@@ -37,6 +37,7 @@ import hackathon from "@/public/images/hackathon_transparent.png"
 import heroImage from "@/public/images/heroes/learn-hub-hero.png"
 import impact from "@/public/images/impact_transparent.png"
 import infrastructureTransparent from "@/public/images/infrastructure_transparent.png"
+import Layer2LearnHero from "@/public/images/layer-2/learn-hero.png"
 import ethereumInside from "@/public/images/run-a-node/ethereum-inside.png"
 import stablecoins from "@/public/images/stablecoins/hero.png"
 import merge from "@/public/images/upgrades/merge.png"
@@ -329,15 +330,15 @@ const LearnPage = () => {
                   </>
                 </Card>
                 <Card
-                  title={t("crypto-security-basics-card-title")}
-                  description={t("crypto-security-basics-card-description")}
+                  title={t("ethereum-networks-card-title")}
+                  description={t("ethereum-networks-card-description")}
                 >
                   <>
                     <CardImage>
-                      <Image src={dogeComputer} alt="" {...height200} />
+                      <Image src={Layer2LearnHero} alt="" {...height200} />
                     </CardImage>
-                    <ButtonLink href="/security/">
-                      {t("crypto-security-basics-card-button")}
+                    <ButtonLink href="/layer-2/networks">
+                      {t("ethereum-networks-card-button")}
                     </ButtonLink>
                   </>
                 </Card>
@@ -350,7 +351,7 @@ const LearnPage = () => {
                     <ListItem>{t("things-to-consider-banner-1")}</ListItem>
                     <ListItem>
                       {t("things-to-consider-banner-2")}{" "}
-                      <InlineLink href="/layer-2/">
+                      <InlineLink href="/layer-2/networks">
                         {t("things-to-consider-banner-layer-2")}
                       </InlineLink>
                       .

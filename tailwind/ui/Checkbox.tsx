@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils/cn"
  * Common style classes for the checkbox, radio, and switch controls
  */
 export const commonControlClasses =
-  "size-4 border border-body-medium text-background hover:border-primary-high-contrast hover:bg-body-light focus-visible:outline-offset-4 focus-visible:outline-primary-hover disabled:cursor-not-allowed disabled:border-disabled disabled:bg-disabled aria-[invalid]:border-error aria-[invalid]:bg-error-light data-[state='checked']:not-disabled:border-primary data-[state='checked']:not-disabled:bg-primary data-[state='checked']:hover:not-disabled:bg-primary-hover"
+  "size-4 border border-body-medium text-background focus-visible:outline-offset-4 focus-visible:outline-primary-hover disabled:cursor-not-allowed disabled:border-disabled disabled:bg-disabled aria-[invalid]:border-error aria-[invalid]:bg-error-light data-[state='checked']:not-disabled:border-primary data-[state='checked']:not-disabled:bg-primary hover:[@media(hover:hover)_and_(pointer:fine)]:border-primary-hover hover:[@media(hover:hover)_and_(pointer:fine)]:bg-primary-hover data-[state='checked']:hover:[@media(hover:hover)_and_(pointer:fine)]:not-disabled:bg-primary-hover"
 
 export type CheckboxProps = React.ComponentPropsWithoutRef<
   typeof CheckboxPrimitive.Root

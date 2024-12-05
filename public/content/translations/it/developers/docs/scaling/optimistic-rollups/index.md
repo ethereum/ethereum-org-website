@@ -253,12 +253,6 @@ Preferisci un approccio visivo all'apprendimento? Guarda Finematics spiegare i r
 
 <YouTube id="7pWxCklcNsU" start="263" />
 
-### Utilizzo dei rollup ottimistici {#use-optimistic-rollups}
-
-Esistono molteplici implementazioni dei rollup ottimistici, che puoi integrare nelle tue dapp:
-
-<RollupProductDevDoc rollupType="optimistic" />
-
 ## Ulteriori letture sui rollup ottimistici
 
 - [Come funzionano gli Optimistic Rollup (La guida completa)](https://www.alchemy.com/overviews/optimistic-rollups)
