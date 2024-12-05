@@ -355,3 +355,7 @@ DeFi est un mouvement open source. Les protocoles et applications DeFi sont ouve
 
 - [Serveur Discord DeFi Llama](https://discord.defillama.com/)
 - [Serveur Discord DeFi Pulse](https://discord.gg/Gx4TCTk)
+
+<Divider />
+
+<QuizWidget quizKey="defi" />
