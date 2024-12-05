@@ -92,7 +92,7 @@ const DataTable = <TData, TValue>({
       trackCustomEvent({
         eventCategory: matomoEventCategory,
         eventAction: "expanded",
-        eventName: row.original.name,
+        eventName: (row.original as { name: string }).name,
       })
     }
 
