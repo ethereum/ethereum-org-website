@@ -239,6 +239,14 @@ const ProductTable = <T,>({
           if (Array.isArray(item.inputState) && item.inputState.length > 0) {
             return itemCount + 1
           }
+
+          if (
+            typeof item.inputState === "string" &&
+            item.filterKey !== "languages"
+          ) {
+            return itemCount + 1
+          }
+
           return (
             itemCount +
             (typeof item.inputState === "boolean" && item.inputState ? 1 : 0)
