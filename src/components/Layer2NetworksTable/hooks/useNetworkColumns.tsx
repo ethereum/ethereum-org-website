@@ -11,16 +11,34 @@ import { TwImage } from "@/components/Image"
 import NetworkMaturityTooltip from "@/components/Layer2NetworksTable/NetworkMaturityTooltip"
 import InlineLink from "@/components/Link"
 import Tooltip from "@/components/Tooltip"
+import { Button } from "@/components/ui/buttons/Button"
 import { TableCell, TableHead } from "@/components/ui/Table"
 
 import { cn } from "@/lib/utils/cn"
+import { trackCustomEvent } from "@/lib/utils/matomo"
 
 export const useNetworkColumns: ColumnDef<ExtendedRollup>[] = [
   {
     id: "l2Info",
     header: ({ table }) => {
+      const meta = table.options.meta as TableMeta
+
       return (
-        <TableHead className="flex-1">
+        <TableHead className="flex w-full flex-row items-center justify-between px-4 py-2">
+          <Button
+            variant="ghost"
+            className="block p-0 lg:hidden"
+            onClick={() => {
+              trackCustomEvent({
+                eventCategory: "MobileFilterToggle",
+                eventAction: "Tap MobileFilterToggle - sticky",
+                eventName: "show mobile filters true",
+              })
+              meta.setMobileFiltersOpen(true)
+            }}
+          >
+            <p className="text-md">{`Filters (${meta.activeFiltersCount})`}</p>
+          </Button>
           <p>
             Networks showing <strong>({table.options.data.length})</strong>
           </p>
