@@ -355,3 +355,7 @@ DeFi, açık kaynaklı bir akımdır. DeFi protokolleri ve uygulamaları; incele
 
 - [DeFi Llama Discord sunucusu](https://discord.defillama.com/)
 - [DeFi Pulse Discord sunucusu](https://discord.gg/Gx4TCTk)
+
+<Divider />
+
+<QuizWidget quizKey="defi" />
