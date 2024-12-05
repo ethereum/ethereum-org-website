@@ -164,7 +164,7 @@ Solidityスマートコントラクト用の単体テストフレームワーク
 
 静的アナライザーは、スマートコントラクトのソースコードを受け取って解析し、コントラクトがプロパティを満たしているかどうかを判断します。 動的解析とは異なり、静的解析では、コントラクトを実行して正確性の解析を行うことはありません。 静的解析は、スマートコントラクトが実行中にたどる可能性のあるすべてのパスを推論します。つまり、ソースコードの構造を調べて、コントラクトの操作がランタイムで何を意味するかを決定します。
 
-コントラクトで静的解析を実行する一般的な手法として、[リンティング](https://www.perforce.com/blog/qac/what-lint-code-and-why-linting-important)と[静的テスト](https://www.techtarget.com/whatis/definition/static-analysis-static-code-analysis)があります。 どちらの手法も、コンパイラによって出力された[抽象構文木](https://en.m.wikipedia.org/wiki/Abstract_syntax_tree)や[制御フローグラフ](https://www.geeksforgeeks.org/software-engineering-control-flow-graph-cfg/amp/)など、コントラクト実行における低レベル表現の解析が必要です。
+コントラクトで静的解析を実行する一般的な手法として、[リンティング](https://www.perforce.com/blog/qac/what-lint-code-and-why-linting- important)と[静的テスト](https://www.techtarget.com/whatis/definition/static-analysis-static-code-analysis)があります。 どちらの手法も、コンパイラによって出力された[抽象構文木](https://en.m.wikipedia.org/wiki/Abstract_syntax_tree)や[制御フローグラフ](https://www.geeksforgeeks.org/software-engineering-control-flow-graph-cfg/amp/)など、コントラクト実行における低レベル表現の解析が必要です。
 
 静的解析は、安全でない構造の使用や構文エラー、コントラクトコード内のコーディング規約違反などの安全性の問題を検出するには有効です。 しかし、より深い脆弱性の検出が不得意であることが知られており、過剰な誤検出が生じる可能性があります。
 
@@ -237,7 +237,7 @@ Solidityスマートコントラクト用の単体テストフレームワーク
 
 上記のように、厳密なテストをしても、コントラクトにバグがないとは言い切れません。 形式検証によるアプローチは、正確性をより強力に保証できますが、現時点では使用が難しく、かなりのコストがかかります。
 
-第三者によるコードレビューを受ければ、コントラクトの脆弱性を発見できる可能性が高くなります。 第三者にコントラクトを分析してもらうには、[スマートコントラクトの監査](https://www.immunebytes.com/blog/what-is-a-smart-contract-audit/)および[バグ報奨金](https://medium.com/immunefi/a-defi-security-standard-the-scaling-bug-bounty-9b83dfdc1ba7)のいずれかの方法があります。
+第三者によるコードレビューを受ければ、コントラクトの脆弱性を発見できる可能性が高くなります。 第三者にコントラクトを分析してもらうには、[スマートコントラクトの監査](https://www.immunebytes.com/blog/what-is-a-smart-contract-audit/)および[バグ報奨金](https://medium. com/immunefi/a-defi-security-standard-the-scaling-bug-bounty-9b83dfdc1ba7)のいずれかの方法があります。
 
 監査は、スマートコントラクトのセキュリティ上の欠陥や不健全な開発プラクティスを探し出す経験豊かな監査人が行います。 監査では、コードベース全体の手動レビューだけでなく、テストや形式検証も行われるのが一般的です。
 
