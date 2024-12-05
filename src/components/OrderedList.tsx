@@ -21,7 +21,7 @@ const liCustomType: SystemStyleObject = {
   insetInlineStart: "-3rem",
   width: "34px",
   height: "1.6rem",
-  pt: "9px", // adjusts number up and down,
+  pt: "5px", // adjusts number up and down,
   lineHeight: "100%",
   borderRadius: "50%",
   background: "grayBackground",
