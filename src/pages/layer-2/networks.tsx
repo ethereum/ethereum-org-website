@@ -121,6 +121,11 @@ export const getStaticProps = (async ({ locale }) => {
         ...ethereumNetworkData,
         txCosts: growThePieData.dailyTxCosts.ethereum,
         tvl: "value" in ethereumMarketcapData ? ethereumMarketcapData.value : 0,
+        walletsSupported: walletsData
+          .filter((wallet) =>
+            wallet.supported_chains.includes("Ethereum Mainnet")
+          )
+          .map((wallet) => wallet.name),
       },
     },
   }

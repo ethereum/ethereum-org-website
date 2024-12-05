@@ -393,6 +393,9 @@ export const walletsData: WalletData[] = [
       "Arbitrum One",
       "zkSync Mainnet",
       "Base",
+      "Scroll",
+      "Blast",
+      "Taiko Mainnet",
     ],
   },
   {
@@ -642,6 +645,7 @@ export const walletsData: WalletData[] = [
       "Linea",
       "zkSync Mainnet",
       "Scroll",
+      "Blast",
     ],
   },
   {
@@ -822,7 +826,7 @@ export const walletsData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "",
     documentation: "https://help.pillar.fi/en/",
-    supported_chains: ["Ethereum Mainnet"],
+    supported_chains: ["Ethereum Mainnet", "OP Mainnet", "Arbitrum One"],
   },
   {
     last_updated: "2024-09-26",
@@ -867,7 +871,12 @@ export const walletsData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "https://www.mewtopia.com/",
     documentation: "https://help.myetherwallet.com/en/",
-    supported_chains: ["Ethereum Mainnet", "zkSync Mainnet"],
+    supported_chains: [
+      "Ethereum Mainnet",
+      "zkSync Mainnet",
+      "Base",
+      "Arbitrum One",
+    ],
   },
   {
     last_updated: "2022-06-24",
@@ -1055,7 +1064,12 @@ export const walletsData: WalletData[] = [
     onboard_documentation: "https://docs.tor.us/wallet/faq-1/users",
     documentation: "https://docs.tor.us/",
     mpc: true,
-    supported_chains: ["Ethereum Mainnet"],
+    supported_chains: [
+      "Ethereum Mainnet",
+      "Arbitrum One",
+      "OP Mainnet",
+      "Base",
+    ],
   },
   {
     last_updated: "2024-11-06",
@@ -1299,7 +1313,12 @@ export const walletsData: WalletData[] = [
     onboard_documentation: "",
     documentation:
       "https://support.ledger.com/hc/en-us/categories/4404376139409?docs=true",
-    supported_chains: ["Ethereum Mainnet"],
+    supported_chains: [
+      "Ethereum Mainnet",
+      "OP Mainnet",
+      "Arbitrum One",
+      "Starknet",
+    ],
   },
   {
     last_updated: "2024-08-16",
@@ -1400,7 +1419,12 @@ export const walletsData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "",
     documentation: "https://support.exodus.com/",
-    supported_chains: ["Ethereum Mainnet"],
+    supported_chains: [
+      "Ethereum Mainnet",
+      "OP Mainnet",
+      "Arbitrum One",
+      "Base",
+    ],
   },
   {
     last_updated: "2024-07-24",
@@ -1626,7 +1650,7 @@ export const walletsData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "https://www.youtube.com/c/GridPlus",
     documentation: "https://docs.gridplus.io/",
-    supported_chains: ["Ethereum Mainnet"],
+    supported_chains: ["Ethereum Mainnet", "Arbitrum One", "OP Mainnet"],
   },
   {
     last_updated: "2024-11-20",
@@ -1684,7 +1708,17 @@ export const walletsData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "https://study.bitkeep.com/en/",
     documentation: "https://docs.bitkeep.com/guide/",
-    supported_chains: ["Ethereum Mainnet"],
+    supported_chains: [
+      "Ethereum Mainnet",
+      "Base",
+      "Arbitrum One",
+      "OP Mainnet",
+      "zkSync Mainnet",
+      "Linea",
+      "Blast",
+      "Starknet",
+      "Mode",
+    ],
   },
   {
     last_updated: "2024-10-31",
@@ -1936,7 +1970,7 @@ export const walletsData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "https://phantom.app/learn",
     documentation: "https://docs.phantom.app/",
-    supported_chains: ["Ethereum Mainnet"],
+    supported_chains: ["Ethereum Mainnet", "Base"],
   },
   {
     last_updated: "2023-08-29",
@@ -2047,7 +2081,16 @@ export const walletsData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "https://community.trustwallet.com/",
     documentation: "https://developer.trustwallet.com/developer/",
-    supported_chains: ["Ethereum Mainnet"],
+    supported_chains: [
+      "Ethereum Mainnet",
+      "Base",
+      "OP Mainnet",
+      "zkSync Mainnet",
+      "Arbitrum One",
+      "Linea",
+      "Scroll",
+      "Blast",
+    ],
   },
   {
     last_updated: "2023-10-30",

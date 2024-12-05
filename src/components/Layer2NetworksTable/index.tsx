@@ -23,8 +23,12 @@ const Layer2NetworksTable = ({
   const [filters, setFilters] = useState<FilterOption[]>(networkFilterOptions)
 
   const filteredData = useMemo(() => {
-    const filteredData = layer2Data
+    const networks = [mainnetData, ...layer2Data]
+
+    const filteredData = networks
       .filter((network) => {
+        if (network === mainnetData) return true
+
         const maturityFilter = filters[1].items.find(
           (item) => item.filterKey === network.networkMaturity
         )
@@ -37,7 +41,7 @@ const Layer2NetworksTable = ({
         )
       })
 
-    return [mainnetData, ...filteredData]
+    return filteredData
   }, [layer2Data, mainnetData, filters])
 
   const resetFilters = () => {
