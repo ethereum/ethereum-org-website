@@ -1,4 +1,4 @@
-import { FC, Fragment, useEffect, useRef, useState } from "react"
+import { FC, Fragment, useCallback, useEffect, useRef, useState } from "react"
 import {
   ColumnDef,
   flexRender,
@@ -18,7 +18,14 @@ import {
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
-type DataTableProps<TData, TValue> = TableProps & {
+interface TableRowData {
+  name: string
+  id?: string | number
+  description?: string
+  url?: string
+}
+
+type DataTableProps<TData extends TableRowData, TValue> = TableProps & {
   columns: ColumnDef<TData, TValue>[]
   data: TData[]
   subComponent?: FC<TData>
@@ -38,7 +45,7 @@ export type TableMeta = {
   [key: string]: string | number | ((open: boolean) => void)
 }
 
-const DataTable = <TData, TValue>({
+const DataTable = <TData extends TableRowData, TValue>({
   columns,
   data,
   subComponent,
@@ -64,7 +71,7 @@ const DataTable = <TData, TValue>({
     },
     onExpandedChange: (updater) =>
       setExpanded(updater as Record<string, boolean>),
-    getRowId: (row: unknown) => `${row.name}`,
+    getRowId: (row: TData) => `${row.name}`,
     getRowCanExpand: (row) => {
       const rowData = row.original as { canExpand?: boolean }
       return rowData.canExpand !== undefined ? rowData.canExpand : true
@@ -88,22 +95,20 @@ const DataTable = <TData, TValue>({
       .map(([key]) => key)
   }
 
-  console.log(data)
+  const createNewExpandedState = useCallback(
+    (
+      newData: TData[],
+      currentExpanded: Record<string, boolean>
+    ): Record<string, boolean> => {
+      const expandedNames = new Set(getExpandedWalletNames(currentExpanded))
 
-  const createNewExpandedState = (
-    newData: TData[],
-    currentExpanded: Record<string, boolean>
-  ): Record<string, boolean> => {
-    const expandedNames = new Set(getExpandedWalletNames(currentExpanded))
-    console.log("expandedNames", expandedNames)
-
-    return newData.reduce<Record<string, boolean>>((acc, item) => {
-      if (hasNameProperty(item)) {
+      return newData.reduce<Record<string, boolean>>((acc, item) => {
         acc[item.name] = expandedNames.has(item.name)
-      }
-      return acc
-    }, {})
-  }
+        return acc
+      }, {})
+    },
+    []
+  )
 
   useEffect(() => {
     if (data !== previousDataRef.current) {
@@ -112,12 +117,13 @@ const DataTable = <TData, TValue>({
       previousDataRef.current = data
       previousExpandedRef.current = expanded
     }
-  }, [data, expanded])
+  }, [createNewExpandedState, data, expanded])
 
   useEffect(() => {
     const prev = previousExpandedRef.current
     const current = expanded
 
+    // Find newly expanded rows
     const newlyExpanded = Object.entries(current)
       .filter(([key, value]) => value === true && prev[key] !== true)
       .map(([key]) => key)
@@ -149,15 +155,6 @@ const DataTable = <TData, TValue>({
       return () => clearTimeout(timer)
     }
   }, [data, table])
-
-  function hasNameProperty(item: TData): item is TData & { name: string } {
-    return (
-      typeof item === "object" &&
-      item !== null &&
-      "name" in item &&
-      typeof (item as unknown).name === "string"
-    )
-  }
 
   return (
     <div className="relative">
