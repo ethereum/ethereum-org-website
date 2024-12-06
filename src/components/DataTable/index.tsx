@@ -18,7 +18,7 @@ import {
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
-interface TableRowData {
+export interface TableRowData {
   name: string
   id?: string | number
   description?: string
