@@ -57,11 +57,14 @@ const DataTable = <TData extends TableRowData, TValue>({
   matomoEventCategory,
   ...props
 }: DataTableProps<TData, TValue>) => {
+  const [isVisible, setIsVisible] = useState(true)
+  const [currentData, setCurrentData] = useState(data)
   const [expanded, setExpanded] = useState<Record<string, boolean>>({})
   const previousExpandedRef = useRef<Record<string, boolean>>({})
+  const previousDataRef = useRef<TData[]>(data)
 
   const table = useReactTable({
-    data,
+    data: currentData,
     columns,
     state: {
       expanded,
@@ -107,6 +110,19 @@ const DataTable = <TData extends TableRowData, TValue>({
     previousExpandedRef.current = expanded
   }, [expanded, table, matomoEventCategory])
 
+  useEffect(() => {
+    if (JSON.stringify(data) !== JSON.stringify(previousDataRef.current)) {
+      setIsVisible(false)
+      const timer = setTimeout(() => {
+        setCurrentData(data)
+        setIsVisible(true)
+        previousDataRef.current = data
+      }, 25) // Adjust this value to match your CSS transition duration
+
+      return () => clearTimeout(timer)
+    }
+  }, [data])
+
   return (
     <div className="relative">
       <div className="sticky top-[76px] z-10 w-full border-b border-primary bg-background">
@@ -130,7 +146,11 @@ const DataTable = <TData extends TableRowData, TValue>({
         </Table>
       </div>
       <Table {...props}>
-        <TableBody>
+        <TableBody
+          className={`duration-25 transition-opacity ${
+            isVisible ? "opacity-100" : "opacity-0"
+          }`}
+        >
           {table.getRowModel().rows?.length ? (
             table.getRowModel().rows.map((row, idx) => (
               <Fragment key={row.id}>
