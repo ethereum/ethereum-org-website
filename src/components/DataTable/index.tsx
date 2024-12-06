@@ -60,6 +60,9 @@ const DataTable = <TData extends TableRowData, TValue>({
   const [isVisible, setIsVisible] = useState(true)
   const [currentData, setCurrentData] = useState(data)
   const [expanded, setExpanded] = useState<Record<string, boolean>>({})
+  const [lastKnownExpanded, setLastKnownExpanded] = useState<
+    Record<string, boolean>
+  >({})
   const previousExpandedRef = useRef<Record<string, boolean>>({})
   const previousDataRef = useRef<TData[]>(data)
 
@@ -87,32 +90,33 @@ const DataTable = <TData extends TableRowData, TValue>({
     } as TableMeta,
   })
 
-  const getExpandedWalletNames = (
-    expanded: Record<string, boolean>
-  ): string[] => {
-    return Object.entries(expanded)
-      .filter(([_, isExpanded]) => isExpanded)
-      .map(([key]) => key)
-  }
-
   const createNewExpandedState = useCallback(
     (
       newData: TData[],
       currentExpanded: Record<string, boolean>
     ): Record<string, boolean> => {
-      const expandedNames = new Set(getExpandedWalletNames(currentExpanded))
-
       return newData.reduce<Record<string, boolean>>((acc, item) => {
-        acc[item.name] = expandedNames.has(item.name)
+        acc[item.name] =
+          lastKnownExpanded[item.name] || currentExpanded[item.name] || false
         return acc
       }, {})
     },
-    []
+    [lastKnownExpanded]
   )
 
   useEffect(() => {
+    const hasExpandedItems = Object.keys(expanded).length > 0
+    if (hasExpandedItems) {
+      setLastKnownExpanded((prev) => ({ ...prev, ...expanded }))
+    }
+  }, [expanded])
+
+  useEffect(() => {
     if (data !== previousDataRef.current) {
-      const newExpanded = createNewExpandedState(data, expanded)
+      const newExpanded = createNewExpandedState(
+        data,
+        previousExpandedRef.current
+      )
       setExpanded(newExpanded)
       previousDataRef.current = data
       previousExpandedRef.current = expanded
