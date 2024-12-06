@@ -66,6 +66,7 @@ import balancer from "@/public/images/dapps/balancer.png"
 import brave from "@/public/images/dapps/brave.png"
 import compound from "@/public/images/dapps/compound.png"
 import convex from "@/public/images/dapps/convex.png"
+import crackAndStack from "@/public/images/dapps/crackandstack.png"
 import cryptopunks from "@/public/images/dapps/cryptopunks.png"
 import cryptovoxels from "@/public/images/dapps/cryptovoxels.png"
 import curve from "@/public/images/dapps/curve.png"
@@ -1085,6 +1086,13 @@ const DappsPage = () => {
       link: "https://zkga.me/",
       image: darkforest,
       alt: t("page-dapps-dark-forest-logo-alt"),
+    },
+    {
+      title: "Crack & Stack",
+      description: t("page-dapps-dapp-description-crack-and-stack"),
+      link: "https://crackandstack.com/",
+      image: crackAndStack,
+      alt: t("page-dapps-crack-and-stack-logo-alt"),
     },
   ]
 
