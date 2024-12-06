@@ -52,9 +52,9 @@ const DataTable = <TData, TValue>({
 }: DataTableProps<TData, TValue>) => {
   const [isVisible, setIsVisible] = useState(true)
   const [currentData, setCurrentData] = useState(data)
-  const [expanded, setExpanded] = useState({})
-  const previousExpandedRef = useRef({})
-  const previousDataRef = useRef(data)
+  const [expanded, setExpanded] = useState<Record<string, boolean>>({})
+  const previousExpandedRef = useRef<Record<string, boolean>>({})
+  const previousDataRef = useRef<TData[]>(data)
 
   const table = useReactTable({
     data: currentData,
@@ -62,7 +62,9 @@ const DataTable = <TData, TValue>({
     state: {
       expanded,
     },
-    onExpandedChange: setExpanded,
+    onExpandedChange: (updater) =>
+      setExpanded(updater as Record<string, boolean>),
+    getRowId: (row: unknown) => `${row.name}`,
     getRowCanExpand: (row) => {
       const rowData = row.original as { canExpand?: boolean }
       return rowData.canExpand !== undefined ? rowData.canExpand : true
@@ -78,26 +80,61 @@ const DataTable = <TData, TValue>({
     } as TableMeta,
   })
 
+  const getExpandedWalletNames = (
+    expanded: Record<string, boolean>
+  ): string[] => {
+    return Object.entries(expanded)
+      .filter(([_, isExpanded]) => isExpanded)
+      .map(([key]) => key)
+  }
+
+  console.log(data)
+
+  const createNewExpandedState = (
+    newData: TData[],
+    currentExpanded: Record<string, boolean>
+  ): Record<string, boolean> => {
+    const expandedNames = new Set(getExpandedWalletNames(currentExpanded))
+    console.log("expandedNames", expandedNames)
+
+    return newData.reduce<Record<string, boolean>>((acc, item) => {
+      if (hasNameProperty(item)) {
+        acc[item.name] = expandedNames.has(item.name)
+      }
+      return acc
+    }, {})
+  }
+
+  useEffect(() => {
+    if (data !== previousDataRef.current) {
+      const newExpanded = createNewExpandedState(data, expanded)
+      setExpanded(newExpanded)
+      previousDataRef.current = data
+      previousExpandedRef.current = expanded
+    }
+  }, [data, expanded])
+
   useEffect(() => {
     const prev = previousExpandedRef.current
     const current = expanded
 
-    // Find newly expanded rows
     const newlyExpanded = Object.entries(current)
       .filter(([key, value]) => value === true && prev[key] !== true)
       .map(([key]) => key)
 
     if (newlyExpanded.length > 0) {
       const row = table.getRowModel().rowsById[newlyExpanded[0]]
-      trackCustomEvent({
-        eventCategory: matomoEventCategory,
-        eventAction: "expanded",
-        eventName: (row.original as { name: string }).name,
-      })
+      if (row) {
+        trackCustomEvent({
+          eventCategory: matomoEventCategory,
+          eventAction: "expanded",
+          eventName: (row.original as { name: string }).name,
+        })
+      }
     }
 
     previousExpandedRef.current = expanded
-  }, [expanded])
+  }, [expanded, table, matomoEventCategory])
 
   useEffect(() => {
     if (JSON.stringify(data) !== JSON.stringify(previousDataRef.current)) {
@@ -111,7 +148,16 @@ const DataTable = <TData, TValue>({
 
       return () => clearTimeout(timer)
     }
-  }, [data])
+  }, [data, table])
+
+  function hasNameProperty(item: TData): item is TData & { name: string } {
+    return (
+      typeof item === "object" &&
+      item !== null &&
+      "name" in item &&
+      typeof (item as unknown).name === "string"
+    )
+  }
 
   return (
     <div className="relative">
