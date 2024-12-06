@@ -1,4 +1,4 @@
-import { FC, Fragment, useCallback, useEffect, useRef, useState } from "react"
+import { FC, Fragment, useEffect, useRef, useState } from "react"
 import {
   ColumnDef,
   flexRender,
@@ -57,24 +57,18 @@ const DataTable = <TData extends TableRowData, TValue>({
   matomoEventCategory,
   ...props
 }: DataTableProps<TData, TValue>) => {
-  const [isVisible, setIsVisible] = useState(true)
-  const [currentData, setCurrentData] = useState(data)
   const [expanded, setExpanded] = useState<Record<string, boolean>>({})
-  const [lastKnownExpanded, setLastKnownExpanded] = useState<
-    Record<string, boolean>
-  >({})
   const previousExpandedRef = useRef<Record<string, boolean>>({})
-  const previousDataRef = useRef<TData[]>(data)
 
   const table = useReactTable({
-    data: currentData,
+    data,
     columns,
     state: {
       expanded,
     },
     onExpandedChange: (updater) =>
       setExpanded(updater as Record<string, boolean>),
-    getRowId: (row: TData) => `${row.name}`,
+    getRowId: (row: TData) => row.name,
     getRowCanExpand: (row) => {
       const rowData = row.original as { canExpand?: boolean }
       return rowData.canExpand !== undefined ? rowData.canExpand : true
@@ -89,39 +83,6 @@ const DataTable = <TData extends TableRowData, TValue>({
       activeFiltersCount,
     } as TableMeta,
   })
-
-  const createNewExpandedState = useCallback(
-    (
-      newData: TData[],
-      currentExpanded: Record<string, boolean>
-    ): Record<string, boolean> => {
-      return newData.reduce<Record<string, boolean>>((acc, item) => {
-        acc[item.name] =
-          lastKnownExpanded[item.name] || currentExpanded[item.name] || false
-        return acc
-      }, {})
-    },
-    [lastKnownExpanded]
-  )
-
-  useEffect(() => {
-    const hasExpandedItems = Object.keys(expanded).length > 0
-    if (hasExpandedItems) {
-      setLastKnownExpanded((prev) => ({ ...prev, ...expanded }))
-    }
-  }, [expanded])
-
-  useEffect(() => {
-    if (data !== previousDataRef.current) {
-      const newExpanded = createNewExpandedState(
-        data,
-        previousExpandedRef.current
-      )
-      setExpanded(newExpanded)
-      previousDataRef.current = data
-      previousExpandedRef.current = expanded
-    }
-  }, [createNewExpandedState, data, expanded])
 
   useEffect(() => {
     const prev = previousExpandedRef.current
@@ -138,27 +99,13 @@ const DataTable = <TData extends TableRowData, TValue>({
         trackCustomEvent({
           eventCategory: matomoEventCategory,
           eventAction: "expanded",
-          eventName: (row.original as { name: string }).name,
+          eventName: row.original.name,
         })
       }
     }
 
     previousExpandedRef.current = expanded
   }, [expanded, table, matomoEventCategory])
-
-  useEffect(() => {
-    if (JSON.stringify(data) !== JSON.stringify(previousDataRef.current)) {
-      setIsVisible(false)
-      const timer = setTimeout(() => {
-        setCurrentData(data)
-        table.resetExpanded()
-        setIsVisible(true)
-        previousDataRef.current = data
-      }, 25) // Adjust this value to match your CSS transition duration
-
-      return () => clearTimeout(timer)
-    }
-  }, [data, table])
 
   return (
     <div className="relative">
@@ -183,11 +130,7 @@ const DataTable = <TData extends TableRowData, TValue>({
         </Table>
       </div>
       <Table {...props}>
-        <TableBody
-          className={`duration-25 transition-opacity ${
-            isVisible ? "opacity-100" : "opacity-0"
-          }`}
-        >
+        <TableBody>
           {table.getRowModel().rows?.length ? (
             table.getRowModel().rows.map((row, idx) => (
               <Fragment key={row.id}>
