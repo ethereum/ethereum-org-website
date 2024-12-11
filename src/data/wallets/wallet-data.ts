@@ -1905,7 +1905,7 @@ export const walletsData: WalletData[] = [
     image: PhantomImage,
     twBackgroundColor: "bg-[#AB9FF2]",
     twGradiantBrandColor: "from-[#AB9FF2]",
-    url: "https://phantom.app/",
+    url: "https://phantom.com/",
     active_development_team: true,
     languages_supported: [
       "en",
@@ -1968,8 +1968,8 @@ export const walletsData: WalletData[] = [
     withdraw_crypto: true,
     multisig: false,
     social_recovery: false,
-    onboard_documentation: "https://phantom.app/learn",
-    documentation: "https://docs.phantom.app/",
+    onboard_documentation: "https://phantom.com/learn",
+    documentation: "https://docs.phantom.com/",
     supported_chains: ["Ethereum Mainnet", "Base"],
   },
   {
