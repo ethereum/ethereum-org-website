@@ -59,7 +59,7 @@ const questionBankConfig: QuestionBankConfig = {
     { totalAnswers: 4, correctAnswer: 2 },
     { totalAnswers: 4, correctAnswer: 1 },
     { totalAnswers: 4, correctAnswer: 4 },
-    { totalAnswers: 4, correctAnswer: 1 },
+    { totalAnswers: 4, correctAnswer: 1, explanationOverrides: [1, 1, 1, 1] },
     { totalAnswers: 4, correctAnswer: 4 },
   ],
   "what-is-ether": [
@@ -132,11 +132,11 @@ const questionBankConfig: QuestionBankConfig = {
   ],
   "run-a-node": [
     { totalAnswers: 4, correctAnswer: 1 },
-    { totalAnswers: 4, correctAnswer: 1 },
+    { totalAnswers: 4, correctAnswer: 1, explanationOverrides: [1, 1, 1, 1] },
     { totalAnswers: 4, correctAnswer: 4 },
     { totalAnswers: 4, correctAnswer: 3 },
     { totalAnswers: 4, correctAnswer: 1 },
-    { totalAnswers: 2, correctAnswer: 2 },
+    { totalAnswers: 2, correctAnswer: 2, explanationOverrides: [1, 1] },
   ],
   stablecoins: [
     { totalAnswers: 4, correctAnswer: 1 },
