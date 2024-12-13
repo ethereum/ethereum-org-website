@@ -121,7 +121,7 @@ const DialogHeader = ({
       {children}
       <Center className={close()} asChild>
         <DialogPrimitive.Close>
-          <MdClose />
+          <MdClose size="20" />
           <span className="sr-only">Close</span>
         </DialogPrimitive.Close>
       </Center>
