@@ -130,7 +130,7 @@ Many unit testing frameworks allow you to create assertions—simple statements 
 
 ##### 3. Measure code coverage
 
-[Code coverage](https://en.m.wikipedia.org/wiki/Code_coverage) is a testing metric that tracks the number of branches, lines, and statements in your code executed during tests. Tests should have good code coverage, otherwise you may get "false negatives" which happen a contract passes all tests, but vulnerabilities still exist in the code. Recording high code coverage, however, gives the assurance all statements/functions in a smart contract were sufficiently tested for correctness.
+[Code coverage](https://en.m.wikipedia.org/wiki/Code_coverage) is a testing metric that tracks the number of branches, lines, and statements in your code executed during tests. Tests should have good code coverage to minimize the risk of untested vulnerabilities. Without sufficient coverage, you might falsely assume your contract is secure because all tests pass, while vulnerabilities still exist in untested code paths. Recording high code coverage, however, gives the assurance all statements/functions in a smart contract were sufficiently tested for correctness.
 
 ##### 4. Use well-developed testing frameworks
 
