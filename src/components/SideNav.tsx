@@ -2,12 +2,13 @@ import { useEffect, useState } from "react"
 import { motion } from "framer-motion"
 import { useTranslation } from "next-i18next"
 import { MdChevronRight } from "react-icons/md"
-import { Box, HStack, Icon } from "@chakra-ui/react"
+import { Box } from "@chakra-ui/react"
 
 import { ChildOnlyProp } from "@/lib/types"
 import { DeveloperDocsLink } from "@/lib/interfaces"
 
 import { BaseLink, LinkProps } from "@/components/Link"
+import { HStack } from "./ui/flex"
 
 import docLinks from "../data/developer-docs-links.yaml"
 
@@ -34,14 +35,7 @@ const innerLinksVariants = {
 
 const LinkContainer = ({ children }: ChildOnlyProp) => {
   return (
-    <HStack
-      w="full"
-      justify="space-between"
-      py={2}
-      pe={4}
-      ps={8}
-      _hover={{ bgColor: "ednBackground" }}
-    >
+    <HStack className="w-full justify-between py-2 pe-4 ps-8 hover:bg-[ednBackground]">
       {children}
     </HStack>
   )
@@ -106,7 +100,7 @@ const NavLink = ({ item, path, isTopLevel }: NavLinkProps) => {
             cursor="pointer"
             display="flex"
           >
-            <Icon as={MdChevronRight} boxSize={6} color="secondary" />
+            <MdChevronRight className="h-6 w-6" color="secondary" />
           </Box>
         </LinkContainer>
         <Box
