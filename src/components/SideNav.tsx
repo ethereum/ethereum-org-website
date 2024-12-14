@@ -8,9 +8,10 @@ import { ChildOnlyProp } from "@/lib/types"
 import { DeveloperDocsLink } from "@/lib/interfaces"
 
 import { BaseLink, LinkProps } from "@/components/Link"
-import { HStack } from "./ui/flex"
 
 import docLinks from "../data/developer-docs-links.yaml"
+
+import { HStack } from "./ui/flex"
 
 export const dropdownIconContainerVariant = {
   open: {
