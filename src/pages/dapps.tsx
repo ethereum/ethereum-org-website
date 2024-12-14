@@ -374,7 +374,10 @@ const RightColumn = (props: ChildOnlyProp) => (
 )
 
 const StyledCallout = (props: ComponentPropsWithRef<typeof Callout>) => (
-  <Callout flex="1 1 416px" minH="full" mt={{ base: 48, lg: 32 }} {...props} />
+  <Callout
+    className="mt-48 min-h-full flex-1 basis-[416px] lg:mt-32"
+    {...props}
+  />
 )
 
 const StyledCardGrid = (props: ChildOnlyProp) => (

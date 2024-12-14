@@ -253,12 +253,6 @@ ii. 使用乐观卷叠的开发者和项目团队可以利用以太坊的基础�
 
 <YouTube id="7pWxCklcNsU" start="263" />
 
-### 使用乐观卷叠 {#use-optimistic-rollups}
-
-乐观重叠有多种实现，你可以将其整合到你的去中心化应用程序中：
-
-<RollupProductDevDoc rollupType="optimistic" />
-
 ## 阅读关于乐观卷叠的更多信息
 
 - [乐观卷叠如何工作（完整指南）](https://www.alchemy.com/overviews/optimistic-rollups)

@@ -1,3 +1,4 @@
+import { ReactElement } from "react"
 import type { IconType } from "react-icons"
 
 import { FilterInputState } from "@/lib/types"
@@ -7,7 +8,7 @@ import Switch from "@/../tailwind/ui/Switch"
 interface SwitchFilterInputProps {
   Icon?: IconType
   label: string
-  description?: string
+  description?: string | ReactElement
   filterIndex: number
   itemIndex: number
   inputState: FilterInputState
