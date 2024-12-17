@@ -213,7 +213,7 @@ Running contracts on a local blockchain could be useful as a form of manual inte
 
 ### Testing contracts on testnets {#testing-contracts-on-testnets}
 
-A test network or testnet works exactly like Ethereum Mainnet, except that it uses Ether (ETH) with no real-world value. Deploying your contract on a [testnet](/developers/docs/networks/#ethereum-testnets) means anyone can interact with it (e.g., via the dapp's frontend) without putting funds at risk.
+A test network or testnet works exactly like Ethereum Mainnet, except that it uses ether (ETH) with no real-world value. Deploying your contract on a [testnet](/developers/docs/networks/#ethereum-testnets) means anyone can interact with it (e.g., via the dapp's frontend) without putting funds at risk.
 
 This form of manual testing is useful for evaluating the end-to-end flow of your application from a user’s point of view. Here, beta testers can also perform trial runs and report any issues with the contract’s business logic and overall functionality.
 
