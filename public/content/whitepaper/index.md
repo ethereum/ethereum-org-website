@@ -197,7 +197,7 @@ The Ethereum state transition function, `APPLY(S,TX) -> S'` can be defined as fo
 2. Calculate the transaction fee as `STARTGAS * GASPRICE`, and determine the sending address from the signature. Subtract the fee from the sender's account balance and increment the sender's nonce. If there is not enough balance to spend, return an error.
 3. Initialize `GAS = STARTGAS`, and take off a certain quantity of gas per byte to pay for the bytes in the transaction.
 4. Transfer the transaction value from the sender's account to the receiving account. If the receiving account does not yet exist, create it. If the receiving account is a contract, run the contract's code either to completion or until the execution runs out of gas.
-5. If the value transfer failed because the sender did not have enough money, or the code execution ran out of gas, revert all state changes except the payment of the fees, and add the fees to the miner's account.
+5. If the value transfer failed because the sender did not have enough ether, or the code execution ran out of gas, revert all state changes except the payment of the fees, and add the fees to the miner's account.
 6. Otherwise, refund the fees for all remaining gas to the sender, and send the fees paid for gas consumed to the miner.
 
 For example, suppose that the contract's code is:
