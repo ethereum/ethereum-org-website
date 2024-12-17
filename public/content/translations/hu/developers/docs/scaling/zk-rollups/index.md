@@ -222,12 +222,6 @@ Nézze meg a videót, melyben a Finematics elmagyarázza a ZK összevont tranzak
 
 <YouTube id="7pWxCklcNsU" start="406" />
 
-### ZK összevont tranzakciók használata {#use-zk-rollups}
-
-A ZK összevont tranzakcióknak többféle megvalósítása létezik, amelyeket integrálhat a dappjaiba:
-
-<RollupProductDevDoc rollupType="zk" />
-
 ## Kik dolgoznak zkEVM-en? {#zkevm-projects}
 
 Többek között az alábbi projektek dolgoznak zkEVM-en:

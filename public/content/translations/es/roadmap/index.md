@@ -8,10 +8,10 @@ alt: "Hoja de ruta de Ethereum"
 summaryPoints:
 buttons:
   - 
-    label: Actualizaciones futuras
+    content: Actualizaciones futuras
     toId: '¿Qué cambios están pendientes?'
   - 
-    label: Actualizaciones anteriores
+    content: Actualizaciones anteriores
     href: /history/
     variant: borrador
 ---

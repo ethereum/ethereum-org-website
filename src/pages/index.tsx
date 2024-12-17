@@ -119,7 +119,7 @@ type Props = BasePageProps & {
 }
 
 // In seconds
-const REVALIDATE_TIME = BASE_TIME_UNIT * 24
+const REVALIDATE_TIME = BASE_TIME_UNIT * 1
 
 const loadData = dataLoader(
   [
@@ -193,8 +193,6 @@ export const getStaticProps = (async ({ locale }) => {
       metricResults,
       rssData: { rssItems, blogLinks },
     },
-    // TODO: re-enable revalidation once we have a workaround for failing builds
-    // revalidate: BASE_TIME_UNIT * 24,
   }
 }) satisfies GetStaticProps<Props>
 
@@ -729,7 +727,15 @@ const HomePage = ({
                   >
                     <CardBanner>
                       {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img src={imgSrc} alt="" loading="lazy" />
+                      <img
+                        src={imgSrc}
+                        alt=""
+                        loading="lazy"
+                        onError={(e) => {
+                          e.currentTarget.onerror = null
+                          e.currentTarget.src = EventFallback.src
+                        }}
+                      />
                     </CardBanner>
                     <CardContent>
                       <CardTitle>{title}</CardTitle>
@@ -810,6 +816,10 @@ const HomePage = ({
                         <img
                           src={imageUrl}
                           alt=""
+                          onError={(e) => {
+                            e.currentTarget.onerror = null
+                            e.currentTarget.src = EventFallback.src
+                          }}
                           className="max-w-full object-cover object-center"
                           loading="lazy"
                         />

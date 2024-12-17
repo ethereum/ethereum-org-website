@@ -253,12 +253,6 @@ ii. 使用樂觀卷軸的開發者和專案團隊可以利用以太坊的基礎�
 
 <YouTube id="7pWxCklcNsU" start="263" />
 
-### 使用樂觀卷軸 {#use-optimistic-rollups}
-
-樂觀卷軸存在多種實作，可供你整合到去中心化應用程式：
-
-<RollupProductDevDoc rollupType="optimistic" />
-
 ## 有關樂觀卷軸的延伸閲讀
 
 - [樂觀卷軸如何運作（完整指引）](https://www.alchemy.com/overviews/optimistic-rollups)

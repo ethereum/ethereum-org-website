@@ -12607,6 +12607,42 @@
       "contributions": [
         "maintenance"
       ]
+    },
+    {
+      "login": "rafagomes",
+      "name": "Rafa Gomes",
+      "avatar_url": "https://avatars.githubusercontent.com/u/565337?v=4",
+      "profile": "https://github.com/rafagomes",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "ddannehh",
+      "name": "ddannehh",
+      "avatar_url": "https://avatars.githubusercontent.com/u/109203827?v=4",
+      "profile": "https://github.com/ddannehh",
+      "contributions": [
+        "design"
+      ]
+    },
+    {
+      "login": "jkylling",
+      "name": "Jonas Irgens Kylling",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6781076?v=4",
+      "profile": "https://github.com/jkylling",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "CremaFR",
+      "name": "Thomas Brillard",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5360522?v=4",
+      "profile": "https://github.com/CremaFR",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,

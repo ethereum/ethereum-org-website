@@ -34,7 +34,7 @@ Using [GraphQL](https://graphql.org/), developers can query any of the curated o
 
 ## Dune Analytics {#dune-analytics}
 
-[Dune Analytics](https://dune.com/) pre-processes blockchain data into relational database (PostgreSQL and DatabricksSQL) tables, allows users to query blockchain data using SQL and build dashboards based on query results. On-chain data are organized into 4 raw tables: `blocks`, `transactions`, (event) `logs` and (call) `traces`. Popular contracts and protocols have been decoded, and each has its own set of event and call tables. Those event and call tables are processed further and organized into abstraction tables by the type of protocols, for example, dex, lending, stablecoins, etc.
+[Dune Analytics](https://dune.com/) pre-processes blockchain data into relational database (DuneSQL) tables, allows users to query blockchain data using SQL and build dashboards based on query results. On-chain data are organized into 4 raw tables: `blocks`, `transactions`, (event) `logs` and (call) `traces`. Popular contracts and protocols have been decoded, and each has its own set of event and call tables. Those event and call tables are processed further and organized into abstraction tables by the type of protocols, for example, dex, lending, stablecoins, etc.
 
 ## SubQuery Network {#subquery-network}
 
