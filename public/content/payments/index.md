@@ -16,7 +16,11 @@ Think about a world where a freelancer in Bali can receive payment from a client
 
 This isn't a far-off dream – it's the reality that Ethereum is building today. Traditional institutions have had their moment in the limelight but despite the time spent building, their innovations have not evolved past a certain stage. Ethereum on the other hand is a platform that is changing how money is handled in the 21st century. It is redefining the very concept of financial transactions.
 
+<div style={{maxWidth: "320px", margin: "0 auto"}}>
+
 ![Ethereum logo on the computer screen](./computer.png)
+
+</div>
 
 ## Remittances: cheaper international transfers {#remittances}
 
@@ -84,8 +88,11 @@ In February 2023, when devastating earthquakes struck Turkey and Syria, the glob
 The result of this? Over $6 million was raised in a matter of days, as tracked by a [Dune](https://dune.com/davy42/turkiye-earthquake-donations) Analytics dashboard.
 
 There were also similar response times for tragedies that happened in India and Ukraine. This rapid response highlights a crucial advantage of Ethereum payments, which is the ability to quickly mobilize global support without the hurdles of currency conversion, lengthy bank transfers, or exorbitant fees.
+<div style={{maxWidth: "320px", margin: "0 auto"}}>
 
 ![Ethereum Robot Image](./eth_robot.png)
+
+</div>
 
 ## Ethereum vs fiat {#ethereum-vs-fiat}
 
@@ -127,8 +134,11 @@ Every transaction on the Ethereum blockchain is recorded on a public ledger. Thi
 - Individuals to keep track of their financial activities
   
 With Ethereum, everyone can see how money moves and how costs are implemented, unlike traditional organisations where most of these remain unknown.
+<div style={{maxWidth: "320px", margin: "0 auto"}}>
 
-![Image](./Image.png)
+![walking image](./walking.png)
+
+</div>
 
 While fiat currencies have the advantage of widespread acceptance and stability, Ethereum offers unique benefits that make it an attractive option for certain types of transactions.
 
