@@ -833,7 +833,7 @@ const WhatIsEthereumPage = ({
             </p>
 
             <p>
-              <InlineLink href="https://www.kernel.community/en/learn/module-1/dreamers">
+              <InlineLink href="https://read.kernel.community/en/learn/module-0/">
                 {t("page-what-is-ethereum-kernel-dreamers")}
               </InlineLink>{" "}
               {t("page-what-is-ethereum-kernel-dreamers-desc")}
