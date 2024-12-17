@@ -18,10 +18,6 @@ This isn't a far-off dream – it's the reality that Ethereum is building today.
 
 ![Ethereum logo on the computer screen](./computer.png)
 
-## Ethereum in action {#ethereum-in-action}
-
-Let's move beyond the theoretical and look at some concrete examples of how Ethereum payments are making a difference in the real world.
-
 ## Remittances: cheaper international transfers {#remittances}
 
 For millions of people working abroad, sending money back home is a regular necessity. Traditional remittance services often come with high fees and slow processing times. Ethereum offers a compelling alternative.
