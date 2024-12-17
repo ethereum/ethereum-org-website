@@ -7,7 +7,11 @@ emoji: ":frame_with_picture:"
 sidebarDepth: 2
 image: /images/impact_transparent.png
 alt: An Eth logo being displayed along with giving hands.
-summaryPoint1: A world where money moves as freely as information.
+summaryPoint1: A world where money moves as freely as information
+summaryPoint2: Open and global, enabling borderless transactions for everyone
+summaryPoint3: Payments received within a minute 
+
+
 ---
 
 Think about a world where a freelancer in Bali can receive payment from a client in New York in just minutes, not days. Where a small business owner in Lagos can secure a loan without ever stepping foot in a bank. 
