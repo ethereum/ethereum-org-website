@@ -129,7 +129,7 @@ contract RecipientContract is IERC223Recipient {
     {
         // It is important to understand that within this function
         // msg.sender is the address of a token that is being received,
-        // msg.value  is always 0 as the token contract does not own or send Ether in most cases,
+        // msg.value  is always 0 as the token contract does not own or send ether in most cases,
         // _from      is the sender of the token transfer,
         // _value     is the amount of tokens that was deposited.
         require(msg.sender == tokenA);
