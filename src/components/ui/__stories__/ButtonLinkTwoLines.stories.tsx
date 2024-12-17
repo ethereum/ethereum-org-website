@@ -1,29 +1,30 @@
 import { BiCircle } from "react-icons/bi"
-import { Meta, StoryObj } from "@storybook/react"
+import type { Meta, StoryObj } from "@storybook/react"
 
-import { ButtonTwoLines as ButtonTwoLinesComponent } from "../buttons/ButtonTwoLines"
+import { ButtonLinkTwoLines as ButtonLinkTwoLinesComponent } from "../buttons/ButtonTwoLines"
 import { Stack } from "../flex"
 
 const meta = {
   title: "Atoms / Form / Buttons / ButtonTwoLines",
-  component: ButtonTwoLinesComponent,
-} satisfies Meta<typeof ButtonTwoLinesComponent>
+  component: ButtonLinkTwoLinesComponent,
+} satisfies Meta<typeof ButtonLinkTwoLinesComponent>
 
 export default meta
 
 type Story = StoryObj<typeof meta>
 
-export const ButtonTwoLines: Story = {
+export const ButtonLinkTwoLines: Story = {
   args: {
     icon: BiCircle,
     mainText: "Main Text",
     helperText: "Helper Text",
     className: "w-[300px]",
+    href: "#",
   },
   render: (args) => (
     <Stack className="gap-8">
-      <ButtonTwoLinesComponent {...args} />
-      <ButtonTwoLinesComponent
+      <ButtonLinkTwoLinesComponent {...args} />
+      <ButtonLinkTwoLinesComponent
         {...args}
         iconAlignment="end"
         size="sm"
