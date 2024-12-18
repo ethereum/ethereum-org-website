@@ -96,7 +96,7 @@ const LvlAccordion = ({
                         className={cn(
                           "text-md font-bold",
                           isActivePage
-                            ? "text-primary-low-contrast"
+                            ? "text-primary-high-contrast"
                             : "text-body"
                         )}
                       >
