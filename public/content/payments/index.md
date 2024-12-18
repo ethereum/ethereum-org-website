@@ -12,9 +12,9 @@ summaryPoint2: Open and global, enabling borderless transactions for everyone
 summaryPoint3: Payments received within a minute 
 ---
 
-Think about a world where a freelancer in Bali can receive payment from a client in New York in just minutes, not days. Where a small business owner in Lagos can secure a loan without ever stepping foot in a bank. 
+Every day, millions of people face the same challenge: moving money across borders is slow, expensive, and often frustrating. A freelancer in Bali waits days for payment to clear from their New York client. This particularly affects people in regions with limited banking infrastructure, making it difficult to participate in the global economy.
 
-This isn't a far-off dream – it's the reality that Ethereum is building today. Traditional institutions have had their moment in the limelight but despite the time spent building, their innovations have not evolved past a certain stage. Ethereum on the other hand is a platform that is changing how money is handled in the 21st century. It is redefining the very concept of financial transactions.
+This isn't a far-off dream – it's happening today on Ethereum. While traditional financial institutions have built robust payment systems over decades, they often remain constrained by borders, working hours, and legacy infrastructure. Ethereum offers a new paradigm: a global, 24/7 financial platform that enables near-instant, programmable transactions for anyone with internet access.
 
 <div style={{maxWidth: "320px", margin: "0 auto"}}>
 
@@ -28,8 +28,8 @@ For millions of people working abroad, sending money back home is a regular nece
 
 <CardGrid className="grid grid-cols-[repeat(auto-fill,_minmax(min(100%,_280px),_1fr))] gap-8">
   <Card title="Cheaper Fees" emoji=":money_with_wings:" description="Remittance services charge up to $14 fees on average. Ethereum transactions can often be completed under $0.01."/>
-  <Card title="Faster Transfers" emoji="📶" description="International wire transfers take several days to be processed. Ethereum transactions is typically settled within minutes." />
-  <Card title="Open to anyone" emoji="🌎" description="You only need an internet connection and a wallet app to send or receive Ether, even in areas with limited banking infrastructure." />
+  <Card title="Faster Transfers" emoji="📶" description="International wire transfers take several days to process. Ethereum transactions are settled in minutes." />
+  <Card title="Open to anyone" emoji="🌎" description="You only need an internet connection and a wallet app to send or receive Ether." />
 </CardGrid>
 
 ## Access to Global Currencies {#access-to-global-currencies}
@@ -111,7 +111,7 @@ At its core, Ethereum is a decentralized platform that allows for secure, fast, 
 
 ### Programmability {#programmability}
 
-One of Ethereum's unique features is its ability to support smart contracts. Smart contracts are self-executing agreements with the terms directly written into code. This opens up a world of possibilities for automated, condition-based payments that can greatly improve how we handle:
+One of Ethereum's unique features is its ability to support smart contracts. Smart contracts are self-executing agreements with the terms directly written into code. This opens up a world of possibilities for automated, condition-based payments that can greatly improve transactions like:
 
 - Escrow services
 - Recurring payments
@@ -119,11 +119,11 @@ One of Ethereum's unique features is its ability to support smart contracts. Sma
 
 ### Speed {#speed}
 
-Do you remember the last time you waited days for an international bank transfer to clear?, the long queue? And the multiple forms you had to fill? With Ethereum, those days are long gone. Transactions on the Ethereum network typically settle within minutes, regardless of where the sender and recipient are located. Due to Ethereum being permissionless, there is no regulatory bureaucracy when sending of money is involved. This speed is particularly crucial in time-sensitive situations, such as emergency relief efforts.
+Do you remember the last time you waited days for an international bank transfer to clear? The long queue? And the multiple forms you had to fill? With Ethereum, those days are long gone. Transactions on the Ethereum network settle in minutes, regardless of where the sender and recipient are located. Due to Ethereum being permissionless, there is no regulatory bureaucracy when sending money. This speed is particularly crucial in time-sensitive situations, such as emergency relief efforts.
 
 ### Lower Fees {#lower-fees}
 
-It is a known fact that traditional international money transfers can come with hefty fees, sometimes eating up a significant portion of the amount sent. Ethereum transactions, while not free, often come with lower fees, especially for larger amounts. This means more of your money goes where you intend it to, rather than lining the pockets of intermediaries.
+Traditional international money transfers fees sometimes eat up a significant portion of the amount sent, especially when dealing with transactions in the hundreds of dollars. Ethereum transactions, while not free, often come with lower fees. This means more of your money goes where you intend it to, rather than lining the pockets of intermediaries.
 
 ### Transparency {#transparency}
 
