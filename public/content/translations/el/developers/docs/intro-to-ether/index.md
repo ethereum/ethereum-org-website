@@ -26,7 +26,7 @@ lang: el
 
 Ως εκ τούτου, ακόμη και αν ένα κακόβουλο dapp υπέβαλε συνεχόμενες συναλλαγές, η συναλλαγή θα τελειώσει και θα τερματιστεί όταν καταναλωθούν τα ether, επιτρέποντας στο δίκτυο να επιστρέψει στο κανονικό.
 
-[Συχνά](https://www.reuters.com/article/us-crypto-currencies-lending-insight-idUSKBN25M0GP#:~:text=price%20of%20ethereum) [συγχέονται](https://www.cnn.com/2021/03/14/tech/nft-art-buying/index.html#:~:text=price%20of%20ethereum) το Ethereum και το ether, όταν αυτοί που αναφέρονται στην «τιμή του Ethereum», περιγράφουν την τιμή του ether.
+[Συχνά συγχέονται](https://abcnews.go.com/Business/bitcoin-slumps-week-low-amid-renewed-worries-chinese/story?id=78399845) το Ethereum και το ether, όταν αυτοί που αναφέρονται στην «τιμή του Ethereum», περιγράφουν την τιμή του ether.
 
 ## Κρυπτόρυξη ether {#minting-ether}
 
