@@ -14,7 +14,10 @@ const CardRow = ({ children }: ChildOnlyProp) => (
   <Flex className="mx-4 my-16 flex-wrap justify-between">{children}</Flex>
 )
 
-const SubmitBugBountyButton = ({ children, ...props }: ButtonLinkProps) => (
+const SubmitBugBountyButton = ({
+  children,
+  ...props
+}: Omit<ButtonLinkProps, "href">) => (
   <ButtonLink
     className="m-4"
     href="https://forms.gle/Gnh4gzGh66Yc3V7G8"
