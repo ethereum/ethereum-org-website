@@ -154,11 +154,11 @@ export const DocsLayout = ({
         </MainArticle>
         {tocItems && (
           <TableOfContents
+            className={isPageIncomplete ? "pt-20" : "pt-12"}
             editPath={absoluteEditPath}
             items={tocItems}
             maxDepth={frontmatter.sidebarDepth!}
             hideEditButton={!!frontmatter.hideEditButton}
-            pt={isPageIncomplete ? "5rem" : "3rem"}
           />
         )}
       </div>
