@@ -355,3 +355,7 @@ DeFi एक ओपन-सोर्स गतिविधि है। DeFi प�
 
 - [DeFi Llama Discord सर्वर](https://discord.defillama.com/)
 - [DeFi Pulse Discord सर्वर](https://discord.gg/Gx4TCTk)
+
+<Divider />
+
+<QuizWidget quizKey="defi" />
