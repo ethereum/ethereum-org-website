@@ -1,18 +1,20 @@
 import { Meta, StoryObj } from "@storybook/react"
+import { fn } from "@storybook/test"
 
-import ModalComponent from "."
+import ModalComponent from "../dialog-modal"
 
 const meta = {
   title: "Molecules/Overlay Content/Modal",
   component: ModalComponent,
   args: {
-    isOpen: true,
+    defaultOpen: true,
     title: "Modal Title",
     children:
       "This is the base component to be used in the modal window. Please change the text to preview final content for ethereum.org",
-    actionButtonLabel: "Save",
-    // Required prop, but not used in the current stories
-    onClose: () => {},
+    actionButton: {
+      label: "Save",
+      onClick: fn(),
+    },
   },
 } satisfies Meta<typeof ModalComponent>
 
@@ -22,8 +24,8 @@ type Story = StoryObj<typeof meta>
 
 export const Modal: Story = {}
 
-export const Full: Story = {
+export const Xl: Story = {
   args: {
-    size: "full",
+    size: "xl",
   },
 }
