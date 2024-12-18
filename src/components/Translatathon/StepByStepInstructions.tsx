@@ -1,8 +1,8 @@
-import { Center, Flex, Text } from "@chakra-ui/react"
-
 import { ButtonLink } from "@/components/Buttons"
 
 import { CROWDIN_PROJECT_URL } from "@/lib/constants"
+
+import { Center, Flex } from "../ui/flex"
 
 import {
   APPLICATION_END_DATE,
@@ -70,46 +70,23 @@ export const StepByStepInstructions = () => {
   const appLive = todaysDate >= appStartDate && todaysDate <= appEndDate
 
   return (
-    <Flex w="full" flexDir="column">
+    <Flex className="w-full flex-col">
       {instructions.map((instruction, index) => (
         <Flex
           key={index}
-          w="full"
-          justifyContent="space-between"
-          p={4}
-          borderBottom="1px solid"
-          borderColor="body.light"
-          gap={4}
-          flexDir={{ base: "column", md: "row" }}
-          alignItems={{ base: "left", md: "center" }}
+          className="w-full flex-col items-start justify-between gap-4 border-b border-body-light p-4 md:flex-row md:items-center"
         >
-          <Flex
-            gap={4}
-            flexDir={{ base: "column", md: "row" }}
-            alignItems={{ base: "left", md: "center" }}
-          >
-            <Center
-              minWidth="46px"
-              maxWidth="46px"
-              h="46px"
-              borderRadius={8}
-              background="background.base"
-              boxShadow="2px 6px 18px 0px rgba(0, 0, 0, 0.10)"
-              p={1}
-            >
-              <Text fontSize="4xl" fontWeight="bold" color="primary.base">
-                {index + 1}
-              </Text>
+          <Flex className="flec-col align-left md:align-center gap-4 md:flex-row">
+            <Center className="bg-background-base h-[46px] min-w-[46px] max-w-[46px] rounded-lg p-1 shadow-[2px_6px_18px_rgba(0,0,0,0.1)]">
+              <p className="text-4xl font-bold text-primary">{index + 1}</p>
             </Center>
-            <Flex flexDir="column">
-              <Text fontSize="xl" fontWeight="bold">
-                {instruction.title}
-              </Text>
-              <Text>{instruction.description}</Text>
+            <Flex className="flex-col">
+              <p className="text-xl font-bold">{instruction.title}</p>
+              <p>{instruction.description}</p>
             </Flex>
           </Flex>
           {instruction.ctaLink ? (
-            <Flex height="42px">
+            <Flex className="h-[42px]">
               <ButtonLink
                 href={instruction.ctaLink}
                 variant="outline"
@@ -119,7 +96,7 @@ export const StepByStepInstructions = () => {
               </ButtonLink>
             </Flex>
           ) : (
-            <Flex w="140px" />
+            <Flex className="w-[140px]" />
           )}
         </Flex>
       ))}
