@@ -237,7 +237,8 @@ const CentralColumn = (props: ChildOnlyProp) => (
 )
 
 const CentralActionCard = (props: ComponentProps<typeof ActionCard>) => (
-  <ActionCard
+  <Box
+    as={ActionCard}
     display={{ base: "block", sm: "flex" }}
     flex="none"
     my={8}
