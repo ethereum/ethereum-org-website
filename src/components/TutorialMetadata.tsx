@@ -1,6 +1,6 @@
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
-import { Badge, Box, Flex, HStack, Text } from "@chakra-ui/react"
+import { Badge } from "@chakra-ui/react"
 
 import type { Lang, TranslationKey } from "@/lib/types"
 import { TutorialFrontmatter } from "@/lib/interfaces"
@@ -12,6 +12,8 @@ import Translation from "@/components/Translation"
 import TutorialTags from "@/components/TutorialTags"
 
 import { getLocaleTimestamp } from "@/lib/utils/time"
+
+import { Flex } from "./ui/flex"
 
 export type TutorialMetadataProps = {
   frontmatter: TutorialFrontmatter
@@ -25,8 +27,7 @@ export enum Skill {
 }
 
 export const getSkillTranslationId = (skill: Skill): TranslationKey =>
-  `page-developers-tutorials:page-tutorial-${
-    Skill[skill.toUpperCase() as keyof typeof Skill]
+  `page-developers-tutorials:page-tutorial-${Skill[skill.toUpperCase() as keyof typeof Skill]
   }`
 
 const TutorialMetadata = ({
@@ -42,101 +43,61 @@ const TutorialMetadata = ({
   const address = frontmatter.address
 
   return (
-    <Flex
-      flexDirection="column"
-      justifyContent="space-between"
-      borderBottomWidth={{ base: 0, lg: "1px" }}
-      borderBottomColor="border"
-    >
-      <Flex justifyContent="space-between" alignItems="center" w="full" mb={8}>
-        <Flex flexWrap="wrap" w="full">
+    <Flex className="flex-col justify-between border-b-0 border-border pb-2 lg:border-b">
+      <Flex className="mb-8 w-full items-center justify-between">
+        <Flex className="w-full flex-wrap">
           <TutorialTags tags={frontmatter.tags} />
         </Flex>
-        <Flex
-          as={Badge}
+        <Badge
           variant="secondary"
-          alignSelf="flex-start"
-          mb={2}
-          whiteSpace="nowrap"
+          className="mb-2 self-start whitespace-nowrap"
         >
           {t(getSkillTranslationId(frontmatter.skill as Skill))}
-        </Flex>
+        </Badge>
       </Flex>
-      <HStack
-        mb={6}
-        flexWrap="wrap"
-        mt={-4}
-        fontSize="sm"
-        color="text300"
-        justifyContent="flex-start"
-        alignItems="flex-start"
-        spacing={4}
-      >
+      <Flex className="text-text300 mb-6 mt-[-1rem] flex-wrap gap-4 text-sm">
         {author && (
-          <Box>
+          <div>
             <Emoji className="me-2 text-sm" text=":writing_hand:" />
             {author}
-          </Box>
+          </div>
         )}
         {hasSource && (
-          <Box>
+          <div>
             <Emoji className="me-2 text-sm" text=":books:" />
             <InlineLink href={frontmatter.sourceUrl}>
               {frontmatter.source}
             </InlineLink>
-          </Box>
+          </div>
         )}
         {published && (
-          <Box>
+          <div>
             <Emoji className="me-2 text-sm" text=":calendar:" />{" "}
             {getLocaleTimestamp(locale! as Lang, published)}
-          </Box>
+          </div>
         )}
-        <Box>
+        <div>
           <Emoji className="me-2 text-sm" text=":stopwatch:" />
           {timeToRead} {t("comp-tutorial-metadata-minute-read")} minute read
-        </Box>
-      </HStack>
-      <HStack
-        mb={6}
-        flexWrap="wrap"
-        mt={-4}
-        fontSize="sm"
-        color="text300"
-        justifyContent="flex-start"
-      >
-        {address && (
-          <Flex flexWrap="wrap" w="full" me={4}>
-            <CopyToClipboard text={address}>
-              {(isCopied) => (
-                <Box
-                  color="primary.base"
-                  cursor="pointer"
-                  overflow="hidden"
-                  textOverflow="ellipsis"
-                  fontFamily="monospace"
-                  bg="ednBackground"
-                  px={1}
-                  fontSize="sm"
-                  _hover={{
-                    bg: "primary100",
-                  }}
-                >
-                  <Text
-                    as={Translation}
-                    textTransform="uppercase"
-                    id="comp-tutorial-metadata-tip-author"
-                  />{" "}
-                  {address} {isCopied && <Translation id="copied" />}
-                  {isCopied && (
-                    <Emoji className="me-2 text-sm" text=":white_check_mark:" />
-                  )}
-                </Box>
-              )}
-            </CopyToClipboard>
-          </Flex>
-        )}
-      </HStack>
+        </div>
+      </Flex>
+      {address && (
+        <Flex className="text-text300 mb-6 mt-[-1rem] flex-wrap text-sm">
+          <CopyToClipboard text={address}>
+            {(isCopied) => (
+              <div className="bg-ednBackground hover:bg-primary100 cursor-pointer overflow-hidden text-ellipsis px-1 font-mono text-sm text-primary">
+                <div className="uppercase">
+                  <Translation id="comp-tutorial-metadata-tip-author" />{" "}
+                </div>
+                {address} {isCopied && <Translation id="copied" />}
+                {isCopied && (
+                  <Emoji className="mr-2 text-sm" text=":white_check_mark:" />
+                )}
+              </div>
+            )}
+          </CopyToClipboard>
+        </Flex>
+      )}
     </Flex>
   )
 }
