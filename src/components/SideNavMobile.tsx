@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
 import { useTranslation } from "next-i18next"
 import { MdChevronRight } from "react-icons/md"
-import { Box, Center, HStack, Icon } from "@chakra-ui/react"
+import { Box } from "@chakra-ui/react"
 
 import type { ChildOnlyProp, TranslationKey } from "@/lib/types"
 import { DeveloperDocsLink } from "@/lib/interfaces"
@@ -11,6 +11,7 @@ import { BaseLink, LinkProps } from "@/components/Link"
 
 import docLinks from "@/data/developer-docs-links.yaml"
 
+import { Center, HStack } from "./ui/flex"
 import {
   dropdownIconContainerVariant,
   type NavLinkProps as SideNavLinkProps,
@@ -48,16 +49,7 @@ const innerLinksVariants = {
 
 const LinkContainer = ({ children }: ChildOnlyProp) => {
   return (
-    <HStack
-      w="full"
-      justify="space-between"
-      py={2}
-      pe={8}
-      ps={2}
-      _hover={{
-        bgColor: "ednBackground",
-      }}
-    >
+    <HStack className="w-full justify-between py-2 pe-8 ps-2 hover:bg-[ednBackground]">
       {children}
     </HStack>
   )
@@ -113,7 +105,7 @@ const NavLink = ({ item, path, toggle }: NavLinkProps) => {
             variants={dropdownIconContainerVariant}
             animate={isOpen ? "open" : "closed"}
           >
-            <Icon as={MdChevronRight} boxSize={6} color="secondary" />
+            <MdChevronRight className="h-6 w-6" color="secondary" />
           </Box>
         </LinkContainer>
         <Box
@@ -169,30 +161,23 @@ const SideNavMobile = ({ path }: SideNavMobileProps) => {
       w="full"
       hideFrom="lg"
     >
-      <Center
-        as={motion.div}
-        fontWeight="medium"
-        color="primary.base"
-        cursor="pointer"
-        py={4}
-        px={8}
-        boxSizing="border-box"
-        bg="ednBackground"
-        borderBottom="1px solid"
-        borderBottomColor="border"
-        onClick={() => setIsOpen(!isOpen)}
-      >
-        <Box me={2}>{t(pageTitleId)}</Box>
-        <Box
-          as={motion.div}
-          cursor="pointer"
-          display="flex"
-          variants={dropdownIconContainerVariant}
-          animate={isOpen ? "open" : "closed"}
+      <motion.div>
+        <Center
+          className="box-border cursor-pointer border-b border-b-current bg-[ednBackground] px-8 py-4 font-medium text-[primary.base]"
+          onClick={() => setIsOpen(!isOpen)}
         >
-          <Icon as={MdChevronRight} boxSize={6} color="secondary" />
-        </Box>
-      </Center>
+          <Box me={2}>{t(pageTitleId)}</Box>
+          <Box
+            as={motion.div}
+            cursor="pointer"
+            display="flex"
+            variants={dropdownIconContainerVariant}
+            animate={isOpen ? "open" : "closed"}
+          >
+            <MdChevronRight className="h-6 w-6" color="secondary" />
+          </Box>
+        </Center>
+      </motion.div>
       <AnimatePresence>
         {isOpen && (
           <Box
