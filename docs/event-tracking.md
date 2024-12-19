@@ -37,7 +37,7 @@ It's helpful to ask yourself how the results of what we track and measure might 
 
 Broadly, events should be grouped by specific topic (e.g. L2 page external links, selected bridge, selected cex).
 
-## Each event comprises of 4 hierarchical values:
+## Each event comprises 4 hierarchical values:
 
 1. Category (other events may share the same category if one feature has several actions)
 2. Action
