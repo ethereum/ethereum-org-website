@@ -6,7 +6,7 @@ description: Our criteria for adding new terms to the ethereum.org glossary
 
 # Adding glossary terms {#contributing-to-ethereumorg-}
 
-This space is changing every day. New terms are constantly entering the lexicon of Ethereum users, and we need your help providing an accurate, up to date reference for all things Ethereum. Check out the current [glossary](/glossary/) and see below if you want to help!
+This space is changing every day. New terms are constantly entering the lexicon of Ethereum users, and we need your help providing an accurate, up-to-date reference for all things Ethereum. Check out the current [glossary](/glossary/) and see below if you want to help!
 
 ## Criteria {#criteria}
 
