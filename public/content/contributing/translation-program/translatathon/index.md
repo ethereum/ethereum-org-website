@@ -86,9 +86,9 @@ For more details, [see the full Terms & conditions](/contributing/translation-pr
 ## Stay up to date
 
 <TranslationHubCallout>
-  <h3 style={{margin:0}}>Translataton hubs</h3>
+  <h3 style={{margin:0}}>Translatathon hubs</h3>
 
-  This year we bring IRL community hugs to join local communities and help translate. These hubs are located all over the world, find out if there is one close to you and join the community!
+  This year we bring IRL community hubs to join local communities and help translate. These hubs are located all over the world, find out if there is one close to you and join the community!
 </TranslationHubCallout>
 
 <TranslatathonCalendar />
