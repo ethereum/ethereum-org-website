@@ -502,5 +502,11 @@
     "emoji": ":iran:",
     "location": "Tehran",
     "link": "https://lu.ma/decaffeth"
-  }
+  },
+  {
+    "title": "ETHCluj Meetup",
+    "emoji": ":romania:",
+    "location": "Cluj-Napoca",
+    "link": "https://www.meetup.com/ethcluj"
+  }    
 ]
