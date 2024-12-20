@@ -495,6 +495,17 @@ const chains = [
     chain: "ETH",
   },
   {
+    name: "River",
+    infoURL: "https://towns-mainnet.hub.caldera.xyz",
+    chainId: 550,
+    nativeCurrency: {
+      name: "Ether",
+      symbol: "ETH",
+      decimals: 18,
+    },
+    chain: "river",
+  },
+  {
     name: "Redstone",
     infoURL: "https://redstone.xyz",
     chainId: 690,
@@ -1122,6 +1133,17 @@ const chains = [
     chain: "ETHW",
   },
   {
+    name: "Fluent Developer Preview",
+    infoURL: "https://fluent.xyz",
+    chainId: 20993,
+    nativeCurrency: {
+      name: "Ether",
+      symbol: "ETH",
+      decimals: 18,
+    },
+    chain: "Fluent",
+  },
+  {
     name: "Lestnet",
     infoURL: "https://lestnet.org",
     chainId: 21363,
@@ -1329,6 +1351,17 @@ const chains = [
       decimals: 18,
     },
     chain: "Lambda Chain",
+  },
+  {
+    name: "Ink",
+    infoURL: "https://inkonchain.com",
+    chainId: 57073,
+    nativeCurrency: {
+      name: "Ether",
+      symbol: "ETH",
+      decimals: 18,
+    },
+    chain: "ETH",
   },
   {
     name: "Linea",
@@ -1638,6 +1671,17 @@ const chains = [
       decimals: 18,
     },
     chain: "DUSTBOY",
+  },
+  {
+    name: "Zether Mainnet",
+    infoURL: "https://zether.org",
+    chainId: 715131,
+    nativeCurrency: {
+      name: "Zether",
+      symbol: "ZTH",
+      decimals: 18,
+    },
+    chain: "Zether",
   },
   {
     name: "zkLink Nova Mainnet",
