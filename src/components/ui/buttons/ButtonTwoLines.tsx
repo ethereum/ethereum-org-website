@@ -50,7 +50,7 @@ export const ButtonTwoLines = ({
   const isIconLeft = ["left", "start"].includes(iconAlignment)
 
   const [childProps, ownProps] = createSplitProps<ButtonTwoLinesProps>()(
-    { ...props, isIconLeft },
+    { ...props, isIconLeft, size },
     [
       "reverseTextOrder",
       "mainText",
@@ -91,7 +91,7 @@ export const ButtonLinkTwoLines = ({
   const isIconLeft = ["left", "start"].includes(iconAlignment)
 
   const [childProps, ownProps] = createSplitProps<ButtonLinkTwoLinesProps>()(
-    { ...props, isIconLeft },
+    { ...props, isIconLeft, size },
     [
       "reverseTextOrder",
       "mainText",
