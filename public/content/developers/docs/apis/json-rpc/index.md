@@ -143,8 +143,6 @@ You can use the [playground tool](https://ethereum-json-rpc.com) to discover and
 
 Returns the current client version.
 
-[![Try this endpoint](./playground.svg)](https://ethereum-json-rpc.com/?method=web3_clientVersion)
-
 **Parameters**
 
 None
@@ -169,8 +167,6 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"web3_clientVersion","params":[],
 ### web3_sha3 {#web3_sha3}
 
 Returns Keccak-256 (_not_ the standardized SHA3-256) of the given data.
-
-[![Try this endpoint](./playground.svg)](https://ethereum-json-rpc.com/?method=web3_sha3)
 
 **Parameters**
 
@@ -200,8 +196,6 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"web3_sha3","params":["0x68656c6c
 ### net_version {#net_version}
 
 Returns the current network id.
-
-[![Try this endpoint](./playground.svg)](https://ethereum-json-rpc.com/?method=net_version)
 
 **Parameters**
 
@@ -234,8 +228,6 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"net_version","params":[],"id":67
 
 Returns `true` if client is actively listening for network connections.
 
-[![Try this endpoint](./playground.svg)](https://ethereum-json-rpc.com/?method=net_listening)
-
 **Parameters**
 
 None
@@ -261,8 +253,6 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"net_listening","params":[],"id":
 
 Returns number of peers currently connected to the client.
 
-[![Try this endpoint](./playground.svg)](https://ethereum-json-rpc.com/?method=net_peerCount)
-
 **Parameters**
 
 None
@@ -287,8 +277,6 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"net_peerCount","params":[],"id":
 ### eth_protocolVersion {#eth_protocolversion}
 
 Returns the current Ethereum protocol version. Note that this method is [not available in Geth](https://github.com/ethereum/go-ethereum/pull/22064#issuecomment-788682924).
-
-[![Try this endpoint](./playground.svg)](https://ethereum-json-rpc.com/?method=eth_protocolVersion)
 
 **Parameters**
 
@@ -695,6 +683,8 @@ curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": [
 ### eth_getTransactionCount {#eth_gettransactioncount}
 
 Returns the number of transactions _sent_ from an address.
+
+[![Try this endpoint](./playground.svg)](https://ethereum-json-rpc.com/?method=eth_getTransactionCount)
 
 **Parameters**
 
@@ -1271,6 +1261,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByHash","param
 Returns information about a transaction by block hash and transaction index position.
 
 [![Try this endpoint](./playground.svg)](https://ethereum-json-rpc.com/?method=eth_getTransactionByBlockHashAndIndex)
+
 **Parameters**
 
 1. `DATA`, 32 Bytes - hash of a block.
