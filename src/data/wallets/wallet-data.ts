@@ -789,7 +789,7 @@ export const walletsData: WalletData[] = [
     twGradiantBrandColor: "from-[#6A12D0]",
     url: "https://www.pillar.fi/",
     active_development_team: true,
-    languages_supported: ["en", "bs", "zh"],
+    languages_supported: ["am", "en", "bs", "zh"],
     twitter: "https://twitter.com/PillarWallet",
     discord: "https://chat.pillar.fi/",
     reddit: "",
