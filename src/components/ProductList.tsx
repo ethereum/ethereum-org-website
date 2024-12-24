@@ -32,7 +32,7 @@ const ProductList = ({ actionLabel, content, category }: ProductListProps) => {
       >
         {category}
       </h3>
-      <List aria-labelledby={CATEGORY_NAME} className="m-0 flex-col">
+      <List aria-labelledby={CATEGORY_NAME} className="m-0">
         {content.map(({ title, description, link, image, alt, id }, idx) => (
           <ListItem key={id || idx} color="text" className="mb-0 mt-8 flex">
             <div className="w-20">
@@ -45,7 +45,7 @@ const ProductList = ({ actionLabel, content, category }: ProductListProps) => {
                 />
               )}
             </div>
-            <Flex className="ms-4 w-full flex-col justify-between border-b border-border pb-4 sm:ms-6 sm:flex-row">
+            <Flex className="ms-4 w-full flex-col justify-between border-b pb-4 sm:ms-6 sm:flex-row">
               <div className="flex-1">
                 <div>{title}</div>
                 <div className="mb-0 text-sm opacity-60">{description}</div>
