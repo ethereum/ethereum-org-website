@@ -16,7 +16,7 @@ import Emoji from "./Emoji"
 const RadioCard = ({ value, children, checked, onChange }) => {
   return (
     <Button
-      variant="outline"
+      variant="ghost"
       onClick={() => onChange(value)}
       className={cn(
         "m-2 mx-0 flex h-full w-full items-center justify-center rounded-full px-6 py-4 lg:mx-2 lg:w-auto",
@@ -96,7 +96,7 @@ const TranslationLeaderboard = ({
           )}
         </RadioCard>
       </Flex>
-      <div className="mb-8 w-full bg-background shadow-md">
+      <div className="mb-8 w-full bg-background-highlight shadow-md">
         <Flex className="bg-muted text-foreground mb-[1px] w-full items-center justify-between p-4">
           <Flex>
             <div className="w-10 opacity-40">#</div>
@@ -168,7 +168,7 @@ const TranslationLeaderboard = ({
       </div>
       <Flex className="mb-8 w-full flex-col justify-center px-8 py-0 lg:flex-row">
         <Button
-          variant="outline"
+          variant="ghost"
           onClick={filterAmount === 10 ? showMore : showLess}
           className="m-2 mx-0 flex h-full w-full items-center justify-center rounded-full px-6 py-4 lg:mx-2 lg:w-auto"
         >
