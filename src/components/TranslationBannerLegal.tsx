@@ -35,7 +35,7 @@ const TranslationBannerLegal = ({
   return (
     <aside
       className={cn(
-        "fixed z-50",
+        "fixed z-popover bg-background-highlight",
         "bottom-0 md:bottom-8",
         "right-0 md:right-8",
         isOpen ? "block" : "hidden"
@@ -46,18 +46,14 @@ const TranslationBannerLegal = ({
           "relative flex justify-between",
           "w-full md:max-w-[600px]",
           "rounded-sm p-4",
-          "bg-info-banner text-black-300",
-          "shadow-[rgba(0,0,0,0.16)_0px_2px_4px_0px] md:shadow-md"
+          "shadow-md"
         )}
       >
-        <div className="m-4 mt-[40px] flex flex-col sm:mt-4">
-          <div className="mb-4 flex flex-col-reverse items-start sm:flex-row sm:items-center">
-            <h3 className="text-xl font-bold leading-none md:text-2xl">
+        <div className="m-4 mt-10 flex flex-col gap-4 sm:mt-4">
+          <div className="flex flex-col-reverse items-start sm:flex-row sm:items-center">
+            <h3 className="leading-none md:text-2xl">
               <Translation id="translation-banner-no-bugs-title" />
-              <Emoji
-                text=":bug:"
-                className="mb-4 ms-2 pt-2 text-3xl sm:mb-auto"
-              />
+              <Emoji text=":bug:" className="ms-2 text-3xl sm:mb-auto" />
             </h3>
           </div>
           <p>
@@ -65,7 +61,6 @@ const TranslationBannerLegal = ({
           </p>
           <div className="flex flex-col items-start sm:flex-row sm:items-center">
             <Button
-              variant="link"
               onClick={() => {
                 localStorage.setItem(
                   `dont-show-translation-legal-banner-${originalPagePath}`,
@@ -78,17 +73,16 @@ const TranslationBannerLegal = ({
             </Button>
           </div>
         </div>
-        <button
-          type="button"
+        <Button
+          variant="ghost"
           className={cn(
-            "absolute right-0 top-0 m-4",
-            "rounded-sm p-2",
+            "absolute right-0 top-0 m-4 p-2",
             "text-secondary hover:text-primary"
           )}
           onClick={() => setIsOpen(false)}
         >
           <MdClose className="h-4 w-4" />
-        </button>
+        </Button>
       </div>
     </aside>
   )
