@@ -26,9 +26,7 @@ const Trilemma = () => {
   return (
     <Flex className="flex-col items-center justify-between space-y-8 lg:flex-row lg:space-x-12 lg:space-y-0">
       <Stack className="mt-16 space-y-8 md:mx-12 md:mt-20 lg:mb-20 lg:mr-0 lg:flex-[0_1_500px]">
-        <h2 className="text-4xl font-bold">
-          {t("page-roadmap-vision-trilemma-h2")}
-        </h2>
+        <h2>{t("page-roadmap-vision-trilemma-h2")}</h2>
         <VStack className="space-y-6">
           <p>{t("page-roadmap-vision-trilemma-p")}</p>
           <p>{t("page-roadmap-vision-trilemma-p-1")}</p>
@@ -62,7 +60,9 @@ const Trilemma = () => {
         </SheetContent>
       </Sheet>
 
-      <TriangleSVG {...triangleSVGProps} />
+      <div>
+        <TriangleSVG {...triangleSVGProps} />
+      </div>
     </Flex>
   )
 }
