@@ -9,6 +9,7 @@ import type { Lang } from "@/lib/types"
 import { Button } from "@/components/ui/buttons/Button"
 import { Flex } from "@/components/ui/flex"
 
+import { cn } from "@/lib/utils/cn"
 import { isLangRightToLeft } from "@/lib/utils/translations"
 
 import Emoji from "./Emoji"
@@ -41,11 +42,15 @@ const TranslationBanner = ({
     ? "translation-banner-body-new"
     : "translation-banner-body-update"
 
-  if (!isOpen) return null
-
   return (
-    <aside className="fixed bottom-0 end-0 z-50 md:bottom-8 md:end-8" dir={dir}>
-      <div className="bg-info-banner relative max-h-full max-w-full p-4 text-neutral-900 shadow-md md:max-w-[600px] md:rounded-sm">
+    <aside
+      className={cn(
+        "fixed bottom-0 end-0 z-popover md:bottom-8 md:end-8",
+        isOpen ? "block" : "hidden"
+      )}
+      dir={dir}
+    >
+      <div className="bg-infoBanner relative max-h-full max-w-full p-4 text-neutral-900 shadow-md md:max-w-[600px] md:rounded-sm">
         <Flex className="m-4 mt-10 flex-col sm:mt-4">
           <Flex className="mb-4 flex-col-reverse items-start sm:flex-row sm:items-center">
             <h3 className="my-0 text-2xl font-bold leading-none">
@@ -59,7 +64,7 @@ const TranslationBanner = ({
           <p>{t(bodyTextId)}</p>
           <Flex className="flex-col items-start sm:flex-row sm:items-center">
             <div>
-              <Button asChild variant="solid">
+              <Button asChild variant="link">
                 <Link href="/contributing/translation-program/">
                   {t("translation-banner-button-translate-page")}
                 </Link>
