@@ -1,7 +1,6 @@
-import { ButtonLink } from "@/components/Buttons"
-
 import { CROWDIN_PROJECT_URL } from "@/lib/constants"
 
+import { Button, ButtonLink } from "../ui/buttons/Button"
 import { Center, Flex } from "../ui/flex"
 
 import {
@@ -71,35 +70,41 @@ export const StepByStepInstructions = () => {
 
   return (
     <Flex className="w-full flex-col">
-      {instructions.map((instruction, index) => (
-        <Flex
-          key={index}
-          className="w-full flex-col items-start justify-between gap-4 border-b border-body-light p-4 md:flex-row md:items-center"
-        >
-          <Flex className="flec-col align-left md:align-center gap-4 md:flex-row">
-            <Center className="bg-background-base h-[46px] min-w-[46px] max-w-[46px] rounded-lg p-1 shadow-[2px_6px_18px_rgba(0,0,0,0.1)]">
-              <p className="text-4xl font-bold text-primary">{index + 1}</p>
-            </Center>
-            <Flex className="flex-col">
-              <p className="text-xl font-bold">{instruction.title}</p>
-              <p>{instruction.description}</p>
+      {instructions.map((instruction, index) => {
+        const isDisabled = instruction.ctaLink === APPLICATION_URL && !appLive
+
+        return (
+          <Flex
+            key={index}
+            className="w-full flex-col items-start justify-between gap-4 border-b border-body-light p-4 md:flex-row md:items-center"
+          >
+            <Flex className="flex-col items-start gap-4 md:flex-row md:items-center">
+              <Center className="h-[46px] min-w-[46px] max-w-[46px] rounded-lg bg-background p-1 shadow">
+                <p className="text-4xl font-bold text-primary">{index + 1}</p>
+              </Center>
+              <Flex className="flex-col">
+                <p className="text-xl font-bold">{instruction.title}</p>
+                <p>{instruction.description}</p>
+              </Flex>
             </Flex>
+            {instruction.ctaLink ? (
+              <Flex className="h-[42px]">
+                {isDisabled ? (
+                  <Button variant="outline" disabled>
+                    {instruction.ctaLabel}
+                  </Button>
+                ) : (
+                  <ButtonLink href={instruction.ctaLink} variant="outline">
+                    {instruction.ctaLabel}
+                  </ButtonLink>
+                )}
+              </Flex>
+            ) : (
+              <Flex className="w-[140px]" />
+            )}
           </Flex>
-          {instruction.ctaLink ? (
-            <Flex className="h-[42px]">
-              <ButtonLink
-                href={instruction.ctaLink}
-                variant="outline"
-                isDisabled={instruction.ctaLink === APPLICATION_URL && !appLive}
-              >
-                {instruction.ctaLabel}
-              </ButtonLink>
-            </Flex>
-          ) : (
-            <Flex className="w-[140px]" />
-          )}
-        </Flex>
-      ))}
+        )
+      })}
     </Flex>
   )
 }
