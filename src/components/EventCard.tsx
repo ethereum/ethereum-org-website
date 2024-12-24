@@ -38,7 +38,7 @@ const EventCard: React.FC<EventCardProps> = ({
   return (
     <Card className={cn("flex h-full flex-col rounded-md border", className)}>
       <CardHeader className="flex flex-row items-center justify-center rounded-t-md border-b border-primary bg-[#FCFCFC] p-2 dark:bg-[#272627]">
-        <BsCalendar3 className="mr-2 h-6 w-6 text-primary" />
+        <BsCalendar3 className="me-2 h-6 w-6 text-primary" />
         <span className="!mt-0 text-right text-sm text-primary">
           {formatedDate}
         </span>
@@ -48,6 +48,10 @@ const EventCard: React.FC<EventCardProps> = ({
           <img
             src={imageUrl}
             alt={title}
+            onError={(e) => {
+              e.currentTarget.onerror = null
+              e.currentTarget.src = EventFallback.src
+            }}
             className="max-h-[224px] w-full object-cover xl:h-[124px]"
           />
         ) : (

@@ -44,10 +44,10 @@ import {
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 import { cn } from "@/lib/utils/cn"
+import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { trackCustomEvent } from "@/lib/utils/matomo"
-import { runOnlyOnce } from "@/lib/utils/runOnlyOnce"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 import {
   getLocaleForNumberFormat,
@@ -172,13 +172,15 @@ const Image400 = ({ src }: Pick<ImageProps, "src">) => (
   <TwImage src={src} alt="" width={400} />
 )
 
-const cachedFetchTxCount = runOnlyOnce(fetchGrowThePie)
-
 type Props = BasePageProps & {
   data: MetricReturnData
 }
 
+const loadData = dataLoader([["growThePieData", fetchGrowThePie]])
+
 export const getStaticProps = (async ({ locale }) => {
+  const [data] = await loadData()
+
   const lastDeployDate = getLastDeployDate()
   const lastDeployLocaleTimestamp = getLocaleTimestamp(
     locale as Lang,
@@ -188,8 +190,6 @@ export const getStaticProps = (async ({ locale }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("/what-is-ethereum")
 
   const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
-
-  const data = await cachedFetchTxCount()
 
   return {
     props: {
@@ -354,7 +354,20 @@ const WhatIsEthereumPage = ({
                       <Stack className="gap-6">
                         <p>{t("page-what-is-ethereum-summary-desc-1")}</p>
                         <p>{t("page-what-is-ethereum-summary-desc-2")}</p>
-                        <p>{t("page-what-is-ethereum-summary-desc-3")}</p>
+                        <ul>
+                          <li>
+                            <Translation id="page-what-is-ethereum:page-what-is-ethereum-summary-bullet-1" />
+                          </li>
+                          <li>
+                            <Translation id="page-what-is-ethereum:page-what-is-ethereum-summary-bullet-2" />
+                          </li>
+                          <li>
+                            <Translation id="page-what-is-ethereum:page-what-is-ethereum-summary-bullet-3" />
+                          </li>
+                          <li>
+                            <Translation id="page-what-is-ethereum:page-what-is-ethereum-summary-bullet-4" />
+                          </li>
+                        </ul>
                       </Stack>
                     </Stack>
                   </Summary>
@@ -820,7 +833,7 @@ const WhatIsEthereumPage = ({
             </p>
 
             <p>
-              <InlineLink href="https://www.kernel.community/en/learn/module-1/dreamers">
+              <InlineLink href="https://read.kernel.community/en/learn/module-1/dreamers">
                 {t("page-what-is-ethereum-kernel-dreamers")}
               </InlineLink>{" "}
               {t("page-what-is-ethereum-kernel-dreamers-desc")}
@@ -834,8 +847,6 @@ const WhatIsEthereumPage = ({
           </Column>
           <CardContainer>
             <Callout
-              flex="1 1 416px"
-              minH="full"
               image={ethImg}
               titleKey="page-what-is-ethereum:page-what-is-ethereum-get-eth-title"
               alt={t("page-what-is-ethereum-get-eth-alt")}
@@ -848,12 +859,11 @@ const WhatIsEthereumPage = ({
               </div>
             </Callout>
             <Callout
-              flex="1 1 416px"
-              minH="full"
               image={dogeComputerImg}
               titleKey="page-what-is-ethereum:page-what-is-ethereum-explore-dapps-title"
               alt={t("page-what-is-ethereum-explore-dapps-alt")}
               descriptionKey="page-what-is-ethereum:page-what-is-ethereum-explore-dapps-description"
+              className="h-full"
             >
               <div>
                 <ButtonLink href="/dapps/">

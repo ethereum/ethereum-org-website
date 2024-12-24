@@ -13,14 +13,14 @@ Az Ethereum és a közössége befogadja az nyílt forráskódot. Közösségi p
 Válasszon nyelvet, hogy megtalálja a kapcsolódó projekteket, anyagokat és a virtuális közösségeket:
 
 - [Ethereum Dart-fejlesztők számára](/developers/docs/programming-languages/dart/)
-- [Ethereum Delphi-fejlesztők számára](/developers/docs/programming-languages/delphi/)
-- [Ethereum .NET-fejlesztők számára](/developers/docs/programming-languages/dot-net/)
+- [Ethereum Delphi fejlesztőknek](/developers/docs/programming-languages/delphi/)
+- [Ethereum .NET fejlesztőknek](/developers/docs/programming-languages/dot-net/)
 - [Ethereum Go fejlesztőknek](/developers/docs/programming-languages/golang/)
-- [Ethereum Java-fejlesztők számára](/developers/docs/programming-languages/java/)
+- [Ethereum Java fejlesztőknek](/developers/docs/programming-languages/java/)
 - [Ethereum JavaScript fejlesztőknek](/developers/docs/programming-languages/javascript/)
 - [Ethereum Python-fejlesztők számára](/developers/docs/programming-languages/python/)
 - [Ethereum Ruby-fejlesztők számára](/developers/docs/programming-languages/ruby/)
-- [Ethereum Rust-fejlesztők számára](/developers/docs/programming-languages/rust/)
+- [Ethereum Rust fejlesztőknek](/developers/docs/programming-languages/rust/)
 
 ### Mi a helyzet, ha az én nyelvem nem támogatott {#other-lang}
 

@@ -31,7 +31,12 @@ Başlamadan önce temel bilgilere mi ihtiyacınız var? [ethereum.org/learn](/le
 - [Ethereum Akıllı Sözleşmesi Olaylarını Dinlemek](https://kauri.io/article/760f495423db42f988d17b8c145b0874/listening-for-ethereum-smart-contract-events-in-java)
 - [Java Ethereum İstemcisi olan Besu'yu (Pantheon) Linux'la kullanmak](https://kauri.io/article/276dd27f1458443295eea58403fd6965/using-pantheon-the-java-ethereum-client-with-linux)
 - [Java Entegrasyon Testlerinde Hyperledger Besu (Pantheon) Düğümü Çalıştırma](https://kauri.io/article/7dc3ecc391e54f7b8cbf4e5fa0caf780/running-a-pantheon-node-in-java-integration-tests)
-- [Web3j Kopya Kağıdı](<https://kauri.io/web3j-cheat-sheet-(java-ethereum)/5dfa1ea941ac3d0001ce1d90/c>)
+- [Web3j Kopya Kağıdı](https://kauri.io/web3j-cheat-sheet-(java-ethereum)/5dfa1ea941ac3d0001ce1d90/c)
+
+EVM tabanlı blokzincirlerle etkileşim için asenkron, yüksek performanslı bir Kotlin kütüphanesi olan [ethers-kt](https://github.com/Kr1ptal/ethers-kt)'yi nasıl kullanacağınızı öğrenin. JVM ve Android platformlarını hedefler.
+- [ERC20 jetonlarını transfer etme](https://github.com/Kr1ptal/ethers-kt/blob/master/examples/src/main/kotlin/io/ethers/examples/abi/TransferERC20.kt)
+- [Olay dinleme ile UniswapV2 takası](https://github.com/Kr1ptal/ethers-kt/blob/master/examples/src/main/kotlin/io/ethers/examples/tokenswapwitheventlistening/TokenSwapWithEventListening.kt)
+- [ETH/ERC20 bakiye izleyicisi](https://github.com/Kr1ptal/ethers-kt/blob/master/examples/src/main/kotlin/io/ethers/examples/balancetracker/BalanceTracker.kt)
 
 ## Orta seviye makaleler {#intermediate-articles}
 
@@ -47,6 +52,7 @@ Başlamadan önce temel bilgilere mi ihtiyacınız var? [ethereum.org/learn](/le
 
 - [Hyperledger Besu (Panteon) (Ethereum İstemcisi)](https://docs.pantheon.pegasys.tech/en/stable/)
 - [Web3J (Ethereum İstemcileriyle Etkileşim Kütüphanesi)](https://github.com/web3j/web3j)
+- [ethers-kt (Async, EVM tabanlı blokzincirler için yüksek performanslı Kotlin/Java/Android kütüphanesi.)](https://github.com/Kr1ptal/ethers-kt)
 - [Eventeum (Olay Dinleyici)](https://github.com/ConsenSys/eventeum)
 - [Mahuta (IPFS Geliştirici Araçları)](https://github.com/ConsenSys/mahuta)
 
