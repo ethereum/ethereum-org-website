@@ -3,7 +3,7 @@ import { useTranslation } from "next-i18next"
 
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 
-import { Button } from "./ui/buttons/Button"
+import { ButtonLink } from "./ui/buttons/Button"
 import InlineLink from "./ui/Link"
 import { TwImage } from "./Image"
 
@@ -37,7 +37,7 @@ const Layer2ProductCard = ({
   const { t } = useTranslation("page-layer-2")
 
   return (
-    <Card className="flex flex-col justify-between rounded-md border-0 p-2 shadow-lg transition-transform duration-100 hover:scale-[1.02] dark:bg-background-medium">
+    <Card className="flex flex-col justify-between rounded-md border-0 bg-background-highlight p-2 shadow-lg transition-transform duration-100 hover:scale-[1.02]">
       <div
         className="mb-4 flex min-h-[200px] items-center justify-center border-b"
         style={{ backgroundColor: background }}
@@ -46,8 +46,7 @@ const Layer2ProductCard = ({
           src={image}
           alt={alt}
           width={100}
-          height={100}
-          className="max-h-[257px] object-contain"
+          className="max-h-[257px] object-cover"
         />
       </div>
 
@@ -101,17 +100,9 @@ const Layer2ProductCard = ({
 
       <CardFooter className="mt-2 p-2">
         {url && (
-          <Button
-            asChild
-            className="w-full rounded-sm hover:text-white hover:shadow-[4px_4px_4px_rgba(147,51,234,0.25)] dark:bg-primary-action dark:hover:bg-primary/90 dark:hover:shadow-[4px_4px_4px_rgba(0,0,0,0.9)]"
-          >
-            <InlineLink
-              href={url}
-              className="flex items-center gap-0 text-lg text-white no-underline"
-            >
-              {t("layer-2-explore")} {name}
-            </InlineLink>
-          </Button>
+          <ButtonLink className="w-full" href={url}>
+            {t("layer-2-explore")} {name}
+          </ButtonLink>
         )}
       </CardFooter>
     </Card>
