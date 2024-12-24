@@ -1,6 +1,6 @@
 import DismissableBanner from "@/components/Banners/DismissableBanner"
-import { ButtonLink } from "@/components/Buttons"
 
+import { ButtonLink } from "../ui/buttons/Button"
 import { Center } from "../ui/flex"
 
 export const TranslatathonBanner = ({ pathname }) => {
