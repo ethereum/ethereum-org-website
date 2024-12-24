@@ -27,7 +27,8 @@ export enum Skill {
 }
 
 export const getSkillTranslationId = (skill: Skill): TranslationKey =>
-  `page-developers-tutorials:page-tutorial-${Skill[skill.toUpperCase() as keyof typeof Skill]
+  `page-developers-tutorials:page-tutorial-${
+    Skill[skill.toUpperCase() as keyof typeof Skill]
   }`
 
 const TutorialMetadata = ({
@@ -82,16 +83,16 @@ const TutorialMetadata = ({
         </div>
       </Flex>
       {address && (
-        <Flex className="text-text300 mb-6 mt-[-1rem] flex-wrap text-sm">
+        <Flex className="text-text300 -mt-4 mb-6 flex-wrap text-sm">
           <CopyToClipboard text={address}>
             {(isCopied) => (
-              <div className="bg-ednBackground hover:bg-primary100 cursor-pointer overflow-hidden text-ellipsis px-1 font-mono text-sm text-primary">
-                <div className="uppercase">
-                  <Translation id="comp-tutorial-metadata-tip-author" />{" "}
-                </div>
-                {address} {isCopied && <Translation id="copied" />}
+              <div className="cursor-pointer overflow-hidden text-ellipsis bg-background-highlight px-1 font-mono text-sm text-primary hover:bg-primary-hover hover:text-body-inverse">
+                <span className="uppercase">
+                  <Translation id="page-developers-tutorials:comp-tutorial-metadata-tip-author" />
+                </span>{" "}
+                {address} {isCopied && <Translation id="copied" />}{" "}
                 {isCopied && (
-                  <Emoji className="mr-2 text-sm" text=":white_check_mark:" />
+                  <Emoji className="text-sm" text=":white_check_mark:" />
                 )}
               </div>
             )}
