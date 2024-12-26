@@ -66,6 +66,7 @@ import balancer from "@/public/images/dapps/balancer.png"
 import brave from "@/public/images/dapps/brave.png"
 import compound from "@/public/images/dapps/compound.png"
 import convex from "@/public/images/dapps/convex.png"
+import crackAndStack from "@/public/images/dapps/crackandstack.png"
 import cryptopunks from "@/public/images/dapps/cryptopunks.png"
 import cryptovoxels from "@/public/images/dapps/cryptovoxels.png"
 import curve from "@/public/images/dapps/curve.png"
@@ -374,7 +375,10 @@ const RightColumn = (props: ChildOnlyProp) => (
 )
 
 const StyledCallout = (props: ComponentPropsWithRef<typeof Callout>) => (
-  <Callout flex="1 1 416px" minH="full" mt={{ base: 48, lg: 32 }} {...props} />
+  <Callout
+    className="mt-48 min-h-full flex-1 basis-[416px] lg:mt-32"
+    {...props}
+  />
 )
 
 const StyledCardGrid = (props: ChildOnlyProp) => (
@@ -1082,6 +1086,13 @@ const DappsPage = () => {
       link: "https://zkga.me/",
       image: darkforest,
       alt: t("page-dapps-dark-forest-logo-alt"),
+    },
+    {
+      title: "Crack & Stack",
+      description: t("page-dapps-dapp-description-crack-and-stack"),
+      link: "https://crackandstack.com/",
+      image: crackAndStack,
+      alt: t("page-dapps-crack-and-stack-logo-alt"),
     },
   ]
 

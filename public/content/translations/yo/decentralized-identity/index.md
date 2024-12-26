@@ -139,7 +139,7 @@ Lábẹ́ ètò yií àwọn ìjẹ́ẹ̀rísí di yíyípadà sí àwọn fá�
 
 ### Àwọn ẹ̀rí orí on-chain {#onchain-attestations}
 
-Àwọn ẹ̀rí orí on-chain ni ó má ń wáyé ní [ àwọn àdéhùn ọlọ́gbọ́n](/glossary/#smart-contract) lórí blockchain Ẹ̀tẹ́ríọ̀mù. Àdéhùn ọlọ́gbọ́n náà (tí ó ṣiṣẹ́ bíi ìforúkọsílẹ̀) yóò ṣe àfiwé ìjẹ́ẹ̀rísí sí ìdánimọ̀ tí kò ní àkóso on-chain tí ó báamu (bọ́tìnì gbangba).
+Àwọn ẹ̀rí orí on-chain ni ó má ń wáyé ní [àwọn àdéhùn ọlọ́gbọ́n](/glossary/#smart-contract) lórí blockchain Ẹ̀tẹ́ríọ̀mù. Àdéhùn ọlọ́gbọ́n náà (tí ó ṣiṣẹ́ bíi ìforúkọsílẹ̀) yóò ṣe àfiwé ìjẹ́ẹ̀rísí sí ìdánimọ̀ tí kò ní àkóso on-chain tí ó báamu (bọ́tìnì gbangba).
 
 Èyí ni àpẹẹrẹ láti fihàn bí àwọn ìfọwọ́sí on-chain le ṣiṣẹ́ ní ìṣe:
 
@@ -172,7 +172,7 @@ Lábẹ́ ètò yií àwọn ìjẹ́ẹ̀rísí di yíyípadà sí àwọn fá�
 - [Àwọn ọnà èlò blockchain: blockchain ní ìdánimọ̀ oní-nọ́ḿbà](https://consensys.net/blockchain-use-cases/digital-identity/) —_ ConsenSys_
 - [Kí ni Ẹ̀tẹ́ríọ̀mù ERC725? Ṣíṣàkóso ìdánimọ̀ tí ara ẹni lórí Blockchain](https://cryptoslate.com/what-is-erc725-self-sovereign-identity-management-on-the-blockchain/) —_Sam Town _
 - [Báwo ni Blockchain Ṣe Lè Yanjú Ìṣòro Ìdánimọ̀ Oní-nọ́ḿbà](https://time.com/6142810/proof-of-humanity/) — _Andrew R. Chow _
-- [ Kí Ni Ìdánimọ̀ Tí Kò Ní Àkóso, Ati Pé Kí Ni Ìdí Tó Fi Kàn Ọ́?](https://web3.hashnode.com/what-is-decentralized-identity) — _Emmanuel Awosika_
+- [Kí Ni Ìdánimọ̀ Tí Kò Ní Àkóso, Ati Pé Kí Ni Ìdí Tó Fi Kàn Ọ́?](https://web3.hashnode.com/what-is-decentralized-identity) — _Emmanuel Awosika_
 - [Ìfihàn sí ìdánimọ̀ tí kò ní àkóso](https://walt.id/white-paper/digital-identity) — _Dominik Beron_
 
 ### Videos {#videos}

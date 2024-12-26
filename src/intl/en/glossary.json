@@ -136,7 +136,7 @@
   "erc-20-term": "ERC-20",
   "erc-20-definition": "ERC-20 is the standard that most tokens on Ethereum network use for their creation.<br />Popular examples are stablecoins like DAI and USDC or exchange tokens like UNI from Uniswap. Akin to any form of alternative moneys that we have in traditional systems… ie. rewards points, credit systems, or even stocks, etc.",
   "erc-721-term": "ERC-721",
-  "erc-721-definition": "NFTs (non fungible tokens) are created using a standard set of rules referred to as ERC-721.<br />NFT tokens can represent ownership of anything unique, like digital art or collectibles, with each token having its own special characteristics and value. Each NFT is unique and easily distinguishable from any other NTF.",
+  "erc-721-definition": "NFTs (non fungible tokens) are created using a standard set of rules referred to as ERC-721.<br />NFT tokens can represent ownership of anything unique, like digital art or collectibles, with each token having its own special characteristics and value. Each NFT is unique and easily distinguishable from any other NFT.",
   "execution-client-term": "Execution client",
   "execution-client-definition": "Execution clients (formerly known as \"Eth1 clients\"), such as Besu, Erigon, Go-Ethereum (Geth), Nethermind, are tasked with processing and broadcasting transactions and managing Ethereum's state. They run the computations for each transaction using the <a href=\"/glossary/#evm\">Ethereum Virtual Machine</a> to ensure that the rules of the protocol are followed.",
   "execution-layer-term": "Execution layer",

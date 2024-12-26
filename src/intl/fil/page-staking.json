@@ -222,7 +222,7 @@
   "page-staking-join-community": "Sumali sa komunidad ng staker",
   "page-staking-join-community-desc": "Ang EthStaker ay isang komunidad kung saan mapag-uusapan at matututunan ng lahat ang staking sa Ethereum. Samahan ang libo-libong miyembro mula sa iba't ibang bahagi ng mundo para sa payo, suporta, at para mapag-usapan ang lahat ng bagay tungkol sa staking.",
   "page-staking-meta-description": "Pangkalahatang-ideya ng Ethereum staking: ang mga panganib, reward, kahingian, at kung saan ito dapat gawin.",
-  "page-staking-meta-title": "Ethreum staking",
+  "page-staking-meta-title": "Ethereum staking",
   "page-staking-withdrawals-important-notices": "Mahahalagang paunawa",
   "page-staking-withdrawals-important-notices-desc": "Hindi pa available ang mga withdrawal. Basahin ang <a href=\"https://blog.ethereum.org/2021/12/01/eth2-merge-and-post-merge-faq/\" target=\"_blank\">Eth2 FAQ sa merge at post-merge</a> para sa iba pang impormasyon.",
   "page-upgrades-merge-btn": "Iba pang detalye tungkol sa The Merge",

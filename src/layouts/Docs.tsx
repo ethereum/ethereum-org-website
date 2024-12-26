@@ -24,7 +24,6 @@ import {
   Heading3 as MdHeading3,
   Heading4 as MdHeading4,
 } from "@/components/MdComponents"
-import RollupProductDevDoc from "@/components/RollupProductDevDoc"
 import SideNav from "@/components/SideNav"
 import SideNavMobile from "@/components/SideNavMobile"
 import TableOfContents from "@/components/TableOfContents"
@@ -91,7 +90,6 @@ export const docsComponents = {
   Emoji,
   GlossaryTooltip,
   InfoBanner,
-  RollupProductDevDoc,
   YouTube,
 }
 

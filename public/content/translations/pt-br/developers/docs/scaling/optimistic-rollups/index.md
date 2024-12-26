@@ -253,12 +253,6 @@ Você é o tipo de pessoa que aprende mais com recursos visuais? Assista aos Fin
 
 <YouTube id="7pWxCklcNsU" start="263" />
 
-### Usar optimistic rollups {#use-optimistic-rollups}
-
-Há múltiplas implementações de optimistic rollups que você pode integrar aos seus dapps:
-
-<RollupProductDevDoc rollupType="optimistic" />
-
 ## Leitura adicional sobre optimistic rollups
 
 - [Como funcionam os optimistic rollups (o guia completo)](https://www.alchemy.com/overviews/optimistic-rollups)
