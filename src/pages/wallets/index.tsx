@@ -118,7 +118,7 @@ export const StyledCard = (props: ComponentPropsWithRef<typeof Card>) => (
 const ChecklistItem = (props: HorizontalCardProps) => (
   <HorizontalCard
     emojiClassName="text-2xl"
-    className="flex-start mb-4 flex border-0"
+    className="items-start"
     {...props}
   />
 )
@@ -356,13 +356,13 @@ const WalletsPage = () => {
         <RightColumn mt={{ base: 12, lg: 0 }}>
           <H2>{t("page-wallets-types")}</H2>
           <Text>{t("page-wallets-types-desc")}</Text>
-          <Box>
+          <Box className="flex flex-col gap-2">
             {types.map((type, idx) => (
               <HorizontalCard
                 key={idx}
                 emoji={type.emoji}
                 description={type.description}
-                className="my-0.5 w-[100%] items-center"
+                className="my-0.5 w-[100%]"
                 emojiClassName="text-[2.5rem]"
               />
             ))}
@@ -439,7 +439,7 @@ const WalletsPage = () => {
           <Box lineHeight={1.4} mb={6} color="text300">
             <Translation id="page-wallets:page-wallets-stay-safe-desc" />
           </Box>
-          <Box>
+          <Flex direction="column" gap={4}>
             <ChecklistItem
               key="0"
               emoji=":white_check_mark:"
@@ -472,7 +472,7 @@ const WalletsPage = () => {
               title={t("page-wallets-triple-check")}
               description={t("page-wallets-triple-check-desc")}
             />
-          </Box>
+          </Flex>
         </LeftColumn>
         <RightColumn mt={{ base: 12, lg: 0 }}>
           <H2>{t("page-wallets-tips")}</H2>

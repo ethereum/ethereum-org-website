@@ -456,7 +456,12 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
           me={{ base: 0, lg: 8 }}
           mb={8}
         >
-          <Box w="full" margin={{ base: "auto 0", lg: "0 2rem 0" }}>
+          <Flex
+            w="full"
+            margin={{ base: "auto 0", lg: "0 2rem 0" }}
+            direction="column"
+            gap={2}
+          >
             {tokens.map((token, index) => (
               <Box key={index} minWidth="full" my={2}>
                 <HorizontalCard
@@ -465,7 +470,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
                 />
               </Box>
             ))}
-          </Box>
+          </Flex>
           <GhostCard className="me-0 mt-16 max-w-[640px] lg:me-8 lg:mt-2">
             <Emoji text=":pizza:" className="text-5xl" />
             <H3>{t("page-stablecoins-bitcoin-pizza")}</H3>

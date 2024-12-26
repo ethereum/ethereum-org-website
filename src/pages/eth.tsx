@@ -215,6 +215,7 @@ const CardContainer = (props: FlexProps) => (
 const TokenCard = (props: ComponentProps<typeof HorizontalCard>) => (
   <HorizontalCard
     className={cn("mx-0 my-2 min-w-full rounded-none", props.className)}
+    emojiClassName="text-[5rem]"
     {...props}
   />
 )
@@ -557,7 +558,6 @@ const EthPage = () => {
               emoji={token.emoji}
               title={token.title}
               description={token.description}
-              className="text-[5rem]"
             />
           ))}
         </RightColumn>
