@@ -1,10 +1,11 @@
+import { forwardRef } from "react"
 import { cva, VariantProps } from "class-variance-authority"
 import { Slot } from "@radix-ui/react-slot"
 
 import { cn } from "@/lib/utils/cn"
 
 const tagVariants = cva(
-  "inline-flex items-center rounded-full border px-2 py-0.5 min-h-8 text-xs uppercase transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
+  "inline-flex items-center rounded-full border px-2 py-0.5 min-h-8 text-xs uppercase transition-colors",
   {
     variants: {
       status: {
@@ -25,27 +26,31 @@ const tagVariants = cva(
       {
         variant: "solid",
         status: "normal",
-        className: "bg-body-medium",
+        className:
+          "bg-body-medium focus-visible:outline-body hover:shadow-body",
       },
       {
         variant: "solid",
         status: "tag",
-        className: "bg-primary",
+        className:
+          "bg-primary focus-visible:outline-primary-high-contrast hover:shadow-primary-low-contrast",
       },
       {
         variant: "solid",
         status: "success",
-        className: "bg-success text-success-light",
+        className:
+          "bg-success text-success-light focus-visible:outline-success-dark",
       },
       {
         variant: "solid",
         status: "error",
-        className: "bg-error text-error-light",
+        className: "bg-error text-error-light focus-visible:outline-error-dark",
       },
       {
         variant: "solid",
         status: "warning",
-        className: "bg-warning text-warning-dark",
+        className:
+          "bg-warning text-warning-dark focus-visible:outline-warning-border",
       },
       {
         variant: "highContrast",
@@ -96,14 +101,44 @@ export interface TagProps
   asChild?: boolean
 }
 
-function Tag({ className, asChild, variant, status, ...props }: TagProps) {
-  const Comp = asChild ? Slot : "div"
-  return (
-    <Comp
-      className={cn(tagVariants({ variant, status }), className)}
-      {...props}
-    />
-  )
+const Tag = forwardRef<HTMLDivElement, TagProps>(
+  ({ className, asChild, variant, status, ...props }, ref) => {
+    const Comp = asChild ? Slot : "div"
+    return (
+      <Comp
+        ref={ref}
+        className={cn(tagVariants({ variant, status }), className)}
+        {...props}
+      />
+    )
+  }
+)
+
+Tag.displayName = "Tag"
+
+export interface TagButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
+    VariantProps<typeof tagVariants> {
+  asChild?: boolean
 }
 
-export { Tag }
+const TagButton = forwardRef<HTMLButtonElement, TagButtonProps>(
+  ({ className, asChild, variant, status, ...props }, ref) => {
+    const Comp = asChild ? Slot : "button"
+    return (
+      <Comp
+        ref={ref}
+        className={cn(
+          "hover:shadow-[2px_2px] focus-visible:outline focus-visible:outline-4 focus-visible:-outline-offset-1 focus-visible:outline-inherit",
+          tagVariants({ variant, status }),
+          className
+        )}
+        {...props}
+      />
+    )
+  }
+)
+
+TagButton.displayName = "TagButton"
+
+export { Tag, TagButton }
