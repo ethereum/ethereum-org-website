@@ -48,6 +48,10 @@ const EventCard: React.FC<EventCardProps> = ({
           <img
             src={imageUrl}
             alt={title}
+            onError={(e) => {
+              e.currentTarget.onerror = null
+              e.currentTarget.src = EventFallback.src
+            }}
             className="max-h-[224px] w-full object-cover xl:h-[124px]"
           />
         ) : (

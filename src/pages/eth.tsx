@@ -34,6 +34,7 @@ import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import Translation from "@/components/Translation"
 import { Divider } from "@/components/ui/divider"
 
+import { cn } from "@/lib/utils/cn"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLocaleTimestamp } from "@/lib/utils/time"
@@ -212,9 +213,12 @@ const CardContainer = (props: FlexProps) => (
 )
 
 const TokenCard = (props: ComponentProps<typeof HorizontalCard>) => (
-  <HorizontalCard minW="full" my={2} mx={0} borderRadius={0} {...props} />
+  <HorizontalCard
+    className={cn("mx-0 my-2 min-w-full rounded-none", props.className)}
+    emojiClassName="text-[5rem]"
+    {...props}
+  />
 )
-
 const TextDivider = () => (
   <Box
     w="10%"
@@ -554,7 +558,6 @@ const EthPage = () => {
               emoji={token.emoji}
               title={token.title}
               description={token.description}
-              className="text-[5rem]"
             />
           ))}
         </RightColumn>
