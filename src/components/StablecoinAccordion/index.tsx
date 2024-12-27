@@ -3,12 +3,12 @@ import { MdArrowForward } from "react-icons/md"
 
 import { ChildOnlyProp, TranslationKey } from "@/lib/types"
 
+import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Flex } from "@/components/ui/flex"
 import InlineLink, { BaseLink } from "@/components/ui/Link"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 
 import { Accordion } from "../../../tailwind/ui/accordion"
-import { ButtonLink } from "../Buttons"
 import CardList from "../CardList"
 import InfoBanner from "../InfoBanner"
 import Translation from "../Translation"

@@ -92,7 +92,9 @@ export const AccordionCustomItem = (props: AccordionCustomItemProps) => {
                 </Tag>
               )}
             </Flex>
-            <p className="text-start text-md">{t(contentObj.textPreview)}</p>
+            <p className="text-start text-md text-body-medium">
+              {t(contentObj.textPreview)}
+            </p>
           </div>
         </Flex>
         <MoreOrLessLink isOpen={open} />
