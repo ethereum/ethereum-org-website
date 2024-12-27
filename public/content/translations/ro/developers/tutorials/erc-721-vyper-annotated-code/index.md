@@ -152,7 +152,7 @@ Identitățile utilizatorului și ale contractului sunt reprezentate în Ethereu
 ownerToNFTokenCount: HashMap[address, uint256]
 ```
 
-Această variabilă conține numărul de jetoane pentru fiecare proprietar. Deoarece nu există nicio corespondență între proprietari și tokenuri, singura modalitate de a identifica tokenurile pe care le deține un anumit proprietar este să ne uităm în urmă în istoricul evenimentelor din blockchain ca să găsim evenimentele `Transfer` corespunzătoare. Această variabilă ne permite să știm când avem toate NTF-urile, fără să mai fie nevoie să ne mai întoarcem în timp pentru a căuta.
+Această variabilă conține numărul de jetoane pentru fiecare proprietar. Deoarece nu există nicio corespondență între proprietari și tokenuri, singura modalitate de a identifica tokenurile pe care le deține un anumit proprietar este să ne uităm în urmă în istoricul evenimentelor din blockchain ca să găsim evenimentele `Transfer` corespunzătoare. Această variabilă ne permite să știm când avem toate NFT-urile, fără să mai fie nevoie să ne mai întoarcem în timp pentru a căuta.
 
 De reținut este că acest algoritm funcționează numai pentru interfețele cu utilizatorul și serverele externe. Codul care rulează pe blockchain-ul propriu-zis nu poate citi evenimentele din trecut.
 

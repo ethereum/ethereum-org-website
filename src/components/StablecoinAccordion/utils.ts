@@ -6,7 +6,7 @@ type AccordionButtonContentType = {
   emoji: string
   title: TranslationKey
   pill?: {
-    color: string
+    color: "success" | "warning"
     name: TranslationKey
   }
   textPreview: TranslationKey
@@ -19,7 +19,7 @@ export const accordionButtonContent: {
     emoji: ":twisted_rightwards_arrows:",
     title: "page-stablecoins-accordion-swap-title",
     pill: {
-      color: "success100",
+      color: "success",
       name: "page-stablecoins-accordion-swap-pill",
     },
     textPreview: "page-stablecoins-accordion-swap-text-preview",

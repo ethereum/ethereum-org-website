@@ -1,15 +1,11 @@
-import React, { useEffect, useState } from "react"
-import {
-  Box,
-  Button,
-  CloseButton,
-  Flex,
-  Heading,
-  useToken,
-} from "@chakra-ui/react"
+import { useEffect, useState } from "react"
+import { MdClose } from "react-icons/md"
+
+import { Button } from "@/components/ui/buttons/Button"
+
+import { cn } from "@/lib/utils/cn"
 
 import Emoji from "./Emoji"
-import Text from "./OldText"
 import Translation from "./Translation"
 
 export type TranslationBannerLegalProps = {
@@ -23,7 +19,6 @@ const TranslationBannerLegal = ({
 }: TranslationBannerLegalProps) => {
   // Default to isOpen being false, and let the useEffect set this.
   const [isOpen, setIsOpen] = useState(false)
-  const text = useToken("colors", "text")
 
   useEffect(() => {
     if (
@@ -38,53 +33,33 @@ const TranslationBannerLegal = ({
   }, [originalPagePath, shouldShow])
 
   return (
-    <Box
-      as="aside"
-      position="fixed"
-      display={isOpen ? "block" : "none"}
-      bottom={{ base: 0, md: 8 }}
-      insetInlineEnd={{ base: 0, md: 8 }}
-      zIndex="99"
+    <aside
+      className={cn(
+        "fixed z-popover bg-background-highlight",
+        "bottom-0 md:bottom-8",
+        "right-0 md:right-8",
+        isOpen ? "block" : "hidden"
+      )}
     >
-      <Flex
-        bg="infoBanner"
-        color="black300"
-        justify="space-between"
-        maxW={{ base: "full", md: "600px" }}
-        maxH="full"
-        p={4}
-        borderRadius="sm"
-        boxShadow={{
-          base: `-4px 10px 0px ${text} 10%`,
-          md: "rgba(0, 0, 0, 0.16) 0px 2px 4px 0px",
-        }}
+      <div
+        className={cn(
+          "relative flex justify-between",
+          "w-full md:max-w-[600px]",
+          "rounded-sm p-4",
+          "shadow-md"
+        )}
       >
-        <Flex direction="column" m={4} mt={{ base: 10, sm: 4 }}>
-          <Flex
-            align={{ base: "flex-start", sm: "center" }}
-            flexDirection={{ base: "column-reverse", sm: "row" }}
-            mb={4}
-          >
-            <Heading
-              as="h3"
-              fontSize={{ base: "1.25rem", md: "1.5rem" }}
-              fontWeight="bold"
-              lineHeight="100%"
-            >
+        <div className="m-4 mt-10 flex flex-col gap-4 sm:mt-4">
+          <div className="flex flex-col-reverse items-start sm:flex-row sm:items-center">
+            <h3 className="leading-none md:text-2xl">
               <Translation id="translation-banner-no-bugs-title" />
-              <Emoji
-                text=":bug:"
-                className="mb-4 ms-2 pt-2 text-3xl sm:mb-auto"
-              />
-            </Heading>
-          </Flex>
-          <Text>
+              <Emoji text=":bug:" className="ms-2 text-3xl sm:mb-auto" />
+            </h3>
+          </div>
+          <p>
             <Translation id="translation-banner-no-bugs-content" />
-          </Text>
-          <Flex
-            align={{ base: "flex-start", sm: "center" }}
-            flexDirection={{ base: "column", sm: "row" }}
-          >
+          </p>
+          <div className="flex flex-col items-start sm:flex-row sm:items-center">
             <Button
               onClick={() => {
                 localStorage.setItem(
@@ -96,21 +71,20 @@ const TranslationBannerLegal = ({
             >
               <Translation id="translation-banner-no-bugs-dont-show-again" />
             </Button>
-          </Flex>
-        </Flex>
-        <CloseButton
-          position="absolute"
-          top={0}
-          insetInlineEnd="0"
-          margin={4}
-          color="secondary"
-          _hover={{
-            color: "primary.base",
-          }}
+          </div>
+        </div>
+        <Button
+          variant="ghost"
+          className={cn(
+            "absolute right-0 top-0 m-4 p-2",
+            "text-secondary hover:text-primary"
+          )}
           onClick={() => setIsOpen(false)}
-        />
-      </Flex>
-    </Box>
+        >
+          <MdClose className="h-4 w-4" />
+        </Button>
+      </div>
+    </aside>
   )
 }
 

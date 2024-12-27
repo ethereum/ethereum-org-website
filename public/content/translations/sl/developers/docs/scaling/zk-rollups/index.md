@@ -34,12 +34,6 @@ Oglejte si, kako pri Finematics razložijo ZK-zvitke:
 
 <YouTube id="7pWxCklcNsU" start="406" />
 
-### Uporaba ZK-zvitkov {#use-zk-rollups}
-
-Obstaja več implementacij ZK-zvitkov, ki jih lahko integrirate v svoje dappe:
-
-<RollupProductDevDoc rollupType="zk" />
-
 **Materiali za branje o ZK-zvitkih**
 
 - [Kaj so zvitki brez znanja?](https://coinmarketcap.com/alexandria/glossary/zero-knowledge-rollups)

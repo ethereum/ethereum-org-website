@@ -222,11 +222,6 @@ Podívejte se na vysvětlení ZK-rollupů od Finematics:
 
 <YouTube id="7pWxCklcNsU" start="406" />
 
-### Použití ZK-rollupů {#use-zk-rollups}
-
-Existuje několik implementací ZK-rollupů, které můžete integrovat do svých dappek:
-
-<RollupProductDevDoc rollupType="zk" />
 
 ## Kdo pracuje na zkEVM? {#zkevm-projects}
 

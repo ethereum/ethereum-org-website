@@ -1,6 +1,5 @@
 import { useTranslation } from "next-i18next"
 import { MdArrowForward } from "react-icons/md"
-import { Accordion } from "@chakra-ui/react"
 
 import { ChildOnlyProp, TranslationKey } from "@/lib/types"
 
@@ -8,6 +7,7 @@ import { Flex } from "@/components/ui/flex"
 import InlineLink, { BaseLink } from "@/components/ui/Link"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 
+import { Accordion } from "../../../tailwind/ui/accordion"
 import { ButtonLink } from "../Buttons"
 import CardList from "../CardList"
 import InfoBanner from "../InfoBanner"
@@ -65,7 +65,7 @@ const StablecoinAccordion = () => {
   const DEFAULT_IMAGE_WIDTH = 24
 
   return (
-    <Accordion borderRadius="base" width="full" allowToggle>
+    <Accordion type="single" className="w-full rounded" collapsible>
       <AccordionCustomItem category="dapps">
         <LeftColumnPanel>
           <SectionTitle>
