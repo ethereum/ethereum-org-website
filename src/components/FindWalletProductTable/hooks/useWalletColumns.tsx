@@ -4,23 +4,56 @@ import { ColumnDef } from "@tanstack/react-table"
 
 import { Wallet } from "@/lib/types"
 
+import type { TableMeta } from "@/components/DataTable"
 import WalletInfo from "@/components/FindWalletProductTable/WalletInfo"
-import { TableHead } from "@/components/ui/Table"
+import { Button } from "@/components/ui/buttons/Button"
+import { TableCell } from "@/components/ui/Table"
 
-// This type is used to define the shape of our data.
-// You can use a Zod schema here if you want.
-export type WalletColumns = {
-  id: string
-  walletInfo: Wallet
-}
+import { trackCustomEvent } from "@/lib/utils/matomo"
 
 export const useWalletColumns: ColumnDef<Wallet>[] = [
   {
     id: "walletInfo",
-    header: () => <TableHead className="hidden" />,
+    header: ({ table }) => {
+      const meta = table.options.meta as TableMeta
+
+      return (
+        <div className="flex w-full flex-row items-center justify-between border-none px-4 py-2">
+          <Button
+            variant="ghost"
+            className="block p-0 lg:hidden"
+            onClick={() => {
+              trackCustomEvent({
+                eventCategory: "MobileFilterToggle",
+                eventAction: "Tap MobileFilterToggle - sticky",
+                eventName: "show mobile filters true",
+              })
+              meta.setMobileFiltersOpen(true)
+            }}
+          >
+            <p className="text-md">{`Filters (${meta.activeFiltersCount})`}</p>
+          </Button>
+          {meta.dataLength === meta.allDataLength ? (
+            <p>
+              Showing all wallets <b>({meta.dataLength})</b>
+            </p>
+          ) : (
+            <p>
+              Showing{" "}
+              <b>
+                {meta.dataLength}/{meta.allDataLength}
+              </b>{" "}
+              wallets
+            </p>
+          )}
+        </div>
+      )
+    },
     cell: ({ row }) => {
       return (
-        <WalletInfo wallet={row.original} isExpanded={row.getIsExpanded()} />
+        <TableCell>
+          <WalletInfo wallet={row.original} isExpanded={row.getIsExpanded()} />
+        </TableCell>
       )
     },
   },

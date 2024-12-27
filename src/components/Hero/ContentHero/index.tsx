@@ -14,7 +14,7 @@ const ContentHero = (props: ContentHeroProps) => {
   return (
     <div className="bg-gradient-main">
       <div className="mx-auto grid max-w-screen-2xl grid-cols-1 items-center lg:grid-cols-2">
-        <div className="h-[300px] md:h-[400px] lg:order-1 lg:h-full lg:py-12">
+        <div className="h-[300px] md:h-[400px] lg:order-1 lg:h-full">
           <TwImage
             className="box h-full max-h-[451px] w-full flex-auto object-contain md:flex-none"
             src={heroImg}
