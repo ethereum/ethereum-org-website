@@ -6,7 +6,6 @@ import type { ChildOnlyProp, FileContributor } from "@/lib/types"
 import { Button } from "@/components/Buttons"
 import InlineLink from "@/components/Link"
 import Modal from "@/components/Modal"
-import Text from "@/components/OldText"
 import Translation from "@/components/Translation"
 import { Flex, VStack } from "@/components/ui/flex"
 import { ListItem, UnorderedList } from "@/components/ui/list"
@@ -85,13 +84,13 @@ const FileContributors = ({
             me={2}
           />
 
-          <Text m={0} color="text200">
+          <p className="m-0 text-[#666666] dark:text-[#b2b2b2]">
             <Translation id="last-edit" />:{" "}
             <InlineLink href={"https://github.com/" + lastContributor.login}>
               @{lastContributor.login}
             </InlineLink>
             , {lastEditLocaleTimestamp}
-          </Text>
+          </p>
         </Flex>
 
         <VStack className="items-stretch justify-between space-y-2 items-center">
