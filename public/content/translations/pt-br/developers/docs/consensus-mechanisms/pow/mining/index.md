@@ -10,7 +10,7 @@ A prova de trabalho não está mais subjacente ao mecanismo de consenso do Ether
 
 ## Pré-requisitos {#prerequisites}
 
-Para melhor entender esta página, recomendamos que você leia primeiro [transações](/developers/docs/transactions/), [blocos](/developers/docs/blocks/) e [prova de trabalho ](/developers/docs/consensus-mechanisms/pow/).
+Para melhor entender esta página, recomendamos que você leia primeiro [transações](/developers/docs/transactions/), [blocos](/developers/docs/blocks/) e [prova de trabalho](/developers/docs/consensus-mechanisms/pow/).
 
 ## O que é mineração de Ethereum? {#what-is-ethereum-mining}
 
@@ -43,7 +43,7 @@ Para conhecer ainda mais a rentabilidade da mineração, use uma calculadora de 
 
 O seguinte fornece uma visão geral de como as transações foram mineradas na prova de trabalho Ethereum. Uma descrição análoga deste processo para a prova de participação Ethereum pode ser encontrada [aqui](/developers/docs/consensus-mechanisms/pos/#transaction-execution-ethereum-pos).
 
-1. Um usuário escreve e assina uma solicitação de [ transação ](/developers/docs/transactions/) com a chave privada de alguma [ conta ](/developers/docs/accounts/).
+1. Um usuário escreve e assina uma solicitação de [transação](/developers/docs/transactions/) com a chave privada de alguma [conta](/developers/docs/accounts/).
 2. O usuário transmite a solicitação de transação para toda a rede Ethereum de algum [nó](/developers/docs/nodes-and-clients/).
 3. Ao ouvir tomar conhecimento da nova solicitação de transação, cada nó na rede Ethereum adiciona a solicitação ao seu mempool local, uma lista de todas as solicitações de transação sobre as quais eles têm conhecimento que ainda não foram confirmadas na blockchain em um bloco.
 4. Em algum ponto, um nó de mineração agrega várias dezenas ou centenas de solicitações de transação a um [bloco](/developers/docs/blocks/) potencial, de uma forma que maximiza as [taxas de transação](/developers/docs/gas/) que eles ganham enquanto ainda estão abaixo do limite de gás de bloco. Então, o nó de mineração:

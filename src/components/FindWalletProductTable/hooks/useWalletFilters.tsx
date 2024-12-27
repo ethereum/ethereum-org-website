@@ -3,6 +3,7 @@ import { useTranslation } from "next-i18next"
 import { FilterOption } from "@/lib/types"
 
 import FindWalletLanguageSelectInput from "@/components/FindWalletProductTable/FindWalletLanguageSelectInput"
+import Layer2SelectInput from "@/components/FindWalletProductTable/Layer2SelectInput"
 import {
   BrowserIcon,
   BuyCryptoIcon,
@@ -428,6 +429,30 @@ export const useWalletFilters = (): FilterOption[] => {
                   })
                   updateFilterState(filterIndex, itemIndex, newInputState)
                 }}
+              />
+            )
+          },
+          options: [],
+        },
+      ],
+    },
+    {
+      title: "Network support",
+      showFilterOption: true,
+      items: [
+        {
+          filterKey: "layer_2_support",
+          filterLabel: "layer_2_support",
+          description: "",
+          inputState: [],
+          ignoreFilterReset: false,
+          input: (filterIndex, itemIndex, inputState, updateFilterState) => {
+            return (
+              <Layer2SelectInput
+                filterIndex={filterIndex}
+                itemIndex={itemIndex}
+                inputState={inputState}
+                updateFilterState={updateFilterState}
               />
             )
           },

@@ -265,7 +265,7 @@ ContentPage.getLayout = (page) => {
   return (
     <Layout {...layoutProps}>
       <PageMetadata
-        title={frontmatter.title}
+        title={frontmatter.metaTitle ?? frontmatter.title}
         description={frontmatter.description}
         image={frontmatter.image}
         author={frontmatter.author}

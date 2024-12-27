@@ -727,7 +727,15 @@ const HomePage = ({
                   >
                     <CardBanner>
                       {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img src={imgSrc} alt="" loading="lazy" />
+                      <img
+                        src={imgSrc}
+                        alt=""
+                        loading="lazy"
+                        onError={(e) => {
+                          e.currentTarget.onerror = null
+                          e.currentTarget.src = EventFallback.src
+                        }}
+                      />
                     </CardBanner>
                     <CardContent>
                       <CardTitle>{title}</CardTitle>
@@ -808,6 +816,10 @@ const HomePage = ({
                         <img
                           src={imageUrl}
                           alt=""
+                          onError={(e) => {
+                            e.currentTarget.onerror = null
+                            e.currentTarget.src = EventFallback.src
+                          }}
                           className="max-w-full object-cover object-center"
                           loading="lazy"
                         />

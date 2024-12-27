@@ -1,15 +1,10 @@
-import {
-  Box,
-  Flex,
-  List,
-  ListItem,
-  useColorModeValue,
-  VisuallyHidden,
-} from "@chakra-ui/react"
+import type { ImageProps } from "next/image"
+import { VisuallyHidden } from "@radix-ui/react-visually-hidden"
 
-import { ButtonLink } from "@/components/Buttons"
-import { Image, type ImageProps } from "@/components/Image"
-import OldHeading from "@/components/OldHeading"
+import { ButtonLink } from "./ui/buttons/Button"
+import { Flex } from "./ui/flex"
+import { List, ListItem } from "./ui/list"
+import { TwImage } from "./Image"
 
 type Content = {
   title: string
@@ -27,85 +22,49 @@ export type ProductListProps = {
 }
 
 const ProductList = ({ actionLabel, content, category }: ProductListProps) => {
-  const shadow = useColorModeValue("tableBox.light", "tableBox.dark")
-
   const CATEGORY_NAME = "category-name"
 
   return (
-    <Box boxSize="full">
-      <OldHeading
-        as="h3"
+    <div className="w-full">
+      <h3
         id={CATEGORY_NAME}
-        fontSize="2xl"
-        borderBottom="2px solid"
-        borderColor="border"
-        paddingBottom={4}
-        marginBottom={0}
+        className="mb-0 mt-10 border-b-2 border-border pb-4 text-2xl"
       >
         {category}
-      </OldHeading>
-      <Flex
-        as={List}
-        aria-labelledby={CATEGORY_NAME}
-        m={0}
-        flexDirection="column"
-        height="inherit"
-      >
+      </h3>
+      <List aria-labelledby={CATEGORY_NAME} className="m-0">
         {content.map(({ title, description, link, image, alt, id }, idx) => (
-          <Flex
-            as={ListItem}
-            key={id || idx}
-            color="text"
-            marginBottom="px"
-            marginTop={8}
-            height="inherit"
-          >
-            <Box width="5rem">
+          <ListItem key={id || idx} color="text" className="mb-0 mt-8 flex">
+            <div className="w-20">
               {image && (
-                <Image
+                <TwImage
                   src={image}
                   alt={alt}
                   width={66}
-                  boxShadow={shadow}
-                  borderRadius="sm"
+                  className="rounded-sm shadow-lg dark:shadow-body-light"
                 />
               )}
-            </Box>
-            <Flex
-              justifyContent="space-between"
-              flexDir={{ base: "column", sm: "row" }}
-              paddingBottom={4}
-              width="full"
-              ms={{ base: 4, sm: 6 }}
-              borderBottom="1px solid"
-              borderColor="border"
-            >
-              <Box flex={1}>
-                <Box>{title}</Box>
-                <Box fontSize="sm" marginBottom={0} opacity="0.6">
-                  {description}
-                </Box>
-              </Box>
+            </div>
+            <Flex className="ms-4 w-full flex-col justify-between border-b pb-4 sm:ms-6 sm:flex-row">
+              <div className="flex-1">
+                <div>{title}</div>
+                <div className="mb-0 text-sm opacity-60">{description}</div>
+              </div>
               {link && (
                 <ButtonLink
                   variant="outline"
                   href={link}
-                  alignSelf="center"
-                  ms={{ base: 0, sm: 8 }}
-                  paddingY={1}
-                  paddingX={6}
-                  borderRadius="sm"
-                  marginTop={{ base: 4, sm: 0 }}
+                  className="ms-0 mt-4 min-h-fit gap-0 self-center rounded-sm px-6 py-1 sm:ms-8 sm:mt-0"
                 >
                   {actionLabel}
                   <VisuallyHidden>to {title} website</VisuallyHidden>
                 </ButtonLink>
               )}
             </Flex>
-          </Flex>
+          </ListItem>
         ))}
-      </Flex>
-    </Box>
+      </List>
+    </div>
   )
 }
 

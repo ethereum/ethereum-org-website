@@ -8,10 +8,10 @@ alt: "نقشه‌ راه اتریوم"
 summaryPoints:
 buttons:
   - 
-    label: ارتقا‌های پیش‌ رو
+    content: ارتقا‌های پیش‌ رو
     toId: چه تغییراتی ایجاد خواهد شد
   - 
-    label: ارتقاهای پیشین
+    content: ارتقاهای پیشین
     href: /history/
     variant: طرح کلی
 ---

@@ -16,7 +16,7 @@ Todos os computadores da rede têm de chegar a um acordo sobre cada novo bloco e
 
 O Ethereum utiliza um mecanismo de consenso baseado em [prova de participação](/developers/docs/consensus-mechanisms/pos/). Qualquer um que queira adicionar novos blocos à cadeia deve colocar ETH – a moeda nativa no Ethereum – como garantia e executar um software validador. Esses “validadores” podem então ser selecionados aleatoriamente para propor blocos que outros validadores verificam e adicionam à blockchain. Há um sistema de recompensas e penalidades que fortemente incentiva os participantes a serem honestos e estarem disponíveis online o máximo possível.
 
-Se você quiser ver como a cadeia de blocos faz hash dos dados e, subsequentemente, ao histórico de referência aos blocos, confira [esta demonstração](https://andersbrownworth. com/blockchain/blockchain) de Anders Brownworth e assista ao vídeo abaixo.
+Se você quiser ver como a cadeia de blocos faz hash dos dados e, subsequentemente, ao histórico de referência aos blocos, confira [esta demonstração](https://andersbrownworth.com/blockchain/blockchain) de Anders Brownworth e assista ao vídeo abaixo.
 
 Assista a Anders explicando hashes em cadeias de blocos:
 

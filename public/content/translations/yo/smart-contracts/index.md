@@ -8,7 +8,7 @@ lang: yo
 
 Àwọn àdéhùn ọlọ́gbọ́n jẹ́ àwọn búlọ́ọ́kù kíkọ́ ìpìlẹ̀ ohun èlò Ethereum. Wọn jẹ awọn eto kọnputa ti a fipamọ sori [blockchain](/glossary/#blockchain) ti o tẹle ọgbọn “ti o ba jẹ eyi leyin naa iyẹn”, ati pe o ni idaniloju lati ṣiṣẹ ni ibamu pelu awọn ofin ti asọye nipasẹ koodu rẹ, eyiti ko le yipada ni kete ti won ba ṣẹda re.
 
-Nick Szabo seda ọrọ naa "adehun ọlọgbọn". Ní 1994, ó kọ [ìfilọ̀sí èrò ](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart.contracts.html), àti ní 1996 ó kọ [ìwádìí nípa ohun tí àwọn àdéhùn ọlọ́gbọ́n lè ṣe](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart_contracts_2.html).
+Nick Szabo seda ọrọ naa "adehun ọlọgbọn". Ní 1994, ó kọ [ìfilọ̀sí èrò](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart.contracts.html), àti ní 1996 ó kọ [ìwádìí nípa ohun tí àwọn àdéhùn ọlọ́gbọ́n lè ṣe](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart_contracts_2.html).
 
 Szabo fojú inú wo ìpàtẹ orí ayélujára níbití àwọn ìlànà àdáṣe, [ààbò nípasẹ̀ cryptography](/glossary/#cryptography) jẹ́ kí ìdúnàdúrà àti àwọn ìṣòwò le ṣeé ṣe láìsí àwọn alágbàtà tí a le gbẹ́kẹ̀lé. Àwọn àdéhùn ọlọ́gbọ́n lórí Ethereum gbé ìran yìí sí ṣíṣe.
 

@@ -7,9 +7,12 @@ import { ButtonLink } from "@/components/Buttons"
 import { SupportedLanguagesTooltip } from "@/components/FindWalletProductTable/SupportedLanguagesTooltip"
 import { DevicesIcon, LanguagesIcon } from "@/components/icons/wallets"
 import { TwImage } from "@/components/Image"
+import Tooltip from "@/components/Tooltip"
 import { Badge } from "@/components/ui/badge"
 
 import { formatStringList, getWalletPersonas } from "@/lib/utils/wallets"
+
+import { ethereumNetworkData, layer2Data } from "@/data/networks/networks"
 
 interface WalletInfoProps {
   wallet: Wallet
@@ -51,6 +54,36 @@ const WalletInfo = ({ wallet, isExpanded }: WalletInfoProps) => {
                   ))}
                 </div>
               )}
+              <div
+                className={`ml-2 mt-1 flex flex-row ${
+                  walletPersonas.length === 0 ? "mb-4" : ""
+                }`}
+              >
+                {wallet.supported_chains.map((chain) => {
+                  const chainData = [ethereumNetworkData, ...layer2Data].find(
+                    (l2) => l2.chainName === chain
+                  )
+                  return (
+                    <div
+                      key={chain}
+                      className="-ml-1.5 overflow-hidden rounded-full"
+                    >
+                      <Tooltip content={chainData?.name || ""}>
+                        <TwImage
+                          src={chainData?.logo || ""}
+                          alt=""
+                          className="rounded-full"
+                          style={{
+                            objectFit: "contain",
+                            width: "24px",
+                            height: "24px",
+                          }}
+                        />
+                      </Tooltip>
+                    </div>
+                  )
+                })}
+              </div>
             </div>
           </div>
           <div className="flex flex-col gap-4 lg:hidden">
@@ -73,9 +106,39 @@ const WalletInfo = ({ wallet, isExpanded }: WalletInfoProps) => {
                 </div>
               )}
             </div>
+            <div
+              className={`ml-2 flex flex-row ${
+                walletPersonas.length === 0 ? "mb-4" : ""
+              }`}
+            >
+              {wallet.supported_chains.map((chain) => {
+                const chainData = [ethereumNetworkData, ...layer2Data].find(
+                  (l2) => l2.chainName === chain
+                )
+                return (
+                  <div
+                    key={chain}
+                    className="-ml-1.5 overflow-hidden rounded-full"
+                  >
+                    <Tooltip content={chainData?.name || ""}>
+                      <TwImage
+                        src={chainData?.logo || ""}
+                        alt=""
+                        className="rounded-full"
+                        style={{
+                          objectFit: "contain",
+                          width: "24px",
+                          height: "24px",
+                        }}
+                      />
+                    </Tooltip>
+                  </div>
+                )
+              })}
+            </div>
           </div>
           <div className="flex flex-row gap-4">
-            <div className="relative hidden w-14 md:block">
+            <div className="relative hidden w-14 lg:block">
               <div
                 className={`${isExpanded ? "block" : "hidden"} absolute -bottom-9 -top-0 left-1/2 w-1 -translate-x-1/2 transform ${wallet.twBackgroundColor}`}
               />
@@ -112,7 +175,7 @@ const WalletInfo = ({ wallet, isExpanded }: WalletInfoProps) => {
         </div>
       </div>
       <div className="flex flex-row gap-4">
-        <div className="relative hidden w-14 md:block">
+        <div className="relative hidden w-14 lg:block">
           <div
             className={`${isExpanded ? "block" : "hidden"} absolute -bottom-9 -top-0 left-1/2 w-1 -translate-x-1/2 transform ${wallet.twBackgroundColor}`}
           />
