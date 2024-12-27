@@ -1,8 +1,9 @@
 /* eslint-disable react/jsx-key */
 import { TwImage } from "@/components/Image"
-import OrderedList from "@/components/OrderedList"
 import Translation from "@/components/Translation"
 import { Center } from "@/components/ui/flex"
+
+import { ListItem, OrderedList } from "../ui/list"
 
 import image from "@/public/images/hackathon_transparent.png"
 
@@ -27,7 +28,11 @@ const StakingHowSoloWorks = () => {
 
   return (
     <Center className="flex-col justify-between md:flex-row">
-      <OrderedList listData={items} />
+      <OrderedList>
+        {items.map((item, index) => (
+          <ListItem key={index}>{item}</ListItem>
+        ))}
+      </OrderedList>
       <TwImage src={image} alt="" width={400} />
     </Center>
   )
