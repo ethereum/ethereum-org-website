@@ -58,7 +58,7 @@ Ahogy a privát kulcs biztosítja az Ethereum-címet, úgy a validátorhoz is l�
 <a href="/security/">Ethereum biztonság és csalásmegelőzés</a>
 </ExpandableCard>
 
-<ExpandableCard title="Maintenance" eventCategory="SoloStaking" eventName="clicked maintenance">
+<ExpandableCard title="Karbantartás" eventCategory="SoloStaking" eventName="clicked maintenance">
 A hardver néha leáll, a hálózati kapcsolat hibára fut, a kliensszoftvert néha frissíteni kell. A csomópont karbantartása elkerülhetetlen, ezzel foglalkozni kell. Muszáj naprakésznek lennie minden várható hálózati frissítésről vagy más kritikus kliensfrissítésről.
 </ExpandableCard>
 
@@ -203,4 +203,4 @@ A teljes egyenleg visszavonásához végig kell menni a validátorkiléptetési 
 - [Lépésről lépésre: hogyan kell csatlakozni az Ethereum 2.0 teszthálózathoz](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) – _Butta_
 - [Eth2 Slashing elkerülési tippek](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) – _Raul Jordan 2020._
 
-<QuizWidget quizKey="solo-staking" />
+<QuizWidget quizKey="staking-solo" />

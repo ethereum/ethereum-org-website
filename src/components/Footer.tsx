@@ -302,8 +302,8 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
     "text-body-medium no-underline hover:text-primary hover:after:text-primary"
 
   return (
-    <footer className="px-8 py-4">
-      <div className="flex flex-wrap items-center justify-center gap-8 border-t border-body-light py-4 md:justify-between">
+    <footer className="px-4 py-4">
+      <div className="flex flex-wrap items-center justify-center gap-8 border-t border-body-light px-4 py-4 md:justify-between">
         <p className="text-sm italic text-body-medium">
           <Translation id="website-last-updated" />: {lastDeployLocaleTimestamp}
         </p>
@@ -317,7 +317,7 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
         </Button>
       </div>
 
-      <div className="grid auto-cols-auto justify-between gap-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5">
+      <div className="grid auto-cols-auto justify-between gap-4 px-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5">
         {linkSections.map((section: FooterLinkSection, idx) => (
           <div key={idx}>
             <h3 className="my-5 text-sm font-bold">

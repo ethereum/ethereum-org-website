@@ -41,6 +41,7 @@
   "page-dapps-choose-category": "選擇類別",
   "page-dapps-category-social": "社交媒體",
   "page-dapps-category-content": "內容",
+  "page-dapps-category-community": "社群",
   "page-dapps-category-messaging": "傳訊",
   "page-dapps-category-identity": "身份",
   "page-dapps-collectibles-benefits-1-description": "當藝術在以太坊上代幣化，所有權可以證明給所有人知道。你可以追蹤藝術作品從作者到目前持有人的旅程。可以避免偽造。",
@@ -95,6 +96,7 @@
   "page-dapps-dapp-description-loopring": "為快速交易打造的點對點平台。",
   "page-dapps-dapp-description-marble-cards": "以統一資源定位符為基礎創作並交易獨特數位卡牌。",
   "page-dapps-dapp-description-matcha": "搜尋數家交易所幫助你找到最佳價格。",
+  "page-dapps-dapp-description-meeds": "為分散式工作的時代而生的 Web3 社群中心。公平透明地獎勵重要貢獻者。",
   "page-dapps-dapp-description-mirror": "以 Web3 為本的強大發佈平台 Mirror，突破網上寫作的界限",
   "page-dapps-dapp-description-multichain": "終極的 web3 路由器。這是為任意跨鏈互動而開發的基礎設施。",
   "page-dapps-dapp-description-nifty-gateway": "在區塊鏈上購入頂尖藝術家、運動員、樂團及創作者之作品。",
@@ -113,6 +115,7 @@
   "page-dapps-dapp-description-rotki": "尊重你隱私的開源投資組合追蹤、分析、管理，及稅金報告工具。",
   "page-dapps-dapp-description-krystal": "一個能夠存取所有你最喜愛的去中心化金融服務的一站式平台。",
   "page-dapps-dapp-description-rarible": "創作、販賣及購買代幣化收藏品。",
+  "page-dapps-dapp-description-request-finance": "一套用於加密貨幣發票、薪資和支出的金融工具。",
   "page-dapps-dapp-description-rubic": "為使用者和去中心化應用程式而設的跨鏈技術聚合器。",
   "page-dapps-dapp-description-sablier": "即時流通資金。",
   "page-dapps-dapp-description-spatial": "建立個人的虛擬形象和 3D 世界",
@@ -217,6 +220,7 @@
   "page-dapps-marble-cards-logo-alt": "marble.cards 標誌",
   "page-dapps-async-logo-alt": "Async 標誌",
   "page-dapps-matcha-logo-alt": "Matcha 標誌",
+  "page-dapps-meeds-logo-alt": "Meeds 標誌",
   "page-dapps-metaverse-benefits-title": "元宇宙",
   "page-dapps-metaverse-benefits-description": "以太坊的哪些特點，讓元宇宙蓬勃發展?",
   "page-dapps-metaverse-benefits-1-title": "非同質化代幣",
@@ -241,6 +245,7 @@
   "page-dapps-ready-button": "開始",
   "page-dapps-ready-description": "選一個去中心化應用程式試試看",
   "page-dapps-ready-title": "準備好了嗎？",
+  "page-dapps-request-finance-logo-alt": "Request Finance 標誌",
   "page-dapps-rubic-logo-alt": "Rubic 標誌",
   "page-dapps-sablier-logo-alt": "Sablier 標誌",
   "page-dapps-set-up-a-wallet-button": "尋找錢包",
@@ -281,5 +286,7 @@
   "page-dapps-dapp-description-dodo": "DODO 是鏈上流動性提供者，採用了主動做市商 (PMM) 演算法。",
   "page-dapps-dodo-image-alt": "DODO 標誌",
   "page-dapps-dapp-description-artblocks": "Art Blocks 致力於將引人入勝的當代生成式藝術的藝術品帶入生活中",
-  "page-dapps-artblocks-image-alt": "Art Blocks 標誌"
+  "page-dapps-artblocks-image-alt": "Art Blocks 標誌",
+  "page-dapps-explore-title": "想瀏覽更多應用程式嗎？",
+  "page-dapps-explore": "查看數百種去中心化應用程式"
 }

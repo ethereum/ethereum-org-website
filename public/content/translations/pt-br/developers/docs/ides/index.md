@@ -41,12 +41,6 @@ A maioria dos IDEs estabelecidos possuem plugins integrados para melhorar a expe
 - [Amostras de código](https://github.com/Azure-Samples/blockchain/blob/master/blockchain-workbench/application-and-smart-contract-samples/readme.md)
 - [GitHub](https://github.com/microsoft/vscode)
 
-**Atom -** **_Um editor de texto de código aberto para o século XXI_**
-
-- [Atom](https://atom.io/)
-- [GitHub](https://github.com/atom)
-- [Pacotes Ethereum](https://atom.io/packages/search?utf8=%E2%9C%93&q=keyword%3Aethereum&commit=Search)
-
 **IDEs de JetBrains (IntelliJ IDEA etc.) -** **_Ferramentas essenciais para desenvolvedores de software e equipes_**
 
 - [JetBrains](https://www.jetbrains.com/)

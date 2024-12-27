@@ -13,7 +13,7 @@ Használja az Ethereumot decentralizált alkalmazások (dappok) fejlesztésére.
 
 **Tegye meg az első lépést, hogy integrálja a Go-t az Ethereummal**
 
-Szükséged van egy méginkább kezdőknek szóló alapozóra? Tekintse meg az [ethereum.org/learn](/learn/) vagy az [ethereum.org/developers](/developers/) oldalt.
+Szükséged van egy méginkább kezdőknek szóló alapozóra? Tekintsd meg az [ethereum.org/learn](/learn/) oldalt vagy az [ethereum.org/developers](/developers/) oldalt.
 
 - [Blokklánc ismertetése](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [Okosszerződések értelmezése](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)

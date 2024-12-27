@@ -6,7 +6,7 @@ lang: tr
 
 İyimser toplamalar, Ethereum temel katmanının işlem hacmini genişletmek üzere tasarlanmış katman 2 (L2) protokolleridir. Ana Ethereum zincirindeki hesaplama yükünü, işlemleri zincir dışında yürüterek azaltarak işleme hızlarında önemli iyileştirmeler sunarlar. Diğer ölçeklendirme çözümleri olan [yan zincirlerin](/developers/docs/scaling/sidechains/) aksine iyimser toplamalar, işlem sonuçlarını zincir üstünde yayımlayarak Ana ağ'dan güvenlik alırken; [plazma zincirleri](/developers/docs/scaling/plasma/) ise Ethereum'da sahtecilik kanıtları ile işlemleri doğrular ancak işlem verilerini farklı bir yerde saklarlar.
 
-Hesaplama, Ethereum'u kullanmanın yavaş ve pahalı kısmı olduğundan iyimser toplamalar ölçeklenebilirlikte 10-100x'lik iyileştirmeler sunabilir. İyimser toplamalar ayrıca işlemleri Ethereum'a çağrı verisi `calldata` olarak yazar, bu da kullanıcılar için gaz maliyetlerini azaltır.
+Hesaplama, Ethereum'u kullanmanın yavaş ve pahalı kısmı olduğundan iyimser toplamalar ölçeklenebilirlikte 10-100x'lik iyileştirmeler sunabilir. İyimser toplamalar ayrıca işlemleri Ethereum'a çağrı verisi `calldata` ya da [blobs](/roadmap/danksharding/) olarak yazar, bu da kullanıcılar için gaz maliyetlerini azaltır.
 
 ## Ön Koşullar {#prerequisites}
 
@@ -14,7 +14,7 @@ Hesaplama, Ethereum'u kullanmanın yavaş ve pahalı kısmı olduğundan iyimser
 
 ## İyimser toplama nedir? {#what-is-an-optimistic-rollup}
 
-Bir iyimser toplama, Ethereum'u ölçeklendirmek amacıyla hesaplama ve durum depolamayı zincir dışına taşımayı içeren bir çözüm yaklaşımıdır. İyimser toplamalar işlemleri Ethereum dışında yürütür, ancak işlem verilerini Ana ağa `calldata` olarak gönderir.
+Bir iyimser toplama, Ethereum'u ölçeklendirmek amacıyla hesaplama ve durum depolamayı zincir dışına taşımayı içeren bir çözüm yaklaşımıdır. İyimser toplamalar, işlemleri Ethereum dışında yürütür ancak işlem verilerini Ana Ağa `calldata` veya [blobs](/roadmap/danksharding/) olarak gönderir.
 
 İyimser toplama operatörleri, Ethereum'a göndermeden önce birden fazla zincir dışı işlemi büyük paketler halinde bir araya getirir. Bu yaklaşım, sabit maliyetlerin her paket içerisindeki birden çok işlem arasında paylaştırarak son kullanıcılar için ücretleri azaltmaya olanak tanır. İyimser toplamalar ayrıca Ethereum'da yayımlanan veri miktarını azaltmak için sıkıştırma tekniklerini kullanır.
 
@@ -44,7 +44,7 @@ Bir iyimser toplamanın mimarisi şu bölümlerden oluşur:
 
 ### Veri mevcudiyeti {#data-availability}
 
-Belirtildiği gibi, iyimser toplamalar işlem verilerini Ethereum'a `calldata` olarak gönderir. Toplama zincirinin yürütülmesi gönderilen işlemlere dayandığından, herkes Ethereum'un temel katmanında bulunan bu bilgileri kullanarak toplamanın durumunu yürütebilir ve durum geçişlerinin doğruluğunu teyit edebilir.
+Belirtildiği üzere iyimser toplamalar, işlem verilerini Ethereum'a `calldata` veya [blobs](/roadmap/danksharding/) olarak gönderir. Toplama zincirinin yürütülmesi gönderilen işlemlere dayandığından, herkes Ethereum'un temel katmanında bulunan bu bilgileri kullanarak toplamanın durumunu yürütebilir ve durum geçişlerinin doğruluğunu teyit edebilir.
 
 [Veri kullanılabilirliği](/developers/docs/data-availability/) kritiktir; çünkü itiraz eden kişiler, durum verilerine erişim olmadan geçersiz toplama işlemlerine itiraz etmek için sahtecilik kanıtları oluşturamazlar. Ethereum'un veri mevcudiyeti ve kullanılabilirliği sağlaması sayesinde, toplama operatörlerinin kötü niyetli hareketlerden (ör. geçersiz bloklar gönderme) paçayı sıyırma riski azalır.
 
@@ -86,15 +86,19 @@ Sıralayıcı, işlemlerin sıralanması üzerinde daha fazla kontrole sahip old
 
 #### Toplama bloklarını Ethereum'a gönderme {#submitting-blocks-to-ethereum}
 
-Belirtildiği gibi, bir iyimser toplamanın operatörü zincir dışı işlemleri bir yığın halinde toplar ve onay için Ethereum'a gönderir. Bu süreç, işlemle ilgili verilerin sıkıştırılmasını ve Ethereum üzerinde `calldata` olarak yayımlanmasını içerir.
+Belirtildiği gibi, bir iyimser toplamanın operatörü zincir dışı işlemleri bir yığın halinde toplar ve onay için Ethereum'a gönderir. Bu süreç, işlemle ilgili verilerin sıkıştırılmasını ve Ethereum üzerinde `calldata` veya blob olarak yayımlanmasını içerir.
 
-`calldata`, akıllı bir sözleşmede çoğunlukla [bellek](/developers/docs/smart-contracts/anatomy/#memory) gibi davranan, değiştirilemeyen, kalıcı olmayan bir alandır. `calldata` blokzincirin [geçmiş günlüklerinin](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html?highlight=memory#logs) bir parçası olarak zincir üzerinde kalırken, Ethereum'un durumunun bir parçası olarak saklanmaz. Çünkü `calldata`, Ethereum'un durumunun herhangi bir bölümüne müdahale etmediğinden zincir üstünde veri saklamak için daha uygundur.
+`calldata`, akıllı bir sözleşmede çoğunlukla [bellek](/developers/docs/smart-contracts/anatomy/#memory) gibi davranan, değiştirilemeyen, kalıcı olmayan bir alandır. `calldata` blokzincirin [geçmiş günlüklerinin](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html?highlight=memory#logs) bir parçası olarak zincir üzerinde kalırken, Ethereum'un durumunun bir parçası olarak saklanmaz. Çünkü `calldata`, Ethereum'un durumunun herhangi bir bölümüne müdahale etmediğinden zincir üstünde veri saklamak için duruma göre daha ucuzdur.
 
 `calldata` anahtar sözcüğü Solidity'de yürütme zamanında bir akıllı sözleşme fonksiyonuna argüman aktarmak için de kullanılır. `calldata` bir işlem sırasında çağrılan fonksiyonu tanımlar ve fonksiyonun girdilerini rastgele bir bayt dizisi şeklinde tutar.
 
 İyimser toplamalar bağlamında `calldata`, sıkıştırılmış işlem verilerini zincir üstündeki sözleşmeye göndermek için kullanılır. Toplama operatörü, toplama sözleşmesinde gerekli fonksiyonu çağırarak ve sıkıştırılmış verileri fonksiyon argümanları olarak geçirerek yeni bir toplu iş ekler. Toplamaların maliyetlerinin çoğu verilerin zincir üstünde depolanmasından kaynaklandığı için `calldata` kullanımı kullanıcı ücretlerini azaltır.
 
 İşte bu konseptin nasıl çalıştığını göstermek için toplama partisi gönderimine [bir örnek](https://etherscan.io/tx/0x9102bfce17c58b5fc1c974c24b6bb7a924fb5fbd7c4cd2f675911c27422a5591). Sıralayıcı `appendSequencerBatch()` yöntemini çağırmış ve sıkıştırılmış işlem verilerini `calldata` kullanarak girdi olarak geçirmiştir.
+
+Bazı toplamalar işlem gruplarını Ethereum'a göndermek için artık blob'ları kullanıyor.
+
+Blob'lar değiştirilemez ve geçicilerdir (aynı `calldata` gibi), geçmişten ~18 gün içinde silinirler. Blob'lar hakkında daha fazla bilgi için [Danksharding](/roadmap/danksharding)'e göz atın.
 
 ### Durum taahhütleri {#state-commitments}
 
@@ -194,9 +198,9 @@ Son olarak, sözleşmeler arasındaki L2 > L1 mesaj çağrıları, gecikmeleri d
 
 İyimser toplamalar, tıpkı Ethereum gibi kullanıcıların işlem başına ne kadar ödeyeceğini belirtmek için bir gaz ücreti şeması kullanır. İyimser toplamalarda tahsil edilen ücretler aşağıdaki bileşenlere bağlıdır:
 
-1. **Durum yazımı:** İyimser toplamalar, işlem verilerini ve blok başlıklarını (önceki blok başlığı karması, durum kökü, karma kökünden oluşur) Ethereum'da `calldata` olarak yayımlar. Bir Ethereum işleminin minimum maliyeti 21.000 gazdır. İyimser toplamalar, birden fazla işlemi tek bir blokta birleştirerek (21k gazı birden fazla kullanıcı işlemi üzerinde amorti ederek) işlemi L1'e yazma maliyetini düşürebilir.
+1. **Durum yazımı:** İyimser toplamalar, işlem verilerini ve blok başlıklarını (önceki blok başlığı karması, durum kökü, parti kökünden oluşur) Ethereum'da `blob` veya "ikili büyük nesne" olarak yayımlar. [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844), verileri zincir üstünde bulundurmaya yarayan uygun maliyetli bir çözümü piyasaya sundu. `Blob`, toplamaların sıkıştırılmış durum geçiş verilerini Ethereum L1'e göndermesine olanak tanıyan yeni bir işlem alanıdır. Blob'lar, sonsuza kadar zincir üstünde kalan`calldata`'nın aksine kısa ömürlüdür ve istemcilerden [4096 dönem](https://github.com/ethereum/consensus-specs/blob/81f3ea8322aff6b9fb15132d050f8f98b16bdba4/configs/mainnet.yaml#L147) (yaklaşık 18 gün) sonra temizlenir. İyimser toplamalar, sıkıştırılmış işlemlerin toplu halde gönderilmesinde blob'ları kullanarak L1'e işlem yazma maliyetini önemli ölçüde azaltabilir.
 
-2. **`calldata:`** Temel işlem ücretinin ötesinde her durum yazımının maliyeti, L1'e gönderilen `calldata` boyutuna bağlıdır. `calldata` maliyetleri şu anda [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) tarafından belirlenmektedir ve maliyet, sırasıyla sıfır olmayan baytlar için 16 gaz ve sıfır baytlar için 4 gaz `calldata` olarak belirlenmiştir. Toplama operatörleri, kullanıcı ücretlerini azaltmak için işlemleri sıkıştırarak Ethereum'da yayımlanan `calldata` baytı sayısını azaltır.
+2. **Blob'ların harcadığı gaz**: Blob'lu işlemlerde, [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) tarafından tanıtılan mekanizmaya benzer dinamik bir ücret mekanizması kullanılır. Tip-3 işlemleri için gaz ücreti hesaplanırken ağ tarafından blob alanı talebine ve gönderilen işlemin blob alanı kullanımına bağlı olarak belirlenen blob'lar için ana ücret göz önünde bulundurulur.
 
 3. **L2 operatör ücretleri**: Bu, Ethereum'daki gaz ücretleri gibi işlem gerçekleştirirken ortaya çıkan bilgi işlem maliyetleri karşılığında toplama düğümlerine ödenen miktarı ifade eder. L2'ler daha yüksek işleme kapasitelerine sahip olduğundan ve Ethereum'daki doğrulayıcıları daha yüksek ücretli işlemlere öncelik vermeye zorlayan ağ tıkanıklıklarıyla karşılaşmadığından, toplama düğümleri daha düşük işlem ücretleri alır.
 
@@ -208,13 +212,13 @@ Açıklandığı gibi, iyimser toplamalar, veri erişilebilirliğini garanti etm
 
 Ana Ethereum zinciri, blokların ne kadar veriyi tutabileceğine dair sınırlamalar getirir ve bu, gaz birimleriyle ifade edilir ([ortalama blok boyutu](/developers/docs/blocks/#block-size) 15 milyon gazdır). Bu, her işlemin ne kadar gaz kullanabileceğini kısıtlasa da, aynı zamanda her işlemle ilişkili veriyi azaltarak blok başına işlenen işlem sayısını artırabileceğimiz anlamına gelir ve bu durum ölçeklenebilirliği doğrudan artırır.
 
-İyimser toplamalar, işlem verisi sıkıştırmasını gerçekleştirmek ve TPS oranlarını artırmak için birkaç teknik kullanır. Örneğin [bu makale](https://vitalik.eth.limo/general/2021/01/05/rollup.html), temel bir kullanıcı işleminin (ether gönderme) Ana Ağ'da ürettiği veri miktarı ile aynı işlemin bir toplamada ürettiği veri miktarını karşılaştırıyor:
+İyimser toplamalar, işlem verisi sıkıştırmasını gerçekleştirmek ve TPS oranlarını artırmak için birkaç teknik kullanır. Örneğin [bu makale](https://vitalik.eth.limo/general/2021/01/05/rollup.html), temel bir kullanıcı işleminin (ether gönderme) Ana Ağda ürettiği veri miktarı ile aynı işlemin bir toplamada ürettiği veri miktarını karşılaştırıyor:
 
 | Parametre  | Ethereum (L1)           | Toplama (L2) |
 | ---------- | ----------------------- | ------------ |
 | Nonce      | ~3                      | 0            |
 | Gaz fiyatı | ~8                      | 0-0,5        |
-| Gaz        | 3                       | 0-0.5        |
+| Gaz        | 3                       | 0-0,5        |
 | Kime       | 21                      | 4            |
 | Değer      | 9                       | ~3           |
 | İmza       | ~68 (2 + 33 + 33)       | ~0,5         |
@@ -249,15 +253,10 @@ Görerek öğrenmeyi mi tercih ediyorsunuz? Finematics'in iyimser toplamalar hak
 
 <YouTube id="7pWxCklcNsU" start="263" />
 
-### İyimser toplamaları kullanın {#use-optimistic-rollups}
-
-Merkeziyetsiz uygulamalarınıza entegre edebileceğiniz birden çok İyimser toplama uygulaması mevcuttur:
-
-<RollupProductDevDoc rollupType="optimistic" />
-
 ## İyimser toplamalara dair daha fazlası
 
 - [İyimser toplamalar nasıl çalışır? (Tam klavuz)](https://www.alchemy.com/overviews/optimistic-rollups)
+- [Blokzincir Toplaması nedir? Teknik Giriş](https://www.ethereum-ecosystem.com/blog/what-is-a-blockchain-rollup-a-technical-introduction)
 - [Temel Arbitrum Rehberi](https://newsletter.banklesshq.com/p/the-essential-guide-to-arbitrum)
 - [Optimism'in Toplaması aslında nasıl çalışıyor?](https://www.paradigm.xyz/2021/01/how-does-optimisms-rollup-really-work)
 - [OVM Deep Dive](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)

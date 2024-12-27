@@ -7,7 +7,7 @@ sidebarDepth: 2
 
 歸檔節點是一個以太坊用戶端的實例，經設定用來建立所有歷史狀態的存檔。 它是某些用例的有用工具，但可能比運行一個全節點更加複雜。
 
-## 基本資訊 {#prerequisites}
+## 先決條件 {#prerequisites}
 
 你應該瞭解[以太坊節點](/developers/docs/nodes-and-clients/)的概念，[其架構](/developers/docs/nodes-and-clients/node-architecture/)、[同步策略](/developers/docs/nodes-and-clients/#sync-modes)、[運行](/developers/docs/nodes-and-clients/run-a-node/)和[使用它們](/developers/docs/apis/json-rpc/)的實踐方法。
 

@@ -4,7 +4,7 @@ description: 如何開始單獨質押你的以太幣概覽
 lang: zh-tw
 template: staking
 emoji: ":money_with_wings:"
-image: /images/staking/leslie-solo.png
+image: /images/staking/leslie-withdrawal.png
 alt: 萊斯利犀牛在她自己的電腦晶片上。
 sidebarDepth: 2
 summaryPoints:
@@ -203,4 +203,4 @@ summaryPoints:
 - [按部就班：如何加入以太坊 2.0 測試網](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) - _Butta_
 - [以太坊 2 罰沒預防技巧](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) - _Raul Jordan 2020 年_
 
-<QuizWidget quizKey="solo-staking" />
+<QuizWidget quizKey="staking-solo" />

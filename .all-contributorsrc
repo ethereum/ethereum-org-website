@@ -12261,7 +12261,8 @@
       "profile": "https://github.com/Shiva-Sai-ssb",
       "contributions": [
         "bug",
-        "maintenance"
+        "maintenance",
+        "content"
       ]
     },
     {
@@ -12542,6 +12543,123 @@
       "profile": "https://signor.vercel.app/",
       "contributions": [
         "maintenance"
+      ]
+    },
+    {
+      "login": "KatrixReloaded",
+      "name": "Kartikeya Sureka",
+      "avatar_url": "https://avatars.githubusercontent.com/u/68804269?v=4",
+      "profile": "https://github.com/KatrixReloaded",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "Piyush-Tilokani",
+      "name": "Piyush Tilokani",
+      "avatar_url": "https://avatars.githubusercontent.com/u/112542519?v=4",
+      "profile": "https://github.com/Piyush-Tilokani",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "jacobourar",
+      "name": "Jacobo Uribe",
+      "avatar_url": "https://avatars.githubusercontent.com/u/109108267?v=4",
+      "profile": "https://github.com/jacobourar",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "Xcertik-Realist",
+      "name": "NilFoundation",
+      "avatar_url": "https://avatars.githubusercontent.com/u/63165931?v=4",
+      "profile": "https://github.com/Xcertik-Realist",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "gconnect",
+      "name": "Glory Agatevure",
+      "avatar_url": "https://avatars.githubusercontent.com/u/23031920?v=4",
+      "profile": "https://github.com/gconnect",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "emmanuellar",
+      "name": "Amarachi Johnson-Ubah",
+      "avatar_url": "https://avatars.githubusercontent.com/u/41474439?v=4",
+      "profile": "http://amarachijohnson.com",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "sumitvekariya",
+      "name": "Sumit Vekariya",
+      "avatar_url": "https://avatars.githubusercontent.com/u/20764957?v=4",
+      "profile": "http://sumitvekariya.surge.sh",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "rafagomes",
+      "name": "Rafa Gomes",
+      "avatar_url": "https://avatars.githubusercontent.com/u/565337?v=4",
+      "profile": "https://github.com/rafagomes",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "ddannehh",
+      "name": "ddannehh",
+      "avatar_url": "https://avatars.githubusercontent.com/u/109203827?v=4",
+      "profile": "https://github.com/ddannehh",
+      "contributions": [
+        "design"
+      ]
+    },
+    {
+      "login": "jkylling",
+      "name": "Jonas Irgens Kylling",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6781076?v=4",
+      "profile": "https://github.com/jkylling",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "CremaFR",
+      "name": "Thomas Brillard",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5360522?v=4",
+      "profile": "https://github.com/CremaFR",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "YakshitAgarwal",
+      "name": "Yakshit Agarwal",
+      "avatar_url": "https://avatars.githubusercontent.com/u/153830716?v=4",
+      "profile": "https://github.com/YakshitAgarwal",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "mseidlx",
+      "name": "Matthias Seidl",
+      "avatar_url": "https://avatars.githubusercontent.com/u/32496674?v=4",
+      "profile": "https://growthepie.xyz",
+      "contributions": [
+        "code"
       ]
     }
   ],

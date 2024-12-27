@@ -92,12 +92,13 @@ sidebarDepth: 2
 
 | クライアント     | ディスクサイズ(スナップ同期) | ディスクサイズ(フルアーカイブ) |
 | ---------- | --------------- | ---------------- |
-| Geth       | 500GB以上         | 12TB以上           |
-| Nethermind | 500GB以上         | 12TB以上           |
 | Besu       | 800GB以上         | 12TB以上           |
 | Erigon     | N/A             | 2.5TB以上          |
+| Geth       | 500GB以上         | 12TB以上           |
+| Nethermind | 500GB以上         | 12TB以上           |
+| Reth       | N/A             | 2.2TB以上          |
 
-- 注: エリゴンにはスナップ同期機能はありませんが、フルプルーニングは可能です(約500GB)
+- 注意: ErigonとRethはスナップ同期を提供していませんが、フルプルーニングが可能です (Erigonで約2TB、Rethで約1.2TB) 。
 
 コンセンサスクライアントの必要な容量は、クライアントの実装や有効にした機能(バリデータスラッシャーなど)によって変わりますが、概ねビーコンデータ用にさらに200GB必要です。 また、多数のバリデータを実行すると、帯域幅への負荷も大きくなります。 [この分析を通して、コンセンサスクライアントの要件の詳細](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc)がわかります。
 
@@ -154,6 +155,7 @@ Raspberry PiのようなARMアーキテクチャのシングルボードコン�
 - [Erigon](https://github.com/ledgerwatch/erigon/releases)
 - [Geth](https://geth.ethereum.org/downloads/)
 - [Nethermind](https://downloads.nethermind.io/)
+- [Reth](https://reth.rs/installation/installation.html)
 
 また、[実行レイヤーにおいても](/developers/docs/nodes-and-clients/client-diversity/#execution-layer)、クライアントの多様性が問題となっていることにも注意が必要です。 マイノリティの実行クライアントの運用を検討することをお勧めします。
 
@@ -177,7 +179,7 @@ Raspberry PiのようなARMアーキテクチャのシングルボードコン�
 
 ダウンロードしたソフトウェアを検証するもう1つの方法は、ハッシュが(一意の暗号論的指紋)、デベロッパーによって提供されたものと一致するかどうかを確認することです。 これはPGPを使うよりもさらに簡単で、ハッシュだけを提供するクライアントもあります。 ダウンロードしたソフトウェアに対しハッシュ関数を実行し、リリースページに記載されているものと比較してください。 以下の例を確認してください：
 
-```
+```sh
 sha256sum teku-22.6.1.tar.gz
 
 9b2f8c1f8d4dab0404ce70ea314ff4b3c77e9d27aff9d1e4c1933a5439767dde
@@ -213,7 +215,7 @@ sha256sum teku-22.6.1.tar.gz
 
 このトークンは、通常はクライアントソフトウェアによって自動的に生成されます。ただし、自分で作成しなければならないこともあります。その場合は、 [OpenSSL](https://www.openssl.org/)を使用してください。
 
-```
+```sh
 openssl rand -hex 32 > jwtsecret
 ```
 
@@ -221,12 +223,12 @@ openssl rand -hex 32 > jwtsecret
 
 このセクションでは、実行クライアントの開始について説明します。 あくまでも基本的な設定例となりますが、以下の設定でクライアントを起動します。
 
-- この例では、メインネットに接続するネットワークを指定
+- 接続するネットワークを指定する。例ではメインネットを使用
   - [テストネット](/developers/docs/networks/)のいずれか1つを選択して、セットアップの予備テストも実行可
 - ブロックチェーンを含むすべてのデータが格納されるデータディレクトリを定義
   - パスは必ず実際のものに変更する(例: 外付けドライブのディレクトリの指定など)
 - クライアントと通信するためのインターフェースを有効化
-  - コンセンサスクライアントとの通信で利用するJSON RPCとエンジンAPIを含む
+  - コンセンサスクライアントとの通信のために、JSON-RPCおよびエンジンAPIを含む
 - API認証で使う`jwtsecret`のパスを定義
   - 例えば、`/tmp/jwtsecret`など、クライアントがアクセス可能な実際のパスにする
 
@@ -236,9 +238,9 @@ openssl rand -hex 32 > jwtsecret
 
 ##### Besuの実行
 
-この例では、メインネットでBesuを起動し、ブロックチェーンデータをデフォルトフォーマットで`/data/ethereum`に保存し、コンセンサスクライアントへの接続のためにJSON RPCとEngine RPCを有効にしています。 エンジンAPIは、トークン`jwtsecret`で認証され、`localhost`からの呼び出しのみが許可されます。
+この例では、Besuをメインネットで起動し、ブロックチェーンデータを`/data/ethereum`にデフォルト形式で保存し、コンセンサスクライアントに接続するためにJSON-RPCおよびエンジンRPCを有効にします。 エンジンAPIは、トークン`jwtsecret`で認証され、`localhost`からの呼び出しのみが許可されます。
 
-```
+```sh
 besu --network=mainnet \
     --data-path=/data/ethereum \
     --rpc-http-enabled=true \
@@ -250,7 +252,7 @@ besu --network=mainnet \
 
 Besuには、一連の質問に答えることで設定ファイルを生成できるランチャーオプションもあります。 対話型ランチャーは、以下のように実行できます。
 
-```
+```sh
 besu --Xlauncher
 ```
 
@@ -258,9 +260,9 @@ besu --Xlauncher
 
 ##### Erigonの実行
 
-この例では、Erigonをメインネットで起動して、ブロックチェーンデータを`/data/ethereum`に保存します。また、JSON RPCを有効にして、許可するネームスペースを定義します。さらに、`jwtsecret`パスで定義されるコンセンサスクライアントへの接続認証を有効にしています。
+この例では、Erigonをメインネットで起動し、ブロックチェーンデータを`/data/ethereum`に保存し、JSON-RPCを有効にして、許可されるネームスペースを定義し、`jwtsecret`パスで定義されたコンセンサスクライアントに接続するための認証を有効にします。
 
-```
+```sh
 erigon --chain mainnet \
     --datadir /data/ethereum  \
     --http --http.api=engine,eth,web3,net \
@@ -271,9 +273,9 @@ Erigonは、デフォルトで8GBのHDDでフル同期を行います。アー�
 
 ##### Gethの実行
 
-この例では、Gethをメインネットで起動し、ブロックチェーンデータを`/data/ethereum`に保存します。また、JSON RPCを有効にして、許可するネームスペースを定義します。 さらに、コンセンサスクライアントに接続するための認証を有効にし、認証に必要な`jwtsecret`を定義し、許可する接続のオプションも合わせて(この例では`localhost`からのみ)定義しています。
+この例では、Gethをメインネットで起動し、ブロックチェーンデータを`/data/ethereum`に保存し、JSON-RPCを有効にして、許可されるネームスペースを定義します。 さらに、コンセンサスクライアントに接続するための認証を有効にし、認証に必要な`jwtsecret`を定義し、許可する接続のオプションも合わせて(この例では`localhost`からのみ)定義しています。
 
-```
+```sh
 geth --mainnet \
     --datadir "/data/ethereum" \
     --http --authrpc.addr localhost \
@@ -286,9 +288,9 @@ geth --mainnet \
 
 ##### Nethermindの実行
 
-Nethermindは、さまざまな[インストールオプション](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/getting-started)を提供しています。 パッケージには、ガイド付きセットアップ機能を備えたランチャーなどのさまざまなバイナリが含まれており、インタラクティブに設定できます。 他にも、設定フラグを付けて実行できるランナーなどがあります。 JSON RPCはデフォルトで有効になっています。
+Nethermindは、さまざまな[インストールオプション](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/getting-started)を提供しています。 パッケージには、ガイド付きセットアップ機能を備えたランチャーなどのさまざまなバイナリが含まれており、インタラクティブに設定できます。 他にも、設定フラグを付けて実行できるランナーなどがあります。 JSON-RPCはデフォルトで有効になっています。
 
-```
+```sh
 Nethermind.Runner --config mainnet \
     --datadir /data/ethereum \
     --JsonRpc.JwtSecretFile=/path/to/jwtsecret
@@ -297,6 +299,19 @@ Nethermind.Runner --config mainnet \
 Nethermindのドキュメントは、Nethermindとコンセンサスクライアントの実行方法をすべて網羅した[完全ガイド](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/running-nethermind-post-merge)です。
 
 実行クライアントは、コア機能と選択したエンドポイントを起動し、ピアを探し始めます。 ピアが見つかったら、同期を開始します。 また、コンセンサスクライアントからの接続を待ちます。 クライアントが正常に現在の状態に同期されると、現在のブロックチェーンデータが利用できるようになります。
+
+##### Rethの実行
+
+この例では、Rethをメインネットで起動し、デフォルトのデータ保存場所を使用します。 `jwtsecret`パスで定義されているコンセンサスクライアントに接続するためのJSON-RPCおよびエンジンRPC認証を有効にし、`localhost`からの呼び出しのみを許可します。
+
+```sh
+reth node \
+    --authrpc.jwtsecret /path/to/jwtsecret \
+    --authrpc.addr 127.0.0.1 \
+    --authrpc.port 8551
+```
+
+デフォルトのデータディレクトリについては、[Rethの設定](https://reth.rs/run/config.html?highlight=data%20directory#configuring-reth)をご覧ください。 [Rethのドキュメント](https://reth.rs/run/mainnet.html)には、その他のオプションや設定の詳細が記載されています。
 
 #### コンセンサスクライアントの開始 {#starting-the-consensus-client}
 
@@ -308,13 +323,13 @@ Nethermindのドキュメントは、Nethermindとコンセンサスクライア
 
 テストネットでビーコンノードを起動する場合、[チェックポイント同期](https://notes.ethereum.org/@launchpad/checkpoint-sync)にパブリックエンドポイントを使用すると、同期時間が大幅に短縮されます。
 
-#### コンセンサスクライアントの実行
+#### コンセンサスクライアントの実行 {#running-a-consensus-client}
 
 ##### Lighthouseの実行
 
 Lighthouseを実行する前に、[Lighthouse Book](https://lighthouse-book.sigmaprime.io/installation.html)でインストールと設定方法の詳細を参照してください。
 
-```
+```sh
 lighthouse beacon_node \
     --network mainnet \
     --datadir /data/ethereum \
@@ -327,7 +342,7 @@ lighthouse beacon_node \
 
 Lodestarソフトウェアをコンパイルするか、Dockerイメージをダウンロードしてインストールしてください。 詳細については、[ドキュメント](https://chainsafe.github.io/lodestar/)または総合[セットアップガイド](https://hackmd.io/@philknows/rk5cDvKmK)を参照してください。
 
-```
+```sh
 lodestar beacon \
     --rootDir="/data/ethereum" \
     --network=mainnet \
@@ -340,7 +355,7 @@ lodestar beacon \
 
 Nimbusには、コンセンサスクライアントと実行クライアントの両方を備えています。 計算能力の低いデバイスでも実行可能です。 [必要なものをインストールした後](https://nimbus.guide/quick-start.html)、コンセンサスクライアントを実行できます。
 
-```
+```sh
 nimbus_beacon_node \
     --network=mainnet \
     --web3-url=http://127.0.0.1:8551 \
@@ -352,7 +367,7 @@ nimbus_beacon_node \
 
 Prysmには、簡単に自動インストールできるスクリプトがあります。 詳細については、[Prysmドキュメント](https://docs.prylabs.network/docs/install/install-with-script)を参照してください。
 
-```
+```sh
 ./prysm.sh beacon-chain \
     --mainnet \
     --datadir /data/ethereum  \
@@ -362,7 +377,7 @@ Prysmには、簡単に自動インストールできるスクリプトがあり
 
 ##### Tekuの実行
 
-```
+```sh
 teku --network mainnet \
     --data-path "/data/ethereum" \
     --ee-endpoint http://localhost:8551 \
@@ -377,7 +392,7 @@ teku --network mainnet \
 
 自分でバリデータを実行すると、[ソロステーキング](/staking/solo/)ができます。これはイーサリアムネットワークをサポートする上で、最も影響力があり、トラストレスな方法です。 ただし、32 ETHのデポジットが必要となります。 費用を抑えたい場合は、[Rocket Pool](https://rocketpool.net/node-operators)など、パーミッションレスなノードオペレータの分散型プールに参加することで、少ない費用でバリデータを実行することもできます。
 
-ステーキングとバリデータのキーを生成するには、[Goerliテストネット・ステーキングランチパッド](https://goerli.launchpad.ethereum.org/)を使うのが最も簡単です。Goerliテストネットでは、実際に[ノードを実行](https://notes.ethereum.org/@launchpad/goerli)して、自分のセットアップをテストすることができます。 メインネットに移行する準備ができたら、今度は[メインネット・ステーキングランチパッド](https://launchpad.ethereum.org/)を使って、同じ手順を繰り返します。
+ステーキングとバリデーターキーの生成を始める最も簡単な方法は、[Holesky Testnet Staking Launchpad](https://holesky.launchpad.ethereum.org/)を使用することです。これにより、[Holesky上でノードを実行して](https://notes.ethereum.org/@launchpad/holesky)、セットアップをテストすることができます。 メインネットに移行する準備ができたら、今度は[メインネット・ステーキングランチパッド](https://launchpad.ethereum.org/)を使って、同じ手順を繰り返します。
 
 ステーキングオプションの概要については、[ステーキング](/staking)ページをご覧ください。
 

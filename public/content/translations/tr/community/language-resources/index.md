@@ -16,9 +16,9 @@ Kendi dilinizde bir eğitim kaynağı mı biliyorsunuz? [Listeye eklemek için](
 
 ## Ethereum.org kaynakları {#ethereum-org}
 
-Ethereum.org, diller sayfamızda bulabileceğiniz 40'tan fazla dile yerel olarak çevrilmiştir.
+Ethereum.org, her sayfanın üst kısmında bulunan dil seçimi menüsü ile erişilebilen 40'tan fazla dile doğal olarak çevrilmiştir.
 
-![Language selector menu](./language-selector-menu.png)
+![Dil seçim menüsü](./language-selector-menu.png)
 
 İki dilliyseniz ve daha fazla kişiye ulaşmamıza yardımcı olmak istiyorsanız, [ethereum.org Çeviri Programı](/contributing/translation-program/#translation-program)na da katılarak web sitesini tercüme etmemize yardımcı olabilirsiniz.
 
@@ -32,6 +32,7 @@ Ethereum.org, diller sayfamızda bulabileceğiniz 40'tan fazla dile yerel olarak
 - [Cointelegraph](http://cointelegraph.com.br/category/analysis) - Büyük bir kripto para haber merkezi olan Cointelegraph'ın Brezilya versiyonu
 - [Livecoins](http://www.livecoins.com.br/ethereum) - kripto para birimi haberleri ve araçları
 - [Seudinheiro](http://www.seudinheiro.com/criptomoedas/) - kripto para haberleri ve raporları
+- [Modüler Kripto](https://modularcrypto.xyz/) - kripto para haberleri ve eğitim makaleleri
 
 **Eğitim**
 
@@ -90,6 +91,24 @@ Ethereum.org, diller sayfamızda bulabileceğiniz 40'tan fazla dile yerel olarak
 - [Microsoft Learn (Ethereum ağları)](https://docs.microsoft.com/de-de/learn/modules/blockchain-ethereum-networks/) - Ethereum ağlarına bağlanın ve ağları dağıtın
 - [Microsoft Learn (blok zincirler)](https://docs.microsoft.com/de-de/learn/paths/ethereum-blockchain-development/) - blok zincir geliştirmeye giriş
 
+### İbranice {#he}
+
+- [Udi Wertheimer - Bitcoin kullanıcılarının Ethereum'dan öğrenebileceği şeyler](https://www.cryptojungle.co.il/udi-wertheimer-what-bitcoiners-can-learn-from-ethereum/)
+- [Omer Greismen (OpenZeppelin) - 15 Milyar Dolarlık Akıllı Sözleşme Hack'ini Nasıl Önledik](https://www.cryptojungle.co.il/omer-greisman-openzeppelin/)
+- [Shy Datika (INX) - Jetonlaştırma ve Ethereum'un bir menkul kıymet olup olmadığı da dahil olmak üzere menkul kıymetlerin geleceği](https://www.cryptojungle.co.il/shy-datika-tokenization/)
+- [Roy Confino (Lemonade) - Ethereum'da Sigorta](https://www.cryptojungle.co.il/roy-confino-insurance/)
+- [Idan Ofrat (Fireblocks) - Kurumsal Benimseme](https://www.cryptojungle.co.il/idan-ofrat-fireblocks/)
+- [Gal Weizman (MetaMask) - Metamask Nedir?](https://www.cryptojungle.co.il/gal-weizman-metamask/)
+- [Dror Aviely (Consensys) - Ethereum'un merkezi](https://www.cryptojungle.co.il/dror-aviely-ethereum-center/)
+- [Nir Rozin - Cryptopunk olmak](https://www.cryptojungle.co.il/nir-rozin-cryptopunk/)
+- [Adan Kedem - Oyun ve Metaverse](https://www.cryptojungle.co.il/adan-kedem-web3-gaming/)
+- [Uri Kolodny (Starkware) - Ethereum ve Blokzincir Katmanları](https://www.cryptojungle.co.il/uri-kolodny-starkware/)
+- [Udi Wertheimer - Ethereum 2.0 ve rakipler](https://www.cryptojungle.co.il/udi-on-eth2/)
+- [Ben Samocha (myself) - Ethereum 2.0 - bir fırsat mı?](https://www.cryptojungle.co.il/etherurm2-week-summary/)
+- [Alon Muroch (Bloxstaking) - Ethereum 2.0 Nedir?](https://www.cryptojungle.co.il/alon-moroch-eth2/)
+- [Eilon Aviv (Collider Ventures) - Ethereum 2.0'da neler yanlış gidebilir?](https://www.cryptojungle.co.il/eilon-aviv-eth2-0/)
+- [Eilon Aviv (Collider Ventures) - Ethereum 2.0'a neden ihtiyacımız var?](https://www.cryptojungle.co.il/eilon-aviv-ethereum-2-0/)
+
 ### İtalyanca {#it}
 
 - [Ethereum Italia](https://www.ethereum-italia.it/) - Akıllı sözleşmeler ve blok zincir teknolojilerine odaklı Ethereum eğitim, organizasyon ve haberleri
@@ -98,9 +117,19 @@ Ethereum.org, diller sayfamızda bulabileceğiniz 40'tan fazla dile yerel olarak
 - [Microsoft Learn (Akıllı sözleşmeler)](https://docs.microsoft.com/it-it/learn/modules/blockchain-solidity-ethereum-smart-contracts/) - Solidity ile Ethereum akıllı sözleşmeleri yazmayı öğrenin
 - [Microsoft Learn (dapps)](https://docs.microsoft.com/it-it/learn/modules/blockchain-create-ui-decentralized-apps/) - merkeziyetsiz uygulamalar ile bir kullanıcı arayüzü oluşturun
 
+### Japonca {#ja}
+
+- [Japonya Sanal ve Kripto Varlıklar Borsası Birliği](https://jvcea.or.jp/)
+- [Japonya Kripto Varlık İş Birliği](https://cryptocurrency-association.org/)
+- [Blok zincir geliştirmeye başlayın - Öğren | Microsoft Docs](https://docs.microsoft.com/ja-jp/learn/paths/ethereum-blockchain-development/) - Bu öğrenim yolu, sizi blok zincir ve Ethereum platformu üzerinde geliştirme ile tanıştırır
+- [Ethereum'da Uzmanlaşma](https://www.oreilly.co.jp/books/9784873118963/) - Japonca Ethereum'da Uzmanlaşmak
+- [Solidity ve Ethereum ile Uygulamalı Akıllı Sözleşme Geliştirme](https://www.oreilly.co.jp/books/9784873119342/) - Japonca Solidity ve Ethereum ile Uygulamalı Akıllı Sözleşme Geliştirme
+
 ### Rusça {#ru}
 
 - [Cyber Academy](https://cyberacademy.dev) - web3 yaratıcıları için eğitim alanı
+- [Forklog](https://forklog.com) - genel olarak kripto hakkında haberler ve eğitici makaleler, mevcut teknolojiler ve farklı blokzincirlerin gelecekteki yükseltmeleri
+- [BeInCrypto](https://ru.beincrypto.com) - haberler, kripto fiyat analizi ve kriptoyla ilgili her şey hakkında basit açıklamalar içeren teknik olmayan makaleler
 
 ### İspanyolca {#es}
 
@@ -122,11 +151,3 @@ Ethereum.org, diller sayfamızda bulabileceğiniz 40'tan fazla dile yerel olarak
 - [Tino Group](https://wiki.tino.org/ethereum-la-gi/) - Ethereum, merkeziyetsiz uygulamalar, cüzdanlar ve SSS'lere genel bakış
 - [Tap Chi Bitcoin](https://tapchibitcoin.io/tap-chi/tin-tuc-ethereum-eth) - Ethereum haberleri ve eğitimi için alt sayfalar içeren bir web platformu
 - [Coin68](https://coin68.com/ethereum-tieu-diem/) - Ethereum haberleri ve eğitim ile ilgili bilgiler içeren bir kripto para portalı
-
-### Japonca {#ja}
-
-- [Japonya Sanal ve Kripto Varlıklar Borsası Birliği](https://jvcea.or.jp/)
-- [Japonya Kripto Varlık İş Birliği](https://cryptocurrency-association.org/)
-- [Blok zincir geliştirmeye başlayın - Öğren | Microsoft Docs](https://docs.microsoft.com/ja-jp/learn/paths/ethereum-blockchain-development/) - Bu öğrenim yolu, sizi blok zincir ve Ethereum platformu üzerinde geliştirme ile tanıştırır
-- [Ethereum'da Uzmanlaşma](https://www.oreilly.co.jp/books/9784873118963/) - Japonca Ethereum'da Uzmanlaşmak
-- [Solidity ve Ethereum ile Uygulamalı Akıllı Sözleşme Geliştirme](https://www.oreilly.co.jp/books/9784873119342/) - Japonca Solidity ve Ethereum ile Uygulamalı Akıllı Sözleşme Geliştirme

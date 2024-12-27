@@ -118,6 +118,13 @@ lang: ja
 - [ドキュメント](https://catapulta.sh/docs)
 - [GitHub](https://github.com/catapulta-sh)
 
+**Covalent -** **_200以上のチェーンで使えるリッチなブロックチェーンAPI_**
+
+- [covalenthq.com](https://www.covalenthq.com/)
+- [ドキュメント](https://www.covalenthq.com/docs/api/)
+- [GitHub](https://github.com/covalenthq)
+- [Discord](https://www.covalenthq.com/discord/)
+
 **Wake -** **_コントラクトのテスト、ファジング、デプロイ、脆弱性スキャン、コードナビゲーションが可能なオールインワンPythonフレームワーク。_**
 
 - [ホームページ](https://getwake.io/)

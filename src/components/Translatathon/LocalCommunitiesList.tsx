@@ -1,5 +1,3 @@
-import { Box, Flex, Text } from "@chakra-ui/react"
-
 import { ButtonLink } from "@/components/Buttons"
 
 import Emoji from "../Emoji"
@@ -75,32 +73,20 @@ const localCommunitiesData = [
 
 export const LocalCommunitiesList = () => {
   return (
-    <Flex gap={4} direction="column">
+    <div className="flex flex-col gap-4">
       {localCommunitiesData.map((community, index) => (
-        <Flex
-          bg="background.highlight"
+        <div
           key={index}
-          direction={{ base: "column-reverse", md: "row" }}
-          p={6}
-          gap={8}
-          justifyContent={"space-between"}
+          className="flex flex-col-reverse justify-between gap-8 bg-background-highlight p-6 md:flex-row"
         >
-          <Flex direction="column" gap={6}>
-            <Flex
-              borderRadius={80}
-              bg="background.base"
-              px={5}
-              py={1}
-              w="fit-content"
-            >
-              <Text fontWeight="bold">{community.location}</Text>
-            </Flex>
-            <Box>
-              <Text size="lg" fontWeight="bold">
-                {community.eventName}
-              </Text>
-            </Box>
-            <Flex>
+          <div className="flex flex-col gap-6">
+            <div className="flex w-fit items-center rounded-full bg-white px-5 py-1 dark:bg-black">
+              <p className="font-bold">{community.location} </p>
+            </div>
+            <div>
+              <p className="text-lg font-bold">{community.eventName}</p>
+            </div>
+            <div>
               <ButtonLink
                 href={community.lumaLink}
                 variant="outline"
@@ -108,13 +94,13 @@ export const LocalCommunitiesList = () => {
               >
                 Register here
               </ButtonLink>
-            </Flex>
-          </Flex>
-          <Flex minW="90">
+            </div>
+          </div>
+          <div className="min-w-[90px]">
             <Emoji className="text-[90px]" text={community.emojiString} />
-          </Flex>
-        </Flex>
+          </div>
+        </div>
       ))}
-    </Flex>
+    </div>
   )
 }
