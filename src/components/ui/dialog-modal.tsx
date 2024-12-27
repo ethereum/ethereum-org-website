@@ -19,9 +19,9 @@ const dialogVariant = tv({
        *
        * Credit: Chakra v2 takes a similar approach for modal
        */
-      "data-[state=open]:animate-contentShow size-[calc(-2rem_+_100%)] fixed left-1/2 top-1/2 grid -translate-x-1/2 -translate-y-1/2 gap-4 rounded-md bg-background p-8 shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] focus:outline-none z-modal  overflow-auto",
+      "data-[state=open]:animate-contentShow  grid gap-4 rounded-md bg-background p-8 shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] focus:outline-none z-modal",
     overlay:
-      "data-[state=open]:animate-overlayShow fixed inset-0 bg-black/70 z-overlay",
+      "data-[state=open]:animate-overlayShow overflow-y-auto p-4 grid place-items-center fixed inset-0 bg-black/70 z-overlay",
     header: "relative pe-12",
     title: "text-2xl",
     footer: "pt-8",
@@ -97,14 +97,15 @@ const DialogContent = React.forwardRef<
   const { content } = useDialogStyles()
   return (
     <DialogPortal>
-      <DialogOverlay />
-      <DialogPrimitive.Content
-        ref={ref}
-        className={cn(content(), className)}
-        {...props}
-      >
-        {children}
-      </DialogPrimitive.Content>
+      <DialogOverlay>
+        <DialogPrimitive.Content
+          ref={ref}
+          className={cn(content(), className)}
+          {...props}
+        >
+          {children}
+        </DialogPrimitive.Content>
+      </DialogOverlay>
     </DialogPortal>
   )
 })
