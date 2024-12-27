@@ -1,12 +1,5 @@
-import { useState } from "react"
-import {
-  Avatar,
-  Flex,
-  FlexProps,
-  ListItem,
-  UnorderedList,
-  VStack,
-} from "@chakra-ui/react"
+import { BaseHTMLAttributes, useState } from "react"
+import { Avatar } from "@chakra-ui/react"
 
 import type { ChildOnlyProp, FileContributor } from "@/lib/types"
 
@@ -15,18 +8,20 @@ import InlineLink from "@/components/Link"
 import Modal from "@/components/Modal"
 import Text from "@/components/OldText"
 import Translation from "@/components/Translation"
+import { Flex, VStack } from "@/components/ui/flex"
+import { ListItem, UnorderedList } from "@/components/ui/list"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 const ContributorList = ({ children }: Required<ChildOnlyProp>) => (
-  <UnorderedList maxH="2xs" m={0} mt={6} overflowY="scroll">
+  <UnorderedList className="max-h-3 mt-6 m-0 overflow-y-scroll">
     {children}
   </UnorderedList>
 )
 
 type ContributorProps = { contributor: FileContributor }
 const Contributor = ({ contributor }: ContributorProps) => (
-  <ListItem p={2} display="flex" alignItems="center">
+  <ListItem className="flex items-center">
     <Avatar
       height="40px"
       width="40px"
@@ -40,6 +35,7 @@ const Contributor = ({ contributor }: ContributorProps) => (
   </ListItem>
 )
 
+type FlexProps = BaseHTMLAttributes<HTMLDivElement> & { asChild?: boolean }
 export type FileContributorsProps = FlexProps & {
   contributors: FileContributor[]
   lastEditLocaleTimestamp: string
@@ -77,15 +73,10 @@ const FileContributors = ({
         </ContributorList>
       </Modal>
 
-      <Flex
-        direction={{
-          base: "column",
-          md: "row",
-        }}
-        p={{ base: 0, md: 2 }}
+      <Flex className="flex-col p-0 md:flex-row md:p-2"
         {...props}
       >
-        <Flex me={4} alignItems="center" flex="1" hideBelow="md">
+        <Flex className="me-4 items-center flex-1 invisible md:visible md:flex">
           <Avatar
             height="40px"
             width="40px"
@@ -103,7 +94,7 @@ const FileContributors = ({
           </Text>
         </Flex>
 
-        <VStack align="stretch" justifyContent="space-between" spacing={2}>
+        <VStack className="items-stretch justify-between space-y-2 items-center">
           <Button
             variant="outline"
             bg="background.base"
