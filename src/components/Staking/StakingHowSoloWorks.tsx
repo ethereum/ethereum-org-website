@@ -1,9 +1,9 @@
 /* eslint-disable react/jsx-key */
-import { Center } from "@chakra-ui/react"
-
-import { Image } from "@/components/Image"
-import OrderedList from "@/components/OrderedList"
+import { TwImage } from "@/components/Image"
 import Translation from "@/components/Translation"
+import { Center } from "@/components/ui/flex"
+
+import { ListItem, OrderedList } from "../ui/list"
 
 import image from "@/public/images/hackathon_transparent.png"
 
@@ -27,12 +27,13 @@ const StakingHowSoloWorks = () => {
   ]
 
   return (
-    <Center
-      flexDirection={{ base: "column", md: "row" }}
-      justifyContent="space-between"
-    >
-      <OrderedList listData={items} />
-      <Image src={image} alt="" width={400} />
+    <Center className="flex-col justify-between md:flex-row">
+      <OrderedList>
+        {items.map((item, index) => (
+          <ListItem key={index}>{item}</ListItem>
+        ))}
+      </OrderedList>
+      <TwImage src={image} alt="" width={400} />
     </Center>
   )
 }
