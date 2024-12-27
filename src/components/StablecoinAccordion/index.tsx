@@ -104,7 +104,7 @@ const StablecoinAccordion = () => {
   const DEFAULT_IMAGE_WIDTH = 24
 
   return (
-    <Accordion type="single" className="w-full rounded-[4px]" collapsible>
+    <Accordion type="single" className="w-full rounded" collapsible>
       <AccordionCustomItem category="dapps">
         <LeftColumnPanel>
           <SectionTitle>

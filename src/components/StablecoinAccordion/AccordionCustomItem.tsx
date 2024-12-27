@@ -66,7 +66,7 @@ export const AccordionCustomItem = (props: AccordionCustomItemProps) => {
     <AccordionItem value={contentObj.title} className="border">
       <AccordionTrigger
         hideIcon
-        className="items-center justify-between px-0 py-0 text-body-medium hover:text-body-medium"
+        className="items-center justify-between px-0 py-0 text-body-medium hover:text-body-medium md:px-0"
         onClick={handleOpen}
       >
         <Flex
@@ -75,7 +75,7 @@ export const AccordionCustomItem = (props: AccordionCustomItemProps) => {
         >
           <Emoji
             text={contentObj.emoji}
-            className="mb-2 me-6 text-[3rem] md:mb-0 md:text-[4rem]"
+            className="mb-2 me-6 text-5xl md:mb-0 md:text-6xl"
           />
           <div>
             <Flex className="mb-2 items-center">
@@ -84,7 +84,7 @@ export const AccordionCustomItem = (props: AccordionCustomItemProps) => {
               </h3>
               {!!contentObj.pill && (
                 <Tag
-                  className="ms-4 rounded-[4px]"
+                  className="ms-4"
                   variant="solid"
                   status={contentObj.pill.color}
                 >
@@ -97,7 +97,7 @@ export const AccordionCustomItem = (props: AccordionCustomItemProps) => {
         </Flex>
         <MoreOrLessLink isOpen={open} />
       </AccordionTrigger>
-      <AccordionContent className="-mx-px -mb-px mt-0 border border-border bg-background p-0 text-md">
+      <AccordionContent className="-mx-px -mb-px mt-0 border border-border bg-background p-0 text-md md:p-0">
         <Flex className="flex-col justify-between p-8 lg:flex-row">
           {children}
         </Flex>
