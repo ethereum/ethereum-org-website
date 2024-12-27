@@ -7,6 +7,8 @@ import { ChildOnlyProp } from "@/lib/types"
 import { Flex } from "@/components/ui/flex"
 import InlineLink from "@/components/ui/Link"
 
+import { cn } from "@/lib/utils/cn"
+
 import { isMobile } from "../lib/utils/isMobile"
 
 import Emoji from "./Emoji"
@@ -112,7 +114,13 @@ const GridItem = ({
     <Flex
       id={`type-${index}`}
       onClick={() => handleClick()}
-      className={`flex-col ${isOpen ? `${color} col-start-1 row-start-1 row-end-[span_3] cursor-auto justify-start text-gray-600 transition sm:flex-col` : "col-start-auto row-start-auto row-end-auto cursor-pointer justify-between bg-background transition-transform duration-500 hover:skew-x-[-5deg] hover:bg-background-highlight sm:flex-row"} items-center border border-body p-6 hover:shadow-table-box lg:flex-col lg:items-start lg:justify-start`}
+      className={cn(
+        "flex-col",
+        isOpen
+          ? `${color} col-start-1 row-start-1 row-end-[span_3] cursor-auto justify-start text-gray-600 transition sm:flex-col`
+          : "col-start-auto row-start-auto row-end-auto cursor-pointer justify-between bg-background transition-transform duration-500 hover:skew-x-[-5deg] hover:bg-background-highlight sm:flex-row",
+        "items-center border border-body p-6 hover:shadow-table-box lg:flex-col lg:items-start lg:justify-start"
+      )}
     >
       {isOpen ? (
         <Emoji className="mb-8 text-8xl" text={emoji} />
