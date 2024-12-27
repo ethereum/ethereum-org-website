@@ -41,14 +41,14 @@ const ActionCard = ({
   return (
     <LinkBox
       className={cn(
-        "m-4 flex flex-none shadow-table hover:scale-[1.02] hover:rounded hover:bg-background-highlight hover:shadow-table-box-hover hover:duration-100 focus:scale-[1.02] focus:rounded focus:shadow-table-box-hover focus:duration-100",
+        "flex shadow-table hover:scale-[1.02] hover:rounded hover:bg-background-highlight hover:shadow-table-box-hover hover:duration-100 focus:scale-[1.02] focus:rounded focus:shadow-table-box-hover focus:duration-100",
         className
       )}
       {...props}
     >
       <Flex
         className={cn(
-          "action-card-image-wrapper flex h-[260px] flex-row bg-gradient-to-r from-accent-a/10 to-accent-c/10",
+          "flex h-[260px] flex-row bg-gradient-to-r from-accent-a/10 to-accent-c/10",
           isBottom ? "items-end" : "items-center",
           isRight ? "justify-end" : "justify-center"
         )}
@@ -57,10 +57,10 @@ const ActionCard = ({
           src={image}
           alt={alt || ""}
           width={imageWidth}
-          className="max-h-full object-cover"
+          className="max-h-full object-cover p-4"
         />
       </Flex>
-      <div className="action-card-content p-6">
+      <div className="flex flex-col justify-center p-6">
         <h3 className="mb-4 mt-2 text-2xl font-semibold leading-snug">
           <LinkOverlay asChild>
             <InlineLink
