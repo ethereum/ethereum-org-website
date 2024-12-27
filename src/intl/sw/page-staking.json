@@ -194,7 +194,7 @@
   "page-staking-faq-2-question": "Kwa nini nahitajika kuwa na fedha kuweza kuweka dhamana?",
   "page-staking-faq-2-answer": "Mthibitishaji ana uwezo wa kupendekeza na kuthibitisha bloku kwenye mtandao. Kupunguza tabia ya uongo, mtumiaji lazima awe na fedha kuweza kuweka dhamana. Hii inaruhusu itifaki kuadhibu mtenda mabaya. Kuweka dhamana ni njia ya kuhakikisha uaminifu, kwa matendo yako yatakuwa na matokeo ya kifedha.",
   "page-staking-faq-3-question": "Ninaweza kununua Eth2'?",
-  "page-staking-faq-3-answer-p1": "Hakuna tokeni ya asili ya 'Eth2' kwenye itifaki, kama tokeni hasili ether (ETH) haikubadilika pale ambapo Ethreum ilabadiishwa kwenda udhibitisho-wa-dhamana.",
+  "page-staking-faq-3-answer-p1": "Hakuna tokeni ya asili ya 'Eth2' kwenye itifaki, kama tokeni hasili ether (ETH) haikubadilika pale ambapo Ethereum ilabadiishwa kwenda udhibitisho-wa-dhamana.",
   "page-staking-faq-3-answer-p2": "Kuna tokeni za viwakilishi zinazoweza wakilisha ETH zilizowekwa dhamana (kama eETH kutoka kwenye daraja la roketi, stETH kutoka Lido, ETH2 kutoka Coinbase). Jifunze zaidi kuhusu <a href=\"/staking/pools/\">madaraja ya kuweka dhamana</a>",
   "page-staking-faq-4-question": "Kuweka dhamana inafanya kazi?",
   "page-staking-faq-4-answer-p1": "Ndio, kuweka dhamana ilikuwa wazi tokea Disemba 1, 2020",

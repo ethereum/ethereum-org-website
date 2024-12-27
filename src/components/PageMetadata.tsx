@@ -42,7 +42,6 @@ const PageMetadata = ({
 
   const desc = description || t("site-description")
   const siteTitle = t("site-title")
-  const fullTitle = `${title} | ${siteTitle}`
 
   // Remove any query params (?) or hash links (#)
   const path = asPath.replace(/[?#].*/, "")
@@ -66,10 +65,10 @@ const PageMetadata = ({
     { name: `twitter:card`, content: `summary_large_image` },
     { name: `twitter:creator`, content: author || siteTitle },
     { name: `twitter:site`, content: author || siteTitle },
-    { name: `twitter:title`, content: fullTitle },
+    { name: `twitter:title`, content: title },
     { name: `twitter:description`, content: desc },
     { name: `twitter:image`, content: ogImageUrl },
-    { property: `og:title`, content: fullTitle },
+    { property: `og:title`, content: title },
     { property: `og:locale`, content: locale! },
     { property: `og:description`, content: desc },
     { property: `og:type`, content: `website` },
@@ -80,7 +79,7 @@ const PageMetadata = ({
 
   return (
     <Head>
-      <title>{fullTitle}</title>
+      <title>{title}</title>
       {metadata.map((data) => (
         <meta
           key={(data as NameMeta).name || (data as PropMeta).property}

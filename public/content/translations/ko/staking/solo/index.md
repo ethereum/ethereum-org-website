@@ -203,4 +203,4 @@ ETH 솔로 스테이킹을 지원하는 도구와 서비스는 점점 많아지�
 - [단계별: 이더리움 2.0 테스트넷에 참여하는 방법](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) - _Butta_
 - [Eth2 슬래싱 방지 팁](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) - _Raul Jordan 2020_
 
-<QuizWidget quizKey="solo-staking" />
+<QuizWidget quizKey="staking-solo" />

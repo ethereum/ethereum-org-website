@@ -12643,6 +12643,24 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "YakshitAgarwal",
+      "name": "Yakshit Agarwal",
+      "avatar_url": "https://avatars.githubusercontent.com/u/153830716?v=4",
+      "profile": "https://github.com/YakshitAgarwal",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "mseidlx",
+      "name": "Matthias Seidl",
+      "avatar_url": "https://avatars.githubusercontent.com/u/32496674?v=4",
+      "profile": "https://growthepie.xyz",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
