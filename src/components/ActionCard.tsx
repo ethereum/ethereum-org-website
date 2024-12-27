@@ -41,14 +41,14 @@ const ActionCard = ({
   return (
     <LinkBox
       className={cn(
-        "focus:bg-table-bg-hover m-4 flex flex-none shadow-table hover:scale-[1.02] hover:rounded hover:bg-background-highlight hover:shadow-table-box-hover hover:duration-100 focus:scale-[1.02] focus:rounded focus:shadow-table-box-hover focus:duration-100",
+        "m-4 flex flex-none shadow-table hover:scale-[1.02] hover:rounded hover:bg-background-highlight hover:shadow-table-box-hover hover:duration-100 focus:scale-[1.02] focus:rounded focus:shadow-table-box-hover focus:duration-100",
         className
       )}
       {...props}
     >
       <Flex
         className={cn(
-          "action-card-image-wrapper flex h-[260px] flex-row bg-gradient-to-r from-accent-a/10 to-accent-c/10 shadow-[inset_0px_-1px_0px_rgba(0,0,0,0.1)]",
+          "action-card-image-wrapper flex h-[260px] flex-row bg-gradient-to-r from-accent-a/10 to-accent-c/10",
           isBottom ? "items-end" : "items-center",
           isRight ? "justify-end" : "justify-center"
         )}
@@ -56,8 +56,8 @@ const ActionCard = ({
         <TwImage
           src={image}
           alt={alt || ""}
+          width={imageWidth}
           className="max-h-full object-cover"
-          style={{ width: `${imageWidth}px` }}
         />
       </Flex>
       <div className="action-card-content p-6">
@@ -66,15 +66,13 @@ const ActionCard = ({
             <InlineLink
               href={href}
               hideArrow
-              className="text-body no-underline hover:no-underline focus:no-underline"
+              className="text-body no-underline"
             >
               {title}
             </InlineLink>
           </LinkOverlay>
         </h3>
-        <p className={"mb-0 text-body opacity-65 dark:opacity-80"}>
-          {description}
-        </p>
+        <p className={"mb-0 text-body/65"}>{description}</p>
         {children && <div className="mt-8">{children}</div>}
       </div>
     </LinkBox>
