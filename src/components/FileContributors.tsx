@@ -21,7 +21,7 @@ const ContributorList = ({ children }: Required<ChildOnlyProp>) => (
 
 type ContributorProps = { contributor: FileContributor }
 const Contributor = ({ contributor }: ContributorProps) => (
-  <ListItem className="flex items-center">
+  <ListItem className="p-2 flex items-center">
     <Avatar
       height="40px"
       width="40px"
