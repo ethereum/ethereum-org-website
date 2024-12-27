@@ -192,7 +192,7 @@ Returns the total amount of vault shares the `owner` currently has.
 
 #### Deposit Event
 
-**MUST** be emitted when tokens are deposited into the vault via the [`mint`](#mint) and [`deposit`](#deposit) methods
+**MUST** be emitted when tokens are deposited into the vault via the [`mint`](#mint) and [`deposit`](#deposit) methods.
 
 ```solidity
 event Deposit(
