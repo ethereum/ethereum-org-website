@@ -19,7 +19,7 @@ const dialogVariant = tv({
        *
        * Credit: Chakra v2 takes a similar approach for modal
        */
-      "data-[state=open]:animate-contentShow  grid gap-4 rounded-md bg-background p-8 shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] focus:outline-none z-modal",
+      "data-[state=open]:animate-contentShow w-full grid gap-4 rounded-md bg-background p-8 shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] focus:outline-none z-modal",
     overlay:
       "data-[state=open]:animate-overlayShow overflow-y-auto p-4 grid place-items-center fixed inset-0 bg-black/70 z-overlay",
     header: "relative pe-12",
