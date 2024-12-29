@@ -1,8 +1,8 @@
 import { BiCircle } from "react-icons/bi"
-import { Stack } from "@chakra-ui/react"
 import { Meta, StoryObj } from "@storybook/react"
 
-import ButtonTwoLinesComponent from "../buttons/ButtonTwoLines"
+import { ButtonTwoLines as ButtonTwoLinesComponent } from "../buttons/ButtonTwoLines"
+import { Stack } from "../flex"
 
 const meta = {
   title: "Atoms / Form / Buttons / ButtonTwoLines",
@@ -15,14 +15,13 @@ type Story = StoryObj<typeof meta>
 
 export const ButtonTwoLines: Story = {
   args: {
-    componentType: "button",
     icon: BiCircle,
     mainText: "Main Text",
     helperText: "Helper Text",
     className: "w-[300px]",
   },
   render: (args) => (
-    <Stack spacing="8">
+    <Stack className="gap-8">
       <ButtonTwoLinesComponent {...args} />
       <ButtonTwoLinesComponent
         {...args}

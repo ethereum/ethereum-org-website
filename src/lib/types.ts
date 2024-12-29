@@ -161,13 +161,19 @@ export type LoadingState<T> =
   | { loading: false; data: T }
   | { loading: false; error: unknown }
 
-/**
- * Quiz data types
- */
-export type QuestionTemplate = {
-  totalAnswers: 2 | 3 | 4
-  correctAnswer: 1 | 2 | 3 | 4
+// Quiz data types
+
+export type ChoiceLetter = "a" | "b" | "c" | "d"
+
+type ChoiceNumber = 1 | 2 | 3 | 4
+type TotalAnswers = 2 | 3 | 4
+
+type QuestionTemplate = {
+  totalAnswers: TotalAnswers
+  correctAnswer: ChoiceNumber
+  explanationOverrides?: (ChoiceNumber | null)[] // Tuple<ChoiceNumber, QuestionTemplate["totalAnswers"]>
 }
+
 export type QuestionBankConfig = Record<string, QuestionTemplate[]>
 
 export type Answer = {

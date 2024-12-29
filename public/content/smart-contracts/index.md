@@ -1,5 +1,6 @@
 ---
 title: Smart contracts
+metaTitle: "Smart contracts: What are the and benefits"
 description: A non-technical introduction to smart contracts
 lang: en
 ---
@@ -76,7 +77,6 @@ They can perform computations, create currency, store data, mint [NFTs](/glossar
 ## Further reading {#further-reading}
 
 - [How Smart Contracts Will Change the World](https://www.youtube.com/watch?v=pA6CGuXEKtQ)
-- [Smart Contracts: The Blockchain Technology That Will Replace Lawyers](https://blockgeeks.com/guides/smart-contracts/)
 - [Smart contracts for developers](/developers/docs/smart-contracts/)
 - [Learn to write smart-contracts](/developers/learning-tools/)
 - [Mastering Ethereum - What is a Smart Contract?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)

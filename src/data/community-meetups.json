@@ -496,5 +496,11 @@
     "emoji": ":italy:",
     "location": "Naples",
     "link": "https://www.eventbrite.it/e/863744451907/"
+  },
+  {
+    "title": "ETHCluj Meetup",
+    "emoji": ":romania:",
+    "location": "Cluj-Napoca",
+    "link": "https://www.meetup.com/ethcluj"
   }    
 ]
