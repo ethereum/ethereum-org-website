@@ -131,15 +131,15 @@ const TranslationLeaderboard = ({
                 className="text-foreground hover:rounded-base hover:bg-accent/50 mb-[1px] w-full items-center justify-between px-4 py-2 shadow-sm hover:shadow-md"
               >
                 <Flex>
-                  {emoji ? (
-                    <div className="w-10">
+                  <div className="flex w-10 items-center">
+                    {emoji ? (
                       <Emoji className="me-4 text-[2rem]" text={emoji} />
-                    </div>
-                  ) : (
-                    <div className="w-10 opacity-40">{idx + 1}</div>
-                  )}
+                    ) : (
+                      <span className="opacity-40">{idx + 1}</span>
+                    )}
+                  </div>
                   <Flex className="me-8 flex-row items-center break-words">
-                    <div className="s:block relative me-4 hidden h-[30px] w-[30px] sm:h-10 sm:w-10">
+                    <div className="relative me-4 hidden h-[30px] w-[30px] sm:block sm:h-10 sm:w-10">
                       <TwImage
                         fill
                         className="rounded-full object-cover"
