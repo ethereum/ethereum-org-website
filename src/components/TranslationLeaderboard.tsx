@@ -1,7 +1,6 @@
 import React, { useState } from "react"
 import reverse from "lodash/reverse"
 import sortBy from "lodash/sortBy"
-import Image from "next/image"
 import { useTranslation } from "next-i18next"
 
 import type { CostLeaderboardData } from "@/lib/types"
@@ -12,6 +11,7 @@ import { Flex } from "@/components/ui/flex"
 import { cn } from "@/lib/utils/cn"
 
 import Emoji from "./Emoji"
+import { TwImage } from "./Image"
 
 const RadioCard = ({ value, children, checked, onChange }) => {
   return (
@@ -140,7 +140,7 @@ const TranslationLeaderboard = ({
                   )}
                   <Flex className="me-8 flex-row items-center break-words">
                     <div className="s:block relative me-4 hidden h-[30px] w-[30px] sm:h-10 sm:w-10">
-                      <Image
+                      <TwImage
                         fill
                         className="rounded-full object-cover"
                         src={avatarUrl}
