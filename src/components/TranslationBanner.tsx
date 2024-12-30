@@ -1,12 +1,11 @@
 import { useEffect, useState } from "react"
-import Link from "next/link"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { MdClose } from "react-icons/md"
 
 import type { Lang } from "@/lib/types"
 
-import { Button } from "@/components/ui/buttons/Button"
+import { Button, ButtonLink } from "@/components/ui/buttons/Button"
 import { Flex } from "@/components/ui/flex"
 
 import { cn } from "@/lib/utils/cn"
@@ -45,17 +44,15 @@ const TranslationBanner = ({
   return (
     <aside
       className={cn(
-        "fixed bottom-0 end-0 z-popover md:bottom-8 md:end-8",
+        "fixed bottom-0 end-0 z-popover rounded bg-background-highlight md:bottom-8 md:end-8",
         isOpen ? "block" : "hidden"
       )}
       dir={dir}
     >
-      <div className="bg-infoBanner relative max-h-full max-w-full p-4 text-neutral-900 shadow-md md:max-w-[600px] md:rounded-sm">
-        <Flex className="m-4 mt-10 flex-col sm:mt-4">
-          <Flex className="mb-4 flex-col-reverse items-start sm:flex-row sm:items-center">
-            <h3 className="my-0 text-2xl font-bold leading-none">
-              {t(headerTextId)}
-            </h3>
+      <div className="relative max-h-full max-w-full p-4 shadow-md md:max-w-[600px]">
+        <Flex className="m-4 mt-10 flex-col gap-4 sm:mt-4">
+          <Flex className="flex-col-reverse items-start sm:flex-row sm:items-center">
+            <h3 className="leading-none md:text-2xl">{t(headerTextId)}</h3>
             <Emoji
               text=":globe_showing_asia_australia:"
               className="mb-4 ms-2 text-2xl sm:mb-auto"
@@ -64,11 +61,9 @@ const TranslationBanner = ({
           <p>{t(bodyTextId)}</p>
           <Flex className="flex-col items-start sm:flex-row sm:items-center">
             <div>
-              <Button asChild variant="link">
-                <Link href="/contributing/translation-program/">
-                  {t("translation-banner-button-translate-page")}
-                </Link>
-              </Button>
+              <ButtonLink href="/contributing/translation-program/">
+                {t("translation-banner-button-translate-page")}
+              </ButtonLink>
             </div>
             {/* Todo: Reimplement once fixed */}
             {/* Issue: https://github.com/ethereum/ethereum-org-website/issues/12292 */}
