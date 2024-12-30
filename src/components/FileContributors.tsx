@@ -12,11 +12,14 @@ import type { ChildOnlyProp, FileContributor } from "@/lib/types"
 
 import { Button } from "@/components/Buttons"
 import InlineLink from "@/components/Link"
-import Modal from "@/components/Modal"
 import Text from "@/components/OldText"
 import Translation from "@/components/Translation"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
+
+import Modal from "./ui/dialog-modal"
+
+import { useBreakpointValue } from "@/hooks/useBreakpointValue"
 
 const ContributorList = ({ children }: Required<ChildOnlyProp>) => (
   <UnorderedList maxH="2xs" m={0} mt={6} overflowY="scroll">
@@ -61,12 +64,14 @@ const FileContributors = ({
         date: Date.now().toString(),
       } as FileContributor)
 
+  const modalSize = useBreakpointValue({ base: "xl", md: "md" } as const)
+
   return (
     <>
       <Modal
-        isOpen={isModalOpen}
-        onClose={() => setModalOpen(false)}
-        size={{ base: "full", md: "xl" }}
+        open={isModalOpen}
+        onOpenChange={(open) => setModalOpen(open)}
+        size={modalSize}
         title={<Translation id="contributors" />}
       >
         <Translation id="contributors-thanks" />
