@@ -25,7 +25,7 @@ Home stakers are responsible for operating the hardware needed to run these clie
 
 A home staker receives rewards directly from the protocol for keeping their validator properly functioning and online.
 
-## Why stake home? {#why-stake-solo}
+## Why stake from home? {#why-stake-solo}
 
 Home staking comes with more responsibility but provides you with maximum control over your funds and staking setup.
 
