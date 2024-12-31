@@ -12,6 +12,10 @@ import { ListItem, UnorderedList } from "@/components/ui/list"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
+import Modal from "./ui/dialog-modal"
+
+import { useBreakpointValue } from "@/hooks/useBreakpointValue"
+
 const ContributorList = ({ children }: Required<ChildOnlyProp>) => (
   <UnorderedList className="max-h-64 m-6 mb-0 ml-0 mr-0 overflow-y-scroll">
     {children}
@@ -56,12 +60,14 @@ const FileContributors = ({
         date: Date.now().toString(),
       } as FileContributor)
 
+  const modalSize = useBreakpointValue({ base: "xl", md: "md" } as const)
+
   return (
     <>
       <Modal
-        isOpen={isModalOpen}
-        onClose={() => setModalOpen(false)}
-        size={{ base: "full", md: "xl" }}
+        open={isModalOpen}
+        onOpenChange={(open) => setModalOpen(open)}
+        size={modalSize}
         title={<Translation id="contributors" />}
       >
         <Translation id="contributors-thanks" />

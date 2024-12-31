@@ -117,11 +117,8 @@ export const StyledCard = (props: ComponentPropsWithRef<typeof Card>) => (
 )
 const ChecklistItem = (props: HorizontalCardProps) => (
   <HorizontalCard
-    border={0}
-    display="flex"
-    className="text-2xl"
-    alignItems="flex-start"
-    mb={4}
+    emojiClassName="text-2xl"
+    className="items-start"
     {...props}
   />
 )
@@ -359,19 +356,14 @@ const WalletsPage = () => {
         <RightColumn mt={{ base: 12, lg: 0 }}>
           <H2>{t("page-wallets-types")}</H2>
           <Text>{t("page-wallets-types-desc")}</Text>
-          <Box>
+          <Box className="flex flex-col gap-2">
             {types.map((type, idx) => (
               <HorizontalCard
-                minWidth="100%"
-                marginTop={2}
-                marginBottom={2}
-                ms={0}
-                me={0}
                 key={idx}
                 emoji={type.emoji}
                 description={type.description}
-                className="text-[2.5rem]"
-                alignItems="center"
+                className="my-0.5 w-[100%]"
+                emojiClassName="text-[2.5rem]"
               />
             ))}
           </Box>
@@ -447,7 +439,7 @@ const WalletsPage = () => {
           <Box lineHeight={1.4} mb={6} color="text300">
             <Translation id="page-wallets:page-wallets-stay-safe-desc" />
           </Box>
-          <Box>
+          <Flex direction="column" gap={4}>
             <ChecklistItem
               key="0"
               emoji=":white_check_mark:"
@@ -480,7 +472,7 @@ const WalletsPage = () => {
               title={t("page-wallets-triple-check")}
               description={t("page-wallets-triple-check-desc")}
             />
-          </Box>
+          </Flex>
         </LeftColumn>
         <RightColumn mt={{ base: 12, lg: 0 }}>
           <H2>{t("page-wallets-tips")}</H2>
@@ -496,12 +488,11 @@ const WalletsPage = () => {
         <H2>{t("page-wallets-explore")}</H2>
         <CalloutCardContainer>
           <Callout
-            flex="1 1 424px"
-            minH="full"
             image={ETHImage}
             titleKey="page-wallets:page-wallets-get-some"
             alt={t("page-wallets-get-some-alt")}
             descriptionKey="page-wallets:page-wallets-get-some-desc"
+            className="min-h-full flex-1 basis-[424px]"
           >
             <Box>
               <ButtonLink href="/get-eth/">
@@ -510,12 +501,11 @@ const WalletsPage = () => {
             </Box>
           </Callout>
           <Callout
-            flex="1 1 424px"
-            minH="full"
             image={DappsImage}
             titleKey="page-wallets:page-wallets-try-dapps"
             alt={t("page-wallets-try-dapps-alt")}
             descriptionKey="page-wallets:page-wallets-try-dapps-desc"
+            className="min-h-full flex-1 basis-[424px]"
           >
             <Box>
               <ButtonLink href="/dapps/">

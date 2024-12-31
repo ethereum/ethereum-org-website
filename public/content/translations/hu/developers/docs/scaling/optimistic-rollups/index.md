@@ -253,12 +253,6 @@ Az [adat sharding](/roadmap/danksharding/) bevezetése az Ethereumban várhatóa
 
 <YouTube id="7pWxCklcNsU" start="263" />
 
-### Optimista összevont tranzakciók használata {#use-optimistic-rollups}
-
-Az optimista összevont tranzakcióknak többféle megvalósítása létezik, amelyeket integrálhat a dappjaiba:
-
-<RollupProductDevDoc rollupType="optimistic" />
-
 ## További információk az optimista összevont tranzakciókról
 
 - [Hogyan működnek az optimista összevont tranzakciók (teljes útmutató)](https://www.alchemy.com/overviews/optimistic-rollups)

@@ -28,12 +28,13 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
   // Temporal list of content pages allowed to be compiled
   // When a content page is migrated (and he components being used), should be added to this list
   const temporalAllowedPages = [
-    // Use cases (7/7) ✅
+    // Use cases (8/8) ✅
     "/dao",
     "/decentralized-identity",
     "/defi",
     "/desci",
     "/nft",
+    "/payments",
     "/refi",
     "/social-networks",
     // Staking (4/4) ✅

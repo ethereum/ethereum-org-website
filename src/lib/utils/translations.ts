@@ -168,8 +168,17 @@ const getRequiredNamespacesForPath = (relativePath: string) => {
     requiredNamespaces = [...requiredNamespaces, "page-wallets", "table"]
   }
 
+  // TODO: Remove this when the page is translated
   if (path.startsWith("/layer-2/")) {
     primaryNamespace = "page-layer-2"
+  }
+
+  if (path.startsWith("/layer-2/learn/")) {
+    primaryNamespace = "page-layer-2-learn"
+  }
+
+  if (path.startsWith("/layer-2/networks/")) {
+    requiredNamespaces = [...requiredNamespaces, "table"]
   }
 
   if (path.startsWith("/contributing/translation-program/translatathon/")) {
@@ -180,6 +189,7 @@ const getRequiredNamespacesForPath = (relativePath: string) => {
   if (
     path.startsWith("/dapps/") ||
     path.startsWith("/layer-2/") ||
+    path.startsWith("/layer-2/learn/") ||
     path.startsWith("/get-eth/") ||
     path.startsWith("/stablecoins/") ||
     path.startsWith("/staking/") ||
@@ -197,6 +207,7 @@ const getRequiredNamespacesForPath = (relativePath: string) => {
   if (
     path.startsWith("/eth/") ||
     path.startsWith("/layer-2/") ||
+    path.startsWith("/layer-2/learn/") ||
     path.startsWith("/nft/") ||
     path.startsWith("/roadmap/merge/") ||
     path.startsWith("/roadmap/scaling/") ||

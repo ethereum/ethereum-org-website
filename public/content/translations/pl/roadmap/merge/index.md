@@ -94,11 +94,13 @@ id="developers">
 
 Połączenie nastąpiło wraz ze zmianami w konsensusie, które obejmują również zmiany związane z:<
 
-- struktura bloków
-- taktowanie gniazda/bloku
-- zmiany kodu operacyjnego
-- źródła losowości w łańcuchu
-- koncepcja bezpiecznej głowy i sfinalizowanych bloków
+<ul>
+  <li>struktura bloków</li>
+  <li>taktowanie gniazda/bloku</li>
+  <li>zmiany kodu operacyjnego</li>
+  <li>źródła losowości w łańcuchu</li>
+  <li>koncepcja <em> bezpiecznej głowy </em> i <em> sfinalizowanych bloków </em></li>
+</ul>
 
 Aby uzyskać więcej informacji, zapoznaj się z tym wpisem na blogu autorstwa Tima Beiko <a href="https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer/"> Wpływ połączenia na warstwę aplikacji Ethereum </a>.
 

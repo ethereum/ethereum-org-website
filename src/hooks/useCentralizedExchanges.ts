@@ -118,7 +118,25 @@ const exchanges: ExchangeDetails = {
     name: "Binance US",
     url: "https://www.binance.us/",
     image: binance,
-    usaExceptions: ["HI", "ID", "NY", "TX", "VT"],
+    // Updated Dec 4th 2024 https://support.binance.us/hc/en-us/articles/360046786914-List-of-supported-states-and-regions
+    usaExceptions: [
+      "AK", // Alaska
+      "AS", // American Samoa
+      "CT", // Connecticut
+      "GA", // Georgia
+      "GU", // Guam
+      "ME", // Maine
+      "MP", // Northern Mariana Islands
+      "NY", // New York
+      "NC", // North Carolina
+      "ND", // North Dakota
+      "OH", // Ohio
+      "OR", // Oregon
+      "TX", // Texas
+      "VI", // U.S. Virgin Islands
+      "VT", // Vermont
+      "WA", // Washington
+    ],
   },
   bitbuy: {
     name: "Bitbuy",
