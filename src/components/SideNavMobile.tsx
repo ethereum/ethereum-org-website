@@ -2,7 +2,6 @@ import React, { useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
 import { useTranslation } from "next-i18next"
 import { MdChevronRight } from "react-icons/md"
-import { Box } from "@chakra-ui/react"
 
 import type { ChildOnlyProp, TranslationKey } from "@/lib/types"
 import { DeveloperDocsLink } from "@/lib/interfaces"
@@ -85,7 +84,7 @@ const NavLink = ({ item, path, toggle }: NavLinkProps) => {
 
   if (item.items) {
     return (
-      <Box>
+      <div>
         <LinkContainer>
           {item.href && (
             <SideNavLink href={item.href} isPartiallyActive={false}>
@@ -93,27 +92,19 @@ const NavLink = ({ item, path, toggle }: NavLinkProps) => {
             </SideNavLink>
           )}
           {!item.href && (
-            <Box w="full" cursor="pointer" onClick={() => setIsOpen(!isOpen)}>
+            <div className="w-full cursor-pointer" onClick={() => setIsOpen(!isOpen)}>
               {t(item.id)}
-            </Box>
+            </div>
           )}
-          <Box
-            as={motion.div}
-            cursor="pointer"
-            display="flex"
+          <motion.div className="cursor-pointer flex"
             onClick={() => setIsOpen(!isOpen)}
             variants={dropdownIconContainerVariant}
             animate={isOpen ? "open" : "closed"}
           >
             <MdChevronRight className="h-6 w-6" color="secondary" />
-          </Box>
+          </motion.div>
         </LinkContainer>
-        <Box
-          as={motion.div}
-          fontSize="sm"
-          lineHeight="tall"
-          fontWeight="normal"
-          ps={4}
+        <motion.div className="ps-4 text-sm font-normal leading-relaxed"
           key={item.id}
           animate={isOpen ? "open" : "closed"}
           variants={innerLinksVariants}
@@ -122,18 +113,18 @@ const NavLink = ({ item, path, toggle }: NavLinkProps) => {
           {item.items.map((childItem, idx) => (
             <NavLink item={childItem} path={path} key={idx} toggle={toggle} />
           ))}
-        </Box>
-      </Box>
+        </motion.div>
+      </div>
     )
   }
   return (
-    <Box onClick={toggle}>
+    <div onClick={toggle}>
       <LinkContainer>
         <SideNavLink href={item.href} isPartiallyActive={false}>
           {t(item.id)}
         </SideNavLink>
       </LinkContainer>
-    </Box>
+    </div>
   )
 }
 
@@ -152,43 +143,26 @@ const SideNavMobile = ({ path }: SideNavMobileProps) => {
     getPageTitleId(path + "/", docLinks) || ("Change page" as TranslationKey)
 
   return (
-    <Box
-      position="sticky"
-      zIndex={2}
-      top="75px"
-      bgColor="ednBackground"
-      height="auto"
-      w="full"
-      hideFrom="lg"
+    <div className="sticky z-2 bg-[ednBackground] h-auto w-full top-[75px] lg:hidden"
+      
     >
       <motion.div>
         <Center
           className="box-border cursor-pointer border-b border-b-current bg-[ednBackground] px-8 py-4 font-medium text-[primary.base]"
           onClick={() => setIsOpen(!isOpen)}
         >
-          <Box me={2}>{t(pageTitleId)}</Box>
-          <Box
-            as={motion.div}
-            cursor="pointer"
-            display="flex"
+          <div className="me-2">{t(pageTitleId)}</div>
+          <motion.div className="cursor-pointer flex"
             variants={dropdownIconContainerVariant}
             animate={isOpen ? "open" : "closed"}
           >
             <MdChevronRight className="h-6 w-6" color="secondary" />
-          </Box>
+          </motion.div>
         </Center>
       </motion.div>
       <AnimatePresence>
         {isOpen && (
-          <Box
-            as={motion.nav}
-            h="auto"
-            maxH="calc(100vh - 139px)" // full height minus primary nav
-            overflowY="scroll"
-            overflowX="hidden"
-            borderBottom="1px solid"
-            borderBottomColor="border"
-            p={2}
+          <motion.nav className="h-auto max-h-[calc(100vh - 139px)] overflow-x-hidden overflow-y-scroll border-b border-border p-2"
             key="nav"
             initial={{ opacity: 0 }}
             animate={{
@@ -213,10 +187,10 @@ const SideNavMobile = ({ path }: SideNavMobileProps) => {
                 toggle={() => setIsOpen(false)}
               />
             ))}
-          </Box>
+          </motion.nav>
         )}
       </AnimatePresence>
-    </Box>
+    </div>
   )
 }
 
