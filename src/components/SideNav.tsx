@@ -2,7 +2,6 @@ import { useEffect, useState } from "react"
 import { motion } from "framer-motion"
 import { useTranslation } from "next-i18next"
 import { MdChevronRight } from "react-icons/md"
-import { Box } from "@chakra-ui/react"
 
 import { ChildOnlyProp } from "@/lib/types"
 import { DeveloperDocsLink } from "@/lib/interfaces"
@@ -81,7 +80,7 @@ const NavLink = ({ item, path, isTopLevel }: NavLinkProps) => {
 
   if (item.items) {
     return (
-      <Box>
+      <div>
         <LinkContainer>
           {item.href && (
             <SideNavLink href={item.href} isPartiallyActive={false}>
@@ -89,27 +88,20 @@ const NavLink = ({ item, path, isTopLevel }: NavLinkProps) => {
             </SideNavLink>
           )}
           {!item.href && (
-            <Box w="full" cursor="pointer" onClick={() => setIsOpen(!isOpen)}>
+            <div className="w-full cursor-pointer"onClick={() => setIsOpen(!isOpen)}>
               {t(item.id)}
-            </Box>
+            </div>
           )}
-          <Box
-            as={motion.div}
+          <motion.div
+          className="cursor-pointer flex"
             onClick={() => setIsOpen(!isOpen)}
             variants={dropdownIconContainerVariant}
             animate={isOpen ? "open" : "closed"}
-            cursor="pointer"
-            display="flex"
           >
             <MdChevronRight className="h-6 w-6" color="secondary" />
-          </Box>
+          </motion.div>
         </LinkContainer>
-        <Box
-          as={motion.div}
-          fontSize="sm"
-          lineHeight="tall"
-          fontWeight="normal"
-          ms={4}
+        <motion.div className="ms-4 text-sm font-normal leading-relaxed"
           key={item.id}
           animate={isOpen ? "open" : "closed"}
           variants={innerLinksVariants}
@@ -118,18 +110,18 @@ const NavLink = ({ item, path, isTopLevel }: NavLinkProps) => {
           {item.items.map((childItem, idx) => (
             <NavLink item={childItem} path={path} key={idx} />
           ))}
-        </Box>
-      </Box>
+        </motion.div>
+      </div>
     )
   }
   return (
-    <Box>
+    <div>
       <LinkContainer>
         <SideNavLink href={item.href} isPartiallyActive={false}>
           {t(item.id)}
         </SideNavLink>
       </LinkContainer>
-    </Box>
+    </div>
   )
 }
 
@@ -144,28 +136,14 @@ const SideNav = ({ path }: SideNavProps) => {
   const { t } = useTranslation("page-developers-docs")
 
   return (
-    <Box
-      as="nav"
-      position="sticky"
-      top="19"
-      pt={8}
-      pb={16}
-      h="calc(100vh - 80px)" // TODO take footer into account for height?
-      w="calc((100% - 1448px) / 2 + 256px)"
-      minW="256px"
-      overflowY="auto"
-      transition="transform 0.2s ease"
-      bgColor="background.base"
-      boxShadow="1px 0px 0px rgba(0, 0, 0, 0.1)"
-      borderInlineEnd="1px solid"
-      borderInlineEndColor="border"
-      display={{ base: "none", lg: "block" }}
+    <nav
+      className="sticky top-[4.75rem] pt-8 pb-16 h-[calc(100vh - 80px)] w-[calc((100% - 1448px) / 2 + 256px)] min-w-256 overflow-y-auto transition-transform duration-200 ease bg-[background.base] shadow-[1px_0px_0px_rgba(0,0,0,0.1)] border-e border-e-border lg:block"
       aria-label={t("common:nav-developers-docs")}
     >
       {docLinks.map((item, idx) => (
         <NavLink item={item} path={path} key={idx} isTopLevel />
       ))}
-    </Box>
+    </nav>
   )
 }
 
