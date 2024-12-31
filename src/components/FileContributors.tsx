@@ -3,7 +3,7 @@ import { Avatar } from "@chakra-ui/react"
 
 import type { ChildOnlyProp, FileContributor } from "@/lib/types"
 
-import { Button } from "@/components/Buttons"
+import { Button, buttonVariants } from "@/components/ui/buttons/Button"
 import InlineLink from "@/components/Link"
 import Modal from "@/components/Modal"
 import Translation from "@/components/Translation"
@@ -13,7 +13,7 @@ import { ListItem, UnorderedList } from "@/components/ui/list"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 const ContributorList = ({ children }: Required<ChildOnlyProp>) => (
-  <UnorderedList className="max-h-3 mt-6 m-0 overflow-y-scroll">
+  <UnorderedList className="max-h-64 m-6 mb-0 ml-0 mr-0 overflow-y-scroll">
     {children}
   </UnorderedList>
 )
@@ -84,7 +84,7 @@ const FileContributors = ({
             me={2}
           />
 
-          <p className="m-0 text-[#666666] dark:text-[#b2b2b2]">
+          <p className="m-0 text-body-medium">
             <Translation id="last-edit" />:{" "}
             <InlineLink href={"https://github.com/" + lastContributor.login}>
               @{lastContributor.login}
@@ -94,11 +94,9 @@ const FileContributors = ({
         </Flex>
 
         <VStack className="items-stretch justify-between space-y-2 items-center">
-          <Button
-            variant="outline"
-            bg="background.base"
-            border={0}
-            mb={{ base: 4, md: 0 }}
+            <Button 
+            className="bg-background border-none mb-4 w-full md:mb-0 md:w-inherit" 
+            variant="outline" 
             onClick={() => {
               setModalOpen(true)
               trackCustomEvent({
@@ -106,9 +104,7 @@ const FileContributors = ({
                 eventAction: "click",
                 eventName: "click",
               })
-            }}
-            w={{ base: "full", md: "inherit" }}
-          >
+            }}>
             <Translation id="see-contributors" />
           </Button>
         </VStack>
