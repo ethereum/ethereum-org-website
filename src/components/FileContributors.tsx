@@ -3,10 +3,10 @@ import { Avatar } from "@chakra-ui/react"
 
 import type { ChildOnlyProp, FileContributor } from "@/lib/types"
 
-import { Button } from "@/components/ui/buttons/Button"
 import InlineLink from "@/components/Link"
 import Modal from "@/components/Modal"
 import Translation from "@/components/Translation"
+import { Button } from "@/components/ui/buttons/Button"
 import { Flex, VStack } from "@/components/ui/flex"
 import { ListItem, UnorderedList } from "@/components/ui/list"
 
