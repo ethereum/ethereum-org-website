@@ -187,6 +187,11 @@ export const useNav = () => {
               href: "/defi/",
             },
             {
+              label: t("payments-page"),
+              description: t("nav-payments-description"),
+              href: "/payments/",
+            },
+            {
               label: t("dao-page"),
               description: t("nav-dao-description"),
               href: "/dao/",
