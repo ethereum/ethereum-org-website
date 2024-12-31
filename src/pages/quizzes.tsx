@@ -3,7 +3,7 @@ import { GetStaticProps, InferGetStaticPropsType, NextPage } from "next"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { FaGithub } from "react-icons/fa"
-import { Box, Flex, Icon, Stack, Text, useDisclosure } from "@chakra-ui/react"
+import { Box, Flex, Icon, Stack, Text } from "@chakra-ui/react"
 
 import { BasePageProps, Lang, QuizKey, QuizStatus } from "@/lib/types"
 
@@ -28,6 +28,7 @@ import { ethereumBasicsQuizzes, usingEthereumQuizzes } from "@/data/quizzes"
 
 import { INITIAL_QUIZ } from "@/lib/constants"
 
+import { useDisclosure } from "@/hooks/useDisclosure"
 import HeroImage from "@/public/images/heroes/quizzes-hub-hero.png"
 
 const handleGHAdd = () =>
@@ -65,7 +66,7 @@ const QuizzesHubPage: NextPage<
   const [userStats, updateUserStats] = useLocalQuizData()
   const [quizStatus, setQuizStatus] = useState<QuizStatus>("neutral")
   const [currentQuiz, setCurrentQuiz] = useState<QuizKey>(INITIAL_QUIZ)
-  const { onOpen, isOpen, onClose } = useDisclosure()
+  const { onOpen, isOpen, setValue } = useDisclosure()
 
   const commonQuizListProps = useMemo(
     () => ({
@@ -91,7 +92,7 @@ const QuizzesHubPage: NextPage<
       />
       <QuizzesModal
         isQuizModalOpen={isOpen}
-        onQuizModalClose={onClose}
+        onQuizModalOpenChange={setValue}
         quizStatus={quizStatus}
       >
         <QuizWidget
