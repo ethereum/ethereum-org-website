@@ -4,11 +4,11 @@ import { Avatar } from "@chakra-ui/react"
 import type { ChildOnlyProp, FileContributor } from "@/lib/types"
 
 import InlineLink from "@/components/Link"
-import Modal from "@/components/Modal"
 import Translation from "@/components/Translation"
 import { Button } from "@/components/ui/buttons/Button"
 import { Flex, VStack } from "@/components/ui/flex"
 import { ListItem, UnorderedList } from "@/components/ui/list"
+import { ScrollArea } from "@/components/ui/scroll-area"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
@@ -17,14 +17,14 @@ import Modal from "./ui/dialog-modal"
 import { useBreakpointValue } from "@/hooks/useBreakpointValue"
 
 const ContributorList = ({ children }: Required<ChildOnlyProp>) => (
-  <UnorderedList className="max-h-64 m-6 mb-0 ml-0 mr-0 overflow-y-scroll">
-    {children}
-  </UnorderedList>
+  <ScrollArea className="max-h-64 w-full">
+    <UnorderedList className="m-6 mb-0 ml-0 mr-0">{children}</UnorderedList>
+  </ScrollArea>
 )
 
 type ContributorProps = { contributor: FileContributor }
 const Contributor = ({ contributor }: ContributorProps) => (
-  <ListItem className="p-2 flex items-center">
+  <ListItem className="flex items-center p-2">
     <Avatar
       height="40px"
       width="40px"
@@ -78,10 +78,8 @@ const FileContributors = ({
         </ContributorList>
       </Modal>
 
-      <Flex className="flex-col p-0 md:flex-row md:p-2"
-        {...props}
-      >
-        <Flex className="me-4 items-center flex-1 invisible md:visible md:flex">
+      <Flex className="flex-col p-0 md:flex-row md:p-2" {...props}>
+        <Flex className="invisible me-4 flex-1 items-center md:visible md:flex">
           <Avatar
             height="40px"
             width="40px"
@@ -99,10 +97,10 @@ const FileContributors = ({
           </p>
         </Flex>
 
-        <VStack className="items-stretch justify-between space-y-2 items-center">
-            <Button 
-            className="bg-background border-none mb-4 w-full md:mb-0 md:w-inherit" 
-            variant="outline" 
+        <VStack className="items-stretch justify-between space-y-2">
+          <Button
+            className="md:w-inherit mb-4 w-full border-none bg-background md:mb-0"
+            variant="outline"
             onClick={() => {
               setModalOpen(true)
               trackCustomEvent({
@@ -110,7 +108,8 @@ const FileContributors = ({
                 eventAction: "click",
                 eventName: "click",
               })
-            }}>
+            }}
+          >
             <Translation id="see-contributors" />
           </Button>
         </VStack>
