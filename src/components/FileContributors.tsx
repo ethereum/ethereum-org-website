@@ -17,8 +17,8 @@ import Modal from "./ui/dialog-modal"
 import { useBreakpointValue } from "@/hooks/useBreakpointValue"
 
 const ContributorList = ({ children }: Required<ChildOnlyProp>) => (
-  <ScrollArea className="max-h-64 w-full">
-    <UnorderedList className="m-6 mb-0 ml-0 mr-0">{children}</UnorderedList>
+  <ScrollArea className="h-64 w-full">
+    <UnorderedList className="m-0">{children}</UnorderedList>
   </ScrollArea>
 )
 
@@ -70,12 +70,16 @@ const FileContributors = ({
         size={modalSize}
         title={<Translation id="contributors" />}
       >
-        <Translation id="contributors-thanks" />
-        <ContributorList>
-          {contributors.map((contributor) => (
-            <Contributor contributor={contributor} key={contributor.login} />
-          ))}
-        </ContributorList>
+        <div className="space-y-4">
+          <p>
+            <Translation id="contributors-thanks" />
+          </p>
+          <ContributorList>
+            {contributors.map((contributor) => (
+              <Contributor contributor={contributor} key={contributor.login} />
+            ))}
+          </ContributorList>
+        </div>
       </Modal>
 
       <Flex className="flex-col p-0 md:flex-row md:p-2" {...props}>
