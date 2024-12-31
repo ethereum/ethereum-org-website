@@ -84,7 +84,7 @@ const FileContributors = ({
             me={2}
           />
 
-          <p className="m-0 text-[#666666] dark:text-[#b2b2b2]">
+          <p className="m-0 text-body-medium">
             <Translation id="last-edit" />:{" "}
             <InlineLink href={"https://github.com/" + lastContributor.login}>
               @{lastContributor.login}
