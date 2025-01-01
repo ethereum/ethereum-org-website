@@ -1,5 +1,4 @@
 import { useTranslation } from "next-i18next"
-import { Stack } from "@/components/ui/flex"
 
 import CardList, { type CardListItem } from "@/components/CardList"
 
