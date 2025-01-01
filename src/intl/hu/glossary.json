@@ -252,7 +252,7 @@
   "network-hashrate-term": "Hálózati hashráta",
   "network-hashrate-definition": "A teljes bányászati hálózat által létrehozott hashráta. Az Ethereumon a bányászatot (proof-of-work, munkaigazolás) leváltotta a proof-of-stake (letéti igazolás) rendszere.",
   "nft-term": "Nem helyettesíthető token (NFT)",
-  "nft-definition": "A nem helyettesíthető token (NFT) egy egyedi digitális tárgy, amely a blokklánc technológiával ellenőrzött, például műtárgyak vagy gyűjthető tárgyak. <a href=\"/nft/\">További információ a nem helyettesíthető tokenekről (NFT)</a>.",
+  "nft-definition": "Egy egyedi digitális tárgy, amelyet Ön birtokolhat, például műtárgyak vagy gyűjthető tárgyak, és amelyet blokklánc-technológiával igazolnak. <a href=\"/nft/\">További információ a nem helyettesíthető tokenekről (NFT)</a>.",
   "node-term": "Csomópont",
   "node-definition": "Egy szoftverkliens, mely részt vesz a hálózatban. <a href=\"/developers/docs/nodes-and-clients/\">Bővebben a csomópontokról és a kliensekről</a>.",
   "nonce-term": "Nonce",
