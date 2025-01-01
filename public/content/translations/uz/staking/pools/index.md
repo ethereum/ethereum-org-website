@@ -57,7 +57,7 @@ Sozlashda sizga yordam beradigan turli xil variantlar mavjud. Quyidagi vositalar
 
 Biz o‘tkazib yuborgan staking vositasi uchun taklif bormi? [Mahsulotni kataloglash qoidalari](/contributing/adding-staking-products/) bilan tanishib chiqing va ularni ko‘rib chiqish uchun yuboring.
 
-## Frequently asked questions {#faq}
+## Tez-tez beriladigan savollar {#faq}
 
 <ExpandableCard title="Mukofotlarni qanday olaman?">
 Odatda, ERC-20 staking tokenlari ishtirokchilarga beriladi va ular tikkan ETH qiymati va mukofotlarini ifodalaydi. Shuni yodda tutingki, turli pullar o‘z foydalanuvchilariga staking mukofotlarini biroz boshqacha usullar bilan tarqatadi, ammo bu umumiy mavzu.
