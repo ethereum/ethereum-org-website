@@ -1,7 +1,7 @@
 ---
 title: Sa hannun jarin ETH na gida
 description: Bayani sama-sama na yadda ake farawa gida tara kuɗin ETH ɗin ku
-lang: ha
+lang: en
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-solo.png
@@ -167,7 +167,7 @@ Kwatankwacin matsalolin da ke cikin <em>aramin abokin ciniki ba zai taɓa ƙarew
 <ExpandableCard title="Wane abokin ciniki ya fi kyau?">
 Abokan ciniki guda ɗaya na iya ɗan bambanta kaɗan dangane da aiki da mu'amalar mai asusu, kamar yadda ƙungiyoyi daban-daban suka haɓaka kowannensu ta amfani da harsunan shirye-shirye iri-iri. Da aka ce, babu ɗayansu da ya kasance "mafi kyau." Duk abokan ciniki na samar da ƙwararrun nau'ikan manhaja ne, waɗanda duk suna yin ayyuka iri ɗaya don daidaitawa da hulɗa tare da blockchain.
 
-Tun da duk abokan ciniki na samarwa suna samar da ayyuka na asali iri ɗaya, hakika yana da matukar muhimmanci ku zaɓi abokin ciniki na tsirar, ma'ana duk wani abokin ciniki, wanda yawancin masu ingantawa a kan hanyar sadarwa BA su yi amfani da su a halin yanzu. Wannan na iya zama kamar rashin fahimta, amma gudanar da mafiya yawa ko babban abokin ciniki yana sanya ku cikin ƙarin haɗarin hukunci a lokacin da akwai matsala a cikin wannan abokin ciniki. Gudanar da ƙaramin abokin ciniki kuma na iyakance waɗannan haɗari sosai.
+Tun da duk abokan ciniki na samarwa suna samar da ayyuka na asali iri ɗaya, hakika yana da matukar muhimmanci ku zaɓi abokin ciniki na tsirar </strong>, ma'ana duk wani abokin ciniki </strong>, wanda yawancin masu ingantawa a kan hanyar sadarwa BA su yi amfani da su a halin yanzu. Wannan na iya zama kamar rashin fahimta, amma gudanar da mafiya yawa ko babban abokin ciniki yana sanya ku cikin ƙarin haɗarin hukunci a lokacin da akwai matsala a cikin wannan abokin ciniki. Gudanar da ƙaramin abokin ciniki kuma na iyakance waɗannan haɗari sosai.
 
 <a href="https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA">Koyi game da dalilin da yasa bambancin abokin ciniki ke da mahimmanci</a>
 </ExpandableCard>
@@ -203,4 +203,4 @@ Don buɗewa da kuma karɓar gabaɗayan ragowar ƙuɗinku dole ne ku kammala aiki
 - [Mataki ta Mataki: Yadda ake shiga Ethereum 2.0 Hanyar sadarwa na gwaji](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) - _ Butta_
 - [Shawarwarin Rigakafi Hukunci a Eth2](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) - _Raul Jordan 2020 _
 
-<QuizWidget quizKey="staking-solo" />
+<QuizWidget quizKey="solo-staking" />
