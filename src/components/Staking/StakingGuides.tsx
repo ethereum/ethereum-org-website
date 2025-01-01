@@ -1,5 +1,5 @@
 import { useTranslation } from "next-i18next"
-import { Stack } from "@chakra-ui/react"
+import { Stack } from "@/components/ui/flex"
 
 import CardList, { type CardListItem } from "@/components/CardList"
 
@@ -29,7 +29,7 @@ const StakingGuides = () => {
     },
   ]
 
-  return <Stack as={CardList} direction="column" gap={4} items={guides} />
+  return <CardList className="flex flex-col gap-4" items={guides} />
 }
 
 export default StakingGuides
