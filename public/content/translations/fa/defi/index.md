@@ -355,3 +355,7 @@ DeFi یک جنبش متن‌باز است. پروتکل‌ها و برنامه�
 
 - [سرور دیسکورد DeFi Llama](https://discord.defillama.com/)
 - [سرور دیسکورد DeFi Pulse](https://discord.gg/Gx4TCTk)
+
+<Divider />
+
+<QuizWidget quizKey="defi" />
