@@ -253,6 +253,11 @@ Učíte se spíše vizuálně? Podívejte se na video od Finematics, které vysv
 
 <YouTube id="7pWxCklcNsU" start="263" />
 
+### Použití optimistických rollupů {#use-optimistic-rollups}
+
+Existuje několik implementací optimistických rollupů, které můžete integrovat do svých dappek:
+
+<RollupProductDevDoc rollupType="optimistic" />
 
 ## Další čtení o optimistických rollupech
 

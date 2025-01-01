@@ -95,6 +95,15 @@ Většina řešení přemostění aplikuje modely s různými stupni důvěry, k
 
 <Divider />
 
+## Jak můžete přemostění používat {#use-bridge}
+
+Přemostění vám umožňují přesouvat aktiva mezi různými blockchainy. Zde je několik zdrojů, které vám mohou pomoci najít a používat přemostění:
+
+- **[Souhrn přemostění L2BEAT](https://l2beat.com/bridges/summary) & [Analýza rizik přemostění L2BEAT](https://l2beat.com/bridges/risk)**: Komplexní souhrn různých přemostění, včetně podrobností o podílu na trhu, typu přemostění a cílových blockchainech. L2BEAT rovněž obsahuje analýzu rizik pro přemostění, která uživatelům při výběru přemostění pomáhá činit informovaná rozhodnutí.
+- **[Souhrn přemostění DefiLlama](https://defillama.com/bridges/Ethereum)**: Přehled přemostění v sítích Ethereum.
+
+<Divider />
+
 ## Rizika používání blockchainovým přemostění {#bridge-risk}
 
 V současné době se nacházíme v rané fázi vývoje těchto řešení. Je pravděpodobné, že optimální návrh přemostění zatím nebyl vyvinut. Interakce s jakýmkoli typem přemostění nese rizika:
