@@ -24,7 +24,7 @@ lang: zh-tw
 
 以下提供了關於如何在以太坊權益證明中執行交易的全面解釋。
 
-1. 使用者使用他們的私鑰建立並簽署[交易](/developers/docs/transactions/)。 這通常由錢包或程式庫處理，例如 [ether.js](https://docs.ethers.io/v5/)、[web3js](https://docs.web3js.org/)、[web3py](https://web3py.readthedocs.io/en/v5/) 等，但本質上是使用者在使用以太坊 [JSON-RPC 應用程式介面](/developers/docs/apis/json-rpc/)向節點發出請求。 使用者定義他們準備支付的一定數量的燃料，作為給驗證者的小費，以鼓勵他們將交易納入到區塊中。 [小費](/developers/docs/gas/#priority-fee)支付給驗證者，而[基本費用](/developers/docs/gas/#base-fee)則會被銷毀。
+1. 使用者使用他們的私鑰建立並簽署[交易](/developers/docs/transactions/)。 這通常由錢包或程式庫處理，例如 [ethers.js](https://docs.ethers.org/v6/)、[web3js](https://docs.web3js.org/)、[web3py](https://web3py.readthedocs.io/en/v5/) 等，但本質上是使用者在使用以太坊 [JSON-RPC 應用程式介面](/developers/docs/apis/json-rpc/)向節點發出請求。 使用者定義他們準備支付的一定數量的燃料，作為給驗證者的小費，以鼓勵他們將交易納入到區塊中。 [小費](/developers/docs/gas/#priority-fee)支付給驗證者，而[基本費用](/developers/docs/gas/#base-fee)則會被銷毀。
 2. 交易提交給以太坊[執行層用戶端](/developers/docs/nodes-and-clients/#execution-client)以驗證其有效性。 這意味著確保發送者有足夠的以太幣來完成交易，並且他們已經使用正確的金鑰來簽署交易。
 3. 如果交易有效，執行層用戶端將其新增至其本機記憶體池（待處理交易清單），並透過執行層廣播網路將其廣播到其他節點。 當其他節點聽到關於交易的消息時，它們也會將其添加到本地記憶體池中。 進階使用者可能會避免廣播他們的交易，而是將其轉發給專門的區塊建置者，例如 [Flashbots Auction](https://docs.flashbots.net/flashbots-auction/overview)。 這使他們能夠在即將到來的區塊中組織交易以獲得最大利潤（[最大可提取價值](/developers/docs/mev/#mev-extraction)）。
 4. 網路上的驗證者節點之一是當前時隙的區塊提議者，該提議者是之前使用 RANDAO 以偽隨機方式選取的。 該節點負責建立和廣播下一個要新增至以太坊區塊鏈的區塊並更新全域狀態。 此節點由三個部分組成：執行用戶端、共識用戶端和驗證者用戶端。 執行層用戶端將來自本機記憶體池的交易捆綁到「執行有效負載」中，並在本機執行它們以產生狀態變更。 此資訊被傳遞到共識用戶端，在該用戶端，執行有效載荷被包裝為「信標區塊」的一部分。該信標區塊還包含有關獎勵、懲罰、罰沒、證明等的資訊，從而使網路能夠就鏈頭的區塊順序達成一致。 [連線共識用戶端和執行用戶端](/developers/docs/networking-layer/#connecting-clients)中更詳細地描述了執行用戶端和共識用戶端之間的通訊。

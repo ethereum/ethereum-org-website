@@ -8,6 +8,31 @@ lang: zh-tw
 
 數十萬的以太坊愛好者聚集在這些線上論壇上，分享消息、談論最近的發展、討論技術問題，並暢想未來。
 
+## 上架政策 {#listing-policy}
+
+為了維護已列出社群的完整性和價值，ethereum.org 遵循嚴格的資格審核政策：
+
+### 資格標準 {#eligibility-criteria}
+
+- **相關性**：該社群必須與以太坊及其生態系統直接相關。
+- **活躍程度**：該社群應該保持活躍，有定期的互動、發帖或討論。 休眠或不活躍的社群可能會被移除。
+- **包容性**：該社群應該建立一種尊重多元化、鼓勵不同背景人士參與的友善環境。
+- **非商業性質**：清單旨在收錄社群主導的空間，而非商業或促銷平台。
+
+### 內容準則 {#content-guidelines}
+
+- **適當內容**：社群必須有自己的管理規範，避免垃圾訊息、仇恨言論、騷擾或任何宣傳非法活動的內容。
+- **語言**：雖然英語是主要語言，但我們鼓勵其他語言的社群提交申請，只要他們能維持包容和尊重的氣氛。
+- **公開透明**：社群應該明確地向成員公開其宗旨、規則和版主等資訊。
+
+### 其他建議 {#other-recommendations}
+
+- **可訪問性**：社群論壇應該讓所有人都能閱讀內容，毋須註冊或登入。
+- **Discord 伺服器邀請**：建議只將可靠的 Discord 伺服器邀請加入到 ethereum.org。 理想情況下，這些邀請應連接到網站上的社群頁面（如 [ethglobal.com/discord](https://ethglobal.com/discord)）或來自官方網址（如 [discord.gg/ethstaker](https://discord.gg/ethstaker) 或 [discord.com/invite/ethstaker](https://discord.com/invite/ethstaker)）。
+
+如果您認為根據這些準則應該新增或移除某個社群，請[在我們的 GitHub 存儲庫開一個新議題](https://github.com/ethereum/ethereum-org-website/issues)。
+
+
 ## 論壇 {#forums}
 
 <SocialListItem socialIcon="reddit"><Link href="https://www.reddit.com/r/ethereum">r/ethereum</Link> - 所有有關以太坊的話題</SocialListItem>

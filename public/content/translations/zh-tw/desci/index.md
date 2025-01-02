@@ -126,6 +126,7 @@ Web3 廣泛試驗過去中心化自治組織和 Web3 開發的不同激勵模型
 - [去中心化科研：研究領域的未來　作者：Samuel Akinosho](https://lucidsamuel.medium.com/desci-the-future-of-research-b76cfc88c8ec)
 - [科研融資（跋：去中心化科研與全新加密原語） 作者：Nadia](https://nadia.xyz/science-funding)
 - [去中心化風潮正在擾亂藥物研發](https://medium.com/id-theory/decentralisation-is-disrupting-drug-development-28b5ba5d447f)
+- [什麼是 DeSci — 去中心化科研？](​https://usadailytimes.com/2022/09/12/what-is-desci-decentralized-science/)
 
 ### 影片 {#videos}
 
@@ -134,3 +135,4 @@ Web3 廣泛試驗過去中心化自治組織和 Web3 開發的不同激勵模型
 - [科學研究發表已毀。 Web3 能夠有所幫助嗎？](https://www.youtube.com/watch?v=WkvzYgCvWj8)
 - [Juan Benet - 去中心化科研、獨立實驗室與大規模數據科學](https://www.youtube.com/watch?v=zkXM9H90g_E)
 - [Sebastian Brunemeier - 去中心化科研如何能夠轉化生物醫學研究與創業投資](https://www.youtube.com/watch?v=qB4Tc3FcVbM)
+- [Paige Donner - 使用 Web3 和區塊鏈打造開放科學工具](https://www.youtube.com/watch?v=nC-2QWQ-lgw&t=17s)

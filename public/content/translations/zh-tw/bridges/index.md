@@ -95,6 +95,15 @@ _Web 3 已發展成由一層和二層網路擴容解決方案組成的生態系�
 
 <Divider />
 
+## 使用跨鏈橋 {#use-bridge}
+
+使用跨鏈橋能夠讓你在不同的區塊鏈之間轉移資產。 以下是一些可以幫助你找到和使用跨鏈橋的資源：
+
+- **[L2BEAT 跨鏈橋摘要](https://l2beat.com/bridges/summary)和 [L2BEAT 跨鏈橋風險分析](https://l2beat.com/bridges/risk)**：提供各種跨鏈橋的完整摘要，包括市場份額、跨鏈橋類型和目標鏈的細節。 L2BEAT 也提供跨鏈橋風險分析，幫助使用者明智地挑選跨鏈橋。
+- **[DefiLlama 跨鏈橋摘要](https://defillama.com/bridges/Ethereum)**：提供以太坊網路上各種跨鏈橋的交易量摘要。
+
+<Divider />
+
 ## 使用跨鏈橋的風險 {#bridge-risk}
 
 跨鏈橋仍在早期發展階段。 很可能尚未發現最佳的跨鏈橋設計。 與任何類型的跨鏈橋互動都有風險：

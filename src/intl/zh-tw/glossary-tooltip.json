@@ -96,7 +96,7 @@
   "multisig-term": "多簽",
   "multisig-definition": "Multisig（多重簽章）是指數位錢包或帳戶需要多個簽章或批准才能執行交易，從而增強安全性。",
   "nft-term": "非同質化代幣 (NFT)",
-  "nft-definition": "非同質化代幣 (NFT) 是一種你可以擁有的獨特數位物品，例如藝術品或收藏品，並透過區塊鏈技術進行驗證。 <a href=\"/nft/\">更多有關非同質化代幣 (NFT) 的資訊</a>。",
+  "nft-definition": "您可以擁有的已透過區塊鏈技術進行驗證的獨一無二的數位物品，如藝術品或收藏品。<a href=\"/nft/\">關於非同質化代幣 (NFT) 的更多資訊</a>。",
   "node-term": "節點",
   "node-definition": "參與網路的軟體用戶端。<a href=\"/developers/docs/nodes-and-clients/\">更多關於節點和用戶端的資訊</a>。",
   "ommer-term": "Ommer（叔）區塊",
