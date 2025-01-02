@@ -431,7 +431,7 @@ const RunANodePage = () => {
   return (
     <GappedPage>
       <PageMetadata
-        title={t("page-run-a-node-title")}
+        title={t("page-run-a-node-meta-title")}
         description={t("page-run-a-node-meta-description")}
         image="/images/run-a-node/ethereum-inside.png"
       />

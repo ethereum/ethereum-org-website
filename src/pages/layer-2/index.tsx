@@ -134,7 +134,7 @@ const Layer2Hub = ({
       {/* TODO: Clarify title and description here */}
       {/* TODO: Setup for translation */}
       <PageMetadata
-        title={"Ethereum layer 2 networks"}
+        title={"Intro to Ethereum Layer 2: benefits and uses"}
         description={"Learn about Ethereum layer 2 networks"}
         image="/images/layer-2/learn-hero.png"
       />

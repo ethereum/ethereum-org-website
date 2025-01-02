@@ -1,12 +1,8 @@
-import { useTranslation } from "next-i18next"
-
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import { Button } from "../ui/buttons/Button"
 
 const FindWalletsNoResults = ({ resetFilters }) => {
-  const { t } = useTranslation("page-wallets-find-wallet")
-
   // Track empty state
   trackCustomEvent({
     eventCategory: "Wallet_empty_state",
@@ -26,14 +22,12 @@ const FindWalletsNoResults = ({ resetFilters }) => {
   return (
     <div className="m-24 border-2 border-dashed border-body-light">
       <div className="p-12">
-        <h3 className="mb-6 text-3xl font-normal">
-          {t("page-find-wallet-empty-results-title")}
-        </h3>
+        <h3 className="mb-6 text-3xl font-normal">No results</h3>
         <p>
           There are no networks matching your criteria, try adding some filters
         </p>
         <Button variant="ghost" onClick={handleClick}>
-          <p>{t("page-find-wallet-reset-filters")}</p>
+          Reset filters
         </Button>
       </div>
     </div>

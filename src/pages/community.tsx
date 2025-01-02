@@ -299,15 +299,8 @@ const CommunityPage = () => {
           </Flex>
           <SimpleGrid columns={{ base: 1, lg: 2 }} spacing={{ base: 8, lg: 0 }}>
             {cards.map((card, idx) => (
-              <Box
-                as={ActionCard}
-                minW={{ base: "min(100%, 240px)", lg: "440px" }}
-                m={{ base: 0, lg: 4 }}
-                borderRadius="sm"
-                border="1px solid"
-                borderColor="text"
-                bg="background.base"
-                boxShadow={theme.colors.cardBoxShadow}
+              <ActionCard
+                className="m-0 flex-col rounded-sm border lg:m-4"
                 key={idx}
                 title={card.title}
                 description={card.description}
