@@ -1,7 +1,7 @@
 ---
 title: Kuɗaɗe masu cin gashin kansu (DeFi)
 description: Bayanai na sama game da DeFi akan Ethereum
-lang: ha
+lang: en
 template: use-cases
 emoji: ":money_with_wings:"
 image: /images/use-cases/defi.png
@@ -355,3 +355,7 @@ DeFi tafiya ne na buɗaɗɗen tushe. Ka'idojin DeFi da aiki da su duk a buɗe su
 
 - [Sabar DeFi Llama Discord](https://discord.defillama.com/)
 - [Sabar DeFi Pulse Discord](https://discord.gg/Gx4TCTk)
+
+<Divider />
+
+<QuizWidget quizKey="defi" />
