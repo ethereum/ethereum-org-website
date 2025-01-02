@@ -312,7 +312,7 @@ reth node \
     --authrpc.port 8551
 ```
 
-See [Configuring Reth](https://reth.rs/run/config.html?highlight=data%20directory#configuring-reth) to learn more about data default data directories. [Reth's documentation](https://reth.rs/run/mainnet.html) contains additional options and configuration details.
+See [Configuring Reth](https://reth.rs/run/config.html?highlight=data%20directory#configuring-reth) to learn more about default data directories. [Reth's documentation](https://reth.rs/run/mainnet.html) contains additional options and configuration details.
 
 #### Starting the consensus client {#starting-the-consensus-client}
 

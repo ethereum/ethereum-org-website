@@ -11,12 +11,12 @@ const TXCOSTS_MEDIAN_USD = "txcosts_median_usd"
 const TXCOUNT = "txcount"
 
 export const fetchGrowThePie = async (): Promise<GrowThePieData> => {
-  const url = "https://api.growthepie.xyz/v1/fundamentals_full.json"
+  const url = "https://api.growthepie.xyz/v1/fundamentals.json"
 
   const response = await fetch(url)
   if (!response.ok) {
     console.log(response.status, response.statusText)
-    throw new Error("Failed to fetch GrowThePie data")
+    throw new Error("Failed to fetch growthepie data")
   }
   const data: DataItem[] = await response.json()
 
@@ -27,7 +27,7 @@ export const fetchGrowThePie = async (): Promise<GrowThePieData> => {
 
   const activeAddresses = data
     .filter((item) => item.date === mostRecentDate)
-    .filter((item) => item.metric_key === "daa")
+    .filter((item) => item.metric_key === "aa_last7d")
     .reduce((acc, item) => {
       return {
         ...acc,

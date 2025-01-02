@@ -1,7 +1,7 @@
-import { Center, Text } from "@chakra-ui/react"
-
 import DismissableBanner from "@/components/Banners/DismissableBanner"
-import { ButtonLink } from "@/components/Buttons"
+
+import { ButtonLink } from "../ui/buttons/Button"
+import { Center } from "../ui/flex"
 
 export const TranslatathonBanner = ({ pathname }) => {
   const todaysDate = new Date()
@@ -12,8 +12,8 @@ export const TranslatathonBanner = ({ pathname }) => {
 
   return todaysDate < translatathonStartDate && showBanner ? (
     <DismissableBanner storageKey="translatathon-banner">
-      <Center gap={4}>
-        <Text>🚨 Applications for the 2024 Translathathon are open 🚨</Text>
+      <Center className="gap-4">
+        <p>🚨 Applications for the 2024 Translathathon are open 🚨</p>
         <ButtonLink
           href="/contributing/translation-program/translatathon"
           variant="outline"
