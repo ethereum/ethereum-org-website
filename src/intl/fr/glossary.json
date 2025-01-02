@@ -252,7 +252,7 @@
   "network-hashrate-term": "Puissance de hachage du réseau",
   "network-hashrate-definition": "Le hashrate collectif produit par l'ensemble d'un réseau de minage. Le minage sur Ethereum a été désactivé lorsque Ethereum est passé à la preuve d'enjeu.",
   "nft-term": "Jeton non fongible (NFT)",
-  "nft-definition": "Le jeton non fongible (ou NFT, pour Non-fungible-token) est un élément numérique unique que vous pouvez posséder, comme une œuvre d'art ou un objet de collection, vérifié par la technologie blockchain. <a href=\"/nft/\">En savoir plus sur les jetons non fongibles (NFT)</a>.",
+  "nft-definition": "Un élément numérique unique que vous pouvez posséder, comme une œuvre d'art ou un objet de collection, vérifié par la technologie blockchain. <a href=\"/nft/\">En savoir plus sur les jetons non fongibles (NFT)</a>.",
   "node-term": "Nœud",
   "node-definition": "Un client logiciel qui participe au réseau. <a href=\"/developers/docs/nodes-and-clients/\">En savoir plus sur les nœuds et les clients</a>.",
   "nonce-term": "Nonce",
