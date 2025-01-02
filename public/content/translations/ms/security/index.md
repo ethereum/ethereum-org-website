@@ -276,7 +276,7 @@ Sambungan pelayar, seperti sambungan Chrome atau Tambahan untuk Firefox, boleh m
 
 - [ Sehingga 3 juta peranti dijangkiti oleh tambahan Chrome dan Edge yang disertakan dengan perisian hasad](https://arstechnica.com/information-technology/2020/12/up-to-3-million-devices-infected-by-malware-laced-chrome-and-edge-add-ons/) - _ Dan Goodin_
 - [Cara Mencipta Kata Laluan yang Kukuh — Yang Tidak Akan Anda Lupa](https://www.avg.com/en/signal/how-to-create-a-strong-password-that-you-wont-forget) - _AVG_
-- [Apakah kunci keselamatan?](https://help.coinbase.com/en/coinbase/getting-started/verify-my-account/security-keys-faq) - _Coinbase_
+- [Apakah kunci keselamatan? ](https://help.coinbase.com/en/coinbase/getting-started/verify-my-account/security-keys-faq) - _Coinbase_
 
 ### Keselamatan Kripto {#reading-crypto-security}
 
