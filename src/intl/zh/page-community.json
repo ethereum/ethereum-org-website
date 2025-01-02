@@ -44,11 +44,18 @@
   "page-community-try-ethereum": "亲自体验以太坊",
   "page-community-upcoming-events-no-events": "我们不知道近期会有哪些活动。你知道吗？",
   "page-community-upcoming-events-load-more": "加载更多",
+  "page-community-upcoming-events-view-event": "查看活动",
   "page-community-why-get-involved-title": "为什么要参与？",
   "page-community-why-get-involved-card-1-title": "查找你的社群",
   "page-community-why-get-involved-card-1-description": "每个人都可以加入社群。寻找并联系想法相同的人，一起讨论、思考和推崇以太坊。",
   "page-community-why-get-involved-card-2-title": "赚取生活费",
   "page-community-why-get-involved-card-2-description": "每个人都有账单需要支付。在以太坊上，你可以找到有意义的工作，并通过工作获取高额的报酬。",
   "page-community-why-get-involved-card-3-title": "让你脱颖而出",
-  "page-community-why-get-involved-card-3-description": "加入以太坊，成为积极影响数百万人的技术的积极利益攸关者。"
+  "page-community-why-get-involved-card-3-description": "加入以太坊，成为积极影响数百万人的技术的积极利益攸关者。",
+  "page-index-internet-image-alt": "插图：由以太坊水晶驱动的未来计算机装置。",
+  "page-index-get-started-image-alt": "插图：有人在用计算机工作。",
+  "page-index-get-started-wallet-image-alt": "插图：一个身体是保险箱的机器人，代表以太坊钱包。",
+  "page-index-get-started-eth-image-alt": "插图：一群人赞叹以太币 (ETH) 图示符。",
+  "page-index-get-started-dapps-image-alt": "插图：一只狗在使用计算机。",
+  "page-index-get-started-devs-image-alt": "插图：一只手正在用乐高积木搭建以太币 (ETH) 徽标。"
 }

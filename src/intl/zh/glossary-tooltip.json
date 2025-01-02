@@ -96,7 +96,7 @@
   "multisig-term": "多重签名",
   "multisig-definition": "Multisig（多重签名）是指钱包或帐户需要多个签名或批准才能进行交易，从而增加了安全性。",
   "nft-term": "非同质化代币 (NFT)",
-  "nft-definition": "非同质化代币 (NFT) 是你可以拥有的一种独特数字物品，例如艺术品或收藏品，并通过区块链技术进行验证。<a href=\"/nft/\">了解有关非同质化代币 (NFT) 的更多信息</a>。",
+  "nft-definition": "一种你能够拥有的独特数字物品，如艺术品或收藏品，可通过区块链技术进行验证。<a href=\"/nft/\">更多关于非同质化代币 (NFT) 的信息</a>。",
   "node-term": "节点",
   "node-definition": "参与网络的软件客户端。<a href=\"/developers/docs/nodes-and-clients/\">了解有关节点和客户端的更多信息</a>。",
   "ommer-term": "叔块",

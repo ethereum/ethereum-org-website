@@ -15,6 +15,7 @@ lang: zh
 - [面向 Dart 开发者的以太坊资源](/developers/docs/programming-languages/dart/)
 - [面向 Delphi 开发者的以太坊资源](/developers/docs/programming-languages/delphi/)
 - [面向 .NET 开发者的以太坊资源](/developers/docs/programming-languages/dot-net/)
+- [面向 Elixir 开发者的以太坊](/developers/docs/programming-languages/elixir/)
 - [面向 Go 开发者的以太坊资源](/developers/docs/programming-languages/golang/)
 - [面向 Java 开发者的以太坊资源](/developers/docs/programming-languages/java/)
 - [面向 JavaScript 开发者的以太坊资源](/developers/docs/programming-languages/javascript/)

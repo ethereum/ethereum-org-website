@@ -95,6 +95,15 @@ _Web3 已经发展成为一个由一层网络区块链和二层网络扩展解�
 
 <Divider />
 
+## 使用链桥 {#use-bridge}
+
+使用链桥可以将资产转移到不同区块链。 下面是一些可以帮助你找到并使用链桥的资源：
+
+- **[L2BEAT 链桥摘要](https://l2beat.com/bridges/summary) & [L2BEAT 链桥风险分析](https://l2beat.com/bridges/risk)**：各种链桥的全面汇总，包括有关市场份额、链桥类型和目的地区块链的详细信息。 L2BEAT 还对链桥进行风险分析，帮助用户在选择链桥时做出明智的决策。
+- **[DefiLlama 链桥摘要](https://defillama.com/bridges/Ethereum)**：跨以太坊网络的链桥交易量摘要。
+
+<Divider />
+
 ## 使用桥梁的风险 {#bridge-risk}
 
 桥梁正处于开发的早期阶段， 很可能尚未发现最佳桥梁设计。 与任何类型的桥梁互动都有风险：

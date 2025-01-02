@@ -44,7 +44,7 @@ lang: zh
 
 - [Lodestar](https://github.com/ChainSafe/lodestar/tree/unstable/packages/light-client)：TypeScript 中的共识轻客户端
 - [Helios](https://github.com/a16z/helios)：Rust 中的执行和共识组合轻客户端
-- [Geth](https://github.com/ethereum/go-ethereum/tree/master/light)：Go 中执行客户端（开发中）轻量级模式
+- [Geth](https://github.com/ethereum/go-ethereum/tree/master/beacon/light)：Go语言编写的执行客户端（开发中）轻量级模式
 - [Nimbus](https://nimbus.guide/el-light-client.html)：Nim 中的共识轻客户端
 
 据我们所知，这些轻客户端都还没部署到生产环境。

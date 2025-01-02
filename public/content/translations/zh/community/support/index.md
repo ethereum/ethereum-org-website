@@ -10,7 +10,7 @@ lang: zh
 
 你正在寻求以太坊官方支持吗？ 你应该知道的第一件事是以太坊是去中心化的。 这意味着以太坊不属于任何中心化组织、实体或个人，因此没有官方支持渠道。
 
-了解以太坊的去中心化性质至关重要，因为任何自称是以太坊官方支持人员的人都可能在试图诈骗你！ 预防诈骗的最好办法就是自学并认真对待安全问题。
+了解以太坊的去中心化特点非常重要，因为**任何声称自己是以太坊官方支持人员的人都可能在试图诈骗你！**防范诈骗的最好方式是自学并认真对待安全问题。
 
 <DocLink href="/security/">
   以太坊安全和预防欺诈措施
@@ -100,5 +100,6 @@ lang: zh
 - [Lighthouse](https://discord.gg/cyAszAh)
 - [Teku](https://discord.gg/7hPv2T6)
 - [Lodestar](https://discord.gg/aMxzVcr)
+- [Grandine](https://discord.gg/H9XCdUSyZd)
 
 你还可以[在此处了解如何运行节点](/developers/docs/nodes-and-clients/run-a-node/)。

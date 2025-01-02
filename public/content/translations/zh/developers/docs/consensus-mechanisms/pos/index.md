@@ -24,7 +24,7 @@ lang: zh
 
 下面提供了关于如何在以太坊权益证明中执行交易的全面解释。
 
-1. 用户使用他们的私钥创建并签署[交易](/developers/docs/transactions/)。 这通常由钱包或库处理，例如 [ether.js](https://docs.ethers.io/v5/)、[web3js](https://docs.web3js.org/)、[web3py](https://web3py.readthedocs.io/en/v5/) 等，但本质上是用户在使用以太坊 [JSON-RPC 应用程序接口](/developers/docs/apis/json-rpc/)向节点发出请求。 用户定义他们准备支付一定量的燃料作为给验证者的小费，以鼓励他们将交易纳入在一个区块中。 [小费](/developers/docs/gas/#priority-fee)支付给验证者，而[基础费](/developers/docs/gas/#base-fee)被销毁。
+1. 用户使用他们的私钥创建并签署[交易](/developers/docs/transactions/)。 这通常由钱包或库处理，例如 [ethers.js](https://docs.ethers.org/v6/)、[web3js](https://docs.web3js.org/)、[web3py](https://web3py.readthedocs.io/en/v5/) 等，但本质上是用户在使用以太坊 [JSON-RPC 应用程序接口](/developers/docs/apis/json-rpc/)向节点发出请求。 用户定义他们准备支付一定量的燃料作为给验证者的小费，以鼓励他们将交易纳入在一个区块中。 [小费](/developers/docs/gas/#priority-fee)支付给验证者，而[基础费](/developers/docs/gas/#base-fee)被销毁。
 2. 交易被提交给以太坊[执行客户端](/developers/docs/nodes-and-clients/#execution-client)验证有效性。 这意味着确保发送人有足够的以太币来完成交易，并且他们已经使用正确的密钥来签名交易。
 3. 如果交易有效，执行客户端将其添加到其本地内存池（待处理交易列表），并通过执行层广播网络将其广播到其他节点。 当其他节点听到关于交易的消息时，它们也将其添加到本地内存池中。 高级用户可能会避免广播他们的交易，而是将其转发给专门的区块构建器，例如 [Flashbots Auction](https://docs.flashbots.net/flashbots-auction/overview)。 这使他们能够在即将到来的区块中组织交易以获得最大利润（[最大可提取价值](/developers/docs/mev/#mev-extraction)）。
 4. 网络上的验证节点之一是当前时隙的区块提议者（之前已使用 RANDAO 以伪随机方式选择）。 该节点负责构建和广播下一个要添加到以太坊区块链的区块并更新全局状态。 该节点由三部分组成：执行客户端、共识客户端和验证者客户端。 执行客户端将来自本地内存池的交易捆绑到“执行负载”中，并在本地执行它们以生成状态更改。 此信息被传递到共识客户端。在该客户端，执行有效载荷被包装为“信标区块”的一部分。该信标区块还包含有关奖励、惩罚、罚没、认证等的信息，从而使网络能够就链头的区块顺序达成一致。 [连接共识客户端和执行客户端](/developers/docs/networking-layer/#connecting-clients)中更详细地描述了执行客户端和共识客户端之间的通信。

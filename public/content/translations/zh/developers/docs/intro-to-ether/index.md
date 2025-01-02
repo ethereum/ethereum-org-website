@@ -26,7 +26,7 @@ ETH 加密货币支持以太坊算力的定价机制。 当用户想要完成一
 
 因此，即使某恶意 dapp 无限循环提交，交易最终也会耗尽 ETH 并终止，从而使网络恢复正常。
 
-人们[经常](https://www.reuters.com/article/us-crypto-currencies-lending-insight-idUSKBN25M0GP#:~:text=price%20of%20ethereum) [会](https://abcnews.go.com/Business/bitcoin-slumps-week-low-amid-renewed-worries-chinese/story?id=78399845#:~:text=cryptocurrencies%20including%20ethereum) [混淆](https://www.cnn.com/2021/03/14/tech/nft-art-buying/index.html#:~:text=price%20of%20ethereum)以太坊和以太币 - 当他们谈及“以太坊价格”时，其实是指以太币价格。
+人们[经常会混淆](https://abcnews.go.com/Business/bitcoin-slumps-week-low-amid-renewed-worries-chinese/story?id=78399845)以太坊和以太币 — 当人们谈及“以太坊的价格”时，他们指的是以太币的价格。
 
 ## 铸造 ETH {#minting-ether}
 

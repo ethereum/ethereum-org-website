@@ -68,7 +68,7 @@ Ethereum.org 是一个开源项目，有超过 **12,000** 名贡献者帮助翻�
 - 我们的[风格指南](/contributing/style-guide/)
 - 我们的[行为准则](/community/code-of-conduct)
 
-<ContributorsQuizBanner mt={16} mb={8} />
+<ContributorsQuizBanner className="mt-16 mb-8" />
 
 ## 如何做出有关网站的决定 {#how-decisions-about-the-site-are-made}
 

@@ -355,3 +355,7 @@ Dai 或 USDC 等代币的价值和美元的差距通常保持在几美分以内�
 
 - [去中心化金融 Llama Discord 服务器](https://discord.defillama.com/)
 - [去中心化金融 Pulse Discord 服务器](https://discord.gg/Gx4TCTk)
+
+<Divider />
+
+<QuizWidget quizKey="defi" />
