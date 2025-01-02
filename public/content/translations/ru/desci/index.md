@@ -126,6 +126,7 @@ Web3 обладает потенциалом, который позволит р
 - [DeSci: будущее исследований с Сэмюэлом Акиношо](https://lucidsamuel.medium.com/desci-the-future-of-research-b76cfc88c8ec)
 - [Финансирование науки (эпилог: DeSci и новые криптопримитивности). Автор: Надия](https://nadia.xyz/science-funding)
 - [Децентрализация подрывает устоявшуюся систему разработки лекарственных средств](https://medium.com/id-theory/decentralisation-is-disrupting-drug-development-28b5ba5d447f)
+- [Что такое децентрализованная наука (DeSci)?](​https://usadailytimes.com/2022/09/12/what-is-desci-decentralized-science/)
 
 ### Видео {#videos}
 
@@ -134,3 +135,4 @@ Web3 обладает потенциалом, который позволит р
 - [Научное издательство сломано. Может ли Web3 исправить это?](https://www.youtube.com/watch?v=WkvzYgCvWj8)
 - [Хуан Бенет — DeSci, независимые лаборатории и наука об обработке больших массивов данных](https://www.youtube.com/watch?v=zkXM9H90g_E)
 - [Себастьян Брунемайер — Как DeSci может преобразовать биомедицинские исследования и венчурный капитал](https://www.youtube.com/watch?v=qB4Tc3FcVbM)
+- [Пейдж Доннер — Применение Web3 и блокчейна в открытой науке](https://www.youtube.com/watch?v=nC-2QWQ-lgw&t=17s)
