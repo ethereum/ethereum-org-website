@@ -58,7 +58,7 @@ lang: el
 
 </ExpandableCard>
 
-## Περαιτέρω υλικό για δίαβασμα {#further-reading}
+## Περαιτέρω υλικό για διάβασμα {#further-reading}
 
 - [Τι στο καλό είναι το WETH;](https://weth.tkn.eth.limo/)
 - [Πληροφορίες κρυπτοπαραστατικών WETH στο Etherscan](https://etherscan.io/token/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2)
