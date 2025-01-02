@@ -122,6 +122,7 @@ Primární iniciativou ke snížení palivových nákladů a zlepšení uživate
 Pokud chcete monitorovat poplatky za palivo, abyste mohli odesílat své ETH za nižší ceny, můžete využít několik různých nástrojů, např.:
 
 - [Etherscan](https://etherscan.io/gastracker) – _odhad ceny paliva za transakci_
+- [ETH tracker paliva](https://www.ethgastracker.com/) _Monitorujte a sledujte ceny paliva na Ethereu a vrstvě 2, abyste snížili transakční poplatky a ušetřili peníze_
 - [Blocknative ETH Gas Estimator](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) – _rozšíření pro prohlížeč Chrome odhadující poplatky za palivo, které podporuje jak typ 0 legacy transakce, tak typ 2 transakce EIP-1559_
 - [Cryptoneur Gas Fees Calculator](https://www.cryptoneur.xyz/gas-fees-calculator) – _kalkulačka poplatků za palivo v místní měně pro různé typy transakcí na hlavní síti, Arbitru a Polygonu_
 

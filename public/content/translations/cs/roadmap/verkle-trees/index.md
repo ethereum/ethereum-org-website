@@ -49,9 +49,9 @@ Verkle trees jsou `(key, value)`, tedy páry klíč-hodnota, kde klíče jsou 32
 
 Testovací sítě Verkle tree jsou již v provozu, ale vyžadují značné aktualizace klientů, které podporují Verkle stromy. I vy můžete pomoci urychlit tento vývoj tím, že spustíte své kontrakty na testnetech nebo spustíte testnetové klienty.
 
-[Prozkoumejte testovací síť Verkle Gen Devnet 2](https://verkle-gen-devnet-2.ethpandaops.io/)
+[Prozkoumejte testovací síť Verkle Gen Devnet 6](https://verkle-gen-devnet-6.ethpandaops.io/)
 
-[Sledujte, jak Guillaume Ballet vysvětluje testovací síť Condrieu Verkle](https://www.youtube.com/watch?v=cPLHFBeC0Vg) (poznámka: testovací síť Condrieu byla důkaz prací a nyní byla nahrazen testovací sítí Verkle Gen Devnet 2).
+[Sledujte, jak Guillaume Ballet vysvětluje testovací síť Condrieu Verkle](https://www.youtube.com/watch?v=cPLHFBeC0Vg) (poznámka: testovací síť Condrieu byla důkaz prací a nyní byla nahrazena testovací sítí Verkle Gen Devnet 6).
 
 ## Další informace {#further-reading}
 
