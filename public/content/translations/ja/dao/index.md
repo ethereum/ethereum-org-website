@@ -160,3 +160,7 @@ _主にプロトコルや[分散型アプリ(Dapp)](/glossary/#dapp)の分散型
 
 - [仮想通貨における分散型自律組織(DAO)とは](https://youtu.be/KHm0uUPqmVE)
 - [分散型自律組織(DAO)で街はつくれるのか?](https://www.ted.com/talks/scott_fitsimones_could_a_dao_build_the_next_great_city) – [TED](https://www.ted.com/)
+
+<Divider />
+
+<QuizWidget quizKey="daos" />
