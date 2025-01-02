@@ -5,7 +5,7 @@ lang: nl
 
 # Info over Ethereum {#learn-about-ethereum}
 
-**Welkom bij [ethereum.org/nl/learn](/nl/learn/): een set bronnen waarmee je meer te weten kunt komen over Ethereum.** Deze pagina bevat technische **en** niet-technische artikelen, handleidingen en bronnen. Is Ethereum helemaal nieuw voor je, [dan raden we je aan hier te beginnen](/nl/what-is-ethereum/).
+**Welkom bij [ethereum.org/nl/learn](/learn/): een set bronnen waarmee je meer te weten kunt komen over Ethereum.** Deze pagina bevat technische **en** niet-technische artikelen, handleidingen en bronnen. Is Ethereum helemaal nieuw voor je, [dan raden we je aan hier te beginnen](/what-is-ethereum/).
 
 Dit zijn enkele uitstekende startpunten:
 
@@ -46,7 +46,7 @@ High-level uitleg over Ethereum en blockchaintechnologie in het algemeen.
 
 Een 'smart contract' is gewoon een stuk code dat op Ethereum wordt uitgevoerd. Het heet een ‘contract’ omdat code die op Ethereum werkt, waardevolle zaken zoals ETH of andere digitale activa kan beheren.
 
-- Wil je leren hoe je op Ethereum kunt programmeren met Smart Contracts? [ethereum.org/nl/developers](/nl/developers/)
+- Wil je leren hoe je op Ethereum kunt programmeren met Smart Contracts? [ethereum.org/nl/developers](/developers/)
 
 ## Proof-of-work en mining {#proof-of-work-and-mining}
 
@@ -58,7 +58,7 @@ In ETH 2.0 zal Ethereum evolueren naar een ander systeem genaamd 'proof-of-stake
 
 Het Ethereum-netwerk bestaat uit vele nodes die compatibele clientsoftware draaien. Er zijn twee clients die gebruikt worden door een meerderheid van nodes: [Geth](https://geth.ethereum.org/) (geschreven in Go) en [Parity](https://www.parity.io/ethereum/) (geschreven in Rust).
 
-- Wil je leren hoe je een eigen node moet beheren? → [ethereum.org/nl/developers](/nl/developers/#clients--running-your-own-node/)
+- Wil je leren hoe je een eigen node moet beheren? → [ethereum.org/nl/developers](/developers/#clients--running-your-own-node/)
 - [Volledige lijst van alle Ethereum-clients](https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients)
 
 ## De schaalbaarheid van Ethereum verbeteren {#improving-ethereums-scalability}

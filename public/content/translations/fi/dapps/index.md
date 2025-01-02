@@ -27,6 +27,6 @@ Oletko kiinnostunut lukemaan lisää muista Ethereumilla tehdyistä sovelluksist
 - [Ethereum DeFi Ecosystem](https://defiprime.com/ethereum) _päivitetään usein - Defiprime_
 - [DeFi Llama](https://defillama.com/) _Analytics + rankings of DeFi protocols - Defi Llama_
 
-Jotkut Ethereumin sovellukset vaativat lompakkoa - [opi lisää Ethereumin lompakoista täältä](/fi/wallets/).
+Jotkut Ethereumin sovellukset vaativat lompakkoa - [opi lisää Ethereumin lompakoista täältä](/wallets/).
 
-Jotkut Ethereumin sovellukset vaativat ETH - [opi lisää ETH:stä täältä](/fi/eth/).
+Jotkut Ethereumin sovellukset vaativat ETH - [opi lisää ETH:stä täältä](/eth/).

@@ -5,7 +5,7 @@ lang: el
 
 # Μάθετε για το Ethereum {#learn-about-ethereum}
 
-**Καλώς ήρθατε στο [ethereum.org/el/learn](/el/learn/), μια συλλογή πληροφοριών που θα σας βοηθήσουν να μάθετε περισσότερα για το Ethereum.** Αυτή η σελίδα περιλαμβάνει τεχνικά και μη τεχνικά άρθρα, οδηγούς και άλλα βοηθήματα. Εάν είστε εντελώς καινούργιοι στο Ethereum, [προτείνουμε να ξεκινήσετε εδώ](/el/what-is-ethereum/).
+**Καλώς ήρθατε στο [ethereum.org/el/learn](/learn/), μια συλλογή πληροφοριών που θα σας βοηθήσουν να μάθετε περισσότερα για το Ethereum.** Αυτή η σελίδα περιλαμβάνει τεχνικά και μη τεχνικά άρθρα, οδηγούς και άλλα βοηθήματα. Εάν είστε εντελώς καινούργιοι στο Ethereum, [προτείνουμε να ξεκινήσετε εδώ](/what-is-ethereum/).
 
 Ακολουθούν μερικά εξαιρετικά κείμενα:
 
@@ -46,7 +46,7 @@ lang: el
 
 Ένα "smart contract" είναι απλά ένα κομμάτι κώδικα που τρέχει στο Ethereum. Ονομάζεται "contract" επειδή ο κώδικας που τρέχει σε Ethereum μπορεί να ελέγξει πολύτιμα πράγματα όπως το ETH ή άλλα ψηφιακά στοιχεία.
 
-- Θέλετε να μάθετε πώς να προγραμματίζετε στο Ethereum με smart contracts; [ethereum.org/el/developers](/el/developers/)
+- Θέλετε να μάθετε πώς να προγραμματίζετε στο Ethereum με smart contracts; [ethereum.org/el/developers](/developers/)
 
 ## Απόδειξη της Εργασίας ("proof-of-work") και Εξόρυξη ("Mining") {#proof-of-work-and-mining}
 
@@ -58,7 +58,7 @@ lang: el
 
 Το δίκτυο του Ethereum αποτελείται από πολλούς κόμβους, καθένας εκ των οποίων διαθέτει συμβατό λογισμικό πελάτη. Υπάρχουν δύο πελάτες που χρησιμοποιούνται από την πλειονότητα των κόμβων: [Geth](https://geth.ethereum.org/) (γραμμένος σε Go) και [Parity](https://www.parity.io/ethereum/) (γραμμένος σε Rust).
 
-- Θέλετε να μάθετε πώς να τρέχετε έναν δικό σας κόμβο; → [ethereum.org/el/developers](/el/developers/#clients--running-your-own-node/)
+- Θέλετε να μάθετε πώς να τρέχετε έναν δικό σας κόμβο; → [ethereum.org/el/developers](/developers/#clients--running-your-own-node/)
 - [Πλήρης κατάλογος όλων των πελατών του Ethereum](https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients)
 
 ## Βελτίωση της κλιμάκωσης του Ethereum {#improving-ethereums-scalability}

@@ -5,7 +5,7 @@ lang: ig
 
 # Mụta maka Ethereum {#learn-about-ethereum}
 
-**Nnọọ na [ethereum.org/ig/learn](/ig/learn/), otu ihe eji aru oru nyere gị aka ịmatakwu gbasara Ethereum.** Peeji a gụnyere teknuzu **na** akụkọ na-abụghị ọrụaka, ntuziaka na ihe eji aru oru. Ọ bụrụ na ị bu onye ohuru na Ethereum, [anyị na-atụ aro ka ịmalite ebe a](/ig/what-is-ethereum/).
+**Nnọọ na [ethereum.org/ig/learn](/learn/), otu ihe eji aru oru nyere gị aka ịmatakwu gbasara Ethereum.** Peeji a gụnyere teknuzu **na** akụkọ na-abụghị ọrụaka, ntuziaka na ihe eji aru oru. Ọ bụrụ na ị bu onye ohuru na Ethereum, [anyị na-atụ aro ka ịmalite ebe a](/what-is-ethereum/).
 
 Ndị a bụ ụfọdụ ebe mmalite kachasi mma:
 
@@ -46,7 +46,7 @@ Na mgbakwunye na ozi dị na peeji a, enwere ọtụtụ ihe enyere obodo aka kw
 
   Nkwekọrịta amamihe 'bụ naanị mpempe koodu na-aru oru na Ethereum. A na-akpọ ya "nkwekọrịta" n'ihi na koodu na-aru oru na Ethereum nwere ike ichikwa ihe ndị bara uru dị ka ETH ma ọ bụ akụnuba dijitalụ ndị ọzọ.
 
-  - I chọrọ ịmụta ka esi eme nhazi nkwekorita amamihe na Ethereum? [ethereum.org/ig/developers/](/ig/developers/)
+  - I chọrọ ịmụta ka esi eme nhazi nkwekorita amamihe na Ethereum? [ethereum.org/ig/developers/](/developers/)
 
   ## Ihe akaebe nke Oru na Ngwuputa {#proof-of-work-and-mining}
 
@@ -58,7 +58,7 @@ Na mgbakwunye na ozi dị na peeji a, enwere ọtụtụ ihe enyere obodo aka kw
 
   Ngwakọta Ethereum nwere ọtụtụ ebe nzuko, nke ọ bụla na-aru oru sọftụwia ndị ahịa jikotara onu. Enwere ndị ahịa abụọ ana-eji site na ọtụtụ ebe nzuko:[Geth](https://geth.ethereum.org/)(edere na ebe ana aga) na [Nha nhata](https://www.parity.io/ethereum/) (e dere na Rust).
 
-  - I chọrọ ịmụ otu esi agba nodu nke gi? [ethereum.org/ig/developers](/ig/developers/#clients--running-your-own-node/)
+  - I chọrọ ịmụ otu esi agba nodu nke gi? [ethereum.org/ig/developers](/developers/#clients--running-your-own-node/)
   - [Ndeputa nile nke ndi Ethereum](https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients)
 
   ## Imeziwanye Ibelata Ethereum {#improving-ethereums-scalability}
