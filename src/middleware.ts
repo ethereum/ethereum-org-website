@@ -32,6 +32,8 @@ export const config = {
   ],
 }
 
+const doubleLocaleRegex = new RegExp(`^/(${LOCALES_CODES.join("|")})/.*`, "i")
+
 // Middleware required to always display the locale prefix in the URL. It
 // redirects to the default locale if the locale is not present in the URL
 export async function middleware(req: NextRequest) {
@@ -43,6 +45,18 @@ export async function middleware(req: NextRequest) {
     PUBLIC_FILE.test(pathname)
   ) {
     return
+  }
+
+  /**
+   * If an URL has double langs in the URL it leads to 500 error,
+   * e.g.: /ja/en/eth/
+   *
+   * It is a known bug:
+   * https://github.com/vercel/next.js/issues/52314
+   * https://github.com/vercel/next.js/issues/52316
+   */
+  if (doubleLocaleRegex.test(pathname)) {
+    return NextResponse.redirect(new URL(`/${DEFAULT_LOCALE}/404`, req.url))
   }
 
   if (locale === FAKE_LOCALE) {
