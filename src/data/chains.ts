@@ -1541,7 +1541,7 @@ const chains = [
   },
   {
     name: "Plume Devnet",
-    infoURL: "https://www.plumenetwork.xyz/",
+    infoURL: "https://plumenetwork.xyz/",
     chainId: 98864,
     nativeCurrency: {
       name: "Plume Sepolia Ether",
@@ -1552,7 +1552,7 @@ const chains = [
   },
   {
     name: "Plume Mainnet",
-    infoURL: "https://www.plumenetwork.xyz/",
+    infoURL: "https://plumenetwork.xyz/",
     chainId: 98865,
     nativeCurrency: {
       name: "Plume Ether",
