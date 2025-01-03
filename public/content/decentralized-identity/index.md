@@ -125,7 +125,7 @@ One concern with storing attestations on-chain is that they might contain inform
 
 The solution is to issue attestations, held by users off-chain in digital wallets, but signed with the issuer's DID stored on-chain. These attestations are encoded as [JSON Web Tokens](https://en.wikipedia.org/wiki/JSON_Web_Token) and contain the issuer's digital signature—which allows for easy verification of off-chain claims.
 
-Here's an hypothetical scenario to explain off-chain attestations:
+Here's a hypothetical scenario to explain off-chain attestations:
 
 1. A university (the issuer) generates an attestation (a digital academic certificate), signs with its keys, and issues it to Bob (the identity owner).
 
