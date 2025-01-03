@@ -11,6 +11,7 @@ import ModeLogo from "@/public/images/layer-2/mode.png"
 import OptimismLogo from "@/public/images/layer-2/optimism.png"
 import ScrollLogo from "@/public/images/layer-2/scroll.png"
 import StarknetLogo from "@/public/images/layer-2/starknet.png"
+import TaikoLogo from "@/public/images/layer-2/taiko.png"
 import ZkSyncEraLogo from "@/public/images/layer-2/zksyncEra.jpg"
 
 export interface Rollup {
@@ -194,6 +195,23 @@ export const layer2Data: Rollups = [
     bridgeLink: "https://app.mode.network/",
     l2BeatLink: "https://l2beat.com/scaling/projects/mode",
     growThePieLink: "https://www.growthepie.xyz/chains/mode",
+    feeToken: ["ETH"],
+  },
+  {
+    l2beatID: "taiko",
+    growthepieID: "taiko",
+    name: "Taiko",
+    chainName: "Taiko Mainnet",
+    logo: TaikoLogo,
+    networkType: "optimistic",
+    description:
+      "Taiko is a decentralized, Ethereum-equivalent ZK-EVM rollup that enables seamless cross-chain communication.",
+    website: "https://taiko.xyz",
+    applicationsLink: "https://taiko.xyz/ecosystem",
+    blockExplorerLink: "https://taikoscan.io/",
+    bridgeLink: "https://bridge.taiko.xyz/",
+    l2BeatLink: "https://l2beat.com/scaling/projects/taiko",
+    growThePieLink: "https://www.growthepie.xyz/chains/taiko",
     feeToken: ["ETH"],
   },
 ]
