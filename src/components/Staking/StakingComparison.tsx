@@ -1,5 +1,5 @@
 import { useTranslation } from "next-i18next"
-import { Box, Heading, useTheme } from "@chakra-ui/react"
+import {useTheme } from "@chakra-ui/react"
 
 import type { StakingPage, TranslationKey } from "@/lib/types"
 
@@ -142,10 +142,10 @@ const StakingComparison = ({ page, className }: StakingComparisonProps) => {
                 {glyph}
               </Flex>
             )}
-            <Box>
-              <Heading as="h3" fontSize="2xl" color={color} mb={2}>
+            <div>
+              <h3 className={`font-2xl text-${color} mb-2`}>
                 {t(title)}
-              </Heading>
+              </h3>
               <Text>{t(content)}</Text>
               <InlineLink
                 onClick={() => {
@@ -155,7 +155,7 @@ const StakingComparison = ({ page, className }: StakingComparisonProps) => {
               >
                 {t(linkText)}
               </InlineLink>
-            </Box>
+            </div>
           </Flex>
         )
       )}
