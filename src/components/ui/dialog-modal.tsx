@@ -182,7 +182,9 @@ const Modal = ({
         <DialogHeader>
           <DialogTitle>{title}</DialogTitle>
         </DialogHeader>
-        <DialogDescription>{children}</DialogDescription>
+        <DialogDescription asChild>
+          <div>{children}</div>
+        </DialogDescription>
         {actionButton && (
           <DialogFooter>
             <Flex className="justify-end gap-2">
