@@ -9,6 +9,7 @@ import ArgentImage from "@/public/images/wallets/argent.png"
 import AuroxImage from "@/public/images/wallets/aurox.png"
 import BitgetImage from "@/public/images/wallets/bitget.png"
 import BlockWalletImage from "@/public/images/wallets/blockwallet.png"
+import BraavosImage from "@/public/images/wallets/braavos_wallet.png"
 import BridgeWalletImage from "@/public/images/wallets/bridge.png"
 import ClearWallet from "@/public/images/wallets/clearwallet.png"
 import CoinbaseImage from "@/public/images/wallets/coinbase.png"
@@ -2347,6 +2348,52 @@ export const walletsData: WalletData[] = [
     onboard_documentation: "https://clear-wallet.flashsoft.eu/",
     documentation: "https://clear-wallet.flashsoft.eu/docs/",
     supported_chains: ["Ethereum Mainnet"],
+  },
+  {
+    last_updated: "2024-12-26",
+    name: "Braavos",
+    image: BraavosImage,
+    twBackgroundColor: "bg-[#FFFFFF]",
+    twGradiantBrandColor: "from-[#ffffff]",
+    url: "https://braavos.app/",
+    active_development_team: true,
+    languages_supported: ["en"],
+    twitter: "https://twitter.com/myBraavos",
+    discord: "https://discord.com/invite/9Ks7V5DN9z",
+    reddit: "",
+    telegram: "https://t.me/mybraavos",
+    ios: true,
+    android: true,
+    linux: false,
+    windows: false,
+    macOS: false,
+    firefox: true,
+    chromium: true,
+    hardware: false,
+    open_source: false,
+    repo_url: "https://github.com/myBraavos/",
+    non_custodial: true,
+    security_audit: [
+      "https://github.com/myBraavos/braavos-account-cairo/tree/main/audit",
+    ],
+    scam_protection: true,
+    hardware_support: false,
+    rpc_importing: false,
+    nft_support: true,
+    connect_to_dapps: true,
+    staking: true,
+    swaps: true,
+    layer_2: true,
+    gas_fee_customization: true,
+    ens_support: false, // Supports SNS (Starknet Name Service) instead
+    erc_20_support: true,
+    buy_crypto: true,
+    withdraw_crypto: true,
+    multisig: true,
+    social_recovery: false,
+    onboard_documentation: "https://braavos.app/faq/",
+    documentation: "",
+    supported_chains: ["Starknet"],
   },
 ] as const satisfies Omit<WalletData, "new_to_crypto">[]
 
