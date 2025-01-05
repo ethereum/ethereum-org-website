@@ -59,8 +59,8 @@ module.exports = (phase, { defaultConfig }) => {
 
       return config
     },
-    i18n,
-    trailingSlash: true,
+    // i18n,
+    // trailingSlash: true,
     images: {
       deviceSizes: [640, 750, 828, 1080, 1200, 1504, 1920],
       remotePatterns: [

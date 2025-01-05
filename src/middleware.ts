@@ -58,6 +58,6 @@ export async function middleware(req: NextRequest) {
       redirectUrl.pathname = redirectUrl.pathname + "/"
     }
 
-    return NextResponse.redirect(redirectUrl, { status: 301 })
+    // return NextResponse.redirect(redirectUrl, { status: 301 })
   }
 }
