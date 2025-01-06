@@ -20,19 +20,18 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    "baseUrl": ".",
     "paths": {
       "@/*": [
-        "./src/*"
+        "src/*"
       ],
       "@/public/*": [
-        "./public/*"
+        "public/*"
       ],
       "@/storybook-utils": [
-        "./.storybook/utils.ts"
+        ".storybook/utils.ts"
       ],
-      "@/content/*": [
-        "./content/*"
-      ]
+      "@/../*": ["./*"]
     },
     "plugins": [
       {
@@ -47,7 +46,8 @@
     "**/*.tsx",
     ".storybook/**/*",
     "tailwind/ui",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "next.config.mjs"
   ],
   "exclude": [
     "node_modules",

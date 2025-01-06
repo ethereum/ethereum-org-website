@@ -1,11 +1,29 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
-const { PHASE_DEVELOPMENT_SERVER } = require("next/constants")
+import remarkFrontmatter from "remark-frontmatter"
+import remarkGfm from "remark-gfm"
+import remarkMdxFrontmatter from "remark-mdx-frontmatter"
+import createBundleAnalyzer from "@next/bundle-analyzer"
+import createMDX from "@next/mdx"
 
-const withBundleAnalyzer = require("@next/bundle-analyzer")({
+import i18nConfig from "./next-i18next.config.js"
+// import { PHASE_DEVELOPMENT_SERVER } from "@next/constants"
+
+const i18n = i18nConfig.i18n
+
+const withBundleAnalyzer = createBundleAnalyzer({
   enabled: process.env.ANALYZE === "true",
 })
 
-const { i18n } = require("./next-i18next.config")
+const withMDX = createMDX({
+  extension: /\.mdx?$/,
+  options: {
+    remarkPlugins: [
+      remarkGfm,
+      [remarkFrontmatter, { type: "yaml", marker: "-" }],
+      // remarkMdxFrontmatter,
+    ],
+    // rehypePlugins: [],
+  },
+})
 
 const LIMIT_CPUS = Number(process.env.LIMIT_CPUS ?? 2)
 
@@ -22,10 +40,11 @@ const experimental = LIMIT_CPUS
   : {}
 
 /** @type {import('next').NextConfig} */
-module.exports = (phase, { defaultConfig }) => {
+const nextConfig = (phase, { defaultConfig }) => {
   let nextConfig = {
     ...defaultConfig,
     reactStrictMode: true,
+    pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
     webpack: (config) => {
       config.module.rules.push({
         test: /\.ya?ml$/,
@@ -72,7 +91,7 @@ module.exports = (phase, { defaultConfig }) => {
     },
   }
 
-  if (phase !== PHASE_DEVELOPMENT_SERVER) {
+  if (phase !== "development") {
     nextConfig = {
       ...nextConfig,
       experimental: {
@@ -98,5 +117,10 @@ module.exports = (phase, { defaultConfig }) => {
     }
   }
 
-  return withBundleAnalyzer(nextConfig)
+  nextConfig = withMDX(nextConfig)
+  nextConfig = withBundleAnalyzer(nextConfig)
+
+  return nextConfig
 }
+
+export default nextConfig

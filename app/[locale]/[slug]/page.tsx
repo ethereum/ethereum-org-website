@@ -1,9 +1,3 @@
-import fs from "fs/promises"
-import { compileMDX } from "next-mdx-remote/rsc"
-import remarkGfm from "remark-gfm"
-
-import rehypeHeadingIds from "@/lib/rehype/rehypeHeadingIds"
-import remarkInferToc from "@/lib/rehype/remarkInferToc"
 import { DEFAULT_LOCALE } from "@/lib/constants"
 
 export default async function Page({
@@ -13,28 +7,36 @@ export default async function Page({
 }) {
   const { locale, slug } = await params
 
-  const path =
-    locale === DEFAULT_LOCALE
-      ? `./content/${slug}/index.md`
-      : `./content/translations/${locale}/${slug}/index.md`
+  let Markdown
+  if (locale === DEFAULT_LOCALE) {
+    Markdown = await import(`../../../content/${slug}/index.md`)
+  } else {
+    Markdown = await import(
+      `../../../content/translations/${locale}/${slug}/index.md`
+    )
+  }
 
-  const markdown = await fs.readFile(path, "utf8")
+  console.log("Markdown", Markdown)
 
-  const { content, frontmatter } = await compileMDX({
-    source: markdown,
-    options: {
-      parseFrontmatter: true,
-      mdxOptions: {
-        remarkPlugins: [
-          remarkGfm,
-          [remarkInferToc, { callback: (toc) => console.log("toc", toc) }],
-        ],
-        rehypePlugins: [rehypeHeadingIds],
-      },
-    },
-  })
+  //   const { content, frontmatter } = await compileMDX({
+  //     source: markdown,
+  //     options: {
+  //       parseFrontmatter: true,
+  //       mdxOptions: {
+  //         remarkPlugins: [
+  //           remarkGfm,
+  //           [remarkInferToc, { callback: (toc) => console.log("toc", toc) }],
+  //         ],
+  //         rehypePlugins: [rehypeHeadingIds],
+  //       },
+  //     },
+  //   })
 
-  return <div>{content}</div>
+  return (
+    <div>
+      <Markdown.default />
+    </div>
+  )
 }
 
 export function generateStaticParams() {
