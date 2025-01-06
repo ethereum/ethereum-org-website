@@ -84,6 +84,7 @@ import golem from "@/public/images/dapps/golem.png"
 import graph from "@/public/images/dapps/graph.png"
 import index from "@/public/images/dapps/index-coop.png"
 import ipfs from "@/public/images/dapps/ipfs.png"
+import junction from "@/public/images/dapps/junction.png"
 import krystal from "@/public/images/dapps/krystal.png"
 import kyberswap from "@/public/images/dapps/kyberswap.png"
 import lido from "@/public/images/dapps/lido.png"
@@ -1225,6 +1226,13 @@ const DappsPage = () => {
       link: "https://rubic.exchange/",
       image: rubic,
       alt: t("page-dapps-rubic-logo-alt"),
+    },
+    {
+      title: "Junction",
+      description: t("page-dapps-dapp-description-junction"),
+      link: "https://junction.exchange/",
+      image: junction,
+      alt: t("page-dapps-junction-logo-alt"),
     },
   ]
 
