@@ -92,19 +92,24 @@ const NavLink = ({ item, path, toggle }: NavLinkProps) => {
             </SideNavLink>
           )}
           {!item.href && (
-            <div className="w-full cursor-pointer" onClick={() => setIsOpen(!isOpen)}>
+            <div
+              className="w-full cursor-pointer"
+              onClick={() => setIsOpen(!isOpen)}
+            >
               {t(item.id)}
             </div>
           )}
-          <motion.div className="cursor-pointer flex"
+          <motion.div
+            className="flex cursor-pointer"
             onClick={() => setIsOpen(!isOpen)}
             variants={dropdownIconContainerVariant}
             animate={isOpen ? "open" : "closed"}
           >
-            <MdChevronRight className="h-6 w-6" color="secondary" />
+            <MdChevronRight className="h-6 w-6 text-body-medium" />
           </motion.div>
         </LinkContainer>
-        <motion.div className="ps-4 text-sm font-normal leading-relaxed"
+        <motion.div
+          className="ps-4 text-sm font-normal leading-relaxed"
           key={item.id}
           animate={isOpen ? "open" : "closed"}
           variants={innerLinksVariants}
@@ -143,26 +148,26 @@ const SideNavMobile = ({ path }: SideNavMobileProps) => {
     getPageTitleId(path + "/", docLinks) || ("Change page" as TranslationKey)
 
   return (
-    <div className="sticky z-2 bg-[ednBackground] h-auto w-full top-[75px] lg:hidden"
-      
-    >
+    <div className="sticky top-[75px] z-sticky h-auto w-full bg-background-highlight lg:hidden">
       <motion.div>
         <Center
-          className="box-border cursor-pointer border-b border-b-current bg-[ednBackground] px-8 py-4 font-medium text-[primary.base]"
+          className="box-border cursor-pointer border-b bg-background-highlight px-8 py-4 font-medium text-primary"
           onClick={() => setIsOpen(!isOpen)}
         >
-          <div className="me-2">{t(pageTitleId)}</div>
-          <motion.div className="cursor-pointer flex"
+          <div>{t(pageTitleId)}</div>
+          <motion.div
+            className="flex cursor-pointer"
             variants={dropdownIconContainerVariant}
             animate={isOpen ? "open" : "closed"}
           >
-            <MdChevronRight className="h-6 w-6" color="secondary" />
+            <MdChevronRight className="h-6 w-6 text-body-medium" />
           </motion.div>
         </Center>
       </motion.div>
       <AnimatePresence>
         {isOpen && (
-          <motion.nav className="h-auto max-h-[calc(100vh - 139px)] overflow-x-hidden overflow-y-scroll border-b border-border p-2"
+          <motion.nav
+            className="max-h-[calc(100vh - 139px)] h-auto overflow-x-hidden overflow-y-scroll border-b p-2"
             key="nav"
             initial={{ opacity: 0 }}
             animate={{
