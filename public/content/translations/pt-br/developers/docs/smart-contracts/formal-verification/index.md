@@ -58,7 +58,7 @@ Especificações de alto nível geralmente capturam duas propriedades temporais 
 
 Veja, por exemplo, este requisito de segurança que cobre condições para usar `transfer()` ou `transferFrom()` em contratos de token ERC-20: _ “O saldo de um remetente nunca é inferior à quantidade solicitada de tokens a serem enviados.”_. Essa descrição em linguagem natural de uma invariável de contrato pode ser traduzida em uma especificação formal (matemática), que pode então ser rigorosamente verificada para validade.
 
-Propriedades de vivacidade afirmam que “algo eventualmente bom acontece” e se refere à capacidade do contrato progredir por diferentes estados. Um exemplo de uma propriedade de vivacidade é a “liquidez”, que se refere à capacidade do contrato transferir seus saldos aos usuários por solicitação. Se essa propriedade for violada, os usuários não poderiam retirar os ativos armazenados no contrato, como aconteceu com o [incidente de carteira do Parity](https://www.cnbc.com/2017/11/08/accidental-bug-may- have-frozen-280-worth-of-ether-on-parity-wallet.html).
+Propriedades de vivacidade afirmam que “algo eventualmente bom acontece” e se refere à capacidade do contrato progredir por diferentes estados. Um exemplo de uma propriedade de vivacidade é a “liquidez”, que se refere à capacidade do contrato transferir seus saldos aos usuários por solicitação. Se essa propriedade for violada, os usuários não poderiam retirar os ativos armazenados no contrato, como aconteceu com o [incidente de carteira do Parity](https://www.cnbc.com/2017/11/08/accidental-bug-may-have-frozen-280-worth-of-ether-on-parity-wallet.html).
 
 ### Especificações de baixo nível {#low-level-specifications}
 

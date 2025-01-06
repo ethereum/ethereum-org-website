@@ -64,7 +64,7 @@ No entanto, normalmente os usuários são honestos e fazem reivindicações corr
 
 Ela também deve fornecer uma prova Merkle verificando que, uma transação que criou seus fundos na cadeia Plasma foi incluída em um bloco. Isso é necessário para iterações de Plasma, como o [Plasma MVP](https://www.learnplasma.org/en/learn/mvp.html), que utiliza um modelo [Transação de Saída Não Gasta (Unspent Transaction Output, UTXO)](https://en.wikipedia.org/wiki/Unspent_transaction_output).
 
-Outros, como [Plasma Cash](https://www.learnplasma.org/en/learn/cash.html), representam fundos como [tokens não fungíveis](/developers/docs/standards/tokens /erc-721/) em vez de UTXOs. A retirada, neste caso, requer a prova de propriedade de tokens na cadeia Plasma. Isso é feito submetendo as duas últimas transações envolvendo o token e fornecendo uma prova Merkle verificando a inclusão dessas transações em um bloco.
+Outros, como [Plasma Cash](https://www.learnplasma.org/en/learn/cash.html), representam fundos como [tokens não fungíveis](/developers/docs/standards/tokens/erc-721/) em vez de UTXOs. A retirada, neste caso, requer a prova de propriedade de tokens na cadeia Plasma. Isso é feito submetendo as duas últimas transações envolvendo o token e fornecendo uma prova Merkle verificando a inclusão dessas transações em um bloco.
 
 O usuário também deve adicionar um vínculo ao pedido de retirada como garantia de comportamento honesto. Se um desafiante provar que o pedido de retirada de Alice é inválido, seu vínculo é reduzido e parte dele vai para o desafiante como recompensa.
 
