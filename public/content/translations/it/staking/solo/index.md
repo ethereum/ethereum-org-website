@@ -203,4 +203,4 @@ Per sbloccare e ricevere il tuo intero saldo, devi inoltre completare il process
 - [Passo dopo Passo: come unirsi alla Testnet di Ethereum 2.0](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) - _Butta_
 - [Suggerimenti per la prevenzione dei tagli di Eth2](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) - _Raul Jordan 2020_
 
-<QuizWidget quizKey="solo-staking" />
+<QuizWidget quizKey="staking-solo" />
