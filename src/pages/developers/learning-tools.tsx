@@ -25,7 +25,6 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import AlchemyUniversityImage from "@/public/images/dev-tools/alchemyuniversity.png"
 import AtlasImage from "@/public/images/dev-tools/atlas.png"
 import BloomTechImage from "@/public/images/dev-tools/bloomtech.png"
-import CaptureTheEtherImage from "@/public/images/dev-tools/capturetheether.png"
 import ChainIDEImage from "@/public/images/dev-tools/chainIDE.png"
 import ConsensysImage from "@/public/images/dev-tools/consensys.png"
 import CryptoZombieImage from "@/public/images/dev-tools/crypto-zombie.png"
@@ -33,6 +32,7 @@ import CyfrinUpdraftImage from "@/public/images/dev-tools/cyfrin-updraft.png"
 import DappWorldImage from "@/public/images/dev-tools/dapp-world.png"
 import EthDotBuildImage from "@/public/images/dev-tools/eth-dot-build.png"
 import LearnWeb3Image from "@/public/images/dev-tools/learnweb3.png"
+import MetanaImage from "@/public/images/dev-tools/metana.png"
 import MetaschoolImage from "@/public/images/dev-tools/metaschool.png"
 import NFTSchoolImage from "@/public/images/dev-tools/nftschool.png"
 import NodeGuardiansImage from "@/public/images/dev-tools/node-guardians.jpg"
@@ -267,19 +267,6 @@ const LearningToolsPage = () => {
       subjects: ["Solidity"],
     },
     {
-      name: "Capture The Ether",
-      description: t(
-        "page-developers-learning-tools:page-learning-tools-capture-the-ether-description"
-      ),
-      url: "https://capturetheether.com/",
-      image: CaptureTheEtherImage,
-      alt: t(
-        "page-developers-learning-tools:page-learning-tools-capture-the-ether-logo-alt"
-      ),
-      background: "#1b9aaa",
-      subjects: ["Solidity"],
-    },
-    {
       name: "Node Guardians",
       description: t(
         "page-developers-learning-tools:page-learning-tools-node-guardians-description"
@@ -320,6 +307,19 @@ const LearningToolsPage = () => {
       ),
       background: "#ffffff",
       subjects: ["Solidity", "web3"],
+    },
+    {
+      name: "Metana",
+      description: t(
+        "page-developers-learning-tools:page-learning-tools-metana-description"
+      ),
+      url: "https://metana.io/web3-solidity-bootcamp-ethereum-blockchain/",
+      image: MetanaImage,
+      alt: t(
+        "page-developers-learning-tools:page-learning-tools-metana-logo-alt"
+      ),
+      background: "#ffffff",
+      subjects: ["Solidity", "web3", "Smart Contracts"],
     },
     {
       name: "Questbook",
