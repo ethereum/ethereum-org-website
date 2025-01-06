@@ -4,6 +4,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { BasePageProps, Lang } from "@/lib/types"
 
 import InlineLink from "@/components/Link"
+import MainArticle from "@/components/MainArticle"
 import Translation from "@/components/Translation"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
@@ -34,7 +35,7 @@ export const getStaticProps = (async ({ locale }) => {
 
 const NotFoundPage = () => (
   <div className="mx-auto mb-0 mt-16 flex w-full flex-col items-center">
-    <div className="w-full px-8 py-4">
+    <MainArticle className="w-full px-8 py-4">
       <h1 className="my-8 text-4xl font-bold">
         <Translation id="we-couldnt-find-that-page" />
       </h1>
@@ -45,7 +46,7 @@ const NotFoundPage = () => (
         </InlineLink>
         .
       </p>
-    </div>
+    </MainArticle>
   </div>
 )
 
