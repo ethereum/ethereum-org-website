@@ -35,11 +35,11 @@ export const getStaticProps = (async ({ locale }) => {
 
 const NotFoundPage = () => (
   <div className="mx-auto mb-0 mt-16 flex w-full flex-col items-center">
-    <MainArticle className="w-full px-8 py-4">
-      <h1 className="my-8 text-4xl font-bold">
+    <MainArticle className="my-8 w-full space-y-8 px-8 py-4">
+      <h1>
         <Translation id="we-couldnt-find-that-page" />
       </h1>
-      <p className="mb-8">
+      <p>
         <Translation id="try-using-search" />{" "}
         <InlineLink href="/">
           <Translation id="return-home" />
