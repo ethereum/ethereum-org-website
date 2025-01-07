@@ -118,7 +118,7 @@ const StakingComparison = ({ page, className }: StakingComparisonProps) => {
         className
       )}
     >
-      <h2 className="text-4xl">
+      <h2 className="mb-4 text-3xl">
         {t("page-staking-comparison-with-other-options")}
       </h2>
       {selectedData.map(
@@ -133,7 +133,7 @@ const StakingComparison = ({ page, className }: StakingComparisonProps) => {
               </Flex>
             )}
             <div>
-              <h3 className={cn("font-2xl mb-2", colorClassName)}>
+              <h3 className={cn("mb-2 text-2xl", colorClassName)}>
                 {t(title)}
               </h3>
               <p>{t(content)}</p>
