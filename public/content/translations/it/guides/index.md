@@ -12,7 +12,7 @@ Vuoi iniziare il tuo viaggio in Ethereum? Le nostre guide pratiche ti guidano pa
 
 1. [Come "creare" un conto di Ethereum](/guides/how-to-create-an-ethereum-account/) - Chiunque può creare gratuitamente un portafoglio. Questa guida ti mostrerà come iniziare.
 
-2. [Come utilizzare un portafoglio](/guides/how-to-use-a-wallet/) - Un'introduzione alle funzionalità di base di qualsiasi portafoglio e come utilizzarle.
+2. [Come utilizzare un portafoglio](/guides/how-to-use-a-wallet/): Impara a inviare e ricevere token nel tuo portafoglio e a connettere il portafoglio ai progetti.
 
 ## Fondamenti di sicurezza
 
