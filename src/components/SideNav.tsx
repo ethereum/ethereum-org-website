@@ -35,7 +35,7 @@ const innerLinksVariants = {
 
 const LinkContainer = ({ children }: ChildOnlyProp) => {
   return (
-    <HStack className="w-full justify-between py-2 pe-4 ps-8 hover:bg-[ednBackground]">
+    <HStack className="w-full justify-between py-2 pe-4 ps-8 hover:bg-background-highlight">
       {children}
     </HStack>
   )
@@ -88,20 +88,24 @@ const NavLink = ({ item, path, isTopLevel }: NavLinkProps) => {
             </SideNavLink>
           )}
           {!item.href && (
-            <div className="w-full cursor-pointer"onClick={() => setIsOpen(!isOpen)}>
+            <div
+              className="w-full cursor-pointer"
+              onClick={() => setIsOpen(!isOpen)}
+            >
               {t(item.id)}
             </div>
           )}
           <motion.div
-          className="cursor-pointer flex"
+            className="flex cursor-pointer"
             onClick={() => setIsOpen(!isOpen)}
             variants={dropdownIconContainerVariant}
             animate={isOpen ? "open" : "closed"}
           >
-            <MdChevronRight className="h-6 w-6" color="secondary" />
+            <MdChevronRight className="h-6 w-6 text-body-medium" />
           </motion.div>
         </LinkContainer>
-        <motion.div className="ms-4 text-sm font-normal leading-relaxed"
+        <motion.div
+          className="ms-4 text-sm font-normal leading-relaxed"
           key={item.id}
           animate={isOpen ? "open" : "closed"}
           variants={innerLinksVariants}
@@ -137,7 +141,7 @@ const SideNav = ({ path }: SideNavProps) => {
 
   return (
     <nav
-      className="sticky top-[4.75rem] pt-8 pb-16 h-[calc(100vh - 80px)] w-[calc((100% - 1448px) / 2 + 256px)] min-w-256 overflow-y-auto transition-transform duration-200 ease bg-[background.base] shadow-[1px_0px_0px_rgba(0,0,0,0.1)] border-e border-e-border lg:block"
+      className="h-[calc(100vh - 80px)] w-[calc((100% - 1448px) / 2 + 256px)] min-w-256 ease sticky top-[4.75rem] overflow-y-auto border-e border-e-border bg-background pb-16 pt-8 shadow-[1px_0px_0px_rgba(0,0,0,0.1)] transition-transform duration-200 lg:block"
       aria-label={t("common:nav-developers-docs")}
     >
       {docLinks.map((item, idx) => (
