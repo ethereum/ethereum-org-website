@@ -40,8 +40,10 @@ const StakingComparison = ({ page, className }: StakingComparisonProps) => {
       eventAction: `Clicked`,
       eventName: "clicked solo staking",
     },
-    colorClassName: "text-[#be8d10]",
-    glyph: <StakingGlyphCPUIcon className="h-[50px] w-[50px] text-[#be8d10]" />,
+    colorClassName: "text-staking-gold",
+    glyph: (
+      <StakingGlyphCPUIcon className="h-[50px] w-[50px] text-staking-gold" />
+    ),
   }
   const saas: DataType = {
     title: "page-staking-saas-with-abbrev",
@@ -52,9 +54,9 @@ const StakingComparison = ({ page, className }: StakingComparisonProps) => {
       eventAction: `Clicked`,
       eventName: "clicked staking as a service",
     },
-    colorClassName: "text-[#129e5b]",
+    colorClassName: "text-staking-green",
     glyph: (
-      <StakingGlyphCloudIcon className="h-[28px] w-[50px] text-[#129e5b]" />
+      <StakingGlyphCloudIcon className="h-[28px] w-[50px] text-staking-green" />
     ),
   }
   const pools: DataType = {
@@ -66,9 +68,9 @@ const StakingComparison = ({ page, className }: StakingComparisonProps) => {
       eventAction: `Clicked`,
       eventName: "clicked pooled staking",
     },
-    colorClassName: "text-[#0b83dc]",
+    colorClassName: "text-staking-blue",
     glyph: (
-      <StakingGlyphTokenWalletIcon className="h-[39px] w-[50px] text-[#0b83dc]" />
+      <StakingGlyphTokenWalletIcon className="h-[39px] w-[50px] text-staking-blue" />
     ),
   }
   const data: {
