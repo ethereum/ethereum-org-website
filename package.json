@@ -1,6 +1,6 @@
 {
   "name": "ethereum-org-website",
-  "version": "9.3.0",
+  "version": "9.4.0",
   "license": "MIT",
   "private": true,
   "scripts": {
@@ -45,6 +45,7 @@
     "@radix-ui/react-portal": "^1.1.1",
     "@radix-ui/react-progress": "^1.1.0",
     "@radix-ui/react-radio-group": "^1.2.0",
+    "@radix-ui/react-scroll-area": "^1.2.2",
     "@radix-ui/react-select": "^2.1.1",
     "@radix-ui/react-slot": "^1.1.0",
     "@radix-ui/react-switch": "^1.1.0",
@@ -66,7 +67,7 @@
     "lodash.merge": "^4.6.2",
     "lodash.shuffle": "^4.2.0",
     "lodash.union": "^4.6.0",
-    "next": "^14.2.15",
+    "next": "^14.2.21",
     "next-i18next": "^14.0.3",
     "next-mdx-remote": "^3.0.8",
     "next-sitemap": "^4.2.3",

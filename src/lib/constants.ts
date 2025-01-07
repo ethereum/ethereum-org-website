@@ -226,6 +226,10 @@ export const COMMUNITY_BLOGS: CommunityBlog[] = [
     href: "https://stark.mirror.xyz/",
     feed: "https://stark.mirror.xyz/feed/atom",
   },
+  {
+    href: "https://medium.com/ethereum-cat-herders/newsletter",
+    feed: "https://medium.com/feed/ethereum-cat-herders",
+  },
 ]
 
 export const BLOG_FEEDS = COMMUNITY_BLOGS.map(({ feed }) => feed).filter(

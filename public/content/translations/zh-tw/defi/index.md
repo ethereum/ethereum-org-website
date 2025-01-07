@@ -355,3 +355,7 @@ Dai、USDC 等穩定幣的價值和美元的差距通常維持在幾美分之內
 
 - [DeFi Llama Discord 伺服器](https://discord.defillama.com/)
 - [DeFi Pulse Discord 伺服器](https://discord.gg/Gx4TCTk)
+
+<Divider />
+
+<QuizWidget quizKey="defi" />

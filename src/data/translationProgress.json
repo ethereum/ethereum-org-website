@@ -79,7 +79,7 @@
   {
     "languageId": "cs",
     "words": {
-      "approved": 118332,
+      "approved": 119208,
       "total": 278939
     }
   },
@@ -93,7 +93,7 @@
   {
     "languageId": "de",
     "words": {
-      "approved": 198014,
+      "approved": 212269,
       "total": 278939
     }
   },
@@ -114,7 +114,7 @@
   {
     "languageId": "el",
     "words": {
-      "approved": 177968,
+      "approved": 189255,
       "total": 278939
     }
   },
@@ -128,7 +128,7 @@
   {
     "languageId": "es-EM",
     "words": {
-      "approved": 269971,
+      "approved": 269975,
       "total": 278939
     }
   },
@@ -177,7 +177,7 @@
   {
     "languageId": "fr",
     "words": {
-      "approved": 269959,
+      "approved": 278939,
       "total": 278939
     }
   },
@@ -226,7 +226,7 @@
   {
     "languageId": "hi",
     "words": {
-      "approved": 158153,
+      "approved": 176520,
       "total": 278939
     }
   },
@@ -240,7 +240,7 @@
   {
     "languageId": "hu",
     "words": {
-      "approved": 269956,
+      "approved": 271750,
       "total": 278939
     }
   },
@@ -254,7 +254,7 @@
   {
     "languageId": "id",
     "words": {
-      "approved": 132669,
+      "approved": 133055,
       "total": 278939
     }
   },
@@ -268,14 +268,14 @@
   {
     "languageId": "it",
     "words": {
-      "approved": 269959,
+      "approved": 278939,
       "total": 278939
     }
   },
   {
     "languageId": "ja",
     "words": {
-      "approved": 269959,
+      "approved": 270178,
       "total": 278939
     }
   },
@@ -408,7 +408,7 @@
   {
     "languageId": "nl",
     "words": {
-      "approved": 106688,
+      "approved": 106999,
       "total": 278939
     }
   },
@@ -443,7 +443,7 @@
   {
     "languageId": "pcm",
     "words": {
-      "approved": 74611,
+      "approved": 74920,
       "total": 278939
     }
   },
@@ -464,7 +464,7 @@
   {
     "languageId": "pt-BR",
     "words": {
-      "approved": 269971,
+      "approved": 270084,
       "total": 278939
     }
   },
@@ -485,7 +485,7 @@
   {
     "languageId": "ru",
     "words": {
-      "approved": 121004,
+      "approved": 121129,
       "total": 278939
     }
   },
@@ -667,14 +667,14 @@
   {
     "languageId": "zh-CN",
     "words": {
-      "approved": 269959,
+      "approved": 278939,
       "total": 278939
     }
   },
   {
     "languageId": "zh-TW",
     "words": {
-      "approved": 236787,
+      "approved": 250720,
       "total": 278939
     }
   },
