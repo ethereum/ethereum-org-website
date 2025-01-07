@@ -42,6 +42,7 @@ import TrezorImage from "@/public/images/wallets/trezor.png"
 import TrustWalletImage from "@/public/images/wallets/trustwallet.png"
 import UnstoppableWalletImage from "@/public/images/wallets/unstoppable.png"
 import ZerionImage from "@/public/images/wallets/zerion.png"
+import StackupImage from "@/public/images/wallets/stackup.png"
 
 /**
  * See src/data/chains.ts for available chains and names for use within
@@ -2347,6 +2348,60 @@ export const walletsData: WalletData[] = [
     onboard_documentation: "https://clear-wallet.flashsoft.eu/",
     documentation: "https://clear-wallet.flashsoft.eu/docs/",
     supported_chains: ["Ethereum Mainnet"],
+  },
+  {
+    last_updated: "2025-01-07",
+    name: "Stackup",
+    image: StackupImage,
+    twBackgroundColor: "bg-[#2e2e2e]",
+    twGradiantBrandColor: "from-[#2e2e2e]",
+    url: "https://www.stackup.fi/",
+    active_development_team: true,
+    languages_supported: ["en"],
+    twitter: "https://x.com/stackup_fi",
+    discord: "",
+    reddit: "",
+    telegram: "",
+    ios: false,
+    android: false,
+    linux: false,
+    windows: false,
+    macOS: false,
+    firefox: true,
+    chromium: true,
+    hardware: false,
+    open_source: true,
+    repo_url: "https://github.com/stackup-wallet",
+    non_custodial: true,
+    security_audit: [],
+    scam_protection: false,
+    hardware_support: true,
+    rpc_importing: false,
+    nft_support: true,
+    connect_to_dapps: true,
+    staking: true,
+    swaps: true,
+    multichain: true,
+    layer_2: true,
+    gas_fee_customization: true,
+    ens_support: true,
+    erc_20_support: true,
+    buy_crypto: true,
+    withdraw_crypto: true,
+    multisig: true,
+    social_recovery: true,
+    onboard_documentation: "https://www.stackup.fi",
+    documentation: "https://www.stackup.fi",
+    supported_chains: [
+      "Ethereum Mainnet",
+      "Arbitrum One",
+      "Base",
+      "Blast",
+      "Linea",
+      "OP Mainnet",
+      "zkSync Mainnet",
+      "Scroll",
+    ],
   },
 ] as const satisfies Omit<WalletData, "new_to_crypto">[]
 
