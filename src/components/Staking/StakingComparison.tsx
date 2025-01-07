@@ -1,5 +1,4 @@
 import { useTranslation } from "next-i18next"
-import {useTheme } from "@chakra-ui/react"
 
 import type { StakingPage, TranslationKey } from "@/lib/types"
 
@@ -8,21 +7,19 @@ import {
   StakingGlyphCPUIcon,
   StakingGlyphTokenWalletIcon,
 } from "@/components/icons/staking"
-import InlineLink from "@/components/Link"
-import OldHeading from "@/components/OldHeading"
-import Text from "@/components/OldText"
 
 import { cn } from "@/lib/utils/cn"
 import { MatomoEventOptions, trackCustomEvent } from "@/lib/utils/matomo"
 
 import { Flex } from "../ui/flex"
+import InlineLink from "../ui/Link"
 
 interface DataType {
   title: TranslationKey
   linkText: TranslationKey
   href: string
   matomo: MatomoEventOptions
-  color: string
+  colorClassName: string
   glyph: JSX.Element
 }
 
@@ -32,8 +29,6 @@ export type StakingComparisonProps = {
 }
 
 const StakingComparison = ({ page, className }: StakingComparisonProps) => {
-  const theme = useTheme()
-  const { stakingGold, stakingGreen, stakingBlue } = theme.colors
   const { t } = useTranslation("page-staking")
 
   const solo: DataType = {
@@ -45,10 +40,8 @@ const StakingComparison = ({ page, className }: StakingComparisonProps) => {
       eventAction: `Clicked`,
       eventName: "clicked solo staking",
     },
-    color: stakingGold,
-    glyph: (
-      <StakingGlyphCPUIcon className="h-[50px] w-[50px]" color="stakingGold" />
-    ),
+    colorClassName: "text-[#be8d10]",
+    glyph: <StakingGlyphCPUIcon className="h-[50px] w-[50px] text-[#be8d10]" />,
   }
   const saas: DataType = {
     title: "page-staking-saas-with-abbrev",
@@ -59,12 +52,9 @@ const StakingComparison = ({ page, className }: StakingComparisonProps) => {
       eventAction: `Clicked`,
       eventName: "clicked staking as a service",
     },
-    color: stakingGreen,
+    colorClassName: "text-[#129e5b]",
     glyph: (
-      <StakingGlyphCloudIcon
-        className="h-[28px] w-[50px]"
-        color="stakingGreen"
-      />
+      <StakingGlyphCloudIcon className="h-[28px] w-[50px] text-[#129e5b]" />
     ),
   }
   const pools: DataType = {
@@ -76,12 +66,9 @@ const StakingComparison = ({ page, className }: StakingComparisonProps) => {
       eventAction: `Clicked`,
       eventName: "clicked pooled staking",
     },
-    color: stakingBlue,
+    colorClassName: "text-[#0b83dc]",
     glyph: (
-      <StakingGlyphTokenWalletIcon
-        className="h-[39px] w-[50px]"
-        color="stakingBlue"
-      />
+      <StakingGlyphTokenWalletIcon className="h-[39px] w-[50px] text-[#0b83dc]" />
     ),
   }
   const data: {
@@ -131,11 +118,14 @@ const StakingComparison = ({ page, className }: StakingComparisonProps) => {
         className
       )}
     >
-      <OldHeading fontSize="2rem">
+      <h2 className="text-4xl">
         {t("page-staking-comparison-with-other-options")}
-      </OldHeading>
+      </h2>
       {selectedData.map(
-        ({ title, linkText, href, color, content, glyph, matomo }, idx) => (
+        (
+          { title, linkText, href, colorClassName, content, glyph, matomo },
+          idx
+        ) => (
           <Flex className="flex-col gap-6 md:flex-row" key={idx}>
             {!!glyph && (
               <Flex className="max-h-12 w-12 flex-col items-center justify-start">
@@ -143,10 +133,10 @@ const StakingComparison = ({ page, className }: StakingComparisonProps) => {
               </Flex>
             )}
             <div>
-              <h3 className={`font-2xl text-${color} mb-2`}>
+              <h3 className={cn("font-2xl mb-2", colorClassName)}>
                 {t(title)}
               </h3>
-              <Text>{t(content)}</Text>
+              <p>{t(content)}</p>
               <InlineLink
                 onClick={() => {
                   trackCustomEvent(matomo)
