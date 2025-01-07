@@ -5,7 +5,7 @@ lang: hu
 ---
 
 A használhatósági heurisztikák amolyan ökölszabályok, melyekkel felmérhető egy oldal használhatósága.
-Ezeket web3-ra alakították ki és érdemes együtt használni Jakob Nielsen [10 általános elv az interakciós dizájnhoz](https://www.nngroup.com/articles/ten-usability-heuristics/) iránymutatásával.
+Az itt felsorolt 7 heurisztikát kifejezetten web3-ra alakították ki és érdemes együtt használni Jakob Nielsen [10 általános elv az interakciós dizájnhoz](https://www.nngroup.com/articles/ten-usability-heuristics/) iránymutatásával.
 
 ## Hét használati heurisztika web3-ra {#seven-usability-heuristics-for-web3}
 
