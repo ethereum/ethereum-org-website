@@ -23,11 +23,13 @@ Ez a web3-ban végzett felhasználói kutatások válogatott listája, amely seg
 
 | Fókuszterület                                                     | Név                                                                                                                                                                                      |
 |:----------------------------------------------------------------- |:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <Badge colorScheme="green">Bevezetés a kriptóba</Badge>           | [The WalletConnect Pulse 2024: Crypto fogyasztói hangulat & használat](https://walletconnect.com/pulse-2024-crypto-consumer-report)                                                      |
 | <Badge colorScheme="green">Bevezetés a kriptóba</Badge>           | [CRADL: UX a kriptovaluták világában](https://docs.google.com/presentation/d/1s2OPSH5sMJzxRYaJSSRTe8W2iIoZx0PseIV-WeZWD1s/edit?usp=sharing)                                              |
 | <Badge colorScheme="green">Bevezetés a kriptóba</Badge>           | [CRADL: Bevezetés a kriptovaluták világába](https://docs.google.com/presentation/d/1R9nFuzA-R6SxaGCKhoMbE4Vxe0JxQSTiHXind3LVq_w/edit?usp=sharing)                                        |
 | <Badge colorScheme="green">Bevezetés a kriptóba</Badge>           | [Bitcoin UX riport](https://github.com/patestevao/BitcoinUX-report/blob/master/report.md)                                                                                                |
 | <Badge colorScheme="green">Bevezetés a kriptóba</Badge>           | [ConSensys: A web3 helyzete világszerte 2023-ban](https://consensys.io/insight-report/web3-and-crypto-global-survey-2023)                                                                |
 | <Badge colorScheme="green">Bevezetés a kriptóba</Badge>           | [NEAR: Az elfogadás felé vezető út felgyorsítása](https://drive.google.com/file/d/1VuaQP4QSaQxR5ddQKTMGI0b0rWdP7uGn/view)                                                                |
+| <Badge colorScheme="purple">Letétbe helyezés</Badge>              | [OpenUX: Rocket Pool csomópont-operátor UX](https://storage.googleapis.com/rocketpool/RocketPool-NodeOperator-UX-Report-Jan-2024.pdf)                                                    |
 | <Badge colorScheme="purple">Letétbe helyezés</Badge>              | [Staking: Főbb trendek, tanulságok és előrejelzések – Eth Staker](https://lookerstudio.google.com/u/0/reporting/cafcee00-e1af-4148-bae8-442a88ac75fa/page/p_ja2srdhh2c?s=hmbTWDh9hJo)    |
 | <Badge colorScheme="purple">Letétbe helyezés</Badge>              | [Többalkalmazásos letétbe helyezés](https://github.com/threshold-network/UX-User-Research/blob/main/Multi-App%20Staking%20(MAS)/iterative-user-study/MAS%20Iterative%20User%20Study.pdf) |
 | <Badge colorScheme="red">DAO</Badge>                              | [2022-es DAO-kutatás frissítése: Mire van szüksége a DAO-építőknek?](https://blog.aragon.org/2022-dao-research-update/)                                                                  |
@@ -47,6 +49,11 @@ Ez a web3-ban végzett felhasználói kutatások válogatott listája, amely seg
 - [W3design.io](https://w3design.io/) – Az ökoszisztéma különböző projektjeinek UI-folyamataiból összeállított könyvtár
 - [Neueux.com](https://neueux.com/apps) – UI-könyvtár felhasználói folyamatok változatos szűrési lehetőségekkel
 - [A web3 használhatóságának válsága: Amit tudnia kell!](https://www.youtube.com/watch?v=oBSXT_6YDzg) – Panelbeszélgetés a fejlesztőközpontú projektépítés buktatóiról (videó, 34 perc)
+
+## Első lépések {#getting-started}
+
+- [Heurisztika a web3-hoz](/developers/docs/design-and-ux/heuristics-for-web3/) - 7 heurisztika a web3-interfész dizájnjához
+- [DEX dizájn bevált gyakorlatok](/developers/docs/design-and-ux/dex-design-best-practice/) - Útmutató a decentralizált tőzsdék tervezéséhez
 
 ## Web3-tervezési esettanulmányok {#design-case-studies}
 

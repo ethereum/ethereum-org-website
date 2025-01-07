@@ -95,6 +95,15 @@ Molte soluzioni di collegamento adottano modelli tra questi due estremi, con gra
 
 <Divider />
 
+## Utilizzare i ponti {#use-bridge}
+
+L'utilizzo dei ponti ti consente di spostare le tue risorse tra blockchain differenti. Ecco alcune risorse che possono aiutarti a trovare e utilizzare i ponti:
+
+- **[Riepilogo sui ponti di L2BEAT](https://l2beat.com/bridges/summary) e [Analisi sui rischi dei ponti di L2BEAT](https://l2beat.com/bridges/risk)**: Un riepilogo completo dei vari ponti, che include dettagli sulle quote di mercato, sul tipo di ponte e sulle catene di destinazione. Inoltre L2BEAT dispone di un'analisi sui rischi dei ponti che aiuta gli utenti a prendere decisioni informate durante la selezione di un ponte.
+- **[Riepilogo sui ponti di DefiLlama](https://defillama.com/bridges/Ethereum)**: Un riepilogo sui volumi dei ponti sulle reti di Ethereum.
+
+<Divider />
+
 ## Rischi nell'uso dei ponti {#bridge-risk}
 
 I ponti sono nelle prime fasi di sviluppo. È probabile che il design ottimale dei ponti non sia ancora stato scoperto. L'interazione con qualsiasi tipo di ponte comporta dei rischi:
