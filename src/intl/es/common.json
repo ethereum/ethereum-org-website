@@ -304,7 +304,7 @@
   "nav-roadmap-scaling-description": "Actualizaciones de red para reducir aún más los costes de transacciones y la velocidad",
   "nav-roadmap-scaling-label": "Transacciones más baratas",
   "nav-roadmap-security": "Mayor seguridad",
-  "nav-roadmap-security-description": "Asegurarse de que Etherum sigue resistiendo a todo tipo de ataques en el futuro",
+  "nav-roadmap-security-description": "Asegurarse de que Ethereum sigue resistiendo a todo tipo de ataques en el futuro",
   "nav-roadmap-security-label": "Seguridad mejorada",
   "nav-roadmap-user-experience": "Mejor experiencia de usuario",
   "nav-roadmap-ux-description": "El uso de Ethereum debe simplificarse",
@@ -335,7 +335,7 @@
   "nav-whitepaper-description": "El informe técnico original de Ethereum escrito por Vitalik Buterin en 2014",
   "nav-zkp-description": "Una forma de demostrar la validez de una declaración sin tener que revelarla",
   "nft-page": "NFT: tókenes no fungibles",
-  "nfts": "NTF",
+  "nfts": "NFT",
   "no": "No",
   "on-this-page": "En esta página",
   "open": "Abierto",
@@ -429,7 +429,7 @@
   "what-is-ether": "¿Qué es el ether (ETH)?",
   "what-is-ethereum": "¿Qué es Ethereum?",
   "withdrawals": "Retiradas de participaciones",
-  "wrapped-ether": "Wrapped Ether (eter envuelto)",
+  "wrapped-ether": "Wrapped Ether (ether envuelto)",
   "yes": "Sí",
   "zero-knowledge-proofs": "Pruebas de conocimiento cero"
 }
