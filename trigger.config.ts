@@ -2,7 +2,7 @@ import { HttpInstrumentation } from "@opentelemetry/instrumentation-http"
 import { defineConfig } from "@trigger.dev/sdk/v3"
 
 export default defineConfig({
-  project: "proj_jnkvoplayqkrsnovqsdr",
+  project: "proj_auvrhfutswhgtzufnsgd",
   runtime: "node",
   logLevel: "log",
   // Set the maxDuration to 300 seconds for all tasks. See https://trigger.dev/docs/runs/max-duration
