@@ -6,11 +6,10 @@ import { MdChevronRight } from "react-icons/md"
 import { ChildOnlyProp } from "@/lib/types"
 import { DeveloperDocsLink } from "@/lib/interfaces"
 
-import { BaseLink, LinkProps } from "@/components/Link"
-
 import docLinks from "../data/developer-docs-links.yaml"
 
 import { HStack } from "./ui/flex"
+import { BaseLink, LinkProps } from "./ui/Link"
 
 export const dropdownIconContainerVariant = {
   open: {
@@ -44,12 +43,7 @@ const LinkContainer = ({ children }: ChildOnlyProp) => {
 const SideNavLink = ({ children, ...props }: LinkProps) => {
   return (
     <BaseLink
-      w="full"
-      textDecoration="none"
-      color="text"
-      fontWeight="normal"
-      _hover={{ textDecoration: "none", color: "primary.base" }}
-      _active={{ color: "primary.base" }}
+      className="w-full font-normal text-body no-underline hover:text-primary"
       {...props}
     >
       {children}
