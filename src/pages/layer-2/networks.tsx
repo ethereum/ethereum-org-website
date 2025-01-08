@@ -171,7 +171,7 @@ const Layer2Networks = ({ layer2Data, locale, mainnetData }) => {
               For more information on the technology, risks and trust
               assumptions of these networks, we recommend checking out L2BEAT,
               which provides a comprehensive risk assessment framework of each
-              project and Growthepie for general data analysis.
+              project and growthepie for general data analysis.
             </p>
           </div>
           <div className="flex flex-col gap-6 sm:flex-row">
