@@ -472,7 +472,7 @@ const BugBountiesPage = () => {
         title={t("page-upgrades-bug-bounty-meta-title")}
         description={t("page-upgrades-bug-bounty-meta-description")}
       />
-      {/* TODO: Remove on the 25th of January */}
+      { /* TODO: Remove on the 25th of January */ }
       <BugBountyBanner />
       <Content>
         <HeroCard>
