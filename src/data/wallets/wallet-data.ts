@@ -2140,7 +2140,7 @@ export const walletsData: WalletData[] = [
     supported_chains: ["Ethereum Mainnet"],
   },
   {
-    last_updated: "2024-10-07",
+    last_updated: "2025-01-07",
     name: "ShapeShift Mobile",
     image: ShapeShiftImage,
     twBackgroundColor: "bg-[#386FF9]",
@@ -2159,7 +2159,7 @@ export const walletsData: WalletData[] = [
       "tr",
       "uk",
     ],
-    twitter: "https://twitter.com/shapeshift",
+    twitter: "https://x.com/shapeshift",
     discord: "https://discord.gg/shapeshift",
     reddit: "",
     telegram: "https://t.me/shapeshiftofficial",
@@ -2196,7 +2196,12 @@ export const walletsData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "https://docs.shapeshift.com/",
     documentation: "https://docs.shapeshift.com/",
-    supported_chains: ["Ethereum Mainnet"],
+    supported_chains: [
+      "Ethereum Mainnet",
+      "Arbitrum One",
+      "OP Mainnet",
+      "Base",
+    ],
   },
   {
     last_updated: "2024-06-20",
