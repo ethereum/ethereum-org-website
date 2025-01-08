@@ -1,4 +1,6 @@
-import type { GrowThePieData } from "../types"
+import type { GrowThePieData } from "@/lib/types"
+
+import { layer2Data } from "@/data/networks/networks"
 
 type DataItem = {
   metric_key: string
@@ -44,18 +46,22 @@ export const fetchGrowThePie = async (): Promise<GrowThePieData> => {
   let totalTxCount = 0
   let weightedSum = 0
 
-  mostRecentData.forEach((item) => {
-    if (item.metric_key !== TXCOSTS_MEDIAN_USD) return
-
-    const txCountItem = mostRecentData.find(
-      (txItem) =>
-        txItem.metric_key === TXCOUNT && txItem.origin_key === item.origin_key
+  mostRecentData
+    .filter((item) =>
+      layer2Data.some((l2) => l2.growthepieID === item.origin_key)
     )
-    if (!txCountItem) return
+    .forEach((item) => {
+      if (item.metric_key !== TXCOSTS_MEDIAN_USD) return
 
-    totalTxCount += txCountItem.value
-    weightedSum += item.value * txCountItem.value
-  })
+      const txCountItem = mostRecentData.find(
+        (txItem) =>
+          txItem.metric_key === TXCOUNT && txItem.origin_key === item.origin_key
+      )
+      if (!txCountItem) return
+
+      totalTxCount += txCountItem.value
+      weightedSum += item.value * txCountItem.value
+    })
 
   // The weighted average of txcosts_median_usd, by txcount on each network (origin_key)
   const weightedAverage = totalTxCount ? weightedSum / totalTxCount : 0
