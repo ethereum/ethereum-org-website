@@ -142,7 +142,8 @@ export const getStaticProps = (async ({ locale }) => {
 const AssetsPage = () => {
   // Ignore locale in the URL for SVG path in public directory to fix broken link
   // SVG path changes from /en/images => /images
-  const svgPathFromOrigin = window.location.origin
+  const svgPathFromOrigin =
+    typeof window !== `undefined` ? window.location.origin : ""
 
   const { t } = useTranslation("page-assets")
   const assetPageHeroImage = useColorModeValue(
