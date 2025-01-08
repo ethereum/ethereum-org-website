@@ -8,6 +8,8 @@ lang: cs
 
 Rostoucí zájem o kryptoměny s sebou přináší rostoucí riziko ze strany podvodníků a hackerů. Tento článek uvádí některé osvědčené postupy ke zmírnění těchto rizik.
 
+**Pamatujte: Nikdo z ethereum.org vás nikdy nebude kontaktovat. Neodpovídejte na e-maily, které tvrdí, že jsou od oficiální podpory Etherea.**
+
 <Divider />
 
 ## Krypto bezpečnost v kostce {#crypto-security}
