@@ -68,7 +68,7 @@ Avant de contribuer, assurez-vous que vous connaissez bien :
 - notre [guide de style](/contributing/style-guide/).
 - notre [code de conduite](/community/code-of-conduct)
 
-<ContributorsQuizBanner mt={16} mb={8} />
+<ContributorsQuizBanner className="mt-16 mb-8" />
 
 ## Comment sont prises les décisions concernant le site {#how-decisions-about-the-site-are-made}
 
