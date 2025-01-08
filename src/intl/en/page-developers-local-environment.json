@@ -31,5 +31,7 @@
   "page-local-environment-solidity-template-desc": "A GitHub template for a pre-built setup for your Solidity smart contracts. Includes a Hardhat local network, Waffle for tests, Ethers for wallet implementation, and more.",
   "page-local-environment-solidity-template-logo-alt": "Solidity template logo",
   "page-local-environment-waffle-desc": "The most advanced testing lib for smart contracts. Use alone or with Scaffold-eth or Hardhat.",
-  "page-local-environment-waffle-logo-alt": "Waffle logo"
+  "page-local-environment-waffle-logo-alt": "Waffle logo",
+  "page-local-environment-dappbooster-desc": "A modern blockchain boilerplate built to quickly get you started with your next project.",
+  "page-local-environment-dappbooster-logo-alt": "dAppBooster logo"
 }
