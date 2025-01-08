@@ -207,6 +207,17 @@ const config = {
           border: "hsla(var(--warning-border))",
         },
 
+        staking: {
+          gold: "var(--staking-gold)",
+          "gold-fill": "var(--staking-gold-fill)",
+          green: "var(--staking-green)",
+          "green-fill": "var(--staking-green-fill)",
+          blue: "var(--staking-blue)",
+          "blue-fill": "var(--staking-blue-fill)",
+          red: "var(--staking-red)",
+          "red-fill": "var(--staking-red-fill)",
+        },
+
         /** @deprecated */
         "switch-background": "hsla(var(--switch-background))", // TODO: Migrate
         "tooltip-shadow": "var(--tooltip-shadow)",

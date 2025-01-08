@@ -130,7 +130,7 @@ export const useNetworkColumns: ColumnDef<ExtendedRollup>[] = [
                   <p>
                     Data from{" "}
                     <InlineLink href="https://growthepie.xyz">
-                      GrowThePie
+                      growthepie
                     </InlineLink>
                     .
                   </p>

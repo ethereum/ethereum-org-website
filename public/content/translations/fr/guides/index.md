@@ -12,7 +12,7 @@ Vous souhaitez entamer votre aventure sur Ethereum ? Nos guides pratiques vous c
 
 1. [Comment "créer" un compte Ethereum](/guides/how-to-create-an-ethereum-account/) -N'importe qui peut créer un portefeuille gratuitement. Ce guide vous montrera par où commencer.
 
-2. [Comment utiliser un portefeuille](/guides/how-to-use-a-wallet/) - Une introduction aux fonctionnalités de base de n'importe quel portefeuille et comment les utiliser.
+2. [Comment utiliser un portefeuille](/guides/how-to-use-a-wallet/) - Apprenez à envoyer et recevoir des jetons dans votre portefeuille et à connecter votre portefeuille à des projets.
 
 ## Notions de sécurité
 

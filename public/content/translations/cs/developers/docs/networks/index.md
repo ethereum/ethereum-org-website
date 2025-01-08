@@ -91,7 +91,7 @@ Goerli je testovací síť pro testování validace a uzamčení. Síť Goerli j
 - [Coinbase Wallet Faucet | Goerli](https://coinbase.com/faucets/ethereum-goerli-faucet)
 - [Chainstack Goerli faucet](https://faucet.chainstack.com/goerli-faucet)
 
-Chcete-li spustit validátor na testovací síti Goerli, použijte [launchpad „cheap goerli validator“](https://holesky.launchpad.ethstaker.cc/en/) od ethstaker.
+Ke spuštění validátoru na testovací síti Holesky použijte [„laciný Holesky validátor“ launchpad](https://holesky.launchpad.ethstaker.cc/en/) od ethstaker.
 
 ### Testovací sítě druhé vrstvy {#layer-2-testnets}
 

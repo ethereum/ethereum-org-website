@@ -26,6 +26,7 @@ Pour que les données fournies par un explorateur de blocs aient du sens, vous d
 - [EthVM](https://www.ethvm.com/)
 - [OKLink](https://www.oklink.com/eth)
 - [Rantom](https://rantom.app/)
+- [Ethseer](https://ethseer.io)
 
 ## Outils open source {#open-source-tools}
 

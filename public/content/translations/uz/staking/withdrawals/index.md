@@ -125,7 +125,7 @@ Ushbu hisob-kitobni kengaytirib, ma’lum miqdordagi pul yechib olish amaliyotla
 
 Ko‘rib turganingizdek, tarmoqdagi tasdiqlovchilar soni ko‘paygan sari bu jarayon sekinlashib boradi. O‘tkazib yuborilgan slotlar sonining ortishi bu jarayonni mutanosib ravishda sekinlashtirishi mumkin, biroq bu umuman olganda ehtimoliy natijalarning sekinroq kechishini aks ettiradi.
 
-## Frequently asked questions {#faq}
+## Tez-tez beriladigan savollar {#faq}
 
 <ExpandableCard
 title="Yechib olish manzilini taqdim etganimdan so‘ng, uni boshqa bir yechib olish manziliga o‘zgartira olamanmi?"
