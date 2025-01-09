@@ -140,7 +140,6 @@ export const ghRepoData = async (githubUrl: string) => {
   }
 
   const repoData = await repoReq.json()
-  console.log(repoData)
 
   const languageReq = await fetch(
     `https://api.github.com/repos/${repoOwner}/${repoName}/languages`,
