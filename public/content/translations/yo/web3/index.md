@@ -147,7 +147,7 @@ A si wa ni ibẹrẹ siṣẹda wẹẹbu to dara julọ pẹ̀lú wẹẹbu ket
 
 Wẹ́ẹ̀bù kẹta ò ní ìtumọ̀ kan. Àwọn omo ẹgbẹ awujo ní èró ọtọọtọ lori rẹ. Èyí ni díẹ̀ nínú won:
 
-- [Kí ni Wẹ́ẹ̀bù keta? Alaye ọjọ iwaju Intanẹẹti alailakoso ](https://www.freecodecamp.org/news/what-is-web3/) – _Nader Dabit_
+- [Kí ni Wẹ́ẹ̀bù keta? Alaye ọjọ iwaju Intanẹẹti alailakoso](https://www.freecodecamp.org/news/what-is-web3/) – _Nader Dabit_
 - [Mímú itúnmọ jade ninu Wẹẹbu keta](https://medium.com/l4-media/making-sense-of-web-3-c1a9e74dcae) – _Josh Stark_
 - [Kí ní ìdí tí Wẹẹbu kẹta fí ṣe koko](https://future.a16z.com/why-web3-matters/)— _Chris Dixon_
 - [Kí ní ìdí tí alailakoso fí ṣe koko](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) - _Chris Dixon_

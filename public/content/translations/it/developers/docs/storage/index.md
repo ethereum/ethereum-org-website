@@ -73,7 +73,7 @@ Per conservare i dati, i sistemi devono avere qualche tipo di meccanismo per ass
 
 Uno dei metodi più diffusi per verificare l'effettiva conservazione dei dati consiste nell'utilizzare qualche tipo di meccanismo di messa alla prova crittografica applicato ai nodi per accertare che contengano ancora i dati. Un esempio semplice è quello di verificare il proof-of-access di Arweave. I nodi vengono messi alla prova per vedere se contengono i dati sia sul blocco più recente sia su un blocco casuale in passato. Se il nodo non trova la risposta, viene penalizzato.
 
-Tipi di Storage con meccanismo di messa alla prova:
+Tipi di dStorage con meccanismo di messa alla prova:
 
 - Züs
 - Skynet
@@ -88,7 +88,6 @@ Non esistono strumenti impeccabili per misurare il livello di decentralizzazione
 
 Strumenti decentralizzati senza KYC:
 
-- Züs (con implementazione di un'edizione non KYC)
 - Skynet
 - Arweave
 - Filecoin

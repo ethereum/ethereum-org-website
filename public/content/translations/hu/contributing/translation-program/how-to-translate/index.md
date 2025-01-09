@@ -18,7 +18,7 @@ A vizuális tanulók tekintsék meg, ahogy Luka bemutatja a Crowdin használatá
 
 Jelentkezzen be Crowdin-profiljába vagy készítsen egyet, ha még nem rendelkezik vele. A létrehozáshoz csak egy e-mail-címre és jelszóra lesz szüksége.
 
-<ButtonLink to="https://crowdin.com/project/ethereum-org/">
+<ButtonLink href="https://crowdin.com/project/ethereum-org/">
   Csatlakozzon a projekthez
 </ButtonLink>
 

@@ -87,7 +87,7 @@ Per qualsiasi software personalizzato o contratto intelligente coinvolto:
 
 Per i prodotti del software correlati alla configurazione, alla gestione o alla migrazione del nodo o del client:
 
-**Quali client del livello del consenso (ovvero Lighthouse, Teku, Nimbus, Prysm) sono supportati?**
+**Quali client del livello del consenso (ovvero Lighthouse, Teku, Nimbus, Prysm, Grandine) sono supportati?**
 
 - Quali client sono supportati? L'utente può scegliere?
 - Questo serve a determinare il punteggio "multi-client" dei prodotti.

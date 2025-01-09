@@ -129,7 +129,7 @@ contract RecipientContract is IERC223Recipient {
     {
         // It is important to understand that within this function
         // msg.sender is the address of a token that is being received,
-        // msg.value  is always 0 as the token contract does not own or send Ether in most cases,
+        // msg.value  is always 0 as the token contract does not own or send ether in most cases,
         // _from      is the sender of the token transfer,
         // _value     is the amount of tokens that was deposited.
         require(msg.sender == tokenA);
@@ -155,7 +155,7 @@ If an ERC-20 token is sent to the `RecipientContract`, the tokens will be transf
 
 ### What if we want to execute some function after the token deposit is completed? {#function-execution}
 
-There are multiple ways of doing so. In this example we will follow the method which makes ERC-223 transfers identical to Ether transfers:
+There are multiple ways of doing so. In this example we will follow the method which makes ERC-223 transfers identical to ether transfers:
 
 ```solidity
 contract RecipientContract is IERC223Recipient {
@@ -178,7 +178,7 @@ contract RecipientContract is IERC223Recipient {
 }
 ```
 
-When the `RecipientContract` will receive a ERC-223 token the contract will execute a function encoded as `_data` parameter of the token transaction, identical to how Ether transactions encode function calls as transaction `data`. Read [the data field](https://ethereum.org/en/developers/docs/transactions/#the-data-field) for more information.
+When the `RecipientContract` will receive a ERC-223 token the contract will execute a function encoded as `_data` parameter of the token transaction, identical to how ether transactions encode function calls as transaction `data`. Read [the data field](https://ethereum.org/en/developers/docs/transactions/#the-data-field) for more information.
 
 In the above example an ERC-223 token must be transferred to the address of the `RecipientContract` with the `transfer(address,uin256,bytes calldata _data)` function. If the data parameter will be `0xc2985578` (the signature of a `foo()` function) then the function foo() will be invoked after the token deposit is received and the event Foo() will be fired.
 

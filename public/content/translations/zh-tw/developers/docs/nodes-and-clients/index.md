@@ -46,6 +46,7 @@ sidebarDepth: 2
 - Etherscan 提供的[節點地圖](https://etherscan.io/nodetracker)
 - Bitfly 提供的[Ethernodes](https://ethernodes.org/)
 - Chainsafe 提供的 [Nodewatch](https://www.nodewatch.io/)，爬取共識節點
+- [Monitoreth](https://monitoreth.io/) – 由 MigaLabs 開發的分散式網路監控工具
 
 ## 節點類型 {#node-types}
 
@@ -197,6 +198,7 @@ EthereumJS 執行用戶端 (EthereumJS) 是以 TypeScript 編寫，並由多個�
 | [Nimbus](https://nimbus.team/)                                | Nim        | Linux, Windows, macOS | 信標鏈、Goerli、Sepolia、Ropsten 等                |
 | [Prysm](https://docs.prylabs.network/docs/getting-started/)   | 開始         | Linux, Windows, macOS | 信標鏈、Gnosis、Goerli、Pyrmont、Sepolia、Ropsten 等 |
 | [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) | Java       | Linux、Windows、macOS   | 信標鏈、Gnosis、Goerli、Sepolia、Ropsten 等         |
+| [Grandine](https://docs.grandine.io/)（測試版）                    | Rust       | Linux、Windows、macOS   | 信標鏈、Goerli、Sepolia 等                        |
 
 ### Lighthouse {#lighthouse}
 
@@ -229,6 +231,12 @@ Teku 是最初的信標鏈創世用戶端之一。 除了一般的目標（安�
 Teku 提供了非常彈性的部署選項。 信標節點與驗證者用戶端可以在同個進程一起運行，對單獨質押者來說非常方便，節點也可分開運行，以完成複雜的質押操作。 此外，Teku 與 [Web3Signer](https://github.com/ConsenSys/web3signer/) 完全相容，以實現簽署金鑰安全及罰沒保護。
 
 Teku 以 Java 編寫，並以 Apache 2.0 授權發佈。 它由 ConsenSys 的 Protocols 團隊開發，該團隊也負責 Besu 和 Web3Signer 開發。 在 [Teku 文檔中](https://docs.teku.consensys.net/en/latest/)瞭解更多。
+
+### Grandine {#grandine}
+
+Grandine 是以 Rust 語言編寫，以 GPL-3.0 授權的共識用戶端實作。 它由 Grandine 核心團隊維護，具有速度快、高效能和輕量的特點。 它適用於各類的質押者，從使用低資源裝置（如樹莓派）的單獨質押者，到運行數萬個驗證者的大機構質押者都能使用。
+
+文件可在 [Grandine 手冊](https://docs.grandine.io/)中找到
 
 ## 同步模式 {#sync-modes}
 

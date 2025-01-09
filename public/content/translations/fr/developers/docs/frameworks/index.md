@@ -132,6 +132,14 @@ Avant de plonger dans les infrastructures, nous vous recommandons de commencer p
 - [GitHub](https://github.com/Ackee-Blockchain/wake)
 - [Extension VS Code](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity)
 
+****Veramo -**** **_Un cadre open source, modulaire et agnostique qui facilite l'intégration des identités décentralisées et des justificatifs vérifiables dans les applications pour les développeurs d'applications décentralisées._**
+
+- [Page d'accueil](https://veramo.io/)
+- [Documentation](https://veramo.io/docs/basics/introduction)
+- [GitHub](https://github.com/uport-project/veramo)
+- [Discord](https://discord.com/invite/FRRBdjemHV)
+- [Package NPM](https://www.npmjs.com/package/@veramo/core)
+
 ## Complément d'information {#further-reading}
 
 _Une ressource communautaire vous a aidé ? Modifiez cette page et ajoutez-la !_

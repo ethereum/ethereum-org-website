@@ -6,7 +6,7 @@ lang: yo
 
 # Bí o ṣe lè fagilé ìráàyèsí ti àdéhùn ọlọgbọ́n sí àwọn owo crypto rẹ
 
-Itọsọna yii yoo kọ ọ bi o ṣe le wo atokọ ti gbogbo [awọn iwe adehun ](/glossary/#smart-contract) ti o ti gba laaye lati wọle si awọn owo rẹ ati bi o ṣe le fagile wọn.
+Itọsọna yii yoo kọ ọ bi o ṣe le wo atokọ ti gbogbo [awọn iwe adehun](/glossary/#smart-contract) ti o ti gba laaye lati wọle si awọn owo rẹ ati bi o ṣe le fagile wọn.
 
 Nígbà míì àwọn olùdàgbà tí wọ́n ní èrò búburú máa ń kọ àwọn ẹnubodè ẹ̀yìn sínú àwọn àdéhùn ọlọ́gbọ́n tí wọ́n máa ń jẹ́ kí wọ́n lè wọlé sí owó àwọn oníṣe tí kò mọ̀ tí wọ́n bá ń bá àdéhùn ọlọ́gbọ́n náà lò. Ohun tí ó sábà máa ń ṣẹlẹ̀ ni wípé irú àwọn pẹpẹ bẹ́ẹ̀ máa ń béèrè fún ààyè láti ná **àìmọye àwọn tọ́kẹ̀n** ní ìsapá láti fi àpò kékeré ti [gáàsì](/glossary/#gas) pamọ́ ní ọjọ́ iwájú, ṣùgbọ́n èyí máa ń wá pẹ̀lú ewu tó pọ̀ sí i.
 

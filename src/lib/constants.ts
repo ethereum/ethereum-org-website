@@ -132,6 +132,24 @@ export const DEVELOPER_FEATURES = [
   "erc_20_support",
 ]
 
+// Chains
+export const CHAINID_NETWORK_ENDPOINT = "https://chainid.network/chains.json"
+
+export const TESTNETS = [
+  "goerli",
+  "holesky",
+  "kiln",
+  "kintsugi",
+  "ropsten",
+  "rinkeby",
+  "sepolia",
+  "zhejiang",
+]
+
+export const EXCLUDED_NAMES = ["deprecated", "testnet"]
+
+export const ETH = "ETH"
+
 /**
  * Navigation
  */
@@ -207,6 +225,10 @@ export const COMMUNITY_BLOGS: CommunityBlog[] = [
   {
     href: "https://stark.mirror.xyz/",
     feed: "https://stark.mirror.xyz/feed/atom",
+  },
+  {
+    href: "https://medium.com/ethereum-cat-herders/newsletter",
+    feed: "https://medium.com/feed/ethereum-cat-herders",
   },
 ]
 
