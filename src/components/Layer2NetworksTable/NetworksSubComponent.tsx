@@ -36,7 +36,7 @@ const NetworkSubComponent = ({ network }) => {
                         <p>
                           Data from{" "}
                           <InlineLink href="https://growthepie.xyz">
-                            Growthepie
+                            growthepie
                           </InlineLink>
                           .
                         </p>
@@ -118,7 +118,7 @@ const NetworkSubComponent = ({ network }) => {
                         <p>
                           Data from{" "}
                           <InlineLink href="https://growthepie.xyz">
-                            Growthepie
+                            growthepie
                           </InlineLink>
                           .
                         </p>
@@ -179,7 +179,7 @@ const NetworkSubComponent = ({ network }) => {
                     <p>
                       Data from{" "}
                       <InlineLink href="https://growthepie.xyz">
-                        Growthepie
+                        growthepie
                       </InlineLink>
                       .
                     </p>

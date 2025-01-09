@@ -9,8 +9,11 @@ const BugBountyBanner = () => (
   <BannerNotification shouldShow>
     <Center>
       <p>
-        All Dencun-related bounties currently receive a 2x bonus multiplier (up
-        to 500,000 USD) up to two weeks before the scheduled mainnet hardfork.
+        The Ethereum Protocol Attackathon is live on{" "}
+        <a href="https://immunefi.com/audit-competition/ethereum-protocol-attackathon/">
+          Immunefi
+        </a>
+        until the 25th of January, with up to $1,500,000 in rewards!
       </p>
     </Center>
   </BannerNotification>
