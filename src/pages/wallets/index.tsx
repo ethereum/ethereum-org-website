@@ -23,7 +23,6 @@ import HorizontalCard, {
 } from "@/components/HorizontalCard"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
-import OldHeading from "@/components/OldHeading"
 import Text from "@/components/OldText"
 import PageHero from "@/components/PageHero"
 import PageMetadata from "@/components/PageMetadata"
@@ -44,14 +43,6 @@ import DappsImage from "@/public/images/doge-computer.png"
 import ETHImage from "@/public/images/eth-logo.png"
 import FindWalletImage from "@/public/images/wallets/find-wallet.png"
 import HeroImage from "@/public/images/wallets/wallet-hero.png"
-
-const H2 = (props: ChildOnlyProp) => (
-  <OldHeading
-    fontSize={{ base: "2xl", md: "2rem" }}
-    lineHeight={1.4}
-    {...props}
-  />
-)
 
 const CardContainer = (props: BoxProps) => (
   <Box display={"flex"} flexWrap={"wrap"} ms={-4} me={-4} {...props} />
@@ -289,7 +280,9 @@ const WalletsPage = () => {
 
       <div className="-mb-8 mt-8 flex flex-col justify-between p-8 lg:flex-row">
         <div className="max-w-full flex-[0_1_50%] lg:me-8">
-          <H2>{t("page-wallets-accounts-addresses")}</H2>
+          <h2 className="mb-8 mt-12 text-2xl leading-[1.4] md:text-[2rem]">
+            {t("page-wallets-accounts-addresses")}
+          </h2>
           <Text>{t("page-wallets-accounts-addresses-desc")}</Text>
           <ul>
             <li>
@@ -311,7 +304,9 @@ const WalletsPage = () => {
           <Text>{t("page-wallets-most-wallets")}</Text>
         </div>
         <div className="mt-12 max-w-full flex-[0_1_50%] lg:ms-8 lg:mt-0">
-          <H2>{t("page-wallets-types")}</H2>
+          <h2 className="mb-8 mt-12 text-2xl leading-[1.4] md:text-[2rem]">
+            {t("page-wallets-types")}
+          </h2>
           <Text>{t("page-wallets-types-desc")}</Text>
           <Box className="flex flex-col gap-2">
             {types.map((type, idx) => (
@@ -353,7 +348,9 @@ const WalletsPage = () => {
         <div className="my-12 mt-4 w-full bg-[linear-gradient(49deg,rgba(127,127,213,0.2)_0%,rgba(134,168,231,0.2)_50%,rgba(145,234,228,0.2)_100%)] px-0 py-16 shadow-[inset_0px_1px_0px_var(--eth-colors-tableItemBoxShadow)] lg:mt-8">
           <div className="w-full px-8 py-4">
             <Flex flexDirection="column" alignItems="center" mb="8">
-              <H2>{t("page-wallets-features-title")}</H2>
+              <h2 className="mb-8 mt-12 text-2xl leading-[1.4] md:text-[2rem]">
+                {t("page-wallets-features-title")}
+              </h2>
               <Box
                 fontSize="xl"
                 lineHeight={1.4}
@@ -389,7 +386,9 @@ const WalletsPage = () => {
 
       <div className="mb-12 flex flex-col justify-between p-8 lg:flex-row">
         <div className="max-w-full flex-[0_1_50%] lg:me-8">
-          <H2>{t("page-wallets-stay-safe")}</H2>
+          <h2 className="mb-8 mt-12 text-2xl leading-[1.4] md:text-[2rem]">
+            {t("page-wallets-stay-safe")}
+          </h2>
           <Box lineHeight={1.4} mb={6} color="text300">
             <Translation id="page-wallets:page-wallets-stay-safe-desc" />
           </Box>
@@ -429,7 +428,9 @@ const WalletsPage = () => {
           </Flex>
         </div>
         <div className="mt-12 max-w-full flex-[0_1_50%] lg:ms-8 lg:mt-0">
-          <H2>{t("page-wallets-tips")}</H2>
+          <h2 className="mb-8 mt-12 text-2xl leading-[1.4] md:text-[2rem]">
+            {t("page-wallets-tips")}
+          </h2>
           <Box lineHeight={1.4} color="text300" mb={6}>
             {t("page-wallets-tips-community")}
           </Box>
@@ -440,7 +441,9 @@ const WalletsPage = () => {
       <div className="w-full px-8 py-4">
         <Divider />
 
-        <H2>{t("page-wallets-explore")}</H2>
+        <h2 className="mb-8 mt-12 text-2xl leading-[1.4] md:text-[2rem]">
+          {t("page-wallets-explore")}
+        </h2>
         <CalloutCardContainer>
           <Callout
             image={ETHImage}
