@@ -654,5 +654,5 @@ Tekintse meg a Solidity és a Vyper dokumentációit az okosszerződések teljes
 ## Kapcsolódó útmutatók {#related-tutorials}
 
 - [A szerződések méretének csökkentése, hogy ne okozzon gondot a méretkorlát](/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/) _– Gyakorlati tanácsok az okosszerződés méretének redukálására._
-- [Okosszerződések adatnaplózása az események mentén](/developers/tutorials/logging-events-smart-contracts/) _– Bevezetés az okossszerződések eseményeibe, s azok használata az adatnaplózáshoz._
+- [Okosszerződések adatnaplózása az események mentén](/developers/tutorials/logging-events-smart-contracts/) _– Bevezetés az okosszerződések eseményeibe, s azok használata az adatnaplózáshoz._
 - [Más szerződésekkel való interakció a Solidity által](/developers/tutorials/interact-with-other-contracts-from-solidity/) _– Hogyan telepítsen okosszerződést egy létező szerződésből és kapcsolódjon azzal._
