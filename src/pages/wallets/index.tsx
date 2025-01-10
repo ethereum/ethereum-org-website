@@ -3,15 +3,9 @@ import { GetStaticProps } from "next"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import {
-  Box,
-  type BoxProps,
-  Flex,
-  Heading,
-  Text as ChakraText,
-} from "@chakra-ui/react"
+import { Box, Flex, Heading, Text as ChakraText } from "@chakra-ui/react"
 
-import { BasePageProps, ChildOnlyProp, Lang } from "@/lib/types"
+import { BasePageProps, Lang } from "@/lib/types"
 
 import ButtonLink from "@/components/Buttons/ButtonLink"
 import Callout from "@/components/Callout"
@@ -44,10 +38,6 @@ import ETHImage from "@/public/images/eth-logo.png"
 import FindWalletImage from "@/public/images/wallets/find-wallet.png"
 import HeroImage from "@/public/images/wallets/wallet-hero.png"
 
-const CardContainer = (props: BoxProps) => (
-  <Box display={"flex"} flexWrap={"wrap"} ms={-4} me={-4} {...props} />
-)
-
 export const StyledCard = (props: ComponentPropsWithRef<typeof Card>) => (
   <Card
     flex="1 1 30%"
@@ -64,10 +54,6 @@ const ChecklistItem = (props: HorizontalCardProps) => (
     className="items-start"
     {...props}
   />
-)
-
-const CalloutCardContainer = (props: ChildOnlyProp) => (
-  <CardContainer mt={16} {...props} />
 )
 
 export const getStaticProps = (async ({ locale }) => {
@@ -265,7 +251,7 @@ const WalletsPage = () => {
           </div>
         </div>
         <div className="w-full px-8 py-4">
-          <CardContainer>
+          <div className="-me-4 -ms-4 flex flex-wrap">
             {cards.map((card, idx) => (
               <StyledCard
                 key={idx}
@@ -274,7 +260,7 @@ const WalletsPage = () => {
                 description={card.description}
               />
             ))}
-          </CardContainer>
+          </div>
         </div>
       </div>
 
@@ -444,7 +430,7 @@ const WalletsPage = () => {
         <h2 className="mb-8 mt-12 text-2xl leading-[1.4] md:text-[2rem]">
           {t("page-wallets-explore")}
         </h2>
-        <CalloutCardContainer>
+        <div className="-me-4 -ms-4 mt-16 flex flex-wrap">
           <Callout
             image={ETHImage}
             titleKey="page-wallets:page-wallets-get-some"
@@ -471,7 +457,7 @@ const WalletsPage = () => {
               </ButtonLink>
             </Box>
           </Callout>
-        </CalloutCardContainer>
+        </div>
       </div>
 
       <div className="w-full px-8 py-4">
