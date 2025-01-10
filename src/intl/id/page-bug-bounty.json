@@ -47,7 +47,7 @@
   "page-upgrades-bug-bounty-specs": "Baca spesifikasi selengkapnya",
   "page-upgrades-bug-bounty-specs-docs": "Dokumen spesifikasi",
   "page-upgrades-bug-bounty-submit": "Kirimkan bug",
-  "page-upgrades-bug-bounty-submit-desc": "Untuk setiap bug yang Anda temukan, Anda akan dihadiahi poin. Poin yang Anda dapatkan tergantung pada tingkat keparahan bug. Bug Lodestar saat ini dihadiahi 10% poin yang dirinci di bawah, karena audit tambahan sedang dalam proses penyelesaian. Yayasan Ethereum (EF) menentukan tingkat keparahan dengan mengggunakan metode OWASP.",
+  "page-upgrades-bug-bounty-submit-desc": "Untuk setiap bug yang Anda temukan, Anda akan dihadiahi poin. Poin yang Anda dapatkan tergantung pada tingkat keparahan bug. Bug Lodestar saat ini dihadiahi 10% poin yang dirinci di bawah, karena audit tambahan sedang dalam proses penyelesaian. Yayasan Ethereum (EF) menentukan tingkat keparahan dengan menggunakan metode OWASP.",
   "page-upgrades-bug-bounty-subtitle": "Dapatkan hingga $50.000 USD dan posisi di papan peringkat dengan menemukan bug protokol lapisan konsensus dan klien.",
   "page-upgrades-bug-bounty-title": "Pengiriman terbuka",
   "page-upgrades-bug-bounty-title-1": "Rantai Suar",
