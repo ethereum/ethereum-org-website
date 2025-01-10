@@ -8,6 +8,8 @@ lang: hu
 
 Az ethereum.org egy nyilvános, nyílt forráskódú információs forrás az Ethereum közösségnek, amelyhez bárki hozzájárulhat. Egy kicsi központi csapat elhivatottan dolgozik az oldal fenntartásán és fejlesztésén, és ebben több ezer közösségi tag segíti őket a világ minden tájáról.
 
+**Az ethereum.org-tól senki sem lép Önnel kapcsolatba. Ne válaszoljon ilyesmire!**
+
 ## Megjegyzés a nevekkel kapcsolatban {#a-note-on-names}
 
 Általános dolog, hogy az emberek összekeverik az Ethereum világába tartozó neveket, így nem tudnak az Ethereum működéséről valós képet kapni. Az alábbiakban gyorsan összefoglalnánk, hogy mi micsoda:

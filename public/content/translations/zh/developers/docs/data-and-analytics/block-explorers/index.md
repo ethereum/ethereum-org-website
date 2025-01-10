@@ -26,6 +26,7 @@ sidebarDepth: 3
 - [EthVM](https://www.ethvm.com/)
 - [OKLink](https://www.oklink.com/eth)
 - [Rantom](https://rantom.app/)
+- [Ethseer](https://ethseer.io)
 
 ## 开源工具 {#open-source-tools}
 

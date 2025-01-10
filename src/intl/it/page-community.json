@@ -44,11 +44,18 @@
   "page-community-try-ethereum": "Prova tu stesso Ethereum",
   "page-community-upcoming-events-no-events": "Non siamo a conoscenza di nessun evento imminente. Ne conosci uno?",
   "page-community-upcoming-events-load-more": "Carica maggiori informazioni",
+  "page-community-upcoming-events-view-event": "Visualizza l'evento",
   "page-community-why-get-involved-title": "Perché partecipare?",
   "page-community-why-get-involved-card-1-title": "Trova la tua tribù",
   "page-community-why-get-involved-card-1-description": "C'è una tribù per tutti. Trova e connettiti con persone che la pensano come te per discutere, riflettere e apprezzare Ethereum insieme.",
   "page-community-why-get-involved-card-2-title": "Guadagnarsi da vivere",
   "page-community-why-get-involved-card-2-description": "Tutti hanno conti da pagare. Ethereum ti permette di trovare un lavoro appassionante ed essere pagato bene per farlo.",
   "page-community-why-get-involved-card-3-title": "Fai la differenza",
-  "page-community-why-get-involved-card-3-description": "Essere coinvolti in Ethereum permette di divenire uno stakeholder attivo in una tecnologia che sta avendo un impatto positivo su milioni di persone."
+  "page-community-why-get-involved-card-3-description": "Essere coinvolti in Ethereum permette di divenire uno stakeholder attivo in una tecnologia che sta avendo un impatto positivo su milioni di persone.",
+  "page-index-internet-image-alt": "Illustrazione di un computer futuristico alimentato da cristalli di Ethereum.",
+  "page-index-get-started-image-alt": "Illustrazione di una persona che lavora al computer.",
+  "page-index-get-started-wallet-image-alt": "Illustrazione di un robot con una cassaforte come corpo, che rappresenta un portafoglio di Ethereum.",
+  "page-index-get-started-eth-image-alt": "Illustrazione di un gruppo di persone che contemplano incantate un glifo di ether (ETH).",
+  "page-index-get-started-dapps-image-alt": "Illustrazione di un cane doge che utilizza un computer.",
+  "page-index-get-started-devs-image-alt": "Un'illustrazione di una mano che crea un logo di ETH, realizzato con mattoncini Lego."
 }

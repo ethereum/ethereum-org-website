@@ -48,7 +48,7 @@ V [komunitě Etherea](/community/), jsou různé zainteresované strany, z nich�
 - **Operátory síťových uzlů**: Tito lidé provozují síťové uzly, které schvalují bloky a transakce a odmítají jakoukoli neplatnou transakci nebo blok, se kterým se setkají. [Více o síťových uzlech](/developers/docs/nodes-and-clients/).
 - **Autory EIP**: Tito lidé navrhují změny protokolu Ethereum ve formě návrhů na vylepšení Etherea (EIP). [Více o EIP](/eips/).
 - **Validátory**: Tito lidé provozují síťové uzly, které mohou přidávat nové bloky do blockchainu Ethereum.
-- **Vývojáře protokolu** (také známí jako  "Klíčoví vývojáři“ ): Tito lidé se starají o různé implementace Etherea (např. go-ethereum, Nethermind, Besu, Erigon, Reth na exekuční vrstvě nebo Prysm, Lighthouse, Nimbus, Teku, Lodestar na vrstvě konsenzu). [Více o klientech Etherea](/developers/docs/nodes-and-clients/).
+- **Vývojáře protokolu** (také známí jako  "Klíčoví vývojáři“ ): Tito lidé se starají o různé implementace Etherea (např. go-ethereum, Nethermind, Besu, Erigon a Reth na exekuční vrstvě nebo Prysm, Lighthouse, Nimbus, Teku, Lodestar a Grandine na vrstvě konsenzu). [Více o klientech Etherea](/developers/docs/nodes-and-clients/).
 
 _Poznámka: Každý může být součástí více skupin (např. vývojář protokolu může navrhovat EIP a provozovat validátor beacon chainu a používat DeFi aplikace). Pro jednoduchost je však lepší tyto skupiny uvést odděleně._
 
