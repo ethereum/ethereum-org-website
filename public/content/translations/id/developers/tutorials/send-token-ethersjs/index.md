@@ -101,7 +101,7 @@ Variabel-variabel ini yang ditentukan di bawah bergantung pada `send_token()`
 4. **`gas_limit`**: batas gas
 5. **`gas_price`**: harga gas
 
-[Lihat di bawah untuk cara mengggunakan](#how-to-use)
+[Lihat di bawah untuk cara menggunakan](#how-to-use)
 
 ```javascript
 const tx = {
