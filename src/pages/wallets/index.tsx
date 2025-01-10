@@ -45,17 +45,6 @@ import ETHImage from "@/public/images/eth-logo.png"
 import FindWalletImage from "@/public/images/wallets/find-wallet.png"
 import HeroImage from "@/public/images/wallets/wallet-hero.png"
 
-const Page = (props: BoxProps) => (
-  <Flex
-    as={MainArticle}
-    direction="column"
-    align="center"
-    width="full"
-    m="0 auto"
-    {...props}
-  />
-)
-
 const GrayContainer = (props: BoxProps) => (
   <Box
     width="full"
@@ -288,7 +277,7 @@ const WalletsPage = () => {
   ]
 
   return (
-    <Page>
+    <MainArticle className="width-full auto m-0 flex flex-col items-center">
       <PageMetadata
         title={t("page-wallets-meta-title")}
         description={t("page-wallets-meta-description")}
@@ -521,7 +510,7 @@ const WalletsPage = () => {
       <Content>
         <FeedbackCard />
       </Content>
-    </Page>
+    </MainArticle>
   )
 }
 
