@@ -770,17 +770,6 @@ const chains = [
     chain: "ETH",
   },
   {
-    name: "Minato",
-    infoURL: "https://soneium.org",
-    chainId: 1946,
-    nativeCurrency: {
-      name: "Ether",
-      symbol: "ETH",
-      decimals: 18,
-    },
-    chain: "ETH",
-  },
-  {
     name: "EtherGem",
     infoURL: "https://egem.io",
     chainId: 1987,
@@ -1122,7 +1111,7 @@ const chains = [
     chain: "ETH",
   },
   {
-    name: "Huddle01",
+    name: "Huddle01 dRTC Chain",
     infoURL: "https://huddle01.com/",
     chainId: 12323,
     nativeCurrency: {
@@ -1682,6 +1671,17 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+  },
+  {
+    name: "Infinaeon",
+    infoURL: "hhttps://rpc.infinaeon.com",
+    chainId: 420000,
+    nativeCurrency: {
+      name: "Ethereum",
+      symbol: "ETH",
+      decimals: 18,
+    },
+    chain: "Infinaeon",
   },
   {
     name: "Scroll",
