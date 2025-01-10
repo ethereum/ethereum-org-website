@@ -24,7 +24,7 @@ La gouvernance d'Ethereum est le processus par lequel des changements de protoco
 
 ### Gouvernance sur la blockchain vs hors chaîne {#on-chain-vs-off-chain}
 
-La technologie de la blockchain permet de nouvelles capacités de gouvernance, connues sous le nom de gouvernance sur la blockchain. La gouvernance est dite sur sur la blockchain lorsque les modifications proposées au protocole sont décidées par vote des parties prenantes, généralement par les détenteurs d'un jeton de gouvernance, et le vote se produit sur la blockchain. Avec certaines formes de gouvernance on-chain, les modifications de protocole proposées sont déjà écrites dans le code et implémentées automatiquement si les parties prenantes approuvent les changements en signant une transaction.
+La technologie de la blockchain permet de nouvelles capacités de gouvernance, connues sous le nom de gouvernance sur la blockchain. La gouvernance est dite sur la blockchain lorsque les modifications proposées au protocole sont décidées par vote des parties prenantes, généralement par les détenteurs d'un jeton de gouvernance, et le vote se produit sur la blockchain. Avec certaines formes de gouvernance on-chain, les modifications de protocole proposées sont déjà écrites dans le code et implémentées automatiquement si les parties prenantes approuvent les changements en signant une transaction.
 
 L'approche opposée, la gouvernance hors chaîne, est celle où toute décision de changement de protocole se fait par le biais d'un processus informel de discussion sociale, qui, s'il est approuvé, sera mis en œuvre dans le code.
 
