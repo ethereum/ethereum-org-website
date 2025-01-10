@@ -4,6 +4,8 @@ import { Flex, type FlexProps, Grid } from "@chakra-ui/react"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
+import type { ModalProps } from "../ui/dialog-modal"
+
 import { PATH_ID_QUERY_PARAM, SIMULATOR_ID } from "./constants"
 import { Explanation } from "./Explanation"
 import type {
@@ -41,14 +43,16 @@ export const Simulator = ({ children, data }: SimulatorProps) => {
   }
 
   // When simulator closed: log event, clear URL params and close modal
-  const onClose = (): void => {
-    trackCustomEvent({
-      eventCategory: "simulator",
-      eventAction: `${pathId}_click`,
-      eventName: `close-from-step-${step + 1}`,
-    })
-    // Clearing URL Params will reset pathId, and close modal
-    clearUrlParams()
+  const onClose: ModalProps["onOpenChange"] = (open) => {
+    if (!open) {
+      trackCustomEvent({
+        eventCategory: "simulator",
+        eventAction: `${pathId}_click`,
+        eventName: `close-from-step-${step + 1}`,
+      })
+      // Clearing URL Params will reset pathId, and close modal
+      clearUrlParams()
+    }
   }
 
   // Remove URL search param if invalid pathId
@@ -181,7 +185,7 @@ export const Simulator = ({ children, data }: SimulatorProps) => {
           })}
         </Flex>
       </Flex>
-      <SimulatorModal isOpen={isOpen} onClose={onClose}>
+      <SimulatorModal open={isOpen} onOpenChange={onClose}>
         <Template>
           {explanation ? (
             <Explanation

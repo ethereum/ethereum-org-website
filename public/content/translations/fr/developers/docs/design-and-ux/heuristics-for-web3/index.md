@@ -5,7 +5,7 @@ lang: fr
 ---
 
 Les heuristiques de convivialité sont des « règles générales » que vous pouvez utiliser pour évaluer la convivialité de votre site.
-Ces heuristiques sont spécialement adaptées au Web3 et devraient être utilisées en complément des [10 principes généraux de la conception d'interaction](https://www.nngroup.com/articles/ten-usability-heuristics/) de Jakob Nielsen.
+Les 7 heuristiques sont ici spécialement adaptées au Web3 et devraient être utilisées en complément des [10 principes généraux de la conception d'interaction](https://www.nngroup.com/articles/ten-usability-heuristics/) de Jakob Nielsen.
 
 ## Sept heuristiques de convivialité pour le Web3 {#seven-usability-heuristics-for-web3}
 

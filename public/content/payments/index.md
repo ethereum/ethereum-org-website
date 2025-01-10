@@ -1,5 +1,6 @@
 ---
 title: Ethereum Payments
+metaTitle: Payments on Ethereum
 description: An overview of payments on Ethereum
 lang: en
 template: use-cases

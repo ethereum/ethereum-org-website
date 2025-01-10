@@ -126,6 +126,7 @@ Web3の様式を活用することで科学データへのアクセスが大幅�
 - [DeSci: Samuel Akinoshoによる研究の未来](https://lucidsamuel.medium.com/desci-the-future-of-research-b76cfc88c8ec)
 - [サイエンスファンディング(エピローグ: DeSciと新しい暗号プリミティブ) by Nadia](https://nadia.xyz/science-funding)
 - [分散化は薬物開発を妨害する](https://medium.com/id-theory/decentralisation-is-disrupting-drug-development-28b5ba5d447f)
+- [DeSci - 分散型科学とは何か？](​https://usadailytimes.com/2022/09/12/what-is-desci-decentralized-science/)
 
 ### 動画 {#videos}
 
@@ -134,3 +135,4 @@ Web3の様式を活用することで科学データへのアクセスが大幅�
 - [破綻している科学出版業界を Web3で救えるか?](https://www.youtube.com/watch?v=WkvzYgCvWj8)
 - [Juan Benet - DeSci、Independent Labs、及び大規模データサイエンス](https://www.youtube.com/watch?v=zkXM9H90g_E)
 - [Sebastian Brunemeier - DeSciによる生体医学研究 & ベンチャーキャピタルの転換](https://www.youtube.com/watch?v=qB4Tc3FcVbM)
+- [Paige Donner - Web3とブロックチェーンによるオープンサイエンスのツール化](https://www.youtube.com/watch?v=nC-2QWQ-lgw&t=17s)

@@ -68,7 +68,7 @@ Mielőtt nekilát, ismerkedjen meg:
 - a [stílusútmutatóval](/contributing/style-guide/)
 - a [viselkedési szabályzattal](/community/code-of-conduct)
 
-<ContributorsQuizBanner mt={16} mb={8} />
+<ContributorsQuizBanner className="mt-16 mb-8" />
 
 ## Hogyan történik a döntéshozás a honlapról {#how-decisions-about-the-site-are-made}
 

@@ -26,6 +26,7 @@ I block explorer sono il tuo portale sui dati di Ethereum. Puoi usarli per veder
 - [EthVM](https://www.ethvm.com/)
 - [OKLink](https://www.oklink.com/eth)
 - [Rantom](https://rantom.app/)
+- [Ethseer](https://ethseer.io)
 
 ## Strumenti open source {#open-source-tools}
 
