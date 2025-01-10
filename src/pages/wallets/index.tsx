@@ -12,9 +12,7 @@ import Callout from "@/components/Callout"
 import Card from "@/components/Card"
 import CardList from "@/components/CardList"
 import FeedbackCard from "@/components/FeedbackCard"
-import HorizontalCard, {
-  HorizontalCardProps,
-} from "@/components/HorizontalCard"
+import HorizontalCard from "@/components/HorizontalCard"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import Text from "@/components/OldText"
@@ -45,13 +43,6 @@ export const StyledCard = (props: ComponentPropsWithRef<typeof Card>) => (
     maxW={{ base: "full", md: "46%", lg: "31%" }}
     m={4}
     p={6}
-    {...props}
-  />
-)
-const ChecklistItem = (props: HorizontalCardProps) => (
-  <HorizontalCard
-    emojiClassName="text-2xl"
-    className="items-start"
     {...props}
   />
 )
@@ -379,17 +370,21 @@ const WalletsPage = () => {
             <Translation id="page-wallets:page-wallets-stay-safe-desc" />
           </Box>
           <Flex direction="column" gap={4}>
-            <ChecklistItem
+            <HorizontalCard
               key="0"
               emoji=":white_check_mark:"
               title={t("page-wallets-take-responsibility")}
               description={t("page-wallets-take-responsibility-desc")}
+              emojiClassName="text-2xl"
+              className="items-start"
             />
-            <ChecklistItem
+            <HorizontalCard
               key="1"
               emoji=":white_check_mark:"
               title={<Translation id="page-wallets:page-wallets-seed-phrase" />}
               description={t("page-wallets-seed-phrase-desc")}
+              emojiClassName="text-2xl"
+              className="items-start"
             >
               <Text>{t("page-wallets-seed-phrase-example")}</Text>
               <Box bg="black" p={2} mb={4} borderRadius="base">
@@ -398,18 +393,22 @@ const WalletsPage = () => {
                 </Text>
               </Box>
               <Text>{t("page-wallets-seed-phrase-write-down")}</Text>
-            </ChecklistItem>
-            <ChecklistItem
+            </HorizontalCard>
+            <HorizontalCard
               key="2"
               emoji=":white_check_mark:"
               title={t("page-wallets-bookmarking")}
               description={t("page-wallets-bookmarking-desc")}
+              emojiClassName="text-2xl"
+              className="items-start"
             />
-            <ChecklistItem
+            <HorizontalCard
               key="3"
               emoji=":white_check_mark:"
               title={t("page-wallets-triple-check")}
               description={t("page-wallets-triple-check-desc")}
+              emojiClassName="text-2xl"
+              className="items-start"
             />
           </Flex>
         </div>
