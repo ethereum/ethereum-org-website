@@ -45,14 +45,6 @@ import ETHImage from "@/public/images/eth-logo.png"
 import FindWalletImage from "@/public/images/wallets/find-wallet.png"
 import HeroImage from "@/public/images/wallets/wallet-hero.png"
 
-const LeftColumn = (props: BoxProps) => (
-  <Box flex="0 1 50%" me={{ base: 0, lg: 8 }} maxW="full" {...props} />
-)
-
-const RightColumn = (props: BoxProps) => (
-  <Box flex="0 1 50%" ms={{ lg: 8 }} maxW="full" {...props} />
-)
-
 const H2 = (props: ChildOnlyProp) => (
   <OldHeading
     fontSize={{ base: "2xl", md: "2rem" }}
@@ -276,10 +268,10 @@ const WalletsPage = () => {
             <Text>{t("page-wallets-desc-2")}</Text>
             <CardList items={guides} mb={{ base: 6, lg: 0 }} />
           </Box>
-          <RightColumn>
+          <div className="max-w-full flex-[0_1_50%] lg:ms-8">
             <Text>{t("page-wallets-desc-3")}</Text>
             <Text>{t("page-wallets-desc-4")}</Text>
-          </RightColumn>
+          </div>
         </div>
         <div className="w-full px-8 py-4">
           <CardContainer>
@@ -296,7 +288,7 @@ const WalletsPage = () => {
       </div>
 
       <div className="-mb-8 mt-8 flex flex-col justify-between p-8 lg:flex-row">
-        <LeftColumn>
+        <div className="max-w-full flex-[0_1_50%] lg:me-8">
           <H2>{t("page-wallets-accounts-addresses")}</H2>
           <Text>{t("page-wallets-accounts-addresses-desc")}</Text>
           <ul>
@@ -317,8 +309,8 @@ const WalletsPage = () => {
             </li>
           </ul>
           <Text>{t("page-wallets-most-wallets")}</Text>
-        </LeftColumn>
-        <RightColumn mt={{ base: 12, lg: 0 }}>
+        </div>
+        <div className="mt-12 max-w-full flex-[0_1_50%] lg:ms-8 lg:mt-0">
           <H2>{t("page-wallets-types")}</H2>
           <Text>{t("page-wallets-types-desc")}</Text>
           <Box className="flex flex-col gap-2">
@@ -332,7 +324,7 @@ const WalletsPage = () => {
               />
             ))}
           </Box>
-        </RightColumn>
+        </div>
       </div>
 
       {locale === "en" ? (
@@ -396,7 +388,7 @@ const WalletsPage = () => {
       )}
 
       <div className="mb-12 flex flex-col justify-between p-8 lg:flex-row">
-        <LeftColumn>
+        <div className="max-w-full flex-[0_1_50%] lg:me-8">
           <H2>{t("page-wallets-stay-safe")}</H2>
           <Box lineHeight={1.4} mb={6} color="text300">
             <Translation id="page-wallets:page-wallets-stay-safe-desc" />
@@ -435,14 +427,14 @@ const WalletsPage = () => {
               description={t("page-wallets-triple-check-desc")}
             />
           </Flex>
-        </LeftColumn>
-        <RightColumn mt={{ base: 12, lg: 0 }}>
+        </div>
+        <div className="mt-12 max-w-full flex-[0_1_50%] lg:ms-8 lg:mt-0">
           <H2>{t("page-wallets-tips")}</H2>
           <Box lineHeight={1.4} color="text300" mb={6}>
             {t("page-wallets-tips-community")}
           </Box>
           <CardList items={articles} />
-        </RightColumn>
+        </div>
       </div>
 
       <div className="w-full px-8 py-4">
