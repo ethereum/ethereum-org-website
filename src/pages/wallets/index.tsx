@@ -47,10 +47,6 @@ import HeroImage from "@/public/images/wallets/wallet-hero.png"
 
 const Content = (props: BoxProps) => <Box py={4} px={8} w="full" {...props} />
 
-const Intro = (props: ChildOnlyProp) => (
-  <Content pb={0} sx={{ h2: { mb: 0 } }} {...props} />
-)
-
 const TwoColumnContent = (props: BoxProps) => (
   <Content
     display="flex"
@@ -275,9 +271,11 @@ const WalletsPage = () => {
       <PageHero content={heroContent} isReverse />
 
       <div className="mt-4 w-full bg-[--eth-colors-grayBackground] px-0 py-16 shadow-[inset_0px_1px_0px_var(--eth-colors-tableItemBoxShadow)] lg:mt-8">
-        <Intro>
-          <H2>{t("page-wallets-whats-a-wallet")}</H2>
-        </Intro>
+        <div className="w-full px-8 py-4 pb-0">
+          <h2 className="mb-0 mt-12 text-2xl leading-[1.4] md:text-[2rem]">
+            {t("page-wallets-whats-a-wallet")}
+          </h2>
+        </div>
         <TwoColumnContent mb={0}>
           <Box
             flexGrow="0"
