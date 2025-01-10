@@ -45,19 +45,6 @@ import ETHImage from "@/public/images/eth-logo.png"
 import FindWalletImage from "@/public/images/wallets/find-wallet.png"
 import HeroImage from "@/public/images/wallets/wallet-hero.png"
 
-const Content = (props: BoxProps) => <Box py={4} px={8} w="full" {...props} />
-
-const TwoColumnContent = (props: BoxProps) => (
-  <Content
-    display="flex"
-    justifyContent="space-between"
-    p={8}
-    mb={12}
-    flexDirection={{ base: "column", lg: "row" }}
-    {...props}
-  />
-)
-
 const LeftColumn = (props: BoxProps) => (
   <Box flex="0 1 50%" me={{ base: 0, lg: 8 }} maxW="full" {...props} />
 )
@@ -276,7 +263,7 @@ const WalletsPage = () => {
             {t("page-wallets-whats-a-wallet")}
           </h2>
         </div>
-        <TwoColumnContent mb={0}>
+        <div className="mb-0 flex flex-col justify-between p-8 lg:flex-row">
           <Box
             flexGrow="0"
             flexShrink="1"
@@ -293,8 +280,8 @@ const WalletsPage = () => {
             <Text>{t("page-wallets-desc-3")}</Text>
             <Text>{t("page-wallets-desc-4")}</Text>
           </RightColumn>
-        </TwoColumnContent>
-        <Content>
+        </div>
+        <div className="w-full px-8 py-4">
           <CardContainer>
             {cards.map((card, idx) => (
               <StyledCard
@@ -305,10 +292,10 @@ const WalletsPage = () => {
               />
             ))}
           </CardContainer>
-        </Content>
+        </div>
       </div>
 
-      <TwoColumnContent marginBottom={-8} marginTop={8}>
+      <div className="-mb-8 mt-8 flex flex-col justify-between p-8 lg:flex-row">
         <LeftColumn>
           <H2>{t("page-wallets-accounts-addresses")}</H2>
           <Text>{t("page-wallets-accounts-addresses-desc")}</Text>
@@ -346,10 +333,10 @@ const WalletsPage = () => {
             ))}
           </Box>
         </RightColumn>
-      </TwoColumnContent>
+      </div>
 
       {locale === "en" ? (
-        <Content my={20} px={0}>
+        <div className="my-20 w-full px-0 py-4">
           <Simulator data={walletOnboardingSimData}>
             <ChakraText
               fontSize={{ base: "lg", md: "xl", lg: "2xl" }}
@@ -369,10 +356,10 @@ const WalletsPage = () => {
               How to use a wallet
             </Heading>
           </Simulator>
-        </Content>
+        </div>
       ) : (
         <div className="my-12 mt-4 w-full bg-[linear-gradient(49deg,rgba(127,127,213,0.2)_0%,rgba(134,168,231,0.2)_50%,rgba(145,234,228,0.2)_100%)] px-0 py-16 shadow-[inset_0px_1px_0px_var(--eth-colors-tableItemBoxShadow)] lg:mt-8">
-          <Content>
+          <div className="w-full px-8 py-4">
             <Flex flexDirection="column" alignItems="center" mb="8">
               <H2>{t("page-wallets-features-title")}</H2>
               <Box
@@ -404,11 +391,11 @@ const WalletsPage = () => {
                 w="full"
               />
             </Flex>
-          </Content>
+          </div>
         </div>
       )}
 
-      <TwoColumnContent>
+      <div className="mb-12 flex flex-col justify-between p-8 lg:flex-row">
         <LeftColumn>
           <H2>{t("page-wallets-stay-safe")}</H2>
           <Box lineHeight={1.4} mb={6} color="text300">
@@ -456,9 +443,9 @@ const WalletsPage = () => {
           </Box>
           <CardList items={articles} />
         </RightColumn>
-      </TwoColumnContent>
+      </div>
 
-      <Content>
+      <div className="w-full px-8 py-4">
         <Divider />
 
         <H2>{t("page-wallets-explore")}</H2>
@@ -490,15 +477,15 @@ const WalletsPage = () => {
             </Box>
           </Callout>
         </CalloutCardContainer>
-      </Content>
+      </div>
 
-      <Content>
+      <div className="w-full px-8 py-4">
         <StandaloneQuizWidget quizKey="wallets" />
-      </Content>
+      </div>
 
-      <Content>
+      <div className="w-full px-8 py-4">
         <FeedbackCard />
-      </Content>
+      </div>
     </MainArticle>
   )
 }
