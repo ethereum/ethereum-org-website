@@ -45,18 +45,6 @@ import ETHImage from "@/public/images/eth-logo.png"
 import FindWalletImage from "@/public/images/wallets/find-wallet.png"
 import HeroImage from "@/public/images/wallets/wallet-hero.png"
 
-const GrayContainer = (props: BoxProps) => (
-  <Box
-    width="full"
-    py={16}
-    px={0}
-    mt={{ base: 4, lg: 8 }}
-    background="grayBackground"
-    boxShadow="inset 0px 1px 0px var(--eth-colors-tableItemBoxShadow)"
-    {...props}
-  />
-)
-
 const Content = (props: BoxProps) => <Box py={4} px={8} w="full" {...props} />
 
 const Intro = (props: ChildOnlyProp) => (
@@ -283,8 +271,10 @@ const WalletsPage = () => {
         description={t("page-wallets-meta-description")}
         image="/images/wallets/wallet-hero.png"
       />
+
       <PageHero content={heroContent} isReverse />
-      <GrayContainer>
+
+      <div className="mt-4 w-full bg-[--eth-colors-grayBackground] px-0 py-16 shadow-[inset_0px_1px_0px_var(--eth-colors-tableItemBoxShadow)] lg:mt-8">
         <Intro>
           <H2>{t("page-wallets-whats-a-wallet")}</H2>
         </Intro>
@@ -318,7 +308,8 @@ const WalletsPage = () => {
             ))}
           </CardContainer>
         </Content>
-      </GrayContainer>
+      </div>
+
       <TwoColumnContent marginBottom={-8} marginTop={8}>
         <LeftColumn>
           <H2>{t("page-wallets-accounts-addresses")}</H2>
@@ -358,6 +349,7 @@ const WalletsPage = () => {
           </Box>
         </RightColumn>
       </TwoColumnContent>
+
       {locale === "en" ? (
         <Content my={20} px={0}>
           <Simulator data={walletOnboardingSimData}>
@@ -381,12 +373,7 @@ const WalletsPage = () => {
           </Simulator>
         </Content>
       ) : (
-        <GrayContainer
-          my={12}
-          bgGradient="linear-gradient(49.21deg, rgba(127, 127, 213, 0.2) 19.87%,
-    rgba(134, 168, 231, 0.2) 58.46%,
-    rgba(145, 234, 228, 0.2) 97.05%)"
-        >
+        <div className="my-12 mt-4 w-full bg-[linear-gradient(49deg,rgba(127,127,213,0.2)_0%,rgba(134,168,231,0.2)_50%,rgba(145,234,228,0.2)_100%)] px-0 py-16 shadow-[inset_0px_1px_0px_var(--eth-colors-tableItemBoxShadow)] lg:mt-8">
           <Content>
             <Flex flexDirection="column" alignItems="center" mb="8">
               <H2>{t("page-wallets-features-title")}</H2>
@@ -420,8 +407,9 @@ const WalletsPage = () => {
               />
             </Flex>
           </Content>
-        </GrayContainer>
+        </div>
       )}
+
       <TwoColumnContent>
         <LeftColumn>
           <H2>{t("page-wallets-stay-safe")}</H2>
@@ -471,6 +459,7 @@ const WalletsPage = () => {
           <CardList items={articles} />
         </RightColumn>
       </TwoColumnContent>
+
       <Content>
         <Divider />
 
@@ -504,9 +493,11 @@ const WalletsPage = () => {
           </Callout>
         </CalloutCardContainer>
       </Content>
+
       <Content>
         <StandaloneQuizWidget quizKey="wallets" />
       </Content>
+
       <Content>
         <FeedbackCard />
       </Content>
