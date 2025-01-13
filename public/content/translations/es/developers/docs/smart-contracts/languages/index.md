@@ -11,9 +11,11 @@ Los dos lenguajes más activos y soportados son:
 - Solidity
 - Vyper
 
-Los desarrolladores más experimentados también podrían querer usar Yul, un lenguaje intermedio para la [máquina virtual Ethereum](/developers/docs/evm/), o Yul+, una extensión de Yul.
+Remix IDE proporciona un entorno de desarrollo integral para crear y probar contratos tanto en Solidity como en Vyper. [Pruebe Remix IDE en el navegador](https://remix.ethereum.org) para empezar a programar.
 
-Si es curioso y le gustaría ayudar a testear nuevos lenguajes que aún se encuentran bajo gran desarrollo, puede experimentar con Fe, un lenguaje emergente de contratos inteligentes que aún está en sus inicios.
+Los desarrolladores más experimentados también podrían querer usar Yul, un lenguaje intermedio para la [máquina virtual de Ethereum](/developers/docs/evm/), o Yul+, una extensión de Yul.
+
+Si es curioso y le gustaría ayudar a testear nuevos lenguajes que aún se encuentran en gran desarrollo, puede experimentar con Fe, un lenguaje emergente de contratos inteligentes que aún está en sus inicios.
 
 ## Requisitos previos {#prerequisites}
 
@@ -175,11 +177,11 @@ def withdraw():
 
 # Finalizar la subasta y enviar la oferta más alta
 # al beneficiario.
-@external
+@externo
 def endAuction():
-    # It is a good guideline to structure functions that interact
-    # with other contracts (i.e. they call functions or send ether)
-    # into three phases:
+    # Es una buena guía para estructurar funciones que interactúan
+    # con otros contratos (es decir, ellos llaman funciones o envían ether)
+    # en tres frases:
     # 1. condiciones de comprobación
     # 2. realizar acciones (condiciones potencialmente cambiantes)
     # 3. interactuando con otros contratos
@@ -275,19 +277,19 @@ El siguiente es un contrato simple implementado en Fe.
 ```
 type BookMsg = bytes[100]
 
-contract GuestBook:
+contrato GuestBook:
     pub guest_book: map<address, BookMsg>
 
     event Signed:
         book_msg: BookMsg
 
     pub def sign(book_msg: BookMsg):
-        self.guest_book[msg.sender] = book_msg
+        self. uest_book[msg.sender] = book_msg
 
         emit Signed(book_msg=book_msg)
 
     pub def get_msg(addr: address) -> BookMsg:
-        return self.guest_book[addr].to_mem()
+        return self. uest_book[addr].to_mem()
 
 ```
 
