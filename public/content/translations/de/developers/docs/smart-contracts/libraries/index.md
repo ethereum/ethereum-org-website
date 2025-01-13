@@ -16,7 +16,7 @@ Normalerweise finden Sie zwei Arten von Erstellungsblöcken in einer Smart Contr
 
 ### Verhaltensweisen {#behaviors}
 
-Wenn Sie einen Smart Contract schreiben, ist es wahrscheinlich das Sie immer wieder dieselben Muster erstellen, zum Beispiel das Zuweisen einer _Admin_-Adresse, um geschützte Vorgänge in einem Vertrag auszuführen, oder das Hinzufügen einer Notfall-_Unterbrechungs_-Schaltfläche, falls ein unvorhergesehenes Problem auftritt.
+Wenn Sie einen Smart Contract schreiben, ist es wahrscheinlich das Sie immer wieder dieselben Muster erstellen, zum Beispiel das Zuweisen einer _Admin-_Adresse, um geschützte Vorgänge in einem Vertrag auszuführen, oder das Hinzufügen einer Notfall-_Unterbrechungs_-Schaltfläche, falls ein unvorhergesehenes Problem auftritt.
 
 Smart-Contract-Bibliotheken bieten in der Regel wiederverwendbare Implementierungen dieser Vorgehensweisen als [Bibliotheken](https://solidity.readthedocs.io/en/v0.7.2/contracts.html#libraries) oder über eine [Vererbung](https://solidity.readthedocs.io/en/v0.7.2/contracts.html#inheritance) an.
 
@@ -56,7 +56,7 @@ Ein weiteres gängiges Beispiel ist [SafeMath](https://docs.openzeppelin.com/con
 
 Um die [Komponierbarkeit und Interoperabilität](/developers/docs/smart-contracts/composability/) zu erleichtern, hat die Ethereum-Community mehrere Standards in Form von **ERCs** definiert. Weitere Informationen hierzu finden Sie im Abschnitt [Standards](/developers/docs/standards/).
 
-Wenn Sie einen ERC in Ihre Verträge aufnehmen, sollten Sie nach Standardimplementierungen suchen, anstatt Ihre eigenen einzuführen. Viele Smart-Contract-Bibliotheken enthalten Implementierungen für die gängigsten ERCs. Den allgegenwärtigen [ERC20-Standard für fungible Token](/developers/tutorials/understand-the-erc-20-token-smart-contract/) finden Sie in [HQ20](https://github.com/HQ20/contracts/blob/master/contracts/token/README.md), [DappSys](https://github.com/dapphub/ds-token/) und [OpenZeppelin](https://docs.openzeppelin.com/contracts/3.x/erc20). Darüber hinaus bieten einige ERCs auch kanonische Implementierungen als Teil des ERC selbst.
+Wenn Sie einen ERC in Ihre Verträge aufnehmen, sollten Sie nach Standardimplementierungen suchen, anstatt Ihre eigenen einzuführen. Viele Smart-Contract-Bibliotheken enthalten Implementierungen für die gängigsten ERCs. Den allgegenwärtigen [ERC20-Standard für fungible Token](/developers/tutorials/understand-the-erc-20-token-smart-contract/) finden Sie in <a hrbeibeispielsweise ef="https: //github.com/HQ20/contracts/blob/master/contracts/token/README.md">HQ20</a>, [DappSys](https://github.com/dapphub/ds-token/) und [OpenZeppelin](https://docs.openzeppelin.com/contracts/3.x/erc20). Darüber hinaus bieten einige ERCs auch kanonische Implementierungen als Teil des ERC selbst.
 
 Es ist erwähnenswert, dass einige ERCs nicht eigenständig sind, sondern Ergänzungen zu anderen ERCs sind. Zum Beispiel fügt [ERC2612](https://eips.ethereum.org/EIPS/eip-2612) eine Erweiterung zu ERC20 hinzu, um die Benutzerfreundlichkeit zu verbessern.
 
@@ -65,7 +65,7 @@ Es ist erwähnenswert, dass einige ERCs nicht eigenständig sind, sondern Ergän
 Beziehen Sie sich immer auf die Dokumentation der Bibliothek, die Sie einbinden, um genaue Anweisungen zur Einbindung in Ihr Projekt zu bekommen. Viele Solidity-Vertragsbibliotheken werden mit `npm` gepackt, sodass Sie sie einfach `npm install` benutzen können. Die meisten Anwendungen zum [Kompilieren](/developers/docs/smart-contracts/compiling/) von Verträgen prüfen Ihre `node_modules` für Smart-Contract-Bibliotheken, sodass Sie Folgendes tun können:
 
 ```solidity
-// Dadurch wird die @openzeppelin/contracts-Bibliothek von Ihren node_modules geladen
+// Dadurch wird die @openzeppelin/contracts-Bibliothek von Ihren node_modules geladen 
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 
 contract MyNFT is ERC721 {
@@ -79,7 +79,7 @@ Unabhängig von der verwendeten Methode sollten Sie beim Einbinden einer Bibliot
 
 Wenn Sie eine Smart-Contract-Bibliothek für Ihr Projekt nutzen, bietet das gleich mehrere Vorteile. In erster Linie sparen Sie Zeit, denn die Bibliothek stellt fertige Bausteine zur Verfügung stellt, die Sie einfach in Ihr System integrieren können, anstatt sie selbst schreiben zu müssen.
 
-Sicherheit ist ein großes Plus. Auch Open-Source-Smart-Contract-Bibliotheken werden oft intensiv untersucht. Da viele Projekte von der Bibliothek abhängen, besteht ein starker Anreiz vonseiten der Communty, sie ständig zu überprüfen. Fehler finden sich viel häufiger im Anwendungscode als in wiederverwendbaren Vertragsbibliotheken. Einige Bibliotheken werden auch [externen Audits](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/audit) unterzogen, um deren Sicherheit zu erhöhen.
+Sicherheit ist ein großes Plus. Auch Open-Source-Smart-Contract-Bibliotheken werden oft intensiv untersucht. Da viele Projekte von der Bibliothek abhängen, besteht ein starker Anreiz vonseiten der Communty, sie ständig zu überprüfen. Fehler finden sich viel häufiger im Anwendungscode als in wiederverwendbaren Vertragsbibliotheken. Einige Bibliotheken werden auch [externen Audits](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/audits) unterzogen, um deren Sicherheit zu erhöhen.
 
 Die Verwendung von Smart-Contract-Bibliotheken birgt jedoch das Risiko, dass Sie Code in Ihr Projekt integreiren, mit dem Sie nicht vertraut sind. Es ist verlockend, einen Vertrag zu importieren und direkt in Ihr Projekt aufzunehmen, doch ohne ein gutes Verständnis dessen, was dieser Vertrag bewirkt, können Sie aufgrund eines unerwarteten Verhaltens versehentlich ein Problem in Ihrem System einführen. Lesen Sie immer die Dokumentation des Codes, den Sie importieren, und überprüfen Sie dann den Code selbst, bevor Sie ihn in Ihr Projekt aufnehmen.
 
