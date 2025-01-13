@@ -18,7 +18,7 @@ Não deixe de ler [contas](/developers/docs/accounts/), [transações](/develope
 
 ## Uma máquina de vendas digitais {#a-digital-vending-machine}
 
-Talvez a melhor metáfora para um contrato inteligente seja uma máquina de venda automática, descrita por [Nick Szabo](https://unenumerated.blogspot.com/). Com as entradas certas, uma saída segura é garantida.
+Talvez a melhor metáfora para um contrato inteligente seja uma máquina de venda automática, descrita por [Nick Szabo](https://unenumerated. blogspot. com/). Com as entradas certas, uma saída segura é garantida.
 
 Para obter um snack de uma máquina de venda automática:
 
@@ -108,3 +108,4 @@ Os contratos multisig (com múltiplas assinaturas) são contas de contrato intel
 - [Coinbase: O que é um contrato inteligente?](https://www.coinbase.com/learn/crypto-basics/what-is-a-smart-contract)
 - [Chainlink: O que é um contrato inteligente?](https://chain.link/education/smart-contracts)
 - [Vídeo: Simplesmente Explicado - Contratos Inteligentes](https://youtu.be/ZE2HxTmxfrI)
+- [Cyfrin Updraft: Plataforma de aprendizado e auditoria Web3](https://updraft.cyfrin.io)

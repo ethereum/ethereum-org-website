@@ -131,7 +131,7 @@ O que é considerado como modificar estado:
 7. Usando chamadas de baixo nível.
 8. Usando montagem em linha que contém certos códigos.
 
-### Funções construtor {#constructor-functions}
+### Funções de "construtor" {#constructor-functions}
 
 `construtor` funções são executadas apenas uma vez quando o contrato é implantado pela primeira vez. Como o `construtor` em muitas linguagens de programação baseadas em classe, essas funções geralmente inicializam variáveis de estado para seus valores especificados.
 
@@ -167,7 +167,7 @@ Além das variáveis definidas no seu contrato, existem algumas variáveis globa
 
 Estes permitem contratos para enviar ETH para outras contas.
 
-## Funções utilitárias {#writing-functions}
+## Como escrever funções {#writing-functions}
 
 Sua função precisa:
 
@@ -203,13 +203,13 @@ Um contrato completo pode parecer algo assim. Aqui a função `construtor` forne
 
 ## Eventos e registros {#events-and-logs}
 
-Eventos permitem que você se comunique com seu contrato inteligente na interface do seu site ou de outros aplicativos de assinatura. Quando uma transação é minerada, os contratos inteligentes podem emitir eventos e escrever registros na blockchain que o frontend pode então processar.
+Os eventos permitem que seu contrato inteligente se comunique com seu front-end ou outros aplicativos que se inscrevem para recebê-los. Uma vez que uma transação é validada e adicionada a um bloco, os contratos inteligentes podem emitir eventos e registrar informações, que o front-end pode processar e utilizar.
 
 ## Exemplos anotados {#annotated-examples}
 
 Estes são alguns exemplos escritos em Solidity. Se você quiser brincar com o código, pode interagir com eles no [Remix](http://remix.ethereum.org).
 
-### Olá, mundo {#hello-world}
+### Hello World {#hello-world}
 
 ```solidity
 // Especifica a versão do Solidity usando a versão semântica.
@@ -309,7 +309,7 @@ contract Token {
 }
 ```
 
-### Asset digital único {#unique-digital-asset}
+### Ativo digital único {#unique-digital-asset}
 
 ```solidity
 pragma solidity ^0.5.10.
@@ -639,7 +639,7 @@ contract CryptoPizza is IERC721, ERC165 {
 
 ## Leitura adicional {#further-reading}
 
-Confira a documentação do Solidity e do Vyper para uma visão geral mais completa dos contratos inteligentes:
+Confira a documentação sobre Solidity e Vyper para ter uma visão geral mais completa dos contratos inteligentes:
 
 - [Solidity](https://solidity.readthedocs.io/)
 - [Vyper](https://vyper.readthedocs.io/)
@@ -653,4 +653,4 @@ Confira a documentação do Solidity e do Vyper para uma visão geral mais compl
 
 - [Diminuir contratos para enfrentar o limite de tamanho do contrato](/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/) _– Algumas dicas práticas para reduzir o tamanho de seu contrato inteligente._
 - [Registrando dados de contratos inteligentes com eventos](/developers/tutorials/logging-events-smart-contracts/) _– Uma introdução aos eventos de contratos inteligentes e como você pode usá-los para registrar dados._
-- [Interaja com outros contratos da Solidity](/developers/tutorials/interact-with-other-contracts-from-solidity/) _– Como implantar um contrato inteligente a partir de um contrato existente e interagir com ele._
+- [Interaja com outros contratos Solidity](/developers/tutorials/interact-with-other-contracts-from-solidity/) _– Como implantar um contrato inteligente a partir de um contrato existente e interagir com ele._

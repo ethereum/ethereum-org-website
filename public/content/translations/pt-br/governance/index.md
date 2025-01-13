@@ -48,7 +48,7 @@ Existem vários interessados na [comunidade Ethereum](/community/), cada um dese
 - **Operadores de nós**: essas pessoas executam nós que propagam blocos e transações, rejeitando qualquer transação ou bloco inválido que eles encontrem. [Mais sobre nós](/developers/docs/nodes-and-clients/).
 - **Autores do EIP**: estas pessoas propõem alterações no protocolo Ethereum, na forma de propostas de aprimoramento do Ethereum (EIPs). [Mais sobre EIPs](/eips/).
 - **Validadores**: essas pessoas executam nós que podem adicionar novos blocos à blockchain Ethereum.
-- **Desenvolvedores de protocolo** (conhecido como "Desenvolvedores principais": essas pessoas mantêm as várias implementações do Ethereum (por exemplo, go-ethereum, Nethermind, Besu, Erigon, Reth na camada de execução; ou Prysm, Lighthouse, Nimbus, Teku, Lodestar, na camada de consenso). [Mais sobre clientes Ethereum](/developers/docs/nodes-and-clients/).
+- **Desenvolvedores de protocolo** (conhecido como "Desenvolvedores principais"): essas pessoas mantêm as várias implementações do Ethereum (por exemplo, go-ethereum, Nethermind, Besu, Erigon, Reth na camada de execução, ou Prysm, Lighthouse, Nimbus, Teku, Lodestar, na camada de consenso). [Mais sobre clientes Ethereum](/developers/docs/nodes-and-clients/).
 
 _Nota: qualquer indivíduo pode fazer parte de vários desses grupos (por exemplo, um desenvolvedor de protocolo pode ganhar um EIP e executar uma Beacon Chain validadora e usar aplicativos DeFi). Mas, para clareza conceitual, é mais fácil distinguir entre eles._
 
