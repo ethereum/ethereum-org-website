@@ -563,7 +563,7 @@ Se prevedi di interrogare un oracolo sulla catena per conoscere i prezzi dei ben
 
 - **[Standard di verifica della sicurezza dei contratti intelligenti](https://github.com/securing/SCSVS)**: _lista di controllo in quattordici parti, creata per standardizzare la sicurezza dei contratti intelligenti per sviluppatori, architetti, revisori di sicurezza e fornitori._
 
-- **[Impara sulla sicurezza e il controllo dei contratti intelligenti](https://updraft.cyfrin.io/courses/security): _corso definitivo sulla sicurezza e il controllo dei contratti intelligenti, creato per gli sviluppatori di contratti intelligenti che desiderano migliorare le proprie migliori pratiche di sicurezza e diventare ricercatori della sicurezza._
+- **[Impara sulla sicurezza e il controllo dei contratti intelligenti](https://updraft.cyfrin.io/courses/security)**: _corso definitivo sulla sicurezza e il controllo dei contratti intelligenti, creato per gli sviluppatori di contratti intelligenti che desiderano migliorare le proprie migliori pratiche di sicurezza e diventare ricercatori della sicurezza._
 
 ### Tutorial sulla sicurezza dei contratti intelligenti {#tutorials-on-smart-contract-security}
 
