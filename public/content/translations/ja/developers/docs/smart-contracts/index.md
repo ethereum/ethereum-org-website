@@ -23,7 +23,7 @@ lang: ja
 自動販売機でスナックを取得する場合、以下のロジックになります。
 
 ```
-money + snack selection = snack dispensed
+お金 + スナック選択 = 出てくるスナック
 ```
 
 このロジックは自動販売機にプログラムされています。
@@ -40,8 +40,7 @@ contract VendingMachine {
     mapping (address => uint) public cupcakeBalances;
 
     // When 'VendingMachine' contract is deployed:
-    // 1. set the deploying address as the owner of the contract
-    // 2. set the deployed smart contract's cupcake balance to 100
+    // 1. 　 // 2. コントラクトの所有者としてデプロイアドレスを設定 set the deployed smart contract's cupcake balance to 100
     constructor() {
         owner = msg.sender;
         cupcakeBalances[address(this)] = 100;
@@ -109,3 +108,4 @@ contract VendingMachine {
 - [Coinbase: スマートコントラクトとは何か](https://www.coinbase.com/learn/crypto-basics/what-is-a-smart-contract)
 - [Chainlink: スマートコントラクトとは何か](https://chain.link/education/smart-contracts)
 - [スマートコントラクトの概要を説明するビデオ](https://youtu.be/ZE2HxTmxfrI)
+- [Cyfrin Updraft: Web3学習および監査プラットフォーム](https://updraft.cyfrin.io)
