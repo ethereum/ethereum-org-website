@@ -93,7 +93,7 @@ contract VendingMachine {
 尽管如此，你也不应将审计看作终极方案。 智能合约审计无法发现所有漏洞并且主要是为了额外增加一轮审核，这有助于检测到开发者在最初的开发和测试中遗漏的问题。 你还应遵循与审计员合作的最佳做法（例如正确记录代码并添加行内注释），让智能合约审计发挥最大作用。
 
 - [智能合约审计提示和技巧](https://twitter.com/tinchoabbate/status/1400170232904400897) - _@tinchoabbate_
-- [充分利用你的审计](https://inference.ag/blog/2023-08-14-tips/) - _推理</ EM></li> </ul>
+- [充分利用你的审计](https://inference.ag/blog/2023-08-14-tips/) - _推理_
 
 #### 漏洞奖励 {#bug-bounties}
 
@@ -563,7 +563,7 @@ contract Attack {
 
 - **[智能合约安全验证标准](https://github.com/securing/SCSVS)** - _旨在确立智能合约安全性标准的第十四部分检查清单，面向开发者、架构师、安全审核者和供应商。_
 
-- **[学习智能合约安全与审计](https://updraft.cyfrin.io/courses/security) - _智能合约安全与审计终极课程，专为寻求提升其安全性最佳做法和希望成为安全研究者的智能合约开发者而创建。_
+- **[学习智能合约安全与审计](https://updraft.cyfrin.io/courses/security)** - _智能合约安全与审计终极课程，专为寻求提升其安全性最佳做法和希望成为安全研究者的智能合约开发者而创建。_
 
 ### 智能合约安全性教程 {#tutorials-on-smart-contract-security}
 
