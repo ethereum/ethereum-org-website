@@ -2387,7 +2387,7 @@ export const walletsData: WalletData[] = [
     repo_url: "",
     non_custodial: true,
     security_audit: ["Certik"],
-    scam_protection: false,
+    scam_protection: true,
     hardware_support: true,
     rpc_importing: true,
     nft_support: true,
@@ -2404,7 +2404,17 @@ export const walletsData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "https://docs.coin98.com/",
     documentation: "https://docs.coin98.com/",
-    supported_chains: ["Ethereum Mainnet"],
+    supported_chains: [
+      "Ethereum Mainnet",
+      "Base",
+      "Blast",
+      "OP Mainnet",
+      "zkSync Mainnet",
+      "Arbitrum One",
+      "Linea",
+      "Scroll",
+      "Taiko Mainnet",
+    ],
   },
 ] as const satisfies Omit<WalletData, "new_to_crypto">[]
 
