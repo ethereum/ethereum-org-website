@@ -110,7 +110,7 @@ const Contributors = () => {
           </InlineLink>
           .
         </Text>
-        <h2 className="my-8 text-2xl font-semibold leading-xs md:text-[2rem]">
+        <h2 className="mb-8 mt-12 text-2xl font-semibold leading-xs md:text-[2rem]">
           {t("page-contributing-translation-program-contributors-thank-you")}
         </h2>
         <List className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
