@@ -102,7 +102,7 @@ Notably this includes EIP-4844, known as **Proto-Danksharding**, which significa
 
 The Deneb upgrade contains a set of improvements to Ethereum's _consensus_ aimed towards improving scalability. This upgrade comes in tandem with the Cancun execution upgrades to enable Proto-Danksharding (EIP-4844), along with other improvements to the Beacon Chain.
 
-Pre-generated signed "voluntary exit messages" no longer expire, thus giving more control to users staking their funds with a third-party node operator. With this signed exit message, stakers can delegate node operation while maintaining the ability to safely exit and withdrawal their funds at any time, without needing to ask permission from anyone.
+Pre-generated signed "voluntary exit messages" no longer expire, thus giving more control to users staking their funds with a third-party node operator. With this signed exit message, stakers can delegate node operation while maintaining the ability to safely exit and withdraw their funds at any time, without needing to ask permission from anyone.
 
 EIP-7514 brings a tightening to the issuance of ETH by capping the "churn" rate that validators can join the network to eight (8) per epoch. Since ETH issuance is proportional to total ETH staked, limiting the number of validators joining caps the _growth rate_ of newly issued ETH, while also reducing hardware requirements for node operators, helping decentralization.
 
