@@ -563,7 +563,7 @@ Ha Ön azt tervezi, hogy egy láncon lévő orákulumot kérdez le eszközárak�
 
 - **[Smart Contract Security Verification Standard](https://github.com/securing/SCSVS)** – _Egy tizennégy részes ellenőrző lista fejlesztők, architektúrával foglalkozók, biztonság-ellenőrzők és beszállítók számára az okosszerződések biztonságának szabványosításához._
 
-- **[Az okosszerződések biztonságának és auditálásának elsajátítása](https://updraft.cyfrin.io/courses/security) – _Az okosszerződések biztonságát és auditálását oktató tanfolyamot olyan fejlesztőknek hozták létre, akik a legjobb biztonsági gyakorlatok mentén szeretnének fejleszteni és biztonsági kutatókká válni._
+- **[Az okosszerződések biztonságának és auditálásának elsajátítása](https://updraft.cyfrin.io/courses/security)** – _Az okosszerződések biztonságát és auditálását oktató tanfolyamot olyan fejlesztőknek hozták létre, akik a legjobb biztonsági gyakorlatok mentén szeretnének fejleszteni és biztonsági kutatókká válni._
 
 ### Útmutatók az okosszerződés-biztonságról {#tutorials-on-smart-contract-security}
 
