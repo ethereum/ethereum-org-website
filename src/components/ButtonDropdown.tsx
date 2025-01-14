@@ -72,7 +72,7 @@ const ButtonDropdown = ({ list, className }: ButtonDropdownProps) => {
             return (
               <DropdownMenuItem
                 key={item.text}
-                className="justify-center"
+                className="justify-center text-center"
                 onClick={() => handleClick(item, idx)}
                 asChild
               >
@@ -89,7 +89,7 @@ const ButtonDropdown = ({ list, className }: ButtonDropdownProps) => {
           return (
             <DropdownMenuItem
               key={item.text}
-              className="justify-center"
+              className="justify-center text-center"
               onClick={() => handleClick(item, idx)}
             >
               <span>{text}</span>

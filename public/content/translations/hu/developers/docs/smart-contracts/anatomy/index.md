@@ -203,7 +203,7 @@ Egy kész szerződés nagyjából így nézne ki. Itt a `constructor` függvény
 
 ## Események és naplózások {#events-and-logs}
 
-Az eseményeken keresztül tud kommunikálni az okosszerződés és a frontend vagy más feliratkozó alkalmazás. Amikor egy tranzakciót kibányásztak, az okosszerződések eseményeket bocsáthatnak ki és naplófájlokat írhatnak a blokkláncra, melyet a frontend fel tud dolgozni.
+Az eseményeken keresztül tud kommunikálni az okosszerződés és a frontend vagy más feliratkozó alkalmazás. Amikor egy tranzakciót validálnak, az okosszerződések eseményeket és naplófájlokat bocsáthatnak ki, melyet a frontend feldolgozhat és hasznosíthat.
 
 ## Jegyzetekkel ellátott példák {#annotated-examples}
 
@@ -420,7 +420,7 @@ contract CryptoPizza is IERC721, ERC165 {
     {
         // Uses the `memory` storage location to store values only for the
         // lifecycle of this function call.
-        // Learn more: https://solidity.readthedocs.io/en/v0.5.10/introduction-to-smart-contracts.html#storage-memory-and-the-stack
+        // További info: https://solidity.readthedocs.io/en/v0.5.10/introduction-to-smart-contracts.html#storage-memory-and-the-stack
         uint256[] memory result = new uint256[](ownerPizzaCount[_owner]);
         uint256 counter = 0;
         for (uint256 i = 0; i < pizzas.length; i++) {
@@ -432,7 +432,7 @@ contract CryptoPizza is IERC721, ERC165 {
         return result;
     }
 
-    // Transfers Pizza and ownership to other address
+    // Átadja a Pizza tulajdonjogot és másik címnek
     function transferFrom(address _from, address _to, uint256 _pizzaId) public {
         require(_from != address(0) && _to != address(0), "Invalid address.");
         require(_exists(_pizzaId), "Pizza does not exist.");
@@ -443,17 +443,17 @@ contract CryptoPizza is IERC721, ERC165 {
         ownerPizzaCount[_from] = SafeMath.sub(ownerPizzaCount[_from], 1);
         pizzaToOwner[_pizzaId] = _to;
 
-        // Emits event defined in the imported IERC721 contract
+        // Kibocsájt egy eseményt, mely az importált IERC721 szerződésben van definiálva
         emit Transfer(_from, _to, _pizzaId);
         _clearApproval(_to, _pizzaId);
     }
 
     /**
-     * Safely transfers the ownership of a given token ID to another address
-     * If the target address is a contract, it must implement `onERC721Received`,
-     * which is called upon a safe transfer, and return the magic value
+     * Biztonságosan átadja a egy adott token ID tulajdonjogát egy másik címnek
+     * Ha a cél cím egy szerződés, akkor az `onERC721Received`-nek implementálva kell lennie,
+     * mely egy biztonságos átadáskor meghívódik és visszaadja a bűvös értéket
      * `bytes4(keccak256("onERC721Received(address,address,uint256,bytes)"))`;
-     * otherwise, the transfer is reverted.
+     * ellenkező esetben a transfer visszafordul.
     */
     function safeTransferFrom(address from, address to, uint256 pizzaId)
         public
@@ -463,11 +463,11 @@ contract CryptoPizza is IERC721, ERC165 {
     }
 
     /**
-     * Safely transfers the ownership of a given token ID to another address
-     * If the target address is a contract, it must implement `onERC721Received`,
-     * which is called upon a safe transfer, and return the magic value
+     * Biztonságosan átadja a egy adott token ID tulajdonjogát egy másik címnek
+     * Ha a cél cím egy szerződés, akkor az `onERC721Received`-nek implementálva kell lennie,
+     * mely egy biztonságos átadáskor meghívódik és visszaadja a bűvös értéket
      * `bytes4(keccak256("onERC721Received(address,address,uint256,bytes)"))`;
-     * otherwise, the transfer is reverted.
+     * ellenkező esetben a transfer visszafordul.
      */
     function safeTransferFrom(
         address from,
@@ -626,10 +626,10 @@ contract CryptoPizza is IERC721, ERC165 {
         uint256 size;
         // Currently there is no better way to check if there is a contract in an address
         // than to check the size of the code at that address.
-        // See https://ethereum.stackexchange.com/a/14016/36603
-        // for more details about how this works.
-        // TODO Check this again before the Serenity release, because all addresses will be
-        // contracts then.
+        // Lásd https://ethereum.stackexchange.com/a/14016/36603
+        // hogy hogyan működik ez.
+        // TODO A Serenity release előtt ellenőrizni, mivel azután minden cím
+        // szerződés lesz.
         // solium-disable-next-line security/no-inline-assembly
         assembly {
             size := extcodesize(account)

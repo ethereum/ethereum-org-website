@@ -8,6 +8,8 @@ lang: it
 
 Il crescente interesse per le criptovalute comporta un maggiore rischio di esporsi a truffatori e hacker. Questo articolo delinea alcune delle migliori pratiche per mitigare tali rischi.
 
+**Ricorda: nessuno ti contatterà mai da ethereum.org. Non rispondere alle email che dichiarano di provenire dal supporto ufficiale di Ethereum.**
+
 <Divider />
 
 ## Sicurezza criptovalute 101 {#crypto-security}
@@ -242,15 +244,7 @@ L'utilizzo dell'**autenticazione a due fattori (A2F)** costituisce un ulteriore 
 
 <InfoBanner emoji=":lock:">
   <div>
-    Nota: L'utilizzo di SMS basati sul protocollo 2FA è suscettibile di 
-    <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">
-      SIM jacking
-    </a>
-     e non è sicuro. Per una migliore sicurezza, utilizzare servizi come{" "}
-    <a href="https://mashable.com/article/how-to-set-up-google-authenticator">
-      Google Authenticator
-    </a>
-     o <a href="https://authy.com/">Authy</a>.
+    Nota: l'utilizzo dell'A2F basata su SMS è soggetta a <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">SIM jacking</a> e non è sicura. Per la massima sicurezza, utilizza un servizio come <a href="https://mashable.com/article/how-to-set-up-google-authenticator">Google Authenticator</a> o <a href="https://authy.com/">Authy</a>.
   </div>
 </InfoBanner>
 

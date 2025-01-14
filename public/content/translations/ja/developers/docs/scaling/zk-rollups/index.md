@@ -182,7 +182,7 @@ ZKロールアップにおけるトランザクション手数料は、イーサ
 
 2. **データの公開**: ZKロールアップでは、各トランザクションの状態データを`calldata`としてイーサリアムに送信します。 現在、`calldata`のコストは [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) によって管理されています。 `calldata` の非ゼロバイトに対しては16ガス、ゼロバイトに対しては4ガスのコストが、それぞれ規定されています。 各トランザクションに対して支払われるコストは、オンチェーンで公開される`calldata`の規模に応じて決定されます。
 
-3. **L2オペレーターに対する手数料**: これは、イーサリアムにおけるマイナー手数料の場合と同様に、トランザクションの処理で発生した計算コストの代価としてロールアップのオペレーターに支払う手数料です。
+3. **L2オペレーター手数料**：これは、トランザクション処理にかかる計算コストに対する補償としてロールアップオペレーターに支払われる金額で、イーサリアムメインネットにおける[トランザクションの「優先手数料 (チップ) 」](/developers/docs/gas/#how-are-gas-fees-calculated)に似ています。
 
 4. **有効性証明の生成と検証**: ZKロールアップのオペレーターは、多くのリソースを用いてトランザクションバッチに対する有効性証明を生成しなければなりません。 メインネットにおけるゼロ知識証明の検証にもガス代が発生します（最大50万ガス）。
 
@@ -222,12 +222,6 @@ FinematicsによるZKロールアップの説明動画をご覧ください：
 
 <YouTube id="7pWxCklcNsU" start="406" />
 
-### ゼロ知識ロールアップの活用方法 {#use-zk-rollups}
-
-現在、Dappに統合可能ないくつかのZKロールアップの実装が提供されています：
-
-<RollupProductDevDoc rollupType="zk" />
-
 ## zkEVMの開発プロジェクト {#zkevm-projects}
 
 現在、zkEVMの開発に取り組んでいるプロジェクトとしては、以下が挙げられます：
@@ -240,7 +234,7 @@ FinematicsによるZKロールアップの説明動画をご覧ください：
 
 - **[Taiko](https://taiko.xyz)** - _Taiko は分散型のイーサリアム等価のゼロ知識ロールアップです ([タイプ1のZK-EVM](https://vitalik.eth.limo/general/2022/08/04/zkevm.html))_。
 
-- **[ZKSync](https://docs.zksync.io/)** - _ZkSync Eraは、Matter Labsが独自開発したzkEVMを搭載するEVM互換のゼロ知識ロールアップです_。
+- **[ZKsync](https://docs.zksync.io/)** - _ZKsync Eraは、Matter Labsによって構築されたEVM互換のZKロールアップであり、自社開発のzkEVMを基盤としています。_
 
 - **[Starknet](https://starkware.co/starknet/)** - _StarkNetは、StarkWareによって開発されたEVM互換のレイヤー2スケーリングソリューションです。_
 

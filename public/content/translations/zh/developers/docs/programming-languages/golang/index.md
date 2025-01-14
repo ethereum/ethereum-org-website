@@ -64,6 +64,7 @@ incomplete: true
 - [Multi Geth](https://github.com/multi-geth/multi-geth) - _支持多种以太坊网络_
 - [Geth Light Client](https://github.com/zsfelfoldi/go-ethereum/wiki/Geth-Light-Client) - _轻量级以太坊子协议的 Geth 实现_
 - [以太坊 Golang 软件开发工具包](https://github.com/everFinance/goether) - _Golang 中的简单以太坊钱包实现和实用程序_
+- [Covalent Golang 软件开发工具包](https://github.com/covalenthq/covalent-api-sdk-go) - _通过 Go 软件开发工具包高效访问多达 200 个区块链的区块链数据_
 
 想要获取更多的资源？ 请查看 [ethereum.org/developers](/developers/)。
 

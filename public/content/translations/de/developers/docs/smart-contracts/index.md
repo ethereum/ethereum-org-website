@@ -109,3 +109,4 @@ Multisig-Verträge (multiple Signaturen) sind Smart Contract-Accounts, die mehre
 - [Coinbase: Was ist ein Smart Contract?](https://www.coinbase.com/learn/crypto-basics/what-is-a-smart-contract)
 - [Chainlink: Was ist ein Smart Contract?](https://chain.link/education/smart-contracts)
 - [Video: Einfach erklärt – Smart Contracts](https://youtu.be/ZE2HxTmxfrI)
+- [Cyfrin Updraft: Web3-Lern- und Auditierungsplattform](https://updraft.cyfrin.io)

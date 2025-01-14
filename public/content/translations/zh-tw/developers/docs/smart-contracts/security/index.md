@@ -78,7 +78,7 @@ contract VendingMachine {
 
 很可惜，單元測試單獨使用時，提升智慧型合約安全性的成效並不顯著。 單元測試可能證明函數可以正確執行模擬資料，但單元測試的效果取決於編寫測試的品質。 這使得偵測未注意到、但會破壞智慧型合約安全性的邊緣案例與漏洞非常困難。
 
-更好的做法是結合單元測試與屬性測試，並運用[靜態和動態分析](/developers/docs/smart-contracts/testing/#static-dynamic-analysis)執行。 靜態分析依賴低階表示法，像是[控制流程圖](https://en.wikipedia.org/wiki/Control-flow_graph)和[抽象語法樹](https://deepsource.io/glossary/ast/)，來分析可觸及的程式狀態和執行路徑。 同時，動態分析技術，如模糊測試、用隨機輸入值執行合約程式碼，能夠偵測違反安全屬性的操作。
+更好的做法是結合單元測試與屬性測試，並運用[靜態和動態分析](/developers/docs/smart-contracts/testing/#static-dynamic-analysis)執行。 靜態分析依賴低階表示法，像是[控制流程圖](https://en.wikipedia.org/wiki/Control-flow_graph)和[抽象語法樹](https://deepsource.io/glossary/ast/)，來分析可觸及的程式狀態和執行路徑。 同時，動態分析技術（如[智慧型合約模糊測試](https://www.cyfrin.io/blog/smart-contract-fuzzing-and-invariants-testing-foundry)）則使用隨機輸入值執行合約程式碼，以偵測違反安全屬性的操作。
 
 [形式驗證](/developers/docs/smart-contracts/)是另一項驗證智慧型合約安全屬性的技術。 不同於一般測試，形式驗證可以确凿地證明智慧型合約不存在任何錯誤。 這種做法會建立描述預期安全屬性的形式規范，並證明合約的形式模型遵守此規范。
 
@@ -90,7 +90,10 @@ contract VendingMachine {
 
 委託智慧型合約審核服務是進行獨立程式碼審查的方法之一。 審核者在確保智慧型合約安全性，且沒有品質瑕疵和設計錯誤上扮演重要角色。
 
-但是，你應該避免把審核當成一勞永逸地的解決方案。 智慧型合約審核不可能發現每一個錯誤，其主要目的是再次進行審查，幫助開發者偵測在開發初期和測試階段沒有發現的問題。 你應該遵循[和審核者合作的最佳案例](https://twitter.com/tinchoabbate/status/1400170232904400897)，製作完整的程式碼記錄，以及新增內嵌備註，才能從智慧型合約審核中獲得最大效益。
+但是，你應該避免把審核當成一勞永逸地的解決方案。 智慧型合約審核不可能發現每一個錯誤，其主要目的是再次進行審查，幫助開發者偵測在開發初期和測試階段沒有發現的問題。 你也應該遵循與審核者合作的最佳案例，例如製作完整的程式碼記錄以及新增內嵌注釋，才能從智慧型合約審核中獲得最大效益。
+
+- [智慧型合約審核提示和技巧](https://twitter.com/tinchoabbate/status/1400170232904400897) - _@tinchoabbate_
+- [充分利用你的審核](https://inference.ag/blog/2023-08-14-tips/) - _推理_
 
 #### 漏洞懸賞 {#bug-bounties}
 
@@ -112,7 +115,7 @@ contract VendingMachine {
 
 - 使用[開發環境](/developers/docs/frameworks/)來測試、編譯、部署智慧型合約
 
-- 利用基本的程式碼分析工具，例如 Mythril 和 Slither 來執行程式碼。 理想情况下，這應該在合併提取請求及檢查輸出結果異同前完成
+- 透過基本的程式碼分析工具，例如 [Cyfrin Aaderyn](https://github.com/Cyfrin/aderyn)、Mythril 和 Slither，來執行程式碼。 理想情况下，這應該在合併提取請求及檢查輸出結果異同前完成
 
 - 確認程式碼編譯沒有錯誤，且 Solidity 編譯器不會傳出警告
 
@@ -126,7 +129,7 @@ contract VendingMachine {
 
 雖然以太坊智慧型合約是預設不得變更，但可以透過升級模式來達成某程度的變更。 當重大缺陷迫使舊合約無法使用，而部署新邏輯是最可行的選擇時，就必須升級合約。
 
-合約升級機制的運作方式不同，「代理人模式」是升級智慧型合約最常見的方法。 代理人模式會將應用程式的狀態和邏輯拆分成_兩個_合約。 第一個合約（稱為「代理人合約」）儲存狀態變數（例如使用者餘額）；第二個合約（稱為「邏輯合約」）保存執行合約函數的程式碼。
+合約升級機制的運作方式不同，「代理人模式」是升級智慧型合約最常見的方法。 [代理人模式](https://www.cyfrin.io/blog/upgradeable-proxy-smart-contract-pattern)會將應用程式的狀態和邏輯拆分成_兩個_合約。 第一個合約（稱為「代理人合約」）儲存狀態變數（例如使用者餘額）；第二個合約（稱為「邏輯合約」）保存執行合約函數的程式碼。
 
 帳戶只和代理人合約互動，代理人合約再用低階調用 [`delegatecall()`](https://docs.soliditylang.org/en/v0.8.16/introduction-to-smart-contracts.html?highlight=delegatecall#delegatecall-callcode-and-libraries) 發送所有函數調用至邏輯合約。 和一般的訊息調用不同，`delegatecall()` 會確保在邏輯合約地址上執行的程式碼是在調用合約的情境下執行。 這表示邏輯合約將永遠把資料寫入代理人的存儲空間（而不是自己的存儲空間），且會保留 `msg.sender` 與 `msg.value` 的原始值。
 
@@ -214,7 +217,7 @@ contract EmergencyStop {
 
 預防鏈上治理相關問題的方法之一是[使用時間鎖定](https://blog.openzeppelin.com/protect-your-users-with-smart-contract-timelocks/)。 時間鎖定是直到特定時間過後，才讓智慧型合約執行某些動作。 其他策略包括：根據每一個代幣被鎖定的時間賦予「投票加權」，或以歷史期間（例如：過去的 2-3 個區塊）而不是目前區塊，來衡量一個地址的投票權。 這兩種方法都能降低快速累積投票權，進而影響鏈上投票結果的情況。
 
-深入瞭解[設計安全治理體系](https://blog.openzeppelin.com/smart-contract-security-guidelines-4-strategies-for-safer-governance-systems/)和 [去中心化自治組織的不同投票機制](https://hackernoon.com/governance-is-the-holy-grail-for-daos)。
+藉由共享連結，了解關於[設計安全管理體系](https://blog.openzeppelin.com/smart-contract-security-guidelines-4-strategies-for-safer-governance-systems/)、[去中心化自治組織的不同投票機制](https://hackernoon.com/governance-is-the-holy-grail-for-daos)，以及[利用去中心化金融的常見去中心化自治組織攻擊媒介](https://dacian.me/dao-governance-defi-attacks)的更多資訊。
 
 ### 8. 將程式碼的複雜性降到最低 {#reduce-code-complexity}
 
@@ -448,7 +451,7 @@ contract Attack {
 
 ##### 如何預防操縱預言機
 
-避免預言機操縱的最低要求，是使用會查詢多來源資訊的去中心化預言機網路，來避免單點失效。 在大多數情況下，去中心化預言機內建加密經濟獎勵機制，促進預言機節點報告正確資訊，因此比集中化預言機安全。
+[避免預言機操縱](https://www.cyfrin.io/blog/price-oracle-manipultion-attacks-with-examples)的最低要求是，使用去中心化預言機網路，來查詢來自多個來源的資訊以避免單點故障。 在大多數情況下，去中心化預言機內建加密經濟獎勵機制，促進預言機節點報告正確資訊，因此比集中化預言機安全。
 
 若你打算在鏈上預言機查詢資產價格，可考慮使用採用時間加權平均價格 (TWAP) 機制的預言機。 [時間加權平均價格預言機](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/oracles)會查詢兩個不同時間點（你可以更改時間點）的資產價格，再根據得到數據的平均值計算現貨價值。 選擇時間較長的價格可保護協定免於價格操縱，因為近期大量的交易下單不會對資產價格造成影響。
 
@@ -468,15 +471,17 @@ contract Attack {
 
 - **[應用程式二進制介面編碼器](https://abi.hashex.org/)** - _對 Solidity 合約的函數和建構函數引數進行編碼的線上免費服務。_
 
+- **[Aderyn](https://github.com/Cyfrin/aderyn)** - _Solidity 靜態分析器，透過周遊抽象語法樹 (AST) 找出可疑漏洞，並以易於使用的 Markdown 格式列印問題。_
+
 ### 監視智慧型合約的工具 {#smart-contract-monitoring-tools}
 
-- **[OpenZeppelin Defender Sentinels](https://docs.openzeppelin.com/defender/v1/sentinel)** - _一個自動監控和回應智慧型合約事件、函數和交易參數的工具。_
+- **[OpenZeppelin Defender Sentinels](https://docs.openzeppelin.com/defender/v1/sentinel)** - _一個自動監控和回應智慧型合約事件、函式和交易參數的工具。_
 
 - **[Tenderly Real-Time Alerting](https://tenderly.co/alerting/)**：_當智慧型合約或錢包出現不尋常的和意外事件時，可以獲得即時通知的工具。_
 
 ### 智慧型合約的安全管理工具 {#smart-contract-administration-tools}
 
-- **[OpenZeppelin Defender Admin](https://docs.openzeppelin.com/defender/v1/admin)** - _管理智慧型合約運作，包括存取控制、升級、和暫停的介面。_
+- **[OpenZeppelin Defender Admin](https://docs.openzeppelin.com/defender/v1/admin)** - _管理智慧型合約運作，包括存取控制、升級和暫停的介面。_
 
 - **[Safe](https://safe.global/)** - _在以太坊上執行、需要達到最低核准人數（N 人中的M 人），才能執行交易的智慧型合約數位錢包。_
 
@@ -506,6 +511,16 @@ contract Attack {
 
 - **[Code4rena](https://code4rena.com/)** - _鼓勵智慧型合約安全性專家找出漏洞，並協助提升 Web3 安全性，富競爭力的審核平台。_
 
+- **[CodeHawks](https://codehawks.com/)** - _舉辦面向安全研究人員的智慧型合約審核比賽的競爭性審核平台。_
+
+- **[Cyfrin](https://cyfrin.io)** - _Web3 安全巨頭，透過產品和智慧型合約審核服務來發展加密安全。_
+
+- **[ImmuneBytes](https://www.immunebytes.com//smart-contract-audit/)** - _Web3 安全公司，透過經驗豐富的審核者團隊和一流工具，為區塊鏈系統提供安全審核。_
+
+- **[Oxorio](https://oxor.io/)** - _智慧型合約審核和區塊鏈安全服務，在以太坊虛擬機、Solidity、零知識、加密公司和去中心化金融專案的跨鏈技術方面擁有深厚的專業知識。_
+
+- **[Inference](https://inference.ag/)** - _安全審核公司，專注基於以太坊虛擬機區塊鏈的智慧型合約審核。 透過專家審核者的幫助，他們能發現潛在問題並提出可行的解決方案，以便在部署前解決這些問題。_
+
 ### 漏洞懸賞平台 {#bug-bounty-platforms}
 
 - **[Immunefi](https://immunefi.com/)** - _這是智慧型合約和去中心化金融專案漏洞懸賞平台。安全研究員在此審核程式碼、找出漏洞、獲得報酬、使加密貨幣更安全。_
@@ -513,6 +528,10 @@ contract Attack {
 - **[HackerOne](https://www.hackerone.com/)** - _連結商業和滲透測試者及安全研究者的漏洞協調和漏洞懸賞平台。_
 
 - **[HackenProof](https://hackenproof.com/)** - _專業的加密貨幣專案（去中心化金融、智慧型合約、錢包、中心化交易所等）漏洞懸賞平台。安全專業人士在此提供分類服務，而研究者可以在提出重要、經過驗證的錯誤報告時獲得報酬。_
+
+-  **[Sherlock](https://www.sherlock.xyz/)** - _Web3 中的智慧型合約安全承銷商，透過智慧型合約管理對審核者的支出，以確保相關漏洞得到公平償付。_
+
+-  **[CodeHawks](https://www.codehawks.com/)** - _競爭性漏洞懸賞平台，審核者可以在其中參與安全競賽和挑戰，以及自己的私人審核（即將推出）。_
 
 ### 已知的智慧型合約漏洞和弱點出版品 {#common-smart-contract-vulnerabilities-and-exploits}
 
@@ -530,6 +549,8 @@ contract Attack {
 
 - **[Ethernaut](https://ethernaut.openzeppelin.com/)** - _以 Web3/Solidity 為中心的實戰演習，每一個等級都是一個必須被「駭客破解」的智慧型合約。_
 
+- **[HackenProof x HackTheBox](https://app.hackthebox.com/tracks/HackenProof-Track)** - _智慧型合約駭客挑戰，以奇幻冒險為背景。 成功完成挑戰還可以入圍非公開的漏洞懸賞計劃。_
+
 ### 保護智慧型合約的最佳案例 {#smart-contract-security-best-practices}
 
 - **[ConsesSys：以太坊智慧型合約安全性最佳案例](https://consensys.github.io/smart-contract-best-practices/)** - _保護以太坊智慧型合約安全性之準則的完整清單。_
@@ -542,14 +563,18 @@ contract Attack {
 
 - **[智慧型合約安全性驗證標準](https://github.com/securing/SCSVS)** - _適用於開發者、架構師、安全性審查者和廠商的標準化智慧型合約安全性 14 點檢查清單。_
 
+- **[學習智慧型合約安全與審核](https://updraft.cyfrin.io/courses/security)** - _出色的智慧型合約安全與審核課程，為希望提升安全最佳做法並成為安全研究人員的智慧型合約開發人員而設。_
+
 ### 關於智慧型合約安全性的使用教學 {#tutorials-on-smart-contract-security}
 
 - [如何編寫安全的智慧型合約](/developers/tutorials/secure-development-workflow/)
 
-- [如何使用 Slither 搜索智慧型合約bug.](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
+- [如何使用 Slither 來搜尋智慧型合約漏洞](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
 
 - [如何使用 Manticore 搜索智慧型合約bug.](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
 
 - [智慧型合約安全指南](/developers/tutorials/smart-contract-security-guidelines/)
 
 - [如何安全整合包含任意代幣的代幣合約](/developers/tutorials/token-integration-checklist/)
+
+- [Cyfrin Updraft - 智慧型合約安全與審核完整課程](https://updraft.cyfrin.io/courses/security)

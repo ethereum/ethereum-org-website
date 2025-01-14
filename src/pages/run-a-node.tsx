@@ -11,7 +11,6 @@ import {
   Flex,
   type FlexProps,
   type HeadingProps,
-  type Icon as ChakraIcon,
 } from "@chakra-ui/react"
 
 import type { BasePageProps, ChildOnlyProp, Lang } from "@/lib/types"
@@ -20,6 +19,7 @@ import { Button, ButtonLink } from "@/components/Buttons"
 import Emoji from "@/components/Emoji"
 import ExpandableCard from "@/components/ExpandableCard"
 import FeedbackCard from "@/components/FeedbackCard"
+import type { IconBaseType } from "@/components/icons/icon-base"
 import {
   DecentralizationGlyphIcon,
   DownloadGlyphIcon,
@@ -314,7 +314,7 @@ const Width40 = (props: ChildOnlyProp) => (
 )
 
 type RunANodeCard = {
-  image: typeof ChakraIcon
+  image: IconBaseType
   title: string
   preview: ReactNode
   body: string[]
@@ -431,7 +431,7 @@ const RunANodePage = () => {
   return (
     <GappedPage>
       <PageMetadata
-        title={t("page-run-a-node-title")}
+        title={t("page-run-a-node-meta-title")}
         description={t("page-run-a-node-meta-description")}
         image="/images/run-a-node/ethereum-inside.png"
       />

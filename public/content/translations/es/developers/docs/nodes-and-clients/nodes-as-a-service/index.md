@@ -63,19 +63,30 @@ A continuación se incluye una lista con algunos de los proveedores de nodos de 
     - Panel de control con Explorador de Solicitudes, Mempool Watcher y Composer
     - Acceso intregrado a un grifo de red de pruebas
     - Comunidad constructora activa en Discord con 18.000 usuarios
+
 - [**All That Node**](https://allthatnode.com/)
   - [Documentos](https://docs.allthatnode.com/)
   - Características
-    - Nivel gratuito más grande con 150.000 peticiones diarias
-    - Acceso a más de 24 nodos de la cadena de bloques
-    - Terminales de conexión RPC, HTTPS y WSS
-    - Acceso ilimitado a datos de archivos
-    - Soporte 24/7 y un tiempo de actividad superior al 99,9 %
-    - Grifo (faucet) disponible en múltiples cadenas
-    - Acceso ilimitado a terminales con un número ilimitado de claves API
-    - Trazado/Depuración de espacio de nombres disponible
+    - 50.000 solicitudes por día con nivel gratuito
+    - Soporte para más de 40 protocolos
+    - Compatibilidad con las API JSON-RPC (EVM, Tendermint), REST y Websocket
+    - Acceso ilimitado a la fecha de archivo
+    - Soporte técnico 24/7 y tiempo de actividad de más del 99,9%
+    - Faucet disponible en múltiples cadenas
+    - Acceso ilimitado a terminales con un número ilimitado de claves de API
+    - API de Rastreo/Depuración compatible
     - Actualizaciones automáticas
-    - Soporte técnico
+
+- [**Amazon Managed Blockchain**](https://aws.amazon.com/managed-blockchain/)
+  - [Documentos](https://aws.amazon.com/managed-blockchain/resources/)
+  - Características
+    - Nodos de Ethereum completamente gestionados
+    - Disponible en seis regiones
+    - JSON-RPC sobre HTTP y WebSockets seguros
+    - Soporta 3 cadenas
+    - SLA, soporte de AWS 24/7
+    - Go-ethereum y Lighthouse
+
 - [**Ankr**](https://www.ankr.com/)
   - [Documentos](https://docs.ankr.com/)
   - Características
@@ -86,8 +97,9 @@ A continuación se incluye una lista con algunos de los proveedores de nodos de 
     - Escalabilidad en función del uso
     - Herramientas de análisis
     - Panel de control
-    - Puntos de conexión RPC, HTTPS y WSS
+    - Terminales de conexión RPC, HTTPS y WSS
     - Asistencia directa
+
 - [**Blast**](https://blastapi.io/)
   - [Documentos](https://docs.blastapi.io/)
   - Características
@@ -102,14 +114,16 @@ A continuación se incluye una lista con algunos de los proveedores de nodos de 
     - Supervisión y alertas 24/7
     - Un acuerdo de nivel de servicio (o SLA) total del 99,9 %
     - Pago en criptomoneda
+
 - [**BlockDaemon**](https://blockdaemon.com/)
-  - [Documentos](https://ubiquity.docs.blockdaemon.com/)
+  - [Documentación](https://ubiquity.docs.blockdaemon.com/)
   - Beneficios
     - Tablero
     - Base por nodo
     - Analíticas
+
 - [**BlockPI**](https://blockpi.io/)
-  - [Documentación](https://docs.blockpi.io/)
+  - [Documentos](https://docs.blockpi.io/)
   - Características
     - Estructura de nodos distriduida & robusta
     - Puntos de conexión RPC, HTTPS y WSS
@@ -119,6 +133,16 @@ A continuación se incluye una lista con algunos de los proveedores de nodos de 
     - Plan personalizado y pago en función del uso
     - Pagar en cripto
     - Soporte directo & Soporte técnico
+
+- [**Chainbase**](https://www.chainbase.com/)
+  - [Documentos](https://docs.chainbase.com)
+  - Características
+    - Servicio de RPC de alta disponibilidad, velóz y escalable
+    - Compatibilidad con multicadena
+    - Tarifas gratuitas
+    - Panel de control sencillo para el usuario
+    - Proporciona servicios de datos de la cadena de bloques más allá de RPC
+
 - [**Chainstack**](https://chainstack.com/)
   - [Documentos](https://docs.chainstack.com/)
   - Características
@@ -131,6 +155,7 @@ A continuación se incluye una lista con algunos de los proveedores de nodos de 
     - Traiga su nube (Bring Your Own Cloud o BYOC)
     - Precio por hora
     - Soporte directo 24/7
+
 - [**DataHub**](https://datahub.figment.io)
   - [Documentos](https://docs.figment.io/)
   - Características
@@ -143,7 +168,8 @@ A continuación se incluye una lista con algunos de los proveedores de nodos de 
     - Panel
     - Soporte directo 24/7
     - Pago en criptomonedas (para empresas)
-- [DRPC](https://drpc.org/)
+
+- [**DRPC**](https://drpc.org/)
   - [Documentos](https://docs.drpc.org/)
   - Características
     - Nodos RPC descentralizados
@@ -157,6 +183,7 @@ A continuación se incluye una lista con algunos de los proveedores de nodos de 
     - Opciones de retroceso flexible
     - [Extremo público](https://eth.drpc.org)
     - Nodos de archivos compartidos libres
+
 - [**GetBlock**](https://getblock.io/)
   - [Documentos](https://getblock.io/docs/get-started/authentication-with-api-key/)
   - Características
@@ -168,6 +195,7 @@ A continuación se incluye una lista con algunos de los proveedores de nodos de 
     - Analíticas avanzadas
     - Actualizaciones automáticas
     - Soporte técnico
+
 - [**InfStones**](https://infstones.com/)
   - Características
     - Opción de nivel gratuito
@@ -179,6 +207,7 @@ A continuación se incluye una lista con algunos de los proveedores de nodos de 
     - Sincronización rápida para los despliegues dedicados
     - Soporte directo 24/7
     - Acceso a más de 50 nodos de la cadena de bloques
+
 - [**Infura**](https://infura.io/)
   - [Documentos](https://infura.io/docs)
   - Características
@@ -187,8 +216,9 @@ A continuación se incluye una lista con algunos de los proveedores de nodos de 
     - Datos de archivo de pago
     - Soporte directo
     - Panel de control
+
 - [**Kaleido**](https://kaleido.io/)
-  - [Documentos](https://docs.kaleido.io/)
+  - [Documentación](https://docs.kaleido.io/)
   - Características
     - Categoría de inicio gratuita
     - Despliegue de nodo de Ethereum en un clic
@@ -207,6 +237,7 @@ A continuación se incluye una lista con algunos de los proveedores de nodos de 
     - Compatible con multinube, multiregión y modelos de despliegue híbrido
     - Precios simples por hora basados en tasación SaaS
     - Soporte 24/7 y SLA
+
 - [**Lava Network**](https://www.lavanet.xyz/)
   - [Documentos](https://docs.lavanet.xyz/)
   - Características
@@ -218,8 +249,9 @@ A continuación se incluye una lista con algunos de los proveedores de nodos de 
     - Interfaz de gestión de proyecto intuitiva
     - Integridad de datos basada en consenso
     - Compatibilidad con multicadena
+
 - [**Moralis**](https://moralis.io/)
-  - [Documentación](https://docs.moralis.io/)
+  - [Documentos](https://docs.moralis.io/)
   - Características
     - Nodos compartidos libres
     - Nodos de archivos compartidos libres
@@ -230,6 +262,7 @@ A continuación se incluye una lista con algunos de los proveedores de nodos de 
     - SDK exclusivo de Ethereum
     - Terminales de conexión de API exclusivas
     - Soporte técnico directo
+
 - [**MegaNode de NodeReal**](https://nodereal.io/)
   - [Documentos](https://docs.nodereal.io/nodereal/meganode/introduction)
   - Características
@@ -237,6 +270,7 @@ A continuación se incluye una lista con algunos de los proveedores de nodos de 
     - API mejorada para desarrolladores de Web3
     - Compatibilidad con multicadena
     - Comience gratis
+
 - [**NOWNodes**](https://nownodes.io/)
   - [Documentos](https://documenter.getpostman.com/view/13630829/TVmFkLwy)
   - Características
@@ -247,6 +281,7 @@ A continuación se incluye una lista con algunos de los proveedores de nodos de 
     - Equipo de Soporte 24/7
     - Gestor de cuentas personales
     - Copias de seguridad, archivos, documentos compartidos y nodos dedicados
+
 - [**Pocket Network**](https://www.pokt.network/)
   - [Documentos](https://docs.pokt.network/home/)
   - Características
@@ -267,6 +302,7 @@ A continuación se incluye una lista con algunos de los proveedores de nodos de 
     - La opción más privada y resistente a la censura
     - Soporte práctico para desarrolladores
     - [Portal Pocket](https://bit.ly/ETHorg_POKTportal): panel de control y analíticas
+
 - [**QuickNode**](https://www.quicknode.com)
   - [Documentos](https://www.quicknode.com/docs/)
   - Características
@@ -280,11 +316,13 @@ A continuación se incluye una lista con algunos de los proveedores de nodos de 
     - API de analíticas y datos de NFT
     - [Certificado SOC2](https://www.quicknode.com/security)
     - Adecuado para desarrolladores y empresas
+
 - [**Rivet**](https://rivet.cloud/)
   - [Documentos](https://rivet.readthedocs.io/en/latest/)
   - Características
     - Opción de nivel gratuito
     - Escalabilidad en función del uso
+
 - [**SenseiNode**](https://senseinode.com)
   - [Documentos](https://docs.senseinode.com/)
   - Características
@@ -292,6 +330,7 @@ A continuación se incluye una lista con algunos de los proveedores de nodos de 
     - Panel de control
     - Alojamiento fuera de AWS en múltiples proveedores de alojamiento por diferentes ubicaciones en América Latina
     - Clientes Prism y Lighthouse
+
 - [**SettleMint**](https://console.settlemint.com/)
   - [Documentos](https://docs.settlemint.com/)
   - Características
@@ -305,6 +344,7 @@ A continuación se incluye una lista con algunos de los proveedores de nodos de 
     - Panel de control
     - Precio por hora
     - Asistencia directa
+
 - [**Antiguamente**](https://tenderly.co/web3-gateway)
   - [Documentos](https://docs.tenderly.co/web3-gateway/web3-gateway)
   - Características
@@ -312,13 +352,26 @@ A continuación se incluye una lista con algunos de los proveedores de nodos de 
     - Acceso libre a datos históricos
     - Carga de flujos de trabajo con mucho texto de lectura hasta 8 veces más rápidas
     - Acceso a la lectura 100 % coherente
-    - Puntos finales RPC JSON
+    - Terminales JSON-RPC
     - Constructor de solicitudes RPC basado en la interfaz y vista previa de las solicitudes
     - Estrechamente incorporado en las herramientas de desarrollo, depuración y pruebas de Tenderly
     - Simulaciones de transacciones
     - Analíticas de uso y filtrado
     - Cómoda y sencilla gestion de claves de acceso
     - Soporte de ingeniería dedicado por chat, correo electrónico y Discord
+
+- [**Vista de token**](https://services.tokenview.io/)
+  - [Documentos](https://services.tokenview.io/docs?type=nodeService)
+  - Características
+    - Soporte técnico 24/7 & comunidad de desarrolladores en Telegram
+    - Compatibilidad con multicadena (Bitcoin, Ethereum, Tron, BNB Smart Chain, Ethereum Classic)
+    - Tanto los terminales RPC como WSS están abiertos al uso
+    - Acceso ilimitado para archivar datos API
+    - Panel de control con explorador de solicitudes y Mempool Watcher
+    - API de datos NFT y notificaciones Webhook
+    - Pago con criptomoneda
+    - Soporte externo para requisitos de comportamiento adicionales
+
 - [**Watchdata**](https://watchdata.io/)
   - [Documentos](https://docs.watchdata.io/)
   - Características
@@ -330,6 +383,7 @@ A continuación se incluye una lista con algunos de los proveedores de nodos de 
     - Compatibilidad con varios nodos
     - Escalabilidad de recursos
     - Velocidades de procesamiento altas
+
 - [**ZMOK**](https://zmok.io/)
   - [Documentos](https://docs.zmok.io/)
   - Características
@@ -338,39 +392,18 @@ A continuación se incluye una lista con algunos de los proveedores de nodos de 
     - Tarifa ilimitada de transacciones y gas infinito por enviar transacciones
     - El más rápido del nuevo bloque en obtener y leer la cadena de bloques
     - El mejor precio por garantía de llamada API
-- [**Chainbase**](https://www.chainbase.com/)
-  - [Documentos](https://docs.chainbase.com)
+
+- [**Zeeve**](https://www.zeeve.io/)
+  - [Documentos](https://www.zeeve.io/docs/)
   - Características
-    - Servicio de RPC de alta disponibilidad, velóz y escalable
-    - Compatibilidad con multicadena
-    - Tarifas gratuitas
-    - Panel de control sencillo para el usuario
-    - Proporciona servicios de datos de la cadena de bloques más allá de RPC
+    - Plataforma de automatización sin código de grado empresarial que proporciona implementación, supervisión y gestión de nodos y redes de la cadena de bloques.
+    - Compatibilidad con más de 30 protocolos & integraciones, entre otras funciones
+    - Servicios de infraestructura Web3 de valor añadido como el almacenamiento descentralizado, la identidad descentralizada y API de datos de la cadena de bloques del libro mayor para casos de uso en el mundo real
+    - El soporte 24/7 y el seguimiento proactivo garantizan el buen estado de los nodos todo el tiempo.
+    - Los terminales RPC ofrecen acceso autenticado a las API, gestión sin complicaciones con panel de control intuitivo y análisis
+    - Proporciona tanto una nube gestionada, como opciones de nuebe propias de libre elección y es compatible con los principales proveedores de nube, como AWS, Azure, Google Cloud, Digital Ocean y en las instalaciones.
+    - Utilizamos el enrutamiento inteligente para elegir siempre el nodo más cercano a su usuario
 
-[**Zeeve**](https://www.zeeve.io/)
-
-- [Documentos](https://www.zeeve.io/docs/)
-- Características
-  - Plataforma de automatización sin código de grado empresarial que proporciona implementación, supervisión y gestión de nodos y redes de la cadena de bloques.
-  - Compatibilidad con más de 30 protocolos & integraciones, entre otras funciones
-  - Servicios de infraestructura Web3 de valor añadido como el almacenamiento descentralizado, la identidad descentralizada y API de datos de la cadena de bloques del libro mayor para casos de uso en el mundo real
-  - El soporte 24/7 y el seguimiento proactivo garantizan el buen estado de los nodos todo el tiempo.
-  - Las terminales RPC ofrecen acceso autenticado a la API, gestión libre de problemas con un panel de control intuitivo y analíticas.
-  - Proporciona tanto una nube gestionada, como opciones de nuebe propias de libre elección y es compatible con los principales proveedores de nube, como AWS, Azure, Google Cloud, Digital Ocean y en las instalaciones.
-  - Utilizamos el enrutamiento inteligente para elegir siempre el nodo más cercano a su usuario
-
-[**Vista de token**](https://services.tokenview.io/)
-
-- [Documentos](https://services.tokeniew/docs?type=nodeService)
-- Características
-  - Soporte técnico 24/7 & comunidad de desarrolladores en Telegram
-  - Compatibilidad con multicadena (Bitcoin, Ethereum, Tron, BNB Smart Chain, Ethereum Classic)
-  - Las terminales RPC y WSS están abiertas para su uso
-  - Acceso ilimitado para archivar datos API
-  - Panel de control con explorador de solicitudes y Mempool Watcher
-  - API de datos NFT y notificaciones Webhook
-  - Pago con criptomoneda
-  - Soporte externo para requisitos de comportamiento adicionales
 
 ## Más información {#further-reading}
 
@@ -383,4 +416,4 @@ A continuación se incluye una lista con algunos de los proveedores de nodos de 
 ## Tutoriales relacionados {#related-tutorials}
 
 - [Primeros pasos con el desarrollo de Ethereum usando Alchemy](/developers/tutorials/getting-started-with-ethereum-development-using-alchemy/)
-- [Guía para enviar transacciones usando Web 3.0 y Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
+- [Guía para enviar transacciones usando web3 y Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)

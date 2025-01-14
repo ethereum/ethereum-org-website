@@ -26,7 +26,7 @@ The ether cryptocurrency supports a pricing mechanism for Ethereum's computing p
 
 Therefore, even if a malicious dapp submitted an infinite loop, the transaction would eventually run out of ether and terminate, allowing the network to return to normal.
 
-It is [common](https://www.reuters.com/article/us-crypto-currencies-lending-insight-idUSKBN25M0GP#:~:text=price%20of%20ethereum) [to](https://abcnews.go.com/Business/bitcoin-slumps-week-low-amid-renewed-worries-chinese/story?id=78399845#:~:text=cryptocurrencies%20including%20ethereum) [conflate](https://www.cnn.com/2021/03/14/tech/nft-art-buying/index.html#:~:text=price%20of%20ethereum) Ethereum and ether — when people reference the "price of Ethereum," they are describing the price of ether.
+It is [common to conflate](https://abcnews.go.com/Business/bitcoin-slumps-week-low-amid-renewed-worries-chinese/story?id=78399845) Ethereum and ether — when people reference the "price of Ethereum," they are describing the price of ether.
 
 ## Minting ether {#minting-ether}
 
@@ -71,7 +71,7 @@ Users can query the ether balance of any [account](/developers/docs/accounts/) b
 
 ## Further reading {#further-reading}
 
-- [Defining Ether and Ethereum](https://www.cmegroup.com/education/courses/introduction-to-ether/defining-ether-and-ethereum.html) – _CME Group_
+- [Defining ether and Ethereum](https://www.cmegroup.com/education/courses/introduction-to-ether/defining-ether-and-ethereum.html) – _CME Group_
 - [Ethereum Whitepaper](/whitepaper/): The original proposal for Ethereum. This document includes a description of ether and the motivations behind its creation.
 - [Gwei Calculator](https://www.alchemy.com/gwei-calculator): Use this gwei calculator to easily convert wei, gwei, and ether. Simply plug in any amount of wei, gwei, or ETH and automatically calculate the conversion.
 

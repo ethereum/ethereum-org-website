@@ -57,7 +57,7 @@ Mostanáig a kliensdiverzitás fókusza inkább a konszenzusrétegen volt. Ugyan
 
 A kliensdiverzitás eléréséhez nem elég, hogy az egyéni felhasználók kisebbségi klienseket válasszanak, ehhez szükség van arra, hogy a bányász/validátor csoportok és intézmények is, mint a nagyobb dappok és tőzsdék is átálljanak. Ugyanakkor az összes felhasználó kiveheti a részét, hogy ezt az egyenlőtlenséget orvosolja, és az összes elérhető Ethereum-szoftver használva legyen. Az egyesítés (Merge) után minden csomópont-üzemeltetőnek futtatnia kell egy végrehajtási és egy konszenzusos klienst. Az alább javasolt klienskombinációkkal növelni lehet a diverzitást.
 
-### Végrehajtási kliensek {#execution-clients}
+### Végrehajtásos kliensek {#execution-clients}
 
 [Besu](https://www.hyperledger.org/use/besu)
 
@@ -90,7 +90,7 @@ Számos irányítópult vagy kimutatás ad képet az aktuális kliensdiverzitás
 - [Rated.network](https://www.rated.network/)
 - [clientdiversity.org](https://clientdiversity.org/) **Végrehajtási réteg:**
 
-- [execution-diversity.info](https://execution-diversity.info/)
+- [supermajority.info](https://supermajority.info//)
 - [Ethernodes](https://ethernodes.org/)
 
 ## További olvasnivaló {#further-reading}
@@ -106,4 +106,4 @@ Számos irányítópult vagy kimutatás ad képet az aktuális kliensdiverzitás
 ## Kapcsolódó témák {#related-topics}
 
 - [Ethereum-csomópont futtatása](/run-a-node/)
-- [ Csomópontok és kliensek](/developers/docs/nodes-and-clients/)
+- [Csomópontok és kliensek](/developers/docs/nodes-and-clients/)

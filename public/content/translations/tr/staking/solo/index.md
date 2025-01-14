@@ -79,9 +79,9 @@ Donanım bazen başarısız oluyor, ağ bağlantıları hata veriyor ve istemci 
 
 Aktif olduğu durumda ETH ödülleri kazanırsınız. Bu ödüller periyodik olarak para çekme adresinize yatırılır.
 
-İstenirse, çevrimiçi olma gereksinimini ortadan kaldıran ve diğer ödülleri durduran bir doğrulayıcı olarak çıkabilirsiniz. Sonrasında kalan bakiyeniz kurulum esnasında belirlediğiniz çekim adresine aktarılacaktır.
+İstenirse, çevrimiçi olma gereksinimini ortadan kaldıran ve diğer ödülleri durduran bir doğrulayıcı olarak çıkabilirsiniz. Sonrasında kalan bakiyeniz kurulum esnasında belirlediğiniz para çekme adresine aktarılacaktır.
 
-[Hisseleme para çekmeleri hakkında daha fazlası](/staking/withdrawals/)
+[Hisseleme para çekme işlemleri hakkında daha fazlası](/staking/withdrawals/)
 
 ## Hisseleme Başlama Noktası başlangıç rehberi {#get-started-on-the-staking-launchpad}
 
@@ -107,7 +107,7 @@ Kurulumunuzda size yardımcı olacak çeşitli seçenekler mevcuttur. Aşağıda
 
 <StakingProductsCardGrid category="nodeTools" />
 
-Ağın güvenliğini iyileştirdiği ve riskinizi sınırladığı için bir [azınlık istemcisi](/developers/docs/nodes-and-clients/client-diversity/) seçmenin önemini lütfen unutmayın. Azınlık istemcisini kurmanıza izin veren araçlar, <em style={{ textTransform: "uppercase" }}>"çoklu istemci"</em> olarak anılır.
+Ağın güvenliğini iyileştirdiği ve riskinizi sınırladığı için bir [azınlık istemcisi](/developers/docs/nodes-and-clients/client-diversity/) seçmenin önemini lütfen unutmayın. Azınlık istemcisini kurmanıza olanak tanıyan araçlar, <em style={{ textTransform: "uppercase" }}>"çoklu istemci"</em> olarak anılır.
 
 ### Anahtar Üreticileri
 
@@ -184,18 +184,21 @@ Tek bir merkezi bulut depolama çözümü üzerinde çalışan doğrulayıcı is
 
 Yeni paydaşlar bunu anahtar üretim ve yatırma zamanında belirler. Henüz bu bilgileri belirlememiş mevcut paydaşlar kendi anahtarlarını güncelleyerek bu işlevi destekleyebilir.
 
-Çekim bilgileri ayarlandığında, ödül ödemeleri (başlangıçtaki 32 adedin üstünde toplananlar) periyodik olarak çekim adresine otomatik dağıtılacaktır.
+Çekim bilgileri ayarlandığında, ödül ödemeleri (başlangıçtaki 32 adedin üstünde toplananlar) periyodik olarak para çekme adresine otomatik dağıtılacaktır.
 
 Tüm bakiyenizin kilidini kaldırmak ve tamamını almak için aynı zamanda doğrulayıcınızın çıkış sürecini tamamlamanız da gerekir.
 
-<ButtonLink href="/staking/withdrawals/">Hisseleme para çekmeleri hakkında daha fazlası</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">Hisseleme para çekme işlemleri hakkında daha fazlası</ButtonLink>
 </ExpandableCard>
 
 ## Daha fazla bilgi {#further-reading}
 
+- [Ethereum Hisseleme Dizini](https://www.staking.directory/) - _Eridian ve Spacesider_
 - [Ethereum'un İstemci Çeşitliliği Sorunu](https://hackernoon.com/ethereums-client-diversity-problem) - _@emmanuelawosika 2022_
 - [İstemci Çeşitliliğine Yardımcı Olmak](https://www.attestant.io/posts/helping-client-diversity/) - _Jim McDonald 2022_
 - [Ethereum'un konsensüs katmanında müşteri çeşitliliği](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA) - _jmcook.eth 2022_
 - [Nasıl Yapılır: Ethereum Doğrulayıcı Donanımı Satın Alımı](https://www.youtube.com/watch?v=C2wwu1IlhDc) - _EthStaker 2022_
 - [Adım Adım: Ethereum 2.0 Testnet'e nasıl katılınır](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) - _Butta_
 - [Eth2 Slashing Önleme İpuçları](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) - _Raul Jordan 2020_
+
+<QuizWidget quizKey="staking-solo" />

@@ -556,7 +556,7 @@ Se referă la rețeaua Ethereum, o rețea peer-to-peer care propagă tranzacții
   Rețelele
 </DocLink>
 
-### token non-fungibil (NTF) {#nft}
+### token non-fungibil (NFT) {#nft}
 
 De asemenea, cunoscut sub numele de „deed”, acesta este un token standard introdus de propunerea ERC-721. NFT-urile pot fi urmărite și tranzacționate, însă fiecare token este unic și distinct; acestea nu sunt interschimbabile precum ETH-ul și [tokenurile ERC-20](#token-standard). NFT-urile pot reprezenta proprietatea asupra activelor digitale sau fizice.
 

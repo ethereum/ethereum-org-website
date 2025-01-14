@@ -6,8 +6,8 @@ lang: fa
 
 # آموزش اتریوم {#learn-about-ethereum}
 
-**به [ethereum.org/fa/learn](/fa/learn/) مجموعه‌ای از منابعی که به شما کمک می‌کنند تا درباره اتریوم یاد بگیرید خوش آمدید.**
-این صفحه شامل مقاله های فنی **و** غیرفنی، راهنما ها، و منابع اطلاعاتی دیگر هستند. اگر در موضوع اتریوم کاملا تازه وارد هستید، [به شما پیشنهاد می کنیم از اینجا شروع کنید](/fa/what-is-ethereum/).
+**به [ethereum.org/fa/learn](/learn/) مجموعه‌ای از منابعی که به شما کمک می‌کنند تا درباره اتریوم یاد بگیرید خوش آمدید.**
+این صفحه شامل مقاله های فنی **و** غیرفنی، راهنما ها، و منابع اطلاعاتی دیگر هستند. اگر در موضوع اتریوم کاملا تازه وارد هستید، [به شما پیشنهاد می کنیم از اینجا شروع کنید](/what-is-ethereum/).
 
 در اینجا بعضی نکات بسیار مناسب برای شروع را می توانید ببینید:
 
@@ -61,7 +61,7 @@ lang: fa
 
 به زبان ساده، یک "قرارداد هوشمند" کد‌هایی هستند که بر روی اتریوم اجرا می‌شوند. به آن "قرارداد" می‌گویند زیرا کدی که روی اتریوم اجرا می‌شود می‌تواند چیز‌های ارزشمندی مانند ETH یا سایر دارایی‌های دیجیتال را کنترل کند.
 
-- Want to learn how to program on Ethereum with smart contracts? [ethereum.org/fa/developers](/fa/developers/)
+- Want to learn how to program on Ethereum with smart contracts? [ethereum.org/fa/developers](/developers/)
 - [What is a Smart Contract?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract) _Nov 12, 2018 - Andreas M. Antonopoulos, Gavin Wood_
 - [چه ارتباطی بین قراردادهای هوشمند و اتریوم وجود دارد؟](https://coiniran.com/ethereum-and-smart-contracts/) _June 2017 - کوین ایران_
 
@@ -77,7 +77,7 @@ lang: fa
 شبکه اتریوم از تعداد زیادی نود تشکیل شده است که هرکدام از آنها نرم‌افزار سازگار کلاینت را اجرا می‌کنند. دو کلاینت وجود دارند که توسط اکثر نود‌ها مورد استفاده قرار می‌گیرند:
 [Geth](https://geth.ethereum.org/) (written in Go) و [Parity](https://www.parity.io/ethereum/) (written in Rust).
 
-- آیا مایلید نود اتریوم شخصی خود را داشته باشید؟ ← [ethereum.org/fa/developers](/fa/developers/#کلاینت‌ها-و-اجرای-نود-شخصی-شما/)
+- آیا مایلید نود اتریوم شخصی خود را داشته باشید؟ ← [ethereum.org/fa/developers](/developers/#کلاینت‌ها-و-اجرای-نود-شخصی-شما/)
 - [Comprehensive list of all Ethereum clients](https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients)
 
 ## اتریوم اینترپرایز {#enterprise-ethereum}
@@ -85,7 +85,7 @@ lang: fa
 منظور از اتریوم اینترپرایز، اجرای خصوصی، مشارکتی، و چند‌گانه کد‌بیس اتریوم برای کاربرد‌های تجاری است. هم‌اکنون کمپانی‌هایی در سراسر جهان برای بازده-ای بیشتر در بازار‌های مالی، مدیریت زنجیره تامین، و ایجاد مدل‌های جدیدی از کسب و کار در حال بهره بردن از اتریوم اینترپرایز هستند.
 
 بیشتر بدانیم
-[Enterprise Ethereum](/fa/enterprise/).
+[Enterprise Ethereum](/enterprise/).
 
 ## بهبود مقیاس‌پذیری اتریوم {#improving-ethereums-scalability}
 

@@ -6,7 +6,7 @@ lang: fr
 
 Les rollups optimistes sont des protocoles de couche 2 (L2) conçus pour augmenter le débit de la couche de base d'Ethereum. Ils réduisent le calcul de la chaîne principale d'Ethereum en traitant les transactions hors chaîne, offrant des améliorations significatives dans les vitesses de traitement. Contrairement aux autres solutions de mise à l'échelle, telles que les [chaînes latérales](/developers/docs/scaling/sidechains/), les rollups optimistes tirent leur sécurité du réseau principal en publiant les résultats de transaction en chaîne, ou les [chaînes Plasma](/developers/docs/scaling/plasma/), qui vérifient également les transactions sur Ethereum avec des preuves de fraude, mais stockent les données de transaction ailleurs.
 
-Le calcul étant la partie lente et coûteuse de l'utilisation d'Ethereum, les rollups optimistes offrent 10 à 100 fois plus d'améliorations en terme d'évolutivité. Les rollups optimistes écrivent également des transactions sur Ethereum comme des `données d'appel`, réduisant les coûts de gaz pour les utilisateurs.
+Le calcul étant la partie lente et coûteuse de l'utilisation d'Ethereum, les rollups optimistes offrent 10 à 100 fois plus d'améliorations en terme d'évolutivité. Les rollups optimistes écrivent également les transactions sur Ethereum en tant que `calldata` ou dans des [blobs](/roadmap/danksharding/), ce qui réduit les coûts de gaz pour les utilisateurs.
 
 ## Prérequis {#prerequisites}
 
@@ -14,7 +14,7 @@ Vous devez avoir lu et compris nos pages sur la [mise à l'échelle d'Ethereum](
 
 ## Qu'est-ce qu'un rollup optimiste ? {#what-is-an-optimistic-rollup}
 
-Un rollup optimiste est une approche de mise à l'échelle d'Ethereum qui implique de déplacer le calcul et le stockage d'état hors chaîne. Les rollups optimistes exécutent des transactions en dehors d'Ethereum, mais publient les données de transaction sur le réseau principal en tant que `calldata`.
+Un rollup optimiste est une approche de mise à l'échelle d'Ethereum qui implique de déplacer le calcul et le stockage d'état hors chaîne. Les rollups optimistes exécutent des transactions en dehors d'Ethereum, mais publient les données de transaction sur le réseau principal en tant que `calldata` ou dans les [blobs](/roadmap/danksharding/).
 
 Les opérateurs de rollup optimiste regroupent plusieurs transactions hors chaîne ensemble en gros lots avant de les soumettre à Ethereum. Cette approche permet de répartir les coûts fixes sur plusieurs transactions dans chaque lot, réduisant ainsi les frais pour les utilisateurs finaux. Les rollups optimistes utilisent également des techniques de compression pour réduire la quantité de données publiées sur Ethereum.
 
@@ -44,7 +44,7 @@ Les rollups optimistes s'appuient sur le protocole Ethereum principal pour les r
 
 ### Disponibilité des données {#data-availability}
 
-Comme mentionné plus tôt, les rollups optimistes envoient des données de transaction sur Ethereum en tant que `calldata`. Étant donné que l'exécution de la chaîne rollup est basée sur les transactions soumises, n'importe qui peut utiliser ces informations – ancrées sur la couche de base d'Ethereum – pour exécuter l'état du rollup et vérifier la justesse des transitions d'état.
+Comme mentionné plus tôt, les rollups optimistes envoient des données de transaction sur Ethereum en tant que `calldata` ou [blobs](/roadmap/danksharding/). Étant donné que l'exécution de la chaîne rollup est basée sur les transactions soumises, n'importe qui peut utiliser ces informations – ancrées sur la couche de base d'Ethereum – pour exécuter l'état du rollup et vérifier la justesse des transitions d'état.
 
 La [disponibilité des données](/developers/docs/data-availability/) est essentielle car, sans accès aux données d'état, les challengers ne peuvent pas construire de preuves de fraude pour contester les opérations de rollup invalides. Avec Ethereum fournissant la disponibilité des données, le risque que les opérateurs de rollup pratiquent des actes malveillants (par exemple, soumettre des blocs non valides) est réduit.
 
@@ -86,15 +86,19 @@ Le séquenceur est différent d'un opérateur de rollup ordinaire car il a un pl
 
 #### Soumettre des blocs de rollup à Ethereum {#submitting-blocks-to-ethereum}
 
-Comme mentionné, l'opérateur d'un rollup optimiste regroupe les transactions hors chaîne dans un lot et l'envoie à Ethereum pour la notarisation. Ce processus consiste à compresser les données liées aux transactions et à les publier sur Ethereum en tant que `calldata`.
+Comme mentionné, l'opérateur d'un rollup optimiste regroupe les transactions hors chaîne dans un lot et l'envoie à Ethereum pour la notarisation. Ce processus implique de compresser les données liées aux transactions et de les publier sur Ethereum en tant que `calldata` ou dans des blobs.
 
-`calldata` est une zone non modifiable et non persistante dans un contrat intelligent qui se comporte principalement comme une [mémoire](/developers/docs/smart-contracts/anatomy/#memory). Alors que `calldata` persiste sur la chaîne en tant que partie des [history logs](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html?highlight=memory#logs) de la blockchain, elle n'est pas stockée en tant que partie de l'état d'Ethereum. Parce que `calldata` ne touche aucune partie de l'état d'Ethereum, il est moins coûteux de stocker des données sur la chaîne.
+`calldata` est une zone non modifiable et non persistante dans un contrat intelligent qui se comporte principalement comme une [mémoire](/developers/docs/smart-contracts/anatomy/#memory). Alors que `calldata` persiste sur la chaîne en tant que partie des [history logs](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html?highlight=memory#logs) de la blockchain, elle n'est pas stockée en tant que partie de l'état d'Ethereum. Parce que `calldata` ne touche aucune partie de l'état d'Ethereum, il est moins coûteux que l'état pour stocker des données sur la chaîne.
 
 Le mot-clé `calldata` est également utilisé dans Solidity pour transmettre des arguments à une fonction de contrat intelligent au moment de l'exécution. `calldata` identifie la fonction appelée pendant une transaction et détient les entrées de la fonction sous la forme d'une séquence arbitraire d'octets.
 
 Dans le contexte des rollups optimistes, `calldata` est utilisé pour envoyer des données de transaction compressées au contrat en chaîne. L'opérateur de rollup ajoute un nouveau lot en appelant la fonction requise dans le contrat de rollup et en transmettant les données compressées comme arguments de fonction. L'utilisation de `calldata` réduit les frais d'utilisation puisque la plupart des coûts que les rollups encourent proviennent du stockage des données sur la chaîne.
 
 Voici [un exemple](https://etherscan.io/tx/0x9102bfce17c58b5fc1c974c24b6bb7a924fb5fbd7c4cd2f675911c27422a5591) de soumission d'un batch de rollup pour montrer comment ce concept fonctionne. Le séquenceur a invoqué la méthode `appendSequencerBatch()` et a transmis les données de transaction compressées comme entrées en utilisant `calldata`.
+
+Certains rollups utilisent maintenant des blobs pour poster des lots de transactions sur Ethereum.
+
+Les blobs ne sont ni modifiables ni persistants (tout comme `calldata`), mais ils sont supprimés de l'historique après environ 18 jours. Pour plus d'informations sur les blobs, consultez [Danksharding](/roadmap/danksharding).
 
 ### Engagements d'état {#state-commitments}
 
@@ -194,9 +198,9 @@ Enfin, il convient de noter que les appels de messages L2 > L1 entre les contrat
 
 Les rollups optimistes utilisent un système de frais de gaz, un peu comme Ethereum, pour indiquer combien les utilisateurs paient par transaction. Les frais facturés sur les rollups optimistes dépendent des éléments suivants :
 
-1. **State write**: Les rollups optimistes publient les données de transaction et les en-têtes de bloc (composés du hachage de l'en-tête de bloc précédent, de la racine de l'état, de la racine du lot) à Ethereum en tant que `calldata`. Le coût minimum d'une transaction Ethereum est de 21 000 gaz. Les rollups optimistes peuvent réduire le coût d'écriture de la transaction sur L1 en regroupant plusieurs transactions dans un seul bloc (ce qui amortit le gaz de 21k sur plusieurs transactions d'utilisateur).
+1. **State write**: Les rollups optimistes publient les données de transaction et les en-têtes de bloc (composés du hachage de l'en-tête de bloc précédent, de la racine de l'état, de la racine du lot) sur Ethereum sous forme de `blob`, ou "objet binaire large". [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844) a introduit une solution économique pour inclure des données sur la chaîne. Un `blob` est un nouveau champ de transaction qui permet aux rollups de publier des données de transition d'état compressées sur la couche 1 d'Ethereum. Contrairement au `calldata`, qui reste en permanence sur la chaîne, les blobs sont de courte durée et peuvent être supprimés des clients après [4096 époques](https://github.com/ethereum/consensus-specs/blob/81f3ea8322aff6b9fb15132d050f8f98b16bdba4/configs/mainnet.yaml#L147) (environ 18 jours). En utilisant des blobs pour publier des lots de transactions compressées, les rollups optimistes peuvent réduire de manière significative le coût d'écriture des transactions sur la couche 1.
 
-2. **`calldata`**: Au-delà des frais de transaction de base, le coût de chaque écriture d'état dépend de la taille des `calldata` postées sur L1. Les coûts des `calldata` sont actuellement régis par [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), qui stipule un coût de 16 gaz pour les octets non nuls et de 4 gaz pour les octets nuls de `calldata`, respectivement. Pour réduire les frais d'utilisation, les opérateurs de rollup compressent les transactions afin de réduire le nombre d'octets de `calldata` publiés sur Ethereum.
+2. **Gaz utilisé pour les blobs** : Les transactions contenant des blobs utilisent un mécanisme de frais dynamique similaire à celui introduit par [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559). Les frais de gaz pour les transactions de type 3 tiennent compte des frais de base pour les blobs, qui sont déterminés par le réseau en fonction de la demande d'espace pour les blobs et de l'utilisation de l'espace blob par la transaction envoyée.
 
 3. **Frais d'opérateur L2** : Il s'agit du montant versé aux nœuds de rollup en compensation des coûts de calcul encourus pour le traitement des transactions, un peu comme les frais de gaz sur Ethereum. Les nœuds de rollup facturent des frais de transaction moins élevés car les L2 ont des capacités de traitement supérieures et ne sont pas confrontées aux congestions du réseau qui obligent les validateurs d'Ethereum à donner la priorité aux transactions dont les frais sont plus élevés.
 
@@ -208,7 +212,7 @@ Comme expliqué, les rollups optimistes publient des données de transaction com
 
 La chaîne principale d'Ethereum impose des limites à la quantité de données que les blocs peuvent contenir, libellées en unités de gaz (la [taille moyenne des blocs](/developers/docs/blocks/#block-size) est de 15 millions de gaz). Bien que cela limite la quantité de gaz que chaque transaction peut utiliser, cela signifie également que nous pouvons augmenter les transactions traitées par bloc en réduisant les données liées aux transactions, ce qui améliore directement l'évolutivité.
 
-Les rollups optimistes utilisent plusieurs techniques pour réaliser la compression des données de transaction et améliorer les taux de TPS. Par exemple, cet [article](https://vitalik.eth.limo/general/2021/01/05/rollup.html) compare les données qu'une transaction utilisateur de base (envoi d'éther) génère sur le réseau principal par rapport à la quantité de données que la même transaction génère sur un rollup :
+Les rollups optimistes utilisent plusieurs techniques pour réaliser la compression des données de transaction et améliorer les taux de TPS. Par exemple, cet [article](https://vitalik.eth.limo/general/2021/01/05/rollup.html) compare les données qu'une transaction utilisateur de base (envoi d'ether) génère sur le réseau principal par rapport à la quantité de données que la même transaction génère sur un rollup :
 
 | Paramètre   | Ethereum (L1)       | Rollup (L2)    |
 | ----------- | ------------------- | -------------- |
@@ -249,17 +253,11 @@ Davantage qu'un apprenant visuel ? Regardez Finematics expliquer les rollups opt
 
 <YouTube id="7pWxCklcNsU" start="263" />
 
-### Utiliser des rollups optimistes {#use-optimistic-rollups}
-
-Plusieurs implémentations de rollups optimistes existent, que vous pouvez intégrer dans vos dApps :
-
-<RollupProductDevDoc rollupType="optimistic" />
-
 ## Autres lectures sur les rollups optimistes
 
 - [Comment fonctionnent les rollups optimistes (Le guide complet)](https://www.alchemy.com/overviews/optimistic-rollups)
-- [Qu'est-ce qu'un Rollup? Une introduction technique](https://www.ethereum-ecosystem.com/blog/what-is-a-blockchain-rollup-a-technical-introduction)
+- [Qu'est-ce qu'un rollup de blockchain ? Une introduction technique](https://www.ethereum-ecosystem.com/blog/what-is-a-blockchain-rollup-a-technical-introduction)
 - [Le guide essentiel pour Arbitrum](https://newsletter.banklesshq.com/p/the-essential-guide-to-arbitrum)
-- [Comment fonctionne réellement le rollup d'Optimism ?](https://research.paradigm.xyz/optimism)
+- [Comment fonctionne réellement le rollup d'Optimism ?](https://www.paradigm.xyz/2021/01/how-does-optimisms-rollup-really-work)
 - [OVM Deep Dive](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)
 - [Qu’est-ce que la machine virtuelle optimiste ?](https://www.alchemy.com/overviews/optimistic-virtual-machine)

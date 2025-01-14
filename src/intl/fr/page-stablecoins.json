@@ -149,8 +149,8 @@
   "page-dapps-ready-button": "Aller",
   "pros": "Avantages",
   "cons": "Inconvénients",
-  "1inch-logo": "Logo de 1inch",
-  "aave-logo": "Logo de Aave",
+  "1inch-logo": "Logo 1inch",
+  "aave-logo": "Logo Aave",
   "binance-logo": "Logo Binance",
   "bittrex-logo": "Logo Bittrex",
   "coinbase-logo": "Logo Coinbase",
@@ -163,5 +163,6 @@
   "makerdao-logo": "Logo MakerDao",
   "matcha-logo": "Logo Matcha",
   "summerfi-logo": "Logo de Summer.fi",
-  "uniswap-logo": "Logo Uniswap"
+  "uniswap-logo": "Logo Uniswap",
+  "page-stablecoins-go-to": "Aller à"
 }

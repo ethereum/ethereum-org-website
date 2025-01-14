@@ -70,7 +70,7 @@ description: 使用 Crowdin 翻譯 ethereum.org 的說明
 
 透過使用頂部的按鈕，你還可以切換到翻譯記憶。在那裡，你可以搜尋現有的翻譯，或者切換到「詞彙表」，其中包含關鍵術語的描述和標準翻譯。
 
-想了解更多嗎？ 請隨時查看[有關使用 Crowdin 線上編輯器的文件](https://support.crowdin.com/online-editor/)
+想瞭解更多嗎？ 請隨時查看[有關使用 Crowdin 線上編輯器的文件](https://support.crowdin.com/online-editor/)
 
 ### 審核過程 {#review-process}
 

@@ -187,6 +187,11 @@ export const useNav = () => {
               href: "/defi/",
             },
             {
+              label: t("payments-page"),
+              description: t("nav-payments-description"),
+              href: "/payments/",
+            },
+            {
               label: t("dao-page"),
               description: t("nav-dao-description"),
               href: "/dao/",
@@ -247,10 +252,26 @@ export const useNav = () => {
           ],
         },
         {
-          label: t("layer-2"),
-          description: t("nav-layer-2-description"),
+          label: t("nav-ethereum-networks"),
+          description: t("nav-ethereum-networks-description"),
           icon: BsLayers,
-          href: "/layer-2/",
+          items: [
+            {
+              label: t("nav-networks-introduction-label"),
+              description: t("nav-networks-introduction-description"),
+              href: "/layer-2/",
+            },
+            {
+              label: t("nav-networks-explore-networks-label"),
+              description: t("nav-networks-explore-networks-description"),
+              href: "/layer-2/networks/",
+            },
+            {
+              label: t("nav-networks-learn-label"),
+              description: t("nav-networks-learn-description"),
+              href: "/layer-2/learn/",
+            },
+          ],
         },
       ],
     },
@@ -320,20 +341,9 @@ export const useNav = () => {
         },
         {
           label: t("enterprise"),
-          description: t("nav-enterprise-description"),
+          description: t("nav-mainnet-description"),
           icon: BsBuildings,
-          items: [
-            {
-              label: t("mainnet-ethereum"),
-              description: t("nav-mainnet-description"),
-              href: "/enterprise/",
-            },
-            {
-              label: t("private-ethereum"),
-              description: t("nav-private-description"),
-              href: "/enterprise/private-ethereum/",
-            },
-          ],
+          href: "/enterprise/",
         },
       ],
     },

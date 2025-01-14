@@ -45,7 +45,7 @@ lang: zh
 - [Filecoin](https://docs.filecoin.io/about-filecoin/what-is-filecoin/)
 - [Skynet](https://siasky.net/)
 - [Storj](https://storj.io/)
-- [0Chain](https://0chain.net/)
+- [Züs](https://zus.network/)
 - [Crust Network](https://crust.network)
 - [Swarm](https://www.ethswarm.org/)
 - [4EVERLAND](https://www.4everland.org/)
@@ -61,6 +61,7 @@ lang: zh
 - [IPFS Scan](https://ipfs-scan.io) _（星际文件系统固定浏览器）_
 - [4EVERLAND](https://www.4everland.org/)_（星际文件系统固定服务）_
 - [Filebase](https://filebase.com)_（星际文件系统固定服务）_
+- [Spheron Network](https://spheron.network/)_（星际文件系统/菲乐币固定服务）_
 
 SWARM 是一种去中心化的数据存储和分发技术，具有存储激励系统和存储空间租金价格预言机。
 
@@ -74,7 +75,7 @@ SWARM 是一种去中心化的数据存储和分发技术，具有存储激励�
 
 具有质询机制的去中心化存储类型：
 
-- 0Chain
+- Züs
 - Skynet
 - Arweave
 - Filecoin
@@ -87,7 +88,6 @@ SWARM 是一种去中心化的数据存储和分发技术，具有存储激励�
 
 不使用身份验证的去中心化工具：
 
-- 0Chain（实现非 KYC 版本）
 - Skynet
 - Arweave
 - Filecoin
@@ -109,7 +109,7 @@ SWARM 是一种去中心化的数据存储和分发技术，具有存储激励�
 
 - 以太坊
 - Filecoin
-- 0Chain
+- Züs
 - Crust Network
 
 ## 相关工具 {#related-tools}
@@ -144,10 +144,10 @@ SWARM 是一种去中心化的数据存储和分发技术，具有存储激励�
 - [相关文档](https://docs.arweave.org/info/)
 - [Arweave](https://github.com/ArweaveTeam/arweave/)
 
-**0chain - _0Chain 是一个基于权益证明的去中心化存储平台，具有区块分片和 blobber。_**
+**Züs - _Züs 是一个具有分片和 blobber 的权益证明去中心化存储平台。_**
 
-- [0Chain.net](https://0chain.net/)
-- [相关文档](https://docs.0chain.net/0chain/)
+- [zus.network](https://zus.network/)
+- [相关文档](https://0chaindocs.gitbook.io/zus-docs)
 - [GitHub](https://github.com/0chain/)
 
 **Crust Network - _Crust 是基于星际文件系统的去中心化存储平台。_**
@@ -197,6 +197,12 @@ SWARM 是一种去中心化的数据存储和分发技术，具有存储激励�
 - [Kaleido](https://kaleido.io/)
 - [相关文档](https://docs.kaleido.io/kaleido-services/ipfs/)
 - [GitHub](https://github.com/kaleido-io)
+
+**Spheron Network - _Spheron 是一项平台即服务 (PaaS)，专为希望在去中心化基础设施上启动其应用程序并获得最佳性能的去中心化应用程序而设计。 它提供开箱即用的计算、去中心化存储、内容分发网络和虚拟主机。_**
+
+- [spheron.network](https://spheron.network/)
+- [相关文档](https://docs.spheron.network/)
+- [GitHub](https://github.com/spheronFdn)
 
 ## 延伸阅读 {#further-reading}
 

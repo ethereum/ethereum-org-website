@@ -4,7 +4,7 @@ description: Az orákulumok valós adatokhoz való hozzáférést biztosítanak 
 lang: hu
 ---
 
-Az orákulumok olyan adatcsatornák, amelyek a láncon kívüli adatforrásokat teszik elérhetővé a blokkláncon lévő okosszerződések számára. Erre azért van szükség, mert az Ethereum-alapú okosszerződések alapértelmezés szerint nem férhetnek hozzá a blokkláncon kívül tárolt információkhoz.
+Az orákulumok olyan alkalmazások, amelyek adatcsatornákat hoznak létre, hogy elérhetővé tegyék a láncon kívüli adatforrásokat a blokkláncon lévő okosszerződések számára. Erre azért van szükség, mert az Ethereum-alapú okosszerződések alapértelmezés szerint nem férhetnek hozzá a blokkláncon kívül tárolt információkhoz.
 
 Ha az okosszerződéseket a láncon kívüli adatok felhasználásával lehet végrehajtani, az kiterjeszti a decentralizált alkalmazások hasznosságát és értékét. A láncon belüli előrejelzési piacok például orákulumokra támaszkodnak, hogy információt szolgáltassanak az eredményekről, amelyet a felhasználók előrejelzéseinek validálására használnak. Tegyük fel, hogy Alice 20 ETH-t tesz fel arra, hogy ki lesz a következő amerikai elnök. Ebben az esetben az előrejelzési piac dappnak szüksége van egy orákulumra, amely megerősíti a választási eredményeket, és meghatározza, hogy Alice jogosult-e kifizetésre.
 
@@ -274,7 +274,7 @@ Egyes decentralizált orákulumhálózatok megkövetelik, hogy a résztvevők sz
 
 Azokat a csomópontokat, amelyek válaszai eltérnek a többségi választól, úgy büntetik, hogy a tokenjeiket szétosztják azok között, amelyek többször adnak helyes értéket. Ha a csomópontoknak az adatszolgáltatás előtt kötelezvényt kell adniuk, akkor ez őszinte válaszadásra ösztönzi őket, mivel feltételezzük, hogy a racionális gazdasági szereplők hozammaximalizálásra törekszenek.
 
-A letét adás/szavazás megvédi a decentralizált orákulumokat a „Sybil-támadásoktól” is, amikor a rosszindulatú szereplők több személyazonosságot hoznak létre, hogy kijátsszák a konszenzusrendszert. A letétadás azonban nem tudja megakadályozni az „ingyenélést” (az orákulum-csomópontok másolnak információt másoktól) és a „lusta validálást” (a többséget követik anélkül, hogy maguk ellenőriznék az információt).
+A letét adás/szavazás megvédi a decentralizált orákulumokat a [Sybil-támadásoktól](/glossary/#sybil-attack) is, amikor a rosszindulatú szereplők több személyazonosságot hoznak létre, hogy kijátsszák a konszenzusrendszert. A letétadás azonban nem tudja megakadályozni az „ingyenélést” (az orákulum-csomópontok másolnak információt másoktól) és a „lusta validálást” (a többséget követik anélkül, hogy maguk ellenőriznék az információt).
 
 ##### Schelling-pont mechanizmusok
 
@@ -358,7 +358,7 @@ contract PriceConsumerV3 {
 
 Bizonyos blokklánc-alkalmazások, mint például a játékok vagy a lottórendszerek, nagyfokú kiszámíthatatlanságot és véletlenszerűséget igényelnek a hatékony működéshez. A blokkláncok determinisztikus végrehajtása azonban kiküszöböli a véletlenszerűséget.
 
-A szokásos megközelítés az álvéletlenszerű kriptográfiai függvények használata, mint például a `blockhash`, de ezeket [manipulálhatják a bányászok](https://ethereum.stackexchange.com/questions/3140/risk-of-using-blockhash-other-miners-preventing-attack#:~:text=So%20while%20the%20miners%20can,to%20one%20of%20the%20players.) a proof-of-work algoritmust megoldva. Továbbá, az Ethereum [proof-of-stake mechanizmusra való átváltása](/roadmap/merge/) azt jelenti, hogy a fejlesztők többé nem támaszkodhatnak a `blockhash`-re a láncon belüli véletlenszerűség tekintetében (a Beacon lánc [RANDAO mechanizmusa](https://eth2book.info/altair/part2/building_blocks/randomness) azonban alternatív véletlenszerűségi forrást biztosít).
+Az eredeti megközelítés az álvéletlenszerű kriptográfiai függvények használata volt, mint például a `blockhash`, de ezeket [manipulálhatták a bányászok](https://ethereum.stackexchange.com/questions/3140/risk-of-using-blockhash-other-miners-preventing-attack#:~:text=So%20while%20the%20miners%20can,to%20one%20of%20the%20players.) a proof-of-work algoritmust megoldva. Továbbá, az Ethereum [proof-of-stake mechanizmusra való átváltása](/roadmap/merge/) azt jelenti, hogy a fejlesztők többé nem támaszkodhatnak a `blockhash`-re a láncon belüli véletlenszerűség tekintetében. A Beacon-lánc [RANDAO mechanizmusa](https://eth2book.info/altair/part2/building_blocks/randomness) azonban alternatív véletlenszerűségi forrást biztosít.
 
 Lehetséges a véletlen értéket a láncon kívül generálni és a láncon belül elküldeni, de ez nagy bizalmi követelményeket támaszt a felhasználókkal szemben. Azt kell hinniük, hogy az érték valóban kiszámíthatatlan mechanizmusok révén jött létre, és nem változott meg az átadás során.
 
@@ -388,6 +388,8 @@ Többféle orákulumalkalmazást is integrálhat az Ethereum dappba:
 
 **[Chainlink](https://chain.link/)** – _A Chainlink decentralizált orákulumhálózatok hamisításbiztos bemeneteket, kimeneteket és számításokat biztosítanak a fejlett okosszerződések támogatásához bármely blokkláncon._
 
+**[Chronicle](https://chroniclelabs.org/)** - _A Chronicle megoldja a láncon belüli adatátvitel jelenlegi korlátait azáltal, hogy valóban skálázható, költséghatékony, decentralizált és ellenőrizhető orákulumokat készít._
+
 **[Witnet](https://witnet.io/)** – _A Witnet egy engedély nélküli, decentralizált és cenzúrának ellenálló orákulum, amely segíti az okosszerződéseket, hogy erős kriptogazdasági garanciákkal reagáljanak a valós világ eseményeire._
 
 **[UMA Oracle](https://uma.xyz)** – _Az UMA optimista orákulum lehetővé teszi, hogy az okosszerződések gyorsan, mindenféle adatot megkapjanak különböző alkalmazásokhoz, beleértve a biztosítási, pénzügyi derivatívákat és előrejelzési piacokat._
@@ -401,6 +403,8 @@ Többféle orákulumalkalmazást is integrálhat az Ethereum dappba:
 **[Pyth Network](https://pyth.network/)** – _A Pyth hálózat egy olyan pénzügyi orákulumhálózat, amely első kézből szerez információt, és folyamatosan valós adatokat tesz közzé a láncon belül egy hamisításnak ellenálló, decentralizált és önfenntartó környezetben._
 
 **[API3 DAO](https://www.api3.org/)** – _Az API3 DAO olyan, első féltől származó orákulummegoldásokat kínál, amelyek nagyobb forrásátláthatóságot, biztonságot és skálázhatóságot biztosítanak egy decentralizált megoldásában az okosszerződések számára._
+
+**[Supra](https://supra.com/)** - Egy vertikálisan integrált eszközrendszer a láncok közötti megoldások számára, amely összekapcsolja az összes blokkláncot, legyen az publikus (L1-ek és L2-k) vagy privát (vállalati), decentralizáltorákulum-árfolyamadatokat biztosítva, melyet láncon belüli és kívüli projektek is használhatnak.
 
 ## További olvasnivaló {#further-reading}
 
@@ -422,6 +426,7 @@ Többféle orákulumalkalmazást is integrálhat az Ethereum dappba:
 **Oktatóanyagok**
 
 - [Hogyan lehet lekérni az Ethereum aktuális árát a Solidityben?](https://blog.chain.link/fetch-current-crypto-price-data-solidity/) – _Chainlink_
+- [Orákulumadat felhasználása](https://docs.chroniclelabs.org/Developers/tutorials/Remix) — _Chronicle_
 
 **Példaprojektek**
 
