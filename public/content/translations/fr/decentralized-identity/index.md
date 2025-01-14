@@ -162,10 +162,8 @@ Il existe de nombreux projets ambitieux utilisant Ethereum comme base pour des s
 - **[Ethereum Attestation Service (EAS)](https://attest.sh/)** - _Un registre/protocole décentralisé pour faire des attestations en chaîne ou hors chaîne sur quoi que ce soit._
 - **[Preuve d'humanité](https://www.proofofhumanity.id)** - _Preuve d'humanité (ou PoH) est un système de vérification d'identité sociale construit sur Ethereum._
 - **[BrightID](https://www.brightid.org/)** - _Un réseau d'identité sociale décentralisé et open-source qui cherche à réformer la vérification d'identité par la création et l'analyse d'un graphe social._
-- **
-walt.id</strong> — _Infrastructure décentralisée et open source d'identité et de portefeuille qui permet aux développeurs et aux organisations de tirer parti de l'identité souveraine et des NFT/SBT._</li> 
-  
-  - **[Veramo](https://veramo.io/)** - _Un environnement JavaScript qui permet à chacun d'utiliser facilement des données vérifiables cryptographiquement dans ses applications._</ul> 
+- **[walt.id](https://walt.id)** — _Infrastructure décentralisée et open source d'identité et de portefeuille qui permet aux développeurs et aux organisations de tirer parti de l'identité souveraine et des NFT/SBT._
+- **[Veramo](https://veramo.io/)** - _Un environnement JavaScript qui permet à chacun d'utiliser facilement des données vérifiables cryptographiquement dans ses applications._
 
 
 
