@@ -562,7 +562,7 @@ Varlık fiyatları için bir zincir üstünde kâhin sorgulaması yapmayı planl
 
 - **[Akıllı Sözleşme Güvenlik Doğrulama Standardı](https://github.com/securing/SCSVS)** - _Akıllı sözleşmelerin güvenliğini geliştiriciler, mimarlar, güvenlik eleştirmenleri ve satıcılar için standart hale getiren on dört parçalı bir kontrol listesi._
 
-- **[Akıllı Sözleşme Güvenliğini ve Denetimini Öğrenme](https://updraft.cyfrin.io/courses/security) - _En iyi güvenlik uygulamalarını geliştirmek ve güvenlik araştırmacısı olmak isteyen akıllı sözleşme geliştiricileri için oluşturulan, akıllı sözleşme güvenliği ve denetimi kursu._
+- **[Akıllı Sözleşme Güvenliğini ve Denetimini Öğrenme](https://updraft.cyfrin.io/courses/security)** - _En iyi güvenlik uygulamalarını geliştirmek ve güvenlik araştırmacısı olmak isteyen akıllı sözleşme geliştiricileri için oluşturulan, akıllı sözleşme güvenliği ve denetimi kursu._
 
 ### Akıllı sözleşme güvenliği üzerine öğreticiler {#tutorials-on-smart-contract-security}
 
