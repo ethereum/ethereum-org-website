@@ -83,7 +83,7 @@ contract Coin {
 }
 ```
 
-Dis eksampol suppose give yu one sense of wetin Solidity kontract syntax bi laik. For more detailed diskripshon of di funshons and variabols, </a>see di docs</0>.
+Dis eksampol suppose give yu one sense of wetin Solidity kontract syntax bi laik. For more detailed diskripshon of di funshons and variabols, [see di docs]((https://docs.soliditylang.org/en/latest/contracts.html)).
 
 ## Vyper {#vyper}
 
@@ -205,7 +205,7 @@ def endAuction():
     send(self.beneficiary, self.highestBid)
 ```
 
-Dis eksampol suppose give yu one sense of wetin Vyper kontract syntax bi laik. For more full diskripshon of di funshons and variabols, </a>see di docs</0>.
+Dis eksampol suppose give yu one sense of wetin Vyper kontract syntax bi laik. For more full diskripshon of di funshons and variabols, [see di docs](https://vyper.readthedocs.io/en/latest/vyper-by-example.html#simple-open-auction).
 
 ## Yul and Yul+ {#yul}
 
