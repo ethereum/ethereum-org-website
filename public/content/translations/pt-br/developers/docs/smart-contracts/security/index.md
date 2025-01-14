@@ -8,7 +8,7 @@ Os contratos inteligentes são extremamente flexíveis e capazes de controlar gr
 
 Blockchains públicas, como a Ethereum, complicam ainda mais a questão de proteger contratos inteligentes. O código de contrato implantado _geralmente_ não pode ser alterado para corrigir falhas de segurança, enquanto os ativos roubados de contratos inteligentes são extremamente difíceis de rastrear e, em sua maioria, irrecuperáveis devido à imutabilidade.
 
-Embora os números variem, estima-se que o valor total roubado ou perdido devido a defeitos de segurança em contratos inteligentes é facilmente superior a 1 bilhão de dólares. Isso inclui incidentes de alto perfil, como o [DAO hack](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/) (com 3,6 milhões de ETH roubados, no valor de mais de US$ 1 bilhão de dólares nos preços de hoje), [ Hack da carteira múltiplas assinaturas da Parity ](https://www.coindesk.com/30-million-ether-reported-stolen-parity-wallet-breach) (US$ 30 milhões perdidos para hackers) e o [ Caso da carteira congelada da Parity](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether) (mais de US$ 300 milhões em ETH bloqueados para sempre).
+Embora os números variem, estima-se que o valor total roubado ou perdido devido a defeitos de segurança em contratos inteligentes é facilmente superior a 1 bilhão de dólares. Isso inclui incidentes de alto perfil, como o [DAO hack](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/) (com 3,6 milhões de ETH roubados, no valor de mais de US$ 1 bilhão de dólares nos preços de hoje), [Hack da carteira múltiplas assinaturas da Parity](https://www.coindesk.com/30-million-ether-reported-stolen-parity-wallet-breach) (US$ 30 milhões perdidos para hackers) e o [Caso da carteira congelada da Parity](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether) (mais de US$ 300 milhões em ETH bloqueados para sempre).
 
 As questões mencionadas tornam imperativo para os desenvolvedores investirem esforços na construção de contratos inteligentes seguros, sólidos e resistentes. Segurança dos contratos inteligentes é um assunto sério, e todo desenvolvedor deve aprender. Este guia abrangerá considerações de segurança para desenvolvedores de Ethereum e explorará recursos para melhorar a segurança dos contratos inteligentes.
 
@@ -99,7 +99,7 @@ Com isto em mente, há que evitar tratar as auditorias como uma bala de prata. A
 
 A criação de um programa de recompensas por bugs é outra abordagem para implementar revisões de código externas. Uma recompensa por bugs é uma recompensa financeira dada a indivíduos (geralmente hackers de chapéu branco) que descobrem vulnerabilidades em um aplicativo.
 
-Quando usadas corretamente, as recompensas por bugs dão aos membros da comunidade hacker incentivo para inspecionar seu código em busca de falhas críticas. Um exemplo da vida real é o “bug do dinheiro infinito” que teria deixado um invasor criar uma quantidade ilimitada de Ether no [Optimism](https://www.optimism.io/), um protocolo da [Camada 2](/layer-2/) em execução na Ethereum. Felizmente, um hacker de chapéu branco [descobriu a falha](https://www.saurik.com/optimism.html) e notificou a equipe, [ganhando um grande pagamento no processo](https://cryptoslate.com/ critical-bug-in-ethereum-l2-optimism-2m-bounty-paid/).
+Quando usadas corretamente, as recompensas por bugs dão aos membros da comunidade hacker incentivo para inspecionar seu código em busca de falhas críticas. Um exemplo da vida real é o “bug do dinheiro infinito” que teria deixado um invasor criar uma quantidade ilimitada de Ether no [Optimism](https://www.optimism.io/), um protocolo da [Camada 2](/layer-2/) em execução na Ethereum. Felizmente, um hacker de chapéu branco [descobriu a falha](https://www.saurik.com/optimism.html) e notificou a equipe, [ganhando um grande pagamento no processo](https://cryptoslate.com/critical-bug-in-ethereum-l2-optimism-2m-bounty-paid/).
 
 Uma estratégia útil é definir o pagamento de um programa de recompensas por bugs proporcionalmente à quantidade de fundos em jogo. Descrita como a “[recompensa por bugs que escala](https://medium.com/immunefi/a-defi-security-standard-the-scaling-bug-bounty-9b83dfdc1ba7)”, essa abordagem fornece incentivos financeiros para que os indivíduos revelem vulnerabilidades de forma responsável em vez de explorá-las.
 
@@ -131,7 +131,7 @@ Embora os contratos inteligentes Ethereum sejam imutáveis por padrão, é poss�
 
 Os mecanismos de atualização de contrato funcionam de forma diferente, mas o “padrão de proxy” é uma das abordagens mais populares para atualizar contratos inteligentes. [Os padrões de proxy](https://www.cyfrin.io/blog/upgradeable-proxy-smart-contract-pattern) dividem o estado e a lógica de um aplicativo entre _dois_ contratos. O primeiro contrato (chamado de 'contrato de proxy') armazena variáveis de estado (por exemplo, saldos de usuários), enquanto o segundo contrato (chamado de 'contrato lógico') contém o código para executar funções de contrato.
 
-As contas interagem com o contrato de proxy, que despacha todas as chamadas de função para o contrato lógico usando o [`delegatecall()`](https://docs.soliditylang.org/en/v0.8.16/introduction-to-smart-contracts.html?highlight =delegatecall#delegatecall-callcode-and-libraries) em chamada de baixo nível. Ao contrário de uma chamada de mensagem normal, o `delegatecall()` garante que o código executado no endereço do contrato lógico seja executado no contexto do contrato de chamada. Isso significa que o contrato lógico sempre escreverá no armazenamento do proxy (em vez de em seu próprio armazenamento) e os valores originais de `msg.sender` e `msg.value` são preservados.
+As contas interagem com o contrato de proxy, que despacha todas as chamadas de função para o contrato lógico usando o [`delegatecall()`](https://docs.soliditylang.org/en/v0.8.16/introduction-to-smart-contracts.html?highlight=delegatecall#delegatecall-callcode-and-libraries) em chamada de baixo nível. Ao contrário de uma chamada de mensagem normal, o `delegatecall()` garante que o código executado no endereço do contrato lógico seja executado no contexto do contrato de chamada. Isso significa que o contrato lógico sempre escreverá no armazenamento do proxy (em vez de em seu próprio armazenamento) e os valores originais de `msg.sender` e `msg.value` são preservados.
 
 Delegar chamadas para o contrato lógico requer armazenar seu endereço no armazenamento do contrato de proxy. Portanto, atualizar a lógica do contrato é apenas uma questão de implantar outro contrato lógico e armazenar o novo endereço no contrato de proxy. Como as chamadas subsequentes para o contrato de proxy são roteadas automaticamente para o novo contrato lógico, você teria “atualizado” o contrato sem realmente modificar o código.
 
@@ -304,7 +304,7 @@ Não há nada de errado aqui, exceto que o `Attacker` tem outra função que cha
 - `Victim` finalmente aplica os resultados da primeira transação (e as subsequentes) ao seu estado, então o saldo do `Attacker` é definido para 0 (zero)
 ```
 
-O resumo é que, como o saldo do chamador não é definido como 0 até que a execução da função termine, as invocações subsequentes serão bem-sucedidas e permitirão que o chamador retire seu saldo várias vezes. Esse tipo de ataque pode ser usado para drenar um contrato inteligente de seus fundos, como aconteceu no [DAO hack em 2016](https://www.coindesk.com/learn/2016/06/25/understanding-the-dao- attack/). Os ataques de reentrância ainda são um problema crítico para contratos inteligentes hoje, como mostram as[listagens públicas de exploits de reentrância](https://github.com/pcaversaccio/reentrancy-attacks).
+O resumo é que, como o saldo do chamador não é definido como 0 até que a execução da função termine, as invocações subsequentes serão bem-sucedidas e permitirão que o chamador retire seu saldo várias vezes. Esse tipo de ataque pode ser usado para drenar um contrato inteligente de seus fundos, como aconteceu no [DAO hack em 2016](https://www.coindesk.com/learn/2016/06/25/understanding-the-dao-attack/). Os ataques de reentrância ainda são um problema crítico para contratos inteligentes hoje, como mostram as[listagens públicas de exploits de reentrância](https://github.com/pcaversaccio/reentrancy-attacks).
 
 ##### Como prevenir ataques de reentrância
 
@@ -475,13 +475,13 @@ Se você planeja consultar um oráculo on-chain para preços de ativos, consider
 
 ### Ferramentas para monitorar contratos inteligentes {#smart-contract-monitoring-tools}
 
-- **[OpenZeppelin Defender Sentinels](https://docs.openzeppelin.com/defender/v1/sentinel)** - *Uma ferramenta para monitorar e responder automaticamente a eventos, funções e parâmetros de transação em seus contratos inteligentes.*
+- **[OpenZeppelin Defender Sentinels](https://docs.openzeppelin.com/defender/v1/sentinel)** - _Uma ferramenta para monitorar e responder automaticamente a eventos, funções e parâmetros de transação em seus contratos inteligentes._
 
 - **[Alerta leve e em tempo real](https://tenderly.co/alerting/)** - _Uma ferramenta para receber notificações em tempo real quando eventos incomuns ou inesperados acontecem em seus contratos inteligentes ou carteiras._
 
 ### Ferramentas para administração segura de contratos inteligentes {#smart-contract-administration-tools}
 
-- **[Administrador do OpenZeppelin Defender](https://docs.openzeppelin.com/defender/v1/admin)** - *Interface para gerenciar a administração de contrato inteligente, incluindo controles de acesso, melhorias e pausas.*
+- **[Administrador do OpenZeppelin Defender](https://docs.openzeppelin.com/defender/v1/admin)** - _Interface para gerenciar a administração de contrato inteligente, incluindo controles de acesso, melhorias e pausas._
 
 - **[Safe](https://safe.global/)** - _Carteira de contrato inteligente em execução na Ethereum, que requer um número mínimo de pessoas para aprovar uma transação antes que ela possa ocorrer (M-de-N)._
 
@@ -505,7 +505,7 @@ Se você planeja consultar um oráculo on-chain para preços de ativos, consider
 
 - **[Hacken](https://hacken.io)** - _Auditor de cibersegurança da Web3 que traz a abordagem de 360 graus à segurança da blockchain._
 
-- **[Nethermind](https://nethermind.io/smart-contracts-audits)** -  _Serviços de auditoria Solidity e Cairo que garantem a integridade dos contratos inteligentes e a segurança dos usuários em toda a Ethereum e Starknet._
+- **[Nethermind](https://nethermind.io/smart-contracts-audits)** - _Serviços de auditoria Solidity e Cairo que garantem a integridade dos contratos inteligentes e a segurança dos usuários em toda a Ethereum e Starknet._
 
 - **[HashEx](https://hashex.org/)** – _O HashEx se dedica a blockchain e auditoria de contrato inteligente para garantir a segurança de criptomoedas, fornecendo serviços como desenvolvimento de contrato inteligente, teste de penetração e consultoria em blockchain._
 
@@ -543,7 +543,7 @@ Se você planeja consultar um oráculo on-chain para preços de ativos, consider
 
 ### Desafios para aprender a segurança de contratos inteligentes {#challenges-for-learning-smart-contract-security}
 
-- **[A Incrível BlockSec CTF](https://github.com/blockthreat/blocksec-ctfs)** - *Lista selecionada de jogos de guerra de segurança na blockchain, desafios e a [Capture The Flag](https://www.webopedia.com/definitions/ctf-event/amp/) com competições e descrições de soluções.*
+- **[A Incrível BlockSec CTF](https://github.com/blockthreat/blocksec-ctfs)** - _Lista selecionada de jogos de guerra de segurança na blockchain, desafios e a [Capture The Flag](https://www.webopedia.com/definitions/ctf-event/amp/) com competições e descrições de soluções._
 
 - **[Maldito DeFi Vulnerável](https://www.damnvulnerabledefi.xyz/)** - _Jogo de guerra para aprender a segurança ofensiva de contratos inteligentes DeFi e desenvolver habilidades em caça a bugs e auditoria de segurança._
 
@@ -563,7 +563,7 @@ Se você planeja consultar um oráculo on-chain para preços de ativos, consider
 
 - **[Padrão de Verificação de Segurança de Contrato Inteligente](https://github.com/securing/SCSVS)** - _Lista de verificação de quatorze partes criadas para padronizar a segurança de contratos inteligentes para desenvolvedores, arquitetos, revisores de segurança e fornecedores._
 
-- **[Aprenda sobre segurança e auditoria de contratos inteligentes](https://updraft.cyfrin.io/courses/security) - _Curso definitivo de segurança e auditoria de contratos inteligentes, criado para desenvolvedores de contratos inteligentes que desejam melhorar suas práticas recomendadas de segurança e se tornar pesquisadores de segurança._
+- **[Aprenda sobre segurança e auditoria de contratos inteligentes](https://updraft.cyfrin.io/courses/security)** - _Curso definitivo de segurança e auditoria de contratos inteligentes, criado para desenvolvedores de contratos inteligentes que desejam melhorar suas práticas recomendadas de segurança e se tornar pesquisadores de segurança._
 
 ### Tutoriais sobre segurança de contratos inteligentes {#tutorials-on-smart-contract-security}
 
