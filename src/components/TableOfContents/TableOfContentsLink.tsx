@@ -26,7 +26,10 @@ const Link = ({
       )}
     >
       <div
-        className="absolute top-1/2 -mt-1 hidden h-2 w-2 rounded-full border border-primary-hover bg-background group-hover:inline-block"
+        className={cn(
+          "absolute top-1/2 -mt-1 hidden h-2 w-2 rounded-full border border-primary-hover bg-background group-hover:inline-block",
+          isActive && "inline-block"
+        )}
         style={{
           insetInlineStart: `calc(-16px - 8px * ${depth} - 4px - 1px)`,
         }}
