@@ -27,7 +27,7 @@ Setki tysięcy entuzjastów Ethereum gromadzi się na tych forach internetowych,
 <SocialListItem socialIcon="discord"><Link href="https://discord.gg/ethstaker">EthStaker Discord</Link> — prowadzone przez społeczność wskazówki, edukacja, wsparcie i zasoby dla obecnych i potencjalnych stakerów</SocialListItem>
 <SocialListItem socialIcon="discord"><Link href="https://discord.gg/ethereum-org">Zespół strony internetowej ethereum.org</Link> — wpadnij i porozmawiaj o tworzeniu i projektowaniu strony internetowej ethereum.org z zespołem i ludźmi ze społeczności</SocialListItem>
 <SocialListItem socialIcon="discord"><Link href="https://discord.matos.club/">Matos Discord</Link> — społeczność twórców web3, w której spotykają się budujący, przedstawiciele przemysłu i entuzjaści Ethereum. Jesteśmy pasjonatami rozwoju, projektowania i kultury web3. Przyjdź tworzyć z nami.</SocialListItem>
-<SocialListItem socialIcon="webpage"><Link href="https://gitter.im/ethereum/solidity/">Solidity Gitter</Link> — czat dla deweloperów Solidity (Gitter)</SocialListItem>
+<SocialListItem socialIcon="webpage"><Link href="https://gitter.im/ethereum/solidity">Solidity Gitter</Link> — czat dla deweloperów Solidity (Gitter)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> — czat dla rozwoju Solidity (Matrix)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> *— forum pytań i odpowiedzi*</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://peeranha.io/">Peeranha</Link> *— zdecentralizowane forum pytań i odpowiedzi*</SocialListItem>
@@ -41,7 +41,7 @@ Setki tysięcy entuzjastów Ethereum gromadzi się na tych forach internetowych,
 
 <Divider />
 
-<Callout emoji=":classical_building:" titleKey="page-community-daos-callout-title" descriptionKey="page-community-daos-callout-description">
+<Callout emoji=":classical_building:" titleKey="page-community:page-community-daos-callout-title" descriptionKey="page-community:page-community-daos-callout-description">
   <div>
     <ButtonLink href="/community/get-involved/#decentralized-autonomous-organizations-daos">
       Dowiedz się więcej o DAO

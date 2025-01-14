@@ -273,12 +273,7 @@ const GasPage = () => {
               </InlineLink>
             </Text>
           </Box>
-          <GhostCard
-            flex="40%"
-            maxW="640px"
-            alignSelf="center"
-            mt={{ base: 16, lg: 2 }}
-          >
+          <GhostCard className="mt-16 max-w-[640px] self-center md:w-2/5 lg:mt-2">
             <Emoji text=":cat:" className="text-5xl" />
             <H3>{t("page-gas-attack-of-the-cryptokitties-header")}</H3>
             <Text>{t("page-gas-attack-of-the-cryptokitties-text")}</Text>
@@ -303,8 +298,6 @@ const GasPage = () => {
                   key={benefit.emoji}
                   emoji={benefit.emoji}
                   description={benefit.description}
-                  className="text-5xl"
-                  align="center"
                 />
               </Box>
             ))}

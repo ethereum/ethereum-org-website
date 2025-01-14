@@ -198,9 +198,9 @@ A felhasználók azonban nem tudják ellenőrizni a résztvevők jóhiszeműség
 
 ### A kvantumszámítógép fenyegetései {#quantum-computing-threats}
 
-A ZK-SNARK elliptikus görbe kriptográfiát ([ECDSA](/glossary/#ecdsa)) használ a titkosításhoz. Ez az algoritmus most biztonságos, de a kvantumszámítógépek meg tudják majd törni ezt a biztonsági modellt a jövőben.
+A ZK-SNARK elliptikus görbe kriptográfiát használ a titkosításhoz. Míg az elliptikus görbe diszkrét logaritmus problémája egyelőre megfejthetetlennek tekinthető, a kvantumszámítógépek fejlődése a jövőben megtörheti ezt a biztonsági modellt.
 
-A ZK-STARK immunis a kvantumszámítógépek fenyegetésére, mert ütközésálló hash-függvényeket használ a titkosításra. Ezt az algoritmust nehezebb feltörni a kvantumszámítógépnek, nem úgy, mint a nyilvános-privát kulcs párosát, melyet az elliptikusgörbe-alapú kriptográfia használ.
+A ZK-STARK immunis a kvantumszámítógépek fenyegetésére, mert csak ütközésálló hash-függvényeket használ a biztonsága érdekében. Ezt az algoritmust nehezebb feltörni a kvantumszámítógépnek, nem úgy, mint a nyilvános-privát kulcs párosát, melyet az elliptikusgörbe-alapú kriptográfia használ.
 
 ## További olvasnivaló {#further-reading}
 
@@ -210,3 +210,5 @@ A ZK-STARK immunis a kvantumszámítógépek fenyegetésére, mert ütközésál
 - [zk-SNARK-ok — Egy valós zero-knowledge példa és mélyebb elemzése](https://medium.com/coinmonks/zk-snarks-a-realistic-zero-knowledge-example-and-deep-dive-c5e6eaa7131c) — _Adam Luciano_
 - [ZK-STARK-ok — Igazolható bizalom létrehozása, még a kvantumszámítógépekkel szemben is](https://medium.com/coinmonks/zk-starks-create-verifiable-trust-even-against-quantum-computers-dd9c6a2bb13d) — _Adam Luciano_
 - [Egy hozzávetőleges áttekintés, hogyan lehetségesek a zk-SNARK-ok](https://vitalik.eth.limo/general/2021/01/26/snarks.html) — _Vitalik Buterin_
+- [A Zero-knowledge bizonyítékok (ZKP) megváltoztatják a szuverén identitás területét](https://frankiefab.hashnode.dev/why-zero-knowledge-proofs-zkps-is-a-game-changer-for-self-sovereign-identity) — _Franklin Ohaegbulam_
+

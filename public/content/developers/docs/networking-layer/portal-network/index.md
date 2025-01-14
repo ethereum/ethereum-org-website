@@ -76,13 +76,13 @@ The Portal Network clients are:
 - [Trin](https://github.com/ethereum/trin): written in Rust
 - [Fluffy](https://nimbus.team/docs/fluffy.html): written in Nim
 - [Ultralight](https://github.com/ethereumjs/ultralight): written in Typescript
-- [Shisui](https://github.com/GrapeBaBa/shisui): written in Go
+- [Shisui](https://github.com/optimism-java/shisui): written in Go
 
 Having multiple independent client implementations enhances the resilience and decentralization of the Ethereum network.
 
 If one client experiences issues or vulnerabilities, other clients can continue to operate smoothly, preventing a single point of failure. Additionally, diverse client implementations foster innovation and competition, driving improvements and reducing monoculture risk within the ecosystem.
 
-## Further reading {#futher-reading}
+## Further reading {#further-reading}
 
 - [The Portal Network (Piper Merriam at Devcon Bogota)](https://www.youtube.com/watch?v=0stc9jnQLXA).
 - [The Portal Network discord](https://discord.gg/CFFnmE7Hbs)

@@ -35,13 +35,11 @@ sidebarDepth: 2
 
 ```
     def update(node,path,value):
+        curnode = db.get(node) if node else [ NULL ] * 17
+        newnode = curnode.copy()
         if path == '':
-            curnode = db.get(node) if node else [ NULL ] * 17
-            newnode = curnode.copy()
             newnode[-1] = value
         else:
-            curnode = db.get(node) if node else [ NULL ] * 17
-            newnode = curnode.copy()
             newindex = update(curnode[path[0]],path[1:],value)
             newnode[path[0]] = newindex
         db.put(hash(newnode),newnode)
@@ -164,7 +162,7 @@ sidebarDepth: 2
 
 ### 前缀树示例 {#example-trie}
 
-假定我们想要包含四个路径/值对 `('do', 'verb')`、`('dog', 'puppy')`、`('doge', 'coins')`、`('horse', 'stallion')` 的前缀树。
+假设我们想要一个包含四个路径/值对的树：`('do', 'verb')`、`('dog', 'puppy')`、`(' doge', 'coins')`、`('horse', 'stallion')`。
 
 首先，我们将路径和值都转换为 `bytes`。 在下方代码中，_路径_的实际字节代表用 `<>` 表示。而_值_仍然显示为字符串，用 `''` 表示，以便于理解（值也应为 `bytes`）：
 
@@ -185,7 +183,7 @@ sidebarDepth: 2
     hashD:    [ <17>, [ <>, <>, <>, <>, <>, <>, [ <35>, 'coins' ], <>, <>, <>, <>, <>, <>, <>, <>, <>, 'puppy' ] ]
 ```
 
-当一个节点在另一个节点内部引用时，包含的是 `H(rlp.encode(node))`，其中 `H(x) = keccak256(x) if len(x) > > = 32 else x` 和 `rlp.encode` 是[递归长度前缀](/developers/docs/data-structures-and-encoding/rlp)编码函数。
+当一个节点在另一个节点内部被引用时，包含的内容是 `H(rlp.encode(node))`，其中 `H(x) = keccak256(x) if len(x) >= 32 else x` 和 `rlp.encode` 是[递归长度前缀](/developers/docs/data-structs-and-encoding/rlp)编码函数。
 
 请注意，更新前缀树时，_如果_新创建节点的长度 >= 32，则需要将键/值对 `(keccak256(x), x)` 存储在一个持久的查询表中。 然而，如果节点比这短，则不需要存储任何数据，因为函数 f(x) = x 是可逆的。
 
@@ -254,7 +252,7 @@ else:
 
 ### 收据树 {#receipts-trie}
 
-每个区块都有自己的收据树。 此处的 `path` 是：`rlp(transactionIndex)`。 `transactionIndex` 是它在挖矿区块中的索引。 收据字典树从不更新。 与交易字典树类似，它也有当前和以前的收据。 为了在收据字典树中查询特定的收据，需要提供区块中交易的索引、收据有效载荷以及交易类型。 返回的收据可以是 `Receipt` 类型，定义为 `TransactionType` 和 `ReceiptPayload` 的串联；也可以是 `LegacyReceipt` 类型，定义为`rlp([status, cumulativeGasUsed, logsBloom, logs])`。
+每个区块都有自己的收据树。 此处的 `path` 是：`rlp(transactionIndex)`。 `transactionIndex` 是它所在区块中的索引。 收据字典树从不更新。 与交易字典树类似，它也有当前和以前的收据。 为了在收据字典树中查询特定的收据，需要提供区块中交易的索引、收据有效载荷以及交易类型。 返回的收据可以是 `Receipt` 类型，定义为 `TransactionType` 和 `ReceiptPayload` 的串联；也可以是 `LegacyReceipt` 类型，定义为`rlp([status, cumulativeGasUsed, logsBloom, logs])`。
 
 关于这个问题的更多信息可以在 [EIP 2718](https://eips.ethereum.org/EIPS/eip-2718) 文档中找到。
 

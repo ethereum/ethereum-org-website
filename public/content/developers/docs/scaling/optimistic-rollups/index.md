@@ -253,12 +253,6 @@ More of a visual learner? Watch Finematics explain optimistic rollups:
 
 <YouTube id="7pWxCklcNsU" start="263" />
 
-### Use Optimistic rollups {#use-optimistic-rollups}
-
-Multiple implementations of Optimistic rollups exist that you can integrate into your dapps:
-
-<RollupProductDevDoc rollupType="optimistic" />
-
 ## Further reading on optimistic rollups
 
 - [How do optimistic rollups work (The Complete guide)](https://www.alchemy.com/overviews/optimistic-rollups)

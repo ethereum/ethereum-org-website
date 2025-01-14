@@ -4,7 +4,7 @@ description: 以太坊智能合约通过预言机访问真实数据，为用户�
 lang: zh
 ---
 
-预言机是使链下数据源可供区块链上的智能合约使用的数据馈送。 由于默认情况下，基于以太坊的智能合约无法访问存储在区块链网络外部的信息，预言机是必不可少的。
+预言机是产生数据馈送的应用程序，使链下数据来源可供区块链用于智能合约。 由于默认情况下，基于以太坊的智能合约无法访问存储在区块链网络外部的信息，预言机是必不可少的。
 
 赋予智能合约使用链下数据执行的能力，扩展了去中心化应用程序的效用和价值。 例如，链上预测市场依靠预言机提供有关结果的信息，用于验证用户的预测。 假设 Alice 下注 20 个以太币赌谁将成为下一任美国 总统。 在这种情况下，预测市场去中心化应用程序需要预言机来确认选举结果，并判定 Alice 是否有资格获得付款。
 
@@ -240,7 +240,7 @@ contract Oracle {
 
 ### 去中心化预言机 {#decentralized-oracles}
 
-去中心化预言机旨在通过消除单点故障来打破中性化预言机的局限性。 去中心化预言机服务由对等网络中的多个参与者组成，这些参与者就链下数据达成共识，然后再将数据发送到智能合约。
+去中心化预言机旨在通过消除单点故障来打破中心化预言机的局限性。 去中心化预言机服务由对等网络中的多个参与者组成，这些参与者就链下数据达成共识，然后再将数据发送到智能合约。
 
 理想情况下，去中心化预言机应该是无需许可、去信任且不受中心机构管理；在现实中，预言机存在着不同程度的去中心化。 有半去中心化的预言机网络，任何人都可以参与其中，但由“所有者“根据以往表现批准和移除节点。 也存在着完全去中心化的预言机网络：这些网络通常作为独立区块链运行，并且已经确定了协调节点和惩罚不良行为的共识机制。
 
@@ -274,7 +274,7 @@ contract Oracle {
 
 如果节点的答案不同于多数答案，将对其进行惩罚，即将其代币分发给提供更正确值的其他节点。 强制节点在提供数据之前提供保证金将激励节点做出诚实的响应，因为假定节点是理性的经济活动参与者，意在最大限度地增加回报。
 
-质押/投票还保护去中心化预言机免受“女巫攻击”，在这种攻击中，恶意参与者创建多个身份来利用共识系统。 然而，质押机制不能防止“揩油行为”（预言机节点从其他节点复制信息）和“懒散验证”（预言机节点随大流而不亲自验证信息）。
+质押/投票还能保护去中心化预言机免受[女巫攻击](/glossary/#sybil-attack)，在这种攻击中，恶意参与者创建多个身份来利用共识系统。 然而，质押机制不能防止“揩油行为”（预言机节点从其他节点复制信息）和“懒散验证”（预言机节点随大流而不亲自验证信息）。
 
 ##### 谢林点机制
 
@@ -358,7 +358,7 @@ contract PriceConsumerV3 {
 
 某些区块链应用程序（如基于区块链的游戏或彩票方案），需要高度的不可预测性和随机性才能有效工作。 然而，区块链的确定性执行消除了任何随机性。
 
-常见方法是采用伪随机加密函数（例如 `blockhash`）但是，它们可被[矿工操纵](https://ethereum.stackexchange.com/questions/3140/risk-of-using-blockhash-other-miners-preventing-attack#:~:text=So%20while%20the%20miners%20can,to%20one%20of%20the%20players.)，对工作量证明算法求解。 此外，以太坊[过渡到权益证明](/roadmap/merge/)意味着开发者不能再依靠 `blockhash` 获得链上随机性（然而，信标链的 [RANDAO 机制](https://eth2book.info/altair/part2/building_blocks/randomness)提供了另一种随机性来源）。
+原始方法是采用伪随机加密函数（例如 `blockhash`），但是它们可被[矿工操纵](https://ethereum.stackexchange.com/questions/3140/risk-of-using-blockhash-other-miners-preventing-attack#:~:text=So%20while%20the%20miners%20can,to%20one%20of%20the%20players.)，对工作量证明算法进行求解。 同样，以太坊[切换到权益证明](/roadmap/merge/)意味着开发者不再能够依赖 `blockhash` 得到链上随机性。 信标链的 [RANDAO 机制](https://eth2book.info/altair/part2/building_blocks/randomness)为随机性来源提供了替代选择。
 
 可以在链下生成随机值并发送到链上，但这样做对用户有很高的信任要求。 他们必须相信值确实是通过不可预测的机制产生的，并且未在传输过程中遭到改动。
 
@@ -388,6 +388,8 @@ Chainlink 的 [Keeper 网络](https://chain.link/keepers)提供智能合约方�
 
 **[Chainlink](https://chain.link/)** - _Chainlink 去中心化预言机网络提供防篡改的输入、输出和计算，支持任何区块链上的高级智能合约。_
 
+**[Chronicle](https://chroniclelabs.org/)** - _Chronicle 通过开发真正可扩展、经济高效、去中心化且可验证的预言机来克服当前链上数据传输面临的局限。_
+
 **[Witnet](https://witnet.io/)** - _Witnet 是一种无需许可、去中心化和抗审查的预言机，帮助智能合约对真实事件做出响应，提供强大的加密经济保障。_
 
 **[UMA 预言机](https://uma.xyz)** - _UMA 的乐观预言机允许智能合约快速接收不同应用程序的任何类型的数据，包括保险、金融衍生品和预测市场。_
@@ -401,6 +403,8 @@ Chainlink 的 [Keeper 网络](https://chain.link/keepers)提供智能合约方�
 **[Pyth 网络](https://pyth.network/)** - _Pyth 网络是第一方金融预言机网络，旨在在防篡改、去中心化和自我可持续的环境中在链上发布连续的真实数据。_
 
 **[API3 去中心化自治组织](https://www.api3.org/)** - _API3 去中心化自治组织提供第一方预言机解决方案，在智能合约的去中心化解决方案中实现更高的来源透明度、安全性和可扩展性_。
+
+**[Supra](https://supra.com/)** - 跨链解决方案的垂直集成工具包，可互连所有区块链，不论公共区块链（一层网络和二层网络）还是私人区块链（企业），提供可用于链上和链下用例的去中心化预言机价格源。
 
 ## 延伸阅读 {#further-reading}
 
@@ -422,6 +426,7 @@ Chainlink 的 [Keeper 网络](https://chain.link/keepers)提供智能合约方�
 **教程**
 
 - [如何通过 Solidity 语言在以太坊上提取当前价格](https://blog.chain.link/fetch-current-crypto-price-data-solidity/) — _Chainlink_
+- [使用预言机数据](https://docs.chroniclelabs.org/Developers/tutorials/Remix) - _Chronicle_
 
 **示例项目**
 

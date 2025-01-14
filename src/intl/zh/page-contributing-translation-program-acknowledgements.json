@@ -28,15 +28,15 @@
   "page-contributing-translation-program-acknowledgements-translator": "翻译人员",
   "page-contributing-translation-program-acknowledgements-language": "语言",
   "page-contributing-translation-program-acknowledgements-total-words": "总字数",
-  "page-contributing-translation-program-acknowledgements-oats-title": "POAP 徽章",
-  "page-contributing-translation-program-acknowledgements-1": "我们所有的翻译人员都有资格获得 POAP（出席证明协议）– 这是一种非同质化代币，证明他们参与了 ethereum.org 翻译计划。",
-  "page-contributing-translation-program-acknowledgements-2": "我们根据翻译人员的活跃度，为他们提供了一些不同的 POAP 徽章",
-  "page-contributing-translation-program-acknowledgements-3": "如果你在 Crowdin 为翻译工作做出了贡献，我们会给你发放 POAP 徽章。",
+  "page-contributing-translation-program-acknowledgements-oats-title": "OAT",
+  "page-contributing-translation-program-acknowledgements-1": "参与翻译计划的贡献者将有资格获得不同的 OAT（链上成就代币），这是一种非同质化代币，用于证明你在 ethereum.org 翻译计划中的参与情况。",
+  "page-contributing-translation-program-acknowledgements-2": "我们根据翻译人员的活跃度，提供了多种不同的链上成就代币",
+  "page-contributing-translation-program-acknowledgements-3": "如果你在 Crowdin 上为翻译工作做出了贡献，你将获得一枚链上成就代币！",
   "page-contributing-translation-program-acknowledgements-how-to-claim-title": "如何领取",
   "page-contributing-translation-program-acknowledgements-how-to-claim-1": "加入我们",
   "page-contributing-translation-program-acknowledgements-how-to-claim-1-discord": "Discord 服务器",
-  "page-contributing-translation-program-acknowledgements-how-to-claim-2": "在 #🥇 | poaps 频道中粘贴指向你的 Crowdin 帐户的链接。",
-  "page-contributing-translation-program-acknowledgements-how-to-claim-3": "等待我们的团队成员向你发送 POAP 徽章领取链接。",
-  "page-contributing-translation-program-acknowledgements-how-to-claim-4": "领取你的 POAP 徽章！",
-  "page-contributing-translation-program-acknowledgements-4": "你应该只使用自我保管的钱包来领取 POAP 徽章。不要使用交易所帐户或其他你不持有私钥的帐户，因为这些帐户将不允许你访问和管理你的 POAP 徽章。"
+  "page-contributing-translation-program-acknowledgements-how-to-claim-2": "将你的 Crowdin 帐户链接粘贴到 #🥇 | proof-of-contribution 频道。",
+  "page-contributing-translation-program-acknowledgements-how-to-claim-3": "等待我们团队的成员为你分配领取链上成就代币所需的角色。",
+  "page-contributing-translation-program-acknowledgements-how-to-claim-4": "领取你的链上成就代币！",
+  "page-contributing-translation-program-acknowledgements-4": "你只能使用自我保管的钱包来领取链上成就代币。请勿使用交易所帐户或你未持有私钥的其他帐户，因为这些帐户将不允许你访问和管理链上成就代币。"
 }

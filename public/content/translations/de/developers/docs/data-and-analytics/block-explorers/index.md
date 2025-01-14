@@ -5,7 +5,7 @@ lang: de
 sidebarDepth: 3
 ---
 
-Block-Explorer sind das Portal zu den Daten von Ethereum. Sie können darüber Echtzeitdaten zu Blöcken, Transaktionen, Minern, Konten und anderen Aktivitäten in der Chain sehen.
+Block-Explorer sind das Portal zu den Daten von Ethereum. Sie können sie nutzen, um Echtzeitdaten zu Blöcken, Transaktionen, Validatoren, Konten und anderen On-Chain-Aktivitäten einzusehen.
 
 ## Voraussetzungen {#prerequisites}
 
@@ -14,17 +14,23 @@ Sie sollten das Basiskonzept von Ethereum verstehen, damit Sie die Daten, die Si
 ## Dienste {#services}
 
 - [Etherscan](https://etherscan.io/) -_Auch in Chinesisch, Koreanisch, Russisch und Japanisch verfügbar_
+- [3xpl](https://3xpl.com/ethereum)
 - [Beaconcha.in](https://beaconcha.in/)
 - [Blockchair](https://blockchair.com/ethereum) -_Auch in Spanisch, Französisch, Italienisch, Niederländisch, Portugiesisch, Russisch, Chinesisch und Farsi verfügbar_
 - [Blockscout](https://eth.blockscout.com/)
 - [Chainlens](https://www.chainlens.com/)
 - [DexGuru Block Explorer](https://ethereum.dex.guru/)
 - [Etherchain](https://www.etherchain.org/)
+- [Ethernow](https://www.ethernow.xyz/)
 - [Ethplorer](https://ethplorer.io/) -_Auch in Chinesisch, Spanisch, Französisch, Türkisch, Russisch, Koreanisch und Vietnamesisch verfügbar_
 - [EthVM](https://www.ethvm.com/)
 - [OKLink](https://www.oklink.com/eth)
-- [Otterscan](https://otterscan.io/)
 - [Rantom](https://rantom.app/)
+
+## Open-Source-Werkzeuge {#open-source-tools}
+
+- [Otterscan](https://otterscan.io/)
+- [lazy-etherscan](https://github.com/woxjro/lazy-etherscan)
 
 ## Daten {#data}
 
@@ -48,7 +54,7 @@ Neue Blöcke werden alle 12 Sekunden zu Ethereum hinzugefügt (es sei denn, ein 
 - Gaslimit - Die Gaslimits, die von den Transaktionen im Block gesetzt wurden
 - Grundgebühr pro Gas - Der Mindestmultiplikator, der erforderlich ist, damit eine Transaktion in einen Block aufgenommen werden kann
 - Verbrannte Gebühren - Wie viel ETH in einem Block verbrannt wird
-- Extra Daten - Alle zusätzlichen Daten, die der Miner in den Block aufgenommen hat
+- Extradaten – alle zusätzlichen Daten, die der Ersteller im Block eingefügt hat
 
 **Erweiterte Daten**
 
@@ -76,12 +82,12 @@ Block-Explorer werden häufig eingesetzt, um den Status der Transaktionen abzuru
 - Transaktionshash - Ein Hash, der bei der Übermittlung der Transaktion generiert wird
 - Status - Ein Hinweis darauf, ob die Transaktion ausstehend, fehlgeschlagen oder erfolgreich ist
 - Block - Der Block, in dem die Transaktion enthalten ist
-- Zeitstempel - Der Zeitpunkt, zu dem ein Miner die Transaktion verarbeitet hat
+- Zeitstempel – der Zeitpunkt, zu dem eine Transaktion in einen von einem Validator vorgeschlagenen Block aufgenommen wurde
 - From - Die Adresse des Kontos, das die Transaktion übermittelt hat
 - To - Die Adresse des Empfängers oder des Smart Contracts, mit dem die Transaktion interagiert
 - Übertragene Token - Eine Liste der Token, die als Teil der Transaktion übertragen wurden
 - Wert - Der Gesamtwert der übertragenen ETH
-- Transaktionsgebühr - Der Betrag, der an den Miner gezahlt wird, um die Transaktion zu verarbeiten (berechnet durch den Gaspreis \ verwendetes Gas)
+- Transaktionsgebühr – an den Validator gezahlte Summe, um die Transaktion zu verarbeiten (Berechnung: Gaspreis \* Gasverbrauch)
 
 **Erweiterte Daten**
 
@@ -232,11 +238,13 @@ Die Daten der obersten Ebene der Konsensebene umfassen Folgendes:
 ## Block Explorer {#block-explorers}
 
 - [Etherscan](https://etherscan.io/) - ein Block-Explorer, mit dem Sie Daten für Ethereum Mainnet und Goerli Testnetz abrufen können
+- [3xpl](https://3xpl.com/ethereum) – ein werbefreier Open-Source-Ethereum-Explorer, der den Download seiner Datensätze erlaubt
 - [Beaconcha.in](https://beaconcha.in/) - ein Open-Source-Block-Explorer für Ethereum Mainnet und Goerli Testnetz
 - [Blockchair](https://blockchair.com/ethereum) – Der privateste Ethereum-Explorer. Auch zum Sortieren und Filtern von (Mempool-) Daten
 - [Etherchain](https://www.etherchain.org/) - Ein Block-Explorer für das Ethereum Mainnet
 - [Ethplorer](https://ethplorer.io/) - ein Block-Explorer mit Fokus auf Token für das Ethereum Mainnet und das Kovan Testnetz
 - [Rantom](https://rantom.app/) - Ein krypto-freundlicher Open-Source-Dienst, der in seine dezentrale Finanzplattform (DeFi)& integriert ist Visualisierung des Transaktionsvolumens von NFTs für einen detaillierten Überblick
+- [Ethernow](https://www.ethernow.xyz/) – ein Echtzeit-Transaktions-Explorer, der es ermöglicht, die Pre-Chain-Ebene des Ethereum-Mainnets einzusehen
 
 ## Weiterführende Informationen {#further-reading}
 

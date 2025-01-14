@@ -1,10 +1,9 @@
-import * as React from "react"
-import { createIcon } from "@chakra-ui/react"
+import { createIconBase } from "../icon-base"
 
-export const GreenTickIcon = createIcon({
+export const GreenTickIcon = createIconBase({
   displayName: "GreenTickIcon",
   viewBox: "0 0 16 16",
-  path: (
+  children: (
     <g>
       <rect width={16} height={16} fill="#c8f7d8" rx={8} />
       <path

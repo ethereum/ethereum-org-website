@@ -1,130 +1,134 @@
 ---
-title: How The Merge impacted ETH supply
-description: Breakdown on how The Merge impacted ETH supply
+title: मर्ज ने ETH आपूर्ति को कैसे प्रभावित किया
+description: मर्ज ने ETH आपूर्ति को कैसे प्रभावित किया, इसका विवरण
 lang: hi
 ---
 
-# How The Merge impacted ETH supply {#how-the-merge-impacts-ETH-supply}
+# मर्ज ने ETH आपूर्ति को कैसे प्रभावित किया {#how-the-merge-impacts-ETH-supply}
 
-The Merge represented the Ethereum networks transition from proof-of-work to proof-of-stake which occurred in September 2022. The way ETH was issued underwent changes at time of that transition. Previously, new ETH was issued from two sources: the execution layer (i.e. Mainnet) and the consensus layer (i.e. बीकन चेन). Since The Merge, issuance on the execution layer is now zero. Let's break this down.
+मर्ज, एथेरियम नेटवर्क के प्रूफ-ऑफ-वर्क से प्रूफ-ऑफ-स्टेक में ट्रांसमिशन को दर्शाता है जो सितंबर 2022 में हुआ था। उस परिवर्तन के समय ETH जारी करने के तरीके में बदलाव आया। पहले, नया ETH दो स्रोतों से जारी किया गया था: निष्पादन परत (यानी मेननेट) और कंसेंसस लेयर (यानी बीकन चेन)। मर्ज के बाद से, निष्पादन परत पर जारी करना अब शून्य है। चलिए इसका विश्लेषण करते हैं।
 
-## Components of ETH issuance {#components-of-eth-issuance}
+## ETH जारी करने के घटक {#components-of-eth-issuance}
 
-We can break the supply of ETH into two primary forces: issuance and burn.
+हम ETH की आपूर्ति को दो प्राथमिक शक्तियों में विभाजित कर सकते हैं: जारी करना और बर्न।
 
-The **issuance** of ETH is the process of creating ETH that did not previously exist. The **burning** of ETH is when existing ETH gets destroyed, removing it from circulation. The rate of issuance and burning gets calculated on several parameters, and the balance between them determines the resulting inflation/deflation rate of ether.
+ETH की **जारी करने** की प्रक्रिया, ऐसे ETH को बनाने की है जो पहले मौजूद नहीं था। ETH का **बर्निंग** तब होता है जब मौजूदा ETH नष्ट हो जाता है, जिससे यह प्रचलन से हट जाता है। जारी करने और बर्निंग की दर की गणना कई मापदंडों पर की जाती है, और उनके बीच संतुलन ईथर की परिणामी मुद्रास्फीति/अपस्फीति दर निर्धारित करता है।
 
 <Card
 emoji=":chart_decreasing:"
-title="ETH issuance tldr">
+title="ETH जारी करना tldr">
 
-- Before transitioning to proof-of-stake, miners were issued approximately 13,000 ETH/day
-- Stakers are issued approximately 1,700 ETH/day, based on about 14 million total ETH staked
-- The exact staking issuance fluctuates based on the total amount of ETH staked
-- **Since The Merge, only the ~1,700 ETH/day remains, dropping total new ETH issuance by ~88%**
-- The burn: This fluctuates according to network demand. _If_ an average gas price of at least 16 gwei is observed for a given day, this effectively offsets the ~1,700 ETH that is issued to validators and brings net ETH inflation to zero or less for that day.
+- प्रूफ-ऑफ-स्टेक से गुज़रने से पहले, खनिकों को लगभग 13,000 ETH/दिन जारी किए गए थे
+- स्टेकर्स को लगभग 1,700 ETH/दिन जारी किए जाते हैं, जो लगभग 14 मिलियन कुल ETH स्टेक पर आधारित होते हैं
+- स्टेक पर लगाई गई ETH की कुल राशि के आधार पर सटीक स्टेकिंग जारी करने में उतार-चढ़ाव होता है
+- **मर्ज के बाद से, केवल ~1,700 ETH/दिन शेष है, कुल नए ETH जारी करने को ~88%** तक गिरा देता है
+- बर्न: यह नेटवर्क की मांग के अनुसार उतार-चढ़ाव करता है। _यदि_ किसी विशेष दिन कम से कम 16 gwei की औसत गैस कीमत का आकलन किया जाता है, यह प्रभावी रूप से ~1,700 ETH को ऑफसेट करता है जो सत्यापनकर्ताओं को जारी किया जाता है और उस दिन के लिए शुद्ध ETH मुद्रास्फीति को शून्य या उससे कम पर लाता है।
 
 </Card>
 
-## Pre-merge (historical) {#pre-merge}
+## पूर्व-मर्ज (ऐतिहासिक) {#pre-merge}
 
-### Execution layer issuance {#el-issuance-pre-merge}
+### निष्पादन परत जारी करना {#el-issuance-pre-merge}
 
-Under proof-of-work, miners only interacted with the execution layer and were rewarded with block rewards if they were the first miner to solve the next block. Since the [Constantinople upgrade](/history/#constantinople) in 2019 this reward was 2 ETH per block. Miners were also rewarded for publishing [ommer](/glossary/#ommer) blocks, which were valid blocks that didn't end up in the longest/canonical chain. These rewards maxed out at 1.75 ETH per ommer, and were _in addition to_ the reward issued from the canonical block. The process of mining was an economically intensive activity, which historically required high levels of ETH issuance to sustain.
+प्रूफ-ऑफ-वर्क के तहत, माईनर ने केवल निष्पादन परत के साथ बातचीत की और उन्हें ब्लॉक पुरस्कारों से पुरस्कृत किया गया यदि वे अगले ब्लॉक को हल करने वाले पहले माईनर थे। 2019 में [कॉन्स्टेंटिनोपल अपग्रेड](/history/#constantinople) के बाद से यह पुरस्कार 2 ETH प्रति ब्लॉक था। माईनर को [ommer](/glossary/#ommer) ब्लॉक्स प्रकाशित करने के लिए भी पुरस्कृत किया गया था, जो ऐसे वैध ब्लॉक्स थे जो सबसे लंबी/विहित श्रृंखला में समाप्त नहीं हुए थे। ये पुरस्कार अधिकतम 1.75 ETH प्रति ओमेर थे, और कैनोनिकल ब्लॉक से जारी इनाम _के अलावा_ थे। माईनिंग की प्रक्रिया एक आर्थिक रूप से गहन गतिविधि थी, जिसे बनाए रखने के लिए ऐतिहासिक रूप से ETH जारी करने के उच्च स्तर की आवश्यकता थी।
 
-### Consensus layer issuance {#cl-issuance-pre-merge}
+### कंसेंसस लेयर जारी करना {#cl-issuance-pre-merge}
 
-The [Beacon Chain](/history/#beacon-chain-genesis) went live in 2020. Instead of miners, it is secured by validators using proof-of-stake. This chain was bootstrapped by Ethereum users depositing ETH one-way into a smart contract on Mainnet (the execution layer), which the Beacon Chain listens to, crediting the user with an equal amount of ETH on the new chain. Until The Merge happened, the Beacon Chain's validators were not processing transactions and were essentially coming to consensus on the state of the validator pool itself.
+[बीकन चेन](/history/#beacon-chain-genesis) 2020 में लाइव हो गया। माईनर के बजाय, इसे प्रूफ-ऑफ-स्टेक का उपयोग करके सत्यापनकर्ताओं द्वारा सुरक्षित किया जाता है। इस श्रृंखला को एथेरियम यूज़र द्वारा मेननेट (निष्पादन परत) पर एक स्मार्ट अनुबंध में ETH वन-वे जमा करने के लिए बूटस्ट्रैप किया गया था, जिसे बीकन चेन सुनता है, यूज़र को नई श्रृंखला पर ETH की समान राशि के साथ श्रेय देता है। मर्ज होने तक, बीकन चेन के सत्यापनकर्ता लेनदेन को संसाधित नहीं कर रहे थे और अनिवार्य रूप से सत्यापनकर्ता पूल की स्थिति पर कंसेंसस के लिए आ रहे थे।
 
-Validators on the Beacon Chain are rewarded with ETH for attesting to the state of the chain and proposing blocks. Rewards (or penalties) are calculated and distributed at each epoch (every 6.4 minutes) based on validator performance. Validator rewards are **significantly** less than the mining rewards that were previously issued under proof-of-work (2 ETH every ~13.5 seconds), as operating a validating node is not as economically intense and thus does not require or warrant as high a reward.
+बीकन चेन पर सत्यापनकर्ताओं को श्रृंखला की स्थिति को प्रमाणित करने और ब्लॉकों का प्रस्ताव करने के लिए ETH से पुरस्कृत किया जाता है। सत्यापनकर्ता के प्रदर्शन के आधार पर प्रत्येक युग (प्रत्येक 6.4 मिनट) में पुरस्कार (या दंड) की गणना और वितरण किया जाता है। सत्यापनकर्ता पुरस्कार माईनिंग पुरस्कारों की तुलना में **काफ़ी** कम हैं जो पहले प्रूफ-ऑफ-वर्क (2 ETH प्रत्येक ~ 13.5 सेकंड) के तहत जारी किए गए थे, क्योंकि एक मान्य नोड का संचालन आर्थिक रूप से तीव्र नहीं है और इस प्रकार उच्च पुरस्‍कार की आवश्यकता या वारंट नहीं है।
 
-### Pre-merge issuance breakdown {#pre-merge-issuance-breakdown}
+### पूर्व-मर्ज जारी करने का विवरण {#pre-merge-issuance-breakdown}
 
-Total ETH supply: **~120,520,000 ETH** (at time of The Merge in September 2022)
+कुल ETH आपूर्ति: **~120,520,000 ETH** (सितंबर 2022 में मर्ज के समय)
 
-**Execution layer issuance:**
+**निष्पादन परत जारी करना:**
 
-- Was estimated at 2.08 ETH per 13.3 seconds\*: **~4,930,000** ETH issued in a year
-- Resulted in an inflation rate of **approximately 4.09%** (4.93M per year / 120.5M total)
-- \*This includes the 2 ETH per canonical block, plus an average of 0.08 ETH over time from ommer blocks. Also uses 13.3 seconds, the baseline block time target without any influence from a [difficulty bomb](/glossary/#difficulty-bomb). ([See source](https://bitinfocharts.com/ethereum/))
+- 2.08 ETH प्रति 13.3 सेकंड का अनुमान लगाया गया था*: **~4,930,000** ETH एक वर्ष में जारी किया गया
+- परिणामस्वरूप मुद्रास्फीति दर **लगभग 4.09%** (4.93M प्रति वर्ष / कुल 120.5M)
+- *इसमें 2 ETH प्रति कैनोनिकल ब्लॉक, साथ ही ओमर ब्लॉक से समय के साथ औसतन 0.08 ETH शामिल हैं। इसके अलावा 13.3 सेकंड का उपयोग करता है, बेसलाइन ब्लॉक समय लक्ष्य [डिफिकल्‍टी बम](/glossary/#difficulty-bomb) से किसी भी प्रभाव के बिना। ([स्रोत देखें](https://bitinfocharts.com/ethereum/))
 
-**Consensus layer issuance:**
+**कंसेंसस लेयर जारी करना:**
 
-- Using 14,000,000 total ETH staked, the rate of ETH issuance is approximately 1700 ETH/day ([See source](https://ultrasound.money/))
-- Results in **~620,500** ETH issued in a year
-- Resulted in inflation rate of **approximately 0.52%** (620.5K per year / 119.3M total)
-
-<InfoBanner>
-<strong>Total annualized issuance rate (pre-merge): ~4.61%</strong> (4.09% + 0.52%)<br/><br/>
-<strong>~88.7%</strong> of the issuance was going to miners on the execution layer (4.09 / 4.61 * 100)<br/><br/>
-<strong>~11.3%</strong> was being issued to stakers on the consensus layer (0.52 / 4.61 * 100)
-</InfoBanner>
-
-## Post-merge (present day) {#post-merge}
-
-### Execution layer issuance {#el-issuance-post-merge}
-
-Execution layer issuance since The Merge is zero. Proof-of-work is no longer a valid means of block production under the upgraded rules of consensus. All execution layer activity is packaged into "beacon blocks", which are published and attested to by proof-of-stake validators. Rewards for attesting-to and publishing beacon blocks are accounted for separately on the consensus layer.
-
-### Consensus layer issuance {#cl-issuance-post-merge}
-
-Consensus layer issuance continues today as before The Merge, with small rewards for validators who attest to and propose blocks. Validator rewards continue to accrue to _validator balances_ that are managed within the consensus layer. Unlike the current accounts, which can transact on Mainnet, these are separate Ethereum accounts where validator funds will not be withdrawable/transferrable until the upcoming Shanghai upgrade. This means that although new ETH is still being issued, 100% of consensus layer funds remain locked and unavailable to the market until this upgrade occurs.
-
-When validator withdrawals are enabled, stakers will be incentivized to remove their _earnings/rewards (balance over 32 ETH)_ as these funds are otherwise not contributing to their stake weight (which maxes at 32).
-
-After withdraw functionality is enabled, stakers may also choose to exit and withdraw their entire validator balance. To ensure Ethereum is stable, the number of validators leaving simultaneously is capped. Only six validators may exit in a given epoch (6.4 minute period) depending on the total ETH staked at the time. As more validators withdraw, the maximum number of exiting validators will gradually be reduced to four to intentionally prevent large destabilizing amounts of staked ETH from being withdrawed concurrently.
-
-### Post-merge inflation breakdown {#post-merge-inflation-breakdown}
-
-- Total ETH supply: **~120,520,000 ETH** (at time of The Merge in September 2022)
-- Execution layer issuance: **0**
-- Consensus layer issuance: Same as above, **~0.52%** annualized issuance rate (with 14 million total ETH staked)
+- स्टेक पर लगाए गए कुल 14,000,000 ETH का उपयोग करते हुए, ETH जारी करने की दर लगभग 1700 ETH/दिन है ([स्रोत देखें](https://ultrasound.money/))
+- एक वर्ष में जारी किए गए **~620,500** ETH में परिणाम
+- परिणामस्वरूप मुद्रास्फीति दर **लगभग 0.52%** (620.5K प्रति वर्ष / 119.3M कुल)
 
 <InfoBanner>
-Total annualized issuance rate: <strong>~0.52%</strong><br/><br/>
-Net reduction in annual ETH issuance: <strong>~88.7%</strong> ((4.61% - 0.52%) / 4.61% * 100)
+<strong>कुल वार्षिक जारी करने की दर (प्री-मर्ज): ~4.61%</strong> (4.09% + 0.52%)<br/><br/>
+~जारी करने का <strong>88.7%</strong> निष्पादन लेयर (4.09/4.61 * 100) पर खनिकों को जा रहा था<br/><br/>
+<strong>~11.3%</strong> कंसेंसस लेयर (0.52/4.61 * 100) पर हितधारकों को जारी किया जा रहा था
 </InfoBanner>
 
-## <Emoji text=":fire:" size="1" /> The burn {#the-burn}
+## पोस्ट-मर्ज (वर्तमान दिन) {#post-merge}
 
-The opposite force to ETH issuance is the rate at which ETH is burned. For a transaction to execute on Ethereum, a minimum fee (known as a "base fee") must be paid, which fluctuates continuously (block-to-block) depending on network activity. The fee is paid in ETH and is _required_ for the transaction to be considered valid. This fee gets _burned_ during the transaction process, removing it from circulation.
+### निष्पादन परत जारी करना {#el-issuance-post-merge}
+
+मर्ज के बाद से निष्पादन परत जारी करना शून्य है। प्रूफ-ऑफ-वर्क अब कंसेंसस के अपग्रेड नियमों के तहत ब्लॉक उत्पादन का एक वैध साधन नहीं है। सभी निष्पादन परत गतिविधि को "बीकन ब्लॉक्स" में पैक किया जाता है, जो प्रूफ-ऑफ-स्टेक सत्यापनकर्ताओं द्वारा प्रकाशित और सत्यापित होते हैं। बीकन ब्लॉकों को सत्यापित करने और प्रकाशित करने के लिए पुरस्कारों को कंसेंसस लेयर पर अलग से हिसाब दिया जाता है।
+
+### कंसेंसस लेयर जारी करना {#cl-issuance-post-merge}
+
+कंसेंसस लेयर जारी करना आज भी मर्ज से पहले की तरह जारी है, सत्यापनकर्ताओं के लिए छोटे पुरस्कारों के साथ जो ब्लॉक को प्रमाणित करते हैं और प्रस्तावित करते हैं। सत्यापनकर्ता पुरस्कार _सत्यापनकर्ता शेष_ तक अर्जित करना जारी रखते हैं जो कंसेंसस लेयर के भीतर प्रबंधित होते हैं। चालू खातों ("निष्पादन" खातों) के विपरीत, जो मेननेट पर लेनदेन कर सकते हैं, ये अलग-अलग एथेरियम खाते हैं जो अन्य एथेरियम खातों के साथ स्वतंत्र रूप से लेनदेन नहीं कर सकते हैं। इन खातों में धनराशि केवल एक निर्दिष्ट निष्पादन पते पर निकाली जा सकती है।
+
+अप्रैल 2023 में हुए शंघाई/कैपेला अपग्रेड के बाद से, स्टेकर्स के लिए इन निकासी को सक्षम किया गया है। स्टेकर्स को अपनी _कमाई/पुरस्कार (32 ETH से अधिक शेष)_ को हटाने के लिए प्रोत्साहित किया जाता है क्योंकि ये फंड अन्यथा उनके स्टेक वजन (जो अधिकतम 32 पर है) में योगदान नहीं दे रहे हैं।
+
+स्टेकर्स अपने पूरे सत्यापनकर्ता बैलेंस से बाहर निकलने और वापस लेने का विकल्प भी चुन सकते हैं। यह सुनिश्चित करने के लिए कि एथेरियम स्थिर है, एक साथ छोड़ने वाले सत्यापनकर्ताओं की संख्या सीमित है।
+
+कुल सत्यापनकर्ता संख्या का लगभग 0.33% किसी दिए गए दिन में बाहर निकल सकता है। डिफ़ॉल्ट रूप से, चार (4) सत्यापनकर्ता प्रति युग (प्रत्येक 6.4 मिनट, या प्रति दिन 900) से बाहर निकल सकते हैं। 262,144 (2<sup>18</sup>) से अधिक प्रत्येक 65,536 (2<sup>16</sup>) अतिरिक्त सत्यापनकर्ताओं के लिए एक अतिरिक्त एक (1) सत्यापनकर्ता को बाहर निकलने की अनुमति है। उदाहरण के लिए, 327,680 से अधिक सत्यापनकर्ताओं के साथ, पांच (5) प्रति युग (1,125 प्रति दिन) छोड़ सकते हैं। छह (6) को 393,216 से अधिक कुल सक्रिय सत्यापनकर्ता गिनती के साथ अनुमति दी जाएगी, और इसके आगे।
+
+जैसे-जैसे अधिक सत्यापनकर्ता वापस लेते हैं, बाहर निकलने वाले सत्यापनकर्ताओं की अधिकतम संख्या धीरे-धीरे कम से कम चार हो जाएगी ताकि जानबूझकर दांव पर लगाए गए ETH की बड़ी अस्थिर मात्रा को समवर्ती रूप से वापस लेने से रोका जा सके।
+
+### मर्ज के बाद की मुद्रास्फीति {#post-merge-inflation-breakdown}
+
+- कुल ETH आपूर्ति: **~120,520,000 ETH** (सितंबर 2022 में मर्ज के समय)
+- निष्पादन परत जारी करना: **0**
+- कंसेंसस लेयर जारी करना: ऊपर की तरह, **~0.52%** वार्षिक जारी करने की दर (14 मिलियन कुल ETH दांव के साथ)
 
 <InfoBanner>
-Fee burning went live with <a href="/history/#london">the London upgrade</a> in August 2021, and remains unchanged since The Merge.
+कुल वार्षिक जारी करने की दर: <strong>~0.52%</strong><br/><br/>
+वार्षिक ETH जारी करने में शुद्ध कमी: <strong>~88.7%</strong> ((4.61% - 0.52%) / 4.61% * 100)
 </InfoBanner>
 
-On top of the fee burn implemented by the London upgrade, validators can also incur penalties for being offline, or worse, they can be slashed for breaking specific rules that threaten network security. These penalties result in a reduction of ETH from that validator's balance, which is not directly rewarded to any other account, effectively burning/removing it from circulation.
+## <Emoji text=":fire:" size="1" />the burn {#the-burn}
 
-### Calculating average gas price for deflation {#calculating-average-gas-price-for-deflation}
+ETH जारी करने के विपरीत बल वह दर है जिस पर ETH को बर्न किया जाता है। एथेरियम पर लेनदेन निष्पादित करने के लिए, एक न्यूनतम शुल्क (जिसे "आधार शुल्क" के रूप में जाना जाता है) का भुगतान किया जाना चाहिए, जो नेटवर्क गतिविधि के आधार पर लगातार (ब्लॉक-टू-ब्लॉक) उतार-चढ़ाव करता है। शुल्क का भुगतान ETH में किया जाता है और लेनदेन को वैध माने जाने के लिए _आवश्यक_ है। यह शुल्क लेन-देन प्रक्रिया के दौरान _बर्न_ हो जाता है, इसे प्रचलन से हटा देता है।
 
-As discussed above, the amount of ETH issued in a given day is dependent upon the total ETH staked. At time of writing, this is approximately 1700 ETH/day.
+<InfoBanner>
+अगस्त 2021 में <a href="/history/#london">द लंदन अपग्रेड</a> के साथ शुल्क बर्निंग लाइव हो गया, और मर्ज के बाद से अपरिवर्तित बना हुआ है।
+</InfoBanner>
 
-To determine the average gas price required to completely offset this issuance in a given 24-hour period, we'll start by calculating the total number of blocks in a day, given a block time of 12 seconds:
+लंदन अपग्रेड द्वारा लागू शुल्क बर्न के शीर्ष पर, सत्यापनकर्ता ऑफ़लाइन होने के लिए दंड भी लगा सकते हैं, या इससे भी बदतर, उन्हें नेटवर्क सुरक्षा को खतरे में डालने वाले विशिष्ट नियमों को तोड़ने के लिए घटाया जा सकता है। इन दंडों के परिणामस्वरूप उस सत्यापनकर्ता की शेष राशि से ETH में कमी आती है, जिसे सीधे किसी अन्य खाते में पुरस्कृत नहीं किया जाता है, प्रभावी रूप से इसे प्रचलन से बर्न कर दिया जाता है/हटा दिया जाता है।
 
-- `(1 block / 12 seconds) * (60 seconds/minute) = 5 blocks/minute`
-- `(5 blocks/minute) * (60 minutes/hour) = 300 blocks/hour`
-- `(300 blocks/hour) * (24 hours/day) = 7200 blocks/day`
+### अपस्फीति के लिए औसत गैस मूल्य की गणना {#calculating-average-gas-price-for-deflation}
 
-Each block targets `15x10^6 gas/block` ([more on gas](/developers/docs/gas/)). Using this, we can solve for the average gas price (in units of gwei/gas) required to offset issuance, given a total daily ETH issuance of 1700 ETH:
+जैसा कि ऊपर चर्चा की गई है, किसी दिए गए दिन में जारी किए गए ETH की मात्रा कुल ETH स्टेक पर निर्भर करती है। लेखन के समय, यह लगभग 1700 ETH / दिन है।
+
+किसी दिए गए 24-घंटे की अवधि में इस जारी करने को पूरी तरह से ऑफसेट करने के लिए आवश्यक औसत गैस मूल्य निर्धारित करने के लिए, हम 12 सेकंड के ब्लॉक समय को देखते हुए, एक दिन में ब्लॉक की कुल संख्या की गणना करके शुरू करेंगे:
+
+- `(1 ब्लॉक / 12 सेकंड) * (60 सेकंड/मिनट) = 5 ब्लॉक/मिनट`
+- `(5 ब्लॉक/मिनट) * (60 मिनट/घंटा) = 300 ब्लॉक/घंटा`
+- `(300 ब्लॉक/घंटा) * (24 घंटे/दिन) = 7200 ब्लॉक/दिन`
+
+प्रत्येक ब्लॉक `15x10^6 gas/block` ([गैस पर अधिक](/developers/docs/gas/)) को लक्षित करता है। इसका उपयोग करके, हम जारी करने के लिए आवश्यक औसत गैस मूल्य (gwei/गैस की इकाइयों में) के लिए हल कर सकते हैं, 1700 ETH के कुल दैनिक ETH जारी किए जाने को देखते हुए:
 
 - `7200 blocks/day * 15x10^6 gas/block *`**`Y gwei/gas`**`* 1 ETH/ 10^9 gwei = 1700 ETH/day`
 
-Solving for `Y`:
+`Y` के लिए हल करना:
 
-- `Y = (1700(10^9))/(7200 * 15(10^6)) = (17x10^3)/(72 * 15) = 16 gwei` (rounding to only two significant digits)
+- `Y = (1700(10^9))/(7200 * 15(10^6)) = (17x10^3)/(72 * 15) = 16 gwei` (केवल दो सार्थक अंकों तक पूर्णांक)
 
-Another way to rearrange this last step would be to replace `1700` with a variable `X` that represents the daily ETH issuance, and to simplify the rest to:
+इस अंतिम चरण को पुनर्व्यवस्थित करने का एक अन्य तरीका `1700` को एक variable `X` से बदलना होगा जो दैनिक ETH जारी करने का प्रतिनिधित्व करता है, और बाकी को सरल बनाने के लिए:
 
 - `Y = (X(10^3)/(7200 * 15)) = X/108`
 
-We can simplify and write this as a function of `X`:
+हम इसे `X` के फ़ंक्शन के रूप में सरल और लिख सकते हैं:
 
-- `f(X) = X/108` where `X` is daily ETH issuance, and `f(X)` represents the gwei/gas price required to offset all of the newly issued ETH.
+- `f(X) = X/108` जहां `X` दैनिक ETH जारी करना है, और `f(X)` सभी नए जारी किए गए ETH को ऑफसेट करने के लिए आवश्यक gwei/गैस मूल्य का प्रतिनिधित्व करता है।
 
-So, for example, if `X` (daily ETH issuance) rises to 1800 based on total ETH staked, `f(X)` (gwei required to offset all of the issuance) would then be `17 gwei` (using 2 significant digits)
+इसलिए, उदाहरण के लिए, यदि `X` (दैनिक ETH जारी) कुल ETH दांव के आधार पर 1800 तक बढ़ जाता है, तो `f(X)` (सभी जारी करने के लिए आवश्यक gwei) `17 gwei` (2 महत्वपूर्ण अंकों का उपयोग करके) होगा
 
 ## अतिरिक्त पाठ्यसामग्री {#further-reading}
 
 - [मर्ज](/roadmap/merge/)
-- [Ultrasound.money](https://ultrasound.money/) - _Dashboards available to visualize ETH issuance and burn in real-time_
-- [Charting Ethereum Issuance](https://www.attestant.io/posts/charting-ethereum-issuance/) - _Jim McDonald 2020_
+- [Ultrasound.money](https://ultrasound.money/) - _ETH जारी करने और रीयल-टाइम में burn करने की कल्पना करने के लिए उपलब्ध डैशबोर्ड_
+- [चार्टिंग एथेरियम जारी करना](https://www.attestant.io/posts/charting-ethereum-issuance/) - _जिम McDonald 2020_

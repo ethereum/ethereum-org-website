@@ -1,5 +1,4 @@
 import { useTranslation } from "next-i18next"
-import { Box } from "@chakra-ui/react"
 
 import CardList, { type CardListItem } from "@/components/CardList"
 
@@ -78,9 +77,9 @@ const MergeArticleList = () => {
   ]
 
   return (
-    <Box mb="4rem">
+    <div className="mb-16">
       <CardList items={reads} />
-    </Box>
+    </div>
   )
 }
 

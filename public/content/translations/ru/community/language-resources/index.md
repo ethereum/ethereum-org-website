@@ -97,7 +97,7 @@ Ethereum.org переведен на более чем 40 языков, кото
 - [Омер Грэйсмен (OpenZeppelin) — Как мы предотвратили взлом смарт-контракта в 15 миллиардов долларов](https://www.cryptojungle.co.il/omer-greisman-openzeppelin/)
 - [Шай Датика (INX) — Токенизация и будущее ценных бумаг, в том числе является ли Ethereum ценной бумагой](https://www.cryptojungle.co.il/shy-datika-tokenization/)
 - [Рой Конфино (Lemonade) — Страхование в Ethereum](https://www.cryptojungle.co.il/roy-confino-insurance/)
-- [Идан Офрат (Fireblocks) — принятие на государственном уровне](https://www.cryptojungle.co.il/idan-ofrat-fireblocks/)
+- [Идан Офрат (Fireblocks) — Институциональное усыновление](https://www.cryptojungle.co.il/idan-ofrat-fireblocks/)
 - [Гал Вейцман (MetaMask) — Что такое MetaMask](https://www.cryptojungle.co.il/gal-weizman-metamask/)
 - [Дрор Авиели (Consensys) — Центр Ethereum](https://www.cryptojungle.co.il/dror-aviely-ethereum-center/)
 - [Нир Розин — Быть криптопанком](https://www.cryptojungle.co.il/nir-rozin-cryptopunk/)

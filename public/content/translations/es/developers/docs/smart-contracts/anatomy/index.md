@@ -203,7 +203,7 @@ Un contrato completo podría verse así. Aquí la función `constructor` proporc
 
 ## Eventos y registros {#events-and-logs}
 
-Los eventos le permiten comunicarse con su contrato inteligente desde su front-end u otras aplicaciones de suscripción. Cuando se mina una transacción, los contratos inteligentes pueden emitir eventos y escribir registros en la cadena de bloques que el front-end pueda procesar.
+Los eventos permiten que su contrato inteligente se comunique con su interfaz o frontend, u otras aplicaciones de suscripción. Una vez que una transacción es validada y se agrega a un bloque, los contratos inteligentes pueden emitir eventos y registrar información, que la frontend puede procesar y utilizar.
 
 ## Ejemplos anotados {#annotated-examples}
 
@@ -282,19 +282,19 @@ contract Token {
         // `requiere` es una estructura de control utilizada para hacer cumplir ciertas condiciones.
         // Si una instrucción `require` evalúa a `falso`, se activa una excepción,
         // la cual revierte todos los cambios realizados en el estado durante la llamada actual.
-        // Learn more: https://solidity.readthedocs.io/en/v0.5.10/control-structures.html#error-handling-assert-require-revert-and-exceptions
+        // Más información: https://solidity.readthedocs.io/en/v0.5.10/control-structures.html#error-handling-assert-require-revert-and-exceptions
 
-        // Only the contract owner can call this function
+        // Sólo el propietario del contrato puede llamar a esta función
         require(msg.sender == owner, "You are not the owner.");
 
-        // Enforces a maximum amount of tokens
+        // Impone una cantidad máxima de tokens
         require(amount < 1e60, "Maximum issuance exceeded");
 
-        // Increases the balance of `receiver` by `amount`
+        // Aumenta el saldo del `receiver` en `amount`.
         balances[receiver] += amount;
     }
 
-    // Sends an amount of existing tokens from any caller to an address.
+    // Envía una cantidad de tokens existentes de cualquier llamante a una dirección.
     function transfer(address receiver, uint amount) public {
         // El remitente debe tener suficientes tokens para enviar
         require(amount <= balances[msg.sender], "Insufficient balance.");
@@ -627,10 +627,10 @@ https://docs.openzeppelin.com/contracts/3. /api/math#SafeMath
         uint256 size;
         // Currently there is no better way to check if there is a contract in an address
         // than to check the size of the code at that address.
-        // See https://ethereum.stackexchange.com/a/14016/36603
-        // for more details about how this works.
-        // TODO Check this again before the Serenity release, because all addresses will be
-        // contracts then.
+        // En https://ethereum.stackexchange.com/a/14016/36603
+        // podrás consultar más detalles sobre cómo funciona esto.
+        // TODO Verifica esto de nuevo antes de el lanzamiento de Serenity, porque todas las direcciones serán
+        // contratos entonces.
         // solium-disable-next-line security/no-inline-assembly
         assembly {
             size := extcodesize(account)

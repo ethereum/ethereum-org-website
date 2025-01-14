@@ -91,7 +91,7 @@ Goerli — тестовая сеть для проверки валидации 
 - [Кран Coinbase Wallet | Goerli](https://coinbase.com/faucets/ethereum-goerli-faucet)
 - [Кран Goerli от Chainstack](https://faucet.chainstack.com/goerli-faucet)
 
-Чтобы стать валидатором в тестовой сети Goerli, используйте [панель запуска cheap goerli validator](https://goerli.launchpad.ethstaker.cc/en/) от EthStaker.
+Чтобы стать валидатором в тестовой сети Goerli, используйте [панель запуска cheap goerli validator](https://holesky.launchpad.ethstaker.cc/en/) от EthStaker.
 
 ### Тестовые сети уровня 2 {#layer-2-testnets}
 
