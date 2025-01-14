@@ -277,19 +277,19 @@ El siguiente es un contrato simple implementado en Fe.
 ```
 type BookMsg = bytes[100]
 
-contrato GuestBook:
+contract GuestBook:
     pub guest_book: map<address, BookMsg>
 
     event Signed:
         book_msg: BookMsg
 
     pub def sign(book_msg: BookMsg):
-        self. uest_book[msg.sender] = book_msg
+        self.guest_book[msg.sender] = book_msg
 
         emit Signed(book_msg=book_msg)
 
     pub def get_msg(addr: address) -> BookMsg:
-        return self. uest_book[addr].to_mem()
+        return self.guest_book[addr].to_mem()
 
 ```
 
