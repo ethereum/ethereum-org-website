@@ -16,7 +16,7 @@ Isso pode criar oportunidades de lucro para um invasor. Por exemplo, um proponen
 
 Há várias soluções para esse problema. Uma delas é a [tecnologia de validador distribuído](https://github.com/ethereum/distributed-validator-specs), que visa distribuir as várias tarefas relacionadas à execução de um validador entre várias máquinas, com redundância, de modo que seja muito mais difícil para um invasor impedir que um bloco seja proposto em um espaço específico. Entretanto, a solução mais eficiente é a **eleição de um único líder secreto (Single Secret Leader Election, SSLE)**.
 
-## Eleição de um único líder secreto {#secret-leader-election}
+## Eleição secreta de um único líder {#secret-leader-election}
 
 Na SSLE, uma criptografia inteligente é usada para garantir que apenas o validador selecionado saiba que foi selecionado. Isso funciona fazendo com que cada validador envie um compromisso com um segredo que todos compartilham. Os compromissos são embaralhados e reconfigurados para que ninguém possa mapear compromissos a validadores, mas cada validador sabe qual compromisso pertence a ele. Em seguida, um compromisso é escolhido aleatoriamente. Se um validador detectar que o compromisso dele foi escolhido, ele saberá que é a vez dele de propor um bloco.
 
