@@ -6,8 +6,9 @@ import type { ReactNode } from "react"
 import type { BasePageProps, ChildOnlyProp, Lang } from "@/lib/types"
 
 import CalloutBanner from "@/components/CalloutBanner"
-import type { CardListItem } from "@/components/CardList"
-import CardList from "@/components/CardList"
+import CardList, {
+  type CardProps as CardListCardProps,
+} from "@/components/CardList"
 import CentralizedExchanges from "@/components/CentralizedExchanges"
 import Emoji from "@/components/Emoji"
 import EthPriceCard from "@/components/EthPriceCard"
@@ -110,7 +111,7 @@ const GetEthPage = ({
     md: "50%",
   })
 
-  const tokenSwaps: CardListItem[] = [
+  const tokenSwaps: CardListCardProps[] = [
     {
       title: "Uniswap",
       link: "https://app.uniswap.org/#/swap",
@@ -137,7 +138,7 @@ const GetEthPage = ({
     },
   ]
 
-  const safetyArticles: CardListItem[] = [
+  const safetyArticles: CardListCardProps[] = [
     {
       title: t("page-get-eth-article-protecting-yourself"),
       link: "https://support.mycrypto.com/staying-safe/protecting-yourself-and-your-funds",
