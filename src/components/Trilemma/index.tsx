@@ -35,11 +35,11 @@ const Trilemma = () => {
             {t("page-roadmap-vision-trilemma-modal-tip")}:
           </p>
         </VStack>
-        <Card {...cardDetail} minH="300px" hideBelow="lg" mt="6" />
+        <Card {...cardDetail} className="mt-6 hidden min-h-[300px] lg:block" />
       </Stack>
       <Sheet open={mobileModalOpen} onOpenChange={handleModalClose}>
         <SheetContent side="bottom" className="rounded-t-[16px]">
-          <Card {...cardDetail} background="none" border="none" my="8" />
+          <Card {...cardDetail} className="my-8 border-none bg-transparent" />
           <SheetClose className="absolute right-3 top-5">
             <span className="sr-only">Close</span>
             <svg

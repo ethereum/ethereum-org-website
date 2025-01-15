@@ -108,13 +108,7 @@ const StyledCard = (props: {
     emoji={props.emoji}
     key={props.key}
     description={props.description}
-    sx={{
-      justifyContent: "flex-start",
-      h3: {
-        fontWeight: "700",
-        margin: "0 0 1rem",
-      },
-    }}
+    className="justify-start [&_h3]:mb-1 [&_h3]:mt-0 [&_h3]:font-bold"
   >
     {props.children}
   </Card>
