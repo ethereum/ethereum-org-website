@@ -38,11 +38,7 @@ import HeroImage from "@/public/images/wallets/wallet-hero.png"
 
 export const StyledCard = (props: ComponentPropsWithRef<typeof Card>) => (
   <Card
-    flex="1 1 30%"
-    minW="280px"
-    maxW={{ base: "full", md: "46%", lg: "31%" }}
-    m={4}
-    p={6}
+    className="m-4 min-w-[280px] max-w-full flex-1 p-6 md:max-w-[46%] lg:max-w-[31%]"
     {...props}
   />
 )
