@@ -257,32 +257,38 @@ const WalletsPage = () => {
           <h2 className="mb-8 mt-12 text-2xl leading-[1.4] md:text-[2rem]">
             {t("page-wallets-accounts-addresses")}
           </h2>
-          <Text>{t("page-wallets-accounts-addresses-desc")}</Text>
+          <p className="mb-[1.45rem] text-md leading-base">
+            {t("page-wallets-accounts-addresses-desc")}
+          </p>
           <ul>
             <li>
-              <Text>
+              <p className="mb-[1.45rem] text-md leading-base">
                 <Translation id="page-wallets:page-wallets-ethereum-account" />
-              </Text>
+              </p>
             </li>
             <li>
-              <Text>
+              <p className="mb-[1.45rem] text-md leading-base">
                 <Translation id="page-wallets:page-wallets-accounts-ethereum-addresses" />
-              </Text>
+              </p>
             </li>
             <li>
-              <Text>
+              <p className="mb-[1.45rem] text-md leading-base">
                 <Translation id="page-wallets:page-wallets-ethereum-wallet" />
-              </Text>
+              </p>
             </li>
           </ul>
-          <Text>{t("page-wallets-most-wallets")}</Text>
+          <p className="mb-[1.45rem] text-md leading-base">
+            {t("page-wallets-most-wallets")}
+          </p>
         </div>
         <div className="mt-12 max-w-full flex-[0_1_50%] lg:ms-8 lg:mt-0">
           <h2 className="mb-8 mt-12 text-2xl leading-[1.4] md:text-[2rem]">
             {t("page-wallets-types")}
           </h2>
-          <Text>{t("page-wallets-types-desc")}</Text>
-          <Box className="flex flex-col gap-2">
+          <p className="mb-[1.45rem] text-md leading-base">
+            {t("page-wallets-types-desc")}
+          </p>
+          <div className="flex flex-col gap-2">
             {types.map((type, idx) => (
               <HorizontalCard
                 key={idx}
@@ -292,7 +298,7 @@ const WalletsPage = () => {
                 emojiClassName="text-[2.5rem]"
               />
             ))}
-          </Box>
+          </div>
         </div>
       </div>
 
