@@ -220,21 +220,22 @@ const WalletsPage = () => {
           </h2>
         </div>
         <div className="mb-0 flex flex-col justify-between p-8 lg:flex-row">
-          <Box
-            flexGrow="0"
-            flexShrink="1"
-            flexBasis="50%"
-            me={{ base: 0, lg: 8 }}
-            mt={{ lg: 0 }}
-            maxWidth={{ lg: "100%" }}
-          >
-            <Text>{t("page-wallets-description")}</Text>
-            <Text>{t("page-wallets-desc-2")}</Text>
+          <div className="me-0 flex-[0_1_50%] lg:me-8 lg:mt-0 lg:max-w-full">
+            <p className="mb-[1.45rem] text-md leading-base">
+              {t("page-wallets-description")}
+            </p>
+            <p className="mb-[1.45rem] text-md leading-base">
+              {t("page-wallets-desc-2")}
+            </p>
             <CardList items={guides} className="mb-6 lg:mb-0" />
-          </Box>
+          </div>
           <div className="max-w-full flex-[0_1_50%] lg:ms-8">
-            <Text>{t("page-wallets-desc-3")}</Text>
-            <Text>{t("page-wallets-desc-4")}</Text>
+            <p className="mb-[1.45rem] text-md leading-base">
+              {t("page-wallets-desc-3")}
+            </p>
+            <p className="mb-[1.45rem] text-md leading-base">
+              {t("page-wallets-desc-4")}
+            </p>
           </div>
         </div>
         <div className="w-full px-8 py-4">
