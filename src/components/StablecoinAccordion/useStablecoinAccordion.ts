@@ -1,6 +1,6 @@
 import { useTranslation } from "next-i18next"
 
-import { CardListItem } from "../CardList"
+import { type CardProps } from "@/components/CardList"
 
 import aaveImg from "@/public/images/dapps/aave.png"
 // -- borrow
@@ -25,7 +25,7 @@ import ethImg from "@/public/images/favicon.png"
 export const useStablecoinAccordion = () => {
   const { t } = useTranslation("page-stablecoins")
 
-  const dapps: Array<CardListItem> = [
+  const dapps: Array<CardProps> = [
     {
       title: "Uniswap",
       image: uniImg,
@@ -52,7 +52,7 @@ export const useStablecoinAccordion = () => {
     },
   ]
 
-  const borrow: Array<CardListItem> = [
+  const borrow: Array<CardProps> = [
     {
       title: "Compound",
       image: compoundImg,
@@ -73,7 +73,7 @@ export const useStablecoinAccordion = () => {
     },
   ]
 
-  const earn: Array<CardListItem> = [
+  const earn: Array<CardProps> = [
     {
       title: t("page-stablecoins-accordion-earn-project-bounties"),
       image: gitcoinImg,
@@ -90,7 +90,7 @@ export const useStablecoinAccordion = () => {
     },
   ]
 
-  const exchanges: Array<CardListItem> = [
+  const exchanges: Array<CardProps> = [
     {
       title: "Coinbase",
       image: coinbaseImg,

@@ -230,7 +230,7 @@ const WalletsPage = () => {
           >
             <Text>{t("page-wallets-description")}</Text>
             <Text>{t("page-wallets-desc-2")}</Text>
-            <CardList items={guides} mb={{ base: 6, lg: 0 }} />
+            <CardList items={guides} className="mb-6 lg:mb-0" />
           </Box>
           <div className="max-w-full flex-[0_1_50%] lg:ms-8">
             <Text>{t("page-wallets-desc-3")}</Text>
