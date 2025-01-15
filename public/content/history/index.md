@@ -32,7 +32,7 @@ Since 2021, upgrades to the **execution layer** are named according to the city 
 | Berlin       | 2015        | 0             | Apr 15, 2021 |
 | London       | 2016        | I             | Aug 5, 2021  |
 | Shanghai     | 2017        | II            | Apr 12, 2023 |
-| **Cancun**   | 2018        | III           | Mar 13, 2024 |
+| **Cancun**   | 2019        | III           | Mar 13, 2024 |
 | _Prague_     | 2019        | IV            | TBD          |
 | _Osaka_      | 2020        | V             | TBD          |
 | _Bogota_     | 2022        | VI            | TBD          |
