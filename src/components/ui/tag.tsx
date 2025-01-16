@@ -9,15 +9,19 @@ const tagVariants = cva(
   {
     variants: {
       status: {
-        normal: "bg-background-highlight text-body-medium border-body-medium",
-        tag: "bg-primary-low-contrast text-primary-high-contrast border-primary",
-        success: "bg-success-light text-success border-success-border",
-        error: "bg-error-light text-error border-error-border",
-        warning: "bg-warning-light text-warning-dark border-warning-border",
+        normal:
+          "bg-background-highlight text-body-medium border-body-medium hover:shadow-body-medium",
+        tag: "bg-primary-low-contrast text-primary-high-contrast border-primary hover:shadow-primary-high-contrast",
+        success:
+          "bg-success-light text-success border-success-border hover:shadow-success",
+        error:
+          "bg-error-light text-error border-error-border hover:shadow-error",
+        warning:
+          "bg-warning-light text-warning-dark border-warning-border hover:shadow-warning-dark dark:hover:shadow-warning",
       },
       variant: {
         subtle: "border-transparent",
-        highContrast: "border-transparent",
+        "high-contrast": "border-transparent",
         solid: "border-transparent text-body-inverse",
         outline: "bg-transparent",
       },
@@ -33,42 +37,43 @@ const tagVariants = cva(
         variant: "solid",
         status: "tag",
         className:
-          "bg-primary focus-visible:outline-primary-high-contrast hover:shadow-primary-low-contrast",
+          "bg-primary focus-visible:outline-primary-high-contrast hover:shadow-primary-high-contrast",
       },
       {
         variant: "solid",
         status: "success",
         className:
-          "bg-success text-success-light focus-visible:outline-success-dark",
+          "bg-success text-success-light focus-visible:outline-success-dark hover:shadow-success-dark dark:hover:shadow-success-light",
       },
       {
         variant: "solid",
         status: "error",
-        className: "bg-error text-error-light focus-visible:outline-error-dark",
+        className:
+          "bg-error text-error-light focus-visible:outline-error-dark hover:shadow-error-dark dark:hover:shadow-error-light",
       },
       {
         variant: "solid",
         status: "warning",
         className:
-          "bg-warning text-warning-dark focus-visible:outline-warning-border",
+          "bg-warning text-warning-dark focus-visible:outline-warning-border hover:shadow-warning-dark dark:hover:shadow-warning-light",
       },
       {
-        variant: "highContrast",
+        variant: "high-contrast",
         status: "normal",
         className: "bg-body-light text-body",
       },
       {
-        variant: "highContrast",
+        variant: "high-contrast",
         status: "tag",
         className: "bg-background-highlight",
       },
       {
-        variant: "highContrast",
+        variant: "high-contrast",
         status: "success",
         className: "text-success-dark",
       },
       {
-        variant: "highContrast",
+        variant: "high-contrast",
         status: "error",
         className: "text-error-dark",
       },

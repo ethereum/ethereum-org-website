@@ -16,7 +16,7 @@ type Story = StoryObj<typeof meta>
 const statusArray = ["normal", "tag", "success", "error", "warning"] as const
 
 // "subtle" is default variant
-const variantArray = ["subtle", "highContrast", "solid", "outline"] as const
+const variantArray = ["subtle", "high-contrast", "solid", "outline"] as const
 
 export const StyleVariantsBasic: Story = {
   render: () => (
