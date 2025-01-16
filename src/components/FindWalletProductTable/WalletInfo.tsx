@@ -8,7 +8,7 @@ import { SupportedLanguagesTooltip } from "@/components/FindWalletProductTable/S
 import { DevicesIcon, LanguagesIcon } from "@/components/icons/wallets"
 import { TwImage } from "@/components/Image"
 import Tooltip from "@/components/Tooltip"
-import { Badge } from "@/components/ui/badge"
+import { Tag } from "@/components/ui/tag"
 
 import { formatStringList, getWalletPersonas } from "@/lib/utils/wallets"
 
@@ -48,9 +48,9 @@ const WalletInfo = ({ wallet, isExpanded }: WalletInfoProps) => {
               {walletPersonas.length > 0 && (
                 <div className="flex flex-row flex-wrap gap-1">
                   {walletPersonas.map((persona) => (
-                    <Badge key={persona} variant="productTable">
+                    <Tag key={persona} variant="highContrast" size="small">
                       {t(persona)}
-                    </Badge>
+                    </Tag>
                   ))}
                 </div>
               )}
@@ -99,9 +99,9 @@ const WalletInfo = ({ wallet, isExpanded }: WalletInfoProps) => {
               {walletPersonas.length > 0 && (
                 <div className="flex flex-row flex-wrap gap-1">
                   {walletPersonas.map((persona) => (
-                    <Badge key={persona} variant="productTable">
+                    <Tag key={persona} variant="highContrast" size="small">
                       {t(persona)}
-                    </Badge>
+                    </Tag>
                   ))}
                 </div>
               )}
