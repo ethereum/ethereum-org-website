@@ -3,7 +3,7 @@ import { GetStaticProps } from "next"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import { Box, Flex, Heading, Text as ChakraText } from "@chakra-ui/react"
+import { Box, Flex } from "@chakra-ui/react"
 
 import { BasePageProps, Lang } from "@/lib/types"
 
@@ -13,7 +13,7 @@ import Card from "@/components/Card"
 import CardList from "@/components/CardList"
 import FeedbackCard from "@/components/FeedbackCard"
 import HorizontalCard from "@/components/HorizontalCard"
-import { Image } from "@/components/Image"
+import { TwImage } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import Text from "@/components/OldText"
 import PageHero from "@/components/PageHero"
@@ -305,41 +305,24 @@ const WalletsPage = () => {
       {locale === "en" ? (
         <div className="my-20 w-full px-0 py-4">
           <Simulator data={walletOnboardingSimData}>
-            <ChakraText
-              fontSize={{ base: "lg", md: "xl", lg: "2xl" }}
-              fontStyle="italic"
-              color="body.medium"
-              mb={2}
-            >
+            <p className="mb-2 text-lg italic leading-base text-body-medium md:text-xl lg:text-2xl">
               Interactive tutorial
-            </ChakraText>
-            <Heading
-              as="h2"
-              size={{ base: "xl", lg: "2xl" }}
-              lineHeight="115%"
-              fontWeight="bold"
-              m={0}
-            >
+            </p>
+            <h2 className="m-0 text-3xl font-bold leading-[115%] lg:text-5xl">
               How to use a wallet
-            </Heading>
+            </h2>
           </Simulator>
         </div>
       ) : (
         <div className="my-12 mt-4 w-full bg-[linear-gradient(49deg,rgba(127,127,213,0.2)_0%,rgba(134,168,231,0.2)_50%,rgba(145,234,228,0.2)_100%)] px-0 py-16 shadow-[inset_0px_1px_0px_var(--eth-colors-tableItemBoxShadow)] lg:mt-8">
           <div className="w-full px-8 py-4">
-            <Flex flexDirection="column" alignItems="center" mb="8">
+            <div className="mb-8 flex flex-col items-center">
               <h2 className="mb-8 mt-12 text-2xl leading-[1.4] md:text-[2rem]">
                 {t("page-wallets-features-title")}
               </h2>
-              <Box
-                fontSize="xl"
-                lineHeight={1.4}
-                color="text"
-                textAlign="center"
-                mb={6}
-              >
+              <div className="mb-6 text-center text-xl leading-base">
                 {t("page-wallets-features-desc")}
-              </Box>
+              </div>
               <ButtonLink
                 href="/wallets/find-wallet/"
                 customEventOptions={{
@@ -350,16 +333,12 @@ const WalletsPage = () => {
               >
                 {t("page-wallets-find-wallet-btn")}
               </ButtonLink>
-              <Image
+              <TwImage
                 src={FindWalletImage}
                 alt=""
-                mt={8}
-                maxW="800px"
-                backgroundSize="cover"
-                backgroundRepeat="no-repeat"
-                w="full"
+                className="mt-8 w-full max-w-[800px] bg-cover bg-no-repeat"
               />
-            </Flex>
+            </div>
           </div>
         </div>
       )}
