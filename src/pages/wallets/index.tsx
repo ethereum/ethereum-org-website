@@ -3,7 +3,7 @@ import { GetStaticProps } from "next"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import { Box, Flex } from "@chakra-ui/react"
+import { Box } from "@chakra-ui/react"
 
 import { BasePageProps, Lang } from "@/lib/types"
 
@@ -15,7 +15,6 @@ import FeedbackCard from "@/components/FeedbackCard"
 import HorizontalCard from "@/components/HorizontalCard"
 import { TwImage } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
-import Text from "@/components/OldText"
 import PageHero from "@/components/PageHero"
 import PageMetadata from "@/components/PageMetadata"
 import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
@@ -348,10 +347,10 @@ const WalletsPage = () => {
           <h2 className="mb-8 mt-12 text-2xl leading-[1.4] md:text-[2rem]">
             {t("page-wallets-stay-safe")}
           </h2>
-          <Box lineHeight={1.4} mb={6} color="text300">
+          <p className="mb-6 leading-xs">
             <Translation id="page-wallets:page-wallets-stay-safe-desc" />
-          </Box>
-          <Flex direction="column" gap={4}>
+          </p>
+          <div className="flex flex-col gap-4">
             <HorizontalCard
               key="0"
               emoji=":white_check_mark:"
@@ -368,13 +367,17 @@ const WalletsPage = () => {
               emojiClassName="text-2xl"
               className="items-start"
             >
-              <Text>{t("page-wallets-seed-phrase-example")}</Text>
-              <Box bg="black" p={2} mb={4} borderRadius="base">
-                <Text fontFamily="monospace" fontSize="sm" color="white" mb={0}>
+              <p className="mb-[1.45rem] text-md leading-base">
+                {t("page-wallets-seed-phrase-example")}
+              </p>
+              <div className="rounded-base mb-4 bg-black p-2">
+                <p className="font-mono text-sm text-white">
                   {t("page-wallets-seed-phrase-snippet")}
-                </Text>
-              </Box>
-              <Text>{t("page-wallets-seed-phrase-write-down")}</Text>
+                </p>
+              </div>
+              <p className="mb-[1.45rem] text-md leading-base">
+                {t("page-wallets-seed-phrase-write-down")}
+              </p>
             </HorizontalCard>
             <HorizontalCard
               key="2"
@@ -392,15 +395,13 @@ const WalletsPage = () => {
               emojiClassName="text-2xl"
               className="items-start"
             />
-          </Flex>
+          </div>
         </div>
         <div className="mt-12 max-w-full flex-[0_1_50%] lg:ms-8 lg:mt-0">
           <h2 className="mb-8 mt-12 text-2xl leading-[1.4] md:text-[2rem]">
             {t("page-wallets-tips")}
           </h2>
-          <Box lineHeight={1.4} color="text300" mb={6}>
-            {t("page-wallets-tips-community")}
-          </Box>
+          <p className="mb-6 leading-xs">{t("page-wallets-tips-community")}</p>
           <CardList items={articles} />
         </div>
       </div>
