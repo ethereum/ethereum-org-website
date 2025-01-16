@@ -50,6 +50,7 @@ Mevcut olarak istemci geliştiricilerin sürdürdüğü iki genel test ağı Sep
 - [GitHub](https://github.com/eth-clients/sepolia)
 - [Otterscan](https://sepolia.otterscan.io/)
 - [Etherscan](https://sepolia.etherscan.io)
+- [Blockscout](https://eth-sepolia.blockscout.com/)
 
 ##### Musluklar
 
@@ -60,6 +61,7 @@ Mevcut olarak istemci geliştiricilerin sürdürdüğü iki genel test ağı Sep
 - [Alchemy Sepolia musluğu](https://sepoliafaucet.com/)
 - [Infura Sepolia Musluğu](https://www.infura.io/faucet)
 - [Chainstack Sepolia Musluğu](https://faucet.chainstack.com/sepolia-faucet)
+- [Ethereum Ekosistemi musluğu](https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia)
 
 #### Goerli _(uzun vadeli destek)_ {#goerli}
 
@@ -76,6 +78,7 @@ Goerli doğrulama ve hisselemeyi test etme amaçlı bir test ağıdır. Goerli a
 - [Web sitesi](https://goerli.net/)
 - [GitHub](https://github.com/eth-clients/goerli)
 - [Etherscan](https://goerli.etherscan.io)
+- [Blockscout](https://eth-goerli.blockscout.com/)
 
 ##### Musluklar
 
@@ -88,7 +91,7 @@ Goerli doğrulama ve hisselemeyi test etme amaçlı bir test ağıdır. Goerli a
 - [Coinbase Cüzdanı Musluğu | Goerli](https://coinbase.com/faucets/ethereum-goerli-faucet)
 - [Chainstack Goerli musluğu](https://faucet.chainstack.com/goerli-faucet)
 
-Goerli test ağında bir Doğrulayıcı başlatmak için, ethstaker'ın ["ucuz goerli doğrulayıcısı" başlama noktasını](https://goerli.launchpad.ethstaker.cc/en/) kullanın.
+Goerli test ağında bir Doğrulayıcı başlatmak için, ethstaker'ın ["ucuz goerli doğrulayıcısı" başlama noktasını](https://holesky.launchpad.ethstaker.cc/en/) kullanın.
 
 ### Katman 2 test ağları {#layer-2-testnets}
 
@@ -111,13 +114,21 @@ Goerli test ağında bir Doğrulayıcı başlatmak için, ethstaker'ın ["ucuz g
 - [Paradigm musluğu](https://faucet.paradigm.xyz/)
 - [Coinbase Cüzdanı Musluğu | Optimism Goerli](https://coinbase.com/faucets/optimism-goerli-faucet)
 
+#### Starknet Goerli {#starknet-goerli}
+
+[Starknet](https://www.starknet.io) için test ağı.
+
+##### Musluklar
+
+- [Starknet musluğu](https://faucet.goerli.starknet.io)
+
 ## Özel ağlar {#private-networks}
 
 Bir Ethereum ağı, düğümleri genel bir ağa (yani Ana Ağ veya bir test ağı) bağlı değilse özel bir ağ değildir. Bu bağlamda özel, korumalı veya güvenli olmaktan ziyade yalnızca ayrılmış veya izole anlamına gelir.
 
 ### Geliştirme ağları {#development-networks}
 
-Bir Ethereum uygulaması geliştirmek için, dağıtmadan önce nasıl çalıştığını görmek amacıyla bunu özel bir ağda çalıştırmanız faydalı olur. Web geliştirme için bilgisayarınızda yerel bir sunucu oluşturmanıza benzer şekilde, dapp'nizi test etmek için yerel bir blok zincir örneği oluşturabilirsiniz. Bu, genel bir test ağından çok daha hızlı yinelemeye izin verir.
+Bir Ethereum uygulaması geliştirmek için dağıtmadan önce nasıl çalıştığını görmek amacıyla bunu özel bir ağda çalıştırmanız faydalı olur. Web geliştirme için bilgisayarınızda yerel bir sunucu oluşturmanıza benzer şekilde, merkeziyetsiz uygulamanızı test etmek için yerel bir blokzincir örneği oluşturabilirsiniz. Bu, genel bir test ağından çok daha hızlı yinelemeye izin verir.
 
 Buna yardımcı olmak için ayrılmış projeler ve araçlar bulunuyor. [Geliştirme ağları](/developers/docs/development-networks/) hakkında daha fazla bilgi edinin.
 
@@ -129,8 +140,8 @@ Genel bir Ethereum ağı genel internete benziyorsa, bir konsorsiyum ağı özel
 
 ## İlgili araçlar {#related-tools}
 
-- [Chainlist](https://chainlist.org/) _Cüzdanları ve sağlayıcıları uygun Zincir ve Ağ Kimliklerine bağlamak için bir EVM ağı listesi_
-- [EVM tabanlı Zincirler](https://github.com/ethereum-lists/chains) _Chainlist'i destekleyen zincir üst verisinin GitHub deposu_
+- [Chainlist](https://chainlist.org/) _Cüzdanları ve sağlayıcıları uygun Zincir ve Ağ Kimliklerine bağlamaya yarayan bir EVM ağları listesi_
+- [EVM Tabanlı Zincirler](https://github.com/ethereum-lists/chains) _Chainlist'i destekleyen zincir üst verisinin GitHub deposu_
 
 ## Daha fazla bilgi {#further-reading}
 

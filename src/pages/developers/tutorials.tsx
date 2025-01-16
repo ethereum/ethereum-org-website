@@ -18,15 +18,15 @@ import { BasePageProps, Lang } from "@/lib/types"
 import { Button, ButtonLink } from "@/components/Buttons"
 import Emoji from "@/components/Emoji"
 import FeedbackCard from "@/components/FeedbackCard"
-import InlineLink, { BaseLink } from "@/components/Link"
+import { BaseLink } from "@/components/Link"
 import MainArticle from "@/components/MainArticle"
-import Modal from "@/components/Modal"
 import OldHeading from "@/components/OldHeading"
 import Text from "@/components/OldText"
 import PageMetadata from "@/components/PageMetadata"
 import Translation from "@/components/Translation"
 import { getSkillTranslationId, Skill } from "@/components/TutorialMetadata"
 import TutorialTags from "@/components/TutorialTags"
+import Modal from "@/components/ui/dialog-modal"
 import { Tag } from "@/components/ui/tag"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
@@ -42,6 +42,7 @@ import {
 
 import externalTutorials from "@/data/externalTutorials.json"
 
+import { useBreakpointValue } from "@/hooks/useBreakpointValue"
 import { useRtlFlip } from "@/hooks/useRtlFlip"
 
 const FilterTag = forwardRef<{ isActive: boolean; name: string }, "button">(
@@ -205,6 +206,8 @@ const TutorialPage = ({
   }
 
   const dir = contentNotTranslated ? "ltr" : "unset"
+
+  const modalSize = useBreakpointValue({ base: "xl", md: "md" } as const)
   return (
     <Flex
       as={MainArticle}
@@ -248,22 +251,16 @@ const TutorialPage = ({
       </Text>
 
       <Modal
-        isOpen={isModalOpen}
-        onClose={() => setModalOpen(false)}
-        size={{ base: "full", md: "xl" }}
+        open={isModalOpen}
+        onOpenChange={(open) => setModalOpen(open)}
+        size={modalSize}
         contentProps={{ dir }}
         title={
           <Translation id="page-developers-tutorials:page-tutorial-submit-btn" />
         }
       >
         <Text>
-          <Translation id="page-developers-tutorials:page-tutorial-listing-policy-intro" />{" "}
-          <InlineLink href="/contributing/content-resources/">
-            <Translation id="page-developers-tutorials:page-tutorial-listing-policy" />
-          </InlineLink>
-        </Text>
-        <Text>
-          <Translation id="page-developers-tutorials:page-tutorial-submit-tutorial" />
+          <Translation id="page-developers-tutorials:page-tutorial-listing-policy-intro" />
         </Text>
         <Flex flexDirection={{ base: "column", md: "row" }} gap="2">
           <Flex
@@ -277,10 +274,10 @@ const TutorialPage = ({
             justifyContent="space-between"
           >
             <Text as="b">
-              <Translation id="page-developers-tutorials:page-tutorial-new-github" />
+              <Translation id="page-developers-tutorials:page-tutorial-create-an-issue" />
             </Text>
             <Text>
-              <Translation id="page-developers-tutorials:page-tutorial-new-github-desc" />
+              <Translation id="page-developers-tutorials:page-tutorial-create-an-issue-desc" />
             </Text>
             <ButtonLink
               leftIcon={<FaGithub />}
@@ -288,34 +285,6 @@ const TutorialPage = ({
               href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=suggest_tutorial.yaml&title="
             >
               <Translation id="page-developers-tutorials:page-tutorial-raise-issue-btn" />
-            </ButtonLink>
-          </Flex>
-          <Flex
-            flex="1"
-            borderWidth="1px"
-            borderStyle="solid"
-            borderColor="border"
-            borderRadius="base"
-            p={4}
-            flexDirection="column"
-            justifyContent="space-between"
-          >
-            <Text as="b">
-              <Translation id="page-developers-tutorials:page-tutorial-pull-request" />
-            </Text>
-            <Text>
-              <Translation id="page-developers-tutorials:page-tutorial-pull-request-desc-1" />{" "}
-              <code>
-                <Translation id="page-developers-tutorials:page-tutorial-pull-request-desc-2" />
-              </code>{" "}
-              <Translation id="page-developers-tutorials:page-tutorial-pull-request-desc-3" />
-            </Text>
-            <ButtonLink
-              leftIcon={<FaGithub />}
-              variant="outline"
-              href="https://github.com/ethereum/ethereum-org-website/new/dev/src/content/developers/tutorials"
-            >
-              <Translation id="page-developers-tutorials:page-tutorial-pull-request-btn" />
             </ButtonLink>
           </Flex>
         </Flex>

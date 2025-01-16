@@ -1,6 +1,6 @@
 {
   "page-stablecoins-accordion-borrow-crypto-collateral": "Kryptot ja vakuudet",
-  "page-stablecoins-accordion-borrow-crypto-collateral-copy": "Käyttäen Ethreumia vakuutena voit lainata suoraan toisilta myymättä Ethereitäsi. Menettely voi antaa sinulle vipuvoimaa – jotkut käyttävät tätä kerätäkseen lisää Ethereitä.",
+  "page-stablecoins-accordion-borrow-crypto-collateral-copy": "Käyttäen Ethereumia vakuutena voit lainata suoraan toisilta myymättä Ethereitäsi. Menettely voi antaa sinulle vipuvoimaa – jotkut käyttävät tätä kerätäkseen lisää Ethereitä.",
   "page-stablecoins-accordion-borrow-crypto-collateral-copy-p2": "Koska Etherin hinta kuitenkin vaihtelee voimakkaasti, sinun täytyy ylikiinnittää vakuuksia. Se tarkoittaa, että lainataksesi 100 yksikköä vakaata valuuttaa (stablecoins) sinun täytyy luultavasti kiinnittää 150 $:n arvosta Ethereitä. Tämä suojaa mekanismia ja lainanantajia.",
   "page-stablecoins-accordion-borrow-crypto-collateral-link": "Lisätietoa vakaista kryptovaluutoista",
   "page-stablecoins-accordion-borrow-pill": "Edistyneille",
@@ -94,7 +94,7 @@
   "page-stablecoins-hero-alt": "Kolme suurinta vakaassa kryptomarkkinassa: DAI, USDC ja Tether.",
   "page-stablecoins-hero-button": "Hanki vakaita kryptoja",
   "page-stablecoins-hero-header": "Digitaalista rahaa päivittäiseen käyttöön",
-  "page-stablecoins-hero-subtitle": "Vakaat kryptot ja Ethererum-rahakkeet on suunniteltu säilyttämään arvonsa, vaikka Ehterin arvo muuttuisi.",
+  "page-stablecoins-hero-subtitle": "Vakaat kryptot ja Ethererum-rahakkeet on suunniteltu säilyttämään arvonsa, vaikka Etherin arvo muuttuisi.",
   "page-stablecoins-interest-earning-dapps": "Korkoa sijoitukselle dAppeilla",
   "page-stablecoins-meta-description": "Johdatus Ethereumin vakaisiin kryptoihin: mitä ne ovat, miten niitä hankitaan ja miksi ne ovat tärkeitä.",
   "page-stablecoins-precious-metals": "Jalometallit",

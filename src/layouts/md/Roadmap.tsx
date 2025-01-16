@@ -1,3 +1,5 @@
+import { useTranslation } from "next-i18next"
+
 import type { ChildOnlyProp } from "@/lib/types"
 import type { MdPageContent, RoadmapFrontmatter } from "@/lib/interfaces"
 
@@ -32,12 +34,14 @@ export const RoadmapLayout = ({
   tocItems,
   contentNotTranslated,
 }: RoadmapLayoutProps) => {
+  const { t } = useTranslation("common")
+
   const dropdownLinks: ButtonDropdownList = {
-    text: "nav-roadmap-options",
-    ariaLabel: "nav-roadmap-options-alt",
+    text: t("common:nav-roadmap-options"),
+    ariaLabel: t("common:nav-roadmap-options-alt"),
     items: [
       {
-        text: "nav-roadmap-home",
+        text: t("common:nav-roadmap-home"),
         href: "/roadmap/",
         matomo: {
           eventCategory: `Roadmap dropdown`,
@@ -46,7 +50,7 @@ export const RoadmapLayout = ({
         },
       },
       {
-        text: "nav-roadmap-security",
+        text: t("common:nav-roadmap-security"),
         href: "/roadmap/security",
         matomo: {
           eventCategory: `Roadmap security dropdown`,
@@ -55,7 +59,7 @@ export const RoadmapLayout = ({
         },
       },
       {
-        text: "nav-roadmap-scaling",
+        text: t("common:nav-roadmap-scaling"),
         href: "/roadmap/scaling",
         matomo: {
           eventCategory: `Roadmap scaling dropdown`,
@@ -64,7 +68,7 @@ export const RoadmapLayout = ({
         },
       },
       {
-        text: "nav-roadmap-user-experience",
+        text: t("common:nav-roadmap-user-experience"),
         href: "/roadmap/user-experience/",
         matomo: {
           eventCategory: `Roadmap user experience dropdown`,
@@ -73,7 +77,7 @@ export const RoadmapLayout = ({
         },
       },
       {
-        text: "nav-roadmap-future-proofing",
+        text: t("common:nav-roadmap-future-proofing"),
         href: "/roadmap/future-proofing",
         matomo: {
           eventCategory: `Roadmap future-proofing dropdown`,

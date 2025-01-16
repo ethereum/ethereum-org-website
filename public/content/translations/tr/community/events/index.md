@@ -5,7 +5,7 @@ lang: tr
 hideEditButton: true
 ---
 
-# Gelecek etkinlikler {#events}
+# Yaklaşan etkinlikler {#events}
 
 **Her ay dünya çapında büyük Ethereum etkinlikleri olur.** Toplulukta daha fazla insanla tanışmak, istihdam fırsatları hakkında bilgi edinmek ve yeni beceriler geliştirmek için bunlardan birine katılmayı düşünebilirsiniz.
 

@@ -1,5 +1,7 @@
+import React from "react"
 import { useTranslation } from "next-i18next"
-import { chakra, forwardRef, HTMLChakraProps } from "@chakra-ui/react"
+
+import { cn } from "@/lib/utils/cn"
 
 import { HandleClickParam } from "./useTrilemma"
 
@@ -27,54 +29,58 @@ export const TriangleSVG = ({
   const { t } = useTranslation("page-roadmap-vision")
 
   const Path = () => (
-    <chakra.path
+    <path
       d="M111.183 479.532L566.904 181.217L598.824 787.211L111.183 479.532Z"
-      stroke="border"
-      strokeWidth="2"
+      className="stroke-border stroke-2"
     />
   )
 
-  const CircleSelect = forwardRef((props, ref) => (
-    <chakra.g
-      ref={ref}
-      cursor="pointer"
-      sx={{
-        "circle:first-of-type": {
-          fill: "white",
-        },
-      }}
-      {...props}
-    />
-  ))
+  const CircleSelect: React.FC<React.ComponentPropsWithoutRef<"g">> = ({
+    children,
+    ...props
+  }) => (
+    <g className="cursor-pointer" {...props}>
+      {children}
+    </g>
+  )
 
-  const FillCircle = ({ isEthereum = false, isActive, ...rest }) => {
+  const FillCircle: React.FC<
+    {
+      isEthereum?: boolean
+      isActive: boolean
+    } & React.ComponentPropsWithoutRef<"circle">
+  > = ({ isEthereum = false, isActive, ...rest }) => {
     return (
-      <chakra.circle
-        fill={
-          (isActive && (isEthereum ? "primary300" : "primary.base")) ||
-          "background.base"
-        }
-        _hover={{
-          fill: isActive ? "primary.base" : "primary100",
-        }}
+      <circle
+        className={cn(
+          "transition-colors",
+          isActive
+            ? isEthereum
+              ? "fill-primary opacity-50"
+              : "fill-primary"
+            : "fill-background",
+          "hover:fill-primary"
+        )}
         {...rest}
       />
     )
   }
 
-  const Text = ({
-    isActive,
-    ...rest
-  }: { isActive: boolean } & HTMLChakraProps<"text">) => (
-    <chakra.text
-      fill={isActive ? "primary400" : "text200"}
-      fontWeight={isActive ? 700 : 500}
-      opacity={isActive ? 1.0 : 0.6}
-      fontSize={{ base: "2rem", sm: "1.4rem" }}
-      textTransform="uppercase"
-      transform={{ base: "translate(-80px, 0px)", sm: "none" }}
+  const Text: React.FC<
+    { isActive: boolean } & React.ComponentPropsWithoutRef<"text">
+  > = ({ isActive, children, ...rest }) => (
+    <text
+      className={cn(
+        "uppercase",
+        isActive ? "fill-primary font-bold" : "fill-body-menu-high font-medium",
+        isActive ? "opacity-100" : "opacity-60",
+        "text-[2rem] sm:text-[1.4rem]",
+        "-translate-x-20 transform sm:translate-x-0"
+      )}
       {...rest}
-    />
+    >
+      {children}
+    </text>
   )
 
   const commonCircleStyles = {
@@ -106,14 +112,11 @@ export const TriangleSVG = ({
   const INNER_CIRCLE_RADIUS = "21"
 
   return (
-    <chakra.svg
+    <svg
       xmlns="http://www.w3.org/2000/svg"
-      height="620px"
+      height="620"
       viewBox="-100 100 850 915"
-      fill="background.base"
-      width={{ base: "full", lg: "auto" }}
-      mt={{ lg: 32 }}
-      me={{ lg: 32 }}
+      className="w-full fill-background lg:mr-32 lg:mt-32 lg:w-auto"
     >
       <Path />
       <Path />
@@ -165,6 +168,6 @@ export const TriangleSVG = ({
       <Text x="540" y="835" isActive={isScalable}>
         {t("page-roadmap-vision-trilemma-text-3")}
       </Text>
-    </chakra.svg>
+    </svg>
   )
 }

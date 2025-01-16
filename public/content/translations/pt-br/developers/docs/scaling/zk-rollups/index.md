@@ -117,7 +117,7 @@ Antes de aceitar transações, o operador realizará as verificações habituais
 
 Uma vez que o nó ZK-rollup tenha transações suficientes, ele as agrega em um lote e compila entradas para o circuito de prova para reunir em uma prova ZK sucinta. Isso pode incluir:
 
-- A Merkle tree root comprising all the transactions in the batch.
+- Uma raiz de árvore Merkle que engloba todas as transações no lote.
 - Provas de Merkle de transações para provar a inclusão no lote.
 - Provas de Merkle para cada par de destinatário-remetente em transações para provar que essas contas são parte da árvore de estado do rollup.
 - Um conjunto de raízes de estado intermediárias, derivadas da atualização da raiz de estado após a aplicação de atualizações de estado para cada transação (ou seja, diminuindo as contas do remetente e aumentando as contas do destinatário).
@@ -138,7 +138,7 @@ Após o circuito de prova verificar a correção das atualizações do estado, o
 
 - **Raiz pré-estado**: o antigo estado raiz do ZK-rollup (ou seja, antes das transações em lote serem executadas), refletindo o último estado válido conhecido da cadeia L2.
 
-- **Raiz pós-estado**: O novo estado raiz do ZK-rollup (ou seja, após a execução de transações em lote), refletindo o estado mais recente da cadeia L2. A raiz pós-estado é a raiz final derivada após a aplicação de atualizações de estado no circuito de prova.
+- **Raiz pós-estado**: o novo estado raiz do ZK-rollup (ou seja, após a execução de transações em lote), refletindo o estado mais recente da cadeia L2. A raiz pós-estado é a raiz final derivada após a aplicação de atualizações de estado no circuito de prova.
 
 - **Raiz do lote**: a raiz Merkle do lote, derivada pela _aplicação da raiz de Merkle_ em transações no lote e pelo hash da raiz da árvore.
 
@@ -182,7 +182,7 @@ O valor que os usuários pagam pelas transações em ZK-rollups depende da taxa 
 
 2. **Publicação de dados**: os ZK-rollups publicam dados de estado para cada transação no Ethereum como `calldata`. Os custos de `calldata` são atualmente regidos por [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), que estipula um custo de 16 gás para bytes diferentes de zero e 4 gás para zero bytes de `calldata`, respectivamente. O custo pago em cada transação é influenciado pela quantidade de `calldata` que precisa ser publicada na cadeia para isso.
 
-3. **Taxas do operador L2**: este é o valor pago ao operador de rollup como compensação pelos custos computacionais incorridos no processamento das transações, muito parecido com as taxas de mineração no Ethereum.
+3. **Taxas do operador L2**: este é o valor pago ao operador de rollup como compensação pelos custos computacionais incorridos no processamento de transações, muito parecido com ["taxas de prioridade (gorjetas)" de transação](/developers/docs/gas/#how-are-gas-fees-calculated) na rede principal do Ethereum.
 
 4. **Geração e verificação de provas**: os operadores de ZK-rollup devem produzir provas de validade para lotes de transações, que consomem muitos recursos. A verificação de provas de conhecimento zero na rede principal também custa gás (cerca de 500.000 gás).
 
@@ -222,27 +222,23 @@ Assista ao Finematics explicando ZK-rollups:
 
 <YouTube id="7pWxCklcNsU" start="406" />
 
-### Usar ZK-rollups {#use-zk-rollups}
-
-Existem várias implementações de ZK-rollups que você pode integrar aos seus dapps:
-
-<RollupProductDevDoc rollupType="zk" />
-
 ## Quem está trabalhando em zkEVMs? {#zkevm-projects}
 
 Os projetos que trabalham em zkEVMs incluem:
 
-- **[Applied ZKP](https://github.com/privacy-scaling-explorations/zkevm-specs)** — _Applied ZKP é um projeto financiado pela Ethereum Foundation para desenvolver um ZK-rollup compatível com EVM e um mecanismo para gerar provas de validade para blocos Ethereum._
+- **[zkEVM](https://github.com/privacy-scaling-explorations/zkevm-specs)** - _zkEVM é um projeto financiado pela Ethereum Foundation para desenvolver um ZK-rollup compatível com EVM e um mecanismo para gerar provas de validação para blocos Ethereum._
 
 - **[Polygon zkEVM](https://polygon.technology/solutions/polygon-zkevm)** — _é um ZK-Rollup descentralizado na rede principal do Ethereum que trabalha em uma Máquina Virtual Ethereum de conhecimento zero (zkEVM) e executa transações do Ethereum de maneira transparente, incluindo contratos inteligentes com validações de prova de conhecimento._
 
-- **[Scroll](https://scroll.io/blog/zkEVM)**: _Scroll é uma empresa impulsionada pela tecnologia que trabalha no desenvolvimento de uma solução nativa zkEVM de camada 2 para Ethereum._
+- **[Scroll](https://scroll.io/blog/zkEVM)** - _Scroll é uma empresa impulsionada pela tecnologia que trabalha no desenvolvimento de uma solução nativa zkEVM de camada 2 para Ethereum._
 
-- **[Taiko](https://taiko.xyz)** - _Taiko é um ZK-rollup descentralizado, equivalente ao Ethereum (um [ZK-EVM do Tipo 1](https://vitalik.ca/general/2022/08/04/zkevm.html))._
+- **[Taiko](https://taiko.xyz)** - _Taiko é um ZK-rollup descentralizado, equivalente ao Ethereum (um [ZK-EVM do Tipo 1](https://vitalik.eth.limo/general/2022/08/04/zkevm.html))._
 
-- **[ZKsync](https://docs.zksync.io/)** - _ZKsync Era is an EVM-compatible ZK Rollup built by Matter Labs, powered by its own zkEVM._
+- **[ZKsync](https://docs.zksync.io/)** - _ZKsync Era é um ZK Rollup compatível com EVM criado pela Matter Labs, com tecnologia do zkEVM da própria empresa._
 
-- **[Starknet](https://starkware.co/starknet/)** - _StarkNet is an EVM-compatible layer 2 scaling solution built by StarkWare._
+- **[Starknet](https://starkware.co/starknet/)** - _StarkNet é uma solução de dimensionamento de camada 2 compatível com EVM desenvolvida pela StarkWare._
+
+- **[Morph](https://www.morphl2.io/)** - _Morph é uma solução de dimensionamento de rollup híbrida que utiliza zk-proof para resolver o problema do desafio de estado da Camada 2._
 
 ## Leitura adicional sobre leitura de ZK-rollups {#further-reading-on-zk-rollups}
 
@@ -250,6 +246,7 @@ Os projetos que trabalham em zkEVMs incluem:
 - [O que são rollups de conhecimento zero?](https://alchemy.com/blog/zero-knowledge-rollups)
 - [STARKs vs SNARKs](https://consensys.net/blog/blockchain-explained/zero-knowledge-proofs-starks-vs-snarks/)
 - [O que é um zkEVM?](https://www.alchemy.com/overviews/zkevm)
+- [Tipos de ZK-EVM: equivalente a Ethereum, equivalente a EVM, Tipo 1, Tipo 4 e outros termos do momento](https://taiko.mirror.xyz/j6KgY8zbGTlTnHRFGW6ZLVPuT0IV0_KmgowgStpA0K4)
 - [Introdução a zkEVMs](https://hackmd.io/@yezhang/S1_KMMbGt)
 - [Recursos incríveis para zkEVM](https://github.com/LuozhuZhang/awesome-zkevm)
 - [ZK-SNARKS nos bastidores](https://vitalik.eth.limo/general/2017/02/01/zk_snarks.html)

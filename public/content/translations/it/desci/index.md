@@ -126,6 +126,7 @@ Accogliamo suggerimenti per nuovi progetti da elencare: per iniziare, ti preghia
 - [DeSci: Il Futuro della Ricerca, di Samuel Akinosho](https://lucidsamuel.medium.com/desci-the-future-of-research-b76cfc88c8ec)
 - [Finanziamento Scientifico (Epilogo: DeSci e nuovi cripto-primitivi), di Nadia](https://nadia.xyz/science-funding)
 - [La Decentralizzazione sta Sconvolgendo lo Sviluppo Farmaceutico](https://medium.com/id-theory/decentralisation-is-disrupting-drug-development-28b5ba5d447f)
+- [Cos'è la DeSci, o Scienza Decentralizzata?](​https://usadailytimes.com/2022/09/12/what-is-desci-decentralized-science/)
 
 ### Video {#videos}
 
@@ -134,3 +135,4 @@ Accogliamo suggerimenti per nuovi progetti da elencare: per iniziare, ti preghia
 - [La Pubblicazione Scientifica È Corrotta. Il Web3 Può Correggerla?](https://www.youtube.com/watch?v=WkvzYgCvWj8)
 - [Juan Benet - DeSci, Laboratori Indipenenti e Scienza dei Dati su Larga Scala](https://www.youtube.com/watch?v=zkXM9H90g_E)
 - [Sebastian Brunemeier: Come la DeSci Può Trasformare la Ricerca Biomedica e il Capitale di Rischio](https://www.youtube.com/watch?v=qB4Tc3FcVbM)
+- [Paige Donner: Utilizzare la Scienza Aperta con il Web3 e la Blockchain](https://www.youtube.com/watch?v=nC-2QWQ-lgw&t=17s)

@@ -6,7 +6,7 @@ lang: fr
 
 # Contribuer à la conception d'ethereum.org {#design-contributions}
 
-La conception est un élément essentiel de tout projet, et en consacrant votre temps et vos compétences en design à Ethereum.org, vous pouvez contribuer à améliorer l'expérience utilisateur pour nos visiteurs. Contribuer à un projet open-source offre l'opportunité d'acquérir une expérience pertinente et de développer vos compétences dans un environnement collaboratif. Vous aurez l'occasion de travailler avec d'autres concepteurs, développeurs et membres de la communauté, chacun ayant ses propres perspectives et idées uniques.
+La conception est une composante essentielle de tout projet, et en consacrant votre temps et vos compétences en la matière à ethereum.org, vous pouvez contribuer à améliorer l'expérience utilisateur de nos visiteurs. Contribuer à un projet open-source offre l'opportunité d'acquérir une expérience pertinente et de développer vos compétences dans un environnement collaboratif. Vous aurez l'occasion de travailler avec d'autres concepteurs, développeurs et membres de la communauté, chacun ayant ses propres perspectives et idées uniques.
 
 Finalement, c'est une excellente façon de construire un portfolio diversifié et impressionnant qui met en valeur vos compétences en conception.
 
@@ -16,7 +16,7 @@ Finalement, c'est une excellente façon de construire un portfolio diversifié e
 
 Nous avons parfois besoin d'aide pour tester nos nouveautés. C'est une excellente manière de contribuer sans avoir de connaissances techniques.
 
-1. L'équipe de conception partagera une conception de maquette sur [Discord](https://discord.com/invite/CetY6Y4) et sur [GitHub](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8).
+1. L'équipe de conception partagera une maquette sur le [Discord](https://discord.com/invite/ethereum-org) et sur [GitHub](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8).
 2. Vous serez guidé à travers les conceptions pour fournir des commentaires via la fonction de commentaires.
 3. Le résultat sera partagé dans une demande GitHub puis fermé par l'équipe.
 
@@ -30,7 +30,7 @@ Fournir des commentaires sur notre site web en :
 
 ### <Emoji text=":three:" size={1} /> &nbsp;Trouver des problèmes liés à la conception du site web et les signaler {#report-design-issues}
 
-Ethereum.org est un site web en rapide croissance avec de nombreuses fonctionnalités et contenus. Certaines des interfaces utilisateur peuvent facilement devenir obsolètes ou pourraient être améliorées. Si vous rencontrez un tel cas, veuillez le signaler afin que nous y portions notre attention.
+ethereum.org est un site web en pleine expansion avec de nombreuses fonctionnalités et contenus. Certaines des interfaces utilisateur peuvent facilement devenir obsolètes ou pourraient être améliorées. Si vous rencontrez un tel cas, veuillez le signaler afin que nous y portions notre attention.
 
 1. Parcourir le site web et observer avec attention sa conception.
 2. Prenez des captures d'écran et des notes si vous voyez des problèmes visuels ou d'expérience utilisateur.
@@ -51,10 +51,10 @@ Notre système de concep rend la conception d'ethereum.org amusante et facile. S
 
 1. Sélectionnez un problème sur lequel travailler à partir du [tableau du système de conception](https://github.com/ethereum/ethereum-org-website/labels/design%20system) sur GitHub ou créez-en un nouveau.
 2. Demandez à ce que le ticket sélectionné vous soit attribué.
-3. Commencez à concevoir le composant demandé dans Figma.
+3. Commencez à concevoir la maquette demandée sur Figma.
 4. Partagez-le avec l'équipe de conception sur GitHub lorsque vous avez besoin d'une revue ou de conseils.
 5. L'équipe de conception examinera votre travail.
-6. L'équipe de conception intégrera les modifications dans le fichier principal et publiera le fichier pour la communauté.
+6. L'équipe de conception intégrera les modifications dans le fichier principal et publiera le fichier à l'intention de la communauté.
 
 ### <Emoji text=":six:" size={1} /> &nbsp;Rédigez du contenu lié à la conception sur le site web {#write-design-articles}
 
@@ -64,7 +64,7 @@ La communauté des développeurs Ethereum est solide, mais la communauté des de
 2. Rendez-vous sur notre dépôt GitHub et [soumettez un problème](https://github.com/ethereum/ethereum-org-website/issues/new) en proposant un sujet (ne rédigez pas encore le contenu).
 3. Attendez que l'équipe de conception donne son approbation.
 4. Une fois approuvé, rédigez le contenu.
-5. Soumettez-le dans le problème GH correspondant.
+5. Soumettez-le dans le ticket GitHub correspondant.
 
 ### <Emoji text=":seven:" size={1} /> &nbsp;Dessinez de nouvelles illustrations {#prepare-illustrations}
 

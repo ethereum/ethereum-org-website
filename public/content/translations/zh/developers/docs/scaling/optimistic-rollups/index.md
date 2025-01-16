@@ -6,7 +6,7 @@ lang: zh
 
 乐观卷叠是二层网络 (L2) 协议，该协议旨在扩展以太坊基础层的吞吐量。 它们通过在链下处理交易来减少以太坊主链上的计算量，从而显著提高处理速度。 与其他扩容解决方案（例如[侧链](/developers/docs/scaling/sidechains/)）不同，乐观卷叠从主网（通过在链上发布交易结果）或从 [Plasma 链](/developers/docs/scaling/plasma/)（该链还使用欺诈证明验证以太坊上的交易，但将交易数据存储在其他地方）获取安全性。
 
-由于计算是使用以太坊时缓慢而昂贵的部分，因此乐观卷叠可以提供高达 10-100 倍的可扩展性改进。 乐观卷叠还将交易以 `calldata` 的形式写入以太坊，从而降低用户的燃料成本。
+由于计算是使用以太坊时缓慢而昂贵的部分，因此乐观卷叠可以提供高达 10-100 倍的可扩展性改进。 乐观卷叠还会将交易以 `calldata` 或 [blob](/roadmap/danksharding/) 的形式写入以太坊，从而降低用户的燃料成本。
 
 ## 前提条件 {#prerequisites}
 
@@ -14,7 +14,7 @@ lang: zh
 
 ## 什么是乐观卷叠？ {#what-is-an-optimistic-rollup}
 
-乐观卷叠是一种扩容以太坊的方法，涉及将计算和状态存储移至链下。 乐观卷叠在以太坊之外执行交易，但将交易数据作为 `calldata` 发布到主网。
+乐观卷叠是一种扩容以太坊的方法，涉及将计算和状态存储移至链下。 乐观卷叠在以太坊之外执行交易，但将交易数据以 `calldata` 或[二进制大对象](/roadmap/danksharding/)的形式发布到主网。
 
 乐观卷叠运营商将多个链下交易大批量捆绑在一起，然后再提交到以太坊。 这种方法可以将固定成本分散到每批中的多笔交易中，从而降低最终用户的费用。 乐观卷叠还使用压缩技术来减少发布在以太坊上的数据量。
 
@@ -44,7 +44,7 @@ lang: zh
 
 ### 数据可用性 {#data-availability}
 
-如前所述，乐观卷叠将交易数据作为 `calldata` 发布到以太坊。 由于卷叠链的执行基于提交的交易，任何人都可以使用此信息（锚定在以太坊的基础层）来执行卷叠的状态并验证状态转换的正确性。
+如前所述，乐观卷叠将交易数据以 `calldata` 或[二进制大对象](/roadmap/danksharding/)的形式发布到以太坊。 由于卷叠链的执行基于提交的交易，任何人都可以使用此信息（锚定在以太坊的基础层）来执行卷叠的状态并验证状态转换的正确性。
 
 [数据可用性](/developers/docs/data-availability/)至关重要，因为如果不能访问状态数据，挑战者就不能构造欺诈证明来质疑无效的卷叠操作。 有了以太坊提供的数据可用性，就降低了卷叠运营商逃脱恶意行为（例如，提交无效区块）的风险。
 
@@ -86,15 +86,19 @@ lang: zh
 
 #### 提交卷叠区块到以太坊 {#submitting-blocks-to-ethereum}
 
-如前所述，乐观卷叠的运营商将链下交易捆绑成一个批次，并将其发送到以太坊进行公证。 此过程涉及压缩交易相关数据并将其作为 `calldata` 发布到以太坊上。
+如前所述，乐观卷叠的运营商将链下交易捆绑成一个批次，并将其发送到以太坊进行公证。 此过程涉及压缩与交易相关的数据并将其以 `calldata` 或二进制大对象的形式发布在以太坊上。
 
-`calldata` 是智能合约中不可修改、非持久的区域，其行为与[内存](/developers/docs/smart-contracts/anatomy/#memory)非常相似。 而 `calldata` 作为区块链的[历史日志](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html?highlight=memory#logs)部分，不会存储为以太坊状态的一部分。 因为 `calldata` 不涉及以太坊状态的任何部分，所以在链上存储数据更便宜。
+`calldata` 是智能合约中不可修改、非持久的区域，其行为与[内存](/developers/docs/smart-contracts/anatomy/#memory)非常相似。 而 `calldata` 作为区块链的[历史日志](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html?highlight=memory#logs)部分，不会存储为以太坊状态的一部分。 由于 `calldata` 不触及以太坊状态的任何部分，因此它比链上存储数据的状态更便宜。
 
 `calldata` 关键字也在 Solidity 中用于在执行时将参数传递给智能合约函数。 `calldata` 识别在交易期间被调用的函数，并以任意字节序列的形式保存函数的输入。
 
 在乐观卷叠的上下文中，`calldata` 用于将压缩的交易数据发送到链上合约。 卷叠运营商通过调用卷叠合约中所需的函数并将压缩数据作为函数参数传递来添加新批次。 使用 `calldata` 可以降低用户费用，因为卷叠产生的大部分成本来自链上存储数据。
 
 以下是一个卷叠批量提交的[示例](https://etherscan.io/tx/0x9102bfce17c58b5fc1c974c24b6bb7a924fb5fbd7c4cd2f675911c27422a5591)，以展示此概念的工作原理。 排序者调用 `appendSequencerBatch()` 方法并使用 `calldata` 将压缩的交易数据作为输入传递。
+
+一些卷叠现在使用二进制大对象将批量交易发布到以太坊。
+
+二进制大对象是不可修改且非持久化的（就像 `calldata` 一样），但会在大约 18 天后从历史记录中删除。 有关二进制大对象的更多信息，请参阅 [Danksharding](/roadmap/danksharding)。
 
 ### 状态承诺 {#state-commitments}
 
@@ -194,9 +198,9 @@ ii. 使用乐观卷叠的开发者和项目团队可以利用以太坊的基础�
 
 乐观卷叠使用类似于以太坊的燃料费方案来表示用户为每笔交易支付的费用。 乐观卷叠收取的费用取决于以下组成部分：
 
-1. **状态写入**：乐观卷叠将交易数据和区块头（由前一个区块头哈希、状态根、批处理根组成）作为 `calldata` 发布到以太坊。 以太坊交易的最低成本是 21,000 燃料。 乐观卷叠可以通过在单个区块中批量处理多笔交易（将 21k 燃料摊销到多个用户交易）来降低将交易写入 L1 的成本。
+1. **状态写入**：乐观卷叠将交易数据和区块头（由前一个区块头哈希、状态根、批处理根组成）作为 `blob`，即二进制大对象，发布到以太坊。 [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844) 引入了在链上纳入数据的高成本效益解决方案。 `blob` 是一个允许卷叠将压缩状态的转换数据发布到以太坊一层网络的新交易字段。 与永驻链上的 `calldata` 不同，二进制大对象的生命周期很短，在 [4096 个时段](https://github.com/ethereum/consensus-specs/blob/81f3ea8322aff6b9fb15132d050f8f98b16bdba4/configs/mainnet.yaml#L147)（大约 18 天）后即可从客户端删除。 通过使用二进制大对象发布批量压缩交易，乐观卷叠可以大幅降低向一层网络写入交易的成本。
 
-2. **`calldata`**：除了基本交易费用之外，每个状态写入的成本取决于发布到 L1 的 `calldata` 大小。 `calldata` 费用目前由 [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) 监管，它规定对于 `calldata` 的非零字节和零字节费用分别为 16 单位和 4 单位燃料。 为了降低用户费用，卷叠运营商压缩交易以减少在以太坊上发布的 `calldata` 字节数。
+2. **使用的二进制大对象燃料**：二进制大对象携带的交易采用类似于 [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) 中引入的动态费用机制。 第三类型交易的燃料费考虑了二进制大对象的基础费，后者由网络根据二进制大对象空间需求和所发送交易的二进制大对象空间使用情况来决定。
 
 3. **二层网络运营商费用**：这是支付给卷叠节点的金额，用来补偿处理交易时产生的计算成本，很像以太坊上的燃料费用。 由于二层网络处理能力更强，并且不会出现网络拥塞迫使以太坊上的验证者优先处理费用更高的交易，卷叠节点收取的交易费更低。
 
@@ -249,15 +253,10 @@ ii. 使用乐观卷叠的开发者和项目团队可以利用以太坊的基础�
 
 <YouTube id="7pWxCklcNsU" start="263" />
 
-### 使用乐观卷叠 {#use-optimistic-rollups}
-
-乐观重叠有多种实现，你可以将其整合到你的去中心化应用程序中：
-
-<RollupProductDevDoc rollupType="optimistic" />
-
 ## 阅读关于乐观卷叠的更多信息
 
 - [乐观卷叠如何工作（完整指南）](https://www.alchemy.com/overviews/optimistic-rollups)
+- [什么是区块链卷叠？ 技术介绍](https://www.ethereum-ecosystem.com/blog/what-is-a-blockchain-rollup-a-technical-introduction)
 - [Arbitrum 基本指南](https://newsletter.banklesshq.com/p/the-essential-guide-to-arbitrum)
 - [乐观卷叠究竟如何工作？](https://www.paradigm.xyz/2021/01/how-does-optimisms-rollup-really-work)
 - [深入研究乐观虚拟机](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)

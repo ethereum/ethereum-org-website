@@ -53,6 +53,13 @@ A konkrét lépések az adott fejlesztői keretrendszertől függenek. Például
 
 - [Dokumentáció](https://portal.thirdweb.com/deploy/)
 
+**Crossmint _– Vállalati szintű web3 fejlesztési platform okosszerződések telepítéséhez, hitelkártyás és láncok közötti fizetések lehetővé tételéhez, valamint API-ok használatára NFT-k létrehozása, terjesztése, értékesítése, tárolása és szerkesztése érdekében._**
+
+- [crossmint.com](https://www.crossmint.com)
+- [Dokumentáció](https://docs.crossmint.com)
+- [Discord](https://discord.com/invite/crossmint)
+- [Blog](https://blog.crossmint.com)
+
 ## Kapcsolódó útmutatók {#related-tutorials}
 
 - [Az első okosszerződés telepítése](/developers/tutorials/deploying-your-first-smart-contract/) _– Bevezetés az első okosszerződés telepítésébe egy Ethereum-teszthálózaton._

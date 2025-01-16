@@ -50,6 +50,7 @@ Las dos redes públicas de prueba que los desarrolladores de clientes están man
 - [GitHub](https://github.com/eth-clients/sepolia)
 - [Otterscan](https://sepolia.otterscan.io/)
 - [Etherscan](https://sepolia.etherscan.io)
+- [Blockscout](https://eth-sepolia.blockscout.com/)
 
 ##### Faucets
 
@@ -60,7 +61,7 @@ Las dos redes públicas de prueba que los desarrolladores de clientes están man
 - [Alchemy Sepolia faucet](https://sepoliafaucet.com/)
 - [Faucet Infura Sepolia](https://www.infura.io/faucet)
 - [Faucet Chainstack Sepolia](https://faucet.chainstack.com/sepolia-faucet)
-- [Blockscout](https://eth-sepolia.blockscout.com/)
+- [Faucet del ecosistema Ethereum](https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia)
 
 #### Goerli _(soporte a largo plazo)_ {#goerli}
 
@@ -77,6 +78,7 @@ Goerli es una red de prueba para probar la validación y la participación. La r
 - [Sitio web](https://goerli.net/)
 - [GitHub](https://github.com/eth-clients/goerli)
 - [Etherscan](https://goerli.etherscan.io)
+- [Blockscout](https://eth-goerli.blockscout.com/)
 
 ##### Faucets
 
@@ -88,9 +90,8 @@ Goerli es una red de prueba para probar la validación y la participación. La r
 - [Faucet All That Node Goerli](https://www.allthatnode.com/faucet/ethereum.dsrv)
 - [Coinbase Wallet Faucet | Goerli](https://coinbase.com/faucets/ethereum-goerli-faucet)
 - [Faucet Chainstack Goerli](https://faucet.chainstack.com/goerli-faucet)
-- [Blockscout](https://eth-goerli.blockscout.com/)
 
-Para iniciar un validador en la red de prueba de Goerli, utilice la plataforma de lanzamiento de [«cheap goerli validator»](https://goerli.launchpad.ethstaker.cc/en/) de ethstaker.
+Para iniciar un validador en la red de prueba de Goerli, utilice la plataforma de lanzamiento de [«cheap goerli validator»](https://holesky.launchpad.ethstaker.cc/en/) de ethstaker.
 
 ### Redes de pruebas de Capa 2 {#layer-2-testnets}
 

@@ -104,10 +104,11 @@ summaryPoint3: 它以开放科学运动为基础。
 - [Bio.xyz：为给你的生物技术去中心化自治组织或去中心化科学项目筹资](https://www.bio.xyz/)
 - [Fleming Protocol：推动协作式生物医学发现的开源数据经济](http://flemingprotocol.io/)
 - [Active Inference Institute](https://www.activeinference.org/)
-- [CureDAO：由社区所有的精准健康平台](https://docs.curedao.org/)
 - [IdeaMarkets：实现去中心化科学的诚信](https://ideamarket.io/)
 - [DeSci Labs](https://www.desci.com/)
 - [ValleyDAO：一个开放的全球化社区，为合成生物学研究提供资金和转译支持](https://www.valleydao.bio)
+- [Cerebrum DAO：寻找和培育促进大脑健康和避免神经变性的解决方案](https://www.cerebrumdao.com/)
+- [CryoDAO：资助低温保存领域的登月研究](https://www.cryodao.org)
 
 我们欢迎提出新项目加入到列表中 - 开始前，请查看我们的[上架政策](/contributing/adding-desci-projects/)！
 
@@ -125,6 +126,7 @@ summaryPoint3: 它以开放科学运动为基础。
 - [Samuel Akinosho 的《去中心化科学：研究的未来》](https://lucidsamuel.medium.com/desci-the-future-of-research-b76cfc88c8ec)
 - [Nadia 的《科学基金（结语：去中心化科学和新的加密原语）》](https://nadia.xyz/science-funding)
 - [去中心化正在颠覆药物开发](https://medium.com/id-theory/decentralisation-is-disrupting-drug-development-28b5ba5d447f)
+- [什么是去中心化科学 (DeSci)？](​https://usadailytimes.com/2022/09/12/what-is-desci-decentralized-science/)
 
 ### 相关视频 {#videos}
 
@@ -133,3 +135,4 @@ summaryPoint3: 它以开放科学运动为基础。
 - [科学出版业存在不合理现象。 Web3 能解决这个问题吗？](https://www.youtube.com/watch?v=WkvzYgCvWj8)
 - [Juan Benet - 去中心化科学、独立实验室以及大规模数据科学](https://www.youtube.com/watch?v=zkXM9H90g_E)
 - [Sebastian Brunemeier - 去中心化科学如何改变生物医学研究和风险资本](https://www.youtube.com/watch?v=qB4Tc3FcVbM)
+- [Paige Donner - 使用 Web3 和区块链打造开放科学的工具](https://www.youtube.com/watch?v=nC-2QWQ-lgw&t=17s)

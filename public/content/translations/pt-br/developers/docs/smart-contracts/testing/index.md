@@ -20,13 +20,13 @@ Embora as abordagens variem, a maioria dos métodos de teste exige a execução 
 
 ### Por que é importante testar contratos inteligentes? {#importance-of-testing-smart-contracts}
 
-Como os contratos inteligentes geralmente gerenciam ativos financeiros de alto valor, pequenos erros de programação podem e geralmente levam a [perdas massivas para os usuários](https://rekt.news/leaderboard/). Rigorous testing can, however, help you discover defects and issues in a smart contract's code early and fix them before launching on Mainnet.
+Como os contratos inteligentes geralmente gerenciam ativos financeiros de alto valor, pequenos erros de programação podem e geralmente levam a [perdas massivas para os usuários](https://rekt.news/leaderboard/). Testes rigorosos podem, no entanto, ajudar a descobrir de maneira antecipada erros e problemas no código de um contrato inteligente e corrigi-los antes do lançamento na rede principal.
 
 Embora seja possível atualizar um contrato se um bug for descoberto, as atualizações são complexas e podem [ resultar em erros](https://blog.trailofbits.com/2018/09/05/contract-upgrade-anti-patterns/) se tratadas de forma inadequada. A atualização de um contrato vai contra o princípio da imutabilidade e sobrecarrega os usuários com suposições de confiança adicionais. Por outro lado, um plano abrangente para testar seu contrato reduz os riscos de segurança do contrato inteligente e reduz a necessidade de realizar atualizações lógicas complexas após a implantação.
 
 ## Métodos para testar contratos inteligentes {#methods-for-testing-smart-contracts}
 
-Methods for testing Ethereum smart contracts fall under two broad categories: **automated testing** and **manual testing**. Testes automatizados e testes manuais tem seus prós e contras, mas você pode combinar ambos para criar um plano robusto para analisar seus contratos.
+Os métodos para testar contratos inteligentes no Ethereum se dividem em duas categorias amplas: **teste automatizado** e **teste manual**. Testes automatizados e testes manuais tem seus prós e contras, mas você pode combinar ambos para criar um plano robusto para analisar seus contratos.
 
 ### Teste automatizado {#automated-testing}
 
@@ -110,7 +110,7 @@ function auctionEnd() external {
 
 Este é um contrato de leilão simples projetado para receber lances durante o período de submissão de ofertas. Se a variável `highestBid` aumentar, o licitante anterior mais alto receberá seu dinheiro; uma vez terminado o período de licitação, o objeto `beneficiary` aciona o contrato para obter seu dinheiro.
 
-Testes unitários para um contrato como este cobriria diferentes funções que um usuário poderia chamar quando interagindo com o contrato. Um exemplo seria um teste unitário que checa se o usuário pode colocar uma ordem enquanto o leilão está em andamento (ou seja, chamadas para `bid()` com sucesso) ou checar se um usuário pode colocar uma ordem mais alta que o atual `highestBid`.
+Testes unitários para um contrato como este cobriria diferentes funções que um usuário poderia chamar quando interagindo com o contrato. Um exemplo seria um teste unitário que verifica se um usuário pode fazer uma oferta enquanto o leilão está em andamento (ou seja, que as chamadas para `bid()` são bem-sucedidas) ou um que verifica se um usuário pode fazer uma oferta maior do que a atual `highestBid`.
 
 Entendendo o fluxo operacional do contrato também ajuda a escrever testes unitários que checam se a execução atende os requisitos. Por exemplo, o contrato de leilão especifica que os usuários não podem colocar ordens quando o leilão terminou (ou seja, quando `auctionEndTime` é menor que `block.timestamp`). Portanto, o desenvolvedor deve rodar um teste unitário que checa se chamadas para a função `bid()` tiveram sucesso ou falharam quando o leilão terminou (ou seja, quando `auctionEndTime` > `block.timestamp`).
 
@@ -144,12 +144,13 @@ Frameworks de teste unitário para contratos inteligentes em Solidity vêm em di
 - **[Rodando testes unitários com Remix](https://remix-ide.readthedocs.io/en/latest/unittesting.html#write-tests)**
 - **[Rodando testes unitários com Ape](https://docs.apeworx.io/ape/stable/userguides/testing.html)**
 - **[Rodando testes unitários com Hardhat](https://hardhat.org/hardhat-runner/docs/guides/test-contracts)**
+- **[Como executar testes unitários com Wake](https://ackeeblockchain.com/wake/docs/latest/testing-framework/overview/)**
 
 ### Teste de Integração {#integration-testing-for-smart-contracts}
 
 Enquanto o teste unitário depura funções de contrato isoladamente, testes integrados avaliam os componentes de um contrato inteligente como um todo. Teste de integração pode detectar defeitos vindos de chamadas entre contratos ou interações entre diferentes funções no mesmo contrato inteligente. Por exemplo, testes de integração podem ajudar a checar se coisas como [herança](https://docs.soliditylang.org/en/v0.8.12/contracts.html#inheritance) e injeção de dependência funcionam devidamente.
 
-Teste de integração é útil se o seu contrato adota uma arquitetura modular ou interfaces com outros contratos on-chain durante a execução. One way of running integration tests is to [fork the blockchain](/glossary/#fork) at a specific height (using a tool like [Forge](https://book.getfoundry.sh/forge/fork-testing) or [Hardhat](https://hardhat.org/hardhat-network/docs/guides/forking-other-networks) and simulate interactions between your contract and deployed contracts.
+Teste de integração é útil se o seu contrato adota uma arquitetura modular ou interfaces com outros contratos on-chain durante a execução. Uma maneira de executar testes de integração é [fazer um fork da blockchain](/glossary/#fork) a uma altura específica (usando uma ferramenta como [Forge](https://book.getfoundry.sh/forge/fork-testing) ou [Hardhat](https://hardhat.org/hardhat-network/docs/guides/forking-other-networks) e simular interações entre seu contrato e contratos implantados.
 
 O blockchain que sofreu fork irá se comportar similarmente à Mainnet e ter contas com estados e saldos associados. Mas ele age somente como um ambiente de área local de desenvolvimento restrita, significando que você não precisará de ETH real para transações, por exemplo, nem suas modificações irão afetar o protocolo Ethereum real.
 
@@ -188,9 +189,11 @@ Executar testes baseados em propriedade geralmente começa com a definição da 
 Uma vez configurado propriamente, a ferramenta de teste de propriedade irá executar as suas funções do contrato inteligente com entradas aleatoriamente geradas. Se houver quaisquer violações de afirmações, você deve receber um relatório com os dados de entrada concretos que violaram a propriedade sendo avaliada. Veja alguns dos guias abaixo para começar com testes baseados em propriedade com diferentes ferramentas:
 
 - **[Análise estática de contratos inteligentes com Slither](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither#slither)**
+- **[Análise estática de contratos inteligentes com Wake](https://ackeeblockchain.com/wake/docs/latest/static-analysis/using-detectors/)**
 - **[Teste baseado em propriedade com Brownie](https://eth-brownie.readthedocs.io/en/stable/tests-hypothesis-property.html)**
-- **[Contratos Fuzzing com Foundry](https://book.getfoundry.sh/forge/fuzz-testing)**
-- **[Contratos Fuzzing com Echidna](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna#echidna-tutorial)**
+- **[Testando contratos com fuzzing com o Foundry](https://book.getfoundry.sh/forge/fuzz-testing)**
+- **[Testando contratos com fuzzing com o Echidna](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna#echidna-tutorial)**
+- **[Testando contratos com fuzzing usando Wake](https://ackeeblockchain.com/wake/docs/latest/testing-framework/fuzzing/)**
 - **[Execução simbólica de contratos inteligentes com Manticore](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore#manticore-tutorial)**
 - **[Execução simbólica de contratos inteligentes com Mythril](https://mythril-classic.readthedocs.io/en/master/tutorial.html)**
 
@@ -262,6 +265,8 @@ A maior diferença é que programas de recompensa por bug são abertos a uma mai
 
 - **[ApeWorx](https://docs.apeworx.io/ape/stable/userguides/testing.html)** - _Desenvolvimento baseado em Python e framework de teste para contratos inteligentes voltados para a Máquina Virtual Ethereum._
 
+- **[Wake](https://ackeeblockchain.com/wake/docs/latest/testing-framework/overview/)** - _Framework baseado em Python para teste unitário e fuzzing com fortes capacidades de depuração e suporte a testes cross-chain, utilizando pytest e Anvil para a melhor experiência e desempenho do usuário._
+
 ### Ferramentas de teste baseadas em propriedades {#property-based-testing-tools}
 
 #### Ferramentas de análise estática {#static-analysis-tools}
@@ -269,6 +274,10 @@ A maior diferença é que programas de recompensa por bug são abertos a uma mai
 - **[Slither](https://github.com/crytic/slither)** - _Framework com base no Python de análise estática estabelecida no Solidity para encontrar vulnerabilidades, aprimorar a compreensão do código e escrever análises personalizadas para contratos inteligentes._
 
 - **[Ethlint](https://ethlint.readthedocs.io/en/latest/)** - _Analisador (linter) para garantir as práticas recomendadas de estilo e segurança para a linguagem de programação de contrato inteligente Solidity._
+
+- **[Cyfrin Aderyn](https://cyfrin.io/tools/aderyn)** - _Analisador estático baseado em Rust especificamente projetado para a segurança e o desenvolvimento de contratos inteligentes Web3._
+
+- **[Wake](https://ackeeblockchain.com/wake/docs/latest/static-analysis/using-detectors/)** - _Framework de análise estática baseado em Python com detectores de vulnerabilidades e qualidade de código, impressoras para extrair informações úteis do código e suporte para a criação de submódulos personalizados._
 
 #### Ferramentas de análise dinâmica {#dynamic-analysis-tools}
 
@@ -289,7 +298,7 @@ A maior diferença é que programas de recompensa por bug são abertos a uma mai
 - [Como usar o Manticore para encontrar bugs em contratos inteligentes](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
 - [Como utilizar o Slither para encontrar bugs nos contratos inteligentes](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
 - [Como simular contratos Solidity para teste](/developers/tutorials/how-to-mock-solidity-contracts-for-testing/)
-- [How to run unit tests in Solidity using Foundry](https://www.rareskills.io/post/foundry-testing-solidity)
+- [Como executar testes unitários em Solidity usando Foundry](https://www.rareskills.io/post/foundry-testing-solidity)
 
 ## Leitura adicional {#further-reading}
 
