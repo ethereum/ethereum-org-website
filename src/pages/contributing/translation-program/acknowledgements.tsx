@@ -1,30 +1,23 @@
+import { BaseHTMLAttributes } from "react"
 import { useRouter } from "next/router"
 import { GetStaticProps } from "next/types"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import {
-  Box,
-  BoxProps,
-  Flex,
-  HeadingProps,
-  List,
-  ListItem,
-  useColorModeValue,
-} from "@chakra-ui/react"
+import { useColorModeValue } from "@chakra-ui/react"
 
 import { BasePageProps, Lang } from "@/lib/types"
 
 import ActionCard from "@/components/ActionCard"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import FeedbackCard from "@/components/FeedbackCard"
-import { Image } from "@/components/Image"
-import InlineLink from "@/components/Link"
-import MainArticle from "@/components/MainArticle"
-import OldHeading from "@/components/OldHeading"
-import Text from "@/components/OldText"
+import { TwImage } from "@/components/Image"
 import PageMetadata from "@/components/PageMetadata"
 import TranslationLeaderboard from "@/components/TranslationLeaderboard"
+import { Flex } from "@/components/ui/flex"
+import InlineLink from "@/components/ui/Link"
+import { ListItem, OrderedList } from "@/components/ui/list"
 
+import { cn } from "@/lib/utils/cn"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLocaleTimestamp } from "@/lib/utils/time"
@@ -39,12 +32,31 @@ import lightThemeCertificateImg from "@/public/images/certificates/light-certifi
 import dogeComputerImg from "@/public/images/doge-computer.png"
 import whatIsEthereumImg from "@/public/images/what-is-ethereum.png"
 
-const Content = (props: BoxProps) => (
-  <Box as={MainArticle} py={4} px={10} w="full" {...props} />
+const Content = ({
+  className,
+  ...props
+}: BaseHTMLAttributes<HTMLHeadingElement>) => (
+  <div className={cn("w-full px-10 py-4", className)} {...props} />
 )
 
-const ContentHeading = (props: HeadingProps) => (
-  <OldHeading lineHeight={1.4} {...props} />
+const H2 = ({
+  className,
+  ...props
+}: BaseHTMLAttributes<HTMLHeadingElement>) => (
+  <h2
+    className={cn(
+      "mb-8 mt-12 text-2xl font-semibold leading-xs md:text-[2rem]",
+      className
+    )}
+    {...props}
+  />
+)
+
+const Text = ({
+  className,
+  ...props
+}: BaseHTMLAttributes<HTMLHeadingElement>) => (
+  <p className={cn("mb-[1.45rem] leading-[1.6rem]", className)} {...props} />
 )
 
 export const getStaticProps = (async ({ locale }) => {
@@ -81,7 +93,7 @@ const TranslatorAcknowledgements = () => {
   )
 
   return (
-    <Flex direction="column" align="center" w="full">
+    <Flex className="w-full flex-col items-center">
       <PageMetadata
         title={t(
           "page-contributing-translation-program-acknowledgements-meta-title"
@@ -93,26 +105,14 @@ const TranslatorAcknowledgements = () => {
 
       <Content>
         <Breadcrumbs slug={router.asPath} className="mt-12" />
-        <ContentHeading
-          as="h1"
-          fontSize={{ base: "2rem", sm: "2.5rem", md: "5xl" }}
-        >
+        <h1 className="my-8 text-[2rem] leading-xs sm:text-[2.5rem] md:text-5xl">
           {t(
             "page-contributing-translation-program-acknowledgements-acknowledgement-page-title"
           )}
-        </ContentHeading>
-        <Flex
-          direction={{ base: "column", lg: "row" }}
-          align={{ base: "flex-start", lg: "normal" }}
-          w="full"
-          ms={0}
-          me={{ base: 0, lg: 8 }}
-        >
+        </h1>
+        <Flex className="me-0 ms-0 w-full flex-col items-start lg:me-8 lg:flex-row lg:items-center">
           {/* LEFT COLUMN */}
-          <Box
-            m={{ base: "auto 0", lg: "0 2rem 0 0" }}
-            w={{ base: "full", lg: "50%" }}
-          >
+          <div className="m-auto w-full lg:mb-0 lg:ml-0 lg:mr-8 lg:mt-0 lg:w-1/2">
             <Text>
               {t(
                 "page-contributing-translation-program-acknowledgements-acknowledgement-page-1"
@@ -143,34 +143,26 @@ const TranslatorAcknowledgements = () => {
             {/* <p>
               <Translation id="page-contributing-translation-program-acknowledgements-acknowledgement-page-5" />
             </p> */}
-          </Box>
+          </div>
           {/* RIGHT COLUMN */}
-          <Box
-            m={{ base: "auto 0", lg: "0 0 0 2rem" }}
-            w={{ base: "full", lg: "50%" }}
-          >
-            <Image
+          <div className="m-auto w-full lg:mb-0 lg:ml-8 lg:mr-0 lg:mt-0 lg:w-1/2">
+            <TwImage
+              width={500}
               src={dogeComputerImg}
-              w={500}
               alt={t(
                 "page-contributing-translation-program-acknowledgements-hero-image-alt"
               )}
             />
-          </Box>
+          </div>
         </Flex>
       </Content>
 
-      <Content maxW="800px">
-        <ContentHeading
-          as="h2"
-          textAlign="center"
-          fontSize={{ base: "2xl", md: "2rem" }}
-          fontWeight={600}
-        >
+      <Content className="max-w-[800px]">
+        <H2 className="text-center">
           {t(
             "page-contributing-translation-program-acknowledgements-translation-leaderboard-title"
           )}
-        </ContentHeading>
+        </H2>
         <TranslationLeaderboard
           monthData={monthData}
           quarterData={quarterData}
@@ -184,15 +176,11 @@ const TranslatorAcknowledgements = () => {
       </Content>
 
       <Content>
-        <ContentHeading
-          as="h2"
-          fontSize={{ base: "2xl", md: "2rem" }}
-          fontWeight={600}
-        >
+        <H2>
           {t(
             "page-contributing-translation-program-acknowledgements-our-translators-title"
           )}
-        </ContentHeading>
+        </H2>
         <Text>
           {t(
             "page-contributing-translation-program-acknowledgements-our-translators-1"
@@ -213,15 +201,11 @@ const TranslatorAcknowledgements = () => {
       </Content>
 
       <Content id="certificate">
-        <ContentHeading
-          as="h2"
-          fontSize={{ base: "2xl", md: "2rem" }}
-          fontWeight={600}
-        >
+        <H2>
           {t(
             "page-contributing-translation-program-acknowledgements-cert-title"
           )}
-        </ContentHeading>
+        </H2>
         <Text>
           {t("page-contributing-translation-program-acknowledgements-cert-1")}
         </Text>
@@ -231,21 +215,17 @@ const TranslatorAcknowledgements = () => {
         <Text>
           {t("page-contributing-translation-program-acknowledgements-cert-3")}
         </Text>
-        <Flex justify="center">
-          <Image src={themedCertificateImage} alt="translator certificate" />
+        <Flex className="justify-center">
+          <TwImage src={themedCertificateImage} alt="translator certificate" />
         </Flex>
       </Content>
 
       <Content id="oats">
-        <ContentHeading
-          as="h2"
-          fontSize={{ base: "2xl", md: "2rem" }}
-          fontWeight={600}
-        >
+        <H2>
           {t(
             "page-contributing-translation-program-acknowledgements-oats-title"
           )}
-        </ContentHeading>
+        </H2>
         <Text>
           {t("page-contributing-translation-program-acknowledgements-1")}
         </Text>
@@ -255,17 +235,13 @@ const TranslatorAcknowledgements = () => {
         <Text>
           {t("page-contributing-translation-program-acknowledgements-3")}
         </Text>
-        <ContentHeading
-          as="h3"
-          fontSize={{ base: "xl", md: "2xl" }}
-          fontWeight={600}
-        >
+        <h3 className="mb-8 mt-10 text-xl font-semibold leading-xs md:text-2xl">
           {t(
             "page-contributing-translation-program-acknowledgements-how-to-claim-title"
           )}
-        </ContentHeading>
+        </h3>
 
-        <List as="ol" styleType="decimal">
+        <OrderedList>
           <ListItem>
             {t(
               "page-contributing-translation-program-acknowledgements-how-to-claim-1"
@@ -291,7 +267,7 @@ const TranslatorAcknowledgements = () => {
               "page-contributing-translation-program-acknowledgements-how-to-claim-4"
             )}
           </ListItem>
-        </List>
+        </OrderedList>
         <Text>
           {t("page-contributing-translation-program-acknowledgements-4")}
         </Text>
