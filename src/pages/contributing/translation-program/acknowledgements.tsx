@@ -110,7 +110,7 @@ const TranslatorAcknowledgements = () => {
             "page-contributing-translation-program-acknowledgements-acknowledgement-page-title"
           )}
         </h1>
-        <Flex className="me-0 ms-0 w-full flex-col items-start lg:me-8 lg:flex-row lg:items-center">
+        <Flex className="me-0 ms-0 w-full flex-col items-start lg:me-8 lg:flex-row">
           {/* LEFT COLUMN */}
           <div className="m-auto w-full lg:mb-0 lg:ml-0 lg:mr-8 lg:mt-0 lg:w-1/2">
             <Text>
