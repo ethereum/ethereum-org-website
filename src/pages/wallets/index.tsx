@@ -3,7 +3,6 @@ import { GetStaticProps } from "next"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import { Box } from "@chakra-ui/react"
 
 import { BasePageProps, Lang } from "@/lib/types"
 
@@ -420,11 +419,11 @@ const WalletsPage = () => {
             descriptionKey="page-wallets:page-wallets-get-some-desc"
             className="min-h-full flex-1 basis-[424px]"
           >
-            <Box>
+            <div>
               <ButtonLink href="/get-eth/">
                 {t("page-wallets-get-some-btn")}
               </ButtonLink>
-            </Box>
+            </div>
           </Callout>
           <Callout
             image={DappsImage}
@@ -433,11 +432,11 @@ const WalletsPage = () => {
             descriptionKey="page-wallets:page-wallets-try-dapps-desc"
             className="min-h-full flex-1 basis-[424px]"
           >
-            <Box>
+            <div>
               <ButtonLink href="/dapps/">
                 {t("page-wallets-more-on-dapps-btn")}
               </ButtonLink>
-            </Box>
+            </div>
           </Callout>
         </div>
       </div>
