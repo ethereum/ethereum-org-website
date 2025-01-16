@@ -3,7 +3,6 @@ import { useRouter } from "next/router"
 import { GetStaticProps } from "next/types"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import { useColorModeValue } from "@chakra-ui/react"
 
 import { BasePageProps, Lang } from "@/lib/types"
 
@@ -27,6 +26,7 @@ import allTimeData from "../../../data/translation-reports/alltime/alltime-data.
 import monthData from "../../../data/translation-reports/month/month-data.json"
 import quarterData from "../../../data/translation-reports/quarter/quarter-data.json"
 
+import useColorModeValue from "@/hooks/useColorModeValue"
 import darkThemeCertificateImg from "@/public/images/certificates/dark-certificate.png"
 import lightThemeCertificateImg from "@/public/images/certificates/light-certificate.png"
 import dogeComputerImg from "@/public/images/doge-computer.png"
