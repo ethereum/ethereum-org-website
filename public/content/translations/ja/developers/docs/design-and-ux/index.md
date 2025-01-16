@@ -30,7 +30,7 @@ lang: ja
 | <Tag variant="solid" status="success">暗号通過へのオンボーディング</Tag>    | [NEAR: 導入へのプロセスを加速](https://drive.google.com/file/d/1VuaQP4QSaQxR5ddQKTMGI0b0rWdP7uGn/view)                                                                          |
 | <Tag status="tag">ステーキング</Tag>           | [ステーキング: 主要なトレンド、要点、予測 - ETHステーカー](https://lookerstudio.google.com/u/0/reporting/cafcee00-e1af-4148-bae8-442a88ac75fa/page/p_ja2srdhh2c?s=hmbTWDh9hJo)               |
 | <Tag status="tag">ステーキング</Tag>           | [複数のアプリのステーキング](https://github.com/threshold-network/UX-User-Research/blob/main/Multi-App%20Staking%20(MAS)/iterative-user-study/MAS%20Iterative%20User%20Study.pdf) |
-| <Tag status="error">自律分散型組織</Tag>             | [2022年DAOリサーチのアップデート: DAOビルダーが必要なことは何か？](https://blog.aragon.org/2022-dao-research-update/)                                                                          |
+| <Tag variant="solid" status="error">自律分散型組織</Tag>             | [2022年DAOリサーチのアップデート: DAOビルダーが必要なことは何か？](https://blog.aragon.org/2022-dao-research-update/)                                                                          |
 | <Tag status="error">分散型金融(DeFi)</Tag>        | [2024年のDefiの状態](https://stateofdefi.org/) (調査中)                                                                                                                      |
 | <Tag status="error">分散型金融(DeFi)</Tag>        | [カバレッジプール](https://github.com/threshold-network/UX-User-Research/tree/main/Keep%20Coverage%20Pool)                                                                   |
 | <Tag status="error">分散型金融(DeFi)</Tag>        | [ConSensys: 2022年DeFiユーザーリサーチレポート](https://cdn2.hubspot.net/hubfs/4795067/ConsenSys%20Codefi-Defi%20User%20ResearchReport.pdf)                                       |
