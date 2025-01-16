@@ -5,6 +5,7 @@ import { CardListItem } from "../CardList"
 import aaveImg from "@/public/images/dapps/aave.png"
 // -- borrow
 import compoundImg from "@/public/images/dapps/compound.png"
+import frankencoinImg from "@/public/images/dapps/frankencoin.png"
 // -- earn
 import gitcoinImg from "@/public/images/dapps/gitcoin.png"
 import loopringImg from "@/public/images/dapps/loopring.png"
@@ -70,6 +71,12 @@ export const useStablecoinAccordion = () => {
       image: summerfiImg,
       link: "https://summer.fi/",
       alt: t("summerfi-logo"),
+    },
+    {
+      title: "Frankencoin",
+      image: frankencoinImg,
+      link: "https://frankencoin.com",
+      alt: t("frankencoin-logo"),
     },
   ]
 

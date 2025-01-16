@@ -51,6 +51,7 @@ import {
   fetchEthereumEcosystemData,
   fetchEthereumStablecoinsData,
 } from "@/lib/api/stablecoinsData"
+import frankencoinImg from "@/public/images/dapps/frankencoin.png"
 import summerfiImg from "@/public/images/dapps/summerfi.png"
 import dogeComputerImg from "@/public/images/doge-computer.png"
 // -- daps
@@ -138,6 +139,7 @@ export const getStaticProps = (async ({ locale }) => {
     GUSD: { type: FIAT, url: "https://gemini.com/dollar" },
     SAI: { type: CRYPTO, url: "https://makerdao.com/en/whitepaper/sai/" },
     DUSD: { type: CRYPTO, url: "https://dusd.finance/" },
+    ZCHF: { type: CRYPTO, url: "https://frankencoin.com" },
     PAXG: { type: ASSET, url: "https://www.paxos.com/paxgold/" },
     AMPL: { type: ALGORITHMIC, url: "https://www.ampleforth.org/" },
     FRAX: { type: ALGORITHMIC, url: "https://frax.finance/" },
@@ -286,6 +288,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
       links: [
         { text: "DAI", url: "https://makerdao.com/en/" },
         { text: "RAI", url: "https://reflexer.finance/" },
+        { text: "ZCHF", url: "https://frankencoin.com" },
       ],
     },
     {
@@ -370,6 +373,15 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
       width: 80,
       name: "Summer.fi",
       description: t("page-stablecoins-stablecoins-dapp-description-4"),
+    },
+    {
+      background: "linear-gradient(35deg, #F0F1F5 0%, #FFFFFF 100%)",
+      url: "https://frankencoin.com",
+      alt: t("frankencoin-logo"),
+      image: frankencoinImg,
+      width: 80,
+      name: "Frankencoin",
+      description: t("page-stablecoins-stablecoins-dapp-description-5"),
     },
   ]
 

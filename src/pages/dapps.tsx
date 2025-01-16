@@ -77,6 +77,7 @@ import dodo from "@/public/images/dapps/dodo.png"
 import ens from "@/public/images/dapps/ens.png"
 import etherisc from "@/public/images/dapps/etherisc.png"
 import foundation from "@/public/images/dapps/foundation.png"
+import frankencoin from "@/public/images/dapps/frankencoin.png"
 import gitcoin from "@/public/images/dapps/gitcoin.png"
 import gm from "@/public/images/dapps/gm.png"
 import gods from "@/public/images/dapps/gods.png"
@@ -734,6 +735,13 @@ const DappsPage = () => {
       link: "https://www.convexfinance.com/",
       image: convex,
       alt: t("page-dapps-convex-image-alt"),
+    },
+    {
+      title: "Frankencoin",
+      description: t("page-dapps-dapp-description-frankencoin"),
+      link: "https://frankencoin.com",
+      image: frankencoin,
+      alt: t("page-dapps-frankencoin-image-alt"),
     },
   ]
 
