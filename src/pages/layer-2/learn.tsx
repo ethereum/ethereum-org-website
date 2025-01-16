@@ -5,7 +5,6 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 
 import type { BasePageProps, Lang } from "@/lib/types"
 
-import { ButtonLink } from "@/components/Buttons"
 import Callout from "@/components/Callout"
 import Card from "@/components/Card"
 import { ContentHero, type ContentHeroProps } from "@/components/Hero"
@@ -14,6 +13,7 @@ import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
 import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import Translation from "@/components/Translation"
+import { ButtonLink } from "@/components/ui/buttons/Button"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
