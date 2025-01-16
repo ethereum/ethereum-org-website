@@ -43,15 +43,15 @@ export const getStaticProps = (async ({ locale }) => {
   }
 }) satisfies GetStaticProps<BasePageProps>
 
-const Content = (props: { children: React.ReactNode }) => (
-  <div className="w-full px-10 py-4">{props.children}</div>
+const Content = ({ ...props }: BaseHTMLAttributes<HTMLHeadingElement>) => (
+  <div className="w-full px-10 py-4" {...props} />
 )
 
 const Text = ({
   className,
   ...props
 }: BaseHTMLAttributes<HTMLHeadingElement>) => (
-  <p className={cn("mb-[1.45rem] leading-base", className)} {...props} />
+  <p className={cn("mb-[1.45rem] leading-[1.6rem]", className)} {...props} />
 )
 
 const Contributors = () => {
