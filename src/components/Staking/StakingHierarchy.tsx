@@ -2,8 +2,6 @@ import React from "react"
 import { useTranslation } from "next-i18next"
 import { IconBase } from "react-icons"
 import {
-  Box,
-  calc,
   Center,
   cssVar,
   Flex,
@@ -131,23 +129,14 @@ const Line = () => {
   const medBp = useToken("breakpoints", "md")
 
   return (
-    <Box
-      as="aside"
-      gridColumn={1}
-      gridRow="1 / 3"
-      position="relative"
-      hideBelow={medBp}
+    <aside
+      className={`realtive after:h-[calc.subtract("100%", "50px")] after:start-[calc.subtract("50%", "2px")] after:z-1 after:border-orange col-span-1 row-span-2 hidden after:absolute after:top-[50px] after:border-s-4 md:block`}
+
+      /* 
+        This value needs to be updated.
       _after={{
-        content: `""`,
-        height: calc.subtract("100%", "50px"),
         borderImage: `linear-gradient(to bottom, ${$colorVar.reference}, ${$nextColorVar.reference}) 1 100%`,
-        borderInlineStart: "4px",
-        borderColor: "orange",
-        position: "absolute",
-        insetInlineStart: calc.subtract("50%", "2px"),
-        top: "50px",
-        zIndex: 1,
-      }}
+      }} */
     />
   )
 }
@@ -277,7 +266,7 @@ const StakingHierarchy = () => {
           </Text>
           <Text>{t("page-staking-hierarchy-solo-p2")}</Text>
           <Text>{t("page-staking-hierarchy-solo-p3")}</Text>
-          <Box>
+          <div>
             <ButtonLink
               href="/staking/solo/"
               onClick={() => {
@@ -291,7 +280,7 @@ const StakingHierarchy = () => {
             >
               {t("page-staking-more-on-solo")}
             </ButtonLink>
-          </Box>
+          </div>
         </Content>
       </SectionGrid>
       <SectionGrid number={2}>
@@ -310,7 +299,7 @@ const StakingHierarchy = () => {
           <Text>{t("page-staking-hierarchy-saas-p1")}</Text>
           <Text>{t("page-staking-hierarchy-saas-p2")}</Text>
           <Text>{t("page-staking-hierarchy-saas-p3")}</Text>
-          <Box>
+          <div>
             <ButtonLink
               href="/staking/saas/"
               onClick={() => {
@@ -324,7 +313,7 @@ const StakingHierarchy = () => {
             >
               {t("page-staking-more-on-saas")}
             </ButtonLink>
-          </Box>
+          </div>
         </Content>
       </SectionGrid>
       <SectionGrid number={3}>
@@ -355,7 +344,7 @@ const StakingHierarchy = () => {
           <Text>
             <Translation id="page-staking:page-staking-hierarchy-pools-p4" />
           </Text>
-          <Box>
+          <div>
             <ButtonLink
               href="/staking/pools/"
               onClick={() => {
@@ -369,7 +358,7 @@ const StakingHierarchy = () => {
             >
               {t("page-staking-more-on-pools")}
             </ButtonLink>
-          </Box>
+          </div>
         </Content>
       </SectionGrid>
       <SectionGrid number={4}>
