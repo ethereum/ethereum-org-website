@@ -737,6 +737,17 @@ const chains = [
     chain: "TSF",
   },
   {
+    name: "Soneium",
+    infoURL: "https://soneium.org",
+    chainId: 1868,
+    nativeCurrency: {
+      name: "Ether",
+      symbol: "ETH",
+      decimals: 18,
+    },
+    chain: "ETH",
+  },
+  {
     name: "Lightlink Phoenix Mainnet",
     infoURL: "https://lightlink.io",
     chainId: 1890,
