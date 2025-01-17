@@ -6,7 +6,6 @@ import { MdHelpOutline } from "react-icons/md"
 
 import { BasePageProps, Lang } from "@/lib/types"
 
-import ButtonLink from "@/components/Buttons/ButtonLink"
 import CalloutBanner from "@/components/CalloutBanner"
 import DataProductCard from "@/components/DataProductCard"
 import Emoji from "@/components/Emoji"
@@ -15,7 +14,6 @@ import GhostCard from "@/components/GhostCard"
 import HorizontalCard from "@/components/HorizontalCard"
 import { TwImage } from "@/components/Image"
 import InfoBanner from "@/components/InfoBanner"
-import InlineLink from "@/components/Link"
 import MainArticle from "@/components/MainArticle"
 import PageHero from "@/components/PageHero"
 import PageMetadata from "@/components/PageMetadata"
@@ -26,8 +24,10 @@ import StablecoinBoxGrid from "@/components/StablecoinBoxGrid"
 import StablecoinsTable from "@/components/StablecoinsTable"
 import Tooltip from "@/components/Tooltip"
 import Translation from "@/components/Translation"
+import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Divider } from "@/components/ui/divider"
 import { Flex, FlexProps } from "@/components/ui/flex"
+import InlineLink from "@/components/ui/Link"
 
 import { cn } from "@/lib/utils/cn"
 import { dataLoader } from "@/lib/utils/data/dataLoader"
@@ -446,7 +446,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
         >
           <div className="-mb-8 w-full px-8 py-4">
             <H2 className="mt-0">{t("page-stablecoins-find-stablecoin")}</H2>
-            <Flex className="me-auto ms-auto w-full flex-col justify-center lg:me-8 lg:ms-0 lg:w-1/2">
+            <Flex className="me-auto ms-auto w-full flex-col justify-center lg:me-2 lg:ms-0 lg:w-1/2">
               <p className="mb-6">
                 {t("page-stablecoins-find-stablecoin-intro")}
               </p>
@@ -480,8 +480,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
                     <Flex className="flex-col">
                       <div>
                         <ButtonLink
-                          mb={4}
-                          me={4}
+                          className="mb-4 me-4"
                           href="https://matcha.xyz/tokens/ethereum/0x6b175474e89094c44da98b954eedeac495271d0f?sellChain=1&sellAddress=0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
                         >
                           {t("page-stablecoins-dai-banner-swap-button")}
@@ -517,8 +516,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
                   <Flex className="flex-col">
                     <div>
                       <ButtonLink
-                        mb={4}
-                        me={4}
+                        className="mb-4 me-4"
                         href="https://matcha.xyz/tokens/ethereum/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48?sellChain=1&sellAddress=0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
                       >
                         {t("page-stablecoins-usdc-banner-swap-button")}
@@ -589,7 +587,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
               <ButtonLink
                 variant="outline"
                 href="/defi/"
-                whiteSpace="normal"
+                className="whitespace-normal"
                 isSecondary
               >
                 {t("page-stablecoins-more-defi-button")}
