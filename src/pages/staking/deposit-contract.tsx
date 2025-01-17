@@ -126,7 +126,7 @@ const Row = (props: ChildOnlyProp) => (
 )
 
 const CardTitle = (props: ChildOnlyProp) => (
-  <h2 className="mb-4 text-[2rem] font-semibold leading-xs" {...props} />
+  <h2 className="mb-4 leading-xs" {...props} />
 )
 
 const Caption = (props: ChildOnlyProp) => (
