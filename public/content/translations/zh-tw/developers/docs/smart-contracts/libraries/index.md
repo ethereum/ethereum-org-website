@@ -79,7 +79,7 @@ contract MyNFT is ERC721 {
 
 在你的專案使用智慧型合約庫有幾個好處。 首先，這提供了現成的組件，可以納入你的系統，而不必自己編寫程式碼，從而節省時間。
 
-安全性也是一個重要的優點。 開放原始碼智慧型合約庫也經常接受嚴格審查。 鑑於許多專案都依賴它們，社群有強烈動機加以持續審查。 在應用程式代碼中比起可重複使用的合約庫更容易發現錯誤。 有些庫甚至接受[外部審核](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/audit)，以提高安全性。
+安全性也是一個重要的優點。 開放原始碼智慧型合約庫也經常接受嚴格審查。 鑑於許多專案都依賴它們，社群有強烈動機加以持續審查。 在應用程式代碼中比起可重複使用的合約庫更容易發現錯誤。 有些庫甚至接受[外部審核](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/audits)，以提高安全性。
 
 然而，使用智慧型合約庫可能將你不熟悉的程式碼納入專案。 我們會想匯入合約，並將其直接納入專案，但若未充分理解該合約的作用，可能會由於意外行為，而無意中在系統中引入問題。 務必參閱要匯入的程式碼文件，然後在納入專案前審查程式碼！
 
@@ -105,7 +105,7 @@ contract MyNFT is ERC721 {
 **Web3 Solidity SDK：** **_提供有效率建立自訂智慧型合約所需的工具_**
 
 - [文件](https://portal.thirdweb.com/solidity/)
-- [Github](https://github.com/thirdweb-dev/contracts)
+- [GitHub](https://github.com/thirdweb-dev/contracts)
 
 ## 相關教程 {#related-tutorials}
 
@@ -114,4 +114,4 @@ contract MyNFT is ERC721 {
 
 ## 衍生閱讀 {#further-reading}
 
-_認識社區或社團資源能幫助大家學習更多? 歡迎自由編輯或添加於本頁!!_
+_知道對你有幫助的社群資源嗎？ 請編輯此頁面並新增資源！_

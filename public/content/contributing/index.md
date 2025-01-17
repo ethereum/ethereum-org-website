@@ -90,7 +90,7 @@ We have low barrier to entry issues on our GitHub repository specifically design
 
 If your contribution gets merged into ethereum.org, you will have a chance to claim a special badge on [Galxe](https://app.galxe.com/quest/ethereumorg). An Onchain Achievement Token (OAT) is a proof that you helped make the ecosystem a little more awesome.
 
-[More on OATs](https://help.galxe.com/en/articles/7067290-galxe-oats-reward-and-celebrate-achievements)
+[More on OATs](https://help.galxe.com/en/articles/9645630-create-quest-rewards#h_1c5d63ba03)
 
 ### How to claim
 1. Join our [Discord server](https://discord.gg/ethereum-org).

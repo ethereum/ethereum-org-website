@@ -8,6 +8,8 @@ lang: fr
 
 L'intérêt grandissant pour la cryptomonnaie amène avec lui un risque croissant venant des escrocs et des pirates informatiques. Cet article expose de bonnes pratiques pour atténuer ces risques.
 
+**Rappelez-vous : Jamais personne de ethereum.org ne vous contactera. Ne répondez pas aux e-mails prétendant provenir du support officiel d'Ethereum.**
+
 <Divider />
 
 ## Le b.a.-ba de la sécurité de votre cryptomonnaie {#crypto-security}

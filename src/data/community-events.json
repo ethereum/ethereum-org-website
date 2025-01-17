@@ -1505,5 +1505,41 @@
     "location": "London, UK",
     "description": "We’re thrilled to return to London for another round of innovation and hands-on building! This year, we’re bringing you an exceptional dual-track event,…",
     "imageUrl": "https://social-images.lu.ma/cdn-cgi/image/format=auto,fit=cover,dpr=1,anim=false,background=white,quality=75,width=800,height=419/api/event-one?calendar_avatar=https%3A%2F%2Fimages.lumacdn.com%2Fcalendars%2F0o%2F4cff6d5a-741b-4917-a568-c6767d9cd91b&amp;calendar_name=Encode%20Club&amp;color0=%231a1716&amp;color1=%23725f47&amp;color2=%23d3c9b3&amp;color3=%237e9a39&amp;host_avatar=https%3A%2F%2Fimages.lumacdn.com%2Favatars%2Fxn%2F04392226-d605-4c28-a6b9-2631bfcfd80e&amp;host_name=Encode%20Club&amp;img=https%3A%2F%2Fimages.lumacdn.com%2Fevent-covers%2Ff3%2Fc10c60fc-7220-4141-aad7-d33e8894f967&amp;name=Encode%20London%20Research%20Conference%20and%20Hackathon"
+  },
+  {
+    "title": "Zugrama India",
+    "startDate": "2025-01-05",
+    "endDate": "2025-02-16",
+    "href": "https://zugrama.org/",
+    "location": "Thiruvananthapuram, Kerala, IND",
+    "description": "A pop-village experiment in India exploring technology in a co-living setup. ",
+    "imageUrl": "https://framerusercontent.com/images/wJDirYhhSH8znG0hz0hyH3wqOlE.png"
+  },
+  {
+    "title": "EthOxford",
+    "startDate": "2025-02-07",
+    "endDate": "2025-02-09",
+    "href": "https://ethoxford.io/",
+    "location": "Oxford, UK",
+    "description": "Join the best builders for a 3 day hackathon hosted at Oxford University.",
+    "imageUrl": "https://ethoxford.io/assets/images/share.jpg?v=7e796eda"
+  },
+  {
+    "title": "ETHVietnam 2025",
+    "startDate": "2025-04-12",
+    "endDate": "2025-04-12",
+    "href": "https://eth-vietnam.com",
+    "location": "HCMC, VNM",
+    "description": "",
+    "imageUrl": "http://static1.squarespace.com/static/629856e64f44db3799f8e3f6/t/65c04e1059e3477a33a1c105/1707101732532/COVER.png?format=1500w"
+  },
+  {
+    "title": "ETHMilan",
+    "startDate": "2025-06-24",
+    "endDate": "2025-06-24",
+    "href": "https://ethmilan.xyz",
+    "location": "Milan, ITALY",
+    "description": "ETHMilan 2024 – Italy&#x27;s Largest ETH &amp; Web3 Conference",
+    "imageUrl": ""
   }
 ]

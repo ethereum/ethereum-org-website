@@ -258,10 +258,10 @@
     "link": "https://www.meetup.com/Cape-Town-Ethereum-Meetup/"
   },
   {
-    "title": "Jeju Blockchain Meetup",
+    "title": "Ethereum Jeju",
     "emoji": ":south_korea:",
     "location": "Jeju",
-    "link": "https://www.meetup.com/Jeju-Blockchain-Meetup"
+    "link": "https://www.meetup.com/Ethereum-Jeju"
   },
   {
     "title": "Seoul Ethereum Meetup",
@@ -496,6 +496,12 @@
     "emoji": ":italy:",
     "location": "Naples",
     "link": "https://www.eventbrite.it/e/863744451907/"
+  },
+  {
+    "title": "Decaffeth",
+    "emoji": ":iran:",
+    "location": "Tehran",
+    "link": "https://lu.ma/decaffeth"
   },
   {
     "title": "ETHCluj Meetup",
