@@ -168,7 +168,7 @@ Dai 或 USDC 等代币的价值和美元的差距通常保持在几美分以内�
 
 要想在传统金融世界实现上述操作，你需要大量的资金。 这些赚钱的策略仅供已经拥有财富的人士使用。 闪电贷款是一个未来的例子，在这里，拥有金钱不一定是赚钱的先决条件。
 
-<ButtonLink isSecondary href="https://aave.com/flash-loans/">
+<ButtonLink isSecondary href="https://aave.com/docs/concepts/flash-loans">
   关于闪电贷的更多信息
 </ButtonLink>
 

@@ -90,7 +90,10 @@ contract VendingMachine {
 
 スマートコントラクトの監査を委託することは、第三者コードレビューを実施する一つの方法です。 監査人は、スマートコントラクトが安全で、品質不良や設計ミスがないようにする重要な役割を担っています。
 
-それでも、監査を特効薬のように受け止めるのは避けるべきです。 スマートコントラクト監査は、すべてのバグを発見できるわけではなく、主に追加のレビューを提供するためのものです。これは、初回の開発とテストでデベロッパーが見逃した問題を検出するのに役立ちます。 スマートコントラクト監査のメリットを最大限に活かすには、コードを適切に文書化し、インラインコメントを追加するなどの[監査人と協業するための最善の方法](https://twitter.com/tinchoabbate/status/1400170232904400897)も実践する必要があります。
+それでも、監査を特効薬のように受け止めるのは避けるべきです。 スマートコントラクト監査は、すべてのバグを発見できるわけではなく、主に追加のレビューを提供するためのものです。これは、初回の開発とテストでデベロッパーが見逃した問題を検出するのに役立ちます。 スマートコントラクト監査のメリットを最大限に活かすには、コードを適切に文書化し、インラインコメントを追加するなどの監査人と協業するための最善の方法も実践する必要があります。
+
+- [スマートコントラクト監査のヒントとコツ](https://twitter.com/tinchoabbate/status/1400170232904400897) - _@tinchoabbate_
+- [監査を最大限に活用する](https://inference.ag/blog/2023-08-14-tips/) - _Inference_
 
 #### バグ報奨金 {#bug-bounties}
 
@@ -214,7 +217,7 @@ contract EmergencyStop {
 
 オンチェーンガバナンスに関連する問題を防ぐ方法の一つとして、[タイムロックの使用](https://blog.openzeppelin.com/protect-your-users-with-smart-contract-timelocks/)が挙げられます。 タイムロックは、特定の時間が経過するまでスマートコントラクトが特定のアクションを実行できないようにするものです。 その他の戦略としては、各トークンがロックされている期間に応じて「投票の重み」を割り当てることや、現在のブロックの代わりに過去の期間 (例: 2～3ブロック前) でアドレスの投票力を測定することなどがあります。 どちらの方法も、オンチェーンの投票を思い通りに動かす投票力を短期間で獲得する可能性を減らすことができます。
 
-詳細は、[安全なガバナンスシステムの設計](https://blog.openzeppelin.com/smart-contract-security-guidelines-4-strategies-for-safer-governance-systems/)と[DAOにおけるさまざまな投票メカニズム](https://hackernoon.com/governance-is-the-holy-grail-for-daos)をご覧ください。
+[安全なガバナンスシステムの設計](https://blog.openzeppelin.com/smart-contract-security-guidelines-4-strategies-for-safer-governance-systems/)、[DAOのさまざまな投票メカニズム](https://hackernoon.com/governance-is-the-holy-grail-for-daos)、[DeFiを悪用した一般的なDAOの攻撃ベクトル](https://dacian.me/dao-governance-defi-attacks)の詳細については、共有のリンクをご覧ください。
 
 ### 8. コードの複雑さの最小化 {#reduce-code-complexity}
 
@@ -235,7 +238,7 @@ EVMは同時実行を許可していません。つまり、メッセージ呼�
 誰でもイーサ (Ether) を入出金できるシンプルなスマートコントラクト (「Victim」) を考えてみましょう。
 
 ```solidity
-// This contract is vulnerable. Do not use in production
+// このコントラクトには、脆弱性があります。 プロダクションでは使用しないでください。
 
 contract Victim {
     mapping (address => uint256) public balances;
@@ -338,7 +341,7 @@ contract MutexPattern {
         locked = false;
     }
     // This function is protected by a mutex, so reentrant calls from within `msg.sender.call` cannot call `withdraw` again.
-    //  The `return` statement evaluates to `true` but still evaluates the `locked = false` statement in the modifier
+    //  `return`ステートメントは、`true`と評価しますが、まだmodifierのステートメントでは`locked = false`と評価します。
     function withdraw(uint _amount) public payable noReentrancy returns(bool) {
         require(balances[msg.sender] >= _amount, "No balance to withdraw.");
 
@@ -414,7 +417,7 @@ contract Attack {
     function attack() public payable {
         timeLock.deposit{value: msg.value}();
         /*
-        if t = current lock time then we need to find x such that
+        「t = 現在のロック時間」ならば、xを以下のようにして求める必要があります。 
         x + t = 2**256 = 0
         so x = -t
         2**256 = type(uint).max + 1
@@ -466,6 +469,8 @@ DEXの価格は正確であることが多く、これは市場の均衡を取�
 
 - **[ABI Encoder](https://abi.hashex.org/)** - _Solidityコントラクトの関数とコンストラクタの引数をエンコードするための無料のオンラインサービス。_
 
+- **[Aderyn](https://github.com/Cyfrin/aderyn)** - _Solidity静的アナライザーです。抽象構文木 (AST) を横断し、疑わしい脆弱性を正確に特定し、問題を扱いやすいマークダウン形式で出力します。_
+
 ### スマートコントラクト監視ツール {#smart-contract-monitoring-tools}
 
 - **[OpenZeppelin Defender Sentinels](https://docs.openzeppelin.com/defender/v1/sentinel)** - _スマートコントラクト上のイベント、関数、トランザクションパラメータの自動的な監視と応答を行うツール。_
@@ -506,9 +511,13 @@ DEXの価格は正確であることが多く、これは市場の均衡を取�
 
 - **[CodeHawks](https://codehawks.com/)** - _優位性のある監査プラットフォームで、セキュリティリサーチャーのスマートコントラクト監査コンペを主催している。_
 
-- **[Cyfrin](https://www.cyfrin.io/)** - _ブロックチェーンセキュリティおよびweb3の教育企業で、EVMやVYperベースのプロトコルに注力している。_
+- **[Cyfrin](https://cyfrin.io)** - _Web3セキュリティの有力企業であり、製品やスマート コントラクト監査サービスを通じて暗号セキュリティを推進している。_
 
 - **[ImmuneBytes](https://www.immunebytes.com//smart-contract-audit/)** - _Web3セキュリティファームで、経験豊富な監査人と最高クラスのツールを通じてブロックチェーンシステムのセキュリティ監査を提供している。_
+
+- **[Oxorio](https://oxor.io/)** - _クリプト会社およびDeFiプロジェクト向けのEVM、Solidity、ゼロ知識、クロスチェーン技術を専門としたスマートコントラクト監査およびブロックチェーンセキュリティサービス。_
+
+- **[Inference](https://inference.ag/)** - _EVMベースのブロックチェーンのスマートコントラクト監査に特化したセキュリティ監査会社。 専門的な監査人が、潜在的な問題を特定し、実行可能なソリューションを提案してデプロイ前に修正することが可能。_
 
 ### バグ報奨プログラムプラットフォーム {#bug-bounty-platforms}
 
@@ -517,6 +526,10 @@ DEXの価格は正確であることが多く、これは市場の均衡を取�
 - **[HackerOne](https://www.hackerone.com/)** - _企業とペネトレーションテスターやサイバーセキュリティ研究者をつなぐ、脆弱性調整とバグ報奨プログラムのプラットフォーム_
 
 - **[HackenProof](https://hackenproof.com/)** - _ 暗号プロジェクト(DeFi、スマート コントラクト、ウォレット、CEXなど)のエキスパートのバグ報奨金プラットフォーム。セキュリティプロフェッショナルはトリアージサービスを提供し、研究者は検証済みの関連バグレポートに対して報酬を獲得。_
+
+-  **[Sherlock](https://www.sherlock.xyz/)** - _スマートコントラクトセキュリティのためのWeb3の引受人。監査人への支払いはスマートコントラクトを介して管理され、バグの関連性に応じて公平に支払われることを保証。_
+
+-  **[CodeHawks](https://www.codehawks.com/)** - _競争力のあるバグ報奨金プラットフォームで、監査人がセキュリティコンテストやチャレンジに参加できる。また、独自のプライベート監査も（間もなく）開催する予定。_
 
 ### 既知のスマートコントラクトの脆弱性とエクスプロイトの公開 {#common-smart-contract-vulnerabilities-and-exploits}
 
@@ -534,6 +547,8 @@ DEXの価格は正確であることが多く、これは市場の均衡を取�
 
 - **[Ethernaut](https://ethernaut.openzeppelin.com/)** - _各レベルでスマートコントラクトのハッキングが必要なWeb3/Solidityベースの机上演習_
 
+- **[HackenProof x HackTheBox](https://app.hackthebox.com/tracks/HackenProof-Track)** - _ファンタジーアドベンチャーを舞台にしたスマートコントラクトハッキングチャレンジ。 チャレンジに成功すれば、非公開のバグ報奨金プログラムにアクセスできる。_
+
 ### スマートコントラクトのセキュリティのベストプラクティス {#smart-contract-security-best-practices}
 
 - **[ConsenSys: イーサリアムスマートコントラクトのセキュリティのベストプラクティス](https://consensys.github.io/smart-contract-best-practices/)** - _イーサリアムスマートコントラクトのセキュリティのガイドラインの包括的リスト。_
@@ -545,6 +560,8 @@ DEXの価格は正確であることが多く、これは市場の均衡を取�
 - **[Solidityドキュメント: セキュリティ考慮事項](https://docs.soliditylang.org/en/v0.8.16/security-considerations.html)** - _Solidityで安全なスマートコントラクトを記述するためのガイドライン。_
 
 - **[スマートコントラクトセキュリティ検証スタンダード](https://github.com/securing/SCSVS)** - _デベロッパー、アーキテクト、セキュリティ評価者、ベンダー向けにスマートコントラクトのセキュリティを標準化するために作成された14部構成のチェックリスト。_
+
+- **[スマートコントラクトセキュリティと監査の学習](https://updraft.cyfrin.io/courses/security)** - _究極のスマート コントラクトセキュリティと監査コース。セキュリティのベストプラクティスのレベルアップおよびセキュリティ研究者になりたいと考えているスマートコントラクトデベロッパー向け。_
 
 ### スマートコントラクトのセキュリティに関するチュートリアル {#tutorials-on-smart-contract-security}
 

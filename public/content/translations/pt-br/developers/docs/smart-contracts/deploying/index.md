@@ -27,7 +27,7 @@ Finalmente, você precisará compilar seu contrato antes de implantá-lo, então
 
 ### Como implantar um contrato inteligente {#steps-to-deploy}
 
-The specific steps involved will depend on the development framework in question. For example, you can check out [Hardhat's documentation on deploying your contracts](https://hardhat.org/guides/deploying.html) or [Foundry's documentation on deploying and verifying a smart contract](https://book.getfoundry.sh/forge/deploying). Once deployed, your contract will have an Ethereum address like other [accounts](/developers/docs/accounts/) and can be verified using [source code verification tools](/developers/docs/smart-contracts/verifying/#source-code-verification-tools).
+Os passos específicos envolvidos dependerão do framework de desenvolvimento em questão. Por exemplo, confira [a documentação do Hardhat sobre como implementar seu contrato](https://hardhat.org/guides/deploying.html) ou [a documentação do Foundry sobre como implementar e verificar um contrato inteligente](https://book.getfoundry.sh/forge/deploying). Uma vez implementado, seu contrato terá um endereço Ethereum igual qualquer outra [conta](/developers/docs/accounts/) e poderá ser verificado usando [ferramentas de verificação de código-fonte](/developers/docs/smart-contracts/verifying/#source-code-verification-tools).
 
 ## Ferramentas relacionadas {#related-tools}
 
@@ -53,11 +53,18 @@ The specific steps involved will depend on the development framework in question
 
 - [Documentação](https://portal.thirdweb.com/deploy/)
 
+**Crossmint - _Plataforma de desenvolvimento web3 de nível empresarial para implantar contratos inteligentes, habilitar pagamentos com cartão de crédito e entre cadeias, e usar APIs para criar, distribuir, vender, armazenar e editar NFTs._**
+
+- [crossmint.com](https://www.crossmint.com)
+- [Documentação](https://docs.crossmint.com)
+- [Discord](https://discord.com/invite/crossmint)
+- [Blog](https://blog.crossmint.com)
+
 ## Tutoriais relacionados {#related-tutorials}
 
 - [Implementando o seu primeiro contrato inteligente](/developers/tutorials/deploying-your-first-smart-contract/) _– Uma introdução à implementação do seu primeiro contrato inteligente em uma rede de teste da Ethereum._
 - [Hello World | tutorial para contrato inteligente](/developers/tutorials/hello-world-smart-contract/)_ - Um tutorial fácil de seguir para criar & implementar um contrato inteligente básico na Ethereum._
-- [Interaja com outros contratos da Solidity](/developers/tutorials/interact-with-other-contracts-from-solidity/) _– Como implantar um contrato inteligente a partir de um contrato existente e interagir com ele._
+- [Interaja com outros contratos Solidity](/developers/tutorials/interact-with-other-contracts-from-solidity/) _– Como implantar um contrato inteligente a partir de um contrato existente e interagir com ele._
 - [Como diminuir o tamanho de seu contrato](/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/) _- Como reduzir o tamanho do seu contrato para mantê-lo abaixo do limite e economizar Gas_
 
 ## Leia mais {#further-reading}

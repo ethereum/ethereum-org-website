@@ -78,7 +78,7 @@ Die übliche Methode besteht darin, kleine Unit-Tests mit Scheindaten zu schreib
 
 Leider sind Unit-Tests für die Verbesserung der Sicherheit von Smart Contracts nur wenig effektiv, wenn sie nur isoliert angewendet werden. Ein Unit-Test kann beweisen, dass eine Funktion bei Mock-Daten korrekt ausgeführt wird, Unit-Tests sind jedoch nur so effektiv wie die Tests, die verfasst werden. Das macht es schwierig, unentdeckte Sonderfälle und Schwachstellen zu erkennen, die die Sicherheit Ihres Smart Contracts gefährden könnten.
 
-Ein besserer Ansatz besteht darin, Unit-Tests mit eigenschaftsbasierten Tests zu kombinieren, die mit [statischer und dynamischer Analyse](/developers/docs/smart-contracts/testing/#static-dynamic-analysis) durchgeführt werden. Die statische Analyse stützt sich auf Low-Level-Darstellungen, wie [Kontrollflussdiagramme](https://en.wikipedia.org/wiki/Control-flow_graph) und [abstrakte Syntaxstrukturen](https://deepsource.io/glossary/ast/), um die erreichbaren Programmzustände und Ausführungspfade zu analysieren. Bei dynamischen Analysetechniken wie Fuzzing wird Vertragscode mit zufälligen Eingabewerten ausgeführt, um Operationen zu erkennen, die gegen Sicherheitseigenschaften verstoßen.
+Ein besserer Ansatz besteht darin, Unit-Tests mit eigenschaftsbasierten Tests zu kombinieren, die mit [statischer und dynamischer Analyse](/developers/docs/smart-contracts/testing/#static-dynamic-analysis) durchgeführt werden. Die statische Analyse stützt sich auf Low-Level-Darstellungen, wie [Kontrollflussdiagramme](https://en.wikipedia.org/wiki/Control-flow_graph) und [abstrakte Syntaxstrukturen](https://deepsource.io/glossary/ast/), um die erreichbaren Programmzustände und Ausführungspfade zu analysieren. In der Zwischenzeit führen dynamische Analysetechniken wie etwa [Smart Contract Fuzzing](https://www.cyfrin.io/blog/smart-contract-fuzzing-and-invariants-testing-foundry) Contract-Code mit zufälligen Eingabewerten aus, um Operationen zu erkennen, die Sicherheitseigenschaften verletzen.
 
 [Die formale Verifizierung](/developers/docs/smart-contracts/formal-verification) ist eine weitere Technik zur Überprüfung der Sicherheitseigenschaften von Smart Contracts. Im Gegensatz zu regulären Tests kann die formale Verifizierung schlüssig beweisen, dass ein Smart Contract keine Fehler enthält. Dies wird erreicht, indem eine formale Spezifikation erstellt wird, die die gewünschten Sicherheitseigenschaften festhält, um dann zu gewährleisten, dass ein Formmodell des Vertrags mit dieser Spezifikation übereinstimmt.
 
@@ -90,7 +90,10 @@ Nachdem Sie Ihren Vertrag getestet haben, sollten Sie andere bitten, den Quellco
 
 Die Beauftragung eines Smart Contract-Audits ist eine Möglichkeit zur Durchführung einer unabhängigen Code-Überprüfung. Prüfer spielen eine wichtige Rolle, wenn es darum geht sicherzustellen, dass Smart Contracts sicher und frei von Qualitätsmängeln und Planungsfehlern sind.
 
-Dennoch sollten Sie Audits nicht als Wunderwaffe betrachten. Smart Contract-Audits können nicht jeden Fehler aufspüren und sind hauptsächlich dazu gedacht, eine zusätzliche Runde von Überprüfungen durchzuführen, die dazu beitragen können, Probleme zu entdecken, die von den Entwicklern während der anfänglichen Entwicklung und Tests übersehen wurden. Sie sollten auch die [Best Practices für die Zusammenarbeit mit Prüfern](https://twitter.com/tinchoabbate/status/1400170232904400897) befolgen, z. B. den Code ordnungsgemäß dokumentieren und Inline-Kommentare hinzufügen, um den Nutzen eines Smart Contract-Audits zu maximieren.
+Dennoch sollten Sie Audits nicht als Wunderwaffe betrachten. Smart Contract-Audits können nicht jeden Fehler aufspüren und sind hauptsächlich dazu gedacht, eine zusätzliche Runde von Überprüfungen durchzuführen, die dazu beitragen können, Probleme zu entdecken, die von den Entwicklern während der anfänglichen Entwicklung und Tests übersehen wurden. Sie sollten auch die Best Practices für die Zusammenarbeit mit Prüfern befolgen, z. B. den Code ordnungsgemäß dokumentieren und Inline-Kommentare hinzufügen, um den Nutzen eines Smart Contract-Audits zu maximieren.
+
+- [Tipps und Tricks zum Smart-Contract-Auditing](https://twitter.com/tinchoabbate/status/1400170232904400897) – _@tinchoabbate_
+- [Holen Sie das Beste aus Ihrem Audit heraus](https://inference.ag/blog/2023-08-14-tips/) – _Inference_
 
 #### Aufdecken von Fehlern {#bug-bounties}
 
@@ -112,7 +115,7 @@ Die Verfügbarkeit von Audits und Bug Bounties entbindet Sie nicht von Ihrer Ver
 
 - Verwendung einer [Entwicklungsumgebung](/developers/docs/frameworks/) zum Testen, Kompilieren und Bereitstellen von Smart Contracts
 
-- Überprüfen Sie Ihren Code mit grundlegenden Code-Analysetools wie Mythril und Slither. Idealerweise sollten Sie dies tun, noch bevor eine Pull-Anfrage eingebunden wird, und die Unterschiede in der Ergebnisausgabe vergleichen
+- Führen Sie Ihren Code in grundlegenden Code-Analysewerkzeugen wie [Cyfrin Awderyn](https://github.com/Cyfrin/aderyn), Mythril und Slither aus. Idealerweise sollten Sie dies tun, noch bevor eine Pull-Anfrage eingebunden wird, und die Unterschiede in der Ergebnisausgabe vergleichen
 
 - Stellen Sie sicher, dass Ihr Code ohne Fehler kompiliert wird und der Solidity-Compiler keine Warnungen ausgibt
 
@@ -126,7 +129,7 @@ Die Entwicklung sicherer Zugriffskontrollen, die Implementierung von Funktionsmo
 
 Obwohl Ethereum Smart Contracts standardmäßig unveränderlich sind, ist es möglich, durch die Verwendung von Upgrade-Mustern einen gewissen Grad an Veränderbarkeit zu erreichen. Die Aktualisierung von Verträgen ist dann erforderlich, wenn ein kritischer Fehler Ihren alten Vertrag unbrauchbar macht und die Einführung einer neuen Logik die sinnvollste Option darstellt.
 
-Die Mechanismen zur Aktualisierung von Verträgen funktionieren unterschiedlich, wobei jedoch das „Proxy-Muster“ einer der beliebtesten Ansätze für die Aktualisierung von Smart Contracts ist. Proxy-Muster teilen den Zustand und die Logik einer Anwendung zwischen _zwei_ Verträgen auf. Der erste Vertrag (ein so genannter „Proxy-Vertrag“) speichert Zustandsvariablen (z. B. Benutzerguthaben), während der zweite Vertrag (ein so genannter „Logik-Vertrag“) den Code für die Ausführung von Vertragsfunktionen enthält.
+Die Mechanismen zur Aktualisierung von Verträgen funktionieren unterschiedlich, wobei jedoch das „Proxy-Muster“ einer der beliebtesten Ansätze für die Aktualisierung von Smart Contracts ist. [Proxy-Muster](https://www.cyfrin.io/blog/upgradeable-proxy-smart-contract-pattern) teilen den Status und die Logik einer Anwendung auf _zwei_ Contracts auf. Der erste Vertrag (ein so genannter „Proxy-Vertrag“) speichert Zustandsvariablen (z. B. Benutzerguthaben), während der zweite Vertrag (ein so genannter „Logik-Vertrag“) den Code für die Ausführung von Vertragsfunktionen enthält.
 
 Konten interagieren mit dem Proxy-Vertrag, der alle Funktionsaufrufe über den [`delegatecall()`](https://docs.soliditylang.org/en/v0.8.16/introduction-to-smart-contracts.html?highlight=delegatecall#delegatecall-callcode-and-libraries) ein Low-Level-Aufruf, an den Logik-Vertrag weiterleitet. Im Gegensatz zu einem normalen Aufruf stellt `delegatecall()` sicher, dass der Code, welcher unter der Adresse des logischen Vertrags läuft, im Kontext des aufrufenden Vertrags ausgeführt wird. Das bedeutet, dass der Logikvertrag immer in den Speicher des Proxys schreibt (anstatt in seinen eigenen Speicher) und die ursprünglichen Werte von `msg.sender` und `msg.value` erhalten bleiben.
 
@@ -214,7 +217,7 @@ Eine dezentrale Verwaltung kann von Vorteil sein, insbesondere weil sie die Inte
 
 Eine Möglichkeit zur Vermeidung von Problemen im Zusammenhang mit der On-Chain-Governance besteht darin, [eine Zeitsperre zu nutzen](https://blog.openzeppelin.com/protect-your-users-with-smart-contract-timelocks/). Eine Zeitsperre verhindert, dass ein Smart Contract bestimmte Aktionen ausführt, bis eine bestimmte Zeitspanne verstrichen ist. Andere Strategien bestehen darin, jedem Token ein „Stimmgewicht“ zuzuweisen, das sich danach richtet, wie lange er gesperrt war, oder die Stimmkraft einer Adresse in einem historischen Zeitraum (z. B. 2-3 Blöcke in der Vergangenheit) anstelle des aktuellen Blocks zu messen. Beide Methoden verringern die Möglichkeit, schnell Stimmrechte anzuhäufen, um On-Chain-Abstimmungen zu beeinflussen.
 
-Mehr über die [Planung sicherer Governance-Systeme](https://blog.openzeppelin.com/smart-contract-security-guidelines-4-strategies-for-safer-governance-systems/) und [verschiedene Abstimmungsmechanismen in DAOs](https://hackernoon.com/governance-is-the-holy-grail-for-daos).
+Weitere Informationen zu [der Gestaltung sicherer Governance-Systeme](https://blog.openzeppelin.com/smart-contract-security-guidelines-4-strategies-for-safer-governance-systems/), [verschiedenen Abstimmungsmechanismen in DAOs](https://hackernoon.com/governance-is-the-holy-grail-for-daos) und [den gängigen DAO-Angriffsvektoren, die DeFi nutzen](https://dacian.me/dao-governance-defi-attacks), finden Sie unter den geteilten Links.
 
 ### 8. Reduzierung der Komplexität des Codes auf ein Minimum {#reduce-code-complexity}
 
@@ -448,7 +451,7 @@ So könnte ein Angreifer beispielsweise den Spotpreis eines Assets künstlich in
 
 ##### So verhindert man Orakelmanipulation
 
-Die Mindestanforderung zur Vermeidung von Orakelmanipulationen ist die Verwendung eines dezentralen Orakelnetzes, das Informationen aus mehreren Quellen abfragt, um einzelne Fehlerquellen zu vermeiden. In den meisten Fällen verfügen dezentrale Orakel über eingebaute kryptoökonomische Anreize, die die Nodes des Orakels dazu bringen, korrekte Informationen zu melden, was sie sicherer macht als zentralisierte Orakel.
+Die Mindestanforderung, um [Oracle-Manipulation zu vermeiden](https://www.cyfrin.io/blog/price-oracle-manipultion-attacks-with-examples), besteht darin, ein dezentrales Oracle-Netzwerk zu verwenden, das Informationen aus mehreren Quellen abfragt, um einzelne Ausfallpunkte zu vermeiden. In den meisten Fällen verfügen dezentrale Orakel über eingebaute kryptoökonomische Anreize, die die Nodes des Orakels dazu bringen, korrekte Informationen zu melden, was sie sicherer macht als zentralisierte Orakel.
 
 Wenn Sie vorhaben, ein On-Chain-Orakel für Asset-Preise abzufragen, sollten Sie ein Orakel verwenden, das einen Mechanismus für zeitgewichtete Durchschnittspreise (TWAP) implementiert. Ein [TWAP-Orakel](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/oracles) fragt den Preis eines Assets zu zwei verschiedenen Zeitpunkten ab (die Sie ändern können) und berechnet den Spotpreis auf der Grundlage des erhaltenen Durchschnitts. Die Wahl längerer Zeiträume schützt Ihr Protokoll vor Preismanipulationen, da große Aufträge, die erst kürzlich ausgeführt wurden, keinen Einfluss auf die Preise der Assets haben können.
 
@@ -468,15 +471,17 @@ Wenn Sie vorhaben, ein On-Chain-Orakel für Asset-Preise abzufragen, sollten Sie
 
 - **[ABI Encoder](https://abi.hashex.org/)** - _Ein frei nutzbarer Online-Service zum Kodieren Ihrer Solidity-Vertragsfunktionen und Konstruktor-Argumente._
 
+- **[Aderyn](https://github.com/Cyfrin/aderyn)** – _Solidity-Statikanalyse-Tool, das die abstrakten Syntaxbäume (AST) durchläuft, um vermutete Schwachstellen zu identifizieren und Probleme in einem leicht konsumierbaren Markdown-Format auszugeben._
+
 ### Tools für die Überwachung von Smart Contracts {#smart-contract-monitoring-tools}
 
-- **[OpenZeppelin Defender Sentinels](https://docs.openzeppelin.com/defender/sentinel)** - \_Ein Tool zur automatischen Überwachung und Reaktion auf Ereignisse, Funktionen und Transaktionsparameter in Ihren Smart Contracts.\_v
+- **[OpenZeppelin Defender Sentinels](https://docs.openzeppelin.com/defender/v1/sentinel)** – _ein Tool zur automatischen Überwachung und Reaktion auf Ereignisse, Funktionen und Transaktionsparameter in Ihren Smart Contracts._v
 
 - **[Tenderly Real-Time Alerting](https://tenderly.co/alerting/)** - _Ein Tool, um Echtzeit-Benachrichtigungen zu erhalten, wenn ungewöhnliche oder unerwartete Ereignisse auf Ihren Smart Contracts oder Wallets auftreten._
 
 ### Tools für die sichere Verwaltung von Smart Contracts {#smart-contract-administration-tools}
 
-- **[OpenZeppelin Defender Admin](https://docs.openzeppelin.com/defender/admin)** - _Schnittstelle für die Verwaltung von Smart Contracts, einschließlich Zugriffskontrollen, Upgrades und Pausieren._
+- **[OpenZeppelin Defender Admin](https://docs.openzeppelin.com/defender/v1/admin)** – _Schnittstelle für die Verwaltung von Smart Contracts, einschließlich Zugriffskontrollen, Upgrades und Pausen._
 
 - **[Safe](https://safe.global/)** - _Smart Contract-Wallet auf Ethereum, die eine Mindestanzahl von Personen benötigt, um eine Transaktion zu genehmigen, bevor sie stattfinden kann (M-of-N)._
 
@@ -506,6 +511,16 @@ Wenn Sie vorhaben, ein On-Chain-Orakel für Asset-Preise abzufragen, sollten Sie
 
 - **[Code4rena](https://code4rena.com/)** - _Eine wettbewerbsorientierte Plattform, die Anreize für Sicherheitsexperten zum Aufspüren von Schwachstellen bietet, um das Web3 sicherer zu machen._
 
+- **[CodeHawks](https://codehawks.com/)** – _Plattform für Wettbewerbs-Audits, die Wettbewerbe zum Auditing von Smart Contracts für Sicherheitsforscher veranstaltet._
+
+- **[Cyfrin](https://cyfrin.io)** – _Web3-Sicherheits-Kraftwerk, das Krypto-Sicherheit durch Produkte und Smart-Contract-Audit-Dienste fördert._
+
+- **[ImmuneBytes](https://www.immunebytes.com//smart-contract-audit/)** – _Web3-Sicherheitsunternehmen, das Sicherheits-Audits für Blockchain-Systeme durch ein Team erfahrener Prüfer und erstklassige Tools anbietet._
+
+- **[Oxorio](https://oxor.io/)** – _Smart-Contract-Audits und Blockchain-Sicherheitsdienste mit Expertise in EVM, Solidity, ZK und Cross-Chain-Technologien für Krypto-Unternehmen und DeFi-Projekte._
+
+- **[Inference](https://inference.ag/)** – _Sicherheits-Audit-Unternehmen, spezialisiert auf Smart-Contract-Audits für EVM-basierte Blockchains. Dank der fachkundigen Prüfer werden potenzielle Probleme identifiziert und umsetzbare Lösungen vorgeschlagen, um diese Probleme vor der Bereitstellung zu beheben._
+
 ### Plattformen zum Aufdecken von Fehlern {#bug-bounty-platforms}
 
 - **[Immunefi](https://immunefi.com/)** - _Bug-Bounty-Plattform für Smart Contracts und DeFi-Projekte, auf der Sicherheitsforscher Code überprüfen, Schwachstellen aufdecken, bezahlt werden und Krypto sicherer machen._
@@ -513,6 +528,10 @@ Wenn Sie vorhaben, ein On-Chain-Orakel für Asset-Preise abzufragen, sollten Sie
 - **[HackerOne](https://www.hackerone.com/)** - _Schwachstellen-Koordinations- und Bug-Bounty-Plattform, die Unternehmen mit Penetrationstestern und Cybersecurity-Forschern zusammenbringt._
 
 - **[HackenProof](https://hackenproof.com/)** - _Experten-Bug-Bounty-Plattform für Krypto-Projekte (DeFi, Smart Contracts, Wallets, CEX und mehr), auf der Sicherheitsexperten Triage-Dienste anbieten und Forscher für relevante, verifizierte Fehlerberichte bezahlt werden._
+
+-  **[Sherlock](https://www.sherlock.xyz/)** – _Underwriter in Web3 für die Sicherheit von Smart Contracts, mit Auszahlungen für Prüfer, die über Smart Contracts verwaltet werden, um sicherzustellen, dass relevante Bugs fair bezahlt werden._
+
+-  **[CodeHawks](https://www.codehawks.com/)** – _Bug-Bounty-Plattform für Wettbewerb, auf der Prüfer an Sicherheitswettbewerben und -herausforderungen sowie (bald) an ihren eigenen privaten Audits teilnehmen können._
 
 ### Veröffentlichungen bekannter Schwachstellen und Exploits von Smart Contracts {#common-smart-contract-vulnerabilities-and-exploits}
 
@@ -530,6 +549,8 @@ Wenn Sie vorhaben, ein On-Chain-Orakel für Asset-Preise abzufragen, sollten Sie
 
 - **[Ethernaut](https://ethernaut.openzeppelin.com/)** - _Web3/Solidity-basiertes War Game, bei dem jedes Level ein Smart Contract ist, der „gehackt“ werden muss._
 
+- **[HackenProof x HackTheBox](https://app.hackthebox.com/tracks/HackenProof-Track)** – _Smart-Contract-Hacking-Herausforderung in einem Fantasy-Abenteuer. Der erfolgreiche Abschluss der Herausforderung bietet außerdem Zugang zu einem privaten Bug-Bounty-Programm._
+
 ### Bewährte Praktiken für die Sicherung von Smart Contracts {#smart-contract-security-best-practices}
 
 - **[ConsenSys: Ethereum Smart Contract Security Best Practices](https://consensys.github.io/smart-contract-best-practices/)** - _Umfassende Liste von Richtlinien zur Sicherung von Ethereum Smart Contracts._
@@ -542,14 +563,18 @@ Wenn Sie vorhaben, ein On-Chain-Orakel für Asset-Preise abzufragen, sollten Sie
 
 - **[Smart Contract Security Verification Standard](https://github.com/securing/SCSVS)** - _Vierzehnteilige Checkliste zur Standardisierung der Sicherheit von Smart Contracts für Entwickler, Architekten, Sicherheitsüberprüfer und Anbieter._
 
+- **[Smart-Contract-Sicherheit und -Auditing erlernen](https://updraft.cyfrin.io/courses/security)** – _der ultimative Kurs für Smart-Contract-Sicherheit und -Auditing, der für Smart-Contract-Entwickler erstellt wurde, die ihre Best Practices zur Sicherheit verbessern und Sicherheitsforscher werden möchten._
+
 ### Tutorials zur Sicherheit von Smart Contracts {#tutorials-on-smart-contract-security}
 
 - [So schreibt man sichere Smart Contracts](/developers/tutorials/secure-development-workflow/)
 
-- [So verwenden Sie Slither, um Fehler in Smart Contracts zu finden](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
+- [So verwenden Sie Slither, um Bugs in Smart Contracts zu finden](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
 
 - [So finden Sie mit Manticore Fehler in Smart Contract](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
 
-- [Smart Contract Sicherheitsrichtlinien](/developers/tutorials/smart-contract-security-guidelines/)
+- [Smart-Contract-Sicherheitsrichtlinien](/developers/tutorials/smart-contract-security-guidelines/)
 
 - [Wie Sie Ihren Token-Vertrag sicher in beliebige Token integrieren](/developers/tutorials/token-integration-checklist/)
+
+- [Cyfrin Updraft – vollständiger Kurs zu Smart-Contract-Sicherheit und -Auditing](https://updraft.cyfrin.io/courses/security)

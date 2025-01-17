@@ -1323,7 +1323,7 @@ This function performs internal processing that is required for the functions th
         for (uint i; i < path.length - 1; i++) {
 ```
 
-As I'm writing this there are [388,160 ERC-20 tokens](https://etherscan.io/tokens). If there was a pair exchange for each token pair, it would be over a 150 billion pair exchanges. The entire chain, at the moment, [only has 0.1% that number of accounts](https://etherscan.io/chart/address). Instead, the swap functions support the concept of a path. A trader can exchange A for B, B for C, and C for D, so there is no need for a direct A-D pair exchange.
+As I'm writing this there are [388,160 ERC-20 tokens](https://etherscan.io/tokens). If there was a pair exchange for each token pair, it would be over 150 billion pair exchanges. The entire chain, at the moment, [only has 0.1% that number of accounts](https://etherscan.io/chart/address). Instead, the swap functions support the concept of a path. A trader can exchange A for B, B for C, and C for D, so there is no need for a direct A-D pair exchange.
 
 The prices on these markets tend to be synchronized, because when they are out of sync it creates an opportunity for arbitrage. Imagine, for example, three tokens, A, B, and C. There are three pair exchanges, one for each pair.
 
