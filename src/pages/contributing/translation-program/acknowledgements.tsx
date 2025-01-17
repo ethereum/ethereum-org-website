@@ -10,6 +10,7 @@ import ActionCard from "@/components/ActionCard"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import FeedbackCard from "@/components/FeedbackCard"
 import { TwImage } from "@/components/Image"
+import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
 import TranslationLeaderboard from "@/components/TranslationLeaderboard"
 import { Flex } from "@/components/ui/flex"
@@ -36,27 +37,21 @@ const Content = ({
   className,
   ...props
 }: BaseHTMLAttributes<HTMLHeadingElement>) => (
-  <div className={cn("w-full px-10 py-4", className)} {...props} />
+  <MainArticle className={cn("w-full px-10 py-4", className)} {...props} />
 )
 
 const H2 = ({
   className,
   ...props
 }: BaseHTMLAttributes<HTMLHeadingElement>) => (
-  <h2
-    className={cn(
-      "mb-8 mt-12 text-2xl font-semibold leading-xs md:text-[2rem]",
-      className
-    )}
-    {...props}
-  />
+  <h2 className={cn("mb-8 mt-12 leading-xs", className)} {...props} />
 )
 
 const Text = ({
   className,
   ...props
 }: BaseHTMLAttributes<HTMLHeadingElement>) => (
-  <p className={cn("mb-[1.45rem] leading-[1.6rem]", className)} {...props} />
+  <p className={cn("mb-6", className)} {...props} />
 )
 
 export const getStaticProps = (async ({ locale }) => {
@@ -105,7 +100,7 @@ const TranslatorAcknowledgements = () => {
 
       <Content>
         <Breadcrumbs slug={router.asPath} className="mt-12" />
-        <h1 className="my-8 text-[2rem] leading-xs sm:text-[2.5rem] md:text-5xl">
+        <h1 className="my-8 leading-xs">
           {t(
             "page-contributing-translation-program-acknowledgements-acknowledgement-page-title"
           )}
@@ -235,7 +230,7 @@ const TranslatorAcknowledgements = () => {
         <Text>
           {t("page-contributing-translation-program-acknowledgements-3")}
         </Text>
-        <h3 className="mb-8 mt-10 text-xl font-semibold leading-xs md:text-2xl">
+        <h3 className="mb-8 mt-10 leading-xs">
           {t(
             "page-contributing-translation-program-acknowledgements-how-to-claim-title"
           )}
