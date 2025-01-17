@@ -207,14 +207,14 @@ const H2 = ({
   className,
   ...props
 }: BaseHTMLAttributes<HTMLHeadingElement>) => (
-  <h2 className={cn("mb-8 mt-12 text-2xl md:text-3xl", className)} {...props} />
+  <h2 className={cn("mb-8 mt-12", className)} {...props} />
 )
 
 const H3 = ({
   className,
   ...props
 }: BaseHTMLAttributes<HTMLHeadingElement>) => (
-  <h3 className={cn("mb-8 mt-10 text-xl md:text-2xl", className)} {...props} />
+  <h3 className={cn("mb-8 mt-10", className)} {...props} />
 )
 
 const StablecoinsPage = ({ markets, marketsHasError }) => {
