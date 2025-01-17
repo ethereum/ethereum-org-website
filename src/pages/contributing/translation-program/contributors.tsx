@@ -8,6 +8,7 @@ import { BasePageProps, CostLeaderboardData, Lang } from "@/lib/types"
 
 import Breadcrumbs from "@/components/Breadcrumbs"
 import FeedbackCard from "@/components/FeedbackCard"
+import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
 import { Flex } from "@/components/ui/flex"
 import InlineLink from "@/components/ui/Link"
@@ -44,14 +45,14 @@ export const getStaticProps = (async ({ locale }) => {
 }) satisfies GetStaticProps<BasePageProps>
 
 const Content = ({ ...props }: BaseHTMLAttributes<HTMLHeadingElement>) => (
-  <div className="w-full px-10 py-4" {...props} />
+  <MainArticle className="w-full px-10 py-4" {...props} />
 )
 
 const Text = ({
   className,
   ...props
 }: BaseHTMLAttributes<HTMLHeadingElement>) => (
-  <p className={cn("mb-[1.45rem] leading-[1.6rem]", className)} {...props} />
+  <p className={cn("mb-6", className)} {...props} />
 )
 
 const Contributors = () => {
@@ -77,16 +78,14 @@ const Contributors = () => {
 
       <Content>
         <Breadcrumbs slug={router.asPath} className="mt-12" />
-        <h1 className="my-8 text-[2.5rem] font-bold leading-xs md:text-5xl">
+        <h1 className="my-8 leading-xs">
           {t("page-contributing-translation-program-contributors-title")}
         </h1>
-        <h4 className="my-8 text-md font-medium leading-xs md:text-xl">
-          <Text className="mb-0 font-bold">
-            {t(
-              "page-contributing-translation-program-contributors-number-of-contributors"
-            )}{" "}
-            {translators.length}
-          </Text>
+        <h4 className="my-8 leading-xs">
+          {t(
+            "page-contributing-translation-program-contributors-number-of-contributors"
+          )}{" "}
+          {translators.length}
         </h4>
         <Text>
           {t(
@@ -110,7 +109,7 @@ const Contributors = () => {
           </InlineLink>
           .
         </Text>
-        <h2 className="mb-8 mt-12 text-2xl font-semibold leading-xs md:text-[2rem]">
+        <h2 className="mb-8 mt-12 leading-xs">
           {t("page-contributing-translation-program-contributors-thank-you")}
         </h2>
         <List className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
@@ -119,10 +118,7 @@ const Contributors = () => {
               user1.toLowerCase().localeCompare(user2.toLowerCase())
             )
             .map((user) => (
-              <ListItem
-                key={user}
-                className="text-[#4c4c4c] dark:text-[#cccccc]"
-              >
+              <ListItem key={user} className="text-body-medium">
                 {user}
               </ListItem>
             ))}
