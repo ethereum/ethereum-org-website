@@ -20,6 +20,7 @@ import Emoji from "@/components/Emoji"
 import FeedbackCard from "@/components/FeedbackCard"
 import { TwImage } from "@/components/Image"
 import InfoBanner from "@/components/InfoBanner"
+import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
 import Tooltip from "@/components/Tooltip"
 import Translation from "@/components/Translation"
@@ -44,7 +45,7 @@ import etherscan from "@/public/images/projects/etherscan-logo-circle.png"
 import ef from "@/public/images/staking/ef-blog-logo.png"
 
 const FlexBox = (props: ChildOnlyProp) => (
-  <Flex className="flex-col border-b-[1px] lg:flex-row" {...props} />
+  <Flex className="flex-col border-b lg:flex-row" {...props} />
 )
 
 const LeftColumn = (props: ChildOnlyProp) => (
@@ -53,20 +54,17 @@ const LeftColumn = (props: ChildOnlyProp) => (
 
 const RightColumn = (props: ChildOnlyProp) => (
   <Flex
-    className="flex-shrink flex-grow basis-1/2 flex-col items-center p-8 pt-4 lg:pt-[8.5rem]"
+    className="flex-shrink flex-grow basis-1/2 flex-col items-center p-8 pt-4"
     {...props}
   />
 )
 
 const Title = (props: ChildOnlyProp) => (
-  <h1 className="py-8 text-[2rem] font-bold leading-xs" {...props} />
+  <h1 className="py-8 leading-xs" {...props} />
 )
 
 const Subtitle = (props: ChildOnlyProp) => (
-  <p
-    className="mb-14 text-xl leading-xs text-[#666666] dark:text-[#b2b2b2]"
-    {...props}
-  />
+  <p className="mb-14 leading-xs text-body-medium" {...props} />
 )
 
 const ButtonRow = (props: ChildOnlyProp) => (
@@ -80,10 +78,6 @@ const H2 = (props: ChildOnlyProp) => (
   <h2 className="mb-8 mt-12 leading-xs" {...props} />
 )
 
-const Text = (props: ChildOnlyProp) => (
-  <p className="mb-[1.45rem] leading-[1.6rem]" {...props} />
-)
-
 const StyledButton = ({
   href,
   children,
@@ -95,7 +89,7 @@ const StyledButton = ({
 
 const CardTag = (props: ChildOnlyProp) => (
   <Flex
-    className="items-center justify-center rounded-t-[3px] border-b-white bg-[#6c24df] p-2 text-sm uppercase text-white dark:bg-[#B38DF0] dark:text-[#333]"
+    className="items-center justify-center rounded-t-sm border-b-white bg-primary p-2 text-sm uppercase text-white dark:text-background-medium"
     {...props}
   />
 )
@@ -103,7 +97,7 @@ const CardTag = (props: ChildOnlyProp) => (
 const AddressCard = (props: ChildOnlyProp) => {
   return (
     <div
-      className="mb-8 max-w-full rounded-[4px] border-[1px] border-solid border-[#e5e5e5] shadow-table lg:sticky lg:top-[7.25rem] lg:max-w-[560px] dark:border-[#333]"
+      className="mb-8 max-w-full rounded-sm border border-border shadow-table lg:sticky lg:top-28 lg:max-w-[560px]"
       {...props}
     />
   )
@@ -136,15 +130,12 @@ const CardTitle = (props: ChildOnlyProp) => (
 )
 
 const Caption = (props: ChildOnlyProp) => (
-  <p
-    className="mb-8 text-sm font-normal text-[#666666] md:mb-8 lg:mb-0 dark:text-[#b2b2b2]"
-    {...props}
-  />
+  <p className="mb-8 text-body-medium md:mb-8 lg:mb-0" {...props} />
 )
 
 const Blockie = (props: { src: string }) => (
   <TwImage
-    className="rounded-[0.25rem]"
+    className="rounded-sm"
     src={props.src}
     alt={""}
     height={64}
@@ -154,7 +145,7 @@ const Blockie = (props: { src: string }) => (
 
 const StyledFakeLink = (props: ButtonProps) => (
   <Button
-    className="me-2 cursor-pointer px-0 text-[#6c24df] hover:!text-[#6c24df] dark:text-[#B38DF0] dark:hover:!text-[#B38DF0]"
+    className="me-2 cursor-pointer px-0 text-primary"
     variant="ghost"
     {...props}
   />
@@ -297,7 +288,7 @@ const DepositContractPage = () => {
     ? ":speaker_high_volume:"
     : ":speaker:"
   return (
-    <div className="w-full">
+    <MainArticle className="w-full">
       <FlexBox>
         <PageMetadata
           title={t("page-staking-deposit-contract-meta-title")}
@@ -308,17 +299,17 @@ const DepositContractPage = () => {
           <Title>{t("page-staking-deposit-contract-title")}</Title>
           <Subtitle>{t("page-staking-deposit-contract-subtitle")}</Subtitle>
           <H2>{t("page-staking-deposit-contract-h2")}</H2>
-          <Text>
+          <p>
             {t("page-staking-deposit-contract-staking")}{" "}
             <InlineLink href="/staking/">
               {t("page-staking-deposit-contract-staking-more-link")}
             </InlineLink>
-          </Text>
+          </p>
           <StyledButton href="https://launchpad.ethereum.org">
             {t("page-staking-deposit-contract-launchpad")}
           </StyledButton>
           <H2>{t("page-staking-deposit-contract-staking-check")}</H2>
-          <Text>{t("page-staking-deposit-contract-staking-check-desc")}</Text>
+          <p>{t("page-staking-deposit-contract-staking-check-desc")}</p>
           <CardList items={addressSources} />
         </LeftColumn>
         <RightColumn>
@@ -439,7 +430,7 @@ const DepositContractPage = () => {
                 <div>
                   {t("page-staking-deposit-contract-warning-2")}{" "}
                   <InlineLink
-                    className="text-[#6c24df] hover:text-[#945af4]"
+                    className="text-primary"
                     href="https://launchpad.ethereum.org"
                   >
                     {t("page-staking-deposit-contract-launchpad-2")}
@@ -451,7 +442,7 @@ const DepositContractPage = () => {
         </RightColumn>
       </FlexBox>
       <FeedbackCard />
-    </div>
+    </MainArticle>
   )
 }
 
