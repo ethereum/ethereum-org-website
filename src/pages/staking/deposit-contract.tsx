@@ -4,6 +4,7 @@ import { type GetStaticProps } from "next"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
+import { Checkbox } from "@chakra-ui/react"
 
 import type {
   BasePageProps,
@@ -37,8 +38,6 @@ import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { DEPOSIT_CONTRACT_ADDRESS } from "@/data/addresses"
-
-import Checkbox from "../../../tailwind/ui/Checkbox"
 
 import consensys from "@/public/images/projects/consensys.png"
 import etherscan from "@/public/images/projects/etherscan-logo-circle.png"
@@ -335,46 +334,43 @@ const DepositContractPage = () => {
                       {t("page-staking-deposit-contract-confirm-address")}
                     </CardTitle>
                   </Row>
-                  <Flex className="flex-col">
-                    <label className="mb-2 flex items-center gap-2">
-                      <Checkbox
-                        checked={state.userHasUsedLaunchpad}
-                        onCheckedChange={() =>
-                          setState({
-                            ...state,
-                            userHasUsedLaunchpad: !state.userHasUsedLaunchpad,
-                          })
-                        }
-                      />
-                      {t("page-staking-deposit-contract-checkbox1")}
-                    </label>
-                    <label className="mb-2 flex items-center gap-2">
-                      <Checkbox
-                        checked={state.userUnderstandsStaking}
-                        onCheckedChange={() =>
-                          setState({
-                            ...state,
-                            userUnderstandsStaking:
-                              !state.userUnderstandsStaking,
-                          })
-                        }
-                      />
-                      {t("page-staking-deposit-contract-checkbox2")}
-                    </label>
-                    <label className="mb-2 flex items-center gap-2">
-                      <Checkbox
-                        checked={state.userWillCheckOtherSources}
-                        onCheckedChange={() =>
-                          setState({
-                            ...state,
-                            userWillCheckOtherSources:
-                              !state.userWillCheckOtherSources,
-                          })
-                        }
-                      />
-                      {t("page-staking-deposit-contract-checkbox3")}
-                    </label>
-                  </Flex>
+                  <Checkbox
+                    mb={2}
+                    isChecked={state.userHasUsedLaunchpad}
+                    onChange={() =>
+                      setState({
+                        ...state,
+                        userHasUsedLaunchpad: !state.userHasUsedLaunchpad,
+                      })
+                    }
+                  >
+                    {t("page-staking-deposit-contract-checkbox1")}
+                  </Checkbox>
+                  <Checkbox
+                    mb={2}
+                    isChecked={state.userUnderstandsStaking}
+                    onChange={() =>
+                      setState({
+                        ...state,
+                        userUnderstandsStaking: !state.userUnderstandsStaking,
+                      })
+                    }
+                  >
+                    {t("page-staking-deposit-contract-checkbox2")}
+                  </Checkbox>
+                  <Checkbox
+                    mb={2}
+                    isChecked={state.userWillCheckOtherSources}
+                    onChange={() =>
+                      setState({
+                        ...state,
+                        userWillCheckOtherSources:
+                          !state.userWillCheckOtherSources,
+                      })
+                    }
+                  >
+                    {t("page-staking-deposit-contract-checkbox3")}
+                  </Checkbox>
                   <CopyButton
                     disabled={!isButtonEnabled}
                     onClick={() =>
