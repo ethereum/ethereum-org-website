@@ -121,7 +121,7 @@ const H3 = ({ children, ...props }: HTMLAttributes<HTMLHeadingElement>) => (
   </h3>
 )
 
-const StandarImage = ({ src, alt }: ImageProps) => (
+const ImageHeight200 = ({ src, alt }: ImageProps) => (
   <TwImage className="h-[200px] w-auto" src={src} alt={alt} />
 )
 
@@ -235,7 +235,7 @@ const LearnPage = () => {
                 >
                   <>
                     <CardImage>
-                      <StandarImage
+                      <ImageHeight200
                         src={whatIsEth}
                         alt={t("what-is-ethereum-card-image-alt")}
                       />
@@ -251,7 +251,7 @@ const LearnPage = () => {
                 >
                   <>
                     <CardImage>
-                      <StandarImage src={eth} alt="" />
+                      <ImageHeight200 src={eth} alt="" />
                     </CardImage>
                     <ButtonLink href="/eth/">
                       {t("what-is-eth-card-title")}
@@ -264,7 +264,7 @@ const LearnPage = () => {
                 >
                   <>
                     <CardImage>
-                      <StandarImage src={impact} alt="" />
+                      <ImageHeight200 src={impact} alt="" />
                     </CardImage>
                     <ButtonLink href="/web3/">
                       {t("what-is-web3-card-title")}
@@ -303,7 +303,7 @@ const LearnPage = () => {
                 >
                   <>
                     <CardImage>
-                      <StandarImage
+                      <ImageHeight200
                         src={wallet}
                         alt={t("what-is-a-wallet-card-alt")}
                       />
@@ -319,7 +319,7 @@ const LearnPage = () => {
                 >
                   <>
                     <CardImage>
-                      <StandarImage src={futureTransparent} alt="" />
+                      <ImageHeight200 src={futureTransparent} alt="" />
                     </CardImage>
                     <ButtonLink href="/wallets/find-wallet/">
                       {t("find-a-wallet-button")}
@@ -332,7 +332,7 @@ const LearnPage = () => {
                 >
                   <>
                     <CardImage>
-                      <StandarImage src={Layer2LearnHero} alt="" />
+                      <ImageHeight200 src={Layer2LearnHero} alt="" />
                     </CardImage>
                     <ButtonLink href="/layer-2/networks">
                       {t("ethereum-networks-card-button")}
@@ -391,7 +391,7 @@ const LearnPage = () => {
                 >
                   <>
                     <CardImage>
-                      <StandarImage src={financeTransparent} alt="" />
+                      <ImageHeight200 src={financeTransparent} alt="" />
                     </CardImage>
                     <ButtonLink href="/defi/">
                       {t("defi-card-button")}
@@ -404,7 +404,7 @@ const LearnPage = () => {
                 >
                   <>
                     <CardImage>
-                      <StandarImage src={stablecoins} alt="" />
+                      <ImageHeight200 src={stablecoins} alt="" />
                     </CardImage>
                     <ButtonLink href="/stablecoins/">
                       {t("stablecoins-card-button")}
@@ -417,7 +417,7 @@ const LearnPage = () => {
                 >
                   <>
                     <CardImage>
-                      <StandarImage src={infrastructureTransparent} alt="" />
+                      <ImageHeight200 src={infrastructureTransparent} alt="" />
                     </CardImage>
                     <ButtonLink href="/nft/">{t("nft-card-button")}</ButtonLink>
                   </>
@@ -428,7 +428,7 @@ const LearnPage = () => {
                 >
                   <>
                     <CardImage>
-                      <StandarImage src={dao} alt="" />
+                      <ImageHeight200 src={dao} alt="" />
                     </CardImage>
                     <ButtonLink href="/dao/">{t("dao-card-button")}</ButtonLink>
                   </>
@@ -439,7 +439,7 @@ const LearnPage = () => {
                 >
                   <>
                     <CardImage>
-                      <StandarImage src={developersEthBlocks} alt="" />
+                      <ImageHeight200 src={developersEthBlocks} alt="" />
                     </CardImage>
                     <ButtonLink href="/dapps/">
                       {t("dapp-card-button")}
@@ -502,7 +502,7 @@ const LearnPage = () => {
                 >
                   <>
                     <CardImage>
-                      <StandarImage src={rhino} alt="" />
+                      <ImageHeight200 src={rhino} alt="" />
                     </CardImage>
                     <ButtonLink href="/staking/">
                       {t("staking-ethereum-card-button")}
@@ -515,7 +515,7 @@ const LearnPage = () => {
                 >
                   <>
                     <CardImage>
-                      <StandarImage src={ethereumInside} alt="" />
+                      <ImageHeight200 src={ethereumInside} alt="" />
                     </CardImage>
                     <ButtonLink href="/run-a-node/">
                       {t("run-a-node-card-title")}
@@ -537,7 +537,7 @@ const LearnPage = () => {
                 >
                   <>
                     <CardImage>
-                      <StandarImage src={hackathon} alt="" />
+                      <ImageHeight200 src={hackathon} alt="" />
                     </CardImage>
                     <ButtonLink href="/energy-consumption/">
                       {t("energy-consumption-card-button")}
@@ -550,7 +550,7 @@ const LearnPage = () => {
                 >
                   <>
                     <CardImage>
-                      <StandarImage src={merge} alt="" />
+                      <ImageHeight200 src={merge} alt="" />
                     </CardImage>
                     <ButtonLink href="/roadmap/">
                       {t("ethereum-upgrades-card-button")}
@@ -563,7 +563,7 @@ const LearnPage = () => {
                 >
                   <>
                     <CardImage>
-                      <StandarImage src={financeTransparent} alt="" />
+                      <ImageHeight200 src={financeTransparent} alt="" />
                     </CardImage>
                     <ButtonLink href="/whitepaper/">
                       {t("ethereum-whitepaper-card-button")}
@@ -609,7 +609,7 @@ const LearnPage = () => {
                 >
                   <>
                     <CardImage>
-                      <StandarImage
+                      <ImageHeight200
                         src={enterprise}
                         alt={t("community-hub-card-alt")}
                       />
@@ -625,7 +625,7 @@ const LearnPage = () => {
                 >
                   <>
                     <CardImage>
-                      <StandarImage src={dogeComputer} alt="" />
+                      <ImageHeight200 src={dogeComputer} alt="" />
                     </CardImage>
                     <ButtonLink href="/community/get-involved/">
                       {t("get-involved-card-title")}
@@ -638,7 +638,7 @@ const LearnPage = () => {
                 >
                   <>
                     <CardImage>
-                      <StandarImage src={impact} alt="" />
+                      <ImageHeight200 src={impact} alt="" />
                     </CardImage>
                     <ButtonLink href="/community/online/">
                       {t("online-communities-card-button")}
