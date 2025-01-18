@@ -109,3 +109,4 @@ Les contrats multisig (signature multiple) sont des comptes de contrats intellig
 - [Coinbase : Qu'est-ce qu'un contrat intelligent ?](https://www.coinbase.com/learn/crypto-basics/what-is-a-smart-contract)
 - [Chainlink : Qu'est-ce qu'un contrat intelligent ?](https://chain.link/education/smart-contracts)
 - [Vidéo : Expliqués Simplement - Les Contrats Intelligents](https://youtu.be/ZE2HxTmxfrI)
+- [Cyfrin Updraft : plateforme d'apprentissage et d'audit Web3](https://updraft.cyfrin.io)

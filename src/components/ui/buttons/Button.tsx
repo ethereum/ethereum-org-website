@@ -126,8 +126,9 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 )
 Button.displayName = "Button"
 
-type ButtonLinkProps = LinkProps &
+type ButtonLinkProps = Omit<LinkProps, "href"> &
   Pick<ButtonProps, "size" | "variant" | "isSecondary"> & {
+    href: string
     buttonProps?: Omit<ButtonProps, "size" | "variant">
     customEventOptions?: MatomoEventOptions
   }

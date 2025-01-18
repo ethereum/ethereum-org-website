@@ -123,7 +123,7 @@ Biz o‘tkazib yuborgan staking vositasi uchun taklif bormi? [Mahsulotni katalog
 
 <StakingGuides />
 
-## Frequently asked questions {#faq}
+## Tez-tez beriladigan savollar {#faq}
 
 Bular garovga qo‘yishning eng keng tarqalgan savollaridan bir nechtasi bo‘lib, ular haqida bilishga arziydi.
 
@@ -203,4 +203,4 @@ Butun balansingizni ochish va qaytarib olish uchun siz validatoringizdan chiqish
 - [Qadam-baqadam: Ethereum 2.0 test tarmog‘iga qanday qo‘shilish mumkin](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) - _Butta_
 - [Eth2 Slashing oldini olish maslahatlari](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) - _Raul Jordan 2020_
 
-<QuizWidget quizKey="solo-staking" />
+<QuizWidget quizKey="staking-solo" />

@@ -1,5 +1,5 @@
 ---
-title: Okosszerződés-biztonság
+title: Okosszerződés biztonság
 description: Útmutató a biztonságos Ethereum-okosszerződések építéséhez
 lang: hu
 ---
@@ -90,7 +90,10 @@ Miután tesztelte a szerződését, kérjen meg másokat is, hogy ellenőrizzék
 
 Az okosszerződés auditálása az egyik módja a független kódvizsgálatnak. Az auditorok fontos szerepet játszanak abban, hogy az okosszerződések biztonságosak legyenek és ne legyenek bennük minőségi és tervezési hibák.
 
-Mindazonáltal fontos megjegyezni, hogy az audit nem old meg minden problémát. Az okosszerződés-auditok nem tárnak fel minden egyes hibát, és a terv általában egy második körös ellenőrzés, hogy azokat a problémákat kiszúrja, ami a fejlesztőknek nem vált világossá a fejlesztés és tesztelés során. Kövesse a [bevált gyakorlatokat az auditorokkal való munka kapcsán](https://twitter.com/tinchoabbate/status/1400170232904400897), mint amilyen a kód megfelelő dokumentálása és a sorokhoz kapcsolt kommentek, amelyek révén az okosszerződés-auditból a lehető legtöbb előnyt ki lehet hozni.
+Mindazonáltal fontos megjegyezni, hogy az audit nem old meg minden problémát. Az okosszerződés-auditok nem tárnak fel minden egyes hibát, és a terv általában egy második körös ellenőrzés, hogy azokat a problémákat kiszúrja, ami a fejlesztőknek nem vált világossá a fejlesztés és tesztelés során. Kövesse a bevált gyakorlatokat az auditorokkal való munka kapcsán, mint amilyen a kód megfelelő dokumentálása és a sorokhoz kapcsolt kommentek, amelyek révén az okosszerződés-auditból a lehető legtöbb előnyt ki lehet hozni.
+
+- [Okosszerződés auditáláshoz tippek és trükkök](https://twitter.com/tinchoabbate/status/1400170232904400897) - _@tinchoabbate_
+- [Hozza ki a legtöbbet az auditból](https://inference.ag/blog/2023-08-14-tips/) - _Inference_
 
 #### Hibavadászatok {#bug-bounties}
 
@@ -214,7 +217,7 @@ A decentralizált irányítás előnyös lehet, főleg mivel összeegyezteti a f
 
 A láncon működő irányítási modell problémáit meg lehet oldani az [időzár használatával](https://blog.openzeppelin.com/protect-your-users-with-smart-contract-timelocks/) is. Az időzár megakadályozza, hogy az okosszerződés végrehajtson bizonyos műveleteket addig, amíg nem telt el egy adott idő. Más stratégia lehet a tokenekhez rendelt „szavazati súly” az alapján, hogy azt mennyi időre kötötték le, vagy egy adott cím szavazati erejét hosszabb periódusra is nézhetik (például 2–3 korábbi blokkra) a jelenlegi blokk helyett. Ezek csökkentik a lehetőségét annak, hogy valaki gyorsan jelentős szavazati erőre tegyen szert, hogy a láncon zajló szavazást eltérítse.
 
-Bővebben a [biztonságos irányítási rendszerek tervezése](https://blog.openzeppelin.com/smart-contract-security-guidelines-4-strategies-for-safer-governance-systems/) és a [különféle szavazási mechanizmusok a DAO-knál](https://hackernoon.com/governance-is-the-holy-grail-for-daos) témákról.
+Többet megtudhat a [biztonságos kormányzási rendszerek tervezéséről](https://blog.openzeppelin.com/smart-contract-security-guidelines-4-strategies-for-safer-governance-systems/), a [különböző szavazási mechanizmusokról a DAO-kban](https://hackernoon.com/governance-is-the-holy-grail-for-daos) és [a DeFi-t kihasználó gyakori DAO támadási vektorokról](https://dacian.me/dao-governance-defi-attacks) a megosztott linkeken.
 
 ### 8. Csökkentse a kód komplexitását a minimumra {#reduce-code-complexity}
 
@@ -468,6 +471,8 @@ Ha Ön azt tervezi, hogy egy láncon lévő orákulumot kérdez le eszközárak�
 
 - **[ABI Encoder](https://abi.hashex.org/)** – _Egy ingyenes online szolgáltatás a Solidity szerződés függvényeinek és constructor parancsainak kódolására._
 
+- **[Aderyn](https://github.com/Cyfrin/aderyn)** – _Solidity statikus elemző, amely végigjárja az absztrakt szintaxisfákat (AST), hogy kiszűrje a feltételezett sebezhetőségeket, és könnyen érthető markdown formátumban kiírja a problémákat._
+
 ### Eszközök az okosszerződések felügyeletére {#smart-contract-monitoring-tools}
 
 - **[OpenZeppelin Defender Sentinels](https://docs.openzeppelin.com/defender/v1/sentinel)** – _Egy eszköz az okosszerződés automatikus felügyeletére, valamint az eseményekre, függvényekre és tranzakcióparaméterekre való válaszadásra._
@@ -508,9 +513,13 @@ Ha Ön azt tervezi, hogy egy láncon lévő orákulumot kérdez le eszközárak�
 
 - **[CodeHawks](https://codehawks.com/)** – _Versenyképes auditplatform, amely okosszerződések auditálási versenyeit tartja a biztonsági szakértők számára._
 
-- **[Cyfrin](https://www.cyfrin.io/)** – _Blokklánc-biztonsági és web3 oktatási cég, amely az EVM- és Vyper-alapú protokollokra összpontosít._
+- **[Cyfrin](https://cyfrin.io)** – _Web3 biztonsági erőmű, elősegíti kriptobiztonságot termékeken és okosszerződés-ellenőrzési szolgáltatásokon keresztül._
 
 - **[ImmuneBytes](https://www.immunebytes.com//smart-contract-audit/)** – _Web3 biztonsági cég, amely a blokkláncrendszerek biztonsági ellenőrzését kínálja tapasztalt auditorcsapattal és a legjobb eszközökkel._
+
+- **[Oxorio](https://oxor.io/)** - _Okosszerződés-auditok és blokkláncbiztonsági szolgáltatások, szakértelem az EVM, Solidity, ZK, kriptocégek láncok közötti technológiái és DeFi projektek területén._
+
+- **[Inference](https://inference.ag/)** - _Biztonsági auditot végző cég, az EVM-alapú blokkláncok okosszerződés-auditjára specializálódva. A tapasztalt auditorok beazonosítják a lehetséges problémákat és megvalósítható megoldásokat javasolnak, hogy telepítés előtt ki legyenek javítva._
 
 ### Hibavadászplatformok {#bug-bounty-platforms}
 
@@ -519,6 +528,10 @@ Ha Ön azt tervezi, hogy egy láncon lévő orákulumot kérdez le eszközárak�
 - **[HackerOne](https://www.hackerone.com/)** – _Sebezhetőségi koordináció és hibavadászplatform, amely összeköti a vállalkozásokat a sebezhetőségi tesztelőkkel és kiberbiztonsági kutatókkal._
 
 - **[HackenProof](https://hackenproof.com/)** – _Szakértői hibavadászplatform kriptoprojektek (DeFi, okosszerződések, tárcák, CEX stb.) számára, ahol a biztonsági szakértők prioritási sorrendszolgáltatást nyújtanak, a kutatók pedig jutalmat kapnak a releváns, igazolt hibák jelentéséért._
+
+-  **[Sherlock](https://www.sherlock.xyz/)** - _Biztosítja a web3-ban az okosszerződések biztonságát, az auditorok kifizetéseit okosszerződéseken keresztül kezelik, hogy biztosítsák a releváns hibák kifizetését._
+
+-  **[CodeHawks](https://www.codehawks.com/)** - _Versenyképes hibavadász platform, ahol az auditorok biztonsági vetélkedőkben és kihívásokban vesznek részt, majd a saját privát auditjukban._
 
 ### Publikációk az okosszerződések ismert sebezhetőségeiről és azok kihasználásáról {#common-smart-contract-vulnerabilities-and-exploits}
 
@@ -536,6 +549,8 @@ Ha Ön azt tervezi, hogy egy láncon lévő orákulumot kérdez le eszközárak�
 
 - **[Ethernaut](https://ethernaut.openzeppelin.com/)** – _Web3/Solidity-alapú háborús játék, ahol minden szint egy okosszerződés, amelyet meg kell „hackelni”._
 
+- **[HackenProof x HackTheBox](https://app.hackthebox.com/tracks/HackenProof-Track)** - _Okosszerződés hackelési kihívás egy fantáziakalandba ágyazva. A kihívás sikeres teljesítése egy privát hibavadász programhoz ad hozzáférést._
+
 ### Bevált gyakorlatok az okosszerződések biztonságossá tételére {#smart-contract-security-best-practices}
 
 - **[ConsenSys: az Ethereum okosszerződés-biztonság bevált gyakorlatai](https://consensys.github.io/smart-contract-best-practices/)** – _Részletes útmutatók az Ethereum-okosszerződések biztonságossá tételére._
@@ -548,15 +563,17 @@ Ha Ön azt tervezi, hogy egy láncon lévő orákulumot kérdez le eszközárak�
 
 - **[Smart Contract Security Verification Standard](https://github.com/securing/SCSVS)** – _Egy tizennégy részes ellenőrző lista fejlesztők, architektúrával foglalkozók, biztonság-ellenőrzők és beszállítók számára az okosszerződések biztonságának szabványosításához._
 
+- **[Az okosszerződések biztonságának és auditálásának elsajátítása](https://updraft.cyfrin.io/courses/security)** – _Az okosszerződések biztonságát és auditálását oktató tanfolyamot olyan fejlesztőknek hozták létre, akik a legjobb biztonsági gyakorlatok mentén szeretnének fejleszteni és biztonsági kutatókká válni._
+
 ### Útmutatók az okosszerződés-biztonságról {#tutorials-on-smart-contract-security}
 
 - [Hogyan lehet biztonságosabb okosszerződéskódot írni](/developers/tutorials/secure-development-workflow/)
 
 - [A Slither használata okosszerződés bugok felderítésére](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
 
-- [A Manticore használata az okosszerződés hibáinak felderítésére](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
+- [A Manticore használata okosszerződés bugok felderítésére](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
 
-- [Smart contract security guidelines](/developers/tutorials/smart-contract-security-guidelines/)
+- [Okosszerződések biztonsági irányelvei](/developers/tutorials/smart-contract-security-guidelines/)
 
 - [Hogyan lehet biztonságosan integrálni a tokenszerződést tetszőleges tokenekkel](/developers/tutorials/token-integration-checklist/)
 
