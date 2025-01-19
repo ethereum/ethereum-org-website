@@ -1467,7 +1467,7 @@
     "endDate": "2025-09-11",
     "href": "https://bostonblockchainweek.com",
     "location": "QUINCY, Massachusetts, USA",
-    "description": "",
+    "description": "Boston Blockchain Week is the preeminent annual event celebrating the global blockchain and Web3 hub that is Greater Boston.",
     "imageUrl": ""
   },
   {
@@ -1541,5 +1541,23 @@
     "location": "Milan, ITALY",
     "description": "ETHMilan 2024 – Italy&#x27;s Largest ETH &amp; Web3 Conference",
     "imageUrl": ""
+  },
+  {
+    "title": "ETHRome Hackathon",
+    "startDate": "2025-04-11",
+    "endDate": "2025-04-13",
+    "href": "https://ethrome.org",
+    "location": "Rome, ITA",
+    "description": "The hackathon for builders by builders",
+    "imageUrl": "https://www.ethrome.org/opengraph-image.png"
+  },
+  {
+    "title": "ETHTokyo",
+    "startDate": "2025-09-12",
+    "endDate": "2025-09-15",
+    "href": "https://lu.ma/eth-tokyo",
+    "location": "Tokyo, JAP",
+    "description": "View and subscribe to events from ETHTokyo on Luma. ETHTokyo",
+    "imageUrl": "https://images.lumacdn.com/calendar-cover-images/rv/316a4b25-a9fb-4ff0-ab1a-d7f23a2ba0e0"
   }
 ]
