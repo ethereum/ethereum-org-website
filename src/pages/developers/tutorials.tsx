@@ -218,7 +218,19 @@ const TutorialPage = ({
           "page-developers-tutorials:page-tutorials-meta-description"
         )}
       />
-      <Heading className="mx-4 mb-4 mt-4 text-center uppercase leading-xs sm:mx-0 sm:mt-0">
+      <Heading
+        as="h1"
+        fontStyle="normal"
+        fontWeight="semibold"
+        fontFamily="monospace"
+        textTransform="uppercase"
+        fontSize="2rem"
+        lineHeight="140%"
+        textAlign="center"
+        mt={{ base: 4, sm: 0 }}
+        mx={{ base: 4, sm: 0 }}
+        mb={{ base: 4, sm: "1.625rem" }}
+      >
         <Translation id="page-developers-tutorials:page-tutorial-title" />
       </Heading>
       <Text className="mb-4 text-center leading-xs text-body-medium">
