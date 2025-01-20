@@ -85,7 +85,7 @@ const ProductCard = ({
   return (
     <Flex
       className={cn(
-        "flex-col justify-between bg-background-highlight",
+        "flex-col justify-between bg-background-highlight text-center",
         "rounded-base border no-underline",
         "hover:scale-[1.02] hover:transition-transform"
       )}
