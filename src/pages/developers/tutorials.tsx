@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react"
+import React, { HTMLAttributes, useEffect, useMemo, useState } from "react"
 import { GetStaticProps, InferGetServerSidePropsType } from "next"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
@@ -9,6 +9,7 @@ import { BasePageProps, Lang } from "@/lib/types"
 
 import Emoji from "@/components/Emoji"
 import FeedbackCard from "@/components/FeedbackCard"
+import Heading from "@/components/Heading"
 import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
 import Translation from "@/components/Translation"
@@ -23,6 +24,7 @@ import {
 import Modal from "@/components/ui/dialog-modal"
 import { Flex, FlexProps } from "@/components/ui/flex"
 
+import { cn } from "@/lib/utils/cn"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { trackCustomEvent } from "@/lib/utils/matomo"
@@ -68,6 +70,10 @@ const FilterTag = React.forwardRef<HTMLButtonElement, FilterTagProps>(
 )
 
 FilterTag.displayName = FilterTag.name
+
+const Text = ({ className, ...props }: HTMLAttributes<HTMLHeadElement>) => (
+  <p className={cn("mb-6", className)} {...props} />
+)
 
 const LinkFlex = ({ href, children, ...props }: LinkFlexProps) => {
   return (
@@ -212,12 +218,12 @@ const TutorialPage = ({
           "page-developers-tutorials:page-tutorials-meta-description"
         )}
       />
-      <h1 className="mx-4 mb-4 mt-4 text-center uppercase leading-xs sm:mx-0 sm:mt-0">
+      <Heading className="mx-4 mb-4 mt-4 text-center uppercase leading-xs sm:mx-0 sm:mt-0">
         <Translation id="page-developers-tutorials:page-tutorial-title" />
-      </h1>
-      <p className="mb-4 text-center leading-xs text-body-medium">
+      </Heading>
+      <Text className="mb-4 text-center leading-xs text-body-medium">
         <Translation id="page-developers-tutorials:page-tutorial-subtitle" />
-      </p>
+      </Text>
 
       <Modal
         open={isModalOpen}
@@ -228,17 +234,17 @@ const TutorialPage = ({
           <Translation id="page-developers-tutorials:page-tutorial-submit-btn" />
         }
       >
-        <p className="mb-6">
+        <Text>
           <Translation id="page-developers-tutorials:page-tutorial-listing-policy-intro" />
-        </p>
+        </Text>
         <Flex className="flex-col gap-2 md:flex-row">
           <Flex className="w-full flex-col justify-between rounded-sm border border-border p-4">
             <b>
               <Translation id="page-developers-tutorials:page-tutorial-create-an-issue" />
             </b>
-            <p className="mb-6">
+            <Text>
               <Translation id="page-developers-tutorials:page-tutorial-create-an-issue-desc" />
-            </p>
+            </Text>
             <ButtonLink
               variant="outline"
               href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=suggest_tutorial.yaml&title="
@@ -300,12 +306,12 @@ const TutorialPage = ({
         {filteredTutorials.length === 0 && (
           <div className="mt-0 p-12 text-center">
             <Emoji text=":crying_face:" className="my-8 text-5xl" />
-            <h2 className="my-8 leading-xs">
+            <h2 className="mb-8 mt-12 leading-xs">
               <Translation id="page-developers-tutorials:page-tutorial-tags-error" />
             </h2>
-            <p>
+            <Text>
               <Translation id="page-developers-tutorials:page-find-wallet-try-removing" />
-            </p>
+            </Text>
           </div>
         )}
         {filteredTutorials.map((tutorial) => {
@@ -328,7 +334,7 @@ const TutorialPage = ({
                   <Translation id={getSkillTranslationId(tutorial.skill!)} />
                 </Badge>
               </Flex>
-              <p className="my-6 uppercase text-body-medium">
+              <Text className="mt-6 uppercase text-body-medium">
                 <Emoji text=":writing_hand:" className="me-2 text-sm" />
                 {tutorial.author}
                 {tutorial.published ? (
@@ -352,8 +358,8 @@ const TutorialPage = ({
                     </span>
                   </>
                 )}
-              </p>
-              <p className="mb-6 text-body-medium">{tutorial.description}</p>
+              </Text>
+              <Text className="text-body-medium">{tutorial.description}</Text>
               <Flex className="w-full flex-wrap">
                 <TutorialTags tags={tutorial.tags ?? []} />
               </Flex>
