@@ -127,7 +127,14 @@ const Row = (props: ChildOnlyProp) => (
 )
 
 const CardTitle = (props: ChildOnlyProp) => (
-  <Heading className="mb-4 leading-xs" {...props} />
+  <Heading
+    as="h2"
+    mb={4}
+    fontWeight="600"
+    fontSize="2rem"
+    lineHeight={1.4}
+    {...props}
+  />
 )
 
 const Caption = (props: ChildOnlyProp) => (
