@@ -307,6 +307,7 @@ const LearningToolsPage = () => {
       ),
       background: "#f6f7f9",
       subjects: ["Solidity", "web3"],
+      priceType: "Paid",
     },
     {
       name: "BloomTech",
@@ -320,6 +321,7 @@ const LearningToolsPage = () => {
       ),
       background: "#ffffff",
       subjects: ["Solidity", "web3"],
+      priceType: "Paid",
     },
     {
       name: "Questbook",
@@ -333,6 +335,7 @@ const LearningToolsPage = () => {
       ),
       background: "#141236",
       subjects: ["Solidity", "web3"],
+      priceType: "Free",
     },
     {
       name: "Metaschool",
@@ -346,6 +349,7 @@ const LearningToolsPage = () => {
       ),
       background: "#f6f7f9",
       subjects: ["Solidity", "web3"],
+      priceType: "Free",
     },
     {
       name: "NFT School",
@@ -359,6 +363,7 @@ const LearningToolsPage = () => {
       ),
       background: "#111f29",
       subjects: ["Solidity", "web3"],
+      priceType: "Free",
     },
     {
       name: "Platzi",
@@ -373,6 +378,7 @@ const LearningToolsPage = () => {
       background: "#121f3d",
       subjects: ["Solidity", "web3"],
       locales: ["es"],
+      priceType: "Paid",
     },
     {
       name: "Speed Run Ethereum",
@@ -386,6 +392,7 @@ const LearningToolsPage = () => {
       ),
       background: "#ffffff",
       subjects: ["Solidity", "web3"],
+      priceType: "Free",
     },
     {
       name: "Alchemy University",
@@ -399,6 +406,7 @@ const LearningToolsPage = () => {
       ),
       background: "#ffffff",
       subjects: ["Solidity", "web3"],
+      priceType: "Free",
     },
     {
       name: "LearnWeb3",
@@ -412,6 +420,7 @@ const LearningToolsPage = () => {
       ),
       background: "#ffffff",
       subjects: ["Solidity", "web3"],
+      priceType: "Free",
     },
     {
       name: "Cyfrin Updraft",
@@ -425,6 +434,7 @@ const LearningToolsPage = () => {
       ),
       background: "#000000",
       subjects: ["Solidity", "web3"],
+      priceType: "Free",
     },
   ]
 
