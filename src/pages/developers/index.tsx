@@ -1,115 +1,97 @@
-import { ReactNode } from "react"
+import { HTMLAttributes, ReactNode } from "react"
 import { GetStaticProps } from "next"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import {
-  Box,
-  chakra,
-  Flex,
-  Heading,
-  SimpleGrid,
-  Stack,
-  TextProps,
-  useColorModeValue,
-} from "@chakra-ui/react"
 
 import { BasePageProps, ChildOnlyProp, Lang } from "@/lib/types"
 
-import ButtonLink from "@/components/Buttons/ButtonLink"
 import Callout from "@/components/Callout"
 import Card, { CardProps } from "@/components/Card"
 import FeedbackCard from "@/components/FeedbackCard"
+import Heading from "@/components/Heading"
 import HubHero from "@/components/Hero/HubHero"
-import { Image } from "@/components/Image"
-import InlineLink from "@/components/Link"
+import { TwImage } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
-import OldHeading from "@/components/OldHeading"
-import Text from "@/components/OldText"
 import PageMetadata from "@/components/PageMetadata"
 import Translation from "@/components/Translation"
+import { ButtonLink } from "@/components/ui/buttons/Button"
+import { Flex, Stack, VStack } from "@/components/ui/flex"
+import InlineLink from "@/components/ui/Link"
 
+import { cn } from "@/lib/utils/cn"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
+import useColorModeValue from "@/hooks/useColorModeValue"
 import SpeedRunEthereumImage from "@/public/images/dev-tools/speed-run-ethereum-banner.png"
 import DevelopersImage from "@/public/images/developers-eth-blocks.png"
 import DogeImage from "@/public/images/doge-computer.png"
 import HeroImage from "@/public/images/heroes/developers-hub-hero.jpg"
 
 const Page = (props: ChildOnlyProp) => (
-  <Flex
-    flexDirection="column"
-    alignItems="center"
-    w="full"
-    my={0}
-    mx="auto"
-    {...props}
-  />
+  <VStack className="mx-auto my-0 w-full" {...props} />
 )
 
 const GrayContainer = (props: ChildOnlyProp) => (
-  <Box
-    w="full"
-    py={16}
-    px={0}
-    mt={8}
-    bg="grayBackground"
-    boxShadow="inset 0px 1px 0px var(--eth-colors-tableItemBoxShadow)"
+  <div
+    className="mt-8 w-full border-t bg-background-highlight px-0 py-16 shadow-table-item-box"
     {...props}
   />
 )
 
 const Content = (props: ChildOnlyProp) => (
-  <Box as={MainArticle} py={4} px={8} w="full" {...props} />
+  <MainArticle className="w-full px-8 py-4" {...props} />
 )
 
-const Subtitle = (props: TextProps) => (
-  <Text fontSize="xl" lineHeight="140%" color="text200" {...props} />
+const Subtitle = ({
+  className,
+  ...props
+}: HTMLAttributes<HTMLHeadingElement>) => (
+  <p className={cn("leading-xs text-body-medium", className)} {...props} />
 )
 
-const MonoSubtitle = (props: ChildOnlyProp) => <OldHeading mb={0} {...props} />
+const MonoSubtitle = (props: ChildOnlyProp) => (
+  <h2 className="mb-0 mt-6" {...props} />
+)
+
+const H2 = (props: ChildOnlyProp) => <h2 className="mb-8 mt-12" {...props} />
+
+const H3 = (props: ChildOnlyProp) => <h3 className="mb-8 mt-10" {...props} />
+
+const Text = (props: ChildOnlyProp) => <p className="mb-6" {...props} />
 
 const StyledCardContainer = (props: ChildOnlyProp) => (
-  <SimpleGrid columns={[1, 1, 2, 4]} mx={-4} mt={8} mb={12} {...props} />
+  <div
+    className="-mx-4 mb-12 mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4"
+    {...props}
+  />
 )
 
 const TwoColumnContent = (props: ChildOnlyProp) => (
   <Flex
-    justifyContent="space-between"
-    alignItems={{ base: "flex-start", lg: "center" }}
-    flexDirection={{ base: "column", lg: "row" }}
-    w="100%"
+    className="w-full flex-col items-start justify-between lg:flex-row lg:items-center"
     {...props}
   />
 )
 
 const ThreeColumnContent = (props: ChildOnlyProp) => (
   <Flex
-    py={0}
-    px={8}
-    w="full"
-    justifyContent="space-between"
-    alignItems={{ base: "flex-start", lg: "flex-start" }}
-    flexDirection={{ base: "column", lg: "row" }}
+    className="flex-col items-start justify-between px-8 py-0 lg:flex-row"
     {...props}
   />
 )
 
 const Column = (props: ChildOnlyProp) => (
-  <Box flex="1 1 33%" mb={6} me={8} w="full" {...props} />
+  <div className="mb-6 me-8 w-full flex-1 basis-1/3" {...props} />
 )
 const RightColumn = (props: ChildOnlyProp) => (
-  <Box flex="1 1 33%" mb={6} me={0} w="full" {...props} />
+  <div className="mb-6 me-0 w-full flex-1 basis-1/3" {...props} />
 )
 const IntroColumn = (props: ChildOnlyProp) => (
-  <Box
-    flex="1 1 33%"
-    mb={6}
-    mt={{ base: 0, lg: 32 }}
-    me={{ base: 0, sm: 8 }}
-    w="full"
+  <div
+    className="mb-6 me-0 mt-0 w-full flex-1 basis-1/3 sm:me-8 lg:mt-32"
     {...props}
   />
 )
@@ -134,12 +116,6 @@ const StyledCard = (props: CardProps) => {
   )
 }
 
-const StyledCallout = chakra(Callout, {
-  baseStyle: {
-    flex: { base: "auto", md: "1 1 416px" },
-  },
-})
-
 const SpeedRunEthereumBanner = ({
   title,
   linkLabel,
@@ -147,31 +123,19 @@ const SpeedRunEthereumBanner = ({
   title: string
   linkLabel: string
 }) => (
-  <Box position="relative" mb={{ xl: 12 }}>
-    <Image
+  <div className="relative xl:mb-12">
+    <TwImage
+      className="h-[450px] xl:h-auto"
       src={SpeedRunEthereumImage}
       alt="SpeedRunEthereum banner"
       sizes="100vw"
       style={{ width: "100vw", objectFit: "cover", objectPosition: "20%" }}
-      h={{
-        base: "450px",
-        xl: "auto",
-      }}
     />
-    <Stack
-      spacing={{ base: "3", md: "4" }}
-      p={{ base: "6", lg: "8" }}
-      position="absolute"
-      insetInlineStart={{ md: "8" }}
-      maxW={{ base: "lg", xl: "xl" }}
-      top={{ base: "0", md: "50" }}
-      wordBreak="break-word"
-      alignItems="flex-start"
-    >
+    <Stack className="absolute top-0 max-w-lg items-start space-y-3 break-words p-6 md:top-12 md:ms-8 md:space-y-4 lg:p-8 xl:max-w-xl">
       <Heading>{title}</Heading>
       <ButtonLink href="https://speedrunethereum.com/">{linkLabel}</ButtonLink>
     </Stack>
-  </Box>
+  </div>
 )
 
 export const getStaticProps = (async ({ locale }) => {
@@ -294,10 +258,10 @@ const DevelopersPage = () => {
         />
         <TwoColumnContent>
           <IntroColumn>
-            <OldHeading>
+            <H2>
               <Translation id="page-developers-index:page-developers-about" />
-            </OldHeading>
-            <Subtitle mb={6}>
+            </H2>
+            <Subtitle className="mb-6">
               <Translation id="page-developers-index:page-developers-about-desc" />
             </Subtitle>
             <Text>
@@ -310,7 +274,8 @@ const DevelopersPage = () => {
               </InlineLink>
             </Text>
           </IntroColumn>
-          <StyledCallout
+          <Callout
+            className="flex-auto md:flex-[1_1_416px]"
             image={DevelopersImage}
             titleKey="page-developers-index:page-developers-improve-ethereum"
             descriptionKey="page-developers-index:page-developers-improve-ethereum-desc"
@@ -321,21 +286,21 @@ const DevelopersPage = () => {
                 <Translation id="page-developers-index:page-developers-contribute" />
               </ButtonLink>
             </div>
-          </StyledCallout>
+          </Callout>
         </TwoColumnContent>
       </Content>
       <GrayContainer>
         <Content>
-          <OldHeading>
+          <H2>
             <Translation id="page-developers-index:page-developers-explore-documentation" />
-          </OldHeading>
+          </H2>
         </Content>
 
         <ThreeColumnContent>
           <Column>
-            <OldHeading as="h3" fontSize={{ base: "xl", md: "2xl" }}>
+            <H3>
               <Translation id="page-developers-index:page-developers-docs-introductions" />
-            </OldHeading>
+            </H3>
             <InlineLink href="/developers/docs/intro-to-ethereum/">
               <Translation id="page-developers-index:page-developers-intro-eth-link" />
             </InlineLink>
@@ -377,18 +342,16 @@ const DevelopersPage = () => {
             <Text>
               <Translation id="page-developers-index:page-developers-language-desc" />
             </Text>
-            <Image
-              hideBelow="lg"
+            <TwImage
+              className="mt-16 hidden max-w-[400px] lg:block"
               src={DogeImage}
               alt={t("page-assets-doge")}
-              maxW="400px"
-              mt={16}
             />
           </Column>
           <Column>
-            <OldHeading as="h3" fontSize={{ base: "xl", md: "2xl" }}>
+            <H3>
               <Translation id="page-developers-index:page-developers-fundamentals" />
-            </OldHeading>
+            </H3>
             <InlineLink href="/developers/docs/accounts/">
               <Translation id="page-developers-index:page-developers-accounts-link" />
             </InlineLink>
@@ -453,9 +416,9 @@ const DevelopersPage = () => {
             </Text>
           </Column>
           <RightColumn>
-            <OldHeading as="h3" fontSize={{ base: "xl", md: "2xl" }}>
+            <H3>
               <Translation id="page-developers-index:page-developers-stack" />
-            </OldHeading>
+            </H3>
             <InlineLink href="/developers/docs/smart-contracts/">
               <Translation id="page-developers-index:page-developers-smart-contracts-link" />
             </InlineLink>
@@ -504,9 +467,9 @@ const DevelopersPage = () => {
             <Text>
               <Translation id="page-developers-index:page-developers-dev-env-desc" />
             </Text>
-            <OldHeading as="h3" fontSize={{ base: "xl", md: "2xl" }}>
+            <H3>
               <Translation id="page-developers-index:page-developers-advanced" />
-            </OldHeading>
+            </H3>
             <InlineLink href="/developers/docs/standards/tokens/">
               <Translation id="page-developers-index:page-developers-token-standards-link" />
             </InlineLink>
