@@ -18,6 +18,7 @@ import CardList from "@/components/CardList"
 import CopyToClipboard from "@/components/CopyToClipboard"
 import Emoji from "@/components/Emoji"
 import FeedbackCard from "@/components/FeedbackCard"
+import Heading from "@/components/Heading"
 import { TwImage } from "@/components/Image"
 import InfoBanner from "@/components/InfoBanner"
 import MainArticle from "@/components/MainArticle"
@@ -126,7 +127,7 @@ const Row = (props: ChildOnlyProp) => (
 )
 
 const CardTitle = (props: ChildOnlyProp) => (
-  <h2 className="mb-4 leading-xs" {...props} />
+  <Heading className="mb-4 leading-xs" {...props} />
 )
 
 const Caption = (props: ChildOnlyProp) => (
@@ -299,7 +300,7 @@ const DepositContractPage = () => {
           <Title>{t("page-staking-deposit-contract-title")}</Title>
           <Subtitle>{t("page-staking-deposit-contract-subtitle")}</Subtitle>
           <H2>{t("page-staking-deposit-contract-h2")}</H2>
-          <p>
+          <p className="mb-6">
             {t("page-staking-deposit-contract-staking")}{" "}
             <InlineLink href="/staking/">
               {t("page-staking-deposit-contract-staking-more-link")}
@@ -309,7 +310,9 @@ const DepositContractPage = () => {
             {t("page-staking-deposit-contract-launchpad")}
           </StyledButton>
           <H2>{t("page-staking-deposit-contract-staking-check")}</H2>
-          <p>{t("page-staking-deposit-contract-staking-check-desc")}</p>
+          <p className="mb-6">
+            {t("page-staking-deposit-contract-staking-check-desc")}
+          </p>
           <CardList items={addressSources} />
         </LeftColumn>
         <RightColumn>
