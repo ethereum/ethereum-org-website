@@ -2,9 +2,9 @@ import { AiOutlineArrowRight } from "react-icons/ai"
 
 import { cn } from "@/lib/utils/cn"
 
-import { Center, Flex, Stack } from "./ui/flex"
-import { LinkBox, LinkOverlay } from "./ui/link-box"
-import Emoji from "./Emoji"
+import Emoji from "../Emoji"
+import { Center, Flex, Stack } from "../ui/flex"
+import { LinkBox, LinkOverlay } from "../ui/link-box"
 
 import { useRtlFlip } from "@/hooks/useRtlFlip"
 
