@@ -12670,6 +12670,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "itzVarsha",
+      "name": "Varshitha",
+      "avatar_url": "https://avatars.githubusercontent.com/u/138134029?v=4",
+      "profile": "https://github.com/itzVarsha",
+      "contributions": [
+        "maintenance"
+      ]
     }
   ],
   "contributorsPerLine": 7,
