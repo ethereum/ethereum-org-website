@@ -5,7 +5,7 @@ import { Meta, StoryObj } from "@storybook/react"
 import DocLink from "."
 
 const meta = {
-  title: "Atoms / DocLink",
+  title: "Molecules / Navigation / DocLink",
   component: DocLink,
   tags: ["autodocs"],
 } satisfies Meta<typeof DocLink>
