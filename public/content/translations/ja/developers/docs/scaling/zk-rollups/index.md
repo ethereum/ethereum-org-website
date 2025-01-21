@@ -222,12 +222,6 @@ FinematicsによるZKロールアップの説明動画をご覧ください：
 
 <YouTube id="7pWxCklcNsU" start="406" />
 
-### ゼロ知識ロールアップの活用方法 {#use-zk-rollups}
-
-現在、Dappに統合可能ないくつかのZKロールアップの実装が提供されています：
-
-<RollupProductDevDoc rollupType="zk" />
-
 ## zkEVMの開発プロジェクト {#zkevm-projects}
 
 現在、zkEVMの開発に取り組んでいるプロジェクトとしては、以下が挙げられます：

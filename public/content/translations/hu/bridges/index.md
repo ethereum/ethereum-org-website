@@ -95,6 +95,15 @@ Számos hidat biztosító megoldás e két modell közötti módszert alakít ki
 
 <Divider />
 
+## Híd használata {#use-bridge}
+
+A hidak segítségével a felhasználók különböző blokkláncok között tudnak eszközöket mozgatni. Íme néhány forrás, amelyek hasznosak lehetnek a hidak megtalálásához és használatához:
+
+- **[L2BEAT hidakról szóló összefoglaló](https://l2beat.com/bridges/summary) & [L2BEAT hidak kockázati elemzése](https://l2beat.com/bridges/risk)**: Egy átfogó tanulmány a különféle hidakról, beleértve azok piaci részesedését, típusát és azokat a blokkláncokat, melyekkel összeköttetést biztosítanak. Az L2BEAT kockázati elemzést is készített a hidakról, hogy a felhasználók megfelelően tudjanak választani azok közül.
+- **[DefiLlama hidakról szóló összefoglaló](https://defillama.com/bridges/Ethereum)**: Az Ethereum hálózatok közötti hidak forgalmi adatainak összefoglalója.
+
+<Divider />
+
 ## A hidak használatának kockázata {#bridge-risk}
 
 A hidak fejlesztése még a korai stádiumban van. Nagy valószínűséggel az optimális kialakítás még nem született meg. A hidakkal való interakció a következő kockázatokkal jár:

@@ -99,7 +99,7 @@ That said, you should avoid treating audits as a silver bullet. Smart contract a
 
 Setting up a bug bounty program is another approach for implementing external code reviews. A bug bounty is a financial reward given to individuals (usually whitehat hackers) that discover vulnerabilities in an application.
 
-When used properly, bug bounties give members of the hacker community incentive to inspect your code for critical flaws. A real-life example is the “infinite money bug” that would have let an attacker create an unlimited amount of Ether on [Optimism](https://www.optimism.io/), a [Layer 2](/layer-2/) protocol running on Ethereum. Fortunately, a whitehat hacker [discovered the flaw](https://www.saurik.com/optimism.html) and notified the team, [earning a large payout in the process](https://cryptoslate.com/critical-bug-in-ethereum-l2-optimism-2m-bounty-paid/).
+When used properly, bug bounties give members of the hacker community incentive to inspect your code for critical flaws. A real-life example is the “infinite money bug” that would have let an attacker create an unlimited amount of ether on [Optimism](https://www.optimism.io/), a [Layer 2](/layer-2/) protocol running on Ethereum. Fortunately, a whitehat hacker [discovered the flaw](https://www.saurik.com/optimism.html) and notified the team, [earning a large payout in the process](https://cryptoslate.com/critical-bug-in-ethereum-l2-optimism-2m-bounty-paid/).
 
 A useful strategy is to set the payout of a bug bounty program in proportion to the amount of funds at stake. Described as the “[scaling bug bounty](https://medium.com/immunefi/a-defi-security-standard-the-scaling-bug-bounty-9b83dfdc1ba7)”, this approach provides financial incentives for individuals to responsibly disclose vulnerabilities instead of exploiting them.
 
@@ -235,7 +235,7 @@ The EVM doesn’t permit concurrency, meaning two contracts involved in a messag
 
 Although mostly harmless, transferring control flow to untrusted contracts can cause problems, such as reentrancy. A reentrancy attack occurs when a malicious contract calls back into a vulnerable contract before the original function invocation is complete. This type of attack is best explained with an example.
 
-Consider a simple smart contract (‘Victim’) that allows anyone to deposit and withdraw Ether:
+Consider a simple smart contract (‘Victim’) that allows anyone to deposit and withdraw ether:
 
 ```solidity
 // This contract is vulnerable. Do not use in production
@@ -346,7 +346,7 @@ contract MutexPattern {
         require(balances[msg.sender] >= _amount, "No balance to withdraw.");
 
         balances[msg.sender] -= _amount;
-        bool (success, ) = msg.sender.call{value: _amount}("");
+        (bool success, ) = msg.sender.call{value: _amount}("");
         require(success);
 
         return true;
@@ -563,7 +563,7 @@ If you plan on querying an on-chain oracle for asset prices, consider using one 
 
 - **[Smart Contract Security Verification Standard](https://github.com/securing/SCSVS)** - _Fourteen-part checklist created to standardize the security of smart contracts for developers, architects, security reviewers and vendors._
 
-- **[Learn Smart Contract Security and Auditing](https://updraft.cyfrin.io/courses/security) - _Ultimate smart contract security and auditing course, created for smart contract developers looking to level up their security best practices and become security researchers._
+- **[Learn Smart Contract Security and Auditing](https://updraft.cyfrin.io/courses/security)** - _Ultimate smart contract security and auditing course, created for smart contract developers looking to level up their security best practices and become security researchers._
 
 ### Tutorials on smart contract security {#tutorials-on-smart-contract-security}
 

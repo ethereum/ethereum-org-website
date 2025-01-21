@@ -133,5 +133,7 @@
   "layer-2-ecosystem-portal": "Portal für das Ökosystem",
   "layer-2-token-lists": "Token-Listen",
   "layer-2-explore": "Entdecken",
-  "page-dapps-ready-button": "Los"
+  "page-dapps-ready-button": "Los",
+  "layer-2-information": "Informationen",
+  "layer-2-wallet-managers": "Wallet-Manager"
 }

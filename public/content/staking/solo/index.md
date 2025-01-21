@@ -25,7 +25,7 @@ Home stakers are responsible for operating the hardware needed to run these clie
 
 A home staker receives rewards directly from the protocol for keeping their validator properly functioning and online.
 
-## Why stake home? {#why-stake-solo}
+## Why stake from home? {#why-stake-solo}
 
 Home staking comes with more responsibility but provides you with maximum control over your funds and staking setup.
 
@@ -203,4 +203,4 @@ To unlock and receive your entire balance back you must also complete the proces
 - [Step by Step: How to join the Ethereum 2.0 Testnet](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) - _Butta_
 - [Eth2 Slashing Prevention Tips](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) - _Raul Jordan 2020_
 
-<QuizWidget quizKey="solo-staking" />
+<QuizWidget quizKey="staking-solo" />

@@ -253,12 +253,6 @@ ii. オプティミスティック・ロールアップを使用するデベロ�
 
 <YouTube id="7pWxCklcNsU" start="263" />
 
-### オプティミスティック・ロールアップの使用方法 {#use-optimistic-rollups}
-
-Dappに統合可能な、既存のオプティミスティック・ロールアップの実装が提供されています：
-
-<RollupProductDevDoc rollupType="optimistic" />
-
 ## オプティミスティック・ロールアップに関する参考文献
 
 - [オプティミスティック・ロールアップの仕組み（完全ガイド）](https://www.alchemy.com/overviews/optimistic-rollups)

@@ -46,6 +46,7 @@ Diversi tracker offrono una panoramica in tempo reale dei nodi nella rete Ethere
 - [Mappa dei nodi](https://etherscan.io/nodetracker) di Etherscan
 - [Ethernodes](https://ethernodes.org/) di Bitfly
 - [Nodewatch](https://www.nodewatch.io/) di Chainsafe, crawling dei nodi di consenso
+- [Monitoreth](https://monitoreth.io/), di MigaLabs, uno strumento di monitoraggio della rete distribuito
 
 ## Tipologie di nodo {#node-types}
 
@@ -197,6 +198,7 @@ Esistono diversi client di consenso (precedentemente noti come client di "Eth2")
 | [Nimbus](https://nimbus.team/)                                | Nim        | Linux, Windows, macOS | Beacon Chain, Goerli, Sepolia, Ropsten e altre                  |
 | [Prysm](https://docs.prylabs.network/docs/getting-started/)   | Go         | Linux, Windows, macOS | Beacon Chain, Gnosis, Goerli, Pyrmont, Sepolia, Ropsten e altre |
 | [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) | Java       | Linux, Windows, macOS | Beacon Chain, Gnosis, Goerli, Sepolia, Ropsten e altre          |
+| [Grandine](https://docs.grandine.io/) (beta)                  | Rust       | Linux, Windows, macOS | Beacon Chain, Goerli, Sepolia e altre                           |
 
 ### Lighthouse {#lighthouse}
 
@@ -229,6 +231,12 @@ Teku è uno dei client di genesi originali della Beacon Chain. Insieme ai soliti
 Teku offre opzioni di sviluppo molto flessibili. Il nodo beacon e il client del validatore possono operare insieme come un singolo processo, il che è estremamente conveniente per gli staker in autonomia, o i nodi possono operare separatamente per le operazioni di staking sofisticate. Inoltre, Teku è completamente interoperabile con [Web3Signer](https://github.com/ConsenSys/web3signer/) per firmare la sicurezza della chiave e la protezione dallo slashing.
 
 Teku è scritto in Java ed è sotto licenza Apache 2.0. È sviluppato dal team Protocols di ConsenSys, responsabile anche di Besu e Web3Signer. Scopri di più nella [documentazione di Teku](https://docs.teku.consensys.net/en/latest/).
+
+### Grandine {#grandine}
+
+Grandine è un'implementazione del client di consenso scritta in Rust sotto la licenza GPL-3.0. Mantenuta dal Team principale di Grandine, è veloce, leggera e ad alte prestazioni. È adatta a un'ampia gamma di staker, da quelli in solo su dispositivi a bassa potenza, come il Raspberry Pi, ai grandi staker istituzionali che eseguono decine di migliaia di validatori.
+
+La documentazione è consultabile sul [Manuale di Grandine](https://docs.grandine.io/)
 
 ## Modalità di sincronizzazione {#sync-modes}
 
