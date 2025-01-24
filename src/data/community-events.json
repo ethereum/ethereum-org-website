@@ -949,15 +949,6 @@
     "imageUrl": ""
   },
   {
-    "title": "ETHDam",
-    "startDate": "2025-05-09",
-    "endDate": "2025-05-11",
-    "href": "https://www.ethdam.com",
-    "location": "Amsterdam, NL",
-    "description": "",
-    "imageUrl": "https://static.wixstatic.com/media/9830df_ceadad27c7ad469e968170753dccc507~mv2.png/v1/fill/w_2500,h_1762,al_c/9830df_ceadad27c7ad469e968170753dccc507~mv2.png"
-  },
-  {
     "title": "ETHDublin 2025",
     "startDate": "2025-05-23",
     "endDate": "2025-05-25",
@@ -1046,15 +1037,6 @@
     "location": "Prague, CZ",
     "description": "Join us for a  technical conference dedicated to exploring the edges of modular blockchain technology. This one-day event, held on May 30, 2024 brings together…",
     "imageUrl": "https://social-images.lu.ma/cdn-cgi/image/format=auto,fit=cover,dpr=1,background=white,quality=75,width=800,height=419/api/event-one?calendar_avatar=https%3A%2F%2Fimages.lumacdn.com%2Fcalendars%2Fgb%2F04e6c14a-bef9-4690-a55e-58dbab9f8aca&amp;calendar_name=ProtoLayers%20Builder%20Conference&amp;color0=%23ffffff&amp;color1=%23010101&amp;color2=%238b8a8a&amp;color3=%23ff3503&amp;host_avatar=https%3A%2F%2Fimages.lumacdn.com%2Favatars%2Fwx%2Fd64d0bac-aec7-4589-840e-4d4111ce4988&amp;host_name=ProtoLayers&amp;img=https%3A%2F%2Fimages.lumacdn.com%2Fevent-covers%2Fr7%2Fa289e9d1-9744-4ccc-a812-e6ac947d09cf&amp;name=ProtoLayers%20Conference"
-  },
-  {
-    "title": "ETHDam",
-    "startDate": "2025-05-09",
-    "endDate": "2025-05-10",
-    "href": "https://www.ethdam.com",
-    "location": "Amsterdam, NL",
-    "description": "",
-    "imageUrl": "https://static.wixstatic.com/media/9830df_ceadad27c7ad469e968170753dccc507~mv2.png/v1/fill/w_2500,h_1762,al_c/9830df_ceadad27c7ad469e968170753dccc507~mv2.png"
   },
   {
     "title": "ETHBratislava",
@@ -1535,7 +1517,7 @@
   },
   {
     "title": "ETHDam III",
-    "href": "https://taikai.network/cryptocanal/hackathons/ethdam2025",
+    "href": "https://www.ethdam.com",
     "location": "Amsterdam, Netherlands",
     "description": "Conference and hackathon gathering the best Privacy and Security builders",
     "startDate": "2025-05-09",
