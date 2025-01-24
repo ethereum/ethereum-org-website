@@ -1,4 +1,5 @@
 import { BaseHTMLAttributes, useState } from "react"
+import { useRouter } from "next/router"
 import { Avatar } from "@chakra-ui/react"
 
 import type { ChildOnlyProp, FileContributor } from "@/lib/types"
@@ -49,6 +50,7 @@ const FileContributors = ({
   lastEditLocaleTimestamp,
   ...props
 }: FileContributorsProps) => {
+  const { locale } = useRouter()
   const [isModalOpen, setModalOpen] = useState(false)
 
   const lastContributor: FileContributor = contributors.length
@@ -61,6 +63,8 @@ const FileContributors = ({
       } as FileContributor)
 
   const modalSize = useBreakpointValue({ base: "xl", md: "md" } as const)
+  const urlPrefix =
+    locale === "en" ? "https://github.com/" : "https://crowdin.com/profile/"
 
   return (
     <>
@@ -94,7 +98,7 @@ const FileContributors = ({
 
           <p className="m-0 text-body-medium">
             <Translation id="last-edit" />:{" "}
-            <InlineLink href={"https://github.com/" + lastContributor.login}>
+            <InlineLink href={urlPrefix + lastContributor.login}>
               @{lastContributor.login}
             </InlineLink>
             , {lastEditLocaleTimestamp}
