@@ -880,7 +880,7 @@ export const walletsData: WalletData[] = [
     ],
   },
   {
-    last_updated: "2022-06-24",
+    last_updated: "2025-01-25",
     name: "Unstoppable wallet",
     image: UnstoppableWalletImage,
     twBackgroundColor: "bg-[#ffbe43]",
@@ -923,6 +923,8 @@ export const walletsData: WalletData[] = [
     onboard_documentation: "",
     documentation: "https://unstoppable.money/faq",
     supported_chains: ["Ethereum Mainnet"],
+      "Arbitrum One",
+      "OP Mainnet",
   },
 
   {
