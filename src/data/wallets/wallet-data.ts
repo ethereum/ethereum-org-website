@@ -2094,7 +2094,7 @@ export const walletsData: WalletData[] = [
     ],
   },
   {
-    last_updated: "2023-10-30",
+    last_updated: "2025-01-25",
     name: "Aurox Wallet",
     image: AuroxImage,
     twBackgroundColor: "bg-[#1F47FF]",
@@ -2138,7 +2138,11 @@ export const walletsData: WalletData[] = [
       "https://docs.getaurox.com/product-docs/aurox-ecosystem/what-is-the-aurox-ecosystem",
     documentation:
       "https://docs.getaurox.com/product-docs/aurox-ecosystem/what-is-the-aurox-ecosystem",
-    supported_chains: ["Ethereum Mainnet"],
+    supported_chains: [
+      "Ethereum Mainnet",
+      "Arbitrum One",
+      "OP Mainnet",
+    ],
   },
   {
     last_updated: "2025-01-07",
