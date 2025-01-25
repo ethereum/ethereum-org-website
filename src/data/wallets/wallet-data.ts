@@ -2205,7 +2205,7 @@ export const walletsData: WalletData[] = [
     ],
   },
   {
-    last_updated: "2024-06-20",
+    last_updated: "2025-01-25",
     name: "Gem Wallet",
     image: GemWalletImage,
     twBackgroundColor: "bg-[#2D5BE6]",
@@ -2262,7 +2262,12 @@ export const walletsData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "https://docs.gemwallet.com/",
     documentation: "https://docs.gemwallet.com/",
-    supported_chains: ["Ethereum Mainnet"],
+    supported_chains: [
+      "Ethereum Mainnet",
+      "Arbitrum One",
+      "Base",
+      "OP Mainnet",
+    ],
   },
   {
     last_updated: "2024-08-24",
