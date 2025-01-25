@@ -218,6 +218,13 @@ const config = {
           "red-fill": "var(--staking-red-fill)",
         },
 
+        //temporary
+        "home-box": {
+          turquoise: "var(--home-box-turquoise)",
+          pink: "var(--home-box-pink)",
+          purple: "var(--home-box-purple)",
+        },
+
         /** @deprecated */
         "switch-background": "hsla(var(--switch-background))", // TODO: Migrate
         "tooltip-shadow": "var(--tooltip-shadow)",
