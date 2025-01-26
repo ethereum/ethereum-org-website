@@ -49,7 +49,8 @@ import nethermind from "@/public/images/upgrades/nethermind.png"
 import nimbus from "@/public/images/upgrades/nimbus-cloud.png"
 import prysm from "@/public/images/upgrades/prysm.png"
 import reth from "@/public/images/upgrades/reth.png"
-import solidity from "@/public/images/upgrades/solidity.png"
+import solidityDark from "@/public/images/upgrades/solidity-dark.png"
+import solidityLight from "@/public/images/upgrades/solidity-light.png"
 import tekuDark from "@/public/images/upgrades/teku-dark.png"
 import tekuLight from "@/public/images/upgrades/teku-light.png"
 import vyper from "@/public/images/upgrades/vyper.png"
@@ -455,7 +456,7 @@ const BugBountiesPage = () => {
     {
       title: "Solidity",
       link: "https://soliditylang.org/",
-      image: solidity,
+      image: useColorModeValue(solidityLight, solidityDark),
     },
     {
       title: "Vyper",
@@ -473,7 +474,7 @@ const BugBountiesPage = () => {
         title={t("page-upgrades-bug-bounty-meta-title")}
         description={t("page-upgrades-bug-bounty-meta-description")}
       />
-      { /* TODO: Remove on the 25th of January */ }
+      {/* TODO: Remove on the 25th of January */}
       <BugBountyBanner />
       <Content>
         <HeroCard>
