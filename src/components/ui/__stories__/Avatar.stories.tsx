@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react"
 
 import { Avatar } from "../avatar"
-import { HStack } from "../flex"
+import { HStack, VStack } from "../flex"
 
 const meta = {
   title: "Atoms / Media & Icons / UI Avatars",
@@ -18,7 +18,13 @@ export const Single: Story = {
     src: "https://bit.ly/dan-abramov",
     href: "#",
   },
-  render: (args) => <Avatar {...args} />,
+  render: (args) => (
+    <VStack className="gap-4">
+      {(["lg", "md", "sm", "xs"] as const).map((size) => (
+        <Avatar key={size} size={size} {...args} />
+      ))}
+    </VStack>
+  ),
 }
 
 export const WithUsername: Story = {
@@ -30,8 +36,16 @@ export const WithUsername: Story = {
   },
   render: (args) => (
     <HStack className="gap-4">
-      <Avatar {...args} />
-      <Avatar {...args} direction="column" />
+      <VStack>
+        {(["md", "sm"] as const).map((size, idx) => (
+          <Avatar key={idx} size={size} {...args} />
+        ))}
+      </VStack>
+      <VStack>
+        {(["md", "sm"] as const).map((size, idx) => (
+          <Avatar key={idx} size={size} direction="column" {...args} />
+        ))}
+      </VStack>
     </HStack>
   ),
 }

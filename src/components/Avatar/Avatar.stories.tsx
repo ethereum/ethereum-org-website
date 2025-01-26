@@ -31,7 +31,7 @@ export const Single: Story = {
 export const Group: Story = {
   args: {
     name: "Dan Abrahmov",
-    src: "https://bit.ly/dan-abramov",
+    src: "https://bit.ly/dan-abramo",
     href: "#",
   },
   render: (args) => (
