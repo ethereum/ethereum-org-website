@@ -12,7 +12,7 @@ import { LinkBox, LinkOverlay } from "./link-box"
 const avatarStyles = tv({
   slots: {
     container:
-      "relative shrink-0 flex overflow-hidden rounded-full focus:outline-4 focus:-outline-offset-1 focus:rounded-full active:shadow-none [&_img]:hover:opacity-70 border border-transparent active:border-primary-hover",
+      "relative shrink-0 flex overflow-hidden rounded-full focus:outline-4 focus:-outline-offset-1 focus:rounded-full active:shadow-none [&_img]:hover:opacity-70 border border-transparent active:border-primary-hover justify-center items-center",
     fallback: "bg-body text-body-inverse",
   },
   variants: {
@@ -115,13 +115,23 @@ export type AvatarProps = AvatarBaseProps &
     direction?: "column" | "row"
     name: string
     src: string
+    dataTest?: string
   }
 
 const Avatar = React.forwardRef<
   React.ElementRef<"span"> | React.ElementRef<"div">,
   AvatarProps
 >((props, ref) => {
-  const { href, src, name, size, label, direction = "row" } = props
+  const {
+    href,
+    src,
+    name,
+    size,
+    label,
+    className,
+    direction = "row",
+    dataTest,
+  } = props
 
   const commonLinkProps = {
     href,
@@ -165,8 +175,8 @@ const Avatar = React.forwardRef<
   }
 
   return (
-    <AvatarBase ref={ref} size={size} asChild>
-      <BaseLink {...commonLinkProps}>
+    <AvatarBase ref={ref} size={size} className={className} asChild>
+      <BaseLink title={dataTest} {...commonLinkProps}>
         <AvatarImage src={src} />
         <AvatarFallback>{fallbackInitials}</AvatarFallback>
       </BaseLink>
@@ -175,4 +185,65 @@ const Avatar = React.forwardRef<
 })
 Avatar.displayName = "Avatar"
 
-export { Avatar, AvatarBase, AvatarFallback, AvatarImage }
+type AvatarGroupProps = AvatarVariantProps &
+  React.HTMLAttributes<HTMLDivElement> & {
+    children: React.ReactNode
+    max?: number
+  }
+/**
+ * Chakra v2 component as reference: https://github.com/chakra-ui/chakra-ui/blob/v2/packages/components/src/avatar/avatar-group.tsx
+ */
+const AvatarGroup = React.forwardRef<HTMLDivElement, AvatarGroupProps>(
+  (props, ref) => {
+    const { children, max, size, className, ...rest } = props
+
+    const validChildren = React.Children.toArray(children).filter((child) =>
+      React.isValidElement(child)
+    ) as React.ReactElement[]
+
+    /**
+     * The visible avatars from max
+     */
+    const childrenWithinMax =
+      max != null ? validChildren.slice(0, max) : validChildren
+    /**
+     * Number of hidden avatars from max
+     */
+    const hiddenCount = max != null ? validChildren.length - max : 0
+
+    /**
+     * Reversed children to handle implied z-index
+     */
+    const reversedChildren = childrenWithinMax.reverse()
+
+    const clonedChildren = reversedChildren.map((child, idx) => {
+      const isFirst = idx === 0
+      return React.cloneElement(child, {
+        className: cn(isFirst ? "me-0" : "-me-2"),
+        size,
+      })
+    })
+
+    const { container, fallback } = avatarStyles({ size })
+
+    return (
+      <div
+        ref={ref}
+        role="group"
+        className={cn("flex flex-row-reverse", className)}
+        {...rest}
+      >
+        {hiddenCount > 0 && (
+          <span
+            className={cn("-ms-2", container(), fallback())}
+          >{`+${hiddenCount}`}</span>
+        )}
+        {clonedChildren}
+      </div>
+    )
+  }
+)
+
+AvatarGroup.displayName = "AvatarGroup"
+
+export { Avatar, AvatarBase, AvatarFallback, AvatarGroup, AvatarImage }

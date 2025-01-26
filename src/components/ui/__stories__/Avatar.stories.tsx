@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react"
 
-import { Avatar } from "../avatar"
+import { Avatar, AvatarGroup } from "../avatar"
 import { HStack, VStack } from "../flex"
 
 const meta = {
@@ -22,6 +22,26 @@ export const Single: Story = {
     <VStack className="gap-4">
       {(["lg", "md", "sm", "xs"] as const).map((size) => (
         <Avatar key={size} size={size} {...args} />
+      ))}
+    </VStack>
+  ),
+}
+
+export const Group: Story = {
+  args: {
+    name: "Dan Abrahmov",
+    src: "https://bit.ly/dan-abramov",
+    href: "#",
+  },
+  render: (args) => (
+    <VStack className="gap-4">
+      {(["sm", "xs"] as const).map((size) => (
+        <AvatarGroup key={size} size={size} max={3}>
+          <Avatar dataTest="one" {...args} />
+          <Avatar dataTest="two" {...args} />
+          <Avatar dataTest="three" {...args} />
+          <Avatar {...args} />
+        </AvatarGroup>
       ))}
     </VStack>
   ),
