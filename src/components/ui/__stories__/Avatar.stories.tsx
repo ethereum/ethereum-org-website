@@ -4,7 +4,7 @@ import { Avatar, AvatarGroup } from "../avatar"
 import { HStack, VStack } from "../flex"
 
 const meta = {
-  title: "Atoms / Media & Icons / UI Avatars",
+  title: "Atoms / Media & Icons / Avatars",
   component: Avatar,
 } satisfies Meta<typeof Avatar>
 
