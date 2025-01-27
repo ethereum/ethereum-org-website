@@ -151,7 +151,7 @@ export const ConnectWeb3 = ({ nav, ctaLabel }: PhoneScreenProps) => {
                 <NotificationPopover
                   title="Example walkthrough"
                   content="These are some things you could do as the owner of your NFTs"
-                  placement="top"
+                  side="top"
                 >
                   <Flex
                     direction="column"
@@ -190,7 +190,7 @@ export const ConnectWeb3 = ({ nav, ctaLabel }: PhoneScreenProps) => {
               <NotificationPopover
                 title="Example walkthrough"
                 content="Try out a real Ethereum application when finished here"
-                placement="top"
+                side="top"
               >
                 <Box fontSize={{ base: "sm", md: "md" }}>
                   <Button variant="link" isDisabled display="block">
