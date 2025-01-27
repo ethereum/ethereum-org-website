@@ -20,7 +20,7 @@ const avatarStyles = tv({
       xs: {
         container:
           "size-6 hover:shadow-[2px_2px_0_var(--avatar-base-shadow-color)] peer-hover:shadow-[2px_2px_0_var(--avatar-base-shadow-color)]",
-        fallback: "text-xs",
+        fallback: "text-2xs",
       },
       sm: {
         container:
