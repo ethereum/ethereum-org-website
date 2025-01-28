@@ -4,7 +4,6 @@ import { IconBase } from "react-icons"
 import {
   Center,
   cssVar,
-  Flex,
   Heading,
   Icon,
   SimpleGrid,
@@ -12,6 +11,7 @@ import {
   useToken,
   VStack,
 } from "@chakra-ui/react"
+import { Flex } from "@/components/ui/flex"
 
 import { ChildOnlyProp } from "@/lib/types"
 
@@ -130,7 +130,7 @@ const Line = () => {
 
   return (
     <aside
-      className={`realtive after:h-[calc.subtract("100%", "50px")] after:start-[calc.subtract("50%", "2px")] after:z-1 after:border-orange col-span-1 row-span-2 hidden after:absolute after:top-[50px] after:border-s-4 md:block`}
+      className={`realtive after:h-[calc.subtract("100%", "50px")] after:start-[calc.subtract("50%", "2px")] after:content-["] after:z-1 after:border-orange col-span-1 row-span-2 hidden after:absolute after:top-[50px] after:border-s-4 md:block`}
 
       /* 
         This value needs to be updated.
@@ -143,11 +143,8 @@ const Line = () => {
 
 const Header = ({ children }: ChildOnlyProp) => (
   <Flex
-    gridArea="header"
-    flexDirection="column"
-    justify="center"
-    alignItems={{ base: "center", md: "initial" }}
-    gap={2}
+    className="flex-col justify-center gap-2 sm:items-center md:items-start"
+    style={{ gridArea: "header" }}
   >
     {children}
   </Flex>
@@ -164,33 +161,9 @@ const HeadingEl = ({ children }: ChildOnlyProp) => (
     {children}
   </Heading>
 )
-
+// Todo: The removed sx prop will be added by creating a separate function for Text like we have HeadingEl. This will also help to migrate the Text component.
 const Pills = ({ children }: ChildOnlyProp) => (
-  <Flex
-    flexWrap="wrap"
-    gap={1}
-    justify={{ base: "center", md: "initial" }}
-    sx={{
-      p: {
-        color: $colorVar.reference,
-        m: 0,
-        position: "relative",
-        py: 0.5,
-        px: 1.5,
-        whiteSpace: "nowrap",
-        _after: {
-          content: `""`,
-          position: "absolute",
-          top: 0,
-          insetInlineStart: 0,
-          boxSize: "100%",
-          background: $colorVar.reference,
-          opacity: 0.125,
-          borderRadius: "sm",
-        },
-      },
-    }}
-  >
+  <Flex className="flex-wrap gap-1 sm:justify-center md:justify-start">
     {children}
   </Flex>
 )
@@ -209,18 +182,17 @@ const Glyph = ({ glyphIcon }: GlyphProps) => (
 
 const Content = ({ children }: ChildOnlyProp) => (
   <Flex
-    flexDirection="column"
-    gridArea="content"
-    mt={{ md: 4 }}
-    mb={{ md: 12 }}
-    sx={{
+    className="flex-col gap-4 md:mb-12 md:mt-4"
+    style={{
+      gridArea: "content",
+    }}
+    /* sx={{
       // For use in markdown files
       ".gold": {
         color: "stakingGold",
         fontWeight: 600,
       },
-    }}
-    gap={4}
+    }} */
   >
     {children}
   </Flex>
@@ -251,12 +223,26 @@ const StakingHierarchy = () => {
         <Header>
           <HeadingEl>{t("page-staking-hierarchy-solo-h2")}</HeadingEl>
           <Pills>
-            <Text>
+            <p
+              className={`after:content-["] relative m-0 whitespace-nowrap px-1.5 py-0.5 text-[colorVar.reference] after:absolute after:start-0 after:top-0 after:box-content after:rounded after:bg-[var(colorVar.reference)] after:opacity-[.125]`}
+            >
               <em>{t("page-staking-hierarchy-solo-pill-1")}</em>
+            </p>
+            <Text
+              className={`after:content-["] relative m-0 whitespace-nowrap px-1.5 py-0.5 text-[$colorVar.reference] after:absolute after:start-0 after:top-0 after:box-content after:rounded after:bg-[$colorVar.reference] after:opacity-[.125]`}
+            >
+              {t("page-staking-hierarchy-solo-pill-2")}
             </Text>
-            <Text>{t("page-staking-hierarchy-solo-pill-2")}</Text>
-            <Text>{t("page-staking-hierarchy-solo-pill-3")}</Text>
-            <Text>{t("page-staking-hierarchy-solo-pill-4")}</Text>
+            <Text
+              className={`after:content-["] relative m-0 whitespace-nowrap px-1.5 py-0.5 text-[$colorVar.reference] after:absolute after:start-0 after:top-0 after:box-content after:rounded after:bg-[$colorVar.reference] after:opacity-[.125]`}
+            >
+              {t("page-staking-hierarchy-solo-pill-3")}
+            </Text>
+            <Text
+              className={`after:content-["] relative m-0 whitespace-nowrap px-1.5 py-0.5 text-[$colorVar.reference] after:absolute after:start-0 after:top-0 after:box-content after:rounded after:bg-[$colorVar.reference] after:opacity-[.125]`}
+            >
+              {t("page-staking-hierarchy-solo-pill-4")}
+            </Text>
           </Pills>
         </Header>
         <Glyph glyphIcon={StakingGlyphCPUIcon} />
