@@ -2,7 +2,6 @@ import React from "react"
 import { useTranslation } from "next-i18next"
 import { IconBase } from "react-icons"
 import {
-  Center,
   cssVar,
   Heading,
   Icon,
@@ -11,7 +10,7 @@ import {
   useToken,
   VStack,
 } from "@chakra-ui/react"
-import { Flex } from "@/components/ui/flex"
+import { Center, Flex } from "@/components/ui/flex"
 
 import { ChildOnlyProp } from "@/lib/types"
 
@@ -118,7 +117,10 @@ const SectionGrid = ({ number, children }: SectionGridProps) => {
 
 const StyledEtherSvg = ({ className = "size-full" }: { className: string }) => {
   return (
-    <Center gridArea="ether" zIndex={2} maxW={20} width="full" mx="auto">
+    <Center
+      style={{ gridArea: "ether" }}
+      className="z-2 mx-auto w-full max-w-20"
+    >
       <StakingGlyphEtherCircleIcon className={className} />
     </Center>
   )
@@ -170,7 +172,11 @@ const Pills = ({ children }: ChildOnlyProp) => (
 
 type GlyphProps = { glyphIcon: typeof IconBase }
 const Glyph = ({ glyphIcon }: GlyphProps) => (
-  <Center gridArea={{ base: "content", md: "glyph" }}>
+  <Center
+    style={{
+      gridArea: "glyph",
+    }}
+  >
     <Icon
       as={glyphIcon}
       boxSize={{ base: "50%", md: "50px" }}
