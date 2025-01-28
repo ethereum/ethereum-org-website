@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react/*"
-import { fireEvent, within } from "@storybook/test"
+import { expect, fireEvent, waitFor, within } from "@storybook/test"
 
 import { MoreInfoPopover as MoreInfoPopoverComponent } from "../MoreInfoPopover"
 
@@ -13,15 +13,20 @@ export default meta
 export const MoreInfoPopover: StoryObj<typeof meta> = {
   args: {
     isFirstStep: false,
+    children: "I am info",
   },
-  render: (args) => (
-    <MoreInfoPopoverComponent {...args}>I am info</MoreInfoPopoverComponent>
-  ),
+  render: (args) => <MoreInfoPopoverComponent {...args} />,
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement)
 
     const popoverTrigger = canvas.getByTestId("more-info-popover-trigger")
 
     fireEvent.click(popoverTrigger)
+
+    await waitFor(async () => {
+      await expect(
+        canvas.getByTestId("more-info-popover-content")
+      ).toBeVisible()
+    })
   },
 }
