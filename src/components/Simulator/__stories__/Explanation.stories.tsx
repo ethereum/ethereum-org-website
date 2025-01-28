@@ -15,11 +15,6 @@ const meta = {
       ),
     },
   },
-} satisfies Meta<typeof ExplanationComponent>
-
-export default meta
-
-export const Explanation: StoryObj<typeof meta> = {
   args: {
     explanation: {
       header: "Begin your journey by downloading a wallet",
@@ -48,5 +43,19 @@ export const Explanation: StoryObj<typeof meta> = {
     nextPathId: "send-receive",
     finalCtaLink: { href: "#", label: "Next Step", isPrimary: true },
   },
-  render: (args) => <ExplanationComponent {...args} />,
+} satisfies Meta<typeof ExplanationComponent>
+
+export default meta
+
+type Story = StoryObj<typeof meta>
+
+export const FirstStep: Story = {}
+
+export const EndStep: Story = {
+  args: {
+    nav: {
+      ...meta.args.nav,
+      totalSteps: 1,
+    },
+  },
 }
