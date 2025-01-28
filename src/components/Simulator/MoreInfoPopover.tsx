@@ -34,6 +34,7 @@ export const MoreInfoPopover = ({ isFirstStep, children }: MoreInfoPopover) => {
           p={0}
           onClick={() => setClicked(true)}
           position="relative"
+          data-testid="more-info-popover-trigger"
         >
           More info
           {isFirstStep && !clicked && <PulseAnimation type="narrow-button" />}
@@ -44,6 +45,7 @@ export const MoreInfoPopover = ({ isFirstStep, children }: MoreInfoPopover) => {
         py={6}
         insetStart={{ base: 4, sm: 8 }}
         w={{ base: "calc(100vw - 3rem)", sm: "calc(100vw - 5rem)" }}
+        data-testid="more-info-popover-content"
       >
         <PopoverArrow />
         <PopoverCloseButton ms="auto" />
