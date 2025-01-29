@@ -56,7 +56,7 @@ const LeftColumn = (props: ChildOnlyProp) => (
 
 const RightColumn = (props: ChildOnlyProp) => (
   <Flex
-    className="flex-shrink flex-grow basis-1/2 flex-col items-center p-8 pt-4"
+    className="flex-shrink flex-grow basis-1/2 flex-col items-center p-8 pt-4 lg:pt-36"
     {...props}
   />
 )
@@ -339,6 +339,7 @@ const DepositContractPage = () => {
                   <Flex className="flex-col">
                     <label className="mb-2 flex items-center gap-2">
                       <Checkbox
+                        className="flex-none"
                         checked={state.userHasUsedLaunchpad}
                         onCheckedChange={() =>
                           setState({
@@ -351,6 +352,7 @@ const DepositContractPage = () => {
                     </label>
                     <label className="mb-2 flex items-center gap-2">
                       <Checkbox
+                        className="flex-none"
                         checked={state.userUnderstandsStaking}
                         onCheckedChange={() =>
                           setState({
@@ -364,6 +366,7 @@ const DepositContractPage = () => {
                     </label>
                     <label className="mb-2 flex items-center gap-2">
                       <Checkbox
+                        className="flex-none"
                         checked={state.userWillCheckOtherSources}
                         onCheckedChange={() =>
                           setState({
