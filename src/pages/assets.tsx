@@ -1,26 +1,17 @@
 import type { GetStaticProps } from "next/types"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import {
-  Box,
-  Center,
-  Flex,
-  Heading,
-  type HeadingProps,
-  SimpleGrid,
-  type SimpleGridProps,
-  useColorModeValue,
-} from "@chakra-ui/react"
 
 import type { BasePageProps, ChildOnlyProp, Lang } from "@/lib/types"
 
 import AssetDownload from "@/components/AssetDownload"
 import FeedbackCard from "@/components/FeedbackCard"
-import { Image } from "@/components/Image"
-import InlineLink from "@/components/Link"
+import Heading from "@/components/Heading"
+import { TwImage } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
-import OldHeading from "@/components/OldHeading"
 import PageMetadata from "@/components/PageMetadata"
+import { Center, Flex } from "@/components/ui/flex"
+import InlineLink from "@/components/ui/Link"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
@@ -37,6 +28,7 @@ import { getLocaleTimestamp } from "@/lib/utils/time"
 // import leslieTheRhino from "@/public/images/upgrades/upgrade_rhino.png"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
+import useColorModeValue from "@/hooks/useColorModeValue"
 import ethDiamondBlack from "@/public/images/assets/eth-diamond-black.png"
 import ethDiamondBlackGray from "@/public/images/assets/eth-diamond-black-gray.png"
 import ethDiamondBlackWhite from "@/public/images/assets/eth-diamond-black-white.jpg"
@@ -89,16 +81,17 @@ import defi from "@/public/images/use-cases/defi.png"
 import wallet from "@/public/images/wallet.png"
 import whatIsEthereum from "@/public/images/what-is-ethereum.png"
 
-const Row = (props: SimpleGridProps) => (
-  <SimpleGrid
-    templateColumns="repeat(auto-fit, minmax(min(288px, 100%), 1fr))"
-    mx={-4}
-    mb="8"
+const Row = (props: ChildOnlyProp) => (
+  <div
+    className="-mx-4 mb-8 grid"
+    style={{
+      gridTemplateColumns: "repeat(auto-fit, minmax(min(288px, 100%), 1fr))",
+    }}
     {...props}
   />
 )
 
-const H2 = (props: ChildOnlyProp & HeadingProps) => (
+const H2 = (props: ChildOnlyProp) => (
   <Heading
     fontSize={{ base: "2xl", md: "3xl" }}
     lineHeight={1.4}
@@ -110,13 +103,7 @@ const H2 = (props: ChildOnlyProp & HeadingProps) => (
 )
 
 const H3 = (props: ChildOnlyProp) => (
-  <OldHeading
-    as="h3"
-    fontSize={{ base: "xl", md: "2xl" }}
-    lineHeight={1.4}
-    mb="0"
-    {...props}
-  />
+  <h3 className="mb-0 mt-10 leading-xs" {...props} />
 )
 
 export const getStaticProps = (async ({ locale }) => {
@@ -146,18 +133,18 @@ const AssetsPage = () => {
     ethDiamondPurple
   )
   return (
-    <Flex direction="column" width="full">
+    <Flex className="w-full flex-col">
       <PageMetadata
         title={t("page-assets-meta-title")}
         description={t("page-assets-meta-desc")}
       />
-      <Box as={MainArticle} py="4" px="8">
-        <Flex direction="column" px="8" py="4">
+      <MainArticle className="px-8 py-4">
+        <Flex className="flex-col px-8 py-4">
           <Center>
-            <Image
+            <TwImage
+              className="w-20"
               src={assetPageHeroImage}
               alt={t("page-assets-eth-diamond-gray")}
-              w="5rem"
             />
           </Center>
           <Center>
@@ -182,7 +169,7 @@ const AssetsPage = () => {
           </Center>
         </Flex>
 
-        <H2 id="illustrations">{t("page-assets-illustrations")}</H2>
+        <H2>{t("page-assets-illustrations")}</H2>
 
         <Row>
           <AssetDownload
@@ -381,8 +368,8 @@ const AssetsPage = () => {
             artistUrl="https://www.patrickatkins.co.uk/"
           />
         </Row>
-        <H2 id="historical">{t("page-assets-historical-artwork")}</H2>
-        <H2 id="brand">{t("page-assets-ethereum-brand-assets")}</H2>
+        <H2>{t("page-assets-historical-artwork")}</H2>
+        <H2>{t("page-assets-ethereum-brand-assets")}</H2>
         <H3>{t("page-assets-page-assets-transparent-background")}</H3>
         <Row>
           <AssetDownload
@@ -548,7 +535,7 @@ const AssetsPage = () => {
             svgUrl="/images/assets/svgs/ethereum-wordmark-purple-white.svg"
           />
         </Row>
-        <H2 id="historical-illustrations">{t("page-assets-illustrations")}</H2>
+        <H2>{t("page-assets-illustrations")}</H2>
         <Row>
           <AssetDownload
             title={t("page-assets-hero-panda")}
@@ -562,7 +549,7 @@ const AssetsPage = () => {
             svgUrl="/images/assets/svgs/merge-panda.svg"
           />
         </Row>
-      </Box>
+      </MainArticle>
       <FeedbackCard />
     </Flex>
   )
