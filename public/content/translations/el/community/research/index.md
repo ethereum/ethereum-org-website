@@ -111,7 +111,7 @@ lang: el
 #### Πρόσφατη έρευνα {#recent-research-2}
 
 - [Arbitrum's δίκαιη εντολή για ακολουθίες](https://eprint.iacr.org/2021/1465)
-- [ethresear.ch επίπεδο 2](https://ethresear.ch/c/layer-2/32)
+- [Ethresear.ch Επίπεδο 2](https://ethresear.ch/c/layer-2/32)
 - [Οδικός χάρτης Rollup-centric](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698)
 - [L2Beat](https://l2beat.com/)
 
@@ -189,7 +189,7 @@ lang: el
 
 - [Εισαγωγή στα πορτοφόλια](/wallets/)
 - [Εισαγωγή στην ασφάλεια πορτοφολιού](/security/)
-- [Ασφάλεια ethresear.ch](https://ethresear.ch/tag/security)
+- [Ασφάλεια Ethresear.ch](https://ethresear.ch/tag/security)
 - [EIP-2938 Αφαιρετικότητα λογαριασμού](https://eips.ethereum.org/EIPS/eip-2938)
 - [EIP-4337 Αφαιρετικότητα λογαριασμού](https://eips.ethereum.org/EIPS/eip-4337)
 
@@ -381,7 +381,7 @@ lang: el
 
 #### Πρόσφατη έρευνα {#recent-research-19}
 
-- [Εφαρμογές ethresear.ch](https://ethresear.ch/c/applications/18)
+- [Εφαρμογές Ethresear.ch](https://ethresear.ch/c/applications/18)
 
 ### Κατηγορία τεχνολογία {#technology-stack}
 

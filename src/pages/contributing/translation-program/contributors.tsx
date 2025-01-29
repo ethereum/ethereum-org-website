@@ -1,27 +1,20 @@
+import { BaseHTMLAttributes } from "react"
 import { useRouter } from "next/router"
 import { GetStaticProps } from "next/types"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import {
-  Box,
-  BoxProps,
-  Flex,
-  HeadingProps,
-  ListItem,
-  SimpleGrid,
-  UnorderedList,
-} from "@chakra-ui/react"
 
 import { BasePageProps, CostLeaderboardData, Lang } from "@/lib/types"
 
 import Breadcrumbs from "@/components/Breadcrumbs"
 import FeedbackCard from "@/components/FeedbackCard"
-import InlineLink from "@/components/Link"
 import MainArticle from "@/components/MainArticle"
-import OldHeading from "@/components/OldHeading"
-import Text from "@/components/OldText"
 import PageMetadata from "@/components/PageMetadata"
+import { Flex } from "@/components/ui/flex"
+import InlineLink from "@/components/ui/Link"
+import { List, ListItem } from "@/components/ui/list"
 
+import { cn } from "@/lib/utils/cn"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLocaleTimestamp } from "@/lib/utils/time"
@@ -51,11 +44,15 @@ export const getStaticProps = (async ({ locale }) => {
   }
 }) satisfies GetStaticProps<BasePageProps>
 
-const Content = (props: BoxProps) => (
-  <Box as={MainArticle} py={4} px={10} w="full" {...props} />
+const Content = ({ ...props }: BaseHTMLAttributes<HTMLHeadingElement>) => (
+  <MainArticle className="w-full px-10 py-4" {...props} />
 )
-const ContentHeading = (props: HeadingProps) => (
-  <OldHeading lineHeight={1.4} {...props} />
+
+const Text = ({
+  className,
+  ...props
+}: BaseHTMLAttributes<HTMLHeadingElement>) => (
+  <p className={cn("mb-6", className)} {...props} />
 )
 
 const Contributors = () => {
@@ -69,7 +66,7 @@ const Contributors = () => {
     .filter((item) => item.length > 0)
 
   return (
-    <Flex direction="column" align="center" w="full">
+    <Flex className="w-full flex-col items-center">
       <PageMetadata
         title={t(
           "page-contributing-translation-program-contributors-meta-title"
@@ -81,25 +78,15 @@ const Contributors = () => {
 
       <Content>
         <Breadcrumbs slug={router.asPath} className="mt-12" />
-        <ContentHeading
-          as="h1"
-          fontSize={{ base: "2.5rem", md: "5xl" }}
-          fontWeight={700}
-        >
+        <h1 className="my-8 leading-xs">
           {t("page-contributing-translation-program-contributors-title")}
-        </ContentHeading>
-        <ContentHeading
-          as="h4"
-          fontSize={{ base: "md", md: "xl" }}
-          fontWeight={500}
-        >
-          <Text as="strong">
-            {t(
-              "page-contributing-translation-program-contributors-number-of-contributors"
-            )}{" "}
-            {translators.length}
-          </Text>
-        </ContentHeading>
+        </h1>
+        <h4 className="my-8 leading-xs">
+          {t(
+            "page-contributing-translation-program-contributors-number-of-contributors"
+          )}{" "}
+          {translators.length}
+        </h4>
         <Text>
           {t(
             "page-contributing-translation-program-contributors-our-translators-1"
@@ -122,24 +109,20 @@ const Contributors = () => {
           </InlineLink>
           .
         </Text>
-        <ContentHeading
-          as="h2"
-          fontSize={{ base: "2xl", md: "2rem" }}
-          fontWeight={600}
-        >
+        <h2 className="mb-8 mt-12 leading-xs">
           {t("page-contributing-translation-program-contributors-thank-you")}
-        </ContentHeading>
-        <SimpleGrid as={UnorderedList} columns={[1, 2, 3, 4, 6]} ms="1.45rem">
+        </h2>
+        <List className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
           {translators
             .sort((user1, user2) =>
               user1.toLowerCase().localeCompare(user2.toLowerCase())
             )
             .map((user) => (
-              <ListItem key={user} color="text300">
+              <ListItem key={user} className="text-body-medium">
                 {user}
               </ListItem>
             ))}
-        </SimpleGrid>
+        </List>
         <Text>
           {t("common:page-languages-interested")}{" "}
           <InlineLink href="/contributing/translation-program/">

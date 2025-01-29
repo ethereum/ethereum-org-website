@@ -1,5 +1,6 @@
 ---
 title: Μη Εναλλάξιμα Κρυπτοπαραστατικά (NFT)
+metaTitle: Τι είναι τα NFT; | Πλεονεκτήματα και χρήση
 description: Μια επισκόπηση των NFT στο Ethereum
 lang: el
 template: use-cases
