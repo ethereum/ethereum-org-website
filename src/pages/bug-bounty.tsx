@@ -65,8 +65,8 @@ const Title = (props: ChildOnlyProp) => (
   <Text className="mb-0 ms-2 uppercase text-body" {...props} />
 )
 
-const H2 = (props: ChildOnlyProp) => (
-  <h2 className="mb-8 mt-12 text-left tracking-normal" {...props} />
+const H2 = (props: HTMLAttributes<HTMLHeadingElement>) => (
+  <h2 className="mb-8 mt-12 text-center tracking-normal" {...props} />
 )
 
 const H4 = (props: ChildOnlyProp) => (
@@ -170,7 +170,14 @@ const StyledCardContainer = (props: ChildOnlyProp) => (
 )
 
 const StyledCard = ({ children, ...props }) => (
-  <Card flex="1 1 464px" m="4" p="6" justifyContent="flex-start" {...props}>
+  <Card
+    flex="1 1 464px"
+    m="4"
+    p="6"
+    justifyContent="flex-start"
+    bg="background.base"
+    {...props}
+  >
     {children}
   </Card>
 )
@@ -451,7 +458,9 @@ const BugBountiesPage = () => {
       </ClientRow>
       <StyledGrayContainer id="rules">
         <Content>
-          <H2>{t("page-upgrades-bug-bounty-validity")}</H2>
+          <H2 className="mb-4 text-left">
+            {t("page-upgrades-bug-bounty-validity")}
+          </H2>
           <Text>
             <Translation id="page-bug-bounty:page-upgrades-bug-bounty-validity-desc" />
           </Text>
