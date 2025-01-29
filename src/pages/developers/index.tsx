@@ -53,7 +53,7 @@ const Subtitle = ({
 )
 
 const MonoSubtitle = (props: ChildOnlyProp) => (
-  <h2 className="mb-0 mt-6" {...props} />
+  <h2 className="mb-0 mt-12" {...props} />
 )
 
 const H2 = (props: ChildOnlyProp) => <h2 className="mb-8 mt-12" {...props} />
