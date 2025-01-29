@@ -207,10 +207,10 @@ export const ConnectWeb3 = ({ nav, ctaLabel }: PhoneScreenProps) => {
       )}
       {[0, 1, 2, 3, 4].includes(step) && (
         <ProgressCta
+          className={step === 0 ? "mb-16" : "mb-0"}
           isAnimated={step === 0}
-          isDisabled={ctaDisabled}
+          disabled={ctaDisabled}
           progressStepper={progressStepper}
-          mb={step === 0 ? 16 : 0}
         >
           {ctaLabel}
         </ProgressCta>
