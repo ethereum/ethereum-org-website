@@ -4,6 +4,7 @@ import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { FaGithub } from "react-icons/fa"
+import { Badge, chakra, forwardRef } from "@chakra-ui/react"
 
 import { BasePageProps, Lang } from "@/lib/types"
 
@@ -15,12 +16,7 @@ import PageMetadata from "@/components/PageMetadata"
 import Translation from "@/components/Translation"
 import { getSkillTranslationId, Skill } from "@/components/TutorialMetadata"
 import TutorialTags from "@/components/TutorialTags"
-import { Badge } from "@/components/ui/badge"
-import {
-  Button,
-  ButtonLink,
-  type ButtonProps,
-} from "@/components/ui/buttons/Button"
+import { Button, ButtonLink } from "@/components/ui/buttons/Button"
 import Modal from "@/components/ui/dialog-modal"
 import { Flex, FlexProps } from "@/components/ui/flex"
 
@@ -44,29 +40,39 @@ type Props = BasePageProps & {
   internalTutorials: ITutorial[]
 }
 
-type FilterTagProps = {
-  isActive: boolean
-  name: string
-} & ButtonProps
-
 type LinkFlexProps = FlexProps & {
   href: string
 }
 
-const FilterTag = React.forwardRef<HTMLButtonElement, FilterTagProps>(
-  ({ isActive, name, ...rest }, ref) => (
-    <Button
-      ref={ref}
-      className={`rounded-sm border bg-gradient-main p-2 uppercase leading-4xs hover:!border-border-high-contrast hover:bg-inherit hover:!text-primary ${
-        isActive
-          ? "!border-primary text-body shadow-table"
-          : "!border-border text-body-medium shadow-none"
-      }`}
-      {...rest}
-    >
-      {name}
-    </Button>
-  )
+const FilterTag = forwardRef<{ isActive: boolean; name: string }, "button">(
+  (props, ref) => {
+    const { isActive, name, ...rest } = props
+    return (
+      <chakra.button
+        ref={ref}
+        bg="none"
+        bgImage="radial-gradient(46.28% 66.31% at 66.95% 58.35%,rgba(127, 127, 213, 0.2) 0%,rgba(134, 168, 231, 0.2) 50%,rgba(145, 234, 228, 0.2) 100%)"
+        border="1px"
+        borderColor={isActive ? "primary300" : "white800"}
+        borderRadius="base"
+        boxShadow={!isActive ? "table" : undefined}
+        color="text"
+        fontSize="sm"
+        lineHeight={1.2}
+        opacity={isActive ? 1 : 0.7}
+        p={2}
+        textTransform="uppercase"
+        _hover={{
+          color: "primary.base",
+          borderColor: "text200",
+          opacity: "1",
+        }}
+        {...rest}
+      >
+        {name}
+      </chakra.button>
+    )
+  }
 )
 
 FilterTag.displayName = FilterTag.name
@@ -334,15 +340,12 @@ const TutorialPage = ({
               href={tutorial.href ?? undefined}
             >
               <Flex className="mb-8 flex-col items-start justify-between gap-y-4 md:-mb-4 md:flex-row">
-                <h4
-                  className={`relative me-0 text-body after:ml-2 after:inline-block after:italic after:transition-all after:duration-100 after:ease-in-out after:content-['↗'] md:me-24 ${tutorial.isExternal ? "after:inline-block" : "after:hidden"}`}
+                <Text
+                  className={`relative me-0 text-2xl font-semibold text-body after:ml-2 after:inline-block after:italic after:transition-all after:duration-100 after:ease-in-out after:content-['↗'] md:me-24 ${tutorial.isExternal ? "after:inline-block" : "after:hidden"}`}
                 >
                   {tutorial.title}
-                </h4>
-                <Badge
-                  variant="secondary"
-                  className="rounded-sm border border-border text-body"
-                >
+                </Text>
+                <Badge variant="secondary">
                   <Translation id={getSkillTranslationId(tutorial.skill!)} />
                 </Badge>
               </Flex>
