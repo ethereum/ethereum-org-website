@@ -1,3 +1,4 @@
+import { HTMLAttributes } from "react"
 import type { GetStaticProps } from "next/types"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
@@ -83,23 +84,13 @@ import whatIsEthereum from "@/public/images/what-is-ethereum.png"
 
 const Row = (props: ChildOnlyProp) => (
   <div
-    className="-mx-4 mb-8 grid"
-    style={{
-      gridTemplateColumns: "repeat(auto-fit, minmax(min(288px, 100%), 1fr))",
-    }}
+    className="-mx-4 mb-8 grid grid-cols-[repeat(auto-fit,minmax(min(288px,100%),1fr))]"
     {...props}
   />
 )
 
-const H2 = (props: ChildOnlyProp) => (
-  <Heading
-    fontSize={{ base: "2xl", md: "3xl" }}
-    lineHeight={1.4}
-    mt={16}
-    mb="6"
-    scrollMarginTop={24}
-    {...props}
-  />
+const H2 = (props: HTMLAttributes<HTMLHeadingElement>) => (
+  <h2 className="mb-6 mt-16 scroll-mt-24 leading-xs" {...props} />
 )
 
 const H3 = (props: ChildOnlyProp) => (
@@ -169,7 +160,7 @@ const AssetsPage = () => {
           </Center>
         </Flex>
 
-        <H2>{t("page-assets-illustrations")}</H2>
+        <H2 id="illustrations">{t("page-assets-illustrations")}</H2>
 
         <Row>
           <AssetDownload
@@ -368,8 +359,8 @@ const AssetsPage = () => {
             artistUrl="https://www.patrickatkins.co.uk/"
           />
         </Row>
-        <H2>{t("page-assets-historical-artwork")}</H2>
-        <H2>{t("page-assets-ethereum-brand-assets")}</H2>
+        <H2 id="historical">{t("page-assets-historical-artwork")}</H2>
+        <H2 id="brand">{t("page-assets-ethereum-brand-assets")}</H2>
         <H3>{t("page-assets-page-assets-transparent-background")}</H3>
         <Row>
           <AssetDownload
@@ -535,7 +526,7 @@ const AssetsPage = () => {
             svgUrl="/images/assets/svgs/ethereum-wordmark-purple-white.svg"
           />
         </Row>
-        <H2>{t("page-assets-illustrations")}</H2>
+        <H2 id="historical-illustrations">{t("page-assets-illustrations")}</H2>
         <Row>
           <AssetDownload
             title={t("page-assets-hero-panda")}
