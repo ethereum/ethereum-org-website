@@ -126,9 +126,6 @@
     --staking-blue-fill: #f1fcf5;
     --staking-red: #a0524c;
     --staking-red-fill: #f8fbf9;
-
-    --edn-background: #f7f7f7;
-    --light-border: #ececec;
   }
 
   /* Dark mode token declarations */
@@ -227,8 +224,5 @@
     --staking-blue-fill: #2b352f;
     --staking-red: #d6bbb9;
     --staking-red-fill: #313432;
-
-    --edn-background: #1a1a1a;
-    --light-border: #404040;
   }
 }
