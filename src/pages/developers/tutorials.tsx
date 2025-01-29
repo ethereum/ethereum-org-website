@@ -75,8 +75,6 @@ const FilterTag = forwardRef<{ isActive: boolean; name: string }, "button">(
   }
 )
 
-FilterTag.displayName = FilterTag.name
-
 const Text = ({ className, ...props }: HTMLAttributes<HTMLHeadElement>) => (
   <p className={cn("mb-6", className)} {...props} />
 )
