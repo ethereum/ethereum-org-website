@@ -49,6 +49,7 @@ export const ClickAnimation = ({
       bottom={bottom}
       insetInline={0}
       color="primary.base"
+      data-testid="click-animation-el"
     >
       <MotionFlex
         direction={direction}
