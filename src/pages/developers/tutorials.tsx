@@ -144,10 +144,11 @@ const TutorialPage = ({
   internalTutorials,
   contentNotTranslated,
 }: InferGetServerSidePropsType<typeof getStaticProps>) => {
-  const { locale } = useRouter()
+  let { locale } = useRouter()
   const { flipForRtl } = useRtlFlip()
   const tableBoxShadow = useToken("colors", "tableBoxShadow")
   const cardBoxShadow = useToken("colors", "cardBoxShadow")
+  if (internalTutorials.length === 0) locale = "en"
   const filteredTutorialsByLang = useMemo(
     () =>
       filterTutorialsByLang(
