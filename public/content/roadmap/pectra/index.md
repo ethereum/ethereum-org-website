@@ -16,9 +16,9 @@ Pectra upgrade is only a single step in Ethereum's long-term development goals. 
 
 ## Activation and roadmap progress {#roadmap-impact}
 
-With each protocol upgrade, Ethereum evolves further to become a more mature platform with better scalability, security and usability. Each upgrade contains multiple improvements that require a lot of initial research, discussion, and later implementations in clients. After rigorous testing, Pectra will be activated on testnets and finally mainnet, bringing these improvements to the entire Ethereum ecosystem.
+With each protocol upgrade, Ethereum evolves further to become a more mature platform with better scalability, security and usability. Each upgrade contains multiple improvements that require a lot of initial research, discussion, and later implementations in clients. After rigorous testing, Pectra will be activated on testnets and finally Mainnet, bringing these improvements to the entire Ethereum ecosystem.
 
-The upgrade includes various improvements enabling new functionality in the network but also some internal protocol changes that will open a path towards further improvements in the future roadmap.
+The upgrade includes various updates enabling new functionality in the network but also some internal protocol changes that will open a path towards further development of the future roadmap.
 
 ## Improvements in Pectra {#new-improvements}
 
@@ -36,7 +36,7 @@ The current effective balance of the validator is exactly 32 ETH. It's the minim
 
 [EIP-7251](https://eips.ethereum.org/EIPS/eip-7251) raises the maximum effective balance to 2048 ETH, meaning that a single validator client can now stake between 32 and 2048 ETH. Instead of multiples of 32, stakers can now choose an arbitrary amount of ETH to stake and receive rewards on every 1 ETH above the minimum. For example, if a validator's balance grows with their rewards to 33 ETH, the extra 1 ETH is also considered part of the effective balance and receives rewards.
 
-But the benefit of a better reward system for validators is only a part of this improvement. Stakers running multiple validators can now aggregate them into a single one, which enables easier operation and reduces network overhead. Because every validator in Beacon Chain submits a signature in every epoch, the bandwidth requirements grow with more validators and a large number of signatures to propagate. Aggregating validators will take load off of the network and open new scaling options while keeping the same economic security.
+But the benefit of a better reward system for validators is only a part of this improvement. [Stakers](/staking/) running multiple validators can now aggregate them into a single one, which enables easier operation and reduces network overhead. Because every validator in Beacon Chain submits a signature in every epoch, the bandwidth requirements grow with more validators and a large number of signatures to propagate. Aggregating validators will take load off of the network and open new scaling options while keeping the same economic security.
 
 ### Blob throughput increase {#7691}
 
@@ -52,7 +52,7 @@ With Ethereum embracing blobs to store data, (EIP-7623)[https://eips.ethereum.or
 
 ### Execution layer triggerable exits {#7002}
 
-Currently, exiting a validator and withdrawing staked ETH is a consensus layer operation that requires an active validator key, the same BLS key used by the validator to perform active duties like attestations. Withdrawal credentials is a separate cold key that receives the exited stake but cannot trigger the exit. The only way for stakers to exit is to send a special message to the Beacon Chain network signed using the active validator key. This is limiting in scenarios where the withdrawal credentials and validator key are held by different entities or when the validator key gets lost.
+Currently, exiting a validator and [withdrawing staked ETH](/staking/withdrawals/) is a consensus layer operation that requires an active validator key, the same BLS key used by the validator to perform active duties like attestations. Withdrawal credentials is a separate cold key that receives the exited stake but cannot trigger the exit. The only way for stakers to exit is to send a special message to the Beacon Chain network signed using the active validator key. This is limiting in scenarios where the withdrawal credentials and validator key are held by different entities or when the validator key gets lost.
 
 [EIP-7002](https://eips.ethereum.org/EIPS/eip-7002) introduces a new system contract on the execution layer that can be used to trigger the exit using withdrawal credentials. Stakers will be able to exit their validator by calling a function in this special contract without the need for their validator key or access to Beacon Chain at all. Importantly, enabling handling validator withdrawal onchain allows for building new protocols for staking with third parties, less trust in staking pools and more security.
 
@@ -92,7 +92,7 @@ To learn more about how Pectra affects you specifically as an Ethereum user, dev
 
 ## Does this upgrade affect all Ethereum nodes and validators? {#client-impact}
 
-Yes, Pectra upgrade requires updates to both execution clients and consensus clients. All main Ethereum clients will release versions supporting the hard fork marked as high priority. To maintain synchronization with the Ethereum network post-upgrade, node operators must ensure they are running a supported client version. Note that the information about client releases is time-sensitive, and users should refer to the latest updates for the most current details.
+Yes, Pectra upgrade requires updates to both [execution clients and consensus clients](/developers/docs/nodes-and-clients/). All main Ethereum clients will release versions supporting the hard fork marked as high priority. To maintain synchronization with the Ethereum network post-upgrade, node operators must ensure they are running a supported client version. Note that the information about client releases is time-sensitive, and users should refer to the latest updates for the most current details.
 
 ## How can ETH be converted after the hard fork? {#scam-alert}
 
