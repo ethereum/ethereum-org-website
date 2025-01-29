@@ -145,7 +145,7 @@ This system relies on the existence of so-called "ledger channels", which have b
 
 Users in each virtual channel interact via a new contract instance, with the ledger channel able to support multiple contract instances. The ledger channel's state also contains more than one contract storage state, allowing for parallel execution of applications off-chain between different users.
 
-Just like regular channels, users exchange state updates to progress the state machine. Except a dispute arises, the intermediary only has to be contacted when opening or terminating the channel.
+Just like regular channels, users exchange state updates to progress the state machine. Unless a dispute arises, the intermediary only has to be contacted when opening or terminating the channel.
 
 ### Virtual payment channels {#virtual-payment-channels}
 
