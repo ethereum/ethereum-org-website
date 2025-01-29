@@ -12,7 +12,6 @@ import CardList from "@/components/CardList"
 import EthPriceCard from "@/components/EthPriceCard"
 import EthVideo from "@/components/EthVideo"
 import FeedbackCard from "@/components/FeedbackCard"
-import Heading from "@/components/Heading"
 import HorizontalCard from "@/components/HorizontalCard"
 import { TwImage } from "@/components/Image"
 import InfoBanner from "@/components/InfoBanner"
@@ -66,6 +65,7 @@ const StyledCard = (props: ComponentProps<typeof Card>) => (
     flex="1 0 30%"
     minW="280px"
     maxW={{ base: "full", md: "46%", lg: "31%" }}
+    bg="background.base"
     {...props}
   />
 )
@@ -75,21 +75,14 @@ const Slogan = (props: ChildOnlyProp) => (
 )
 
 const Title = (props: ChildOnlyProp) => (
-  <Heading
-    as="h1"
-    fontSize="sm"
-    lineHeight={1.4}
-    letterSpacing="0.04em"
-    fontWeight="500"
-    mb={4}
-    textTransform="uppercase"
-    color="textTableOfContents"
+  <h1
+    className="mb-4 mt-0 text-md font-normal uppercase !leading-xs"
     {...props}
   />
 )
 
 const Subtitle = (props: ChildOnlyProp) => (
-  <Text className="leading-xs text-body-medium" {...props} />
+  <Text className="mb-0 leading-xs text-body-medium" {...props} />
 )
 
 const Text = ({ className, ...props }: HTMLAttributes<HTMLHeadingElement>) => (
