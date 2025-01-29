@@ -156,7 +156,7 @@ const HeroCard = (props: ChildOnlyProp) => (
 
 const HeroContainer = (props: ChildOnlyProp) => (
   <div
-    className="flex-1 basis-1/2 pb-16 pl-0 pr-0 pt-24 lg:pb-32 lg:pl-8 lg:pr-8 lg:pt-32"
+    className="flex-1 basis-1/2 pb-16 pl-0 pr-0 pt-24 lg:-mt-32 lg:pb-32 lg:pl-8 lg:pr-8 lg:pt-32"
     {...props}
   />
 )
