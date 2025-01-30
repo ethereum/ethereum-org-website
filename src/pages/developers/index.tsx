@@ -24,7 +24,6 @@ import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
-import useColorModeValue from "@/hooks/useColorModeValue"
 import SpeedRunEthereumImage from "@/public/images/dev-tools/speed-run-ethereum-banner.png"
 import DevelopersImage from "@/public/images/developers-eth-blocks.png"
 import DogeImage from "@/public/images/doge-computer.png"
@@ -97,21 +96,10 @@ const IntroColumn = (props: ChildOnlyProp) => (
 )
 
 const StyledCard = (props: CardProps) => {
-  const tableBoxShadow = useColorModeValue("tableBox.light", "tableBox.dark")
-
   return (
     <Card
-      boxShadow={tableBoxShadow}
-      m={4}
-      p={6}
+      className={`m-4 p-6 shadow-[0px_1px_3px_rgba(0,0,0,0.1)] transition-transform duration-100 hover:scale-105 hover:rounded hover:bg-background-highlight hover:shadow-[0px_8px_17px_rgba(0,0,0,0.15)] dark:shadow-[0px_1px_3px_rgba(60,60,60,0.1)]`}
       {...props}
-      _hover={{
-        borderRadius: "4px",
-        boxShadow: "0px 8px 17px rgba(0, 0, 0, 0.15)",
-        background: "tableBackgroundHover",
-        transition: "transform 0.1s",
-        transform: "scale(1.02)",
-      }}
     />
   )
 }
