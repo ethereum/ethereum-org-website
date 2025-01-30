@@ -62,7 +62,7 @@ const GappedContent = (props: ChildOnlyProp) => (
   />
 )
 
-const Content = (props: ChildOnlyProp) => (
+const Content = (props: HTMLAttributes<HTMLDivElement>) => (
   <div className="w-full px-8 py-4" {...props} />
 )
 
@@ -139,7 +139,7 @@ const BuildBox = ({
   ...props
 }: HTMLAttributes<HTMLHeadingElement>) => (
   <Container
-    className={cn("flex-1 flex-col bg-background-low p-8", className)}
+    className={cn("flex-1 flex-col bg-background-highlight p-8", className)}
     {...props}
   />
 )
@@ -194,11 +194,11 @@ const Text = ({ className, ...props }: HTMLAttributes<HTMLHeadingElement>) => (
 )
 
 const Width60 = (props: ChildOnlyProp) => (
-  <div className="w-full flex-[300%]" {...props} />
+  <div className="w-full flex-[3]" {...props} />
 )
 
 const Width40 = (props: ChildOnlyProp) => (
-  <Center className="w-full flex-[200%]" {...props} />
+  <Center className="w-full flex-[2]" {...props} />
 )
 
 type RunANodeCard = {
@@ -329,7 +329,7 @@ const RunANodePage = () => {
         </div>
       </div>
 
-      <Content>
+      <Content id="what-is-a-node">
         <TwoColumnContent>
           <Width60>
             <H2>
@@ -414,7 +414,7 @@ const RunANodePage = () => {
 
       <Divider />
 
-      <Content>
+      <Content id="getting-started">
         <H2>{t("page-run-a-node-getting-started-title")}</H2>
         <GappedContent>
           <SoftwareHighlight className="bg-[#ccfcff] dark:bg-[#293233]">
@@ -493,7 +493,7 @@ const RunANodePage = () => {
               <ul>
                 <li>{t("page-run-a-node-buy-fully-loaded-note-1")}</li>
                 <li>{t("page-run-a-node-buy-fully-loaded-note-2")}</li>
-                <li className="mb-0">
+                <li className="mb-0 font-bold">
                   <code>{t("page-run-a-node-buy-fully-loaded-note-3")}</code>
                 </li>
               </ul>
@@ -537,7 +537,7 @@ const RunANodePage = () => {
         </MarginFlex>
       </Content>
 
-      <Content>
+      <Content id="build-your-own">
         <H2>{t("page-run-a-node-build-your-own-title")}</H2>
 
         <BuildContainer>
