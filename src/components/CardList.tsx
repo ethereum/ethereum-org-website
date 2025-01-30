@@ -36,7 +36,7 @@ const Card = ({
   imageWidth = 20,
   ...props
 }: CardProps) => {
-  const { flipForRtl } = useRtlFlip()
+  const { twFlipForRtl } = useRtlFlip()
   const isLink = !!link
   const isExternal = url.isExternal(link || "")
 
@@ -70,7 +70,7 @@ const Card = ({
           <div className="mb-0 text-sm opacity-60">{caption}</div>
         </div>
       )}
-      {isExternal && <span style={{ transform: flipForRtl }}>↗</span>}
+      {isExternal && <span className={twFlipForRtl}>↗</span>}
     </div>
   )
 }
