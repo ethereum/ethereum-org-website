@@ -62,7 +62,7 @@ const Content = (props: ChildOnlyProp) => (
 )
 
 const Title = (props: ChildOnlyProp) => (
-  <Text className="mb-0 ms-2 uppercase text-body" {...props} />
+  <Text className="mb-0 ms-2 text-sm uppercase text-body" {...props} />
 )
 
 const H2 = (props: HTMLAttributes<HTMLHeadingElement>) => (
@@ -790,7 +790,9 @@ const BugBountiesPage = () => {
       <Divider />
       <Contact>
         <div>
-          <H2>{t("page-upgrades-bug-bounty-questions")}</H2>
+          <Text className="mb-4 text-xl font-bold">
+            {t("page-upgrades-bug-bounty-questions")}
+          </Text>
           <Text className="mb-0">
             {t("page-upgrades-bug-bounty-email-us")}{" "}
             <InlineLink href="mailto:bounty@ethereum.org">
