@@ -170,14 +170,7 @@ const StyledCardContainer = (props: ChildOnlyProp) => (
 )
 
 const StyledCard = ({ children, ...props }) => (
-  <Card
-    flex="1 1 464px"
-    m="4"
-    p="6"
-    justifyContent="flex-start"
-    bg="background.base"
-    {...props}
-  >
+  <Card className="m-4 flex-[1_1_464px] justify-start p-6" {...props}>
     {children}
   </Card>
 )
