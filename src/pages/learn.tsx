@@ -49,15 +49,7 @@ import whatIsEth from "@/public/images/what-is-ethereum.png"
 
 // TODO: Migrate the original Card component before updating this
 const Card = ({ children, ...props }: OriginalCardProps) => (
-  <OriginalCard
-    justifyContent="space-between"
-    sx={{
-      h3: {
-        mt: 0,
-      },
-    }}
-    {...props}
-  >
+  <OriginalCard className="justify-between [&_h3]:mt-0" {...props}>
     {children}
   </OriginalCard>
 )
@@ -447,8 +439,7 @@ const LearnPage = () => {
                   </>
                 </Card>
                 <Card
-                  justifyContent="start"
-                  bg="cardGradient"
+                  className="justify-start bg-gradient-main"
                   title={t("emerging-use-cases-title")}
                   description={t("emerging-use-cases-description")}
                 >
