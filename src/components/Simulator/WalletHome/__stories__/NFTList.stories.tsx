@@ -27,11 +27,17 @@ const meta = {
 
 export default meta
 
-export const NFTList: StoryObj = {
+export const HasList: StoryObj = {
   args: {
     nfts: Array.from({ length: 5 }, () => ({
       title: "Cool art",
       image: NFTImage,
     })),
+  },
+}
+
+export const NoNFTs: StoryObj = {
+  args: {
+    nfts: [],
   },
 }
