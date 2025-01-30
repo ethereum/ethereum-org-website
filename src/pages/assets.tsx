@@ -7,7 +7,6 @@ import type { BasePageProps, ChildOnlyProp, Lang } from "@/lib/types"
 
 import AssetDownload from "@/components/AssetDownload"
 import FeedbackCard from "@/components/FeedbackCard"
-import Heading from "@/components/Heading"
 import { TwImage } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
@@ -139,9 +138,7 @@ const AssetsPage = () => {
             />
           </Center>
           <Center>
-            <Heading as="h1" size="2xl" my="8">
-              {t("page-assets-h1")}
-            </Heading>
+            <h1 className="my-8">{t("page-assets-h1")}</h1>
           </Center>
           <Center>
             <InlineLink href="/assets/#illustrations">
