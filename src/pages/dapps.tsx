@@ -1821,7 +1821,7 @@ const DappsPage = () => {
                 {(categories[selectedCategory].benefits || []).map(
                   (art, idx) => (
                     <Card
-                      textAlign="center"
+                      className="text-center"
                       key={idx}
                       emoji={art.emoji}
                       title={art.title}

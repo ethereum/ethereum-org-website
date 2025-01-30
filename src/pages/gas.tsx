@@ -70,10 +70,7 @@ const Page = (props: FlexProps) => (
 
 export const StyledCard = (props: ComponentPropsWithRef<typeof Card>) => (
   <Card
-    flex="1 1 30%"
-    minW="280px"
-    maxW={{ base: "full", lg: "46%" }}
-    p={6}
+    className="min-w-[280px] max-w-full flex-[1_0_30%] p-6 md:max-w-[46%]"
     {...props}
   />
 )
