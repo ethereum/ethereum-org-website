@@ -60,12 +60,7 @@ const Intro = (props: ChildOnlyProp) => (
 
 const StyledCard = (props: ComponentProps<typeof Card>) => (
   <Card
-    m={4}
-    p={6}
-    flex="1 0 30%"
-    minW="280px"
-    maxW={{ base: "full", md: "46%", lg: "31%" }}
-    bg="background.base"
+    className="m-4 min-w-[280px] max-w-full flex-[1_0_30%] p-6 md:max-w-[46%] lg:max-w-[31%]"
     {...props}
   />
 )
