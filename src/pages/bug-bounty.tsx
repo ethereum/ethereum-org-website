@@ -254,7 +254,7 @@ const StyledCardContainer = (props: ChildOnlyProp) => (
 )
 
 const StyledCard = ({ children, ...props }) => (
-  <Card flex="1 1 464px" m="4" p="6" justifyContent="flex-start" {...props}>
+  <Card className="m-4 flex-[1_1_464px] justify-start p-6" {...props}>
     {children}
   </Card>
 )
@@ -473,7 +473,7 @@ const BugBountiesPage = () => {
         title={t("page-upgrades-bug-bounty-meta-title")}
         description={t("page-upgrades-bug-bounty-meta-description")}
       />
-      { /* TODO: Remove on the 25th of January */ }
+      {/* TODO: Remove on the 25th of January */}
       <BugBountyBanner />
       <Content>
         <HeroCard>

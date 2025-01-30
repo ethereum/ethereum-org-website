@@ -75,8 +75,7 @@ const EmojiCard = ({ emoji, title, description }) => (
     emoji={emoji}
     title={title}
     description={description}
-    flex="1 1 30%"
-    p={6}
+    className="flex-[1_1_30%] p-6"
   />
 )
 
