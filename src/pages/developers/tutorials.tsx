@@ -333,13 +333,16 @@ const TutorialPage = ({
         {filteredTutorials.map((tutorial) => {
           return (
             <LinkFlex
-              className="mb-px w-full flex-col justify-between border-b p-8 text-border no-underline duration-100 hover:rounded-sm hover:bg-background-low hover:shadow-table-box-hover"
+              className="mb-px w-full flex-col justify-between border-b p-8 text-border no-underline duration-100 hover:bg-background-highlight"
               key={tutorial.href}
               href={tutorial.href ?? undefined}
             >
               <Flex className="mb-8 flex-col items-start justify-between gap-y-4 md:-mb-4 md:flex-row">
                 <Text
-                  className={`relative me-0 text-2xl font-semibold text-body after:ml-2 after:inline-block after:italic after:transition-all after:duration-100 after:ease-in-out after:content-['↗'] md:me-24 ${tutorial.isExternal ? "after:inline-block" : "after:hidden"}`}
+                  className={cn(
+                    "relative me-0 text-2xl font-semibold text-body after:ml-2 after:inline-block after:italic after:transition-all after:duration-100 after:ease-in-out after:content-['↗'] md:me-24",
+                    tutorial.isExternal ? "after:inline-block" : "after:hidden"
+                  )}
                 >
                   {tutorial.title}
                 </Text>
