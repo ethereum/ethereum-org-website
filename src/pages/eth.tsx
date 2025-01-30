@@ -60,7 +60,7 @@ const Intro = (props: ChildOnlyProp) => (
 
 const StyledCard = (props: ComponentProps<typeof Card>) => (
   <Card
-    className="m-4 min-w-[280px] max-w-full flex-[1_0_30%] p-6 md:max-w-[46%] lg:max-w-[31%]"
+    className="m-4 min-w-[280px] max-w-full flex-[1_0_30%] bg-background p-6 md:max-w-[46%] lg:max-w-[31%]"
     {...props}
   />
 )
