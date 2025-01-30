@@ -1,5 +1,7 @@
+import pickBy from "lodash/pickBy"
 import type { Meta, StoryObj } from "@storybook/react/*"
 
+import { viewportModes } from "../../../../../.storybook/modes"
 import { NFTList as Component } from "../NFTList"
 
 import NFTImage from "@/public/images/deep-panic.png"
@@ -14,6 +16,13 @@ const meta = {
       </div>
     ),
   ],
+  parameters: {
+    chromatic: {
+      modes: pickBy(viewportModes, (args) =>
+        ["base", "md"].includes(args.viewport)
+      ),
+    },
+  },
 } satisfies Meta<typeof Component>
 
 export default meta
