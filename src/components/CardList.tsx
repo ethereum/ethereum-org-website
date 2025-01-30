@@ -1,12 +1,13 @@
 import TwImage, { type ImageProps } from "next/image"
 import type { ReactNode } from "react"
 
-import { BaseLink } from "@/components/Link"
-import { LinkBox } from "@/components/ui/link-box"
+import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 
 import { cn } from "@/lib/utils/cn"
 import { MatomoEventOptions, trackCustomEvent } from "@/lib/utils/matomo"
 import * as url from "@/lib/utils/url"
+
+import { BaseLink } from "./ui/Link"
 
 import { useRtlFlip } from "@/hooks/useRtlFlip"
 
@@ -42,9 +43,9 @@ const Card = ({
   return (
     <div
       className={cn(
-        "text-text flex flex-row items-center gap-4 border border-solid border-border p-4",
+        "text-text flex flex-row items-center gap-4 border p-4",
         "transition-all duration-200",
-        "hover:rounded-base hover:bg-tableBackgroundHover hover:shadow-[0_0_1px_var(--eth-colors-primary)]",
+        "hover:bg-background-highlight",
         className
       )}
       onClick={onClick}
@@ -53,14 +54,11 @@ const Card = ({
       {image && <TwImage src={image} alt={alt ?? ""} width={imageWidth} />}
       <div className="flex flex-1 basis-3/4 flex-col">
         {isLink ? (
-          <BaseLink
-            href={link}
-            isExternal={isExternal}
-            hideArrow
-            className="text-text hover:no-underline"
-          >
-            {title}
-          </BaseLink>
+          <LinkOverlay asChild>
+            <BaseLink href={link} hideArrow className="text-body no-underline">
+              {title}
+            </BaseLink>
+          </LinkOverlay>
         ) : (
           <div>{title}</div>
         )}
