@@ -26,7 +26,7 @@ export const ReceiveEther = () => (
     <NotificationPopover
       title="Example walkthrough"
       content="Share QR containing your address (public identifier) from your own wallet when finished here"
-      placement="top"
+      side="top"
     >
       <div className="relative mx-auto mb-3 w-fit bg-background p-3 md:mb-5">
         <TwImage
@@ -46,7 +46,8 @@ export const ReceiveEther = () => (
       <NotificationPopover
         title="Example walkthrough"
         content="Share your address (public identifier) from your own wallet when finished here"
-        placement="top-start"
+        side="top"
+        align="end"
       >
         <Button className="h-fit rounded-lg bg-body-light px-2 py-1.5 text-xs font-bold text-body">
           Copy
