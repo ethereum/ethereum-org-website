@@ -12,7 +12,7 @@ import {
 import type { GHIssue } from "@/lib/types"
 
 import InlineLink from "../Link"
-import Tag from "../Tag"
+import { Tag } from "../ui/tag"
 
 type IssuesListProps = SimpleGridProps & {
   issues: GHIssue[]
@@ -48,11 +48,9 @@ const IssuesList = ({ issues, ...props }: IssuesListProps) => {
           <Flex flexWrap="wrap" gap="1">
             {issue.labels.map((label) => {
               return (
-                <Tag
-                  key={label.id}
-                  label={<Emoji text={label.name} />}
-                  variant="outline"
-                />
+                <Tag key={label.id} variant="outline">
+                  <Emoji text={label.name} />
+                </Tag>
               )
             })}
           </Flex>
