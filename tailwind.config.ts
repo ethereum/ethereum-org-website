@@ -145,7 +145,6 @@ const config = {
         },
 
         disabled: "hsla(var(--disabled))",
-        ednBackground: "var(--edn-background)",
 
         background: {
           DEFAULT: "hsla(var(--background))",

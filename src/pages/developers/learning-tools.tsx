@@ -70,7 +70,7 @@ const H1 = ({
 }: BaseHTMLAttributes<HTMLHeadingElement>) => (
   <h1
     className={cn(
-      "text-text text-center font-mono text-2xl font-semibold uppercase leading-[1.4]",
+      "my-8 text-center font-mono text-3xl font-semibold uppercase leading-[1.4]",
       className
     )}
     {...props}
@@ -110,7 +110,7 @@ const StackContainer = ({
 }: BaseHTMLAttributes<HTMLDivElement>) => (
   <div
     className={cn(
-      "sm:rounded-base mx-0 my-8 w-full rounded-none border border-border bg-ednBackground px-8 py-12 sm:mx-8 sm:w-[96%]",
+      "mx-0 my-8 w-full border bg-background-highlight px-8 py-12 sm:mx-8 sm:w-[96%] sm:rounded",
       className
     )}
     {...props}
