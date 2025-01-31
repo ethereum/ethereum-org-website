@@ -45,7 +45,7 @@ export const SendFromContacts = ({
         <CategoryTabs
           categories={["My contacts", "Recent"]}
           activeIndex={1}
-          mb={4}
+          className="mb-4"
         />
         <Stack className="gap-4">
           {CONTACTS.map(({ name, lastAction }, i) => (
