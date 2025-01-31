@@ -52,6 +52,7 @@ const FilterTag = forwardRef<{ isActive: boolean; name: string }, "button">(
       <Tag
         variant={isActive ? "solid" : "outline"}
         status={isActive ? "tag" : "normal"}
+        className="hover:border-primary-hover"
         asChild
       >
         <Button ref={ref} {...rest}>
