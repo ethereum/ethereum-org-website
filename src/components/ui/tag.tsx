@@ -4,7 +4,7 @@ import { Slot } from "@radix-ui/react-slot"
 import { cn } from "@/lib/utils/cn"
 
 const tagVariants = cva(
-  "inline-flex items-center rounded-full border uppercase transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
+  "inline-flex items-center rounded-full border uppercase transition-colors focus:outline-none",
   {
     variants: {
       status: {

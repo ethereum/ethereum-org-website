@@ -4,7 +4,7 @@ import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { FaGithub } from "react-icons/fa"
-import { chakra, forwardRef } from "@chakra-ui/react"
+import { forwardRef } from "@chakra-ui/react"
 
 import { BasePageProps, Lang } from "@/lib/types"
 
@@ -49,29 +49,15 @@ const FilterTag = forwardRef<{ isActive: boolean; name: string }, "button">(
   (props, ref) => {
     const { isActive, name, ...rest } = props
     return (
-      <chakra.button
-        ref={ref}
-        bg="none"
-        bgImage="radial-gradient(46.28% 66.31% at 66.95% 58.35%,rgba(127, 127, 213, 0.2) 0%,rgba(134, 168, 231, 0.2) 50%,rgba(145, 234, 228, 0.2) 100%)"
-        border="1px"
-        borderColor={isActive ? "primary300" : "white800"}
-        borderRadius="base"
-        boxShadow={!isActive ? "table" : undefined}
-        color="text"
-        fontSize="sm"
-        lineHeight={1.2}
-        opacity={isActive ? 1 : 0.7}
-        p={2}
-        textTransform="uppercase"
-        _hover={{
-          color: "primary.base",
-          borderColor: "text200",
-          opacity: "1",
-        }}
-        {...rest}
+      <Tag
+        variant={isActive ? "solid" : "outline"}
+        status={isActive ? "tag" : "normal"}
+        asChild
       >
-        {name}
-      </chakra.button>
+        <Button ref={ref} {...rest}>
+          {name}
+        </Button>
+      </Tag>
     )
   }
 )
