@@ -1,12 +1,10 @@
 import React, { useState } from "react"
-import { Box, Flex, GridItem, SimpleGrid } from "@chakra-ui/react"
 
 import { cn } from "@/lib/utils/cn"
 import { MatomoEventOptions, trackCustomEvent } from "@/lib/utils/matomo"
 
+import { Flex } from "./ui/flex"
 import Emoji from "./Emoji"
-import OldHeading from "./OldHeading"
-import Text from "./OldText"
 
 export interface BoxItem {
   emoji: string
@@ -32,20 +30,20 @@ const hashCode = (stringPhrase: string): number => {
 
 // Theme variables from Theme.js
 const colors = [
-  "gridYellow",
-  "gridRed",
-  "gridBlue",
-  "gridGreen",
-  "warning",
-  "gridPink",
-  "gridPurple",
+  "#ffe78e",
+  "#ef7d7d",
+  "#a7d0f4",
+  "#6fc4a0",
+  "#ffe3d3",
+  "#ffa1c3",
+  "#a4a4ff",
 ]
 
 const BoxGrid = ({ items }: BoxGridProps) => {
   const [indexOpen, setOpenIndex] = useState(0)
 
   return (
-    <SimpleGrid columns={{ base: 1, lg: 4 }} my={16} borderRadius="sm">
+    <div className="my-16 grid grid-cols-1 rounded-sm lg:grid-cols-4">
       {items.map((item, idx: number) => {
         let columnNumber = idx + 1
         if (columnNumber > 4) {
@@ -56,30 +54,20 @@ const BoxGrid = ({ items }: BoxGridProps) => {
         const isOpen = idx === indexOpen
 
         return (
-          <GridItem
-            as={Flex}
-            rowStart={{ ...(isOpen && { lg: 1 }) }}
-            rowEnd={{ ...(isOpen && { lg: 3 }) }}
-            colStart={{ ...(isOpen && { lg: columnNumber }) }}
-            color={isOpen ? "black300" : "text"}
-            cursor="pointer"
-            bg={isOpen ? color : "background.base"}
-            direction={{
-              base: isOpen ? "column" : "column-reverse",
-              sm: isOpen ? "column" : "row-reverse",
-              lg: isOpen ? "column" : "column-reverse",
-            }}
-            align={{ base: "center", lg: "stretch" }}
-            justify="space-between"
-            border="1px solid"
-            borderColor="text"
-            p={6}
-            _hover={{
-              bg: isOpen ? color : "ednBackground",
-              transition: "transform 0.5s",
-              transform: "skewX(-5deg)",
-              boxShadow: "tableBoxShadow",
-            }}
+          <Flex
+            className={cn(
+              "cursor-pointer items-center justify-between border border-body p-6 transition-transform duration-500 hover:-skew-x-6 hover:shadow-table-box-hover lg:items-stretch",
+              isOpen
+                ? [
+                    "flex-col text-gray-600 sm:flex-col lg:row-start-1 lg:row-end-3 lg:flex-col",
+                    columnNumber === 1 && "lg:col-start-1",
+                    columnNumber === 2 && "lg:col-start-2",
+                    columnNumber === 3 && "lg:col-start-3",
+                    columnNumber === 4 && "lg:col-start-4",
+                  ]
+                : "flex-col-reverse bg-background text-body hover:bg-background-highlight sm:flex-row-reverse lg:flex-col-reverse"
+            )}
+            style={{ backgroundColor: isOpen ? color : "" }}
             onClick={() => {
               setOpenIndex(idx)
               trackCustomEvent({
@@ -99,26 +87,18 @@ const BoxGrid = ({ items }: BoxGridProps) => {
               )}
               text={item.emoji}
             />
-            <Box>
-              <OldHeading
-                as="h3"
-                fontSize="2.5rem"
-                fontWeight="normal"
-                mt={0}
-                lineHeight={1.4}
-              >
-                {item.title}
-              </OldHeading>
+            <div>
+              <h3 className="mb-8 mt-0 leading-xs">{item.title}</h3>
               {isOpen && (
-                <Text fontSize="xl" lineHeight={1.4} color="black300">
+                <p className="mb-6 leading-xs text-gray-600">
                   {item.description}
-                </Text>
+                </p>
               )}
-            </Box>
-          </GridItem>
+            </div>
+          </Flex>
         )
       })}
-    </SimpleGrid>
+    </div>
   )
 }
 
