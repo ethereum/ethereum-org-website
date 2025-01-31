@@ -19,7 +19,7 @@ import TutorialTags from "@/components/TutorialTags"
 import { Button, ButtonLink } from "@/components/ui/buttons/Button"
 import Modal from "@/components/ui/dialog-modal"
 import { Flex, FlexProps } from "@/components/ui/flex"
-import { Tag } from "@/components/ui/tag"
+import { Tag, TagButton } from "@/components/ui/tag"
 
 import { cn } from "@/lib/utils/cn"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
@@ -49,16 +49,15 @@ const FilterTag = forwardRef<{ isActive: boolean; name: string }, "button">(
   (props, ref) => {
     const { isActive, name, ...rest } = props
     return (
-      <Tag
+      <TagButton
+        ref={ref}
         variant={isActive ? "solid" : "outline"}
         status={isActive ? "tag" : "normal"}
-        className="hover:border-primary-hover"
-        asChild
+        className="justify-center"
+        {...rest}
       >
-        <Button ref={ref} {...rest}>
-          {name}
-        </Button>
-      </Tag>
+        {name}
+      </TagButton>
     )
   }
 )
@@ -278,17 +277,19 @@ const TutorialPage = ({
       <div className="my-8 w-full shadow-table-box md:w-2/3">
         <Flex className="m-8 flex-col justify-center border-b border-border px-0 pb-4 pt-4 md:pb-8">
           <Flex className="mb-4 max-w-full flex-wrap items-center gap-2">
-            {Object.entries(allTags).map(([tagName, tagCount], idx) => {
-              const name = `${tagName} (${tagCount})`
-              const isActive = selectedTags.includes(tagName)
-              return (
-                <FilterTag
-                  key={idx}
-                  onClick={() => handleTagSelect(tagName)}
-                  {...{ name, isActive }}
-                />
-              )
-            })}
+            <div className="flex w-full flex-wrap gap-2 lg:grid lg:grid-cols-3 lg:gap-4 xl:grid-cols-4 2xl:grid-cols-5">
+              {Object.entries(allTags).map(([tagName, tagCount], idx) => {
+                const name = `${tagName} (${tagCount})`
+                const isActive = selectedTags.includes(tagName)
+                return (
+                  <FilterTag
+                    key={idx}
+                    onClick={() => handleTagSelect(tagName)}
+                    {...{ name, isActive }}
+                  />
+                )
+              })}
+            </div>
             {selectedTags.length > 0 && (
               <Button
                 className="cursor-pointer p-0 text-primary underline"
