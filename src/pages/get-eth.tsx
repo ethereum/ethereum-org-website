@@ -41,7 +41,6 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import { useBreakpointValue } from "@/hooks/useBreakpointValue"
 import uniswap from "@/public/images/dapps/uni.png"
 import dapps from "@/public/images/doge-computer.png"
-import oneinch from "@/public/images/exchanges/1inch.png"
 import bancor from "@/public/images/exchanges/bancor.png"
 import kyber from "@/public/images/exchanges/kyber.png"
 import hero from "@/public/images/get-eth.png"
@@ -116,12 +115,6 @@ const GetEthPage = ({
       title: "Uniswap",
       link: "https://app.uniswap.org/#/swap",
       image: uniswap,
-      alt: "",
-    },
-    {
-      title: "1inch",
-      link: "https://1inch.exchange/#/",
-      image: oneinch,
       alt: "",
     },
     {
