@@ -48,7 +48,7 @@ const WalletInfo = ({ wallet, isExpanded }: WalletInfoProps) => {
               {walletPersonas.length > 0 && (
                 <div className="flex flex-row flex-wrap gap-1">
                   {walletPersonas.map((persona) => (
-                    <Tag key={persona} variant="highContrast" size="small">
+                    <Tag key={persona} variant="high-contrast" size="small">
                       {t(persona)}
                     </Tag>
                   ))}
@@ -99,7 +99,7 @@ const WalletInfo = ({ wallet, isExpanded }: WalletInfoProps) => {
               {walletPersonas.length > 0 && (
                 <div className="flex flex-row flex-wrap gap-1">
                   {walletPersonas.map((persona) => (
-                    <Tag key={persona} variant="highContrast" size="small">
+                    <Tag key={persona} variant="high-contrast" size="small">
                       {t(persona)}
                     </Tag>
                   ))}
