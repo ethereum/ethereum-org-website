@@ -1,6 +1,6 @@
 ---
 title: Linguaggi dei contratti intelligenti
-description: "Panoramica e confronto dei due linguaggi principali dei contratti intelligenti: Solidity e Viper."
+description: 'Panoramica e confronto dei due linguaggi principali dei contratti intelligenti: Solidity e Viper.'
 lang: it
 ---
 
@@ -10,6 +10,8 @@ I due linguaggi più attivi e gestiti sono:
 
 - Solidity
 - Vyper
+
+Remix IDE fornisce un ambiente di sviluppo completo per creare e testare i contratti sia in Solidity che in Vyper. [Prova Remix IDE integrato nel browser](https://remix.ethereum.org) per iniziare a programmare.
 
 Gli sviluppatori più esperti potrebbero prendere in considerazione anche Yul, un linguaggio intermedio per la [macchina virtuale Ethereum](/developers/docs/evm/), oppure Yul +, un'estensione di Yul.
 
@@ -35,7 +37,7 @@ Una conoscenza pregressa dei linguaggi di programmazione, specialmente JavaScrip
 - [Portale del Linguaggio di Solidity](https://soliditylang.org/)
 - [Solidity per Esempio](https://docs.soliditylang.org/en/latest/solidity-by-example.html)
 - [GitHub](https://github.com/ethereum/solidity/)
-- [Solidity Gitter Chatroom](https://gitter.im/ethereum/solidity) collegato a [Solidity Matrix Chatroom](https://matrix.to/#/#ethereum_solidity:gitter.im)
+- [Solidity Gitter Chatroom](https://gitter.im/ethereum/solidity) collegato alla [Chatroom di Solidity Matrix](https://matrix.to/#/#ethereum_solidity:gitter.im)
 - [Cheat Sheet](https://reference.auditless.com/cheatsheet)
 - [Solidity Blog](https://blog.soliditylang.org/)
 - [Twitter di Solidity](https://twitter.com/solidity_lang)
@@ -138,7 +140,7 @@ ended: public(bool)
 pendingReturns: public(HashMap[address, uint256])
 
 # Crea una semplice asta con `_bidding_time`
-# tempo di offerta in secondi per conto
+# tempo di offerta in secondi per conto 
 # dell'indirizzo del beneficiario `_beneficiary`.
 @external
 def __init__(_beneficiary: address, _bidding_time: uint256):

@@ -109,3 +109,4 @@ contract VendingMachine {
 - [Coinbase：什么是智能合约？](https://www.coinbase.com/learn/crypto-basics/what-is-a-smart-contract)
 - [Chainlink：什么是智能合约？](https://chain.link/education/smart-contracts)
 - [视频：智能合约简介](https://youtu.be/ZE2HxTmxfrI)
+- [Cyfrin Updraft：Web3 学习与审计平台](https://updraft.cyfrin.io)
