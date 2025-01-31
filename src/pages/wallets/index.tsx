@@ -36,7 +36,7 @@ import HeroImage from "@/public/images/wallets/wallet-hero.png"
 
 export const StyledCard = (props: ComponentPropsWithRef<typeof Card>) => (
   <Card
-    className="m-4 min-w-[280px] max-w-full flex-1 p-6 md:max-w-[46%] lg:max-w-[31%]"
+    className="m-4 min-w-[280px] max-w-full flex-1 bg-background p-6 md:max-w-[46%] lg:max-w-[31%]"
     {...props}
   />
 )
@@ -202,7 +202,7 @@ const WalletsPage = () => {
   ]
 
   return (
-    <MainArticle className="width-full auto m-0 flex flex-col items-center">
+    <MainArticle className="mx-auto flex w-full flex-col items-center">
       <PageMetadata
         title={t("page-wallets-meta-title")}
         description={t("page-wallets-meta-description")}
@@ -211,7 +211,7 @@ const WalletsPage = () => {
 
       <PageHero content={heroContent} isReverse />
 
-      <div className="mt-4 w-full bg-[--eth-colors-grayBackground] px-0 py-16 shadow-[inset_0px_1px_0px_var(--eth-colors-tableItemBoxShadow)] lg:mt-8">
+      <div className="mt-4 w-full border-t bg-background-highlight px-0 py-16 lg:mt-8">
         <div className="w-full px-8 py-4 pb-0">
           <h2 className="mb-0 mt-12 text-2xl leading-[1.4] md:text-[2rem]">
             {t("page-wallets-whats-a-wallet")}
@@ -312,7 +312,7 @@ const WalletsPage = () => {
           </Simulator>
         </div>
       ) : (
-        <div className="my-12 mt-4 w-full bg-[linear-gradient(49deg,rgba(127,127,213,0.2)_0%,rgba(134,168,231,0.2)_50%,rgba(145,234,228,0.2)_100%)] px-0 py-16 shadow-[inset_0px_1px_0px_var(--eth-colors-tableItemBoxShadow)] lg:mt-8">
+        <div className="my-12 mt-4 w-full border-t bg-gradient-main px-0 py-16 lg:mt-8">
           <div className="w-full px-8 py-4">
             <div className="mb-8 flex flex-col items-center">
               <h2 className="mb-8 mt-12 text-2xl leading-[1.4] md:text-[2rem]">
