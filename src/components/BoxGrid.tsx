@@ -30,13 +30,13 @@ const hashCode = (stringPhrase: string): number => {
 
 // Theme variables from Theme.js
 const colors = [
-  "#ffe78e",
-  "#ef7d7d",
-  "#a7d0f4",
-  "#6fc4a0",
-  "#ffe3d3",
-  "#ffa1c3",
-  "#a4a4ff",
+  "bg-[#ffe78e]",
+  "bg-[#ef7d7d]",
+  "bg-[#a7d0f4]",
+  "bg-[#6fc4a0]",
+  "bg-[#ffe3d3]",
+  "bg-[#ffa1c3]",
+  "bg-[#a4a4ff]",
 ]
 
 const BoxGrid = ({ items }: BoxGridProps) => {
@@ -52,22 +52,16 @@ const BoxGrid = ({ items }: BoxGridProps) => {
         const colorIdx = hashCode(item.emoji) % colors.length
         const color = colors[colorIdx]
         const isOpen = idx === indexOpen
+        const columnNumberClassName = `col-start-${columnNumber}`
 
         return (
           <Flex
             className={cn(
               "cursor-pointer items-center justify-between border border-body p-6 transition-transform duration-500 hover:-skew-x-6 hover:shadow-table-box-hover lg:items-stretch",
               isOpen
-                ? [
-                    "flex-col text-gray-600 sm:flex-col lg:row-start-1 lg:row-end-3 lg:flex-col",
-                    columnNumber === 1 && "lg:col-start-1",
-                    columnNumber === 2 && "lg:col-start-2",
-                    columnNumber === 3 && "lg:col-start-3",
-                    columnNumber === 4 && "lg:col-start-4",
-                  ]
+                ? `flex-col text-gray-600 sm:flex-col lg:row-start-1 lg:row-end-3 lg:flex-col ${color} lg:${columnNumberClassName}`
                 : "flex-col-reverse bg-background text-body hover:bg-background-highlight sm:flex-row-reverse lg:flex-col-reverse"
             )}
-            style={{ backgroundColor: isOpen ? color : "" }}
             onClick={() => {
               setOpenIndex(idx)
               trackCustomEvent({
@@ -88,9 +82,11 @@ const BoxGrid = ({ items }: BoxGridProps) => {
               text={item.emoji}
             />
             <div>
-              <h3 className="mb-8 mt-0 leading-xs">{item.title}</h3>
+              <h3 className="mb-8 mt-0 text-[2.5rem] font-normal leading-xs">
+                {item.title}
+              </h3>
               {isOpen && (
-                <p className="mb-6 leading-xs text-gray-600">
+                <p className="mb-6 text-xl leading-xs text-gray-600">
                   {item.description}
                 </p>
               )}
