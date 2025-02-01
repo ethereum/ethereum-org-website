@@ -546,7 +546,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
                 <MdHelpOutline className="ms-2 fill-body" size={16} />
               </Tooltip>
             </H3>
-            <InfoBanner emoji="⚠️" isWarning mb="4">
+            <InfoBanner className="mb-4" emoji="⚠️" isWarning>
               {t("page-stablecoins-algorithmic-disclaimer")}
             </InfoBanner>
             <p className="mb-6">
