@@ -42,7 +42,7 @@ Les portefeuilles évoluent rapidement sur Ethereum. Nous avons tenté de créer
 - **WalletConnect** - les utilisateurs doivent pouvoir se connecter aux DApps en utilisant WalletConnect.
 - **Importation des points de terminaison RPC d'Ethereum** - les utilisateurs peuvent importer les données RPC d'un nœud, leur permettant de se connecter à un nœud de leur choix, ou à d'autres réseaux compatibles EVM.
 - **NFTs** - les utilisateurs sont en mesure de visualiser et d'interagir avec leurs NFTs dans le portefeuille.
-- **Connexion aux applications Ethereum** - les utilisateurs sont en mesure de se connecter à des applications Ethereum et de les utiliser.
+- <strong x-id="1"">Connexion aux applications Ethereum</strong> - les utilisateurs sont en mesure de se connecter à des applications Ethereum et de les utiliser.
 - **Mise en jeu** - les utilisateurs peuvent mettre en jeu directement via le portefeuille.
 - **Échanges** - les utilisateurs peuvent échanger des tokens directement via le portefeuille.
 - **Réseaux multichaînes** - votre portefeuille prend en charge par défaut l'accès à plusieurs réseaux blockchain.
