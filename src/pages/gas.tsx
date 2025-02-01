@@ -179,7 +179,7 @@ const GasPage = () => {
           w="full"
         >
           <Box flex="60%" w="full" me={{ base: "auto", lg: 2 }}>
-            <InfoBanner mb={8} title={t("page-gas-summary-title")}>
+            <InfoBanner className="mb-8" title={t("page-gas-summary-title")}>
               <UnorderedList>
                 <ListItem>{t("page-gas-summary-item-1")}</ListItem>
                 <ListItem>{t("page-gas-summary-item-2")}</ListItem>
