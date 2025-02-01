@@ -77,7 +77,7 @@ export const useStablecoinAccordion = () => {
     {
       title: t("page-stablecoins-accordion-earn-project-bounties"),
       image: gitcoinImg,
-      link: "https://gitcoin.co/explorer",
+      link: "https://app.buidlbox.io/",
       description: t("page-stablecoins-accordion-earn-project-1-description"),
       alt: t("gitcoin-logo"),
     },
