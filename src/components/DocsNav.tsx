@@ -1,12 +1,12 @@
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa"
+import { Text } from "@chakra-ui/react"
 
 import { TranslationKey } from "@/lib/types"
 import type { DeveloperDocsLink } from "@/lib/interfaces"
 
 import { BaseLink } from "@/components/Link"
-import Text from "@/components/OldText"
 
 import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
@@ -87,18 +87,25 @@ const DocsNav = ({ contentNotTranslated }: DocsNavProps) => {
   const { asPath } = useRouter()
   const docsArray: DocsArrayProps[] = []
   const getDocs = (links: Array<DeveloperDocsLink>): void => {
+    // If object has 'items' key
     for (const item of links) {
+      // And if item has a 'to' key
+      // Add 'to' path and 'id' to docsArray
       if (item.items) {
         item.href && docsArray.push({ href: item.href, id: item.id })
+        // Then recursively add sub-items
         getDocs(item.items)
       } else {
+        // If object has no further 'items', add and continue
         docsArray.push({ href: item.href, id: item.id })
       }
     }
   }
 
+  // Initiate recursive loop with full docLinks yaml
   getDocs(docLinks)
 
+  // Find index that matches current page
   let currentIndex = 0
   for (let i = 0; i < docsArray.length; i++) {
     if (
@@ -109,6 +116,7 @@ const DocsNav = ({ contentNotTranslated }: DocsNavProps) => {
     }
   }
 
+  // Extract previous and next doc based on current index +/- 1
   const previousDoc = currentIndex - 1 >= 0 ? docsArray[currentIndex - 1] : null
   const nextDoc =
     currentIndex + 1 < docsArray.length ? docsArray[currentIndex + 1] : null
