@@ -15,7 +15,7 @@ import { useRtlFlip } from "@/hooks/useRtlFlip"
 const TextDiv = ({ children, className, ...props }) => (
   <div
     className={cn(
-      "flex h-full w-full flex-col justify-center justify-between break-words p-4",
+      "flex h-full w-full flex-col justify-center break-words p-4",
       className
     )}
     {...props}
