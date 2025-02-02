@@ -1,9 +1,14 @@
-import { BaseHTMLAttributes, ElementRef, forwardRef } from "react"
+import {
+  ElementRef,
+  forwardRef,
+  type HTMLAttributes,
+  type OlHTMLAttributes,
+} from "react"
 import { Slot } from "@radix-ui/react-slot"
 
 import { cn } from "@/lib/utils/cn"
 
-export type ListProps = BaseHTMLAttributes<HTMLUListElement> & {
+export type ListProps<T = HTMLAttributes<HTMLUListElement>> = T & {
   asChild?: boolean
 }
 
@@ -25,28 +30,28 @@ List.displayName = "List"
 // Alias
 const UnorderedList = List
 
-const OrderedList = forwardRef<ElementRef<"ol">, ListProps>(
-  ({ className, children, ...props }, ref) => (
-    <List className={cn("list-decimal", className)} asChild>
-      <ol ref={ref} {...props}>
-        {children}
-      </ol>
-    </List>
-  )
-)
+const OrderedList = forwardRef<
+  ElementRef<"ol">,
+  ListProps<OlHTMLAttributes<HTMLOListElement>>
+>(({ className, children, ...props }, ref) => (
+  <List className={cn("list-decimal", className)} asChild>
+    <ol ref={ref} {...props}>
+      {children}
+    </ol>
+  </List>
+))
 
 OrderedList.displayName = "OrderedList"
 
-const ListItem = forwardRef<
-  ElementRef<"li">,
-  BaseHTMLAttributes<HTMLLIElement>
->(({ className, ...props }, ref) => (
-  <li
-    ref={ref}
-    className={cn("mb-3 last:mb-0 [&_ol]:mt-3 [&_ul]:mt-3", className)}
-    {...props}
-  />
-))
+const ListItem = forwardRef<ElementRef<"li">, HTMLAttributes<HTMLLIElement>>(
+  ({ className, ...props }, ref) => (
+    <li
+      ref={ref}
+      className={cn("mb-3 last:mb-0 [&_ol]:mt-3 [&_ul]:mt-3", className)}
+      {...props}
+    />
+  )
+)
 
 ListItem.displayName = "ListItem"
 
