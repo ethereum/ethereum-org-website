@@ -30,7 +30,7 @@ const DescriptionParagraph = ({ children }: ChildOnlyProp) => (
 
 const CallToContribute = ({ editPath }: CallToContributeProps) => {
   return (
-    <aside className="mt-8 items-center rounded-md border border-b-4 border-primary border-b-primary bg-background-highlight">
+    <aside className="mt-8 items-center rounded-md border border-b-4 border-primary bg-background-highlight">
       <ContentColumn>
         <h2 className="mb-8 mt-0 p-1 font-monospace uppercase leading-xs">
           <Translation id="page-developers-docs:page-calltocontribute-title" />
