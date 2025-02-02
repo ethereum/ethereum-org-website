@@ -1,6 +1,5 @@
-import React, { ReactNode } from "react"
+import React from "react"
 import { FaGithub } from "react-icons/fa"
-import { FlexProps } from "@chakra-ui/react"
 
 import { ChildOnlyProp } from "@/lib/types"
 
@@ -14,10 +13,7 @@ export type CallToContributeProps = {
   editPath: string
 }
 
-const ContentColumn = (props: {
-  children: ReactNode
-  hideBelow?: FlexProps["hideBelow"]
-}) => (
+const ContentColumn = (props: ChildOnlyProp) => (
   <Flex
     className="flex-1 basis-1/2 flex-col p-4 text-body lg:text-start"
     {...props}
