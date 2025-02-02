@@ -20,15 +20,6 @@ export const HomeScreen = ({ nav, ...props }: HomeScreenProps) => {
 
   const { step } = nav
   const ICON_COUNT = 8
-  const sharedIconStyles = {
-    w: "full",
-    aspectRatio: 1,
-    borderRadius: "xl",
-    placeItems: "center",
-    transition:
-      "background-color 2000ms ease-in-out, border 200ms ease-in--out",
-    border: "2px solid transparent",
-  } as const
   const sharedIconClasses =
     "w-full aspect-square rounded-xl place-items-center duration-200 transition-[border,background-color] border-2 border-transparent"
   return (
@@ -36,17 +27,13 @@ export const HomeScreen = ({ nav, ...props }: HomeScreenProps) => {
       {Array(ICON_COUNT)
         .fill(0)
         .map((_, i) => (
-          <div
-            key={i}
-            className={cn("bg-body-light", sharedIconClasses)}
-            {...sharedIconStyles}
-          />
+          <div key={i} className={cn("bg-body-light", sharedIconClasses)} />
         ))}
       <AnimatePresence>
         {step === 1 ? (
           <motion.button
             className={cn(
-              "grid border-body bg-body outline duration-300 hover:outline-2 hover:outline-offset-2 hover:outline-primary-hover",
+              "grid border-body bg-body duration-300 hover:outline hover:outline-2 hover:outline-offset-2 hover:outline-primary-hover",
               sharedIconClasses,
               gridShadow
             )}
@@ -56,7 +43,7 @@ export const HomeScreen = ({ nav, ...props }: HomeScreenProps) => {
             onClick={nav.progressStepper}
           >
             {/* TODO: remove important flag from classes when icons are migrated */}
-            <EthGlyphIcon className="!text-2xl !text-background sm:!text-3xl" />
+            <EthGlyphIcon className="!size-[1em] !text-2xl !text-background sm:!text-3xl" />
           </motion.button>
         ) : (
           <motion.div
@@ -67,7 +54,7 @@ export const HomeScreen = ({ nav, ...props }: HomeScreenProps) => {
             initial={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
-            <MdArrowDownward className="!text-2xl !text-disabled sm:!text-3xl" />
+            <MdArrowDownward className="!size-[1em] !text-2xl !text-disabled sm:!text-3xl" />
           </motion.div>
         )}
       </AnimatePresence>
