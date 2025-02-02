@@ -4,7 +4,7 @@ import { tv, type VariantProps } from "tailwind-variants"
 import { ListItem } from "@/components/ui/list"
 
 const wordStyle = tv({
-  base: "[--word-display-transition:color_1s_ease-in-out,_background-color_1s_ease-in-out,_border-color_1s_ease-in-out] transition-(--word-display-transition) relative",
+  base: "relative transition duration-1000 ease-in-out",
   variants: {
     variant: {
       initial: "border-b border-body-medium mt-1.5 md:mt-4 z-[1]",
