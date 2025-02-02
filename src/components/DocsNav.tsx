@@ -1,31 +1,27 @@
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa"
 
-import { TranslationKey } from "@/lib/types"
-import type { DeveloperDocsLink } from "@/lib/interfaces"
-
-import Emoji from "@/components/Emoji"
+import { BaseLink } from "@/components/Link"
+import Text from "@/components/OldText"
 
 import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import docLinks from "@/data/developer-docs-links.yaml"
 
-import { Stack } from "./ui/flex"
-import { LinkBox, LinkOverlay } from "./ui/link-box"
-
 import { useRtlFlip } from "@/hooks/useRtlFlip"
 
 const TextDiv = ({ children, className, ...props }) => (
-  <Stack
+  <div
     className={cn(
-      "h-full max-w-[166px] justify-between gap-0 break-words p-4",
+      "flex h-full w-full flex-col justify-center justify-between break-words p-4",
       className
     )}
     {...props}
   >
     {children}
-  </Stack>
+  </div>
 )
 
 type DocsArrayProps = {
@@ -41,43 +37,42 @@ type CardLinkProps = {
 
 const CardLink = ({ docData, isPrev, contentNotTranslated }: CardLinkProps) => {
   const { t } = useTranslation("page-developers-docs")
-  const { isRtl } = useRtlFlip()
+  const { flipForRtl } = useRtlFlip()
 
   return (
-    <LinkBox
+    <BaseLink
+      href={docData.href}
       className={cn(
-        "flex w-full flex-1 items-center no-underline",
-        "h-[82px] rounded-sm border bg-background",
-        isPrev ? "justify-start" : "justify-end"
+        "flex w-full items-start items-center rounded-sm border border-primary bg-background !no-underline",
+        isPrev ? "justify-start" : "justify-end",
+        "hover:border-primary-hover hover:[&_.btn-txt]:text-primary-hover hover:[&_svg]:fill-primary-hover"
       )}
+      rel={isPrev ? "prev" : "next"}
+      onClick={() => {
+        trackCustomEvent({
+          eventCategory: "next/previous article DocsNav",
+          eventAction: "click",
+          eventName: isPrev ? "previous" : "next",
+        })
+      }}
     >
-      <div className={cn("h-full p-4", isPrev ? "order-[0]" : "order-1")}>
-        <Emoji
-          text={isPrev ? ":point_left:" : ":point_right:"}
-          className={cn(
-            "text-5xl",
-            !contentNotTranslated && isRtl ? "-scale-x-100" : ""
-          )}
-        />
+      <div
+        className={cn("p-4", isPrev ? "order-0" : "order-1")}
+        style={{ transform: contentNotTranslated ? undefined : flipForRtl }}
+      >
+        {isPrev ? (
+          <FaChevronLeft className="fill-primary text-xl" />
+        ) : (
+          <FaChevronRight className="fill-primary text-xl" />
+        )}
       </div>
-      <TextDiv className={cn(!isPrev ? "pe-0 text-end" : "ps-0")}>
-        <p className="uppercase text-body">{t(isPrev ? "previous" : "next")}</p>
-        <LinkOverlay
-          href={docData.href}
-          onClick={() => {
-            trackCustomEvent({
-              eventCategory: "next/previous article DocsNav",
-              eventAction: "click",
-              eventName: isPrev ? "previous" : "next",
-            })
-          }}
-          className={cn("underline", isPrev ? "text-start" : "text-end")}
-          rel={isPrev ? "prev" : "next"}
-        >
-          {t(docData.id)}
-        </LinkOverlay>
+      <TextDiv className={cn(isPrev ? "ps-0" : "pe-0 text-end")}>
+        <Text className="btn-txt !m-0 text-lg text-primary">
+          {t(isPrev ? "previous" : "next")}
+        </Text>
+        <Text className="!mb-0 text-sm no-underline">{t(docData.id)}</Text>
       </TextDiv>
-    </LinkBox>
+    </BaseLink>
   )
 }
 
@@ -87,28 +82,20 @@ type DocsNavProps = {
 
 const DocsNav = ({ contentNotTranslated }: DocsNavProps) => {
   const { asPath } = useRouter()
-  // Construct array of all linkable documents in order recursively
   const docsArray: DocsArrayProps[] = []
   const getDocs = (links: Array<DeveloperDocsLink>): void => {
     for (const item of links) {
-      // If object has 'items' key
       if (item.items) {
-        // And if item has a 'to' key
-        // Add 'to' path and 'id' to docsArray
         item.href && docsArray.push({ href: item.href, id: item.id })
-        // Then recursively add sub-items
         getDocs(item.items)
       } else {
-        // If object has no further 'items', add and continue
         docsArray.push({ href: item.href, id: item.id })
       }
     }
   }
 
-  // Initiate recursive loop with full docLinks yaml
   getDocs(docLinks)
 
-  // Find index that matches current page
   let currentIndex = 0
   for (let i = 0; i < docsArray.length; i++) {
     if (
@@ -119,7 +106,6 @@ const DocsNav = ({ contentNotTranslated }: DocsNavProps) => {
     }
   }
 
-  // Extract previous and next doc based on current index +/- 1
   const previousDoc = currentIndex - 1 >= 0 ? docsArray[currentIndex - 1] : null
   const nextDoc =
     currentIndex + 1 < docsArray.length ? docsArray[currentIndex + 1] : null
@@ -129,7 +115,7 @@ const DocsNav = ({ contentNotTranslated }: DocsNavProps) => {
       className={cn(
         "flex flex-col-reverse md:flex-row lg:flex-col-reverse xl:flex-row",
         "mt-8 justify-between gap-4",
-        "items-center md:items-start"
+        "items-stretch"
       )}
       aria-label="Paginate to document"
     >
@@ -140,7 +126,7 @@ const DocsNav = ({ contentNotTranslated }: DocsNavProps) => {
           isPrev
         />
       ) : (
-        <div className="hidden flex-grow xl:block"></div>
+        <div className="hidden flex-grow xl:block" />
       )}
       {nextDoc ? (
         <CardLink
@@ -148,7 +134,7 @@ const DocsNav = ({ contentNotTranslated }: DocsNavProps) => {
           contentNotTranslated={contentNotTranslated}
         />
       ) : (
-        <div className="hidden flex-grow xl:block"></div>
+        <div className="hidden flex-grow xl:block" />
       )}
     </nav>
   )
