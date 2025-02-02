@@ -46,9 +46,9 @@ const CardLink = ({ docData, isPrev, contentNotTranslated }: CardLinkProps) => {
     <BaseLink
       href={docData.href}
       className={cn(
-        "flex w-full items-start items-center rounded-sm border border-primary bg-background !no-underline",
+        "group flex w-full items-center rounded-sm border border-primary bg-background !no-underline",
         isPrev ? "justify-start" : "justify-end",
-        "hover:border-primary-hover hover:[&_.btn-txt]:text-primary-hover hover:[&_svg]:fill-primary-hover"
+        "hover:border-primary-hover"
       )}
       rel={isPrev ? "prev" : "next"}
       onClick={() => {
@@ -64,13 +64,13 @@ const CardLink = ({ docData, isPrev, contentNotTranslated }: CardLinkProps) => {
         style={{ transform: contentNotTranslated ? undefined : flipForRtl }}
       >
         {isPrev ? (
-          <FaChevronLeft className="fill-primary text-xl" />
+          <FaChevronLeft className="text-xl group-hover:fill-primary-hover" />
         ) : (
-          <FaChevronRight className="fill-primary text-xl" />
+          <FaChevronRight className="text-xl group-hover:fill-primary-hover" />
         )}
       </div>
       <TextDiv className={cn(isPrev ? "ps-0" : "pe-0 text-end")}>
-        <Text className="btn-txt !m-0 text-lg text-primary">
+        <Text className="btn-txt !m-0 text-lg text-primary group-hover:text-primary-hover">
           {t(isPrev ? "previous" : "next")}
         </Text>
         <Text className="!mb-0 text-sm no-underline">{t(docData.id)}</Text>
