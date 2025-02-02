@@ -26,7 +26,7 @@ const TextDiv = ({ children, className, ...props }) => (
 
 type DocsArrayProps = {
   href: string
-  id: TranslationKey
+  id: string
 }
 
 type CardLinkProps = {
