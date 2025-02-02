@@ -6,7 +6,7 @@ import { Text } from "@chakra-ui/react"
 import { TranslationKey } from "@/lib/types"
 import type { DeveloperDocsLink } from "@/lib/interfaces"
 
-import { BaseLink } from "@/components/Link"
+import { BaseLink } from "@/components/ui/Link"
 
 import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
