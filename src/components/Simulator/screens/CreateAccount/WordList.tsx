@@ -12,7 +12,7 @@ import {
   EXTRA_DELAY_MS,
   WORDS_REQUIRED,
 } from "./constants"
-import { WordDisplay, type WordStyleVariant } from "./WordDisplay"
+import { WordDisplay, type WordStyleVariantProps } from "./WordDisplay"
 
 type WordListProps = {
   words: Array<string>
@@ -42,7 +42,7 @@ export const WordList = ({ words, wordsSelected }: WordListProps) => {
 
   const wordMapping = (word: string, index: number): React.ReactElement => {
     const initialWordDisplay = typeof wordsSelected === "undefined"
-    const variant: WordStyleVariant = initialWordDisplay
+    const variant: WordStyleVariantProps["variant"] = initialWordDisplay
       ? "initial"
       : index === wordsSelected
         ? "active"
@@ -63,13 +63,7 @@ export const WordList = ({ words, wordsSelected }: WordListProps) => {
       <WordDisplay
         key={word + index}
         variant={variant}
-        transition={`
-          color 1s ease-in-out,
-          background-color 1s ease-in-out,
-          border-color 1s ease-in-out
-        `}
-        transitionDelay={numToMsString(getDelayFromIndex(index))}
-        position="relative"
+        className={`[--display-delay:${numToMsString(getDelayFromIndex(index))}] delay-(--display-delay)`}
       >
         {showLabel && (
           <>
