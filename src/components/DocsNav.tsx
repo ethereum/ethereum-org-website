@@ -2,6 +2,9 @@ import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa"
 
+import { TranslationKey } from "@/lib/types"
+import type { DeveloperDocsLink } from "@/lib/interfaces"
+
 import { BaseLink } from "@/components/Link"
 import Text from "@/components/OldText"
 
@@ -26,7 +29,7 @@ const TextDiv = ({ children, className, ...props }) => (
 
 type DocsArrayProps = {
   href: string
-  id: string
+  id: TranslationKey
 }
 
 type CardLinkProps = {
