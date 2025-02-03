@@ -157,7 +157,8 @@ export const getStaticProps = (async ({ locale }) => {
         ethereumEcosystemData.findIndex(
           // eslint-disable-next-line
           (etherToken) => stablecoin.id == etherToken.id
-        ) > -1
+        ) > -1 ||
+        Object.keys(stablecoins).includes(stablecoin.symbol.toUpperCase())
     )
 
     marketsHasError = false
