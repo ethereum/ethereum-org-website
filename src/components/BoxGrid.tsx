@@ -45,21 +45,16 @@ const BoxGrid = ({ items }: BoxGridProps) => {
   return (
     <div className="my-16 grid grid-cols-1 rounded-sm lg:grid-cols-4">
       {items.map((item, idx: number) => {
-        let columnNumber = idx + 1
-        if (columnNumber > 4) {
-          columnNumber = columnNumber - 3
-        }
         const colorIdx = hashCode(item.emoji) % colors.length
         const color = colors[colorIdx]
         const isOpen = idx === indexOpen
-        const columnNumberClassName = `col-start-${columnNumber}`
 
         return (
           <Flex
             className={cn(
               "cursor-pointer items-center justify-between border border-body p-6 transition-transform duration-500 hover:-skew-x-6 hover:shadow-table-box-hover lg:items-stretch",
               isOpen
-                ? `flex-col text-gray-600 sm:flex-col lg:row-start-1 lg:row-end-3 lg:flex-col ${color} lg:${columnNumberClassName}`
+                ? `flex-col text-gray-600 sm:flex-col lg:row-start-1 lg:row-end-3 lg:flex-col ${color}`
                 : "flex-col-reverse bg-background text-body hover:bg-background-highlight sm:flex-row-reverse lg:flex-col-reverse"
             )}
             onClick={() => {
