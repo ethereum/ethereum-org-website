@@ -35,8 +35,8 @@ const RoadmapActionCard = ({
   const imgSrc = images[image] ?? images.futureProofing
 
   return (
-    <LinkBox className="flex flex-col border border-border">
-      <Center className="h-[260px] bg-main-gradient">
+    <LinkBox className="flex flex-col border">
+      <Center className="h-[260px] bg-gradient-main">
         <TwImage src={imgSrc} alt={alt} style={{ objectFit: "contain" }} />
       </Center>
       <Flex className="flex-1 flex-col justify-between gap-4 p-6">
