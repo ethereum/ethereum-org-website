@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from "react"
 import { motion } from "framer-motion"
 import { PiCheckThin } from "react-icons/pi"
-import { Flex, Grid, Icon, Spinner, Text } from "@chakra-ui/react"
 
 import type { PhoneScreenProps } from "@/lib/types"
+
+import { Flex } from "@/components/ui/flex"
+import { Spinner } from "@/components/ui/spinner"
+
+import { cn } from "@/lib/utils/cn"
 
 import { ProgressCta } from "../../ProgressCta"
 
@@ -48,8 +52,8 @@ export const GeneratingKeys = ({
   }, [loading])
 
   return (
-    <Grid placeItems="center" h="full" bg="background.highlight">
-      <Flex direction="column" alignItems="center" gap={4}>
+    <div className="grid h-full place-items-center bg-background-highlight">
+      <Flex className="flex-col items-center gap-4">
         {loading ? (
           <motion.div
             key="spinner"
@@ -58,7 +62,7 @@ export const GeneratingKeys = ({
             transition={{ duration: 0.5 }}
             data-testid="loading-spinner"
           >
-            <Spinner w={SPINNER_SIZE} h={SPINNER_SIZE} />
+            <Spinner className={SPINNER_SIZE} />
           </motion.div>
         ) : (
           <motion.div
@@ -67,26 +71,21 @@ export const GeneratingKeys = ({
             animate={{ scale: 1 }}
             transition={{ type: "spring", delay: 0.25 }}
           >
-            <Icon
-              as={PiCheckThin}
-              w={SPINNER_SIZE}
-              h={SPINNER_SIZE}
-              transform="rotate(-10deg)"
-            />
+            <PiCheckThin className={cn(SPINNER_SIZE, "-rotate-[10deg]")} />
           </motion.div>
         )}
 
-        <Text textAlign="center" px={{ base: 4, md: 8 }}>
+        <p className="px-4 text-center md:px-8">
           {loading
             ? "Generating example recovery phrase"
             : "Example account created"}
-        </Text>
+        </p>
         {complete && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: BUTTON_FADE_DURATION * 1e-3 }}
-            style={{ position: "absolute", bottom: 0, width: "100%" }}
+            className="absolute bottom-0 w-full"
           >
             <ProgressCta
               className="inset-x-0"
@@ -98,6 +97,6 @@ export const GeneratingKeys = ({
           </motion.div>
         )}
       </Flex>
-    </Grid>
+    </div>
   )
 }
