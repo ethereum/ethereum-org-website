@@ -39,7 +39,12 @@ export const InteractiveWordSelector = ({
           setWordsSelected={setWordsSelected}
         />
       ) : (
-        <ProgressCta progressStepper={progressStepper}>{ctaLabel}</ProgressCta>
+        <ProgressCta
+          data-testid="word-selector-cta"
+          progressStepper={progressStepper}
+        >
+          {ctaLabel}
+        </ProgressCta>
       )}
     </Box>
   )

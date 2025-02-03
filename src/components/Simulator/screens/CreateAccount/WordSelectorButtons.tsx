@@ -65,6 +65,7 @@ export const WordSelectorButtons = ({
       bottom={0}
       w="full"
       bg="background.highlight"
+      data-testid="word-selector-buttons"
     >
       <Grid
         templateColumns="repeat(4, 1fr)"
