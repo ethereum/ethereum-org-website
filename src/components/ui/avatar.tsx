@@ -126,7 +126,7 @@ const Avatar = React.forwardRef<
     href,
     src,
     name,
-    size,
+    size = "md",
     label,
     className,
     direction = "row",
