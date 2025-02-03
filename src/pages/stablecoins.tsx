@@ -603,17 +603,6 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
               <H3>{t("page-stablecoins-interest-earning-dapps")}</H3>
               <p className="mb-6">{t("page-stablecoins-saving")}</p>
             </div>
-
-            <Flex className="mx-auto w-full flex-col justify-center rounded-sm border border-border-high-contrast p-8 lg:mx-0">
-              <Emoji className="mb-4 text-[5rem]" text=":bank:" />
-              <p className="mb-6 text-7xl">{t("page-stablecoins-bank-apy")}</p>
-              <em className="mb-6">
-                {t("page-stablecoins-bank-apy-source")}{" "}
-                <InlineLink href="https://www.nytimes.com/2020/09/18/your-money/savings-interest-rates.html">
-                  {t("page-stablecoins-bank-apy-source-link")}
-                </InlineLink>
-              </em>
-            </Flex>
           </Flex>
           <div className="mb-16 grid grid-cols-[repeat(auto-fill,_minmax(min(100%,_280px),_1fr))] gap-8">
             {dapps.map((dapp, idx) => (

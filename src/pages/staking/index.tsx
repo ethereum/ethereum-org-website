@@ -13,9 +13,6 @@ import type {
 } from "@/lib/types"
 
 import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
-import ButtonLink, {
-  type ButtonLinkProps,
-} from "@/components/Buttons/ButtonLink"
 import Card from "@/components/Card"
 import ExpandableCard from "@/components/ExpandableCard"
 import FeedbackCard from "@/components/FeedbackCard"
@@ -28,6 +25,10 @@ import StakingCommunityCallout from "@/components/Staking/StakingCommunityCallou
 import StakingHierarchy from "@/components/Staking/StakingHierarchy"
 import StakingStatsBox from "@/components/Staking/StakingStatsBox"
 import Translation from "@/components/Translation"
+import {
+  ButtonLink,
+  type ButtonLinkProps,
+} from "@/components/ui/buttons/Button"
 import { Divider } from "@/components/ui/divider"
 import { Flex, Stack, VStack } from "@/components/ui/flex"
 import InlineLink from "@/components/ui/Link"
@@ -108,13 +109,7 @@ const StyledCard = (props: {
     emoji={props.emoji}
     key={props.key}
     description={props.description}
-    sx={{
-      justifyContent: "flex-start",
-      h3: {
-        fontWeight: "700",
-        margin: "0 0 1rem",
-      },
-    }}
+    className="justify-start [&_h3]:mb-1 [&_h3]:mt-0 [&_h3]:font-bold"
   >
     {props.children}
   </Card>
