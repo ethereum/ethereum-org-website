@@ -56,6 +56,7 @@ export const GeneratingKeys = ({
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
+            data-testid="loading-spinner"
           >
             <Spinner w={SPINNER_SIZE} h={SPINNER_SIZE} />
           </motion.div>
@@ -90,6 +91,7 @@ export const GeneratingKeys = ({
             <ProgressCta
               className="inset-x-0"
               progressStepper={progressStepper}
+              data-testid="generating-keys-cta"
             >
               {ctaLabel}
             </ProgressCta>
