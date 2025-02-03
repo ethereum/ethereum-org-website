@@ -35,7 +35,6 @@ const InfoBanner = ({
         "rounded-sm p-6 sm:flex-row",
         shouldCenter ? "max-w-[55rem]" : "max-w-full",
         isWarning ? "bg-orange-200" : "bg-indigo-100",
-        !onClick && "text-gray-600",
         className
       )}
       onClick={onClick}
