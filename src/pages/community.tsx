@@ -192,7 +192,7 @@ const CommunityPage = () => {
       />
       <HubHero {...heroContent} />
       <Divider />
-      <Flex className="-mt-px h-full w-full flex-row-reverse items-center border-b border-b-border-high-contrast bg-home-box-turquoise py-8 ps-0 lg:h-[720px] lg:py-0 lg:ps-8">
+      <Flex className="-mt-px h-full w-full flex-row-reverse items-center border-b border-b-border-high-contrast bg-[#ccfcff] py-8 ps-0 lg:h-[720px] lg:py-0 lg:ps-8 dark:bg-[#293233]">
         <Content>
           <Flex className="mb-8 flex-col items-center">
             <H2>{t("page-community-why-get-involved-title")}</H2>
@@ -249,7 +249,7 @@ const CommunityPage = () => {
           </div>
         </div>
       </div>
-      <Flex className="-mt-px h-full w-full flex-col-reverse items-center border-y border-y-border-high-contrast bg-home-box-turquoise py-8 ps-0 lg:h-[720px] lg:flex-row-reverse lg:py-0 lg:ps-8">
+      <Flex className="-mt-px h-full w-full flex-col-reverse items-center border-y border-y-border-high-contrast bg-[#ccfcff] py-8 ps-0 lg:h-[720px] lg:flex-row-reverse lg:py-0 lg:ps-8 dark:bg-[#293233]">
         <RowReverse>
           <FeatureContent>
             <H2>{t("page-community-open-source")}</H2>
@@ -276,7 +276,7 @@ const CommunityPage = () => {
           </ImageContainer>
         </RowReverse>
       </Flex>
-      <Flex className="-mt-px h-full w-full flex-col-reverse items-center border-y border-y-border-high-contrast bg-home-box-pink py-8 ps-0 lg:h-[720px] lg:flex-row-reverse lg:py-0 lg:ps-8">
+      <Flex className="-mt-px h-full w-full flex-col-reverse items-center border-y border-y-border-high-contrast bg-[#ffe5f9] py-8 ps-0 lg:h-[720px] lg:flex-row-reverse lg:py-0 lg:ps-8 dark:bg-[#332027]">
         <Flex className="flex-col-reverse items-center lg:flex-row">
           <FeatureContent>
             <Flex className="flex-col justify-center">
@@ -305,7 +305,7 @@ const CommunityPage = () => {
           </ImageContainer>
         </Flex>
       </Flex>
-      <Flex className="-mt-px h-full w-full flex-col-reverse items-center border-y border-y-border-high-contrast bg-home-box-purple lg:h-[720px] lg:flex-row">
+      <Flex className="-mt-px h-full w-full flex-col-reverse items-center border-y border-y-border-high-contrast bg-[#e8e8ff] lg:h-[720px] lg:flex-row dark:bg-[#212131]">
         <RowReverse>
           <FeatureContent>
             <H2>{t("page-community-support")}</H2>

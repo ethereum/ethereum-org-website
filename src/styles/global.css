@@ -43,9 +43,6 @@
       rgba(145, 234, 228, 0.2) 100%
     );
     --search-background: var(--background);
-    --home-box-turquoise: #ccfcff;
-    --home-box-pink: #ffe5f9;
-    --home-box-purple: #e8e8ff;
   }
 
   [data-theme="dark"] {
@@ -74,9 +71,6 @@
       rgba(134, 253, 232, 0.08) 100%
     );
     --search-background: #4c4c4c;
-    --home-box-turquoise: #293233;
-    --home-box-pink: #332027;
-    --home-box-purple: #212131;
   }
 }
 
