@@ -1,18 +1,17 @@
 import type { Meta, StoryObj } from "@storybook/react/*"
 
-import { WordList as Component } from "../WordList"
+import { InitialWordDisplay as Component } from "../InitialWordDisplay"
 
 const meta = {
   title:
-    "Molecules / Display Content / Simulator / CreateAccount Screen / WordList",
+    "Molecules / Display Content / Simulator / CreateAccount Screen / InitialWordDisplay",
   component: Component,
 } satisfies Meta<typeof Component>
 
 export default meta
 
-export const WordList: StoryObj<typeof meta> = {
+export const InitialWordDisplay: StoryObj<typeof meta> = {
   args: {
     words: ["fake", "none", "nope", "back", "stop", "halt", "cease"],
-    wordsSelected: 2,
   },
 }
