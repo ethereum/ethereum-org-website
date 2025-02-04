@@ -23,20 +23,29 @@ const ContributorList = ({ children }: Required<ChildOnlyProp>) => (
 )
 
 type ContributorProps = { contributor: FileContributor }
-const Contributor = ({ contributor }: ContributorProps) => (
-  <ListItem className="flex items-center p-2">
-    <Avatar
-      height="40px"
-      width="40px"
-      src={contributor.avatar_url}
-      name={contributor.login}
-      me={2}
-    />
-    <InlineLink href={"https://github.com/" + contributor.login}>
-      @{contributor.login}
-    </InlineLink>
-  </ListItem>
-)
+const Contributor = ({ contributor }: ContributorProps) => {
+  const isCrowdinContributor = contributor.avatar_url.includes(
+    "crowdin-static.downloads.crowdin.com"
+  )
+  const urlPrefix = isCrowdinContributor
+    ? "https://crowdin.com/profile/"
+    : "https://github.com/"
+
+  return (
+    <ListItem className="flex items-center p-2">
+      <Avatar
+        height="40px"
+        width="40px"
+        src={contributor.avatar_url}
+        name={contributor.login}
+        me={2}
+      />
+      <InlineLink href={urlPrefix + contributor.login}>
+        @{contributor.login}
+      </InlineLink>
+    </ListItem>
+  )
+}
 
 type FlexProps = BaseHTMLAttributes<HTMLDivElement> & { asChild?: boolean }
 export type FileContributorsProps = FlexProps & {
@@ -94,7 +103,15 @@ const FileContributors = ({
 
           <p className="m-0 text-body-medium">
             <Translation id="last-edit" />:{" "}
-            <InlineLink href={"https://github.com/" + lastContributor.login}>
+            <InlineLink
+              href={
+                lastContributor.avatar_url.includes(
+                  "crowdin-static.downloads.crowdin.com"
+                )
+                  ? "https://crowdin.com/profile/" + lastContributor.login
+                  : "https://github.com/" + lastContributor.login
+              }
+            >
               @{lastContributor.login}
             </InlineLink>
             , {lastEditLocaleTimestamp}
