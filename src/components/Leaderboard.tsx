@@ -96,8 +96,8 @@ const Leaderboard = ({ content, limit = 100 }: LeaderboardProps) => {
                 <Avatar
                   src={avatarImg}
                   name={avatarAlt}
-                  // This meets the Design System requirement, despite not being used in this instance
-                  href="#"
+                  // This meets the Design System requirement, despite the leaderboard item itself being a link
+                  href={hasGitHub ? `${GITHUB_URL}${username}` : "#"}
                   // `size-10` is not part of a "size" variant
                   className="me-4 size-10"
                 />
