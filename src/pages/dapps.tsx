@@ -140,11 +140,13 @@ const Option = (
   return (
     <Button
       variant="outline"
-      className={`my-2 flex w-full items-center justify-center rounded-4xl border px-6 py-4 transition-none lg:mx-2 lg:w-auto lg:justify-start ${
-        props.isActive
-          ? "border-primary text-primary shadow-table-box"
-          : "border-body text-body"
-      } hover:border-primary hover:text-primary active:bg-transparent`}
+      className={cn(
+        `my-2 flex w-full items-center justify-center rounded-4xl border px-6 py-4 transition-none lg:mx-2 lg:w-auto lg:justify-start ${
+          props.isActive
+            ? "border-primary text-primary shadow-table-box"
+            : "border-body text-body"
+        } hover:border-primary hover:text-primary active:bg-transparent`
+      )}
       {...props}
     />
   )
@@ -158,11 +160,11 @@ const OptionText = (props: ChildOnlyProp) => (
 )
 
 const ButtonPrimary = (props: Pick<ButtonProps, "children" | "onClick">) => (
-  <Button className="rounded px-3 py-2" {...props} />
+  <Button {...props} />
 )
 
 const ButtonSecondary = (props: Pick<ButtonProps, "children" | "onClick">) => (
-  <Button variant="outline" className="rounded px-3 py-2" {...props} />
+  <Button variant="outline" {...props} />
 )
 
 const ImageContainer = (props: Pick<FlexProps, "children" | "id">) => (
@@ -228,7 +230,7 @@ const FullWidthContainer = (
   props: ChildOnlyProp & { ref: React.RefObject<HTMLDivElement> }
 ) => (
   <Page
-    className="m-0 mb-16 border-t border-border bg-background-highlight pb-8 pt-16"
+    className="m-0 mb-16 border-t bg-background-highlight pb-8 pt-16"
     {...props}
   />
 )
@@ -246,7 +248,7 @@ const StepBoxContainer = (props: ChildOnlyProp) => (
 
 const StepBox = (props: ComponentPropsWithRef<typeof BaseLink>) => (
   <BaseLink
-    className="flex w-full flex-col items-start justify-between border border-border px-8 pb-8 pt-0 no-underline transition-transform duration-200 hover:scale-105 hover:bg-background md:flex-row md:items-center md:pb-0"
+    className="flex w-full flex-col items-start justify-between border px-8 pb-8 pt-0 text-body no-underline transition-transform duration-200 hover:scale-105 hover:bg-background-highlight md:flex-row md:items-center md:pb-0"
     {...props}
   />
 )
