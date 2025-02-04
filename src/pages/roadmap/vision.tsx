@@ -89,13 +89,7 @@ const ProblemCardContainer = (props: ChildOnlyProp) => {
 
 const CentreCard = (props: ComponentPropsWithRef<typeof Card>) => (
   <Card
-    flex="1 1 30%"
-    minW="240px"
-    m={4}
-    page-upgrades-proof-stake-link
-    p={6}
-    border={0}
-    textAlign="center"
+    className="m-4 min-w-[240px] flex-[1_1_30%] border-0 p-6 text-center"
     {...props}
   />
 )
