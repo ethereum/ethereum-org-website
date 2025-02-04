@@ -8,7 +8,6 @@ import {
   Flex,
   FlexProps,
   HeadingProps,
-  Link,
   ListItem,
   Table,
   TableCaption,
@@ -22,7 +21,6 @@ import {
 
 import { BasePageProps, Lang } from "@/lib/types"
 
-import { ButtonLink } from "@/components/Buttons"
 import Callout from "@/components/Callout"
 import Card from "@/components/Card"
 import Emoji from "@/components/Emoji"
@@ -32,7 +30,6 @@ import GhostCard from "@/components/GhostCard"
 import HorizontalCard from "@/components/HorizontalCard"
 import { Image } from "@/components/Image"
 import InfoBanner from "@/components/InfoBanner"
-import InlineLink from "@/components/Link"
 import MainArticle from "@/components/MainArticle"
 import OldHeading from "@/components/OldHeading"
 import Text from "@/components/OldText"
@@ -40,7 +37,9 @@ import PageHero from "@/components/PageHero"
 import PageMetadata from "@/components/PageMetadata"
 import Pill from "@/components/Pill"
 import Translation from "@/components/Translation"
+import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Divider } from "@/components/ui/divider"
+import InlineLink, { BaseLink } from "@/components/ui/Link"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
@@ -237,7 +236,7 @@ const GasPage = () => {
                   "page-gas-how-do-i-pay-less-gas-card-3-description"
                 )}
               >
-                <ButtonLink w="fit-content" href="/layer-2/">
+                <ButtonLink className="w-fit" href="/layer-2/">
                   {t("page-gas-try-layer-2")}
                 </ButtonLink>
               </StyledCard>
@@ -387,9 +386,9 @@ const GasPage = () => {
             <Text>
               <Translation id="page-gas:page-gas-faq-question-2-a-1" />
             </Text>
-            <Link href="/eth/">
+            <BaseLink href="/eth/">
               <Translation id="page-gas:page-gas-faq-question-2-a-2" />
-            </Link>
+            </BaseLink>
           </ExpandableCard>
           <ExpandableCard title={t("page-gas-faq-question-3-q")}>
             <Text>
