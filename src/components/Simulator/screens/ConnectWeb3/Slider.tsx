@@ -31,6 +31,7 @@ export const Slider = ({ isConnected, displayUrl, children }: SliderProps) => {
         animate={{ bottom: 0 }}
         exit={{ bottom: "-100%" }}
         transition={{ duration: 0.75, ease: "easeOut" }}
+        data-testid="slider-box"
       >
         <Flex
           direction="column"
