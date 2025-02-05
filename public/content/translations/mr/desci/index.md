@@ -96,7 +96,7 @@ Web3 पॅटर्नचा वापर करून वैज्ञानि
 - [VitaDAO: दीर्घायुषी संशोधनासाठी प्रायोजित संशोधन कराराद्वारे निधी प्राप्त करा](https://www.vitadao.com/)
 - [ResearchHub: वैज्ञानिक परिणाम पोस्ट करा आणि समवयस्कांशी संभाषण करा](https://www.researchhub.com/)
 - [LabDAO: सिलिकोमध्ये प्रोटीन फोल्ड करा](https://alphafodl.vercel.app/)
-- [dClimate API: विकेंद्रित समुदायाद्वारे गोळा केलेला हवामान डेटा क्वेरी](https://api.dclimate.net/)
+- [dClimate API: विकेंद्रित समुदायाद्वारे गोळा केलेला हवामान डेटा क्वेरी](https://www.dclimate.net/)
 - [DeSci फाउंडेशन: DeSci प्रकाशन साधन बिल्डर](https://descifoundation.org/)
 - [DeSci.World: वापरकर्त्यांना विकेंद्रित विज्ञान पाहण्यासाठी, व्यस्त ठेवण्यासाठी वन-स्टॉप शॉप](https://desci.world)
 - [फ्लेमिंग प्रोटोकॉल: ओपन-सोर्स डेटा इकॉनॉमी जी सहयोगात्मक बायोमेडिकल शोधांना चालना देते](https://medium.com/@FlemingProtocol/a-data-economy-for-patient-driven-biomedical-innovation-9d56bf63d3dd)

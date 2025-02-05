@@ -96,7 +96,7 @@ Verken projecten en word lid van de DeSci-gemeenschap.
 - [VitaDAO: krijg financiering via gesponsorde onderzoeksovereenkomsten voor onderzoek naar lange levensduur](https://www.vitadao.com/)
 - [ResearchHub: publiceer een wetenschappelijk resultaat en neem deel aan een gesprek met collega's](https://www.researchhub.com/)
 - [LabDAO: vouw een eiwit in-silico](https://alphafodl.vercel.app/)
-- [dClimate API: vraag klimaatgegevens op verzameld door een gedecentraliseerde gemeenschap](https://api.dclimate.net/)
+- [dClimate API: vraag klimaatgegevens op verzameld door een gedecentraliseerde gemeenschap](https://www.dclimate.net/)
 - [DeSci Foundation: bouwer van tools voor het publiceren van DeSci](https://descifoundation.org/)
 - [DeSci.World: one-stop shop voor gebruikers om te kijken naar en deel te nemen aan gedecentraliseerde wetenschap](https://desci.world)
 - [OceanDAO: door DAO beheerde financiering voor datagerelateerde wetenschap](https://oceanprotocol.com/)

@@ -96,7 +96,7 @@ Explore projetos e junte-se à comunidade DeSci.
 - [Virotada: receba financiamento por meio de acordos de pesquisa patrocinados para pesquisas sobre longevidade](https://www.vitadao.com/)
 - [ResearchHub: publique um resultado científico e converse com colegas](https://www.researchhub.com/)
 - [LabDAO: dobre uma proteína in-silico](https://alphafodl.vercel.app/)
-- [dClimate API: consulte dados climáticos coletados por uma comunidade descentralizada](https://api.dclimate.net/)
+- [dClimate API: consulte dados climáticos coletados por uma comunidade descentralizada](https://www.dclimate.net/)
 - [DeSci Foundation: construtor de ferramentas de publicação DeSci](https://descifoundation.org/)
 - [DeSci.World: balcão único para os usuários visualizarem e interagirem com a ciência descentralizada](https://desci.world)
 - [OceanDAO: financiamento governado pela DAO para ciência relacionada a dados](https://oceanprotocol.com/)

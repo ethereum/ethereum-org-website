@@ -96,7 +96,7 @@ Jelajahi proyek-proyek dan bergabunglah dengan komunitas DeSci.
 - [VitaDAO: Terima pendanaan melalui perjanjian penelitian yang disponsori untuk penelitian kelangsungan hidup](https://www.vitadao.com/)
 - [ResearchHub: Unggah hasil ilmiah dan terlibat dalam percakapan dengan rekan-rekan sejawat](https://www.researchhub.com/)
 - [LabDAO: Melipat protein secara in-silico](https://alphafodl.vercel.app/)
-- [dClimate API: Permintaan data iklim yang dikumpulkan oleh komunitas terdesentralisasi](https://api.dclimate.net/)
+- [dClimate API: Permintaan data iklim yang dikumpulkan oleh komunitas terdesentralisasi](https://www.dclimate.net/)
 - [DeSci Foundation: Pembangun alat penerbitan DeSci](https://descifoundation.org/)
 - [DeSci.World: pusat informasi untuk pengguna melihat dan terlibat dengan ilmu pengetahuan terdesentralisasi](https://desci.world)
 - [OceanDAO: Pendanaan yang diatur oleh DAO untuk ilmu pengetahuan terkait data](https://oceanprotocol.com/)

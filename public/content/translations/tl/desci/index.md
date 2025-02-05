@@ -96,7 +96,7 @@ Tingnan ang mga proyekto at sumali sa komunidad ng DeSci.
 - [VitaDAO: makatanggap ng pondo sa pamamagitan ng mga sponsored na research agreement para sa longevity research](https://www.vitadao.com/)
 - [ResearchHub: mag-post ng resulta ng siyentipikong pag-aaral at makipag-usap sa mga kapwa mananaliksik](https://www.researchhub.com/)
 - [LabDAO: mag-fold ng protein in-silico](https://alphafodl.vercel.app/)
-- [dClimate API: mag-query ng data ng klima na kinolekta ng desentralisadong komunidad](https://api.dclimate.net/)
+- [dClimate API: mag-query ng data ng klima na kinolekta ng desentralisadong komunidad](https://www.dclimate.net/)
 - [DeSci Foundation: builder ng tool sa paglalathala ng DeSc](https://descifoundation.org/)
 - [DeSci.World: one-stop shop para tingnan at mag-engage ang mga user sa decentralized science](https://desci.world)
 - [OceanDAO: pagpopondo na pinapamahalaan ng decentralized autonomous organization (DAO) para sa agham na nauugnay sa data](https://oceanprotocol.com/)

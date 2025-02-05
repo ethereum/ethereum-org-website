@@ -96,7 +96,7 @@ Layihələri araşdırın və DeSci cəmiyyətinə qoşulun.
 - [VitaDAO: uzunömürlülük tədqiqatları üçün sponsorluq edilən tədqiqat müqavilələri vasitəsilə maliyyə əldə edin](https://www.vitadao.com/)
 - [ResearchHub: elmi nəticəni dərc edin və həmkarlarınız ilə söhbət edin](https://www.researchhub.com/)
 - [LabDAO: in-silico-da protein qazanın](https://alphafodl.vercel.app/)
-- [dClimate API: mərkəzləşdirilməmiş icma tərəfindən toplanan iqlim məlumatlarını sorğulayın](https://api.dclimate.net/)
+- [dClimate API: mərkəzləşdirilməmiş icma tərəfindən toplanan iqlim məlumatlarını sorğulayın](https://www.dclimate.net/)
 - [DeSci Fondu: DeSci nəşriyyat aləti qurucusu](https://descifoundation.org/)
 - [DeSci.World: istifadəçilər üçün mərkəzləşdirilməmiş elmlə məşğul olmaq üçün bir mağaza](https://desci.world)
 - [Fleming Protokolu: birgə biotibbi kəşfləri gücləndirən açıq mənbəli məlumat iqtisadiyyatı](https://medium.com/@FlemingProtocol/a-data-economy-for-patient-driven-biomedical-innovation-9d56bf63d3dd)

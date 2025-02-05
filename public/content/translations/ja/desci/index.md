@@ -96,7 +96,7 @@ Web3の様式を活用することで科学データへのアクセスが大幅�
 - [VitaDAO: 長寿研究のための研究スポンサー契約を通じた資金獲得](https://www.vitadao.com/)
 - [ResearchHub: 科学的成果を投稿し、仲間と会話する](https://www.researchhub.com/)
 - [LabDAO: コンピュータを用いたタンパク質フォールディング](https://alphafodl.vercel.app/)
-- [dClimate API: 分散型コミュニティに収集された気候データのクエリ](https://api.dclimate.net/)
+- [dClimate API: 分散型コミュニティに収集された気候データのクエリ](https://www.dclimate.net/)
 - [DeSci財団: DeSci出版ツールビルダー](https://descifoundation.org/)
 - [DeSci.World: ユーザーが閲覧して参加できる分散型科学のワンストップショップ](https://desci.world)
 - [OceanDAO: データ関連科学のための、DAOに統制された資金調達](https://oceanprotocol.com/)

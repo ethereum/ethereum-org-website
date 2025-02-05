@@ -96,7 +96,7 @@ summaryPoint3: Δημιουργία πάνω στο ανοιχτό επιστη�
 - [VitaDAO: Λάβετε χρηματοδότηση μέσω συμφωνιών έρευνας με χορηγία για έρευνα μακροζωίας.](https://www.vitadao.com/)
 - [ResearchHub: Δημοσιεύστε μια επιστημονική έρευνα και συμμετάσχετε σε μια συζήτηση.](https://www.researchhub.com/)
 - [LabDAO: fold a protein in-silico](https://alphafodl.vercel.app/)
-- [dClimate API: Αναζήτηση δεδομένων για το κλίμα που συλλέγονται από μια αποκεντρωμένη κοινότητα.](https://api.dclimate.net/)
+- [dClimate API: Αναζήτηση δεδομένων για το κλίμα που συλλέγονται από μια αποκεντρωμένη κοινότητα.](https://www.dclimate.net/)
 - [DeSci Foundation: DeSci δημιουργία εργαλείου δημοσίευσης.](https://descifoundation.org/)
 - [DeSci.World: Σύντομη αγορά για να δουν οι χρήστες και να ασχοληθούν με την αποκεντρωμένη επιστήμη.](https://desci.world)
 - [OceanDAO: DAO χρηματοδότησης για την επιστήμη που σχετίζεται με δεδομένα.](https://oceanprotocol.com/)

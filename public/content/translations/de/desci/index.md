@@ -96,7 +96,7 @@ Erkunden Sie Projekte und werden Sie Teil der DeSci-Gemeinschaft.
 - [VitaDAO: langfristige Forschung finanziert durch gesponserte Forschungsverträge](https://www.vitadao.com/)
 - [ResearchHub: wissenschaftliche Ergebnisse veröffentlichen und in Diskurs mit Partnern gehen](https://www.researchhub.com/)
 - [LabDAO: Falten eines Proteins in Silizium](https://alphafodl.vercel.app/)
-- [dClimate API: Klimadaten abfragen, die von einer dezentralen Gemeinschaft erfasst werden](https://api.dclimate.net/)
+- [dClimate API: Klimadaten abfragen, die von einer dezentralen Gemeinschaft erfasst werden](https://www.dclimate.net/)
 - [DeSci Foundation: DeSci Publishing Tool Builder](https://descifoundation.org/)
 - [DeSci.World: One-Stop-Shop für Benutzer, mit dezentralisierter Wissenschaft](https://desci.world)
 - [OceanDAO: DAO regelte die Finanzierung der datenbezogenen Wissenschaft](https://oceanprotocol.com/)

@@ -96,7 +96,7 @@ Istražite projekte i pridružite se DeSci zajednici.
 - [VitaDAO: dobijte sredstva finansiranje putem ugovora o sponzorisanju istraživanja za istraživanje dugovečnosti](https://www.vitadao.com/)
 - [ResearchHub: objavite naučne rezultate i učestvujte u diskusiji sa kolegama](https://www.researchhub.com/)
 - [LabDAO: Istraživanja proteina u virtuelnom okruženju](https://alphafodl.vercel.app/)
-- [dClimate API omogućava upite za klimatske podatke koji su prikupljeni od strane decentralizovane zajednice](https://api.dclimate.net/)
+- [dClimate API omogućava upite za klimatske podatke koji su prikupljeni od strane decentralizovane zajednice](https://www.dclimate.net/)
 - [DeSci fondacija: DeSci alat za izgradnju sistema za objavljivanje](https://descifoundation.org/)
 - [DeSci.World: jedno mesto za korisnike da vide i učestvuju u decentralizovanoj nauci](https://desci.world)
 - [OceanDAO: finansiranje kojim upravlja DAO za nauku povezanu sa podacima](https://oceanprotocol.com/)

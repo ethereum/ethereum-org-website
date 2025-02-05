@@ -96,7 +96,7 @@ Web3 обладает потенциалом, который позволит р
 - [VitaDAO: получайте финансирование через спонсорские соглашения на исследования долголетия](https://www.vitadao.com/)
 - [ResearchHub: публикуйте научные результаты и участвуйте в беседах с коллегами](https://www.researchhub.com/)
 - [LabDAO: складывание белка in-silico](https://alphafodl.vercel.app/)
-- [dClimate API: запрос климатических данных, собранных децентрализованным сообществом](https://api.dclimate.net/)
+- [dClimate API: запрос климатических данных, собранных децентрализованным сообществом](https://www.dclimate.net/)
 - [DeSci Foundation: конструктор инструментов публикации DeSci](https://descifoundation.org/)
 - [DeSci.World: единая пользовательская площадка для просмотра и взаимодействия с децентрализованной наукой](https://desci.world)
 - [OceanDAO: финансирование науки, связанной с данными, под управлением DAO](https://oceanprotocol.com/)

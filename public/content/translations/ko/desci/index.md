@@ -96,7 +96,7 @@ NFT가 향후 거래에 대한 수익을 원래 작성자에게 다시 전달할
 - [VitaDAO: 장수 연구를 위한 후원 연구 계약을 통해 자금을 받으세요](https://www.vitadao.com/)
 - [ResearchHub: 과학적 결과를 게시하고 동료들과 대화에 참여하세요](https://www.researchhub.com/)
 - [LabDAO: 단백질 인실리코를 접으세요](https://alphafodl.vercel.app/)
-- [dClimate API: 분산된 커뮤니티에서 수집한 기후 데이터 쿼리](https://api.dclimate.net/)
+- [dClimate API: 분산된 커뮤니티에서 수집한 기후 데이터 쿼리](https://www.dclimate.net/)
 - [DeFi Foundation: DeFi 게시 도구 빌더](https://descifoundation.org/)
 - [DeSci.World: 사용자가 보고, 탈중앙화 과학에 참여할 수 있는 원스톱 상점](https://desci.world)
 - [플레밍 프로토콜: 협업 생물 의학 발견을 촉진하는 오픈 소스 데이터 경제](https://medium.com/@FlemingProtocol/a-data-economy-for-patient-driven-biomedical-innovation-9d56bf63d3dd)
