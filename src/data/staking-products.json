@@ -990,16 +990,39 @@
       "url": "https://lido.fi/",
       "audits": [
         {
-          "name": "Quantstamp",
-          "url": "https://github.com/lidofinance/audits/blob/main/QSP%20Lido%20Report%2012-2020.pdf"
+          "name": "All Audits",
+          "date": "07-2026",
+          "url": "https://docs.lido.fi/security/audits/"
         },
         {
-          "name": "MixBytes()",
-          "url": "https://github.com/lidofinance/audits/blob/main/MixBytes%20ETH2%20Oracle%20Security%20Audit%20Report%2004-2021.pdf"
+          "name": "Certora Lido V3 Audit",
+          "date": "12-2025",
+          "url": "https://github.com/lidofinance/audits/blob/main/Certora%20Lido%20V3%20Audit%20Report%20-%2012-2025.pdf"
         },
         {
-          "name": "Sigma Prime",
-          "url": "https://github.com/lidofinance/audits/blob/main/Sigma%20Prime%20-%20Lido%20Finance%20Security%20Assessment%20Report%20v2.1.pdf"
+          "name": "MixBytes Lido V3 Security Audit",
+          "date": "12-2025",
+          "url": "https://github.com/lidofinance/audits/blob/main/MixBytes%20Lido%20V3%20Security%20Audit%20Report%20-%2012-2025.pdf"
+        },
+        {
+          "name": "Consensys Diligence Lido V3 Security Audit",
+          "date": "11-2025",
+          "url": "https://github.com/lidofinance/audits/blob/main/Consensys%20Diligence%20Lido%20V3%20Security%20Audit%20-%2011-2025.pdf"
+        },
+        {
+          "name": "Ackee Blockchain Community Staking Module v2 Audit",
+          "date": "09-2025",
+          "url": "https://github.com/lidofinance/audits/blob/main/Ackee%20Blockchain%20Community%20Staking%20Module%20v2%20Audit%20Report%2009-2025.pdf"
+        },
+        {
+          "name": "Code4rena Community Staking Module v2 Audit",
+          "date": "08-2025",
+          "url": "https://github.com/lidofinance/audits/blob/main/Code4rena%20CSM%20V2%20Audit%20Report%2008-2025.pdf"
+        },
+        {
+          "name": "OpenZeppelin Dual Governance Audit",
+          "date": "11-2024",
+          "url": "https://github.com/lidofinance/audits/blob/main/OpenZeppelin%20Dual%20Governance%20Audit%20Report%2011-2024.pdf"
         }
       ],
       "minEth": 0,
@@ -1015,16 +1038,14 @@
       "hasBugBounty": true,
       "isTrustless": true,
       "hasPermissionlessNodes": true,
-      "pctMajorityExecutionClient": null,
-      "pctMajorityConsensusClient": 42.83,
+      "pctMajorityExecutionClient": 40.13,
+      "pctMajorityConsensusClient": 37.66,
       "platforms": ["Browser", "Wallet"],
       "ui": ["GUI"],
       "socials": {
         "discord": "https://discord.com/invite/vgdPfhZ",
         "twitter": "https://twitter.com/lidofinance",
-        "telegram": "https://t.me/lidofinance",
-        "reddit": "https://www.reddit.com/r/lidofinance/",
-        "github": "https://github.com/lidofinance/lido-dao"
+        "github": "https://github.com/lidofinance/core"
       },
       "matomo": {
         "eventCategory": "StakingProductCard",
