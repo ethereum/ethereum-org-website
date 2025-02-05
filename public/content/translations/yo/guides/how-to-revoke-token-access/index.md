@@ -20,7 +20,6 @@ Lọgan ti pẹpẹ kan ba ni awọn ẹtọ wiwọle ailopin si tọ́kẹ̀n k
 
 - [Ethallowance](https://ethallowance.com/)(Ethereum)
 - [Etherscan](https://etherscan.io/tokenapprovalchecker)(Ethereum)
-- [Cointool](https://cointool.app/approve/eth) (onírúurú nẹtiwọki)
 - [fífagi lée](https://revoke.cash/) (onírúurú nẹtiwọki)
 - [Unrekt](https://app.unrekt.net/) (onírúurú nẹtiwọki)
 - [EverRevoke](https://everrise.com/everrevoke/) (onírúurú nẹtiwọki)

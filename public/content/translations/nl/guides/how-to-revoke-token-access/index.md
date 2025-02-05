@@ -20,7 +20,6 @@ Verschillende websites laten je slimme contracten die verbonden zijn met je adre
 
 - [Ethallowance](https://ethallowance.com/) (Ethereum)
 - [Etherscan](https://etherscan.io/tokenapprovalchecker) (Ethereum)
-- [Cointool](https://cointool.app/approve/eth) (verschillende netwerken)
 - [Revoke](https://revoke.cash/) (verschillende netwerken)
 - [Unrekt](https://app.unrekt.net/) (verschillende netwerken)
 - [EverRevoke](https://everrise.com/everrevoke/) (verschillende netwerken)

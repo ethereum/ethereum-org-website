@@ -20,7 +20,6 @@ Auf mehreren Websites können Sie die mit Ihrer Adresse verbundenen intelligente
 
 - [Ethallowance](https://ethallowance.com/) (Ethereum)
 - [Etherscan](https://etherscan.io/tokenapprovalchecker) (Ethereum)
-- [Cointool](https://cointool.app/approve/eth) (multiple Netzwerke)
 - [Revoke](https://revoke.cash/) (multiple Netzwerke)
 - [Unrekt](https://app.unrekt.net/) (multiple Netzwerke)
 - [EverRevoke](https://everrise.com/everrevoke/) (multiple Netzwerke)
