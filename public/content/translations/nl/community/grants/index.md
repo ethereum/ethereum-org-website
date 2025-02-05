@@ -34,7 +34,7 @@ Deze projecten hebben hun eigen beurzen gecreëerd voor projecten die gericht zi
 - [mStable Grants Program](https://docs.mstable.org/advanced/grants-program) - _[mStable](https://mstable.org/)-gemeenschap_
 - [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) – _[The Graph](https://thegraph.com/)-ecosysteem_
 - [UMA Grants Program](https://grants.umaproject.org/) - _[UMA](https://umaproject.org/)-ontwikkelaarsondersteuning_
-- [Uniswap Grants Program](https://www.unigrants.org/) - _[Uniswap](https://uniswap.org/)-gemeenschap_
+- [Uniswap Grants Program](https://www.uniswapfoundation.org/) - _[Uniswap](https://uniswap.org/)-gemeenschap_
 
 ## Kwadratische financiering {#quadratic-funding}
 

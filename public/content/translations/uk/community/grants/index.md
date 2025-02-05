@@ -35,7 +35,7 @@ lang: uk
 - [Програма грантів mStable](https://docs.mstable.org/advanced/grants-program) — _спільнота [mStable](https://mstable.org/)_
 - [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) — _екосистема [The Graph](https://thegraph.com/)_
 - [Програма грантів UMA](https://grants.umaproject.org/) — _підтримка розробників від [UMA](https://umaproject.org/)_
-- [Програма грантів Uniswap](https://www.unigrants.org/) — _спільнота [Uniswap](https://uniswap.org/)_
+- [Програма грантів Uniswap](https://www.uniswapfoundation.org/) — _спільнота [Uniswap](https://uniswap.org/)_
 
 ## Чотиричне фінансування {#quadratic-funding}
 

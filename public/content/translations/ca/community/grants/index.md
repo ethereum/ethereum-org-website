@@ -33,7 +33,7 @@ Aquests projectes han creat les seves pròpies subvencions per projectes enfocad
 - [MetaMask Program](https://metamaskgrants.org/) - _[MetaMask](https://metamask.io/) employee-led grants DAO_
 - [mStable Grants Program](https://docs.mstable.org/advanced/grants-program) - _[mStable](https://mstable.org/) community_
 - [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) – _Ecosistema [The Graph](https://thegraph.com/)_
-- [Programa de subvencions Uniswap](https://www.unigrants.org/) – _Comunitat [Uniswap](https://uniswap.org/)_
+- [Programa de subvencions Uniswap](https://www.uniswapfoundation.org/) – _Comunitat [Uniswap](https://uniswap.org/)_
 
 ## Finançament quadràtic {#quadratic-funding}
 

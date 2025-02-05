@@ -31,7 +31,7 @@ Miradi hii imeunda misaada yao kwa miradi inayolenga kukuza na kujaribu teknoloj
 - [Shirika la Ruzuku ya Ikolojia ya Lido (LEGO)](https://lego.lido.fi/) - _hugharamia ikolojia ya [Lido](https://lido.fi/)_
 - [Programu ya Ruzuku ya mStable](https://docs.mstable.org/advanced/grants-program) - _jamii ya [mStablei](https://mstable.org/)_
 - [Grafu](https://airtable.com/shrdfvnFvVch3IOVm) - _Ikolojia ya [Grafu](https://thegraph.com/)_
-- [Programu ya Ruzuku za Uniswap](https://www.unigrants.org/) - _Jamii ya [Uniswap](https://uniswap.org/)_
+- [Programu ya Ruzuku za Uniswap](https://www.uniswapfoundation.org/) - _Jamii ya [Uniswap](https://uniswap.org/)_
 
 ## Ufadhili wa Kwadratiki {#quadratic-funding}
 
