@@ -354,7 +354,20 @@ const WhatIsEthereumPage = ({
                       <Stack className="gap-6">
                         <p>{t("page-what-is-ethereum-summary-desc-1")}</p>
                         <p>{t("page-what-is-ethereum-summary-desc-2")}</p>
-                        <p>{t("page-what-is-ethereum-summary-desc-3")}</p>
+                        <ul>
+                          <li>
+                            <Translation id="page-what-is-ethereum:page-what-is-ethereum-summary-bullet-1" />
+                          </li>
+                          <li>
+                            <Translation id="page-what-is-ethereum:page-what-is-ethereum-summary-bullet-2" />
+                          </li>
+                          <li>
+                            <Translation id="page-what-is-ethereum:page-what-is-ethereum-summary-bullet-3" />
+                          </li>
+                          <li>
+                            <Translation id="page-what-is-ethereum:page-what-is-ethereum-summary-bullet-4" />
+                          </li>
+                        </ul>
                       </Stack>
                     </Stack>
                   </Summary>
@@ -371,10 +384,7 @@ const WhatIsEthereumPage = ({
                         emoji={card.emoji}
                         title={card.title}
                         description={card.description}
-                        flex="1 1 30%"
-                        minW="240px"
-                        m={4}
-                        p={6}
+                        className="m-4 min-w-[240px] flex-[1_1_30%] p-6"
                       />
                     ))}
                   </CardContainer>
@@ -820,7 +830,7 @@ const WhatIsEthereumPage = ({
             </p>
 
             <p>
-              <InlineLink href="https://www.kernel.community/en/learn/module-1/dreamers">
+              <InlineLink href="https://read.kernel.community/en/learn/module-1/dreamers">
                 {t("page-what-is-ethereum-kernel-dreamers")}
               </InlineLink>{" "}
               {t("page-what-is-ethereum-kernel-dreamers-desc")}
@@ -834,8 +844,6 @@ const WhatIsEthereumPage = ({
           </Column>
           <CardContainer>
             <Callout
-              flex="1 1 416px"
-              minH="full"
               image={ethImg}
               titleKey="page-what-is-ethereum:page-what-is-ethereum-get-eth-title"
               alt={t("page-what-is-ethereum-get-eth-alt")}
@@ -848,12 +856,11 @@ const WhatIsEthereumPage = ({
               </div>
             </Callout>
             <Callout
-              flex="1 1 416px"
-              minH="full"
               image={dogeComputerImg}
               titleKey="page-what-is-ethereum:page-what-is-ethereum-explore-dapps-title"
               alt={t("page-what-is-ethereum-explore-dapps-alt")}
               descriptionKey="page-what-is-ethereum:page-what-is-ethereum-explore-dapps-description"
+              className="h-full"
             >
               <div>
                 <ButtonLink href="/dapps/">

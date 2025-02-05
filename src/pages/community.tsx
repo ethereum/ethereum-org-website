@@ -1,31 +1,25 @@
+import { BaseHTMLAttributes } from "react"
 import { GetStaticProps } from "next"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import {
-  Box,
-  Flex,
-  HeadingProps,
-  SimpleGrid,
-  Text,
-  useTheme,
-} from "@chakra-ui/react"
 
 import { BasePageProps, ChildOnlyProp, Lang } from "@/lib/types"
 import { ICard, IGetInvolvedCard } from "@/lib/interfaces"
 
 import ActionCard from "@/components/ActionCard"
-import ButtonLink, { ButtonLinkProps } from "@/components/Buttons/ButtonLink"
 import Callout from "@/components/Callout"
 import Card from "@/components/Card"
 import FeedbackCard from "@/components/FeedbackCard"
 import { HubHero } from "@/components/Hero"
 import type { HubHeroProps } from "@/components/Hero/HubHero"
-import { Image } from "@/components/Image"
+import { TwImage } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
-import OldHeading from "@/components/OldHeading"
 import PageMetadata from "@/components/PageMetadata"
+import { ButtonLink, ButtonLinkProps } from "@/components/ui/buttons/Button"
 import { Divider } from "@/components/ui/divider"
+import { Flex } from "@/components/ui/flex"
 
+import { cn } from "@/lib/utils/cn"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLocaleTimestamp } from "@/lib/utils/time"
@@ -65,50 +59,29 @@ export const getStaticProps = (async ({ locale }) => {
 }) satisfies GetStaticProps<BasePageProps>
 
 const CardContainer = ({ children }: ChildOnlyProp) => {
-  return (
-    <Flex wrap="wrap" mx={-4}>
-      {children}
-    </Flex>
-  )
+  return <Flex className="-mx-4 flex-wrap">{children}</Flex>
 }
 
 const Content = ({ children }: ChildOnlyProp) => {
-  return (
-    <Box py={4} px={8} w="full">
-      {children}
-    </Box>
-  )
+  return <div className="w-full px-8 py-4">{children}</div>
 }
 
 const Page = ({ children }: ChildOnlyProp) => {
   return (
-    <Flex
-      as={MainArticle}
-      direction="column"
-      alignItems="center"
-      w="full"
-      mx="auto"
-    >
-      {children}
+    <Flex asChild className="mx-auto w-full flex-col items-center">
+      <MainArticle>{children}</MainArticle>
     </Flex>
   )
 }
 
 const ButtonRow = ({ children }: ChildOnlyProp) => {
-  return (
-    <Flex alignItems="flex-start" direction={{ base: "column", md: "row" }}>
-      {children}
-    </Flex>
-  )
+  return <Flex className="flex-col items-start md:flex-row">{children}</Flex>
 }
 
 const StyledButtonLink = ({ children, ...props }: ButtonLinkProps) => {
   return (
     <ButtonLink
-      mt={{ base: 4, md: 0 }}
-      ms={{ base: 0, md: 2 }}
-      display="flex"
-      alignItems="center"
+      className="ms-0 mt-4 flex items-center md:ms-2 md:mt-0"
       {...props}
     >
       {children}
@@ -118,55 +91,42 @@ const StyledButtonLink = ({ children, ...props }: ButtonLinkProps) => {
 
 const RowReverse = ({ children }: ChildOnlyProp) => {
   return (
-    <Flex
-      direction={{ base: "column-reverse", lg: "row-reverse" }}
-      alignItems={{ base: "center", lg: "normal" }}
-    >
+    <Flex className="flex-col-reverse items-center lg:flex-row-reverse lg:items-stretch">
       {children}
     </Flex>
   )
 }
 
 const ImageContainer = ({ children }: ChildOnlyProp) => {
-  return (
-    <Flex h="full" w={{ base: "75%", lg: "full" }}>
-      {children}
-    </Flex>
-  )
+  return <Flex className="h-full w-3/4 lg:w-full">{children}</Flex>
 }
 
 const Subtitle = ({ children }: ChildOnlyProp) => {
-  return (
-    <Text mb={8} fontSize={{ base: "md", sm: "xl" }} lineHeight={1.4}>
-      {children}
-    </Text>
-  )
+  return <p className="mb-8 text-md sm:text-xl">{children}</p>
 }
 
 const FeatureContent = ({ children }: ChildOnlyProp) => {
   return (
-    <Flex
-      direction="column"
-      boxSize="full"
-      justifyContent="center"
-      p={{ base: 8, lg: 24 }}
-    >
+    <Flex className="h-full w-full flex-col justify-center p-8 lg:p-24">
       {children}
     </Flex>
   )
 }
 
-const H2 = ({ children, ...props }: HeadingProps) => {
+const H2 = ({
+  children,
+  className,
+  ...props
+}: BaseHTMLAttributes<HTMLHeadingElement>) => {
   return (
-    <OldHeading fontSize={{ base: "2xl", md: "2rem" }} mt={0} {...props}>
+    <h2 className={cn("mb-8 mt-0 text-2xl md:text-3xl", className)} {...props}>
       {children}
-    </OldHeading>
+    </h2>
   )
 }
 
 const CommunityPage = () => {
   const { t } = useTranslation("page-community")
-  const theme = useTheme()
 
   const cards: Array<ICard> = [
     {
@@ -232,30 +192,15 @@ const CommunityPage = () => {
       />
       <HubHero {...heroContent} />
       <Divider />
-      <Flex
-        bg="homeBoxTurquoise"
-        alignItems="center"
-        direction="row-reverse"
-        py={{ base: 8, lg: 0 }}
-        ps={{ base: 0, lg: 8 }}
-        w="full"
-        h={{ base: "full", lg: "720px" }}
-        mt="-1px"
-        borderBottom="1px solid"
-        borderColor="text"
-      >
+      <Flex className="-mt-px h-full w-full flex-row-reverse items-center border-b border-b-border-high-contrast bg-[#ccfcff] py-8 ps-0 lg:h-[720px] lg:py-0 lg:ps-8 dark:bg-[#293233]">
         <Content>
-          <Flex direction="column" alignItems="center" mb={8}>
+          <Flex className="mb-8 flex-col items-center">
             <H2>{t("page-community-why-get-involved-title")}</H2>
           </Flex>
           <CardContainer>
             {whyGetInvolvedCards.map((card, idx) => (
               <Card
-                m={4}
-                p={6}
-                flex="1 0 30%"
-                minW="280px"
-                maxW={{ base: "full", md: "46%", lg: "31%" }}
+                className="m-4 min-w-[280px] max-w-full flex-[1_0_30%] p-6 md:max-w-[46%] lg:max-w-[31%]"
                 key={idx}
                 emoji={card.emoji}
                 title={card.title}
@@ -265,49 +210,29 @@ const CommunityPage = () => {
           </CardContainer>
         </Content>
       </Flex>
-      <Box
-        w="full"
-        pb={16}
-        bg="grayBackground"
-        boxShadow={`inset 0px 0px 0px ${theme.colors.tableItemBoxShadow}`}
-      >
-        <Box py={4} px={{ base: 4, lg: 8 }} w="full">
-          <Flex
-            direction={{ base: "column-reverse", md: "row" }}
-            alignItems="center"
-            mb={{ base: 0, m: 12 }}
-            mt={{ base: 0, m: 4 }}
-          >
-            <Box p={{ base: 0, sm: 8, lg: 24 }} boxSize="full">
+      <div className="w-full bg-background-highlight pb-16 shadow-table-item-box">
+        <div className="w-full px-4 py-4 lg:px-8">
+          <Flex className="mb-0 mt-0 flex-col-reverse items-center md:m-12 md:mt-4 md:flex-row">
+            <div className="h-full w-full p-0 sm:p-8 lg:p-24">
               <H2 id="get-involved">
                 {t("page-community-get-involved-title")}
               </H2>
               <Subtitle>
                 {t("page-community-get-involved-description")}
               </Subtitle>
-            </Box>
+            </div>
             <ImageContainer>
-              <Image
+              <TwImage
+                className="-my-4 object-cover"
                 src={developersEthBlockImg}
                 alt={t("page-community-get-involved-image-alt")}
-                style={{
-                  objectFit: "cover",
-                }}
-                my={-4}
               />
             </ImageContainer>
           </Flex>
-          <SimpleGrid columns={{ base: 1, lg: 2 }} spacing={{ base: 8, lg: 0 }}>
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-0">
             {cards.map((card, idx) => (
-              <Box
-                as={ActionCard}
-                minW={{ base: "min(100%, 240px)", lg: "440px" }}
-                m={{ base: 0, lg: 4 }}
-                borderRadius="sm"
-                border="1px solid"
-                borderColor="text"
-                bg="background.base"
-                boxShadow={theme.colors.cardBoxShadow}
+              <ActionCard
+                className="m-0 flex-col rounded-sm border lg:m-4"
                 key={idx}
                 title={card.title}
                 description={card.description}
@@ -317,22 +242,10 @@ const CommunityPage = () => {
                 alt={card.alt}
               />
             ))}
-          </SimpleGrid>
-        </Box>
-      </Box>
-      <Flex
-        bg="homeBoxTurquoise"
-        alignItems="center"
-        direction={{ base: "column-reverse", lg: "row-reverse" }}
-        ps={{ base: 0, lg: 8 }}
-        py={{ base: 8, lg: 0 }}
-        w="full"
-        h={{ base: "full", lg: "720px" }}
-        mt="-1px"
-        borderTop="1px solid"
-        borderBottom="1px solid"
-        borderColor="text"
-      >
+          </div>
+        </div>
+      </div>
+      <Flex className="-mt-px h-full w-full flex-col-reverse items-center border-y border-y-border-high-contrast bg-[#ccfcff] py-8 ps-0 lg:h-[720px] lg:flex-row-reverse lg:py-0 lg:ps-8 dark:bg-[#293233]">
         <RowReverse>
           <FeatureContent>
             <H2>{t("page-community-open-source")}</H2>
@@ -351,35 +264,18 @@ const CommunityPage = () => {
             </ButtonRow>
           </FeatureContent>
           <ImageContainer>
-            <Image
+            <TwImage
+              className="object-cover"
               src={whatIsEthereumImg}
               alt={t("page-community-open-source-image-alt")}
-              style={{
-                objectFit: "cover",
-              }}
             />
           </ImageContainer>
         </RowReverse>
       </Flex>
-      <Flex
-        bg="homeBoxPink"
-        alignItems="center"
-        direction={{ base: "column-reverse", lg: "row-reverse" }}
-        ps={{ base: 0, lg: 8 }}
-        py={{ base: 8, lg: 0 }}
-        h={{ base: "full", lg: "720px" }}
-        w="full"
-        mt="-1px"
-        borderTop="1px solid"
-        borderBottom="1px solid"
-        borderColor="text"
-      >
-        <Flex
-          direction={{ base: "column-reverse", lg: "row" }}
-          alignItems="center"
-        >
+      <Flex className="-mt-px h-full w-full flex-col-reverse items-center border-y border-y-border-high-contrast bg-[#ffe5f9] py-8 ps-0 lg:h-[720px] lg:flex-row-reverse lg:py-0 lg:ps-8 dark:bg-[#332027]">
+        <Flex className="flex-col-reverse items-center lg:flex-row">
           <FeatureContent>
-            <Flex direction="column" justifyContent="center">
+            <Flex className="flex-col justify-center">
               <H2>{t("page-community-contribute")}</H2>
               <Subtitle>{t("page-community-contribute-description")}</Subtitle>
               <ButtonRow>
@@ -397,94 +293,70 @@ const CommunityPage = () => {
             </Flex>
           </FeatureContent>
           <ImageContainer>
-            <Image
+            <TwImage
+              className="object-cover"
               src={financeTransparentImg}
               alt={t("page-index-internet-image-alt")}
-              style={{
-                objectFit: "cover",
-              }}
             />
           </ImageContainer>
         </Flex>
       </Flex>
-      <Flex
-        bg="homeBoxPurple"
-        alignItems="center"
-        direction={{ base: "column-reverse", lg: "row" }}
-        h={{ base: "full", lg: "720px" }}
-        w="full"
-        mt="-1px"
-        borderTop="1px solid"
-        borderBottom="1px solid"
-        borderColor="text"
-      >
+      <Flex className="-mt-px h-full w-full flex-col-reverse items-center border-y border-y-border-high-contrast bg-[#e8e8ff] lg:h-[720px] lg:flex-row dark:bg-[#212131]">
         <RowReverse>
           <FeatureContent>
             <H2>{t("page-community-support")}</H2>
             <Subtitle>{t("page-community-support-description")}</Subtitle>
-            <Box>
+            <div>
               <ButtonLink href="/community/support/">
                 {t("page-community-support-button")}
               </ButtonLink>
-            </Box>
+            </div>
           </FeatureContent>
           <ImageContainer>
-            <Image
+            <TwImage
+              className="object-cover"
               src={hackathonTransparentImg}
               alt={t("page-community-support-alt")}
-              style={{
-                objectFit: "cover",
-              }}
             />
           </ImageContainer>
         </RowReverse>
       </Flex>
       <Divider />
-      <Flex
-        direction={{ base: "column", lg: "row" }}
-        alignItems={{ base: "felx-start", lg: "center" }}
-        w="full"
-        py={4}
-        px={8}
-      >
-        <Box flex="0 0 50%" maxW={{ base: "full", md: "75%" }} mb={6}>
-          <OldHeading fontSize={{ base: "2xl", md: "2rem" }}>
+      <Flex className="w-full flex-col items-start px-8 py-4 lg:flex-row lg:items-center">
+        <div className="mb-6 max-w-full flex-[0_0_50%] md:max-w-[75%]">
+          <h2 className="mb-8 mt-12 text-2xl md:text-3xl">
             {t("page-community-try-ethereum")}
-          </OldHeading>
-        </Box>
+          </h2>
+        </div>
       </Flex>
       <Content>
         <CardContainer>
-          <Box
-            as={Callout}
-            flex="1 1 416px"
-            minH="full"
+          <Callout
+            className="min-h-full flex-[1_1_416px]"
             image={ethImg}
             titleKey="page-community:page-community-get-eth-title"
             alt={t("page-community-get-eth-alt")}
             descriptionKey="page-community:page-community-get-eth-description"
           >
-            <Box>
+            <div>
               <ButtonLink href="/get-eth/">
                 {t("page-community-get-eth")}
               </ButtonLink>
-            </Box>
-          </Box>
-          <Box
-            as={Callout}
-            flex="1 1 416px"
-            minH="full"
+            </div>
+          </Callout>
+          <Callout
+            className="min-h-full flex-[1_1_416px]"
             image={dogeComputerImg}
             titleKey="page-community:page-community-explore-dapps-title"
             alt={t("page-community-explore-dapps-alt")}
             descriptionKey="page-community:page-community-explore-dapps-description"
           >
-            <Box>
+            <div>
               <ButtonLink href="/dapps/">
                 {t("page-community-explore-dapps")}
               </ButtonLink>
-            </Box>
-          </Box>
+            </div>
+          </Callout>
         </CardContainer>
       </Content>
       <FeedbackCard />

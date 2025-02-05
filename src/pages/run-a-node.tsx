@@ -1,21 +1,12 @@
+import { HTMLAttributes } from "react"
 import type { GetStaticProps } from "next/types"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import type { ComponentProps, ReactNode } from "react"
+import type { ReactNode } from "react"
 import { FaDiscord } from "react-icons/fa"
-import {
-  Box,
-  type BoxProps,
-  Center,
-  type CenterProps,
-  Flex,
-  type FlexProps,
-  type HeadingProps,
-} from "@chakra-ui/react"
 
 import type { BasePageProps, ChildOnlyProp, Lang } from "@/lib/types"
 
-import { Button, ButtonLink } from "@/components/Buttons"
 import Emoji from "@/components/Emoji"
 import ExpandableCard from "@/components/ExpandableCard"
 import FeedbackCard from "@/components/FeedbackCard"
@@ -30,17 +21,16 @@ import {
   SovereigntyGlyphIcon,
   VoteGlyphIcon,
 } from "@/components/icons/run-a-node"
-import { Image, TwImage } from "@/components/Image"
-import InlineLink from "@/components/Link"
+import { TwImage } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
-import OldHeading from "@/components/OldHeading"
-import Text from "@/components/OldText"
 import PageHero from "@/components/PageHero"
 import PageMetadata from "@/components/PageMetadata"
 import { StandaloneQuizWidget as QuizWidget } from "@/components/Quiz/QuizWidget"
 import Translation from "@/components/Translation"
+import { Button, ButtonLink } from "@/components/ui/buttons/Button"
 import { Divider } from "@/components/ui/divider"
-import { Stack, VStack } from "@/components/ui/flex"
+import { Center, Flex, Stack, VStack } from "@/components/ui/flex"
+import InlineLink from "@/components/ui/Link"
 
 import { cn } from "@/lib/utils/cn"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
@@ -59,258 +49,156 @@ import Terminal from "@/public/images/run-a-node/terminal.svg"
 import leslie from "@/public/images/upgrades/upgrade_rhino.png"
 
 const GappedPage = (props: ChildOnlyProp) => (
-  <Flex
-    as={MainArticle}
-    direction="column"
-    align="center"
-    w="full"
-    my="0"
-    mx="auto"
-    gap={{ base: 12, lg: 16 }}
-    sx={{
-      "*": {
-        scrollMarginTop: "5.5rem",
-      },
-    }}
+  <MainArticle
+    className="mx-auto my-0 flex w-full scroll-mt-[5.5rem] flex-col items-center gap-12 lg:gap-16"
     {...props}
   />
 )
 
 const GappedContent = (props: ChildOnlyProp) => (
   <Flex
-    direction="column"
-    w="full"
-    gap={{ base: 8, lg: 12 }}
-    px={{ base: 0, md: 8, lg: 16 }}
-    py="4"
+    className="w-full flex-col gap-8 px-0 py-4 md:px-8 lg:gap-12 lg:px-16"
     {...props}
   />
 )
 
-const Content = (props: BoxProps) => <Box w="full" py="4" px="8" {...props} />
+const Content = (props: HTMLAttributes<HTMLDivElement>) => (
+  <div className="w-full px-8 py-4" {...props} />
+)
 
 const TwoColumnContent = (props: ChildOnlyProp) => (
   <Flex
-    direction={{ base: "column", lg: "row" }}
-    justify="space-between"
-    align={{ base: "flex-start", lg: "center" }}
-    gap="8"
-    mb="8"
+    className="mb-8 flex-col items-start justify-between gap-8 lg:flex-row lg:items-center"
     {...props}
   />
 )
 
-const SplitContent = (props: FlexProps) => (
-  <Flex
-    direction={{ base: "column", md: "row" }}
-    align="center"
-    w="full"
-    gap="8"
-    {...props}
-  />
+const SplitContent = ({
+  className,
+  ...props
+}: HTMLAttributes<HTMLHeadingElement>) => (
+  <VStack className={cn("w-full gap-8 md:flex-row", className)} {...props} />
 )
 
-const Column = (props: ChildOnlyProp) => <Box flex={1} {...props} />
+const Column = (props: ChildOnlyProp) => <div className="flex-1" {...props} />
 
-const SoftwareHighlight = (props: CenterProps) => (
+const SoftwareHighlight = ({
+  className,
+  ...props
+}: HTMLAttributes<HTMLHeadingElement>) => (
   <Center
-    w="100%"
-    gap="8"
-    py="8"
-    px={{ base: 8, md: 24 }}
-    border="1px"
-    borderColor="#dadada"
-    borderRadius="base"
-    color="text"
-    flexDirection={{ base: "column", md: "row" }}
-    position="relative"
-    isolation="isolate"
-    sx={{
-      "&::after": {
-        content: '""',
-        position: "absolute",
-        inset: 0,
-        zIndex: -1,
-        bg: "inherit",
-        filter: "blur(1rem)",
-      },
-    }}
+    className={cn(
+      "relative isolate !ml-0 w-full flex-col-reverse gap-8 rounded-sm border border-border-high-contrast p-8 pe-16 ps-16 text-body after:absolute after:inset-0 after:-z-10 after:bg-inherit after:blur-xl after:content-[''] md:mx-24 md:flex-row",
+      className
+    )}
     {...props}
   />
 )
 
 const ColumnFill = (props: ChildOnlyProp) => (
-  <Box
-    flex={1}
-    lineHeight="taller"
-    sx={{ ul: { listStyle: "none" } }}
-    {...props}
-  />
+  <div className="flex-1 list-none" {...props} />
 )
 
 const ColumnNarrow = (props: ChildOnlyProp) => (
   <Flex
-    boxSizing="border-box"
-    inset="auto"
-    justify="center"
-    align="center"
+    className="inset-auto box-border items-center justify-center"
     {...props}
   />
 )
 
 const FlexContent = (props: ChildOnlyProp) => (
-  <Flex direction="column" py="4" px="8" w="full" {...props} />
+  <Flex className="w-full flex-col px-8 py-4" {...props} />
 )
 
-const FlexContainer = (props: FlexProps) => (
-  <Flex direction={{ base: "column", lg: "row" }} gap="8" {...props} />
+const FlexContainer = ({
+  className,
+  ...props
+}: HTMLAttributes<HTMLHeadingElement>) => (
+  <Flex className={cn("flex-col gap-8 lg:flex-row", className)} {...props} />
 )
 
 const MarginFlex = (props: ChildOnlyProp) => (
-  <FlexContainer my="12" {...props} />
+  <FlexContainer className="my-12" {...props} />
 )
 
-const Container = (props: FlexProps) => (
+const Container = ({
+  className,
+  ...props
+}: HTMLAttributes<HTMLHeadingElement>) => (
   <Flex
-    bg="grayBackground"
-    border="1px"
-    borderColor="#d1d1d1"
-    borderRadius="5px"
-    color="text"
-    py="0"
-    px="8"
+    className={cn(
+      "rounded-md border border-border-high-contrast bg-background-highlight px-8 py-0 text-body",
+      className
+    )}
     {...props}
   />
 )
 
-const BuildBox = (props: ComponentProps<typeof Container>) => (
+const BuildBox = ({
+  className,
+  ...props
+}: HTMLAttributes<HTMLHeadingElement>) => (
   <Container
-    direction="column"
-    bg="preBackground"
-    flex={1}
-    p="8"
-    sx={{
-      "& > p:last-of-type": {
-        mb: 8,
-      },
-      "li:last-child": {
-        mb: 0,
-      },
-    }}
+    className={cn("flex-1 flex-col bg-background-highlight p-8", className)}
     {...props}
   />
 )
 
 const BuildBoxSpace = (props: ChildOnlyProp) => (
   <BuildBox
-    direction="column"
-    justify="space-between"
-    _hover={{
-      transform: "scale(1.02)",
-      transition: "transform 0.1s",
-    }}
+    className="justify-between duration-100 hover:scale-[102%]"
     {...props}
   />
 )
 
 const FullyLoaded = (props: ChildOnlyProp) => (
   <Container
-    direction="column"
-    justify="space-between"
-    lineHeight="200%"
-    flex={1}
-    px="8"
-    py="8"
-    _hover={{
-      transform: "scale(1.02)",
-      transition: "transform 0.1s",
-    }}
-    sx={{
-      p: {
-        fontSize: "110%",
-      },
-      code: {
-        fontWeight: 600,
-        lineHeight: "125%",
-      },
-      "li:last-child": {
-        mb: 0,
-      },
-    }}
+    className="flex-1 flex-col justify-between p-8 leading-loose duration-100 hover:scale-[102%]"
     {...props}
   />
 )
 
 const SvgTitle = (props: ChildOnlyProp) => (
-  <Flex gap="4" align="center" {...props} />
+  <Flex className="items-center gap-4" {...props} />
 )
 
 const ButtonContainer = (props: ChildOnlyProp) => (
-  <Flex
-    gap="4"
-    mt="auto"
-    direction={{ base: "column", lg: "row" }}
-    {...props}
-  />
+  <Flex className="mt-auto flex-col gap-4 lg:flex-row" {...props} />
 )
 
 const BuildContainer = (props: ChildOnlyProp) => (
   <Container
-    direction="column"
-    py="8"
-    px={{ base: 0, md: 8 }}
-    borderRadius="none"
-    border="none"
-    bg="none"
+    className="flex-col rounded-none border-none bg-inherit px-0 py-8 md:px-8"
     {...props}
   />
 )
 
 const StakingCalloutContainer = (props: ChildOnlyProp) => (
-  <SplitContent
-    w="full"
-    p="8"
-    bg="linear-gradient(
-      262.78deg,
-      rgba(152, 186, 249, 0.25) 0%,
-      rgba(207, 177, 251, 0.25) 53.12%,
-      rgba(151, 252, 246, 0.25) 100%
-    )"
-    {...props}
-  />
+  <SplitContent className="bg-gradient-main p-8" {...props} />
 )
 
-const H2 = (props: HeadingProps) => (
-  <OldHeading
-    fontSize={{ base: "2xl", md: "2rem" }}
-    lineHeight={1.4}
-    {...props}
-  />
+const H2 = (props: ChildOnlyProp) => (
+  <h2 className="mb-8 mt-12 leading-xs" {...props} />
 )
 
-const H3 = (props: HeadingProps) => (
-  <OldHeading
-    as="h3"
-    fontSize={{ base: "xl", md: "2xl" }}
-    lineHeight={1.4}
-    {...props}
-  />
+const H3 = ({ className, ...props }: HTMLAttributes<HTMLHeadingElement>) => (
+  <h3 className={cn("mb-8 mt-10 leading-xs", className)} {...props} />
 )
 
 const H4 = (props: ChildOnlyProp) => (
-  <OldHeading
-    as="h4"
-    fontSize={{ base: "md", md: "xl" }}
-    lineHeight={1.4}
-    fontWeight="medium"
-    {...props}
-  />
+  <h4 className="my-8 leading-xs" {...props} />
 )
 
-const Width60 = (props: ChildOnlyProp) => <Box w="full" flex={3} {...props} />
+const Text = ({ className, ...props }: HTMLAttributes<HTMLHeadingElement>) => (
+  <p className={cn("mb-6", className)} {...props} />
+)
+
+const Width60 = (props: ChildOnlyProp) => (
+  <div className="w-full flex-[3]" {...props} />
+)
 
 const Width40 = (props: ChildOnlyProp) => (
-  <Center w="full" flex={2} {...props} />
+  <Center className="w-full flex-[2]" {...props} />
 )
 
 type RunANodeCard = {
@@ -431,7 +319,7 @@ const RunANodePage = () => {
   return (
     <GappedPage>
       <PageMetadata
-        title={t("page-run-a-node-title")}
+        title={t("page-run-a-node-meta-title")}
         description={t("page-run-a-node-meta-description")}
         image="/images/run-a-node/ethereum-inside.png"
       />
@@ -455,7 +343,7 @@ const RunANodePage = () => {
             <Text>{t("page-run-a-node-what-3-text")}</Text>
           </Width60>
           <Width40>
-            <Image
+            <TwImage
               src={hackathon}
               alt=""
               sizes="624px"
@@ -529,21 +417,18 @@ const RunANodePage = () => {
       <Content id="getting-started">
         <H2>{t("page-run-a-node-getting-started-title")}</H2>
         <GappedContent>
-          <SoftwareHighlight
-            bg="homeBoxTurquoise"
-            flexDirection={{ base: "column-reverse", md: "row" }}
-          >
+          <SoftwareHighlight className="bg-[#ccfcff] dark:bg-[#293233]">
             <ColumnFill>
               <Text>
                 {t("page-run-a-node-getting-started-software-section-1")}
               </Text>
               <Text>
-                <Text as="code">
+                <code>
                   <Emoji text=":warning:" className="me-4 text-md" />
                   {t(
                     "page-run-a-node-getting-started-software-section-1-alert"
                   )}
-                </Text>
+                </code>
               </Text>
               <InlineLink href="/developers/docs/nodes-and-clients/run-a-node/">
                 {t("page-run-a-node-getting-started-software-section-1-link")}
@@ -558,7 +443,7 @@ const RunANodePage = () => {
             </ColumnNarrow>
           </SoftwareHighlight>
 
-          <SoftwareHighlight bg="homeBoxOrange">
+          <SoftwareHighlight className="flex-col bg-[#FFE3D3] dark:bg-[#332821]">
             <ColumnNarrow>
               <Dappnode
                 // TODO: make a11y svgs (using <title>)
@@ -573,10 +458,7 @@ const RunANodePage = () => {
             </ColumnFill>
           </SoftwareHighlight>
 
-          <SoftwareHighlight
-            bg="homeBoxPurple"
-            flexDirection={{ base: "column-reverse", md: "row" }}
-          >
+          <SoftwareHighlight className="bg-[#E8E8FF] dark:bg-[#212132]">
             <ColumnFill>
               <Text>
                 {t("page-run-a-node-getting-started-software-section-3a")}
@@ -602,7 +484,7 @@ const RunANodePage = () => {
         <Text>{t("page-run-a-node-choose-your-adventure-2")}</Text>
         <MarginFlex>
           <FullyLoaded>
-            <Box>
+            <div>
               <H3>
                 <Emoji text=":shopping_cart:" className="me-4 text-[2rem]" />
                 {t("page-run-a-node-buy-fully-loaded-title")}
@@ -611,13 +493,11 @@ const RunANodePage = () => {
               <ul>
                 <li>{t("page-run-a-node-buy-fully-loaded-note-1")}</li>
                 <li>{t("page-run-a-node-buy-fully-loaded-note-2")}</li>
-                <li>
-                  <Text as="code">
-                    {t("page-run-a-node-buy-fully-loaded-note-3")}
-                  </Text>
+                <li className="mb-0 font-bold">
+                  <code>{t("page-run-a-node-buy-fully-loaded-note-3")}</code>
                 </li>
               </ul>
-            </Box>
+            </div>
             <ButtonContainer>
               <ButtonLink href="https://shop.dappnode.io/">
                 {t("page-run-a-node-shop-dappnode")}
@@ -629,7 +509,7 @@ const RunANodePage = () => {
           </FullyLoaded>
 
           <FullyLoaded>
-            <Box>
+            <div>
               <H3>
                 <Emoji
                   text=":building_construction:"
@@ -645,11 +525,11 @@ const RunANodePage = () => {
                 <li>
                   {t("page-run-a-node-choose-your-adventure-build-bullet-2")}
                 </li>
-                <li>
+                <li className="mb-0">
                   {t("page-run-a-node-choose-your-adventure-build-bullet-3")}
                 </li>
               </ul>
-            </Box>
+            </div>
             <Button variant="outline" toId="build-your-own">
               {t("page-run-a-node-choose-your-adventure-build-start")}
             </Button>
@@ -687,14 +567,14 @@ const RunANodePage = () => {
                     </InlineLink>
                   </Text>
                 </li>
-                <li>
+                <li className="mb-0">
                   <Text>{t("page-run-a-node-build-your-own-min-ssd")}</Text>
                   <Text>
-                    <Text as="small">
-                      <Text as="em">
+                    <small>
+                      <em className="mb-8">
                         {t("page-run-a-node-build-your-own-ssd-note")}
-                      </Text>
-                    </Text>
+                      </em>
+                    </small>
                   </Text>
                 </li>
               </ul>
@@ -706,25 +586,25 @@ const RunANodePage = () => {
                 <li>
                   {t("page-run-a-node-build-your-own-nuc")}
                   <Text>
-                    <Text as="small">
+                    <small>
                       {t("page-run-a-node-build-your-own-nuc-small")}
-                    </Text>
+                    </small>
                   </Text>
                 </li>
                 <li>
                   {t("page-run-a-node-build-your-own-connection")}
                   <Text>
-                    <Text as="small">
+                    <small>
                       {t("page-run-a-node-build-your-own-connection-small")}
-                    </Text>
+                    </small>
                   </Text>
                 </li>
-                <li>
+                <li className="mb-0">
                   {t("page-run-a-node-build-your-own-peripherals")}
                   <Text>
-                    <Text as="small">
+                    <small className="mb-8">
                       {t("page-run-a-node-build-your-own-peripherals-small")}
-                    </Text>
+                    </small>
                   </Text>
                 </li>
               </ul>
@@ -744,7 +624,7 @@ const RunANodePage = () => {
 
           <FlexContainer>
             <BuildBoxSpace>
-              <Box>
+              <div>
                 <H4>
                   {t("page-run-a-node-build-your-own-software-option-1-title")}
                 </H4>
@@ -753,7 +633,7 @@ const RunANodePage = () => {
                     "page-run-a-node-build-your-own-software-option-1-description"
                   )}
                 </Text>
-              </Box>
+              </div>
               <ButtonContainer>
                 <ButtonLink href="https://docs.dappnode.io">
                   {t("page-run-a-node-build-your-own-software-option-1-button")}
@@ -762,7 +642,7 @@ const RunANodePage = () => {
             </BuildBoxSpace>
 
             <BuildBoxSpace>
-              <Box>
+              <div>
                 <H4>
                   {t("page-run-a-node-build-your-own-software-option-2-title")}
                 </H4>
@@ -776,17 +656,17 @@ const RunANodePage = () => {
                     "page-run-a-node-build-your-own-software-option-2-description-2"
                   )}
                 </Text>
-              </Box>
+              </div>
               <ButtonContainer>
                 <ButtonLink
                   href="/developers/docs/nodes-and-clients/run-a-node/#spinning-up-node"
                   variant="outline"
                 >
-                  <Text as="code">
+                  <code>
                     {t(
                       "page-run-a-node-build-your-own-software-option-2-button"
                     )}
-                  </Text>
+                  </code>
                 </ButtonLink>
               </ButtonContainer>
             </BuildBoxSpace>
@@ -795,16 +675,14 @@ const RunANodePage = () => {
       </Content>
 
       <Content>
-        <SplitContent direction={{ base: "column-reverse", md: "row" }}>
+        <SplitContent className="flex-col-reverse md:flex-row">
           <Column>
             <H2>{t("page-run-a-node-community-title")}</H2>
             <Text>{t("page-run-a-node-community-description-1")}</Text>
             <Text>{t("page-run-a-node-community-description-2")}</Text>
             <ButtonContainer>
-              <ButtonLink
-                leftIcon={<FaDiscord />}
-                href="https://discord.com/invite/dappnode"
-              >
+              <ButtonLink href="https://discord.com/invite/dappnode">
+                <FaDiscord />
                 {t("page-run-a-node-community-link-1")}
               </ButtonLink>
               <ButtonLink
@@ -817,7 +695,7 @@ const RunANodePage = () => {
             </ButtonContainer>
           </Column>
           <Column>
-            <Image
+            <TwImage
               src={community}
               alt=""
               sizes="624px"
@@ -834,8 +712,7 @@ const RunANodePage = () => {
             <InlineLink href="https://github.com/ethereumbook/ethereumbook/blob/develop/03clients.asciidoc#should-i-run-a-full-node">
               {t("page-run-a-node-further-reading-1-link")}
             </InlineLink>{" "}
-            -{" "}
-            <Text as="i">{t("page-run-a-node-further-reading-1-author")}</Text>
+            - <i>{t("page-run-a-node-further-reading-1-author")}</i>
           </li>
           <li>
             <InlineLink href="https://ethereum-on-arm-documentation.readthedocs.io/en/latest/">
@@ -846,8 +723,7 @@ const RunANodePage = () => {
             <InlineLink href="https://vitalik.eth.limo/general/2021/05/23/scaling.html">
               {t("page-run-a-node-further-reading-3-link")}
             </InlineLink>{" "}
-            -{" "}
-            <Text as="i">{t("page-run-a-node-further-reading-3-author")}</Text>
+            - <i>{t("page-run-a-node-further-reading-3-author")}</i>
           </li>
         </ul>
       </Content>
@@ -856,15 +732,12 @@ const RunANodePage = () => {
 
       <StakingCalloutContainer>
         <Column>
-          <Image
+          <TwImage
+            className="-translate-y-12 -scale-x-100 transform lg:-translate-x-8 lg:translate-y-0 lg:scale-[115%] lg:-scale-x-[115%]"
             src={leslie}
             alt=""
             sizes="624px"
             style={{ width: "624px", height: "auto" }}
-            transform={{
-              base: "scaleX(-1) translateY(-3rem)",
-              lg: "scaleX(-1) scale(1.15) translateX(2rem)",
-            }}
           />
         </Column>
         <Column>
@@ -878,7 +751,7 @@ const RunANodePage = () => {
         </Column>
       </StakingCalloutContainer>
       <Content>
-        <H3 id="plan-on-staking" display="flex" alignItems="center">
+        <H3 id="plan-on-staking" className="flex items-center">
           <Emoji text=":cut_of_meat:" className="me-4 text-[2rem]" />
           {t("page-run-a-node-staking-plans-title")}
         </H3>
@@ -891,7 +764,7 @@ const RunANodePage = () => {
             {t("page-run-a-node-staking-plans-ethstaker-link-label")}
           </InlineLink>
         </Text>
-        <H3 id="rasp-pi" display="flex" alignItems="center">
+        <H3 id="rasp-pi" className="flex items-center">
           <Emoji text=":pie:" className="me-4 text-[2rem]" />
           {t("page-run-a-node-rasp-pi-title")}
         </H3>
@@ -901,19 +774,13 @@ const RunANodePage = () => {
             <InlineLink href="https://ethereum-on-arm-documentation.readthedocs.io/en/latest">
               {t("page-run-a-node-rasp-pi-note-2-link")}
             </InlineLink>{" "}
-            -{" "}
-            <Text as="i">
-              {t("page-run-a-node-rasp-pi-note-2-description")}
-            </Text>
+            - <i>{t("page-run-a-node-rasp-pi-note-2-description")}</i>
           </li>
           <li>
             <InlineLink href="/developers/tutorials/run-node-raspberry-pi">
               {t("page-run-a-node-rasp-pi-note-3-link")}
             </InlineLink>{" "}
-            -{" "}
-            <Text as="i">
-              {t("page-run-a-node-rasp-pi-note-3-description")}
-            </Text>
+            - <i>{t("page-run-a-node-rasp-pi-note-3-description")}</i>
           </li>
         </ul>
       </Content>

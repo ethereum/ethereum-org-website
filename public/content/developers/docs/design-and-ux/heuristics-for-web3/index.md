@@ -53,7 +53,7 @@ People care deeply about their data. Safety is often a primary concern for users
 **Example:** 
 Include your audits in the footer, at a prominent size.
 
-![Audits refernced in the website footer](./Image2.png)
+![Audits referenced in the website footer](./Image2.png)
 
 ### 3. The most important info is obvious {#the-most-important-info-is-obvious}
 

@@ -1934,6 +1934,13 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/ddannehh"><img src="https://avatars.githubusercontent.com/u/109203827?v=4?s=100" width="100px;" alt="ddannehh"/><br /><sub><b>ddannehh</b></sub></a><br /><a href="#design-ddannehh" title="Design">🎨</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/jkylling"><img src="https://avatars.githubusercontent.com/u/6781076?v=4?s=100" width="100px;" alt="Jonas Irgens Kylling"/><br /><sub><b>Jonas Irgens Kylling</b></sub></a><br /><a href="#content-jkylling" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/CremaFR"><img src="https://avatars.githubusercontent.com/u/5360522?v=4?s=100" width="100px;" alt="Thomas Brillard"/><br /><sub><b>Thomas Brillard</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=CremaFR" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/YakshitAgarwal"><img src="https://avatars.githubusercontent.com/u/153830716?v=4?s=100" width="100px;" alt="Yakshit Agarwal"/><br /><sub><b>Yakshit Agarwal</b></sub></a><br /><a href="#content-YakshitAgarwal" title="Content">🖋</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://growthepie.xyz"><img src="https://avatars.githubusercontent.com/u/32496674?v=4?s=100" width="100px;" alt="Matthias Seidl"/><br /><sub><b>Matthias Seidl</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=mseidlx" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/JoeChenJ"><img src="https://avatars.githubusercontent.com/u/171761102?v=4?s=100" width="100px;" alt="JoeChenJ"/><br /><sub><b>JoeChenJ</b></sub></a><br /><a href="#content-JoeChenJ" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/itzVarsha"><img src="https://avatars.githubusercontent.com/u/138134029?v=4?s=100" width="100px;" alt="Varshitha"/><br /><sub><b>Varshitha</b></sub></a><br /><a href="#maintenance-itzVarsha" title="Maintenance">🚧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://alexandriaroberts.dev/"><img src="https://avatars.githubusercontent.com/u/31341867?v=4?s=100" width="100px;" alt="Alexandria Roberts"/><br /><sub><b>Alexandria Roberts</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=alexandriaroberts" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>

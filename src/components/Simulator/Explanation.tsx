@@ -1,11 +1,13 @@
 import React from "react"
 import { motion } from "framer-motion"
 import { MdArrowBack } from "react-icons/md"
-import { Box, Flex, Grid, Heading, Text } from "@chakra-ui/react"
 
 import type { SimulatorNavProps } from "@/lib/types"
 
-import { Button, ButtonLink } from "../Buttons"
+import { cn } from "@/lib/utils/cn"
+
+import { Button, ButtonLink } from "../ui/buttons/Button"
+import { Flex } from "../ui/flex"
 
 import type {
   LabelHref,
@@ -43,74 +45,51 @@ export const Explanation = ({
     hidden: { opacity: 0 },
   }
   return (
-    <Flex direction="column" flex={1} zIndex={1}>
+    <Flex className="z-[1] flex-1 flex-col">
       {/* Back button */}
       <Button
-        as={motion.button}
         variant="ghost"
-        leftIcon={<MdArrowBack size="18px" />}
-        sx={{ paddingInlineStart: 0 }}
-        mt={{ base: -6, md: 0 }}
-        mb={{ base: 2, md: 8 }}
+        className={cn(
+          "-mt-6 mb-2 w-fit ps-0 [transition-duration:10ms] md:mb-8 md:mt-0",
+          step === 0 ? "pointer-events-none" : "pointer-events-auto"
+        )}
         onClick={regressStepper}
-        pointerEvents={step === 0 ? "none" : "all"}
-        variants={backButtonVariants}
-        initial="hidden"
-        animate={step === 0 ? "hidden" : "visible"}
-        transitionDuration="10ms"
-        w="fit-content"
+        asChild
       >
-        Back
-      </Button>
-      <Flex direction={{ base: "row", md: "column" }} gap={{ base: 3, md: 2 }}>
-        {/* Step counter */}
-        <Grid
-          placeItems="center"
-          bg="body.light"
-          borderRadius="lg"
-          p={2}
-          w={9}
-          h={8}
-          fontSize="xs"
+        <motion.button
+          initial="hidden"
+          variants={backButtonVariants}
+          animate={step === 0 ? "hidden" : "visible"}
         >
-          <Text as="span" lineHeight={1} fontWeight="bold" m={0}>
+          <MdArrowBack size="18px" />
+          Back
+        </motion.button>
+      </Button>
+      <Flex className="gap-3 md:flex-col md:gap-2">
+        {/* Step counter */}
+        <div className="grid h-8 w-9 place-items-center rounded-lg bg-body-light p-2 text-xs">
+          <span className="font-bold leading-none">
             {step + 1}/{totalSteps}
-          </Text>
-        </Grid>
+          </span>
+        </div>
         {/* Header and description */}
-        <Box>
-          <Heading
-            as="h3"
-            fontSize={{ base: "xl", sm: "2xl", md: "3xl", lg: "4xl" }}
-            lineHeight={{ base: 8, md: 10 }}
-            mt={0}
-            mb={{ base: 4, md: 8 }}
-          >
+        <div>
+          <h3 className="mb-4 mt-0 text-xl leading-8 sm:text-2xl md:mb-8 md:text-3xl md:leading-10 lg:text-4xl">
             {header}
-          </Heading>
+          </h3>
           {description && (
-            <Box display={{ base: "block", md: "none" }} position="relative">
+            <div className="relative md:hidden">
               <MoreInfoPopover isFirstStep={nav.step === 0}>
-                <Box>{description}</Box>
+                <div>{description}</div>
               </MoreInfoPopover>
-            </Box>
+            </div>
           )}
-        </Box>
+        </div>
       </Flex>
-      {description && (
-        <Box display={{ base: "none", md: "block" }}>{description}</Box>
-      )}
+      {description && <div className="max-md:hidden">{description}</div>}
       {/* Last step navigation buttons */}
       {isLastStep && (
-        <Flex
-          direction="column"
-          gap={4}
-          maxW="300px"
-          w="full"
-          mx={{ base: "auto", md: 0 }}
-          mt={4}
-          zIndex={-1}
-        >
+        <Flex className="z-[-1] mx-auto mt-4 w-full max-w-[300px] flex-col gap-4 md:mx-0">
           {nextPathSummary && openPath && nextPathId && (
             <PathButton
               pathSummary={nextPathSummary}

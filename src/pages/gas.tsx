@@ -70,10 +70,7 @@ const Page = (props: FlexProps) => (
 
 export const StyledCard = (props: ComponentPropsWithRef<typeof Card>) => (
   <Card
-    flex="1 1 30%"
-    minW="280px"
-    maxW={{ base: "full", lg: "46%" }}
-    p={6}
+    className="min-w-[280px] max-w-full flex-[1_0_30%] p-6 md:max-w-[46%]"
     {...props}
   />
 )
@@ -182,7 +179,7 @@ const GasPage = () => {
           w="full"
         >
           <Box flex="60%" w="full" me={{ base: "auto", lg: 2 }}>
-            <InfoBanner mb={8} title={t("page-gas-summary-title")}>
+            <InfoBanner className="mb-8" title={t("page-gas-summary-title")}>
               <UnorderedList>
                 <ListItem>{t("page-gas-summary-item-1")}</ListItem>
                 <ListItem>{t("page-gas-summary-item-2")}</ListItem>
@@ -298,8 +295,6 @@ const GasPage = () => {
                   key={benefit.emoji}
                   emoji={benefit.emoji}
                   description={benefit.description}
-                  className="text-5xl"
-                  align="center"
                 />
               </Box>
             ))}

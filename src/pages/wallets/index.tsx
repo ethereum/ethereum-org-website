@@ -3,34 +3,23 @@ import { GetStaticProps } from "next"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import {
-  Box,
-  type BoxProps,
-  Flex,
-  Heading,
-  Text as ChakraText,
-} from "@chakra-ui/react"
 
-import { BasePageProps, ChildOnlyProp, Lang } from "@/lib/types"
+import { BasePageProps, Lang } from "@/lib/types"
 
-import ButtonLink from "@/components/Buttons/ButtonLink"
 import Callout from "@/components/Callout"
 import Card from "@/components/Card"
 import CardList from "@/components/CardList"
 import FeedbackCard from "@/components/FeedbackCard"
-import HorizontalCard, {
-  HorizontalCardProps,
-} from "@/components/HorizontalCard"
-import { Image } from "@/components/Image"
+import HorizontalCard from "@/components/HorizontalCard"
+import { TwImage } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
-import OldHeading from "@/components/OldHeading"
-import Text from "@/components/OldText"
 import PageHero from "@/components/PageHero"
 import PageMetadata from "@/components/PageMetadata"
 import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import { Simulator } from "@/components/Simulator"
 import { SIMULATOR_ID } from "@/components/Simulator/constants"
 import Translation from "@/components/Translation"
+import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Divider } from "@/components/ui/divider"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
@@ -45,89 +34,11 @@ import ETHImage from "@/public/images/eth-logo.png"
 import FindWalletImage from "@/public/images/wallets/find-wallet.png"
 import HeroImage from "@/public/images/wallets/wallet-hero.png"
 
-const Page = (props: BoxProps) => (
-  <Flex
-    as={MainArticle}
-    direction="column"
-    align="center"
-    width="full"
-    m="0 auto"
-    {...props}
-  />
-)
-
-const GrayContainer = (props: BoxProps) => (
-  <Box
-    width="full"
-    py={16}
-    px={0}
-    mt={{ base: 4, lg: 8 }}
-    background="grayBackground"
-    boxShadow="inset 0px 1px 0px var(--eth-colors-tableItemBoxShadow)"
-    {...props}
-  />
-)
-
-const Content = (props: BoxProps) => <Box py={4} px={8} w="full" {...props} />
-
-const Intro = (props: ChildOnlyProp) => (
-  <Content pb={0} sx={{ h2: { mb: 0 } }} {...props} />
-)
-
-const TwoColumnContent = (props: BoxProps) => (
-  <Content
-    display="flex"
-    justifyContent="space-between"
-    p={8}
-    mb={12}
-    flexDirection={{ base: "column", lg: "row" }}
-    {...props}
-  />
-)
-
-const LeftColumn = (props: BoxProps) => (
-  <Box flex="0 1 50%" me={{ base: 0, lg: 8 }} maxW="full" {...props} />
-)
-
-const RightColumn = (props: BoxProps) => (
-  <Box flex="0 1 50%" ms={{ lg: 8 }} maxW="full" {...props} />
-)
-
-const H2 = (props: ChildOnlyProp) => (
-  <OldHeading
-    fontSize={{ base: "2xl", md: "2rem" }}
-    lineHeight={1.4}
-    {...props}
-  />
-)
-
-const CardContainer = (props: BoxProps) => (
-  <Box display={"flex"} flexWrap={"wrap"} ms={-4} me={-4} {...props} />
-)
-
 export const StyledCard = (props: ComponentPropsWithRef<typeof Card>) => (
   <Card
-    flex="1 1 30%"
-    minW="280px"
-    maxW={{ base: "full", md: "46%", lg: "31%" }}
-    m={4}
-    p={6}
+    className="m-4 min-w-[280px] max-w-full flex-1 bg-background p-6 md:max-w-[46%] lg:max-w-[31%]"
     {...props}
   />
-)
-const ChecklistItem = (props: HorizontalCardProps) => (
-  <HorizontalCard
-    border={0}
-    display="flex"
-    className="text-2xl"
-    alignItems="flex-start"
-    mb={4}
-    {...props}
-  />
-)
-
-const CalloutCardContainer = (props: ChildOnlyProp) => (
-  <CardContainer mt={16} {...props} />
 )
 
 export const getStaticProps = (async ({ locale }) => {
@@ -291,37 +202,42 @@ const WalletsPage = () => {
   ]
 
   return (
-    <Page>
+    <MainArticle className="mx-auto flex w-full flex-col items-center">
       <PageMetadata
         title={t("page-wallets-meta-title")}
         description={t("page-wallets-meta-description")}
         image="/images/wallets/wallet-hero.png"
       />
+
       <PageHero content={heroContent} isReverse />
-      <GrayContainer>
-        <Intro>
-          <H2>{t("page-wallets-whats-a-wallet")}</H2>
-        </Intro>
-        <TwoColumnContent mb={0}>
-          <Box
-            flexGrow="0"
-            flexShrink="1"
-            flexBasis="50%"
-            me={{ base: 0, lg: 8 }}
-            mt={{ lg: 0 }}
-            maxWidth={{ lg: "100%" }}
-          >
-            <Text>{t("page-wallets-description")}</Text>
-            <Text>{t("page-wallets-desc-2")}</Text>
-            <CardList items={guides} mb={{ base: 6, lg: 0 }} />
-          </Box>
-          <RightColumn>
-            <Text>{t("page-wallets-desc-3")}</Text>
-            <Text>{t("page-wallets-desc-4")}</Text>
-          </RightColumn>
-        </TwoColumnContent>
-        <Content>
-          <CardContainer>
+
+      <div className="mt-4 w-full border-t bg-background-highlight px-0 py-16 lg:mt-8">
+        <div className="w-full px-8 py-4 pb-0">
+          <h2 className="mb-0 mt-12 text-2xl leading-[1.4] md:text-[2rem]">
+            {t("page-wallets-whats-a-wallet")}
+          </h2>
+        </div>
+        <div className="mb-0 flex flex-col justify-between p-8 lg:flex-row">
+          <div className="me-0 flex-[0_1_50%] lg:me-8 lg:mt-0 lg:max-w-full">
+            <p className="mb-[1.45rem] text-md leading-base">
+              {t("page-wallets-description")}
+            </p>
+            <p className="mb-[1.45rem] text-md leading-base">
+              {t("page-wallets-desc-2")}
+            </p>
+            <CardList items={guides} className="mb-6 lg:mb-0" />
+          </div>
+          <div className="max-w-full flex-[0_1_50%] lg:ms-8">
+            <p className="mb-[1.45rem] text-md leading-base">
+              {t("page-wallets-desc-3")}
+            </p>
+            <p className="mb-[1.45rem] text-md leading-base">
+              {t("page-wallets-desc-4")}
+            </p>
+          </div>
+        </div>
+        <div className="w-full px-8 py-4">
+          <div className="-me-4 -ms-4 flex flex-wrap">
             {cards.map((card, idx) => (
               <StyledCard
                 key={idx}
@@ -330,94 +246,81 @@ const WalletsPage = () => {
                 description={card.description}
               />
             ))}
-          </CardContainer>
-        </Content>
-      </GrayContainer>
-      <TwoColumnContent marginBottom={-8} marginTop={8}>
-        <LeftColumn>
-          <H2>{t("page-wallets-accounts-addresses")}</H2>
-          <Text>{t("page-wallets-accounts-addresses-desc")}</Text>
+          </div>
+        </div>
+      </div>
+
+      <div className="-mb-8 mt-8 flex flex-col justify-between p-8 lg:flex-row">
+        <div className="max-w-full flex-[0_1_50%] lg:me-8">
+          <h2 className="mb-8 mt-12 text-2xl leading-[1.4] md:text-[2rem]">
+            {t("page-wallets-accounts-addresses")}
+          </h2>
+          <p className="mb-[1.45rem] text-md leading-base">
+            {t("page-wallets-accounts-addresses-desc")}
+          </p>
           <ul>
             <li>
-              <Text>
+              <p className="mb-[1.45rem] text-md leading-base">
                 <Translation id="page-wallets:page-wallets-ethereum-account" />
-              </Text>
+              </p>
             </li>
             <li>
-              <Text>
+              <p className="mb-[1.45rem] text-md leading-base">
                 <Translation id="page-wallets:page-wallets-accounts-ethereum-addresses" />
-              </Text>
+              </p>
             </li>
             <li>
-              <Text>
+              <p className="mb-[1.45rem] text-md leading-base">
                 <Translation id="page-wallets:page-wallets-ethereum-wallet" />
-              </Text>
+              </p>
             </li>
           </ul>
-          <Text>{t("page-wallets-most-wallets")}</Text>
-        </LeftColumn>
-        <RightColumn mt={{ base: 12, lg: 0 }}>
-          <H2>{t("page-wallets-types")}</H2>
-          <Text>{t("page-wallets-types-desc")}</Text>
-          <Box>
+          <p className="mb-[1.45rem] text-md leading-base">
+            {t("page-wallets-most-wallets")}
+          </p>
+        </div>
+        <div className="mt-12 max-w-full flex-[0_1_50%] lg:ms-8 lg:mt-0">
+          <h2 className="mb-8 mt-12 text-2xl leading-[1.4] md:text-[2rem]">
+            {t("page-wallets-types")}
+          </h2>
+          <p className="mb-[1.45rem] text-md leading-base">
+            {t("page-wallets-types-desc")}
+          </p>
+          <div className="flex flex-col gap-2">
             {types.map((type, idx) => (
               <HorizontalCard
-                minWidth="100%"
-                marginTop={2}
-                marginBottom={2}
-                ms={0}
-                me={0}
                 key={idx}
                 emoji={type.emoji}
                 description={type.description}
-                className="text-[2.5rem]"
-                alignItems="center"
+                className="my-0.5 w-[100%]"
+                emojiClassName="text-[2.5rem]"
               />
             ))}
-          </Box>
-        </RightColumn>
-      </TwoColumnContent>
+          </div>
+        </div>
+      </div>
+
       {locale === "en" ? (
-        <Content my={20} px={0}>
+        <div className="my-20 w-full px-0 py-4">
           <Simulator data={walletOnboardingSimData}>
-            <ChakraText
-              fontSize={{ base: "lg", md: "xl", lg: "2xl" }}
-              fontStyle="italic"
-              color="body.medium"
-              mb={2}
-            >
+            <p className="mb-2 text-lg italic leading-base text-body-medium md:text-xl lg:text-2xl">
               Interactive tutorial
-            </ChakraText>
-            <Heading
-              as="h2"
-              size={{ base: "xl", lg: "2xl" }}
-              lineHeight="115%"
-              fontWeight="bold"
-              m={0}
-            >
+            </p>
+            <h2 className="m-0 text-3xl font-bold leading-[115%] lg:text-5xl">
               How to use a wallet
-            </Heading>
+            </h2>
           </Simulator>
-        </Content>
+        </div>
       ) : (
-        <GrayContainer
-          my={12}
-          bgGradient="linear-gradient(49.21deg, rgba(127, 127, 213, 0.2) 19.87%,
-    rgba(134, 168, 231, 0.2) 58.46%,
-    rgba(145, 234, 228, 0.2) 97.05%)"
-        >
-          <Content>
-            <Flex flexDirection="column" alignItems="center" mb="8">
-              <H2>{t("page-wallets-features-title")}</H2>
-              <Box
-                fontSize="xl"
-                lineHeight={1.4}
-                color="text"
-                textAlign="center"
-                mb={6}
-              >
+        <div className="my-12 mt-4 w-full border-t bg-gradient-main px-0 py-16 lg:mt-8">
+          <div className="w-full px-8 py-4">
+            <div className="mb-8 flex flex-col items-center">
+              <h2 className="mb-8 mt-12 text-2xl leading-[1.4] md:text-[2rem]">
+                {t("page-wallets-features-title")}
+              </h2>
+              <div className="mb-6 text-center text-xl leading-base">
                 {t("page-wallets-features-desc")}
-              </Box>
+              </div>
               <ButtonLink
                 href="/wallets/find-wallet/"
                 customEventOptions={{
@@ -428,110 +331,124 @@ const WalletsPage = () => {
               >
                 {t("page-wallets-find-wallet-btn")}
               </ButtonLink>
-              <Image
+              <TwImage
                 src={FindWalletImage}
                 alt=""
-                mt={8}
-                maxW="800px"
-                backgroundSize="cover"
-                backgroundRepeat="no-repeat"
-                w="full"
+                className="mt-8 w-full max-w-[800px] bg-cover bg-no-repeat"
               />
-            </Flex>
-          </Content>
-        </GrayContainer>
+            </div>
+          </div>
+        </div>
       )}
-      <TwoColumnContent>
-        <LeftColumn>
-          <H2>{t("page-wallets-stay-safe")}</H2>
-          <Box lineHeight={1.4} mb={6} color="text300">
+
+      <div className="mb-12 flex flex-col justify-between p-8 lg:flex-row">
+        <div className="max-w-full flex-[0_1_50%] lg:me-8">
+          <h2 className="mb-8 mt-12 text-2xl leading-[1.4] md:text-[2rem]">
+            {t("page-wallets-stay-safe")}
+          </h2>
+          <p className="mb-6 leading-xs">
             <Translation id="page-wallets:page-wallets-stay-safe-desc" />
-          </Box>
-          <Box>
-            <ChecklistItem
+          </p>
+          <div className="flex flex-col gap-4">
+            <HorizontalCard
               key="0"
               emoji=":white_check_mark:"
               title={t("page-wallets-take-responsibility")}
               description={t("page-wallets-take-responsibility-desc")}
+              emojiClassName="text-2xl"
+              className="items-start"
             />
-            <ChecklistItem
+            <HorizontalCard
               key="1"
               emoji=":white_check_mark:"
               title={<Translation id="page-wallets:page-wallets-seed-phrase" />}
               description={t("page-wallets-seed-phrase-desc")}
+              emojiClassName="text-2xl"
+              className="items-start"
             >
-              <Text>{t("page-wallets-seed-phrase-example")}</Text>
-              <Box bg="black" p={2} mb={4} borderRadius="base">
-                <Text fontFamily="monospace" fontSize="sm" color="white" mb={0}>
+              <p className="mb-[1.45rem] text-md leading-base">
+                {t("page-wallets-seed-phrase-example")}
+              </p>
+              <div className="rounded-base mb-4 bg-black p-2">
+                <p className="font-mono text-sm text-white">
                   {t("page-wallets-seed-phrase-snippet")}
-                </Text>
-              </Box>
-              <Text>{t("page-wallets-seed-phrase-write-down")}</Text>
-            </ChecklistItem>
-            <ChecklistItem
+                </p>
+              </div>
+              <p className="mb-[1.45rem] text-md leading-base">
+                {t("page-wallets-seed-phrase-write-down")}
+              </p>
+            </HorizontalCard>
+            <HorizontalCard
               key="2"
               emoji=":white_check_mark:"
               title={t("page-wallets-bookmarking")}
               description={t("page-wallets-bookmarking-desc")}
+              emojiClassName="text-2xl"
+              className="items-start"
             />
-            <ChecklistItem
+            <HorizontalCard
               key="3"
               emoji=":white_check_mark:"
               title={t("page-wallets-triple-check")}
               description={t("page-wallets-triple-check-desc")}
+              emojiClassName="text-2xl"
+              className="items-start"
             />
-          </Box>
-        </LeftColumn>
-        <RightColumn mt={{ base: 12, lg: 0 }}>
-          <H2>{t("page-wallets-tips")}</H2>
-          <Box lineHeight={1.4} color="text300" mb={6}>
-            {t("page-wallets-tips-community")}
-          </Box>
+          </div>
+        </div>
+        <div className="mt-12 max-w-full flex-[0_1_50%] lg:ms-8 lg:mt-0">
+          <h2 className="mb-8 mt-12 text-2xl leading-[1.4] md:text-[2rem]">
+            {t("page-wallets-tips")}
+          </h2>
+          <p className="mb-6 leading-xs">{t("page-wallets-tips-community")}</p>
           <CardList items={articles} />
-        </RightColumn>
-      </TwoColumnContent>
-      <Content>
+        </div>
+      </div>
+
+      <div className="w-full px-8 py-4">
         <Divider />
 
-        <H2>{t("page-wallets-explore")}</H2>
-        <CalloutCardContainer>
+        <h2 className="mb-8 mt-12 text-2xl leading-[1.4] md:text-[2rem]">
+          {t("page-wallets-explore")}
+        </h2>
+        <div className="-me-4 -ms-4 mt-16 flex flex-wrap">
           <Callout
-            flex="1 1 424px"
-            minH="full"
             image={ETHImage}
             titleKey="page-wallets:page-wallets-get-some"
             alt={t("page-wallets-get-some-alt")}
             descriptionKey="page-wallets:page-wallets-get-some-desc"
+            className="min-h-full flex-1 basis-[424px]"
           >
-            <Box>
+            <div>
               <ButtonLink href="/get-eth/">
                 {t("page-wallets-get-some-btn")}
               </ButtonLink>
-            </Box>
+            </div>
           </Callout>
           <Callout
-            flex="1 1 424px"
-            minH="full"
             image={DappsImage}
             titleKey="page-wallets:page-wallets-try-dapps"
             alt={t("page-wallets-try-dapps-alt")}
             descriptionKey="page-wallets:page-wallets-try-dapps-desc"
+            className="min-h-full flex-1 basis-[424px]"
           >
-            <Box>
+            <div>
               <ButtonLink href="/dapps/">
                 {t("page-wallets-more-on-dapps-btn")}
               </ButtonLink>
-            </Box>
+            </div>
           </Callout>
-        </CalloutCardContainer>
-      </Content>
-      <Content>
+        </div>
+      </div>
+
+      <div className="w-full px-8 py-4">
         <StandaloneQuizWidget quizKey="wallets" />
-      </Content>
-      <Content>
+      </div>
+
+      <div className="w-full px-8 py-4">
         <FeedbackCard />
-      </Content>
-    </Page>
+      </div>
+    </MainArticle>
   )
 }
 

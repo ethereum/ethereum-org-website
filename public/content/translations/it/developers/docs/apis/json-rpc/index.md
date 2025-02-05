@@ -386,6 +386,8 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_syncing","params":[],"id":1}
 
 Restituisce l'indirizzo di coinbase del client.
 
+> **Nota:** Questo metodo è stato deprecato alla **v1.14.0** e non è più supportato. Tentare di utilizzarlo risulterà in un errore "Metodo non supportato".
+
 **Parametri**
 
 Nessuno
@@ -1649,10 +1651,10 @@ geth --http --dev console 2>>geth.log
 
 Questo avvierà l'interfaccia HTTP RPC su `http://localhost:8545`.
 
-Possiamo verificare che l'interfaccia sia in esecuzione recuperando l'indirizzo di Coinbase e il saldo utilizzando [curl](https://curl.se). Si noti che i dati in questi esempi saranno diversi sul nodo locale. Se vuoi provare questi comandi, sostituisci i parametri di richiesta nella seconda richiesta di curl con il risultato restituito dalla prima.
+Possiamo verificare l'esecuzione dell'interfaccia recuperando l'indirizzo (ottenendo il primo indirizzo dall'array di conti) e il saldo di coinbase utilizzando [curl](https://curl.se). Si noti che i dati in questi esempi saranno diversi sul nodo locale. Se vuoi provare questi comandi, sostituisci i parametri di richiesta nella seconda richiesta di curl con il risultato restituito dalla prima.
 
 ```bash
-curl --data '{"jsonrpc":"2.0","method":"eth_coinbase", "id":1}' -H "Content-Type: application/json" localhost:8545
+curl --data '{"jsonrpc":"2.0","method":"eth_accounts","params":[]", "id":1}' -H "Content-Type: application/json" localhost:8545
 {"id":1,"jsonrpc":"2.0","result":["0x9b1d35635cc34752ca54713bb99d38614f63c955"]}
 
 curl --data '{"jsonrpc":"2.0","method":"eth_getBalance", "params": ["0x9b1d35635cc34752ca54713bb99d38614f63c955", "latest"], "id":2}' -H "Content-Type: application/json" localhost:8545

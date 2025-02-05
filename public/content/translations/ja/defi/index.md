@@ -355,3 +355,7 @@ PoolTogetherのような損失のない宝くじは、楽しく革新的な新�
 
 - [DeFi Pulse Discord server](https://discord.defillama.com/)
 - [DeFi Pulse Discord server](https://discord.gg/Gx4TCTk)
+
+<Divider />
+
+<QuizWidget quizKey="defi" />

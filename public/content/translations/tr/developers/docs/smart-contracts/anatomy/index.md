@@ -6,11 +6,11 @@ lang: tr
 
 Bir akıllı sözleşme Ethereum üzerindeki bir adreste çalışan bir programdır. Bir işlem alındığında yürütülebilen fonksiyonlar ve verilerden oluşurlar. Burada bir akıllı sözleşmenin nelerden oluştuğu hakkında genel bir bakış bulunmaktadır.
 
-## Ön Koşullar {#prerequisites}
+## Ön koşullar {#prerequisites}
 
 İlk olarak [akıllı sözleşmeler](/developers/docs/smart-contracts/) hakkında okuduğunuzdan emin olun. Bu belge, hâlihazırda JavaScript veya Python gibi programlama dillerine aşina olduğunuzu varsayar.
 
-## Veri {#data}
+## Veriler {#data}
 
 Her sözleşme verisi bir lokasyona atanmalıdır: ya `storage` ya da `memory`. Bir akıllı sözleşmede depolamayı değiştirmek pahalıdır, bundan dolayı verinizin nerede yaşayacağını düşünmelisiniz.
 
@@ -100,7 +100,7 @@ function update_name(string value) public {
 - `public` olarak deklare edilir, bu da herkesin ona erişebileceği anlamına gelir
 - `view` olarak deklare edilmez, yani sözleşme durumunu değiştirebilir
 
-### Fonksiyonları gör {#view-functions}
+### Fonksiyonları görüntüleme {#view-functions}
 
 Bu fonksiyonlar sözleşmenin verisinin durumunu değiştirmemeye söz verirler. Yaygın örnekler "alıcı" fonksiyonlardır – örnek olarak bunu bir kullanıcının bakiyesini almak için kullanabilirsiniz.
 
@@ -131,7 +131,7 @@ Durumu değiştirme olarak sayılan şeyler:
 7. Alt düzey çağrıları kullanma.
 8. Belirli işlem kodları içeren satır içi tümleşkeler kullanma.
 
-### Yapıcı fonksiyonlar {#constructor-functions}
+### Yapıcı fonksiyonları {#constructor-functions}
 
 `constructor` fonksiyonları sadece sözleşme ilk dağıtılığında tek sefer yürütülür. Birçok sınıf odaklı programlama dilinde olan `constructor` gibi, bu fonksiyonlar genellikle durum değişkenlerini belirtilmiş değerlere ilkler.
 
@@ -167,7 +167,7 @@ Sözleşmenizde tanımladığınız değişkenler ve fonksiyonlara ek olarak, ba
 
 Bunlar sözleşmelerin başka hesaplara ETH göndermesini sağlar.
 
-## Fonksiyon yazmak {#writing-functions}
+## Fonksiyonları yazma {#writing-functions}
 
 Fonksiyonunuz şunlara ihtiyaç duyar:
 
@@ -201,9 +201,9 @@ contract ExampleDapp {
 
 Tam bir sözleşme bu şekilde gözükebilir. Burada `constructor` fonksiyonu `dapp_name` değişkeni için bir başlangıç değeri sağlıyor.
 
-## Olaylar ve kayıtlar {#events-and-logs}
+## Olaylar ve günlükler {#events-and-logs}
 
-Olaylar, akıllı sözleşmenizle ön uç tarafından veya başka katılımcı uygulamalarla iletişim kurmanızı sağlar. Bir işlem kazıldığında, akıllı sözleşmeler olay yayınlayabilirler ve blok zincirine ön ucun daha sonra işleyebileceği kayıtlar yazabilirler.
+Olaylar, akıllı sözleşmelerinizin ön yüzünüz ya da diğer abonelik uygulamalarınızla iletişime geçebilmesini sağlar. Bir işlem doğrulandıktan ve bir bloğa eklendikten sonra akıllı sözleşmeler, ön ucun daha sonra işleyebileceği ve kullanabileceği olayları ve günlük bilgilerini yayabilir.
 
 ## Açıklamalı örnekler {#annotated-examples}
 
@@ -246,7 +246,7 @@ contract HelloWorld {
 }
 ```
 
-### Token {#token}
+### Jeton {#token}
 
 ```solidity
 pragma solidity ^0.5.10;
@@ -628,7 +628,7 @@ contract CryptoPizza is IERC721, ERC165 {
         // than to check the size of the code at that address.
         // Bunun nasıl çalıştığı hakkında daha fazla ayrıntı için
         // bkz. https://ethereum.stackexchange.com/a/14016/36603.
-        // Serenity sürümünden önce bunu tekrar kontrol edin,
+        // Serenity sürümünden önce bunu tekrar kontrol edin, 
         // çünkü o zaman tüm adresler sözleşme olacaktır.
         // solium-disable-next-line security/no-inline-assembly
         assembly {

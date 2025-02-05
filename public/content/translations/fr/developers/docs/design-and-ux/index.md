@@ -23,11 +23,13 @@ Il s'agit d'une liste organisée de recherches par des utilisateurs sur le Web3 
 
 | Domaine d'intervention                                  | Nom                                                                                                                                                                                                 |
 |:------------------------------------------------------- |:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <Badge colorScheme="green">Crypto onboarding</Badge>    | [Le WalletConnect Pulse 2024 : Utilisation du sentiment & des consommateurs de crypto](https://walletconnect.com/pulse-2024-crypto-consumer-report)                                                 |
 | <Badge colorScheme="green">Crypto onboarding</Badge>    | [CRADL : UX pour crypto-monnaie](https://docs.google.com/presentation/d/1s2OPSH5sMJzxRYaJSSRTe8W2iIoZx0PseIV-WeZWD1s/edit?usp=sharing)                                                              |
 | <Badge colorScheme="green">Crypto onboarding</Badge>    | [CRADL : Intégration vers la crypto-monnaie](https://docs.google.com/presentation/d/1R9nFuzA-R6SxaGCKhoMbE4Vxe0JxQSTiHXind3LVq_w/edit?usp=sharing)                                                  |
 | <Badge colorScheme="green">Crypto onboarding</Badge>    | [Rapport sur l'UX de Bitcoin](https://github.com/patestevao/BitcoinUX-report/blob/master/report.md)                                                                                                 |
 | <Badge colorScheme="green">Crypto onboarding</Badge>    | [ConSensys : L'état de la perception du Web3 dans le monde en 2023](https://consensys.io/insight-report/web3-and-crypto-global-survey-2023)                                                         |
 | <Badge colorScheme="green">Crypto onboarding</Badge>    | [NEAR : Accélérer le processus d'adoption](https://drive.google.com/file/d/1VuaQP4QSaQxR5ddQKTMGI0b0rWdP7uGn/view)                                                                                  |
+| <Badge colorScheme="purple">Staking</Badge>             | [OpenUX : Expérience utilisateur des opérateurs de nœuds Rocket Pool](https://storage.googleapis.com/rocketpool/RocketPool-NodeOperator-UX-Report-Jan-2024.pdf)                                     |
 | <Badge colorScheme="purple">Staking</Badge>             | [La mise en jeu : Tendances clés, points à retenir et prédictions - Eth Staker](https://lookerstudio.google.com/u/0/reporting/cafcee00-e1af-4148-bae8-442a88ac75fa/page/p_ja2srdhh2c?s=hmbTWDh9hJo) |
 | <Badge colorScheme="purple">Staking</Badge>             | [Mise en jeu multi-applications](https://github.com/threshold-network/UX-User-Research/blob/main/Multi-App%20Staking%20(MAS)/iterative-user-study/MAS%20Iterative%20User%20Study.pdf)               |
 | <Badge colorScheme="red">DAO</Badge>                    | [Mise à jour de la recherche DAO 2022 : Que nécessitent les développeurs de DAO ?](https://blog.aragon.org/2022-dao-research-update/)                                                               |
@@ -47,6 +49,11 @@ Il s'agit d'une liste organisée de recherches par des utilisateurs sur le Web3 
 - [W3design.io](https://w3design.io/) - Une bibliothèque organisée de flux d'interface utilisateur de différents projets dans l'écosystème
 - [Neueux.com](https://neueux.com/apps) - Bibliothèque d'interface utilisateur de flux d'utilisateurs avec diverses options de filtrage
 - [La crise de la convivialité du Web3 : Ce que vous DEVEZ savoir !](https://www.youtube.com/watch?v=oBSXT_6YDzg) - Une table ronde sur les pièges de la construction de projets axés sur les développeurs (vidéo, 34 minutes)
+
+## Premiers pas {#getting-started}
+
+- [Heuristiques pour le Web3](/developers/docs/design-and-ux/heuristics-for-web3/) - 7 heuristiques pour la conception d'interfaces Web3
+- [Conseils pratiques de conception de DEX](/developers/docs/design-and-ux/dex-design-best-practice/) - Un guide pour la conception des échanges décentralisés
 
 ## Études de cas dans la conception pour le web3 {#design-case-studies}
 

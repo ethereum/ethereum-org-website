@@ -1,5 +1,5 @@
 ---
-title: Seguridad de los contratos inteligentes
+title: Seguridad en contratos inteligentes
 description: Resumen de lineamientos para crear contratos inteligentes seguros en Ethereum
 lang: es
 ---
@@ -90,7 +90,10 @@ Después de probar su contrato, es bueno pedir a otros que comprueben el código
 
 Encargar una auditoría de un contrato inteligente es una forma de realizar una revisión independiente del código. Los auditores desempeñan un papel importante a la hora de garantizar que los contratos inteligentes sean seguros y estén libres de defectos de calidad y errores de diseño.
 
-Dicho esto, hay que evitar tratar las auditorías como una bala de plata. Las auditorías no detectarán todos los errores y están diseñadas principalmente para proporcionar una ronda adicional de revisiones, que puede ayudar a detectar los problemas que los desarrolladores pasaron por alto durante el desarrollo y las pruebas iniciales. También es necesario cumplir con [buenas prácticas para trabajar con los auditores](https://twitter.com/tinchoabbate/status/1400170232904400897), como documentar el código adecuadamente y añadir comentarios en línea, para maximizar el beneficio de una auditoría del contrato inteligente.
+Dicho esto, hay que evitar tratar las auditorías como una bala de plata. Las auditorías no detectarán todos los errores y están diseñadas principalmente para proporcionar una ronda adicional de revisiones, que puede ayudar a detectar los problemas que los desarrolladores pasaron por alto durante el desarrollo y las pruebas iniciales. También es necesario cumplir con buenas prácticas para trabajar con los auditores, como documentar el código adecuadamente y añadir comentarios en línea, para maximizar el beneficio de una auditoría del contrato inteligente.
+
+- [Consejos y trucos de auditoría de contratos inteligentes](https://twitter.com/tinchoabbate/status/1400170232904400897) - _@tinchoabbate_
+- [Aproveche al máximo su auditoría](https://inference.ag/blog/2023-08-14-tips/) - _Inference_
 
 #### Dar recompensas por detección de errores {#bug-bounties}
 
@@ -214,7 +217,7 @@ La gobernanza descentralizada puede ser beneficiosa, especialmente porque alinea
 
 Una manera de prevenir problemas relacionados con la gobernanza en cadena es [usar un bloqueo de tiempo o timelock](https://blog.openzeppelin.com/protect-your-users-with-smart-contract-timelocks/). Un bloqueo de tiempo impide que un contrato inteligente ejecute ciertas acciones hasta que pase una cantidad específica de tiempo. Otras estrategias incluyen asignar un "peso de votación" a cada token en función de cuánto tiempo ha estado bloqueado, o medir el poder de voto de una dirección en un período histórico (por ejemplo, 2-3 bloques en el pasado) en lugar del bloque actual. Ambos métodos reducen la posibilidad de acumular rápidamente el poder de voto para cambiar los votos en cadena.
 
-Consulte más información sobre el [diseño de sistemas de gobernanza seguros](https://blog.openzeppelin.com/smart-contract-security-guidelines-4-strategies-for-safer-governance-systems/) y los [diferentes mecanismos de votación en las DAO](https://hackernoon.com/governance-is-the-holy-grail-for-daos).
+Obtenga más información sobre [diseño de sistemas de gobernanza seguros](https://blog.openzeppelin.com/smart-contract-security-guidelines-4-strategies-for-safer-governance-systems/), [diferentes mecanismos de votación en las DAO](https://hackernoon.com/governance-is-the-holy-grail-for-daos) y [los vectores de ataque comunes de DAO que aprovechan DeFi](https://dacian.me/dao-governance-defi-attacks) en los enlaces compartidos.
 
 ### 8. Reducir la complejidad del código al mínimo {#reduce-code-complexity}
 
@@ -468,6 +471,8 @@ Si planea consultar a un oráculo en cadena precios de activos, considere el uso
 
 - **[ABI Encoder:](https://abi.hashex.org/)** _Servicio en línea gratuito para codificar funciones de contratos y argumentos constructor de Solidity. _
 
+- **[Aderyn](https://github.com/Cyfrin/aderyn)**: _Analizador estático de Solidity, que atraviesa los Árboles de Sintaxis Abstracta (AST) para identificar vulnerabilidades sospechosas e imprimir problemas en un formato de reducción fácil de consumir._
+
 ### Herramientas para monitorear contratos inteligentes {#smart-contract-monitoring-tools}
 
 - **[OpenZeppelin Defender Sentinels:](https://docs.openzeppelin.com/defender/v1/sentinel)** _Una herramienta para monitorear y responder automáticamente a eventos, funciones y parámetros de transacción en sus contratos inteligentes. _
@@ -508,9 +513,13 @@ Si planea consultar a un oráculo en cadena precios de activos, considere el uso
 
 - **[CodeHawks](https://codehawks.com/)**: _plataforma de auditorías competitivas que aloja licitaciones de auditorías de contratos inteligentes para investigadores de seguridad._
 
-- **[Cyfrin](https://www.cyfrin.io/)**: _empresa de formación sobre seguridad de cadenas de bloques y Web3 centrada en protocolos basados en la EVM y Vyper._
+- **[Cyfrin:](https://cyfrin.io)** _Plataforma de seguridad web3 que incuba la seguridad criptográfica a través de productos y servicios de auditoría de contratos inteligentes._
 
 - **[ImmuneBytes](https://www.immunebytes.com//smart-contract-audit/)**: _empresa de seguridad en Web3 que ofrece auditorías de seguridad para sistemas de cadena de bloque mediante un equipo de auditores expertos y las mejores herramientas existentes._
+
+- **[Oxorio:](https://oxor.io/)** _Auditorías de contratos inteligentes y servicios de seguridad de cadena de bloques con experiencia en EVM, Solidity, ZK y tecnología de cadena cruzada para empresas criptográficas y proyectos DeFi._
+
+- **[Inference:](https://inference.ag/)** _Empresa de auditoría de seguridad especializada en auditoría de contratos inteligentes para cadenas de bloques basadas en EVM. Gracias a sus auditores expertos, identifican posibles problemas y sugieren soluciones prácticas para solucionarlos antes de la implementación._
 
 ### Plataformas de recompensas por errores {#bug-bounty-platforms}
 
@@ -519,6 +528,10 @@ Si planea consultar a un oráculo en cadena precios de activos, considere el uso
 - **[HackerOne:](https://www.hackerone.com/)** _Plataforma de coordinación de vulnerabilidades y recompensas por errores que conecta a las empresas con evaluadores de penetración e investigadores de ciberseguridad. _
 
 - **[HackenProof:](https://hackenproof.com/)** _Plataforma experta de recompensas por errores para proyectos criptográficos (DeFi, Smart Contracts, Wallets, CEX y más), donde profesionales de seguridad proporcionan servicios de triaje y a los investigadores se les paga por informes de errores relevantes y verificados. _
+
+-  **[Sherlock:](https://www.sherlock.xyz/)** _Asegurador en Web3 para la seguridad de los contratos inteligentes, con pagos para auditores gestionados a través de contratos inteligentes para garantizar que los errores relevantes se paguen de manera justa._
+
+-  **[CodeHawks:](https://www.codehawks.com/)** _Plataforma de recompensas por errores competitivas donde los auditores participan en concursos y desafíos de seguridad, y (pronto) en sus propias auditorías privadas._
 
 ### Publicaciones de vulnerabilidades y explotaciones conocidas en los contratos inteligentes {#common-smart-contract-vulnerabilities-and-exploits}
 
@@ -536,6 +549,8 @@ Si planea consultar a un oráculo en cadena precios de activos, considere el uso
 
 - **[Ethernaut:](https://ethernaut.openzeppelin.com/)** _Juego de guerra basado en la Web3/Solidity donde cada nivel es un contrato inteligente que necesita ser "hackeado". _
 
+- **[HackenProof x HackTheBox:](https://app.hackthebox.com/tracks/HackenProof-Track)** _Desafío de piratería de contrato inteligente, ambientado en una aventura de fantasía. La finalización exitosa del desafío también da acceso a un programa privado de recompensas por errores._
+
 ### Mejores prácticas para proteger contratos inteligentes {#smart-contract-security-best-practices}
 
 - **[ConsenSys: mejores prácticas de seguridad de contratos inteligentes de Ethereum:](https://consensys.github.io/smart-contract-best-practices/)** _Lista exhaustiva de directrices para proteger contratos inteligentes de Ethereum._
@@ -548,6 +563,8 @@ Si planea consultar a un oráculo en cadena precios de activos, considere el uso
 
 - **[Estándar de verificación de seguridad de contratos inteligentes:](https://github.com/securing/SCSVS)** _Lista de verificación de catorce partes creada para estandarizar la seguridad de los contratos inteligentes para desarrolladores, arquitectos, revisores y proveedores de seguridad. _
 
+- **[Aprenda sobre seguridad y auditorías de contratos inteligentes:](https://updraft.cyfrin.io/courses/security)** _Curso definitivo de seguridad y auditoría de contratos inteligentes creado para desarrolladores de contratos inteligentes que buscan mejorar sus buenas prácticas de seguridad y convertirse en investigadores de seguridad._
+
 ### Tutoriales sobre seguridad de contratos inteligentes {#tutorials-on-smart-contract-security}
 
 - [Cómo escribir contratos inteligentes seguros](/developers/tutorials/secure-development-workflow/)
@@ -556,7 +573,7 @@ Si planea consultar a un oráculo en cadena precios de activos, considere el uso
 
 - [Cómo utilizar Manticore para encontrar errores en contratos inteligentes](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
 
-- [Directrices de seguridad de contratos inteligentes](/developers/tutorials/smart-contract-security-guidelines/)
+- [Pautas de seguridad de contratos inteligentes](/developers/tutorials/smart-contract-security-guidelines/)
 
 - [Cómo integrar de forma segura su contrato de tokens con tokens arbitrarios](/developers/tutorials/token-integration-checklist/)
 

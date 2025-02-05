@@ -1,6 +1,6 @@
 ---
-title: Önálló letétbe helyezés
-description: Az önálló letétbe helyezés áttekintése
+title: Egyéni letétbe helyezés
+description: Az egyéni letétbe helyezés áttekintése
 lang: hu
 template: staking
 emoji: ":money_with_wings:"
@@ -13,31 +13,31 @@ summaryPoints:
   - Nem kell másban megbíznia, és az eszközeihez tartozó kulcsok mindig az Ön kontrollja alatt állnak
 ---
 
-## Mi az az önálló letétbe helyezés? {#what-is-solo-staking}
+## Mi az az egyéni letétbe helyezés? {#what-is-solo-staking}
 
-Az önálló letétbe helyezés (solo staking) során a felhasználó egy [Ethereum csomópontot működtet](/run-a-node/) az internethez csatlakozva, letétbe helyez 32 ETH-t, hogy aktiváljon egy [validátort](#faq), így közvetlenül részt tud venni a hálózat konszenzusfolyamatában.
+Az egyéni letétbe helyezés során a felhasználó egy [Ethereum-csomópontot működtet](/run-a-node/) az internethez csatlakozva, letétbe helyez 32 ETH-t, hogy aktiváljon egy [validátort](#faq), így közvetlenül részt tud venni a hálózat konszenzusfolyamatában.
 
-**Az önálló letétbe helyezés növeli az Ethereum hálózatának decentralizációját**, így az ellenállóbb lesz a cenzúrával és a támadásokkal szemben. A többi letétbe helyezési módszer nem feltétlen segíti a hálózatot ugyanilyen módon. Az önálló letétbe helyezés a legjobb letéti opció az Ethereum biztosítására.
+**Az egyéni letétbe helyezés növeli az Ethereum hálózatának decentralizációját**, így az ellenállóbb lesz a cenzúrával és a támadásokkal szemben. A többi letétbe helyezési módszer nem feltétlen segíti a hálózatot ugyanilyen módon. Az egyéni letétbe helyezés a legjobb letéti opció az Ethereum biztosítására.
 
 Az Ethereum-csomópontot egy végrehajtási réteg (EL) klienst és egy konszenzus réteg (CL) klienst tartalmaz. Ezek a kliensek olyan szoftverek, amelyek együtt dolgoznak egy érvényes aláírókulcs-készlettel együtt, hogy érvényesítsék a tranzakciókat és a blokkokat, tanúsítsák a lánc státuszát, aggregálják a tanúsítványokat és blokkokat javasoljanak.
 
-Az önálló letétbe helyezők azért felelnek, hogy a kliensek futásához szükséges hardvert működtetik. Azt javasoljuk, hogy erre egy dedikált gépet használjanak, melyet otthonról üzemeltetnek, mert ez rendkívül hasznos a hálózat egészsége szempontjából.
+Az egyéni letétbe helyezők azért felelnek, hogy a kliensek futásához szükséges hardvert működtetik. Azt javasoljuk, hogy erre egy dedikált gépet használjanak, melyet otthonról üzemeltetnek, mert ez rendkívül hasznos a hálózat egészsége szempontjából.
 
-Az önálló letétbe helyező közvetlenül a protokolltól kap jutalmakat azért, hogy a validátora megfelelően működik és online van.
+Az egyéni letétbe helyező közvetlenül a protokolltól kap jutalmakat azért, hogy a validátora megfelelően működik és online van.
 
-## Miért legyek önálló letétbe helyező? {#why-stake-solo}
+## Miért legyek egyéni letétbe helyező? {#why-stake-solo}
 
-Az önálló letétbe helyezés több felelősséggel jár, de teljes kontrollt biztosít a pénzeszközök és a staking felállítás felett.
+Az egyéni letétbe helyezés több felelősséggel jár, de teljes kontrollt biztosít a pénzeszközök és a staking felállítás felett.
 
 <CardGrid>
   <Card title="Szerezzen új ETH-t" emoji="💸" description="Earn ETH-denominated rewards directly from the protocol when your validator is online, without any middlemen taking a cut." />
   <Card title="Teljes kontroll" emoji="🎛️" description="Keep your own keys. Choose the combination of clients and hardware that allows you to minimize your risk and best contribute to the health and security of the network. Third-party staking services make these decisions for you, and they don't always make the safest choices." />
-  <Card title="Hálózatbiztonság" emoji="🔐" description="Solo staking is the most impactful way to stake. By running a validator on your own hardware at home, you strengthen the robustness, decentralization, and security of the Ethereum protocol." />
+  <Card title="Hálózatbiztonság" emoji="🔐" description="Home staking is the most impactful way to stake. By running a validator on your own hardware at home, you strengthen the robustness, decentralization, and security of the Ethereum protocol." />
 </CardGrid>
 
-## Megfontolások, mielőtt belevágna az önálló stakingbe {#considerations-before-staking-solo}
+## Megfontolandó dolgok, mielőtt belevágna az egyéni letétbe helyezésbe {#considerations-before-staking-solo}
 
-Bármennyire is szeretnénk, hogy az önálló letétbe helyezés elérhető és kockázatmentes legyen mindenkinek, ez nem a valóság. Mielőtt belevágna, komoly gyakorlati megfontolásokkal kell szembenéznie.
+Bármennyire is szeretnénk, hogy az egyéni letétbe helyezés elérhető és kockázatmentes legyen mindenkinek, ez nem lehet elérni. Mielőtt belevágna, komoly gyakorlati megfontolásokkal kell szembenéznie.
 
 <InfoGrid>
 <ExpandableCard title="Kötelező olvasmány" eventCategory="SoloStaking" eventName="clicked required reading">
@@ -93,7 +93,7 @@ A Staking Launchpad egy nyílt forráskódú alkalmazás, ami segít a letétbe 
 
 ## Mit kell figyelembe venni a csomópont- és kliensbeállító eszközöknél {#node-tool-considerations}
 
-Az önálló letétbe helyezést segítő eszközök és szolgáltatások száma egyre növekszik, de mindnél áll fent kockázat, és ugyanúgy mind előnyökkel is jár.
+Az egyéni letétbe helyezést segítő eszközök és szolgáltatások száma egyre növekszik, de mindnél áll fenn kockázat, ugyanúgy mind előnyökkel is jár.
 
 Alább különböző jellemzők mentén mutatjuk be a jelentős erősségeket vagy gyengeségeket, melyekkel a listázott letéti eszközök rendelkezhetnek. Ez alapján Ön is megértheti, hogy e jellemzőket hogyan határoztuk meg, és így könnyebben választhat a szükséges eszközök közül.
 
@@ -119,7 +119,7 @@ Ezek alternatív eszközök a [Staking Deposit CLI](https://github.com/ethereum/
 
 Hiányolja valamelyik letétbe helyezési eszközt? Ha a [terméklistázó szabályzat](/contributing/adding-staking-products/) alapján úgy véli, hogy egy adott eszköz illeszkedne ide, akkor jelezze felénk.
 
-## Nézze meg az önálló letétbe helyezés útmutatóit {#staking-guides}
+## Nézze meg az egyéni letétbe helyezésre vonatkozó útmutatókat {#staking-guides}
 
 <StakingGuides />
 
@@ -138,7 +138,7 @@ A validátorhoz tartozó kulcspár pontosan 32 ETH összeget igényel ahhoz, ho
 
 Egy validátorhoz ne kössön le többet, mint 32 ETH. Ez nem hoz több nyereséget. A <a href="/staking/withdrawals/#validator-sweeping">validátor-ellenőrzés</a> során a 32 ETH feletti rész automatikusan átkerül a visszavonási címre, ha az be van állítva a validátorhoz.
 
-Ha az önálló letétbe helyezés túl nagy erőfeszítést igényelne Öntől, akkor nézze meg a <a href="/staking/saas/">letétbe helyezés, mint szolgáltatás</a> opcióit, vagy ha kevesebb mint 32 ETH összegről van szó, akkor fontolja meg a <a href="/staking/pools/">letéti alapok</a> szolgáltatást.
+Ha az egyéni letétbe helyezés túl nagy erőfeszítést igényelne Öntől, akkor nézze meg a <a href="/staking/saas/">letétbe helyezés, mint szolgáltatás</a> opcióit, vagy ha kevesebb mint 32 ETH összegről van szó, akkor fontolja meg a <a href="/staking/pools/">letéti alapok</a> szolgáltatást.
 </ExpandableCard>
 
 <ExpandableCard title="Súlyos büntetéssel és kizárással jár, ha offline a validátorom? (Röviden: nem.)">
@@ -203,4 +203,4 @@ A teljes egyenleg visszavonásához végig kell menni a validátorkiléptetési 
 - [Lépésről lépésre: hogyan kell csatlakozni az Ethereum 2.0 teszthálózathoz](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) – _Butta_
 - [Eth2 Slashing elkerülési tippek](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) – _Raul Jordan 2020._
 
-<QuizWidget quizKey="solo-staking" />
+<QuizWidget quizKey="staking-solo" />
