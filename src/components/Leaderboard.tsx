@@ -57,10 +57,12 @@ const Leaderboard = ({ content, limit = 100 }: LeaderboardProps) => {
               >
                 <div className="me-4 opacity-40">{idx + 1}</div>
                 <Avatar
-                  className="me-4 flex h-10 w-10 flex-wrap sm:block"
-                  href={avatarImg}
                   src={avatarImg}
                   name={avatarAlt}
+                  // This meets the Design System requirement, despite the leaderboard item itself being a link
+                  href={hasGitHub ? `${GITHUB_URL}${username}` : "#"}
+                  // `size-10` is not part of a "size" variant
+                  className="me-4 size-10"
                 />
                 <Flex className="me-8 flex-1 basis-3/4 flex-col">
                   <LinkOverlay
