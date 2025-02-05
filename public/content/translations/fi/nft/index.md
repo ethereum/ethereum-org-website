@@ -58,7 +58,6 @@ NFT-järjestelmä on suhteellisen uusi. Teoriassa, mikä tahansa uniikki asia, j
 - [Kiinteistömurto-osakkeet](https://realt.co/)
 - [Tutkintotodistukset](https://www.degreecert.com/)
 - [Musiikin rojaltit NFTin kautta](https://opulous.org/)
-- [Siirry ansaintaan](https://yeticoineth.com/about.html)
 - [Digitaalinen identiteetti](https://photochromic.io/)
 
 ### ethereum.org sovelluksia {#ethereum-org-examples}

@@ -58,7 +58,6 @@ NFT-världen är relativt ny. I teorin omfattar NFT allt som är unikt och där 
 - [Andelar i fastigheter](https://realt.co/)
 - [Examensbevis](https://www.degreecert.com/)
 - [Musik royalties via NFTs](https://opulous.org/)
-- [Move 2 Earn](https://yeticoineth.com/about.html)
 - [Digital identitet](https://photochromic.io/)
 
 ### exempel på ethereum.org {#ethereum-org-examples}
