@@ -34,7 +34,7 @@ const InfoBanner = ({
       className={cn(
         "rounded-sm p-6 sm:flex-row",
         shouldCenter ? "max-w-[55rem]" : "max-w-full",
-        isWarning ? "bg-orange-200" : "bg-indigo-100",
+        isWarning ? "bg-warning-light" : "bg-primary-low-contrast",
         className
       )}
       onClick={onClick}
