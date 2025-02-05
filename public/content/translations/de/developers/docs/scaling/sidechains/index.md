@@ -28,7 +28,7 @@ Mehrere Projekte bieten Implementierungen von Sidechains, die Sie in Ihre dApps 
 
 - [Polygon PoS](https://polygon.technology/solutions/polygon-pos)
 - [Skale](https://skale.network/)
-- [Gnosis-Chain (ehemals xDai)](https://www.xdaichain.com/)
+- [Gnosis-Chain (ehemals xDai)](https://www.gnosis.io/)
 
 ## Weiterführende Informationen {#further-reading}
 

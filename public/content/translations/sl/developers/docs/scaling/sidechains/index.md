@@ -28,7 +28,7 @@ Več projektov zagotavlja implementacije stranskih verig, ki jih lahko integrira
 
 - [Polygon PoS](https://polygon.technology/solutions/polygon-pos)
 - [Skale](https://skale.network/)
-- [Gnosis Chain (prej xDai)](https://www.xdaichain.com/)
+- [Gnosis Chain (prej xDai)](https://www.gnosis.io/)
 
 ## Nadaljnje branje {#further-reading}
 
