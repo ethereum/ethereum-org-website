@@ -19,7 +19,7 @@ import TutorialTags from "@/components/TutorialTags"
 import { Button, ButtonLink } from "@/components/ui/buttons/Button"
 import Modal from "@/components/ui/dialog-modal"
 import { Flex, FlexProps } from "@/components/ui/flex"
-import { Tag } from "@/components/ui/tag"
+import { Tag, TagButton } from "@/components/ui/tag"
 
 import { cn } from "@/lib/utils/cn"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
@@ -49,16 +49,15 @@ const FilterTag = forwardRef<{ isActive: boolean; name: string }, "button">(
   (props, ref) => {
     const { isActive, name, ...rest } = props
     return (
-      <Tag
+      <TagButton
+        ref={ref}
         variant={isActive ? "solid" : "outline"}
         status={isActive ? "tag" : "normal"}
-        className="hover:border-primary-hover"
-        asChild
+        className="justify-center"
+        {...rest}
       >
-        <Button ref={ref} {...rest}>
-          {name}
-        </Button>
-      </Tag>
+        {name}
+      </TagButton>
     )
   }
 )
