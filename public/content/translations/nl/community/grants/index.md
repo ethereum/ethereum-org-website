@@ -28,7 +28,7 @@ Deze projecten hebben hun eigen beurzen gecreëerd voor projecten die gericht zi
 - [Aave Grants Program](https://aavegrants.org/) – _[Aave](https://aave.com/) Grants DAO_
 - [Balancer](https://balancergrants.notion.site/Balancer-Community-Grants-23e562c5bc4347cd8304637bff0058e6) – _[Balancer](https://balancer.fi/)-ecosysteemfonds_
 - [Chainlink Grants Program](https://chain.link/community/grants) - _[Chainlink](https://chain.link/)-gemeenschapssubsidies_
-- [Compound Grants Program](https://compoundgrants.org/) – _[Compound](https://compound.finance/)-financieringsecosysteem_
+- [Compound Grants Program](https://compoundgrants.questbook.app/) – _[Compound](https://compound.finance/)-financieringsecosysteem_
 - [Lido Ecosystem Grants Organisation (LEGO)](https://lego.lido.fi/) – _[Lido](https://lido.fi/)-financieringsecosysteem_
 - [MetaMask Program](https://metamaskgrants.org/) - _[MetaMask](https://metamask.io/) Grants DAO geleid door werknemers_
 - [mStable Grants Program](https://docs.mstable.org/advanced/grants-program) - _[mStable](https://mstable.org/)-gemeenschap_

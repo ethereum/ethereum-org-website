@@ -28,7 +28,7 @@ lang: uk
 - [Програма грантів Aave](https://aavegrants.org/) — _гранти DAO від [Aave](https://aave.com/)_
 - [Balancer](https://balancergrants.notion.site/Balancer-Community-Grants-23e562c5bc4347cd8304637bff0058e6) — _фонд екосистеми [Balancer](https://balancer.fi/)_
 - [Програма грантів Chainlink](https://chain.link/community/grants) — _гранти спільноти [Chainlink](https://chain.link/)_
-- [Програма грантів Compound](https://compoundgrants.org/) — _фінансова екосистема [Compound](https://compound.finance/)_
+- [Програма грантів Compound](https://compoundgrants.questbook.app/) — _фінансова екосистема [Compound](https://compound.finance/)_
 - [Програма грантів Decentraland](https://governance.decentraland.org/grants/) — _[децентралізація](https://decentraland.org/) DAO Metaverse_
 - [Організація грантів Lido Ecosystem (LEGO)](https://lego.lido.fi/) — _фінансова екосистема [Lido](https://lido.fi/)_
 - [Програма MetaMask](https://metamaskgrants.org/) — _гранти під керівництвом співробітників DAO від [MetaMask](https://metamask.io/)_
