@@ -28,9 +28,9 @@ const IssuesList = ({ issues, className }: IssuesListProps) => {
             <HStack className="gap-2">
               <Avatar
                 name={issue.user.login}
-                href={issue.user.avatar_url}
                 src={issue.user.avatar_url}
-                className="size-8 flex-wrap"
+                size="sm"
+                href={`https://github.com/${issue.user.login}`}
               />
               <p className="text-sm">by {issue.user.login}</p>
             </HStack>
