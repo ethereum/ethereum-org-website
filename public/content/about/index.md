@@ -95,7 +95,7 @@ This means the website needs to handle many different user journeys, from “a d
 
 ## Product roadmap {#roadmap}
 
-To make our work more accessible and to foster more community collaboration, the ethereum.org core team publishes an overview of our cyclical roadmap goals.
+To make our work more accessible and to foster more community collaboration, the ethereum.org core team publishes an overview of our [shape up cycle](https://www.productplan.com/glossary/shape-up-method/) roadmap goals.
 
 [View our 2025 Cycle 1 product roadmap](https://github.com/ethereum/ethereum-org-website/issues/14726)
 
