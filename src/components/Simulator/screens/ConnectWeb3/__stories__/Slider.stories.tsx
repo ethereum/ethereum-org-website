@@ -9,7 +9,7 @@ const meta = {
   component: SliderComponent,
   decorators: [
     (Story) => (
-      <div className="relative h-[500px] w-[322px]">
+      <div className="relative h-[500px] w-[322px] overflow-hidden">
         <Story />
       </div>
     ),
