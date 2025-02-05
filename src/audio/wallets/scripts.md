@@ -1,13 +1,29 @@
-Before we dive into wallets, let's clarify some important terms that often get mixed up.
+What are crypto wallets and why do you need one?
 
-First, let's understand the relationship between wallets, accounts, keys, and addresses.
+Wallets are applications that give you control over your Ethereum account. Just like your physical wallet, it contains everything you need to prove your identity and handle your assets. Your wallet allows you to sign into applications, read your balance, send transactions and verify your identity.
+
+Its important to know that wallet app providers don't have custody of your funds. They just provide you a window to see your assets on Ethereum and tools to easily manage them. 
+
+That means you can swap wallet providers at any time and keep the same account. Many wallets also let you manage several different accounts from one application.
+
+To sum up what wallet is:
+
+An app for managing your funds
+Your wallet shows your balances, transaction history and gives you a way to send/receive funds. Some wallets may offer more.
+
+Your Ethereum account
+Your wallet is your window into your Ethereum account – your balance, transaction history and more. But you can swap wallet providers at any time.
+
+Your login for Ethereum apps
+Your wallet lets you connect to applications using your Ethereum account. It's like a login you can use across many apps.
+
+
+Now, let's clarify some important terms that often get mixed up.
 
 An Ethereum account is like your digital identity, made up of two important keys. A public key, which creates your address that you can share with others, and a private key, which must be kept secret as it's used to sign transactions. Think of these keys working together to help you manage your digital assets and make transactions.
 
 Your public key, also known as your Ethereum address works just like an email address - it's the public identifier for your digital assets.
 You can freely share this public address with others when you want to receive funds or interact with blockchain applications. Make sure you do not share your private key with anyone else though.
-
-Now, what's a wallet? A wallet is an app or device that helps you interact with your Ethereum account. With it, you can create an Ethereum account, check your balance, send and receive funds, sign in to Ethereum applications, and verify your identity.
 
 There are several types of wallets you can choose from. Hardware wallets are physical devices that keep your crypto offline for maximum security. Mobile wallets are applications that let you access your funds on your phone. Browser wallets are web applications for managing your account. Browser extensions are extensions that connect you to Ethereum through your web browser. Lastly, Desktop applications are programs for managing funds on your computer in a standalone application.
 
