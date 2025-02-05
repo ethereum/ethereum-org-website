@@ -1,16 +1,8 @@
 import React from "react"
 import { useTranslation } from "next-i18next"
 import { IconBase } from "react-icons"
-import {
-  cssVar,
-  Heading,
-  Icon,
-  SimpleGrid,
-  Text,
-  useToken,
-  VStack,
-} from "@chakra-ui/react"
-import { Center, Flex } from "@/components/ui/flex"
+import { cssVar, Icon, SimpleGrid, Text, useToken } from "@chakra-ui/react"
+import { Center, VStack, Flex } from "@/components/ui/flex"
 
 import { ChildOnlyProp } from "@/lib/types"
 
@@ -153,15 +145,13 @@ const Header = ({ children }: ChildOnlyProp) => (
 )
 
 const HeadingEl = ({ children }: ChildOnlyProp) => (
-  <Heading
-    color={$colorVar.reference}
-    fontSize="2rem"
-    fontWeight={600}
-    lineHeight={1.4}
-    textAlign={{ base: "center", md: "initial" }}
+  <h1
+    className="text-($colorVar.reference) text-center text-[2rem] font-semibold leading-[1.4] md:text-start"
+    /* This value needs to be updated across the file.
+     color={$colorVar.reference} */
   >
     {children}
-  </Heading>
+  </h1>
 )
 // Todo: The removed sx prop will be added by creating a separate function for Text like we have HeadingEl. This will also help to migrate the Text component.
 const Pills = ({ children }: ChildOnlyProp) => (
@@ -170,9 +160,18 @@ const Pills = ({ children }: ChildOnlyProp) => (
   </Flex>
 )
 
+const TextEl = ({ children }: ChildOnlyProp) => (
+  <p
+    className={`after:content-["] relative m-0 whitespace-nowrap px-1.5 py-0.5 text-[colorVar.reference] after:absolute after:start-0 after:top-0 after:box-content after:rounded after:bg-[var(colorVar.reference)] after:opacity-[.125]`}
+  >
+    {children}
+  </p>
+)
+
 type GlyphProps = { glyphIcon: typeof IconBase }
 const Glyph = ({ glyphIcon }: GlyphProps) => (
   <Center
+    //Need to set the base styles we've had previously ie. gridArea="base:content"
     style={{
       gridArea: "glyph",
     }}
@@ -212,28 +211,18 @@ const StakingHierarchy = () => {
   )
 
   return (
-    <VStack
-      bgGradient="linear(rgba(237, 194, 84, 0.1) 13.39%, rgba(75, 231, 156, 0.1) 44.21%, rgba(231, 202, 200, 0.1) 82.88%)"
-      borderRadius={{ base: 0, md: "lg" }}
-      spacing={{ base: 16, md: 0 }}
-      p={8}
-      borderInlineStart={{ base: "4px", md: "none" }}
-      borderInlineEnd={0}
-      sx={{
-        borderImage: `linear-gradient(to bottom, ${stakingGold} 5%, ${stakingGreen} 30%, ${stakingBlue} 55%, ${stakingRed} 80%) 1 100%`,
-      }}
-    >
+    <VStack className="border-gradient-to-b border-gradient-gold-green-blue-red space-y-16 rounded-none border-l-4 border-r-0 bg-gradient-to-b from-[rgba(237,194,84,0.1)] via-[rgba(75,231,156,0.1)] to-[rgba(231,202,200,0.1)] p-8 md:space-y-0 md:rounded-lg md:border-l-0">
       <SectionGrid number={1}>
         <StyledEtherSvg className="size-[100%] text-staking-gold" />
         <Line />
         <Header>
           <HeadingEl>{t("page-staking-hierarchy-solo-h2")}</HeadingEl>
           <Pills>
-            <p
-              className={`after:content-["] relative m-0 whitespace-nowrap px-1.5 py-0.5 text-[colorVar.reference] after:absolute after:start-0 after:top-0 after:box-content after:rounded after:bg-[var(colorVar.reference)] after:opacity-[.125]`}
+            <Text
+              className={`after:content-["] relative m-0 whitespace-nowrap px-1.5 py-0.5 text-[$colorVar.reference] after:absolute after:start-0 after:top-0 after:box-content after:rounded after:bg-[$colorVar.reference] after:opacity-[.125]`}
             >
               <em>{t("page-staking-hierarchy-solo-pill-1")}</em>
-            </p>
+            </Text>
             <Text
               className={`after:content-["] relative m-0 whitespace-nowrap px-1.5 py-0.5 text-[$colorVar.reference] after:absolute after:start-0 after:top-0 after:box-content after:rounded after:bg-[$colorVar.reference] after:opacity-[.125]`}
             >
