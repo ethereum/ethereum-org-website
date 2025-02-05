@@ -32,7 +32,9 @@ const InfoBanner = ({
       className={cn(
         "rounded-sm p-6 sm:flex-row",
         shouldCenter ? "max-w-[55rem]" : "max-w-full",
-        isWarning ? "bg-warning-light" : "bg-primary-low-contrast",
+        isWarning
+          ? "bg-warning-light dark:text-body-inverse"
+          : "bg-primary-low-contrast",
         className
       )}
       {...props}
