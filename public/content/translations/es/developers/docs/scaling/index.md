@@ -106,7 +106,7 @@ _Obsérvese que la explicación del video utiliza el término "Capa 2" para refe
 - [Guía incompleta sobre los rollups](https://vitalik.eth.limo/general/2021/01/05/rollup.html)
 - [Rollups de conocimiento cero (ZK) con tecnología de Ethereum: los mejores del mundo](https://hackmd.io/@canti/rkUT0BD8K)
 - [Rollups optimistas vs. rollups de conocimiento cero (ZK)](https://limechain.tech/blog/optimistic-rollups-vs-zk-rollups/)
-- [Escalabilidad de la cadena de bloques de conocimiento cero](https://ethworks.io/assets/download/zero-knowledge-blockchain-scaling-ethworks.pdf)
+- [Escalabilidad de la cadena de bloques de conocimiento cero](https://www.archblock.com/poland/assets/download/zero-knowledge-blockchain-scaling-ethworks.pdf)
 - [Por qué los rollups y los fragmentos de datos son la única solución sustentable para la alta escalabilidad](https://polynya.medium.com/why-rollups-data-shards-are-the-only-sustainable-solution-for-high-scalability-c9aabd6fbb48)
 - [¿Qué tipo de capas 3 tienen sentido?](https://vitalik.eth.limo/general/2022/09/17/layer_3.html)
 - [Disponibilidad de datos o: cómo los rollups aprendieron a dejar de preocuparse y amar a Ethereum](https://ethereum2077.substack.com/p/data-availability-in-ethereum-rollups)

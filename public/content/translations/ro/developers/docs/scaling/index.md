@@ -106,7 +106,7 @@ _Rețineți că explicația din videoclip folosește termenul "Nivelul 2" pentru
 - [Un ghid incomplet pentru rollup-uri](https://vitalik.eth.limo/general/2021/01/05/rollup.html)
 - [ZK-rollup-urile acţionate de Ethereum: campionii lumii](https://hackmd.io/@canti/rkUT0BD8K)
 - [Rollup-urile Optimistic în comparaţie cu ZK Rollup-urile](https://limechain.tech/blog/optimistic-rollups-vs-zk-rollups/)
-- [Zero-Knowledge Blockchain Scalability](https://ethworks.io/assets/download/zero-knowledge-blockchain-scaling-ethworks.pdf)
+- [Zero-Knowledge Blockchain Scalability](https://www.archblock.com/poland/assets/download/zero-knowledge-blockchain-scaling-ethworks.pdf)
 - [De ce rollup-urile + fragmentele de date sunt singura soluție sustenabilă pentru o scalabilitate ridicată](https://polynya.medium.com/why-rollups-data-shards-are-the-only-sustainable-solution-for-high-scalability-c9aabd6fbb48)
 
 _Cunoașteți o resursă a comunității care v-a ajutat? Editaţi această pagină și adăugaţi-o!_
