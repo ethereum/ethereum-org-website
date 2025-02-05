@@ -92,7 +92,7 @@ Beispiele für L2-Lösungen, die produktionsbereit sind oder es bald sein werden
 - Plasma (Daten off-chain, Betrugsnachweise)
   - [OMG Network](https://omg.network/)
   - [Gazelle](https://gzle.io)
-  - [Matic Network](https://matic.network/)
+  - [Matic Network](https://polygon.technology/)
   - [LeapDAO](https://ipfs.leapdao.org/)
 - State Channels
   - [Connext](https://connext.network/)

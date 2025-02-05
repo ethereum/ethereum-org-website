@@ -90,7 +90,7 @@ Przykłady rozwiązań L2, które są gotowe do produkcji lub wkrótce będą:
 - Plazma (dane poza łańcuchem, dowody oszustwa)
   - [Sieć OMG](https://omg.network/)
   - [Gazelle](https://gzle.io)
-  - [Sieć Matic](https://matic.network/)
+  - [Sieć Matic](https://polygon.technology/)
   - [LeapDAO](https://ipfs.leapdao.org/)
 - Kanały uzyskiwania informacji
   - [Połącz](https://connext.network/)

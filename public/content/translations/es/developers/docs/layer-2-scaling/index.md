@@ -170,7 +170,7 @@ Una cadena de plasma es una blockchain independiente que está anclada a la cade
 ### Usos de Plasma {#use-plasma}
 
 - [Red OMG](https://omg.network/)
-- [Red Matic](https://matic.network/)
+- [Red Matic](https://polygon.technology/)
 - [Gluon](https://gluon.network/)
 - [LeapDAO](https://ipfs.leapdao.org/)
 

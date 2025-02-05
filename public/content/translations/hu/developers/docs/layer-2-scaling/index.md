@@ -170,7 +170,7 @@ A plasma lánc olyan különálló blokklánc, mely hozzá van kötve a fő Ethe
 ### Plasma használata {#use-plasma}
 
 - [OMG Network](https://omg.network/)
-- [Matic Network](https://matic.network/)
+- [Matic Network](https://polygon.technology/)
 - [Gluon](https://gluon.network/)
 - [LeapDAO](https://ipfs.leapdao.org/)
 

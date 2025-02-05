@@ -170,7 +170,7 @@ Un lanț „plasma” este un blockchain separat care este ancorat pe lanțul pr
 ### Folosește Plasma {#use-plasma}
 
 - [OMG Network](https://omg.network/)
-- [Matic Network](https://matic.network/)
+- [Matic Network](https://polygon.technology/)
 - [Gluon](https://gluon.network/)
 - [LeapDAO](https://ipfs.leapdao.org/)
 

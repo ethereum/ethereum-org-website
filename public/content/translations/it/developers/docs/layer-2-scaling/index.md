@@ -170,7 +170,7 @@ Una catena Plasma è una blockchain separata, collegata alla catena principale E
 ### Usano Plasma {#use-plasma}
 
 - [OMG Network](https://omg.network/)
-- [Matic Network](https://matic.network/)
+- [Matic Network](https://polygon.technology/)
 - [Gluon](https://gluon.network/)
 - [LeapDAO](https://ipfs.leapdao.org/)
 

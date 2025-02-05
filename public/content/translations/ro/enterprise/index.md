@@ -91,7 +91,7 @@ Câteva exemple de soluții de Nivelul 2 care sunt pregătite pentru producție 
 - Plasma (date în afara lanțului, dovezi de fraudă)
   - [OMG Network](https://omg.network/)
   - [Gazelle](https://gzle.io)
-  - [Matic Network](https://matic.network/)
+  - [Matic Network](https://polygon.technology/)
   - [LeapDAO](https://ipfs.leapdao.org/)
 - Canale de stare
   - [Connext](https://connext.network/)

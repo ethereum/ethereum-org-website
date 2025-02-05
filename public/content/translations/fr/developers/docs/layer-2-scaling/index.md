@@ -170,7 +170,7 @@ Une chaîne plasma est une blockchain séparée qui est ancrée à la chaîne Et
 ### Chaînes Plasma que vous pouvez utiliser {#use-plasma}
 
 - [OMG Network](https://omg.network/)
-- [Matic Network](https://matic.network/)
+- [Matic Network](https://polygon.technology/)
 - [Gluon](https://gluon.network/)
 - [LeapDAO](https://ipfs.leapdao.org/)
 

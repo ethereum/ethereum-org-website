@@ -91,7 +91,7 @@ Contoh solusi L2 yang siap dipakai atau yang akan segera dimasukkan:
 - Plasma (data off chain, bukti penipuan)
   - [OMG Network](https://omg.network/)
   - [Gazelle](https://gzle.io)
-  - [Matic Network](https://matic.network/)
+  - [Matic Network](https://polygon.technology/)
   - [LeapDAO](https://ipfs.leapdao.org/)
 - Kanal state
   - [Connext](https://connext.network/)
