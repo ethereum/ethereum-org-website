@@ -1,6 +1,5 @@
 import { useTranslation } from "next-i18next"
 import {
-  Avatar,
   Box,
   Flex,
   LinkBox,
@@ -15,6 +14,8 @@ import Emoji from "@/components/Emoji"
 import { BaseLink } from "@/components/Link"
 
 import { GITHUB_URL } from "@/lib/constants"
+
+import { Avatar } from "./ui/avatar"
 
 import { useRtlFlip } from "@/hooks/useRtlFlip"
 
@@ -95,10 +96,10 @@ const Leaderboard = ({ content, limit = 100 }: LeaderboardProps) => {
                 <Avatar
                   src={avatarImg}
                   name={avatarAlt}
-                  me={4}
-                  h={10}
-                  w={10}
-                  display={{ base: "none", xs: "block" }}
+                  // This meets the Design System requirement, despite the leaderboard item itself being a link
+                  href={hasGitHub ? `${GITHUB_URL}${username}` : "#"}
+                  // `size-10` is not part of a "size" variant
+                  className="me-4 size-10"
                 />
                 <Flex flex="1 1 75%" direction="column" me={8}>
                   <LinkOverlay

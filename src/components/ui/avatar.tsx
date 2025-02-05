@@ -12,8 +12,8 @@ import { LinkBox, LinkOverlay } from "./link-box"
 const avatarStyles = tv({
   slots: {
     container:
-      "relative shrink-0 flex overflow-hidden rounded-full focus:outline-4 focus:-outline-offset-1 focus:rounded-full active:shadow-none [&_img]:hover:opacity-70 border border-transparent active:border-primary-hover justify-center items-center",
-    fallback: "bg-body text-body-inverse",
+      "relative shrink-0 overflow-hidden rounded-full focus:outline-4 focus:-outline-offset-1 focus:rounded-full active:shadow-none [&_img]:hover:opacity-70 border border-transparent active:border-primary-hover ",
+    fallback: "bg-body text-body-inverse flex justify-center items-center",
   },
   variants: {
     size: {
@@ -126,7 +126,7 @@ const Avatar = React.forwardRef<
     href,
     src,
     name,
-    size,
+    size = "md",
     label,
     className,
     direction = "row",
