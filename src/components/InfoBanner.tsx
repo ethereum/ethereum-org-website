@@ -15,7 +15,6 @@ type InfoBannerProps = {
   title?: string
   id?: string
   className?: string
-  onClick?: () => void
 }
 
 const InfoBanner = ({
@@ -26,7 +25,6 @@ const InfoBanner = ({
   shouldSpaceBetween,
   title,
   className,
-  onClick,
   ...props
 }: InfoBannerProps) => {
   const banner = (
@@ -37,7 +35,6 @@ const InfoBanner = ({
         isWarning ? "bg-warning-light" : "bg-primary-low-contrast",
         className
       )}
-      onClick={onClick}
       {...props}
     >
       {emoji && (
