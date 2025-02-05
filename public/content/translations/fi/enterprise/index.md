@@ -41,7 +41,7 @@ Seuraavat projektit tarjoavat lohkoketjupalveluja yritystason järjestelmille:
 - [Blockapps](https://blockapps.net/) _toteutus Enterprise Ethereum -protokollasta, työkaluista ja API:sta, jotka luovat STRATO-alustan_
 - [Clearmatics](https://www.clearmatics.com/about) _protokolla- ja vertaisverkkoalustan arkkitehtuuria sekä lohkoketjuja kehittävä yritys_
 - [PegaSys Plus](https://pegasys.tech/enterprise/) _tarjoaa samat ominaisuudet ja toiminnalisuudet kuin HF Besu, sekä muita yrityksille suunnattuja etuja_
-- [Quorum](https://www.goquorum.com/) _avoimen lähdekoodin lohkoketjualusta, joka yhdistää julkisen Ethereum-yhteisön innovaatiot yritysten tarpeisiin suunnattuihin palveluihin_
+- [Quorum](https://docs.goquorum.consensys.io/) _avoimen lähdekoodin lohkoketjualusta, joka yhdistää julkisen Ethereum-yhteisön innovaatiot yritysten tarpeisiin suunnattuihin palveluihin_
 
 ## Protokolla ja Infrastruktuuri {#protocol-and-infrastructure}
 

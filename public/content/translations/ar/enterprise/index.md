@@ -40,7 +40,7 @@ lang: ar
 - [Blockapps](https://blockapps.net/) _تنفيذ بروتوكول إيثريوم للمؤسسات وأدوات وAPIs من منصة STRATO_
 - [Clearmatics](https://www.clearmatics.com/about) _بروتوكولات وبنية منصة نظراء، سلسلة كتل R&D للشركة_
 - [PegaSys Plus](https://pegasys.tech/enterprise/) _يوفر نفس ميزات ووظائف HF Besu، بالإضافة إلى فوائد إضافية تركز على المؤسسة_
-- [Quorum](https://www.goquorum.com/) _منصة سلسلة كتل مفتوحة المصدر تجمع بين ابتكار مجتمع إيثريوم العام وتحسينات لدعم احتياجات المؤسسة_
+- [Quorum](https://docs.goquorum.consensys.io/) _منصة سلسلة كتل مفتوحة المصدر تجمع بين ابتكار مجتمع إيثريوم العام وتحسينات لدعم احتياجات المؤسسة_
 
 ## البروتوكول والبنية التحتية {#protocol-and-infrastructure}
 

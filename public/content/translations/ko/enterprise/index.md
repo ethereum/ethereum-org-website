@@ -41,7 +41,7 @@ sidebarDepth: 1
 - [블록앱스(BlockApps)](https://blockapps.net/) _STRATO 플랫폼을 구성하는 엔터프라이즈 이더리움 프로토콜, 툴링 및 API의 구현체_
 - [클리어매틱스(Clearmatics)](https://www.clearmatics.com/about) _프로토콜 및 P2P 플랫폼 아키텍처, 블록체인 R&D 기업_
 - [페가시스 플러스(PegaSys Plus)](https://pegasys.tech/enterprise/) _HF Besu와 동일한 기능은 물론 추가적인 엔터프라이즈 중심 서비스 제공_
-- [쿼럼(Quorum)](https://www.goquorum.com/) _공개 이더리움 커뮤니티를 통해 이루어진 혁신과 기업의 요구사항을 지원하면서 이루어진 개선 사항을 결합하는 오픈 소스 블록체인 플랫폼_
+- [쿼럼(Quorum)](https://docs.goquorum.consensys.io/) _공개 이더리움 커뮤니티를 통해 이루어진 혁신과 기업의 요구사항을 지원하면서 이루어진 개선 사항을 결합하는 오픈 소스 블록체인 플랫폼_
 
 ## 프로토콜 및 인프라 {#protocol-and-infrastructure}
 

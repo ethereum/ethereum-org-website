@@ -41,7 +41,7 @@ Các dự án sau đây cung cấp dịch vụ chuỗi khối cho các hệ th�
 - [Blockapps](https://blockapps.net/) _triển khai giao thức Enterprise Ethereum, công cụ và API tạo thành nền tảng STRATO_
 - [Clearmatics](https://www.clearmatics.com/about) _giao thức và kiến ​​trúc nền tảng ngang hàng, công ty R&D chuỗi khối_
 - [PegaSys Plus](https://pegasys.tech/enterprise/) _cung cấp các tính năng và chức năng tương tự như HF Besu, cộng với các lợi ích tập trung vào doanh nghiệp bổ sung_
-- [Quorum](https://www.goquorum.com/) _nền tảng chuỗi khối mã nguồn mở kết hợp sự đổi mới của cộng đồng Ethereum công cộng với các cải tiến để hỗ trợ nhu cầu doanh nghiệp_
+- [Quorum](https://docs.goquorum.consensys.io/) _nền tảng chuỗi khối mã nguồn mở kết hợp sự đổi mới của cộng đồng Ethereum công cộng với các cải tiến để hỗ trợ nhu cầu doanh nghiệp_
 
 ## Giao thức và cơ sở hạ tầng {#protocol-and-infrastructure}
 

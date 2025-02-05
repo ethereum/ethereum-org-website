@@ -40,7 +40,7 @@ Följande projekt tillhandahåller blockchain-tjänster för system för storfö
 - [Blockapps](https://blockapps.net/) _implementering av Enterprise Ethereum-protokollet, verktyg och API:er som bildar STRATO-plattformen_
 - [Clearmatics](https://www.clearmatics.com/about) _protokoll och peer-to-peer-plattformsarkitektur, blockchain R&D företag_
 - [PegaSys Plus](https://pegasys.tech/enterprise/) _erbjuder samma funktioner som HF Besu, plus ytterligare företagsfokuserade fördelar_
-- [Quorum](https://www.goquorum.com/) _blockchain-plattform med öppen källkod som kombinerar innovation av den offentliga Ethereum-gemenskapen med förbättringar för att stödja företagens behov_
+- [Quorum](https://docs.goquorum.consensys.io/) _blockchain-plattform med öppen källkod som kombinerar innovation av den offentliga Ethereum-gemenskapen med förbättringar för att stödja företagens behov_
 
 ## Protokoll och infrastruktur {#protocol-and-infrastructure}
 

@@ -41,7 +41,7 @@ Daugiau išsamios informacijos rasite šiuose straipsniuose:
 - [Blockapps](https://blockapps.net/) _Ethereum įmonėms proyokolo įgyvendinimas, įrankinė ir API, kurie sudaro STRATO platformą_
 - [Clearmatics](https://www.clearmatics.com/about) _protokolai ir tarpusavio sąveikos struktūra, blokų grandinė R&D company_
 - [PegaSys Plus](https://pegasys.tech/enterprise/) _turi tas pačias savybes ir funkcijas kaip ir HF Besu, o taip pat konkrečiai įmonėms reikalingas savybes_
-- [Quorum](https://www.goquorum.com/) _atviro kodo blokų grandinės platforma, teikianti inovacijas Ethereum bendruomenei ir geriau tenkinanti įmonių interesus_
+- [Quorum](https://docs.goquorum.consensys.io/) _atviro kodo blokų grandinės platforma, teikianti inovacijas Ethereum bendruomenei ir geriau tenkinanti įmonių interesus_
 
 ## Protokolas ir infrastruktūra {#protocol-and-infrastructure}
 
