@@ -1,6 +1,5 @@
 import Emoji from "react-emoji-render"
 import {
-  Avatar,
   Flex,
   HStack,
   SimpleGrid,
@@ -13,6 +12,7 @@ import type { GHIssue } from "@/lib/types"
 
 import InlineLink from "../Link"
 import Tag from "../Tag"
+import { Avatar } from "../ui/avatar"
 
 type IssuesListProps = SimpleGridProps & {
   issues: GHIssue[]
@@ -35,8 +35,8 @@ const IssuesList = ({ issues, ...props }: IssuesListProps) => {
               <Avatar
                 name={issue.user.login}
                 src={issue.user.avatar_url}
-                w="32px"
-                h="32px"
+                size="sm"
+                href={`https://github.com/${issue.user.login}`}
               />
               <Text size="sm">by {issue.user.login}</Text>
             </HStack>
