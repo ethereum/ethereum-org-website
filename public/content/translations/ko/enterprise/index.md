@@ -74,7 +74,7 @@ sidebarDepth: 1
 ### 툴링 {#tooling}
 
 - [Alethio](https://explorer.aleth.io/) _이더리움 데이터 분석 플랫폼_
-- [Treum](https://treum.io/) _블록체인 기술을 사용하여 공급망에 투명성, 추적성, 거래성 제공_
+- [Treum](https://consensys.io/blog/consensys-acquires-treum) _블록체인 기술을 사용하여 공급망에 투명성, 추적성, 거래성 제공_
 
 ## 엔터프라이즈 개발자 커뮤니티 {#enterprise-developer-community}
 

@@ -74,7 +74,7 @@ Mạng Ethereum công cộng và riêng tư có thể cần các tính năng c�
 ### Bộ công cụ {#tooling}
 
 - [Alethio -](https://explorer.aleth.io/) _Nền tảng phân tích dữ liệu Ethereum_
-- [Treum](https://treum.io/) _mang lại tính minh bạch, truy xuất nguồn gốc và tính truyền thống cho chuỗi cung ứng, sử dụng công nghệ chuỗi khối_
+- [Treum](https://consensys.io/blog/consensys-acquires-treum) _mang lại tính minh bạch, truy xuất nguồn gốc và tính truyền thống cho chuỗi cung ứng, sử dụng công nghệ chuỗi khối_
 
 ## Cộng đồng nhà phát triển doanh nghiệp {#enterprise-developer-community}
 

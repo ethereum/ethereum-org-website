@@ -136,7 +136,7 @@ Oto niektóre aplikacje dla przedsiębiorstw, które zostały wdrożone w public
 - [ShipChain](https://shipchain.io) _publiczny łańcuch boczny Ethereum i system korporacyjny zapewniający widoczność i zaufanie łańcucha dostaw, zwłaszcza w przypadku logistyki multimodalnej_
 - [Follow Our Fibre](https://www.followourfibre.com) _monitorowanie łańcucha dostaw wiskozy_
 - [EY OpsChain Network Procurement](https://blockchain.ey.com/products/contract-manager) _umożliwia firmom angażowanie się w proces zamówień poprzez wystawianie zapytań ofertowych, umowy, zamówienia i faktury w Twojej sieci zaufanych partnerów biznesowych_
-- [Treum](https://treum.io/) _zapewnia przejrzystość, identyfikowalność i możliwość handlu w łańcuchach dostaw, wykorzystując technologię blockchain_
+- [Treum](https://consensys.io/blog/consensys-acquires-treum) _zapewnia przejrzystość, identyfikowalność i możliwość handlu w łańcuchach dostaw, wykorzystując technologię blockchain_
 
 ### Poświadczenia i certyfikaty {#credentials}
 

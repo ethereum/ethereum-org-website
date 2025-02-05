@@ -74,7 +74,7 @@ Julkiset ja yksityiset Ethereum-verkot saattavat tarvita tiettyjä ominaisuuksia
 ### Työkalut {#tooling}
 
 - [Alethio](https://explorer.aleth.io/) _Ethereumin data-analytiikka-alusta_
-- [Treum](https://treum.io/) _tuo läpinäkyvyyttä, jäljitettävyyttä ja vaihdettavuutta toimitusketjuille lohkoketjuteknologiaa hyödyntäen_
+- [Treum](https://consensys.io/blog/consensys-acquires-treum) _tuo läpinäkyvyyttä, jäljitettävyyttä ja vaihdettavuutta toimitusketjuille lohkoketjuteknologiaa hyödyntäen_
 
 ## Yrityskehitysyhteisö {#enterprise-developer-community}
 

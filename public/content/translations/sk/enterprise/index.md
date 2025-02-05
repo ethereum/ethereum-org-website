@@ -73,7 +73,7 @@ Verejné a súkromné ​​siete Etherea môžu potrebovať špecifické vlastn
 ### Nástroje {#tooling}
 
 - [Alethio](https://explorer.aleth.io/) _platforma na analýzu údajov Etherea_
-- [Treum](https://treum.io/) _prináša transparentnosť, sledovateľnosť a obchodovateľnosť pre dodávateľské reťazce pomocou technológie blockchain_
+- [Treum](https://consensys.io/blog/consensys-acquires-treum) _prináša transparentnosť, sledovateľnosť a obchodovateľnosť pre dodávateľské reťazce pomocou technológie blockchain_
 
 ## Komunita vývojárov pre podniky {#enterprise-developer-community}
 

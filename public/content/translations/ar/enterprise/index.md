@@ -73,7 +73,7 @@ lang: ar
 ### الأدوات {#tooling}
 
 - [Alethio](https://explorer.aleth.io/) _منصة لتحليل البيانات بواسطة إيثريوم_
-- [Treum](https://treum.io/) _جلب الشفافية وقابلية التتبع وقابلية الإتجار لسلالس الإمداد، باستخدام تقنية سلسلة الكتل_
+- [Treum](https://consensys.io/blog/consensys-acquires-treum) _جلب الشفافية وقابلية التتبع وقابلية الإتجار لسلالس الإمداد، باستخدام تقنية سلسلة الكتل_
 
 ## المجتمع المؤسسي للمطورين {#enterprise-developer-community}
 

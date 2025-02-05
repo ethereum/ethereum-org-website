@@ -141,7 +141,7 @@ Iată câteva dintre aplicațiile pentru întreprinderi care au fost implementat
 - [ShipChain](https://shipchain.io) _lanț paralel public al lui Ethereum și sistem de întreprinderi pentru vizibilitatea și încrederea lanțului de aprovizionare, în special pentru logistica multi-modală_
 - [Follow Our Fibre](https://www.followourfibre.com) _trasabilitatea lanțului de aprovizionare cu viscoză_
 - [EY OpsChain Network Procurement](https://blockchain.ey.com/products/contract-manager) _permite companiilor să se angajeze într-un flux de lucru de achiziții publice prin emiterea de cereri de ofertă, contracte, ordine de cumpărare și facturi în rețeaua partenerilor dvs. de afaceri de încredere_
-- [Treum](https://treum.io/) _aduce transparență, trasabilitate și capacitate de comercializare în lanțurile de aprovizionare utilizând tehnologia blockchain_
+- [Treum](https://consensys.io/blog/consensys-acquires-treum) _aduce transparență, trasabilitate și capacitate de comercializare în lanțurile de aprovizionare utilizând tehnologia blockchain_
 - [TradeTrust](https://www.tradetrust.io/) _verifies electronic Bills of Lading (eBLs) for international shipping_
 
 ### Acreditări și certificări {#credentials}

@@ -141,7 +141,7 @@ Nachfolgend werden einige der Anwendungen für Unternehmen aufgelistet, die bisl
 - [Minespider](https://www.minespider.com/) _Lieferketten-Tracking_
 - [Folge unseren Fasern](https://www.followourfibre.com) _Viskose-Lieferkettenverfolgbarkeit_
 - [EY OpsChain Netzwerkbeschaffung](https://blockchain.ey.com/products/contract-manager) _bietet einen Beschaffungsworkflow durch die Ausgabe von RFQs, Verträgen, Bestellungen und Rechnungen in Ihrem Netzwerk vertrauenswürdiger Geschäftspartner_
-- [Treum](https://treum.io/) _bringt Transparenz, Rückverfolgbarkeit und Handelbarkeit in Lieferketten mithilfe der Blockchain-Technologie_
+- [Treum](https://consensys.io/blog/consensys-acquires-treum) _bringt Transparenz, Rückverfolgbarkeit und Handelbarkeit in Lieferketten mithilfe der Blockchain-Technologie_
 - [TradeTrust](https://www.tradetrust.io/) _überprüft elektronische Frachtbriefe (eBLs) für den internationalen Versand_
 
 ### Referenzen und Zertifizierungen {#credentials}

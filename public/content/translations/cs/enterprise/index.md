@@ -74,7 +74,7 @@ Veřejné a soukromé Ethereum sítě mohou v závislosti na tom, kdo je použí
 ### Nástroje {#tooling}
 
 - [Alethio](https://explorer.aleth.io/) _Datově analytická platforma pro Ethereum_
-- [Treum](https://treum.io/) _pomocí technologie blockchainu přináší transparentnost, dohledatelnost a obchodovatelnost dodavatelským řetězcům_
+- [Treum](https://consensys.io/blog/consensys-acquires-treum) _pomocí technologie blockchainu přináší transparentnost, dohledatelnost a obchodovatelnost dodavatelským řetězcům_
 
 ## Komunita vývojářů funkcí pro firmy {#enterprise-developer-community}
 

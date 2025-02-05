@@ -73,7 +73,7 @@ Offentlige og private Ethereum-nettverk kan trenge spesifikke funksjoner som kre
 ### Verktøy {#tooling}
 
 - [Alethio](https://explorer.aleth.io/) _Ethereum Data Analyse Platform_
-- [Treum](https://treum.io/) _bringer gjennomsiktighet, sporbarhet og evne til å forsyne kjeder, ved bruk av blokkjedeteknologi_
+- [Treum](https://consensys.io/blog/consensys-acquires-treum) _bringer gjennomsiktighet, sporbarhet og evne til å forsyne kjeder, ved bruk av blokkjedeteknologi_
 
 ## Fellesskap for bedriftsutviklere {#enterprise-developer-community}
 

@@ -74,7 +74,7 @@ Viešiesiems ir privatiems Ethereum tinklams gali prireikti specifinių savybių
 ### Įrankinė {#tooling}
 
 - [Alethio](https://explorer.aleth.io/) _Ethereum duomenų analizės platforma_
-- [Treum](https://treum.io/) _naudojant blokų grandinės technologiją, tiekimo grandinėms suteikiamas skaidrumas, atsekamumas ir galimybė prekiauti _
+- [Treum](https://consensys.io/blog/consensys-acquires-treum) _naudojant blokų grandinės technologiją, tiekimo grandinėms suteikiamas skaidrumas, atsekamumas ir galimybė prekiauti _
 
 ## Verslo kūrėjų bendruomenė {#enterprise-developer-community}
 
