@@ -49,7 +49,7 @@ Biblioteki te eliminują znaczną złożoność interakcji bezpośrednio z węz�
 
 **Ethercluster -** **_Uruchom własną usługę API Ethereum wspierającą ETH i ETC._**
 
-- [ethercluster.com](https://www.ethercluster.com/)
+- [ethercluster.com](https://etccooperative.github.io/ethercluster-website/)
 
 **Chainstack -** **_Udostępnione i dedykowane węzły Ethereum jako usługa._**
 

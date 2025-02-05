@@ -54,7 +54,7 @@ Aceste biblioteci elimină o mare parte din complexitatea interacțiunii directe
 
 **Ethercluster -** **_Rulaţi-vă propriul serviciu API Ethereum, acceptând atât ETH, cât și ETC._**
 
-- [ethercluster.com](https://www.ethercluster.com/)
+- [ethercluster.com](https://etccooperative.github.io/ethercluster-website/)
 
 **Chainstack -** **_Noduri Ethereum partajate și dedicate ca serviciu._**
 

@@ -54,7 +54,7 @@ Pustaka ini menyederhanakan banyak kerumitan dalam interaksi langsung dengan nod
 
 **Ethercluster -** **_Jalankan layanan API Ethereum Anda sendiri yang mendukung baik ETH dan ETC._**
 
-- [ethercluster.com](https://www.ethercluster.com/)
+- [ethercluster.com](https://etccooperative.github.io/ethercluster-website/)
 
 **Chainstack -** **_Node Ethereum yang dibagikan dan didedikasikan sebagai layanan._**
 
