@@ -93,7 +93,7 @@ Godine 1977. američka savezna država Vajoming stvorila je LLC (limited liabili
 
 ### Poznat primer {#law-example}
 
-[DAOGrad](https://citydao.io)Kompanija CityDAO je iskoristila zakon o DAO savezne države Vajoming da kupi 40 ari zemljišta u blizini Nacionalnog parka Jeloustoun.
+[DAOGrad](https://citizen.citydao.io/)Kompanija CityDAO je iskoristila zakon o DAO savezne države Vajoming da kupi 40 ari zemljišta u blizini Nacionalnog parka Jeloustoun.
 
 ## Članstvo u DAO-u {#dao-membership}
 

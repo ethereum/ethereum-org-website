@@ -93,7 +93,7 @@ In 1977, Wyoming na hin invent the LLC wey dey protect entrepreneurs and e dey l
 
 ### Popula eksampol {#law-example}
 
-[CityDAO](https://citydao.io) – dem use Wyoming's DAO law take buy 40 acres of land near Yellowstone National Park.
+[CityDAO](https://citizen.citydao.io/) – dem use Wyoming's DAO law take buy 40 acres of land near Yellowstone National Park.
 
 ## DAO membership {#dao-membership}
 

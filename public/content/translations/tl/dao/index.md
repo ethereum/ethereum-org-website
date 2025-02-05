@@ -91,7 +91,7 @@ Noong 1977, nalikha sa Wyoming ang LLC, na nagpoprotekta sa mga negosyante at na
 
 ### Isang sikat na halimbawa {#law-example}
 
-[CityDAO](https://citydao.io) – Ginamit ng CityDAO ang batas sa DAO ng Wyoming para bumili ng 40 ektarya ng lupa malapit sa Yellowstone National Park.
+[CityDAO](https://citizen.citydao.io/) – Ginamit ng CityDAO ang batas sa DAO ng Wyoming para bumili ng 40 ektarya ng lupa malapit sa Yellowstone National Park.
 
 ## Pagiging miyembro ng DAO {#dao-membership}
 

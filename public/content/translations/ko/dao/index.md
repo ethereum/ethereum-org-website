@@ -93,7 +93,7 @@ DAO에는 수천 명의 의결권을 가진 회원이 있을 수 있지만, 자�
 
 ### 유명한 예시 {#law-example}
 
-[CityDAO](https://citydao.io) - CityDAO는 와이오밍의 DAO 법을 사용하여 옐로스톤 국립공원 근처의 40에이커의 땅을 구입했습니다.
+[CityDAO](https://citizen.citydao.io/) - CityDAO는 와이오밍의 DAO 법을 사용하여 옐로스톤 국립공원 근처의 40에이커의 땅을 구입했습니다.
 
 ## DAO 멤버십 {#dao-membership}
 

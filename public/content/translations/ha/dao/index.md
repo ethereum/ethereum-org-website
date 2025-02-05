@@ -91,7 +91,7 @@ A 1977, Wyoming ya ƙirƙira LLC, wanda ke ba da kariya ga 'yan kasuwa da iyakan
 
 ### Misali Shahararren {#law-example}
 
-[CityDAO](https://citydao.io) - CityDAO tayi amfani da dokar Wyoming's DAO wajen siyan eka 40 na fili kusa da wurin shakatawa na Yellowstone.
+[CityDAO](https://citizen.citydao.io/) - CityDAO tayi amfani da dokar Wyoming's DAO wajen siyan eka 40 na fili kusa da wurin shakatawa na Yellowstone.
 
 ## Membobin hulɗar DAO {#dao-membership}
 
