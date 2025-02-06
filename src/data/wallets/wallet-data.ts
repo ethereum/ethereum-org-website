@@ -256,7 +256,7 @@ export const walletsData: WalletData[] = [
     ],
   },
   {
-    last_updated: "2022-06-22",
+    last_updated: "2025-01-25",
     name: "Frame",
     image: FrameImage,
     twBackgroundColor: "bg-[#222021]",
@@ -264,7 +264,7 @@ export const walletsData: WalletData[] = [
     url: "https://frame.sh",
     active_development_team: true,
     languages_supported: ["en"],
-    twitter: "https://twitter.com/0xFrame",
+    twitter: "https://x.com/0xFrame",
     discord: "https://discord.gg/rr4Yr3JkPq",
     reddit: "",
     telegram: "",
@@ -298,7 +298,12 @@ export const walletsData: WalletData[] = [
     onboard_documentation:
       "https://framelabs.notion.site/Getting-Started-Guide-775a95edec3244ce80e118ead8ea6516",
     documentation: "",
-    supported_chains: ["Ethereum Mainnet"],
+    supported_chains: [
+      "Ethereum Mainnet",
+      "Arbitrum One",
+      "Base",
+      "OP Mainnet",
+    ],
   },
   {
     last_updated: "2025-02-01",
