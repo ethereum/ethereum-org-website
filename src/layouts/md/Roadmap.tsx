@@ -5,7 +5,6 @@ import type { MdPageContent, RoadmapFrontmatter } from "@/lib/interfaces"
 
 import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import { ContentHero, HubHero } from "@/components/Hero"
-import Pill from "@/components/Pill"
 import RoadmapActionCard from "@/components/Roadmap/RoadmapActionCard"
 import RoadmapImageContent from "@/components/Roadmap/RoadmapImageContent"
 
@@ -20,7 +19,6 @@ const CardGrid = (props: ChildOnlyProp) => (
 // Roadmap layout components
 export const roadmapComponents = {
   CardGrid,
-  Pill,
   RoadmapActionCard,
   RoadmapImageContent,
 }

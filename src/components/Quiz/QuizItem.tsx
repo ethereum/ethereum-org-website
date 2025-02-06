@@ -5,11 +5,11 @@ import type { QuizzesSection } from "@/lib/types"
 import { cn } from "@/lib/utils/cn"
 
 import { GreenTickIcon } from "../icons/quiz"
-import Tag from "../Tag"
 import Translation from "../Translation"
 import { Button } from "../ui/buttons/Button"
 import { Flex, Stack } from "../ui/flex"
 import { ListItem } from "../ui/list"
+import { Tag } from "../ui/tag"
 
 export type QuizzesListItemProps = Omit<QuizzesSection, "id"> & {
   isCompleted: boolean
@@ -46,15 +46,14 @@ const QuizItem = ({
           </Flex>
 
           {/* Labels */}
-          <Flex className="gap-3">
+          <Flex className="gap-3 font-normal">
             {/* number of questions - label */}
-            <Tag
-              label={t(`${numberOfQuestions} ${t("questions")}`)}
-              ms={{ lg: -2 }}
-            />
+            <Tag className="lg:-ms-2">
+              {t(`${numberOfQuestions} ${t("questions")}`)}
+            </Tag>
 
             {/* difficulty - label */}
-            <Tag label={level.toUpperCase()} />
+            <Tag>{level.toUpperCase()}</Tag>
           </Flex>
         </Stack>
 

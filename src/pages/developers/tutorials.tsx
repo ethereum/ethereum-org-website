@@ -4,7 +4,7 @@ import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { FaGithub } from "react-icons/fa"
-import { Badge, chakra, forwardRef } from "@chakra-ui/react"
+import { forwardRef } from "@chakra-ui/react"
 
 import { BasePageProps, Lang } from "@/lib/types"
 
@@ -19,6 +19,7 @@ import TutorialTags from "@/components/TutorialTags"
 import { Button, ButtonLink } from "@/components/ui/buttons/Button"
 import Modal from "@/components/ui/dialog-modal"
 import { Flex, FlexProps } from "@/components/ui/flex"
+import { Tag, TagButton } from "@/components/ui/tag"
 
 import { cn } from "@/lib/utils/cn"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
@@ -48,29 +49,15 @@ const FilterTag = forwardRef<{ isActive: boolean; name: string }, "button">(
   (props, ref) => {
     const { isActive, name, ...rest } = props
     return (
-      <chakra.button
+      <TagButton
         ref={ref}
-        bg="none"
-        bgImage="radial-gradient(46.28% 66.31% at 66.95% 58.35%,rgba(127, 127, 213, 0.2) 0%,rgba(134, 168, 231, 0.2) 50%,rgba(145, 234, 228, 0.2) 100%)"
-        border="1px"
-        borderColor={isActive ? "primary300" : "white800"}
-        borderRadius="base"
-        boxShadow={!isActive ? "table" : undefined}
-        color="text"
-        fontSize="sm"
-        lineHeight={1.2}
-        opacity={isActive ? 1 : 0.7}
-        p={2}
-        textTransform="uppercase"
-        _hover={{
-          color: "primary.base",
-          borderColor: "text200",
-          opacity: "1",
-        }}
+        variant={isActive ? "solid" : "outline"}
+        status={isActive ? "tag" : "normal"}
+        className="justify-center"
         {...rest}
       >
         {name}
-      </chakra.button>
+      </TagButton>
     )
   }
 )
@@ -290,17 +277,19 @@ const TutorialPage = ({
       <div className="my-8 w-full shadow-table-box md:w-2/3">
         <Flex className="m-8 flex-col justify-center border-b border-border px-0 pb-4 pt-4 md:pb-8">
           <Flex className="mb-4 max-w-full flex-wrap items-center gap-2">
-            {Object.entries(allTags).map(([tagName, tagCount], idx) => {
-              const name = `${tagName} (${tagCount})`
-              const isActive = selectedTags.includes(tagName)
-              return (
-                <FilterTag
-                  key={idx}
-                  onClick={() => handleTagSelect(tagName)}
-                  {...{ name, isActive }}
-                />
-              )
-            })}
+            <div className="flex w-full flex-wrap gap-2 lg:grid lg:grid-cols-3 lg:gap-4 xl:grid-cols-4 2xl:grid-cols-5">
+              {Object.entries(allTags).map(([tagName, tagCount], idx) => {
+                const name = `${tagName} (${tagCount})`
+                const isActive = selectedTags.includes(tagName)
+                return (
+                  <FilterTag
+                    key={idx}
+                    onClick={() => handleTagSelect(tagName)}
+                    {...{ name, isActive }}
+                  />
+                )
+              })}
+            </div>
             {selectedTags.length > 0 && (
               <Button
                 className="cursor-pointer p-0 text-primary underline"
@@ -346,9 +335,9 @@ const TutorialPage = ({
                 >
                   {tutorial.title}
                 </Text>
-                <Badge variant="secondary">
+                <Tag variant="outline">
                   <Translation id={getSkillTranslationId(tutorial.skill!)} />
-                </Badge>
+                </Tag>
               </Flex>
               <Text className="mt-6 uppercase text-body-medium">
                 <Emoji text=":writing_hand:" className="me-2 text-sm" />
