@@ -2,9 +2,10 @@ import React from "react"
 import { useTranslation } from "next-i18next"
 import { IconBase } from "react-icons"
 import { cssVar, Icon, SimpleGrid, Text, useToken } from "@chakra-ui/react"
-import { Center, VStack, Flex } from "@/components/ui/flex"
 
 import { ChildOnlyProp } from "@/lib/types"
+
+import { Center, Flex, VStack } from "@/components/ui/flex"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
