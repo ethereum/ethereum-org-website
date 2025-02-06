@@ -3,6 +3,8 @@ import { GrMenu } from "react-icons/gr"
 
 import { HStack } from "@/components/ui/flex"
 
+import { cn } from "@/lib/utils/cn"
+
 import { FAKE_DEMO_ADDRESS } from "../../constants"
 import { EthGlyphIcon } from "../../icons"
 import { NotificationPopover } from "../../NotificationPopover"
@@ -15,10 +17,14 @@ export const Web3App = ({
   displayUrl,
   appName,
   children,
+  className,
   ...rest
 }: Web3AppProps) => {
   return (
-    <div className="size-full bg-background-highlight" {...rest}>
+    <div
+      className={cn("size-full bg-background-highlight", className)}
+      {...rest}
+    >
       <div className="bg-[#e8e8e8] p-1 dark:bg-[#171717]">
         <p className="text-center text-xs">{displayUrl}</p>
       </div>

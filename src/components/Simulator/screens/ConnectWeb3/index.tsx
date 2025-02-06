@@ -128,7 +128,7 @@ export const ConnectWeb3 = ({ nav, ctaLabel }: PhoneScreenProps) => {
           style={{ height: "100%" }}
         >
           <Web3App
-            bg="background.base"
+            className="bg-background"
             appName="NFT Marketplace"
             displayUrl="app.example.com"
           >
