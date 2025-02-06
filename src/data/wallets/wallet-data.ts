@@ -256,7 +256,7 @@ export const walletsData: WalletData[] = [
     ],
   },
   {
-    last_updated: "2022-06-22",
+    last_updated: "2025-01-25",
     name: "Frame",
     image: FrameImage,
     twBackgroundColor: "bg-[#222021]",
@@ -264,7 +264,7 @@ export const walletsData: WalletData[] = [
     url: "https://frame.sh",
     active_development_team: true,
     languages_supported: ["en"],
-    twitter: "https://twitter.com/0xFrame",
+    twitter: "https://x.com/0xFrame",
     discord: "https://discord.gg/rr4Yr3JkPq",
     reddit: "",
     telegram: "",
@@ -298,10 +298,15 @@ export const walletsData: WalletData[] = [
     onboard_documentation:
       "https://framelabs.notion.site/Getting-Started-Guide-775a95edec3244ce80e118ead8ea6516",
     documentation: "",
-    supported_chains: ["Ethereum Mainnet"],
+    supported_chains: [
+      "Ethereum Mainnet",
+      "Arbitrum One",
+      "Base",
+      "OP Mainnet",
+    ],
   },
   {
-    last_updated: "2022-06-22",
+    last_updated: "2025-02-01",
     name: "MetaMask",
     image: MetaMaskImage,
     twBackgroundColor: "bg-[#FFFFFF]",
@@ -354,7 +359,7 @@ export const walletsData: WalletData[] = [
       "zh",
       "zh-tw",
     ],
-    twitter: "https://twitter.com/metamask",
+    twitter: "https://x.com/metamask",
     discord: "",
     reddit: "",
     telegram: "",
@@ -375,18 +380,18 @@ export const walletsData: WalletData[] = [
     rpc_importing: true,
     nft_support: true,
     connect_to_dapps: true,
-    staking: false,
+    staking: true,
     swaps: true,
     layer_2: true,
     gas_fee_customization: true,
     ens_support: true,
     erc_20_support: true,
     buy_crypto: true,
-    withdraw_crypto: false,
+    withdraw_crypto: true,
     multisig: false,
     social_recovery: false,
     onboard_documentation: "https://support.metamask.io",
-    documentation: "",
+    documentation: "https://docs.metamask.io/",
     supported_chains: [
       "Ethereum Mainnet",
       "Linea",
@@ -880,7 +885,7 @@ export const walletsData: WalletData[] = [
     ],
   },
   {
-    last_updated: "2022-06-24",
+    last_updated: "2025-01-25",
     name: "Unstoppable wallet",
     image: UnstoppableWalletImage,
     twBackgroundColor: "bg-[#ffbe43]",
@@ -922,7 +927,11 @@ export const walletsData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "",
     documentation: "https://unstoppable.money/faq",
-    supported_chains: ["Ethereum Mainnet"],
+    supported_chains: [
+      "Ethereum Mainnet",
+      "Arbitrum One",
+      "OP Mainnet",
+    ],
   },
 
   {
@@ -2094,7 +2103,7 @@ export const walletsData: WalletData[] = [
     ],
   },
   {
-    last_updated: "2023-10-30",
+    last_updated: "2025-01-25",
     name: "Aurox Wallet",
     image: AuroxImage,
     twBackgroundColor: "bg-[#1F47FF]",
@@ -2138,7 +2147,11 @@ export const walletsData: WalletData[] = [
       "https://docs.getaurox.com/product-docs/aurox-ecosystem/what-is-the-aurox-ecosystem",
     documentation:
       "https://docs.getaurox.com/product-docs/aurox-ecosystem/what-is-the-aurox-ecosystem",
-    supported_chains: ["Ethereum Mainnet"],
+    supported_chains: [
+      "Ethereum Mainnet",
+      "Arbitrum One",
+      "OP Mainnet",
+    ],
   },
   {
     last_updated: "2025-01-07",
@@ -2205,7 +2218,7 @@ export const walletsData: WalletData[] = [
     ],
   },
   {
-    last_updated: "2024-06-20",
+    last_updated: "2025-01-25",
     name: "Gem Wallet",
     image: GemWalletImage,
     twBackgroundColor: "bg-[#2D5BE6]",
@@ -2262,7 +2275,12 @@ export const walletsData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "https://docs.gemwallet.com/",
     documentation: "https://docs.gemwallet.com/",
-    supported_chains: ["Ethereum Mainnet"],
+    supported_chains: [
+      "Ethereum Mainnet",
+      "Arbitrum One",
+      "Base",
+      "OP Mainnet",
+    ],
   },
   {
     last_updated: "2024-08-24",

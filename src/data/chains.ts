@@ -517,6 +517,17 @@ const chains = [
     chain: "ETH",
   },
   {
+    name: "Tranched Mainnet",
+    infoURL: "https://tranched-mainnet.hub.caldera.xyz",
+    chainId: 743,
+    nativeCurrency: {
+      name: "Ether",
+      symbol: "ETH",
+      decimals: 18,
+    },
+    chain: "tranched-mainnet",
+  },
+  {
     name: "Rivalz",
     infoURL: "https://rivalz.hub.caldera.xyz",
     chainId: 753,
@@ -735,6 +746,17 @@ const chains = [
       decimals: 18,
     },
     chain: "TSF",
+  },
+  {
+    name: "Soneium",
+    infoURL: "https://soneium.org",
+    chainId: 1868,
+    nativeCurrency: {
+      name: "Ether",
+      symbol: "ETH",
+      decimals: 18,
+    },
+    chain: "ETH",
   },
   {
     name: "Lightlink Phoenix Mainnet",
@@ -1265,6 +1287,17 @@ const chains = [
     chain: "ETH",
   },
   {
+    name: "Donatuz",
+    infoURL: "https://www.donatuz.com",
+    chainId: 42026,
+    nativeCurrency: {
+      name: "Ether",
+      symbol: "ETH",
+      decimals: 18,
+    },
+    chain: "ETH",
+  },
+  {
     name: "Arbitrum One",
     infoURL: "https://arbitrum.io",
     chainId: 42161,
@@ -1626,6 +1659,17 @@ const chains = [
       decimals: 18,
     },
     chain: "HDX",
+  },
+  {
+    name: "CONET Mainnet",
+    infoURL: "https://conet.network",
+    chainId: 224400,
+    nativeCurrency: {
+      name: "CONET ETH",
+      symbol: "ETH",
+      decimals: 18,
+    },
+    chain: "CONET Mainnet",
   },
   {
     name: "Abyss Protocol",
