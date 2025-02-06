@@ -60,7 +60,7 @@ Die beiden öffentlichen Testnets, die die Client-Entwickler derzeit betreiben, 
 - [Faucet für Coinbase-Wallet | Sepolia](https://coinbase.com/faucets/ethereum-sepolia-faucet)
 - [Faucet für Alchemy Sepolia](https://sepoliafaucet.com/)
 - [Faucet für Infura Sepolia](https://www.infura.io/faucet)
-- [Faucet für Chainstack Sepolia](https://faucet.chainstack.com/sepolia-faucet)
+- [Faucet für Chainstack Sepolia](https://faucet.chainstack.com/sepolia-testnet-faucet)
 - [Ethereum-Ökosystem-Faucet](https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia)
 
 #### Goerli _(Langzeit-Support)_ {#goerli}

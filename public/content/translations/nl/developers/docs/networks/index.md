@@ -60,7 +60,7 @@ De twee openbare testnetten die clientontwikkelaars op dit moment beheren zijn S
 - [Coinbase Wallet Faucet | Sepolia](https://coinbase.com/faucets/ethereum-sepolia-faucet)
 - [Alchemy Sepolia faucet](https://sepoliafaucet.com/)
 - [Infura Sepolia faucet](https://www.infura.io/faucet)
-- [Chainstack Sepolia faucet](https://faucet.chainstack.com/sepolia-faucet)
+- [Chainstack Sepolia faucet](https://faucet.chainstack.com/sepolia-testnet-faucet)
 - [Ethereum Ecosystem faucet](https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia)
 
 #### Goerli _(ondersteuning op lange termijn)_ {#goerli}

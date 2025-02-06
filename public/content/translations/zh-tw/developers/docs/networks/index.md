@@ -60,7 +60,7 @@ lang: zh-tw
 - [Coinbase 錢包水龍頭 | Sepolia](https://coinbase.com/faucets/ethereum-sepolia-faucet)
 - [Alchemy Sepolia 水龍頭](https://sepoliafaucet.com/)
 - [Infura Sepolia 水龍頭](https://www.infura.io/faucet)
-- [Chainstack Sepolia 水龍頭](https://faucet.chainstack.com/sepolia-faucet)
+- [Chainstack Sepolia 水龍頭](https://faucet.chainstack.com/sepolia-testnet-faucet)
 - [以太坊生態系統水龍頭](https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia)
 
 #### Goerli_（長期支援）_ {#goerli}

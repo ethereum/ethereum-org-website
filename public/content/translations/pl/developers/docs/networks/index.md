@@ -60,7 +60,7 @@ Dwie publiczne sieci testowe, które obecnie wykorzystują programiści klientó
 - [Kran Coinbase Wallet | Sepolia](https://coinbase.com/faucets/ethereum-sepolia-faucet)
 - [Kran Alchemy Sepolia](https://sepoliafaucet.com/)
 - [Kran Infura Sepolia](https://www.infura.io/faucet)
-- [Kran Chainstack Sepolia](https://faucet.chainstack.com/sepolia-faucet)
+- [Kran Chainstack Sepolia](https://faucet.chainstack.com/sepolia-testnet-faucet)
 - [Kran Ethereum Ecosystem](https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia)
 
 #### Goerli _(wsparcie długoterminowe)_ {#goerli}
