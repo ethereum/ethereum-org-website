@@ -219,7 +219,7 @@ const StyledH3 = (props: ChildOnlyProp) => (
 )
 
 const StyledInfoBanner = (props: ComponentPropsWithRef<typeof InfoBanner>) => (
-  <InfoBanner w={{ lg: "50%" }} {...props} />
+  <InfoBanner className="lg:w-1/2" {...props} />
 )
 
 const Column = (props: ChildOnlyProp) => (

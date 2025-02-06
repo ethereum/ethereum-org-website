@@ -1,6 +1,6 @@
 ---
 title: Zero-knowledge proofs
-description: An non-technical introduction to zero-knowledge proofs for beginners.
+description: A non-technical introduction to zero-knowledge proofs for beginners.
 lang: en
 ---
 
