@@ -90,7 +90,7 @@ Goerli is a testnet for testing validating and staking. The Goerli network is op
 - [Alchemy Goerli Faucet](https://goerlifaucet.com/)
 - [All That Node Goerli Faucet](https://www.allthatnode.com/faucet/ethereum.dsrv)
 - [Coinbase Wallet Faucet | Goerli](https://coinbase.com/faucets/ethereum-goerli-faucet)
-- [Chainstack Goerli faucet](https://faucet.chainstack.com/goerli-faucet)
+- [Chainstack faucet](https://faucet.chainstack.com/goerli-faucet)
 
 To launch a Validator on Holesky testnet, use ethstaker's ["cheap Holesky validator" launchpad](https://holesky.launchpad.ethstaker.cc/en/).
 

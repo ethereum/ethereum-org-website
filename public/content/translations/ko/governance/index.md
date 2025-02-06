@@ -118,7 +118,7 @@ EIP 챔피언은 모든 관련 이해 당사자로부터 의견을 수집해야 
 
 포크는 네트워크에 주요 기술 업그레이드나 변경 사항이 필요할 때 프로토콜의 "규칙"을 바꿉니다. [이더리움 클라이언트는](/developers/docs/nodes-and-clients/) 새로운 포크 규칙을 구현하기 위해 소프트웨어를 업데이트해야 합니다.
 
-DAO 포크는 안전하지 않은 [DAO 계약](/glossary/#dao)에서 해킹에 의해 360만 ETH가 소실된 [2016년 DAO 공격](https://www.coindesk.com/understanding-dao-hack-journalists)에 대한 대응책이었습니다. 포크는 부실 계약에서 새로운 계약으로 자금을 이동시켜 해킹으로 자금을 잃은 사람 누구나 자금을 회수할 수 있게 했습니다.
+DAO 포크는 안전하지 않은 [DAO 계약](/glossary/#dao)에서 해킹에 의해 360만 ETH가 소실된 [2016년 DAO 공격](https://www.coindesk.com/learn/understanding-the-dao-attack)에 대한 대응책이었습니다. 포크는 부실 계약에서 새로운 계약으로 자금을 이동시켜 해킹으로 자금을 잃은 사람 누구나 자금을 회수할 수 있게 했습니다.
 
 이러한 조치는 이더리움 커뮤니티가 투표한 결과입니다. ETH 보유자는 누구든지 [투표 플랫폼](http://v1.carbonvote.com/)에서 트랜잭션을 통해 투표할 수 있었습니다. 포크하기 위한 결정은 85% 이상의 표를 얻었습니다.
 

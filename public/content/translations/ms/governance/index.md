@@ -118,7 +118,7 @@ Secara amnya, perselisihan dikendalikan dengan perbincangan lama dalam forum awa
 
 Cabang ialah apabila peningkatan teknikal utama atau perubahan perlu dibuat kepada rangkaian dan menukar "peraturan" protokol. [ Pelanggan Ethereum](/developers/docs/nodes-and-clients/) mesti mengemas kini perisian mereka untuk melaksanakan peraturan cabang baru.
 
-Cabang DAO adalah sebagai tindak balas kepada [serangan DAO tahun 2016](https://www.coindesk.com/understanding-dao-hack-journalists) di mana kontrak [DAO](/glossary/#dao) yang tidak selamat telah disedut lebih daripada 3.6 juta ETH dalam satu serangan penggodaman. Cabang itu memindahkan dana daripada kontrak yang rosak kepada kontrak baru yang membolehkan sesiapa yang kehilangan dana dalam serangan penggodaman untuk mendapatkannya semula.
+Cabang DAO adalah sebagai tindak balas kepada [serangan DAO tahun 2016](https://www.coindesk.com/learn/understanding-the-dao-attack) di mana kontrak [DAO](/glossary/#dao) yang tidak selamat telah disedut lebih daripada 3.6 juta ETH dalam satu serangan penggodaman. Cabang itu memindahkan dana daripada kontrak yang rosak kepada kontrak baru yang membolehkan sesiapa yang kehilangan dana dalam serangan penggodaman untuk mendapatkannya semula.
 
 Tindakan ini telah diundi oleh masyarakat Ethereum. Mana-mana pemegang ETH boleh mengundi melalui transaksi pada [ platform mengundi](https://web.archive.org/web/20170620030820/http://v1.carbonvote.com/). Keputusan untuk mencabang mencapai lebih 85% undi.
 
