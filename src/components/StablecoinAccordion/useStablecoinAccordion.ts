@@ -6,7 +6,7 @@ import aaveImg from "@/public/images/dapps/aave.png"
 // -- borrow
 import compoundImg from "@/public/images/dapps/compound.png"
 // -- earn
-import gitcoinImg from "@/public/images/dapps/gitcoin.png"
+import buidlboxImg from "@/public/images/dapps/buidlbox.png"
 import loopringImg from "@/public/images/dapps/loopring.png"
 import matchaImg from "@/public/images/dapps/matcha.png"
 import summerfiImg from "@/public/images/dapps/summerfi.png"
@@ -76,10 +76,10 @@ export const useStablecoinAccordion = () => {
   const earn: Array<CardProps> = [
     {
       title: t("page-stablecoins-accordion-earn-project-bounties"),
-      image: gitcoinImg,
+      image: buidlboxImg,
       link: "https://app.buidlbox.io/",
       description: t("page-stablecoins-accordion-earn-project-1-description"),
-      alt: t("gitcoin-logo"),
+      alt: t("buidlbox-logo"),
     },
     {
       title: t("page-stablecoins-accordion-earn-project-bug-bounties"),
