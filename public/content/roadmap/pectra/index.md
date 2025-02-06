@@ -2,8 +2,6 @@
 title: Pectra 
 description: Learn about Pectra - the next Ethereum protocol upgrade
 lang: en
-template: upgrade
-alt: 
 ---
 
 # Prague-Electra (Pectra) {#pectra}
