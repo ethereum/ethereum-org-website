@@ -49,7 +49,7 @@ Let’s say you have ETH on Ethereum Mainnet but want cheaper transaction fees t
 
 ### Dapps on other blockchains {#dapps-other-chains}
 
-If you’ve been using Aave on Ethereum Mainnet to lend USDT but the interest rate for lending USDT using Aave on Polygon is higher.
+If you’ve been using Aave on Ethereum Mainnet to supply USDT but the interest rate you may receive for supplying USDT using Aave on Polygon is higher.
 
 ### Explore blockchain ecosystems {#explore-ecosystems}
 
