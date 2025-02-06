@@ -116,7 +116,7 @@ Ecco alcune delle applicazioni aziendali sviluppate sulla Rete Principale pubbli
 ### Notarizzazione dei dati {#notarization-of-data}
 
 - [ANSA](https://www.ansa.it/english/news/science_tecnology/2020/04/06/ansa-using-blockchain-to-help-readers_af820b4f-0947-439b-843e-52e114f53318.html): _agenzia giornalistica italiana che combatte le notizie false e consente ai lettori di verificare l'origine delle notizie registrandole sulla Rete Principale_
-- [Breitling](https://www.coindesk.com/breitling-arianee-all-new-watches-ethereum): _registra l'origine e lo storico di riparazioni di orologi su Ethereum_
+- [Breitling](https://www.coindesk.com/business/2020/10/15/breitling-goes-live-with-ethereum-based-system-to-put-all-new-watches-on-the-blockchain): _registra l'origine e lo storico di riparazioni di orologi su Ethereum_
 - [BRØK](https://www.xn--brk-1na.no/): _una piattaforma di tabelle di capitalizzazione per le aziende non quotate al pubblico, fornita dal governo norvegese_
 - [Certifaction](https://certifaction.com/): _firme elettroniche legalmente valide con privacy-by-design_
 - [EthSign](https://ethsign.xyz/): _registra i documenti elettronici firmati sulla blockchain di Ethereum_

@@ -127,7 +127,7 @@ Oto niektóre aplikacje dla przedsiębiorstw, które zostały wdrożone w public
 - [BBVA](https://www.ledgerinsights.com/bbva-blockchain-loan-banking-tech-award/) _szczegóły sfinalizowanych pożyczek są zhaszowane i zarejestrowane w sieci głównej_
 - [ANSA](https://cointelegraph.com/news/italys-top-news-agency-uses-blockchain-to-fight-fake-coronavirus-news) _największa włoska agencja informacyjna walcząca z fałszywymi wiadomościami i umożliwiająca odbiorcom weryfikację pochodzenia wiadomości poprzez rejestrowanie ich w sieci głównej_
 - [Verizon](https://decrypt.co/46745/verizon-news-press-releases-ethereum-full-transparency) _rejestruje informacje prasowe dotyczące Ethereum, aby zapewnić odpowiedzialność i zaufanie korporacyjne_
-- [Breitling](https://www.coindesk.com/breitling-arianee-all-new-watches-ethereum) _rejestruje pochodzenie i historie napraw zegarków w Ethereum_
+- [Breitling](https://www.coindesk.com/business/2020/10/15/breitling-goes-live-with-ethereum-based-system-to-put-all-new-watches-on-the-blockchain) _rejestruje pochodzenie i historie napraw zegarków w Ethereum_
 
 ### Łańcuch dostaw {#supply-chain}
 

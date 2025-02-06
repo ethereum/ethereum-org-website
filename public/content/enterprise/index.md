@@ -7,7 +7,7 @@ lang: en
 # Ethereum for enterprise {#ethereum-for-enterprise}
 
 Ethereum can help many kinds of businesses, including large companies:
- 
+
 - Increase trust and reduce the cost of coordination between business parties
 - Improve business network accountability and operational efficiency
 - Build new business models and value creation opportunities
@@ -75,20 +75,20 @@ Here are some of the enterprise applications that have been built on top of the 
 ### Payments {#payments}
 
 - [Brave Browser](https://basicattentiontoken.org/) - _pays users for their attention to advertisements and users can pay publishers to support them, via the Basic Attention Token_
-- [City of Lugano, Switzerland](https://bitcoinsuisse.com/news/city-of-lugano-accepts-crypto-payments) - _payment of taxes and other municipal services_ 
+- [City of Lugano, Switzerland](https://bitcoinsuisse.com/news/city-of-lugano-accepts-crypto-payments) - _payment of taxes and other municipal services_
 - [EthereumAds](https://ethereumads.com/) - _lets web site operators sell advertising space and get paid via Ethereum_
 - [hCaptcha](https://www.hcaptcha.com/) - _Bot prevention CAPTCHA system which pays web site operators for the work done by users to label data for machine learning. Now deployed by Cloudflare_
 - [Opera MiniPay](https://www.opera.com/products/minipay) - _makes mobile payments more accessible and secure for people in Africa with a non-custodial wallet and leverages phone numbers for easy transactions_
 - [Roxpay](https://www.roxpay.ch/) - _automates pay-per-use asset invoicing and payments_
-- [SAP Digital Currency Hub](https://community.sap.com/t5/technology-blogs-by-sap/cross-border-payments-made-easy-with-digital-money-experience-the-future/ba-p/13560384) - _cross border payments with stablecoins_ 
-- [Toku](https://www.toku.com/) - _payroll, token grant administration, tax compliance, local employment, benefits & distributed HR solutions_ 
+- [SAP Digital Currency Hub](https://community.sap.com/t5/technology-blogs-by-sap/cross-border-payments-made-easy-with-digital-money-experience-the-future/ba-p/13560384) - _cross border payments with stablecoins_
+- [Toku](https://www.toku.com/) - _payroll, token grant administration, tax compliance, local employment, benefits & distributed HR solutions_
 - [Xerof](https://www.xerof.com/) - _facilitates fast and inexpensive international (cross-border) B2B payments_
 
 ### Finance {#finance}
 
 - [ABN AMRO](https://tokeny.com/tokeny-fuels-abn-amro-bank-in-tokenizing-green-bonds-on-polygon/) - _with Tokeny, tokenized green bonds_
 - [Crowdz](https://crowdz.io/) - _invoice/receivables financing and factoring platform_
-- [Mata Capital](https://consensys.io/blockchain-use-cases/finance/mata-capital) - _real estate investment tokenization_ 
+- [Mata Capital](https://consensys.io/blockchain-use-cases/finance/mata-capital) - _real estate investment tokenization_
 - [Obligate](https://www.obligate.com/) - _regulated and KYC'd on-chain bonds and commercial paper_
 - [Siemens](https://press.siemens.com/global/en/pressrelease/siemens-issues-first-digital-bond-blockchain ) - _bond issuance_
 - [Sila](https://silamoney.com/) - _banking and ACH payments infrastructure-as-a-service, using a stablecoin_
@@ -98,7 +98,7 @@ Here are some of the enterprise applications that have been built on top of the 
 ### Asset tokenization {#tokenization}
 
 - [AgroToken](https://agrotoken.io/en/) - _tokenizing and trading agricultural commodities_
-- [Bitbond](https://www.bitbond.com/) - _improves the issuance, settlement and custody of financial assets with tokenization_ 
+- [Bitbond](https://www.bitbond.com/) - _improves the issuance, settlement and custody of financial assets with tokenization_
 - [Blocksquare](https://blocksquare.io/) - _tokenization infrastructure for real estate_
 - [Centrifuge](https://centrifuge.io/) - _tokenized receivables financing, debt, and assets_
 - [Clearmatics](https://www.clearmatics.com) - _builds decentralised network platforms for the p2p exchange of tokenised value_
@@ -111,12 +111,12 @@ Here are some of the enterprise applications that have been built on top of the 
 - [Rubey](https://www.rubey.be/) - _a platform that tokenizes high-end art to make it accessible to retail investors_
 - [Swarm](https://swarm.com/) - _a platform focused on the digitization and trading of real-world assets in a regulatory compliant manner_
 - [Thallo](https://www.thallo.io/) - _a platform to integrate digital carbon credits into business transactions_
-- [Tokenchampions](https://tokenchampions.com/) - _tokenizes European football players' image rights_ 
+- [Tokenchampions](https://tokenchampions.com/) - _tokenizes European football players' image rights_
 
 ### Notarization of data {#notarization-of-data}
 
 - [ANSA](https://www.ansa.it/english/news/science_tecnology/2020/04/06/ansa-using-blockchain-to-help-readers_af820b4f-0947-439b-843e-52e114f53318.html) - _Italian news agency fights fake news and enables readers to verify the origin of news stories by recording them on Mainnet_
-- [Breitling](https://www.coindesk.com/breitling-arianee-all-new-watches-ethereum) - _records provenance and repair history of watches on Ethereum_
+- [Breitling](https://www.coindesk.com/business/2020/10/15/breitling-goes-live-with-ethereum-based-system-to-put-all-new-watches-on-the-blockchain) - _records provenance and repair history of watches on Ethereum_
 - [BRØK](https://www.xn--brk-1na.no/) - _a cap tables platform for unlisted companies on the public, provided by The Norwegian Government_
 - [Certifaction](https://certifaction.com/) - _legally valid eSignatures with by privacy-by-design_
 - [EthSign](https://ethsign.xyz/) - _records signed electronic documents on the Ethereum blockchain_
