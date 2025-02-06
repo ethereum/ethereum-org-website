@@ -60,3 +60,12 @@ export const SliderConnected: Story = {
     ctaLabel: "Go to account",
   },
 }
+export const Account: Story = {
+  args: {
+    nav: {
+      ...meta.args.nav,
+      step: 4,
+    },
+    ctaLabel: "Finished",
+  },
+}
