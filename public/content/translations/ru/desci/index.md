@@ -118,7 +118,7 @@ Web3 обладает потенциалом, который позволит р
 - [Руководство по децентрализованной биотехнологии от Джоселин Перл для ресурса Future венчурного фонда a16z](https://future.a16z.com/a-guide-to-decentralized-biotech/)
 - [Аргументы в пользу DeSci](https://gitcoin.co/blog/desci-the-case-for-decentralised-science/)
 - [Руководство по DeSci](https://future.com/what-is-decentralized-science-aka-desci/)
-- [Децентрализованные научные ресурсы](https://www.vincentweisser.com/decentralized-science)
+- [Децентрализованные научные ресурсы](https://www.vincentweisser.com/desci)
 - [IP-NFT от Molecule’s Biopharma — техническое описание](https://www.molecule.xyz/blog/molecules-biopharma-ip-nfts-a-technical-description)
 - [Создание систем, не требующих доверия, в науке. Автор: Джон Старр](https://medium.com/@jringo/building-systems-of-trustless-science-1cd2d072f673)
 - [Пол Калхас — DeSci: будущее децентрализованной науки (подкаст)](https://anchor.fm/andrew-steinwold/episodes/Paul-Kohlhaas---DeSci-The-Future-of-Decentralized-Science---Zima-Red-ep-117-e1h683a)

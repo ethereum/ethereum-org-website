@@ -118,7 +118,7 @@ Uvítame návrhy nových projektov na zaradenie do zoznamu – pre začiatok si 
 - [Sprievodca decentralizovanou biotechnológiou od Jocelynn Pearl pre budúcnosť a16z](https://future.a16z.com/a-guide-to-decentralized-biotech/)
 - [Prípad pre DeSci](https://gitcoin.co/blog/desci-the-case-for-decentralised-science/)
 - [Sprievodca DeSci](https://future.com/what-is-decentralized-science-aka-desci/)
-- [Decentralizované vedecké zdroje](https://www.vincentweisser.com/decentralized-science)
+- [Decentralizované vedecké zdroje](https://www.vincentweisser.com/desci)
 - [Molecule's Biopharma IP-NFTs – technický popis](https://www.molecule.xyz/blog/molecules-biopharma-ip-nfts-a-technical-description)
 - [Budovanie dôveryhodných systémov vedy od Jona Starra](https://medium.com/@jringo/building-systems-of-trustless-science-1cd2d072f673)
 - [Paul Kohlhaas – DeSci: budúcnosť decentralizovanej vedy (podcast)](https://anchor.fm/andrew-steinwold/episodes/Paul-Kohlhaas---DeSci-The-Future-of-Decentralized-Science---Zima-Red-ep-117-e1h683a)

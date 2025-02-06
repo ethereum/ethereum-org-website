@@ -118,7 +118,7 @@ Web3 डेटा समाधान उपरोक्त परिदृश्
 - [विकेन्द्रीकृत बायोटेक के लिए एक गाइड, a16z भविष्य के लिए जॉक्लिन पर्ल द्वारा](https://future.a16z.com/a-guide-to-decentralized-biotech/)
 - [DeSci केस](https://gitcoin.co/blog/desci-the-case-for-decentralised-science/)
 - [DeSci के लिए गाइड](https://future.com/what-is-decentralized-science-aka-desci/)
-- [विकेन्द्रीकृत विज्ञान संसाधन](https://www.vincentweisser.com/decentralized-science)
+- [विकेन्द्रीकृत विज्ञान संसाधन](https://www.vincentweisser.com/desci)
 - [Molecule Biopharma IP-NFT - एक तकनीकी विवरण](https://www.molecule.xyz/blog/molecules-biopharma-ip-nfts-a-technical-description)
 - [विज्ञान की विश्वसनीय प्रणालियों का निर्माण, जॉन स्टार द्वारा](https://medium.com/@jringo/building-systems-of-trustless-science-1cd2d072f673)
 - [पॉल कोल्हास - DeSci: विकेंद्रीकृत विज्ञान का भविष्य (पॉडकास्ट)](https://anchor.fm/andrew-steinwold/episodes/Paul-Kohlhaas---DeSci-The-Future-of-Decentralized-Science---Zima-Red-ep-117-e1h683a)

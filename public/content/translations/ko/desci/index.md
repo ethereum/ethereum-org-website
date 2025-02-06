@@ -120,7 +120,7 @@ NFT가 향후 거래에 대한 수익을 원래 작성자에게 다시 전달할
 - [A16z 미래를 위한 Jocelynn Pearl의 분산형 생명공학 가이드](https://future.a16z.com/a-guide-to-decentralized-biotech/)
 - [DeSci의 사례](https://gitcoin.co/blog/desci-the-case-for-decentralised-science/)
 - [DeSci 가이드](https://future.com/what-is-decentralized-science-aka-desci/)
-- [탈중앙화 과학 참고 자료](https://www.vincentweisser.com/decentralized-science)
+- [탈중앙화 과학 참고 자료](https://www.vincentweisser.com/desci)
 - [분자의 바이오제약회사 IP-NFT - 기술 설명](https://molecule.to/blog/molecules-biopharma-ip-nfts-a-technical-description)
 - [존 스타의 신뢰할 수 없는 과학 시스템 구축](https://medium.com/@jringo/building-systems-of-trustless-science-1cd2d072f673)
 - [생명공학 DAO의 출현](https://molecule.to/blog/the-emergence-of-biotech-daos)

@@ -118,7 +118,7 @@ Kami mengalu-alukan cadangan untuk projek baharu untuk disenaraikan - sila lihat
 - [Panduan kepada bioteknologi teagih oleh Jocelynn Pearl untuk masa depan a16z](https://future.a16z.com/a-guide-to-decentralized-biotech/)
 - [Kes untuk DeSci](https://gitcoin.co/blog/desci-the-case-for-decentralised-science/)
 - [Panduan untuk DeSci](https://future.com/what-is-decentralized-science-aka-desci/)
-- [Sumber sains teragih](https://www.vincentweisser.com/decentralized-science)
+- [Sumber sains teragih](https://www.vincentweisser.com/desci)
 - [IP-NFT Biopharma Molecule - Penerangan Teknikal](https://www.molecule.xyz/blog/molecules-biopharma-ip-nfts-a-technical-description)
 - [Membina Sistem Sains Tanpa Amanah oleh Jon Starr](https://medium.com/@jringo/building-systems-of-trustless-science-1cd2d072f673)
 - [Paul Kohlhaas - DeSci: Masa Depan Sains Teragih (podcast)](https://anchor.fm/andrew-steinwold/episodes/Paul-Kohlhaas---DeSci-The-Future-of-Decentralized-Science---Zima-Red-ep-117-e1h683a)

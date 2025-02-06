@@ -118,7 +118,7 @@ Web3 این پتانسیل را دارد که با آزمایش مدل‌های 
 - [راهنمای بیوتکنولوژی غیرمتمرکز توسط Jocelynn Pearl برای آینده a16z](https://future.a16z.com/a-guide-to-decentralized-biotech/)
 - [مورد برای DeSci](https://gitcoin.co/blog/desci-the-case-for-decentralised-science/)
 - [راهنمای DeSci](https://future.com/what-is-decentralized-science-aka-desci/)
-- [منابع علمی غیرمتمرکز](https://www.vincentweisser.com/decentralized-science)
+- [منابع علمی غیرمتمرکز](https://www.vincentweisser.com/desci)
 - [Molecule's Biopharma IP-NFTs - توضیحات فنی](https://www.molecule.xyz/blog/molecules-biopharma-ip-nfts-a-technical-description)
 - [ساختن سیستم های بی اعتماد علم توسط جان استار](https://medium.com/@jringo/building-systems-of-trustless-science-1cd2d072f673)
 - [Paul Kohlhaas - DeSci: The Future of Science Decentralized (پادکست)](https://anchor.fm/andrew-steinwold/episodes/Paul-Kohlhaas---DeSci-The-Future-of-Decentralized-Science---Zima-Red-ep-117-e1h683a)

@@ -120,7 +120,7 @@ Siyahıya salınacaq yeni layihələr üçün təklifləri alqışlayırıq - ba
 - [A16z gələcəyi üçün Jocelynn Pearl tərəfindən mərkəzləşdirilməmiş biotexnologiyaya dair bələdçi](https://future.a16z.com/a-guide-to-decentralized-biotech/)
 - [DeSci üçün keys](https://gitcoin.co/blog/desci-the-case-for-decentralised-science/)
 - [DeSci üçün bələdçi](https://future.com/what-is-decentralized-science-aka-desci/)
-- [Mərkəzləşdirilməmiş elm resursları](https://www.vincentweisser.com/decentralized-science)
+- [Mərkəzləşdirilməmiş elm resursları](https://www.vincentweisser.com/desci)
 - [Molekulun Biopharma IP-NFTs - Texniki Təsvir](https://molecule.to/blog/molecules-biopharma-ip-nfts-a-technical-description)
 - [Jon Starr tərəfindən hazırlanmış Etibar Əsasında Qurulmayan Elmi Sistemlər](https://medium.com/@jringo/building-systems-of-trustless-science-1cd2d072f673)
 - [Biotech DAO-ların yaranması](https://molecule.to/blog/the-emergence-of-biotech-daos)

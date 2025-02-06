@@ -118,7 +118,7 @@ Kami menyambut saran untuk proyek-proyek baru yang ingin ditampilkan - silakan l
 - [Panduan Bioteknologi Terdesentralisasi oleh Jocelynn Pearl untuk a16z future](https://future.a16z.com/a-guide-to-decentralized-biotech/)
 - [Argumen untuk DeSci](https://gitcoin.co/blog/desci-the-case-for-decentralised-science/)
 - [Panduan untuk DeSci](https://future.com/what-is-decentralized-science-aka-desci/)
-- [Sumber daya ilmu pengetahuan terdesentralisasi](https://www.vincentweisser.com/decentralized-science)
+- [Sumber daya ilmu pengetahuan terdesentralisasi](https://www.vincentweisser.com/desci)
 - [IP-NFT Biopharma dari Molecule - Deskripsi Teknis](https://www.molecule.xyz/blog/molecules-biopharma-ip-nfts-a-technical-description)
 - [Membangun Sistem Ilmu Pengetahuan yang Tidak Memerlukan Kepercayaan oleh Jon Starr](https://medium.com/@jringo/building-systems-of-trustless-science-1cd2d072f673)
 - [Paul Kohlhaas - DeSci: Masa Depan Ilmu Pengetahuan Terdesentralisasi (podcast)](https://anchor.fm/andrew-steinwold/episodes/Paul-Kohlhaas---DeSci-The-Future-of-Decentralized-Science---Zima-Red-ep-117-e1h683a)

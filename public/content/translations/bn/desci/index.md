@@ -120,7 +120,7 @@ Web3 প্যাটার্ন ব্যবহার করে বৈজ্ঞ
 - [একটি a16z ভবিষ্যতের জন্য Jocelynn Pearl এর বিকেন্দ্রীভূত বায়োটেকের একটি নির্দেশিকা](https://future.a16z.com/a-guide-to-decentralized-biotech/)
 - [DeSci এর জন্য ক্ষেত্র](https://gitcoin.co/blog/desci-the-case-for-decentralised-science/)
 - [DeSci-এর নির্দেশিকা](https://future.com/what-is-decentralized-science-aka-desci/)
-- [বিকেন্দ্রীকৃত বিজ্ঞান রিসোর্সসমূহ](https://www.vincentweisser.com/decentralized-science)
+- [বিকেন্দ্রীকৃত বিজ্ঞান রিসোর্সসমূহ](https://www.vincentweisser.com/desci)
 - [মলিকিউলের বায়োফার্মা IP-NFT - একটি প্রযুক্তিগত বর্ণনা](https://molecule.to/blog/molecules-biopharma-ip-nfts-a-technical-description)
 - [জন স্টারের তৈরি করা বিজ্ঞানের বিশ্বাসহীন সিস্টেম](https://medium.com/@jringo/building-systems-of-trustless-science-1cd2d072f673)
 - [বায়োটেক DAO-এর উত্থান](https://molecule.to/blog/the-emergence-of-biotech-daos)

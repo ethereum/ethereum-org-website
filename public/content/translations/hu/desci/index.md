@@ -118,7 +118,7 @@ Fedezze fel a projekteket és csatlakozzon a DeSci közösségéhez.
 - [Útmutató a decentralizált biotechnológiához – Jocelynn Pearl (a16z future)](https://future.a16z.com/a-guide-to-decentralized-biotech/)
 - [A DeSci ügye](https://gitcoin.co/blog/desci-the-case-for-decentralised-science/)
 - [Útmutató a DeSci-hez](https://future.com/what-is-decentralized-science-aka-desci/)
-- [A decentralizált tudomány forrásai](https://www.vincentweisser.com/decentralized-science)
+- [A decentralizált tudomány forrásai](https://www.vincentweisser.com/desci)
 - [Molecule Biopharma IP-NFT-k – technikai leírás](https://www.molecule.xyz/blog/molecules-biopharma-ip-nfts-a-technical-description)
 - [Bizalom nélküli rendszer építése a tudomány számára – Jon Starr](https://medium.com/@jringo/building-systems-of-trustless-science-1cd2d072f673)
 - [Paul Kohlhaas – DeSci: a decentralizált tudomány jövője (podcast)](https://anchor.fm/andrew-steinwold/episodes/Paul-Kohlhaas---DeSci-The-Future-of-Decentralized-Science---Zima-Red-ep-117-e1h683a)

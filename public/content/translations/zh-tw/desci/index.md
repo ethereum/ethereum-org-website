@@ -118,7 +118,7 @@ Web3 廣泛試驗過去中心化自治組織和 Web3 開發的不同激勵模型
 - [Jocelynn Pearl 為 a16z future 編寫的去中心化生物技術指南](https://future.a16z.com/a-guide-to-decentralized-biotech/)
 - [去中心化科研的重要性](https://gitcoin.co/blog/desci-the-case-for-decentralised-science/)
 - [去中心化科研指南](https://future.com/what-is-decentralized-science-aka-desci/)
-- [去中心化科研資源](https://www.vincentweisser.com/decentralized-science)
+- [去中心化科研資源](https://www.vincentweisser.com/desci)
 - [Molecule 的生物製藥 IP-NFT - 技術性說明](https://www.molecule.xyz/blog/molecules-biopharma-ip-nfts-a-technical-description)
 - [建立無需信任機制的科學系統 作者：Jon Starr](https://medium.com/@jringo/building-systems-of-trustless-science-1cd2d072f673)
 - [Paul Kohlhaas - DeSci：去中心化科研的未來（播客）](https://anchor.fm/andrew-steinwold/episodes/Paul-Kohlhaas---DeSci-The-Future-of-Decentralized-Science---Zima-Red-ep-117-e1h683a)

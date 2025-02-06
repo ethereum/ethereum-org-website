@@ -118,7 +118,7 @@ summaryPoint3: Δημιουργία πάνω στο ανοιχτό επιστη�
 - [Ένας οδηγός για την αποκεντρωμένη βιοτεχνολογία από την Jocelynn Pearl για το μέλλον του a16z](https://future.a16z.com/a-guide-to-decentralized-biotech/)
 - [Η περίπτωση για την DeSci](https://gitcoin.co/blog/desci-the-case-for-decentralised-science/)
 - [Οδηγός για DeSci](https://future.com/what-is-decentralized-science-aka-desci/)
-- [Πηγές αποκεντρωμένης επιστήμης](https://www.vincentweisser.com/decentralized-science)
+- [Πηγές αποκεντρωμένης επιστήμης](https://www.vincentweisser.com/desci)
 - [Molecule’s Biopharma IP-NFTs - Τεχνική περιγραφή](https://www.molecule.xyz/blog/molecules-biopharma-ip-nfts-a-technical-description)
 - [Δημιουργώντας έμπιστα συστήματα επιστήμης του Jon Starr](https://medium.com/@jringo/building-systems-of-trustless-science-1cd2d072f673)
 - [Paul Kohlhaas - DeSci: Το μέλλον της αποκεντρωμένης επιστήμης (podcast)](https://anchor.fm/andrew-steinwold/episodes/Paul-Kohlhaas---DeSci-The-Future-of-Decentralized-Science---Zima-Red-ep-117-e1h683a)

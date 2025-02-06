@@ -118,7 +118,7 @@ Web3の様式を活用することで科学データへのアクセスが大幅�
 - [Jocelynn Pearlによるa16zの未来のための分散型バイオテックのガイド](https://future.a16z.com/a-guide-to-decentralized-biotech/)
 - [DeSciのケース](https://gitcoin.co/blog/desci-the-case-for-decentralised-science/)
 - [DeSciのガイド](https://future.com/what-is-decentralized-science-aka-desci/)
-- [分散型科学のリソース](https://www.vincentweisser.com/decentralized-science)
+- [分散型科学のリソース](https://www.vincentweisser.com/desci)
 - [MoleculeのBiopharma IP-NFTs - 技術説明](https://www.molecule.xyz/blog/molecules-biopharma-ip-nfts-a-technical-description)
 - [Jon Starrによるトラストレスな科学システムの構築](https://medium.com/@jringo/building-systems-of-trustless-science-1cd2d072f673)
 - [Paul Kohlaas - DeSci: 分散型科学の未来(ポッドキャスト)](https://anchor.fm/andrew-steinwold/episodes/Paul-Kohlhaas---DeSci-The-Future-of-Decentralized-Science---Zima-Red-ep-117-e1h683a)

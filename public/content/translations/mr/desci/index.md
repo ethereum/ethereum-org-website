@@ -120,7 +120,7 @@ Web3 पॅटर्नचा वापर करून वैज्ञानि
 - [a16z भविष्यासाठी जोसेलिन पर्लद्वारे विकेंद्रित बायोटेकसाठी मार्गदर्शक](https://future.a16z.com/a-guide-to-decentralized-biotech/)
 - [DeSci साठी केस](https://gitcoin.co/blog/desci-the-case-for-decentralised-science/)
 - [DeSci साठी मार्गदर्शक](https://future.com/what-is-decentralized-science-aka-desci/)
-- [विकेंद्रित विज्ञान संसाधने](https://www.vincentweisser.com/decentralized-science)
+- [विकेंद्रित विज्ञान संसाधने](https://www.vincentweisser.com/desci)
 - [रेणूचे बायोफार्मा IP-NFT - एक तांत्रिक वर्णन](https://molecule.to/blog/molecules-biopharma-ip-nfts-a-technical-description)
 - [जॉन स्टारद्वारे विश्वासार्ह विज्ञान प्रणाली तयार करणे](https://medium.com/@jringo/building-systems-of-trustless-science-1cd2d072f673)
 - [बायोटेक DAO चा उदय](https://molecule.to/blog/the-emergence-of-biotech-daos)

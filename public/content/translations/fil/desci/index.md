@@ -120,7 +120,7 @@ Tumatanggap kami ng mga mungkahi para sa mga bagong proyekto na ililista - tingn
 - [Gabay sa decentralized biotech ni Jocelynn Pearl para sa a16z future](https://future.a16z.com/a-guide-to-decentralized-biotech/)
 - [Ang sitwasyon para sa DeSci](https://gitcoin.co/blog/desci-the-case-for-decentralised-science/)
 - [Gabay sa DeSci](https://future.com/what-is-decentralized-science-aka-desci/)
-- [Mga mapagkukunan tungkol sa decentralized science](https://www.vincentweisser.com/decentralized-science)
+- [Mga mapagkukunan tungkol sa decentralized science](https://www.vincentweisser.com/desci)
 - [Biopharma IP-NFTs ng Molecule - Isang Teknikal na Paglalarawan](https://molecule.to/blog/molecules-biopharma-ip-nfts-a-technical-description)
 - [Paggawa ng mga Trustless na System of Science ni Jon Starr](https://medium.com/@jringo/building-systems-of-trustless-science-1cd2d072f673)
 - [Ang Pag-usbong ng Biotech DAOs](https://molecule.to/blog/the-emergence-of-biotech-daos)

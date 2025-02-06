@@ -118,7 +118,7 @@ summaryPoint3: 它以开放科学运动为基础。
 - [由 Jocelynn Pearl 为 a16z 自建媒体网站 Future 写的一份去中心化生物技术指南](https://future.a16z.com/a-guide-to-decentralized-biotech/)
 - [去中心化科学实例](https://gitcoin.co/blog/desci-the-case-for-decentralised-science/)
 - [去中心化科学指南](https://future.com/what-is-decentralized-science-aka-desci/)
-- [去中心化科学资源](https://www.vincentweisser.com/decentralized-science)
+- [去中心化科学资源](https://www.vincentweisser.com/desci)
 - [Molecule 的生物制药知识产权-非同质化代币 - 技术描述](https://www.molecule.xyz/blog/molecules-biopharma-ip-nfts-a-technical-description)
 - [Jon Starr 的《构建去信任科学系统》](https://medium.com/@jringo/building-systems-of-trustless-science-1cd2d072f673)
 - [Paul Kohlhaas - 去中心化科学：去中心化科学的未来（播客）](https://anchor.fm/andrew-steinwold/episodes/Paul-Kohlhaas---DeSci-The-Future-of-Decentralized-Science---Zima-Red-ep-117-e1h683a)

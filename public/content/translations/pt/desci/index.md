@@ -118,7 +118,7 @@ Aceitamos sugestões para novos projetos a serem incluídos na lista - consulte 
 - [Um guia para a biotecnologia descentralizada por Jocelynn Pearl para a16z future](https://future.a16z.com/a-guide-to-decentralized-biotech/)
 - [O argumento a favor do DeSci](https://gitcoin.co/blog/desci-the-case-for-decentralised-science/)
 - [Guia do DeSci](https://future.com/what-is-decentralized-science-aka-desci/)
-- [Recursos científicos descentralizados](https://www.vincentweisser.com/decentralized-science)
+- [Recursos científicos descentralizados](https://www.vincentweisser.com/desci)
 - [IP-NFTs biofarmacêuticos da Molecule - Uma descrição técnica](https://www.molecule.xyz/blog/molecules-biopharma-ip-nfts-a-technical-description)
 - [Construir sistemas de ciência isentos de confiança por Jon Starr](https://medium.com/@jringo/building-systems-of-trustless-science-1cd2d072f673)
 - [Paul Kohlhaas - DeSci: O futuro da ciência descentralizada (podcast)](https://anchor.fm/andrew-steinwold/episodes/Paul-Kohlhaas---DeSci-The-Future-of-Decentralized-Science---Zima-Red-ep-117-e1h683a)

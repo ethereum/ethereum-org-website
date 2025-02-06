@@ -118,7 +118,7 @@ Web3 має потенціал розірвати цю несправну мод
 - [Посібник із децентралізованої біотехнології від Джоселін Перл для ресурсу Future венчурного фонду a16z](https://future.a16z.com/a-guide-to-decentralized-biotech/)
 - [Аргументи на користь DeSci](https://gitcoin.co/blog/desci-the-case-for-decentralised-science/)
 - [Посібник із DeSci](https://future.com/what-is-decentralized-science-aka-desci/)
-- [Децентралізовані наукові ресурси](https://www.vincentweisser.com/decentralized-science)
+- [Децентралізовані наукові ресурси](https://www.vincentweisser.com/desci)
 - [Biopharma IP-NFTs від Molecule - Технічний опис](https://www.molecule.xyz/blog/molecules-biopharma-ip-nfts-a-technical-description)
 - [Побудова систем, що не потребують довіри, у науці. Автор: Джон Старр](https://medium.com/@jringo/building-systems-of-trustless-science-1cd2d072f673)
 - [Пол Колхаас — DeSci: майбутнє децентралізованої науки (подкаст)](https://anchor.fm/andrew-steinwold/episodes/Paul-Kohlhaas---DeSci-The-Future-of-Decentralized-Science---Zima-Red-ep-117-e1h683a)

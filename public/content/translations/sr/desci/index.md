@@ -118,7 +118,7 @@ Dobrodošli su predlozi novih projekata za listu — molim vas, pogledajte našu
 - [Vodič za decentralizovanu biotehnologiju od strane Džoselin Prl za a16z future program](https://future.a16z.com/a-guide-to-decentralized-biotech/)
 - [Argumenti za DeSci](https://gitcoin.co/blog/desci-the-case-for-decentralised-science/)
 - [Vodič kroz DeSci](https://future.com/what-is-decentralized-science-aka-desci/)
-- [Resursi za decentralizovanu nauku](https://www.vincentweisser.com/decentralized-science)
+- [Resursi za decentralizovanu nauku](https://www.vincentweisser.com/desci)
 - [Molecule-ova Biophrama IP-NFT-jevi — Tehnički opis](https://www.molecule.xyz/blog/molecules-biopharma-ip-nfts-a-technical-description)
 - [Izgradnja sistema nauke bez potrebe za poverenjem, autor Džon Star](https://medium.com/@jringo/building-systems-of-trustless-science-1cd2d072f673)
 - [Pol Kohlas — DeSci: Budućnost decentralizovane nauke (podkast)](https://anchor.fm/andrew-steinwold/episodes/Paul-Kohlhaas---DeSci-The-Future-of-Decentralized-Science---Zima-Red-ep-117-e1h683a)

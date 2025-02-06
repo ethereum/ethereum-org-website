@@ -118,7 +118,7 @@ Listelenecek yeni proje önerilerine açığız - başlamak için lütfen [liste
 - [Jocelynn Pearl tarafından a16z geleceği için merkeziyetsiz biyoteknoloji rehberi](https://future.a16z.com/a-guide-to-decentralized-biotech/)
 - [DeSci için durum](https://gitcoin.co/blog/desci-the-case-for-decentralised-science/)
 - [DeSci Rehberi](https://future.com/what-is-decentralized-science-aka-desci/)
-- [Merkeziyetsiz bilim kaynakları](https://www.vincentweisser.com/decentralized-science)
+- [Merkeziyetsiz bilim kaynakları](https://www.vincentweisser.com/desci)
 - [Molekülün Biyofarması IP-NFT'ler - Teknik Bir Açıklama](https://www.molecule.xyz/blog/molecules-biopharma-ip-nfts-a-technical-description)
 - [Bilim İçin Güvensiz Sistemler Geliştirmek, Jon Starr](https://medium.com/@jringo/building-systems-of-trustless-science-1cd2d072f673)
 - [Paul Kohlhass - DeSci: Merkeziyetsiz Bilimin Geleceği (podcast)](https://anchor.fm/andrew-steinwold/episodes/Paul-Kohlhaas---DeSci-The-Future-of-Decentralized-Science---Zima-Red-ep-117-e1h683a)
