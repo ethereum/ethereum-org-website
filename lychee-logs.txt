@@ -1,0 +1,7 @@
+Error: Network error
+
+Caused by:
+    0: error sending request for url (http://ethereum-org-website/)
+    1: client error (Connect)
+    2: dns error: failed to lookup address information: nodename nor servname provided, or not known
+    3: failed to lookup address information: nodename nor servname provided, or not known

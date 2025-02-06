@@ -168,7 +168,7 @@ Kung biglang bumaba ang supply ng palitan B at kulang ang binili ng user para sa
 
 Upang magawa ang halimbawa sa itaas sa tradisyunal na mundo ng pananalapi, kakailanganin mo ng napakalaking halaga ng pera. Ang mga estratehiya sa paggawa ng pera na ito ay naa-access lamang ng mga may umiiral na kayamanan. Ang mga mabilis na loan ay isang halimbawa ng hinaharap kung saan ang pagkakaroon ng pera ay hindi kinakailangan para kumita ng pera.
 
-<ButtonLink isSecondary href="https://aave.com/flash-loans/">
+<ButtonLink isSecondary href="https://aave.com/docs/concepts/flash-loans/">
   Higit pang detalye tungkol sa mga mabilis na loan
 </ButtonLink>
 

@@ -168,7 +168,7 @@ Beləliklə, bir əməliyyatda aşağıdakılar baş verir:
 
 Ənənəvi maliyyə dünyasında yuxarıdakı əməliyyatı yerinə yetirmək üçün sizə böyük miqdarda pul lazımdır. Bu pul qazanma strategiyaları yalnız mövcud sərvəti olanlar üçün əlçatandır. Flaş kreditləri, pula sahib olmağın mütləq pul qazanmaq üçün ilkin şərt olmadığı bir gələcəyin nümunəsidir.
 
-[Flaş kreditləri haqqında daha çox](https://aave.com/flash-loans/)
+[Flaş kreditləri haqqında daha çox](https://aave.com/docs/concepts/flash-loans/)
 
 <Divider />
 

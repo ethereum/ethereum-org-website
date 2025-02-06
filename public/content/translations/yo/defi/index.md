@@ -168,7 +168,7 @@ Tí ipese pẹpẹ ìṣòwò B bá ṣubú lójijì, tí ó sì ṣeé ṣe ki 
 
 Láti lè ṣe àpẹẹrẹ tó wà lókè nínú ayé ìṣúná ibile, wa nílò iye owó tó pọ̀ gan-an. Àwọn ilana riri owó yìí jẹ́ wiwọlé sí fun àwọn tó ní òrò tó wà tẹ́lẹ̀. Àwọn owó yíyá ojú ẹsẹ̀ jẹ apẹẹrẹ ti ọjọ iwaju nibiti nini owo kii ṣe pataki ṣaaju fun riri owo.
 
-<ButtonLink isSecondary href="https://aave.com/flash-loans/">
+<ButtonLink isSecondary href="https://aave.com/docs/concepts/flash-loans/">
   Díẹ̀ síi lori àwọn owó yíyá ojú ẹsẹ̀
 </ButtonLink>
 

@@ -168,7 +168,7 @@ Gdyby podaż na giełdzie B nagle spadła i użytkownik nie byłby w stanie kupi
 
 Aby móc dokonać transakcji z powyższego przykładu to w tradycyjnym świecie finansowym, potrzebna jest ogromna kwota pieniędzy. Takie strategie finansowe są dostępne tylko dla posiadaczy ogromnego majątku. Pożyczki błyskawiczne pokazują, że w przyszłości takie strategie będą dostępne nie tylko dla najbogatszych uczestników rynku.
 
-<ButtonLink isSecondary href="https://aave.com/flash-loans/">
+<ButtonLink isSecondary href="https://aave.com/docs/concepts/flash-loans/">
   Więcej o pożyczkach błyskawicznych
 </ButtonLink>
 
