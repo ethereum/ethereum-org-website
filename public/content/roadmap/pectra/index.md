@@ -1,5 +1,5 @@
 ---
-title: Pectra 
+title: Pectra
 description: Learn about Pectra - the next Ethereum protocol upgrade
 lang: en
 ---
@@ -9,7 +9,7 @@ lang: en
 Pectra is an upcoming Ethereum protocol upgrade that brings new functionality and changes to the Ethereum network. Following [Dencun](/roadmap/dencun/), this is another major upgrade to both the execution and consensus layer of Ethereum. The shortened name Pectra is a combination of Prague, the execution layer hard fork, and Electra on the consensus layer fork, both of which will be activated at the same time. Together, they bring a number of improvements to the Ethereum core protocol, the way it works under the hood, and also how we can use it. There are many benefits to Ethereum users, developers and validators.
 
 <InfoBanner>
-Pectra upgrade is only a single step in Ethereum's long-term development goals. Learn more about [the protocol roadmap](/roadmap/) and [previous upgrades](/history/).
+Pectra upgrade is only a single step in Ethereum's long-term development goals. Learn more about <a href="/roadmap/">the protocol roadmap</a> and <a href="/history/">previous upgrades</a>.
 </InfoBanner>
 
 ## Activation and roadmap progress {#roadmap-impact}
@@ -44,7 +44,7 @@ Currently, network targets average 3 blobs per block with a maximum of 6 blobs. 
 
 ### Increase calldata cost {#7623}
 
-Before the introduction of [blobs in Dencun upgrade](/roadmap/danksharding), L2s were using calldata function in EVM to store their data in Ethereum. It's a permanent and less efficient way of storing data, however, sometimes it can be still cheaper than blobs even today. 
+Before the introduction of [blobs in Dencun upgrade](/roadmap/danksharding), L2s were using calldata function in EVM to store their data in Ethereum. It's a permanent and less efficient way of storing data, however, sometimes it can be still cheaper than blobs even today.
 
 With Ethereum embracing blobs to store data, (EIP-7623)[https://eips.ethereum.org/EIPS/eip-7623] increases calldata pricing to provide incentive to only use blobs and also offset the computational cost of the network handling the new blob data.
 
@@ -66,7 +66,7 @@ Precompiles are a special set of smart contracts built directly into the Ethereu
 
 [EIP-2537](https://eips.ethereum.org/EIPS/eip-2537) adds a new precompile function for curve operations over [BLS12-381](https://hackmd.io/@benjaminion/bls12-381). This elliptic curve became widely used in cryptocurrency ecosystems thanks to its practical properties. More specifically, it's been adopted by Ethereum's consensus layer, where it's used by validators.
 
-The new precompile adds the ability for every developer to easily, efficiently, and securely perform cryptographic operations using this curve, for example, verifying signatures. Onchain applications that depend on this curve can become more gas efficient and secure relying on a precompile instead of some custom contract. This mainly applies to applications that want to reason about validators inside the EVM, e.g. staking pools, restaking, light clients, bridges but also zero-knowledge. 
+The new precompile adds the ability for every developer to easily, efficiently, and securely perform cryptographic operations using this curve, for example, verifying signatures. Onchain applications that depend on this curve can become more gas efficient and secure relying on a precompile instead of some custom contract. This mainly applies to applications that want to reason about validators inside the EVM, e.g. staking pools, restaking, light clients, bridges but also zero-knowledge.
 
 ### Serve historical block hashes from state {#2935}
 
@@ -82,7 +82,7 @@ The Beacon Chain consensus is based on validators casting their votes for the la
 
 ### Add blob schedule to EL config files {#7840}
 
-[EIP-7840](https://eips.ethereum.org/EIPS/eip-7840) is a simple change that adds a new field to execution layer client configuration. It configures the number of blocks, enabling dynamic setting for target and maximum blob counts per block as well as blob fee adjustment. With directly defined configuration, clients can avoid the complexity of exchanging this information via Engine API. 
+[EIP-7840](https://eips.ethereum.org/EIPS/eip-7840) is a simple change that adds a new field to execution layer client configuration. It configures the number of blocks, enabling dynamic setting for target and maximum blob counts per block as well as blob fee adjustment. With directly defined configuration, clients can avoid the complexity of exchanging this information via Engine API.
 
 <InfoBanner>
 To learn more about how Pectra affects you specifically as an Ethereum user, developer or validator, look into [Pectra FAQ](https://epf.wiki/#/wiki/pectra-faq).
