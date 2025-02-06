@@ -140,7 +140,7 @@ Transaktionen in <b>Ether</b> werden in ähnlicher Weise verwaltet. Aber statt z
 
 </FeaturedText>
 
-Versuchen Sie, einige Werte nach und von Wei zu konvertieren. [Beachten Sie](https://web3py.readthedocs.io/en/stable/examples.html#converting-currency-denominations), dass es zwischen Ether und Wei noch andere Einheiten gibt. Eine der bekanntesten ist **Gwei**, da Transaktionsgebühren in dieser Einheit angegeben werden.
+Versuchen Sie, einige Werte nach und von Wei zu konvertieren. [Beachten Sie](https://web3py.readthedocs.io/en/stable/troubleshooting.html#how-do-i-convert-currency-denominations), dass es zwischen Ether und Wei noch andere Einheiten gibt. Eine der bekanntesten ist **Gwei**, da Transaktionsgebühren in dieser Einheit angegeben werden.
 
 ```python
 In [2]: Web3.toWei(1, 'ether')

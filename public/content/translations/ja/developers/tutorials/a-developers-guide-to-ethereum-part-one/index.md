@@ -136,7 +136,7 @@ In [1]: from web3 import Web3
 
 </FeaturedText>
 
-好きな数字でweiとETH(ether)を変換してみてください。 なお、ETHとweiの間には、[さまざまな単位の名称があります](https://web3py.readthedocs.io/en/stable/examples.html#converting-currency-denominations)。 その中でよく使われているのは、**gwei**です。これは基本的に手数料を意味します。
+好きな数字でweiとETH(ether)を変換してみてください。 なお、ETHとweiの間には、[さまざまな単位の名称があります](https://web3py.readthedocs.io/en/stable/troubleshooting.html#how-do-i-convert-currency-denominations)。 その中でよく使われているのは、**gwei**です。これは基本的に手数料を意味します。
 
 ```python
 In [2]: Web3.to_wei(1, 'ether')

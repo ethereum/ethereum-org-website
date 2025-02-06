@@ -136,7 +136,7 @@ Se usa un patrón similar cuando se escriben transacciones en <b>ether</b>. Sin 
 
 </FeaturedText>
 
-Pruebe convertir algunos valores a y desde wei. Tenga en cuenta que [hay nombres para muchas de las denominaciones](https://web3py.readthedocs.io/en/stable/examples.html#converting-currency-denominations) entre ether y wei. Una de las más conocidas es **gwei**, ya que es como suelen representarse las comisiones de las transacciones.
+Pruebe convertir algunos valores a y desde wei. Tenga en cuenta que [hay nombres para muchas de las denominaciones](https://web3py.readthedocs.io/en/stable/troubleshooting.html#how-do-i-convert-currency-denominations) entre ether y wei. Una de las más conocidas es **gwei**, ya que es como suelen representarse las comisiones de las transacciones.
 
 ```python
 In [2]: Web3.to_wei(1, 'ether')
