@@ -104,7 +104,7 @@ Nakonec při rozhodování, zda zahrnout knihovnu, zvažte její celkové použi
 
 **thirdweb Solidity SDK –** **_poskytuje nástroje potřebné pro efektivní vytváření vlastních smart kontraktů._**
 
-- [Dokumentace](https://portal.thirdweb.com/solidity/)
+- [Dokumentace](https://portal.thirdweb.com/contracts/build/overview)
 - [GitHub](https://github.com/thirdweb-dev/contracts)
 
 ## Související návody {#related-tutorials}

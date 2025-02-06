@@ -104,7 +104,7 @@ Last, wen yu dey diside on weda to inklude one library, make yu konsida hau yu d
 
 **thirdweb Solidity SDK -** **_Dey provide di tools wey dey nid to build kustom smart kontracts betta_**
 
-- [Dokumentashon](https://portal.thirdweb.com/solidity/)
+- [Dokumentashon](https://portal.thirdweb.com/contracts/build/overview)
 - [GitHub](https://github.com/thirdweb-dev/contracts)
 
 ## Related tutorials {#related-tutorials}

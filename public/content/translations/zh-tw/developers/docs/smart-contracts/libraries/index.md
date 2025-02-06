@@ -104,7 +104,7 @@ contract MyNFT is ERC721 {
 
 **Web3 Solidity SDK：** **_提供有效率建立自訂智慧型合約所需的工具_**
 
-- [文件](https://portal.thirdweb.com/solidity/)
+- [文件](https://portal.thirdweb.com/contracts/build/overview)
 - [GitHub](https://github.com/thirdweb-dev/contracts)
 
 ## 相關教程 {#related-tutorials}
