@@ -69,7 +69,7 @@ export const WordSelectorButtons = ({
       className="absolute bottom-0 w-full bg-background-highlight p-4"
       data-testid="word-selector-buttons"
     >
-      <div className="h-90 grid w-full grid-cols-4 gap-2 overflow-hidden whitespace-nowrap md:h-[152px]">
+      <div className="grid h-[90px] w-full grid-cols-4 gap-2 overflow-hidden whitespace-nowrap md:h-[152px]">
         {pseudoRandomizedWords.map(({ word, index }) => (
           <Button
             key={word + index}
