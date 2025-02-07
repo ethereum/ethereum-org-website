@@ -367,8 +367,8 @@ const chains = [
     infoURL: "https://xr-one.gitbook.io",
     chainId: 273,
     nativeCurrency: {
-      name: "XR",
-      symbol: "XR",
+      name: "XR1",
+      symbol: "XR1",
       decimals: 18,
     },
     chain: "ETH",
@@ -388,6 +388,17 @@ const chains = [
     name: "Orderly Mainnet",
     infoURL: "https://orderly.network/",
     chainId: 291,
+    nativeCurrency: {
+      name: "Ether",
+      symbol: "ETH",
+      decimals: 18,
+    },
+    chain: "ETH",
+  },
+  {
+    name: "ZKcandy Mainnet",
+    infoURL: "https://zkcandy.io/",
+    chainId: 320,
     nativeCurrency: {
       name: "Ether",
       symbol: "ETH",
@@ -1111,6 +1122,17 @@ const chains = [
     chain: "SuperLumio",
   },
   {
+    name: "Rebus Mainnet",
+    infoURL: "https://www.rebuschain.com",
+    chainId: 9696,
+    nativeCurrency: {
+      name: "Ether",
+      symbol: "ETH",
+      decimals: 18,
+    },
+    chain: "ETH",
+  },
+  {
     name: "Zytron Linea Mainnet",
     infoURL: "https://zytron.zypher.network/",
     chainId: 9901,
@@ -1375,6 +1397,17 @@ const chains = [
     chain: "ETH",
   },
   {
+    name: "BirdLayer",
+    infoURL: "https://www.dodochain.com",
+    chainId: 53456,
+    nativeCurrency: {
+      name: "Ether",
+      symbol: "ETH",
+      decimals: 18,
+    },
+    chain: "BirdLayer",
+  },
+  {
     name: "Titan",
     infoURL: "https://tokamak.network",
     chainId: 55004,
@@ -1595,7 +1628,7 @@ const chains = [
     chain: "re.al",
   },
   {
-    name: "Taiko Mainnet",
+    name: "Taiko Alethia",
     infoURL: "https://taiko.xyz",
     chainId: 167000,
     nativeCurrency: {
@@ -1606,7 +1639,7 @@ const chains = [
     chain: "ETH",
   },
   {
-    name: "Taiko Hekla L2",
+    name: "Taiko Hekla",
     infoURL: "https://taiko.xyz",
     chainId: 167009,
     nativeCurrency: {
@@ -2091,6 +2124,17 @@ const chains = [
       decimals: 18,
     },
     chain: "RARI",
+  },
+  {
+    name: "WITNESS CHAIN",
+    infoURL: "https://www.witnesschain.com",
+    chainId: 1702448187,
+    nativeCurrency: {
+      name: "ETHER",
+      symbol: "ETH",
+      decimals: 18,
+    },
+    chain: "Witness-Chain",
   },
   {
     name: "Pirl",
