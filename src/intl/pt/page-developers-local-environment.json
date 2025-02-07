@@ -30,8 +30,5 @@
   "page-local-environment-setup-title": "Configurar o seu ambiente de programação local",
   "page-local-environment-solidity-template-desc": "Um modelo GitHub para uma configuração previamente construída para os seus contratos inteligentes Solidity. Inclui uma rede local Hardhat, Waffle para testes, Ethers para implementação de carteiras e muito mais.",
   "page-local-environment-solidity-template-logo-alt": "Logótipo do template Solidity",
-  "page-local-environment-truffle-desc": "O Truffle Suite conduz os programadores da ideia à dapp da forma mais confortável possível.",
-  "page-local-environment-truffle-logo-alt": "Logótipo Truffle",
-  "page-local-environment-waffle-desc": "A biblioteca de testes mais avançada para contratos inteligentes. Pode ser usada sozinha ou com Scaffold-eth ou Hardhat.",
-  "page-local-environment-waffle-logo-alt": "Logótipo Truffle"
+  "page-local-environment-waffle-desc": "A biblioteca de testes mais avançada para contratos inteligentes. Pode ser usada sozinha ou com Scaffold-eth ou Hardhat."
 }

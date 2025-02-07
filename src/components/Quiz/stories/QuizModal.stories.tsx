@@ -17,7 +17,7 @@ const meta = {
   args: {
     isQuizModalOpen: true,
     quizStatus: "neutral",
-    onQuizModalClose: fn(),
+    onQuizModalOpenChange: fn(),
     children: "",
     widgetProps: {
       quizKey: LAYER_2_QUIZ_KEY,

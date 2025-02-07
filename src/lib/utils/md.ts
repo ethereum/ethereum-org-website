@@ -28,12 +28,13 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
   // Temporal list of content pages allowed to be compiled
   // When a content page is migrated (and he components being used), should be added to this list
   const temporalAllowedPages = [
-    // Use cases (7/7) ✅
+    // Use cases (8/8) ✅
     "/dao",
     "/decentralized-identity",
     "/defi",
     "/desci",
     "/nft",
+    "/payments",
     "/refi",
     "/social-networks",
     // Staking (4/4) ✅
@@ -192,10 +193,10 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
     "/developers/tutorials/secure-development-workflow",
     "/developers/tutorials/send-token-ethersjs",
     "/developers/tutorials/sending-transactions-using-web3-and-alchemy",
+    "/developers/tutorials/server-components",
     "/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript",
     "/developers/tutorials/short-abi",
     "/developers/tutorials/smart-contract-security-guidelines",
-    "/developers/tutorials/solidity-and-truffle-continuous-integration-setup",
     "/developers/tutorials/testing-erc-20-tokens-with-waffle",
     "/developers/tutorials/the-graph-fixing-web3-data-querying",
     "/developers/tutorials/token-integration-checklist",

@@ -45,8 +45,8 @@ Az Ethereum-hálózat csomópontjairól számos trekker biztosít valós idejű 
 
 - [Csomóponttérkép](https://etherscan.io/nodetracker), készítette: Etherscan
 - [Ethercsomópontok](https://ethernodes.org/), készítette: Bitfly
-- [Ethereum-csomópont-letapogató](https://crawler.ethereum.org/)
 - [Nodewatch](https://www.nodewatch.io/), készítette: Chainsafe, konszenzuscsomópontok letapogatása
+- [Monitoreth](https://monitoreth.io/) - a MigaLabs által biztosított megosztott hálózati ellenőrzési eszköz
 
 ## Csomóponttípusok {#node-types}
 
@@ -130,15 +130,14 @@ Az Ethereum-közösség több nyílt forráskódú végrehajtási klienst (korá
 
 Ez a táblázat összefoglalja a különböző klienseket. Ezek mindegyike megfelel a [klienstesztnek](https://github.com/ethereum/tests), és aktívan karbantartják őket, hogy naprakészek legyenek a hálózati frissítések tekintetében.
 
-| Kliens                                                                   | Nyelv      | Operációs rendszerek  | Hálózatok                 | Szinkronizációs stratégiák                | Állapot elhagyás    |
-| ------------------------------------------------------------------------ | ---------- | --------------------- | ------------------------- | ----------------------------------------- | ------------------- |
-| [Geth](https://geth.ethereum.org/)                                       | Go         | Linux, Windows, macOS | Mainnet, Sepolia, Holesky | Snap, Full                                | Archív, megvágott   |
-| [Nethermind](http://nethermind.io/)                                      | C#, .NET   | Linux, Windows, macOS | Mainnet, Sepolia, Holesky | Snap (kiszolgálás nélkül), gyors, teljes  | Archív, csökkentett |
-| [Besu](https://besu.hyperledger.org/en/stable/)                          | Java       | Linux, Windows, macOS | Mainnet, Sepolia, Holesky | Pillanatfelvételen alapuló, gyors, teljes | Archív, csökkentett |
-| [Erigon](https://github.com/ledgerwatch/erigon)                          | Go         | Linux, Windows, macOS | Mainnet, Sepolia, Holesky | Teljes                                    | Archív, csökkentett |
-| [Reth](https://github.com/paradigmxyz/reth) _(béta)_                     | Rust       | Linux, Windows, macOS | Mainnet, Sepolia, Holesky | Teljes                                    | Archív, megvágott   |
-| [EthereumJS](https://github.com/ethereumjs/ethereumjs-monorepo) _(béta)_ | TypeScript | Linux, Windows, macOS | Mainnet, Sepolia, Holesky | Snap, Full, Light                         |                     |
-
+| Kliens                                                                   | Nyelv      | Operációs rendszerek  | Hálózatok                 | Szinkronizációs stratégiák                                           | Állapot elhagyás    |
+| ------------------------------------------------------------------------ | ---------- | --------------------- | ------------------------- | -------------------------------------------------------------------- | ------------------- |
+| [Geth](https://geth.ethereum.org/)                                       | Go         | Linux, Windows, macOS | Mainnet, Sepolia, Holesky | [Snap](#snap-sync), [teljes](#full-sync)                             | Archív, megvágott   |
+| [Nethermind](https://www.nethermind.io/)                                 | C#, .NET   | Linux, Windows, macOS | Mainnet, Sepolia, Holesky | [Snap](#snap-sync) (kiszolgálás nélkül), gyors, [teljes](#full-sync) | Archív, csökkentett |
+| [Besu](https://besu.hyperledger.org/en/stable/)                          | Java       | Linux, Windows, macOS | Mainnet, Sepolia, Holesky | [Snap](#snap-sync), [gyors](#fast-sync), [teljes](#full-sync)        | Archív, csökkentett |
+| [Erigon](https://github.com/ledgerwatch/erigon)                          | Go         | Linux, Windows, macOS | Mainnet, Sepolia, Holesky | [Teljes](#full-sync)                                                 | Archív, csökkentett |
+| [Reth](https://reth.rs/)                                                 | Rust       | Linux, Windows, macOS | Mainnet, Sepolia, Holesky | [Teljes](#full-sync)                                                 | Archív, megvágott   |
+| [EthereumJS](https://github.com/ethereumjs/ethereumjs-monorepo) _(béta)_ | TypeScript | Linux, Windows, macOS | Sepolia, Holesky          | [Teljes](#full-sync)                                                 | Megvágott           |
 
 A támogatott hálózatokkal kapcsolatos további információkért olvassa el az [Ethereum-hálózatok](/developers/docs/networks/) című cikket.
 
@@ -166,9 +165,27 @@ A Nethermind egy Ethereum-implementáció, amelyet a C# .NET tech stackkel hozta
 
 - egy optimizált virtuális géppel;
 - állapoteléréssel;
-- networkinggel és sokféle funkcióval, mint a Prometheus/Graphana irányítópultok, seq vállalati naplózási támogatás, JSON RPC nyomon követés és analitikai pluginek.
+- networkinggel és sokféle funkcióval, mint a Prometheus/Graphana irányítópultok, seq vállalati naplózási támogatás, JSON-RPC nyomon követés és analitikai plugin-ek.
 
 Ezenkívül a Nethermind [részletes dokumentációval](https://docs.nethermind.io), erős fejlesztői támogatással és online közösséggel is rendelkezik, valamint nonstop támogatással a prémium felhasználók részére.
+
+### Reth {#reth}
+
+A Reth (a Rust Ethereum rövidítve) egy Ethereum teljes csomópont-implementáció, amely felhasználóbarát, rendkívül moduláris, gyors és hatékony. A Reth-et eredetileg a Paradigm építette és fejlesztette, és az Apache és MIT alatt van engedélyeztetve.
+
+A Reth készen áll az éles használatra, olyan kritikus környezetekben is jól használható, mint a letétbe helyezés vagy nagy elérhetőséget igénylő szolgáltatások. Olyan esetekben is jól teljesít, melyek nagy teljesítményt igényelnek jó áron, mint az RPC, MEV, indexálás, szimulációk és peer-to-peer tevékenységek.
+
+Tudjon meg többet a [Reth Book](https://reth.rs/) vagy a [Reth GitHub repo](https://github.com/paradigmxyz/reth?tab=readme-ov-file#reth) révén.
+
+### Fejlesztés alatt {#execution-in-development}
+
+Ezek a kliensek még a fejlesztés korai fázisában vannak, és ezért nem lehet élesben használni őket.
+
+#### EthereumJS {#ethereumjs}
+
+Az EthereumJS végrehajtási kliens (EthereumJS) TypeScript nyelven íródott, és számos csomagból áll, beleértve a Block, Transaction és Merkle-Patricia Trie osztályok által képviselt alapvető Ethereum primitíveket, valamint az alapvető klienskomponenseket, beleértve az Ethereum virtuális gép (EVM) implementációját, egy blokkláncosztályt és a DevP2P hálózati stacket.
+
+Tudjon meg többet erről a [dokumentációból](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master)
 
 ## Konszenzusos kliensek {#consensus-clients}
 
@@ -181,6 +198,7 @@ Többféle konszenzusos kliens (korábbi nevén „Eth2” kliens) is létezik, 
 | [Nimbus](https://nimbus.team/)                                | Nim        | Linux, Windows, macOS | Beacon Chain, Goerli, Sepolia, Ropsten stb.                  |
 | [Prysm](https://docs.prylabs.network/docs/getting-started/)   | Go         | Linux, Windows, macOS | Beacon Chain, Gnosis, Goerli, Pyrmont, Sepolia, Ropsten stb. |
 | [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) | Java       | Linux, Windows, macOS | Beacon Chain, Gnosis, Goerli, Sepolia, Ropsten stb.          |
+| [Grandine](https://docs.grandine.io/) (béta)                  | Rust       | Linux, Windows, macOS | Beacon Chain, Goerli, Sepolia és mások                       |
 
 ### Lighthouse {#lighthouse}
 
@@ -214,6 +232,12 @@ A Teku nagyon rugalmas alkalmazási opciókat kínál. A Beacon-csomópont és a
 
 A Teku Java nyelven íródott és az Apache 2.0 licenc alatt fut. A ConsenSys Protocols csapata fejleszti, amely a Besu és a Web3Signer fejlesztője is. További információk a [Teku-dokumentációban](https://docs.teku.consensys.net/en/latest/) találhatók.
 
+### Grandine {#grandine}
+
+A Grandine egy konszenzuskliens-implementáció, amelyet Rust nyelven írtak, és a GPL-3.0 licenc alatt adták ki. Fenntartója a Grandine központi csapata, továbbá gyors, nagy teljesítményre képes és könnyű. A letétbe helyezők széles skálájához illeszkedik, a kis erőforrásigényű eszközökön, például Raspberry Pi-n futó egyéni letétbe helyezőktől kezdve a több tízezer validálót futtató, nagy intézményi letétesekig.
+
+A dokumentációt a [Grandine Book](https://docs.grandine.io/) tartalmazza
+
 ## Szinkronizálási módok {#sync-modes}
 
 Ahhoz, hogy az Ethereum-kliens az aktuális adatokat kövesse és hitelesítse a hálózaton, szinkronizálnia kell a legfrissebb hálózati státusszal. Ez úgy történik, hogy adatokat tölt le többi klienstől, kriptográfiailag ellenőrzi azok integritását, és felépít egy helyi blokkláncadatbázist.
@@ -222,21 +246,32 @@ A szinkronizálási módok ennek a folyamatnak a különböző megközelítései
 
 ### A végrehajtási réteg szinkronizálási módjai {#execution-layer-sync-modes}
 
-#### Teljes archívum szinkronizálása {#full-sync}
+A végrehajtási réteg különféle módokon futhat a felhasználási esetek szerint, újravégrehajtva a blokklánc globális állapotát addig, hogy csak a lánc csúcsával szinkronizál egy megbízható ellenőrzési pontból.
 
-A teljes szinkronizálás letölti az összes blokkot (beleértve a fejléceket, a tranzakciókat és a visszaigazolásokat is), és a genezistől kezdve a blokkok végrehajtásával lépésenként legenerálja a blokklánc státuszát.
+#### Teljes szinkronizálás (full sync) {#full-sync}
+
+A teljes szinkronizálás letölti az összes blokkot (beleértve a fejléceket és a blokkadatokat), és a genezistől kezdve a blokkok végrehajtásával lépésenként legenerálja a blokklánc státuszát.
 
 - Minimalizálja a bizalomigényt, és a tranzakciók hiánytalan ellenőrzésével a legmagasabb fokú biztonságot garantálja.
 - A tranzakciók növekvő száma miatt az összes tranzakció feldolgozása napokat vagy akár heteket is igénybe vehet.
 
-#### Teljes, pillanatfelvételen alapuló (snap) szinkronizálás {#snap-sync}
+Az [archív csomópontok](#archive-node) teljes szinkronizálást végeznek, hogy felépítsék (és megtartsák) a státuszváltozások teljes előzményadatait, melyeket az összes blokk összes tranzakciója indukált.
 
-A pillanatfelvételen alapuló szinkronizálás blokkonként végez ellenőrzést, ahogy egy teljes archív szinkronizálás is, de nem a genezisblokktól kezdi, hanem egy azt követő, megbízható ellenőrzési ponton, ami valóban része a blokkláncnak. A csomópont elmenti a periodikus ellenőrzési pontokat, miközben törli az adatokat, melyek egy bizonyos időpontnál régebbiek. Ezek a pillanatfelvételek kellenek az adatok újragenerálásához, amikor arra szükség van, így nem kell azokat örökre tárolni.
+#### Gyors szinkronizálás (fast sync) {#fast-sync}
 
-- A leggyorsabb szinkronizálási stratégia, jelenleg az alapértelmezett mód az Ethereum-főhálózaton
-- A biztonság feláldozása nélkül takarít meg nagy lemezterületet és sávszélességet
+Ahogy a teljes szinkronizálás, a gyors szinkronizálás is letölt minden blokkot (beleértve a fejléceket, tranzakciókat és visszaigazolásokat). Ugyanakkor nem hajtja újra végre a korábbi tranzakciókat, hanem a visszaigazolásokra támaszkodik, amíg elér a legújabb fejhez, ahol importálásba kezd és feldolgozza a blokkokat, hogy teljes csomópontot adjon.
 
-[A snap szinkronizálásról bővebben](https://github.com/ethereum/devp2p/blob/master/caps/snap.md)
+- Gyors szinkronizálási stratégia.
+- Csökkenti az internet-sávszélességi igényt.
+
+#### Snap szinkronizálás (snap sync) {#snap-sync}
+
+A snap szinkronizálás is blokkról blokkra ellenőrzi a láncot. Ugyanakkor nem a genezisblokktól kezdi, hanem egy azt követő, megbízható ellenőrzési ponton, ami valóban része a blokkláncnak. A csomópont elmenti a periodikus ellenőrzési pontokat, miközben törli az adatokat, melyek egy bizonyos időpontnál régebbiek. Ezek a pillanatfelvételek kellenek az adatok újragenerálásához szükségszerint, így nem kell azokat örökre tárolni.
+
+- A leggyorsabb szinkronizálási stratégia jelenleg az alapértelmezett mód az Ethereum-főhálózaton.
+- A biztonság feláldozása nélkül takarít meg nagy lemezterületet és sávszélességet.
+
+[Bővebben a snap szinkronizálásról](https://github.com/ethereum/devp2p/blob/master/caps/snap.md).
 
 #### Könnyű szinkronizálás (light sync) {#light-sync}
 
@@ -259,15 +294,13 @@ Az optimista szinkronizálás egy Merge utáni szinkronizálási stratégia, ame
 
 #### Ellenőrzésipont-alapú szinkronizálás {#checkpoint-sync}
 
-Az ellenőrzésipont-alapú vagy más néven „gyenge szubjektivitású” szinkronizálás első osztályú felhasználói élményt nyújt a Beacon-csomópont szinkronizálásához. A [gyenge szubjektivitás](/developers/docs/consensus-mechanisms/pos/weak-subjectivity/) feltevésein alapul, ami lehetővé teszi, hogy a kliens a Beacon láncot a genezis helyett egy közelmúltbeli, gyenge szubjektivitású ellenőrzési ponttól kezdve szinkronizálja. Ez jelentősen lerövidíti a kezdeti szinkronizálás idejét ahhoz hasonló bizalmi feltevések mellett, mintha a [genezistől](/glossary/#genesis-block) kezdve szinkronizálnánk.
+Az ellenőrzésipont-alapú vagy más néven gyenge szubjektivitású szinkronizálás első osztályú felhasználói élményt nyújt a Beacon-csomópont szinkronizálásához. A [gyenge szubjektivitás](/developers/docs/consensus-mechanisms/pos/weak-subjectivity/) feltevésein alapul, ami lehetővé teszi, hogy a kliens a Beacon láncot a genezis helyett egy közelmúltbeli, gyenge szubjektivitású ellenőrzési ponttól kezdve szinkronizálja. Ez jelentősen lerövidíti a kezdeti szinkronizálás idejét ahhoz hasonló bizalmi feltevések mellett, mintha a [genezistől](/glossary/#genesis-block) kezdve szinkronizálnánk.
 
 A gyakorlatban ez azt jelenti, hogy a csomópontunk egy távoli szolgáltatóhoz kapcsolódva a közelmúltban véglegesített állapotokat tölt le, majd attól a ponttól kezdve folytatja az adatok hitelesítését. Az adatokat szolgáltató harmadik fél bizalmat igényel, ezért körültekintően kell kiválasztani.
 
 Az [ ellenőrzésipont-alapú szinkronizálásról](https://notes.ethereum.org/@djrtwo/ws-sync-in-practice) bővebben
 
 ## További olvasnivaló {#further-reading}
-
-Az interneten sok információ található az Ethereum-kliensekről. Következzen néhány forrás, amely hasznos lehet.
 
 - [Ethereum-alapismeretek – 2. rész – A csomópontok megértése](https://kauri.io/ethereum-101-part-2-understanding-nodes/48d5098292fd4f11b251d1b1814f0bba/a) _– Wil Barnes, 2019. február 13._
 - [Teljes csomópontok futtatása az Ethereumon: Útmutató az alig motivált felhasználók számára](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux, 2019. november 7._

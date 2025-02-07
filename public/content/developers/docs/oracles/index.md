@@ -294,7 +294,7 @@ Decentralized oracle services ensure high availability of off-chain data to smar
 
 This ensures fault-tolerance since the oracle contract can rely on multiple nodes (who also rely on multiple data sources) to execute queries from other contracts. Decentralization at the source _and_ node-operator level is crucial—a network of oracle nodes serving information retrieved from the same source will run into the same problem as a centralized oracle.
 
-It is also possible for stake-based oracles can slash node operators who fail to respond quickly to data requests. This significantly incentivizes oracle nodes to invest in fault-tolerant infrastructure and provide data in timely fashion.
+It is also possible for stake-based oracles to slash node operators who fail to respond quickly to data requests. This significantly incentivizes oracle nodes to invest in fault-tolerant infrastructure and provide data in timely fashion.
 
 ### Good incentive compatibility {#good-incentive-compatibility}
 

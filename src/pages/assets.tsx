@@ -1,26 +1,17 @@
+import { HTMLAttributes } from "react"
 import type { GetStaticProps } from "next/types"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import {
-  Box,
-  Center,
-  Flex,
-  Heading,
-  type HeadingProps,
-  SimpleGrid,
-  type SimpleGridProps,
-  useColorModeValue,
-} from "@chakra-ui/react"
 
 import type { BasePageProps, ChildOnlyProp, Lang } from "@/lib/types"
 
 import AssetDownload from "@/components/AssetDownload"
 import FeedbackCard from "@/components/FeedbackCard"
-import { Image } from "@/components/Image"
-import InlineLink from "@/components/Link"
+import { TwImage } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
-import OldHeading from "@/components/OldHeading"
 import PageMetadata from "@/components/PageMetadata"
+import { Center, Flex } from "@/components/ui/flex"
+import InlineLink from "@/components/ui/Link"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
@@ -37,6 +28,7 @@ import { getLocaleTimestamp } from "@/lib/utils/time"
 // import leslieTheRhino from "@/public/images/upgrades/upgrade_rhino.png"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
+import useColorModeValue from "@/hooks/useColorModeValue"
 import ethDiamondBlack from "@/public/images/assets/eth-diamond-black.png"
 import ethDiamondBlackGray from "@/public/images/assets/eth-diamond-black-gray.png"
 import ethDiamondBlackWhite from "@/public/images/assets/eth-diamond-black-white.jpg"
@@ -89,34 +81,19 @@ import defi from "@/public/images/use-cases/defi.png"
 import wallet from "@/public/images/wallet.png"
 import whatIsEthereum from "@/public/images/what-is-ethereum.png"
 
-const Row = (props: SimpleGridProps) => (
-  <SimpleGrid
-    templateColumns="repeat(auto-fit, minmax(min(288px, 100%), 1fr))"
-    mx={-4}
-    mb="8"
+const Row = (props: ChildOnlyProp) => (
+  <div
+    className="-mx-4 mb-8 grid grid-cols-[repeat(auto-fit,minmax(min(288px,100%),1fr))]"
     {...props}
   />
 )
 
-const H2 = (props: ChildOnlyProp & HeadingProps) => (
-  <Heading
-    fontSize={{ base: "2xl", md: "3xl" }}
-    lineHeight={1.4}
-    mt={16}
-    mb="6"
-    scrollMarginTop={24}
-    {...props}
-  />
+const H2 = (props: HTMLAttributes<HTMLHeadingElement>) => (
+  <h2 className="mb-6 mt-16 scroll-mt-24 leading-xs" {...props} />
 )
 
 const H3 = (props: ChildOnlyProp) => (
-  <OldHeading
-    as="h3"
-    fontSize={{ base: "xl", md: "2xl" }}
-    lineHeight={1.4}
-    mb="0"
-    {...props}
-  />
+  <h3 className="mb-0 mt-10 leading-xs" {...props} />
 )
 
 export const getStaticProps = (async ({ locale }) => {
@@ -146,24 +123,22 @@ const AssetsPage = () => {
     ethDiamondPurple
   )
   return (
-    <Flex direction="column" width="full">
+    <Flex className="w-full flex-col">
       <PageMetadata
         title={t("page-assets-meta-title")}
         description={t("page-assets-meta-desc")}
       />
-      <Box as={MainArticle} py="4" px="8">
-        <Flex direction="column" px="8" py="4">
+      <MainArticle className="px-8 py-4">
+        <Flex className="flex-col px-8 py-4">
           <Center>
-            <Image
+            <TwImage
+              className="w-20"
               src={assetPageHeroImage}
               alt={t("page-assets-eth-diamond-gray")}
-              w="5rem"
             />
           </Center>
           <Center>
-            <Heading as="h1" size="2xl" my="8">
-              {t("page-assets-h1")}
-            </Heading>
+            <h1 className="my-8">{t("page-assets-h1")}</h1>
           </Center>
           <Center>
             <InlineLink href="/assets/#illustrations">
@@ -262,22 +237,19 @@ const AssetsPage = () => {
             title={t("page-assets-doge")}
             alt={t("page-assets-doge")}
             image={doge}
-            artistName="William Tempest"
-            artistUrl="https://cargocollective.com/willtempest"
+            artistName="WT"
           />
           <AssetDownload
             title={t("page-assets-blocks")}
             alt={t("page-assets-blocks")}
             image={developers}
-            artistName="William Tempest"
-            artistUrl="https://cargocollective.com/willtempest"
+            artistName="WT"
           />
           <AssetDownload
             title={t("page-assets-enterprise")}
             alt={t("page-assets-enterprise")}
             image={enterprise}
-            artistName="William Tempest"
-            artistUrl="https://cargocollective.com/willtempest"
+            artistName="WT"
           />
         </Row>
         <Row>
@@ -285,22 +257,19 @@ const AssetsPage = () => {
             title={t("page-assets-infrastructure")}
             alt={t("page-assets-infrastructure")}
             image={infrastructure}
-            artistName="William Tempest"
-            artistUrl="https://cargocollective.com/willtempest"
+            artistName="WT"
           />
           <AssetDownload
             title={t("page-assets-finance")}
             alt={t("page-assets-finance")}
             image={finance}
-            artistName="William Tempest"
-            artistUrl="https://cargocollective.com/willtempest"
+            artistName="WT"
           />
           <AssetDownload
             title={t("page-assets-impact")}
             alt={t("page-assets-impact")}
             image={impact}
-            artistName="William Tempest"
-            artistUrl="https://cargocollective.com/willtempest"
+            artistName="WT"
           />
         </Row>
         <Row>
@@ -308,22 +277,19 @@ const AssetsPage = () => {
             title={t("page-assets-future")}
             alt={t("page-assets-future")}
             image={future}
-            artistName="William Tempest"
-            artistUrl="https://cargocollective.com/willtempest"
+            artistName="WT"
           />
           <AssetDownload
             title={t("page-assets-hackathon")}
             alt={t("page-assets-hackathon")}
             image={hackathon}
-            artistName="William Tempest"
-            artistUrl="https://cargocollective.com/willtempest"
+            artistName="WT"
           />
           <AssetDownload
             title={t("page-assets-robot")}
             alt={t("page-assets-robot")}
             image={wallet}
-            artistName="William Tempest"
-            artistUrl="https://cargocollective.com/willtempest"
+            artistName="WT"
           />
         </Row>
         <Row>
@@ -571,7 +537,7 @@ const AssetsPage = () => {
             svgUrl="/images/assets/svgs/merge-panda.svg"
           />
         </Row>
-      </Box>
+      </MainArticle>
       <FeedbackCard />
     </Flex>
   )

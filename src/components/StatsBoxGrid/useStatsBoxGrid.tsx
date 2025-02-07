@@ -25,7 +25,7 @@ const formatSmallUSD = (value: number, locale: string): string => {
     currency: "USD",
     notation: "compact",
     minimumSignificantDigits: 2,
-    maximumSignificantDigits: 3,
+    maximumSignificantDigits: 2,
   }).format(value)
 }
 
@@ -96,27 +96,27 @@ export const useStatsBoxGrid = ({
   const metrics: StatsBoxMetric[] = [
     {
       apiProvider: "DeFi Llama",
-      apiUrl: "https://defillama.com/",
+      apiUrl: "https://defillama.com/chain/Ethereum",
       label: t("page-index-network-stats-value-defi-description"),
       state: valueLocked,
     },
     {
-      apiProvider: "GrowThePie",
-      apiUrl: "https://growthepie.xyz/",
-      label: t("page-index-network-stats-tx-day-description"),
-      state: txs,
+      apiProvider: "Dune Analytics",
+      apiUrl: "https://dune.com/hildobby/eth2-staking",
+      label: t("page-index-network-stats-total-eth-staked"),
+      state: totalEtherStaked,
     },
     {
-      apiProvider: "GrowThePie",
-      apiUrl: "https://growthepie.xyz/",
+      apiProvider: "growthepie",
+      apiUrl: "https://www.growthepie.xyz/fundamentals/transaction-costs",
       label: t("page-index-network-stats-tx-cost-description"),
       state: medianTxCost,
     },
     {
-      apiProvider: "Dune Analytics",
-      apiUrl: "https://dune.com/",
-      label: t("page-index-network-stats-total-eth-staked"),
-      state: totalEtherStaked,
+      apiProvider: "growthepie",
+      apiUrl: "https://www.growthepie.xyz/fundamentals/transaction-count",
+      label: t("page-index-network-stats-tx-day-description"),
+      state: txs,
     },
   ]
 

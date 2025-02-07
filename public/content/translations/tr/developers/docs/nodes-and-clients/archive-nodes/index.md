@@ -56,7 +56,7 @@ Kendi arşiv düğümünüzü başlatmadan önce, istemciler arasındaki farklar
 
 ## Tavsiye edilen uygulamalar
 
-[Bir düğümü çalıştırmak için genel tavsiye edilenler](/developers/docs/nodes-and-clients/run-a-node/) dışında, bir arşiv düğümü donanım ve bakım açısından zahmetli olabilir. Erigon'un [ana özellikleri](https://github.com/ledgerwatch/erigon#key-features) düşünüldüğünde en pratik bakış açısı [Erigon](/developers/docs/nodes-and-clients/#erigon) istemci ugulamasının kullanılmasıdır.
+[Bir düğümü çalıştırmaya yönelik genel tavsiyeler](/developers/docs/nodes-and-clients/run-a-node/) dışında, bir arşiv düğümü donanım ve bakım açısından daha fazla şey gerektirebilir. Erigon'un [ana özellikleri](https://github.com/ledgerwatch/erigon#key-features) düşünüldüğünde en pratik bakış açısı [Erigon](/developers/docs/nodes-and-clients/#erigon) istemci ugulamasının kullanılmasıdır.
 
 ### Donanım
 

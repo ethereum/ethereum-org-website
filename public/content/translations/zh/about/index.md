@@ -8,6 +8,8 @@ lang: zh
 
 ethereum.org 是一个为以太坊社区打造的公共且开源的网站，任何人都可以贡献其中。 我们有一支小型核心团队致力于维护和开发该网站，有全球数以千计的社区成员为其做贡献。
 
+**ethereum.org 的人员永远不会主动联系你。 请不要回应。**
+
 ## 关于名称的说明 {#a-note-on-names}
 
 人们常常混淆以太坊环境中的名称，这可能导致人们很难理解以太坊如何运作。 下面将对几个名称进行简明解释：
@@ -90,7 +92,7 @@ ethereum.org 是一个面向以太坊社区的开源公共网站和教育资源�
 
 为了使我们的工作更易于了解，并促进更多的社区合作，ethereum.org 核心团队发布了一份季度目标路线图概览。
 
-[查看我们的 2024 年 第 1 季度产品路线图](https://github.com/ethereum/ethereum-org-website/issues/12005)
+[查看我们的 2024 年第 3 季度产品路线图](https://github.com/ethereum/ethereum-org-website/issues/13399)
 
 **这看起来怎么样？**我们始终感谢为我们的路线图提供的反馈 - 如有改进之处，请告诉我们! 我们欢迎社区里的任何人提出想法和建议。
 
@@ -113,6 +115,10 @@ ethereum.org 是一个面向以太坊社区的开源公共网站和教育资源�
 如果你想要[对该网站做贡献](/contributing/)，请务必先阅读[我们的原则](/contributing/design-principles/)以及[我们的风格指南](/contributing/style-guide/)。
 
 欢迎大家针对我们的设计原则、设计体系和风格指南，提出反馈意见。 请记住，ethereum.org 来自社区，服务社区。
+
+## 许可证 {#license}
+
+除非另有说明，ethereum.org 网站是开源的，并基于 [MIT 许可证](https://github.com/ethereum/ethereum-org-website/blob/dev/LICENSE)构建。 更多关于 ethereum.org [使用条款](/terms-of-use/)的信息。
 
 ## 正在招聘 {#open-jobs}
 

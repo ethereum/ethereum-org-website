@@ -61,6 +61,7 @@ lang: zh-tw
 - [Alchemy Sepolia 水龍頭](https://sepoliafaucet.com/)
 - [Infura Sepolia 水龍頭](https://www.infura.io/faucet)
 - [Chainstack Sepolia 水龍頭](https://faucet.chainstack.com/sepolia-faucet)
+- [以太坊生態系統水龍頭](https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia)
 
 #### Goerli_（長期支援）_ {#goerli}
 
@@ -90,7 +91,7 @@ Goerli 是測試驗證和質押的測試網。 Goerli 測試網對想要運行�
 - [Coinbase 錢包水龍頭 | Goerli](https://coinbase.com/faucets/ethereum-goerli-faucet)
 - [Chainstack Goerli 水龍頭](https://faucet.chainstack.com/goerli-faucet)
 
-要在 Goerli 測試網上啟動驗證者，請使用 ethstaker 的[「cheap goerli validator（實惠的 goerli 驗證者）」啟動面板](https://goerli.launchpad.ethstaker.cc/en/)。
+在 Holesky 測試網上啟動驗證者時，需要使用 Ethstaker 的[「廉價 Holesky 驗證者」啟動面板](https://holesky.launchpad.ethstaker.cc/en/)。
 
 ### 二層網路測試網 {#layer-2-testnets}
 

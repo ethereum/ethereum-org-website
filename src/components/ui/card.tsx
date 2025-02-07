@@ -3,7 +3,7 @@ import { cva, VariantProps } from "class-variance-authority"
 
 import { cn } from "@/lib/utils/cn"
 
-import { BaseLink } from "./Link"
+import { BaseLink, LinkProps } from "./Link"
 
 const titleVariants = cva(
   "group-hover/link:underline group-focus/link:underline",
@@ -20,11 +20,10 @@ const titleVariants = cva(
   }
 )
 
-type CardProps = React.HTMLAttributes<HTMLDivElement> & {
-  href?: string
-}
+type CardProps = React.HTMLAttributes<HTMLDivElement> &
+  Pick<LinkProps, "href" | "customEventOptions">
 const Card = React.forwardRef<HTMLDivElement, CardProps>(
-  ({ className, href, ...props }, ref) => {
+  ({ className, href, customEventOptions, ...props }, ref) => {
     if (href) {
       return (
         <BaseLink
@@ -33,6 +32,7 @@ const Card = React.forwardRef<HTMLDivElement, CardProps>(
             "group/link rounded-2xl text-body no-underline hover:text-body",
             className
           )}
+          customEventOptions={customEventOptions}
           hideArrow
         >
           <div ref={ref} {...props} />

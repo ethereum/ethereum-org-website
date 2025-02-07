@@ -1,7 +1,7 @@
-import { Box, Flex } from "@chakra-ui/react"
-
-import { ButtonLink } from "@/components/Buttons"
 import Callout from "@/components/Callout"
+
+import { ButtonLink } from "../ui/buttons/Button"
+import { Flex } from "../ui/flex"
 
 import { APPLICATION_END_DATE, APPLICATION_URL } from "./constants"
 
@@ -15,20 +15,18 @@ export const ApplyNow = () => {
 
   if (dateToday < deadline) {
     return (
-      <Box pt={12}>
+      <div className="pt-12">
         <Callout
-          flex="1 1 416px"
           image={DolphinImage}
           titleKey="page-translatathon:translatathon-apply-now"
           descriptionKey="page-translatathon:translatathon-apply-now-desc"
-          alignItems="center"
-          textAlign="center"
+          className="flex-1 basis-[416px] items-center text-center"
         >
-          <Flex m="auto">
+          <Flex className="m-auto">
             <ButtonLink href={APPLICATION_URL}>Apply now</ButtonLink>
           </Flex>
         </Callout>
-      </Box>
+      </div>
     )
   } else {
     return <></>

@@ -252,7 +252,7 @@ This site uses **sentence casing** for header names as a convention. Only the fi
 
 ### Setting Up Your Wallet
 
-### Getting Enough Ether
+### Getting Enough ether
 ```
 
 ### Article authors {#authors}

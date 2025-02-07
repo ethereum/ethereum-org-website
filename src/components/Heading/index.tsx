@@ -37,7 +37,7 @@ const Heading = forwardRef<HeadingProps, "h2">((props, ref) => {
   } else {
     // If a `size` value is not passed to this wrapper, set a default based on the element
     // provided to the `as` prop
-    // Only heading elemnts will set the defaults (Default heading is `h2`)
+    // Only heading elements will set the defaults (Default heading is `h2`)
     const headingDefaultKeys = Object.keys(HEADING_SIZE_DEFAULTS)
 
     if (typeof as === "string" && headingDefaultKeys.includes(as)) {

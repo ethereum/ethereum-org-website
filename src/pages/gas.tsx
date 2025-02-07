@@ -38,8 +38,9 @@ import OldHeading from "@/components/OldHeading"
 import Text from "@/components/OldText"
 import PageHero from "@/components/PageHero"
 import PageMetadata from "@/components/PageMetadata"
-import Pill from "@/components/Pill"
 import Translation from "@/components/Translation"
+import { Divider } from "@/components/ui/divider"
+import { Tag } from "@/components/ui/tag"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
@@ -55,10 +56,6 @@ import whatIsEthereumImg from "@/public/images/what-is-ethereum.png"
 
 const Content = (props: BoxProps) => <Box px={8} w="full" {...props} />
 
-const Divider = (props: BoxProps) => (
-  <Box my={16} w="10%" h={1} bg="homeDivider" {...props} />
-)
-
 const Page = (props: FlexProps) => (
   <Flex
     as={MainArticle}
@@ -73,10 +70,7 @@ const Page = (props: FlexProps) => (
 
 export const StyledCard = (props: ComponentPropsWithRef<typeof Card>) => (
   <Card
-    flex="1 1 30%"
-    minW="280px"
-    maxW={{ base: "full", lg: "46%" }}
-    p={6}
+    className="min-w-[280px] max-w-full flex-[1_0_30%] p-6 md:max-w-[46%]"
     {...props}
   />
 )
@@ -162,7 +156,7 @@ const GasPage = () => {
         title={t("page-gas-meta-title")}
         description={t("page-gas-meta-description")}
       />
-      <Box background="layer2Gradient" width="full">
+      <div className="w-full bg-gradient-to-r from-accent-a/10 to-accent-c/10 dark:from-accent-a/20 dark:to-accent-c-hover/20">
         <Box pb={8}>
           <PageHero
             content={{
@@ -177,7 +171,7 @@ const GasPage = () => {
             }}
           />
         </Box>
-      </Box>
+      </div>
       <Content mb={{ base: 16, lg: 32 }} mt={16}>
         <Flex
           direction={{ base: "column", lg: "row" }}
@@ -185,7 +179,7 @@ const GasPage = () => {
           w="full"
         >
           <Box flex="60%" w="full" me={{ base: "auto", lg: 2 }}>
-            <InfoBanner mb={8} title={t("page-gas-summary-title")}>
+            <InfoBanner className="mb-8" title={t("page-gas-summary-title")}>
               <UnorderedList>
                 <ListItem>{t("page-gas-summary-item-1")}</ListItem>
                 <ListItem>{t("page-gas-summary-item-2")}</ListItem>
@@ -276,12 +270,7 @@ const GasPage = () => {
               </InlineLink>
             </Text>
           </Box>
-          <GhostCard
-            flex="40%"
-            maxW="640px"
-            alignSelf="center"
-            mt={{ base: 16, lg: 2 }}
-          >
+          <GhostCard className="mt-16 max-w-[640px] self-center md:w-2/5 lg:mt-2">
             <Emoji text=":cat:" className="text-5xl" />
             <H3>{t("page-gas-attack-of-the-cryptokitties-header")}</H3>
             <Text>{t("page-gas-attack-of-the-cryptokitties-text")}</Text>
@@ -306,8 +295,6 @@ const GasPage = () => {
                   key={benefit.emoji}
                   emoji={benefit.emoji}
                   description={benefit.description}
-                  className="text-5xl"
-                  align="center"
                 />
               </Box>
             ))}
@@ -328,9 +315,9 @@ const GasPage = () => {
             <Flex alignItems="flex-start">
               <H2 mt={0}>{t("page-gas-how-is-gas-calculated-header")}</H2>
 
-              <Pill mt={1.5} ms={4} background="warning">
+              <Tag status="warning" className="ms-4 mt-1.5">
                 {t("page-gas-advanced")}
-              </Pill>
+              </Tag>
             </Flex>
             <Text>{t("page-gas-how-is-gas-calculated-text-1")}</Text>
             <UnorderedList ms={6} spacing={3}>

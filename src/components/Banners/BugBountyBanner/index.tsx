@@ -1,17 +1,20 @@
 // Libraries
 import React from "react"
-import { Center, Text } from "@chakra-ui/react"
 
 // Components
 import BannerNotification from "@/components/Banners/BannerNotification"
+import { Center } from "@/components/ui/flex"
 
 const BugBountyBanner = () => (
   <BannerNotification shouldShow>
     <Center>
-      <Text m={0} p={0}>
-        All Dencun-related bounties currently receive a 2x bonus multiplier (up
-        to 500,000 USD) up to two weeks before the scheduled mainnet hardfork.
-      </Text>
+      <p>
+        The Ethereum Protocol Attackathon is live on{" "}
+        <a href="https://immunefi.com/audit-competition/ethereum-protocol-attackathon/">
+          Immunefi
+        </a>{" "}
+        until the 20th of January, with up to $1,500,000 in rewards!
+      </p>
     </Center>
   </BannerNotification>
 )

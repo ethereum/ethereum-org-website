@@ -45,8 +45,8 @@ sidebarDepth: 2
 
 - [节点地图](https://etherscan.io/nodetracker)由 Etherscan 区块浏览器提供
 - [以太坊节点](https://ethernodes.org/)由 Bitfly 提供
-- [以太坊节点爬虫](https://crawler.ethereum.org/)
 - [Nodewatch](https://www.nodewatch.io/) 由 Chainsafe 提供，爬取共识节点
+- [Monitoreth](https://monitoreth.io/) — 由 MigaLabs 开发的分布式网络监测工具
 
 ## 节点类型 {#node-types}
 
@@ -130,13 +130,14 @@ sidebarDepth: 2
 
 下表汇总了不同的客户端。 这些客户端均通过[客户端测试](https://github.com/ethereum/tests)并得到积极维护，以保持与网络升级同步。
 
-| 客户端                                             | 语言      | 操作系统：               | 网络                             | 同步策略            | 状态缓冲           |
-| ----------------------------------------------- | ------- | ------------------- | ------------------------------ | --------------- | -------------- |
-| [Geth](https://geth.ethereum.org/)              | Go      | Linux、Windows、macOS | 主网、Sepolia、Goerli              | 快照、完全           | Archive、Pruned |
-| [Nethermind](http://nethermind.io/)             | C#、.NET | Linux、Windows、macOS | 主网、Sepolia、Goerli 及其他          | 快照（不提供服务）、快速、完全 | Archive、Pruned |
-| [Besu](https://besu.hyperledger.org/en/stable/) | Java    | Linux、Windows、macOS | Mainnet, Sepolia, Goerli, 以及更多 | 快照、快速、完全        | Archive、Pruned |
-| [Erigon](https://github.com/ledgerwatch/erigon) | Go      | Linux、Windows、macOS | Mainnet, Sepolia, Goerli, 以及更多 | 完全              | Archive、Pruned |
-| [Reth](https://github.com/paradigmxyz/reth)     | Rust语言  | Linux、Windows、macOS | 主网、Sepolia、Goerli 及其他          | 完全              | Archive、Pruned |
+| 客户端                                                                    | 语言         | 操作系统：               | 网络                 | 同步策略                                               | 状态缓冲           |
+| ---------------------------------------------------------------------- | ---------- | ------------------- | ------------------ | -------------------------------------------------- | -------------- |
+| [Geth](https://geth.ethereum.org/)                                     | Go         | Linux、Windows、macOS | 主网、Sepolia、Holesky | [快照](#snap-sync)、[完全](#full-sync)                  | Archive、Pruned |
+| [Nethermind](https://www.nethermind.io/)                               | C#、.NET    | Linux、Windows、macOS | 主网、Sepolia、Holesky | [快照](#snap-sync)（不提供服务）、快速、[完全](#full-sync)        | Archive、Pruned |
+| [Besu](https://besu.hyperledger.org/en/stable/)                        | Java       | Linux、Windows、macOS | 主网、Sepolia、Holesky | [快照](#snap-sync)、[快速](#fast-sync)、[完全](#full-sync) | Archive、Pruned |
+| [Erigon](https://github.com/ledgerwatch/erigon)                        | Go         | Linux、Windows、macOS | 主网、Sepolia、Holesky | [完全](#full-sync)                                   | Archive、Pruned |
+| [Reth](https://reth.rs/)                                               | Rust语言     | Linux、Windows、macOS | 主网、Sepolia、Holesky | [完全](#full-sync)                                   | Archive、Pruned |
+| [EthereumJS](https://github.com/ethereumjs/ethereumjs-monorepo)_（测试版）_ | TypeScript | Linux、Windows、macOS | Sepolia、Holesky    | [完全](#full-sync)                                   | 修剪             |
 
 有关受支持网络的更多信息，请仔细阅读[以太坊网络](/developers/docs/networks/)。
 
@@ -164,9 +165,27 @@ Nethermind 是使用 C# .NET 技术栈创建的以太坊实现，依照 LGPL-3.0
 
 - 优化虚拟机
 - 状态访问
-- 联网和丰富的功能，如 Promethe/Graphana 仪表板、seq 企业日志支持、JSON RPC 跟踪和分析插件
+- 联网和丰富的功能，如 Prometheus/Grafana 仪表板、seq 企业日志支持、JSON-RPC 跟踪和分析插件。
 
 Nethermind 也有[详细的相关文档](https://docs.nethermind.io)、强大的开发支持、在线社区，并为高级用户提供全天候支持。
+
+### Reth {#reth}
+
+Reth（Rust 以太坊的简称）是一个以太坊全节点实现，专注于用户友好、高度模块化、高速度和高效率。 Reth 一开始由 Paradigm 开发和推动，并依照 Apache 和 MIT 许可证授权。
+
+Reth 已达到生产就绪，适用于质押或高正常运行时间服务之类的关键任务环境。 在需要大裕度高性能保证的使用案例中表现良好，例如远程过程调用、最大可提取价值、索引、模拟和对等网络活动。
+
+查看 [Reth Book](https://reth.rs/) 或 [Reth GitHub 仓库](https://github.com/paradigmxyz/reth?tab=readme-ov-file#reth)了解更多信息。
+
+### 开发中的客户端 {#execution-in-development}
+
+以下客户端仍处于早期开发阶段，尚不建议用于生产。
+
+#### EthereumJS {#ethereumjs}
+
+EthereumJS 执行客户端 (EthereumJS) 是用 TypeScript 编写的，由许多包组成，包括由区块、交易和默克尔帕特里夏树类表示的核心以太坊原语和核心客户端组件（包括以太坊虚拟机 (EVM) 的实现、区块链类和 DevP2P 网络堆栈）。
+
+通过阅读其[相关文档](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master)了解更多信息
 
 ## 共识客户端 {#consensus-clients}
 
@@ -179,6 +198,7 @@ Nethermind 也有[详细的相关文档](https://docs.nethermind.io)、强大的
 | [Nimbus](https://nimbus.team/)                                | Nim        | Linux、Windows、macOS | 信标链、Goerli、Sepolia、Ropsten 等                |
 | [Prysm](https://docs.prylabs.network/docs/getting-started/)   | Go         | Linux、Windows、macOS | 信标链、Gnosis、Goerli、Pyrmont、Sepolia、Ropsten 等 |
 | [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) | Java       | Linux、Windows、macOS | 信标链、Gnosis、Goerli、Sepolia、Ropsten 等         |
+| [Grandine](https://docs.grandine.io/)（测试版）                    | Rust语言     | Linux、Windows、macOS | 信标链、Goerli、Sepolia 等                        |
 
 ### Lighthouse {#lighthouse}
 
@@ -212,6 +232,12 @@ Teku 提供了非常灵活的部署选项。 信标节点和验证者客户端�
 
 Teku 用 Java 语言编写，并依照 Apache 2.0 获得许可。 它由 ConsenSys 的 Protocols 团队开发，该团队还要对 Besu 和 Web3Signer 负责。 在 [Teku 相关文档](https://docs.teku.consensys.net/en/latest/)中了解更多信息。
 
+### Grandine {#grandine}
+
+Grandine 是一种依据 GPL-3.0 许可的共识客户端实现，使用 Rust 语言编写。 它由 Grandine 核心团队维护，快速、高效且轻量。 它适合各种类型的质押者，从运行低资源设备（如树莓派设备）的单独质押者，到运行数万个验证者的机构质押者。
+
+你可以在 [Grandine 手册](https://docs.grandine.io/)中找到相关文档
+
 ## 同步模式 {#sync-modes}
 
 为了追踪和验证网络中的最新数据，以太坊客户端需要与最新网络状态同步。 同步方法如下：从对等节点下载数据，用加密方法验证其完整性，并构建一个本地区块链数据库。
@@ -220,21 +246,32 @@ Teku 用 Java 语言编写，并依照 Apache 2.0 获得许可。 它由 ConsenS
 
 ### 执行层同步模式 {#execution-layer-sync-modes}
 
-#### 完全归档同步 {#full-sync}
+执行层可以在不同的模式下运行，以适应不同的使用案例，从重新执行区块链的世界状态到只从可信检查点同步链的小费。
 
-完全同步下载所有区块（包括区块头、交易和收据），并通过执行从创世块开始的每个区块逐步生成区块链的状态。
+#### 完全同步 {#full-sync}
+
+完全同步会下载所有区块（包括区块头和区块体），并通过执行自创世块以来的每个区块，以增量方式重新生成区块链的状态。
 
 - 通过验证每笔交易，最大限度地减少信任并实现最高安全性。
 - 随着交易数量的增加，处理所有交易可能需要几天到几周时间。
 
-#### 完全快照同步 {#snap-sync}
+[存档节点](#archive-node)会执行完全同步，以构建（并保留）每个区块中每笔事务所做的状态更改的完整历史记录。
 
-快照同步逐块验证区块链，就像完全归档同步一样；然而，有别于从创世块开始验证，它会从更近期的“可信”检查点开始验证，而该检查点已知是真实区块链的一部分。 节点会定期保存检查点，同时删除早于某个时间的数据。 快照用于在需要时重新生成状态数据，而不需要永久保存。
+#### 快速同步 {#fast-sync}
 
-- 最快的同步策略，目前是以太坊主网默认设置
-- 节省大量磁盘使用空间和网络带宽，同时不影响安全
+与完全同步一样，快速同步会下载所有区块（包括区块头、交易和收据）。 不过，快速同步并不重新处理历史交易，而是依赖收据，直至到达最近的头部时，再切换到导入和处理区块，以提供一个完整的节点。
 
-[关于快照同步的更多信息](https://github.com/ethereum/devp2p/blob/master/caps/snap.md)
+- 快速同步策略。
+- 降低处理需求以减少带宽使用。
+
+#### 快照同步 {#snap-sync}
+
+快照同步同样是逐块验证链。 不同的是，快照同步不是从创世区块开始，而是从一个最近的已知为真实区块链一部分的受信任检查点开始。 节点会定期保存检查点，同时删除早于某个时间的数据。 这些快照被用于在需要时重新生成状态数据，而不是永久储存它。
+
+- 最快的同步策略，目前是以太坊主网的默认策略。
+- 节省大量磁盘空间和网络带宽，同时不牺牲安全性。
+
+[关于快照同步的更多信息](https://github.com/ethereum/devp2p/blob/master/caps/snap.md)。
 
 #### 轻量同步 {#light-sync}
 
@@ -257,15 +294,13 @@ Teku 用 Java 语言编写，并依照 Apache 2.0 获得许可。 它由 ConsenS
 
 #### 检查点同步 {#checkpoint-sync}
 
-检查点同步也称为弱主观性同步，可提供卓越的信标节点同步用户体验。 它基于[弱主观性](/developers/docs/consensus-mechanisms/pos/weak-subjectivity/)假设，这使得信标链能够从最近的弱主观性检查点而不是从创世块开始同步。 检查点同步可大幅加快初始同步速度，其信任假设与从[创世块](/glossary/#genesis-block)同步类似。
+检查点同步也称为“弱主观性同步”，在同步信标节点时可提供卓越的用户体验。 它基于[弱主观性](/developers/docs/consensus-mechanisms/pos/weak-subjectivity/)假设，因而能够从最近的弱主观性检查点而不是从创世块同步信标链。 检查点同步可大幅加快初始同步速度，其信任假设与从[创世块](/glossary/#genesis-block)同步时类似。
 
-在实践中，这意味着你的节点会连接到远程服务，以下载最近的最终确定状态并从该点继续验证数据。 提供数据的第三方应该可信，因此要谨慎加以选择。
+在实践中，这意味着你的节点会连接到远程服务，以下载最近的最终确定状态并从该点继续验证数据。 提供数据的第三方会受到信任，因此要谨慎选择。
 
 关于[检查点同步](https://notes.ethereum.org/@djrtwo/ws-sync-in-practice)的更多信息
 
 ## 延伸阅读 {#further-reading}
-
-你可以在互联网上找到大量关于以太坊客户端的信息。 以下是一些可能有用的资源。
 
 - [以太坊 101 - 第二部分 - 了解节点](https://kauri.io/ethereum-101-part-2-understanding-nodes/48d5098292fd4f11b251d1b1814f0bba/a) _– Wil Barnes，2019 年 2 月 13 日_
 - [运行以太坊全节点：勉励者指南](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux，2019 年 11 月 7 日_

@@ -6,7 +6,7 @@ lang: hu
 
 Az optimista összevont tranzakciók olyan L2 protokollok, amelyeket az Ethereum alapréteg tranzakcióátvitelének növelésére terveztek. A tranzakciók láncon kívüli feldolgozásával csökkentik a számításokat a fő Ethereum-láncon, ami jelentősen javítja a feldolgozási sebességet. A [mellékláncokhoz](/developers/docs/scaling/sidechains/) képest az optimistaz összevont tranzakciók a főhálózat biztonságát a tranzakciós eredmények láncon belüli közzétételével nyerik, a [plazmaláncokkal összevetve](/developers/docs/scaling/plasma/) ugyanúgy az Ethereumon ellenőrzik a tranzakciókat csalási bizonyítékokkal, de azok a tranzakciós adatokat máshol tárolják.
 
-Mivel a számítás az Ethereum használatának lassú és drága része, az optimista összevont tranzakciók akár 10-100-szoros javulást is kínálnak a méretezhetőségben. Az optimista összevont tranzakciók a tranzakciókat is `calldata` mezőként írják az Ethereumba, csökkentve a felhasználók gázköltségeit.
+Mivel a számítás az Ethereum használatának lassú és drága része, az optimista összevont tranzakciók akár 10-100-szoros javulást is kínálnak a méretezhetőségben. Az optimista összevont tranzakciók a tranzakciókat is `calldata` mezőként vagy a [blobokba](/roadmap/danksharding/) írják az Ethereumba, csökkentve a felhasználók gázköltségeit.
 
 ## Előfeltételek {#prerequisites}
 
@@ -14,7 +14,7 @@ Mivel a számítás az Ethereum használatának lassú és drága része, az opt
 
 ## Mi az az optimista összevont tranzakció? {#what-is-an-optimistic-rollup}
 
-Az optimista összevont tranzakció az Ethereum skálázásának olyan megközelítése, amely a számítást és a státusztárolást láncon kívül végzi. Az optimista összevont tranzakciók a tranzakciókat az Ethereumon kívül hajtják végre, de a tranzakciós adatokat `calldata`-ként a főhálózatra küldik.
+Az optimista összevont tranzakció az Ethereum skálázásának olyan megközelítése, amely a számítást és a státusztárolást láncon kívül végzi. Az optimista összevont tranzakciók a tranzakciókat az Ethereumon kívül hajtják végre, de a tranzakciós adatokat `calldata` mezőként vagy [blobokban](/roadmap/danksharding/) a főhálózatra küldik.
 
 Az optimista összevont tranzakciók operátorai több láncon kívüli tranzakciót kötegelnek össze nagy tételekben, mielőtt elküldik az Ethereumnak. Ez a megközelítés lehetővé teszi a fix költségek elosztását a kötegek tranzakcióira, csökkentve ezzel a végfelhasználók díjait. Az optimista összevont tranzakciók tömörítési technikákat is alkalmaznak, hogy csökkentsék az Ethereumban közzétett adatok mennyiségét.
 
@@ -44,7 +44,7 @@ Az optimista összevont tranzakciók az Ethereum fő protokolljára támaszkodna
 
 ### Adatelérhetőség {#data-availability}
 
-Az optimista összevont tranzakciók a tranzakciós adatokat `calldata`-ként küldik az Ethereumba. Mivel az összevont tranzakció-lánc végrehajtása a benyújtott tranzakciókon alapul, bárki felhasználhatja ezt az Ethereum alaprétegén tárolt információt az összevont tranzakció státuszának végrehajtásához és a státuszváltozások helyességének ellenőrzéséhez.
+Az optimista összevont tranzakciók a tranzakciós adatokat `calldata` mezőként vagy [blobokban](/roadmap/danksharding/) küldik az Ethereumba. Mivel az összevont tranzakció-lánc végrehajtása a benyújtott tranzakciókon alapul, bárki felhasználhatja ezt az Ethereum alaprétegén tárolt információt az összevont tranzakció státuszának végrehajtásához és a státuszváltozások helyességének ellenőrzéséhez.
 
 [Az adatelérhetőség](/developers/docs/data-availability/) kritikus fontosságú, mivel a státuszadatokhoz való hozzáférés nélkül azok, akik megkérdőjelezik az eredményt, nem tudnak csalási bizonyítékokat konstruálni az érvénytelen összevont tranzakciós műveletek vitatására. Mivel az Ethereum biztosítja az adatelérhetőséget, csökken annak kockázata, hogy az összevont tranzakció operátorai rosszindulatú cselekményeket követnek el (pl. érvénytelen blokkok beküldése).
 
@@ -86,15 +86,19 @@ A szekvencer különbözik a hagyományos rollup-operátortól, mert nagyobb bef
 
 #### Összevonttranzakció-blokkok beküldése az Ethereumra {#submitting-blocks-to-ethereum}
 
-Az optimista összevont tranzakció operátora a láncon kívüli tranzakciókat egy kötegbe gyűjti, és elküldi az Ethereumnak hitelesítésre. Ez a folyamat magában foglalja a tranzakciókkal kapcsolatos adatok tömörítését és közzétételét az Ethereumban `calldata`-ként.
+Az optimista összevont tranzakció operátora a láncon kívüli tranzakciókat egy kötegbe gyűjti, és elküldi az Ethereumnak hitelesítésre. Ez a folyamat magában foglalja a tranzakciókkal kapcsolatos adatok tömörítését és közzétételét az Ethereumban `calldata` mezőként vagy blobokban.
 
-A `calldata` az okosszerződésben egy nem módosítható, nem állandó terület, amely a [memóriához](/developers/docs/smart-contracts/anatomy/#memory) hasonlóan viselkedik. A `calldata` a blokklánc [historikus naplóinak](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html?highlight=memory#logs) részeként fennmarad a láncban, de az Ethereum státusz részeként nem tárolódik. Mivel a `calldata` nem érinti az Ethereum státuszát, ezért olcsóbb az adatok tárolása a láncban.
+A `calldata` az okosszerződésben egy nem módosítható, nem állandó terület, amely a [memóriához](/developers/docs/smart-contracts/anatomy/#memory) hasonlóan viselkedik. A `calldata` a blokklánc [historikus naplóinak](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html?highlight=memory#logs) részeként fennmarad a láncban, de az Ethereum státusz részeként nem tárolódik. Mivel a `calldata` nem érinti az Ethereum státuszát, ezért olcsóbb, mintha az adatokat a láncban kellene tárolni.
 
 A `calldata` kulcsszót a Solidityben arra is használják, hogy végrehajtáskor argumentumokat adjanak át egy okosszerződés-függvénynek. A `calldata` azonosítja a tranzakció során meghívott függvényt, és a függvény bemeneteit egy tetszőleges bájtsorozat formájában tartalmazza.
 
 Az optimista összevont tranzakciók a `calldata`-t arra használják, hogy a tömörített tranzakciós adatokat a láncon belüli szerződéshez küldik. az összevont tranzakció operátora úgy ad be új köteget, hogy az összevont tranzakciós szerződésben szereplő függvényt meghívja és a tömörített adatokat függvényargumentumként átadja. A `calldata` használata csökkenti a felhasználói díjakat, mivel az összevont tranzakciók legtöbb költsége az adatok láncban történő tárolásából származik.
 
 Itt megtekinthet egy [példát](https://etherscan.io/tx/0x9102bfce17c58b5fc1c974c24b6bb7a924fb5fbd7c4cd2f675911c27422a5591) egy összevonttranzakció-köteg benyújtására, mely bemutatja a koncepció működését. A szekvenszer meghívta a `appendSequencerBatch()` metódust, és a tömörített tranzakciós adatokat a `calldata` segítségével adta át bemenetként.
+
+Néhány összevont tranzakció blobot használ, hogy a tranzakciókötegeket az Ethereumon letárolja.
+
+A blobok nem módosíthatók és nem állandóak (ahogy a `calldata` is), de kb. 18 nap múlva levágják azokat az előzményadatokról. A blobokkal kapcsolatos további információkért tekintse meg [Danksharding](/roadmap/danksharding) oldalt.
 
 ### Státuszrögzítések {#state-commitments}
 
@@ -194,9 +198,9 @@ Végül fontos tudni, hogy a szerződések közötti L2 > L1 üzenethívások n�
 
 Az optimista összevont tranzakciók az Ethereumhoz hasonlóan gázdíjrendszert használnak annak jelölésére, hogy a felhasználók mennyit fizetnek tranzakciónként. Az optimista összevont tranzakciók után felszámított díjak a következő összetevőktől függenek:
 
-1. **Státuszrögzítés**: Az optimista összevont tranzakciók a tranzakciós adatokat és a blokkfejléceket (amelyek az előző blokkfejléc hash-éből, a státuszgyökérből és a köteggyökérből állnak) `calldata`-ként teszik közzé az Ethereumon. Egy Ethereum-tranzakció minimális költsége 21 000 gáz. Az optimista összevont tranzakciók csökkenthetik a tranzakció L1-re írásának költségét azáltal, hogy több tranzakciót kötegelnek egyetlen blokkban (így a 21 000 gáz több felhasználói oszlik el).
+1. **Státuszrögzítés**: Az optimista összevont tranzakciók a tranzakciós adatokat és a blokkfejléceket (amelyek az előző blokkfejléc hash-éből, a státuszgyökérből és a köteggyökérből állnak) `blobként` vagy egy „binárisan nagy objektumként” teszik közzé az Ethereumon. [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844) bevezetett egy költséghatékony megoldást az adat láncon belüli tárolására. A `blob` egy új tranzakciós mező, mellyel az összevont tranzakciók képesek tömörített státuszváltozást rögzíteni az Ethereumon (L1). A `calldata` mezőhöz képest, mely állandóan elérhető a láncon, a blobok rövid életűek és levághatók a kliensekről [4096 korszak után](https://github.com/ethereum/consensus-specs/blob/81f3ea8322aff6b9fb15132d050f8f98b16bdba4/configs/mainnet.yaml#L147) (kb.18 nappal később). A blobok használatával, melyekbe a tömörített tranzakciós adatok kötegeit teszik, az optimista összevont tranzakciók jelentősen csökkentették annak költségét, hogy a tranzakciók bekerüljenek az L1-re.
 
-2. **`calldata`**: Az alap tranzakciós díjon túl az egyes státuszok írásának költsége az L1-re küldött `calldata` méretétől függ. A `calldata` költségeit jelenleg az [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) szabályozza, amely a `calldata` nem nulla bájtjaira 16, nulla bájtjaira 4 gázköltséget ír elő. A felhasználói díjak csökkentése érdekében az összevont tranzakció operátorai tömörítik a tranzakciókat, hogy csökkentsék az Ethereumon közzétett `calldata` bájtok számát.
+2. A **Blob gázhasználata**: a blobot igénylő tranzakciók egy dinamikus díjmechanizmust használnak, amely hasonlít az [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) által bevezetetthez. A 3-as típusú tranzakciók gázdíja egy alap blobdíjjal számol, melyet a hálózat határoz meg a blobhelyre való kereslet és a küldött tranzakció blobhely használata alapján.
 
 3. **L2 operátordíjak**: Ezt az összevonttranzakció-csomópontnak fizetik a tranzakciók feldolgozása során felmerülő számítási költségek ellentételezéseként, hasonlóan az Ethereum gázdíjaihoz. az összevonttranzakció-csomópontok alacsonyabb tranzakciós díjakat számítanak fel, mivel az L2-k nagyobb feldolgozási kapacitással rendelkeznek, és nincsenek olyan hálózati torlódásaik, amelyek miatt az Ethereum validálói magasabb díjú tranzakciókat részesítenek előnyben.
 
@@ -210,16 +214,16 @@ Az Ethereum korlátozza, hogy mennyi adatot tartalmazhatnak a blokkok, gázegys�
 
 Az optimista összevont tranzakciók többféle technikát használnak a tranzakciós adatok tömörítésének elérésére és a másodpercenkénti tranzakciószám (TPS) javítására. Ez a [cikk](https://vitalik.eth.limo/general/2021/01/05/rollup.html) például összehasonlítja, hogy egy egyszerű felhasználói tranzakció (ether küldése) mennyi adatot generál a főhálózaton és az összevont tranzakció-on:
 
-| Parameter | Ethereum (L1)             | Összevont tranzakció (L2) |
-| --------- | ------------------------- | ------------------------- |
-| Nonce     | ~3                        | 0                         |
-| Gázár     | ~8                        | 0–0,5                     |
-| Gáz       | 3                         | 0–0,5                     |
-| Címzett   | 21                        | 4                         |
-| Value     | 9                         | ~3                        |
-| Aláírás   | ~68 (2 + 33 + 33)         | ~0,5                      |
-| Küldő     | 0 (az aláírásból kinyeri) | 4                         |
-| **Total** | **~112 bájt**             | **~12 bájt**              |
+| Paraméter    | Ethereum (L1)             | Összevont tranzakció (L2) |
+| ------------ | ------------------------- | ------------------------- |
+| Nonce        | ~3                        | 0                         |
+| Gázár        | ~8                        | 0–0,5                     |
+| Gáz          | 3                         | 0–0,5                     |
+| Címzett      | 21                        | 4                         |
+| Érték        | 9                         | ~3                        |
+| Aláírás      | ~68 (2 + 33 + 33)         | ~0,5                      |
+| Küldő        | 0 (az aláírásból kinyeri) | 4                         |
+| **Összesen** | **~112 bájt**             | **~12 bájt**              |
 
 Néhány hozzávetőleges számítás ezekkel a számokkal segíthet megmutatni az optimista összevont tranzakció által biztosított skálázhatósági javulást:
 
@@ -249,16 +253,10 @@ Az [adat sharding](/roadmap/danksharding/) bevezetése az Ethereumban várhatóa
 
 <YouTube id="7pWxCklcNsU" start="263" />
 
-### Optimista összevont tranzakciók használata {#use-optimistic-rollups}
-
-Az optimista összevont tranzakcióknak többféle megvalósítása létezik, amelyeket integrálhat a dappjaiba:
-
-<RollupProductDevDoc rollupType="optimistic" />
-
 ## További információk az optimista összevont tranzakciókról
 
 - [Hogyan működnek az optimista összevont tranzakciók (teljes útmutató)](https://www.alchemy.com/overviews/optimistic-rollups)
-- [Minden, amit az optimista összevont tranzakciókról tudni kell](https://research.paradigm.xyz/rollups)
+- [Mi az a blokklánc összevont tranzakció? Technikai bevezetés](https://www.ethereum-ecosystem.com/blog/what-is-a-blockchain-rollup-a-technical-introduction)
 - [Az alapvető útmutató az Arbitrumhoz](https://newsletter.banklesshq.com/p/the-essential-guide-to-arbitrum)
 - [Hogyan működik valójában az optimista összevont tranzakció?](https://www.paradigm.xyz/2021/01/how-does-optimisms-rollup-really-work)
 - [Az OVM részletes bemutatása](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)

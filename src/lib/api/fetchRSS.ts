@@ -19,6 +19,7 @@ export const fetchRSS = async (xmlUrl: string | string[]) => {
   const allItems: RSSItem[][] = []
   for (const url of urls) {
     const response = (await fetchXml(url)) as RSSResult | AtomResult
+
     if ("rss" in response) {
       const [mainChannel] = response.rss.channel as RSSChannel[]
       const [source] = mainChannel.title
@@ -41,6 +42,10 @@ export const fetchRSS = async (xmlUrl: string | string[]) => {
         // Map to RSSItem object
         .map((item) => {
           const getImgSrc = () => {
+            if (url.includes("medium.com/feed/"))
+              return item["content:encoded"]?.[0].match(
+                /https?:\/\/[^"]*?\.(jpe?g|png|webp)/g
+              )
             if (item.enclosure) return item.enclosure[0].$.url
             if (item["media:content"]) return item["media:content"][0].$.url
             return channelImage
@@ -124,15 +129,19 @@ export const fetchRSS = async (xmlUrl: string | string[]) => {
  * @returns A promise that resolves to the parsed XML data as a JSON object.
  */
 export const fetchXml = async (url: string) => {
-  const response = await fetch(url)
-  const xml = await response.text()
-  let returnObject: Record<string, unknown> = {}
-  parseString(xml, (err, result) => {
-    if (err) {
-      console.error(err)
-      return
-    }
-    returnObject = result
-  })
-  return returnObject
+  try {
+    const response = await fetch(url)
+    const xml = await response.text()
+    let returnObject: Record<string, unknown> = {}
+    parseString(xml, (err, result) => {
+      if (err) {
+        throw err // Throw the error to be caught by the outer try-catch
+      }
+      returnObject = result
+    })
+    return returnObject
+  } catch (error) {
+    console.error("Error fetching or parsing XML:", url, error)
+    throw error
+  }
 }

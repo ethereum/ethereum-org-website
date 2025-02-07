@@ -117,11 +117,12 @@ Az Ethereum [skálázhatósági fejlesztései](/roadmap/) meg fogják oldani a g
 
 A második blokkláncréteggel (L2) kialakított skálázás a fő kezdeményezés arra, hogy nagy mértékben javuljanak a gázköltségek, a felhasználói élmény és a skálázhatóság. [Bővebben az L2 skálázásról](/developers/docs/scaling/#layer-2-scaling).
 
-## A gázdíjak felügyelete {#moitoring-gas-fees}
+## A gázdíjak felügyelete {#monitoring-gas-fees}
 
 Ha Ön szeretné felügyelni a gázdíjakat azért, hogy kevesebbet kelljen fizetnie az ETH-tranzakciókért, akkor számos eszköz áll rendelkezésre:
 
 - [Etherscan](https://etherscan.io/gastracker) _ Tranzakció gázdíjának becslése_
+- [ETH Gas Tracker](https://www.ethgastracker.com/) _Figyeli és kövesti az Ethereum és az L2 gázárakat a tranzakciós díjak csökkentése és a pénzmegtakarítás érdekében_
 - [Blocknative ETH gázbecslés](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) _Gázbecslő Chrome-kiterjesztés, amely támogatja az eredeti (0. típusú) és az EIP-1559 (2. típusú) tranzakciókat._
 - [Cryptoneur gázdíjkalkulátor](https://www.cryptoneur.xyz/gas-fees-calculator) _Számolja ki a gázdíjat a saját pénznemében a különféle tranzakciókra az Ethereum főhálózatán, az Arbitrumon és a Polygonon._
 

@@ -5,7 +5,7 @@ lang: tr
 sidebarDepth: 2
 ---
 
-Özyinelemeli Uzunluk Ön Eki (RLP), Ethereum'un yürütüm istemcilerinde yaygın şekilde kullanılan bir serileştirme yoludur. RLP, düğümler arasında veri transferini, alan açısından verimli bir biçimde standartlaştırır. RLP'nin amacı, rastgele iç içe geçmiş ikili veri dizilerini kodlamaktır. RLP, Ethereum'un yürütüm katmanında nesneleri serileştirmek için kullanılan temel kodlama yöntemidir. RLP'nin tek amacı yapıyı kodlamaktır; spesifik veri çeşitlerinin kodlanması (örn. dizeler, değişkenler) daha üst düzey protokollere bırakılır, ancak pozitif RLP tam sayıları başında sıfır olmadan yüksek son haneli ikili biçimde temsil edilmelidir (böylece tam sayı değeri sıfır, boş bayt dizisine eşdeğer olmuş olur). Seri durumundan çıkarılmış başında sıfır olan pozitif tam sayılar geçersiz kabul edilir. Dize uzunluğunun tam sayı gösteriminin yanı sıra yükteki tam sayılar da bu şekilde kodlanmalıdır.
+Özyinelemeli Uzunluk Ön Eki (RLP), Ethereum'un yürütüm istemcilerinde yaygın şekilde kullanılan bir serileştirme yoludur. RLP, düğümler arasında veri transferini, alan açısından verimli bir biçimde standartlaştırır. RLP'nin amacı, rastgele iç içe geçmiş ikili veri dizilerini kodlamaktır. RLP, Ethereum'un yürütüm katmanında nesneleri serileştirmek için kullanılan temel kodlama yöntemidir. RLP'nin ana amacı, yapıyı kodlamaktır; RLP, pozitif tamsayılar hariç olmak üzere belirli veri tiplerinin (örneğin dizeler, yüzer veriler) kodlanmasını daha yüksek düzeyli protokollere devreder. Pozitif tamsayılar, başlarında sıfır olmadan big-endian ikili biçiminde gösterilmelidir (böylece sıfır tamsayı değeri boş bayt dizisine eşdeğer olur). Başında sıfır bulunan seri duruma getirilmiş pozitif tamsayılar, RLP kullanan herhangi bir üst düzey protokol tarafından geçersiz olarak değerlendirilmelidir.
 
 Daha fazla bilgi için bkz. [Ethereum sarı kağıdı (Appendix B)](https://ethereum.github.io/yellowpaper/paper.pdf#page=19).
 
@@ -20,6 +20,7 @@ RLP kodlama fonksiyonu bir öğeyi içine alır. Bir öğe aşağıdaki gibi tan
 
 - bir dize (yani bayt dizisi), bir öğedir
 - öğelerin listesi, bir öğedir
+- bir pozitif tamsayı bir öğedir
 
 Örneğin, aşağıdakilerin tümü öğelerdir:
 
@@ -27,15 +28,18 @@ RLP kodlama fonksiyonu bir öğeyi içine alır. Bir öğe aşağıdaki gibi tan
 - "cat" kelimesini içeren dize;
 - herhangi bir sayıda dize içeren bir liste;
 - `["cat", ["puppy", "cow"], "horse", [[]], "pig", [""], "sheep"]` gibi daha karmaşık veri yapıları.
+- `100` sayısı
 
-Bu sayfanın geri kalanı bağlamında "dize", "belirli sayıda ikili veri baytı" anlamına gelir; hiçbir özel kodlama kullanılmaz ve dizelerin içeriği hakkında hiçbir bilgiye sahip olunduğu ima edilmez.
+Bu sayfanın geri kalanı bağlamında "dize", "belirli sayıda ikili veri baytı" anlamına gelir; hiçbir özel kodlama kullanılmaz ve dizelerin içeriği hakkında hiçbir bilgiye sahip olunduğu ima edilmez (minimum olmayan pozitif tamsayılara karşın kuralın gerektirdiği durumlar hariç).
 
 RLP kodlaması şu şekilde tanımlanır:
 
+- Pozitif bir tamsayı için big-endian yorumu tam sayı olan en kısa bayt dizisine dönüştürülür ve ardından aşağıdaki kurallar uyarınca bir dize olarak kodlanır.
 - Değer aralığı `[0x00, 0x7f]` (ondalık `[0, 127]`) olan tek bir bayt söz konusu olduğunda, bu bayt kendisinin RLP kodlamasıdır.
 - Aksi takdirde, eğer bir dize 0-55 bayt uzunluğunda ise RLP kodlaması, (**0x80**, ondalık olarak 128) değerine sahip bir tek bayt ile dizenin uzunluğu ve onu takip eden dizeden oluşur. Bu nedenle, ilk baytın aralığı `[0x80, 0xb7]` (ondalık olarak `[128, 183]`)'dir.
 - Eğer bir dize 55 bayttan daha uzunsa, RLP kodlaması bir tane **0xb7** (ondalık 183) değerine sahip tek bir bayt ile başlar. Ardından, dizenin uzunluğunun ikili formundaki uzunluğu bayt cinsinden eklenir, ardından dizenin uzunluğu ve en sonunda dizenin kendisi eklenir. Örneğin, 1024 bayt uzunluğundaki bir dize `\xb9\x04\x00` (ondalık `185, 4, 0`) olarak kodlanır ve ardından dize gelir. Burada, ilk bayt olarak `0xb9` (183 + 2 = 185) ve ardından gerçek dizenin uzunluğunu belirten 2 bayt `0x0400` (ondalık olarak 1024) gelir. Bu nedenle, ilk baytın aralığı `[0xb8, 0xbf]` (ondalık olarak `[184, 191]`) şeklindedir.
-- Bir listenin toplam yükü (yani tüm öğelerinin RLP kodlanmış toplam uzunluğu) 0-55 bayt arasında ise RLP kodlaması, **0xc0** değerine sahip tek bir bayt ile listenin uzunluğu ve ardından öğelerin RLP kodlamalarının birleştirilmiş halinden oluşur. Bu nedenle, ilk baytın aralığı `[0xc0, 0xf7]` (ondalık olarak `[192, 247]`) şeklindedir.
+- Bir dize 2^64 bayt uzunluğunda veya daha uzunsa kodlanamayabilir.
+- Bir listenin toplam yükü (yani tüm öğelerinin RLP kodlanmış toplam uzunluğu) 0-55 bayt arasında ise RLP kodlaması, **0xc0** değerine sahip tek bir bayt ile yükün uzunluğu ve ardından öğelerin RLP kodlamalarının birleştirilmiş halinden oluşur. Bu nedenle, ilk baytın aralığı `[0xc0, 0xf7]` (ondalık olarak `[192, 247]`) şeklindedir.
 - Bir listenin toplam yükü 55 bayttan daha uzunsa RLP kodlaması, **0xf7** değerine sahip tek bir bayt ile ikili biçimde yükün uzunluğunun bayt cinsinden uzunluğu ve ardından yükün uzunluğu ve onun da ardından öğelerin RLP kodlamalarının birleştirilmiş halinden oluşur. Bu nedenle, ilk baytın aralığı `[0xb8, 0xbf]` (ondalık olarak `[248, 255]`) şeklindedir.
 
 Kodda, bu:
@@ -73,9 +77,9 @@ def to_binary(x):
 - boş dize ('null') = `[ 0x80 ]`
 - boş liste = `[ 0xc0 ]`
 - tam sayı 0 =`[ 0x80 ]`
-- kodlanmış tam sayı 0 ('\\x00') = `[ 0x0f ]`
-- kodlanmış tam sayı 15 ('\\x0f') = `[ 0x0f ]`
-- kodlanmış tam sayı 1024 ('\\x04') = `[ 0x82, 0x04, 0x00 ]`
+- bayt '\\x00' = `[ 0x00 ]`
+- bayt '\\x0f' = `[ 0x0f ]`
+- baytlar '\\x04\\x00' = `[ 0x82, 0x04, 0x00 ]`
 - ağacın [küme teorisi ile gösterimi](http://en.wikipedia.org/wiki/Set-theoretic_definition_of_natural_numbers), `[ [], [[]], [ [], [[]] ] ] = [ 0xc7, 0xc0, 0xc1, 0xc0, 0xc3, 0xc0, 0xc1, 0xc0 ]`
 - "Lorem ipsum dolor sit amet, consectetur adipisicing elit" dizesi =`[ 0xb8, 0x38, 'L', 'o', 'r', 'e', 'm', ' ', ... , 'e', 'l', 'ı', 't' ]`
 
@@ -85,7 +89,7 @@ RLP'nin kodlaması kurallarına ve sürecine göre RLP kod çözme girdisi, bir 
 
 1.  giriş verilerinin ilk baytına (yani önek) ve veri tipinin kodunun çözülmesine göre, gerçek verilerin uzunluğu ve kayma;
 
-2.  verinin türüne ve kaymasına göre verilerin kodunu uygun şekilde çözün;
+2.  verilerin türüne ve kaymasına göre, pozitif tamsayılar için minimum kodlama kuralına uyarak, verilerin kodunu uygun şekilde çözün;
 
 3.  girdinin geri kalanını çözmeye devam edin;
 

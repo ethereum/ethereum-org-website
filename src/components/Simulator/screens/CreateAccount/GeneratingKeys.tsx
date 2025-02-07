@@ -87,7 +87,10 @@ export const GeneratingKeys = ({
             transition={{ duration: BUTTON_FADE_DURATION * 1e-3 }}
             style={{ position: "absolute", bottom: 0, width: "100%" }}
           >
-            <ProgressCta progressStepper={progressStepper} insetInline={0}>
+            <ProgressCta
+              className="inset-x-0"
+              progressStepper={progressStepper}
+            >
               {ctaLabel}
             </ProgressCta>
           </motion.div>

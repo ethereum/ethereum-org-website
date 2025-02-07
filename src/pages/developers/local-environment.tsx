@@ -1,29 +1,25 @@
+import { HTMLAttributes } from "react"
 import { GetStaticProps, InferGetStaticPropsType } from "next"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import {
-  Box,
-  Flex,
-  ListItem,
-  SimpleGrid,
-  UnorderedList,
-} from "@chakra-ui/react"
 
 import { BasePageProps, ChildOnlyProp, Lang } from "@/lib/types"
 import { Framework } from "@/lib/interfaces"
 
 import FeedbackCard from "@/components/FeedbackCard"
-import { Image } from "@/components/Image"
+import Heading from "@/components/Heading"
+import { TwImage } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
-import Heading from "@/components/OldHeading"
-import Text from "@/components/OldText"
 import PageMetadata from "@/components/PageMetadata"
 import ProductCard from "@/components/ProductCard"
 import Translation from "@/components/Translation"
+import { Flex, VStack } from "@/components/ui/flex"
+import { ListItem, UnorderedList } from "@/components/ui/list"
 
+import { cn } from "@/lib/utils/cn"
+import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
-import { runOnlyOnce } from "@/lib/utils/runOnlyOnce"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
@@ -31,35 +27,28 @@ import { getLocalEnvironmentFrameworkData } from "@/lib/api/ghRepoData"
 import EthBlocksImage from "@/public/images/developers-eth-blocks.png"
 
 const Content = ({ children }: ChildOnlyProp) => {
-  return (
-    <Box as={MainArticle} py={4} px={8} w="full">
-      {children}
-    </Box>
-  )
+  return <MainArticle className="w-full px-8 py-4">{children}</MainArticle>
 }
 
 const Column = ({ children }: ChildOnlyProp) => {
   return (
-    <Box
-      flex="1 0 33%"
-      justifyContent="flex-end"
-      mb={6}
-      me={8}
-      w="full"
-      maxW={{ base: "full", md: "none" }}
-    >
+    <div className="mb-6 me-8 w-full max-w-full flex-shrink-0 flex-grow basis-1/3 justify-end md:max-w-none">
       {children}
-    </Box>
+    </div>
   )
 }
+
+const Text = ({ className, ...props }: HTMLAttributes<HTMLHeadingElement>) => (
+  <p className={cn("mb-6", className)} {...props} />
+)
+
+const loadData = dataLoader([
+  ["frameworksListData", getLocalEnvironmentFrameworkData],
+])
 
 type Props = BasePageProps & {
   frameworksList: Framework[]
 }
-
-const cachedFetchLocalEnvironmentFrameworkData = runOnlyOnce(
-  getLocalEnvironmentFrameworkData
-)
 
 export const getStaticProps = (async ({ locale }) => {
   const requiredNamespaces = getRequiredNamespacesForPage(
@@ -68,7 +57,7 @@ export const getStaticProps = (async ({ locale }) => {
 
   const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
-  const frameworksListData = await cachedFetchLocalEnvironmentFrameworkData()
+  const [frameworksListData] = await loadData()
 
   const lastDeployDate = getLastDeployDate()
   const lastDeployLocaleTimestamp = getLocaleTimestamp(
@@ -92,19 +81,12 @@ const LocalEnvironmentPage = ({
   const { t } = useTranslation("page-developers-local-environment")
 
   return (
-    <Flex direction="column" alignItems="center" w="full" mx="auto" mt={16}>
+    <VStack className="mx-auto mt-16 w-full">
       <PageMetadata
         title={t("page-local-environment-setup-meta-title")}
         description={t("page-local-environment-setup-meta-desc")}
       />
-      <Box
-        pt={{ base: 0, xl: 4 }}
-        pb={{ base: 8, xl: 4 }}
-        px={8}
-        w="full"
-        mb={8}
-        justifyContent="center"
-      >
+      <div className="mb-8 w-full justify-center px-8 pb-8 pt-0 xl:pb-4 xl:pt-4">
         <Heading
           as="h1"
           fontStyle="normal"
@@ -119,25 +101,14 @@ const LocalEnvironmentPage = ({
         >
           <Translation id="page-developers-local-environment:page-local-environment-setup-title" />
         </Heading>
-        <Text
-          fontSize="xl"
-          lineHeight={1.4}
-          color="text200"
-          mb={2}
-          textAlign="center"
-        >
+        <Text className="mb-2 text-center leading-xs text-body-medium">
           <Translation id="page-developers-local-environment:page-local-environment-setup-subtitle" />
           <br />
           <Translation id="page-developers-local-environment:page-local-environment-setup-subtitle-2" />
         </Text>
-      </Box>
+      </div>
       <Content>
-        <Flex
-          direction={{ base: "column-reverse", lg: "row" }}
-          alignItems={{ base: "flex-start", lg: "center" }}
-          w="full"
-          justifyContent="space-between"
-        >
+        <Flex className="w-full flex-col-reverse items-start justify-between lg:flex-row lg:items-center">
           <Column>
             <Heading
               fontSize={{ base: "2xl", md: "2rem" }}
@@ -172,17 +143,15 @@ const LocalEnvironmentPage = ({
             </UnorderedList>
           </Column>
           <Column>
-            <Image
-              flex="1 1 100%"
-              backgroundSize="cover"
-              backgroundRepeat="no-repeat"
+            <TwImage
+              className="flex-1 basis-full bg-cover bg-no-repeat"
               src={EthBlocksImage}
               alt={t("page-developers-index:alt-eth-blocks")}
               loading="eager"
             />
           </Column>
         </Flex>
-        <SimpleGrid minChildWidth="min(100%, 280px)" spacing={8}>
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {frameworksList.map((framework, idx) => (
             <ProductCard
               key={idx}
@@ -198,12 +167,12 @@ const LocalEnvironmentPage = ({
               {t(framework.description)}
             </ProductCard>
           ))}
-        </SimpleGrid>
+        </div>
       </Content>
       <Content>
         <FeedbackCard />
       </Content>
-    </Flex>
+    </VStack>
   )
 }
 

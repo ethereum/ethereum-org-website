@@ -43,7 +43,7 @@ const BigNumber = ({
     >
       {value ? (
         <>
-          <div className="text-5xl font-bold">{value}</div>
+          <div className="text-4xl font-bold sm:text-5xl">{value}</div>
           <div className="text-sm">
             {children}
             {sourceName && sourceUrl && (
@@ -68,7 +68,9 @@ const BigNumber = ({
           </div>
         </>
       ) : (
-        <span className="text-3xl">{t("loading-error-refresh")}</span>
+        <span className="pt-4 text-md text-body-medium">
+          {t("loading-error-refresh")}
+        </span>
       )}
     </div>
   )

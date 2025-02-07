@@ -10,7 +10,7 @@ lang: it
 
 Stai cercando il supporto ufficiale di Ethereum? La prima cosa che dovresti sapere è che Ethereum è decentralizzato. Questo significa che nessuna organizzazione centrale, entità o persona possiede Ethereum, e per questo non esistono canali di supporto ufficiali.
 
-Comprendere la natura decentralizzata di Ethereum è fondamentale perché chiunque affermi di essere il supporto ufficiale di Ethereum probabilmente sta cercando di truffarti! La migliore protezione contro i truffatori sta nell'educare sé stessi prendendo sul serio la sicurezza.
+Comprendere la natura decentralizzata di Ethereum è fondamentale perché **chiunque sostenga di essere il supporto ufficiale per Ethereum sta probabilmente provando a truffarti!** La migliore protezione contro i truffatori è informarsi e prendere sul serio la sicurezza.
 
 <DocLink href="/security/">
   Sicurezza di Ethereum e prevenzione delle truffe
@@ -73,7 +73,6 @@ Ecco alcuni esempi più diffusi:
 - [ethers.js](https://discord.gg/6jyGVDK6Jx)
 - [web3.js](https://discord.gg/GsABYQu4sC)
 - [Hardhat](https://discord.gg/xtrMGhmbfZ)
-- [Truffle](https://discord.gg/8uKcsccEYE)
 - [Alchemy](http://alchemy.com/discord)
 - [Tenderly](https://discord.gg/fBvDJYR)
 
@@ -92,6 +91,7 @@ La maggior parte dei team che costruiscono client di Ethereum hanno anche spazi 
 - [Nethermind](https://discord.gg/YJx3pm8z5C)
 - [Besu](https://discord.gg/p8djYngzKN)
 - [Erigon](https://github.com/ledgerwatch/erigon/issues)
+- [Reth](https://github.com/paradigmxyz/reth/discussions)
 
 ### Client di consenso {#consensus-clients}
 
@@ -100,5 +100,6 @@ La maggior parte dei team che costruiscono client di Ethereum hanno anche spazi 
 - [Lighthouse](https://discord.gg/cyAszAh)
 - [Teku](https://discord.gg/7hPv2T6)
 - [Lodestar](https://discord.gg/aMxzVcr)
+- [Grandine](https://discord.gg/H9XCdUSyZd)
 
 Puoi anche [imparare ad eseguire un nodo qui](/developers/docs/nodes-and-clients/run-a-node/).

@@ -1,17 +1,8 @@
 import { useTranslation } from "next-i18next"
-import {
-  Drawer,
-  DrawerCloseButton,
-  DrawerContent,
-  DrawerOverlay,
-  Flex,
-  Heading,
-  Hide,
-  Stack,
-  Text,
-} from "@chakra-ui/react"
 
 import Card from "@/components/Card"
+import { Flex, Stack, VStack } from "@/components/ui/flex"
+import { Sheet, SheetClose, SheetContent } from "@/components/ui/sheet"
 
 import { TriangleSVG, TriangleSVGProps } from "./Triangle"
 import { useTrilemma } from "./useTrilemma"
@@ -33,50 +24,45 @@ const Trilemma = () => {
   }
 
   return (
-    <Flex
-      alignItems="center"
-      flexDirection={{ base: "column", lg: "row" }}
-      justifyContent="space-between"
-      columnGap="12"
-      rowGap="8"
-    >
-      <Stack
-        spacing="8"
-        mt={{ base: "16", md: "20" }}
-        mb={{ lg: "20" }}
-        ms={{ md: "12" }}
-        me={{ md: "12", lg: 0 }}
-        flex={{
-          lg: "0 1 500px",
-        }}
-      >
-        <Heading fontSize="2rem">
-          {t("page-roadmap-vision-trilemma-h2")}
-        </Heading>
-        <Flex flexDir="column" gap="6">
-          <Text>{t("page-roadmap-vision-trilemma-p")}</Text>
-          <Text>{t("page-roadmap-vision-trilemma-p-1")}</Text>
-          <Text>{t("page-roadmap-vision-trilemma-p-2")}</Text>
-          <Text fontWeight={600} hideFrom="lg">
+    <Flex className="flex-col items-center justify-between space-y-8 lg:flex-row lg:space-x-12 lg:space-y-0">
+      <Stack className="mt-16 space-y-8 md:mx-12 md:mt-20 lg:mb-20 lg:mr-0 lg:flex-[0_1_500px]">
+        <h2>{t("page-roadmap-vision-trilemma-h2")}</h2>
+        <VStack className="space-y-6">
+          <p>{t("page-roadmap-vision-trilemma-p")}</p>
+          <p>{t("page-roadmap-vision-trilemma-p-1")}</p>
+          <p>{t("page-roadmap-vision-trilemma-p-2")}</p>
+          <p className="font-semibold lg:hidden">
             {t("page-roadmap-vision-trilemma-modal-tip")}:
-          </Text>
-        </Flex>
-        <Card {...cardDetail} minH="300px" hideBelow="lg" mt="6" />
+          </p>
+        </VStack>
+        <Card {...cardDetail} className="mt-6 hidden min-h-[300px] lg:block" />
       </Stack>
-      <Hide above="lg">
-        <Drawer
-          isOpen={mobileModalOpen}
-          onClose={handleModalClose}
-          placement="bottom"
-        >
-          <DrawerOverlay background="rgba(0,0,0,0.3)" />
-          <DrawerContent borderTopRadius="2xl" background="background.base">
-            <Card {...cardDetail} background="none" border="none" my="8" />
-            <DrawerCloseButton top="6" insetInlineEnd="6" />
-          </DrawerContent>
-        </Drawer>
-      </Hide>
-      <TriangleSVG {...triangleSVGProps} />
+      <Sheet open={mobileModalOpen} onOpenChange={handleModalClose}>
+        <SheetContent side="bottom" className="rounded-t-[16px]">
+          <Card {...cardDetail} className="my-8 border-none bg-transparent" />
+          <SheetClose className="absolute right-3 top-5">
+            <span className="sr-only">Close</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </SheetClose>
+        </SheetContent>
+      </Sheet>
+
+      <div>
+        <TriangleSVG {...triangleSVGProps} />
+      </div>
     </Flex>
   )
 }

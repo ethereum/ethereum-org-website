@@ -4,138 +4,158 @@ description: Herkese açık Ethereum blok zincirindeki işletme uygulamaları ha
 lang: tr
 ---
 
-# İşletmeler için Ethereum Mainnet {#ethereum-for-enterprise}
+# İşletmeler için Ethereum {#ethereum-for-enterprise}
 
-Blockchain uygulamaları işletmelere yardımcı olur:
+Ethereum, büyük şirketler de dahil olmak üzere çok sayıda işletmeye yardımcı olabilir:
 
 - Güveni artırır ve iş tarafları arasındaki koordinasyon maliyetini azaltır
 - İş ağı mesuliyetini ve operasyonel verimliliği iyileştirir
 - Yeni iş modelleri ve değer yaratma fırsatları oluşturur
 - Kuruluşlarını rekabetçi bir şekilde geleceğe hazırlar
 
-İşletmeler için blok zinciri uygulamaları, genel izinsiz Ethereum [Mainnet](/glossary/#mainnet) veya Ethereum teknolojisine dayalı özel blok zincirleri üzerine kurulabilir. [Özel İşletme Ethereum zincirleri](/enterprise/private-ethereum/) hakkında daha fazla bilgiye erişin.
+İlk yıllarda, birçok kurumsal blokzincir uygulaması özel, izinli Ethereum uyumlu blokzincirler ve konsorsiyum zincirler üzerine kuruldu. Günümüzde daha yüksek verim, daha düşük işlem maliyeti ve gizlilik sağlayan teknolojik gelişmeler sayesinde, Ethereum teknolojisi kullanan çoğu kurumsal uygulama, genel Ethereum Ana Ağı veya [Katman 2](/layer-2) zincirleri üzerine kuruluyor.
 
-## Genel ve özel Ethereum {#private-vs-public}
 
-Yalnızca bir genel Ethereum Mainnet vardır. Mainnet üzerinde oluşturulan uygulamalar, İnternet üzerinde oluşturulan uygulamaların birbirine bağlanma şekilleriyle benzer şekilde birlikte çalışabilir ve merkeziyetsiz blok zincirinin tüm potansiyelinden yararlanır.
+## Kaynaklar {#enterprise-resources}
 
-Birçok işletme ve konsorsiyum, Ethereum teknolojisine dayalı belirli uygulamalar için özel ve izinli blok zincirleri dağıttı.
+### Daha fazla bilgi {#further-reading}
 
-### Anahtar farklılıkları {#key-differences}
+İşletmelerin Ethereum'dan nasıl yararlanacağını anlamanızı sağlayacak teknik olmayan kaynaklar
 
-- Blok Zinciri Güvenliği/Değişmezliği - Bir blok zincirinin kurcalamaya karşı direnci, mutabakat algoritması tarafından belirlenir. Ethereum Mainnet, dünya çapında bireyler ve madenciler tarafından işletilen binlerce bağımsız düğümün etkileşimi ile güvence altına alınmıştır. Özel zincirler tipik olarak bir veya birkaç kuruluş tarafından kontrol edilen az sayıda düğüme sahiptir; bu düğümler sıkı bir şekilde kontrol edilebilir ancak zinciri yeniden yazmak veya sahte işlemler yapmak için yalnızca birkaçının güvenliği ihlal edilmesi yeterli olur.
-- Performans - Özel Kurumsal Ethereum zincirleri, özel donanım gereksinimleri ve Yetki İspatı gibi farklı mutabakat algoritmaları olan yüksek performanslı düğümler kullanabildiğinden, temel katmanda (Katman 1) daha yüksek işlem verimi elde edebilirler. Ethereum Mainnet'te, [Katman 2 ölçeklendirme çözümleri](/developers/docs/scaling/#layer-2-scaling) kullanılarak yüksek verim elde edilebilir.
-- Maliyet - Özel bir zinciri çalıştırmanın maliyeti, öncelikle zinciri kurmak ve yönetmek için iş gücüne ve onu çalıştıracak sunuculara yansıtılır. Ethereum Mainnet'e bağlanmanın herhangi bir maliyeti olmasa da, her işlem için ether ile ödenmesi gereken bir gaz maliyeti vardır. Son kullanıcıların ve hatta işletmelerin işlemlerinde doğrudan ether kullanma ihtiyacını ortadan kaldırmak için işlem aktarıcıları (Gaz İstasyonları) geliştirilmektedir. Bazı [analizler](https://github.com/EYBlockchain/fundamental-cost-of-ownership/blob/master/EY%20Total%20Cost%20of%20Ownership%20for%20Blockchain%20Solutions.pdf), bir uygulamayı çalıştırmanın toplam maliyetinin Mainnet'te özel bir zincir çalıştırmaya göre daha düşük olabileceğini göstermiştir.
-- Düğüm İzni Verme - Özel zincirlere yalnızca yetkili düğümler katılabilir. Ethereum Mainnet'te herkes bir düğüm kurabilir.
-- Gizlilik - Özel zincirlere yazılan verilere erişim, ağa erişimi kısıtlayarak ve erişim kontrolleri ve özel işlemlerle daha ayrıntılı bir şekilde kontrol edilebilir. Mainnet Katman 1'e yazılan tüm veriler herkes tarafından görüntülenebilir, bu nedenle hassas bilgiler zincir dışında saklanmalı ve iletilmeli veya başka bir şekilde şifrelenmelidir. Bunu kolaylaştıran tasarım kalıpları (örneğin, Baseline, Aztek) ve ayrıca verileri bölümlere ayrılmış ve Katman 1'in dışında tutabilen Katman 2 çözümleri ortaya çıkıyor.
-
-### Neden Ethereum Mainnet üzerinde geliştirmelisiniz {#why-build-on-ethereum-mainnet}
-
-İşletmeler; Hyperledger, Quorum ve Corda projelerinin başlatıldığı 2016 yılından bu yana blok zinciri teknolojisini deniyorlar. Odak noktası büyük ölçüde özel izinli kurumsal blok zincirleri üzerindeydi, ancak 2019'dan itibaren iş uygulamaları için halka açık ve özel blok zincirleri hakkında düşünmede bir değişiklik oldu. Forrester tarafından yürütülen bir [ankete](https://assets.ey.com/content/dam/ey-sites/ey-com/en_gl/topics/blockchain/ey-public-blockchain-opportunity-snapshot.pdf) göre "Ankete katılanlar ... bu potansiyeli görüyorlar, %75'i gelecekte halka açık blok zincirlerinden yararlanma olasılığının yüksek olduğunu ve yaklaşık üçte biri bunun çok muhtemel olduğunu söylüyor". EY'den Paul Brody, daha güçlü güvenlik/değişmezlik, şeffaflık, daha düşük toplam sahip olma maliyeti ve aynı zamanda Mainnet'te bulunan diğer tüm uygulamalarla birlikte çalışma yeteneği (ağ etkileri) gibi herkese açık blok zinciri oluşturmanın yararlarından (uygulamaya bağlı olarak) [bahsetti](https://www.youtube.com/watch?v=-ycu5vGDdZw&feature=youtu.be&t=3668). İşletmeler arasında ortak bir referans çerçevesinin paylaşılması, birbirleriyle iletişim kuramayan, bilgileri paylaşamayan veya senkronize edemeyen çok sayıda izole siloların gereksiz yere oluşturulmasını önler.
-
-Odağı herkese açık blokzincirlere kaydıran bir başka gelişme de [Katman 2'dir](/developers/docs/scaling/#layer-2-scaling). Katman 2, öncelikle, genel zincirlerde yüksek verimli uygulamaları mümkün kılan bir ölçeklenebilirlik teknolojisi kategorisidir. Ancak Katman 2 çözümleri aynı zamanda [işletme geliştiricilerini geçmişte özel zincirleri seçmeye iten diğer zorlukların bazılarına da hitap edebilir.](https://entethalliance.org/how-ethereum-layer-2-scaling-solutions-address-barriers-to-enterprises-building-on-mainnet/).
-
-## İşletme geliştiricisi kaynakları {#enterprise-developer-resources}
+- [Blockchain İşletmeler İçin Neden Faydalıdır?](https://entethalliance.org/why-are-blockchains-useful-for-business/) - _Blokzincirlerin değerini öngörülebilirlik merceğinden ele alır_
+- [ Kurumsal Ethereum Birliği 2023 İşletime Hazırlık Raporu](https://entethalliance.org/eea-ethereum-business-readiness-report-2023/) - _işletmeler için halka açık Ethereum'un ve daha geniş çapta Ethereum ekosisteminin potansiyeli ve yapabileceklerini araştırır_
+- [_Ethereum for Business_ Yazan: Paul Brody](https://www.uapress.com/product/ethereum-for-business/) - _varlık yönetiminden ödemelere ve tedarik zincirlerine kadar getiri sağlayan kullanım durumlarına yönelik sade bir İngilizce rehberdir_
 
 ### Organizasyonlar {#organizations}
 
-Ethereum'u işletme dostu hâle getirmek için farklı kuruluşlar tarafından bazı ortak çabalar sarf edilmiştir:
+Ethereum'u işletme dostu hâle getirmek için farklı kuruluşlar tarafından bazı ortak çabalar sarf edilmiştir
 
-- [Enterprise Ethereum Alliance (EEA)](https://entethalliance.org/) EEA, kuruluşların Ethereum teknolojisini günlük iş operasyonlarında benimsemelerini ve kullanmalarını sağlar. Ethereum ekosistemini, yeni iş fırsatları geliştirmesi, endüstrinin benimsenmesini teşvik etmesi ve birbirleriyle öğrenmesi ve iş birliği yapması için güçlendirir. EEA'nın Mainnet çalışma grubu, halka açık Ethereum Mainnet'i oluşturmakla ilgilenen işletmelerin temsilcilerinin yanı sıra onları desteklemek isteyen Ethereum topluluğunun üyeleri için bir odak noktasıdır.
-- [Ethereum OASIS Open Project](https://github.com/ethereum-oasis/oasis-open-project) Ethereum OASIS Open Project, Ethereum'un uzun ömürlülüğünü, birlikte çalışabilirliğini ve entegrasyon kolaylığını kolaylaştıran yüksek kaliteli özellikler oluşturmak için çeşitli paydaşlara tarafsız bir forum sağlamak için var olan bir OASIS Open Project'tir. Proje, Ethereum protokolünde yeni özellikler ve geliştirmeleri kolaylaştıran net, açık standartlar, yüksek kaliteli belgeler ve paylaşılan test paketleri geliştirmeyi amaçlıyor.
-- [Baseline Project](https://www.baseline-protocol.org/) Baseline Protocol, halka açık Ethereum Mainnet aracılığıyla düşük maliyetle güvenli ve özel iş süreçleri sağlamak için kriptografi, mesajlaşma ve blok zincirindeki ilerlemeleri birleştiren açık kaynaklı bir girişimdir. Protokol, zincir üzerinde herhangi bir hassas veri bırakmadan işletmeler arasında gizli ve karmaşık iş birliğine olanak tanır. Baseline Project, Ethereum OASIS Open Project'in bir alt projesidir ve Baseline Technical Steering Committee (Temel Teknik Yönlendirme Komitesi) tarafından koordine edilir.
+- [Enterprise Ethereum Alliance](https://entethalliance.org/) - EEA, kuruluşların Ethereum teknolojisini benimsemelerine ve günlük iş operasyonlarında kullanmalarına yardımcı olur. Amacı, Ethereum'un ticari gelişimini profesyonel ve ticari destek, savunuculuk ve araştırma, standart geliştirme ve ekosistem güven hizmetleri aracılığıyla hızlandırmaktır.
+- [Global Blockchain Business Council](https://www.gbbc.io/) - GBBC, blokzincir teknolojisi ekosistemi için kurulmuş sektörel bir birliktir. GBBC kendisini, politika yapıcıları ve düzenleyicilerle etkileşimde bulunarak, etkinlikler düzenleyerek, derinlemesine tartışmalar yürüterek ve araştırmaları teşvik ederek daha güvenli, adil ve işlevsel toplumlar yaratmak adına blokzincirin daha fazla benimsenmesini sağlamaya adamıştır.
+
+
+## İşletme geliştiricisi kaynakları {#enterprise-developer-resources}
 
 ### Ürünler ve hizmetler {#products-and-services}
 
-- [Alchemy](https://www.alchemy.com/) _Ethereum üzerinde uygulamalar oluşturmak ve izlemek için API hizmetleri ve araçları sağlar_
-- [Blast](https://blastapi.io/), _Ethereum Arşiv Ana Ağı'na ve Test Ağlarına RPC/WSS API'leri sağlayan bir API platformudur._
-- [Blockapps](https://blockapps.net/), _STRATO platformunu oluşturan İşletme Ethereum protokolünün, araçlarının ve API'lerinin uygulanması_
-- [Chainstack](https://chainstack.com/), _herkese açık ve izole müşteri bulutlarında barındırılan ana ağ ve test ağı Ethereum altyapısı_
-- [ConsenSys](https://consensys.io/), _Ethereum üzerine geliştirme için bir dizi ürün ve aracın yanı sıra danışmanlık ve özel geliştirme hizmetleri sağlar_
-- [Envision Blockchain](https://envisionblockchain.com/), _Ethereum Ana Ağı'nda uzmanlaşmış kurumsal odaklı danışmanlık ve geliştirme hizmetleri sağlar_
-- [EY OpsChain](https://blockchain.ey.com/products/contract-manager), _Güvenilir iş ortakları ağınız genelinde RFQ'ları, sözleşmeleri, satın alma emirlerini ve faturaları düzenleyerek bir tedarik iş akışı sağlar_
-- [Hyperledger Besu](https://www.hyperledger.org/use/besu), _Apache 2.0 lisansı altında geliştirilen, Java ile yazılmış kurumsal odaklı açık kaynaklı bir Ethereum istemcisi_
-- [Infura](https://infura.io/), _Ethereum ve IPFS ağlarına ölçeklenebilir API erişimi_
-- [Kaleido](https://kaleido.io/), _basitleştirilmiş blokzincir ve dijital varlık uygulamaları sunan işletme odaklı bir geliştirme platformu_
-- [NodeReal](https://nodereal.io/), _Web3 ekosistemi için ölçeklenebilir blokzincir altyapısı ve API hizmetleri sağlayıcısı sunar_
-- [Provide](https://provide.services/), _İşletme Web3 uygulamaları için altyapı ve API'ler_
-- [QuickNode](https://www.quicknode.com/), _birleşik bir ürün grubu ve işletme sınıfı çözümler sunarken NFT API, Jeton API gibi yüksek düzey API'lerle güvenilir ve hızlı düğümler sağlar_
-- [Tenderly](https://tenderly.co), _akıllı sözleşmeleri geliştirmek, test etmek, izlemek ve çalıştırmak için hata ayıklama, gözlemlenebilirlik ve altyapı temel blokları sağlayan bir Web3 geliştirme platformu_
-- [Unibright](https://unibright.io/), _iş süreçleri ve entegrasyon alanında 20 yılı aşkın deneyime sahip blokzincir uzmanları, mimarlar, geliştiriciler ve danışmanlardan oluşan bir ekip_
-- [Zero Services GmbH](https://www.zeroservices.eu/), _Avrupa ve Asya'daki ortak yerleşkelere yayılmış bir yönetilen hizmetler sağlayıcısı. Düğümlerinizi güvenli ve hatasız şekilde çalıştırır ve izler_
-- [Zeeve](https://www.zeeve.io/), _Ethereum üzerinde geliştirme için çeşitli ürünler ve araçlar, bunlarla birlikte İşletme Web3 uygulamaları için API'ler ve altyapı sağlar._
+- [4EVERLAND](https://www.4everland.org/) - _merkeziyetsiz uygulamaları barındırmaya ve Ethereum'da merkeziyetsiz depolamayı mümkün kılmaya yönelik API'ler, RPC hizmetleri ve araçlar sağlar_
+- [Alchemy](https://www.alchemy.com/) - _Ethereum üzerinde uygulamalar oluşturmak ve izlemek için API hizmetleri ve araçları sağlar_
+- [Blast](https://blastapi.io/) - _Ethereum Arşiv Ana Ağına ve Test Ağlarına RPC/WSS API'leri sağlayan bir API platformudur._
+- [Blockapps](https://blockapps.net/) - _STRATO platformunu oluşturan İşletme Ethereum protokolünün, araçlarının ve API'lerinin uygulanmasıdır_
+- [Chainstack](https://chainstack.com/) - _herkese açık ve izole müşteri bulutlarında barındırılan ana ağ ve test ağı Ethereum altyapısıdır_
+- [ConsenSys](https://consensys.io/) - _Ethereum üzerine geliştirme için bir dizi ürün ve aracın yanı sıra danışmanlık ve özel geliştirme hizmetleri sağlar_
+- [Crossmint](http://crossmint.com/) _Akıllı sözleşmeleri dağıtmak, kredi kartı ve zincirler arası ödemeleri mümkün kılmak ve NFT'ler oluşturmak, dağıtmak, satmak, depolamak ve düzenlemek üzere API'leri kullanmak amacıyla kurumsal düzeyde web3 geliştirme platformudur._
+- [Envision Blockchain](https://envisionblockchain.com/) - _Ethereum Ana Ağı alanında uzmanlaşmış, kurumsal odaklı danışmanlık ve geliştirme hizmetleri sunar_
+- [EY OpsChain](https://blockchain.ey.com/products/contract-manager) - _Güvenilir iş ortakları ağınız genelinde RFQ'ları, sözleşmeleri, satın alma emirlerini ve faturaları düzenleyerek bir tedarik iş akışı sağlar_
+- [Hyperledger Besu](https://www.hyperledger.org/use/besu) - _Apache 2.0 lisansı altında geliştirilen, Java ile yazılmış kurumsal odaklı açık kaynaklı bir Ethereum istemcisidir_
+- [Infura](https://infura.io/) - _Ethereum ve IPFS ağlarına ölçeklenebilir API erişimi sunar_
+- [Kaleido](https://kaleido.io/) - _basitleştirilmiş blokzincir ve dijital varlık uygulamaları sunan işletme odaklı bir geliştirme platformudur_
+- [NodeReal](https://nodereal.io/) - _Web3 ekosistemi için ölçeklenebilir blokzincir altyapısı ve API hizmetleri sağlayıcısı sunar_
+- [Moralis](http://moralis.io/) - _kurumsal düzeyde API'ler ve SOC2 tip 2 sertifikasına sahip Düğümler_
+- [Provide](https://provide.services/) - _kurumsal sıfır bilgi ara yazılımı_
+- [QuickNode](https://www.quicknode.com/) - _birleşik bir ürün grubu ve kurumsal düzey çözümler sunarken NFT API, Jeton API gibi yüksek düzey API'ler ile güvenilir ve hızlı düğümler sağlar_
+- [Tenderly](https://tenderly.co) - _akıllı sözleşmeleri geliştirmek, test etmek, izlemek ve çalıştırmak için hata ayıklama, gözlemlenebilirlik ve altyapı temel blokları sağlayan bir Web3 geliştirme platformudur_
+- [Unibright](https://unibright.io/) - _iş süreçleri ve entegrasyon alanında 20 yılın üzerinde deneyime sahip blokzincir uzmanları, mimarlar, geliştiriciler ve danışmanlardan oluşan bir ekiptir_
+- [Zeeve](https://www.zeeve.io/) - _Ethereum üzerinde geliştirme yapmak için çeşitli ürünler ve araçların yanı sıra Kurumsal Web3 uygulamaları için altyapı ve API'ler sağlar._
 
 ### Araçlar ve kütüphaneler {#tooling-and-libraries}
 
-- [Alethio](https://explorer.aleth.io/) _Ethereum Veri Analizi Platformu_
-- [Chainlens](https://www.chainlens.com/), _Web3 Labs'den Ethereum ile uyumlu herkese açık ve özel ağlara yönelik bir veri ve analiz platformu_
-- [Ernst & Young'ın "Nightfall"u](https://github.com/EYBlockchain/nightfall) _özel işlemler için bir araç takımı_
-- [EthSigner](https://github.com/ConsenSys/ethsigner) _bir web3 sağlayıcısıyla kullanılacak bir işlem imzalama uygulaması_
-- [Tenderly](https://tenderly.co/)_gerçek zamanlı analizler sağlayan, özel ağlar için destek sunarak uyarılarda bulunan ve izleme gerçekleştiren bir Veri Platformudur_
-- [Truffle Suite](https://trufflesuite.com) _blok zinciri geliştirme paketi (Truffle, Ganache, Drizzle)_
+- [Baseline Project](https://www.baseline-protocol.org/) - _Baseline Protokolü, işletmelerin karmaşık, çok taraflı iş süreçlerini ve iş akışlarını gizlilik içinde koordine etmesine ve verileri ilgili kayıt sistemlerinde tutmasına yardımcı olan bir dizi araç ve kütüphaneler bütünüdür. Standart, iki veya daha fazla durum makinesinin, bir ağı ortak bir referans çerçevesi olarak kullanarak veri tutarlılığı ve iş akışı sürekliliği elde etmesine ve bunu sürdürmesine olanak tanır._
+- [Chainlens](https://www.chainlens.com/) - _Web3 Labs'in geliştirdiği SaaS ve şirket içi blokzincir veri ve analizleri platformudur_
+- [Ernst& Young's 'Nightfall'](https://github.com/EYBlockchain/nightfall_3) - _ERC20, ERC721 ve ERC1155 uygulamalarını İyimser Toplama kullanarak Sıfır Bilgi kapsamında transfer etmeye yarayan bir uygulamadır_
 
 ### Ölçeklenebilirlik çözümleri {#scalability-solutions}
 
-[Katman 2](/layer-2), Ethereum'un (Katman 1) üzerinde çalışan, güvenlik özelliklerini Katman 1'den devralan ve daha yüksek işlem işleme kapasitesi (iş hacmi), daha düşük işlem ücretleri (yürütme maliyeti) ve Katman 1'den daha hızlı işlem onayları sağlayan bir teknoloji veya sistemler kümesidir. Katman 2 ölçeklendirme çözümleri, Katman 1 tarafından güvence altına alınmasına rağmen, blokzincir uygulamalarının Katman 1'in barındırabileceğinden çok daha fazla kullanıcıyı, eylemi veya veriyi işlemesine olanak tanır. Birçoğu, performansı ve güvenliği en üst düzeye çıkarmak için kriptografi ve sıfır-bilgi (ZK) ispatları alanlarındaki son gelişmelerden yararlanır.
+Yeni blokzincir uygulamalarının çoğu [Katman 2](/layer-2) zincirleri üzerine kuruluyor. Katman 2, Ethereum'un (Katman 1) üzerinde çalışan, güvenlik özelliklerini Katman 1'den devralan ve daha yüksek işlem işleme kapasitesi (iş hacmi), daha düşük işlem ücretleri (yürütme maliyeti) ve Katman 1'den daha hızlı işlem onayları sağlayan bir teknoloji veya sistemler kümesidir. Katman 2 ölçeklendirme çözümleri, Katman 1 tarafından güvence altına alınmasına rağmen, blokzincir uygulamalarının Katman 1'in barındırabileceğinden çok daha fazla kullanıcıyı, eylemi veya veriyi işlemesine olanak tanır. Çoğu, performansı ve güvenliği en üst düzeye çıkarmak için kriptografideki son gelişmelerden ve sıfır bilgi (ZK) ispatlarından yararlanırken bazıları da ek bir gizlilik düzeyi sunar.
 
-Uygulamanızı bir Katman 2 ölçeklenebilirlik çözümünün üzerine geliştirmek, [önceden şirketleri özel blok zincirleri üzerine inşa etmeye yönlendiren endişelerin çoğunun üzerine giderken](https://entethalliance.org/how-ethereum-layer-2-scaling-solutions-address-barriers-to-enterprises-building-on-mainnet/) Ana Ağ'da geliştirme yapmanın faydalarını da sürdürür.
+## Ethereum Ana Ağında kullanımda olan işletme uygulamaları {#enterprise-live-on-mainnet}
 
-## Mainnet'te kullanımda olan işletme uygulamaları {#enterprise-live-on-mainnet}
-
-Herkese açık Ethereum Ana Ağı üzerinde geliştirilmiş işletme uygulamalarından bazılarını aşağıda bulabilirsiniz
+Geleneksel, blokzincir tabanlı olmayan şirketlere hitap eden, herkese açık Ethereum Ana Ağı ve L2'leri üzerine geliştirilmiş kurumsal uygulamalardan bazılarını burada bulabilirsiniz.
 
 ### Ödemeler {#payments}
 
-- [Brave Browser](https://basicattentiontoken.org/), _kullanıcılara reklamlara yönelttikleri dikkat karşılığında ödeme yapar ve kullanıcılar, yayıncıları desteklemek için Temel Dikkat Jetonu aracılığıyla ödeme yapabilir_
-- [hCaptcha](https://www.hcaptcha.com/), _Bot önleme CAPTCHA sistemi, web sitesi operatörlerine, makine öğrenimi için verileri etiketlemek üzere kullanıcılar tarafından yapılan iş için ödeme yapar. Artık Cloudflare tarafından dağıtılmaktadır_
-- [EthereumAds](https://ethereumads.com/), _web sitesi operatörlerinin reklam alanı satmasına ve Ethereum aracılığıyla ödeme almasına olanak tanır_
+- [Brave Browser](https://basicattentiontoken.org/) - _kullanıcılara reklamlara yönelttikleri dikkat karşılığında ödeme yapar ve kullanıcılar, yayıncıları desteklemek için Temel Dikkat Jetonu aracılığıyla ödeme yapabilir_
+- [İsviçre, Lugano Şehri](https://bitcoinsuisse.com/news/city-of-lugano-accepts-crypto-payments) - _vergi ve diğer belediye hizmetleri ödemeleri_
+- [EthereumAds](https://ethereumads.com/) - _web sitesi operatörlerinin reklam alanı satmasına ve Ethereum aracılığıyla ödeme almasına olanak tanır_
+- [hCaptcha](https://www.hcaptcha.com/) - _Bot önleme CAPTCHA sistemi, web sitesi operatörlerine, makine öğrenimi için verileri etiketlemek üzere kullanıcılar tarafından yapılan iş için ödeme yapar. Artık Cloudflare tarafından dağıtılıyor_
+- [Opera MiniPay](https://www.opera.com/products/minipay) - _Afrika'daki insanlar için mobil ödemeleri, saklama gerektirmeyen bir cüzdanla daha erişilebilir ve güvenli hale getirir ve kolay işlem yapılabilmesi için telefon numaralarını kullanır_
+- [Roxpay](https://www.roxpay.ch/) - _kullanım başına ödeme varlık faturalandırmasını ve ödemelerini otomatik hale getirir_
+- [SAP Digital Currency Hub](https://community.sap.com/t5/technology-blogs-by-sap/cross-border-payments-made-easy-with-digital-money-experience-the-future/ba-p/13560384) - _sabit paralarla sınır ötesi ödemeler_
+- [Toku](https://www.toku.com/) - _bordro, jeton hibe yönetimi, vergi uyumluluğu, yerel istihdam, yan haklar ve dağıtılmış İK çözümleri_
+- [Xerof](https://www.xerof.com/) - _hızlı ve düşük maliyetli uluslararası (sınır ötesi) B2B ödemelerini kolaylaştırır_
 
 ### Finans {#finance}
 
-- [Santander Bank](https://www.coindesk.com/santander-settles-both-sides-of-a-20-million-bond-trade-on-ethereum), _bono ihracı ve uzlaşma_
-- [Societe Generale](https://www.generali-investments.com/it/en/institutional/article/generali-investments-and-generali-iard-carry-out-first-market-transaction-based-on-blockchain-infrastructure), _bono ihracı_
-- [Cadence](https://www.forbes.com/sites/benjaminpirus/2019/10/09/fatburger-and-others-feed-30-million-into-ethereum-for-new-bond-offering/#513870be115b), _FAT Markaları için bono teklifi ve jetonlaştırma_
-- [Sila](https://silamoney.com/), _sabit para kullanan bankacılık ve ACH ödeme altyapısı hizmeti_
-- [Taurus](https://www.taurushq.com/), _jetonlaştırılmış menkul kıymet ihraç eder_
+- [ABN AMRO](https://tokeny.com/tokeny-fuels-abn-amro-bank-in-tokenizing-green-bonds-on-polygon/) - _Tokeny ile birlikte jetonlaştırılmış yeşil tahviller_
+- [Crowdz](https://crowdz.io/) - _fatura/alacak finansmanı ve faktoring platformu_
+- [Mata Capital](https://consensys.io/blockchain-use-cases/finance/mata-capital) - _gayirmenkul yatırımı jetonlaştırması_
+- [Obligate](https://www.obligate.com/) - _düzenlemeye tabi, KYC uygulanmış zincir üstü bonolar ve ticari belgeler_
+- [Siemens](https://press.siemens.com/global/en/pressrelease/siemens-issues-first-digital-bond-blockchain) - _bono ihracı_
+- [Sila](https://silamoney.com/) - _sabit para kullanan bankacılık ve ACH ödeme altyapısı hizmeti_
+- [Societe Generate FORGE](https://www.sgforge.com/product/bonds/) - _bono ihracı_
+- [Taurus](https://www.taurushq.com/) - _jetonlaştırılmış menkul kıymet ihraç eder_
 
 ### Varlık jetonlaştırması {#tokenization}
 
-- [Tinlake](https://tinlake.centrifuge.io/), _faturalar, ipotekler veya sürekli akış telif ücretleri gibi jetonlaştırılmış gerçek dünya varlıkları yoluyla alacak finansmanı_
-- [RealT](https://realt.co/), _dünya genelindeki yatırımcılar tamamen uyumlu, kesirli, jetonlaştırılmış mülkiyet ile ABD emlak piyasasından satın alım yapabilirler._
-- [AgroToken](https://agrotoken.io/en/home), _tarımsal ürünlerin jetonlaştırılması ve alım satımı_
-- [Fasset](https://www.fasset.com/), _sürdürülebilir altyapıyı destekleyen bir platform_
+- [AgroToken](https://agrotoken.io/en/) - _tarımsal emtiaların jetonlaştırılması ve ticareti_
+- [Bitbond](https://www.bitbond.com/) - _finansal varlıkların ihracını, uzlaşma sürecini ve saklanmasını jetonlaştırma yoluyla iyileştirir_
+- [Blocksqaure](https://blocksquare.io/) - _gayrimenkul için jetonlaştırma altyapısıdır_
+- [Centrifuge](https://centrifuge.io/) - _jetonlaştırılmış alacak finansmanı, borç ve varlıklar_
+- [Clearmatics](https://www.clearmatics.com) - _jetonlaştırılmış değerin p2p takası için merkeziyetsiz ağ platformları oluşturur_
+- [dClimate](https://www.dclimate.net/) - _merkeziyetsiz iklim bilgi ekosistemidir_
+- [Fabrica](https://www.fabrica.land/) - _gayrimenkul varlıklarını dijitalleştiren, DeFi borçlanmasını ve mülk ticaretini mümkün kılan bir platformdur_
+- [Fasset](https://www.fasset.com/) - _sürdürülebilir altyapıyı destekleyen bir platformdur_
+- [Nori](https://nori.com/) - _karbon giderme projelerinin faaliyetlerini ölçmelerine ve projelerin para kazanmalarına olanak sağlayan açık kaynaklı bir pazar altyapısıdır_
+- [Propy](https://propy.com/) - _akıllı sözleşmeler ile konut gayrimenkul işlemlerini otomatikleştiren bir platformdur_
+- [RealT](https://realt.co/) - _dünya genelindeki yatırımcıların tamamen uyumlu, parçalı, jetonlaştırılmış mülkiyet ile ABD emlak piyasasından alım satım yapmasına olanak tanır_
+- [Rubey](https://www.rubey.be/) - _yüksek değerli sanat eserlerini jetonlaştırarak perakende yatırımcılar için erişilebilir hale getiren bir platformdur_
+- [Swarm](https://swarm.com/) - _gerçek dünya varlıklarının dijitalleştirilmese ve ticaretine odaklanan, düzenlemelere uygun bir platformdur_
+- [Thallo](https://www.thallo.io/) - _dijital karbon kredilerini ticari işlemlere entegre eden bir platformdur_
+- [Tokenchampions](https://tokenchampions.com/) - _Avrupalı futbolcuların imaj haklarını jetonlaştırır_
 
 ### Verilerin noter tasdiki {#notarization-of-data}
 
-- [BBVA](https://www.ledgerinsights.com/bbva-blockchain-loan-banking-tech-award/), _kesinleşmiş kredilerin ayrıntıları karma hale getirilir ve Ana Ağ'a kaydedilir_
-- [ANSA](https://cointelegraph.com/news/italys-top-news-agency-uses-blockchain-to-fight-fake-coronavirus-news), _İtalya'nın en büyük haber ajansı sahte haberlerle mücadele ediyor ve okuyucuların haberleri Ana Ağ'a kaydederek haberlerin kaynağını doğrulamasını sağlıyor_
-- [Verizon](https://decrypt.co/46745/verizon-news-press-releases-ethereum-full-transparency), _kurumsal mesuliyeti ve güveni sağlamak için Ethereum'daki basın bültenlerini günlüğe kaydeder_
-- [Breitling](https://www.coindesk.com/breitling-arianee-all-new-watches-ethereum), _saatlerin kökenini ve onarım geçmişini Ethereum'a kaydeder_
-- [EthSign](https://ethsign.xyz/), _imzalı elektronik belgeleri Ethereum blokzincirine kaydeder_
+- [ANSA](https://www.ansa.it/english/news/science_tecnology/2020/04/06/ansa-using-blockchain-to-help-readers_af820b4f-0947-439b-843e-52e114f53318.html) - _İtalyan haber ajansıdır, sahte haberlerle mücadele eder ve okuyucuların haber makalelerinin kaynağını Ana Ağa kaydederek doğrulamasını sağlar_
+- [Breitling](https://www.coindesk.com/breitling-arianee-all-new-watches-ethereum) - _saatlerin kökenini ve onarım geçmişini Ethereum'a kaydeder_
+- [BRØK](https://www.xn--brk-1na.no/) - _Norveç Hükümeti tarafından sağlanan, halka açık olmayan şirketlere yönelik bir sermaye tablosu platformudur_
+- [Certifaction](https://certifaction.com/) - _tasarımın parçası olarak gizlilik esasına dayalı, yasal olarak geçerli e-İmzalar_
+- [EthSign](https://ethsign.xyz/) - _imzalı elektronik belgeleri Ethereum blok zincirine kaydeder_
+- [Stacktical](https://stacktical.com/) - _yerel emanet özellikleriyle Hizmet Düzeyi Anlaşmalarının (SLA) yazılım geliştirme, dijital ihraç ve dijital imza süreçlerini mümkün kılar_
+- [Verizon](https://decrypt.co/46745/verizon-news-press-releases-ethereum-full-transparency) - _kurumsal mesuliyeti ve güveni sağlamak için Ethereum'daki basın bültenlerini günlüğe kaydeder_
+- [WolfTown](https://www.mef.net/edge-view-blog/automated-secure-timely-sla-reporting-is-finally-a-reality/) - _MEF ve Sage Yönetimi, telekom operatörleri arasındaki Hizmet Düzeyi Anlaşması raporlamasını otomatik hale getirir_
 
 ### Tedarik zinciri {#supply-chain}
 
-- [Morpheus.network](https://morpheus.network/), _Ethereum Ana Ağı'nda noter tasdikli verilerle özel zincirlerin bir karışımını uygulayan tedarik zinciri otomasyon platformudur; Kanadalı gıda, petrol ve gaz distribütörü Federated Co-op Ltd. ve Arjantinli evcil hayvan maması sağlayıcısı Vitalcan tarafından kullanılır_
-- [Minespider](https://www.minespider.com/), _tedarik zinciri takibi_
-- [EY OpsChain Contract Manager](https://blockchain.ey.com/products/contract-manager). _güvenilir iş ortaklarından oluşan ağınızda RFQ'ler, sözleşmeler, alım emirleri ve faturalar düzenleyerek şirketlerin tedarik iş akışına dahil olmalarını sağlar_
-- [Treum](https://treum.io/), _blokzincir teknolojisini kullanarak tedarik zincirlerine şeffaflık, izlenebilirlik ve ticaret kolaylığı getirir_
-- [TradeTrust](https://www.tradetrust.io/), _uluslararası nakliye için elektronik Konşimentoları (eBL'ler) doğrular_
+- [Birra Peroni](https://www.ey.com/en_gl/news/2021/05/birra-peroni-is-the-first-industrial-organization-to-mint-unique-non-fungible-tokens-using-ey-opschain-traceability), _her yeni bira partisi için NFT basarak tedarik zincirinde daha fazla görünürlük ve verimlilik sağlar_
+- [CargoX](https://cargox.io/) - _kargo sektörü için elektronik makbuz, konşimento ve belge transferi sağlayıcısıdır_
+- [Circularize](https://www.circularise.com/) - _ürünlere dönüştürülen hammaddeler için uçtan uca izlenebilirlik sağlar_
+- [EY OpsChain Contract Manager](https://blockchain.ey.com/products/contract-manager) - _şirketlerin iş ortakları ağı üzerinden RFQ'lar, sözleşmeler, satın alma emirleri ve faturalar düzenleyerek tedarik iş akışına katılmasını sağlar_
+- [Minespider](https://www.minespider.com/) - _tedarik zinciri takibi ve menşe tespiti ile CO2 emisyonu takibi_
+- [Morpheus network](https://morpheus.network/) - _tedarik zinciri otomasyonu platformudur_
+- [StaTwig](https://statwig.com/) - _tedarik zinciri operasyonları_
+- [TradeTrust](https://www.tradetrust.io/) - _uluslararası nakliye için elektronik Konşimentoları (eBL'ler) doğrular_
+- [Transmute](https://transmute.industries/) - _Ethereum üzerinde Merkeziyetsiz Kimliğe sahip İşlemleri destekleyen, küresel ticarete yönelik bir veri alışverişi platformudur_
 
 ### Sigorta {#insurance}
 
-- [Arbol](https://www.arbolmarket.com/), _hava durumuyla alakalı riskleri karşılayan parametrik sigortadır_
-- [Etherisc](https://etherisc.com/), _çeşitli risklere yönelik merkeziyetsiz sigortadır_
+- [Arbol](https://www.arbolmarket.com/) - _hava koşullarına bağlı riskleri karşılamak için parametrik sigortadır_
+- [Etherisc](https://etherisc.com/) - _çeşitli risklere yönelik merkeziyetsiz sigortadır_
+- [Nayms](https://www.nayms.com/) - _sigorta programlarının oluşturulması, sermayenin toplanması ve ticareti, risk yazımı, prim ve tazminat talebi işlemleri için ödeme yollarına yönelik AON ile oluşturulmuş dijital bir alandır_
 
-### Referanslar ve sertifikalar {#credentials}
+### Kimlik, kimlik bilgileri ve sertifikalar {#credentials}
 
-- [İki İtalyan lisesi](https://cointelegraph.com/news/two-italian-high-schools-to-issue-digital-diplomas-with-blockchain), _Ethereum Ana Ağı'nda düzenlenen dijital diplomalar_
-- [St. Gallen Üniversitesi](https://cointelegraph.com/news/swiss-university-fights-fake-diplomas-with-blockchain-technology), _bir İsviçre üniversitesi tarafından verilen diplomaları doğrulamaya yönelik pilot proje_
-- [Hyland Credentials](https://www.hylandcredentials.com), _dijital diplomalar ve diğer eğitim yeterlilik belgeleri, lisanslar ve sertifikalar_
-- [OpenCerts](https://opencerts.io/faq), _Singapur'da blokzincir eğitim belgeleri yayınlar_
-- [BlockCerts](https://www.blockcerts.org/), _blokzincir belgeleri için açık bir standart geliştirdi_
+- [BCdiploma](https://www.bcdiploma.com/) - _diplomaları, sertifikaları ve mikro kimlik bilgilerini dijitalleştirir ve doğrular_
+- [Hyland Credentials](https://www.hylandcredentials.com) - _dijital diplomalar ve eğitimle ilgili diğer kimlik bilgileri, lisanslar ve sertifikalar_
+- [Palau Digital Residency Program](https://rns.id/) - _dünya vatandaşlarına Palau hükümeti tarafından verilmiş yasal bir kimliğe sahip olma olanağı tanır_
+- [Spherity](https://www.spherity.com/) - _ekosistemlerde dijital güveni sağlamaya yönelik dijital kimlik yönetimi çözümleri sunar, merkeziyetsiz kimliklere ve doğrulanabilir kimlik bilgilerine odaklanır_
+- [Zug Digital ID](https://ezug.ch/en/) - _İsviçre'de, ülke sakinlere devlet hizmetlerine dijital erişim olanağı sunan ve e-bisiklet ödünç alma ve belediyede oy kullanma gibi işlevleri destekleyen blokzincir tabanlı bir kimlik sistemidir_
 
-### Yardımcı Araçlar {#utilities}
+### Eğlence, NFT'ler ve Sadakat
 
-- [GridPlus](https://blog.gridplus.io/gridplus-is-live-in-texas-efc83c814601), _elektrik ödemeleri_
+- [Adidas Virtual Gear](https://www.adidas.com/metaverse) - _sanal ekipman NFT koleksiyonudur_
+- [The British Museum's Sandbox](https://decrypt.co/150405/british-museum-enter-metaverse-via-sandbox) - _bir NFT koleksiyonudur_
+- [Fruitlab](https://fruitlab.com/) - _oyuncuların çevrimiçi oyunları izleyerek, paylaşarak ve oynayarak para kazanabildiği bir platformdur_
+- [Nike Swoosh](https://www.swoosh.nike/) - _bir NFT platformudur_
+- [Sothbebys Metaverse](https://metaverse.sothebys.com/) - _Sothebys'in dijital sanat eseri NFT pazar yeridir_
 
 Bu listeye bir şeyler eklemek isterseniz, lütfen [katkıda bulunma talimatlarına](/contributing/) bakın.

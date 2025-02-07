@@ -45,7 +45,7 @@ Szerződésalapú megtartással működő platformok:
 - [Filecoin](https://docs.filecoin.io/about-filecoin/what-is-filecoin/)
 - [Skynet](https://siasky.net/)
 - [Storj](https://storj.io/)
-- [0Chain](https://0chain.net/)
+- [Züs](https://zus.network/)
 - [Crust Network](https://crust.network)
 - [Swarm](https://www.ethswarm.org/)
 - [4EVERLAND](https://www.4everland.org/)
@@ -75,7 +75,7 @@ Az egyik legnépszerűbb módszer az adatmegtartásra, hogy valamilyen kriptogr�
 
 A kihívásmechanizmussal rendelkező decentralizált tárhelyek típusai:
 
-- 0Chain
+- Züs
 - Skynet
 - Arweave
 - Filecoin
@@ -88,7 +88,7 @@ A platformok decentralitását nem lehet könnyen mérni, de általában olyan e
 
 Decentralizált eszközök KYC nélkül:
 
-- 0Chain (egy KYC nélküli kiadást implementál)
+- Züs (egy KYC nélküli kiadást implementál)
 - Skynet
 - Arweave
 - Filecoin
@@ -110,7 +110,7 @@ Proof-of-stake-alapú:
 
 - Ethereum
 - Filecoin
-- 0Chain
+- Züs
 - Crust Network
 
 ## Kapcsolódó eszközök {#related-tools}
@@ -145,10 +145,10 @@ Proof-of-stake-alapú:
 - [Dokumentáció](https://docs.arweave.org/info/)
 - [Arweave](https://github.com/ArweaveTeam/arweave/)
 
-**0chain – _A 0Chain egy proof-of-stake dStorage platform shardinggal és blobberekkel._**
+**Züs – _A Züs egy proof-of-stake dStorage platform shardinggal és blobberekkel._**
 
-- [0Chain.net](https://0chain.net/)
-- [Dokumentáció](https://docs.0chain.net/0chain/)
+- - [zus.network](https://zus.network/)
+- [Dokumentáció](https://0chaindocs.gitbook.io/zus-docs)
 - [GitHub](https://github.com/0chain/)
 
 **Crust Network – _Crust egy dStorage platform az IPFS tetején._**
@@ -210,7 +210,7 @@ Proof-of-stake-alapú:
 - [Mi az a decentralizált tárhely?](https://coinmarketcap.com/alexandria/article/what-is-decentralized-storage-a-deep-dive-by-filecoin) – _CoinMarketCap_
 - [Öt gyakori mítosz lerombolása a decentralizált tárhelyről](https://www.storj.io/blog/busting-five-common-myths-about-decentralized-storage) – _Storj_
 
-_Van olyan közösségi erőforrása, amely segített Önnek? Szerkessze ezt az oldalt, és adja hozzá!_
+_Ismer olyan közösségi információforrást, amely a hasznára vált? Módosítsa az oldalt, és adja hozzá!_
 
 ## Kapcsolódó témák {#related-topics}
 

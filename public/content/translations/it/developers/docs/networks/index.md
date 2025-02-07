@@ -61,6 +61,7 @@ Le due reti di prova pubbliche che gli sviluppatori di client stanno mantenendo 
 - [Faucet Alchemy Sepolia](https://sepoliafaucet.com/)
 - [Faucet Infura Sepolia](https://www.infura.io/faucet)
 - [Faucet Chainstack Sepolia](https://faucet.chainstack.com/sepolia-faucet)
+- [Faucet dell'ecosistema di Ethereum](https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia)
 
 #### Goerli _(supporto a lungo termine)_ {#goerli}
 
@@ -90,7 +91,7 @@ Goerli è una rete di prova per testare la convalida e lo staking. La rete Goerl
 - [Faucet Coinbase Wallet | Goerli](https://coinbase.com/faucets/ethereum-goerli-faucet)
 - [Faucet Gorli di Chainstack](https://faucet.chainstack.com/goerli-faucet)
 
-Per lanciare un Validatore sulla rete di prova Goerli, usa il ["cheap goerli validator" launchpad](https://goerli.launchpad.ethstaker.cc/en/) di ethstaker.
+Per lanciare un Validatore sulla rete di prova Holesky, usa il [launchpad del "validatore economico di Holesky"](https://holesky.launchpad.ethstaker.cc/en/) di ethstaker.
 
 ### Rete di prova del livello 2 {#layer-2-testnets}
 

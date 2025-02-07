@@ -3,7 +3,7 @@ import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { FaDiscord, FaGithub, FaXTwitter } from "react-icons/fa6"
 
-import type { EventCardProps, Lang } from "@/lib/types"
+import type { EventCardProps } from "@/lib/types"
 import type { CodeExample } from "@/lib/interfaces"
 
 import { useBentoBox } from "@/components/Homepage/useBentoBox"
@@ -16,8 +16,8 @@ import TryAppsIcon from "@/components/icons/phone-homescreen.svg"
 import RoadmapSign from "@/components/icons/roadmap-sign.svg"
 import Whitepaper from "@/components/icons/whitepaper.svg"
 
+import { cn } from "@/lib/utils/cn"
 import { isValidDate } from "@/lib/utils/date"
-import { isLangRightToLeft } from "@/lib/utils/translations"
 
 import events from "@/data/community-events.json"
 import CreateWalletContent from "@/data/CreateWallet"
@@ -27,6 +27,7 @@ import { GITHUB_REPO_URL } from "@/lib/constants"
 import SimpleDomainRegistryContent from "!!raw-loader!@/data/SimpleDomainRegistry.sol"
 import SimpleTokenContent from "!!raw-loader!@/data/SimpleToken.sol"
 import SimpleWalletContent from "!!raw-loader!@/data/SimpleWallet.sol"
+import { useRtlFlip } from "@/hooks/useRtlFlip"
 
 export const useHome = () => {
   const { t } = useTranslation(["common", "page-index"])
@@ -37,7 +38,9 @@ export const useHome = () => {
 
   const bentoItems = useBentoBox()
 
-  const dir = isLangRightToLeft(locale as Lang) ? "rtl" : "ltr"
+  const { direction, isRtl } = useRtlFlip()
+
+  const eventCategory = `Homepage - ${locale}`
 
   const toggleCodeExample = (id: number): void => {
     setActiveCode(id)
@@ -52,6 +55,7 @@ export const useHome = () => {
       ),
       codeLanguage: "language-solidity",
       code: SimpleWalletContent,
+      eventName: "bank",
     },
     {
       title: t("page-index:page-index-developers-code-example-title-1"),
@@ -60,6 +64,7 @@ export const useHome = () => {
       ),
       codeLanguage: "language-solidity",
       code: SimpleTokenContent,
+      eventName: "token",
     },
     {
       title: t("page-index:page-index-developers-code-example-title-2"),
@@ -68,6 +73,7 @@ export const useHome = () => {
       ),
       codeLanguage: "language-javascript",
       code: CreateWalletContent,
+      eventName: "wallet",
     },
     {
       title: t("page-index:page-index-developers-code-example-title-3"),
@@ -76,6 +82,7 @@ export const useHome = () => {
       ),
       codeLanguage: "language-solidity",
       code: SimpleDomainRegistryContent,
+      eventName: "dns",
     },
   ]
 
@@ -85,7 +92,8 @@ export const useHome = () => {
       description: t("page-index:page-index-cta-wallet-description"),
       href: "/wallets/find-wallet/",
       Svg: PickWalletIcon,
-      className: "text-primary hover:text-primary-hover", // TODO: Confirm hover style
+      className: "text-primary hover:text-primary-hover",
+      eventName: "find wallet",
     },
     {
       label: t("page-index:page-index-cta-get-eth-label"),
@@ -93,6 +101,7 @@ export const useHome = () => {
       href: "/get-eth/",
       Svg: EthTokenIcon,
       className: "text-accent-a hover:text-accent-a-hover",
+      eventName: "get eth",
     },
     {
       label: t("page-index:page-index-cta-networks-label"),
@@ -100,13 +109,18 @@ export const useHome = () => {
       href: "/layer-2/", // TODO: Update with new networks page when ready
       Svg: ChooseNetworkIcon,
       className: "text-accent-b hover:text-accent-b-hover",
+      eventName: "L2",
     },
     {
       label: t("page-index:page-index-cta-dapps-label"),
       description: t("page-index:page-index-cta-dapps-description"),
       href: "/dapps/",
       Svg: TryAppsIcon,
-      className: "text-accent-c hover:text-accent-c-hover",
+      className: cn(
+        "text-accent-c hover:text-accent-c-hover",
+        isRtl && "[&_svg]:-scale-x-100"
+      ),
+      eventName: "dapps",
     },
   ]
 
@@ -115,26 +129,33 @@ export const useHome = () => {
       label: t("page-index:page-index-popular-topics-ethereum"),
       Svg: EthTokenIcon,
       href: "/what-is-ethereum/",
+      eventName: "ethereum",
     },
     {
       label: t("page-index:page-index-popular-topics-wallets"),
       Svg: PickWalletIcon,
       href: "/wallets/",
+      eventName: "wallets",
     },
     {
       label: t("page-index:page-index-popular-topics-start"),
       Svg: BlockHeap,
       href: "/guides/",
+      eventName: "start guides",
     },
     {
       label: t("page-index:page-index-popular-topics-whitepaper"),
       Svg: Whitepaper,
+      className: cn(isRtl && "[&_div_div:has(svg)]:-scale-x-100"),
       href: "/whitepaper/",
+      eventName: "whitepaper",
     },
     {
       label: t("page-index:page-index-popular-topics-roadmap"),
       Svg: RoadmapSign,
+      className: cn(isRtl && "[&_div_div:has(svg)]:-scale-x-100 "),
       href: "/roadmap/",
+      eventName: "roadmap",
     },
   ]
 
@@ -160,6 +181,7 @@ export const useHome = () => {
       description: t(
         "page-index:page-index-join-action-contribute-description"
       ),
+      eventName: "contribute",
     },
     {
       Svg: FaGithub,
@@ -167,6 +189,7 @@ export const useHome = () => {
       href: GITHUB_REPO_URL,
       className: "text-accent-a hover:text-accent-a-hover",
       description: t("page-index:page-index-join-action-github-description"),
+      eventName: "GitHub",
     },
     {
       Svg: FaDiscord,
@@ -174,6 +197,7 @@ export const useHome = () => {
       href: "/discord/",
       className: "text-primary hover:text-primary-hover",
       description: t("page-index:page-index-join-action-discord-description"),
+      eventName: "Discord",
     },
     {
       Svg: FaXTwitter,
@@ -181,6 +205,7 @@ export const useHome = () => {
       href: "https://x.com/EthDotOrg",
       className: "text-accent-b hover:text-accent-b-hover",
       description: t("page-index:page-index-join-action-twitter-description"),
+      eventName: "Twitter",
     },
   ]
 
@@ -188,7 +213,7 @@ export const useHome = () => {
     t,
     locale,
     asPath,
-    dir,
+    dir: direction,
     isModalOpen,
     setModalOpen,
     activeCode,
@@ -199,5 +224,6 @@ export const useHome = () => {
     upcomingEvents,
     joinActions,
     bentoItems,
+    eventCategory,
   }
 }

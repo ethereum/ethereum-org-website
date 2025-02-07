@@ -5,7 +5,7 @@ lang: de
 incomplete: true
 ---
 
-<FeaturedText>Erfahren Sie, wie Sie mit Python-basierten Projekten und Tools für Ethereum entwickeln können</FeaturedText>
+<FeaturedText>Erfahren Sie, wie Sie mit Python-basierten Projekten und Werkzeugen für Ethereum entwickeln können</FeaturedText>
 
 Sie können mit Ethereum dezentrale Anwendungen (oder "dApps") erstellen, die von den Vorteilen der Kryptowährung und der Blockchain-Technologie profitieren. Solche dApps sind vertrauenswürdig. Das bedeutet, dass sie, sobald sie auf Ethereum hochgeladen wurden, immer exakt wie programmiert ausgeführt werden. Darüber lassen sich digitale Vermögenswerte verwalten und neuartige Finanzanwendungen erschaffen. Sie können dezentralisiert sein. Das bedeutet, dass keine einzelne Einheit oder Person sie kontrollieren kann. Damit ist es fast unmöglich, sie zu zensieren.
 
@@ -51,21 +51,22 @@ Sind Sie an einigen grundlegenden Informationen interessiert? Dann sehen Sie sic
 - [Web3.py](https://github.com/ethereum/web3.py) – _Python-Bibliothek für die Interaktion mit Ethereum_
 - [Vyper](https://github.com/ethereum/vyper/) – _Pythonic Smart Contract-Sprache für EVM_
 - [Ape](https://github.com/ApeWorX/ape) – _Das Smart Contract-Entwicklungstool für Python-Experten, Datenwissenschaftler und Sicherheitsexperten_
-- [Brownie](https://github.com/eth-brownie/brownie) – _Python-Framework zum Bereitstellen, Testen und Interagieren mit Ethereum Smart Contracts_
 - [py-evm](https://github.com/ethereum/py-evm) – _Implementierung der Ethereum -Virtual Machine_
 - [eth-tester](https://github.com/ethereum/eth-tester) – _Tools zum Testen von Ethereum-basierten Anwendungen_
 - [eth-utils](https://github.com/ethereum/eth-utils/) – _Dienstprogrammfunktionen für das Arbeiten mit Codebasen, die mit Ethereum verwandt sind_
 - [py-solc-x](https://pypi.org/project/py-solc-x/) – _Python-Wrapper um den Solc Solidity-Compiler mit 0.5.x Unterstützung_
-- [py-wasm](https://github.com/ethereum/py-wasm) – _Python-Implementierung des Web Assembly Interpreters_
-- [pydevp2p](https://github.com/ethereum/pydevp2p) – _Implementierung des Ethereum-P2P-Stacks_
 - [pymaker](https://github.com/makerdao/pymaker) – _Python-API für Maker-Verträge_
 - [siwe](https://github.com/spruceid/siwe-py) – _Mit Ethereum (siwe) für Python anmelden_
 - [Web3 DeFi für Ethereum-Integrationen](https://github.com/tradingstrategy-ai/web3-ethereum-defi) - _Ein Python-Paket mit fertigen Integrationen für ERC-20, Uniswap und andere populäre Projekte_
+- [Wake](https://getwake.io) – _All-in-One-Python-Framework für das Testen von Contracts, Fuzzing, die Bereitstellung, Schwachstellenscans und die Code-Navigation (Sprachserver – [Tools for Solidity](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity))_
 
 ### Archiviert/Nicht mehr verwaltet: {#archived--no-longer-maintained}
 
 - [Trinity](https://github.com/ethereum/trinity) – _Ethereum-Python-Client_
 - [Mamba](https://github.com/arjunaskykok/mamba) – _Framework zum Schreiben, Kompilieren und Bereitstellen von Smart Contracts in der Sprache Vyper_
+- [Brownie](https://github.com/eth-brownie/brownie) – _Python-Framework zum Bereitstellen, Testen und Interagieren mit Ethereum Smart Contracts_
+- [pydevp2p](https://github.com/ethereum/pydevp2p) – _Implementierung des Ethereum-P2P-Stacks_
+- [py-wasm](https://github.com/ethereum/py-wasm) – _Python-Implementierung des Web Assembly Interpreters_
 
 Sind Sie an weiteren Informationen interessiert? Sehen Sie sich [ethereum.org/developers](/developers/) an.
 
@@ -82,8 +83,8 @@ Die folgenden Ethereum-basierten Projekte verwenden die auf dieser Seite erwähn
 ## Python Community-Diskussionen {#python-community-contributors}
 
 - [Ethereum Python Community Discord](https://discord.gg/9zk7snTfWe) für Web3.py und andere Python Framework-Diskussionen
-- [Vyper Discord](https://discord.gg/SdvKC79cJk) für Diskussionen zu Vyper Smart Contract-Programmierung
+- [Vyper Discord](https://discord.gg/SdvKC79cJk) für Diskussionen zur Vyper-Smart-Contract-Programmierung
 
 ## Andere aggregierte Listen {#other-aggregated-lists}
 
-Das Vyper-Wiki verfügt über eine [umfassende Liste mit Ressourcen für Vyper](https://github.com/ethereum/vyper/wiki/Vyper-tools-and-resources)
+Das Vyper-Wiki verfügt über eine [umfangreiche Liste mit Ressourcen für Vyper](https://github.com/vyperlang/vyper/wiki/Vyper-tools-and-resources)

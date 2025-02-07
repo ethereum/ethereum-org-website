@@ -1,34 +1,27 @@
-import { useEffect, useMemo, useState } from "react"
+import React, { HTMLAttributes, useEffect, useMemo, useState } from "react"
 import { GetStaticProps, InferGetServerSidePropsType } from "next"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { FaGithub } from "react-icons/fa"
-import {
-  Badge,
-  Box,
-  chakra,
-  Flex,
-  forwardRef,
-  Heading,
-  useToken,
-} from "@chakra-ui/react"
+import { forwardRef } from "@chakra-ui/react"
 
 import { BasePageProps, Lang } from "@/lib/types"
 
-import { Button, ButtonLink } from "@/components/Buttons"
 import Emoji from "@/components/Emoji"
 import FeedbackCard from "@/components/FeedbackCard"
-import InlineLink, { BaseLink } from "@/components/Link"
+import Heading from "@/components/Heading"
 import MainArticle from "@/components/MainArticle"
-import Modal from "@/components/Modal"
-import OldHeading from "@/components/OldHeading"
-import Text from "@/components/OldText"
 import PageMetadata from "@/components/PageMetadata"
 import Translation from "@/components/Translation"
 import { getSkillTranslationId, Skill } from "@/components/TutorialMetadata"
 import TutorialTags from "@/components/TutorialTags"
+import { Button, ButtonLink } from "@/components/ui/buttons/Button"
+import Modal from "@/components/ui/dialog-modal"
+import { Flex, FlexProps } from "@/components/ui/flex"
+import { Tag, TagButton } from "@/components/ui/tag"
 
+import { cn } from "@/lib/utils/cn"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { trackCustomEvent } from "@/lib/utils/matomo"
@@ -42,41 +35,43 @@ import {
 
 import externalTutorials from "@/data/externalTutorials.json"
 
-import { useRtlFlip } from "@/hooks/useRtlFlip"
+import { useBreakpointValue } from "@/hooks/useBreakpointValue"
+
+type Props = BasePageProps & {
+  internalTutorials: ITutorial[]
+}
+
+type LinkFlexProps = FlexProps & {
+  href: string
+}
 
 const FilterTag = forwardRef<{ isActive: boolean; name: string }, "button">(
   (props, ref) => {
     const { isActive, name, ...rest } = props
     return (
-      <chakra.button
+      <TagButton
         ref={ref}
-        bg="none"
-        bgImage="radial-gradient(46.28% 66.31% at 66.95% 58.35%,rgba(127, 127, 213, 0.2) 0%,rgba(134, 168, 231, 0.2) 50%,rgba(145, 234, 228, 0.2) 100%)"
-        border="1px"
-        borderColor={isActive ? "primary300" : "white800"}
-        borderRadius="base"
-        boxShadow={!isActive ? "table" : undefined}
-        color="text"
-        fontSize="sm"
-        lineHeight={1.2}
-        opacity={isActive ? 1 : 0.7}
-        p={2}
-        textTransform="uppercase"
-        _hover={{
-          color: "primary.base",
-          borderColor: "text200",
-          opacity: "1",
-        }}
+        variant={isActive ? "solid" : "outline"}
+        status={isActive ? "tag" : "normal"}
+        className="justify-center"
         {...rest}
       >
         {name}
-      </chakra.button>
+      </TagButton>
     )
   }
 )
 
-type Props = BasePageProps & {
-  internalTutorials: ITutorial[]
+const Text = ({ className, ...props }: HTMLAttributes<HTMLHeadElement>) => (
+  <p className={cn("mb-6", className)} {...props} />
+)
+
+const LinkFlex = ({ href, children, ...props }: LinkFlexProps) => {
+  return (
+    <Flex asChild {...props}>
+      <a href={href}>{children}</a>
+    </Flex>
+  )
 }
 
 export const getStaticProps = (async ({ locale }) => {
@@ -144,9 +139,6 @@ const TutorialPage = ({
   contentNotTranslated,
 }: InferGetServerSidePropsType<typeof getStaticProps>) => {
   const { locale } = useRouter()
-  const { flipForRtl } = useRtlFlip()
-  const tableBoxShadow = useToken("colors", "tableBoxShadow")
-  const cardBoxShadow = useToken("colors", "cardBoxShadow")
   const filteredTutorialsByLang = useMemo(
     () =>
       filterTutorialsByLang(
@@ -205,16 +197,11 @@ const TutorialPage = ({
   }
 
   const dir = contentNotTranslated ? "ltr" : "unset"
+
+  const modalSize = useBreakpointValue({ base: "xl", md: "md" } as const)
   return (
-    <Flex
-      as={MainArticle}
-      flexDirection="column"
-      alignItems="center"
-      w="full"
-      my={0}
-      mx="auto"
-      mt={16}
-      dir={dir}
+    <MainArticle
+      className={`mx-auto my-0 mt-16 flex w-full flex-col items-center ${dir}`}
     >
       <PageMetadata
         title={t("page-developers-tutorials:page-tutorials-meta-title")}
@@ -237,104 +224,44 @@ const TutorialPage = ({
       >
         <Translation id="page-developers-tutorials:page-tutorial-title" />
       </Heading>
-      <Text
-        fontSize="xl"
-        lineHeight="140%"
-        color="text200"
-        mb={4}
-        textAlign="center"
-      >
+      <Text className="mb-4 text-center leading-xs text-body-medium">
         <Translation id="page-developers-tutorials:page-tutorial-subtitle" />
       </Text>
 
       <Modal
-        isOpen={isModalOpen}
-        onClose={() => setModalOpen(false)}
-        size={{ base: "full", md: "xl" }}
+        open={isModalOpen}
+        onOpenChange={(open) => setModalOpen(open)}
+        size={modalSize}
         contentProps={{ dir }}
         title={
           <Translation id="page-developers-tutorials:page-tutorial-submit-btn" />
         }
       >
         <Text>
-          <Translation id="page-developers-tutorials:page-tutorial-listing-policy-intro" />{" "}
-          <InlineLink href="/contributing/content-resources/">
-            <Translation id="page-developers-tutorials:page-tutorial-listing-policy" />
-          </InlineLink>
+          <Translation id="page-developers-tutorials:page-tutorial-listing-policy-intro" />
         </Text>
-        <Text>
-          <Translation id="page-developers-tutorials:page-tutorial-submit-tutorial" />
-        </Text>
-        <Flex flexDirection={{ base: "column", md: "row" }} gap="2">
-          <Flex
-            flex="1"
-            borderWidth="1px"
-            borderStyle="solid"
-            borderColor="border"
-            borderRadius="base"
-            p={4}
-            flexDirection="column"
-            justifyContent="space-between"
-          >
-            <Text as="b">
-              <Translation id="page-developers-tutorials:page-tutorial-new-github" />
-            </Text>
+        <Flex className="flex-col gap-2 md:flex-row">
+          <Flex className="w-full flex-col justify-between rounded-sm border border-border p-4">
+            <b>
+              <Translation id="page-developers-tutorials:page-tutorial-create-an-issue" />
+            </b>
             <Text>
-              <Translation id="page-developers-tutorials:page-tutorial-new-github-desc" />
+              <Translation id="page-developers-tutorials:page-tutorial-create-an-issue-desc" />
             </Text>
             <ButtonLink
-              leftIcon={<FaGithub />}
               variant="outline"
               href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=suggest_tutorial.yaml&title="
             >
+              <FaGithub />
               <Translation id="page-developers-tutorials:page-tutorial-raise-issue-btn" />
-            </ButtonLink>
-          </Flex>
-          <Flex
-            flex="1"
-            borderWidth="1px"
-            borderStyle="solid"
-            borderColor="border"
-            borderRadius="base"
-            p={4}
-            flexDirection="column"
-            justifyContent="space-between"
-          >
-            <Text as="b">
-              <Translation id="page-developers-tutorials:page-tutorial-pull-request" />
-            </Text>
-            <Text>
-              <Translation id="page-developers-tutorials:page-tutorial-pull-request-desc-1" />{" "}
-              <code>
-                <Translation id="page-developers-tutorials:page-tutorial-pull-request-desc-2" />
-              </code>{" "}
-              <Translation id="page-developers-tutorials:page-tutorial-pull-request-desc-3" />
-            </Text>
-            <ButtonLink
-              leftIcon={<FaGithub />}
-              variant="outline"
-              href="https://github.com/ethereum/ethereum-org-website/new/dev/src/content/developers/tutorials"
-            >
-              <Translation id="page-developers-tutorials:page-tutorial-pull-request-btn" />
             </ButtonLink>
           </Flex>
         </Flex>
       </Modal>
 
       <Button
+        className="px-3 py-2 text-body"
         variant="outline"
-        color="text"
-        borderColor="text"
-        _hover={{
-          color: "primary.base",
-          borderColor: "primary.base",
-          boxShadow: cardBoxShadow,
-        }}
-        _active={{
-          bg: "secondaryButtonBackgroundActive",
-        }}
-        py={2}
-        px={3}
         onClick={() => {
           setModalOpen(true)
           trackCustomEvent({
@@ -347,52 +274,26 @@ const TutorialPage = ({
         <Translation id="page-developers-tutorials:page-tutorial-submit-btn" />
       </Button>
 
-      <Box
-        boxShadow={tableBoxShadow}
-        mb={8}
-        mt={8}
-        w={{ base: "full", md: "66%" }}
-      >
-        <Flex
-          justifyContent="center"
-          m={8}
-          pb={{ base: 4, md: 8 }}
-          pt={{ base: 4, md: "initial" }}
-          px={{ base: 0, md: "initial" }}
-          borderBottomWidth="1px"
-          borderBottomStyle="solid"
-          borderBottomColor="border"
-          flexDirection={{ base: "column", md: "initial" }}
-        >
-          <Flex
-            flexWrap="wrap"
-            alignItems="center"
-            gap={2}
-            maxW={{ base: "full", md: "initial" }}
-            mb={{ base: 4, md: "initial" }}
-          >
-            {Object.entries(allTags).map(([tagName, tagCount], idx) => {
-              const name = `${tagName} (${tagCount})`
-              const isActive = selectedTags.includes(tagName)
-              return (
-                <FilterTag
-                  key={idx}
-                  onClick={() => handleTagSelect(tagName)}
-                  {...{ name, isActive }}
-                />
-              )
-            })}
+      <div className="my-8 w-full shadow-table-box md:w-2/3">
+        <Flex className="m-8 flex-col justify-center border-b border-border px-0 pb-4 pt-4 md:pb-8">
+          <Flex className="mb-4 max-w-full flex-wrap items-center gap-2">
+            <div className="flex w-full flex-wrap gap-2 lg:grid lg:grid-cols-3 lg:gap-4 xl:grid-cols-4 2xl:grid-cols-5">
+              {Object.entries(allTags).map(([tagName, tagCount], idx) => {
+                const name = `${tagName} (${tagCount})`
+                const isActive = selectedTags.includes(tagName)
+                return (
+                  <FilterTag
+                    key={idx}
+                    onClick={() => handleTagSelect(tagName)}
+                    {...{ name, isActive }}
+                  />
+                )
+              })}
+            </div>
             {selectedTags.length > 0 && (
               <Button
-                color="primary.base"
-                textDecoration="underline"
-                bg="none"
-                border="none"
-                cursor="pointer"
-                p={0}
-                _hover={{
-                  bg: "none",
-                }}
+                className="cursor-pointer p-0 text-primary underline"
+                variant="ghost"
                 onClick={() => {
                   setSelectedTags([])
                   trackCustomEvent({
@@ -408,69 +309,37 @@ const TutorialPage = ({
           </Flex>
         </Flex>
         {filteredTutorials.length === 0 && (
-          <Box mt={0} textAlign="center" padding={12}>
+          <div className="mt-0 p-12 text-center">
             <Emoji text=":crying_face:" className="my-8 text-5xl" />
-            <OldHeading>
+            <h2 className="mb-8 mt-12 leading-xs">
               <Translation id="page-developers-tutorials:page-tutorial-tags-error" />
-            </OldHeading>
+            </h2>
             <Text>
               <Translation id="page-developers-tutorials:page-find-wallet-try-removing" />
             </Text>
-          </Box>
+          </div>
         )}
         {filteredTutorials.map((tutorial) => {
           return (
-            <Flex
-              as={BaseLink}
-              textDecoration="none"
-              flexDirection="column"
-              justifyContent="space-between"
-              fontWeight="normal"
-              color="text"
-              boxShadow="0px 1px 1px var(--eth-colors-tableItemBoxShadow)"
-              mb="px"
-              padding={8}
-              w="full"
-              _hover={{
-                textDecoration: "none",
-                borderRadius: "base",
-                boxShadow: "0 0 1px var(--eth-colors-primary-base)",
-                bg: "tableBackgroundHover",
-              }}
+            <LinkFlex
+              className="mb-px w-full flex-col justify-between border-b p-8 text-border no-underline duration-100 hover:bg-background-highlight"
               key={tutorial.href}
               href={tutorial.href ?? undefined}
-              hideArrow
             >
-              <Flex
-                justifyContent="space-between"
-                mb={{ base: 8, md: -4 }}
-                alignItems="flex-start"
-                flexDirection={{ base: "column", md: "initial" }}
-              >
+              <Flex className="mb-8 flex-col items-start justify-between gap-y-4 md:-mb-4 md:flex-row">
                 <Text
-                  color="text"
-                  fontWeight="semibold"
-                  fontSize="2xl"
-                  me={{ base: 0, md: 24 }}
-                  _after={{
-                    ms: 0.5,
-                    me: "0.3rem",
-                    display: tutorial.isExternal ? "inline-block" : "none",
-                    content: `"↗"`,
-                    transform: flipForRtl,
-                    transitionProperty: "all",
-                    transitionDuration: "0.1s",
-                    transitionTimingFunction: "ease-in-out",
-                    fontStyle: "normal",
-                  }}
+                  className={cn(
+                    "relative me-0 text-2xl font-semibold text-body after:ml-2 after:inline-block after:italic after:transition-all after:duration-100 after:ease-in-out after:content-['↗'] md:me-24",
+                    tutorial.isExternal ? "after:inline-block" : "after:hidden"
+                  )}
                 >
                   {tutorial.title}
                 </Text>
-                <Badge variant="secondary">
+                <Tag variant="outline">
                   <Translation id={getSkillTranslationId(tutorial.skill!)} />
-                </Badge>
+                </Tag>
               </Flex>
-              <Text color="text200" fontSize="sm" textTransform="uppercase">
+              <Text className="mt-6 uppercase text-body-medium">
                 <Emoji text=":writing_hand:" className="me-2 text-sm" />
                 {tutorial.author}
                 {tutorial.published ? (
@@ -489,22 +358,22 @@ const TutorialPage = ({
                   <>
                     {" "}
                     •<Emoji text=":link:" className="mx-2 text-sm" />
-                    <Box as="span" color="primary.base" cursor="pointer">
+                    <span className="cursor-pointer text-primary">
                       <Translation id="page-developers-tutorials:page-tutorial-external-link" />
-                    </Box>
+                    </span>
                   </>
                 )}
               </Text>
-              <Text color="text200">{tutorial.description}</Text>
-              <Flex flexWrap="wrap" w="full">
+              <Text className="text-body-medium">{tutorial.description}</Text>
+              <Flex className="w-full flex-wrap">
                 <TutorialTags tags={tutorial.tags ?? []} />
               </Flex>
-            </Flex>
+            </LinkFlex>
           )
         })}
-      </Box>
+      </div>
       <FeedbackCard />
-    </Flex>
+    </MainArticle>
   )
 }
 

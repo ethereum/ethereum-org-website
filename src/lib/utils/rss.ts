@@ -1,4 +1,4 @@
-import { _0X_PARC_FEED, SOLIDITY_FEED, VITALIK_FEED } from "../constants"
+import { SOLIDITY_FEED, VITALIK_FEED } from "../constants"
 import type { RSSItem } from "../types"
 
 export const sortByPubDate = (items: RSSItem[]) =>
@@ -20,16 +20,12 @@ export const postProcess = (rssItems: RSSItem[]) =>
           ...item,
           imgSrc: "/images/vitalik-blog-banner.svg",
           link: item.link.replace(".ca", ".eth.limo"),
+          sourceUrl: item.sourceUrl.replace(".ca", ".eth.limo"),
         }
       case SOLIDITY_FEED:
         return {
           ...item,
           imgSrc: "/images/solidity-banner.png",
-        }
-      case _0X_PARC_FEED:
-        return {
-          ...item,
-          imgSrc: "/images/0xparc-logo.svg",
         }
       default:
         return item

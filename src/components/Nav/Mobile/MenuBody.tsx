@@ -17,8 +17,6 @@ import {
   AccordionTrigger,
 } from "./MenuAccordion"
 
-import { useNavMenuColorsTw } from "@/hooks/useNavMenuColorsTw"
-
 type MenuBodyProps = {
   onToggle: () => void
   linkSections: NavSections
@@ -26,7 +24,6 @@ type MenuBodyProps = {
 
 const MenuBody = ({ linkSections, onToggle }: MenuBodyProps) => {
   const { locale } = useRouter()
-  const menuColors = useNavMenuColorsTw()
   const [value, setValue] = useState("")
 
   return (
@@ -48,7 +45,7 @@ const MenuBody = ({ linkSections, onToggle }: MenuBodyProps) => {
               className="border-b border-body-light first:border-t"
             >
               <AccordionTrigger
-                className={cn(menuColors.body)}
+                className="text-body"
                 onClick={() => {
                   trackCustomEvent({
                     eventCategory: "Mobile navigation menu",
@@ -67,9 +64,8 @@ const MenuBody = ({ linkSections, onToggle }: MenuBodyProps) => {
 
               <AccordionContent
                 className={cn(
-                  "mt-0 p-0",
-                  isExpanded && "border-t border-disabled",
-                  menuColors.lvl[2].background
+                  "mt-0 bg-background-low p-0",
+                  isExpanded && "border-t border-disabled"
                 )}
               >
                 <LvlAccordion

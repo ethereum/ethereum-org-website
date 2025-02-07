@@ -8,6 +8,8 @@ lang: pt-br
 
 ethereum.org é um recurso público de código aberto para a comunidade Ethereum, com o qual todos podem contribuir. Nós temos uma pequena equipe principal dedicada a manter e desenvolver o site com contribuições de milhares de membros da comunidade em todo o mundo.
 
+**Ninguém da ethereum.org jamais entrará em contato com você. Não responda.**
+
 ## Observação sobre nomes {#a-note-on-names}
 
 É comum para as pessoas confundir nomes no cenário do Ethereum, o que pode levar a más interpretações sobre como o Ethereum funciona. Aqui está uma rápida explicação para esclarecer as coisas:
@@ -84,13 +86,13 @@ O Ethereum e a comunidade estão sempre evoluindo, logo, o ethereum.org também 
 
 ### 3. O ethereum.org não é um site de produtos típico 🦄 {#core-principles-3}
 
-O universo Ethereum é imenso: ele inclui uma comunidade, uma tecnologia, um conjunto de ideias, ideologias e muito mais. Isso significa que o website precisa lidar com muitas jornadas de usuários diferentes, de “um desenvolvedor que deseja uma ferramenta específica” a “um recém-chegado que acabou de comprar ETH e não sabe o que é uma carteira”. "Qual é o melhor website para uma plataforma blockchain?" permanece uma questão em aberto — somos pioneiros. Construir isso requer experimentação.
+O universo Ethereum é imenso: ele inclui uma comunidade, uma tecnologia, um conjunto de ideias, ideologias e muito mais. Isso significa que o site precisa lidar com muitas jornadas diferentes de usuários, de "um desenvolvedor que quer uma ferramenta específica" a "um recém-chegado que acabou de comprar algum ETH e não sabe o que é uma carteira". "Qual é o melhor site para uma plataforma de blockchain?" permanece uma questão em aberto. Somos pioneiros. Construir isso requer experimentação.
 
 ## Roteiro do produto {#roadmap}
 
 Para tornar nosso trabalho mais acessível e fomentar mais colaboração comunitária, a equipe base do ethereum.org publica uma visão geral de nossas metas de roteiro trimestrais.
 
-[Veja o nosso roteiro do produto para o primeiro trimestre de 2023](https://github.com/ethereum/ethereum-org-website/issues/9090)
+[Veja nosso roteiro de produtos para o terceiro trimestre de 2024](https://github.com/ethereum/ethereum-org-website/issues/13399)
 
 **O que você acha disso?** Nós sempre agradecemos o feedback sobre nosso roadmap — se houver algo em que você acha que deveríamos melhorar, por favor nos avise! Agradecemos o envio de ideias e PRs (pull requests) de qualquer pessoa da comunidade.
 
@@ -104,7 +106,7 @@ Nós usamos um conjunto de [princípios de design](/contributing/design-principl
 
 Construímos e lançamos um [sistema de design](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System?node-id=0%3A1&t=QBt9RkhpPqzE3Aa6-1) para enviar funcionalidades mais rapidamente e permitir que os membros da comunidade participem do design aberto do ethereum.org.
 
-Quer se envolver?[Acompanhe no Figma](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System), [assuntos no GitHub](https://github.com/ethereum/ethereum-org-website/issues/6284) e junte-se à conversa em nosso [canal #design no Discord](https://discord.gg/bKycYhVUwV).
+Quer se envolver?[Acompanhe no Figma](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System), [assuntos no GitHub](https://github.com/ethereum/ethereum-org-website/issues/6284) e junte-se à conversa em nosso [canal #design no Discord](https://discord.gg/ethereum-org).
 
 ## Guia de estilo {#style-guide}
 
@@ -113,6 +115,10 @@ Temos um [guia de estilo](/contributing/style-guide/) para padronizar certos asp
 Certifique-se de ler [nossos princípios](/contributing/design-principles/) e [nosso guia de estilo](/contributing/style-guide/) se você quiser [contribuir para o site](/contributing/).
 
 Agradecemos seus comentários sobre nossos princípios de design, sistema de design e guia de estilo. Lembre-se, o site ethereum.org é feito para a comunidade, pela comunidade.
+
+## Licença {#license}
+
+O site ethereum.org é de código aberto e construído sob uma [Licença MIT](https://github.com/ethereum/ethereum-org-website/blob/dev/LICENSE), a menos que especificado de outra forma. Mais sobre os [termos de uso](/terms-of-use/) do ethereum.org.
 
 ## Vagas de emprego {#open-jobs}
 

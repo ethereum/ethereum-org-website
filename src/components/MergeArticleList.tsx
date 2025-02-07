@@ -1,12 +1,11 @@
 import { useTranslation } from "next-i18next"
-import { Box } from "@chakra-ui/react"
 
-import CardList, { type CardListItem } from "@/components/CardList"
+import CardList, { type CardProps } from "@/components/CardList"
 
 const MergeArticleList = () => {
   const { t } = useTranslation(["page-upgrades", "page-upgrades-index"])
 
-  const reads: CardListItem[] = [
+  const reads: CardProps[] = [
     {
       title: t("page-upgrades-index:page-upgrade-article-title-ethmerge"),
       description: t(
@@ -78,9 +77,9 @@ const MergeArticleList = () => {
   ]
 
   return (
-    <Box mb="4rem">
+    <div className="mb-16">
       <CardList items={reads} />
-    </Box>
+    </div>
   )
 }
 

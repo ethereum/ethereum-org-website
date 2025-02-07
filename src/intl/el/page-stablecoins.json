@@ -131,6 +131,7 @@
   "page-stablecoins-stablecoins-table-type-precious-metals-backed": "Πολύτιμα μέταλλα",
   "page-stablecoins-table-error": "Δεν ήταν δυνατή η φόρτωση των κρυπτονομισμάτων σταθερής αξίας. Δοκιμάστε να ανανεώσετε τη σελίδα.",
   "page-stablecoins-title": "Κρυπτονομίσματα σταθερής αξίας",
+  "page-stablecoins-meta-title": "Επεξήγηση κρύπτο σταθερής αξίας: Σε τι χρησιμεύουν;",
   "page-stablecoins-top-coins": "Κορυφαία κρυπτονομίσματα σταθερής αξίας ανά κεφαλαιοποίηση αγοράς",
   "page-stablecoins-top-coins-intro": "Η κεφαλαιοποίηση αγοράς είναι",
   "page-stablecoins-top-coins-intro-code": "ο συνολικός αριθμός των νομισμάτων πολλαπλασιασμένος επί την τιμή ανά νόμισμα. Αυτή η λίστα είναι δυναμική και η κατάσταση των έργων που αναφέρονται δεν είναι απαραίτητα επικυρωμένα από την ομάδα του ethereum.org.",
@@ -163,5 +164,6 @@
   "makerdao-logo": "Λογότυπο MakerDao",
   "matcha-logo": "Λογότυπο Matcha",
   "summerfi-logo": "Λογότυπο Summer.fi",
-  "uniswap-logo": "Λογότυπο Uniswap"
+  "uniswap-logo": "Λογότυπο Uniswap",
+  "page-stablecoins-go-to": "Μετάβαση σε"
 }

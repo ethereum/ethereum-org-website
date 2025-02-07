@@ -252,7 +252,7 @@ Maggiori informazioni a riguardo si possono trovare nella documentazione [EIP 27
 
 ### Trie delle ricevute {#receipts-trie}
 
-Ogni blocco ha il proprio trie delle ricevute. Qui, un `path` è: `rlp(transactionIndex)`. `transactionIndex` è il suo indice nel blocco estratto. L'albero delle ricevute non è mai aggiornato. Analogamento all'albero delle Transazioni, esistono ricevute correnti e legacy. Per interrogare una ricevuta specifica nell'albero delle Ricevute, l'indice della transazione nel suo blocco, il carico utile di ricevute e il tipo di transazione sono necessari. La ricevuta Restituita può essere di tipo `Receipt`, definita come la concatenazione di `TransactionType` e `ReceiptPayload` o di tipo `LegacyReceipt`, definibile come `rlp([status, cumulativeGasUsed, logsBloom, logs])`.
+Ogni blocco ha il proprio trie delle ricevute. Qui, un `path` è: `rlp(transactionIndex)`. `transactionIndex` è il suo indice all'interno del blocco in cui è stato incluso. L'albero delle ricevute non è mai aggiornato. Analogamento all'albero delle Transazioni, esistono ricevute correnti e legacy. Per interrogare una ricevuta specifica nell'albero delle Ricevute, l'indice della transazione nel suo blocco, il carico utile di ricevute e il tipo di transazione sono necessari. La ricevuta Restituita può essere di tipo `Receipt`, definita come la concatenazione di `TransactionType` e `ReceiptPayload` o di tipo `LegacyReceipt`, definibile come `rlp([status, cumulativeGasUsed, logsBloom, logs])`.
 
 Maggiori informazioni a riguardo si possono trovare nella documentazione [EIP 2718](https://eips.ethereum.org/EIPS/eip-2718).
 

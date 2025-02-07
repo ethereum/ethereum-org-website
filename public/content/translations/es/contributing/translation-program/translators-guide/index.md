@@ -10,7 +10,7 @@ La guía de estilo de traducción de ethereum.org reúne algunas de las pautas, 
 
 Este documento sirve de guía general y no es específico de ningún idioma.
 
-Si tiene alguna pregunta, sugerencia o comentario, no dude en contactarnos en translations@ethereum.org, enviar un mensaje a @ethdotorg en Crowdin, o [unirse a nuestro chat Discord](https://discord.gg/ethereum-org), donde puede enviarnos mensajes en el canal de #translations o contactar con cualquiera de los miembros del equipo.
+Si tiene alguna pregunta, sugerencia o comentario, no dude en contactarnos en translations@ethereum.org, enviar un mensaje a @ethdotorg en Crowdin o [unirse a nuestro chat de Discord](https://discord.gg/ethereum-org), donde puede enviarnos mensajes en el canal #translations o contactar con cualquiera de los miembros del equipo.
 
 ## Cómo utilizar Crowdin {#using-crowdin}
 
@@ -36,7 +36,7 @@ El uso del estilo formal da un carácter más serio y menos ofensivo, y es apto 
 
 La mayoría de los idiomas indoeuropeos y afro-asiáticos utilizan pronombres personales de segunda persona específicos para el género, que distinguen entre hombres y mujeres. Al dirigirnos al usuario o usar pronombres posesivos, podemos evitar el asumir el género del visitante, ya que el estilo formal suele siempre ser oportuno y coherente, independientemente de cómo se identifiquen.
 
-## Vocabulario y significado sencillo y claro {#simple-vocabulary}
+## Vocabulario y significado sencillos y claros {#simple-vocabulary}
 
 Nuestro objetivo es hacer que el contenido de la página web sea comprensible para el mayor número de personas posible.
 
@@ -54,7 +54,7 @@ Una idea errónea común es que Ethereum debe estar siempre escrito en latín. E
 
 **Lo anterior no se aplica a los idiomas, donde los nombres propios no se traducen, por regla general.**
 
-## Traducir metadatos de la página {#translating-metadata}
+## Traducción de metadatos de la página {#translating-metadata}
 
 Algunas páginas contienen metadatos en la página, como 'title', 'lang', 'description', 'sidebar', etc.
 
@@ -88,9 +88,9 @@ Crowdin tiene una función incorporada que advierte a los traductores cuando est
 
 Un ejemplo de una advertencia de Crowdin cuando olvida añadir una etiqueta a su traducción: ![Ejemplo de una advertencia de Crowdin](./crowdin-warning-example.png)
 
-## Trabajar con etiquetas y fragmentos de código {#dealing-with-tags}
+## Cómo abordar las etiquetas y los fragmentos de código {#dealing-with-tags}
 
-Gran parte del contenido en inglés contiene etiquetas y variables, que se destacan en amarillo en el editor de Crowdin.-. Estas funciones tienen diferentes funciones y deben abordarse correctamente.
+Gran parte del contenido en inglés contiene etiquetas y variables, que se destacan en amarillo en el editor de Crowdin. Estas funciones tienen diferentes funciones y deben abordarse correctamente.
 
 **Ajustes de Crowdin**
 
@@ -158,7 +158,7 @@ En el ejemplo de abajo, al pasar el cursor por la <0> etiqueta se muestra lo que
 
 ![Ejemplo de tags.png ambiguo](./example-of-ambiguous-tags.png)
 
-## Siglas y descripciones completas {#short-vs-full-forms}
+## Abreviaturas/siglas vs. formas completas {#short-vs-full-forms}
 
 En el sitio web, se utilizan muchas siglas, como por ejemplo, dapps, NFT, DAO, DeFi, etc. Estas siglas se utilizan comúnmente en inglés y la mayoría de los visitantes del sitio web están familiarizados con ellas.
 
@@ -170,9 +170,9 @@ Ejemplo de cómo traducir dApps:
 
 - Aplicaciones descentralizadas (dApps) → _Traducida completa (abreviatura en inglés entre paréntesis)_
 
-## Términos sin traducción oficial {#terms-without-established-translations}
+## Términos sin traducción establecida {#terms-without-established-translations}
 
-Puede que algunos términos aún no tengan una traducción oficial en otros idiomas, y sin embargo, se conozcan ampliamente por su denominación en inglés. Tales términos incluyen principalmente conceptos más nuevos, como proof-of-work (prueba de trabajo), proof-of-stake (prueba de participación), beacon chain (cadena de baliza), staking (participación), etc.
+Puede que algunos términos aún no tengan una traducción establecida en otros idiomas y se conozcan ampliamente por su denominación en inglés. Tales términos incluyen principalmente conceptos más nuevos, como proof-of-work (prueba de trabajo), proof-of-stake (prueba de participación), beacon chain (cadena de baliza), staking (participación), etc.
 
 Si bien la traducción de estos términos puede sonar antinatural, ya que la versión en inglés también se utiliza en otros idiomas, es altamente recomendable que se traduzcan.
 
@@ -180,7 +180,7 @@ Al traducirlos, sea creativo con toda libertad, use traducciones descriptivas o 
 
 **La razón por la que la mayoría de estos términos se deberían traducir, en lugar de dejar algunos en inglés, es el hecho de que esta nueva terminología se extenderá en el futuro, a medida que más personas empiecen a utilizar Ethereum y tecnologías relacionadas. Si queremos llegar a más personas de todo el mundo con este espacio, tenemos que proporcionar una terminología comprensible en tantos idiomas como sea posible, aunque necesitemos acuñar los términos nosotros mismos.**
 
-## Botones y comandos interactivos (CTA) {#buttons-and-ctas}
+## Botones y CTA {#buttons-and-ctas}
 
 El sitio web contiene numerosos botones, que deben traducirse de forma diferente a otros contenidos.
 
@@ -245,7 +245,7 @@ He aquí algunos ejemplos de aspectos especialmente importantes:
 **Guiones**
 
 - En inglés, un guión corto (-) se utiliza para unir palabras o diferentes partes de una palabra, mientras un guión medio (–) se utiliza para indicar una explicación o hacer una pausa.
-- Muchos idiomas siguen unas reglas de uso de los guines diferentes, por lo tanto, deben cumplirse.
+- Muchos idiomas siguen unas reglas de uso de los guiones diferentes, por lo tanto, deben cumplirse.
 
 ### Formatos {#formats}
 
