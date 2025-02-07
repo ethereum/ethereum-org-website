@@ -43,7 +43,7 @@ However, in addition to holding the user's balances, the channel also tracks the
 
 This makes it possible to execute a smart contract off-chain between two users. In this scenario, updates to the smart contract's internal state require only the approval of the peers who created the channel.
 
-While this solves the scalability problem described earlier, it has implications for security. On Ethereum, the validity of state transitions on Ethereum is enforced by the network's consensus protocol. This makes it impossible to propose an invalid update to a smart contract's state or alter smart contract execution.
+While this solves the scalability problem described earlier, it has implications for security. On Ethereum, the validity of state transitions is enforced by the network's consensus protocol. This makes it impossible to propose an invalid update to a smart contract's state or alter smart contract execution.
 
 State channels don't have the same security guarantees. To some extent, a state channel is a miniature version of Mainnet. With a limited set of participants enforcing rules, the possibility of malicious behavior (e.g., proposing invalid state updates) increases. State channels derive their security from a dispute arbitration system based on [fraud proofs](/glossary/#fraud-proof).
 
@@ -145,7 +145,7 @@ This system relies on the existence of so-called "ledger channels", which have b
 
 Users in each virtual channel interact via a new contract instance, with the ledger channel able to support multiple contract instances. The ledger channel's state also contains more than one contract storage state, allowing for parallel execution of applications off-chain between different users.
 
-Just like regular channels, users exchange state updates to progress the state machine. Except a dispute arises, the intermediary only has to be contacted when opening or terminating the channel.
+Just like regular channels, users exchange state updates to progress the state machine. Unless a dispute arises, the intermediary only has to be contacted when opening or terminating the channel.
 
 ### Virtual payment channels {#virtual-payment-channels}
 
