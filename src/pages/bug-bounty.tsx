@@ -38,6 +38,7 @@ import useColorModeValue from "@/hooks/useColorModeValue"
 import besu from "@/public/images/upgrades/besu.png"
 import erigon from "@/public/images/upgrades/erigon.png"
 import geth from "@/public/images/upgrades/geth.png"
+import grandine from "@/public/images/upgrades/grandine.png"
 import lighthouseDark from "@/public/images/upgrades/lighthouse-dark.png"
 import lighthouseLight from "@/public/images/upgrades/lighthouse-light.png"
 import lodestar from "@/public/images/upgrades/lodestar.png"
@@ -333,6 +334,11 @@ const BugBountiesPage = () => {
       link: "https://pegasys.tech/teku",
       image: useColorModeValue(tekuDark, tekuLight),
     },
+    {
+      title: "Grandine",
+      link: "https://grandine.io/",
+      image: grandine,
+    },
   ]
 
   const specs: Spec[] = [
@@ -448,6 +454,9 @@ const BugBountiesPage = () => {
             alt=""
             {...iconImageProps}
           />
+        </Client>
+        <Client>
+          <TwImage src={grandine} alt="" {...iconImageProps} />
         </Client>
       </ClientRow>
       <StyledGrayContainer id="rules">
