@@ -2,16 +2,16 @@ import { useTranslation } from "next-i18next"
 
 import { type CardProps } from "@/components/CardList"
 
+// Static assets
+// -- dapps
 import aaveImg from "@/public/images/dapps/aave.png"
-// -- borrow
-import compoundImg from "@/public/images/dapps/compound.png"
 // -- earn
 import buidlboxImg from "@/public/images/dapps/buidlbox.png"
+// -- borrow
+import compoundImg from "@/public/images/dapps/compound.png"
 import loopringImg from "@/public/images/dapps/loopring.png"
 import matchaImg from "@/public/images/dapps/matcha.png"
 import summerfiImg from "@/public/images/dapps/summerfi.png"
-// Static assets
-// -- dapps
 import uniImg from "@/public/images/dapps/uni.png"
 import oneInchImg from "@/public/images/exchanges/1inch.png"
 import binanceImg from "@/public/images/exchanges/binance.png"
