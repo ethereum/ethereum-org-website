@@ -5,7 +5,7 @@ import { Slot } from "@radix-ui/react-slot"
 import { cn } from "@/lib/utils/cn"
 
 const tagVariants = cva(
-  "inline-flex items-center rounded-full border px-2 py-0.5 min-h-8 text-xs uppercase transition-colors",
+  "inline-flex items-center rounded-full border text-xs uppercase transition-colors",
   {
     variants: {
       status: {
@@ -24,6 +24,10 @@ const tagVariants = cva(
         "high-contrast": "border-transparent",
         solid: "border-transparent text-body-inverse",
         outline: "bg-transparent",
+      },
+      size: {
+        small: "text-2xs px-2 py-0.5",
+        medium: "text-xs px-2 py-0.5 min-h-8",
       },
     },
     compoundVariants: [
@@ -96,6 +100,7 @@ const tagVariants = cva(
     defaultVariants: {
       variant: "subtle",
       status: "normal",
+      size: "medium",
     },
   }
 )
@@ -107,12 +112,12 @@ export interface TagProps
 }
 
 const Tag = forwardRef<HTMLDivElement, TagProps>(
-  ({ className, asChild, variant, status, ...props }, ref) => {
+  ({ className, asChild, variant, status, size, ...props }, ref) => {
     const Comp = asChild ? Slot : "div"
     return (
       <Comp
         ref={ref}
-        className={cn(tagVariants({ variant, status }), className)}
+        className={cn(tagVariants({ variant, status, size }), className)}
         {...props}
       />
     )

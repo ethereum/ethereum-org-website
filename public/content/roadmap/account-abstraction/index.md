@@ -108,7 +108,9 @@ Note that EIP-3074 is currently not active. The community is currently favoring 
 
 ## Current progress {#current-progress}
 
-Smart contract wallets are already available, but more upgrades are required to make them as decentralized and permissionless as possible. EIP-4337 is a mature proposal that does not require any changes to Ethereum's protocol, so it is possible that this could be implemented quickly. However, upgrades that alter Ethereum's protocol are currently not in active development, so those changes may take much longer to ship. It is also possible that account abstraction is achieved well enough by EIP-4337 that no protocol changes are ever required.
+Smart contract wallets are already available, but more upgrades are required to make them as decentralized and permissionless as possible. EIP-4337 is a mature proposal that does not require any changes to Ethereum's protocol, so it is possible that this could be implemented quickly. However, upgrades that alter Ethereum's protocol are currently not in active development, so those changes may take much longer to ship. It is also possible that account abstraction is achieved well enough by EIP-4337 that no protocol changes are ever required. 
+
+**Note**: You can track adoption of ERC-4337 smart contract wallets [via this dashboard](https://www.bundlebear.com/overview/all).
 
 ## Further reading {#further-reading}
 
@@ -124,3 +126,7 @@ Smart contract wallets are already available, but more upgrades are required to 
 - [EIP-4337 documentation](https://eips.ethereum.org/EIPS/eip-4337)
 - [EIP-2771 documentation](https://eips.ethereum.org/EIPS/eip-2771)
 - ["Basics of Account Abstraction" -- What is Account Abstraction Part I](https://www.alchemy.com/blog/account-abstraction)
+- [Charting Ethereum's Account Abstraction Roadmap I: EIP-3074, EIP-5806, & EIP-7702](https://research.2077.xyz/charting-ethereums-account-abstraction-roadmap-eip-3074-eip-5806-eip-7702)
+- [Awesome Account Abstraction](https://github.com/4337Mafia/awesome-account-abstraction)
+- [Modular Account Abstraction for Everyone Else](https://blog.rhinestone.wtf/part-1-modular-account-abstraction-for-everyone-else-84567422bc46)
+

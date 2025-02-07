@@ -4,7 +4,7 @@ import { HStack, VStack } from "../flex"
 import { Tag, TagButton } from "../tag"
 
 const meta = {
-  title: "Molecules / Display Content / New Tags",
+  title: "Molecules / Display Content / Tags",
   component: Tag,
 } satisfies Meta<typeof Tag>
 
@@ -17,6 +17,7 @@ const statusArray = ["normal", "tag", "success", "error", "warning"] as const
 
 // "subtle" is default variant
 const variantArray = ["subtle", "high-contrast", "solid", "outline"] as const
+const sizeArray = ["small", "medium"] as const
 
 export const StyleVariantsBasic: Story = {
   render: () => (
@@ -47,5 +48,17 @@ export const StyleVariantsButton: Story = {
         </VStack>
       ))}
     </HStack>
+  ),
+}
+
+export const StyleVariantsSize: Story = {
+  render: () => (
+    <VStack>
+      {sizeArray.map((size) => (
+        <Tag key={size} status="tag" variant="subtle" size={size}>
+          {size}
+        </Tag>
+      ))}
+    </VStack>
   ),
 }
