@@ -40,7 +40,7 @@ Nasledujúce projekty poskytujú blockchainové služby pre podnikové systémy:
 - [Blockapps](https://blockapps.net/) _implementácia protokolu, nástrojov a API rozhraní Enterprise Ethereum, ktoré tvoria platformu STRATO_
 - [Clearmatics](https://www.clearmatics.com/about) _protokoly a architektúra peer-to-peer platformy, spoločnosť zameraná na R&D v oblasti blockchainu_
 - [PegaSys Plus](https://pegasys.tech/enterprise/) _ponúka rovnaké vlastnosti a funkcie ako HF Besu, plus ďalšie výhody zamerané na podniky_
-- [Quorum](https://www.goquorum.com/) _open source blockchainová platforma ktorá kombinuje inováciu verejnej komunity Etherea s vylepšeniami na podporu podnikových potrieb_
+- [Quorum](https://docs.goquorum.consensys.io/) _open source blockchainová platforma ktorá kombinuje inováciu verejnej komunity Etherea s vylepšeniami na podporu podnikových potrieb_
 
 ## Protokol a infraštruktúra {#protocol-and-infrastructure}
 
@@ -73,7 +73,7 @@ Verejné a súkromné ​​siete Etherea môžu potrebovať špecifické vlastn
 ### Nástroje {#tooling}
 
 - [Alethio](https://explorer.aleth.io/) _platforma na analýzu údajov Etherea_
-- [Treum](https://treum.io/) _prináša transparentnosť, sledovateľnosť a obchodovateľnosť pre dodávateľské reťazce pomocou technológie blockchain_
+- [Treum](https://consensys.io/blog/consensys-acquires-treum) _prináša transparentnosť, sledovateľnosť a obchodovateľnosť pre dodávateľské reťazce pomocou technológie blockchain_
 
 ## Komunita vývojárov pre podniky {#enterprise-developer-community}
 

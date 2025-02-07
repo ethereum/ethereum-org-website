@@ -206,7 +206,7 @@ return (
 
 在本教程中，我们将使用 MetaMask，它是浏览器中的虚拟钱包，用来管理您的以太坊账户地址。 如果您想了解更多关于以太坊交易如何运作的信息，请参阅[此页面](/developers/docs/transactions/)。
 
-您可以点击[此处](https://metamask.io/download.html)免费下载并创建一个 MetaMask 账户。 在创建账户时，或者如果您已经有一个账户，确保切换到右上角的“Ropsten 测试网络”\（这样我们就不会交易真正的钱币\）。
+您可以点击[此处](https://metamask.io/download)免费下载并创建一个 MetaMask 账户。 在创建账户时，或者如果您已经有一个账户，确保切换到右上角的“Ropsten 测试网络”\（这样我们就不会交易真正的钱币\）。
 
 ### 通过水龙头中添加以太币 {#add-ether-from-faucet}
 
@@ -263,7 +263,7 @@ export const connectWallet = async () => {
         <span>
           <p>
             {" "}
-            🦊 <a target="_blank" href={`https://metamask.io/download.html`}>
+            🦊 <a target="_blank" href={`https://metamask.io/download`}>
               You must install MetaMask, a virtual Ethereum wallet, in your
               browser.
             </a>
@@ -373,7 +373,7 @@ export const getCurrentWalletConnected = async () => {
         <span>
           <p>
             {" "}
-            🦊 <a target="_blank" href={`https://metamask.io/download.html`}>
+            🦊 <a target="_blank" href={`https://metamask.io/download`}>
               You must install MetaMask, a virtual Ethereum wallet, in your
               browser.
             </a>
@@ -437,7 +437,7 @@ function addWalletListener() {
     setStatus(
       <p>
         {" "}
-        🦊 <a target="_blank" href={`https://metamask.io/download.html`}>
+        🦊 <a target="_blank" href={`https://metamask.io/download`}>
           You must install MetaMask, a virtual Ethereum wallet, in your browser.
         </a>
       </p>

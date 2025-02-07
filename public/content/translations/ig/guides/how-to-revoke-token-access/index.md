@@ -20,7 +20,6 @@ Naanị ihe nchebe bụ ịghara iji ọrụ ọhụrụ a nwalebeghị, kwadoo 
 
 - [Ethallowance](https://ethallowance.com/) (Ethereum)
 - [Etherscan](https://etherscan.io/tokenapprovalchecker) (Ethereum)
-- [Cointool](https://cointool.app/approve/eth) (ọtụtụ netwọk)
 - [Kagbuo](https://revoke.cash/) (ọtụtụ netwọk)
 - [Unrekt](https://app.unrekt.net/) (ọtụtụ netwọk)
 - [Kagbuo mgbe ọbụla](https://everrise.com/everrevoke/) (ọtụtụ netwọk)

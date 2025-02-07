@@ -118,7 +118,7 @@ Faptul că multe părți interesate au motivații și convingeri diferite însea
 
 Un fork sau o bifurcare se produce atunci când trebuie efectuate actualizări sau modificări tehnice majore în rețea și trebuie modificate „regulile" protocolului. [Clienții Ethereum](/developers/docs/nodes-and-clients/) trebuie să-și actualizeze software-ul pentru a implementa noile reguli de forking.
 
-Forkul DAO a fost introdus ca răspuns la [atacul DAO din 2016](https://www.coindesk.com/understanding-dao-hack-journalists) când, din cauza lipsei de protecție, un contract [DAO](/glossary/#dao) a fost golit de peste 3,6 milioane ETH prin piratare. Forkul a mutat fondurile din contractul defectuos într-un nou contract, permițând oricui a pierdut fonduri în urma piratării să le recupereze.
+Forkul DAO a fost introdus ca răspuns la [atacul DAO din 2016](https://www.coindesk.com/learn/understanding-the-dao-attack) când, din cauza lipsei de protecție, un contract [DAO](/glossary/#dao) a fost golit de peste 3,6 milioane ETH prin piratare. Forkul a mutat fondurile din contractul defectuos într-un nou contract, permițând oricui a pierdut fonduri în urma piratării să le recupereze.
 
 Această măsură a fost votată de comunitatea Ethereum. Orice deținător de ETH a putut vota printr-o tranzacție pe [o platformă de vot](http://v1.carbonvote.com/). Decizia de forking a atins peste 85% din voturi.
 

@@ -40,7 +40,7 @@ Følgende prosjekter tilbyr blokkjedetjenester for bedrftsklassifiserte systemer
 - [Blockapps](https://blockapps.net/) _implementeringen av Enterprise Ethereum protocol, verktøy og APIer som utgjør STRATO-plattformen_
 - [Clearmatics](https://www.clearmatics.com/about) _protokoller og peer-to-peer plattform arkitektur, blokkjede R&D-selskap_
 - [PegaSys Plus](https://pegasys.tech/enterprise/) _tilbyr de samme funksjonene og funksjonalitetene som HF Besu, og ytterligere virksomhetsmålrettede fordeler_
-- [Quorum](https://www.goquorum.com/) _open source blokkjede platform som kombinerer innovasjonen fra det offentliges Ethereum samfunnet med forbedringer for å støtte bedriftens behov_
+- [Quorum](https://docs.goquorum.consensys.io/) _open source blokkjede platform som kombinerer innovasjonen fra det offentliges Ethereum samfunnet med forbedringer for å støtte bedriftens behov_
 
 ## Protokoll og infrastruktur {#protocol-and-infrastructure}
 
@@ -73,7 +73,7 @@ Offentlige og private Ethereum-nettverk kan trenge spesifikke funksjoner som kre
 ### Verktøy {#tooling}
 
 - [Alethio](https://explorer.aleth.io/) _Ethereum Data Analyse Platform_
-- [Treum](https://treum.io/) _bringer gjennomsiktighet, sporbarhet og evne til å forsyne kjeder, ved bruk av blokkjedeteknologi_
+- [Treum](https://consensys.io/blog/consensys-acquires-treum) _bringer gjennomsiktighet, sporbarhet og evne til å forsyne kjeder, ved bruk av blokkjedeteknologi_
 
 ## Fellesskap for bedriftsutviklere {#enterprise-developer-community}
 

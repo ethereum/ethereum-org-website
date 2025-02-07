@@ -203,7 +203,7 @@ Per poter interagire con il tuo smart contract, gli utenti dovranno connettere i
 
 Per questo tutorial, utilizzeremo MetaMask, un portafoglio virtuale nel browser, utilizzato per gestire l'indirizzo del tuo conto di Ethereum. Se vuoi capire di più su come funzionano le transazioni su Ethereum, dai un'occhiata a [questa pagina](/developers/docs/transactions/).
 
-Puoi scaricare e creare gratuitamente un conto di MetaMask [qui](https://metamask.io/download.html). Quando stai creando un conto, o se ne hai già uno, assicurati di passare alla "Rete di Prova di Ropsten" in alto a destra \(così da non avere a che fare con denaro reale\).
+Puoi scaricare e creare gratuitamente un conto di MetaMask [qui](https://metamask.io/download). Quando stai creando un conto, o se ne hai già uno, assicurati di passare alla "Rete di Prova di Ropsten" in alto a destra \(così da non avere a che fare con denaro reale\).
 
 ### Aggiungere ether da un Faucet {#add-ether-from-faucet}
 
@@ -260,7 +260,7 @@ export const connectWallet = async () => {
         <span>
           <p>
             {" "}
-            🦊 <a target="_blank" href={`https://metamask.io/download.html`}>
+            🦊 <a target="_blank" href={`https://metamask.io/download`}>
               You must install MetaMask, a virtual Ethereum wallet, in your
               browser.
             </a>
@@ -370,7 +370,7 @@ export const getCurrentWalletConnected = async () => {
         <span>
           <p>
             {" "}
-            🦊 <a target="_blank" href={`https://metamask.io/download.html`}>
+            🦊 <a target="_blank" href={`https://metamask.io/download`}>
               You must install MetaMask, a virtual Ethereum wallet, in your
               browser.
             </a>
@@ -434,7 +434,7 @@ function addWalletListener() {
     setStatus(
       <p>
         {" "}
-        🦊 <a target="_blank" href={`https://metamask.io/download.html`}>
+        🦊 <a target="_blank" href={`https://metamask.io/download`}>
           You must install MetaMask, a virtual Ethereum wallet, in your browser.
         </a>
       </p>

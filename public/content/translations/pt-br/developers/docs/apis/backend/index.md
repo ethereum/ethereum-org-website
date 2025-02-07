@@ -72,7 +72,7 @@ Essas bibliotecas abstraem muito da complexidade de interagir diretamente com um
 
 **Ethercluster -** **_Execute o seu próprio serviço de API da Ethereum que suporta ETH e ETC._**
 
-- [ethercluster.com](https://www.ethercluster.com/)
+- [ethercluster.com](https://etccooperative.github.io/ethercluster-website/)
 
 **Chainstack -** **_Nós Ethereum compartilhados e dedicados como serviço._**
 

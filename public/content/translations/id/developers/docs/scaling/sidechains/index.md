@@ -28,7 +28,7 @@ Beberapa proyek menyediakan implementasi sidechain yang dapat Anda integrasikan 
 
 - [Skale](https://skale.network/)
 - [POA Network](https://www.poa.network/)
-- [Gnosis Chain (sebelumnya xDai)](https://www.xdaichain.com/)
+- [Gnosis Chain (sebelumnya xDai)](https://www.gnosis.io/)
 
 ## Bacaan lebih lanjut {#further-reading}
 
