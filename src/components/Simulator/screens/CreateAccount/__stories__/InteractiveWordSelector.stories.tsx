@@ -8,19 +8,18 @@ import {
   within,
 } from "@storybook/test"
 
+import { PhoneDecorator } from "@/components/Simulator/__stories__/PhoneDecorator"
+
 import { InteractiveWordSelector as Component } from "../InteractiveWordSelector"
 
 const meta = {
   title:
     "Molecules / Display Content / Simulator / CreateAccount Screen / InteractiveWordSelector",
   component: Component,
-  decorators: [
-    (Story) => (
-      <div className="relative h-[600px] w-[322px]">
-        <Story />
-      </div>
-    ),
-  ],
+  parameters: {
+    layout: "fullscreen",
+  },
+  decorators: [PhoneDecorator],
   args: {
     words: [
       "fake",

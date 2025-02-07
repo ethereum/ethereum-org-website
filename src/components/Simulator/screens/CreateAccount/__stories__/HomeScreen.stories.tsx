@@ -1,12 +1,17 @@
 import type { Meta, StoryObj } from "@storybook/react/*"
 import { fn } from "@storybook/test"
 
+import { PhoneDecorator } from "@/components/Simulator/__stories__/PhoneDecorator"
+
 import { HomeScreen as Component } from "../HomeScreen"
 
 const meta = {
   title:
     "Molecules / Display Content / Simulator / CreateAccount Screen / HomeScreen",
   component: Component,
+  parameters: {
+    layout: "fullscreen",
+  },
   args: {
     nav: {
       step: 0,
@@ -16,6 +21,7 @@ const meta = {
       regressStepper: fn(),
     },
   },
+  decorators: [PhoneDecorator],
 } satisfies Meta<typeof Component>
 
 export default meta

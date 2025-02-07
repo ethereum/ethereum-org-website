@@ -7,6 +7,8 @@ import {
   within,
 } from "@storybook/test"
 
+import { PhoneDecorator } from "@/components/Simulator/__stories__/PhoneDecorator"
+
 import { BUTTON_DELAY_DURATION } from "../constants"
 import { GeneratingKeys } from "../GeneratingKeys"
 
@@ -14,6 +16,9 @@ const meta = {
   title:
     "Molecules / Display Content / Simulator / CreateAccount Screen / GeneratingKeys",
   component: GeneratingKeys,
+  parameters: {
+    layout: "fullscreen",
+  },
   args: {
     ctaLabel: "Next",
     nav: {
@@ -25,13 +30,7 @@ const meta = {
     },
     generateNewWords: fn(),
   },
-  decorators: [
-    (Story) => (
-      <div className="relative h-[590px] w-[312px]">
-        <Story />
-      </div>
-    ),
-  ],
+  decorators: [PhoneDecorator],
 } satisfies Meta<typeof GeneratingKeys>
 
 export default meta
