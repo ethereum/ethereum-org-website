@@ -661,5 +661,29 @@
     "timeToRead": "90",
     "lang": "en",
     "publishDate": "04/24/2024"
+  },
+  {
+    "url": "https://docs.dappbooster.dev/introduction/getting-started",
+    "title": "Getting Started With dAppBooster",
+    "description": "Getting started with dAppBooster in just a few lines of code.",
+    "author": "BootNode",
+    "authorGithub": "https://github.com/bootnodedev/",
+    "tags": ["dapp", "vite", "typescript", "web3", "react", "frontend", "javascript", "dappbooster", "beginner"],
+    "skillLevel": "beginner",
+    "timeToRead": "15",
+    "lang": "en",
+    "publishDate": "01/08/2025"
+  },
+  {
+    "url": "https://docs.dappbooster.dev/recipes/my-first-dapp",
+    "title": "My First dApp",
+    "description": "This guide will walk you through developing your first dApp using dAppBooster.",
+    "author": "BootNode",
+    "authorGithub": "https://github.com/bootnodedev/",
+    "tags": ["dapp", "vite", "typescript", "web3", "react", "wagmi", "frontend", "javascript", "dappbooster"],
+    "skillLevel": "beginner",
+    "timeToRead": "30",
+    "lang": "en",
+    "publishDate": "01/08/2025"
   }
 ]
