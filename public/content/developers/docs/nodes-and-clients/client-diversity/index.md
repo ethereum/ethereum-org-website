@@ -92,7 +92,8 @@ Several dashboards give real-time client diversity statistics for the execution 
 
 - [Rated.network](https://www.rated.network/)
 - [clientdiversity.org](https://clientdiversity.org/)
-  **Execution layer:**
+
+**Execution layer:**
 
 - [supermajority.info](https://supermajority.info//)
 - [Ethernodes](https://ethernodes.org/)
