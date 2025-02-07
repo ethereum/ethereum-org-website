@@ -8,16 +8,9 @@ import { cn } from "@/lib/utils/cn"
 
 import { EthGlyphIcon } from "../../icons"
 
-import useColorModeValue from "@/hooks/useColorModeValue"
-
 type HomeScreenProps = HTMLAttributes<HTMLDivElement> & SimulatorNavProps
 
 export const HomeScreen = ({ nav, ...props }: HomeScreenProps) => {
-  const gridShadow = useColorModeValue(
-    "shadow-[0_0_7px_0_var(--eth-colors-blackAlpha-800)]",
-    "shadow-[0_0_7px_0_var(--eth-colors-whiteAlpha-800)]"
-  )
-
   const { step } = nav
   const ICON_COUNT = 8
   const sharedIconClasses =
@@ -33,9 +26,8 @@ export const HomeScreen = ({ nav, ...props }: HomeScreenProps) => {
         {step === 1 ? (
           <motion.button
             className={cn(
-              "grid border-body bg-body duration-300 hover:outline hover:outline-2 hover:outline-offset-2 hover:outline-primary-hover",
-              sharedIconClasses,
-              gridShadow
+              "hover:outline-primary-hover, grid border-body bg-body shadow-md duration-300 hover:outline hover:outline-2 hover:outline-offset-2",
+              sharedIconClasses
             )}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
