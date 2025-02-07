@@ -10,8 +10,7 @@ import {
 import SocialListItem from "@/components/SocialListItem"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import Link from "@/components/ui/Link"
-
-import { cn } from "@/lib/utils/cn"
+import { Tag } from "@/components/ui/tag"
 
 import { FlagType, Product } from "./types"
 
@@ -51,16 +50,9 @@ const StakingBadge = ({
 }) => {
   const uiTypeColor = type === "ui"
   return (
-    <span
-      className={cn(
-        "rounded-full px-2 py-1 text-xs normal-case",
-        uiTypeColor
-          ? "bg-success-light text-success dark:bg-success-dark dark:text-success-light"
-          : "bg-primary-low-contrast text-primary-high-contrast"
-      )}
-    >
+    <Tag variant="solid" status={uiTypeColor ? "success" : "tag"} size="small">
       {children}
-    </span>
+    </Tag>
   )
 }
 

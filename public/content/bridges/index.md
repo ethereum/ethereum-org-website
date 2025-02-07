@@ -49,7 +49,7 @@ Let’s say you have ETH on Ethereum Mainnet but want cheaper transaction fees t
 
 ### Dapps on other blockchains {#dapps-other-chains}
 
-If you’ve been using Aave on Ethereum Mainnet to lend USDT but the interest rate for lending USDT using Aave on Polygon is higher.
+If you’ve been using Aave on Ethereum Mainnet to supply USDT but the interest rate you may receive for supplying USDT using Aave on Polygon is higher.
 
 ### Explore blockchain ecosystems {#explore-ecosystems}
 
@@ -131,7 +131,9 @@ Bridges are crucial to onboarding users onto Ethereum L2s, and even for users wh
 <Divider />
 
 ## Further reading {#further-reading}
+- [EIP-5164: Cross-Chain Execution](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) - _June 18, 2022 - Brendan Asselstine_
+- [L2Bridge Risk Framework](https://gov.l2beat.com/t/l2bridge-risk-framework/31) - _July 5, 2022 - Bartek Kiepuszewski_
+- ["Why the future will be multi-chain, but it will not be cross-chain."](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) - _January 8, 2022 - Vitalik Buterin_
+- [Harnessing Shared Security For Secure Cross-Chain Interoperability: Lagrange State Committees And Beyond](https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - _June 12, 2024 - Emmanuel Awosika_
+- [The State Of Rollup Interoperability Solutions](https://research.2077.xyz/the-state-of-rollup-interoperability) - _June 20, 2024 - Alex Hook_
 
-- [EIP-5164: Cross-Chain Execution](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) _June 18, 2022 - Brendan Asselstine_
-- [L2Bridge Risk Framework](https://gov.l2beat.com/t/l2bridge-risk-framework/31) _July 5, 2022 - Bartek Kiepuszewski_
-- ["Why the future will be multi-chain, but it will not be cross-chain."](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) _January 8, 2022 - Vitalik Buterin_
