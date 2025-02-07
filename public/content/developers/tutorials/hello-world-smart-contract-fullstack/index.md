@@ -9,7 +9,7 @@ tags:
     "alchemy",
     "smart contracts",
     "deploying",
-    "blockexplorer",
+    "block explorer",
     "frontend",
     "transactions",
   ]
