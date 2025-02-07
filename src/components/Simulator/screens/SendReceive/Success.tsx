@@ -111,7 +111,7 @@ export const Success = ({
               {txPending ? (
                 "Sending transaction"
               ) : (
-                <Text as="span">
+                <Text as="span" data-testid="success-message">
                   You sent{" "}
                   <strong>
                     <>{sentEthValue} ETH</>
