@@ -167,7 +167,7 @@ const GasPage = () => {
       <Content className="mb-16 mt-16 lg:mb-32">
         <Flex className="w-full flex-col items-center lg:flex-row lg:items-start">
           <div className="me-auto w-full flex-[60%] lg:me-2">
-            <InfoBanner mb={8} title={t("page-gas-summary-title")}>
+            <InfoBanner className="mb-8" title={t("page-gas-summary-title")}>
               <UnorderedList>
                 <ListItem>{t("page-gas-summary-item-1")}</ListItem>
                 <ListItem>{t("page-gas-summary-item-2")}</ListItem>

@@ -21,9 +21,9 @@ const badgeVariants = cva(
         outline: "text-foreground",
         // TODO: remove variant once we finish the badge and tag components with DS styles
         productTable: "bg-body-light text-body font-medium uppercase",
-        emerging: "bg-blue-600 text-white border-none",
+        emerging: "bg-blue-200 text-black border-none",
         developing: "bg-blue-400 text-white border-none",
-        maturing: "bg-blue-200 text-black border-none",
+        maturing: "bg-blue-600 text-white border-none",
         robust: "bg-blue-100 text-black border-none",
         "n/a": "hidden lg:block",
       },
