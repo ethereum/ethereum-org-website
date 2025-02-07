@@ -23,7 +23,7 @@ export const WordList = ({ words, wordsSelected }: WordListProps) => {
   const sharedClasses = "m-0 flex flex-col gap-y-3 gap-x-8"
 
   const classVariants = {
-    initial: "gap-x-0",
+    initial: "gap-y-0",
   }
 
   const styles = cn(
@@ -88,7 +88,7 @@ export const WordList = ({ words, wordsSelected }: WordListProps) => {
   }
 
   return (
-    <div className="grid grid-cols-2 gap-x-7 whitespace-nowrap px-4 md:px-8">
+    <div className="grid grid-cols-2 gap-x-7 whitespace-nowrap bg-background px-4 md:px-8">
       <OrderedList className={styles} start={1}>
         {words.map(wordMapping).slice(0, splitIndex)}
       </OrderedList>
