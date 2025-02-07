@@ -41,7 +41,7 @@ _θα μπορούσατε_ [να εκτελέσετε έναν κόμβο](/dev
 
 Ορισμένοι πελάτες συναίνεσης διαθέτουν ενσωματωμένα εργαλεία για την περιστροφή τοπικών αλυσίδων beacon για δοκιμαστικούς σκοπούς. Οδηγίες για Lighthouse, Nimbus και Lodestar είναι διαθέσιμες:
 
-- [Τοπικό δίκτυο δοκιμών χρησιμοποιώντας Lodestar](https://chainsafe.github.io/lodestar/usage/local/)
+- [Τοπικό δίκτυο δοκιμών χρησιμοποιώντας Lodestar](https://chainsafe.github.io/lodestar/contribution/advanced-topics/setting-up-a-testnet#post-merge-local-testnet/)
 - [Τοπικό δίκτυο δοκιμών χρησιμοποιώντας το Lighthouse](https://lighthouse-book.sigmaprime.io/setup.html#local-testnets)
 - [Τοπικό δίκτυο δοκιμών χρησιμοποιώντας Nimbus](https://github.com/status-im/nimbus-eth1/blob/master/fluffy/docs/local_testnet.md)
 

@@ -41,7 +41,7 @@ lang: zh
 
 一些共识客户端具有内置工具，用于启动本地信标链以进行测试。 提供了 Lighthouse、Nimbus 和 Lodestar 的说明：
 
-- [使用 Lodestar 的本地测试网](https://chainsafe.github.io/lodestar/usage/local/)
+- [使用 Lodestar 的本地测试网](https://chainsafe.github.io/lodestar/contribution/advanced-topics/setting-up-a-testnet#post-merge-local-testnet/)
 - [使用 Lightthouse 的本地测试网](https://lighthouse-book.sigmaprime.io/setup.html#local-testnets)
 - [使用 Nimbus 的本地测试网](https://github.com/status-im/nimbus-eth1/blob/master/fluffy/docs/local_testnet.md)
 
