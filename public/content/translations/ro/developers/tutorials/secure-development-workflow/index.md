@@ -50,6 +50,6 @@ Documentați proprietățile de securitate de importanță majoră și utilizaț
 
 ## Solicitați ajutor {#ask-for-help}
 
-[Biroul Ethereum este deschis](https://calendly.com/dan-trailofbits/ethereum-office-hours) în fiecare marți după-amiază. Aceste sesiuni individuale de 1 oră reprezintă ocazia să ne puneți orice întrebări despre securitate și depanare cu instrumentele noastre, precum și să primiți feedback de la experți cu privire la abordarea dvs. actuală. Vă vom ajuta să parcurgeți acest ghid.
+[Biroul Ethereum este deschis](https://calendly.com/dan-trailofbits/office-hours) în fiecare marți după-amiază. Aceste sesiuni individuale de 1 oră reprezintă ocazia să ne puneți orice întrebări despre securitate și depanare cu instrumentele noastre, precum și să primiți feedback de la experți cu privire la abordarea dvs. actuală. Vă vom ajuta să parcurgeți acest ghid.
 
 Veniți cu noi pe site-ul Slack: [Empire Hacking](https://join.slack.com/t/empirehacking/shared_invite/zt-h97bbrj8-1jwuiU33nnzg67JcvIciUw). Vă stăm tot timpul la dispoziție pe canalele #crytic și #ethereum dacă aveți întrebări.

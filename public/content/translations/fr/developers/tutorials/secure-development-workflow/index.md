@@ -51,6 +51,6 @@ Enfin, soyez attentifs aux problèmes que les outils automatisés ne peuvent pas
 
 ## Demandez de l'aide {#ask-for-help}
 
-[Les heures de bureau d'Ethereum](https://calendly.com/dan-trailofbits/ethereum-office-hours) se déroulent tous les mardis après-midi. Ces sessions en tête à tête sont l'occasion de nous poser toutes vos questions sur la sécurité, de dépannage à l'aide de nos outils et d'obtenir des commentaires d'experts sur votre approche actuelle. Nous vous aiderons à travailler à travers ce guide.
+[Les heures de bureau d'Ethereum](https://calendly.com/dan-trailofbits/office-hours) se déroulent tous les mardis après-midi. Ces sessions en tête à tête sont l'occasion de nous poser toutes vos questions sur la sécurité, de dépannage à l'aide de nos outils et d'obtenir des commentaires d'experts sur votre approche actuelle. Nous vous aiderons à travailler à travers ce guide.
 
 Rejoignez notre Slack : [Empire Hacking](https://join.slack.com/t/empirehacking/shared_invite/zt-h97bbrj8-1jwuiU33nnzg67JcvIciUw). Nous sommes toujours disponibles dans les canaux #crytic et #ethereum si vous avez des questions.

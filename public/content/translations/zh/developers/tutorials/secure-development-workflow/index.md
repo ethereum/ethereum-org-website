@@ -50,6 +50,6 @@ sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/devel
 
 ## 寻求帮助 {#ask-for-help}
 
-[以太坊的办公时间](https://calendly.com/dan-trailofbits/ethereum-office-hours)为每周二下午。 这些 1 小时的 1 对 1 会议是一个机会，你可以向我们询问有关安全的任何问题，使用我们的工具进行故障排除，并获得专家对你当前方法的反馈。 我们将帮助你消化本指南。
+[以太坊的办公时间](https://calendly.com/dan-trailofbits/office-hours)为每周二下午。 这些 1 小时的 1 对 1 会议是一个机会，你可以向我们询问有关安全的任何问题，使用我们的工具进行故障排除，并获得专家对你当前方法的反馈。 我们将帮助你消化本指南。
 
 加入我们的 Slack: [ Empire Hacking](https://join.slack.com/t/empirehacking/shared_invite/zt-h97bbrj8-1jwuiU33nnzg67JcvIciUw)。 如果你有任何问题，可以随时在 #crytic 和 #ethereum 频道上联系我们。
