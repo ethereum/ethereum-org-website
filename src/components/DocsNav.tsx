@@ -40,8 +40,10 @@ type CardLinkProps = {
 }
 
 const CardLink = ({ docData, isPrev, contentNotTranslated }: CardLinkProps) => {
-  const { t } = useTranslation("page-developers-docs")
+  const { t, i18n } = useTranslation("page-developers-docs")
   const { isRtl } = useRtlFlip()
+
+  const currentLang = i18n.language //To navigate the docs in the current language
 
   return (
     <LinkBox
@@ -63,7 +65,7 @@ const CardLink = ({ docData, isPrev, contentNotTranslated }: CardLinkProps) => {
       <TextDiv className={cn(!isPrev ? "pe-0 text-end" : "ps-0")}>
         <p className="uppercase text-body">{t(isPrev ? "previous" : "next")}</p>
         <LinkOverlay
-          href={docData.href}
+          href={`/${currentLang}/${docData.href}`}
           onClick={() => {
             trackCustomEvent({
               eventCategory: "next/previous article DocsNav",
