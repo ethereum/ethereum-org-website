@@ -26,7 +26,7 @@ Deze programma's ondersteunen het brede Ethereum-ecosysteem door subsidies aan t
 Deze projecten hebben hun eigen beurzen gecreëerd voor projecten die gericht zijn op de ontwikkeling en het experimenteren met hun eigen technologie.
 
 - [Aave Grants Program](https://aavegrants.org/) – _[Aave](https://aave.com/) Grants DAO_
-- [Balancer](https://balancergrants.notion.site/Balancer-Community-Grants-23e562c5bc4347cd8304637bff0058e6) – _[Balancer](https://balancer.fi/)-ecosysteemfonds_
+- [Balancer](https://quark-ceres-740.notion.site/Balancer-Grants-938f1b979810427f8d903a904315da41) – _[Balancer](https://balancer.fi/)-ecosysteemfonds_
 - [Chainlink Grants Program](https://chain.link/community/grants) - _[Chainlink](https://chain.link/)-gemeenschapssubsidies_
 - [Compound Grants Program](https://compoundgrants.questbook.app/) – _[Compound](https://compound.finance/)-financieringsecosysteem_
 - [Lido Ecosystem Grants Organisation (LEGO)](https://lego.lido.fi/) – _[Lido](https://lido.fi/)-financieringsecosysteem_

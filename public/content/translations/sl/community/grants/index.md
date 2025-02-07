@@ -25,7 +25,7 @@ Te projekti so ustvarili svoje finančne spodbude za projekte, ki merijo proti r
 
 - [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) – _[The Graph](https://thegraph.com/) ekosistem_
 - [Uniswap](https://www.uniswapfoundation.org/) – _[Uniswap](https://uniswap.org/) skupnost_
-- [Balancer](https://balancergrants.notion.site/Balancer-Community-Grants-23e562c5bc4347cd8304637bff0058e6) – _[Balancer](https://balancer.fi/) sklad ekosistema_
+- [Balancer](https://quark-ceres-740.notion.site/Balancer-Grants-938f1b979810427f8d903a904315da41) – _[Balancer](https://balancer.fi/) sklad ekosistema_
 - [mStable](https://docs.mstable.org/advanced/grants-program) - _[mStable](https://mstable.org/) skupnost_
 
 ## Kvadratično financiranje {#quadratic-funding}

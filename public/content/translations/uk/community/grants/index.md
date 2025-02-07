@@ -26,7 +26,7 @@ lang: uk
 У межах цих проєктів створено власні гранти, спрямовані на розробку й тестування власних технологій.
 
 - [Програма грантів Aave](https://aavegrants.org/) — _гранти DAO від [Aave](https://aave.com/)_
-- [Balancer](https://balancergrants.notion.site/Balancer-Community-Grants-23e562c5bc4347cd8304637bff0058e6) — _фонд екосистеми [Balancer](https://balancer.fi/)_
+- [Balancer](https://quark-ceres-740.notion.site/Balancer-Grants-938f1b979810427f8d903a904315da41) — _фонд екосистеми [Balancer](https://balancer.fi/)_
 - [Програма грантів Chainlink](https://chain.link/community/grants) — _гранти спільноти [Chainlink](https://chain.link/)_
 - [Програма грантів Compound](https://compoundgrants.questbook.app/) — _фінансова екосистема [Compound](https://compound.finance/)_
 - [Програма грантів Decentraland](https://governance.decentraland.org/grants/) — _[децентралізація](https://decentraland.org/) DAO Metaverse_
