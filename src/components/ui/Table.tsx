@@ -166,6 +166,18 @@ const TableCell = React.forwardRef<
 })
 TableCell.displayName = "TableCell"
 
+const TableCaption = React.forwardRef<
+  HTMLTableCaptionElement,
+  React.HTMLAttributes<HTMLTableCaptionElement>
+>(({ className, ...props }, ref) => (
+  <caption
+    ref={ref}
+    className={cn("text-muted-foreground mt-4 text-sm", className)}
+    {...props}
+  />
+))
+TableCaption.displayName = "TableCaption"
+
 const mdxTableComponents = {
   table: Table,
   td: ({ align, ...rest }) => <TableCell align={align} {...rest} />,
@@ -179,6 +191,7 @@ export {
   mdxTableComponents,
   Table,
   TableBody,
+  TableCaption,
   TableCell,
   TableHead,
   TableHeader,
