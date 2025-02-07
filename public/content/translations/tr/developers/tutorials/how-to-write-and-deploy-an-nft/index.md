@@ -46,7 +46,7 @@ Bir Alchemy hesabı oluşturduktan sonra, bir uygulama oluşturarak bir API anah
 
 İşlem göndermek ve almak için bir Ethereum hesabına ihtiyacımız var. Bu eğitim için, Ethereum hesap adresinizi yönetmek için kullanılan tarayıcı üstü bir sanal cüzdan olan MetaMask'i kullanacağız. Ethereum'daki işlemlerin nasıl çalıştığı hakkında daha fazla bilgi edinmek istiyorsanız, Ethereum Vakfı'nın [bu sayfasına](/developers/docs/transactions/) göz atın.
 
-[Buradan](https://metamask.io/download.html) ücretsiz olarak bir MetaMask hesabı indirebilir ve oluşturabilirsiniz. Bir hesap oluştururken, ya da bir hesabınız çoktan varsa, sağ üstten Sepolia Test Ağına geçtiğinizden emin olun (bu sayede gerçek parayla denemeler yapmayız).
+[Buradan](https://metamask.io/download) ücretsiz olarak bir MetaMask hesabı indirebilir ve oluşturabilirsiniz. Bir hesap oluştururken, ya da bir hesabınız çoktan varsa, sağ üstten Sepolia Test Ağına geçtiğinizden emin olun (bu sayede gerçek parayla denemeler yapmayız).
 
 ![Sepolia'yı ağınız olarak ayarlayın](./metamask-goerli.png)
 

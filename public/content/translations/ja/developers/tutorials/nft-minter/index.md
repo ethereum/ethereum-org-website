@@ -203,7 +203,7 @@ return (
 
 このチュートリアルでは、イーサリアムアカウントアドレスを管理するためにブラウザの仮想ウォレットであるMetamaskを使用します。 イーサリアムのトランザクションの仕組みの詳細については、[こちらのページ](/developers/docs/transactions/)をご覧ください。
 
-Metamaskのアカウントは[こちら](https://metamask.io/download.html)から無料でダウンロード、作成できます。 アカウントを作成後、またはすでにアカウントをお持ちの場合は、(実際に支払いが発生しないように)右上の「Ropsten Test Network」に切り替えてください。
+Metamaskのアカウントは[こちら](https://metamask.io/download)から無料でダウンロード、作成できます。 アカウントを作成後、またはすでにアカウントをお持ちの場合は、(実際に支払いが発生しないように)右上の「Ropsten Test Network」に切り替えてください。
 
 ### フォーセットからイーサ(ETH)を追加 {#add-ether-from-faucet}
 
@@ -260,7 +260,7 @@ export const connectWallet = async () => {
         <span>
           <p>
             {" "}
-            🦊 <a target="_blank" href={`https://metamask.io/download.html`}>
+            🦊 <a target="_blank" href={`https://metamask.io/download`}>
               You must install MetaMask, a virtual Ethereum wallet, in your
               browser.
             </a>
@@ -370,7 +370,7 @@ export const getCurrentWalletConnected = async () => {
         <span>
           <p>
             {" "}
-            🦊 <a target="_blank" href={`https://metamask.io/download.html`}>
+            🦊 <a target="_blank" href={`https://metamask.io/download`}>
               You must install MetaMask, a virtual Ethereum wallet, in your
               browser.
             </a>
@@ -434,7 +434,7 @@ function addWalletListener() {
     setStatus(
       <p>
         {" "}
-        🦊 <a target="_blank" href={`https://metamask.io/download.html`}>
+        🦊 <a target="_blank" href={`https://metamask.io/download`}>
           You must install MetaMask, a virtual Ethereum wallet, in your browser.
         </a>
       </p>

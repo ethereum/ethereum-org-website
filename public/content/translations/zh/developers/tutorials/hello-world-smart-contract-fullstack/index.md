@@ -48,7 +48,7 @@ _注：请确保选择 **Goerli**，否则本教程将不适用。_
 
 你需要一个以太坊帐户来发送和接受交易。 我们将会使用 MetaMask，这是一个浏览器中的虚拟钱包，可供用户管理他们的以太坊帐户地址。
 
-你可以[在这里](https://metamask.io/download.html)免费下载并创建一个 MetaMask 帐户。 When you are creating an account, or if you already have an account, make sure to switch over to the “Goerli Test Network” in the upper right (so that we’re not dealing with real money).
+你可以[在这里](https://metamask.io/download)免费下载并创建一个 MetaMask 帐户。 When you are creating an account, or if you already have an account, make sure to switch over to the “Goerli Test Network” in the upper right (so that we’re not dealing with real money).
 
 ### 步骤 4：从水龙头添加以太币 {#step-4-add-ether-from-a-faucet}
 
@@ -1116,7 +1116,7 @@ useEffect(async () => {
 
 #### 下载 MetaMask {#download-metamask}
 
-你可以[在这里](https://metamask.io/download.html)免费下载并创建一个 MetaMask 帐户。 在你创建帐户时，或者如果你已经有帐户，请确保切换到右上角的“Goerli 测试网络”（这样我们就不会使用实际货币进行交易）。
+你可以[在这里](https://metamask.io/download)免费下载并创建一个 MetaMask 帐户。 在你创建帐户时，或者如果你已经有帐户，请确保切换到右上角的“Goerli 测试网络”（这样我们就不会使用实际货币进行交易）。
 
 #### 通过水龙头中添加以太币 {#add-ether-from-a-faucet}
 
@@ -1171,7 +1171,7 @@ export const connectWallet = async () => {
         <span>
           <p>
             {" "}
-            🦊 <a target="_blank" href={`https://metamask.io/download.html`}>
+            🦊 <a target="_blank" href={`https://metamask.io/download`}>
               You must install MetaMask, a virtual Ethereum wallet, in your
               browser.
             </a>
@@ -1267,7 +1267,7 @@ export const getCurrentWalletConnected = async () => {
         <span>
           <p>
             {" "}
-            🦊 <a target="_blank" href={`https://metamask.io/download.html`}>
+            🦊 <a target="_blank" href={`https://metamask.io/download`}>
               You must install MetaMask, a virtual Ethereum wallet, in your
               browser.
             </a>
@@ -1329,7 +1329,7 @@ function addWalletListener() {
     setStatus(
       <p>
         {" "}
-        🦊 <a target="_blank" href={`https://metamask.io/download.html`}>
+        🦊 <a target="_blank" href={`https://metamask.io/download`}>
           You must install MetaMask, a virtual Ethereum wallet, in your browser.
         </a>
       </p>

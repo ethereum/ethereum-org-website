@@ -46,7 +46,7 @@ Una volta creato un profilo di Alchemy, puoi generare una chiave API creando un'
 
 Per inviare e ricevere le transazioni, necessitiamo di un conto di Ethereum. Per questo tutorial, useremo MetaMask, un portafoglio virtuale nel browser per gestire l'indirizzo del tuo conto di Ethereum. Se vuoi capire di più su come funzionano le transazioni su Ethereum, dai un'occhiata a [questa pagina](/developers/docs/transactions/) della Ethereum Foundation.
 
-Puoi scaricare e creare gratuitamente un conto di MetaMask [qui](https://metamask.io/download.html). Quando crei un account, o se ne possiedi già uno, assicurati di passare alla "Rete di prova di Sepolia" in alto a destra (così da non avere a che fare con denaro reale).
+Puoi scaricare e creare gratuitamente un conto di MetaMask [qui](https://metamask.io/download). Quando crei un account, o se ne possiedi già uno, assicurati di passare alla "Rete di prova di Sepolia" in alto a destra (così da non avere a che fare con denaro reale).
 
 ![Imposta Sepolia come tua rete](./metamask-goerli.png)
 
@@ -87,7 +87,7 @@ Non è importante come rispondi alle domande d'installazione; a titolo di esempi
     author:
     license: (ISC)
     About to write to /Users/thesuperb1/Desktop/my-nft/package.json:
-    
+
     {
       "name": "my-nft",
       "version": "1.0.0",

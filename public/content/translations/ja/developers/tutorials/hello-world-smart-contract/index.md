@@ -16,11 +16,11 @@ published: 2021-03-31
 このチュートリアルは、ブロックチェーンの開発が初めてで、どこから始めたらよいのか分からない場合や、 スマートコントラクトをデプロイしてやり取りする方法を理解したいだけの場合に、最適なガイドとなります。 このチュートリアルでは、仮想ウォレット([MetaMask](https://metamask.io/))、[Solidity](https://docs.soliditylang.org/en/v0.8.0/)、[Hardhat](https://hardhat.org/)、[Alchemy](https://alchemyapi.io/eth)を使用して、Goerliテストネットワーク上で簡単なスマートコントラクトを作成してデプロイする方法を順を追って説明します(現時点でしっかりと理解できていなくても、心配はご無用です。後ほど説明します)。
 
 > **警告**
-> 
+>
 > 🚧 非推奨の通知
-> 
+>
 > このガイドでは、Goerliテストネットワークをスマートコントラクトの作成とデプロイに使用しています。 ただし、イーサリアム・ファウンデーションにより、[Goerliが間もなく廃止予定](https://www.alchemy.com/blog/goerli-faucet-deprecation)であることが発表されました。
-> 
+>
 > このチュートリアルでは、[Sepolia](https://www.alchemy.com/overviews/sepolia-testnet)および[Sepoliaフォーセット](https://sepoliafaucet.com/)の利用を推奨します。
 
 このチュートリアルの[パート2](https://docs.alchemy.com/docs/interacting-with-a-smart-contract)では、ここでデプロイしたスマートコントラクトとやり取りする方法について説明します。[パート3](https://docs.alchemy.com/docs/submitting-your-smart-contract-to-etherscan)では、そのスマートコントラクトをEtherscanで公開する方法について説明します。
@@ -49,7 +49,7 @@ Alchemyのアカウントを作成すると、アプリを作成することでA
 
 トランザクションの送受信には、イーサリアムアカウントが必要です。 このチュートリアルでは、イーサリアムアカウントアドレスを管理するためにブラウザの仮想ウォレットであるMetamaskを使用します。 [トランザクション](/developers/docs/transactions/)の詳細。
 
-Metamaskのアカウントは[こちら](https://metamask.io/download.html)から無料でダウンロード、作成できます。 アカウントを作成後、またはすでにアカウントをお持ちの場合は(実際に支払いが発生しないように)右上の「Goerli Test Network」に切り替えてください。
+Metamaskのアカウントは[こちら](https://metamask.io/download)から無料でダウンロード、作成できます。 アカウントを作成後、またはすでにアカウントをお持ちの場合は(実際に支払いが発生しないように)右上の「Goerli Test Network」に切り替えてください。
 
 ![MetaMask Ropstenの例](./metamask-ropsten-example.png)
 
@@ -66,7 +66,7 @@ Metamaskのアカウントは[こちら](https://metamask.io/download.html)か�
 ```
 
 > **注:** この結果の単位は、ETHではなくweiです。 weiはETHの最小単位として使われています。 weiからETHへ変換すると、1 eth = 10<sup>18</sup> weiになります。 つまり、0x2B5E3AF16B1880000を10進数に変換すると、5\*10¹⁸となり、5 ETHに相当します。
-> 
+>
 > ご安心ください。 偽のお金はすべてそこにあります<Emoji text=":money_mouth_face:" size={1} />。
 
 ## ステップ6: プロジェクトを初期化する {#step-6}

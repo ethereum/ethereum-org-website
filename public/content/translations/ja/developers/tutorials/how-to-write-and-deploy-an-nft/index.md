@@ -46,7 +46,7 @@ Alchemyのアカウントを作成すると、アプリを作成することでA
 
 トランザクションの送受信には、イーサリアムアカウントが必要です。 このチュートリアルでは、イーサリアムアカウントアドレスを管理するためにブラウザの仮想ウォレットであるMetamaskを使用します。 イーサリアムのトランザクションの仕組みの詳細については、イーサリアム・ファウンデーションの[こちらのページ](/developers/docs/transactions/)をご覧ください。
 
-Metamaskのアカウントは[こちら](https://metamask.io/download.html)から無料でダウンロード、作成できます。 アカウントを作成後、またはすでにアカウントをお持ちの場合は(実際に支払いが発生しないように)右上の「Sepolia Test Network」に切り替えてください。
+Metamaskのアカウントは[こちら](https://metamask.io/download)から無料でダウンロード、作成できます。 アカウントを作成後、またはすでにアカウントをお持ちの場合は(実際に支払いが発生しないように)右上の「Sepolia Test Network」に切り替えてください。
 
 ![Sepoliaをネットワークとして設定する](./metamask-goerli.png)
 
@@ -87,7 +87,7 @@ Metamaskのアカウントは[こちら](https://metamask.io/download.html)か�
     author:
     license: (ISC)
     About to write to /Users/thesuperb1/Desktop/my-nft/package.json:
-    
+
     {
       "name": "my-nft",
       "version": "1.0.0",

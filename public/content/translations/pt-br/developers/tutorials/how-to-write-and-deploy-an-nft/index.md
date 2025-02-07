@@ -46,7 +46,7 @@ Assim que criar uma conta na Alchemy, você pode gerar uma chave de API criando 
 
 Precisamos de uma conta Ethereum para enviar e receber transações. Para este tutorial, usaremos uma carteira virtual no navegador, a MetaMask, para gerenciar o endereço da sua conta Ethereum. Se você quiser entender mais sobre como as transações no Ethereum funcionam, confira [esta página](/developers/docs/transactions/) na Fundação Ethereum.
 
-Você pode baixar e criar uma conta MetaMask gratuitamente [neste link](https://metamask.io/download.html). Quando você estiver criando uma conta, ou se você já tiver uma, certifique-se de mudar para a “Sepolia Test Network” no canto superior direito (para que não lidemos com dinheiro real).
+Você pode baixar e criar uma conta MetaMask gratuitamente [neste link](https://metamask.io/download). Quando você estiver criando uma conta, ou se você já tiver uma, certifique-se de mudar para a “Sepolia Test Network” no canto superior direito (para que não lidemos com dinheiro real).
 
 ![Defina Sepolia como sua rede](./metamask-goerli.png)
 
@@ -87,7 +87,7 @@ Não importa realmente como você responde às questões de instalação; aqui e
     author:
     license: (ISC)
     About to write to /Users/thesuperb1/Desktop/my-nft/package.json:
-    
+
     {
       "name": "my-nft",
       "version": "1.0.0",

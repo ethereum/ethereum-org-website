@@ -203,7 +203,7 @@ Pour que les utilisateurs puissent interagir avec votre contrat intelligent, ils
 
 Pour ce tutoriel, nous utiliserons MetaMask, un portefeuille virtuel utilisable dans le navigateur servant à gérer les adresses Ethereum. Si vous voulez en savoir plus sur le fonctionnement des transactions sur Ethereum, consultez [cette page](/developers/docs/transactions/).
 
-Vous pouvez télécharger et créer un compte MetaMask gratuitement [ici](https://metamask.io/download.html). Lorsque vous créez un compte, ou si vous en avez déjà un, assurez-vous de basculer sur « Réseau de test Ropsten » en haut à droite \(afin de ne pas utiliser d'argent réel\).
+Vous pouvez télécharger et créer un compte MetaMask gratuitement [ici](https://metamask.io/download). Lorsque vous créez un compte, ou si vous en avez déjà un, assurez-vous de basculer sur « Réseau de test Ropsten » en haut à droite \(afin de ne pas utiliser d'argent réel\).
 
 ### Ajoutez de l'ether depuis un Robinet {#add-ether-from-faucet}
 
@@ -260,7 +260,7 @@ export const connectWallet = async () => {
         <span>
           <p>
             {" "}
-            🦊 <a target="_blank" href={`https://metamask.io/download.html`}>
+            🦊 <a target="_blank" href={`https://metamask.io/download`}>
               You must install MetaMask, a virtual Ethereum wallet, in your
               browser.
             </a>
@@ -370,7 +370,7 @@ export const getCurrentWalletConnected = async () => {
         <span>
           <p>
             {" "}
-            🦊 <a target="_blank" href={`https://metamask.io/download.html`}>
+            🦊 <a target="_blank" href={`https://metamask.io/download`}>
               You must install MetaMask, a virtual Ethereum wallet, in your
               browser.
             </a>
@@ -434,7 +434,7 @@ function addWalletListener() {
     setStatus(
       <p>
         {" "}
-        🦊 <a target="_blank" href={`https://metamask.io/download.html`}>
+        🦊 <a target="_blank" href={`https://metamask.io/download`}>
           You must install MetaMask, a virtual Ethereum wallet, in your browser.
         </a>
       </p>
