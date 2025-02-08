@@ -2211,7 +2211,7 @@ const chains = [
       symbol: "ETH",
       decimals: 18,
     },
-    chain: "Taiko Alethia",
+    chain: "ETH",
   },
 ] as const
 
