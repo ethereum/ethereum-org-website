@@ -2202,6 +2202,17 @@ const chains = [
     },
     chain: "dchainmainnet",
   },
+  {
+    name: "Taiko Mainnet",
+    infoURL: "https://taiko.xyz/",
+    chainId: 167000,
+    nativeCurrency: {
+      name: "Ether",
+      symbol: "ETH",
+      decimals: 18,
+    },
+    chain: "Taiko Alethia",
+  },
 ] as const
 
 export default chains
