@@ -1,4 +1,5 @@
-import { Box, Flex, List, ListItem, useToken, VStack } from "@chakra-ui/react"
+import { List, ListItem } from "@chakra-ui/react"
+import { VStack, Flex } from "@/components/ui/flex"
 
 import type { StakingPage } from "@/lib/types"
 
@@ -8,8 +9,6 @@ import {
   GreenCheckProductGlyphIcon,
   WarningProductGlyphIcon,
 } from "@/components/icons/staking"
-import OldHeading from "@/components/OldHeading"
-import Text from "@/components/OldText"
 import Translation from "@/components/Translation"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
@@ -37,11 +36,11 @@ const IndicatorGroup = ({
     return <WarningProductGlyphIcon style={style} />
   }
   return (
-    <VStack spacing={2} flex={1}>
+    <VStack className="flex-1 p-2">
       <IndicatorIcon style={styleObj} />
-      <Text fontSize="xs" textAlign="center" maxW="{40}">
+      <p className="max-w-[10rem] text-center text-xs">
         <Translation id={label} />
-      </Text>
+      </p>
     </VStack>
   )
 }
@@ -51,9 +50,6 @@ export type StakingConsiderationsProps = {
 }
 
 const StakingConsiderations = ({ page }: StakingConsiderationsProps) => {
-  // TODO: Replace with direct token implementation after UI migration is completed
-  const mdBp = useToken("breakpoints", "md")
-
   const {
     StyledSvg,
     caution,
@@ -75,10 +71,10 @@ const StakingConsiderations = ({ page }: StakingConsiderationsProps) => {
   }
 
   return (
-    <Flex flexDir={{ base: "column", md: "row" }}>
+    <Flex className="flex-col md:flex-row">
       <ButtonDropdown list={dropdownLinks} className="mb-4 md:hidden" />
       {/* TODO: Improve a11y */}
-      <Box flex={1} hideBelow={mdBp}>
+      <div className="hidden flex-1 md:block">
         {!!pageData && (
           <List m={0}>
             {/* TODO: Make mobile responsive */}
@@ -107,27 +103,12 @@ const StakingConsiderations = ({ page }: StakingConsiderationsProps) => {
             ))}
           </List>
         )}
-      </Box>
-      <Flex
-        alignItems="center"
-        flexDir="column"
-        bg="background.highlight"
-        flex={2}
-        minH="410px"
-        p={6}
-      >
+      </div>
+      <Flex className="felx-col bg-highlight flex-2 min-h-[410px] items-center p-6">
         <StyledSvg />
-        <OldHeading
-          as="h3"
-          fontWeight={700}
-          fontSize="27px"
-          lineHeight={1.4}
-          mt={10}
-        >
-          {title}
-        </OldHeading>
-        <Text>{description}</Text>
-        <Flex gap={8} justifyContent="center" mt="auto">
+        <h3 className="mt-10 text-[27px] font-bold leading-[1.4]">{title}</h3>
+        <p>{description}</p>
+        <Flex className="mt-auto justify-center gap-8">
           {!!valid && (
             <IndicatorGroup
               label={valid}
