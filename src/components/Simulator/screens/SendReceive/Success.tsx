@@ -11,7 +11,7 @@ import { getMaxFractionDigitsUsd } from "../../utils"
 import { WalletHome } from "../../WalletHome"
 import type { TokenBalance } from "../../WalletHome/interfaces"
 
-const ICON_SIZE = "size-4.5rem"
+const ICON_SIZE = "text-[4.5rem]"
 
 type SuccessProps = {
   tokenBalances: Array<TokenBalance>
@@ -100,6 +100,7 @@ export const Success = ({
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
                   transition={{ type: "spring", delay: 0.25 }}
+                  data-testid="success-icon"
                 >
                   <PiCheckThin className={cn(ICON_SIZE, "-rotate-[10deg]")} />
                 </motion.div>
@@ -108,7 +109,7 @@ export const Success = ({
                 {txPending ? (
                   "Sending transaction"
                 ) : (
-                  <span data-testid="success-message">
+                  <span>
                     You sent{" "}
                     <strong>
                       <>{sentEthValue} ETH</>

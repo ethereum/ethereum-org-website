@@ -107,8 +107,18 @@ export const Success: Story = {
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement)
 
-    await waitFor(async () => {
-      expect(canvas.getByTestId("success-message")).toBeInTheDocument()
-    })
+    await waitFor(
+      async () => {
+        const successIcon = canvas.getByTestId("success-icon")
+        console.log("🚀 ~ successIcon:", successIcon)
+        await expect(successIcon).toBeInTheDocument()
+        await expect(successIcon).toHaveStyle({
+          transform: "none",
+        })
+      },
+      {
+        timeout: 10000,
+      }
+    )
   },
 }
