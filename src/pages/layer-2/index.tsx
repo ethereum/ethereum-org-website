@@ -1,4 +1,5 @@
 import type { GetStaticProps } from "next/types"
+import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 
 import type { BasePageProps, GrowThePieData, Lang } from "@/lib/types"
@@ -74,6 +75,7 @@ const Layer2Hub = ({
   growThePieData: GrowThePieData
   locale: Lang
 }) => {
+  const { t } = useTranslation(["page-layer-2", "common"])
   const medianTxCost =
     "error" in growThePieData.txCostsMedianUsd
       ? { error: growThePieData.txCostsMedianUsd.error }
@@ -81,13 +83,13 @@ const Layer2Hub = ({
 
   // TODO: setup translation
   const heroContent: HubHeroProps = {
-    title: "Layer 2",
-    header: "Ethereum networks",
-    description: "Use Ethereum for a fraction of the cost.",
+    title: t("page-layer-2-hero-title"),
+    header: t("page-layer-2-hero-header"),
+    description: t("page-layer-2-hero-description"),
     heroImg: HeroImage,
     buttons: [
       {
-        content: "Explore networks",
+        content: t("nav-networks-explore-networks-label"),
         href: "/layer-2/networks",
         matomo: {
           eventCategory: "l2_hub",
@@ -96,7 +98,7 @@ const Layer2Hub = ({
         },
       },
       {
-        content: "Learn more",
+        content: t("page-layer-2-hero-button-2-content"),
         href: "#layer-2-powered-by-ethereum",
         matomo: {
           eventCategory: "l2_hub",
@@ -110,21 +112,18 @@ const Layer2Hub = ({
   // TODO: Setup for translation
   const calloutCards = [
     {
-      title: "$0.01 fees",
-      description:
-        "You can trade, send money globally, or use  applications without worrying about high costs.",
+      title: t("page-layer-2-calloutCard-1-title"),
+      description: t("page-layer-2-calloutCard-1-description"),
       emoji: ":money_with_wings:",
     },
     {
-      title: "Near instant transactions",
-      description:
-        "Whether you are making a quick payment or engaging in decentralized finance (DeFi), all transactions take only a few seconds. ",
+      title: t("page-layer-2-calloutCard-2-title"),
+      description: t("page-layer-2-calloutCard-2-description"),
       emoji: ":closed_lock_with_key:",
     },
     {
-      title: "Backed by Ethereum",
-      description:
-        "Ethereum’s time-proven and decentralized blockchain functions as the settlement layer for other newer networks.",
+      title: t("page-layer-2-calloutCard-3-title"),
+      description: t("page-layer-2-calloutCard-3-description"),
       emoji: ":hammer_and_wrench:",
     },
   ]
@@ -134,8 +133,8 @@ const Layer2Hub = ({
       {/* TODO: Clarify title and description here */}
       {/* TODO: Setup for translation */}
       <PageMetadata
-        title={"Intro to Ethereum Layer 2: benefits and uses"}
-        description={"Learn about Ethereum layer 2 networks"}
+        title={t("page-layer-2-meta-title")}
+        description={t("page-layer-2-meta-description")}
         image="/images/layer-2/learn-hero.png"
       />
 
@@ -148,22 +147,19 @@ const Layer2Hub = ({
       >
         <div className="flex flex-col gap-16 md:flex-row">
           <div className="flex flex-1 flex-col gap-8">
-            <h2>Powered by Ethereum</h2>
+            <h2>{t("page-layer-2-powered-by-ethereum-title")}</h2>
             <p>
-              <strong>Ethereum is no longer just a single network</strong>. With
-              hundreds of blockchains now built on top of it, Ethereum has
-              become more cost-effective, faster, and accessible for everyday
-              use.
+              <strong>
+                {t("page-layer-2-powered-by-ethereum-description-1")}{" "}
+              </strong>
+              {t("page-layer-2-powered-by-ethereum-description-2")}
             </p>
-            <p>
-              Embrace the future by joining one of the many networks powered by
-              Ethereum!
-            </p>
+            <p>{t("page-layer-2-powered-by-ethereum-description-3")}</p>
           </div>
           <div className="flex flex-1">
             <TwImage
               src={ManDogCardImage}
-              alt="Man and dog playing"
+              alt={t("page-layer-2-man-and-dog-alt")}
               style={{
                 width: "100%",
                 maxHeight: "240px",
@@ -188,7 +184,7 @@ const Layer2Hub = ({
                   )}
                 </p>
                 <p className="text-body-medium">
-                  Average transaction cost on the Ethereum blockchain
+                  {t("page-layer-2-blockchain-transaction-cost")}
                 </p>
               </div>
             </div>
@@ -203,7 +199,7 @@ const Layer2Hub = ({
                   })}
                 </p>
                 <p className="text-body-medium">
-                  Average transaction cost on Ethereum backed networks
+                  {t("page-layer-2-networks-transaction-cost")}
                 </p>
               </div>
             </div>
@@ -222,11 +218,9 @@ const Layer2Hub = ({
       {/* TODO: Setup for translation */}
       <div id="layer-2-the-network-of-networks" className="w-full py-9 sm:px-8">
         <div className="flex flex-col gap-8 overflow-hidden bg-[#B9B9F1] bg-opacity-20 px-4 py-10 text-center">
-          <h2>The network of networks</h2>
+          <h2>{t("page-layer-2-network-of-networks-title")}</h2>
           <p className="font-md">
-            Ethereum&apos;s strength and security provides a platform for other
-            networks to build upon. With a single account, everything is
-            compatible and connects seamlessly.
+            {t("page-layer-2-network-of-networks-description")}
           </p>
           <div className="relative m-auto h-[275px] w-[275px] sm:h-[375px] sm:w-[375px]">
             {/* Outer ring */}
@@ -338,7 +332,7 @@ const Layer2Hub = ({
             <div className="absolute left-1/2 top-1/2 h-12 w-12 -translate-x-1/2 -translate-y-1/2 transform">
               <TwImage
                 src={EthereumLogo}
-                alt="Ethereum"
+                alt={t("page-layer-2-ethereum-logo-alt")}
                 width={48}
                 height={48}
               />
@@ -367,10 +361,8 @@ const Layer2Hub = ({
       {/* TODO: Setup for translation */}
       <div id="layer-2-ready-to-start" className="w-full px-8 py-9">
         <div className="flex flex-col items-center gap-8">
-          <h2>Ready to start?</h2>
-          <p>
-            Have a look at all the different networks that are available to you.
-          </p>
+          <h2>{t("page-layer-2-ready-to-start-title")}</h2>
+          <p>{t("page-layer-2-ready-to-start-description")}</p>
           <div>
             <ButtonLink
               href="/layer-2/networks"
@@ -380,7 +372,7 @@ const Layer2Hub = ({
                 eventName: "mid_explore_networks",
               }}
             >
-              Explore networks
+              {t("page-layer-2-ready-to-start-button")}
             </ButtonLink>
           </div>
         </div>
@@ -427,7 +419,7 @@ const Layer2Hub = ({
                         eventName: "mid_powered_by_ethereum",
                       }}
                     >
-                      Go
+                      {t("page-layer-2-go")}
                     </ButtonLink>
                   </div>
                 </div>
@@ -439,13 +431,13 @@ const Layer2Hub = ({
             <div className="mx-auto inline-flex items-center justify-center gap-2 rounded-full bg-background px-4 py-2 text-sm font-bold">
               <TwImage
                 src={EthereumLogo}
-                alt="Ethereum"
+                alt={t("page-layer-2-ethereum-logo-alt")}
                 style={{
                   width: "24px",
                   height: "24px",
                 }}
               />
-              <p>Powered by Ethereum</p>
+              <p>{t("page-layer-2-powered-by-ethereum-title")}</p>
             </div>
           </div>
         </div>
@@ -460,17 +452,14 @@ const Layer2Hub = ({
           <div className="flex flex-1 items-center justify-center">
             <TwImage
               src={WalkingImage}
-              alt="Walking"
+              alt={t("page-layer-2-walking-alt")}
               height={345}
               width={264}
             />
           </div>
           <div className="flex flex-1 flex-col justify-center gap-6">
-            <h2>Why do we need multiple networks on Ethereum?</h2>
-            <p>
-              Why are there all these networks and not just one Ethereum
-              network?
-            </p>
+            <h2>{t("page-layer-2-why-do-we-need-multiple-networks-1")}</h2>
+            <p>{t("page-layer-2-why-do-we-need-multiple-networks-2")}</p>
             <div>
               <ButtonLink
                 href="/layer-2/learn"
@@ -480,7 +469,7 @@ const Layer2Hub = ({
                   eventName: "mid_l2_learn",
                 }}
               >
-                Learn more
+                {t("learn-more")}
               </ButtonLink>
             </div>
           </div>
@@ -492,95 +481,57 @@ const Layer2Hub = ({
         id="layer-2-faq"
         className="flex w-full max-w-[832px] flex-col gap-12 px-8 py-9"
       >
-        <h2>Frequently asked questions</h2>
+        <h2>{t("page-layer-2-faq-title")}</h2>
         <div>
           <ExpandableCard
-            title={"How do I know that a network is part of Ethereum?"}
+            title={t("page-layer-2-faq-ExpandableCard-1-title")}
             eventCategory="l2_hub"
             eventAction="expand"
             eventName="how do i know if a network is part of ethereum"
           >
             <div className="flex flex-col gap-8">
               <p>
-                There are many different ways one can categorize networks in
-                relation to Ethereum. Many networks claim to be scaling Ethereum
-                to gather popularity. However, one clear perspective is whether
-                the network stores its data on the Ethereum main network. This
-                greatly enhances user security and Ethereum&apos;s
-                permissionless vision. Such projects are often called “rollups”.
-                If data is stored somewhere else, then the project is not a
-                direct Ethereum extension and is rather independent. Check out
-                some of the most popular{" "}
+                {t("page-layer-2-faq-ExpandableCard-1-description-1")}{" "}
                 <InlineLink href="/layer-2/networks">
-                  Ethereum networks
+                  {t("nav-ethereum-networks")}
                 </InlineLink>
-                .
+                {t("page-layer-2-period")}
               </p>
-              <p>
-                Some specific industries might not require such direct close
-                relationship such as gaming or non-financial applications where
-                different technologies are better fit.
-              </p>
+              <p>{t("page-layer-2-faq-ExpandableCard-1-description-2")}</p>
             </div>
           </ExpandableCard>
           <ExpandableCard
-            title={"Are all these networks safe?"}
+            title={t("page-layer-2-faq-ExpandableCard-2-title")}
             eventCategory="l2_hub"
             eventAction="expand"
             eventName="are all these networks safe"
           >
             <div className="flex flex-col gap-8">
               <p>
-                While generally designed with robust security features, their
-                safety depends on the underlying technology, smart contract
-                security, and{" "}
+                {t("page-layer-2-faq-ExpandableCard-2-description-1")}{" "}
                 <InlineLink href="/layer-2/networks">
-                  maturity of the network
+                  {t("page-layer-2-faq-ExpandableCard-2-link")}
                 </InlineLink>
-                .
+                {t("page-layer-2-period")}
               </p>
-              <p>
-                Users should perform due diligence, starting with small
-                transactions and staying updated on developments to ensure
-                secure usage.
-              </p>
+              <p>{t("page-layer-2-faq-ExpandableCard-2-description-2")}</p>
             </div>
           </ExpandableCard>
           <ExpandableCard
-            title={
-              "Why can't Ethereum scale its own chain instead of relying on these networks?"
-            }
+            title={t("page-layer-2-faq-ExpandableCard-3-title")}
             eventCategory="l2_hub"
             eventAction="expand"
             eventName="why can't ethereum scale its own chain instead of relying on these networks"
           >
-            <p>
-              Ethereum can&apos;t easily scale its own main chain because it
-              needs to stay secure and decentralized. Making the main chain
-              faster could make it less secure and more centralized. Ethereum
-              networks help by processing transactions off the main chain and
-              then using the main chain for security, allowing Ethereum to
-              handle more transactions without losing security or
-              decentralization.
-            </p>
+            <p>{t("page-layer-2-faq-ExpandableCard-3-description")}</p>
           </ExpandableCard>
           <ExpandableCard
-            title={"Why is there no 'official' Ethereum networks?"}
+            title={t("page-layer-2-faq-ExpandableCard-4-title")}
             eventCategory="l2_hub"
             eventAction="expand"
             eventName="why is there no official ethereum networks"
           >
-            <p>
-              Just as there is no &apos;official&apos; Ethereum client, there is
-              no &apos;official&apos; Ethereum layer 2. Ethereum is
-              permissionless - technically anyone can create a layer 2! Multiple
-              teams will implement their version of a layer 2, and the ecosystem
-              as a whole will benefit from a diversity of design approaches that
-              are optimized for different use cases. Much like we have multiple
-              Ethereum clients developed by multiple teams in order to have
-              diversity in the network, this too will be how layer 2s develop in
-              the future.
-            </p>
+            <p>{t("page-layer-2-faq-ExpandableCard-4-description")}</p>
           </ExpandableCard>
         </div>
       </div>
@@ -592,10 +543,8 @@ const Layer2Hub = ({
       >
         <Callout
           image={ExploreImage}
-          title={"Explore different networks"}
-          description={
-            "Learn how networks differ from each other and how far have gotten in their development."
-          }
+          title={t("page-layer-2-callout-1-title")}
+          description={t("page-layer-2-callout-1-description")}
         >
           <div>
             <ButtonLink
@@ -606,16 +555,14 @@ const Layer2Hub = ({
                 eventName: "bottom_explore_networks",
               }}
             >
-              Explore networks
+              {t("nav-networks-explore-networks-label")}
             </ButtonLink>
           </div>
         </Callout>
         <Callout
           image={WalkingImage}
-          title={"Interested in more details?"}
-          description={
-            "Curious about the technology and reasons for this scaling approach? Learn more about the thinking and different technological approaches."
-          }
+          title={t("page-layer-2-callout-2-title")}
+          description={t("page-layer-2-callout-2-description")}
           headerClassName="-mt-6"
         >
           <div>
@@ -627,7 +574,7 @@ const Layer2Hub = ({
                 eventName: "bottom_l2_learn",
               }}
             >
-              Learn more
+              {t("learn-more")}
             </ButtonLink>
           </div>
         </Callout>
