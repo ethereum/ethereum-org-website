@@ -30,6 +30,7 @@ import {
   type ButtonLinkProps,
   type ButtonProps,
 } from "@/components/ui/buttons/Button"
+import Checkbox from "@/components/ui/checkbox"
 import { Flex } from "@/components/ui/flex"
 import InlineLink from "@/components/ui/Link"
 
@@ -39,8 +40,6 @@ import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { DEPOSIT_CONTRACT_ADDRESS } from "@/data/addresses"
-
-import Checkbox from "../../../tailwind/ui/Checkbox"
 
 import consensys from "@/public/images/projects/consensys.png"
 import etherscan from "@/public/images/projects/etherscan-logo-circle.png"
