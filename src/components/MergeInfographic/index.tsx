@@ -91,13 +91,7 @@ const MergeInfographic = () => {
           <Translation id="page-upgrades:page-upgrades-merge-infographic-el" />
         </Box>
         <SvgText />
-        <Background
-          aria-hidden="true"
-          position="absolute"
-          width="100%"
-          height="100%"
-          zIndex={0}
-        />
+        <Background className="absolute z-0 size-full" aria-hidden="true" />
       </Box>
     </AspectRatio>
   )
