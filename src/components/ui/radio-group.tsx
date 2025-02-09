@@ -4,7 +4,7 @@ import * as RadioGroupPrimitive from "@radix-ui/react-radio-group"
 
 import { cn } from "@/lib/utils/cn"
 
-import { commonControlClasses } from "../../src/components/ui/checkbox"
+import { commonControlClasses } from "./checkbox"
 
 const RadioGroup = React.forwardRef<
   React.ElementRef<typeof RadioGroupPrimitive.Root>,
