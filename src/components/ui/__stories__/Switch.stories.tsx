@@ -4,7 +4,7 @@ import { Meta, type StoryObj } from "@storybook/react"
 import SwitchComponent from "../Switch"
 
 const meta = {
-  title: "Atoms / Form / ShadCN Switch",
+  title: "Atoms / Form / Switch",
   component: SwitchComponent,
 } satisfies Meta<typeof SwitchComponent>
 
