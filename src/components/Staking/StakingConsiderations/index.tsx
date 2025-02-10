@@ -1,6 +1,3 @@
-import { List, ListItem } from "@/components/ui/list"
-import { VStack, Flex } from "@/components/ui/flex"
-
 import type { StakingPage } from "@/lib/types"
 
 import ButtonDropdown from "@/components/ButtonDropdown"
@@ -10,6 +7,8 @@ import {
   WarningProductGlyphIcon,
 } from "@/components/icons/staking"
 import Translation from "@/components/Translation"
+import { Flex, VStack } from "@/components/ui/flex"
+import { List, ListItem } from "@/components/ui/list"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
