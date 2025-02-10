@@ -89,7 +89,7 @@ const Layer2Hub = ({
     heroImg: HeroImage,
     buttons: [
       {
-        content: t("nav-networks-explore-networks-label"),
+        content: t("common:nav-networks-explore-networks-label"),
         href: "/layer-2/networks",
         matomo: {
           eventCategory: "l2_hub",
@@ -469,7 +469,7 @@ const Layer2Hub = ({
                   eventName: "mid_l2_learn",
                 }}
               >
-                {t("learn-more")}
+                {t("common:learn-more")}
               </ButtonLink>
             </div>
           </div>
@@ -555,7 +555,7 @@ const Layer2Hub = ({
                 eventName: "bottom_explore_networks",
               }}
             >
-              {t("nav-networks-explore-networks-label")}
+              {t("common:nav-networks-explore-networks-label")}
             </ButtonLink>
           </div>
         </Callout>
@@ -574,7 +574,7 @@ const Layer2Hub = ({
                 eventName: "bottom_l2_learn",
               }}
             >
-              {t("learn-more")}
+              {t("common:learn-more")}
             </ButtonLink>
           </div>
         </Callout>
