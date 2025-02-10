@@ -1,7 +1,6 @@
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa"
-import { Text } from "@chakra-ui/react"
 
 import { TranslationKey } from "@/lib/types"
 import type { DeveloperDocsLink } from "@/lib/interfaces"
@@ -70,10 +69,10 @@ const CardLink = ({ docData, isPrev, contentNotTranslated }: CardLinkProps) => {
         )}
       </div>
       <TextDiv className={cn(isPrev ? "ps-0" : "pe-0 text-end")}>
-        <Text className="btn-txt !m-0 text-lg text-primary group-hover:text-primary-hover">
+        <p className="btn-txt !m-0 text-lg text-primary group-hover:text-primary-hover">
           {t(isPrev ? "previous" : "next")}
-        </Text>
-        <Text className="!mb-0 text-sm no-underline">{t(docData.id)}</Text>
+        </p>
+        <p className="!mb-0 text-sm no-underline">{t(docData.id)}</p>
       </TextDiv>
     </BaseLink>
   )
