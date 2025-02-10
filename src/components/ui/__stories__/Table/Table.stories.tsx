@@ -2,7 +2,7 @@ import * as React from "react"
 import { Flex } from "@chakra-ui/react"
 import { Meta, StoryObj } from "@storybook/react"
 
-import { Table as TableComponent } from "../../Table"
+import { Table as TableComponent } from "../../table"
 
 import {
   MdxDemoData,

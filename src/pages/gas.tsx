@@ -31,7 +31,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/components/ui/Table"
+} from "@/components/ui/table"
 import { Tag } from "@/components/ui/tag"
 
 import { cn } from "@/lib/utils/cn"

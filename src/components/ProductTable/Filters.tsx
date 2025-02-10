@@ -3,14 +3,13 @@ import { BsArrowCounterclockwise } from "react-icons/bs"
 
 import { FilterInputState, FilterOption } from "@/lib/types"
 
-import { Button } from "@/components/ui/buttons/Button"
-
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/../tailwind/ui/accordion"
+} from "@/components/ui/accordion"
+import { Button } from "@/components/ui/buttons/Button"
 
 interface PresetFiltersProps {
   filters: FilterOption[]

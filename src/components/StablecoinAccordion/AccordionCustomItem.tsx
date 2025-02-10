@@ -6,12 +6,12 @@ import type { ChildOnlyProp } from "@/lib/types"
 import { Flex } from "@/components/ui/flex"
 import { Tag, TagProps } from "@/components/ui/tag"
 
+import Emoji from "../Emoji"
 import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "../../../tailwind/ui/accordion"
-import Emoji from "../Emoji"
+} from "../ui/accordion"
 
 import { accordionButtonContent, CategoryNameType } from "./utils"
 
