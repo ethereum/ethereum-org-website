@@ -201,7 +201,7 @@ export const layer2Data: Rollups = [
     l2beatID: "taiko",
     growthepieID: "taiko",
     name: "Taiko",
-    chainName: "Taiko Mainnet",
+    chainName: "Taiko Alethia",
     logo: TaikoLogo,
     networkType: "optimistic",
     description:
