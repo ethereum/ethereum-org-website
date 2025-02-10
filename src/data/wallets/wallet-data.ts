@@ -402,7 +402,7 @@ export const walletsData: WalletData[] = [
       "Base",
       "Scroll",
       "Blast",
-      "Taiko Mainnet",
+      "Taiko Alethia",
     ],
   },
   {
@@ -2475,7 +2475,7 @@ export const walletsData: WalletData[] = [
       "Arbitrum One",
       "Linea",
       "Scroll",
-      "Taiko Mainnet",
+      "Taiko Alethia",
     ],
   },
 ] as const satisfies Omit<WalletData, "new_to_crypto">[]
