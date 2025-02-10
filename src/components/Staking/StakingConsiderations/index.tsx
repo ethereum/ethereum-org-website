@@ -1,4 +1,4 @@
-import { List, ListItem } from "@chakra-ui/react"
+import { List, ListItem } from "@/components/ui/list"
 import { VStack, Flex } from "@/components/ui/flex"
 
 import type { StakingPage } from "@/lib/types"
@@ -76,7 +76,7 @@ const StakingConsiderations = ({ page }: StakingConsiderationsProps) => {
       {/* TODO: Improve a11y */}
       <div className="hidden flex-1 md:block">
         {!!pageData && (
-          <List m={0}>
+          <List className="m-0">
             {/* TODO: Make mobile responsive */}
             {pageData.map(({ title, matomo }, idx) => (
               <ListItem
@@ -85,15 +85,7 @@ const StakingConsiderations = ({ page }: StakingConsiderationsProps) => {
                   handleSelection(idx)
                   trackCustomEvent(matomo)
                 }}
-                py={1}
-                cursor="pointer"
-                display="table"
-                w="full"
-                h={8}
-                p="3"
-                mb="0"
-                _hover={activeStyles}
-                position="relative"
+                className={`relative mb-0 table h-8 w-full cursor-pointer p-3 py-1 hover:[${activeStyles}]`}
                 {...(idx === activeIndex
                   ? activeStyles
                   : { color: "primary.base" })}
