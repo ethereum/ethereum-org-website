@@ -24,7 +24,7 @@ import {
 import TableOfContents from "@/components/TableOfContents"
 import TooltipLink from "@/components/TooltipLink"
 import TutorialMetadata from "@/components/TutorialMetadata"
-import { mdxTableComponents } from "@/components/ui/Table"
+import { mdxTableComponents } from "@/components/ui/table"
 import YouTube from "@/components/YouTube"
 
 import { getEditPath } from "@/lib/utils/editPath"
