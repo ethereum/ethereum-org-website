@@ -493,7 +493,7 @@ const Layer2Hub = ({
               <p>
                 {t("page-layer-2-faq-ExpandableCard-1-description-1")}{" "}
                 <InlineLink href="/layer-2/networks">
-                  {t("nav-ethereum-networks")}
+                  {t("common:nav-ethereum-networks")}
                 </InlineLink>
                 {t("page-layer-2-period")}
               </p>
