@@ -98,6 +98,7 @@ import rubic from "@/public/images/dapps/rubic.png"
 import sablier from "@/public/images/dapps/sablier.png"
 import spatial from "@/public/images/dapps/spatial.png"
 import spruce from "@/public/images/dapps/spruce.png"
+import efp from "@/public/images/dapps/efp.png"
 import status from "@/public/images/dapps/status.png"
 import summerfi from "@/public/images/dapps/summerfi.png"
 import superrare from "@/public/images/dapps/superrare.png"
@@ -1043,6 +1044,13 @@ const DappsPage = () => {
       link: "https://www.spruceid.com/",
       image: spruce,
       alt: t("page-dapps-spruce-logo-alt"),
+    },
+    {
+      title: "Ethereum Follow Protocol",
+      description: t("page-dapps-dapp-description-efp"),
+      link: "https://efp.app/",
+      image: efp,
+      alt: t("page-dapps-efp-logo-alt"),
     },
   ]
 
