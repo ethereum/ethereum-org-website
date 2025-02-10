@@ -319,7 +319,7 @@ const GasPage = () => {
             </p>
           </div>
           <Table className="min-w-[auto] max-w-full">
-            <TableCaption className="text-sm">
+            <TableCaption className="caption-bottom">
               <Translation id="page-gas:page-gas-table-figure" />
             </TableCaption>
             <TableHeader>
