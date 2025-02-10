@@ -5,14 +5,13 @@ import { Flex, HStack, VStack } from "@/components/ui/flex"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
+import type { IconBaseType } from "./icons/icon-base"
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "../../tailwind/ui/accordion"
-
-import type { IconBaseType } from "./icons/icon-base"
+} from "./ui/accordion"
 
 export type ExpandableCardProps = {
   children?: ReactNode

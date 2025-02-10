@@ -402,7 +402,7 @@ export const walletsData: WalletData[] = [
       "Base",
       "Scroll",
       "Blast",
-      "Taiko Mainnet",
+      "Taiko Alethia",
     ],
   },
   {
@@ -928,11 +928,7 @@ export const walletsData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "",
     documentation: "https://unstoppable.money/faq",
-    supported_chains: [
-      "Ethereum Mainnet",
-      "Arbitrum One",
-      "OP Mainnet",
-    ],
+    supported_chains: ["Ethereum Mainnet", "Arbitrum One", "OP Mainnet"],
   },
 
   {
@@ -2148,11 +2144,7 @@ export const walletsData: WalletData[] = [
       "https://docs.getaurox.com/product-docs/aurox-ecosystem/what-is-the-aurox-ecosystem",
     documentation:
       "https://docs.getaurox.com/product-docs/aurox-ecosystem/what-is-the-aurox-ecosystem",
-    supported_chains: [
-      "Ethereum Mainnet",
-      "Arbitrum One",
-      "OP Mainnet",
-    ],
+    supported_chains: ["Ethereum Mainnet", "Arbitrum One", "OP Mainnet"],
   },
   {
     last_updated: "2025-01-07",
@@ -2483,7 +2475,7 @@ export const walletsData: WalletData[] = [
       "Arbitrum One",
       "Linea",
       "Scroll",
-      "Taiko Mainnet",
+      "Taiko Alethia",
     ],
   },
 ] as const satisfies Omit<WalletData, "new_to_crypto">[]
