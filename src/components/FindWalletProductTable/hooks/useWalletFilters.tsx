@@ -1,3 +1,4 @@
+import { useRef } from "react"
 import { useTranslation } from "next-i18next"
 
 import { FilterOption } from "@/lib/types"
@@ -35,6 +36,7 @@ import { DEFAULT_LOCALE } from "@/lib/constants"
 
 export const useWalletFilters = (): FilterOption[] => {
   const { t } = useTranslation("page-wallets-find-wallet")
+  const prevNetworkArray = useRef<string[]>([])
   return [
     {
       title: t("page-find-wallet-device"),
@@ -452,7 +454,19 @@ export const useWalletFilters = (): FilterOption[] => {
                 filterIndex={filterIndex}
                 itemIndex={itemIndex}
                 inputState={inputState}
-                updateFilterState={updateFilterState}
+                updateFilterState={(filterIndex, itemIndex, newInputState) => {
+                  const newArray = newInputState as string[]
+                  const oldArray = prevNetworkArray.current
+                  if (newArray.length > oldArray.length) {
+                    trackCustomEvent({
+                      eventCategory: "WalletFilterSidebar",
+                      eventAction: "network",
+                      eventName: newArray[newArray.length - 1],
+                    })
+                  }
+                  prevNetworkArray.current = newArray
+                  updateFilterState(filterIndex, itemIndex, newInputState)
+                }}
               />
             )
           },

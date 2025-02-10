@@ -9,7 +9,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "./ui/Table"
+} from "./ui/table"
 
 import { useRtlFlip } from "@/hooks/useRtlFlip"
 

@@ -30,7 +30,7 @@ import TableOfContents from "@/components/TableOfContents"
 import Translation from "@/components/Translation"
 import { Divider } from "@/components/ui/divider"
 import InlineLink from "@/components/ui/Link"
-import { mdxTableComponents } from "@/components/ui/Table"
+import { mdxTableComponents } from "@/components/ui/table"
 import YouTube from "@/components/YouTube"
 
 import { cn } from "@/lib/utils/cn"

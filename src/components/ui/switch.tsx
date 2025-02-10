@@ -3,7 +3,7 @@ import * as SwitchPrimitives from "@radix-ui/react-switch"
 
 import { cn } from "@/lib/utils/cn"
 
-import { commonControlClasses } from "./Checkbox"
+import { commonControlClasses } from "./checkbox"
 
 const Switch = React.forwardRef<
   React.ElementRef<typeof SwitchPrimitives.Root>,
