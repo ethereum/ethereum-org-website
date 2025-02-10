@@ -44,5 +44,15 @@
     "page-layer-2-callout-1-title": "Explore different networks",
     "page-layer-2-callout-1-description": "Learn how networks differ from each other and how far have gotten in their development.",
     "page-layer-2-callout-2-title": "Interested in more details?",
-    "page-layer-2-callout-2-description": "Curious about the technology and reasons for this scaling approach? Learn more about the thinking and different technological approaches."
+    "page-layer-2-callout-2-description": "Curious about the technology and reasons for this scaling approach? Learn more about the thinking and different technological approaches.",
+    "page-layer-2-arbitrum-description": "Arbitrum One is a general-purpose Optimistic Rollup built by Offchain Labs and governed by the Arbitrum DAO.",
+    "page-layer-2-base-description": "Base is an Optimistic Rollup built with the OP Stack. It offers a low-cost and builder-friendly way for anyone, anywhere, to build onchain.",
+    "page-layer-2-optimism-description": "OP Mainnet is an EVM-equivalent Optimistic Rollup. It aims to be fast, simple, and secure.",
+    "page-layer-2-blast-description": "Blast is an EVM-compatible Optimistic Rollup supporting native yield.",
+    "page-layer-2-zksync2-description": "ZKsync Era is a general-purpose ZK Rollup with full EVM compatibility.",
+    "page-layer-2-linea-description": "Linea is a ZK Rollup powered by Consensys zkEVM, designed to scale the Ethereum network.",
+    "page-layer-2-scroll-description": "Scroll is ZK Rollup that extends Ethereum’s capabilities through ZK tech and EVM compatibility.",
+    "page-layer-2-starknet-description": "Starknet is a general purpose ZK Rollup based on STARKs and the Cairo VM.",
+    "page-layer-2-mode-description": "Mode is an OP stack Optimistic Rollup building the AIFi economy.",
+    "page-layer-2-taiko-description": "Taiko is a decentralized, Ethereum-equivalent ZK-EVM rollup that enables seamless cross-chain communication."
 }

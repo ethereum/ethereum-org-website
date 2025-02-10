@@ -405,7 +405,7 @@ const Layer2Hub = ({
                     </div>
                     <div className="flex flex-1 flex-col gap-1">
                       <p className="text-xl font-bold">{l2.name}</p>
-                      <p className="text-body-medium">{l2.description}</p>
+                      <p className="text-body-medium">{t(l2.description)}</p>
                     </div>
                   </div>
                   <div className="flex w-full md:w-auto">
