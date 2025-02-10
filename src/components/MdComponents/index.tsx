@@ -1,5 +1,4 @@
-import { type HTMLAttributes } from "react"
-import { Box, type BoxProps } from "@chakra-ui/react"
+import { type ComponentProps, type HTMLAttributes } from "react"
 
 import type { ChildOnlyProp } from "@/lib/types"
 
@@ -111,7 +110,6 @@ export const HR = () => (
 // All base html element components
 export const htmlElements = {
   a: TooltipLink,
-  div: Box,
   h1: Heading1,
   h2: Heading2,
   h3: Heading3,
@@ -147,7 +145,7 @@ export const Title = (props: ChildOnlyProp) => (
   <Heading1 className="mt-4" {...props} />
 )
 
-export const ContentContainer = (props: Pick<BoxProps, "id" | "children">) => {
+export const ContentContainer = (props: ComponentProps<"article">) => {
   return (
     <MainArticle className="relative flex-[1_1_992px] px-8 pb-8" {...props} />
   )
