@@ -118,6 +118,8 @@ lang: en
 
 <GlossaryDefinition term="dao" />
 
+<GlossaryDefinition term="desci" />
+
 <GlossaryDefinition term="dex" />
 
 <GlossaryDefinition term="deposit-contract" />
