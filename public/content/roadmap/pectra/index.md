@@ -85,7 +85,7 @@ The Beacon Chain consensus is based on validators casting their votes for the la
 [EIP-7840](https://eips.ethereum.org/EIPS/eip-7840) is a simple change that adds a new field to execution layer client configuration. It configures the number of blocks, enabling dynamic setting for target and maximum blob counts per block as well as blob fee adjustment. With directly defined configuration, clients can avoid the complexity of exchanging this information via Engine API.
 
 <InfoBanner>
-To learn more about how Pectra affects you specifically as an Ethereum user, developer or validator, look into [Pectra FAQ](https://epf.wiki/#/wiki/pectra-faq).
+To learn more about how Pectra affects you specifically as an Ethereum user, developer or validator, look into <a href="https://epf.wiki/#/wiki/pectra-faq">Pectra FAQ</a>.
 </InfoBanner>
 
 ## Does this upgrade affect all Ethereum nodes and validators? {#client-impact}
