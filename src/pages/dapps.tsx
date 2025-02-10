@@ -1,4 +1,5 @@
 import React, {
+  BaseHTMLAttributes,
   type ComponentPropsWithRef,
   ReactNode,
   useEffect,
@@ -9,23 +10,10 @@ import { type GetStaticProps } from "next"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import {
-  Badge,
-  Box,
-  Button,
-  type ButtonProps,
-  Flex,
-  type FlexProps,
-  Heading,
-  type HeadingProps,
-  SimpleGrid,
-  useToken,
-} from "@chakra-ui/react"
 
 import type { BasePageProps, ChildOnlyProp, Lang } from "@/lib/types"
 
 import BoxGrid from "@/components/BoxGrid"
-import ButtonLink from "@/components/Buttons/ButtonLink"
 import Callout from "@/components/Callout"
 import CalloutBanner from "@/components/CalloutBanner"
 import Card from "@/components/Card"
@@ -33,12 +21,9 @@ import DocLink from "@/components/DocLink"
 import Emoji from "@/components/Emoji"
 import FeedbackCard from "@/components/FeedbackCard"
 import GhostCard from "@/components/GhostCard"
-import { Image } from "@/components/Image"
+import { TwImage } from "@/components/Image"
 import InfoBanner from "@/components/InfoBanner"
-import InlineLink, { BaseLink } from "@/components/Link"
 import MainArticle from "@/components/MainArticle"
-import OldHeading from "@/components/OldHeading"
-import Text from "@/components/OldText"
 import PageHero from "@/components/PageHero"
 import PageMetadata from "@/components/PageMetadata"
 import ProductCard from "@/components/ProductCard"
@@ -46,8 +31,13 @@ import ProductListComponent, {
   type ProductListProps,
 } from "@/components/ProductList"
 import Translation from "@/components/Translation"
+import { Button, ButtonLink, ButtonProps } from "@/components/ui/buttons/Button"
 import { Divider } from "@/components/ui/divider"
+import { Flex, FlexProps } from "@/components/ui/flex"
+import InlineLink, { BaseLink } from "@/components/ui/Link"
+import { Tag } from "@/components/ui/tag"
 
+import { cn } from "@/lib/utils/cn"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { trackCustomEvent } from "@/lib/utils/matomo"
@@ -66,7 +56,6 @@ import balancer from "@/public/images/dapps/balancer.png"
 import brave from "@/public/images/dapps/brave.png"
 import compound from "@/public/images/dapps/compound.png"
 import convex from "@/public/images/dapps/convex.png"
-import crackAndStack from "@/public/images/dapps/crackandstack.png"
 import cryptopunks from "@/public/images/dapps/cryptopunks.png"
 import cryptovoxels from "@/public/images/dapps/cryptovoxels.png"
 import curve from "@/public/images/dapps/curve.png"
@@ -126,26 +115,20 @@ import wallet from "@/public/images/wallet.png" // width=300
 
 const Page = (props: ChildOnlyProp & FlexProps) => (
   <Flex
-    as={MainArticle}
-    direction="column"
-    align="center"
-    mx="auto"
-    w="full"
-    {...props}
-  />
+    asChild
+    className={cn("mx-auto w-full flex-col items-center", props.className)}
+  >
+    <MainArticle {...props} />
+  </Flex>
 )
 
 const Content = (props: ChildOnlyProp) => (
-  <Box py={4} px={8} w="full" {...props} />
+  <div className="w-full px-8 py-4" {...props} />
 )
 
 const OptionContainer = (props: ChildOnlyProp) => (
   <Flex
-    direction={{ base: "column", lg: "row" }}
-    justify="center"
-    px={8}
-    mb={8}
-    w={{ base: "full", lg: "auto" }}
+    className="mb-8 w-full flex-col justify-center px-8 lg:w-auto lg:flex-row"
     {...props}
   />
 )
@@ -153,225 +136,135 @@ const OptionContainer = (props: ChildOnlyProp) => (
 const Option = (
   props: Pick<ButtonProps, "children" | "onClick"> & { isActive: boolean }
 ) => {
-  const tableBoxShadow = useToken("colors", "tableBoxShadow")
-
   return (
     <Button
       variant="outline"
-      display="flex"
-      alignItems="center"
-      justifyContent={{ base: "center", lg: "flex-start" }}
-      boxShadow={props.isActive ? tableBoxShadow : `none`}
-      color={props.isActive ? "primary.base" : "text"}
-      borderColor={props.isActive ? "primary.base" : "text"}
-      borderRadius="2rem"
-      height="auto"
-      w={{ base: "full", lg: "auto" }}
-      my={2}
-      mx={{ base: 0, lg: 2 }}
-      py={4}
-      px={6}
-      transition="none"
-      _hover={{
-        color: "primary.base",
-        borderColor: "primary.base",
-      }}
-      _active={{ bg: "transparent" }}
+      className={cn(
+        `my-2 flex w-full items-center justify-center rounded-4xl border px-6 py-4 transition-none lg:mx-2 lg:w-auto lg:justify-start ${
+          props.isActive
+            ? "border-primary text-primary shadow-table-box"
+            : "border-body text-body"
+        } hover:border-primary hover:text-primary active:bg-transparent`
+      )}
       {...props}
     />
   )
 }
 
 const OptionText = (props: ChildOnlyProp) => (
-  <Text
-    as="span"
-    fontSize={{ base: "md", md: "2xl" }}
-    textAlign="center"
-    fontWeight={{ base: "semibold", md: "normal" }}
-    lineHeight="100%"
+  <span
+    className="text-center text-md font-semibold md:text-2xl md:font-normal"
     {...props}
   />
 )
 
 const ButtonPrimary = (props: Pick<ButtonProps, "children" | "onClick">) => (
-  <Button py={2} px={3} borderRadius="0.25em" {...props} />
+  <Button {...props} />
 )
 
 const ButtonSecondary = (props: Pick<ButtonProps, "children" | "onClick">) => (
-  <Button variant="outline" py={2} px={3} borderRadius="0.25em" {...props} />
+  <Button variant="outline" {...props} />
 )
 
 const ImageContainer = (props: Pick<FlexProps, "children" | "id">) => (
-  <Flex justify="center" {...props} />
+  <Flex className="justify-center" {...props} />
 )
 
 const Subtitle = (props: ChildOnlyProp) => (
-  <Text
-    fontSize={{ base: "xl", lg: "2xl" }}
-    lineHeight="140%"
-    color="text200"
-    mt={4}
+  <p
+    className="mb-6 mt-4 text-xl leading-xs text-body-medium lg:text-2xl"
     {...props}
   />
 )
 
 const Row = (props: ChildOnlyProp) => (
-  <Flex
-    w="full"
-    direction={{ base: "column", lg: "row" }}
-    align="flex-start"
-    {...props}
-  />
+  <Flex className="w-full flex-col items-start lg:flex-row" {...props} />
 )
 
 const IntroRow = (props: ChildOnlyProp) => (
   <Flex
-    w="full"
-    direction={{ base: "column", lg: "row" }}
-    align="flex-start"
-    bg="background.base"
-    p={8}
-    borderRadius="32px"
+    className="w-full flex-col items-start rounded-3xl bg-background p-8 lg:flex-row"
     {...props}
   />
 )
 
 const TwoColumnContent = (props: ChildOnlyProp) => (
   <Flex
-    w="full"
-    direction={{ base: "column", lg: "row" }}
-    align="flex-start"
-    me={{ lg: 8 }}
+    className="w-full flex-col items-start lg:me-8 lg:flex-row"
     {...props}
   />
 )
 
 const StyledH2 = (props: ChildOnlyProp) => (
-  <OldHeading
-    fontSize="2xl"
-    lineHeight="22px"
-    letterSpacing={0}
-    mt={2}
+  <h2 className="mb-8 mt-2 text-2xl" {...props} />
+)
+
+const H2 = (props: BaseHTMLAttributes<HTMLHeadingElement>) => (
+  <h2
+    className={cn(
+      "mb-8 mt-12 text-2xl font-semibold md:text-3xl",
+      props.className
+    )}
     {...props}
   />
 )
 
-const H2 = (props: HeadingProps) => (
-  <Heading
-    mt={12}
-    mb={8}
-    fontSize={{ base: "2xl", md: "2rem" }}
-    fontWeight="semibold"
-    lineHeight={1.4}
-    {...props}
-  />
-)
-
-const H3 = (props: HeadingProps) => (
-  <OldHeading
-    as="h3"
-    fontSize={{ base: "xl", md: "2xl" }}
-    fontWeight="semibold"
-    lineHeight={1.4}
-    {...props}
-  />
+const H3 = (props: BaseHTMLAttributes<HTMLHeadingElement>) => (
+  <h3 className="mb-4 mt-8 text-xl font-semibold md:text-2xl" {...props} />
 )
 
 const StyledH3 = (props: ChildOnlyProp) => (
-  <Heading
-    as="h3"
-    lineHeight={1.4}
-    fontSize="xl"
-    fontWeight="bold"
-    mb={2}
-    mt={6}
-    sx={{
-      a: {
-        dispalay: "none",
-      },
-    }}
-    {...props}
-  />
+  <h3 className="mb-2 mt-6 text-xl font-bold" {...props} />
 )
 
 const StyledInfoBanner = (props: ComponentPropsWithRef<typeof InfoBanner>) => (
-  <InfoBanner w={{ lg: "50%" }} {...props} />
+  <InfoBanner className="lg:w-1/2" {...props} />
 )
 
 const Column = (props: ChildOnlyProp) => (
-  <Box flex="1 1 75%" mb={6} me={{ lg: 8 }} {...props} />
+  <div className="mb-6 flex-[1_1_75%] lg:me-8" {...props} />
 )
 
 const FullWidthContainer = (
   props: ChildOnlyProp & { ref: React.RefObject<HTMLDivElement> }
 ) => (
   <Page
-    m={0}
-    mb={16}
-    pt={16}
-    pb={8}
-    borderTop="1px solid"
-    borderColor="border"
-    bg="ednBackground"
+    className="m-0 mb-16 border-t bg-background-highlight pb-8 pt-16"
     {...props}
   />
 )
 
 const CardContainer = (props: ChildOnlyProp) => (
-  <SimpleGrid gap={4} columns={[1, null, 2]} {...props} />
+  <div className="grid grid-cols-1 gap-4 md:grid-cols-2" {...props} />
 )
 
 const StepBoxContainer = (props: ChildOnlyProp) => (
   <Flex
-    flexWrap={{ base: "wrap", lg: "nowrap" }}
-    w="full"
-    my={4}
-    mb={16}
-    mx={0}
+    className="mx-0 my-4 mb-16 w-full flex-wrap lg:flex-nowrap"
     {...props}
   />
 )
 
 const StepBox = (props: ComponentPropsWithRef<typeof BaseLink>) => (
   <BaseLink
-    border="1px solid"
-    borderColor="border"
-    pt={0}
-    pb={{ base: 8, md: 0 }}
-    px={8}
-    display="flex"
-    flexDirection={{ base: "column", md: "row" }}
-    justifyContent="space-between"
-    alignItems={{ base: "flex-start", md: "center" }}
-    color="text"
-    textDecor="none"
-    w="full"
-    transition="transform 0.2s"
-    _hover={{
-      bg: "ednBackground",
-      transform: "scale(1.05)",
-    }}
+    className="flex w-full flex-col items-start justify-between border px-8 pb-8 pt-0 text-body no-underline transition-transform duration-200 hover:scale-105 hover:bg-background-highlight md:flex-row md:items-center md:pb-0"
     {...props}
   />
 )
 
 const CenterText = (props: ChildOnlyProp) => (
-  <Text
-    textAlign="center"
-    maxW="800px"
-    mt={{ base: "auto", lg: 0 }}
-    mx={{ base: 6, lg: 0 }}
-    mb={4}
+  <p
+    className="mx-6 mb-4 mt-auto max-w-[800px] text-center lg:mx-0 lg:mt-0"
     {...props}
   />
 )
 
 const LeftColumn = (props: ChildOnlyProp) => (
-  <Box w="full" m={{ base: "auto 0", lg: 0 }} me={{ lg: 8 }} {...props} />
+  <div className="m-auto w-full lg:m-0 lg:me-8" {...props} />
 )
 
 const RightColumn = (props: ChildOnlyProp) => (
-  <Box w="full" m={{ base: "auto 0", lg: 0 }} ms={{ lg: 8 }} {...props} />
+  <div className="m-auto w-full lg:m-0 lg:ms-8" {...props} />
 )
 
 const StyledCallout = (props: ComponentPropsWithRef<typeof Callout>) => (
@@ -382,11 +275,14 @@ const StyledCallout = (props: ComponentPropsWithRef<typeof Callout>) => (
 )
 
 const StyledCardGrid = (props: ChildOnlyProp) => (
-  <SimpleGrid gap={8} minChildWidth="min(100%, 280px)" my={16} {...props} />
+  <div
+    className="my-16 grid grid-cols-[repeat(auto-fit,minmax(min(100%,280px),1fr))] gap-8"
+    {...props}
+  />
 )
 
 const MoreButtonContainer = (props: ChildOnlyProp) => (
-  <Flex justify="center" mt={12} mb={4} {...props} />
+  <Flex className="mb-4 mt-12 justify-center" {...props} />
 )
 
 const ProductList = (props: Omit<ProductListProps, "actionLabel">) => {
@@ -1087,13 +983,6 @@ const DappsPage = () => {
       image: darkforest,
       alt: t("page-dapps-dark-forest-logo-alt"),
     },
-    {
-      title: "Crack & Stack",
-      description: t("page-dapps-dapp-description-crack-and-stack"),
-      link: "https://crackandstack.com/",
-      image: crackAndStack,
-      alt: t("page-dapps-crack-and-stack-logo-alt"),
-    },
   ]
 
   const social = [
@@ -1271,7 +1160,7 @@ const DappsPage = () => {
       alt: t("page-dapps-uniswap-logo-alt"),
       background: "#212f46",
       type: CategoryType.FINANCE,
-      pillColor: "tagMint",
+      pillColor: "success" as const,
     },
     {
       name: "OpenSea",
@@ -1281,7 +1170,7 @@ const DappsPage = () => {
       alt: t("page-dapps-opensea-logo-alt"),
       background: "#181b21",
       type: CategoryType.COLLECTIBLES,
-      pillColor: "tagBlue",
+      pillColor: "tag" as const,
     },
     {
       name: "Gods Unchained",
@@ -1291,7 +1180,7 @@ const DappsPage = () => {
       alt: t("page-dapps-gods-unchained-logo-alt"),
       background: "#111c25",
       type: CategoryType.GAMING,
-      pillColor: "tagOrange",
+      pillColor: "warning" as const,
     },
     {
       name: "Ethereum Name Service",
@@ -1301,7 +1190,7 @@ const DappsPage = () => {
       alt: t("page-dapps-ens-logo-alt"),
       background: "#fff",
       type: CategoryType.SOCIAL,
-      pillColor: "tagMint",
+      pillColor: "success" as const,
     },
   ]
 
@@ -1344,19 +1233,21 @@ const DappsPage = () => {
       <Divider />
       <Content>
         <StyledH2>{t("common:get-started")}</StyledH2>
-        <Text>
+        <p className="mb-6">
           <Translation id="page-dapps:page-dapps-get-started-subtitle" />
-        </Text>
+        </p>
         <Row>
           <StepBoxContainer>
             <StepBox href="/get-eth/">
-              <Box>
+              <div>
                 <StyledH3>
                   {/* TODO: Use CSS counter for intl-friendly numbering  */}
                   1. {t("page-wallets-get-some")}
                 </StyledH3>
-                <Text>{t("page-dapps-get-some-eth-description")}</Text>
-              </Box>
+                <p className="mb-6">
+                  {t("page-dapps-get-some-eth-description")}
+                </p>
+              </div>
               <ButtonSecondary
                 onClick={() =>
                   trackCustomEvent({
@@ -1370,10 +1261,12 @@ const DappsPage = () => {
               </ButtonSecondary>
             </StepBox>
             <StepBox href="/wallets/find-wallet/">
-              <Box>
+              <div>
                 <StyledH3>2. {t("page-dapps-set-up-a-wallet-title")}</StyledH3>
-                <Text>{t("page-dapps-set-up-a-wallet-description")}</Text>
-              </Box>
+                <p className="mb-6">
+                  {t("page-dapps-set-up-a-wallet-description")}
+                </p>
+              </div>
               <ButtonSecondary
                 onClick={() =>
                   trackCustomEvent({
@@ -1387,10 +1280,10 @@ const DappsPage = () => {
               </ButtonSecondary>
             </StepBox>
             <StepBox href="#explore">
-              <Box>
+              <div>
                 <StyledH3>3. {t("page-dapps-ready-title")}</StyledH3>
-                <Text>{t("page-dapps-ready-description")}</Text>
-              </Box>
+                <p className="mb-6">{t("page-dapps-ready-description")}</p>
+              </div>
               <ButtonPrimary
                 onClick={() =>
                   trackCustomEvent({
@@ -1408,7 +1301,7 @@ const DappsPage = () => {
         <H3 id="beginner">
           {t("page-dapps-beginner-friendly-header")} <Emoji text=":+1:" />
         </H3>
-        <Text>{t("page-dapps-beginner-friendly-description")}</Text>
+        <p className="mb-6">{t("page-dapps-beginner-friendly-description")}</p>
         <StyledCardGrid>
           {editorChoices.map((choice, idx) => (
             <ProductCard
@@ -1420,9 +1313,9 @@ const DappsPage = () => {
               image={choice.image}
               name={choice.name}
             >
-              <Badge size="sm" background={choice.pillColor}>
+              <Tag variant="solid" status={choice.pillColor}>
                 {choice.type}
-              </Badge>
+              </Tag>
             </ProductCard>
           ))}
         </StyledCardGrid>
@@ -1554,16 +1447,16 @@ const DappsPage = () => {
                 />
               </RightColumn>
             </TwoColumnContent>
-            <Box py={4} w="full">
-              <Text m={0} fontWeight="bold">
+            <div className="w-full py-4">
+              <p className="m-0 font-bold">
                 {t("page-dapps:page-dapps-explore-title")}
-              </Text>
-              <Text m={0}>
+              </p>
+              <p className="m-0">
                 <InlineLink href="https://www.ethereum-ecosystem.com/apps">
                   {t("page-dapps:page-dapps-explore")}
                 </InlineLink>
-              </Text>
-            </Box>
+              </p>
+            </div>
             <CalloutBanner
               className="m-0 mx-0 mt-32 lg:mb-16"
               titleKey={"page-dapps:page-dapps-wallet-callout-title"}
@@ -1574,11 +1467,11 @@ const DappsPage = () => {
               imageWidth={300}
               alt={t("page-dapps-wallet-callout-image-alt")}
             >
-              <Box>
+              <div>
                 <ButtonLink href="/wallets/find-wallet/">
                   {t("page-dapps-wallet-callout-button")}
                 </ButtonLink>
-              </Box>
+              </div>
             </CalloutBanner>
           </Content>
         )}
@@ -1795,28 +1688,30 @@ const DappsPage = () => {
         )}
         {selectedCategory !== CategoryType.FINANCE && (
           <Content>
-            <Text m={0} fontWeight="bold">
+            <p className="m-0 font-bold">
               {t("page-dapps:page-dapps-explore-title")}
-            </Text>
-            <Text m={0}>
+            </p>
+            <p className="m-0">
               <InlineLink href="https://www.ethereum-ecosystem.com/apps">
                 {t("page-dapps:page-dapps-explore")}
               </InlineLink>
-            </Text>
+            </p>
           </Content>
         )}
         {/* General content for all categories */}
         <Content>
           <Divider />
           {categories[selectedCategory].benefits && (
-            <Box mt={12}>
+            <div className="mt-12">
               <H2>
                 {t("page-dapps-magic-title-1")}{" "}
                 <Emoji className="text-[2rem]" text=":sparkles:" />{" "}
                 {t("page-dapps-magic-title-2")}{" "}
                 {categories[selectedCategory].benefitsTitle}
               </H2>
-              <Text>{categories[selectedCategory].benefitsDescription}</Text>
+              <p className="mb-6">
+                {categories[selectedCategory].benefitsDescription}
+              </p>
               <CardContainer>
                 {(categories[selectedCategory].benefits || []).map(
                   (art, idx) => (
@@ -1851,37 +1746,25 @@ const DappsPage = () => {
                   </ButtonLink>
                 </MoreButtonContainer>
               )}
-            </Box>
+            </div>
           )}
         </Content>
       </FullWidthContainer>
       <Content>
         <ImageContainer id="what-are-dapps">
           <GhostCard className="mt-2 flex items-center">
-            <Image
-              bgSize="cover"
-              bgRepeat="no-repeat"
-              alignSelf="center"
-              width={300} // 300px denoted in graphql
-              // w="full" // ?
-              // minW="240px" // ?
-              // maxW="300px" // ?
-              my="8"
-              mx={{ base: 0, sm: "8", md: "24" }}
+            <TwImage
+              className="mx-0 my-8 w-[300px] self-center bg-cover bg-no-repeat sm:mx-8 md:mx-24"
               src={magicians}
               alt={t("page-dapps-magician-img-alt")}
             />
           </GhostCard>
         </ImageContainer>
-        <Flex
-          direction="column"
-          align={{ base: "flex-start", sm: "center" }}
-          mt={12}
-        >
+        <Flex className="mt-12 flex-col items-start sm:items-center">
           <H2>{t("page-dapps-magic-behind-dapps-title")}</H2>
-          <Text textAlign={{ base: "left", sm: "center" }} maxW="800px" mb={4}>
+          <p className="mb-4 max-w-[800px] text-left sm:text-center">
             {t("page-dapps-magic-behind-dapps-description")}
-          </Text>
+          </p>
           <InlineLink href="/what-is-ethereum/">
             {t("page-dapps-magic-behind-dapps-link")}
           </InlineLink>
@@ -1890,11 +1773,11 @@ const DappsPage = () => {
         <Row>
           <LeftColumn>
             <H2>{t("page-dapps-how-dapps-work-title")}</H2>
-            <Text>
+            <p className="mb-6">
               <Translation id="page-dapps:page-dapps-how-dapps-work-p1" />
-            </Text>
-            <Text>{t("page-dapps-how-dapps-work-p2")}</Text>
-            <Text>{t("page-dapps-how-dapps-work-p3")}</Text>
+            </p>
+            <p className="mb-6">{t("page-dapps-how-dapps-work-p2")}</p>
+            <p className="mb-6">{t("page-dapps-how-dapps-work-p3")}</p>
             <DocLink href="/developers/docs/dapps/">
               {t("page-dapps-docklink-dapps")}
             </DocLink>
@@ -1909,11 +1792,11 @@ const DappsPage = () => {
               image={developers}
               alt={t("page-dapps-learn-callout-image-alt")}
             >
-              <Box>
+              <div>
                 <ButtonLink href="/developers/">
                   {t("page-dapps-learn-callout-button")}
                 </ButtonLink>
-              </Box>
+              </div>
             </StyledCallout>
           </RightColumn>
         </Row>

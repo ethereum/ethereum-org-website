@@ -125,7 +125,7 @@ export const getStaticProps = (async ({ locale }) => {
     EURS: { type: FIAT, url: "https://eurs.stasis.net/" },
     USDK: { type: FIAT, url: "https://www.oklink.com/usdk" },
     MUSD: { type: CRYPTO, url: "https://mstable.org/" },
-    USDX: { type: CRYPTO, url: "https://usdx.cash/usdx-stablecoin" },
+    USDX: { type: CRYPTO, url: "https://usdx.money/" },
     GUSD: { type: FIAT, url: "https://gemini.com/dollar" },
     SAI: { type: CRYPTO, url: "https://makerdao.com/en/whitepaper/sai/" },
     DUSD: { type: CRYPTO, url: "https://dusd.finance/" },
@@ -546,7 +546,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
                 <MdHelpOutline className="ms-2 fill-body" size={16} />
               </Tooltip>
             </H3>
-            <InfoBanner emoji="⚠️" isWarning mb="4">
+            <InfoBanner className="mb-4" emoji="⚠️" isWarning>
               {t("page-stablecoins-algorithmic-disclaimer")}
             </InfoBanner>
             <p className="mb-6">

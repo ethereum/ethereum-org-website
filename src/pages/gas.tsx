@@ -38,9 +38,9 @@ import OldHeading from "@/components/OldHeading"
 import Text from "@/components/OldText"
 import PageHero from "@/components/PageHero"
 import PageMetadata from "@/components/PageMetadata"
-import Pill from "@/components/Pill"
 import Translation from "@/components/Translation"
 import { Divider } from "@/components/ui/divider"
+import { Tag } from "@/components/ui/tag"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
@@ -179,7 +179,7 @@ const GasPage = () => {
           w="full"
         >
           <Box flex="60%" w="full" me={{ base: "auto", lg: 2 }}>
-            <InfoBanner mb={8} title={t("page-gas-summary-title")}>
+            <InfoBanner className="mb-8" title={t("page-gas-summary-title")}>
               <UnorderedList>
                 <ListItem>{t("page-gas-summary-item-1")}</ListItem>
                 <ListItem>{t("page-gas-summary-item-2")}</ListItem>
@@ -315,9 +315,9 @@ const GasPage = () => {
             <Flex alignItems="flex-start">
               <H2 mt={0}>{t("page-gas-how-is-gas-calculated-header")}</H2>
 
-              <Pill mt={1.5} ms={4} background="warning">
+              <Tag status="warning" className="ms-4 mt-1.5">
                 {t("page-gas-advanced")}
-              </Pill>
+              </Tag>
             </Flex>
             <Text>{t("page-gas-how-is-gas-calculated-text-1")}</Text>
             <UnorderedList ms={6} spacing={3}>

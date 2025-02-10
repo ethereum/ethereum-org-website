@@ -29,7 +29,7 @@ const buttonVariants = cva(
     variants: {
       variant: {
         solid: cn(
-          "text-white bg-primary-action !border-transparent",
+          "text-white bg-primary-action border-transparent",
           "hover:!text-white hover:bg-primary-action-hover", // Hover
           "active:bg-primary-action-hover", // Active
           "disabled:bg-disabled disabled:text-background" // Disabled
