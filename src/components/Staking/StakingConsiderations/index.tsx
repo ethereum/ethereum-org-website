@@ -10,6 +10,7 @@ import Translation from "@/components/Translation"
 import { Flex, VStack } from "@/components/ui/flex"
 import { List, ListItem } from "@/components/ui/list"
 
+import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import { useStakingConsiderations } from "@/hooks/useStakingConsiderations"
@@ -35,7 +36,7 @@ const IndicatorGroup = ({
     return <WarningProductGlyphIcon style={style} />
   }
   return (
-    <VStack className="flex-1 p-2">
+    <VStack className="flex-1 gap-2">
       <IndicatorIcon style={styleObj} />
       <p className="max-w-[10rem] text-center text-xs">
         <Translation id={label} />
@@ -63,12 +64,6 @@ const StakingConsiderations = ({ page }: StakingConsiderationsProps) => {
     activeIndex,
   } = useStakingConsiderations({ page })
 
-  const activeStyles = {
-    bg: "background.highlight",
-    color: "body.base",
-    transition: "background 0.5s, color 0.5s",
-  }
-
   return (
     <Flex className="flex-col md:flex-row">
       <ButtonDropdown list={dropdownLinks} className="mb-4 md:hidden" />
@@ -84,10 +79,12 @@ const StakingConsiderations = ({ page }: StakingConsiderationsProps) => {
                   handleSelection(idx)
                   trackCustomEvent(matomo)
                 }}
-                className={`relative mb-0 table h-8 w-full cursor-pointer p-3 py-1 hover:[${activeStyles}]`}
-                {...(idx === activeIndex
-                  ? activeStyles
-                  : { color: "primary.base" })}
+                className={cn(
+                  "transition-background relative mb-0 table h-8 w-full cursor-pointer p-3 duration-500 hover:bg-background-highlight hover:text-body",
+                  idx === activeIndex
+                    ? "bg-background-highlight text-body"
+                    : "text-primary"
+                )}
               >
                 {title}
               </ListItem>
@@ -95,9 +92,9 @@ const StakingConsiderations = ({ page }: StakingConsiderationsProps) => {
           </List>
         )}
       </div>
-      <Flex className="felx-col bg-highlight flex-2 min-h-[410px] items-center p-6">
+      <Flex className="min-h-[410px] flex-[2] flex-col items-center bg-background-highlight p-6">
         <StyledSvg />
-        <h3 className="mt-10 text-[27px] font-bold leading-[1.4]">{title}</h3>
+        <h3 className="mt-10 text-2xl font-bold leading-[1.4]">{title}</h3>
         <p>{description}</p>
         <Flex className="mt-auto justify-center gap-8">
           {!!valid && (
