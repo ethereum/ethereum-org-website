@@ -27,6 +27,7 @@ const ListenToPlayer = ({ slug }) => {
       html5: true,
       onload: () => {
         setSound(audioPlayer)
+        setTimeRemaining(audioPlayer.duration())
       },
       onplay: () => setIsPlaying(true),
       onpause: () => setIsPlaying(false),
@@ -83,6 +84,7 @@ const ListenToPlayer = ({ slug }) => {
       sound.pause()
     } else {
       sound.play()
+      setTimeRemaining(sound.duration() - sound.seek())
       setStartedPlaying(true)
       setIsPlaying(true)
       setShowWidget(true)
