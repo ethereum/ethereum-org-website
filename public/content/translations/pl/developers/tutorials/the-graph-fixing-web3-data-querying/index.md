@@ -196,7 +196,7 @@ Następnie tworzymy nową jednostkę zakładu. Identyfikatorem dla tego będzie 
 
 Na koniec możemy zaktualizować podmiot Player, który będzie zawierał wszystkie dane. Tablice nie mogą być wypychane bezpośrednio, ale muszą zostać zaktualizowane, jak pokazano tutaj. Używamy identyfikatora, aby odnieść się do zakładu. A .save() jest wymagane na końcu do przechowywania obiektu.
 
-Pełną dokumentację można zobaczyć tutaj: https://thegraph.com/docs/define-a-subgraph#writing-mappings. Możesz także dodać dane wyjściowe rejestrowania do pliku mapowania, zobacz [tutaj](https://thegraph.com/docs/en/subgraphs/developing/creating/graph-ts/api/#api-reference).
+Pełną dokumentację można zobaczyć tutaj: https://thegraph.com/docs/en/subgraphs/developing/creating/assemblyscript-mappings/#writing-mappings. Możesz także dodać dane wyjściowe rejestrowania do pliku mapowania, zobacz [tutaj](https://thegraph.com/docs/en/subgraphs/developing/creating/graph-ts/api/#api-reference).
 
 ```typescript
 import { Bet, Player } from "../generated/schema"

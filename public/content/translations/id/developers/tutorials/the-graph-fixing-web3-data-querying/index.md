@@ -196,7 +196,7 @@ Lalu kita membuat entitas Bet baru. The id for this will be `event.transaction.h
 
 Lastly we can update the Player entity with all the data. Array tidak boleh didorong secara langsung, tapi perlu diperbarui seperti yang ditunjukkan di sini. Kita menggunakan id untuk merujuk pada taruhannya. And `.save()` is required at the end to store an entity.
 
-Dokumentasi lengkapnya bisa dilihat di sini: https://thegraph.com/docs/define-a-subgraph#writing-mappings. Anda juga bisa menambahkan output yang membuat log ke file pemetaan, lihat [di sini](https://thegraph.com/docs/en/subgraphs/developing/creating/graph-ts/api/#api-reference).
+Dokumentasi lengkapnya bisa dilihat di sini: https://thegraph.com/docs/en/subgraphs/developing/creating/assemblyscript-mappings/#writing-mappings. Anda juga bisa menambahkan output yang membuat log ke file pemetaan, lihat [di sini](https://thegraph.com/docs/en/subgraphs/developing/creating/graph-ts/api/#api-reference).
 
 ```typescript
 import { Bet, Player } from "../generated/schema"
