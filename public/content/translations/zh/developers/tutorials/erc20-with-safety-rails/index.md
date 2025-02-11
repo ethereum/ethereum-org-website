@@ -24,7 +24,7 @@ published: 2022-08-15
 
 ## 创建 ERC-20 合约 {#creating-an-erc-20-contract}
 
-在添加安全保障功能之前，我们首先需要 ERC-20 合约。 在这篇文章中，我们将使用 [the OpenZeppelin 合约向导](https://docs.openzeppelin.com/contracts/4.x/wizard)。 在另一个浏览器中将其打开，然后遵循以下说明：
+在添加安全保障功能之前，我们首先需要 ERC-20 合约。 在这篇文章中，我们将使用 [the OpenZeppelin 合约向导](https://docs.openzeppelin.com/contracts/5.x/wizard)。 在另一个浏览器中将其打开，然后遵循以下说明：
 
 1. 选择 **ERC-20**。
 2. 请输入以下设置：
