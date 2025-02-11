@@ -258,6 +258,6 @@ Davantage qu'un apprenant visuel ? Regardez Finematics expliquer les rollups opt
 - [Comment fonctionnent les rollups optimistes (Le guide complet)](https://www.alchemy.com/overviews/optimistic-rollups)
 - [Qu'est-ce qu'un rollup de blockchain ? Une introduction technique](https://www.ethereum-ecosystem.com/blog/what-is-a-blockchain-rollup-a-technical-introduction)
 - [Le guide essentiel pour Arbitrum](https://www.bankless.com/the-essential-guide-to-arbitrum)
-- [Comment fonctionne réellement le rollup d'Optimism ?](https://www.paradigm.xyz/2021/01/how-does-optimisms-rollup-really-work)
+- [Comment fonctionne réellement le rollup d'Optimism ?](https://www.paradigm.xyz/2021/01/how-does-optimism-s-rollup-really-work)
 - [OVM Deep Dive](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)
 - [Qu’est-ce que la machine virtuelle optimiste ?](https://www.alchemy.com/overviews/optimistic-virtual-machine)
