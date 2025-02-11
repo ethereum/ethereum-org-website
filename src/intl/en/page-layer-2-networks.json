@@ -61,5 +61,11 @@
     "page-layer-2-networks-market-share-description": "Total value locked in escrow contracts on Ethereum.",
     "page-layer-2-networks-avg-transaction-fee": "Avg. transaction fee",
     "page-layer-2-networks-transaction-fee": "Transaction fee",
-    "page-layer-2-networks-transaction-fee-description": "The average cost of transaction for transfers, swaps, minting and other activities."
+    "page-layer-2-networks-transaction-fee-description": "The average cost of transaction for transfers, swaps, minting and other activities.",
+    "page-layer-2-networks-transaction-see-networks": "See networks",
+    "page-layer-2-networks-n/a": "N/A",
+    "page-layer-2-networks-robust": "ROBUST",
+    "page-layer-2-networks-maturing": "MATURING",
+    "page-layer-2-networks-developing": "DEVELOPING",
+    "page-layer-2-networks-emerging": "EMERGING"
 }
