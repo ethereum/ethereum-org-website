@@ -61,7 +61,7 @@ export const useNetworkFilters = (): FilterOption[] => {
             return (
               <SwitchFilterInput
                 Icon={RobustIcon}
-                label="Robust"
+                label={t("page-layer-2-networks-robust-label")}
                 description={
                   <>
                     {t("page-layer-2-networks-robust-description-1")}

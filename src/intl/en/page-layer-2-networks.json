@@ -22,6 +22,8 @@
     "page-layer-2-networks-emerging-label": "Emerging",
     "page-layer-2-networks-emerging-description": "A centralized operator runs the network. The data is publicly visible on Ethereum to verify whether the operator is being honest.",
     "page-layer-2-networks-network-maturity": "Network maturity:",
+    "page-layer-2-networks-network-maturity-description": "Looks at the development stage, risks associated with using the network and ecosystem size of the network.",
+    "page-layer-2-networks-summary-metric": "This is a summary metric based on risk analysis done by",
     "page-layer-2-networks-no-results-title": "No results",
     "page-layer-2-networks-no-results-description": "There are no networks matching your criteria, try adding some filters",
     "page-layer-2-networks-reset-filters": "Reset filters",
@@ -53,5 +55,11 @@
     "page-layer-2-networks-robust-description-1": "Fully decentralized and secure network that cannot be tampered with or stopped by any individual or group, including its creators.",
     "page-layer-2-networks-robust-description-2": "This is a network that fulfills Ethereum's vision of decentralization.",
     "page-layer-2-networks-developing-description-1": "Single operator is running the network with public data visibility for transparency.",
-    "page-layer-2-networks-emerging-description-1": "Single operator is running the network in private and works towards transparency."
+    "page-layer-2-networks-emerging-description-1": "Single operator is running the network in private and works towards transparency.",
+    "page-layer-2-networks-networks-showing": "Networks showing",
+    "page-layer-2-networks-market-share": "Market share",
+    "page-layer-2-networks-market-share-description": "Total value locked in escrow contracts on Ethereum.",
+    "page-layer-2-networks-avg-transaction-fee": "Avg. transaction fee",
+    "page-layer-2-networks-transaction-fee": "Transaction fee",
+    "page-layer-2-networks-transaction-fee-description": "The average cost of transaction for transfers, swaps, minting and other activities."
 }
