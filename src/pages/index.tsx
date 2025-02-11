@@ -13,9 +13,6 @@ import type {
   RSSItem,
 } from "@/lib/types"
 
-import SvgButtonLink, {
-  type SvgButtonLinkProps,
-} from "@/components/Buttons/SvgButtonLink"
 import { ChevronNext } from "@/components/Chevron"
 import CodeModal from "@/components/CodeModal"
 import HomeHero from "@/components/Hero/HomeHero"
@@ -30,6 +27,9 @@ import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
 import { TranslatathonBanner } from "@/components/Translatathon/TranslatathonBanner"
 import { Button, ButtonLink } from "@/components/ui/buttons/Button"
+import SvgButtonLink, {
+  type SvgButtonLinkProps,
+} from "@/components/ui/buttons/SvgButtonLink"
 import {
   Card,
   CardBanner,

@@ -17,7 +17,6 @@ import {
 import type { BasePageProps, ChildOnlyProp, Lang } from "@/lib/types"
 
 import Breadcrumbs from "@/components/Breadcrumbs"
-import ButtonLink from "@/components/Buttons/ButtonLink"
 import Card from "@/components/Card"
 import Emoji from "@/components/Emoji"
 import FeedbackCard from "@/components/FeedbackCard"
@@ -31,6 +30,7 @@ import PageHero, {
 } from "@/components/PageHero"
 import PageMetadata from "@/components/PageMetadata"
 import Trilemma from "@/components/Trilemma"
+import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Divider } from "@/components/ui/divider"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"

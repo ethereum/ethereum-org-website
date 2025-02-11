@@ -3,7 +3,6 @@ import { IoChevronDownSharp, IoChevronUpSharp } from "react-icons/io5"
 
 import { Wallet } from "@/lib/types"
 
-import { ButtonLink } from "@/components/Buttons"
 import { SupportedLanguagesTooltip } from "@/components/FindWalletProductTable/SupportedLanguagesTooltip"
 import { DevicesIcon, LanguagesIcon } from "@/components/icons/wallets"
 import { TwImage } from "@/components/Image"
@@ -13,6 +12,8 @@ import { Tag } from "@/components/ui/tag"
 import { formatStringList, getWalletPersonas } from "@/lib/utils/wallets"
 
 import { ethereumNetworkData, layer2Data } from "@/data/networks/networks"
+
+import { ButtonLink } from "../ui/buttons/Button"
 
 interface WalletInfoProps {
   wallet: Wallet
@@ -184,8 +185,7 @@ const WalletInfo = ({ wallet, isExpanded }: WalletInfoProps) => {
           <ButtonLink
             href={wallet.url}
             variant="outline"
-            w={{ base: "full", sm: "auto" }}
-            isExternal
+            className="max-sm:w-full"
             size="sm"
             customEventOptions={{
               eventCategory: "WalletExternalLinkList",

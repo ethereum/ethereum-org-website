@@ -1,9 +1,10 @@
 import { MdInfoOutline } from "react-icons/md"
 
-import { ButtonLink } from "@/components/Buttons"
 import NetworkUsageChart from "@/components/Layer2NetworksTable/NetworkUsageChart"
 import InlineLink from "@/components/Link"
 import Tooltip from "@/components/Tooltip"
+
+import { ButtonLink } from "../ui/buttons/Button"
 
 const formatNumber = (num: number): string => {
   if (num >= 1e9) {

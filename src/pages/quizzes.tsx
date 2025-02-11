@@ -7,7 +7,6 @@ import { Box, Flex, Icon, Stack, Text } from "@chakra-ui/react"
 
 import { BasePageProps, Lang, QuizKey, QuizStatus } from "@/lib/types"
 
-import { ButtonLink } from "@/components/Buttons"
 import FeedbackCard from "@/components/FeedbackCard"
 import { HubHero } from "@/components/Hero"
 import MainArticle from "@/components/MainArticle"
@@ -17,6 +16,7 @@ import QuizzesList from "@/components/Quiz/QuizzesList"
 import QuizzesModal from "@/components/Quiz/QuizzesModal"
 import QuizzesStats from "@/components/Quiz/QuizzesStats"
 import { useLocalQuizData } from "@/components/Quiz/useLocalQuizData"
+import { ButtonLink } from "@/components/ui/buttons/Button"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"

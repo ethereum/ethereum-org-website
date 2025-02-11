@@ -1,5 +1,5 @@
-import { ButtonLink } from "@/components/Buttons"
 import { TwImage } from "@/components/Image"
+import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Center, Flex } from "@/components/ui/flex"
 import { LinkBox } from "@/components/ui/link-box"
 import { LinkOverlay } from "@/components/ui/link-box"
