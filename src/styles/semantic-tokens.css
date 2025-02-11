@@ -126,6 +126,8 @@
     --staking-blue-fill: #f1fcf5;
     --staking-red: #a0524c;
     --staking-red-fill: #f8fbf9;
+
+    --player-widget-shadow: 2px 2px 12px 1px rgba(52, 43, 64, 0.02), -16px 16px 12px -3px rgba(52, 43, 64, 0.02), -32px 32px 24px -6px rgba(52, 43, 64, 0.02), -40px 40px 40px -12px rgba(88, 55, 131, 0.04);
   }
 
   /* Dark mode token declarations */
@@ -224,5 +226,7 @@
     --staking-blue-fill: #2b352f;
     --staking-red: #d6bbb9;
     --staking-red-fill: #313432;
+
+    --player-widget-shadow: -2px 2px 12px 1px rgba(255, 255, 255, 0.04), -6px 6px 12px -3px rgba(255, 255, 255, 0.04), -12px 12px 24px -6px rgba(255, 255, 255, 0.04), -20px 20px 40px -12px rgba(255, 255, 255, 0.04);
   }
 }

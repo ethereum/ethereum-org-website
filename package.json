@@ -62,6 +62,7 @@
     "ethereum-blockies-base64": "^1.0.2",
     "framer-motion": "^10.13.0",
     "gray-matter": "^4.0.3",
+    "howler": "^2.2.4",
     "htmr": "^1.0.2",
     "i18next": "^23.6.0",
     "lodash.merge": "^4.6.2",
