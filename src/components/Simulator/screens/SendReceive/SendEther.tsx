@@ -61,7 +61,7 @@ export const SendEther = ({
         <p className="mb-4 text-xl font-bold md:mb-6 md:text-2xl">Send</p>
         <p className="md:mb-6">How much do you want to send?</p>
       </div>
-      <Flex className="gap-4 border-y border-background-highlight px-6 py-4 text-xs text-body-medium md:py-6">
+      <Flex className="justify-between gap-4 border-y border-background-highlight px-6 py-4 text-xs text-body-medium md:py-6">
         {/* Left side: Displayed send amount */}
         <NotificationPopover
           title="Example walkthrough"
@@ -70,7 +70,7 @@ export const SendEther = ({
         >
           <Flex
             className={cn(
-              "flex-1 font-bold",
+              "font-bold",
               chosenAmount > 0 ? "text-body" : "text-disabled"
             )}
           >
