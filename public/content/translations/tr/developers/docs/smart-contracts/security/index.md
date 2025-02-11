@@ -304,7 +304,7 @@ Burada, gelen `msg.sender.call.value` tarafından bırakılan gaz miktarı 40.00
 - `Victim` finally applies the results of the first transaction (and subsequent ones) to its state, so `Attacker`’s balance is set to 0
 ```
 
-Özetle, çağıranın bakiyesi fonksiyonun yürütülmesi tamamlanana kadar 0'a ayarlanmadığı için sonraki çağrılar başarılı olacak ve çağıranın bakiyesini birden fazla kez çekmesine olanak tanıyacaktır. Bu tür saldırılar, [2016 DAO hack](https://www.coindesk.com/learn/2016/06/25/understanding-the-dao-attack/) olayında olduğu gibi akıllı sözleşmenin fonlarını boşaltmak için kullanılabilir. Yeniden giriş saldırıları, [yeniden giriş suistimallerinin herkese açık listesi](https://github.com/pcaversaccio/reentrancy-attacks) içinde gösterildiği gibi bugün hala akıllı sözleşmeler için ciddi bir sorundur.
+Özetle, çağıranın bakiyesi fonksiyonun yürütülmesi tamamlanana kadar 0'a ayarlanmadığı için sonraki çağrılar başarılı olacak ve çağıranın bakiyesini birden fazla kez çekmesine olanak tanıyacaktır. Bu tür saldırılar, [2016 DAO hack](https://www.coindesk.com/learn/understanding-the-dao-attack) olayında olduğu gibi akıllı sözleşmenin fonlarını boşaltmak için kullanılabilir. Yeniden giriş saldırıları, [yeniden giriş suistimallerinin herkese açık listesi](https://github.com/pcaversaccio/reentrancy-attacks) içinde gösterildiği gibi bugün hala akıllı sözleşmeler için ciddi bir sorundur.
 
 ##### Yeniden giriş saldırılarını engelleme
 

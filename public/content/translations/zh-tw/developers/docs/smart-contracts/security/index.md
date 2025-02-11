@@ -304,7 +304,7 @@ contract Victim {
 - `Victim` finally applies the results of the first transaction (and subsequent ones) to its state, so `Attacker`’s balance is set to 0
 ```
 
-總起來說，因為調用者的餘額並非 0，直到函數執行結束前，後續的調用都能成功執行，並允許調用者多次提領餘額。 這類攻擊可以被用於將智慧型合約內的所有資金提領一空，如同 [2016 年的 DAO 駭客攻擊](https://www.coindesk.com/learn/2016/06/25/understanding-the-dao-attack/)。 就像[重入入侵公開清單](https://github.com/pcaversaccio/reentrancy-attacks)所示，如今重入攻擊仍是智慧型合約面臨的嚴重問題。
+總起來說，因為調用者的餘額並非 0，直到函數執行結束前，後續的調用都能成功執行，並允許調用者多次提領餘額。 這類攻擊可以被用於將智慧型合約內的所有資金提領一空，如同 [2016 年的 DAO 駭客攻擊](https://www.coindesk.com/learn/understanding-the-dao-attack)。 就像[重入入侵公開清單](https://github.com/pcaversaccio/reentrancy-attacks)所示，如今重入攻擊仍是智慧型合約面臨的嚴重問題。
 
 ##### 如何預防重入攻擊
 

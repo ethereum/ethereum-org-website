@@ -304,7 +304,7 @@ Ebben még nincs semmi rossz, viszont a `attacker` (támadó) szerződésben van
 - `Victim` finally applies the results of the first transaction (and subsequent ones) to its state, so `Attacker`’s balance is set to 0
 ```
 
-Összességében, mivel a meghívó egyenlege nem lesz 0 mindaddig, amíg a függvényvégrehajtás nem zárul le, a rákövetkező meghívások sikeresek lesznek, és megengedik a meghívónak, hogy kivegye az egyenlegét többször is. Ez a támadás alkalmas arra, hogy egy okosszerződés pénzeszközeit kifolyassák, ahogy az a [2016-os DAO hackelésnél](https://www.coindesk.com/learn/2016/06/25/understanding-the-dao-attack/) megtörtént. Az újrabelépéses támadás még mindig kritikus probléma az okosszerződéseknél, ahogy azt az [újrabelépéses támadások nyilvános listája](https://github.com/pcaversaccio/reentrancy-attacks) mutatja.
+Összességében, mivel a meghívó egyenlege nem lesz 0 mindaddig, amíg a függvényvégrehajtás nem zárul le, a rákövetkező meghívások sikeresek lesznek, és megengedik a meghívónak, hogy kivegye az egyenlegét többször is. Ez a támadás alkalmas arra, hogy egy okosszerződés pénzeszközeit kifolyassák, ahogy az a [2016-os DAO hackelésnél](https://www.coindesk.com/learn/understanding-the-dao-attack) megtörtént. Az újrabelépéses támadás még mindig kritikus probléma az okosszerződéseknél, ahogy azt az [újrabelépéses támadások nyilvános listája](https://github.com/pcaversaccio/reentrancy-attacks) mutatja.
 
 ##### Hogyan lehet megakadályozni egy újrabelépéses támadást
 

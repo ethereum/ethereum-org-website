@@ -301,7 +301,7 @@ Tidak ada yang salah di sini, kecuali bahwa `Attacker` memiliki fungsi lain yang
 - `Victim` finally applies the results of the first transaction (and subsequent ones) to its state, so `Attacker`’s balance is set to 0
 ```
 
-Ringkasnya adalah karena saldo pemanggil tidak ditetapkan ke 0 hingga selesainya eksekusi fungsi, pemanggilan berikutnya akan berhasil dan memungkinkan pemanggil menarik saldonya beberapa kali. Jenis serangan seperti ini dapat digunakan untuk menguras dana dari kontrak pintar, seperti yang terjadi dalam serangan [peretasan DAO 2016](https://www.coindesk.com/learn/2016/06/25/understanding-the-dao-attack/). Serangan reentrancy (masuk kembali) masih menjadi masalah kritis bagi kontrak pintar saat ini, seperti yang ditunjukkan oleh [daftar publik eksploit reentrancy](https://github.com/pcaversaccio/reentrancy-attacks).
+Ringkasnya adalah karena saldo pemanggil tidak ditetapkan ke 0 hingga selesainya eksekusi fungsi, pemanggilan berikutnya akan berhasil dan memungkinkan pemanggil menarik saldonya beberapa kali. Jenis serangan seperti ini dapat digunakan untuk menguras dana dari kontrak pintar, seperti yang terjadi dalam serangan [peretasan DAO 2016](https://www.coindesk.com/learn/understanding-the-dao-attack). Serangan reentrancy (masuk kembali) masih menjadi masalah kritis bagi kontrak pintar saat ini, seperti yang ditunjukkan oleh [daftar publik eksploit reentrancy](https://github.com/pcaversaccio/reentrancy-attacks).
 
 ##### Cara mencegah serangan reentrancy (masuk kembali)
 

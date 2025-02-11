@@ -304,7 +304,7 @@ Nortin dey wrong here, eksept dat `Attacka` get anoda funshon wey koll`withdraw(
 - `Victim` finally applies the results of the first transaction (and subsequent ones) to its state, so `Attacker`’s balance is set to 0
 ```
 
-Di summary bi sey bikos di kolla balans nor dey set to 0 ontil di funshon don run finish, invokashons wey follow go succeed and go allow di kolla to witdraw dia balana plenti taims. Dem fit yus dis kain attak take drain funds from di smart kontract, laik wetin hapun in di [2016 DAO hack](https://www.coindesk.com/learn/2016/06/25/understanding-the-dao-attack/). Reentrancy attaks still dey kritical issue for smart kontracts today as [di publik listings of reentrancy exploits](https://github.com/pcaversaccio/reentrancy-attacks) dey show.
+Di summary bi sey bikos di kolla balans nor dey set to 0 ontil di funshon don run finish, invokashons wey follow go succeed and go allow di kolla to witdraw dia balana plenti taims. Dem fit yus dis kain attak take drain funds from di smart kontract, laik wetin hapun in di [2016 DAO hack](https://www.coindesk.com/learn/understanding-the-dao-attack). Reentrancy attaks still dey kritical issue for smart kontracts today as [di publik listings of reentrancy exploits](https://github.com/pcaversaccio/reentrancy-attacks) dey show.
 
 ##### Hau yu fit privent reentrancy attaks
 

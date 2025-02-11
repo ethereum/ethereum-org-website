@@ -304,7 +304,7 @@ There’s nothing wrong here, except that `Attacker` has another function that c
 - `Victim` finally applies the results of the first transaction (and subsequent ones) to its state, so `Attacker`’s balance is set to 0
 ```
 
-The summary is that because the caller’s balance isn't set to 0 until the function execution completes, subsequent invocations will succeed and allow the caller to withdraw their balance multiple times. This kind of attack can be used to drain a smart contract of its funds, like what happened in the [2016 DAO hack](https://www.coindesk.com/learn/2016/06/25/understanding-the-dao-attack/). Reentrancy attacks are still a critical issue for smart contracts today as [public listings of reentrancy exploits](https://github.com/pcaversaccio/reentrancy-attacks) show.
+The summary is that because the caller’s balance isn't set to 0 until the function execution completes, subsequent invocations will succeed and allow the caller to withdraw their balance multiple times. This kind of attack can be used to drain a smart contract of its funds, like what happened in the [2016 DAO hack](https://www.coindesk.com/learn/understanding-the-dao-attack). Reentrancy attacks are still a critical issue for smart contracts today as [public listings of reentrancy exploits](https://github.com/pcaversaccio/reentrancy-attacks) show.
 
 ##### How to prevent reentrancy attacks
 

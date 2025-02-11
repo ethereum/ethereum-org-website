@@ -304,7 +304,7 @@ Hier ist nichts verkehrt, außer dass `Attacker` eine weitere Funktion hat, die 
 - `Victim` finally applies the results of the first transaction (and subsequent ones) to its state, so `Attacker`’s balance is set to 0
 ```
 
-Da das Guthaben des Aufrufers nicht auf 0 gesetzt wird, bevor die Funktion ausgeführt wurde, können nachfolgende Aufrufe erfolgreich sein und dem Aufrufer ermöglichen, sein Guthaben mehrmals abzuheben. Diese Art von Angriff kann genutzt werden, um einem Smart Contract das Kapital zu entziehen, wie es beim [2016 DAO-Hack](https://www.coindesk.com/learn/2016/06/25/understanding-the-dao-attack/) geschehen ist. Wiederholungsangriffe sind auch heute noch ein kritisches Thema für Smart Contracts, wie [öffentliche Auflistungen von Reentrancy-Exploits](https://github.com/pcaversaccio/reentrancy-attacks) zeigen.
+Da das Guthaben des Aufrufers nicht auf 0 gesetzt wird, bevor die Funktion ausgeführt wurde, können nachfolgende Aufrufe erfolgreich sein und dem Aufrufer ermöglichen, sein Guthaben mehrmals abzuheben. Diese Art von Angriff kann genutzt werden, um einem Smart Contract das Kapital zu entziehen, wie es beim [2016 DAO-Hack](https://www.coindesk.com/learn/understanding-the-dao-attack) geschehen ist. Wiederholungsangriffe sind auch heute noch ein kritisches Thema für Smart Contracts, wie [öffentliche Auflistungen von Reentrancy-Exploits](https://github.com/pcaversaccio/reentrancy-attacks) zeigen.
 
 ##### So verhindert man Wiederholungsangriffe
 

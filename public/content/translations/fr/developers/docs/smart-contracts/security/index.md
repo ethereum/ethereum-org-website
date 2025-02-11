@@ -304,7 +304,7 @@ Il n'y a rien de mal ici, excepté que l'`Attacker` a une autre fonction qui app
 - `Victim` applique enfin les résultats de la première transaction (et de celles subséquentes) à son état, donc le solde de `Attacker` est fixé à 0
 ```
 
-Le résumé est que, comme le solde de l'appelant n'est pas défini à 0 jusqu'à ce que l'exécution de la fonction soit terminée, les invocations suivantes réussiront et permettront à l'appelant de retirer son solde plusieurs fois. Ce type d'attaque peut être utilisé pour drainer un contrat intelligent de ses fonds, comme ce qui s'est passé dans le hack [DAO 2016](https://www.coindesk.com/learn/2016/06/25/understanding-the-dao-attack/). Les attaques par réentrance sont toujours un problème critique pour les contrats intelligents aujourd'hui, comme le montre [les listes publiques des exploits de réentrance](https://github.com/pcaversaccio/reentrancy-attacks).
+Le résumé est que, comme le solde de l'appelant n'est pas défini à 0 jusqu'à ce que l'exécution de la fonction soit terminée, les invocations suivantes réussiront et permettront à l'appelant de retirer son solde plusieurs fois. Ce type d'attaque peut être utilisé pour drainer un contrat intelligent de ses fonds, comme ce qui s'est passé dans le hack [DAO 2016](https://www.coindesk.com/learn/understanding-the-dao-attack). Les attaques par réentrance sont toujours un problème critique pour les contrats intelligents aujourd'hui, comme le montre [les listes publiques des exploits de réentrance](https://github.com/pcaversaccio/reentrancy-attacks).
 
 ##### Comment empêcher les attaques par réentrance
 

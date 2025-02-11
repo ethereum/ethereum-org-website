@@ -304,7 +304,7 @@ Er is hier niets aan de hand, behalve dat `Attacker` een andere functie heeft di
 - `Victim` finally applies the results of the first transaction (and subsequent ones) to its state, so `Attacker`’s balance is set to 0
 ```
 
-De conclusie is dat omdat het saldo van de oproeper niet op 0 wordt gezet totdat de uitvoering van de functie is voltooid, latere oproepen zullen slagen en de oproeper in staat stellen zijn/haar saldo meerdere keren op te nemen. Dit soort aanval kan gebruikt worden om middelen van een smart contract leeg te halen, zoals gebeurde in de [2016 DAO hack](https://www.coindesk.com/learn/2016/06/25/understanding-the-dao-attack/). Reentrancy-aanvallen zijn vandaag de dag nog steeds een kritiek probleem voor smart contracts, zoals blijkt uit [openbare lijsten van reentrancy-exploitaties](https://github.com/pcaversaccio/reentrancy-attacks).
+De conclusie is dat omdat het saldo van de oproeper niet op 0 wordt gezet totdat de uitvoering van de functie is voltooid, latere oproepen zullen slagen en de oproeper in staat stellen zijn/haar saldo meerdere keren op te nemen. Dit soort aanval kan gebruikt worden om middelen van een smart contract leeg te halen, zoals gebeurde in de [2016 DAO hack](https://www.coindesk.com/learn/understanding-the-dao-attack). Reentrancy-aanvallen zijn vandaag de dag nog steeds een kritiek probleem voor smart contracts, zoals blijkt uit [openbare lijsten van reentrancy-exploitaties](https://github.com/pcaversaccio/reentrancy-attacks).
 
 ##### Hoe reentrancy-aanvallen voorkomen
 

@@ -304,7 +304,7 @@ Não há nada de errado aqui, exceto que o `Attacker` tem outra função que cha
 - `Victim` finalmente aplica os resultados da primeira transação (e as subsequentes) ao seu estado, então o saldo do `Attacker` é definido para 0 (zero)
 ```
 
-O resumo é que, como o saldo do chamador não é definido como 0 até que a execução da função termine, as invocações subsequentes serão bem-sucedidas e permitirão que o chamador retire seu saldo várias vezes. Esse tipo de ataque pode ser usado para drenar um contrato inteligente de seus fundos, como aconteceu no [DAO hack em 2016](https://www.coindesk.com/learn/2016/06/25/understanding-the-dao-attack/). Os ataques de reentrância ainda são um problema crítico para contratos inteligentes hoje, como mostram as[listagens públicas de exploits de reentrância](https://github.com/pcaversaccio/reentrancy-attacks).
+O resumo é que, como o saldo do chamador não é definido como 0 até que a execução da função termine, as invocações subsequentes serão bem-sucedidas e permitirão que o chamador retire seu saldo várias vezes. Esse tipo de ataque pode ser usado para drenar um contrato inteligente de seus fundos, como aconteceu no [DAO hack em 2016](https://www.coindesk.com/learn/understanding-the-dao-attack). Os ataques de reentrância ainda são um problema crítico para contratos inteligentes hoje, como mostram as[listagens públicas de exploits de reentrância](https://github.com/pcaversaccio/reentrancy-attacks).
 
 ##### Como prevenir ataques de reentrância
 

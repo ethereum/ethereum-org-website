@@ -304,7 +304,7 @@ Non c'è nulla di sbagliato qui, tranne il fatto che l'`Attacker` ha un'altra fu
 - `Victim` infine applica i risultati della prima transazione (e delle successive) al proprio stato, così che il saldo di `Attacker` è impostato su 0
 ```
 
-Riepilogando: poiché il saldo del chiamante non è impostato a 0 fino al completamento dell'esecuzione della funzione, le invocazioni successive avranno successo, consentendo al chiamante di prelevare il proprio saldo numerose volte. Questo tipo di attacco è utilizzabile per sottrarre a un contratto intelligente i suoi fondi, come è avvenuto nella [violazione della DAO del 2016](https://www.coindesk.com/learn/2016/06/25/understanding-the-dao-attack/). Gli attacchi di rientranza sono ancora oggi un problema critico per i contratti intelligenti, come mostrato dagli [elenchi pubblici di exploit di rientranza](https://github.com/pcaversaccio/reentrancy-attacks).
+Riepilogando: poiché il saldo del chiamante non è impostato a 0 fino al completamento dell'esecuzione della funzione, le invocazioni successive avranno successo, consentendo al chiamante di prelevare il proprio saldo numerose volte. Questo tipo di attacco è utilizzabile per sottrarre a un contratto intelligente i suoi fondi, come è avvenuto nella [violazione della DAO del 2016](https://www.coindesk.com/learn/understanding-the-dao-attack). Gli attacchi di rientranza sono ancora oggi un problema critico per i contratti intelligenti, come mostrato dagli [elenchi pubblici di exploit di rientranza](https://github.com/pcaversaccio/reentrancy-attacks).
 
 ##### Come prevenire gli attacchi di rientranza
 

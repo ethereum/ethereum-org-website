@@ -304,7 +304,7 @@ contract Victim {
 - 最后 `Victim` 将第一笔交易（和后续交易）的结果应用于其状态，所以 `Attacker` 的余额被设置为 0
 ```
 
-总结起来就是，由于调用者的余额在函数执行完成之前没有设置为 0，所以后续的调用会成功，让调用者可以多次提取他们的余额。 这种攻击可以用来提空智能合约中的资金，就像 [2016 DAO 黑客攻击](https://www.coindesk.com/learn/2016/06/25/understanding-the-dao-attack/)中发生情况的那样。 正如[公开的重入攻击列表](https://github.com/pcaversaccio/reentrancy-attacks)所示，当前重入攻击仍是智能合约所面临的一个严重问题。
+总结起来就是，由于调用者的余额在函数执行完成之前没有设置为 0，所以后续的调用会成功，让调用者可以多次提取他们的余额。 这种攻击可以用来提空智能合约中的资金，就像 [2016 DAO 黑客攻击](https://www.coindesk.com/learn/understanding-the-dao-attack)中发生情况的那样。 正如[公开的重入攻击列表](https://github.com/pcaversaccio/reentrancy-attacks)所示，当前重入攻击仍是智能合约所面临的一个严重问题。
 
 ##### 如何防止重入攻击
 

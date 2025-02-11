@@ -304,7 +304,7 @@ No hay nada malo aquí, excepto que `Attacker` tiene otra función que llama a `
 - `Victim` finally applies the results of the first transaction (and subsequent ones) to its state, so `Attacker`’s balance is set to 0
 ```
 
-El resumen es que, debido a que el saldo de la persona que llama no se establece en 0 hasta que se complete la ejecución de la función, las invocaciones posteriores tendrán éxito y permitirán que la persona que llame retire su saldo varias veces. Este tipo de ataque se puede utilizar para drenar un contrato inteligente de sus fondos, como lo que sucedió en el [hackeo de 2016 de DAO](https://www.coindesk.com/learn/2016/06/25/understanding-the-dao-attack/). Los ataques de reentrada siguen siendo un problema crítico para los contratos inteligentes hoy en día, como muestran las [listas públicas de explotaciones de reentrada](https://github.com/pcaversaccio/reentrancy-attacks).
+El resumen es que, debido a que el saldo de la persona que llama no se establece en 0 hasta que se complete la ejecución de la función, las invocaciones posteriores tendrán éxito y permitirán que la persona que llame retire su saldo varias veces. Este tipo de ataque se puede utilizar para drenar un contrato inteligente de sus fondos, como lo que sucedió en el [hackeo de 2016 de DAO](https://www.coindesk.com/learn/understanding-the-dao-attack). Los ataques de reentrada siguen siendo un problema crítico para los contratos inteligentes hoy en día, como muestran las [listas públicas de explotaciones de reentrada](https://github.com/pcaversaccio/reentrancy-attacks).
 
 ##### Cómo prevenir los ataques de reentrada
 

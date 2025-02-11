@@ -304,7 +304,7 @@ Na první pohled není na tomto kontraktu nic špatného, až na to, že kontrak
 - `Victim` finally applies the results of the first transaction (and subsequent ones) to its state, so `Attacker`’s balance is set to 0
 ```
 
-Výsledkem je, že následná vyvolání budou úspěšná a umožní volajícímu vybrat svůj zůstatek vícekrát, protože zůstatek volajícího není nastaven na 0, dokud se nedokončí provedení funkce. Tento druh útoku může být použit k vybrání prostředků smart kontraktu, jako se to stalo při [DAO hacku v roce 2016](https://www.coindesk.com/learn/2016/06/25/understanding-the-dao-attack/). Útoky opětovným vstupem (reentrancy) jsou stále kritickým problémem smart kontraktů, jak ukazují [veřejné seznamy exploitů reentrancy útoků](https://github.com/pcaversaccio/reentrancy-attacks).
+Výsledkem je, že následná vyvolání budou úspěšná a umožní volajícímu vybrat svůj zůstatek vícekrát, protože zůstatek volajícího není nastaven na 0, dokud se nedokončí provedení funkce. Tento druh útoku může být použit k vybrání prostředků smart kontraktu, jako se to stalo při [DAO hacku v roce 2016](https://www.coindesk.com/learn/understanding-the-dao-attack). Útoky opětovným vstupem (reentrancy) jsou stále kritickým problémem smart kontraktů, jak ukazují [veřejné seznamy exploitů reentrancy útoků](https://github.com/pcaversaccio/reentrancy-attacks).
 
 ##### Jak zabránit útokům opětovným vstupem
 
