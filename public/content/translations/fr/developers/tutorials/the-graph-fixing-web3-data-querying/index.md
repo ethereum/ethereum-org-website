@@ -91,7 +91,7 @@ Commençons par parler de GraphQL, initialement conçu et implémenté par Faceb
 
 <img src="https://cdn0.scrvt.com/b095ee27d37b3d7b6b150adba9ac6ec8/42226f4816a77656/bc5c8b270798/graphql-querygif.gif" width="100%" />
 
-Ces deux images illustrent bien l'essence de GraphQL. Avec la requête de droite, nous pouvons définir exactement les données que nous voulons. Ainsi, nous récupérons tout en une seule requête et rien de plus que ce dont nous avons exactement besoin. Un serveur GraphQL gère la récupération de toutes les données requises, il est ainsi incroyablement facile à utiliser côté consommateur. [Voici une bonne explication](https://www.apollographql.com/blog/graphql-explained-5844742f195e/) de la façon dont le serveur gère exactement une requête si vous êtes intéressé.
+Ces deux images illustrent bien l'essence de GraphQL. Avec la requête de droite, nous pouvons définir exactement les données que nous voulons. Ainsi, nous récupérons tout en une seule requête et rien de plus que ce dont nous avons exactement besoin. Un serveur GraphQL gère la récupération de toutes les données requises, il est ainsi incroyablement facile à utiliser côté consommateur. [Voici une bonne explication](https://www.apollographql.com/blog/graphql-explained) de la façon dont le serveur gère exactement une requête si vous êtes intéressé.
 
 Maintenant, avec cette connaissance, parlons enfin de blockchain et de The Graph.
 

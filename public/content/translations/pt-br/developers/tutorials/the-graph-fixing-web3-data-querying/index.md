@@ -91,7 +91,7 @@ Primeiro, vamos falar sobre GraphQL, originalmente projetado e implementado pelo
 
 <img src="https://cdn0.scrvt.com/b095ee27d37b3d7b6b150adba9ac6ec8/42226f4816a77656/bc5c8b270798/graphql-querygif.gif" width="100%" />
 
-As duas imagens capturam praticamente a essência do GraphQL. Com a consulta à direita, podemos definir exactamente quais os dados que queremos, assim aí temos tudo ao alcance e nada mais do que aquilo de que precisamos. Um servidor GraphQL lida com a busca de todos os dados necessários, então é incrivelmente fácil para o lado frontend do consumidor. [Esta é uma bela explicação](https://www.apollographql.com/blog/graphql-explained-5844742f195e/) de como exatamente o servidor lida com uma consulta se estiver interessado.
+As duas imagens capturam praticamente a essência do GraphQL. Com a consulta à direita, podemos definir exactamente quais os dados que queremos, assim aí temos tudo ao alcance e nada mais do que aquilo de que precisamos. Um servidor GraphQL lida com a busca de todos os dados necessários, então é incrivelmente fácil para o lado frontend do consumidor. [Esta é uma bela explicação](https://www.apollographql.com/blog/graphql-explained) de como exatamente o servidor lida com uma consulta se estiver interessado.
 
 Agora com esse conhecimento, vamos finalmente adentrar o espaço da blockchain e The Graph.
 

@@ -91,7 +91,7 @@ Acum să analizăm o soluție mai bună.
 
 <img src="https://cdn0.scrvt.com/b095ee27d37b3d7b6b150adba9ac6ec8/42226f4816a77656/bc5c8b270798/graphql-querygif.gif" width="100%" />
 
-Cele două imagini surprind destul de bine esența GraphQL. Cu ajutorul interogării din dreapta putem defini exact ce date vrem și astfel obținem totul printr-o singură cerere, exact ce avem nevoie și nimic mai mult. Un server GraphQL se ocupă de preluarea tuturor datelor necesare, utilizarea fiind deci incredibil de ușoară de către consumatorul din frontend. [Se explică frumos prin aceasta](https://www.apollographql.com/blog/graphql-explained-5844742f195e/) cum anume gestionează serverul o interogare, dacă sunteți interesat.
+Cele două imagini surprind destul de bine esența GraphQL. Cu ajutorul interogării din dreapta putem defini exact ce date vrem și astfel obținem totul printr-o singură cerere, exact ce avem nevoie și nimic mai mult. Un server GraphQL se ocupă de preluarea tuturor datelor necesare, utilizarea fiind deci incredibil de ușoară de către consumatorul din frontend. [Se explică frumos prin aceasta](https://www.apollographql.com/blog/graphql-explained) cum anume gestionează serverul o interogare, dacă sunteți interesat.
 
 Cunoscând acum aceste lucruri, să ne avântăm în sfârșit în spațiul blockchain și în „The Graph”.
 
