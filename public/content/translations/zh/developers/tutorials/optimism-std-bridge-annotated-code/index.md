@@ -15,7 +15,7 @@ lang: zh
 
 要在乐观解决方案（或任何其他第二层）上使用第一层资产，需要[桥接](/bridges/#prerequisites)该资产。 实现这一点的一种方法是，用户在一层网络上锁定资产（以太币和 [ERC-20 代币](/developers/docs/standards/tokens/erc-20/)是最常见的资产）并收到供在二层网络上使用的对等资产。 最后，拥有这些资产的任何人可能想把它们桥接回第一层。 在桥接过程中，资产会在第二层销毁，然后在第一层上发放给用户。
 
-这就是[乐观解决方案标准链桥](https://community.optimism.io/docs/developers/bridge/standard-bridge)的工作方式。 在本文中，我们将学习链桥的源代码，看看它如何工作，并将它作为精心编写的 Solidity 代码示例加以研究。
+这就是[乐观解决方案标准链桥](https://docs.optimism.io/app-developers/bridging/standard-bridge)的工作方式。 在本文中，我们将学习链桥的源代码，看看它如何工作，并将它作为精心编写的 Solidity 代码示例加以研究。
 
 ## 控制流通 {#control-flows}
 

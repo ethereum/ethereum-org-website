@@ -17,7 +17,7 @@ One way to achieve this is for users to lock assets (ETH and [ERC-20 tokens](/de
 Eventually, whoever ends up with them might want to bridge them back to L1.
 When doing this, the assets are burned on L2 and then released back to the user on L1.
 
-This is the way the [Optimism standard bridge](https://community.optimism.io/docs/developers/bridge/standard-bridge) works.
+This is the way the [Optimism standard bridge](https://docs.optimism.io/app-developers/bridging/standard-bridge) works.
 In this article we go over the source code for that bridge to see how it works and study it as an example of well written Solidity code.
 
 ## Control flows {#control-flows}

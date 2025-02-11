@@ -15,7 +15,7 @@ lang: tr
 
 Optimism'de (veya başka herhangi bir K2'de) K1 varlıklarını kullanmak için varlıkların [köprülenmesi](/bridges/#prerequisites) gerekir. Kullanıcıların varlıkları (ETH ve [ERC-20 token'ları](/developers/docs/standards/tokens/erc-20/) en yaygın olanlardır) L1'de kilitlemesi ve L2'de eş değer varlıklar alması bunu başarmanın yollarından biridir. Nihayetinde bu varlıkları alan kişiler bunları tekrar K1'e köprülemek isteyebilir. Bunu yaparken, varlıklar K2'de yakılır ve ardından K1'de kullanıcıya geri verilir.
 
-[Optimism standart köprüsü](https://community.optimism.io/docs/developers/bridge/standard-bridge) bu şekilde çalışır. Bu makalede, nasıl çalıştığını görmek için bu köprünün kaynak kodunu gözden geçireceğiz ve onu iyi yazılmış bir Solidity kodu örneği olarak inceleyeceğiz.
+[Optimism standart köprüsü](https://docs.optimism.io/app-developers/bridging/standard-bridge) bu şekilde çalışır. Bu makalede, nasıl çalıştığını görmek için bu köprünün kaynak kodunu gözden geçireceğiz ve onu iyi yazılmış bir Solidity kodu örneği olarak inceleyeceğiz.
 
 ## Kontrol akışları {#control-flows}
 

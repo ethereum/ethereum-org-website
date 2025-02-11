@@ -15,7 +15,7 @@ lang: ja
 
 Optimism（またはその他のL2）上でL1のアセットを使用するには、当該アセットを[ブリッジ](/bridges/#prerequisites)する必要があります。 アセットをブリッジする方法のひとつとして、アセット（最も一般的なのは、ETHや[ERC-20 トークン](/developers/docs/standards/tokens/erc-20/)です）をL1上でロックし、L2上で同等のアセットを受け取る方法があります。 最終的に、これらのアセットを所持するユーザーは、再度L1にブリッジする必要があるでしょう。 L1にアセットをブリッジすると、L2上のアセットはバーンされ、L1上のアセットがユーザーに戻されます。
 
-以上が、[Optimismにおける標準ブリッジ](https://community.optimism.io/docs/developers/bridge/standard-bridge)の仕組みです。 この記事では、このブリッジ機能についてSolidity上で適切に作成したソースコードを確認しながら、その仕組みを学びます。
+以上が、[Optimismにおける標準ブリッジ](https://docs.optimism.io/app-developers/bridging/standard-bridge)の仕組みです。 この記事では、このブリッジ機能についてSolidity上で適切に作成したソースコードを確認しながら、その仕組みを学びます。
 
 ## 制御フロー {#control-flows}
 

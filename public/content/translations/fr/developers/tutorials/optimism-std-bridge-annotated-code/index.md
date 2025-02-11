@@ -15,7 +15,7 @@ lang: fr
 
 Pour utiliser les actifs L1 sur Optimism (ou n'importe quel autre L2), les actifs doivent être [connectés](/bridges/#prerequisites). Une façon d'y arriver est pour les utilisateurs de verrouiller les actifs (ETH et les [jetons ERC-20](/developers/docs/standards/tokens/erc-20/) sont les plus communs) sur L1 et de recevoir des actifs équivalents à utiliser sur L2. Finalement, celui qui se retrouve avec souhaitera peut-être les ramener en L1. En faisant cela, les actifs sont brûlés sur L2 puis redistribués à l'utilisateur sur L1.
 
-C'est ainsi que fonctionne la [passerelle standard Optimism](https://community.optimism.io/docs/developers/bridge/standard-bridge). Dans cet article, nous passerons en revue le code source de cette passerelle pour comprendre comment elle fonctionne et l'étudier comme un exemple de code Solidity parfaitement écrit.
+C'est ainsi que fonctionne la [passerelle standard Optimism](https://docs.optimism.io/app-developers/bridging/standard-bridge). Dans cet article, nous passerons en revue le code source de cette passerelle pour comprendre comment elle fonctionne et l'étudier comme un exemple de code Solidity parfaitement écrit.
 
 ## Flux de contrôle {#control-flows}
 

@@ -15,7 +15,7 @@ lang: es
 
 Para utilizar activos de L1 en Optimism (o cualquier otra L2), los activos deben "[puentearse](/bridges/#prerequisites)". Una manera de lograr esto es que los usuarios bloqueen activos (ETH y los [tokens ERC-20](/developers/docs/standards/tokens/erc-20/) son los más comunes) en L1 y recibir activos equivalentes para usar en L2. Eventualmente, quien acabe poseyéndolos puede querer puentearlos de vuelta a la L1. Al hacer esto, los activos se queman en L2 y luego se liberan nuevamente al usuario en L1.
 
-Así es como funciona el [puente estándar de Optimism](https://community.optimism.io/docs/developers/bridge/standard-bridge). En este artículo analizaremos el código fuente de ese puente para ver cómo funciona y lo estudiaremos como ejemplo de código de Solidity bien escrito.
+Así es como funciona el [puente estándar de Optimism](https://docs.optimism.io/app-developers/bridging/standard-bridge). En este artículo analizaremos el código fuente de ese puente para ver cómo funciona y lo estudiaremos como ejemplo de código de Solidity bien escrito.
 
 ## Flujos de control {#control-flows}
 

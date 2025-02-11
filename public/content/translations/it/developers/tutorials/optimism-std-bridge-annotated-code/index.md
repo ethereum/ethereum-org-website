@@ -15,7 +15,7 @@ lang: it
 
 Per usare le risorse del L1 su Optimism (o su qualsiasi altro L2), le risorse devono essere collegate con un [ponte](/bridges/#prerequisites). Un modo per farlo è che gli utenti blocchino le risorse (ETH e [token ERC-20](/developers/docs/standards/tokens/erc-20/) sono le più comuni) nel L1 e ricevano le risorse equivalenti da usare nel L2. In definitiva, chiunque le riceva potrebbe volerle ricollegare al L1. Così facendo, le risorse sono bruciate nel L2 e poi rilasciate nuovamente all'utente nel L1.
 
-Questo è il modo in cui funziona il [ponte standard di Optimism](https://community.optimism.io/docs/developers/bridge/standard-bridge). In questo articolo esaminiamo il codice sorgente di quel ponte, per vedere come funziona e per studiarlo come un esempio di codice di Solidity ben scritto.
+Questo è il modo in cui funziona il [ponte standard di Optimism](https://docs.optimism.io/app-developers/bridging/standard-bridge). In questo articolo esaminiamo il codice sorgente di quel ponte, per vedere come funziona e per studiarlo come un esempio di codice di Solidity ben scritto.
 
 ## Flussi di controllo {#control-flows}
 
