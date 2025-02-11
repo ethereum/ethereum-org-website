@@ -45,7 +45,7 @@ Pustaka ini menyederhanakan banyak kerumitan dalam interaksi langsung dengan nod
 **DataHub oleh Figment -** **_layanan API Web3 dengan Jaringan Utama Ethereum dan testnet._**
 
 - [DataHub](https://www.figment.io/datahub)
-- [Dokumentasi](https://docs.figment.io/introduction/what-is-datahub)
+- [Dokumentasi](https://figment-docs.gitbook.io/learn-docs/introduction/what-is-datahub)
 
 **Nodesmith -** **_Akses API JSON-RPC ke Jaringan Utama dan testnet Ethereum._**
 

@@ -45,7 +45,7 @@ Aceste biblioteci elimină o mare parte din complexitatea interacțiunii directe
 **DataHub de Figment-** **_Servicii API Web3 cu Mainnet -ul Ethereum și testnet-uri_**
 
 - [DataHub](https://www.figment.io/datahub)
-- [Documentație](https://docs.figment.io/introduction/what-is-datahub)
+- [Documentație](https://figment-docs.gitbook.io/learn-docs/introduction/what-is-datahub)
 
 **Nodesmith -** **_Acces la API-ul JSON-RPC pentru Mainnet-ul Ethereum și testnet-uri._**
 
