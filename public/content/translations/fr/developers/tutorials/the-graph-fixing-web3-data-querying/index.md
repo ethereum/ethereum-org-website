@@ -196,7 +196,7 @@ Puis nous créons une nouvelle entité Bet. L'ID pour cela sera `event.transacti
 
 Enfin, nous pouvons mettre à jour l'entité du Player avec toutes les données. Les tableaux ne peuvent pas être poussés directement, mais doivent être mis à jour comme indiqué ici. Nous utilisons l'ID pour référencer le pari. Et `.save()` est requis à la fin pour stocker une entité.
 
-La documentation complète est disponible ici : https://thegraph.com/docs/en/developing/creating-a-subgraph/#writing-mappings. Vous pouvez également ajouter une sortie de journalisation au fichier de mapping, voir [ici](https://thegraph.com/docs/assemblyscript-api#api-reference).
+La documentation complète est disponible ici : https://thegraph.com/docs/en/developing/creating-a-subgraph/#writing-mappings. Vous pouvez également ajouter une sortie de journalisation au fichier de mapping, voir [ici](https://thegraph.com/docs/en/subgraphs/developing/creating/graph-ts/api/#api-reference).
 
 ```typescript
 import { Bet, Player } from "../generated/schema"

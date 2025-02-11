@@ -198,7 +198,7 @@ Then we create a new Bet entity. The id for this will be `event.transaction.hash
 
 Lastly we can update the Player entity with all the data. Arrays cannot be pushed to directly, but need to be updated as shown here. We use the id to reference the bet. And `.save()` is required at the end to store an entity.
 
-The full documentation can be seen here: https://thegraph.com/docs/en/developing/creating-a-subgraph/#writing-mappings. You can also add logging output to the mapping file, see [here](https://thegraph.com/docs/assemblyscript-api#api-reference).
+The full documentation can be seen here: https://thegraph.com/docs/en/developing/creating-a-subgraph/#writing-mappings. You can also add logging output to the mapping file, see [here](https://thegraph.com/docs/en/subgraphs/developing/creating/graph-ts/api/#api-reference).
 
 ```typescript
 import { Bet, Player } from "../generated/schema"

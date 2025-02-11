@@ -196,7 +196,7 @@ The Graphのマッピングファイルは、受信したイベントをエン�
 
 最後に、すべてのデータでPlayerエンティティを更新します。 配列を直接プッシュすることはできませんが、ここに示すように更新する必要があります。 betを参照するためにidを使用します。 エンティティを保存するには、`.save()`が最後に必要です。
 
-ドキュメント全文については、こちらをご覧ください。https://thegraph.com/docs/en/developing/creating-a-subgraph/#writing-mappings マッピングファイルにログの出力を追加できます。詳細は[こちら](https://thegraph.com/docs/assemblyscript-api#api-reference)をご覧ください。
+ドキュメント全文については、こちらをご覧ください。https://thegraph.com/docs/en/developing/creating-a-subgraph/#writing-mappings マッピングファイルにログの出力を追加できます。詳細は[こちら](https://thegraph.com/docs/en/subgraphs/developing/creating/graph-ts/api/#api-reference)をご覧ください。
 
 ```typescript
 import { Bet, Player } from "../generated/schema"

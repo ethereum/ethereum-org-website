@@ -196,7 +196,7 @@ Apoi vom crea o nouă entitate Bet. The id for this will be `event.transaction.h
 
 Lastly we can update the Player entity with all the data. Matricele nu pot fi împinse direct, dar trebuie actualizate așa cum se arată aici. Folosim id-ul pentru a face referire la pariu. And `.save()` is required at the end to store an entity.
 
-Puteți vedea aici documentația completă: https://thegraph.com/docs/define-a-subgraph#writing-mappings. Puteți și adăuga rezultatele jurnalizării în fișierul de mapare; pentru aceasta, uitați-vă [aici](https://thegraph.com/docs/assemblyscript-api#api-reference).
+Puteți vedea aici documentația completă: https://thegraph.com/docs/define-a-subgraph#writing-mappings. Puteți și adăuga rezultatele jurnalizării în fișierul de mapare; pentru aceasta, uitați-vă [aici](https://thegraph.com/docs/en/subgraphs/developing/creating/graph-ts/api/#api-reference).
 
 ```typescript
 import { Bet, Player } from "../generated/schema"

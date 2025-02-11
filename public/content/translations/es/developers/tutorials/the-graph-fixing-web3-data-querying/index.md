@@ -196,7 +196,7 @@ Luego creamos una nueva entidad Bet. El id para esto será `event.transaction.ha
 
 Por último, podemos actualizar la entidad Player con todos los datos. Los arrays no pueden empujarse directamente, sino que necesitan ser actualizados como se muestra aquí. Utilizamos el id para referenciar la apuesta. `.save()` es necesario al final para almacenar una entidad.
 
-La documentación completa puede obtenerse aquí: https://thegraph.com/docs/en/developing/creating-a-subgraph/#writing-mappings. También puede añadir salida de registro al archivo de mapeo; consulte [aquí](https://thegraph.com/docs/assemblyscript-api#api-reference).
+La documentación completa puede obtenerse aquí: https://thegraph.com/docs/en/developing/creating-a-subgraph/#writing-mappings. También puede añadir salida de registro al archivo de mapeo; consulte [aquí](https://thegraph.com/docs/en/subgraphs/developing/creating/graph-ts/api/#api-reference).
 
 ```typescript
 import { Bet, Player } from "../generated/schema"

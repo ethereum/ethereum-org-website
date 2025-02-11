@@ -196,7 +196,7 @@ The Graph 中的映射文件定义了将传入事件转换为实体的函数。 
 
 最后，我们可以使用所有数据更新 Player 实体。 数组不能直接推送，需要按如下所示进行更新。 我们使用 id 来引用投注。 最后需要 `.save()` 来存储实体。
 
-完整的文档可以在这里看到：https://thegraph.com/docs/define-a-subgraph#writing-mappings。 您还可以将日志输出添加到映射文件，请参阅[此处](https://thegraph.com/docs/assemblyscript-api#api-reference)。
+完整的文档可以在这里看到：https://thegraph.com/docs/define-a-subgraph#writing-mappings。 您还可以将日志输出添加到映射文件，请参阅[此处](https://thegraph.com/docs/en/subgraphs/developing/creating/graph-ts/api/#api-reference)。
 
 ```typescript
 import { Bet, Player } from "../generated/schema"

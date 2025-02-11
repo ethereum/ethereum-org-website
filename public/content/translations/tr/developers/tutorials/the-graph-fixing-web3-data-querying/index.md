@@ -196,7 +196,7 @@ Sonrasında yeni bir Bet varlığı oluştururuz. Bunun kimliği, her zaman benz
 
 Son olarak Player varlığını tüm verilerle güncelleyebiliriz. Diziler doğrudan aktarılamaz, ancak burada gösterildiği gibi güncellenmesi gerekir. Bahise başvurmak için id'yi kullanırız. Ve bir varlığı saklamak için sonunda `.save()` gereklidir.
 
-Belgelerin tamamına buradan erişilebilir: https://thegraph.com/docs/define-a-subgraph#writing-mappings. Ayrıca eşleştirme dosyasında kayıt çıktısı da ekleyebilirsiniz, [buraya](https://thegraph.com/docs/assemblyscript-api#api-reference) göz atın.
+Belgelerin tamamına buradan erişilebilir: https://thegraph.com/docs/define-a-subgraph#writing-mappings. Ayrıca eşleştirme dosyasında kayıt çıktısı da ekleyebilirsiniz, [buraya](https://thegraph.com/docs/en/subgraphs/developing/creating/graph-ts/api/#api-reference) göz atın.
 
 ```typescript
 import { Bet, Player } from "../generated/schema"
