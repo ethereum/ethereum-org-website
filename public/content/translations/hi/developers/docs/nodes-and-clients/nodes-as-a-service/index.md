@@ -264,7 +264,7 @@ sidebarDepth: 2
     - प्रत्यक्ष, तकनीकी सहायता
 
 - [**NodeReal MegaNode**](https://nodereal.io/)
-  - [डॉक्स](https://docs.nodereal.io/nodereal/meganode/introduction)
+  - [डॉक्स](https://docs.nodereal.io/docs/introduction)
   - विशेषताएँ
     - विश्वसनीय, तेज और स्केलेबल RPC API सेवाएं
     - web3 डेवलपर के लिए उन्नत API
