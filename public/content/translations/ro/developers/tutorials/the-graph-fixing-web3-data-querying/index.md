@@ -124,7 +124,7 @@ Aici puteți defini mai multe contracte și manipulatoare. O configurare tipică
 
 Din comoditate, ați dori probabil să utilizați un instrument șablon, cum ar fi „mustache”. Then you create a `subgraph.template.yaml` and insert the addresses based on the latest deployments. Pentru a vedea un exemplu de configurare mai avansată, puteți consulta, de exemplu, [depozitarul subgraph-ului Aave](https://github.com/aave/aave-protocol/tree/master/thegraph).
 
-Iar aici puteți vedea documentația completă: https://thegraph.com/docs/define-a-subgraph#the-subgraph-manifest.
+Iar aici puteți vedea documentația completă: https://thegraph.com/docs/en/subgraphs/developing/creating/subgraph-manifest.
 
 ```yaml
 specVersion: 0.0.1

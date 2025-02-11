@@ -124,7 +124,7 @@ Tutaj możesz zdefiniować wiele kontraktów i programów obsługi. Typowa konfi
 
 Dla wygody możesz również użyć narzędzia szablonu, takiego jak wąsy. Następnie tworzysz subgraph.template.yaml i wstawiasz adresy oparte na najnowszych wdrożeniach. Aby zapoznać się z bardziej zaawansowaną przykładową konfiguracją, zobacz na przykład [Repozytorium subgrafów Aave](https://github.com/aave/aave-protocol/tree/master/thegraph).
 
-A pełną dokumentację można zobaczyć tutaj: https://thegraph.com/docs/define-a-subgraph#the-subgraph-manifest.
+A pełną dokumentację można zobaczyć tutaj: https://thegraph.com/docs/en/subgraphs/developing/creating/subgraph-manifest.
 
 ```yaml
 specVersion: 0.0.1

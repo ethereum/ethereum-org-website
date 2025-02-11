@@ -124,7 +124,7 @@ GameContract.events.BetPlaced({
 
 为方便起见，您可能还想使用像 mustache 这样的模板工具。 然后创建一个 `subgraph.template.yaml` 并根据最新部署插入地址。 有关更高级的示例设置，请参阅这个 [Aave subgraph repo](https://github.com/aave/aave-protocol/tree/master/thegraph) 示例。
 
-完整的文档可以在这里看到：https://thegraph.com/docs/define-a-subgraph#the-subgraph-manifest。
+完整的文档可以在这里看到：https://thegraph.com/docs/en/subgraphs/developing/creating/subgraph-manifest。
 
 ```yaml
 specVersion: 0.0.1

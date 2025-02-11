@@ -124,7 +124,7 @@ Anda bisa menentukan kontrak dan handler beragam di sini. Pengaturan umumnya aka
 
 Untuk alasan kenyamanan, Anda mungkin juga mau menggunakan peralatan templat seperti mustache. Then you create a `subgraph.template.yaml` and insert the addresses based on the latest deployments. Untuk pengaturan percontohan yang lebih canggih, lihat contoh [repo subgraph Aave](https://github.com/aave/aave-protocol/tree/master/thegraph).
 
-Dan dokumentasi lengkapnya bisa dilihat di sini: https://thegraph.com/docs/define-a-subgraph#the-subgraph-manifest.
+Dan dokumentasi lengkapnya bisa dilihat di sini: https://thegraph.com/docs/en/subgraphs/developing/creating/subgraph-manifest.
 
 ```yaml
 specVersion: 0.0.1
