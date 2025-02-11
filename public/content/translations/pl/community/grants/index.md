@@ -31,7 +31,7 @@ Projekty te stworzyły własne granty dla projektów mających na celu rozwój i
 - [Organizacja grantów ekosystemu Lido (LEGO)](https://lido.fi/lego) — _ekosystem finansowy [Lido](https://lido.fi/)_
 - [Program MetaMask](https://metamaskgrants.org/) — _DAO prowadzonych przez pracowników grantów [MetaMask](https://metamask.io/)_
 - [Program grantów sieci SKALE](https://skale.space/developers#grants) — _ekosystem [sieci SKALE](https://skale.space/)_
-- [Program grantów Swarm Foundation](https://my.ethswarm.org/grants) — _ekosystem [Swarm Foundation](https://www.ethswarm.org/)_
+- [Program grantów Swarm Foundation](https://my.ethswarm.org) — _ekosystem [Swarm Foundation](https://www.ethswarm.org/)_
 - [The Graph](https://thegraph.com/ecosystem/grants/) — _ekosystem [The Graph](https://thegraph.com/)_
 - [Program grantów Uniswap](https://www.uniswapfoundation.org/approach) — _społeczność [Uniswap](https://uniswap.org/)_
 

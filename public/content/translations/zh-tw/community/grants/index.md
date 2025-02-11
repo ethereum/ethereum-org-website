@@ -31,7 +31,7 @@ lang: zh-tw
 - [Lido 生態系統資助機構 (LEGO)](https://lido.fi/lego) – _[Lido](https://lido.fi/) 金融生態系統_
 - [MetaMask 計劃](https://metamaskgrants.org/) - _[MetaMask](https://metamask.io/) 員工引導自助去中心化自治組織_
 - [SKALE 網路資助計劃](https://skale.space/developers#grants) - _[SKALE 網路](https://skale.space/)生態系統_
-- [Swarm 基金會資助計劃](https://my.ethswarm.org/grants) - _[Swarm 基金會](https://www.ethswarm.org/)生態系統_
+- [Swarm 基金會資助計劃](https://my.ethswarm.org) - _[Swarm 基金會](https://www.ethswarm.org/)生態系統_
 - [The Graph](https://thegraph.com/ecosystem/grants/) – _[The Graph](https://thegraph.com/) 生態系統_
 - [Uniswap 資助計劃](https://www.uniswapfoundation.org/approach) – _[Uniswap](https://uniswap.org/) 社群_
 

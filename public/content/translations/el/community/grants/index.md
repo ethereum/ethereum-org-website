@@ -31,7 +31,7 @@ lang: el
 - [Lido Ecosystem Grants Organization (LEGO)](https://lido.fi/lego) – _[Lido](https://lido.fi/) χρηματοοικονομικό οικοσύστημα_
 - [MetaMask Program](https://metamaskgrants.org/) - _[MetaMask](https://metamask.io/) employee-led grants DAO_
 - [Πρόγραμμα επιχορήγησης δικτύου SKALE](https://skale.space/developers#grants) - _[SKALE](https://skale.space/)δίκτυο οικοσυστήματος_
-- [Ίδρυμα Swarm πρόγραμμα χρηματοδοτήσεων](https://my.ethswarm.org/grants) - _Οικοσύστημα [Ιδρύματος Swarm](https://www.ethswarm.org/)_
+- [Ίδρυμα Swarm πρόγραμμα χρηματοδοτήσεων](https://my.ethswarm.org) - _Οικοσύστημα [Ιδρύματος Swarm](https://www.ethswarm.org/)_
 - [The Graph](https://thegraph.com/ecosystem/grants/) – _Οικοσύστημα [The Graph](https://thegraph.com/)_
 - [Πρόγραμμα χρηματοδοτήσεων Uniswap](https://www.uniswapfoundation.org/approach) – _Κοινότητα [Uniswap](https://uniswap.org/)_
 
