@@ -87,7 +87,7 @@ Ha valamilyen egyéni szoftver vagy okosszerződés van benne:
 
 Azokkal a szoftverekkel kapcsolatban, melyek csomópont- vagy kliensfelállítással, -kezeléssel vagy -migrációval kapcsolatosak:
 
-**Mely konszenzusréteg-kliensek (vagyis Lighthouse, Teku, Nimbus, Prysm) támogatottak?**
+**Mely konszenzusréteg-kliensek (vagyis A Lighthouse, Teku, Nimbus, Prysm, Grandine) támogatott?**
 
 - Milyen klienseket támogat? Választhat a felhasználó?
 - Ez meghatározza a termék több klienssel való használhatóságát.

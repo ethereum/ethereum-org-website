@@ -78,7 +78,7 @@ La méthode habituelle est d'écrire de petits tests unitaires à l'aide de donn
 
 Malheureusement, les tests unitaires sont peu efficaces pour améliorer la sécurité des contrats intelligents lorsqu'ils sont utilisés isolément. Un test unitaire peut prouver qu'une fonction s'exécute correctement pour les données simulées, mais les tests unitaires sont seulement aussi efficaces que les tests écrits. Il est donc difficile de détecter les cas et les vulnérabilités marginaux manqués qui pourraient nuire à la sécurité de votre contrat intelligent.
 
-Une meilleure approche est de combiner les tests unitaires avec des tests fondés sur les propriétés effectués en utilisant [l'analyse statique et dynamique](/developers/docs/smart-contracts/testing/#static-dynamic-analysis). L'analyse statique repose sur des représentations de bas niveau, tels que [des graphiques de flux de contrôle](https://en.wikipedia.org/wiki/Control-flow_graph) et [des arbres de syntaxe abstraite](https://deepsource.io/glossary/ast/) pour analyser les états de programme et les chemins d'exécution accessibles. D'autre part, les techniques d'analyse dynamique, telles que le fuzzing, exécutent du code de contrat avec des valeurs d'entrées aléatoires pour détecter les opérations qui violent les propriétés de sécurité.
+Une meilleure approche est de combiner les tests unitaires avec des tests fondés sur les propriétés effectués en utilisant [l'analyse statique et dynamique](/developers/docs/smart-contracts/testing/#static-dynamic-analysis). L'analyse statique repose sur des représentations de bas niveau, tels que [des graphiques de flux de contrôle](https://en.wikipedia.org/wiki/Control-flow_graph) et [des arbres de syntaxe abstraite](https://deepsource.io/glossary/ast/) pour analyser les états de programme et les chemins d'exécution accessibles. D'autre part, les techniques d'analyse dynamique, telles que le [fuzzing de contrat intelligent](https://www.cyfrin.io/blog/smart-contract-fuzzing-and-invariants-testing-foundry), exécutent du code de contrat avec des valeurs d'entrées aléatoires pour détecter les opérations qui violent les propriétés de sécurité.
 
 [La vérification formelle](/developers/docs/smart-contracts/formal-verification) est une autre technique de vérification des propriétés de sécurité dans les contrats intelligents. Contrairement aux tests réguliers, la vérification formelle peut prouver de façon concluante l'absence d'erreurs dans un contrat intelligent. Ceci est réalisé en créant une spécification formelle qui permet de saisir les propriétés de sécurité désirées et de prouver qu'un modèle formel des contrats adhère à cette spécification.
 
@@ -90,7 +90,10 @@ Après avoir testé votre contrat, il est bon de demander à d'autres de vérifi
 
 Demander un audit des contrats intelligents est une façon de procéder à un examen indépendant du code. Les vérificateurs jouent un rôle important en veillant à ce que les contrats intelligents soient sécurisés et exempts de défauts de qualité et d'erreurs de conception.
 
-Cela dit, évitez de considérer les audits comme un remède miracle. Les audits de contrats intelligents ne saisiront pas chaque bogue et sont principalement conçus pour fournir une série de revues complémentaires, qui peut aider à détecter les problèmes qui auront échappé aux développeurs lors du développement et du test initial. Suivez également [les bonnes pratiques pour travailler avec les auditeurs](https://twitter.com/tinchoabbate/status/1400170232904400897), comme documenter le code correctement et ajouter de commentaires en ligne, pour maximiser les avantages d'un audit des contrats intelligents.
+Cela dit, évitez de considérer les audits comme un remède miracle. Les audits de contrats intelligents ne saisiront pas chaque bogue et sont principalement conçus pour fournir une série de revues complémentaires, qui peut aider à détecter les problèmes qui auront échappé aux développeurs lors du développement et du test initial. Vous devez également suivre les bonnes pratiques pour travailler avec les auditeurs, comme documenter le code correctement et ajouter des commentaires en ligne, pour maximiser les avantages d'un audit de contrats intelligents.
+
+- [Trucs & astuces d'audit de contrat intelligent](https://twitter.com/tinchoabbate/status/1400170232904400897) - _tinchoabbate_
+- [Tirer le meilleur de votre audit](https://inference.ag/blog/2023-08-14-tips/) - _Inference_
 
 #### Chasse à la prime {#bug-bounties}
 
@@ -112,7 +115,7 @@ L’existence d’audits et de primes de bogue n'exclut pas votre responsabilit�
 
 - Utilisez un [environnement de développement](/developers/docs/frameworks/) pour tester, compiler, déployer des contrats intelligents
 
-- Exécutez votre code sur des outils d'analyse de code basiques, tels que Mythril et Slither. Idéalement, vous devriez le faire avant de fusionner chaque pull request et comparer les différences de sortie
+- Exécutez votre code sur des outils d'analyse de code basiques, tels que [Cyfrin Aaderyn](https://github.com/Cyfrin/aderyn), Mythril et Slither. Idéalement, vous devriez le faire avant de fusionner chaque pull request et comparer les différences de sortie
 
 - Assurez-vous que votre code est compilé sans erreurs, et que le compilateur Solidity n'émet aucun avertissement
 
@@ -126,7 +129,7 @@ La conception de contrôles d'accès sécurisés, la mise en œuvre de modificat
 
 Bien que les contrats intelligents Ethereum soient immuables par défaut, il est possible d'obtenir un certain degré de mutabilité en utilisant des modèles de mise à niveau. La mise à niveau des contrats est nécessaire dans les cas où une faille critique rend votre ancien contrat inutilisable et où le déploiement d'une nouvelle logique est l'option la plus réalisable.
 
-Les mécanismes de mise à niveau des contrats fonctionnent différemment, mais le « modèle proxy » est l'une des approches les plus populaires pour la mise à niveau des contrats intelligents. Les modèles de proxy divisent l'état et la logique d'une application entre _deux_ contrats. Le premier contrat (appelé « contrat mandataire ») stocke les variables d'état (par exemple, les soldes des utilisateurs), tandis que le second contrat (appelé « contrat logique ») contient le code d'exécution des fonctions du contrat.
+Les mécanismes de mise à niveau des contrats fonctionnent différemment, mais le « modèle proxy » est l'une des approches les plus populaires pour la mise à niveau des contrats intelligents. [Les modèles de proxy](https://www.cyfrin.io/blog/upgradeable-proxy-smart-contract-pattern) divisent l'état et la logique d'une application entre _deux_ contrats. Le premier contrat (appelé « contrat mandataire ») stocke les variables d'état (par exemple, les soldes des utilisateurs), tandis que le second contrat (appelé « contrat logique ») contient le code d'exécution des fonctions du contrat.
 
 Les comptes interagissent avec le contrat du mandataire, qui envoie tous les appels de fonction au contrat logique en utilisant l'appel de bas niveau [`delegatecall()`](https://docs.soliditylang.org/en/v0.8.16/introduction-to-smart-contracts.html?highlight=delegatecall#delegatecall-callcode-and-libraries). Contrairement à un appel de message ordinaire, `delegatecall()` garantit que le code exécuté à l'adresse du contrat logique est exécuté dans le contexte du contrat appelant. Cela signifie que le contrat logique écrira toujours dans le stockage du proxy (au lieu de son propre stockage) et les valeurs originales des `msg.sender` et `msg.value` sont préservées.
 
@@ -214,7 +217,7 @@ Une gouvernance décentralisée peut être bénéfique, en particulier parce qu'
 
 Une façon de prévenir les problèmes liés à la gouvernance sur la chaîne est d'utiliser [un timelock](https://blog.openzeppelin.com/protect-your-users-with-smart-contract-timelocks/). Un timelock empêche un contrat intelligent d'exécuter certaines actions jusqu'à ce qu'un certain temps passe. D'autres stratégies incluent l'assignation d'une « pondération de vote » à chaque jeton en fonction de la durée d'enfermement de chaque jeton, ou mesurant le pouvoir de vote d'une adresse à une période historique (par exemple, 2-3 blocs dans le passé) au lieu du bloc actuel. Les deux méthodes réduisent la possibilité d’amasser rapidement le pouvoir de vote pour basculer sur les votes en chaîne.
 
-En savoir plus sur [la conception de systèmes de gouvernance sécurisée](https://blog.openzeppelin.com/smart-contract-security-guidelines-4-strategies-for-safer-governance-systems/) et [de mécanismes de vote différents dans les DAO](https://hackernoon.com/governance-is-the-holy-grail-for-daos).
+Vous trouverez plus d'informations sur [la conception de systèmes de gouvernance sécurisés](https://blog.openzeppelin.com/smart-contract-security-guidelines-4-strategies-for-safer-governance-systems/), [les différents mécanismes de vote dans les DAO](https://hackernoon.com/governance-is-the-holy-grail-for-daos), et [les vecteurs d'attaque courants des DAO utilisant la DeFi](https://dacian.me/dao-governance-defi-attacks) dans les liens partagés.
 
 ### 8. Réduire la complexité du code à un minimum {#reduce-code-complexity}
 
@@ -448,7 +451,7 @@ Par exemple, un attaquant pourrait artificiellement pomper le prix au comptant d
 
 ##### Comment éviter la manipulation d'oracle
 
-Le minimum requis pour éviter la manipulation d'oracle est d'utiliser un réseau oracle décentralisé qui interroge des informations provenant de sources multiples pour éviter des points de défaillance uniques. Dans la plupart des cas, les oracles décentralisés ont des incitations cryptoéconomiques intégrées pour encourager les noeuds d'oracle à signaler des informations correctes, les rendant plus sûres que les oracles centralisés.
+Le minimum requis pour [éviter la manipulation d'oracle](https://www.cyfrin.io/blog/price-oracle-manipultion-attacks-with-examples) est d'utiliser un réseau oracle décentralisé qui interroge des informations provenant de sources multiples pour éviter les points de défaillance uniques. Dans la plupart des cas, les oracles décentralisés ont des incitations cryptoéconomiques intégrées pour encourager les noeuds d'oracle à signaler des informations correctes, les rendant plus sûres que les oracles centralisés.
 
 Si vous comptez interroger un oracle sur le prix des actifs, envisagez d'utiliser un mécanisme qui implémente un prix moyen pondéré (« Time Weighted Average Price », dit TWAP). Un [oracle TWAP](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/oracles) interroge le prix d'un actif à deux points différents dans le temps (que vous pouvez modifier) et calcule le prix au comptant en fonction de la moyenne obtenue. Le choix de périodes plus longues protège votre protocole contre la manipulation des prix car les larges ordres exécutés récemment ne peuvent pas affecter les prix des actifs.
 
@@ -467,6 +470,8 @@ Si vous comptez interroger un oracle sur le prix des actifs, envisagez d'utilise
 - **[Fork Checker](https://forkchecker.hashex.org/)** - _ : Il s'agit d'un outil gratuit en ligne pour la vérification de toutes les informations disponibles concernant un contrat issu du fork._
 
 - **[ABI Encoder](https://abi.hashex.org/)** - _ : Il s'agit d'un service gratuit en ligne pour l'encodage des fonctions de contrat Solidity et de vos arguments de constructeur._
+
+- **[Aderyn](https://github.com/Cyfrin/aderyn)** - _Analyseur statique de Solidity, parcourant les arbres de syntaxe abstraite (AST) pour repérer les vulnérabilités suspectes et imprimant les problèmes dans un format markdown facile à utiliser._
 
 ### Outils de surveillance des contrats intelligents {#smart-contract-monitoring-tools}
 
@@ -506,6 +511,16 @@ Si vous comptez interroger un oracle sur le prix des actifs, envisagez d'utilise
 
 - **[Code4rena](https://code4rena.com/)** - _Une plateforme concurrentielle, réputée pour ses audits de sécurité, qui prête main forte aux experts garantissant la sécurité des smart-contracts, dans l'objectif commun d'œuvrer à la sécurisation du Web3. _
 
+- **[CodeHawks](https://codehawks.com/)** - _Plateforme d'audits compétitifs hébergeant des concours d'audit de contrats intelligents pour les chercheurs en sécurité._
+
+- **[Cyfrin](https://cyfrin.io)** - _Puissante centrale de sécurité du Web3, veillant sur la sécurité cryptographique avec des produits et des services d'audit de contrats intelligents._
+
+- **[ImmuneBytes](https://www.immunebytes.com//smart-contract-audit/)** - _Entreprise de sécurité Web3 qui propose des audits de sécurité pour les systèmes de blockchain grâce à une équipe d'auditeurs expérimentés et des outils de premier plan._
+
+- **[Oxorio](https://oxor.io/)** - _Audits de contrats intelligents et services de sécurité blockchain avec expertise concernant l'EVM, Solidity, le ZK, la technologie inter-chaînes pour les entreprises de crypto et les projets de DeFi._
+
+- **[Inference](https://inference.ag/)** - _Entreprise d'audit de sécurité spécialisée dans l'audit de contrats intelligents pour les blockchains basées sur l'EVM. Grâce à ces auditeurs experts, elle identifie les problèmes potentiels et suggèrent des solutions opérationnelles pour les régler avant leur déploiement._
+
 ### Plateformes de récompense de bug {#bug-bounty-platforms}
 
 - **[Immunefi](https://immunefi.com/)** - _Plateforme de récompense de bug pour les contrats intelligents et les projets DeFi, où les chercheurs en sécurité examinent le code, révèlent les vulnérabilités, sont payés et rendent les crypto-monnaies plus sûres._
@@ -513,6 +528,10 @@ Si vous comptez interroger un oracle sur le prix des actifs, envisagez d'utilise
 - **[HackerOne](https://www.hackerone.com/)** - _Coordination de vulnérabilité et plateforme de récompense de bogue qui relie les entreprises aux testeurs de pénétration et aux chercheurs en cybersécurité._
 
 - **[HackenProof](https://hackenproof.com/)** - _Plateforme de récompense de bogue pour les projets de cryptomonnaies (DeFi, contrats intelligents, portefeuilles, CEX et bien plus encore), où les professionnels de la sécurité fournissent des services de triage et les chercheurs sont payés pour des rapports de bogues pertinents et vérifiés._
+
+-  **[Sherlock](https://www.sherlock.xyz/)** - _Souscripteur en Web3 pour la sécurité des contrats intelligents, offrant des paiements pour les auditeurs gérés via des contrats intelligents pour garantir que les bugs pertinents soient payés équitablement._
+
+-  **[CodeHawks](https://www.codehawks.com/)** - _Plateforme de primes de bugs compétitive où les auditeurs participent à des concours et défis de sécurité, et (bientôt) à leurs propres audits privés._
 
 ### Publications de vulnérabilités connues de contrats intelligents et d'exploitations {#common-smart-contract-vulnerabilities-and-exploits}
 
@@ -530,6 +549,8 @@ Si vous comptez interroger un oracle sur le prix des actifs, envisagez d'utilise
 
 - **[Ethernaut](https://ethernaut.openzeppelin.com/)** - _Wargame basé sur Web3/Solidity où chaque niveau est un contrat intelligent qui doit être « hacké »._
 
+- **[HackenProof x HackTheBox](https://app.hackthebox.com/tracks/HackenProof-Track)** - _Défi de piratage de contrats intelligents, situé dans le cadre d'une aventure fantastique. La résolution du défi donne également accès à un programme privé de primes de bugs._
+
 ### Meilleures pratiques pour sécuriser les contrats intelligents {#smart-contract-security-best-practices}
 
 - **[Consensys : Meilleures pratiques en termes de sécurité pour les contrats intelligents Ethereum](https://consensys.github.io/smart-contract-best-practices/)** - _Liste complète de lignes directrices pour sécuriser les contrats intelligents Ethereum._
@@ -542,6 +563,8 @@ Si vous comptez interroger un oracle sur le prix des actifs, envisagez d'utilise
 
 - **[Norme de vérification de la sécurité des contrats intelligents](https://github.com/securing/SCSVS)** - _Liste de contrôle de quatorze parties créée pour standardiser la sécurité des contrats intelligents pour les développeurs, architectes, réviseurs de sécurité et fournisseurs._
 
+- **[Apprendre la sécurité et l'audit des contrats intelligents](https://updraft.cyfrin.io/courses/security)** - _Le cours ultime sur la sécurité et l'audit des contrats intelligents, conçu pour les développeurs de contrats intelligents souhaitant améliorer leurs pratiques en matière de sécurité et devenir des chercheurs en sécurité._
+
 ### Tutoriels sur la sécurité des contrats intelligents {#tutorials-on-smart-contract-security}
 
 - [Comment écrire des contrats intelligents sécurisés](/developers/tutorials/secure-development-workflow/)
@@ -553,3 +576,5 @@ Si vous comptez interroger un oracle sur le prix des actifs, envisagez d'utilise
 - [Directives de sécurité pour les contrats intelligents](/developers/tutorials/smart-contract-security-guidelines/)
 
 - [Comment intégrer en toute sécurité votre contrat de jetons avec des jetons arbitraires](/developers/tutorials/token-integration-checklist/)
+
+- [Cyfrin Updraft - Cours complet sur la sécurité et l'audit des contrats intelligents](https://updraft.cyfrin.io/courses/security)

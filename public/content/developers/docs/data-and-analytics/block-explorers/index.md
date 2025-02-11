@@ -95,7 +95,7 @@ Block explorers have become a common place for people to track the progress of t
 - Gas limit - The maximum numbers of gas units this transaction can consume
 - Gas used - The actual amount of gas units the transaction consumed
 - Gas price - The price set per gas unit
-- Nonce - The transaction number for the `from` address (bear in mind this starts at 0 so a nonce of `100` would actually be the 101st transaction submitted by this account
+- Nonce - The transaction number for the `from` address (bear in mind this starts at 0 so a nonce of `100` would actually be the 101st transaction submitted by this account)
 - Input data - Any extra information required by the transaction
 
 ### Accounts {#accounts}

@@ -12,6 +12,8 @@ import {
 
 import type { BasePageProps, ChildOnlyProp, Lang } from "@/lib/types"
 
+/* Uncomment for Bug Bounty Banner: */
+/* import BugBountyBanner from "@/components/Banners/BugBountyBanner" */
 import Breadcrumbs from "@/components/Breadcrumbs"
 import BugBountyCards from "@/components/BugBountyCards"
 import ButtonLink from "@/components/Buttons/ButtonLink"
@@ -472,7 +474,8 @@ const BugBountiesPage = () => {
         title={t("page-upgrades-bug-bounty-meta-title")}
         description={t("page-upgrades-bug-bounty-meta-description")}
       />
-      {/* INFO: Uncomment this to enable Bug Bounty Banner: <BugBountyBanner /> */}
+      { /* Uncomment for Bug Bounty Banner: */ }
+      { /* <BugBountyBanner /> */ }
       <Content>
         <HeroCard>
           <HeroContainer>

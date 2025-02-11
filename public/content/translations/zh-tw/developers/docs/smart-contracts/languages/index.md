@@ -11,6 +11,8 @@ lang: zh-tw
 - Solidity
 - Vyper
 
+Remix 整合開發環境提供一個全面的開發環境，用於透過 Solidity 和 Vyper 語言建立和測試合約。 [嘗試使用瀏覽器內的 Remix IDE](https://remix.ethereum.org) 開始編碼。
+
 經驗更豐富的開發者可能也會想使用 Yul，這是[以太坊虛擬機](/developers/docs/evm/)的中階語言，或是使用 Yul 的延伸語言 Yul+。
 
 若你有興趣，且想協助測試還處於大力開發階段的新語言，可以實驗仍在發展初期的新興智慧型合約語言 Fe。
@@ -35,7 +37,7 @@ lang: zh-tw
 - [Solidity 語言入口網站](https://soliditylang.org/)
 - [Solidity by Example](https://docs.soliditylang.org/en/latest/solidity-by-example.html)
 - [Github](https://github.com/ethereum/solidity/)
-- [Solidity Gitter Chatroom](https://gitter.im/ethereum/solidity/) 橋接 [Solidity Matrix Chatroom](https://matrix.to/#/#ethereum_solidity:gitter.im)
+- [Solidity Gitter Chatroom](https://gitter.im/ethereum/solidity) 橋接至 [Solidity Matrix Chatroom](https://matrix.to/#/#ethereum_solidity:gitter.im)
 - [懶人包](https://reference.auditless.com/cheatsheet)
 - [Solidity 部落格](https://blog.soliditylang.org/)
 - [Solidity Twitter](https://twitter.com/solidity_lang)
@@ -89,7 +91,7 @@ contract Coin {
 - 為了提升合約安全性並更容易審核，特意提供比 Solidity 更少功能。 Vyper 不支援：
   - 修飾符
   - 繼承
-  - 內嵌組譯碼
+  - 行內組譯
   - 函數重載
   - 運算子重載
   - 遞迴調用

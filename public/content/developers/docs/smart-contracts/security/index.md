@@ -346,7 +346,7 @@ contract MutexPattern {
         require(balances[msg.sender] >= _amount, "No balance to withdraw.");
 
         balances[msg.sender] -= _amount;
-        bool (success, ) = msg.sender.call{value: _amount}("");
+        (bool success, ) = msg.sender.call{value: _amount}("");
         require(success);
 
         return true;
@@ -563,7 +563,7 @@ If you plan on querying an on-chain oracle for asset prices, consider using one 
 
 - **[Smart Contract Security Verification Standard](https://github.com/securing/SCSVS)** - _Fourteen-part checklist created to standardize the security of smart contracts for developers, architects, security reviewers and vendors._
 
-- **[Learn Smart Contract Security and Auditing](https://updraft.cyfrin.io/courses/security) - _Ultimate smart contract security and auditing course, created for smart contract developers looking to level up their security best practices and become security researchers._
+- **[Learn Smart Contract Security and Auditing](https://updraft.cyfrin.io/courses/security)** - _Ultimate smart contract security and auditing course, created for smart contract developers looking to level up their security best practices and become security researchers._
 
 ### Tutorials on smart contract security {#tutorials-on-smart-contract-security}
 

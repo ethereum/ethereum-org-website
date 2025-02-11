@@ -355,3 +355,7 @@ DeFi adalah gerakan sumber terbuka. Anda bisa memeriksa, melakukan fork, dan ber
 
 - [Server Discord DeFi Llama](https://discord.defillama.com/)
 - [Server Discord DeFi Pulse](https://discord.gg/Gx4TCTk)
+
+<Divider />
+
+<QuizWidget quizKey="defi" />

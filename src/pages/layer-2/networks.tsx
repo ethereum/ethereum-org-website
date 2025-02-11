@@ -4,12 +4,12 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 
 import type { BasePageProps, Lang } from "@/lib/types"
 
-import { ButtonLink } from "@/components/Buttons"
 import Callout from "@/components/Callout"
 import { ContentHero, ContentHeroProps } from "@/components/Hero"
 import Layer2NetworksTable from "@/components/Layer2NetworksTable"
 import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
+import { ButtonLink } from "@/components/ui/buttons/Button"
 
 import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
@@ -69,7 +69,7 @@ export const getStaticProps = (async ({ locale }) => {
       return {
         ...network,
         txCosts: growThePieData.dailyTxCosts[network.growthepieID],
-        tvl: l2beatData.data.projects[network.l2beatID].tvl.breakdown.total,
+        tvl: l2beatData.data.projects[network.l2beatID].tvs.breakdown.total,
         networkMaturity: networkMaturity(
           l2beatData.data.projects[network.l2beatID]
         ),
@@ -171,7 +171,7 @@ const Layer2Networks = ({ layer2Data, locale, mainnetData }) => {
               For more information on the technology, risks and trust
               assumptions of these networks, we recommend checking out L2BEAT,
               which provides a comprehensive risk assessment framework of each
-              project and Growthepie for general data analysis.
+              project and growthepie for general data analysis.
             </p>
           </div>
           <div className="flex flex-col gap-6 sm:flex-row">

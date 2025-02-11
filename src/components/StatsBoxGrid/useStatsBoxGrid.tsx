@@ -107,13 +107,13 @@ export const useStatsBoxGrid = ({
       state: totalEtherStaked,
     },
     {
-      apiProvider: "GrowThePie",
+      apiProvider: "growthepie",
       apiUrl: "https://www.growthepie.xyz/fundamentals/transaction-costs",
       label: t("page-index-network-stats-tx-cost-description"),
       state: medianTxCost,
     },
     {
-      apiProvider: "GrowThePie",
+      apiProvider: "growthepie",
       apiUrl: "https://www.growthepie.xyz/fundamentals/transaction-count",
       label: t("page-index-network-stats-tx-day-description"),
       state: txs,
