@@ -64,7 +64,7 @@ sidebarDepth: 1
 
 - [Ernst & Young의 'Nightfall'](https://github.com/EYBlockchain/nightfall) *[여기](https://bravenewcoin.com/insights/ernst-and-young-rolls-out-'nightfall-to-enable-private-transactions-on)*에서 자세한 정보 확인
 - [Pegasys의 Orion](https://docs.pantheon.pegasys.tech/en/stable/Concepts/Privacy/Privacy-Overview/) *[여기](https://pegasys.tech/privacy-in-pantheon-how-it-works-and-why-your-enterprise-should-care/)*에서 자세한 정보 확인
-- [Quorum의 Tessera](https://docs.goquorum.com/en/latest/Privacy/Tessera/Tessera/) *[여기](https://github.com/jpmorganchase/tessera/wiki/How-Tessera-works)*에서 자세한 정보 확인
+- [Quorum의 Tessera](https://docs.goquorum.consensys.io/concepts/privacy#private-transaction-manager/) *[여기](https://github.com/jpmorganchase/tessera/wiki/How-Tessera-works)*에서 자세한 정보 확인
 
 ### 보안 {#security}
 

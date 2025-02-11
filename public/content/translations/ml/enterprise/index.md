@@ -63,7 +63,7 @@ Ethereum എന്റർപ്രൈസ് സൗഹൃദമാക്കുന�
 
 - [ഏണസ്റ്റ് & യങ്ങിന്റെ ‘നൈറ്റ്ഫാൾ’](https://github.com/EYBlockchain/nightfall) _ കൂടുതൽ വിവരങ്ങൾ [ഇവിടെ](https://bravenewcoin.com/insights/ernst-and-young-rolls-out-'nightfall-to-enable-private-transactions-on) _
 - [പെഗാസിസിന്റെ ഓറിയോൺ](https://docs.pantheon.pegasys.tech/en/stable/Concepts/Privacy/Privacy-Overview/) _ കൂടുതൽ വിവരങ്ങൾ [ഇവിടെ](https://pegasys.tech/privacy-in-pantheon-how-it-works-and-why-your-enterprise-should-care/) _
-- [കോറം ടെസ്സെറ](https://docs.goquorum.com/en/latest/Privacy/Tessera/Tessera/) _ കൂടുതൽ വിവരങ്ങൾ [ഇവിടെ](https://github.com/jpmorganchase/tessera/wiki/How-Tessera-works) _
+- [കോറം ടെസ്സെറ](https://docs.goquorum.consensys.io/concepts/privacy#private-transaction-manager/) _ കൂടുതൽ വിവരങ്ങൾ [ഇവിടെ](https://github.com/jpmorganchase/tessera/wiki/How-Tessera-works) _
 
 ### സുരക്ഷ {#security}
 

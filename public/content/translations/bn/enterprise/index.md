@@ -63,7 +63,7 @@ lang: bn
 
 - [Ernst & Young's ‘Nightfall'](https://github.com/EYBlockchain/nightfall) _আরো তথ্য [এখানে](https://bravenewcoin.com/insights/ernst-and-young-rolls-out-'nightfall-to-enable-private-transactions-on)_
 - [Pegasys' Orion](https://docs.pantheon.pegasys.tech/en/stable/Concepts/Privacy/Privacy-Overview/) _আরো তথ্য এখানে_
-- [Quorum's Tessera](https://docs.goquorum.com/en/latest/Privacy/Tessera/Tessera/) _আরো তথ্য_
+- [Quorum's Tessera](https://docs.goquorum.consensys.io/concepts/privacy#private-transaction-manager/) _আরো তথ্য_
 - [এখানে](https://github.com/jpmorganchase/tessera/wiki/How-Tessera-works)
 
 ### নিরাপত্তা {#security}

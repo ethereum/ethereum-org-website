@@ -63,7 +63,7 @@ Offentlige og private Ethereum-nettverk kan trenge spesifikke funksjoner som kre
 
 - [Ernst & Youngs "Nightfall"](https://github.com/EYBlockchain/nightfall) _Mer informasjon [her](https://bravenewcoin.com/insights/ernst-and-young-rolls-out-'nightfall-to-enable-private-transactions-on)_
 - [Pegasys' Orion](https://docs.pantheon.pegasys.tech/en/stable/Concepts/Privacy/Privacy-Overview/) _mer informasjon [her](https://pegasys.tech/privacy-in-pantheon-how-it-works-and-why-your-enterprise-should-care/)_
-- [Quorum Tessera](https://docs.goquorum.com/en/latest/Privacy/Tessera/Tessera/) _Mer informasjon [her](https://github.com/jpmorganchase/tessera/wiki/How-Tessera-works)_
+- [Quorum Tessera](https://docs.goquorum.consensys.io/concepts/privacy#private-transaction-manager/) _Mer informasjon [her](https://github.com/jpmorganchase/tessera/wiki/How-Tessera-works)_
 
 ### Sikkerhet {#security}
 

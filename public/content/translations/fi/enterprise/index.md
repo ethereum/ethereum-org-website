@@ -64,7 +64,7 @@ Julkiset ja yksityiset Ethereum-verkot saattavat tarvita tiettyjä ominaisuuksia
 
 - [Ernst & Young's ‘Nightfall'](https://github.com/EYBlockchain/nightfall) _Lisätietoa on [täällä](https://bravenewcoin.com/insights/ernst-and-young-rolls-out-'nightfall-to-enable-private-transactions-on)_
 - [Pegasys' Orion](https://docs.pantheon.pegasys.tech/en/stable/Concepts/Privacy/Privacy-Overview/) _Lisätietoa on [täällä](https://pegasys.tech/privacy-in-pantheon-how-it-works-and-why-your-enterprise-should-care/)_
-- [Quorum's Tessera](https://docs.goquorum.com/en/latest/Privacy/Tessera/Tessera/) _Lisätietoa on [täällä](https://github.com/jpmorganchase/tessera/wiki/How-Tessera-works)_
+- [Quorum's Tessera](https://docs.goquorum.consensys.io/concepts/privacy#private-transaction-manager/) _Lisätietoa on [täällä](https://github.com/jpmorganchase/tessera/wiki/How-Tessera-works)_
 
 ### Turvallisuus {#security}
 
