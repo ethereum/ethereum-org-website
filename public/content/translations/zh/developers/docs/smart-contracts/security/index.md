@@ -8,7 +8,7 @@ lang: zh
 
 公共区块链（比如以太坊）使智能合约的安全性问题变的更加复杂。 已部署的合约代码_通常_无法更改因而不能给安全问题打补丁，并且由于这种不可变性，从智能合约中盗取的资产极难追踪并且绝大多数无法挽回。
 
-虽然统计数据有所差异，但据估计，由于智能合约的安全缺陷而被盗窃或丢失的资产总额肯定超过了 10 亿美元。 其中包括几次著名事件，比如 [DAO 攻击事件](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/)（360 万个以太币被盗，按照当前价格计算总金额超过 10 亿美元）、[Parity 多重签名钱包攻击事件](https://www.coindesk.com/30-million-ether-reported-stolen-parity-wallet-breach)（黑客窃取了 3000 万美元）以及 [Parity 钱包冻结问题](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether)（价值超过 3 亿美元的以太币遭到永久锁定）。
+虽然统计数据有所差异，但据估计，由于智能合约的安全缺陷而被盗窃或丢失的资产总额肯定超过了 10 亿美元。 其中包括几次著名事件，比如 [DAO 攻击事件](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/)（360 万个以太币被盗，按照当前价格计算总金额超过 10 亿美元）、[Parity 多重签名钱包攻击事件](https://www.coindesk.com/markets/2017/07/19/30-million-ether-reported-stolen-due-to-parity-wallet-breach)（黑客窃取了 3000 万美元）以及 [Parity 钱包冻结问题](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether)（价值超过 3 亿美元的以太币遭到永久锁定）。
 
 上述几个事件迫使开发者必须付诸努力，构建安全、稳健、恢复力强的智能合约。 智能合约安全性是每个开发者都需要学习和研究的严肃问题。 本指南将介绍针对以太坊开发者的安全性注意事项，并研究增强智能合约安全性的资源。
 

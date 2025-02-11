@@ -8,7 +8,7 @@ lang: ja
 
 イーサリアムのようなパブリックブロックチェーンは、スマートコントラクトのセキュリティ確保の問題をさらに複雑にします。 デプロイされたコントラクトのコードは_通常_、セキュリティ上の欠陥にパッチを当てるために変更することはできません。一方、スマートコントラクトから盗まれた資産は追跡が非常に難しく、その不変性により、大抵回収できません。
 
-数値は一様ではありませんが、スマートコントラクトのセキュリティ上の欠陥が原因で盗まれたり失われたりした価値の総額は、10億ドルを超えると推定されています。 これには、[The DAOハック](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/)(現行価格10億ドル相当以上の360万ETHの盗難)、[パリティ(Parity)マルチシグウォレットハック](https://www.coindesk.com/30-million-ether-reported-stolen-parity-wallet-breach) (ハッカーによる3000万ドルの盗難)、[パリティ(Parity)凍結ウォレット問題](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether)(3億ドル以上のETHを永遠にロック)などの有名な事件も含まれています。
+数値は一様ではありませんが、スマートコントラクトのセキュリティ上の欠陥が原因で盗まれたり失われたりした価値の総額は、10億ドルを超えると推定されています。 これには、[The DAOハック](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/)(現行価格10億ドル相当以上の360万ETHの盗難)、[パリティ(Parity)マルチシグウォレットハック](https://www.coindesk.com/markets/2017/07/19/30-million-ether-reported-stolen-due-to-parity-wallet-breach) (ハッカーによる3000万ドルの盗難)、[パリティ(Parity)凍結ウォレット問題](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether)(3億ドル以上のETHを永遠にロック)などの有名な事件も含まれています。
 
 前述の問題は、デベロッパーに安全で堅牢な回復力のあるスマートコントラクトの構築に労力を費やすことを不可欠にしました。 スマートコントラクトのセキュリティは深刻な課題であり、全てのデベロッパーが学ぶべきことです。 このガイドでは、イーサリアムデベロッパーのためのセキュリティの考慮事項について説明します。さらに、スマートコントラクトのセキュリティ向上に役立つリソースもご紹介します。
 

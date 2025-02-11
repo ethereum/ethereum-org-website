@@ -8,7 +8,7 @@ lang: zh-tw
 
 公共區塊鏈，例如以太坊，使智慧型合約的安全議題更加複雜。 已部署的合約程式碼_通常_無法變更，以修補安全缺陷；而要追蹤從智慧型合約竊取的資產也十分困難，且因為物件的不可變性，大多無法挽回。
 
-雖然數字有差異，但因智慧型合約安全缺陷而遭竊取或損失的總額，估計超過 10 億美元。 備受關注的事件如 [DAO 駭客攻擊](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/)（駭客竊取 360 萬以太幣，現價超過 10 億美元）；[Parity 多重簽章錢包駭客攻擊](https://www.coindesk.com/30-million-ether-reported-stolen-parity-wallet-breach)（駭客竊取 3 千萬美元）；以及 [Parity 凍結錢包問題](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether)（超過 3 億美元的以太幣遭到永久凍結）。
+雖然數字有差異，但因智慧型合約安全缺陷而遭竊取或損失的總額，估計超過 10 億美元。 備受關注的事件如 [DAO 駭客攻擊](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/)（駭客竊取 360 萬以太幣，現價超過 10 億美元）；[Parity 多重簽章錢包駭客攻擊](https://www.coindesk.com/markets/2017/07/19/30-million-ether-reported-stolen-due-to-parity-wallet-breach)（駭客竊取 3 千萬美元）；以及 [Parity 凍結錢包問題](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether)（超過 3 億美元的以太幣遭到永久凍結）。
 
 前面提到的問題，促使開發者將努力打造安全、健全且有韌性的智慧型合約視為當務之急。 我們必須嚴肅看待智慧型合約的安全性，每個開發者都需要好好加以瞭解。 此指南將涵蓋以太坊開發者應有的資安考量，並探索提升智慧型合約安全性的資源。
 
