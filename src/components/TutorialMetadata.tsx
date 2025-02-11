@@ -6,13 +6,13 @@ import { TutorialFrontmatter } from "@/lib/interfaces"
 
 import CopyToClipboard from "@/components/CopyToClipboard"
 import Emoji from "@/components/Emoji"
-import InlineLink from "@/components/Link"
 import Translation from "@/components/Translation"
 import TutorialTags from "@/components/TutorialTags"
 
 import { getLocaleTimestamp } from "@/lib/utils/time"
 
 import { Flex } from "./ui/flex"
+import InlineLink from "./ui/Link"
 import { Tag } from "./ui/tag"
 
 export type TutorialMetadataProps = {
