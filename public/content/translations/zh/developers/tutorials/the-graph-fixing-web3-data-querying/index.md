@@ -167,7 +167,7 @@ dataSources:
 - 大整数
 - 大十进制数
 
-您还可以使用实体作为类型来定义关系。 在我们的示例中，我们定义了从玩家到投注的一对多关系。 感叹号(!) 表示值不能为空。 完整的文档可以在这里看到：https://thegraph.com/docs/define-a-subgraph#the-graphql-schema。
+您还可以使用实体作为类型来定义关系。 在我们的示例中，我们定义了从玩家到投注的一对多关系。 感叹号(!) 表示值不能为空。 完整的文档可以在这里看到：https://thegraph.com/docs/en/subgraphs/developing/creating/ql-schema。
 
 ```graphql
 type Bet @entity {

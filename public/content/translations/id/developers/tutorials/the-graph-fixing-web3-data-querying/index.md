@@ -167,7 +167,7 @@ Skema adalah definisi data GraphQL. Skema akan memungkinkan Anda menentukan enti
 - BigInt
 - BigDecimal
 
-Anda bisa juga menggunakan entitas sebagai jenis untuk menentukan hubungan. Dalam contoh kita, kita menentukan 1 untuk banyak hubungan dari pemain ke taruhan. Tanda ! berarti nilai tidak boleh kosong. Dokumentasi lengkapnya bisa dilihat di sini: https://thegraph.com/docs/define-a-subgraph#the-graphql-schema.
+Anda bisa juga menggunakan entitas sebagai jenis untuk menentukan hubungan. Dalam contoh kita, kita menentukan 1 untuk banyak hubungan dari pemain ke taruhan. Tanda ! berarti nilai tidak boleh kosong. Dokumentasi lengkapnya bisa dilihat di sini: https://thegraph.com/docs/en/subgraphs/developing/creating/ql-schema.
 
 ```graphql
 type Bet @entity {

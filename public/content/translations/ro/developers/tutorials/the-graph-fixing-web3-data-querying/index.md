@@ -167,7 +167,7 @@ Schema este definiția datelor GraphQL. Aceasta vă va permite să definiți ce 
 - BigInt
 - BigDecimal
 
-De asemenea, puteți utiliza entitățile ca „tip” pentru a defini relațiile. În exemplul nostru definim o relație între 1-și-mai-mulți a unui jucător la pariuri. Semnul „!” ne spune că valoarea nu poate fi goală. Puteți vedea aici documentația completă: https://thegraph.com/docs/define-a-subgraph#the-graphql-schema.
+De asemenea, puteți utiliza entitățile ca „tip” pentru a defini relațiile. În exemplul nostru definim o relație între 1-și-mai-mulți a unui jucător la pariuri. Semnul „!” ne spune că valoarea nu poate fi goală. Puteți vedea aici documentația completă: https://thegraph.com/docs/en/subgraphs/developing/creating/ql-schema.
 
 ```graphql
 type Bet @entity {

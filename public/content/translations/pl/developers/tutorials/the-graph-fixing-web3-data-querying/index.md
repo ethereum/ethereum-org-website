@@ -167,7 +167,7 @@ Schematem jest definicja danych GraphQL. Pozwoli to na zdefiniowanie istniejący
 - BigInt
 - BigDecimal
 
-Możesz również używać obiektów jako typu do definiowania relacji. W naszym przykładzie definiujemy relacje od gracza do zakładów. ! oznacza, że ​​wartość nie może być pusta. Pełną dokumentację można zobaczyć tutaj: https://thegraph.com/docs/define-a-subgraph#the-graphql-schema.
+Możesz również używać obiektów jako typu do definiowania relacji. W naszym przykładzie definiujemy relacje od gracza do zakładów. ! oznacza, że ​​wartość nie może być pusta. Pełną dokumentację można zobaczyć tutaj: https://thegraph.com/docs/en/subgraphs/developing/creating/ql-schema.
 
 ```graphql
 type Bet @entity {

@@ -167,7 +167,7 @@ dataSources:
 - BigInt
 - BigDecimal
 
-İlişkileri tanımlamak için varlıkları tür olarak da kullanabilirsiniz. Örneğimizde, oyuncudan bahislere "1'e çok" ilişkisi tanımladık. "!", değerin boş olamayacağı anlamına gelir. Belgelerin tamamına [buradan](https://thegraph.com/docs/define-a-subgraph#the-graphql-schema) erişilebilir.
+İlişkileri tanımlamak için varlıkları tür olarak da kullanabilirsiniz. Örneğimizde, oyuncudan bahislere "1'e çok" ilişkisi tanımladık. "!", değerin boş olamayacağı anlamına gelir. Belgelerin tamamına [buradan](https://thegraph.com/docs/en/subgraphs/developing/creating/ql-schema) erişilebilir.
 
 ```graphql
 type Bet @entity {
