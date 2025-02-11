@@ -32,7 +32,7 @@ Estes projetos criaram seus próprios programas de recompensas destinados a dese
 - [Programa MetaMask](https://metamaskgrants.org/) - _[MetaMask](https://metamask.io/) bolsas lideradas por funcionários DAO_
 - [Programa de bolsas da SKALE Network](https://skale.space/developers#grants) - _[Ecossistema da SKALE Network](https://skale.space/)_
 - [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) – _Ecossistema [The Graph](https://thegraph.com/)_
-- [Uniswap Grants Program](https://www.uniswapfoundation.org/apply-for-a-grant) - _[Comunidade da Uniswap](https://uniswap.org/)_
+- [Uniswap Grants Program](https://www.uniswapfoundation.org/opportunities) - _[Comunidade da Uniswap](https://uniswap.org/)_
 
 ## Financiamento quadrático {#quadratic-funding}
 

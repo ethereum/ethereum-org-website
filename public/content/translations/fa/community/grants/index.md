@@ -32,7 +32,7 @@ lang: fa
 - [برنامه‌ی Metamask‏](https://metamaskgrants.org/) - _[سازمان خودمختار غیرمتمرکز کمک‌های مالی کارمندمحور MetaMask‏](https://metamask.io/)_
 - [برنامه کمک‌های مالی شبکه SKALE‏](https://skale.space/developers#grants) - _[اکوسیستم شبکه](https://skale.space/)‏SKALE‏_
 - [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) – _اکوسیستم [‏The Graph‏](https://thegraph.com/)_
-- [برنامه کمک‌های مالی Uniswap‏](https://www.uniswapfoundation.org/apply-for-a-grant) - _[جامعه](https://uniswap.org/)‏Uniswap‏_
+- [برنامه کمک‌های مالی Uniswap‏](https://www.uniswapfoundation.org/opportunities) - _[جامعه](https://uniswap.org/)‏Uniswap‏_
 
 ## کمک مالی درجه‌ی دوم {#quadratic-funding}
 
