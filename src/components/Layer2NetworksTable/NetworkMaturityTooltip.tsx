@@ -51,7 +51,7 @@ const NetworkMaturityTooltip = ({ maturity }: { maturity: MaturityLevel }) => {
       content={
         <div className="flex flex-col gap-2">
           <p className="text-lg font-bold">
-            {t("page-layer-2-networks-network-maturity")}{" "}
+            {t("page-layer-2-networks-network-maturity-with-colon")}{" "}
             {maturityDescription[maturity].label}
           </p>
           <p className="whitespace-pre-wrap">
