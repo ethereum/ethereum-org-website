@@ -518,7 +518,7 @@ Guarde el archivo y luego estará listo para iniciar la escritura de la función
 
 ### Implemente pinJSONToIPFS {#pin-json-to-ipfs}
 
-Afortunadamente para nosotros, Pinata tiene una [API específicamente para subir datos JSON a IPFS](https://pinata.cloud/documentation#PinJSONToIPFS) y un práctico ejemplo de JavaScript con axios que podemos usar, con algunas ligeras modificaciones.
+Afortunadamente para nosotros, Pinata tiene una [API específicamente para subir datos JSON a IPFS](https://docs.pinata.cloud/api-reference/endpoint/ipfs/pin-json-to-ipfs#pin-json) y un práctico ejemplo de JavaScript con axios que podemos usar, con algunas ligeras modificaciones.
 
 En la carpeta `utils`, vamos a crear otro archivo llamado `pinata.js` y luego importar su secreto y clave de Pinata desde el archivo .env de la siguiente manera:
 

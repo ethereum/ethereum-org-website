@@ -518,7 +518,7 @@ REACT_APP_PINATA_SECRET = <pinata-api-secret>
 
 ### pinJSONToIPFSの実装 {#pin-json-to-ipfs}
 
-幸いにもPinataでは、[惑星間ファイルシステム(IPFS)へのJSONデータのアップロードに特化したAPI](https://pinata.cloud/documentation#PinJSONToIPFS)と、少しの変更を加えるだけで使用できるaxiosのサンプルを備えた便利なJavaScriptを使用できます。
+幸いにもPinataでは、[惑星間ファイルシステム(IPFS)へのJSONデータのアップロードに特化したAPI](https://docs.pinata.cloud/api-reference/endpoint/ipfs/pin-json-to-ipfs#pin-json)と、少しの変更を加えるだけで使用できるaxiosのサンプルを備えた便利なJavaScriptを使用できます。
 
 `utils`フォルダーに`pinata.js`という別のファイルを作成し、.envファイルからPinataのシークレットとキーをインポートしましょう。
 

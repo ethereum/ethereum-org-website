@@ -518,7 +518,7 @@ Dosyayı kaydettikten sonra JSON meta verilerinizi IPFS'ye yüklemek için fonks
 
 ### PinJSONToIPFS'yi uygulayın {#pin-json-to-ipfs}
 
-Neyse ki, Pinata'nın [özellikle JSON verilerini IPFS'ye yüklemek için bir API'si](https://pinata.cloud/documentation#PinJSONToIPFS) ve axios örneğiyle bazı ufak değişiklikler yaparak birlikte kullanabileceğimiz uygun bir JavaScript'i var.
+Neyse ki, Pinata'nın [özellikle JSON verilerini IPFS'ye yüklemek için bir API'si](https://docs.pinata.cloud/api-reference/endpoint/ipfs/pin-json-to-ipfs#pin-json) ve axios örneğiyle bazı ufak değişiklikler yaparak birlikte kullanabileceğimiz uygun bir JavaScript'i var.
 
 `utils` klasörünüzde `pinata.js` adında başka bir dosya oluşturalım ve ardından .env dosyasından Pinata sırrımızı ve anahtarımızı şu şekilde içe aktaralım:
 

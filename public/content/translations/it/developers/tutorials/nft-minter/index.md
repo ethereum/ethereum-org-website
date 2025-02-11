@@ -518,7 +518,7 @@ Salva il file: sei pronto ora per scrivere la funzione per caricare i tuoi metad
 
 ### Implementa pinJSONToIPFS {#pin-json-to-ipfs}
 
-Per nostra fortuna, Pinata ha un'[API specifica per caricare i dati JSON su IPFS](https://pinata.cloud/documentation#PinJSONToIPFS) e un comodo JavaScript con esempio di axios che possiamo usare, con alcune lievi modifiche.
+Per nostra fortuna, Pinata ha un'[API specifica per caricare i dati JSON su IPFS](https://docs.pinata.cloud/api-reference/endpoint/ipfs/pin-json-to-ipfs#pin-json) e un comodo JavaScript con esempio di axios che possiamo usare, con alcune lievi modifiche.
 
 Nella cartella `utils` creiamo un altro file denominato `pinata.js` e poi importiamo il nostro codice segreto di Pinata e la chiave dal file .env, come segue:
 

@@ -521,7 +521,7 @@ REACT_APP_PINATA_SECRET = <pinata-api-secret>
 
 ### 实现 pinJSONToIPFS {#pin-json-to-ipfs}
 
-对我们来说幸运的是，Pinata 提供了一个[专门用于将 JSON 数据上传到星际文件系统的应用程序接口](https://pinata.cloud/documentation#PinJSONToIPFS)和一个方便的使用 axios 示例的 JavaScript，我们做一些轻微修改后就可以使用它。
+对我们来说幸运的是，Pinata 提供了一个[专门用于将 JSON 数据上传到星际文件系统的应用程序接口](https://docs.pinata.cloud/api-reference/endpoint/ipfs/pin-json-to-ipfs#pin-json)和一个方便的使用 axios 示例的 JavaScript，我们做一些轻微修改后就可以使用它。
 
 在您的 `utils` 文件夹中，我们创建另一个名为 `pinata.js` 的文件，然后从 .env 文件中导入我们的 Pinata 私钥和密钥，如下所示：
 

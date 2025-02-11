@@ -518,7 +518,7 @@ Enregistrez le fichier et vous êtes prêt à commencer à écrire la fonction p
 
 ### Implémenter pinJSONToIPFS {#pin-json-to-ipfs}
 
-Heureusement pour nous, Pinata a une [API spécifique pour télécharger des données JSON sur IPFS](https://pinata.cloud/documentation#PinJSONToIPFS) et un JavaScript pratique avec un exemple d'axios que nous pouvons utiliser en opérant juste quelques petites modifications.
+Heureusement pour nous, Pinata a une [API spécifique pour télécharger des données JSON sur IPFS](https://docs.pinata.cloud/api-reference/endpoint/ipfs/pin-json-to-ipfs#pin-json) et un JavaScript pratique avec un exemple d'axios que nous pouvons utiliser en opérant juste quelques petites modifications.
 
 Dans votre dossier `utils`, créons un autre fichier appelé `pinata.js` puis importez notre clé secrète Pinata à partir du fichier `.env` comme suit :
 
