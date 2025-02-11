@@ -70,7 +70,7 @@ Utilizarea **Autentificării cu doi factori (2FA)**  oferă un *factor de sec
 
 <InfoBanner emoji=":lock:">
   <div>
-    Observaţie: Utilizarea 2FA bazată pe SMS este vulnerabilă la 
+    Observaţie: Utilizarea 2FA bazată pe SMS este vulnerabilă la
     <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">
      piratarea SIM (SIM jacking)
     </a>
@@ -274,7 +274,7 @@ Escrocherile Airdrop implică un proiect de escrocherie care lansează un activ 
 ### Securitatea cripto {#reading-crypto-security}
 
 - [Protejarea dvs. și a fondurilor dvs.](https://support.mycrypto.com/staying-safe/protecting-yourself-and-your-funds) - _MyCrypto_
-- [4 moduri de a rămâne în siguranță în cripto](https://www.coindesk.com/tech/2021/04/20/4-ways-to-stay-safe-in-crypto/) - _CoinDesk_
+- [4 moduri de a rămâne în siguranță în cripto](https://www.coindesk.com/learn/4-ways-to-stay-safe-in-crypto/) - _CoinDesk_
 - [Ghidul de securitate pentru începători și pentru oamenii inteligenți](https://medium.com/mycrypto/mycryptos-security-guide-for-dummies-and-smart-people-too-ab178299c82e) - _MyCrypto_
 - [Securitate cripto: Parole și autentificare](https://www.youtube.com/watch?v=m8jlnZuV1i4) - _Andreas M. Antonopoulos_
 
