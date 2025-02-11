@@ -22,7 +22,7 @@ import ValuesMarquee from "@/components/Homepage/ValuesMarquee"
 import AngleBrackets from "@/components/icons/angle-brackets.svg"
 import Calendar from "@/components/icons/calendar.svg"
 import CalendarAdd from "@/components/icons/calendar-add.svg"
-import { TwImage } from "@/components/Image"
+import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
 import { TranslatathonBanner } from "@/components/Translatathon/TranslatathonBanner"
@@ -335,7 +335,7 @@ const HomePage = ({
         {/* Activity - The strongest ecosystem */}
         <Section id="activity" variant="responsiveFlex">
           <SectionBanner>
-            <TwImage src={ActivityImage} alt="" />
+            <Image src={ActivityImage} alt="" />
           </SectionBanner>
 
           <SectionContent>
@@ -361,7 +361,7 @@ const HomePage = ({
           className="md:flex-row-reverse"
         >
           <SectionBanner>
-            <TwImage src={LearnImage} alt="" />
+            <Image src={LearnImage} alt="" />
           </SectionBanner>
 
           <SectionContent>
@@ -429,7 +429,7 @@ const HomePage = ({
         {/* Builders - Blockchain's biggest builder community */}
         <Section id="builders" variant="responsiveFlex">
           <SectionBanner className="relative">
-            <TwImage src={BuildersImage} alt="" />
+            <Image src={BuildersImage} alt="" />
           </SectionBanner>
 
           <SectionContent>
@@ -578,7 +578,7 @@ const HomePage = ({
           className="md:flex-row-reverse"
         >
           <SectionBanner>
-            <TwImage src={CommunityImage} alt="" />
+            <Image src={CommunityImage} alt="" />
           </SectionBanner>
 
           <SectionContent>
@@ -824,7 +824,7 @@ const HomePage = ({
                           loading="lazy"
                         />
                       ) : (
-                        <TwImage src={EventFallback} alt="" />
+                        <Image src={EventFallback} alt="" />
                       )}
                     </CardBanner>
                     <CardContent>

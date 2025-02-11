@@ -8,7 +8,7 @@ import type { BasePageProps, Lang } from "@/lib/types"
 import Callout from "@/components/Callout"
 import Card from "@/components/Card"
 import { ContentHero, type ContentHeroProps } from "@/components/Hero"
-import { TwImage } from "@/components/Image"
+import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
 import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
@@ -141,7 +141,7 @@ const Layer2Learn = () => {
           </p>
         </div>
         <div className="w-full md:w-[30%]">
-          <TwImage
+          <Image
             src={WhatIsEthereumImage}
             alt="What is Ethereum"
             className="h-full w-full object-cover"
@@ -202,7 +202,7 @@ const Layer2Learn = () => {
         className="flex w-full flex-col gap-16 px-8 py-9 md:flex-row"
       >
         <div className="w-full items-center justify-center md:w-[50%]">
-          <TwImage src={DAOImage} alt="" />
+          <Image src={DAOImage} alt="" />
         </div>
 
         <div className="flex w-full flex-col gap-4 md:w-[50%]">
@@ -247,7 +247,7 @@ const Layer2Learn = () => {
           <p>{t("page-layer-2-learn-how-does-layer-2-work-rollups-2")}</p>
         </div>
         <div className="flex w-full md:w-[50%]">
-          <TwImage src={RollupImage} alt={""} className="object-contain" />
+          <Image src={RollupImage} alt={""} className="object-contain" />
         </div>
       </div>
 
@@ -261,7 +261,7 @@ const Layer2Learn = () => {
               key={idx}
               className="flex w-full flex-col gap-4 rounded-sm border border-solid border-body-light bg-background-highlight p-6 md:w-[50%]"
             >
-              <TwImage src={card.image} alt={""} />
+              <Image src={card.image} alt={""} />
               <h3>{card.title}</h3>
               <p>{card.description}</p>
               <a href={card.childLink}>{card.childSentence}</a>

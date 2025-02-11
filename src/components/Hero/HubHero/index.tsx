@@ -1,7 +1,7 @@
 import type { CommonHeroProps } from "@/lib/types"
 
 import { CallToAction } from "@/components/Hero/CallToAction"
-import { TwImage } from "@/components/Image"
+import { Image } from "@/components/Image"
 import { Stack } from "@/components/ui/flex"
 
 import { cn } from "@/lib/utils/cn"
@@ -23,7 +23,7 @@ const HubHero = ({
 
   return (
     <div className="relative">
-      <TwImage
+      <Image
         src={heroImg}
         alt=""
         priority

@@ -5,7 +5,7 @@ import { Wallet } from "@/lib/types"
 
 import { SupportedLanguagesTooltip } from "@/components/FindWalletProductTable/SupportedLanguagesTooltip"
 import { DevicesIcon, LanguagesIcon } from "@/components/icons/wallets"
-import { TwImage } from "@/components/Image"
+import { Image } from "@/components/Image"
 import Tooltip from "@/components/Tooltip"
 import { Tag } from "@/components/ui/tag"
 
@@ -39,7 +39,7 @@ const WalletInfo = ({ wallet, isExpanded }: WalletInfoProps) => {
       <div className="flex flex-row items-center justify-between gap-4">
         <div className="flex flex-col gap-4">
           <div className="hidden flex-row gap-4 lg:flex">
-            <TwImage
+            <Image
               src={wallet.image}
               alt=""
               style={{ objectFit: "contain", width: "56px", height: "56px" }}
@@ -70,7 +70,7 @@ const WalletInfo = ({ wallet, isExpanded }: WalletInfoProps) => {
                       className="-ml-1.5 overflow-hidden rounded-full"
                     >
                       <Tooltip content={chainData?.name || ""}>
-                        <TwImage
+                        <Image
                           src={chainData?.logo || ""}
                           alt=""
                           className="rounded-full"
@@ -89,7 +89,7 @@ const WalletInfo = ({ wallet, isExpanded }: WalletInfoProps) => {
           </div>
           <div className="flex flex-col gap-4 lg:hidden">
             <div className="flex flex-row items-center gap-4">
-              <TwImage
+              <Image
                 src={wallet.image}
                 alt=""
                 style={{ objectFit: "contain", width: "24px", height: "24px" }}
@@ -122,7 +122,7 @@ const WalletInfo = ({ wallet, isExpanded }: WalletInfoProps) => {
                     className="-ml-1.5 overflow-hidden rounded-full"
                   >
                     <Tooltip content={chainData?.name || ""}>
-                      <TwImage
+                      <Image
                         src={chainData?.logo || ""}
                         alt=""
                         className="rounded-full"

@@ -1,6 +1,6 @@
 import { useTranslation } from "next-i18next"
 
-import { TwImage as Image } from "@/components/Image"
+import { Image } from "@/components/Image"
 
 import useColorModeValue from "@/hooks/useColorModeValue"
 import darkImage from "@/public/images/ef-logo.png"
