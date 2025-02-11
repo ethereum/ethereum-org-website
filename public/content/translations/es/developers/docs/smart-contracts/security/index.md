@@ -505,7 +505,7 @@ Si planea consultar a un oráculo en cadena precios de activos, considere el uso
 
 - **[Hacken:](https://hacken.io)** _Auditor de ciberseguridad Web3 que aporta el enfoque de 360 grados a la seguridad de la cadena de bloques. _
 
-- **[Nethermind:](https://nethermind.io/smart-contracts-audits)** _Servicios de auditoría de Solidity y Cairo que garantizan la integridad de los contratos inteligentes y la seguridad de los usuarios en Ethereum y Starknet._
+- **[Nethermind:](https://www.nethermind.io/smart-contract-audits)** _Servicios de auditoría de Solidity y Cairo que garantizan la integridad de los contratos inteligentes y la seguridad de los usuarios en Ethereum y Starknet._
 
 - **[HashEx:](https://hashex.org/)** _HashEx se centra en la auditoría de cadena de bloques y contratos inteligentes para garantizar la seguridad de las criptomonedas, proporcionando servicios como el desarrollo de contratos inteligentes, las pruebas de penetración y la consultoría de cadenas de bloques. _
 

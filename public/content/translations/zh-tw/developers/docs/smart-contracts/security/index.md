@@ -505,7 +505,7 @@ contract Attack {
 
 - **[Hacken](https://hacken.io)** - _為區塊鏈安全採用 360 度全方位方法的 Web3 網路安全審核者。_
 
-- **[Nethermind](https://nethermind.io/smart-contracts-audits)** - _Solidity 和 Cairo 稽核服務，確保智慧型合約完整性、以及以太坊及 Starknet 使用者的安全。_
+- **[Nethermind](https://www.nethermind.io/smart-contract-audits)** - _Solidity 和 Cairo 稽核服務，確保智慧型合約完整性、以及以太坊及 Starknet 使用者的安全。_
 
 - **[HashEx](https://hashex.org/)** - _HashEx 專注於區塊鏈和智慧型合約審核，以確保加密貨幣的安全性，提供智慧型合約開發、滲透測試、區塊鏈諮詢等服務。_
 

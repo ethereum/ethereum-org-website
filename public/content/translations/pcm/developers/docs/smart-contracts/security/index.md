@@ -505,7 +505,7 @@ If yu dey plan query on-chain orakol for asset prices, make yu konsida to dey yu
 
 - **[Hacken](https://hacken.io)** - _ Web3 cybersekurity auditor wey dey bring di 360-degree approach to blockchain sekurity._
 
-- **[Nethermind](https://nethermind.io/smart-contracts-audits)** - _ Solidity and Cairo auditing savis wey sure sey di intergrity of smart kontracts and di safety of di users akross Ethereum and Starknet._
+- **[Nethermind](https://www.nethermind.io/smart-contract-audits)** - _ Solidity and Cairo auditing savis wey sure sey di intergrity of smart kontracts and di safety of di users akross Ethereum and Starknet._
 
 - **[HashEx](https://hashex.org/)** - _HashEx dey fokus on blockchain and di smart kontract auditing to sure sey di sekurity of cryptocurrencies, dey provide savis laik smart kontract divelopment, penetrashon testing, blockchain konsulting._
 

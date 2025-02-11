@@ -500,7 +500,7 @@ Jika Anda berencana untuk meminta harga aset dari oracle di dalam rantai, pertim
 
 - **[Hacken](https://hacken.io)** - _Auditor keamanan Web3 yang menghadirkan pendekatan 360 derajat untuk keamanan rantai blok._
 
-- **[Nethermind](https://nethermind.io/smart-contracts-audits)** - _Layanan pengauditan Solidity dan Cairo, memastikan integritas kontrak pintar dan keamanan pengguna di seluruh Ethereum dan Starknet._
+- **[Nethermind](https://www.nethermind.io/smart-contract-audits)** - _Layanan pengauditan Solidity dan Cairo, memastikan integritas kontrak pintar dan keamanan pengguna di seluruh Ethereum dan Starknet._
 
 - **[HashEx](https://hashex.org/)** - _HashEx berfokus pada pengauditan rantai blok dan kontrak pintar untuk memastikan keamanan mata uang kripto, menyediakan layanan seperti pengembangan kontrak pintar, pengujian penetrasi, konsultasi rantai blok._
 

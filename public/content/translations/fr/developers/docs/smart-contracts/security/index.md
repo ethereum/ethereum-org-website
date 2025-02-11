@@ -505,7 +505,7 @@ Si vous comptez interroger un oracle sur le prix des actifs, envisagez d'utilise
 
 - **[Hacken](https://hacken.io)** - _Auditeur de cybersécurité Web3 apportant une approche à 360° à la sécurité de la blockchain._
 
-- **[Nethermind](https://nethermind.io/smart-contracts-audits)** - _Des services offrant des audits Cairo et Solidity, utilisés comme garantie pour assurer l'intégrité des contrats intelligents et la sécurité des utilisateurs dans les écosystèmes Ethereum et Starknet._
+- **[Nethermind](https://www.nethermind.io/smart-contract-audits)** - _Des services offrant des audits Cairo et Solidity, utilisés comme garantie pour assurer l'intégrité des contrats intelligents et la sécurité des utilisateurs dans les écosystèmes Ethereum et Starknet._
 
 - **[HashEx](https://hashex.org/)** - _Les rapports d'audit présentés par HashEx relatifs à la blockchain et aux contrats intelligents, visent à garantir la sécurité des cryptomonnaies, fournissant des services tels que le développement des contrats intelligents, le test de pénétration, ou le conseil blockchain._
 

@@ -505,7 +505,7 @@ contract Attack {
 
 - **[Hacken](https://hacken.io)** - _Ελεγκτής κυβερνοασφάλειας Web3 που φέρνει την προσέγγιση 360 μοιρών στην ασφάλεια blockchain._
 
-- **[Nethermind](https://nethermind.io/smart-contracts-audits)** - _Υπηρεσίες ελέγχου Solidity και Cairo, που διασφαλίζει την ακεραιότητα των έξυπνων συμβολαίων και την ασφάλεια των χρηστών σε όλο το Ethereum και το Starknet._
+- **[Nethermind](https://www.nethermind.io/smart-contract-audits)** - _Υπηρεσίες ελέγχου Solidity και Cairo, που διασφαλίζει την ακεραιότητα των έξυπνων συμβολαίων και την ασφάλεια των χρηστών σε όλο το Ethereum και το Starknet._
 
 - **[HashEx](https://hashex.org/)** - _Η HashEx επικεντρώνεται στον έλεγχο blockchain και έξυπνων συμβολαίων για να διασφαλίσει την ασφάλεια των κρυπτονομισμάτων, παρέχοντας υπηρεσίες όπως ανάπτυξη έξυπνων συμβολαίων, δοκιμές διείσδυσης, συμβουλευτική blockchain._
 

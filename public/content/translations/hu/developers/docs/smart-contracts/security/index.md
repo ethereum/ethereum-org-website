@@ -505,7 +505,7 @@ Ha Ön azt tervezi, hogy egy láncon lévő orákulumot kérdez le eszközárak�
 
 - **[Hacken](https://hacken.io)** – _Web3 kiberbiztonsági auditor, amely 360 fokos megközelítést alkalmaz a blokkláncbiztonságban._
 
-- **[Nethermind](https://nethermind.io/smart-contracts-audits)** – _Solidity és Cairo auditszolgáltatások, amelyekkel az okosszerződések integritása, valamint a felhasználók biztonsága is biztosíthat az Ethereumon és a Starkneten._
+- **[Nethermind](https://www.nethermind.io/smart-contract-audits)** – _Solidity és Cairo auditszolgáltatások, amelyekkel az okosszerződések integritása, valamint a felhasználók biztonsága is biztosíthat az Ethereumon és a Starkneten._
 
 - **[HashEx](https://hashex.org/)** – _A HashEx a blokkláncok és okosszerződések auditálásra szakosodott a kriptovaluták biztonságának biztosítása céljából, illetve olyan szolgáltatásokat nyújt, mint az okosszerződés-fejlesztés, sérülékenység-vizsgálat, blokklánctanácsadás._
 

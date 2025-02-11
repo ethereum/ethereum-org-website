@@ -504,7 +504,7 @@ Varlık fiyatları için bir zincir üstünde kâhin sorgulaması yapmayı planl
 
 - **[Hacken](https://hacken.io)** - _Blokzincir güvenliğine 360 derece yaklaşımını getiren Web3 siber güvenlik denetimcisi._
 
-- **[Nethermind](https://nethermind.io/smart-contracts-audits)** - _Ethereum ve Starknet üzerinde akıllı sözleşmelerin bütünlüğünü ve kullanıcıların güvenliğini güvence altına alan Solidity ve Cairo denetim hizmetleri._
+- **[Nethermind](https://www.nethermind.io/smart-contract-audits)** - _Ethereum ve Starknet üzerinde akıllı sözleşmelerin bütünlüğünü ve kullanıcıların güvenliğini güvence altına alan Solidity ve Cairo denetim hizmetleri._
 
 - **[HashEx](https://hashex.org/)** - _HashEx, kripto paraların güvenliğini güvence altına almak için blokzincir ve akıllı sözleşme denetimlerine odaklanırken akıllı sözleşme geliştirme, penetrasyon testi ve blokzincir danışmanlığı gibi hizmetler de sunar._
 

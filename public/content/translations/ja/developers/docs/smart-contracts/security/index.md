@@ -417,7 +417,7 @@ contract Attack {
     function attack() public payable {
         timeLock.deposit{value: msg.value}();
         /*
-        「t = 現在のロック時間」ならば、xを以下のようにして求める必要があります。 
+        「t = 現在のロック時間」ならば、xを以下のようにして求める必要があります。
         x + t = 2**256 = 0
         so x = -t
         2**256 = type(uint).max + 1
@@ -503,7 +503,7 @@ DEXの価格は正確であることが多く、これは市場の均衡を取�
 
 - **[Hacken](https://hacken.io)** - _ブロックチェーンセキュリティへの360度アプローチをもたらすサイバーセキュリティ監査人。_
 
-- **[Nethermind](https://nethermind.io/smart-contracts-audits)** - _ SolidityとCairoの監査サービスにより、イーサリアムとStarknet全体でスマートコントラクトの整合性とユーザーの安全を確保。_
+- **[Nethermind](https://www.nethermind.io/smart-contract-audits)** - _ SolidityとCairoの監査サービスにより、イーサリアムとStarknet全体でスマートコントラクトの整合性とユーザーの安全を確保。_
 
 - **[HashEx](https://hashex.org/)** - _HashExは、ブロックチェーンとスマート コントラクトの監査に焦点を当てており、暗号通貨のセキュリティを確保するためのスマートコントラクト開発、侵入テスト、ブロックチェーンコンサルティングなどのサービスを提供。_
 

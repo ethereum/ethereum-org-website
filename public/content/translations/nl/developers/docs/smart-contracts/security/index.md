@@ -505,7 +505,7 @@ Als u van plan bent om een on-chain oracle te raadplegen voor activaprijzen, geb
 
 - **[Hacken](https://hacken.io)** - _Web3-cyberbeveiligingsauditor die een 360-gradenaanpak levert voor blockchainbeveiliging._
 
-- **[Nethermind](https://nethermind.io/smart-contracts-audits)** - _Solidity- en Cairo-auditservices, die de integriteit van smart contracts en de beveiliging van gebruikers op Ethereum en Starknet waarborgen._
+- **[Nethermind](https://www.nethermind.io/smart-contract-audits)** - _Solidity- en Cairo-auditservices, die de integriteit van smart contracts en de beveiliging van gebruikers op Ethereum en Starknet waarborgen._
 
 - **[HashEx](https://hashex.org/)** - _HashEx richt zich op blockchain- en smart contract-auditing om de beveiliging van cryptovaluta te garanderen, en levert services zoals smart contract-ontwikkeling, penetratietesten en blockchain-consulting._
 

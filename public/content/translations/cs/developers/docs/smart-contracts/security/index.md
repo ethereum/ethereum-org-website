@@ -505,7 +505,7 @@ Pokud plánujete dotazovat on-chain orákulum na ceny aktiv, zvažte použití t
 
 - **[Hacken](https://hacken.io)** – _Web3 auditor kybernetické bezpečnosti přinášející 360stupňový přístup k bezpečnosti blockchainu._
 
-- **[Nethermind](https://nethermind.io/smart-contracts-audits)** – _služby auditu Solidity a Cairo, které zajišťují integritu smart kontraktů a bezpečnost uživatelů napříč Ethereem a Starknetem._
+- **[Nethermind](https://www.nethermind.io/smart-contract-audits)** – _služby auditu Solidity a Cairo, které zajišťují integritu smart kontraktů a bezpečnost uživatelů napříč Ethereem a Starknetem._
 
 - **[HashEx](https://hashex.org/)** – _HashEx se zaměřuje na audit blockchainu a smart kontraktů s cílem zajistit bezpečnost kryptoměn a poskytuje služby, jako je vývoj smart kontraktů, penetrační testování a poradenství v oblasti blockchainu._
 

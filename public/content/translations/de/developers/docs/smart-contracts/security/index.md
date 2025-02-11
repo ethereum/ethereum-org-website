@@ -505,7 +505,7 @@ Wenn Sie vorhaben, ein On-Chain-Orakel für Asset-Preise abzufragen, sollten Sie
 
 - **[Hacken](https://hacken.io)** - _Web3 Cybersicherheitsauditor mit 360-Grad-Ansatz für die Sicherheit der Blockchain._
 
-- **[](https://nethermind.io/smart-contracts-audits)** - _Solidity und Cairo Audit-Dienste sorgen für Datenintegrität der Smart Contracts und Sicherheit der Nutzer im Ethereum- und Starknet-Ökosystem._
+- **[](https://www.nethermind.io/smart-contract-audits)** - _Solidity und Cairo Audit-Dienste sorgen für Datenintegrität der Smart Contracts und Sicherheit der Nutzer im Ethereum- und Starknet-Ökosystem._
 
 - **[HashEx](https://hashex.org/)** - _HashEx konzentriert sich auf die Prüfung von Blockchain und Smart Contracts, um die Sicherheit von Kryptowährungen zu gewährleisten, und bietet Dienstleistungen wie die Entwicklung von Smart Contracts, Penetrationstests und Blockchain-Beratung._
 
