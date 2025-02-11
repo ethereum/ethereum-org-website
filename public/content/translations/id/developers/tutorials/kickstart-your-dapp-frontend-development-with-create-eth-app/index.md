@@ -65,7 +65,7 @@ Setelah memiliki subgraph, ini memungkinkan Anda menulis kueri sederhana di Dapp
 
 ### Apollo {#apollo}
 
-Berkat integrasi [Apollo Boost](https://www.apollographql.com/docs/react/get-started/), Anda dapat dengan mudah mengintegrasikan graph ke dalam Dapp React Anda. Khususnya ketika menggunakan [kaitan React dan Apollo](https://www.apollographql.com/blog/apollo-client-now-with-react-hooks-676d116eeae2), mengambil data menjadi semudah menulis sebuah kueri GraphQl dalam kompenen Anda:
+Berkat integrasi [Apollo Boost](https://www.apollographql.com/docs/react/get-started/), Anda dapat dengan mudah mengintegrasikan graph ke dalam Dapp React Anda. Khususnya ketika menggunakan [kaitan React dan Apollo](https://www.apollographql.com/blog/apollo-client-now-with-react-hooks), mengambil data menjadi semudah menulis sebuah kueri GraphQl dalam kompenen Anda:
 
 ```js
 const { loading, error, data } = useQuery(myGraphQlQuery)

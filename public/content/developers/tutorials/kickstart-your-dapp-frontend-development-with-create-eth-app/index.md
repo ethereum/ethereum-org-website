@@ -60,7 +60,7 @@ Once you have a subgraph, it allows you to write one simple query in your dapp t
 
 ### Apollo {#apollo}
 
-Thanks to the [Apollo Boost](https://www.apollographql.com/docs/react/get-started/) integration you can easily integrate the graph in your React dapp. Especially when using [React hooks and Apollo](https://www.apollographql.com/blog/apollo-client-now-with-react-hooks-676d116eeae2), fetching data is as simple as writing a single GraphQl query in your component:
+Thanks to the [Apollo Boost](https://www.apollographql.com/docs/react/get-started/) integration you can easily integrate the graph in your React dapp. Especially when using [React hooks and Apollo](https://www.apollographql.com/blog/apollo-client-now-with-react-hooks), fetching data is as simple as writing a single GraphQl query in your component:
 
 ```js
 const { loading, error, data } = useQuery(myGraphQlQuery)

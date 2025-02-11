@@ -65,7 +65,7 @@ yarn react-app:start
 
 ### Apollo {#apollo}
 
-由于 [Apollo Boost](https://www.apollographql.com/docs/react/get-started/) 集成，你可以轻松将图集成到 React 去中心化应用程序中。 特别是在使用 [React hooks 和 Apollo](https://www.apollographql.com/blog/apollo-client-now-with-react-hooks-676d116eeae2) 时，获取数据就像在您的组件中写一个 GraphQl 查询一样简单：
+由于 [Apollo Boost](https://www.apollographql.com/docs/react/get-started/) 集成，你可以轻松将图集成到 React 去中心化应用程序中。 特别是在使用 [React hooks 和 Apollo](https://www.apollographql.com/blog/apollo-client-now-with-react-hooks) 时，获取数据就像在您的组件中写一个 GraphQl 查询一样简单：
 
 ```js
 const { loading, error, data } = useQuery(myGraphQlQuery)

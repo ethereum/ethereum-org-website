@@ -65,7 +65,7 @@ Une fois que vous disposez d'un subgraph, vous pouvez écrire une simple requêt
 
 ### Apollo {#apollo}
 
-Grâce à l'intégration d'[Apollo Boost](https://www.apollographql.com/docs/react/get-started/), vous pouvez facilement intégrer Graph dans votre dApp React. Surtout lorsque vous utilisez [des hooks React et Apollo](https://www.apollographql.com/blog/apollo-client-now-with-react-hooks-676d116eeae2), récupérer des données est aussi simple que d'écrire une requête GraphQl dans votre composant:
+Grâce à l'intégration d'[Apollo Boost](https://www.apollographql.com/docs/react/get-started/), vous pouvez facilement intégrer Graph dans votre dApp React. Surtout lorsque vous utilisez [des hooks React et Apollo](https://www.apollographql.com/blog/apollo-client-now-with-react-hooks), récupérer des données est aussi simple que d'écrire une requête GraphQl dans votre composant:
 
 ```js
 const { loading, error, data } = useQuery(myGraphQlQuery)

@@ -65,7 +65,7 @@ subgraphがあれば、Dappにシンプルなクエリをひとつ追加する�
 
 ### Apollo {#apollo}
 
-[Apollo Boost](https://www.apollographql.com/docs/react/get-started/)との統合により、Reactで作成したDappにThe Graphを簡単に搭載できるようになりました。 特に[React hooksとApollo](https://www.apollographql.com/blog/apollo-client-now-with-react-hooks-676d116eeae2)を使えば、コンポーネントにGraphQLのクエリをひとつ追加するだけで、簡単にデータ取得が可能になります：
+[Apollo Boost](https://www.apollographql.com/docs/react/get-started/)との統合により、Reactで作成したDappにThe Graphを簡単に搭載できるようになりました。 特に[React hooksとApollo](https://www.apollographql.com/blog/apollo-client-now-with-react-hooks)を使えば、コンポーネントにGraphQLのクエリをひとつ追加するだけで、簡単にデータ取得が可能になります：
 
 ```js
 const { loading, error, data } = useQuery(myGraphQlQuery)

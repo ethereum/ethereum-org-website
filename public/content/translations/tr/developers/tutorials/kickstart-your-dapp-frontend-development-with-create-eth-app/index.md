@@ -65,7 +65,7 @@ Bir alt grafiğiniz olduğunda, ihtiyacınız olan geçmiş veriler de dahil olm
 
 ### Apollo {#apollo}
 
-[Apollo Boost](https://www.apollographql.com/docs/react/get-started/) entegrasyonu sayesinde grafiği React merkeziyetsiz uygulamanıza kolayca entegre edebilirsiniz. Özellikle [React hooks ve Apollo](https://www.apollographql.com/blog/apollo-client-now-with-react-hooks-676d116eeae2) kullanılırken, verileri almak, bileşeninize tek bir GraphQl sorgusu yazmak kadar basittir:
+[Apollo Boost](https://www.apollographql.com/docs/react/get-started/) entegrasyonu sayesinde grafiği React merkeziyetsiz uygulamanıza kolayca entegre edebilirsiniz. Özellikle [React hooks ve Apollo](https://www.apollographql.com/blog/apollo-client-now-with-react-hooks) kullanılırken, verileri almak, bileşeninize tek bir GraphQl sorgusu yazmak kadar basittir:
 
 ```js
 const { loading, error, data } = useQuery(myGraphQlQuery)

@@ -65,7 +65,7 @@ Odată ce aveți un subgraf, acesta vă permite să scrieți o simplă interogar
 
 ### Apollo {#apollo}
 
-Datorită integrării [Apollo Boost](https://www.apollographql.com/docs/react/get-started/), puteți integra cu ușurință graful în aplicația dvs. Dapp React. Mai ales când folosiți [React hooks și Apollo](https://www.apollographql.com/blog/apollo-client-now-with-react-hooks-676d116eeae2), preluarea datelor este la fel de simplă ca scrierea unei singure interogări GraphQL în componenta dvs.:
+Datorită integrării [Apollo Boost](https://www.apollographql.com/docs/react/get-started/), puteți integra cu ușurință graful în aplicația dvs. Dapp React. Mai ales când folosiți [React hooks și Apollo](https://www.apollographql.com/blog/apollo-client-now-with-react-hooks), preluarea datelor este la fel de simplă ca scrierea unei singure interogări GraphQL în componenta dvs.:
 
 ```js
 const { loading, error, data } = useQuery(myGraphQlQuery)

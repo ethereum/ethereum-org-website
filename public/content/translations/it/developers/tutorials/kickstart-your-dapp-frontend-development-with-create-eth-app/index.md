@@ -65,7 +65,7 @@ Una volta che hai un grafico secondario, ti consente di scrivere una semplice ri
 
 ### Apollo {#apollo}
 
-Grazie all'integrazione di [Apollo Boost](https://www.apollographql.com/docs/react/get-started/), puoi integrare facilmente il grafico nella tua dapp di React. Specialmente quando si utilizzano gli [hook di React e Apollo](https://www.apollographql.com/blog/apollo-client-now-with-react-hooks-676d116eeae2), recuperare i dati è tanto facile quanto scrivere una singola query di GraphQL nel tuo componente:
+Grazie all'integrazione di [Apollo Boost](https://www.apollographql.com/docs/react/get-started/), puoi integrare facilmente il grafico nella tua dapp di React. Specialmente quando si utilizzano gli [hook di React e Apollo](https://www.apollographql.com/blog/apollo-client-now-with-react-hooks), recuperare i dati è tanto facile quanto scrivere una singola query di GraphQL nel tuo componente:
 
 ```js
 const { loading, error, data } = useQuery(myGraphQlQuery)
