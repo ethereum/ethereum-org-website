@@ -479,7 +479,7 @@ Meta verilerimizi IPFS'de depolamak için, uygun bir IPFS API'si ve araç takım
 
 ## Meta verilerinizi IPFS'ye sabitlemek için Pinata'yı kullanın {#use-pinata-to-pin-your-metadata-to-IPFS}
 
-[Pinata](https://pinata.cloud/) hesabınız yoksa, [buradan](https://pinata.cloud/signup) ücretsiz bir hesap için kaydolun ve e-postanızla hesabınızı doğrulamak için adımları tamamlayın.
+[Pinata](https://pinata.cloud/) hesabınız yoksa, [buradan](https://app.pinata.cloud/auth/signup) ücretsiz bir hesap için kaydolun ve e-postanızla hesabınızı doğrulamak için adımları tamamlayın.
 
 ### Pinata API anahtarınızı oluşturun {#create-pinata-api-key}
 

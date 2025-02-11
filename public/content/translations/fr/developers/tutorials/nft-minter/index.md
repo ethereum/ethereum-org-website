@@ -479,7 +479,7 @@ Pour stocker nos métadonnées sur IPFS, nous allons utiliser [Pinata](https://p
 
 ## Utiliser Pinata pour épingler vos métadonnées sur IPFS {#use-pinata-to-pin-your-metadata-to-IPFS}
 
-Si vous n'avez pas de compte [Pinata](https://pinata.cloud/), créez-vous un compte gratuit [ici](https://pinata.cloud/signup) et suivez les étapes pour vérifier votre mail et votre compte.
+Si vous n'avez pas de compte [Pinata](https://pinata.cloud/), créez-vous un compte gratuit [ici](https://app.pinata.cloud/auth/signup) et suivez les étapes pour vérifier votre mail et votre compte.
 
 ### Créer votre clé API Pinata {#create-pinata-api-key}
 

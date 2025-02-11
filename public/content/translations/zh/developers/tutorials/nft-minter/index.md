@@ -482,7 +482,7 @@ useEffect(async () => {
 
 ## 使用 Pintata 将元数据固定到星际文件系统 {#use-pinata-to-pin-your-metadata-to-IPFS}
 
-如果您没有 [Pinata](https://pinata.cloud/) 帐户，请点击[此处](https://pinata.cloud/signup)注册一个免费帐户完成您的电子邮件和帐户验证步骤。
+如果您没有 [Pinata](https://pinata.cloud/) 帐户，请点击[此处](https://app.pinata.cloud/auth/signup)注册一个免费帐户完成您的电子邮件和帐户验证步骤。
 
 ### 创建您的 Pinata 应用程序接口密钥 {#create-pinata-api-key}
 
