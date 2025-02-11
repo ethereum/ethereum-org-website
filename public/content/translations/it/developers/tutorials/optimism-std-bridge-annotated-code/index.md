@@ -1270,7 +1270,7 @@ Se un utente ha commesso un errore rilevabile usando l'indirizzo del token L2 er
 
 ## Conclusioni {#conclusion}
 
-Il ponte standard è il meccanismo più flessibile per i trasferimenti di risorse. Tuttavia, essendo così generico, non è sempre il metodo più facile da usare. Specialmente per i prelievi, gran parte degli utenti preferisce usare [ponti di terze parti](https://www.optimism.io/apps/bridges) che non attendono il periodo di contestazione dell'errore e non richiedono una prova di Merkle per finalizzare il prelievo.
+Il ponte standard è il meccanismo più flessibile per i trasferimenti di risorse. Tuttavia, essendo così generico, non è sempre il metodo più facile da usare. Specialmente per i prelievi, gran parte degli utenti preferisce usare [ponti di terze parti](https://optimism.io/apps#bridge) che non attendono il periodo di contestazione dell'errore e non richiedono una prova di Merkle per finalizzare il prelievo.
 
 Questi ponti funzionano tipicamente avendo delle risorse sul L1, che forniscono immediatamente per una ridotta commissione (spesso inferiore al costo del gas per un prelievo del ponte standard). Quando il ponte (o le persone che lo gestiscono) prevede di avere poche risorse su L1, trasferisce delle sufficienti risorse da L2. Poiché questi sono prelievi molto grandi, il costo di prelievo è ammortizzato su un grande importo e ha un'incidenza minore.
 

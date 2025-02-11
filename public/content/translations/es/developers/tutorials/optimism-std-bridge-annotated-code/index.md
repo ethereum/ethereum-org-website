@@ -1270,7 +1270,7 @@ Si un usuario realizó un error detectable mediante el uso de la dirección de t
 
 ## Conclusión {#conclusion}
 
-El puente estándar es el mecanismo más flexible para las transferencias de activos. Sin embargo, debido a que es muy genérico, no siempre es el mecanismo más fácil de utilizar. Especialmente para los retiros, la mayoría de los usuarios prefieren usar [puentes de terceros](https://www.optimism.io/apps/bridges) que no esperen el periodo de desafío y no requieran una prueba de Merkle para finalizar el retiro.
+El puente estándar es el mecanismo más flexible para las transferencias de activos. Sin embargo, debido a que es muy genérico, no siempre es el mecanismo más fácil de utilizar. Especialmente para los retiros, la mayoría de los usuarios prefieren usar [puentes de terceros](https://optimism.io/apps#bridge) que no esperen el periodo de desafío y no requieran una prueba de Merkle para finalizar el retiro.
 
 Estos puentes normalmente funcionan teniendo activos en L1, que proporcionan inmediatamente por una pequeña tarifa (a menudo menor que el costo del gas para un retiro de puente estándar). Cuando el puente (o la gente que lo ejecuta) anticipa quedarse con pocos activos en L1, transfiere suficientes activos de L2. Como se trata de retiros muy grandes, el costo de la retirada se amortiza en grandes cantidades y resulta en un porcentaje mucho menor.
 

@@ -1270,7 +1270,7 @@ Se um usuário fez um erro detectável usando o endereço de token L2 errado, n�
 
 ## Conclusão {#conclusion}
 
-A ponte padrão é o mecanismo mais flexível para transferência de ativos. Porém, por ser genérico não é sempre o mecanismo mais fácil de usar. Especialmente para retiradas, a maioria dos usuários prefere usar [pontes de terceiros](https://www.optimism.io/apps/bridges) a esperar o período de desafio e também não precisar de uma prova de Merkle para finalizar a retirada.
+A ponte padrão é o mecanismo mais flexível para transferência de ativos. Porém, por ser genérico não é sempre o mecanismo mais fácil de usar. Especialmente para retiradas, a maioria dos usuários prefere usar [pontes de terceiros](https://optimism.io/apps#bridge) a esperar o período de desafio e também não precisar de uma prova de Merkle para finalizar a retirada.
 
 Estas pontes tipicamente funcionam tendo ativos na L1, que elas fornecem imediatamente por uma taxa pequena (geralmente menor que o custo de gas para uma retirada de uma ponte padrão). Quando a ponte (ou as pessoas que a administram) antecipa a falta de ativos L1, ela transfere ativos suficientes da L2. Como estes são saques muito grandes, o custo do saque é amortizado por uma larga quantia e é um percentual muito menor.
 

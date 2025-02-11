@@ -1270,7 +1270,7 @@ Si un utilisateur a fait une erreur détectable en utilisant la mauvaise adresse
 
 ## Conclusion {#conclusion}
 
-La passerelle standard est le mécanisme le plus souple pour les transferts d'actifs. Cependant, parce qu'il est si générique, ce n'est pas toujours le mécanisme le plus facile à utiliser. Spécialement pour les retraits, la plupart des utilisateurs préfèrent utiliser des [passerelles tierces](https://www.optimism.io/apps/bridges) qui n'attendent pas la période problématique et ne nécessitent pas de preuve de Merkle pour finaliser le retrait.
+La passerelle standard est le mécanisme le plus souple pour les transferts d'actifs. Cependant, parce qu'il est si générique, ce n'est pas toujours le mécanisme le plus facile à utiliser. Spécialement pour les retraits, la plupart des utilisateurs préfèrent utiliser des [passerelles tierces](https://optimism.io/apps#bridge) qui n'attendent pas la période problématique et ne nécessitent pas de preuve de Merkle pour finaliser le retrait.
 
 Ces passerelles fonctionnent généralement en ayant des actifs sur L1 qu'ils fournissent immédiatement moyennant un petit supplément (souvent inférieur au coût du gaz pour un retrait standard d'une passerelle). Quand la passerelle (ou la personne qui la gère) prévoit d'être en deçà des actifs L1, elle transfère suffisamment d'actifs de L2. Comme il s'agit de retraits très importants, le coût de retrait est amorti sur une somme importante et représente un pourcentage beaucoup plus faible.
 

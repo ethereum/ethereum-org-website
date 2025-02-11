@@ -1270,7 +1270,7 @@ If a user made a detectable error by using the wrong L2 token address, we want t
 
 ## Concluzie {#conclusion}
 
-The standard bridge is the most flexible mechanism for asset transfers. However, because it is so generic it is not always the easiest mechanism to use. Especially for withdrawals, most users prefer to use [third party bridges](https://www.optimism.io/apps/bridges) that do not wait the challenge period and do not require a Merkle proof to finalize the withdrawal.
+The standard bridge is the most flexible mechanism for asset transfers. However, because it is so generic it is not always the easiest mechanism to use. Especially for withdrawals, most users prefer to use [third party bridges](https://optimism.io/apps#bridge) that do not wait the challenge period and do not require a Merkle proof to finalize the withdrawal.
 
 These bridges typically work by having assets on L1, which they provide immediately for a small fee (often less than the cost of gas for a standard bridge withdrawal). When the bridge (or the people running it) anticipates being short on L1 assets it transfers sufficient assets from L2. As these are very big withdrawals, the withdrawal cost is amortized over a large amount and is a much smaller percentage.
 
