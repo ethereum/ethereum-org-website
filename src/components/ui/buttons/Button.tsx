@@ -102,7 +102,6 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     },
     ref
   ) => {
-    console.log("🚀 ~ variant:", variant)
     const handleOnClick = (e: React.MouseEvent<HTMLButtonElement>) => {
       toId && scrollIntoView(toId)
       customEventOptions && trackCustomEvent(customEventOptions)
@@ -110,10 +109,6 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       onClick?.(e)
     }
 
-    console.log(
-      "🚀 ~ buttonVariants({ variant, size, className }):",
-      buttonVariants({ variant, size, className })
-    )
     const Comp = asChild ? Slot : "button"
     return (
       <Comp
