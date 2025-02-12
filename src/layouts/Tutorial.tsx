@@ -24,7 +24,7 @@ import {
 import TableOfContents from "@/components/TableOfContents"
 import TooltipLink from "@/components/TooltipLink"
 import TutorialMetadata from "@/components/TutorialMetadata"
-import { mdxTableComponents } from "@/components/ui/Table"
+import { mdxTableComponents } from "@/components/ui/table"
 import YouTube from "@/components/YouTube"
 
 import { getEditPath } from "@/lib/utils/editPath"
@@ -115,11 +115,11 @@ export const TutorialLayout = ({
         <Heading1>{frontmatter.title}</Heading1>
         <TutorialMetadata frontmatter={frontmatter} timeToRead={timeToRead} />
         <TableOfContents
+          className="pt-8"
           items={tocItems}
           maxDepth={frontmatter.sidebarDepth!}
           editPath={absoluteEditPath}
           isMobile
-          pt={8}
         />
         {children}
         <FileContributors
@@ -130,11 +130,11 @@ export const TutorialLayout = ({
       </MainArticle>
       {tocItems && (
         <TableOfContents
+          className="pt-8"
           items={tocItems}
           maxDepth={frontmatter.sidebarDepth!}
           editPath={absoluteEditPath}
           hideEditButton={!!frontmatter.hideEditButton}
-          pt={8}
         />
       )}
     </div>

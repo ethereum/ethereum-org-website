@@ -186,7 +186,6 @@ export const RSS_DISPLAY_COUNT = 6
 
 export const VITALIK_FEED = "https://vitalik.eth.limo/feed.xml"
 export const SOLIDITY_FEED = "https://soliditylang.org/feed.xml"
-export const _0X_PARC_FEED = "https://rss.app/feeds/cWXGYts0ZM8C3F6t.xml"
 
 export const COMMUNITY_BLOGS: CommunityBlog[] = [
   {
@@ -206,8 +205,8 @@ export const COMMUNITY_BLOGS: CommunityBlog[] = [
     feed: "https://raw.githubusercontent.com/eth-educators/github-actions/refs/heads/main/_data/blog_data.xml",
   },
   {
+    name: "0xPARC",
     href: "https://0xparc.org/blog",
-    feed: _0X_PARC_FEED,
   },
   {
     href: "https://www.attestant.io/posts/",

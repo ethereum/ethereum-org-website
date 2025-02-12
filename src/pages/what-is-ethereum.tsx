@@ -388,10 +388,7 @@ const WhatIsEthereumPage = ({
                         emoji={card.emoji}
                         title={card.title}
                         description={card.description}
-                        flex="1 1 30%"
-                        minW="240px"
-                        m={4}
-                        p={6}
+                        className="m-4 min-w-[240px] flex-[1_1_30%] p-6"
                       />
                     ))}
                   </CardContainer>

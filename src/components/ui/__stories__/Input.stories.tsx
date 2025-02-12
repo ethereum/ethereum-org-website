@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/react/*"
 
-import { VStack } from "../../../src/components/ui/flex"
-import Input from "../Input"
+import { VStack } from "../flex"
+import Input from "../input"
 
 const meta = {
-  title: "Atoms / Form / ShadCN Input",
+  title: "Atoms / Form / Input",
   component: Input,
 } satisfies Meta<typeof Input>
 

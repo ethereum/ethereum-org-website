@@ -7,8 +7,8 @@ import type { LocaleDisplayInfo } from "@/lib/types"
 
 import { cn } from "@/lib/utils/cn"
 
-import { Badge } from "../ui/badge"
 import { CommandItem } from "../ui/command"
+import { Tag } from "../ui/tag"
 
 import ProgressBar from "./ProgressBar"
 
@@ -64,12 +64,9 @@ const MenuItem = ({ displayInfo, ...props }: ItemProps) => {
               {targetName}
             </p>
             {isBrowserDefault && (
-              <Badge
-                className="h-fit-content rounded border-body-medium p-1 text-2xs font-normal uppercase leading-none text-body-medium"
-                variant="outline"
-              >
+              <Tag variant="outline" size="small">
                 {t("page-languages-browser-default")}
-              </Badge>
+              </Tag>
             )}
           </div>
           <p className="text-xs uppercase text-body">{sourceName}</p>
