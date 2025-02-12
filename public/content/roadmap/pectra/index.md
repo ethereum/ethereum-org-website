@@ -12,12 +12,6 @@ Pectra is an upcoming Ethereum protocol upgrade that brings new functionality an
 Pectra upgrade is only a single step in Ethereum's long-term development goals. Learn more about <a href="/roadmap/">the protocol roadmap</a> and <a href="/history/">previous upgrades</a>.
 </InfoBanner>
 
-## Activation and roadmap progress {#roadmap-impact}
-
-With each protocol upgrade, Ethereum evolves further to become a more mature platform with better scalability, security and usability. Each upgrade contains multiple improvements that require a lot of initial research, discussion, and later implementations in clients. After rigorous testing, Pectra will be activated on testnets and finally Mainnet, bringing these improvements to the entire Ethereum ecosystem.
-
-The upgrade includes various updates enabling new functionality in the network but also some internal protocol changes that will open a path towards further development of the future roadmap.
-
 ## Improvements in Pectra {#new-improvements}
 
 Pectra brings the biggest number of [EIPs](https://eips.ethereum.org/) of any previous upgrades! There are many minor changes but also some significant new features. The full list of changes and technical details can be found in the individual included EIPs.
@@ -46,7 +40,7 @@ Currently, network targets average 3 blobs per block with a maximum of 6 blobs. 
 
 Before the introduction of [blobs in Dencun upgrade](/roadmap/danksharding), L2s were using calldata function in EVM to store their data in Ethereum. It's a permanent and less efficient way of storing data, however, sometimes it can be still cheaper than blobs even today.
 
-With Ethereum embracing blobs to store data, (EIP-7623)[https://eips.ethereum.org/EIPS/eip-7623] increases calldata pricing to provide incentive to only use blobs and also offset the computational cost of the network handling the new blob data.
+With Ethereum embracing blobs to store data, [EIP-7623](https://eips.ethereum.org/EIPS/eip-7623) increases calldata pricing to provide incentive to only use blobs and also offset the computational cost of the network handling the new blob data.
 
 ### Execution layer triggerable exits {#7002}
 
