@@ -6,7 +6,8 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 
 import type { BasePageProps, ChildOnlyProp, Lang } from "@/lib/types"
 
-import BugBountyBanner from "@/components/Banners/BugBountyBanner"
+/* Uncomment for Bug Bounty Banner: */
+/* import BugBountyBanner from "@/components/Banners/BugBountyBanner" */
 import Breadcrumbs from "@/components/Breadcrumbs"
 import BugBountyCards from "@/components/BugBountyCards"
 import Card from "@/components/Card"
@@ -382,8 +383,8 @@ const BugBountiesPage = () => {
         title={t("page-upgrades-bug-bounty-meta-title")}
         description={t("page-upgrades-bug-bounty-meta-description")}
       />
-      {/* TODO: Remove on the 25th of January */}
-      <BugBountyBanner />
+      {/* Uncomment for Bug Bounty Banner: */}
+      {/* <BugBountyBanner /> */}
       <Content>
         <HeroCard>
           <HeroContainer>
