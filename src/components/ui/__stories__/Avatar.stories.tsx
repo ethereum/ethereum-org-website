@@ -1,8 +1,7 @@
-import * as React from "react"
-import { AvatarGroup, HStack, VStack } from "@chakra-ui/react"
-import { Meta, StoryObj } from "@storybook/react"
+import type { Meta, StoryObj } from "@storybook/react"
 
-import Avatar from "."
+import { Avatar, AvatarGroup } from "../avatar"
+import { HStack, VStack } from "../flex"
 
 const meta = {
   title: "Atoms / Media & Icons / Avatars",
@@ -15,13 +14,13 @@ type Story = StoryObj<typeof meta>
 
 export const Single: Story = {
   args: {
-    name: "Dan Abrahmov",
+    name: "dan abrahmov",
     src: "https://bit.ly/dan-abramov",
     href: "#",
   },
   render: (args) => (
-    <VStack spacing={4}>
-      {["lg", "md", "sm", "xs"].map((size) => (
+    <VStack className="gap-4">
+      {(["lg", "md", "sm", "xs"] as const).map((size) => (
         <Avatar key={size} size={size} {...args} />
       ))}
     </VStack>
@@ -35,12 +34,12 @@ export const Group: Story = {
     href: "#",
   },
   render: (args) => (
-    <VStack spacing={4}>
-      {["sm", "xs"].map((size) => (
+    <VStack className="gap-4">
+      {(["sm", "xs"] as const).map((size) => (
         <AvatarGroup key={size} size={size} max={3}>
-          <Avatar {...args} />
-          <Avatar {...args} />
-          <Avatar {...args} />
+          <Avatar dataTest="one" {...args} />
+          <Avatar dataTest="two" {...args} />
+          <Avatar dataTest="three" {...args} />
           <Avatar {...args} />
         </AvatarGroup>
       ))}
@@ -51,19 +50,19 @@ export const Group: Story = {
 export const WithUsername: Story = {
   args: {
     name: "Dan Abrahmov",
-    src: "https://bit.ly/dan-abramov",
-    href: "#",
+    src: "http://bit.ly/dan-abramov",
+    href: "http://bit.ly/dan-abramov",
     label: "daneabrahmov",
   },
   render: (args) => (
-    <HStack spacing={16}>
+    <HStack className="gap-4">
       <VStack>
-        {["md", "sm"].map((size, idx) => (
+        {(["md", "sm", "xs"] as const).map((size, idx) => (
           <Avatar key={idx} size={size} {...args} />
         ))}
       </VStack>
       <VStack>
-        {["md", "sm"].map((size, idx) => (
+        {(["md", "sm", "xs"] as const).map((size, idx) => (
           <Avatar key={idx} size={size} direction="column" {...args} />
         ))}
       </VStack>

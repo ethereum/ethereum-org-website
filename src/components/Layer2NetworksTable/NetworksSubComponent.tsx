@@ -236,7 +236,7 @@ const NetworkSubComponent = ({ network }) => {
             <div className="flex flex-col gap-0.5">
               <div>
                 <InlineLink
-                  href={network.growThePieLink}
+                  href={network.growthepieLink}
                   customEventOptions={{
                     eventCategory: "l2_networks",
                     eventAction: "analytics_profiles",

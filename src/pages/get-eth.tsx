@@ -6,8 +6,9 @@ import type { ReactNode } from "react"
 import type { BasePageProps, ChildOnlyProp, Lang } from "@/lib/types"
 
 import CalloutBanner from "@/components/CalloutBanner"
-import type { CardListItem } from "@/components/CardList"
-import CardList from "@/components/CardList"
+import CardList, {
+  type CardProps as CardListCardProps,
+} from "@/components/CardList"
 import CentralizedExchanges from "@/components/CentralizedExchanges"
 import Emoji from "@/components/Emoji"
 import EthPriceCard from "@/components/EthPriceCard"
@@ -40,7 +41,6 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import { useBreakpointValue } from "@/hooks/useBreakpointValue"
 import uniswap from "@/public/images/dapps/uni.png"
 import dapps from "@/public/images/doge-computer.png"
-import oneinch from "@/public/images/exchanges/1inch.png"
 import bancor from "@/public/images/exchanges/bancor.png"
 import kyber from "@/public/images/exchanges/kyber.png"
 import hero from "@/public/images/get-eth.png"
@@ -110,17 +110,11 @@ const GetEthPage = ({
     md: "50%",
   })
 
-  const tokenSwaps: CardListItem[] = [
+  const tokenSwaps: CardListCardProps[] = [
     {
       title: "Uniswap",
       link: "https://app.uniswap.org/#/swap",
       image: uniswap,
-      alt: "",
-    },
-    {
-      title: "1inch",
-      link: "https://1inch.exchange/#/",
-      image: oneinch,
       alt: "",
     },
     {
@@ -137,7 +131,7 @@ const GetEthPage = ({
     },
   ]
 
-  const safetyArticles: CardListItem[] = [
+  const safetyArticles: CardListCardProps[] = [
     {
       title: t("page-get-eth-article-protecting-yourself"),
       link: "https://support.mycrypto.com/staying-safe/protecting-yourself-and-your-funds",

@@ -30,7 +30,7 @@ import TableOfContents from "@/components/TableOfContents"
 import Translation from "@/components/Translation"
 import { Divider } from "@/components/ui/divider"
 import InlineLink from "@/components/ui/Link"
-import { mdxTableComponents } from "@/components/ui/Table"
+import { mdxTableComponents } from "@/components/ui/table"
 import YouTube from "@/components/YouTube"
 
 import { cn } from "@/lib/utils/cn"
@@ -154,11 +154,11 @@ export const DocsLayout = ({
         </MainArticle>
         {tocItems && (
           <TableOfContents
+            className={isPageIncomplete ? "pt-20" : "pt-12"}
             editPath={absoluteEditPath}
             items={tocItems}
             maxDepth={frontmatter.sidebarDepth!}
             hideEditButton={!!frontmatter.hideEditButton}
-            pt={isPageIncomplete ? "5rem" : "3rem"}
           />
         )}
       </div>
