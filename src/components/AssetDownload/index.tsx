@@ -65,7 +65,12 @@ const AssetDownload = ({
           {extname(imgSrc).slice(1).toUpperCase()})
         </ButtonLink>
         {svgUrl && (
-          <ButtonLink href={svgUrl} onClick={matomoHandler} target="_blank">
+          <ButtonLink
+            href={svgUrl}
+            onClick={matomoHandler}
+            target="_blank"
+            locale={false}
+          >
             {t("page-assets-download-download")} (SVG)
           </ButtonLink>
         )}
