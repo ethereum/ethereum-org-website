@@ -74,7 +74,9 @@ export const useNetworkColumns: ColumnDef<ExtendedRollup>[] = [
             <div className="flex flex-row gap-4 lg:hidden">
               <div className="w-[24px]" />
               <div>
-                <p className="text-xs text-body-medium">Avg. transaction fee</p>
+                <p className="text-xs text-body-medium">
+                  <Translation id="page-layer-2-networks:page-layer-2-networks-avg-transaction-fee" />
+                </p>
                 <p>
                   $
                   {row.original.txCosts.toLocaleString(meta.locale as Lang, {
@@ -185,7 +187,8 @@ export const useNetworkColumns: ColumnDef<ExtendedRollup>[] = [
                   </p>
                   <p>
                     <Translation id="page-layer-2-networks:page-layer-2-networks-data-from" />{" "}
-                    <InlineLink href="https://l2beat.com">L2BEAT</InlineLink>.
+                    <InlineLink href="https://l2beat.com">L2BEAT</InlineLink>
+                    <Translation id="page-layer-2-networks:page-layer-2-networks-period" />
                   </p>
                 </div>
               }
