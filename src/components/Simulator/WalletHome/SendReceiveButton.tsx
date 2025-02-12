@@ -41,8 +41,7 @@ export const SendReceiveButton = ({
       )}
     >
       {!isDisabled && isAnimated && <PulseAnimation type="circle" />}
-      {/* TODO: Remove important flags from class utils when simulator icons are migrated to tailwind */}
-      <Icon className="!size-4 !text-background md:!size-6" />
+      <Icon className="size-4 text-background md:size-6" />
     </div>
     <div className="relative">
       <p
