@@ -117,7 +117,7 @@ Berikut adalah beberapa aplikasi perusahaan yang telah digunakan pada Jaringan U
 
 ### Keuangan {#finance}
 
-- [Santander Bank](https://www.coindesk.com/santander-settles-both-sides-of-a-20-million-bond-trade-on-ethereum) _penerbitan dan penyelesaian obligasi_
+- [Santander Bank](https://www.coindesk.com/markets/2019/09/12/santander-settles-both-sides-of-a-20-million-bond-trade-on-ethereum) _penerbitan dan penyelesaian obligasi_
 - [Societe Generale](https://www.societegenerale.com/en/news/newsroom/societe-generale-performs-first-financial-transaction-settled-central-bank-digital) _penerbitan obligasi_
 - [Cadence](https://www.forbes.com/sites/benjaminpirus/2019/10/09/fatburger-and-others-feed-30-million-into-ethereum-for-new-bond-offering/#513870be115b) _penawaran dan tokenisasi obligasi untuk FAT Brands_
 - [Sila](https://silamoney.com/) _perbankan dan infrastructure-as-a-service pembayaran ACH_
