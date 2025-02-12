@@ -19,6 +19,7 @@ const ListenToPlayer = ({ slug }) => {
   const [autoplay, setAutoplay] = useState(true)
   const [playbackSpeed, setPlaybackSpeed] = useState(1)
   const [currentTrackIndex, setCurrentTrackIndex] = useState(index)
+  const [countdown, setCountdown] = useState(0)
   const duration = sound?.duration() ?? 0
 
   useEffect(() => {
@@ -33,7 +34,18 @@ const ListenToPlayer = ({ slug }) => {
       onpause: () => setIsPlaying(false),
       onend: () => {
         if (autoplay && currentTrackIndex < playlist.length - 1) {
-          setCurrentTrackIndex(currentTrackIndex + 1)
+          setCountdown(5)
+          const countdownInterval = setInterval(() => {
+            setCountdown((prev) => Math.max(0, prev - 1))
+          }, 1000)
+          const timer = setTimeout(() => {
+            clearInterval(countdownInterval)
+            setCurrentTrackIndex(currentTrackIndex + 1)
+          }, 5000)
+          return () => {
+            clearTimeout(timer)
+            clearInterval(countdownInterval)
+          }
         } else {
           setIsPlaying(false)
         }
@@ -122,6 +134,11 @@ const ListenToPlayer = ({ slug }) => {
     setPlaybackSpeed(speed)
   }
 
+  const title =
+    countdown > 0
+      ? `Next article in ${countdown}s`
+      : t(playlist[currentTrackIndex].title)
+
   return (
     <>
       <TopOfPagePlayer
@@ -135,7 +152,7 @@ const ListenToPlayer = ({ slug }) => {
         autoplay={autoplay}
         setAutoplay={setAutoplay}
         showWidget={showWidget}
-        title={t(playlist[currentTrackIndex].title)}
+        title={title}
         duration={duration}
         timeRemaining={timeRemaining}
         onSeek={handleSeek}
