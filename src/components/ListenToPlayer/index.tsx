@@ -23,6 +23,9 @@ const ListenToPlayer = ({ slug }) => {
   const duration = sound?.duration() ?? 0
 
   useEffect(() => {
+    // Guard clause to prevent accessing playlist when empty
+    if (!playlist.length || currentTrackIndex === -1) return
+
     const audioPlayer = new Howl({
       src: [playlist[currentTrackIndex].audioFile],
       html5: true,
@@ -139,12 +142,7 @@ const ListenToPlayer = ({ slug }) => {
     setPlaybackSpeed(speed)
   }
 
-  const title =
-    countdown > 0
-      ? `Next article in ${countdown}s`
-      : t(playlist[currentTrackIndex].title)
-
-  return (
+  return playlist.length > 0 && index !== -1 ? (
     <>
       <TopOfPagePlayer
         duration={duration}
@@ -157,7 +155,11 @@ const ListenToPlayer = ({ slug }) => {
         autoplay={autoplay}
         setAutoplay={setAutoplay}
         showWidget={showWidget}
-        title={title}
+        title={
+          countdown > 0
+            ? `Next article in ${countdown}s`
+            : t(playlist[currentTrackIndex].title)
+        }
         duration={duration}
         timeRemaining={timeRemaining}
         onSeek={handleSeek}
@@ -170,6 +172,8 @@ const ListenToPlayer = ({ slug }) => {
         handleCloseWidget={handleCloseWidget}
       />
     </>
+  ) : (
+    <></>
   )
 }
 

@@ -7,29 +7,29 @@ import whatIsEthereumAudio from "@/audio/what-is-ethereum/what-is-ethereum.mp3"
 export const listenToPlaylists = {
   learn: [
     {
-      title: "what-is-ether",
-      audioFile: ethAudio,
-      slug: "/eth",
+      title: "what-is-ethereum",
+      audioFile: whatIsEthereumAudio,
+      slug: "/what-is-ethereum/",
     },
     {
-      title: "smart-contracts",
-      audioFile: smartContractsAudio,
-      slug: "/smart-contracts",
+      title: "what-is-ether",
+      audioFile: ethAudio,
+      slug: "/eth/",
     },
     {
       title: "wallets",
       audioFile: walletsAudio,
-      slug: "/wallets",
+      slug: "/wallets/",
     },
     {
       title: "web3",
       audioFile: web3Audio,
-      slug: "/web3",
+      slug: "/web3/",
     },
     {
-      title: "what-is-ethereum",
-      audioFile: whatIsEthereumAudio,
-      slug: "/what-is-ethereum",
+      title: "smart-contracts",
+      audioFile: smartContractsAudio,
+      slug: "/smart-contracts/",
     },
   ],
 }
@@ -46,5 +46,5 @@ export const getPlaylistBySlug = (
       return { playlist, index }
     }
   }
-  throw new Error(`Playlist with slug "${slug}" not found`)
+  return { playlist: [], index: -1 }
 }

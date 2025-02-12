@@ -22,6 +22,7 @@ import HorizontalCard, {
   HorizontalCardProps,
 } from "@/components/HorizontalCard"
 import { Image } from "@/components/Image"
+import ListenToPlayer from "@/components/ListenToPlayer"
 import MainArticle from "@/components/MainArticle"
 import OldHeading from "@/components/OldHeading"
 import Text from "@/components/OldText"
@@ -148,7 +149,7 @@ export const getStaticProps = (async ({ locale }) => {
 }) satisfies GetStaticProps<BasePageProps>
 
 const WalletsPage = () => {
-  const { locale } = useRouter()
+  const { locale, asPath } = useRouter()
   const { t } = useTranslation("page-wallets")
 
   const heroContent = {
@@ -296,6 +297,9 @@ const WalletsPage = () => {
       />
       <PageHero content={heroContent} isReverse />
       <GrayContainer>
+        <Content mb={-8}>
+          <ListenToPlayer slug={asPath} />
+        </Content>
         <Intro>
           <H2>{t("page-wallets-whats-a-wallet")}</H2>
         </Intro>

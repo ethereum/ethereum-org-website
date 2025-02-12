@@ -1,4 +1,5 @@
 import { GetStaticProps } from "next"
+import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import type { ComponentProps } from "react"
@@ -26,6 +27,7 @@ import HorizontalCard from "@/components/HorizontalCard"
 import { Image } from "@/components/Image"
 import InfoBanner from "@/components/InfoBanner"
 import InlineLink from "@/components/Link"
+import ListenToPlayer from "@/components/ListenToPlayer"
 import MainArticle from "@/components/MainArticle"
 import OldHeading from "@/components/OldHeading"
 import Text from "@/components/OldText"
@@ -266,6 +268,7 @@ export const getStaticProps = (async ({ locale }) => {
 
 const EthPage = () => {
   const { t } = useTranslation("page-eth")
+  const { asPath } = useRouter()
 
   const tokens = [
     {
@@ -391,6 +394,9 @@ const EthPage = () => {
       </Content>
       <GrayContainer>
         <Content>
+          <div className="mb-8">
+            <ListenToPlayer slug={asPath} />
+          </div>
           <Intro>
             <Text>{t("page-eth-description")} </Text>
           </Intro>
