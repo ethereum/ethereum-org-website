@@ -288,7 +288,7 @@ Controlla la [documentazione per tutte le opzioni di configurazione](https://get
 
 ##### Eseguire Nethermind
 
-Nethermind offre varie [opzioni d'installazione](https://docs.nethermind.io/first-steps-with-nethermind/getting-started). Il pacchetto presenta vari binari, incluso un Launcher con una configurazione guidata, che ti aiuterà a creare la configurazione in modo interattivo. In alternativa trovi Runner, che è l'eseguibile stesso, e puoi eseguirlo coi flag di configurazione. JSON-RPC è abilitato di default.
+Nethermind offre varie [opzioni d'installazione](https://docs.nethermind.io/get-started/installing-nethermind). Il pacchetto presenta vari binari, incluso un Launcher con una configurazione guidata, che ti aiuterà a creare la configurazione in modo interattivo. In alternativa trovi Runner, che è l'eseguibile stesso, e puoi eseguirlo coi flag di configurazione. JSON-RPC è abilitato di default.
 
 ```sh
 Nethermind.Runner --config mainnet \

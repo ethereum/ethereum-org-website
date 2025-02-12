@@ -288,7 +288,7 @@ geth --mainnet \
 
 ##### Ausführen von Nethermind
 
-Nethermind bietet verschiedene [Installationsoptionen](https://docs.nethermind.io/first-steps-with-nethermind/getting-started). Das Paket enthält verschiedene Binärdateien, darunter einen Launcher mit einem geführten Setup, mit dem Sie die Konfiguration interaktiv erstellen können. Alternativ finden Sie Runner, das die ausführbare Datei selbst ist, und Sie können sie einfach mit Konfigurationsflaggen ausführen. JSON-RPC ist standardmäßig aktiviert.
+Nethermind bietet verschiedene [Installationsoptionen](https://docs.nethermind.io/get-started/installing-nethermind). Das Paket enthält verschiedene Binärdateien, darunter einen Launcher mit einem geführten Setup, mit dem Sie die Konfiguration interaktiv erstellen können. Alternativ finden Sie Runner, das die ausführbare Datei selbst ist, und Sie können sie einfach mit Konfigurationsflaggen ausführen. JSON-RPC ist standardmäßig aktiviert.
 
 ```sh
 Nethermind.Runner --config mainnet \

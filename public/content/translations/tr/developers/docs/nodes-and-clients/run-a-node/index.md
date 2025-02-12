@@ -288,7 +288,7 @@ geth --mainnet \
 
 ##### Nethermind'ı Çalıştırmak
 
-Nethermind çeşitli [kurulum seçenekleri](https://docs.nethermind.io/first-steps-with-nethermind/getting-started) sunar. Paket çeşitli dosyalarla gelir, bunlara yapılandırmayı etkileşimli bir şekilde oluşturmanıza yardımcı olacak kılavuzlu kurulumu olan bir Başlatıcı dahildir. Alternatif olarak, çalıştırılabilir dosyanın kendisi olan Çalıştırıcı'yı bulacaksınız ve bunu sadece yapılandırma bayrakları ile çalıştırabilirsiniz. JSON-RPC varsayılan olarak etkindir.
+Nethermind çeşitli [kurulum seçenekleri](https://docs.nethermind.io/get-started/installing-nethermind) sunar. Paket çeşitli dosyalarla gelir, bunlara yapılandırmayı etkileşimli bir şekilde oluşturmanıza yardımcı olacak kılavuzlu kurulumu olan bir Başlatıcı dahildir. Alternatif olarak, çalıştırılabilir dosyanın kendisi olan Çalıştırıcı'yı bulacaksınız ve bunu sadece yapılandırma bayrakları ile çalıştırabilirsiniz. JSON-RPC varsayılan olarak etkindir.
 
 ```sh
 Nethermind.Runner --config mainnet \

@@ -288,7 +288,7 @@ geth --mainnet \
 
 ##### Nethermindの実行
 
-Nethermindは、さまざまな[インストールオプション](https://docs.nethermind.io/first-steps-with-nethermind/getting-started)を提供しています。 パッケージには、ガイド付きセットアップ機能を備えたランチャーなどのさまざまなバイナリが含まれており、インタラクティブに設定できます。 他にも、設定フラグを付けて実行できるランナーなどがあります。 JSON-RPCはデフォルトで有効になっています。
+Nethermindは、さまざまな[インストールオプション](https://docs.nethermind.io/get-started/installing-nethermind)を提供しています。 パッケージには、ガイド付きセットアップ機能を備えたランチャーなどのさまざまなバイナリが含まれており、インタラクティブに設定できます。 他にも、設定フラグを付けて実行できるランナーなどがあります。 JSON-RPCはデフォルトで有効になっています。
 
 ```sh
 Nethermind.Runner --config mainnet \

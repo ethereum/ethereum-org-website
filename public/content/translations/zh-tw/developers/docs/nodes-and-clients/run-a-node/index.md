@@ -288,7 +288,7 @@ geth --mainnet \
 
 ##### 運行 Nethermind
 
-Nethermind 提供多種 [安裝選項](https://docs.nethermind.io/first-steps-with-nethermind/getting-started)。 此套件包含許多二進位檔案，包括有引導式設定的啟動器，可以互動式幫助你建立設定。 或者，你可以找到可執行執行器，並使用設定標記執行它。 JSON-RPC 是預設啟用的。
+Nethermind 提供多種 [安裝選項](https://docs.nethermind.io/get-started/installing-nethermind)。 此套件包含許多二進位檔案，包括有引導式設定的啟動器，可以互動式幫助你建立設定。 或者，你可以找到可執行執行器，並使用設定標記執行它。 JSON-RPC 是預設啟用的。
 
 ```sh
 Nethermind.Runner --config mainnet \

@@ -289,7 +289,7 @@ Check [docs for all configuration options](https://geth.ethereum.org/docs/fundam
 
 ##### Running Nethermind
 
-Nethermind offers various [installation options](https://docs.nethermind.io/first-steps-with-nethermind/getting-started). The package comes with various binaries, including a Launcher with a guided setup, which will help you to create the configuration interactively. Alternatively, you find Runner which is the executable itself and you can just run it with config flags. JSON-RPC is enabled by default.
+Nethermind offers various [installation options](https://docs.nethermind.io/get-started/installing-nethermind). The package comes with various binaries, including a Launcher with a guided setup, which will help you to create the configuration interactively. Alternatively, you find Runner which is the executable itself and you can just run it with config flags. JSON-RPC is enabled by default.
 
 ```sh
 Nethermind.Runner --config mainnet \

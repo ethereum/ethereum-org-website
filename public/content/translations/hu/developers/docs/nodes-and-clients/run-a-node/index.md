@@ -288,7 +288,7 @@ Tekintse meg a [dokumentációt az összes konfigurálási opcióhoz](https://ge
 
 ##### A Nethermind futtatása
 
-A Nethermind különféle [telepítési opciókat](https://docs.nethermind.io/first-steps-with-nethermind/getting-started) kínál. A csomag számos binárist tartalmaz, beleértve egy Telepítőt, ami egy vezetett felállítást tesz lehetővé, így a konfigurációt interaktív módon lehet létrehozni. Másik megoldásként használhatja a Runner-t is, ami a végrehajtási program maga, és konfigurációs jelölőkkel futtathatja. A JSON-RPC alapból engedélyezve van.
+A Nethermind különféle [telepítési opciókat](https://docs.nethermind.io/get-started/installing-nethermind) kínál. A csomag számos binárist tartalmaz, beleértve egy Telepítőt, ami egy vezetett felállítást tesz lehetővé, így a konfigurációt interaktív módon lehet létrehozni. Másik megoldásként használhatja a Runner-t is, ami a végrehajtási program maga, és konfigurációs jelölőkkel futtathatja. A JSON-RPC alapból engedélyezve van.
 
 ```sh
 Nethermind.Runner --config mainnet \
