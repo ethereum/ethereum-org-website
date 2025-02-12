@@ -1,17 +1,46 @@
-import { Meta, StoryObj } from "@storybook/react"
+import type { Meta, StoryObj } from "@storybook/react"
 
-import ListenToPlayerComponent from "."
+import { langViewportModes } from "../../../.storybook/modes"
+import { BaseLayout as BaseLayoutComponent } from "../../layouts/BaseLayout"
+
+import ListenToPlayer from "."
 
 const meta = {
   title: "Atoms / Media & Icons / ListenToPlayer / ListenToPlayer",
-  component: ListenToPlayerComponent,
-  args: {
-    slug: "/eth",
+  component: BaseLayoutComponent,
+  parameters: {
+    layout: "fullscreen",
+    chromatic: {
+      modes: {
+        ...langViewportModes,
+      },
+    },
   },
-} satisfies Meta<typeof ListenToPlayerComponent>
+  argTypes: {
+    children: {
+      table: {
+        disable: true,
+      },
+    },
+    lastDeployLocaleTimestamp: {
+      table: {
+        disable: true,
+      },
+    },
+  },
+} satisfies Meta<typeof BaseLayoutComponent>
 
 export default meta
 
-type Story = StoryObj<typeof meta>
-
-export const ListenToPlayer: Story = {}
+export const BaseLayout: StoryObj<typeof meta> = {
+  args: {
+    children: (
+      <div className="flex w-full flex-col items-center gap-4 px-8 py-9 md:flex-row">
+        <ListenToPlayer slug="/eth" />
+      </div>
+    ),
+    contentIsOutdated: false,
+    contentNotTranslated: false,
+    lastDeployLocaleTimestamp: "May 14, 2021",
+  },
+}

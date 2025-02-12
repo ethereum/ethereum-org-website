@@ -103,6 +103,11 @@ const ListenToPlayer = ({ slug }) => {
     }
   }
 
+  const handleCloseWidget = () => {
+    setShowWidget(false)
+    sound?.pause()
+  }
+
   const handleSeek = (time: number) => {
     if (!sound) return
     sound.seek(time)
@@ -162,7 +167,7 @@ const ListenToPlayer = ({ slug }) => {
         handleNext={handleNext}
         playbackSpeed={playbackSpeed}
         handlePlaybackSpeed={handlePlaybackSpeed}
-        setShowWidget={setShowWidget}
+        handleCloseWidget={handleCloseWidget}
       />
     </>
   )

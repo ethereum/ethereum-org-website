@@ -24,7 +24,7 @@ interface PlayerWidgetProps {
   handleNext: () => void
   playbackSpeed: number
   handlePlaybackSpeed: (playbackSpeed: number) => void
-  setShowWidget: (showWidget: boolean) => void
+  handleCloseWidget: () => void
 }
 
 const PlayerWidget = ({
@@ -41,7 +41,7 @@ const PlayerWidget = ({
   handleNext,
   playbackSpeed,
   handlePlaybackSpeed,
-  setShowWidget,
+  handleCloseWidget,
 }: PlayerWidgetProps) => {
   const [isExpanded, setIsExpanded] = useState(true)
   const [isDragging, setIsDragging] = useState(false)
@@ -106,7 +106,11 @@ const PlayerWidget = ({
 
   return (
     <div
-      className={` ${showWidget ? "block" : "hidden"} border shadow-player-widget-shadow ${isExpanded ? "w-80 rounded-2xl px-4 py-4" : "w-56 rounded-t-2xl px-2 py-2"} `}
+      className={` ${showWidget ? "block" : "hidden"} border bg-background shadow-player-widget-shadow ${
+        isExpanded
+          ? "w-80 rounded-2xl px-4 py-4"
+          : "w-80 rounded-t-2xl px-2 py-2"
+      } fixed ${isExpanded ? "bottom-4" : "bottom-0"} right-5 z-[9999]`}
     >
       <div className={`flex flex-col gap-2 ${isExpanded ? "block" : "hidden"}`}>
         <div className="flex justify-between">
@@ -219,7 +223,7 @@ const PlayerWidget = ({
             <IoClose
               onClick={() => {
                 setIsExpanded(!isExpanded)
-                setShowWidget(false)
+                handleCloseWidget()
               }}
             />
           </div>
