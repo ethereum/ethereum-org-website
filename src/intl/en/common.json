@@ -441,5 +441,8 @@
   "withdrawals": "Staking withdrawals",
   "wrapped-ether": "Wrapped Ether",
   "yes": "Yes",
-  "zero-knowledge-proofs": "Zero-knowledge proofs"
+  "zero-knowledge-proofs": "Zero-knowledge proofs",
+  "contributor-quiz-banner-title": "Unsure where to start?",
+  "contributor-quiz-banner-description": "Take a quick quiz and find out how you can contribute on ethereum.org.",
+  "contributor-quiz-banner-button": "Take a quiz"
 }
