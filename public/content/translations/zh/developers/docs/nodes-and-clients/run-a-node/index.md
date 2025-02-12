@@ -256,7 +256,7 @@ Besu 还带有一个启动器选项，它会询问一系列问题并生成配置
 besu --Xlauncher
 ```
 
-[Besu 相关文档](https://besu.hyperledger.org/en/latest/HowTo/Get-Started/Starting-node/)包含更多选项和配置详细信息。
+[Besu 相关文档](https://besu.hyperledger.org/public-networks/get-started/start-node/)包含更多选项和配置详细信息。
 
 ##### 运行 Erigon
 

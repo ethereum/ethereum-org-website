@@ -256,7 +256,7 @@ Besu में एक लॉन्चर विकल्प भी आता ह
 besu --Xlauncher
 ```
 
-[Besu का प्रलेखन](https://besu.hyperledger.org/en/latest/HowTo/Get-Started/Starting-node/) अतिरिक्त विकल्प और कॉन्फ़िगरेशन विवरण शामिल करता है।
+[Besu का प्रलेखन](https://besu.hyperledger.org/public-networks/get-started/start-node/) अतिरिक्त विकल्प और कॉन्फ़िगरेशन विवरण शामिल करता है।
 
 ##### Erigon चलाना
 

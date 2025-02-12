@@ -256,7 +256,7 @@ Besu همچنین دارای یک گزینه لانچر است که یک سری 
 besu --Xlauncher
 ```
 
-[اسناد Besu](https://besu.hyperledger.org/en/latest/HowTo/Get-Started/Starting-node/) حاوی گزینه‌های اضافی و جزئیات پیکربندی است.
+[اسناد Besu](https://besu.hyperledger.org/public-networks/get-started/start-node/) حاوی گزینه‌های اضافی و جزئیات پیکربندی است.
 
 ##### اجرای Erigon
 

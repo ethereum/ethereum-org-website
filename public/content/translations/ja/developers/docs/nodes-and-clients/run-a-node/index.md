@@ -256,7 +256,7 @@ Besuには、一連の質問に答えることで設定ファイルを生成で�
 besu --Xlauncher
 ```
 
-[Besuのドキュメント](https://besu.hyperledger.org/en/latest/HowTo/Get-Started/Starting-node/)で、追加のオプションと設定の詳細を参照してください。
+[Besuのドキュメント](https://besu.hyperledger.org/public-networks/get-started/start-node/)で、追加のオプションと設定の詳細を参照してください。
 
 ##### Erigonの実行
 

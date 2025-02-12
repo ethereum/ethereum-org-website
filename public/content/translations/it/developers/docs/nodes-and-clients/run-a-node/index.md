@@ -256,7 +256,7 @@ Besu presenta inoltre un'opzione del launcher che porrà una serie di domande e 
 besu --Xlauncher
 ```
 
-La [documentazione di Besu](https://besu.hyperledger.org/en/latest/HowTo/Get-Started/Starting-node/) contiene le opzioni aggiuntive e i dettagli di configurazione.
+La [documentazione di Besu](https://besu.hyperledger.org/public-networks/get-started/start-node/) contiene le opzioni aggiuntive e i dettagli di configurazione.
 
 ##### Eseguire Erigon
 

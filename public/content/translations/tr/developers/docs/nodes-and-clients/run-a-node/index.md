@@ -256,7 +256,7 @@ Besu aynı zamanda birtakım sorular soran ve yapılandırma dosyasını oluştu
 besu --Xlauncher
 ```
 
-[Besu'nun dokümanlarını](https://besu.hyperledger.org/en/latest/HowTo/Get-Started/Starting-node/) daha fazla seçenek ve yapılandırma detayları içerir.
+[Besu'nun dokümanlarını](https://besu.hyperledger.org/public-networks/get-started/start-node/) daha fazla seçenek ve yapılandırma detayları içerir.
 
 ##### Erigon'u Çalıştırmak
 

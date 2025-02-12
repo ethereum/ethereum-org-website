@@ -256,7 +256,7 @@ A Besu egy telepítő opcióval bír, mely egy sor kérdést tesz fel, majd lege
 besu --Xlauncher
 ```
 
-A [Besu dokumentációja](https://besu.hyperledger.org/en/latest/HowTo/Get-Started/Starting-node/) további opciókat és konfigurációs részleteket tartalmaz.
+A [Besu dokumentációja](https://besu.hyperledger.org/public-networks/get-started/start-node/) további opciókat és konfigurációs részleteket tartalmaz.
 
 ##### Az Erigon futtatása
 

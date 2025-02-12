@@ -256,7 +256,7 @@ O Besu também vem com uma opção de inicializador, que fará uma série de per
 besu --Xlauncher
 ```
 
-A [documentação do Besu](https://besu.hyperledger.org/en/latest/HowTo/Get-Started/Starting-node/) contém opções adicionais e detalhes de configuração.
+A [documentação do Besu](https://besu.hyperledger.org/public-networks/get-started/start-node/) contém opções adicionais e detalhes de configuração.
 
 ##### Executando o Erigon
 
