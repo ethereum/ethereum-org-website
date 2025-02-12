@@ -71,6 +71,7 @@ import {
   BLOGS_WITHOUT_FEED,
   CALENDAR_DISPLAY_COUNT,
   GITHUB_REPO_URL,
+  LOCALES_CODES,
   RSS_DISPLAY_COUNT,
 } from "@/lib/constants"
 
@@ -79,7 +80,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "../components/ui/accordion"
+} from "../../components/ui/accordion"
 
 import { useClipboard } from "@/hooks/useClipboard"
 import { fetchCommunityEvents } from "@/lib/api/calendarEvents"
@@ -117,6 +118,10 @@ type Props = BasePageProps & {
   rssData: { rssItems: RSSItem[]; blogLinks: CommunityBlog[] }
 }
 
+type Params = {
+  locale: string
+}
+
 // In seconds
 const REVALIDATE_TIME = BASE_TIME_UNIT * 1
 
@@ -133,7 +138,16 @@ const loadData = dataLoader(
   REVALIDATE_TIME * 1000
 )
 
-export const getStaticProps = (async ({ locale }) => {
+export async function getStaticPaths() {
+  return {
+    paths: LOCALES_CODES.map((locale) => ({ params: { locale } })),
+    fallback: false,
+  }
+}
+
+export const getStaticProps = (async ({ params }) => {
+  const { locale } = params || {}
+
   const [
     ethPrice,
     totalEthStaked,
@@ -185,7 +199,7 @@ export const getStaticProps = (async ({ locale }) => {
 
   return {
     props: {
-      messages: (await import(`../intl/${locale}/common.json`)).default,
+      messages: (await import(`../../intl/${locale}/common.json`)).default,
       calendar,
       contentNotTranslated,
       lastDeployLocaleTimestamp,
@@ -193,7 +207,7 @@ export const getStaticProps = (async ({ locale }) => {
       rssData: { rssItems, blogLinks },
     },
   }
-}) satisfies GetStaticProps<Props>
+}) satisfies GetStaticProps<Props, Params>
 
 const HomePage = ({
   calendar,

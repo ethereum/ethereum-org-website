@@ -31,7 +31,7 @@ const App = ({ Component, pageProps }: AppPropsWithLayout) => {
 
   return (
     <NextIntlClientProvider
-      locale={router.locale}
+      locale={router.query.locale as string}
       timeZone="Europe/Vienna" // TODO: get from locale?
       messages={pageProps.messages}
     >
