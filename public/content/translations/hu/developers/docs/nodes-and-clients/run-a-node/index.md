@@ -288,7 +288,7 @@ Tekintse meg a [dokumentációt az összes konfigurálási opcióhoz](https://ge
 
 ##### A Nethermind futtatása
 
-A Nethermind különféle [telepítési opciókat](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/getting-started) kínál. A csomag számos binárist tartalmaz, beleértve egy Telepítőt, ami egy vezetett felállítást tesz lehetővé, így a konfigurációt interaktív módon lehet létrehozni. Másik megoldásként használhatja a Runner-t is, ami a végrehajtási program maga, és konfigurációs jelölőkkel futtathatja. A JSON-RPC alapból engedélyezve van.
+A Nethermind különféle [telepítési opciókat](https://docs.nethermind.io/first-steps-with-nethermind/getting-started) kínál. A csomag számos binárist tartalmaz, beleértve egy Telepítőt, ami egy vezetett felállítást tesz lehetővé, így a konfigurációt interaktív módon lehet létrehozni. Másik megoldásként használhatja a Runner-t is, ami a végrehajtási program maga, és konfigurációs jelölőkkel futtathatja. A JSON-RPC alapból engedélyezve van.
 
 ```sh
 Nethermind.Runner --config mainnet \
@@ -296,7 +296,7 @@ Nethermind.Runner --config mainnet \
     --JsonRpc.JwtSecretFile=/path/to/jwtsecret
 ```
 
-A Nethermind dokumentációk egy [teljeskörű útmutatót](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/running-nethermind-post-merge) adnak arról, hogyan lehet a Nethermind-ot konszenzusos klienssel működtetni.
+A Nethermind dokumentációk egy [teljeskörű útmutatót](https://docs.nethermind.io/first-steps-with-nethermind/running-nethermind-post-merge) adnak arról, hogyan lehet a Nethermind-ot konszenzusos klienssel működtetni.
 
 A végrehajtási kliens elindítja a fő funkcióit, a kiválasztott végpontokat, és társakat keres. Miután sikeresen felfedezte a társait, elkezd szinkronizálni. A végrehajtási kliens kapcsolódásra vár a konszenzusos klienstől. A jelenlegi blokkláncadatok elérhetők lesznek, amint a kliens sikeresen szinkronizál a jelen státuszhoz.
 

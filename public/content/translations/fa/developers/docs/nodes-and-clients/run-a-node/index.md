@@ -288,7 +288,7 @@ geth --mainnet \
 
 ##### اجرای Nethermind
 
-Nethermind [گزینه های نصب](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/getting-started) مختلفی را ارائه می دهد. این بسته با باینری‌های مختلف، از جمله یک لانچر با راه‌اندازی هدایت‌شده ارائه می‌شود که به شما در ایجاد پیکربندی به صورت تعاملی کمک می‌کند. از طرف دیگر، Runner را پیدا می‌کنید که خود فایل اجرایی است و فقط می‌توانید آن را با پرچم‌های پیکربندی اجرا کنید. JSON-RPC به‌صورت پیش‌فرض فعال است.
+Nethermind [گزینه های نصب](https://docs.nethermind.io/first-steps-with-nethermind/getting-started) مختلفی را ارائه می دهد. این بسته با باینری‌های مختلف، از جمله یک لانچر با راه‌اندازی هدایت‌شده ارائه می‌شود که به شما در ایجاد پیکربندی به صورت تعاملی کمک می‌کند. از طرف دیگر، Runner را پیدا می‌کنید که خود فایل اجرایی است و فقط می‌توانید آن را با پرچم‌های پیکربندی اجرا کنید. JSON-RPC به‌صورت پیش‌فرض فعال است.
 
 ```sh
 Nethermind.Runner --config mainnet \
@@ -296,7 +296,7 @@ Nethermind.Runner --config mainnet \
     --JsonRpc.JwtSecretFile=/path/to/jwtsecret
 ```
 
-اسناد Nethermind یک [راهنمای کامل](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/running-nethermind-post-merge) در مورد اجرای Nethermind با کلاینت اجماع ارائه می دهد.
+اسناد Nethermind یک [راهنمای کامل](https://docs.nethermind.io/first-steps-with-nethermind/running-nethermind-post-merge) در مورد اجرای Nethermind با کلاینت اجماع ارائه می دهد.
 
 یک کلاینت اجرا، توابع اصلی، نقاط پایانی انتخابی خود را آغاز می کند و شروع به جستجوی همتا می کند. پس از یافتن موفق همتایان، کلاینت شروع به همگام‌سازی می‌کند. کلاینت اجرا منتظر اتصال از سمت کلاینت اجماع خواهد بود. داده‌های کنونی زنجیره‌ی بلوکی زمانی آماده خواهد بود که کلاینت به‌طور موفقیت‌آمیز با وضعیت فعلی همگام‌سازی کرده باشد.
 

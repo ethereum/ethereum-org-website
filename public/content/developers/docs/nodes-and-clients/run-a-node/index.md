@@ -289,7 +289,7 @@ Check [docs for all configuration options](https://geth.ethereum.org/docs/fundam
 
 ##### Running Nethermind
 
-Nethermind offers various [installation options](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/getting-started). The package comes with various binaries, including a Launcher with a guided setup, which will help you to create the configuration interactively. Alternatively, you find Runner which is the executable itself and you can just run it with config flags. JSON-RPC is enabled by default.
+Nethermind offers various [installation options](https://docs.nethermind.io/first-steps-with-nethermind/getting-started). The package comes with various binaries, including a Launcher with a guided setup, which will help you to create the configuration interactively. Alternatively, you find Runner which is the executable itself and you can just run it with config flags. JSON-RPC is enabled by default.
 
 ```sh
 Nethermind.Runner --config mainnet \
@@ -297,7 +297,7 @@ Nethermind.Runner --config mainnet \
     --JsonRpc.JwtSecretFile=/path/to/jwtsecret
 ```
 
-Nethermind docs offer a [complete guide](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/running-nethermind-post-merge) on running Nethermind with consensus client.
+Nethermind docs offer a [complete guide](https://docs.nethermind.io/first-steps-with-nethermind/running-nethermind-post-merge) on running Nethermind with consensus client.
 
 An execution client will initiate its core functions, chosen endpoints, and start looking for peers. After successfully discovering peers, the client starts synchronization. The execution client will await a connection from consensus client. Current blockchain data will be available once the client is successfully synced to the current state.
 

@@ -288,7 +288,7 @@ geth --mainnet \
 
 ##### 運行 Nethermind
 
-Nethermind 提供多種 [安裝選項](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/getting-started)。 此套件包含許多二進位檔案，包括有引導式設定的啟動器，可以互動式幫助你建立設定。 或者，你可以找到可執行執行器，並使用設定標記執行它。 JSON-RPC 是預設啟用的。
+Nethermind 提供多種 [安裝選項](https://docs.nethermind.io/first-steps-with-nethermind/getting-started)。 此套件包含許多二進位檔案，包括有引導式設定的啟動器，可以互動式幫助你建立設定。 或者，你可以找到可執行執行器，並使用設定標記執行它。 JSON-RPC 是預設啟用的。
 
 ```sh
 Nethermind.Runner --config mainnet \
@@ -296,7 +296,7 @@ Nethermind.Runner --config mainnet \
     --JsonRpc.JwtSecretFile=/path/to/jwtsecret
 ```
 
-Nethermind 文檔提供了與共識用戶端一起運行 Nethermind 的 [完整指南](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/running-nethermind-post-merge)。
+Nethermind 文檔提供了與共識用戶端一起運行 Nethermind 的 [完整指南](https://docs.nethermind.io/first-steps-with-nethermind/running-nethermind-post-merge)。
 
 執行用戶端會啟用它的核心功能、選擇端點並開始尋找對等用戶端。 成功發現對等用戶端後，用戶端開始同步。 執行用戶端會等待來自共識用戶端的連接。 在用戶端成功與目前狀態同步以後，目前的區塊鏈資料就可以使用。
 

@@ -288,7 +288,7 @@ geth --mainnet \
 
 ##### Nethermind'ı Çalıştırmak
 
-Nethermind çeşitli [kurulum seçenekleri](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/getting-started) sunar. Paket çeşitli dosyalarla gelir, bunlara yapılandırmayı etkileşimli bir şekilde oluşturmanıza yardımcı olacak kılavuzlu kurulumu olan bir Başlatıcı dahildir. Alternatif olarak, çalıştırılabilir dosyanın kendisi olan Çalıştırıcı'yı bulacaksınız ve bunu sadece yapılandırma bayrakları ile çalıştırabilirsiniz. JSON-RPC varsayılan olarak etkindir.
+Nethermind çeşitli [kurulum seçenekleri](https://docs.nethermind.io/first-steps-with-nethermind/getting-started) sunar. Paket çeşitli dosyalarla gelir, bunlara yapılandırmayı etkileşimli bir şekilde oluşturmanıza yardımcı olacak kılavuzlu kurulumu olan bir Başlatıcı dahildir. Alternatif olarak, çalıştırılabilir dosyanın kendisi olan Çalıştırıcı'yı bulacaksınız ve bunu sadece yapılandırma bayrakları ile çalıştırabilirsiniz. JSON-RPC varsayılan olarak etkindir.
 
 ```sh
 Nethermind.Runner --config mainnet \
@@ -296,7 +296,7 @@ Nethermind.Runner --config mainnet \
     --JsonRpc.JwtSecretFile=/path/to/jwtsecret
 ```
 
-Nethermind dokümanları Nethermind'ı bir fikir birliği istemcisi ile çalıştırmak üzerine [tam bir kılavuz](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/running-nethermind-post-merge) sunar.
+Nethermind dokümanları Nethermind'ı bir fikir birliği istemcisi ile çalıştırmak üzerine [tam bir kılavuz](https://docs.nethermind.io/first-steps-with-nethermind/running-nethermind-post-merge) sunar.
 
 Bir yürütüm istemcisi çekirdek fonksiyonlarını ve seçili uç noktalarını başlatacak ve eşleri aramaya başlayacaktır. İstemci, eşlerini başarılı bir şekilde bulduktan sonra senkronizasyonu başlatır. Yürütüm istemcisi fikir birliği istemcisinden bir bağlantı bekleyecektir. İstemci mevcut duruma başarılı şekilde senkronize edildiğinde mevcut blok zincir verisi mevcut olacaktır.
 

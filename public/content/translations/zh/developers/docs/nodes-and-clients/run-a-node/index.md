@@ -288,7 +288,7 @@ geth --mainnet \
 
 ##### 运行 Nethermind
 
-Nethermind 提供各种[安装选项](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/getting-started)。 该软件包附带各种二进制文件，包括一个带有引导式设置的启动器，它将帮助你以交互方式创建配置。 或者，你会找到可执行文件 Runner，并且可以使用配置标记运行它。 默认情况下已启用 JSON-RPC。
+Nethermind 提供各种[安装选项](https://docs.nethermind.io/first-steps-with-nethermind/getting-started)。 该软件包附带各种二进制文件，包括一个带有引导式设置的启动器，它将帮助你以交互方式创建配置。 或者，你会找到可执行文件 Runner，并且可以使用配置标记运行它。 默认情况下已启用 JSON-RPC。
 
 ```sh
 Nethermind.Runner --config mainnet \
@@ -296,7 +296,7 @@ Nethermind.Runner --config mainnet \
     --JsonRpc.JwtSecretFile=/path/to/jwtsecret
 ```
 
-Nethermind 相关文档提供了有关运行 Nethermind 和共识客户端的[完整指南](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/running-nethermind-post-merge)。
+Nethermind 相关文档提供了有关运行 Nethermind 和共识客户端的[完整指南](https://docs.nethermind.io/first-steps-with-nethermind/running-nethermind-post-merge)。
 
 执行客户端将启动其核心功能及所选端点，并开始寻找对等节点。 成功发现对等节点后，该客户端开始同步。 执行客户端将等待来自共识客户端的连接。 当客户端成功同步到最新状态时，最新的区块链数据将可用。
 

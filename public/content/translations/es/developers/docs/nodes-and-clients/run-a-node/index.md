@@ -288,7 +288,7 @@ Compruebe los [documentos para todas las opciones de configuración](https://get
 
 ##### Cómo ejecutar Nethermind
 
-Nethermind ofrece varias [opciones de instalación](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/getting-started). El paquete viene con varios binarios, incluido un lanzador con una configuración guiada, que le ayudará a crear la configuración interactivamente. Asimismo, se encuentra Runner que es el archivo ejecutable en sí y que se puede ejecutar con parámetros de configuración. JSON-RPC está habilitado de forma predeterminada.
+Nethermind ofrece varias [opciones de instalación](https://docs.nethermind.io/first-steps-with-nethermind/getting-started). El paquete viene con varios binarios, incluido un lanzador con una configuración guiada, que le ayudará a crear la configuración interactivamente. Asimismo, se encuentra Runner que es el archivo ejecutable en sí y que se puede ejecutar con parámetros de configuración. JSON-RPC está habilitado de forma predeterminada.
 
 ```sh
 Nethermind.Runner --config mainnet \
@@ -296,7 +296,7 @@ Nethermind.Runner --config mainnet \
     --JsonRpc.JwtSecretFile=/path/to/jwtsecret
 ```
 
-Los documentos sobre Nethermind ofrecen una [guía completa](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/running-nethermind-post-merge) sobre cómo ejecutar Nethermind con el cliente de consenso.
+Los documentos sobre Nethermind ofrecen una [guía completa](https://docs.nethermind.io/first-steps-with-nethermind/running-nethermind-post-merge) sobre cómo ejecutar Nethermind con el cliente de consenso.
 
 Un cliente de ejecución iniciará sus funciones básicas, las terminales elegidas seleccionados y comenzará a buscar pares. Al encontrar pares correctamente, el cliente inicia la sincronización. El cliente de ejecución esperará una conexión desde el cliente de consenso. Los datos actuales de la cadena de bloques estarán disponibles una vez que el cliente se sincronice correctamente al estado actual.
 
