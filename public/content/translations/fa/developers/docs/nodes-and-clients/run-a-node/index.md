@@ -162,7 +162,7 @@ sidebarDepth: 2
 ##### کلاینت‌های اجماع
 
 - [Lighthouse](https://github.com/sigp/lighthouse/releases/latest)
-- [Lodestar](https://chainsafe.github.io/lodestar/install/source/) (یک باینری از پیش ساخته شده ارائه نمی دهد، فقط یک تصویر داکر یا باید از منبع ساخته شود)
+- [Lodestar](https://chainsafe.github.io/lodestar/run/getting-started/installation/) (یک باینری از پیش ساخته شده ارائه نمی دهد، فقط یک تصویر داکر یا باید از منبع ساخته شود)
 - [Nimbus](https://github.com/status-im/nimbus-eth2/releases/latest)
 - [Prysm](https://github.com/prysmaticlabs/prysm/releases/latest)
 - [Teku](https://github.com/ConsenSys/teku/releases)

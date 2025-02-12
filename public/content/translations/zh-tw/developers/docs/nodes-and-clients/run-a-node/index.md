@@ -162,7 +162,7 @@ sidebarDepth: 2
 ##### 共識客戶
 
 - [Lighthouse](https://github.com/sigp/lighthouse/releases/latest)
-- [Lodestar](https://chainsafe.github.io/lodestar/install/source/)（並未提供預先建置的二進位檔案，只有一個 Docker 映像檔，或者自行編譯原始碼）
+- [Lodestar](https://chainsafe.github.io/lodestar/run/getting-started/installation/)（並未提供預先建置的二進位檔案，只有一個 Docker 映像檔，或者自行編譯原始碼）
 - [Nimbus](https://github.com/status-im/nimbus-eth2/releases/latest)
 - [Prysm](https://github.com/prysmaticlabs/prysm/releases/latest)
 - [Teku](https://github.com/ConsenSys/teku/releases)

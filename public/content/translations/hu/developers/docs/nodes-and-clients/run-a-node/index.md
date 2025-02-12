@@ -162,7 +162,7 @@ Fontos tisztában lenni azzal is, hogy a kliensdiverzitás [problémát jelent a
 ##### Konszenzusos kliensek
 
 - [Lighthouse](https://github.com/sigp/lighthouse/releases/latest)
-- [Lodestar](https://chainsafe.github.io/lodestar/install/source/) (nem ad előre megépített binárist, csak egy Docker-képet vagy fel kell építeni a forrásból)
+- [Lodestar](https://chainsafe.github.io/lodestar/run/getting-started/installation/) (nem ad előre megépített binárist, csak egy Docker-képet vagy fel kell építeni a forrásból)
 - [Nimbus](https://github.com/status-im/nimbus-eth2/releases/latest)
 - [Prysm](https://github.com/prysmaticlabs/prysm/releases/latest)
 - [Teku](https://github.com/ConsenSys/teku/releases)

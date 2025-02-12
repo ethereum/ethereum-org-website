@@ -162,7 +162,7 @@ sidebarDepth: 2
 ##### सहमति ग्राहक
 
 - [लाइटहाउस](https://github.com/sigp/lighthouse/releases/latest)
-- [Lodestar](https://chainsafe.github.io/lodestar/install/source/) (एक पहले से तैयार बाइनरी, केवल एक डॉकर इमेज प्रदान नहीं करता है या उसे स्रोत से बनाया जा सकता है)
+- [Lodestar](https://chainsafe.github.io/lodestar/run/getting-started/installation/) (एक पहले से तैयार बाइनरी, केवल एक डॉकर इमेज प्रदान नहीं करता है या उसे स्रोत से बनाया जा सकता है)
 - [निम्बस](https://github.com/status-im/nimbus-eth2/releases/latest)
 - [प्रिज़्म](https://github.com/prysmaticlabs/prysm/releases/latest)
 - [टेकु](https://github.com/ConsenSys/teku/releases)

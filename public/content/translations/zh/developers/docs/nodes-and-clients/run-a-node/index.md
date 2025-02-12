@@ -162,7 +162,7 @@ sidebarDepth: 2
 ##### 共识客户端
 
 - [Lighthouse](https://github.com/sigp/lighthouse/releases/latest)
-- [Lodestar](https://chainsafe.github.io/lodestar/install/source/)（不提供预构建的二进制文件，仅提供 Docker 映像或使用源代码进行构建）
+- [Lodestar](https://chainsafe.github.io/lodestar/run/getting-started/installation/)（不提供预构建的二进制文件，仅提供 Docker 映像或使用源代码进行构建）
 - [Nimbus](https://github.com/status-im/nimbus-eth2/releases/latest)
 - [Prysm](https://github.com/prysmaticlabs/prysm/releases/latest)
 - [Teku](https://github.com/ConsenSys/teku/releases)

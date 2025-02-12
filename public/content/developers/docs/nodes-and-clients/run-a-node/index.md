@@ -163,7 +163,7 @@ It is also worth noting that client diversity is an [issue on the execution laye
 ##### Consensus clients
 
 - [Lighthouse](https://github.com/sigp/lighthouse/releases/latest)
-- [Lodestar](https://chainsafe.github.io/lodestar/install/source/) (Doesn't provide a pre-built binary, only a Docker image or to be build from source)
+- [Lodestar](https://chainsafe.github.io/lodestar/run/getting-started/installation/) (Doesn't provide a pre-built binary, only a Docker image or to be build from source)
 - [Nimbus](https://github.com/status-im/nimbus-eth2/releases/latest)
 - [Prysm](https://github.com/prysmaticlabs/prysm/releases/latest)
 - [Teku](https://github.com/ConsenSys/teku/releases)
