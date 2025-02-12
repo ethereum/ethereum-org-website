@@ -70,6 +70,7 @@
     "lodash.union": "^4.6.0",
     "next": "^14.2.21",
     "next-i18next": "^14.0.3",
+    "next-intl": "^3.26.3",
     "next-mdx-remote": "^3.0.8",
     "next-sitemap": "^4.2.3",
     "next-themes": "^0.3.0",

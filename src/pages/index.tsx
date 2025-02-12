@@ -1,6 +1,5 @@
 import { Fragment, lazy, Suspense } from "react"
 import type { GetStaticProps, InferGetStaticPropsType } from "next"
-import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { FaDiscord, FaGithub } from "react-icons/fa6"
 import { IoMdCopy } from "react-icons/io"
 import { MdCheck } from "react-icons/md"
@@ -186,7 +185,7 @@ export const getStaticProps = (async ({ locale }) => {
 
   return {
     props: {
-      ...(await serverSideTranslations(locale!, requiredNamespaces)),
+      messages: (await import(`../intl/${locale}/common.json`)).default,
       calendar,
       contentNotTranslated,
       lastDeployLocaleTimestamp,

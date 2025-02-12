@@ -1,5 +1,7 @@
 import { useEffect } from "react"
+import { useRouter } from "next/router"
 import { appWithTranslation } from "next-i18next"
+import { NextIntlClientProvider } from "next-intl"
 import { TooltipProvider } from "@radix-ui/react-tooltip"
 import { init } from "@socialgouv/matomo-next"
 
@@ -12,6 +14,8 @@ import "@/styles/global.css"
 import { BaseLayout } from "@/layouts/BaseLayout"
 
 const App = ({ Component, pageProps }: AppPropsWithLayout) => {
+  const router = useRouter()
+
   useEffect(() => {
     if (!process.env.IS_PREVIEW_DEPLOY) {
       init({
@@ -26,17 +30,23 @@ const App = ({ Component, pageProps }: AppPropsWithLayout) => {
   const getLayout = Component.getLayout ?? ((page) => page)
 
   return (
-    <ThemeProvider>
-      <TooltipProvider>
-        <BaseLayout
-          contentIsOutdated={!!pageProps.frontmatter?.isOutdated}
-          contentNotTranslated={pageProps.contentNotTranslated}
-          lastDeployLocaleTimestamp={pageProps.lastDeployLocaleTimestamp}
-        >
-          {getLayout(<Component {...pageProps} />)}
-        </BaseLayout>
-      </TooltipProvider>
-    </ThemeProvider>
+    <NextIntlClientProvider
+      locale={router.locale}
+      timeZone="Europe/Vienna" // TODO: get from locale?
+      messages={pageProps.messages}
+    >
+      <ThemeProvider>
+        <TooltipProvider>
+          <BaseLayout
+            contentIsOutdated={!!pageProps.frontmatter?.isOutdated}
+            contentNotTranslated={pageProps.contentNotTranslated}
+            lastDeployLocaleTimestamp={pageProps.lastDeployLocaleTimestamp}
+          >
+            {getLayout(<Component {...pageProps} />)}
+          </BaseLayout>
+        </TooltipProvider>
+      </ThemeProvider>
+    </NextIntlClientProvider>
   )
 }
 
