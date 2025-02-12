@@ -162,7 +162,7 @@ Também é relevante observar que a diversidade de clientes é um [problema na c
 ##### Clientes de consenso
 
 - [Lighthouse](https://github.com/sigp/lighthouse/releases/latest)
-- [Lodestar](https://chainsafe.github.io/lodestar/run/getting-started/installation/) (não fornece um binário pré-compilado, apenas uma imagem do Docker ou para ser compilado a partir da fonte)
+- [Lodestar](https://chainsafe.github.io/lodestar/run/getting-started/installation#build-from-source/) (não fornece um binário pré-compilado, apenas uma imagem do Docker ou para ser compilado a partir da fonte)
 - [Nimbus](https://github.com/status-im/nimbus-eth2/releases/latest)
 - [Prysm](https://github.com/prysmaticlabs/prysm/releases/latest)
 - [Teku](https://github.com/ConsenSys/teku/releases)

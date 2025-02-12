@@ -162,7 +162,7 @@ Raspberry PiのようなARMアーキテクチャのシングルボードコン�
 ##### コンセンサスクライアント
 
 - [Lighthouse](https://github.com/sigp/lighthouse/releases/latest)
-- [Lodestar](https://chainsafe.github.io/lodestar/run/getting-started/installation/)(ビルド済みのバイナリを提供していないため、Dockerイメージを使用またはソースからビルド)
+- [Lodestar](https://chainsafe.github.io/lodestar/run/getting-started/installation#build-from-source/)(ビルド済みのバイナリを提供していないため、Dockerイメージを使用またはソースからビルド)
 - [Nimbus](https://github.com/status-im/nimbus-eth2/releases/latest)
 - [Prysm](https://github.com/prysmaticlabs/prysm/releases/latest)
 - [Teku](https://github.com/ConsenSys/teku/releases)

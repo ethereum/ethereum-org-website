@@ -162,7 +162,7 @@ Il convient également de noter que la diversité de clients est un problème [p
 ##### Clients de consensus
 
 - [Lighthouse](https://github.com/sigp/lighthouse/releases/latest)
-- [Lodestar](https://chainsafe.github.io/lodestar/run/getting-started/installation/) (ne fournit pas de binaire pré-compilé, seulement une image Docker ou à construire à partir de la source)
+- [Lodestar](https://chainsafe.github.io/lodestar/run/getting-started/installation#build-from-source/) (ne fournit pas de binaire pré-compilé, seulement une image Docker ou à construire à partir de la source)
 - [Nimbus](https://github.com/status-im/nimbus-eth2/releases/latest)
 - [Prysm](https://github.com/prysmaticlabs/prysm/releases/latest)
 - [Teku](https://github.com/ConsenSys/teku/releases)

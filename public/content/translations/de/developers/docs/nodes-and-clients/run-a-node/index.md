@@ -162,7 +162,7 @@ Es sei auch erwähnet, dass die Client-Vielfalt ein [Problem auf der Ausführung
 ##### Konsens-Clients
 
 - [Lighthouse](https://github.com/sigp/lighthouse/releases/latest)
-- [Lodestar](https://chainsafe.github.io/lodestar/run/getting-started/installation/) (Bietet keine vorgefertigte Binärdatei, sondern nur eine Docker-Abbildung, die aus den Quelldateien erstellt werden muss)
+- [Lodestar](https://chainsafe.github.io/lodestar/run/getting-started/installation#build-from-source/) (Bietet keine vorgefertigte Binärdatei, sondern nur eine Docker-Abbildung, die aus den Quelldateien erstellt werden muss)
 - [Nimbus](https://github.com/status-im/nimbus-eth2/releases/latest)
 - [Prysm](https://github.com/prysmaticlabs/prysm/releases/latest)
 - [Teku](https://github.com/ConsenSys/teku/releases)
