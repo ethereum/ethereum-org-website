@@ -36,7 +36,7 @@ export const SendFromContacts = ({
           >
             <PiMagnifyingGlass />
             <span className="me-auto">Address or contacts</span>
-            <QrCodeIcon className="text-lg text-disabled" />
+            <QrCodeIcon className="text-lg" />
           </Button>
         </NotificationPopover>
       </div>
