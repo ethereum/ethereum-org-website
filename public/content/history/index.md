@@ -32,8 +32,8 @@ Since 2021, upgrades to the **execution layer** are named according to the city 
 | Berlin       | 2014        | 0             | Apr 15, 2021 |
 | London       | 2015        | I             | Aug 5, 2021  |
 | Shanghai     | 2016        | II            | Apr 12, 2023 |
-| **Cancun**   | 2017        | III           | Mar 13, 2024 |
-| _Prague_     | 2018        | IV            | TBD          |
+| Cancun       | 2017        | III           | Mar 13, 2024 |
+| **Prague**   | 2018        | IV            | TBD - Next   |
 | _Osaka_      | 2019        | V             | TBD          |
 | _Bogota_     | 2022        | VI            | TBD          |
 | _Bangkok_    | 2024        | VII           | TBD          |
@@ -42,29 +42,87 @@ Since 2021, upgrades to the **execution layer** are named according to the city 
 
 Since the launch of the [Beacon Chain](/glossary/#beacon-chain), upgrades to the **consensus layer** are named after celestial stars beginning with letters that proceed in alphabetical order:
 
-| Upgrade Name                                                | Upgrade Date |
-| ----------------------------------------------------------- | ------------ |
-| Beacon Chain genesis                                        | Dec 1, 2020  |
-| [Altair](https://en.wikipedia.org/wiki/Altair)              | Oct 27, 2021 |
-| [Bellatrix](https://en.wikipedia.org/wiki/Bellatrix)        | Sep 6, 2022  |
-| [Capella](https://en.wikipedia.org/wiki/Capella)            | Apr 12, 2023 |
-| [**Deneb**](https://en.wikipedia.org/wiki/Deneb)            | Mar 13, 2024 |
-| [_Electra_](<https://en.wikipedia.org/wiki/Electra_(star)>) | TBD          |
+| Upgrade Name                                                  | Upgrade Date |
+| ------------------------------------------------------------- | ------------ |
+| Beacon Chain genesis                                          | Dec 1, 2020  |
+| [Altair](https://en.wikipedia.org/wiki/Altair)                | Oct 27, 2021 |
+| [Bellatrix](https://en.wikipedia.org/wiki/Bellatrix)          | Sep 6, 2022  |
+| [Capella](https://en.wikipedia.org/wiki/Capella)              | Apr 12, 2023 |
+| [Deneb](https://en.wikipedia.org/wiki/Deneb)                  | Mar 13, 2024 |
+| [**Electra**](<https://en.wikipedia.org/wiki/Electra_(star)>) | TBD - Next   |
+| [_Fulu_](<https://en.wikipedia.org/wiki/Fulu_(star)>)         | TBD          |
 
 **Combined naming**
 
-The execution and consensus upgrades were initially rolled out at different times, but after [The Merge](/roadmap/merge/) in 2022 these have been deployed simultaneously. As-such, colloquial terms have emerged to simplify references to these upgrades using a single conjoined term. This began with the _Shanghai-Capella_ upgrade, commonly referred to as "**Shapella**", and is continued with the _Cancun-Deneb_ upgrade, which may be referred to as "**Dencun**."
+The execution and consensus upgrades were initially rolled out at different times, but after [The Merge](/roadmap/merge/) in 2022 these have been deployed simultaneously. As-such, colloquial terms have emerged to simplify references to these upgrades using a single conjoined term. This began with the _Shanghai-Capella_ upgrade, commonly referred to as "**Shapella**", and is continued with the _Cancun-Deneb_ (**Dencun**), and the _Prague-Electra_ (**Pectra**) upgrades.
 
 | Execution Upgrade | Consensus Upgrade | Short Name |
 | ----------------- | ----------------- | ---------- |
 | Shanghai          | Capella           | "Shapella" |
 | Cancun            | Deneb             | "Dencun"   |
+| Prague            | Electra           | "Pectra"   |
+| Osaka             | Fulu              | "Fusaka"   |
 
 </ExpandableCard>
 
 Skip straight to information about some of the particularly important past upgrades: [The Beacon Chain](/roadmap/beacon-chain/); [The Merge](/roadmap/merge/); and [EIP-1559](#london)
 
 Looking for future protocol upgrades? [Learn about upcoming upgrades on the Ethereum roadmap](/roadmap/).
+
+<Divider />
+
+## 2025 {#2025}
+
+### Prague-Electra ("Pectra") {#pectra}
+
+<NetworkUpgradeSummary name="pectra" />
+
+#### Prague summary {#prague-summary}
+
+The Prague upgrade contains a set of improvements to Ethereum's _execution_ aimed at scaling and staking experience, in tandem with the Electra consensus upgrades.
+
+<!-- TODO: Short description of execution layer changes -->
+
+<ExpandableCard title="Prague EIPs" contentPreview="Official improvements included in this upgrade.">
+
+<ul>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-6110">EIP-6110</a> - <em>Supply validator deposits on chain</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7002">EIP-7002</a> - <em>Execution layer triggerable exits</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7251">EIP-7251</a> - <em>Increase the <code>MAX_EFFECTIVE_BALANCE</code></em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7549">EIP-7549</a> - <em>Move committee index outside Attestation</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7691">EIP-7691</a> - <em>Blob throughput increase</em></li>
+</ul>
+
+</ExpandableCard>
+
+<!-- TODO: Confirm link list, target 4±1 -->
+
+- [Pectra.wtf](https//pectra.wtf)
+- [How Pectra will enhance the staking experience](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
+
+#### Electra summary {#electra-summary}
+
+<!-- TODO: Fill in description -->
+
+The Electra upgrade contains a set of improvements to Ethereum's _consensus_ aimed towards ... This upgrade comes in tandem with the Prague execution upgrades to ...
+
+<!-- Short description of consensus layer changes -->
+
+<ExpandableCard title="Electra EIPs" contentPreview="Official improvements included in this upgrade.">
+
+<ul>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-2537">EIP-2537</a> - <em>Precompile for BLS12-381 curve operations</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-2935">EIP-2935</a> - <em>Save historical block hashes in state</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7623">EIP-7623</a> - <em>Increase calldata cost</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7685">EIP-7685</a> - <em>General purpose execution layer requests</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7702">EIP-7702</a> - <em>Set EOA account code</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7840">EIP-7840</a> - <em>Add blob schedule to EL config files</em></li>
+</ul>
+
+</ExpandableCard>
+
+- [Read the Electra upgrade specifications](https://github.com/ethereum/consensus-specs/blob/dev/specs/electra/)
+- [Prague-Electra ("Pectra") FAQ](/roadmap/pectra/)
 
 <Divider />
 
