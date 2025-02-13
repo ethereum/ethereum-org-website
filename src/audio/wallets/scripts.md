@@ -1,4 +1,4 @@
-What are crypto wallets and why do you need one?
+You are listening to "What are crypto wallets and why do you need one?" page.
 
 Wallets are applications that give you control over your Ethereum account. Just like your physical wallet, it contains everything you need to prove your identity and handle your assets. Your wallet allows you to sign into applications, read your balance, send transactions and verify your identity.
 
