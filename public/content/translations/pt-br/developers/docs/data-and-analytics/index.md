@@ -38,7 +38,7 @@ O [Dune Analytics](https://dune.com/) pré-processa dados da blockchain em tabel
 
 ## Leitura Adicional {#further-reading}
 
-- [Visão geral da rede de gráficos](https://thegraph.com/docs/en/about/network/)
+- [Visão geral da rede de gráficos](https://thegraph.com/docs/en/about//)
 - [Área de consulta de gráficos](https://thegraph.com/explorer/subgraph/graphprotocol/graph-network-mainnet?version=current)
 - [Exemplos de código de API em EtherScan](https://etherscan.io/apis#contracts)
 - [Explorador de Beacon Chain Beaconcha.in](https://beaconcha.in)

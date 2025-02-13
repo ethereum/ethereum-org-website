@@ -15,7 +15,7 @@ lang: pt-br
 
 Para usar ativos L1 na Optimism (ou qualquer outra L2), os ativos precisam ser [enviados pela ponte](/bridges/#prerequisites). Uma maneira de conseguir isso é os usuários bloquearem ativos (ETH e [tokens ERC-20](/developers/docs/standards/tokens/erc-20/) são os mais comuns) na L1, e receber ativos equivalentes para usar na L2. Por fim, quem for que acabe com eles, talvez queira enviá-los de volta para a L1. Ao fazer isso, os ativos são queimados na L2 e, em seguida, liberados para o usuário na L1.
 
-É assim que a [ponte padrão Optimism](https://community.optimism.io/docs/developers/bridge/standard-bridge) funciona. Neste artigo, passamos pelo código-fonte para essa ponte para ver como ele funciona e estudá-lo como um exemplo de código Solidity bem escrito.
+É assim que a [ponte padrão Optimism](https://docs.optimism.io/app-developers/bridging/standard-bridge) funciona. Neste artigo, passamos pelo código-fonte para essa ponte para ver como ele funciona e estudá-lo como um exemplo de código Solidity bem escrito.
 
 ## Fluxo de controle {#control-flows}
 
@@ -1270,7 +1270,7 @@ Se um usuário fez um erro detectável usando o endereço de token L2 errado, n�
 
 ## Conclusão {#conclusion}
 
-A ponte padrão é o mecanismo mais flexível para transferência de ativos. Porém, por ser genérico não é sempre o mecanismo mais fácil de usar. Especialmente para retiradas, a maioria dos usuários prefere usar [pontes de terceiros](https://www.optimism.io/apps/bridges) a esperar o período de desafio e também não precisar de uma prova de Merkle para finalizar a retirada.
+A ponte padrão é o mecanismo mais flexível para transferência de ativos. Porém, por ser genérico não é sempre o mecanismo mais fácil de usar. Especialmente para retiradas, a maioria dos usuários prefere usar [pontes de terceiros](https://optimism.io/apps#bridge) a esperar o período de desafio e também não precisar de uma prova de Merkle para finalizar a retirada.
 
 Estas pontes tipicamente funcionam tendo ativos na L1, que elas fornecem imediatamente por uma taxa pequena (geralmente menor que o custo de gas para uma retirada de uma ponte padrão). Quando a ponte (ou as pessoas que a administram) antecipa a falta de ativos L1, ela transfere ativos suficientes da L2. Como estes são saques muito grandes, o custo do saque é amortizado por uma larga quantia e é um percentual muito menor.
 

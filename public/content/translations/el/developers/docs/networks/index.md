@@ -60,7 +60,7 @@ lang: el
 - [Coinbase Wallet faucet | Sepolia](https://coinbase.com/faucets/ethereum-sepolia-faucet)
 - [Sepolia faucet στο Alchemy](https://sepoliafaucet.com/)
 - [Sepolia faucet στο Infura](https://www.infura.io/faucet)
-- [Sepolia faucet στο Chainstack](https://faucet.chainstack.com/sepolia-faucet)
+- [Sepolia faucet στο Chainstack](https://faucet.chainstack.com/sepolia-testnet-faucet)
 - [Faucet στο οικοσύστημα Ethereum](https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia)
 
 #### Goerli _(μακροπρόθεσμη υποστήριξη)_ {#goerli}
