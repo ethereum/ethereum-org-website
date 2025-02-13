@@ -32,8 +32,8 @@ const ContributorAvatar = ({
     src={contributor.avatar_url}
     name={contributor.login}
     href={
-      contributor.avatar_url.includes("crowdin.com")
-        ? "https://crowdin.com/profile/" + contributor.login
+      contributor.html_url.includes("crowdin.com")
+        ? contributor.html_url
         : "https://github.com/" + contributor.login
     }
     // `size-10` is not part of the "size" variants
@@ -64,7 +64,7 @@ const ContributorAvatarGroup = ({
         </div>
       ))}
       {remainingCount > 0 && (
-        <Center className="size-10 rounded-full bg-primary text-body-inverse">
+        <Center className="size-10 rounded-full bg-primary ps-1 text-sm text-body-inverse">
           +{remainingCount}
         </Center>
       )}
@@ -79,7 +79,7 @@ const Contributor = ({ contributor }: ContributorProps) => (
       contributor={contributor}
       label={"@" + contributor.login}
     />
-    {contributor.avatar_url.includes("crowdin.com") && (
+    {contributor.html_url.includes("crowdin.com") && (
       <p className="ms-5 text-body-medium">
         <Translation id="translator" />
       </p>
