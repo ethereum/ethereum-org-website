@@ -1,3 +1,5 @@
+Hey there, listeners! Today, we're diving into the fascinating world of smart contracts.
+
 Smart contracts are the fundamental building blocks of Ethereum's application layer. They are computer programs stored on the blockchain that follow "if this then that" logic, and are guaranteed to execute according to the rules defined by its code, which cannot be changed once created. Nick Szabo, who coined the term in 1994, envisioned a digital marketplace where automatic, cryptographically-secure processes enable transactions and business functions to happen without trusted intermediaries. Smart contracts on Ethereum put this vision into practice.
 
 One of the most basic examples of a smart contract is a vending machine. You put in money, select your item, and the machine automatically gives you what you paid for. No human needs to be involved, and it works the same way every time. Smart contracts work similarly - they're programs that automatically execute when specific conditions are met.
