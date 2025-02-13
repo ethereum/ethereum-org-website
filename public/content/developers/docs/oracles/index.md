@@ -294,7 +294,7 @@ Decentralized oracle services ensure high availability of off-chain data to smar
 
 This ensures fault-tolerance since the oracle contract can rely on multiple nodes (who also rely on multiple data sources) to execute queries from other contracts. Decentralization at the source _and_ node-operator level is crucial—a network of oracle nodes serving information retrieved from the same source will run into the same problem as a centralized oracle.
 
-It is also possible for stake-based oracles can slash node operators who fail to respond quickly to data requests. This significantly incentivizes oracle nodes to invest in fault-tolerant infrastructure and provide data in timely fashion.
+It is also possible for stake-based oracles to slash node operators who fail to respond quickly to data requests. This significantly incentivizes oracle nodes to invest in fault-tolerant infrastructure and provide data in timely fashion.
 
 ### Good incentive compatibility {#good-incentive-compatibility}
 
@@ -387,6 +387,8 @@ Chainlink’s [Keeper Network](https://chain.link/keepers) provides options for 
 There are multiple oracle applications you can integrate into your Ethereum dapp:
 
 **[Chainlink](https://chain.link/)** - _Chainlink decentralized oracle networks provide tamper-proof inputs, outputs, and computations to support advanced smart contracts on any blockchain._
+
+**[RedStone Oracles](https://redstone.finance/)** - _RedStone is a decentralized modular oracle that provides gas-optimized data feeds. It specializes in offering price feeds for emerging assets, such as liquid staking tokens (LSTs), liquid restaking tokens (LRTs), and Bitcoin staking derivatives._
 
 **[Chronicle](https://chroniclelabs.org/)** - _Chronicle overcomes the current limitations of transferring data on-chain by developing truly scalable, cost-efficient, decentralized, and verifiable oracles._
 

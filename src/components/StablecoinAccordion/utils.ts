@@ -5,8 +5,8 @@ export type CategoryNameType = "dapps" | "buy" | "earn" | "generate"
 type AccordionButtonContentType = {
   emoji: string
   title: TranslationKey
-  pill?: {
-    color: "success" | "warning"
+  tag?: {
+    status: string
     name: TranslationKey
   }
   textPreview: TranslationKey
@@ -18,8 +18,8 @@ export const accordionButtonContent: {
   dapps: {
     emoji: ":twisted_rightwards_arrows:",
     title: "page-stablecoins-accordion-swap-title",
-    pill: {
-      color: "success",
+    tag: {
+      status: "success",
       name: "page-stablecoins-accordion-swap-pill",
     },
     textPreview: "page-stablecoins-accordion-swap-text-preview",
@@ -37,8 +37,8 @@ export const accordionButtonContent: {
   generate: {
     emoji: ":handshake:",
     title: "page-stablecoins-accordion-borrow-title",
-    pill: {
-      color: "warning",
+    tag: {
+      status: "warning",
       name: "page-stablecoins-accordion-borrow-pill",
     },
     textPreview: "page-stablecoins-accordion-borrow-text-preview",

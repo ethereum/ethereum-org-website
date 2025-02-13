@@ -18,13 +18,13 @@
     "imageUrl": ""
   },
   {
-    "title": "ETHDam",
-    "startDate": "2025-05-09",
-    "endDate": "2025-05-11",
-    "href": "https://www.ethdam.com",
-    "location": "Amsterdam, NL",
+    "title": "ETH Seoul",
+    "startDate": "2025-04-06",
+    "endDate": "2025-04-13",
+    "href": "https://ethseoul.org",
+    "location": "Seoul",
     "description": "",
-    "imageUrl": "https://static.wixstatic.com/media/9830df_ceadad27c7ad469e968170753dccc507~mv2.png/v1/fill/w_2500,h_1762,al_c/9830df_ceadad27c7ad469e968170753dccc507~mv2.png"
+    "imageUrl": ""
   },
   {
     "title": "ETHDublin 2025",
@@ -70,6 +70,15 @@
     "location": "Sofia, BGR",
     "description": "The first major Ethereum community conference in Bulgaria. Bringing ETH enthusiasts, professionals, and developers to the IT heart of the Balkans. 23 - 25 September 2025.",
     "imageUrl": "https://framerusercontent.com/assets/OHGIdIaZVjWGAwpmJhN1z6Yuh5g.png"
+  },
+  {
+    "title": "ProtoLayers Conference",
+    "startDate": "2025-10-11",
+    "endDate": "2025-10-11",
+    "href": "https://lu.ma/protolayersprague",
+    "location": "Prague, CZ",
+    "description": "Join us for a  technical conference dedicated to exploring the edges of modular blockchain technology. This one-day event, held on May 30, 2024 brings together…",
+    "imageUrl": "https://social-images.lu.ma/cdn-cgi/image/format=auto,fit=cover,dpr=1,background=white,quality=75,width=800,height=419/api/event-one?calendar_avatar=https%3A%2F%2Fimages.lumacdn.com%2Fcalendars%2Fgb%2F04e6c14a-bef9-4690-a55e-58dbab9f8aca&amp;calendar_name=ProtoLayers%20Builder%20Conference&amp;color0=%23ffffff&amp;color1=%23010101&amp;color2=%238b8a8a&amp;color3=%23ff3503&amp;host_avatar=https%3A%2F%2Fimages.lumacdn.com%2Favatars%2Fwx%2Fd64d0bac-aec7-4589-840e-4d4111ce4988&amp;host_name=ProtoLayers&amp;img=https%3A%2F%2Fimages.lumacdn.com%2Fevent-covers%2Fr7%2Fa289e9d1-9744-4ccc-a812-e6ac947d09cf&amp;name=ProtoLayers%20Conference"
   },
   {
     "title": "ETHPrague",
@@ -225,15 +234,6 @@
     "imageUrl": ""
   },
   {
-    "title": "ETH Seoul",
-    "startDate": "2025-04-14",
-    "endDate": "2025-04-14",
-    "href": "https://ethseoul.org",
-    "location": "Seoul, KR",
-    "description": "",
-    "imageUrl": "https://www.ethseoul.org/img/website-logo.png"
-  },
-  {
     "title": "BUIDL Asia",
     "startDate": "2025-04-15",
     "endDate": "2025-04-16",
@@ -241,6 +241,15 @@
     "location": "Seoul, KR",
     "description": "",
     "imageUrl": ""
+  },
+  {
+    "title": "ETHDubai",
+    "to": "https://www.ethdubaiconf.org/",
+    "location": "Dubai, UAE",
+    "description": "The Ethereum dev conference and hackathon in Dubai on everything DeFi, privacy, L2s, AVS, AI Agents, intents, Account Abstraction and more with a focus on decentralization and community projects. ETHDubai also organizes a Demo Pitch Day with VCs.",
+    "startDate": "2025-04-28",
+    "endDate": "2025-04-29",
+    "imageUrl": "https://www.ethdubaiconf.org/ethdubaicard1.png"
   },
   {
     "title": "Staking Summit*",
@@ -513,6 +522,15 @@
     "imageUrl": "http://static1.squarespace.com/static/629856e64f44db3799f8e3f6/t/65c04e1059e3477a33a1c105/1707101732532/COVER.png?format=1500w"
   },
   {
+    "title": "ETHDam III",
+    "href": "https://www.ethdam.com",
+    "location": "Amsterdam, Netherlands",
+    "description": "Conference and hackathon gathering the best Privacy and Security builders",
+    "startDate": "2025-05-09",
+    "endDate": "2025-05-11",
+    "imageUrl": "https://drive.google.com/file/d/12IW8m1LdF4AU95LskDle9ei_J09M3jz-/preview"
+  },
+  {
     "title": "ETHMilan",
     "startDate": "2025-06-24",
     "endDate": "2025-06-24",
@@ -522,13 +540,49 @@
     "imageUrl": ""
   },
   {
+    "title": "Crecimiento",
+    "startDate": "2025-03-05",
+    "endDate": "2025-03-28",
+    "href": "https://crecimientoar",
+    "location": "TBD, ARG",
+    "description": "",
+    "imageUrl": ""
+  },
+  {
     "title": "EthereumSF",
     "startDate": "2025-03-10",
     "endDate": "2025-03-16",
     "href": "https://ethereumsf.org/",
     "location": "San Francisco, US",
     "description": "ETHSF&#39;25 is a decentralized, week-long event series across the Bay Area, featuring events focused on d/acc, blockchain, AI and beyond.",
-    "imageUrl": "https://ethereumsf.org//images/bc1477229a5e5187095c4a1987b29c0d.png"
+    "imageUrl": ""
+  },
+  {
+    "title": "Building Blocks",
+    "startDate": "2025-03-25",
+    "endDate": "2025-03-29",
+    "href": "https://buildingblockstlv.com/",
+    "location": "Tel Aviv, IL",
+    "description": "Building Blocks - Scaling Crypto Startups",
+    "imageUrl": ""
+  },
+  {
+    "title": "Paris P2P Festival",
+    "startDate": "2025-04-04",
+    "endDate": "2025-04-11",
+    "href": "https://www.p2p.paris",
+    "location": "Paris, FR",
+    "description": "The Parisian community interested in P2P, Security &amp; Cryptography technologies",
+    "imageUrl": "https://p2p.paris/images/paris-p2p-thumbnail.jpg"
+  },
+  {
+    "title": "Appcon",
+    "startDate": "2025-04-07",
+    "endDate": "2025-04-13",
+    "href": "https://appcon.org",
+    "location": "Milan, ITA",
+    "description": "Discover Ethereum apps at Appcon in Milan. Explore an interactive public showcase, connect through the exclusive Builders’ Program, and experience real-world demos—bridging new adopters, developers, and investors in one vibrant setting.",
+    "imageUrl": "https://appcon.org/opengraph-image.png?1ef56b7e20f7b364"
   },
   {
     "title": "ETHRome Hackathon",
@@ -556,6 +610,15 @@
     "location": "Bratislava, SVK",
     "description": "Two-day conference and hackathon focused on sharing knowledge and sparking innovative ideas aimed at energizing the entire ethereum ecosystem.",
     "imageUrl": "https://framerusercontent.com/assets/IBAFZwu44FpNo95n3OoOapeFUyw.png"
+  },
+  {
+    "title": "EthAccra",
+    "startDate": "2025-09-03",
+    "endDate": "2025-09-06",
+    "href": "https://ethaccra.xyz",
+    "location": "Accra, GHA",
+    "description": "",
+    "imageUrl": "http://eth-accra-website.vercel.app/assets/pngs/meta_image.png"
   },
   {
     "title": "ETHTokyo",

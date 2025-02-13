@@ -66,7 +66,7 @@ Bonus points breakdown:
 
 1) ETHglossary translators
 [ETHglossary](https://ethglossaryproject.vercel.app/) is an open-source glossary of key Ethereum terms, and an initiative to create and maintain a glossary of Ethereum terms and their translations in 60+ languages that anyone can use and contribute to.
-Translatathon participants can suggest translations for these terms and vote or discuss existing translations to earn bonus points in the Translathon.
+Translatathon participants can suggest translations for these terms and vote or discuss existing translations to earn bonus points in the Translatathon.
 Each 10 translated terms will earn you 100 bonus points, with a bonus for completing all 70 terms currently available in the glossary app. The bonus points will be automatically added to your final score once the Translatathon ends and the final scores are calculated.
 
 Participants can earn a maximum of 1,000 bonus points by translating all of the terms in their native language, but translating multiple languages will not result in any additional points!
