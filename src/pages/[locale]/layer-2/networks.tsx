@@ -1,8 +1,6 @@
-import { useRouter } from "next/router"
 import type { GetStaticProps } from "next/types"
-import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 
-import type { BasePageProps, Lang } from "@/lib/types"
+import type { BasePageProps, Lang, Params } from "@/lib/types"
 
 import Callout from "@/components/Callout"
 import { ContentHero, ContentHeroProps } from "@/components/Hero"
@@ -21,8 +19,10 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import { ethereumNetworkData, layer2Data } from "@/data/networks/networks"
 import { walletsData } from "@/data/wallets/wallet-data"
 
-import { BASE_TIME_UNIT } from "@/lib/constants"
+import { BASE_TIME_UNIT, DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
 
+import loadNamespaces from "@/i18n/loadNamespaces"
+import { useRouter } from "@/i18n/routing"
 import { fetchEthereumMarketcap } from "@/lib/api/fetchEthereumMarketcap"
 import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
 import { fetchGrowThePieBlockspace } from "@/lib/api/fetchGrowThePieBlockspace"
@@ -45,7 +45,16 @@ const loadData = dataLoader(
   REVALIDATE_TIME * 1000
 )
 
-export const getStaticProps = (async ({ locale }) => {
+export async function getStaticPaths() {
+  return {
+    paths: LOCALES_CODES.map((locale) => ({ params: { locale } })),
+    fallback: false,
+  }
+}
+
+export const getStaticProps = (async ({ params }) => {
+  const { locale = DEFAULT_LOCALE } = params || {}
+
   const [
     ethereumMarketcapData,
     growThePieData,
@@ -110,9 +119,11 @@ export const getStaticProps = (async ({ locale }) => {
       return maturityDiff
     })
 
+  const messages = await loadNamespaces(locale, requiredNamespaces)
+
   return {
     props: {
-      ...(await serverSideTranslations(locale!, requiredNamespaces)),
+      messages,
       contentNotTranslated,
       lastDeployLocaleTimestamp,
       locale,
@@ -129,7 +140,7 @@ export const getStaticProps = (async ({ locale }) => {
       },
     },
   }
-}) satisfies GetStaticProps<BasePageProps>
+}) satisfies GetStaticProps<BasePageProps, Params>
 
 const Layer2Networks = ({ layer2Data, locale, mainnetData }) => {
   const { pathname } = useRouter()

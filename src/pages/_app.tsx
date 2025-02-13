@@ -9,6 +9,8 @@ import { AppPropsWithLayout } from "@/lib/types"
 
 import ThemeProvider from "@/components/ThemeProvider"
 
+import { DEFAULT_LOCALE } from "@/lib/constants"
+
 import "@/styles/global.css"
 
 import { BaseLayout } from "@/layouts/BaseLayout"
@@ -31,9 +33,13 @@ const App = ({ Component, pageProps }: AppPropsWithLayout) => {
 
   return (
     <NextIntlClientProvider
-      locale={router.query.locale as string}
+      locale={(router.query.locale as string) || DEFAULT_LOCALE}
       timeZone="Europe/Vienna" // TODO: get from locale?
-      messages={pageProps.messages}
+      messages={pageProps.messages || {}}
+      onError={() => {
+        // Suppress errors by default, enable if needed to debug
+        // console.error(error)
+      }}
     >
       <ThemeProvider>
         <TooltipProvider>

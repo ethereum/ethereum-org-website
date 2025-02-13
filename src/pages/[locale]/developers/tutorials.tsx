@@ -7,12 +7,9 @@ import React, {
   useState,
 } from "react"
 import { GetStaticProps, InferGetServerSidePropsType } from "next"
-import { useRouter } from "next/router"
-import { useTranslation } from "next-i18next"
-import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { FaGithub } from "react-icons/fa"
 
-import { BasePageProps, Lang } from "@/lib/types"
+import { BasePageProps, Lang, Params } from "@/lib/types"
 
 import Emoji from "@/components/Emoji"
 import FeedbackCard from "@/components/FeedbackCard"
@@ -41,7 +38,12 @@ import {
 
 import externalTutorials from "@/data/externalTutorials.json"
 
+import { DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
+
 import { useBreakpointValue } from "@/hooks/useBreakpointValue"
+import { useTranslation } from "@/hooks/useTranslation"
+import loadNamespaces from "@/i18n/loadNamespaces"
+import { useRouter } from "@/i18n/routing"
 
 type Props = BasePageProps & {
   internalTutorials: ITutorial[]
@@ -83,7 +85,16 @@ const LinkFlex = ({ href, children, ...props }: LinkFlexProps) => {
   )
 }
 
-export const getStaticProps = (async ({ locale }) => {
+export async function getStaticPaths() {
+  return {
+    paths: LOCALES_CODES.map((locale) => ({ params: { locale } })),
+    fallback: false,
+  }
+}
+
+export const getStaticProps = (async ({ params }) => {
+  const { locale = DEFAULT_LOCALE } = params || {}
+
   const requiredNamespaces = getRequiredNamespacesForPage(
     "/developers/tutorials"
   )
@@ -96,15 +107,17 @@ export const getStaticProps = (async ({ locale }) => {
     lastDeployDate
   )
 
+  const messages = await loadNamespaces(locale!, requiredNamespaces)
+
   return {
     props: {
-      ...(await serverSideTranslations(locale!, requiredNamespaces)),
+      messages,
       contentNotTranslated,
       internalTutorials: getTutorialsData(locale!),
       lastDeployLocaleTimestamp,
     },
   }
-}) satisfies GetStaticProps<Props>
+}) satisfies GetStaticProps<Props, Params>
 
 export interface IExternalTutorial {
   url: string

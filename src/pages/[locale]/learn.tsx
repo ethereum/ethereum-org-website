@@ -1,9 +1,13 @@
 import { GetStaticProps } from "next"
-import { useTranslation } from "next-i18next"
-import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import type { HTMLAttributes, ReactNode } from "react"
 
-import type { BasePageProps, ChildOnlyProp, Lang, ToCItem } from "@/lib/types"
+import type {
+  BasePageProps,
+  ChildOnlyProp,
+  Lang,
+  Params,
+  ToCItem,
+} from "@/lib/types"
 
 import OriginalCard, {
   type CardProps as OriginalCardProps,
@@ -27,6 +31,10 @@ import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
+import { DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
+
+import useTranslation from "@/hooks/useTranslation"
+import loadNamespaces from "@/i18n/loadNamespaces"
 import developersEthBlocks from "@/public/images/developers-eth-blocks.png"
 import dogeComputer from "@/public/images/doge-computer.png"
 import enterprise from "@/public/images/enterprise-eth.png"
@@ -117,10 +125,19 @@ const ImageHeight200 = ({ src, alt }: ImageProps) => (
   <TwImage className="h-[200px] w-auto" src={src} alt={alt} />
 )
 
-export const getStaticProps = (async ({ locale }) => {
+export async function getStaticPaths() {
+  return {
+    paths: LOCALES_CODES.map((locale) => ({ params: { locale } })),
+    fallback: false,
+  }
+}
+
+export const getStaticProps = (async ({ params }) => {
+  const { locale = DEFAULT_LOCALE } = params || {}
+
   const requiredNamespaces = getRequiredNamespacesForPage("/learn")
 
-  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
+  const contentNotTranslated = !existsNamespace(locale, requiredNamespaces[2])
 
   const lastDeployDate = getLastDeployDate()
   const lastDeployLocaleTimestamp = getLocaleTimestamp(
@@ -128,14 +145,16 @@ export const getStaticProps = (async ({ locale }) => {
     lastDeployDate
   )
 
+  const messages = await loadNamespaces(locale, requiredNamespaces)
+
   return {
     props: {
-      ...(await serverSideTranslations(locale!, requiredNamespaces)),
+      messages,
       contentNotTranslated,
       lastDeployLocaleTimestamp,
     },
   }
-}) satisfies GetStaticProps<BasePageProps>
+}) satisfies GetStaticProps<BasePageProps, Params>
 
 const LearnPage = () => {
   const { t } = useTranslation("page-learn")

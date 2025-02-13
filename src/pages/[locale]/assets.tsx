@@ -1,9 +1,7 @@
 import { HTMLAttributes } from "react"
 import type { GetStaticProps } from "next/types"
-import { useTranslation } from "next-i18next"
-import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 
-import type { BasePageProps, ChildOnlyProp, Lang } from "@/lib/types"
+import type { BasePageProps, ChildOnlyProp, Lang, Params } from "@/lib/types"
 
 import AssetDownload from "@/components/AssetDownload"
 import FeedbackCard from "@/components/FeedbackCard"
@@ -28,7 +26,11 @@ import { getLocaleTimestamp } from "@/lib/utils/time"
 // import leslieTheRhino from "@/public/images/upgrades/upgrade_rhino.png"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
+import { DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
+
 import useColorModeValue from "@/hooks/useColorModeValue"
+import { useTranslation } from "@/hooks/useTranslation"
+import loadNamespaces from "@/i18n/loadNamespaces"
 import ethDiamondBlack from "@/public/images/assets/eth-diamond-black.png"
 import ethDiamondBlackGray from "@/public/images/assets/eth-diamond-black-gray.png"
 import ethDiamondBlackWhite from "@/public/images/assets/eth-diamond-black-white.jpg"
@@ -96,7 +98,16 @@ const H3 = (props: ChildOnlyProp) => (
   <h3 className="mb-0 mt-10 leading-xs" {...props} />
 )
 
-export const getStaticProps = (async ({ locale }) => {
+export async function getStaticPaths() {
+  return {
+    paths: LOCALES_CODES.map((locale) => ({ params: { locale } })),
+    fallback: false,
+  }
+}
+
+export const getStaticProps = (async ({ params }) => {
+  const { locale = DEFAULT_LOCALE } = params || {}
+
   const requiredNamespaces = getRequiredNamespacesForPage("assets")
 
   const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
@@ -107,14 +118,16 @@ export const getStaticProps = (async ({ locale }) => {
     lastDeployDate
   )
 
+  const messages = await loadNamespaces(locale, requiredNamespaces)
+
   return {
     props: {
-      ...(await serverSideTranslations(locale!, requiredNamespaces)),
+      messages,
       contentNotTranslated,
       lastDeployLocaleTimestamp,
     },
   }
-}) satisfies GetStaticProps<BasePageProps>
+}) satisfies GetStaticProps<BasePageProps, Params>
 
 const AssetsPage = () => {
   // Ignore locale in the URL for SVG path in public directory to fix broken link

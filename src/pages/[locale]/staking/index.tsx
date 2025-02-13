@@ -1,7 +1,6 @@
 import { type HTMLAttributes, ReactNode } from "react"
 import { GetStaticProps, InferGetStaticPropsType } from "next"
 import { useTranslation } from "next-i18next"
-import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 
 import type {
   BasePageProps,
@@ -9,6 +8,7 @@ import type {
   EpochResponse,
   EthStoreResponse,
   Lang,
+  Params,
   StakingStatsData,
 } from "@/lib/types"
 
@@ -41,8 +41,9 @@ import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
-import { BASE_TIME_UNIT } from "@/lib/constants"
+import { BASE_TIME_UNIT, DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
 
+import loadNamespaces from "@/i18n/loadNamespaces"
 import rhino from "@/public/images/upgrades/upgrade_rhino.png"
 
 type BenefitsType = {
@@ -156,7 +157,16 @@ const loadData = dataLoader(
   REVALIDATE_TIME * 1000
 )
 
-export const getStaticProps = (async ({ locale }) => {
+export async function getStaticPaths() {
+  return {
+    paths: LOCALES_CODES.map((locale) => ({ params: { locale } })),
+    fallback: false,
+  }
+}
+
+export const getStaticProps = (async ({ params }) => {
+  const { locale = DEFAULT_LOCALE } = params || {}
+
   const lastDeployDate = getLastDeployDate()
   const lastDeployLocaleTimestamp = getLocaleTimestamp(
     locale as Lang,
@@ -169,15 +179,17 @@ export const getStaticProps = (async ({ locale }) => {
 
   const [data] = await loadData()
 
+  const messages = await loadNamespaces(locale, requiredNamespaces)
+
   return {
     props: {
-      ...(await serverSideTranslations(locale!, requiredNamespaces)),
+      messages,
       contentNotTranslated,
       data,
       lastDeployLocaleTimestamp,
     },
   }
-}) satisfies GetStaticProps<Props>
+}) satisfies GetStaticProps<Props, Params>
 
 const StakingPage = ({
   data,

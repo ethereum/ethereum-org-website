@@ -9,6 +9,7 @@ import type {
   BasePageProps,
   CommunityBlog,
   Lang,
+  Params,
   RSSItem,
 } from "@/lib/types"
 
@@ -70,6 +71,7 @@ import {
   BLOG_FEEDS,
   BLOGS_WITHOUT_FEED,
   CALENDAR_DISPLAY_COUNT,
+  DEFAULT_LOCALE,
   GITHUB_REPO_URL,
   LOCALES_CODES,
   RSS_DISPLAY_COUNT,
@@ -83,6 +85,7 @@ import {
 } from "../../components/ui/accordion"
 
 import { useClipboard } from "@/hooks/useClipboard"
+import loadNamespaces from "@/i18n/loadNamespaces"
 import { fetchCommunityEvents } from "@/lib/api/calendarEvents"
 import { fetchEthPrice } from "@/lib/api/fetchEthPrice"
 import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
@@ -118,10 +121,6 @@ type Props = BasePageProps & {
   rssData: { rssItems: RSSItem[]; blogLinks: CommunityBlog[] }
 }
 
-type Params = {
-  locale: string
-}
-
 // In seconds
 const REVALIDATE_TIME = BASE_TIME_UNIT * 1
 
@@ -146,7 +145,7 @@ export async function getStaticPaths() {
 }
 
 export const getStaticProps = (async ({ params }) => {
-  const { locale } = params || {}
+  const { locale = DEFAULT_LOCALE } = params || {}
 
   const [
     ethPrice,
@@ -197,9 +196,11 @@ export const getStaticProps = (async ({ params }) => {
   })) as CommunityBlog[]
   blogLinks.push(...BLOGS_WITHOUT_FEED)
 
+  const messages = await loadNamespaces(locale, requiredNamespaces)
+
   return {
     props: {
-      messages: (await import(`../../intl/${locale}/common.json`)).default,
+      messages,
       calendar,
       contentNotTranslated,
       lastDeployLocaleTimestamp,

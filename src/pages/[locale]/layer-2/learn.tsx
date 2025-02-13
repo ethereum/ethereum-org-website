@@ -1,9 +1,7 @@
 import { GetStaticProps } from "next"
-import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
-import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 
-import type { BasePageProps, Lang } from "@/lib/types"
+import type { BasePageProps, Lang, Params } from "@/lib/types"
 
 import Callout from "@/components/Callout"
 import Card from "@/components/Card"
@@ -20,6 +18,10 @@ import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
+import { DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
+
+import loadNamespaces from "@/i18n/loadNamespaces"
+import { useRouter } from "@/i18n/routing"
 import Callout2Image from "@/public/images/layer-2/learn-hero.png"
 import OptimisticRollupImage from "@/public/images/layer-2/optimistic_rollup.png"
 import RollupImage from "@/public/images/layer-2/rollup-2.png"
@@ -28,7 +30,16 @@ import Callout1Image from "@/public/images/man-and-dog-playing.png"
 import DAOImage from "@/public/images/use-cases/dao-2.png"
 import WhatIsEthereumImage from "@/public/images/what-is-ethereum.png"
 
-export const getStaticProps = (async ({ locale }) => {
+export async function getStaticPaths() {
+  return {
+    paths: LOCALES_CODES.map((locale) => ({ params: { locale } })),
+    fallback: false,
+  }
+}
+
+export const getStaticProps = (async ({ params }) => {
+  const { locale = DEFAULT_LOCALE } = params || {}
+
   const lastDeployDate = getLastDeployDate()
   const lastDeployLocaleTimestamp = getLocaleTimestamp(
     locale as Lang,
@@ -39,14 +50,16 @@ export const getStaticProps = (async ({ locale }) => {
 
   const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
+  const messages = await loadNamespaces(locale, requiredNamespaces)
+
   return {
     props: {
-      ...(await serverSideTranslations(locale!, requiredNamespaces)),
+      messages,
       contentNotTranslated,
       lastDeployLocaleTimestamp,
     },
   }
-}) satisfies GetStaticProps<BasePageProps>
+}) satisfies GetStaticProps<BasePageProps, Params>
 
 const Layer2Learn = () => {
   const { t } = useTranslation("page-layer-2-learn")

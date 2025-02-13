@@ -16,25 +16,31 @@ import { useTranslations } from "next-intl"
 
 const DEFAULT_NAMESPACE = "common"
 
-export default function useTranslation(namespaces?: string[] | string) {
+export function useTranslation(namespaces?: string[] | string) {
   const t = useTranslations()
 
   const customT: typeof t = (fullKey, values) => {
-    if (fullKey.includes(":")) {
-      const [namespace, key] = fullKey.split(":")
+    try {
+      if (fullKey.includes(":")) {
+        const [namespace, key] = fullKey.split(":")
 
-      if (values) {
-        return t(`${namespace}.${key}`, values)
+        if (values) {
+          return t(`${namespace}.${key}`, values)
+        }
+
+        return t.raw(`${namespace}.${key}`)
       }
 
-      return t.raw(`${namespace}.${key}`)
+      const namespace = Array.isArray(namespaces)
+        ? namespaces[0]
+        : namespaces || DEFAULT_NAMESPACE
+
+      return t.raw(`${namespace}.${fullKey}`)
+    } catch (error) {
+      // Suppress errors by default, enable if needed to debug
+      // console.error(error)
+      return fullKey
     }
-
-    const namespace = Array.isArray(namespaces)
-      ? namespaces[0]
-      : namespaces || DEFAULT_NAMESPACE
-
-    return t.raw(`${namespace}.${fullKey}`)
   }
 
   // keep the original methods
@@ -45,3 +51,5 @@ export default function useTranslation(namespaces?: string[] | string) {
 
   return { t: customT }
 }
+
+export default useTranslation

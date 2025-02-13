@@ -1,5 +1,4 @@
 import { useRouter } from "next/router"
-import { useTranslation } from "next-i18next"
 
 import type { ChildOnlyProp } from "@/lib/types"
 import type { MdPageContent, UseCasesFrontmatter } from "@/lib/interfaces"
@@ -15,6 +14,8 @@ import { getEditPath } from "@/lib/utils/editPath"
 import { getSummaryPoints } from "@/lib/utils/getSummaryPoints"
 
 import { ContentLayout } from "../ContentLayout"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 // UseCases layout components
 export const useCasesComponents = {

@@ -1,9 +1,7 @@
 import { HTMLAttributes, ReactNode } from "react"
 import { GetStaticProps } from "next"
-import { useTranslation } from "next-i18next"
-import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 
-import { BasePageProps, ChildOnlyProp, Lang } from "@/lib/types"
+import { BasePageProps, ChildOnlyProp, Lang, Params } from "@/lib/types"
 
 import Callout from "@/components/Callout"
 import Card, { CardProps } from "@/components/Card"
@@ -24,6 +22,10 @@ import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
+import { DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
+
+import { useTranslation } from "@/hooks/useTranslation"
+import loadNamespaces from "@/i18n/loadNamespaces"
 import SpeedRunEthereumImage from "@/public/images/dev-tools/speed-run-ethereum-banner.png"
 import DevelopersImage from "@/public/images/developers-eth-blocks.png"
 import DogeImage from "@/public/images/doge-computer.png"
@@ -126,7 +128,16 @@ const SpeedRunEthereumBanner = ({
   </div>
 )
 
-export const getStaticProps = (async ({ locale }) => {
+export async function getStaticPaths() {
+  return {
+    paths: LOCALES_CODES.map((locale) => ({ params: { locale } })),
+    fallback: false,
+  }
+}
+
+export const getStaticProps = (async ({ params }) => {
+  const { locale = DEFAULT_LOCALE } = params || {}
+
   const requiredNamespaces = getRequiredNamespacesForPage("/developers")
 
   const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
@@ -137,14 +148,16 @@ export const getStaticProps = (async ({ locale }) => {
     lastDeployDate
   )
 
+  const messages = await loadNamespaces(locale!, requiredNamespaces)
+
   return {
     props: {
-      ...(await serverSideTranslations(locale!, requiredNamespaces)),
+      messages,
       contentNotTranslated,
       lastDeployLocaleTimestamp,
     },
   }
-}) satisfies GetStaticProps<BasePageProps>
+}) satisfies GetStaticProps<BasePageProps, Params>
 
 interface IDevelopersPath {
   emoji: string

@@ -1,11 +1,9 @@
 import { useMemo, useState } from "react"
 import { GetStaticProps, InferGetStaticPropsType, NextPage } from "next"
-import { useTranslation } from "next-i18next"
-import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { FaGithub } from "react-icons/fa"
 import { Box, Flex, Icon, Stack, Text } from "@chakra-ui/react"
 
-import { BasePageProps, Lang, QuizKey, QuizStatus } from "@/lib/types"
+import { BasePageProps, Lang, Params, QuizKey, QuizStatus } from "@/lib/types"
 
 import { ButtonLink } from "@/components/Buttons"
 import FeedbackCard from "@/components/FeedbackCard"
@@ -26,9 +24,11 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { ethereumBasicsQuizzes, usingEthereumQuizzes } from "@/data/quizzes"
 
-import { INITIAL_QUIZ } from "@/lib/constants"
+import { DEFAULT_LOCALE, INITIAL_QUIZ, LOCALES_CODES } from "@/lib/constants"
 
 import { useDisclosure } from "@/hooks/useDisclosure"
+import { useTranslation } from "@/hooks/useTranslation"
+import loadNamespaces from "@/i18n/loadNamespaces"
 import HeroImage from "@/public/images/heroes/quizzes-hub-hero.png"
 
 const handleGHAdd = () =>
@@ -38,7 +38,16 @@ const handleGHAdd = () =>
     eventName: "GH_add",
   })
 
-export const getStaticProps = (async ({ locale }) => {
+export async function getStaticPaths() {
+  return {
+    paths: LOCALES_CODES.map((locale) => ({ params: { locale } })),
+    fallback: false,
+  }
+}
+
+export const getStaticProps = (async ({ params }) => {
+  const { locale = DEFAULT_LOCALE } = params || {}
+
   const requiredNamespaces = getRequiredNamespacesForPage("/quizzes")
 
   const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
@@ -49,14 +58,16 @@ export const getStaticProps = (async ({ locale }) => {
     lastDeployDate
   )
 
+  const messages = await loadNamespaces(locale, requiredNamespaces)
+
   return {
     props: {
-      ...(await serverSideTranslations(locale!, requiredNamespaces)),
+      messages,
       contentNotTranslated,
       lastDeployLocaleTimestamp,
     },
   }
-}) satisfies GetStaticProps<BasePageProps>
+}) satisfies GetStaticProps<BasePageProps, Params>
 
 const QuizzesHubPage: NextPage<
   InferGetStaticPropsType<typeof getStaticProps>

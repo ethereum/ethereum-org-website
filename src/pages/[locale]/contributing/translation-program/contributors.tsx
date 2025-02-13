@@ -1,10 +1,7 @@
 import { BaseHTMLAttributes } from "react"
-import { useRouter } from "next/router"
 import { GetStaticProps } from "next/types"
-import { useTranslation } from "next-i18next"
-import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 
-import { BasePageProps, CostLeaderboardData, Lang } from "@/lib/types"
+import { BasePageProps, CostLeaderboardData, Lang, Params } from "@/lib/types"
 
 import Breadcrumbs from "@/components/Breadcrumbs"
 import FeedbackCard from "@/components/FeedbackCard"
@@ -20,9 +17,24 @@ import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
-import allTimeData from "../../../data/translation-reports/alltime/alltime-data.json"
+import allTimeData from "@/data/translation-reports/alltime/alltime-data.json"
 
-export const getStaticProps = (async ({ locale }) => {
+import { DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
+
+import { useTranslation } from "@/hooks/useTranslation"
+import loadNamespaces from "@/i18n/loadNamespaces"
+import { useRouter } from "@/i18n/routing"
+
+export async function getStaticPaths() {
+  return {
+    paths: LOCALES_CODES.map((locale) => ({ params: { locale } })),
+    fallback: false,
+  }
+}
+
+export const getStaticProps = (async ({ params }) => {
+  const { locale = DEFAULT_LOCALE } = params || {}
+
   const lastDeployDate = getLastDeployDate()
   const lastDeployLocaleTimestamp = getLocaleTimestamp(
     locale as Lang,
@@ -35,14 +47,16 @@ export const getStaticProps = (async ({ locale }) => {
 
   const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
+  const messages = await loadNamespaces(locale, requiredNamespaces)
+
   return {
     props: {
-      ...(await serverSideTranslations(locale!, requiredNamespaces)),
+      messages,
       contentNotTranslated,
       lastDeployLocaleTimestamp,
     },
   }
-}) satisfies GetStaticProps<BasePageProps>
+}) satisfies GetStaticProps<BasePageProps, Params>
 
 const Content = ({ ...props }: BaseHTMLAttributes<HTMLHeadingElement>) => (
   <MainArticle className="w-full px-10 py-4" {...props} />

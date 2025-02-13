@@ -1,10 +1,8 @@
 import { BaseHTMLAttributes } from "react"
 import { GetStaticProps } from "next/types"
-import { useTranslation } from "next-i18next"
-import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { MdHelpOutline } from "react-icons/md"
 
-import { BasePageProps, Lang } from "@/lib/types"
+import { BasePageProps, Lang, Params } from "@/lib/types"
 
 import CalloutBanner from "@/components/CalloutBanner"
 import DataProductCard from "@/components/DataProductCard"
@@ -36,8 +34,10 @@ import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
-import { BASE_TIME_UNIT } from "@/lib/constants"
+import { BASE_TIME_UNIT, DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
 
+import { useTranslation } from "@/hooks/useTranslation"
+import loadNamespaces from "@/i18n/loadNamespaces"
 import {
   fetchEthereumEcosystemData,
   fetchEthereumStablecoinsData,
@@ -93,7 +93,16 @@ const loadData = dataLoader<[EthereumDataResponse, StablecoinDataResponse]>(
   REVALIDATE_TIME * 1000
 )
 
-export const getStaticProps = (async ({ locale }) => {
+export async function getStaticPaths() {
+  return {
+    paths: LOCALES_CODES.map((locale) => ({ params: { locale } })),
+    fallback: false,
+  }
+}
+
+export const getStaticProps = (async ({ params }) => {
+  const { locale = DEFAULT_LOCALE } = params || {}
+
   const lastDeployDate = getLastDeployDate()
   const lastDeployLocaleTimestamp = getLocaleTimestamp(
     locale as Lang,
@@ -174,16 +183,18 @@ export const getStaticProps = (async ({ locale }) => {
     marketsHasError = true
   }
 
+  const messages = await loadNamespaces(locale, requiredNamespaces)
+
   return {
     props: {
-      ...(await serverSideTranslations(locale!, requiredNamespaces)),
+      messages,
       contentNotTranslated,
       lastDeployLocaleTimestamp,
       markets,
       marketsHasError,
     },
   }
-}) satisfies GetStaticProps<Props>
+}) satisfies GetStaticProps<Props, Params>
 
 const Content = (props: BaseHTMLAttributes<HTMLDivElement>) => (
   <div className="w-full px-8 py-4" {...props} />

@@ -7,11 +7,8 @@ import React, {
   useState,
 } from "react"
 import { type GetStaticProps } from "next"
-import { useRouter } from "next/router"
-import { useTranslation } from "next-i18next"
-import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 
-import type { BasePageProps, ChildOnlyProp, Lang } from "@/lib/types"
+import type { BasePageProps, ChildOnlyProp, Lang, Params } from "@/lib/types"
 
 import BoxGrid from "@/components/BoxGrid"
 import Callout from "@/components/Callout"
@@ -44,6 +41,11 @@ import { trackCustomEvent } from "@/lib/utils/matomo"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
+import { DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
+
+import { useTranslation } from "@/hooks/useTranslation"
+import loadNamespaces from "@/i18n/loadNamespaces"
+import { useRouter } from "@/i18n/routing"
 import aave from "@/public/images/dapps/aave.png"
 import ankr from "@/public/images/dapps/ankr.png"
 import api3 from "@/public/images/dapps/api3.png"
@@ -320,7 +322,16 @@ interface Categories {
   [key: string]: Category
 }
 
-export const getStaticProps = (async ({ locale }) => {
+export async function getStaticPaths() {
+  return {
+    paths: LOCALES_CODES.map((locale) => ({ params: { locale } })),
+    fallback: false,
+  }
+}
+
+export const getStaticProps = (async ({ params }) => {
+  const { locale = DEFAULT_LOCALE } = params || {}
+
   const requiredNamespaces = getRequiredNamespacesForPage("/dapps")
 
   const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
@@ -331,14 +342,16 @@ export const getStaticProps = (async ({ locale }) => {
     lastDeployDate
   )
 
+  const messages = await loadNamespaces(locale, requiredNamespaces)
+
   return {
     props: {
-      ...(await serverSideTranslations(locale!, requiredNamespaces)),
+      messages,
       contentNotTranslated,
       lastDeployLocaleTimestamp,
     },
   }
-}) satisfies GetStaticProps<BasePageProps>
+}) satisfies GetStaticProps<BasePageProps, Params>
 
 const DappsPage = () => {
   const { t } = useTranslation(["page-dapps", "common"])

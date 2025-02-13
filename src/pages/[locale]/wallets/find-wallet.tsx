@@ -1,9 +1,12 @@
 import { GetStaticProps, InferGetStaticPropsType } from "next"
-import { useRouter } from "next/router"
-import { useTranslation } from "next-i18next"
-import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 
-import type { BasePageProps, ChildOnlyProp, Lang, Wallet } from "@/lib/types"
+import type {
+  BasePageProps,
+  ChildOnlyProp,
+  Lang,
+  Params,
+  Wallet,
+} from "@/lib/types"
 
 import BannerNotification from "@/components/Banners/BannerNotification"
 import Breadcrumbs from "@/components/Breadcrumbs"
@@ -24,6 +27,11 @@ import {
   getSupportedLocaleWallets,
 } from "@/lib/utils/wallets"
 
+import { DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
+
+import { useTranslation } from "@/hooks/useTranslation"
+import loadNamespaces from "@/i18n/loadNamespaces"
+import { usePathname } from "@/i18n/routing"
 import HeroImage from "@/public/images/wallets/wallet-hero.png"
 
 const Subtitle = ({ children }: ChildOnlyProp) => (
@@ -36,7 +44,16 @@ type Props = BasePageProps & {
   wallets: Wallet[]
 }
 
-export const getStaticProps = (async ({ locale }) => {
+export async function getStaticPaths() {
+  return {
+    paths: LOCALES_CODES.map((locale) => ({ params: { locale } })),
+    fallback: false,
+  }
+}
+
+export const getStaticProps = (async ({ params }) => {
+  const { locale = DEFAULT_LOCALE } = params || {}
+
   const lastDeployDate = getLastDeployDate()
   const lastDeployLocaleTimestamp = getLocaleTimestamp(
     locale as Lang,
@@ -61,20 +78,22 @@ export const getStaticProps = (async ({ locale }) => {
     ),
   }))
 
+  const messages = await loadNamespaces(locale!, requiredNamespaces)
+
   return {
     props: {
-      ...(await serverSideTranslations(locale!, requiredNamespaces)),
+      messages,
       contentNotTranslated,
       lastDeployLocaleTimestamp,
       wallets,
     },
   }
-}) satisfies GetStaticProps<Props>
+}) satisfies GetStaticProps<Props, Params>
 
 const FindWalletPage = ({
   wallets,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
-  const { pathname } = useRouter()
+  const pathname = usePathname()
   const { t } = useTranslation("page-wallets-find-wallet")
 
   return (

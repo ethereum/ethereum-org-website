@@ -1,10 +1,7 @@
 import { BaseHTMLAttributes } from "react"
-import { useRouter } from "next/router"
 import { GetStaticProps } from "next/types"
-import { useTranslation } from "next-i18next"
-import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 
-import { BasePageProps, Lang } from "@/lib/types"
+import { BasePageProps, Lang, Params } from "@/lib/types"
 
 import ActionCard from "@/components/ActionCard"
 import Breadcrumbs from "@/components/Breadcrumbs"
@@ -23,11 +20,16 @@ import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
-import allTimeData from "../../../data/translation-reports/alltime/alltime-data.json"
-import monthData from "../../../data/translation-reports/month/month-data.json"
-import quarterData from "../../../data/translation-reports/quarter/quarter-data.json"
+import allTimeData from "@/data/translation-reports/alltime/alltime-data.json"
+import monthData from "@/data/translation-reports/month/month-data.json"
+import quarterData from "@/data/translation-reports/quarter/quarter-data.json"
+
+import { DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
 
 import useColorModeValue from "@/hooks/useColorModeValue"
+import { useTranslation } from "@/hooks/useTranslation"
+import loadNamespaces from "@/i18n/loadNamespaces"
+import { useRouter } from "@/i18n/routing"
 import darkThemeCertificateImg from "@/public/images/certificates/dark-certificate.png"
 import lightThemeCertificateImg from "@/public/images/certificates/light-certificate.png"
 import dogeComputerImg from "@/public/images/doge-computer.png"
@@ -54,7 +56,16 @@ const Text = ({
   <p className={cn("mb-6", className)} {...props} />
 )
 
-export const getStaticProps = (async ({ locale }) => {
+export async function getStaticPaths() {
+  return {
+    paths: LOCALES_CODES.map((locale) => ({ params: { locale } })),
+    fallback: false,
+  }
+}
+
+export const getStaticProps = (async ({ params }) => {
+  const { locale = DEFAULT_LOCALE } = params || {}
+
   const lastDeployDate = getLastDeployDate()
   const lastDeployLocaleTimestamp = getLocaleTimestamp(
     locale as Lang,
@@ -67,14 +78,16 @@ export const getStaticProps = (async ({ locale }) => {
 
   const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
+  const messages = await loadNamespaces(locale, requiredNamespaces)
+
   return {
     props: {
-      ...(await serverSideTranslations(locale!, requiredNamespaces)),
+      messages,
       contentNotTranslated,
       lastDeployLocaleTimestamp,
     },
   }
-}) satisfies GetStaticProps<BasePageProps>
+}) satisfies GetStaticProps<BasePageProps, Params>
 
 const TranslatorAcknowledgements = () => {
   const router = useRouter()

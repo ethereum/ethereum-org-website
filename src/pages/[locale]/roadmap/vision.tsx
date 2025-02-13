@@ -1,7 +1,5 @@
 import { GetStaticProps } from "next"
-import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
-import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import type { ComponentPropsWithRef } from "react"
 import {
   Box,
@@ -14,7 +12,7 @@ import {
   useToken,
 } from "@chakra-ui/react"
 
-import type { BasePageProps, ChildOnlyProp, Lang } from "@/lib/types"
+import type { BasePageProps, ChildOnlyProp, Lang, Params } from "@/lib/types"
 
 import Breadcrumbs from "@/components/Breadcrumbs"
 import ButtonLink from "@/components/Buttons/ButtonLink"
@@ -38,6 +36,10 @@ import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
+import { DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
+
+import loadNamespaces from "@/i18n/loadNamespaces"
+import { useRouter } from "@/i18n/routing"
 import oldship from "@/public/images/upgrades/oldship.png"
 
 const Page = (props: ChildOnlyProp) => (
@@ -102,7 +104,16 @@ const TrilemmaContent = (props: ChildOnlyProp) => (
   <Box w="full" my={8} mx={0} p={8} background="cardGradient" {...props} />
 )
 
-export const getStaticProps = (async ({ locale }) => {
+export async function getStaticPaths() {
+  return {
+    paths: LOCALES_CODES.map((locale) => ({ params: { locale } })),
+    fallback: false,
+  }
+}
+
+export const getStaticProps = (async ({ params }) => {
+  const { locale = DEFAULT_LOCALE } = params || {}
+
   const requiredNamespaces = getRequiredNamespacesForPage("/roadmap/vision")
 
   const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
@@ -113,14 +124,16 @@ export const getStaticProps = (async ({ locale }) => {
     lastDeployDate
   )
 
+  const messages = await loadNamespaces(locale, requiredNamespaces)
+
   return {
     props: {
-      ...(await serverSideTranslations(locale!, requiredNamespaces)),
+      messages,
       contentNotTranslated,
       lastDeployLocaleTimestamp,
     },
   }
-}) satisfies GetStaticProps<BasePageProps>
+}) satisfies GetStaticProps<BasePageProps, Params>
 
 const VisionPage = () => {
   const { t } = useTranslation(["page-roadmap-vision", "page-upgrades-index"])

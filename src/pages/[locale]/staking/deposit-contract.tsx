@@ -1,14 +1,13 @@
 import { useEffect, useState } from "react"
 import makeBlockie from "ethereum-blockies-base64"
 import { type GetStaticProps } from "next"
-import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
-import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 
 import type {
   BasePageProps,
   ChildOnlyProp,
   Lang,
+  Params,
   TranslationKey,
 } from "@/lib/types"
 
@@ -41,6 +40,10 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { DEPOSIT_CONTRACT_ADDRESS } from "@/data/addresses"
 
+import { DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
+
+import loadNamespaces from "@/i18n/loadNamespaces"
+import { useRouter } from "@/i18n/routing"
 import consensys from "@/public/images/projects/consensys.png"
 import etherscan from "@/public/images/projects/etherscan-logo-circle.png"
 import ef from "@/public/images/staking/ef-blog-logo.png"
@@ -163,7 +166,16 @@ const CHUNKED_ADDRESS = DEPOSIT_CONTRACT_ADDRESS.match(/.{1,3}/g)?.join(" ")
 
 const blockieSrc = makeBlockie(DEPOSIT_CONTRACT_ADDRESS)
 
-export const getStaticProps = (async ({ locale }) => {
+export async function getStaticPaths() {
+  return {
+    paths: LOCALES_CODES.map((locale) => ({ params: { locale } })),
+    fallback: false,
+  }
+}
+
+export const getStaticProps = (async ({ params }) => {
+  const { locale = DEFAULT_LOCALE } = params || {}
+
   const requiredNamespaces = getRequiredNamespacesForPage(
     "/staking/deposit-contract"
   )
@@ -176,14 +188,16 @@ export const getStaticProps = (async ({ locale }) => {
     lastDeployDate
   )
 
+  const messages = await loadNamespaces(locale, requiredNamespaces)
+
   return {
     props: {
-      ...(await serverSideTranslations(locale!, requiredNamespaces)),
+      messages,
       contentNotTranslated,
       lastDeployLocaleTimestamp,
     },
   }
-}) satisfies GetStaticProps<BasePageProps>
+}) satisfies GetStaticProps<BasePageProps, Params>
 
 const DepositContractPage = () => {
   const { asPath } = useRouter()

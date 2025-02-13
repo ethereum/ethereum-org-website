@@ -1,10 +1,8 @@
 import { BaseHTMLAttributes } from "react"
 import shuffle from "lodash/shuffle"
 import { GetStaticProps } from "next"
-import { useTranslation } from "next-i18next"
-import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 
-import { BasePageProps, Lang, LearningTool } from "@/lib/types"
+import { BasePageProps, Lang, LearningTool, Params } from "@/lib/types"
 
 import ButtonLink from "@/components/Buttons/ButtonLink"
 import CalloutBanner from "@/components/CalloutBanner"
@@ -21,6 +19,10 @@ import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
+import { DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
+
+import { useTranslation } from "@/hooks/useTranslation"
+import loadNamespaces from "@/i18n/loadNamespaces"
 import AlchemyUniversityImage from "@/public/images/dev-tools/alchemyuniversity.png"
 import AtlasImage from "@/public/images/dev-tools/atlas.png"
 import BloomTechImage from "@/public/images/dev-tools/bloomtech.png"
@@ -117,7 +119,16 @@ const StackContainer = ({
   />
 )
 
-export const getStaticProps = (async ({ locale }) => {
+export async function getStaticPaths() {
+  return {
+    paths: LOCALES_CODES.map((locale) => ({ params: { locale } })),
+    fallback: false,
+  }
+}
+
+export const getStaticProps = (async ({ params }) => {
+  const { locale = DEFAULT_LOCALE } = params || {}
+
   const requiredNamespaces = getRequiredNamespacesForPage(
     "/developers/learning-tools"
   )
@@ -130,14 +141,16 @@ export const getStaticProps = (async ({ locale }) => {
     lastDeployDate
   )
 
+  const messages = await loadNamespaces(locale!, requiredNamespaces)
+
   return {
     props: {
-      ...(await serverSideTranslations(locale!, requiredNamespaces)),
+      messages,
       contentNotTranslated,
       lastDeployLocaleTimestamp,
     },
   }
-}) satisfies GetStaticProps<BasePageProps>
+}) satisfies GetStaticProps<BasePageProps, Params>
 
 const LearningToolsPage = () => {
   const { t } = useTranslation(["page-developers-learning-tools"])
@@ -480,9 +493,7 @@ const LearningToolsPage = () => {
           <CalloutBanner
             className="mx-4 mb-40 mt-24"
             image={EnterpriseEth}
-            alt={t(
-              "page-developers-learning-tools:page-index-tout-enterprise-image-alt"
-            )}
+            alt="Enterprise ETH"
             titleKey={
               "page-developers-learning-tools:page-learning-tools-documentation"
             }

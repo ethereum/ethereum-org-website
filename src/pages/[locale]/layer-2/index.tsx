@@ -1,7 +1,6 @@
 import type { GetStaticProps } from "next/types"
-import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 
-import type { BasePageProps, GrowThePieData, Lang } from "@/lib/types"
+import type { BasePageProps, GrowThePieData, Lang, Params } from "@/lib/types"
 
 import Callout from "@/components/Callout"
 import Card from "@/components/Card"
@@ -21,8 +20,9 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { layer2Data, Rollups } from "@/data/networks/networks"
 
-import { BASE_TIME_UNIT } from "@/lib/constants"
+import { BASE_TIME_UNIT, DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
 
+import loadNamespaces from "@/i18n/loadNamespaces"
 import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
 import HeroImage from "@/public/images/heroes/layer-2-hub-hero.jpg"
 import EthereumLogo from "@/public/images/layer-2/ethereum.png"
@@ -38,7 +38,16 @@ const loadData = dataLoader(
   REVALIDATE_TIME * 1000
 )
 
-export const getStaticProps = (async ({ locale }) => {
+export async function getStaticPaths() {
+  return {
+    paths: LOCALES_CODES.map((locale) => ({ params: { locale } })),
+    fallback: false,
+  }
+}
+
+export const getStaticProps = (async ({ params }) => {
+  const { locale = DEFAULT_LOCALE } = params || {}
+
   const lastDeployDate = getLastDeployDate()
   const lastDeployLocaleTimestamp = getLocaleTimestamp(
     locale as Lang,
@@ -53,9 +62,11 @@ export const getStaticProps = (async ({ locale }) => {
 
   const randomL2s = layer2Data.sort(() => 0.5 - Math.random()).slice(0, 9)
 
+  const messages = await loadNamespaces(locale, requiredNamespaces)
+
   return {
     props: {
-      ...(await serverSideTranslations(locale!, requiredNamespaces)),
+      messages,
       randomL2s,
       contentNotTranslated,
       lastDeployLocaleTimestamp,
@@ -63,7 +74,7 @@ export const getStaticProps = (async ({ locale }) => {
       growThePieData,
     },
   }
-}) satisfies GetStaticProps<BasePageProps>
+}) satisfies GetStaticProps<BasePageProps, Params>
 
 const Layer2Hub = ({
   randomL2s,

@@ -8,7 +8,6 @@ import type {
   InferGetStaticPropsType,
 } from "next/types"
 import type { SSRConfig } from "next-i18next"
-import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { MDXRemote, type MDXRemoteSerializeResult } from "next-mdx-remote"
 import { serialize } from "next-mdx-remote/serialize"
 import { getPlaiceholder } from "plaiceholder"
@@ -34,11 +33,11 @@ import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getContent, getContentBySlug } from "@/lib/utils/md"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 import { remapTableOfContents } from "@/lib/utils/toc"
-import {
-  filterRealLocales,
-  getRequiredNamespacesForPage,
-} from "@/lib/utils/translations"
+import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
+import { LOCALES_CODES } from "@/lib/constants"
+
+import loadNamespaces from "@/i18n/loadNamespaces"
 import {
   docsComponents,
   DocsLayout,
@@ -64,6 +63,7 @@ import remarkInferToc from "@/lib/rehype/remarkInferToc"
 
 interface Params extends ParsedUrlQuery {
   slug: string[]
+  locale: string
 }
 
 export const layoutMapping = {
@@ -88,17 +88,17 @@ const componentsMapping = {
   tutorial: tutorialsComponents,
 } as const
 
-export const getStaticPaths = (({ locales }) => {
+export const getStaticPaths = (() => {
   const contentFiles = getContent("/")
 
   // Generate page paths for each supported locale
-  const paths = filterRealLocales(locales).flatMap((locale) =>
+  const paths = LOCALES_CODES.flatMap((locale) =>
     contentFiles.map((file) => ({
       params: {
         // Splitting nested paths to generate proper slug
         slug: file.slug.split("/").slice(1),
+        locale,
       },
-      locale,
     }))
   )
 
@@ -120,7 +120,7 @@ const loadData = dataLoader([["gfissues", fetchGFIs]])
 
 export const getStaticProps = (async (context) => {
   const params = context.params!
-  const { locale } = context
+  const { locale } = params
 
   const markdown = getContentBySlug(`${locale}/${params.slug.join("/")}`)
   const frontmatter = markdown.frontmatter
@@ -198,9 +198,11 @@ export const getStaticProps = (async (context) => {
 
   const [gfissues] = await loadData()
 
+  const messages = await loadNamespaces(locale, requiredNamespaces)
+
   return {
     props: {
-      ...(await serverSideTranslations(locale!, requiredNamespaces)),
+      messages,
       mdxSource,
       slug,
       frontmatter,

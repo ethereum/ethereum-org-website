@@ -1,9 +1,7 @@
 import { HTMLAttributes } from "react"
 import { GetStaticProps, InferGetStaticPropsType } from "next"
-import { useTranslation } from "next-i18next"
-import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 
-import { BasePageProps, ChildOnlyProp, Lang } from "@/lib/types"
+import { BasePageProps, ChildOnlyProp, Lang, Params } from "@/lib/types"
 import { Framework } from "@/lib/interfaces"
 
 import FeedbackCard from "@/components/FeedbackCard"
@@ -23,6 +21,10 @@ import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
+import { DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
+
+import { useTranslation } from "@/hooks/useTranslation"
+import loadNamespaces from "@/i18n/loadNamespaces"
 import { getLocalEnvironmentFrameworkData } from "@/lib/api/ghRepoData"
 import EthBlocksImage from "@/public/images/developers-eth-blocks.png"
 
@@ -50,7 +52,16 @@ type Props = BasePageProps & {
   frameworksList: Framework[]
 }
 
-export const getStaticProps = (async ({ locale }) => {
+export async function getStaticPaths() {
+  return {
+    paths: LOCALES_CODES.map((locale) => ({ params: { locale } })),
+    fallback: false,
+  }
+}
+
+export const getStaticProps = (async ({ params }) => {
+  const { locale = DEFAULT_LOCALE } = params || {}
+
   const requiredNamespaces = getRequiredNamespacesForPage(
     "/developers/local-environment"
   )
@@ -65,15 +76,17 @@ export const getStaticProps = (async ({ locale }) => {
     lastDeployDate
   )
 
+  const messages = await loadNamespaces(locale!, requiredNamespaces)
+
   return {
     props: {
-      ...(await serverSideTranslations(locale!, requiredNamespaces)),
+      messages,
       contentNotTranslated,
       frameworksList: frameworksListData,
       lastDeployLocaleTimestamp,
     },
   }
-}) satisfies GetStaticProps<Props>
+}) satisfies GetStaticProps<Props, Params>
 
 const LocalEnvironmentPage = ({
   frameworksList,

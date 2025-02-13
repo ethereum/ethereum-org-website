@@ -1,9 +1,7 @@
 import { BaseHTMLAttributes } from "react"
 import { GetStaticProps } from "next"
-import { useTranslation } from "next-i18next"
-import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 
-import { BasePageProps, ChildOnlyProp, Lang } from "@/lib/types"
+import { BasePageProps, ChildOnlyProp, Lang, Params } from "@/lib/types"
 import { ICard, IGetInvolvedCard } from "@/lib/interfaces"
 
 import ActionCard from "@/components/ActionCard"
@@ -25,6 +23,10 @@ import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
+import { DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
+
+import { useTranslation } from "@/hooks/useTranslation"
+import loadNamespaces from "@/i18n/loadNamespaces"
 // Static assets
 import developersEthBlockImg from "@/public/images/developers-eth-blocks.png"
 import dogeComputerImg from "@/public/images/doge-computer.png"
@@ -38,7 +40,16 @@ import communityHeroImg from "@/public/images/heroes/community-hero.png"
 import upgradesCoreImg from "@/public/images/upgrades/core.png"
 import whatIsEthereumImg from "@/public/images/what-is-ethereum.png"
 
-export const getStaticProps = (async ({ locale }) => {
+export async function getStaticPaths() {
+  return {
+    paths: LOCALES_CODES.map((locale) => ({ params: { locale } })),
+    fallback: false,
+  }
+}
+
+export const getStaticProps = (async ({ params }) => {
+  const { locale = DEFAULT_LOCALE } = params || {}
+
   const requiredNamespaces = getRequiredNamespacesForPage("/community")
 
   const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
@@ -49,14 +60,16 @@ export const getStaticProps = (async ({ locale }) => {
     lastDeployDate
   )
 
+  const messages = await loadNamespaces(locale, requiredNamespaces)
+
   return {
     props: {
-      ...(await serverSideTranslations(locale!, requiredNamespaces)),
+      messages,
       contentNotTranslated,
       lastDeployLocaleTimestamp,
     },
   }
-}) satisfies GetStaticProps<BasePageProps>
+}) satisfies GetStaticProps<BasePageProps, Params>
 
 const CardContainer = ({ children }: ChildOnlyProp) => {
   return <Flex className="-mx-4 flex-wrap">{children}</Flex>

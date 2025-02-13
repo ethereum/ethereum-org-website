@@ -1,9 +1,7 @@
 import type { GetStaticProps, InferGetStaticPropsType } from "next/types"
-import { useTranslation } from "next-i18next"
-import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import type { ReactNode } from "react"
 
-import type { BasePageProps, ChildOnlyProp, Lang } from "@/lib/types"
+import type { BasePageProps, ChildOnlyProp, Lang, Params } from "@/lib/types"
 
 import CalloutBanner from "@/components/CalloutBanner"
 import CardList, {
@@ -38,7 +36,11 @@ import { trackCustomEvent } from "@/lib/utils/matomo"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
+import { DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
+
 import { useBreakpointValue } from "@/hooks/useBreakpointValue"
+import { useTranslation } from "@/hooks/useTranslation"
+import loadNamespaces from "@/i18n/loadNamespaces"
 import uniswap from "@/public/images/dapps/uni.png"
 import dapps from "@/public/images/doge-computer.png"
 import bancor from "@/public/images/exchanges/bancor.png"
@@ -74,7 +76,16 @@ type Props = BasePageProps & {
   lastDataUpdateDate: string
 }
 
-export const getStaticProps = (async ({ locale }) => {
+export async function getStaticPaths() {
+  return {
+    paths: LOCALES_CODES.map((locale) => ({ params: { locale } })),
+    fallback: false,
+  }
+}
+
+export const getStaticProps = (async ({ params }) => {
+  const { locale = DEFAULT_LOCALE } = params || {}
+
   const requiredNamespaces = getRequiredNamespacesForPage("get-eth")
 
   const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
@@ -89,15 +100,17 @@ export const getStaticProps = (async ({ locale }) => {
     lastDeployDate
   )
 
+  const messages = await loadNamespaces(locale, requiredNamespaces)
+
   return {
     props: {
-      ...(await serverSideTranslations(locale!, requiredNamespaces)),
+      messages,
       contentNotTranslated,
       lastDeployLocaleTimestamp,
       lastDataUpdateDate,
     },
   }
-}) satisfies GetStaticProps<Props>
+}) satisfies GetStaticProps<Props, Params>
 
 const GetEthPage = ({
   lastDataUpdateDate,
