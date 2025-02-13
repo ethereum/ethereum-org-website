@@ -58,7 +58,7 @@ Kurtosisは、マルチコンテナテスト環境のビルドシステムで、
 
 イーサリアムKurtosisパッケージを使用すると、パラメータ化された、高スケーラブルで、プライベートのイーサリアムテストネットをDockerもしくはKubernetesで素早くインスタンス化できます。 このパッケージでは、すべての主要な実行レイヤー (EL) およびコンセンサスレイヤー (CL) クライアントをサポートしています。 Kurtosisは、適切にすべてのローカルポートのマッピングを処理し、提供するネットワークへサービス接続をして、イーサリアムコアインフラストラクチャに関する検証およびテストワークフローに使えるようにします。
 
-- [イーサリアムネットワークパッケージ](https://github.com/kurtosis-tech/ethereum-package)
+- [イーサリアムネットワークパッケージ](https://github.com/ethpandaops/ethereum-package)
 - [ウェブサイト](https://www.kurtosis.com/)
 - [GitHub](https://github.com/kurtosis-tech/kurtosis)
 - [ドキュメント](https://docs.kurtosis.com/)

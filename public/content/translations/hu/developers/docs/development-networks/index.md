@@ -58,7 +58,7 @@ A Kurtosis egy felépített rendszer a több konténeres tesztkörnyezetekhez, a
 
 Az Ethereum Kurtosis csomag segítségével gyorsan létrehozható egy paraméterezhető, nagymértékben skálázható és privát Ethereum teszthálózat a Docker vagy a Kubernetes segítségével. A csomag támogatja az összes főbb végrehajtási (EL) és konszenzusréteg (CL) klienst. A Kurtosis elegánsan kezeli az összes helyi port hozzárendelést és szolgáltatáskapcsolatot egy reprezentatív hálózathoz, amelyet az Ethereum fő infrastruktúrával kapcsolatos validálási és tesztelési munkafolyamatokban lehet használni.
 
-- [Ethereum hálózati csomag](https://github.com/kurtosis-tech/ethereum-package)
+- [Ethereum hálózati csomag](https://github.com/ethpandaops/ethereum-package)
 - [Honlap](https://www.kurtosis.com/)
 - [GitHub](https://github.com/kurtosis-tech/kurtosis)
 - [Dokumentáció](https://docs.kurtosis.com/)

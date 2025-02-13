@@ -22,8 +22,8 @@ const frameworksList: Array<Framework> = [
   },
   {
     id: "Kurtosis Ethereum Package",
-    url: "https://github.com/kurtosis-tech/ethereum-package",
-    githubUrl: "https://github.com/kurtosis-tech/ethereum-package",
+    url: "https://github.com/ethpandaops/ethereum-package",
+    githubUrl: "https://github.com/ethpandaops/ethereum-package",
     background: "#000000",
     name: "Kurtosis Ethereum Package",
     description:
