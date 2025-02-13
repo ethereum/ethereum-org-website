@@ -48,7 +48,7 @@ The two pie charts above show snapshots of the current client diversity for the 
 
 The execution layer data were obtained from [Ethernodes](https://ethernodes.org) on 23-Jan-2022. Data for consensus clients was obtained from [Michael Sproul](https://github.com/sigp/blockprint). Consensus client data is more difficult to obtain because the consensus layer clients do not always have unambiguous traces that can be used to identify them. The data was generated using a classification algorithm that sometimes confuses some of the minority clients (see [here](https://twitter.com/sproulM_/status/1440512518242197516) for more details). In the diagram above, these ambiguous classifications are treated with an either/or label (e.g. Nimbus/Teku). Nevertheless, it is clear that the majority of the network is running Prysm. The data is a snapshot over a fixed set of blocks (in this case Beacon blocks in slots 2048001 to 2164916) and Prysm's dominance has sometimes been higher, exceeding 68%. Despite only being snapshots, the values in the diagram provide a good general sense of the current state of client diversity.
 
-Up to date client diversity data for the consensus layer is now available at [clientdiversity.org](https://clientdiversity.org/).
+Up-to-date client diversity data for the consensus layer is now available at [clientdiversity.org](https://clientdiversity.org/).
 
 ## Execution layer {#execution-layer}
 

@@ -78,7 +78,7 @@ The broad areas that are frequently relevant for smart contracts include:
 
 - **External interactions.** Contracts interact with each other, and some external contracts should not be trusted. For example, if your contract relies on external oracles, will it remain secure if half the available oracles are compromised?
 
-  - Manticore and Echidna are the best choice for testing external interactions with your contracts. Manticore has an built-in mechanism to stub external contracts.
+  - Manticore and Echidna are the best choice for testing external interactions with your contracts. Manticore has a built-in mechanism to stub external contracts.
 
 - **Standard conformance.** Ethereum standards (e.g. ERC20) have a history of flaws in their design. Be aware of the limitations of the standard you are building on.
   - Slither, Echidna, and Manticore will help you to detect deviations from a given standard.

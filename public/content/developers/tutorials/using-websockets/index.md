@@ -41,7 +41,7 @@ To begin, open a WebSocket using the WebSocket URL for your app. You can find yo
 
 ![Where to find your WebSocket URL in your Alchemy dashboard](./use-websockets.gif)
 
-Any of the APIs listed in the [Alchemy API Reference](https://docs.alchemyapi.io/documentation/alchemy-api-reference/) can be used via WebSocket. To do so, use the same payload that would be sent as the body of a HTTP POST request, but instead send that payload through the WebSocket.
+Any of the APIs listed in the [Alchemy API Reference](https://docs.alchemyapi.io/documentation/alchemy-api-reference/) can be used via WebSocket. To do so, use the same payload that would be sent as the body of an HTTP POST request, but instead send that payload through the WebSocket.
 
 ## With Web3 {#with-web3}
 
