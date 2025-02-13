@@ -1,8 +1,8 @@
-import { useTranslation } from "next-i18next"
-
 import { BaseLink } from "@/components/Link"
 
 import MenuItem from "./MenuItem"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 type NoResultsCalloutProps = { onClose: () => void }
 

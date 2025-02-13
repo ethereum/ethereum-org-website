@@ -43,7 +43,7 @@ import { DEPOSIT_CONTRACT_ADDRESS } from "@/data/addresses"
 import { DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
 
 import loadNamespaces from "@/i18n/loadNamespaces"
-import { useRouter } from "@/i18n/routing"
+import { usePathname } from "@/i18n/routing"
 import consensys from "@/public/images/projects/consensys.png"
 import etherscan from "@/public/images/projects/etherscan-logo-circle.png"
 import ef from "@/public/images/staking/ef-blog-logo.png"
@@ -200,7 +200,7 @@ export const getStaticProps = (async ({ params }) => {
 }) satisfies GetStaticProps<BasePageProps, Params>
 
 const DepositContractPage = () => {
-  const { asPath } = useRouter()
+  const pathname = usePathname()
 
   const { t } = useTranslation("page-staking-deposit-contract")
 
@@ -317,7 +317,7 @@ const DepositContractPage = () => {
           description={t("page-staking-deposit-contract-meta-desc")}
         />
         <LeftColumn>
-          <Breadcrumbs slug={asPath} startDepth={1} />
+          <Breadcrumbs slug={pathname} startDepth={1} />
           <Title>{t("page-staking-deposit-contract-title")}</Title>
           <Subtitle>{t("page-staking-deposit-contract-subtitle")}</Subtitle>
           <H2>{t("page-staking-deposit-contract-h2")}</H2>

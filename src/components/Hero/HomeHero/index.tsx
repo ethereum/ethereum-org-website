@@ -1,9 +1,9 @@
-import { useTranslation } from "next-i18next"
-
 import type { ClassNameProp, CommonHeroProps } from "@/lib/types"
 
 import { TwImage } from "@/components/Image"
 import Morpher from "@/components/Morpher"
+
+import useTranslation from "@/hooks/useTranslation"
 
 export type HomeHeroProps = Pick<CommonHeroProps, "heroImg"> & ClassNameProp
 

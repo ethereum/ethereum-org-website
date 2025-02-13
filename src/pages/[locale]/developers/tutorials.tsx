@@ -7,6 +7,7 @@ import React, {
   useState,
 } from "react"
 import { GetStaticProps, InferGetServerSidePropsType } from "next"
+import { useLocale } from "next-intl"
 import { FaGithub } from "react-icons/fa"
 
 import { BasePageProps, Lang, Params } from "@/lib/types"
@@ -43,7 +44,6 @@ import { DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
 import { useBreakpointValue } from "@/hooks/useBreakpointValue"
 import { useTranslation } from "@/hooks/useTranslation"
 import loadNamespaces from "@/i18n/loadNamespaces"
-import { useRouter } from "@/i18n/routing"
 
 type Props = BasePageProps & {
   internalTutorials: ITutorial[]
@@ -160,7 +160,7 @@ const TutorialPage = ({
   internalTutorials,
   contentNotTranslated,
 }: InferGetServerSidePropsType<typeof getStaticProps>) => {
-  const { locale } = useRouter()
+  const locale = useLocale()
   const filteredTutorialsByLang = useMemo(
     () =>
       filterTutorialsByLang(

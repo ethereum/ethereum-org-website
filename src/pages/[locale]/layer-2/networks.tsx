@@ -22,7 +22,7 @@ import { walletsData } from "@/data/wallets/wallet-data"
 import { BASE_TIME_UNIT, DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
 
 import loadNamespaces from "@/i18n/loadNamespaces"
-import { useRouter } from "@/i18n/routing"
+import { usePathname } from "@/i18n/routing"
 import { fetchEthereumMarketcap } from "@/lib/api/fetchEthereumMarketcap"
 import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
 import { fetchGrowThePieBlockspace } from "@/lib/api/fetchGrowThePieBlockspace"
@@ -143,7 +143,7 @@ export const getStaticProps = (async ({ params }) => {
 }) satisfies GetStaticProps<BasePageProps, Params>
 
 const Layer2Networks = ({ layer2Data, locale, mainnetData }) => {
-  const { pathname } = useRouter()
+  const pathname = usePathname()
 
   const heroProps: ContentHeroProps = {
     breadcrumbs: { slug: pathname, startDepth: 1 },

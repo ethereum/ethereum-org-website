@@ -21,7 +21,7 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import { DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
 
 import loadNamespaces from "@/i18n/loadNamespaces"
-import { useRouter } from "@/i18n/routing"
+import { usePathname } from "@/i18n/routing"
 import Callout2Image from "@/public/images/layer-2/learn-hero.png"
 import OptimisticRollupImage from "@/public/images/layer-2/optimistic_rollup.png"
 import RollupImage from "@/public/images/layer-2/rollup-2.png"
@@ -63,7 +63,7 @@ export const getStaticProps = (async ({ params }) => {
 
 const Layer2Learn = () => {
   const { t } = useTranslation("page-layer-2-learn")
-  const { pathname } = useRouter()
+  const pathname = usePathname()
 
   const heroProps: ContentHeroProps = {
     breadcrumbs: { slug: pathname, startDepth: 1 },

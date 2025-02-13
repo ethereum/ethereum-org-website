@@ -29,7 +29,7 @@ import { DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
 import useColorModeValue from "@/hooks/useColorModeValue"
 import { useTranslation } from "@/hooks/useTranslation"
 import loadNamespaces from "@/i18n/loadNamespaces"
-import { useRouter } from "@/i18n/routing"
+import { usePathname } from "@/i18n/routing"
 import darkThemeCertificateImg from "@/public/images/certificates/dark-certificate.png"
 import lightThemeCertificateImg from "@/public/images/certificates/light-certificate.png"
 import dogeComputerImg from "@/public/images/doge-computer.png"
@@ -90,7 +90,7 @@ export const getStaticProps = (async ({ params }) => {
 }) satisfies GetStaticProps<BasePageProps, Params>
 
 const TranslatorAcknowledgements = () => {
-  const router = useRouter()
+  const pathname = usePathname()
   const { t } = useTranslation(
     "page-contributing-translation-program-acknowledgements"
   )
@@ -112,7 +112,7 @@ const TranslatorAcknowledgements = () => {
       />
 
       <Content>
-        <Breadcrumbs slug={router.asPath} className="mt-12" />
+        <Breadcrumbs slug={pathname} className="mt-12" />
         <h1 className="my-8 leading-xs">
           {t(
             "page-contributing-translation-program-acknowledgements-acknowledgement-page-title"

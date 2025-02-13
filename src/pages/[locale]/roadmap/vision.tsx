@@ -39,7 +39,7 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import { DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
 
 import loadNamespaces from "@/i18n/loadNamespaces"
-import { useRouter } from "@/i18n/routing"
+import { usePathname } from "@/i18n/routing"
 import oldship from "@/public/images/upgrades/oldship.png"
 
 const Page = (props: ChildOnlyProp) => (
@@ -137,7 +137,7 @@ export const getStaticProps = (async ({ params }) => {
 
 const VisionPage = () => {
   const { t } = useTranslation(["page-roadmap-vision", "page-upgrades-index"])
-  const { pathname } = useRouter()
+  const pathname = usePathname()
 
   const paths = [
     {

@@ -1,5 +1,3 @@
-import { useRouter } from "next/router"
-
 import type { ChildOnlyProp } from "@/lib/types"
 import type { MdPageContent, UseCasesFrontmatter } from "@/lib/interfaces"
 
@@ -16,6 +14,7 @@ import { getSummaryPoints } from "@/lib/utils/getSummaryPoints"
 import { ContentLayout } from "../ContentLayout"
 
 import { useTranslation } from "@/hooks/useTranslation"
+import { usePathname } from "@/i18n/routing"
 
 // UseCases layout components
 export const useCasesComponents = {
@@ -33,12 +32,12 @@ export const UseCasesLayout = ({
   tocItems,
   contentNotTranslated,
 }: UseCasesLayoutProps) => {
-  const { asPath: relativePath } = useRouter()
+  const pathname = usePathname()
   const { t } = useTranslation("template-usecase")
 
   const summaryPoints = getSummaryPoints(frontmatter)
 
-  const absoluteEditPath = getEditPath(relativePath)
+  const absoluteEditPath = getEditPath(pathname)
 
   const dropdownLinks: ButtonDropdownList = {
     text: t("template-usecase:template-usecase-dropdown"),

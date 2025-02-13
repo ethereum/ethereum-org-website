@@ -1,19 +1,22 @@
 import { useMemo } from "react"
-import { useRouter } from "next/router"
-import { useTranslation } from "next-i18next"
+import { useLocale } from "next-intl"
 
 import type { Lang, LocaleDisplayInfo } from "@/lib/types"
 
 import { MatomoEventOptions, trackCustomEvent } from "@/lib/utils/matomo"
 import { filterRealLocales } from "@/lib/utils/translations"
 
+import { LOCALES_CODES } from "@/lib/constants"
+
 import { localeToDisplayInfo } from "./localeToDisplayInfo"
 
 import { useDisclosure } from "@/hooks/useDisclosure"
+import { useTranslation } from "@/hooks/useTranslation"
 
 export const useLanguagePicker = (handleClose?: () => void) => {
   const { t } = useTranslation("common")
-  const { locale, locales: rawLocales } = useRouter()
+  const locale = useLocale()
+  const rawLocales = LOCALES_CODES
 
   const languages = useMemo<LocaleDisplayInfo[]>(() => {
     const locales = filterRealLocales(rawLocales)

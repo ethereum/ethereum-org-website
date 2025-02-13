@@ -23,7 +23,7 @@ import { DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
 
 import { useTranslation } from "@/hooks/useTranslation"
 import loadNamespaces from "@/i18n/loadNamespaces"
-import { useRouter } from "@/i18n/routing"
+import { usePathname } from "@/i18n/routing"
 
 export async function getStaticPaths() {
   return {
@@ -73,7 +73,7 @@ const Contributors = () => {
   const { t } = useTranslation(
     "page-contributing-translation-program-contributors"
   )
-  const router = useRouter()
+  const pathname = usePathname()
 
   const translators = (allTimeData as CostLeaderboardData[])
     .map((item: CostLeaderboardData) => item.username)
@@ -91,7 +91,7 @@ const Contributors = () => {
       />
 
       <Content>
-        <Breadcrumbs slug={router.asPath} className="mt-12" />
+        <Breadcrumbs slug={pathname} className="mt-12" />
         <h1 className="my-8 leading-xs">
           {t("page-contributing-translation-program-contributors-title")}
         </h1>

@@ -1,4 +1,3 @@
-import { useTranslation } from "next-i18next"
 import { IoChevronDownSharp, IoChevronUpSharp } from "react-icons/io5"
 
 import { Wallet } from "@/lib/types"
@@ -13,6 +12,8 @@ import { Tag } from "@/components/ui/tag"
 import { formatStringList, getWalletPersonas } from "@/lib/utils/wallets"
 
 import { ethereumNetworkData, layer2Data } from "@/data/networks/networks"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 interface WalletInfoProps {
   wallet: Wallet

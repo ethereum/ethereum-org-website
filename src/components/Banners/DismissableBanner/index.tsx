@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react"
-import { useTranslation } from "next-i18next"
 import { MdClose } from "react-icons/md"
 
 import { Button } from "@/components/ui/buttons/Button"
@@ -8,6 +7,8 @@ import { Center } from "@/components/ui/flex"
 import { cn } from "@/lib/utils/cn"
 
 import BannerNotification from "../BannerNotification"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 type DismissableBannerProps = React.HTMLAttributes<HTMLDivElement> & {
   storageKey: string

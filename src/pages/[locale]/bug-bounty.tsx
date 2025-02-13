@@ -37,7 +37,7 @@ import { DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
 import useColorModeValue from "@/hooks/useColorModeValue"
 import { useTranslation } from "@/hooks/useTranslation"
 import loadNamespaces from "@/i18n/loadNamespaces"
-import { useRouter } from "@/i18n/routing"
+import { usePathname } from "@/i18n/routing"
 import besu from "@/public/images/upgrades/besu.png"
 import erigon from "@/public/images/upgrades/erigon.png"
 import geth from "@/public/images/upgrades/geth.png"
@@ -263,7 +263,7 @@ export const getStaticProps = (async ({ params }) => {
 }) satisfies GetStaticProps<BasePageProps, Params>
 
 const BugBountiesPage = () => {
-  const { pathname } = useRouter()
+  const pathname = usePathname()
   const { t } = useTranslation("page-bug-bounty")
 
   const consensusBountyHunters: Node[] = consensusData.sort(sortBountyHuntersFn)

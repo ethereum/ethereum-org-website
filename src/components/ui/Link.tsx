@@ -1,6 +1,5 @@
 import { AnchorHTMLAttributes, forwardRef } from "react"
 import NextLink, { type LinkProps as NextLinkProps } from "next/link"
-import { useRouter } from "next/router"
 import { RxExternalLink } from "react-icons/rx"
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden"
 
@@ -12,6 +11,7 @@ import * as url from "@/lib/utils/url"
 import { DISCORD_PATH, SITE_URL } from "@/lib/constants"
 
 import { useRtlFlip } from "@/hooks/useRtlFlip"
+import { usePathname } from "@/i18n/routing"
 
 type BaseProps = {
   hideArrow?: boolean
@@ -49,7 +49,7 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
   }: LinkProps,
   ref
 ) {
-  const { asPath } = useRouter()
+  const pathname = usePathname()
   const { twFlipForRtl } = useRtlFlip()
 
   if (!href) {
@@ -57,7 +57,7 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
     return <a {...props} />
   }
 
-  const isActive = url.isHrefActive(href, asPath, isPartiallyActive)
+  const isActive = url.isHrefActive(href, pathname, isPartiallyActive)
   const isDiscordInvite = url.isDiscordInvite(href)
   const isPdf = url.isPdf(href)
   const isExternal = url.isExternal(href)
@@ -67,7 +67,7 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
   // Get proper download link for internally hosted PDF's & static files (ex: whitepaper)
   // Opens in separate window.
   if (isInternalPdf) {
-    href = getRelativePath(asPath, href)
+    href = getRelativePath(pathname, href)
   }
 
   if (isDiscordInvite) {

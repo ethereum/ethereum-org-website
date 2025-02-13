@@ -1,5 +1,6 @@
 import { GetStaticProps, InferGetStaticPropsType } from "next"
 import type { ImageProps } from "next/image"
+import { useLocale } from "next-intl"
 import type { HTMLAttributes } from "react"
 import { MdInfoOutline } from "react-icons/md"
 
@@ -56,7 +57,6 @@ import { DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
 
 import useTranslation from "@/hooks/useTranslation"
 import loadNamespaces from "@/i18n/loadNamespaces"
-import { useRouter } from "@/i18n/routing"
 import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
 import dogeComputerImg from "@/public/images/doge-computer.png"
 import ethImg from "@/public/images/eth.png"
@@ -220,7 +220,7 @@ const WhatIsEthereumPage = ({
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const { t } = useTranslation(["page-what-is-ethereum", "learn-quizzes"])
 
-  const { locale } = useRouter()
+  const locale = useLocale()
   const localeForNumberFormat = getLocaleForNumberFormat(locale! as Lang)
 
   const formatNumber = (

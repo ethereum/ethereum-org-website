@@ -1,6 +1,5 @@
 import { useState } from "react"
-import { useRouter } from "next/router"
-import { useTranslation } from "next-i18next"
+import { useLocale } from "next-intl"
 import { FaDiscord, FaGithub, FaXTwitter } from "react-icons/fa6"
 
 import type { EventCardProps } from "@/lib/types"
@@ -28,10 +27,13 @@ import SimpleDomainRegistryContent from "!!raw-loader!@/data/SimpleDomainRegistr
 import SimpleTokenContent from "!!raw-loader!@/data/SimpleToken.sol"
 import SimpleWalletContent from "!!raw-loader!@/data/SimpleWallet.sol"
 import { useRtlFlip } from "@/hooks/useRtlFlip"
+import useTranslation from "@/hooks/useTranslation"
+import { usePathname } from "@/i18n/routing"
 
 export const useHome = () => {
   const { t } = useTranslation(["common", "page-index"])
-  const { locale, asPath } = useRouter()
+  const locale = useLocale()
+  const asPath = usePathname()
 
   const [isModalOpen, setModalOpen] = useState(false)
   const [activeCode, setActiveCode] = useState(0)

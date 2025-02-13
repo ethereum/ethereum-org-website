@@ -7,6 +7,8 @@ import React, {
   useState,
 } from "react"
 import { type GetStaticProps } from "next"
+import { useRouter } from "next/router"
+import { useLocale } from "next-intl"
 
 import type { BasePageProps, ChildOnlyProp, Lang, Params } from "@/lib/types"
 
@@ -45,7 +47,6 @@ import { DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
 
 import { useTranslation } from "@/hooks/useTranslation"
 import loadNamespaces from "@/i18n/loadNamespaces"
-import { useRouter } from "@/i18n/routing"
 import aave from "@/public/images/dapps/aave.png"
 import ankr from "@/public/images/dapps/ankr.png"
 import api3 from "@/public/images/dapps/api3.png"
@@ -355,7 +356,8 @@ export const getStaticProps = (async ({ params }) => {
 
 const DappsPage = () => {
   const { t } = useTranslation(["page-dapps", "common"])
-  const { locale, query } = useRouter()
+  const { query } = useRouter()
+  const locale = useLocale()
 
   const [selectedCategory, setCategory] = useState<CategoryType>(
     CategoryType.FINANCE
