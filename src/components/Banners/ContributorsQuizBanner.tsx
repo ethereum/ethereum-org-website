@@ -1,3 +1,5 @@
+import { useTranslation } from "next-i18next"
+
 import { cn } from "@/lib/utils/cn"
 
 import { TwImage } from "../Image"
@@ -11,6 +13,7 @@ function ContributorsQuizBanner({
   className,
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) {
+  const { t } = useTranslation("common")
   return (
     <aside
       className={cn(
@@ -40,15 +43,14 @@ function ContributorsQuizBanner({
         className={cn("flex-[1_1_50%]", "gap-8 py-8 ps-8", "pe-8 lg:pe-0")}
       >
         <Stack>
-          <h2>Unsure where to start?</h2>
+          <h2>{t("contributor-quiz-banner-title")}</h2>
           <p className="text-lg text-body">
-            Take a quick quiz and find out how you can contribute on
-            ethereum.org.
+            {t("contributor-quiz-banner-description")}
           </p>
         </Stack>
         <div>
           <ButtonLink href="https://ethdotorg.typeform.com/contributor">
-            Take a quiz
+            {t("contributor-quiz-banner-button")}
           </ButtonLink>
         </div>
       </Stack>
