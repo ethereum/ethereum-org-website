@@ -34,7 +34,6 @@ const App = ({ Component, pageProps }: AppPropsWithLayout) => {
   return (
     <NextIntlClientProvider
       locale={(router.query.locale as string) || DEFAULT_LOCALE}
-      timeZone="Europe/Vienna" // TODO: get from locale?
       messages={pageProps.messages || {}}
       onError={() => {
         // Suppress errors by default, enable if needed to debug
