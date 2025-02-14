@@ -29,6 +29,7 @@ import bitvavo from "@/public/images/exchanges/bitvavo.png"
 import bybit from "@/public/images/exchanges/bybit.png"
 import coinbase from "@/public/images/exchanges/coinbase.png"
 import coinmama from "@/public/images/exchanges/coinmama.png"
+import coinmate from "@/public/images/exchanges/coinmate.png"
 import coinspot from "@/public/images/exchanges/coinspot.png"
 import cryptocom from "@/public/images/exchanges/crypto.com.png"
 import easycrypto from "@/public/images/exchanges/easycrypto.png"
@@ -60,6 +61,7 @@ type ExchangeKey =
   | "bybit"
   | "coinbase"
   | "coinmama"
+  | "coinmate"
   | "coinspot"
   | "cryptocom"
   | "easycrypto"
@@ -197,6 +199,12 @@ const exchanges: ExchangeDetails = {
     url: "https://www.coinmama.com/",
     image: coinmama,
     usaExceptions: ["CT", "FL", "IA", "NY"],
+  },
+  coinmate: {
+    name: "Coinmate",
+    url: "https://coinmate.io/en",
+    image: coinmate,
+    usaExceptions: [],
   },
   coinspot: {
     name: "CoinSpot",
