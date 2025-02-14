@@ -4,6 +4,7 @@ import { fn } from "@storybook/test"
 
 import { viewportModes } from "../../../../.storybook/modes"
 import { Explanation as ExplanationComponent } from "../Explanation"
+import { SendReceiveIcon } from "../icons"
 
 const meta = {
   title: "Molecules / Display Content / Simulator / Explanation",
@@ -39,7 +40,7 @@ const meta = {
       totalSteps: 3,
       openPath: fn(),
     },
-    nextPathSummary: { Icon: fn(), primaryText: "" },
+    nextPathSummary: { Icon: SendReceiveIcon, primaryText: "" },
     nextPathId: "send-receive",
     finalCtaLink: { href: "#", label: "Next Step", isPrimary: true },
   },

@@ -89,7 +89,7 @@ Here are some of the enterprise applications that have been built on top of the 
 - [ABN AMRO](https://tokeny.com/tokeny-fuels-abn-amro-bank-in-tokenizing-green-bonds-on-polygon/) - _with Tokeny, tokenized green bonds_
 - [Crowdz](https://crowdz.io/) - _invoice/receivables financing and factoring platform_
 - [Mata Capital](https://consensys.io/blockchain-use-cases/finance/mata-capital) - _real estate investment tokenization_ 
-- [Obligate](https://www.obligate.com/) - _regulated and KYC'd on-chain bonds and commercial paper_
+- [Obligate](https://www.obligate.com/) - _regulated and KYC'd onchain bonds and commercial paper_
 - [Siemens](https://press.siemens.com/global/en/pressrelease/siemens-issues-first-digital-bond-blockchain ) - _bond issuance_
 - [Sila](https://silamoney.com/) - _banking and ACH payments infrastructure-as-a-service, using a stablecoin_
 - [Societe Generale FORGE](https://www.sgforge.com/product/bonds/) - _bond issuance_

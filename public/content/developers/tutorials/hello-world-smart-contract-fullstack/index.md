@@ -435,7 +435,7 @@ To interact with our contract, we need to create a contract instance in our code
 
 1. Provider - a node provider that gives you read and write access to the blockchain
 2. Signer - represents an Ethereum account that can sign transactions
-3. Contract - an Ethers.js object representing a specific contract deployed on-chain
+3. Contract - an Ethers.js object representing a specific contract deployed onchain
 
 We'll use the contract ABI from the previous step to create our instance of the contract:
 

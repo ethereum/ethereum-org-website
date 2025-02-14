@@ -12,7 +12,7 @@ import NetworkMaturityTooltip from "@/components/Layer2NetworksTable/NetworkMatu
 import InlineLink from "@/components/Link"
 import Tooltip from "@/components/Tooltip"
 import { Button } from "@/components/ui/buttons/Button"
-import { TableCell, TableHead } from "@/components/ui/Table"
+import { TableCell, TableHead } from "@/components/ui/table"
 
 import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"

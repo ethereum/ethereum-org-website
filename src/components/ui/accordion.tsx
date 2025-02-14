@@ -21,7 +21,7 @@ const AccordionTrigger = React.forwardRef<
     hideIcon?: boolean
   }
 >(({ className, children, hideIcon = false, ...props }, ref) => (
-  <AccordionPrimitive.Header className="flex">
+  <AccordionPrimitive.Header className="flex [font-size:inherit]">
     <AccordionPrimitive.Trigger
       ref={ref}
       className={cn(

@@ -14,7 +14,7 @@
   "page-roadmap-vision-problems": "Today's problems",
   "page-roadmap-vision-scalability": "Scalability",
   "page-roadmap-vision-scalability-desc": "Ethereum needs to be able to handle more transactions per second without increasing the size of the nodes in the network. Nodes are vital network participants who store and run the blockchain. Increasing node size isn't practical because only those with powerful and expensive computers could do it. To scale, Ethereum needs more transactions per second, coupled with more nodes. More nodes means more security.",
-  "page-roadmap-vision-scalability-desc-3": "Layer 2 rollups scale Ethereum by moving transactions off-chain and only posting summary data to Ethereum. This batching increases Ethereum's throughput while drastically reducing costs for users.",
+  "page-roadmap-vision-scalability-desc-3": "Layer 2 rollups scale Ethereum by moving transactions offchain and only posting summary data to Ethereum. This batching increases Ethereum's throughput while drastically reducing costs for users.",
   "page-roadmap-vision-scalability-desc-4": "Rollups need low-cost storage on layer 1 to make transactions as cheap as possible for users. This will be provided in the form of blobs attached to Ethereum blocks. Eventually, many blobs will be attached to Ethereum blocks, providing cheap storage for many rollups.",
   "page-roadmap-vision-security": "Security",
   "page-roadmap-vision-security-desc": "The planned upgrades improve Ethereum's security against coordinated attacks.",

@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/react/*"
 
-import { HStack, VStack } from "../../../src/components/ui/flex"
-import CheckboxComponent, { type CheckboxProps } from "../Checkbox"
+import CheckboxComponent, { type CheckboxProps } from "../checkbox"
+import { HStack, VStack } from "../flex"
 
 const meta = {
-  title: "Atoms / Form / ShadCN Checkbox",
+  title: "Atoms / Form / Checkbox",
   component: CheckboxComponent,
 } satisfies Meta<typeof CheckboxComponent>
 

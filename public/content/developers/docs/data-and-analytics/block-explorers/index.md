@@ -5,7 +5,7 @@ lang: en
 sidebarDepth: 3
 ---
 
-Block explorers are your portal to Ethereum's data. You can use them to see real-time data on blocks, transactions, validators, accounts, and other on-chain activity.
+Block explorers are your portal to Ethereum's data. You can use them to see real-time data on blocks, transactions, validators, accounts, and other onchain activity.
 
 ## Prerequisites {#prerequisites}
 

@@ -34,8 +34,7 @@ export const HomeScreen = ({ nav, ...props }: HomeScreenProps) => {
             exit={{ opacity: 0 }}
             onClick={nav.progressStepper}
           >
-            {/* TODO: remove important flag from classes when icons are migrated */}
-            <EthGlyphIcon className="!size-[1em] !text-2xl !text-background sm:!text-3xl" />
+            <EthGlyphIcon className="size-[1em] text-2xl text-background sm:text-3xl" />
           </motion.button>
         ) : (
           <motion.div

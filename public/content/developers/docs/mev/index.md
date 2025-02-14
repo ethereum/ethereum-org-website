@@ -108,7 +108,7 @@ This possibility of blockchain re-organization has been [previously explored on 
 
 ## State of MEV {#state-of-mev}
 
-MEV extraction ballooned in early 2021, resulting in extremely high gas prices in the first few months of the year. The emergence of Flashbots's MEV relay has reduced the effectiveness of generalized frontrunners and has taken gas price auctions off-chain, lowering gas prices for ordinary users.
+MEV extraction ballooned in early 2021, resulting in extremely high gas prices in the first few months of the year. The emergence of Flashbots's MEV relay has reduced the effectiveness of generalized frontrunners and has taken gas price auctions offchain, lowering gas prices for ordinary users.
 
 While many searchers are still making good money from MEV, as opportunities become more well-known and more and more searchers compete for the same opportunity, validators will capture more and more total MEV revenue (because the same sort of gas auctions as originally described above also occur in Flashbots, albeit privately, and validators will capture the resulting gas revenue). MEV is also not unique to Ethereum, and as opportunities become more competitive on Ethereum, searchers are moving to alternate blockchains like Binance Smart Chain, where similar MEV opportunities as those on Ethereum exist with less competition.
 
@@ -130,7 +130,7 @@ With fewer resources at their disposal, solo stakers may be unable to profit fro
 
 ### Permissioned mempools {#permissioned-mempools}
 
-In response to sandwiching and frontrunning attacks, traders may start conducting off-chain deals with validators for transaction privacy. Instead of sending a potential MEV transaction to the public mempool, the trader sends it directly to the validator, who includes it in a block and splits profits with the trader.
+In response to sandwiching and frontrunning attacks, traders may start conducting offchain deals with validators for transaction privacy. Instead of sending a potential MEV transaction to the public mempool, the trader sends it directly to the validator, who includes it in a block and splits profits with the trader.
 
 “Dark pools” are a larger version of this arrangement and function as permissioned, access-only mempools open to users willing to pay certain fees. This trend would diminish Ethereum’s permissionlessness and trustlessness and potentially transform the blockchain into a “pay-to-play” mechanism that favors the highest bidder.
 
@@ -156,7 +156,7 @@ In-protocol proposer-builder separation reduces MEV’s effect on consensus by r
 
 This doesn’t exclude validators totally from MEV-related income, though, as builders must bid high to get their blocks accepted by validators. Nevertheless, with validators no longer directly focused on optimizing MEV income, the threat of time-bandit attacks reduces.
 
-Proposer-builder separation also reduces MEV’s centralization risks. For instance, the use of a commit-reveal scheme removes the need for builders to trust validators not to steal the MEV opportunity or expose it to other builders. This lowers the barrier for solo stakers to benefit from MEV, otherwise, builders would trend towards favoring large pools with off-chain reputation and conducting off-chain deals with them.
+Proposer-builder separation also reduces MEV’s centralization risks. For instance, the use of a commit-reveal scheme removes the need for builders to trust validators not to steal the MEV opportunity or expose it to other builders. This lowers the barrier for solo stakers to benefit from MEV, otherwise, builders would trend towards favoring large pools with offchain reputation and conducting offchain deals with them.
 
 Similarly, validators don’t have to trust builders not to withhold block bodies or publish invalid blocks because payment is unconditional. The validator’s fee still processes even if the proposed block is unavailable or declared invalid by other validators. In the latter case, the block is simply discarded, forcing the block builder to lose all transaction fees and MEV revenue.
 

@@ -1,12 +1,13 @@
 import { StaticImageData } from "next/image"
-import type { Icon } from "@chakra-ui/react"
+
+import type { IconBaseType } from "@/components/icons/icon-base"
 
 export interface TokenBalance {
   name: string
   ticker: string
   amount: number
   usdConversion: number
-  Icon: typeof Icon
+  Icon: IconBaseType
 }
 
 export interface Contact {

@@ -8,10 +8,10 @@ import { Flex } from "@/components/ui/flex"
 import InlineLink, { BaseLink } from "@/components/ui/Link"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 
-import { Accordion } from "../../../tailwind/ui/accordion"
 import CardList from "../CardList"
 import InfoBanner from "../InfoBanner"
 import Translation from "../Translation"
+import { Accordion } from "../ui/accordion"
 
 import {
   AccordionCustomItem,

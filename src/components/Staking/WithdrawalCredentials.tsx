@@ -7,10 +7,10 @@ import Translation from "@/components/Translation"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
-import Input from "../../../tailwind/ui/Input"
 import { Alert, AlertContent } from "../ui/alert"
 import { Button } from "../ui/buttons/Button"
 import { Flex } from "../ui/flex"
+import Input from "../ui/input"
 import { Spinner } from "../ui/spinner"
 
 interface Validator {

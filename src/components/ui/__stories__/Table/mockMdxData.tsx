@@ -8,7 +8,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "../../Table"
+} from "../../table"
 
 /*
  * Note on the Chakra Table components:

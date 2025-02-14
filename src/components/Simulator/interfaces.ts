@@ -1,14 +1,15 @@
 import type { ReactElement } from "react"
-import type { Icon } from "@chakra-ui/react"
 
 import { PhoneScreenProps } from "@/lib/types"
+
+import type { IconBaseType } from "../icons/icon-base"
 
 import type { PathId } from "./types"
 
 export interface SimulatorPathSummary {
   primaryText: string
   secondaryText?: string
-  Icon: typeof Icon
+  Icon: IconBaseType
 }
 
 export interface SimulatorExplanation {
@@ -32,7 +33,7 @@ export interface LabelHref {
 
 export interface SimulatorDetails {
   title: string
-  Icon: typeof Icon
+  Icon: IconBaseType
   Screen: (props: PhoneScreenProps) => JSX.Element
   explanations: Array<SimulatorExplanation>
   ctaLabels: Array<string>

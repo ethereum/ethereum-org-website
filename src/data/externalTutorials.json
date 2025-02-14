@@ -557,7 +557,7 @@
   {
     "url": "https://docs.replit.com/tutorials/web3/build-smart-contract-oracle",
     "title": "Build a smart contract oracle with Solidity, Node.js, and Replit",
-    "description": "Learn how to use oracles in smart contracts and how oracles work internally, and gain experience with hybrid on-and-off chain systems.",
+    "description": "Learn how to use oracles in smart contracts and how oracles work internally, and gain experience with hybrid on-and-offchain systems.",
     "author": "replit",
     "authorGithub": "https://github.com/replit",
     "tags": ["solidity", "oracles", "javascript"],

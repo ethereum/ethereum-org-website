@@ -80,7 +80,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "../../tailwind/ui/accordion"
+} from "../components/ui/accordion"
 
 import { useClipboard } from "@/hooks/useClipboard"
 import { fetchCommunityEvents } from "@/lib/api/calendarEvents"

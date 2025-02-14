@@ -10,7 +10,7 @@ source: Tellor Docs
 sourceUrl: https://docs.tellor.io/tellor/
 ---
 
-Pop Quiz: Your protocol is just about finished, but it needs an oracle to get access to off chain data...What do you do?
+Pop Quiz: Your protocol is just about finished, but it needs an oracle to get access to offchain data...What do you do?
 
 ## (Soft) Prerequisites {#soft-prerequisites}
 

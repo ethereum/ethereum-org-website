@@ -13,8 +13,7 @@ export const WelcomeScreen = () => (
     animate={{ opacity: 1 }}
     transition={{ duration: 0.8 }}
   >
-    {/* TODO: remove important flag from classes when icons are migrated */}
-    <EthGlyphIcon className="!my-4 !h-[110px] !w-auto !text-body md:!h-[190px]" />
+    <EthGlyphIcon className="my-4 h-[110px] w-auto text-body md:h-[190px]" />
     <p className="px-4 text-center text-2xl leading-8 md:px-8">
       Welcome to
       <span className="block font-bold">wallet simulator</span>

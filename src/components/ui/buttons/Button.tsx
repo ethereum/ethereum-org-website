@@ -36,7 +36,7 @@ const buttonVariants = cva(
         ),
         outline: "", // Base styling
         ghost: "border-transparent hover:shadow-none",
-        link: "border-transparent hover:shadow-none underline py-0 px-1 active:text-primary",
+        link: "border-transparent hover:shadow-none underline !min-h-0 !py-0 !px-1 active:text-primary",
       },
       size: {
         lg: "text-lg py-3 px-8 [&>svg]:text-2xl rounded-lg focus-visible:rounded-lg",

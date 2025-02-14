@@ -1,14 +1,14 @@
 import type { Meta, StoryObj } from "@storybook/react/*"
 
-import { HStack } from "../../../src/components/ui/flex"
+import { HStack } from "../flex"
 import {
   RadioGroup,
   RadioGroupItem,
   type RadioGroupItemProps,
-} from "../RadioGroup"
+} from "../radio-group"
 
 const meta = {
-  title: "Atoms / Form / ShadCN Radio",
+  title: "Atoms / Form / Radio",
   component: RadioGroup,
 } satisfies Meta<typeof RadioGroup>
 

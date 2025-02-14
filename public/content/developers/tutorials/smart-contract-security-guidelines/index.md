@@ -24,9 +24,9 @@ Documentation can be written at different levels, and should be updated while im
 - **Schema and architectural diagrams**, including the contract interactions and the state machine of the system. [Slither printers](https://github.com/crytic/slither/wiki/Printer-documentation) can help to generate these schemas.
 - **Thorough code documentation**, the [Natspec format](https://solidity.readthedocs.io/en/develop/natspec-format.html) can be used for Solidity.
 
-### On-chain vs off-chain computation {#on-chain-vs-off-chain-computation}
+### Onchain vs offchain computation {#onchain-vs-offchain-computation}
 
-- **Keep as much code as you can off-chain.** Keep the on-chain layer small. Pre-process data with code off-chain in such a way that verification on-chain is simple. Do you need an ordered list? Sort the list offchain, then only check its order onchain.
+- **Keep as much code as you can offchain.** Keep the onchain layer small. Pre-process data with code offchain in such a way that verification onchain is simple. Do you need an ordered list? Sort the list offchain, then only check its order onchain.
 
 ### Upgradeability {#upgradeability}
 

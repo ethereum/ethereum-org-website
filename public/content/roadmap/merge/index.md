@@ -98,7 +98,7 @@ The Merge came with changes to consensus, which also includes changes related to
   <li>block structure</li>
   <li>slot/block timing</li>
   <li>opcode changes</li>
-  <li>sources of on-chain randomness</li>
+  <li>sources of onchain randomness</li>
   <li>concept of <em>safe head</em> and <em>finalized blocks</em></li>
 </ul>
 

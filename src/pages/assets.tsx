@@ -117,6 +117,11 @@ export const getStaticProps = (async ({ locale }) => {
 }) satisfies GetStaticProps<BasePageProps>
 
 const AssetsPage = () => {
+  // Ignore locale in the URL for SVG path in public directory to fix broken link
+  // SVG path changes from /en/images => /images
+  const svgPathFromOrigin =
+    typeof window !== `undefined` ? window.location.origin : ""
+
   const { t } = useTranslation("page-assets")
   const assetPageHeroImage = useColorModeValue(
     ethDiamondBlack,
@@ -364,19 +369,19 @@ const AssetsPage = () => {
             title={t("page-assets-eth-diamond-glyph")}
             alt={t("page-assets-eth-diamond-glyph")}
             image={ethDiamondGlyph}
-            svgUrl="/images/assets/svgs/eth-diamond-glyph.svg"
+            svgUrl={`${svgPathFromOrigin}/images/assets/svgs/eth-diamond-glyph.svg`}
           />
           <AssetDownload
             title={t("page-assets-eth-diamond-gray")}
             alt={t("page-assets-eth-diamond-gray")}
             image={ethDiamondBlack}
-            svgUrl="/images/assets/svgs/eth-diamond-black.svg"
+            svgUrl={`${svgPathFromOrigin}/images/assets/svgs/eth-diamond-black.svg`}
           />
           <AssetDownload
             title={t("page-assets-eth-diamond-color")}
             alt={t("page-assets-eth-diamond-color")}
             image={ethDiamondColor}
-            svgUrl="/images/assets/svgs/eth-diamond-rainbow.svg"
+            svgUrl={`${svgPathFromOrigin}/images/assets/svgs/eth-diamond-rainbow.svg`}
           />
         </Row>
         <Row>
@@ -384,13 +389,13 @@ const AssetsPage = () => {
             title={t("page-assets-eth-diamond-purple")}
             alt={t("page-assets-eth-diamond-purple")}
             image={ethDiamondPurple}
-            svgUrl="/images/assets/svgs/eth-diamond-purple.svg"
+            svgUrl={`${svgPathFromOrigin}/images/assets/svgs/eth-diamond-purple.svg`}
           />
           <AssetDownload
             title={t("page-assets-eth-diamond-colored")}
             alt={t("page-assets-eth-diamond-colored")}
             image={ethGlyphColored}
-            svgUrl="/images/assets/svgs/eth-glyph-colored.svg"
+            svgUrl={`${svgPathFromOrigin}/images/assets/svgs/eth-glyph-colored.svg`}
           />
         </Row>
         <Row>
@@ -398,19 +403,19 @@ const AssetsPage = () => {
             title={t("page-assets-eth-logo-portrait-gray")}
             alt={t("page-assets-eth-logo-portrait-gray")}
             image={ethPortraitBlack}
-            svgUrl="/images/assets/svgs/ethereum-logo-portrait-black.svg  "
+            svgUrl={`${svgPathFromOrigin}/images/assets/svgs/ethereum-logo-portrait-black.svg  `}
           />
           <AssetDownload
             title={t("page-assets-eth-logo-landscape-gray")}
             alt={t("page-assets-eth-logo-landscape-gray")}
             image={ethLandscapeBlack}
-            svgUrl="/images/assets/svgs/ethereum-logo-landscape-black.svg"
+            svgUrl={`${svgPathFromOrigin}/images/assets/svgs/ethereum-logo-landscape-black.svg`}
           />
           <AssetDownload
             title={t("page-assets-eth-wordmark-gray")}
             alt={t("page-assets-eth-wordmark-gray")}
             image={ethWordmarkBlack}
-            svgUrl="/images/assets/svgs/ethereum-wordmark-black.svg"
+            svgUrl={`${svgPathFromOrigin}/images/assets/svgs/ethereum-wordmark-black.svg`}
           />
         </Row>
         <Row>
@@ -418,19 +423,19 @@ const AssetsPage = () => {
             title={t("page-assets-eth-logo-portrait-purple")}
             alt={t("page-assets-eth-logo-portrait-purple")}
             image={ethPortraitPurple}
-            svgUrl="/images/assets/svgs/ethereum-logo-portrait-purple.svg"
+            svgUrl={`${svgPathFromOrigin}/images/assets/svgs/ethereum-logo-portrait-purple.svg`}
           />
           <AssetDownload
             title={t("page-assets-eth-logo-landscape-purple")}
             alt={t("page-assets-eth-logo-landscape-purple")}
             image={ethLandscapePurple}
-            svgUrl="/images/assets/svgs/ethereum-logo-landscape-purple.svg"
+            svgUrl={`${svgPathFromOrigin}/images/assets/svgs/ethereum-logo-landscape-purple.svg`}
           />
           <AssetDownload
             title={t("page-assets-eth-wordmark-purple")}
             alt={t("page-assets-eth-wordmark-purple")}
             image={ethWordmarkPurple}
-            svgUrl="/images/assets/svgs/ethereum-wordmark-purple-purple.svg"
+            svgUrl={`${svgPathFromOrigin}/images/assets/svgs/ethereum-wordmark-purple-purple.svg`}
           />
         </Row>
         <H3>{t("page-assets-page-assets-solid-background")}</H3>
@@ -439,19 +444,19 @@ const AssetsPage = () => {
             title={t("page-assets-eth-diamond-white")}
             alt={t("page-assets-eth-diamond-white")}
             image={ethDiamondBlackWhite}
-            svgUrl="/images/assets/svgs/eth-diamond-black-white.svg"
+            svgUrl={`${svgPathFromOrigin}/images/assets/svgs/eth-diamond-black-white.svg`}
           />
           <AssetDownload
             title={t("page-assets-eth-diamond-gray")}
             alt={t("page-assets-eth-diamond-gray")}
             image={ethDiamondBlackGray}
-            svgUrl="/images/assets/svgs/eth-diamond-black-gray.svg"
+            svgUrl={`${svgPathFromOrigin}/images/assets/svgs/eth-diamond-black-gray.svg`}
           />
           <AssetDownload
             title={t("page-assets-eth-diamond-purple")}
             alt={t("page-assets-eth-diamond-purple")}
             image={ethDiamondPurplePurple}
-            svgUrl="/images/assets/svgs/eth-diamond-purple-purple.svg"
+            svgUrl={`${svgPathFromOrigin}/images/assets/svgs/eth-diamond-purple-purple.svg`}
           />
         </Row>
 
@@ -460,13 +465,13 @@ const AssetsPage = () => {
             title={t("page-assets-eth-diamond-white")}
             alt={t("page-assets-eth-diamond-white")}
             image={ethDiamondPurpleWhite}
-            svgUrl="/images/assets/svgs/eth-diamond-purple-white.svg"
+            svgUrl={`${svgPathFromOrigin}/images/assets/svgs/eth-diamond-purple-white.svg`}
           />
           <AssetDownload
             title={t("page-assets-eth-diamond-white")}
             alt={t("page-assets-eth-diamond-white")}
             image={ethDiamondPurpleWhite}
-            svgUrl="/images/assets/svgs/eth-diamond-purple-white.svg"
+            svgUrl={`${svgPathFromOrigin}/images/assets/svgs/eth-diamond-purple-white.svg`}
           />
         </Row>
         <Row>
@@ -474,19 +479,19 @@ const AssetsPage = () => {
             title={t("page-assets-eth-logo-portrait-gray")}
             alt={t("page-assets-eth-logo-portrait-gray")}
             image={ethPortraitBlackGray}
-            svgUrl="/images/assets/svgs/ethereum-logo-portrait-black-gray.svg"
+            svgUrl={`${svgPathFromOrigin}/images/assets/svgs/ethereum-logo-portrait-black-gray.svg`}
           />
           <AssetDownload
             title={t("page-assets-eth-logo-landscape-gray")}
             alt={t("page-assets-eth-logo-landscape-gray")}
             image={ethLandscapeBlackGray}
-            svgUrl="/images/assets/svgs/ethereum-logo-landscape-black-gray.svg"
+            svgUrl={`${svgPathFromOrigin}/images/assets/svgs/ethereum-logo-landscape-black-gray.svg`}
           />
           <AssetDownload
             title={t("page-assets-eth-wordmark-gray")}
             alt={t("page-assets-eth-wordmark-gray")}
             image={ethWordmarkBlackGray}
-            svgUrl="/images/assets/svgs/ethereum-wordmark-black-gray.svg"
+            svgUrl={`${svgPathFromOrigin}/images/assets/svgs/ethereum-wordmark-black-gray.svg`}
           />
         </Row>
         <Row>
@@ -494,19 +499,19 @@ const AssetsPage = () => {
             title={t("page-assets-eth-logo-portrait-purple")}
             alt={t("page-assets-eth-logo-portrait-purple")}
             image={ethPortraitPurplePurple}
-            svgUrl="/images/assets/svgs/ethereum-logo-portrait-purple-purple.svg"
+            svgUrl={`${svgPathFromOrigin}/images/assets/svgs/ethereum-logo-portrait-purple-purple.svg`}
           />
           <AssetDownload
             title={t("page-assets-eth-logo-landscape-purple")}
             alt={t("page-assets-eth-logo-landscape-purple")}
             image={ethLandscapePurplePurple}
-            svgUrl="/images/assets/svgs/ethereum-logo-landscape-purple-purple.svg"
+            svgUrl={`${svgPathFromOrigin}/images/assets/svgs/ethereum-logo-landscape-purple-purple.svg`}
           />
           <AssetDownload
             title={t("page-assets-eth-wordmark-purple")}
             alt={t("page-assets-eth-wordmark-purple")}
             image={ethWordmarkPurplePurple}
-            svgUrl="/images/assets/svgs/ethereum-wordmark-purple-purple.svg"
+            svgUrl={`${svgPathFromOrigin}/images/assets/svgs/ethereum-wordmark-purple-purple.svg`}
           />
         </Row>
         <Row>
@@ -514,13 +519,13 @@ const AssetsPage = () => {
             title={t("page-assets-eth-logo-landscape-white")}
             alt={t("page-assets-eth-logo-landscape-white")}
             image={ethLandscapePurpleWhite}
-            svgUrl="/images/assets/svgs/ethereum-logo-landscape-purple-white.svg"
+            svgUrl={`${svgPathFromOrigin}/images/assets/svgs/ethereum-logo-landscape-purple-white.svg`}
           />
           <AssetDownload
             title={t("page-assets-eth-wordmark-white")}
             alt={t("page-assets-eth-wordmark-white")}
             image={ethWordmarkPurpleWhite}
-            svgUrl="/images/assets/svgs/ethereum-wordmark-purple-white.svg"
+            svgUrl={`${svgPathFromOrigin}/images/assets/svgs/ethereum-wordmark-purple-white.svg`}
           />
         </Row>
         <H2 id="historical-illustrations">{t("page-assets-illustrations")}</H2>
@@ -534,7 +539,7 @@ const AssetsPage = () => {
             title={t("page-assets-merge-panda")}
             alt={t("page-assets-merge-panda")}
             image={mergePanda}
-            svgUrl="/images/assets/svgs/merge-panda.svg"
+            svgUrl={`${svgPathFromOrigin}/images/assets/svgs/merge-panda.svg`}
           />
         </Row>
       </MainArticle>

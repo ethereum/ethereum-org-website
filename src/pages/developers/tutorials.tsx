@@ -1,10 +1,16 @@
-import React, { HTMLAttributes, useEffect, useMemo, useState } from "react"
+import React, {
+  type ButtonHTMLAttributes,
+  forwardRef,
+  HTMLAttributes,
+  useEffect,
+  useMemo,
+  useState,
+} from "react"
 import { GetStaticProps, InferGetServerSidePropsType } from "next"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { FaGithub } from "react-icons/fa"
-import { forwardRef } from "@chakra-ui/react"
 
 import { BasePageProps, Lang } from "@/lib/types"
 
@@ -45,22 +51,25 @@ type LinkFlexProps = FlexProps & {
   href: string
 }
 
-const FilterTag = forwardRef<{ isActive: boolean; name: string }, "button">(
-  (props, ref) => {
-    const { isActive, name, ...rest } = props
-    return (
-      <TagButton
-        ref={ref}
-        variant={isActive ? "solid" : "outline"}
-        status={isActive ? "tag" : "normal"}
-        className="justify-center"
-        {...rest}
-      >
-        {name}
-      </TagButton>
-    )
-  }
-)
+const FilterTag = forwardRef<
+  HTMLButtonElement,
+  { isActive: boolean; name: string } & ButtonHTMLAttributes<HTMLButtonElement>
+>((props, ref) => {
+  const { isActive, name, ...rest } = props
+  return (
+    <TagButton
+      ref={ref}
+      variant={isActive ? "solid" : "outline"}
+      status={isActive ? "tag" : "normal"}
+      className="justify-center"
+      {...rest}
+    >
+      {name}
+    </TagButton>
+  )
+})
+
+FilterTag.displayName = "FilterTag"
 
 const Text = ({ className, ...props }: HTMLAttributes<HTMLHeadElement>) => (
   <p className={cn("mb-6", className)} {...props} />
