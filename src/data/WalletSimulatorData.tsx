@@ -337,7 +337,7 @@ export const walletOnboardingSimData: SimulatorData = {
           <>
             <p>
               Your wallet can be used to connect to all sorts of applications,
-              allowing you to interact with your on-chain assets.
+              allowing you to interact with your onchain assets.
             </p>
             <p>
               Your friend just sent an NFT art piece to your address! Let&apos;s
@@ -354,7 +354,7 @@ export const walletOnboardingSimData: SimulatorData = {
               Your account is universal across all Ethereum and
               Ethereum-compatible applications.
             </p>
-            <p>Assets stored on-chain can be accessed from any application.</p>
+            <p>Assets stored onchain can be accessed from any application.</p>
           </>
         ),
       },
