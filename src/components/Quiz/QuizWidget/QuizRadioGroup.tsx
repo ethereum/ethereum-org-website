@@ -138,7 +138,6 @@ const CustomRadio = ({
         <Center
           className={cn(
             "size-6 flex-shrink-0 flex-grow-0 rounded-full bg-disabled text-white",
-            // TODO: Upon removing custom radio props, flip remove `data` for checked
             "[:is([data-state='checked'],:hover)_>_&]:text-white",
             "[:is([data-state='checked'],:hover)_>_&]:bg-primary-action",
             "[:is([data-state='checked'],:hover)[data-answer-visible]_>_&]:bg-white",
