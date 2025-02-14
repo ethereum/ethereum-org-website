@@ -16,10 +16,9 @@ import { useTranslation } from "@/hooks/useTranslation"
 export const useLanguagePicker = (handleClose?: () => void) => {
   const { t } = useTranslation("common")
   const locale = useLocale()
-  const rawLocales = LOCALES_CODES
 
   const languages = useMemo<LocaleDisplayInfo[]>(() => {
-    const locales = filterRealLocales(rawLocales)
+    const locales = filterRealLocales(LOCALES_CODES)
 
     // Get the preferred languages for the users browser
     const navLangs = typeof navigator !== "undefined" ? navigator.languages : []
@@ -63,7 +62,7 @@ export const useLanguagePicker = (handleClose?: () => void) => {
           return b.approvalProgress - a.approvalProgress
         }) || []
     )
-  }, [locale, rawLocales, t])
+  }, [locale, t])
 
   const { isOpen, setValue, ...menu } = useDisclosure()
 
