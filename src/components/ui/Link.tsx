@@ -1,5 +1,5 @@
 import { AnchorHTMLAttributes, forwardRef } from "react"
-import NextLink, { type LinkProps as NextLinkProps } from "next/link"
+import NextLink from "next/link"
 import { RxExternalLink } from "react-icons/rx"
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden"
 
@@ -11,6 +11,7 @@ import * as url from "@/lib/utils/url"
 import { DISCORD_PATH, SITE_URL } from "@/lib/constants"
 
 import { useRtlFlip } from "@/hooks/useRtlFlip"
+import { Link as I18nLink } from "@/i18n/routing"
 import { usePathname } from "@/i18n/routing"
 
 type BaseProps = {
@@ -22,7 +23,7 @@ type BaseProps = {
 
 export type LinkProps = BaseProps &
   AnchorHTMLAttributes<HTMLAnchorElement> &
-  Omit<NextLinkProps, "href">
+  Omit<typeof I18nLink, "href">
 
 /**
  * Link wrapper which handles:
@@ -67,7 +68,7 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
   // Get proper download link for internally hosted PDF's & static files (ex: whitepaper)
   // Opens in separate window.
   if (isInternalPdf) {
-    href = getRelativePath(pathname, href)
+    href = "/" + getRelativePath(pathname, href)
   }
 
   if (isDiscordInvite) {
@@ -117,10 +118,6 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
       <NextLink
         target="_blank"
         rel="noopener"
-        // disable locale prefixing for internal PDFs
-        // TODO: add i18n support using a rehype plugin (similar as we do for
-        // images)
-        locale={false}
         onClick={() =>
           trackCustomEvent(
             customEventOptions ?? {
@@ -160,7 +157,7 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
   }
 
   return (
-    <NextLink
+    <I18nLink
       onClick={() =>
         trackCustomEvent(
           customEventOptions ?? {
@@ -174,7 +171,7 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
       {...commonProps}
     >
       {children}
-    </NextLink>
+    </I18nLink>
   )
 })
 BaseLink.displayName = "BaseLink"
