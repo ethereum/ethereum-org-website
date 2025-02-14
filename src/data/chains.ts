@@ -253,6 +253,17 @@ const chains = [
     chain: "FETH",
   },
   {
+    name: "Unichain",
+    infoURL: "https://unichain.org",
+    chainId: 130,
+    nativeCurrency: {
+      name: "Ether",
+      symbol: "ETH",
+      decimals: 18,
+    },
+    chain: "ETH",
+  },
+  {
     name: "Defi Oracle Meta Mainnet",
     infoURL: "https://info.defi-oracle.io/",
     chainId: 138,
@@ -1593,6 +1604,17 @@ const chains = [
       decimals: 18,
     },
     chain: "henez",
+  },
+  {
+    name: "Lumoz Chain Mainnet",
+    infoURL: "https://lumoz.org",
+    chainId: 96370,
+    nativeCurrency: {
+      name: "Lumoz Mainnet Token",
+      symbol: "MOZ",
+      decimals: 18,
+    },
+    chain: "ETH",
   },
   {
     name: "Plume Devnet",
