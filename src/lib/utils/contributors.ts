@@ -41,7 +41,7 @@ export const getFileContributorInfo = async (
 
   const contributors: FileContributor[] = useGitHubContributors
     ? gitContributors
-    : crowdinContributors
+    : [...crowdinContributors, ...gitContributors]
 
   return { contributors, lastUpdatedDate }
 }

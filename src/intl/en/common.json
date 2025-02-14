@@ -199,7 +199,7 @@
   "language-zh-tw": "Chinese Traditional",
   "languages": "Languages",
   "last-24-hrs": "Last 24 hours",
-  "last-edit": "Last edit",
+  "last-edit-on": "Last edit on",
   "last-updated": "Last updated",
   "layer-2": "Layer 2",
   "learn": "Learn",
@@ -441,5 +441,6 @@
   "withdrawals": "Staking withdrawals",
   "wrapped-ether": "Wrapped Ether",
   "yes": "Yes",
-  "zero-knowledge-proofs": "Zero-knowledge proofs"
+  "zero-knowledge-proofs": "Zero-knowledge proofs",
+  "translator": "Translator"
 }
