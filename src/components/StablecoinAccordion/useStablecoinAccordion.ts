@@ -1,7 +1,6 @@
-import { useTranslation } from "next-i18next"
-
 import { type CardProps } from "@/components/CardList"
 
+import { useTranslation } from "@/hooks/useTranslation"
 import aaveImg from "@/public/images/dapps/aave.png"
 // -- borrow
 import compoundImg from "@/public/images/dapps/compound.png"

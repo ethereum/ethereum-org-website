@@ -1,5 +1,4 @@
-import { useRouter } from "next/router"
-import { useTranslation } from "next-i18next"
+import { useLocale } from "next-intl"
 import { FaDiscord, FaGlobe, FaXTwitter } from "react-icons/fa6"
 import { MdInfoOutline } from "react-icons/md"
 
@@ -16,6 +15,8 @@ import InlineLink from "@/components/ui/Link"
 import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { getLocaleFormattedDate } from "@/lib/utils/time"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 const SocialLink = (props) => (
   <InlineLink
@@ -35,7 +36,7 @@ const WalletSubComponent = ({
   filters,
   listIdx,
 }: WalletSubComponentProps) => {
-  const { locale } = useRouter()
+  const locale = useLocale()
 
   const { t } = useTranslation("page-wallets-find-wallet")
   const walletFiltersOptions: FilterOption[] = useWalletFilters()

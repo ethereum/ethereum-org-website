@@ -1,5 +1,4 @@
-import { useRouter } from "next/router"
-import { useTranslation } from "next-i18next"
+import { useLocale } from "next-intl"
 
 import { FilterInputState, Lang } from "@/lib/types"
 
@@ -14,6 +13,8 @@ import {
 import { getLanguageCodeName } from "@/lib/utils/intl"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { getLanguageCountWalletsData } from "@/lib/utils/wallets"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 interface FindWalletLanguageSelectInputProps {
   filterIndex: number
@@ -32,7 +33,7 @@ const FindWalletLanguageSelectInput = ({
   inputState,
   updateFilterState,
 }: FindWalletLanguageSelectInputProps) => {
-  const { locale } = useRouter()
+  const locale = useLocale()
   const { t } = useTranslation("page-wallets-find-wallet")
   const languageCountWalletsData = getLanguageCountWalletsData(locale as string)
   const countSortedLanguagesCount = languageCountWalletsData.sort(

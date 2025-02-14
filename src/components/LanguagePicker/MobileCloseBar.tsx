@@ -1,7 +1,8 @@
 import { MouseEventHandler } from "react"
-import { useTranslation } from "next-i18next"
 
 import { Button } from "../ui/buttons/Button"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 type MobileCloseBarProps = {
   handleClick: MouseEventHandler<HTMLButtonElement>

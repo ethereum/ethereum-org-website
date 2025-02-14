@@ -1,5 +1,4 @@
 import { useMemo } from "react"
-import { useTranslation } from "next-i18next"
 import { useRadio, useRadioGroup, UseRadioProps } from "@chakra-ui/react"
 
 import type {
@@ -14,6 +13,8 @@ import { Center, HStack, Stack } from "@/components/ui/flex"
 import { cn } from "@/lib/utils/cn"
 
 import type { AnswerStatus } from "./useQuizWidget"
+
+import useTranslation from "@/hooks/useTranslation"
 
 type QuizRadioGroupProps = {
   questions: Question[]

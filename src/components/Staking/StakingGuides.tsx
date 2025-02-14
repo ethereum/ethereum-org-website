@@ -1,6 +1,6 @@
-import { useTranslation } from "next-i18next"
-
 import CardList, { type CardProps } from "@/components/CardList"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 const StakingGuides = () => {
   const { t } = useTranslation("page-staking")

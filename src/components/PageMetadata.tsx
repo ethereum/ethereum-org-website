@@ -1,12 +1,14 @@
 import Head from "next/head"
-import { useRouter } from "next/router"
-import { useTranslation } from "next-i18next"
+import { useLocale } from "next-intl"
 
 import { getOgImage } from "@/lib/utils/metadata"
 import { filterRealLocales } from "@/lib/utils/translations"
 import { getFullUrl } from "@/lib/utils/url"
 
-import { DEFAULT_LOCALE, SITE_URL } from "@/lib/constants"
+import { DEFAULT_LOCALE, LOCALES_CODES, SITE_URL } from "@/lib/constants"
+
+import { useTranslation } from "@/hooks/useTranslation"
+import { usePathname } from "@/i18n/routing"
 
 type NameMeta = {
   name: string
@@ -35,16 +37,17 @@ const PageMetadata = ({
   canonicalUrl,
   author,
 }: PageMetadataProps) => {
-  const { locale, locales: rawLocales, asPath } = useRouter()
+  const locale = useLocale()
+  const pathname = usePathname()
   const { t } = useTranslation()
 
-  const locales = filterRealLocales(rawLocales)
+  const locales = filterRealLocales(LOCALES_CODES)
 
   const desc = description || t("site-description")
   const siteTitle = t("site-title")
 
   // Remove any query params (?) or hash links (#)
-  const path = asPath.replace(/[?#].*/, "")
+  const path = pathname.replace(/[?#].*/, "")
   const slug = path.split("/")
 
   // Set canonical URL w/ language path to avoid duplicate content

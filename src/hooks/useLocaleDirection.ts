@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { useRouter } from "next/router"
+import { useLocale } from "next-intl"
 
 import { Lang } from "@/lib/types"
 
@@ -11,7 +11,7 @@ import { isLangRightToLeft } from "@/lib/utils/translations"
  */
 export const useLocaleDirection = (): string => {
   const [direction, setDirection] = useState<"ltr" | "rtl">("ltr")
-  const { locale } = useRouter()
+  const locale = useLocale()
 
   useEffect(() => {
     const dir = isLangRightToLeft(locale as Lang) ? "rtl" : "ltr"

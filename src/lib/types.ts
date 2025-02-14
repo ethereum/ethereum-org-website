@@ -28,7 +28,7 @@ import allQuestionData from "@/data/quizzes/questionBank"
 import { screens } from "./utils/screen"
 import { WALLETS_FILTERS_DEFAULT } from "./constants"
 
-import { layoutMapping } from "@/pages/[...slug]"
+import { layoutMapping } from "@/pages/[locale]/[...slug]"
 
 // Credit: https://stackoverflow.com/a/52331580
 export type Unpacked<T> = T extends (infer U)[] ? U : T
@@ -57,6 +57,10 @@ export type Root = {
 
 export type BasePageProps = SSRConfig &
   Pick<Root, "contentNotTranslated" | "lastDeployLocaleTimestamp">
+
+export type Params = {
+  locale: string
+}
 
 export type Frontmatter = RoadmapFrontmatter &
   UpgradeFrontmatter &

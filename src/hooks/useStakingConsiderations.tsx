@@ -1,5 +1,4 @@
 import { ElementType, useState } from "react"
-import { useTranslation } from "next-i18next"
 
 import type { StakingPage } from "@/lib/types"
 
@@ -19,6 +18,8 @@ import {
 import { StakingConsiderationsProps } from "@/components/Staking/StakingConsiderations"
 
 import { MatomoEventOptions } from "@/lib/utils/matomo"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 type DataType = {
   title: string

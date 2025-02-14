@@ -1,5 +1,4 @@
 import type { ImageProps } from "next/image"
-import { useTranslation } from "next-i18next"
 import type { ReactNode } from "react"
 
 import { cn } from "@/lib/utils/cn"
@@ -9,6 +8,8 @@ import { Center, Flex, HStack } from "./ui/flex"
 import { Tag } from "./ui/tag"
 import GitStars from "./GitStars"
 import { TwImage } from "./Image"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 type SubjectBadgeProps = {
   subject: string

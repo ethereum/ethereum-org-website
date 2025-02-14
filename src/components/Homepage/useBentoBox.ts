@@ -1,7 +1,6 @@
-import { useTranslation } from "next-i18next"
-
 import { cn } from "@/lib/utils/cn"
 
+import useTranslation from "@/hooks/useTranslation"
 import ImpactImage from "@/public/images/impact_transparent.png"
 import ManAndDogImage from "@/public/images/man-and-dog-playing.png"
 import ManBabyWomanImage from "@/public/images/man-baby-woman.png"

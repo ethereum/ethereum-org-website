@@ -1,5 +1,4 @@
 import React from "react"
-import { useTranslation } from "next-i18next"
 import { MdExpandMore } from "react-icons/md"
 
 import type { ToCItem } from "@/lib/types"
@@ -12,6 +11,8 @@ import {
 } from "../ui/dropdown-menu"
 
 import ItemsListMobile from "./ItemsListMobile"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 export type TableOfContentsMobileProps = {
   items?: Array<ToCItem>

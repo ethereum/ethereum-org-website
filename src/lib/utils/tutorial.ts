@@ -2,7 +2,10 @@ import { Lang } from "@/lib/types"
 
 import { Skill } from "@/components/TutorialMetadata"
 
-import { IExternalTutorial, ITutorial } from "@/pages/developers/tutorials"
+import {
+  IExternalTutorial,
+  ITutorial,
+} from "@/pages/[locale]/developers/tutorials"
 
 // Take all tutorials, and return a list of tutorials for a specific locale
 export const filterTutorialsByLang = (

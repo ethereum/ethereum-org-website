@@ -1,5 +1,4 @@
 import React, { type ReactNode, useState } from "react"
-import { useTranslation } from "next-i18next"
 
 import { Flex, HStack, VStack } from "@/components/ui/flex"
 
@@ -12,6 +11,8 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "./ui/accordion"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 export type ExpandableCardProps = {
   children?: ReactNode

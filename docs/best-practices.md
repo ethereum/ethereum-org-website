@@ -66,7 +66,7 @@ Markdown will be translated as whole pages of content, so no specific action is 
   - **Method two: `t()`**
 
     ```tsx
-    import { useTranslation } from "next-i18next"
+    import { useTranslation } from "@/hooks/useTranslation"
 
     // Utilize anywhere in JS using
     const { t } = useTranslation()

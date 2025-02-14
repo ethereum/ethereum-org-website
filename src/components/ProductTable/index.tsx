@@ -18,6 +18,8 @@ import PresetFilters from "@/components/ProductTable/PresetFilters"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
+import { usePathname } from "@/i18n/routing"
+
 interface ProductTableProps<T> {
   columns: ColumnDef<T>[]
   data: T[]
@@ -48,6 +50,7 @@ const ProductTable = <T,>({
   meta,
 }: ProductTableProps<T>) => {
   const router = useRouter()
+  const pathname = usePathname()
   const [activePresets, setActivePresets] = useState<number[]>([])
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
 
@@ -90,7 +93,7 @@ const ProductTable = <T,>({
         })),
       }))
       setFilters(updatedFilters)
-      router.replace(router.pathname, undefined, { shallow: true })
+      router.replace(pathname, undefined, { shallow: true })
     }
   }, [router])
 

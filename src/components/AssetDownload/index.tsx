@@ -2,7 +2,6 @@ import { extname } from "path"
 
 import { BaseHTMLAttributes } from "react"
 import type { ImageProps, StaticImageData } from "next/image"
-import { useTranslation } from "next-i18next"
 
 import AssetDownloadArtist from "@/components/AssetDownload/AssetDownloadArtist"
 import AssetDownloadImage from "@/components/AssetDownload/AssetDownloadImage"
@@ -12,6 +11,8 @@ import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import { ButtonLink } from "../ui/buttons/Button"
 import { Flex, Stack } from "../ui/flex"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 type AssetDownloadProps = {
   title: string

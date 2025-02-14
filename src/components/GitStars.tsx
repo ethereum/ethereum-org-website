@@ -1,4 +1,4 @@
-import { useRouter } from "next/router"
+import { useLocale } from "next-intl"
 import { FaGithub } from "react-icons/fa"
 
 import { Center, Flex } from "@/components/ui/flex"
@@ -17,7 +17,7 @@ type GitStarsProps = Omit<LinkProps, "href" | "href"> & {
 }
 
 const GitStars = ({ gitHubRepo, hideStars, ...props }: GitStarsProps) => {
-  const { locale } = useRouter()
+  const locale = useLocale()
   // Use Intl.NumberFormat to format the number for locale
   const starsString = Intl.NumberFormat(locale, {
     compactDisplay: "short",

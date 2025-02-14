@@ -20,12 +20,15 @@ import { Template } from "./Template"
 import type { PathId, SimulatorData } from "./types"
 import { getValidPathId } from "./utils"
 
+import { usePathname } from "@/i18n/routing"
+
 type SimulatorProps = {
   children: ReactNode
   data: SimulatorData
 }
 export const Simulator = ({ children, data }: SimulatorProps) => {
   const router = useRouter()
+  const pathname = usePathname()
 
   // Track step
   const [step, setStep] = useState(0) // 0-indexed to use as array index
@@ -39,7 +42,7 @@ export const Simulator = ({ children, data }: SimulatorProps) => {
   const isOpen = !!pathId
 
   const clearUrlParams = () => {
-    const pathWithoutParams = router.asPath.replace(/\?[^#]*/, "")
+    const pathWithoutParams = pathname.replace(/\?[^#]*/, "")
     router.replace(pathWithoutParams)
   }
 

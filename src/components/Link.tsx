@@ -1,5 +1,5 @@
 import NextLink, { type LinkProps as NextLinkProps } from "next/link"
-import { useRouter } from "next/router"
+import { useLocale } from "next-intl"
 import { RxExternalLink } from "react-icons/rx"
 import {
   forwardRef,
@@ -17,6 +17,7 @@ import * as url from "@/lib/utils/url"
 import { DISCORD_PATH, SITE_URL } from "@/lib/constants"
 
 import { useRtlFlip } from "@/hooks/useRtlFlip"
+import { usePathname } from "@/i18n/routing"
 
 type BaseProps = {
   hideArrow?: boolean
@@ -53,15 +54,16 @@ export const BaseLink = forwardRef(function Link(
   }: LinkProps,
   ref
 ) {
-  const { locale, asPath } = useRouter()
+  const locale = useLocale()
+  const pathname = usePathname()
   const { flipForRtl } = useRtlFlip()
 
   if (!href) {
-    console.warn("Link component is missing href prop:", asPath, locale)
+    console.warn("Link component is missing href prop:", pathname, locale)
     return <ChakraLink {...props} />
   }
 
-  const isActive = url.isHrefActive(href, asPath, isPartiallyActive)
+  const isActive = url.isHrefActive(href, pathname, isPartiallyActive)
   const isDiscordInvite = url.isDiscordInvite(href)
   const isPdf = url.isPdf(href)
   const isExternal = url.isExternal(href)
@@ -71,7 +73,7 @@ export const BaseLink = forwardRef(function Link(
   // Get proper download link for internally hosted PDF's & static files (ex: whitepaper)
   // Opens in separate window.
   if (isInternalPdf) {
-    href = getRelativePath(asPath, href)
+    href = getRelativePath(pathname, href)
   }
 
   if (isDiscordInvite) {

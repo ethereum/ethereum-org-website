@@ -1,4 +1,3 @@
-import { useTranslation } from "next-i18next"
 import { BsTranslate } from "react-icons/bs"
 import { MdBrightness2, MdSearch, MdWbSunny } from "react-icons/md"
 
@@ -10,6 +9,7 @@ import FooterButton from "./FooterButton"
 import FooterItemText from "./FooterItemText"
 
 import useColorModeValue from "@/hooks/useColorModeValue"
+import { useTranslation } from "@/hooks/useTranslation"
 
 type MenuFooterProps = {
   onToggle: () => void
