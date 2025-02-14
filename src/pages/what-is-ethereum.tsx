@@ -26,6 +26,7 @@ import Card from "@/components/Card"
 import EnergyConsumptionChart from "@/components/EnergyConsumptionChart"
 import FeedbackCard from "@/components/FeedbackCard"
 import { TwImage } from "@/components/Image"
+import ListenToPlayer from "@/components/ListenToPlayer"
 import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
 import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
@@ -206,7 +207,7 @@ const WhatIsEthereumPage = ({
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const { t } = useTranslation(["page-what-is-ethereum", "learn-quizzes"])
 
-  const { locale } = useRouter()
+  const { locale, asPath } = useRouter()
   const localeForNumberFormat = getLocaleForNumberFormat(locale! as Lang)
 
   const formatNumber = (
@@ -343,6 +344,9 @@ const WhatIsEthereumPage = ({
         </Content>
         <div className="w-full bg-background-highlight">
           <Section>
+            <div className="mb-8">
+              <ListenToPlayer slug={asPath} />
+            </div>
             <Stack className="gap-14">
               <TwoColumnContent id="summary">
                 <Width60>

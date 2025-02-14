@@ -13,6 +13,7 @@ import GlossaryDefinition from "@/components/Glossary/GlossaryDefinition"
 import GlossaryTooltip from "@/components/Glossary/GlossaryTooltip"
 import { HubHero } from "@/components/Hero"
 import NetworkUpgradeSummary from "@/components/History/NetworkUpgradeSummary"
+import ListenToPlayer from "@/components/ListenToPlayer"
 import Logo from "@/components/Logo"
 import MainArticle from "@/components/MainArticle"
 import MatomoOptOut from "@/components/MatomoOptOut"
@@ -118,6 +119,7 @@ export const StaticLayout = ({
                   {lastEditLocaleTimestamp}
                 </p>
               )}
+              <ListenToPlayer slug={asPath} />
             </Stack>
           )}
 

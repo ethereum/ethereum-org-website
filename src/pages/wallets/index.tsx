@@ -12,6 +12,7 @@ import CardList from "@/components/CardList"
 import FeedbackCard from "@/components/FeedbackCard"
 import HorizontalCard from "@/components/HorizontalCard"
 import { TwImage } from "@/components/Image"
+import ListenToPlayer from "@/components/ListenToPlayer"
 import MainArticle from "@/components/MainArticle"
 import PageHero from "@/components/PageHero"
 import PageMetadata from "@/components/PageMetadata"
@@ -62,7 +63,7 @@ export const getStaticProps = (async ({ locale }) => {
 }) satisfies GetStaticProps<BasePageProps>
 
 const WalletsPage = () => {
-  const { locale } = useRouter()
+  const { locale, asPath } = useRouter()
   const { t } = useTranslation("page-wallets")
 
   const heroContent = {
@@ -212,6 +213,9 @@ const WalletsPage = () => {
       <PageHero content={heroContent} isReverse />
 
       <div className="mt-4 w-full border-t bg-background-highlight px-0 py-16 lg:mt-8">
+        <div className="-mb-8 w-full px-8 py-4 pb-0">
+          <ListenToPlayer slug={asPath} />
+        </div>
         <div className="w-full px-8 py-4 pb-0">
           <h2 className="mb-0 mt-12 text-2xl leading-[1.4] md:text-[2rem]">
             {t("page-wallets-whats-a-wallet")}
