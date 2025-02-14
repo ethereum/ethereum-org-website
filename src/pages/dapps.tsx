@@ -126,38 +126,6 @@ const Content = (props: ChildOnlyProp) => (
   <div className="w-full px-8 py-4" {...props} />
 )
 
-const OptionContainer = (props: ChildOnlyProp) => (
-  <Flex
-    className="mb-8 w-full flex-col justify-center px-8 lg:w-auto lg:flex-row"
-    {...props}
-  />
-)
-
-const Option = (
-  props: Pick<ButtonProps, "children" | "onClick"> & { isActive: boolean }
-) => {
-  return (
-    <Button
-      variant="outline"
-      className={cn(
-        `my-2 flex w-full items-center justify-center rounded-4xl border px-6 py-4 transition-none lg:mx-2 lg:w-auto lg:justify-start ${
-          props.isActive
-            ? "border-primary text-primary shadow-table-box"
-            : "border-body text-body"
-        } hover:border-primary hover:text-primary active:bg-transparent`
-      )}
-      {...props}
-    />
-  )
-}
-
-const OptionText = (props: ChildOnlyProp) => (
-  <span
-    className="text-center text-md font-semibold md:text-2xl md:font-normal"
-    {...props}
-  />
-)
-
 const ButtonPrimary = (props: Pick<ButtonProps, "children" | "onClick">) => (
   <Button {...props} />
 )
@@ -1324,14 +1292,21 @@ const DappsPage = () => {
         <H2 id="explore">{t("page-dapps-explore-dapps-title")}</H2>
         <CenterText>{t("page-dapps-explore-dapps-description")}</CenterText>
         <H3>{t("page-dapps-choose-category")}</H3>
-        <OptionContainer>
+        <div className="mb-8 grid w-full grid-cols-1 justify-center gap-4 px-8 sm:grid-cols-2 lg:w-auto lg:grid-cols-3 2xl:grid-cols-6">
           {categoryKeys.map((key, idx) => {
             const categoryType = key as CategoryType
             const category = categories[categoryType]
             return (
-              <Option
+              <Button
                 key={idx}
-                isActive={selectedCategory === categoryType}
+                variant="outline"
+                className={cn(
+                  "flex items-center justify-center rounded-4xl border px-6 py-4 transition-none lg:justify-start",
+                  selectedCategory === categoryType
+                    ? "border-primary text-primary shadow-table-box"
+                    : "border-body text-body",
+                  "hover:border-primary hover:text-primary active:bg-transparent"
+                )}
                 onClick={() => {
                   handleCategorySelect(categoryType, false)
                   trackCustomEvent({
@@ -1341,12 +1316,17 @@ const DappsPage = () => {
                   })
                 }}
               >
-                <Emoji className="me-4 text-2xl" text={category.emoji} />
-                <OptionText>{category.title}</OptionText>
-              </Option>
+                <Emoji
+                  className="me-4 shrink-0 text-2xl"
+                  text={category.emoji}
+                />
+                <span className="text-center text-md font-semibold md:text-2xl md:font-normal">
+                  {category.title}
+                </span>
+              </Button>
             )
           })}
-        </OptionContainer>
+        </div>
         {/* Category-specific content */}
         {selectedCategory === CategoryType.FINANCE && (
           <Content>
