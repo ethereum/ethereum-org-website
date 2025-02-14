@@ -64,7 +64,7 @@ const ContributorAvatarGroup = ({
         </div>
       ))}
       {remainingCount > 0 && (
-        <Center className="size-10 rounded-full bg-primary ps-1 text-sm text-body-inverse">
+        <Center className="-me-2 size-10 rounded-full bg-primary ps-1 text-sm text-body-inverse">
           +{remainingCount}
         </Center>
       )}
@@ -122,7 +122,7 @@ const FileContributors = ({
       </Modal>
 
       <Flex className="flex-col p-0 md:flex-row md:p-2" {...props}>
-        <Flex className="mb-4 me-4 flex flex-1 flex-col items-start lg:mb-0">
+        <Flex className="mb-4 me-4 flex-1 flex-col items-start lg:mb-0">
           <p className="mb-2 text-body-medium">
             <Translation id="last-edit-on" /> {lastEditLocaleTimestamp}
           </p>
@@ -130,7 +130,6 @@ const FileContributors = ({
             <ContributorAvatarGroup contributors={contributors} />
             <LinkOverlay asChild>
               <Button
-                className="-ms-2"
                 variant="ghost"
                 onClick={() => {
                   setModalOpen(true)
