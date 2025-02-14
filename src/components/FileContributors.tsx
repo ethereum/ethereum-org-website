@@ -4,7 +4,7 @@ import type { ChildOnlyProp, FileContributor } from "@/lib/types"
 
 import Translation from "@/components/Translation"
 import { Button } from "@/components/ui/buttons/Button"
-import { Center, Flex, VStack } from "@/components/ui/flex"
+import { Center, Flex } from "@/components/ui/flex"
 import { ListItem, UnorderedList } from "@/components/ui/list"
 import { ScrollArea } from "@/components/ui/scroll-area"
 
@@ -122,7 +122,7 @@ const FileContributors = ({
       </Modal>
 
       <Flex className="flex-col p-0 md:flex-row md:p-2" {...props}>
-        <Flex className="me-4 hidden flex-1 flex-col items-start md:visible md:flex">
+        <Flex className="mb-4 me-4 flex flex-1 flex-col items-start lg:mb-0">
           <p className="mb-2 text-body-medium">
             <Translation id="last-edit-on" /> {lastEditLocaleTimestamp}
           </p>
@@ -130,6 +130,7 @@ const FileContributors = ({
             <ContributorAvatarGroup contributors={contributors} />
             <LinkOverlay asChild>
               <Button
+                className="-ms-2"
                 variant="ghost"
                 onClick={() => {
                   setModalOpen(true)
@@ -145,22 +146,6 @@ const FileContributors = ({
             </LinkOverlay>
           </LinkBox>
         </Flex>
-        <VStack className="items-stretch justify-between space-y-2 md:invisible">
-          <Button
-            className="mb-4 w-full border-none bg-background"
-            variant="outline"
-            onClick={() => {
-              setModalOpen(true)
-              trackCustomEvent({
-                eventCategory: "see contributors",
-                eventAction: "click",
-                eventName: "click",
-              })
-            }}
-          >
-            <Translation id="see-contributors" />
-          </Button>
-        </VStack>
       </Flex>
     </>
   )
