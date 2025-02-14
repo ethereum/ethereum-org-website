@@ -1,5 +1,6 @@
 import { useRouter } from "next/router"
 import type { GetStaticProps } from "next/types"
+import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 
 import type { BasePageProps, Lang } from "@/lib/types"
@@ -133,21 +134,21 @@ export const getStaticProps = (async ({ locale }) => {
 
 const Layer2Networks = ({ layer2Data, locale, mainnetData }) => {
   const { pathname } = useRouter()
+  const { t } = useTranslation(["page-layer-2-networks", "common"])
 
   const heroProps: ContentHeroProps = {
     breadcrumbs: { slug: pathname, startDepth: 1 },
     heroImg: "/images/layer-2/learn-hero.png",
     blurDataURL: "/images/layer-2/learn-hero.png",
-    title: "Explore networks",
-    description:
-      "Using Ethereum today means interacting with hundreds of different networks and apps. All backed by Ethereum as the foundational backbone.",
+    title: t("common:nav-networks-explore-networks-label"),
+    description: t("page-layer-2-networks-hero-description"),
   }
 
   return (
     <MainArticle className="relative flex flex-col">
       <PageMetadata
-        title="Ethereum Layer 2:Explore networks"
-        description="Using Ethereum today means interacting with hundreds of different networks and apps. All backed by Ethereum as the foundational backbone."
+        title={t("page-layer-2-networks-meta-title")}
+        description={t("page-layer-2-networks-hero-description")}
         image="/images/layer-2/learn-hero.png"
       />
 
@@ -161,23 +162,22 @@ const Layer2Networks = ({ layer2Data, locale, mainnetData }) => {
 
       <div id="more-advanced-cta" className="w-full px-8 py-9">
         <div className="flex flex-col gap-8 bg-main-gradient px-12 py-14">
-          <h3>Looking for more advanced overview?</h3>
+          <h3>{t("page-layer-2-networks-more-advanced-title")}</h3>
           <div className="flex max-w-[768px] flex-col gap-8">
             <p>
-              Many of the projects are{" "}
-              <strong>still young and somewhat experimental.</strong>
+              {t("page-layer-2-networks-more-advanced-descripton-1")}{" "}
+              <strong>
+                {t("page-layer-2-networks-more-advanced-descripton-2")}
+              </strong>
             </p>
-            <p>
-              For more information on the technology, risks and trust
-              assumptions of these networks, we recommend checking out L2BEAT,
-              which provides a comprehensive risk assessment framework of each
-              project and growthepie for general data analysis.
-            </p>
+            <p>{t("page-layer-2-networks-more-advanced-descripton-3")}</p>
           </div>
           <div className="flex flex-col gap-6 sm:flex-row">
-            <ButtonLink href="https://l2beat.com">Visit l2beat.com</ButtonLink>
+            <ButtonLink href="https://l2beat.com">
+              {t("page-layer-2-networks-more-advanced-link-1")}
+            </ButtonLink>
             <ButtonLink href="https://growthepie.xyz">
-              Visit growthepie.xyz
+              {t("page-layer-2-networks-more-advanced-link-2")}
             </ButtonLink>
           </div>
         </div>
@@ -189,10 +189,8 @@ const Layer2Networks = ({ layer2Data, locale, mainnetData }) => {
       >
         <Callout
           image={Callout1Image}
-          title={"What are the benefits?"}
-          description={
-            "Ethereum's strength and security provides a platform for other networks to build upon."
-          }
+          title={t("page-layer-2-networks-callout-1-title")}
+          description={t("page-layer-2-networks-callout-1-description")}
         >
           <div>
             <ButtonLink
@@ -203,16 +201,14 @@ const Layer2Networks = ({ layer2Data, locale, mainnetData }) => {
                 eventName: "bottom_hub",
               }}
             >
-              Learn more
+              {t("common:learn-more")}
             </ButtonLink>
           </div>
         </Callout>
         <Callout
           image={Callout2Image}
-          title={"Interested in more details?"}
-          description={
-            "Curious about the technology and reasons for this scaling approach? Learn more about the thinking and different technological approaches."
-          }
+          title={t("page-layer-2-networks-callout-2-title")}
+          description={t("page-layer-2-networks-callout-2-description")}
         >
           <div>
             <ButtonLink
@@ -223,7 +219,7 @@ const Layer2Networks = ({ layer2Data, locale, mainnetData }) => {
                 eventName: "bottom_learn",
               }}
             >
-              Learn more
+              {t("common:learn-more")}
             </ButtonLink>
           </div>
         </Callout>
