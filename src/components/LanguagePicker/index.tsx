@@ -1,3 +1,5 @@
+import { useParams } from "next/navigation"
+
 import { BaseLink } from "@/components/Link"
 
 import { cn } from "@/lib/utils/cn"
@@ -36,6 +38,7 @@ const LanguagePicker = ({
 }: LanguagePickerProps) => {
   const pathname = usePathname()
   const { push } = useRouter()
+  const params = useParams()
   const { disclosure, languages } = useLanguagePicker(handleClose)
   const { isOpen, setValue, onClose, onOpen } = disclosure
 
@@ -52,9 +55,15 @@ const LanguagePicker = ({
   // onClick handlers
   const handleMobileCloseBarClick = () => onClose()
   const handleMenuItemSelect = (currentValue: string) => {
-    push(pathname, {
-      locale: currentValue,
-    })
+    push(
+      // @ts-expect-error -- TypeScript will validate that only known `params`
+      // are used in combination with a given `pathname`. Since the two will
+      // always match for the current route, we can skip runtime checks.
+      { pathname, params },
+      {
+        locale: currentValue,
+      }
+    )
     onClose({
       eventAction: "Locale chosen",
       eventName: currentValue,
