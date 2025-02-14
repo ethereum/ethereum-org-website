@@ -1,7 +1,7 @@
 import React, { ReactNode } from "react"
 
 import GlossaryTooltip from "./Glossary/GlossaryTooltip"
-import InlineLink from "./Link"
+import InlineLink from "./ui/Link"
 
 interface Props {
   href?: string

@@ -1,6 +1,5 @@
-import { ButtonLink } from "@/components/Buttons"
-
 import Emoji from "../Emoji"
+import { ButtonLink } from "../ui/buttons/Button"
 
 const localCommunitiesData = [
   {
@@ -90,7 +89,7 @@ export const LocalCommunitiesList = () => {
               <ButtonLink
                 href={community.lumaLink}
                 variant="outline"
-                color="body.base"
+                className="text-body"
               >
                 Register here
               </ButtonLink>

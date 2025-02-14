@@ -1,11 +1,12 @@
-import { cva, VariantProps } from "class-variance-authority"
 import type { FC, SVGProps } from "react"
+import { tv, type VariantProps } from "tailwind-variants"
 
 import { cn } from "@/lib/utils/cn"
 
-import { BaseLink, LinkProps } from "../ui/Link"
+import { BaseLink, LinkProps } from "../Link"
 
-const variants = cva("flex items-center gap-3.5", {
+const variants = tv({
+  base: "flex items-center gap-3.5",
   variants: {
     variant: {
       col: "flex-col text-center [&_.body]:text-center",

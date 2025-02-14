@@ -1,7 +1,7 @@
 import { motion } from "framer-motion"
 
 import EthGlyph from "@/components/icons/eth-glyph-solid.svg"
-import { TwImage } from "@/components/Image"
+import { Image } from "@/components/Image"
 import { Button } from "@/components/ui/buttons/Button"
 import { Flex } from "@/components/ui/flex"
 
@@ -29,7 +29,7 @@ export const ReceiveEther = () => (
       side="top"
     >
       <div className="relative mx-auto mb-3 w-fit bg-background p-3 md:mb-5">
-        <TwImage
+        <Image
           alt=""
           src={QrImage}
           className="size-[6rem] rounded p-1 md:size-[7.5rem] dark:invert"

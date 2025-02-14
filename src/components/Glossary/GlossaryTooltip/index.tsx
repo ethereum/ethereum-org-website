@@ -1,9 +1,9 @@
 import React, { ReactNode } from "react"
 import { useRouter } from "next/router"
 
-import InlineLink from "@/components/Link"
 import Tooltip, { type TooltipProps } from "@/components/Tooltip"
 import Translation from "@/components/Translation"
+import InlineLink from "@/components/ui/Link"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { cleanPath } from "@/lib/utils/url"

@@ -3,7 +3,7 @@ import shuffle from "lodash/shuffle"
 
 import type { TranslationKey } from "@/lib/types"
 
-import InlineLink from "./Link"
+import InlineLink from "./ui/Link"
 import Translation from "./Translation"
 
 interface App {

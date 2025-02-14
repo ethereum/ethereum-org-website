@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils/cn"
 
-import { TwImage } from "../Image"
+import { Image } from "../Image"
 import { ButtonLink } from "../ui/buttons/Button"
 import { Flex, Stack } from "../ui/flex"
 
@@ -29,7 +29,7 @@ function ContributorsQuizBanner({
           "px-8 md:px-0"
         )}
       >
-        <TwImage
+        <Image
           className="absolute max-h-[120%] w-full object-contain"
           src={PeopleLearning}
           alt="People learning about Ethereum"

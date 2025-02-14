@@ -12,7 +12,7 @@ import ExpandableCard from "@/components/ExpandableCard"
 import FeedbackCard from "@/components/FeedbackCard"
 import GhostCard from "@/components/GhostCard"
 import HorizontalCard from "@/components/HorizontalCard"
-import { TwImage } from "@/components/Image"
+import { Image } from "@/components/Image"
 import InfoBanner from "@/components/InfoBanner"
 import MainArticle from "@/components/MainArticle"
 import PageHero from "@/components/PageHero"
@@ -184,7 +184,7 @@ const GasPage = () => {
           </div>
 
           <div className="hidden max-h-[450px] flex-[50%] justify-center lg:flex">
-            <TwImage src={walletImg} alt="A robot" className="object-contain" />
+            <Image src={walletImg} alt="A robot" className="object-contain" />
           </div>
         </Flex>
       </Content>
@@ -276,12 +276,7 @@ const GasPage = () => {
             ))}
           </div>
           <div className="w-full">
-            <TwImage
-              className="object-contain"
-              src={ethImg}
-              alt=""
-              width={600}
-            />
+            <Image className="object-contain" src={ethImg} alt="" width={600} />
           </div>
         </Flex>
       </Content>

@@ -21,7 +21,7 @@ import DocLink from "@/components/DocLink"
 import Emoji from "@/components/Emoji"
 import FeedbackCard from "@/components/FeedbackCard"
 import GhostCard from "@/components/GhostCard"
-import { TwImage } from "@/components/Image"
+import { Image } from "@/components/Image"
 import InfoBanner from "@/components/InfoBanner"
 import MainArticle from "@/components/MainArticle"
 import PageHero from "@/components/PageHero"
@@ -1753,7 +1753,7 @@ const DappsPage = () => {
       <Content>
         <ImageContainer id="what-are-dapps">
           <GhostCard className="mt-2 flex items-center">
-            <TwImage
+            <Image
               className="mx-0 my-8 w-[300px] self-center bg-cover bg-no-repeat sm:mx-8 md:mx-24"
               src={magicians}
               alt={t("page-dapps-magician-img-alt")}

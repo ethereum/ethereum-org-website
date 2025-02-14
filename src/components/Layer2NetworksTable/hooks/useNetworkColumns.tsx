@@ -7,11 +7,11 @@ import { ColumnDef } from "@tanstack/react-table"
 import { ExtendedRollup, Lang } from "@/lib/types"
 
 import { TableMeta } from "@/components/DataTable"
-import { TwImage } from "@/components/Image"
+import { Image } from "@/components/Image"
 import NetworkMaturityTooltip from "@/components/Layer2NetworksTable/NetworkMaturityTooltip"
-import InlineLink from "@/components/Link"
 import Tooltip from "@/components/Tooltip"
 import { Button } from "@/components/ui/buttons/Button"
+import InlineLink from "@/components/ui/Link"
 import { TableCell, TableHead } from "@/components/ui/table"
 
 import { cn } from "@/lib/utils/cn"
@@ -57,7 +57,7 @@ export const useNetworkColumns: ColumnDef<ExtendedRollup>[] = [
           <div className="flex flex-col gap-3">
             <div className="flex flex-row items-center gap-4">
               <div className="w-[40px] rounded-full">
-                <TwImage
+                <Image
                   src={row.original.logo}
                   alt={row.original.name}
                   className="h-[40px] w-[40px] rounded-full p-1"

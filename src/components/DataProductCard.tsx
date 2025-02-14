@@ -1,7 +1,7 @@
 import React from "react"
 import { StaticImageData } from "next/image"
 
-import { TwImage } from "@/components/Image"
+import { Image } from "@/components/Image"
 import { Flex } from "@/components/ui/flex"
 
 import InlineLink from "./ui/Link"
@@ -42,7 +42,7 @@ const DataProductCard = ({
         }
         style={{ background }}
       >
-        <TwImage
+        <Image
           alt={alt ? alt : `${name} logo`}
           className="max-h-[257px] max-w-[311px] self-center object-cover sm:max-w-[372px]"
           src={image}
@@ -69,7 +69,7 @@ const DataProductCard = ({
               >
                 <Flex className="items-center">
                   {logo && (
-                    <TwImage
+                    <Image
                       className="me-2 min-w-6 object-cover"
                       src={logo}
                       alt=""

@@ -1,9 +1,9 @@
 import { Stack } from "@/components/ui/flex"
+import Link from "@/components/ui/Link"
 import { ListItem, OrderedList, UnorderedList } from "@/components/ui/list"
 
 import Emoji from "../components/Emoji"
 import GlossaryTooltip from "../components/Glossary/GlossaryTooltip"
-import Link from "../components/Link"
 import {
   CONNECT_WEB3,
   CREATE_ACCOUNT,

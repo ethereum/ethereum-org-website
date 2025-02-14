@@ -6,7 +6,6 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 
 import { BasePageProps, Lang, LearningTool } from "@/lib/types"
 
-import ButtonLink from "@/components/Buttons/ButtonLink"
 import CalloutBanner from "@/components/CalloutBanner"
 import FeedbackCard from "@/components/FeedbackCard"
 import InfoBanner from "@/components/InfoBanner"
@@ -14,6 +13,7 @@ import LearningToolsCardGrid from "@/components/LearningToolsCardGrid"
 import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
 import Translation from "@/components/Translation"
+import { ButtonLink } from "@/components/ui/buttons/Button"
 
 import { cn } from "@/lib/utils/cn"
 import { existsNamespace } from "@/lib/utils/existsNamespace"

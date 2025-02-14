@@ -1,6 +1,6 @@
 import { extname } from "path"
 
-import { type ImageProps, TwImage } from "@/components/Image"
+import { Image, type ImageProps } from "@/components/Image"
 
 import { toPosixPath } from "@/lib/utils/relativePath"
 
@@ -48,7 +48,7 @@ const MarkdownImage = ({
         rel="noopener"
         locale={false}
       >
-        <TwImage
+        <Image
           alt={alt}
           width={imageWidth}
           height={imageHeight}

@@ -25,7 +25,7 @@ import Callout from "@/components/Callout"
 import Card from "@/components/Card"
 import EnergyConsumptionChart from "@/components/EnergyConsumptionChart"
 import FeedbackCard from "@/components/FeedbackCard"
-import { TwImage } from "@/components/Image"
+import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
 import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
@@ -169,7 +169,7 @@ const NoWrapText = (props: ChildOnlyProp) => (
 )
 
 const Image400 = ({ src }: Pick<ImageProps, "src">) => (
-  <TwImage src={src} alt="" width={400} />
+  <Image src={src} alt="" width={400} />
 )
 
 type Props = BasePageProps & {
@@ -331,7 +331,7 @@ const WhatIsEthereumPage = ({
               </header>
             </Stack>
             <Hero>
-              <TwImage
+              <Image
                 src={hero}
                 alt={t("page-what-is-ethereum-alt-img-bazaar")}
                 // TODO: adjust value when the old theme breakpoints are removed (src/theme.ts)

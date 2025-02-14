@@ -12,7 +12,7 @@ import DocLink from "@/components/DocLink"
 import FeedbackCard from "@/components/FeedbackCard"
 import { HubHero } from "@/components/Hero"
 import type { HubHeroProps } from "@/components/Hero/HubHero"
-import { type ImageProps, TwImage } from "@/components/Image"
+import { Image, type ImageProps } from "@/components/Image"
 import LeftNavBar from "@/components/LeftNavBar"
 import MainArticle from "@/components/MainArticle"
 import { ContentContainer } from "@/components/MdComponents"
@@ -114,7 +114,7 @@ const H3 = ({ children, ...props }: HTMLAttributes<HTMLHeadingElement>) => (
 )
 
 const ImageHeight200 = ({ src, alt }: ImageProps) => (
-  <TwImage className="h-[200px] w-auto" src={src} alt={alt} />
+  <Image className="h-[200px] w-auto" src={src} alt={alt} />
 )
 
 export const getStaticProps = (async ({ locale }) => {
@@ -348,7 +348,7 @@ const LearnPage = () => {
                   </UnorderedList>
                 </Stack>
                 <div className="self-end">
-                  <TwImage className="max-w-[265px]" src={newRings} alt="" />
+                  <Image className="max-w-[265px]" src={newRings} alt="" />
                 </div>
               </Flex>
 

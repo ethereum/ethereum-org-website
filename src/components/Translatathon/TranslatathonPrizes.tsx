@@ -1,5 +1,6 @@
 import Emoji from "@/components/Emoji"
-import Link from "@/components/Link"
+
+import Link from "../ui/Link"
 
 const TranslatathonPrizes = () => {
   return (

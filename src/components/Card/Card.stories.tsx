@@ -1,9 +1,9 @@
 import { Box } from "@chakra-ui/react"
 import { Meta, type StoryObj } from "@storybook/react"
 
-import { Button } from "@/components/Buttons"
-
 import { getTranslation } from "@/storybook-utils"
+
+import { Button } from "../ui/buttons/Button"
 
 import CardComponent, { CardProps } from "."
 

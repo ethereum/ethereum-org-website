@@ -4,11 +4,12 @@ import { MdInfoOutline } from "react-icons/md"
 
 import type { ChildOnlyProp, Lang, StakingStatsData } from "@/lib/types"
 
-import InlineLink from "@/components/Link"
 import Tooltip from "@/components/Tooltip"
 import { Flex, VStack } from "@/components/ui/flex"
 
 import { getLocaleForNumberFormat } from "@/lib/utils/translations"
+
+import InlineLink from "../ui/Link"
 
 const Cell = ({ children }: ChildOnlyProp) => (
   <VStack className="gap-2 px-8 py-4">{children}</VStack>

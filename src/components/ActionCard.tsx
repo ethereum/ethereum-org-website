@@ -1,7 +1,7 @@
 import { StaticImageData } from "next/image"
 import type { BaseHTMLAttributes, ElementType, ReactNode } from "react"
 
-import { TwImage } from "@/components/Image"
+import { Image } from "@/components/Image"
 import InlineLink from "@/components/ui/Link"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 
@@ -53,7 +53,7 @@ const ActionCard = ({
           isRight ? "justify-end" : "justify-center"
         )}
       >
-        <TwImage
+        <Image
           src={image}
           alt={alt || ""}
           width={imageWidth}

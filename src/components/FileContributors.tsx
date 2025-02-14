@@ -2,7 +2,6 @@ import { BaseHTMLAttributes, useState } from "react"
 
 import type { ChildOnlyProp, FileContributor } from "@/lib/types"
 
-import InlineLink from "@/components/Link"
 import Translation from "@/components/Translation"
 import { Button } from "@/components/ui/buttons/Button"
 import { Flex, VStack } from "@/components/ui/flex"
@@ -13,6 +12,7 @@ import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import { Avatar } from "./ui/avatar"
 import Modal from "./ui/dialog-modal"
+import InlineLink from "./ui/Link"
 
 import { useBreakpointValue } from "@/hooks/useBreakpointValue"
 
