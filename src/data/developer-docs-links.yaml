@@ -154,6 +154,14 @@
       items:
         - id: docs-nav-block-explorers
           href: /developers/docs/data-and-analytics/block-explorers/
+        - id: docs-nav-extraction-tranformation-example
+          href: /developers/docs/data-and-analytics/extraction-tranformation-example/
+        - id: docs-nav-data-flow
+          href: /developers/docs/data-and-analytics/data-flow/
+        - id: docs-nav-outsourcing-data
+          href: /developers/docs/data-and-analytics/outsourcing-data/
+        - id: docs-nav-data-stacks
+          href: /developers/docs/data-and-analytics/data-stacks/
     - id: docs-nav-storage
       href: /developers/docs/storage/
       description: docs-nav-storage-description
