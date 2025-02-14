@@ -16,7 +16,6 @@ import Emoji from "@/components/Emoji"
 import FeedbackCard from "@/components/FeedbackCard"
 import InfoBanner from "@/components/InfoBanner"
 import MainArticle from "@/components/MainArticle"
-import Text from "@/components/OldText"
 import PageHero, {
   type ContentType as PageHeroContent,
 } from "@/components/PageHero"
@@ -36,6 +35,13 @@ import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import oldship from "@/public/images/upgrades/oldship.png"
+
+/**
+ * TODO: Consider replacing this with a global style for the `p` element
+ */
+const Text = (props: Omit<ComponentProps<"p">, "className">) => (
+  <p className="mb-[1.45rem]" {...props} />
+)
 
 const Page = (props: ChildOnlyProp) => (
   <VStack className="w-full gap-0" {...props} asChild>
