@@ -91,6 +91,7 @@ Weak statelessness, history expiry and state expiry are all in the research phas
 
 ## Further reading {#further-reading}
 
+- [What is Stateless Ethereum?](https://stateless.fyi/)
 - [Vitalik statelessness AMA](https://www.reddit.com/r/ethereum/comments/o9s15i/impromptu_technical_ama_on_statelessness_and/)
 - [A theory of state size management](https://hackmd.io/@vbuterin/state_size_management)
 - [Resurrection-conflict-minimized state bounding](https://ethresear.ch/t/resurrection-conflict-minimized-state-bounding-take-2/8739)
