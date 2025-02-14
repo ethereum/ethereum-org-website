@@ -29,6 +29,7 @@ import type { NavSections } from "./types"
 export const useNav = () => {
   const { t } = useTranslation("common")
   const { setTheme, resolvedTheme } = useTheme()
+  // TODO Remove when removing chakra provider
   const { setColorMode } = useColorMode()
 
   const linkSections: NavSections = {

@@ -1,6 +1,6 @@
-import * as React from "react"
-import { Stack } from "@chakra-ui/react"
 import { Meta, type StoryObj } from "@storybook/react"
+
+import { Stack } from "../ui/flex"
 
 import BreadcrumbsComponent from "."
 
@@ -13,7 +13,7 @@ export default meta
 
 export const Breadcrumbs: StoryObj = {
   render: () => (
-    <Stack spacing="8">
+    <Stack className="gap-8">
       <BreadcrumbsComponent slug="/en/staking/" />
       <BreadcrumbsComponent slug="/en/staking/solo/" />
       <BreadcrumbsComponent slug="/en/roadmap/merge/issuance/" />

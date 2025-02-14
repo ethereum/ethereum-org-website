@@ -1,9 +1,10 @@
-import { Stack } from "@chakra-ui/react"
 import { Meta, StoryObj } from "@storybook/react"
 
 import { ToCItem } from "@/lib/types"
 
-import TableOfContents from "./"
+import { Stack } from "../ui/flex"
+
+import TableOfContentsComponent from "./"
 
 const tocItems: ToCItem[] = [
   {
@@ -73,22 +74,26 @@ const tocItems: ToCItem[] = [
 
 const meta = {
   title: "Molecules / Navigation / TableOfContents",
+  component: TableOfContentsComponent,
   parameters: {
     layout: "fullscreen",
   },
   decorators: [
     (Story) => (
-      <Stack minH="100vh" position="relative">
+      <Stack className="relative min-h-[100vh]">
         <Story />
       </Stack>
     ),
   ],
-} satisfies Meta<typeof TableOfContents>
+} satisfies Meta<typeof TableOfContentsComponent>
 
 export default meta
 
 type Story = StoryObj<typeof meta>
 
-export const Default: Story = {
-  render: () => <TableOfContents items={tocItems} maxDepth={2} />,
+export const TableOfContents: Story = {
+  args: {
+    items: tocItems,
+    maxDepth: 2,
+  },
 }
