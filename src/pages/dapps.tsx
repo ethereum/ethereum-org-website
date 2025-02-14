@@ -63,6 +63,7 @@ import cyberconnect from "@/public/images/dapps/cyberconnect.png"
 import darkforest from "@/public/images/dapps/darkforest.png"
 import decentraland from "@/public/images/dapps/decentraland.png"
 import dodo from "@/public/images/dapps/dodo.png"
+import efp from "@/public/images/dapps/efp.png"
 import ens from "@/public/images/dapps/ens.png"
 import etherisc from "@/public/images/dapps/etherisc.png"
 import foundation from "@/public/images/dapps/foundation.png"
@@ -1043,6 +1044,13 @@ const DappsPage = () => {
       link: "https://www.spruceid.com/",
       image: spruce,
       alt: t("page-dapps-spruce-logo-alt"),
+    },
+    {
+      title: "Ethereum Follow Protocol",
+      description: t("page-dapps-dapp-description-efp"),
+      link: "https://efp.app/",
+      image: efp,
+      alt: t("page-dapps-efp-logo-alt"),
     },
   ]
 
