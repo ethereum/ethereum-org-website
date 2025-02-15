@@ -1,7 +1,10 @@
 import { type ReactNode } from "react"
-import type { Meta, StoryObj } from "@storybook/react/"
+import capitalize from "lodash/capitalize"
+import type { Meta, StoryObj } from "@storybook/react"
 
 import { HStack, Stack, VStack } from "@/components/ui/flex"
+
+import { cn } from "@/lib/utils/cn"
 
 const meta = {
   title: "Design System/ShadCN Colors",
@@ -38,11 +41,12 @@ const getCSSCustomPropIndex = () => {
   }
   return variables as Record<string, string>
 }
+
+const cssVarsEntries = Object.entries(getCSSCustomPropIndex())
+
 const primitiveColorKeys = ["gray", "purple"] as const
 export const Primitives: StoryObj = {
   render: () => {
-    const cssVarsEntries = Object.entries(getCSSCustomPropIndex())
-
     return (
       <Stack className="gap-16">
         {primitiveColorKeys.map((color) => (
@@ -87,4 +91,59 @@ const ColorGroupWrapper = ({
   </div>
 )
 
-// bg-linear-[180deg,_#1b1b1b_35%,_#fff_35%]
+export const SemanticScheme: StoryObj = {
+  render: () => {
+    const tokenNames = [
+      "primary",
+      "body",
+      "background",
+      "disabled",
+      "success",
+      "warning",
+      "error",
+    ] as const
+
+    return (
+      <Stack className="gap-16">
+        {tokenNames.map((tokenName) => {
+          const variableObj = cssVarsEntries.filter(([key]) =>
+            key.startsWith(`--${tokenName}`)
+          )
+
+          return (
+            <Stack key={tokenName} className="gap-4">
+              <h2>{capitalize(tokenName)}</h2>
+              <HStack className="gap-8">
+                {variableObj.map((variable) => (
+                  <SemanticColorBlock
+                    key={JSON.stringify(variable)}
+                    variable={variable}
+                  />
+                ))}
+              </HStack>
+            </Stack>
+          )
+        })}
+      </Stack>
+    )
+  },
+}
+
+const SemanticColorBlock = ({
+  variable: [varName, varValue],
+}: {
+  variable: [string, string]
+}) => (
+  <VStack key={`${varName}-${varValue}`} className="mb-auto">
+    <div
+      className={cn(
+        "size-20",
+        varName === "--background" || varName === "--body-inverse"
+          ? "border"
+          : undefined
+      )}
+      style={{ background: `hsla(var(${varName}))` }}
+    />
+    <span>{varName}</span>
+  </VStack>
+)
