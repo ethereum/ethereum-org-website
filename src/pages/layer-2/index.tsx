@@ -70,7 +70,7 @@ export const getStaticProps = (async ({ locale }) => {
       )
     }
 
-    return randomL2s.sort(() => 0.5 - Math.random()).slice(0, 9)
+    return randomL2s.sort(() => 0.5 - Math.random()).slice(0, 3)
   }
 
   const randomL2s = layer2Data.sort(() => 0.5 - Math.random()).slice(0, 9)
@@ -417,7 +417,7 @@ const Layer2Hub = ({
       <div id="layer-2-cta" className="w-full px-8 py-9">
         <div className="mx-auto flex max-w-[640px] flex-col gap-6 rounded bg-main-gradient p-8">
           <div className="flex flex-col gap-6">
-            {userRandomL2s.slice(0, 3).map((l2, idx) => {
+            {userRandomL2s.map((l2, idx) => {
               return (
                 <div
                   key={idx}
