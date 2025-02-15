@@ -23,7 +23,7 @@ The validator signing key consists of two elements:
 - Validator **private** key
 - Validator **public** key
 
-The purpose of the validator private key is to sign on-chain operations such as block proposals and attestations. Because of this, these keys must be held in a hot wallet.
+The purpose of the validator private key is to sign onchain operations such as block proposals and attestations. Because of this, these keys must be held in a hot wallet.
 
 This flexibility has the advantage of moving validator signing keys very quickly from one device to another, however, if they have gotten lost or stolen, a thief may be able to **act maliciously** in a few ways:
 

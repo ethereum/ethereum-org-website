@@ -1,36 +1,28 @@
 import React from "react"
-import { Box, type BoxProps, Flex, Text } from "@chakra-ui/react"
+
+import { Flex } from "@/components/ui/flex"
 
 import { getMaxFractionDigitsUsd } from "../utils"
 
 import { AddressPill } from "./AddressPill"
 
-type WalletBalanceProps = BoxProps & {
+type WalletBalanceProps = {
   usdAmount?: number
 }
 
-export const WalletBalance = ({
-  usdAmount = 0,
-  ...boxProps
-}: WalletBalanceProps) => (
-  <Box zIndex={1} {...boxProps}>
-    <Text textAlign="center" color="body.medium" mb={{ base: 2, md: 4 }}>
-      Your total
-    </Text>
-    <Text
-      textAlign="center"
-      fontSize={{ base: "3xl", md: "5xl" }}
-      fontWeight="bold"
-    >
+export const WalletBalance = ({ usdAmount = 0 }: WalletBalanceProps) => (
+  <div className="z-[1]">
+    <p className="mb-2 text-center text-body-medium md:mb-4">Your total</p>
+    <p className="text-center text-3xl font-bold !leading-base md:text-5xl">
       {Intl.NumberFormat("en-US", {
         style: "currency",
         currency: "USD",
         notation: "compact",
         maximumFractionDigits: getMaxFractionDigitsUsd(usdAmount),
       }).format(usdAmount)}
-    </Text>
-    <Flex justify="center" mb={4}>
+    </p>
+    <Flex className="mb-4 justify-center">
       <AddressPill />
     </Flex>
-  </Box>
+  </div>
 )

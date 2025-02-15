@@ -1,12 +1,12 @@
 import type { ImageProps } from "next/image"
 import { useTranslation } from "next-i18next"
 import type { ReactNode } from "react"
-import { Badge } from "@chakra-ui/react"
 
 import { cn } from "@/lib/utils/cn"
 
 import { ButtonLink } from "./ui/buttons/Button"
 import { Center, Flex, HStack } from "./ui/flex"
+import { Tag } from "./ui/tag"
 import GitStars from "./GitStars"
 import { TwImage } from "./Image"
 
@@ -19,34 +19,30 @@ const SubjectBadge = ({ subject, children }: SubjectBadgeProps) => {
   const backgroundProp = () => {
     switch (subject) {
       case "Solidity":
-        return "tagYellow"
+        return "warning"
       case "Vyper":
-        return "tagBlue"
+        return "tag"
       case "web3":
-        return "tagTurquoise"
+        return "success"
       case "JavaScript":
-        return "tagRed"
+        return "error"
       case "TypeScript":
-        return "tagBlue"
+        return "tag"
       case "Go":
-        return "tagTurquoise"
+        return "tag"
       case "Python":
-        return "tagMint"
+        return "error"
       case "Rust":
-        return "tagOrange"
+        return "warning"
       case "C#":
-        return "tagBlue"
+        return "tag"
       case "Java":
-        return "tagPink"
+        return "error"
       default:
-        return "tagGray"
+        return "normal"
     }
   }
-  return (
-    <Badge size="sm" textTransform="unset" background={backgroundProp()}>
-      {children}
-    </Badge>
-  )
+  return <Tag status={backgroundProp()}>{children}</Tag>
 }
 
 export type ProductCardProps = {

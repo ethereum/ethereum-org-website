@@ -1,10 +1,10 @@
+import { BaseHTMLAttributes } from "react"
 import shuffle from "lodash/shuffle"
 import { GetStaticProps } from "next"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import { Box, Flex, HeadingProps } from "@chakra-ui/react"
 
-import { BasePageProps, ChildOnlyProp, Lang, LearningTool } from "@/lib/types"
+import { BasePageProps, Lang, LearningTool } from "@/lib/types"
 
 import ButtonLink from "@/components/Buttons/ButtonLink"
 import CalloutBanner from "@/components/CalloutBanner"
@@ -12,11 +12,10 @@ import FeedbackCard from "@/components/FeedbackCard"
 import InfoBanner from "@/components/InfoBanner"
 import LearningToolsCardGrid from "@/components/LearningToolsCardGrid"
 import MainArticle from "@/components/MainArticle"
-import Heading from "@/components/OldHeading"
-import Text from "@/components/OldText"
 import PageMetadata from "@/components/PageMetadata"
 import Translation from "@/components/Translation"
 
+import { cn } from "@/lib/utils/cn"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLocaleTimestamp } from "@/lib/utils/time"
@@ -45,77 +44,75 @@ import SpeedRunEthereumImage from "@/public/images/dev-tools/speed-run-ethereum.
 import TenderlyImage from "@/public/images/dev-tools/tenderly.png"
 import EnterpriseEth from "@/public/images/enterprise-eth.png"
 
-const Page = (props: ChildOnlyProp) => (
-  <Flex
-    direction="column"
-    align="center"
-    w="full"
-    mx="auto"
-    mt={16}
-    mb={0}
+const Page = ({ className, ...props }: BaseHTMLAttributes<HTMLDivElement>) => (
+  <div
+    className={cn(
+      "mx-auto mb-0 mt-16 flex w-full flex-col items-center",
+      className
+    )}
     {...props}
   />
 )
 
-const Header = (props: ChildOnlyProp) => (
-  <Flex
-    as="header"
-    direction="column"
-    align="center"
-    textAlign="center"
-    maxW="896px"
-    py={0}
-    px={8}
-    m="auto"
+const Header = ({ className, ...props }: BaseHTMLAttributes<HTMLElement>) => (
+  <header
+    className={cn(
+      "m-auto flex max-w-[896px] flex-col items-center px-8 py-0 text-center",
+      className
+    )}
     {...props}
   />
 )
 
-const H1 = (props: ChildOnlyProp) => (
-  <Heading
-    as="h1"
-    color="text"
-    fontStyle="normal"
-    fontFamily="monospace"
-    textTransform="uppercase"
-    fontWeight="semibold"
-    fontSize="2rem"
-    lineHeight={1.4}
-    textAlign="center"
+const H1 = ({
+  className,
+  ...props
+}: BaseHTMLAttributes<HTMLHeadingElement>) => (
+  <h1
+    className={cn(
+      "my-8 text-center font-mono text-3xl font-semibold uppercase leading-[1.4]",
+      className
+    )}
     {...props}
   />
 )
 
-const Subtitle = (props: HeadingProps) => (
-  <Heading
-    fontSize="xl"
-    lineHeight={1.4}
-    fontWeight="normal"
-    color="text300"
-    maxW="55ch"
-    mb={2}
-    mt={4}
+const Subtitle = ({
+  className,
+  ...props
+}: BaseHTMLAttributes<HTMLHeadingElement>) => (
+  <h2
+    className={cn(
+      "text-text300 mb-2 mt-4 max-w-[55ch] text-xl font-normal leading-[1.4]",
+      className
+    )}
     {...props}
   />
 )
 
-const SubtitleTwo = (props: ChildOnlyProp) => <Subtitle mt={0} {...props} />
-
-const ContentBox = (props: ChildOnlyProp) => (
-  <Box py={4} px={8} w="full" {...props} />
+const SubtitleTwo = ({
+  className,
+  ...props
+}: BaseHTMLAttributes<HTMLHeadingElement>) => (
+  <Subtitle className={cn("mt-0", className)} {...props} />
 )
 
-const StackContainer = (props: ChildOnlyProp) => (
-  <Box
-    border="1px"
-    borderColor="border"
-    borderRadius={{ base: 0, sm: "base" }}
-    w={{ base: "full", sm: "96%" }}
-    mx={{ base: 0, sm: 8 }}
-    my={8}
-    px={8}
-    py={12}
-    background="ednBackground"
+const ContentBox = ({
+  className,
+  ...props
+}: BaseHTMLAttributes<HTMLDivElement>) => (
+  <div className={cn("w-full px-8 py-4", className)} {...props} />
+)
+
+const StackContainer = ({
+  className,
+  ...props
+}: BaseHTMLAttributes<HTMLDivElement>) => (
+  <div
+    className={cn(
+      "mx-0 my-8 w-full border bg-background-highlight px-8 py-12 sm:mx-8 sm:w-[96%] sm:rounded",
+      className
+    )}
     {...props}
   />
 )
@@ -449,7 +446,7 @@ const LearningToolsPage = () => {
         )}
       />
       <MainArticle className="w-full">
-        <Box w="full">
+        <div className="w-full">
           <Header>
             <H1>
               <Translation id="page-developers-learning-tools:page-learning-tools-coding" />
@@ -458,14 +455,14 @@ const LearningToolsPage = () => {
               <Translation id="page-developers-learning-tools:page-learning-tools-coding-subtitle" />
             </Subtitle>
           </Header>
-        </Box>
+        </div>
         <StackContainer>
           <SubtitleTwo>
             <Translation id="page-developers-learning-tools:page-learning-tools-sandbox" />
           </SubtitleTwo>
-          <Text>
+          <p>
             <Translation id="page-developers-learning-tools:page-learning-tools-sandbox-desc" />
-          </Text>
+          </p>
           <LearningToolsCardGrid category={randomizedSandboxes} />
           <InfoBanner emoji=":point_up:" shouldCenter>
             <Translation id="page-developers-learning-tools:page-learning-tools-remix-description-2" />
@@ -475,18 +472,18 @@ const LearningToolsPage = () => {
           <SubtitleTwo>
             <Translation id="page-developers-learning-tools:page-learning-tools-game-tutorials" />
           </SubtitleTwo>
-          <Text>
+          <p>
             <Translation id="page-developers-learning-tools:page-learning-tools-game-tutorials-desc" />
-          </Text>
+          </p>
           <LearningToolsCardGrid category={games} />
         </StackContainer>
         <StackContainer>
           <SubtitleTwo>
             <Translation id="page-developers-learning-tools:page-learning-tools-bootcamps" />
           </SubtitleTwo>
-          <Text>
+          <p>
             <Translation id="page-developers-learning-tools:page-learning-tools-bootcamps-desc" />
-          </Text>
+          </p>
           <LearningToolsCardGrid category={bootcamps} />
         </StackContainer>
         <ContentBox>
@@ -503,13 +500,14 @@ const LearningToolsPage = () => {
               "page-developers-learning-tools:page-learning-tools-documentation-desc"
             }
           >
-            <Box>
+            <div>
               <ButtonLink href="/developers/docs/">
                 <Translation id="page-developers-learning-tools:page-learning-tools-browse-docs" />
               </ButtonLink>
-            </Box>
+            </div>
           </CalloutBanner>
         </ContentBox>
+
         <ContentBox>
           <FeedbackCard />
         </ContentBox>

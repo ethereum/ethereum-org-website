@@ -14,7 +14,7 @@ import {
   TableHeader,
   TableProps,
   TableRow,
-} from "@/components/ui/Table"
+} from "@/components/ui/table"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 

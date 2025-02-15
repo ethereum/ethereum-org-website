@@ -48,7 +48,9 @@ export const CreateAccount = ({ nav, ctaLabel }: PhoneScreenProps) => {
         <ProgressCta
           isAnimated={step === 0}
           progressStepper={progressStepper}
-          bg={[5].includes(step) ? "background.base" : "background.highlight"}
+          className={
+            [5].includes(step) ? "bg-background" : "bg-background-highlight"
+          }
         >
           {ctaLabel}
         </ProgressCta>

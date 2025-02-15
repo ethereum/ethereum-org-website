@@ -29,12 +29,12 @@ Since 2021, upgrades to the **execution layer** are named according to the city 
 
 | Upgrade Name | Devcon Year | Devcon Number | Upgrade Date |
 | ------------ | ----------- | ------------- | ------------ |
-| Berlin       | 2015        | 0             | Apr 15, 2021 |
-| London       | 2016        | I             | Aug 5, 2021  |
-| Shanghai     | 2017        | II            | Apr 12, 2023 |
-| **Cancun**   | 2018        | III           | Mar 13, 2024 |
-| _Prague_     | 2019        | IV            | TBD          |
-| _Osaka_      | 2020        | V             | TBD          |
+| Berlin       | 2014        | 0             | Apr 15, 2021 |
+| London       | 2015        | I             | Aug 5, 2021  |
+| Shanghai     | 2016        | II            | Apr 12, 2023 |
+| **Cancun**   | 2017        | III           | Mar 13, 2024 |
+| _Prague_     | 2018        | IV            | TBD          |
+| _Osaka_      | 2019        | V             | TBD          |
 | _Bogota_     | 2022        | VI            | TBD          |
 | _Bangkok_    | 2024        | VII           | TBD          |
 
@@ -102,7 +102,7 @@ Notably this includes EIP-4844, known as **Proto-Danksharding**, which significa
 
 The Deneb upgrade contains a set of improvements to Ethereum's _consensus_ aimed towards improving scalability. This upgrade comes in tandem with the Cancun execution upgrades to enable Proto-Danksharding (EIP-4844), along with other improvements to the Beacon Chain.
 
-Pre-generated signed "voluntary exit messages" no longer expire, thus giving more control to users staking their funds with a third-party node operator. With this signed exit message, stakers can delegate node operation while maintaining the ability to safely exit and withdrawal their funds at any time, without needing to ask permission from anyone.
+Pre-generated signed "voluntary exit messages" no longer expire, thus giving more control to users staking their funds with a third-party node operator. With this signed exit message, stakers can delegate node operation while maintaining the ability to safely exit and withdraw their funds at any time, without needing to ask permission from anyone.
 
 EIP-7514 brings a tightening to the issuance of ETH by capping the "churn" rate that validators can join the network to eight (8) per epoch. Since ETH issuance is proportional to total ETH staked, limiting the number of validators joining caps the _growth rate_ of newly issued ETH, while also reducing hardware requirements for node operators, helping decentralization.
 
@@ -426,7 +426,7 @@ The Constantinople fork:
 <ExpandableCard title="Constantinople EIPs" contentPreview="Official improvements included in this fork.">
 
 <ul>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-145">EIP-145</a> – <em>optimises cost of certain on-chain actions.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-145">EIP-145</a> – <em>optimises cost of certain onchain actions.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1014">EIP-1014</a> – <em>allows you to interact with addresses that have yet to be created.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1052">EIP-1052</a> – <em>introduces the <code>EXTCODEHASH</code> instruction to retrieve the hash of another contract's code.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1234">EIP-1234</a> – <em>makes sure the blockchain doesn&#39;t freeze before proof-of-stake and reduces block reward from 3 to 2 ETH.</em></li>

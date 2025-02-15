@@ -2,19 +2,16 @@ import { GetStaticProps, InferGetStaticPropsType } from "next"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import { Box, Center, Text } from "@chakra-ui/react"
 
 import type { BasePageProps, ChildOnlyProp, Lang, Wallet } from "@/lib/types"
 
 import BannerNotification from "@/components/Banners/BannerNotification"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import FindWalletProductTable from "@/components/FindWalletProductTable"
-import { Image } from "@/components/Image"
-import InlineLink from "@/components/Link"
+import { TwImage } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
-import OldHeading from "@/components/OldHeading"
 import PageMetadata from "@/components/PageMetadata"
-import { Flex } from "@/components/ui/flex"
+import InlineLink from "@/components/ui/Link"
 
 import { cn } from "@/lib/utils/cn"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
@@ -30,15 +27,9 @@ import {
 import HeroImage from "@/public/images/wallets/wallet-hero.png"
 
 const Subtitle = ({ children }: ChildOnlyProp) => (
-  <Text
-    fontSize="xl"
-    lineHeight={1.4}
-    color="body.medium"
-    mb={6}
-    _last={{ mb: 8 }}
-  >
+  <p className="mb-6 text-xl leading-[1.4] text-body-medium last:mb-8">
     {children}
-  </Text>
+  </p>
 )
 
 type Props = BasePageProps & {
@@ -98,21 +89,17 @@ const FindWalletPage = ({
         {t("page-find-wallet-footnote-1")}
       </BannerNotification>
 
-      <Flex
+      <div
         className={cn(
-          "relative mb-[44px] w-full flex-col p-12 sm:flex-row",
+          "relative mb-[44px] flex w-full flex-col p-12 md:flex-row",
           "bg-gradient-to-r from-accent-a/10 to-accent-c/10 dark:from-accent-a/20 dark:to-accent-c-hover/20"
         )}
       >
-        <Box w={{ base: "full", sm: "50%" }} mt={{ base: 8, sm: 0 }}>
+        <div className="mt-8 w-full sm:mt-0 md:w-1/2">
           <Breadcrumbs slug={pathname} />
-          <OldHeading
-            as="h1"
-            fontSize={{ base: "2.5rem", md: "5xl" }}
-            lineHeight={1.4}
-          >
+          <h1 className="mb-8 mt-8 text-[2.5rem] leading-[1.4] md:text-5xl">
             {t("page-find-wallet-title")}
-          </OldHeading>
+          </h1>
           <Subtitle>{t("page-find-wallet-description")}</Subtitle>
           <Subtitle>
             {t("page-find-wallet-desc-2")}{" "}
@@ -120,9 +107,9 @@ const FindWalletPage = ({
               {t("page-find-wallet-desc-2-wallets-link")}
             </InlineLink>
           </Subtitle>
-        </Box>
-        <Center w={{ base: "full", sm: "50%" }}>
-          <Image
+        </div>
+        <div className="flex w-full items-center justify-center md:w-1/2">
+          <TwImage
             src={HeroImage}
             // TODO: adjust value when the old theme breakpoints are removed (src/theme.ts)
             sizes="(max-width: 480px) 100vw, 500px"
@@ -132,8 +119,9 @@ const FindWalletPage = ({
               objectFit: "contain",
             }}
           />
-        </Center>
-      </Flex>
+        </div>
+      </div>
+
       <FindWalletProductTable wallets={wallets} />
     </MainArticle>
   )

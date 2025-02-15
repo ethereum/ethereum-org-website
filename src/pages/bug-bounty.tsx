@@ -1,36 +1,32 @@
+import { HTMLAttributes } from "react"
 import { useRouter } from "next/router"
 import type { GetStaticProps } from "next/types"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import {
-  Box,
-  Center,
-  ListItem,
-  UnorderedList,
-  useColorModeValue,
-} from "@chakra-ui/react"
 
 import type { BasePageProps, ChildOnlyProp, Lang } from "@/lib/types"
 
-import BugBountyBanner from "@/components/Banners/BugBountyBanner"
+/* Uncomment for Bug Bounty Banner: */
+/* import BugBountyBanner from "@/components/Banners/BugBountyBanner" */
 import Breadcrumbs from "@/components/Breadcrumbs"
 import BugBountyCards from "@/components/BugBountyCards"
-import ButtonLink from "@/components/Buttons/ButtonLink"
 import Card from "@/components/Card"
 import CardList from "@/components/CardList"
 import Emoji from "@/components/Emoji"
 import ExpandableCard from "@/components/ExpandableCard"
 import FeedbackCard from "@/components/FeedbackCard"
-import { Image, type ImageProps } from "@/components/Image"
+import { type ImageProps, TwImage } from "@/components/Image"
 import Leaderboard from "@/components/Leaderboard"
-import InlineLink from "@/components/Link"
 import MainArticle from "@/components/MainArticle"
-import OldHeading from "@/components/OldHeading"
-import Text from "@/components/OldText"
 import PageMetadata from "@/components/PageMetadata"
 import Translation from "@/components/Translation"
+import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Divider } from "@/components/ui/divider"
+import { Center, Flex, VStack } from "@/components/ui/flex"
+import InlineLink from "@/components/ui/Link"
+import { ListItem, UnorderedList } from "@/components/ui/list"
 
+import { cn } from "@/lib/utils/cn"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLocaleTimestamp } from "@/lib/utils/time"
@@ -39,9 +35,11 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import consensusData from "@/data/consensus-bounty-hunters.json"
 import executionData from "@/data/execution-bounty-hunters.json"
 
+import useColorModeValue from "@/hooks/useColorModeValue"
 import besu from "@/public/images/upgrades/besu.png"
 import erigon from "@/public/images/upgrades/erigon.png"
 import geth from "@/public/images/upgrades/geth.png"
+import grandine from "@/public/images/upgrades/grandine.png"
 import lighthouseDark from "@/public/images/upgrades/lighthouse-dark.png"
 import lighthouseLight from "@/public/images/upgrades/lighthouse-light.png"
 import lodestar from "@/public/images/upgrades/lodestar.png"
@@ -49,61 +47,41 @@ import nethermind from "@/public/images/upgrades/nethermind.png"
 import nimbus from "@/public/images/upgrades/nimbus-cloud.png"
 import prysm from "@/public/images/upgrades/prysm.png"
 import reth from "@/public/images/upgrades/reth.png"
-import solidity from "@/public/images/upgrades/solidity.png"
+import solidityDark from "@/public/images/upgrades/solidity-dark.png"
+import solidityLight from "@/public/images/upgrades/solidity-light.png"
 import tekuDark from "@/public/images/upgrades/teku-dark.png"
 import tekuLight from "@/public/images/upgrades/teku-light.png"
 import vyper from "@/public/images/upgrades/vyper.png"
 
 const Page = (props: ChildOnlyProp) => (
-  <Box
-    as={MainArticle}
-    display="flex"
-    flexDirection="column"
-    alignItems="center"
-    w="full"
-    my="0"
-    mx="auto"
+  <MainArticle
+    className="mx-auto my-0 flex w-full flex-col items-center"
     {...props}
   />
 )
 
 const Content = (props: ChildOnlyProp) => (
-  <Box py="4" px="8" w="full" {...props} />
+  <div className="w-full px-8 py-4" {...props} />
 )
 
 const Title = (props: ChildOnlyProp) => (
-  <Text
-    textTransform="uppercase"
-    fontSize="0.875rem"
-    color="text"
-    mb="0"
-    ms="2"
-    {...props}
-  />
+  <Text className="mb-0 ms-2 text-sm uppercase text-body" {...props} />
 )
 
-const H2 = (props: ChildOnlyProp) => (
-  <OldHeading
-    as="h2"
-    fontSize="1.5rem"
-    fontStyle="normal"
-    fontWeight="700"
-    lineHeight="22px"
-    letterSpacing="0rem"
-    textAlign="left"
-    {...props}
-  />
+const H2 = (props: HTMLAttributes<HTMLHeadingElement>) => (
+  <h2 className="mb-8 mt-12 text-center tracking-normal" {...props} />
+)
+
+const H4 = (props: ChildOnlyProp) => (
+  <h4 className="my-8 leading-xs" {...props} />
 )
 
 const Subtitle = (props: ChildOnlyProp) => (
-  <Text
-    fontSize="1.5rem"
-    lineHeight="140%"
-    color="text200"
-    maxW="480px"
-    mt="4"
-    {...props}
-  />
+  <Text className="mt-4 max-w-[480px] leading-xs text-body-medium" {...props} />
+)
+
+const Text = ({ className, ...props }: HTMLAttributes<HTMLHeadingElement>) => (
+  <p className={cn("mb-6", className)} {...props} />
 )
 
 const SloganGradient = ({ children }: ChildOnlyProp) => (
@@ -116,182 +94,109 @@ const SloganGradient = ({ children }: ChildOnlyProp) => (
 )
 
 const Rules = (props: ChildOnlyProp) => (
-  <Box
-    my="0"
-    mx="auto"
-    maxW="3xl"
-    display="flex"
-    flexDirection="column"
-    alignItems="center"
-    {...props}
-  />
+  <VStack className="mx-auto my-0 max-w-3xl" {...props} />
 )
 
 const SubmitInstructions = (props: ChildOnlyProp) => (
-  <Box flex="1 1 600px" me="8" maxW="100ch" {...props} />
+  <div className="me-8 max-w-[100ch] flex-1 basis-[600px]" {...props} />
 )
 
 const GradientContainer = (props: ChildOnlyProp) => (
-  <Box
-    w="full"
-    py="16"
-    px="0"
-    mt="8"
-    bg="cardGradient"
-    boxShadow="inset 0px 1px 0px var(--eth-colors-tableItemBoxShadow)"
+  <div
+    className="mt-8 w-full border-t bg-banner-grid-gradient px-0 py-16 shadow-table-item-box"
     {...props}
   />
 )
 
 const LeaderboardContainer = (props: ChildOnlyProp) => (
-  <Box
-    flex="1 1 50%"
-    display="flex"
-    flexDirection="column"
-    alignItems="center"
-    p={{ lg: "6rem 2rem 8rem 0rem", base: "0" }}
+  <VStack
+    className="flex-1 basis-1/2 p-0 lg:pb-32 lg:pl-0 lg:pr-8 lg:pt-24"
     {...props}
   />
 )
 
 const FullLeaderboardContainer = (props: ChildOnlyProp) => (
-  <Box
-    my="8"
-    mx="auto"
-    py="0"
-    px="8"
-    maxW="3xl"
-    display="flex"
-    flexDirection="column"
-    alignItems="center"
-    {...props}
-  />
+  <VStack className="mx-auto my-8 max-w-3xl px-8 py-0" {...props} />
 )
 
-const On = () => <Box w="8px" h="8px" bg="success400" borderRadius="64px" />
+const On = () => <div className="h-2 w-2 rounded-full bg-success" />
 
 const Contact = (props: ChildOnlyProp) => (
-  <Box
-    borderRadius="2px"
-    border="1px"
-    borderStyle="solid"
-    borderColor="border"
-    display="flex"
-    justifyContent="space-between"
-    alignItems="center"
-    p="6"
-    my="12"
-    mx="32"
-    w="80%"
+  <Flex
+    className="mx-32 my-12 w-4/5 items-center justify-between rounded-sm border border-border p-6"
     {...props}
   />
 )
 
 const ButtonRow = (props: ChildOnlyProp) => (
-  <Box display="flex" alignItems="center" mt="4" flexWrap="wrap" {...props} />
+  <Flex className="mt-4 flex-wrap items-center" {...props} />
 )
 
 const StyledButton = ({ children, ...props }) => (
-  <ButtonLink me="4" mb="0" {...props}>
+  <ButtonLink className="mb-0 me-4" href={props.href} {...props}>
     {children}
   </ButtonLink>
 )
 
 const ClientIntro = (props: ChildOnlyProp) => (
-  <Text
-    textTransform="uppercase"
-    fontSize="0.875rem"
-    color="text300"
-    fontWeight="semibold"
-    mt={{ base: "5xl", lg: "0" }}
-    {...props}
-  />
+  <Text className="mt-5xl uppercase lg:mt-0" {...props} />
 )
 
 const ClientRow = (props: ChildOnlyProp) => (
-  <Box
-    display="flex"
-    alignItems="center"
-    flexDirection={{ base: "column", lg: "row" }}
-    {...props}
-  />
+  <VStack className="lg:flex-row" {...props} />
 )
 
 const Client = (props: ChildOnlyProp) => (
-  <Box m="16" mt="4" mb="12" w="60px" {...props} />
+  <div className="m-16 mb-12 mt-4 w-[60px]" {...props} />
 )
 
 const HeroCard = (props: ChildOnlyProp) => (
-  <Box
-    display="flex"
-    justifyContent="space-between"
-    flexDirection={{ base: "column", lg: "row" }}
-    ps={{ lg: "0" }}
-    mt={{ base: "-2rem", lg: "0" }}
+  <VStack
+    className="-mt-8 justify-between lg:mt-0 lg:flex-row lg:ps-0"
     {...props}
   />
 )
 
 const HeroContainer = (props: ChildOnlyProp) => (
-  <Box
-    flex="1 1 50%"
-    p={{ lg: "8rem 2rem 8rem 2rem", base: "6rem 0 4rem 0" }}
+  <div
+    className="flex-1 basis-1/2 pb-16 pl-0 pr-0 pt-24 lg:-mt-32 lg:pb-32 lg:pl-8 lg:pr-8 lg:pt-32"
     {...props}
   />
 )
 
 const Row = (props: ChildOnlyProp) => (
-  <Box
-    display="flex"
-    alignItems="center"
-    flexWrap={{ base: "nowrap", lg: "wrap" }}
-    {...props}
-  />
+  <Flex className="items-center lg:flex-wrap" {...props} />
 )
 
 const StyledCardContainer = (props: ChildOnlyProp) => (
-  <Box display="flex" flexWrap="wrap" m="2rem -1rem 3rem -1rem" {...props} />
+  <Flex className="-ml-4 -mr-4 mb-12 mt-8 flex-wrap" {...props} />
 )
 
 const StyledCard = ({ children, ...props }) => (
-  <Card flex="1 1 464px" m="4" p="6" justifyContent="flex-start" {...props}>
+  <Card className="m-4 flex-[1_1_464px] justify-start p-6" {...props}>
     {children}
   </Card>
 )
 
 const StyledGrayContainer = ({ children, ...props }) => (
-  <Box
-    w="full"
-    py="16"
-    px="0"
-    mt="8"
-    mb="12"
-    bg="grayBackground"
-    boxShadow="inset 0px 1px 0px var(--eth-colors-tableItemBoxShadow)"
+  <div
+    className="mb-12 mt-8 w-full border-t bg-background-highlight px-0 py-16 shadow-table-item-box"
     {...props}
   >
     {children}
-  </Box>
+  </div>
 )
 
 const Faq = (props: ChildOnlyProp) => (
-  <Box
-    display="flex"
-    mt="16"
-    flexDirection={{ base: "column", lg: "row" }}
-    {...props}
-  />
+  <Flex className="mt-16 flex-col lg:flex-row" {...props} />
 )
 
-const LeftColumn = (props: ChildOnlyProp) => <Box w="full" {...props} />
+const LeftColumn = (props: ChildOnlyProp) => (
+  <div className="w-full" {...props} />
+)
 
 const RightColumn = (props: ChildOnlyProp) => (
-  <Box
-    w="full"
-    ms={{ base: "0rem", lg: "2rem" }}
-    flexDirection={{ base: "column", lg: "column" }}
-    {...props}
-  />
+  <Flex className="ms-0 w-full flex-col lg:ms-8" {...props} />
 )
 
 type BountyHuntersArg = { score?: number }
@@ -430,6 +335,11 @@ const BugBountiesPage = () => {
       link: "https://pegasys.tech/teku",
       image: useColorModeValue(tekuDark, tekuLight),
     },
+    {
+      title: "Grandine",
+      link: "https://grandine.io/",
+      image: grandine,
+    },
   ]
 
   const specs: Spec[] = [
@@ -455,7 +365,7 @@ const BugBountiesPage = () => {
     {
       title: "Solidity",
       link: "https://soliditylang.org/",
-      image: solidity,
+      image: useColorModeValue(solidityLight, solidityDark),
     },
     {
       title: "Vyper",
@@ -473,8 +383,8 @@ const BugBountiesPage = () => {
         title={t("page-upgrades-bug-bounty-meta-title")}
         description={t("page-upgrades-bug-bounty-meta-description")}
       />
-      { /* TODO: Remove on the 25th of January */ }
-      <BugBountyBanner />
+      {/* Uncomment for Bug Bounty Banner: */}
+      {/* <BugBountyBanner /> */}
       <Content>
         <HeroCard>
           <HeroContainer>
@@ -507,49 +417,54 @@ const BugBountiesPage = () => {
       <ClientIntro>{t("page-upgrades-bug-bounty-clients")}</ClientIntro>
       <ClientRow>
         <Client>
-          <Image src={besu} alt="" {...iconImageProps} />
+          <TwImage src={besu} alt="" {...iconImageProps} />
         </Client>
         <Client>
-          <Image src={erigon} alt="" {...iconImageProps} />
+          <TwImage src={erigon} alt="" {...iconImageProps} />
         </Client>
         <Client>
-          <Image src={geth} alt="" {...iconImageProps} />
+          <TwImage src={geth} alt="" {...iconImageProps} />
         </Client>
         <Client>
-          <Image src={nethermind} alt="" {...iconImageProps} />
+          <TwImage src={nethermind} alt="" {...iconImageProps} />
         </Client>
         <Client>
-          <Image src={reth} alt="" {...iconImageProps} />
+          <TwImage src={reth} alt="" {...iconImageProps} />
         </Client>
       </ClientRow>
       <ClientRow>
         <Client>
-          <Image
+          <TwImage
             src={useColorModeValue(lighthouseLight, lighthouseDark)}
             alt=""
             {...iconImageProps}
           />
         </Client>
         <Client>
-          <Image src={lodestar} alt="" {...iconImageProps} />
+          <TwImage src={lodestar} alt="" {...iconImageProps} />
         </Client>
         <Client>
-          <Image src={nimbus} alt="" {...iconImageProps} />
+          <TwImage src={nimbus} alt="" {...iconImageProps} />
         </Client>
         <Client>
-          <Image src={prysm} alt="" {...iconImageProps} />
+          <TwImage src={prysm} alt="" {...iconImageProps} />
         </Client>
         <Client>
-          <Image
+          <TwImage
             src={useColorModeValue(tekuDark, tekuLight)}
             alt=""
             {...iconImageProps}
           />
         </Client>
+        <Client>
+          <TwImage src={grandine} alt="" {...iconImageProps} />
+        </Client>
       </ClientRow>
       <StyledGrayContainer id="rules">
         <Content>
-          <H2>{t("page-upgrades-bug-bounty-validity")}</H2>
+          <H2 className="mb-4 text-left">
+            {t("page-upgrades-bug-bounty-validity")}
+          </H2>
           <Text>
             <Translation id="page-bug-bounty:page-upgrades-bug-bounty-validity-desc" />
           </Text>
@@ -567,7 +482,7 @@ const BugBountiesPage = () => {
                 {t("page-upgrades-bug-bounty-execution-specs")}
               </InlineLink>
               <br />
-              <Box>
+              <div>
                 <Text>{t("page-upgrades-bug-bounty-annotations")}</Text>
                 <UnorderedList>
                   <ListItem>
@@ -583,52 +498,31 @@ const BugBountiesPage = () => {
                     </InlineLink>
                   </ListItem>
                 </UnorderedList>
-              </Box>
-              <Box>
-                <OldHeading
-                  as="h4"
-                  fontWeight="medium"
-                  lineHeight={1.4}
-                  fontSize={{ base: "md", md: "xl" }}
-                >
-                  {t("page-upgrades-bug-bounty-types")}
-                </OldHeading>
+              </div>
+              <div>
+                <H4>{t("page-upgrades-bug-bounty-types")}</H4>
                 <UnorderedList>
                   <ListItem>{t("page-upgrades-bug-bounty-type-1")}</ListItem>
                   <ListItem>{t("page-upgrades-bug-bounty-type-2")}</ListItem>
                   <ListItem>{t("page-upgrades-bug-bounty-type-3")}</ListItem>
                   <ListItem>{t("page-upgrades-bug-bounty-type-4")}</ListItem>
                 </UnorderedList>
-              </Box>
-              <Box>
-                <OldHeading
-                  as="h4"
-                  fontWeight="medium"
-                  lineHeight={1.4}
-                  fontSize={{ base: "md", md: "xl" }}
-                >
-                  {t("page-upgrades-bug-bounty-specs-docs")}
-                </OldHeading>
+              </div>
+              <div>
+                <H4>{t("page-upgrades-bug-bounty-specs-docs")}</H4>
                 <CardList items={specs} />
-              </Box>
+              </div>
             </StyledCard>
             <StyledCard
               emoji=":computer:"
               title={t("page-upgrades-bug-bounty-client-bugs")}
               description={t("page-upgrades-bug-bounty-client-bugs-desc")}
             >
-              <Box>
+              <div>
                 <Text>
                   <Translation id="page-bug-bounty:page-upgrades-bug-bounty-client-bugs-desc-2" />
                 </Text>
-                <OldHeading
-                  as="h4"
-                  fontWeight="medium"
-                  lineHeight={1.4}
-                  fontSize={{ base: "md", md: "xl" }}
-                >
-                  {t("page-upgrades-bug-bounty-types")}
-                </OldHeading>
+                <H4>{t("page-upgrades-bug-bounty-types")}</H4>
                 <UnorderedList>
                   <ListItem>
                     {t("page-upgrades-bug-bounty-clients-type-1")}
@@ -640,53 +534,32 @@ const BugBountiesPage = () => {
                     {t("page-upgrades-bug-bounty-clients-type-3")}
                   </ListItem>
                 </UnorderedList>
-              </Box>
-              <Box>
-                <OldHeading
-                  as="h4"
-                  fontWeight="medium"
-                  lineHeight={1.4}
-                  fontSize={{ base: "md", md: "xl" }}
-                >
-                  {t("page-upgrades-bug-bounty-help-links")}
-                </OldHeading>
+              </div>
+              <div>
+                <H4>{t("page-upgrades-bug-bounty-help-links")}</H4>
                 <CardList items={clients} />
-              </Box>
+              </div>
             </StyledCard>
             <StyledCard
               emoji=":book:"
               title={t("page-upgrades-bug-bounty-misc-bugs")}
               description={t("page-upgrades-bug-bounty-misc-bugs-desc")}
             >
-              <Box>
+              <div>
                 <Text>{t("page-upgrades-bug-bounty-misc-bugs-desc-2")}</Text>
-              </Box>
-              <Box>
-                <OldHeading
-                  as="h4"
-                  fontWeight="medium"
-                  lineHeight={1.4}
-                  fontSize={{ base: "md", md: "xl" }}
-                >
-                  {t("page-upgrades-bug-bounty-help-links")}
-                </OldHeading>
+              </div>
+              <div>
+                <H4>{t("page-upgrades-bug-bounty-help-links")}</H4>
                 <CardList items={languages} />
-              </Box>
+              </div>
             </StyledCard>
             <StyledCard
               emoji=":scroll:"
               title={t("page-upgrades-bug-bounty-deposit-bugs")}
               description={t("page-upgrades-bug-bounty-deposit-bugs-desc")}
             >
-              <Box>
-                <OldHeading
-                  as="h4"
-                  fontWeight="medium"
-                  lineHeight={1.4}
-                  fontSize={{ base: "md", md: "xl" }}
-                >
-                  {t("page-upgrades-bug-bounty-help-links")}
-                </OldHeading>
+              <div>
+                <H4>{t("page-upgrades-bug-bounty-help-links")}</H4>
                 <InlineLink href="https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/deposit-contract.md">
                   Deposit Contract Specifications
                 </InlineLink>
@@ -694,22 +567,15 @@ const BugBountiesPage = () => {
                 <InlineLink href="https://github.com/ethereum/consensus-specs/blob/dev/solidity_deposit_contract/deposit_contract.sol">
                   Deposit Contract Source Code
                 </InlineLink>
-              </Box>
+              </div>
             </StyledCard>
             <StyledCard
               emoji=":bug:"
               title={t("page-upgrades-bug-bounty-dependency-bugs")}
               description={t("page-upgrades-bug-bounty-dependency-bugs-desc")}
             >
-              <Box>
-                <OldHeading
-                  as="h4"
-                  fontWeight="medium"
-                  lineHeight={1.4}
-                  fontSize={{ base: "md", md: "xl" }}
-                >
-                  {t("page-upgrades-bug-bounty-help-links")}
-                </OldHeading>
+              <div>
+                <H4>{t("page-upgrades-bug-bounty-help-links")}</H4>
                 <InlineLink href="https://github.com/ethereum/c-kzg-4844">
                   C-KZG-4844
                 </InlineLink>
@@ -717,7 +583,7 @@ const BugBountiesPage = () => {
                 <InlineLink href="https://github.com/crate-crypto/go-kzg-4844">
                   Go-KZG-4844
                 </InlineLink>
-              </Box>
+              </div>
             </StyledCard>
           </StyledCardContainer>
           <H2>{t("page-upgrades-bug-bounty-not-included")}</H2>
@@ -736,11 +602,11 @@ const BugBountiesPage = () => {
             </Text>
             <Text>{t("page-upgrades-bug-bounty-points")}</Text>
             <Text>
-              <Text as="b">{t("page-upgrades-bug-bounty-quality")}</Text>
+              <b>{t("page-upgrades-bug-bounty-quality")}</b>
               {t("page-upgrades-bug-bounty-quality-desc")}
             </Text>
             <Text>
-              <Text as="b">{t("page-upgrades-bug-bounty-quality-repro")}</Text>
+              <b>{t("page-upgrades-bug-bounty-quality-repro")}</b>
               {t("page-upgrades-bug-bounty-quality-repro-desc")}
             </Text>
             <Text>
@@ -754,7 +620,7 @@ const BugBountiesPage = () => {
         <Rules>
           <H2>{t("page-upgrades-bug-bounty-hunting")}</H2>
           <Text>
-            <Text as="em">{t("page-upgrades-bug-bounty-hunting-desc")}</Text>
+            <em>{t("page-upgrades-bug-bounty-hunting-desc")}</em>
           </Text>
           <UnorderedList>
             <ListItem>{t("page-upgrades-bug-bounty-hunting-li-1")}</ListItem>
@@ -934,15 +800,17 @@ const BugBountiesPage = () => {
       </Content>
       <Divider />
       <Contact>
-        <Box>
-          <H2>{t("page-upgrades-bug-bounty-questions")}</H2>
-          <Text mb="0rem">
+        <div>
+          <Text className="mb-4 text-xl font-bold">
+            {t("page-upgrades-bug-bounty-questions")}
+          </Text>
+          <Text className="mb-0">
             {t("page-upgrades-bug-bounty-email-us")}{" "}
             <InlineLink href="mailto:bounty@ethereum.org">
               bounty@ethereum.org
             </InlineLink>
           </Text>
-        </Box>
+        </div>
         <Emoji className="text-5xl" text=":email:" />
       </Contact>
       <FeedbackCard />

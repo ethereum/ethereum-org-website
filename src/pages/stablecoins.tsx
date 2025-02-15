@@ -125,7 +125,7 @@ export const getStaticProps = (async ({ locale }) => {
     EURS: { type: FIAT, url: "https://eurs.stasis.net/" },
     USDK: { type: FIAT, url: "https://www.oklink.com/usdk" },
     MUSD: { type: CRYPTO, url: "https://mstable.org/" },
-    USDX: { type: CRYPTO, url: "https://usdx.cash/usdx-stablecoin" },
+    USDX: { type: CRYPTO, url: "https://usdx.money/" },
     GUSD: { type: FIAT, url: "https://gemini.com/dollar" },
     SAI: { type: CRYPTO, url: "https://makerdao.com/en/whitepaper/sai/" },
     DUSD: { type: CRYPTO, url: "https://dusd.finance/" },
@@ -546,7 +546,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
                 <MdHelpOutline className="ms-2 fill-body" size={16} />
               </Tooltip>
             </H3>
-            <InfoBanner emoji="⚠️" isWarning mb="4">
+            <InfoBanner className="mb-4" emoji="⚠️" isWarning>
               {t("page-stablecoins-algorithmic-disclaimer")}
             </InfoBanner>
             <p className="mb-6">
@@ -603,17 +603,6 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
               <H3>{t("page-stablecoins-interest-earning-dapps")}</H3>
               <p className="mb-6">{t("page-stablecoins-saving")}</p>
             </div>
-
-            <Flex className="mx-auto w-full flex-col justify-center rounded-sm border border-border-high-contrast p-8 lg:mx-0">
-              <Emoji className="mb-4 text-[5rem]" text=":bank:" />
-              <p className="mb-6 text-7xl">{t("page-stablecoins-bank-apy")}</p>
-              <em className="mb-6">
-                {t("page-stablecoins-bank-apy-source")}{" "}
-                <InlineLink href="https://www.nytimes.com/2020/09/18/your-money/savings-interest-rates.html">
-                  {t("page-stablecoins-bank-apy-source-link")}
-                </InlineLink>
-              </em>
-            </Flex>
           </Flex>
           <div className="mb-16 grid grid-cols-[repeat(auto-fill,_minmax(min(100%,_280px),_1fr))] gap-8">
             {dapps.map((dapp, idx) => (

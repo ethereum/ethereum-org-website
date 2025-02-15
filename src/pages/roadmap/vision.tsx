@@ -2,17 +2,11 @@ import { GetStaticProps } from "next"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import type { ComponentPropsWithRef } from "react"
-import {
-  Box,
-  Flex,
-  type FlexProps,
-  Heading,
-  type HeadingProps,
-  List,
-  ListItem,
-  useToken,
-} from "@chakra-ui/react"
+import type {
+  ComponentProps,
+  ComponentPropsWithRef,
+  CSSProperties,
+} from "react"
 
 import type { BasePageProps, ChildOnlyProp, Lang } from "@/lib/types"
 
@@ -24,7 +18,6 @@ import FeedbackCard from "@/components/FeedbackCard"
 import InfoBanner from "@/components/InfoBanner"
 import InlineLink from "@/components/Link"
 import MainArticle from "@/components/MainArticle"
-import OldHeading from "@/components/OldHeading"
 import Text from "@/components/OldText"
 import PageHero, {
   type ContentType as PageHeroContent,
@@ -32,80 +25,79 @@ import PageHero, {
 import PageMetadata from "@/components/PageMetadata"
 import Trilemma from "@/components/Trilemma"
 import { Divider } from "@/components/ui/divider"
+import { Flex, type FlexProps, VStack } from "@/components/ui/flex"
+import { List, ListItem } from "@/components/ui/list"
 
+import { cn } from "@/lib/utils/cn"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
+import { screens } from "@/lib/utils/screen"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import oldship from "@/public/images/upgrades/oldship.png"
 
 const Page = (props: ChildOnlyProp) => (
-  <Flex
-    as={MainArticle}
-    direction="column"
-    align="center"
-    w="full"
-    {...props}
-  />
+  <VStack className="w-full gap-0" {...props} asChild>
+    <MainArticle {...props} />
+  </VStack>
 )
 
 const PageContent = (props: ChildOnlyProp) => (
-  <Flex flexDirection="column" gap="8" py={4} px={8} w="full" {...props} />
+  <Flex className="w-full flex-col gap-8 px-8 py-4" {...props} />
 )
 
-const H2 = (props: HeadingProps) => (
-  <Heading
-    as="h2"
-    mb={8}
-    fontSize={{ base: "2xl", md: "2rem" }}
-    fontWeight="semibold"
-    lineHeight={1.4}
+const H2 = ({ className, ...props }: ComponentProps<"h2">) => (
+  <h2
+    className={cn(
+      "mb-8 text-2xl font-semibold leading-[1.4] md:text-[2rem]",
+      className
+    )}
     {...props}
   />
 )
 
-const CenterH2 = (props: HeadingProps) => <H2 textAlign="center" {...props} />
+const CenterH2 = (props: Omit<ComponentProps<"h2">, "className">) => (
+  <H2 className="text-center" {...props} />
+)
 
-const H3 = (props: HeadingProps) => (
-  <OldHeading
-    as="h3"
-    fontSize={{ base: "xl", md: "2xl" }}
-    fontWeight="semibold"
-    lineHeight={1.4}
+const H3 = (props: Omit<ComponentProps<"h3">, "className">) => (
+  <h3
+    className="mb-8 mt-10 text-xl font-semibold leading-[1.4] md:text-2xl"
     {...props}
   />
 )
 
-const CardContainer = (props: FlexProps) => (
-  <Flex wrap="wrap" mx={-4} {...props} />
+const CardContainer = ({ className, ...props }: FlexProps) => (
+  <Flex className={cn("-mx-4 flex-wrap", className)} {...props} />
 )
 
 const ProblemCardContainer = (props: ChildOnlyProp) => {
-  const containerMaxWidth = useToken("breakpoints", ["lg"])
-
-  return <CardContainer maxW={containerMaxWidth} m="0 auto" {...props} />
+  return (
+    <CardContainer
+      style={{ "--container-max-w": screens.lg } as CSSProperties}
+      className="mx-auto max-w-[var(--container-max-w)]"
+      {...props}
+    />
+  )
 }
 
 const CentreCard = (props: ComponentPropsWithRef<typeof Card>) => (
   <Card
-    flex="1 1 30%"
-    minW="240px"
-    m={4}
-    page-upgrades-proof-stake-link
-    p={6}
-    border={0}
-    textAlign="center"
+    className="m-4 min-w-[240px] flex-[1_1_30%] border-0 p-6 text-center"
     {...props}
   />
 )
 
 const CentralContent = (props: ChildOnlyProp) => (
-  <Box my={0} mx={{ base: 0, lg: 48 }} {...props} />
+  <div className="lg:mx-48" {...props} />
 )
 
 const TrilemmaContent = (props: ChildOnlyProp) => (
-  <Box w="full" my={8} mx={0} p={8} background="cardGradient" {...props} />
+  <div
+    className="my-8 w-full bg-gradient-to-r from-accent-a/10 to-accent-c/10 p-8"
+    {...props}
+  />
 )
 
 export const getStaticProps = (async ({ locale }) => {
@@ -168,7 +160,7 @@ const VisionPage = () => {
           <Text>{t("page-roadmap-vision-upgrade-needs-desc")}</Text>
           <Text>{t("page-roadmap-vision-upgrade-needs-desc-2")}</Text>
           <Text>{t("page-roadmap-vision-upgrade-needs-desc-3")} </Text>
-          <List listStyleType="disc">
+          <List className="list-disc">
             <ListItem>
               <InlineLink href="https://members.delphidigital.io/reports/the-hitchhikers-guide-to-ethereum">
                 {t("page-roadmap-vision-2022")}

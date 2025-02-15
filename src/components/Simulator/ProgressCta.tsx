@@ -1,38 +1,38 @@
-import React from "react"
+import React, { type ComponentPropsWithoutRef } from "react"
 import { motion } from "framer-motion"
-import { Button, ButtonProps, Flex, type FlexProps } from "@chakra-ui/react"
+
+import { cn } from "@/lib/utils/cn"
+
+import { Button, type ButtonProps } from "../ui/buttons/Button"
+import { Flex } from "../ui/flex"
 
 import { ClickAnimation } from "./ClickAnimation"
 import { PulseAnimation } from "./PulseAnimation"
 
 const MotionFlex = motion(Flex)
 
-type ProgressCtaProps = FlexProps &
-  Pick<ButtonProps, "isDisabled"> & {
+type ProgressCtaProps = ComponentPropsWithoutRef<typeof MotionFlex> &
+  Pick<ButtonProps, "disabled"> & {
     isAnimated?: boolean
     progressStepper: () => void
   }
 export const ProgressCta = ({
   isAnimated = false,
   progressStepper,
-  isDisabled,
+  disabled,
   children,
+  className,
   ...flexProps
 }: ProgressCtaProps) => (
   <MotionFlex
-    py={10}
-    px={6}
-    position="absolute"
-    w="full"
-    bottom="0"
+    className={cn("absolute bottom-0 w-full px-6 py-10", className)}
     initial={{ opacity: 1 }}
     {...flexProps}
   >
     <Button
-      w="full"
+      className="relative w-full"
       onClick={progressStepper}
-      isDisabled={isDisabled}
-      position="relative"
+      disabled={disabled}
     >
       <>
         {children}

@@ -11,9 +11,8 @@ import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import meetups from "@/data/community-meetups.json"
 
-import Input from "../../tailwind/ui/Input"
-
 import { Flex } from "./ui/flex"
+import Input from "./ui/input"
 import InlineLink, { BaseLink } from "./ui/Link"
 
 export interface Meetup {
