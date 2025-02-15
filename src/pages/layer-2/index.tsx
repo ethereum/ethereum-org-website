@@ -16,6 +16,7 @@ import InlineLink from "@/components/ui/Link"
 import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
+import { networkMaturity } from "@/lib/utils/networkMaturity"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
@@ -24,6 +25,7 @@ import { layer2Data, Rollups } from "@/data/networks/networks"
 import { BASE_TIME_UNIT } from "@/lib/constants"
 
 import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
+import { fetchL2beat } from "@/lib/api/fetchL2beat"
 import HeroImage from "@/public/images/heroes/layer-2-hub-hero.jpg"
 import EthereumLogo from "@/public/images/layer-2/ethereum.png"
 import WalkingImage from "@/public/images/layer-2/layer-2-walking.png"
@@ -34,7 +36,10 @@ import ManDogCardImage from "@/public/images/man-and-dog-playing.png"
 const REVALIDATE_TIME = BASE_TIME_UNIT * 24
 
 const loadData = dataLoader(
-  [["growThePieData", fetchGrowThePie]],
+  [
+    ["growThePieData", fetchGrowThePie],
+    ["l2beatData", fetchL2beat],
+  ],
   REVALIDATE_TIME * 1000
 )
 
@@ -49,14 +54,34 @@ export const getStaticProps = (async ({ locale }) => {
 
   const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
-  const [growThePieData] = await loadData()
+  const [growThePieData, l2beatData] = await loadData()
+
+  const getRandomL2s = () => {
+    let randomL2s = layer2Data.filter(
+      (network) =>
+        networkMaturity(l2beatData.data.projects[network.l2beatID]) === "robust"
+    )
+
+    if (randomL2s.length === 0) {
+      randomL2s = layer2Data.filter(
+        (network) =>
+          networkMaturity(l2beatData.data.projects[network.l2beatID]) ===
+          "maturing"
+      )
+    }
+
+    return randomL2s.sort(() => 0.5 - Math.random()).slice(0, 9)
+  }
 
   const randomL2s = layer2Data.sort(() => 0.5 - Math.random()).slice(0, 9)
+
+  const userRandomL2s = getRandomL2s()
 
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
       randomL2s,
+      userRandomL2s,
       contentNotTranslated,
       lastDeployLocaleTimestamp,
       locale,
@@ -67,10 +92,12 @@ export const getStaticProps = (async ({ locale }) => {
 
 const Layer2Hub = ({
   randomL2s,
+  userRandomL2s,
   growThePieData,
   locale,
 }: {
   randomL2s: Rollups
+  userRandomL2s: Rollups
   growThePieData: GrowThePieData
   locale: Lang
 }) => {
@@ -390,7 +417,7 @@ const Layer2Hub = ({
       <div id="layer-2-cta" className="w-full px-8 py-9">
         <div className="mx-auto flex max-w-[640px] flex-col gap-6 rounded bg-main-gradient p-8">
           <div className="flex flex-col gap-6">
-            {randomL2s.slice(0, 3).map((l2, idx) => {
+            {userRandomL2s.slice(0, 3).map((l2, idx) => {
               return (
                 <div
                   key={idx}
