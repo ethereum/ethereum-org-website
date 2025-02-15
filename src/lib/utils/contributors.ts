@@ -1,6 +1,6 @@
 import { join } from "path"
 
-import type { CommitHistory, FileContributor, Lang, Layout } from "@/lib/types"
+import type { CommitHistory, FileContributor, Lang } from "@/lib/types"
 
 import { DEFAULT_LOCALE } from "@/lib/constants"
 
@@ -18,7 +18,6 @@ export const getFileContributorInfo = async (
   slug: string,
   locale: string,
   fileLang: string,
-  layout: Layout,
   cache: CommitHistory
 ) => {
   const gitContributors = await fetchAndCacheGitContributors(
@@ -30,11 +29,9 @@ export const getFileContributorInfo = async (
   const gitHubLastEdit = gitContributors[0]?.date
   const lastUpdatedDate = gitHubLastEdit || latestCommitDate
 
-  const crowdinContributors = ["docs", "tutorial"].includes(layout)
-    ? convertToFileContributorFromCrowdin(
-        getCrowdinContributors(mdPath, locale as Lang)
-      )
-    : []
+  const crowdinContributors = convertToFileContributorFromCrowdin(
+    getCrowdinContributors(mdPath, locale as Lang)
+  )
 
   const useGitHubContributors: boolean =
     fileLang === DEFAULT_LOCALE || crowdinContributors.length === 0
