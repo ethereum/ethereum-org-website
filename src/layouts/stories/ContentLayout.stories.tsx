@@ -60,6 +60,11 @@ export const ContentLayout: StoryObj<typeof meta> = {
       ],
     },
     maxDepth: 2,
+    contributors: [
+      { login: "github", avatar_url: "/", html_url: "https://github.com" },
+      { login: "crowdin", avatar_url: "/", html_url: "https://crowdin.com" },
+    ],
+    lastEditLocaleTimestamp: "MM DD, YY",
     heroSection: (
       <Center h="400px" border="2px dashed" borderColor="primary.base">
         Hero section
