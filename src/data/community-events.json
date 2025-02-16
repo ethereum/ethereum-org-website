@@ -1228,12 +1228,12 @@
     "imageUrl": ""
   },
   {
-   "title": "ETHDubai",
-   "to": "https://www.ethdubaiconf.org/",
-   "location": "Dubai, UAE",
-   "description": "The Ethereum dev conference and hackathon in Dubai on everything DeFi, privacy, L2s, AVS, AI Agents, intents, Account Abstraction and more with a focus on decentralization and community projects. ETHDubai also organizes a Demo Pitch Day with VCs.",
-   "startDate": "2025-04-28",
-   "endDate": "2025-04-29"
+    "title": "ETHDubai",
+    "to": "https://www.ethdubaiconf.org/",
+    "location": "Dubai, UAE",
+    "description": "The Ethereum dev conference and hackathon in Dubai on everything DeFi, privacy, L2s, AVS, AI Agents, intents, Account Abstraction and more with a focus on decentralization and community projects. ETHDubai also organizes a Demo Pitch Day with VCs.",
+    "startDate": "2025-04-28",
+    "endDate": "2025-04-29"
   },
   {
     "title": "Staking Summit*",
