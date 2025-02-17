@@ -152,6 +152,6 @@ Web3 не мае жорсткага вызначэння. Розныя ўдзе�
 - [Чаму Web3 — гэта важна](https://future.a16z.com/why-web3-matters/) — _Крыс Дыксан_
 - [Чаму дэцэнтралізацыя з'яўляецца важнай](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) — _Крыс Дыксан_
 - [Пейзаж Web3](https://a16z.com/wp-content/uploads/2021/10/The-web3-Readlng-List.pdf) — _a16z_
-- [Дэбаты Web3](https://www.notboring.co/p/the-web3-debate?s=r) — _Пэкі Маккормік_
+- [Дэбаты Web3](https://www.notboring.co/p/the-web3-debate) — _Пэкі Маккормік_
 
 <QuizWidget quizKey="web3" />

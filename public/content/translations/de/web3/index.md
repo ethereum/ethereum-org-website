@@ -152,6 +152,6 @@ Web3 ist nicht starr definiert. Zahlreiche Community-Teilnehmer haben unterschie
 - [Warum Web3 wichtig ist](https://future.a16z.com/why-web3-matters/) – _Chris Dixon_
 - [Warum Dezentralisierung wichtig ist](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) – _Chris Dixon_
 - [Die Web3-Landschaft](https://a16z.com/wp-content/uploads/2021/10/The-web3-Readlng-List.pdf) – _a16z_
-- [Die Web3-Debatte](https://www.notboring.co/p/the-web3-debate?s=r) – _Packy McCormick_
+- [Die Web3-Debatte](https://www.notboring.co/p/the-web3-debate) – _Packy McCormick_
 
 <QuizWidget quizKey="web3" />

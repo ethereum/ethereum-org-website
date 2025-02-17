@@ -152,6 +152,6 @@ Ethereum.org는 중요한 이더리움 콘텐츠를 가능한 많은 언어로 �
 - [웹3가 중요한 이유](https://future.a16z.com/why-web3-matters/) — _Chris Dixon_
 - [탈중앙화가 중요한 이유](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) - _Chris Dixon_
 - [웹3의 전망](https://a16z.com/wp-content/uploads/2021/10/The-web3-Readlng-List.pdf) – _a16z_
-- [웹3에 대해 토론하기](https://www.notboring.co/p/the-web3-debate?s=r) – _Packy McCormick_
+- [웹3에 대해 토론하기](https://www.notboring.co/p/the-web3-debate) – _Packy McCormick_
 
 <QuizWidget quizKey="web3" />

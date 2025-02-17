@@ -152,6 +152,6 @@ Web3 tidak ditakrifkan secara tegar. Pelbagai peserta komuniti mempunyai perspek
 - [Kepentingan Web3](https://future.a16z.com/why-web3-matters/) — _Chris Dixon_
 - [Kepentingan Keteragihan](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) - _Chris Dixon_
 - [Lanskap Web3](https://a16z.com/wp-content/uploads/2021/10/The-web3-Readlng-List.pdf) – *a16z*
-- [Debat Web3](https://www.notboring.co/p/the-web3-debate?s=r) – _Packy McCormick_
+- [Debat Web3](https://www.notboring.co/p/the-web3-debate) – _Packy McCormick_
 
 <QuizWidget quizKey="web3" />

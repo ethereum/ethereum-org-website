@@ -152,6 +152,6 @@ Walang malinaw na pagpapakahulugan sa Web3. May iba't ibang pananaw dito ang iba
 - [Bakit Mahalaga ang Web3](https://future.a16z.com/why-web3-matters/) — _Chris Dixon_
 - [Bakit Mahalaga ang Decentralization](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) - _Chris Dixon_
 - [Ang Web3 Landscape](https://a16z.com/wp-content/uploads/2021/10/The-web3-Readlng-List.pdf) – _a16z_
-- [Ang Debate tungkol sa Web3](https://www.notboring.co/p/the-web3-debate?s=r) – _Packy McCormick_
+- [Ang Debate tungkol sa Web3](https://www.notboring.co/p/the-web3-debate) – _Packy McCormick_
 
 <QuizWidget quizKey="web3" />

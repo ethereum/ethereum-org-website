@@ -176,6 +176,6 @@ Web3 is niet strikt gedefinieerd. Verschillende community-deelnemers hebben er v
 - [Why Web3 Matters](https://future.a16z.com/why-web3-matters/) — _Chris Dixon_
 - [Why Decentralization Matters](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) - _Chris Dixon_
 - [The Web3 Landscape](https://a16z.com/wp-content/uploads/2021/10/The-web3-Readlng-List.pdf) – _a16z_
-- [The Web3 Debate](https://www.notboring.co/p/the-web3-debate?s=r) – _Packy McCormick_
+- [The Web3 Debate](https://www.notboring.co/p/the-web3-debate) – _Packy McCormick_
 
 <QuizWidget quizKey="web3" />

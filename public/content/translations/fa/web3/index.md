@@ -152,6 +152,6 @@ Web3 تعریف سفت و محکمی ندارد. شرکت‌کنندگان مخ�
 - [چرا وب 3 مهم است](https://future.a16z.com/why-web3-matters/) – _کریس دیکسون_
 - [چرا تمرکززدایی مهم است](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) - _کریس دیکسون_
 - [فضای وب 3](https://a16z.com/wp-content/uploads/2021/10/The-web3-Readlng-List.pdf) – _a16z_
-- [بحث وب ۳](https://www.notboring.co/p/the-web3-debate?s=r) - _پکی مک‌کورمیک_
+- [بحث وب ۳](https://www.notboring.co/p/the-web3-debate) - _پکی مک‌کورمیک_
 
 <QuizWidget quizKey="web3" />

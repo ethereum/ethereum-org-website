@@ -152,6 +152,6 @@ Web3 కఠినంగా నిర్వచించబడలేదు. వి
 - [Web3 ఎందుకు ముఖ్యమైనది](https://future.a16z.com/why-web3-matters/) — _క్రిస్ డిక్సన్_
 - [వికేంద్రీకరణ ఎందుకు ముఖ్యమైనది](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) - _క్రిస్ డిక్సన్_
 - [Web3 ల్యాండ్‌స్కేప్](https://a16z.com/wp-content/uploads/2021/10/The-web3-Readlng-List.pdf) – _a16z_
-- [Web3 డిబేట్](https://www.notboring.co/p/the-web3-debate?s=r) – _ప్యాకీ మెక్‌కార్మిక్_
+- [Web3 డిబేట్](https://www.notboring.co/p/the-web3-debate) – _ప్యాకీ మెక్‌కార్మిక్_
 
 <QuizWidget quizKey="web3" />

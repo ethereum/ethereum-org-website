@@ -152,6 +152,6 @@ Web3 — это молодая и развивающаяся экосистем�
 - [Почему Web3 — это важно](https://future.a16z.com/why-web3-matters/) — _Chris Dixon_
 - [Почему важна децентрализация](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) — _Chris Dixon_
 - [Ландшафт Web3](https://a16z.com/wp-content/uploads/2021/10/The-web3-Readlng-List.pdf) — _a16z_
-- [Дебаты о Web3](https://www.notboring.co/p/the-web3-debate?s=r) — _Packy McCormick_
+- [Дебаты о Web3](https://www.notboring.co/p/the-web3-debate) — _Packy McCormick_
 
 <QuizWidget quizKey="web3" />

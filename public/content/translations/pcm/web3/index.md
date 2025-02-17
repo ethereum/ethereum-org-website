@@ -152,6 +152,6 @@ Dem nor rily define Web3. Difrent pipol wey dey patisipate in Web3 get difrent o
 - [Why We3 Matta](https://future.a16z.com/why-web3-matters/) — _Chris Dixon_
 - [Why disentralizashon matta](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) - _Chris Dixon_
 - [Di Web3 landscape](https://a16z.com/wp-content/uploads/2021/10/The-web3-Readlng-List.pdf) – _a16z_
-- [Di Web3 Debate](https://www.notboring.co/p/the-web3-debate?s=r) – _Packy McCormick_
+- [Di Web3 Debate](https://www.notboring.co/p/the-web3-debate) – _Packy McCormick_
 
 <QuizWidget quizKey="web3" />

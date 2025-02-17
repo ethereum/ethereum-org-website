@@ -152,6 +152,6 @@ Web3 rijit bir şekilde tanımlanmamıştır. Çeşitli topluluk katılımcılar
 - [Web3 Neden Önemli?](https://future.a16z.com/why-web3-matters/)—_Chris Dixon_
 - [Merkeziyetsizlik Neden Önemli?](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) - _Chris Dixon_
 - [Web3 Manzarası](https://a16z.com/wp-content/uploads/2021/10/The-web3-Readlng-List.pdf) – _a16z_
-- [Web3 Tartışması](https://www.notboring.co/p/the-web3-debate?s=r) – _Packy McCormick_
+- [Web3 Tartışması](https://www.notboring.co/p/the-web3-debate) – _Packy McCormick_
 
 <QuizWidget quizKey="web3" />

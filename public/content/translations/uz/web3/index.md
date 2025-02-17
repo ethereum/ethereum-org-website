@@ -152,6 +152,6 @@ Web3 qat’iy belgilangan emas. Jamiyatning turli ishtirokchilari bu borada turl
 - [Nega Web3 muhim](https://future.a16z.com/why-web3-matters/) — _Kris Dixon_
 - [Markazlashtirmaslik nima uchun muhim](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) — _Kris Dixon_
 - [Web3 manzarasi](https://a16z.com/wp-content/uploads/2021/10/The-web3-Readlng-List.pdf) — _a16z_
-- [Web3 bahsi](https://www.notboring.co/p/the-web3-debate?s=r) — _Pakki MakKormik_
+- [Web3 bahsi](https://www.notboring.co/p/the-web3-debate) — _Pakki MakKormik_
 
 <QuizWidget quizKey="web3" />

@@ -152,6 +152,6 @@ Ba'a bayyana Web3 sosai ba. Mahalartar al'umma daban-daban suna da hangen nesa d
 - [Me yasa ake batun Web3](https://future.a16z.com/why-Web3-matters/) - _Chris Dixon_
 - [Me yasa ake Batun Karkatattun](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) - _Chris Dixon_
 - [Iyakokin Web3](https://a16z.com/wp-content/uploads/2021/10/The-Web3-Readlng-List.pdf) – _a16z_
-- [Muhawarar Web3](https://www.notboring.co/p/the-Web3-debate?s=r) – _Packy McCormick_
+- [Muhawarar Web3](https://www.notboring.co/p/the-web3-debate) – _Packy McCormick_
 
 <QuizWidget quizKey="web3" />
