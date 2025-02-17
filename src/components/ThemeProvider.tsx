@@ -3,6 +3,8 @@ import type { ThemeProviderProps } from "next-themes/dist/types"
 
 import { COLOR_MODE_STORAGE_KEY } from "@/lib/constants"
 
+import { useLocaleDirection } from "@/hooks/useLocaleDirection"
+
 /**
  * Primary theming wrapper for use with color mode. Uses the theme provider
  * from `next-themes`.
@@ -11,6 +13,8 @@ import { COLOR_MODE_STORAGE_KEY } from "@/lib/constants"
  * primary decorator to Storybook.
  */
 const ThemeProvider = ({ children }: Pick<ThemeProviderProps, "children">) => {
+  useLocaleDirection()
+
   return (
     <NextThemesProvider
       attribute="data-theme"
