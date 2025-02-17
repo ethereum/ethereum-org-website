@@ -6,7 +6,8 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 
 import type { BasePageProps, ChildOnlyProp, Lang } from "@/lib/types"
 
-import BugBountyBanner from "@/components/Banners/BugBountyBanner"
+/* Uncomment for Bug Bounty Banner: */
+/* import BugBountyBanner from "@/components/Banners/BugBountyBanner" */
 import Breadcrumbs from "@/components/Breadcrumbs"
 import BugBountyCards from "@/components/BugBountyCards"
 import Card from "@/components/Card"
@@ -14,7 +15,7 @@ import CardList from "@/components/CardList"
 import Emoji from "@/components/Emoji"
 import ExpandableCard from "@/components/ExpandableCard"
 import FeedbackCard from "@/components/FeedbackCard"
-import { type ImageProps, TwImage } from "@/components/Image"
+import { Image, type ImageProps } from "@/components/Image"
 import Leaderboard from "@/components/Leaderboard"
 import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
@@ -38,6 +39,7 @@ import useColorModeValue from "@/hooks/useColorModeValue"
 import besu from "@/public/images/upgrades/besu.png"
 import erigon from "@/public/images/upgrades/erigon.png"
 import geth from "@/public/images/upgrades/geth.png"
+import grandine from "@/public/images/upgrades/grandine.png"
 import lighthouseDark from "@/public/images/upgrades/lighthouse-dark.png"
 import lighthouseLight from "@/public/images/upgrades/lighthouse-light.png"
 import lodestar from "@/public/images/upgrades/lodestar.png"
@@ -333,6 +335,11 @@ const BugBountiesPage = () => {
       link: "https://pegasys.tech/teku",
       image: useColorModeValue(tekuDark, tekuLight),
     },
+    {
+      title: "Grandine",
+      link: "https://grandine.io/",
+      image: grandine,
+    },
   ]
 
   const specs: Spec[] = [
@@ -376,8 +383,8 @@ const BugBountiesPage = () => {
         title={t("page-upgrades-bug-bounty-meta-title")}
         description={t("page-upgrades-bug-bounty-meta-description")}
       />
-      {/* TODO: Remove on the 25th of January */}
-      <BugBountyBanner />
+      {/* Uncomment for Bug Bounty Banner: */}
+      {/* <BugBountyBanner /> */}
       <Content>
         <HeroCard>
           <HeroContainer>
@@ -410,44 +417,47 @@ const BugBountiesPage = () => {
       <ClientIntro>{t("page-upgrades-bug-bounty-clients")}</ClientIntro>
       <ClientRow>
         <Client>
-          <TwImage src={besu} alt="" {...iconImageProps} />
+          <Image src={besu} alt="" {...iconImageProps} />
         </Client>
         <Client>
-          <TwImage src={erigon} alt="" {...iconImageProps} />
+          <Image src={erigon} alt="" {...iconImageProps} />
         </Client>
         <Client>
-          <TwImage src={geth} alt="" {...iconImageProps} />
+          <Image src={geth} alt="" {...iconImageProps} />
         </Client>
         <Client>
-          <TwImage src={nethermind} alt="" {...iconImageProps} />
+          <Image src={nethermind} alt="" {...iconImageProps} />
         </Client>
         <Client>
-          <TwImage src={reth} alt="" {...iconImageProps} />
+          <Image src={reth} alt="" {...iconImageProps} />
         </Client>
       </ClientRow>
       <ClientRow>
         <Client>
-          <TwImage
+          <Image
             src={useColorModeValue(lighthouseLight, lighthouseDark)}
             alt=""
             {...iconImageProps}
           />
         </Client>
         <Client>
-          <TwImage src={lodestar} alt="" {...iconImageProps} />
+          <Image src={lodestar} alt="" {...iconImageProps} />
         </Client>
         <Client>
-          <TwImage src={nimbus} alt="" {...iconImageProps} />
+          <Image src={nimbus} alt="" {...iconImageProps} />
         </Client>
         <Client>
-          <TwImage src={prysm} alt="" {...iconImageProps} />
+          <Image src={prysm} alt="" {...iconImageProps} />
         </Client>
         <Client>
-          <TwImage
+          <Image
             src={useColorModeValue(tekuDark, tekuLight)}
             alt=""
             {...iconImageProps}
           />
+        </Client>
+        <Client>
+          <Image src={grandine} alt="" {...iconImageProps} />
         </Client>
       </ClientRow>
       <StyledGrayContainer id="rules">

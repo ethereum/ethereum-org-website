@@ -12,7 +12,7 @@ import Card from "@/components/Card"
 import FeedbackCard from "@/components/FeedbackCard"
 import { HubHero } from "@/components/Hero"
 import type { HubHeroProps } from "@/components/Hero/HubHero"
-import { TwImage } from "@/components/Image"
+import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
 import { ButtonLink, ButtonLinkProps } from "@/components/ui/buttons/Button"
@@ -222,7 +222,7 @@ const CommunityPage = () => {
               </Subtitle>
             </div>
             <ImageContainer>
-              <TwImage
+              <Image
                 className="-my-4 object-cover"
                 src={developersEthBlockImg}
                 alt={t("page-community-get-involved-image-alt")}
@@ -264,7 +264,7 @@ const CommunityPage = () => {
             </ButtonRow>
           </FeatureContent>
           <ImageContainer>
-            <TwImage
+            <Image
               className="object-cover"
               src={whatIsEthereumImg}
               alt={t("page-community-open-source-image-alt")}
@@ -293,7 +293,7 @@ const CommunityPage = () => {
             </Flex>
           </FeatureContent>
           <ImageContainer>
-            <TwImage
+            <Image
               className="object-cover"
               src={financeTransparentImg}
               alt={t("page-index-internet-image-alt")}
@@ -313,7 +313,7 @@ const CommunityPage = () => {
             </div>
           </FeatureContent>
           <ImageContainer>
-            <TwImage
+            <Image
               className="object-cover"
               src={hackathonTransparentImg}
               alt={t("page-community-support-alt")}

@@ -1,6 +1,6 @@
 import type { ReactNode } from "react"
 
-import { type ImageProps, TwImage } from "@/components/Image"
+import { Image, type ImageProps } from "@/components/Image"
 
 import { cn } from "@/lib/utils/cn"
 import { type MatomoEventOptions } from "@/lib/utils/matomo"
@@ -131,7 +131,7 @@ const PageHero = ({
           "w-full self-center"
         )}
       >
-        <TwImage
+        <Image
           src={image}
           // TODO: adjust value when the old theme breakpoints are removed (src/theme.ts)
           sizes="(max-width: 992px) 100vw, 624px"

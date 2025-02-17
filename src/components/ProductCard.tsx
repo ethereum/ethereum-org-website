@@ -8,7 +8,7 @@ import { ButtonLink } from "./ui/buttons/Button"
 import { Center, Flex, HStack } from "./ui/flex"
 import { Tag } from "./ui/tag"
 import GitStars from "./GitStars"
-import { TwImage } from "./Image"
+import { Image } from "./Image"
 
 type SubjectBadgeProps = {
   subject: string
@@ -87,7 +87,7 @@ const ProductCard = ({
       )}
     >
       <Center className="min-h-[200px]" style={{ backgroundColor: bgProp }}>
-        <TwImage src={image} alt={alt} height="100" className="self-center" />
+        <Image src={image} alt={alt} height="100" className="self-center" />
       </Center>
       <Flex className="h-full flex-col p-6 text-left">
         {githubRepoStars > 0 && (
