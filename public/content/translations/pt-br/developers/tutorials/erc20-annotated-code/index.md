@@ -216,7 +216,7 @@ Este comentário explica o propósito do contrato.
 /**
  * @dev Implementation of the {IERC20} interface.
  *
- * This implementation is agnostic to the way tokens are created. Isto significa 
+ * This implementation is agnostic to the way tokens are created. Isto significa
 * que um mecanismo de oferta deve ser adicionado em um contrato derivado usando {_mint}.
  * For a generic mechanism see {ERC20PresetMinterPauser}.
  *
@@ -262,7 +262,7 @@ Essa linha anexa a biblioteca `SafeMath` ao tipo `uint256`. Você pode encontrar
 
 Essas definições especificam as variáveis de estado do contrato. Existem variáveis declaradas como `private`, mas isso apenas significa que outros contratos na blockchain não as podem ler. _Não há segredos na blockchain_, o software em cada nó possui o estado de cada contrato em cada bloco. Por convenção, as variáveis de estado são denominadas `_<something>`.
 
-As duas primeiras variáveis são [mapeamentos](https://www.tutorialspoint.com/solidity/solidity_mappings.html), ou seja, se comportam mais ou menos da mesma forma que [matrizes associativas](https://wikipedia.org/wiki/Associative_array), com exceção das chaves, que são valores numéricos. O armazenamento é alocado apenas para as entradas que possuem valores diferentes do padrão (zero).
+As duas primeiras variáveis são [mapeamentos](https://www.tutorialspoint.com/solidity/solidity_mappings.htm), ou seja, se comportam mais ou menos da mesma forma que [matrizes associativas](https://wikipedia.org/wiki/Associative_array), com exceção das chaves, que são valores numéricos. O armazenamento é alocado apenas para as entradas que possuem valores diferentes do padrão (zero).
 
 ```solidity
     mapping (address => uint256) private _balances;
