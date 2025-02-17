@@ -70,8 +70,8 @@ export const getContentBySlug = (slug: string) => {
     }
   }
 
-  const currentDir = getContentRoot()
-  let fullPath = toPosixPath(join(currentDir, realSlug))
+  const contentRoot = getContentRoot()
+  let fullPath = toPosixPath(join(contentRoot, realSlug))
   let contentNotTranslated = false
 
   // If content is not translated, use english content fallback
@@ -107,9 +107,9 @@ export const getContent = (dir: string) => {
 }
 
 export const getTutorialsData = (locale: string): ITutorial[] => {
-  const currentDir = getContentRoot()
+  const contentRoot = getContentRoot()
   const fullPath = join(
-    currentDir,
+    contentRoot,
     locale !== "en" ? `translations/${locale!}` : "",
     "developers/tutorials"
   )
@@ -120,7 +120,7 @@ export const getTutorialsData = (locale: string): ITutorial[] => {
 
     tutorialData = languageTutorialFiles.map((dir) => {
       const filePath = join(
-        currentDir,
+        contentRoot,
         locale !== "en" ? `translations/${locale!}` : "",
         "developers/tutorials",
         dir,
