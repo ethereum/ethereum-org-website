@@ -138,7 +138,7 @@
     "prettier-plugin-tailwindcss": "^0.6.5",
     "raw-loader": "^4.0.2",
     "storybook": "8.1.10",
-    "storybook-react-i18next": "3.1.1",
+    "storybook-next-intl": "^1.2.5",
     "tailwindcss": "^3.4.4",
     "ts-node": "^10.9.1",
     "tsconfig-paths-webpack-plugin": "4.1.0",

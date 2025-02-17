@@ -1,7 +1,6 @@
+import { useTranslations } from "next-intl"
 import type { Meta, StoryObj } from "@storybook/react"
 import { expect, userEvent, waitFor, within } from "@storybook/test"
-
-import { getTranslation } from "@/storybook-utils"
 
 import { StandaloneQuizWidget } from "../QuizWidget"
 
@@ -28,8 +27,10 @@ type Story = StoryObj<typeof meta>
 
 export const AllCorrectQuestions: Story = {
   play: async ({ canvasElement, step, args }) => {
-    const translatedQuizKey = getTranslation(args.quizKey, "common")
-    const translatedPassedQuiz = getTranslation("passed", "learn-quizzes")
+    const t = useTranslations()
+
+    const translatedQuizKey = t(`common.${args.quizKey}`)
+    const translatedPassedQuiz = t("learn-quizzes.passed")
 
     const canvas = within(canvasElement)
 
