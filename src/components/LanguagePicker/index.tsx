@@ -1,7 +1,5 @@
 import { useParams } from "next/navigation"
 
-import { BaseLink } from "@/components/Link"
-
 import { cn } from "@/lib/utils/cn"
 
 import {
@@ -12,6 +10,7 @@ import {
   CommandList,
 } from "../ui/command"
 import { Dialog, DialogContent, DialogTrigger } from "../ui/dialog"
+import { BaseLink } from "../ui/Link"
 import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover"
 
 import MenuItem from "./MenuItem"

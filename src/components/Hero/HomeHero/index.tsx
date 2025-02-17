@@ -1,6 +1,6 @@
 import type { ClassNameProp, CommonHeroProps } from "@/lib/types"
 
-import { TwImage } from "@/components/Image"
+import { Image } from "@/components/Image"
 import Morpher from "@/components/Morpher"
 
 import useTranslation from "@/hooks/useTranslation"
@@ -13,7 +13,7 @@ const HomeHero = ({ heroImg, className }: HomeHeroProps) => {
   return (
     <div className={className}>
       <div className="h-[240px] md:h-[380px] lg:h-[480px]">
-        <TwImage
+        <Image
           src={heroImg}
           alt={t("page-index:page-index-hero-image-alt")}
           // TODO: adjust value when the old theme breakpoints are removed (src/theme.ts)

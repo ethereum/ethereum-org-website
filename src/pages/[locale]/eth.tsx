@@ -11,7 +11,7 @@ import EthPriceCard from "@/components/EthPriceCard"
 import EthVideo from "@/components/EthVideo"
 import FeedbackCard from "@/components/FeedbackCard"
 import HorizontalCard from "@/components/HorizontalCard"
-import { TwImage } from "@/components/Image"
+import { Image } from "@/components/Image"
 import InfoBanner from "@/components/InfoBanner"
 import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
@@ -319,7 +319,7 @@ const EthPage = () => {
             </ButtonLink>
           </Header>
           <Hero>
-            <TwImage
+            <Image
               src={eth}
               // TODO: adjust value when the old theme breakpoints are removed (src/theme.ts)
               sizes="(max-width: 768px) 100vw, 800px"

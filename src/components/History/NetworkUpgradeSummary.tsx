@@ -9,7 +9,7 @@ import { getLocaleForNumberFormat } from "@/lib/utils/translations"
 
 import NetworkUpgradeSummaryData from "../../data/NetworkUpgradeSummaryData"
 import Emoji from "../Emoji"
-import InlineLink from "../Link"
+import InlineLink from "../ui/Link"
 
 import { useTranslation } from "@/hooks/useTranslation"
 

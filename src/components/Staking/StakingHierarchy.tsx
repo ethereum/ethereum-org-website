@@ -6,7 +6,6 @@ import { ChildOnlyProp } from "@/lib/types"
 import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
-import { ButtonLink } from "../Buttons"
 import {
   StakingGlyphCentralizedIcon,
   StakingGlyphCloudIcon,
@@ -15,6 +14,7 @@ import {
   StakingGlyphTokenWalletIcon,
 } from "../icons/staking"
 import Translation from "../Translation"
+import { ButtonLink } from "../ui/buttons/Button"
 import { Center, Flex, VStack } from "../ui/flex"
 
 import { useTranslation } from "@/hooks/useTranslation"
@@ -135,7 +135,7 @@ const StakingHierarchy = () => {
                   eventName: "clicked solo staking",
                 })
               }}
-              width={{ base: "100%", md: "auto" }}
+              className="max-md:w-full"
             >
               {t("page-staking-more-on-solo")}
             </ButtonLink>
@@ -171,7 +171,7 @@ const StakingHierarchy = () => {
                   eventName: "clicked staking as a service",
                 })
               }}
-              width={{ base: "100%", md: "auto" }}
+              className="max-md:w-full"
             >
               {t("page-staking-more-on-saas")}
             </ButtonLink>
@@ -219,7 +219,7 @@ const StakingHierarchy = () => {
                   eventName: "clicked pooled staking",
                 })
               }}
-              width={{ base: "100%", md: "auto" }}
+              className="max-md:w-full"
             >
               {t("page-staking-more-on-pools")}
             </ButtonLink>

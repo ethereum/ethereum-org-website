@@ -10,7 +10,7 @@ import { Flex } from "@/components/ui/flex"
 import { cn } from "@/lib/utils/cn"
 
 import Emoji from "./Emoji"
-import { TwImage } from "./Image"
+import { Image } from "./Image"
 
 import { useTranslation } from "@/hooks/useTranslation"
 
@@ -141,7 +141,7 @@ const TranslationLeaderboard = ({
                   </div>
                   <Flex className="me-8 flex-row items-center break-words">
                     <div className="relative me-4 hidden h-[30px] w-[30px] sm:block sm:h-10 sm:w-10">
-                      <TwImage
+                      <Image
                         fill
                         className="rounded-full object-cover"
                         src={avatarUrl}

@@ -8,7 +8,7 @@ import Card, { CardProps } from "@/components/Card"
 import FeedbackCard from "@/components/FeedbackCard"
 import Heading from "@/components/Heading"
 import HubHero from "@/components/Hero/HubHero"
-import { TwImage } from "@/components/Image"
+import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
 import Translation from "@/components/Translation"
@@ -114,7 +114,7 @@ const SpeedRunEthereumBanner = ({
   linkLabel: string
 }) => (
   <div className="relative xl:mb-12">
-    <TwImage
+    <Image
       className="h-[450px] xl:h-auto"
       src={SpeedRunEthereumImage}
       alt="SpeedRunEthereum banner"
@@ -343,7 +343,7 @@ const DevelopersPage = () => {
             <Text>
               <Translation id="page-developers-index:page-developers-language-desc" />
             </Text>
-            <TwImage
+            <Image
               className="mt-16 hidden max-w-[400px] lg:block"
               src={DogeImage}
               alt={t("page-assets-doge")}

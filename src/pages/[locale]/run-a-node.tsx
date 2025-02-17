@@ -19,7 +19,7 @@ import {
   SovereigntyGlyphIcon,
   VoteGlyphIcon,
 } from "@/components/icons/run-a-node"
-import { TwImage } from "@/components/Image"
+import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import PageHero from "@/components/PageHero"
 import PageMetadata from "@/components/PageMetadata"
@@ -356,7 +356,7 @@ const RunANodePage = () => {
             <Text>{t("page-run-a-node-what-3-text")}</Text>
           </Width60>
           <Width40>
-            <TwImage
+            <Image
               src={hackathon}
               alt=""
               sizes="624px"
@@ -374,7 +374,7 @@ const RunANodePage = () => {
           )}
         >
           <Stack className="flex-col items-center justify-between gap-8 md:flex-row md:gap-12">
-            <TwImage
+            <Image
               src={impact}
               alt=""
               sizes="300px"
@@ -708,7 +708,7 @@ const RunANodePage = () => {
             </ButtonContainer>
           </Column>
           <Column>
-            <TwImage
+            <Image
               src={community}
               alt=""
               sizes="624px"
@@ -745,7 +745,7 @@ const RunANodePage = () => {
 
       <StakingCalloutContainer>
         <Column>
-          <TwImage
+          <Image
             className="-translate-y-12 -scale-x-100 transform lg:-translate-x-8 lg:translate-y-0 lg:scale-[115%] lg:-scale-x-[115%]"
             src={leslie}
             alt=""

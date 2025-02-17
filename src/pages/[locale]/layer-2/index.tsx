@@ -6,7 +6,7 @@ import Callout from "@/components/Callout"
 import Card from "@/components/Card"
 import ExpandableCard from "@/components/ExpandableCard"
 import HubHero, { HubHeroProps } from "@/components/Hero/HubHero"
-import { TwImage } from "@/components/Image"
+import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
 import { ButtonLink } from "@/components/ui/buttons/Button"
@@ -172,7 +172,7 @@ const Layer2Hub = ({
             </p>
           </div>
           <div className="flex flex-1">
-            <TwImage
+            <Image
               src={ManDogCardImage}
               alt="Man and dog playing"
               style={{
@@ -245,7 +245,7 @@ const Layer2Hub = ({
             <div className="absolute inset-0 animate-spin-30 rounded-full">
               {/* Top logo */}
               <div className="absolute -top-[12px] left-1/2 h-6 w-6 -translate-x-1/2 -translate-y-1/2 transform animate-counter-spin-30 rounded-full bg-primary">
-                <TwImage
+                <Image
                   className="rounded-full"
                   src={randomL2s[0].logo}
                   alt={randomL2s[0].name}
@@ -255,7 +255,7 @@ const Layer2Hub = ({
               </div>
               {/* Bottom right logo */}
               <div className="absolute bottom-[17%] right-[8%] h-6 w-6 -translate-x-1/2 -translate-y-1/2 transform animate-counter-spin-30 rounded-full">
-                <TwImage
+                <Image
                   className="rounded-full"
                   src={randomL2s[1].logo}
                   alt={randomL2s[1].name}
@@ -265,7 +265,7 @@ const Layer2Hub = ({
               </div>
               {/* Bottom left logo */}
               <div className="absolute bottom-[17%] left-[8%] h-6 w-6 -translate-x-1/2 -translate-y-1/2 transform animate-counter-spin-30 rounded-full">
-                <TwImage
+                <Image
                   className="rounded-full"
                   src={randomL2s[2].logo}
                   alt={randomL2s[2].name}
@@ -280,7 +280,7 @@ const Layer2Hub = ({
             <div className="absolute inset-[30px] animate-spin-21 rounded-full sm:inset-[54px]">
               {/* Top logo */}
               <div className="absolute -top-[12px] left-1/2 h-6 w-6 -translate-x-1/2 -translate-y-1/2 transform animate-counter-spin-21 rounded-full">
-                <TwImage
+                <Image
                   className="rounded-full"
                   src={randomL2s[3].logo}
                   alt={randomL2s[3].name}
@@ -290,7 +290,7 @@ const Layer2Hub = ({
               </div>
               {/* Bottom right logo */}
               <div className="absolute bottom-[15%] right-[5%] h-6 w-6 transform animate-counter-spin-21 rounded-full">
-                <TwImage
+                <Image
                   className="rounded-full"
                   src={randomL2s[4].logo}
                   alt={randomL2s[4].name}
@@ -300,7 +300,7 @@ const Layer2Hub = ({
               </div>
               {/* Bottom left logo */}
               <div className="absolute bottom-[15%] left-[5%] h-6 w-6 transform animate-counter-spin-21 rounded-full">
-                <TwImage
+                <Image
                   className="rounded-full"
                   src={randomL2s[5].logo}
                   alt={randomL2s[5].name}
@@ -315,7 +315,7 @@ const Layer2Hub = ({
             <div className="absolute inset-[60px] animate-spin-9 rounded-full sm:inset-[108px]">
               {/* Top logo */}
               <div className="absolute -top-[12px] left-1/2 h-6 w-6 -translate-x-1/2 -translate-y-1/2 transform animate-counter-spin-9 rounded-full">
-                <TwImage
+                <Image
                   className="rounded-full"
                   src={randomL2s[6].logo}
                   alt={randomL2s[6].name}
@@ -325,7 +325,7 @@ const Layer2Hub = ({
               </div>
               {/* Bottom right logo */}
               <div className="absolute bottom-[15%] right-[5%] h-6 w-6 transform animate-counter-spin-9 rounded-full">
-                <TwImage
+                <Image
                   className="rounded-full"
                   src={randomL2s[7].logo}
                   alt={randomL2s[7].name}
@@ -335,7 +335,7 @@ const Layer2Hub = ({
               </div>
               {/* Bottom left logo */}
               <div className="absolute bottom-[15%] left-[5%] h-6 w-6 transform animate-counter-spin-9 rounded-full">
-                <TwImage
+                <Image
                   className="rounded-full"
                   src={randomL2s[8].logo}
                   alt={randomL2s[8].name}
@@ -347,12 +347,7 @@ const Layer2Hub = ({
 
             {/* Center Ethereum Logo */}
             <div className="absolute left-1/2 top-1/2 h-12 w-12 -translate-x-1/2 -translate-y-1/2 transform">
-              <TwImage
-                src={EthereumLogo}
-                alt="Ethereum"
-                width={48}
-                height={48}
-              />
+              <Image src={EthereumLogo} alt="Ethereum" width={48} height={48} />
             </div>
           </div>
         </div>
@@ -413,7 +408,7 @@ const Layer2Hub = ({
                 >
                   <div className="flex flex-1 flex-col items-start gap-4 md:flex-row md:items-center">
                     <div className="flex h-14 w-14 items-center justify-center rounded-md bg-background shadow-drop">
-                      <TwImage
+                      <Image
                         src={l2.logo}
                         alt={l2.name}
                         style={{
@@ -448,7 +443,7 @@ const Layer2Hub = ({
 
           <div className="flex justify-center">
             <div className="mx-auto inline-flex items-center justify-center gap-2 rounded-full bg-background px-4 py-2 text-sm font-bold">
-              <TwImage
+              <Image
                 src={EthereumLogo}
                 alt="Ethereum"
                 style={{
@@ -469,12 +464,7 @@ const Layer2Hub = ({
       >
         <div className="flex flex-col gap-8 bg-background-highlight px-12 py-12 md:flex-row">
           <div className="flex flex-1 items-center justify-center">
-            <TwImage
-              src={WalkingImage}
-              alt="Walking"
-              height={345}
-              width={264}
-            />
+            <Image src={WalkingImage} alt="Walking" height={345} width={264} />
           </div>
           <div className="flex flex-1 flex-col justify-center gap-6">
             <h2>Why do we need multiple networks on Ethereum?</h2>

@@ -1,4 +1,4 @@
-import { TwImage as Image } from "@/components/Image"
+import { Image } from "@/components/Image"
 
 import useColorModeValue from "@/hooks/useColorModeValue"
 import { useTranslation } from "@/hooks/useTranslation"

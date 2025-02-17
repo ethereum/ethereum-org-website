@@ -1,6 +1,6 @@
 import type { TranslationKey } from "@/lib/types"
 
-import { type ImageProps, TwImage } from "@/components/Image"
+import { Image, type ImageProps } from "@/components/Image"
 
 import { cn } from "@/lib/utils/cn"
 
@@ -36,7 +36,7 @@ const CalloutBanner = ({
       {...props}
     >
       <div className="flex">
-        <TwImage
+        <Image
           src={image}
           alt={alt}
           width={imageWidth}

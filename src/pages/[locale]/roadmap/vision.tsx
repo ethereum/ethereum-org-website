@@ -9,21 +9,20 @@ import type {
 import type { BasePageProps, ChildOnlyProp, Lang, Params } from "@/lib/types"
 
 import Breadcrumbs from "@/components/Breadcrumbs"
-import ButtonLink from "@/components/Buttons/ButtonLink"
 import Card from "@/components/Card"
 import Emoji from "@/components/Emoji"
 import FeedbackCard from "@/components/FeedbackCard"
 import InfoBanner from "@/components/InfoBanner"
-import InlineLink from "@/components/Link"
 import MainArticle from "@/components/MainArticle"
-import Text from "@/components/OldText"
 import PageHero, {
   type ContentType as PageHeroContent,
 } from "@/components/PageHero"
 import PageMetadata from "@/components/PageMetadata"
 import Trilemma from "@/components/Trilemma"
+import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Divider } from "@/components/ui/divider"
 import { Flex, type FlexProps, VStack } from "@/components/ui/flex"
+import InlineLink from "@/components/ui/Link"
 import { List, ListItem } from "@/components/ui/list"
 
 import { cn } from "@/lib/utils/cn"
@@ -38,6 +37,13 @@ import { DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
 import loadNamespaces from "@/i18n/loadNamespaces"
 import { usePathname } from "@/i18n/routing"
 import oldship from "@/public/images/upgrades/oldship.png"
+
+/**
+ * TODO: Consider replacing this with a global style for the `p` element
+ */
+const Text = (props: Omit<ComponentProps<"p">, "className">) => (
+  <p className="mb-[1.45rem]" {...props} />
+)
 
 const Page = (props: ChildOnlyProp) => (
   <VStack className="w-full gap-0" {...props} asChild>

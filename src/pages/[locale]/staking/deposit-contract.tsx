@@ -17,7 +17,7 @@ import CopyToClipboard from "@/components/CopyToClipboard"
 import Emoji from "@/components/Emoji"
 import FeedbackCard from "@/components/FeedbackCard"
 import Heading from "@/components/Heading"
-import { TwImage } from "@/components/Image"
+import { Image } from "@/components/Image"
 import InfoBanner from "@/components/InfoBanner"
 import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
@@ -145,7 +145,7 @@ const Caption = (props: ChildOnlyProp) => (
 )
 
 const Blockie = (props: { src: string }) => (
-  <TwImage
+  <Image
     className="rounded-sm"
     src={props.src}
     alt={""}

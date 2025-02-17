@@ -1,6 +1,4 @@
-import { BaseLink } from "@/components/Link"
-
-import MenuItem from "./MenuItem"
+import { BaseLink } from "../ui/Link"
 
 import { useTranslation } from "@/hooks/useTranslation"
 
@@ -14,9 +12,7 @@ const NoResultsCallout = ({ onClose }: NoResultsCalloutProps) => {
       <p className="text-body-medium">
         {t("page-languages-want-more-paragraph")}
       </p>
-      {/* TODO: use migrated Link component */}
       <BaseLink
-        as={MenuItem}
         key="item-no-results"
         href="contributing/translation-program"
         onClick={onClose}

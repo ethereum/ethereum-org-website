@@ -2,9 +2,9 @@ import type { GetStaticProps } from "next"
 
 import { BasePageProps, Lang } from "@/lib/types"
 
-import InlineLink from "@/components/Link"
 import MainArticle from "@/components/MainArticle"
 import Translation from "@/components/Translation"
+import InlineLink from "@/components/ui/Link"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"

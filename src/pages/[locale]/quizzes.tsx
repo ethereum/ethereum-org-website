@@ -4,7 +4,6 @@ import { FaGithub } from "react-icons/fa"
 
 import { BasePageProps, Lang, Params, QuizKey, QuizStatus } from "@/lib/types"
 
-import { ButtonLink } from "@/components/Buttons"
 import FeedbackCard from "@/components/FeedbackCard"
 import { HubHero } from "@/components/Hero"
 import MainArticle from "@/components/MainArticle"
@@ -14,6 +13,7 @@ import QuizzesList from "@/components/Quiz/QuizzesList"
 import QuizzesModal from "@/components/Quiz/QuizzesModal"
 import QuizzesStats from "@/components/Quiz/QuizzesStats"
 import { useLocalQuizData } from "@/components/Quiz/useLocalQuizData"
+import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Flex, HStack, Stack } from "@/components/ui/flex"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"

@@ -10,7 +10,7 @@ import Emoji from "@/components/Emoji"
 import FeedbackCard from "@/components/FeedbackCard"
 import GhostCard from "@/components/GhostCard"
 import HorizontalCard from "@/components/HorizontalCard"
-import { TwImage } from "@/components/Image"
+import { Image } from "@/components/Image"
 import InfoBanner from "@/components/InfoBanner"
 import MainArticle from "@/components/MainArticle"
 import PageHero from "@/components/PageHero"
@@ -509,7 +509,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
                     </Flex>
                   </div>
                 </Flex>
-                <TwImage
+                <Image
                   src={daiLargeImg}
                   alt={t("page-stablecoins-dai-logo")}
                   className="my-8 min-w-24 max-w-24 flex-1 self-center bg-cover bg-repeat sm:min-w-40 sm:max-w-40 md:my-0 md:max-w-60"
@@ -544,7 +544,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
                     </div>
                   </Flex>
                 </Flex>
-                <TwImage
+                <Image
                   src={usdcLargeImg}
                   alt={t("page-stablecoins-usdc-logo")}
                   className="my-8 min-w-24 max-w-24 flex-1 self-center bg-cover bg-repeat sm:min-w-40 sm:max-w-40 md:my-0 md:max-w-60"

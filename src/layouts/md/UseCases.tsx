@@ -5,7 +5,7 @@ import BannerNotification from "@/components/Banners/BannerNotification"
 import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import Emoji from "@/components/Emoji"
 import { ContentHero } from "@/components/Hero"
-import InlineLink from "@/components/Link"
+import InlineLink from "@/components/ui/Link"
 import { List, ListItem } from "@/components/ui/list"
 
 import { getEditPath } from "@/lib/utils/editPath"

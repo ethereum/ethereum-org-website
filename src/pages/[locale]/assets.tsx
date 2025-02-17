@@ -5,7 +5,7 @@ import type { BasePageProps, ChildOnlyProp, Lang, Params } from "@/lib/types"
 
 import AssetDownload from "@/components/AssetDownload"
 import FeedbackCard from "@/components/FeedbackCard"
-import { TwImage } from "@/components/Image"
+import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
 import { Center, Flex } from "@/components/ui/flex"
@@ -149,7 +149,7 @@ const AssetsPage = () => {
       <MainArticle className="px-8 py-4">
         <Flex className="flex-col px-8 py-4">
           <Center>
-            <TwImage
+            <Image
               className="w-20"
               src={assetPageHeroImage}
               alt={t("page-assets-eth-diamond-gray")}

@@ -9,7 +9,7 @@ import Card from "@/components/Card"
 import CardList from "@/components/CardList"
 import FeedbackCard from "@/components/FeedbackCard"
 import HorizontalCard from "@/components/HorizontalCard"
-import { TwImage } from "@/components/Image"
+import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import PageHero from "@/components/PageHero"
 import PageMetadata from "@/components/PageMetadata"
@@ -344,7 +344,7 @@ const WalletsPage = () => {
               >
                 {t("page-wallets-find-wallet-btn")}
               </ButtonLink>
-              <TwImage
+              <Image
                 src={FindWalletImage}
                 alt=""
                 className="mt-8 w-full max-w-[800px] bg-cover bg-no-repeat"

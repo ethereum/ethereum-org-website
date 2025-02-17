@@ -11,7 +11,7 @@ import type {
 import BannerNotification from "@/components/Banners/BannerNotification"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import FindWalletProductTable from "@/components/FindWalletProductTable"
-import { TwImage } from "@/components/Image"
+import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
 import InlineLink from "@/components/ui/Link"
@@ -128,7 +128,7 @@ const FindWalletPage = ({
           </Subtitle>
         </div>
         <div className="flex w-full items-center justify-center md:w-1/2">
-          <TwImage
+          <Image
             src={HeroImage}
             // TODO: adjust value when the old theme breakpoints are removed (src/theme.ts)
             sizes="(max-width: 480px) 100vw, 500px"
