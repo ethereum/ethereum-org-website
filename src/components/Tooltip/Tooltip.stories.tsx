@@ -2,8 +2,8 @@ import { RiInformationLine } from "react-icons/ri"
 import { Box, Center } from "@chakra-ui/react"
 import { Meta, StoryObj } from "@storybook/react"
 
-import InlineLink from "../Link"
 import Translation from "../Translation"
+import InlineLink from "../ui/Link"
 
 // TODO: remove `index` when we delete the old tooltip
 import TooltipComponent from "./index"
