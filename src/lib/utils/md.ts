@@ -186,6 +186,7 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
     "/developers/tutorials/reverse-engineering-a-contract",
     "/developers/tutorials/run-node-raspberry-pi",
     "/developers/tutorials/scam-token-tricks",
+    "/developers/tutorials/secret-state/",
     "/developers/tutorials/secure-development-workflow",
     "/developers/tutorials/send-token-ethersjs",
     "/developers/tutorials/sending-transactions-using-web3-and-alchemy",
