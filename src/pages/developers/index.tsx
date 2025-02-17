@@ -8,7 +8,6 @@ import { BasePageProps, ChildOnlyProp, Lang } from "@/lib/types"
 import Callout from "@/components/Callout"
 import Card, { CardProps } from "@/components/Card"
 import FeedbackCard from "@/components/FeedbackCard"
-import Heading from "@/components/Heading"
 import HubHero from "@/components/Hero/HubHero"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
@@ -120,7 +119,7 @@ const SpeedRunEthereumBanner = ({
       style={{ width: "100vw", objectFit: "cover", objectPosition: "20%" }}
     />
     <Stack className="absolute top-0 max-w-lg items-start space-y-3 break-words p-6 md:top-12 md:ms-8 md:space-y-4 lg:p-8 xl:max-w-xl">
-      <Heading>{title}</Heading>
+      <h2>{title}</h2>
       <ButtonLink href="https://speedrunethereum.com/">{linkLabel}</ButtonLink>
     </Stack>
   </div>
