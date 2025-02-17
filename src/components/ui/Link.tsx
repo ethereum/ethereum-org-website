@@ -1,4 +1,4 @@
-import { AnchorHTMLAttributes, forwardRef } from "react"
+import { AnchorHTMLAttributes, ComponentProps, forwardRef } from "react"
 import NextLink from "next/link"
 import { RxExternalLink } from "react-icons/rx"
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden"
@@ -23,7 +23,7 @@ type BaseProps = {
 
 export type LinkProps = BaseProps &
   AnchorHTMLAttributes<HTMLAnchorElement> &
-  Omit<typeof I18nLink, "href">
+  Omit<ComponentProps<typeof I18nLink>, "href">
 
 /**
  * Link wrapper which handles:
@@ -60,14 +60,14 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
 
   const isActive = url.isHrefActive(href, pathname, isPartiallyActive)
   const isDiscordInvite = url.isDiscordInvite(href)
-  const isPdf = url.isPdf(href)
+  const isFile = url.isFile(href)
   const isExternal = url.isExternal(href)
-  const isInternalPdf = isPdf && !isExternal
+  const isInternalFile = isFile && !isExternal
   const isHash = url.isHash(href)
 
-  // Get proper download link for internally hosted PDF's & static files (ex: whitepaper)
+  // Get proper download link for internally hosted files (ex: whitepaper.pdf)
   // Opens in separate window.
-  if (isInternalPdf) {
+  if (isInternalFile && !href.startsWith("/")) {
     href = "/" + getRelativePath(pathname, href)
   }
 
@@ -113,7 +113,7 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
     )
   }
 
-  if (isInternalPdf) {
+  if (isInternalFile) {
     return (
       <NextLink
         target="_blank"

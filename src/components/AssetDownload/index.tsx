@@ -56,22 +56,12 @@ const AssetDownload = ({
         )}
       </div>
       <Flex className="mt-4 gap-5">
-        <ButtonLink
-          href={imgSrc}
-          onClick={matomoHandler}
-          target="_blank"
-          locale={false}
-        >
+        <ButtonLink href={imgSrc} onClick={matomoHandler} target="_blank">
           {t("page-assets-download-download")} (
           {extname(imgSrc).slice(1).toUpperCase()})
         </ButtonLink>
         {svgUrl && (
-          <ButtonLink
-            href={svgUrl}
-            onClick={matomoHandler}
-            target="_blank"
-            locale={false}
-          >
+          <ButtonLink href={svgUrl} onClick={matomoHandler} target="_blank">
             {t("page-assets-download-download")} (SVG)
           </ButtonLink>
         )}
