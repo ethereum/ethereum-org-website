@@ -70,7 +70,7 @@ sidebarDepth: 2
 
 ## 参考文献 {#further-reading}
 
-- [イーサリアムフルノードとアーカイブノードの比較](https://www.quicknode.com/guides/infrastructor/ethereum-full-node-vs-archive-node) - *QuickNode、2022年9月*
+- [イーサリアムフルノードとアーカイブノードの比較](https://www.quicknode.com/guides/infrastructure/node-setup/ethereum-full-node-vs-archive-node) - *QuickNode、2022年9月*
 - [自分のイーサリアムアーカイブノードを構築する](https://tjayrush.medium.com/building-your-own-ethereum-archive-node-72c014affc09) - _Thomas Jay Rush、2021年8月_
 - [エリゴン、エリゴンのRPC、TrueBlocks(スクレイピングとAPI)をサービスとしてセットアップする方法](https://magnushansson.xyz/blog_posts/crypto_defi/2022-01-10-Erigon-Trueblocks) _ – Magnus Hansson、2022年9月更新_
 
