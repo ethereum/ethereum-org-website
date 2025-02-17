@@ -91,11 +91,13 @@ type FlexProps = BaseHTMLAttributes<HTMLDivElement> & { asChild?: boolean }
 export type FileContributorsProps = FlexProps & {
   contributors: FileContributor[]
   lastEditLocaleTimestamp: string
+  className?: string
 }
 
 const FileContributors = ({
   contributors,
   lastEditLocaleTimestamp,
+  className,
   ...props
 }: FileContributorsProps) => {
   const [isModalOpen, setModalOpen] = useState(false)
@@ -121,8 +123,11 @@ const FileContributors = ({
         </div>
       </Modal>
 
-      <Flex className="flex-col p-0 md:flex-row md:p-2" {...props}>
-        <Flex className="mb-4 me-4 flex-1 flex-col items-start lg:mb-0">
+      <Flex
+        className={cn("flex-col p-0 md:flex-row md:p-2", className)}
+        {...props}
+      >
+        <Flex className="my-4 me-4 flex-1 flex-col items-start lg:mb-0">
           <p className="mb-2 text-body-medium">
             <Translation id="last-edit-on" /> {lastEditLocaleTimestamp}
           </p>
