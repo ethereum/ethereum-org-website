@@ -39,6 +39,10 @@ const App = ({ Component, pageProps }: AppPropsWithLayout) => {
         // Suppress errors by default, enable if needed to debug
         // console.error(error)
       }}
+      getMessageFallback={({ key }) => {
+        const keyOnly = key.split(".").pop()
+        return keyOnly || key
+      }}
     >
       <ThemeProvider>
         <TooltipProvider>
