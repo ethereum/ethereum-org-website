@@ -49,7 +49,7 @@ We advise you to refresh the revoking tool after a few minutes and connect your 
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Want to learn more?</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     See our other guides
   </ButtonLink>
 </InfoBanner>

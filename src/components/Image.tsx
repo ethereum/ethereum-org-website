@@ -1,44 +1,21 @@
-import NextImage, { ImageProps as NextImageProps, StaticImageData } from "next/image"
-import { chakra, ChakraComponent, HTMLChakraProps } from "@chakra-ui/react"
+import NextImage, {
+  ImageProps as NextImageProps,
+  StaticImageData,
+} from "next/image"
 
-export type ImageProps = NextImageProps &
-  Omit<HTMLChakraProps<"img">, keyof NextImageProps>
+export type ImageProps = NextImageProps
 
-const imageProps: (keyof NextImageProps)[] = [
-  "src",
-  "alt",
-  "sizes",
-  "width",
-  "height",
-  "fill",
-  "loader",
-  "quality",
-  "priority",
-  "loading",
-  "placeholder",
-  "blurDataURL",
-  "unoptimized",
-  "onLoadingComplete",
-  "alt",
-  "crossOrigin",
-  "decoding",
-  "loading",
-  "referrerPolicy",
-  "sizes",
-  "src",
-  "style",
-  "useMap",
-]
-
-const DefaultNextImage = (props: ImageProps) => {
-  const hasBlurData = !!((props.src as StaticImageData).blurDataURL || props.blurDataURL)
-  return <NextImage placeholder={hasBlurData ? "blur" : "empty"} {...props}  />
+const isStaticImageData = (src: ImageProps["src"]): src is StaticImageData => {
+  return typeof src === "object" && "blurDataURL" in src
 }
 
-/**
- * TODO: replace this component with import { Image } from "@chakra-ui/next-js"
- * once https://github.com/vercel/next.js/issues/52216 is fixed
- */
-export const Image: ChakraComponent<"img", NextImageProps> = chakra(DefaultNextImage, {
-  shouldForwardProp: (prop) => (imageProps as string[]).includes(prop),
-})
+const DefaultNextImage = (props: ImageProps) => {
+  if (isStaticImageData(props.src)) {
+    return <NextImage placeholder="blur" {...props} />
+  }
+
+  const hasBlurData = !!props.blurDataURL
+  return <NextImage placeholder={hasBlurData ? "blur" : "empty"} {...props} />
+}
+
+export const Image = (props: NextImageProps) => <DefaultNextImage {...props} />

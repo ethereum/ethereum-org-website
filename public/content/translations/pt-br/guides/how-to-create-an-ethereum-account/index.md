@@ -14,7 +14,7 @@ Ao contrário de abrir uma nova conta em uma empresa, a criação de uma conta E
 
 Uma carteira é um aplicativo que ajuda você controlar a sua conta Ethereum. Ela usa as suas chaves para enviar e receber transações e se conectar em aplicativos. Existem dezenas de carteiras diferentes para escolher: carteira para celular, carteira desktop ou ainda como extensão do navegador.
 
-<ButtonLink to="/wallets/find-wallet/">
+<ButtonLink href="/wallets/find-wallet/">
   Encontre uma carteira
 </ButtonLink>
 
@@ -42,7 +42,7 @@ Após salvar a frase semente, você verá o painel da carteira com o saldo. Conf
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Quer saber mais?</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     Veja nossos outros guias
   </ButtonLink>
 </InfoBanner>

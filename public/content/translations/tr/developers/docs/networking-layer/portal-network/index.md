@@ -24,7 +24,7 @@ Portal Ağı, hafif düğümlerin verilerini alırken tam düğümlere güvenmek
 
 ## Portal Ağı nasıl çalışır? {#how-does-portal-network-work}
 
-Ethereum düğümleri, birbirleriyle nasıl iletişim kuracaklarını tanımlayan katı protokollere sahiptir. Yürütüm istemcileri, [DevP2P](/developers/docs/networking-layer/#devp2p) olarak bilinen bir dizi alt protokol kullanarak iletişim kurarken fikir birliği istemcileri [libP2P](/developers/docs/networking-layer/#libp2p) adlı farklı bir alt protokol yığını kullanır. Bunlar, düğümler arasında iletilebilecek veri türlerini tanımlar.
+Ethereum düğümleri, birbirleriyle nasıl iletişim kuracaklarını tanımlayan katı protokollere sahiptir. Yürütüm istemcileri, [DevP2P](/developers/docs/networking-layer/#devp2p) olarak bilinen bir dizi alt protokol kullanarak iletişim kurarken, fikir birliği istemcileri [libP2P](/developers/docs/networking-layer/#libp2p) adlı farklı bir alt protokol yığınını kullanır. Bunlar, düğümler arasında iletilebilecek veri türlerini tanımlar.
 
 ![devP2P ve libP2P](portal-network-devp2p-libp2p.png)
 
@@ -55,7 +55,7 @@ Bu ağ tasarımının faydaları şunlardır:
 - merkezi sağlayıcılara olan bağımlılığı azaltmak
 - Internet bant genişliği kullanımını azaltmak
 - minimize edilmiş veya sıfır senkronizasyon
-- kısıtlı kaynaklara sahip (<1 GB RAM, <100 MB disk, 1 CPU) cihazlardan erişim
+- Kaynak kısıtlaması olan cihazlara erişim (<1 GB RAM, <100 MB disk alanı, 1 CPU)
 
 Aşağıdaki diyagram, Portal Ağı tarafından sunulabilecek mevcut istemcilerin işlevlerini gösterir ve kullanıcıların çok düşük kaynaklı cihazlardan bu işlevlere erişmesini sağlar.
 
@@ -70,6 +70,7 @@ Portal Ağı istemcileri:
 - [Trin](https://github.com/ethereum/trin): Rust dilinde yazılmıştır
 - [Nimbus](https://nimbus.team/docs/fluffy.html): Nim dilinde yazılmıştır
 - [Trin](https://github.com/ethereumjs/ultralight): Typerscipt dilinde yazılmıştır
+- [Shisui](https://github.com/GrapeBaBa/shisui): Go ile yazılmıştır
 
 Birden fazla bağımsız istemci uygulamasına sahip olmak, Ethereum ağının dayanıklılığını ve merkeziyetsizliğini arttırır.
 
@@ -78,5 +79,5 @@ Eğer bir istemci sorun veya kırılganlıklar yaşıyorsa, diğer istemciler d�
 ## Daha fazla bilgi {#futher-reading}
 
 - [Portal Ağı (Devcon Bogota'daki Piper Merriam)](https://www.youtube.com/watch?v=0stc9jnQLXA).
-- [Portal Ağı discord](https://discord.gg/6XFs56cX)
-- [Portal Ağı web sitesi](https://ethportal.net)
+- [Portal Ağı discord](https://discord.gg/CFFnmE7Hbs)
+- [Portal Ağı web sitesi](https://www.ethportal.net/)

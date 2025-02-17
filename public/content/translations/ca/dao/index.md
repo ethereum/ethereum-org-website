@@ -74,7 +74,7 @@ La vèrtebra d'una DAO és el contracte intel·ligent. El contracte defineix les
 
 Això és possible perquè els contractes intel·ligents són a prova de manipulació un cop estan actius a Ethereum. No podeu editar el codi (normes de la DAO) sense que la gent se n'adoni, ja que tot és públic.
 
-<DocLink to="/smart-contracts/">
+<DocLink href="/smart-contracts/">
   Més informació sobre els contractes intel·ligents
 </DocLink>
 

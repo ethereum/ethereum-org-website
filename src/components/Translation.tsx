@@ -13,12 +13,6 @@ type TranslationProps = {
   transform?: HtmrOptions["transform"]
 }
 
-// Custom components mapping to be used by `htmr` when parsing the translation
-// text
-const defaultTransform = {
-  a: TooltipLink,
-}
-
 // Renders the translation string for the given translation key `id`. It
 // fallback to English if it doesn't find the given key in the current language
 const Translation = ({ id, options, transform = {} }: TranslationProps) => {
@@ -27,6 +21,12 @@ const Translation = ({ id, options, transform = {} }: TranslationProps) => {
 
   const { t } = useTranslation(requiredNamespaces)
   const translatedText = t(id, options)
+
+  // Custom components mapping to be used by `htmr` when parsing the translation
+  // text
+  const defaultTransform = {
+    a: TooltipLink,
+  }
 
   // Use `htmr` to parse html content in the translation text
   return htmr(translatedText, {

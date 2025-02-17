@@ -1,7 +1,7 @@
-import React from "react"
-import { Flex, type FlexProps, Text } from "@chakra-ui/react"
+import { Button } from "@/components/ui/buttons/Button"
+import { Flex, type FlexProps } from "@/components/ui/flex"
 
-import { Button } from "../../Buttons"
+import { cn } from "@/lib/utils/cn"
 
 type CategoryTabsProps = FlexProps & {
   categories: Array<string>
@@ -12,31 +12,32 @@ export const CategoryTabs = ({
   categories,
   activeIndex = 0,
   setActiveIndex,
+  className,
   ...flexProps
 }: CategoryTabsProps) => (
-  <Flex gap={6} {...flexProps}>
-    {categories.map((category, index) =>
-      setActiveIndex ? (
+  <Flex className={cn("gap-6", className)} {...flexProps}>
+    {categories.map((category, index) => {
+      const isActiveIndex = activeIndex === index
+      const fontWeightClass = isActiveIndex && "font-bold"
+      return setActiveIndex ? (
         <Button
           key={category}
           variant="ghost"
-          fontWeight={activeIndex === index ? "bold" : "normal"}
+          className={cn(
+            fontWeightClass,
+            "p-0 pb-2 text-body",
+            isActiveIndex && "!text-[initial]"
+          )}
+          disabled={isActiveIndex}
           onClick={() => setActiveIndex(index)}
-          p={0}
-          pb={2}
-          color="body.base"
         >
           {category}
         </Button>
       ) : (
-        <Text
-          mb={2}
-          key={category}
-          fontWeight={activeIndex === index ? "bold" : "normal"}
-        >
+        <p className={cn(fontWeightClass, "mb-2")} key={category}>
           {category}
-        </Text>
+        </p>
       )
-    )}
+    })}
   </Flex>
 )

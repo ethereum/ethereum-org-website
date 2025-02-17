@@ -131,6 +131,7 @@
   "page-stablecoins-stablecoins-table-type-precious-metals-backed": "Precious metals",
   "page-stablecoins-table-error": "Couldn't load stablecoins. Try refreshing the page.",
   "page-stablecoins-title": "Stablecoins",
+  "page-stablecoins-meta-title": "Stablecoins explained: What are they for?",
   "page-stablecoins-top-coins": "Top stablecoins by market capitalisation",
   "page-stablecoins-top-coins-intro": "Market capitalisation is",
   "page-stablecoins-top-coins-intro-code": "the total number of tokens that exist multiplied by the value per token. This list is dynamic and the projects listed here are not necessarily endorsed by the ethereum.org team.",
@@ -163,5 +164,6 @@
   "makerdao-logo": "MakerDao logo",
   "matcha-logo": "Matcha logo",
   "summerfi-logo": "Summer.fi logo",
-  "uniswap-logo": "Uniswap logo"
+  "uniswap-logo": "Uniswap logo",
+  "page-stablecoins-go-to": "Go to"
 }

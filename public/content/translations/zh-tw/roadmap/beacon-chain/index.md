@@ -56,7 +56,7 @@ summaryPoint3: 信標鏈引入共識邏輯和區塊廣播協定，現在可保�
 
 起初，信標鏈獨立於以太坊主網存在，但兩者已於 2022 年合併。
 
-<ButtonLink to="/roadmap/merge/">
+<ButtonLink href="/roadmap/merge/">
   合併
 </ButtonLink>
 
@@ -64,7 +64,7 @@ summaryPoint3: 信標鏈引入共識邏輯和區塊廣播協定，現在可保�
 
 僅當採用權益證明共識機制時，分片才能安全地進入以太坊生態系統。 已與主網「合併」的信標鏈引入了質押，為未來進一步擴展以太坊所需的分片機制鋪平道路。
 
-<ButtonLink to="/roadmap/danksharding/">
+<ButtonLink href="/roadmap/danksharding/">
   分片鏈
 </ButtonLink>
 

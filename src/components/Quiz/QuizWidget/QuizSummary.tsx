@@ -1,89 +1,77 @@
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
-import {
-  Heading,
-  HStack,
-  StackDivider,
-  Text,
-  TextProps,
-  ThemingProps,
-  useMediaQuery,
-  useToken,
-  VStack,
-} from "@chakra-ui/react"
 
+import { HStack, VStack } from "@/components/ui/flex"
+
+import { cn } from "@/lib/utils/cn"
 import { numberToPercent } from "@/lib/utils/numberToPercent"
+import { screens } from "@/lib/utils/screen"
 
-import { useQuizWidgetContext } from "./context"
+import { useMediaQuery } from "@/hooks/useMediaQuery"
 
-export const QuizSummary = () => {
-  const { numberOfCorrectAnswers, questions, ratioCorrect, isPassingScore } =
-    useQuizWidgetContext()
+type QuizSummaryProps = {
+  numberOfCorrectAnswers: number
+  questionsLength: number
+  ratioCorrect: number
+  isPassingScore: boolean
+}
 
+export const QuizSummary = ({
+  numberOfCorrectAnswers,
+  questionsLength,
+  ratioCorrect,
+  isPassingScore,
+}: QuizSummaryProps) => {
   const { locale } = useRouter()
   const { t } = useTranslation("learn-quizzes")
 
-  const smBp = useToken("breakpoints", "sm")
+  const [largerThanMobile] = useMediaQuery([`(min-width: ${screens.sm})`])
 
-  const [largerThanMobile] = useMediaQuery(`(min-width: ${smBp})`)
-
-  const commonTextSize: ThemingProps<"Text">["size"] = ["xl", "2xl"]
-  const valueStyles: TextProps = { fontWeight: "700", lineHeight: 1 }
-  const labelStyles: TextProps = { fontSize: "sm", m: 0, color: "disabled" }
+  const commonTextSize = "text-xl sm:text-2xl"
+  const valueStyles = "font-bold leading-none"
+  const labelStyles = "text-sm m-0 text-disabled"
 
   return (
-    <VStack spacing="3" w="full">
-      <Heading
-        as="h3"
-        textAlign="center"
-        size="lg"
-        color={isPassingScore ? "success.base" : "body.base"}
+    <VStack className="w-full gap-3">
+      <h3
+        className={cn(
+          "text-center text-3xl",
+          isPassingScore ? "text-success" : "text-body"
+        )}
       >
         {isPassingScore ? t("passed") : t("your-results")}
-      </Heading>
+      </h3>
       <HStack
-        py="4"
-        px="8"
-        justify="center"
-        boxShadow="drop"
-        bg="background.base"
-        mx="auto"
-        spacing="4"
-        sx={{
-          "& > div": {
-            py: "4",
-          },
-        }}
-        overflowX="hidden"
-        divider={<StackDivider borderColor="disabled" />}
+        className="mx-auto justify-center gap-4 overflow-x-hidden bg-background px-8 py-4 shadow-drop [&_>_div]:py-4"
+        separator={<div className="border-disabled" />}
       >
         <VStack>
-          <Text size={commonTextSize} {...valueStyles}>
+          <span className={cn(commonTextSize, valueStyles)}>
             {numberToPercent(ratioCorrect, locale)}
-          </Text>
-          <Text size={commonTextSize} {...labelStyles}>
-            {t("score")}
-          </Text>
+          </span>
+          <span className={cn(commonTextSize, labelStyles)}>{t("score")}</span>
         </VStack>
 
         <VStack>
-          <Text size={commonTextSize} {...valueStyles}>
+          <span className={cn(commonTextSize, valueStyles)}>
             +{numberOfCorrectAnswers}
-          </Text>
-          <Text size={commonTextSize} {...labelStyles}>
+          </span>
+          <span className={cn(commonTextSize, labelStyles)}>
             {t("correct")}
-          </Text>
+          </span>
         </VStack>
 
         {largerThanMobile && (
-          <VStack>
-            <Text size={commonTextSize} {...valueStyles}>
-              {questions.length}
-            </Text>
-            <Text size={commonTextSize} {...labelStyles}>
-              {t("questions")}
-            </Text>
-          </VStack>
+          <>
+            <VStack>
+              <span className={cn(commonTextSize, valueStyles)}>
+                {questionsLength}
+              </span>
+              <span className={cn(commonTextSize, labelStyles)}>
+                {t("questions")}
+              </span>
+            </VStack>
+          </>
         )}
       </HStack>
     </VStack>

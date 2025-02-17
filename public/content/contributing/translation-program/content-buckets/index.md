@@ -101,7 +101,6 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Account abstraction](/roadmap/account-abstraction/)
 - [Verkle trees](/roadmap/verkle-trees/)
 - [Statelessness, state expiry and history expiry](/roadmap/statelessness/)
-- [How The Merge impacted ETH supply](/roadmap/merge/issuance/)
 
 ## 10) Community pages {#community-pages}
 
@@ -178,6 +177,7 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Programming languages](/developers/docs/programming-languages/)
 - [Delphi](/developers/docs/programming-languages/delphi/)
 - [.NET](/developers/docs/programming-languages/dot-net/)
+- [Elixir](/developers/docs/programming-languages/elixir/)
 - [Golang](/developers/docs/programming-languages/golang/)
 - [Java](/developers/docs/programming-languages/java/)
 - [JavaScript](/developers/docs/programming-languages/javascript/)
@@ -340,7 +340,6 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Set up web3.js to use the Ethereum blockchain in JavaScript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/)
 - [Short ABIs for calldata optimization](/developers/tutorials/short-abi/)
 - [Smart contract security guidelines](/developers/tutorials/smart-contract-security-guidelines/)
-- [Solidity and Truffle continuous integration setup](/developers/tutorials/solidity-and-truffle-continuous-integration-setup/)
 - [Testing ERC-20 tokens with Waffle](/developers/tutorials/testing-erc-20-tokens-with-waffle/)
 - [Token integration checklist](/developers/tutorials/token-integration-checklist/)
 - [Using WebSockets](/developers/tutorials/using-websockets/)

@@ -63,7 +63,7 @@ Web3では、 [ 非代替性トークン(NFT)](/glossary/#nft) を通じて直�
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>非代替性トークン(NFT)について学ぶ</div>
-  <ButtonLink to="/nft/">
+  <ButtonLink href="/nft/">
     非代替性トークン(NFT)の詳細
   </ButtonLink>
 </InfoBanner>
@@ -88,7 +88,7 @@ Web3では、自分のデータを所有するだけでなく、企業の株式�
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>分散型自律組織(DAO)についてもっと知る</div>
-  <ButtonLink to="/dao/">
+  <ButtonLink href="/dao/">
     分散型自律組織(DAO)の詳細
   </ButtonLink>
 </InfoBanner>
@@ -103,7 +103,7 @@ Web3は、イーサリアムアドレスと[イーサリアムネームサービ
 
 銀行口座のない人や銀行口座を持つことができない国に住む人を除いて、Web2の支払いインフラストラクチャは、銀行や支払い業者に依存しています。 Web3は [ETH](/glossary/#ether)のようなトークンをブラウザで直接送金するため、信頼できるサードパーティを必要としません。
 
-<ButtonLink to="/eth/">
+<ButtonLink href="/eth/">
   ETHの詳細
 </ButtonLink>
 

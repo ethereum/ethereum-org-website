@@ -11,6 +11,8 @@ Les deux langages les plus actifs et les plus suivis sont :
 - Solidity
 - Vyper
 
+L'IDE Remix fournit un environnement de développement complet pour créer et tester des contrats dans Solidity et Vyper. [Essayez l'IDE Remix dans le navigateur](https://remix.ethereum.org) pour commencer à coder.
+
 Des développeurs plus expérimentés peuvent choisir d'utiliser Yul, un langage intermédiaire pour la [machine virtuelle Ethereum (EVM)](/developers/docs/evm/), ou Yul+, une extension de Yul.
 
 Si vous êtes curieux et que vous aimez aider à tester de nouveaux langages encore en cours de développement, vous pouvez essayer Fe, un nouveau langage pour contrat intelligent qui en est encore à ses balbutiements.
@@ -35,7 +37,7 @@ La connaissance de langages de programmation comme JavaScript ou Python peut vou
 - [Portail Solidity](https://soliditylang.org/)
 - [Solidity by Example](https://docs.soliditylang.org/en/latest/solidity-by-example.html)
 - [GitHub](https://github.com/ethereum/solidity/)
-- [Solidity Gitter Chatroom](https://gitter.im/ethereum/solidity/) en jonction avec [Solidity Matrix Chatroom](https://matrix.to/#/#ethereum_solidity:gitter.im)
+- [Salle de chat Gitter Solidity](https://gitter.im/ethereum/solidity) reliée à [Salle de chat Matrix Solidity](https://matrix.to/#/#ethereum_solidity:gitter.im)
 - [Cheat Sheet](https://reference.auditless.com/cheatsheet)
 - [Blog Solidity](https://blog.soliditylang.org/)
 - [Twitter Solidity](https://twitter.com/solidity_lang)

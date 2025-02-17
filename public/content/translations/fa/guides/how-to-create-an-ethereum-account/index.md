@@ -14,7 +14,7 @@ lang: fa
 
 کیف پول اپلیکیشنی است که به شما کمک می کند حساب اتریوم خود را مدیریت کنید. از کلیدهای شما برای ارسال و دریافت تراکنش ها و ورود به اپلیکیشن‌ها استفاده می کند. ده‌ها کیف پول مختلف وجود دارند که می‌توانید آن‌ها را انتخاب کنید، از جمله افزونه‌های موبایل، دسکتاپ یا حتی مرورگر.
 
-<ButtonLink to="/wallets/find-wallet/">
+<ButtonLink href="/wallets/find-wallet/">
   یافتن یک کیف پول
 </ButtonLink>
 
@@ -42,7 +42,7 @@ lang: fa
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>می‌خواهید بیشتر بدانید؟</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     راهنماهای دیگر ما را ببینید
   </ButtonLink>
 </InfoBanner>

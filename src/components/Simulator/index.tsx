@@ -1,8 +1,10 @@
-import React, { useEffect, useMemo, useState } from "react"
+import { type ReactNode, useEffect, useMemo, useState } from "react"
 import { useRouter } from "next/router"
-import { Flex, type FlexProps, Grid } from "@chakra-ui/react"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
+
+import type { ModalProps } from "../ui/dialog-modal"
+import { Flex } from "../ui/flex"
 
 import { PATH_ID_QUERY_PARAM, SIMULATOR_ID } from "./constants"
 import { Explanation } from "./Explanation"
@@ -18,7 +20,8 @@ import { Template } from "./Template"
 import type { PathId, SimulatorData } from "./types"
 import { getValidPathId } from "./utils"
 
-type SimulatorProps = Pick<FlexProps, "children"> & {
+type SimulatorProps = {
+  children: ReactNode
   data: SimulatorData
 }
 export const Simulator = ({ children, data }: SimulatorProps) => {
@@ -41,14 +44,16 @@ export const Simulator = ({ children, data }: SimulatorProps) => {
   }
 
   // When simulator closed: log event, clear URL params and close modal
-  const onClose = (): void => {
-    trackCustomEvent({
-      eventCategory: "simulator",
-      eventAction: `${pathId}_click`,
-      eventName: `close-from-step-${step + 1}`,
-    })
-    // Clearing URL Params will reset pathId, and close modal
-    clearUrlParams()
+  const onClose: ModalProps["onOpenChange"] = (open) => {
+    if (!open) {
+      trackCustomEvent({
+        eventCategory: "simulator",
+        eventAction: `${pathId}_click`,
+        eventName: `close-from-step-${step + 1}`,
+      })
+      // Clearing URL Params will reset pathId, and close modal
+      clearUrlParams()
+    }
   }
 
   // Remove URL search param if invalid pathId
@@ -126,37 +131,15 @@ export const Simulator = ({ children, data }: SimulatorProps) => {
   }
 
   return (
-    <Grid
+    <div
       id={SIMULATOR_ID}
-      bg="cardGradient"
-      placeItems="center"
-      p={{ base: 4, md: 16 }}
-      w="full"
-      scrollMarginTop={{ base: "5rem" }}
-      scrollBehavior="smooth"
+      className="grid w-full scroll-mt-[5rem] place-items-center scroll-smooth bg-gradient-to-r from-accent-a/10 to-accent-c/10 p-4 md:p-16 dark:bg-gradient-to-tr dark:from-primary/20 dark:from-20% dark:via-accent-a/20 dark:via-60% dark:to-accent-c/20 dark:to-95%"
     >
-      <Flex
-        direction={{ base: "column", md: "row" }}
-        bg="background.base"
-        px={{ base: 4, md: 16 }}
-        py={{ base: 8, md: 16 }}
-        alignItems="center"
-        textAlign={{ base: "center", md: "start" }}
-        gap={{ base: 16, md: 8, lg: 16 }}
-        maxW="1000px"
-        w="full"
-      >
+      <Flex className="w-full max-w-[1000px] items-center gap-16 bg-background px-4 py-8 text-center max-md:flex-col md:p-16 md:text-start md:max-lg:gap-8">
         {/* TEXT CONTENT */}
-        <Flex direction="column" px={4}>
-          {children}
-        </Flex>
+        <Flex className="flex-col px-4">{children}</Flex>
         {/* Button stack for path options */}
-        <Flex
-          direction="column"
-          gap={8}
-          w={{ base: "min(100%, 320px)", md: "300px" }}
-          minW={{ md: "300px" }}
-        >
+        <Flex className="w-[min(100%,_320px)] flex-col gap-8 md:w-[300px]">
           {Object.keys(data).map((id) => {
             const sim = data[id]
             const pathSummary = {
@@ -181,7 +164,7 @@ export const Simulator = ({ children, data }: SimulatorProps) => {
           })}
         </Flex>
       </Flex>
-      <SimulatorModal isOpen={isOpen} onClose={onClose}>
+      <SimulatorModal open={isOpen} onOpenChange={onClose}>
         <Template>
           {explanation ? (
             <Explanation
@@ -201,7 +184,7 @@ export const Simulator = ({ children, data }: SimulatorProps) => {
               logFinalCta={logFinalCta}
             />
           ) : (
-            <Flex flex={1} minH={32} />
+            <Flex className="min-h-32 flex-1" />
           )}
           {Screen && (
             <Phone>
@@ -210,6 +193,6 @@ export const Simulator = ({ children, data }: SimulatorProps) => {
           )}
         </Template>
       </SimulatorModal>
-    </Grid>
+    </div>
   )
 }

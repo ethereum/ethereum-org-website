@@ -190,7 +190,7 @@ These tools can be used as an alternative to the [Staking Deposit CLI](https://g
 
 لفتح رصيدك واسترداده بالكامل، عليك أيضًا إكمال عملية الخروج من برنامج المدقق.
 
-<ButtonLink to="/staking/withdrawals/">مزيد من المعلومات حول عمليات السحب المتعلقة بالمراهنات</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">مزيد من المعلومات حول عمليات السحب المتعلقة بالمراهنات</ButtonLink>
 </ExpandableCard>
 
 ## قراءة إضافية {#further-reading}

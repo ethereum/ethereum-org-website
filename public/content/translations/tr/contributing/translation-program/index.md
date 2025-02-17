@@ -22,7 +22,7 @@ Ethereum.org Çeviri Programı açıktır ve herkes katkı verebilir!
 
 _Çeviriler konusunda iş birliği yapmak, sorular sormak, geribildirim ve fikir paylaşmak veya bir tercüme grubuna katılmak için [ethereum.org Discord](/discord/)'una katılın._
 
-<ButtonLink to="https://crowdin.com/project/ethereum-org/">
+<ButtonLink href="https://crowdin.com/project/ethereum-org/">
   Çeviriye başlayın
 </ButtonLink>
 
@@ -36,9 +36,9 @@ Ethereum.org Çeviri Programının [misyon ve vizyonu](/contributing/translation
 
 ### Şimdiye kadarki ilerleme durumumuz {#our-progress}
 
-- [**5.100 +** çevirmen](/contributing/translation-program/contributors/)
-- **54** sitenin yayında olduğu dil sayısı
-- [**3 milyon** 2022'de çevrilen kelime sayısı](/contributing/translation-program/acknowledgements/)
+- [**6.000'in üzerinde** çevirmen](/contributing/translation-program/contributors/)
+- **62** sitenin yayında olduğu dil sayısı
+- [**3 milyon** 2023'de çevrilen kelime sayısı](/contributing/translation-program/acknowledgements/)
 
 <TranslationChartImage />
 
@@ -50,9 +50,9 @@ Ethereum.org, binlerce topluluk üyesi tarafından çevrilmektedir ve bu kişile
 
 Çeviri Programına katkıda bulunduysanız ve çevirdiğiniz kelimelerden en az 5000 tanesi onaylandıysa ethereum.org çevirmen sertifikasına hak kazanırsınız. [Sertifikalar hakkında daha fazla bilgi](/contributing/translation-program/acknowledgements/#certificate)
 
-#### POAP'ler {#poaps}
+#### OAT'ler {#oats}
 
-Tüm çevirmenlerimiz, ethereum.org Çeviri Programına katkıda bulunduklarını kanıtlayan bir NFT olan POAP'yi (Katılım İspatı Protokolü) almaya hak kazanır. [POAP'ler hakkında daha fazla bilgi](/contributing/translation-program/acknowledgements/#poap)
+Çeviri Programı'na katkıda bulunanlar, 2024 yılında çevirdikleri kelime sayısına göre farklı sayıda OAT (zincir üstünde başarı jetonu) almaya hak kazanacaktır. OAT'ler, ethereum.org Çeviri Programı'na katkınızı kanıtlayan NFT'lerdir. [OAT'ler hakkında daha fazla bilgi](/contributing/translation-program/acknowledgements/#oats)
 
 #### Çevirmenlere teşekkür {#translator-acknowledgements}
 

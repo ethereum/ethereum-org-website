@@ -1,17 +1,17 @@
 import { useRouter } from "next/router"
 import { FaGithub } from "react-icons/fa"
-import { Center, Flex, Icon } from "@chakra-ui/react"
+
+import { Center, Flex } from "@/components/ui/flex"
+import { BaseLink, LinkProps } from "@/components/ui/Link"
 
 import Emoji from "./Emoji"
-import { BaseLink, LinkProps } from "./Link"
-import Text from "./OldText"
 
 type GitHubRepo = {
   stargazerCount: number
   url: string
 }
 
-type GitStarsProps = Omit<LinkProps, "to" | "href"> & {
+type GitStarsProps = Omit<LinkProps, "href" | "href"> & {
   gitHubRepo: GitHubRepo
   hideStars: boolean
 }
@@ -25,45 +25,23 @@ const GitStars = ({ gitHubRepo, hideStars, ...props }: GitStarsProps) => {
 
   return (
     <BaseLink
+      className="ms-auto text-body no-underline hover:underline"
       href={gitHubRepo.url}
       hideArrow
-      ms="auto"
-      textDecoration="none"
       {...props}
     >
-      <Flex
-        background="lightBorder"
-        textDecoration="none"
-        border="1px solid"
-        borderColor="lightBorder"
-        borderRadius="base"
-        color="text"
-        _hover={{
-          boxShadow: "0 0 1px var(--eth-colors-primary-base)",
-          path: { fill: "primary.base" },
-        }}
-      >
+      <Flex className="items-stretch overflow-hidden rounded bg-background-medium">
         {hideStars ? (
-          <Icon as={FaGithub} m={1} />
+          <FaGithub className="m-1 text-2xl" />
         ) : (
           <>
-            <Center
-              w="36px"
-              justifyContent="space-between"
-              fontSize="s"
-              mx="0.325rem"
-            >
-              <Icon as={FaGithub} />
+            <Center className="mx-1.5 w-9 justify-between text-2xl">
+              <FaGithub />
               <Emoji text=":star:" />
             </Center>
-            <Text
-              fontSize="0.8125rem"
-              px="0.325rem"
-              my="0"
-              background="searchBackgroundEmpty"
-            >
-              {starsString}
-            </Text>
+            <Flex className="items-center bg-background-highlight px-1.5">
+              <p className="my-0 text-xs text-body">{starsString}</p>
+            </Flex>
           </>
         )}
       </Flex>

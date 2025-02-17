@@ -59,11 +59,11 @@ Bagama't hindi lang sa Web3 matatagpuan ang mga kakaibang feature nito, at hindi
 
 Ibinibigay ng Web3 sa iyo ang pagmamay-ari ng ng iyong mga digital asset sa kakaibang paraan. Halimbawa, sabihin nating naglalaro ka ng isang web2 na laro. Kapag bumili ka ng in-game item, direkta itong nauugnay sa iyong account. Kung ide-delete ng mga game creator ang account mo, mawawala ang mga item na ito. O kaya naman, kung huminto ka sa paglalaro, mawawala ang halaga na in-invest mo sa iyong mga in-game item.
 
-Pinapayagan ng Web3 ang pagmamay-ari sa pamamagitan ng [mga non-fungible token (NFTs)](/nft/). Walang sinuman, kahit ang mga game creator, ang may kapangyarihang bawiin ang iyong pagmamay-ari. At, kung hihinto ka sa paglalaro, maaari mong ibenta o i-trade ang iyong mga in-game item sa mga open market at mabawi ang iyong ipinuhunan.
+Pinapahintulutan ng Web3 ang pagmamay-ari sa pamamagitan ng [mga non-fungible token (NFTs)](/glossary/#nft). Walang sinuman, kahit ang mga game creator, ang may kapangyarihang bawiin ang iyong pagmamay-ari. At, kung hihinto ka sa paglalaro, maaari mong ibenta o i-trade ang iyong mga in-game item sa mga open market at mabawi ang iyong ipinuhunan.
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Magbasa pa tungkol sa NFTs</div>
-  <ButtonLink to="/nft/">
+  <ButtonLink href="/nft/">
     Iba pang detalye tungkol sa NFTs
   </ButtonLink>
 </InfoBanner>
@@ -82,13 +82,13 @@ Sa Web2.0, kailangan ng mga content creator na magtiwalang hindi babaguhin ng mg
 
 Bukod sa pagmamay-ari sa data sa Web3, maaari mo ring maging pagmamay-ari ang platform bilang collective, gamit ang mga token na nagsisilbing mga share sa isang kumpanya. Hinahayaan ka ng DAOs na magsaayos ng decentralized na pagmamay-ari sa isang platform at gumawa ng mga pasya tungkol sa hinaharap nito.
 
-Ang DAOs ay tinutukoy bilang mga agreed-upon smart contract na ino-automate ang decentralized na pagpapasya sa pool ng mga resource (mga token). Boboto ang mga user na may mga token sa kung paano gagamitin ang mga resource, at awtomatikong isasagawa ng code ang resulta ng botohan.
+Ang mga DAO ay teknikal na tinukoy bilang napagkasunduan na [mga smart contract](/glossary/#smart-contract) na awtomatiko ang desentralisadong paggawa ng desisyon sa isang sama-samang mga mapagkukunan(mga token). Boboto ang mga user na may mga token sa kung paano gagamitin ang mga resource, at awtomatikong isasagawa ng code ang resulta ng botohan.
 
 Gayunpaman, itinuturing na DAOs ng mga tao ang maraming komunidad sa Web3. May iba't ibang antas ng decentralization at automation ayon sa code ang mga komunidad na ito. Kasalukuyan naming tinitingnan kung ano ang DAOs at kung paano maaaring magbago ang mga ito sa hinaharap.
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Magkaroon ng higit pang kaalaman tungkol sa DAOs</div>
-  <ButtonLink to="/dao/">
+  <ButtonLink href="/dao/">
     Iba pang kaalaman ukol sa DAOs
   </ButtonLink>
 </InfoBanner>
@@ -97,17 +97,13 @@ Gayunpaman, itinuturing na DAOs ng mga tao ang maraming komunidad sa Web3. May i
 
 Karaniwan, gagawa ka ng account para sa bawat platform na gagamitin mo. Halimbawa, maaaring mayroon kang Twitter account, Youtube account, at Reddit account. Gustong palitan ang iyong display name o profile picture? Kailangan mo iyong gawin sa bawat account. Maaari ka ring gumamit ng mga social sign-in sa ilang sitwasyon, ngunit magpepresenta ito ng isang pamilyar na problema—censorship. Sa isang click lang, maaaring hindi na ipa-access sa iyo ng mga platform na ito ang iyong buong buhay online. Mas malala pa rito, hinihingi ng maraming plaform na ipagkatiwala mo sa kanila ang personally identifiable information para gumawa ng account.
 
-Nilulutas ng Web3 ang mga problemang ito sa pamamagitan ng pagbibigay sayo ng kontrol sa iyong digital identity gamit ang Ethereum address at ENS profile. Kapag gumamit ng Ethereum address, iisang login na lang ang gagamitin sa mga platform na secure, ligtas sa censorship, at anonymous.
-
-<ButtonLink to="https://login.xyz/">
-  Mag-sign in sa Ethereum
-</ButtonLink>
+Niresolba ng Web3 ang mga problemang ito sa pamamagitan ng pagpapahintulot sa iyo na kontrolin ang iyong digital na pagkakakilanlan gamit ang isang Ethereum address at [Ethereum Name Service (ENS)](/glossary/#ens) na profile. Kapag gumamit ng Ethereum address, iisang login na lang ang gagamitin sa mga platform na secure, ligtas sa censorship, at anonymous.
 
 ### Mga native na pagbabayad {#native-payments}
 
-Ang paraan ng pagbabayad sa Web2 ay nakasalalay sa mga bangko at iba pang payment processor, hindi pa kasama rito ang mga taong walang bank account o nakatira sa mahihigpit na bansa. Gumagamit ang Web3 ng mga token gaya ng [ETH](/eth/) upang direktang magpadala ng pera sa browser at hindi nito kailangan ng pinagkakatiwalaang third party.
+Ang paraan ng pagbabayad sa Web2 ay nakasalalay sa mga bangko at iba pang payment processor, hindi pa kasama rito ang mga taong walang bank account o nakatira sa mahihigpit na bansa. Gumagamit ang Web3 ng mga token gaya ng [ETH](/glossary/#ether) upang direktang magpadala ng pera sa browser at hindi nito kinakailangan ng pinagkakatiwalaang third party.
 
-<ButtonLink to="/eth/">
+<ButtonLink href="/eth/">
   Iba pang kaalaman ukol sa ETH
 </ButtonLink>
 
@@ -117,7 +113,7 @@ Sa kabila ng napakaraming benepisyo ng Web3 sa kasalukuyan, marami pa ring limit
 
 ### Accessibility {#accessibility}
 
-Ang mahahalagang feature ng Web3, gaya ng Mag-sign in sa Ethereum, ay magagamit na ng kahit sino nang libre. Ngunit ang nauugnay na gastos sa mga transaksyon ay napakamahal pa rin para sa nakararami. Maliit ang posibilidad na gamitin ang Web3 sa mga umuunlad at hindi mayaman na bansa dahil sa mahal na bayarin sa transaksyon. Sa Ethereum, nilulutas ang mga problemang ito sa pamamagitan ng [roadmap](/roadmap/) at [mga layer 2 scaling solution](/developers/docs/scaling/). Handa na ang teknolohiya, ngunit kailangang mas marami ang gumamit ng layer 2 para maging accessible ang Web3 sa lahat.
+Ang mahahalagang feature ng Web3, gaya ng Mag-sign in sa Ethereum, ay magagamit na ng kahit sino nang libre. Ngunit ang nauugnay na gastos sa mga transaksyon ay napakamahal pa rin para sa nakararami. Maliit ang posibilidad na gamitin ang Web3 sa mga umuunlad at hindi mayaman na bansa dahil sa mahal na bayarin sa transaksyon. Sa Ethereum, nilulutas ang mga hamon na ito sa pamamagitan ng [roadmap](/roadmap/) at [mga layer 2 na solusyon sa pagpapalawak](/glossary/#layer-2). Handa na ang teknolohiya, ngunit kailangang mas marami ang gumamit ng layer 2 para maging accessible ang Web3 sa lahat.
 
 ### Karanasan ng user {#user-experience}
 

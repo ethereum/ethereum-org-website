@@ -6,7 +6,7 @@ lang: tr
 
 # Bir cüzdan nasıl kullanılır
 
-Bir cüzdanın temel fonksiyonlarının nasıl kullanılacağını öğrenin. Eğer henüz bir cüzdanınız yoksa, [Nasıl yapılır: Bir Ethereum hesabı oluşturun](/guides/how-to-create-an-ethereum-account/) öğreticimize bakın.
+Bir cüzdanın temel fonksiyonlarının nasıl kullanılacağını öğrenin. Eğer halen bir hesabınız yoksa, [Nasıl Ethereum hesabı açılır](/guides/how-to-create-an-ethereum-account/) yazımızı inceleyebilirsiniz.
 
 ## Cüzdanınızı açın
 
@@ -51,7 +51,7 @@ Adresiniz tüm Ethereum projelerinde aynı olacaktır. Hiçbir projeye tek tek k
 
 1. Herhangi bir projenin web sitesine girin.
 2. Eğer projenin giriş sayfası sadece projenin statik bir açıklamasıysa, menüde olan ve sizi asıl web uygulamasına yönlendirecek "Uygulamayı Aç" butonuna basabiliyor olmalısınız.
-3. Uygulamaya girdikten sonra "Bağlan" tuşuna basın
+3. Uygulamaya girdiğinizde "Bağlan" düğmesine tıklayın.
 
 ![Kullanıcının cüzdan ile web sitesine bağlanmasını sağlayan buton](./connect1.png)
 
@@ -64,7 +64,7 @@ Adresiniz tüm Ethereum projelerinde aynı olacaktır. Hiçbir projeye tek tek k
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Daha fazlasını mı öğrenmek istiyorsunuz?</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     Diğer rehberlerimizi inceleyin
   </ButtonLink>
 </InfoBanner>

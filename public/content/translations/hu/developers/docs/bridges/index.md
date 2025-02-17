@@ -1,5 +1,5 @@
 ---
-title: Bridges
+title: Hidak
 description: Fejlesztőknek szóló áttekintés a hidakról
 lang: hu
 ---
@@ -103,7 +103,7 @@ Ha egy dapp egy híd vagy egy aggregátor integrációját választja, az integr
 
 ### Egy dapp telepítése több láncra {#deploying-a-dapp-on-multiple-chains}
 
-Egy dapp több láncra történő telepítéséhez a fejlesztők olyan fejlesztési platformokat használhatnak, mint az [Alchemy](https://www.alchemy.com/), [Hardhat](https://hardhat.org/), [Truffle](https://trufflesuite.com/), [Moralis](https://moralis.io/) stb. Ezek a platformok olyan összeállítható bővítményekkel rendelkeznek, amelyek lehetővé teszik a dappoknak a láncok közötti átjárhatóságot. A fejlesztők például használhatják a [hardhat-deploy plugin](https://github.com/wighawag/hardhat-deploy) által kínált determinisztikus telepítési proxyt.
+Egy dapp több láncra történő telepítéséhez a fejlesztők olyan fejlesztési platformokat használhatnak, mint az [Alchemy](https://www.alchemy.com/), [Hardhat](https://hardhat.org/), [Moralis](https://moralis.io/) stb. Ezek a platformok olyan összeállítható bővítményekkel rendelkeznek, amelyek lehetővé teszik a dappoknak a láncok közötti átjárhatóságot. A fejlesztők például használhatják a [hardhat-deploy plugin](https://github.com/wighawag/hardhat-deploy) által kínált determinisztikus telepítési proxyt.
 
 #### Példák:
 

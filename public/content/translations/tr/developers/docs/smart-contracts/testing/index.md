@@ -20,13 +20,13 @@ Yaklaşımlar farklılıklar gösterse de çoğu test yöntemi, akıllı sözle�
 
 ### Akıllı sözleşmeleri test etmek neden önemlidir? {#importance-of-testing-smart-contracts}
 
-Akıllı sözleşmeler genellikle yüksek değerli finansal varlıkları yönettiğinden, küçük programlama hataları sıklıkla [kullanıcılar için büyük kayıplara](https://rekt.news/leaderboard/) yol açabilir. Ancak titizlikle yapılan testler akıllı sözleşmelerin kodundaki sorunları erkenden fark etmenize ve sözleşmeyi ana ağa dağıtmadan önce düzeltmenize yardımcı olabilir.
+Akıllı sözleşmeler genellikle yüksek değerli finansal varlıkları yönettiğinden, küçük programlama hataları sıklıkla [kullanıcılar için büyük kayıplara](https://rekt.news/leaderboard/) yol açabilir. Ancak titizlikle yapılan testler akıllı sözleşmelerin kodundaki kusurları ve sorunları erkenden fark etmenize ve sözleşmeyi Ana Ağa dağıtmadan önce düzeltmenize yardımcı olabilir.
 
 Bir hata bulunursa sözleşmeyi yükseltmek mümkün olsa da, yükseltmeler karmaşık olduğundan yanlış şekilde ele alınırsa [hatalarla sonuçlanabilir](https://blog.trailofbits.com/2018/09/05/contract-upgrade-anti-patterns/). Bir sözleşmeyi yükseltmek, değişmezlik ilkesini ortadan kaldırır ve kullanıcılara ek güven varsayımları yükler. Bu durumla karşılaşmamak ve sözleşmenizi test etmek için kapsamlı bir plan yapıp akıllı sözleşmenizin güvenlik risklerini azaltırsanız dağıtımdan sonra karmaşık mantık yükseltmelerine ihtiyacınız azalır.
 
 ## Akıllı sözleşme test etme yöntemleri {#methods-for-testing-smart-contracts}
 
-Ethereum akıllı sözleşmelerini test etme yöntemleri iki genel başlık altında sınıflandırılabilir: **otomatik test** ve **manuel test**. Otomatik test ve manuel test, benzersiz avantajlar ve çeşitli artı-eksiler sunar ancak sözleşmelerinizi analiz etmek için sağlam bir plan oluşturmak istiyorsanız ikisini birlikte kullanabilirsiniz.
+Ethereum akıllı sözleşmelerini test etme yöntemleri iki genel kategori altında sınıflandırılabilir: **otomatik test** ve **manuel test**. Otomatik test ve manuel test, benzersiz avantajlar ve çeşitli artı-eksiler sunar ancak sözleşmelerinizi analiz etmek için sağlam bir plan oluşturmak istiyorsanız ikisini birlikte kullanabilirsiniz.
 
 ### Otomatik test {#automated-testing}
 
@@ -110,7 +110,7 @@ function auctionEnd() external {
 
 Bu, teklif verme döneminde teklif almak için tasarlanmış basit bir açık artırma sözleşmesidir. `highestBid` artarsa, en yüksek teklifi veren önceki kişi parasını alır; teklif süresi sona erdiğinde `beneficiary` parasını almak için sözleşmeyi çağırır.
 
-Bunun gibi bir sözleşme için yapılan birim testleri, bir kullanıcının sözleşmeyle etkileşim kurarken çağırabileceği çeşitli tipteki işlevleri kapsar. Örneğin, bir kullanıcının açık artırma devam ederken teklif verip veremeyeceğini (yani, `bid()` çağrılarının başarılı olması) ya da bir kullanıcının mevcut `highestBid` değerinden daha yüksek bir teklif verip veremeyeceğini kontrol eden bir birim testi olabilir.
+Bunun gibi bir sözleşme için yapılan birim testleri, bir kullanıcının sözleşmeyle etkileşim kurarken çağırabileceği çeşitli tipteki işlevleri kapsar. Bir kullanıcının açık artırma devam ederken teklif verip veremeyeceğini (yani `bid()` çağrılarının başarılı olması) ya da bir kullanıcının mevcut `highestBid` değerinden daha yüksek bir teklif verip veremeyeceğini kontrol eden bir birim testi örnek olarak verilebilir.
 
 Bir sözleşmenin operasyonel iş akışını anlamanın bir diğer faydası da yürütmenin gereksinimleri karşılayıp karşılamadığını kontrol eden birim testlerini yazmaya yardımcı olmasıdır. Örneğin açık artırma sözleşmesi, artırma sona erdiğinde (yani `auctionEndTime` değeri `block.timestamp` değerinden düşük olduğunda) kullanıcıların teklif veremeyeceğini belirtir. Bu nedenle bir geliştirici, açık artırma bittiğinde (yani, `auctionEndTime` > `block.timestamp` olduğunda) `bid()` fonksiyonuna yapılan çağrıların başarılı olup olmadığını kontrol eden bir birim testi çalıştırabilir.
 
@@ -138,19 +138,19 @@ Akıllı sözleşmeniz için birim testleri çalıştırmada kullanılan araçla
 
 Solidity akıllı sözleşmeleri için birim testi çerçeveleri farklı dillerde (çoğunlukla JavaScript, Python ve Rust) sunulur. Farklı test çerçeveleri ile birim testleri çalıştırmaya başlamak hakkında bilgi almak için aşağıdaki rehberlere başvurun:
 
-- **[Truffle ile birim testleri çalıştırma](https://trufflesuite.com/docs/truffle/testing/testing-your-contracts/)**
 - **[Brownie ile birim testleri çalıştırma](https://eth-brownie.readthedocs.io/en/v1.0.0_a/tests.html)**
 - **[Foundry ile birim testleri çalıştırma](https://book.getfoundry.sh/forge/writing-tests)**
 - **[Waffle ile birim testleri çalıştırma](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-tests)**
 - **[Remix ile birim testleri çalıştırma](https://remix-ide.readthedocs.io/en/latest/unittesting.html#write-tests)**
 - **[Ape ile birim testleri çalıştırma](https://docs.apeworx.io/ape/stable/userguides/testing.html)**
 - **[Hardhat ile birim testleri çalıştırma](https://hardhat.org/hardhat-runner/docs/guides/test-contracts)**
+- **[Wake ile birim testi çalıştırma](https://ackeeblockchain.com/wake/docs/latest/testing-framework/overview/)**
 
 ### Entegrasyon testi {#integration-testing-for-smart-contracts}
 
 Birim testi izole edilmiş sözleşme işlevlerinde hata ayıklarken, entegrasyon testleri bir akıllı sözleşmenin tüm bileşenlerini bir bütün olarak değerlendirir. Entegrasyon testi, sözleşmeler arası çağrılardan veya aynı akıllı sözleşmedeki farklı işlevler arasındaki etkileşimlerden kaynaklanan sorunları tespit edebilir. Örneğin, entegrasyon testleri [kalıtım](https://docs.soliditylang.org/en/v0.8.12/contracts.html#inheritance) ve bağımlılık enjeksiyonu gibi şeylerin doğru çalışıp çalışmadığını kontrol etmeye yardımcı olabilir.
 
-Entegrasyon testi, sözleşmenizin modüler bir mimariyi benimsemesi ya da yürütülmesi sırasında diğer zincir içi sözleşmelerle arayüz oluşturması açısından kullanışlıdır. Entegrasyon testlerini yürütmenin bir yolu, blok zincirini belirli bir yükseklikte ([Ganache](https://trufflesuite.com/docs/ganache/) veya [Hardhat](https://hardhat.org/hardhat-network/docs/guides/forking-other-networks) gibi bir araç kullanarak) [çatallamak](/glossary/#fork) ve sözleşmeniz ile dağıtılmış sözleşmeler arasındaki etkileşimleri simüle etmektir.
+Entegrasyon testi, sözleşmenizin modüler bir mimariyi benimsemesi ya da yürütülmesi sırasında diğer zincir içi sözleşmelerle arayüz oluşturması açısından kullanışlıdır. Entegrasyon testlerini yürütmenin bir yolu, blokzincirini belirli bir yükseklikte ([Forge](https://book.getfoundry.sh/forge/fork-testing) veya [Hardhat](https://hardhat.org/hardhat-network/docs/guides/forking-other-networks) gibi bir araç kullanarak) [çatallandırmak](/glossary/#fork) ve sözleşmeniz ile dağıtılmış sözleşmeler arasındaki etkileşimleri simüle etmektir.
 
 Çatallanmış blokzincir, ana ağa benzer şekilde davranır ve ilişkili durumları ve bakiyeleri bulunan hesaplara sahiptir. Ancak yalnızca ayrıştırılmış bir yerel geliştirme ortamı olarak işlev görür, yani işlemler için gerçek Ether'e ihtiyacınız olmaz ve yaptığınız değişiklikler gerçek Ethereum ağını etkilemez.
 
@@ -189,9 +189,11 @@ Beklenmeyen girdilerin yanlış işlenmesi, istenmeyen yürütmelere neden olup 
 Testinizi düzgün bir şekilde yapılandırdıktan sonra özellik test aracı akıllı sözleşmelerde fonksiyonlarınızı rastgele üretilmiş girdilerle yürütür. Herhangi bir sav ihlali varsa, değerlendirilmekte olan özellikleri ihlal eden somut girdi verilerini içeren bir rapor almalısınız. Farklı araçlarla özellik tabanlı testler çalıştırmaya başlamakla ilgili kılavuzlara bakabilirsiniz:
 
 - **[Slither ile akıllı sözleşmelerin statik analizi](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither#slither)**
+- **[Wake ile akıllı sözleşmelerin statik analizi](https://ackeeblockchain.com/wake/docs/latest/static-analysis/using-detectors/)**
 - **[Brownie ile özellik tabanlı test](https://eth-brownie.readthedocs.io/en/stable/tests-hypothesis-property.html)**
 - **[Foundry ile sözleşme bulanıklaştırma](https://book.getfoundry.sh/forge/fuzz-testing)**
 - **[Echidna ile sözleşme bulanıklaştırma](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna#echidna-tutorial)**
+- **[Wake ile sözleşme bulanıklaştırma](https://ackeeblockchain.com/wake/docs/latest/testing-framework/fuzzing/)**
 - **[Manticore ile akıllı sözleşmeleri sembolik yürütme](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore#manticore-tutorial)**
 - **[Mythril ile akıllı sözleşmeleri sembolik yürütme](https://mythril-classic.readthedocs.io/en/master/tutorial.html)**
 
@@ -239,7 +241,7 @@ Yine de, bağımsız bir kod incelemesi ile sözleşmenin güvenlik açıkların
 
 Denetimler, akıllı sözleşmelerde güvenlik açıkları ve zayıf geliştirme uygulamaları durumlarını bulma konusunda deneyimli denetçiler tarafından gerçekleştirilir. Bir denetim genellikle testin (ve muhtemelen resmi doğrulamanın) yanı sıra tüm kod tabanının manuel olarak gözden geçirilmesini içerir.
 
-Bunun aksine hata ödül programı, genellikle akıllı sözleşmelerde bir güvenlik açığı keşfeden ve geliştiricilere açıklayan bir bireye (genellikle [beyaz şapkalı hackerlar](<https://en.wikipedia.org/wiki/White_hat_(computer_security)>) olarak tanımlanan) maddi bir ödül sunmayı içerir. Hata ödülleri, başkalarından akıllı sözleşmelerdeki kusurları bulmalarına yardım etmelerini içerdiğinden denetimlere benzer.
+Bunun aksine hata ödül programı, genellikle akıllı sözleşmelerde bir güvenlik açığı keşfeden ve geliştiricilere açıklayan bir bireye (genellikle [beyaz şapkalı hackerlar](https://en.wikipedia.org/wiki/White_hat_(computer_security)) olarak tanımlanan) maddi bir ödül sunmayı içerir. Hata ödülleri, başkalarından akıllı sözleşmelerdeki kusurları bulmalarına yardım etmelerini içerdiğinden denetimlere benzer.
 
 En önemli fark, hata ödül programlarının daha geniş bir geliştirici/hacker topluluğuna açık olması ve özgün yetenek ve deneyime sahip etik hacker ve bağımsız güvenlik profesyonellerinden oluşan bir grubu kendine çekmesidir. Bu, esas olarak sınırlı veya dar uzmanlığa sahip ekiplere emanet edilen akıllı sözleşme denetimlerine göre bir avantaj olabilir.
 
@@ -255,8 +257,6 @@ En önemli fark, hata ödül programlarının daha geniş bir geliştirici/hacke
 
 - **[OpenZeppelin Test Yardımcıları](https://github.com/OpenZeppelin/openzeppelin-test-helpers)** - _Ethereum akıllı sözleşme testi için sav kütüphanesi. Sözleşmelerinizin beklendiği gibi davrandığından emin olun!_
 
-- **[Truffle Testleri](https://hardhat.org/hardhat-runner/docs/guides/test-contracts#testing-contracts)** - _Sözleşmelerinizi test etmeyi kolaylaştıran, otomatikleştirilmiş bir test çerçevesi._
-
 - **[Brownie birim test çerçevesi](https://eth-brownie.readthedocs.io/en/v1.0.0_a/tests.html)** - _Brownie, minimum kodla küçük testler yazmanıza olanak tanıyan, büyük projeler için iyi ölçeklenen ve oldukça genişletilebilir, zengin özelliklere sahip bir test çerçevesi olan Pytest'i kullanır._
 
 - **[Foundry Testleri](https://github.com/foundry-rs/foundry/tree/master/forge)** - _Foundry, basit birim testleri, gaz optimizasyon kontrolleri ve sözleşme bulanıklaştırma gerçekleştirebilen hızlı ve esnek bir Ethereum test çerçevesi olan Forge'u barındırır._
@@ -265,6 +265,8 @@ En önemli fark, hata ödül programlarının daha geniş bir geliştirici/hacke
 
 - **[ApeWorx](https://docs.apeworx.io/ape/stable/userguides/testing.html)** - _Ethereum Sanal Makinası'nı hedefleyen akıllı sözleşmeleri test etmek için Python tabanlı geliştirme ve test çerçevesi._
 
+- **[Wake](https://ackeeblockchain.com/wake/docs/latest/testing-framework/overview/)** - _En iyi kullanıcı deneyimi ve performansı için pytest ve Anvil kullanan, güçlü hata ayıklama yetenekleri ve zincirler arası test desteği ile birim testi ve fuzz testine yönelik Python tabanlı bir geliştirici alanıdır._
+
 ### Özellik tabanlı test araçları {#property-based-testing-tools}
 
 #### Statik analiz araçları {#static-analysis-tools}
@@ -272,6 +274,10 @@ En önemli fark, hata ödül programlarının daha geniş bir geliştirici/hacke
 - **[Slither](https://github.com/crytic/slither)** - _Güvenlik açıklarını bulmaya, kod kavramayı geliştirmeye ve akıllı sözleşmeler için özel analizler yazmaya yarayan Python tabanlı Solidity statik analiz çerçevesi._
 
 - **[Ethlint](https://ethlint.readthedocs.io/en/latest/)** - _Solidity akıllı sözleşme programlama dilinin tarz ve güvenlik en iyi uygulamalarının yürütülmesini sağlamaya yarayan linter._
+
+- **[Cyfrin Aderyn](https://cyfrin.io/tools/aderyn)** - _Web3 akıllı sözleşme güvenliği ve geliştirmesi için özel olarak tasarlanan, Rust tabanlı bir statik analiz aracıdır._
+
+- **[Wake](https://ackeeblockchain.com/wake/docs/latest/static-analysis/using-detectors/)** - _Güvenlik açığı ve kod kalitesi dedektörleri, koddan yararlı bilgiler ayıklamak için yazıcılar ve özel alt modüller yazma desteği ile Python tabanlı bir statik analiz geliştirici ortamıdır._
 
 #### Dinamik analiz araçları {#dynamic-analysis-tools}
 
@@ -287,14 +293,12 @@ En önemli fark, hata ödül programlarının daha geniş bir geliştirici/hacke
 
 ## İlgili öğreticiler {#related-tutorials}
 
-- [Truffle testleri için Travis veya Circle Continuous Integration (CI) nasıl kurulur?](/developers/tutorials/solidity-and-truffle-continuous-integration-setup/)
 - [Farklı test ürünlerine genel bakış ve ürünlerin karşılaştırılması](/developers/tutorials/guide-to-smart-contract-security-tools/) \_
 - [Akıllı sözleşmeleri test etmek için Echidna nasıl kullanılır](/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/)
 - [Manticore kullanarak akıllı sözleşme hataları nasıl bulunur?](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
-- [Akıllı sözleşme hatalarını bulmak için Slither nasıl kullanılır](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
+- [Akıllı sözleşme hatalarını bulmak için Slither nasıl kullanılır?](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
 - [Solidity sözleşmeleri test etmek için nasıl taklit edilir?](/developers/tutorials/how-to-mock-solidity-contracts-for-testing/)
-- [Truffle Testlerinden OpenZeppelin Test Ortamı'na nasıl geçiş yapılır?](https://docs.openzeppelin.com/test-environment/0.1/migrating-from-truffle)
-- [Sözleşmeler ağa dağıtıldıktan sonra nasıl test edilir?](https://fulldecent.blogspot.com/2019/04/testing-deployed-ethereum-contracts.html)
+- [Foundry'de Solidity kullanarak birim testi çalıştırma](https://www.rareskills.io/post/foundry-testing-solidity)
 
 ## Daha fazla bilgi {#further-reading}
 

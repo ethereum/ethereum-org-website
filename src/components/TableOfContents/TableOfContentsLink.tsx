@@ -1,10 +1,8 @@
-import { cssVar, SystemStyleObject } from "@chakra-ui/react"
-
 import type { ToCItem } from "@/lib/types"
 
-import { BaseLink } from "@/components/Link"
+import { cn } from "@/lib/utils/cn"
 
-import { useRtlFlip } from "@/hooks/useRtlFlip"
+import { BaseLink } from "../ui/Link"
 
 export type TableOfContentsLinkProps = {
   depth: number
@@ -17,71 +15,25 @@ const Link = ({
   item: { title, url },
   activeHash,
 }: TableOfContentsLinkProps) => {
-  const { flipForRtl } = useRtlFlip()
   const isActive = activeHash === url
-  const isNested = depth === 2
-
-  const classList: Array<string> = []
-  isActive && classList.push("active")
-  isNested && classList.push("nested")
-  const classes = classList.join(" ")
-
-  const $dotBg = cssVar("dot-bg")
-
-  const hoverOrActiveStyle: SystemStyleObject = {
-    color: "primary.base",
-    _after: {
-      content: `""`,
-      background: $dotBg.reference,
-      border: "1px",
-      borderColor: "primary.base",
-      borderRadius: "50%",
-      boxSize: 2,
-      position: "absolute",
-      insetInlineStart: "-1.29rem",
-      top: "50%",
-      mt: -1,
-    },
-  }
 
   return (
     <BaseLink
       href={url}
-      className={classes}
-      textDecoration="none"
-      display="inline-block"
-      position="relative"
-      color="textTableOfContents"
-      fontWeight="normal"
-      mb="0.5rem !important"
-      width={{ base: "100%", lg: "auto" }}
-      _hover={{
-        ...hoverOrActiveStyle,
-      }}
-      sx={{
-        [$dotBg.variable]: "colors.background",
-        "&.active": {
-          [$dotBg.variable]: "colors.primary",
-          ...hoverOrActiveStyle,
-        },
-        "&.nested": {
-          _before: {
-            content: `"⌞"`,
-            opacity: 0.5,
-            display: "inline-flex",
-            position: "absolute",
-            insetInlineStart: -3.5,
-            top: -1,
-            transform: flipForRtl,
-          },
-          "&.active, &:hover": {
-            _after: {
-              insetInlineStart: "-2.29rem",
-            },
-          },
-        },
-      }}
+      className={cn(
+        "group relative inline-block w-full p-2 ps-0 text-body-medium no-underline lg:w-auto",
+        isActive && "visited"
+      )}
     >
+      <div
+        className={cn(
+          "absolute top-1/2 -mt-1 hidden h-2 w-2 rounded-full border border-primary-hover bg-background group-hover:inline-block",
+          isActive && "inline-block"
+        )}
+        style={{
+          insetInlineStart: `calc(-16px - 8px * ${depth} - 4px - 1px)`,
+        }}
+      />
       {title}
     </BaseLink>
   )

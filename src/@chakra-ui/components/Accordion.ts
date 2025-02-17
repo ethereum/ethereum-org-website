@@ -5,6 +5,12 @@ const { defineMultiStyleConfig, definePartsStyle } =
   createMultiStyleConfigHelpers(accordionAnatomy.keys)
 
 const baseStyle = definePartsStyle({
+  container: {
+    "& > :is(h2, h3)": {
+      fontSize: "initial",
+      fontWeight: "initial",
+    },
+  },
   button: {
     py: "2",
     px: { base: "2", md: "4" },

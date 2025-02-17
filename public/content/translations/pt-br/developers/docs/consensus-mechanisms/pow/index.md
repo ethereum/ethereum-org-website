@@ -12,7 +12,7 @@ A rede Ethereum começou usando um mecanismo de consenso que envolvia **[Prova d
 
 ## Pré-requisitos {#prerequisites}
 
-Para entender melhor esta página, recomendamos ler primeiro sobre [transações](/developers/docs/transactions/), [blocos](/developers/docs/blocks/) e [mecanismos de consenso](/developers/docs/consensus-mechanisms/).
+Para entender melhor esta página, recomendamos ler primeiro sobre [ transações ](/developers/docs/transactions/), [blocos](/developers/docs/blocks/) e [mecanismos de consenso](/developers/docs/consensus-mechanisms/).
 
 ## O que é prova de trabalho (PoW)? {#what-is-pow}
 
@@ -68,7 +68,7 @@ Para complicar ainda mais, as transações rejeitadas na bifurcação temporári
 
 ## Uso de energia na prova de trabalho {#energy}
 
-Uma importante crítica à prova de trabalho é a quantidade de energia necessária para manter a rede segura. Para manter a segurança e a descentralização, o Ethereum na prova de trabalho consumia grandes quantidades de energia. Pouco antes de mudar para a prova de participação, os mineradores do Ethereum consumiam coletivamente cerca de 70 TWh/ano (aproximadamente o mesmo que a República Tcheca – de acordo com [digiconomist](https://digiconomist.net/) em 18 de julho de 2022).
+Uma importante crítica à prova de trabalho é a quantidade de energia necessária para manter a rede segura. Para manter a segurança e a descentralização, o Ethereum na prova de trabalho consumia grandes quantidades de energia. Pouco antes de mudar para a prova de participação, os mineradores do Ethereum consumiam coletivamente cerca de 70 TWh/ano (aproximadamente o mesmo que a República Tcheca, de acordo com [digiconomist](https://digiconomist.net/) em 18 de julho de 2022).
 
 ## Prós e contras {#pros-and-cons}
 
@@ -106,3 +106,4 @@ Em termos gerais, a prova de participação tem o mesmo objetivo final que a pro
 
 - [Mineração](/developers/docs/consensus-mechanisms/pow/mining/)
 - [Prova de participação](/developers/docs/consensus-mechanisms/pos/)
+- [Prova de autoridade](/developers/docs/consensus-mechanisms/poa/)

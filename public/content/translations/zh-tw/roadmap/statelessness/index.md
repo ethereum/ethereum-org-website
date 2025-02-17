@@ -72,7 +72,7 @@ EIP-4444 尚未準備好上線，但正在積極討論當中。 有趣的是，E
 
 無狀態依賴區塊建置者維護完整狀態資料的副本，這樣它們才能產生用於驗證區塊的證據。 其他節點不需要存取狀態資料，驗證區塊所需的所有資訊都可以從證據中取得。 這導致了這樣一種狀況：提出區塊的成本很高，但驗證區塊很便宜，表示較少的運營商會選擇運行區塊提出節點。 然而，只要盡可能多的參與者能夠獨立驗證所提出區塊的有效性，區塊提交者的去中心化程度就不是非常重要。
 
-<ButtonLink variant="outline-color" to="https://notes.ethereum.org/WUUUXBKWQXORxpFMlLWy-w#So-why-is-it-ok-to-have-expensive-proposers">閱讀關於 Dankrad 筆記的更多資訊</ButtonLink>
+<ButtonLink variant="outline-color" href="https://notes.ethereum.org/WUUUXBKWQXORxpFMlLWy-w#So-why-is-it-ok-to-have-expensive-proposers">閱讀關於 Dankrad 筆記的更多資訊</ButtonLink>
 </ExpandableCard>
 
 區塊提交者使用狀態資料來建立「證據」，即證明區塊中的交易正在更改的狀態值的最小資料集。 其他驗證者不儲存狀態，只儲存狀態根（整個狀態的的雜湊值）。 他們會接收區塊和證據，然後用其更新自己的狀態根。 這使得驗證節點的工作變得極輕量。

@@ -33,7 +33,7 @@ In einem Polynombindungs-Schema haben die Zeugen überschaubare Größen, die le
 
 <ExpandableCard title="Exakt wieviel können Verkle Bäume die Zeugengröße reduzieren?" eventCategory="/roadmap/verkle-trees" eventName="clicked exactly how much can Verkle trees reduce witness size?">
 
-Die Größe des Zeugen variiert abhängig von der Anzahl der Blätter, die er enthält. Davon ausgehend, dass ein Zeuge 1000 Blätter abdeckt, wäre ein Zeuge für einen Merkle Baum ungefähr 3,5 MB (von 7 Ebenen im Trie ausgehend). Ein Zeuge für die selben Daten in einem Verkle Baum (von 4 Ebenen zum Baum ausgehend) würde ungefähr 150 kB an Daten ergeben -**etwa 23x kleiner**. Diese Reduktion der Zeugengröße wird Zeugen in zustandsfreien Clients ermöglichen, akzeptabel klein zu sein. Polynomzeugen sind 0,128-1 kB klein (abhängig, welche Polynombindung verwendet wird).
+Die Größe des Zeugen variiert abhängig von der Anzahl der Blätter, die er enthält. Davon ausgehend, dass ein Zeuge 1000 Blätter abdeckt, wäre ein Zeuge für einen Merkle Baum ungefähr 3,5 MB (von 7 Ebenen im Trie ausgehend). Ein Zeuge für die selben Daten in einem Verkle Baum (von 4 Ebenen zum Baum ausgehend) würde ungefähr 150 kB an Daten ergeben -**etwa 23x kleiner**. Diese Reduktion der Zeugengröße wird Zeugen in zustandsfreien Clients ermöglichen, akzeptabel klein zu sein. Polynomzeugen sind 0,128–1 kB groß; abhängig davon, welches spezifische Polynom-Commitment verwendet wird.
 
 </ExpandableCard>
 
@@ -49,17 +49,18 @@ Verkle Bäume sind `(key,value)` Paare, in denen die keys 32-byte Elemente zusam
 
 Verkle Tree Testnetzwerke laufen bereits, aber es sind noch substantielle Updates der Clients vonnöten, um Verkle Bäume zu unterstützen. Sie können dazu beitragen, den Fortschritt zu beschleunigen, indem Sie Kontrakte in die Testnets einbringen oder Testnet-Clients betreiben.
 
-[Schauen Sie sich das Beverly Hills Verkle Testnetzwerk an](https://beverlyhills.ethpandaops.io)
+[Entdecken Sie das Verkle Gen Devnet 2-Testnetz](https://verkle-gen-devnet-2.ethpandaops.io/)
 
-[Guillaume Ballet erklärt das Condrieu Verkle Testnetzwerk](https://www.youtube.com/watch?v=cPLHFBeC0Vg) (Beachten Sie, dass das Condrieu Testnetzwerk ein proof-of-work war und nun durch das [Kaustinen Testnetzwerk](https://kaustinen.ethdevops.io) ersetzt wurde).
+[Sehen Sie sich an, wie Guillaume Ballet das Condrieu Verkle-Testnetz erklärt](https://www.youtube.com/watch?v=cPLHFBeC0Vg) (beachten Sie, dass das Condrieu-Testnetz Proof-of-Work war und durch das Verkle Gen Devnet 2-Testnetz ersetzt wurde).
 
 ## Weiterführende Informationen {#further-reading}
 
+- [Verkle Trees für Zustandslosigkeit](https://verkle.info/)
 - [Dankrad Feist erklärt Verkle Trees bei PEEPanEIP](https://www.youtube.com/watch?v=RGJOQHzg3UQ)
 - [Guillaume Ballet erklärt Verkle Trees bei ETHGlobal](https://www.youtube.com/watch?v=f7bEtX3Z57o)
 - ["Wie Verkle Trees Ethereum schlank und super machen" von Guillaume Ballet bei Devcon 6](https://www.youtube.com/watch?v=Q7rStTKwuYs)
 - [Piper Merriam über zustandsfreie Clients bei ETHDenver 2020](https://www.youtube.com/watch?v=0yiZJNciIJ4)
-- [Dankrad Feist erklärt Verkle Trees und Zustandsfreiheit auf dem Zero Knowledge Podcast](https://zeroknowledge.fm/episode-202-stateless-ethereum-verkle-tries-with-dankrad-feist/)
+- [Dankrad Fiest erklärt Verkle Trees und Zustandslosigkeit im Podcast zu Null-Wissen](https://zeroknowledge.fm/episode-202-stateless-ethereum-verkle-tries-with-dankrad-feist/)
 - [Vitalik Buterin über Verkle Trees](https://vitalik.eth.limo/general/2021/06/18/verkle.html)
 - [Dankrad Feist über Verkle Trees](https://dankradfeist.de/ethereum/2021/06/18/verkle-trie-for-eth1.html)
 - [Verkle Trees EIP Dokumentation](https://notes.ethereum.org/@vbuterin/verkle_tree_eip#Illustration)

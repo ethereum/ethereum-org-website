@@ -155,6 +155,8 @@ ERC-20トークンを扱えるように設計されていないスマートコ�
 3.  組み込まれた処理が無い
     -   ERC-20標準では、受け取るコントラクが実装する必須関数が含まれていません。そのため、多くのコントラクトでは、送られてくるトークンを適切に扱うことができない状態が生じています。
 
+この問題から、[ERC-223](/developers/docs/standards/tokens/erc-223)などの代替規格が登場しています。
+
 ## 参考文献 {#further-reading}
 
 - [EIP-20：ERC-20トークン規格](https://eips.ethereum.org/EIPS/eip-20)
@@ -165,5 +167,6 @@ ERC-20トークンを扱えるように設計されていないスマートコ�
 
 ## その他の代替性トークン {#fungible-token-standards}
 
+- [ERC-223](/developers/docs/standards/tokens/erc-223)
 - [ERC-777](/developers/docs/standards/tokens/erc-777)
 - [ERC-4626 - トークン化ボールト](/developers/docs/standards/tokens/erc-4626)

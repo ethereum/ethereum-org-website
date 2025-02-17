@@ -6,13 +6,13 @@ lang: de
 
 # So tauschen Sie Token
 
-Sind Sie es leid, nach einer Börse zu suchen, die all Ihre Lieblings-Token auflistet? Sie können all dies auch mit dezentralisierten Krypto-Börsen tun.
+Sind Sie es leid, nach einer Börse zu suchen, die all Ihre Lieblings-Token auflistet? Sie können die meisten Token mithilfe von [dezentralisierten Börsen](/glossary/#dex) tauschen.
 
-Ein Token-Swap beinhaltet den Austausch von zwei verschiedenen Assets im Ethereum-Netzwerk, zum Beispiel den Austausch von ETH für DAI (ERC-20-Token). Der Prozess ist sehr schnell und preiswert. Sie brauchen eine Krypto-Wallet, um die Token zu tauschen.
+Ein Token-Tausch beinhaltet den Tausch zweier verschiedener Assets, die auf dem Ethereum-Netzwerk existieren, zum Beispiel der Tausch von ETH gegen DAI (ein [ERC-20](/glossary/#erc-20)-Token). Der Prozess ist sehr schnell und preiswert. Sie brauchen eine Krypto-Wallet, um die Token zu tauschen.
 
 **Voraussetzung:**
 
-- Haben Sie eine Krypto-Wallet, können Sie sich dieses Tutorium ansehen: [So "registrieren" Sie ein Ethereum-Konto](/guides/how-to-create-an-ethereum-account/)
+- Besitz einer [Krypto-Wallet](/glossary/#wallet). Sie können diesem Tutorial folgen: [Wie Sie einen Ethereum-Account „registrieren“](/guides/how-to-create-an-ethereum-account/)
 - Laden Sie Ihre Krypto-Wallet auf
 
 ## 1. Verbinden Sie Ihre Krypto-Wallet mit einem Exchange (DEX) Ihrer Wahl
@@ -24,7 +24,7 @@ Einige beliebte Börsen sind:
 - [1Inch](https://app.1inch.io/#/1/unified/swap/ETH/DAI)
 - [Curve](https://curve.fi/#/ethereum/swap)
 
-Wenn Sie mehr darüber erfahren möchten, was DeFi ist und wie diese neuen Arten von Börsen funktionieren, können wir Ihnen die [Kernel-Bibliothek](https://library.kernel.community/Topic+-+DeFi/Topic+-+DeFi) empfehlen.
+Interessiert? Erfahren Sie mehr darüber, was [das dezentrale Finanzwesen (DeFi)](/defi/) ist und wie diese neuen Börsen funktionieren.
 
 ## 2. Wählen Sie die Token aus, die Sie tauschen wollen
 
@@ -51,7 +51,7 @@ Sie werden die getauschten Token automatisch in Ihrer Krypto-Wallet erhalten, we
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Möchten Sie mehr erfahren?</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     Sehen Sie unsere anderen Anleitungen
   </ButtonLink>
 </InfoBanner>

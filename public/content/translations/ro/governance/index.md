@@ -32,7 +32,7 @@ Abordarea opusă, guvernanța off-chain, este cea în care orice decizie de modi
 
 _În timp ce, la nivel de protocol, guvernanța în Ethereum este off-chain, în numeroase cazuri sistemele dezvoltate pe Ethereum, cum ar fi organizațiile DAO, utilizează guvernanța on-chain._
 
-<ButtonLink to="/dao/">
+<ButtonLink href="/dao/">
   Mai multe despre organizațiile DAO
 </ButtonLink>
 
@@ -58,7 +58,7 @@ _Notă: orice persoană poate face parte din mai multe dintre aceste grupuri (de
 
 Un proces important folosit în guvernanța Ethereum este cel al sugerării de **Propuneri de îmbunătățire pentru Ethereum (EIP-uri)**. EIP-urile sunt standarde care specifică potențiale caracteristici sau procese noi pentru Ethereum. Oricine din comunitatea Ethereum poate crea un EIP. De exemplu, niciunul dintre autorii EIP-721, EIP-ul care a standardizat NFT-urile, nu a lucrat direct la dezvoltarea protocolului Ethereum.
 
-<ButtonLink to="/eips/">
+<ButtonLink href="/eips/">
   Mai multe despre EIP-uri
 </ButtonLink>
 
@@ -154,7 +154,7 @@ Deși dezvoltarea specificațiilor și implementărilor a fost întotdeauna comp
 
 Când Lanțul Beacon se va uni cu nivelul execuției în Ethereum, procesul de guvernanță pentru a propune modificări va fi armonizat. Acest proces de implementare a fuziunii este [deja în curs de desfășurare](https://eips.ethereum.org/EIPS/eip-3675).
 
-<ButtonLink to="/roadmap/merge/">
+<ButtonLink href="/roadmap/merge/">
   Mai multe despre fuziune
 </ButtonLink>
 

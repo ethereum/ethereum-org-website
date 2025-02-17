@@ -72,11 +72,11 @@ These are just a few examples of how user experiences could be leveled up by acc
 
 ## How will account abstraction be implemented? {#how-will-aa-be-implemented}
 
-Smart contract wallets exist today but are challenging to implement because the EVM does not support them. Instead, they rely on wrapping relatively complex code around standard Ethereum transactions. Ethereum can change this by allowing smart contracts to initiate transactions, handling the necessary logic in Ethereum smart contracts instead of off-chain. Putting logic into smart contracts also increases Ethereum's decentralization since it removes the need for "relayers" run by wallet developers to translate messages signed by the user to regular Ethereum transactions.
+Smart contract wallets exist today but are challenging to implement because the EVM does not support them. Instead, they rely on wrapping relatively complex code around standard Ethereum transactions. Ethereum can change this by allowing smart contracts to initiate transactions, handling the necessary logic in Ethereum smart contracts instead of offchain. Putting logic into smart contracts also increases Ethereum's decentralization since it removes the need for "relayers" run by wallet developers to translate messages signed by the user to regular Ethereum transactions.
 
 <ExpandableCard title="EIP-2771: account abstraction using meta-transactions" eventCategory="/roadmap/account-abstract" eventName="clicked EIP-2771: account abstraction using meta-transactions">
 
-EIP-2771 introduces the concept of meta-transactions that allow third parties to pay for a user's gas costs without making changes to the Ethereum protocol. The idea is that transactions signed by a user get sent to a `Forwarder` contract. The forwarder is a trusted entity that verifies that transactions are valid before sending them on to a gas relay. This is done off-chain, avoiding the need to pay gas. The gas relay passes the transaction on to a `Recipient` contract, paying the necessary gas to make the transaction executable on Ethereum. The transaction is executed if the `Forwarder` is known and trusted by the `Recipient`. This model makes it easy for developers to implement gasless transactions for users.
+EIP-2771 introduces the concept of meta-transactions that allow third parties to pay for a user's gas costs without making changes to the Ethereum protocol. The idea is that transactions signed by a user get sent to a `Forwarder` contract. The forwarder is a trusted entity that verifies that transactions are valid before sending them on to a gas relay. This is done offchain, avoiding the need to pay gas. The gas relay passes the transaction on to a `Recipient` contract, paying the necessary gas to make the transaction executable on Ethereum. The transaction is executed if the `Forwarder` is known and trusted by the `Recipient`. This model makes it easy for developers to implement gasless transactions for users.
 
 </ExpandableCard>
 
@@ -108,7 +108,9 @@ Note that EIP-3074 is currently not active. The community is currently favoring 
 
 ## Current progress {#current-progress}
 
-Smart contract wallets are already available, but more upgrades are required to make them as decentralized and permissionless as possible. EIP-4337 is a mature proposal that does not require any changes to Ethereum's protocol, so it is possible that this could be implemented quickly. However, upgrades that alter Ethereum's protocol are currently not in active development, so those changes may take much longer to ship. It is also possible that account abstraction is achieved well enough by EIP-4337 that no protocol changes are ever required.
+Smart contract wallets are already available, but more upgrades are required to make them as decentralized and permissionless as possible. EIP-4337 is a mature proposal that does not require any changes to Ethereum's protocol, so it is possible that this could be implemented quickly. However, upgrades that alter Ethereum's protocol are currently not in active development, so those changes may take much longer to ship. It is also possible that account abstraction is achieved well enough by EIP-4337 that no protocol changes are ever required. 
+
+**Note**: You can track adoption of ERC-4337 smart contract wallets [via this dashboard](https://www.bundlebear.com/overview/all).
 
 ## Further reading {#further-reading}
 
@@ -124,3 +126,7 @@ Smart contract wallets are already available, but more upgrades are required to 
 - [EIP-4337 documentation](https://eips.ethereum.org/EIPS/eip-4337)
 - [EIP-2771 documentation](https://eips.ethereum.org/EIPS/eip-2771)
 - ["Basics of Account Abstraction" -- What is Account Abstraction Part I](https://www.alchemy.com/blog/account-abstraction)
+- [Charting Ethereum's Account Abstraction Roadmap I: EIP-3074, EIP-5806, & EIP-7702](https://research.2077.xyz/charting-ethereums-account-abstraction-roadmap-eip-3074-eip-5806-eip-7702)
+- [Awesome Account Abstraction](https://github.com/4337Mafia/awesome-account-abstraction)
+- [Modular Account Abstraction for Everyone Else](https://blog.rhinestone.wtf/part-1-modular-account-abstraction-for-everyone-else-84567422bc46)
+

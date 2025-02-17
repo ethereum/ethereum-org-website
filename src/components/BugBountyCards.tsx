@@ -1,105 +1,70 @@
+import { BaseHTMLAttributes } from "react"
 import { useTranslation } from "next-i18next"
-import {
-  Box,
-  type BoxProps,
-  Center,
-  type CenterProps,
-  Divider,
-  Flex,
-  type FlexProps,
-  Heading,
-  type HeadingProps,
-  type TextProps,
-  useToken,
-} from "@chakra-ui/react"
 
 import type { ChildOnlyProp, TranslationKey } from "@/lib/types"
 
-import { ButtonLink, type ButtonLinkProps } from "@/components/Buttons"
-import Text from "@/components/OldText"
+import { cn } from "@/lib/utils/cn"
+
+import { ButtonLink, ButtonLinkProps } from "./ui/buttons/Button"
+import { Center, Flex, Stack } from "./ui/flex"
+
+type FlexProps = BaseHTMLAttributes<HTMLDivElement>
 
 const CardRow = ({ children }: ChildOnlyProp) => (
-  <Flex justifyContent="space-between" my="16" mx="4" flexWrap="wrap">
-    {children}
-  </Flex>
+  <Flex className="mx-4 my-16 flex-wrap justify-between">{children}</Flex>
 )
 
-const SubmitBugBountyButton = ({ children, ...props }: ButtonLinkProps) => (
-  <ButtonLink m="4" to="https://forms.gle/Gnh4gzGh66Yc3V7G8" {...props}>
+const SubmitBugBountyButton = ({
+  children,
+  ...props
+}: Omit<ButtonLinkProps, "href">) => (
+  <ButtonLink
+    className="m-4"
+    href="https://forms.gle/Gnh4gzGh66Yc3V7G8"
+    {...props}
+  >
     {children}
   </ButtonLink>
 )
 
 const Card = ({ children, ...props }: FlexProps) => {
-  const tableBoxShadow = useToken("colors", "tableBoxShadow")
-
   return (
-    <Flex
-      flexDir="column"
-      flex={{ base: "1 1 412px", xl: "1 1 260px" }}
-      justifyContent="space-between"
-      bg="background.base"
-      borderRadius="2px"
-      borderRad
-      boxShadow={tableBoxShadow}
-      border="1px solid"
-      borderColor="border"
-      m="4"
-      _hover={{
-        borderRadius: "base",
-        boxShadow: "tableBoxHover",
-        background: "tableBackgroundHover",
-        transition: "transform 0.1s",
-        transform: "scale(1.02)",
-      }}
+    <Stack
+      className={cn(
+        "flex-[1_1_412px] gap-0 xl:flex-[1_1_216px]",
+        "m-4 justify-between bg-background",
+        "rounded-sm border shadow-table-box",
+        "hover:scale-[1.02] hover:rounded hover:bg-background-highlight hover:shadow-table-box-hover hover:transition-transform hover:duration-100"
+      )}
       {...props}
     >
       {children}
-    </Flex>
+    </Stack>
   )
 }
 
 type LabelVariant = "low" | "medium" | "high" | "critical"
 
-type LabelProps = CenterProps & {
+type LabelProps = FlexProps & {
   variant: LabelVariant
 }
 
-const stylePropsByVariant = {
-  low: {
-    bg: "lowBug",
-    color: "black300",
-  },
-  medium: {
-    bg: "mediumBug",
-    color: "black300",
-  },
-  high: {
-    bg: "fail400",
-    color: "white",
-  },
-  critical: {
-    bg: "fail600",
-    color: "white",
-  },
+const classNameByVariant = {
+  low: "bg-red-100 text-black",
+  medium: "bg-red-300 text-black",
+  high: "bg-red-700 text-white",
+  critical: "bg-red-900 text-white",
 }
 
 const Label = ({ children, variant = "medium", ...props }: LabelProps) => {
-  const variantStyleProps = stylePropsByVariant[variant]
+  const variantClassName = classNameByVariant[variant]
 
   return (
     <Center
-      borderTopEndRadius="1px"
-      borderTopStartRadius="1px"
-      borderBottomEndRadius={0}
-      borderBottomStartRadius={0}
-      borderBottom="1px solid"
-      borderColor="border"
-      fontSize="sm"
-      px="0"
-      py="1"
-      textTransform="uppercase"
-      {...variantStyleProps}
+      className={cn(
+        "rounded-t-[1px] border-b px-0 py-1 text-sm uppercase",
+        variantClassName
+      )}
       {...props}
     >
       {children}
@@ -107,48 +72,34 @@ const Label = ({ children, variant = "medium", ...props }: LabelProps) => {
   )
 }
 
-const H2 = ({ children, ...props }: HeadingProps) => (
-  <Heading
-    fontSize="2xl"
-    fontStyle="normal"
-    fontWeight="bold"
-    lineHeight="22px"
-    letterSpacing="normal"
-    p="4"
-    textAlign="start"
-    mb="-2"
-    mt="2"
+const H2 = ({ children, ...props }) => (
+  <h2
+    className={cn("-mb-2 mt-2 p-4", "text-start text-2xl font-bold leading-6")}
     {...props}
   >
     {children}
-  </Heading>
+  </h2>
 )
 
-const Description = ({ children, ...props }: TextProps) => (
-  <Text as="p" fontSize="xl" px="4" py="0" opacity="0.6" {...props}>
+const Description = ({ children, ...props }) => (
+  <p className="mb-6 px-4 py-0 text-xl opacity-60" {...props}>
     {children}
-  </Text>
+  </p>
 )
 
-const SubHeader = ({ children, ...props }: TextProps) => (
-  <Text
-    as="p"
-    textTransform="uppercase"
-    fontSize="sm"
-    ms="4"
-    mt="4"
-    mb="2"
-    opacity="0.6"
-    {...props}
-  >
+const SubHeader = ({ children, ...props }) => (
+  <p className="mb-2 ms-4 mt-4 text-sm uppercase opacity-60" {...props}>
     {children}
-  </Text>
+  </p>
 )
 
-const TextBox = ({ children, ...props }: BoxProps) => (
-  <Box m="4" mt="2" {...props}>
+const TextBox = ({
+  children,
+  ...props
+}: BaseHTMLAttributes<HTMLDivElement>) => (
+  <div className="m-4 mt-2" {...props}>
     {children}
-  </Box>
+  </div>
 )
 
 export interface BugBountyCardInfo {
@@ -246,7 +197,7 @@ const BugBountyCards = () => {
           <H2>{t(card.h2TranslationId)}</H2>
           <Description>{t(card.descriptionTranslationId)}</Description>
           <SubHeader>{t(card.subDescriptionTranslationId)}</SubHeader>
-          <Divider opacity="1" />
+
           <SubHeader>{t(card.subHeader1TranslationId)}</SubHeader>
           <TextBox>
             <ul>
@@ -258,7 +209,7 @@ const BugBountyCards = () => {
               ))}
             </ul>
           </TextBox>
-          <Divider opacity="1" />
+
           <SubHeader>{t(card.subHeader2TranslationId)}</SubHeader>
           <TextBox>{t(card.textTranslationId)}</TextBox>
           <SubmitBugBountyButton>

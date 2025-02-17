@@ -4,141 +4,158 @@ description: Guías, artículos y herramientas sobre aplicaciones empresariales 
 lang: es
 ---
 
-# Red principal de Ethereum para empresas {#ethereum-for-enterprise}
+# Ethereum para empresas {#ethereum-for-enterprise}
 
-Las aplicaciones de cadenas de bloques ayudan a los negocios:
+Ethereum puede ayudar a muchos tipos de empresas, incluidas las grandes compañias:
 
 - Incrementando la confianza mientras reducen los gastos de coordinación entre las partes implicadas en el negocio.
 - Mejorando la confiabilidad de la red de negocios y la eficiencia operacional.
 - Construyendo nuevos modelos de negocio y oportunidades de creación de valor.
 - Asegurando una organización competitiva a prueba de todo futuro.
 
-Las aplicaciones de cadenas de bloques empresariales se pueden crear en la [red principal](/glossary/#mainnet), pública sin permisos, o en cadenas de bloques privadas que están basadas en tecnología de Ethereum. Más información en [cadenas privadas de Ethereum para empresa](/enterprise/private-ethereum/).
+En los primeros años muchas aplicaciones de cadena de bloques de las compañías se construían en cadenas de bloques privadas con permiso compatibles con Ethereum o cadenas de consorcio. Hoy en día, gracias a los avances tecnológicos que permiten un mayor rendimiento, menor costo de transacción y privacidad, la mayoría de las aplicaciones de compañías que utilizan la tecnología de Ethereum se construyen sobre la red principal pública de Ethereum o sobre cadenas de [Capa 2](/layer-2).
 
-## Ethereum público frente a privado {#private-vs-public}
 
-Solo existe una red principal pública de Ethereum. Las aplicaciones creadas en la red principal son capaces de interoperar. De forma similar a cómo lo haría una aplicación creada en Internet, pueden conectarse con otras e impulsar así el potencial completo de la cadena de bloques descentralizada.
+## Recursos {#enterprise-resources}
 
-Muchos negocios y consorcios han implementado cadenas privadas con permisos para aplicaciones específicas basadas en la tecnología de Ethereum.
+### Más información {#further-reading}
 
-### Principales diferencias {#key-differences}
+Recursos no técnicos para poder entender cómo los negocios se pueden beneficiar de Ethereum:
 
-- Seguridad/Inmutabilidad de la cadena de bloques: la resistencia de la cadena a la manipulación está determinada por su algoritmo de consenso. La red principal de Ethereum está asegurada por la interacción de miles de nodos independientes ejecutados por individuos y mineros alrededor del mundo. Las cadenas privadas suelen tener un pequeño número de nodos controlados por una o varias organizaciones. Esos nodos se pueden controlar rigurosamente, pero solo unos pocos deben estar comprometidos para reescribir la cadena o cometer transacciones fraudulentas.
-- Rendimiento: Como las cadenas privadas de Enterprise Ethereum pueden usar nodos de alto rendimiento con requisitos especiales de hardware y diferentes algoritmos de consenso como prueba de autoridad, pueden lograr una transacción más alta a través de la capa base (capa 1). En la red principal de Ethereum, se puede lograr un alto rendimiento con el uso de [soluciones de escala de capa 2](/developers/docs/scaling/#layer-2-scaling).
-- Coste: el coste de operar una cadena privada se refleja principalmente en la mano de obra necesaria para instalar y gestionar la cadena, así como en los servidores para ejecutarla. Aunque no hay coste para conectarse a la red principal de Ethereum, sí que hay un coste de gas por cada transacción que se debe pagar en Ether. Se están desarrollando repetidores de transacciones (conocidos como estaciones de gas) con el objeto de eliminar la necesidad de que los usuarios finales e incluso las empresas utilicen directamente Ether en sus transacciones. Algunos [análisis](https://github.com/EYBlockchain/fundamental-cost-of-ownership/blob/master/EY%20Total%20Cost%20of%20Ownership%20for%20Blockchain%20Solutions.pdf) han demostrado que el coste total de operación de una aplicación puede ser menor en la red principal que ejecutar una cadena privada.
-- Permiso del nodo: solo los nodos autorizados pueden unirse a cadenas privadas. Cualquiera puede configurar un nodo en la red principal de Ethereum.
-- Privacidad: El acceso a los datos escritos en cadenas privadas puede ser controlado restringiendo el acceso a la red, y sobre una base más fina con controles de acceso y transacciones privadas. Todos los datos escritos en la capa 1 de red principal son visibles para cualquier persona, por lo que la información sensible debe ser almacenada y transmitida fuera de la cadena, o cifrada. Están surgiendo patrones de diseño que facilitan esto (p. ej., Baseline, Aztec), así como soluciones de capa 2 que pueden mantener los datos compartimentados y fuera de la capa 1.
-
-### Por qué construir en la red principal de Ethereum {#why-build-on-ethereum-mainnet}
-
-Las empresas han estado experimentando con tecnología de cadena de bloques desde 2016, cuando se lanzaron los proyectos Hyperledger, Quorum y Corda. El foco se centró en gran medida en las cadenas de bloques privadas empresariales. Sin embargo, a partir de 2019 ha habido un cambio en el pensamiento sobre las cadenas de bloques públicas frente a las privadas para aplicaciones de negocios. Una [encuesta](https://assets.ey.com/content/dam/ey-sites/ey-com/en_gl/topics/blockchain/ey-public-blockchain-opportunity-snapshot.pdf) realizada por Forrester reveló que "Los encuestados... ven este potencial, ya que un 75 % afirma que es posible que en el futuro se aprovechen las ventajas de las blockchain públicas, y casi un tercio indica que es algo muy probable”. Paul Brody, de EY, [habló](https://www.youtube.com/watch?v=-ycu5vGDdZw&feature=youtu.be&t=3668) sobre los beneficios de construir en una cadena de bloques pública, que (según la aplicación) puede incluir mayor seguridad o inmutabilidad, más transparencia, menos coste total de propiedad y la capacidad de interactuar con todas las demás aplicaciones que también están en la red principal (efectos de red). Compartir un marco común de referencia entre las empresas evita la creación innecesaria de numerosos silos aislados que no pueden comunicarse y compartir o sincronizar información entre sí.
-
-Otro avance que está desplazando el foco de atención hacia las cadenas de bloques públicas es una [capa 2](/developers/docs/scaling/#layer-2-scaling). La capa 2 es principalmente una categoría de tecnología de escalabilidad que hace posibles aplicaciones de alto rendimiento en cadenas públicas. Sin embargo, las soluciones de la capa 2 también pueden [abordar algunos de los otros desafíos que han llevado a los desarrolladores de empresas a elegir cadenas privadas en el pasado](https://entethalliance.org/how-ethereum-layer-2-scaling-solutions-address-barriers-to-enterprises-building-on-mainnet/).
-
-## Recursos del desarrollador de empresa {#enterprise-developer-resources}
+- [¿Por qué las cadenas de bloques son útiles para los negocios?](https://entethalliance.org/why-are-blockchains-useful-for-business/)_: Analiza el valor de las cadenas de bloques a través de la lente de la previsibilidad_.
+- [Informe de preparación de las empresas 2023 de Enterprise Ethereum Alliance](https://entethalliance.org/eea-ethereum-business-readiness-report-2023/)_: Encuesta sobre el potencial y las capacidades de Ethereum público y el ecosistema más amplio de Ethereum para los negocios_.
+- [_Ethereum for Business_ (por Paul Brody)](https://www.uapress.com/product/ethereum-for-business/) _es una guía en inglés simple sobre los casos de uso que generan retornos, del manejo de activos a los pagos o las cadenas de suministro_.
 
 ### Organizaciones {#organizations}
 
-Diferentes organizaciones han emprendido iniciativas de colaboración para que Ethereum sea fácil de usar:
+Diferentes organizaciones han colaborado para que Ethereum sea fácil de usar para las empresas.
 
-- [Enterprise Ethereum Alliance (EEA)](https://entethalliance.org/) El EEA permite a las organizaciones adoptar y utilizar la tecnología de Ethereum en sus operaciones diarias. Permite al ecosistema de Ethereum desarrollar nuevas oportunidades de negocio e impulsar la adopción de la industria, así como aprender y colaborar entre sí. El grupo de trabajo de la red principal de la EEA está enfocado hacia los representantes de negocios que estén interesados en construir sobre la red principal pública de Ethereum, así como también hacia los miembros de la comunidad de Ethereum que quieran apoyarlos.
-- [Proyecto abierto Ethereum OASIS](https://github.com/ethereum-oasis/oasis-open-project) El proyecto abierto Ethereum OASIS es un proyecto abierto OASIS que existe para proporcionar un foro neutral dedicado a diversas partes interesadas para crear especificaciones de alta calidad que faciliten la longevidad de Ethereum, su interoperabilidad y su facilidad de integración. El proyecto pretende desarrollar estándares claros y abiertos, documentación de alta calidad y conjuntos de pruebas compartidos que faciliten nuevas características y mejoras al protocolo de Ethereum.
-- [Proyecto Baseline](https://www.baseline-protocol.org/) El protocolo Baseline es una iniciativa de código abierto que combina avances en criptografía, mensajería y cadena de bloques para entregar procesos comerciales seguros y privados, a bajo coste, a través de la red principal pública de Ethereum. El protocolo permite realizar una colaboración confidencial y compleja entre empresas sin dejar ningún dato sensible en cadena. El proyecto Baseline es un subproyecto del proyecto abierto Ethereum OASIS y está coordinado por el Comité Directivo Técnico de Baseline.
+- [Enterprise Ethereum Alliance:](https://entethalliance.org/) La EEA ayuda a las organizaciones a adoptar y usar tecnología de Ethereum en sus operaciones de negocio diarias. Su objetivo es acelerar el negocio de Ethereum a través de apoyo profesional y comercial, promoción e investigación, desarrollo de estándares y servicios de confianza del ecosistema.
+- [Global Blockchain Business Council](https://www.gbbc.io/): El GBBC es una asociación industrial para el ecosistema de tecnología cadenas de bloques. Al involucrar a los responsables de las políticas y los reguladores, organizar eventos y debates en profundidad e impulsar la investigación, el GBBC se dedica a promover la adopción de la cadena de bloques para crear sociedades más seguras, equitativas y funcionales.
+
+
+## Recursos para desarrolladores de empresas {#enterprise-developer-resources}
 
 ### Productos y servicios {#products-and-services}
 
-- [Alchemy](https://www.alchemy.com/) _proporciona servicios y herramientas de API para crear y monitorear aplicaciones en Ethereum_
-- [Blast](https://blastapi.io/)_es una plataforma API que proporciona API RPC/WSS para la red principal del archivo de Ethereum y redes de prueba._
-- Implementación de [blockapps](https://blockapps.net/) _ del protocolo de Ethereum para empresas, herramientas y API, que forman la plataforma STRATO._
-- [Chainstack](https://chainstack.com/) _es la red principal y red de prueba Ethereum alojada en & nubes públicas aisladas de clientes._
-- [ConsenSys](https://consensys.net/) _proporciona una gama de productos y herramientas para construir en Ethereum, así como servicios de asesoramiento y desarrollo personalizado._
-- [Envision Blockchain](https://envisionblockchain.com/) _proporciona servicios de consultoría y desarrollo enfocados a empresas, especializándose en la red principal de Ethereum._
-- [EY OpsChain](https://blockchain.ey.com/products/contract-manager) _proporciona un flujo de trabajo de compras mediante la emisión de RFQ, contratos, órdenes de compra y facturas a través de su red de socios comerciales de confianza._
-- [Hyperledger Besu](https://www.hyperledger.org/use/besu) _ es un cliente Ethereum de código abierto enfocado en empresas, desarrollado bajo licencia Apache 2.0 y escrito en Java._
-- [Infura:](https://infura.io/) _acceso API escalable a las redes Ethereum e IPFS._
-- [Kaleido](https://kaleido.io/) _una plataforma empresarial, centrada en el desarrollo que ofrece aplicaciones de cadena de bloques simplificadas y activos digitales._
-- [NodeReal](https://nodereal.io/) _proporciona una infraestructura de cadena de bloque escalable, a la par que es proveedora de servicios API para el ecosistema Web3._
-- [Proporciona](https://provide.services/) _infraestructura y API para aplicaciones Enterprise Web3._
-- [QuickNode](https://www.quicknode.com/) _proporciona nodos fiables y rápidos con API de alto nivel, como la API NFT, la API de Token, etc., y ofrece al mismo tiempo una suite de productos unificada y soluciones de calidad superior._
-- [Tenderly](https://tenderly.co) _es una plataforma de desarrollo Web3 que proporciona bloques de construcción de infraestructura y de depuración, observabilidad para desarrollar, probar, monitorear y ejecutar contratos inteligentes._
-- [Unibright](https://unibright.io/) _es un equipo de especialistas en cadenas de bloques, arquitectos, desarrolladores y consultores con más de 20 años de experiencia en procesos de negocio e integración._
-- [Zero Services GmbH](https://www.zeroservices.eu/) _es un proveedor de servicios administrados, distribuidos por coubicaciones en Europa y Asia. Funciona & supervisa sus nodos de forma segura y confiable_
-- [Zeeve](https://www.zeeve.io/) _proporciona una gama de productos y herramientas para construir en Ethereum, así como infraestructura y API para aplicaciones Web3 para empresas._
+- [4EVERLAND](https://www.4everland.org/)_: Proporciona API, servicios RPC y herramientas para alojar aplicaciones descentralizadas y permitir el almacenamiento descentralizado en Ethereum_.
+- [Alchemy](https://www.alchemy.com/)_: Ofrece servicios y herramientas de API para crear y monitorear aplicaciones en Ethereum_.
+- [Blast](https://blastapi.io/)_: Una plataforma de API que proporciona API RPC/WSS para las redes de prueba y la red principal de Ethereum Archive._
+- [Blockapps](https://blockapps.net/)_: Implementación del protocolo, las herramientas y las API de Enterprise Ethereum que forman la plataforma STRATO_.
+- [Chainstack](https://chainstack.com/)_: Infraestructura de red principal y red de prueba de Ethereum alojada en nubes de clientes públicas y aisladas_.
+- [ConsenSys](https://consensys.io/)_: Ofrece una gama de productos y herramientas para desarrollar en Ethereum, así como servicios de consultoría y desarrollo personalizados_.
+- [Crossmint](http://crossmint.com/)_: Plataforma de desarrollo web3 de nivel empresarial para implementar contratos inteligentes, habilitar pagos con tarjetas de crédito y entre cadenas, y usar API para crear, distribuir, vender, almacenar y editar NFT._
+- [Envision Blockchain](https://envisionblockchain.com/)_: Ofrece servicios de consultoría y desarrollo enfocados en la empresa especializados en la red principal de Ethereum_.
+- [EY OpsChain](https://blockchain.ey.com/products/contract-manager)_: Ofrece un flujo de trabajo de adquisiciones mediante la emisión de solicitudes de cotización, contratos, órdenes de compra y facturas a través de su red de socios comerciales de confianza_.
+- [Hyperledger Besu](https://www.hyperledger.org/use/besu)_: Un cliente Ethereum de código abierto enfocado en la empresa, desarrollado bajo la licencia Apache 2.0 y escrito en Java_.
+- [Infura](https://infura.io/)_: Acceso API escalable a las redes Ethereum e IPFS_
+- [Kaleido](https://kaleido.io/)_: Una plataforma de desarrollo centrada en la empresa que ofrece aplicaciones simplificadas de cadena de bloques y activos digitales_.
+- [NodeReal](https://nodereal.io/)_: Ofrece servicios de infraestructura escalable y API de cadena de bloques para el ecosistema web3_.
+- [Moralis](http://moralis.io/)_: API y nodos de nivel empresarial con certificación SOC2 tipo 2_.
+- [Provide](https://provide.services/)_: Middleware empresarial de conocimiento cero_.
+- [QuickNode](https://www.quicknode.com/)_: Proporciona nodos confiables y rápidos con API de alto nivel como NFT API, Token API, etc., al tiempo que ofrece un conjunto unificado de productos y soluciones de nivel empresarial_.
+- [Tenderly](https://tenderly.co)_: Una plataforma de desarrollo web3 que proporciona bloques construcción de infraestructura, depuración y observabilidad para desarrollar, probar, supervisar y operar contratos inteligentes_.
+- [Unibright](https://unibright.io/)_: Un equipo de especialistas, arquitectos, desarrolladores y consultores de cadena de bloques con más de 20 años de experiencia en procesos e integraciones empresariales_.
+- [Zeeve](https://www.zeeve.io/)_: Proporciona una gama de productos y herramientas para construir en Ethereum, así como infraestructura y API para aplicaciones web3 empresariales_.
 
 ### Herramientas y bibliotecas {#tooling-and-libraries}
 
-- [Alethio:](https://explorer.aleth.io/) _plataforma de análisis de datos de Ethereum_
-- [Sirato](https://www.web3labs.com/sirato)_es una plataforma de datos y análisis para redes públicas y privadas de Web3 Labs compatibles con Ethereum._
-- [Ernst & Nightfall's "Nightfall"](https://github.com/EYBlockchain/nightfall) _: un conjunto de herramientas para realizar transacciones privadas_
-- [EthSigner](https://github.com/ConsenSys/ethsigner) _: una aplicación de firmado de transacción para utilizarse con un proveedor de web3_
-- [Anteriormente](https://tenderly.co/) _era una plataforma de datos que proporciona análisis en tiempo real, alertas y monitoreo con soporte para redes privadas._
-- [Truffle Suite:](https://trufflesuite.com) _suite de desarrollo de cadena de bloques (Truffle, Ganache, Drizzle)_
+- [Baseline Project](https://www.baseline-protocol.org/)_: El Baseline Project es un conjunto de herramientas y bibliotecas que ayuda a las empresas a coordinar procesos y flujos de trabajo complejos y multipartitos con privacidad mientras se mantienen los datos en los respectivos sistemas de registro. El estándar permite que dos o más máquinas de estado logren y mantengan la consistencia de los datos y la continuidad del flujo de trabajo mediante el uso de una red como marco de referencia común._
+- [Chainlens](https://www.chainlens.com/)_: Plataforma de análisis y datos de cadena de bloques local y SaaS de Web3 Labs_.
+- [Ernst &Young's 'Nightfall'](https://github.com/EYBlockchain/nightfall_3)_: Aplicación para transferir aplicaciones ERC20, ERC721 y ERC1155 bajo Conocimiento Cero utilizando un rollup optimista_.
 
 ### Soluciones de escalabilidad {#scalability-solutions}
 
-[Capa 2](/layer-2) es un conjunto de tecnologías o sistemas que se ejecuta en Ethereum (Capa 1), hereda propiedades de seguridad de Capa 1, proporciona una mayor capacidad de procesamiento de transacciones (rendimiento), reduce las comisiones de transacción (costes operativos) y acelera las confirmaciones de las transacciones con respecto a Capa 1. Las soluciones de escalabilidad de Capa 2 están aseguradas mediante Capa 1, no obstante permiten a las aplicaciones de cadena de bloques manejar muchos más usuarios o acciones o datos de los que la Capa 1 podría alojar. Muchos de ellos aprovechan recientes avances en criptografía y pruebas de conocimiento cero (ZK) para maximizar el desempeño y la seguridad.
+La mayoría de las nuevas aplicaciones de cadena de bloques se están construyendo sobre cadenas de [Capa 2](/layer-2). Capa 2 es un conjunto de tecnologías o sistemas que se ejecutan encima de Ethereum (Capa 1), heredan propiedades de seguridad de la Capa 1 y proporcionan mayor capacidad de procesamiento de transacciones, reducen las comisiones de transacción (costos operativos) y aceleran las confirmaciones de las transacciones en comparación a la Capa 1. Las soluciones de escalabilidad de Capa 2 están aseguradas mediante Capa 1, pero permiten a las aplicaciones de cadena de bloques manejar muchos más usuarios o acciones o datos que la Capa 1. Muchas aprovechan los avances recientes en criptografía y pruebas de conocimiento cero (ZK) para maximizar el rendimiento y la seguridad, y algunas ofrecen un nivel adicional de privacidad.
 
-Crear su aplicación apoyándose en la solución de escalabilidad de Capa 2 puede ayudarle [a abordar muchas de las preocupaciones que anteriormente han motivado a las empresas a construir sobre cadenas de bloques privadas](https://entethalliance.org/how-ethereum-layer-2-scaling-solutions-address-barriers-to-enterprises-building-on-mainnet/), sin perder las ventajas que supone construir en una red principal.
+## Aplicaciones empresariales en vivo en la red principal de Ethereum {#enterprise-live-on-mainnet}
 
-## Aplicaciones empresariales en vivo en la red principal {#enterprise-live-on-mainnet}
-
-Estas son algunas de las aplicaciones empresariales que se han apoyándose en la red principal pública de Ethereum:
+Estas son algunas de las aplicaciones empresariales que se han construido sobre la red principal pública de Ethereum y L2 por y para empresas tradicionales no basadas en cadena de bloques.
 
 ### Pagos {#payments}
 
-- [Brave Browser](https://basicattentiontoken.org/) _paga a los usuarios por ver los anuncios y los usuarios pueden pagar a los editores para que les apoyen mediante el token de atención básica._
-- [hCaptcha](https://www.hcaptcha.com/) _El sistema CAPTCHA de prevención de bots paga a los operadores del sitio web a cambio del trabajo realizado por los usuarios a la hora de etiquetar datos para el aprendizaje automático. Actualmente lo implementa Cloudflare._
-- [EthereumAds](https://ethereumads.com/) _permite a los operadores del sitio web vender espacio de publicidad y recibir pagos vía Ethereum._
+- [Navegador Brave](https://basicattentiontoken.org/)_: Paga a los usuarios por su atención a los anuncios, y los usuarios pueden pagar a los editores para que los apoyen a través del Token de Atención Básica (Basic Attention Token)_.
+- [Ciudad de Lugano, Suiza](https://bitcoinsuisse.com/news/city-of-lugano-accepts-crypto-payments)_: Pago de impuestos y otros servicios municipales_.
+- [EthereumAds](https://ethereumads.com/)_: Permite que los operadores vendan espacios publicitarios y se les pague usando Ethereum_.
+- [hCaptcha](https://www.hcaptcha.com/)_: El sistema CAPTCHA de prevención de uso de bots que paga a los operadores de sitios web por el trabajo hecho por los usuarios para etiquetar datos para el aprendizaje computacional. Ahora implementado por Cloudflare._
+- [Opera MiniPay](https://www.opera.com/products/minipay)_: Hace que los pagos móviles sean más accesibles y seguros para las personas en África que cuentan con una billetera sin custodia y aprovecha los números telefónicos para transacciones más fáciles._
+- [Roxpay](https://www.roxpay.ch/)_: Automatiza la facturación y pago de activos de tipo "pago por uso" (pay per use)_.
+- [SAP Digital Currency Hub](https://community.sap.com/t5/technology-blogs-by-sap/cross-border-payments-made-easy-with-digital-money-experience-the-future/ba-p/13560384)_: Pagos trasnacionales con monedas estables_.
+- [Toku](https://www.toku.com/)_: Soluciones de nómina, administración de donaciones de tokens, cumplimiento tributario, contratación local, beneficios y recursos humanos distribuidos._
+- [Xerof](https://www.xerof.com/)_: Facilita los pagos B2B internacionales (transfronterizos) de forma rápida y rentable_.
 
 ### Finanzas {#finance}
 
-- [Santander Bank](https://www.coindesk.com/santander-settles-both-sides-of-a-20-million-bond-trade-on-ethereum) _ es una entidad de emisión de bonos y liquidación._
-- [Société Générale](https://www.generali-investments.com/it/en/institutional/article/generali-investments-and-generali-iard-carry-out-first-market-transaction-based-on-blockchain-infrastructure) _emite bonos._
-- [Cadence](https://www.forbes.com/sites/benjaminpirus/2019/10/09/fatburger-and-others-feed-30-million-into-ethereum-for-new-bond-offering/#513870be115b) _realiza ofertas de bonos y tokenización para marcas FAT._
-- [Sila](https://silamoney.com/)_es una infraestructura de servicios bancarios y pagos ACH, que utiliza una moneda estable._
-- [Taurus](https://www.taurushq.com/) _emite valores tokenizados._
+- [ABN AMRO](https://tokeny.com/tokeny-fuels-abn-amro-bank-in-tokenizing-green-bonds-on-polygon/)_: Con Tokeny, bonos verdes tokenizados_.
+- [Crowdz](https://crowdz.io/)_: Plataforma de financiación y factorización de facturas/cuentas por cobrar_.
+- [Mata Capital](https://consensys.io/blockchain-use-cases/finance/mata-capital)_: Tokenización de inversiones inmobiliarias_
+- [Obligate](https://www.obligate.com/)_: Bonos y papel comercial en cadena regulados con estándar KYC_.
+- [Siemens](https://press.siemens.com/global/en/pressrelease/siemens-issues-first-digital-bond-blockchain)_: Emisión de bonos_.
+- [Sila](https://silamoney.com/)_: Infraestructura de pagos bancarios y pagos ACH como servicio utilizando una moneda estable_.
+- [Societe Generale FORGE](https://www.sgforge.com/product/bonds/)_: Emisión de bonos_.
+- [Taurus](https://www.taurushq.com/)_: Emite títulos tokenizados_.
 
 ### Tokenización de activos {#tokenization}
 
-- [Tinlake](https://tinlake.centrifuge.io/) _recibe financiación mediante activos tokenizados del mundo real como facturas, hipotecas o recaudaciones por derechos de autor en retransmisiones._
-- [RealT](https://realt.co/) _Los inversores de todo el mundo pueden comprar en el mercado inmobiliario estadounidense a través de una propiedad completamente compatible, fraccionada y tokenizada._
-- [AgroToken](https://agrotoken.io/en/) _tokenizar y comerciar con productos agrícolas._
-- [Fasset](https://www.fasset.com/) _es una plataforma para apoyar la infraestructura sostenible._
+- [AgroToken](https://agrotoken.io/en/)_: Tokenización y trading de productos agrícolas_.
+- [Bitbond](https://www.bitbond.com/)_: Mejora la emisión, liquidación y custodia de activos financieros con tokenización_.
+- [Blocksquare](https://blocksquare.io/)_: infraestructura de tokenización para bienes raíces_.
+- [Centrifuge](https://centrifuge.io/)_: Financiación de cuentas por cobrar, deuda y activos tokenizados_.
+- [Clearmatics](https://www.clearmatics.com)_: Permite crear plataformas de red descentralizadas para el intercambio P2P de valor tokenizado_.
+- [dClimate](https://www.dclimate.net/)_: Ecosistema descentralizado de información climática_.
+- [Fabrica](https://www.fabrica.land/)_: Plataforma para digitalizar activos inmobiliarios permite préstamos y trading de propiedades DeFi_.
+- [Fasset](https://www.fasset.com/)_: Plataforma para apoyar la infraestructura sostenible_.
+- [Nori](https://nori.com/)_: Infraestructura de mercado de código abierto que permite que los proyectos de eliminación de carbono midan y moneticen su actividad_.
+- [Propy](https://propy.com/)_: Plataforma para automatizar transacciones de bienes raíces residenciales con contratos inteligentes_.
+- [RealT](https://realt.co/)_: Inversores de todo el mundo pueden comprar en el mercado inmobiliario de EE.UU. a través de propiedad que cumple con todas las normas, fraccionada y tokenizada_.
+- [Rubey](https://www.rubey.be/)_: Plataforma que tokeniza el arte de alta gama para hacerlo accesible a los inversores minoristas_.
+- [Swarm](https://swarm.com/)_: Plataforma centrada en la digitalización y el comercio de activos del mundo real de una manera que cumple con la normativa_.
+- [Thallo](https://www.thallo.io/)_: Plataforma para integrar créditos digitales de carbono en las transacciones comerciales_.
+- [Tokenchampions](https://tokenchampions.com/)_: Tokeniza los derechos de imagen de los jugadores de fútbol europeos_.
 
 ### Notarización de datos {#notarization-of-data}
 
-- [BBVA](https://www.ledgerinsights.com/bbva-blockchain-loan-banking-tech-award/) _los detalles de los préstamos finalizados se cifran y se registran en la red principal._
-- [La integridad de los datos de Splunk](https://www.splunk.com/en_us/blog/security/the-newest-data-attack.html) _se puede garantizar escribiendo periódicamente el código de los datos indexados a la red principal._
-- [ANSA](https://cointelegraph.com/news/italys-top-news-agency-uses-blockchain-to-fight-fake-coronavirus-news) _es la agencia de noticias más grande de Italia, lucha contra noticias falsas y permite a los lectores verificar el origen de las noticias registrándolas en la red principal._
-- [Verizon](https://decrypt.co/46745/verizon-news-press-releases-ethereum-full-transparency) _registra comunicados de prensa en Ethereum para asegurar la responsabilidad corporativa y la confianza._
-- [Breitling](https://www.coindesk.com/breitling-arianee-all-new-watches-ethereum) _registra la procedencia y el historial de reparación de relojes en Ethereum._
-- [EthSign](https://ethsign.xyz/) _registros firmados de documentos electrónicos en la cadena de bloques de Ethereum._
+- [ANSA](https://www.ansa.it/english/news/science_tecnology/2020/04/06/ansa-using-blockchain-to-help-readers_af820b4f-0947-439b-843e-52e114f53318.html)_: Agencia de noticias italiana que lucha contra las noticias falsas y permite a los lectores verificar el origen de las noticias grabándolas en la red principal_.
+- [Breitling](https://www.coindesk.com/breitling-arianee-all-new-watches-ethereum)_: Registra el historial de procedencia y reparación de relojes en Ethereum_.
+- [BRØK](https://www.xn--brk-1na.no/)_: Plataforma de mesas de capitalización para las compañías no listadas en la red pública de Ethereum, proporcionada por el Gobierno noruego_.
+- [Certificación](https://certifaction.com/)_: Firmas electrónicas legalmente válidas con privacidad integrada en el diseño (Privacy-by-design)_.
+- [EthSign](https://ethsign.xyz/)_: Registra documentos electrónicos firmados en la cadena de bloques de Ethereum_.
+- [Stacktical](https://stacktical.com/)_: Permite el desarrollo de software, la emisión digital y la firma digital de Acuerdos de Nivel de Servicio (SLA) con capacidades de fideicomiso nativas_.
+- [Verizon](https://decrypt.co/46745/verizon-news-press-releases-ethereum-full-transparency)_: Registra comunicados de prensa en Ethereum para garantizar la responsabilidad corporativa y la confianza_.
+- [WolfTown](https://www.mef.net/edge-view-blog/automated-secure-timely-sla-reporting-is-finally-a-reality/)_ (MEF Forum y Sage Management): Automatiza la presentación de informes de acuerdos de nivel de servicio entre operadores de telecomunicaciones_.
 
 ### Cadena de suministro {#supply-chain}
 
-- [CargoX](https://cargox.io/press-releases/full/cargox-becomes-first-public-blockchain-ethereum-bill-lading-provider-approved-international-group-pi-clubs) _es la factura de embarque y proveedor de transferencia de documentos._
-- [Morfeo. network](https://morpheus.network/) _es una plataforma de automatización de cadena de suministro que implementa un híbrido de cadenas privadas con datos notariados en la red principal de Ethereum. La utilizan empresas como el distribuidor canadiense de alimentos, petróleo y gas Federated Co-op Ltd. y el proveedor argentino de comida para animales domésticos Vitalcan._
-- [Minespider](https://www.minespider.com/) _se encarga del seguimiento de la cadena de suministro._
-- [EY OpsChain Contract Manager](https://blockchain.ey.com/products/contract-manager) _proporciona un flujo de trabajo de compras mediante la emisión de RFQ, contratos, órdenes de compra y facturas a través de su red de socios comerciales de confianza._
-- [Treum](https://treum.io/) _ofrece transparencia, trazabilidad y comerciabilidad para cadenas de suministro mediante la tecnología de cadena de bloques._
-- [TradeTrust](https://www.tradetrust.io/) _verifica facturas electrónicas de Lading (eBLs) para envío internacionales._
-- [Birra Peroni](https://www.ey.com/en_gl/news/2021/05/birra-peroni-is-the-first-industrial-organization-to-mint-unique-non-fungible-tokens-using-ey-opschain-traceability) _acuña NFT por cada nuevo lote de cerveza, lo que permite una mayor visibilidad y eficiencia en toda su cadena de suministros._
+- [Birra Peroni](https://www.ey.com/en_gl/news/2021/05/birra-peroni-is-the-first-industrial-organization-to-mint-unique-non-fungible-tokens-using-ey-opschain-traceability)_: Mintea NFT por cada nuevo lote de cerveza, lo que permite una mayor visibilidad y eficiencia en toda su cadena de suministro._
+- [CargoX](https://cargox.io/)_: Proveedor de conocimientos de embarque electrónicos y transferencia de documentos para envíos_.
+- [Circularize](https://www.circularise.com/)_: Solución de trazabilidad de extremo a extremo para materias primas convertidas en productos_.
+- [EY OpsChain Contract Manager](https://blockchain.ey.com/products/contract-manager)_: Permite a las empresas interactuar en flujos de trabajo de compras mediante la emisión de solicitudes de presupuesto, contratos, órdenes de compra y facturas a través de una red de socios comerciales_.
+- [Minespider](https://www.minespider.com/)_: Seguimiento y procedencia de la cadena de suministro y seguimiento de emisiones de CO2_.
+- [Morpheus.network](https://morpheus.network/)_: Plataforma de automatización de la cadena de suministro_.
+- [StaTwig](https://statwig.com/)_: Operaciones de cadena de suministro_.
+- [TradeTrust](https://www.tradetrust.io/)_: Permite verificar el conocimiento de embarque electrónico (eBL) para envíos internacionales_.
+- [Transmute](https://transmute.industries/)_: Plataforma de intercambio de datos para el comercio global; admite transacciones con Identidad Descentralizada en Ethereum_.
 
 ### Seguros {#insurance}
 
-- [Arbol](https://www.arbolmarket.com/) _seguro paramétrico para cubrir los riesgos meteorológicos._
-- [Etherisc](https://etherisc.com/) _seguro descentralizado para una variedad de riesgos._
+- [Arbol](https://www.arbolmarket.com/)_: Seguro paramétrico para cubrir riesgos relacionados con el clima_.
+- [Etherisc](https://etherisc.com/)_: Seguro descentralizado para una variedad de riesgos_.
+- [Nayms](https://www.nayms.com/)_: Espacio digital para la creación de programas de seguros, captación y negociación de capital, cobertura de riesgos y los carriles de pago para las transacciones de primas y reclamos, construido con AON_.
 
-### Credenciales y certificaciones {#credentials}
+### Identidad, credenciales y certificaciones {#credentials}
 
-- [Los títulos digitales de dos centros de secundaria italianos](https://cointelegraph.com/news/two-italian-high-schools-to-issue-digital-diplomas-with-blockchain) _se emitieron en la red principal de Ethereum._
-- [Proyecto piloto de la Universidad de St. Gallen](https://cointelegraph.com/news/swiss-university-fights-fake-diplomas-with-blockchain-technology) _para verificar las titulaciones mediante una universidad suiza_
-- [Credenciales Hyland](https://www.hylandcredentials.com)_diplomas digitales y otros credenciales, licencias y certificados educativos._
-- [OpenCerts](https://opencerts.io/faq) _emite credenciales académicos de la cadena de bloques en Singapur._
-- [BlockCerts](https://www.blockcerts.org/) _ha desarrollado un estándar abierto para credenciales de la cadena de bloques._
+- [BCdiploma](https://www.bcdiploma.com/)_: Digitaliza y verifica diplomas, certificados y microcredenciales_.
+- [Hyland Credentials](https://www.hylandcredentials.com)_: Diplomas digitales y otras credenciales, licencias y certificados educativos_.
+- [Programa de Residencia Digital de Palau](https://rns.id/)_: Ofrece a los ciudadanos globales la posibilidad de tener una identificación legal emitida por el gobierno de Palau_.
+- [Spherity](https://www.spherity.com/)_: Ofrece soluciones de gestión de identidad digital para establecer la confianza digital en los ecosistemas, centrándose en identidades descentralizadas y credenciales verificables_.
+- [Zug Digital ID](https://ezug.ch/en/)_: Es un sistema de identidad basado en cadena de bloques en Suiza que ofrece a los residentes acceso digital a los servicios gubernamentales y admite funcionalidades como el préstamo de bicicletas eléctricas y la votación municipal_.
 
-### Utilidades {#utilities}
+### Entretenimiento, NFT y lealtad
 
-- [GridPlus](https://blog.gridplus.io/gridplus-is-live-in-texas-efc83c814601) _pagos de electricidad_
+- [Adidas Virtual Gear](https://www.adidas.com/metaverse)_: Colección NFT de artículos virtuales_.
+- [The British Museum's Sandbox](https://decrypt.co/150405/british-museum-enter-metaverse-via-sandbox)_: Colección de NFT_.
+- [Fruitlab](https://fruitlab.com/)_: Plataforma para que los jugadores ganen viendo, compartiendo y jugando juegos en línea_.
+- [Nike Swoosh](https://www.swoosh.nike/)_: Plataforma de NFT_.
+- [Sothbebys Metaverse](https://metaverse.sothebys.com/)_: Mercado de arte digital NFT de Sothebys_.
 
 Si desea añadir información a esta lista, consulte las [instrucciones para contribuir](/contributing/).

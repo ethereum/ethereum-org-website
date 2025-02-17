@@ -1,6 +1,6 @@
 ---
-title: Solo stake your ETH
-description: An overview of how to get started solo staking your ETH
+title: Home stake your ETH
+description: An overview of how to get started home staking your ETH
 lang: en
 template: staking
 emoji: ":money_with_wings:"
@@ -13,31 +13,31 @@ summaryPoints:
   - Remove trust, and never give up control of the keys to your funds
 ---
 
-## What is solo staking? {#what-is-solo-staking}
+## What is home staking? {#what-is-solo-staking}
 
-Solo staking is the act of [running an Ethereum node](/run-a-node/) connected to the internet and depositing 32 ETH to activate a [validator](#faq), giving you the ability to participate directly in network consensus.
+Home staking is the act of [running an Ethereum node](/run-a-node/) connected to the internet and depositing 32 ETH to activate a [validator](#faq), giving you the ability to participate directly in network consensus.
 
-**Solo staking increases the decentralization of the Ethereum network**, making Ethereum more censorship-resistant and robust against attacks. Other staking methods may not help the network in the same ways. Solo staking is the best staking option for securing Ethereum.
+**Home staking increases the decentralization of the Ethereum network**, making Ethereum more censorship-resistant and robust against attacks. Other staking methods may not help the network in the same ways. Home staking is the best staking option for securing Ethereum.
 
 An Ethereum node consists of both an execution layer (EL) client, as well as a consensus layer (CL) client. These clients are software that work together, along with a valid set of signing keys, to verify transactions and blocks, attest to the correct head of the chain, aggregate attestations, and propose blocks.
 
-Solo stakers are responsible for operating the hardware needed to run these clients. It is highly recommended to use a dedicated machine for this that you operate from home–this is extremely beneficial to the health of the network.
+Home stakers are responsible for operating the hardware needed to run these clients. It is highly recommended to use a dedicated machine for this that you operate from home–this is extremely beneficial to the health of the network.
 
-A solo staker receives rewards directly from the protocol for keeping their validator properly functioning and online.
+A home staker receives rewards directly from the protocol for keeping their validator properly functioning and online.
 
-## Why stake solo? {#why-stake-solo}
+## Why stake from home? {#why-stake-solo}
 
-Solo staking comes with more responsibility but provides you with maximum control over your funds and staking setup.
+Home staking comes with more responsibility but provides you with maximum control over your funds and staking setup.
 
 <CardGrid>
   <Card title="Earn fresh ETH" emoji="💸" description="Earn ETH-denominated rewards directly from the protocol when your validator is online, without any middlemen taking a cut." />
   <Card title="Full control" emoji="🎛️" description="Keep your own keys. Choose the combination of clients and hardware that allows you to minimize your risk and best contribute to the health and security of the network. Third-party staking services make these decisions for you, and they don't always make the safest choices." />
-  <Card title="Network security" emoji="🔐" description="Solo staking is the most impactful way to stake. By running a validator on your own hardware at home, you strengthen the robustness, decentralization, and security of the Ethereum protocol." />
+  <Card title="Network security" emoji="🔐" description="Home staking is the most impactful way to stake. By running a validator on your own hardware at home, you strengthen the robustness, decentralization, and security of the Ethereum protocol." />
 </CardGrid>
 
-## Considerations before staking solo {#considerations-before-staking-solo}
+## Considerations before home staking {#considerations-before-staking-solo}
 
-As much as we wish that solo staking was accessible and risk free to everyone, this is not reality. There are some practical and serious considerations to keep in mind before choosing to solo stake your ETH.
+As much as we wish that home staking was accessible and risk free to everyone, this is not reality. There are some practical and serious considerations to keep in mind before choosing to home stake your ETH.
 
 <InfoGrid>
 <ExpandableCard title="Required reading" eventCategory="SoloStaking" eventName="clicked required reading">
@@ -93,7 +93,7 @@ The Staking Launchpad is an open source application that will help you become a 
 
 ## What to consider with node and client setup tools {#node-tool-considerations}
 
-There are a growing number of tools and services to help you solo stake your ETH, but each come with different risks and benefits.
+There are a growing number of tools and services to help you home stake your ETH, but each come with different risks and benefits.
 
 Attribute indicators are used below to signal notable strengths or weaknesses a listed staking tool may have. Use this section as a reference for how we define these attributes while you’re choosing what tools to help with your staking journey.
 
@@ -119,7 +119,7 @@ These tools can be used as an alternative to the [Staking Deposit CLI](https://g
 
 Have a suggestion for a staking tool we missed? Check out our [product listing policy](/contributing/adding-staking-products/) to see if it would be a good fit, and to submit it for review.
 
-## Explore solo staking guides {#staking-guides}
+## Explore home staking guides {#staking-guides}
 
 <StakingGuides />
 
@@ -138,7 +138,7 @@ Each key-pair associated with a validator requires exactly 32 ETH to be activat
 
 Do not deposit more than 32 ETH for a single validator. It will not increase your rewards. If a withdrawal address has been set for the validator, excess funds over 32 ETH will be automatically withdrawn to this address during the next <a href="/staking/withdrawals/#validator-sweeping">validator sweep</a>.
 
-If solo staking seems too demanding for you, consider using a <a href="/staking/saas/">staking-as-a-service</a> provider, or if you're working with less than 32 ETH, check out the <a href="/staking/pools/">staking pools</a>.
+If home staking seems too demanding for you, consider using a <a href="/staking/saas/">staking-as-a-service</a> provider, or if you're working with less than 32 ETH, check out the <a href="/staking/pools/">staking pools</a>.
 </ExpandableCard>
 
 <ExpandableCard title="Will I be slashed if I go offline? (tldr: No.)">
@@ -190,7 +190,7 @@ Once withdrawal credentials are set, reward payments (accumulated ETH over the i
 
 To unlock and receive your entire balance back you must also complete the process of exiting your validator.
 
-<ButtonLink to="/staking/withdrawals/">More on staking withdrawals</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">More on staking withdrawals</ButtonLink>
 </ExpandableCard>
 
 ## Further reading {#further-reading}
@@ -203,4 +203,4 @@ To unlock and receive your entire balance back you must also complete the proces
 - [Step by Step: How to join the Ethereum 2.0 Testnet](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) - _Butta_
 - [Eth2 Slashing Prevention Tips](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) - _Raul Jordan 2020_
 
-<QuizWidget quizKey="solo-staking" />
+<QuizWidget quizKey="staking-solo" />

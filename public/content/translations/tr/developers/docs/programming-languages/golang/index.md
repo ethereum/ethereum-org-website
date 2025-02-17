@@ -23,7 +23,6 @@ Başlamadan önce temel bilgilere mi ihtiyacınız var? [ethereum.org/learn](/le
 
 ## Başlangıç Seviyesi Makaleler ve Kitaplar {#beginner-articles-and-books}
 
-- [Ethereum İstemcinizi Seçmek](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
 - [Geth ile Başlarken](https://medium.com/@tzhenghao/getting-started-with-geth-c1a30b8d6458)
 - [Ethereum'a bağlanmak için Golang kullanmak](https://www.youtube.com/watch?v=-7uChuO_VzM)
 - [Golang Kullanarak Ethereum Akıllı Sözleşmeleri Dağıtmak](https://www.youtube.com/watch?v=pytGqQmDslE)
@@ -54,7 +53,7 @@ Başlamadan önce temel bilgilere mi ihtiyacınız var? [ethereum.org/learn](/le
 
 - [Geth / Go Ethereum](https://github.com/ethereum/go-ethereum) - _Ethereum protokolünün resmi Go uygulaması_
 - [Go Ethereum Kodu Analizi](https://github.com/ZtesoftCS/go-ethereum-code-analysis) - _Go Ethereum kaynak kodunun incelenmesi ve analizi_
-- Arşiv düğümlerine odaklanan Go Ethereum'un [Erigon](https://github.com/ledgerwatch/erigon) - \_Faster türevi
+- [Erigon](https://github.com/ledgerwatch/erigon) - _Arşiv düğümlerine odaklanan, Go Ethereum'un daha hızlı türevi_
 - [Golem](https://github.com/golemfactory/golem) - _Golem, bilgi işlem gücü için küresel bir pazar oluşturuyor_
 - [Quorum](https://github.com/jpmorganchase/quorum) - _İzin verilen veri gizliliğini destekleyen Ethereum uygulaması_
 - [Prysm](https://github.com/prysmaticlabs/prysm) - _Ethereum "Serenity" 2.0 Go Uygulaması_
@@ -64,7 +63,8 @@ Başlamadan önce temel bilgilere mi ihtiyacınız var? [ethereum.org/learn](/le
 - [Ethereum HD Cüzdan](https://github.com/miguelmota/go-ethereum-hdwallet) - _Go'daki Ethereum HD Cüzdan türevleri_
 - [Multi Geth](https://github.com/multi-geth/multi-geth) - _Pek çok Ethereum ağ türü için destek_
 - [Geth Hafif İstemci](https://github.com/zsfelfoldi/go-ethereum/wiki/Geth-Light-Client) - _Hafif Ethereum Alt Protokolünün Geth uygulaması_
-- [Ethereum Golang SDK](https://github.com/everFinance/goether) - Golang'da _Basit bir Ethereum cüzdan uygulaması ve faydaları_
+- [Ethereum Golang SDK](https://github.com/everFinance/goether) - _Golang'da Basit bir Ethereum cüzdan uygulaması ve faydaları_
+- [Covalent Golang SDK](https://github.com/covalenthq/covalent-api-sdk-go) - _200'den fazla blokzincir için Go SDK aracılığıyla verimli blokzincir verileri erişimi_
 
 Daha fazla kaynak mı arıyorsunuz? Göz atın: [ethereum.org/developers](/developers/).
 

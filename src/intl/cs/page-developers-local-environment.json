@@ -1,7 +1,7 @@
 {
-  "page-local-environment-brownie-desc": "Vývoj a testovací rámec pro vývoj chytrých kontraktů pro Ethereum Virtual Machine v Pythonu.",
+  "page-local-environment-brownie-desc": "Vývoj a testovací rámec pro vývoj chytrých kontraktů pro Virtuální stroj Etherea v Pythonu.",
   "page-local-environment-brownie-logo-alt": "Logo Brownie",
-  "page-local-environment-kurtosis-desc": "Kontejnerová sada nástrojů pro snadnou konfiguraci a vytvoření testovací sítě Ethereum pro více klientů pro rychlý lokální vývoj, prototypování a testování decentralizované aplikace.",
+  "page-local-environment-kurtosis-desc": "Kontejnerová sada nástrojů pro snadnou konfiguraci a vytvoření testovací sítě Ethereum pro více klientů pro rychlý lokální vývoj, prototypování a testování dappky.",
   "page-local-environment-kurtosis-logo-alt": "Logo Kurtosis",
   "page-local-environment-epirus-desc": "Platforma k vyvíjení, nasazení a monitorování aplikací pro blockchain v Java Virtual Machine.",
   "page-local-environment-epirus-logo-alt": "Logo Espirus",
@@ -15,7 +15,7 @@
   "page-local-environment-framework-feature-4": "Konfigurace pro připojení k sítím Ethereum a nasazení kontraktů, ať už na místně běžící instanci, nebo v jedné z veřejných sítí Etherea.",
   "page-local-environment-framework-feature-5": "Decentralizovaná distribuce aplikací. Integrace s možnostmi úložiště jako IPFS.",
   "page-local-environment-framework-features": "Tyto rámce přicházejí s mnoha funkcemi mimo provoz, jako:",
-  "page-local-environment-frameworks-desc": " Doporučujeme vybrat rámec, zejména pokud teprve začínáte. Vytvoření plnohodnotné decentralizované aplikace vyžaduje několik různých technologií. Rámce zahrnují mnoho těchto potřebných funkcí nebo poskytují jednoduché plugin systémy, abyste si mohli vybrat nástroje, které chcete.",
+  "page-local-environment-frameworks-desc": " Doporučujeme vybrat rámec, zejména pokud teprve začínáte. Vytvoření plnohodnotné dappky vyžaduje několik různých technologií. Rámce zahrnují mnoho těchto potřebných funkcí nebo poskytují jednoduché plugin systémy, abyste si mohli vybrat nástroje, které chcete.",
   "page-local-environment-frameworks-title": "Rámce a předpřipravené sady",
   "page-local-environment-hardhat-desc": "Hardhat je prostředí pro vývoj Etherea pro profesionály.",
   "page-local-environment-hardhat-logo-alt": "Logo Hardhat",
@@ -30,8 +30,6 @@
   "page-local-environment-setup-title": "Nastavení vlastního místního vývojářského prostředí",
   "page-local-environment-solidity-template-desc": "GitHub šablona pro předem vytvořené nastavení chytrých kontraktů Solidity. Zahrnuje místní síť Hardhat, Waffle pro testy, Ethery pro implementaci peněženky a další.",
   "page-local-environment-solidity-template-logo-alt": "Logo Solidity template",
-  "page-local-environment-truffle-desc": "Truffle Suite provede vývojáře od nápadu k vytvoření decentralizované aplikace co nejpohodlněji.",
-  "page-local-environment-truffle-logo-alt": "Logo Truffle",
   "page-local-environment-waffle-desc": "Nejpokročilejší testovací lib pro chytré kontrakty. Používejte samostatně nebo systémy Scaffold-eth a Hardhat.",
   "page-local-environment-waffle-logo-alt": "Logo Waffle"
 }

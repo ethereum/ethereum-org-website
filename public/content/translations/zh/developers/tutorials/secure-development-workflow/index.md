@@ -26,7 +26,6 @@ sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/devel
 
 - 你的合约是否可以升级？ 使用 [`slither-check-upgradeability`](https://github.com/crytic/slither/wiki/Upgradeability-Checks) 或 [Crytic](https://blog.trailofbits.com/2020/06/12/upgradeable-contracts-made-safer-with-crytic/) 检查你的可升级代码是否有缺陷。 我们记录了 17 种升级可能出现的问题。
 - 你的合约是否声明符合 ERC 的要求？ 使用 [`slither-check-erc`](https://github.com/crytic/slither/wiki/ERC-Conformance) 对它们进行审核。 这个工具能立即识别出六个常见规范的偏差。
-- 你在 Truffle 中设有单元测试吗？ 将它们添加到 [`slither-prop`](https://github.com/crytic/slither/wiki/Property-generation)。 它可以根据你的具体代码自动生成一套强大的安全属性，用于 ERC20 功能。
 - 你是否与第三方代币集成？ 在依赖外部合约之前，请先查看我们的[代币集成清单](/developers/tutorials/token-integration-checklist/)。
 
 目视检查代码的关键安全功能。

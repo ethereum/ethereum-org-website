@@ -33,7 +33,7 @@ lang: ja
 - [SKALE Network助成金プログラム](https://skale.space/developers#grants) - _[SKALE Network](https://skale.space/)エコシステム_
 - [Swarm Foundation助成金プログラム](https://my.ethswarm.org/grants) - _[Swarm Foundation](https://www.ethswarm.org/)エコシステム_
 - [The Graph](https://thegraph.com/ecosystem/grants/) – _[The Graph](https://thegraph.com/)エコシステム_
-- [ユニスワップ助成金プログラム](https://www.uniswapfoundation.org/grants) – _[ユニスワップ](https://uniswap.org/)コミュニティ_
+- [ユニスワップ助成金プログラム](https://www.uniswapfoundation.org/approach) – _[ユニスワップ](https://uniswap.org/)コミュニティ_
 
 ## クオドラティック・ファンディング {#quadratic-funding}
 

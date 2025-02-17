@@ -1,25 +1,17 @@
+import { HTMLAttributes } from "react"
 import type { GetStaticProps } from "next/types"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import {
-  Box,
-  Center,
-  Flex,
-  Heading,
-  type HeadingProps,
-  SimpleGrid,
-  type SimpleGridProps
-} from "@chakra-ui/react"
 
 import type { BasePageProps, ChildOnlyProp, Lang } from "@/lib/types"
 
 import AssetDownload from "@/components/AssetDownload"
 import FeedbackCard from "@/components/FeedbackCard"
 import { Image } from "@/components/Image"
-import InlineLink from "@/components/Link"
 import MainArticle from "@/components/MainArticle"
-import OldHeading from "@/components/OldHeading"
 import PageMetadata from "@/components/PageMetadata"
+import { Center, Flex } from "@/components/ui/flex"
+import InlineLink from "@/components/ui/Link"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
@@ -89,33 +81,19 @@ import defi from "@/public/images/use-cases/defi.png"
 import wallet from "@/public/images/wallet.png"
 import whatIsEthereum from "@/public/images/what-is-ethereum.png"
 
-const Row = (props: SimpleGridProps) => (
-  <SimpleGrid
-    templateColumns="repeat(auto-fit, minmax(min(288px, 100%), 1fr))"
-    mx={-4}
-    mb="8"
+const Row = (props: ChildOnlyProp) => (
+  <div
+    className="-mx-4 mb-8 grid grid-cols-[repeat(auto-fit,minmax(min(288px,100%),1fr))]"
     {...props}
   />
 )
 
-const H2 = (props: ChildOnlyProp & HeadingProps) => (
-  <Heading
-    fontSize={{ base: "2xl", md: "3xl" }}
-    lineHeight={1.4}
-    mt={16}
-    mb="6"
-    {...props}
-  />
+const H2 = (props: HTMLAttributes<HTMLHeadingElement>) => (
+  <h2 className="mb-6 mt-16 scroll-mt-24 leading-xs" {...props} />
 )
 
 const H3 = (props: ChildOnlyProp) => (
-  <OldHeading
-    as="h3"
-    fontSize={{ base: "xl", md: "2xl" }}
-    lineHeight={1.4}
-    mb="0"
-    {...props}
-  />
+  <h3 className="mb-0 mt-10 leading-xs" {...props} />
 )
 
 export const getStaticProps = (async ({ locale }) => {
@@ -139,43 +117,46 @@ export const getStaticProps = (async ({ locale }) => {
 }) satisfies GetStaticProps<BasePageProps>
 
 const AssetsPage = () => {
+  // Ignore locale in the URL for SVG path in public directory to fix broken link
+  // SVG path changes from /en/images => /images
+  const svgPathFromOrigin =
+    typeof window !== `undefined` ? window.location.origin : ""
+
   const { t } = useTranslation("page-assets")
   const assetPageHeroImage = useColorModeValue(
     ethDiamondBlack,
     ethDiamondPurple
   )
   return (
-    <Flex direction="column" width="full">
+    <Flex className="w-full flex-col">
       <PageMetadata
         title={t("page-assets-meta-title")}
         description={t("page-assets-meta-desc")}
       />
-      <Box as={MainArticle} py="4" px="8">
-        <Flex direction="column" px="8" py="4">
+      <MainArticle className="px-8 py-4">
+        <Flex className="flex-col px-8 py-4">
           <Center>
             <Image
+              className="w-20"
               src={assetPageHeroImage}
               alt={t("page-assets-eth-diamond-gray")}
-              w="5rem"
             />
           </Center>
           <Center>
-            <Heading as="h1" size="2xl" my="8">
-              {t("page-assets-h1")}
-            </Heading>
+            <h1 className="my-8">{t("page-assets-h1")}</h1>
           </Center>
           <Center>
-            <InlineLink href="/images/assets/#illustrations">
+            <InlineLink href="/assets/#illustrations">
               {t("page-assets-illustrations")}
             </InlineLink>
           </Center>
           <Center>
-            <InlineLink href="/images/assets/#historical">
+            <InlineLink href="/assets/#historical">
               {t("page-assets-historical-artwork")}
             </InlineLink>
           </Center>
           <Center>
-            <InlineLink href="/images/assets/#brand">
+            <InlineLink href="/assets/#brand">
               {t("page-assets-ethereum-brand-assets")}
             </InlineLink>
           </Center>
@@ -261,22 +242,19 @@ const AssetsPage = () => {
             title={t("page-assets-doge")}
             alt={t("page-assets-doge")}
             image={doge}
-            artistName="William Tempest"
-            artistUrl="https://cargocollective.com/willtempest"
+            artistName="WT"
           />
           <AssetDownload
             title={t("page-assets-blocks")}
             alt={t("page-assets-blocks")}
             image={developers}
-            artistName="William Tempest"
-            artistUrl="https://cargocollective.com/willtempest"
+            artistName="WT"
           />
           <AssetDownload
             title={t("page-assets-enterprise")}
             alt={t("page-assets-enterprise")}
             image={enterprise}
-            artistName="William Tempest"
-            artistUrl="https://cargocollective.com/willtempest"
+            artistName="WT"
           />
         </Row>
         <Row>
@@ -284,22 +262,19 @@ const AssetsPage = () => {
             title={t("page-assets-infrastructure")}
             alt={t("page-assets-infrastructure")}
             image={infrastructure}
-            artistName="William Tempest"
-            artistUrl="https://cargocollective.com/willtempest"
+            artistName="WT"
           />
           <AssetDownload
             title={t("page-assets-finance")}
             alt={t("page-assets-finance")}
             image={finance}
-            artistName="William Tempest"
-            artistUrl="https://cargocollective.com/willtempest"
+            artistName="WT"
           />
           <AssetDownload
             title={t("page-assets-impact")}
             alt={t("page-assets-impact")}
             image={impact}
-            artistName="William Tempest"
-            artistUrl="https://cargocollective.com/willtempest"
+            artistName="WT"
           />
         </Row>
         <Row>
@@ -307,22 +282,19 @@ const AssetsPage = () => {
             title={t("page-assets-future")}
             alt={t("page-assets-future")}
             image={future}
-            artistName="William Tempest"
-            artistUrl="https://cargocollective.com/willtempest"
+            artistName="WT"
           />
           <AssetDownload
             title={t("page-assets-hackathon")}
             alt={t("page-assets-hackathon")}
             image={hackathon}
-            artistName="William Tempest"
-            artistUrl="https://cargocollective.com/willtempest"
+            artistName="WT"
           />
           <AssetDownload
             title={t("page-assets-robot")}
             alt={t("page-assets-robot")}
             image={wallet}
-            artistName="William Tempest"
-            artistUrl="https://cargocollective.com/willtempest"
+            artistName="WT"
           />
         </Row>
         <Row>
@@ -397,19 +369,19 @@ const AssetsPage = () => {
             title={t("page-assets-eth-diamond-glyph")}
             alt={t("page-assets-eth-diamond-glyph")}
             image={ethDiamondGlyph}
-            svgUrl="/images/assets/svgs/eth-diamond-glyph.svg"
+            svgUrl={`${svgPathFromOrigin}/images/assets/svgs/eth-diamond-glyph.svg`}
           />
           <AssetDownload
             title={t("page-assets-eth-diamond-gray")}
             alt={t("page-assets-eth-diamond-gray")}
             image={ethDiamondBlack}
-            svgUrl="/images/assets/svgs/eth-diamond-black.svg"
+            svgUrl={`${svgPathFromOrigin}/images/assets/svgs/eth-diamond-black.svg`}
           />
           <AssetDownload
             title={t("page-assets-eth-diamond-color")}
             alt={t("page-assets-eth-diamond-color")}
             image={ethDiamondColor}
-            svgUrl="/images/assets/svgs/eth-diamond-rainbow.svg"
+            svgUrl={`${svgPathFromOrigin}/images/assets/svgs/eth-diamond-rainbow.svg`}
           />
         </Row>
         <Row>
@@ -417,13 +389,13 @@ const AssetsPage = () => {
             title={t("page-assets-eth-diamond-purple")}
             alt={t("page-assets-eth-diamond-purple")}
             image={ethDiamondPurple}
-            svgUrl="/images/assets/svgs/eth-diamond-purple.svg"
+            svgUrl={`${svgPathFromOrigin}/images/assets/svgs/eth-diamond-purple.svg`}
           />
           <AssetDownload
             title={t("page-assets-eth-diamond-colored")}
             alt={t("page-assets-eth-diamond-colored")}
             image={ethGlyphColored}
-            svgUrl="/images/assets/svgs/eth-glyph-colored.svg"
+            svgUrl={`${svgPathFromOrigin}/images/assets/svgs/eth-glyph-colored.svg`}
           />
         </Row>
         <Row>
@@ -431,19 +403,19 @@ const AssetsPage = () => {
             title={t("page-assets-eth-logo-portrait-gray")}
             alt={t("page-assets-eth-logo-portrait-gray")}
             image={ethPortraitBlack}
-            svgUrl="/images/assets/svgs/ethereum-logo-portrait-black.svg  "
+            svgUrl={`${svgPathFromOrigin}/images/assets/svgs/ethereum-logo-portrait-black.svg  `}
           />
           <AssetDownload
             title={t("page-assets-eth-logo-landscape-gray")}
             alt={t("page-assets-eth-logo-landscape-gray")}
             image={ethLandscapeBlack}
-            svgUrl="/images/assets/svgs/ethereum-logo-landscape-black.svg"
+            svgUrl={`${svgPathFromOrigin}/images/assets/svgs/ethereum-logo-landscape-black.svg`}
           />
           <AssetDownload
             title={t("page-assets-eth-wordmark-gray")}
             alt={t("page-assets-eth-wordmark-gray")}
             image={ethWordmarkBlack}
-            svgUrl="/images/assets/svgs/ethereum-wordmark-black.svg"
+            svgUrl={`${svgPathFromOrigin}/images/assets/svgs/ethereum-wordmark-black.svg`}
           />
         </Row>
         <Row>
@@ -451,19 +423,19 @@ const AssetsPage = () => {
             title={t("page-assets-eth-logo-portrait-purple")}
             alt={t("page-assets-eth-logo-portrait-purple")}
             image={ethPortraitPurple}
-            svgUrl="/images/assets/svgs/ethereum-logo-portrait-purple.svg"
+            svgUrl={`${svgPathFromOrigin}/images/assets/svgs/ethereum-logo-portrait-purple.svg`}
           />
           <AssetDownload
             title={t("page-assets-eth-logo-landscape-purple")}
             alt={t("page-assets-eth-logo-landscape-purple")}
             image={ethLandscapePurple}
-            svgUrl="/images/assets/svgs/ethereum-logo-landscape-purple.svg"
+            svgUrl={`${svgPathFromOrigin}/images/assets/svgs/ethereum-logo-landscape-purple.svg`}
           />
           <AssetDownload
             title={t("page-assets-eth-wordmark-purple")}
             alt={t("page-assets-eth-wordmark-purple")}
             image={ethWordmarkPurple}
-            svgUrl="/images/assets/svgs/ethereum-wordmark-purple-purple.svg"
+            svgUrl={`${svgPathFromOrigin}/images/assets/svgs/ethereum-wordmark-purple-purple.svg`}
           />
         </Row>
         <H3>{t("page-assets-page-assets-solid-background")}</H3>
@@ -472,19 +444,19 @@ const AssetsPage = () => {
             title={t("page-assets-eth-diamond-white")}
             alt={t("page-assets-eth-diamond-white")}
             image={ethDiamondBlackWhite}
-            svgUrl="/images/assets/svgs/eth-diamond-black-white.svg"
+            svgUrl={`${svgPathFromOrigin}/images/assets/svgs/eth-diamond-black-white.svg`}
           />
           <AssetDownload
             title={t("page-assets-eth-diamond-gray")}
             alt={t("page-assets-eth-diamond-gray")}
             image={ethDiamondBlackGray}
-            svgUrl="/images/assets/svgs/eth-diamond-black-gray.svg"
+            svgUrl={`${svgPathFromOrigin}/images/assets/svgs/eth-diamond-black-gray.svg`}
           />
           <AssetDownload
             title={t("page-assets-eth-diamond-purple")}
             alt={t("page-assets-eth-diamond-purple")}
             image={ethDiamondPurplePurple}
-            svgUrl="/images/assets/svgs/eth-diamond-purple-purple.svg"
+            svgUrl={`${svgPathFromOrigin}/images/assets/svgs/eth-diamond-purple-purple.svg`}
           />
         </Row>
 
@@ -493,13 +465,13 @@ const AssetsPage = () => {
             title={t("page-assets-eth-diamond-white")}
             alt={t("page-assets-eth-diamond-white")}
             image={ethDiamondPurpleWhite}
-            svgUrl="/images/assets/svgs/eth-diamond-purple-white.svg"
+            svgUrl={`${svgPathFromOrigin}/images/assets/svgs/eth-diamond-purple-white.svg`}
           />
           <AssetDownload
             title={t("page-assets-eth-diamond-white")}
             alt={t("page-assets-eth-diamond-white")}
             image={ethDiamondPurpleWhite}
-            svgUrl="/images/assets/svgs/eth-diamond-purple-white.svg"
+            svgUrl={`${svgPathFromOrigin}/images/assets/svgs/eth-diamond-purple-white.svg`}
           />
         </Row>
         <Row>
@@ -507,19 +479,19 @@ const AssetsPage = () => {
             title={t("page-assets-eth-logo-portrait-gray")}
             alt={t("page-assets-eth-logo-portrait-gray")}
             image={ethPortraitBlackGray}
-            svgUrl="/images/assets/svgs/ethereum-logo-portrait-black-gray.svg"
+            svgUrl={`${svgPathFromOrigin}/images/assets/svgs/ethereum-logo-portrait-black-gray.svg`}
           />
           <AssetDownload
             title={t("page-assets-eth-logo-landscape-gray")}
             alt={t("page-assets-eth-logo-landscape-gray")}
             image={ethLandscapeBlackGray}
-            svgUrl="/images/assets/svgs/ethereum-logo-landscape-black-gray.svg"
+            svgUrl={`${svgPathFromOrigin}/images/assets/svgs/ethereum-logo-landscape-black-gray.svg`}
           />
           <AssetDownload
             title={t("page-assets-eth-wordmark-gray")}
             alt={t("page-assets-eth-wordmark-gray")}
             image={ethWordmarkBlackGray}
-            svgUrl="/images/assets/svgs/ethereum-wordmark-black-gray.svg"
+            svgUrl={`${svgPathFromOrigin}/images/assets/svgs/ethereum-wordmark-black-gray.svg`}
           />
         </Row>
         <Row>
@@ -527,19 +499,19 @@ const AssetsPage = () => {
             title={t("page-assets-eth-logo-portrait-purple")}
             alt={t("page-assets-eth-logo-portrait-purple")}
             image={ethPortraitPurplePurple}
-            svgUrl="/images/assets/svgs/ethereum-logo-portrait-purple-purple.svg"
+            svgUrl={`${svgPathFromOrigin}/images/assets/svgs/ethereum-logo-portrait-purple-purple.svg`}
           />
           <AssetDownload
             title={t("page-assets-eth-logo-landscape-purple")}
             alt={t("page-assets-eth-logo-landscape-purple")}
             image={ethLandscapePurplePurple}
-            svgUrl="/images/assets/svgs/ethereum-logo-landscape-purple-purple.svg"
+            svgUrl={`${svgPathFromOrigin}/images/assets/svgs/ethereum-logo-landscape-purple-purple.svg`}
           />
           <AssetDownload
             title={t("page-assets-eth-wordmark-purple")}
             alt={t("page-assets-eth-wordmark-purple")}
             image={ethWordmarkPurplePurple}
-            svgUrl="/images/assets/svgs/ethereum-wordmark-purple-purple.svg"
+            svgUrl={`${svgPathFromOrigin}/images/assets/svgs/ethereum-wordmark-purple-purple.svg`}
           />
         </Row>
         <Row>
@@ -547,13 +519,13 @@ const AssetsPage = () => {
             title={t("page-assets-eth-logo-landscape-white")}
             alt={t("page-assets-eth-logo-landscape-white")}
             image={ethLandscapePurpleWhite}
-            svgUrl="/images/assets/svgs/ethereum-logo-landscape-purple-white.svg"
+            svgUrl={`${svgPathFromOrigin}/images/assets/svgs/ethereum-logo-landscape-purple-white.svg`}
           />
           <AssetDownload
             title={t("page-assets-eth-wordmark-white")}
             alt={t("page-assets-eth-wordmark-white")}
             image={ethWordmarkPurpleWhite}
-            svgUrl="/images/assets/svgs/ethereum-wordmark-purple-white.svg"
+            svgUrl={`${svgPathFromOrigin}/images/assets/svgs/ethereum-wordmark-purple-white.svg`}
           />
         </Row>
         <H2 id="historical-illustrations">{t("page-assets-illustrations")}</H2>
@@ -567,10 +539,10 @@ const AssetsPage = () => {
             title={t("page-assets-merge-panda")}
             alt={t("page-assets-merge-panda")}
             image={mergePanda}
-            svgUrl="/images/assets/svgs/merge-panda.svg"
+            svgUrl={`${svgPathFromOrigin}/images/assets/svgs/merge-panda.svg`}
           />
         </Row>
-      </Box>
+      </MainArticle>
       <FeedbackCard />
     </Flex>
   )

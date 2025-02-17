@@ -1,20 +1,11 @@
+import { BaseHTMLAttributes } from "react"
 import { GetStaticProps } from "next/types"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import {
-  Box,
-  BoxProps,
-  Flex,
-  FlexProps,
-  Grid,
-  HeadingProps,
-  Icon,
-  SimpleGrid,
-} from "@chakra-ui/react"
+import { MdHelpOutline } from "react-icons/md"
 
 import { BasePageProps, Lang } from "@/lib/types"
 
-import ButtonLink from "@/components/Buttons/ButtonLink"
 import CalloutBanner from "@/components/CalloutBanner"
 import DataProductCard from "@/components/DataProductCard"
 import Emoji from "@/components/Emoji"
@@ -23,22 +14,25 @@ import GhostCard from "@/components/GhostCard"
 import HorizontalCard from "@/components/HorizontalCard"
 import { Image } from "@/components/Image"
 import InfoBanner from "@/components/InfoBanner"
-import InlineLink from "@/components/Link"
 import MainArticle from "@/components/MainArticle"
-import OldHeading from "@/components/OldHeading"
-import Text from "@/components/OldText"
 import PageHero from "@/components/PageHero"
 import PageMetadata from "@/components/PageMetadata"
 import ProductList from "@/components/ProductList"
+import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import StablecoinAccordion from "@/components/StablecoinAccordion"
 import StablecoinBoxGrid from "@/components/StablecoinBoxGrid"
 import StablecoinsTable from "@/components/StablecoinsTable"
 import Tooltip from "@/components/Tooltip"
 import Translation from "@/components/Translation"
+import { ButtonLink } from "@/components/ui/buttons/Button"
+import { Divider } from "@/components/ui/divider"
+import { Flex, FlexProps } from "@/components/ui/flex"
+import InlineLink from "@/components/ui/Link"
 
+import { cn } from "@/lib/utils/cn"
+import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
-import { runOnlyOnce } from "@/lib/utils/runOnlyOnce"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
@@ -88,9 +82,16 @@ type Props = BasePageProps & {
   marketsHasError: boolean
 }
 
-// Fetch external API data once to avoid hitting rate limit
-const ethereumEcosystemDataFetch = runOnlyOnce(fetchEthereumEcosystemData)
-const ethereumStablecoinsDataFetch = runOnlyOnce(fetchEthereumStablecoinsData)
+// In seconds
+const REVALIDATE_TIME = BASE_TIME_UNIT * 1
+
+const loadData = dataLoader<[EthereumDataResponse, StablecoinDataResponse]>(
+  [
+    ["ethereumEcosystemData", fetchEthereumEcosystemData],
+    ["ethereumStablecoinsData", fetchEthereumStablecoinsData],
+  ],
+  REVALIDATE_TIME * 1000
+)
 
 export const getStaticProps = (async ({ locale }) => {
   const lastDeployDate = getLastDeployDate()
@@ -124,7 +125,7 @@ export const getStaticProps = (async ({ locale }) => {
     EURS: { type: FIAT, url: "https://eurs.stasis.net/" },
     USDK: { type: FIAT, url: "https://www.oklink.com/usdk" },
     MUSD: { type: CRYPTO, url: "https://mstable.org/" },
-    USDX: { type: CRYPTO, url: "https://usdx.cash/usdx-stablecoin" },
+    USDX: { type: CRYPTO, url: "https://usdx.money/" },
     GUSD: { type: FIAT, url: "https://gemini.com/dollar" },
     SAI: { type: CRYPTO, url: "https://makerdao.com/en/whitepaper/sai/" },
     DUSD: { type: CRYPTO, url: "https://dusd.finance/" },
@@ -137,12 +138,7 @@ export const getStaticProps = (async ({ locale }) => {
   }
 
   try {
-    // Fetch token data in the Ethereum ecosystem
-    const ethereumEcosystemData: EthereumDataResponse =
-      await ethereumEcosystemDataFetch()
-    // Fetch token data for stablecoins
-    const stablecoinsData: StablecoinDataResponse =
-      await ethereumStablecoinsDataFetch()
+    const [ethereumEcosystemData, stablecoinsData] = await loadData()
 
     // Get the intersection of stablecoins and Ethereum tokens to only have a list of data for stablecoins in the Ethereum ecosystem
     const ethereumStablecoinData = stablecoinsData.filter(
@@ -186,69 +182,51 @@ export const getStaticProps = (async ({ locale }) => {
       markets,
       marketsHasError,
     },
-    // Updated once a week
-    revalidate: BASE_TIME_UNIT * 24 * 7,
   }
 }) satisfies GetStaticProps<Props>
 
-const Content = (props: BoxProps) => <Box py={4} px={8} w="full" {...props} />
+const Content = (props: BaseHTMLAttributes<HTMLDivElement>) => (
+  <div className="w-full px-8 py-4" {...props} />
+)
 
-const Divider = () => <Box my={16} w="10%" h={1} bg="homeDivider" />
-
-const EditorsChoice = (props: FlexProps) => (
+const EditorsChoice = ({ className, ...props }: FlexProps) => (
   <Flex
-    flexDirection={{ base: "column-reverse", lg: "row" }}
-    justifyContent="space-between"
-    width="full"
-    border="1.5px solid"
-    borderColor="text"
-    borderRadius="sm"
-    background="background.base"
-    color="text"
-    p={8}
-    mb={8}
+    className={cn(
+      "mb-8 w-full flex-col-reverse justify-between rounded-sm border border-border-high-contrast bg-background p-8 text-body lg:flex-row",
+      className
+    )}
     {...props}
   />
 )
 
 const Page = (props: FlexProps) => (
-  <Flex
-    width="full"
-    direction="column"
-    align="center"
-    my={0}
-    mx="auto"
-    {...props}
-  />
+  <Flex className="mx-auto my-0 w-full flex-col items-center" {...props} />
 )
 
-const H2 = (props: HeadingProps) => (
-  <OldHeading
-    fontSize={{ base: "2xl", md: "2rem" }}
-    lineHeight={1.4}
-    {...props}
-  />
+const H2 = ({
+  className,
+  ...props
+}: BaseHTMLAttributes<HTMLHeadingElement>) => (
+  <h2 className={cn("mb-8 mt-12", className)} {...props} />
 )
 
-const H3 = (props: HeadingProps) => (
-  <OldHeading
-    as="h3"
-    fontSize={{ base: "xl", md: "2xl" }}
-    lineHeight={1.4}
-    {...props}
-  />
+const H3 = ({
+  className,
+  ...props
+}: BaseHTMLAttributes<HTMLHeadingElement>) => (
+  <h3 className={cn("mb-8 mt-10", className)} {...props} />
 )
 
 const StablecoinsPage = ({ markets, marketsHasError }) => {
   const { t } = useTranslation("page-stablecoins")
 
   const tooltipContent = (
-    <Box>
+    <div>
       {t("common:data-provided-by")}{" "}
       <InlineLink href="https://www.coingecko.com/en/api">
         coingecko.com
       </InlineLink>
-    </Box>
+    </div>
   )
 
   const features = [
@@ -282,7 +260,10 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
         t("page-stablecoins-crypto-backed-con-1"),
         t("page-stablecoins-crypto-backed-con-2"),
       ],
-      links: [{ text: "Dai", url: "https://makerdao.com/en/" }],
+      links: [
+        { text: "DAI", url: "https://makerdao.com/en/" },
+        { text: "RAI", url: "https://reflexer.finance/" },
+      ],
     },
     {
       title: t("page-stablecoins-precious-metals"),
@@ -345,7 +326,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
       url: "https://aave.com",
       alt: t("aave-logo"),
       image: aaveImg,
-      width: "64px",
+      width: 64,
       name: "Aave",
       description: t("page-stablecoins-stablecoins-dapp-description-1"),
     },
@@ -354,7 +335,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
       url: "https://compound.finance",
       alt: t("compound-logo"),
       image: compoundImg,
-      width: "160px",
+      width: 160,
       name: "Compound",
       description: t("page-stablecoins-stablecoins-dapp-description-2"),
     },
@@ -363,7 +344,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
       url: "https://summer.fi/",
       alt: t("summerfi-logo"),
       image: summerfiImg,
-      width: "80px",
+      width: 80,
       name: "Summer.fi",
       description: t("page-stablecoins-stablecoins-dapp-description-4"),
     },
@@ -394,7 +375,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
       {
         content: t("page-stablecoins-how-they-work-button"),
         toId: "how",
-        variant: "outline",
+        variant: "outline" as const,
         matomo: {
           eventCategory: "stablecoins hero buttons",
           eventAction: "click",
@@ -415,369 +396,260 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
   ]
 
   return (
-    <Page as={MainArticle}>
-      <PageMetadata
-        title={t("page-stablecoins-title")}
-        description={t("page-stablecoins-meta-description")}
-        image="/images/stablecoins/hero.png"
-      />
-      <PageHero isReverse content={heroContent} />
-      <Divider />
-      <Content>
-        <Flex
-          direction={{ base: "column", lg: "row" }}
-          align="flex-start"
-          width="full"
-          me={8}
-          mb={8}
-        >
-          <Box
-            w="full"
-            ms={{ base: "auto", lg: 0 }}
-            me={{ base: "auto", lg: 2 }}
-          >
-            <H2 mt={0}>{t("page-stablecoins-why-stablecoins")}</H2>
-            <Text>
-              {t("page-stablecoins-prices-definition")}{" "}
-              <InlineLink href="#how">
-                {t("page-stablecoins-prices-definition-how")}
-              </InlineLink>
-            </Text>
-          </Box>
-        </Flex>
-        <Flex
-          direction={{ base: "column", lg: "row" }}
-          align="flex-start"
-          width="full"
-          me={{ base: 0, lg: 8 }}
-          mb={8}
-        >
-          <Box w="full" margin={{ base: "auto 0", lg: "0 2rem 0" }}>
-            {tokens.map((token, index) => (
-              <Box key={index} minWidth="full" my={2}>
-                <HorizontalCard
-                  emoji={token.emoji}
-                  description={token.description}
-                  emojiSize={3}
-                />
-              </Box>
-            ))}
-          </Box>
-          <GhostCard
-            maxW="640px"
-            me={{ base: 0, lg: 8 }}
-            mt={{ base: 16, lg: 2 }}
-          >
-            <Emoji text=":pizza:" fontSize="5xl" />
-            <H3>{t("page-stablecoins-bitcoin-pizza")}</H3>
-            <Text>{t("page-stablecoins-bitcoin-pizza-body")} </Text>
-          </GhostCard>
-        </Flex>
-      </Content>
-      <Box
-        w="full"
-        py={16}
-        mt={8}
-        mb={8}
-        background="cardGradient"
-        boxShadow="inset 0px 1px 0px var(--eth-colors-tableItemBoxShadow)"
-      >
-        <Box mb={-8} py={4} px={8} w="full">
-          <H2 mt={0}>{t("page-stablecoins-find-stablecoin")}</H2>
-          <Box
-            display="flex"
-            w="full"
-            width={{ base: "full", lg: "50%" }}
-            justifyContent="center"
-            flexDirection="column"
-            ms={{ base: "auto", lg: 0 }}
-            me={{ base: "auto", lg: 2 }}
-          >
-            <Text>{t("page-stablecoins-find-stablecoin-intro")}</Text>
-            <ul>
-              <li>
+    <Page asChild>
+      <MainArticle>
+        <PageMetadata
+          title={t("page-stablecoins-meta-title")}
+          description={t("page-stablecoins-meta-description")}
+          image="/images/stablecoins/hero.png"
+        />
+        <PageHero isReverse content={heroContent} />
+        <Divider />
+        <Content>
+          <Flex className="mb-8 me-8 w-full flex-col items-start lg:flex-row">
+            <div className="me-auto ms-auto w-full lg:me-2 lg:ms-0">
+              <H2 className="mt-0">{t("page-stablecoins-why-stablecoins")}</H2>
+              <p className="mb-6">
+                {t("page-stablecoins-prices-definition")}{" "}
                 <InlineLink href="#how">
-                  {t("page-stablecoins-find-stablecoin-types-link")}
+                  {t("page-stablecoins-prices-definition-how")}
                 </InlineLink>
-              </li>
-              <li>
-                <InlineLink href="#explore">
-                  {t("page-stablecoins-find-stablecoin-how-to-get-them")}
-                </InlineLink>
-              </li>
-            </ul>
-          </Box>
-          <H3 mt={0} mb={4}>
-            {t("page-stablecoins-editors-choice")}
-          </H3>
-          <Text>{t("page-stablecoins-editors-choice-intro")}</Text>
-          <SimpleGrid columns={{ base: 1, lg: 2 }} spacing={16}>
-            <EditorsChoice boxShadow="gridYellowBoxShadow">
-              <Box
-                display="flex"
-                w="full"
-                width={{ base: "full", lg: "50%" }}
-                justifyContent="center"
-                flexDirection="column"
-                ms={{ base: "auto", lg: 0 }}
-                me={{ base: "auto", lg: 8 }}
-              >
-                <Box>
-                  <H2 fontSize="2rem" mt={0} mb={2}>
-                    {t("page-stablecoins-dai-banner-title")}
+              </p>
+            </div>
+          </Flex>
+          <Flex className="mb-8 me-0 w-full flex-col items-start lg:me-8 lg:flex-row">
+            <Flex className="mx-auto w-full flex-col gap-2 lg:mx-8 lg:my-0">
+              {tokens.map((token, index) => (
+                <div key={index} className="my-2 min-w-full">
+                  <HorizontalCard
+                    emoji={token.emoji}
+                    description={token.description}
+                  />
+                </div>
+              ))}
+            </Flex>
+            <GhostCard className="me-0 mt-16 max-w-[640px] lg:me-8 lg:mt-2">
+              <Emoji text=":pizza:" className="text-5xl" />
+              <H3>{t("page-stablecoins-bitcoin-pizza")}</H3>
+              <p className="mb-6">
+                {t("page-stablecoins-bitcoin-pizza-body")}{" "}
+              </p>
+            </GhostCard>
+          </Flex>
+        </Content>
+        <div
+          className={cn(
+            "my-8 w-full py-16 shadow-inner",
+            "bg-gradient-to-r from-accent-a/10 to-accent-c/10",
+            "dark:bg-gradient-to-tr dark:from-primary/20 dark:from-20% dark:via-accent-a/20 dark:via-60% dark:to-accent-c/20 dark:to-95%"
+          )}
+        >
+          <div className="-mb-8 w-full px-8 py-4">
+            <H2 className="mt-0">{t("page-stablecoins-find-stablecoin")}</H2>
+            <Flex className="me-auto ms-auto w-full flex-col justify-center lg:me-2 lg:ms-0 lg:w-1/2">
+              <p className="mb-6">
+                {t("page-stablecoins-find-stablecoin-intro")}
+              </p>
+              <ul>
+                <li>
+                  <InlineLink href="#how">
+                    {t("page-stablecoins-find-stablecoin-types-link")}
+                  </InlineLink>
+                </li>
+                <li>
+                  <InlineLink href="#explore">
+                    {t("page-stablecoins-find-stablecoin-how-to-get-them")}
+                  </InlineLink>
+                </li>
+              </ul>
+            </Flex>
+            <H3 className="mb-4 mt-0">
+              {t("page-stablecoins-editors-choice")}
+            </H3>
+            <p className="mb-6">{t("page-stablecoins-editors-choice-intro")}</p>
+            <div className="grid grid-cols-1 gap-16 lg:grid-cols-2">
+              <EditorsChoice className="shadow-grid-yellow-box-shadow">
+                <Flex className="me-auto ms-auto w-full flex-col justify-center lg:me-8 lg:ms-0 lg:w-1/2">
+                  <div>
+                    <H2 className="mb-2 mt-0 text-3xl">
+                      {t("page-stablecoins-dai-banner-title")}
+                    </H2>
+                    <p className="mb-6 text-xl text-body-medium">
+                      {t("page-stablecoins-dai-banner-body")}
+                    </p>
+                    <Flex className="flex-col">
+                      <div>
+                        <ButtonLink
+                          className="mb-4 me-4"
+                          href="https://matcha.xyz/tokens/ethereum/0x6b175474e89094c44da98b954eedeac495271d0f?sellChain=1&sellAddress=0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+                        >
+                          {t("page-stablecoins-dai-banner-swap-button")}
+                        </ButtonLink>
+                      </div>
+                      <div>
+                        <ButtonLink
+                          variant="outline"
+                          href="https://www.coinbase.com/price/dai#WhatIsDaiDAI"
+                          isSecondary
+                        >
+                          {t("page-stablecoins-dai-banner-learn-button")}
+                        </ButtonLink>
+                      </div>
+                    </Flex>
+                  </div>
+                </Flex>
+                <Image
+                  src={daiLargeImg}
+                  alt={t("page-stablecoins-dai-logo")}
+                  className="my-8 min-w-24 max-w-24 flex-1 self-center bg-cover bg-repeat sm:min-w-40 sm:max-w-40 md:my-0 md:max-w-60"
+                />
+              </EditorsChoice>
+
+              <EditorsChoice className="shadow-grid-blue-box-shadow">
+                <Flex className="me-auto ms-auto w-full flex-col justify-center lg:me-8 lg:ms-0 lg:w-1/2">
+                  <H2 className="mb-2 mt-0 text-3xl">
+                    {t("page-stablecoins-usdc-banner-title")}
                   </H2>
-                  <Text fontSize="xl" lineHeight={1.4} color="text200">
-                    {t("page-stablecoins-dai-banner-body")}
-                  </Text>
-                  <Flex direction="column">
-                    <Box>
+                  <p className="mb-6 text-xl text-body-medium">
+                    {t("page-stablecoins-usdc-banner-body")}
+                  </p>
+                  <Flex className="flex-col">
+                    <div>
                       <ButtonLink
-                        mb={4}
-                        me={4}
-                        href="https://matcha.xyz/tokens/ethereum/0x6b175474e89094c44da98b954eedeac495271d0f?sellChain=1&sellAddress=0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+                        className="mb-4 me-4"
+                        href="https://matcha.xyz/tokens/ethereum/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48?sellChain=1&sellAddress=0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
                       >
-                        {t("page-stablecoins-dai-banner-swap-button")}
+                        {t("page-stablecoins-usdc-banner-swap-button")}
                       </ButtonLink>
-                    </Box>
-                    <Box>
+                    </div>
+                    <div>
                       <ButtonLink
                         variant="outline"
-                        to="https://www.coinbase.com/price/dai#WhatIsDaiDAI"
+                        href="https://www.coinbase.com/usdc"
                         isSecondary
                       >
-                        {t("page-stablecoins-dai-banner-learn-button")}
+                        {t("page-stablecoins-usdc-banner-learn-button")}
                       </ButtonLink>
-                    </Box>
+                    </div>
                   </Flex>
-                </Box>
-              </Box>
-              <Image
-                src={daiLargeImg}
-                alt={t("page-stablecoins-dai-logo")}
-                backgroundSize="cover"
-                backgroundRepeat="repeat"
-                alignSelf="center"
-                flex="1"
-                maxWidth={{ base: "96px", sm: "160px", md: "240px" }}
-                minWidth={{ base: "96px", sm: "160px" }}
-                my={{ base: 8, md: 0 }}
-              />
-            </EditorsChoice>
-
-            <EditorsChoice boxShadow="gridBlueBowShadow">
-              <Box
-                display="flex"
-                w="full"
-                width={{ base: "full", lg: "50%" }}
-                justifyContent="center"
-                flexDirection="column"
-                ms={{ base: "auto", lg: 0 }}
-                me={{ base: "auto", lg: 8 }}
-              >
-                <H2 fontSize="2rem" mt={0} mb={2}>
-                  {t("page-stablecoins-usdc-banner-title")}
-                </H2>
-                <Text fontSize="xl" lineHeight={1.4} color="text200">
-                  {t("page-stablecoins-usdc-banner-body")}
-                </Text>
-                <Flex direction="column">
-                  <Box>
-                    <ButtonLink
-                      mb={4}
-                      me={4}
-                      href="https://matcha.xyz/tokens/ethereum/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48?sellChain=1&sellAddress=0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
-                    >
-                      {t("page-stablecoins-usdc-banner-swap-button")}
-                    </ButtonLink>
-                  </Box>
-                  <Box>
-                    <ButtonLink
-                      variant="outline"
-                      to="https://www.coinbase.com/usdc"
-                      isSecondary
-                    >
-                      {t("page-stablecoins-usdc-banner-learn-button")}
-                    </ButtonLink>
-                  </Box>
                 </Flex>
-              </Box>
-              <Image
-                src={usdcLargeImg}
-                alt={t("page-stablecoins-usdc-logo")}
-                backgroundSize="cover"
-                backgroundRepeat="repeat"
-                alignSelf="center"
-                flex="1"
-                maxWidth={{ base: "96px", sm: "160px", md: "240px" }}
-                minWidth={{ base: "96px", sm: "160px" }}
-                mb={{ base: 8, md: 0 }}
+                <Image
+                  src={usdcLargeImg}
+                  alt={t("page-stablecoins-usdc-logo")}
+                  className="my-8 min-w-24 max-w-24 flex-1 self-center bg-cover bg-repeat sm:min-w-40 sm:max-w-40 md:my-0 md:max-w-60"
+                />
+              </EditorsChoice>
+            </div>
+            <H3>
+              {t("page-stablecoins-top-coins")}
+              <Tooltip content={tooltipContent}>
+                <MdHelpOutline className="ms-2 fill-body" size={16} />
+              </Tooltip>
+            </H3>
+            <InfoBanner className="mb-4" emoji="⚠️" isWarning>
+              {t("page-stablecoins-algorithmic-disclaimer")}
+            </InfoBanner>
+            <p className="mb-6">
+              {t("page-stablecoins-top-coins-intro")}{" "}
+              {t("page-stablecoins-top-coins-intro-code")}
+            </p>
+          </div>
+          <div className="w-full overflow-x-auto px-8 py-4">
+            <StablecoinsTable
+              columns={tableColumns}
+              content={markets}
+              hasError={marketsHasError}
+            />
+          </div>
+        </div>
+        <Content id="explore">
+          <H2>{t("page-stablecoins-get-stablecoins")}</H2>
+        </Content>
+        <Flex className="w-full items-center pb-4 pe-0 ps-0 lg:pe-8 lg:ps-8">
+          <StablecoinAccordion />
+        </Flex>
+        <Divider />
+        <Content>
+          <CalloutBanner
+            className="mx-0 mb-16 mt-8"
+            titleKey={t("page-stablecoins-stablecoins-dapp-callout-title")}
+            descriptionKey={t(
+              "page-stablecoins-stablecoins-dapp-callout-description"
+            )}
+            image={dogeComputerImg}
+            imageWidth={600}
+            alt={t("page-stablecoins-stablecoins-dapp-callout-image-alt")}
+          >
+            <div className="flex flex-wrap gap-4">
+              <ButtonLink href="/dapps/">
+                {t("page-stablecoins-explore-dapps")}
+              </ButtonLink>
+              <ButtonLink
+                variant="outline"
+                href="/defi/"
+                className="whitespace-normal"
+                isSecondary
+              >
+                {t("page-stablecoins-more-defi-button")}
+              </ButtonLink>
+            </div>
+          </CalloutBanner>
+          <H2>{t("page-stablecoins-save-stablecoins")}</H2>
+          <Flex className="mb-8 me-8 w-full flex-col items-start lg:flex-row">
+            <div className="me-auto ms-auto w-full lg:me-2 lg:ms-0">
+              <p className="mb-6">
+                {t("page-stablecoins-save-stablecoins-body")}
+              </p>
+              <H3>{t("page-stablecoins-interest-earning-dapps")}</H3>
+              <p className="mb-6">{t("page-stablecoins-saving")}</p>
+            </div>
+          </Flex>
+          <div className="mb-16 grid grid-cols-[repeat(auto-fill,_minmax(min(100%,_280px),_1fr))] gap-8">
+            {dapps.map((dapp, idx) => (
+              <DataProductCard
+                key={idx}
+                background={dapp.background}
+                url={dapp.url}
+                alt={dapp.alt}
+                image={dapp.image!}
+                imgWidth={dapp.width!}
+                name={dapp.name}
+                description={dapp.description}
               />
-            </EditorsChoice>
-          </SimpleGrid>
-          <H3>
-            {t("page-stablecoins-top-coins")}
-            <Tooltip content={tooltipContent}>
-              <Icon ms={2} fill="'text" name="info" boxSize={4} />
-            </Tooltip>
-          </H3>
-          <InfoBanner emoji="⚠️" isWarning mb="4">
+            ))}
+          </div>
+        </Content>
+        <Divider />
+        <Content id="how">
+          <H2 className="mt-0">{t("page-stablecoins-types-of-stablecoin")}</H2>
+          <InfoBanner emoji="⚠️" isWarning>
+            <H3 className="mb-4 mt-0">
+              {t("page-stablecoins-research-warning-title")}
+            </H3>
             {t("page-stablecoins-algorithmic-disclaimer")}
           </InfoBanner>
-          <Text>
-            {t("page-stablecoins-top-coins-intro")}{" "}
-            {t("page-stablecoins-top-coins-intro-code")}
-          </Text>
-        </Box>
-        <Box px={8} py={4} width="full" overflowX="auto">
-          <StablecoinsTable
-            columns={tableColumns}
-            content={markets}
-            hasError={marketsHasError}
-          />
-        </Box>
-      </Box>
-      <Content id="explore">
-        <H2>{t("page-stablecoins-get-stablecoins")}</H2>
-      </Content>
-      <Flex
-        alignItems="center"
-        w="full"
-        ps={{ base: "0rem", lg: "2rem" }}
-        pe={{ base: "0rem", lg: "2rem" }}
-        pb={16}
-      >
-        <StablecoinAccordion />
-      </Flex>
-      <Divider />
-      <Content>
-        <CalloutBanner
-          mt={8}
-          mb={16}
-          mx={0}
-          titleKey={t("page-stablecoins-stablecoins-dapp-callout-title")}
-          descriptionKey={t(
-            "page-stablecoins-stablecoins-dapp-callout-description"
-          )}
-          image={dogeComputerImg}
-          imageWidth={600}
-          alt={t("page-stablecoins-stablecoins-dapp-callout-image-alt")}
-        >
-          <Flex flexFlow="wrap" gap="1em">
-            <ButtonLink to="/dapps/">
-              {t("page-stablecoins-explore-dapps")}
-            </ButtonLink>
-            <ButtonLink
-              variant="outline"
-              to="/defi/"
-              whiteSpace="normal"
-              isSecondary
-            >
-              {t("page-stablecoins-more-defi-button")}
-            </ButtonLink>
+          <StablecoinBoxGrid items={features} />
+        </Content>
+        <div id="tools" className="w-full px-8 py-12">
+          <H2>{t("page-stablecoins-tools-title")}</H2>
+
+          <Flex className="mb-8 me-8 w-full flex-col items-start lg:flex-row">
+            <Flex className="me-auto ms-auto w-full flex-col justify-center lg:me-2 lg:ms-0 lg:w-1/2">
+              <ProductList
+                actionLabel={t("page-stablecoins:page-dapps-ready-button")}
+                category={t(
+                  "page-stablecoins-category-dashboard-and-education"
+                )}
+                content={toolsData}
+              />
+            </Flex>
           </Flex>
-        </CalloutBanner>
-        <H2>{t("page-stablecoins-save-stablecoins")}</H2>
-        <Flex
-          flexDirection={{ base: "column", lg: "row" }}
-          alignItems="flex-start"
-          width="full"
-          me={8}
-          mb={8}
-        >
-          <Box
-            w="full"
-            ms={{ base: "auto", lg: 0 }}
-            me={{ base: "auto", lg: 2 }}
-          >
-            <Text>{t("page-stablecoins-save-stablecoins-body")}</Text>
-            <H3>{t("page-stablecoins-interest-earning-dapps")}</H3>
-            <Text>{t("page-stablecoins-saving")}</Text>
-          </Box>
-
-          <Box
-            display="flex"
-            justifyContent="center"
-            flexDirection="column"
-            borderRadius="sm"
-            w="full"
-            border="1.5px solid"
-            boxShadow="cardBoxShadow"
-            borderColor="text"
-            p={8}
-            mx={{ base: "auto", lg: 0 }}
-          >
-            <Emoji mb={4} text=":bank:" fontSize="5rem" />
-            <Text as="p" fontSize="64px" lineHeight="100%">
-              {t("page-stablecoins-bank-apy")}
-            </Text>
-            <Text as="em">
-              {t("page-stablecoins-bank-apy-source")}{" "}
-              <InlineLink href="https://www.nytimes.com/2020/09/18/your-money/savings-interest-rates.html">
-                {t("page-stablecoins-bank-apy-source-link")}
-              </InlineLink>
-            </Text>
-          </Box>
-        </Flex>
-        <Grid
-          templateColumns="repeat(auto-fill, minmax(min(100%, 280px), 1fr))"
-          gap={8}
-          mb={16}
-        >
-          {dapps.map((dapp, idx) => (
-            <DataProductCard
-              key={idx}
-              background={dapp.background}
-              url={dapp.url}
-              alt={dapp.alt}
-              image={dapp.image!}
-              imgWidth={dapp.width!}
-              name={dapp.name}
-              description={dapp.description}
-            />
-          ))}
-        </Grid>
-      </Content>
-      <Divider />
-      <Content id="how">
-        <H2 mt={0}>{t("page-stablecoins-types-of-stablecoin")}</H2>
-        <InfoBanner emoji="⚠️" isWarning>
-          <H3 mt={0} mb={4}>
-            {t("page-stablecoins-research-warning-title")}
-          </H3>
-          {t("page-stablecoins-algorithmic-disclaimer")}
-        </InfoBanner>
-        <StablecoinBoxGrid items={features} />
-      </Content>
-      <Box id="tools" py={12} px={8} w="full">
-        <H2>{t("page-stablecoins-tools-title")}</H2>
-
-        <Flex
-          alignItems="flex-start"
-          width="full"
-          me={8}
-          mb={8}
-          flexDirection={{ base: "column", lg: "row" }}
-        >
-          <Box
-            display="flex"
-            w="full"
-            width={{ base: "full", lg: "50%" }}
-            justifyContent="center"
-            flexDirection="column"
-            ms={{ base: "auto", lg: 0 }}
-            me={{ base: "auto", lg: 2 }}
-          >
-            <ProductList
-              actionLabel={t("page-stablecoins:page-dapps-ready-button")}
-              category={t("page-stablecoins-category-dashboard-and-education")}
-              content={toolsData}
-            />
-          </Box>
-        </Flex>
-      </Box>
-      <Content>
-        <FeedbackCard />
-      </Content>
+        </div>
+        <Content>
+          <StandaloneQuizWidget quizKey="stablecoins" />
+          <FeedbackCard />
+        </Content>
+      </MainArticle>
     </Page>
   )
 }

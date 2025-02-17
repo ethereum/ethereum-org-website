@@ -26,7 +26,7 @@ Une API interne est également utilisée pour la communication entre les clients
 
 ## Spécifications de client d'exécution {#spec}
 
-[Lisez la spécification complète de l'API JSON-RPC sur GitHub](https://github.com/ethereum/execution-apis).
+[Lisez la spécification complète de l'API JSON-RPC sur GitHub](https://github.com/ethereum/execution-apis). Cette API est documentée sur la [page web d'exécution API](https://ethereum.github.io/execution-apis/api-documentation/) et comprend un inspecteur pour tester toutes les méthodes disponibles.
 
 ## Conventions {#conventions}
 
@@ -53,7 +53,7 @@ Lors de l'encodage de données non formatées (tableaux d'octets, adresses de co
 Voici quelques exemples :
 
 - 0x41 (taille 1, « A »)
-- 0x004200 (taille 3, « \0B\0 »)
+- 0x004200 (taille 3, "0B0")
 - 0x (taille 0, "")
 - FAUX : 0xf0f0f (doit avoir un nombre pair de chiffres)
 - FAUX : 004200 (doit être préfixé par 0x)
@@ -74,7 +74,7 @@ Les options suivantes sont possibles pour le paramètre defaultBlock :
 
 - `chaîne HEX` - un nombre de bloc entier
 - `Chaîne « earliest »` pour le bloc d'origine/le plus ancien
-- `Chaine « latest »` - pour le dernier bloc miné
+- `String "latest"` - pour le dernier bloc proposé
 - `Chaine « latest »` - pour le dernier bloc de tête sûr
 - `Chaîne « finalized »` - pour le dernier bloc finalisé
 - `Chaîne "pending"` - pour l'état ou les transactions en attente
@@ -132,6 +132,10 @@ Une poignée de méthodes JSON-RPC de base nécessitent des données du réseau 
 - [eth_getUncleByBlockHashAndIndex](#eth_getunclebyblockhashandindex)
 - [eth_getUncleByBlockNumberAndIndex](#eth_getunclebyblocknumberandindex)
 
+## Terrain de jeu pour l'API JSON-RPC
+
+Vous pouvez utiliser [l'outil de terrain de jeu](https://ethereum-json-rpc.com) pour découvrir et tester les méthodes de l'API. Cela vous montre également quelles méthodes et réseaux sont pris en charge par les différents fournisseurs de nœud.
+
 ## Méthodes API JSON-RPC {#json-rpc-methods}
 
 ### web3_clientVersion {#web3_clientversion}
@@ -165,7 +169,7 @@ Retourne le Keccak-256 (_non pas_ le SHA3-256 standard) des données.
 
 **Paramètres**
 
-1. `DATA` - les données à convertir en hachage SHA3
+1. `DATA` - Les données à convertir en hachage SHA3
 
 ```js
 params: ["0x68656c6c6f20776f726c64"]
@@ -382,6 +386,8 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_syncing","params":[],"id":1}
 
 Renvoie l'adresse coinbase du client.
 
+> **Note :** Cette méthode est obsolète depuis la version **v1.14.0** et n'est plus prise en charge. Essayer d’utiliser cette méthode entraînera une erreur « Méthode non prise en charge ».
+
 **Paramètres**
 
 Aucune
@@ -560,7 +566,7 @@ Renvoie le solde du compte de l'adresse donnée.
 **Paramètres**
 
 1. `DATA`, 20 octets - adresse pour vérifier le solde.
-2. `QUANTITY|TAG` - numéro de bloc entier, ou la chaîne `« latest »`, `« earliest »` ou `« pending »`, voir le [paramètre de bloc par défaut](/developers/docs/apis/json-rpc/#default-block)
+2. `QUANTITY|TAG` - nombre entier d'un numéro de bloc, ou la chaîne `« latest »`, `« earliest »`, `« pending »`, `« safe »`, ou `« finalized »`, voir le [paramètre de bloc par défaut](/developers/docs/apis/json-rpc/#default-block)
 
 ```js
 params: ["0x407d73d8a49eeb85d32cf465507dd71d507100c1", "latest"]
@@ -591,7 +597,7 @@ Renvoie la valeur d'une position de stockage à une adresse donnée.
 
 1. `DATA`, 20 octets - adresse du stockage.
 2. `QUANTITY` - nombre entier de la position dans le stockage.
-3. `QUANTITY|TAG` - numéro de bloc entier, ou la chaîne `« latest »`, `« earliest »` ou `« pending »`, voir le [paramètre de bloc par défaut](/developers/docs/apis/json-rpc/#default-block)
+3. `QUANTITY|TAG` - nombre entier d'un numéro de bloc, ou la chaîne `« latest »`, `« earliest »`, `« pending »`, `« safe »`, ou `« finalized »`, voir le [paramètre de bloc par défaut](/developers/docs/apis/json-rpc/#default-block)
 
 **Valeur de retour**
 
@@ -657,7 +663,7 @@ Renvoie le nombre de transactions _envoyées_ à partir d'une adresse.
 **Paramètres**
 
 1. `DATA`, 20 octets - adresse.
-2. `QUANTITY|TAG` - numéro de bloc entier, ou la chaîne `« latest »`, `« earliest »` ou `« pending »`, voir le [paramètre de bloc par défaut](/developers/docs/apis/json-rpc/#default-block)
+2. `QUANTITY|TAG` - nombre entier d'un numéro de bloc, ou la chaîne `« latest »`, `« earliest »`, `« pending »`, `« safe »`, ou `« finalized »`, voir le [paramètre de bloc par défaut](/developers/docs/apis/json-rpc/#default-block)
 
 ```js
 params: [
@@ -692,7 +698,7 @@ Renvoie le nombre de transactions dans un bloc à partir d'un bloc correspondant
 1. `DATA`, 32 octets - hachage d'un bloc
 
 ```js
-params: ["0xb903239f8543d04b5dc1ba6579132b143087c68db1b2168786408fcbce568238"]
+params: ["0xd03ededb7415d22ae8bac30f96b2d1de83119632693b963642318d87d1bece5b"]
 ```
 
 **Valeur de retour**
@@ -703,12 +709,12 @@ params: ["0xb903239f8543d04b5dc1ba6579132b143087c68db1b2168786408fcbce568238"]
 
 ```js
 // Request
-curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockTransactionCountByHash","params":["0xb903239f8543d04b5dc1ba6579132b143087c68db1b2168786408fcbce568238"],"id":1}'
+curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockTransactionCountByHash","params":["0xd03ededb7415d22ae8bac30f96b2d1de83119632693b963642318d87d1bece5b"],"id":1}'
 // Result
 {
   "id":1,
   "jsonrpc": "2.0",
-  "result": "0xb" // 11
+  "result": "0x8b" // 139
 }
 ```
 
@@ -718,11 +724,11 @@ Renvoie le nombre de transactions dans un bloc correspondant au numéro de bloc 
 
 **Paramètres**
 
-1. `QUANTITY|TAG` - numéro de bloc entier, ou la chaîne `« earliest »`, `« latest »` ou `« pending »`, voir le [paramètre de bloc par défaut](/developers/docs/apis/json-rpc/#default-block).
+1. `QUANTITY|TAG` - nombre entier d'un numéro de bloc, ou la chaîne `« latest »`, `« earliest »`, `« pending »`, `« safe »`, ou `« finalized »`, voir le [paramètre de bloc par défaut](/developers/docs/apis/json-rpc/#default-block).
 
 ```js
 params: [
-  "0xe8", // 232
+  "0x13738ca", // 20396234
 ]
 ```
 
@@ -734,12 +740,12 @@ params: [
 
 ```js
 // Request
-curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockTransactionCountByNumber","params":["0xe8"],"id":1}'
+curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockTransactionCountByNumber","params":["0x13738ca"],"id":1}'
 // Result
 {
   "id":1,
   "jsonrpc": "2.0",
-  "result": "0xa" // 10
+  "result": "0x8b" // 139
 }
 ```
 
@@ -752,7 +758,7 @@ Renvoie le nombre d'oncles dans un bloc à partir d'un bloc correspondant au hac
 1. `DATA`, 32 octets - hachage d'un bloc
 
 ```js
-params: ["0xb903239f8543d04b5dc1ba6579132b143087c68db1b2168786408fcbce568238"]
+params: ["0x1d59ff54b1eb26b013ce3cb5fc9dab3705b415a67127a003c3e61eb445bb8df2"]
 ```
 
 **Valeur de retour**
@@ -763,7 +769,7 @@ params: ["0xb903239f8543d04b5dc1ba6579132b143087c68db1b2168786408fcbce568238"]
 
 ```js
 // Request
-curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleCountByBlockHash","params":["0xb903239f8543d04b5dc1ba6579132b143087c68db1b2168786408fcbce568238"],"id":1}'
+curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleCountByBlockHash","params":["0x1d59ff54b1eb26b013ce3cb5fc9dab3705b415a67127a003c3e61eb445bb8df2"],"id":1}'
 // Result
 {
   "id":1,
@@ -778,7 +784,7 @@ Renvoie le nombre d'oncles dans un bloc à partir d'un bloc correspondant au num
 
 **Paramètres**
 
-1. `QUANTITY|TAG` - nombre entier d'un bloc, ou la chaîne « latest », « earliest » ou « pending », voir le [paramètre de bloc par défaut](/developers/docs/apis/json-rpc/#default-block)
+1. `QUANTITY|TAG` - nombre entier d'un numéro de bloc, ou la chaîne `« latest »`, `« earliest »`, `« pending »`, `« safe »`, ou `« finalized »`, voir le [paramètre de bloc par défaut](/developers/docs/apis/json-rpc/#default-block)
 
 ```js
 params: [
@@ -799,7 +805,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleCountByBlockNumber",
 {
   "id":1,
   "jsonrpc": "2.0",
-  "result": "0x1" // 1
+  "result": "0x0" // 0
 }
 ```
 
@@ -810,12 +816,12 @@ Renvoie le code à une adresse donnée.
 **Paramètres**
 
 1. `DATA`, 20 octets - adresse
-2. `QUANTITY|TAG` - numéro de bloc entier, ou la chaîne `« latest »`, `« earliest »` ou `« pending »`, voir le [paramètre de bloc par défaut](/developers/docs/apis/json-rpc/#default-block)
+2. `QUANTITY|TAG` - nombre entier d'un numéro de bloc, ou la chaîne `« latest »`, `« earliest »`, `« pending »`, `« safe »`, ou `« finalized »`, voir le [paramètre de bloc par défaut](/developers/docs/apis/json-rpc/#default-block)
 
 ```js
 params: [
-  "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b",
-  "0x2", // 2
+  "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+  "0x5daf3b", // 6139707
 ]
 ```
 
@@ -827,12 +833,12 @@ params: [
 
 ```js
 // Request
-curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getCode","params":["0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b", "0x2"],"id":1}'
+curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getCode","params":["0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2", "0x5daf3b"],"id":1}'
 // Result
 {
   "id":1,
   "jsonrpc": "2.0",
-  "result": "0x600160008035811a818181146012578301005b601b6001356025565b8060005260206000f25b600060078202905091905056"
+  "result": "0x6060604052600436106100af576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806306fdde03146100b9578063095ea7b31461014757806318160ddd146101a157806323b872dd146101ca5780632e1a7d4d14610243578063313ce5671461026657806370a082311461029557806395d89b41146102e2578063a9059cbb14610370578063d0e30db0146103ca578063dd62ed3e146103d4575b6100b7610440565b005b34156100c457600080fd5b6100cc6104dd565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561010c5780820151818401526020810190506100f1565b50505050905090810190601f1680156101395780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b341561015257600080fd5b610187600480803573ffffffffffffffffffffffffffffffffffffffff1690602001909190803590602001909190505061057b565b604051808215151515815260200191505060405180910390f35b34156101ac57600080fd5b6101b461066d565b6040518082815260200191505060405180910390f35b34156101d557600080fd5b610229600480803573ffffffffffffffffffffffffffffffffffffffff1690602001909190803573ffffffffffffffffffffffffffffffffffffffff1690602001909190803590602001909190505061068c565b604051808215151515815260200191505060405180910390f35b341561024e57600080fd5b61026460048080359060200190919050506109d9565b005b341561027157600080fd5b610279610b05565b604051808260ff1660ff16815260200191505060405180910390f35b34156102a057600080fd5b6102cc600480803573ffffffffffffffffffffffffffffffffffffffff16906020019091905050610b18565b6040518082815260200191505060405180910390f35b34156102ed57600080fd5b6102f5610b30565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561033557808201518184015260208101905061031a565b50505050905090810190601f1680156103625780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b341561037b57600080fd5b6103b0600480803573ffffffffffffffffffffffffffffffffffffffff16906020019091908035906020019091905050610bce565b604051808215151515815260200191505060405180910390f35b6103d2610440565b005b34156103df57600080fd5b61042a600480803573ffffffffffffffffffffffffffffffffffffffff1690602001909190803573ffffffffffffffffffffffffffffffffffffffff16906020019091905050610be3565b6040518082815260200191505060405180910390f35b34600360003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600082825401925050819055503373ffffffffffffffffffffffffffffffffffffffff167fe1fffcc4923d04b559f4d29a8bfc6cda04eb5b0d3c460751c2402c5c5cc9109c346040518082815260200191505060405180910390a2565b60008054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156105735780601f1061054857610100808354040283529160200191610573565b820191906000526020600020905b81548152906001019060200180831161055657829003601f168201915b505050505081565b600081600460003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060008573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020819055508273ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff167f8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925846040518082815260200191505060405180910390a36001905092915050565b60003073ffffffffffffffffffffffffffffffffffffffff1631905090565b600081600360008673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002054101515156106dc57600080fd5b3373ffffffffffffffffffffffffffffffffffffffff168473ffffffffffffffffffffffffffffffffffffffff16141580156107b457507fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff600460008673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000205414155b156108cf5781600460008673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020541015151561084457600080fd5b81600460008673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600082825403925050819055505b81600360008673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000828254039250508190555081600360008573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600082825401925050819055508273ffffffffffffffffffffffffffffffffffffffff168473ffffffffffffffffffffffffffffffffffffffff167fddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef846040518082815260200191505060405180910390a3600190509392505050565b80600360003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000205410151515610a2757600080fd5b80600360003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600082825403925050819055503373ffffffffffffffffffffffffffffffffffffffff166108fc829081150290604051600060405180830381858888f193505050501515610ab457600080fd5b3373ffffffffffffffffffffffffffffffffffffffff167f7fcf532c15f0a6db0bd6d0e038bea71d30d808c7d98cb3bf7268a95bf5081b65826040518082815260200191505060405180910390a250565b600260009054906101000a900460ff1681565b60036020528060005260406000206000915090505481565b60018054600181600116156101000203166002900480601f016020809104026020016040519081016040528092919081815260200182805460018160011615610100020316600290048015610bc65780601f10610b9b57610100808354040283529160200191610bc6565b820191906000526020600020905b815481529060010190602001808311610ba957829003601f168201915b505050505081565b6000610bdb33848461068c565b905092915050565b60046020528160005260406000206020528060005260406000206000915091505054815600a165627a7a72305820deb4c2ccab3c2fdca32ab3f46728389c2fe2c165d5fafa07661e4e004f6c344a0029"
 }
 ```
 
@@ -913,7 +919,7 @@ Crée une nouvelle transaction d'appel ou une création de contrat, si le champ 
 - `gaz` : `QUANTITY` - (facultatif, par défaut : 90 000) Nombre entier du gaz fourni pour l'exécution de la transaction. Il retournera du gaz inutilisé.
 - `gasPrice` : `QUANTITY` - (facultatif, par défaut : To-Be-Determined) Nombre entier du prix du gaz utilisé pour chaque gaz payé.
 - `value` : `QUANTITY` - (facultatif) Nombre entier de la valeur envoyée avec cette transaction.
-- `data` : `DATA` - Le code compilé d'un contrat OU le hachage de la signature de la méthode invoquée et des paramètres encodés.
+- `input` : `DATA` - Le code compilé d'un contrat OU le hachage de la signature de la méthode invoquée et des paramètres encodés.
 - `nonce` : `QUANTITY` - (facultatif) Entier d'un nonce. Cela permet d'écraser vos propres transactions en attente qui utilisent le même nonce.
 
 ```js
@@ -924,7 +930,8 @@ params: [
     gas: "0x76c0", // 30400
     gasPrice: "0x9184e72a000", // 10000000000000
     value: "0x9184e72a", // 2441406250
-    data: "0xd46e8dd67c5d32be8d46e8dd67c5d32be8058bb8eb970870f072445675058bb8eb970870f072445675",
+    input:
+      "0xd46e8dd67c5d32be8d46e8dd67c5d32be8058bb8eb970870f072445675058bb8eb970870f072445675",
   },
 ]
 ```
@@ -933,7 +940,7 @@ params: [
 
 `DATA`, 32 octets - le hachage de la transaction, ou le hachage zéro si la transaction n'est pas encore disponible.
 
-Utilisez [eth_getTransactionReceipt](#eth_gettransactionreceipt) pour obtenir l'adresse du contrat, après que la transaction a été minée, lorsque vous avez créé un contrat.
+Utilisez [eth_getTransactionReceipt](#eth_gettransactionreceipt) pour obtenir l'adresse du contrat, après que la transaction a été proposée dans un block, lorsque vous avez créé un contrat.
 
 **Exemple**
 
@@ -966,7 +973,7 @@ params: [
 
 `DATA`, 32 octets - le hachage de la transaction, ou le hachage zéro si la transaction n'est pas encore disponible.
 
-Utilisez [eth_getTransactionReceipt](#eth_gettransactionreceipt) pour obtenir l'adresse du contrat, après que la transaction a été minée, lorsque vous avez créé un contrat.
+Utilisez [eth_getTransactionReceipt](#eth_gettransactionreceipt) pour obtenir l'adresse du contrat, après que la transaction a été proposée dans un block, lorsque vous avez créé un contrat.
 
 **Exemple**
 
@@ -996,7 +1003,7 @@ Exécute un nouvel appel de message immédiatement sans créer de transaction su
 - `value` : `QUANTITY` - (facultatif) Nombre entier de la valeur envoyée avec cette transaction
 - `input` : `DATA` - Hachage (facultatif) de la signature de la méthode et des paramètres encodés. Pour plus de détails, voir [le contrat Ethereum ABI dans la documentation de Solidity](https://docs.soliditylang.org/en/latest/abi-spec.html).
 
-2. `QUANTITY|TAG` - numéro de bloc entier, ou la chaîne `« latest »`, `« earliest »` ou `« pending »`, voir le [paramètre de bloc par défaut](/developers/docs/apis/json-rpc/#default-block)
+2. `QUANTITY|TAG` - nombre entier d'un numéro de bloc, ou la chaîne `« latest »`, `« earliest »`, `« pending »`, `« safe »`, ou `« finalized »`, voir le [paramètre de bloc par défaut](/developers/docs/apis/json-rpc/#default-block)
 
 **Valeur de retour**
 
@@ -1123,7 +1130,7 @@ Renvoie des informations sur un bloc par numéro de bloc.
 
 **Paramètres**
 
-1. `QUANTITY|TAG` - numéro de bloc entier, ou la chaîne `« earliest »`, `« latest »` ou `« pending »`, voir le [paramètre de bloc par défaut](/developers/docs/apis/json-rpc/#default-block).
+1. `QUANTITY|TAG` - nombre entier d'un numéro de bloc, ou la chaîne `« latest »`, `« earliest »`, `« pending »`, `« safe »`, ou `« finalized »`, voir le [paramètre de bloc par défaut](/developers/docs/apis/json-rpc/#default-block).
 2. `Boolean` - Si `true` il retourne les objets de transaction complètes, si `false` seulement les hachages des transactions.
 
 ```js
@@ -1214,7 +1221,7 @@ Retourne des informations sur une transaction par hachage de bloc et la position
 
 ```js
 params: [
-  "0xe670ec64341771606e55d6b4ca35a1a6b75ee3d5145a99d05921026d1527331",
+  "0x1d59ff54b1eb26b013ce3cb5fc9dab3705b415a67127a003c3e61eb445bb8df2",
   "0x0", // 0
 ]
 ```
@@ -1225,7 +1232,7 @@ params: [
 
 ```js
 // Request
-curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByBlockHashAndIndex","params":["0xc6ef2fc5426d6ad6fd9e2a26abeab0aa2411b7ab17f30a99d3cb96aed1d1055b", "0x0"],"id":1}'
+curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByBlockHashAndIndex","params":["0x1d59ff54b1eb26b013ce3cb5fc9dab3705b415a67127a003c3e61eb445bb8df2", "0x0"],"id":1}'
 ```
 
 Résultat voir [eth_getTransactionByHash](#eth_gettransactionbyhash)
@@ -1236,7 +1243,7 @@ Retourne des informations sur une transaction par numéro de bloc et la position
 
 **Paramètres**
 
-1. `QUANTITY|TAG` - numéro de bloc, ou la chaîne `« earliest »` ,`« latest »`, ou `« pending »`, voir le [paramètre de bloc par défaut](/developers/docs/apis/json-rpc/#default-block).
+1. `QUANTITY|TAG` - un numéro de bloc, ou la chaîne `« earliest »`, `« latest »`, `« pending »`, `« safe »`, ou `« finalized »`, comme dans le [paramètre de bloc par défaut](/developers/docs/apis/json-rpc/#default-block).
 2. `QUANTITY` - position de l'indice de transaction.
 
 ```js
@@ -1335,7 +1342,7 @@ Retourne des informations à propos d'un oncle d'un bloc par hachage et position
 
 ```js
 params: [
-  "0xc6ef2fc5426d6ad6fd9e2a26abeab0aa2411b7ab17f30a99d3cb96aed1d1055b",
+  "0x1d59ff54b1eb26b013ce3cb5fc9dab3705b415a67127a003c3e61eb445bb8df2",
   "0x0", // 0
 ]
 ```
@@ -1346,7 +1353,7 @@ params: [
 
 ```js
 // Request
-curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleByBlockHashAndIndex","params":["0xc6ef2fc5426d6ad6fd9e2a26abeab0aa2411b7ab17f30a99d3cb96aed1d1055b", "0x0"],"id":1}'
+curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleByBlockHashAndIndex","params":["0x1d59ff54b1eb26b013ce3cb5fc9dab3705b415a67127a003c3e61eb445bb8df2", "0x0"],"id":1}'
 ```
 
 Résultat voir [eth_getBlockByHash](#eth_getblockbyhash)
@@ -1359,7 +1366,7 @@ Renvoie des informations à propos d'un oncle d'un bloc par nombre et par positi
 
 **Paramètres**
 
-1. `QUANTITY|TAG` - numéro de bloc, ou la chaîne `« earliest »` ,`« latest »`, ou `« pending »`, voir le [paramètre de bloc par défaut](/developers/docs/apis/json-rpc/#default-block).
+1. `QUANTITY|TAG` - un numéro de bloc, ou la chaîne `« earliest »`, `« latest »`, `« pending »`, `« safe »`, ou `« finalized »`, comme dans le [paramètre de bloc par défaut](/developers/docs/apis/json-rpc/#default-block).
 2. `QUANTITY` - la position de l'oncle dans l'indice.
 
 ```js
@@ -1397,8 +1404,8 @@ Crée un objet filtre, basé sur les options de filtre, pour avertir lorsque l'�
 
 1. `Object` - Les options de filtre :
 
-- `fromBlock`: `QUANTITY|TAG` - (optionnel, par défaut : `"latest"`) nombre de blocs entiers, ou `"latest"` pour le dernier bloc miné ou `"pending"`, `"earliest"` pour les transactions non encore minées.
-- `toBlock`: `QUANTITY|TAG` - (facultatif, par défaut : `"latest"`) Numéro de bloc d'entier ou `"latest"` pour le dernier bloc miné ou `"pending"`, `"earliest"` pour les transactions non encore minées.
+- `fromBlock`: `QUANTITY|TAG` - (optionnel, par défaut : `« latest »`) nombre entier de blocs, ou `« latest »` pour le dernier bloc proposé, `« safe »` pour le dernier bloc sécurisé, `« finalized »` pour le dernier bloc finalisé, ou `« pending »`, `« earliest »` pour les transactions ne faisant pas encore partie d'un bloc.
+- `toBlock`: `QUANTITY|TAG` - (optionnel, par défaut : `« latest »`) nombre entier de blocs, ou `« latest »` pour le dernier bloc proposé, `« safe »` pour le dernier bloc sécurisé, `« finalized »` pour le dernier bloc finalisé, ou `« pending »`, `« earliest »` pour les transactions ne faisant pas encore partie d'un bloc.
 - `address`: `DATA|Array`, 20 octets - (facultatif) adresse contractuelle ou une liste d'adresses d'où les logs doivent provenir.
 - `topics`: `Array of DATA`, - (facultatif) tableau de 32 bytes `DATA` topics. Les sujets dépendent de l'ordre. Chaque sujet peut également être un tableau de DATA avec des options "ou".
 
@@ -1591,8 +1598,8 @@ Retourne un tableau de tous les logs correspondant à un objet filtre donné.
 
 1. `Object` - Les options de filtre :
 
-- `fromBlock`: `QUANTITY|TAG` - (optionnel, par défaut : `"latest"`) nombre de blocs entiers, ou `"latest"` pour le dernier bloc miné ou `"pending"`, `"earliest"` pour les transactions non encore minées.
-- `toBlock`: `QUANTITY|TAG` - (facultatif, par défaut : `"latest"`) Numéro de bloc d'entier ou `"latest"` pour le dernier bloc miné ou `"pending"`, `"earliest"` pour les transactions non encore minées.
+- `fromBlock`: `QUANTITY|TAG` - (optionnel, par défaut : `« latest »`) nombre entier de blocs, ou `« latest »` pour le dernier bloc proposé, `« safe »` pour le dernier bloc sécurisé, `« finalized »` pour le dernier bloc finalisé, ou `« pending »`, `« earliest »` pour les transactions ne faisant pas encore partie d'un bloc.
+- `toBlock`: `QUANTITY|TAG` - (optionnel, par défaut : `« latest »`) nombre entier de blocs, ou `« latest »` pour le dernier bloc proposé, `« safe »` pour le dernier bloc sécurisé, `« finalized »` pour le dernier bloc finalisé, ou `« pending »`, `« earliest »` pour les transactions ne faisant pas encore partie d'un bloc.
 - `address`: `DATA|Array`, 20 octets - (facultatif) adresse contractuelle ou une liste d'adresses d'où les logs doivent provenir.
 - `topics`: `Array of DATA`, - (facultatif) tableau de 32 bytes `DATA` topics. Les sujets dépendent de l'ordre. Chaque sujet peut également être un tableau de DATA avec des options "ou".
 - `blockhash`: `DATA`, 32 octets - (facultatif, **futur**) À l'ajout de EIP-234, `blockHash` sera une nouvelle option de filtre qui restreint les logs retournés au bloc unique avec le hachage de 32 octets `blockHash`. Utiliser `blockHash` est équivalent à `fromBlock` = `toBlock` = le numéro de bloc avec le hachage `blockHash`. Si `blockHash` est présent dans les critères de filtre, alors ni `fromBlock` ni `toBlock` ne sont autorisés.
@@ -1644,10 +1651,10 @@ geth --http --dev console 2>>geth.log
 
 Cela démarrera l'interface HTTP RPC sur `http://localhost:8545`.
 
-Nous pouvons vérifier que l'interface fonctionne en récupérant l'adresse et le solde de Coinbase en utilisant [curl](https://curl.se). Veuillez noter que les données contenues dans ces exemples seront différentes sur votre noeud local. Si vous voulez essayer ces commandes, remplacez les paramètres de la requête dans la deuxième requête avec le résultat retourné par la première.
+Nous pouvons vérifier que l'interface est en cours d'exécution en récupérant l'adresse coinbase (en obtenant la première adresse dans le tableau des comptes) et le solde en utilisant [curl](https://curl.se). Veuillez noter que les données contenues dans ces exemples seront différentes sur votre noeud local. Si vous voulez essayer ces commandes, remplacez les paramètres de la requête dans la deuxième requête avec le résultat retourné par la première.
 
 ```bash
-curl --data '{"jsonrpc":"2.0","method":"eth_coinbase", "id":1}' -H "Content-Type: application/json" localhost:8545
+curl --data '{"jsonrpc":"2.0","method":"eth_accounts","params":[]", "id":1}' -H "Content-Type: application/json" localhost:8545
 {"id":1,"jsonrpc":"2.0","result":["0x9b1d35635cc34752ca54713bb99d38614f63c955"]}
 
 curl --data '{"jsonrpc":"2.0","method":"eth_getBalance", "params": ["0x9b1d35635cc34752ca54713bb99d38614f63c955", "latest"], "id":2}' -H "Content-Type: application/json" localhost:8545
@@ -1694,7 +1701,7 @@ curl --data '{"jsonrpc":"2.0","method": "eth_getTransactionReceipt", "params": [
 {"jsonrpc":"2.0","id":7,"result":{"blockHash":"0x77b1a4f6872b9066312de3744f60020cbd8102af68b1f6512a05b7619d527a4f","blockNumber":"0x1","contractAddress":"0x4d03d617d700cf81935d7f797f4e2ae719648262","cumulativeGasUsed":"0x1c31e","from":"0x9b1d35635cc34752ca54713bb99d38614f63c955","gasUsed":"0x1c31e","logs":[],"logsBloom":"0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000","status":"0x1","to":null,"transactionHash":"0xe1f3095770633ab2b18081658bad475439f6a08c902d0915903bafff06e6febf","transactionIndex":"0x0"}}
 ```
 
-Notre contrat a été créé sur `0x4d03d617d700cf81935d7f797f4e2ae719648262`. Un résultat nul au lieu d'un reçu signifie que la transaction n'a pas encore été intégrée dans un bloc. Attendez un instant et vérifiez si votre mineur est en cours d'exécution et réessayez.
+Notre contrat a été créé sur `0x4d03d617d700cf81935d7f797f4e2ae719648262`. Un résultat nul au lieu d'un reçu signifie que la transaction n'a pas encore été intégrée dans un bloc. Attendez un instant et vérifiez si votre client de consensus est en cours d'exécution et réessayez.
 
 #### Interagir avec les contrats intelligents {#interacting-with-smart-contract}
 

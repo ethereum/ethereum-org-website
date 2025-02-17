@@ -33,7 +33,7 @@ Projektek által adott támogatás olyanoknak, akik az adott technológiát fejl
 - [SKALE Network Grants Program](https://skale.space/developers#grants) – _[SKALE Network](https://skale.space/) ökoszisztéma_
 - [Swarm Foundation Grants Program](https://my.ethswarm.org/grants) - _[Swarm Foundation](https://www.ethswarm.org/) ökoszisztéma_
 - [The Graph](https://thegraph.com/ecosystem/grants/) – _[The Graph](https://thegraph.com/) ökoszisztéma_
-- [Uniswap Grants Program](https://www.uniswapfoundation.org/grants) – _[Uniswap](https://uniswap.org/) közösség_
+- [Uniswap Grants Program](https://www.uniswapfoundation.org/approach) – _[Uniswap](https://uniswap.org/)-közösség_
 
 ## Kvadratikus finanszírozás {#quadratic-funding}
 

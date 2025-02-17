@@ -14,9 +14,9 @@ Cheaper hard drives can be used to store older data but those are too slow to ke
 
 ## Reducing storage for nodes {#reducing-storage-for-nodes}
 
-There are several ways to reduce the amount of data each node has to store, each requiring Ethereum's core protocol to be updates to a different extent:
+There are several ways to reduce the amount of data each node has to store, each requiring Ethereum's core protocol to be updated to a different extent:
 
-- **History expiry**: enable nodes to discard state data older than X blocks, but does not change how Ethereum client's handle state data
+- **History expiry**: enable nodes to discard state data older than X blocks, but does not change how Ethereum client's handle state data.
 - **State expiry**: allow state data that is not used frequently to become inactive. Inactive data can be ignored by clients until it is resurrected.
 - **Weak statelessness**: only block producers need access to full state data, other nodes can verify blocks without a local state database.
 - **Strong statelessness**: no nodes need access to the full state data.
@@ -72,7 +72,7 @@ For this to happen, [Verkle trees](/roadmap/verkle-trees/) must already have bee
 
 Statelessness relies on block builders maintaining a copy of the full state data so that they can generate witnesses that can be used to verify the block. Other nodes do not need access to the state data, all the information required to verify the block is available in the witness. This creates a situation where proposing a block is expensive, but verifying the block is cheap, which implies fewer operators will run a block proposing node. However, decentralization of block proposers is not critical as long as as many participants as possible can independently verify that the blocks they propose are valid.
 
-<ButtonLink variant="outline-color" to="https://notes.ethereum.org/WUUUXBKWQXORxpFMlLWy-w#So-why-is-it-ok-to-have-expensive-proposers">Read more on Dankrad's notes</ButtonLink>
+<ButtonLink variant="outline-color" href="https://notes.ethereum.org/WUUUXBKWQXORxpFMlLWy-w#So-why-is-it-ok-to-have-expensive-proposers">Read more on Dankrad's notes</ButtonLink>
 </ExpandableCard>
 
 Block proposers use the state data to create "witnesses" - the minimal set of data that prove the values of the state that are being changed by the transactions in a block. Other validators do not hold the state, they only store the state root (a hash of the entire state). They receive a block and a witness and use them to update their state root. This makes a validating node extremely lightweight.

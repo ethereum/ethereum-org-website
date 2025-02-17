@@ -28,12 +28,13 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
   // Temporal list of content pages allowed to be compiled
   // When a content page is migrated (and he components being used), should be added to this list
   const temporalAllowedPages = [
-    // Use cases (7/7) ✅
+    // Use cases (8/8) ✅
     "/dao",
     "/decentralized-identity",
     "/defi",
     "/desci",
     "/nft",
+    "/payments",
     "/refi",
     "/social-networks",
     // Staking (4/4) ✅
@@ -86,6 +87,8 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
     "/developers/docs/data-structures-and-encoding/ssz",
     "/developers/docs/data-structures-and-encoding/web3-secret-storage",
     "/developers/docs/design-and-ux",
+    "/developers/docs/design-and-ux/heuristics-for-web3",
+    "/developers/docs/design-and-ux/dex-design-best-practice",
     "/developers/docs/development-networks",
     "/developers/docs/ethereum-stack",
     "/developers/docs/evm",
@@ -113,6 +116,7 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
     "/developers/docs/programming-languages/dart",
     "/developers/docs/programming-languages/delphi",
     "/developers/docs/programming-languages/dot-net",
+    "/developers/docs/programming-languages/elixir",
     "/developers/docs/programming-languages/golang",
     "/developers/docs/programming-languages/java",
     "/developers/docs/programming-languages/javascript",
@@ -190,10 +194,10 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
     "/developers/tutorials/secure-development-workflow",
     "/developers/tutorials/send-token-ethersjs",
     "/developers/tutorials/sending-transactions-using-web3-and-alchemy",
+    "/developers/tutorials/server-components",
     "/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript",
     "/developers/tutorials/short-abi",
     "/developers/tutorials/smart-contract-security-guidelines",
-    "/developers/tutorials/solidity-and-truffle-continuous-integration-setup",
     "/developers/tutorials/testing-erc-20-tokens-with-waffle",
     "/developers/tutorials/the-graph-fixing-web3-data-querying",
     "/developers/tutorials/token-integration-checklist",
@@ -241,6 +245,9 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
     "/contributing/translation-program/playbook",
     "/contributing/translation-program/resources",
     "/contributing/translation-program/translatathon",
+    "/contributing/translation-program/translatathon/details",
+    "/contributing/translation-program/translatathon/translatathon-hubs",
+    "/contributing/translation-program/translatathon/terms-and-conditions",
     "/contributing/translation-program/translators-guide",
     "/cookie-policy",
     "/eips",
@@ -262,6 +269,7 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
     "/roadmap/account-abstraction",
     "/roadmap/danksharding",
     "/roadmap/dencun",
+    "/roadmap/pectra",
     "/roadmap/merge/issuance",
     "/roadmap/pbs",
     "/roadmap/secret-leader-election",
@@ -271,6 +279,7 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
     "/security",
     "/smart-contracts",
     "/staking/dvt",
+
     "/terms-of-use",
     "/web3",
     "/whitepaper",
@@ -387,7 +396,7 @@ export const getTutorialsData = (locale: string): ITutorial[] => {
       const frontmatter = data as Frontmatter
 
       return {
-        to: join(`/${locale}/developers/tutorials`, dir),
+        href: join(`/${locale}/developers/tutorials`, dir),
         title: frontmatter.title,
         description: frontmatter.description,
         author: frontmatter.author || "",

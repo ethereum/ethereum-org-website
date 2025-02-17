@@ -190,7 +190,7 @@ Una vez establecidas las credenciales de retirada, los pagos de recompensa (ETH 
 
 Para desbloquear y recibir el saldo completo, también debe completar el proceso de salida de su validador.
 
-<ButtonLink to="/staking/withdrawals/">Más sobre los retiros de Staking</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">Más sobre los retiros de Staking</ButtonLink>
 </ExpandableCard>
 
 ## Para profundizar sobre el tema {#further-reading}
@@ -203,4 +203,4 @@ Para desbloquear y recibir el saldo completo, también debe completar el proceso
 - [Paso a paso: Cómo unirse a la red de prueba de Ethereum 2.0](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) - _Butta_
 - [Consejos para la prevención de «recortes» de Eth2](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) - _Raúl Jordan 2020_
 
-<QuizWidget quizKey="solo-staking" />
+<QuizWidget quizKey="staking-solo" />

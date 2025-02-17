@@ -106,3 +106,4 @@ Une critique majeure de la preuve de travail est la quantité d'énergie nécess
 
 - [Minage](/developers/docs/consensus-mechanisms/pow/mining/)
 - [Preuve d'enjeu](/developers/docs/consensus-mechanisms/pos/)
+- [Preuve d'autorité](/developers/docs/consensus-mechanisms/poa/)

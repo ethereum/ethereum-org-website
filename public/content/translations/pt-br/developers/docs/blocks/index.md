@@ -127,7 +127,7 @@ A lista `withdrawals` contém objetos `withdrawal` estruturados da seguinte form
 | Campo            | Descrição                     |
 |:---------------- |:----------------------------- |
 | `endereço`       | endereço da conta que retirou |
-| `amount`         | quantidade retirada           |
+| `quantidade`     | quantidade retirada           |
 | `index`          | valor do índice da retirada   |
 | `validatorIndex` | valor do índice do validador  |
 
@@ -139,7 +139,7 @@ Essa implementação difere dos sistemas baseados em prova de trabalho, na qual 
 
 ## Tamanho do bloco {#block-size}
 
-Uma observação final importante é que os blocos em si são delimitados por tamanho. Cada bloco tem um tamanho alvo de 15 milhões de gás, mas o tamanho dos blocos aumentar ou diminui de acordo com as demandas da rede, até o limite do bloco de 30 milhões de gás (2 vezes o tamanho do bloco de destino). A quantidade total de gás gasto por todas as transações no bloco deve ser inferior ao limite de gás do bloco. Isso é importante porque garante que os blocos não possam ser arbitrariamente grandes. Se os blocos pudessem ser arbitrariamente grandes, os nós completos com menos desempenho iriam gradualmente deixar de conseguir acompanhar a rede devido aos requisitos de espaço e velocidade. Quanto maior o bloco, maior o poder de computação necessário para processá-los a tempo para o próximo espaço. Essa força centralizadora é impedida com a limitação do tamanho dos blocos.
+Uma observação final importante é que os blocos em si são delimitados por tamanho. Cada bloco tem um tamanho alvo de 15 milhões de gás, mas o tamanho dos blocos aumentar ou diminui de acordo com as demandas da rede, até o limite do bloco de 30 milhões de gás (2 vezes o tamanho do bloco de destino). O limite de gás do bloco pode ser ajustado para mais ou para menos em um fator de 1/1.024 em relação ao limite de gás do bloco anterior. Como resultado, os validadores podem alterar o limite de gás do bloco por meio de um consenso. A quantidade total de gás gasto por todas as transações no bloco deve ser inferior ao limite de gás do bloco. Isso é importante porque garante que os blocos não possam ser arbitrariamente grandes. Se os blocos pudessem ser arbitrariamente grandes, os nós completos com menos desempenho iriam gradualmente deixar de conseguir acompanhar a rede devido aos requisitos de espaço e velocidade. Quanto maior o bloco, maior o poder de computação necessário para processá-los a tempo para o próximo espaço. Essa força centralizadora é impedida com a limitação do tamanho dos blocos.
 
 ## Leitura adicional {#further-reading}
 

@@ -72,7 +72,7 @@ EIP-4444 尚未准备好上线，但在积极讨论中。 有趣的是，EIP-444
 
 无状态性依赖于区块构建者保存完整状态数据的副本，以便生成可用于验证区块的见证。 其他节点不需要访问状态数据，验证区块所需的所有信息都可以在见证中获得。 这就造成了一种情况，即提出区块的成本很高，但验证区块的成本很低，这意味着运行区块提出节点的运营商会越来越少。 不过，只要有尽可能多的参与者能够独立验证区块提议者提出的区块是否有效，区块提议者的去中心化并不重要。
 
-<ButtonLink variant="outline-color" to="https://notes.ethereum.org/WUUUXBKWQXORxpFMlLWy-w#So-why-is-it-ok-to-have-expensive-proposers">阅读 Dankrad 的说明，了解更多信息</ButtonLink>
+<ButtonLink variant="outline-color" href="https://notes.ethereum.org/WUUUXBKWQXORxpFMlLWy-w#So-why-is-it-ok-to-have-expensive-proposers">阅读 Dankrad 的说明，了解更多信息</ButtonLink>
 </ExpandableCard>
 
 区块提议者使用状态数据创建“见证” - 证明区块中的交易正在改变的状态值的最小数据集。 其他验证者并不持有状态数据，它们只存储状态根（整个状态的哈希值）。 它们接收区块和见证，并使用它们来更新状态根。 这使得验证节点变得非常轻量。

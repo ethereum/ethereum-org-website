@@ -6,101 +6,7 @@ lang: tr
 
 # Ethereum güvenliği ve dolandırıcılık önleme {#introduction}
 
-Kripto paralara olan ilgi arttıkça, kripto para kullanmanın en iyi yöntemlerini öğrenmek çok önemlidir. Kripto eğlenceli ve heyecan verici olabilir, ancak ciddi riskleri de vardır. Eğer bu küçük ön çalışmayı uygulamaya koyarsanız, bu riskleri azaltabilirsiniz.
-
-<Divider />
-
-## Web güvenliği 101 {#web-security}
-
-### Güçlü şifre kullanın {#use-strong-passwords}
-
-[Hesap hack'lerinin %80'inden fazlası, zayıf veya çalınmış şifrelerin bir sonucudur](https://cloudnine.com/ediscoverydaily/electronic-discovery/80-percent-hacking-related-breaches-related-password-issues-cybersecurity-trends/). Hesaplarınızı güvende tutmak için uzun bir karakter, sayı ve sembol kombinasyonu en iyisidir.
-
-Bireylerin yaptığı yaygın bir hata: İki ila üç yaygın ve birbiriyle alakalı kelimelerden oluşan bir kombinasyon kullanmaktır. Bunun gibi şifreler güvensizdir çünkü [sözlük saldırısı](https://wikipedia.org/wiki/Dictionary_attack) olarak bilinen basit bir hack'leme tekniğine karşı yetersizdirler.
-
-```md
-Zayıf şifre örneği: TatlıTüylüKedicikler!
-
-Güçlü şifre örneği: ymv\*azu.EAC8eyp8umf
-```
-
-Bir başka yaygın hata da, [sosyal mühendislik](https://wikipedia.org/wiki/Social_engineering_(security)) aracılığıyla kolayca tahmin edilebilen veya bulunabilen şifreler kullanmaktır. Şifrenizde annenizin kızlık soyadı, çocuklarınızın veya evcil hayvanlarınızın adları veya doğum tarihlerinin bulunması güvenli değildir ve şifrenizin ele geçirilme riskini artırır.
-
-#### Şifre belirlemek için iyi yöntemler: {#good-password-practices}
-
-- Şifre üreticinizin veya doldurduğunuz formun izin verdiği kadar uzun şifreler oluşturun
-- Büyük harf, küçük harf, sayı ve sembollerin bir karışımını kullanın
-- Şifrenizde aile adları gibi kişisel bilgileri kullanmayın
-- Yaygın sözlük kelimelerinden kaçının
-
-[Güçlü şifreler oluşturma hakkında daha fazla bilgi](https://terranovasecurity.com/how-to-create-a-strong-password-in-7-easy-steps/)
-
-### Her şey için farklı şifreler kullanın {#use-unique-passwords}
-
-Güçlü bir şifre, bir veri ihlali sırasında parolanın açığa çıkması durumunda çok fazla koruma sağlamaz. [Have I Been Pwned](https://haveibeenpwned.com) web sitesi, hesaplarınızın veritabanlarında depolanan herhangi bir veri ihlaline karışıp karışmadığını kontrol etmenize olanak tanır. Varsa **sitede bulunan şifreleri hemen değiştirmelisiniz**. Her hesap için benzersiz şifreler kullanmak, şifrelerinizden biri ele geçirildiğinde hacker'ların tüm hesaplarınıza erişme riskini azaltır.
-
-### Bir şifre yöneticisi kullanın {#use-password-manager}
-
-<InfoBanner emoji=":bulb:">
-  <div>
-    Bir şifre yöneticisi kullanmak; güçlü, benzersiz şifreler oluşturmak ve bunları hatırlama işini sizin için çözer! Bunlardan birini kullanmanızı <strong>şiddetle</strong> öneririz ve çoğu ücretsizdir!
-  </div>
-</InfoBanner>
-
-Sahip olduğunuz her hesap için güçlü, benzersiz şifreleri ezberlemeye çalışmak pek kolay değildir. Bir şifre yöneticisi, tek bir güçlü ana şifre aracılığıyla erişebileceğiniz tüm şifreleriniz için güvenli, şifrelenmiş bir depo sunar. Ayrıca, yeni bir hizmete kaydolurken güçlü şifreler önerirler, böylece kendinizinkini oluşturmak zorunda kalmazsınız. Birçok şifre yöneticisi, herhangi bir kötü niyetli saldırıdan önce şifreleri değiştirmenize izin vererek, bir veri ihlaline karışıp karışmadığınızı da size söyler.
-
-![Bir şifre yöneticisi kullanım örneği](./passwordManager.png)
-
-#### Bir şifre yöneticisi deneyin: {#try-password-manager}
-
-- [Bitwarden](https://bitwarden.com/)
-- [KeePass](https://keepass.info/)
-- [1Password](https://1password.com/)
-- Yahut diğer [önerilen şifre yöneticilerine](https://www.privacytools.io/secure-password-manager) göz atın
-
-### İki Faktörlü Kimlik Doğrulamayı Kullanın {#two-factor-authentication}
-
-Gerçekten siz olduğunuzu kanıtlamak için, kimlik doğrulama için kullanılabilecek farklı benzersiz ispatlar vardır. Bunlar **faktörler** olarak bilinir ve üç ana faktör şunlardır:
-
-- Bildiğiniz bir şey (şifre veya güvenlik sorusu gibi)
-- Olduğunuz bir şey (parmak izi veya göz/yüz tarayıcısı gibi)
-- Sahip olduğunuz bir şey (telefonunuzda bir güvenlik anahtarı veya kimlik doğrulama uygulaması)
-
-**İki Faktörlü Doğrulama (2FA)** kullanmak çevrimiçi hesaplarınız için ek bir *güvenlik faktörü* sağlar; böylece sadece şifrenizi bilmek (bildiğiniz bir şey) bir hesaba erişmek için yeterli değildir. En yaygın olarak, ikinci faktör **zaman esaslı tek seferlik şifre (TOTP)** olarak bilinen, Google Authenticator veya Authy gibi bir doğrulayıcı uygulamadan ulaşabileceğiniz rastgele seçilmiş 6 haneli bir koddur. Bunlar "senin sahip olduğun bir şey" faktörü ile çalışırlar çünkü zamanlı kodu oluşturan tohum, sizin aygıtınızda depolanır.
-
-<InfoBanner emoji=":lock:">
-  <div>
-    Not: SMS tabanlı 2FA'nın kullanılması 
-    <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">
-      SIM dolandırıcılığı
-    </a>na karşı zayıftır
-     ve güvenli değildir. En iyi güvenlik için, bunun gibi hizmetleri kullanın{" "}
-    <a href="https://mashable.com/article/how-to-set-up-google-authenticator">
-      Google Kimlik Doğrulayıcı
-    </a>
-     yada <a href="https://authy.com/">Authy</a>.
-  </div>
-</InfoBanner>
-
-#### Güvenlik anahtarları {#security-keys}
-
-2FA'da sonraki adımı atmak isteyenler, bir güvenlik anahtar kullanmayı düşünebilir. Güvenlik anahtarları doğrulayıcı uygulamalarla aynı şekilde çalışan fiziksel donanım doğrulama aygıtlarıdır. Bir güvenlik anahtarı kullanmak 2FA'daki en güvenli yoldur. Bu anahtarların birçoğu FIDO Evrensel İkinci Faktör (U2F) standartından yararlanır. [FIDO U2F hakkında daha fazlasını öğrenin](https://www.yubico.com/authentication-standards/fido-u2f/).
-
-2FA hakkında daha fazlasını izleyin:
-
-<YouTube id="m8jlnZuV1i4" start="3479" />
-
-### Tarayıcı uzantılarını kaldırın {#uninstall-browser-extensions}
-
-Chrome uzantıları veya Firefox Eklentileri gibi tarayıcı uzantıları, kullanışlı tarayıcı işlevselliğini artırabilir ve kullanıcı deneyimini iyileştirebilir, ancak bunun riskleri de vardır. Varsayılan olarak, çoğu tarayıcı uzantısı "site verilerini okuma ve değiştirme" erişimi ister ve verilerinizle hemen hemen her şeyi yapmalarına izin verir. Chrome uzantıları her zaman otomatik olarak güncellenir, bu nedenle önceden güvenli bir uzantı daha sonra kötü amaçlı kod içerecek şekilde güncellenebilir. Çoğu tarayıcı uzantısı verilerinizi çalmaya çalışmaz, ancak yapabileceklerinin farkında olmalısınız.
-
-#### Bu yollarla güvende kalabilirsiniz: {#browser-extension-safety}
-
-- Sadece güvenilir kaynaklardan tarayıcı eklentileri indirin
-- Kullanılmayan tarayıcı eklentilerini silin
-- Otomatik güncellemeyi durdurmak için yerel olarak Chrome eklentilerini silin (Gelişmiş)
-
-[Tarayıcı uzantılarının riskleri hakkında daha fazla bilgi](https://www.kaspersky.co.uk/blog/browser-extensions-security/12750/)
+Kripto paralara olan ilginin artması, dolandırıcı ve bilgisayar korsanları kaynaklı artan bir riski de beraberinde getiriyor. Bu makale, bu riskleri en düşük seviyeye indirmeye yönelik bazı en iyi pratikleri açıklıyor.
 
 <Divider />
 
@@ -108,13 +14,13 @@ Chrome uzantıları veya Firefox Eklentileri gibi tarayıcı uzantıları, kulla
 
 ### Bilginizi yükseltin {#level-up-your-knowledge}
 
-İnsanların kriptoda dolandırılmalarının en büyük nedenlerinden biri genellikle anlayış eksikliğidir. Örneğin, Ethereum ağının merkezi olmadığını ve kimseye ait olmadığını anlamıyorsanız, özel anahtarlarınız karşılığında kayıp ETH'nizi geri vermeyi vaat eden bir müşteri hizmetleri temsilcisi gibi davranan biri tarafından avlanmak kolaydır. Kendinizi Ethereum'un nasıl çalıştığı konusunda eğitmek değerli bir yatırımdır.
+Kriptonun nasıl çalıştığını yanlış anlamak, maliyetli hatalara sebebiyet verebilir. Örneğin, birisi özel anahtarınız karşılığında kayıp ETH'yi iade edebilecek bir müşteri hizmetleri temsilcisi gibi davranıyorsa, Ethereum'un bu tür bir işlevsellikten yoksun merkeziyetsiz bir ağ olduğunu anlamayan insanları avlıyor demektir. Kendinizi Ethereum'un nasıl çalıştığı konusunda eğitmek değerli bir yatırımdır.
 
-<DocLink to="/what-is-ethereum/">
+<DocLink href="/what-is-ethereum/">
   Ethereum nedir?
 </DocLink>
 
-<DocLink to="/eth/">
+<DocLink href="/eth/">
   Ether nedir?
 </DocLink>
 <Divider />
@@ -125,15 +31,15 @@ Chrome uzantıları veya Firefox Eklentileri gibi tarayıcı uzantıları, kulla
 
 **Hiçbir nedenle, özel anahtarlarınızı asla paylaşmayın!**
 
-Cüzdanınızın özel anahtarı, Ethereum cüzdanınız için bir şifre görevi görür. Cüzdan adresinizi bilen birinin hesabınızın tüm varlıklarını ele geçirmesini engelleyen tek şey budur!
+Cüzdanınızın özel anahtarı, Ethereum cüzdanınızın şifresidir. Cüzdan adresinizi bilen birinin hesabınızın tüm varlıklarını ele geçirmesini engelleyen tek şey budur!
 
-<DocLink to="/wallets/">
+<DocLink href="/wallets/">
   Ethereum cüzdanı nedir?
 </DocLink>
 
 #### Güvenlik kelimelerinizin/özel anahtarlarınızın ekran görüntülerini almayın {#screenshot-private-keys}
 
-Güvenlik kelimelerinizin veya özel anahtarlarınızın ekran görüntüsünü alarak, bunları bulutla senkronize etme ve potansiyel olarak hacker'lar tarafından erişilebilir hâle getirme riskini alırsınız. Buluttan özel anahtarlar elde etmek, hacker'lar için yaygın bir saldırı vektörüdür.
+Güvenlik kelimeleriniz ya da özel anahtarınız, ekran görüntülerini aldığınız zaman bulut depolama sağlayıcısına aktarılabilir. Bu da onları saldırganlar tarafından erişilebilir hale getirir. Buluttan özel anahtarlar almak, bilgisayar korsanları için yaygın bir saldırı vektörüdür.
 
 ### Donanım cüzdanı kullanın {#use-hardware-wallet}
 
@@ -148,9 +54,9 @@ Bir donanım cüzdanı, özel anahtarlar için çevrimdışı depolama sağlar. 
 
 ### İşlemleri göndermeden önce iki kez kontrol edin {#double-check-transactions}
 
-Yanlışlıkla yanlış cüzdan adresine kripto göndermek yaygın bir hatadır. **Ethereum'da gönderilen bir işlem geri alınamaz.** Adres sahibini tanımıyorsanız ve onu fonunuzu size geri göndermeye ikna edemezseniz paranızı geri almanın bir yolu olmayacaktır.
+Yanlışlıkla yanlış cüzdan adresine kripto göndermek yaygın bir hatadır. **Ethereum üzerinden gönderilen bir işlem geri döndürülemez.** Adresin sahibini tanımıyor ve paranızı size geri göndermeye ikna edemiyorsanız paranızı geri alamazsınız.
 
-Bir işlem göndermeden önce, gönderdiğiniz adresin istediğiniz alıcının adresiyle tam olarak eşleştiğinden daima emin olun. Akıllı bir sözleşmeyle etkileşim kurarken, imzalamadan önce işlem mesajını okumak da önerilir.
+Bir işlem göndermeden önce, gönderdiğiniz adresin istediğiniz alıcının adresiyle tam olarak eşleştiğinden daima emin olun. Bir akıllı sözleşme ile etkileşime girerken gelen mesajı imzalamadan önce okumak iyi bir pratiktir.
 
 ### Akıllı sözleşme harcama limitleri belirleyin {#spend-limits}
 
@@ -164,25 +70,35 @@ Birçok Ethereum cüzdanı, boşaltılan hesaplara karşı koruma sağlamak içi
 
 ## Yaygın dolandırıcılıklar {#common-scams}
 
-Dolandırıcılar her zaman paranızı almanın yollarını ararlar. Dolandırıcıları tamamen durdurmak imkansızdır, ancak kullanılan çoğu tekniğin farkında olarak onları daha etkisiz hâle getirebiliriz. Bu dolandırıcılıkların birçok çeşidi vardır, ancak genellikle aynı üst düzey kalıpları izlerler. Ne olursa olsun, unutmayın:
+Dolandırıcıları tamamen durdurmak imkansızdır ancak en çok kullanıldıkları teknikleri öğrenerek onları daha etkisiz hâle getirebiliriz. Bu dolandırıcılıkların birçok çeşidi vardır, ancak genellikle aynı üst düzey kalıpları izlerler. Ne olursa olsun, unutmayın:
 
 - her zaman şüpheci olun
 - kimse size ücretsiz veya indirimli ETH vermeyecek
 - kimsenin özel anahtarlarınıza veya kişisel bilgilerinize erişmesine gerek yok
 
+### X reklam yemlemesi {#ad-phishing}
+
+![X bağlantı yemlemesi](./twitterPhishingScam.png)
+
+Twitter'ın (X olarak da bilinir) bağlantı önizleme özelliğini (unfurling) taklit ederek kullanıcıların yasal bir web sitesini ziyaret ettiklerine inanmasını sağlayan bir yöntem mevcuttur. Bu teknik, Twitter'ın tweetlerde paylaşılan URL'lerin önizlemelerini oluşturma mekanizmasını istismar eder ve örneğin _ethereum.org'dan_ (yukarıda gösterilmiştir) şeklinde bir ifade gösterse de aslında kötü amaçlı bir siteye yönlendirir.
+
+Özellikle bir bağlantıya tıkladıktan sonra doğru etki alanında olup olmadığınızı her zaman kontrol edin.
+
+[Daha fazla bilgiye buradan ulaşabilirsiniz](https://harrydenley.com/faking-twitter-unfurling).
+
 ### Çekiliş dolandırıcılığı {#giveaway}
 
-Kripto para birimindeki en yaygın dolandırıcılıklardan biri, çekiliş dolandırıcılığıdır. Çekiliş dolandırıcılığı birçok şekilde olabilir, ancak genelde verilen cüzdan adresine ETH gönderirseniz, ETH'nizin iki katını geri alacağınız vaat edilir. *Bu sebepten dolayı, 1 alana 1 bedava dolandırıcılığı olarak da bilinir.*
+Kripto para birimindeki en yaygın dolandırıcılıklardan biri, çekiliş dolandırıcılığıdır. Çekiliş dolandırıcılığı birçok şekilde olabilir, ancak genelde verilen cüzdan adresine ETH göndermeniz halinde ETH'nizin iki katını geri alacağınız vaat edilir. *Bu sebepten dolayı, 1 alana 1 bedava dolandırıcılığı olarak da bilinir.*
 
-Bu dolandırıcılıklar genellikle yanlış kararlar vermeye yönlendirmek ve sahte bir aciliyet hissi yaratmak amacıyla hediyeyi talep etmek için sınırlı bir fırsat süresi şart koşar.
+Bu dolandırıcılıklar genellikle aciliyet hissi yaratarak ödülü talep etmek için sınırlı bir zaman aralığı belirler.
 
-#### Sosyal medya hack'leri {#social-media-hacks}
+### Sosyal medya hack'leri {#social-media-hacks}
 
 Bunun üst düzey bir versiyonu Temmuz 2020'de önde gelen ünlülerin ve organizasyonların Twitter hesapları çalındığında gerçekleşti. Hacker eş zamanlı olarak çalınan hesaplarda bir Bitcoin çekilişi paylaştı. Aldatıcı tweetler hızlıca fark edilmiş ve silinmiş olsa da saldırganlar 11 Bitcoin koparmayı başardı (Eylül 2021 itibarıyla 500.000 ABD Doları).
 
 ![Twitter'daki dolandırıcılık](./appleTwitterScam.png)
 
-#### Ünlü çekilişleri {#celebrity-giveaway}
+### Ünlü çekilişleri {#celebrity-giveaway}
 
 Ünlü çekilişi, çekiliş dolandırıcılığı teşebbüslerinin yaygın başka bir türüdür. Dolandırıcılar bir ünlü tarafından verilen kaydedilmiş bir röportaj veya konferans videosunu alırlar ve YouTube'da canlı yayın olarak yayınlarlar: Bir kripto para çekilişini destekleyen canlı bir video röportajı veriyormuş gibi gösterirler.
 
@@ -236,9 +152,9 @@ Eğer bilinmeyen bir göndericiden bir e-posta alırsanız, hatırlayın:
 
 ### Kripto ticaret simsarı dolandırıcılıkları {#broker-scams}
 
-Dolandırıcı kripto ticaret simsarları sizin paranızı almayı ve sizin adınıza yatırım yapmayı teklif ederler ve uzman kripto para simsarı olduklarını iddia ederler. Genellikle bu teklife gerçeklikten uzak kazanç vaatleri eşlik eder. Dolandırıcı paranızı aldıktan sonra, daha fazla yatırım kazancını kaybetmemek için daha çok para göndermenizi isteyerek sizi kandırmaya devam edebilir veya tamamen ortadan kaybolabilir.
+Dolandırıcı kripto ticaret komisyoncuları, paranızı almayı ve sizin adınıza yatırım yapmayı teklif edecek uzman kripto para komisyoncuları olduklarını iddia ederler. Dolandırıcı paranızı aldıktan sonra, daha fazla yatırım kazancını kaybetmemek için daha çok para göndermenizi isteyerek sizi kandırmaya devam edebilir veya tamamen ortadan kaybolabilir.
 
-Bu sahtekâr simsarlar, simsar hakkında görünüşte doğal sohbetler başlatmak için YouTube'da sahte hesaplar kullanarak hedeflerini bulurlar. Bu sohbetler genelde gerçekliğini arttırmak için yüksek miktarda oy alır, ancak oyların hepsi bot hesaplardandır.
+Bu dolandırıcılar, kurbanlarını genelde Youtube'da sahte hesaplar açarak ve doğal görünümlü komisyonculuk sohbetleri başlatarak bulurlar. Bu sohbetler genelde gerçekliğini arttırmak için yüksek miktarda oy alır, ancak oyların hepsi bot hesaplardandır.
 
 **İnternetteki yabancılara sizin yerinize yatırım yapmaları için güvenmeyin. Krito paranızı kaybedersiniz.**
 
@@ -246,9 +162,9 @@ Bu sahtekâr simsarlar, simsar hakkında görünüşte doğal sohbetler başlatm
 
 ### Kripto madencilik havuzu dolandırıcılıkları {#mining-pool-scams}
 
-Eylül 2022'den itibaren Ethereum'da madencilik yapmak artık mümkün değil. Ancak, madencilik havuzu dolandırıcılığı hâlâ var. Madencilik havuzu dolandırıcılığı, istenmeyen kişilerin sizinle iletişim kurmasını ve bir Ethereum madencilik havuzuna katılarak büyük getiriler elde edebileceğinizi iddia etmesini içerir. Dolandırıcılar vaatlerde bulunurlar ve sizinle olabildiği kadar iletişimde kalırlar. Temel olarak, dolandırıcı sizi bir Ethereum madencilik havuzuna katıldığınızda kripto paranızın ETH yaratmak için kullanılacağına ve ETH şeklinde kâr payı ödemesi alacağınıza ikna etmeye çalışır. Aslında gerçekleşecek olan, kripto paranızın küçük kazançlar yarattığını fark etmenizdir. Bu sadece sizi daha çok yatırmanız için aldatmayı amaçlar. Sonunda, tüm paranız bilinmeyen bir adrese gönderilecek ve dolandırıcı ya ortadan kaybolacak ya da bazı durumlarda yakın zamanda olduğu gibi iletişim halinde kalmaya devam edecek.
+Eylül 2022'den itibaren Ethereum'da madencilik yapmak artık mümkün değil. Ancak, madencilik havuzu dolandırıcılığı hâlâ var. Madencilik havuzu dolandırıcılığı, istenmeyen kişilerin sizinle iletişim kurmasını ve bir Ethereum madencilik havuzuna katılarak büyük getiriler elde edebileceğinizi iddia etmesini içerir. Dolandırıcılar vaatlerde bulunurlar ve sizinle olabildiği kadar iletişimde kalırlar. Esasında, dolandırıcı sizi bir Ethereum madencilik havuzuna katıldığınızda kripto paralarınızın ETH üretmek için kullanılacağına ve ETH şeklinde kâr edeceğinize ikna etmeye çalışır. Sonrasında kripto paranızın küçük getiriler sağladığını görürsünüz. Bu sadece sizi daha çok yatırmanız için aldatmayı amaçlar. Sonunda, tüm paranız bilinmeyen bir adrese gönderilecek ve dolandırıcı ya ortadan kaybolacak ya da bazı durumlarda yakın zamanda olduğu gibi iletişim halinde kalmaya devam edecek.
 
-Sonuç olarak, bir madencilik havuzunun parçası olmanızı isteyen sosyal medyada sizinle iletişime geçen kişilere karşı dikkatli olun. Kriptonuzu bir kez kaybettiğinizde, geri dönüşü yoktur.
+Sonuç olarak; sosyal medya üzerinden sizinle iletişime geçip bir madencilik havuzuna girmenizi teklif eden kişilere karşı dikkatli olun. Kriptonuzu bir kez kaybettiğinizde, geri dönüşü yoktur.
 
 Hatırlanacak birkaç şey:
 
@@ -260,9 +176,95 @@ Hatırlanacak birkaç şey:
 
 ### Airdrop dolandırıcılığı {#airdrop-scams}
 
-Airdrop dolandırıcılığı, bir varlığı (NFT, token) cüzdanınıza Airdrop ile gelen ve sizi Airdrop'la gönderilen varlığı almanız için bir dolandırıcılık web sitesine yönlendiren bir dolandırıcılık projesini içerir. Almaya çalışırken Ethereum cüzdanınızla oturum açmanız ve bir işlemi "onaylamanız" istenecektir. Bu işlem, açık ve özel anahtarlarınızı dolandırıcıya göndererek hesabınızı tehlikeye atar. Bu dolandırıcılığın alternatif bir biçimi, dolandırıcının hesabına para gönderen bir işlemi onaylamanızı isteyebilir.
+Airdrop dolandırıcılığı, bir varlığı (NFT, jeton) cüzdanınıza Airdrop ile gelen ve sizi Airdrop'la gönderilen varlığı almanız için bir dolandırıcılık web sitesine yönlendiren bir dolandırıcılık projesini içerir. Almaya çalışırken Ethereum cüzdanınızla oturum açmanız ve bir işlemi "onaylamanız" istenecektir. Bu işlem, açık ve özel anahtarlarınızı dolandırıcıya göndererek hesabınızı tehlikeye atar. Bu dolandırıcılığın alternatif bir biçimi, dolandırıcının hesabına para gönderen bir işlemi onaylamanızı isteyebilir.
 
 [Airdrop dolandırıcılığı hakkında daha fazla bilgi](https://www.youtube.com/watch?v=LLL_nQp1lGk)
+
+<Divider />
+
+## Web güvenliği 101 {#web-security}
+
+### Güçlü şifre kullanın {#use-strong-passwords}
+
+[Hesap hack'lerinin %80'inden fazlası, zayıf veya çalınmış şifrelerin bir sonucudur](https://cloudnine.com/ediscoverydaily/electronic-discovery/80-percent-hacking-related-breaches-related-password-issues-cybersecurity-trends/). Karakterler, sayılar ve sembollerden oluşan uzun bir kombinasyon hesaplarınızı güvende tutar.
+
+Sık yapılan hatalardan biri, bilinen ve alakalı olan birkaç kelimeden oluşan bir kombinasyon kullanmaktır. Bu tür parolalar, sözlük saldırısı adı verilen bir saldırı tekniğine maruz kalma riski doğurdukları için güvenli değildir.
+
+```md
+Zayıf şifre örneği: TatlıTüylüKedicikler!
+
+Güçlü şifre örneği: ymv\*azu.EAC8eyp8umf
+```
+
+Bir diğer yaygın hata da [sosyal mühendislik](https://wikipedia.org/wiki/Social_engineering_(security)) ile kolayca tahmin edilebilecek ya da bulunabilecek bir şifre kullanmaktır. Parolanızda annenizin kızlık soyadını, çocuklarınızın veya evcil hayvanlarınızın adlarını veya doğum tarihlerini kullanırsanız, saldırıya uğrama riskiniz artar.
+
+#### Şifre belirlemek için iyi yöntemler: {#good-password-practices}
+
+- Şifre üreticinizin veya doldurduğunuz formun izin verdiği kadar uzun şifreler oluşturun
+- Büyük harf, küçük harf, sayı ve sembollerin bir karışımını kullanın
+- Şifrenizde aile adları gibi kişisel bilgileri kullanmayın
+- Yaygın kelimelerden kaçının
+
+[Güçlü şifreler oluşturma hakkında daha fazla bilgi](https://terranovasecurity.com/how-to-create-a-strong-password-in-7-easy-steps/)
+
+### Her şey için farklı şifreler kullanın {#use-unique-passwords}
+
+Bir veri sızıntısında açığa çıkmış olan güçlü bir parola, artık güçlü bir parola değildir. [Have I Been Pwned](https://haveibeenpwned.com) web sitesi, hesaplarınızın daha önce bir veri sızıntısına dahil olup olmadığını görmenizi sağlar. Eğer dahil olmuşlarsa **o parolaları hemen değiştirin**. Her hesap için benzersiz bir parola kullanmak, bilgisayar korsanlarının bir hesabın parolasının açığa çıkmasıyla her hesabınıza erişebilme riskini azaltır.
+
+### Bir şifre yöneticisi kullanın {#use-password-manager}
+
+<InfoBanner emoji=":bulb:">
+  <div>
+    Bir şifre yöneticisi kullanmak; güçlü, benzersiz şifreler oluşturmak ve bunları hatırlama işini sizin için çözer! Bunlardan birini kullanmanızı <strong>şiddetle</strong> öneririz ve çoğu ücretsizdir!
+  </div>
+</InfoBanner>
+
+Sahip olduğunuz her hesap için güçlü, benzersiz şifreleri ezberlemeye çalışmak pek kolay değildir. Bir şifre yöneticisi, tek bir güçlü ana şifre aracılığıyla erişebileceğiniz tüm şifreleriniz için güvenli, şifrelenmiş bir depo sunar. Ayrıca, yeni bir hizmete kaydolurken güçlü şifreler önerirler, böylece kendinizinkini oluşturmak zorunda kalmazsınız. Birçok şifre yöneticisi, herhangi bir kötü niyetli saldırıdan önce şifreleri değiştirmenize izin vererek, bir veri ihlaline karışıp karışmadığınızı da size söyler.
+
+![Bir şifre yöneticisi kullanım örneği](./passwordManager.png)
+
+#### Bir şifre yöneticisi deneyin: {#try-password-manager}
+
+- [Bitwarden](https://bitwarden.com/)
+- [KeePass](https://keepass.info/)
+- [1Password](https://1password.com/)
+- Yahut diğer [önerilen şifre yöneticilerine](https://www.privacytools.io/secure-password-manager) göz atın
+
+### İki Faktörlü Kimlik Doğrulamayı Kullanın {#two-factor-authentication}
+
+Bazen sizden kimliğinizi benzersiz kanıtlarla doğrulamanız istenebilir. Bunlar, **faktörler** olarak bilinir. 3 önemli faktör şunlardır:
+
+- Bildiğiniz bir şey (şifre veya güvenlik sorusu gibi)
+- Olduğunuz bir şey (parmak izi veya göz/yüz tarayıcısı gibi)
+- Sahip olduğunuz bir şey (telefonunuzda bir güvenlik anahtarı veya kimlik doğrulama uygulaması)
+
+**İki Faktörlü Doğrulama (2FA)** kullanmak, çevrimiçi hesaplarınıza ekstra bir *güvenlik faktörü* eklemenizi sağlar. 2FA, sadece bir parolaya sahip olmanın bir hesaba girmek için yeterli olmamasını sağlar. En yaygın olarak, ikinci faktör **zaman esaslı tek seferlik şifre (TOTP)** olarak bilinen, Google Authenticator veya Authy gibi bir doğrulayıcı uygulamadan ulaşabileceğiniz rastgele seçilmiş 6 haneli bir koddur. Bunlar "senin sahip olduğun bir şey" faktörü ile çalışırlar çünkü zamanlı kodu oluşturan tohum, sizin aygıtınızda depolanır.
+
+<InfoBanner emoji=":lock:">
+  <div>
+    Not: SMS tabanlı 2FA kullanımı, <a href="https://www.vice.com/tr/makale/3kx4ej/sim-jacking-mobile-phone-fraud">SIM hırsızlığı</a> tehlikesine karşı açıktır ve güvenli değildir. En iyi güvenlik için <a href="https://mashable.com/article/how-to-set-up-google-authenticator">Google Authenticator</a> ya da <a href="https://authy.com/">Authy</a> gibi bir hizmet kullanın.
+  </div>
+</InfoBanner>
+
+#### Güvenlik anahtarları {#security-keys}
+
+Güvenlik anahtarı, 2FA'nın daha gelişmiş ve güvenli bir türüdür. Güvenlik anahtarları, kimlik doğrulama uygulamaları gibi çalışan fiziksel donanımlı kimlik doğrulama cihazlarıdır. Bir güvenlik anahtarı kullanmak 2FA'daki en güvenli yoldur. Bu anahtarların birçoğu FIDO Evrensel İkinci Faktör (U2F) standartından yararlanır. [FIDO U2F hakkında daha fazlasını öğrenin](https://www.yubico.com/authentication-standards/fido-u2f/).
+
+2FA hakkında daha fazlasını izleyin:
+
+<YouTube id="m8jlnZuV1i4" start="3479" />
+
+### Tarayıcı uzantılarını kaldırın {#uninstall-browser-extensions}
+
+Chrome uzantıları ve Firefox Eklentileri gibi tarayıcı uzantıları, tarayıcı işlevselliğini artırabilir fakat beraberinde riskler de getirir. Varsayılan olarak, çoğu tarayıcı uzantısı "site verilerini okuma ve değiştirme" erişimi ister ve verilerinizle hemen hemen her şeyi yapmalarına izin verir. Chrome uzantıları her zaman otomatik olarak güncellenir, bu nedenle önceden güvenli bir uzantı daha sonra kötü amaçlı kod içerecek şekilde güncellenebilir. Çoğu tarayıcı uzantısı verilerinizi çalmaya çalışmaz, ancak yapabileceklerinin farkında olmalısınız.
+
+#### Bu yollarla güvende kalabilirsiniz: {#browser-extension-safety}
+
+- Sadece güvenilir kaynaklardan tarayıcı eklentileri indirin
+- Kullanılmayan tarayıcı eklentilerini silin
+- Otomatik güncellemeyi durdurmak için yerel olarak Chrome eklentilerini silin (Gelişmiş)
+
+[Tarayıcı uzantılarının riskleri hakkında daha fazla bilgi](https://www.kaspersky.co.uk/blog/browser-extensions-security/12750/)
 
 <Divider />
 

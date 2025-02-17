@@ -120,7 +120,7 @@ Manifestul este fișierul nostru de configurare și definește:
 - alte lucruri de ascultat, cum ar fi apeluri de funcții sau blocuri
 - the mapping functions being called (see `mapping.ts` below)
 
-Aici puteți defini mai multe contracte și manipulatoare. O configurare tipică ar fi cu un folder subgraph în proiectul Truffle/Hardhat, cu propriul depozitar. Puteți apoi face referire la ABI cu ușurință.
+Aici puteți defini mai multe contracte și manipulatoare. O configurare tipică ar fi cu un folder subgraph în proiectul Hardhat, cu propriul depozitar. Puteți apoi face referire la ABI cu ușurință.
 
 Din comoditate, ați dori probabil să utilizați un instrument șablon, cum ar fi „mustache”. Then you create a `subgraph.template.yaml` and insert the addresses based on the latest deployments. Pentru a vedea un exemplu de configurare mai avansată, puteți consulta, de exemplu, [depozitarul subgraph-ului Aave](https://github.com/aave/aave-protocol/tree/master/thegraph).
 

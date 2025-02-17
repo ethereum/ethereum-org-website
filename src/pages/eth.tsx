@@ -1,21 +1,11 @@
 import { GetStaticProps } from "next"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import type { ComponentProps } from "react"
-import {
-  Box,
-  Flex,
-  type FlexProps,
-  Heading,
-  type HeadingProps,
-  ListItem,
-  UnorderedList,
-} from "@chakra-ui/react"
+import type { ComponentProps, HTMLAttributes } from "react"
 
 import type { BasePageProps, ChildOnlyProp, Lang } from "@/lib/types"
 
 import ActionCard from "@/components/ActionCard"
-import ButtonLink from "@/components/Buttons/ButtonLink"
 import CalloutBanner from "@/components/CalloutBanner"
 import Card from "@/components/Card"
 import CardList from "@/components/CardList"
@@ -25,14 +15,17 @@ import FeedbackCard from "@/components/FeedbackCard"
 import HorizontalCard from "@/components/HorizontalCard"
 import { Image } from "@/components/Image"
 import InfoBanner from "@/components/InfoBanner"
-import InlineLink from "@/components/Link"
 import MainArticle from "@/components/MainArticle"
-import OldHeading from "@/components/OldHeading"
-import Text from "@/components/OldText"
 import PageMetadata from "@/components/PageMetadata"
 import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import Translation from "@/components/Translation"
+import { ButtonLink } from "@/components/ui/buttons/Button"
+import { Divider } from "@/components/ui/divider"
+import { Flex, VStack } from "@/components/ui/flex"
+import InlineLink from "@/components/ui/Link"
+import { ListItem, UnorderedList } from "@/components/ui/list"
 
+import { cn } from "@/lib/utils/cn"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLocaleTimestamp } from "@/lib/utils/time"
@@ -44,224 +37,138 @@ import defi from "@/public/images/finance_transparent.png"
 import ethereum from "@/public/images/what-is-ethereum.png"
 
 const Page = (props: ChildOnlyProp) => (
-  <Flex
-    as={MainArticle}
-    direction="column"
-    align="center"
-    w="full"
-    my={0}
-    mx="auto"
+  <MainArticle
+    className="mx-auto my-0 flex w-full flex-col items-center"
     {...props}
   />
 )
 
 const Content = (props: ChildOnlyProp) => (
-  <Box w="full" px={8} py={4} {...props} />
-)
-
-const Divider = () => (
-  <Box my={16} mx={0} w="10%" h={1} backgroundColor="homeDivider" />
+  <div className="w-full px-8 py-4" {...props} />
 )
 
 const GrayContainer = (props: ChildOnlyProp) => (
-  <Box
-    width="full"
-    py={16}
-    mt={8}
-    background="grayBackground"
-    boxShadow="inset 0px 1px 0px var(--eth-colors-tableItemBoxShadow)"
+  <div
+    className="mt-8 w-full border-t bg-background-highlight py-16 shadow-table-item-box"
     {...props}
   />
 )
 
 const Intro = (props: ChildOnlyProp) => (
-  <Box maxW="608px" mb={{ base: 12, sm: 16 }} {...props} />
+  <div className="mb-12 max-w-[608px] sm:mb-16" {...props} />
 )
 
 const StyledCard = (props: ComponentProps<typeof Card>) => (
   <Card
-    m={4}
-    p={6}
-    flex="1 0 30%"
-    minW="280px"
-    maxW={{ base: "full", md: "46%", lg: "31%" }}
+    className="m-4 min-w-[280px] max-w-full flex-[1_0_30%] bg-background p-6 md:max-w-[46%] lg:max-w-[31%]"
     {...props}
   />
 )
 
 const Slogan = (props: ChildOnlyProp) => (
-  <Text
-    textStyle="normal"
-    fontWeight="normal"
-    fontSize="2rem"
-    lineHeight={1.4}
-    {...props}
-  />
+  <h3 className="mb-6 leading-xs" {...props} />
 )
 
 const Title = (props: ChildOnlyProp) => (
-  <Heading
-    as="h1"
-    fontSize="sm"
-    lineHeight={1.4}
-    letterSpacing="0.04em"
-    fontWeight="500"
-    mb={4}
-    textTransform="uppercase"
-    color="textTableOfContents"
+  <h1
+    className="mb-4 mt-0 text-md font-normal uppercase !leading-xs"
     {...props}
   />
 )
 
 const Subtitle = (props: ChildOnlyProp) => (
-  <Text fontSize="xl" lineHeight={1.4} color="text200" {...props} />
+  <Text className="mb-0 leading-xs text-body-medium" {...props} />
 )
 
-export const TwoColumnContent = (props: FlexProps) => (
+const Text = ({ className, ...props }: HTMLAttributes<HTMLHeadingElement>) => (
+  <p className={cn("mb-6", className)} {...props} />
+)
+
+export const TwoColumnContent = ({
+  className,
+  ...props
+}: HTMLAttributes<HTMLHeadingElement>) => (
   <Flex
-    w="full"
-    direction={{ base: "column", lg: "row" }}
-    justify="space-between"
-    p={8}
-    mb={12}
+    className={cn(
+      "mb-12 w-full flex-col justify-between p-8 lg:flex-row",
+      className
+    )}
     {...props}
   />
 )
 
 export const LeftColumn = (props: ChildOnlyProp) => (
-  <Box
-    flex="0 0 50%"
-    maxW={{ base: "full", lg: "75%" }}
-    me={{ lg: 16 }}
+  <div
+    className="max-w-full flex-none basis-1/2 lg:me-16 lg:max-w-[75%]"
     {...props}
   />
 )
 
 export const RightColumn = (props: ChildOnlyProp) => (
   <Flex
-    flex="0 1 50%"
-    direction="column"
-    justify="center"
-    maxW={{ base: "full", lg: "75%" }}
-    mt={{ base: 12, lg: 0 }}
+    className="mt-12 max-w-full flex-shrink flex-grow-0 basis-1/2 flex-col justify-center lg:mt-0 lg:max-w-[75%]"
     {...props}
   />
 )
 
 const SubtitleTwo = (props: ChildOnlyProp) => (
-  <Text fontSize="xl" lineHeight={1.4} color="text300" mb={8} {...props} />
+  <Text className="mb-8 leading-xs text-body-menu-medium" {...props} />
 )
 
 const HeroContainer = (props: ChildOnlyProp) => (
   <Flex
-    align="center"
-    justify="space-between"
-    direction={{ base: "column-reverse", md: "row" }}
+    className="flex-col-reverse items-center justify-between md:flex-row"
     {...props}
   />
 )
 
 const Hero = (props: ChildOnlyProp) => (
-  <Box
-    flex="1 1 100%"
-    maxW="800px"
-    bgSize="cover"
-    bgRepeat="no-repeat"
-    ms={{ base: 0, md: 8 }}
+  <div
+    className="ms-0 max-w-[800px] flex-1 basis-full bg-cover bg-no-repeat md:ms-8"
     {...props}
   />
 )
 
 const Header = (props: ChildOnlyProp) => (
-  <Box
-    as="header"
-    flex="1 1 50%"
-    minW="300px"
-    mt={{ base: 6, md: 32 }}
-    {...props}
-  />
+  <div className="mt-6 min-w-[300px] flex-1 basis-1/2 md:mt-32" {...props} />
 )
 
-const H2 = (prop: HeadingProps) => (
-  <OldHeading
-    fontSize={{ base: "2xl", md: "2rem" }}
-    lineHeight={1.4}
-    mt={0}
-    {...prop}
-  />
+const H2 = (props: ChildOnlyProp) => (
+  <h2 className="mb-8 mt-0 leading-xs" {...props} />
 )
 
-const H3 = (props: HeadingProps) => (
-  <OldHeading
-    as="h3"
-    fontSize={{ base: "xl", md: "2xl" }}
-    lineHeight={1.4}
-    {...props}
-  />
+const H3 = (props: ChildOnlyProp) => (
+  <h3 className="mb-8 mt-10 leading-xs" {...props} />
 )
 
-const H4 = (props: HeadingProps) => (
-  <OldHeading
-    as="h4"
-    fontSize={{ base: "md", md: "xl" }}
-    fontWeight={600}
-    lineHeight={1.4}
-    {...props}
-  />
+const H4 = (props: ChildOnlyProp) => (
+  <h4 className="my-8 leading-xs" {...props} />
 )
 
-const CardContainer = (props: FlexProps) => (
-  <Flex wrap="wrap" mx={-4} {...props} />
+const CardContainer = ({
+  className,
+  ...props
+}: HTMLAttributes<HTMLHeadingElement>) => (
+  <Flex className={cn("-mx-4 flex-wrap", className)} {...props} />
 )
 
 const TokenCard = (props: ComponentProps<typeof HorizontalCard>) => (
-  <HorizontalCard minW="full" my={2} mx={0} borderRadius={0} {...props} />
-)
-
-const TextDivider = () => (
-  <Box
-    w="10%"
-    h="1px"
-    bg="searchResultBackground"
-    my={8}
-    alignSelf={{ lg: "flex-start" }}
+  <HorizontalCard
+    className={cn("mx-0 my-2 min-w-full rounded-none", props.className)}
+    emojiClassName="text-[5rem]"
+    {...props}
   />
+)
+const TextDivider = () => (
+  <div className="my-8 w-[10%] bg-search-background lg:items-start" />
 )
 
 const CentralColumn = (props: ChildOnlyProp) => (
-  <Flex
-    direction="column"
-    align="center"
-    maxW="960px"
-    my={16}
-    mx="auto"
-    {...props}
-  />
+  <VStack className="mx-auto my-16 max-w-[960px]" {...props} />
 )
 
 const CentralActionCard = (props: ComponentProps<typeof ActionCard>) => (
-  <ActionCard
-    display={{ base: "block", sm: "flex" }}
-    flex="none"
-    my={8}
-    mx={0}
-    sx={{
-      ".action-card-image-wrapper": {
-        p: 4,
-        minW: { sm: "260px" },
-      },
-      ".action-card-content": {
-        display: { sm: "flex" },
-        justifyContent: { sm: "center" },
-        flexDirection: { sm: "column" },
-        ms: { sm: 4 },
-      },
-      p: {
-        mb: { sm: 0 },
-      },
-    }}
-    {...props}
-  />
+  <ActionCard className="my-8" imageWidth={260} {...props} />
 )
 
 export const getStaticProps = (async ({ locale }) => {
@@ -393,8 +300,8 @@ const EthPage = () => {
             <Slogan>{t("page-eth-currency-for-future")}</Slogan>
             <Subtitle>{t("page-eth-is-money")}</Subtitle>
             <SubtitleTwo>{t("page-eth-currency-for-apps")}</SubtitleTwo>
-            <EthPriceCard isLeftAlign={false} mb={8} />
-            <ButtonLink to="/get-eth/">
+            <EthPriceCard className="mb-8" />
+            <ButtonLink href="/get-eth/">
               {t("page-eth-button-buy-eth")}
             </ButtonLink>
           </Header>
@@ -414,7 +321,7 @@ const EthPage = () => {
           <Intro>
             <Text>{t("page-eth-description")} </Text>
           </Intro>
-          <CardContainer mb={8}>
+          <CardContainer className="mb-8">
             {benefits.map((benefits, idx) => (
               <StyledCard
                 key={idx}
@@ -425,7 +332,7 @@ const EthPage = () => {
             ))}
           </CardContainer>
           <InfoBanner emoji=":wave:" shouldCenter>
-            <Text as="b">{t("page-eth-buy-some")}</Text>{" "}
+            <b>{t("page-eth-buy-some")}</b>{" "}
             <Translation id="page-eth:page-eth-buy-some-desc" />{" "}
             <InlineLink href="/what-is-ethereum/">
               {t("page-eth-more-on-ethereum-link")}
@@ -439,13 +346,13 @@ const EthPage = () => {
           <H2>{t("page-eth-whats-unique")}</H2>
           <Text>{t("page-eth-whats-unique-desc")}</Text>
           <EthVideo />
-          <Box>
+          <div>
             <H4>{t("page-eth-fuels")}</H4>
             <Text>{t("page-eth-fuels-desc")}</Text>
             <Text>{t("page-eth-fuels-desc-2")}</Text>
             <Text>
               <Translation id="page-eth:page-eth-fuels-desc-3" />{" "}
-              <Text as="strong">{t("page-eth-powers-ethereum")}</Text>
+              <b>{t("page-eth-powers-ethereum")}</b>
               {t("page-eth-period")}
             </Text>
             <Text>
@@ -454,22 +361,22 @@ const EthPage = () => {
                 {t("page-eth-fuels-more-staking")}
               </InlineLink>
             </Text>
-          </Box>
+          </div>
           <CentralActionCard
-            to="/what-is-ethereum/"
+            href="/what-is-ethereum/"
             title={t("page-eth-whats-ethereum")}
             description={t("page-eth-whats-ethereum-desc")}
             image={ethereum}
           />
           <TextDivider />
-          <Box>
+          <div>
             <H4>{t("page-eth-underpins")}</H4>
             <Text>
               <Translation id="page-eth:page-eth-underpins-desc" />
             </Text>
             <Text>{t("page-eth-underpins-desc-2")}</Text>
             <CentralActionCard
-              to="/defi/"
+              href="/defi/"
               title={t("page-eth-whats-defi")}
               description={t("page-eth-whats-defi-description")}
               image={defi}
@@ -477,9 +384,9 @@ const EthPage = () => {
             <InfoBanner isWarning>
               <Translation id="page-eth:page-eth-weth" />
             </InfoBanner>
-          </Box>
+          </div>
           <TextDivider />
-          <Box>
+          <div>
             <H4>{t("page-eth-uses")}</H4>
             <Text>{t("page-eth-uses-desc")}</Text>
             <Text>{t("page-eth-uses-desc-2")} </Text>
@@ -509,21 +416,22 @@ const EthPage = () => {
                 – {t("page-eth-uses-desc-6")}
               </ListItem>
             </UnorderedList>
-          </Box>
+          </div>
           <Divider />
         </CentralColumn>
         <CalloutBanner
-          my={20}
-          mx={0}
+          className="mx-0 my-20"
           titleKey={"page-eth:page-eth-where-to-buy"}
           descriptionKey={"page-eth:page-eth-where-to-buy-desc"}
           image={ethCat}
           alt={t("page-eth-cat-img-alt")}
           imageWidth={300}
         >
-          <Box>
-            <ButtonLink to="/get-eth/">{t("page-eth-get-eth-btn")}</ButtonLink>
-          </Box>
+          <div>
+            <ButtonLink href="/get-eth/">
+              {t("page-eth-get-eth-btn")}
+            </ButtonLink>
+          </div>
         </CalloutBanner>
       </Content>
 
@@ -540,12 +448,12 @@ const EthPage = () => {
           <CardList items={cardListContent} />
         </RightColumn>
       </TwoColumnContent>
-      <TwoColumnContent id="tokens" align="flex-start">
+      <TwoColumnContent className="items-start" id="tokens">
         <LeftColumn>
           <H3>{t("page-eth-not-only-crypto")}</H3>
           <Text>{t("page-eth-not-only-crypto-desc")} </Text>
           <Text>{t("page-eth-not-only-crypto-desc-2")}</Text>
-          <H4 fontWeight="normal">{t("page-eth-more-on-tokens")}</H4>
+          <H4>{t("page-eth-more-on-tokens")}</H4>
           <CardList items={tokenLinks} />
         </LeftColumn>
         <RightColumn>
@@ -556,7 +464,6 @@ const EthPage = () => {
               emoji={token.emoji}
               title={token.title}
               description={token.description}
-              emojiSize={5}
             />
           ))}
         </RightColumn>

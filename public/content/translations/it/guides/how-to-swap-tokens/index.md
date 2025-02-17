@@ -51,7 +51,7 @@ Riceverai automaticamente i token scambiati nel tuo portafoglio, una volta elabo
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Vuoi scoprire di più?</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     Visualizza le altre guide
   </ButtonLink>
 </InfoBanner>

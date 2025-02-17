@@ -6,101 +6,7 @@ lang: id
 
 # Keamanan ethereum dan pencegahan penipuan {#introduction}
 
-Dengan berkembangnya ketertarikan pada mata uang digital, mempelajari cara terbaik menggunakan mata uang digital menjadi perlu. Mata uang digital dapat menjadi menyenangkan dan menarik, tetapi juga ada risiko serius. Jika Anda mengerjakan sejumlah pekerjaan awal ini, Anda dapat mengurangi risiko tersebut.
-
-<Divider />
-
-## Keamanan Situs 101 {#web-security}
-
-### Gunakan kata sandi yang kuat {#use-strong-passwords}
-
-[Lebih dari 80% pembajakan akun adalah akibat dari lemahnya atau tercurinya kata sandi](https://cloudnine.com/ediscoverydaily/electronic-discovery/80-percent-hacking-related-breaches-related-password-issues-cybersecurity-trends/). Kombinasi karakter, angka, dan simbol yang panjang adalah cara terbaik untuk menjaga keamanan akun Anda.
-
-Kesalahan individu yang umum terjadi adalah menggunakan kombinasi dua atau tiga kata yang umum dan berhubungan. Kata sandi seperti ini tidaklah aman karena sangat rentan terhadap teknik peretasan sederhana yang dikenal dengan sebutan [dictionary attack](https://wikipedia.org/wiki/Dictionary_attack).
-
-```md
-Contoh kata sandi yang lemah: CuteFluffyKittens!
-
-Contoh kata sandi yang kuat: ymv\*azu.EAC8eyp8umf
-```
-
-Beberapa kesalahan yang sering terjadi adalah penggunaan kata sandi yang sangat mudah ditebak atau ditemukan melalui [rekayasa sosial](https://wikipedia.org/wiki/Social_engineering_(security)). Menyertakan nama pembantu ibu Anda, nama anak atau hewan peliharaan Anda, atau tanggal lahir dalam kata sandi Anda tidaklah aman dan meningkatkan resiko kata sandi Anda diretas.
-
-#### Beberapa langkah yang perlu diperhatikan dalam membentuk kata sandi: {#good-password-practices}
-
-- Buatlah kata sandi dengan panjang karakter maksimal sesuai dengan yang diperbolehkan pembuat kata sandi atau sesuai dengan ketentuan formulir yang anda isi
-- Gunakan gabungan huruf kapital, huruf kecil, angka dan simbol
-- Hindari penggunaan informasi personal, seperti nama keluarga, di dalam kata sandi anda
-- Hindari penggunaan kata yang sering digunakan
-
-[Selanjutnya, langkah dalam membuat kata sandi yang kuat](https://terranovasecurity.com/how-to-create-a-strong-password-in-7-easy-steps/)
-
-### Gunakan kata sandi yang unik untuk semua hal {#use-unique-passwords}
-
-Kata sandi yang kuat tidak akan memberikan perlindungan yang kuat ketika diretas saat terjadi serangan data. Situs web [Have I Been Pwned](https://haveibeenpwned.com) memungkinkan Anda untuk memeriksa apakah akun Anda terlibat dalam pelanggaran data yang disimpan dalam database mereka. Jika sudah, **Anda harus segera mengubah kata sandi pwned**. Menggunakan kata sandi yang unik untuk setiap akun mengurangi resiko peretas untuk mendapatkan akses semua akun Anda ketika salah satu kata sandi akun tersebut diretas.
-
-### Menggunakan pengelola kata sandi {#use-password-manager}
-
-<InfoBanner emoji=":bulb:">
-  <div>
-    Menggunakan pengelola kata sandi akan membantu Anda membuat kata sandi yang kuat dan unik serta mengingatnya! Kami <strong>sangat</strong> menyarankan untuk menggunakannya, dan sebagian besar dari mereka gratis!
-  </div>
-</InfoBanner>
-
-Mengingat kata sandi yang kuat dan unik untuk setiap akun tidaklah ideal. Pengatur kata sandi memberikan tempat yang terenkripsi dan aman untuk setiap kata sandi Anda. Mereka juga menyarankan kata sandi yang kuat saat mendaftar ke layanan baru, jadi Anda tidak perlu membuatnya sendiri. Banyak pengelola kata sandi akan memberitahukan Anda jika kata sandi Anda diretas, sehingga memberikan Anda kesemaptan untuk mengubah kata sandi Anda sebelum serangan yang berbahaya.
-
-![Contoh penggunaan pengelola kata sandi](./passwordManager.png)
-
-#### Contoh jasa pengelola kata sandi: {#try-password-manager}
-
-- [Bitwarden](https://bitwarden.com/)
-- [KeePass](https://keepass.info/)
-- [1Password](https://1password.com/)
-- Atau coba lihat [pengelola kata sandi yang direkomendasikan](https://www.privacytools.io/secure-password-manager) lainnya
-
-### Menggunakan Autentikasi Dua Faktor {#two-factor-authentication}
-
-Untuk memastikan diri Anda yang sebenarnya, terdapat berabgai bukti yang dapat digunakan sebagai autentikasi. Ini dikenal sebagai **faktor**, ada tiga jenis faktor utama:
-
-- Sesuatu yang Anda ketahui (seperti kata sandi atau pertanyaan keamanan)
-- Sesuatu yang melekat pada diri Anda (seperti sidik jari atau hasil pindaian mata/wajah)
-- Sesuatu yang Anda miliki (sebuah kunci atau autentikasi aplikasi dalam perangkat yang Anda miliki)
-
-Menggunakan **Autentikasi Dua Faktor (2FA)** menambahkan *faktor keamanan* pada akun daring Anda sehingga mengetahui kata sandi akun (sesuatu yang anda ketahui) tidak cukup untuk mengakses akun tersebut. Umumnya, faktor autentikasi kedua adalah 6 digit kode yang dikenal sebagai **kata sandi satu kali berbais waktu (TOTP)**, yang Anda dapat akses dengan sebuah aplikasi autentikasi seperti Google Authenticator atau Authy. Ini berfungsi sebagai faktor "sesuatu yang Anda miliki" karena benih yang menghasilkan kode waktunya disimpan di perangkat Anda.
-
-<InfoBanner emoji=":lock:">
-  <div>
-    Catatan: Menggunakan 2FA berbasis SMS rentan terhadap 
-    <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">
-      SIM jacking
-    </a>
-    dan tidak aman. Untuk keamanan terbaik, gunakan layanan seperti{" "}
-    <a href="https://mashable.com/article/how-to-set-up-google-authenticator">
-      Google Authenticator
-    </a>
-    atau <a href="https://authy.com/">Authy</a>.
-  </div>
-</InfoBanner>
-
-#### Kunci keamanan {#security-keys}
-
-Untuk meningkatkan keamanan melampaui 2FA, anda dapat menggunakan kunci keamanan. Kunci keamanan adalah perangkat keras untuk auntentikasi yang bekerja sama seperti aplikasi autentikasi. Menggunakan kunci keamanan merupakan cara paling aman dalam 2FA. Umumnya kunci ini menggunakan standar FIDO Universal 2nd Factor (U2F). [Pelajari lebih lanjut mengenai FIDO U2F](https://www.yubico.com/authentication-standards/fido-u2f/).
-
-Tonton lebih lanjut mengenai 2FA:
-
-<YouTube id="m8jlnZuV1i4" start="3479" />
-
-### Hapus ekstensi peramban {#uninstall-browser-extensions}
-
-Ekstensi peramban seperti Chrome extension atau pengaya dalam Firefox dapat menambah fungsionalitas dan meningkatkan pengalaman pengguna, namun hal ini juga membawa resiko. Secara bawaan, sebagian besar ekstensi peramban menanyakan akses untuk 'membaca dan mengubah data', mengizinkan mereka melakukan hampir apapun pada data Anda. Ekstensi Chrome selalu melakukan pembaruan otomatis, jadi ekstensi yang sebelumnya aman bisa diperbarui belakangan dan mengandung kode jahat. Sebagian besar ekstensi peramban tidak bermaksud mencuri data Anda, tetapi Anda harus waspada bahwa mereka dapat melakukannya.
-
-#### Tetaplah aman dengan cara: {#browser-extension-safety}
-
-- Hanya menginstal ekstensi peramban dari sumber terpercaya
-- Hapus ekstensi peramban yang tidak digunakan
-- Instal ekstensi Chrome secara lokal untuk menghentikan pembaruan-otomatis (Lanjutan)
-
-[Selengkapnya mengenai risiko ekstensi browser](https://www.kaspersky.co.uk/blog/browser-extensions-security/12750/)
+Meningkatnya minat terhadap mata uang kripto disertai dengan risiko yang semakin besar dari penipu dan peretas. Artikel ini memaparkan beberapa praktik terbaik untuk mengurangi risiko tersebut.
 
 <Divider />
 
@@ -108,13 +14,13 @@ Ekstensi peramban seperti Chrome extension atau pengaya dalam Firefox dapat mena
 
 ### Tingkatkan pengetahuan Anda {#level-up-your-knowledge}
 
-Salah satu alasan terbesar orang tertipu dalam kripto secara umum adalah kurangnya pemahaman. Sebagai contoh, jika Anda tidak mengerti bahwa jaringan Ethereum terdesentralisasi dan tidak dimiliki siapapun, maka mudah untuk jatuh pada jebakan seseorang yang mencoba menjadi agen layanan konsumen yang menjanjikan Anda mengembalikan hilangnya ETH di bursa dengan memberi kunci privat Anda. Mengedukasi diri Anda sendiri tentang bagaimana Ethereum bekerja adalah investasi yang sepadan.
+Kesalahpahaman tentang cara kerja kripto dapat menyebabkan kesalahan yang mahal. Misalnya, jika seseorang berpura-pura menjadi agen layanan pelanggan yang dapat mengembalikan ETH yang hilang dengan imbalan kunci pribadi Anda, mereka memanfaatkan ketidaktahuan orang bahwa Ethereum adalah jaringan terdesentralisasi yang tidak memiliki fungsionalitas seperti itu. Mengedukasi diri Anda sendiri tentang bagaimana Ethereum bekerja adalah investasi yang sepadan.
 
-<DocLink to="/what-is-ethereum/">
+<DocLink href="/what-is-ethereum/">
   Apa yang Dimaksud dengan Ethereum?
 </DocLink>
 
-<DocLink to="/eth/">
+<DocLink href="/eth/">
   Apa yang Dimaksud dengan ether?
 </DocLink>
 <Divider />
@@ -125,15 +31,15 @@ Salah satu alasan terbesar orang tertipu dalam kripto secara umum adalah kurangn
 
 **Jangan pernah, untuk alasan apapun, membagi kunci pribadi Anda!**
 
-Kunci privat dompet Anda bertindak sebagai kata sandi ke dompet Ethereum Anda. Ini satu-satunya cara menghentikan seseorang yang mengetahui alamat dompet Anda dari menghabisi akun Anda dan semua asetnya!
+Kunci privat untuk dompet Anda adalah kata sandi untuk dompet Ethereum Anda. Ini satu-satunya cara menghentikan seseorang yang mengetahui alamat dompet Anda dari menghabisi akun Anda dan semua asetnya!
 
-<DocLink to="/wallets/">
+<DocLink href="/wallets/">
   Apa itu dompet Ethereum?
 </DocLink>
 
-#### Jangan mengambil tangkapan layar frase seed/kunci pribadi Anda {#screenshot-private-keys}
+#### Jangan mengambil tangkapan layar frasa benih/kunci pribadi Anda {#screenshot-private-keys}
 
-Dengan menangkap layar frase seed atau kunci pribadi, Anda berisiko mensinkronisasikannya ke cloud dan berpotensi membuatnya dapat diakses pembajak. Mendapatkan kunci pribadi dari cloud adalah vektor serangan umum bagi peretas.
+Mengambil tangkapan layar frasa benih atau kunci privat Anda dapat menyinkronkannya ke penyedia data cloud, yang bisa membuatnya dapat diakses oleh peretas. Mendapatkan kunci pribadi dari cloud adalah vektor serangan umum bagi peretas.
 
 ### Gunakan dompet perangkat keras {#use-hardware-wallet}
 
@@ -148,9 +54,9 @@ Menjaga kunci pribadi tetap offline secara besar-besaran mengurangi risiko diret
 
 ### Periksa kembali transaksi sebelum mengirim {#double-check-transactions}
 
-Secara tidak sengaja mengirim crypto ke alamat dompet yang salah adalah kesalahan umum. **Transaksi yang dikirim melalui Ethereum tidak dapat dibatalkan.** Kecuali jika Anda mengetahui pemilik alamat dan dapat meyakinkan mereka untuk mengirimkan kembali dana Anda, Anda tidak dapat mengambil dana Anda.
+Secara tidak sengaja mengirim crypto ke alamat dompet yang salah adalah kesalahan umum. **Transaksi yang dikirim di Ethereum tidak dapat dibatalkan.** Anda tidak akan dapat mendapatkan kembali dana kecuali mengetahui pemilik alamat dan dapat meyakinkan mereka untuk mengembalikan dana tersebut.
 
-Selalu pastikan alamat yang Anda kirim sama persis dengan alamat penerima yang diinginkan sebelum melakukan transaksi. Juga disarankan saat berinteraksi dengan kontrak pintar untuk membaca pesan transaksi sebelum menandatangani.
+Selalu pastikan alamat yang Anda kirim sama persis dengan alamat penerima yang diinginkan sebelum melakukan transaksi. Sebaiknya, saat berinteraksi dengan kontrak pintar, bacalah pesan transaksi sebelum menandatanganinya.
 
 ### Tetapkan batas pengeluaran kontrak pintar {#spend-limits}
 
@@ -164,25 +70,35 @@ Banyak dompet Ethereum menawarkan perlindungan batas untuk melindungi dari akun 
 
 ## Penipuan umum {#common-scams}
 
-Penipu selalu mencari cara untuk mengambil dana dari Anda. Tidak mungkin menghentikan penipu sepenuhnya, tetapi kami dapat membuatnya kurang efektif dengan mengetahui sebagian besar teknik yang digunakan. Ada banyak variasi penipuan ini, tetapi umumnya mengikuti pola tingkat tinggi yang sama. Jika tidak ada yang lain, ingat:
+Meskipun tidak mungkin menghentikan penipu sepenuhnya, kita bisa membuat mereka kurang efektif dengan menyadari teknik-teknik yang paling sering mereka gunakan. Ada banyak variasi penipuan ini, tetapi umumnya mengikuti pola tingkat tinggi yang sama. Jika tidak ada yang lain, ingat:
 
 - selalu skeptis
 - tidak ada yang akan memberi Anda ETH gratis atau diskon
 - tidak ada yang membutuhkan akses ke kunci pribadi atau informasi pribadi Anda
 
+### Twitter dan penipuan {#ad-phishing}
+
+![Phishing melalui tautan Twitter](./twitterPhishingScam.png)
+
+Ada metode untuk memalsukan fitur pratayang tautan (unfurling) Twitter (juga dikenal sebagai X) untuk mungkin menipu pengguna agar berpikir mereka mengunjungi situs web yang sah. Teknik ini memanfaatkan mekanisme Twitter untuk menghasilkan pratayang URL yang dibagikan dalam tweet, dan menunjukkan _dari ethereum.org_ (seperti yang ditunjukkan di atas), padahal sebenarnya mereka diarahkan ke situs jahat.
+
+Selalu periksa bahwa Anda berada di domain yang benar, terutama setelah mengklik tautan.
+
+[Informasi lebih lanjut di sini](https://harrydenley.com/faking-twitter-unfurling).
+
 ### Penipuan berhadiah {#giveaway}
 
-Salah satu penipuan paling umum dalam mata uang kripto adalah penipuan giveaway. Penipuan giveaway dapat mengambil banyak bentuk, tetapi premis umumnya adalah bahwa jika Anda mengirim ETH ke alamat dompet yang disediakan, Anda akan menerima kembali ETH Anda tetapi berlipat ganda. *Untuk alasan ini, ini juga dikenal sebagai penipuan 2-untuk-1.*
+Salah satu penipuan paling umum dalam mata uang kripto adalah penipuan giveaway. Penipuan giveaway dapat muncul dalam berbagai bentuk, tetapi ide umumnya adalah jika mengirim ETH ke alamat dompet yang diberikan, Anda akan menerima ETH kembali dengan jumlah yang digandakan. *Untuk alasan ini, ini juga dikenal sebagai penipuan 2-untuk-1.*
 
-Penipuan ini biasanya menetapkan kesempatan dalam waktu terbatas untuk mengklaim hadiah agar menyebabkan pengambilan keputusan yang buruk dan menciptakan rasa urgensi palsu.
+Penipuan semacam ini biasanya menetapkan waktu yang terbatas untuk mengeklaim giveaway, untuk menciptakan rasa urgensi yang palsu.
 
-#### Peretasan media sosial {#social-media-hacks}
+### Peretasan media sosial {#social-media-hacks}
 
 Riwayat tinggi dari versi ini terjadi pada Juli 2020, ketika akun Twitter selebritas dan organisasi terkemuka diretas. Peretas secara bersamaan memposting hadiah Bitcoin di akun yang diretas. Meskipun tweet yang menipu dengan cepat diketahui dan dihapus, para peretas masih berhasil lolos dengan 11 bitcoin (atau $500.000 pada September 2021).
 
 ![Penipuan di Twitter](./appleTwitterScam.png)
 
-#### Hadiah selebriti {#celebrity-giveaway}
+### Hadiah selebriti {#celebrity-giveaway}
 
 Pemberian selebriti adalah bentuk umum lain dari penipuan giveaway. Para penipu akan merekam wawancara video atau pembicaraan konferensi yang diberikan selebriti dan menyiarkannya secara langsung di YouTube - membuatnya tampak seolah-olah selebriti tersebut memberikan wawancara video langsung yang mendukung pemberian mata uang kripto.
 
@@ -214,7 +130,7 @@ Sebagai aturan umum, staf tidak akan pernah berkomunikasi dengan Anda melalui sa
 
 ### Penipuan token 'Eth2' {#eth2-token-scam}
 
-Menjelang [Penggabungan](/roadmap/merge/), penipu memanfaatkan kebingungan seputar istilah 'Eth2' untuk mencoba meminta pengguna menukar ETH mereka dengan token 'ETH2'. Tidak ada 'ETH2', dan tidak ada token sah lain yang diperkenalkan bersamaan dengan Penggabungan. ETH yang Anda miliki sebelum Penggabungan masih sama dengan ETH yang sekarang. **Tidak perlu melakukan tindakan apa pun yang terkait dengan ETH Anda untuk akun peralihan dari bukti kerja ke bukti kepemilikan**.
+Menjelang [Penggabungan](/roadmap/merge/), penipu memanfaatkan kebingungan seputar istilah 'Eth2' untuk mencoba meminta pengguna menukar ETH mereka dengan token 'ETH2'. Tidak ada 'ETH2', dan tidak ada token sah lain yang diperkenalkan bersamaan dengan Penggabungan. ETH yang Anda miliki sebelum Penggabungan masih sama dengan ETH yang sekarang. **Tidak perlu melakukan tindakan apa pun yang terkait dengan ETH Anda untuk akun peralihan dari bukti kerja ke bukti taruhan**.
 
 Penipu mungkin muncul dalam bentuk "bantuan", memberi tahu Anda bahwa jika Anda mendepositkan ETH Anda, Anda akan menerima 'ETH2' kembali. Tidak ada [dukungan Ethereum resmi](/community/support/), dan tidak ada token baru. Jangan pernah membagikan frasa benih dompet Anda dengan siapa pun.
 
@@ -236,9 +152,9 @@ Jika Anda menerima email dari pengirim yang tidak dikenal, ingatlah:
 
 ### Penipuan broker perdagangan kripto {#broker-scams}
 
-Broker penipu perdagangan crypto mengklaim sebagai pialang mata uang kripto spesialis yang akan menawarkan untuk mengambil uang Anda dan menginvestasikannya atas nama Anda. Perjanjian pengembalian yang tidak realistis biasanya menyertai penawaran ini. Setelah penipu menerima dana Anda, mereka mungkin mengarahkan Anda, meminta Anda mengirim lebih banyak dana, sehingga Anda tidak kehilangan keuntungan investasi lebih lanjut, atau mungkin hilang sama sekali.
+Penipu broker perdagangan kripto mengklaim sebagai broker mata uang kripto spesialis yang akan menawarkan untuk mengambil uang Anda dan berinvestasi atas nama Anda. Setelah penipu menerima dana Anda, mereka mungkin mengarahkan Anda, meminta Anda mengirim lebih banyak dana, sehingga Anda tidak kehilangan keuntungan investasi lebih lanjut, atau mungkin hilang sama sekali.
 
-Broker penipu ini menemukan target mereka dengan menggunakan akun palsu di YouTube untuk memulai percakapan yang tampaknya wajar tentang broker. Percakapan ini sering kali mendapat dukungan tinggi untuk meningkatkan legitimasi, tetapi suara positif semuanya berasal dari akun bot.
+Para penipu ini sering kali mencari target dengan menggunakan akun palsu di YouTube untuk memulai percakapan yang tampak alami tentang 'broker'. Percakapan ini sering kali mendapat dukungan tinggi untuk meningkatkan legitimasi, tetapi suara positif semuanya berasal dari akun bot.
 
 **Jangan percaya orang asing di internet untuk berinvestasi atas nama Anda. Anda akan kehilangan kripto Anda.**
 
@@ -246,9 +162,9 @@ Broker penipu ini menemukan target mereka dengan menggunakan akun palsu di YouTu
 
 ### Penipuan pool penambangan crypto {#mining-pool-scams}
 
-Mulai September 2022, menambang di Ethereum sudah tidak bisa dilakukan lagi. Namun, penipuan yang terkait dengan kelompok penambangan masih ada. Penipuan kelompok penambangan terjadi ketika seseorang menghubungi Anda tanpa Anda memintanya, lalu mengatakan bahwa Anda bisa mendapatkan keuntungan besar dengan bergabung dalam kelompok penambangan Ethereum. Penipu akan membuat klaim dan tetap berhubungan dengan Anda selama waktu yang dibutuhkan. Pada dasarnya, penipu akan mencoba dan meyakinkan Anda bahwa ketika Anda bergabung dengan pool penambangan Ethereum, mata uang kripto Anda akan digunakan untuk membuat ETH dan Anda akan dibayar dividen dalam bentuk ETH. Apa yang akhirnya terjadi adalah, Anda akan melihat bahwa mata uang kripto Anda menghasilkan keuntungan kecil. Ini hanya untuk memancing Anda berinvestasi lebih banyak. Pada akhirnya, semua dana Anda akan dikirim ke alamat yang tidak dikenal, dan si penipu entah akan menghilang atau dalam beberapa kasus akan terus berhubungan seperti yang terjadi dalam kasus baru-baru ini.
+Mulai September 2022, menambang di Ethereum sudah tidak bisa dilakukan lagi. Namun, penipuan yang terkait dengan kelompok penambangan masih ada. Penipuan kelompok penambangan terjadi ketika seseorang menghubungi Anda tanpa Anda memintanya, lalu mengatakan bahwa Anda bisa mendapatkan keuntungan besar dengan bergabung dalam kelompok penambangan Ethereum. Penipu akan membuat klaim dan tetap berhubungan dengan Anda selama waktu yang dibutuhkan. Pada dasarnya, penipu akan mencoba meyakinkan Anda bahwa ketika bergabung dengan kolam penambangan Ethereum, mata uang kripto Anda akan digunakan untuk membuat ETH dan Anda akan dibayar dividen ETH. Anda kemudian akan melihat bahwa mata uang kripto Anda menghasilkan keuntungan kecil. Ini hanya untuk memancing Anda berinvestasi lebih banyak. Pada akhirnya, semua dana Anda akan dikirim ke alamat yang tidak dikenal, dan si penipu entah akan menghilang atau dalam beberapa kasus akan terus berhubungan seperti yang terjadi dalam kasus baru-baru ini.
 
-Intinya, waspadalah terhadap orang-orang yang menghubungi Anda di media sosial yang meminta Anda untuk menjadi bagian dari penambangan pool. Setelah Anda kehilangan crypto Anda, itu hilang.
+Intinya: berhati-hatilah dengan orang yang menghubungi Anda di media sosial meminta untuk bergabung dengan pool penambangan. Setelah Anda kehilangan crypto Anda, itu hilang.
 
 Beberapa hal yang perlu diingat:
 
@@ -260,9 +176,95 @@ Beberapa hal yang perlu diingat:
 
 ### Penipuan airdrop {#airdrop-scams}
 
-Penipuan Airdrop melibatkan proyek penipuan dengan memasukkan aset (NFT, token) ke dompet Anda dan mengirim Anda ke situs web scam untuk mengklaim aset yang dijadikan Airdrop. Anda akan diminta untuk masuk dengan dompet Ethereum Anda dan "menyetujui" transaksi saat mencoba mengklaim. Transaksi ini membahayakan akun Anda dengan mengirimkan kunci publik dan privat Anda ke penipu. Bentuk alternatif penipuan ini mungkin mengharuskan Anda mengonfirmasi transaksi yang mengirimkan dana ke akun penipu.
+Penipuan Airdrop melibatkan proyek penipuan dengan memasukkan aset (NFT, token) ke dompet dan mengirim Anda ke situs web scam untuk mengeklaim aset yang dijadikan Airdrop. Anda akan diminta untuk masuk dengan dompet Ethereum Anda dan "menyetujui" transaksi saat mencoba mengklaim. Transaksi ini membahayakan akun Anda dengan mengirimkan kunci publik dan privat Anda ke penipu. Bentuk alternatif penipuan ini mungkin mengharuskan Anda mengonfirmasi transaksi yang mengirimkan dana ke akun penipu.
 
 [Lebih lanjut tentang penipuan Airdrop](https://www.youtube.com/watch?v=LLL_nQp1lGk)
+
+<Divider />
+
+## Keamanan Situs 101 {#web-security}
+
+### Gunakan kata sandi yang kuat {#use-strong-passwords}
+
+[Lebih dari 80% pembajakan akun adalah akibat dari lemahnya atau tercurinya kata sandi](https://cloudnine.com/ediscoverydaily/electronic-discovery/80-percent-hacking-related-breaches-related-password-issues-cybersecurity-trends/). Kombinasi panjang dari karakter, angka, dan simbol akan membantu menjaga keamanan akun Anda.
+
+Kesalahan umum adalah menggunakan kombinasi beberapa kata umum yang saling terkait. Kata sandi seperti ini tidak aman karena rentan terhadap teknik peretasan yang disebut serangan kamus.
+
+```md
+Contoh kata sandi yang lemah: CuteFluffyKittens!
+
+Contoh kata sandi yang kuat: ymv\*azu.EAC8eyp8umf
+```
+
+Kesalahan umum lainnya adalah menggunakan kata sandi yang mudah ditebak atau ditemukan melalui [rekayasa sosial](https://wikipedia.org/wiki/Social_engineering_(security)). Menyertakan nama gadis ibu, nama anak-anak atau hewan peliharaan, atau tanggal lahir dalam kata sandi Anda akan meningkatkan risiko akun diretas.
+
+#### Beberapa langkah yang perlu diperhatikan dalam membentuk kata sandi: {#good-password-practices}
+
+- Buatlah kata sandi dengan panjang karakter maksimal sesuai dengan yang diperbolehkan pembuat kata sandi atau sesuai dengan ketentuan formulir yang anda isi
+- Gunakan gabungan huruf kapital, huruf kecil, angka dan simbol
+- Hindari penggunaan informasi personal, seperti nama keluarga, di dalam kata sandi anda
+- Hindari kata-kata umum
+
+[Selanjutnya, langkah dalam membuat kata sandi yang kuat](https://terranovasecurity.com/how-to-create-a-strong-password-in-7-easy-steps/)
+
+### Gunakan kata sandi yang unik untuk semua hal {#use-unique-passwords}
+
+Kata sandi yang kuat yang telah terungkap dalam pelanggaran data tidak lagi merupakan kata sandi yang kuat. Situs web [Have I Been Pwned](https://haveibeenpwned.com) memungkinkan Anda memeriksa apakah akun terlibat dalam pelanggaran data publik. Jika iya, **gantilah kata sandi tersebut segera**. Menggunakan kata sandi yang unik untuk setiap akun mengurangi risiko peretas mendapatkan akses ke semua akun Anda jika salah satu kata sandi tersebut terkompromi.
+
+### Menggunakan pengelola kata sandi {#use-password-manager}
+
+<InfoBanner emoji=":bulb:">
+  <div>
+    Menggunakan pengelola kata sandi akan membantu Anda membuat kata sandi yang kuat dan unik serta mengingatnya! Kami <strong>sangat</strong> menyarankan untuk menggunakannya, dan sebagian besar dari mereka gratis!
+  </div>
+</InfoBanner>
+
+Mengingat kata sandi yang kuat dan unik untuk setiap akun tidaklah ideal. Pengatur kata sandi memberikan tempat yang terenkripsi dan aman untuk setiap kata sandi Anda. Mereka juga menyarankan kata sandi yang kuat saat mendaftar ke layanan baru, jadi Anda tidak perlu membuatnya sendiri. Banyak pengelola kata sandi akan memberitahukan Anda jika kata sandi Anda diretas, sehingga memberikan Anda kesemaptan untuk mengubah kata sandi Anda sebelum serangan yang berbahaya.
+
+![Contoh penggunaan pengelola kata sandi](./passwordManager.png)
+
+#### Contoh jasa pengelola kata sandi: {#try-password-manager}
+
+- [Bitwarden](https://bitwarden.com/)
+- [KeePass](https://keepass.info/)
+- [1Password](https://1password.com/)
+- Atau coba lihat [pengelola kata sandi yang direkomendasikan](https://www.privacytools.io/secure-password-manager) lainnya
+
+### Menggunakan Autentikasi Dua Faktor {#two-factor-authentication}
+
+Anda mungkin terkadang diminta untuk mengautentikasi identitas melalui bukti unik. Ini dikenal sebagai **faktor**. Tiga faktor utama adalah:
+
+- Sesuatu yang Anda ketahui (seperti kata sandi atau pertanyaan keamanan)
+- Sesuatu yang melekat pada diri Anda (seperti sidik jari atau hasil pindaian mata/wajah)
+- Sesuatu yang Anda miliki (sebuah kunci atau autentikasi aplikasi dalam perangkat yang Anda miliki)
+
+Menggunakan **Autentikasi Dua Faktor (2FA)** memberikan *faktor keamanan* tambahan untuk akun online Anda. 2FA memastikan bahwa hanya memiliki kata sandi saja tidak cukup untuk mengakses akun. Umumnya, faktor autentikasi kedua adalah 6 digit kode yang dikenal sebagai **kata sandi satu kali berbais waktu (TOTP)**, yang Anda dapat akses dengan sebuah aplikasi autentikasi seperti Google Authenticator atau Authy. Ini berfungsi sebagai faktor "sesuatu yang Anda miliki" karena benih yang menghasilkan kode waktunya disimpan di perangkat Anda.
+
+<InfoBanner emoji=":lock:">
+  <div>
+    Catatan: Menggunakan 2FA berbasis SMS rentan terhadap <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">SIM jacking</a> dan tidak aman. Untuk keamanan terbaik, gunakan layanan seperti <a href="https://mashable.com/article/how-to-set-up-google-authenticator">Google Authenticator</a> atau <a href="https://authy.com/">Authy</a>.
+  </div>
+</InfoBanner>
+
+#### Kunci keamanan {#security-keys}
+
+Kunci keamanan adalah jenis 2FA yang lebih canggih dan aman. Kunci keamanan adalah perangkat autentikasi perangkat keras fisik yang bekerja mirip dengan aplikasi autentikator. Menggunakan kunci keamanan merupakan cara paling aman dalam 2FA. Umumnya kunci ini menggunakan standar FIDO Universal 2nd Factor (U2F). [Pelajari lebih lanjut mengenai FIDO U2F](https://www.yubico.com/authentication-standards/fido-u2f/).
+
+Tonton lebih lanjut tentang 2FA:
+
+<YouTube id="m8jlnZuV1i4" start="3479" />
+
+### Hapus ekstensi peramban {#uninstall-browser-extensions}
+
+Ekstensi browser, seperti ekstensi Chrome atau Add-on untuk Firefox, dapat meningkatkan fungsionalitas browser tetapi juga membawa risiko. Secara bawaan, sebagian besar ekstensi peramban menanyakan akses untuk 'membaca dan mengubah data', mengizinkan mereka melakukan hampir apapun pada data Anda. Ekstensi Chrome selalu melakukan pembaruan otomatis, jadi ekstensi yang sebelumnya aman bisa diperbarui belakangan dan mengandung kode jahat. Sebagian besar ekstensi peramban tidak bermaksud mencuri data Anda, tetapi Anda harus waspada bahwa mereka dapat melakukannya.
+
+#### Tetaplah aman dengan cara: {#browser-extension-safety}
+
+- Hanya menginstal ekstensi peramban dari sumber terpercaya
+- Hapus ekstensi peramban yang tidak digunakan
+- Instal ekstensi Chrome secara lokal untuk menghentikan pembaruan-otomatis (Lanjutan)
+
+[Selengkapnya mengenai risiko ekstensi browser](https://www.kaspersky.co.uk/blog/browser-extensions-security/12750/)
 
 <Divider />
 

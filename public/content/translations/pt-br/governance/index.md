@@ -32,7 +32,7 @@ A abordagem oposta, a governança off-chain, é quando quaisquer decisões de mu
 
 _Embora no protocolo a governança Ethereum seja off-chain, muitos casos de uso com base em Ethereum, como DAOs, usam a governação on-chain._
 
-<ButtonLink to="/dao/">
+<ButtonLink href="/dao/">
   Mais sobre DAOs
 </ButtonLink>
 
@@ -48,7 +48,7 @@ Existem vários interessados na [comunidade Ethereum](/community/), cada um dese
 - **Operadores de nós**: essas pessoas executam nós que propagam blocos e transações, rejeitando qualquer transação ou bloco inválido que eles encontrem. [Mais sobre nós](/developers/docs/nodes-and-clients/).
 - **Autores do EIP**: estas pessoas propõem alterações no protocolo Ethereum, na forma de propostas de aprimoramento do Ethereum (EIPs). [Mais sobre EIPs](/eips/).
 - **Validadores**: essas pessoas executam nós que podem adicionar novos blocos à blockchain Ethereum.
-- **Desenvolvedores de protocolo** (conhecido como "Desenvolvedores principais"): essas pessoas mantêm as várias implementações da Ethereum (por exemplo, go-ethereum, Nethermind, Besu, Erigon na camada de execução ou Prysm, Farismo, Nimbus, Teku, Lodestar na camada de consenso). [Mais sobre clientes Ethereum](/developers/docs/nodes-and-clients/).
+- **Desenvolvedores de protocolo** (conhecido como "Desenvolvedores principais"): essas pessoas mantêm as várias implementações do Ethereum (por exemplo, go-ethereum, Nethermind, Besu, Erigon, Reth na camada de execução, ou Prysm, Lighthouse, Nimbus, Teku, Lodestar, na camada de consenso). [Mais sobre clientes Ethereum](/developers/docs/nodes-and-clients/).
 
 _Nota: qualquer indivíduo pode fazer parte de vários desses grupos (por exemplo, um desenvolvedor de protocolo pode ganhar um EIP e executar uma Beacon Chain validadora e usar aplicativos DeFi). Mas, para clareza conceitual, é mais fácil distinguir entre eles._
 
@@ -58,7 +58,7 @@ _Nota: qualquer indivíduo pode fazer parte de vários desses grupos (por exempl
 
 Um processo importante usado na governança Ethereum é a sugestão de **Propostas de melhoria Ethereum (EIPs)**. EIPs são padrões que especificam novos recursos ou processos potenciais para a Ethereum. Qualquer um dentro da comunidade Ethereum pode criar um EIP. Caso tenha interesse em escrever uma EIP, participar em revisão por pares e/ou governança, consulte:
 
-<ButtonLink to="/eips/">
+<ButtonLink href="/eips/">
   Mais sobre EIPs
 </ButtonLink>
 
@@ -120,7 +120,7 @@ Forks são quando é necessário fazer grandes melhorias técnicas ou alteraçõ
 
 O fork da DAO foi em resposta ao [ataque da DAO de 2016](https://www.coindesk.com/understanding-dao-hack-journalists) no qual um contrato inseguro de [DAO](/glossary/#dao) foi drenado em mais de 3 milhões de ETH em um hack. O fork transferiu os fundos do contrato falho para um novo contrato, permitindo que qualquer um que perdeu fundos no hack os recuperasse.
 
-Este curso de ação foi votado pela comunidade Ethereum. Qualquer titular de ETH pôde votar via uma transação em [uma plataforma de votação](http://v1.carbonvote.com/). A decisão de criar fork ultrapassou 85% dos votos.
+Este curso de ação foi votado pela comunidade Ethereum. Qualquer titular de ETH pôde votar por meio de uma transação em [uma plataforma de votação](https://web.archive.org/web/20170620030820/http://v1.carbonvote.com/). A decisão de criar fork ultrapassou 85% dos votos.
 
 É importante notar que enquanto o protocolo fez um fork para reverter o hack, o peso que a votação teve na decisão de criar fork é discutível por algumas razões:
 
@@ -152,9 +152,9 @@ O processo de governança Ethereum muitas vezes troca velocidade e eficiência p
 
 Embora as implementações de especificação e desenvolvimento sempre tenham sido totalmente de código aberto, os processos formais usados para propor as atualizações descritas acima não foram usados. Isso permitiu que as alterações fossem especificadas e acordadas mais rapidamente por pesquisadores e implementadores.
 
-Quando ocorreu a fusão da Beacon Chain com a camada de execução do Ethereum em 15 de setembro de 2022, a transação foi concluída como parte da [atualização de rede Paris](/history/#paris). A proposta [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) foi alterada de "Última Chamada" para "Final", completando a transição para o prova de participação.
+Quando ocorreu a fusão da Beacon Chain com a camada de execução do Ethereum em 15 de setembro de 2022, a transação foi concluída como parte da [melhoria da rede Paris](/history/#paris). A proposta [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) foi alterada de "Última Chamada" para "Final", completando a transição para o prova de participação.
 
-<ButtonLink to="/roadmap/merge/">
+<ButtonLink href="/roadmap/merge/">
   Mais sobre a integração
 </ButtonLink>
 
@@ -174,9 +174,9 @@ Quando ocorreu a fusão da Beacon Chain com a camada de execução do Ethereum e
 
 A governança na Ethereum não está definida de forma rígida. Vários participantes da comunidade têm diversas perspectivas sobre isso. Aqui estão alguns deles:
 
-- [Notas sobre governaça da Blockchain](https://vitalik.eth.limo/general/2017/12/17/voting.html) - _Vitalik Buterin_
+- [Notas sobre governança da blockchain](https://vitalik.eth.limo/general/2017/12/17/voting.html) - _Vitalik Buterin_
 - [Como funciona a governança Ethereum?](https://cryptotesters.com/blog/ethereum-governance) – _Criptotesters_
 - [Como funciona a governança Ethereum](https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a) – _Micah Zoltu_
 - [O que é um desenvolvedor principal Ethereum?](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) – _Hudson Jameson_
-- [Governança, Parte 2: A plutocracia ainda é uma desvantagem](https://vitalik.eth.limo/general/2018/03/28/plutocracy.html) – _Vitalik Buterin_
+- [Governança, Parte 2: a plutocracia ainda é uma desvantagem](https://vitalik.eth.limo/general/2018/03/28/plutocracy.html) – _Vitalik Buterin_
 - [Indo além da governança por meio da votação com moedas.](https://vitalik.eth.limo/general/2021/08/16/voting3.html) – _Vitalik Buterin_

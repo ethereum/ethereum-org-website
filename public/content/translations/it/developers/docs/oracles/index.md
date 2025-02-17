@@ -22,7 +22,7 @@ Gli oracoli differiscono in base alla fonte di dati (una o più fonti), ai model
 
 ## Perché i contratti intelligenti hanno bisogno degli oracoli? {#why-do-smart-contracts-need-oracles}
 
-Molti sviluppatori vedono i contratti intelligenti come del codice in esecuzione in determinati indirizzi sulla blockchain. Tuttavia, una [ visione più generale dei contratti intelligenti ](/smart-contracts/) è che siano programmi software autoeseguibili in grado di far rispettare gli accordi tra le parti una volta soddisfatte determinate condizioni, da qui il termine “contratti intelligenti”.
+Molti sviluppatori vedono i contratti intelligenti come del codice in esecuzione in determinati indirizzi sulla blockchain. Tuttavia, una [visione più generale dei contratti intelligenti](/smart-contracts/) è che siano programmi software autoeseguibili in grado di far rispettare gli accordi tra le parti una volta soddisfatte determinate condizioni, da qui il termine “contratti intelligenti”.
 
 Ma utilizzare contratti intelligenti per far rispettare gli accordi tra le persone non è semplice, dato che Ethereum è deterministico. Un [sistema deterministico](https://en.wikipedia.org/wiki/Deterministic_algorithm) è un sistema che produce sempre gli stessi risultati dato uno stato iniziale ed un input specifico, il che significa che non c'è casualità o variazione nel processo di calcolo degli output dagli input.
 
@@ -274,7 +274,7 @@ Alcune reti di oracoli decentralizzati richiedono ai partecipanti di votare o me
 
 I nodi le cui risposte si discostano dalla risposta maggioritaria vengono penalizzati con la distribuzione dei loro token ad altri che forniscono valori più corretti. Obbligare i nodi a fornire una garanzia prima di fornire i dati incentiva le risposte oneste, poiché si presume che siano attori economici razionali intenti a massimizzare i rendimenti.
 
-Lo staking/votazione, inoltre, protegge gli oracoli decentralizzati dagli "attacchi Sybil", in cui attori malintenzionati creano identità multiple per ingannare il sistema di consenso. Tuttavia, lo staking non può impedire il "freeloading" (nodi oracolo che copiano informazioni da altri) e la "convalida pigra" (nodi oracolo che seguono la maggioranza senza verificare le informazioni stesse).
+Inoltre, lo staking e il voto proteggono gli oracoli decentralizzati dagli [attacchi Sybil](/glossary/#sybil-attack), in cui gli utenti malevoli creano svariate identità per prendersi gioco del sistema del consenso. Tuttavia, lo staking non può impedire il "freeloading" (nodi oracolo che copiano informazioni da altri) e la "convalida pigra" (nodi oracolo che seguono la maggioranza senza verificare le informazioni stesse).
 
 ##### Meccanismi del punto di Schelling
 
@@ -358,7 +358,7 @@ contract PriceConsumerV3 {
 
 Alcune applicazioni della blockchain, come i giochi o le lotterie basate su blockchain, richiedono un alto livello di imprevedibilità e casualità per funzionare efficacemente. Tuttavia, l'esecuzione deterministica delle blockchain elimina la casualità.
 
-L'approccio abituale è quello di utilizzare funzioni crittografiche pseudocasuali, come `blockhash`, ma queste sono suscettibili di [manipolazione da miner](https://ethereum.stackexchange.com/questions/3140/risk-of-using-blockhash-other-miners-preventing-attack#:~:text=So%20while%20the%20miners%20can,to%20one%20of%20the%20players.) che risolvono l'algoritmo proof-of-work. Inoltre, il [passaggio al proof-of-stake](/roadmap/merge/) di Ethereum fa sì che gli sviluppatori non possano più fare affidamento su `blockhash` per la casualità sulla catena (il [meccanismo RANDAO](https://eth2book.info/altair/part2/building_blocks/randomness) della Beacon Chain fornisce comunque una fonte alternativa di casualità).
+L'approcio originale consisteva nell'utilizzare una funzione crittografica pseudocasuale, come ad esempio `blockhash`, ma questa era suscettibile di [manipolazioni da parte dei minatori](https://ethereum.stackexchange.com/questions/3140/risk-of-using-blockhash-other-miners-preventing-attack#:~:text=So%20while%20the%20miners%20can,to%20one%20of%20the%20players.) che risolvevano l'algoritmo di proof-of-work. Inoltre il [passaggio al proof-of-stake](/roadmap/merge/) di Ethereum fa sì che gli sviluppatori non possano più affidarsi al `blockhash` per la casualità on-chain. Il [meccanismo RANDAO](https://eth2book.info/altair/part2/building_blocks/randomness) della Beacon Chain fornisce invece una fonte alternativa di casualità.
 
 È possibile generare il valore casuale off-chain e inviarlo sulla catena, ma ciò impone agli utenti requisiti di fiducia elevati. Devono credere che il valore sia stato realmente generato attraverso meccanismi imprevedibili e non sia stato alterato in transito.
 
@@ -387,6 +387,8 @@ Alcune reti di oracoli decentralizzati offrono servizi di automazione, che conse
 Ci sono più applicazioni di oracoli che puoi integrare nella tua dapp su Ethereum:
 
 **[Chainlink](https://chain.link/)** - _ Le reti di oracoli decentralizzati di Chainlink forniscono input a prova di manomissione, output e calcoli per supportare contratti intelligenti avanzati su qualsiasi blockchain._
+
+**[Chronicle](https://chroniclelabs.org/)** - _Chronicle supera le attuali limitazioni del trasferimento dei dati sulla catena sviluppando oracoli veramente scalabili, economici, decentralizzati e verificabili._
 
 **[Witnet](https://witnet.io/)** - _Witnet è un oracolo senza permessi, decentralizzato e resistente alla censura che aiuta i contratti intelligenti a reagire agli eventi del mondo reale con forti garanzie cripto-economiche._
 
@@ -424,6 +426,7 @@ Ci sono più applicazioni di oracoli che puoi integrare nella tua dapp su Ethere
 **Tutorial**
 
 - [Come recuperare il prezzo corrente di Ethereum in Solidity](https://blog.chain.link/fetch-current-crypto-price-data-solidity/) - _Chainlink_
+- [Consuming Oracle Data](https://docs.chroniclelabs.org/Developers/tutorials/Remix) — _Chronicle_
 
 **Progetti di esempio**
 

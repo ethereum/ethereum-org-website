@@ -26,8 +26,6 @@
   "page-local-environment-setup-title": "Configureu el vostre entorn local de desenvolupament",
   "page-local-environment-solidity-template-desc": "Una plantilla GitHub per a una configuració preestablerta per als vostres contractes intel·ligents Solidity. Inclou una xarxa local Hardhat, Waffle per fer proves, Ethers per a la implementació de la cartera i molt més.",
   "page-local-environment-solidity-template-logo-alt": "Logotip de la plantilla de Solidity",
-  "page-local-environment-truffle-desc": "Truffle Suite fa que els desenvolupadors passin de la idea a la dapp el més còmodament possible.",
-  "page-local-environment-truffle-logo-alt": "Logotip de Truffle",
   "page-local-environment-waffle-desc": "La biblioteca de proves més avançada per a contractes intel·ligents. Feu-la servir sola o amb Scaffold-eth o Hardhat.",
   "page-local-environment-waffle-logo-alt": "Logotip de Waffle"
 }

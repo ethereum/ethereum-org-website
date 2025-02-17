@@ -8,11 +8,11 @@ alt: "Οδικός χάρτης"
 summaryPoints:
 buttons:
   - 
-    label: Περαιτέρω αναβαθμίσεις
+    content: Περαιτέρω αναβαθμίσεις
     toId: ποιές-αλλαγές-έρχονται
   - 
-    label: Προηγούμενες αναβαθμίσεις
-    to: /history/
+    content: Προηγούμενες αναβαθμίσεις
+    href: /history/
     variant: περίγραμμα
 ---
 
@@ -26,28 +26,28 @@ buttons:
 
 <CardGrid>
   <RoadmapActionCard
-    to="/roadmap/scaling"
+    href="/roadmap/scaling"
     title="Φθηνότερες συναλλαγές"
     image="scaling"
     description="Rollups are too expensive and rely on centralized components, causing users to place too much trust in their operators. The roadmap includes fixes for both of these problems."
     buttonText="More on reducing fees"
   />
   <RoadmapActionCard
-    to="/roadmap/security"
+    href="/roadmap/security"
     title="Επιπλέον ασφάλεια"
     image="security"
     description="Ethereum is already very secure but it can be made even stronger, ready to withstand all kinds of attack far into the future."
     buttonText="More on security"
   />
   <RoadmapActionCard
-    to="/roadmap/user-experience"
+    href="/roadmap/user-experience"
     title="Καλύτερη εμπειρία χρήστη"
     image="userExperience"
     description="More support for smart contract wallets and light-weight nodes will make using Ethereum simpler and safer."
     buttonText="More on user experience"
   />
   <RoadmapActionCard
-    to="/roadmap/future-proofing"
+    href="/roadmap/future-proofing"
     title="Πρόβλεψη για το μέλλον"
     image="futureProofing"
     description="Ethereum researchers and developers are solving tomorrow's problems today, readying the network for future generations."
@@ -78,7 +78,7 @@ buttons:
 
 **Ναι, σχεδόν σίγουρα.** Ο οδικός χάρτης είναι το τρέχον σχέδιο για την αναβάθμιση του Ethereum, το οποίο καλύπτει τόσο βραχυπρόθεσμα όσο και μακροπρόθεσμα σχέδια. Αναμένουμε ότι ο οδικός χάρτης θα αλλάξει, καθώς θα καταστούν διαθέσιμες νέες πληροφορίες και τεχνολογίες.
 
-Σκεφτείτε τον οδικό χάρτη του Ethereum ως μια σειρά προθέσεων για τη βελτίωση του Ethereum. Είναι η καλύτερη υπόθεση των βασικών ερευνητών και των προγραμματιστών για την πιο βέλτιστη πορεία του Ethereum προς το μέλλον.
+Σκεφτείτε τον οδικό χάρτη του Ethereum ως μια σειρά προθέσεων για τη βελτίωση του Ethereum. Είναι η καλύτερη θεωρία των βασικών ερευνητών και των προγραμματιστών για τη βέλτιστη πορεία του Ethereum προς το μέλλον.
 
 ## Πότε θα ολοκληρωθεί ο οδικός χάρτης; {#when-will-the-roadmap-be-finished}
 

@@ -63,7 +63,7 @@ H πρώτη σύλληψη της ιδέας του Berners-Lee, γνωστή �
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Μάθετε περισσότερα για τα NFT</div>
-  <ButtonLink to="/nft/">
+  <ButtonLink href="/nft/">
     Περισσότερα για τα NFT
   </ButtonLink>
 </InfoBanner>
@@ -88,7 +88,7 @@ H πρώτη σύλληψη της ιδέας του Berners-Lee, γνωστή �
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Μάθετε περισσότερα για τους DAO</div>
-  <ButtonLink to="/dao/">
+  <ButtonLink href="/dao/">
     Περισσότερα για τους DAO
   </ButtonLink>
 </InfoBanner>
@@ -103,7 +103,7 @@ H πρώτη σύλληψη της ιδέας του Berners-Lee, γνωστή �
 
 Η υποδομή πληρωμών του Web2 βασίζεται σε τράπεζες και διαχειριστές πληρωμών, εξαιρώντας τα άτομα χωρίς τραπεζικούς λογαριασμούς ή εκείνων που τυχαίνει να ζουν σε διαφορετική χώρα. Το Web3 χρησιμοποιεί ψηφιακά στοιχεία όπως το [ETH](/glossary/#ether) για την αποστολή χρημάτων απευθείας στο πρόγραμμα περιήγησης και δεν απαιτεί κάποιο αξιόπιστο τρίτο μέρος.
 
-<ButtonLink to="/eth/">
+<ButtonLink href="/eth/">
   Περισσότερα για το ETH
 </ButtonLink>
 
@@ -149,9 +149,9 @@ H πρώτη σύλληψη της ιδέας του Berners-Lee, γνωστή �
 
 - [Τι είναι το Web3; Το Αποκεντρωμένο Διαδίκτυο του Μέλλοντος Περιγράφηκε](https://www.freecodecamp.org/news/what-is-web3/) - _Nader Dabit_
 - [Κατανοώντας το Web3](https://medium.com/l4-media/making-sense-of-web-3-c1a9e74dcae) - _Josh Stark_
-- [Γιατί το Web3 έχει σημασία](https://future.a16z.com/why-web3-matters/) - _ Chris Dixon_
-- [Γιατί η αποκέντρωσης έχει σημασία](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) - _ Chris Dixon_
-- [Το τοπίο του Web3](https://a16z.com/wp-content/uploads/2021/10/The-web3-Readlng-List.pdf) - _ a16z_
-- [Η συζήτηση για το Web3](https://www.notboring.co/p/the-web3-debate?s=r) - _ Packy McCormick_
+- [Γιατί το Web3 έχει σημασία](https://future.a16z.com/why-web3-matters/) - _Chris Dixon_
+- [Γιατί η αποκέντρωσης έχει σημασία](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) - _Chris Dixon_
+- [Το τοπίο του Web3](https://a16z.com/wp-content/uploads/2021/10/The-web3-Readlng-List.pdf) - _a16z_
+- [Η συζήτηση για το Web3](https://www.notboring.co/p/the-web3-debate?s=r) - _Packy McCormick_
 
 <QuizWidget quizKey="web3" />

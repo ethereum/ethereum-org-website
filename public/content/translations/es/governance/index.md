@@ -32,7 +32,7 @@ El enfoque opuesto, la gobernanza «off-chain» o externa a la cadena, consiste 
 
 _A pesar de que siguiendo el protocolo, la gobernanza de Ethereum se desarrolla externa a la cadena de bloques, muchos casos de uso que se ejecutan sobre la red Ethereum, como las DAO, se sirven de la gobernanza dentro de la cadena._
 
-<ButtonLink to="/dao/">
+<ButtonLink href="/dao/">
   Más información acerca de las DAO
 </ButtonLink>
 
@@ -48,7 +48,7 @@ En la [comunidad Ethereum](/community/), hay diversos actores y cada uno cumple 
 - **Operadores de nodos**: estas personas ejecutan nodos que propagan bloques y transacciones y rechazan cualquier transacción o bloque inválido con el que se encuentren. [Más información sobre los nodos](/developers/docs/nodes-and-clients/).
 - **Autores de EIP**: estas personas proponen cambios en el protocolo Ethereum en calidad de propuestas de mejora de Ethereum (EIP, «Ethereum Improvement Proposals»). [Más información sobre las EIP](/eips/).
 - **Validadores**: estas personas ejecutan nodos que pueden añadir nuevos bloques a la cadena de bloques de Ethereum.
-- **Desarrolladores del protocolo** (también conocidos como «desarrolladores principales» ): estas personas mantienen las diversas implementaciones de Ethereum (p. ej., go-ethereum, mind, Besu, Erigon en la capa de ejecución, o Prisma, Lighthouse, Nimbus, Teku, Lodestar en la capa de consenso). [Más información sobre los clientes de Ethereum](/developers/docs/nodes-and-clients/).
+- **Desarrolladores del protocolo** (también conocidos como "Desarrolladores principales"): estas personas mantienen las diversas implementaciones de Ethereum (por ejemplo, go-ethereum, Nethermind, Besu, Erigon, Reth en la capa de ejecución o Prysm, Lighthouse, Nimbus, Teku, Lodestar en la capa de consenso). [Más información sobre los clientes de Ethereum](/developers/docs/nodes-and-clients/).
 
 _Nota: cualquier persona puede ser parte de varios de estos grupos (p. ej., un desarrollador de protocolos podría abogar por una EIP, ejecutar un validador de la cadena de baliza y utilizar aplicaciones DeFi). Sin embargo, por motivos de claridad conceptual, resulta más práctico hacer una distinción entre ellos._
 
@@ -58,7 +58,7 @@ _Nota: cualquier persona puede ser parte de varios de estos grupos (p. ej., un d
 
 Un proceso importante utilizado en la gobernanza Ethereum son las **propuestas de mejora de Ethereum (EIP, «Ethereum Improvement Proposals»)**. Las EIP son estándares que especifican posibles nuevas características o procesos para Ethereum. Cualquier persona dentro de la comunidad Ethereum puede formular una EIP. Si le interesa escribir una EIP o participar en una revisión entre pares, vea:
 
-<ButtonLink to="/eips/">
+<ButtonLink href="/eips/">
   Más información sobre las EIP
 </ButtonLink>
 
@@ -120,7 +120,7 @@ Las bifurcaciones se dan cuando hay mejoras técnicas o modificaciones que cambi
 
 La bifurcación de una DAO surgió en respuesta al [ataque de una DAO en 2016](https://www.coindesk.com/understanding-dao-hack-journalists), donde un contrato inseguro de una [DAO](/glossary/#dao) fue drenado por más de 3,6 millones de ETH en un hack. La bifurcación movió los fondos desde el contrato corrompido a un nuevo contrato, permitiendo que las personas que perdieron sus fondos, los recuperaran.
 
-Esta acción fue votada por la comunidad Ethereum. Cualquier poseedor de ETH pudo votar a través de una transacción en [una plataforma de votación](http://v1.carbonvote.com/). La decisión de bifurcar obtuvo más del 85 % de los votos.
+Esta acción fue votada por la comunidad Ethereum. Cualquier titular de ETH pudo votar a través de una transacción en [una plataforma de votación](https://web.archive.org/web/20170620030820/http://v1.carbonvote.com/). La decisión de bifurcar obtuvo más del 85 % de los votos.
 
 Es importante destacar que a pesar de que el protocolo efectivamente se bifurcó para revertir el ataque, el peso que el voto tenía en decidir la separación es debatible por varias razones:
 
@@ -154,7 +154,7 @@ Si bien la especificación y las implementaciones de desarrollo siempre han sido
 
 Cuando la cadena de baliza se fusionó con la capa de ejecución de Ethereum el 15 de septiembre de 2022, La fusión se completó como parte de la [actualización de la red París](/history/#paris). La propuesta [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) se cambió de "Última llamada" a "Final", completando la transición a la prueba de participación.
 
-<ButtonLink to="/roadmap/merge/">
+<ButtonLink href="/roadmap/merge/">
   Más sobre la fusión
 </ButtonLink>
 

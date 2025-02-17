@@ -17,7 +17,7 @@ La sfida affrontata dagli sviluppatori di Ethereum è che l'attuale protocollo d
 
 Gli [schemi di impegno "KZG"](/roadmap/danksharding/#what-is-kzg) utilizzati in svariati punti su Ethereum per generare frasi segrete crittografiche sono noti per la loro vulnerabilità ai computer quantistici. Al momento, il problema viene eluso utilizzando le "configurazioni fidate", in cui molti utenti generano casualità non decodificabili da un computer quantistico. Tuttavia, la soluzione ideale sarebbe semplicemente incorporare, piuttosto, la crittografia sicura contro i computer quantistici. Esistono due approcci principali che potrebbero divenire efficienti sostituti per lo schema BLS: la firma [basata su STARK](https://hackmd.io/@vbuterin/stark_aggregation) e [basata su reticolo](https://medium.com/asecuritysite-when-bob-met-alice/so-what-is-lattice-encryption-326ac66e3175). **Queste sono ancora in fase di ricerca e prototipazione**.
 
-<ButtonLink variant="outline-color" to="/roadmap/danksharding#what-is-kzg"> Leggi su KZG e le configurazioni fidate</ButtonLink>
+<ButtonLink variant="outline-color" href="/roadmap/danksharding#what-is-kzg"> Leggi su KZG e le configurazioni fidate</ButtonLink>
 
 ## Un Ethereum più semplice ed efficiente {#simpler-more-efficient-ethereum}
 
@@ -29,7 +29,7 @@ Similmente, esistono aggiornamenti apportabili ad altre parti dei client odierni
 
 ## Stato attuale {#current-progress}
 
-Gran parte degli aggiornamenti necessari per rendere Ethereum a prova di futuro sono **ancora in fase di ricerca e potrebbero richiedere ancora svariati anni** per essere implementati. Gli aggiornamenti come la rimozione di SELF-DESTRUCT e l'armonizzazione dello schema di compressione utilizzato nei client d'esecuzione e del consenso potrebbero arrivare prima della crittografia resistente ai computer quantistici.
+Gran parte degli aggiornamenti necessari per rendere Ethereum a prova di futuro sono **ancora in fase di ricerca e potrebbero richiedere ancora svariati anni** per essere implementati. Aggiornamenti come la rimozione di SELFDESTRUCT e l'armonizzazione dello schema di compressione utilizzato nei client di esecuzione e di consenso potrebbero arrivare prima della crittografia a resistenza quantistica.
 
 **Letture consigliate**
 

@@ -17,6 +17,8 @@ on:
       - "src/layouts/**/*"
       - "src/@chakra-ui/**/*"
       - ".storybook/**/*"
+      - "tailwind.config.ts"
+      - "src/styles/**/*"
 
 # List of jobs
 jobs:

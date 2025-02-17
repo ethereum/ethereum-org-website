@@ -1,18 +1,16 @@
 import React from "react"
 import { motion } from "framer-motion"
-import {
-  Grid,
-  type GridProps,
-  type ListProps,
-  OrderedList,
-} from "@chakra-ui/react"
+
+import { OrderedList } from "@/components/ui/list"
+
+import { cn } from "@/lib/utils/cn"
 
 import {
   DELAY_MULTIPLIER_MS,
   EXTRA_DELAY_MS,
   WORDS_REQUIRED,
 } from "./constants"
-import { WordDisplay, type WordStyleVariant } from "./WordDisplay"
+import { WordDisplay, type WordStyleVariantProps } from "./WordDisplay"
 
 type WordListProps = {
   words: Array<string>
@@ -22,35 +20,30 @@ type WordListProps = {
 // ?: Consider not generating
 // ?: Keep in mind translations... English only? BIP39 Langs only?
 export const WordList = ({ words, wordsSelected }: WordListProps) => {
-  const sharedStyles = {
-    display: "flex",
-    flexDirection: "column",
-    columnGap: 8,
-    rowGap: 3,
-    m: 0,
-  } as const
-  const styleVariants = {
-    initial: {
-      rowGap: 0,
-    },
-  } as const
+  const sharedClasses = "m-0 flex flex-col gap-y-3 gap-x-8"
 
-  const variantStyles: GridProps =
-    styleVariants[typeof wordsSelected === "undefined" ? "initial" : ""] ?? {}
-  const styles = { ...sharedStyles, ...variantStyles } as ListProps
+  const classVariants = {
+    initial: "gap-y-0",
+  }
+
+  const styles = cn(
+    sharedClasses,
+    classVariants[typeof wordsSelected === "undefined" ? "initial" : ""]
+  )
+
   const splitIndex = Math.floor(words.length / 2)
 
   const wordMapping = (word: string, index: number): React.ReactElement => {
     const initialWordDisplay = typeof wordsSelected === "undefined"
-    const variant: WordStyleVariant = initialWordDisplay
+    const variant: WordStyleVariantProps["variant"] = initialWordDisplay
       ? "initial"
       : index === wordsSelected
-      ? "active"
-      : index < wordsSelected
-      ? "complete"
-      : index < 2
-      ? "incomplete"
-      : "disabled"
+        ? "active"
+        : index < wordsSelected
+          ? "complete"
+          : index < 2
+            ? "incomplete"
+            : "disabled"
     const showLabel = initialWordDisplay || variant === "complete"
 
     const getDelayFromIndex = (index: number, isInitial?: boolean): number => {
@@ -63,13 +56,7 @@ export const WordList = ({ words, wordsSelected }: WordListProps) => {
       <WordDisplay
         key={word + index}
         variant={variant}
-        transition={`
-          color 1s ease-in-out,
-          background-color 1s ease-in-out,
-          border-color 1s ease-in-out
-        `}
-        transitionDelay={numToMsString(getDelayFromIndex(index))}
-        position="relative"
+        className={`[--display-delay:${numToMsString(getDelayFromIndex(index))}] delay-(--display-delay)`}
       >
         {showLabel && (
           <>
@@ -85,16 +72,12 @@ export const WordList = ({ words, wordsSelected }: WordListProps) => {
             </motion.span>
             {initialWordDisplay && (
               <motion.div
+                className="absolute inset-0 backdrop-blur-[2px]"
                 initial={{ opacity: 1 }}
                 animate={{ opacity: 0 }}
                 transition={{
                   duration: 0.25,
                   delay: getDelayFromIndex(index, true) * 1e-3,
-                }}
-                style={{
-                  position: "absolute",
-                  inset: 0,
-                  backdropFilter: "blur(2px)",
                 }}
               />
             )}
@@ -105,19 +88,13 @@ export const WordList = ({ words, wordsSelected }: WordListProps) => {
   }
 
   return (
-    <Grid
-      templateColumns="repeat(2, 1fr)"
-      columnGap={7}
-      whiteSpace="nowrap"
-      px={{ base: 4, md: 8 }}
-      bg="background.base"
-    >
-      <OrderedList {...styles} start={1}>
+    <div className="grid grid-cols-2 gap-x-7 whitespace-nowrap bg-background px-4 md:px-8">
+      <OrderedList className={styles} start={1}>
         {words.map(wordMapping).slice(0, splitIndex)}
       </OrderedList>
-      <OrderedList {...styles} start={splitIndex + 1}>
+      <OrderedList className={styles} start={splitIndex + 1}>
         {words.map(wordMapping).slice(splitIndex)}
       </OrderedList>
-    </Grid>
+    </div>
   )
 }

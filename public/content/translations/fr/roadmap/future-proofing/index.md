@@ -13,11 +13,11 @@ Certaines parties de la feuille de route ne sont pas nécessairement requises po
 
 Une partie de la sécurisation de la [cryptographie](/glossary/#cryptography) actuelle d'Ethereum sera compromise lorsque le calcul quantique deviendra une réalité. Bien que les ordinateurs quantiques soient probablement à des décennies de constituer une véritable menace pour la cryptographie moderne, Ethereum est construit pour être sécurisé pour les siècles à venir. Cela signifie rendre [Ethereum quantique résistant](https://consensys.net/blog/developers/how-will-quantum-supremacy-affect-blockchain/) dès que possible.
 
-Le défi auquel sont confrontés les développeurs d'Ethereum est que le protocole actuel de [preuve d'enjeu](/glossary/#pos) repose sur un système de signature très efficace connu sous le nom de BLS pour regrouper les votes sur les [blocs](/glossary/#block) valides. Ce schéma de signature est rompu par les ordinateurs quantiques, mais les alternatives de résistance quantique ne sont pas aussi efficaces.
+Le défi auquel sont confrontés les développeurs d'Ethereum est que le protocole actuel de [preuve d'enjeu](/glossary/#pos)repose sur un système de signature très efficace connu sous le nom de BLS pour regrouper les votes sur les [blocs](/glossary/#block) valides. Ce schéma de signature est rompu par les ordinateurs quantiques, mais les alternatives de résistance quantique ne sont pas aussi efficaces.
 
 Les [schémas d'engagement « KZG»](/roadmap/danksharding/#what-is-kzg) utilisés à plusieurs endroits à travers Ethereum pour générer des secrets cryptographiques sont connus pour être vulnérables. Actuellement, cela est contourné en utilisant des « configurations de confiance » où de nombreux utilisateurs génèrent un aléa qui ne peut pas être inversé par un ordinateur quantique. Cependant, la solution idéale serait simplement d'intégrer la cryptographie quantique sûre. Il y a deux approches principales qui pourraient devenir des remplacements efficaces pour le schéma BLS : la signature [basée sur le STARK](https://hackmd.io/@vbuterin/stark_aggregation) et la signature [basée sur le treillis](https://medium.com/asecuritysite-when-bob-met-alice/so-what-is-lattice-encryption-326ac66e3175). **Ils sont encore en cours de recherche et de prototype**.
 
-<ButtonLink variant="outline-color" to="/roadmap/danksharding#what-is-kzg"> En savoir plus sur KZG et les configurations fiables</ButtonLink>
+<ButtonLink variant="outline-color" href="/roadmap/danksharding#what-is-kzg"> En savoir plus sur KZG et les configurations fiables</ButtonLink>
 
 ## Ethereum plus simple et plus efficace {#simpler-more-efficient-ethereum}
 
@@ -29,7 +29,7 @@ De même, il y a des mises à jour qui peuvent être faites à d'autres parties 
 
 ## Progrès actuels {#current-progress}
 
-La plupart des mises à jour requises pour la pérennité d'Ethereum sont **toujours en phase de recherche et peuvent prendre plusieurs années** avant d'être mises en œuvre. Les mises à jour telles que la suppression de SELF-DESTRUCT et l'harmonisation du système de compression utilisé dans l'exécution et les clients de consensus sont susceptibles d'advenir plus tôt que la cryptographie résistante quantique.
+La plupart des mises à jour requises pour la pérennité d'Ethereum sont **toujours en phase de recherche et peuvent prendre plusieurs années** avant d'être mises en œuvre. Les mises à niveau telles que la suppression de SELFDESTRUCT et l'harmonisation du système de compression utilisé dans l'exécution et les clients de consensus sont susceptibles d'advenir plus tôt que la cryptographie résistante au quantique.
 
 **Complément d'information**
 

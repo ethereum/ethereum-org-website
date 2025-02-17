@@ -1,61 +1,60 @@
+import { forwardRef } from "react"
 import { useTranslation } from "next-i18next"
-import { Button, ButtonProps, ScaleFade, Text } from "@chakra-ui/react"
+import type { ButtonHTMLAttributes } from "react"
+
+import { Button } from "@/components/ui/buttons/Button"
+
+import { cn } from "@/lib/utils/cn"
 
 import { FeedbackGlyphIcon } from "../icons"
 
-type FixedDotProps = ButtonProps & {
-  bottomOffset: number
+type FixedDotProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   isExpanded: boolean
+  offsetBottom?: boolean
+  suppressScale?: boolean
 }
-const FixedDot = ({ bottomOffset, isExpanded, ...props }: FixedDotProps) => {
-  const { t } = useTranslation("common")
-  const size = "12"
-  return (
-    <Button
-      data-testid="feedback-widget-button"
-      h={size}
-      w={{ base: size, lg: isExpanded ? "15rem" : size }}
-      borderRadius="full"
-      boxShadow="tableItemBox"
-      position="sticky"
-      bottom={{ base: `${bottomOffset + 1}rem`, lg: 4 }}
-      color="white"
-      ms="auto"
-      me="4"
-      mt={{ lg: "inherit" }}
-      zIndex={98} /* Below the mobile menu */
-      display="flex"
-      alignItems="center"
-      _hover={{
-        transform: "scale(1.1)",
-        transition: "transform 0.2s ease-in-out",
-      }}
-      transition="transform 0.2s ease-in-out, width 0.25s ease-in-out,
-      border-radius 0.25s linear"
-      aria-label={t("feedback-widget")}
-      leftIcon={<FeedbackGlyphIcon color="white" />}
-      iconSpacing={{ base: 0, lg: "3" }}
-      sx={{
-        ".chakra-button__icon": {
-          me: !isExpanded ? 0 : undefined,
-        },
-      }}
-      {...props}
-    >
-      <ScaleFade in={isExpanded} delay={0.25}>
-        <Text
-          as="span"
-          fontWeight="bold"
-          noOfLines={2}
-          height="100%"
-          alignItems="center"
-          display={{ base: "none", lg: isExpanded ? "flex" : "none" }}
+
+const FixedDot = forwardRef<HTMLButtonElement, FixedDotProps>(
+  ({ offsetBottom, isExpanded, suppressScale, className, ...props }, ref) => {
+    const { t } = useTranslation("common")
+    return (
+      <Button
+        ref={ref}
+        data-testid="feedback-widget-button"
+        aria-label={t("feedback-widget")}
+        className={cn(
+          "lg:mt-inherit sticky bottom-4 z-overlay me-4 ms-auto flex size-12 items-center gap-0 rounded-full text-white shadow-table-item-box",
+          "transition-all duration-200 hover:shadow-none hover:transition-transform hover:duration-200",
+          !suppressScale && "hover:scale-110",
+          offsetBottom && "bottom-31 lg:bottom-4",
+          isExpanded ? "lg:w-60 lg:gap-3" : "lg:w-12",
+          className
+        )}
+        {...props}
+      >
+        <FeedbackGlyphIcon
+          className={cn("text-white", !isExpanded && "-mx-1")}
+        />
+        <div
+          className={cn(
+            "duration-250 transform transition-all",
+            isExpanded ? "scale-100 opacity-100" : "scale-95 opacity-0"
+          )}
         >
-          {t("feedback-widget-prompt")}
-        </Text>
-      </ScaleFade>
-    </Button>
-  )
-}
+          <span
+            className={cn(
+              "line-clamp-2 hidden h-full items-center font-bold text-white",
+              isExpanded && "lg:flex"
+            )}
+          >
+            {t("feedback-widget-prompt")}
+          </span>
+        </div>
+      </Button>
+    )
+  }
+)
+
+FixedDot.displayName = "FixedDot"
 
 export default FixedDot

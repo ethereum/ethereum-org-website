@@ -43,7 +43,7 @@ Les millores d'Ethereum estan d'alguna manera interrelacionades. Per tant, recap
 
 Un cop succeeixi La Fusió, s'assignaran els tenidors per validar la xarxa principal d'Ethereum. [La mineria](/developers/docs/consensus-mechanisms/pow/mining/) ja no farà falta, per tant, el miners probablement invertiran els seus guanys en participacions en el nou sistema de prova de participació.
 
-<ButtonLink to="/roadmap/beacon-chain/">
+<ButtonLink href="/roadmap/beacon-chain/">
   La cadena de balisa
 </ButtonLink>
 
@@ -59,7 +59,7 @@ Originalment, el pla era treballar en cadenes de fragments abans de La Fusió, p
 
 La comunitat avaluarà de forma contínua la necessitat de múltiples rondes de cadenes de fragments per permetre una escalabilitat infinita.
 
-<ButtonLink to="/roadmap/danksharding/">
+<ButtonLink href="/roadmap/danksharding/">
   Cadenes de fragments
 </ButtonLink>
 

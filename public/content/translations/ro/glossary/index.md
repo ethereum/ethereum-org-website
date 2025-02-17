@@ -21,7 +21,7 @@ Un tip de atac asupra unei [rețele](#network) descentralizate în care un grup 
 
 Un obiect care conține o [adresă](#address), un sold, un [nonce](#nonce) și, opțional, stocare și cod. Un cont poate fi un [cont contractual](#contract-account) sau un [cont deținut din exterior (externally owned account - EOA)](#eoa).
 
-<DocLink to="/developers/docs/accounts">
+<DocLink href="/developers/docs/accounts">
   Conturi Ethereum
 </DocLink>
 
@@ -33,7 +33,7 @@ Cel mai adesea, aceasta reprezintă un [EOA](#eoa) sau [contract](#contract-acco
 
 Modul standard de interacțiune cu [contractele](#contract-account) din ecosistemul Ethereum, atât din afara blockchain-ului, cât și pentru interacțiunile între contracte.
 
-<DocLink to="/developers/docs/smart-contracts/compiling/#web-applications">
+<DocLink href="/developers/docs/smart-contracts/compiling/#web-applications">
   ABI
 </DocLink>
 
@@ -45,7 +45,7 @@ O interfață de programare a aplicațiilor (API) este un set de definiții priv
 
 În [Solidity](#solidity), `assert(false)` compilează la `0xfe`, un opcode invalid, care utilizează tot [gazul](#gas) rămas și anulează toate modificările. Atunci când o declarație `assert()` este ratată, înseamnă că se întâmplă ceva foarte grav şi neaşteptat și va trebui să vă remediaţi codul. Trebuie să utilizaţi `assert()` pentru a evita situaţiile care nu ar trebui niciodată să apară, sub nicio formă.
 
-<DocLink to="/developers/docs/smart-contracts/security/">
+<DocLink href="/developers/docs/smart-contracts/security/">
   Securitatea contractelor inteligente
 </DocLink>
 
@@ -61,7 +61,7 @@ Un vot al unui validator pentru un [Lanțul Beacon](#beacon-chain) sau un [fragm
 
 Fiecare [bloc](#block) are un preț rezervat, cunoscut sub numele de „taxa de bază”. Este taxa minimă pe [gaz](#gas) pe care trebuie să o plătească un utilizator pentru a include o tranzacție în blocul următor.
 
-<DocLink to="/developers/docs/gas/">
+<DocLink href="/developers/docs/gas/">
   Gaz și taxe
 </DocLink>
 
@@ -69,7 +69,7 @@ Fiecare [bloc](#block) are un preț rezervat, cunoscut sub numele de „taxa de 
 
 O actualizare a reţelei care a introdus un nou nivel de consens, care va deveni coordonatorul întregii rețele Ethereum. Introduce [dovada-mizei](#pos) (PoS) și [validatorii](#validator) în Ethereum. În cele din urmă va fuziona cu [Mainnet-ul](#mainnet).
 
-<DocLink to="/roadmap/beacon-chain/">
+<DocLink href="/roadmap/beacon-chain/">
   Lanțul Beacon
 </DocLink>
 
@@ -81,7 +81,7 @@ Reprezentarea unui număr pozițional în care cifra cea mai semnificativă este
 
 O colecție de informații necesare (antetul unui bloc) despre [tranzacțiile](#transaction) pe care le cuprinde și un set de alte anteturi de blocuri, cunoscute sub numele de [ommeri](#ommer). Blocurile sunt adăugate la rețeaua Ethereum de către [miner-i](#miner).
 
-<DocLink to="/developers/docs/blocks/">
+<DocLink href="/developers/docs/blocks/">
   Blocuri
 </DocLink>
 
@@ -89,7 +89,7 @@ O colecție de informații necesare (antetul unui bloc) despre [tranzacțiile](#
 
 În Ethereum este o secvență de [blocuri](#block) validate prin sistemul [dovezii- muncii](#pow), fiecare legându-se de cel precedent peste tot până la [blocul genezei](#genesis-block). Nu există nici o limită de dimensiune a blocului; utilizează în schimb diferite limite de [gaz](#gas-limit).
 
-<DocLink to="/developers/docs/intro-to-ethereum#what-is-a-blockchain">
+<DocLink href="/developers/docs/intro-to-ethereum#what-is-a-blockchain">
   Ce este un blockchain?
 </DocLink>
 
@@ -113,7 +113,7 @@ The [Beacon Chain](#beacon-chain) has a tempo divided into slots (12 seconds) an
 
 Conversia codului scris dintr-un limbaj de programare de nivel înalt (de exemplu, [Solidity](#solidity)) într-un limbaj de nivel inferior (de exemplu, cod [bytecode](#bytecode) EVM).
 
-<DocLink to="/developers/docs/smart-contracts/compiling/">
+<DocLink href="/developers/docs/smart-contracts/compiling/">
   Compilarea contractelor inteligente
 </DocLink>
 
@@ -153,7 +153,7 @@ O [tranzacție](#transaction) specială, cu [adresa zero](#zero-address) ca dest
 
 O legătură încrucișată oferă un rezumat al stării unui fragment. Acesta este modul în care lanțurile de [fragmente](#shard) vor comunica între ele prin intermediul [Lanțului Beacon](#beacon-chain) în sistemul de fragmente bazat pe [Dovadă de Mizare (proof-of-stake)](#proof-of-stake).
 
-<DocLink to="/developers/docs/consensus-mechanisms/pos/#how-does-validation-work">
+<DocLink href="/developers/docs/consensus-mechanisms/pos/#how-does-validation-work">
   Dovada-mizei (proof-of-stake)
 </DocLink>
 
@@ -165,7 +165,7 @@ O legătură încrucișată oferă un rezumat al stării unui fragment. Acesta e
 
 O companie sau altă organizație care funcționează fără gestionare ierarhică. DAO se poate referi și la un contract numit „DAO” lansat la 30 aprilie 2016, care a fost apoi piratat în iunie 2016; aceasta a motivat în cele din urmă o [Furculiță tare](#hard-fork) cu (numele de cod DAO) la blocul 1.192.000, care a inversat contractul DAO piratat și a determinat Ethereum și Ethereum Clasic să se împartă în două sisteme concurente.
 
-<DocLink to="/dao/">
+<DocLink href="/dao/">
   Organizații autonome descentralizate (DAO)
 </DocLink>
 
@@ -173,7 +173,7 @@ O companie sau altă organizație care funcționează fără gestionare ierarhic
 
 Aplicație descentralizată. Este cel puțin un [contract inteligent](#smart-contract) și o interfață web cu utilizatorul. În sens mai larg, o aplicație dapp este o aplicație web care este construită pe servicii de infrastructură deschise, descentralizate, peer-to-peer. În plus, multe aplicații dapp includ stocare descentralizată și/sau un protocol de mesaj și platformă.
 
-<DocLink to="/developers/docs/dapps/">
+<DocLink href="/developers/docs/dapps/">
   Introducere despre aplicațiile dapp
 </DocLink>
 
@@ -181,7 +181,7 @@ Aplicație descentralizată. Este cel puțin un [contract inteligent](#smart-con
 
 Un tip de aplicație [dapp](#dapp) care îți permite să schimbi token-uri cu colegii din rețea. Ai nevoie de [eter](#ether) pentru a utiliza unul (pentru a plăti [taxele de tranzacții](#transaction-fee)), dar acestea nu sunt supuse restricțiilor geografice, cum ar fi schimburile centralizate – oricine poate participa.
 
-<DocLink to="/get-eth/#dex">
+<DocLink href="/get-eth/#dex">
   Decentralized exchanges
 </DocLink>
 
@@ -193,7 +193,7 @@ Vezi [token-urile nefungibile (NFT)](#nft)
 
 Prescurtare de la „finanțe descentralizate”, o categorie largă de [aplicații descentralizate](#dapp) care vizează furnizarea de servicii financiare susținute de blockchain, fără intermediari, astfel încât oricine cu o conexiune la internet să poată participa.
 
-<DocLink to="/defi/">
+<DocLink href="/defi/">
   Finanțe descentralizate (DeFi)
 </DocLink>
 
@@ -221,7 +221,7 @@ Un algoritm criptografic utilizat de Ethereum pentru a se asigura că fondurile 
 
 O perioadă de 32 de [sloturi](#slot) (6,4 minute) în sistemul coordonat de [lanțul Beacon](#beacon-chain). [Comitetele](#committee) de [validatori](#validator) sunt amestecate în fiecare epocă din motive de securitate. Există o oportunitate în fiecare epocă pentru ca lanțul să fie [finalizat](#finality).
 
-<DocLink to="/developers/docs/consensus-mechanisms/pos/#how-does-validation-work">
+<DocLink href="/developers/docs/consensus-mechanisms/pos/#how-does-validation-work">
   Dovada-mizei
 </DocLink>
 
@@ -229,7 +229,7 @@ O perioadă de 32 de [sloturi](#slot) (6,4 minute) în sistemul coordonat de [la
 
 'Eth1' is a term that referred to Mainnet Ethereum, the existing proof-of-work blockchain. This term has since been deprecated in favor of the 'execution layer'. [Learn more about this name change](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/).
 
-<DocLink to="/roadmap/">
+<DocLink href="/roadmap/">
   Aflați mai multe despre actualizările Ethereum
 </DocLink>
 
@@ -237,7 +237,7 @@ O perioadă de 32 de [sloturi](#slot) (6,4 minute) în sistemul coordonat de [la
 
 'Eth2' is a term that referred to a set of Ethereum protocol upgrades, including Ethereum's transition to proof-of-stake. This term has since been deprecated in favor of the 'consensus layer'. [Learn more about this name change](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/).
 
-<DocLink to="/roadmap/">
+<DocLink href="/roadmap/">
   Aflați mai multe despre actualizările Ethereum
 </DocLink>
 
@@ -245,7 +245,7 @@ O perioadă de 32 de [sloturi](#slot) (6,4 minute) în sistemul coordonat de [la
 
 Un document de proiectare care furnizează informații comunității Ethereum, descriind o caracteristică nouă propusă, procesele sau mediul acesteia (a se vedea [ERC](#erc)).
 
-<DocLink to="/eips/">
+<DocLink href="/eips/">
   Introducere despre EIP-uri
 </DocLink>
 
@@ -275,7 +275,7 @@ Un [cont](#account) creat de sau pentru utilizatorii umani ai rețelei Ethereum.
 
 O etichetă dată unor [EIP](#eip)-uri care încearcă să definească un standard specific de utilizare Ethereum.
 
-<DocLink to="/eips/">
+<DocLink href="/eips/">
   Introducere despre EIP-uri
 </DocLink>
 
@@ -289,7 +289,7 @@ Un algoritm de dovadă a muncii (PoW) pentru Ethereum 1.0.
 
 Criptomonedă nativă utilizată de ecosistemul Ethereum, care acoperă costurile [gazului](#gas) la executarea tranzacțiilor. Se scrie şi ca ETH sau cu simbolul său Ξ, Litera grecească Xi cu majusculă.
 
-<DocLink to="/eth/">
+<DocLink href="/eth/">
   Moneda viitorului dvs. digital
 </DocLink>
 
@@ -297,7 +297,7 @@ Criptomonedă nativă utilizată de ecosistemul Ethereum, care acoperă costuril
 
 Permite utilizarea facilităților de logare [EVM](#evm). Aplicațiile [dapp](#dapp) pot asculta evenimente și le pot utiliza pentru a declanșa apeluri JavaScript în interfața utilizatorului.
 
-<DocLink to="/developers/docs/smart-contracts/anatomy/#events-and-logs">
+<DocLink href="/developers/docs/smart-contracts/anatomy/#events-and-logs">
   Evenimente și jurnale
 </DocLink>
 
@@ -305,7 +305,7 @@ Permite utilizarea facilităților de logare [EVM](#evm). Aplicațiile [dapp](#d
 
 O mașină virtuală bazată pe stivă care execută [bytecode](#bytecode). În Ethereum, modelul de execuție specifică în ce mod starea sistemului este modificată având în vedere o serie de instrucțiuni bytecode și un mic șir de date de mediu. Acest lucru este specificat printr-un model formal al unei mașini de stat virtuale.
 
-<DocLink to="/developers/docs/evm/">
+<DocLink href="/developers/docs/evm/">
   Mașina Virtuală Ethereum
 </DocLink>
 
@@ -325,7 +325,7 @@ O funcție implicită apelată în absența datelor sau a unui nume de funcție 
 
 Un serviciu efectuat prin [contract inteligent](#smart-contract) care distribuie fonduri sub formă de eter de test gratuit care poate fi utilizat pe o rețea de testare.
 
-<DocLink to="/developers/docs/networks/#testnet-faucets">
+<DocLink href="/developers/docs/networks/#testnet-faucets">
   Faucet-uri cu ETH de testare
 </DocLink>
 
@@ -333,10 +333,10 @@ Un serviciu efectuat prin [contract inteligent](#smart-contract) care distribuie
 
 Finalitatea este garanția că un set de tranzacții, înainte de un anumit timp, nu se va schimba și nu poate fi restabilit.
 
-<DocLink to="/developers/docs/consensus-mechanisms/pow/#finality">
+<DocLink href="/developers/docs/consensus-mechanisms/pow/#finality">
   Finalitatea dovezii muncii
 </DocLink>
-<DocLink to="/developers/docs/consensus-mechanisms/pos/#finality">
+<DocLink href="/developers/docs/consensus-mechanisms/pos/#finality">
   Finalitatea dovezii mizei
 </DocLink>
 
@@ -356,7 +356,7 @@ The algorithm used to identify the head of the blockchain. On the execution laye
 
 Un model de securitate pentru anumite soluții de [nivel 2](#layer-2) în care, pentru a crește viteza, tranzacțiile sunt [grupate](#rollups) în loturi (rolled up) și trimise la Ethereum într-o singură tranzacție. Se presupune că ele sunt valabile, dar pot fi contestate dacă se suspectează fraudă. O dovadă de fraudă va rula apoi tranzacția pentru a vedea dacă a avut loc fraudă. Această metodă crește cantitatea de tranzacții posibile, menținând în același timp securitatea. Unele [pachete cumulate](#rollups) (rollups) folosesc [dovezi de validitate](#validity-proof).
 
-<DocLink to="/developers/docs/scaling/optimistic-rollups/">
+<DocLink href="/developers/docs/scaling/optimistic-rollups/">
   Rollup-uri Optimistic
 </DocLink>
 
@@ -372,7 +372,7 @@ Etapa inițială de dezvoltare a testului Ethereum, care a durat din iulie 2015 
 
 Un combustibil virtual utilizat în Ethereum pentru a executa contracte inteligente. [EVM](#evm) utilizează un mecanism de contabilitate pentru a măsura consumul de gaz și a limita consumul de resurse de calcul (a se vedea [Turing complet](#turing-complete)).
 
-<DocLink to="/developers/docs/gas/">
+<DocLink href="/developers/docs/gas/">
   Gaze și taxe
 </DocLink>
 
@@ -440,7 +440,7 @@ O [furculiță tare](#hard-fork) pe Ethereum la blocul 200.000 pentru a introduc
 
 O interfață de utilizator care combină de obicei un editor de cod, un compilator, un timp de execuție și un depanator.
 
-<DocLink to="/developers/docs/ides/">
+<DocLink href="/developers/docs/ides/">
   Medii de dezvoltare Integrate
 </DocLink>
 
@@ -448,7 +448,7 @@ O interfață de utilizator care combină de obicei un editor de cod, un compila
 
 Odată ce codul unui [contract](#smart-contract) (sau [bibliotecă](#library)) este implementat, acesta devine imuabil. Practicile standard de dezvoltare software se bazează pe posibilitatea de a remedia eventualele erori și de a adăuga noi caracteristici, deci aceasta reprezintă o provocare pentru dezvoltarea contractelor inteligente.
 
-<DocLink to="/developers/docs/smart-contracts/deploying/">
+<DocLink href="/developers/docs/smart-contracts/deploying/">
   Implementarea contractelor Inteligente
 </DocLink>
 
@@ -464,7 +464,7 @@ O [tranzacție](#transaction) trimisă dintr-un cont contractual către un alt [
 
 Cunoscută și sub denumirea de „algoritm de întindere a parolei”, este utilizată de formatele "[keystore](#keystore-file)" pentru a proteja împotriva atacurilor cu forță brută, dicționar și tabla curcubeu la criptarea expresiei de acces, prin hash-area repetată a expresiei de acces.
 
-<DocLink to="/developers/docs/smart-contracts/security/">
+<DocLink href="/developers/docs/smart-contracts/security/">
   Securitatea contractelor inteligente
 </DocLink>
 
@@ -484,7 +484,7 @@ Un fișier codat JSON care conține o singură [cheie privată](#private-key) (g
 
 Un domeniu de dezvoltare care se concentrează pe îmbunătățiri bazate pe stratificarea peste protocolul Ethereum. Aceste îmbunătățiri sunt legate de viteza [tranzacțiilor](#transaction), [taxe de tranzacție](#transaction-fee) mai mici și confidențialitatea tranzacțiilor.
 
-<DocLink to="/developers/docs/scaling/#layer-2-scaling">
+<DocLink href="/developers/docs/scaling/#layer-2-scaling">
   Nivel 2
 </DocLink>
 
@@ -496,7 +496,7 @@ Un depozit open source de cheie-valoare pe disc, implementat ca o [bibliotecă](
 
 Un tip special de [contract](#smart-contract) care nu are funcții de plătit, nu are funcție de rezervă și nu are stocare de date. Prin urmare, nu poate primi sau reține eter, sau stoca date. O bibliotecă servește drept cod implementat anterior, pe care alte contracte îl pot solicita pentru calcul numai-în-citire.
 
-<DocLink to="/developers/docs/smart-contracts/libraries/">
+<DocLink href="/developers/docs/smart-contracts/libraries/">
   Biblioteci de contracte inteligente
 </DocLink>
 
@@ -536,7 +536,7 @@ A treia etapă de dezvoltare a Ethereum, lansată în octombrie 2017.
 
 Un [nod](#node) de rețea care găsește dovezi valabile de [dovadă a muncii](#pow) (PoW) pentru blocuri noi, prin hash de trecere repetată (vezi [Ethash](#ethash)).
 
-<DocLink to="/developers/docs/consensus-mechanisms/pow/mining/">
+<DocLink href="/developers/docs/consensus-mechanisms/pow/mining/">
   Minarea
 </DocLink>
 
@@ -552,18 +552,18 @@ Minting is the process of creating new tokens and bringing them into circulation
 
 Se referă la rețeaua Ethereum, o rețea peer-to-peer care propagă tranzacții și blocuri la fiecare nod Ethereum (participant la rețea).
 
-<DocLink to="/developers/docs/networks/">
+<DocLink href="/developers/docs/networks/">
   Rețelele
 </DocLink>
 
-### token non-fungibil (NTF) {#nft}
+### token non-fungibil (NFT) {#nft}
 
 De asemenea, cunoscut sub numele de „deed”, acesta este un token standard introdus de propunerea ERC-721. NFT-urile pot fi urmărite și tranzacționate, însă fiecare token este unic și distinct; acestea nu sunt interschimbabile precum ETH-ul și [tokenurile ERC-20](#token-standard). NFT-urile pot reprezenta proprietatea asupra activelor digitale sau fizice.
 
-<DocLink to="/nft/">
+<DocLink href="/nft/">
   Token-uri nefungibile (NFT)
 </DocLink>
-<DocLink to="/developers/docs/standards/tokens/erc-721/">
+<DocLink href="/developers/docs/standards/tokens/erc-721/">
   Standardul de tokenuri nefungibile ERC-721
 </DocLink>
 
@@ -571,7 +571,7 @@ De asemenea, cunoscut sub numele de „deed”, acesta este un token standard in
 
 Un client software care participă la rețea.
 
-<DocLink to="/developers/docs/nodes-and-clients/">
+<DocLink href="/developers/docs/nodes-and-clients/">
   Noduri și clienți
 </DocLink>
 
@@ -591,7 +591,7 @@ Când un [miner](#miner) găsește un [block](#block) valid, un alt miner poate 
 
 Un [rollup](#rollups) de tranzacții care utilizează [dovezi de fraudă (fraud-proofs)](#fraud-proof) pentru a oferi un randament sporit al tranzacțiilor [layer 2](#layer-2), utilizând în același timp securitatea oferită de [Rețeaua principală](#mainnet) (nivelul 1). Spre deosebire de [Plasma](#plasma), o soluție similară de layer 2, pachetele Optimistic pot gestiona tipuri de tranzacții mai complexe - orice este posibil în [EVM](#evm). Acestea au probleme de latență în comparație cu [pachetele Zero-knowledge](#zk-rollups), deoarece o tranzacție poate fi contestată prin dovada fraudei.
 
-<DocLink to="/developers/docs/scaling/optimistic-rollups/">
+<DocLink href="/developers/docs/scaling/optimistic-rollups/">
   Rollup-uri Optimistic
 </DocLink>
 
@@ -599,7 +599,7 @@ Un [rollup](#rollups) de tranzacții care utilizează [dovezi de fraudă (fraud-
 
 Un oracol este o punte între [blockchain](#blockchain) și lumea reală. Acestea acționează ca [API-uri](#api) on-chain care pot fi interogate pentru informații și folosite în [contractele inteligente](#smart-contract).
 
-<DocLink to="/developers/docs/oracles/">
+<DocLink href="/developers/docs/oracles/">
   Oracolele
 </DocLink>
 
@@ -615,7 +615,7 @@ Una dintre cele mai proeminente implementări interoperabile ale software-ului c
 
 O soluție de scalare off-chain care utilizează [dovada de fraudă (fraud-proof)](#fraud-proof), cum ar fi [Rollup-ul Optimistic](#optimistic-rollups). Plasma este limitată la tranzacții simple, cum ar fi transferuri de bază de token-uri și schimburi.
 
-<DocLink to="/developers/docs/scaling/plasma">
+<DocLink href="/developers/docs/scaling/plasma">
   Plasma
 </DocLink>
 
@@ -627,7 +627,7 @@ Un număr secret care permite utilizatorilor Ethereum să dovedească proprietat
 
 O metodă prin care un protocol blockchain de criptomonede își propune să obțină un [consens](#consensus) distribuit. PoS cere utilizatorilor să demonstreze că dețin o anumită cantitate de criptomonede ("miza" lor în rețea) pentru a putea participa la validarea tranzacțiilor.
 
-<DocLink to="/developers/docs/consensus-mechanisms/pos/">
+<DocLink href="/developers/docs/consensus-mechanisms/pos/">
   Dovada-mizei
 </DocLink>
 
@@ -635,7 +635,7 @@ O metodă prin care un protocol blockchain de criptomonede își propune să ob�
 
 O bucată de date (dovada) care necesită calcule semnificative pentru a fi găsite. În Ethereum, [minerii](#miner) trebuie să găsească o soluție numerică la algoritmul [Ethash](#ethash), care îndeplinește o țintă de [dificultate](#difficulty) la nivelul întregii rețele.
 
-<DocLink to="/developers/docs/consensus-mechanisms/pow/">
+<DocLink href="/developers/docs/consensus-mechanisms/pow/">
   Dovada-muncii
 </DocLink>
 
@@ -655,7 +655,7 @@ Datele returnate de un client Ethereum pentru a reprezenta rezultatul unei anumi
 
 Un atac care constă dintr-un contract de atacator care apelează o funcție contractuală a victimei în așa fel încât în ​​timpul executării, victima să apeleze din nou contractul atacatorului, recursiv. Acest lucru poate duce, de exemplu, la furtul de fonduri prin omiterea unor părți din contractul victimei care actualizează soldurile sau contorizează sumele retrase.
 
-<DocLink to="/developers/docs/smart-contracts/security/#re-entrancy">
+<DocLink href="/developers/docs/smart-contracts/security/#re-entrancy">
   Reintrare
 </DocLink>
 
@@ -671,7 +671,7 @@ Un standard de codificare proiectat de dezvoltatorii Ethereum pentru a codifica 
 
 Pachetele (rollups) sunt un tip de soluție de scalare [layer 2](#layer-2) care grupează mai multe tranzacții și le trimite la [lanțul principal Ethereum](#mainnet) într-o singură tranzacție. Pachetele (rollups). Acest lucru permite reducerea costurilor de [gaz](#gas) și creșterea volumului [tranzacțiilor](#transaction). Există pachete Optimistic și Zero-knowledge care utilizează diferite metode de securitate pentru a oferi aceste câștiguri de scalabilitate.
 
-<DocLink to="/developers/docs/scaling/#rollups">
+<DocLink href="/developers/docs/scaling/#rollups">
   Rollup-uri
 </DocLink>
 
@@ -683,7 +683,7 @@ Pachetele (rollups) sunt un tip de soluție de scalare [layer 2](#layer-2) care 
 
 Etapa de dezvoltare a lui Ethereum care a inițiat o serie de actualizări de scalare și sustenabilitate, cunoscută anterior sub numele de „Ethereum 2.0” sau „Eth2”.
 
-<DocLink to="/roadmap/">
+<DocLink href="/roadmap/">
   Actualizările Ethereum
 </DocLink>
 
@@ -695,7 +695,7 @@ O familie de funcții hash criptografice publicate de Institutul Național de St
 
 Un lanț de [dovadă-a-mizei](#pos) coordonat de [Lanțul Beacon](#beacon-chain) și securizat de [validatori](#validator). În cadrul actualizării prin lanţuri de fragmente vor fi adăugate 64 la rețea. Lanțurile de fragmente vor oferi un randament sporit al tranzacțiilor pentru Ethereum prin furnizarea de date suplimentare [nivelului 2](#layer-2), soluții precum [ rollup-urile optimistic](#optimistic-rollups) și [rollup-urile ZK](#zk-rollups).
 
-<DocLink to="/roadmap/danksharding">
+<DocLink href="/roadmap/danksharding">
   Lanțuri de fragmente
 </DocLink>
 
@@ -703,7 +703,7 @@ Un lanț de [dovadă-a-mizei](#pos) coordonat de [Lanțul Beacon](#beacon-chain)
 
 O soluție de scalare care utilizează un lanț separat cu [reguli de consens](#consensus-rules) diferite, deseori mai rapide. O punte este necesară pentru a conecta aceste lanțuri paralele la [Rețeaua principală](#mainnet). [Rollup-urile](#rollups) utilizează, de asemenea, lanțurile paralele, dar funcționează în colaborare cu [Rețeaua principală](#mainnet).
 
-<DocLink to="/developers/docs/scaling/sidechains/">
+<DocLink href="/developers/docs/scaling/sidechains/">
   Lanțuri paralele
 </DocLink>
 
@@ -715,7 +715,7 @@ Un termen de programare computerizată care descrie un obiect din care poate exi
 
 Un interval de timp (12 secunde) în care se pot propune un nou [Lanț Beacon](#beacon-chain) și un bloc de lanțuri de [fragmente](#shard) de către un [validator](#validator) în sistemul [dovezii-mizei](#pos). Un slot poate fi gol. 32 de sloturi alcătuiesc o [epocă](#epoch).
 
-<DocLink to="/developers/docs/consensus-mechanisms/pos/#how-does-validation-work">
+<DocLink href="/developers/docs/consensus-mechanisms/pos/#how-does-validation-work">
   Proof-of-stake
 </DocLink>
 
@@ -723,7 +723,7 @@ Un interval de timp (12 secunde) în care se pot propune un nou [Lanț Beacon](#
 
 Un program care se execută pe infrastructura de calcul Ethereum.
 
-<DocLink to="/developers/docs/smart-contracts/">
+<DocLink href="/developers/docs/smart-contracts/">
   Introducere în Contracte Inteligente
 </DocLink>
 
@@ -731,7 +731,7 @@ Un program care se execută pe infrastructura de calcul Ethereum.
 
 Short for "succinct non-interactive argument of knowledge", a SNARK is a type of [zero-knowledge proof](#zk-proof).
 
-<DocLink to="/developers/docs/scaling/zk-rollups/">
+<DocLink href="/developers/docs/scaling/zk-rollups/">
   Rollup-uri Zero-knowledge
 </DocLink>
 
@@ -739,7 +739,7 @@ Short for "succinct non-interactive argument of knowledge", a SNARK is a type of
 
 Un limbaj de programare procedural (imperativ) cu sintaxă similară cu JavaScript, C++ sau Java. Cel mai popular și mai frecvent utilizat limbaj pentru [contractele inteligente](#smart-contract) Ethereum. Creat de Dr. Gavin Wood.
 
-<DocLink to="/developers/docs/smart-contracts/languages/#solidity">
+<DocLink href="/developers/docs/smart-contracts/languages/#solidity">
   Solidity
 </DocLink>
 
@@ -755,7 +755,7 @@ O [furculiță tare](#hard-fork) a blockchain-ului Ethereum, care a avut loc la 
 
 Un token [ERC-20](#token-standard) cu o valoare legată de valoarea unui alt activ. Există monede stabile susținute de monedă fiat, cum ar fi dolari, metale prețioase, cum ar fi aurul și alte criptomonede, cum ar fi Bitcoin.
 
-<DocLink to="/eth/#tokens">
+<DocLink href="/eth/#tokens">
   ETH nu constituie singura valoare cripto de pe Ethereum
 </DocLink>
 
@@ -763,7 +763,7 @@ Un token [ERC-20](#token-standard) cu o valoare legată de valoarea unui alt act
 
 Depunerea unei cantități de [eter](#ether) (miza ta) pentru a deveni un validator și a securiza [rețeaua](#network). Un validator verifică [tranzacțiile](#transaction) și propune [blocuri](#block) în cadrul unui model de consens [dovadă a mizei](#pos) (PoS). Miza îți oferă un stimulent economic pentru a acționa în interesul cel mai ridicat al rețelei. Vei primi recompense pentru îndeplinirea sarcinilor tale de [validator](#validator), dar în caz contrar, vei pierde cantități variabile de ETH.
 
-<DocLink to="/staking/">
+<DocLink href="/staking/">
   Mizați ETH pentru a deveni validator Ethereum
 </DocLink>
 
@@ -771,7 +771,7 @@ Depunerea unei cantități de [eter](#ether) (miza ta) pentru a deveni un valida
 
 Short for "scalable transparent argument of knowledge", a STARK is a type of [zero-knowledge proof](#zk-proof).
 
-<DocLink to="/developers/docs/scaling/zk-rollups/">
+<DocLink href="/developers/docs/scaling/zk-rollups/">
   Rollup-uri Zero-knowledge
 </DocLink>
 
@@ -779,7 +779,7 @@ Short for "scalable transparent argument of knowledge", a STARK is a type of [ze
 
 O soluție de [level 2](#layer-2) în care este configurat un canal între participanți, unde aceștia pot tranzacționa liber și ieftin. Către [Rețeaua principală](#mainnet) este trimisă doar o [tranzacție](#transaction) de creare a canalului și de închidere a acestuia. Acest lucru permite un randament de tranzacție foarte mare, dar se bazează pe cunoașterea numărului de participanți în avans și blocarea de fonduri.
 
-<DocLink to="/developers/docs/scaling/state-channels/#state-channels">
+<DocLink href="/developers/docs/scaling/state-channels/#state-channels">
   Canalele de stare
 </DocLink>
 
@@ -807,7 +807,7 @@ O [furculiță tare](#hard-fork) a blockchain-ului Ethereum, care a avut loc la 
 
 Prescurtare de la "rețea de testare", o rețea utilizată pentru a simula comportamentul rețelei principale Ethereum (a se vedea [Rețelei principale](#mainnet)).
 
-<DocLink to="/developers/docs/networks/#ethereum-testnets">
+<DocLink href="/developers/docs/networks/#ethereum-testnets">
   Rețele de testare
 </DocLink>
 
@@ -815,7 +815,7 @@ Prescurtare de la "rețea de testare", o rețea utilizată pentru a simula compo
 
 Introdus prin propunerea ERC-20, acesta oferă o structură de [contract inteligent](#smart-contract) standardizată pentru token-urile fungibile. Token-urile din același contract pot fi urmărite, tranzacționate și sunt interschimbabile, spre deosebire de [NFT-uri](#nft).
 
-<DocLink to="/developers/docs/standards/tokens/erc-20/">
+<DocLink href="/developers/docs/standards/tokens/erc-20/">
   Standardul de token ERC-20
 </DocLink>
 
@@ -823,7 +823,7 @@ Introdus prin propunerea ERC-20, acesta oferă o structură de [contract intelig
 
 Date trimise către Blockchain-ul Ethereum, semnate de un [cont](#account) originar, care vizează o anumită [adresă](#address). Tranzacția conține metadata, cum ar fi [limita de gaz](#gas-limit) pentru acea tranzacție.
 
-<DocLink to="/developers/docs/transactions/">
+<DocLink href="/developers/docs/transactions/">
   Tranzacțiile
 </DocLink>
 
@@ -847,10 +847,10 @@ Un concept numit după matematicianul și informaticianul englez Alan Turing - u
 
 Un [nod](#node) dintr-un sistem de [dovadă-a-mizei](#pos) (PoS) responsabil pentru stocarea datelor, procesarea tranzacțiilor și adăugarea de blocuri noi în blockchain. Pentru activarea software-ului de validare, trebuie să poți [miza](#staking) 32 ETH.
 
-<DocLink to="/developers/docs/consensus-mechanisms/pos">
+<DocLink href="/developers/docs/consensus-mechanisms/pos">
   Dovada-mizei
 </DocLink>
-<DocLink to="/staking/">
+<DocLink href="/staking/">
   Mizarea în Ethereum
 </DocLink>
 
@@ -858,7 +858,7 @@ Un [nod](#node) dintr-un sistem de [dovadă-a-mizei](#pos) (PoS) responsabil pen
 
 Un model de securitate pentru anumite soluții [layer 2](#layer-2) în care, pentru a crește viteza, tranzacțiile sunt [împachetate](/#rollups) în loturi și trimise către Ethereum într-o singură tranzacție. Calculul tranzacției se face în afara lanțului și apoi este furnizat lanțului principal cu o dovadă a validității acestora. Această metodă crește cantitatea de tranzacții posibile, menținând în același timp securitatea. Unele [pachete](#rollups) folosesc [dovezi de fraudă](#fraud-proof).
 
-<DocLink to="/developers/docs/scaling/zk-rollups/">
+<DocLink href="/developers/docs/scaling/zk-rollups/">
   Rollup-uri Zero-knowledge
 </DocLink>
 
@@ -866,7 +866,7 @@ Un model de securitate pentru anumite soluții [layer 2](#layer-2) în care, pen
 
 O soluție off-chain care utilizează [probe de validitate (validity proofs)](#validity-proof) pentru a îmbunătăți randamentul tranzacțiilor. În comparație cu [Rollup-urile Zero-knowledge](#zk-rollup), datele Validium nu sunt stocate pe nivelul 1 al [Relația Principale](#mainnet).
 
-<DocLink to="/developers/docs/scaling/validium/">
+<DocLink href="/developers/docs/scaling/validium/">
   Validium
 </DocLink>
 
@@ -874,7 +874,7 @@ O soluție off-chain care utilizează [probe de validitate (validity proofs)](#v
 
 Un limbaj de programare la nivel înalt cu sintaxă Python. Destinat să se apropie de un limbaj funcțional pur. Creat de Vitalik Buterin.
 
-<DocLink to="/developers/docs/smart-contracts/languages/#vyper">
+<DocLink href="/developers/docs/smart-contracts/languages/#vyper">
   Vyper
 </DocLink>
 
@@ -886,7 +886,7 @@ Un limbaj de programare la nivel înalt cu sintaxă Python. Destinat să se apro
 
 Software care deține [chei private](#private-key). Folosit pentru a accesa și controla [conturile](#account) Ethereum și a interacționa cu [contractele inteligente](#smart-contract). Cheile nu trebuie să fie stocate într-un portofel și pot fi preluate din stocarea offline (adică un card de memorie sau pe hârtie) pentru o securitate îmbunătățită. În ciuda numelui, portofelele nu stochează niciodată monedele sau token-uri reale.
 
-<DocLink to="/wallets/">
+<DocLink href="/wallets/">
   Portofele Ethereum
 </DocLink>
 
@@ -894,7 +894,7 @@ Software care deține [chei private](#private-key). Folosit pentru a accesa și 
 
 A treia versiune a web-ului. Propus pentru prima dată de Dr. Gavin Wood, Web3 reprezintă o nouă viziune și concentrare pentru aplicațiile web - de la aplicații gestionate și deținute central, până la aplicații construite pe protocoale descentralizate (vezi [Dapp](#dapp)).
 
-<DocLink to="/developers/docs/web2-vs-web3/">
+<DocLink href="/developers/docs/web2-vs-web3/">
   Web2 față de Web3
 </DocLink>
 
@@ -914,7 +914,7 @@ O adresă specială Ethereum, compusă în întregime din zerouri, care este spe
 
 A zero-knowledge proof is a cryptographic method that allows an individual to prove that a statement is true without conveying any additional information.
 
-<DocLink to="/developers/docs/scaling/zk-rollups/">
+<DocLink href="/developers/docs/scaling/zk-rollups/">
   Rollup-uri Zero-knowledge
 </DocLink>
 
@@ -922,7 +922,7 @@ A zero-knowledge proof is a cryptographic method that allows an individual to pr
 
 Un [rollup](#rollups) de tranzacții care utilizează [dovezi de validitate](#validity-proof) pentru a oferi un randament sporit al tranzacțiilor [stratul 2](#layer-2), utilizând totodată securitatea oferită de [Rețeaua principală](#mainnet) ( nivelul 1). Deși nu pot gestiona tipuri de tranzacții complexe, cum ar fi [pachetele Optimistic](#optimistic-rollups), nu au probleme de latență, deoarece tranzacțiile sunt valabile în mod demonstrabil atunci când sunt prezentate.
 
-<DocLink to="/developers/docs/scaling/zk-rollups/">
+<DocLink href="/developers/docs/scaling/zk-rollups/">
   Pachete de zero-Knowledge
 </DocLink>
 

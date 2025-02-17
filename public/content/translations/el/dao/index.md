@@ -1,5 +1,6 @@
 ---
-title: Αποκεντρωμένοι Αυτόνομοι Οργανισμοί (DAO)
+title: Τι είναι ο DAO;
+metaTitle: Τι είναι ο DAO; | Αποκεντρωμένος Αυτόνομος Οργανισμός
 description: Μια επισκόπηση των DAO στο Ethereum
 lang: el
 template: use-cases
@@ -160,3 +161,7 @@ _Συνήθως χρησιμοποιείται για την αποκεντρω�
 
 - [Τι είναι ένας DAO στα κρυπτονομίσματα;](https://youtu.be/KHm0uUPqmVE)
 - [Μπορεί ένας DAO να χτίσει μια πόλη;](https://www.ted.com/talks/scott_fitsimones_could_a_dao_build_the_next_great_city) – [TED](https://www.ted.com/)
+
+<Divider />
+
+<QuizWidget quizKey="daos" />

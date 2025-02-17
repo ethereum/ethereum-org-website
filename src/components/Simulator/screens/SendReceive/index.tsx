@@ -103,7 +103,7 @@ export const SendReceive = ({ nav, ctaLabel }: PhoneScreenProps) => {
       {[1, 3, 5].includes(step) && (
         <ProgressCta
           isAnimated={step === 0}
-          isDisabled={step === 3 && !chosenAmount}
+          disabled={step === 3 && !chosenAmount}
           progressStepper={progressStepper}
         >
           {ctaLabel}

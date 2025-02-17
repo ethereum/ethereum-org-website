@@ -56,7 +56,7 @@ summaryPoint3: 由建置於以太坊區塊鏈上的智慧型合約提供支援�
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:" mt="8">
   <div>探索、購買或建立你個人的非同質化代幣藝術品/收藏品……</div>
-  <ButtonLink to="/dapps/?category=collectibles#explore">
+  <ButtonLink href="/dapps/?category=collectibles#explore">
     探索非同質化代幣藝術品
   </ButtonLink>
 </InfoBanner>
@@ -75,7 +75,7 @@ summaryPoint3: 由建置於以太坊區塊鏈上的智慧型合約提供支援�
 
 ## 非同質化代幣如何運作？ {#how-nfts-work}
 
-與以太坊區塊鏈上的任何數位物品一樣，非同質化代幣是透過一種稱爲「智慧型合約」的基於以太坊的特殊電腦程式所建立。 這些合約會遵循特定的規則，如 [ERC-721](/glossary/#erc-721) 或 [ERC-1155](/glossary/#erc-1155) 標準，這些規則決定了合約的用途。
+非同質化代幣 (NFT) 就如同以太坊區塊鏈上的任何數位物品一樣，是透過一種基於以太坊、被稱為「智慧型合約」的特別電腦程式所建立的。 這些合約會遵循特定的規則，如 [ERC-721](/glossary/#erc-721) 或 [ERC-1155](/glossary/#erc-1155) 標準，這些規則決定了合約的用途。
 
 非同質化代幣智慧型合約的一些關鍵用途：
 
@@ -93,7 +93,7 @@ summaryPoint3: 由建置於以太坊區塊鏈上的智慧型合約提供支援�
 
 與非同質化代幣有關的安全問題最常與釣魚詐騙、智慧型合約漏洞或使用者錯誤（如無意間洩漏私密金鑰）有關，所以良好的錢包安全性對非同質化代幣持有者十分重要。
 
-<ButtonLink to="/security/">
+<ButtonLink href="/security/">
   更多安全相關資訊
 </ButtonLink>
 

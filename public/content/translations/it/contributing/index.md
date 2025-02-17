@@ -68,7 +68,7 @@ Prima di contribuire, assicurati di avere familiarità con:
 - la nostra [guida di stile](/contributing/style-guide/)
 - il nostro [codice di condotta](/community/code-of-conduct)
 
-<ContributorsQuizBanner mt={16} mb={8} />
+<ContributorsQuizBanner className="mt-16 mb-8" />
 
 ## Come vengono prese le decisioni sul sito {#how-decisions-about-the-site-are-made}
 
@@ -88,7 +88,7 @@ Abbiamo una bassa barriera per l'inserimento di ticket sul nostro repository di 
 
 ## Rivendica il tuo token di traguardo su catena (OAT) {#oat}
 
-Se il tuo contributo viene integrato su ethereum.org, potrai rivendicare un distintivo speciale su [Galxe](https://galxe.com/ethereumorg/). Un token di traguardo su catena (OAT) è la dimostrazione che tu abbia contribuito a rendere l'ecosistema un po' più fantastico.
+Se il tuo contributo viene aggiunto a ethereum.org, avrai una possibilità di rivendicare un distintivo speciale su [Galxe](https://app.galxe.com/quest/ethereumorg). Un token di traguardo su catena (OAT) è la dimostrazione che tu abbia contribuito a rendere l'ecosistema un po' più fantastico.
 
 [Maggiori informazioni sui OAT](https://help.galxe.com/en/articles/7067290-galxe-oats-reward-and-celebrate-achievements)
 

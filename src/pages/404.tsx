@@ -1,12 +1,11 @@
 import type { GetStaticProps } from "next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import { Box, Flex, Heading, Text } from "@chakra-ui/react"
 
 import { BasePageProps, Lang } from "@/lib/types"
 
-import InlineLink from "@/components/Link"
 import MainArticle from "@/components/MainArticle"
 import Translation from "@/components/Translation"
+import InlineLink from "@/components/ui/Link"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
@@ -35,20 +34,20 @@ export const getStaticProps = (async ({ locale }) => {
 }) satisfies GetStaticProps<BasePageProps>
 
 const NotFoundPage = () => (
-  <Flex flexDir="column" align="center" w="full" mt={16} mb={0} mx="auto">
-    <Box as={MainArticle} py={4} px={8} w="full">
-      <Heading as="h1" size="2xl" my={8}>
+  <div className="mx-auto mb-0 mt-16 flex w-full flex-col items-center">
+    <MainArticle className="my-8 w-full space-y-8 px-8 py-4">
+      <h1>
         <Translation id="we-couldnt-find-that-page" />
-      </Heading>
-      <Text mb={8}>
+      </h1>
+      <p>
         <Translation id="try-using-search" />{" "}
         <InlineLink href="/">
           <Translation id="return-home" />
         </InlineLink>
         .
-      </Text>
-    </Box>
-  </Flex>
+      </p>
+    </MainArticle>
+  </div>
 )
 
 export default NotFoundPage

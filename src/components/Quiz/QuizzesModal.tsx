@@ -1,12 +1,13 @@
-import { Center, ModalContentProps } from "@chakra-ui/react"
-
 import { QuizStatus } from "@/lib/types"
 
-import Modal from "../Modal"
+import Modal, { type ModalProps } from "../ui/dialog-modal"
+import { Center } from "../ui/flex"
+
+import { useBreakpointValue } from "@/hooks/useBreakpointValue"
 
 type QuizzesModalProps = {
   isQuizModalOpen: boolean
-  onQuizModalClose: () => void
+  onQuizModalOpenChange: (open: boolean) => void
   children: React.ReactNode
   quizStatus: QuizStatus
 }
@@ -15,30 +16,28 @@ const QuizzesModal = ({
   children,
   quizStatus,
   isQuizModalOpen,
-  onQuizModalClose,
+  onQuizModalOpenChange,
   ...props
 }: QuizzesModalProps) => {
-  const getStatusColor = (): ModalContentProps["bg"] => {
-    if (quizStatus === "neutral") {
-      return "background.base"
-    }
-    if (quizStatus === "success") {
-      return "success.neutral"
-    }
-    return "error.neutral"
+  // TODO: remove bang in utility class names when Modal is migrated
+  const getStatusColorClass = () => {
+    if (quizStatus === "neutral") return "!bg-background"
+    if (quizStatus === "success")
+      return "!bg-success-light dark:!bg-success-dark"
+    return "!bg-error-light dark:!bg-error-dark"
   }
+
+  const size = useBreakpointValue<ModalProps["size"]>({ base: "xl", md: "md" })!
 
   return (
     <Modal
-      isOpen={isQuizModalOpen}
-      onClose={onQuizModalClose}
-      size={{ base: "full", md: "xl" }}
-      contentProps={{ bg: getStatusColor() }}
+      open={isQuizModalOpen}
+      onOpenChange={onQuizModalOpenChange}
+      size={size}
+      contentProps={{ className: getStatusColorClass() }}
       {...props}
     >
-      <Center m={0} bg={getStatusColor()}>
-        {children}
-      </Center>
+      <Center>{children}</Center>
     </Modal>
   )
 }

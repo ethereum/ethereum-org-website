@@ -78,7 +78,7 @@ Ethereumovo varnost zagotavlja mehanizem dokaza o deležu. Sistem je zasnovan ta
 
 Varnostne težave, povezane z NFT-ji, so najpogosteje posledica prevar z lažnim predstavljanjem, ranljivosti v pametnih pogodbah ali uporabniških napak (na primer nenamerno izpostavljanje zasebnih ključev), zato je ustrezna zaščita denarnic za lastnike NFT-jev izjemno pomembna.
 
-<ButtonLink to="/security/">
+<ButtonLink href="/security/">
   Več o varnosti
 </ButtonLink>
 

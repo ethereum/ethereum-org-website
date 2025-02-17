@@ -64,7 +64,7 @@ Alamat anda akan sama dalam semua projek Ethereum. Anda tidak perlu mendaftar se
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Mahu belajar lebih lanjut?</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     Lihat panduan-panduan lain kami
   </ButtonLink>
 </InfoBanner>

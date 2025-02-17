@@ -1,6 +1,5 @@
+import { BaseHTMLAttributes } from "react"
 import { motion } from "framer-motion"
-import dynamic from "next/dynamic"
-import { Box, type BoxProps, Text, UnorderedList } from "@chakra-ui/react"
 import {
   Item,
   List,
@@ -9,15 +8,17 @@ import {
   Viewport,
 } from "@radix-ui/react-navigation-menu"
 
-import { Button } from "@/components/Buttons"
+import { cn } from "@/lib/utils/cn"
 
-import { MAIN_NAV_ID, NAV_PY, SECTION_LABELS } from "@/lib/constants"
+import { MAIN_NAV_ID, SECTION_LABELS } from "@/lib/constants"
 
+import { Button } from "../../ui/buttons/Button"
 import type { NavSections } from "../types"
 
+import MenuContent from "./MenuContent"
 import { useNavMenu } from "./useNavMenu"
 
-type NavMenuProps = BoxProps & {
+type NavMenuProps = BaseHTMLAttributes<HTMLDivElement> & {
   sections: NavSections
 }
 
@@ -25,76 +26,54 @@ const Menu = ({ sections, ...props }: NavMenuProps) => {
   const { activeSection, direction, handleSectionChange, isOpen } =
     useNavMenu(sections)
 
-  const MenuContent = dynamic(() => import("./MenuContent"))
-
   return (
-    <Box {...props}>
+    <div {...props}>
       <Root
         dir={direction}
         orientation="horizontal"
         onValueChange={handleSectionChange}
         delayDuration={0}
       >
-        <List asChild>
-          <UnorderedList
-            id={MAIN_NAV_ID}
-            display="flex"
-            listStyleType="none"
-            m="0"
-          >
-            {SECTION_LABELS.map((sectionKey) => {
-              const { label, items } = sections[sectionKey]
-              const isActive = activeSection === sectionKey
+        <List id={MAIN_NAV_ID} className="m-0 flex list-none">
+          {SECTION_LABELS.map((sectionKey) => {
+            const { label, items } = sections[sectionKey]
+            const isActive = activeSection === sectionKey
 
-              return (
-                <Item key={sectionKey} value={label}>
-                  <Trigger asChild>
-                    <Button
-                      py="2"
-                      px={{ base: "3", lg: "4" }}
-                      variant="ghost"
-                      whiteSpace="nowrap"
-                      color={isActive ? "primary.base" : "body.base"}
-                      _after={{
-                        content: '""',
-                        position: "absolute",
-                        insetInline: 0,
-                        top: "100%",
-                        height: NAV_PY,
-                      }}
-                    >
-                      {/* Animated highlight for active section */}
-                      {isActive && (
-                        <Box
-                          as={motion.div}
-                          layoutId="active-section-highlight"
-                          position="absolute"
-                          inset="0"
-                          bg="primary.lowContrast"
-                          rounded="base"
-                          zIndex={0}
-                        />
-                      )}
-                      <Text as="span" position="relative" zIndex={1}>
-                        {label}
-                      </Text>
-                    </Button>
-                  </Trigger>
-                  {/* Desktop Menu content */}
-                  <MenuContent
-                    items={items}
-                    isOpen={isOpen}
-                    sections={sections}
-                  />
-                </Item>
-              )
-            })}
-          </UnorderedList>
+            return (
+              <Item key={sectionKey} value={label}>
+                <Trigger asChild>
+                  <Button
+                    className={cn(
+                      "relative whitespace-nowrap px-3 py-2 lg:px-4",
+                      isActive ? "text-primary" : "text-body",
+                      "after:absolute after:inset-x-0 after:top-full after:h-4 after:content-['']"
+                    )}
+                    variant="ghost"
+                  >
+                    {/* Animated highlight for active section */}
+                    {isActive && (
+                      <motion.div
+                        layoutId="active-section-highlight"
+                        className="absolute inset-0 z-0 rounded bg-primary-low-contrast"
+                      />
+                    )}
+                    <span className="relative z-10">{label}</span>
+                  </Button>
+                </Trigger>
+                {/* Desktop Menu content */}
+                <MenuContent
+                  items={items}
+                  isOpen={isOpen}
+                  sections={sections}
+                />
+              </Item>
+            )
+          })}
         </List>
 
         <Viewport />
       </Root>
-    </Box>
+    </div>
   )
 }
 

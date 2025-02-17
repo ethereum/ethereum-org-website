@@ -87,11 +87,20 @@ Tegyük fel, hogy Ön a reptéren a check-in előtt áll. Kétféle ellenőrzés
 1. Manuális chek-in – ahol a hivatalnokok manuálisan ellenőrzik a jegyét és a személyazonosságát, mielőtt a belépőkártyát átadnák.
 2. Self check-In – ahol egy gép ellenőrzi ezeket és adja ki a belépőkártyát, ha mindent rendben talál.
 
-A manuális ellenőrzés hasonló a bizalmat igénylő modellhez, mert egy harmadik félen múlik a működése, mint a hivatalnokok. Felhasználóként abban bízunk, hogy a hivatalnokok a megfelelő döntést hozzák és helyesen kezelik a privát információkat.
+A manuális ellenőrzés hasonló a bizalmat igénylő modellhez, mert egy harmadik félen múlik a működése, például a hivatalnokokon. Felhasználóként abban bízunk, hogy a hivatalnokok a megfelelő döntést hozzák és helyesen kezelik a privát információkat.
 
 A self check-in hasonlít a bizalomigénytől mentes modellhez, mivel kiveszi az operátor szerepét, és a technológia működteti. A felhasználónak mindvégig megmarad a kontroll az adatai felett, és nem kell azokat egy harmadik félre bíznia.
 
 Számos hidat biztosító megoldás e két modell közötti módszert alakít ki változó bizalmi fokozattal.
+
+<Divider />
+
+## Híd használata {#use-bridge}
+
+A hidak segítségével a felhasználók különböző blokkláncok között tudnak eszközöket mozgatni. Íme néhány forrás, amelyek hasznosak lehetnek a hidak megtalálásához és használatához:
+
+- **[L2BEAT hidakról szóló összefoglaló](https://l2beat.com/bridges/summary) & [L2BEAT hidak kockázati elemzése](https://l2beat.com/bridges/risk)**: Egy átfogó tanulmány a különféle hidakról, beleértve azok piaci részesedését, típusát és azokat a blokkláncokat, melyekkel összeköttetést biztosítanak. Az L2BEAT kockázati elemzést is készített a hidakról, hogy a felhasználók megfelelően tudjanak választani azok közül.
+- **[DefiLlama hidakról szóló összefoglaló](https://defillama.com/bridges/Ethereum)**: Az Ethereum hálózatok közötti hidak forgalmi adatainak összefoglalója.
 
 <Divider />
 

@@ -3,12 +3,19 @@ import { extendBaseTheme, type ThemeConfig } from "@chakra-ui/react"
 import components from "./components"
 import foundations from "./foundations"
 import semanticTokens from "./semanticTokens"
-import styles from "./styles"
 
 const config: ThemeConfig = {
   cssVarPrefix: "eth",
-  initialColorMode: "system",
-  useSystemColorMode: true,
+  initialColorMode: "light",
+  /**
+   * Disable Chakra's system color subscription, as it works differently from
+   * `next-themes` and causes a desync with it.
+   *
+   * Chakra will always change the color mode based on the system preference.
+   * While `next-themes` will only change to the system preference if the user
+   * has `system` as their active theme.
+   */
+  useSystemColorMode: false,
 }
 
 /**
@@ -19,7 +26,6 @@ const config: ThemeConfig = {
  */
 const theme = {
   config,
-  styles,
   ...foundations,
   semanticTokens,
   components,

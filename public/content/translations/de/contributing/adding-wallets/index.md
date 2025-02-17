@@ -57,7 +57,7 @@ Wallets verändern sich auf Ethereum rasch. Wir haben versucht, ein gerechtes Fr
 
 Wenn Sie eine Wallet zu ethereum.org hinzufügen möchten, erstellen Sie ein Ticket auf GitHub.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml">
+<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml">
   Ein Thema erstellen
 </ButtonLink>
 

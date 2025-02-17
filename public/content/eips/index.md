@@ -64,7 +64,7 @@ If you’re interested to read more about EIPs, check out the [EIPs website](htt
 - [EIPs For Nerds](https://ethereum2077.substack.com/t/eip-research) — *EIPs For Nerds provides comprehensive, ELI5-style overviews of various Ethereum Improvement Proposals (EIPs), including core EIPs and application/infrastructure-layer EIPs (ERCs), to educate readers and shape consensus around proposed changes to the Ethereum protocol.* 
 - [EIPs.wtf](https://www.eips.wtf/) — *EIPs.wtf provides extra information for Ethereum Improvement Proposals (EIPs), including their status, implementation details, related pull requests, and community feedback.* 
 - [EIP.Fun](https://eipfun.substack.com/) — *EIP.Fun provides the latest news on Ethereum Improvement Proposals (EIPs), updates on EIP meetings, and more.*
-- [EIPs Insight](https://eipsinsight.com/) — *EIPs Insight is a representation of state of Ethereum Improvement Proposals (EIPs) process & statistics as per information collected from different resoucrces.*
+- [EIPs Insight](https://eipsinsight.com/) — *EIPs Insight is a representation of state of Ethereum Improvement Proposals (EIPs) process & statistics as per information collected from different resources.*
 
 ## Participate {#participate}
 

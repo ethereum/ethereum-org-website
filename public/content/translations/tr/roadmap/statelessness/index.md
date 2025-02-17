@@ -14,7 +14,7 @@ Daha eski verileri depolamak için daha ucuz sabit sürücüler kullanılabilir,
 
 ## Düğümler için depolamayı azaltma {#reducing-storage-for-nodes}
 
-Her bir düğümün depolaması gereken veri miktarını düşürmek için, her biri Ethereum'un temel protokolünün farklı bir boyuta güncellenmesini gerektiren birçok yol mevcuttur:
+Her düğümün depolaması gereken veri miktarını azaltmak için birkaç yol vardır ve bunların her biri Ethereum'un çekirdek protokolünün farklı bir alanda güncellenmesine ihtiyaç duyar:
 
 - **Tarih sonlanması**: düğümlerin X bloku öncesi durum verilerini kenara ayırmasına imkân vermek, ancak Ethereum müşterilerinin durum verisini nasıl tutacağını değitirmemek
 - **Durum sonlanması**: sıkça kullanılmayan durum verisinin atıl hale geçmesine olanak vermek. Atıl veri canlanana kadar müşteriler tarafından görmezden gelinebilir.
@@ -72,7 +72,7 @@ Bunun olabilmesi için [Verkle ağaçları](/roadmap/verkle-trees/) Ethereum ist
 
 Durumsuzluk blok oluşturucularının tüm durum verilerinin bir kopyasını yönetmesine dayanır, bu sayede bloku onaylaması için tanıklar oluşturabilirler. Diğer düğümlerin ise tüm durum verilerine erişmeye ihtiyaçları yoktur, blokun onayı için gereken tüm bilgiler zaten tanık için ulaşılabilirdir. Bu durum blok önermenin masraflı, ancak blok onaylamanın pahalı olduğu bir olay yaratır, bu da daha az operatörün önerici düğüm için bir blok çalıştırmasıyla sonuçlanır. Ancak, blok önericilerinin merkeziyetsizleştirilmesi olabildiğince çok katılımcının bağımsız olarak önerilen blokların geçerli olduğunu onayladığı sürece çok da kritik bir konu değildir.
 
-<ButtonLink variant="outline-color" to="https://notes.ethereum.org/WUUUXBKWQXORxpFMlLWy-w#So-why-is-it-ok-to-have-expensive-proposers">Dankrad'ın notlarında daha fazlasını bulabilirsiniz</ButtonLink>
+<ButtonLink variant="outline-color" href="https://notes.ethereum.org/WUUUXBKWQXORxpFMlLWy-w#So-why-is-it-ok-to-have-expensive-proposers">Dankrad'ın notlarında daha fazlasını bulabilirsiniz</ButtonLink>
 </ExpandableCard>
 
 Blok önericileri durum verisini "tanıklar" oluşturmak için kullanırlar, bu da durumdaki değerlerin bloktaki işlemler tarafından değiştirdiğini kanıtlayan minimal bir veri kümesidir. Diğer doğrulayıcılar durumu değil, durum kökünü depolarlar (durumun tamamından oluşan bir düğüm). Bir blok ve tanık alırlar ve bu blok ve tanığı durum köklerini güncellemek için kullanırlar. Bu, doğrulama düğümünü oldukça hafifleştirir.
@@ -81,7 +81,7 @@ Zayıf durumsuzluk geliştirilmiş bir araştırma aşamasındadır, ancak öner
 
 ### Güçlü durumsuzluk {#strong-statelessness}
 
-Güçlü durumsuzluk herhangi bir blokun durum verisi depolaması ihtiyacını ortadan kaldırır. Bunun yerine, işlemler blok oluşturucular tarafından toplanabilen tanıklar aracılığıyla gönderilir. Blok oluşturucular sonrasında sadece alakalı hesaplara gerekli tanıkları oluşturman durumu depolamaktan sorumludur. Durumun sorumluluğu neredeyse tamamen kullanıcılara verilmiştir, yani kullanıcılar hangi hesap ve depolama anahtarlarıyla etkileşimde olduklarını tanımlamak için tanıkları ve "erişim listelerini" gönderirler. Bu, son derece hafif düğümleri olanaklı kılardı ancak akıllı sözleşmelerle işlem yapmayı zorlaştırmak gibi bazı bedeller söz konusudur.
+Güçlü durumsuzluk, herhangi bir düğümün durum verisi depolamaya olan ihtiyacını ortadan kaldırır. Bunun yerine, işlemler blok oluşturucular tarafından toplanabilen tanıklar aracılığıyla gönderilir. Blok oluşturucular sonrasında sadece alakalı hesaplara gerekli tanıkları oluşturman durumu depolamaktan sorumludur. Durumun sorumluluğu neredeyse tamamen kullanıcılara verilmiştir, yani kullanıcılar hangi hesap ve depolama anahtarlarıyla etkileşimde olduklarını tanımlamak için tanıkları ve "erişim listelerini" gönderirler. Bu, son derece hafif düğümleri olanaklı kılardı ancak akıllı sözleşmelerle işlem yapmayı zorlaştırmak gibi bazı bedeller söz konusudur.
 
 Güçlü durumsuzluk araştırmacılar tarafından incelendi fakat şu anda Ethereum Yol Haritasının bir parçası olması beklenmiyor - Ethereum'un ölçeklendirilme gereklilikleri için şu anda zayıf durumsuzluk yeterli gibi görünüyor.
 

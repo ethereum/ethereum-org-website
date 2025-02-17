@@ -38,12 +38,6 @@ IDE yang paling mapan memiliki plugin untuk meningkatkan pengalaman pengembangan
 - [Contoh kode](https://github.com/Azure-Samples/blockchain/blob/master/blockchain-workbench/application-and-smart-contract-samples/readme.md)
 - [GitHub](https://github.com/microsoft/vscode)
 
-**Atom -** **_Editor teks yang dapat diretas pada Abad ke-21_**
-
-- [Atom](https://atom.io/)
-- [GitHub](https://github.com/atom)
-- [Paket Ethereum](https://atom.io/packages/search?utf8=%E2%9C%93&q=keyword%3Aethereum&commit=Search)
-
 **IDE JetBrains (IntelliJ IDEA, dll.) -** **_Peralatan penting untuk para pengembang dan tim perangkat lunak_**
 
 - [JetBrains](https://www.jetbrains.com/)

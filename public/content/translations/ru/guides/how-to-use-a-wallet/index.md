@@ -6,7 +6,7 @@ lang: ru
 
 # Как использовать кошелек
 
-Узнайте, как работают все основные функции кошелька. Если у вас его ещё нет, ознакомьтесь с нашим руководством [Как создать учетную запись Ethereum](/guides/how-to-create-an-ethereum-account/).
+Узнайте, как работают все основные функции кошелька. Если у вас его еще нет, ознакомьтесь с нашим руководством [Как создать аккаунт Ethereum](/guides/how-to-create-an-ethereum-account/).
 
 ## Откройте кошелек
 
@@ -64,7 +64,7 @@ lang: ru
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Хотите узнать больше?</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     Посмотрите другие наши руководства
   </ButtonLink>
 </InfoBanner>

@@ -73,7 +73,7 @@ Junto com as mensagens de saudação, o protocolo de transmissão também pode e
 
 #### Protocolo de transmissão {#wire-protocol}
 
-Uma vez que os pares estão conectados e uma sessão RLPx foi iniciada, o protocolo de transmissão define como os pares se comunicam. Inicialmente, o protocolo de transmissão definiu três tarefas principais: sincronização de cadeia, propagação de bloco e troca de transação. No entanto, uma vez que o Ethereum mudou para a prova de participação, a propagação do bloco e a sincronização da cadeia tornaram-se parte da camada de consenso. A troca de transações ainda é da responsabilidade dos clientes de execução. Troca de transações refere-se à troca de transações pendentes entre nós para que os mineradores possam selecionar algumas delas para inclusão no próximo bloco. Informações detalhadas sobre essas tarefas estão disponíveis [aqui](https://github.com/ethereum/devp2p/blob/master/caps/eth.md). Os clientes que oferecem suporte a esses subprotocolos os expõem por meio do [JSON-RPC](/developers/docs/apis/json-rpc/).
+Uma vez que os pares estão conectados e uma sessão RLPx foi iniciada, o protocolo de transmissão define como os pares se comunicam. Inicialmente, o protocolo de transmissão definiu três tarefas principais: sincronização de cadeia, propagação de bloco e troca de transação. No entanto, uma vez que o Ethereum mudou para a prova de participação, a propagação do bloco e a sincronização da cadeia tornaram-se parte da camada de consenso. A troca de transações ainda é da responsabilidade dos clientes de execução. A troca de transações refere-se à troca de transações pendentes entre nós para que os construtores de blocos possam selecionar algumas delas para inclusão no próximo bloco. Informações detalhadas sobre essas tarefas estão disponíveis [aqui](https://github.com/ethereum/devp2p/blob/master/caps/eth.md). Os clientes que oferecem suporte a esses subprotocolos os expõem por meio do [JSON-RPC](/developers/docs/apis/json-rpc/).
 
 #### les (subprotocolo ethereum leve) {#les}
 
@@ -125,7 +125,7 @@ Ambos os clientes de consenso e execução executam em paralelo. Eles precisam e
 
 Um resumo do fluxo de controle é mostrado abaixo, com a pilha de rede relevante entre colchetes.
 
-### Quando o cliente de consenso não é produtor de bloco:
+### Quando o cliente de consenso não é produtor de bloco: {#when-consensus-client-is-not-block-producer}
 
 - O cliente de consenso recebe um bloco através do protocolo gossip do bloco (consenso p2p)
 - O cliente de consenso pré-valida o bloco, ou seja, garante que chegou de um remetente válido com metadados corretos
@@ -134,7 +134,7 @@ Um resumo do fluxo de controle é mostrado abaixo, com a pilha de rede relevante
 - A camada de execução passa os dados de validação de volta para a camada de consenso, bloco agora considerado validado (conexão RPC local)
 - A camada de consenso adiciona bloco no nício de sua própria blockchain e o atesta, transmitindo o atestado pela rede (consenso p2p)
 
-### Quando o cliente de consenso é produtor de blocos:
+### Quando o cliente de consenso é produtor de blocos: {#when-consensus-client-is-block-producer}
 
 - O cliente de consenso recebe o aviso de que é o próximo produtor de bloco (consenso p2p)
 - A camada de consenso chama o método `create block` no cliente de execução (RPC local)

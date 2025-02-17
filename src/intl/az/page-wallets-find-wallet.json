@@ -47,7 +47,6 @@
   "page-find-wallet-check-out": "Yoxlayın",
   "page-find-wallet-info-updated-on": "məlumat yeniləndi",
   "page-find-wallet-showing-all-wallets": "Bütün pulqabılar göstərilir",
-  "page-find-wallet-showing": "Göstərilir",
   "page-find-wallet-wallets": "pulqabıları",
   "page-find-wallet-iOS": "iOS",
   "page-find-wallet-android": "Android",
@@ -67,14 +66,11 @@
   "page-find-wallet-finance-desc": "Siz DeFi istifadə edən və DeFi tətbiqlərinə qoşulmağa imkan verən pulqabı istəyən birisiniz",
   "page-find-wallet-developer-title": "Tərtibatçı",
   "page-find-wallet-developer-desc": "Siz tərtibatçısınız və tətbiqləri inkişaf etdirmək və sınaqdan keçirmək üçün pulqabına ehtiyacınız var",
-  "page-find-wallet-filters": "Filtrlər",
-  "page-find-wallet-active": "aktiv",
   "page-find-wallet-footnote-1": "Bu səhifədə qeyd olunan pulqabıları rəsmi olaraq təsdiqlənməyib və yalnız məlumat məqsədləri üçün verilir.",
   "page-find-wallet-footnote-2": "Onların təsvirləri pulqabı layihələrinin özləri tərəfindən verilmişdir.",
   "page-find-wallet-footnote-3": "Məhsullarımızı <a href=\"/contributing/adding-wallets/\">siyahı siyasəti</a> səhifəmizdəki kriteriyalara əsasən əlavə edirik. Pulqabı əlavə etməyimizi istəyirsinizsə,<a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\">GitHub-da problemdən şikayət edin</a>.",
   "page-find-wallet-mobile": "Mobil",
   "page-find-wallet-desktop": "Masaüstü kompüter",
   "page-find-wallet-browser": "Brauzer",
-  "page-find-wallet-device": "Cihazlar",
-  "page-find-wallet-reset-filters": "Filtrləri sıfırlayın"
+  "page-find-wallet-device": "Cihazlar"
 }

@@ -92,6 +92,6 @@ _Wir betrachten andere Skalierungslösungen, die nicht Ethereum für Datenverfü
 
 Wenn Sie eine Ebene 2 zu ethereum.org hinzufügen möchten, erstellen Sie einen Eintrag auf GitHub.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml">
+<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml">
   Eintrag erstellen
 </ButtonLink>
