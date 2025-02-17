@@ -8,7 +8,7 @@ import { Framework } from "@/lib/interfaces"
 
 import FeedbackCard from "@/components/FeedbackCard"
 import Heading from "@/components/Heading"
-import { TwImage } from "@/components/Image"
+import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
 import ProductCard from "@/components/ProductCard"
@@ -143,7 +143,7 @@ const LocalEnvironmentPage = ({
             </UnorderedList>
           </Column>
           <Column>
-            <TwImage
+            <Image
               className="flex-1 basis-full bg-cover bg-no-repeat"
               src={EthBlocksImage}
               alt={t("page-developers-index:alt-eth-blocks")}
