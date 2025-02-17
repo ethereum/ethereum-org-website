@@ -3,11 +3,9 @@ import { GetStaticProps, InferGetStaticPropsType, NextPage } from "next"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { FaGithub } from "react-icons/fa"
-import { Box, Flex, Icon, Stack, Text } from "@chakra-ui/react"
 
 import { BasePageProps, Lang, QuizKey, QuizStatus } from "@/lib/types"
 
-import { ButtonLink } from "@/components/Buttons"
 import FeedbackCard from "@/components/FeedbackCard"
 import { HubHero } from "@/components/Hero"
 import MainArticle from "@/components/MainArticle"
@@ -17,6 +15,8 @@ import QuizzesList from "@/components/Quiz/QuizzesList"
 import QuizzesModal from "@/components/Quiz/QuizzesModal"
 import QuizzesStats from "@/components/Quiz/QuizzesStats"
 import { useLocalQuizData } from "@/components/Quiz/useLocalQuizData"
+import { ButtonLink } from "@/components/ui/buttons/Button"
+import { Flex, HStack, Stack } from "@/components/ui/flex"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
@@ -78,7 +78,7 @@ const QuizzesHubPage: NextPage<
   )
 
   return (
-    <Box as={MainArticle}>
+    <MainArticle>
       <PageMetadata
         title={t("common:quizzes-title")}
         description={t("quizzes-subtitle")}
@@ -102,10 +102,10 @@ const QuizzesHubPage: NextPage<
           updateUserStats={updateUserStats}
         />
       </QuizzesModal>
-      <Box px={{ base: 0, lg: "8" }} py={{ base: 0, lg: "4" }} mb="12">
-        <Flex direction={{ base: "column-reverse", lg: "row" }} columnGap="20">
-          <Stack spacing="10" flex="1">
-            <Box>
+      <div className="mb-12 lg:px-8 lg:py-4">
+        <Flex className="gap-x-20 max-lg:flex-col-reverse">
+          <Stack className="flex-1 gap-10">
+            <div>
               <QuizzesList
                 content={ethereumBasicsQuizzes}
                 headingId={t("basics")}
@@ -118,51 +118,39 @@ const QuizzesHubPage: NextPage<
                 descriptionId={t("using-ethereum-description")}
                 {...commonQuizListProps}
               />
-            </Box>
-            <Flex
-              direction={{ base: "column", xl: "row" }}
-              justify="space-between"
-              align="center"
-              bg="background.highlight"
-              borderRadius={{ lg: "lg" }}
-              p="8"
-              gap={{ base: "4", xl: 0 }}
-            >
-              <Box>
-                <Text align={{ base: "center", xl: "left" }} fontWeight="bold">
-                  {t("want-more-quizzes")}
-                </Text>
+            </div>
+            <Flex className="items-center justify-between bg-background-highlight p-8 max-xl:flex-col max-xl:gap-4 lg:rounded-lg">
+              <div className="max-xl:text-center">
+                <p className="font-bold">{t("want-more-quizzes")}</p>
 
-                <Text align={{ base: "center", xl: "left" }}>
-                  {t("contribute")}
-                </Text>
-              </Box>
+                <p>{t("contribute")}</p>
+              </div>
               <ButtonLink
                 href="/contributing/quizzes/"
                 variant="outline"
                 hideArrow
                 onClick={handleGHAdd}
               >
-                <Flex alignItems="center">
-                  <Icon as={FaGithub} color="text" boxSize={6} me={2} />
+                <HStack className="gap-0">
+                  <FaGithub className="me-2 size-6 text-body" />
                   {t("add-quiz")}
-                </Flex>
+                </HStack>
               </ButtonLink>
             </Flex>
           </Stack>
-          <Box flex="1">
+          <div className="flex-1">
             <QuizzesStats
               averageScoresArray={userStats.average}
               completedQuizzes={userStats.completed}
               totalCorrectAnswers={userStats.score}
             />
-          </Box>
+          </div>
         </Flex>
-      </Box>
-      <Box w="full" py="4" px="8">
+      </div>
+      <div className="w-full px-8 py-4">
         <FeedbackCard />
-      </Box>
-    </Box>
+      </div>
+    </MainArticle>
   )
 }
 
