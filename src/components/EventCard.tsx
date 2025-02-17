@@ -10,7 +10,7 @@ import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 
 import { cn } from "@/lib/utils/cn"
 
-import { TwImage } from "./Image"
+import { Image } from "./Image"
 
 import EventFallback from "@/public/images/events/event-placeholder.png"
 
@@ -55,7 +55,7 @@ const EventCard: React.FC<EventCardProps> = ({
             className="max-h-[224px] w-full object-cover xl:h-[124px]"
           />
         ) : (
-          <TwImage src={EventFallback} alt="" />
+          <Image src={EventFallback} alt="" />
         )}
       </div>
       <CardContent className="flex-grow p-4">

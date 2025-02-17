@@ -9,7 +9,7 @@ import { BasePageProps, Lang } from "@/lib/types"
 import ActionCard from "@/components/ActionCard"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import FeedbackCard from "@/components/FeedbackCard"
-import { TwImage } from "@/components/Image"
+import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
 import TranslationLeaderboard from "@/components/TranslationLeaderboard"
@@ -141,7 +141,7 @@ const TranslatorAcknowledgements = () => {
           </div>
           {/* RIGHT COLUMN */}
           <div className="m-auto w-full lg:mb-0 lg:ml-8 lg:mr-0 lg:mt-0 lg:w-1/2">
-            <TwImage
+            <Image
               width={500}
               src={dogeComputerImg}
               alt={t(
@@ -211,7 +211,7 @@ const TranslatorAcknowledgements = () => {
           {t("page-contributing-translation-program-acknowledgements-cert-3")}
         </Text>
         <Flex className="justify-center">
-          <TwImage src={themedCertificateImage} alt="translator certificate" />
+          <Image src={themedCertificateImage} alt="translator certificate" />
         </Flex>
       </Content>
 
