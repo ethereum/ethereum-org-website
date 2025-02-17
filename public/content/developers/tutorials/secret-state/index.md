@@ -272,7 +272,7 @@ def map2mineCount(bool[${width+2}][${height+2}] map, u32 x, u32 y) -> u8 {
 }
 ```
 
-<a id="why-map-border">
+#### Why map border {#why-map-border}
 
 Zero-knowlege proofs use [arithmetic circuits](https://medium.com/web3studio/simple-explanations-of-arithmetic-circuits-and-zero-knowledge-proofs-806e59a79785), which don't have an easy equivalent to an `if` statement. Instead, they use the equivalent of the [conditional operator](https://en.wikipedia.org/wiki/Ternary_conditional_operator). If `a` can be either zero or one, you can calculate `if a { b } else { c }` as `ab+(1-a)c`.
 
@@ -390,7 +390,7 @@ On a production system we might use a more complicated [setup ceremony](https://
 
 **Note:** Compilation of Zokrates programs and key creation are slow processes. There is no need to repeat them every time, just when map size changes. On a production system you'd do them once, and then store the output. The only reason I am not doing it here is for the sake of simplicity.
 
-<a id="calculateMapHash" />
+#### `calculateMapHash` {#calculateMapHash}
    
 ```typescript
 const calculateMapHash = function(hashMe: boolean[][]): string {
