@@ -15,7 +15,7 @@ import CardList from "@/components/CardList"
 import Emoji from "@/components/Emoji"
 import ExpandableCard from "@/components/ExpandableCard"
 import FeedbackCard from "@/components/FeedbackCard"
-import { type ImageProps, TwImage } from "@/components/Image"
+import { Image, type ImageProps } from "@/components/Image"
 import Leaderboard from "@/components/Leaderboard"
 import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
@@ -417,47 +417,47 @@ const BugBountiesPage = () => {
       <ClientIntro>{t("page-upgrades-bug-bounty-clients")}</ClientIntro>
       <ClientRow>
         <Client>
-          <TwImage src={besu} alt="" {...iconImageProps} />
+          <Image src={besu} alt="" {...iconImageProps} />
         </Client>
         <Client>
-          <TwImage src={erigon} alt="" {...iconImageProps} />
+          <Image src={erigon} alt="" {...iconImageProps} />
         </Client>
         <Client>
-          <TwImage src={geth} alt="" {...iconImageProps} />
+          <Image src={geth} alt="" {...iconImageProps} />
         </Client>
         <Client>
-          <TwImage src={nethermind} alt="" {...iconImageProps} />
+          <Image src={nethermind} alt="" {...iconImageProps} />
         </Client>
         <Client>
-          <TwImage src={reth} alt="" {...iconImageProps} />
+          <Image src={reth} alt="" {...iconImageProps} />
         </Client>
       </ClientRow>
       <ClientRow>
         <Client>
-          <TwImage
+          <Image
             src={useColorModeValue(lighthouseLight, lighthouseDark)}
             alt=""
             {...iconImageProps}
           />
         </Client>
         <Client>
-          <TwImage src={lodestar} alt="" {...iconImageProps} />
+          <Image src={lodestar} alt="" {...iconImageProps} />
         </Client>
         <Client>
-          <TwImage src={nimbus} alt="" {...iconImageProps} />
+          <Image src={nimbus} alt="" {...iconImageProps} />
         </Client>
         <Client>
-          <TwImage src={prysm} alt="" {...iconImageProps} />
+          <Image src={prysm} alt="" {...iconImageProps} />
         </Client>
         <Client>
-          <TwImage
+          <Image
             src={useColorModeValue(tekuDark, tekuLight)}
             alt=""
             {...iconImageProps}
           />
         </Client>
         <Client>
-          <TwImage src={grandine} alt="" {...iconImageProps} />
+          <Image src={grandine} alt="" {...iconImageProps} />
         </Client>
       </ClientRow>
       <StyledGrayContainer id="rules">
