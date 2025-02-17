@@ -18,8 +18,6 @@ import PresetFilters from "@/components/ProductTable/PresetFilters"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
-import { usePathname } from "@/i18n/routing"
-
 interface ProductTableProps<T> {
   columns: ColumnDef<T>[]
   data: T[]
@@ -50,7 +48,6 @@ const ProductTable = <T,>({
   meta,
 }: ProductTableProps<T>) => {
   const router = useRouter()
-  const pathname = usePathname()
   const [activePresets, setActivePresets] = useState<number[]>([])
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
 
@@ -93,9 +90,11 @@ const ProductTable = <T,>({
         })),
       }))
       setFilters(updatedFilters)
-      router.replace(pathname, undefined, { shallow: true })
+
+      // TODO: Fix this, removed to avoid infinite re-renders
+      // router.replace(pathname, undefined, { shallow: true })
     }
-  }, [router])
+  }, [router.query])
 
   // Update or remove preset filters
   const handleSelectPreset = (idx: number) => {
