@@ -147,7 +147,7 @@ Web3 ile daha iyi bir Web yaratmanın henüz başındayız, ancak bunu destekley
 
 Web3 rijit bir şekilde tanımlanmamıştır. Çeşitli topluluk katılımcıları bu konuda farklı bakış açılarına sahiptir. İşte bunlardan birkaçı:
 
-- [Web3 nedir? Geleceğin Merkeziyetsiz İnterneti Açıklandı](https://www.freecodecamp.org/news/what-is-web3/) – _Nader Dabit_
+- [Web3 nedir? Geleceğin Merkeziyetsiz İnterneti Açıklandı](https://www.freecodecamp.org/news/what-is-web3) – _Nader Dabit_
 - [Web 3'ü Anlamak](https://medium.com/l4-media/making-sense-of-web-3-c1a9e74dcae)–_Josh Stark_
 - [Web3 Neden Önemli?](https://future.a16z.com/why-web3-matters/)—_Chris Dixon_
 - [Merkeziyetsizlik Neden Önemli?](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) - _Chris Dixon_

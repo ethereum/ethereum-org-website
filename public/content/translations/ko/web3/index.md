@@ -147,7 +147,7 @@ Ethereum.org는 중요한 이더리움 콘텐츠를 가능한 많은 언어로 �
 
 웹3는 한 문장으로 정의되지 않습니다. 다양한 커뮤니티 참가자들은 웹3에 대해 서로 다른 관점을 갖고 있습니다. 다음은 그 중 몇 가지입니다.
 
-- [ 웹3란? 미래의 분산화된 인터넷 살펴보기](https://www.freecodecamp.org/news/what-is-web3/) – _Nader Dabit_
+- [ 웹3란? 미래의 분산화된 인터넷 살펴보기](https://www.freecodecamp.org/news/what-is-web3) – _Nader Dabit_
 - [웹3 이해하기](https://medium.com/l4-media/making-sense-of-web-3-c1a9e74dcae) – _Josh Stark_
 - [웹3가 중요한 이유](https://future.a16z.com/why-web3-matters/) — _Chris Dixon_
 - [탈중앙화가 중요한 이유](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) - _Chris Dixon_

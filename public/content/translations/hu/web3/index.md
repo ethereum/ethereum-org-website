@@ -147,7 +147,7 @@ Ez még csak a kezdete annak, hogy az internet jobbá váljon a Web3-mal, és ah
 
 A Web3 nincs szigorúan definiálva. A közösségek különböző résztvevői más-más perspektívával bírnak. Néhány ezek közül:
 
-- [Mi az a Web3? Áttekintés a jövő decentralizált internetéről](https://www.freecodecamp.org/news/what-is-web3/) – _Nader Dabit_
+- [Mi az a Web3? Áttekintés a jövő decentralizált internetéről](https://www.freecodecamp.org/news/what-is-web3) – _Nader Dabit_
 - [A Web3 értelmezése](https://medium.com/l4-media/making-sense-of-web-3-c1a9e74dcae) – _Josh Stark_
 - [Miért számít a Web3](https://future.a16z.com/why-web3-matters/) — _Chris Dixon_
 - [Miért fontos a decentralizáció](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) – _Chris Dixon_

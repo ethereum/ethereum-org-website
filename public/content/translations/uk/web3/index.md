@@ -147,7 +147,7 @@ Web3 — це молода екосистема, що розвивається. 
 
 Мережа Web3 не має жорсткої регламентації. Різні учасники спільноти мають різне ставлення щодо цього. Ось деякі з них:
 
-- [Що таке Web3? Пояснення децентралізованого інтернету майбутнього](https://www.freecodecamp.org/news/what-is-web3/) — _Надер Дабіт_
+- [Що таке Web3? Пояснення децентралізованого інтернету майбутнього](https://www.freecodecamp.org/news/what-is-web3) — _Надер Дабіт_
 - [Розуміння Web3](https://medium.com/l4-media/making-sense-of-web-3-c1a9e74dcae) — _ Джош Старк_
 - [У чому важливість Web3](https://future.a16z.com/why-web3-matters/) — _Кріс Діксон_
 - [У чому важливість децентралізації](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) — _Кріс Діксон_

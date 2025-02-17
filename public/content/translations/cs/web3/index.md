@@ -147,7 +147,7 @@ Jsme teprve na začátku lepšího webu s pomocí Web3, ale díky neustávajíc�
 
 Web3 není pevně definován. Různí členové komunity mají na jeho definici odlišné pohledy. Zde je několik z nich:
 
-- [Co je Web3? Vysvětlení decentralizovaného internetu budoucnosti](https://www.freecodecamp.org/news/what-is-web3/) – _Nader Dabit_
+- [Co je Web3? Vysvětlení decentralizovaného internetu budoucnosti](https://www.freecodecamp.org/news/what-is-web3) – _Nader Dabit_
 - [Jak dáváme Web3 smysl](https://medium.com/l4-media/making-sense-of-web-3-c1a9e74dcae) – _Josh Stark_
 - [Proč na Web3 záleží](https://future.a16z.com/why-web3-matters/) — _Chris Dixon_
 - [Proč na decentralizaci záleží](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) - _Chris Dixon_

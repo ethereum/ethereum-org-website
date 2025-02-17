@@ -147,7 +147,7 @@ Wi just dey start to dey kreate betta Web wit Web3, but as we kontinu to impruf 
 
 Dem nor rily define Web3. Difrent pipol wey dey patisipate in Web3 get difrent opinion abou am. Hia na few of dem:
 
-- [Wetin bi Web3? Di disentralized intanet of di fushure wey dem Explain](https://www.freecodecamp.org/news/what-is-web3/) – _Nader Dabit_
+- [Wetin bi Web3? Di disentralized intanet of di fushure wey dem Explain](https://www.freecodecamp.org/news/what-is-web3) – _Nader Dabit_
 - [Hau pesi fit make sense of Web3](https://medium.com/l4-media/making-sense-of-web-3-c1a9e74dcae) – _Josh Stark_
 - [Why We3 Matta](https://future.a16z.com/why-web3-matters/) — _Chris Dixon_
 - [Why disentralizashon matta](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) - _Chris Dixon_

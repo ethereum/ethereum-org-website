@@ -147,7 +147,7 @@ Biz hali Web3 bilan yaxshiroq Web yaratishning boshidamiz, lekin uni qo‘llab-q
 
 Web3 qat’iy belgilangan emas. Jamiyatning turli ishtirokchilari bu borada turlicha qarashlarga ega. Mana ulardan bir nechtasi:
 
-- [Web3 nima? Kelajakning markazlashmagan interneti tushuntirildi](https://www.freecodecamp.org/news/what-is-web3/) – _Nader Dabit_
+- [Web3 nima? Kelajakning markazlashmagan interneti tushuntirildi](https://www.freecodecamp.org/news/what-is-web3) – _Nader Dabit_
 - [Web 3ni tushunish](https://medium.com/l4-media/making-sense-of-web-3-c1a9e74dcae) – _ Josh Stark_
 - [Nega Web3 muhim](https://future.a16z.com/why-web3-matters/) — _Kris Dixon_
 - [Markazlashtirmaslik nima uchun muhim](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) — _Kris Dixon_
