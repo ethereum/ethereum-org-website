@@ -7,7 +7,7 @@ import { HStack, Stack, VStack } from "@/components/ui/flex"
 import { cn } from "@/lib/utils/cn"
 
 const meta = {
-  title: "Design System/ShadCN Colors",
+  title: "Design System / Colors",
   parameters: {
     // Do not create snapshots for any stories in the file.
     chromatic: { disableSnapshot: true },
