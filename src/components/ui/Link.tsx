@@ -58,7 +58,7 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
     return <a {...props} />
   }
 
-  const isActive = url.isHrefActive(href, pathname, isPartiallyActive)
+  const isActive = url.isHrefActive(href, pathname || "", isPartiallyActive)
   const isDiscordInvite = url.isDiscordInvite(href)
   const isFile = url.isFile(href)
   const isExternal = url.isExternal(href)

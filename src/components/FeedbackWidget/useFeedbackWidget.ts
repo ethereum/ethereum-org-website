@@ -33,7 +33,7 @@ export const useFeedbackWidget = () => {
     const pathsWithBottomNav = ["/staking", "/dao", "/defi", "/nft"]
     let shouldOffset = false
     pathsWithBottomNav.forEach((path) => {
-      if (pathname.includes(path)) {
+      if ((pathname || "").includes(path)) {
         shouldOffset = true
       }
     })

@@ -12,7 +12,10 @@ import { usePathname } from "@/i18n/routing"
 export const useSurvey = (feedbackSubmitted: boolean) => {
   const locale = useLocale()
   const pathname = usePathname()
-  const { href: url } = new URL(path.join(locale! as Lang, pathname), SITE_URL)
+  const { href: url } = new URL(
+    path.join(locale! as Lang, pathname || ""),
+    SITE_URL
+  )
   return useMemo((): string | null => {
     if (!feedbackSubmitted) return null
     return `https://ethereumorg.paperform.co//?url=${url}`
