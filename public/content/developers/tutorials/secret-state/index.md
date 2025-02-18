@@ -69,7 +69,7 @@ We need [several tables](https://github.com/qbzzt/20240901-secret-state/blob/mai
 
 - `PlayerGame`: The key is the player's address. The data is:
 
-  - `gameId`: 32 byte value that is the hash of the map the player is playing on (the game identifier).
+  - `gameId`: 32-byte value that is the hash of the map the player is playing on (the game identifier).
   - `win`: a boolean that is whether the player won the game.
   - `lose`: a boolean that is whether the player lost the game.
   - `digNumber`: the number of successful digs in the game.
@@ -78,7 +78,7 @@ We need [several tables](https://github.com/qbzzt/20240901-secret-state/blob/mai
 
 - `Map`: The key is a tuple of three values:
 
-  - `gameId`: 32 byte value that is the hash of the map the player is playing on (the game identifier).
+  - `gameId`: 32-byte value that is the hash of the map the player is playing on (the game identifier).
   - `x` coordinate
   - `y` coordinate
 
@@ -270,7 +270,7 @@ def map2mineCount(bool[${width+2}][${height+2}] map, u32 x, u32 y) -> u8 {
 
 #### Why map border {#why-map-border}
 
-Zero-knowlege proofs use [arithmetic circuits](https://medium.com/web3studio/simple-explanations-of-arithmetic-circuits-and-zero-knowledge-proofs-806e59a79785), which don't have an easy equivalent to an `if` statement. Instead, they use the equivalent of the [conditional operator](https://en.wikipedia.org/wiki/Ternary_conditional_operator). If `a` can be either zero or one, you can calculate `if a { b } else { c }` as `ab+(1-a)c`.
+Zero-knowledge proofs use [arithmetic circuits](https://medium.com/web3studio/simple-explanations-of-arithmetic-circuits-and-zero-knowledge-proofs-806e59a79785), which don't have an easy equivalent to an `if` statement. Instead, they use the equivalent of the [conditional operator](https://en.wikipedia.org/wiki/Ternary_conditional_operator). If `a` can be either zero or one, you can calculate `if a { b } else { c }` as `ab+(1-a)c`.
 
 Because of this, a Zokrates `if` statement always evaluates both branches. For example, if you have this code:
 
@@ -614,7 +614,7 @@ To do so:
 
 In any sufficiently complex application there are competing design goals that require trade-offs. Let's look at some of the tradeoffs and why the current solution is preferable to other options.
 
-### Why zero-knowlege {#why-zero-knowledge}
+### Why zero-knowledge {#why-zero-knowledge}
 
 For minesweeper you don't really need zero-knowledge. The server can always hold the map, and then just reveal all of it when the game is over. Then, at the end of the game, the smart contract can calculate the map hash, verify that it matches, and if it doesn't penalize the server or disregard the game completely.
 
@@ -638,7 +638,7 @@ If I were writing a production-level application, I'd check if I have a file wit
 
 [Key creation](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts#L63-L69) is another pure calculation that needn't be done more than once for a given minefield size. Again, it is done only once for the sake of simplicity.
 
-Additionally, we could use [a setup ceremony](https://zokrates.github.io/toolbox/trusted_setup.html#initializing-a-phase-2-ceremony). The advantage of a setup ceremony is that you need either the entropy or some intermediate result from each participant to cheat on the zero-knowlege proof. If at least one ceremony participant is honest and deletes that information, the zero-knowledge proofs are safe from certain attacks. However, there is _no mechanism_ to verify that information has been deleted from everywhere. If zero-knowledge proofs are critically important, you want to participate in the setup ceremony.
+Additionally, we could use [a setup ceremony](https://zokrates.github.io/toolbox/trusted_setup.html#initializing-a-phase-2-ceremony). The advantage of a setup ceremony is that you need either the entropy or some intermediate result from each participant to cheat on the zero-knowledge proof. If at least one ceremony participant is honest and deletes that information, the zero-knowledge proofs are safe from certain attacks. However, there is _no mechanism_ to verify that information has been deleted from everywhere. If zero-knowledge proofs are critically important, you want to participate in the setup ceremony.
 
 Here we rely on [perpetual powers of tau](https://github.com/privacy-scaling-explorations/perpetualpowersoftau), which had dozens of participants. It is probably safe enough, and much simpler. We also don't add entropy to the during key creation, which makes it easier for users to [verify the zero-knowledge configuration](#user-verify-zero-trust).
 
