@@ -179,12 +179,14 @@ To be able to do the above example in the traditional finance world, you'd need 
 
 #### Lending {#lending}
 
-You can earn interest on your crypto by lending it and see your funds grow in real time. Right now interest rates are much higher than what you're likely to get at your local bank (if you're lucky enough to be able to access one). Here's an example:
+You can earn interest on your crypto by lending it and see your funds grow in real time. Right now interest rates are much higher than what you're likely to get at your local bank (if you're lucky enough to be able to access one). 
+
 
 - You lend your 100 Dai, a [stablecoin](/stablecoins/), to a product like Aave.
 - You receive 100 Aave Dai (aDai) which is a token that represents your loaned Dai.
-- Your aDai will increase based on the interest rates and you can see your balance growing in your wallet. Dependent on the [APR](/glossary/#apr), your wallet balance will read something like 100.1234 after a few days or even hours!
+- Your aDai will increase based on the interest rates and you can see your balance growing in your wallet. Dependent on the [APR](/glossary/#apr), your wallet balance will read something like 100.1234 after a few days!
 - You can withdraw an amount of regular Dai that's equal to your aDai balance at any time.
+
 
 <ButtonLink href="/dapps/?category=finance#explore">
   See lending dapps
