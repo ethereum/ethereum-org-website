@@ -5,7 +5,6 @@ import { BasePageProps, ChildOnlyProp, Lang, Params } from "@/lib/types"
 import { Framework } from "@/lib/interfaces"
 
 import FeedbackCard from "@/components/FeedbackCard"
-import Heading from "@/components/Heading"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
@@ -100,20 +99,9 @@ const LocalEnvironmentPage = ({
         description={t("page-local-environment-setup-meta-desc")}
       />
       <div className="mb-8 w-full justify-center px-8 pb-8 pt-0 xl:pb-4 xl:pt-4">
-        <Heading
-          as="h1"
-          fontStyle="normal"
-          fontFamily="monospace"
-          textTransform="uppercase"
-          fontWeight="semibold"
-          fontSize="2rem"
-          lineHeight={1.4}
-          textAlign="center"
-          mt={0}
-          mb="1.625rem"
-        >
+        <h1 className="mb-[1.625rem] text-center font-monospace text-[2rem] font-semibold uppercase not-italic leading-[1.4]">
           <Translation id="page-developers-local-environment:page-local-environment-setup-title" />
-        </Heading>
+        </h1>
         <Text className="mb-2 text-center leading-xs text-body-medium">
           <Translation id="page-developers-local-environment:page-local-environment-setup-subtitle" />
           <br />
@@ -123,14 +111,9 @@ const LocalEnvironmentPage = ({
       <Content>
         <Flex className="w-full flex-col-reverse items-start justify-between lg:flex-row lg:items-center">
           <Column>
-            <Heading
-              fontSize={{ base: "2xl", md: "2rem" }}
-              lineHeight={1.4}
-              mt={0}
-              mb="1.625rem"
-            >
+            <h2 className="mb-[1.625rem] text-2xl leading-[1.4] md:text-[2rem]">
               <Translation id="page-developers-local-environment:page-local-environment-frameworks-title" />
-            </Heading>
+            </h2>
             <Text>
               <Translation id="page-developers-local-environment:page-local-environment-frameworks-desc" />
             </Text>

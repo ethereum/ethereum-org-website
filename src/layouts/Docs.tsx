@@ -1,5 +1,4 @@
 import type { HTMLAttributes } from "react"
-import { Badge } from "@chakra-ui/react"
 
 import { ChildOnlyProp } from "@/lib/types"
 import type { DocsFrontmatter, MdPageContent } from "@/lib/interfaces"
@@ -82,7 +81,6 @@ export const docsComponents = {
   h4: H4,
   pre: Codeblock,
   ...mdxTableComponents,
-  Badge,
   ButtonLink,
   Card,
   CallToContribute,

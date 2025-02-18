@@ -14,7 +14,6 @@ import { BasePageProps, Lang, Params } from "@/lib/types"
 
 import Emoji from "@/components/Emoji"
 import FeedbackCard from "@/components/FeedbackCard"
-import Heading from "@/components/Heading"
 import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
 import Translation from "@/components/Translation"
@@ -231,21 +230,9 @@ const TutorialPage = ({
           "page-developers-tutorials:page-tutorials-meta-description"
         )}
       />
-      <Heading
-        as="h1"
-        fontStyle="normal"
-        fontWeight="semibold"
-        fontFamily="monospace"
-        textTransform="uppercase"
-        fontSize="2rem"
-        lineHeight="140%"
-        textAlign="center"
-        mt={{ base: 4, sm: 0 }}
-        mx={{ base: 4, sm: 0 }}
-        mb={{ base: 4, sm: "1.625rem" }}
-      >
+      <h1 className="no-italic mb-4 text-center font-monospace text-[2rem] font-semibold uppercase leading-[1.4] max-sm:mx-4 max-sm:mt-4 sm:mb-[1.625rem]">
         <Translation id="page-developers-tutorials:page-tutorial-title" />
-      </Heading>
+      </h1>
       <Text className="mb-4 text-center leading-xs text-body-medium">
         <Translation id="page-developers-tutorials:page-tutorial-subtitle" />
       </Text>

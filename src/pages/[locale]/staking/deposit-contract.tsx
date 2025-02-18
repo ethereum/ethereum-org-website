@@ -15,7 +15,6 @@ import CardList from "@/components/CardList"
 import CopyToClipboard from "@/components/CopyToClipboard"
 import Emoji from "@/components/Emoji"
 import FeedbackCard from "@/components/FeedbackCard"
-import Heading from "@/components/Heading"
 import { Image } from "@/components/Image"
 import InfoBanner from "@/components/InfoBanner"
 import MainArticle from "@/components/MainArticle"
@@ -130,14 +129,7 @@ const Row = (props: ChildOnlyProp) => (
 )
 
 const CardTitle = (props: ChildOnlyProp) => (
-  <Heading
-    as="h2"
-    mb={4}
-    fontWeight="600"
-    fontSize="2rem"
-    lineHeight={1.4}
-    {...props}
-  />
+  <h2 className="mb-4 text-[2rem] font-semibold leading-[1.4]" {...props} />
 )
 
 const Caption = (props: ChildOnlyProp) => (
