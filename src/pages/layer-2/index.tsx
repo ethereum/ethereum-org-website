@@ -7,7 +7,7 @@ import Callout from "@/components/Callout"
 import Card from "@/components/Card"
 import ExpandableCard from "@/components/ExpandableCard"
 import HubHero, { HubHeroProps } from "@/components/Hero/HubHero"
-import { TwImage } from "@/components/Image"
+import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
 import { ButtonLink } from "@/components/ui/buttons/Button"
@@ -16,6 +16,7 @@ import InlineLink from "@/components/ui/Link"
 import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
+import { networkMaturity } from "@/lib/utils/networkMaturity"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
@@ -24,6 +25,7 @@ import { layer2Data, Rollups } from "@/data/networks/networks"
 import { BASE_TIME_UNIT } from "@/lib/constants"
 
 import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
+import { fetchL2beat } from "@/lib/api/fetchL2beat"
 import HeroImage from "@/public/images/heroes/layer-2-hub-hero.jpg"
 import EthereumLogo from "@/public/images/layer-2/ethereum.png"
 import WalkingImage from "@/public/images/layer-2/layer-2-walking.png"
@@ -34,7 +36,10 @@ import ManDogCardImage from "@/public/images/man-and-dog-playing.png"
 const REVALIDATE_TIME = BASE_TIME_UNIT * 24
 
 const loadData = dataLoader(
-  [["growThePieData", fetchGrowThePie]],
+  [
+    ["growThePieData", fetchGrowThePie],
+    ["l2beatData", fetchL2beat],
+  ],
   REVALIDATE_TIME * 1000
 )
 
@@ -49,14 +54,34 @@ export const getStaticProps = (async ({ locale }) => {
 
   const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
-  const [growThePieData] = await loadData()
+  const [growThePieData, l2beatData] = await loadData()
+
+  const getRandomL2s = () => {
+    let randomL2s = layer2Data.filter(
+      (network) =>
+        networkMaturity(l2beatData.data.projects[network.l2beatID]) === "robust"
+    )
+
+    if (randomL2s.length === 0) {
+      randomL2s = layer2Data.filter(
+        (network) =>
+          networkMaturity(l2beatData.data.projects[network.l2beatID]) ===
+          "maturing"
+      )
+    }
+
+    return randomL2s.sort(() => 0.5 - Math.random()).slice(0, 3)
+  }
 
   const randomL2s = layer2Data.sort(() => 0.5 - Math.random()).slice(0, 9)
+
+  const userRandomL2s = getRandomL2s()
 
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
       randomL2s,
+      userRandomL2s,
       contentNotTranslated,
       lastDeployLocaleTimestamp,
       locale,
@@ -67,10 +92,12 @@ export const getStaticProps = (async ({ locale }) => {
 
 const Layer2Hub = ({
   randomL2s,
+  userRandomL2s,
   growThePieData,
   locale,
 }: {
   randomL2s: Rollups
+  userRandomL2s: Rollups
   growThePieData: GrowThePieData
   locale: Lang
 }) => {
@@ -161,7 +188,7 @@ const Layer2Hub = ({
             </p>
           </div>
           <div className="flex flex-1">
-            <TwImage
+            <Image
               src={ManDogCardImage}
               alt="Man and dog playing"
               style={{
@@ -234,7 +261,7 @@ const Layer2Hub = ({
             <div className="absolute inset-0 animate-spin-30 rounded-full">
               {/* Top logo */}
               <div className="absolute -top-[12px] left-1/2 h-6 w-6 -translate-x-1/2 -translate-y-1/2 transform animate-counter-spin-30 rounded-full bg-primary">
-                <TwImage
+                <Image
                   className="rounded-full"
                   src={randomL2s[0].logo}
                   alt={randomL2s[0].name}
@@ -244,7 +271,7 @@ const Layer2Hub = ({
               </div>
               {/* Bottom right logo */}
               <div className="absolute bottom-[17%] right-[8%] h-6 w-6 -translate-x-1/2 -translate-y-1/2 transform animate-counter-spin-30 rounded-full">
-                <TwImage
+                <Image
                   className="rounded-full"
                   src={randomL2s[1].logo}
                   alt={randomL2s[1].name}
@@ -254,7 +281,7 @@ const Layer2Hub = ({
               </div>
               {/* Bottom left logo */}
               <div className="absolute bottom-[17%] left-[8%] h-6 w-6 -translate-x-1/2 -translate-y-1/2 transform animate-counter-spin-30 rounded-full">
-                <TwImage
+                <Image
                   className="rounded-full"
                   src={randomL2s[2].logo}
                   alt={randomL2s[2].name}
@@ -269,7 +296,7 @@ const Layer2Hub = ({
             <div className="absolute inset-[30px] animate-spin-21 rounded-full sm:inset-[54px]">
               {/* Top logo */}
               <div className="absolute -top-[12px] left-1/2 h-6 w-6 -translate-x-1/2 -translate-y-1/2 transform animate-counter-spin-21 rounded-full">
-                <TwImage
+                <Image
                   className="rounded-full"
                   src={randomL2s[3].logo}
                   alt={randomL2s[3].name}
@@ -279,7 +306,7 @@ const Layer2Hub = ({
               </div>
               {/* Bottom right logo */}
               <div className="absolute bottom-[15%] right-[5%] h-6 w-6 transform animate-counter-spin-21 rounded-full">
-                <TwImage
+                <Image
                   className="rounded-full"
                   src={randomL2s[4].logo}
                   alt={randomL2s[4].name}
@@ -289,7 +316,7 @@ const Layer2Hub = ({
               </div>
               {/* Bottom left logo */}
               <div className="absolute bottom-[15%] left-[5%] h-6 w-6 transform animate-counter-spin-21 rounded-full">
-                <TwImage
+                <Image
                   className="rounded-full"
                   src={randomL2s[5].logo}
                   alt={randomL2s[5].name}
@@ -304,7 +331,7 @@ const Layer2Hub = ({
             <div className="absolute inset-[60px] animate-spin-9 rounded-full sm:inset-[108px]">
               {/* Top logo */}
               <div className="absolute -top-[12px] left-1/2 h-6 w-6 -translate-x-1/2 -translate-y-1/2 transform animate-counter-spin-9 rounded-full">
-                <TwImage
+                <Image
                   className="rounded-full"
                   src={randomL2s[6].logo}
                   alt={randomL2s[6].name}
@@ -314,7 +341,7 @@ const Layer2Hub = ({
               </div>
               {/* Bottom right logo */}
               <div className="absolute bottom-[15%] right-[5%] h-6 w-6 transform animate-counter-spin-9 rounded-full">
-                <TwImage
+                <Image
                   className="rounded-full"
                   src={randomL2s[7].logo}
                   alt={randomL2s[7].name}
@@ -324,7 +351,7 @@ const Layer2Hub = ({
               </div>
               {/* Bottom left logo */}
               <div className="absolute bottom-[15%] left-[5%] h-6 w-6 transform animate-counter-spin-9 rounded-full">
-                <TwImage
+                <Image
                   className="rounded-full"
                   src={randomL2s[8].logo}
                   alt={randomL2s[8].name}
@@ -336,12 +363,7 @@ const Layer2Hub = ({
 
             {/* Center Ethereum Logo */}
             <div className="absolute left-1/2 top-1/2 h-12 w-12 -translate-x-1/2 -translate-y-1/2 transform">
-              <TwImage
-                src={EthereumLogo}
-                alt="Ethereum"
-                width={48}
-                height={48}
-              />
+              <Image src={EthereumLogo} alt="Ethereum" width={48} height={48} />
             </div>
           </div>
         </div>
@@ -390,7 +412,7 @@ const Layer2Hub = ({
       <div id="layer-2-cta" className="w-full px-8 py-9">
         <div className="mx-auto flex max-w-[640px] flex-col gap-6 rounded bg-main-gradient p-8">
           <div className="flex flex-col gap-6">
-            {randomL2s.slice(0, 3).map((l2, idx) => {
+            {userRandomL2s.map((l2, idx) => {
               return (
                 <div
                   key={idx}
@@ -402,7 +424,7 @@ const Layer2Hub = ({
                 >
                   <div className="flex flex-1 flex-col items-start gap-4 md:flex-row md:items-center">
                     <div className="flex h-14 w-14 items-center justify-center rounded-md bg-background shadow-drop">
-                      <TwImage
+                      <Image
                         src={l2.logo}
                         alt={l2.name}
                         style={{
@@ -437,7 +459,7 @@ const Layer2Hub = ({
 
           <div className="flex justify-center">
             <div className="mx-auto inline-flex items-center justify-center gap-2 rounded-full bg-background px-4 py-2 text-sm font-bold">
-              <TwImage
+              <Image
                 src={EthereumLogo}
                 alt="Ethereum"
                 style={{
@@ -458,12 +480,7 @@ const Layer2Hub = ({
       >
         <div className="flex flex-col gap-8 bg-background-highlight px-12 py-12 md:flex-row">
           <div className="flex flex-1 items-center justify-center">
-            <TwImage
-              src={WalkingImage}
-              alt="Walking"
-              height={345}
-              width={264}
-            />
+            <Image src={WalkingImage} alt="Walking" height={345} width={264} />
           </div>
           <div className="flex flex-1 flex-col justify-center gap-6">
             <h2>Why do we need multiple networks on Ethereum?</h2>
