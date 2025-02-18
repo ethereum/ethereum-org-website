@@ -5,7 +5,6 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "postinstall": "yarn theme",
     "build": "next build",
     "postbuild": "next-sitemap",
     "start": "next start",
