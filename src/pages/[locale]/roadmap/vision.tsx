@@ -1,5 +1,4 @@
 import { GetStaticProps } from "next"
-import { useTranslation } from "next-i18next"
 import type {
   ComponentProps,
   ComponentPropsWithRef,
@@ -34,6 +33,7 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
 
+import useTranslation from "@/hooks/useTranslation"
 import loadNamespaces from "@/i18n/loadNamespaces"
 import { usePathname } from "@/i18n/routing"
 import oldship from "@/public/images/upgrades/oldship.png"

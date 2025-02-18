@@ -7,7 +7,6 @@ import type {
   GetStaticProps,
   InferGetStaticPropsType,
 } from "next/types"
-import type { SSRConfig } from "next-i18next"
 import { MDXRemote, type MDXRemoteSerializeResult } from "next-mdx-remote"
 import { serialize } from "next-mdx-remote/serialize"
 import { getPlaiceholder } from "plaiceholder"
@@ -108,11 +107,10 @@ export const getStaticPaths = (() => {
   }
 }) satisfies GetStaticPaths<Params>
 
-type Props = Omit<Parameters<LayoutMappingType[Layout]>[0], "children"> &
-  SSRConfig & {
-    mdxSource: MDXRemoteSerializeResult
-    gfissues: Awaited<ReturnType<typeof fetchGFIs>>
-  }
+type Props = Omit<Parameters<LayoutMappingType[Layout]>[0], "children"> & {
+  mdxSource: MDXRemoteSerializeResult
+  gfissues: Awaited<ReturnType<typeof fetchGFIs>>
+}
 
 const commitHistoryCache: CommitHistory = {}
 

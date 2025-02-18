@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react"
 import makeBlockie from "ethereum-blockies-base64"
 import { type GetStaticProps } from "next"
-import { useTranslation } from "next-i18next"
 
 import type {
   BasePageProps,
@@ -42,6 +41,7 @@ import { DEPOSIT_CONTRACT_ADDRESS } from "@/data/addresses"
 
 import { DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
 
+import useTranslation from "@/hooks/useTranslation"
 import loadNamespaces from "@/i18n/loadNamespaces"
 import { usePathname } from "@/i18n/routing"
 import consensys from "@/public/images/projects/consensys.png"

@@ -2,7 +2,6 @@ import type { Options } from "mdast-util-toc"
 import type { NextPage } from "next"
 import type { AppProps } from "next/app"
 import type { StaticImageData } from "next/image"
-import type { SSRConfig } from "next-i18next"
 import type { ReactElement, ReactNode } from "react"
 import type { ColumnDef } from "@tanstack/react-table"
 
@@ -55,8 +54,10 @@ export type Root = {
   lastDeployLocaleTimestamp: string
 }
 
-export type BasePageProps = SSRConfig &
-  Pick<Root, "contentNotTranslated" | "lastDeployLocaleTimestamp">
+export type BasePageProps = Pick<
+  Root,
+  "contentNotTranslated" | "lastDeployLocaleTimestamp"
+>
 
 export type Params = {
   locale: string

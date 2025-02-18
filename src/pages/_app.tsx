@@ -1,6 +1,5 @@
 import { useEffect } from "react"
 import { useRouter } from "next/router"
-import { appWithTranslation } from "next-i18next"
 import { NextIntlClientProvider } from "next-intl"
 import { TooltipProvider } from "@radix-ui/react-tooltip"
 import { init } from "@socialgouv/matomo-next"
@@ -59,4 +58,4 @@ const App = ({ Component, pageProps }: AppPropsWithLayout) => {
   )
 }
 
-export default appWithTranslation(App)
+export default App
