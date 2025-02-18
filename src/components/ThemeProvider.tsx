@@ -17,7 +17,7 @@ const ThemeProvider = ({ children }: Pick<ThemeProviderProps, "children">) => {
 
   return (
     <NextThemesProvider
-      attribute="data-theme"
+      attribute="class"
       defaultTheme="light"
       disableTransitionOnChange
       storageKey={COLOR_MODE_STORAGE_KEY}
