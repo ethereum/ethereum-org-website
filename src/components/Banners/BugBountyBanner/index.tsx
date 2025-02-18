@@ -9,11 +9,11 @@ const BugBountyBanner = () => (
   <BannerNotification shouldShow>
     <Center>
       <p>
-        The Ethereum Protocol Attackathon is live on{" "}
-        <a href="https://immunefi.com/audit-competition/ethereum-protocol-attackathon/">
-          Immunefi
+        Prague code is now in scope! The Prague Audit Competition is running on {" "}
+        <a href="https://cantina.xyz/competitions/9ab19e33-b73c-4384-83a8-b905f508ce5e">
+          Cantina
         </a>{" "}
-        until the 20th of January, with up to $1,500,000 in rewards!
+        during 21st of February - 21st of March, with up to $2,000,000 in rewards!
       </p>
     </Center>
   </BannerNotification>
