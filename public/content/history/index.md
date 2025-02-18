@@ -73,54 +73,48 @@ Looking for future protocol upgrades? [Learn about upcoming upgrades on the Ethe
 
 ## 2025 {#2025}
 
-### Prague-Electra ("Pectra") {#pectra}
+### Prague-Electra ("Pectra", _in progress_) {#pectra}
 
 <NetworkUpgradeSummary name="pectra" />
 
-#### Prague summary {#prague-summary}
+The Prague-Electra ("Pectra") upgrade includes several improvements to the Ethereum protocol aimed at enhancing the experience for all users, including users of layer 2 network, stakers and node operators.
 
-The Prague upgrade contains a set of improvements to Ethereum's _execution_ aimed at scaling and staking experience, in tandem with the Electra consensus upgrades.
+Staking gets an upgrade with compounding validator accounts, and improved control over staked funds using the execution withdrawal address. EIP-7251 increases the max effective balance for a single validator to 2048, improving capital efficiency for stakers. EIP-7002 allows an execution account to securely trigger validator actions, including exiting, or withdrawing portions of the funds, improving the experience for ETH stakers, while helping strengthen accountability for node operators.
 
-<!-- TODO: Short description of execution layer changes -->
+Other parts of the upgrade focus on improving the experience for regular users. EIP-7702 brings the ability for a regular non-smart-contract account ([EOA](/glossary/#eoa)) to execute code similar to a smart contract. This unlocks unbounded new functionality for traditional Ethereum accounts, such as transaction batching, gas sponsorship, alternative authentication, programmable spending controls, account recovery mechanisms and more.
 
-<ExpandableCard title="Prague EIPs" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="Pectra EIPs" contentPreview="Official improvements included in this upgrade.">
+
+Better user experience:
 
 <ul>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-6110">EIP-6110</a> - <em>Supply validator deposits on chain</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-7002">EIP-7002</a> - <em>Execution layer triggerable exits</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-7251">EIP-7251</a> - <em>Increase the <code>MAX_EFFECTIVE_BALANCE</code></em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-7549">EIP-7549</a> - <em>Move committee index outside Attestation</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7702">EIP-7702</a> - <em>Set EOA account code</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-7691">EIP-7691</a> - <em>Blob throughput increase</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7623">EIP-7623</a> - <em>Increase calldata cost</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7840">EIP-7840</a> - <em>Add blob schedule to EL config files</em></li>
 </ul>
 
-</ExpandableCard>
+Better staking experience:
 
-<!-- TODO: Confirm link list, target 4±1 -->
+<ul>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7251">EIP-7251</a> - <em>Increase the <code>MAX_EFFECTIVE_BALANCE</code></em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7002">EIP-7002</a> - <em>Execution layer triggerable exits</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7685">EIP-7685</a> - <em>General purpose execution layer requests</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-6110">EIP-6110</a> - <em>Supply validator deposits on chain</em></li>
+</ul>
 
-- [Pectra.wtf](https//pectra.wtf)
-- [How Pectra will enhance the staking experience](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
-
-#### Electra summary {#electra-summary}
-
-<!-- TODO: Fill in description -->
-
-The Electra upgrade contains a set of improvements to Ethereum's _consensus_ aimed towards ... This upgrade comes in tandem with the Prague execution upgrades to ...
-
-<!-- Short description of consensus layer changes -->
-
-<ExpandableCard title="Electra EIPs" contentPreview="Official improvements included in this upgrade.">
+Protocol efficiency and security improvements:
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2537">EIP-2537</a> - <em>Precompile for BLS12-381 curve operations</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-2935">EIP-2935</a> - <em>Save historical block hashes in state</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-7623">EIP-7623</a> - <em>Increase calldata cost</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-7685">EIP-7685</a> - <em>General purpose execution layer requests</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-7702">EIP-7702</a> - <em>Set EOA account code</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-7840">EIP-7840</a> - <em>Add blob schedule to EL config files</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7549">EIP-7549</a> - <em>Move committee index outside Attestation</em></li>
 </ul>
 
 </ExpandableCard>
 
+- [Pectra.wtf](https//pectra.wtf)
+- [How Pectra will enhance the staking experience](https://www.kiln.fi/post/next-ethereum-upgrade-how-pectra-will-enhance-the-staking-experience)
 - [Read the Electra upgrade specifications](https://github.com/ethereum/consensus-specs/blob/dev/specs/electra/)
 - [Prague-Electra ("Pectra") FAQ](/roadmap/pectra/)
 
