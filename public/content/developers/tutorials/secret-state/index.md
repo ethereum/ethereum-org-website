@@ -5,7 +5,7 @@ author: Ori Pomerantz
 tags: ["server", "offchain", "centralized", "zero-knowledge", "zokrates", "mud"]
 skill: advanced
 lang: en
-published: 2024-09-15
+published: 2025-03-15
 ---
 
 _There are no secrets on the blockchain_. Everything that is posted on the blockchain is open to everybody to read. This is necessary, because the blockchain is based on anybody being able to verify it. However, games often rely on secret state. For example, the game of [minesweeper](<https://en.wikipedia.org/wiki/Minesweeper_(video_game)>) makes absolutely no sense if you can just go on a blockchain explorer and see the map.
@@ -14,13 +14,15 @@ The simplest solution is to use a [server component](/developers/tutorials/serve
 
 After reading this article you will know how to create this kind of secret state holding server, a client for showing the state, and an onchain component for communication between the two. The main tools we use will be:
 
-- [Zokrates](https://zokrates.github.io/) for zero-knowledge proofs and their verification.
-- [Typescript](https://www.typescriptlang.org/) for both the server and the client.
-- [Node](https://nodejs.org/en) for the server.
-- [Viem](https://viem.sh/) for communication with the Blockchain.
-- [MUD](https://mud.dev/) for onchain data management. Proper disclosure: While I'm writing this on my own time for Ethereum Foundation, my day job is working for [Lattice](https://lattice.xyz/) which makes this framework.
-- [React](https://react.dev/) for the user interface of the client.
-- [Vite](https://vitejs.dev/) for serving the client code.
+| Tool                                          | Purpose                                                 | Verified on version |
+| --------------------------------------------- | ------------------------------------------------------- | ------------------: |
+| [Zokrates](https://zokrates.github.io/)       | Zero-knowledge proofs and their verification            |               1.1.9 |
+| [Typescript](https://www.typescriptlang.org/) | Programming language for both the server and the client |               5.4.2 |
+| [Node](https://nodejs.org/en)                 | Running the server                                      |             20.18.2 |
+| [Viem](https://viem.sh/)                      | Communication with the Blockchain                       |              2.9.20 |
+| [MUD](https://mud.dev/)                       | Onchain data management                                 |              2.0.12 |
+| [React](https://react.dev/)                   | Client user interface                                   |              18.2.0 |
+| [Vite](https://vitejs.dev/)                   | Serving the client code                                 |               4.2.1 |
 
 ## Minesweeper example {#minesweeper}
 
@@ -32,7 +34,7 @@ This application is written using [MUD](https://mud.dev/), a framework that lets
 
 To run the minesweeper example:
 
-1. Make sure you [have the prerequisites installed](https://mud.dev/quickstart#prerequisites): [Node](https://mud.dev/quickstart#prerequisites), [Foundry](https://book.getfoundry.sh/getting-started/installation), [`git`](https://git-scm.com/downloads), and [`pnpm`](https://git-scm.com/downloads).
+1. Make sure you [have the prerequisites installed](https://mud.dev/quickstart#prerequisites): [Node](https://mud.dev/quickstart#prerequisites), [Foundry](https://book.getfoundry.sh/getting-started/installation), [`git`](https://git-scm.com/downloads), [`pnpm`](https://git-scm.com/downloads), and [`mprocs`](https://github.com/pvolok/mprocs).
 
 2. Clone the repository.
 
@@ -47,15 +49,26 @@ To run the minesweeper example:
    pnpm install
    ```
 
-4. Start the program (including an [anvil](https://book.getfoundry.sh/anvil/) blockchain) and wait.
+   If Foundry was installed as part of `pnpm install`, you need to restart the command-line shell.
+
+4. Compile the contracts
+
+    ```sh copy
+    cd packages/contracts
+    forge build
+    cd ../..
+    ```
+
+
+5. Start the program (including an [anvil](https://book.getfoundry.sh/anvil/) blockchain) and wait.
 
    ```sh copy
-   pnpm dev
+   mprocs
    ```
 
    Note that the startup takes a long time. To see the progress, first use the down arrow to scroll to the _contracts_ tab to see the MUD contracts being deployed. When you get the message _Waiting for file changes…_, the contracts are deployed and further progress will happen in the _server_ tab. There, you wait until you get the message _Verifier address: 0x...._.
 
-5. Now you can browse to [the client](http://localhost:3000), click **New Game**, and start playing.
+6. Now you can browse to [the client](http://localhost:3000), click **New Game**, and start playing.
 
 ### Tables {#tables}
 
