@@ -473,7 +473,6 @@ export const useNav = () => {
     const targetTheme = resolvedTheme === "dark" ? "light" : "dark"
 
     setTheme(targetTheme)
-    // setColorMode(targetTheme)
 
     trackCustomEvent({
       eventCategory: "nav bar",
