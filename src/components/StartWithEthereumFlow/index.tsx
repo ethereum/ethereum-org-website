@@ -69,7 +69,11 @@ const StartWithEthereumFlow = () => {
             "border border-[#b2e2de] bg-gradient-to-b p-12 dark:border-[#083935] dark:bg-gradient-to-t"
           )}
         >
-          <ConnectYourWallet handleNext={handleNext} />
+          <ConnectYourWallet
+            handleNext={handleNext}
+            stepIndex={activeIndex}
+            totalSteps={totalSlides}
+          />
         </SwiperSlide>
         <SwiperSlide
           className={cn(
