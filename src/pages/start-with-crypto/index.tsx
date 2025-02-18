@@ -6,6 +6,7 @@ import { BasePageProps, Lang } from "@/lib/types"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
+import StartWithEthereumFlow from "@/components/StartWithEthereumFlow"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
@@ -38,7 +39,7 @@ export const getStaticProps = (async ({ locale }) => {
 
 const StartWithCryptoPage = () => {
   return (
-    <MainArticle className="flex w-full flex-col items-center">
+    <MainArticle className="flex w-full flex-col items-center overflow-x-hidden">
       <PageMetadata title={""} description={""} image="" />
 
       <div className="mb-16 h-[240px] w-full md:h-[380px] lg:h-[398px]">
@@ -51,7 +52,7 @@ const StartWithCryptoPage = () => {
         />
       </div>
 
-      <div className="mb-36 flex flex-col gap-12 px-8">
+      <div className="mb-36 flex flex-col gap-12 overflow-x-hidden px-8">
         <div className="mx-auto flex max-w-[1000px] flex-col items-center gap-4 text-center">
           <h1>Get started with Ethereum</h1>
           <p>
@@ -59,6 +60,10 @@ const StartWithCryptoPage = () => {
             Step into the new world yourself and learn all the basics in just
             few steps.
           </p>
+        </div>
+
+        <div className="flex flex-col gap-12">
+          <StartWithEthereumFlow />
         </div>
 
         <div className="flex w-full flex-col gap-12 rounded-2xl border border-accent-c/10 bg-gradient-to-t from-accent-c/10 from-20% to-accent-c/5 to-60% px-12 py-16 md:flex-row dark:from-accent-c/20 dark:to-accent-c/10">
