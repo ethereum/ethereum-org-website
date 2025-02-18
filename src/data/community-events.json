@@ -42,7 +42,7 @@
     "href": "https://ethkyiv.com",
     "location": "Kyiv, Ukraine",
     "description": "Welcome to the 1st edition of ETHKyiv, hosted this June 21-23 and bringing together participants from diverse backgrounds, including developers, designers, entrepreneurs, and blockchain enthusiasts!",
-    "imageUrl": ""
+    "imageUrl": "https://ethkyiv.com/_next/image?url=%2Fimages%2Fmain-banner_01.png&w=1920&q=75"
   },
   {
     "title": "DappCon",
@@ -237,7 +237,7 @@
     "title": "BUIDL Asia",
     "startDate": "2025-04-15",
     "endDate": "2025-04-16",
-    "href": "https://-",
+    "href": "https://www.buidl.asia/",
     "location": "Seoul, KR",
     "description": "",
     "imageUrl": ""
@@ -543,10 +543,10 @@
     "title": "Crecimiento",
     "startDate": "2025-03-05",
     "endDate": "2025-03-28",
-    "href": "https://crecimientoar",
-    "location": "TBD, ARG",
-    "description": "",
-    "imageUrl": ""
+    "href": "https://aleph.crecimiento.build/",
+    "location": "Buenos Aires, Argentina",
+    "description": "The Crecimiento Pop-Up City is a moment-in-time for these visionaries to come together with renowned experts, and transform Argentina into a world-leading startup & innovation hub.",
+    "imageUrl": "https://cdn.prod.website-files.com/6661b1a3c1bce60cd61fc966/669e83df3c3a7535a9cc05fa_1200xlogo.png"
   },
   {
     "title": "EthereumSF",
@@ -636,7 +636,7 @@
     "href": "https://www.edgecity.live/austin",
     "location": "Austin, USA",
     "description": "Edge City Austin",
-    "imageUrl": ""
+    "imageUrl": "https://cdn.prod.website-files.com/65b2cb5abdecf7cd7747e170/67aba5d16f625f40658dde92_edge-sxsw-10.png"
   },
   {
     "title": "Edge Expedition South Africa",
