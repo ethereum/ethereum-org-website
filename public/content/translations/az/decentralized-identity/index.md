@@ -160,7 +160,7 @@ Ethereum-dan mərkəzləşdirilməmiş kimlik həlləri üçün əsas kimi istif
 - **[Ethereum Attestasiya Xidməti (EAS)](https://attest.sh/)** - _ Hər hansı bir şey haqqında zəncirli və ya zəncirdən kənar sertifikatlar əldə etmək üçün mərkəzləşdirilməmiş kitab/protokol._
 - **[Proof of Humanity](https://www.proofofhumanity.id)** - _Proof of Humanity (or PoH) Ethereum üzərində qurulmuş sosial kimlik yoxlama sistemidir._
 - **[BrightID](https://www.brightid.org/)** - _Mərkəzləşdirilməmiş, sosial qrafikin yaradılması və təhlili vasitəsilə kimliyin yoxlanılmasında islahatlar aparmağa çalışan açıq mənbəli sosial kimlik şəbəkəsi._
-- **[Kimliyi təsdiq edən pasport](https://proofofpersonhood.com/)** - _ Mərkəzləşdirilməmiş rəqəmsal kimlik toplayıcısı._
+- **[Kimliyi təsdiq edən pasport](https://passport.human.tech/)** - _ Mərkəzləşdirilməmiş rəqəmsal kimlik toplayıcısı._
 - **[walt.id](https://walt.id)** — _Tərtibatçılara və təşkilatlara öz suveren kimlik və NFTs/SBT-lərdən istifadə etməyə imkan verən açıq mənbəli mərkəzləşdirilməmiş kimlik və cüzdan infrastrukturu._
 
 ## Further reading {#further-reading}
