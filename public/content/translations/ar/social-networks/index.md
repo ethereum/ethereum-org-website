@@ -105,7 +105,7 @@ summaryPoint3: الرموز المميزة و NFTs تنشئ أساليب جدي�
 - [Web3 holds the promise of decentralized, community-powered social networks (يبشر Web3 بشبكات اجتماعية لامركزية مدعومة من المجتمع](https://venturebeat.com/2022/02/26/web3-holds-the-promise-of-decentralized-community-powered-social-networks/) - _سوميت جوش_
 - [An Overview of the Blockchain Social Media Landscape (نظرة عامة على وسائل التواصل الاجتماعي لسلسلة الكتلة](https://www.gemini.com/cryptopedia/blockchain-social-media-decentralized-social-media) — _Gemini Cryptopedia_
 - [How Blockchain Can Solve Social Media Privacy (كيف يمكن لسلسلة الكتل أن تحل مشكلة الخصوصية في وسائل التواصل الاجتماعي)](https://www.investopedia.com/news/ethereum-blockchain-social-media-privacy-problem-linkedin-indorse/) — _برابلين باجباي_
-- [Social Media Networks Are Coming To The Blockchain (انتقال وسائل التواصل الاجتماعي إلى سلسلة الكتل](https://businesstechguides.co/what-are-decentralized-social-networks) — _إيمانويل أوسيكا_
+- [Social Media Networks Are Coming To The Blockchain (انتقال وسائل التواصل الاجتماعي إلى سلسلة الكتل](https://eawosika.com/what-are-decentralized-social-networks) — _إيمانويل أوسيكا_
 - [Sufficient Decentralization for Social Networks (لامركزية كافية للشبكات الاجتماعية](https://www.varunsrinivasan.com/2022/01/11/sufficient-decentralization-for-social-networks) _فارون سرينيفاسان_
 
 ### مقاطع الفيديو {#videos}

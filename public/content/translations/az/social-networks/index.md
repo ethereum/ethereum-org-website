@@ -111,7 +111,7 @@ Rinkeby test şəbəkəsində beta mərhələsini başa vurduqdan sonra, Reddit 
 - [Web3 mərkəzləşdirilməmiş, icma dəstəkli sosial şəbəkələrə inam verir](https://venturebeat.com/2022/02/26/web3-holds-the-promise-of-decentralized-community-powered-social-networks/) — _Sumit Ghosh_
 - [Blockchain Sosial Media Landşaftına Baxış](https://www.gemini.com/cryptopedia/blockchain-social-media-decentralized-social-media) — *Gemini Kriptopediyası*
 - [Blokçeyn Sosial Media Məxfiliyini Necə Həll edə bilər](https://www.investopedia.com/news/ethereum-blockchain-social-media-privacy-problem-linkedin-indorse/) — _Prableen Bajpai_
-- [Sosial Media Şəbəkələri Blockchain-ə gəlir](https://businesstechguides.co/what-are-decentralized-social-networks) — _Emmanuel Awosika_
+- [Sosial Media Şəbəkələri Blockchain-ə gəlir](https://eawosika.com/what-are-decentralized-social-networks) — _Emmanuel Awosika_
 - [Sosial şəbəkələr üçün kifayət qədər mərkəzsizləşdirmə](https://www.varunsrinivasan.com/2022/01/11/sufficient-decentralization-for-social-networks) — _Varun Srinivasan_
 
 
