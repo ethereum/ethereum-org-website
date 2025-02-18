@@ -47,6 +47,7 @@ To run the minesweeper example:
    ```sh copy
    cd 20240901-secret-state/
    pnpm install
+   npm install -g mprocs
    ```
 
    If Foundry was installed as part of `pnpm install`, you need to restart the command-line shell.
@@ -108,7 +109,7 @@ These flows coordinate execution between the client, the onchain component, and 
 
 #### Initialization {#initialization-flow}
 
-When you run `pnpm dev`, these steps happen:
+When you run `mprocs`, these steps happen:
 
 1. [`mprocs`](https://github.com/pvolok/mprocs) runs four components:
 
