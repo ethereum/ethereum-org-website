@@ -515,7 +515,7 @@ Se prevedi di interrogare un oracolo sulla catena per conoscere i prezzi dei ben
 
 - **[Cyfrin](https://cyfrin.io)**: _motore di sicurezza per Web3, che incuba la criptosicurezza tramite prodotti e servizi di controllo dei contratti intelligenti._
 
-- **[ImmuneBytes](https://www.immunebytes.com//smart-contract-audit/)**: _studio di sicurezza del Web3 che offre controlli di sicurezza per i sistemi della blockchain tramite un team di revisori esperti e strumenti di prim'ordine._
+- **[ImmuneBytes](https://immunebytes.com/smart-contract-audit/)**: _studio di sicurezza del Web3 che offre controlli di sicurezza per i sistemi della blockchain tramite un team di revisori esperti e strumenti di prim'ordine._
 
 - **[Oxorio](https://oxor.io/)**: _servizi di controllo dei contratti intelligenti e sicurezza della blockchain con esperienza nell'EVM, in Solidity, tecnologie tra catene per cripto-aziende e progetti di DeFi._
 

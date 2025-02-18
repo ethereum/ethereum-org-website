@@ -515,7 +515,7 @@ contract Attack {
 
 - **[Cyfrin](https://cyfrin.io)** - _Web3 安全巨頭，透過產品和智慧型合約審核服務來發展加密安全。_
 
-- **[ImmuneBytes](https://www.immunebytes.com//smart-contract-audit/)** - _Web3 安全公司，透過經驗豐富的審核者團隊和一流工具，為區塊鏈系統提供安全審核。_
+- **[ImmuneBytes](https://immunebytes.com/smart-contract-audit/)** - _Web3 安全公司，透過經驗豐富的審核者團隊和一流工具，為區塊鏈系統提供安全審核。_
 
 - **[Oxorio](https://oxor.io/)** - _智慧型合約審核和區塊鏈安全服務，在以太坊虛擬機、Solidity、零知識、加密公司和去中心化金融專案的跨鏈技術方面擁有深厚的專業知識。_
 
