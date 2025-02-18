@@ -18,7 +18,7 @@ Comece lendo sobre a missão e os valores da ethereum.org no nosso [código de c
 - Assista ou participe das [reuniões do núcleo de desenvolvedores](https://www.youtube.com/@EthereumProtocol)
 - [Lista de desejos do Programa de apoio ao ecossistema](https://esp.ethereum.foundation/wishlist/): ferramentas, documentação e áreas de infraestrutura onde o Programa de suporte ao ecossistema do Ethereum está ativamente buscando aplicativos
 - [Web3Bridge](https://www.web3bridge.com/): participe da promissora comunidade da web3 em sua iniciativa de identificar, treinar e oferecer suporte a centenas de desenvolvedores e membros da comunidade em toda a África
-- Junte-se ao [Discord Ethereum Cat Herders](https://discord.io/EthCatHerders)
+- Junte-se ao [Discord Ethereum Cat Herders](https://discord.gg/Nz6rtfJ8Cu)
 
 ## Pesquisadores e acadêmicos <Emoji text=":mag:" size={1} /> {#researchers-and-academics}
 
@@ -32,7 +32,7 @@ Você tem formação em matemática, criptografia ou economia? Talvez tenha inte
   - Saiba como se tornar um [editor de EIP](https://eips.ethereum.org/EIPS/eip-5069)
     - Você pode fazer a revisão por pares de EIPs agora mesmo! Consulte os [PRs abertos com a tag `e-review`](https://github.com/ethereum/EIPs/pulls?q=is%3Apr+is%3Aopen+label%3Ae-review). Envie feedback técnico por meio do link `discussion-to`.
   - Participe da [governança de EIP](https://github.com/ethereum-cat-herders/EIPIP)
-    - Junte-se ao [Discord Ethereum Cat Herders](https://discord.io/EthCatHerders)
+    - Junte-se ao [Discord Ethereum Cat Herders](https://discord.gg/Nz6rtfJ8Cu)
   - [Mais sobre EIPs](/eips/)
 - [Challenges.ethereum.org](https://challenges.ethereum.org/): uma série de pesquisas com recompensas de alto valor. Você pode ganhar >US$ 100.000
 - [Ethresear.ch](https://ethresear.ch): fórum principal de pesquisa do Ethereum e o fórum mais influente do mundo sobre criptoeconomia
