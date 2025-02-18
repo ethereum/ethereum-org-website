@@ -1,4 +1,4 @@
-import { useRef } from "react"
+import { useRef, useState } from "react"
 import type { SwiperRef } from "swiper/react"
 
 import ConnectYourWallet from "@/components/StartWithEthereumFlow/ConnectYourWallet"
@@ -10,6 +10,16 @@ import { cn } from "@/lib/utils/cn"
 
 const StartWithEthereumFlow = () => {
   const swiperRef = useRef<SwiperRef>(null)
+  const [activeIndex, setActiveIndex] = useState(1)
+  const [totalSlides, setTotalSlides] = useState(0)
+
+  const handleInit = (swiper) => {
+    setTotalSlides(swiper.slides.length)
+  }
+
+  const handleSlideChange = (swiper) => {
+    setActiveIndex(swiper.activeIndex + 1)
+  }
 
   const handleNext = () => {
     swiperRef.current?.swiper.slideNext()
@@ -22,7 +32,7 @@ const StartWithEthereumFlow = () => {
         "w-screen",
         "px-8",
         "[&_.swiper-slide]:overflow-visible [&_.swiper-slide]:rounded-2xl",
-        "[&_.swiper-slide]:h-[386px]",
+        "[&_.swiper-slide]:min-h-[386px]",
         "[&_.swiper-slide-shadow]:!bg-transparent",
         "[&_.swiper]:mt-4 [&_.swiper]:!flex [&_.swiper]:h-fit [&_.swiper]:w-full [&_.swiper]:flex-col [&_.swiper]:items-center"
       )}
@@ -38,6 +48,8 @@ const StartWithEthereumFlow = () => {
         allowTouchMove={false}
         simulateTouch={false}
         preventInteractionOnTransition={true}
+        onInit={handleInit}
+        onSlideChange={handleSlideChange}
       >
         <SwiperSlide
           className={cn(
@@ -47,8 +59,8 @@ const StartWithEthereumFlow = () => {
         >
           <DownloadAWallet
             handleNext={handleNext}
-            stepIndex={swiperRef.current?.swiper.activeIndex ?? 0}
-            totalSteps={swiperRef.current?.swiper.slides.length ?? 0}
+            stepIndex={activeIndex}
+            totalSteps={totalSlides}
           />
         </SwiperSlide>
         <SwiperSlide
