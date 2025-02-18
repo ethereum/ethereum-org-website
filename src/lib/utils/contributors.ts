@@ -9,6 +9,7 @@ import {
   getCrowdinContributors,
 } from "./crowdin"
 import { getLastModifiedDate } from "./gh"
+import { getLocaleTimestamp } from "./time"
 
 import { fetchAndCacheGitContributors } from "@/lib/api/fetchGitHistory"
 
@@ -41,4 +42,22 @@ export const getFileContributorInfo = async (
     : [...crowdinContributors, ...gitContributors]
 
   return { contributors, lastUpdatedDate }
+}
+
+export const getPageContributorInfo = async (
+  pagePath: string,
+  locale: Lang,
+  cache: CommitHistory
+) => {
+  const gitContributors = await fetchAndCacheGitContributors(
+    join("src/pages/", pagePath),
+    cache
+  )
+
+  const lastEditLocaleTimestamp = getLocaleTimestamp(
+    locale,
+    gitContributors[0].date as string
+  )
+
+  return { contributors: gitContributors, lastEditLocaleTimestamp }
 }
