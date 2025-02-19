@@ -57,6 +57,7 @@ const ResourcesPage = () => {
       <PageMetadata
         title={t("page-resources-meta-title")}
         description={t("page-resources-meta-description")}
+        image="/images/heroes/guides-hub-hero.jpg"
       />
 
       <HubHero
