@@ -1,5 +1,4 @@
 import TsconfigPathsPlugin from "tsconfig-paths-webpack-plugin"
-import { propNames } from "@chakra-ui/react"
 import type { StorybookConfig } from "@storybook/nextjs"
 
 /**
@@ -41,11 +40,6 @@ const config: StorybookConfig = {
   docs: {
     autodocs: "tag",
   },
-  refs: {
-    "@chakra-ui/react": {
-      disable: true,
-    },
-  },
   webpackFinal: async (config) => {
     config.module = config.module || {}
     config.module.rules = config.module.rules || []
@@ -79,23 +73,6 @@ const config: StorybookConfig = {
   typescript: {
     reactDocgenTypescriptOptions: {
       shouldExtractLiteralValuesFromEnum: true,
-      /**
-       * For handling bloated controls table of Chakra Props
-       *
-       * https://github.com/chakra-ui/chakra-ui/issues/2009#issuecomment-852793946
-       */
-      propFilter: (prop) => {
-        const excludedPropNames = propNames.concat([
-          "as",
-          "apply",
-          "sx",
-          "__css",
-        ])
-        const isStyledSystemProp = excludedPropNames.includes(prop.name)
-        const isHTMLElementProp =
-          prop.parent?.fileName.includes("node_modules") ?? false
-        return !(isStyledSystemProp || isHTMLElementProp)
-      },
     },
 
     reactDocgen: "react-docgen-typescript",

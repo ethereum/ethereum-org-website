@@ -561,7 +561,6 @@ const HomePage = ({
                 </Accordion>
               </WindowBox>
               {isModalOpen && (
-                // TODO: Migrate CodeModal, CodeBlock from Chakra-UI to tailwind/shad-cn
                 <CodeModal
                   isOpen={isModalOpen}
                   setIsOpen={setModalOpen}
