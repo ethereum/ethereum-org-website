@@ -3,7 +3,12 @@ import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import type { ComponentProps, HTMLAttributes } from "react"
 
-import type { BasePageProps, ChildOnlyProp, Lang } from "@/lib/types"
+import type {
+  BasePageProps,
+  ChildOnlyProp,
+  CommitHistory,
+  Lang,
+} from "@/lib/types"
 
 import ActionCard from "@/components/ActionCard"
 import CalloutBanner from "@/components/CalloutBanner"
@@ -12,6 +17,7 @@ import CardList from "@/components/CardList"
 import EthPriceCard from "@/components/EthPriceCard"
 import EthVideo from "@/components/EthVideo"
 import FeedbackCard from "@/components/FeedbackCard"
+import FileContributors from "@/components/FileContributors"
 import HorizontalCard from "@/components/HorizontalCard"
 import { Image } from "@/components/Image"
 import InfoBanner from "@/components/InfoBanner"
@@ -26,6 +32,7 @@ import InlineLink from "@/components/ui/Link"
 import { ListItem, UnorderedList } from "@/components/ui/list"
 
 import { cn } from "@/lib/utils/cn"
+import { getPageContributorInfo } from "@/lib/utils/contributors"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLocaleTimestamp } from "@/lib/utils/time"
@@ -182,16 +189,23 @@ export const getStaticProps = (async ({ locale }) => {
     lastDeployDate
   )
 
+  const commitHistoryCache: CommitHistory = {}
+
+  const { contributors, lastEditLocaleTimestamp } =
+    await getPageContributorInfo("eth.tsx", locale as Lang, commitHistoryCache)
+
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
       contentNotTranslated,
       lastDeployLocaleTimestamp,
+      contributors,
+      lastEditLocaleTimestamp,
     },
   }
 }) satisfies GetStaticProps<BasePageProps>
 
-const EthPage = () => {
+const EthPage = ({ contributors, lastEditLocaleTimestamp }) => {
   const { t } = useTranslation("page-eth")
 
   const tokens = [
@@ -472,6 +486,11 @@ const EthPage = () => {
         <StandaloneQuizWidget quizKey="what-is-ether" />
       </Content>
       <Content>
+        <FileContributors
+          className="my-10 border-t"
+          contributors={contributors}
+          lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        />
         <FeedbackCard />
       </Content>
     </Page>
