@@ -1,6 +1,5 @@
 import { useRouter } from "next/router"
 import type { HTMLAttributes } from "react"
-import { Badge } from "@chakra-ui/react"
 
 import type { ChildOnlyProp } from "@/lib/types"
 import type { MdPageContent, TutorialFrontmatter } from "@/lib/interfaces"
@@ -78,7 +77,6 @@ export const tutorialsComponents = {
   kbd: KBD,
   pre: Codeblock,
   ...mdxTableComponents,
-  Badge,
   ButtonLink,
   CallToContribute,
   Card,

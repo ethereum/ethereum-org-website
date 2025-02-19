@@ -1,6 +1,7 @@
-import * as React from "react"
-import { Box } from "@chakra-ui/react"
+import type { CSSProperties } from "react"
 import { Meta, StoryObj } from "@storybook/react"
+
+import { screens } from "@/lib/utils/screen"
 
 import { getTranslation } from "@/storybook-utils"
 
@@ -23,9 +24,12 @@ const meta = {
   },
   decorators: [
     (Story) => (
-      <Box maxW="container.2xl" mx="auto">
+      <div
+        style={{ "--hero-decorator-max-w": screens["2xl"] } as CSSProperties}
+        className="mx-auto max-w-[var(--hero-decorator-max-w)]"
+      >
         <Story />
-      </Box>
+      </div>
     ),
   ],
 } satisfies Meta<typeof HubHeroComponent>

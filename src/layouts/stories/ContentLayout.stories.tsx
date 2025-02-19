@@ -1,5 +1,6 @@
-import { Center } from "@chakra-ui/react"
 import type { Meta, StoryObj } from "@storybook/react"
+
+import { Center } from "@/components/ui/flex"
 
 import { langViewportModes } from "../../../.storybook/modes"
 import { ContentLayout as ContentLayoutComponent } from "../ContentLayout"
@@ -29,7 +30,7 @@ export default meta
 export const ContentLayout: StoryObj<typeof meta> = {
   args: {
     children: (
-      <Center h="497px" border="2px dashed" borderColor="primary.base">
+      <Center className="h-[497px] border-2 border-dashed border-primary">
         Content Here
       </Center>
     ),
@@ -66,7 +67,7 @@ export const ContentLayout: StoryObj<typeof meta> = {
     ],
     lastEditLocaleTimestamp: "MM DD, YY",
     heroSection: (
-      <Center h="400px" border="2px dashed" borderColor="primary.base">
+      <Center className="h-[400px] border-2 border-dashed border-primary">
         Hero section
       </Center>
     ),
