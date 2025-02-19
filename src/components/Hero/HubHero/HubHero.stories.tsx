@@ -1,7 +1,4 @@
-import type { CSSProperties } from "react"
 import { Meta, StoryObj } from "@storybook/react"
-
-import { screens } from "@/lib/utils/screen"
 
 import { getTranslation } from "@/storybook-utils"
 
@@ -24,10 +21,7 @@ const meta = {
   },
   decorators: [
     (Story) => (
-      <div
-        style={{ "--hero-decorator-max-w": screens["2xl"] } as CSSProperties}
-        className="mx-auto max-w-[var(--hero-decorator-max-w)]"
-      >
+      <div className="mx-auto max-w-2xl">
         <Story />
       </div>
     ),

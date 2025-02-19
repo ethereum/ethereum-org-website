@@ -2,11 +2,7 @@ import { GetStaticProps } from "next"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import type {
-  ComponentProps,
-  ComponentPropsWithRef,
-  CSSProperties,
-} from "react"
+import type { ComponentProps, ComponentPropsWithRef } from "react"
 
 import type { BasePageProps, ChildOnlyProp, Lang } from "@/lib/types"
 
@@ -30,7 +26,6 @@ import { List, ListItem } from "@/components/ui/list"
 import { cn } from "@/lib/utils/cn"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
-import { screens } from "@/lib/utils/screen"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
@@ -79,13 +74,7 @@ const CardContainer = ({ className, ...props }: FlexProps) => (
 )
 
 const ProblemCardContainer = (props: ChildOnlyProp) => {
-  return (
-    <CardContainer
-      style={{ "--container-max-w": screens.lg } as CSSProperties}
-      className="mx-auto max-w-[var(--container-max-w)]"
-      {...props}
-    />
-  )
+  return <CardContainer className="mx-auto max-w-lg" {...props} />
 }
 
 const CentreCard = (props: ComponentPropsWithRef<typeof Card>) => (
