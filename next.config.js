@@ -53,6 +53,10 @@ module.exports = (phase, { defaultConfig }) => {
           issuer: fileLoaderRule.issuer,
           resourceQuery: { not: [...fileLoaderRule.resourceQuery.not, /url/] }, // exclude if *.svg?url
           use: ["@svgr/webpack"],
+        },
+        {
+          test: /\.md$/,
+          use: ["raw-loader"],
         }
       )
 
