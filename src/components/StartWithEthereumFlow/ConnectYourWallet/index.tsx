@@ -1,3 +1,7 @@
+import { useAccount } from "wagmi"
+import { ConnectButton } from "@rainbow-me/rainbowkit"
+
+import Emoji from "@/components/Emoji"
 import { Image } from "@/components/Image"
 import { Button } from "@/components/ui/buttons/Button"
 import { Tag } from "@/components/ui/tag"
@@ -13,8 +17,10 @@ const ConnectYourWallet = ({
   stepIndex: number
   totalSteps: number
 }) => {
+  const { isConnected } = useAccount()
+
   return (
-    <div className="flex flex-col items-center gap-8 lg:flex-row lg:gap-24">
+    <div className="flex flex-col items-center gap-4 lg:flex-row lg:gap-24">
       <div className="flex flex-1 flex-col gap-14">
         <div className="flex flex-col gap-5">
           <div>
@@ -28,16 +34,55 @@ const ConnectYourWallet = ({
             projects on Ethereum. No separate accounts needed.
           </p>
         </div>
-        <div className="hidden flex-col lg:flex">
-          <Button onClick={handleNext}>Sign in with Ethereum</Button>
+        <div className="hidden flex-col items-center justify-center gap-4 lg:flex">
+          {isConnected && <Emoji text="🎉" className="text-[72px]" />}
+          {isConnected && (
+            <p className="text-center text-md font-bold">
+              This is your account
+            </p>
+          )}
+          <ConnectButton
+            showBalance={{
+              smallScreen: true,
+              largeScreen: true,
+            }}
+          />
+          {isConnected && <Button onClick={handleNext}>Lets continue</Button>}
         </div>
       </div>
-      <div className="flex flex-1 flex-col gap-8">
+      <div className="flex flex-1 flex-col gap-4 lg:gap-8">
         <div className="mx-auto">
-          <Image src={FinanceImage} alt="Finance" width={370} height={370} />
+          <Image
+            className="hidden lg:block"
+            src={FinanceImage}
+            alt="Finance"
+            width={370}
+            height={370}
+          />
+          {!isConnected && (
+            <Image
+              className="block lg:hidden"
+              src={FinanceImage}
+              alt="Finance"
+              width={200}
+              height={200}
+            />
+          )}
         </div>
-        <div className="flex flex-col lg:hidden">
-          <Button onClick={handleNext}>Sign in with Ethereum</Button>
+        <div className="flex flex-col items-center justify-center gap-4 lg:hidden">
+          {isConnected && <Emoji text="🎉" className="text-[72px]" />}
+          {isConnected && (
+            <p className="text-center text-md font-bold">
+              This is your account
+            </p>
+          )}
+          <ConnectButton
+            showBalance={{
+              smallScreen: true,
+              largeScreen: true,
+            }}
+          />
+          {isConnected && <Button onClick={handleNext}>Lets continue</Button>}
         </div>
       </div>
     </div>

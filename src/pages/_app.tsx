@@ -1,7 +1,11 @@
 import { useEffect } from "react"
+import { useRouter } from "next/router"
 import { appWithTranslation } from "next-i18next"
+import { WagmiProvider } from "wagmi"
 import { TooltipProvider } from "@radix-ui/react-tooltip"
+import { type Locale, RainbowKitProvider } from "@rainbow-me/rainbowkit"
 import { init } from "@socialgouv/matomo-next"
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
 
 import { AppPropsWithLayout } from "@/lib/types"
 
@@ -9,9 +13,14 @@ import ThemeProvider from "@/components/ThemeProvider"
 
 import "@/styles/global.css"
 
+import { rainbowkitConfig } from "@/config/rainbow-kit"
 import { BaseLayout } from "@/layouts/BaseLayout"
 
+const queryClient = new QueryClient()
+
 const App = ({ Component, pageProps }: AppPropsWithLayout) => {
+  const { locale } = useRouter()
+
   useEffect(() => {
     if (!process.env.IS_PREVIEW_DEPLOY) {
       init({
@@ -28,13 +37,19 @@ const App = ({ Component, pageProps }: AppPropsWithLayout) => {
   return (
     <ThemeProvider>
       <TooltipProvider>
-        <BaseLayout
-          contentIsOutdated={!!pageProps.frontmatter?.isOutdated}
-          contentNotTranslated={pageProps.contentNotTranslated}
-          lastDeployLocaleTimestamp={pageProps.lastDeployLocaleTimestamp}
-        >
-          {getLayout(<Component {...pageProps} />)}
-        </BaseLayout>
+        <WagmiProvider config={rainbowkitConfig}>
+          <QueryClientProvider client={queryClient}>
+            <RainbowKitProvider locale={locale as Locale}>
+              <BaseLayout
+                contentIsOutdated={!!pageProps.frontmatter?.isOutdated}
+                contentNotTranslated={pageProps.contentNotTranslated}
+                lastDeployLocaleTimestamp={pageProps.lastDeployLocaleTimestamp}
+              >
+                {getLayout(<Component {...pageProps} />)}
+              </BaseLayout>
+            </RainbowKitProvider>
+          </QueryClientProvider>
+        </WagmiProvider>
       </TooltipProvider>
     </ThemeProvider>
   )
