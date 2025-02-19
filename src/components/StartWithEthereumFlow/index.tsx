@@ -81,7 +81,7 @@ const StartWithEthereumFlow = () => {
             "border border-[#d7e1fc] bg-gradient-to-b p-12 dark:border-[#192853] dark:bg-gradient-to-t"
           )}
         >
-          <LetUseSomeApps />
+          <LetUseSomeApps stepIndex={activeIndex} totalSteps={totalSlides} />
         </SwiperSlide>
       </Swiper>
     </SwiperContainer>

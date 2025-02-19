@@ -23,7 +23,7 @@ const ConnectYourWallet = ({
             </Tag>
           </div>
           <h2 className="text-3xl font-bold">Connect Your Wallet</h2>
-          <p className="text-body-medium">
+          <p>
             You can use your new wallet as a single account in all apps and
             projects on Ethereum. No separate accounts needed.
           </p>

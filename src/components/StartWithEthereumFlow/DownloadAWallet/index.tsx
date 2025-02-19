@@ -29,7 +29,7 @@ const DownloadAWallet = ({
             </Tag>
           </div>
           <h2 className="text-3xl font-bold">Download a wallet</h2>
-          <p className="text-body-medium">
+          <p>
             Wallet is an app that allows you to receive, send cryptocurrencies
             and manage your Ethereum account.
           </p>
