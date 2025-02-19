@@ -69,6 +69,40 @@ To run the minesweeper example:
 
    Note that the startup takes a long time. To see the progress, first use the down arrow to scroll to the _contracts_ tab to see the MUD contracts being deployed. When you get the message _Waiting for file changes…_, the contracts are deployed and further progress will happen in the _server_ tab. There, you wait until you get the message _Verifier address: 0x...._.
 
+   If this step is successful, you will see the `mprocs` screen, with the different processes on the left and the console output for the currently selected process on the right.
+
+   ![The mprocs screen](./mprocs.png)
+
+   If there is a problem with `mprocs`, you can run the four processes manually, each in its own command line window:
+
+   - **Anvil**
+
+     ```sh
+     cd packages/contracts
+     anvil --base-fee 0 --block-time 2
+     ```
+
+   - **Contracts** 
+
+     ```sh
+     cd packages/contracts
+     pnpm mud dev-contracts --rpc http://127.0.0.1:8545
+     ```
+
+   - **Server**
+
+     ```sh
+     cd packages/server
+     pnpm start
+     ```  
+
+   - **Client**
+
+     ```sh
+     cd packages/client
+     pnpm run dev
+     ```  
+
 6. Now you can browse to [the client](http://localhost:3000), click **New Game**, and start playing.
 
 ### Tables {#tables}
