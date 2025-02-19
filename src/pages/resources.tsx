@@ -1,5 +1,9 @@
-// TODO: Refactor for intl
+import { GetStaticProps } from "next"
+import { useTranslation } from "next-i18next"
+import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { FaGithub } from "react-icons/fa6"
+
+import type { BasePageProps, Lang } from "@/lib/types"
 
 import { HubHero } from "@/components/Hero"
 import StackIcon from "@/components/icons/stack.svg"
@@ -17,23 +21,48 @@ import { Button, ButtonLink } from "@/components/ui/buttons/Button"
 import { Section } from "@/components/ui/section"
 
 import { cn } from "@/lib/utils/cn"
+import { existsNamespace } from "@/lib/utils/existsNamespace"
+import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
+import { getLocaleTimestamp } from "@/lib/utils/time"
+import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import heroImg from "@/public/images/heroes/guides-hub-hero.jpg"
 
+export const getStaticProps = (async ({ locale }) => {
+  const requiredNamespaces = getRequiredNamespacesForPage("/resources")
+
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
+
+  const lastDeployDate = getLastDeployDate()
+  const lastDeployLocaleTimestamp = getLocaleTimestamp(
+    locale as Lang,
+    lastDeployDate
+  )
+
+  return {
+    props: {
+      ...(await serverSideTranslations(locale!, requiredNamespaces)),
+      contentNotTranslated,
+      lastDeployLocaleTimestamp,
+    },
+  }
+}) satisfies GetStaticProps<BasePageProps>
+
 const ResourcesPage = () => {
+  const { t } = useTranslation("page-resources")
   const resourceSections = useResources()
 
   return (
     <MainArticle className="relative flex flex-col">
       <PageMetadata
-        title="Dashboard of Ethereum Dashboards"
-        description="Dashboard of Ethereum Dashboards"
+        title={t("page-resources-meta-title")}
+        description={t("page-resources-meta-description")}
       />
 
       <HubHero
-        title="Resources"
-        header="Ethereum Dashboards"
-        description="We've gathered on the same page a extensive list of resources form the community to follow all the main topics on the vast Ethereum ecosystem"
+        title={t("page-resources-hero-title")}
+        header={t("page-resources-hero-header")}
+        description={t("page-resources-hero-description")}
         heroImg={heroImg}
       />
 
@@ -56,7 +85,7 @@ const ResourcesPage = () => {
                   size="sm"
                   className="my-auto h-fit text-nowrap rounded-full border-border-low-contrast px-4 py-1.5 font-normal uppercase text-body"
                 >
-                  <span className="max-md:hidden">Close</span> -
+                  <span className="max-md:hidden">{t("common:close")}</span> -
                 </Button>
               </div>
             </AccordionTrigger>
@@ -88,11 +117,8 @@ const ResourcesPage = () => {
       </Accordion>
 
       <div className="align-center mx-auto flex w-fit flex-col gap-4 py-16 text-center">
-        <p className="font-bold">Find more great resources on</p>
-        <ButtonLink
-          href="https://ethereumdashboards.com"
-          className="rounded-lg"
-        >
+        <p className="font-bold">{t("page-resources-find-more")}</p>
+        <ButtonLink href="https://ethereumdashboards.com" size="lg">
           https://ethereumdashboards.com
         </ButtonLink>
       </div>
@@ -107,20 +133,16 @@ const ResourcesPage = () => {
       >
         <div className="mb-12 flex flex-col gap-y-8 rounded-4xl bg-radial-a px-8 py-12 lg:mb-32 xl:mb-36">
           <div className="flex flex-col gap-y-4 text-center">
-            <h2>Contribute</h2>
-            <p>
-              This dashboard is a living page that requires frequent updates.
-              Help find the best resources to give an overview of the Ethereum
-              ecosystem.
-            </p>
+            <h2>{t("page-resources-contribute-title")}</h2>
+            <p>{t("page-resources-contribute-description")}</p>
           </div>
           <div className="mx-auto grid grid-cols-1 gap-16 md:grid-cols-2">
-            <Button variant="outline" isSecondary>
-              Suggest a resource
-            </Button>
-            <Button variant="outline" isSecondary>
-              <FaGithub /> Found a bug
-            </Button>
+            <ButtonLink href="http" variant="outline" isSecondary>
+              {t("page-resources-suggest-resource")}
+            </ButtonLink>
+            <ButtonLink href="" variant="outline" isSecondary>
+              <FaGithub /> {t("page-resources-found-bug")}
+            </ButtonLink>
           </div>
         </div>
       </Section>

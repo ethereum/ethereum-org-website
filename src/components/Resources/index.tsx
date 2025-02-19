@@ -34,8 +34,8 @@ export const ResourceItem = ({
     <div>
       <h3 className="text-lg">{title}</h3>
       <p>{description}</p>
-      <Tag asChild className="mt-1">
-        <Link href={href} className="normal-case">
+      <Tag asChild>
+        <Link href={href} className="mt-1 rounded-full normal-case">
           {href}
         </Link>
       </Tag>

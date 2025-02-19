@@ -1,4 +1,5 @@
-// TODO: Refactor for intl
+import { useTranslation } from "next-i18next"
+
 import type { DashboardBox, DashboardSection } from "./types"
 
 import IconBeaconchain from "@/public/images/resources/beaconcha-in.png"
@@ -41,119 +42,119 @@ const tempBigNumber = (
 )
 
 export const useResources = (): DashboardSection[] => {
+  const { t } = useTranslation("page-resources")
   const networkBoxes: DashboardBox[] = [
     {
-      title: "Ethereum Networks - Layer 2",
+      title: t("page-resources-network-layer2-title"),
       metric: tempBigNumber,
       items: [
         {
           title: "L2 Beat",
-          description:
-            "L2BEAT was created to provide transparent and verifiable insights into emerging layer two (L2) technologies which, in line with the rollup-centric Ethereum scaling roadmap, are aimed at scaling Ethereum.",
+          description: t("page-resources-network-layer2-l2beat-description"),
           href: "https://l2beat.com/",
           imgSrc: IconL2beat,
         },
         {
           title: "Growthepie",
-          description:
-            "Mastering Ethereum Layer 2s. Your gateway to curated analytics and knowledge.",
+          description: t(
+            "page-resources-network-layer2-growthepie-description"
+          ),
           href: "https://www.growthepie.xyz/",
           imgSrc: IconGrowthepie,
         },
         {
           title: "L2 Fees",
-          description: "How much does it cost to use Layer 2?",
+          description: t("page-resources-network-layer2-l2fees-description"),
           href: "https://l2fees.info/",
           imgSrc: IconEthGlyphBlueCircle,
         },
       ],
     },
     {
-      title: "Block explorers",
+      title: t("page-resources-block-explorers-title"),
       metric: "todo",
       items: [
         {
           title: "Blockscout",
-          description: "Open source block explorer better than Etherscan.",
+          description: t(
+            "page-resources-block-explorers-blockscout-description"
+          ),
           href: "https://ethereum.blockscout.com",
           imgSrc: IconBlockscout,
         },
         {
           title: "Etherscan",
-          description:
-            "Etherscan is a block explorer and analytics platform for Ethereum, a decentralized smart contracts platform.",
+          description: t(
+            "page-resources-block-explorers-etherscan-description"
+          ),
           href: "https://etherscan.io",
           imgSrc: IconEtherscan,
         },
         {
           title: "Beaconcha.in",
-          description:
-            "Open source Ethereum explorer showing the Ethereum Mainnet 🚀.",
+          description: t(
+            "page-resources-block-explorers-beaconchain-description"
+          ),
           href: "https://beaconcha.in",
           imgSrc: IconBeaconchain,
         },
         {
           title: "Txcity.io",
-          description:
-            "A funny visualizer of the Ethereum blocks in real-time.",
+          description: t("page-resources-block-explorers-txcity-description"),
           href: "https://txcity.io/",
           imgSrc: IconEthGlyphBlueCircle,
         },
       ],
     },
     {
-      title: "ETH the asset",
+      title: t("page-resources-eth-asset-title"),
       metric: "todo - semi-circle progress chart",
       items: [
         {
           title: "Etherealize Dashboard",
-          description:
-            "Ethereum is the largest, most secure, and most open blockchain for the world to use. And Ethereum is open for business.",
+          description: t("page-resources-eth-asset-etherealize-description"),
           href: "https://dashboard.etherealize.io/",
           imgSrc: IconEthGlyphBlueCircle,
         },
         {
           title: "Ultra Sound Money",
-          description:
-            "Ultra sound money is an Ethereum meme focusing on the likely decrease of the ETH supply.",
+          description: t("page-resources-eth-asset-ultrasound-description"),
           href: "https://ultrasound.money/",
           imgSrc: IconUltrasoundMoney,
         },
         {
           title: "ETH is Money",
-          description:
-            "ETH is money is a tribe of believers who hold, stake, and propagate ETH as money.",
+          description: t("page-resources-eth-asset-ethismoney-description"),
           href: "https://www.ethismoney.xyz/",
           imgSrc: IconEthGlyphBlueCircle,
         },
         {
           title: "Ethereum Now",
-          description:
-            "Ethernow enables you to see what is happening at the core of Ethereum, in real-time. Go hands-on now.",
+          description: t("page-resources-eth-asset-ethernow-description"),
           href: "https://www.ethernow.xyz",
           imgSrc: IconBlocknative,
         },
       ],
     },
     {
-      title: "Gas",
+      title: t("page-resources-gas-title"),
       metric: "todo",
       items: [
         {
           title: "Ethereum Gas Tracker",
-          description: "Track all the KPIs on gas.",
+          description: t("page-resources-gas-etherscan-description"),
           href: "https://etherscan.io/gastracker",
           imgSrc: IconEthGlyphBlueCircle,
         },
         {
           title: "Blocknative Gas Estimator",
-          description: "Web3's most accurate gas fee prediction.",
+          description: t("page-resources-gas-blocknative-description"),
           href: "https://www.blocknative.com/gas-estimator",
           imgSrc: IconBlocknative,
         },
         {
           title: "GasFees.io",
-          description: "Gas costs data tracker for Ethereum networks.",
+          description: t("page-resources-gas-gasfees-description"),
           href: "https://www.gasfees.io/",
           imgSrc: IconEthGlyphBlueCircle,
         },
@@ -163,121 +164,116 @@ export const useResources = (): DashboardSection[] => {
 
   const usingBoxes: DashboardBox[] = [
     {
-      title: "DeFi",
+      title: t("page-resources-defi-title"),
       metric: tempBigNumber,
       items: [
         {
           title: "DeFi Llama",
-          description:
-            "DefiLlama is the largest TVL aggregator for DeFi (Decentralized Finance).",
+          description: t("page-resources-defi-defillama-description"),
           href: "https://defillama.com",
           imgSrc: IconDefiLlama,
         },
         {
           title: "DeFi Market Cap",
-          description: "Top 100 DeFi tokens by market capitalization.",
+          description: t("page-resources-defi-defimarketcap-description"),
           href: "https://defimarketcap.io",
           imgSrc: IconDefiMarketCap,
         },
         {
           title: "EigenPhi",
-          description:
-            "Wanna understand DeFi transactions and trading strategies?",
+          description: t("page-resources-defi-eigenphi-description"),
           href: "https://www.eigenphi.io",
           imgSrc: IconEigenphi,
         },
         {
           title: "DeFiScan",
-          description:
-            "Verifiable insights into the maturity and risks of DeFi.",
+          description: t("page-resources-defi-defiscan-description"),
           href: "https://defiscan.info",
           imgSrc: IconDefiScan,
         },
       ],
     },
     {
-      title: "Stablecoins",
+      title: t("page-resources-stablecoins-title"),
       metric: tempBigNumber,
       items: [
         {
           title: "stablecoins.wtf",
-          description:
-            "The purpose of this website is to educate degens about stablecoins.",
+          description: t(
+            "page-resources-stablecoins-stablecoinswtf-description"
+          ),
           href: "https://stablecoins.wtf/",
           imgSrc: IconStablecoinsWtf,
         },
         {
           title: "Visa Onchain Analytics Dashboard",
-          description:
-            "The Visa Onchain Analytics Dashboard showcases how fiat-backed stablecoins move via public blockchains globally.",
+          description: t("page-resources-stablecoins-visa-description"),
           href: "https://visaonchainanalytics.com",
           imgSrc: IconVisaOnchainAnalytics,
         },
         {
           title: "Real World Assets",
-          description:
-            "Explore the activity behind crypto and asset-backed stablecoins.",
+          description: t("page-resources-stablecoins-rwa-description"),
           href: "https://app.rwa.xyz/stablecoins",
           imgSrc: IconRwa,
         },
       ],
     },
     {
-      title: "NFT",
+      title: t("page-resources-nft-title"),
       metric: "todo - bar chart",
       items: [
         {
           title: "Etherscan - Top NFT",
-          description: "Top NFT contracts.",
+          description: t("page-resources-nft-etherscan-description"),
           href: "https://etherscan.io/nft-top-contracts",
           imgSrc: IconEtherscan,
         },
         {
           title: "NFTgo",
-          description: "Real-time global NFT market data.",
+          description: t("page-resources-nft-nftgo-description"),
           href: "https://nftgo.io/macro/market-overview",
           imgSrc: IconNftgo,
         },
       ],
     },
     {
-      title: "Applications",
+      title: t("page-resources-applications-title"),
       items: [
         {
           title: "Ethereum Ecosystem",
-          description:
-            "Immerse yourself in the Ethereum ecosystem and get familiar with hundreds of popular apps & tools.",
+          description: t("page-resources-applications-ecosystem-description"),
           href: "https://www.ethereum-ecosystem.com/apps",
           imgSrc: IconEthGlyphEOrg,
         },
         {
           title: "Farcaster Network",
-          description: "Data from Farcaster usage.",
+          description: t("page-resources-applications-farcaster-description"),
           href: "https://www.farcaster.network",
           imgSrc: IconFarcaster,
         },
         {
           title: "Dapp Radar",
-          description:
-            "Explore top blockchain dapps, NFTs, games, DeFi projects, tokens, and airdrops. Track rankings, explore market insights, find trending projects, and unlock rewards with the world’s dapp store.",
+          description: t("page-resources-applications-dappradar-description"),
           href: "https://dappradar.com",
           imgSrc: IconEthGlyphBlueCircle,
         },
       ],
     },
     {
-      title: "Ethereum Adoption",
+      title: t("page-resources-adoption-title"),
       items: [
         {
           title: "Ethereum Adoption",
-          description: "Ethereum Censorability Monitor.",
+          description: t(
+            "page-resources-adoption-ethereumadoption-description"
+          ),
           href: "https://ethereumadoption.com",
           imgSrc: IconEthGlyphEOrg,
         },
         {
           title: "Cryptowerk",
-          description:
-            "Ethereum adoption analytics based on Cryptwerk merchants database - map, countries, companies, businesses, categories, rating.",
+          description: t("page-resources-adoption-cryptowerk-description"),
           href: "https://cryptwerk.com/analytics/ethereum/",
           imgSrc: IconCryptwerk,
         },
@@ -287,32 +283,30 @@ export const useResources = (): DashboardSection[] => {
 
   const scalingBoxes: DashboardBox[] = [
     {
-      title: "Ethereum Roadmap",
+      title: t("page-resources-roadmap-title"),
       metric: "todo",
       items: [
         {
           title: "Ethereum Roadmap",
-          description:
-            "Detailed visualization on Ethereum roadmap and the next network upgrade.",
+          description: t("page-resources-roadmap-ethroadmap-description"),
           href: "https://ethroadmap.com",
           imgSrc: IconEthGlyphRainbowFrame,
         },
       ],
     },
     {
-      title: "Blobs",
+      title: t("page-resources-blobs-title"),
       metric: "todo",
       items: [
         {
           title: "Blob Scan",
-          description: "Comprehensive blob scanner.",
+          description: t("page-resources-blobs-blobscan-description"),
           href: "https://blobscan.com",
           imgSrc: IconEthGlyphBlueCircle,
         },
         {
           title: "Blobsguru",
-          description:
-            "Ethereum Blobs Explorer: Analyze L2 transactions & EIP-4844 data.",
+          description: t("page-resources-blobs-blobsguru-description"),
           href: "https://blobs.guru",
           imgSrc: IconBlobsGuru,
         },
@@ -322,81 +316,84 @@ export const useResources = (): DashboardSection[] => {
 
   const resilienceBoxes: DashboardBox[] = [
     {
-      title: "Nodes",
+      title: t("page-resources-nodes-title"),
       metric: tempBigNumber,
       items: [
         {
           title: "Node Watch",
-          description: "Overview of the nodes.",
+          description: t("page-resources-nodes-nodewatch-description"),
           href: "https://nodewatch.io",
           imgSrc: IconNodewatch,
         },
         {
           title: "Ethernodes",
-          description: "Ethereum Mainnet statistics.",
+          description: t("page-resources-nodes-ethernodes-description"),
           href: "https://ethernodes.org",
           imgSrc: IconEthGlyphBlueCircle,
         },
         {
           title: "Etherscan - Ethereum Node Tracker",
-          description: "Daily.",
+          description: t("page-resources-nodes-etherscan-description"),
           href: "https://etherscan.io/nodetracker",
           imgSrc: IconEtherscan,
         },
         {
           title: "luckystaker.com",
-          description: "Daily proposal probability of getting a block.",
+          description: t("page-resources-nodes-luckystaker-description"),
           href: "https://luckystaker.com",
           imgSrc: IconEthstaker,
         },
         {
           title: "Ethereum Validator Queue",
-          description:
-            "A dashboard showing the Ethereum validator enter and exit queue and estimated wait times.",
+          description: t("page-resources-nodes-validatorqueue-description"),
           href: "https://www.validatorqueue.com",
           imgSrc: IconEthGlyphBlueCircle,
         },
       ],
     },
     {
-      title: "Network resilience",
+      title: t("page-resources-network-resilience-title"),
       items: [
         {
           title: "Neutrality Watch",
-          description: "Ethereum Censorability Monitor.",
+          description: t(
+            "page-resources-network-resilience-neutralitywatch-description"
+          ),
           href: "https://eth.neutralitywatch.com",
           imgSrc: IconEthGlyphBlueCircle,
         },
         {
           title: "Project Sunshine",
-          description:
-            "A dashboard to measure the health of Ethereum's decentralization.",
+          description: t(
+            "page-resources-network-resilience-sunshine-description"
+          ),
           href: "https://ethsunshine.com",
           imgSrc: IconEthGlyphEOrg,
         },
         {
           title: "Client Diversity",
-          description:
-            "Improve Ethereum's resilience by using a minority client.",
+          description: t(
+            "page-resources-network-resilience-clientdiversity-description"
+          ),
           href: "https://clientdiversity.org",
           imgSrc: IconEthGlyphEOrg,
         },
         {
           title: "Super Majority",
-          description:
-            "The supermajority client risk of the Ethereum execution layer, especially the client usage of staking services.",
+          description: t(
+            "page-resources-network-resilience-supermajority-description"
+          ),
           href: "https://supermajority.info",
           imgSrc: IconSupermajority,
         },
       ],
     },
     {
-      title: "Attestations",
+      title: t("page-resources-attestations-title"),
       items: [
         {
           title: "Ethereum Attestation Service",
-          description:
-            "EAS enables anyone to create and validate on-chain and off-chain attestations on Ethereum.",
+          description: t("page-resources-attestations-eas-description"),
           href: "https://easscan.org",
           imgSrc: IconEas,
         },
@@ -406,76 +403,70 @@ export const useResources = (): DashboardSection[] => {
 
   const privacySecurityBoxes: DashboardBox[] = [
     {
-      title: "Relays",
+      title: t("page-resources-relays-title"),
       metric: tempBigNumber,
       items: [
         {
           title: "Beaconchain Relays",
-          description:
-            "Validators can use relays to outsource their block production to entities specialized in extracting extra revenue.",
+          description: t("page-resources-relays-beaconchain-description"),
           href: "https://beaconcha.in/relays",
           imgSrc: IconBeaconchain,
         },
         {
           title: "Relay Landscape | Ethereum Mainnet",
-          description:
-            "MEV relay market share, total value relayed, value per block, and other statistics for Ethereum network.",
+          description: t("page-resources-relays-ratednetwork-description"),
           href: "https://explorer.rated.network/relays?network=mainnet",
           imgSrc: IconRatedNetwork,
         },
         {
           title: "Relay Scan",
-          description: "MEV-Boost analytics.",
+          description: t("page-resources-relays-relayscan-description"),
           href: "https://www.relayscan.io",
           imgSrc: IconRelayscan,
         },
       ],
     },
     {
-      title: "MEV",
+      title: t("page-resources-mev-title"),
       metric: tempBigNumber,
       items: [
         {
           title: "MEV-Boost Dashboard",
-          description:
-            "The purpose of this website is to educate degens about stablecoins.",
+          description: t("page-resources-mev-mevboost-description"),
           href: "https://mevboost.pics",
           imgSrc: IconEthGlyphBlack,
         },
         {
           title: "MEV Watch",
-          description:
-            "Some MEV-Boost relays are regulated under OFAC and will censor certain transactions. Use this tool to observe the effect it's having on Ethereum blocks.",
+          description: t("page-resources-mev-mevwatch-description"),
           href: "https://www.mevwatch.info",
           imgSrc: IconEthGlyphBlueCircle,
         },
       ],
     },
     {
-      title: "ZK adoption",
+      title: t("page-resources-zk-adoption-title"),
       items: [
         {
           title: "Ethproofs",
-          description: "SNARKs that scale Ethereum.",
+          description: t("page-resources-zk-adoption-ethproofs-description"),
           href: "https://ethproofs.org",
           imgSrc: IconEthproofs,
         },
         {
           title: "L2beat - ZK Catalog",
-          description:
-            "ZK Catalog by L2BEAT is a community-driven resource offering detailed insights into the ZK technology utilized by various blockchain projects.",
+          description: t("page-resources-zk-adoption-l2beat-description"),
           href: "https://l2beat.com/zk-catalog",
           imgSrc: IconL2beat,
         },
       ],
     },
     {
-      title: "Mempool",
+      title: t("page-resources-mempool-title"),
       items: [
         {
           title: "Ethereum Mempool Dashboard",
-          description:
-            "Selected comparative visualizations on Ethereum's mempool.",
+          description: t("page-resources-mempool-mempool-description"),
           href: "https://mempool.pics",
           imgSrc: IconEthGlyphBlueCircle,
         },
@@ -483,27 +474,33 @@ export const useResources = (): DashboardSection[] => {
     },
   ]
 
-  return [
+  const resources = [
     {
       key: "network",
-      title: "The network",
+      title: t("page-resources-network-title"),
       boxes: networkBoxes,
     },
-    { key: "using", title: "Using Ethereum", boxes: usingBoxes },
+    {
+      key: "using",
+      title: t("page-resources-using-title"),
+      boxes: usingBoxes,
+    },
     {
       key: "scaling",
-      title: "Scaling Ethereum",
+      title: t("page-resources-scaling-title"),
       boxes: scalingBoxes,
     },
     {
       key: "resilience",
-      title: "Ethereum resilience",
+      title: t("page-resources-resilience-title"),
       boxes: resilienceBoxes,
     },
     {
       key: "privacySecurity",
-      title: "Privacy & Security",
+      title: t("page-resources-privacy-security-title"),
       boxes: privacySecurityBoxes,
     },
   ]
+
+  return resources
 }
