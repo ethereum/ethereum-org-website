@@ -11,7 +11,12 @@ import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 
-import type { BasePageProps, ChildOnlyProp, Lang } from "@/lib/types"
+import type {
+  BasePageProps,
+  ChildOnlyProp,
+  CommitHistory,
+  Lang,
+} from "@/lib/types"
 
 import BoxGrid from "@/components/BoxGrid"
 import Callout from "@/components/Callout"
@@ -20,6 +25,7 @@ import Card from "@/components/Card"
 import DocLink from "@/components/DocLink"
 import Emoji from "@/components/Emoji"
 import FeedbackCard from "@/components/FeedbackCard"
+import FileContributors from "@/components/FileContributors"
 import GhostCard from "@/components/GhostCard"
 import { Image } from "@/components/Image"
 import InfoBanner from "@/components/InfoBanner"
@@ -38,6 +44,7 @@ import InlineLink, { BaseLink } from "@/components/ui/Link"
 import { Tag } from "@/components/ui/tag"
 
 import { cn } from "@/lib/utils/cn"
+import { getPageContributorInfo } from "@/lib/utils/contributors"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { trackCustomEvent } from "@/lib/utils/matomo"
@@ -331,16 +338,27 @@ export const getStaticProps = (async ({ locale }) => {
     lastDeployDate
   )
 
+  const commitHistoryCache: CommitHistory = {}
+
+  const { contributors, lastEditLocaleTimestamp } =
+    await getPageContributorInfo(
+      "dapps.tsx",
+      locale as Lang,
+      commitHistoryCache
+    )
+
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
       contentNotTranslated,
       lastDeployLocaleTimestamp,
+      contributors,
+      lastEditLocaleTimestamp,
     },
   }
 }) satisfies GetStaticProps<BasePageProps>
 
-const DappsPage = () => {
+const DappsPage = ({ contributors, lastEditLocaleTimestamp }) => {
   const { t } = useTranslation(["page-dapps", "common"])
   const { locale, query } = useRouter()
 
@@ -1802,6 +1820,11 @@ const DappsPage = () => {
         </Row>
       </Content>
       <Content>
+        <FileContributors
+          className="my-10 border-t"
+          contributors={contributors}
+          lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        />
         <FeedbackCard />
       </Content>
     </Page>

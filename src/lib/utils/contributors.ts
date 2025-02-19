@@ -54,9 +54,12 @@ export const getPageContributorInfo = async (
     cache
   )
 
+  const latestCommitDate = getLastModifiedDate(pagePath, locale!)
+  const gitHubLastEdit = gitContributors[0]?.date
+
   const lastEditLocaleTimestamp = getLocaleTimestamp(
     locale,
-    gitContributors[0].date as string
+    gitHubLastEdit || latestCommitDate
   )
 
   return { contributors: gitContributors, lastEditLocaleTimestamp }
