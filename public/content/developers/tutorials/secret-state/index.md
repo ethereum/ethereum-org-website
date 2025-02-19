@@ -508,7 +508,7 @@ All MUD functions in the same `System` go through the same access control, so I 
 
 ### Zero-knowledge abuses {#zero-knowledge-abuses}
 
-The math to verify Zokrates is beyond the scope of this tutorial (and my abilities). However, we can run various checks on the zero-knowledge code to verify that if it is not done correctly it fails. All of these tests are going to require us to change [`zero-knowledge.ts`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts) and restart the entire application. IT is not sufficient to restart the server process, because it puts the application in an impossible state (the player has a game in progress, but the game is no longer available to the server).
+The math to verify Zokrates is beyond the scope of this tutorial (and my abilities). However, we can run various checks on the zero-knowledge code to verify that if it is not done correctly it fails. All of these tests are going to require us to change [`zero-knowledge.ts`](https://github.com/qbzzt/20240901-secret-state/blob/main/packages/server/src/zero-knowledge.ts) and restart the entire application. It is not sufficient to restart the server process, because it puts the application in an impossible state (the player has a game in progress, but the game is no longer available to the server).
 
 #### Wrong answer {#wrong-answer}
 
