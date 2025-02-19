@@ -129,7 +129,7 @@ const FileContributors = ({
       >
         <Flex className="my-4 me-4 flex-1 flex-col items-start lg:mb-0">
           <p className="mb-2 text-body-medium">
-            <Translation id="last-edit-on" /> {lastEditLocaleTimestamp}
+            <Translation id="page-last-update" /> {lastEditLocaleTimestamp}
           </p>
           <LinkBox className="flex">
             <ContributorAvatarGroup contributors={contributors} />
