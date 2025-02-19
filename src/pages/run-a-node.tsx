@@ -5,11 +5,17 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import type { ReactNode } from "react"
 import { FaDiscord } from "react-icons/fa"
 
-import type { BasePageProps, ChildOnlyProp, Lang } from "@/lib/types"
+import type {
+  BasePageProps,
+  ChildOnlyProp,
+  CommitHistory,
+  Lang,
+} from "@/lib/types"
 
 import Emoji from "@/components/Emoji"
 import ExpandableCard from "@/components/ExpandableCard"
 import FeedbackCard from "@/components/FeedbackCard"
+import FileContributors from "@/components/FileContributors"
 import type { IconBaseType } from "@/components/icons/icon-base"
 import {
   DecentralizationGlyphIcon,
@@ -33,6 +39,7 @@ import { Center, Flex, Stack, VStack } from "@/components/ui/flex"
 import InlineLink from "@/components/ui/Link"
 
 import { cn } from "@/lib/utils/cn"
+import { getPageContributorInfo } from "@/lib/utils/contributors"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLocaleTimestamp } from "@/lib/utils/time"
@@ -220,16 +227,27 @@ export const getStaticProps = (async ({ locale }) => {
     lastDeployDate
   )
 
+  const commitHistoryCache: CommitHistory = {}
+
+  const { contributors, lastEditLocaleTimestamp } =
+    await getPageContributorInfo(
+      "run-a-node.tsx",
+      locale as Lang,
+      commitHistoryCache
+    )
+
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
       contentNotTranslated,
       lastDeployLocaleTimestamp,
+      contributors,
+      lastEditLocaleTimestamp,
     },
   }
 }) satisfies GetStaticProps<BasePageProps>
 
-const RunANodePage = () => {
+const RunANodePage = ({ contributors, lastEditLocaleTimestamp }) => {
   const { t } = useTranslation("page-run-a-node")
   const heroContent = {
     title: t("page-run-a-node-title"),
@@ -726,6 +744,11 @@ const RunANodePage = () => {
             - <i>{t("page-run-a-node-further-reading-3-author")}</i>
           </li>
         </ul>
+        <FileContributors
+          className="my-10 border-t"
+          contributors={contributors}
+          lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        />
       </Content>
 
       <Divider />
