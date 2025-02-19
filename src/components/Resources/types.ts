@@ -1,8 +1,10 @@
+import { StaticImageData } from "next/image"
+
 export type Item = {
   title: string
   description: string
   href: string
-  icon: React.ReactNode
+  imgSrc: StaticImageData
 }
 
 export type DashboardBox = {

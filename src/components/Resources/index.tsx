@@ -3,6 +3,8 @@ import { Tag } from "@/components/ui/tag"
 
 import { cn } from "@/lib/utils/cn"
 
+import { Image } from "../Image"
+
 import { Item } from "./types"
 
 export const DashboardBox = ({
@@ -20,13 +22,17 @@ type ItemProps = React.HTMLAttributes<HTMLDivElement> & {
 }
 
 export const ResourceItem = ({
-  item: { title, description, href, icon },
+  item: { title, description, href, imgSrc },
   className,
 }: ItemProps) => (
-  <div className={cn("flex gap-2 p-3", className)}>
-    <div>{icon}</div>
+  <div
+    className={cn("flex gap-2 border-b p-3 last-of-type:border-0", className)}
+  >
+    <div className="m-1 size-[18px] shrink-0 text-[18px]">
+      <Image src={imgSrc} alt={title} />
+    </div>
     <div>
-      <h3>{title}</h3>
+      <h3 className="text-lg">{title}</h3>
       <p>{description}</p>
       <Tag asChild className="mt-1">
         <Link href={href} className="normal-case">

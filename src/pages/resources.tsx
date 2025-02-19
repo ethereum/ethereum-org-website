@@ -72,7 +72,7 @@ const ResourcesPage = () => {
                   <div className="border-b bg-[#ffffff] px-6 py-4 font-bold dark:bg-[#171717]">
                     {title}
                   </div>
-                  <div className="bg-background bg-gradient-to-br from-white to-primary/10 px-2 py-6 dark:from-transparent dark:to-primary/10">
+                  <div className="h-full bg-background bg-gradient-to-br from-white to-primary/10 px-2 py-6 dark:from-transparent dark:to-primary/10">
                     {metric && metric}
                     <ResourcesContainer>
                       {items.map((item) => (

@@ -1,6 +1,36 @@
 // TODO: Refactor for intl
 import type { DashboardBox, DashboardSection } from "./types"
 
+import IconBeaconchain from "@/public/images/resources/beaconcha-in.png"
+import IconBlobsGuru from "@/public/images/resources/blobsguru.png"
+import IconBlocknative from "@/public/images/resources/blocknative.png"
+import IconBlockscout from "@/public/images/resources/blockscout.webp"
+import IconCryptwerk from "@/public/images/resources/cryptowerk.png"
+import IconDefiLlama from "@/public/images/resources/defi-llama.png"
+import IconDefiMarketCap from "@/public/images/resources/defi-market-cap.png"
+import IconDefiScan from "@/public/images/resources/defi-scan.png"
+import IconEas from "@/public/images/resources/eas.png"
+import IconEigenphi from "@/public/images/resources/eigenphi.png"
+import IconEthGlyphBlack from "@/public/images/resources/eth-glyph-black.png"
+import IconEthGlyphBlueCircle from "@/public/images/resources/eth-glyph-blue-circle.png"
+import IconEthGlyphEOrg from "@/public/images/resources/eth-glyph-e-org.png"
+import IconEthGlyphRainbowFrame from "@/public/images/resources/eth-glyph-rainbow.frame.png"
+import IconEtherscan from "@/public/images/resources/etherscan.png"
+import IconEthproofs from "@/public/images/resources/ethproofs.png"
+import IconEthstaker from "@/public/images/resources/ethstaker.png"
+import IconFarcaster from "@/public/images/resources/farcaster.png"
+import IconGrowthepie from "@/public/images/resources/growthepie.png"
+import IconL2beat from "@/public/images/resources/l2beat.png"
+import IconNftgo from "@/public/images/resources/nftgo.png"
+import IconNodewatch from "@/public/images/resources/nodewatch.png"
+import IconRatedNetwork from "@/public/images/resources/rated-network.png"
+import IconRelayscan from "@/public/images/resources/relayscan.png"
+import IconRwa from "@/public/images/resources/rwa.png"
+import IconStablecoinsWtf from "@/public/images/resources/stablecoins-wtf.png"
+import IconSupermajority from "@/public/images/resources/supermajority.png"
+import IconUltrasoundMoney from "@/public/images/resources/ultrasound-money.png"
+import IconVisaOnchainAnalytics from "@/public/images/resources/visa-onchain-analytcs.png"
+
 const tempBigNumber = (
   <div className="flex flex-col items-center py-4">
     <div className="text-center text-4xl font-bold">$0.006</div>
@@ -21,20 +51,20 @@ export const useResources = (): DashboardSection[] => {
           description:
             "L2BEAT was created to provide transparent and verifiable insights into emerging layer two (L2) technologies which, in line with the rollup-centric Ethereum scaling roadmap, are aimed at scaling Ethereum.",
           href: "https://l2beat.com/",
-          icon: "todo",
+          imgSrc: IconL2beat,
         },
         {
           title: "Growthepie",
           description:
             "Mastering Ethereum Layer 2s. Your gateway to curated analytics and knowledge.",
           href: "https://www.growthepie.xyz/",
-          icon: "todo",
+          imgSrc: IconGrowthepie,
         },
         {
           title: "L2 Fees",
           description: "How much does it cost to use Layer 2?",
           href: "https://l2fees.info/",
-          icon: "todo",
+          imgSrc: IconEthGlyphBlueCircle,
         },
       ],
     },
@@ -46,28 +76,28 @@ export const useResources = (): DashboardSection[] => {
           title: "Blockscout",
           description: "Open source block explorer better than Etherscan.",
           href: "https://ethereum.blockscout.com",
-          icon: "todo",
+          imgSrc: IconBlockscout,
         },
         {
           title: "Etherscan",
           description:
             "Etherscan is a block explorer and analytics platform for Ethereum, a decentralized smart contracts platform.",
           href: "https://etherscan.io",
-          icon: "todo",
+          imgSrc: IconEtherscan,
         },
         {
           title: "Beaconcha.in",
           description:
             "Open source Ethereum explorer showing the Ethereum Mainnet 🚀.",
           href: "https://beaconcha.in",
-          icon: "todo",
+          imgSrc: IconBeaconchain,
         },
         {
           title: "Txcity.io",
           description:
             "A funny visualizer of the Ethereum blocks in real-time.",
           href: "https://txcity.io/",
-          icon: "todo",
+          imgSrc: IconEthGlyphBlueCircle,
         },
       ],
     },
@@ -80,28 +110,28 @@ export const useResources = (): DashboardSection[] => {
           description:
             "Ethereum is the largest, most secure, and most open blockchain for the world to use. And Ethereum is open for business.",
           href: "https://dashboard.etherealize.io/",
-          icon: "todo",
+          imgSrc: IconEthGlyphBlueCircle,
         },
         {
           title: "Ultra Sound Money",
           description:
             "Ultra sound money is an Ethereum meme focusing on the likely decrease of the ETH supply.",
           href: "https://ultrasound.money/",
-          icon: "todo",
+          imgSrc: IconUltrasoundMoney,
         },
         {
           title: "ETH is Money",
           description:
             "ETH is money is a tribe of believers who hold, stake, and propagate ETH as money.",
           href: "https://www.ethismoney.xyz/",
-          icon: "todo",
+          imgSrc: IconEthGlyphBlueCircle,
         },
         {
           title: "Ethereum Now",
           description:
             "Ethernow enables you to see what is happening at the core of Ethereum, in real-time. Go hands-on now.",
           href: "https://www.ethernow.xyz",
-          icon: "todo",
+          imgSrc: IconBlocknative,
         },
       ],
     },
@@ -113,19 +143,19 @@ export const useResources = (): DashboardSection[] => {
           title: "Ethereum Gas Tracker",
           description: "Track all the KPIs on gas.",
           href: "https://etherscan.io/gastracker",
-          icon: "todo",
+          imgSrc: IconEthGlyphBlueCircle,
         },
         {
           title: "Blocknative Gas Estimator",
           description: "Web3's most accurate gas fee prediction.",
           href: "https://www.blocknative.com/gas-estimator",
-          icon: "todo",
+          imgSrc: IconBlocknative,
         },
         {
           title: "GasFees.io",
           description: "Gas costs data tracker for Ethereum networks.",
           href: "https://www.gasfees.io/",
-          icon: "todo",
+          imgSrc: IconEthGlyphBlueCircle,
         },
       ],
     },
@@ -141,27 +171,27 @@ export const useResources = (): DashboardSection[] => {
           description:
             "DefiLlama is the largest TVL aggregator for DeFi (Decentralized Finance).",
           href: "https://defillama.com",
-          icon: "todo",
+          imgSrc: IconDefiLlama,
         },
         {
           title: "DeFi Market Cap",
           description: "Top 100 DeFi tokens by market capitalization.",
           href: "https://defimarketcap.io",
-          icon: "todo",
+          imgSrc: IconDefiMarketCap,
         },
         {
           title: "EigenPhi",
           description:
             "Wanna understand DeFi transactions and trading strategies?",
           href: "https://www.eigenphi.io",
-          icon: "todo",
+          imgSrc: IconEigenphi,
         },
         {
           title: "DeFiScan",
           description:
             "Verifiable insights into the maturity and risks of DeFi.",
           href: "https://defiscan.info",
-          icon: "todo",
+          imgSrc: IconDefiScan,
         },
       ],
     },
@@ -174,21 +204,21 @@ export const useResources = (): DashboardSection[] => {
           description:
             "The purpose of this website is to educate degens about stablecoins.",
           href: "https://stablecoins.wtf/",
-          icon: "todo",
+          imgSrc: IconStablecoinsWtf,
         },
         {
           title: "Visa Onchain Analytics Dashboard",
           description:
             "The Visa Onchain Analytics Dashboard showcases how fiat-backed stablecoins move via public blockchains globally.",
           href: "https://visaonchainanalytics.com",
-          icon: "todo",
+          imgSrc: IconVisaOnchainAnalytics,
         },
         {
           title: "Real World Assets",
           description:
             "Explore the activity behind crypto and asset-backed stablecoins.",
           href: "https://app.rwa.xyz/stablecoins",
-          icon: "todo",
+          imgSrc: IconRwa,
         },
       ],
     },
@@ -200,13 +230,13 @@ export const useResources = (): DashboardSection[] => {
           title: "Etherscan - Top NFT",
           description: "Top NFT contracts.",
           href: "https://etherscan.io/nft-top-contracts",
-          icon: "todo",
+          imgSrc: IconEtherscan,
         },
         {
           title: "NFTgo",
           description: "Real-time global NFT market data.",
           href: "https://nftgo.io/macro/market-overview",
-          icon: "todo",
+          imgSrc: IconNftgo,
         },
       ],
     },
@@ -218,20 +248,20 @@ export const useResources = (): DashboardSection[] => {
           description:
             "Immerse yourself in the Ethereum ecosystem and get familiar with hundreds of popular apps & tools.",
           href: "https://www.ethereum-ecosystem.com/apps",
-          icon: "todo",
+          imgSrc: IconEthGlyphEOrg,
         },
         {
           title: "Farcaster Network",
           description: "Data from Farcaster usage.",
           href: "https://www.farcaster.network",
-          icon: "todo",
+          imgSrc: IconFarcaster,
         },
         {
           title: "Dapp Radar",
           description:
             "Explore top blockchain dapps, NFTs, games, DeFi projects, tokens, and airdrops. Track rankings, explore market insights, find trending projects, and unlock rewards with the world’s dapp store.",
           href: "https://dappradar.com",
-          icon: "todo",
+          imgSrc: IconEthGlyphBlueCircle,
         },
       ],
     },
@@ -242,14 +272,14 @@ export const useResources = (): DashboardSection[] => {
           title: "Ethereum Adoption",
           description: "Ethereum Censorability Monitor.",
           href: "https://ethereumadoption.com",
-          icon: "todo",
+          imgSrc: IconEthGlyphEOrg,
         },
         {
           title: "Cryptowerk",
           description:
             "Ethereum adoption analytics based on Cryptwerk merchants database - map, countries, companies, businesses, categories, rating.",
           href: "https://cryptwerk.com/analytics/ethereum/",
-          icon: "todo",
+          imgSrc: IconCryptwerk,
         },
       ],
     },
@@ -265,7 +295,7 @@ export const useResources = (): DashboardSection[] => {
           description:
             "Detailed visualization on Ethereum roadmap and the next network upgrade.",
           href: "https://ethroadmap.com",
-          icon: "todo",
+          imgSrc: IconEthGlyphRainbowFrame,
         },
       ],
     },
@@ -277,14 +307,14 @@ export const useResources = (): DashboardSection[] => {
           title: "Blob Scan",
           description: "Comprehensive blob scanner.",
           href: "https://blobscan.com",
-          icon: "todo",
+          imgSrc: IconEthGlyphBlueCircle,
         },
         {
           title: "Blobsguru",
           description:
             "Ethereum Blobs Explorer: Analyze L2 transactions & EIP-4844 data.",
           href: "https://blobs.guru",
-          icon: "todo",
+          imgSrc: IconBlobsGuru,
         },
       ],
     },
@@ -299,32 +329,32 @@ export const useResources = (): DashboardSection[] => {
           title: "Node Watch",
           description: "Overview of the nodes.",
           href: "https://nodewatch.io",
-          icon: "todo",
+          imgSrc: IconNodewatch,
         },
         {
           title: "Ethernodes",
           description: "Ethereum Mainnet statistics.",
           href: "https://ethernodes.org",
-          icon: "todo",
+          imgSrc: IconEthGlyphBlueCircle,
         },
         {
           title: "Etherscan - Ethereum Node Tracker",
           description: "Daily.",
           href: "https://etherscan.io/nodetracker",
-          icon: "todo",
+          imgSrc: IconEtherscan,
         },
         {
           title: "luckystaker.com",
           description: "Daily proposal probability of getting a block.",
           href: "https://luckystaker.com",
-          icon: "todo",
+          imgSrc: IconEthstaker,
         },
         {
           title: "Ethereum Validator Queue",
           description:
             "A dashboard showing the Ethereum validator enter and exit queue and estimated wait times.",
           href: "https://www.validatorqueue.com",
-          icon: "todo",
+          imgSrc: IconEthGlyphBlueCircle,
         },
       ],
     },
@@ -335,28 +365,28 @@ export const useResources = (): DashboardSection[] => {
           title: "Neutrality Watch",
           description: "Ethereum Censorability Monitor.",
           href: "https://eth.neutralitywatch.com",
-          icon: "todo",
+          imgSrc: IconEthGlyphBlueCircle,
         },
         {
           title: "Project Sunshine",
           description:
             "A dashboard to measure the health of Ethereum's decentralization.",
           href: "https://ethsunshine.com",
-          icon: "todo",
+          imgSrc: IconEthGlyphEOrg,
         },
         {
           title: "Client Diversity",
           description:
             "Improve Ethereum's resilience by using a minority client.",
           href: "https://clientdiversity.org",
-          icon: "todo",
+          imgSrc: IconEthGlyphEOrg,
         },
         {
           title: "Super Majority",
           description:
             "The supermajority client risk of the Ethereum execution layer, especially the client usage of staking services.",
           href: "https://supermajority.info",
-          icon: "todo",
+          imgSrc: IconSupermajority,
         },
       ],
     },
@@ -368,7 +398,7 @@ export const useResources = (): DashboardSection[] => {
           description:
             "EAS enables anyone to create and validate on-chain and off-chain attestations on Ethereum.",
           href: "https://easscan.org",
-          icon: "todo",
+          imgSrc: IconEas,
         },
       ],
     },
@@ -384,20 +414,20 @@ export const useResources = (): DashboardSection[] => {
           description:
             "Validators can use relays to outsource their block production to entities specialized in extracting extra revenue.",
           href: "https://beaconcha.in/relays",
-          icon: "todo",
+          imgSrc: IconBeaconchain,
         },
         {
           title: "Relay Landscape | Ethereum Mainnet",
           description:
             "MEV relay market share, total value relayed, value per block, and other statistics for Ethereum network.",
           href: "https://explorer.rated.network/relays?network=mainnet",
-          icon: "todo",
+          imgSrc: IconRatedNetwork,
         },
         {
           title: "Relay Scan",
           description: "MEV-Boost analytics.",
           href: "https://www.relayscan.io",
-          icon: "todo",
+          imgSrc: IconRelayscan,
         },
       ],
     },
@@ -410,14 +440,14 @@ export const useResources = (): DashboardSection[] => {
           description:
             "The purpose of this website is to educate degens about stablecoins.",
           href: "https://mevboost.pics",
-          icon: "todo",
+          imgSrc: IconEthGlyphBlack,
         },
         {
           title: "MEV Watch",
           description:
             "Some MEV-Boost relays are regulated under OFAC and will censor certain transactions. Use this tool to observe the effect it's having on Ethereum blocks.",
           href: "https://www.mevwatch.info",
-          icon: "todo",
+          imgSrc: IconEthGlyphBlueCircle,
         },
       ],
     },
@@ -425,17 +455,17 @@ export const useResources = (): DashboardSection[] => {
       title: "ZK adoption",
       items: [
         {
-          title: "ETH Proofs",
+          title: "Ethproofs",
           description: "SNARKs that scale Ethereum.",
           href: "https://ethproofs.org",
-          icon: "todo",
+          imgSrc: IconEthproofs,
         },
         {
           title: "L2beat - ZK Catalog",
           description:
             "ZK Catalog by L2BEAT is a community-driven resource offering detailed insights into the ZK technology utilized by various blockchain projects.",
           href: "https://l2beat.com/zk-catalog",
-          icon: "todo",
+          imgSrc: IconL2beat,
         },
       ],
     },
@@ -447,7 +477,7 @@ export const useResources = (): DashboardSection[] => {
           description:
             "Selected comparative visualizations on Ethereum's mempool.",
           href: "https://mempool.pics",
-          icon: "todo",
+          imgSrc: IconEthGlyphBlueCircle,
         },
       ],
     },
