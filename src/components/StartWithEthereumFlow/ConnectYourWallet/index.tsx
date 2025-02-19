@@ -1,6 +1,6 @@
 import { useAccount } from "wagmi"
-import { ConnectButton } from "@rainbow-me/rainbowkit"
 
+import ConnectToEthereumButton from "@/components/ConnectToEthereumButton"
 import Emoji from "@/components/Emoji"
 import { Image } from "@/components/Image"
 import { Button } from "@/components/ui/buttons/Button"
@@ -41,12 +41,7 @@ const ConnectYourWallet = ({
               This is your account
             </p>
           )}
-          <ConnectButton
-            showBalance={{
-              smallScreen: true,
-              largeScreen: true,
-            }}
-          />
+          <ConnectToEthereumButton />
           {isConnected && <Button onClick={handleNext}>Lets continue</Button>}
         </div>
       </div>
@@ -76,12 +71,7 @@ const ConnectYourWallet = ({
               This is your account
             </p>
           )}
-          <ConnectButton
-            showBalance={{
-              smallScreen: true,
-              largeScreen: true,
-            }}
-          />
+          <ConnectToEthereumButton />
           {isConnected && <Button onClick={handleNext}>Lets continue</Button>}
         </div>
       </div>
