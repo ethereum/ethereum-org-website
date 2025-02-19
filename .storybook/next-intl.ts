@@ -61,6 +61,10 @@ console.log(
 const nextIntl = {
   defaultLocale: "en",
   messagesByLocale,
+  getMessageFallback: ({ key }: { key: string }) => {
+    const keyOnly = key.split(".").pop()
+    return keyOnly || key
+  },
 }
 
 export default nextIntl
