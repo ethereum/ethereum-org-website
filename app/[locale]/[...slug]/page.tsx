@@ -1,7 +1,7 @@
 import { join } from "path"
 
 import { SerializeOptions } from "next-mdx-remote/dist/types"
-import { compileMDX, MDXRemote } from "next-mdx-remote/rsc"
+import { compileMDX } from "next-mdx-remote/rsc"
 import remarkSlug from "rehype-slug"
 import remarkGfm from "remark-gfm"
 import remarkHeadingId from "remark-heading-id"
@@ -81,8 +81,11 @@ export default async function Page({
 
   const source = preprocessMarkdown(markdown)
 
-  const { frontmatter } = await compileMDX<StaticFrontmatter>({
+  const { content, frontmatter } = await compileMDX<StaticFrontmatter>({
     source,
+    // TODO: Address component typing error here (flip `FC` types to prop object types)
+    // @ts-expect-error Incompatible component function signatures
+    components: { ...mdComponents, ...staticComponents },
     options: {
       parseFrontmatter: true,
       mdxOptions,
@@ -118,13 +121,7 @@ export default async function Page({
       lastEditLocaleTimestamp={lastEditLocaleTimestamp}
       contentNotTranslated={contentNotTranslated}
     >
-      <MDXRemote
-        source={source}
-        // TODO: Address component typing error here (flip `FC` types to prop object types)
-        // @ts-expect-error Incompatible component function signatures
-        components={{ ...mdComponents, ...staticComponents }}
-        options={{ parseFrontmatter: true, mdxOptions }}
-      />
+      {content}
     </StaticLayout>
   )
 }
