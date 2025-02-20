@@ -9,7 +9,6 @@ tags:
     "smart contracts",
     "querying",
     "the graph",
-    "create-eth-app",
     "react",
   ]
 skill: intermediate
