@@ -100,7 +100,7 @@ export const getStaticProps = (async ({ locale }) => {
 
   const { contributors, lastEditLocaleTimestamp } =
     await getPageContributorInfo(
-      "learn.tsx",
+      "get-eth.tsx",
       locale as Lang,
       commitHistoryCache
     )

@@ -3,13 +3,14 @@ import { GetStaticProps } from "next/types"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 
-import { BasePageProps, Lang } from "@/lib/types"
+import { BasePageProps, CommitHistory, Lang } from "@/lib/types"
 
 import Callout from "@/components/Callout"
 import Card from "@/components/Card"
 import Emoji from "@/components/Emoji"
 import ExpandableCard from "@/components/ExpandableCard"
 import FeedbackCard from "@/components/FeedbackCard"
+import FileContributors from "@/components/FileContributors"
 import GhostCard from "@/components/GhostCard"
 import HorizontalCard from "@/components/HorizontalCard"
 import { Image } from "@/components/Image"
@@ -35,6 +36,7 @@ import {
 import { Tag } from "@/components/ui/tag"
 
 import { cn } from "@/lib/utils/cn"
+import { getPageContributorInfo } from "@/lib/utils/contributors"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLocaleTimestamp } from "@/lib/utils/time"
@@ -95,16 +97,23 @@ export const getStaticProps = (async ({ locale }) => {
     lastDeployDate
   )
 
+  const commitHistoryCache: CommitHistory = {}
+
+  const { contributors, lastEditLocaleTimestamp } =
+    await getPageContributorInfo("gas.tsx", locale as Lang, commitHistoryCache)
+
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
       contentNotTranslated,
       lastDeployLocaleTimestamp,
+      contributors,
+      lastEditLocaleTimestamp,
     },
   }
 }) satisfies GetStaticProps<BasePageProps>
 
-const GasPage = () => {
+const GasPage = ({ contributors, lastEditLocaleTimestamp }) => {
   const { t } = useTranslation("page-gas")
 
   const benefits = [
@@ -379,6 +388,11 @@ const GasPage = () => {
             <p className="mb-6">{t("page-gas-faq-question-3-a-2")}</p>
           </ExpandableCard>
         </div>
+        <FileContributors
+          className="my-10 border-t"
+          contributors={contributors}
+          lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        />
       </Content>
       <Divider />
       <Content>
