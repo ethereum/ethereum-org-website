@@ -1,10 +1,11 @@
+import { useTranslations } from "next-intl"
 import type { Meta, StoryObj } from "@storybook/react"
 import { fn } from "@storybook/test"
 
 import { QuizButtonGroup } from "../QuizWidget/QuizButtonGroup"
 import { QuizContent } from "../QuizWidget/QuizContent"
 
-import { LAYER_2_QUIZ_TITLE, layer2Questions } from "./utils"
+import { LAYER_2_QUIZ_TITLE_KEY, layer2Questions } from "./utils"
 
 const meta = {
   title: "Molecules / Display Content / Quiz / QuizWidget / ButtonGroup",
@@ -18,7 +19,7 @@ const meta = {
     quizPageProps: false,
     quizScore: 0,
     showResults: false,
-    title: LAYER_2_QUIZ_TITLE,
+    title: LAYER_2_QUIZ_TITLE_KEY,
     userQuizProgress: [],
     handleReset: fn(),
     setCurrentQuestionAnswerChoice: fn(),
@@ -26,11 +27,17 @@ const meta = {
     setUserQuizProgress: fn(),
   },
   decorators: [
-    (Story, { args }) => (
-      <QuizContent title={LAYER_2_QUIZ_TITLE} answerStatus={args.answerStatus}>
-        <Story />
-      </QuizContent>
-    ),
+    (Story, { args }) => {
+      const t = useTranslations()
+      return (
+        <QuizContent
+          title={t(LAYER_2_QUIZ_TITLE_KEY)}
+          answerStatus={args.answerStatus}
+        >
+          <Story />
+        </QuizContent>
+      )
+    },
   ],
 } satisfies Meta<typeof QuizButtonGroup>
 

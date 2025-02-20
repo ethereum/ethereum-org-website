@@ -1,10 +1,11 @@
 import * as React from "react"
-import { useTranslation } from "next-i18next"
 import { DocSearchButton } from "@docsearch/react"
 
 import { cn } from "@/lib/utils/cn"
 
 import { Button, type ButtonProps } from "../ui/buttons/Button"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 const SearchInputButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, ...props }, ref) => {

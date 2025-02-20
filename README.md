@@ -95,9 +95,9 @@ yarn dev
 - Open this directory in your favorite text editor / IDE, and see your changes live by visiting `localhost:3000` from your browser
 - Pro Tip:
   - Explore scripts within `package.json` for more build options
-  - Get **faster** production builds by building only one language. E.g. in your `.env` file, set `BUILD_LOCALES=en` to build the content only in English
-  - To build the site in other selected languages too, you need to set them in `BUILD_LOCALES`, eg: `BUILD_LOCALES=en,es` if you also want to build only English (required) and Spanish.
-  - To build all languages, simply comment this line out with a hash mark, eg: `# BUILD_LOCALES=`
+  - Get **faster** production builds by building only one language. E.g. in your `.env` file, set `NEXT_PUBLIC_BUILD_LOCALES=en` to build the content only in English
+  - To build the site in other selected languages too, you need to set them in `NEXT_PUBLIC_BUILD_LOCALES`, eg: `NEXT_PUBLIC_BUILD_LOCALES=en,es` if you also want to build only English (required) and Spanish.
+  - To build all languages, simply comment this line out with a hash mark, eg: `# NEXT_PUBLIC_BUILD_LOCALES=`
 
 By default the script will build all the languages (complete list in `i18n.config.json`).
 
@@ -168,7 +168,7 @@ Learn more about how we review pull requests [here](docs/review-process.md).
 
 - To help with verification we request GitHub contributors connect their GitHub account with their Discord account (Discord > Settings > Connections > GitHub). Crowdin contributors will be verified directly through Crowdin by our team.
 
-If you haven't contributed yet and would like to earn a POAP/OATs to show your loyalty to the Ethereum space, head over to the [issues](https://github.com/ethereum/ethereum-org-website/issues/) tab to get started! If you would like to contribute to translations check out our [Translation Program](https://ethereum.org/en/contributing/translation-program/). 
+If you haven't contributed yet and would like to earn a POAP/OATs to show your loyalty to the Ethereum space, head over to the [issues](https://github.com/ethereum/ethereum-org-website/issues/) tab to get started! If you would like to contribute to translations check out our [Translation Program](https://ethereum.org/en/contributing/translation-program/).
 
 <hr style="margin-top: 3em; margin-bottom: 3em;">
 

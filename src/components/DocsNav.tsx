@@ -1,6 +1,3 @@
-import { useRouter } from "next/router"
-import { useTranslation } from "next-i18next"
-
 import { TranslationKey } from "@/lib/types"
 import type { DeveloperDocsLink } from "@/lib/interfaces"
 
@@ -15,6 +12,8 @@ import { Stack } from "./ui/flex"
 import { LinkBox, LinkOverlay } from "./ui/link-box"
 
 import { useRtlFlip } from "@/hooks/useRtlFlip"
+import { useTranslation } from "@/hooks/useTranslation"
+import { usePathname } from "@/i18n/routing"
 
 const TextDiv = ({ children, className, ...props }) => (
   <Stack
@@ -86,7 +85,7 @@ type DocsNavProps = {
 }
 
 const DocsNav = ({ contentNotTranslated }: DocsNavProps) => {
-  const { asPath } = useRouter()
+  const pathname = usePathname()
   // Construct array of all linkable documents in order recursively
   const docsArray: DocsArrayProps[] = []
   const getDocs = (links: Array<DeveloperDocsLink>): void => {
@@ -112,8 +111,8 @@ const DocsNav = ({ contentNotTranslated }: DocsNavProps) => {
   let currentIndex = 0
   for (let i = 0; i < docsArray.length; i++) {
     if (
-      asPath.indexOf(docsArray[i].href) >= 0 &&
-      asPath.length === docsArray[i].href.length
+      pathname.indexOf(docsArray[i].href) >= 0 &&
+      pathname.length === docsArray[i].href.length
     ) {
       currentIndex = i
     }

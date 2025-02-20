@@ -1,4 +1,3 @@
-import { useTranslation } from "next-i18next"
 import { useTheme } from "next-themes"
 
 import type { ChildOnlyProp } from "@/lib/types"
@@ -6,6 +5,8 @@ import type { ChildOnlyProp } from "@/lib/types"
 import { cn } from "@/lib/utils/cn"
 
 import { Flex } from "./ui/flex"
+
+import useTranslation from "@/hooks/useTranslation"
 
 type CellProps = ChildOnlyProp & {
   color?: string

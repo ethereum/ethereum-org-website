@@ -1,6 +1,5 @@
+import { useTranslations } from "next-intl"
 import { Meta, type StoryObj } from "@storybook/react"
-
-import { getTranslation } from "@/storybook-utils"
 
 import { Button } from "../ui/buttons/Button"
 
@@ -23,20 +22,17 @@ const DEVELOPS_INDEX_NS = "page-developers-index"
 
 export const Card: StoryObj<typeof meta> = {
   render: (args) => {
+    const t = useTranslations(DEVELOPS_INDEX_NS)
+
     const defaultProps: CardProps = {
       emoji: ":woman_student:",
-      title: getTranslation("page-developers-learn", DEVELOPS_INDEX_NS),
-      description: getTranslation(
-        "page-developers-learn-desc",
-        DEVELOPS_INDEX_NS
-      ),
+      title: t("page-developers-learn"),
+      description: t("page-developers-learn-desc"),
     }
 
     return (
       <CardComponent {...defaultProps} {...args}>
-        <Button>
-          {getTranslation("page-developers-read-docs", DEVELOPS_INDEX_NS)}
-        </Button>
+        <Button>{t("page-developers-read-docs")}</Button>
       </CardComponent>
     )
   },

@@ -2,12 +2,13 @@
  * TODO: Update metric for new homepage:
  * - [ ] Replace TVL DeFi with "Total value held on Ethereum"
  */
-import { useRouter } from "next/router"
-import { useTranslation } from "next-i18next"
+import { useLocale } from "next-intl"
 
 import type { AllMetricData, Lang, StatsBoxMetric } from "@/lib/types"
 
 import { getLocaleForNumberFormat } from "@/lib/utils/translations"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 const formatLargeUSD = (value: number, locale: string): string => {
   return new Intl.NumberFormat(locale, {
@@ -45,7 +46,7 @@ export const useStatsBoxGrid = ({
   ethPrice,
 }: AllMetricData): StatsBoxMetric[] => {
   const { t } = useTranslation("page-index")
-  const { locale } = useRouter()
+  const locale = useLocale()
 
   const localeForNumberFormat = getLocaleForNumberFormat(locale! as Lang)
 

@@ -10,7 +10,7 @@ export default async function handler(
     return res.status(401).json({ message: "Invalid secret" })
   }
 
-  const BUILD_LOCALES = process.env.BUILD_LOCALES
+  const BUILD_LOCALES = process.env.NEXT_PUBLIC_BUILD_LOCALES
   // Supported locales defined in `i18n.config.json`
   const locales = BUILD_LOCALES
     ? BUILD_LOCALES.split(",")

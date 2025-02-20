@@ -1,6 +1,5 @@
 import { Fragment } from "react"
-import { useRouter } from "next/router"
-import { useTranslation } from "next-i18next"
+import { useLocale } from "next-intl"
 
 import type { Lang } from "@/lib/types"
 
@@ -15,6 +14,9 @@ import {
   BreadcrumbProps,
   BreadcrumbSeparator,
 } from "../ui/breadcrumb"
+
+import { useTranslation } from "@/hooks/useTranslation"
+import { usePathname } from "@/i18n/routing"
 
 export type BreadcrumbsProps = BreadcrumbProps & {
   slug: string
@@ -41,10 +43,11 @@ type Crumb = {
 // ]
 const Breadcrumbs = ({ slug, startDepth = 0, ...props }: BreadcrumbsProps) => {
   const { t } = useTranslation("common")
-  const { locale, asPath } = useRouter()
+  const locale = useLocale()
+  const pathname = usePathname()
   const dir = isLangRightToLeft(locale! as Lang) ? "rtl" : "ltr"
 
-  const hasHome = asPath !== "/"
+  const hasHome = pathname !== "/"
   const slugChunk = slug.split("/")
   const sliced = slugChunk.filter((item) => !!item)
 

@@ -5,7 +5,7 @@ import type { Preview } from "@storybook/react"
 import ThemeProvider from "@/components/ThemeProvider"
 import { TooltipProvider } from "@/components/ui/tooltip"
 
-import i18n, { baseLocales } from "./i18next"
+import nextIntl, { baseLocales } from "./next-intl"
 import { withNextThemes } from "./withNextThemes"
 
 import "../src/styles/global.css"
@@ -47,7 +47,7 @@ const preview: Preview = {
     ),
   ],
   parameters: {
-    i18n,
+    nextIntl,
     controls: {
       matchers: {
         color: /(background|color)$/i,

@@ -1,6 +1,6 @@
-import { useTranslation } from "next-i18next"
-
 import { BaseLink } from "../ui/Link"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 type NoResultsCalloutProps = { onClose: () => void }
 

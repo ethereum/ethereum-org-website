@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { useRouter } from "next/router"
+import { useLocale } from "next-intl"
 
 import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
@@ -23,7 +23,7 @@ type MenuBodyProps = {
 }
 
 const MenuBody = ({ linkSections, onToggle }: MenuBodyProps) => {
-  const { locale } = useRouter()
+  const locale = useLocale()
   const [value, setValue] = useState("")
 
   return (

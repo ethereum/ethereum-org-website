@@ -1,6 +1,5 @@
 import * as React from "react"
 import { cva, VariantProps } from "class-variance-authority"
-import { useTranslation } from "next-i18next"
 import { EffectCards, Keyboard, Navigation, Pagination } from "swiper/modules"
 import {
   Swiper as SwiperReact,
@@ -19,6 +18,8 @@ import "swiper/css"
 import "swiper/css/navigation"
 import "swiper/css/pagination"
 import "swiper/css/effect-cards"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 const SwiperContainer = React.forwardRef<
   HTMLDivElement,

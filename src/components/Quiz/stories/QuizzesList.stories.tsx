@@ -1,11 +1,10 @@
+import { useTranslations } from "next-intl"
 import type { Meta, StoryObj } from "@storybook/react"
 import { fn } from "@storybook/test"
 
 import type { CompletedQuizzes } from "@/lib/types"
 
 import { ethereumBasicsQuizzes } from "@/data/quizzes"
-
-import { getTranslation } from "@/storybook-utils"
 
 import QuizzesListComponent from "../QuizzesList"
 
@@ -20,8 +19,8 @@ const meta = {
   component: QuizzesListComponent,
   args: {
     content: ethereumBasicsQuizzes,
-    headingId: getTranslation("basics", "learn-quizzes"),
-    descriptionId: getTranslation("basics-description", "learn-quizzes"),
+    headingId: "learn-quizzes.basics",
+    descriptionId: "learn-quizzes.basics-description",
     userStats: {
       score: 0,
       average: [],
@@ -50,5 +49,14 @@ export const OneCompletedQuiz: StoryObj<typeof meta> = {
       },
     },
   },
-  render: (args) => <QuizzesListComponent {...args} />,
+  render: (args) => {
+    const t = useTranslations()
+    return (
+      <QuizzesListComponent
+        {...args}
+        headingId={t(args.headingId)}
+        descriptionId={t(args.descriptionId)}
+      />
+    )
+  },
 }

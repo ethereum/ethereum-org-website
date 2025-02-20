@@ -1,5 +1,3 @@
-import { useTranslation } from "next-i18next"
-
 import WithdrawalCredentials from "@/components/Staking/WithdrawalCredentials"
 import Translation from "@/components/Translation"
 import { ListItem, UnorderedList } from "@/components/ui/list"
@@ -8,6 +6,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import { ButtonLink } from "../ui/buttons/Button"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 const WithdrawalsTabComparison = () => {
   const { t } = useTranslation("page-staking")

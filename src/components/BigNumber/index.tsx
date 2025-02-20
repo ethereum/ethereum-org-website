@@ -1,6 +1,5 @@
 import { type ReactNode } from "react"
-import { useRouter } from "next/router"
-import { useTranslation } from "next-i18next"
+import { useLocale } from "next-intl"
 import { MdInfoOutline } from "react-icons/md"
 
 import { cn } from "@/lib/utils/cn"
@@ -8,6 +7,8 @@ import { isValidDate } from "@/lib/utils/date"
 
 import Tooltip from "../Tooltip"
 import Link from "../ui/Link"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 type BigNumberProps = {
   children: ReactNode
@@ -27,7 +28,7 @@ const BigNumber = ({
   className,
 }: BigNumberProps) => {
   const { t } = useTranslation("common")
-  const { locale } = useRouter()
+  const locale = useLocale()
   const lastUpdatedDisplay =
     lastUpdated && isValidDate(lastUpdated)
       ? new Intl.DateTimeFormat(locale, {

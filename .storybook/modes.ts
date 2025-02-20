@@ -1,6 +1,6 @@
 import pickBy from "lodash/pickBy"
 
-import { baseLocales } from "./i18next"
+import { baseLocales } from "./next-intl"
 import { breakpointSet } from "./preview"
 
 export const viewportModes = breakpointSet.reduce<{

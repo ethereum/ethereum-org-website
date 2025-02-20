@@ -1,4 +1,3 @@
-import { useTranslation } from "next-i18next"
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden"
 
 import Emoji from "@/components/Emoji"
@@ -12,6 +11,7 @@ import { LinkOverlay } from "./ui/link-box"
 import { List, ListItem } from "./ui/list"
 
 import { useRtlFlip } from "@/hooks/useRtlFlip"
+import { useTranslation } from "@/hooks/useTranslation"
 
 type Person = {
   name: string

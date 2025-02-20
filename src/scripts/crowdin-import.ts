@@ -407,7 +407,7 @@ const langsSummary: string = summary.reduce(
 log("Empty buckets:", trackers.emptyBuckets)
 if (summary.length) {
   console.table(summary)
-  console.log("Langs to test:", `\nBUILD_LOCALES=en${langsSummary}`)
+  console.log("Langs to test:", `\nNEXT_PUBLIC_BUILD_LOCALES=en${langsSummary}`)
   console.log("🎉 Crowdin import complete.")
 } else {
   console.warn("Nothing imported, see instruction at top of crowdin-imports.ts")

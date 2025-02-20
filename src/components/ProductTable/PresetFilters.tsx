@@ -1,8 +1,8 @@
-import { useTranslation } from "next-i18next"
-
 import type { TPresetFilters } from "@/lib/types"
 
 import { cn } from "@/lib/utils/cn"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 export interface PresetFiltersProps {
   presets: TPresetFilters

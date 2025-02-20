@@ -1,5 +1,3 @@
-import { useTranslation } from "next-i18next"
-
 import type { QuizzesSection } from "@/lib/types"
 
 import { cn } from "@/lib/utils/cn"
@@ -10,6 +8,8 @@ import { Button } from "../ui/buttons/Button"
 import { Flex, Stack } from "../ui/flex"
 import { ListItem } from "../ui/list"
 import { Tag } from "../ui/tag"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 export type QuizzesListItemProps = Omit<QuizzesSection, "id"> & {
   isCompleted: boolean
