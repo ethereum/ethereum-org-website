@@ -62,7 +62,7 @@ const StakingCommunityCallout = (props: StakingCommunityCalloutProps) => {
               eventName: "clicked website",
             })
           }}
-          href="https://ethstaker.cc"
+          href="https://ethstaker.org"
         >
           {t("common:rollup-component-website")}
         </ButtonLink>

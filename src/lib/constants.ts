@@ -201,7 +201,7 @@ export const COMMUNITY_BLOGS: CommunityBlog[] = [
     feed: "https://ethpandaops.io/posts/index.xml",
   },
   {
-    href: "https://ethstaker.cc/blog",
+    href: "https://ethstaker.org/blog",
     feed: "https://raw.githubusercontent.com/eth-educators/github-actions/refs/heads/main/_data/blog_data.xml",
   },
   {
