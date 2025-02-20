@@ -1,8 +1,7 @@
 import { Meta, StoryObj } from "@storybook/react"
 
+import { langViewportModes } from "@/storybook/modes"
 import { getTranslation } from "@/storybook-utils"
-
-import { langViewportModes } from "../../../../.storybook/modes"
 
 import ContentHeroComponent, { ContentHeroProps } from "."
 
