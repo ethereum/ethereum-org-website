@@ -78,7 +78,7 @@ This function returns the amount of `assets` that would be exchanged by the vaul
 function maxDeposit(address receiver) public view returns (uint256 maxAssets)
 ```
 
-This function returns the maximum amount of underlying assets that can be deposited in a single [`deposit`](#deposit) call by the `receiver`.
+This function returns the maximum amount of underlying assets that can be deposited in a single [`deposit`](#deposit) call, with the shares minted for the `receiver`.
 
 #### previewDeposit {#previewdeposit}
 
@@ -102,7 +102,7 @@ This function deposits `assets` of underlying tokens into the vault and grants o
 function maxMint(address receiver) public view returns (uint256 maxShares)
 ```
 
-This function returns the maximum amount of shares that can be minted in a single [`mint`](#mint) call by the `receiver`.
+This function returns the maximum amount of shares that can be minted in a single [`mint`](#mint) call, with the shares minted for the `receiver`.
 
 #### previewMint {#previewmint}
 
