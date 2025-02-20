@@ -6,6 +6,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import type {
   BasePageProps,
   ChildOnlyProp,
+  CommitHistory,
   EpochResponse,
   EthStoreResponse,
   Lang,
@@ -16,6 +17,7 @@ import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import Card from "@/components/Card"
 import ExpandableCard from "@/components/ExpandableCard"
 import FeedbackCard from "@/components/FeedbackCard"
+import FileContributors from "@/components/FileContributors"
 import LeftNavBar from "@/components/LeftNavBar"
 import { ContentContainer, Page } from "@/components/MdComponents"
 import MobileButtonDropdown from "@/components/MobileButtonDropdown"
@@ -35,6 +37,7 @@ import InlineLink from "@/components/ui/Link"
 import { ListItem, UnorderedList } from "@/components/ui/list"
 
 import { cn } from "@/lib/utils/cn"
+import { getPageContributorInfo } from "@/lib/utils/contributors"
 import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
@@ -169,18 +172,31 @@ export const getStaticProps = (async ({ locale }) => {
 
   const [data] = await loadData()
 
+  const commitHistoryCache: CommitHistory = {}
+
+  const { contributors, lastEditLocaleTimestamp } =
+    await getPageContributorInfo(
+      "staking/index.tsx",
+      locale as Lang,
+      commitHistoryCache
+    )
+
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
       contentNotTranslated,
       data,
       lastDeployLocaleTimestamp,
+      contributors,
+      lastEditLocaleTimestamp,
     },
   }
 }) satisfies GetStaticProps<Props>
 
 const StakingPage = ({
   data,
+  contributors,
+  lastEditLocaleTimestamp,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const { t } = useTranslation("page-staking")
 
@@ -621,6 +637,11 @@ const StakingPage = ({
                   </InlineLink>
                 </ListItem>
               </UnorderedList>
+              <FileContributors
+                className="my-10 border-t"
+                contributors={contributors}
+                lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+              />
             </div>
             <div>
               <FeedbackCard />

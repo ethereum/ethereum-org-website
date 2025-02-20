@@ -9,6 +9,7 @@ import { MdInfoOutline } from "react-icons/md"
 import type {
   BasePageProps,
   ChildOnlyProp,
+  CommitHistory,
   Lang,
   MetricReturnData,
 } from "@/lib/types"
@@ -25,6 +26,7 @@ import Callout from "@/components/Callout"
 import Card from "@/components/Card"
 import EnergyConsumptionChart from "@/components/EnergyConsumptionChart"
 import FeedbackCard from "@/components/FeedbackCard"
+import FileContributors from "@/components/FileContributors"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
@@ -44,6 +46,7 @@ import {
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 import { cn } from "@/lib/utils/cn"
+import { getPageContributorInfo } from "@/lib/utils/contributors"
 import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
@@ -191,11 +194,22 @@ export const getStaticProps = (async ({ locale }) => {
 
   const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
+  const commitHistoryCache: CommitHistory = {}
+
+  const { contributors, lastEditLocaleTimestamp } =
+    await getPageContributorInfo(
+      "what-is-ethereum.tsx",
+      locale as Lang,
+      commitHistoryCache
+    )
+
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
       contentNotTranslated,
       lastDeployLocaleTimestamp,
+      contributors,
+      lastEditLocaleTimestamp,
       data: data.txCount,
     },
   }
@@ -203,6 +217,8 @@ export const getStaticProps = (async ({ locale }) => {
 
 const WhatIsEthereumPage = ({
   data,
+  contributors,
+  lastEditLocaleTimestamp,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const { t } = useTranslation(["page-what-is-ethereum", "learn-quizzes"])
 
@@ -836,6 +852,11 @@ const WhatIsEthereumPage = ({
               {t("page-what-is-ethereum-kernel-dreamers-desc")}
             </p>
           </Stack>
+          <FileContributors
+            className="my-10 border-t"
+            contributors={contributors}
+            lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+          />
         </Section>
 
         <Section>
