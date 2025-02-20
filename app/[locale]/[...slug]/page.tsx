@@ -3,7 +3,7 @@ import { CommitHistory, Lang, ToCItem } from "@/lib/types"
 import mdComponents from "@/components/MdComponents"
 
 import { getFileContributorInfo } from "@/lib/utils/contributors"
-import { getContent } from "@/lib/utils/md"
+import { getPostSlugs } from "@/lib/utils/md"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 
 import { LOCALES_CODES } from "@/lib/constants"
@@ -69,14 +69,14 @@ export default async function Page({
 }
 
 export async function generateStaticParams() {
-  const contentFiles = getContent("/")
+  const slugs = await getPostSlugs("/", /\/developers/)
 
   // Generate page paths for each supported locale
   return LOCALES_CODES.flatMap((locale) =>
-    contentFiles.map((file) => ({
+    slugs.map((slug) => ({
       params: {
         // Splitting nested paths to generate proper slug
-        slug: file.slug.split("/").slice(1),
+        slug: slug.split("/").slice(1),
         locale,
       },
     }))
