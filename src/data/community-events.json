@@ -42,7 +42,7 @@
     "href": "https://ethkyiv.com",
     "location": "Kyiv, Ukraine",
     "description": "Welcome to the 1st edition of ETHKyiv, hosted this June 21-23 and bringing together participants from diverse backgrounds, including developers, designers, entrepreneurs, and blockchain enthusiasts!",
-    "imageUrl": ""
+    "imageUrl": "https://ethkyiv.com/_next/image?url=%2Fimages%2Fmain-banner_01.png&w=1920&q=75"
   },
   {
     "title": "DappCon",
@@ -237,7 +237,7 @@
     "title": "BUIDL Asia",
     "startDate": "2025-04-15",
     "endDate": "2025-04-16",
-    "href": "https://-",
+    "href": "https://www.buidl.asia/",
     "location": "Seoul, KR",
     "description": "",
     "imageUrl": ""
@@ -543,10 +543,10 @@
     "title": "Crecimiento",
     "startDate": "2025-03-05",
     "endDate": "2025-03-28",
-    "href": "https://crecimientoar",
-    "location": "TBD, ARG",
-    "description": "",
-    "imageUrl": ""
+    "href": "https://aleph.crecimiento.build/",
+    "location": "Buenos Aires, Argentina",
+    "description": "The Crecimiento Pop-Up City is a moment-in-time for these visionaries to come together with renowned experts, and transform Argentina into a world-leading startup & innovation hub.",
+    "imageUrl": "https://cdn.prod.website-files.com/6661b1a3c1bce60cd61fc966/669e83df3c3a7535a9cc05fa_1200xlogo.png"
   },
   {
     "title": "EthereumSF",
@@ -617,7 +617,7 @@
     "endDate": "2025-09-06",
     "href": "https://ethaccra.xyz",
     "location": "Accra, GHA",
-    "description": "",
+    "description": "ETHAccra",
     "imageUrl": "http://eth-accra-website.vercel.app/assets/pngs/meta_image.png"
   },
   {
@@ -628,5 +628,59 @@
     "location": "Tokyo, JAP",
     "description": "View and subscribe to events from ETHTokyo on Luma. ETHTokyo",
     "imageUrl": "https://images.lumacdn.com/calendar-cover-images/rv/316a4b25-a9fb-4ff0-ab1a-d7f23a2ba0e0"
+  },
+  {
+    "title": "Edge City Austin",
+    "startDate": "2025-03-02",
+    "endDate": "2025-03-07",
+    "href": "https://www.edgecity.live/austin",
+    "location": "Austin, USA",
+    "description": "Edge City Austin",
+    "imageUrl": "https://cdn.prod.website-files.com/65b2cb5abdecf7cd7747e170/67aba5d16f625f40658dde92_edge-sxsw-10.png"
+  },
+  {
+    "title": "Edge Expedition South Africa",
+    "startDate": "2025-04-03",
+    "endDate": "2025-04-12",
+    "href": "https://www.edgecity.live/southafrica",
+    "location": "Capetown, ZA",
+    "description": "Edge Expedition | South Africa",
+    "imageUrl": "https://cdn.prod.website-files.com/65b2cb5abdecf7cd7747e170/67802a19fb53c877dd9f5eb0_og-southafricaexpedition%20(1).png"
+  },
+  {
+    "title": "ETH Seoul",
+    "startDate": "2025-04-12",
+    "endDate": "2025-04-12",
+    "href": "https://ethseoul.org",
+    "location": "Seoul, KR",
+    "description": "",
+    "imageUrl": ""
+  },
+  {
+    "title": "ETH Cinco de Mayo",
+    "startDate": "2025-05-01",
+    "endDate": "2025-05-04",
+    "href": "https://ethcdm.com/",
+    "location": "Mexico, MX",
+    "description": "ETH Cinco de Mayo Hackathon, Feb. 2nd-4th 2024, Puebla, Mexico. A perfect combination of competition, workshops, networking, entrepreneurship and culture!",
+    "imageUrl": "https://ethcdm.com/assets/images/og-918.jpg"
+  },
+  {
+    "title": "World Expo on Blockchain*",
+    "startDate": "2025-05-10",
+    "endDate": "2025-06-03",
+    "href": "https://web2025.world/",
+    "location": "Osaka, JPN",
+    "description": "A future without financial inclusion, digital trust, data privacy and security is no future at all. Blockchain isn’t just relevant—it’s essential.",
+    "imageUrl": "https://framerusercontent.com/images/Ivp1oWg8CFUDERZIoey9dadW7E.png"
+  },
+  {
+    "title": "ETHBratislava",
+    "startDate": "2025-05-23",
+    "endDate": "2025-05-25",
+    "href": "https://ethbratislava.com/",
+    "location": "Bratislava, SVK",
+    "description": "Two-day conference and hackathon focused on sharing knowledge and sparking innovative ideas aimed at energizing the entire ethereum ecosystem.",
+    "imageUrl": "https://framerusercontent.com/assets/IBAFZwu44FpNo95n3OoOapeFUyw.png"
   }
 ]
