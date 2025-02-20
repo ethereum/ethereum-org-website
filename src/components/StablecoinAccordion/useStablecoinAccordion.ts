@@ -2,16 +2,16 @@ import { useTranslation } from "next-i18next"
 
 import { type CardProps } from "@/components/CardList"
 
+// Static assets
+// -- dapps
 import aaveImg from "@/public/images/dapps/aave.png"
+// -- earn
+import buidlboxImg from "@/public/images/dapps/buidlbox.png"
 // -- borrow
 import compoundImg from "@/public/images/dapps/compound.png"
-// -- earn
-import gitcoinImg from "@/public/images/dapps/gitcoin.png"
 import loopringImg from "@/public/images/dapps/loopring.png"
 import matchaImg from "@/public/images/dapps/matcha.png"
 import summerfiImg from "@/public/images/dapps/summerfi.png"
-// Static assets
-// -- dapps
 import uniImg from "@/public/images/dapps/uni.png"
 import oneInchImg from "@/public/images/exchanges/1inch.png"
 import binanceImg from "@/public/images/exchanges/binance.png"
@@ -76,10 +76,10 @@ export const useStablecoinAccordion = () => {
   const earn: Array<CardProps> = [
     {
       title: t("page-stablecoins-accordion-earn-project-bounties"),
-      image: gitcoinImg,
-      link: "https://gitcoin.co/explorer",
+      image: buidlboxImg,
+      link: "https://app.buidlbox.io/",
       description: t("page-stablecoins-accordion-earn-project-1-description"),
-      alt: t("gitcoin-logo"),
+      alt: t("buidlbox-logo"),
     },
     {
       title: t("page-stablecoins-accordion-earn-project-bug-bounties"),
