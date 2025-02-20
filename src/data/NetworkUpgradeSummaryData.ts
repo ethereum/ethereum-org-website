@@ -1,6 +1,9 @@
 import type { NetworkUpgradeData } from "@/lib/types"
 
 const NetworkUpgradeSummaryData: NetworkUpgradeData = {
+  pectra: {
+    isPending: true,
+  },
   dencun: {
     dateTimeAsString: "2024-03-13T13:55:35.000Z",
     ethPriceInUSD: 3984,
