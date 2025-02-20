@@ -63,7 +63,7 @@ Calldata refers to the bytes sent as part of the transaction. It is stored as pa
 
 This is the cheapest method to permanently put data in the blockchain. The cost per byte is either 4 execution gas (if the byte is zero) or 16 gas (any other value). If the data is compressed, which is standard practice, then every byte value is equally likely, so the average cost is approximately 15.95 gas per byte.
 
-At writing the prices are 12 gwei/gas and 2300 $/ETH, which means the cost is approximately 45 cents per kilobyte. Because this was the cheapest method prior to EIP-4844, this is the method rollups used to store transaction information, which need to be available for [fault challenges](https://docs.optimism.io/stack/protocol/overview#fault-proofs), but do not need to be accessible directly onchain.
+At the time of writing, the prices are 12 gwei/gas and 2300 $/ETH, which means the cost is approximately 45 cents per kilobyte. Because this was the cheapest method prior to EIP-4844, this is the method rollups used to store transaction information, which need to be available for [fault challenges](https://docs.optimism.io/stack/protocol/overview#fault-proofs), but do not need to be accessible directly onchain.
 
 Here are the addresses to see the transactions posted by some famous rollups.
 
