@@ -1,5 +1,3 @@
-"use client"
-
 import { useLocale } from "next-intl"
 import type { HTMLAttributes } from "react"
 
@@ -37,7 +35,6 @@ import UpcomingEventsList from "@/components/UpcomingEventsList"
 import { getEditPath } from "@/lib/utils/editPath"
 import { isLangRightToLeft } from "@/lib/utils/translations"
 
-import { usePathname } from "@/i18n/routing"
 import GuideHeroImage from "@/public/images/heroes/guides-hub-hero.jpg"
 
 const Heading1 = (props: HTMLAttributes<HTMLHeadingElement>) => (
@@ -90,13 +87,12 @@ export const StaticLayout = ({
   contentNotTranslated,
 }: StaticLayoutProps) => {
   const locale = useLocale()
-  const pathname = usePathname()
 
   const absoluteEditPath = getEditPath(slug)
 
   return (
     <div className="w-full">
-      <TranslatathonBanner pathname={pathname} />
+      <TranslatathonBanner />
       <Flex
         className="mx-auto mb-16 w-full justify-between p-8 lg:pt-16"
         dir={contentNotTranslated ? "ltr" : "unset"}
@@ -113,7 +109,7 @@ export const StaticLayout = ({
             <Stack className="gap-8">
               <Breadcrumbs slug={slug} />
 
-              {!pathname.includes("/whitepaper") && (
+              {!slug.includes("/whitepaper") && (
                 <p
                   className="text-body-medium"
                   dir={isLangRightToLeft(locale as Lang) ? "rtl" : "ltr"}

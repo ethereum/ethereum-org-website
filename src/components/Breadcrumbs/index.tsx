@@ -16,7 +16,6 @@ import {
 } from "../ui/breadcrumb"
 
 import { useTranslation } from "@/hooks/useTranslation"
-import { usePathname } from "@/i18n/routing"
 
 export type BreadcrumbsProps = BreadcrumbProps & {
   slug: string
@@ -27,6 +26,8 @@ type Crumb = {
   fullPath: string
   text: string
 }
+
+// TODO: update docs after removing pathname and slug logic
 
 // Generate crumbs from slug
 // e.g. "/en/eth2/proof-of-stake/" will generate:
@@ -44,10 +45,9 @@ type Crumb = {
 const Breadcrumbs = ({ slug, startDepth = 0, ...props }: BreadcrumbsProps) => {
   const { t } = useTranslation("common")
   const locale = useLocale()
-  const pathname = usePathname()
   const dir = isLangRightToLeft(locale! as Lang) ? "rtl" : "ltr"
 
-  const hasHome = pathname !== "/"
+  const hasHome = slug !== ""
   const slugChunk = slug.split("/")
   const sliced = slugChunk.filter((item) => !!item)
 

@@ -18,7 +18,7 @@ import { remapTableOfContents } from "@/lib/utils/toc"
 
 import { DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
 
-import { StaticLayout } from "@/layouts"
+import { staticComponents, StaticLayout } from "@/layouts"
 import rehypeImg from "@/lib/md/rehypeImg"
 import remarkInferToc from "@/lib/md/remarkInferToc"
 
@@ -107,15 +107,15 @@ export default async function Page({
 
   return (
     <StaticLayout
-      frontmatter={frontmatter}
       slug={slug}
+      frontmatter={frontmatter}
       tocItems={tocItems}
       lastEditLocaleTimestamp={lastEditLocaleTimestamp}
       contentNotTranslated={contentNotTranslated}
     >
       <MDXRemote
         source={source}
-        components={{ ...mdComponents }}
+        components={{ ...mdComponents, ...staticComponents }}
         options={{ parseFrontmatter: true, mdxOptions }}
       />
     </StaticLayout>
