@@ -28,11 +28,11 @@ export const ResourceItem = ({
   <div
     className={cn("flex gap-2 border-b p-3 last-of-type:border-0", className)}
   >
-    <div className="m-1 size-[18px] shrink-0 text-[18px]">
+    <div className="my-1 size-[18px] shrink-0">
       <Image src={imgSrc} alt={title} />
     </div>
     <div>
-      <h3 className="text-lg">{title}</h3>
+      <h3 className="text-md">{title}</h3>
       <p>{description}</p>
       <Tag asChild>
         <Link href={href} className="mt-1 rounded-full normal-case">

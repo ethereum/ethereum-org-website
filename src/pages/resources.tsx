@@ -17,7 +17,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
-import { Button, ButtonLink } from "@/components/ui/buttons/Button"
+import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Section } from "@/components/ui/section"
 
 import { cn } from "@/lib/utils/cn"
@@ -75,19 +75,33 @@ const ResourcesPage = () => {
       >
         {resourceSections.map(({ key, icon, title, boxes }) => (
           <AccordionItem value={key} key={key}>
-            <AccordionTrigger asChild hideIcon>
-              <div className="flex w-full items-center gap-3 border-b bg-transparent px-4 py-6">
-                <div className="grid size-12 place-items-center rounded-lg border border-border-low-contrast">
-                  {icon || <StackIcon className="text-2xl" />}
-                </div>
-                <h2 className="flex-1 text-start font-black">{title}</h2>
-                <Button
-                  variant="outline"
-                  size="sm"
-                  className="my-auto h-fit text-nowrap rounded-full border-border-low-contrast px-4 py-1.5 font-normal uppercase text-body"
-                >
+            <AccordionTrigger
+              hideIcon
+              className={cn(
+                "group flex w-full items-center gap-3 border-b bg-transparent px-4 py-6",
+                "[&[data-state=open]]:bg-background-transparent [&[data-state=open]]:text-body",
+                "[&[data-state=closed]_.accordion-open]:hidden [&[data-state=open]_.accordion-closed]:hidden"
+              )}
+            >
+              <div className="grid size-12 place-items-center rounded-lg border border-border-low-contrast">
+                {icon || <StackIcon className="text-2xl" />}
+              </div>
+              <h2 className="flex-1 text-start font-black">{title}</h2>
+              <div
+                className={cn(
+                  "min-h-[31px] px-2 py-1.5 text-xs [&>svg]:text-md",
+                  "my-auto h-fit text-nowrap px-4 py-1.5 font-normal uppercase text-body",
+                  "rounded-full border border-solid border-current",
+                  "inline-flex items-center justify-center gap-2 transition [&>svg]:flex-shrink-0",
+                  "group-hover:!text-primary-hover group-hover:shadow-[4px_4px_theme('colors.primary.low-contrast')]"
+                )}
+              >
+                <span className="accordion-closed">
+                  <span className="max-md:hidden">{t("common:open")}</span> +
+                </span>
+                <span className="accordion-open">
                   <span className="max-md:hidden">{t("common:close")}</span> -
-                </Button>
+                </span>
               </div>
             </AccordionTrigger>
             <AccordionContent className="grid grid-cols-1 gap-8 pb-12 pt-8 md:pb-12 md:pt-8 lg:grid-cols-2">
