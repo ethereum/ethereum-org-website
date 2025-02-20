@@ -59,6 +59,7 @@ export type ProductCardProps = {
   githubRepoStars?: number
   githubRepoLanguages?: Array<string>
   hideStars?: boolean
+  priceType?: string
 }
 
 const ProductCard = ({
@@ -75,6 +76,7 @@ const ProductCard = ({
   githubRepoStars = 0,
   githubRepoLanguages = [],
   hideStars = false,
+  priceType,
 }: ProductCardProps) => {
   const { t } = useTranslation("common")
 
@@ -119,6 +121,9 @@ const ProductCard = ({
               {subject}
             </SubjectBadge>
           ))}
+        {priceType && (
+          <SubjectBadge subject={priceType}>{priceType}</SubjectBadge>
+        )}
         {githubRepoLanguages.length > 0 &&
           githubRepoLanguages.map((name, idx: number) => (
             <SubjectBadge key={idx} subject={name}>
