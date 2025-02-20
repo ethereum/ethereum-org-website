@@ -7,8 +7,7 @@ import remarkGfm from "remark-gfm"
 import remarkHeadingId from "remark-heading-id"
 
 import { CONTENT_DIR, CONTENT_PATH } from "../constants"
-import { StaticFrontmatter } from "../interfaces"
-import { TocNodeType } from "../types"
+import { Frontmatter, TocNodeType } from "../types"
 
 import rehypeImg from "@/lib/md/rehypeImg"
 import remarkInferToc from "@/lib/md/remarkInferToc"
@@ -53,7 +52,7 @@ export const compile = async ({
 
   const source = preprocessMarkdown(markdown)
 
-  const { content, frontmatter } = await compileMDX<StaticFrontmatter>({
+  const { content, frontmatter } = await compileMDX<Frontmatter>({
     source,
     components,
     options: {

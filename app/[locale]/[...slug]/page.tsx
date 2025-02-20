@@ -1,3 +1,5 @@
+import readingTime from "reading-time"
+
 import { CommitHistory, Lang, ToCItem } from "@/lib/types"
 
 import mdComponents from "@/components/MdComponents"
@@ -8,7 +10,7 @@ import { getLocaleTimestamp } from "@/lib/utils/time"
 
 import { LOCALES_CODES } from "@/lib/constants"
 
-import { StaticLayout } from "@/layouts"
+import { layoutMapping } from "@/layouts"
 import { compile } from "@/lib/md/compile"
 import { importMd } from "@/lib/md/import"
 
@@ -39,15 +41,16 @@ export default async function Page({
     tocNodeItems.length === 1 && "items" in tocNodeItems[0]
       ? tocNodeItems[0].items
       : tocNodeItems
+  const timeToRead = readingTime(markdown)
 
-  // TODO make this dynamic
-  const layout = "static"
+  const layout = frontmatter.template || "static"
+  const Layout = layoutMapping[layout]
 
-  const { lastUpdatedDate } = await getFileContributorInfo(
+  const { contributors, lastUpdatedDate } = await getFileContributorInfo(
     slug,
     locale,
     frontmatter.lang,
-    layout as never, // TODO: fix
+    layout,
     commitHistoryCache
   )
   const lastEditLocaleTimestamp = getLocaleTimestamp(
@@ -56,15 +59,17 @@ export default async function Page({
   )
 
   return (
-    <StaticLayout
+    <Layout
       slug={slug}
       frontmatter={frontmatter}
       tocItems={tocItems as ToCItem[]}
       lastEditLocaleTimestamp={lastEditLocaleTimestamp}
       contentNotTranslated={!isTranslated}
+      contributors={contributors}
+      timeToRead={Math.round(timeToRead.minutes)}
     >
       {content}
-    </StaticLayout>
+    </Layout>
   )
 }
 
