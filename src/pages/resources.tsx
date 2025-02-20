@@ -67,14 +67,37 @@ const ResourcesPage = () => {
         heroImg={heroImg}
       />
 
-      {/* TODO: Section shortcut bar */}
+      {/* TODO: Implement scroll position tracking */}
+      <div className="my-12 flex flex-col items-center gap-3 px-2 text-center">
+        <div className="my-2 text-body-medium">What&apos;s on this page</div>
+        <nav className="flex max-w-full gap-1 overflow-x-auto rounded-xl bg-background">
+          {resourceSections.map(({ key, title }) => (
+            <ButtonLink
+              key={key}
+              href={`#${key}`}
+              variant="ghost"
+              isSecondary
+              className="text-nowrap rounded-xl px-4 py-2 text-sm text-primary hover:bg-primary/10"
+              activeClassName="bg-primary-low-contrast text-primary"
+            >
+              {title}
+            </ButtonLink>
+          ))}
+        </nav>
+      </div>
 
       <Accordion
         type="multiple"
         defaultValue={resourceSections.map(({ key }) => key)}
+        className="space-y-16"
       >
         {resourceSections.map(({ key, icon, title, boxes }) => (
-          <AccordionItem value={key} key={key}>
+          <AccordionItem
+            value={key}
+            key={key}
+            id={key}
+            className="scroll-mt-20"
+          >
             <AccordionTrigger
               hideIcon
               className={cn(
