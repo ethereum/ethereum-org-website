@@ -45,11 +45,15 @@ To start, visit the [Ethereum quick start guide](https://academy.subquery.networ
 ## Ethernow - Mempool Data Program {#ethernow}
 [Blocknative](https://www.blocknative.com/) provides open access to its Ethereum historical [mempool data archive](https://www.ethernow.xyz/mempool-data-archive). This enables researchers and community good projects to explore the pre-chain layer of Ethereum Mainnet. The data set is actively maintained and represents the most comprehensive historical record of mempool transaction events within the Ethereum ecosystem. Learn more at [Ethernow](https://www.ethernow.xyz/). 
 
-## Further Reading {#further-reading}
+## EVM Query Language 
 
+EVM Query Language (EQL) is an SQL-like language designed to query EVM (Ethereum Virtual Machine) chains. EQL's ultimate goal is to support complex relational queries on EVM chain first-class citizens (blocks, accounts, and transactions) while providing developers and researchers with an ergonomic syntax for everyday use. With EQL, developers can fetch blockchain data using familiar SQL-like syntax and eliminate the need for complex boilerplate code. EQL supports standard blockchain data requests (e.g., retrieving an account's nonce and balance on Ethereum or fetching the current block size and timestamp) and is continually adding support for more complex requests and featuresets.
+
+## Further Reading {#further-reading}
+- [Exploring Crypto Data I: Data Flow Architectures](https://research.2077.xyz/exploring-crypto-data-1-data-flow-architectures)
 - [Graph Network Overview](https://thegraph.com/docs/en/about/network/)
 - [Graph Query Playground](https://thegraph.com/explorer/subgraph/graphprotocol/graph-network-mainnet?version=current)
 - [API code examples on EtherScan](https://etherscan.io/apis#contracts)
 - [Beaconcha.in Beacon Chain explorer](https://beaconcha.in)
 - [Dune Basics](https://docs.dune.com/#dune-basics)
-- [SubQuery Ethereum Quick Start Guide](https://academy.subquery.network/indexer/quickstart/quickstart_chains/ethereum-gravatar.html)
+- [EVM Query Language](https://eql.sh/blog/alpha-release-notes) 
