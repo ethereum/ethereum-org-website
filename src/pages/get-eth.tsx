@@ -3,7 +3,12 @@ import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import type { ReactNode } from "react"
 
-import type { BasePageProps, ChildOnlyProp, Lang } from "@/lib/types"
+import type {
+  BasePageProps,
+  ChildOnlyProp,
+  CommitHistory,
+  Lang,
+} from "@/lib/types"
 
 import CalloutBanner from "@/components/CalloutBanner"
 import CardList, {
@@ -13,6 +18,7 @@ import CentralizedExchanges from "@/components/CentralizedExchanges"
 import Emoji from "@/components/Emoji"
 import EthPriceCard from "@/components/EthPriceCard"
 import FeedbackCard from "@/components/FeedbackCard"
+import FileContributors from "@/components/FileContributors"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
@@ -31,6 +37,7 @@ import { Stack } from "@/components/ui/flex"
 import InlineLink from "@/components/ui/Link"
 
 import { cn } from "@/lib/utils/cn"
+import { getPageContributorInfo } from "@/lib/utils/contributors"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLastModifiedDateByPath } from "@/lib/utils/gh"
@@ -89,18 +96,31 @@ export const getStaticProps = (async ({ locale }) => {
     lastDeployDate
   )
 
+  const commitHistoryCache: CommitHistory = {}
+
+  const { contributors, lastEditLocaleTimestamp } =
+    await getPageContributorInfo(
+      "learn.tsx",
+      locale as Lang,
+      commitHistoryCache
+    )
+
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
       contentNotTranslated,
       lastDeployLocaleTimestamp,
       lastDataUpdateDate,
+      contributors,
+      lastEditLocaleTimestamp,
     },
   }
 }) satisfies GetStaticProps<Props>
 
 const GetEthPage = ({
   lastDataUpdateDate,
+  contributors,
+  lastEditLocaleTimestamp,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const { t } = useTranslation("page-get-eth")
 
@@ -378,6 +398,11 @@ const GetEthPage = ({
               </Stack>
             </Stack>
           </TwoColumnContent>
+          <FileContributors
+            className="my-10 border-t"
+            contributors={contributors}
+            lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+          />
         </Stack>
 
         <Divider className="mx-auto my-16 md:my-32" />
