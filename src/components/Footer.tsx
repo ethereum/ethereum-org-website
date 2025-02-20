@@ -302,71 +302,59 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
     "text-body-medium no-underline hover:text-primary hover:after:text-primary"
 
   return (
-    <footer className="px-4 py-4">
-      <div className="flex flex-wrap items-center justify-center gap-8 border-t border-body-light px-4 py-4 md:justify-between">
-        <p className="text-sm italic text-body-medium">
-          <Translation id="website-last-updated" />: {lastDeployLocaleTimestamp}
-        </p>
-
-        <Button
-          variant="outline"
-          isSecondary
-          onClick={() => scrollIntoView("__next")}
-        >
-          <IoChevronUpSharp /> Go to top
-        </Button>
-      </div>
-
-      <div className="grid auto-cols-auto justify-between gap-4 px-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5">
-        {linkSections.map((section: FooterLinkSection, idx) => (
-          <div key={idx}>
-            <h3 className="my-5 text-sm font-bold">
-              <Translation id={section.title} />
-            </h3>
-            <List className="m-0 mb-4 list-none text-sm">
-              {section.links.map((link, linkIdx) => (
-                <ListItem key={linkIdx} className="mb-4">
-                  <BaseLink
-                    href={link.href}
-                    className={footerLinkClassName}
-                    isPartiallyActive={false}
-                  >
-                    {link.text}
-                  </BaseLink>
-                </ListItem>
-              ))}
-            </List>
-          </div>
-        ))}
-      </div>
-      <div className="flex flex-col items-center justify-center bg-background-highlight p-6 text-sm">
-        <div className="flex gap-4">
-          {socialLinks.map(({ href, ariaLabel, icon: Icon }) => (
-            <BaseLink
-              key={href}
-              href={href}
-              hideArrow
-              aria-label={ariaLabel}
-              className="text-body hover:text-primary"
-            >
-              <Icon className="h-9 w-9 hover:transform hover:transition-colors" />
-            </BaseLink>
+    <footer className="footer">
+      <nav aria-label={t("footer-navigation")} role="navigation">
+        <div className="footer-sections">
+          {linkSections.map((section, idx) => (
+            <div key={idx} className="footer-section">
+              <h2 id={`footer-section-${idx}`} className="footer-section-title">
+                {section.title}
+              </h2>
+              <List
+                aria-labelledby={`footer-section-${idx}`}
+                className="footer-links"
+              >
+                {section.links.map((link: FooterLink, linkIdx) => (
+                  <ListItem key={linkIdx}>
+                    <BaseLink
+                      href={link.href}
+                      className="footer-link"
+                      aria-current={link.isPartiallyActive ? "page" : undefined}
+                    >
+                      {link.text}
+                    </BaseLink>
+                  </ListItem>
+                ))}
+              </List>
+            </div>
           ))}
         </div>
-        <List className="m-0 flex list-none flex-col flex-wrap justify-center p-5 text-sm font-normal sm:flex-row sm:justify-between md:justify-center">
-          {dipperLinks.map(({ href, text }) => (
-            <ListItem key={text} className="px-2 text-center">
-              <BaseLink
-                href={href}
-                className={cn("w-full sm:w-auto", footerLinkClassName)}
-                isPartiallyActive={false}
-              >
-                {text}
-              </BaseLink>
-            </ListItem>
-          ))}
-        </List>
+      </nav>
+      
+      <div className="social-links" aria-label={t("social-media")}>
+        {socialLinks.map(({ icon: Icon, href, ariaLabel }) => (
+          <BaseLink
+            key={href}
+            href={href}
+            className="social-link"
+            aria-label={ariaLabel}
+          >
+            <Icon aria-hidden="true" />
+          </BaseLink>
+        ))}
       </div>
+      
+      <Button
+        onClick={() => scrollIntoView("top-of-page")}
+        className="scroll-to-top"
+        aria-label={t("back-to-top")}
+      >
+        <IoChevronUpSharp aria-hidden="true" />
+      </Button>
+      
+      <p className="deploy-timestamp">
+        {t("website-last-updated")}: {lastDeployLocaleTimestamp}
+      </p>
     </footer>
   )
 }
