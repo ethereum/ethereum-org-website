@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { useTranslation } from "next-i18next"
 
 import { FilterInputState } from "@/lib/types"
 
@@ -31,6 +32,7 @@ const NetworksWalletSelectInput = ({
   updateFilterState,
 }: NetworksWalletSelectInputProps) => {
   const [searchQuery, setSearchQuery] = useState("")
+  const { t } = useTranslation("page-layer-2-networks")
 
   const filteredWallets = walletsData
     .filter((wallet) =>
@@ -48,7 +50,7 @@ const NetworksWalletSelectInput = ({
         }}
       >
         <SelectTrigger className="w-full">
-          <SelectValue placeholder="Select wallet" />
+          <SelectValue placeholder={t("page-layer-2-networks-select-wallet")} />
         </SelectTrigger>
         <SelectContent
           position="popper"
@@ -63,7 +65,7 @@ const NetworksWalletSelectInput = ({
           >
             <Input
               type="search"
-              placeholder="Search wallets..."
+              placeholder={t("page-layer-2-networks-search-wallets")}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full"
@@ -77,7 +79,7 @@ const NetworksWalletSelectInput = ({
             ))
           ) : (
             <div className="p-2 text-center text-body-medium">
-              No wallets found
+              {t("page-layer-2-networks-no-wallet-found")}
             </div>
           )}
         </SelectContent>

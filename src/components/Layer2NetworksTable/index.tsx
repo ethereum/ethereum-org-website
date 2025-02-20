@@ -1,4 +1,5 @@
 import { useMemo, useState } from "react"
+import { useTranslation } from "next-i18next"
 
 import { ExtendedRollup, FilterOption, Lang } from "@/lib/types"
 
@@ -21,6 +22,7 @@ const Layer2NetworksTable = ({
 }) => {
   const networkFilterOptions = useNetworkFilters()
   const [filters, setFilters] = useState<FilterOption[]>(networkFilterOptions)
+  const { t } = useTranslation("page-layer-2-networks")
 
   const filteredData = useMemo(() => {
     const networks = [mainnetData, ...layer2Data]
@@ -72,7 +74,7 @@ const Layer2NetworksTable = ({
       noResultsComponent={() => (
         <NetworksNoResults resetFilters={resetFilters} />
       )}
-      mobileFiltersLabel={"See networks"}
+      mobileFiltersLabel={t("page-layer-2-networks-transaction-see-networks")}
     />
   )
 }
