@@ -1,13 +1,28 @@
-import { compileMDX } from "next-mdx-remote/rsc"
+import { join } from "path"
+
+import { SerializeOptions } from "next-mdx-remote/dist/types"
+import { compileMDX, MDXRemote } from "next-mdx-remote/rsc"
 import remarkSlug from "rehype-slug"
 import remarkGfm from "remark-gfm"
 import remarkHeadingId from "remark-heading-id"
 
+import { CommitHistory, Lang, TocNodeType } from "@/lib/types"
+import { StaticFrontmatter } from "@/lib/interfaces"
+
+import mdComponents from "@/components/MdComponents"
+
+import { getFileContributorInfo } from "@/lib/utils/contributors"
 import { getContent } from "@/lib/utils/md"
+import { getLocaleTimestamp } from "@/lib/utils/time"
+import { remapTableOfContents } from "@/lib/utils/toc"
 
 import { DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
 
-import remarkInferToc from "@/lib/rehype/remarkInferToc"
+import { StaticLayout } from "@/layouts"
+import rehypeImg from "@/lib/md/rehypeImg"
+import remarkInferToc from "@/lib/md/remarkInferToc"
+
+const commitHistoryCache: CommitHistory = {}
 
 // Preprocess the markdown content
 function preprocessMarkdown(content: string) {
@@ -19,40 +34,92 @@ function preprocessMarkdown(content: string) {
 export default async function Page({
   params,
 }: {
-  params: Promise<{ locale: string; slug: string }>
+  params: Promise<{ locale: string; slug: string[] }>
 }) {
-  const { locale, slug } = await params
+  const { locale, slug: slugArray } = await params
+
+  const slug = slugArray.join("/")
 
   let markdown = ""
+  let contentNotTranslated = false
   if (locale === DEFAULT_LOCALE) {
     markdown = (await import(`../../../public/content/${slug}/index.md`))
       .default
   } else {
-    markdown = (
-      await import(
-        `../../../public/content/translations/${locale}/${slug}/index.md`
-      )
-    ).default
+    try {
+      markdown = (
+        await import(
+          `../../../public/content/translations/${locale}/${slug}/index.md`
+        )
+      ).default
+    } catch (error) {
+      markdown = (await import(`../../../public/content/${slug}/index.md`))
+        .default
+      contentNotTranslated = true
+    }
   }
 
-  const { content, frontmatter } = await compileMDX({
-    source: preprocessMarkdown(markdown),
+  let tocNodeItems: TocNodeType[] = []
+  const tocCallback = (toc: TocNodeType): void => {
+    tocNodeItems = "items" in toc ? toc.items : []
+  }
+
+  const source = preprocessMarkdown(markdown)
+
+  const { frontmatter } = await compileMDX<StaticFrontmatter>({
+    source,
     options: {
       parseFrontmatter: true,
-      mdxOptions: {
-        remarkPlugins: [
-          remarkGfm,
-          remarkHeadingId,
-          [remarkInferToc, { callback: (toc) => console.log("toc", toc) }],
-        ],
-        rehypePlugins: [remarkSlug],
-      },
     },
   })
 
-  console.log("frontmatter", frontmatter)
+  // TODO: double check if this is the correct path
+  const mdPath = join("/content", ...slugArray)
+  const mdDir = join("public", mdPath)
 
-  return <div>{content}</div>
+  const mdxOptions = {
+    remarkPlugins: [
+      remarkGfm,
+      remarkHeadingId,
+      remarkSlug,
+      [remarkInferToc, { callback: tocCallback }],
+    ],
+    rehypePlugins: [[rehypeImg, { dir: mdDir, srcPath: mdPath, locale }]],
+  } satisfies SerializeOptions["mdxOptions"]
+
+  const tocItems = remapTableOfContents(tocNodeItems, source)
+
+  const layout = "static"
+
+  const { lastUpdatedDate } = await getFileContributorInfo(
+    mdDir,
+    mdPath,
+    slug,
+    locale!,
+    frontmatter.lang,
+    layout as never,
+    commitHistoryCache
+  )
+  const lastEditLocaleTimestamp = getLocaleTimestamp(
+    locale as Lang,
+    lastUpdatedDate
+  )
+
+  return (
+    <StaticLayout
+      frontmatter={frontmatter}
+      slug={slug}
+      tocItems={tocItems}
+      lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+      contentNotTranslated={contentNotTranslated}
+    >
+      <MDXRemote
+        source={source}
+        components={{ ...mdComponents }}
+        options={{ parseFrontmatter: true, mdxOptions }}
+      />
+    </StaticLayout>
+  )
 }
 
 export async function generateStaticParams() {

@@ -1,10 +1,8 @@
 import fs from "fs"
 import path from "path"
 
-import type { Root } from "hast"
 import sizeOf from "image-size"
 import { getPlaiceholder } from "plaiceholder"
-import type { Plugin } from "unified"
 import { visit } from "unist-util-visit"
 
 import { getHashFromBuffer } from "@/lib/utils/crypto"
@@ -152,7 +150,7 @@ const setImagePlaceholders = async (
  * @param options.srcDir Directory where the image src attr is going to point
  */
 
-const setImageSize: Plugin<[Options], Root> = (options) => {
+const setImageSize = (options: Options) => {
   const opts = options || {}
   const dir = opts.dir
   const srcPath = opts.srcPath

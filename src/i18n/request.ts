@@ -13,8 +13,15 @@ export default getRequestConfig(async ({ requestLocale }) => {
     locale = routing.defaultLocale
   }
 
+  // TODO: load all namespaces
+  const ns = "common"
+
+  const messages = {
+    [ns]: (await import(`../intl/${locale}/${ns}.json`)).default,
+  }
+
   return {
     locale,
-    messages: (await import(`../intl/${locale}/common.json`)).default,
+    messages,
   }
 })
