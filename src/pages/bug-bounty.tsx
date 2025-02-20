@@ -317,7 +317,7 @@ const BugBountiesPage = () => {
     },
     {
       title: "Nethermind",
-      link: "https://docs.nethermind.io/nethermind/",
+      link: "https://docs.nethermind.io/",
       image: nethermind,
     },
     {
