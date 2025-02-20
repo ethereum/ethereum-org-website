@@ -6,7 +6,7 @@ import remarkSlug from "rehype-slug"
 import remarkGfm from "remark-gfm"
 import remarkHeadingId from "remark-heading-id"
 
-import { CommitHistory, Lang, TocNodeType } from "@/lib/types"
+import { CommitHistory, Lang, ToCItem, TocNodeType } from "@/lib/types"
 import { StaticFrontmatter } from "@/lib/interfaces"
 
 import mdComponents from "@/components/MdComponents"
@@ -14,7 +14,6 @@ import mdComponents from "@/components/MdComponents"
 import { getFileContributorInfo } from "@/lib/utils/contributors"
 import { getContent } from "@/lib/utils/md"
 import { getLocaleTimestamp } from "@/lib/utils/time"
-import { remapTableOfContents } from "@/lib/utils/toc"
 
 import { DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
 
@@ -64,15 +63,6 @@ export default async function Page({
     tocNodeItems = "items" in toc ? toc.items : []
   }
 
-  const source = preprocessMarkdown(markdown)
-
-  const { frontmatter } = await compileMDX<StaticFrontmatter>({
-    source,
-    options: {
-      parseFrontmatter: true,
-    },
-  })
-
   // TODO: double check if this is the correct path
   const mdPath = join("/content", ...slugArray)
   const mdDir = join("public", mdPath)
@@ -87,7 +77,20 @@ export default async function Page({
     rehypePlugins: [[rehypeImg, { dir: mdDir, srcPath: mdPath, locale }]],
   } satisfies SerializeOptions["mdxOptions"]
 
-  const tocItems = remapTableOfContents(tocNodeItems, source)
+  const source = preprocessMarkdown(markdown)
+
+  const { frontmatter } = await compileMDX<StaticFrontmatter>({
+    source,
+    options: {
+      parseFrontmatter: true,
+      mdxOptions,
+    },
+  })
+
+  const tocItems =
+    tocNodeItems.length === 1 && "items" in tocNodeItems[0]
+      ? tocNodeItems[0].items
+      : tocNodeItems
 
   const layout = "static"
 
@@ -109,12 +112,14 @@ export default async function Page({
     <StaticLayout
       slug={slug}
       frontmatter={frontmatter}
-      tocItems={tocItems}
+      tocItems={tocItems as ToCItem[]}
       lastEditLocaleTimestamp={lastEditLocaleTimestamp}
       contentNotTranslated={contentNotTranslated}
     >
       <MDXRemote
         source={source}
+        // TODO: Address component typing error here (flip `FC` types to prop object types)
+        // @ts-expect-error Incompatible component function signatures
         components={{ ...mdComponents, ...staticComponents }}
         options={{ parseFrontmatter: true, mdxOptions }}
       />
