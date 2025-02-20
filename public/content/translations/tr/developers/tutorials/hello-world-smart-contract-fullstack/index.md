@@ -48,7 +48,7 @@ _Not: **Goerli**'yi seçmezseniz bu öğretici çalışmaz._
 
 İşlem göndermek ve almak için bir Ethereum hesabına ihtiyacınız vardır. Kullanıcıların Ethereum hesap adreslerini yönetmelerini sağlayan bir sanal tarayıcı cüzdanı olan MetaMask'i kullanacağız.
 
-[Buradan](https://metamask.io/download.html) ücretsiz olarak bir MetaMask hesabı indirebilir ve oluşturabilirsiniz. Bir hesap oluştururken ya da zaten bir hesabınız varsa, sağ üstten "Goerli Test Ağına" geçin (bu sayede gerçek parayla denemeler yapmayız).
+[Buradan](https://metamask.io/download) ücretsiz olarak bir MetaMask hesabı indirebilir ve oluşturabilirsiniz. Bir hesap oluştururken ya da zaten bir hesabınız varsa, sağ üstten "Goerli Test Ağına" geçin (bu sayede gerçek parayla denemeler yapmayız).
 
 ### Adım 4: Bir Musluktan ether ekleyin {#step-4-add-ether-from-a-faucet}
 
@@ -1116,7 +1116,7 @@ Ethereum'daki işlemlerin nasıl çalıştığı hakkında daha fazla bilgi edin
 
 #### MetaMask'i indirin {#download-metamask}
 
-[Buradan](https://metamask.io/download.html) ücretsiz olarak bir MetaMask hesabı indirebilir ve oluşturabilirsiniz. Bir hesap oluştururken ya da zaten bir hesabınız varsa, sağ üstten "Goerli Test Ağına" geçin \(bu sayede gerçek parayla denemeler yapmayız\).
+[Buradan](https://metamask.io/download) ücretsiz olarak bir MetaMask hesabı indirebilir ve oluşturabilirsiniz. Bir hesap oluştururken ya da zaten bir hesabınız varsa, sağ üstten "Goerli Test Ağına" geçin \(bu sayede gerçek parayla denemeler yapmayız\).
 
 #### Bir Musluktan ether ekleyin {#add-ether-from-a-faucet}
 
@@ -1171,7 +1171,7 @@ export const connectWallet = async () => {
         <span>
           <p>
             {" "}
-            🦊 <a target="_blank" href={`https://metamask.io/download.html`}>
+            🦊 <a target="_blank" href={`https://metamask.io/download`}>
               You must install MetaMask, a virtual Ethereum wallet, in your
               browser.
             </a>
@@ -1267,7 +1267,7 @@ export const getCurrentWalletConnected = async () => {
         <span>
           <p>
             {" "}
-            🦊 <a target="_blank" href={`https://metamask.io/download.html`}>
+            🦊 <a target="_blank" href={`https://metamask.io/download`}>
               You must install MetaMask, a virtual Ethereum wallet, in your
               browser.
             </a>
@@ -1329,7 +1329,7 @@ function addWalletListener() {
     setStatus(
       <p>
         {" "}
-        🦊 <a target="_blank" href={`https://metamask.io/download.html`}>
+        🦊 <a target="_blank" href={`https://metamask.io/download`}>
           You must install MetaMask, a virtual Ethereum wallet, in your browser.
         </a>
       </p>

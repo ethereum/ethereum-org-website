@@ -140,7 +140,7 @@ Not: Bilgisayarlar, ondalık matematiği işlemede çok kötüdür. Bunu aşmak 
 
 </FeaturedText>
 
-Bazı değerleri wei'ye ve wei'den dönüştürmeyi deneyin. Ether ve wei [arasındaki çok sayıda birim için isimler olduğunu](https://web3py.readthedocs.io/en/stable/examples.html#converting-currency-denominations) unutmayın. Bunlar arasında daha iyi bilinenlerden biri **gwei**'dir, çünkü genellikle işlem ücretleri bu şekilde gösterilir.
+Bazı değerleri wei'ye ve wei'den dönüştürmeyi deneyin. Ether ve wei [arasındaki çok sayıda birim için isimler olduğunu](https://web3py.readthedocs.io/en/stable/troubleshooting.html#how-do-i-convert-currency-denominations) unutmayın. Bunlar arasında daha iyi bilinenlerden biri **gwei**'dir, çünkü genellikle işlem ücretleri bu şekilde gösterilir.
 
 ```python
 In [2]: Web3.to_wei(1, 'ether')

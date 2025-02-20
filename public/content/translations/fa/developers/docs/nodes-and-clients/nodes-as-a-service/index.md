@@ -264,7 +264,7 @@ sidebarDepth: 2
     - پشتیبانی فنی مستقیم
 
 - [**مگانود نودرئال**](https://nodereal.io/)
-  - [مستندات](https://docs.nodereal.io/nodereal/meganode/introduction)
+  - [مستندات](https://docs.nodereal.io/docs/introduction)
   - ویژگی‌ها
     - خدمات RPC ای‌پی‌آی قابل اعتماد، سریع و مقیاس‌پذیر
     - API پیشرفته برای توسعه‌دهندگان Web3
