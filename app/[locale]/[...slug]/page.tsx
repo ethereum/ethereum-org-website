@@ -20,6 +20,7 @@ import { DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
 import { staticComponents, StaticLayout } from "@/layouts"
 import rehypeImg from "@/lib/md/rehypeImg"
 import remarkInferToc from "@/lib/md/remarkInferToc"
+import { remarkPreserveJsx } from "@/lib/md/remarkPreserveJsx"
 
 const commitHistoryCache: CommitHistory = {}
 
@@ -73,6 +74,7 @@ export default async function Page({
       remarkHeadingId,
       remarkSlug,
       [remarkInferToc, { callback: tocCallback }],
+      remarkPreserveJsx,
     ],
     rehypePlugins: [[rehypeImg, { dir: mdDir, srcPath: mdPath, locale }]],
   } satisfies SerializeOptions["mdxOptions"]
