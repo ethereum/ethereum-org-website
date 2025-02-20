@@ -1,3 +1,5 @@
+"use client"
+
 import { MdClose } from "react-icons/md"
 
 import { Button } from "@/components/ui/buttons/Button"
