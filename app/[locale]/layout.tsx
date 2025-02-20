@@ -42,7 +42,7 @@ export default async function LocaleLayout({
   )
 
   return (
-    <html lang={locale}>
+    <html lang={locale} suppressHydrationWarning>
       <body>
         <Providers locale={locale} messages={messages}>
           <SkipLink />
