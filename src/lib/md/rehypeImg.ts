@@ -150,7 +150,7 @@ const setImagePlaceholders = async (
  * @param options.srcDir Directory where the image src attr is going to point
  */
 
-const setImageSize = (options: Options) => {
+const rehypeImg = (options: Options) => {
   const opts = options || {}
   const dir = opts.dir
   const srcPath = opts.srcPath
@@ -193,4 +193,4 @@ const setImageSize = (options: Options) => {
   }
 }
 
-export default setImageSize
+export default rehypeImg
