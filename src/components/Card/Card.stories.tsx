@@ -1,4 +1,3 @@
-import { Box } from "@chakra-ui/react"
 import { Meta, type StoryObj } from "@storybook/react"
 
 import { getTranslation } from "@/storybook-utils"
@@ -11,9 +10,9 @@ const meta = {
   component: CardComponent,
   decorators: [
     (Story) => (
-      <Box maxW="342px" margin="0 auto">
+      <div className="max-w-[342px]">
         <Story />
-      </Box>
+      </div>
     ),
   ],
 } satisfies Meta<typeof CardComponent>

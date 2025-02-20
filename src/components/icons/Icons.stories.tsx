@@ -1,6 +1,6 @@
-import * as React from "react"
-import { Center, Flex, Icon, SimpleGrid } from "@chakra-ui/react"
 import type { Meta, StoryObj } from "@storybook/react"
+
+import { Center, Flex } from "../ui/flex"
 
 import EthHomeIcon from "./eth-home-icon.svg"
 import FeedbackThumbsUpIcon from "./feedback-thumbs-up-icon.svg"
@@ -97,9 +97,8 @@ import {
 } from "./wallets"
 
 const meta = {
-  component: Icon,
   title: "Atoms / Media & Icons / Icons",
-} satisfies Meta<typeof Icon>
+} satisfies Meta
 
 export default meta
 
@@ -197,15 +196,10 @@ iconsDefinitions.sort((a, b) =>
 const items = iconsDefinitions.map((IconDef) => (
   <Flex
     key={IconDef.displayName}
-    direction="column"
-    gap={4}
-    p={4}
-    border="1px"
-    borderStyle="solid"
-    borderColor="background.highlight"
+    className="flex-col gap-4 border border-background-highlight p-4"
   >
     <Center>
-      <IconDef className="h-[50px] w-[50px]" w="50px" h="50px" />
+      <IconDef className="size-[50px]" />
     </Center>
     <Center>{IconDef.displayName}</Center>
   </Flex>
@@ -213,6 +207,10 @@ const items = iconsDefinitions.map((IconDef) => (
 
 export const Icons: StoryObj<typeof meta> = {
   render: () => {
-    return <SimpleGrid columns={[2, 2, 3, 5]}>{items}</SimpleGrid>
+    return (
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+        {items}
+      </div>
+    )
   },
 }
