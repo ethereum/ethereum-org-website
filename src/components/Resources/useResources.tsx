@@ -1,5 +1,7 @@
 import { useTranslation } from "next-i18next"
 
+import BigNumber from "../BigNumber"
+
 import type { DashboardBox, DashboardSection } from "./types"
 
 import IconBeaconchain from "@/public/images/resources/beaconcha-in.png"
@@ -33,12 +35,9 @@ import IconUltrasoundMoney from "@/public/images/resources/ultrasound-money.png"
 import IconVisaOnchainAnalytics from "@/public/images/resources/visa-onchain-analytcs.png"
 
 const tempBigNumber = (
-  <div className="flex flex-col items-center py-4">
-    <div className="text-center text-4xl font-bold">$0.006</div>
-    <div className="text-center text-sm text-body-medium">
-      todo: use real big numbers
-    </div>
-  </div>
+  <BigNumber className="items-center" value="$0.006">
+    todo: use real big numbers
+  </BigNumber>
 )
 
 export const useResources = (): DashboardSection[] => {
