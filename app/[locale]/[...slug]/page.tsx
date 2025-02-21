@@ -10,7 +10,7 @@ import { getLocaleTimestamp } from "@/lib/utils/time"
 
 import { LOCALES_CODES } from "@/lib/constants"
 
-import { layoutMapping } from "@/layouts"
+import { componentsMapping, layoutMapping } from "@/layouts"
 import { compile } from "@/lib/md/compile"
 import { importMd } from "@/lib/md/import"
 
@@ -33,7 +33,7 @@ export default async function Page({
     locale,
     // TODO: Address component typing error here (flip `FC` types to prop object types)
     // @ts-expect-error Incompatible component function signatures
-    components: { ...mdComponents },
+    components: { ...mdComponents, ...componentsMapping },
   })
 
   // ignore the first item if there is only one as it is the main heading for the article

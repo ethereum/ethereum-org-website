@@ -1,7 +1,5 @@
-import { DocsLayout } from "./Docs"
 import * as mdLayouts from "./md"
-import { StaticLayout } from "./Static"
-import { TutorialLayout } from "./Tutorial"
+import { staticComponents, StaticLayout } from "./Static"
 
 export * from "./BaseLayout"
 export * from "./Docs"
@@ -15,7 +13,14 @@ export const layoutMapping = {
   staking: mdLayouts.StakingLayout,
   roadmap: mdLayouts.RoadmapLayout,
   upgrade: mdLayouts.UpgradeLayout,
-  docs: DocsLayout,
   translatathon: mdLayouts.TranslatathonLayout,
-  tutorial: TutorialLayout,
 }
+
+export const componentsMapping = {
+  ...staticComponents,
+  ...mdLayouts.useCasesComponents,
+  ...mdLayouts.stakingComponents,
+  ...mdLayouts.roadmapComponents,
+  ...mdLayouts.upgradeComponents,
+  ...mdLayouts.translatathonComponents,
+} as const
