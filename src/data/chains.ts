@@ -1783,6 +1783,17 @@ const chains = [
     chain: "Infinaeon",
   },
   {
+    name: "EthereumFair",
+    infoURL: "https://etherfair.org/",
+    chainId: 513100,
+    nativeCurrency: {
+      name: "EthereumFair",
+      symbol: "ETHF",
+      decimals: 18,
+    },
+    chain: "ETHF",
+  },
+  {
     name: "Scroll",
     infoURL: "https://scroll.io",
     chainId: 534352,
