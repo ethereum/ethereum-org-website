@@ -237,7 +237,7 @@ Verificați cu atenţie documentația sau pagina de ajutor a clientului pentru a
 
 `besu --sync-mode=FULL`
 
-Ca orice altă configurație, aceasta poate fi definită cu ajutorul steguleţului de pornire sau în fișierul de configurare. Un alt exemplu este [Nethermind](https://docs.nethermind.io/nethermind/), care vă solicită să alegeți o configurație la prima inițializare și creează un fișier de configurare.
+Ca orice altă configurație, aceasta poate fi definită cu ajutorul steguleţului de pornire sau în fișierul de configurare. Un alt exemplu este [Nethermind](https://docs.nethermind.io/), care vă solicită să alegeți o configurație la prima inițializare și creează un fișier de configurare.
 
 ## Clienți de consens (anterior clienți „Eth2”) {#consensus-clients}
 

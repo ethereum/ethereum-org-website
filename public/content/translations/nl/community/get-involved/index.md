@@ -16,7 +16,7 @@ De Ethereum-gemeenschap omvat mensen met verschillende achtergronden en vaardigh
 - Bekijk of neem deel aan [Core Dev calls](https://www.youtube.com/@EthereumProtocol)
 - [Wensenlijst van Ecosystem Support Programma](https://esp.ethereum.foundation/wishlist/) - tooling, documentatie en infrastructuurgebieden waar het Ecosystem Support Programma van Ethereum actief op zoek is naar subsidieaanvragen
 - [Web3Bridge](https://www.web3bridge.com/) - sluit u aan bij de ambitieuze web3-gemeenschap in hun initiatief om honderden ontwikkelaars en leden van de gemeenschap in heel Afrika te identificeren, te trainen en te ondersteunen
-- Sluit u aan bij de [Ethereum Cat Herders Discord](https://discord.io/EthCatHerders)
+- Sluit u aan bij de [Ethereum Cat Herders Discord](https://discord.gg/Nz6rtfJ8Cu)
 
 ## Onderzoekers & Academici<Emoji text=":mag:" size={1} />± {#researchers-and-academics}
 
