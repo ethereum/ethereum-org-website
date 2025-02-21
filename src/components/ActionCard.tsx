@@ -48,7 +48,7 @@ const ActionCard = ({
     >
       <Flex
         className={cn(
-          "flex h-[260px] flex-row bg-gradient-to-r from-accent-a/10 to-accent-c/10",
+          "flex min-h-[260px] flex-row bg-gradient-to-r from-accent-a/10 to-accent-c/10",
           isBottom ? "items-end" : "items-center",
           isRight ? "justify-end" : "justify-center"
         )}
