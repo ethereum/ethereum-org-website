@@ -31,10 +31,14 @@ const NetworkMaturity = () => {
             {" "}
             <p>
               We review the network’s progress towards{" "}
-              <a href="https://medium.com/l2beat/introducing-stages-a-framework-to-evaluate-rollups-maturity-d290bb22befe">
+              <a
+                href="https://medium.com/l2beat/introducing-stages-a-framework-to-evaluate-rollups-maturity-d290bb22befe"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Ethereum alignment
               </a>
-              (<strong>rollup stages 0-2</strong>),{" "}
+              &nbsp;(<strong>rollup stages 0-2</strong>),{" "}
               <strong>total value locked (TVL)</strong>,
               <strong> time live in production</strong>, and{" "}
               <strong>risk considerations</strong>. These levels help track
