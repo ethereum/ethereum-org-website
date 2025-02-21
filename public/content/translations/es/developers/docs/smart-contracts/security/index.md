@@ -115,7 +115,7 @@ La existencia de auditorías y recompensas por errores no lo exime de la respons
 
 - Utilizar un [entorno de desarrollo](/developers/docs/frameworks/) para probar, compilar e implementar contratos inteligentes
 
-- Ejecute su código mediante herramientas básicas de análisis de código, como [Cyfrin Aaderyn](https://github.com/Cyfrin/aderyn), Mythril y Slither. En principio, debería hacer esto antes de combinar cada pull request y comparar las diferencias en el resultado
+- Ejecute su código mediante herramientas básicas de análisis de código, como [Cyfrin Aderyn](https://github.com/Cyfrin/aderyn), Mythril y Slither. En principio, debería hacer esto antes de combinar cada pull request y comparar las diferencias en el resultado
 
 - Asegurarse de que el código se compile sin errores y que el compilador de Solidity no emita advertencias
 

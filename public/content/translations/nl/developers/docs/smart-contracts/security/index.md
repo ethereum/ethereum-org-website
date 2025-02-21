@@ -115,7 +115,7 @@ Het bestaan van audits en bug bounties is geen excuus voor uw verantwoordelijkhe
 
 - Gebruik een [ontwikkelomgeving](/developers/docs/frameworks/) voor het testen, compileren en implementeren van smart contracts
 
-- Voer uw code uit op standaard codeanalyse-programma's, zoals [Cyfrin Aaderyn](https://github.com/Cyfrin/aderyn), Mythril en Slither. Idealiter zou u dit moeten doen voordat elke pull request wordt samengevoegd en de verschillen in uitvoer vergelijken
+- Voer uw code uit op standaard codeanalyse-programma's, zoals [Cyfrin Aderyn](https://github.com/Cyfrin/aderyn), Mythril en Slither. Idealiter zou u dit moeten doen voordat elke pull request wordt samengevoegd en de verschillen in uitvoer vergelijken
 
 - Zorg ervoor dat uw code zonder fouten wordt gecompileerd en dat de Solidity-compiler geen waarschuwingen afgeeft
 

@@ -115,7 +115,7 @@ Az auditok és hibavadászatok nem csökkentik az Ön felelősségét, hogy jó 
 
 - Használjon [fejlesztői környezetet](/developers/docs/frameworks/) az okosszerződések tesztelésére, átfordítására és telepítésére
 
-- Futtassa le a kódját olyan alapvető kódelemző eszközökön, mint a [Cyfrin Aaderyn](https://github.com/Cyfrin/aderyn), Mythril és Slither. Ideális esetben ezt minden egyes pullrequest-beolvasztás előtt meg kell tenni, majd összehasonlítani az eredmények különbségeit
+- Futtassa le a kódját olyan alapvető kódelemző eszközökön, mint a [Cyfrin Aderyn](https://github.com/Cyfrin/aderyn), Mythril és Slither. Ideális esetben ezt minden egyes pullrequest-beolvasztás előtt meg kell tenni, majd összehasonlítani az eredmények különbségeit
 
 - Biztosítsa, hogy a kód hibák nélkül kerül átfordításra, és a Solidity átfordító nem ad figyelmeztetéseket
 

@@ -115,7 +115,7 @@ L'esistenza di controlli e ricompense per la caccia ai bug non è una scusa per 
 
 - Usa un [ambiente di sviluppo](/developers/docs/frameworks/) per testare, compilare e distribuire i contratti intelligenti
 
-- Esegui il tuo codice tramite strumenti di analisi del codice di base, come [Cyfrin Aaderyn](https://github.com/Cyfrin/aderyn), Mythril e Slither. Idealmente, dovresti farlo prima della fusione di ogni richiesta pull e confrontare le differenze nell'output
+- Esegui il tuo codice tramite strumenti di analisi del codice di base, come [Cyfrin Aderyn](https://github.com/Cyfrin/aderyn), Mythril e Slither. Idealmente, dovresti farlo prima della fusione di ogni richiesta pull e confrontare le differenze nell'output
 
 - Assicurati che il tuo codice si compili senza errori e che il compilatore di Solidity non emetta alcun avviso
 

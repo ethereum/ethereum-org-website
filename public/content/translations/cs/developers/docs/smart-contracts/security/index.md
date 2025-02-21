@@ -115,7 +115,7 @@ Existence auditů a bug bounty vás nezbavuje odpovědnosti za psaní kvalitníh
 
 - Pro testování, kompilaci a nasazování smart kontraktů používejte [vývojové prostředí](/developers/docs/frameworks/)
 
-- Spusťe svůj kód v základních nástrojích pro analýzu kódu, jako jsou [Cyfrin Aaderyn](https://github.com/Cyfrin/aderyn), Mythril a Slither. Ideálně byste to měli udělat před každým sloučením pull requestu a porovnat rozdíly ve výstupu
+- Spusťe svůj kód v základních nástrojích pro analýzu kódu, jako jsou [Cyfrin Aderyn](https://github.com/Cyfrin/aderyn), Mythril a Slither. Ideálně byste to měli udělat před každým sloučením pull requestu a porovnat rozdíly ve výstupu
 
 - Ujistěte se, že váš kód se kompiluje bez chyb a kompilátor Solidity nevydává žádná varování
 
