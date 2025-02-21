@@ -306,7 +306,7 @@ Muir Glacier çatallanması, [bomba değerine](/glossary/#difficulty-bomb) bir g
 Konstantinopolis çatalı:
 
 - [Hisse ispatı uygulanmadan](#beacon-chain-genesis) önce blokzincirin donmamasını sağladı.
-- EVM</'deki belirli işlemlerin [gaz](/glossary/#gas) maliyetini optimize etti bir>.
+- EVM deki belirli işlemlerin [gaz](/glossary/#gas) maliyetini optimize etti bir.
 - Henüz oluşturulmamış adreslerle etkileşim kurma yeteneğini ekledi.
 
 [Ethereum Vakfı'nın duyurusunu okuyun](https://blog.ethereum.org/2019/02/22/ethereum-constantinople-st-petersburg-upgrade-announcement/)

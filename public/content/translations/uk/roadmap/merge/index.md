@@ -92,7 +92,7 @@ title="Розробники децентралізованих програм і
 contentPreview="The Merge was designed to have minimal impact on smart contract and dapp developers."
 id="developers">
 
-Злиття супроводжувалося змінами у консенсусі, зокрема змінилися:<
+Злиття супроводжувалося змінами у консенсусі, зокрема змінилися:
 
 <ul>
   <li>структура блоків</li>
