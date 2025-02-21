@@ -23,8 +23,6 @@
           // Packages. `react` related packages come first.
           // Also, put `react-icons` in sorting order not with `react`
           ["^react(?!-.)$", "^\\w", "^@\\w"],
-          // The Chakra theme directory if imported to story file or other places
-          ["^@/@chakra-ui"],
           // From the `types` directory.
           ["^@/lib/types", "^@/lib/interfaces"],
           // From the `components` directory.
@@ -65,17 +63,6 @@
         "varsIgnorePattern": "^_$"
       }
     ],
-    "unused-imports/no-unused-imports-ts": "warn",
-    "no-restricted-imports": [
-      "warn",
-      {
-        "paths": [
-          {
-            "name": "react-i18next",
-            "message": "Please use next-i18next instead of react-i18next."
-          }
-        ]
-      }
-    ]
+    "unused-imports/no-unused-imports-ts": "warn"
   }
 }

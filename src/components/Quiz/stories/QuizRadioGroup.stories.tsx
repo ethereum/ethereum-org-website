@@ -1,20 +1,27 @@
+import { useTranslations } from "next-intl"
 import type { Meta, StoryObj } from "@storybook/react"
 import { expect, fireEvent, fn, within } from "@storybook/test"
 
 import { QuizContent } from "../QuizWidget/QuizContent"
 import { QuizRadioGroup } from "../QuizWidget/QuizRadioGroup"
 
-import { LAYER_2_QUIZ_TITLE, layer2Questions } from "./utils"
+import { LAYER_2_QUIZ_TITLE_KEY, layer2Questions } from "./utils"
 
 const meta = {
   title: "Molecules / Display Content / Quiz / QuizWidget / RadioGroup",
   component: QuizRadioGroup,
   decorators: [
-    (Story, { args }) => (
-      <QuizContent title={LAYER_2_QUIZ_TITLE} answerStatus={args.answerStatus}>
-        <Story />
-      </QuizContent>
-    ),
+    (Story, { args }) => {
+      const t = useTranslations()
+      return (
+        <QuizContent
+          title={t(LAYER_2_QUIZ_TITLE_KEY)}
+          answerStatus={args.answerStatus}
+        >
+          <Story />
+        </QuizContent>
+      )
+    },
   ],
 } satisfies Meta<typeof QuizRadioGroup>
 
