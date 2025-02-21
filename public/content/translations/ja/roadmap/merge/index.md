@@ -92,7 +92,7 @@ title="分散型アプリ(Dapp)とスマートコントラクトのデベロッ�
 contentPreview="The Merge was designed to have minimal impact on smart contract and dapp developers."
 id="developers">
 
-マージにはコンセンサスに関連する変更も含まれており、下記に関連する変更も含まれています。<
+マージにはコンセンサスに関連する変更も含まれており、下記に関連する変更も含まれています。
 
 <ul>
   <li>ブロック構造</li>

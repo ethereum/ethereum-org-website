@@ -90,7 +90,7 @@ title="Dapp و توسعه‌دهندگان قرارداد هوشمند"
 contentPreview="The Merge was designed to have minimal impact on smart contract and dapp developers."
 id="developers">
 
-رویداد «ادغام» با تغییراتی در اجماع همراه شد، که همچنین شامل تغییرات مرتبط با موارد زیر می‌شود:<
+رویداد «ادغام» با تغییراتی در اجماع همراه شد، که همچنین شامل تغییرات مرتبط با موارد زیر می‌شود:
 
 <ul>
   <li>ساختار بلوک</li>

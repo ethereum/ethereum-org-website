@@ -355,7 +355,7 @@ Ethereum melaksanakan versi mudah GHOST yang hanya turun tujuh tahap. Khususnya,
 
 - Blok mesti menyatakan ibu bapa, dan ia mesti menyatakan 0 atau lebih bapa saudara
 - Seorang bapa saudara termasuk dalam blok B mesti mempunyai sifat-sifat berikut:
-  - Ia mesti merupakan anak langsung daripada nenek moyang generasi ke-k, iaitu 2 <= k <= 7.
+  - Ia mesti merupakan anak langsung daripada nenek moyang generasi ke-k, iaitu `2 <= k <= 7`.
   - Ia tidak boleh menjadi nenek moyang B
   - Pakcik mesti merupakan pengepala blok yang sah, tetapi tidak perlu menjadi blok yang disahkan atau bahkan sah sebelum ini
   - Seorang bapa saudara mesti berbeza daripada semua bapa saudara yang termasuk dalam blok sebelumnya dan semua bapa saudara lain termasuk dalam blok yang sama (tidak termasuk dua kali ganda)
