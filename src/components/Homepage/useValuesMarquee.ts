@@ -1,5 +1,6 @@
-import { useRouter } from "next/router"
-import { useTranslation } from "next-i18next"
+import { useLocale } from "next-intl"
+
+import useTranslation from "@/hooks/useTranslation"
 
 type Item = {
   label: string
@@ -13,7 +14,7 @@ export type Pairing = {
 
 export const useValuesMarquee = () => {
   const { t } = useTranslation("page-index")
-  const { locale } = useRouter()
+  const locale = useLocale()
   const pairings: Pairing[] = [
     {
       legacy: {

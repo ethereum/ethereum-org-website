@@ -16,7 +16,7 @@ import { CONTENT_DIR, DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
 
 import { toPosixPath } from "./relativePath"
 
-import { ITutorial } from "@/pages/developers/tutorials"
+import { ITutorial } from "@/pages/[locale]/developers/tutorials"
 
 function getContentRoot() {
   return join(process.cwd(), CONTENT_DIR)
