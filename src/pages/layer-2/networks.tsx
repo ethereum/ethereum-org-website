@@ -130,7 +130,7 @@ export const getStaticProps = (async ({ locale }) => {
       },
     },
   }
-}) satisfies GetStaticProps
+}) satisfies GetStaticProps<BasePageProps>
 
 const Layer2Networks = ({ layer2Data, locale, mainnetData }) => {
   const { pathname } = useRouter()
