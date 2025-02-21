@@ -18,7 +18,14 @@ import {
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
-type DataTableProps<TData, TValue> = TableProps & {
+export interface TableRowData {
+  name: string
+  id?: string | number
+  description?: string
+  url?: string
+}
+
+type DataTableProps<TData extends TableRowData, TValue> = TableProps & {
   columns: ColumnDef<TData, TValue>[]
   data: TData[]
   subComponent?: FC<TData>
@@ -38,7 +45,7 @@ export type TableMeta = {
   [key: string]: string | number | ((open: boolean) => void)
 }
 
-const DataTable = <TData, TValue>({
+const DataTable = <TData extends TableRowData, TValue>({
   columns,
   data,
   subComponent,
@@ -52,9 +59,9 @@ const DataTable = <TData, TValue>({
 }: DataTableProps<TData, TValue>) => {
   const [isVisible, setIsVisible] = useState(true)
   const [currentData, setCurrentData] = useState(data)
-  const [expanded, setExpanded] = useState({})
-  const previousExpandedRef = useRef({})
-  const previousDataRef = useRef(data)
+  const [expanded, setExpanded] = useState<Record<string, boolean>>({})
+  const previousExpandedRef = useRef<Record<string, boolean>>({})
+  const previousDataRef = useRef<TData[]>(data)
 
   const table = useReactTable({
     data: currentData,
@@ -62,7 +69,9 @@ const DataTable = <TData, TValue>({
     state: {
       expanded,
     },
-    onExpandedChange: setExpanded,
+    onExpandedChange: (updater) =>
+      setExpanded(updater as Record<string, boolean>),
+    getRowId: (row: TData) => row.name,
     getRowCanExpand: (row) => {
       const rowData = row.original as { canExpand?: boolean }
       return rowData.canExpand !== undefined ? rowData.canExpand : true
@@ -89,22 +98,23 @@ const DataTable = <TData, TValue>({
 
     if (newlyExpanded.length > 0) {
       const row = table.getRowModel().rowsById[newlyExpanded[0]]
-      trackCustomEvent({
-        eventCategory: matomoEventCategory,
-        eventAction: "expanded",
-        eventName: (row.original as { name: string }).name,
-      })
+      if (row) {
+        trackCustomEvent({
+          eventCategory: matomoEventCategory,
+          eventAction: "expanded",
+          eventName: row.original.name,
+        })
+      }
     }
 
     previousExpandedRef.current = expanded
-  }, [expanded])
+  }, [expanded, table, matomoEventCategory])
 
   useEffect(() => {
     if (JSON.stringify(data) !== JSON.stringify(previousDataRef.current)) {
       setIsVisible(false)
       const timer = setTimeout(() => {
         setCurrentData(data)
-        table.resetExpanded()
         setIsVisible(true)
         previousDataRef.current = data
       }, 25) // Adjust this value to match your CSS transition duration
