@@ -206,7 +206,7 @@ return (
 
 在本教程中，我们将使用 MetaMask，它是浏览器中的虚拟钱包，用来管理您的以太坊账户地址。 如果您想了解更多关于以太坊交易如何运作的信息，请参阅[此页面](/developers/docs/transactions/)。
 
-您可以点击[此处](https://metamask.io/download.html)免费下载并创建一个 MetaMask 账户。 在创建账户时，或者如果您已经有一个账户，确保切换到右上角的“Ropsten 测试网络”\（这样我们就不会交易真正的钱币\）。
+您可以点击[此处](https://metamask.io/download)免费下载并创建一个 MetaMask 账户。 在创建账户时，或者如果您已经有一个账户，确保切换到右上角的“Ropsten 测试网络”\（这样我们就不会交易真正的钱币\）。
 
 ### 通过水龙头中添加以太币 {#add-ether-from-faucet}
 
@@ -263,7 +263,7 @@ export const connectWallet = async () => {
         <span>
           <p>
             {" "}
-            🦊 <a target="_blank" href={`https://metamask.io/download.html`}>
+            🦊 <a target="_blank" href={`https://metamask.io/download`}>
               You must install MetaMask, a virtual Ethereum wallet, in your
               browser.
             </a>
@@ -373,7 +373,7 @@ export const getCurrentWalletConnected = async () => {
         <span>
           <p>
             {" "}
-            🦊 <a target="_blank" href={`https://metamask.io/download.html`}>
+            🦊 <a target="_blank" href={`https://metamask.io/download`}>
               You must install MetaMask, a virtual Ethereum wallet, in your
               browser.
             </a>
@@ -437,7 +437,7 @@ function addWalletListener() {
     setStatus(
       <p>
         {" "}
-        🦊 <a target="_blank" href={`https://metamask.io/download.html`}>
+        🦊 <a target="_blank" href={`https://metamask.io/download`}>
           You must install MetaMask, a virtual Ethereum wallet, in your browser.
         </a>
       </p>
@@ -482,7 +482,7 @@ useEffect(async () => {
 
 ## 使用 Pintata 将元数据固定到星际文件系统 {#use-pinata-to-pin-your-metadata-to-IPFS}
 
-如果您没有 [Pinata](https://pinata.cloud/) 帐户，请点击[此处](https://pinata.cloud/signup)注册一个免费帐户完成您的电子邮件和帐户验证步骤。
+如果您没有 [Pinata](https://pinata.cloud/) 帐户，请点击[此处](https://app.pinata.cloud/auth/signup)注册一个免费帐户完成您的电子邮件和帐户验证步骤。
 
 ### 创建您的 Pinata 应用程序接口密钥 {#create-pinata-api-key}
 
@@ -521,7 +521,7 @@ REACT_APP_PINATA_SECRET = <pinata-api-secret>
 
 ### 实现 pinJSONToIPFS {#pin-json-to-ipfs}
 
-对我们来说幸运的是，Pinata 提供了一个[专门用于将 JSON 数据上传到星际文件系统的应用程序接口](https://pinata.cloud/documentation#PinJSONToIPFS)和一个方便的使用 axios 示例的 JavaScript，我们做一些轻微修改后就可以使用它。
+对我们来说幸运的是，Pinata 提供了一个[专门用于将 JSON 数据上传到星际文件系统的应用程序接口](https://docs.pinata.cloud/api-reference/endpoint/ipfs/pin-json-to-ipfs#pin-json)和一个方便的使用 axios 示例的 JavaScript，我们做一些轻微修改后就可以使用它。
 
 在您的 `utils` 文件夹中，我们创建另一个名为 `pinata.js` 的文件，然后从 .env 文件中导入我们的 Pinata 私钥和密钥，如下所示：
 

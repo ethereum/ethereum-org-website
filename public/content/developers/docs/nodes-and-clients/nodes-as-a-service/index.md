@@ -264,7 +264,7 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Direct, technical support
 
 - [**NodeReal MegaNode**](https://nodereal.io/)
-  - [Docs](https://docs.nodereal.io/nodereal/meganode/introduction)
+  - [Docs](https://docs.nodereal.io/docs/introduction)
   - Features
     - Reliable, fast and scalable RPC API services
     - Enhanced API for web3 developers

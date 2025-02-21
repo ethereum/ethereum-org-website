@@ -15,7 +15,7 @@ lang: zh
 
 要在乐观解决方案（或任何其他第二层）上使用第一层资产，需要[桥接](/bridges/#prerequisites)该资产。 实现这一点的一种方法是，用户在一层网络上锁定资产（以太币和 [ERC-20 代币](/developers/docs/standards/tokens/erc-20/)是最常见的资产）并收到供在二层网络上使用的对等资产。 最后，拥有这些资产的任何人可能想把它们桥接回第一层。 在桥接过程中，资产会在第二层销毁，然后在第一层上发放给用户。
 
-这就是[乐观解决方案标准链桥](https://community.optimism.io/docs/developers/bridge/standard-bridge)的工作方式。 在本文中，我们将学习链桥的源代码，看看它如何工作，并将它作为精心编写的 Solidity 代码示例加以研究。
+这就是[乐观解决方案标准链桥](https://docs.optimism.io/app-developers/bridging/standard-bridge)的工作方式。 在本文中，我们将学习链桥的源代码，看看它如何工作，并将它作为精心编写的 Solidity 代码示例加以研究。
 
 ## 控制流通 {#control-flows}
 
@@ -1270,7 +1270,7 @@ contract L2StandardBridge is IL2ERC20Bridge, CrossDomainEnabled {
 
 ## 总结 {#conclusion}
 
-标准链桥是最灵活的资产转移机制。 然而，由于它非常笼统，因而并非总是可供使用的最简便机制。 特别是对于提款，大多数用户喜欢使用[第三方链桥](https://www.optimism.io/apps/bridges)，这些链桥不用等待质询期并且不需要进行默克尔证明就能完成提款。
+标准链桥是最灵活的资产转移机制。 然而，由于它非常笼统，因而并非总是可供使用的最简便机制。 特别是对于提款，大多数用户喜欢使用[第三方链桥](https://optimism.io/apps#bridge)，这些链桥不用等待质询期并且不需要进行默克尔证明就能完成提款。
 
 通常，这些链桥的工作方式是在第一层上拥有资产，而且它们会立即为这些资产提供一小笔费用（通常少于标准链桥提款的燃料费用）。 当链桥（或运行链桥的人）预计第一层资产短缺时，它将从第二层转移足够的资产。 由于这些提款的数额非常庞大，大笔的提款费用经分期摊销后，所占百分比要小得多。
 

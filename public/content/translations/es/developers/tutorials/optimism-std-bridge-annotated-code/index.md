@@ -15,7 +15,7 @@ lang: es
 
 Para utilizar activos de L1 en Optimism (o cualquier otra L2), los activos deben "[puentearse](/bridges/#prerequisites)". Una manera de lograr esto es que los usuarios bloqueen activos (ETH y los [tokens ERC-20](/developers/docs/standards/tokens/erc-20/) son los más comunes) en L1 y recibir activos equivalentes para usar en L2. Eventualmente, quien acabe poseyéndolos puede querer puentearlos de vuelta a la L1. Al hacer esto, los activos se queman en L2 y luego se liberan nuevamente al usuario en L1.
 
-Así es como funciona el [puente estándar de Optimism](https://community.optimism.io/docs/developers/bridge/standard-bridge). En este artículo analizaremos el código fuente de ese puente para ver cómo funciona y lo estudiaremos como ejemplo de código de Solidity bien escrito.
+Así es como funciona el [puente estándar de Optimism](https://docs.optimism.io/app-developers/bridging/standard-bridge). En este artículo analizaremos el código fuente de ese puente para ver cómo funciona y lo estudiaremos como ejemplo de código de Solidity bien escrito.
 
 ## Flujos de control {#control-flows}
 
@@ -1270,7 +1270,7 @@ Si un usuario realizó un error detectable mediante el uso de la dirección de t
 
 ## Conclusión {#conclusion}
 
-El puente estándar es el mecanismo más flexible para las transferencias de activos. Sin embargo, debido a que es muy genérico, no siempre es el mecanismo más fácil de utilizar. Especialmente para los retiros, la mayoría de los usuarios prefieren usar [puentes de terceros](https://www.optimism.io/apps/bridges) que no esperen el periodo de desafío y no requieran una prueba de Merkle para finalizar el retiro.
+El puente estándar es el mecanismo más flexible para las transferencias de activos. Sin embargo, debido a que es muy genérico, no siempre es el mecanismo más fácil de utilizar. Especialmente para los retiros, la mayoría de los usuarios prefieren usar [puentes de terceros](https://optimism.io/apps#bridge) que no esperen el periodo de desafío y no requieran una prueba de Merkle para finalizar el retiro.
 
 Estos puentes normalmente funcionan teniendo activos en L1, que proporcionan inmediatamente por una pequeña tarifa (a menudo menor que el costo del gas para un retiro de puente estándar). Cuando el puente (o la gente que lo ejecuta) anticipa quedarse con pocos activos en L1, transfiere suficientes activos de L2. Como se trata de retiros muy grandes, el costo de la retirada se amortiza en grandes cantidades y resulta en un porcentaje mucho menor.
 

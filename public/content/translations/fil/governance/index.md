@@ -118,7 +118,7 @@ Karaniwang inaayos ang mga hindi pagkakaunawaan sa mahabang usapan sa mga pampub
 
 Nangyayari ang mga fork kapag may mga pangunahing teknikal na pag-upgrade o pagbabago at babaguhin nito ang "mga panuntunan" ng protocol. Dapat i-update ng [mga Ethereum client](/developers/docs/nodes-and-clients/) ang kanilang software upang ipatupad ang mga panuntunan para sa fork.
 
-Ang DAO fork ay ginawa bilang tugon sa [DAO attack noong 2016](https://www.coindesk.com/understanding-dao-hack-journalists) kung saan nakuha sa isang hindi secure na [DAO](/glossary/#dao) contract ang mahigit 3.6 milyong ETH sa isang hack. Inilipat ng fork ang mga pondo mula sa palyadong contract sa bagong contract, kaya mare-recover ito ng kahit sinong nawalan ng pondo dahil sa pag-hack.
+Ang DAO fork ay ginawa bilang tugon sa [DAO attack noong 2016](https://www.coindesk.com/learn/understanding-the-dao-attack) kung saan nakuha sa isang hindi secure na [DAO](/glossary/#dao) contract ang mahigit 3.6 milyong ETH sa isang hack. Inilipat ng fork ang mga pondo mula sa palyadong contract sa bagong contract, kaya mare-recover ito ng kahit sinong nawalan ng pondo dahil sa pag-hack.
 
 Pinagbotohan ng komunidad ng Ethereum ang pagkilos na ito. Makakaboto ang sinumang nagmamay-ari ng ETH sa pamamagitan ng isang transaksyon sa [isang voting platform](http://v1.carbonvote.com/). Ang desisyong mag-fork ay umabot ng mahigit 85% ng mga boto.
 
