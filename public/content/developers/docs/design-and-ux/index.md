@@ -23,7 +23,7 @@ This is a curated list of user research done in web3 that may help with design a
 
 | Area of focus                                           | Name                                                                                                                                                                               |
 | :------------------------------------------------------ | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |                                         
-| <Tag variant="solid" status="success">Crypto onboarding</Tag>    | [The WalletConnect Pulse 2024: Crypto Consumer Sentiment & Usage](https://walletconnect.com/pulse-2024-crypto-consumer-report)                                                |
+| <Tag variant="solid" status="success">Crypto onboarding</Tag>    | [The Reown Pulse 2024: Crypto Consumer Sentiment & Usage](https://reown.com/blog/unveiling-walletconnects-consumer-crypto-report)                                                |
 | <Tag variant="solid" status="success">Crypto onboarding</Tag>    | [CRADL: UX in Cryptocurrency](https://docs.google.com/presentation/d/1s2OPSH5sMJzxRYaJSSRTe8W2iIoZx0PseIV-WeZWD1s/edit?usp=sharing)                                                |
 | <Tag variant="solid" status="success">Crypto onboarding</Tag>    | [CRADL: Onboarding to Cryptocurrency](https://docs.google.com/presentation/d/1R9nFuzA-R6SxaGCKhoMbE4Vxe0JxQSTiHXind3LVq_w/edit?usp=sharing)                                        |
 | <Tag variant="solid" status="success">Crypto onboarding</Tag>    | [Bitcoin UX report](https://github.com/patestevao/BitcoinUX-report/blob/master/report.md)                                                                                          |
@@ -45,7 +45,6 @@ This is a curated list of user research done in web3 that may help with design a
 - [Web3 UX Design Handbook](https://web3ux.design/) - Practical guide to designing Web3 apps
 - [Web3 Design Principles](https://medium.com/@lyricalpolymath/web3-design-principles-f21db2f240c1) - A framework of UX rules for blockchain based dapps
 - [Blockchain Design Principles](https://medium.com/design-ibm/blockchain-design-principles-599c5c067b6e) - Lessons learned by the blockchain design team at IBM
-- [Web3 Design Patterns](https://www.web3designpatterns.io/)- A curated library of design patterns from real Web3 products
 - [W3design.io](https://w3design.io/) - A curated library of UI flows of different projects in the ecosystem
 - [Neueux.com](https://neueux.com/apps) - UI library of user flows with diverse filtering options
 - [Web3's Usability Crisis: What You NEED to Know!](https://www.youtube.com/watch?v=oBSXT_6YDzg) - A panel discussion on pitfalls of developer focused project building (video, 34 min)
@@ -58,7 +57,6 @@ This is a curated list of user research done in web3 that may help with design a
 ## Web3 Design Case Studies {#design-case-studies}
 
 - [Deep Work Studio](https://deepwork.studio/case-studies/)
-- [Crypto UX Handbook](https://www.cryptouxhandbook.com/)
 - [Selling an NFT on OpenSea](https://builtformars.com/case-studies/opensea)
 - [Wallet UX teardown how wallets need to change](https://www.youtube.com/watch?v=oTpuxYj8JWI&ab_channel=ETHDenver) (video, 20 min)
 
@@ -79,7 +77,7 @@ Get involved in professional community-driven organizations or join design group
 - [Openux.xyz](https://openux.xyz/)
 - [Open Source Web3Design](https://www.web3designers.org/)
 
-## Design Systems {#design-systems}
+## Design Systems and other design resources {#design-systems-and-resources}
 
 - [Optimism Design](https://www.figma.com/@optimism) (Figma)
 - [Ethereum.org Design system](https://www.figma.com/@ethdotorg) (Figma)
