@@ -182,7 +182,6 @@ export const getStaticProps = (async (context) => {
     slug,
     locale!,
     frontmatter.lang,
-    layout,
     commitHistoryCache
   )
 

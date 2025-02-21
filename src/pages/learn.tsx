@@ -3,13 +3,20 @@ import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import type { HTMLAttributes, ReactNode } from "react"
 
-import type { BasePageProps, ChildOnlyProp, Lang, ToCItem } from "@/lib/types"
+import type {
+  BasePageProps,
+  ChildOnlyProp,
+  CommitHistory,
+  Lang,
+  ToCItem,
+} from "@/lib/types"
 
 import OriginalCard, {
   type CardProps as OriginalCardProps,
 } from "@/components/Card"
 import DocLink from "@/components/DocLink"
 import FeedbackCard from "@/components/FeedbackCard"
+import FileContributors from "@/components/FileContributors"
 import { HubHero } from "@/components/Hero"
 import type { HubHeroProps } from "@/components/Hero/HubHero"
 import { Image, type ImageProps } from "@/components/Image"
@@ -22,6 +29,7 @@ import { Center, Flex, Stack } from "@/components/ui/flex"
 import InlineLink from "@/components/ui/Link"
 import { ListItem, UnorderedList } from "@/components/ui/list"
 
+import { getPageContributorInfo } from "@/lib/utils/contributors"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLocaleTimestamp } from "@/lib/utils/time"
@@ -128,16 +136,27 @@ export const getStaticProps = (async ({ locale }) => {
     lastDeployDate
   )
 
+  const commitHistoryCache: CommitHistory = {}
+
+  const { contributors, lastEditLocaleTimestamp } =
+    await getPageContributorInfo(
+      "learn.tsx",
+      locale as Lang,
+      commitHistoryCache
+    )
+
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
       contentNotTranslated,
       lastDeployLocaleTimestamp,
+      contributors,
+      lastEditLocaleTimestamp,
     },
   }
 }) satisfies GetStaticProps<BasePageProps>
 
-const LearnPage = () => {
+const LearnPage = ({ contributors, lastEditLocaleTimestamp }) => {
   const { t } = useTranslation("page-learn")
 
   const tocItems = [
@@ -713,6 +732,11 @@ const LearnPage = () => {
               </Stack>
             </Section>
 
+            <FileContributors
+              className="my-10 border-t"
+              contributors={contributors}
+              lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+            />
             <FeedbackCard />
           </ContentContainer>
         </MainArticle>
