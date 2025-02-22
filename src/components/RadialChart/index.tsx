@@ -22,6 +22,7 @@ import Link from "../ui/Link"
  * @property {string} [sourceUrl] - The URL of the data source.
  * @property {number | string} [lastUpdated] - The last updated timestamp for the data.
  * @property {string} [className] - Additional class names for the chart container.
+ * @property {string} [unit] - The unit to be displayed next to the value.
  */
 type RadialChartProps = {
   value: number
@@ -31,10 +32,11 @@ type RadialChartProps = {
   sourceUrl?: string
   lastUpdated?: number | string
   className?: string
+  unit?: string
 }
 
 /**
- * RadialChart component renders a radial chart with the provided value and optional total value, label, source name, source URL, last updated timestamp, and additional class names.
+ * RadialChart component renders a radial chart with the provided value and optional total value, label, source name, source URL, last updated timestamp, additional class names, and unit.
  *
  * @param {RadialChartProps} props - The properties for the RadialChart component.
  * @returns {JSX.Element} The rendered RadialChart component.
@@ -47,6 +49,7 @@ const RadialChart = ({
   sourceUrl,
   lastUpdated,
   className,
+  unit,
 }: RadialChartProps) => {
   const { t } = useTranslation("common")
   const { locale } = useRouter()
@@ -105,6 +108,7 @@ const RadialChart = ({
         </RadialBarChart>
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 transform text-3xl font-black">
           {displayValue}
+          {unit && <span className="text-sm">{unit}</span>}
         </div>
       </div>
       <div className="mt-4 text-center">

@@ -1,6 +1,13 @@
+import { useEffect, useState } from "react"
+import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 
+import { Lang } from "@/lib/types"
+
+import { getLocaleForNumberFormat } from "@/lib/utils/translations"
+
 import BigNumber from "../BigNumber"
+import RadialChart from "../RadialChart"
 
 import type { DashboardBox, DashboardSection } from "./types"
 
@@ -40,12 +47,52 @@ const tempBigNumber = (
   </BigNumber>
 )
 
-export const useResources = (): DashboardSection[] => {
+const formatSmallUSD = (value: number, locale: string): string =>
+  new Intl.NumberFormat(locale, {
+    style: "currency",
+    currency: "USD",
+    notation: "compact",
+    minimumSignificantDigits: 2,
+    maximumSignificantDigits: 2,
+  }).format(value)
+
+export const useResources = ({ txCostsMedianUsd }): DashboardSection[] => {
   const { t } = useTranslation("page-resources")
+  const { locale } = useRouter()
+  const localeForNumberFormat = getLocaleForNumberFormat(locale! as Lang)
+
+  const medianTxCost =
+    "error" in txCostsMedianUsd
+      ? { error: txCostsMedianUsd.error }
+      : {
+          ...txCostsMedianUsd,
+          value: formatSmallUSD(txCostsMedianUsd.value, localeForNumberFormat),
+        }
+
+  const [timeToNextBlock, setTimeToNextBlock] = useState(12)
+
+  useEffect(() => {
+    const genesisTime = new Date("2020-12-01T12:00:23Z").getTime()
+    const updateTime = () => {
+      const now = Date.now()
+      const timeElapsed = (now - genesisTime) / 1000
+      const timeToNext = 12 - (timeElapsed % 12)
+      setTimeToNextBlock(Math.floor(timeToNext) || 12)
+    }
+
+    updateTime()
+    const interval = setInterval(updateTime, 1000)
+    return () => clearInterval(interval)
+  }, [])
+
   const networkBoxes: DashboardBox[] = [
     {
       title: t("page-resources-network-layer2-title"),
-      metric: tempBigNumber,
+      metric: (
+        <BigNumber className="items-center" value={medianTxCost.value}>
+          Median transaction cost on Ethereum networks
+        </BigNumber>
+      ),
       items: [
         {
           title: "L2 Beat",
@@ -71,7 +118,14 @@ export const useResources = (): DashboardSection[] => {
     },
     {
       title: t("page-resources-block-explorers-title"),
-      metric: "todo",
+      metric: (
+        <RadialChart
+          value={timeToNextBlock}
+          totalValue={12}
+          label="Time to next block"
+          unit="s"
+        />
+      ),
       items: [
         {
           title: "Blockscout",

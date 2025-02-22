@@ -21,14 +21,29 @@ import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Section } from "@/components/ui/section"
 
 import { cn } from "@/lib/utils/cn"
+import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
+import { BASE_TIME_UNIT } from "@/lib/constants"
+
+import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
 import heroImg from "@/public/images/heroes/guides-hub-hero.jpg"
 
+// In seconds
+const REVALIDATE_TIME = BASE_TIME_UNIT * 1
+
+const loadData = dataLoader(
+  [["growThePieData", fetchGrowThePie]],
+  REVALIDATE_TIME * 1000
+)
+
 export const getStaticProps = (async ({ locale }) => {
+  const [growThePieData] = await loadData()
+  const { txCostsMedianUsd } = growThePieData
+
   const requiredNamespaces = getRequiredNamespacesForPage("/resources")
 
   const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
@@ -44,13 +59,15 @@ export const getStaticProps = (async ({ locale }) => {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
       contentNotTranslated,
       lastDeployLocaleTimestamp,
+      txCostsMedianUsd,
     },
   }
 }) satisfies GetStaticProps<BasePageProps>
 
-const ResourcesPage = () => {
+const ResourcesPage = ({ txCostsMedianUsd }) => {
   const { t } = useTranslation("page-resources")
-  const resourceSections = useResources()
+
+  const resourceSections = useResources({ txCostsMedianUsd })
 
   return (
     <MainArticle className="relative flex flex-col">
