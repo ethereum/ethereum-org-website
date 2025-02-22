@@ -36,7 +36,7 @@ See a live example on ethereum.org: [https://ethereum.org/en/developers/docs/blo
 
 ### English content
 
-These should be created for header on every new English markdown document.
+These should be created for header in every new English markdown document.
 
 ### Translated content
 
