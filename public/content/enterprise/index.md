@@ -116,7 +116,7 @@ Here are some of the enterprise applications that have been built on top of the 
 ### Notarization of data {#notarization-of-data}
 
 - [ANSA](https://www.ansa.it/english/news/science_tecnology/2020/04/06/ansa-using-blockchain-to-help-readers_af820b4f-0947-439b-843e-52e114f53318.html) - _Italian news agency fights fake news and enables readers to verify the origin of news stories by recording them on Mainnet_
-- [Breitling](https://www.coindesk.com/breitling-arianee-all-new-watches-ethereum) - _records provenance and repair history of watches on Ethereum_
+- [Breitling](https://www.coindesk.com/learn/2016/06/25/understanding-the-dao-attack/) - _records provenance and repair history of watches on Ethereum_
 - [BRØK](https://www.xn--brk-1na.no/) - _a cap tables platform for unlisted companies on the public, provided by The Norwegian Government_
 - [Certifaction](https://certifaction.com/) - _legally valid eSignatures with by privacy-by-design_
 - [EthSign](https://ethsign.xyz/) - _records signed electronic documents on the Ethereum blockchain_
