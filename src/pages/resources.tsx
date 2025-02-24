@@ -1,3 +1,4 @@
+import { motion } from "framer-motion"
 import { GetStaticProps } from "next"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
@@ -85,11 +86,11 @@ const ResourcesPage = ({ txCostsMedianUsd }) => {
         heroImg={heroImg}
       />
 
-      <div className="sticky top-4 z-10 my-8 flex flex-col items-center gap-3 px-2 py-4 text-center">
+      <div className="sticky top-8 z-10 my-8 flex flex-col items-center gap-3 px-2 py-4 text-center">
         <div className="my-2 text-body-medium">
           {t("page-resources-whats-on-this-page")}
         </div>
-        <nav className="flex gap-1 overflow-x-auto rounded-xl border bg-background p-0.5 shadow-lg">
+        <nav className="flex max-w-[calc(100%-1rem)] gap-1 overflow-x-auto rounded-xl border bg-background p-0.5 shadow-lg">
           {resourceSections.map(({ key, title }) => (
             <ButtonLink
               key={key}
@@ -97,11 +98,17 @@ const ResourcesPage = ({ txCostsMedianUsd }) => {
               variant="ghost"
               isSecondary
               className={cn(
-                "text-nowrap rounded-xl px-4 py-2 text-sm",
-                activeSection === key && "bg-primary-low-contrast !text-primary"
+                "relative text-nowrap rounded-xl px-4 py-2 text-sm",
+                activeSection === key && "text-primary"
               )}
             >
-              {title}
+              {activeSection === key && (
+                <motion.div
+                  layoutId="active-section-highlight"
+                  className="absolute inset-0 z-0 rounded-xl bg-primary-low-contrast"
+                />
+              )}
+              <span className="relative z-10">{title}</span>
             </ButtonLink>
           ))}
         </nav>
