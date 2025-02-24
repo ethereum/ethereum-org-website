@@ -90,9 +90,11 @@ const ProductTable = <T,>({
         })),
       }))
       setFilters(updatedFilters)
-      router.replace(router.pathname, undefined, { shallow: true })
+
+      // TODO: Fix this, removed to avoid infinite re-renders
+      // router.replace(pathname, undefined, { shallow: true })
     }
-  }, [router])
+  }, [router.query])
 
   // Update or remove preset filters
   const handleSelectPreset = (idx: number) => {

@@ -6,7 +6,7 @@ import i18nConfig from "../../i18n.config.json"
 
 import type { CommunityBlog } from "./types"
 
-export const OLD_CONTENT_DIR = "src/content"
+export const OLD_CONTENT_DIR = "src/content" // For old git commit history -- do not remove
 export const CONTENT_DIR = "public/content"
 export const TRANSLATIONS_DIR = "public/content/translations"
 export const TRANSLATED_IMAGES_DIR = "/content/translations"
@@ -19,7 +19,7 @@ export const NULL_VALUE = "—"
 export const DEFAULT_LOCALE = "en"
 export const FAKE_LOCALE = "default"
 // Sorted list of supported locales codes, defined in `i18n.config.json`
-const BUILD_LOCALES = process.env.BUILD_LOCALES
+const BUILD_LOCALES = process.env.NEXT_PUBLIC_BUILD_LOCALES
 export const LOCALES_CODES = BUILD_LOCALES
   ? BUILD_LOCALES.split(",")
   : i18nConfig.map(({ code }) => code)

@@ -1,6 +1,6 @@
 ---
 title: Learn Foundational Ethereum Topics with SQL
-description: This tutorial helps readers understand fundamental Ethereum concepts including transactions, blocks and gas by querying on-chain data with Structured Query Language (SQL).
+description: This tutorial helps readers understand fundamental Ethereum concepts including transactions, blocks and gas by querying onchain data with Structured Query Language (SQL).
 author: "Paul Apivat"
 tags: ["SQL", "Querying", "Transactions"]
 skill: beginner
@@ -10,17 +10,17 @@ source: paulapivat.com
 sourceUrl: https://paulapivat.com/post/query_ethereum/
 ---
 
-Many Ethereum tutorials target developers, but there’s a lack of educational resources for data analysts or for people who wish to see on-chain data without running a client or node.
+Many Ethereum tutorials target developers, but there’s a lack of educational resources for data analysts or for people who wish to see onchain data without running a client or node.
 
-This tutorial helps readers understand fundamental Ethereum concepts including transactions, blocks and gas by querying on-chain data with structured query language (SQL) through an interface provided by [Dune Analytics](https://dune.xyz/home).
+This tutorial helps readers understand fundamental Ethereum concepts including transactions, blocks and gas by querying onchain data with structured query language (SQL) through an interface provided by [Dune Analytics](https://dune.xyz/home).
 
-On-chain data can help us understand Ethereum, the network, and as an economy for computing power and should serve as a base for understanding challenges facing Ethereum today (i.e., rising gas prices) and, more importantly, discussions around scaling solutions.
+Onchain data can help us understand Ethereum, the network, and as an economy for computing power and should serve as a base for understanding challenges facing Ethereum today (i.e., rising gas prices) and, more importantly, discussions around scaling solutions.
 
 ### Transactions {#transactions}
 
 A user’s journey on Ethereum starts with initializing a user-controlled account or an entity with an ETH balance. There are two account types - user-controlled or a smart contract (see [ethereum.org](/developers/docs/accounts/)).
 
-Any account can be viewed on a block explorer like [Etherscan](https://etherscan.io/). Block explorers are a portal to Ethereum’s data. They display, in real-time, data on blocks, transactions, miners, accounts and other on-chain activity (see [here](/developers/docs/data-and-analytics/block-explorers/)).
+Any account can be viewed on a block explorer like [Etherscan](https://etherscan.io/). Block explorers are a portal to Ethereum’s data. They display, in real-time, data on blocks, transactions, miners, accounts and other onchain activity (see [here](/developers/docs/data-and-analytics/block-explorers/)).
 
 However, a user may wish to query the data directly to reconcile the information provided by external block explorers. [Dune Analytics](https://duneanalytics.com/) provides this capability to anyone with some knowledge of SQL.
 
@@ -132,9 +132,9 @@ The only thing this query does not cover is _list of transaction_ which requires
 - Chain data (list of blocks, transactions)
 - State data (result of each transaction’s state transition)
 
-State root falls in the latter and is _implicit_ data (not stored on-chain), while chain data is explicit and stored on the chain itself ([source](https://ethereum.stackexchange.com/questions/359/where-is-the-state-data-stored)).
+State root falls in the latter and is _implicit_ data (not stored onchain), while chain data is explicit and stored on the chain itself ([source](https://ethereum.stackexchange.com/questions/359/where-is-the-state-data-stored)).
 
-For this tutorial, we'll be focusing on on-chain data that _can_ be queried with SQL via Dune Analytics.
+For this tutorial, we'll be focusing on onchain data that _can_ be queried with SQL via Dune Analytics.
 
 As stated above, each block contains a list of transactions, we can query this by filtering for a specific block. We'll try the most recent block, 12396854:
 
@@ -262,7 +262,7 @@ ORDER BY block_time DESC
 
 ### Summary {#summary}
 
-With this tutorial, we understand foundational Ethereum concepts and how the Ethereum blockchain works by querying and getting a feel for on-chain data.
+With this tutorial, we understand foundational Ethereum concepts and how the Ethereum blockchain works by querying and getting a feel for onchain data.
 
 The dashboard that holds all code used in this tutorial can be found [here](https://duneanalytics.com/paulapivat/Learn-Ethereum).
 

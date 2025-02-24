@@ -1,5 +1,4 @@
 import { useRef } from "react"
-import { useTranslation } from "next-i18next"
 
 import { FilterOption } from "@/lib/types"
 
@@ -33,6 +32,8 @@ import SwitchFilterInput from "@/components/ProductTable/FilterInputs/SwitchFilt
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import { DEFAULT_LOCALE } from "@/lib/constants"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 export const useWalletFilters = (): FilterOption[] => {
   const { t } = useTranslation("page-wallets-find-wallet")
