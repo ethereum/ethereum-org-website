@@ -41,12 +41,6 @@ import IconSupermajority from "@/public/images/resources/supermajority.png"
 import IconUltrasoundMoney from "@/public/images/resources/ultrasound-money.png"
 import IconVisaOnchainAnalytics from "@/public/images/resources/visa-onchain-analytcs.png"
 
-const tempBigNumber = (
-  <BigNumber className="items-center" value="$0.006">
-    todo: use real big numbers
-  </BigNumber>
-)
-
 const formatSmallUSD = (value: number, locale: string): string =>
   new Intl.NumberFormat(locale, {
     style: "currency",
@@ -122,8 +116,12 @@ export const useResources = ({ txCostsMedianUsd }): DashboardSection[] => {
         <RadialChart
           value={timeToNextBlock}
           totalValue={12}
+          displayValue={new Intl.NumberFormat(locale, {
+            style: "unit",
+            unit: "second",
+            unitDisplay: "narrow",
+          }).format(timeToNextBlock)}
           label="Time to next block"
-          unit="s"
         />
       ),
       items: [
@@ -161,7 +159,7 @@ export const useResources = ({ txCostsMedianUsd }): DashboardSection[] => {
     },
     {
       title: t("page-resources-eth-asset-title"),
-      metric: "todo - semi-circle progress chart",
+      // TODO: Add RadialChart metric
       items: [
         {
           title: "Etherealize Dashboard",
@@ -191,7 +189,7 @@ export const useResources = ({ txCostsMedianUsd }): DashboardSection[] => {
     },
     {
       title: t("page-resources-gas-title"),
-      metric: "todo",
+      // TODO: Add metric
       items: [
         {
           title: "Ethereum Gas Tracker",
@@ -218,7 +216,7 @@ export const useResources = ({ txCostsMedianUsd }): DashboardSection[] => {
   const usingBoxes: DashboardBox[] = [
     {
       title: t("page-resources-defi-title"),
-      metric: tempBigNumber,
+      // TODO: Add big number metric
       items: [
         {
           title: "DeFi Llama",
@@ -248,7 +246,7 @@ export const useResources = ({ txCostsMedianUsd }): DashboardSection[] => {
     },
     {
       title: t("page-resources-stablecoins-title"),
-      metric: tempBigNumber,
+      // TODO: Add big number metric
       items: [
         {
           title: "stablecoins.wtf",
@@ -274,7 +272,7 @@ export const useResources = ({ txCostsMedianUsd }): DashboardSection[] => {
     },
     {
       title: t("page-resources-nft-title"),
-      metric: "todo - bar chart",
+      // TODO: Add bar chart metric
       items: [
         {
           title: "Etherscan - Top NFT",
@@ -337,7 +335,7 @@ export const useResources = ({ txCostsMedianUsd }): DashboardSection[] => {
   const scalingBoxes: DashboardBox[] = [
     {
       title: t("page-resources-roadmap-title"),
-      metric: "todo",
+      // TODO: Add metric
       items: [
         {
           title: "Ethereum Roadmap",
@@ -349,7 +347,7 @@ export const useResources = ({ txCostsMedianUsd }): DashboardSection[] => {
     },
     {
       title: t("page-resources-blobs-title"),
-      metric: "todo",
+      // TODO: Add metric
       items: [
         {
           title: "Blob Scan",
@@ -370,7 +368,7 @@ export const useResources = ({ txCostsMedianUsd }): DashboardSection[] => {
   const resilienceBoxes: DashboardBox[] = [
     {
       title: t("page-resources-nodes-title"),
-      metric: tempBigNumber,
+      // TODO: Add big number metric
       items: [
         {
           title: "Node Watch",
@@ -457,7 +455,7 @@ export const useResources = ({ txCostsMedianUsd }): DashboardSection[] => {
   const privacySecurityBoxes: DashboardBox[] = [
     {
       title: t("page-resources-relays-title"),
-      metric: tempBigNumber,
+      // TODO: Add big number metric
       items: [
         {
           title: "Beaconchain Relays",
@@ -481,7 +479,7 @@ export const useResources = ({ txCostsMedianUsd }): DashboardSection[] => {
     },
     {
       title: t("page-resources-mev-title"),
-      metric: tempBigNumber,
+      // TODO: Add big number metric
       items: [
         {
           title: "MEV-Boost Dashboard",
