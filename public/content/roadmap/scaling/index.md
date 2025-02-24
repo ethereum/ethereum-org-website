@@ -1,6 +1,6 @@
 ---
 title: Scaling Ethereum
-description: Rollups batch transactions together off-chain, reducing costs for the user. However, the way rollups currently use data is too expensive, limiting how cheap transactions can be. Proto-Danksharding fixes this.
+description: Rollups batch transactions together offchain, reducing costs for the user. However, the way rollups currently use data is too expensive, limiting how cheap transactions can be. Proto-Danksharding fixes this.
 lang: en
 image: /images/roadmap/roadmap-transactions.png
 alt: "Ethereum roadmap"

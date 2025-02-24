@@ -1,18 +1,18 @@
 import React, { type ReactNode, useState } from "react"
-import { useTranslation } from "next-i18next"
 
 import { Flex, HStack, VStack } from "@/components/ui/flex"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
+import type { IconBaseType } from "./icons/icon-base"
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "../../tailwind/ui/accordion"
+} from "./ui/accordion"
 
-import type { IconBaseType } from "./icons/icon-base"
+import { useTranslation } from "@/hooks/useTranslation"
 
 export type ExpandableCardProps = {
   children?: ReactNode

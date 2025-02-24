@@ -1,4 +1,4 @@
-import { TwImage } from "@/components/Image"
+import { Image } from "@/components/Image"
 import { Center, Flex } from "@/components/ui/flex"
 
 import { ButtonLink } from "../ui/buttons/Button"
@@ -17,7 +17,7 @@ export const TranslationHubCallout = ({ children }) => {
         </Flex>
       </Flex>
       <Center className="w-full">
-        <TwImage
+        <Image
           src={WalkingImage}
           alt=""
           style={{ objectFit: "contain" }}
