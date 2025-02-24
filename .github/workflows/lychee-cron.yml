@@ -36,17 +36,7 @@ jobs:
             --format detailed
             './**/*.md'
             './**/*.html'
-          output: ./lychee-report.txt
         continue-on-error: true
-
-      # looks like we dont need to do this?
-      # - name: Add Lychee Report to Job Summary
-      #   if: always()
-      #   run: |
-      #     echo "### Lychee Report" >> $GITHUB_STEP_SUMMARY
-      #     echo '```' >> $GITHUB_STEP_SUMMARY
-      #     cat ./lychee-report.txt >> $GITHUB_STEP_SUMMARY
-      #     echo '```' >> $GITHUB_STEP_SUMMARY
 
       - name: Provide helpful failure message
         if: failure()
