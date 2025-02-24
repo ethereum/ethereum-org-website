@@ -79,7 +79,7 @@
   {
     "languageId": "cs",
     "words": {
-      "approved": 113096,
+      "approved": 132738,
       "total": 277274
     }
   },
@@ -93,7 +93,7 @@
   {
     "languageId": "de",
     "words": {
-      "approved": 204496,
+      "approved": 204502,
       "total": 277274
     }
   },
@@ -114,7 +114,7 @@
   {
     "languageId": "el",
     "words": {
-      "approved": 205604,
+      "approved": 216561,
       "total": 277274
     }
   },
@@ -128,7 +128,7 @@
   {
     "languageId": "es-EM",
     "words": {
-      "approved": 258234,
+      "approved": 259637,
       "total": 277274
     }
   },
@@ -177,14 +177,14 @@
   {
     "languageId": "fr",
     "words": {
-      "approved": 267184,
+      "approved": 276688,
       "total": 277274
     }
   },
   {
     "languageId": "ga-IE",
     "words": {
-      "approved": 0,
+      "approved": 392,
       "total": 277336
     }
   },
@@ -240,7 +240,7 @@
   {
     "languageId": "hu",
     "words": {
-      "approved": 260003,
+      "approved": 260460,
       "total": 277274
     }
   },
@@ -254,7 +254,7 @@
   {
     "languageId": "id",
     "words": {
-      "approved": 130553,
+      "approved": 130832,
       "total": 277274
     }
   },
@@ -268,14 +268,14 @@
   {
     "languageId": "it",
     "words": {
-      "approved": 267184,
+      "approved": 272957,
       "total": 277274
     }
   },
   {
     "languageId": "ja",
     "words": {
-      "approved": 258438,
+      "approved": 258444,
       "total": 277274
     }
   },
@@ -408,7 +408,7 @@
   {
     "languageId": "nl",
     "words": {
-      "approved": 104590,
+      "approved": 104683,
       "total": 277274
     }
   },
@@ -464,7 +464,7 @@
   {
     "languageId": "pt-BR",
     "words": {
-      "approved": 266613,
+      "approved": 267177,
       "total": 277274
     }
   },
@@ -485,7 +485,7 @@
   {
     "languageId": "ru",
     "words": {
-      "approved": 118703,
+      "approved": 118709,
       "total": 277274
     }
   },
@@ -569,7 +569,7 @@
   {
     "languageId": "te",
     "words": {
-      "approved": 26550,
+      "approved": 26691,
       "total": 277274
     }
   },
@@ -625,7 +625,7 @@
   {
     "languageId": "uk",
     "words": {
-      "approved": 81899,
+      "approved": 81999,
       "total": 277274
     }
   },
@@ -667,14 +667,14 @@
   {
     "languageId": "zh-CN",
     "words": {
-      "approved": 267184,
+      "approved": 267190,
       "total": 277274
     }
   },
   {
     "languageId": "zh-TW",
     "words": {
-      "approved": 239263,
+      "approved": 239269,
       "total": 277274
     }
   },

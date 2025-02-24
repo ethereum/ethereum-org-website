@@ -1,18 +1,24 @@
 import type { GetStaticProps } from "next"
-import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 
 import { BasePageProps, Lang } from "@/lib/types"
 
-import InlineLink from "@/components/Link"
 import MainArticle from "@/components/MainArticle"
 import Translation from "@/components/Translation"
+import InlineLink from "@/components/ui/Link"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
-export const getStaticProps = (async ({ locale }) => {
+import { DEFAULT_LOCALE } from "@/lib/constants"
+
+import loadNamespaces from "@/i18n/loadNamespaces"
+
+export const getStaticProps = (async () => {
+  // TODO: generate 404 pages for each locale when we finish the app router migration
+  const locale = DEFAULT_LOCALE
+
   const requiredNamespaces = getRequiredNamespacesForPage("/")
 
   // Want to check common namespace, so looking at requiredNamespaces[0]
@@ -24,9 +30,11 @@ export const getStaticProps = (async ({ locale }) => {
     lastDeployDate
   )
 
+  const messages = await loadNamespaces(locale!, requiredNamespaces)
+
   return {
     props: {
-      ...(await serverSideTranslations(locale!, requiredNamespaces)),
+      messages,
       contentNotTranslated,
       lastDeployLocaleTimestamp,
     },

@@ -1,19 +1,20 @@
-import { useRouter } from "next/router"
-import { useTranslation } from "next-i18next"
-import { Badge } from "@chakra-ui/react"
+import { useLocale } from "next-intl"
 
 import type { Lang, TranslationKey } from "@/lib/types"
 import { TutorialFrontmatter } from "@/lib/interfaces"
 
 import CopyToClipboard from "@/components/CopyToClipboard"
 import Emoji from "@/components/Emoji"
-import InlineLink from "@/components/Link"
 import Translation from "@/components/Translation"
 import TutorialTags from "@/components/TutorialTags"
 
 import { getLocaleTimestamp } from "@/lib/utils/time"
 
 import { Flex } from "./ui/flex"
+import InlineLink from "./ui/Link"
+import { Tag } from "./ui/tag"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 export type TutorialMetadataProps = {
   frontmatter: TutorialFrontmatter
@@ -35,7 +36,7 @@ const TutorialMetadata = ({
   frontmatter,
   timeToRead,
 }: TutorialMetadataProps) => {
-  const { locale } = useRouter()
+  const locale = useLocale()
   const { t } = useTranslation("page-developers-tutorials")
 
   const hasSource = frontmatter.source && frontmatter.sourceUrl
@@ -49,12 +50,9 @@ const TutorialMetadata = ({
         <Flex className="w-full flex-wrap">
           <TutorialTags tags={frontmatter.tags} />
         </Flex>
-        <Badge
-          variant="secondary"
-          className="mb-2 self-start whitespace-nowrap"
-        >
+        <Tag variant="outline" className="mb-2 self-start whitespace-nowrap">
           {t(getSkillTranslationId(frontmatter.skill as Skill))}
-        </Badge>
+        </Tag>
       </Flex>
       <Flex className="text-text300 mb-6 mt-[-1rem] flex-wrap gap-4 text-sm">
         {author && (

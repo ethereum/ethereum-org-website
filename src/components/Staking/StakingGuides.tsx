@@ -1,11 +1,11 @@
-import { useTranslation } from "next-i18next"
+import CardList, { type CardProps } from "@/components/CardList"
 
-import CardList, { type CardListItem } from "@/components/CardList"
+import { useTranslation } from "@/hooks/useTranslation"
 
 const StakingGuides = () => {
   const { t } = useTranslation("page-staking")
 
-  const guides: CardListItem[] = [
+  const guides: CardProps[] = [
     {
       title: t("page-staking-guide-title-coincashew-ethereum"),
       link: "https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet",

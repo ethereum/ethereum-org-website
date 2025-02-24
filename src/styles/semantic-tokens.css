@@ -118,18 +118,18 @@
     --shadow-window-box-5: 0px -64px 120px 80px hsla(var(--purple-100), var(--shadow-window-box-5-opacity));
 
     /* Staking */
-    --staking-gold: #be8d10;
-    --staking-gold-fill: #fef9ef;
-    --staking-green: #129e5b;
-    --staking-green-fill: #f7faf1;
-    --staking-blue: #0b83dc;
-    --staking-blue-fill: #f1fcf5;
-    --staking-red: #a0524c;
-    --staking-red-fill: #f8fbf9;
+    --staking-gold: 43, 84%, 40%;
+    --staking-gold-fill: 40, 88%, 97%;
+    --staking-green: 151, 80%, 35%;
+    --staking-green-fill: 80, 47%, 96%;
+    --staking-blue: 206, 90%, 45%;
+    --staking-blue-fill: 142, 65%, 97%;
+    --staking-red: 4, 36%, 46%;
+    --staking-red-fill: 140, 27%, 98%;
   }
 
   /* Dark mode token declarations */
-  [data-theme="dark"] {
+  .dark {
     --body: var(--gray-100);
     --body-medium: var(--gray-400);
     --body-light: var(--gray-600);

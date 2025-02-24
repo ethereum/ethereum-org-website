@@ -4,7 +4,7 @@ description: An introduction to the Ethereum virtual machine and how it relates 
 lang: en
 ---
 
-The Ethereum Virtual Machine (EVM) is a decentralized virtual environment that executes code consistently and securely across all Ethereum nodes. Nodes run the EVM to execute smart contracts, using "[gas](/gas/)" to measure the computational effort required for [operations](/developers/docs/evm/opcodes/), ensuring efficient resource allocation and network security.
+The Ethereum Virtual Machine (EVM) is a decentralized virtual environment that executes code consistently and securely across all Ethereum nodes. Nodes run the EVM to execute smart contracts, using "[gas](/developers/docs/gas/)" to measure the computational effort required for [operations](/developers/docs/evm/opcodes/), ensuring efficient resource allocation and network security.
 
 ## Prerequisites {#prerequisites}
 

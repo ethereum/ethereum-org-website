@@ -4,7 +4,7 @@ import type { MdPageContent, SharedFrontmatter } from "@/lib/interfaces"
 import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import Card from "@/components/Card"
 import { ContentHero, ContentHeroProps } from "@/components/Hero"
-import { TwImage as Image } from "@/components/Image"
+import { Image } from "@/components/Image"
 import { ApplyNow } from "@/components/Translatathon/ApplyNow"
 import { APPLICATION_URL } from "@/components/Translatathon/constants"
 import { DatesAndTimeline } from "@/components/Translatathon/DatesAndTimeline"
@@ -75,8 +75,7 @@ const EmojiCard = ({ emoji, title, description }) => (
     emoji={emoji}
     title={title}
     description={description}
-    flex="1 1 30%"
-    p={6}
+    className="flex-[1_1_30%] p-6"
   />
 )
 

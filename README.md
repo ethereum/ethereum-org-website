@@ -1,5 +1,5 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/e8f2e766-888b-4954-8500-1b647d84db99/deploy-status)](https://app.netlify.com/sites/ethereumorg/deploys)
-[![All Contributors](https://img.shields.io/github/all-contributors/ethereum/ethereum-org-website?color=orange&style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/github/all-contributors/ethereum/ethereum-org-website?color=orange&style=flat-square)](#contributors)
 [![Discord](https://img.shields.io/discord/714888181740339261?color=1C1CE1&label=ethereum.org%20%7C%20Discord%20%F0%9F%91%8B%20&style=flat-square)](https://discord.gg/ethereum-org)
 [![Twitter Follow](https://img.shields.io/twitter/follow/ethdotorg.svg?style=social)](https://x.com/ethdotorg)
 [![Crowdin](https://badges.crowdin.net/ethereum-org/localized.svg)](https://crowdin.com/project/ethereum-org)
@@ -95,9 +95,9 @@ yarn dev
 - Open this directory in your favorite text editor / IDE, and see your changes live by visiting `localhost:3000` from your browser
 - Pro Tip:
   - Explore scripts within `package.json` for more build options
-  - Get **faster** production builds by building only one language. E.g. in your `.env` file, set `BUILD_LOCALES=en` to build the content only in English
-  - To build the site in other selected languages too, you need to set them in `BUILD_LOCALES`, eg: `BUILD_LOCALES=en,es` if you also want to build only English (required) and Spanish.
-  - To build all languages, simply comment this line out with a hash mark, eg: `# BUILD_LOCALES=`
+  - Get **faster** production builds by building only one language. E.g. in your `.env` file, set `NEXT_PUBLIC_BUILD_LOCALES=en` to build the content only in English
+  - To build the site in other selected languages too, you need to set them in `NEXT_PUBLIC_BUILD_LOCALES`, eg: `NEXT_PUBLIC_BUILD_LOCALES=en,es` if you also want to build only English (required) and Spanish.
+  - To build all languages, simply comment this line out with a hash mark, eg: `# NEXT_PUBLIC_BUILD_LOCALES=`
 
 By default the script will build all the languages (complete list in `i18n.config.json`).
 
@@ -168,7 +168,7 @@ Learn more about how we review pull requests [here](docs/review-process.md).
 
 - To help with verification we request GitHub contributors connect their GitHub account with their Discord account (Discord > Settings > Connections > GitHub). Crowdin contributors will be verified directly through Crowdin by our team.
 
-If you haven't contributed yet and would like to earn a POAP/OATs to show your loyalty to the Ethereum space, head over to the [issues](https://github.com/ethereum/ethereum-org-website/issues/) tab to get started! If you would like to contribute to translations check out our [Translation Program](https://ethereum.org/en/contributing/translation-program/). 
+If you haven't contributed yet and would like to earn a POAP/OATs to show your loyalty to the Ethereum space, head over to the [issues](https://github.com/ethereum/ethereum-org-website/issues/) tab to get started! If you would like to contribute to translations check out our [Translation Program](https://ethereum.org/en/contributing/translation-program/).
 
 <hr style="margin-top: 3em; margin-bottom: 3em;">
 
@@ -1939,6 +1939,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://growthepie.xyz"><img src="https://avatars.githubusercontent.com/u/32496674?v=4?s=100" width="100px;" alt="Matthias Seidl"/><br /><sub><b>Matthias Seidl</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=mseidlx" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/JoeChenJ"><img src="https://avatars.githubusercontent.com/u/171761102?v=4?s=100" width="100px;" alt="JoeChenJ"/><br /><sub><b>JoeChenJ</b></sub></a><br /><a href="#content-JoeChenJ" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/itzVarsha"><img src="https://avatars.githubusercontent.com/u/138134029?v=4?s=100" width="100px;" alt="Varshitha"/><br /><sub><b>Varshitha</b></sub></a><br /><a href="#maintenance-itzVarsha" title="Maintenance">🚧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://alexandriaroberts.dev/"><img src="https://avatars.githubusercontent.com/u/31341867?v=4?s=100" width="100px;" alt="Alexandria Roberts"/><br /><sub><b>Alexandria Roberts</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=alexandriaroberts" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/colinlyguo"><img src="https://avatars.githubusercontent.com/u/102356659?v=4?s=100" width="100px;" alt="colin"/><br /><sub><b>colin</b></sub></a><br /><a href="#content-colinlyguo" title="Content">🖋</a></td>
     </tr>
   </tbody>
 </table>

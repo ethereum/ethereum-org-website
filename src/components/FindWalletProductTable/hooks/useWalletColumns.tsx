@@ -7,7 +7,7 @@ import { Wallet } from "@/lib/types"
 import type { TableMeta } from "@/components/DataTable"
 import WalletInfo from "@/components/FindWalletProductTable/WalletInfo"
 import { Button } from "@/components/ui/buttons/Button"
-import { TableCell } from "@/components/ui/Table"
+import { TableCell } from "@/components/ui/table"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
