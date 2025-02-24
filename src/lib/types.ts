@@ -49,15 +49,10 @@ export type AppPropsWithLayout = AppProps & {
 
 export type Root = {
   children: ReactNode
-  contentIsOutdated: boolean
-  contentNotTranslated: boolean
   lastDeployLocaleTimestamp: string
 }
 
-export type BasePageProps = Pick<
-  Root,
-  "contentNotTranslated" | "lastDeployLocaleTimestamp"
->
+export type BasePageProps = Pick<Root, "lastDeployLocaleTimestamp">
 
 export type Params = {
   locale: string
