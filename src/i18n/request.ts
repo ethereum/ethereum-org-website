@@ -1,11 +1,7 @@
-import { headers } from "next/headers"
+import merge from "lodash.merge"
 import { getRequestConfig } from "next-intl/server"
 
 import { Lang } from "@/lib/types"
-
-import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
-
-import { HEADER_PATHNAME_KEY } from "@/lib/constants"
 
 import { getMessages } from "./loadMessages"
 import { routing } from "./routing"
@@ -19,21 +15,9 @@ export default getRequestConfig(async ({ requestLocale }) => {
     locale = routing.defaultLocale
   }
 
-  const allMessages = await getMessages(locale)
-
-  const headersList = headers()
-  const fullPathname = headersList.get(HEADER_PATHNAME_KEY)
-  const pathname = fullPathname?.replace(`/${locale}`, "")
-
-  const requiredNamespaces = getRequiredNamespacesForPage(pathname || "/")
-
-  const messages = requiredNamespaces.reduce(
-    (acc, ns) => {
-      acc[ns] = allMessages[ns]
-      return acc
-    },
-    {} as Record<string, string>
-  )
+  const allLocaleMessages = await getMessages(locale)
+  const allDefaultMessages = await getMessages(routing.defaultLocale)
+  const messages = merge(allDefaultMessages, allLocaleMessages)
 
   return {
     locale,

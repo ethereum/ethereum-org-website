@@ -1,4 +1,4 @@
-import merge from "lodash.merge"
+import pick from "lodash.pick"
 import { notFound } from "next/navigation"
 import { getMessages, setRequestLocale } from "next-intl/server"
 
@@ -6,8 +6,6 @@ import { Lang } from "@/lib/types"
 
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLocaleTimestamp } from "@/lib/utils/time"
-
-import { DEFAULT_LOCALE } from "@/lib/constants"
 
 import Providers from "./providers"
 
@@ -30,14 +28,8 @@ export default async function LocaleLayout({
   // Enable static rendering
   setRequestLocale(locale)
 
-  let messages = await getMessages({ locale })
-
-  if (locale !== DEFAULT_LOCALE) {
-    // This is to ensure that the default locale messages are always available
-    // even if they are not present in the current locale
-    const defaultMessages = await getMessages({ locale: DEFAULT_LOCALE })
-    messages = merge(defaultMessages, messages)
-  }
+  const allMessages = await getMessages({ locale })
+  const messages = pick(allMessages, "common")
 
   const lastDeployDate = getLastDeployDate()
   const lastDeployLocaleTimestamp = getLocaleTimestamp(

@@ -1,12 +1,15 @@
-import { setRequestLocale } from "next-intl/server"
+import pick from "lodash.pick"
+import { getMessages, setRequestLocale } from "next-intl/server"
 
 import { CommitHistory, Lang, ToCItem } from "@/lib/types"
 
+import I18nProvider from "@/components/I18nProvider"
 import mdComponents from "@/components/MdComponents"
 
 import { getFileContributorInfo } from "@/lib/utils/contributors"
 import { getPostSlugs } from "@/lib/utils/md"
 import { getLocaleTimestamp } from "@/lib/utils/time"
+import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { LOCALES_CODES } from "@/lib/constants"
 
@@ -60,16 +63,22 @@ export default async function Page({
     lastUpdatedDate
   )
 
+  const allMessages = await getMessages({ locale })
+  const requiredNamespaces = getRequiredNamespacesForPage(slug, layout)
+  const messages = pick(allMessages, requiredNamespaces)
+
   return (
-    <Layout
-      slug={slug}
-      frontmatter={frontmatter}
-      tocItems={tocItems as ToCItem[]}
-      lastEditLocaleTimestamp={lastEditLocaleTimestamp}
-      contentNotTranslated={!isTranslated}
-    >
-      {content}
-    </Layout>
+    <I18nProvider locale={locale} messages={messages}>
+      <Layout
+        slug={slug}
+        frontmatter={frontmatter}
+        tocItems={tocItems as ToCItem[]}
+        lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        contentNotTranslated={!isTranslated}
+      >
+        {content}
+      </Layout>
+    </I18nProvider>
   )
 }
 
