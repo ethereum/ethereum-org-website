@@ -106,16 +106,19 @@ const PlayerWidget = ({
 
   return (
     <div
-      className={` ${showWidget ? "block" : "hidden"} border bg-background shadow-player-widget-shadow ${
+      className={`${showWidget ? "block" : "hidden"} border bg-background shadow-player-widget-shadow ${
         isExpanded
           ? "w-80 rounded-2xl px-4 py-4"
           : "w-80 rounded-t-2xl px-2 py-2"
-      } fixed ${isExpanded ? "bottom-4" : "bottom-0"} right-5 z-[9999]`}
+      } fixed ${isExpanded ? "bottom-4" : "bottom-0"} left-0 right-0 z-[9999] mx-auto sm:left-auto sm:right-5 sm:mx-0`}
     >
       <div className={`flex flex-col gap-2 ${isExpanded ? "block" : "hidden"}`}>
         <div className="flex justify-between">
           <p className="text-sm font-bold leading-base">{title}</p>
-          <div className="cursor-pointer text-body-medium hover:text-body">
+          <div
+            className="cursor-pointer text-body-medium hover:text-body"
+            title={"Collapse"}
+          >
             <CollapseIcon onClick={() => setIsExpanded(!isExpanded)} />
           </div>
         </div>
@@ -147,6 +150,7 @@ const PlayerWidget = ({
             <p
               className="w-[24px] cursor-pointer text-right text-xs font-bold leading-base text-body-medium hover:text-body"
               onClick={() => setShowSpeedMenu(!showSpeedMenu)}
+              title={`Playback speed`}
             >
               {playbackSpeed}x
             </p>
@@ -174,6 +178,7 @@ const PlayerWidget = ({
             <div
               className="cursor-pointer text-2xl text-disabled hover:text-body"
               onClick={() => handlePrevious()}
+              title="Previous"
             >
               <ArrowIcon />
             </div>
@@ -182,6 +187,7 @@ const PlayerWidget = ({
             <div
               className="cursor-pointer text-[32px] text-primary hover:text-primary-hover"
               onClick={handlePlayPause}
+              title={isPlaying ? "Pause" : "Play"}
             >
               {isPlaying ? <PauseCircleIcon /> : <PlayCircleIcon />}
             </div>
@@ -189,12 +195,14 @@ const PlayerWidget = ({
           <div
             className="cursor-pointer text-2xl text-disabled hover:text-body"
             onClick={() => handleNext()}
+            title="Next"
           >
             <ArrowIcon className="rotate-180" />
           </div>
           <div
             className={`cursor-pointer text-base ${autoplay ? "text-primary" : "text-disabled"} hover:text-primary-hover`}
             onClick={() => setAutoplay(!autoplay)}
+            title={autoplay ? "Disable autoplay" : "Enable autoplay"}
           >
             <AutoplayIcon />
           </div>
@@ -208,6 +216,7 @@ const PlayerWidget = ({
           <div
             className="cursor-pointer text-[32px] text-primary hover:text-primary-hover"
             onClick={handlePlayPause}
+            title={isPlaying ? "Pause" : "Play"}
           >
             {isPlaying ? <PauseCircleIcon /> : <PlayCircleIcon />}
           </div>
@@ -216,10 +225,16 @@ const PlayerWidget = ({
           </div>
         </div>
         <div className="flex flex-row gap-6">
-          <div className="cursor-pointer text-disabled hover:text-body">
+          <div
+            className="cursor-pointer text-disabled hover:text-body"
+            title={"Expand"}
+          >
             <ExpandIcon onClick={() => setIsExpanded(!isExpanded)} />
           </div>
-          <div className="cursor-pointer text-disabled hover:text-body">
+          <div
+            className="cursor-pointer text-disabled hover:text-body"
+            title={"Close"}
+          >
             <IoClose
               onClick={() => {
                 setIsExpanded(!isExpanded)
