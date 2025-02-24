@@ -22,7 +22,7 @@ import Link from "../ui/Link"
  * @property {string} [sourceUrl] - The URL of the data source.
  * @property {number | string} [lastUpdated] - The last updated timestamp for the data.
  * @property {string} [className] - Additional class names for the chart container.
- * @property {string} [unit] - The unit to be displayed next to the value.
+ * @property {string} [displayValue] - The custom display value to be shown.
  */
 type RadialChartProps = {
   value: number
@@ -32,11 +32,11 @@ type RadialChartProps = {
   sourceUrl?: string
   lastUpdated?: number | string
   className?: string
-  unit?: string
+  displayValue?: string
 }
 
 /**
- * RadialChart component renders a radial chart with the provided value and optional total value, label, source name, source URL, last updated timestamp, additional class names, and unit.
+ * RadialChart component renders a radial chart with the provided value and optional total value, label, source name, source URL, last updated timestamp, additional class names, and custom display value.
  *
  * @param {RadialChartProps} props - The properties for the RadialChart component.
  * @returns {JSX.Element} The rendered RadialChart component.
@@ -49,7 +49,7 @@ const RadialChart = ({
   sourceUrl,
   lastUpdated,
   className,
-  unit,
+  displayValue,
 }: RadialChartProps) => {
   const { t } = useTranslation("common")
   const { locale } = useRouter()
@@ -65,14 +65,6 @@ const RadialChart = ({
           dateStyle: "medium",
         }).format(new Date(lastUpdated))
       : ""
-
-  const displayValue = totalValue
-    ? value
-    : new Intl.NumberFormat(locale, {
-        style: "percent",
-        maximumFractionDigits: 0,
-        notation: "standard",
-      }).format(value / 100)
 
   const data = [{ value }]
 
@@ -107,8 +99,7 @@ const RadialChart = ({
           />
         </RadialBarChart>
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 transform text-3xl font-black">
-          {displayValue}
-          {unit && <span className="text-sm">{unit}</span>}
+          {displayValue || value}
         </div>
       </div>
       <div className="mt-4 text-center">
