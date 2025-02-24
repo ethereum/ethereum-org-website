@@ -159,7 +159,9 @@ const TutorialPage = ({
   internalTutorials,
   contentNotTranslated,
 }: InferGetServerSidePropsType<typeof getStaticProps>) => {
-  const locale = useLocale()
+  let locale = useLocale()
+
+  if (internalTutorials.length === 0) locale = "en"
   const filteredTutorialsByLang = useMemo(
     () =>
       filterTutorialsByLang(
