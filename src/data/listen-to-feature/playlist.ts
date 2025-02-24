@@ -1,8 +1,8 @@
-import ethAudio from "@/audio/eth/eth.mp3"
-import smartContractsAudio from "@/audio/smart-contracts/smart-contracts.mp3"
-import walletsAudio from "@/audio/wallets/wallets.mp3"
-import web3Audio from "@/audio/web3/web3.mp3"
-import whatIsEthereumAudio from "@/audio/what-is-ethereum/what-is-ethereum.mp3"
+import ethAudio from "@/data/audio/eth/eth.mp3"
+import smartContractsAudio from "@/data/audio/smart-contracts/smart-contracts.mp3"
+import walletsAudio from "@/data/audio/wallets/wallets.mp3"
+import web3Audio from "@/data/audio/web3/web3.mp3"
+import whatIsEthereumAudio from "@/data/audio/what-is-ethereum/what-is-ethereum.mp3"
 
 export const listenToPlaylists = {
   learn: [
