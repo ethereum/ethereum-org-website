@@ -19,7 +19,6 @@ export const NULL_VALUE = "—"
 // i18n
 export const DEFAULT_LOCALE = "en"
 export const FAKE_LOCALE = "default"
-export const HEADER_PATHNAME_KEY = "x-pathname"
 // Sorted list of supported locales codes, defined in `i18n.config.json`
 const BUILD_LOCALES = process.env.NEXT_PUBLIC_BUILD_LOCALES
 export const LOCALES_CODES = BUILD_LOCALES
