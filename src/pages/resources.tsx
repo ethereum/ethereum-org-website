@@ -29,6 +29,7 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { BASE_TIME_UNIT, GITHUB_REPO_URL } from "@/lib/constants"
 
+import useScrollPositionActiveSection from "@/hooks/useScrollPositionActiveSection"
 import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
 import heroImg from "@/public/images/heroes/guides-hub-hero.jpg"
 
@@ -66,8 +67,8 @@ export const getStaticProps = (async ({ locale }) => {
 
 const ResourcesPage = ({ txCostsMedianUsd }) => {
   const { t } = useTranslation("page-resources")
-
   const resourceSections = useResources({ txCostsMedianUsd })
+  const activeSection = useScrollPositionActiveSection()
 
   return (
     <MainArticle className="relative flex flex-col">
@@ -84,20 +85,21 @@ const ResourcesPage = ({ txCostsMedianUsd }) => {
         heroImg={heroImg}
       />
 
-      {/* TODO: Implement scroll position tracking */}
-      <div className="my-12 flex flex-col items-center gap-3 px-2 text-center">
+      <div className="sticky top-4 z-10 my-8 flex flex-col items-center gap-3 px-2 py-4 text-center">
         <div className="my-2 text-body-medium">
           {t("page-resources-whats-on-this-page")}
         </div>
-        <nav className="flex max-w-full gap-1 overflow-x-auto rounded-xl bg-background">
+        <nav className="flex gap-1 overflow-x-auto rounded-xl border bg-background p-0.5 shadow-lg">
           {resourceSections.map(({ key, title }) => (
             <ButtonLink
               key={key}
               href={`#${key}`}
               variant="ghost"
               isSecondary
-              className="text-nowrap rounded-xl px-4 py-2 text-sm text-primary hover:bg-primary/10"
-              activeClassName="bg-primary-low-contrast text-primary"
+              className={cn(
+                "text-nowrap rounded-xl px-4 py-2 text-sm",
+                activeSection === key && "bg-primary-low-contrast !text-primary"
+              )}
             >
               {title}
             </ButtonLink>
