@@ -58,6 +58,10 @@ export const compile = async ({
     options: {
       parseFrontmatter: true,
       mdxOptions,
+      scope: {
+        // TODO fix this
+        gfissues: [],
+      },
     },
   })
 

@@ -1,4 +1,4 @@
-import readingTime from "reading-time"
+import { setRequestLocale } from "next-intl/server"
 
 import { CommitHistory, Lang, ToCItem } from "@/lib/types"
 
@@ -23,6 +23,9 @@ export default async function Page({
 }) {
   const { locale, slug: slugArray } = await params
 
+  // Enable static rendering
+  setRequestLocale(locale)
+
   const slug = slugArray.join("/")
 
   const { markdown, isTranslated } = await importMd(locale, slug)
@@ -41,12 +44,11 @@ export default async function Page({
     tocNodeItems.length === 1 && "items" in tocNodeItems[0]
       ? tocNodeItems[0].items
       : tocNodeItems
-  const timeToRead = readingTime(markdown)
 
   const layout = frontmatter.template || "static"
   const Layout = layoutMapping[layout]
 
-  const { contributors, lastUpdatedDate } = await getFileContributorInfo(
+  const { lastUpdatedDate } = await getFileContributorInfo(
     slug,
     locale,
     frontmatter.lang,
@@ -65,8 +67,6 @@ export default async function Page({
       tocItems={tocItems as ToCItem[]}
       lastEditLocaleTimestamp={lastEditLocaleTimestamp}
       contentNotTranslated={!isTranslated}
-      contributors={contributors}
-      timeToRead={Math.round(timeToRead.minutes)}
     >
       {content}
     </Layout>
@@ -78,13 +78,13 @@ export async function generateStaticParams() {
 
   // Generate page paths for each supported locale
   return LOCALES_CODES.flatMap((locale) =>
-    slugs.map((slug) => ({
-      params: {
+    slugs.map((slug) => {
+      return {
         // Splitting nested paths to generate proper slug
         slug: slug.split("/").slice(1),
         locale,
-      },
-    }))
+      }
+    })
   )
 }
 

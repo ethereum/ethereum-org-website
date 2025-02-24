@@ -1,6 +1,7 @@
+import merge from "lodash.merge"
 import dynamic from "next/dynamic"
 import { notFound } from "next/navigation"
-import { getMessages } from "next-intl/server"
+import { getMessages, setRequestLocale } from "next-intl/server"
 
 import { Lang } from "@/lib/types"
 
@@ -10,6 +11,8 @@ import { SkipLink } from "@/components/SkipLink"
 
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLocaleTimestamp } from "@/lib/utils/time"
+
+import { DEFAULT_LOCALE } from "@/lib/constants"
 
 import Providers from "./providers"
 
@@ -32,8 +35,17 @@ export default async function LocaleLayout({
     notFound()
   }
 
-  // TODO: load/pick only necessary namespaces (use getRequiredNamespacesForPage logic)
-  const messages = await getMessages()
+  // Enable static rendering
+  setRequestLocale(locale)
+
+  let messages = await getMessages({ locale })
+
+  if (locale !== DEFAULT_LOCALE) {
+    // This is to ensure that the default locale messages are always available
+    // even if they are not present in the current locale
+    const defaultMessages = await getMessages({ locale: DEFAULT_LOCALE })
+    messages = merge(defaultMessages, messages)
+  }
 
   const lastDeployDate = getLastDeployDate()
   const lastDeployLocaleTimestamp = getLocaleTimestamp(
