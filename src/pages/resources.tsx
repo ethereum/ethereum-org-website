@@ -174,7 +174,7 @@ const ResourcesPage = ({ txCostsMedianUsd }) => {
       <div className="align-center mx-auto flex w-fit flex-col gap-4 py-16 text-center">
         <p className="font-bold">{t("page-resources-find-more")}</p>
         <ButtonLink href="https://ethereumdashboards.com" size="lg">
-          https://ethereumdashboards.com
+          ethereumdashboards.com
         </ButtonLink>
       </div>
 
