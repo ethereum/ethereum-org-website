@@ -27,7 +27,7 @@ import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
-import { BASE_TIME_UNIT } from "@/lib/constants"
+import { BASE_TIME_UNIT, GITHUB_REPO_URL } from "@/lib/constants"
 
 import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
 import heroImg from "@/public/images/heroes/guides-hub-hero.jpg"
@@ -192,10 +192,25 @@ const ResourcesPage = ({ txCostsMedianUsd }) => {
             <p>{t("page-resources-contribute-description")}</p>
           </div>
           <div className="mx-auto grid grid-cols-1 gap-16 md:grid-cols-2">
-            <ButtonLink href="http" variant="outline" isSecondary>
+            {/* TODO: Add issue template for resource listing and redirect to new template */}
+            <ButtonLink
+              href={new URL(
+                "issues/new?template=feature_request.yaml",
+                GITHUB_REPO_URL
+              ).toString()}
+              variant="outline"
+              isSecondary
+            >
               {t("page-resources-suggest-resource")}
             </ButtonLink>
-            <ButtonLink href="" variant="outline" isSecondary>
+            <ButtonLink
+              href={new URL(
+                "issues/new?template=bug_report.yaml",
+                GITHUB_REPO_URL
+              ).toString()}
+              variant="outline"
+              isSecondary
+            >
               <FaGithub /> {t("page-resources-found-bug")}
             </ButtonLink>
           </div>
