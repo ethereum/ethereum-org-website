@@ -1,5 +1,4 @@
 import { useState } from "react"
-import { useTranslation } from "next-i18next"
 
 import { FilterInputState } from "@/lib/types"
 
@@ -13,6 +12,8 @@ import {
 } from "@/components/ui/select"
 
 import { walletsData } from "@/data/wallets/wallet-data"
+
+import useTranslation from "@/hooks/useTranslation"
 
 interface NetworksWalletSelectInputProps {
   filterIndex: number

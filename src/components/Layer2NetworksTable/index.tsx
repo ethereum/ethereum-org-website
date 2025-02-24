@@ -1,5 +1,4 @@
 import { useMemo, useState } from "react"
-import { useTranslation } from "next-i18next"
 
 import { ExtendedRollup, FilterOption, Lang } from "@/lib/types"
 
@@ -10,6 +9,8 @@ import NetworkSubComponent from "@/components/Layer2NetworksTable/NetworksSubCom
 import ProductTable from "@/components/ProductTable"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
+
+import useTranslation from "@/hooks/useTranslation"
 
 const Layer2NetworksTable = ({
   layer2Data,

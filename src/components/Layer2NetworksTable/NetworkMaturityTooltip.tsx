@@ -1,9 +1,9 @@
-import { useTranslation } from "next-i18next"
-
 import { MaturityLevel } from "@/lib/types"
 
 import Tooltip from "@/components/Tooltip"
 import { Tag } from "@/components/ui/tag"
+
+import useTranslation from "@/hooks/useTranslation"
 
 const NetworkMaturityTooltip = ({ maturity }: { maturity: MaturityLevel }) => {
   const { t } = useTranslation("page-layer-2-networks")

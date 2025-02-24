@@ -1,4 +1,3 @@
-import { useTranslation } from "next-i18next"
 import { MdInfoOutline } from "react-icons/md"
 
 import NetworkUsageChart from "@/components/Layer2NetworksTable/NetworkUsageChart"
@@ -6,6 +5,8 @@ import Tooltip from "@/components/Tooltip"
 
 import { ButtonLink } from "../ui/buttons/Button"
 import InlineLink from "../ui/Link"
+
+import useTranslation from "@/hooks/useTranslation"
 
 const formatNumber = (num: number): string => {
   if (num >= 1e9) {
