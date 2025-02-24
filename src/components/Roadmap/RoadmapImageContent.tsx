@@ -1,4 +1,4 @@
-import { TwImage } from "@/components/Image"
+import { Image } from "@/components/Image"
 import { Center, Flex, Stack } from "@/components/ui/flex"
 
 import wallet from "@/public/images/wallet.png"
@@ -14,7 +14,7 @@ const RoadmapImageContent = ({ children, title }: RoadmapImageContentProps) => (
     <Flex className="flex-col lg:flex-row">
       <Stack className="mb-4">{children}</Stack>
       <Center className="min-w-fit">
-        <TwImage
+        <Image
           className="object-contain"
           src={wallet}
           alt="Ethereum Wallet"

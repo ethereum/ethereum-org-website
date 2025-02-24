@@ -39,7 +39,7 @@
   --docsearch-hit-height: fit-content;
 }
 
-[data-theme="dark"] {
+.dark {
   --docsearch-modal-background: theme(backgroundColor.background.DEFAULT);
   --docsearch-highlight-color: theme(colors.primary.hover);
 }
