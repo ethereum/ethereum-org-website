@@ -86,7 +86,9 @@ const ResourcesPage = ({ txCostsMedianUsd }) => {
 
       {/* TODO: Implement scroll position tracking */}
       <div className="my-12 flex flex-col items-center gap-3 px-2 text-center">
-        <div className="my-2 text-body-medium">What&apos;s on this page</div>
+        <div className="my-2 text-body-medium">
+          {t("page-resources-whats-on-this-page")}
+        </div>
         <nav className="flex max-w-full gap-1 overflow-x-auto rounded-xl bg-background">
           {resourceSections.map(({ key, title }) => (
             <ButtonLink
