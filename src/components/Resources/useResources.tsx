@@ -547,7 +547,7 @@ export const useResources = ({ txCostsMedianUsd }): DashboardSection[] => {
       boxes: resilienceBoxes,
     },
     {
-      key: "privacySecurity",
+      key: "privacy-security",
       title: t("page-resources-privacy-security-title"),
       boxes: privacySecurityBoxes,
     },
