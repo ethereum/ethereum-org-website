@@ -15,7 +15,7 @@ published: 2021-04-22
 
 [Beeple](https://www.nytimes.com/2021/03/11/arts/design/nft-auction-christies-beeple.html): $69 Juta [3LAU](https://www.forbes.com/sites/abrambrown/2021/03/03/3lau-nft-nonfungible-tokens-justin-blau/?sh=5f72ef64643b): $11 Juta [Grimes](https://www.theguardian.com/music/2021/mar/02/grimes-sells-digital-art-collection-non-fungible-tokens): $6 Juta
 
-Semuanya mencetak NFT mereka menggunakan API efektif Alchemy. Dalam tutorial ini, kami akan mengajarkan Anda cara melakukan hal yang sama dalam waktu <10 menit.
+Semuanya mencetak NFT mereka menggunakan API efektif Alchemy. Dalam tutorial ini, kami akan mengajarkan Anda cara melakukan hal yang sama dalam waktu \<10 menit.
 
 "Mencetak NFT" adalah tindakan mempublikasikan instance unik dari token ERC-721 Anda di rantai blok. Dengan menggunakan kontrak pintar kita dari [Bagian 1 seri tutorial NFT ini](/developers/tutorials/how-to-write-and-deploy-an-nft/), mari gunakan kemampuan web3 kita dan cetak NFT. Pada akhir tutorial ini, Anda akan dapat mencetak sebanyak mungkin NFT sesuai keinginan (dan dompet) Anda!
 

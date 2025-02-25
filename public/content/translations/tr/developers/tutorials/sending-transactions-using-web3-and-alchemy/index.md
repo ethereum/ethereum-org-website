@@ -58,7 +58,7 @@ Bu öğreticide kullanacağımız şey budur.
 
 Pekala, şimdi bu sorulardan birkaçını aradan çıkardığımıza göre, öğreticiye geçelim. Alchemy ile ilgili sorularınızı herhangi bir zaman [discord](https://discord.gg/gWuC7zB)'umuzda sormaktan çekinmeyin!
 
-### 7\. Güvenli, gaz açısından optimize edilmiş ve özel işlemler nasıl gönderilir? {how-to-send-secure-gas-optimized-and-private-transactions}
+### 7\. Güvenli, gaz açısından optimize edilmiş ve özel işlemler nasıl gönderilir? {#how-to-send-secure-gas-optimized-and-private-transactions}
 
 - [Alchemy, bir Transact API'leri paketi sunar](https://docs.alchemy.com/reference/transact-api-quickstart). Bunları kullanarak takviyeli işlemler gönderebilir, işlemlerin gerçekleşmeden önce simülasyonunu yapabilir, özel işlemler ve gaz tasarruflu işlemler gönderebilirsiniz
 - Ayrıca işleminizin bellek havuzundan çekilip zincire eklenmesi durumunda bildirim almak için [Notify API](https://docs.alchemy.com/docs/alchemy-notify)'sini de kullanabilirsiniz
