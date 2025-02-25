@@ -103,7 +103,7 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
         {!hideArrow && (
           <RxExternalLink
             className={cn(
-              "-me-1 inline h-6 w-6 p-1 align-middle",
+              "-me-1 inline h-6 w-6 shrink-0 p-1 align-middle",
               twFlipForRtl
             )}
           />
