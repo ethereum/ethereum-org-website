@@ -1,5 +1,4 @@
-import { useRouter } from "next/router"
-import { useTranslation } from "next-i18next"
+import { useParams } from "next/navigation"
 
 import { cn } from "@/lib/utils/cn"
 
@@ -20,6 +19,8 @@ import NoResultsCallout from "./NoResultsCallout"
 import { useLanguagePicker } from "./useLanguagePicker"
 
 import { useEventListener } from "@/hooks/useEventListener"
+import { useTranslation } from "@/hooks/useTranslation"
+import { usePathname, useRouter } from "@/i18n/routing"
 
 type LanguagePickerProps = {
   children: React.ReactNode
@@ -34,7 +35,9 @@ const LanguagePicker = ({
   className,
   dialog,
 }: LanguagePickerProps) => {
-  const { asPath, push } = useRouter()
+  const pathname = usePathname()
+  const { push } = useRouter()
+  const params = useParams()
   const { disclosure, languages } = useLanguagePicker(handleClose)
   const { isOpen, setValue, onClose, onOpen } = disclosure
 
@@ -51,9 +54,15 @@ const LanguagePicker = ({
   // onClick handlers
   const handleMobileCloseBarClick = () => onClose()
   const handleMenuItemSelect = (currentValue: string) => {
-    push(asPath, asPath, {
-      locale: currentValue,
-    })
+    push(
+      // @ts-expect-error -- TypeScript will validate that only known `params`
+      // are used in combination with a given `pathname`. Since the two will
+      // always match for the current route, we can skip runtime checks.
+      { pathname, params },
+      {
+        locale: currentValue,
+      }
+    )
     onClose({
       eventAction: "Locale chosen",
       eventName: currentValue,

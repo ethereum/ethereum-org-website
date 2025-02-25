@@ -1,4 +1,4 @@
-import { useRouter } from "next/router"
+import { useLocale } from "next-intl"
 
 import type { Lang } from "@/lib/types"
 
@@ -18,7 +18,7 @@ type UseDirection = {
  * @returns An object containing the Tailwind className, RTL flag, and direction.
  */
 export const useRtlFlip = (): UseDirection => {
-  const { locale } = useRouter()
+  const locale = useLocale()
   const isRtl = isLangRightToLeft(locale as Lang)
   return {
     flipForRtl: isRtl ? "scaleX(-1)" : undefined, // transform (deprecated)

@@ -3,7 +3,6 @@ import React from "react"
 import { LearningToolsCardGridProps } from "@/lib/types"
 
 import ProductCard from "./ProductCard"
-import Translation from "./Translation"
 
 const LearningToolsCardGrid = ({ category }: LearningToolsCardGridProps) => {
   return (
@@ -20,7 +19,7 @@ const LearningToolsCardGrid = ({ category }: LearningToolsCardGridProps) => {
             name={name}
             subjects={subjects}
           >
-            <Translation id={description} />
+            {description}
           </ProductCard>
         ))}
     </div>

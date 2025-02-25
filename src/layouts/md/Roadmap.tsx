@@ -1,5 +1,3 @@
-import { useTranslation } from "next-i18next"
-
 import type { ChildOnlyProp } from "@/lib/types"
 import type { MdPageContent, RoadmapFrontmatter } from "@/lib/interfaces"
 
@@ -10,6 +8,7 @@ import RoadmapImageContent from "@/components/Roadmap/RoadmapImageContent"
 
 import { ContentLayout } from "../ContentLayout"
 
+import { useTranslation } from "@/hooks/useTranslation"
 import RoadmapHubHeroImage from "@/public/images/heroes/roadmap-hub-hero.jpg"
 
 const CardGrid = (props: ChildOnlyProp) => (

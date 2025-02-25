@@ -1,5 +1,5 @@
 import { useEffect } from "react"
-import { useRouter } from "next/router"
+import { useLocale } from "next-intl"
 
 import { Lang } from "@/lib/types"
 
@@ -10,7 +10,7 @@ import { isLangRightToLeft } from "@/lib/utils/translations"
  * responding to changes in the locale without requiring refresh.
  */
 export const useLocaleDirection = () => {
-  const { locale } = useRouter()
+  const locale = useLocale()
 
   useEffect(() => {
     const dir = isLangRightToLeft(locale as Lang) ? "rtl" : "ltr"
