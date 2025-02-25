@@ -16,6 +16,9 @@ const meta = {
         ...langViewportModes,
       },
     },
+    nextjs: {
+      appDirectory: true,
+    },
   },
   argTypes: {
     children: {
