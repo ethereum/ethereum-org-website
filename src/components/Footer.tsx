@@ -1,4 +1,3 @@
-import { useTranslation } from "next-i18next"
 import { FaDiscord, FaGithub, FaXTwitter } from "react-icons/fa6"
 import { IoChevronUpSharp } from "react-icons/io5"
 
@@ -12,6 +11,8 @@ import { scrollIntoView } from "@/lib/utils/scrollIntoView"
 import { Button } from "./ui/buttons/Button"
 import { BaseLink } from "./ui/Link"
 import { List, ListItem } from "./ui/list"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 const socialLinks = [
   {
@@ -320,9 +321,7 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
       <div className="grid auto-cols-auto justify-between gap-4 px-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5">
         {linkSections.map((section: FooterLinkSection, idx) => (
           <div key={idx}>
-            <h3 className="my-5 text-sm font-bold">
-              <Translation id={section.title} />
-            </h3>
+            <h3 className="my-5 text-sm font-bold">{section.title}</h3>
             <List className="m-0 mb-4 list-none text-sm">
               {section.links.map((link, linkIdx) => (
                 <ListItem key={linkIdx} className="mb-4">

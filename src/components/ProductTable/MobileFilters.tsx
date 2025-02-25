@@ -1,5 +1,4 @@
 import React from "react"
-import { useTranslation } from "next-i18next"
 import { BsArrowCounterclockwise } from "react-icons/bs"
 import { IoClose } from "react-icons/io5" // Add this import
 
@@ -19,6 +18,8 @@ import {
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import { Button } from "../ui/buttons/Button"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 interface MobileFiltersProps {
   filters: FilterOption[]

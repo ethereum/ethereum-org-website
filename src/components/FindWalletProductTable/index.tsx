@@ -1,5 +1,4 @@
 import { useEffect, useMemo, useState } from "react"
-import { useTranslation } from "next-i18next"
 
 import { ChainName, FilterOption, Lang, Wallet } from "@/lib/types"
 
@@ -12,6 +11,8 @@ import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import FindWalletsNoResults from "./FindWalletsNoResults"
 import WalletSubComponent from "./WalletSubComponent"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 const FindWalletProductTable = ({ wallets }: { wallets: Wallet[] }) => {
   const { t } = useTranslation("page-wallets-find-wallet")
