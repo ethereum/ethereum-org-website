@@ -25,22 +25,22 @@ export const ResourceItem = ({
   item: { title, description, href, imgSrc },
   className,
 }: ItemProps) => (
-  <div
-    className={cn("flex gap-2 border-b p-3 last-of-type:border-0", className)}
+  <Link
+    href={href}
+    className={cn(
+      "flex gap-2 border-b p-3 text-body no-underline last-of-type:border-0 hover:bg-background-highlight hover:text-body",
+      className
+    )}
   >
     <div className="my-1 size-[18px] shrink-0">
       <Image src={imgSrc} alt={title} />
     </div>
-    <div>
-      <h3 className="text-md">{title}</h3>
-      <p>{description}</p>
-      <Tag asChild>
-        <Link href={href} className="mt-1 rounded-full normal-case">
-          {href}
-        </Link>
-      </Tag>
+    <div className="w-full">
+      <h3 className="text-md text-inherit">{title}</h3>
+      <p className="text-inherit">{description}</p>
+      <Tag className="mt-1 rounded-full normal-case text-inherit">{href}</Tag>
     </div>
-  </div>
+  </Link>
 )
 
 export const ResourcesContainer = ({
