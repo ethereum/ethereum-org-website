@@ -108,7 +108,7 @@ const PlayerWidget = ({
 
   return (
     <div
-      className={`${showWidget ? "block" : "hidden"} border bg-background shadow-player-widget-shadow ${
+      className={`${showWidget ? "block" : "hidden"} border bg-background shadow-widget ${
         isExpanded
           ? "w-80 rounded-2xl px-4 py-4"
           : "w-80 rounded-t-2xl px-2 py-2"
