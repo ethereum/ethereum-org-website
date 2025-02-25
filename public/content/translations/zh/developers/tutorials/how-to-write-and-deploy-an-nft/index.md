@@ -76,7 +76,7 @@ Alchemy 非常自豪能够推动非同质化代币领域的一些巨头，包括
     npm init
 
 其实如何回答安装问题并不重要，以下提供一个回答的样例供参考：
-
+```json
     package name: (my-nft)
     version: (1.0.0)
     description: My first NFT!
@@ -99,7 +99,7 @@ Alchemy 非常自豪能够推动非同质化代币领域的一些巨头，包括
       "author": "",
       "license": "ISC"
     }
-
+```
 批准 package.json，我们就可以开始了！
 
 ## 步骤 7：安装[安全帽 (Hardhat)](https://hardhat.org/getting-started/#overview) {#install-hardhat}
@@ -259,6 +259,7 @@ Ethers.js 是一个软件库，通过以更加方便用户的方法打包[标准
 
 按如下所示更新你的 hardhat.config.js 代码：
 
+```js
     /**
     * @type import('hardhat/config').HardhatUserConfig
     */
@@ -276,6 +277,7 @@ Ethers.js 是一个软件库，通过以更加方便用户的方法打包[标准
           }
        },
     }
+```
 
 ## 步骤 14：编写合约 {#compile-contract}
 

@@ -618,7 +618,7 @@ Bir token'ı transfer etmesine izin verilen herkesin onu yakmasına izin verilir
 
 Solidity'nin aksine, Vyper'ın kalıtımı yoktur. Bu, kodu daha net hâle getirmek ve dolayısıyla güvenliğini sağlamak için bilinçli bir tasarım seçimidir. Bu nedenle, kendi Vyper ERC-721 sözleşmenizi oluşturmak için [bu sözleşmeyi](https://github.com/vyperlang/vyper/blob/master/examples/tokens/ERC721.vy) alın ve istediğiniz iş mantığını uygulamak için değiştirin.
 
-# Sonuç {#conclusion}
+## Sonuç {#conclusion}
 
 İnceleme için, bu sözleşmedeki en önemli fikirlerden bazıları şunlardır:
 

@@ -55,7 +55,7 @@ Bu ağ tasarımının faydaları şunlardır:
 - merkezi sağlayıcılara olan bağımlılığı azaltmak
 - Internet bant genişliği kullanımını azaltmak
 - minimize edilmiş veya sıfır senkronizasyon
-- Kaynak kısıtlaması olan cihazlara erişim (<1 GB RAM, <100 MB disk alanı, 1 CPU)
+- Kaynak kısıtlaması olan cihazlara erişim (\<1 GB RAM, \<100 MB disk alanı, 1 CPU)
 
 Aşağıdaki diyagram, Portal Ağı tarafından sunulabilecek mevcut istemcilerin işlevlerini gösterir ve kullanıcıların çok düşük kaynaklı cihazlardan bu işlevlere erişmesini sağlar.
 
