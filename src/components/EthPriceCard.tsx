@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react"
-import { useRouter } from "next/router"
-import { useTranslation } from "next-i18next"
+import { useLocale } from "next-intl"
 import { MdInfoOutline } from "react-icons/md"
 
 import type { LoadingState } from "@/lib/types"
@@ -13,6 +12,7 @@ import { cn } from "@/lib/utils/cn"
 import { Flex } from "./ui/flex"
 
 import { useRtlFlip } from "@/hooks/useRtlFlip"
+import { useTranslation } from "@/hooks/useTranslation"
 
 type EthPriceResponse = {
   ethereum: {
@@ -30,7 +30,7 @@ const EthPriceCard = ({
   className,
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) => {
-  const { locale } = useRouter()
+  const locale = useLocale()
   const { t } = useTranslation()
   const [state, setState] = useState<LoadingState<EthPriceState>>({
     loading: true,

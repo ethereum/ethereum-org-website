@@ -1,4 +1,4 @@
-import { TwImage as Image } from "@/components/Image"
+import { Image } from "@/components/Image"
 import { Flex, type FlexProps } from "@/components/ui/flex"
 
 import { cn } from "@/lib/utils/cn"
