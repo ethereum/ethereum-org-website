@@ -1,5 +1,4 @@
-import { useRouter } from "next/router"
-import { useTranslation } from "next-i18next"
+import { useLocale } from "next-intl"
 import { MdInfoOutline } from "react-icons/md"
 
 import type { ChildOnlyProp, Lang, StakingStatsData } from "@/lib/types"
@@ -10,6 +9,8 @@ import { Flex, VStack } from "@/components/ui/flex"
 import { getLocaleForNumberFormat } from "@/lib/utils/translations"
 
 import InlineLink from "../ui/Link"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 const Cell = ({ children }: ChildOnlyProp) => (
   <VStack className="gap-2 px-8 py-4">{children}</VStack>
@@ -39,7 +40,7 @@ type StakingStatsBoxProps = {
   data: StakingStatsData
 }
 const StakingStatsBox = ({ data }: StakingStatsBoxProps) => {
-  const { locale } = useRouter()
+  const locale = useLocale()
   const { t } = useTranslation("page-staking")
 
   const localeForStatsBoxNumbers = getLocaleForNumberFormat(locale! as Lang)

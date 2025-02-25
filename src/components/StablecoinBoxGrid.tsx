@@ -1,6 +1,4 @@
 import { useState } from "react"
-import { useRouter } from "next/router"
-import { useTranslation } from "next-i18next"
 
 import { ChildOnlyProp } from "@/lib/types"
 
@@ -12,6 +10,9 @@ import { cn } from "@/lib/utils/cn"
 import { isMobile } from "../lib/utils/isMobile"
 
 import Emoji from "./Emoji"
+
+import { useTranslation } from "@/hooks/useTranslation"
+import { useRouter } from "@/i18n/routing"
 
 // Represent string as 32-bit integer
 const hashCode = (string: string): number => {

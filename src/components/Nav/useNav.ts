@@ -1,4 +1,3 @@
-import { useTranslation } from "next-i18next"
 import { useTheme } from "next-themes"
 import {
   BsBook,
@@ -24,6 +23,8 @@ import EthereumIcon from "@/components/icons/ethereum-icon.svg"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import type { NavSections } from "./types"
+
+import useTranslation from "@/hooks/useTranslation"
 
 export const useNav = () => {
   const { t } = useTranslation("common")

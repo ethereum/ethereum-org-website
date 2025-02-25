@@ -1,5 +1,4 @@
-import { useRouter } from "next/router"
-import { useTranslation } from "next-i18next"
+import { useLocale } from "next-intl"
 import { FaXTwitter } from "react-icons/fa6"
 
 import { CompletedQuizzes, QuizShareStats } from "@/lib/types"
@@ -20,6 +19,8 @@ import {
   getTotalQuizzesPoints,
   shareOnTwitter,
 } from "./utils"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 const handleShare = ({ score, total }: QuizShareStats) => {
   shareOnTwitter({
@@ -45,7 +46,7 @@ const QuizzesStats = ({
   averageScoresArray,
   completedQuizzes,
 }: QuizzesStatsProps) => {
-  const { locale } = useRouter()
+  const locale = useLocale()
   const { t } = useTranslation("learn-quizzes")
   const numberOfCompletedQuizzes = getNumberOfCompletedQuizzes(completedQuizzes)
 
@@ -146,10 +147,7 @@ const QuizzesStats = ({
                 <Stack key={labelId} className="m-0 gap-0" asChild>
                   <ListItem>
                     <span className="text-body">
-                      <Translation
-                        id={labelId}
-                        options={{ ns: "learn-quizzes" }}
-                      />
+                      <Translation id={labelId} ns="learn-quizzes" />
                     </span>
                     {/* Data from Matomo, manually updated */}
                     <span>{value}</span>

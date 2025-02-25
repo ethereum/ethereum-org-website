@@ -1,4 +1,3 @@
-import { useTranslation } from "next-i18next"
 import type { SVGTextElementAttributes } from "react"
 
 import Translation from "@/components/Translation"
@@ -9,6 +8,8 @@ import { createIconBase } from "../icons/icon-base"
 import { HStack } from "../ui/flex"
 
 import { Background } from "./Background"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 const Text = ({
   className,
@@ -63,9 +64,7 @@ const MergeInfographic = () => {
     <div
       className="relative isolate aspect-[25/11] w-full"
       role="img"
-      aria-label={t(
-        "page-upgrades-index:page-upgrades-merge-infographic-alt-text"
-      )}
+      aria-label={t("page-upgrades:page-upgrades-merge-infographic-alt-text")}
     >
       <div>
         <HStack
