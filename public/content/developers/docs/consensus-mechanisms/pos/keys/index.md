@@ -23,7 +23,7 @@ The validator signing key consists of two elements:
 - Validator **private** key
 - Validator **public** key
 
-The purpose of the validator private key is to sign on-chain operations such as block proposals and attestations. Because of this, these keys must be held in a hot wallet.
+The purpose of the validator private key is to sign onchain operations such as block proposals and attestations. Because of this, these keys must be held in a hot wallet.
 
 This flexibility has the advantage of moving validator signing keys very quickly from one device to another, however, if they have gotten lost or stolen, a thief may be able to **act maliciously** in a few ways:
 
@@ -55,6 +55,8 @@ Losing this key before updating withdrawal credentials to `0x01` type means losi
 Separating the validator keys from the Ethereum account keys enables multiple validators to be run by a single user.
 
 ![validator key schematic](validator-key-schematic.png)
+
+**Note**: Exiting from staking duties and withdrawing a validator's balance currently requires signing a [voluntary exit message (VEM)](https://mirror.xyz/ladislaus.eth/wmoBbUBes2Wp1_6DvP6slPabkyujSU7MZOFOC3QpErs&1) with the validator key. However, [EIP-7002](https://eips.ethereum.org/EIPS/eip-7002) is a proposal that will allow a user to trigger a validator's exit and withdrawals its balance by signing exit messages with the withdrawal key in the future. This will reduce trust assumptions by enabling stakers who delegate ETH to [staking-as-a-service providers](https://ethereum.org/en/staking/saas/#what-is-staking-as-a-service) to remain in control of their funds. 
 
 ## Deriving keys from a seed phrase {#deriving-keys-from-seed}
 
@@ -94,3 +96,5 @@ Each branch is separated by a `/` so `m/2` means start with the master key and f
 
 - [Ethereum Foundation blog post by Carl Beekhuizen](https://blog.ethereum.org/2020/05/21/keys/)
 - [EIP-2333 BLS12-381 key generation](https://eips.ethereum.org/EIPS/eip-2333)
+- [EIP-7002: Execution Layer Triggered Exits](https://research.2077.xyz/eip-7002-unpacking-improvements-to-staking-ux-post-merge)
+- [Key management at scale](https://docs.ethstaker.cc/ethstaker-knowledge-base/scaled-node-operators/key-management-at-scale)

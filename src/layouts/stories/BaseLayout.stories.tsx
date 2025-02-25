@@ -1,5 +1,6 @@
-import { Center } from "@chakra-ui/react"
 import type { Meta, StoryObj } from "@storybook/react"
+
+import { Center } from "@/components/ui/flex"
 
 import { langViewportModes } from "../../../.storybook/modes"
 import { BaseLayout as BaseLayoutComponent } from "../BaseLayout"
@@ -13,6 +14,9 @@ const meta = {
       modes: {
         ...langViewportModes,
       },
+    },
+    nextjs: {
+      appDirectory: true,
     },
   },
   argTypes: {
@@ -34,7 +38,7 @@ export default meta
 export const BaseLayout: StoryObj<typeof meta> = {
   args: {
     children: (
-      <Center h="497px" border="2px dashed" borderColor="primary.base">
+      <Center className="h-[497px] border-2 border-dashed border-primary">
         Content Here
       </Center>
     ),

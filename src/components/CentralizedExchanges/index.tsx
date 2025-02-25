@@ -1,5 +1,4 @@
-import { useRouter } from "next/router"
-import { useTranslation } from "next-i18next"
+import { useLocale } from "next-intl"
 
 import type { ChildOnlyProp, Lang } from "@/lib/types"
 
@@ -14,6 +13,7 @@ import { WEBSITE_EMAIL } from "@/lib/constants"
 import Select from "../Select"
 
 import { useCentralizedExchanges } from "@/hooks/useCentralizedExchanges"
+import { useTranslation } from "@/hooks/useTranslation"
 
 const ListContainer = (props: ChildOnlyProp) => (
   <div className="mt-16 flex flex-col gap-4" {...props} />
@@ -66,7 +66,7 @@ const CentralizedExchanges = ({
   lastDataUpdateDate,
 }: CentralizedExchangesProps) => {
   const { t } = useTranslation("page-get-eth")
-  const { locale } = useRouter()
+  const locale = useLocale()
   const {
     selectOptions,
     handleSelectChange,
