@@ -77,7 +77,7 @@ Sekarang karena kita ada di dalam folder proyek kita, kita akan menggunakan npm 
     npm init
 
 Tidak jadi masalah bagaimana cara Anda menjawab pertanyaan instalasinya, berikut adalah cara kami melakukannya sebagai referensi:
-
+```json
     package name: (my-nft)
     version: (1.0.0)
     description: My first NFT!
@@ -100,7 +100,7 @@ Tidak jadi masalah bagaimana cara Anda menjawab pertanyaan instalasinya, berikut
       "author": "",
       "license": "ISC"
     }
-
+```
 Setujui package.json, dan kita siap untuk beraksi!
 
 ## Langkah 7: Instal [Hardhat](https://hardhat.org/getting-started/#overview) {#install-hardhat}
@@ -262,6 +262,7 @@ Kita sejauh ini telah menambahkan beberapa dependensi dan plugin, kini kita perl
 
 Perbarui hardhat.config.js Anda agar terlihat seperti ini:
 
+```js
     /**
     * @type import('hardhat/config').HardhatUserConfig
     */
@@ -279,6 +280,7 @@ Perbarui hardhat.config.js Anda agar terlihat seperti ini:
           }
        },
     }
+```
 
 ## Langkah 14: Mengkompilasi kontrak kita {#compile-contract}
 
