@@ -9,6 +9,7 @@ import ThemeProvider from "@/components/ThemeProvider"
 
 import "@/styles/global.css"
 
+import { FeedbackWidgetProvider } from "@/contexts/FeedbackWidgetContext"
 import { BaseLayout } from "@/layouts/BaseLayout"
 
 const App = ({ Component, pageProps }: AppPropsWithLayout) => {
@@ -28,13 +29,15 @@ const App = ({ Component, pageProps }: AppPropsWithLayout) => {
   return (
     <ThemeProvider>
       <TooltipProvider>
-        <BaseLayout
-          contentIsOutdated={!!pageProps.frontmatter?.isOutdated}
-          contentNotTranslated={pageProps.contentNotTranslated}
-          lastDeployLocaleTimestamp={pageProps.lastDeployLocaleTimestamp}
-        >
-          {getLayout(<Component {...pageProps} />)}
-        </BaseLayout>
+        <FeedbackWidgetProvider>
+          <BaseLayout
+            contentIsOutdated={!!pageProps.frontmatter?.isOutdated}
+            contentNotTranslated={pageProps.contentNotTranslated}
+            lastDeployLocaleTimestamp={pageProps.lastDeployLocaleTimestamp}
+          >
+            {getLayout(<Component {...pageProps} />)}
+          </BaseLayout>
+        </FeedbackWidgetProvider>
       </TooltipProvider>
     </ThemeProvider>
   )

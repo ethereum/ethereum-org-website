@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import { Howl } from "howler"
 import { useTranslation } from "next-i18next"
 
@@ -7,7 +7,10 @@ import TopOfPagePlayer from "@/components/ListenToPlayer/TopOfPagePlayer"
 
 import { getPlaylistBySlug } from "@/data/listen-to-feature/playlist"
 
+import { FeedbackWidgetContext } from "@/contexts/FeedbackWidgetContext"
+
 const ListenToPlayer = ({ slug }) => {
+  const { setShowFeedbackWidget } = useContext(FeedbackWidgetContext)
   const { playlist, index } = getPlaylistBySlug(slug)
 
   const { t } = useTranslation()
@@ -21,6 +24,10 @@ const ListenToPlayer = ({ slug }) => {
   const [currentTrackIndex, setCurrentTrackIndex] = useState(index)
   const [countdown, setCountdown] = useState(0)
   const duration = sound?.duration() ?? 0
+
+  useEffect(() => {
+    setShowFeedbackWidget(!showWidget)
+  }, [showWidget, setShowFeedbackWidget])
 
   useEffect(() => {
     // Guard clause to prevent accessing playlist when empty

@@ -809,6 +809,11 @@ export type WalletSupportedLanguageContextType = {
   setSupportedLanguage: (language: string) => void
 }
 
+export type FeedbackWidgetContextType = {
+  showFeedbackWidget: boolean
+  setShowFeedbackWidget: (showFeedbackWidget: boolean) => void
+}
+
 // Historical upgrades
 type NetworkUpgradeDetails = {
   blockNumber?: number
