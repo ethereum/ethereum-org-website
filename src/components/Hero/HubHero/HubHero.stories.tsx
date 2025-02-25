@@ -1,6 +1,5 @@
-import { Meta, StoryObj } from "@storybook/react"
-
-import { getTranslation } from "@/storybook-utils"
+import { useTranslations } from "next-intl"
+import type { Meta, StoryObj } from "@storybook/react/*"
 
 import { langViewportModes } from "../../../../.storybook/modes"
 
@@ -32,9 +31,11 @@ export default meta
 
 export const HubHero: StoryObj = {
   render: () => {
+    const t = useTranslations()
+
     const buttons: HubHeroProps["buttons"] = [
       {
-        content: getTranslation("hero-button-lets-get-started", "page-learn"),
+        content: t("page-learn.hero-button-lets-get-started"),
         toId: "what-is-crypto-ethereum",
         matomo: {
           eventCategory: "learn hub hero buttons",
@@ -54,9 +55,9 @@ export const HubHero: StoryObj = {
 
     return (
       <HubHeroComponent
-        title={getTranslation("learn-hub", "common")}
-        header={getTranslation("hero-header", "page-learn")}
-        description={getTranslation("hero-subtitle", "page-learn")}
+        title={t("common.learn-hub")}
+        header={t("page-learn.hero-header")}
+        description={t("page-learn.hero-subtitle")}
         heroImg={learnHubHeroImg}
         buttons={buttons}
       />

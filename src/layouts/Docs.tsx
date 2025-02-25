@@ -1,4 +1,3 @@
-import { useRouter } from "next/router"
 import type { HTMLAttributes } from "react"
 
 import { ChildOnlyProp } from "@/lib/types"
@@ -34,6 +33,8 @@ import YouTube from "@/components/YouTube"
 
 import { cn } from "@/lib/utils/cn"
 import { getEditPath } from "@/lib/utils/editPath"
+
+import { usePathname } from "@/i18n/routing"
 
 const baseHeadingClasses =
   "font-mono uppercase font-bold scroll-mt-40 break-words"
@@ -113,12 +114,12 @@ export const DocsLayout = ({
   contentNotTranslated,
 }: DocsLayoutProps) => {
   const isPageIncomplete = !!frontmatter.incomplete
-  const { asPath: relativePath } = useRouter()
-  const absoluteEditPath = getEditPath(relativePath)
+  const pathname = usePathname()
+  const absoluteEditPath = getEditPath(pathname)
 
   return (
     <div className="flex w-full flex-col border-b">
-      <SideNavMobile path={relativePath} />
+      <SideNavMobile path={pathname} />
       {isPageIncomplete && (
         <BannerNotification shouldShow={isPageIncomplete}>
           <Translation id="page-developers-docs:banner-page-incomplete" />
@@ -128,7 +129,7 @@ export const DocsLayout = ({
         className="flex justify-between bg-background-highlight lg:pe-8"
         dir={contentNotTranslated ? "ltr" : "unset"}
       >
-        <SideNav path={relativePath} />
+        <SideNav path={pathname} />
         <MainArticle className="min-w-0 flex-1 px-8 pb-8 pt-8 md:px-16 md:pb-16 md:pt-12">
           <H1 id="top">{frontmatter.title}</H1>
           <FileContributors
