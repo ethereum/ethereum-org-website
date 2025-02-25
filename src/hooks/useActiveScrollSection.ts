@@ -2,11 +2,11 @@
 
 import { useEffect, useState } from "react"
 
-const useScrollPositionActiveSection = () => {
+const useActiveScrollSection = () => {
   const [activeSection, setActiveSection] = useState("")
 
   useEffect(() => {
-    const sections = document.querySelectorAll("section[id], [id].scroll-mt-20")
+    const sections = document.querySelectorAll("section[id], [id].scroll-mt-40")
 
     const handleScroll = () => {
       let currentSection = ""
@@ -14,7 +14,7 @@ const useScrollPositionActiveSection = () => {
 
       sections.forEach((section) => {
         const sectionTop = section.getBoundingClientRect().top
-        const distance = Math.abs(sectionTop - window.innerHeight / 2)
+        const distance = Math.abs(sectionTop - 5 * 16) // 5rem from the top
         if (distance < minDistance) {
           minDistance = distance
           currentSection = section.getAttribute("id") || ""
@@ -27,13 +27,23 @@ const useScrollPositionActiveSection = () => {
       }
     }
 
-    window.addEventListener("scroll", handleScroll)
+    const debounce = (func: () => void, wait: number) => {
+      let timeout: NodeJS.Timeout
+      return () => {
+        clearTimeout(timeout)
+        timeout = setTimeout(func, wait)
+      }
+    }
+
+    const debouncedHandleScroll = debounce(handleScroll, 100)
+
+    window.addEventListener("scroll", debouncedHandleScroll)
     return () => {
-      window.removeEventListener("scroll", handleScroll)
+      window.removeEventListener("scroll", debouncedHandleScroll)
     }
   }, [])
 
   return activeSection
 }
 
-export default useScrollPositionActiveSection
+export default useActiveScrollSection

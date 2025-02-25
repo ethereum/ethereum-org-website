@@ -30,7 +30,7 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { BASE_TIME_UNIT, GITHUB_REPO_URL } from "@/lib/constants"
 
-import useScrollPositionActiveSection from "@/hooks/useScrollPositionActiveSection"
+import useActiveScrollSection from "@/hooks/useActiveScrollSection"
 import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
 import heroImg from "@/public/images/heroes/guides-hub-hero.jpg"
 
@@ -69,7 +69,7 @@ export const getStaticProps = (async ({ locale }) => {
 const ResourcesPage = ({ txCostsMedianUsd }) => {
   const { t } = useTranslation("page-resources")
   const resourceSections = useResources({ txCostsMedianUsd })
-  const activeSection = useScrollPositionActiveSection()
+  const activeSection = useActiveScrollSection()
 
   return (
     <MainArticle className="relative flex flex-col">
@@ -86,11 +86,11 @@ const ResourcesPage = ({ txCostsMedianUsd }) => {
         heroImg={heroImg}
       />
 
-      <div className="sticky top-8 z-10 my-8 flex flex-col items-center gap-3 px-2 py-4 text-center">
+      <div className="sticky top-6 z-10 my-8 flex flex-col items-center gap-3 px-2 py-4 text-center">
         <div className="my-2 text-body-medium">
           {t("page-resources-whats-on-this-page")}
         </div>
-        <nav className="flex max-w-[calc(100%-1rem)] gap-1 overflow-x-auto rounded-xl border bg-background p-0.5 shadow-lg">
+        <nav className="flex max-w-[calc(100%-1rem)] gap-1 overflow-x-auto rounded-2xl border bg-background p-0.5 shadow-lg">
           {resourceSections.map(({ key, title }) => (
             <ButtonLink
               key={key}
@@ -99,7 +99,7 @@ const ResourcesPage = ({ txCostsMedianUsd }) => {
               isSecondary
               className={cn(
                 "relative text-nowrap rounded-xl px-4 py-2 text-sm",
-                activeSection === key && "text-primary"
+                activeSection === key && "!text-primary"
               )}
             >
               {activeSection === key && (
@@ -124,7 +124,7 @@ const ResourcesPage = ({ txCostsMedianUsd }) => {
             value={key}
             key={key}
             id={key}
-            className="scroll-mt-20"
+            className="scroll-mt-40"
           >
             <AccordionTrigger
               hideIcon
