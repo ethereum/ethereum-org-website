@@ -48,7 +48,12 @@ const ListenToPlayer = ({ slug }: { slug: string }) => {
       onplay: () => setIsPlaying(true),
       onpause: () => setIsPlaying(false),
       onend: () => {
-        if (autoplay && currentTrackIndex < playlist.length - 1) {
+        // Only do countdown/timeout if track naturally ended (not manually skipped)
+        if (
+          autoplay &&
+          currentTrackIndex < playlist.length - 1 &&
+          !sound?.playing()
+        ) {
           setCountdown(5)
           const countdownInterval = setInterval(() => {
             setCountdown((prev) => Math.max(0, prev - 1))
@@ -178,13 +183,17 @@ const ListenToPlayer = ({ slug }: { slug: string }) => {
 
   const handleNext = () => {
     if (!sound) return
-    sound.seek(duration)
-    setTimeRemaining(0)
-    trackCustomEvent({
-      eventCategory: "Audio",
-      eventAction: "click",
-      eventName: "next",
-    })
+    sound.stop() // Stop current sound
+    if (currentTrackIndex < playlist.length - 1) {
+      trackCustomEvent({
+        eventCategory: "Audio",
+        eventAction: "click",
+        eventName: "next",
+      })
+      setCurrentTrackIndex(currentTrackIndex + 1) // Directly go to next track
+    } else {
+      setIsPlaying(false)
+    }
   }
 
   const handlePlaybackSpeed = (speed: number) => {
