@@ -11,7 +11,7 @@ import { getPlaylistBySlug } from "@/data/listen-to-feature/playlist"
 
 import { FeedbackWidgetContext } from "@/contexts/FeedbackWidgetContext"
 
-const ListenToPlayer = ({ slug }) => {
+const ListenToPlayer = ({ slug }: { slug: string }) => {
   const { setShowFeedbackWidget } = useContext(FeedbackWidgetContext)
   const { playlist, index } = getPlaylistBySlug(slug)
 
@@ -191,7 +191,9 @@ const ListenToPlayer = ({ slug }) => {
     })
   }
 
-  return playlist.length > 0 && index !== -1 ? (
+  if (!playlist.length || index === -1) return null
+
+  return (
     <>
       <TopOfPagePlayer
         duration={duration}
@@ -221,8 +223,6 @@ const ListenToPlayer = ({ slug }) => {
         handleCloseWidget={handleCloseWidget}
       />
     </>
-  ) : (
-    <></>
   )
 }
 

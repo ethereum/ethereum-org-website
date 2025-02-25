@@ -10,6 +10,7 @@ import {
   PlayCircleIcon,
 } from "@/components/icons/listen-to"
 
+import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 interface PlayerWidgetProps {
@@ -108,13 +109,16 @@ const PlayerWidget = ({
 
   return (
     <div
-      className={`${showWidget ? "block" : "hidden"} border bg-background shadow-widget ${
-        isExpanded
-          ? "w-80 rounded-2xl px-4 py-4"
-          : "w-80 rounded-t-2xl px-2 py-2"
-      } fixed ${isExpanded ? "bottom-4" : "bottom-0"} left-0 right-0 z-[9999] mx-auto sm:left-auto sm:right-5 sm:mx-0`}
+      className={cn(
+        showWidget ? "block" : "hidden",
+        "w-80 border bg-background shadow-widget",
+        isExpanded ? "bottom-4 rounded-2xl p-4" : "bottom-0 rounded-t-2xl p-2",
+        "fixed left-0 right-0 z-[9999] mx-auto sm:left-auto sm:right-5 sm:mx-0"
+      )}
     >
-      <div className={`flex flex-col gap-2 ${isExpanded ? "block" : "hidden"}`}>
+      <div
+        className={cn("flex flex-col gap-2", isExpanded ? "block" : "hidden")}
+      >
         <div className="flex justify-between">
           <p className="text-sm font-bold leading-base">{title}</p>
           <div
@@ -188,7 +192,7 @@ const PlayerWidget = ({
           <div>
             <div
               className="cursor-pointer text-2xl text-disabled hover:text-body"
-              onClick={() => handlePrevious()}
+              onClick={handlePrevious}
               title="Previous"
             >
               <ArrowIcon />
@@ -205,13 +209,17 @@ const PlayerWidget = ({
           </div>
           <div
             className="cursor-pointer text-2xl text-disabled hover:text-body"
-            onClick={() => handleNext()}
+            onClick={handleNext}
             title="Next"
           >
             <ArrowIcon className="rotate-180" />
           </div>
           <div
-            className={`cursor-pointer text-base ${autoplay ? "text-primary" : "text-disabled"} hover:text-primary-hover`}
+            className={cn(
+              "cursor-pointer text-base",
+              autoplay ? "text-primary" : "text-disabled",
+              "hover:text-primary-hover"
+            )}
             onClick={() => setAutoplay(!autoplay)}
             title={autoplay ? "Disable autoplay" : "Enable autoplay"}
           >
@@ -221,7 +229,10 @@ const PlayerWidget = ({
       </div>
 
       <div
-        className={`flex flex-row items-center justify-between ${isExpanded ? "hidden" : "block"}`}
+        className={cn(
+          "flex flex-row items-center justify-between",
+          isExpanded ? "hidden" : "block"
+        )}
       >
         <div className="flex flex-row items-center gap-2">
           <div

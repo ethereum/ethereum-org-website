@@ -3,7 +3,7 @@ import { createIconBase } from "../icon-base"
 export const ArrowIcon = createIconBase({
   displayName: "ArrowIcon",
   viewBox: "0 0 32 32",
-  fill: "var(--disabled)",
+  fill: "fill-disabled",
   children: (
     <g>
       <path
