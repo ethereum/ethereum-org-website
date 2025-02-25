@@ -141,4 +141,3 @@ If you want to monitor gas prices, so you can send your ETH for less, you can us
 - [EIP-1559 docs](https://eips.ethereum.org/EIPS/eip-1559).
 - [Tim Beiko's EIP-1559 Resources](https://hackmd.io/@timbeiko/1559-resources)
 - [EIP-1559: Separating Mechanisms From Memes](https://research.2077.xyz/eip-1559-separating-mechanisms-from-memes)
-- [Multidimensional gas pricing](https://vitalik.eth.limo/general/2024/05/09/multidim.html)
