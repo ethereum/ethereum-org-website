@@ -1,6 +1,6 @@
 import { ComponentPropsWithRef } from "react"
 import { GetStaticProps } from "next"
-import { useRouter } from "next/router"
+import { useLocale } from "next-intl"
 
 import { BasePageProps, Lang, Params } from "@/lib/types"
 
@@ -32,6 +32,7 @@ import { DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
 
 import { useTranslation } from "@/hooks/useTranslation"
 import loadNamespaces from "@/i18n/loadNamespaces"
+import { usePathname } from "@/i18n/routing"
 import DappsImage from "@/public/images/doge-computer.png"
 import ETHImage from "@/public/images/eth-logo.png"
 import FindWalletImage from "@/public/images/wallets/find-wallet.png"
@@ -76,7 +77,8 @@ export const getStaticProps = (async ({ params }) => {
 }) satisfies GetStaticProps<BasePageProps, Params>
 
 const WalletsPage = () => {
-  const { locale, asPath } = useRouter()
+  const pathname = usePathname()
+  const locale = useLocale()
   const { t } = useTranslation("page-wallets")
 
   const heroContent = {
@@ -227,7 +229,7 @@ const WalletsPage = () => {
 
       <div className="mt-4 w-full border-t bg-background-highlight px-0 py-16 lg:mt-8">
         <div className="-mb-8 w-full px-8 py-4 pb-0">
-          <ListenToPlayer slug={asPath} />
+          <ListenToPlayer slug={pathname} />
         </div>
         <div className="w-full px-8 py-4 pb-0">
           <h2 className="mb-0 mt-12 text-2xl leading-[1.4] md:text-[2rem]">

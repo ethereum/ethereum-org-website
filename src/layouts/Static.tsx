@@ -1,4 +1,3 @@
-import { useRouter } from "next/router"
 import { useLocale } from "next-intl"
 import type { HTMLAttributes } from "react"
 
@@ -89,7 +88,6 @@ export const StaticLayout = ({
   lastEditLocaleTimestamp,
   contentNotTranslated,
 }: StaticLayoutProps) => {
-  const { asPath } = useRouter()
   const locale = useLocale()
   const pathname = usePathname()
 
@@ -123,7 +121,7 @@ export const StaticLayout = ({
                   {lastEditLocaleTimestamp}
                 </p>
               )}
-              <ListenToPlayer slug={asPath} />
+              <ListenToPlayer slug={pathname} />
             </Stack>
           )}
 

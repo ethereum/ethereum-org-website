@@ -1,5 +1,4 @@
 import { GetStaticProps } from "next"
-import { useRouter } from "next/router"
 import type { ComponentProps, HTMLAttributes } from "react"
 
 import type { BasePageProps, ChildOnlyProp, Lang, Params } from "@/lib/types"
@@ -35,6 +34,7 @@ import { DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
 
 import { useTranslation } from "@/hooks/useTranslation"
 import loadNamespaces from "@/i18n/loadNamespaces"
+import { usePathname } from "@/i18n/routing"
 import eth from "@/public/images/eth.png"
 import ethCat from "@/public/images/eth-gif-cat.png"
 import defi from "@/public/images/finance_transparent.png"
@@ -208,7 +208,7 @@ export const getStaticProps = (async ({ params }) => {
 
 const EthPage = () => {
   const { t } = useTranslation("page-eth")
-  const { asPath } = useRouter()
+  const pathname = usePathname()
 
   const tokens = [
     {
@@ -335,7 +335,7 @@ const EthPage = () => {
       <GrayContainer>
         <Content>
           <div className="mb-8">
-            <ListenToPlayer slug={asPath} />
+            <ListenToPlayer slug={pathname} />
           </div>
           <Intro>
             <Text>{t("page-eth-description")} </Text>
