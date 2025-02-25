@@ -12,8 +12,8 @@ import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
 import { ResourceItem, ResourcesContainer } from "@/components/Resources"
 import { useResources } from "@/components/Resources/useResources"
+import Translation from "@/components/Translation"
 import { ButtonLink } from "@/components/ui/buttons/Button"
-import Link from "@/components/ui/Link"
 import { Section } from "@/components/ui/section"
 
 import { cn } from "@/lib/utils/cn"
@@ -143,11 +143,8 @@ const ResourcesPage = ({ txCostsMedianUsd }) => {
         </section>
       ))}
 
-      <div className="align-center mx-auto flex w-fit flex-col gap-4 py-16 text-center">
-        <p className="font-bold">{t("page-resources-find-more")}</p>
-        <Link href="https://ethereumdashboards.com" size="lg">
-          ethereumdashboards.com
-        </Link>
+      <div className="mb-20 text-center">
+        <Translation id="page-resources:page-resources-find-more" />
       </div>
 
       <Section
