@@ -5,7 +5,9 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
   enabled: process.env.ANALYZE === "true",
 })
 
-const { i18n } = require("./next-i18next.config")
+const createNextIntlPlugin = require("next-intl/plugin")
+
+const withNextIntl = createNextIntlPlugin()
 
 const LIMIT_CPUS = Number(process.env.LIMIT_CPUS ?? 2)
 
@@ -67,7 +69,6 @@ module.exports = (phase, { defaultConfig }) => {
 
       return config
     },
-    i18n,
     trailingSlash: true,
     images: {
       deviceSizes: [640, 750, 828, 1080, 1200, 1504, 1920],
@@ -77,6 +78,19 @@ module.exports = (phase, { defaultConfig }) => {
           hostname: "crowdin-static.downloads.crowdin.com",
         },
       ],
+    },
+    async headers() {
+      return [
+        {
+          source: "/(.*)", // Apply to all routes
+          headers: [
+            {
+              key: "X-Frame-Options",
+              value: "DENY",
+            },
+          ],
+        },
+      ]
     },
   }
 
@@ -106,5 +120,5 @@ module.exports = (phase, { defaultConfig }) => {
     }
   }
 
-  return withBundleAnalyzer(nextConfig)
+  return withBundleAnalyzer(withNextIntl(nextConfig))
 }

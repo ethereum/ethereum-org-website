@@ -358,7 +358,7 @@ Tools for Ethereum developers are rapidly improving. There is lots of active res
 
 ### Oracles {#oracles}
 
-Oracles import off-chain data onto the blockchain in a permissionless and decentralized way. Getting this data on-chain enables dapps to be reactive to real-world phenomena such as price fluctuations in real-world assets, events in off-chain apps, or even changes in the weather.
+Oracles import offchain data onto the blockchain in a permissionless and decentralized way. Getting this data onchain enables dapps to be reactive to real-world phenomena such as price fluctuations in real-world assets, events in offchain apps, or even changes in the weather.
 
 #### Background reading {#background-reading-18}
 

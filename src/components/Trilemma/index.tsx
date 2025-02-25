@@ -1,11 +1,11 @@
-import { useTranslation } from "next-i18next"
-
 import Card from "@/components/Card"
 import { Flex, Stack, VStack } from "@/components/ui/flex"
 import { Sheet, SheetClose, SheetContent } from "@/components/ui/sheet"
 
 import { TriangleSVG, TriangleSVGProps } from "./Triangle"
 import { useTrilemma } from "./useTrilemma"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 const Trilemma = () => {
   const { t } = useTranslation("page-roadmap-vision")

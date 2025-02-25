@@ -107,6 +107,7 @@ Sharding is splitting up the Ethereum blockchain so that subsets of [validators]
 
 ## Looking for specific technical upgrades? {#looking-for-specific-technical-upgrades}
 
+- [Pectra](/roadmap/pectra) - Prague/Electra hardfork that brings new approach to account abstraction, improves scalability and more.
 - [Danksharding](/roadmap/danksharding) - Danksharding makes layer 2 rollups much cheaper for users by adding “blobs” of data to Ethereum blocks.
 - [Staking withdrawals](/staking/withdrawals) - The Shanghai/Capella upgrade enabled staking withdrawals on Ethereum, allowing people to unlock their staked ETH.
 - [Single slot finality](/roadmap/single-slot-finality) - Instead of waiting for fifteen minutes, blocks could get proposed and finalized in the same slot. This is more convenient for apps and much more difficult to attack.

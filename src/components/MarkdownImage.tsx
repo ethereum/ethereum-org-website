@@ -1,12 +1,12 @@
 import { extname } from "path"
 
-import { type ImageProps, TwImage } from "@/components/Image"
+import NextLink from "next/link"
+
+import { Image, type ImageProps } from "@/components/Image"
 
 import { toPosixPath } from "@/lib/utils/relativePath"
 
 import { CONTENT_IMAGES_MAX_WIDTH } from "@/lib/constants"
-
-import InlineLink from "./ui/Link"
 
 interface MarkdownImageProps extends Omit<ImageProps, "width" | "height"> {
   width: string
@@ -42,13 +42,8 @@ const MarkdownImage = ({
     // display the wrapper as a `span` to avoid dom nesting warnings as mdx
     // sometimes wraps images in `p` tags
     <span className="flex justify-center">
-      <InlineLink
-        href={transformedSrc}
-        target="_blank"
-        rel="noopener"
-        locale={false}
-      >
-        <TwImage
+      <NextLink href={transformedSrc} target="_blank" rel="noopener">
+        <Image
           alt={alt}
           width={imageWidth}
           height={imageHeight}
@@ -58,7 +53,7 @@ const MarkdownImage = ({
           className="h-auto"
           {...rest}
         />
-      </InlineLink>
+      </NextLink>
     </span>
   )
 }

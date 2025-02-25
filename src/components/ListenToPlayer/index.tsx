@@ -1,6 +1,5 @@
 import { useContext, useEffect, useState } from "react"
 import { Howl } from "howler"
-import { useTranslation } from "next-i18next"
 import { Portal } from "@radix-ui/react-portal"
 
 import PlayerWidget from "@/components/ListenToPlayer/PlayerWidget"
@@ -12,6 +11,7 @@ import { trackCustomEvent } from "@/lib/utils/matomo"
 import { getPlaylistBySlug } from "@/data/listen-to-feature/playlist"
 
 import { FeedbackWidgetContext } from "@/contexts/FeedbackWidgetContext"
+import { useTranslation } from "@/hooks/useTranslation"
 
 const ListenToPlayer = ({ slug }: { slug: string }) => {
   const { setShowFeedbackWidget } = useContext(FeedbackWidgetContext)

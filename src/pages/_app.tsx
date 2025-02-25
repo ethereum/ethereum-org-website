@@ -1,5 +1,6 @@
 import { useEffect } from "react"
-import { appWithTranslation } from "next-i18next"
+import { useRouter } from "next/router"
+import { NextIntlClientProvider } from "next-intl"
 import { TooltipProvider } from "@radix-ui/react-tooltip"
 import { init } from "@socialgouv/matomo-next"
 
@@ -7,12 +8,16 @@ import { AppPropsWithLayout } from "@/lib/types"
 
 import ThemeProvider from "@/components/ThemeProvider"
 
+import { DEFAULT_LOCALE } from "@/lib/constants"
+
 import "@/styles/global.css"
 
 import { FeedbackWidgetProvider } from "@/contexts/FeedbackWidgetContext"
 import { BaseLayout } from "@/layouts/BaseLayout"
 
 const App = ({ Component, pageProps }: AppPropsWithLayout) => {
+  const router = useRouter()
+
   useEffect(() => {
     if (!process.env.IS_PREVIEW_DEPLOY) {
       init({
@@ -27,20 +32,33 @@ const App = ({ Component, pageProps }: AppPropsWithLayout) => {
   const getLayout = Component.getLayout ?? ((page) => page)
 
   return (
-    <ThemeProvider>
-      <TooltipProvider>
-        <FeedbackWidgetProvider>
-          <BaseLayout
-            contentIsOutdated={!!pageProps.frontmatter?.isOutdated}
-            contentNotTranslated={pageProps.contentNotTranslated}
-            lastDeployLocaleTimestamp={pageProps.lastDeployLocaleTimestamp}
-          >
-            {getLayout(<Component {...pageProps} />)}
-          </BaseLayout>
-        </FeedbackWidgetProvider>
-      </TooltipProvider>
-    </ThemeProvider>
+    <NextIntlClientProvider
+      locale={(router.query.locale as string) || DEFAULT_LOCALE}
+      messages={pageProps.messages || {}}
+      onError={() => {
+        // Suppress errors by default, enable if needed to debug
+        // console.error(error)
+      }}
+      getMessageFallback={({ key }) => {
+        const keyOnly = key.split(".").pop()
+        return keyOnly || key
+      }}
+    >
+      <ThemeProvider>
+        <TooltipProvider>
+          <FeedbackWidgetProvider>
+            <BaseLayout
+              contentIsOutdated={!!pageProps.frontmatter?.isOutdated}
+              contentNotTranslated={pageProps.contentNotTranslated}
+              lastDeployLocaleTimestamp={pageProps.lastDeployLocaleTimestamp}
+            >
+              {getLayout(<Component {...pageProps} />)}
+            </BaseLayout>
+          </FeedbackWidgetProvider>
+        </TooltipProvider>
+      </ThemeProvider>
+    </NextIntlClientProvider>
   )
 }
 
-export default appWithTranslation(App)
+export default App
