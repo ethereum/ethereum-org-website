@@ -12,13 +12,8 @@ import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
 import { ResourceItem, ResourcesContainer } from "@/components/Resources"
 import { useResources } from "@/components/Resources/useResources"
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion"
 import { ButtonLink } from "@/components/ui/buttons/Button"
+import Link from "@/components/ui/Link"
 import { Section } from "@/components/ui/section"
 
 import { cn } from "@/lib/utils/cn"
@@ -90,7 +85,7 @@ const ResourcesPage = ({ txCostsMedianUsd }) => {
         <div className="my-2 text-body-medium">
           {t("page-resources-whats-on-this-page")}
         </div>
-        <nav className="flex max-w-[calc(100%-1rem)] gap-1 overflow-x-auto rounded-2xl border bg-background p-0.5 shadow-lg">
+        <nav className="mx-4 flex max-w-[calc(100%-2rem)] gap-1 overflow-x-auto rounded-2xl border bg-background p-0.5 shadow-lg">
           {resourceSections.map(({ key, title }) => (
             <ButtonLink
               key={key}
@@ -114,79 +109,45 @@ const ResourcesPage = ({ txCostsMedianUsd }) => {
         </nav>
       </div>
 
-      <Accordion
-        type="multiple"
-        defaultValue={resourceSections.map(({ key }) => key)}
-        className="space-y-16"
-      >
-        {resourceSections.map(({ key, icon, title, boxes }) => (
-          <AccordionItem
-            value={key}
-            key={key}
-            id={key}
-            className="scroll-mt-40"
-          >
-            <AccordionTrigger
-              hideIcon
-              className={cn(
-                "group flex w-full items-center gap-3 border-b bg-transparent px-4 py-6",
-                "[&[data-state=open]]:bg-background-transparent [&[data-state=open]]:text-body",
-                "[&[data-state=closed]_.accordion-open]:hidden [&[data-state=open]_.accordion-closed]:hidden"
-              )}
-            >
-              <div className="grid size-12 place-items-center rounded-lg border border-border-low-contrast">
-                {icon || <StackIcon className="text-2xl" />}
-              </div>
-              <h2 className="flex-1 text-start font-black">{title}</h2>
+      {resourceSections.map(({ key, icon, title, boxes }) => (
+        <section id={key} key={key} className="mb-16 scroll-mt-40">
+          <div className="group flex w-full items-center gap-3 border-b bg-transparent px-4 py-6">
+            <div className="grid size-12 place-items-center rounded-lg border border-border-low-contrast">
+              {icon || <StackIcon className="text-2xl" />}
+            </div>
+            <h2 className="flex-1 text-start font-black">{title}</h2>
+          </div>
+          <div className="grid grid-cols-1 gap-8 pb-12 pt-8 md:pb-12 md:pt-8 lg:grid-cols-2">
+            {boxes.map(({ title, metric, items, className }) => (
               <div
                 className={cn(
-                  "min-h-[31px] px-2 py-1.5 text-xs [&>svg]:text-md",
-                  "my-auto h-fit text-nowrap px-4 py-1.5 font-normal uppercase text-body",
-                  "rounded-full border border-solid border-current",
-                  "inline-flex items-center justify-center gap-2 transition [&>svg]:flex-shrink-0",
-                  "group-hover:!text-primary-hover group-hover:shadow-[4px_4px_theme('colors.primary.low-contrast')]"
+                  "overflow-hidden rounded-2xl border shadow-lg",
+                  className
                 )}
+                key={title}
               >
-                <span className="accordion-closed">
-                  <span className="max-md:hidden">{t("common:open")}</span> +
-                </span>
-                <span className="accordion-open">
-                  <span className="max-md:hidden">{t("common:close")}</span> -
-                </span>
-              </div>
-            </AccordionTrigger>
-            <AccordionContent className="grid grid-cols-1 gap-8 pb-12 pt-8 md:pb-12 md:pt-8 lg:grid-cols-2">
-              {boxes.map(({ title, metric, items, className }) => (
-                <div
-                  className={cn(
-                    "overflow-hidden rounded-2xl border shadow-lg",
-                    className
-                  )}
-                  key={title}
-                >
-                  <div className="border-b bg-[#ffffff] px-6 py-4 font-bold dark:bg-[#171717]">
-                    {title}
-                  </div>
-                  <div className="h-full bg-background bg-gradient-to-br from-white to-primary/10 px-2 py-6 dark:from-transparent dark:to-primary/10">
-                    {metric && metric}
-                    <ResourcesContainer>
-                      {items.map((item) => (
-                        <ResourceItem item={item} key={item.title} />
-                      ))}
-                    </ResourcesContainer>
-                  </div>
+                <div className="border-b bg-[#ffffff] px-6 py-4 font-bold dark:bg-[#171717]">
+                  {title}
                 </div>
-              ))}
-            </AccordionContent>
-          </AccordionItem>
-        ))}
-      </Accordion>
+                <div className="h-full bg-background bg-gradient-to-br from-white to-primary/10 px-2 py-6 dark:from-transparent dark:to-primary/10">
+                  {metric && metric}
+                  <ResourcesContainer>
+                    {items.map((item) => (
+                      <ResourceItem item={item} key={item.title} />
+                    ))}
+                  </ResourcesContainer>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      ))}
 
       <div className="align-center mx-auto flex w-fit flex-col gap-4 py-16 text-center">
         <p className="font-bold">{t("page-resources-find-more")}</p>
-        <ButtonLink href="https://ethereumdashboards.com" size="lg">
+        <Link href="https://ethereumdashboards.com" size="lg">
           ethereumdashboards.com
-        </ButtonLink>
+        </Link>
       </div>
 
       <Section
