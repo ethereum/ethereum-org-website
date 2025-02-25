@@ -77,7 +77,7 @@ Looking for future protocol upgrades? [Learn about upcoming upgrades on the Ethe
 
 <NetworkUpgradeSummary name="pectra" />
 
-The Prague-Electra ("Pectra") upgrade includes several improvements to the Ethereum protocol aimed at enhancing the experience for all users, including users of layer 2 network, stakers and node operators.
+The Prague-Electra ("Pectra") upgrade includes several improvements to the Ethereum protocol aimed at enhancing the experience for all users, layer 2 networks, stakers and node operators.
 
 Staking gets an upgrade with compounding validator accounts, and improved control over staked funds using the execution withdrawal address. EIP-7251 increases the max effective balance for a single validator to 2048, improving capital efficiency for stakers. EIP-7002 allows an execution account to securely trigger validator actions, including exiting, or withdrawing portions of the funds, improving the experience for ETH stakers, while helping strengthen accountability for node operators.
 
