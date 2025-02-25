@@ -74,8 +74,10 @@ const ListenToPlayer = ({ slug }: { slug: string }) => {
 
     return () => {
       if (sound) {
+        sound.stop()
         sound.unload()
       }
+      audioPlayer.unload()
     }
   }, [currentTrackIndex])
 
