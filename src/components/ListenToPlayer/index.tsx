@@ -1,10 +1,12 @@
 import { useContext, useEffect, useState } from "react"
 import { Howl } from "howler"
 import { useTranslation } from "next-i18next"
+import { Portal } from "@radix-ui/react-portal"
 
 import PlayerWidget from "@/components/ListenToPlayer/PlayerWidget"
 import TopOfPagePlayer from "@/components/ListenToPlayer/TopOfPagePlayer"
 
+import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import { getPlaylistBySlug } from "@/data/listen-to-feature/playlist"
@@ -25,6 +27,7 @@ const ListenToPlayer = ({ slug }: { slug: string }) => {
   const [playbackSpeed, setPlaybackSpeed] = useState(1)
   const [currentTrackIndex, setCurrentTrackIndex] = useState(index)
   const [countdown, setCountdown] = useState(0)
+  const [isExpanded, setIsExpanded] = useState(true)
   const duration = sound?.duration() ?? 0
 
   useEffect(() => {
@@ -202,26 +205,37 @@ const ListenToPlayer = ({ slug }: { slug: string }) => {
         handlePlayPause={handlePlayPause}
         timeRemaining={timeRemaining}
       />
-      <PlayerWidget
-        autoplay={autoplay}
-        setAutoplay={setAutoplay}
-        showWidget={showWidget}
-        title={
-          countdown > 0
-            ? `Next article in ${countdown}s`
-            : t(playlist[currentTrackIndex].title)
-        }
-        duration={duration}
-        timeRemaining={timeRemaining}
-        onSeek={handleSeek}
-        isPlaying={isPlaying}
-        handlePlayPause={handlePlayPause}
-        handlePrevious={handlePrevious}
-        handleNext={handleNext}
-        playbackSpeed={playbackSpeed}
-        handlePlaybackSpeed={handlePlaybackSpeed}
-        handleCloseWidget={handleCloseWidget}
-      />
+      <Portal>
+        <div
+          className={cn(
+            showWidget ? "block" : "hidden",
+            isExpanded ? "bottom-4" : "bottom-0",
+            "fixed left-0 right-0 z-[9999] mx-auto sm:left-auto sm:right-5 sm:mx-0"
+          )}
+        >
+          <PlayerWidget
+            autoplay={autoplay}
+            setAutoplay={setAutoplay}
+            isExpanded={isExpanded}
+            setIsExpanded={setIsExpanded}
+            title={
+              countdown > 0
+                ? `Next article in ${countdown}s`
+                : t(playlist[currentTrackIndex].title)
+            }
+            duration={duration}
+            timeRemaining={timeRemaining}
+            onSeek={handleSeek}
+            isPlaying={isPlaying}
+            handlePlayPause={handlePlayPause}
+            handlePrevious={handlePrevious}
+            handleNext={handleNext}
+            playbackSpeed={playbackSpeed}
+            handlePlaybackSpeed={handlePlaybackSpeed}
+            handleCloseWidget={handleCloseWidget}
+          />
+        </div>
+      </Portal>
     </>
   )
 }

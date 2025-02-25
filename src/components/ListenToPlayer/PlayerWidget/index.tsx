@@ -14,7 +14,6 @@ import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 interface PlayerWidgetProps {
-  showWidget: boolean
   title: string
   duration: number
   timeRemaining: number
@@ -28,10 +27,11 @@ interface PlayerWidgetProps {
   playbackSpeed: number
   handlePlaybackSpeed: (playbackSpeed: number) => void
   handleCloseWidget: () => void
+  isExpanded: boolean
+  setIsExpanded: (isExpanded: boolean) => void
 }
 
 const PlayerWidget = ({
-  showWidget,
   title,
   duration,
   timeRemaining,
@@ -45,8 +45,9 @@ const PlayerWidget = ({
   playbackSpeed,
   handlePlaybackSpeed,
   handleCloseWidget,
+  isExpanded,
+  setIsExpanded,
 }: PlayerWidgetProps) => {
-  const [isExpanded, setIsExpanded] = useState(true)
   const [isDragging, setIsDragging] = useState(false)
   const scrubBarRef = useRef<HTMLDivElement>(null)
   const progress =
@@ -110,10 +111,8 @@ const PlayerWidget = ({
   return (
     <div
       className={cn(
-        showWidget ? "block" : "hidden",
         "w-80 border bg-background shadow-widget",
-        isExpanded ? "bottom-4 rounded-2xl p-4" : "bottom-0 rounded-t-2xl p-2",
-        "fixed left-0 right-0 z-[9999] mx-auto sm:left-auto sm:right-5 sm:mx-0"
+        isExpanded ? "rounded-2xl p-4" : "rounded-t-2xl p-2"
       )}
     >
       <div
@@ -230,8 +229,8 @@ const PlayerWidget = ({
 
       <div
         className={cn(
-          "flex flex-row items-center justify-between",
-          isExpanded ? "hidden" : "block"
+          "flex-row items-center justify-between",
+          isExpanded ? "hidden" : "flex"
         )}
       >
         <div className="flex flex-row items-center gap-2">
