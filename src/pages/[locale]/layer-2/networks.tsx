@@ -78,7 +78,7 @@ export const getStaticProps = (async ({ params }) => {
       return {
         ...network,
         txCosts: growThePieData.dailyTxCosts[network.growthepieID],
-        tvl: l2beatData.data.projects[network.l2beatID].tvl.breakdown.total,
+        tvl: l2beatData.data.projects[network.l2beatID].tvs.breakdown.total,
         networkMaturity: networkMaturity(
           l2beatData.data.projects[network.l2beatID]
         ),
