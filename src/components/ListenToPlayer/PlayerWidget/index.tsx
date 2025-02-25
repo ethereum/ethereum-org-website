@@ -10,6 +10,8 @@ import {
   PlayCircleIcon,
 } from "@/components/icons/listen-to"
 
+import { trackCustomEvent } from "@/lib/utils/matomo"
+
 interface PlayerWidgetProps {
   showWidget: boolean
   title: string
@@ -119,7 +121,16 @@ const PlayerWidget = ({
             className="cursor-pointer text-body-medium hover:text-body"
             title={"Collapse"}
           >
-            <CollapseIcon onClick={() => setIsExpanded(!isExpanded)} />
+            <CollapseIcon
+              onClick={() => {
+                setIsExpanded(!isExpanded)
+                trackCustomEvent({
+                  eventCategory: "Audio",
+                  eventAction: "click",
+                  eventName: "minimize",
+                })
+              }}
+            />
           </div>
         </div>
         <div className="flex items-center justify-between">
@@ -229,7 +240,16 @@ const PlayerWidget = ({
             className="cursor-pointer text-disabled hover:text-body"
             title={"Expand"}
           >
-            <ExpandIcon onClick={() => setIsExpanded(!isExpanded)} />
+            <ExpandIcon
+              onClick={() => {
+                setIsExpanded(!isExpanded)
+                trackCustomEvent({
+                  eventCategory: "Audio",
+                  eventAction: "click",
+                  eventName: "expand",
+                })
+              }}
+            />
           </div>
           <div
             className="cursor-pointer text-disabled hover:text-body"

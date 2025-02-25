@@ -5,6 +5,8 @@ import { useTranslation } from "next-i18next"
 import PlayerWidget from "@/components/ListenToPlayer/PlayerWidget"
 import TopOfPagePlayer from "@/components/ListenToPlayer/TopOfPagePlayer"
 
+import { trackCustomEvent } from "@/lib/utils/matomo"
+
 import { getPlaylistBySlug } from "@/data/listen-to-feature/playlist"
 
 import { FeedbackWidgetContext } from "@/contexts/FeedbackWidgetContext"
@@ -50,6 +52,11 @@ const ListenToPlayer = ({ slug }) => {
           }, 1000)
           const timer = setTimeout(() => {
             clearInterval(countdownInterval)
+            trackCustomEvent({
+              eventCategory: "Audio",
+              eventAction: "automated_next",
+              eventName: `${currentTrackIndex + 1}`,
+            })
             setCurrentTrackIndex(currentTrackIndex + 1)
           }, 5000)
           return () => {
@@ -104,8 +111,18 @@ const ListenToPlayer = ({ slug }) => {
 
     if (isPlaying) {
       sound.pause()
+      trackCustomEvent({
+        eventCategory: "Audio",
+        eventAction: "click",
+        eventName: "pause",
+      })
     } else {
       sound.play()
+      trackCustomEvent({
+        eventCategory: "Audio",
+        eventAction: "click",
+        eventName: "play",
+      })
       setTimeRemaining(sound.duration() - sound.seek())
       setStartedPlaying(true)
       setIsPlaying(true)
@@ -116,6 +133,11 @@ const ListenToPlayer = ({ slug }) => {
   const handleCloseWidget = () => {
     setShowWidget(false)
     sound?.pause()
+    trackCustomEvent({
+      eventCategory: "Audio",
+      eventAction: "click",
+      eventName: "close",
+    })
   }
 
   const handleSeek = (time: number) => {
@@ -133,9 +155,19 @@ const ListenToPlayer = ({ slug }) => {
       sound.unload()
       setSound(null)
       setCurrentTrackIndex(currentTrackIndex - 1)
+      trackCustomEvent({
+        eventCategory: "Audio",
+        eventAction: "click",
+        eventName: "previous (previous track)",
+      })
     } else {
       sound.seek(0)
       setTimeRemaining(duration)
+      trackCustomEvent({
+        eventCategory: "Audio",
+        eventAction: "click",
+        eventName: "previous (current track)",
+      })
     }
   }
 
@@ -143,10 +175,20 @@ const ListenToPlayer = ({ slug }) => {
     if (!sound) return
     sound.seek(duration)
     setTimeRemaining(0)
+    trackCustomEvent({
+      eventCategory: "Audio",
+      eventAction: "click",
+      eventName: "next",
+    })
   }
 
   const handlePlaybackSpeed = (speed: number) => {
     setPlaybackSpeed(speed)
+    trackCustomEvent({
+      eventCategory: "Audio",
+      eventAction: "click",
+      eventName: `speed (${speed})`,
+    })
   }
 
   return playlist.length > 0 && index !== -1 ? (

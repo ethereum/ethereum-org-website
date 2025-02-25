@@ -1,5 +1,7 @@
 import { PauseCircleIcon, PlayCircleIcon } from "@/components/icons/listen-to"
 
+import { trackCustomEvent } from "@/lib/utils/matomo"
+
 interface TopOfPagePlayerProps {
   startedPlaying: boolean
   isPlaying: boolean
@@ -18,7 +20,16 @@ const TopOfPagePlayer = ({
   return (
     <div
       className="flex cursor-pointer flex-row items-center gap-2 text-primary hover:text-primary-hover"
-      onClick={handlePlayPause}
+      onClick={() => {
+        if (startedPlaying) {
+          trackCustomEvent({
+            eventCategory: "Audio",
+            eventAction: "click",
+            eventName: "start",
+          })
+        }
+        handlePlayPause()
+      }}
     >
       {startedPlaying ? (
         isPlaying ? (
