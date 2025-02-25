@@ -18,37 +18,39 @@ const TopOfPagePlayer = ({
   handlePlayPause,
 }: TopOfPagePlayerProps) => {
   return (
-    <div
-      className="flex cursor-pointer flex-row items-center gap-2 text-primary hover:text-primary-hover"
-      onClick={() => {
-        if (startedPlaying) {
-          trackCustomEvent({
-            eventCategory: "Audio",
-            eventAction: "click",
-            eventName: "start",
-          })
-        }
-        handlePlayPause()
-      }}
-    >
-      {startedPlaying ? (
-        isPlaying ? (
-          <PauseCircleIcon className="h-6 w-6 transition-transform" />
+    <div className="inline-block rounded-lg bg-background-low p-2">
+      <div
+        className="flex cursor-pointer flex-row items-center gap-2 text-primary hover:text-primary-hover"
+        onClick={() => {
+          if (startedPlaying) {
+            trackCustomEvent({
+              eventCategory: "Audio",
+              eventAction: "click",
+              eventName: "start",
+            })
+          }
+          handlePlayPause()
+        }}
+      >
+        {startedPlaying ? (
+          isPlaying ? (
+            <PauseCircleIcon className="h-6 w-6 transition-transform" />
+          ) : (
+            <PlayCircleIcon className="h-6 w-6 transition-transform" />
+          )
         ) : (
           <PlayCircleIcon className="h-6 w-6 transition-transform" />
-        )
-      ) : (
-        <PlayCircleIcon className="h-6 w-6 transition-transform" />
-      )}
-      <div className="text-sm text-body-medium">
-        {startedPlaying ? (
-          `${Math.floor(timeRemaining / 60)}:${String(Math.floor(timeRemaining % 60)).padStart(2, "0")}`
-        ) : (
-          <p className="text-primary hover:text-primary-hover">
-            <strong>Listen to this article</strong> ({Math.round(duration / 60)}{" "}
-            min)
-          </p>
         )}
+        <div className="text-sm text-body-medium">
+          {startedPlaying ? (
+            `${Math.floor(timeRemaining / 60)}:${String(Math.floor(timeRemaining % 60)).padStart(2, "0")}`
+          ) : (
+            <p className="text-primary hover:text-primary-hover">
+              <strong>Listen to this article</strong> (
+              {Math.round(duration / 60)} min)
+            </p>
+          )}
+        </div>
       </div>
     </div>
   )
