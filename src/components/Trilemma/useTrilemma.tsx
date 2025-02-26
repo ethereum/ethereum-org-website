@@ -1,9 +1,10 @@
 import { useState } from "react"
-import { useTranslation } from "next-i18next"
 
 import { isMobile } from "@/lib/utils/isMobile"
 
 import { CardProps } from "../Card"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 /**
  * The `selection` param accepted values for the click handler

@@ -1,11 +1,11 @@
-import { useTranslation } from "next-i18next"
-
 import type { TranslationKey } from "@/lib/types"
 
 import Emoji from "@/components/Emoji"
-import { type ImageProps, TwImage } from "@/components/Image"
+import { Image, type ImageProps } from "@/components/Image"
 
 import { cn } from "@/lib/utils/cn"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 export type CalloutProps = {
   children?: React.ReactNode
@@ -43,7 +43,7 @@ const Callout = ({
     >
       {image && (
         <div className="-mt-40 self-center">
-          <TwImage
+          <Image
             src={image}
             alt={alt || ""}
             className="max-h-[263px] min-h-[200px] max-w-[263px] object-contain"
