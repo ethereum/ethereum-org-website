@@ -1942,6 +1942,8 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/itzVarsha"><img src="https://avatars.githubusercontent.com/u/138134029?v=4?s=100" width="100px;" alt="Varshitha"/><br /><sub><b>Varshitha</b></sub></a><br /><a href="#maintenance-itzVarsha" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://alexandriaroberts.dev/"><img src="https://avatars.githubusercontent.com/u/31341867?v=4?s=100" width="100px;" alt="Alexandria Roberts"/><br /><sub><b>Alexandria Roberts</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=alexandriaroberts" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/colinlyguo"><img src="https://avatars.githubusercontent.com/u/102356659?v=4?s=100" width="100px;" alt="colin"/><br /><sub><b>colin</b></sub></a><br /><a href="#content-colinlyguo" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/jenish-thapa"><img src="https://avatars.githubusercontent.com/u/141203631?v=4?s=100" width="100px;" alt="Jenish Thapa"/><br /><sub><b>Jenish Thapa</b></sub></a><br /><a href="#ideas-jenish-thapa" title="Ideas, Planning, & Feedback">🤔</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://jiangxue.org/~ritsu"><img src="https://avatars.githubusercontent.com/u/57232813?v=4?s=100" width="100px;" alt="iusx"/><br /><sub><b>iusx</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=iusx" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
