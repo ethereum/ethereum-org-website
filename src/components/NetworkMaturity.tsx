@@ -1,4 +1,12 @@
 import InlineLink from "./ui/Link"
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "./ui/table"
 import ExpandableCard from "./ExpandableCard"
 
 import DevelopingImage from "@/public/images/network-maturity/developing.svg"
@@ -31,71 +39,67 @@ const NetworkMaturity = () => {
             </p>
           </div>
 
-          <table className="mt-4 w-full max-w-[760px] border-collapse">
-            <thead>
-              <tr className="border-b border-black">
-                <th className="w-1/2 bg-[#F7F7F7] p-3 text-left font-semibold">
-                  Maturity
-                </th>
-                <th className="w-1/2 border-l border-white bg-[#F7F7F7] p-3 text-left font-semibold">
-                  Requirements
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr className="h-[60px]">
-                <td className="border-none bg-[#3C4CEB] p-3 align-middle text-white">
+          <Table className="mt-4 w-full max-w-[760px]">
+            <TableHeader>
+              <TableRow>
+                <TableHead className="w-1/2">Maturity</TableHead>
+                <TableHead className="w-1/2">Requirements</TableHead>
+              </TableRow>
+            </TableHeader>
+            <TableBody>
+              <TableRow>
+                <TableCell className="border-none bg-[#3C4CEB] align-middle text-white">
                   <div className="flex items-center gap-2">
                     <RobustImage />
                     <strong>Robust</strong>
                   </div>
-                </td>
-                <td className="border-none p-3">
+                </TableCell>
+                <TableCell>
                   • Stage 2<br />• At least $1B TVL
-                </td>
-              </tr>
+                </TableCell>
+              </TableRow>
 
-              <tr className="h-[60px]">
-                <td className="border-none bg-[#6995F7] p-3 align-middle text-white">
+              <TableRow>
+                <TableCell className="bg-[#6995F7] align-middle text-white">
                   <div className="flex items-center gap-2">
                     <MaturingImage />
                     <strong>Maturing</strong>
                   </div>
-                </td>
-                <td className="border-none p-3">
+                </TableCell>
+                <TableCell>
                   • Stage 1<br />• At least $150M TVL
                   <br />• 6+ months live in production
-                </td>
-              </tr>
+                </TableCell>
+              </TableRow>
 
-              <tr className="h-[60px]">
-                <td className="border-none bg-[#CADFFB] p-3 align-middle">
+              <TableRow>
+                <TableCell className="bg-[#CADFFB] align-middle text-black">
                   <div className="flex items-center gap-2">
                     <DevelopingImage />
                     <strong>Developing</strong>
                   </div>
-                </td>
-                <td className="border-none p-3">
+                </TableCell>
+                <TableCell>
                   • Stage 0<br />• Risk assessment: 3/5 (L2beat)
                   <br />• At least $150M TVL
                   <br />• 6+ months live in production
-                </td>
-              </tr>
+                </TableCell>
+              </TableRow>
 
-              <tr className="h-[60px]">
-                <td className="border-none bg-[#E8F1FF] p-3 align-middle">
+              <TableRow>
+                <TableCell className="bg-[#E8F1FF] align-middle text-black">
                   <div className="flex items-center gap-2">
                     <EmergingImage />
                     <strong>Emerging</strong>
                   </div>
-                </td>
-                <td className="border-none p-3">
+                </TableCell>
+                <TableCell>
                   • Stage 0<br />• Risk assessment: 2/5 (L2beat)
                   <br />• At least $150M TVL or 6+ months live in production
-                </td>
-              </tr>
-            </tbody>
-          </table>
+                </TableCell>
+              </TableRow>
+            </TableBody>
+          </Table>
         </div>
       </ExpandableCard>
     </div>
