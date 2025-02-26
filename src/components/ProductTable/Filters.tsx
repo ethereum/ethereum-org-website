@@ -1,4 +1,3 @@
-import { useTranslation } from "next-i18next"
 import { BsArrowCounterclockwise } from "react-icons/bs"
 
 import { FilterInputState, FilterOption } from "@/lib/types"
@@ -10,6 +9,8 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 import { Button } from "@/components/ui/buttons/Button"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 interface PresetFiltersProps {
   filters: FilterOption[]

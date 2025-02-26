@@ -1,5 +1,4 @@
 import { useMemo, useState } from "react"
-import { useTranslation } from "next-i18next"
 import * as RadioGroup from "@radix-ui/react-radio-group"
 
 import type {
@@ -14,6 +13,8 @@ import { Center, HStack, Stack } from "@/components/ui/flex"
 import { cn } from "@/lib/utils/cn"
 
 import type { AnswerStatus } from "./useQuizWidget"
+
+import useTranslation from "@/hooks/useTranslation"
 
 type QuizRadioGroupProps = {
   questions: Question[]

@@ -1,4 +1,3 @@
-import { useTranslation } from "next-i18next"
 import type { ComponentType, ReactNode, SVGProps } from "react"
 
 import {
@@ -13,6 +12,8 @@ import Link from "@/components/ui/Link"
 import { Tag } from "@/components/ui/tag"
 
 import { FlagType, Product } from "./types"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 const getIconFromName = (
   imageName: string

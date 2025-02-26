@@ -19,7 +19,7 @@ export const NULL_VALUE = "—"
 export const DEFAULT_LOCALE = "en"
 export const FAKE_LOCALE = "default"
 // Sorted list of supported locales codes, defined in `i18n.config.json`
-const BUILD_LOCALES = process.env.BUILD_LOCALES
+const BUILD_LOCALES = process.env.NEXT_PUBLIC_BUILD_LOCALES
 export const LOCALES_CODES = BUILD_LOCALES
   ? BUILD_LOCALES.split(",")
   : i18nConfig.map(({ code }) => code)
