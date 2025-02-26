@@ -350,6 +350,16 @@ const HomePage = ({
               <Suspense fallback={<SkeletonLines noOfLines={10} />}>
                 <StatsBoxGrid metricResults={metricResults} />
               </Suspense>
+
+              <ButtonLink
+                size="lg"
+                href="/resources"
+                className="mt-12"
+                isSecondary
+                variant="outline"
+              >
+                {t("page-index:page-index-activity-action")} <ChevronNext />
+              </ButtonLink>
             </div>
           </SectionContent>
         </Section>
