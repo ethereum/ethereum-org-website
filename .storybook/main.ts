@@ -28,9 +28,9 @@ const config: StorybookConfig = {
       },
     },
     "@storybook/addon-interactions",
-    "storybook-react-i18next",
     "@storybook/addon-themes",
     "@chromatic-com/storybook",
+    "storybook-next-intl",
   ],
   staticDirs: ["../public"],
   framework: {
