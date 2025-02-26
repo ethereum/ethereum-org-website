@@ -47,7 +47,7 @@ lang: el
 
 ## Περισσότερες πληροφορίες {#further-reading}
 
-- [Επισκόπηση του Δικτύου Graph](https://thegraph.com/docs/en/about//)
+- [Επισκόπηση του Δικτύου Graph](https://thegraph.com/docs/en/about/)
 - [Χώρος ανάπτυξης Graph Query](https://thegraph.com/explorer/subgraph/graphprotocol/graph-network-mainnet?version=current)
 - [Παραδείγματα κώδικα API στο EtherScan](https://etherscan.io/apis#contracts)
 - [Beaconcha.in εξερευνητής κύριας αλυσίδας](https://beaconcha.in)

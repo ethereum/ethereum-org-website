@@ -47,7 +47,7 @@ To start, visit the [Ethereum quick start guide](https://academy.subquery.networ
 
 ## Further Reading {#further-reading}
 
-- [Graph Network Overview](https://thegraph.com/docs/en/about//)
+- [Graph Network Overview](https://thegraph.com/docs/en/about/)
 - [Graph Query Playground](https://thegraph.com/explorer/subgraph/graphprotocol/graph-network-mainnet?version=current)
 - [API code examples on EtherScan](https://etherscan.io/apis#contracts)
 - [Beaconcha.in Beacon Chain explorer](https://beaconcha.in)
