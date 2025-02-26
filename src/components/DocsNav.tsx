@@ -39,7 +39,7 @@ type CardLinkProps = {
 
 const CardLink = ({ docData, isPrev, contentNotTranslated }: CardLinkProps) => {
   const { t } = useTranslation("page-developers-docs")
-  const { flipForRtl } = useRtlFlip()
+  const { twFlipForRtl } = useRtlFlip()
 
   return (
     <BaseLink
@@ -59,8 +59,11 @@ const CardLink = ({ docData, isPrev, contentNotTranslated }: CardLinkProps) => {
       }}
     >
       <div
-        className={cn("p-4", isPrev ? "order-0" : "order-1")}
-        style={{ transform: contentNotTranslated ? undefined : flipForRtl }}
+        className={cn(
+          "p-4",
+          isPrev ? "order-0" : "order-1",
+          !contentNotTranslated && twFlipForRtl
+        )}
       >
         {isPrev ? (
           <FaChevronLeft className="text-xl group-hover:fill-primary-hover" />
