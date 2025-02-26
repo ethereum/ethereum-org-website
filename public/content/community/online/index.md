@@ -60,7 +60,8 @@ If you believe a community should be added or removed based on these guidelines,
 ## YouTube and X formerly (Twitter) {#youtube-and-twitter}
 
 <SocialListItem socialIcon="youtube"><Link href="https://www.youtube.com/c/EthereumFoundation">Ethereum Foundation</Link> - Keep up to date with the latest from the Ethereum Foundation</SocialListItem>
-<SocialListItem socialIcon="twitter"><Link href="https://x.com/ethereum">@ethereum</Link> - Official account of the Ethereum Foundation</SocialListItem>
+<SocialListItem socialIcon="twitter"><Link href="https://x.com/ethereum">@ethereum</Link> - Main Ethereum account for the community</SocialListItem>
+<SocialListItem socialIcon="twitter"><Link href="https://x.com/ethereumfndn">@ethereumfndn</Link> - Official account of the Ethereum Foundation</SocialListItem>
 <SocialListItem socialIcon="twitter"><Link href="https://x.com/ethdotorg">@ethdotorg</Link> - The portal to Ethereum, built for our growing global community</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://hive.one/c/ethereum?page=1">List of influential Ethereum twitter accounts</Link></SocialListItem>
 
