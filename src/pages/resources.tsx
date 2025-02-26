@@ -25,7 +25,7 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { BASE_TIME_UNIT, GITHUB_REPO_URL } from "@/lib/constants"
 
-import useActiveScrollSection from "@/hooks/useActiveScrollSection"
+import { useActiveHash } from "@/hooks/useActiveHash"
 import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
 import heroImg from "@/public/images/heroes/guides-hub-hero.jpg"
 
@@ -64,7 +64,10 @@ export const getStaticProps = (async ({ locale }) => {
 const ResourcesPage = ({ txCostsMedianUsd }) => {
   const { t } = useTranslation("page-resources")
   const resourceSections = useResources({ txCostsMedianUsd })
-  const activeSection = useActiveScrollSection()
+  const activeSection = useActiveHash(
+    resourceSections.map(({ key }) => key),
+    "0% 0% -70% 0%"
+  ).replace(/^#/, "")
 
   return (
     <MainArticle className="relative flex flex-col">
