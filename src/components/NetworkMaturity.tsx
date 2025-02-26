@@ -1,32 +1,15 @@
-import { useState } from "react"
+import ExpandableCard from "./ExpandableCard"
 
 import DevelopingImage from "@/public/images/network-maturity/developing.svg"
 import EmergingImage from "@/public/images/network-maturity/emerging.svg"
 import MaturingImage from "@/public/images/network-maturity/maturing.svg"
-import Button from "@/public/images/network-maturity/network-maturity-icon.svg"
 import RobustImage from "@/public/images/network-maturity/robust.svg"
 
 const NetworkMaturity = () => {
-  const [isExpanded, setIsExpanded] = useState(false)
-
   return (
-    <div className="network-maturity-card mx-9 mt-10 rounded-lg border bg-white p-6">
-      {/* Header with toggle button */}
-      <div
-        className="flex cursor-pointer items-center justify-between"
-        onClick={() => setIsExpanded(!isExpanded)}
-      >
-        <h2 className="text-xl font-bold">Network maturity explained</h2>
-        <button aria-label="Toggle section">
-          <Button
-            className={`transform transition-transform ${isExpanded ? "" : "rotate-180"}`}
-          ></Button>
-        </button>
-      </div>
-
-      {/* Collapsible Content */}
-      {isExpanded && (
-        <div className="mt-4 border-t py-6">
+    <div className="mx-9 mt-10">
+      <ExpandableCard title="Network maturity explained">
+        <div>
           <div className="space-y-4">
             {" "}
             <p>
@@ -118,7 +101,7 @@ const NetworkMaturity = () => {
             </tbody>
           </table>
         </div>
-      )}
+      </ExpandableCard>
     </div>
   )
 }
