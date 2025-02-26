@@ -1,3 +1,5 @@
+"use client"
+
 import type { StakingPage } from "@/lib/types"
 
 import ButtonDropdown from "@/components/ButtonDropdown"

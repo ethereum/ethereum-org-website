@@ -1,3 +1,5 @@
+"use client"
+
 import { useLocale } from "next-intl"
 import { FaDiscord } from "react-icons/fa"
 

@@ -1,3 +1,5 @@
+"use client"
+
 import { TranslationKey } from "@/lib/types"
 import type { DeveloperDocsLink } from "@/lib/interfaces"
 

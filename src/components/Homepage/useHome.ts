@@ -28,12 +28,10 @@ import SimpleTokenContent from "!!raw-loader!@/data/SimpleToken.sol"
 import SimpleWalletContent from "!!raw-loader!@/data/SimpleWallet.sol"
 import { useRtlFlip } from "@/hooks/useRtlFlip"
 import useTranslation from "@/hooks/useTranslation"
-import { usePathname } from "@/i18n/routing"
 
 export const useHome = () => {
   const { t } = useTranslation(["common", "page-index"])
   const locale = useLocale()
-  const asPath = usePathname()
 
   const [isModalOpen, setModalOpen] = useState(false)
   const [activeCode, setActiveCode] = useState(0)
@@ -214,7 +212,6 @@ export const useHome = () => {
   return {
     t,
     locale,
-    asPath,
     dir: direction,
     isModalOpen,
     setModalOpen,

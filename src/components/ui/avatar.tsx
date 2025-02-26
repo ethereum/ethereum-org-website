@@ -1,3 +1,5 @@
+"use client"
+
 import * as React from "react"
 import upperCase from "lodash/upperCase"
 import { tv, type VariantProps } from "tailwind-variants"

@@ -1,3 +1,5 @@
+"use client"
+
 import { FaDiscord, FaGithub, FaXTwitter } from "react-icons/fa6"
 import { IoChevronUpSharp } from "react-icons/io5"
 

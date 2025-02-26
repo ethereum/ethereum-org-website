@@ -1,7 +1,12 @@
 {
   "compilerOptions": {
     "target": "ES6",
-    "lib": ["dom", "dom.iterable", "esnext", "ES2021.String"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext",
+      "ES2021.String"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -16,11 +21,33 @@
     "jsx": "preserve",
     "incremental": true,
     "paths": {
-      "@/*": ["./src/*"],
-      "@/public/*": ["./public/*"],
-      "@/storybook-utils": ["./.storybook/utils.ts"]
-    }
+      "@/*": [
+        "./src/*"
+      ],
+      "@/public/*": [
+        "./public/*"
+      ],
+      "@/storybook-utils": [
+        "./.storybook/utils.ts"
+      ]
+    },
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
-  "include": ["./src/**/*", "next-env.d.ts", "**/*.ts", "**/*.tsx", ".storybook/**/*"],
-  "exclude": ["node_modules", "./public", "./src/intl"]
+  "include": [
+    "./src/**/*",
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".storybook/**/*",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "./public",
+    "./src/intl"
+  ]
 }

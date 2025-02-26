@@ -1,3 +1,5 @@
+"use client"
+
 import { useEffect, useState } from "react"
 
 import { MATOMO_LS_KEY } from "@/lib/utils/matomo"
