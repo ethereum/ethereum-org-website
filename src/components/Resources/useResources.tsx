@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react"
 import { useRouter } from "next/router"
-import { useTranslation } from "next-i18next"
 
 import { Lang } from "@/lib/types"
 
@@ -11,6 +10,7 @@ import RadialChart from "../RadialChart"
 
 import type { DashboardBox, DashboardSection } from "./types"
 
+import { useTranslation } from "@/hooks/useTranslation"
 import IconBeaconchain from "@/public/images/resources/beaconcha-in.png"
 import IconBlobsGuru from "@/public/images/resources/blobsguru.png"
 import IconBlocknative from "@/public/images/resources/blocknative.png"

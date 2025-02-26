@@ -2,7 +2,6 @@
 
 import { type ReactNode, useEffect, useState } from "react"
 import { useRouter } from "next/router"
-import { useTranslation } from "next-i18next"
 import { MdInfoOutline } from "react-icons/md"
 import { PolarAngleAxis, RadialBar, RadialBarChart } from "recharts"
 
@@ -11,6 +10,8 @@ import { isValidDate } from "@/lib/utils/date"
 
 import Tooltip from "../Tooltip"
 import Link from "../ui/Link"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 /**
  * RadialChartProps defines the properties for the RadialChart component.

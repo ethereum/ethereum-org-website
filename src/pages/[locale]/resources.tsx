@@ -1,10 +1,8 @@
 import { motion } from "framer-motion"
 import { GetStaticProps } from "next"
-import { useTranslation } from "next-i18next"
-import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { FaGithub } from "react-icons/fa6"
 
-import type { BasePageProps, Lang } from "@/lib/types"
+import type { BasePageProps, Lang, Params } from "@/lib/types"
 
 import { HubHero } from "@/components/Hero"
 import StackIcon from "@/components/icons/stack.svg"
@@ -23,9 +21,16 @@ import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
-import { BASE_TIME_UNIT, GITHUB_REPO_URL } from "@/lib/constants"
+import {
+  BASE_TIME_UNIT,
+  DEFAULT_LOCALE,
+  GITHUB_REPO_URL,
+  LOCALES_CODES,
+} from "@/lib/constants"
 
 import { useActiveHash } from "@/hooks/useActiveHash"
+import { useTranslation } from "@/hooks/useTranslation"
+import loadNamespaces from "@/i18n/loadNamespaces"
 import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
 import heroImg from "@/public/images/heroes/guides-hub-hero.jpg"
 
@@ -37,7 +42,16 @@ const loadData = dataLoader(
   REVALIDATE_TIME * 1000
 )
 
-export const getStaticProps = (async ({ locale }) => {
+export async function getStaticPaths() {
+  return {
+    paths: LOCALES_CODES.map((locale) => ({ params: { locale } })),
+    fallback: false,
+  }
+}
+
+export const getStaticProps = (async ({ params }) => {
+  const { locale = DEFAULT_LOCALE } = params || ({} as { locale: string })
+
   const [growThePieData] = await loadData()
   const { txCostsMedianUsd } = growThePieData
 
@@ -51,15 +65,17 @@ export const getStaticProps = (async ({ locale }) => {
     lastDeployDate
   )
 
+  const messages = await loadNamespaces(locale as string, requiredNamespaces)
+
   return {
     props: {
-      ...(await serverSideTranslations(locale!, requiredNamespaces)),
+      messages,
       contentNotTranslated,
       lastDeployLocaleTimestamp,
       txCostsMedianUsd,
     },
   }
-}) satisfies GetStaticProps<BasePageProps>
+}) satisfies GetStaticProps<BasePageProps, Params>
 
 const ResourcesPage = ({ txCostsMedianUsd }) => {
   const { t } = useTranslation("page-resources")
