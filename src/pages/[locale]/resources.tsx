@@ -131,8 +131,8 @@ const ResourcesPage = ({ txCostsMedianUsd }) => {
       {resourceSections.map(({ key, icon, title, boxes }) => (
         <section id={key} key={key} className="mb-16 scroll-mt-40">
           <div className="group flex w-full items-center gap-3 border-b bg-transparent px-4 py-6">
-            <div className="grid size-12 place-items-center rounded-lg border border-border-low-contrast">
-              {icon || <StackIcon className="text-2xl" />}
+            <div className="grid size-12 place-items-center rounded-lg border border-border-low-contrast text-2xl">
+              {icon || <StackIcon />}
             </div>
             <h2 className="flex-1 text-start font-black">{title}</h2>
           </div>

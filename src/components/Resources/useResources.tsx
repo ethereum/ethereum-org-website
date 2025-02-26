@@ -3,6 +3,12 @@ import { useRouter } from "next/router"
 
 import { Lang } from "@/lib/types"
 
+import SectionIconArrowsFullscreen from "@/components/icons/arrows-fullscreen.svg"
+import SectionIconEthGlyph from "@/components/icons/eth-glyph.svg"
+import SectionIconEthWallet from "@/components/icons/eth-wallet.svg"
+import SectionIconHeartPulse from "@/components/icons/heart-pulse.svg"
+import SectionIconPrivacy from "@/components/icons/privacy.svg"
+
 import { getLocaleForNumberFormat } from "@/lib/utils/translations"
 
 import BigNumber from "../BigNumber"
@@ -529,26 +535,31 @@ export const useResources = ({ txCostsMedianUsd }): DashboardSection[] => {
     {
       key: "network",
       title: t("page-resources-network-title"),
+      icon: <SectionIconEthGlyph />,
       boxes: networkBoxes,
     },
     {
       key: "using",
       title: t("page-resources-using-title"),
+      icon: <SectionIconEthWallet />,
       boxes: usingBoxes,
     },
     {
       key: "scaling",
       title: t("page-resources-scaling-title"),
+      icon: <SectionIconArrowsFullscreen />,
       boxes: scalingBoxes,
     },
     {
       key: "resilience",
       title: t("page-resources-resilience-title"),
+      icon: <SectionIconHeartPulse />,
       boxes: resilienceBoxes,
     },
     {
       key: "privacy-security",
       title: t("page-resources-privacy-security-title"),
+      icon: <SectionIconPrivacy />,
       boxes: privacySecurityBoxes,
     },
   ]
