@@ -100,11 +100,11 @@ const ResourcesPage = ({ txCostsMedianUsd }) => {
         heroImg={heroImg}
       />
 
-      <div className="sticky top-6 z-10 my-8 flex flex-col items-center gap-3 px-2 py-4 text-center">
+      <div className="sticky top-1 z-10 my-8 flex flex-col items-center gap-3 py-4 text-center md:top-6 md:px-2">
         <div className="my-2 text-body-medium">
           {t("page-resources-whats-on-this-page")}
         </div>
-        <nav className="mx-4 flex max-w-[calc(100%-2rem)] gap-1 overflow-x-auto rounded-2xl border bg-background p-0.5 shadow-lg">
+        <nav className="mx-4 flex max-w-full gap-1 overflow-x-auto bg-background p-2 shadow md:max-w-[calc(100%-2rem)] md:rounded-2xl md:border md:p-0.5 md:shadow-lg">
           {resourceSections.map(({ key, title }) => (
             <ButtonLink
               key={key}
