@@ -12706,6 +12706,15 @@
       "contributions": [
         "ideas"
       ]
+    },
+    {
+      "login": "iusx",
+      "name": "iusx",
+      "avatar_url": "https://avatars.githubusercontent.com/u/57232813?v=4",
+      "profile": "https://jiangxue.org/~ritsu",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
