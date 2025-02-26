@@ -136,7 +136,7 @@ const ResourcesPage = ({ txCostsMedianUsd }) => {
             </div>
             <h2 className="flex-1 text-start font-black">{title}</h2>
           </div>
-          <div className="grid grid-cols-1 gap-8 pb-12 pt-8 md:pb-12 md:pt-8 lg:grid-cols-2">
+          <div className="grid grid-cols-1 gap-8 px-4 pb-12 pt-8 md:pb-12 md:pt-8 lg:grid-cols-2">
             {boxes.map(({ title, metric, items, className }) => (
               <div
                 className={cn(
