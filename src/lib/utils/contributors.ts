@@ -50,7 +50,7 @@ export const getPageContributorInfo = async (
   cache: CommitHistory
 ) => {
   const gitContributors = await fetchAndCacheGitContributors(
-    join("src/pages/", pagePath),
+    join("src/pages/[locale]", pagePath),
     cache
   )
 
