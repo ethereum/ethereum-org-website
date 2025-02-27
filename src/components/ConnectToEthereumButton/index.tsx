@@ -1,13 +1,34 @@
 import { ConnectButton } from "@rainbow-me/rainbowkit"
 
+import EthGlyphSolid from "@/components/icons/eth-glyph-solid.svg"
+import { Button } from "@/components/ui/buttons/Button"
+
 const ConnectToEthereumButton = () => {
   return (
-    <ConnectButton
-      showBalance={{
-        smallScreen: true,
-        largeScreen: true,
+    <ConnectButton.Custom>
+      {({ account, chain, openConnectModal, mounted }) => {
+        const ready = mounted
+        if (!ready) return null
+
+        if (account && chain) {
+          return (
+            <ConnectButton
+              showBalance={{
+                smallScreen: true,
+                largeScreen: true,
+              }}
+            />
+          )
+        }
+
+        return (
+          <Button onClick={openConnectModal} className="px-8">
+            <EthGlyphSolid />
+            Sign in with Ethereum
+          </Button>
+        )
       }}
-    />
+    </ConnectButton.Custom>
   )
 }
 

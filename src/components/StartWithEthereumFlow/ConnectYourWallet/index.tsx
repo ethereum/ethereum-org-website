@@ -64,7 +64,7 @@ const ConnectYourWallet = ({
             />
           )}
         </div>
-        <div className="flex flex-col items-center justify-center gap-4 lg:hidden">
+        <div className="mb-2.5 flex flex-col items-center justify-center gap-4 sm:mb-0 lg:hidden">
           {isConnected && <Emoji text="🎉" className="text-[72px]" />}
           {isConnected && (
             <p className="text-center text-md font-bold">
