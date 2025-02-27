@@ -42,7 +42,7 @@ export const getStaticProps = (async ({ params }) => {
     requiredNamespaces[2]
   )
 
-  const messages = await loadNamespaces(locale, requiredNamespaces)
+  const messages = await loadNamespaces(locale as string, requiredNamespaces)
 
   return {
     props: {
