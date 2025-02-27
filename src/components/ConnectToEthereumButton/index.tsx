@@ -22,7 +22,7 @@ const ConnectToEthereumButton = () => {
         }
 
         return (
-          <Button onClick={openConnectModal} className="px-8">
+          <Button onClick={openConnectModal} className="w-full px-8 sm:w-auto">
             <EthGlyphSolid />
             Sign in with Ethereum
           </Button>

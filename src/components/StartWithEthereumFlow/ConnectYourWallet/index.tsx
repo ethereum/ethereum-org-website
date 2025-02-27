@@ -45,7 +45,7 @@ const ConnectYourWallet = ({
           {isConnected && <Button onClick={handleNext}>Lets continue</Button>}
         </div>
       </div>
-      <div className="flex flex-1 flex-col gap-4 lg:gap-8">
+      <div className="flex w-full flex-1 flex-col gap-4 lg:gap-8">
         <div className="mx-auto">
           <Image
             className="hidden lg:block"
@@ -64,7 +64,7 @@ const ConnectYourWallet = ({
             />
           )}
         </div>
-        <div className="mb-2.5 flex flex-col items-center justify-center gap-4 sm:mb-0 lg:hidden">
+        <div className="mb-2.5 flex w-full flex-col items-center justify-center gap-4 sm:mb-0 lg:hidden">
           {isConnected && <Emoji text="🎉" className="text-[72px]" />}
           {isConnected && (
             <p className="text-center text-md font-bold">
