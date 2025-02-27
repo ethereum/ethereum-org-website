@@ -123,6 +123,11 @@ export const useNav = () => {
           icon: BsPinAngle,
           items: [
             {
+              label: t("nav-start-with-crypto-title"),
+              description: t("nav-start-with-crypto-description"),
+              href: "/start-with-crypto/",
+            },
+            {
               label: t("nav-find-wallet-label"),
               description: t("nav-find-wallet-description"),
               href: "/wallets/find-wallet/",
