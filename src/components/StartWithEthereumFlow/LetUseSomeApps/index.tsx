@@ -104,7 +104,10 @@ const LetUseSomeApps = ({
           {dappsList.map((dapp) => (
             <div
               key={dapp.name}
-              className="flex flex-col items-center justify-between gap-4 border-b border-background py-4 last:border-b-0 sm:flex-row"
+              className="group flex cursor-pointer flex-col items-center justify-between gap-4 rounded-xl border-b border-background p-4 last:border-b-0 hover:bg-background-highlight sm:flex-row"
+              onClick={() => {
+                window.open(dapp.url, "_blank")
+              }}
             >
               <div className="flex flex-row items-center gap-4">
                 <Image
@@ -127,7 +130,7 @@ const LetUseSomeApps = ({
                   href={dapp.url}
                   variant="outline"
                   size="sm"
-                  className="w-full sm:w-auto"
+                  className="w-full group-hover:!text-primary-hover group-hover:shadow-[4px_4px_theme('colors.primary.low-contrast')] sm:w-auto"
                 >
                   Go
                 </ButtonLink>
