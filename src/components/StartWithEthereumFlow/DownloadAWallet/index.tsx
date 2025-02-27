@@ -54,7 +54,7 @@ const DownloadAWallet = ({
           </Button>
         </div>
       </div>
-      <div className="flex flex-1 flex-col gap-8">
+      <div className="flex w-full flex-1 flex-col gap-8">
         <div className="flex flex-col overflow-hidden rounded-2xl border shadow-window-box">
           {newToCryptoWallets.map((wallet) => (
             <div
@@ -64,8 +64,8 @@ const DownloadAWallet = ({
                 window.open(wallet.url, "_blank")
               }}
             >
-              <div className="flex flex-row items-center justify-between">
-                <div className="flex flex-row items-center gap-4">
+              <div className="flex flex-col items-center justify-between gap-2 sm:flex-row">
+                <div className="flex w-full max-w-[200px] flex-row items-center gap-4">
                   <div>
                     <Image
                       src={wallet.image}
@@ -81,8 +81,9 @@ const DownloadAWallet = ({
                   variant="outline"
                   isSecondary
                   size="sm"
+                  className="w-full sm:w-auto"
                 >
-                  Download
+                  Get wallet
                 </ButtonLink>
               </div>
             </div>
