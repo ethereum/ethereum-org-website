@@ -5,6 +5,7 @@ import { Button, ButtonLink } from "@/components/ui/buttons/Button"
 import Checkbox from "@/components/ui/checkbox"
 import { Tag } from "@/components/ui/tag"
 
+import { trackCustomEvent } from "@/lib/utils/matomo"
 import { getNewToCryptoWallets } from "@/lib/utils/wallets"
 
 const DownloadAWallet = ({
@@ -37,12 +38,29 @@ const DownloadAWallet = ({
         <div className="hidden flex-col gap-8 lg:flex">
           <div
             className="group flex cursor-pointer flex-row items-center gap-2 hover:text-primary-hover"
-            onClick={() => setHasWallet(!hasWallet)}
+            onClick={() => {
+              setHasWallet(!hasWallet)
+              trackCustomEvent({
+                eventCategory: "start page",
+                eventAction: "wallet checkbox",
+                eventName: "I have a wallet",
+              })
+            }}
           >
             <Checkbox className="size-6 [&_svg]:text-xl" checked={hasWallet} />
             <p>I have a wallet.</p>
           </div>
-          <Button disabled={!hasWallet} onClick={handleNext}>
+          <Button
+            disabled={!hasWallet}
+            onClick={() => {
+              handleNext()
+              trackCustomEvent({
+                eventCategory: "start page",
+                eventAction: "next step",
+                eventName: "Continue from 1",
+              })
+            }}
+          >
             Next
           </Button>
         </div>
@@ -55,6 +73,11 @@ const DownloadAWallet = ({
               className="flex cursor-pointer flex-col gap-4 border-b border-body-light bg-background p-4 last:border-b-0 hover:bg-background-highlight sm:p-6"
               onClick={() => {
                 window.open(wallet.url, "_blank")
+                trackCustomEvent({
+                  eventCategory: "start page",
+                  eventAction: "get wallet",
+                  eventName: wallet.name,
+                })
               }}
             >
               <div className="flex flex-row items-center justify-between gap-2">
@@ -84,12 +107,29 @@ const DownloadAWallet = ({
         <div className="flex flex-col gap-8 lg:hidden">
           <div
             className="group flex cursor-pointer flex-row items-center gap-2 hover:text-primary-hover"
-            onClick={() => setHasWallet(!hasWallet)}
+            onClick={() => {
+              setHasWallet(!hasWallet)
+              trackCustomEvent({
+                eventCategory: "start page",
+                eventAction: "wallet checkbox",
+                eventName: "I have a wallet",
+              })
+            }}
           >
             <Checkbox className="size-6 [&_svg]:text-xl" checked={hasWallet} />
             <p>I have a wallet.</p>
           </div>
-          <Button disabled={!hasWallet} onClick={handleNext}>
+          <Button
+            disabled={!hasWallet}
+            onClick={() => {
+              handleNext()
+              trackCustomEvent({
+                eventCategory: "start page",
+                eventAction: "next step",
+                eventName: "Continue from 1",
+              })
+            }}
+          >
             Next
           </Button>
         </div>

@@ -1,3 +1,4 @@
+import { useEffect } from "react"
 import { useAccount } from "wagmi"
 
 import ConnectToEthereumButton from "@/components/ConnectToEthereumButton"
@@ -5,6 +6,8 @@ import Emoji from "@/components/Emoji"
 import { Image } from "@/components/Image"
 import { Button } from "@/components/ui/buttons/Button"
 import { Tag } from "@/components/ui/tag"
+
+import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import FinanceImage from "@/public/images/finance_transparent.png"
 
@@ -18,6 +21,16 @@ const ConnectYourWallet = ({
   totalSteps: number
 }) => {
   const { isConnected } = useAccount()
+
+  useEffect(() => {
+    if (isConnected) {
+      trackCustomEvent({
+        eventCategory: "start page",
+        eventAction: "sign in",
+        eventName: "connected",
+      })
+    }
+  }, [isConnected])
 
   return (
     <div className="flex flex-col items-center gap-4 lg:flex-row lg:gap-24">
@@ -41,8 +54,29 @@ const ConnectYourWallet = ({
               This is your account
             </p>
           )}
-          <ConnectToEthereumButton />
-          {isConnected && <Button onClick={handleNext}>Lets continue</Button>}
+          <ConnectToEthereumButton
+            onClick={() => {
+              trackCustomEvent({
+                eventCategory: "start page",
+                eventAction: "connect wallet",
+                eventName: "Connect to Ethereum",
+              })
+            }}
+          />
+          {isConnected && (
+            <Button
+              onClick={() => {
+                handleNext()
+                trackCustomEvent({
+                  eventCategory: "start page",
+                  eventAction: "next step",
+                  eventName: "Continue from 2",
+                })
+              }}
+            >
+              Lets continue
+            </Button>
+          )}
         </div>
       </div>
       <div className="flex w-full flex-1 flex-col gap-4 lg:gap-8">
@@ -71,8 +105,29 @@ const ConnectYourWallet = ({
               This is your account
             </p>
           )}
-          <ConnectToEthereumButton />
-          {isConnected && <Button onClick={handleNext}>Lets continue</Button>}
+          <ConnectToEthereumButton
+            onClick={() => {
+              trackCustomEvent({
+                eventCategory: "start page",
+                eventAction: "connect wallet",
+                eventName: "Connect to Ethereum",
+              })
+            }}
+          />
+          {isConnected && (
+            <Button
+              onClick={() => {
+                handleNext()
+                trackCustomEvent({
+                  eventCategory: "start page",
+                  eventAction: "next step",
+                  eventName: "Continue from 2",
+                })
+              }}
+            >
+              Lets continue
+            </Button>
+          )}
         </div>
       </div>
     </div>

@@ -3,6 +3,8 @@ import { ButtonLink } from "@/components/ui/buttons/Button"
 import Link from "@/components/ui/Link"
 import { Tag } from "@/components/ui/tag"
 
+import { trackCustomEvent } from "@/lib/utils/matomo"
+
 import AaveImage from "@/public/images/dapps/aave.png"
 import OpenSeaImage from "@/public/images/dapps/opensea.png"
 import UniswapImage from "@/public/images/dapps/uni.png"
@@ -107,6 +109,11 @@ const LetUseSomeApps = ({
               className="group flex cursor-pointer flex-col items-center justify-between gap-4 rounded-xl border-b border-background p-4 last:border-b-0 hover:bg-background-highlight sm:flex-row"
               onClick={() => {
                 window.open(dapp.url, "_blank")
+                trackCustomEvent({
+                  eventCategory: "start page",
+                  eventAction: "dapps",
+                  eventName: dapp.name,
+                })
               }}
             >
               <div className="flex flex-row items-center gap-4">
@@ -139,7 +146,17 @@ const LetUseSomeApps = ({
           ))}
         </div>
         <div className="flex lg:hidden">
-          <Link href="/dapps" className="font-bold no-underline">
+          <Link
+            href="/dapps"
+            className="font-bold no-underline"
+            onClick={() => {
+              trackCustomEvent({
+                eventCategory: "start page",
+                eventAction: "dapps",
+                eventName: "Explore more",
+              })
+            }}
+          >
             Explore more
           </Link>
         </div>
