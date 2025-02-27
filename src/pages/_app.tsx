@@ -1,7 +1,7 @@
 import { useEffect } from "react"
 import dynamic from "next/dynamic"
 import { useRouter } from "next/router"
-import { appWithTranslation } from "next-i18next"
+import { NextIntlClientProvider } from "next-intl"
 import { TooltipProvider } from "@radix-ui/react-tooltip"
 import { init } from "@socialgouv/matomo-next"
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
@@ -9,6 +9,8 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
 import { AppPropsWithLayout } from "@/lib/types"
 
 import ThemeProvider from "@/components/ThemeProvider"
+
+import { DEFAULT_LOCALE } from "@/lib/constants"
 
 import "@/styles/global.css"
 
@@ -22,7 +24,7 @@ const WalletProviders = dynamic(() => import("@/components/WalletProviders"), {
 const queryClient = new QueryClient()
 
 const App = ({ Component, pageProps }: AppPropsWithLayout) => {
-  const { locale } = useRouter()
+  const router = useRouter()
 
   useEffect(() => {
     if (!process.env.IS_PREVIEW_DEPLOY) {
@@ -38,22 +40,35 @@ const App = ({ Component, pageProps }: AppPropsWithLayout) => {
   const getLayout = Component.getLayout ?? ((page) => page)
 
   return (
-    <ThemeProvider>
-      <TooltipProvider>
-        <QueryClientProvider client={queryClient}>
-          <WalletProviders locale={locale}>
-            <BaseLayout
-              contentIsOutdated={!!pageProps.frontmatter?.isOutdated}
-              contentNotTranslated={pageProps.contentNotTranslated}
-              lastDeployLocaleTimestamp={pageProps.lastDeployLocaleTimestamp}
-            >
-              {getLayout(<Component {...pageProps} />)}
-            </BaseLayout>
-          </WalletProviders>
-        </QueryClientProvider>
-      </TooltipProvider>
-    </ThemeProvider>
+    <NextIntlClientProvider
+      locale={(router.query.locale as string) || DEFAULT_LOCALE}
+      messages={pageProps.messages || {}}
+      onError={() => {
+        // Suppress errors by default, enable if needed to debug
+        // console.error(error)
+      }}
+      getMessageFallback={({ key }) => {
+        const keyOnly = key.split(".").pop()
+        return keyOnly || key
+      }}
+    >
+      <ThemeProvider>
+        <TooltipProvider>
+          <QueryClientProvider client={queryClient}>
+            <WalletProviders locale={router.query.locale as string}>
+              <BaseLayout
+                contentIsOutdated={!!pageProps.frontmatter?.isOutdated}
+                contentNotTranslated={pageProps.contentNotTranslated}
+                lastDeployLocaleTimestamp={pageProps.lastDeployLocaleTimestamp}
+              >
+                {getLayout(<Component {...pageProps} />)}
+              </BaseLayout>
+            </WalletProviders>
+          </QueryClientProvider>
+        </TooltipProvider>
+      </ThemeProvider>
+    </NextIntlClientProvider>
   )
 }
 
-export default appWithTranslation(App)
+export default App

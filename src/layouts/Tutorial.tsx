@@ -1,6 +1,4 @@
-import { useRouter } from "next/router"
 import type { HTMLAttributes } from "react"
-import { Badge } from "@chakra-ui/react"
 
 import type { ChildOnlyProp } from "@/lib/types"
 import type { MdPageContent, TutorialFrontmatter } from "@/lib/interfaces"
@@ -28,6 +26,8 @@ import { mdxTableComponents } from "@/components/ui/table"
 import YouTube from "@/components/YouTube"
 
 import { getEditPath } from "@/lib/utils/editPath"
+
+import { usePathname } from "@/i18n/routing"
 
 const Heading1 = (props: HTMLAttributes<HTMLHeadingElement>) => (
   <MdHeading1
@@ -78,7 +78,6 @@ export const tutorialsComponents = {
   kbd: KBD,
   pre: Codeblock,
   ...mdxTableComponents,
-  Badge,
   ButtonLink,
   CallToContribute,
   Card,
@@ -103,8 +102,8 @@ export const TutorialLayout = ({
   contributors,
   contentNotTranslated,
 }: TutorialLayoutProps) => {
-  const { asPath: relativePath } = useRouter()
-  const absoluteEditPath = getEditPath(relativePath)
+  const pathname = usePathname()
+  const absoluteEditPath = getEditPath(pathname)
 
   return (
     <div className="flex w-full gap-8 border-b bg-background p-8 lg:mx-auto lg:bg-background-highlight lg:shadow">
