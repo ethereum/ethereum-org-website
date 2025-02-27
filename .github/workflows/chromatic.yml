@@ -15,7 +15,6 @@ on:
       - "src/components/**/*"
       - "src/pages/**/*"
       - "src/layouts/**/*"
-      - "src/@chakra-ui/**/*"
       - ".storybook/**/*"
       - "tailwind.config.ts"
       - "src/styles/**/*"

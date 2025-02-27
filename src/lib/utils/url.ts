@@ -1,4 +1,4 @@
-import { join } from "path"
+import { extname, join } from "path"
 
 import {
   DEFAULT_LOCALE,
@@ -20,6 +20,8 @@ export const isGlossary = (href: string): boolean =>
   href.includes("glossary") && href.includes("#")
 
 export const isPdf = (href: string): boolean => href.endsWith(".pdf")
+
+export const isFile = (href: string): boolean => extname(href).length > 0
 
 export const sanitizeHitUrl = (url: string): string =>
   url

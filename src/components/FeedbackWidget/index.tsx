@@ -1,4 +1,3 @@
-import { useTranslation } from "next-i18next"
 import { MdClose } from "react-icons/md"
 
 import { Button } from "@/components/ui/buttons/Button"
@@ -12,6 +11,8 @@ import {
 
 import FixedDot from "./FixedDot"
 import { useFeedbackWidget } from "./useFeedbackWidget"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 const FeedbackWidget = () => {
   const { t } = useTranslation("common")

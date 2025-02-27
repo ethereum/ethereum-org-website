@@ -1,7 +1,9 @@
-import * as React from "react"
-import { Flex } from "@chakra-ui/react"
+import type { CSSProperties } from "react"
 import { Meta, StoryObj } from "@storybook/react"
 
+import { screens } from "@/lib/utils/screen"
+
+import { Flex } from "../../flex"
 import { Table as TableComponent } from "../../table"
 
 import {
@@ -15,7 +17,10 @@ const meta = {
   component: TableComponent,
   decorators: [
     (Story) => (
-      <Flex flexDir="column" gap={16} maxW="container.md">
+      <Flex
+        style={{ "--table-decorator-max-w": screens["md"] } as CSSProperties}
+        className="max-w-[var(--table-decorator-max-w)] flex-col gap-16"
+      >
         <Story />
       </Flex>
     ),

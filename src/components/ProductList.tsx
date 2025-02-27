@@ -4,7 +4,7 @@ import { VisuallyHidden } from "@radix-ui/react-visually-hidden"
 import { ButtonLink } from "./ui/buttons/Button"
 import { Flex } from "./ui/flex"
 import { List, ListItem } from "./ui/list"
-import { TwImage } from "./Image"
+import { Image } from "./Image"
 
 type Content = {
   title: string
@@ -37,7 +37,7 @@ const ProductList = ({ actionLabel, content, category }: ProductListProps) => {
           <ListItem key={id || idx} color="text" className="mb-0 mt-8 flex">
             <div className="w-20">
               {image && (
-                <TwImage
+                <Image
                   src={image}
                   alt={alt}
                   width={66}
