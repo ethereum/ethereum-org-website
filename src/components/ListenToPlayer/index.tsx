@@ -221,30 +221,32 @@ const ListenToPlayer = ({ slug }: { slug: string }) => {
           className={cn(
             showWidget ? "block" : "hidden",
             isExpanded ? "bottom-4" : "bottom-0",
-            "fixed left-1/2 right-auto z-[9999] -translate-x-1/2 sm:left-auto sm:right-5 sm:translate-x-0"
+            "fixed left-1/2 right-auto z-[5000] -translate-x-1/2 sm:left-auto sm:right-5 sm:translate-x-0"
           )}
         >
-          <PlayerWidget
-            autoplay={autoplay}
-            setAutoplay={setAutoplay}
-            isExpanded={isExpanded}
-            setIsExpanded={setIsExpanded}
-            title={
-              countdown > 0
-                ? `${t(playlist[currentTrackIndex + 1].title)} in ${countdown}s`
-                : t(playlist[currentTrackIndex].title)
-            }
-            duration={duration}
-            timeRemaining={timeRemaining}
-            onSeek={handleSeek}
-            isPlaying={isPlaying}
-            handlePlayPause={handlePlayPause}
-            handlePrevious={handlePrevious}
-            handleNext={handleNext}
-            playbackSpeed={playbackSpeed}
-            handlePlaybackSpeed={handlePlaybackSpeed}
-            handleCloseWidget={handleCloseWidget}
-          />
+          <div className="relative">
+            <PlayerWidget
+              autoplay={autoplay}
+              setAutoplay={setAutoplay}
+              isExpanded={isExpanded}
+              setIsExpanded={setIsExpanded}
+              title={
+                countdown > 0
+                  ? `${t(playlist[currentTrackIndex + 1].title)} in ${countdown}s`
+                  : t(playlist[currentTrackIndex].title)
+              }
+              duration={duration}
+              timeRemaining={timeRemaining}
+              onSeek={handleSeek}
+              isPlaying={isPlaying}
+              handlePlayPause={handlePlayPause}
+              handlePrevious={handlePrevious}
+              handleNext={handleNext}
+              playbackSpeed={playbackSpeed}
+              handlePlaybackSpeed={handlePlaybackSpeed}
+              handleCloseWidget={handleCloseWidget}
+            />
+          </div>
         </div>
       </Portal>
     </>
