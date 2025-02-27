@@ -35,18 +35,11 @@ const DownloadAWallet = ({
           </p>
         </div>
         <div className="hidden flex-col gap-8 lg:flex">
-          <div className="flex flex-row items-center gap-2">
-            <Checkbox
-              className="size-6 [&_svg]:text-xl"
-              checked={hasWallet}
-              onCheckedChange={(checked) => {
-                if (checked === true) {
-                  setHasWallet(true)
-                } else {
-                  setHasWallet(false)
-                }
-              }}
-            />
+          <div
+            className="group flex cursor-pointer flex-row items-center gap-2 hover:text-primary-hover"
+            onClick={() => setHasWallet(!hasWallet)}
+          >
+            <Checkbox className="size-6 [&_svg]:text-xl" checked={hasWallet} />
             <p>I have a wallet.</p>
           </div>
           <Button disabled={!hasWallet} onClick={handleNext}>
@@ -90,18 +83,11 @@ const DownloadAWallet = ({
           ))}
         </div>
         <div className="flex flex-col gap-8 lg:hidden">
-          <div className="flex flex-row items-center gap-2">
-            <Checkbox
-              className="size-6 [&_svg]:text-xl"
-              checked={hasWallet}
-              onCheckedChange={(checked) => {
-                if (checked === true) {
-                  setHasWallet(true)
-                } else {
-                  setHasWallet(false)
-                }
-              }}
-            />
+          <div
+            className="group flex cursor-pointer flex-row items-center gap-2 hover:text-primary-hover"
+            onClick={() => setHasWallet(!hasWallet)}
+          >
+            <Checkbox className="size-6 [&_svg]:text-xl" checked={hasWallet} />
             <p>I have a wallet.</p>
           </div>
           <Button disabled={!hasWallet} onClick={handleNext}>
