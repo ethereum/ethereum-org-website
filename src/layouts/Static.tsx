@@ -121,7 +121,9 @@ export const StaticLayout = ({
                   {lastEditLocaleTimestamp}
                 </p>
               )}
-              <ListenToPlayer slug={pathname} />
+              <div>
+                <ListenToPlayer slug={pathname} />
+              </div>
             </Stack>
           )}
 
