@@ -181,6 +181,10 @@ const getRequiredNamespacesForPath = (relativePath: string) => {
     requiredNamespaces = [...requiredNamespaces, "table"]
   }
 
+  if (path.startsWith("/start-with-crypto/")) {
+    requiredNamespaces = [...requiredNamespaces]
+  }
+
   if (path.startsWith("/contributing/translation-program/translatathon/")) {
     primaryNamespace = "page-translatathon"
   }

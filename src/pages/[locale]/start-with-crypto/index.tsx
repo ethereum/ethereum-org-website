@@ -1,5 +1,4 @@
 import { GetStaticProps } from "next"
-import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 
 import { BasePageProps, Lang } from "@/lib/types"
 
@@ -14,10 +13,22 @@ import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
+import { DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
+
+import loadNamespaces from "@/i18n/loadNamespaces"
 import HeroImage from "@/public/images/heroes/developers-hub-hero.jpg"
 import ManDogeImage from "@/public/images/start-with-ethereum/man-doge-playing.png"
 
-export const getStaticProps = (async ({ locale }) => {
+export async function getStaticPaths() {
+  return {
+    paths: LOCALES_CODES.map((locale) => ({ params: { locale } })),
+    fallback: false,
+  }
+}
+
+export const getStaticProps = (async ({ params }) => {
+  const { locale = DEFAULT_LOCALE } = params || {}
+
   const lastDeployDate = getLastDeployDate()
   const lastDeployLocaleTimestamp = getLocaleTimestamp(
     locale as Lang,
@@ -26,11 +37,16 @@ export const getStaticProps = (async ({ locale }) => {
 
   const requiredNamespaces = getRequiredNamespacesForPage("/start-with-crypto")
 
-  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
+  const contentNotTranslated = !existsNamespace(
+    locale! as string,
+    requiredNamespaces[2]
+  )
+
+  const messages = await loadNamespaces(locale, requiredNamespaces)
 
   return {
     props: {
-      ...(await serverSideTranslations(locale!, requiredNamespaces)),
+      messages,
       contentNotTranslated,
       lastDeployLocaleTimestamp,
     },
