@@ -9,6 +9,7 @@ import {
   PauseCircleIcon,
   PlayCircleIcon,
 } from "@/components/icons/listen-to"
+import Tooltip from "@/components/Tooltip"
 
 import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
@@ -120,21 +121,22 @@ const PlayerWidget = ({
       >
         <div className="flex justify-between">
           <p className="text-sm font-bold leading-base">{title}</p>
-          <button
-            className="cursor-pointer text-body-medium hover:text-body"
-            aria-label={"Collapse"}
-            title={"Collapse"}
-            onClick={() => {
-              setIsExpanded(!isExpanded)
-              trackCustomEvent({
-                eventCategory: "Audio",
-                eventAction: "click",
-                eventName: "minimize",
-              })
-            }}
-          >
-            <CollapseIcon />
-          </button>
+          <Tooltip content={"Collapse"}>
+            <button
+              className="cursor-pointer text-body-medium hover:text-body"
+              aria-label={"Collapse"}
+              onClick={() => {
+                setIsExpanded(!isExpanded)
+                trackCustomEvent({
+                  eventCategory: "Audio",
+                  eventAction: "click",
+                  eventName: "minimize",
+                })
+              }}
+            >
+              <CollapseIcon />
+            </button>
+          </Tooltip>
         </div>
         <div className="flex items-center justify-between">
           <div
@@ -161,14 +163,16 @@ const PlayerWidget = ({
         </div>
         <div className="flex items-center justify-between gap-10">
           <div className="relative">
-            <button
-              className="w-[24px] cursor-pointer text-right text-xs font-bold leading-base text-body-medium hover:text-body"
-              onClick={() => setShowSpeedMenu(!showSpeedMenu)}
-              title={`Playback speed`}
-              aria-label={"Playback speed"}
-            >
-              {playbackSpeed}x
-            </button>
+            <Tooltip content={"Playback speed"}>
+              <button
+                className="w-[24px] cursor-pointer text-right text-xs font-bold leading-base text-body-medium hover:text-body"
+                onClick={() => setShowSpeedMenu(!showSpeedMenu)}
+                title={`Playback speed`}
+                aria-label={"Playback speed"}
+              >
+                {playbackSpeed}x
+              </button>
+            </Tooltip>
             {showSpeedMenu && (
               <div
                 ref={speedMenuRef}
@@ -189,42 +193,50 @@ const PlayerWidget = ({
               </div>
             )}
           </div>
-          <button
-            className="cursor-pointer text-2xl text-disabled hover:text-body"
-            onClick={handlePrevious}
-            title="Previous"
-            aria-label={"Previous"}
-          >
-            <ArrowIcon />
-          </button>
-          <button
-            className="cursor-pointer text-[32px] text-primary hover:text-primary-hover"
-            onClick={handlePlayPause}
-            title={isPlaying ? "Pause" : "Play"}
-            aria-label={isPlaying ? "Pause" : "Play"}
-          >
-            {isPlaying ? <PauseCircleIcon /> : <PlayCircleIcon />}
-          </button>
-          <button
-            className="cursor-pointer text-2xl text-disabled hover:text-body"
-            onClick={handleNext}
-            title="Next"
-            aria-label={"Next"}
-          >
-            <ArrowIcon className="rotate-180" />
-          </button>
-          <button
-            className={cn(
-              "cursor-pointer text-base",
-              autoplay ? "text-primary" : "text-disabled",
-              "hover:text-primary-hover"
-            )}
-            onClick={() => setAutoplay(!autoplay)}
-            title={autoplay ? "Disable autoplay" : "Enable autoplay"}
-            aria-label={autoplay ? "Disable autoplay" : "Enable autoplay"}
-          >
-            <AutoplayIcon />
-          </button>
+          <Tooltip content={"Previous"}>
+            <button
+              className="cursor-pointer text-2xl text-disabled hover:text-body"
+              onClick={handlePrevious}
+              title="Previous"
+              aria-label={"Previous"}
+            >
+              <ArrowIcon />
+            </button>
+          </Tooltip>
+          <Tooltip content={isPlaying ? "Pause" : "Play"}>
+            <button
+              className="cursor-pointer text-[32px] text-primary hover:text-primary-hover"
+              onClick={handlePlayPause}
+              title={isPlaying ? "Pause" : "Play"}
+              aria-label={isPlaying ? "Pause" : "Play"}
+            >
+              {isPlaying ? <PauseCircleIcon /> : <PlayCircleIcon />}
+            </button>
+          </Tooltip>
+          <Tooltip content={"Next"}>
+            <button
+              className="cursor-pointer text-2xl text-disabled hover:text-body"
+              onClick={handleNext}
+              title="Next"
+              aria-label={"Next"}
+            >
+              <ArrowIcon className="rotate-180" />
+            </button>
+          </Tooltip>
+          <Tooltip content={autoplay ? "Disable autoplay" : "Enable autoplay"}>
+            <button
+              className={cn(
+                "cursor-pointer text-base",
+                autoplay ? "text-primary" : "text-disabled",
+                "hover:text-primary-hover"
+              )}
+              onClick={() => setAutoplay(!autoplay)}
+              title={autoplay ? "Disable autoplay" : "Enable autoplay"}
+              aria-label={autoplay ? "Disable autoplay" : "Enable autoplay"}
+            >
+              <AutoplayIcon />
+            </button>
+          </Tooltip>
         </div>
       </div>
 
@@ -235,45 +247,51 @@ const PlayerWidget = ({
         )}
       >
         <div className="flex flex-row items-center gap-2">
-          <button
-            className="cursor-pointer text-[32px] text-primary hover:text-primary-hover"
-            onClick={handlePlayPause}
-            title={isPlaying ? "Pause" : "Play"}
-            aria-label={isPlaying ? "Pause" : "Play"}
-          >
-            {isPlaying ? <PauseCircleIcon /> : <PlayCircleIcon />}
-          </button>
+          <Tooltip content={isPlaying ? "Pause" : "Play"}>
+            <button
+              className="cursor-pointer text-[32px] text-primary hover:text-primary-hover"
+              onClick={handlePlayPause}
+              title={isPlaying ? "Pause" : "Play"}
+              aria-label={isPlaying ? "Pause" : "Play"}
+            >
+              {isPlaying ? <PauseCircleIcon /> : <PlayCircleIcon />}
+            </button>
+          </Tooltip>
           <div className="text-sm text-body-medium">
             {`${Math.floor(timeRemaining / 60)}:${String(Math.floor(timeRemaining % 60)).padStart(2, "0")}`}
           </div>
         </div>
         <div className="flex flex-row gap-6">
-          <button
-            className="cursor-pointer text-disabled hover:text-body"
-            title={"Expand"}
-            aria-label={"Expand"}
-            onClick={() => {
-              setIsExpanded(!isExpanded)
-              trackCustomEvent({
-                eventCategory: "Audio",
-                eventAction: "click",
-                eventName: "expand",
-              })
-            }}
-          >
-            <ExpandIcon />
-          </button>
-          <button
-            className="cursor-pointer text-disabled hover:text-body"
-            title={"Close"}
-            aria-label={"Close"}
-            onClick={() => {
-              setIsExpanded(!isExpanded)
-              handleCloseWidget()
-            }}
-          >
-            <IoClose />
-          </button>
+          <Tooltip content={"Expand"}>
+            <button
+              className="cursor-pointer text-disabled hover:text-body"
+              title={"Expand"}
+              aria-label={"Expand"}
+              onClick={() => {
+                setIsExpanded(!isExpanded)
+                trackCustomEvent({
+                  eventCategory: "Audio",
+                  eventAction: "click",
+                  eventName: "expand",
+                })
+              }}
+            >
+              <ExpandIcon />
+            </button>
+          </Tooltip>
+          <Tooltip content={"Close"}>
+            <button
+              className="cursor-pointer text-disabled hover:text-body"
+              title={"Close"}
+              aria-label={"Close"}
+              onClick={() => {
+                setIsExpanded(!isExpanded)
+                handleCloseWidget()
+              }}
+            >
+              <IoClose />
+            </button>
+          </Tooltip>
         </div>
       </div>
     </div>
