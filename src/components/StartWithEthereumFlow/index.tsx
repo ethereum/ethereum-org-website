@@ -30,6 +30,7 @@ const StartWithEthereumFlow = () => {
       className={cn(
         "-mx-8",
         "w-screen",
+        "max-w-screen-2xl",
         "px-4 sm:px-8",
         "[&_.swiper-slide]:overflow-visible [&_.swiper-slide]:rounded-2xl",
         "[&_.swiper-slide]:min-h-[386px]",
