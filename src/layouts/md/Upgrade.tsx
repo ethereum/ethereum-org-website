@@ -1,5 +1,3 @@
-import { useTranslation } from "next-i18next"
-
 import type { ChildOnlyProp } from "@/lib/types"
 import type { MdPageContent, UpgradeFrontmatter } from "@/lib/interfaces"
 
@@ -13,6 +11,8 @@ import UpgradeStatus from "@/components/UpgradeStatus"
 import { getSummaryPoints } from "@/lib/utils/getSummaryPoints"
 
 import { ContentLayout } from "../ContentLayout"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 // Upgrade layout components
 export const upgradeComponents = {
@@ -47,7 +47,7 @@ export const UpgradeLayout = ({
 
   const dropdownLinks: ButtonDropdownList = {
     text: t("page-upgrades-upgrades-guide"),
-    ariaLabel: t("page-upgrades-upgrades-aria-label"),
+    ariaLabel: t("page-upgrades-index:page-upgrades-upgrades-aria-label"),
     items: [
       {
         text: t("page-upgrades-upgrades-beacon-chain"),

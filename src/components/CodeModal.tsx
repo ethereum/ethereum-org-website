@@ -1,5 +1,4 @@
 import { Children, type ReactElement } from "react"
-import { useTranslation } from "next-i18next"
 import { IoMdCopy } from "react-icons/io"
 import { MdCheck } from "react-icons/md"
 
@@ -13,6 +12,7 @@ import {
 } from "./ui/dialog-modal"
 
 import { useClipboard } from "@/hooks/useClipboard"
+import { useTranslation } from "@/hooks/useTranslation"
 
 type CodeModalProps = {
   title: string
