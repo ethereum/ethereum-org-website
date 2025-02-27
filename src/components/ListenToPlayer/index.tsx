@@ -221,7 +221,7 @@ const ListenToPlayer = ({ slug }: { slug: string }) => {
           className={cn(
             showWidget ? "block" : "hidden",
             isExpanded ? "bottom-4" : "bottom-0",
-            "fixed left-0 right-0 z-[9999] mx-auto sm:left-auto sm:right-5 sm:mx-0"
+            "fixed left-1/2 right-auto z-[9999] -translate-x-1/2 sm:left-auto sm:right-5 sm:translate-x-0"
           )}
         >
           <PlayerWidget
