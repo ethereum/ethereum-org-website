@@ -12697,6 +12697,24 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "jenish-thapa",
+      "name": "Jenish Thapa",
+      "avatar_url": "https://avatars.githubusercontent.com/u/141203631?v=4",
+      "profile": "https://github.com/jenish-thapa",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "iusx",
+      "name": "iusx",
+      "avatar_url": "https://avatars.githubusercontent.com/u/57232813?v=4",
+      "profile": "https://jiangxue.org/~ritsu",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,

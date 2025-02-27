@@ -17,7 +17,7 @@ const NetworkMaturityTooltip = ({ maturity }: { maturity: MaturityLevel }) => {
       description:
         "Fully decentralized and secure network that cannot be tampered with or stopped by any individual or group, including its creators.\n\nThis is a network that fulfills Ethereum's vision of decentralization.",
       tag: {
-        className: "bg-blue-100 text-black border-none",
+        className: "bg-blue-600 text-white border-none",
       },
     },
     maturing: {
@@ -25,7 +25,7 @@ const NetworkMaturityTooltip = ({ maturity }: { maturity: MaturityLevel }) => {
       description:
         "A network transitioning to being decentralized. A group of actors still may be able to halt the network in extreme situations.",
       tag: {
-        className: "bg-blue-200 text-black border-none",
+        className: "bg-blue-400 text-white border-none",
       },
     },
     developing: {
@@ -33,7 +33,7 @@ const NetworkMaturityTooltip = ({ maturity }: { maturity: MaturityLevel }) => {
       description:
         "A centralized operator runs the network but adds fail-safe features to reduce risks of centralization.",
       tag: {
-        className: "bg-blue-400 text-white border-none",
+        className: "bg-blue-200 text-black border-none",
       },
     },
     emerging: {
@@ -41,7 +41,7 @@ const NetworkMaturityTooltip = ({ maturity }: { maturity: MaturityLevel }) => {
       description:
         "A centralized operator runs the network. The data is publicly visible on Ethereum to verify whether the operator is being honest.",
       tag: {
-        className: "bg-blue-600 text-white border-none",
+        className: "bg-blue-100 text-black border-none",
       },
     },
   } as const
