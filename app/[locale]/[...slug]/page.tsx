@@ -1,4 +1,5 @@
 import pick from "lodash.pick"
+import { notFound } from "next/navigation"
 import { getMessages, setRequestLocale } from "next-intl/server"
 
 import { CommitHistory, Lang, ToCItem } from "@/lib/types"
@@ -25,6 +26,17 @@ export default async function Page({
   params: Promise<{ locale: string; slug: string[] }>
 }) {
   const { locale, slug: slugArray } = await params
+
+  // Check if this specific path is in our valid paths
+  const validPaths = await generateStaticParams()
+  const isValidPath = validPaths.some(
+    (path) =>
+      path.locale === locale && path.slug.join("/") === slugArray.join("/")
+  )
+
+  if (!isValidPath) {
+    notFound()
+  }
 
   // Enable static rendering
   setRequestLocale(locale)
@@ -96,5 +108,3 @@ export async function generateStaticParams() {
     })
   )
 }
-
-export const dynamicParams = false

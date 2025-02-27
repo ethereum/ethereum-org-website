@@ -1,12 +1,5 @@
-import Link from "next/link"
+import NotFoundPage from "@/components/NotFoundPage"
 
-// TODO: add 404 page
 export default function NotFound() {
-  return (
-    <div>
-      <h2>Not Found Locale</h2>
-      <p>Could not find requested resource</p>
-      <Link href="/">Return Home</Link>
-    </div>
-  )
+  return <NotFoundPage />
 }
