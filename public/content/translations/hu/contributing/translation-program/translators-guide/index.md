@@ -116,7 +116,7 @@ A hivatkozásokat másolja át egyenesen a forrásból, kattintson rájuk vagy h
 
 ![Example of link.png](./example-of-link.png)
 
-A hivatkozások tagekkel formázva is megjelennek a forrásszövegben (vagyis <0> </0>). Ha a tagek fölé mozgatja a kurzort, akkor megnézheti a tartalmát - ezek sokszor hivatkozásokat tartalmaznak.
+A hivatkozások tagekkel formázva is megjelennek a forrásszövegben (vagyis \<0> \</0>). Ha a tagek fölé mozgatja a kurzort, akkor megnézheti a tartalmát - ezek sokszor hivatkozásokat tartalmaznak.
 
 A hivatkozásokat mindig másolja át a forrásból, ne változtassa meg a sorrendjüket.
 
@@ -154,7 +154,7 @@ nonce - _Nem fordítható szöveg_
 
 A forrás tartalmaz rövidített tagokat is, melyek csak számként jelennek meg, a tartalmuk nem egyértelmű ránézésre. Ha a kurzort fölé mozgatjuk, akkor látszik, hogy mit tartalmaznak.
 
-Az alábbi példában látszik, hogy a kurzort odamozgatva <0> azt mutatja, hogy `<code>` és egy kódrészletet tartalmaz, így azt nem kell lefordítani.
+Az alábbi példában látszik, hogy a kurzort odamozgatva \<0> azt mutatja, hogy `<code>` és egy kódrészletet tartalmaz, így azt nem kell lefordítani.
 
 ![Example of ambiguous tags.png](./example-of-ambiguous-tags.png)
 

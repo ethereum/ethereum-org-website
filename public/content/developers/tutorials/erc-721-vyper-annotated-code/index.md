@@ -696,7 +696,7 @@ code clearer and therefore easier to secure. So to create your own Vyper ERC-721
 contract](https://github.com/vyperlang/vyper/blob/master/examples/tokens/ERC721.vy) and modify it
 to implement the business logic you want.
 
-# Conclusion {#conclusion}
+## Conclusion {#conclusion}
 
 For review, here are some of the most important ideas in this contract:
 

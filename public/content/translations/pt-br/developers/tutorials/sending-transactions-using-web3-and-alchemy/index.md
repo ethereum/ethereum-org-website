@@ -58,7 +58,7 @@ Isso é o que nós usaremos neste tutorial.
 
 Ok, agora que temos esclarecemos esses pontos, passemos para o tutorial. Sinta-se à vontade para fazer perguntas a qualquer momento no [discord](https://discord.gg/gWuC7zB) do Alchemy!
 
-### 7\. Como enviar transações seguras, otimizadas de gás e privadas? {how-to-send-secure-gas-optimized-and-private-transactions}
+### 7\. Como enviar transações seguras, otimizadas de gás e privadas? {#how-to-send-secure-gas-optimized-and-private-transactions}
 
 - [Alchemy tem um conjunto de APIs para Transações](https://docs.alchemy.com/reference/transact-api-quickstart). Você pode usá-los para reforçar transações, simular transações antes que elas aconteçam, enviar transações privadas e enviar transações otimizadas de gás
 - Você também pode usar a [API de notificação](https://docs.alchemy.com/docs/alchemy-notify) para ser alertado quando sua transação for retirada do mempool e adicionada à cadeia

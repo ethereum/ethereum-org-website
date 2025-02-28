@@ -92,7 +92,7 @@ title="去中心化应用程序和智能合约开发者"
 contentPreview="The Merge was designed to have minimal impact on smart contract and dapp developers."
 id="developers">
 
-合并导致共识层发生变化，其中还包括以下方面的变化：<
+合并导致共识层发生变化，其中还包括以下方面的变化：
 
 <ul>
   <li>区块结构</li>

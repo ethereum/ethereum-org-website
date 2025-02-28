@@ -260,7 +260,7 @@ En el directorio de su proyecto, teclee:
 npm install --save-dev @nomiclabs/hardhat-ethers "ethers@^5.0.0"
 ```
 
-### Paso 13: Actualizar hardhat.config.js {#step-13-update-hardhat.configjs}
+### Paso 13: Actualizar hardhat.config.js {#step-13-update-hardhat-configjs}
 
 Hasta ahora hemos añadido varias dependencias y plugins, por lo que ahora necesitamos actualizar `hardhat.config.js` para que nuestro proyecto sepa de todas ellas.
 

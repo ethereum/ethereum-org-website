@@ -77,7 +77,7 @@ Odată ce suntem în dosarul proiectului nostru, vom folosi npm init pentru a in
     npm init
 
 Nu este prea important cum răspundeți la întrebările de instalare; iată cum am făcut-o noi, ca referință:
-
+```json
     package name: (my-nft)
     version: (1.0.0)
     description: My first NFT!
@@ -100,7 +100,7 @@ Nu este prea important cum răspundeți la întrebările de instalare; iată cum
       "author": "",
       "license": "ISC"
     }
-
+```
 Aprobați package.json și suntem gata să începem!
 
 ## Etapa 7: Instalarea [Hardhat](https://hardhat.org/getting-started/#overview) {#install-hardhat}
@@ -258,6 +258,7 @@ Până acum am adăugat mai multe dependențe și plugin-uri, acum trebuie să a
 
 Actualizați hardhat.config.js pentru a arăta astfel:
 
+```js
     /**
     * @type import('hardhat/config').HardhatUserConfig
     */
@@ -275,6 +276,7 @@ Actualizați hardhat.config.js pentru a arăta astfel:
           }
        },
     }
+```
 
 ## Etapa 14: Compilarea contractului nostru {#compile-contract}
 

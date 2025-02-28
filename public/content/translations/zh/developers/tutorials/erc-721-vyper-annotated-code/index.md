@@ -618,7 +618,7 @@ def burn(_tokenId: uint256):
 
 与 Solidity 相比，Vyper 中没有继承。 这种有意而为之的设计选择，是为了使代码 更清晰，从而更容易受保护。 因此，要创建你自己的 Vyper ERC-721 合约，你可以 利用[此合约](https://github.com/vyperlang/vyper/blob/master/examples/tokens/ERC721.vy)，并修改 它以实现想要的业务逻辑。
 
-# 总结 {#conclusion}
+## 总结 {#conclusion}
 
 回顾一下，下面是此合约中最重要的几点：
 

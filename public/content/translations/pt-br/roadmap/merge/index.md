@@ -92,7 +92,7 @@ title="Dapp e desenvolvedores de contratos inteligentes"
 contentPreview="The Merge was designed to have minimal impact on smart contract and dapp developers."
 id="developers">
 
-A Fusão veio com alterações no consenso, que também inclui alterações relacionadas a:<
+A Fusão veio com alterações no consenso, que também inclui alterações relacionadas a:
 
 <ul>
   <li>estrutura de bloco</li>

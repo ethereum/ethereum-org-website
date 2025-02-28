@@ -167,7 +167,7 @@ Tenemos una detención excepcional si cualquiera de estas condiciones es verdade
 
   La función _W(w,μ)_ es definida más tarde en la ecuación 150. _W(w,μ)_ es verdadero si una de estas condiciones es verdadera:
 
-  - **_w ∈ {CREATE, CREATE2, SSTORE, SELFDESTRUCT}_** Estos códigos de operación cambian el estado, ya sea creando un nuevo contrato, almacenando un valor o destruyendo el contrato actual.
+  - **_w ∈ \{CREATE, CREATE2, SSTORE, SELFDESTRUCT}_** Estos códigos de operación cambian el estado, ya sea creando un nuevo contrato, almacenando un valor o destruyendo el contrato actual.
 
   - **_LOG0≤w ∧ w≤LOG4_** Si somos llamados estáticamente, no podemos emitir entradas de registro. Los código de operación del registro están todos en un rango entre [`LOG0` (A0)](https://www.evm.codes/#a0) y [`LOG4` (A4)](https://www.evm.codes/#a4). El número que figura luego del código de operación del registro especifica cuántos temas contiene la entrada de registro.
   - **_w=CALL ∧ μ<sub>s</sub>[2]≠0_** Puede invocar otro contrato cuando está estático, pero, si lo hace, no puede transferir ETH a este.
@@ -228,7 +228,7 @@ La dirección cuyo saldo necesitamos encontrar es _μ<sub>s</sub>[0] mod 2<sup>1
 
 Si _σ[μ<sub>s</sub>[0] mod 2<sup>160</sup>] ≠ ∅_, significa que hay información sobre esta dirección. En ese caso, _σ[μ<sub>s</sub>[0] mod 2<sup>160</sup>]<sub>b</sub>_ es el saldo de esa dirección. Si _σ[μ<sub>s</sub>[0] mod 2<sup>160</sup>] = ∅_, significa que esta dirección no está inicializada y el saldo es cero. Puede ver el listado de campos de información de la cuenta en la sección 4.1 de la p. 4.
 
-La segunda ecuación, _A'<sub>a</sub> ≡ A<sub>a</sub> ∪ {μ<sub>s</sub>[0] mod 2<sup>160</sup>}_, está relacionada con la diferencia en costo entre el acceso al almacenamiento en caliente (almacenamiento al que se ha accedido recientemente y es probable que esté almacenado en caché) y el almacenamiento en frío (almacenamiento al que no se ha accedido y es probable que esté en almacenamiento más lento que es más caro de recuperar). _A<sub>a</sub>_ es el listado de direcciones accesadas previamente por la transacción, que deberían por lo tanto ser más baratas de acceder, como se define en la sección 6.1 de la p. 8. Puede leer más sobre este tema en [EIP-2929](https://eips.ethereum.org/EIPS/eip-2929).
+La segunda ecuación, _A'<sub>a</sub> ≡ A<sub>a</sub> ∪ \{μ<sub>s</sub>[0] mod 2<sup>160</sup>}_, está relacionada con la diferencia en costo entre el acceso al almacenamiento en caliente (almacenamiento al que se ha accedido recientemente y es probable que esté almacenado en caché) y el almacenamiento en frío (almacenamiento al que no se ha accedido y es probable que esté en almacenamiento más lento que es más caro de recuperar). _A<sub>a</sub>_ es el listado de direcciones accesadas previamente por la transacción, que deberían por lo tanto ser más baratas de acceder, como se define en la sección 6.1 de la p. 8. Puede leer más sobre este tema en [EIP-2929](https://eips.ethereum.org/EIPS/eip-2929).
 
 | Valor | Nemotecnia | δ  | α  | Descripción                                  |
 | -----:| ---------- | -- | -- | -------------------------------------------- |

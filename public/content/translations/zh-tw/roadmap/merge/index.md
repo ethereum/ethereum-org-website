@@ -62,7 +62,7 @@ id="staking-node-operators">
 
 1. 同時運行共識用戶端及執行用戶端；合併之後，無法再使用取得執行資料的第三方端點。
 2. 使用共用的 JWT 金鑰來驗證執行與共識用戶端，以便他們能夠安全地通訊。
-3 設定「費用接收」地址以接收賺取的交易費小費/最大可提取價值 (MEV)。
+3. 設定「費用接收」地址以接收賺取的交易費小費/最大可提取價值 (MEV)。
 
 在完成上述兩點以前，你的節點會顯示為「離線」，直到兩個層皆同步且通過驗證為止。
 
@@ -92,7 +92,7 @@ title="去中心化應用程式和智慧型合約開發者"
 contentPreview="The Merge was designed to have minimal impact on smart contract and dapp developers."
 id="developers">
 
-合併過程中共識機制亦發生變更，包括以下方面的相關變更：<
+合併過程中共識機制亦發生變更，包括以下方面的相關變更：
 
 <ul>
   <li>區塊結構</li>
