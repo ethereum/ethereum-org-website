@@ -25,11 +25,13 @@ export const compile = async ({
   slugArray,
   locale,
   components = {},
+  scope = {},
 }: {
   markdown: string
   slugArray: string[]
   locale: string
   components: MDXRemoteProps["components"]
+  scope?: Record<string, unknown>
 }) => {
   let tocNodeItems: TocNodeType[] = []
   const tocCallback = (toc: TocNodeType): void => {
@@ -58,10 +60,7 @@ export const compile = async ({
     options: {
       parseFrontmatter: true,
       mdxOptions,
-      scope: {
-        // TODO fix this
-        gfissues: [],
-      },
+      scope,
     },
   })
 

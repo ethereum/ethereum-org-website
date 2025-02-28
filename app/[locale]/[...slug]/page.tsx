@@ -5,13 +5,17 @@ import { getMessages, setRequestLocale } from "next-intl/server"
 import I18nProvider from "@/components/I18nProvider"
 import mdComponents from "@/components/MdComponents"
 
+import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { getPostSlugs } from "@/lib/utils/md"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { LOCALES_CODES } from "@/lib/constants"
 
 import { componentsMapping, layoutMapping } from "@/layouts"
+import { fetchGFIs } from "@/lib/api/fetchGFIs"
 import { getPageData } from "@/lib/md/data"
+
+const loadData = dataLoader([["gfissues", fetchGFIs]])
 
 export default async function Page({
   params,
@@ -34,6 +38,8 @@ export default async function Page({
   // Enable static rendering
   setRequestLocale(locale)
 
+  const [gfissues] = await loadData()
+
   const slug = slugArray.join("/")
 
   const {
@@ -48,6 +54,9 @@ export default async function Page({
     // TODO: Address component typing error here (flip `FC` types to prop object types)
     // @ts-expect-error Incompatible component function signatures
     components: { ...mdComponents, ...componentsMapping },
+    scope: {
+      gfissues,
+    },
   })
 
   // Determine the actual layout after we have the frontmatter

@@ -22,6 +22,7 @@ interface GetPageDataParams {
   slug: string
   components: MDXRemoteProps["components"]
   layout?: Layout
+  scope?: Record<string, unknown>
 }
 
 interface PageData {
@@ -38,6 +39,7 @@ export async function getPageData({
   slug,
   components,
   layout: layoutFromProps,
+  scope,
 }: GetPageDataParams): Promise<PageData> {
   const slugArray = slug.split("/")
 
@@ -48,6 +50,7 @@ export async function getPageData({
     slugArray,
     locale,
     components,
+    scope,
   })
 
   const layout = layoutFromProps || frontmatter.template || "static"
