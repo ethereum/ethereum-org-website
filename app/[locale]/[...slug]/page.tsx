@@ -2,23 +2,16 @@ import pick from "lodash.pick"
 import { notFound } from "next/navigation"
 import { getMessages, setRequestLocale } from "next-intl/server"
 
-import { CommitHistory, Lang, ToCItem } from "@/lib/types"
-
 import I18nProvider from "@/components/I18nProvider"
 import mdComponents from "@/components/MdComponents"
 
-import { getFileContributorInfo } from "@/lib/utils/contributors"
 import { getPostSlugs } from "@/lib/utils/md"
-import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { LOCALES_CODES } from "@/lib/constants"
 
 import { componentsMapping, layoutMapping } from "@/layouts"
-import { compile } from "@/lib/md/compile"
-import { importMd } from "@/lib/md/import"
-
-const commitHistoryCache: CommitHistory = {}
+import { getPageData } from "@/lib/md/data"
 
 export default async function Page({
   params,
@@ -43,38 +36,25 @@ export default async function Page({
 
   const slug = slugArray.join("/")
 
-  const { markdown, isTranslated } = await importMd(locale, slug)
-
-  const { content, frontmatter, tocNodeItems } = await compile({
-    markdown,
-    slugArray,
+  const {
+    content,
+    frontmatter,
+    tocItems,
+    lastEditLocaleTimestamp,
+    isTranslated,
+  } = await getPageData({
     locale,
+    slug,
     // TODO: Address component typing error here (flip `FC` types to prop object types)
     // @ts-expect-error Incompatible component function signatures
     components: { ...mdComponents, ...componentsMapping },
   })
 
-  // ignore the first item if there is only one as it is the main heading for the article
-  const tocItems =
-    tocNodeItems.length === 1 && "items" in tocNodeItems[0]
-      ? tocNodeItems[0].items
-      : tocNodeItems
-
+  // Determine the actual layout after we have the frontmatter
   const layout = frontmatter.template || "static"
   const Layout = layoutMapping[layout]
 
-  const { lastUpdatedDate } = await getFileContributorInfo(
-    slug,
-    locale,
-    frontmatter.lang,
-    layout,
-    commitHistoryCache
-  )
-  const lastEditLocaleTimestamp = getLocaleTimestamp(
-    locale as Lang,
-    lastUpdatedDate
-  )
-
+  // Get i18n messages
   const allMessages = await getMessages({ locale })
   const requiredNamespaces = getRequiredNamespacesForPage(slug, layout)
   const messages = pick(allMessages, requiredNamespaces)
@@ -84,7 +64,7 @@ export default async function Page({
       <Layout
         slug={slug}
         frontmatter={frontmatter}
-        tocItems={tocItems as ToCItem[]}
+        tocItems={tocItems}
         lastEditLocaleTimestamp={lastEditLocaleTimestamp}
         contentNotTranslated={!isTranslated}
       >
@@ -97,14 +77,10 @@ export default async function Page({
 export async function generateStaticParams() {
   const slugs = await getPostSlugs("/", /\/developers/)
 
-  // Generate page paths for each supported locale
   return LOCALES_CODES.flatMap((locale) =>
-    slugs.map((slug) => {
-      return {
-        // Splitting nested paths to generate proper slug
-        slug: slug.split("/").slice(1),
-        locale,
-      }
-    })
+    slugs.map((slug) => ({
+      slug: slug.split("/").slice(1),
+      locale,
+    }))
   )
 }
