@@ -49,18 +49,26 @@ export const getPageContributorInfo = async (
   locale: Lang,
   cache: CommitHistory
 ) => {
-  const gitContributors = await fetchAndCacheGitContributors(
-    join("src/pages/[locale]", pagePath),
-    cache
+  const gitContributors = [
+    ...(await fetchAndCacheGitContributors(
+      join("src/pages/[locale]", pagePath),
+      cache
+    )),
+    ...(await fetchAndCacheGitContributors(join("src/pages", pagePath), cache)),
+  ]
+
+  const uniqueGitContributors = gitContributors.filter(
+    (contributor, index, self) =>
+      index === self.findIndex((t) => t.login === contributor.login)
   )
 
   const latestCommitDate = getLastModifiedDate(pagePath, locale!)
-  const gitHubLastEdit = gitContributors[0]?.date
+  const gitHubLastEdit = uniqueGitContributors[0]?.date
 
   const lastEditLocaleTimestamp = getLocaleTimestamp(
     locale,
     gitHubLastEdit || latestCommitDate
   )
 
-  return { contributors: gitContributors, lastEditLocaleTimestamp }
+  return { contributors: uniqueGitContributors, lastEditLocaleTimestamp }
 }
