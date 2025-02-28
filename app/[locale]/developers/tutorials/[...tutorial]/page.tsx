@@ -6,6 +6,7 @@ import { getMessages, setRequestLocale } from "next-intl/server"
 import I18nProvider from "@/components/I18nProvider"
 import mdComponents from "@/components/MdComponents"
 
+import { dateToString } from "@/lib/utils/date"
 import { getPostSlugs } from "@/lib/utils/md"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
@@ -43,6 +44,11 @@ export default async function Page({
     components: { ...mdComponents, ...tutorialsComponents },
     layout,
   })
+
+  // If the page has a published date, format it
+  if ("published" in frontmatter) {
+    frontmatter.published = dateToString(frontmatter.published)
+  }
 
   // Get i18n messages
   const allMessages = await getMessages({ locale })
