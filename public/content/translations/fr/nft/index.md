@@ -1,5 +1,6 @@
 ---
 title: Jetons non fongibles (NFT)
+metaTitle: Que sont les NFT ? | Avantages et utilisation
 description: Un aperçu des NFT sur Ethereum
 lang: fr
 template: use-cases
@@ -14,17 +15,23 @@ summaryPoint3: Propulsés par des contrats intelligents sur la blockchain Ethere
 
 ## Que sont les NFT ? {#what-are-nfts}
 
-Les NFT sont des jetons qui sont **individuellement uniques**. Chaque NFT a des propriétés différentes (non fongibles) et sa rareté est prouvée. Ils diffèrent des jetons tels que [l'ETH](/glossary/#ether) ou d'autres jetons basés sur Ethereum comme l'USDC, où chaque jeton est identique et possède les mêmes propriétés (« fongibles »). Vous ne vous souciez pas de savoir quel type de billet (ou d'ETH) vous possédez dans votre portefeuille, parce qu'ils sont tous identiques et valent tous la même chose. Cependant, vous vous souciez de savoir quel NFT spécifique vous possédez, car ils ont tous des propriétés individuelles qui les distinguent des autres ("non fongibles").
+Les NFT sont des jetons qui sont **individuellement uniques**. Chaque NFT a des propriétés différentes (non fongibles) et sa rareté est prouvée. Ils diffèrent des jetons tels que
+
+l'ETH</b> ou d'autres jetons basés sur Ethereum comme l'USDC, où chaque jeton est identique et possède les mêmes propriétés (« fongibles »). Vous ne vous souciez pas de savoir quel type de billet (ou d'ETH) vous possédez dans votre portefeuille, parce qu'ils sont tous identiques et valent tous la même chose. Cependant, vous vous souciez de savoir quel NFT spécifique vous possédez, car ils ont tous des propriétés individuelles qui les distinguent des autres ("non fongibles").</p> 
 
 Le caractère unique de chaque NFT permet la tokenisation de choses telles que l'art, les objets de collection ou même l'immobilier, où un NFT unique et spécifique représente un objet numérique ou réel unique et spécifique. La propriété d'un actif est publiquement vérifiable sur la [blockchain](/glossary/#blockchain) Ethereum.
 
 <YouTube id="Xdkkux6OxfM" />
+
+
 
 ## L'internet des ressources {#internet-of-assets}
 
 Les NFT et Ethereum résolvent certains des problèmes qui se posent aujourd'hui sur l'internet. Alors que tout devient de plus en plus numérique, il y a un besoin de reproduire les propriétés des objets physiques tels que la rareté, l'unicité et la preuve de propriété d'une manière qui n'est pas contrôlée par une entité centralisée. Par exemple, avec les NFT, vous pouvez posséder un fichier mp3 de musique dans toutes les applications basées sur Ethereum et ne pas être lié à l'application musicale spécifique d'une société comme Spotify ou Apple Music. Vous pouvez posséder un identifiant de média social que vous pouvez vendre ou échanger, mais **qui ne peut pas vous être retiré arbitrairement** par un fournisseur de plateforme.
 
 Voici à quoi ressemble un internet de NFT par rapport à l'internet que la plupart d'entre nous utilisons aujourd'hui...
+
+
 
 ### Une comparaison {#nft-comparison}
 
@@ -36,6 +43,9 @@ Voici à quoi ressemble un internet de NFT par rapport à l'internet que la plup
 | Les NFT sont des [contrats intelligents](/glossary/#smart-contract) sur Ethereum. Cela signifie qu'ils **peuvent facilement être utilisés dans d'autres contrats intelligents** et applications sur Ethereum ! | Les entreprises qui possèdent des objets numériques **requièrent généralement leurs propres infrastructure de type « jardin clos »**.                                                                         |
 | Les **créateurs de contenu peuvent vendre leur travail n'importe où** et accéder à un marché mondial.                                                                                                          | Les créateurs dépendent de l'infrastructure et de la distribution des plates-formes qu'ils utilisent. Celles-ci sont souvent soumises à des conditions d'utilisation et à des **restrictions géographiques**. |
 | Les créateurs de NFT **peuvent conserver les droits** de propriété sur leur propre travail et programmer les redevances directement dans le contrat NFT.                                                       | Les plateformes, telles que **les services de streaming musical, conservent la majorité des profits issus des ventes**.                                                                                       |
+
+
+
 
 ## Comment les NFT sont-ils utilisés ? {#nft-use-cases}
 
@@ -73,6 +83,8 @@ Ce site web dispose également d'un nom de domaine alternatif NFT, **ethereum.et
 
 <Divider />
 
+
+
 ## Comment fonctionnent les NFT ? {#how-nfts-work}
 
 Les NFT, comme tous les objets numériques de la blockchain Ethereum, sont créés par un programme informatique spécial basé sur Ethereum appelé « contrat intelligent ». Ces contrats suivent certaines règles, comme les normes [ERC-721](/glossary/#erc-721) ou [ERC-1155](/glossary/#erc-1155), qui déterminent ce que le contrat peut faire.
@@ -86,6 +98,8 @@ Le contrat intelligent NFT peut accomplir quelques tâches essentielles :
 Lorsque quelqu'un "crée" ou "frappe" un NFT, il demande au contrat intelligent de lui donner la propriété d'un NFT particulier. Cette information est stockée publiquement et en toute sécurité dans la blockchain.
 
 En outre, le créateur du contrat peut ajouter des règles supplémentaires. Elles peuvent limiter le nombre d'exemplaires d'un certain NFT ou décider qu'ils recevront une petite redevance chaque fois que le NFT changera de mains.
+
+
 
 ### Sécurité NFT {#nft-security}
 
@@ -104,6 +118,8 @@ Les questions de sécurité concernant les NFT sont le plus souvent liées aux e
 - [Norme de jeton ERC-721](/developers/docs/standards/tokens/erc-721/)
 - [Norme de jeton ERC-1155](/developers/docs/standards/tokens/erc-1155/)
 - [Applications et outils NFT populaires](https://www.ethereum-ecosystem.com/blockchains/ethereum/nfts)
+
+
 
 ## Autres ressources {#other-resources}
 
