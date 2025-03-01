@@ -31,6 +31,7 @@ import IconEthGlyphBlack from "@/public/images/resources/eth-glyph-black.png"
 import IconEthGlyphBlueCircle from "@/public/images/resources/eth-glyph-blue-circle.png"
 import IconEthGlyphEOrg from "@/public/images/resources/eth-glyph-e-org.png"
 import IconEthGlyphRainbowFrame from "@/public/images/resources/eth-glyph-rainbow.frame.png"
+import IconEtherealize from "@/public/images/resources/etherealize.png"
 import IconEtherscan from "@/public/images/resources/etherscan.png"
 import IconEthproofs from "@/public/images/resources/ethproofs.png"
 import IconEthstaker from "@/public/images/resources/ethstaker.png"
@@ -44,6 +45,7 @@ import IconRelayscan from "@/public/images/resources/relayscan.png"
 import IconRwa from "@/public/images/resources/rwa.png"
 import IconStablecoinsWtf from "@/public/images/resources/stablecoins-wtf.png"
 import IconSupermajority from "@/public/images/resources/supermajority.png"
+import IconTxCity from "@/public/images/resources/txcity.png"
 import IconUltrasoundMoney from "@/public/images/resources/ultrasound-money.png"
 import IconVisaOnchainAnalytics from "@/public/images/resources/visa-onchain-analytcs.png"
 
@@ -136,7 +138,7 @@ export const useResources = ({ txCostsMedianUsd }): DashboardSection[] => {
           description: t(
             "page-resources-block-explorers-blockscout-description"
           ),
-          href: "https://ethereum.blockscout.com",
+          href: "https://eth.blockscout.com",
           imgSrc: IconBlockscout,
         },
         {
@@ -159,7 +161,7 @@ export const useResources = ({ txCostsMedianUsd }): DashboardSection[] => {
           title: "Txcity.io",
           description: t("page-resources-block-explorers-txcity-description"),
           href: "https://txcity.io/",
-          imgSrc: IconEthGlyphBlueCircle,
+          imgSrc: IconTxCity,
         },
       ],
     },
@@ -171,7 +173,7 @@ export const useResources = ({ txCostsMedianUsd }): DashboardSection[] => {
           title: "Etherealize Dashboard",
           description: t("page-resources-eth-asset-etherealize-description"),
           href: "https://dashboard.etherealize.io/",
-          imgSrc: IconEthGlyphBlueCircle,
+          imgSrc: IconEtherealize,
         },
         {
           title: "Ultra Sound Money",
