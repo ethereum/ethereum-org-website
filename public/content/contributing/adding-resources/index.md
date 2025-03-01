@@ -10,8 +10,6 @@ We want to make sure we list the best resources possible while keeping users saf
 
 Anyone is free to suggest new resources to add to the resource dashboard on ethereum.org, currently found at [ethereum.org/resources](/resources/).
 
-**Please only suggest new additions for this page.**
-
 Although we welcome new additions, the current resources were chosen based on an experience we're trying to create for our users. These are based on some of our design principles:
 
 - _Inspirational_: anything on ethereum.org should offer something new to users
