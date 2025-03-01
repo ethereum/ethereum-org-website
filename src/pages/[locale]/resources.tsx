@@ -119,14 +119,14 @@ const ResourcesPage = ({ txCostsMedianUsd }) => {
           {t("page-resources-whats-on-this-page")}
         </div>
         <nav className="mx-4 flex max-w-full gap-1 overflow-x-auto bg-background p-2 shadow md:max-w-[calc(100%-2rem)] md:rounded-2xl md:border md:p-0.5 md:shadow-lg">
-          {resourceSections.map(({ key, title }) => (
+          {resourceSections.map(({ key, title, icon }) => (
             <ButtonLink
               key={key}
               href={`#${key}`}
               variant="ghost"
               isSecondary
               className={cn(
-                "relative text-nowrap rounded-xl px-4 py-2 text-sm",
+                "relative text-nowrap rounded-xl px-4 py-2 text-sm [&_svg]:shrink-0 [&_svg]:text-sm",
                 activeSection === key && "!text-primary"
               )}
             >
@@ -136,19 +136,20 @@ const ResourcesPage = ({ txCostsMedianUsd }) => {
                   className="absolute inset-0 z-0 rounded-xl bg-primary-low-contrast"
                 />
               )}
+              {icon && <span className="z-10 text-lg">{icon}</span>}
               <span className="relative z-10">{title}</span>
             </ButtonLink>
           ))}
         </nav>
       </div>
 
-      {resourceSections.map(({ key, icon, title, boxes }) => (
+      {resourceSections.map(({ key, icon, title: sectionTitle, boxes }) => (
         <section id={key} key={key} className="mb-16 scroll-mt-40">
           <div className="group flex w-full items-center gap-3 border-b bg-transparent px-4 py-6">
-            <div className="grid size-12 place-items-center rounded-lg border border-border-low-contrast text-2xl">
+            <div className="grid size-12 place-items-center rounded-lg border border-border-low-contrast text-2xl [&_svg]:shrink-0">
               {icon || <StackIcon />}
             </div>
-            <h2 className="flex-1 text-start font-black">{title}</h2>
+            <h2 className="flex-1 text-start font-black">{sectionTitle}</h2>
           </div>
           <div className="grid grid-cols-1 gap-8 px-4 pb-12 pt-8 md:pb-12 md:pt-8 lg:grid-cols-2">
             {boxes.map(({ title, metric, items, className }) => (
