@@ -245,6 +245,8 @@ const ListenToPlayer = ({ slug }: { slug: string }) => {
               playbackSpeed={playbackSpeed}
               handlePlaybackSpeed={handlePlaybackSpeed}
               handleCloseWidget={handleCloseWidget}
+              currentTrackIndex={currentTrackIndex}
+              totalTracks={playlist.length}
             />
           </div>
         </div>

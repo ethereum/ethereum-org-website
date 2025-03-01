@@ -30,6 +30,8 @@ interface PlayerWidgetProps {
   handleCloseWidget: () => void
   isExpanded: boolean
   setIsExpanded: (isExpanded: boolean) => void
+  currentTrackIndex: number
+  totalTracks: number
 }
 
 const PlayerWidget = ({
@@ -48,6 +50,8 @@ const PlayerWidget = ({
   handleCloseWidget,
   isExpanded,
   setIsExpanded,
+  currentTrackIndex,
+  totalTracks,
 }: PlayerWidgetProps) => {
   const [isDragging, setIsDragging] = useState(false)
   const scrubBarRef = useRef<HTMLDivElement>(null)
@@ -195,7 +199,10 @@ const PlayerWidget = ({
           </div>
           <Tooltip content={"Previous"}>
             <button
-              className="cursor-pointer text-2xl text-disabled hover:text-body"
+              className={cn(
+                "cursor-pointer text-2xl hover:text-primary",
+                currentTrackIndex === 0 ? "text-disabled" : "text-body-medium"
+              )}
               onClick={handlePrevious}
               title="Previous"
               aria-label={"Previous"}
@@ -215,7 +222,12 @@ const PlayerWidget = ({
           </Tooltip>
           <Tooltip content={"Next"}>
             <button
-              className="cursor-pointer text-2xl text-disabled hover:text-body"
+              className={cn(
+                "cursor-pointer text-2xl hover:text-primary",
+                currentTrackIndex === totalTracks - 1
+                  ? "text-disabled"
+                  : "text-body-medium"
+              )}
               onClick={handleNext}
               title="Next"
               aria-label={"Next"}
