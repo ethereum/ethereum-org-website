@@ -45,7 +45,7 @@ Mielőtt elmerülne a keretrendszerekben, javasoljuk, hogy olvassa át a bevezet
 - [Dokumentáció](https://docs.web3j.io)
 - [GitHub](https://github.com/web3j/web3j)
 
-**ethers-kt –** **_Async, nagy teljesítményű Kotlin/Java/Android könyvtár EVM-alapú blokkláncokhoz._**
+<strong x-id=„1”>ethers-kt –</strong> **_Async, nagy teljesítményű Kotlin/Java/Android könyvtár EVM-alapú blokkláncokhoz._**
 
 - [GitHub](https://github.com/Kr1ptal/ethers-kt)
 - [Példák](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
@@ -131,6 +131,14 @@ Mielőtt elmerülne a keretrendszerekben, javasoljuk, hogy olvassa át a bevezet
 - [Dokumentáció](https://ackeeblockchain.com/wake/docs/latest/)
 - [GitHub](https://github.com/Ackee-Blockchain/wake)
 - [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity)
+
+**Veramo -** **_Egy nyílt forráskódú, moduláris és agnosztikus keretrendszer, amely megkönnyíti a decentralizált alkalmazások fejlesztői számára a decentralizált identitások és ellenőrizhető hitelesítő adatok beépítését az alkalmazásaikba._**
+
+- [Honlap](https://veramo.io/)
+- [Dokumentáció](https://veramo.io/docs/basics/introduction)
+- [GitHub](https://github.com/uport-project/veramo)
+- [Discord](https://discord.com/invite/FRRBdjemHV)
+- [NPM-csomag](https://www.npmjs.com/package/@veramo/core)
 
 ## További olvasnivaló {#further-reading}
 
