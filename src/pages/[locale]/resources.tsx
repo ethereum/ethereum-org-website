@@ -4,6 +4,7 @@ import { FaGithub } from "react-icons/fa6"
 
 import type { BasePageProps, Lang, Params } from "@/lib/types"
 
+import BannerNotification from "@/components/Banners/BannerNotification"
 import { HubHero } from "@/components/Hero"
 import StackIcon from "@/components/icons/stack.svg"
 import MainArticle from "@/components/MainArticle"
@@ -12,6 +13,7 @@ import { ResourceItem, ResourcesContainer } from "@/components/Resources"
 import { useResources } from "@/components/Resources/useResources"
 import Translation from "@/components/Translation"
 import { ButtonLink } from "@/components/ui/buttons/Button"
+import Link from "@/components/ui/Link"
 import { Section } from "@/components/ui/section"
 
 import { cn } from "@/lib/utils/cn"
@@ -92,6 +94,18 @@ const ResourcesPage = ({ txCostsMedianUsd }) => {
         description={t("page-resources-meta-description")}
         image="/images/heroes/guides-hub-hero.jpg"
       />
+
+      <BannerNotification shouldShow>
+        {t("page-resources-banner-notification-message")}{" "}
+        <Link
+          href={new URL(
+            "issues/new?title=Resource%20dashboard%20feedback",
+            GITHUB_REPO_URL
+          ).toString()}
+        >
+          {t("page-resources-share-feedback")}
+        </Link>
+      </BannerNotification>
 
       <HubHero
         title={t("page-resources-hero-title")}

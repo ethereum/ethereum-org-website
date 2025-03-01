@@ -81,5 +81,7 @@
   "page-resources-contribute-description": "This dashboard is a living page that requires frequent updates. Help find the best resources to give an overview of the Ethereum ecosystem.",
   "page-resources-suggest-resource": "Suggest a resource",
   "page-resources-found-bug": "Found a bug",
-  "page-resources-whats-on-this-page": "What's on this page"
+  "page-resources-whats-on-this-page": "What's on this page",
+  "page-resources-banner-notification-message": "Resources dashboard is new!",
+  "page-resources-share-feedback": "Please share your feedback with us"
 }
