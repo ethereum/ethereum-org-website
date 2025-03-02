@@ -12,9 +12,30 @@ const StartWithEthereumFlow = () => {
   const swiperRef = useRef<SwiperRef>(null)
   const [activeIndex, setActiveIndex] = useState(1)
   const [totalSlides, setTotalSlides] = useState(0)
+  const [slideHeights, setSlideHeights] = useState<number[]>([])
 
   const handleInit = (swiper) => {
     setTotalSlides(swiper.slides.length)
+
+    updateSlideHeights(swiper)
+
+    const resizeObserver = new ResizeObserver(() => {
+      updateSlideHeights(swiper)
+    })
+
+    swiper.slides.forEach((slide) => {
+      resizeObserver.observe(slide)
+    })
+
+    swiper.on("destroy", () => {
+      resizeObserver.disconnect()
+    })
+  }
+
+  // Separate function to update slide heights
+  const updateSlideHeights = (swiper) => {
+    const heights = swiper.slides.map((slide) => slide.offsetHeight)
+    setSlideHeights(heights)
   }
 
   const handleSlideChange = (swiper) => {
@@ -58,11 +79,17 @@ const StartWithEthereumFlow = () => {
             "border border-[#ebe0fd] bg-gradient-to-r p-4 sm:p-12 dark:border-[#1c112f]"
           )}
         >
-          <DownloadAWallet
-            handleNext={handleNext}
-            stepIndex={activeIndex}
-            totalSteps={totalSlides}
-          />
+          <div
+            style={{
+              maxHeight: `calc(${slideHeights[activeIndex - 1]}px - ${activeIndex - 1 === 0 ? 0 : 100}px)`,
+            }}
+          >
+            <DownloadAWallet
+              handleNext={handleNext}
+              stepIndex={activeIndex}
+              totalSteps={totalSlides}
+            />
+          </div>
         </SwiperSlide>
         <SwiperSlide
           className={cn(
@@ -70,11 +97,17 @@ const StartWithEthereumFlow = () => {
             "border border-[#b2e2de] bg-gradient-to-b p-4 sm:p-12 dark:border-[#083935] dark:bg-gradient-to-t"
           )}
         >
-          <ConnectYourWallet
-            handleNext={handleNext}
-            stepIndex={activeIndex}
-            totalSteps={totalSlides}
-          />
+          <div
+            style={{
+              maxHeight: `calc(${slideHeights[activeIndex - 1]}px - ${activeIndex - 1 === 1 ? 0 : 100}px)`,
+            }}
+          >
+            <ConnectYourWallet
+              handleNext={handleNext}
+              stepIndex={activeIndex}
+              totalSteps={totalSlides}
+            />
+          </div>
         </SwiperSlide>
         <SwiperSlide
           className={cn(
@@ -82,7 +115,13 @@ const StartWithEthereumFlow = () => {
             "border border-[#d7e1fc] bg-gradient-to-b p-4 sm:p-12 dark:border-[#192853] dark:bg-gradient-to-t"
           )}
         >
-          <LetUseSomeApps stepIndex={activeIndex} totalSteps={totalSlides} />
+          <div
+            style={{
+              maxHeight: `calc(${slideHeights[activeIndex - 1]}px - ${activeIndex - 1 === 2 ? 0 : 100}px)`,
+            }}
+          >
+            <LetUseSomeApps stepIndex={activeIndex} totalSteps={totalSlides} />
+          </div>
         </SwiperSlide>
       </Swiper>
     </SwiperContainer>
