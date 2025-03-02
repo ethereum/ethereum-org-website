@@ -555,7 +555,7 @@
     "href": "https://ethereumsf.org/",
     "location": "San Francisco, US",
     "description": "ETHSF&#39;25 is a decentralized, week-long event series across the Bay Area, featuring events focused on d/acc, blockchain, AI and beyond.",
-    "imageUrl": ""
+    "imageUrl": "https://static.wixstatic.com/media/4ae173_bcefbce48625440083d62f9dc78450b6%7Emv2.png/v1/fit/w_2500,h_1330,al_c/4ae173_bcefbce48625440083d62f9dc78450b6%7Emv2.png"
   },
   {
     "title": "Building Blocks",
@@ -682,5 +682,41 @@
     "location": "Bratislava, SVK",
     "description": "Two-day conference and hackathon focused on sharing knowledge and sparking innovative ideas aimed at energizing the entire ethereum ecosystem.",
     "imageUrl": "https://framerusercontent.com/assets/IBAFZwu44FpNo95n3OoOapeFUyw.png"
+  },
+  {
+    "title": "Invisible Garden",
+    "startDate": "2025-04-21",
+    "endDate": "2025-05-31",
+    "href": "https://invisible.garden",
+    "location": "San Jose, Costa Rica",
+    "description": "",
+    "imageUrl": ""
+  },
+  {
+    "title": "Code Africa Conference",
+    "startDate": "2025-05-19",
+    "endDate": "2025-05-23",
+    "href": "https://codeafrica.io",
+    "location": "Nairobi,  Kenya",
+    "description": "",
+    "imageUrl": ""
+  },
+  {
+    "title": "ETHVietnam 2025",
+    "startDate": "2025-05-21",
+    "endDate": "2025-05-25",
+    "href": "https://eth-vietnam.com",
+    "location": "HCMC, VNM",
+    "description": "",
+    "imageUrl": "http://static1.squarespace.com/static/629856e64f44db3799f8e3f6/t/65c04e1059e3477a33a1c105/1707101732532/COVER.png?format=1500w"
+  },
+  {
+    "title": "Ethsafari",
+    "startDate": "2025-09-07",
+    "endDate": "2025-09-14",
+    "href": "https://g.co/kgs/gQYT2iY",
+    "location": "Nairobi, KEN",
+    "description": "",
+    "imageUrl": ""
   }
 ]
