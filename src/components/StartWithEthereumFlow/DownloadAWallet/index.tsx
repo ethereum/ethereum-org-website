@@ -90,7 +90,7 @@ const DownloadAWallet = ({
                       height={30}
                     />
                   </div>
-                  <p className="text-body-medium">{wallet.name}</p>
+                  <p className="text-body">{wallet.name}</p>
                 </div>
                 <ButtonLink
                   href={wallet.url}
