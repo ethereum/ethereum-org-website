@@ -44,6 +44,15 @@ const StartWithEthereumFlow = () => {
 
   const handleNext = () => {
     swiperRef.current?.swiper.slideNext()
+    const container = document.getElementById("start-with-ethereum-flow")
+
+    if (container) {
+      const containerRect = container.getBoundingClientRect()
+      window.scrollTo({
+        top: window.scrollY + containerRect.top - 90,
+        behavior: "smooth",
+      })
+    }
   }
 
   return (

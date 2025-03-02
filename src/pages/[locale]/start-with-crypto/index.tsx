@@ -78,7 +78,7 @@ const StartWithCryptoPage = () => {
           </p>
         </div>
 
-        <div className="flex flex-col gap-12">
+        <div id="start-with-ethereum-flow" className="flex flex-col gap-12">
           <StartWithEthereumFlow />
         </div>
 
