@@ -145,7 +145,7 @@ const LetUseSomeApps = ({
             </div>
           ))}
         </div>
-        <div className="flex lg:hidden">
+        <div className="flex justify-center lg:hidden">
           <Link
             href="/dapps"
             className="font-bold no-underline"
