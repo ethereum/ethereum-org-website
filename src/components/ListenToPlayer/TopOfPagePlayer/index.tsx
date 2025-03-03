@@ -18,7 +18,7 @@ const TopOfPagePlayer = ({
   handlePlayPause,
 }: TopOfPagePlayerProps) => {
   return (
-    <div className="inline-block rounded-lg bg-background-low p-2">
+    <div className="inline-block w-full rounded-lg bg-background-low p-2 lg:w-auto">
       <div
         className="flex cursor-pointer flex-row items-center gap-2 text-primary hover:text-primary-hover"
         onClick={() => {

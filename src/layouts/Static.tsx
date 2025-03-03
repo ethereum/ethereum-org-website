@@ -71,6 +71,7 @@ export const staticComponents = {
   SocialListItem,
   TranslationChartImage,
   UpcomingEventsList,
+  ListenToPlayer,
 }
 
 type StaticLayoutProps = ChildOnlyProp &
@@ -121,9 +122,6 @@ export const StaticLayout = ({
                   {lastEditLocaleTimestamp}
                 </p>
               )}
-              <div>
-                <ListenToPlayer slug={pathname} />
-              </div>
             </Stack>
           )}
 
