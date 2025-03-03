@@ -583,9 +583,11 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
         <Content>
           <CalloutBanner
             className="mx-0 mb-16 mt-8"
-            titleKey={"page-stablecoins-stablecoins-dapp-callout-title"}
+            titleKey={
+              "page-stablecoins:page-stablecoins-stablecoins-dapp-callout-title"
+            }
             descriptionKey={
-              "page-stablecoins-stablecoins-dapp-callout-description"
+              "page-stablecoins:page-stablecoins-stablecoins-dapp-callout-description"
             }
             image={dogeComputerImg}
             imageWidth={600}
