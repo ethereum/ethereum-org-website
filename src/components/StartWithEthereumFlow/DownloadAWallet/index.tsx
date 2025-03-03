@@ -52,6 +52,7 @@ const DownloadAWallet = ({
           </div>
           <Button
             disabled={!hasWallet}
+            className="w-fit px-10"
             onClick={() => {
               handleNext()
               trackCustomEvent({
@@ -61,7 +62,7 @@ const DownloadAWallet = ({
               })
             }}
           >
-            Next
+            Continue
           </Button>
         </div>
       </div>
@@ -92,12 +93,7 @@ const DownloadAWallet = ({
                   </div>
                   <p className="text-body">{wallet.name}</p>
                 </div>
-                <ButtonLink
-                  href={wallet.url}
-                  variant="outline"
-                  isSecondary
-                  size="sm"
-                >
+                <ButtonLink href={wallet.url} variant="outline" size="sm">
                   Get wallet
                 </ButtonLink>
               </div>
@@ -121,6 +117,7 @@ const DownloadAWallet = ({
           </div>
           <Button
             disabled={!hasWallet}
+            className="w-full px-10 lg:w-fit"
             onClick={() => {
               handleNext()
               trackCustomEvent({
@@ -130,7 +127,7 @@ const DownloadAWallet = ({
               })
             }}
           >
-            Next
+            Continue
           </Button>
         </div>
       </div>
