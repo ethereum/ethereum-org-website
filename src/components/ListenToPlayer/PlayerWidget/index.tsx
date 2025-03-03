@@ -12,7 +12,22 @@ import {
 import Tooltip from "@/components/Tooltip"
 
 import { cn } from "@/lib/utils/cn"
+import { isMobile } from "@/lib/utils/isMobile"
 import { trackCustomEvent } from "@/lib/utils/matomo"
+
+const PlayerButton = ({
+  children,
+  tooltipContent,
+}: {
+  children: React.ReactNode
+  tooltipContent: string
+}) => {
+  return isMobile() ? (
+    children
+  ) : (
+    <Tooltip content={tooltipContent}>{children}</Tooltip>
+  )
+}
 
 interface PlayerWidgetProps {
   title: string
@@ -167,7 +182,7 @@ const PlayerWidget = ({
         </div>
         <div className="flex items-center justify-between gap-10">
           <div className="relative">
-            <Tooltip content={"Playback speed"}>
+            <PlayerButton tooltipContent={"Playback speed"}>
               <button
                 className="w-[24px] cursor-pointer text-right text-xs font-bold leading-base text-body-medium hover:text-body"
                 onClick={() => setShowSpeedMenu(!showSpeedMenu)}
@@ -176,7 +191,7 @@ const PlayerWidget = ({
               >
                 {playbackSpeed}x
               </button>
-            </Tooltip>
+            </PlayerButton>
             {showSpeedMenu && (
               <div
                 ref={speedMenuRef}
@@ -197,7 +212,7 @@ const PlayerWidget = ({
               </div>
             )}
           </div>
-          <Tooltip content={"Previous"}>
+          <PlayerButton tooltipContent={"Previous"}>
             <button
               className={cn(
                 "cursor-pointer text-2xl hover:text-primary",
@@ -209,8 +224,8 @@ const PlayerWidget = ({
             >
               <ArrowIcon />
             </button>
-          </Tooltip>
-          <Tooltip content={isPlaying ? "Pause" : "Play"}>
+          </PlayerButton>
+          <PlayerButton tooltipContent={isPlaying ? "Pause" : "Play"}>
             <button
               className="cursor-pointer text-[32px] text-primary hover:text-primary-hover"
               onClick={handlePlayPause}
@@ -219,8 +234,8 @@ const PlayerWidget = ({
             >
               {isPlaying ? <PauseCircleIcon /> : <PlayCircleIcon />}
             </button>
-          </Tooltip>
-          <Tooltip content={"Next"}>
+          </PlayerButton>
+          <PlayerButton tooltipContent={"Next"}>
             <button
               className={cn(
                 "cursor-pointer text-2xl hover:text-primary",
@@ -234,8 +249,10 @@ const PlayerWidget = ({
             >
               <ArrowIcon className="rotate-180" />
             </button>
-          </Tooltip>
-          <Tooltip content={autoplay ? "Disable autoplay" : "Enable autoplay"}>
+          </PlayerButton>
+          <PlayerButton
+            tooltipContent={autoplay ? "Disable autoplay" : "Enable autoplay"}
+          >
             <button
               className={cn(
                 "cursor-pointer text-base",
@@ -248,7 +265,7 @@ const PlayerWidget = ({
             >
               <AutoplayIcon />
             </button>
-          </Tooltip>
+          </PlayerButton>
         </div>
       </div>
 
@@ -259,7 +276,7 @@ const PlayerWidget = ({
         )}
       >
         <div className="flex flex-row items-center gap-2">
-          <Tooltip content={isPlaying ? "Pause" : "Play"}>
+          <PlayerButton tooltipContent={isPlaying ? "Pause" : "Play"}>
             <button
               className="cursor-pointer text-[32px] text-primary hover:text-primary-hover"
               onClick={handlePlayPause}
@@ -268,13 +285,13 @@ const PlayerWidget = ({
             >
               {isPlaying ? <PauseCircleIcon /> : <PlayCircleIcon />}
             </button>
-          </Tooltip>
+          </PlayerButton>
           <div className="text-sm text-body-medium">
             {`${Math.floor(timeRemaining / 60)}:${String(Math.floor(timeRemaining % 60)).padStart(2, "0")}`}
           </div>
         </div>
         <div className="flex flex-row gap-6">
-          <Tooltip content={"Expand"}>
+          <PlayerButton tooltipContent={"Expand"}>
             <button
               className="cursor-pointer text-disabled hover:text-body"
               title={"Expand"}
@@ -290,8 +307,8 @@ const PlayerWidget = ({
             >
               <ExpandIcon />
             </button>
-          </Tooltip>
-          <Tooltip content={"Close"}>
+          </PlayerButton>
+          <PlayerButton tooltipContent={"Close"}>
             <button
               className="cursor-pointer text-disabled hover:text-body"
               title={"Close"}
@@ -303,7 +320,7 @@ const PlayerWidget = ({
             >
               <IoClose />
             </button>
-          </Tooltip>
+          </PlayerButton>
         </div>
       </div>
     </div>
