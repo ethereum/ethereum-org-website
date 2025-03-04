@@ -2,9 +2,10 @@ import { mainnet } from "wagmi/chains"
 import { getDefaultConfig } from "@rainbow-me/rainbowkit"
 import {
   coinbaseWallet,
-  mewWallet,
+  metaMaskWallet,
   oneKeyWallet,
   rainbowWallet,
+  walletConnectWallet,
   zerionWallet,
 } from "@rainbow-me/rainbowkit/wallets"
 
@@ -18,9 +19,10 @@ export const rainbowkitConfig = getDefaultConfig({
       wallets: [
         coinbaseWallet,
         rainbowWallet,
-        mewWallet,
+        metaMaskWallet,
         zerionWallet,
         oneKeyWallet,
+        walletConnectWallet,
       ],
     },
   ],
