@@ -181,7 +181,7 @@ const getRequiredNamespacesForPath = (relativePath: string) => {
     requiredNamespaces = [...requiredNamespaces, "table"]
   }
 
-  if (path.startsWith("/start-with-crypto/")) {
+  if (path.startsWith("/start/")) {
     requiredNamespaces = [...requiredNamespaces]
   }
 

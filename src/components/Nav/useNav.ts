@@ -125,7 +125,7 @@ export const useNav = () => {
             {
               label: t("nav-start-with-crypto-title"),
               description: t("nav-start-with-crypto-description"),
-              href: "/start-with-crypto/",
+              href: "/start/",
             },
             {
               label: t("nav-find-wallet-label"),

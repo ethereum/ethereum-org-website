@@ -35,7 +35,7 @@ export const getStaticProps = (async ({ params }) => {
     lastDeployDate
   )
 
-  const requiredNamespaces = getRequiredNamespacesForPage("/start-with-crypto")
+  const requiredNamespaces = getRequiredNamespacesForPage("/start")
 
   const contentNotTranslated = !existsNamespace(
     locale! as string,
@@ -89,6 +89,7 @@ const StartWithCryptoPage = () => {
               Billions can’t open bank accounts or freely use their money.
               Ethereum’s financial system is always open and unbiased.
             </p>
+            {/* TODO: Add share button */}
             <div className="flex w-full md:w-auto">
               <ButtonLink
                 href="/start-with-crypto/onboarding-guide"
