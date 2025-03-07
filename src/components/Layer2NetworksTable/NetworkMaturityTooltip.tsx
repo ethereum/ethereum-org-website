@@ -61,7 +61,7 @@ const NetworkMaturityTooltip = ({ maturity }: { maturity: MaturityLevel }) => {
       }
     >
       <Tag variant="solid" {...maturityDescription[maturity].tag}>
-        {t(`page-layer-2-networks-${maturity}`)}
+        {t(`page-layer-2-networks-${maturity}-label`).toUpperCase()}
       </Tag>
     </Tooltip>
   )
