@@ -1364,6 +1364,17 @@ const chains = [
     chain: "ATH",
   },
   {
+    name: "Hemi Network",
+    infoURL: "https://hemi.xyz",
+    chainId: 43111,
+    nativeCurrency: {
+      name: "Ether",
+      symbol: "ETH",
+      decimals: 18,
+    },
+    chain: "ETH",
+  },
+  {
     name: "Blessnet",
     infoURL: "https://blessnet.io",
     chainId: 45513,
@@ -1781,6 +1792,17 @@ const chains = [
       decimals: 18,
     },
     chain: "Infinaeon",
+  },
+  {
+    name: "EthereumFair",
+    infoURL: "https://etherfair.org/",
+    chainId: 513100,
+    nativeCurrency: {
+      name: "EthereumFair",
+      symbol: "ETHF",
+      decimals: 18,
+    },
+    chain: "ETHF",
   },
   {
     name: "Scroll",
