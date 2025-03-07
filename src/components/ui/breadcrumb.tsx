@@ -1,9 +1,10 @@
 import * as React from "react"
-import Link, { LinkProps } from "next/link"
 import { LuChevronRight, LuMoreHorizontal } from "react-icons/lu"
 import { Slot } from "@radix-ui/react-slot"
 
 import { cn } from "@/lib/utils/cn"
+
+import { Link } from "@/i18n/routing"
 
 interface BreadcrumbProps extends React.ComponentPropsWithoutRef<"nav"> {
   separator?: React.ReactNode
@@ -46,7 +47,7 @@ BreadcrumbItem.displayName = "BreadcrumbItem"
 const BreadcrumbLink = React.forwardRef<
   HTMLAnchorElement,
   React.ComponentPropsWithoutRef<"a"> &
-    LinkProps & {
+    React.ComponentPropsWithoutRef<typeof Link> & {
       asChild?: boolean
     }
 >(({ asChild, className, ...props }, ref) => {
