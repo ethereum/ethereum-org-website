@@ -144,7 +144,7 @@ In both proof-of-work and proof-of-stake, a node that builds a block proposes it
 
 The combination of block producer and block proposer roles is what introduces most of the MEV-related problems described previously. For example, consensus nodes are incentivized to trigger chain reorganizations in [time-bandit attacks](https://www.mev.wiki/attack-examples/time-bandit-attack) to maximize MEV earnings.
 
-[Proposer-builder separation](https://ethresear.ch/t/proposer-block-builder-separation-friendly-fee-market-designs/9725) (PBS) is designed to mitigate the impact of MEV, especially at the consensus layer. PBS’ major feature is the separation of block producer and block proposer rules. Validators are still responsible for proposing and voting on blocks, but a new class of specialized entities, called **block builders**, are tasked with ordering transactions and building blocks.
+[Proposer-builder separation](https://ethresear.ch/t/proposer-block-builder-separation-friendly-fee-market-designs/9725) (PBS) is designed to mitigate the impact of MEV, especially at the consensus layer. The primary feature of PBS is the separation of block producer and block proposer roles. Validators are still responsible for proposing and voting on blocks, but a new class of specialized entities, called **block builders**, are tasked with ordering transactions and building blocks.
 
 Under PBS, a block builder creates a transaction bundle and places a bid for its inclusion in a Beacon Chain block (as the “execution payload”). The validator selected to propose the next block then checks the different bids and chooses the bundle with the highest fee. PBS essentially creates an auction market, where builders negotiate with validators selling blockspace.
 
