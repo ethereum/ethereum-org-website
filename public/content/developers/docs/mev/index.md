@@ -156,7 +156,7 @@ In-protocol proposer-builder separation reduces MEV’s effect on consensus by r
 
 This doesn’t exclude validators totally from MEV-related income, though, as builders must bid high to get their blocks accepted by validators. Nevertheless, with validators no longer directly focused on optimizing MEV income, the threat of time-bandit attacks reduces.
 
-Proposer-builder separation also reduces MEV’s centralization risks. For instance, the use of a commit-reveal scheme removes the need for builders to trust validators not to steal the MEV opportunity or expose it to other builders. This lowers the barrier for solo stakers to benefit from MEV, otherwise, builders would trend towards favoring large pools with off-chain reputation and conducting off-chain deals with them.
+Proposer-builder separation also reduces MEV’s centralization risks. For instance, the use of a commit-reveal scheme removes the need for builders to trust validators not to steal the MEV opportunity or expose it to other builders. This lowers the barrier for solo stakers to benefit from MEV, otherwise, builders would tend to favor large pools with off-chain reputation and engage in off-chain deals with them.
 
 Similarly, validators don’t have to trust builders not to withhold block bodies or publish invalid blocks because payment is unconditional. The validator’s fee still processes even if the proposed block is unavailable or declared invalid by other validators. In the latter case, the block is simply discarded, forcing the block builder to lose all transaction fees and MEV revenue.
 
