@@ -31,7 +31,7 @@ Bu projeler kendi teknolojilerini geliştirmeye ve deneyimlemeye yönelik olarak
 - [Lido Ekosistem Hibeleri Organizasyonu (LEGO)](https://lido.fi/lego) – _[Lido](https://lido.fi/) finans ekosistemi_
 - [MetaMask Programı](https://metamaskgrants.org/) - _[MetaMask](https://metamask.io/) çalışanlar öncülüğünde yönetilen hibe DAO'su_
 - [SKALE Ağı Hibe Ekosistemi](https://skale.space/developers#grants) - _[SKALE Ağı](https://skale.space/) ekosistemi_
-- [Swarm Vakfı Hibe Programı](https://my.ethswarm.org/grants) - _[Swarm Vakfı](https://www.ethswarm.org/) ekosistemi_
+- [Swarm Vakfı Hibe Programı](https://my.ethswarm.org) - _[Swarm Vakfı](https://www.ethswarm.org/) ekosistemi_
 - [The Graph](https://thegraph.com/ecosystem/grants/) – _[The Graph](https://thegraph.com/) ekosistemi_
 - [Uniswap Hibe Programı](https://www.uniswapfoundation.org/approach) – _[Uniswap](https://uniswap.org/) topluluğu_
 
