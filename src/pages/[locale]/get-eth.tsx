@@ -1,7 +1,13 @@
 import type { GetStaticProps, InferGetStaticPropsType } from "next/types"
 import type { ReactNode } from "react"
 
-import type { BasePageProps, ChildOnlyProp, Lang, Params } from "@/lib/types"
+import type {
+  BasePageProps,
+  ChildOnlyProp,
+  CommitHistory,
+  Lang,
+  Params,
+} from "@/lib/types"
 
 import CalloutBanner from "@/components/CalloutBanner"
 import CardList, {
@@ -11,6 +17,7 @@ import CentralizedExchanges from "@/components/CentralizedExchanges"
 import Emoji from "@/components/Emoji"
 import EthPriceCard from "@/components/EthPriceCard"
 import FeedbackCard from "@/components/FeedbackCard"
+import FileContributors from "@/components/FileContributors"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
@@ -29,6 +36,7 @@ import { Stack } from "@/components/ui/flex"
 import InlineLink from "@/components/ui/Link"
 
 import { cn } from "@/lib/utils/cn"
+import { getPageContributorInfo } from "@/lib/utils/contributors"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLastModifiedDateByPath } from "@/lib/utils/gh"
@@ -100,6 +108,14 @@ export const getStaticProps = (async ({ params }) => {
     lastDeployDate
   )
 
+  const commitHistoryCache: CommitHistory = {}
+
+  const { contributors, lastEditLocaleTimestamp } =
+    await getPageContributorInfo(
+      "get-eth.tsx",
+      locale as Lang,
+      commitHistoryCache
+    )
   const messages = await loadNamespaces(locale, requiredNamespaces)
 
   return {
@@ -108,12 +124,16 @@ export const getStaticProps = (async ({ params }) => {
       contentNotTranslated,
       lastDeployLocaleTimestamp,
       lastDataUpdateDate,
+      contributors,
+      lastEditLocaleTimestamp,
     },
   }
 }) satisfies GetStaticProps<Props, Params>
 
 const GetEthPage = ({
   lastDataUpdateDate,
+  contributors,
+  lastEditLocaleTimestamp,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const { t } = useTranslation("page-get-eth")
 
@@ -391,6 +411,11 @@ const GetEthPage = ({
               </Stack>
             </Stack>
           </TwoColumnContent>
+          <FileContributors
+            className="my-10 border-t"
+            contributors={contributors}
+            lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+          />
         </Stack>
 
         <Divider className="mx-auto my-16 md:my-32" />
