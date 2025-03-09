@@ -163,3 +163,4 @@ Multiple projects provide implementations of Validium and volitions that you can
 - [ZK-rollups vs Validium](https://blog.matter-labs.io/zkrollup-vs-validium-starkex-5614e38bc263)
 - [Volition and the Emerging Data Availability spectrum](https://medium.com/starkware/volition-and-the-emerging-data-availability-spectrum-87e8bfa09bb)
 - [Rollups, Validiums, and Volitions: Learn About the Hottest Ethereum Scaling Solutions](https://www.defipulse.com/blog/rollups-validiums-and-volitions-learn-about-the-hottest-ethereum-scaling-solutions)
+- [The Practical Guide to Ethereum Rollups](https://research.2077.xyz/the-practical-guide-to-ethereum-rollups)

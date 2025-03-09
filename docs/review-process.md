@@ -42,7 +42,7 @@ Typographical and grammatical errors are medium-priority as small errors of this
 
 ### Adding products
 
-Adding new products is currently a low-to-medium priority (depending on the type of product). These pull requests often take a long time to review as we must extensively research products to ensure we not sending our users to any dubious or unsafe products.
+Adding new products is currently a low-to-medium priority (depending on the type of product). These pull requests often take a long time to review as we must extensively research products to ensure we are not sending our users to any dubious or unsafe products.
 
 **Timeline:** PRs should be closed or merged within 30 days of opening.
 

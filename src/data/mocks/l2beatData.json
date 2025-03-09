@@ -174,7 +174,7 @@
             "name": "EVM"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 14519913133.67,
             "ether": 4387357086.39,
@@ -259,7 +259,7 @@
             "name": "L3HostChain"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 8612500120.84,
             "ether": 2758347738.64,
@@ -342,7 +342,7 @@
             "name": "Governance"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 6196279162.59,
             "ether": 1680718678.59,
@@ -415,7 +415,7 @@
             "name": "EVM"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 1775655355.27,
             "ether": 1000829476.79,
@@ -488,7 +488,7 @@
             "name": "EVM"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 1464031435.75,
             "ether": 1056445834.33,
@@ -556,7 +556,7 @@
             "name": "EthereumBlobs"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 1085270515.25,
             "ether": 777698458.3,
@@ -628,7 +628,7 @@
             "name": "L3HostChain"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 949499632.91,
             "ether": 765004713.99,
@@ -707,7 +707,7 @@
             "name": "ElasticChain"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 917340067.71,
             "ether": 308914649.32,
@@ -784,7 +784,7 @@
             "name": "Governance"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 710326532.1,
             "ether": 254598315.88,
@@ -861,7 +861,7 @@
             "name": "EVM"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 555645039.27,
             "ether": 182838295.49,
@@ -943,7 +943,7 @@
             "name": "EVM"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 344647264.2,
             "ether": 49719116.99,
@@ -1017,7 +1017,7 @@
             "name": "OVM"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 326151746.16,
             "ether": 12768832.2,
@@ -1085,7 +1085,7 @@
             "name": "EthereumBlobs"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 312221249.25,
             "ether": 189034104.91,
@@ -1165,7 +1165,7 @@
             "name": "EVM"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 220075918.87,
             "ether": 5006542.39,
@@ -1243,7 +1243,7 @@
             "name": "EVM"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 189431953.3,
             "ether": 2519399.8,
@@ -1320,7 +1320,7 @@
             "name": "EVM"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 187895720.91,
             "ether": 34838247,
@@ -1394,7 +1394,7 @@
             "name": "EVM"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 174337451.03,
             "ether": 172258887.46,
@@ -1469,7 +1469,7 @@
             "name": "EVM"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 137851764.81,
             "ether": 1724633.49,
@@ -1550,7 +1550,7 @@
             "name": "EVM"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 136736279.37,
             "ether": 1545831.78,
@@ -1623,7 +1623,7 @@
             "name": "BasedSequencing"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 121266589.86,
             "ether": 24635937.92,
@@ -1705,7 +1705,7 @@
             "name": "EVM"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 116691306.39,
             "ether": 13503783.95,
@@ -1781,7 +1781,7 @@
             "name": "SHARP"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 93659353.37,
             "ether": 17602310.27,
@@ -1858,7 +1858,7 @@
             "name": "SHARP"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 79877798.36,
             "ether": 0,
@@ -1933,7 +1933,7 @@
             "name": "Linea"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 69966371.85,
             "ether": 28367222.4,
@@ -2010,7 +2010,7 @@
             "name": "EVM"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 68526117.51,
             "ether": 17993896.25,
@@ -2091,7 +2091,7 @@
             "name": "EVM"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 64173669.52,
             "ether": 2866.64,
@@ -2168,7 +2168,7 @@
             "name": "ElasticChain"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 58625520.92,
             "ether": 12940092.08,
@@ -2239,7 +2239,7 @@
             "name": "EthereumCalldata"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 56413482.52,
             "ether": 45450022.15,
@@ -2315,7 +2315,7 @@
             "name": "LoopringFork"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 52278697.77,
             "ether": 1915110.08,
@@ -2393,7 +2393,7 @@
             "name": "EVM"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 51753680.28,
             "ether": 10188636.1,
@@ -2463,7 +2463,7 @@
             "name": "EthereumCalldata"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 49655027.89,
             "ether": 22434322.19,
@@ -2545,7 +2545,7 @@
             "name": "EVM"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 49507158.23,
             "ether": 16889885.65,
@@ -2622,7 +2622,7 @@
             "name": "Governance"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 43166829.84,
             "ether": 0,
@@ -2707,7 +2707,7 @@
             "name": "EVM"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 42252636.93,
             "ether": 41282992.87,
@@ -2789,7 +2789,7 @@
             "name": "EVM"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 39999828.32,
             "ether": 27088916.2,
@@ -2864,7 +2864,7 @@
             "name": "EVM"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 29748921.51,
             "ether": 11556721.19,
@@ -2945,7 +2945,7 @@
             "name": "EVM"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 29708868.67,
             "ether": 24636329.46,
@@ -3020,7 +3020,7 @@
             "name": "EVM"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 28116918.2,
             "ether": 384280.19,
@@ -3102,7 +3102,7 @@
             "name": "EVM"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 26478275.82,
             "ether": 134830.61,
@@ -3184,7 +3184,7 @@
             "name": "EVM"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 24735455,
             "ether": 1547203.07,
@@ -3266,7 +3266,7 @@
             "name": "EVM"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 24484494.96,
             "ether": 24196533.6,
@@ -3342,7 +3342,7 @@
             "name": "SHARP"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 20899022.43,
             "ether": 20899022.43,
@@ -3417,7 +3417,7 @@
             "name": "Superchain"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 19107377.14,
             "ether": 5810355.5,
@@ -3498,7 +3498,7 @@
             "name": "EVM"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 18170986.93,
             "ether": 629742.57,
@@ -3574,7 +3574,7 @@
             "name": "EVM"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 18089436.85,
             "ether": 0,
@@ -3647,7 +3647,7 @@
             "name": "PolygonCDK"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 16104367.07,
             "ether": 1458252.13,
@@ -3729,7 +3729,7 @@
             "name": "SHARP"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 13897955.03,
             "ether": 0,
@@ -3805,7 +3805,7 @@
             "name": "EVM"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 13758922.67,
             "ether": 0,
@@ -3880,7 +3880,7 @@
             "name": "EVM"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 13201491.75,
             "ether": 1619201.13,
@@ -3956,7 +3956,7 @@
             "name": "EVM"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 12577575.33,
             "ether": 5237949.65,
@@ -4033,7 +4033,7 @@
             "name": "SHARP"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 11873190.92,
             "ether": 5498677.81,
@@ -4116,7 +4116,7 @@
             "name": "EVM"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 7275493.91,
             "ether": 412051.47,
@@ -4193,7 +4193,7 @@
             "name": "SHARP"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 6326832.99,
             "ether": 190488.45,
@@ -4250,7 +4250,7 @@
         "isUpcoming": false,
         "isUnderReview": true,
         "badges": [],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 5359541.9,
             "ether": 2742640.8,
@@ -4331,7 +4331,7 @@
             "name": "EVM"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 3943546.63,
             "ether": 0,
@@ -4412,7 +4412,7 @@
             "name": "EVM"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 3836315.09,
             "ether": 3836315.09,
@@ -4491,7 +4491,7 @@
             "name": "EVM"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 3716293.75,
             "ether": 2035537.14,
@@ -4572,7 +4572,7 @@
             "name": "EVM"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 2682737.32,
             "ether": 215598.46,
@@ -4654,7 +4654,7 @@
             "name": "EVM"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 2474608.79,
             "ether": 1823743.75,
@@ -4734,7 +4734,7 @@
             "name": "EVM"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 2359746.22,
             "ether": 55973.27,
@@ -4810,7 +4810,7 @@
             "name": "EVM"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 2072912,
             "ether": 2046926.19,
@@ -4883,7 +4883,7 @@
             "name": "ZKsyncLiteFork"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 1935240.99,
             "ether": 134024.79,
@@ -4961,7 +4961,7 @@
             "name": "EVM"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 1510795.21,
             "ether": 624177.06,
@@ -5039,7 +5039,7 @@
             "name": "EVM"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 1488688.94,
             "ether": 0,
@@ -5116,7 +5116,7 @@
             "name": "EVM"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 1194423.32,
             "ether": 28089.82,
@@ -5189,7 +5189,7 @@
             "name": "ZKsyncLiteFork"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 1151246.5,
             "ether": 232267.11,
@@ -5267,7 +5267,7 @@
             "name": "EVM"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 1059826.93,
             "ether": 1024524.05,
@@ -5342,7 +5342,7 @@
             "name": "EVM"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 878846.76,
             "ether": 0,
@@ -5426,7 +5426,7 @@
             "name": "EVM"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 838083.3,
             "ether": 838083.3,
@@ -5497,7 +5497,7 @@
             "name": "EVM"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 802894.82,
             "ether": 802894.82,
@@ -5578,7 +5578,7 @@
             "name": "EVM"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 731356.58,
             "ether": 637547.3,
@@ -5655,7 +5655,7 @@
             "name": "EVM"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 710064.73,
             "ether": 710064.73,
@@ -5735,7 +5735,7 @@
             "name": "EVM"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 664698.4,
             "ether": 582092.55,
@@ -5807,7 +5807,7 @@
             "name": "EVM"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 650784.65,
             "ether": 324752.69,
@@ -5885,7 +5885,7 @@
             "name": "EVM"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 372801.69,
             "ether": 0,
@@ -5962,7 +5962,7 @@
             "name": "EVM"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 255793.38,
             "ether": 249607.66,
@@ -6037,7 +6037,7 @@
             "name": "Conduit"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 238658.39,
             "ether": 238658.39,
@@ -6113,7 +6113,7 @@
             "name": "Cartesi"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 230490.19,
             "ether": 0,
@@ -6192,7 +6192,7 @@
             "name": "EVM"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 187656.73,
             "ether": 187544.95,
@@ -6276,7 +6276,7 @@
             "name": "EVM"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 172103.01,
             "ether": 172103.01,
@@ -6353,7 +6353,7 @@
             "name": "SHARP"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 165657.93,
             "ether": 165657.93,
@@ -6440,7 +6440,7 @@
             "name": "EVM"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 158456.43,
             "ether": 158347.83,
@@ -6520,7 +6520,7 @@
             "name": "Caldera"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 115431.53,
             "ether": 0,
@@ -6593,7 +6593,7 @@
             "name": "EVM"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 78548.03,
             "ether": 78548.03,
@@ -6668,7 +6668,7 @@
             "name": "EVM"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 61505.01,
             "ether": 61505.01,
@@ -6744,7 +6744,7 @@
             "name": "EVM"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 59513.86,
             "ether": 59513.86,
@@ -6825,7 +6825,7 @@
             "name": "EVM"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 59061.73,
             "ether": 59061.73,
@@ -6896,7 +6896,7 @@
             "name": "EVM"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 58268.16,
             "ether": 58268.16,
@@ -6972,7 +6972,7 @@
             "name": "EVM"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 55514.85,
             "ether": 55514.85,
@@ -7053,7 +7053,7 @@
             "name": "EVM"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 49359.4,
             "ether": 21.18,
@@ -7135,7 +7135,7 @@
             "name": "EVM"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 40374.61,
             "ether": 1654.05,
@@ -7215,7 +7215,7 @@
             "name": "EVM"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 22983.01,
             "ether": 22983.01,
@@ -7297,7 +7297,7 @@
             "name": "EVM"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 18786.69,
             "ether": 18786.69,
@@ -7373,7 +7373,7 @@
             "name": "EVM"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 17037.6,
             "ether": 17037.6,
@@ -7445,7 +7445,7 @@
             "name": "EVM"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 14647.21,
             "ether": 14637.21,
@@ -7527,7 +7527,7 @@
             "name": "EVM"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 10776.49,
             "ether": 10680.13,
@@ -7590,7 +7590,7 @@
         "isUpcoming": false,
         "isUnderReview": true,
         "badges": [],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 7489.72,
             "ether": 7028.35,
@@ -7666,7 +7666,7 @@
             "name": "EVM"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 5710.42,
             "ether": 5708.4,
@@ -7724,7 +7724,7 @@
         "isUpcoming": false,
         "isUnderReview": true,
         "badges": [],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 4315.41,
             "ether": 3612.79,
@@ -7805,7 +7805,7 @@
             "name": "EVM"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 3271.86,
             "ether": 3271.86,
@@ -7880,7 +7880,7 @@
             "name": "Superchain"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 3071.48,
             "ether": 0,
@@ -7961,7 +7961,7 @@
             "name": "Conduit"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 1926.77,
             "ether": 1926.77,
@@ -8018,7 +8018,7 @@
         "isUpcoming": false,
         "isUnderReview": true,
         "badges": [],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 1553.1,
             "ether": 1385.3,
@@ -8102,7 +8102,7 @@
             "name": "Superchain"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 1490.81,
             "ether": 1490.81,
@@ -8160,7 +8160,7 @@
         "isUpcoming": false,
         "isUnderReview": true,
         "badges": [],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 1012.94,
             "ether": 0,
@@ -8226,7 +8226,7 @@
             "name": "EthereumCalldata"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 768.03,
             "ether": 750.02,
@@ -8307,7 +8307,7 @@
             "name": "AltLayer"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 598.57,
             "ether": 0,
@@ -8389,7 +8389,7 @@
             "name": "Optimism"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 520.03,
             "ether": 0,
@@ -8469,7 +8469,7 @@
             "name": "EVM"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 247.28,
             "ether": 14.96,
@@ -8552,7 +8552,7 @@
             "name": "EVM"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 29.85,
             "ether": 29.85,
@@ -8636,7 +8636,7 @@
             "name": "EVM"
           }
         ],
-        "tvl": {
+        "tvs": {
           "associatedTokens": []
         },
         "stage": "NotApplicable",
@@ -8689,7 +8689,7 @@
         "isUpcoming": false,
         "isUnderReview": true,
         "badges": [],
-        "tvl": {
+        "tvs": {
           "associatedTokens": []
         },
         "stage": "NotApplicable",
@@ -8759,7 +8759,7 @@
             "name": "EVM"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 0,
             "ether": 0,
@@ -8818,7 +8818,7 @@
         "isUpcoming": false,
         "isUnderReview": true,
         "badges": [],
-        "tvl": {
+        "tvs": {
           "associatedTokens": []
         },
         "stage": "NotApplicable",
@@ -8892,7 +8892,7 @@
             "name": "EVM"
           }
         ],
-        "tvl": {
+        "tvs": {
           "breakdown": {
             "total": 0,
             "ether": 0,
@@ -8951,7 +8951,7 @@
         "isUpcoming": false,
         "isUnderReview": true,
         "badges": [],
-        "tvl": {
+        "tvs": {
           "associatedTokens": []
         },
         "stage": "UnderReview",
