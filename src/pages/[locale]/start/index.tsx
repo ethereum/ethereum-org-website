@@ -6,7 +6,7 @@ import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
 import StartWithEthereumFlow from "@/components/StartWithEthereumFlow"
-import { ButtonLink } from "@/components/ui/buttons/Button"
+import ShareModal from "@/components/StartWithEthereumFlow/ShareModal"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
@@ -89,15 +89,8 @@ const StartWithCryptoPage = () => {
               Billions can’t open bank accounts or freely use their money.
               Ethereum’s financial system is always open and unbiased.
             </p>
-            {/* TODO: Add share button */}
             <div className="flex w-full md:w-auto">
-              <ButtonLink
-                href="/start-with-crypto/onboarding-guide"
-                variant="outline"
-                className="w-full md:w-auto"
-              >
-                Share this page
-              </ButtonLink>
+              <ShareModal />
             </div>
           </div>
           <div className="flex max-w-[450px] flex-col items-center justify-center">
