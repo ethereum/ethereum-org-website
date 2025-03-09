@@ -1,5 +1,6 @@
 ---
-title: Organizaciones Autónomas Descentralizadas (DAO)
+title: '¿Qué es una DAO?'
+metaTitle: '¿Qué es una DAO? | Organizaciones Autónomas Descentralizadas'
 description: Una visión general de las DAO en Ethereum
 lang: es
 template: use-cases
