@@ -12,6 +12,7 @@ import { DEFAULT_LOCALE } from "@/lib/constants"
 
 import "@/styles/global.css"
 
+import { FeedbackWidgetProvider } from "@/contexts/FeedbackWidgetContext"
 import { BaseLayout } from "@/layouts/BaseLayout"
 
 const App = ({ Component, pageProps }: AppPropsWithLayout) => {
@@ -45,13 +46,15 @@ const App = ({ Component, pageProps }: AppPropsWithLayout) => {
     >
       <ThemeProvider>
         <TooltipProvider>
-          <BaseLayout
-            contentIsOutdated={!!pageProps.frontmatter?.isOutdated}
-            contentNotTranslated={pageProps.contentNotTranslated}
-            lastDeployLocaleTimestamp={pageProps.lastDeployLocaleTimestamp}
-          >
-            {getLayout(<Component {...pageProps} />)}
-          </BaseLayout>
+          <FeedbackWidgetProvider>
+            <BaseLayout
+              contentIsOutdated={!!pageProps.frontmatter?.isOutdated}
+              contentNotTranslated={pageProps.contentNotTranslated}
+              lastDeployLocaleTimestamp={pageProps.lastDeployLocaleTimestamp}
+            >
+              {getLayout(<Component {...pageProps} />)}
+            </BaseLayout>
+          </FeedbackWidgetProvider>
         </TooltipProvider>
       </ThemeProvider>
     </NextIntlClientProvider>
