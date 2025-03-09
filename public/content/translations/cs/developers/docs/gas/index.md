@@ -1,5 +1,6 @@
 ---
 title: Palivo a poplatky
+metaTitle: "Palivo a poplatky na Ethereu: technický přehled"
 description:
 lang: cs
 ---

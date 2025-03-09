@@ -16,7 +16,7 @@ Levnější pevné disky mohou být použity k ukládání starších dat, ale t
 
 Existuje několik způsobů, jak snížit množství dat, která musí každý uzel ukládat, přičemž každý z nich vyžaduje odlišný rozsah aktualizace základního protokolu Etherea:
 
-- **Expirace historie**: Dovoluje uzlům odstraňovat stavová data starší než X bloků, aniž by se změnil způsob, jakým klienty Etherea s těmito daty pracují.
+- **Expirace historie**: Dovoluje uzlům odstraňovat stavová data starší než X bloků, aniž by se změnil způsob, jakým klienti Etherea s těmito daty pracují.
 - **Vypršení stavu**: Dovoluje stavovým datům, která nejsou často používána, aby se stala neaktivními. Neaktivní data mohou klienty ignorovat, dokud nebudou znovu oživena.
 - **Slabá bezstavovost**: Pouze producenti bloků potřebují přístup k plným stavovým datům, ostatní uzly mohou ověřovat bloky bez místní stavové databáze.
 - **Silná bezstavovost**: Žádné uzly nepotřebují přístup k úplným stavovým datům.

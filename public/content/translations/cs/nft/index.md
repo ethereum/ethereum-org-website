@@ -1,5 +1,6 @@
 ---
 title: Nezaměnitelné tokeny (NFT)
+metaTitle: Co jsou NFTéčka? | Výhody a využití
 description: Přehled NFT na Ethereu
 lang: cs
 template: use-cases
