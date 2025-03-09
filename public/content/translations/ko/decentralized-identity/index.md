@@ -160,7 +160,7 @@ DID는 블록체인에 저장되기 때문에 누구든지 이더리움에서 �
 - **[EAS(Ethereum Attestation Service)](https://attest.sh/)** - _모든 것에 대한 온체인 또는 오프체인 증명을 만들 수 있는 탈중앙화된 장부/프로토콜입니다._
 - **[인간 증명](https://www.proofofhumanity.id)** - _인간 증명(PoH: Proof of Humanity)은 이더리움 기반의 소셜 신원 증명 시스템입니다._
 - **[BrightID](https://www.brightid.org/)** - _소셜 그래프를 만들고 분석함으로써 신원 증명을 개혁하고자 하는 탈중앙화된 오픈소스의 소셜 신원 증명 네트워크입니다._
-- **[개인 증명 여권](https://proofofpersonhood.com/)** - _탈중앙화 디지털 신원 정보 종합 플랫폼입니다._
+- **[개인 증명 여권](https://passport.human.tech/)** - _탈중앙화 디지털 신원 정보 종합 플랫폼입니다._
 
 ## 더 읽을 거리 {#further-reading}
 
