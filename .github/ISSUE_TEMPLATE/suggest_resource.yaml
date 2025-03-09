@@ -1,0 +1,63 @@
+name: Suggest a resource
+description: Suggest a new resource to list on ethereum.org/resources
+title: Suggest a resource
+labels: ["resource 📚"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Before suggesting a resource, make sure you've read [our listing policy](https://www.ethereum.org/en/contributing/adding-resources/).
+  - type: markdown
+    attributes:
+      value: Only continue with the issue if your resource meets the criteria listed there.
+  - type: markdown
+    attributes:
+      value: If it does, complete the following information which we need to accurately list the resource.
+  - type: markdown
+    id: resource_info
+    attributes:
+      value: "## Resource info"
+  - type: input
+    id: resource_name
+    attributes:
+      label: Name
+      description: Please provide the official name of the resource
+    validations:
+      required: true
+  - type: input
+    id: resource_url
+    attributes:
+      label: Resource URL
+      description: Please provide a URL to the resource
+    validations:
+      required: true
+  - type: textarea
+    id: resource_description
+    attributes:
+      label: Description
+      description: Please provide a short 1-2 sentence description of the resource
+    validations:
+      required: true
+  - type: textarea
+    id: resource_logo
+    attributes:
+      label: Logo
+      description: |
+        Please provide an SVG or transparent PNG
+        Tip: You can attach images by clicking this area to highlight it and then dragging files in.
+  - type: input
+    id: resource_category
+    attributes:
+      label: Category
+      description: Please specify a best fit to categorize the resource (e.g., DeFi, NFT, Scaling, etc.)
+  - type: checkboxes
+    id: resource_work_on
+    attributes:
+      label: Would you like to work on this issue?
+      options:
+        - label: "Yes"
+          required: false
+        - label: "No"
+          required: false
+    validations:
+      required: true
