@@ -46,7 +46,7 @@ incomplete: true
 
 ## 進階使用模式 {#advanced-use-patterns}
 
-- [使用 Eventeum 建置 Java 智慧型合約資料快取](https://kauri.io/article/fe81ee9612eb4e5a9ab72790ef24283d/using-eventeum-to-build-a-java-smart-contract-data-cache)
+- [使用 Eventeum 建置 Java 智慧型合約資料快取](使用 Eventeum 構建Java 智慧型合約數據緩存)
 
 ## Java 專案和工具 {#java-projects-and-tools}
 
