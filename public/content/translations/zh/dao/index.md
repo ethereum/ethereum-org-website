@@ -1,5 +1,6 @@
 ---
-title: 去中心化自治组织 (DAO)
+title: 什么是去中心化自治组织 (DAO)？
+metaTitle: 什么是去中心化自治组织 (DAO)？ | 去中心化自治组织
 description: 以太坊上的去中心化自治组织简介
 lang: zh
 template: use-cases

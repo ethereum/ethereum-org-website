@@ -1,5 +1,6 @@
 ---
 title: 如何使用钱包
+metaTitle: 如何使用以太坊钱包 | 分步教学
 description: 指南：如何发送和接收代币，以及如何连接到 Web3 项目。
 lang: zh
 ---
