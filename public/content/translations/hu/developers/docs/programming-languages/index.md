@@ -15,6 +15,7 @@ Válasszon nyelvet, hogy megtalálja a kapcsolódó projekteket, anyagokat és a
 - [Ethereum Dart-fejlesztők számára](/developers/docs/programming-languages/dart/)
 - [Ethereum Delphi fejlesztőknek](/developers/docs/programming-languages/delphi/)
 - [Ethereum .NET fejlesztőknek](/developers/docs/programming-languages/dot-net/)
+- [Ethereum Elixir-fejlesztők számára](/developers/docs/programming-languages/elixir/)
 - [Ethereum Go fejlesztőknek](/developers/docs/programming-languages/golang/)
 - [Ethereum Java fejlesztőknek](/developers/docs/programming-languages/java/)
 - [Ethereum JavaScript fejlesztőknek](/developers/docs/programming-languages/javascript/)
