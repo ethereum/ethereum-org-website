@@ -1,5 +1,6 @@
 ---
 title: Token non fungibili (NFT)
+metaTitle: Cosa sono i NFT? | Benefici e utilizzi
 description: Una panoramica dei NFT su Ethereum
 lang: it
 template: use-cases

@@ -1,5 +1,6 @@
 ---
-title: Organizzazioni autonome decentralizzate (DAO)
+title: Cos'è una DAO?
+metaTitle: Cos'è una DAO? | Organizzazione autonoma decentralizzata
 description: Una panoramica delle DAO su Ethereum
 lang: it
 template: use-cases
