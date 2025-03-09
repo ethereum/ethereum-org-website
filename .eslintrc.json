@@ -33,8 +33,8 @@
           ["^@/data"],
           // From the `constants` directory.
           ["^@/lib/constants"],
-          // From the `.storybook/utils` file
-          ["^@/storybook-utils"],
+          // `.storybook` directory and utils files`
+          ["^@/storybook","^@/storybook-utils"],
           // Parent imports. Put `..` last.
           ["^\\.\\.(?!/?$)", "^\\.\\./?$"],
           // Other relative imports. Put same-folder imports and `.` last.

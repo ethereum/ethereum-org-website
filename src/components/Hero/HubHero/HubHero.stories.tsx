@@ -4,7 +4,7 @@ import { Meta, StoryObj } from "@storybook/react"
 
 import { screens } from "@/lib/utils/screen"
 
-import { langViewportModes } from "../../../../.storybook/modes"
+import { langViewportModes } from "@/storybook/modes"
 
 import HubHeroComponent, { type HubHeroProps } from "./"
 

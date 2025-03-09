@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from "@storybook/react"
 
-import { langViewportModes } from "../../../.storybook/modes"
+import { langViewportModes } from "@/storybook/modes"
 
 import MergeInfographicComponent from "."
 
