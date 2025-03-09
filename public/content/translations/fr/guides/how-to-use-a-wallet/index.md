@@ -1,5 +1,6 @@
 ---
 title: Comment utiliser un portefeuille
+metaTitle: Comment utiliser un portefeuille Ethereum | Étape par étape
 description: Un guide expliquant comment envoyer, recevoir des jetons et se connecter à des projets web3.
 lang: fr
 ---
