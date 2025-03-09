@@ -1,6 +1,7 @@
 import { Framework } from "@/lib/interfaces"
 
 import EthDiamondBlackImage from "@/public/images/assets/eth-diamond-black.png"
+import DappBooster from "@/public/images/dev-tools/dappbooster.png"
 import EpirusImage from "@/public/images/dev-tools/epirus.png"
 import FoundryImage from "@/public/images/dev-tools/foundry.png"
 import HardhatImage from "@/public/images/dev-tools/hardhat.png"
@@ -107,6 +108,17 @@ const frameworksList: Array<Framework> = [
       "page-developers-local-environment:page-local-environment-foundry-desc",
     alt: "page-developers-local-environment:page-local-environment-foundry-logo-alt",
     image: FoundryImage,
+  },
+  {
+    id: "dappbooster",
+    url: "https://dappbooster.dev/",
+    githubUrl: "https://github.com/bootnodedev/dappbooster",
+    background: "#ffffff",
+    name: "dAppBooster",
+    description:
+      "page-developers-local-environment:page-local-environment-dappbooster-desc",
+    alt: "page-developers-local-environment:page-local-environment-dappbooster-logo-alt",
+    image: DappBooster,
   },
 ]
 
