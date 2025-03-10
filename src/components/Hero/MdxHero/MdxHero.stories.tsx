@@ -2,7 +2,7 @@ import { Meta, StoryObj } from "@storybook/react"
 
 import { HStack } from "@/components/ui/flex"
 
-import { langViewportModes } from "../../../../.storybook/modes"
+import { langViewportModes } from "@/storybook/modes"
 
 import MdxHeroComponent from "./"
 
