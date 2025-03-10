@@ -60,7 +60,7 @@ Verkle ట్రీ టెస్ట్‌నెట్‌లు ఇప్పట�
 - [Guillaume బ్యాలెట్ ETHGlobal వద్ద Verkle ట్రీస్ వివరిస్తుంది](https://www.youtube.com/watch?v=f7bEtX3Z57o)
 - [డెవ్‌కాన్ 6లో గుయిలౌమ్ బ్యాలెట్ ద్వారా "Verkle ట్రీస్ మేక్ Ethereum లీన్ అండ్ మీన్"](https://www.youtube.com/watch?v=Q7rStTKwuYs)
 - [ETHDenver 2020 నుండి స్టేట్‌లెస్ క్లయింట్‌లపై Piper Merriam](https://www.youtube.com/watch?v=0yiZJNciIJ4)
-- [జీరో నాలెడ్జ్ పాడ్‌క్యాస్ట్‌లో Verkle ట్రీస్ మరియు స్టేట్‌లెస్‌నెస్‌ను Dankrad Fiest వివరిస్తుంది](https://zeroknowledge.fm/episode-202-stateless-ethereum-verkle-tries-with-dankrad-feist/)
+- [జీరో నాలెడ్జ్ పాడ్‌క్యాస్ట్‌లో Verkle ట్రీస్ మరియు స్టేట్‌లెస్‌నెస్‌ను Dankrad Fiest వివరిస్తుంది](https://zeroknowledge.fm/podcast/202/)
 - [Verkle ట్రీస్‌పై Vitalik Buterin](https://vitalik.eth.limo/general/2021/06/18/verkle.html)
 - [Verkle ట్రీస్‌పై Dankrad Feist](https://dankradfeist.de/ethereum/2021/06/18/verkle-trie-for-eth1.html)
 - [Verkle ట్రీ EIP డాక్యుమెంటేషన్](https://notes.ethereum.org/@vbuterin/verkle_tree_eip#Illustration)

@@ -168,7 +168,7 @@ Jika bekalan bursa B merosot secara tiba-tiba dan pengguna tidak dapat membeli c
 
 Untuk dapat melakukan contoh di atas dalam dunia kewangan tradisional, anda memerlukan sejumlah besar wang. Strategi menjana wang ini hanya boleh diakses oleh mereka yang mempunyai kekayaan sedia ada. Pinjaman kilat adalah contoh masa depan di mana mempunyai wang tidak semestinya prasyarat untuk membuat wang.
 
-<ButtonLink isSecondary href="https://aave.com/flash-loans/">
+<ButtonLink isSecondary href="https://aave.com/docs/concepts/flash-loans/">
   Lebih lanjut mengenai pinjaman kilat
 </ButtonLink>
 

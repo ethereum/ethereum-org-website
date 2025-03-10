@@ -56,7 +56,7 @@ Essas bibliotecas abstraem muito da complexidade de interagir diretamente com um
 **DataHub por Figment -** **_Serviços de API Web3 API com rede principal Ethereum e rede de testes._**
 
 - [DataHub](https://www.figment.io/datahub)
-- [Documentação](https://docs.figment.io/introduction/what-is-datahub)
+- [Documentação](https://figment-docs.gitbook.io/learn-docs/introduction/what-is-datahub)
 
 **NFTPort -** **_Dados Ethereum e APIs Mint._**
 
@@ -72,7 +72,7 @@ Essas bibliotecas abstraem muito da complexidade de interagir diretamente com um
 
 **Ethercluster -** **_Execute o seu próprio serviço de API da Ethereum que suporta ETH e ETC._**
 
-- [ethercluster.com](https://www.ethercluster.com/)
+- [ethercluster.com](https://etccooperative.github.io/ethercluster-website/)
 
 **Chainstack -** **_Nós Ethereum compartilhados e dedicados como serviço._**
 

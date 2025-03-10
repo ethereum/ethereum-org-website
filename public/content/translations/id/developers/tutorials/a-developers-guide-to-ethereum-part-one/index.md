@@ -140,7 +140,7 @@ Pola yang sama digunakan ketika menangani transaksi dalam <b>ether</b>. Namun, a
 
 </FeaturedText>
 
-Cobalah untuk mengubah beberapa nilai ke dan dari wei. Perhatikan bahwa [ada nama untuk banyak denominasi](https://web3py.readthedocs.io/en/stable/examples.html#converting-currency-denominations) di antara ether dan wei. Salah satu yang lebih dikenal di antaranya adalah **gwei**, karena sering menjadi cara mewakili biaya transaksi.
+Cobalah untuk mengubah beberapa nilai ke dan dari wei. Perhatikan bahwa [ada nama untuk banyak denominasi](https://web3py.readthedocs.io/en/stable/troubleshooting.html#how-do-i-convert-currency-denominations) di antara ether dan wei. Salah satu yang lebih dikenal di antaranya adalah **gwei**, karena sering menjadi cara mewakili biaya transaksi.
 
 ```python
 In [2]: Web3.toWei(1, 'ether')

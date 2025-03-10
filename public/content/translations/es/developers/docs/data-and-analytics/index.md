@@ -47,7 +47,7 @@ Para comenzar, visite la guía de inicio rápido de [Ethereum](https://academy.s
 
 ## Más información {#further-reading}
 
-- [Descripción general de Graph Network](https://thegraph.com/docs/en/about/network/)
+- [Descripción general de Graph Network](https://thegraph.com/docs/en/about/)
 - [Graph Query Playground](https://thegraph.com/explorer/subgraph/graphprotocol/graph-network-mainnet?version=current)
 - [Ejemplos de código API en EtherScan](https://etherscan.io/apis#contracts)
 - [Explorador de la cadena de Baliza Beaconcha.in](https://beaconcha.in)

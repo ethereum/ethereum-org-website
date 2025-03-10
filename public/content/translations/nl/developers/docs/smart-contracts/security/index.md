@@ -8,7 +8,7 @@ Smart contracts zijn extreem flexibel en kunnen grote hoeveelheden waarden en ge
 
 Openbare blockchains, zoals Ethereum, maken de beveiliging van smart contracts nog ingewikkelder. Ingezette contractcode kan _gewoonlijk_ niet worden gewijzigd om beveiligingsproblemen op te lossen, terwijl activa die zijn gestolen van smart contracts extreem moeilijk te traceren zijn en meestal niet kunnen worden teruggehaald vanwege de onveranderlijkheid.
 
-Hoewel de cijfers variëren, wordt geschat dat het totale bedrag aan waarde dat gestolen of verloren is gegaan door beveiligingsfouten in smart contracts al gauw meer dan $1 miljard bedraagt. Hieronder vallen ook opvallende incidenten, zoals de [DAO-hack](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/) (3,6M ETH gestolen, met een waarde van meer dan 1 miljard dollar in de huidige prijzen), [Parity multisig-wallethack](https://www.coindesk.com/30-million-ether-reported-stolen-parity-wallet-breach) ($30M verloren aan hackers), en het [Parity frozen wallet-probleem](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether) (meer dan $300M in ETH voor altijd vergrendeld).
+Hoewel de cijfers variëren, wordt geschat dat het totale bedrag aan waarde dat gestolen of verloren is gegaan door beveiligingsfouten in smart contracts al gauw meer dan $1 miljard bedraagt. Hieronder vallen ook opvallende incidenten, zoals de [DAO-hack](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/) (3,6M ETH gestolen, met een waarde van meer dan 1 miljard dollar in de huidige prijzen), [Parity multisig-wallethack](https://www.coindesk.com/markets/2017/07/19/30-million-ether-reported-stolen-due-to-parity-wallet-breach) ($30M verloren aan hackers), en het [Parity frozen wallet-probleem](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether) (meer dan $300M in ETH voor altijd vergrendeld).
 
 De bovengenoemde problemen maken het noodzakelijk voor ontwikkelaars om te investeren in het bouwen van veilige, robuuste en veerkrachtige smart contracts. De beveiliging van smart contracts is een serieuze zaak en iedere ontwikkelaar doet er goed aan om dit te leren. Deze gids behandelt de beveiligingsaspecten voor Ethereum-ontwikkelaars en gaat in op bronnen voor het verbeteren van de beveiliging van smart contracts.
 
@@ -304,7 +304,7 @@ Er is hier niets aan de hand, behalve dat `Attacker` een andere functie heeft di
 - `Victim` finally applies the results of the first transaction (and subsequent ones) to its state, so `Attacker`’s balance is set to 0
 ```
 
-De conclusie is dat omdat het saldo van de oproeper niet op 0 wordt gezet totdat de uitvoering van de functie is voltooid, latere oproepen zullen slagen en de oproeper in staat stellen zijn/haar saldo meerdere keren op te nemen. Dit soort aanval kan gebruikt worden om middelen van een smart contract leeg te halen, zoals gebeurde in de [2016 DAO hack](https://www.coindesk.com/learn/2016/06/25/understanding-the-dao-attack/). Reentrancy-aanvallen zijn vandaag de dag nog steeds een kritiek probleem voor smart contracts, zoals blijkt uit [openbare lijsten van reentrancy-exploitaties](https://github.com/pcaversaccio/reentrancy-attacks).
+De conclusie is dat omdat het saldo van de oproeper niet op 0 wordt gezet totdat de uitvoering van de functie is voltooid, latere oproepen zullen slagen en de oproeper in staat stellen zijn/haar saldo meerdere keren op te nemen. Dit soort aanval kan gebruikt worden om middelen van een smart contract leeg te halen, zoals gebeurde in de [2016 DAO hack](https://www.coindesk.com/learn/understanding-the-dao-attack). Reentrancy-aanvallen zijn vandaag de dag nog steeds een kritiek probleem voor smart contracts, zoals blijkt uit [openbare lijsten van reentrancy-exploitaties](https://github.com/pcaversaccio/reentrancy-attacks).
 
 ##### Hoe reentrancy-aanvallen voorkomen
 
@@ -505,7 +505,7 @@ Als u van plan bent om een on-chain oracle te raadplegen voor activaprijzen, geb
 
 - **[Hacken](https://hacken.io)** - _Web3-cyberbeveiligingsauditor die een 360-gradenaanpak levert voor blockchainbeveiliging._
 
-- **[Nethermind](https://nethermind.io/smart-contracts-audits)** - _Solidity- en Cairo-auditservices, die de integriteit van smart contracts en de beveiliging van gebruikers op Ethereum en Starknet waarborgen._
+- **[Nethermind](https://www.nethermind.io/smart-contract-audits)** - _Solidity- en Cairo-auditservices, die de integriteit van smart contracts en de beveiliging van gebruikers op Ethereum en Starknet waarborgen._
 
 - **[HashEx](https://hashex.org/)** - _HashEx richt zich op blockchain- en smart contract-auditing om de beveiliging van cryptovaluta te garanderen, en levert services zoals smart contract-ontwikkeling, penetratietesten en blockchain-consulting._
 

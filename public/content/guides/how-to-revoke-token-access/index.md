@@ -20,7 +20,6 @@ Several websites let you view and revoke smart contracts connected to your addre
 
 - [Ethallowance](https://ethallowance.com/) (Ethereum)
 - [Etherscan](https://etherscan.io/tokenapprovalchecker) (Ethereum)
-- [Cointool](https://cointool.app/approve/eth) (multiple networks)
 - [Revoke](https://revoke.cash/) (multiple networks)
 - [Unrekt](https://app.unrekt.net/) (multiple networks)
 - [EverRevoke](https://everrise.com/everrevoke/) (multiple networks)

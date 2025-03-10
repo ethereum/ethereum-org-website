@@ -20,7 +20,6 @@ Existen varios sitios web que le permiten ver y revocar contratos inteligentes c
 
 - [Ethallowance](https://ethallowance.com/) (Ethereum)
 - [Etherscan](https://etherscan.io/tokenapprovalchecker) (Ethereum)
-- [Cointool](https://cointool.app/approve/eth) (múltiples redes)
 - [Revoke](https://revoke.cash/) (múltiples redes)
 - [Unrekt](https://app.unrekt.net/) (múltiples redes)
 - [EverRevoke](https://everrise.com/everrevoke/) (múltiples redes)

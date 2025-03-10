@@ -50,6 +50,6 @@ Finalmente, esteja atento a questões que as ferramentas automatizadas não cons
 
 ## Pedir ajuda {#ask-for-help}
 
-[Horário de escritório Ethereum](https://calendly.com/dan-trailofbits/ethereum-office-hours) executa todas as terças da tarde. Essas sessões presenciais de uma hora são uma oportunidade para você nos fazer quaisquer perguntas que sobre segurança, solucionar problemas usando nossas ferramentas e obter comentários de especialistas sobre sua abordagem atual. Vamos ajudá-lo a trabalhar neste guia.
+[Horário de escritório Ethereum](https://calendly.com/dan-trailofbits/office-hours) executa todas as terças da tarde. Essas sessões presenciais de uma hora são uma oportunidade para você nos fazer quaisquer perguntas que sobre segurança, solucionar problemas usando nossas ferramentas e obter comentários de especialistas sobre sua abordagem atual. Vamos ajudá-lo a trabalhar neste guia.
 
 Junte-se ao nosso Slack: [Empire Hacking](https://join.slack.com/t/empirehacking/shared_invite/zt-h97bbrj8-1jwuiU33nnzg67JcvIciUw). Sempre estaremos disponíveis nos canais #crytic e #ethereum caso tenha alguma dúvida.

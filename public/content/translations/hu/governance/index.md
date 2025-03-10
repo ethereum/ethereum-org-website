@@ -118,7 +118,7 @@ Mivel ennyiféle érdekelt van különböző motivációkkal és hitekkel, ezér
 
 Az elágazások akkor jönnek létre, amikor komoly technikai változások történnek a hálózaton és megváltoztatják a protokoll szabályait. Az [Ethereum-klienseknek](/developers/docs/nodes-and-clients/) frissíteni kell a szoftverjét, hogy az új elágazási szabályokat életbe léptessék.
 
-A DAO-elágazás volt a válasz egy [2016-os DAO-támadásra](https://www.coindesk.com/understanding-dao-hack-journalists), amikor egy sebezhető [DAO](/glossary/#dao) szerződésből 3,6 millió ETH-t ürítettek le a támadás során. Az elágazás a pénzeszközöket a hibás szerződésből egy újba tette át, hogy a támadás során károsultak kaphassanak belőle.
+A DAO-elágazás volt a válasz egy [2016-os DAO-támadásra](https://www.coindesk.com/learn/understanding-the-dao-attack), amikor egy sebezhető [DAO](/glossary/#dao) szerződésből 3,6 millió ETH-t ürítettek le a támadás során. Az elágazás a pénzeszközöket a hibás szerződésből egy újba tette át, hogy a támadás során károsultak kaphassanak belőle.
 
 Ennek az akciónak a kezelését megszavazták az Ethereum közösségen belül. Bármely ETH tulajdonos szavazhatott egy tranzakción keresztül [egy szavazási platformon](https://web.archive.org/web/20170620030820/http://v1.carbonvote.com/). Az elágazás mellett több mint a szavazók 85%-a voksolt.
 

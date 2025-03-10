@@ -106,7 +106,7 @@ _Si noti che la spiegazione nel video usa il termine "Livello 2" per fare riferi
 - [Una guida incompleta ai rollup](https://vitalik.eth.limo/general/2021/01/05/rollup.html)
 - [Rollup ZK basati su Ethereum: fuoriclasse a livello mondiale](https://hackmd.io/@canti/rkUT0BD8K)
 - [Rollup ottimistici vs Rollup ZK](https://limechain.tech/blog/optimistic-rollups-vs-zk-rollups/)
-- [Scalabilità della blockchain a conoscenza zero](https://ethworks.io/assets/download/zero-knowledge-blockchain-scaling-ethworks.pdf)
+- [Scalabilità della blockchain a conoscenza zero](https://www.archblock.com/poland/assets/download/zero-knowledge-blockchain-scaling-ethworks.pdf)
 - [Perché i rollup e i frammenti di dati sono la sola soluzione sostenibile per un'elevata scalabilità](https://polynya.medium.com/why-rollups-data-shards-are-the-only-sustainable-solution-for-high-scalability-c9aabd6fbb48)
 - [Che tipo di Livelli 3 hanno senso?](https://vitalik.eth.limo/general/2022/09/17/layer_3.html)
 - [Disponibilità dei dati, ovvero come i rollup hanno imparato a smettere di preoccuparsi e ad amare Ethereum](https://ethereum2077.substack.com/p/data-availability-in-ethereum-rollups)
