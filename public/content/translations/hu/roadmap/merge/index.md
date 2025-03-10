@@ -92,7 +92,7 @@ title="Dapp- és okosszerződés-fejlesztők"
 contentPreview="The Merge was designed to have minimal impact on smart contract and dapp developers."
 id="developers">
 
-A Beolvadás megváltoztatta a konszenzust, amely a következőkre is hatott:<
+A Beolvadás megváltoztatta a konszenzust, amely a következőkre is hatott:
 
 <ul>
   <li>blokkstruktúra</li>

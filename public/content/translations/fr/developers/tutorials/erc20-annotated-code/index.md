@@ -587,7 +587,7 @@ La fonction `a.add(b)` est un ajout sûr. Dans le cas peu probable où `a`+`b`>=
 
 Voici les quatre fonctions qui font le travail réel : `_transfer`, `_mint`, `_burn`, et `_approve`.
 
-#### La fonction \_transfer {#\_transfer}
+#### La fonction \_transfer {#_transfer}
 
 ```solidity
     /**
@@ -652,7 +652,7 @@ Ce sont les lignes qui exécutent réellement le transfert. Notez qu'il n'y a **
 
 Enfin, émettre un événement `Transfert`. Les événements ne sont pas accessibles par les contrats intelligents, mais le code exécuté en dehors de la blockchain peut lire les événements et réagir. Par exemple, un portefeuille peut garder une trace du moment où le propriétaire obtient plus de jetons.
 
-#### La fonction \_mint and \_burn {#\_mint-and-\_burn}
+#### La fonction \_mint and \_burn {#_mint-and-_burn}
 
 Ces deux fonctions (`_mint` et `_burn`) modifient la quantité totale de jetons. Elles sont internes et il n'y a pas de fonction qui les appelle dans ce contrat, ainsi elles ne sont utiles que si vous héritez du contrat et ajoutez votre propre logique pour décider dans quelles conditions générer de nouveaux jetons ou utiliser les jetons existants.
 
@@ -706,7 +706,7 @@ Veillez à mettre à jour `_totalSupply` lorsque le nombre total de jetons chang
 
 La fonction `_burn` est presque identique à `_mint` sauf qu'elle fonctionne en sens inverse.
 
-#### Fonction \_approve {#\_approve}
+#### Fonction \_approve {#_approve}
 
 C'est la fonction qui spécifie les provisions. Notez qu'elle permet à un propriétaire de spécifier une provision supérieure au solde actuel du propriétaire. Cela ne pose pas de problème car le solde est vérifié au moment du transfert dans la mesure où il pourrait être différent du solde existant au moment de la création de la provision.
 
@@ -783,7 +783,7 @@ Cette fonction modifie la variable `_decimals` qui est utilisée pour dicter aux
 
 Il s'agit de la fonction hook à appeler pendant les transferts. Elle est ici vide, mais si vous en avez besoin pour accomplir quelque chose, vous avez juste à la remplacer.
 
-# Conclusion {#conclusion}
+## Conclusion {#conclusion}
 
 Pour résumer, voici quelques-unes des idées les plus importantes de ce contrat (selon moi et les vôtres pourraient ne pas être les mêmes) :
 

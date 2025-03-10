@@ -681,7 +681,7 @@ the way normal addition does.
 
 These are the four functions that do the actual work: `_transfer`, `_mint`, `_burn`, and `_approve`.
 
-#### The \_transfer function {#\_transfer}
+#### The _transfer function {#_transfer}
 
 ```solidity
     /**
@@ -757,7 +757,7 @@ is atomic, nothing can happen in the middle of it.
 Finally, emit a `Transfer` event. Events are not accessible to smart contracts, but code running outside the blockchain
 can listen for events and react to them. For example, a wallet can keep track of when the owner gets more tokens.
 
-#### The \_mint and \_burn functions {#\_mint-and-\_burn}
+#### The _mint and _burn functions {#_mint-and-_burn}
 
 These two functions (`_mint` and `_burn`) modify the total supply of tokens.
 They are internal and there is no function that calls them in this contract,
@@ -819,7 +819,7 @@ Make sure to update `_totalSupply` when the total number of tokens changes.
 
 The `_burn` function is almost identical to `_mint`, except it goes in the other direction.
 
-#### The \_approve function {#\_approve}
+#### The _approve function {#_approve}
 
 This is the function that actually specifies allowances. Note that it allows an owner to specify
 an allowance that is higher than the owner's current balance. This is OK because the balance is
@@ -904,7 +904,7 @@ are not designed to handle it.
 This is the hook function to be called during transfers. It is empty here, but if you need
 it to do something you just override it.
 
-# Conclusion {#conclusion}
+## Conclusion {#conclusion}
 
 For review, here are some of the most important ideas in this contract (in my opinion, yours is likely to vary):
 

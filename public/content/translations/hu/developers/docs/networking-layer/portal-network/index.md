@@ -55,7 +55,7 @@ Ennek a hálózati dizájnnak az előnyei:
 - csökkenti a központi szolgáltatóktól való függést
 - csökkenti az internet sávszélességi igényt
 - minimális vagy nulla szinkronizálásra van szükség
-- A kevés erőforrással bíró eszközök esetében is működőképes (<1 GB RAM, <100 MB merevlemez, 1 CPU)
+- A kevés erőforrással bíró eszközök esetében is működőképes (\<1 GB RAM, \<100 MB merevlemez, 1 CPU)
 
 Az alábbi ábra a meglévő kliensek azon funkcióit mutatja be, amelyeket a Portal Network biztosíthat, lehetővé téve a felhasználók számára, hogy ezeket a funkciókat nagyon alacsony erőforrásigényű eszközökön is elérjék.
 

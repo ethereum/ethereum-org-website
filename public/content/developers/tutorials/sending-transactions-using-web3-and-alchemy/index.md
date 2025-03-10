@@ -55,7 +55,7 @@ This is what we will be using in this tutorial.
 
 Okay, now that we have a few of these questions out of the way, let’s move on to the tutorial. Feel free to ask questions anytime in the Alchemy [discord](https://discord.gg/gWuC7zB)!
 
-### 7\. How to send secure, gas-optimized, and private transactions? {how-to-send-secure-gas-optimized-and-private-transactions}
+### 7\. How to send secure, gas-optimized, and private transactions? {#how-to-send-secure-gas-optimized-and-private-transactions}
 
 - [Alchemy has a suite of Transact APIs](https://docs.alchemy.com/reference/transact-api-quickstart). You can use these to send reinforced transactions, simulate transactions before they happen, send private transactions, and send gas-optimized transactions
 - You can also use the [Notify API](https://docs.alchemy.com/docs/alchemy-notify) to be alerted when your transaction is pulled from the mempool and added to the chain
