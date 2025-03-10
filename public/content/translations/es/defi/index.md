@@ -1,5 +1,6 @@
 ---
 title: Finanzas descentralizadas (DeFi)
+metaTitle: '¿Qué son las DeFi? | Beneficios y usos de las Finanzas Descentralizadas'
 description: Una visión de las finanzas descentralizadas en Ethereum
 lang: es
 template: use-cases
@@ -168,7 +169,7 @@ Si la oferta de B cayera repentinamente y el usuario no pudiera comprar la canti
 
 Para hacer lo que describimos en el ejemplo de arriba pero en el mundo real necesitaría mucho dinero. Estas estrategias para hacer dinero solo son accesibles para aquellos que ya tienen dinero. Los préstamos flash son un ejemplo de un futuro en el que tener dinero no es necesariamente un requisito previo para ganar dinero.
 
-<ButtonLink isSecondary href="https://aave.com/flash-loans/">
+<ButtonLink isSecondary href="https://aave.com/docs/concepts/flash-loans">
   Más información sobre los préstamos flash
 </ButtonLink>
 
@@ -324,7 +325,7 @@ DeFi se puede dividir en varias capas:
 3. Los protocolos, o [contratos inteligentes](/glossary/#smart-contract), brindan funcionalidad, como por ejemplo, un servicio que permite el préstamo descentralizado de activos.
 4. [Las aplicaciones](/dapps/): los productos que usamos para gestionar y acceder a los protocolos.
 
-Nota: Gran parte de la DeFi utiliza el [estándar ERC-20](/glossary/#erc-20). Las aplicaciones en DeFi utilizan un wrapper para ETH llamado Wrapped Ether (WETH). [Más información sobre Wrapper Ether](/wrapped-eth).
+Nota: Gran parte de la DeFi utiliza el [estándar ERC-20](/glossary/#erc-20). Las aplicaciones en DeFi usan un wrapper de ETH llamado Wrapped Ether (WETH). [Más información sobre Wrapper Ether](/wrapped-eth).
 
 ## Desarrollar DeFi {#build-defi}
 

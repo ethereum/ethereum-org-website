@@ -16,7 +16,7 @@ Los discos duros más baratos se pueden usar para almacenar datos más antiguos,
 
 Hay varias formas de reducir la cantidad de datos que cada nodo tiene que almacenar, cada una de las cuales requiere que el protocolo principal de Ethereum se actualice en un grado diferente:
 
-- **El vencimiento del historial**: permite que los nodos descarten los datos de estado más antiguos que los bloques X, pero no cambia la forma en que el cliente de Ethereum gestiona los datos de estado.
+- **Expiración del historial**: permite que los nodos eliminen los datos de estado más antiguos que X bloques, pero no cambia la forma en que el cliente de Ethereum gestiona los datos de estado.
 - **El vencimiento del estado**: permite que los datos de estado que no se utilizan con frecuencia se vuelvan inactivos. Los clientes pueden ignorar los datos inactivos hasta que se resuciten.
 - **Sin estado débil**: solo los productores de bloques necesitan acceso a datos de estado completo, otros nodos pueden verificar bloques sin una base de datos de estado local.
 - **Sin estado fuerte**: ningún nodo necesita acceso a los datos completos del estado.
