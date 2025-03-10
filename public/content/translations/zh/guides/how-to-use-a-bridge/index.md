@@ -10,7 +10,7 @@ lang: zh
 
 **前期准备：**
 
-- 要有加密钱包，请参照这个教程：[如何“注册”以太坊帐户](/guides/how-to-create-an-ethereum-account/)
+- 拥有一个加密货币钱包，你可以参照该教程：[如何创建一个以太坊帐户](/guides/how-to-create-an-ethereum-account/)
 - 把代币转入你的钱包
 
 ## 1. 确定你想使用哪个二层网络

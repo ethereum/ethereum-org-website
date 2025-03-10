@@ -79,6 +79,8 @@ sidebarDepth: 2
 
 [Prysm](https://docs.prylabs.network/docs/getting-started)
 
+[Grandine](https://docs.grandine.io/)
+
 技术用户可以为非主流客户端编写更多教程和相关文档，并鼓励他们运营节点的对等体从主流客户端迁离，帮助加快这一进程。 [clientdiversity.org](https://clientdiversity.org/) 提供了改用非主流共识客户端的指南。
 
 ## 客户端多样性仪表板 {#client-diversity-dashboards}

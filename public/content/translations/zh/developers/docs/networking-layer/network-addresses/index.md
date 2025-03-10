@@ -23,7 +23,7 @@ sidebarDepth: 2
 
 ## Enode {#enode}
 
-Enode 使用 URL 地址格式来识别以太坊节点。 十六进制节点 ID 编码为 URL 的用户名部分，采用 @ 符号与主机分隔开来。 主机名只能作为 IP 地址给出；不允许给出 DNS 名称。 主机名部分中的端口是 TCP 监听端口。 如果传输控制协议和用户数据报协议（发现）端口不同，用户数据报协议端口将被指定为查询参数“disposport”
+Enode 使用 URL 地址格式来识别以太坊节点。 十六进制节点 ID 编码为 URL 的用户名部分，采用 @ 符号与主机分隔开来。 主机名只能作为 IP 地址给出；不允许给出 DNS 名称。 主机名部分中的端口是 TCP 监听端口。 如果传输控制协议 (TCP) 和用户数据报协议 (UDP)（发现）端口不同，用户数据报协议 (UDP) 端口将被指定为查询参数 "discport"。
 
 在下面的例子中，节点 URL 描述了一个 IP 地址为 `10.3.58.6`、TCP 端口为 `30303`、UDP 发现端口为 `30301` 的节点。
 
@@ -35,4 +35,6 @@ Enode 使用 URL 地址格式来识别以太坊节点。 十六进制节点 ID �
 
 ## 延伸阅读 {#further-reading}
 
-[EIP-778：以太坊节点记录](https://eips.ethereum.org/EIPS/eip-778) [以太坊中的网络地址](https://dean.eigenmann.me/blog/2020/01/21/network-addresses-in-ethereum/) [LibP2P：Multiaddr-Enode-ENR?!](https://consensys.net/diligence/blog/2020/09/libp2p-multiaddr-enode-enr/)
+- [EIP-778：以太坊节点记录 (ENR)](https://eips.ethereum.org/EIPS/eip-778)
+- [以太坊中的网络地址](https://dean.eigenmann.me/blog/2020/01/21/network-addresses-in-ethereum/)
+- [LibP2P：Multiaddr-Enode-ENR?!](https://consensys.net/diligence/blog/2020/09/libp2p-multiaddr-enode-enr/)
