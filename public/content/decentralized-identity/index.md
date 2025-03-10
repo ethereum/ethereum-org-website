@@ -39,7 +39,7 @@ These traditional examples of identifiers are issued, held and controlled by cen
 
 1. Decentralized identity increases individual control of identifying information. Decentralized identifiers and attestations can be verified without relying on centralized authorities and third-party services.
 
-2. Decentralized identity solutions facilitates a trustless, seamless, and privacy-protecting method for verifying and managing user identity.
+2. Decentralized identity solutions facilitate a trustless, seamless, and privacy-protecting method for verifying and managing user identity.
 
 3. Decentralized identity harnesses blockchain technology, which creates trust between different parties and provides cryptographic guarantees to prove the validity of attestations.
 
