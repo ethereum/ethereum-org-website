@@ -102,6 +102,7 @@ const ResourcesPage = ({ txCostsMedianUsd }) => {
             "issues/new?title=Resource%20dashboard%20feedback",
             GITHUB_REPO_URL
           ).toString()}
+          className="visited:text-white"
         >
           {t("page-resources-share-feedback")}
         </Link>
