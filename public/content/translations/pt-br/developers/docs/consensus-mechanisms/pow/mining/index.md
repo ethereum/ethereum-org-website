@@ -10,7 +10,7 @@ A prova de trabalho não está mais subjacente ao mecanismo de consenso do Ether
 
 ## Pré-requisitos {#prerequisites}
 
-Para melhor entender esta página, recomendamos que você leia primeiro [transações](/developers/docs/transactions/), [blocos](/developers/docs/blocks/) e [prova de trabalho](/developers/docs/consensus-mechanisms/pow/).
+Para melhor entender esta página, recomendamos que você leia primeiro [transações](/developers/docs/transactions/), [blocos](/developers/docs/blocks/) e [prova de trabalho ](/developers/docs/consensus-mechanisms/pow/).
 
 ## O que é mineração de Ethereum? {#what-is-ethereum-mining}
 
