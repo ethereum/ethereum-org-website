@@ -1,9 +1,6 @@
-import type { CSSProperties } from "react"
 import { Meta, StoryObj } from "@storybook/react"
 
 import { HStack } from "@/components/ui/flex"
-
-import { screens } from "@/lib/utils/screen"
 
 import { langViewportModes } from "@/storybook/modes"
 
@@ -22,10 +19,7 @@ const meta = {
   },
   decorators: [
     (Story) => (
-      <HStack
-        style={{ "--hero-decorator-max-w": screens["2xl"] } as CSSProperties}
-        className="mx-auto h-[100vh] max-w-[var(--hero-decorator-max-w)]"
-      >
+      <HStack className="mx-auto h-[100vh] max-w-screen-2xl">
         <Story />
       </HStack>
     ),
