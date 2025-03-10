@@ -5,7 +5,7 @@ import { HStack } from "@/components/ui/flex"
 
 import { screens } from "@/lib/utils/screen"
 
-import { langViewportModes } from "../../../../.storybook/modes"
+import { langViewportModes } from "@/storybook/modes"
 
 import MdxHeroComponent from "./"
 
