@@ -253,7 +253,6 @@ Učíte se spíše vizuálně? Podívejte se na video od Finematics, které vysv
 
 <YouTube id="7pWxCklcNsU" start="263" />
 
-
 ## Další čtení o optimistických rollupech
 
 - [Jak fungují optimistické rollupy (kompletní průvodce)](https://www.alchemy.com/overviews/optimistic-rollups)
