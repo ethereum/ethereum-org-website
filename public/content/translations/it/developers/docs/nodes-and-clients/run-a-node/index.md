@@ -141,7 +141,7 @@ Come spiegato prima, configurare il tuo nodo di Ethereum richiederà l'esecuzion
 
 #### Ottenere il software del client {#getting-the-client}
 
-Prima di tutto devi ottenere il software dei tuoi [client di esecuzione](/developers/docs/nodes-and-clients/#execution-clients) e [client di consenso](/developers/docs/nodes-and-clients/#consensus-clients) preferiti.
+Prima di tutto devi ottenere il software dei tuoi [client di esecuzione](/developers/docs/nodes-and-clients/#execution-clients) e [client di consenso](developers/docs/nodes-and-clients/#consensus-clients) preferiti.
 
 Puoi semplicemente scaricare un'applicazione eseguibile o pacchetto d'installazione più adatto al tuo sistema operativo e alla tua architettura. Verifica sempre le firme e le checksum dei pacchetti scaricati. Alcuni client offrono anche repository o immagini Docker per facilitare l’installazione e gli aggiornamenti. Tutti i client sono open source, quindi puoi anche compilarli da sorgente. Questo è un metodo più avanzato ma, in alcuni casi, potrebbe esser richiesto.
 
@@ -311,7 +311,7 @@ reth node \
     --authrpc.port 8551
 ```
 
-Si veda [Configurare Reth](https://reth.rs/run/config.html?highlight=data%20directory#configuring-reth) per ulteriori informazioni sulle directory di dati predefinite. La [documentazione di Reth](https://reth.rs/run/mainnet.html) contiene opzioni aggiuntive e dettagli di configurazione.
+Visita [Configurare Reth](https://reth.rs/run/config.html?highlight=data%20directory#configuring-reth) per scoprire di più sulle directory di dati predefinite. La [documentazione di Reth](https://reth.rs/run/mainnet.html) contiene opzioni aggiuntive e dettagli di configurazione.
 
 #### Avviare il client di consenso {#starting-the-consensus-client}
 

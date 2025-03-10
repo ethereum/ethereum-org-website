@@ -1,6 +1,6 @@
 ---
 title: Proof-of-stake (PoS)
-description: Spiegazione del protocollo di consenso Proof-of-stake e del suo ruolo in Ethereum.
+description: Spiegazione del protocollo di consenso proof-of-stake e del suo ruolo in Ethereum.
 lang: it
 ---
 
