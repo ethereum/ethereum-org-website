@@ -492,7 +492,7 @@ const HomePage = ({
                   <button
                     key={title}
                     className={cn(
-                      "flex flex-col gap-y-0.5 border-t px-6 py-4 hover:bg-background-highlight max-md:hidden",
+                      "flex flex-col gap-y-0.5 border-t px-6 py-4 text-start hover:bg-background-highlight max-md:hidden",
                       isModalOpen &&
                         idx === activeCode &&
                         "bg-background-highlight"
