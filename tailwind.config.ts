@@ -269,9 +269,6 @@ const config = {
         31: "7.75rem", // FeedbackWidget conditional bottom offset
         128: "32rem",
       },
-      maxWidth: {
-        ...screens,
-      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },

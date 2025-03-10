@@ -20,7 +20,7 @@ const meta = {
   },
   decorators: [
     (Story) => (
-      <div className="mx-auto max-w-2xl">
+      <div className="mx-auto max-w-screen-2xl">
         <Story />
       </div>
     ),

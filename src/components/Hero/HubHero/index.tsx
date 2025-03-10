@@ -38,7 +38,7 @@ const HubHero = ({
           "text-center xl:text-start",
           "xl:rounded",
           "xl:bg-hub-hero-content",
-          "xl:absolute xl:top-1/2 xl:max-w-96",
+          "xl:absolute xl:top-1/2 xl:max-w-sm",
           "xl:-translate-y-1/2 xl:transform",
           "xl:backdrop-blur xl:backdrop-filter",
           "break-words",

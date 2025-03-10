@@ -19,7 +19,7 @@ const meta = {
   },
   decorators: [
     (Story) => (
-      <HStack className="mx-auto h-[100vh] max-w-2xl">
+      <HStack className="mx-auto h-[100vh] max-w-screen-2xl">
         <Story />
       </HStack>
     ),

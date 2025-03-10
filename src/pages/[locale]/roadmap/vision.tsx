@@ -76,7 +76,7 @@ const CardContainer = ({ className, ...props }: FlexProps) => (
 )
 
 const ProblemCardContainer = (props: ChildOnlyProp) => {
-  return <CardContainer className="mx-auto max-w-lg" {...props} />
+  return <CardContainer className="mx-auto max-w-screen-lg" {...props} />
 }
 
 const CentreCard = (props: ComponentPropsWithRef<typeof Card>) => (

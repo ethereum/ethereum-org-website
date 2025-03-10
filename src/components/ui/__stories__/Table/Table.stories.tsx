@@ -14,7 +14,7 @@ const meta = {
   component: TableComponent,
   decorators: [
     (Story) => (
-      <Flex className="max-w-md flex-col gap-16">
+      <Flex className="max-w-screen-md flex-col gap-16">
         <Story />
       </Flex>
     ),
