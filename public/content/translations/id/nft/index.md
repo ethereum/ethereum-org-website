@@ -1,5 +1,6 @@
 ---
 title: Token yang tidak dapat dipertukarkan (NFT)
+metaTitle: Apa itu NFT? | Manfaat dan kegunaannya
 description: Gambaran umum tentang NFT di Ethereum
 lang: id
 template: use-cases
