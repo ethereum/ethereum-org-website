@@ -2,12 +2,13 @@ import { ComponentPropsWithRef } from "react"
 import { GetStaticProps } from "next"
 import { useLocale } from "next-intl"
 
-import { BasePageProps, Lang, Params } from "@/lib/types"
+import { BasePageProps, CommitHistory, Lang, Params } from "@/lib/types"
 
 import Callout from "@/components/Callout"
 import Card from "@/components/Card"
 import CardList from "@/components/CardList"
 import FeedbackCard from "@/components/FeedbackCard"
+import FileContributors from "@/components/FileContributors"
 import HorizontalCard from "@/components/HorizontalCard"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
@@ -20,6 +21,7 @@ import Translation from "@/components/Translation"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Divider } from "@/components/ui/divider"
 
+import { getPageContributorInfo } from "@/lib/utils/contributors"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLocaleTimestamp } from "@/lib/utils/time"
@@ -63,6 +65,14 @@ export const getStaticProps = (async ({ params }) => {
 
   const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
+  const commitHistoryCache: CommitHistory = {}
+
+  const { contributors, lastEditLocaleTimestamp } =
+    await getPageContributorInfo(
+      "wallets/index.tsx",
+      locale as Lang,
+      commitHistoryCache
+    )
   const messages = await loadNamespaces(locale!, requiredNamespaces)
 
   return {
@@ -70,11 +80,13 @@ export const getStaticProps = (async ({ params }) => {
       messages,
       contentNotTranslated,
       lastDeployLocaleTimestamp,
+      contributors,
+      lastEditLocaleTimestamp,
     },
   }
 }) satisfies GetStaticProps<BasePageProps, Params>
 
-const WalletsPage = () => {
+const WalletsPage = ({ contributors, lastEditLocaleTimestamp }) => {
   const locale = useLocale()
   const { t } = useTranslation("page-wallets")
 
@@ -419,6 +431,11 @@ const WalletsPage = () => {
       </div>
 
       <div className="w-full px-8 py-4">
+        <FileContributors
+          className="my-10 border-t"
+          contributors={contributors}
+          lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        />
         <Divider />
 
         <h2 className="mb-8 mt-12 text-2xl leading-[1.4] md:text-[2rem]">
