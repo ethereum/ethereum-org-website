@@ -13,6 +13,7 @@ import { LOCALES_CODES } from "@/lib/constants"
 
 import { docsComponents, DocsLayout } from "@/layouts"
 import { getPageData } from "@/lib/md/data"
+import { getMdMetadata } from "@/lib/md/metadata"
 
 export default async function Page({
   params,
@@ -78,6 +79,20 @@ export async function generateStaticParams() {
       }
     })
   )
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string; doc: string[] }>
+}) {
+  const { locale, doc } = await params
+  const slug = ["developers/docs", ...(doc || [])]
+
+  return await getMdMetadata({
+    locale,
+    slug,
+  })
 }
 
 export const dynamicParams = false

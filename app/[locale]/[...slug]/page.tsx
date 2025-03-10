@@ -14,6 +14,7 @@ import { LOCALES_CODES } from "@/lib/constants"
 import { componentsMapping, layoutMapping } from "@/layouts"
 import { fetchGFIs } from "@/lib/api/fetchGFIs"
 import { getPageData } from "@/lib/md/data"
+import { getMdMetadata } from "@/lib/md/metadata"
 
 const loadData = dataLoader([["gfissues", fetchGFIs]])
 
@@ -92,4 +93,17 @@ export async function generateStaticParams() {
       locale,
     }))
   )
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string; slug: string[] }>
+}) {
+  const { locale, slug } = await params
+
+  return await getMdMetadata({
+    locale,
+    slug,
+  })
 }

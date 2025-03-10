@@ -14,6 +14,7 @@ import { LOCALES_CODES } from "@/lib/constants"
 
 import { TutorialLayout, tutorialsComponents } from "@/layouts"
 import { getPageData } from "@/lib/md/data"
+import { getMdMetadata } from "@/lib/md/metadata"
 
 export default async function Page({
   params,
@@ -81,6 +82,20 @@ export async function generateStaticParams() {
       locale,
     }))
   )
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string; tutorial: string[] }>
+}) {
+  const { locale, tutorial } = await params
+  const slug = ["developers/tutorials", ...(tutorial || [])]
+
+  return await getMdMetadata({
+    locale,
+    slug,
+  })
 }
 
 export const dynamicParams = false
