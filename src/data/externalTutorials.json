@@ -280,7 +280,6 @@
       "hardhat",
       "nextjs",
       "moralis",
-      "web3modal",
       "ethersjs"
     ],
     "skillLevel": "beginner",
@@ -340,7 +339,7 @@
     "authorGithub": "https://github.com/PatrickAlphaC",
     "tags": [
       "solidity",
-      "ethers.js",
+      "ethersjs",
       "hardhat",
       "NFT",
       "smart contracts",
@@ -511,8 +510,7 @@
       "smart contracts",
       "solidity",
       "yul",
-      "storage",
-      "memory"
+      "storage"
     ],
     "skillLevel": "beginner",
     "lang": "en",
