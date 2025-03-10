@@ -386,6 +386,8 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_syncing","params":[],"id":1}
 
 傳回用戶端的 coinbase 地址。
 
+> **注意：**此方法已於 **v1.14.0** 棄用並不再支援。 嘗試採用此方法將會出現「不支援此方法」的錯誤。
+
 **參數**
 
 無
@@ -1649,10 +1651,10 @@ geth --http --dev console 2>>geth.log
 
 這將在 `http://localhost:8545` 上啟動 HTTP 遠端程序呼叫介面。
 
-我們可以使用 [curl](https://curl.se) 擷取 Coinbase 地址和餘額來驗證介面正在執行。 請注意，這些範例中的資料與你的本地節點有所不同。 如果你想嘗試這些命令，請將第二個 curl 請求中的請求參數替換為第一個請求返回的結果。
+我們可以透過使用 [ curl](https://curl.se) 取得 Coinbase 地址（獲取帳戶陣列中的第一個地址）和餘額，驗證介面是否正在執行。 請注意，這些範例中的資料與你的本地節點有所不同。 如果你想嘗試這些命令，請將第二個 curl 請求中的請求參數替換為第一個請求返回的結果。
 
 ```bash
-curl --data '{"jsonrpc":"2.0","method":"eth_coinbase", "id":1}' -H "Content-Type: application/json" localhost:8545
+curl --data '{"jsonrpc":"2.0","method":"eth_accounts","params":[]", "id":1}' -H "Content-Type: application/json" localhost:8545
 {"id":1,"jsonrpc":"2.0","result":["0x9b1d35635cc34752ca54713bb99d38614f63c955"]}
 
 curl --data '{"jsonrpc":"2.0","method":"eth_getBalance", "params": ["0x9b1d35635cc34752ca54713bb99d38614f63c955", "latest"], "id":2}' -H "Content-Type: application/json" localhost:8545

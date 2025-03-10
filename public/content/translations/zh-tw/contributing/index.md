@@ -19,7 +19,7 @@ Ethereum.org 是一個開源專案，擁有超過 **12000 名**貢獻者，幫�
 - [處理未解決的問題](https://github.com/ethereum/ethereum-org-website/issues) – 我們確定為需要完成的工作
 
 **設計**
-- [幫助設計網站](/contributing/design/)設計師不論資歷，都可以為改進網站做出貢獻
+- [幫助設計網站](/contributing/design/) — 任何水平的設計者都可以為改進網站做出貢獻
 
 **內容**
 - [建立/編輯內容](/contributing/#how-to-update-content) – 提議建立新頁面或對已有內容稍微改進
@@ -94,7 +94,7 @@ Ethereum.org 是一個開源專案，擁有超過 **12000 名**貢獻者，幫�
 
 ### 如何領取
 1. 加入我們的 [Discord 伺服器](https://discord.gg/ethereum-org)。
-2. 將你貢獻內容的連結貼到 `#🥇 | proof-of-contribution` 頻道
+2. 將你貢獻內容的連結貼到 `#🥇 | proof-of-contribution` 頻道。
 3. 等待我們團隊的成員向你發送前往你的鏈上成就代幣的連結。
 4. 領取你的鏈上成就代幣！
 
