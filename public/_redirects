@@ -177,3 +177,7 @@
 /*/deprecated-software /:splat/dapps/ 301!
 
 /*/enterprise/private-ethereum/ /:splat/enterprise/ 301!
+
+/dashboards /en/resources 301!
+
+/*/dashboards /:splat/resources 301!

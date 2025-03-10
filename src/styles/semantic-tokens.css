@@ -25,7 +25,7 @@
 
     --border: var(--gray-200);
     --border-high-contrast: var(--gray-400);
-    --border-low-contrast: var(--gray-50);
+    --border-low-contrast: var(--gray-100);
     --border-hover: var(--gray-300);
 
     --primary: var(--purple-600);
@@ -150,7 +150,7 @@
 
     --border: var(--gray-600);
     --border-high-contrast: var(--gray-300);
-    --border-low-contrast: var(--black);
+    --border-low-contrast: var(--gray-900);
     --border-hover: var(--gray-500);
 
     --primary: var(--purple-400);
