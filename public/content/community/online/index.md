@@ -57,7 +57,7 @@ If you believe a community should be added or removed based on these guidelines,
 <SocialListItem socialIcon="webpage"><Link href="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> <i>- question and answer forum</i></SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://app.peera.ai/">Peera Community Forum</Link> <i>- decentralized question and answer forum</i></SocialListItem>
 
-## YouTube and X formerly (Twitter) {#youtube-and-twitter}
+## YouTube and X (formerly Twitter) {#youtube-and-twitter}
 
 <SocialListItem socialIcon="youtube"><Link href="https://www.youtube.com/c/EthereumFoundation">Ethereum Foundation</Link> - Keep up to date with the latest from the Ethereum Foundation</SocialListItem>
 <SocialListItem socialIcon="twitter"><Link href="https://x.com/ethereum">@ethereum</Link> - Main Ethereum account for the community</SocialListItem>
