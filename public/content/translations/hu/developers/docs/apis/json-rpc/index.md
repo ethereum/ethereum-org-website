@@ -386,6 +386,8 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_syncing","params":[],"id":1}
 
 A kliens coinbase-címét adja vissza.
 
+> **Megjegyzés:** Ez a metódus a **v1.14.0** óta elavult, és már nem támogatott. Ha megpróbálja használni ezt a metódust, a „Nem támogatott metódus” hibaüzenetet kapja.
+
 **Paraméterek**
 
 Egyik sem
@@ -1649,10 +1651,10 @@ geth --http --dev console 2>>geth.log
 
 Ez elindítja a HTTP RPC interfészt a `http://localhost:8545` kódon.
 
-A [curl](https://curl.se) segítségével a Coinbase-címet és egyenleget lekérve ellenőrizhetjük, hogy az interfész fut-e. Vegye figyelembe, hogy e példában az adatok mások, mint az Ön lokális csomópontján. Ha ki szeretné próbálni ezeket a parancsokat, akkor a lekérdezés paramétereit a második curl kérésben cserélje le az első kérésre kapott eredményekre.
+A coinbase címének lekérdezésével (az első cím megszerzésével a számlák tömbjéből) és a [curl](https://curl.se) használatával ellenőrizhetjük, hogy az interfész fut-e. Vegye figyelembe, hogy e példában az adatok mások, mint az Ön lokális csomópontján. Ha ki szeretné próbálni ezeket a parancsokat, akkor a lekérdezés paramétereit a második curl kérésben cserélje le az első kérésre kapott eredményekre.
 
 ```bash
-curl --data '{"jsonrpc":"2.0","method":"eth_coinbase", "id":1}' -H "Content-Type: application/json" localhost:8545
+curl --data '{"jsonrpc":"2.0","method":"eth_accounts","params":[]", "id":1}' -H "Content-Type: application/json" localhost:8545
 {"id":1,"jsonrpc":"2.0","result":["0x9b1d35635cc34752ca54713bb99d38614f63c955"]}
 
 curl --data '{"jsonrpc":"2.0","method":"eth_getBalance", "params": ["0x9b1d35635cc34752ca54713bb99d38614f63c955", "latest"], "id":2}' -H "Content-Type: application/json" localhost:8545
