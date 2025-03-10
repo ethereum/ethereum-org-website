@@ -105,7 +105,7 @@ const Tooltip = ({
         <Content
           side="top"
           sideOffset={2}
-          className="max-w-80 px-5 text-sm"
+          className="z-[10000] max-w-80 px-5 text-sm"
           data-testid="tooltip-popover"
         >
           {content}

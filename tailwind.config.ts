@@ -261,6 +261,7 @@ const config = {
           var(--shadow-window-box-1), var(--shadow-window-box-2),
           var(--shadow-window-box-3), var(--shadow-window-box-4),
           var(--shadow-window-box-5)`,
+        widget: "var(--shadow-widget)",
       },
       spacing: {
         7.5: "1.875rem",

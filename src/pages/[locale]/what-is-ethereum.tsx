@@ -25,6 +25,7 @@ import Card from "@/components/Card"
 import EnergyConsumptionChart from "@/components/EnergyConsumptionChart"
 import FeedbackCard from "@/components/FeedbackCard"
 import { Image } from "@/components/Image"
+import ListenToPlayer from "@/components/ListenToPlayer"
 import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
 import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
@@ -57,6 +58,7 @@ import { DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
 
 import useTranslation from "@/hooks/useTranslation"
 import loadNamespaces from "@/i18n/loadNamespaces"
+import { usePathname } from "@/i18n/routing"
 import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
 import dogeComputerImg from "@/public/images/doge-computer.png"
 import ethImg from "@/public/images/eth.png"
@@ -219,7 +221,7 @@ const WhatIsEthereumPage = ({
   data,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const { t } = useTranslation(["page-what-is-ethereum", "learn-quizzes"])
-
+  const pathname = usePathname()
   const locale = useLocale()
   const localeForNumberFormat = getLocaleForNumberFormat(locale! as Lang)
 
@@ -357,6 +359,9 @@ const WhatIsEthereumPage = ({
         </Content>
         <div className="w-full bg-background-highlight">
           <Section>
+            <div className="mb-8">
+              <ListenToPlayer slug={pathname} />
+            </div>
             <Stack className="gap-14">
               <TwoColumnContent id="summary">
                 <Width60>
