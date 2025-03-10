@@ -130,7 +130,7 @@ De nombreux frameworks de tests unitaires vous permettent de créer des assertio
 
 ##### 3. Mesurer la couverture du code
 
-[La couverture de code](https://en.m.wikipedia.org/wiki/Code_coverage) est une métrique de test qui suit le nombre de branches, de lignes et d'instructions dans votre code exécuté lors des tests. Les tests doivent avoir une bonne couverture du code, sinon vous risquez d'obtenir des « faux négatifs », ce qui se produit lorsqu'un contrat réussit tous les tests, mais des vulnérabilités existent toujours dans le code. L'enregistrement d'une couverture de code élevée donne toutefois l'assurance que toutes les déclarations/fonctions d'un contrat intelligent ont été suffisamment testées pour être correctes.
+[La couverture de code](https://en.m.wikipedia.org/wiki/Code_coverage) est une métrique de test qui suit le nombre de branches, de lignes et d'instructions dans votre code exécuté lors des tests. Les tests devraient avoir une bonne couverture de code pour minimiser le risque de vulnérabilités non testées. Sans une couverture suffisante, vous pourriez à tort supposer que votre contrat est sécurisé parce que tous les tests réussissent, alors que des vulnérabilités existent encore dans des chemins de code non testés. L'enregistrement d'une couverture de code élevée donne toutefois l'assurance que toutes les déclarations/fonctions d'un contrat intelligent ont été suffisamment testées pour être correctes.
 
 ##### 4. Utiliser des frameworks de test bien développés
 
@@ -213,7 +213,7 @@ Exécuter des contrats sur une blockchain locale pourrait être utile comme une 
 
 ### Tests de contrats sur les réseaux de test {#testing-contracts-on-testnets}
 
-Un réseau de test fonctionne exactement comme le réseau principal d'Ethereum, sauf qu'il utilise Ether (ETH) sans valeur de monde réel. Déployer votre contrat sur un [réseau de test](/developers/docs/networks/#ethereum-testnets) signifie que n'importe qui peut interagir avec lui (par exemple, via le frontend de la DAPP) sans mettre en péril les fonds.
+Un réseau de test fonctionne exactement comme le réseau principal d'Ethereum, sauf qu'il utilise de l'Ether (ETH) sans valeur dans le monde réel. Déployer votre contrat sur un [réseau de test](/developers/docs/networks/#ethereum-testnets) signifie que n'importe qui peut interagir avec lui (par exemple, via le frontend de la DAPP) sans mettre en péril les fonds.
 
 Cette forme de test manuel est utile pour évaluer le flux de bout en bout de votre application du point de vue de l'utilisateur. Ici, les utilisateurs finaux peuvent exécuter des essais et rapporter tous les problèmes avec la logique commerciale du contrat et les fonctionnalités générales.
 

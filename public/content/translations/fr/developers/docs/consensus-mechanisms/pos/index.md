@@ -58,7 +58,7 @@ Au-delà des attaques à 51 %, les acteurs mal intentionnés pourraient égaleme
 - attaques de longue portée (bien que le gadget de finalité neutralise ce vecteur d'attaque)
 - réorganisations de courte portée (bien que les délais d'accélération et d'attestation de la proposition atténuent ce problème)
 - attaques par rebond et par équilibrage (également atténuées par l'augmentation du nombre de propositions, et ces attaques n'ont de toute façon été démontrées que dans des conditions de réseau idéales)
-- attaques avalanche (neutralisé par la règle des algorithmes de choix de fourche qui consiste à ne prendre en compte que le dernier message)
+- attaques en avalanche (neutralisées par la règle des algorithmes de choix de fourche qui consiste à ne prendre en compte que le dernier message)
 
 Dans l'ensemble, il a été démontré que la preuve d'enjeu, telle qu'elle est implémentée sur Ethereum, est plus sûre économiquement que la preuve de travail.
 

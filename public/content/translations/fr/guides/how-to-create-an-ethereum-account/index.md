@@ -58,7 +58,7 @@ Non. Le portefeuille est un outil de gestion qui vous aide à gérer vos comptes
 
 ### Puis-je envoyer des bitcoins à une adresse Ethereum, ou des ethers à une adresse Bitcoin ?
 
-Non, vous ne pouvez pas. Bitcoin et Ether existent sur deux réseaux différents (c'est-à-dire des blockchains différentes), chacun ayant ses propres registres et formats d'adresse. Plusieurs tentatives ont été mises en place pour relier ces deux réseaux, la plus concluante étant actuellement [Bitcoin Emballé ou WBTC](https://www.bitcoin.com/get-started/what-is-wbtc/). Ceci n'est pas une recommandation, car WBTC est une solution de garde (ce qui signifie qu'un groupe restreint de personnes contrôle certaines fonctions critiques) et est fourni ici à titre informatif uniquement.
+Non, vous ne pouvez pas. Bitcoin et Ether existent sur deux réseaux différents (c'est-à-dire des blockchains différentes), chacun ayant ses propres registres et formats d'adresse. Plusieurs tentatives ont été mises en place pour relier ces deux réseaux, la plus concluante étant actuellement [Bitcoin Emballé ou WBTC](https://www. bitcoin. com/get-started/what-is-wbtc/). Ceci n'est pas une recommandation, car WBTC est une solution de garde (ce qui signifie qu'un groupe restreint de personnes contrôle certaines fonctions critiques) et est fourni ici à titre informatif uniquement.
 
 ### Si je possède une adresse ETH, est-ce que je peux l'utiliser sur d'autres blockchains ?
 
