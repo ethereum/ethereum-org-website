@@ -303,6 +303,8 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_protocolVersion","params":[]
 
 Returns an object with data about the sync status or `false`.
 
+[![Try this endpoint](./playground.svg)](https://ethereum-json-rpc.com/?method=eth_syncing)
+
 **Parameters**
 
 None
@@ -387,6 +389,8 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_syncing","params":[],"id":1}
 
 Returns the client coinbase address.
 
+[![Try this endpoint](./playground.svg)](https://ethereum-json-rpc.com/?method=eth_coinbase)
+
 > **Note:** This method has been deprecated as of **v1.14.0** and is no longer supported. Attempting to use this method will result in a "Method not supported" error.
 
 **Parameters**
@@ -414,6 +418,8 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_coinbase","params":[],"id":6
 
 Returns the chain ID used for signing replay-protected transactions.
 
+[![Try this endpoint](./playground.svg)](https://ethereum-json-rpc.com/?method=eth_chainId)
+
 **Parameters**
 
 None
@@ -438,6 +444,8 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_chainId","params":[],"id":67
 ### eth_mining {#eth_mining}
 
 Returns `true` if client is actively mining new blocks. This can only return `true` for proof-of-work networks and may not be available in some clients since [The Merge](/roadmap/merge/).
+
+[![Try this endpoint](./playground.svg)](https://ethereum-json-rpc.com/?method=eth_mining)
 
 **Parameters**
 
@@ -464,6 +472,8 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_mining","params":[],"id":71}
 
 Returns the number of hashes per second that the node is mining with. This can only return `true` for proof-of-work networks and may not be available in some clients since [The Merge](/roadmap/merge/).
 
+[![Try this endpoint](./playground.svg)](https://ethereum-json-rpc.com/?method=eth_hashrate)
+
 **Parameters**
 
 None
@@ -489,6 +499,8 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_hashrate","params":[],"id":7
 
 Returns an estimate of the current price per gas in wei. For example, the Besu client examines the last 100 blocks and returns the median gas unit price by default.
 
+[![Try this endpoint](./playground.svg)](https://ethereum-json-rpc.com/?method=eth_gasPrice)
+
 **Parameters**
 
 None
@@ -510,9 +522,13 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_gasPrice","params":[],"id":7
 }
 ```
 
+
+
 ### eth_accounts {#eth_accounts}
 
 Returns a list of addresses owned by client.
+
+[![Try this endpoint](./playground.svg)](https://ethereum-json-rpc.com/?method=eth_accounts)
 
 **Parameters**
 
@@ -538,6 +554,8 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_accounts","params":[],"id":1
 ### eth_blockNumber {#eth_blocknumber}
 
 Returns the number of most recent block.
+  
+[![Try this endpoint](./playground.svg)](https://ethereum-json-rpc.com/?method=eth_blockNumber)
 
 **Parameters**
 
@@ -563,6 +581,8 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id
 ### eth_getBalance {#eth_getbalance}
 
 Returns the balance of the account of given address.
+
+[![Try this endpoint](./playground.svg)](https://ethereum-json-rpc.com/?method=eth_getBalance)
 
 **Parameters**
 
@@ -593,6 +613,8 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBalance","params":["0x407
 ### eth_getStorageAt {#eth_getstorageat}
 
 Returns the value from a storage position at a given address.
+
+[![Try this endpoint](./playground.svg)](https://ethereum-json-rpc.com/?method=eth_getStorageAt)
 
 **Parameters**
 
@@ -662,6 +684,8 @@ curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": [
 
 Returns the number of transactions _sent_ from an address.
 
+[![Try this endpoint](./playground.svg)](https://ethereum-json-rpc.com/?method=eth_getTransactionCount)
+
 **Parameters**
 
 1. `DATA`, 20 Bytes - address.
@@ -695,6 +719,8 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionCount","params
 
 Returns the number of transactions in a block from a block matching the given block hash.
 
+[![Try this endpoint](./playground.svg)](https://ethereum-json-rpc.com/?method=eth_getBlockTransactionCountByHash)
+
 **Parameters**
 
 1. `DATA`, 32 Bytes - hash of a block
@@ -723,6 +749,8 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockTransactionCountByHa
 ### eth_getBlockTransactionCountByNumber {#eth_getblocktransactioncountbynumber}
 
 Returns the number of transactions in a block matching the given block number.
+
+[![Try this endpoint](./playground.svg)](https://ethereum-json-rpc.com/?method=eth_getBlockTransactionCountByNumber)
 
 **Parameters**
 
@@ -755,6 +783,8 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockTransactionCountByNu
 
 Returns the number of uncles in a block from a block matching the given block hash.
 
+[![Try this endpoint](./playground.svg)](https://ethereum-json-rpc.com/?method=eth_getUncleCountByBlockHash)
+
 **Parameters**
 
 1. `DATA`, 32 Bytes - hash of a block
@@ -784,6 +814,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleCountByBlockHash","p
 
 Returns the number of uncles in a block from a block matching the given block number.
 
+[![Try this endpoint](./playground.svg)](https://ethereum-json-rpc.com/?method=eth_getUncleCountByBlockNumber)
 **Parameters**
 
 1. `QUANTITY|TAG` - integer of a block number, or the string `"latest"`, `"earliest"`, `"pending"`, `"safe"` or `"finalized"`, see the [default block parameter](/developers/docs/apis/json-rpc/#default-block)
@@ -814,6 +845,8 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleCountByBlockNumber",
 ### eth_getCode {#eth_getcode}
 
 Returns code at a given address.
+
+[![Try this endpoint](./playground.svg)](https://ethereum-json-rpc.com/?method=eth_getCode)
 
 **Parameters**
 
@@ -994,6 +1027,8 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sendRawTransaction","params"
 
 Executes a new message call immediately without creating a transaction on the blockchain. Often used for executing read-only smart contract functions, for example the `balanceOf` for an ERC-20 contract.
 
+[![Try this endpoint](./playground.svg)](https://ethereum-json-rpc.com/?method=eth_call)
+
 **Parameters**
 
 1. `Object` - The transaction call object
@@ -1028,6 +1063,8 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_call","params":[{see above}]
 
 Generates and returns an estimate of how much gas is necessary to allow the transaction to complete. The transaction will not be added to the blockchain. Note that the estimate may be significantly more than the amount of gas actually used by the transaction, for a variety of reasons including EVM mechanics and node performance.
 
+[![Try this endpoint](./playground.svg)](https://ethereum-json-rpc.com/?method=eth_estimateGas)
+
 **Parameters**
 
 See [eth_call](#eth_call) parameters, except that all properties are optional. If no gas limit is specified geth uses the block gas limit from the pending block as an upper bound. As a result the returned estimate might not be enough to executed the call/transaction when the amount of gas is higher than the pending block gas limit.
@@ -1052,6 +1089,8 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_estimateGas","params":[{see 
 ### eth_getBlockByHash {#eth_getblockbyhash}
 
 Returns information about a block by hash.
+
+[![Try this endpoint](./playground.svg)](https://ethereum-json-rpc.com/?method=eth_getBlockByHash)
 
 **Parameters**
 
@@ -1105,7 +1144,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockByHash","params":["0
     "gasLimit": "0x1388",
     "gasUsed": "0x0",
     "hash": "0xdc0818cf78f21a8e70579cb46a43643f78291264dda342ae31049421c82d21ae",
-    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
     "miner": "0xbb7b8287f3f0a933474a79eae42cbca977791171",
     "mixHash": "0x4fffe9ae21f1c9e15207b1f472d5bbdd68c9595d461666602f2be20daf5e7843",
     "nonce": "0x689056015818adbe",
@@ -1129,6 +1168,8 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockByHash","params":["0
 ### eth_getBlockByNumber {#eth_getblockbynumber}
 
 Returns information about a block by block number.
+
+[![Try this endpoint](./playground.svg)](https://ethereum-json-rpc.com/?method=eth_getBlockByNumber)
 
 **Parameters**
 
@@ -1157,6 +1198,8 @@ Result see [eth_getBlockByHash](#eth_getblockbyhash)
 ### eth_getTransactionByHash {#eth_gettransactionbyhash}
 
 Returns the information about a transaction requested by transaction hash.
+
+[![Try this endpoint](./playground.svg)](https://ethereum-json-rpc.com/?method=eth_getTransactionByHash)
 
 **Parameters**
 
@@ -1217,6 +1260,8 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByHash","param
 
 Returns information about a transaction by block hash and transaction index position.
 
+[![Try this endpoint](./playground.svg)](https://ethereum-json-rpc.com/?method=eth_getTransactionByBlockHashAndIndex)
+
 **Parameters**
 
 1. `DATA`, 32 Bytes - hash of a block.
@@ -1244,6 +1289,8 @@ Result see [eth_getTransactionByHash](#eth_gettransactionbyhash)
 ### eth_getTransactionByBlockNumberAndIndex {#eth_gettransactionbyblocknumberandindex}
 
 Returns information about a transaction by block number and transaction index position.
+
+[![Try this endpoint](./playground.svg)](https://ethereum-json-rpc.com/?method=eth_getTransactionByBlockNumberAndIndex)
 
 **Parameters**
 
@@ -1341,6 +1388,8 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionReceipt","para
 
 Returns information about a uncle of a block by hash and uncle index position.
 
+[![Try this endpoint](./playground.svg)](https://ethereum-json-rpc.com/?method=eth_getUncleByBlockHashAndIndex)
+
 **Parameters**
 
 1. `DATA`, 32 Bytes - The hash of a block.
@@ -1370,6 +1419,8 @@ Result see [eth_getBlockByHash](#eth_getblockbyhash)
 ### eth_getUncleByBlockNumberAndIndex {#eth_getunclebyblocknumberandindex}
 
 Returns information about a uncle of a block by number and uncle index position.
+
+[![Try this endpoint](./playground.svg)](https://ethereum-json-rpc.com/?method=eth_getUncleByBlockNumberAndIndex)
 
 **Parameters**
 
@@ -1588,6 +1639,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getFilterChanges","params":[
 ### eth_getFilterLogs {#eth_getfilterlogs}
 
 Returns an array of all logs matching filter with given id.
+
 
 **Parameters**
 
