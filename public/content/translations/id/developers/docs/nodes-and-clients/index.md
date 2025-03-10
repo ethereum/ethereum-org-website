@@ -235,7 +235,7 @@ Perhatikan dokumentasi klien atau halaman bantuan untuk menemukan mode sinkronis
 
 `besu --sync-mode=FULL`
 
-Sama seperti konfigurasi lainnya, ia dapat ditentukan dengan bendera startup atau dalam berkas konfigurasi. Contoh lainnya adalah [Nethermind](https://docs.nethermind.io/nethermind/) yang mendorong Anda untuk memilih konfigurasi pada saat inisiasi pertama dan membuat berkas konfigurasi.
+Sama seperti konfigurasi lainnya, ia dapat ditentukan dengan bendera startup atau dalam berkas konfigurasi. Contoh lainnya adalah [Nethermind](https://docs.nethermind.io/) yang mendorong Anda untuk memilih konfigurasi pada saat inisiasi pertama dan membuat berkas konfigurasi.
 
 ## Klien konsensus (sebelumnya klien 'Eth2') {#consensus-clients}
 
