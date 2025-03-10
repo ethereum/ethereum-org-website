@@ -69,7 +69,7 @@ const MobileFilters = ({
             <p>{t("table-filters")}</p>
             <p className="text-body-medium">{` ${activeFiltersCount} ${t("table-active")}`}</p>
           </div>
-          <FilterBurgerIcon className="broke h-8 w-8 stroke-primary" />
+          <FilterBurgerIcon className="h-8 w-8 stroke-primary" />
         </Button>
       </DrawerTrigger>
       <DrawerContent className="flex h-full flex-col p-2">
