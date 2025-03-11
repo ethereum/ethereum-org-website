@@ -26,8 +26,6 @@ const Search = ({ children }: Props) => {
   const searchButtonRef = useRef<HTMLButtonElement>(null)
   const { t } = useTranslation("common")
 
-  console.log(locale)
-
   const handleOpen = () => {
     onOpen()
     trackCustomEvent({
@@ -49,8 +47,6 @@ const Search = ({ children }: Props) => {
   const indexName =
     process.env.NEXT_PUBLIC_ALGOLIA_BASE_SEARCH_INDEX_NAME || "ethereumorg"
 
-  console.log(appId, apiKey, indexName)
-
   return (
     <>
       {children({ ...disclosure, onOpen: handleOpen })}
@@ -62,7 +58,7 @@ const Search = ({ children }: Props) => {
             indexName={indexName}
             onClose={onClose}
             searchParameters={{
-              facetFilters: [`language:${locale}`],
+              facetFilters: [`lang:${locale}`],
             }}
             transformItems={(items) =>
               items
