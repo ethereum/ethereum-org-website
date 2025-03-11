@@ -1,5 +1,6 @@
 ---
-title: Decentralizované autonomní organizace (DAO)
+title: Co je DAO?
+metaTitle: Co je DAO? | Decentralizovaná autonomní organizace
 description: Přehled DAO na Ethereu
 lang: cs
 template: use-cases

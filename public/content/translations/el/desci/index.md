@@ -126,7 +126,7 @@ summaryPoint3: Δημιουργία πάνω στο ανοιχτό επιστη�
 - [DeSci: Το μέλλον της έρευνας από τον Samuel Akinosho.](https://lucidsamuel.medium.com/desci-the-future-of-research-b76cfc88c8ec)
 - [Χρηματοδότηση επιστήμης (Επίλογος: Η DeSci και οι νέες μεθόδοι κρύπτο) από την Nadia.](https://nadia.xyz/science-funding)
 - [Η αποκέντρωση διακόπτει την ανάπτυξη των ναρκωτικών.](https://medium.com/id-theory/decentralisation-is-disrupting-drug-development-28b5ba5d447f)
-- [Τι είναι το DeSci - Αποκεντρωμένη επιστήμη;](​https://usadailytimes.com/2022/09/12/what-is-desci-decentralized-science/)
+- [Τι είναι το DeSci - Αποκεντρωμένη επιστήμη;](https://usadailytimes.com/2022/09/12/what-is-desci-decentralized-science/)
 
 ### Βίντεο {#videos}
 

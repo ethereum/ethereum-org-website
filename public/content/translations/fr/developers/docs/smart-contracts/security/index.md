@@ -115,7 +115,7 @@ L’existence d’audits et de primes de bogue n'exclut pas votre responsabilit�
 
 - Utilisez un [environnement de développement](/developers/docs/frameworks/) pour tester, compiler, déployer des contrats intelligents
 
-- Exécutez votre code sur des outils d'analyse de code basiques, tels que [Cyfrin Aaderyn](https://github.com/Cyfrin/aderyn), Mythril et Slither. Idéalement, vous devriez le faire avant de fusionner chaque pull request et comparer les différences de sortie
+- Exécutez votre code sur des outils d'analyse de code basiques, tels que [Cyfrin Aderyn](https://github.com/Cyfrin/aderyn), Mythril et Slither. Idéalement, vous devriez le faire avant de fusionner chaque pull request et comparer les différences de sortie
 
 - Assurez-vous que votre code est compilé sans erreurs, et que le compilateur Solidity n'émet aucun avertissement
 
