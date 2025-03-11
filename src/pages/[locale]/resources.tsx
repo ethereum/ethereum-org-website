@@ -130,7 +130,6 @@ const ResourcesPage = ({ txCostsMedianUsd }) => {
                 "relative text-nowrap rounded-xl px-4 py-2 text-sm [&_svg]:shrink-0 [&_svg]:text-sm",
                 activeSection === key && "!text-primary"
               )}
-              hideArrow
             >
               {activeSection === key && (
                 <motion.div

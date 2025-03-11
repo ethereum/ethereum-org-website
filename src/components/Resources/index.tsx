@@ -31,6 +31,7 @@ export const ResourceItem = ({
       "flex gap-2 border-b p-3 text-body no-underline last-of-type:border-0 hover:bg-background-highlight hover:text-body",
       className
     )}
+    hideArrow
   >
     <div className="my-1 size-[18px] shrink-0">
       <Image src={imgSrc} alt={title} />
