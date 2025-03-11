@@ -89,7 +89,7 @@
   },
   "devDependencies": {
     "@chromatic-com/storybook": "1.5.0",
-    "@netlify/plugin-nextjs": "^5.8.0",
+    "@netlify/plugin-nextjs": "^5.10.0",
     "@storybook/addon-essentials": "8.1.10",
     "@storybook/addon-interactions": "8.1.10",
     "@storybook/addon-links": "8.1.10",

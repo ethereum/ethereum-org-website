@@ -561,7 +561,7 @@ These days there are a lot of [L2 scaling solution](https://ethereum.org/en/laye
     }    
     ```
 
-# Conclusion {#conclusion}
+## Conclusion {#conclusion}
 
 Of course, you don't really care about providing a user interface for `Greeter`. You want to create a user interface for your own contracts. To create your own application, run these steps:
 

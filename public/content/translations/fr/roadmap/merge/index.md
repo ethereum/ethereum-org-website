@@ -92,7 +92,7 @@ title="Développeurs de dApps et de contrats intelligents"
 contentPreview="The Merge was designed to have minimal impact on smart contract and dapp developers."
 id="developers">
 
-La Fusion s'est accompagnée de changements apportés au consensus, qui incluent également des changements liés à :<
+La Fusion s'est accompagnée de changements apportés au consensus, qui incluent également des changements liés à :
 
 <ul>
   <li>la structure d'un bloc</li>

@@ -618,7 +618,7 @@ Toute personne autorisée à transférer un jeton est autorisée à le détruire
 
 Contrairement à Solidity, Vyper n'a pas de système d'héritage. Il s'agit d'un choix de conception délibéré visant à rendre le code plus clair et donc plus facile à sécuriser. Donc pour créer votre propre contrat Vyper ERC-721, vous prenez [ce contrat](https://github.com/vyperlang/vyper/blob/master/examples/tokens/ERC721.vy) puis vous le modifiez en fonction de la stratégie commerciale que vous souhaitez mettre en œuvre.
 
-# Conclusion {#conclusion}
+## Conclusion {#conclusion}
 
 Voici les principaux points à retenir sur ce contrat :
 

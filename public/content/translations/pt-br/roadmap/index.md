@@ -94,7 +94,7 @@ As melhorias normalmente não afetam os usuários finais, exceto ao proporcionar
 
 [Vitalik Buterin propôs uma visão para o planejamento do Ethereum](https://twitter.com/VitalikButerin/status/1741190491578810445) que foi organizada em diversas categorias vinculadas pelos efeitos na arquitetura do Ethereum. Ela inclui:
 
-- <**A Fusão**: melhorias relacionadas à mudança de [prova de trabalho](/glossary/#pow) para [prova de participação](/glossary/#pos)
+- **A Fusão**: melhorias relacionadas à mudança de [prova de trabalho](/glossary/#pow) para [prova de participação](/glossary/#pos)
 - **The Surge**: melhorias relacionadas ao dimensionamento por meio de [rollups](/glossary/#rollups) e fragmentação de dados
 - **The Scourge**: melhorias relacionadas à resistência à censura, à descentralização e a riscos de protocolo do [MEV](/glossary/#mev)
 - **The Verge**: melhorias relacionadas à verificação de [blocos](/glossary/#block) com mais facilidade

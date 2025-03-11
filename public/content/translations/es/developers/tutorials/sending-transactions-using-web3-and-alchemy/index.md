@@ -58,7 +58,7 @@ Esto es lo que vamos a usar en este tutorial.
 
 Bien, ahora que ya hemos resuelto algunas de estas dudas, comencemos con el tutorial. ¡No dude preguntar sus dudas en cualquier momento a través del canal [discord](https://discord.gg/gWuC7zB) de Alchemy!
 
-### 7\. ¿Cómo enviar transacciones seguras, privadas y con gas optimizado? {how-to-send-secure-gas-optimized-and-private-transactions}
+### 7\. ¿Cómo enviar transacciones seguras, privadas y con gas optimizado? {#how-to-send-secure-gas-optimized-and-private-transactions}
 
 - [Alchemy tiene un conjunto de API para transacciones](https://docs.alchemy.com/reference/transact-api-quickstart). Puede usarlas para enviar transacciones reforzadas, simular transacciones antes de que ocurran, enviar transacciones privadas y transacciones con gas optimizado.
 - También puede utilizar la [API de Notify](https://docs.alchemy.com/docs/alchemy-notify) para recibir alertas cuando su transacción se toma desde la zona de espera y se añade a la cadena.

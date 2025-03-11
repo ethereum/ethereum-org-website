@@ -116,7 +116,7 @@ Cara terbaik untuk menangani tautan adalah dengan menyalinnya langsung dari sumb
 
 ![Contoh tautan.png](./example-of-link.png)
 
-Tautan juga muncul dalam teks sumber dalam bentuk tag (misalnya, <0> </0>). Jika Anda mengarahkan kursor ke tag, editor akan menampilkan konten lengkapnya-terkadang tag ini mewakili tautan.
+Tautan juga muncul dalam teks sumber dalam bentuk tag (misalnya, \<0> \</0>). Jika Anda mengarahkan kursor ke tag, editor akan menampilkan konten lengkapnya-terkadang tag ini mewakili tautan.
 
 Sangat penting untuk menyalin tautan dari sumbernya dan tidak mengubah urutannya.
 
@@ -154,7 +154,7 @@ nonce - _Teks yang tidak dapat diterjemahkan_
 
 Teks sumber juga berisi tag singkat, yang hanya berisi angka, artinya fungsinya tidak langsung terlihat. Anda dapat mengarahkan kursor ke tag ini untuk melihat dengan tepat fungsi mana yang mereka layani.
 
-Pada contoh di bawah, Anda dapat mengarahkan kursor ke tag <0> yang menunjukkan bahwa ia mewakili `<code>` dan berisi cuplikan kode. Oleh karena itu, konten di dalam tag ini tidak boleh diterjemahkan.
+Pada contoh di bawah, Anda dapat mengarahkan kursor ke tag \<0> yang menunjukkan bahwa ia mewakili `<code>` dan berisi cuplikan kode. Oleh karena itu, konten di dalam tag ini tidak boleh diterjemahkan.
 
 ![Contoh yang membingungkan tags.png](./example-of-ambiguous-tags.png)
 
