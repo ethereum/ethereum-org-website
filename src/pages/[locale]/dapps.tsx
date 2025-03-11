@@ -76,6 +76,7 @@ import golem from "@/public/images/dapps/golem.png"
 import graph from "@/public/images/dapps/graph.png"
 import index from "@/public/images/dapps/index-coop.png"
 import ipfs from "@/public/images/dapps/ipfs.png"
+import kiwinews from "@/public/images/dapps/kiwinews.png"
 import krystal from "@/public/images/dapps/krystal.png"
 import kyberswap from "@/public/images/dapps/kyberswap.png"
 import lido from "@/public/images/dapps/lido.png"
@@ -929,13 +930,6 @@ const DappsPage = () => {
 
   const avatar = [
     {
-      title: "OSUVOX",
-      description: t("page-dapps-dapp-description-osuvox"),
-      link: "https://osuvox.io/",
-      image: osuvox,
-      alt: t("page-dapps-osuvox-logo-alt"),
-    },
-    {
       title: "Spatial",
       description: t("page-dapps-dapp-description-spatial"),
       link: "https://www.spatial.io/",
@@ -982,6 +976,13 @@ const DappsPage = () => {
       link: "https://link3.to/cyberconnect",
       image: cyberconnect,
       alt: t("page-dapps-cyberconnect-logo-alt"),
+    },
+    {
+      title: "Kiwi News",
+      description: t("page-dapps-dapp-description-kiwinews"),
+      link: "https://news.kiwistand.com/",
+      image: kiwinews,
+      alt: t("page-dapps-kiwinews-logo-alt"),
     },
   ]
 
