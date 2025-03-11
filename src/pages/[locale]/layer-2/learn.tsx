@@ -1,9 +1,10 @@
 import { GetStaticProps } from "next"
 
-import type { BasePageProps, Lang, Params } from "@/lib/types"
+import type { BasePageProps, CommitHistory, Lang, Params } from "@/lib/types"
 
 import Callout from "@/components/Callout"
 import Card from "@/components/Card"
+import FileContributors from "@/components/FileContributors"
 import { ContentHero, type ContentHeroProps } from "@/components/Hero"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
@@ -12,6 +13,7 @@ import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import Translation from "@/components/Translation"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 
+import { getPageContributorInfo } from "@/lib/utils/contributors"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLocaleTimestamp } from "@/lib/utils/time"
@@ -50,6 +52,14 @@ export const getStaticProps = (async ({ params }) => {
 
   const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
+  const commitHistoryCache: CommitHistory = {}
+
+  const { contributors, lastEditLocaleTimestamp } =
+    await getPageContributorInfo(
+      "layer-2/learn.tsx",
+      locale as Lang,
+      commitHistoryCache
+    )
   const messages = await loadNamespaces(locale, requiredNamespaces)
 
   return {
@@ -57,11 +67,13 @@ export const getStaticProps = (async ({ params }) => {
       messages,
       contentNotTranslated,
       lastDeployLocaleTimestamp,
+      contributors,
+      lastEditLocaleTimestamp,
     },
   }
 }) satisfies GetStaticProps<BasePageProps, Params>
 
-const Layer2Learn = () => {
+const Layer2Learn = ({ contributors, lastEditLocaleTimestamp }) => {
   const { t } = useTranslation("page-layer-2-learn")
   const pathname = usePathname()
 
@@ -322,6 +334,11 @@ const Layer2Learn = () => {
             </p>
           </div>
         </div>
+        <FileContributors
+          className="my-10 border-t"
+          contributors={contributors}
+          lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        />
       </div>
 
       <div id="callout-cards" className="px-8 py-9">

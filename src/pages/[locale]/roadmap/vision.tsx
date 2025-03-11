@@ -1,12 +1,19 @@
 import { GetStaticProps } from "next"
 import type { ComponentProps, ComponentPropsWithRef } from "react"
 
-import type { BasePageProps, ChildOnlyProp, Lang, Params } from "@/lib/types"
+import type {
+  BasePageProps,
+  ChildOnlyProp,
+  CommitHistory,
+  Lang,
+  Params,
+} from "@/lib/types"
 
 import Breadcrumbs from "@/components/Breadcrumbs"
 import Card from "@/components/Card"
 import Emoji from "@/components/Emoji"
 import FeedbackCard from "@/components/FeedbackCard"
+import FileContributors from "@/components/FileContributors"
 import InfoBanner from "@/components/InfoBanner"
 import MainArticle from "@/components/MainArticle"
 import PageHero, {
@@ -21,6 +28,7 @@ import InlineLink from "@/components/ui/Link"
 import { List, ListItem } from "@/components/ui/list"
 
 import { cn } from "@/lib/utils/cn"
+import { getPageContributorInfo } from "@/lib/utils/contributors"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLocaleTimestamp } from "@/lib/utils/time"
@@ -117,6 +125,14 @@ export const getStaticProps = (async ({ params }) => {
     lastDeployDate
   )
 
+  const commitHistoryCache: CommitHistory = {}
+
+  const { contributors, lastEditLocaleTimestamp } =
+    await getPageContributorInfo(
+      "roadmap/vision.tsx",
+      locale as Lang,
+      commitHistoryCache
+    )
   const messages = await loadNamespaces(locale, requiredNamespaces)
 
   return {
@@ -124,11 +140,13 @@ export const getStaticProps = (async ({ params }) => {
       messages,
       contentNotTranslated,
       lastDeployLocaleTimestamp,
+      contributors,
+      lastEditLocaleTimestamp,
     },
   }
 }) satisfies GetStaticProps<BasePageProps, Params>
 
-const VisionPage = () => {
+const VisionPage = ({ contributors, lastEditLocaleTimestamp }) => {
   const { t } = useTranslation(["page-roadmap-vision", "page-upgrades-index"])
   const pathname = usePathname()
 
@@ -282,6 +300,11 @@ const VisionPage = () => {
             </ButtonLink>
           </InfoBanner>
         </CentralContent>
+        <FileContributors
+          className="my-10 border-t"
+          contributors={contributors}
+          lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        />
       </PageContent>
       <Divider />
       <FeedbackCard />
