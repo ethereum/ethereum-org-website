@@ -44,7 +44,7 @@ Es befinden sich mehrere leichte Clients in der Entwicklung, darunter Ausführun
 
 - [Lodestar](https://github.com/ChainSafe/lodestar/tree/unstable/packages/light-client): leichter Konsensclient in TypeScript
 - [Helios](https://github.com/a16z/helios): kombinierter leichter Ausführungs- und Konsensclient in Rust
-- [Geth](https://github.com/ethereum/go-ethereum/tree/master/light): Light-Modus für Ausführungsclient (in Entwicklung) in Go
+- [Geth](https://github.com/ethereum/go-ethereum/tree/master/beacon/light): Light-Modus für Ausführungs-Client (in Entwicklung) in Go
 - [Nimbus](https://nimbus.guide/el-light-client.html): Leichter Konsensclient in Nim
 
 Unseres Wissens nach ist noch keiner dieser Clients produktionsreif.

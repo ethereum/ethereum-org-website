@@ -8,6 +8,8 @@ lang: fr
 
 L'intérêt grandissant pour la cryptomonnaie amène avec lui un risque croissant venant des escrocs et des pirates informatiques. Cet article expose de bonnes pratiques pour atténuer ces risques.
 
+**Rappelez-vous : Jamais personne de ethereum.org ne vous contactera. Ne répondez pas aux e-mails prétendant provenir du support officiel d'Ethereum.**
+
 <Divider />
 
 ## Le b.a.-ba de la sécurité de votre cryptomonnaie {#crypto-security}
@@ -17,7 +19,7 @@ L'intérêt grandissant pour la cryptomonnaie amène avec lui un risque croissan
 Une mauvaise compréhension de la façon dont fonctionnent les cryptomonnaies peut amener à des erreurs coûteuses. Par exemple, si quelqu'un prétend être un agent d'un service client qui peut vous rendre vos ETH perdus en échange de vos clés privées, ils s'attaquent aux personnes ne comprenant pas qu'Ethereum est un réseau décentralisé manquant de ce genre de fonctionnalité. S'informer sur le fonctionnement d'Ethereum est un investissement qui en vaut la peine.
 
 <DocLink href="/what-is-ethereum/">
-  Qu'est-ce qu'Ethereum&nbsp;?
+  Qu'est-ce qu'Ethereum ?
 </DocLink>
 
 <DocLink href="/eth/">

@@ -1,5 +1,3 @@
-import { useTranslation } from "next-i18next"
-
 import { ButtonLink } from "./ui/buttons/Button"
 import { Flex } from "./ui/flex"
 import {
@@ -9,9 +7,10 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "./ui/Table"
+} from "./ui/table"
 
 import { useRtlFlip } from "@/hooks/useRtlFlip"
+import { useTranslation } from "@/hooks/useTranslation"
 
 export interface TableRow {
   name: string

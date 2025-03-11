@@ -38,7 +38,7 @@ Los pasos específicos involucrados dependerán del marco de desarrollo en cuest
 **Tenderly: _plataforma de desarrollo web3 que proporciona bloques de desarrollo de depuración, observabilidad y infraestructura para desarrollar, probar, monitorear y operar contratos inteligentes_.**
 
 - [tenderly.co](https://tenderly.co/)
-- [Documentos](https://docs.tenderly.co/)
+- [Documentación](https://docs.tenderly.co/)
 - [GitHub](https://github.com/Tenderly)
 - [Discord](https://discord.gg/eCWjuvt)
 
@@ -52,6 +52,13 @@ Los pasos específicos involucrados dependerán del marco de desarrollo en cuest
 **thirdweb:_ implemente fácilmente cualquier contrato en cualquier cadena compatible con EVM, usando un solo comando_.**
 
 - [Documentación](https://portal.thirdweb.com/deploy/)
+
+**Crossmint: _Plataforma de desarrollo web3 de nivel empresarial para implementar contratos inteligentes, habilitar pagos con tarjeta de crédito y entre cadenas, y utilizar API para crear, distribuir, vender, almacenar y editar NFT. _**
+
+- [crossmint.com](https://www.crossmint.com)
+- [Documentación](https://docs.crossmint.com)
+- [Discord](https://discord.com/invite/crossmint)
+- [Blog](https://blog.crossmint.com)
 
 ## Tutoriales relacionados {#related-tutorials}
 

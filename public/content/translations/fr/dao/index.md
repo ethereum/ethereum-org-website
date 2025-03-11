@@ -160,3 +160,7 @@ _Habituellement utilisée pour le développement décentralisé et la gouvernanc
 
 - [Qu'est-ce qu'une DAO en cryptomonnaie ?](https://youtu.be/KHm0uUPqmVE)
 - [Une DAO peut-elle bâtir une ville ?](https://www.ted.com/talks/scott_fitsimones_could_a_dao_build_the_next_great_city) – [TED](https://www.ted.com/)
+
+<Divider />
+
+<QuizWidget quizKey="daos" />

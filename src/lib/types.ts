@@ -2,7 +2,6 @@ import type { Options } from "mdast-util-toc"
 import type { NextPage } from "next"
 import type { AppProps } from "next/app"
 import type { StaticImageData } from "next/image"
-import type { SSRConfig } from "next-i18next"
 import type { ReactElement, ReactNode } from "react"
 import type { ColumnDef } from "@tanstack/react-table"
 
@@ -28,7 +27,7 @@ import allQuestionData from "@/data/quizzes/questionBank"
 import { screens } from "./utils/screen"
 import { WALLETS_FILTERS_DEFAULT } from "./constants"
 
-import { layoutMapping } from "@/pages/[...slug]"
+import { layoutMapping } from "@/pages/[locale]/[...slug]"
 
 // Credit: https://stackoverflow.com/a/52331580
 export type Unpacked<T> = T extends (infer U)[] ? U : T
@@ -55,8 +54,14 @@ export type Root = {
   lastDeployLocaleTimestamp: string
 }
 
-export type BasePageProps = SSRConfig &
-  Pick<Root, "contentNotTranslated" | "lastDeployLocaleTimestamp">
+export type BasePageProps = Pick<
+  Root,
+  "contentNotTranslated" | "lastDeployLocaleTimestamp"
+>
+
+export type Params = {
+  locale: string
+}
 
 export type Frontmatter = RoadmapFrontmatter &
   UpgradeFrontmatter &
@@ -161,13 +166,19 @@ export type LoadingState<T> =
   | { loading: false; data: T }
   | { loading: false; error: unknown }
 
-/**
- * Quiz data types
- */
-export type QuestionTemplate = {
-  totalAnswers: 2 | 3 | 4
-  correctAnswer: 1 | 2 | 3 | 4
+// Quiz data types
+
+export type ChoiceLetter = "a" | "b" | "c" | "d"
+
+type ChoiceNumber = 1 | 2 | 3 | 4
+type TotalAnswers = 2 | 3 | 4
+
+type QuestionTemplate = {
+  totalAnswers: TotalAnswers
+  correctAnswer: ChoiceNumber
+  explanationOverrides?: (ChoiceNumber | null)[] // Tuple<ChoiceNumber, QuestionTemplate["totalAnswers"]>
 }
+
 export type QuestionBankConfig = Record<string, QuestionTemplate[]>
 
 export type Answer = {

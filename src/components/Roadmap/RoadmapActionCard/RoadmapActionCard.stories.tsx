@@ -1,4 +1,3 @@
-import { Box, SimpleGrid } from "@chakra-ui/react"
 import type { Meta, StoryObj } from "@storybook/react"
 
 import RoadmapActionCardComponent from "."
@@ -8,13 +7,13 @@ const meta = {
   component: RoadmapActionCardComponent,
   decorators: [
     (Story) => (
-      <Box maxW="1008px">
+      <div className="max-w-[1008px]">
         <div>
-          <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8}>
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             <Story />
-          </SimpleGrid>
+          </div>
         </div>
-      </Box>
+      </div>
     ),
   ],
 } satisfies Meta<typeof RoadmapActionCardComponent>

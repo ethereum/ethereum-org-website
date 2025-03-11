@@ -1,7 +1,6 @@
-import { Box } from "@chakra-ui/react"
 import { Meta, StoryObj } from "@storybook/react"
 
-import { langViewportModes } from "../../../.storybook/modes"
+import { langViewportModes } from "@/storybook/modes"
 
 import MergeInfographicComponent from "."
 
@@ -18,9 +17,9 @@ const meta = {
   },
   decorators: [
     (Story) => (
-      <Box maxW="1008px" mx="auto">
+      <div className="mx-auto max-w-[1008px]">
         <Story />
-      </Box>
+      </div>
     ),
   ],
 } satisfies Meta<typeof MergeInfographicComponent>

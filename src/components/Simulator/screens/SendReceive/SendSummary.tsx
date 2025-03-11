@@ -1,5 +1,8 @@
 import React from "react"
-import { Box, Flex, Text } from "@chakra-ui/react"
+
+import { Flex } from "@/components/ui/flex"
+
+import { cn } from "@/lib/utils/cn"
 
 import { ETH_TRANSFER_FEE } from "../../constants"
 import { getMaxFractionDigitsUsd } from "../../utils"
@@ -29,77 +32,52 @@ export const SendSummary = ({
   return (
     <>
       {/* Top section */}
-      <Box py={{ base: 6, md: 8 }} px={6}>
-        <Text
-          fontSize={{ base: "xl", md: "2xl" }}
-          fontWeight="bold"
-          mb={{ base: 4, md: 8 }}
-        >
+      <div className="px-6 py-6 md:py-8">
+        <p className="mb-4 text-xl font-bold md:mb-8 md:text-2xl">
           You are sending
-        </Text>
+        </p>
         <Flex
-          alignItems="top"
-          flex={1}
-          fontWeight="bold"
-          color={chosenAmount > 0 ? "body.base" : "inherit"}
-          mb={{ base: 0, md: 2 }}
+          className={cn(
+            "flex-1 font-bold md:mb-2",
+            chosenAmount > 0 ? "text-body" : "text-inherit"
+          )}
         >
-          <Text
-            fontSize={{ base: "5xl", md: "6xl" }}
-            h="full"
-            lineHeight="1em"
-            m={0}
-          >
+          <p className="h-full text-5xl leading-[1em] md:text-6xl">
             {formatChosenAmount}
-          </Text>
+          </p>
         </Flex>
-        <Text fontSize="xs" color="body.medium" m={0}>
+        <p className="text-xs text-body-medium">
           {formatEth(chosenAmount / ethPrice)} ETH
-        </Text>
-      </Box>
+        </p>
+      </div>
       {/* Bottom section */}
-      <Flex
-        py={{ base: 4, md: 8 }}
-        px={6}
-        bg="background.highlight"
-        h="full"
-        gap={{ base: 3, md: 6 }}
-        direction="column"
-        sx={{ p: { m: 0 } }}
-        fontSize={{ base: "sm", md: "md" }}
-      >
-        <Box>
-          <Text>To</Text>
-          <Text fontWeight="bold">{recipient}</Text>
-        </Box>
-        <Box>
-          <Text>Arrival time</Text>
-          <Text fontWeight="bold">est. about 12 seconds</Text>
-        </Box>
-        <Box>
-          <Text>Network fees</Text>
-          <Text m={0} fontWeight="bold">
+      <Flex className="h-full flex-col gap-3 bg-background-highlight px-6 py-4 text-sm md:gap-6 md:py-8 md:text-md">
+        <div>
+          <p>To</p>
+          <p className="font-bold">{recipient}</p>
+        </div>
+        <div>
+          <p>Arrival time</p>
+          <p className="font-bold">est. about 12 seconds</p>
+        </div>
+        <div>
+          <p>Network fees</p>
+          <p className="font-bold">
             {Intl.NumberFormat("en", {
               maximumFractionDigits: getMaxFractionDigitsUsd(usdFee),
               style: "currency",
               currency: "USD",
               notation: "compact",
             }).format(usdFee)}
-            <Text
-              as="span"
-              color="body.medium"
-              fontSize="xs"
-              fontWeight="normal"
-              ms={2}
-            >
+            <span className="ms-2 text-xs font-normal text-body-medium">
               (
               {Intl.NumberFormat("en", {
                 maximumFractionDigits: 6,
               }).format(ETH_TRANSFER_FEE)}{" "}
               ETH)
-            </Text>
-          </Text>
-        </Box>
+            </span>
+          </p>
+        </div>
       </Flex>
     </>
   )

@@ -26,7 +26,7 @@ Kryptoměna ether podporuje mechanismus stanovení cen pro výpočetní výkon E
 
 Proto, i když by škodlivá dappka odeslala nekonečnou smyčku, transakci by nakonec došel ether a byla by ukončena, což by umožnilo síti vrátit se do normálu.
 
-[Často](https://www.reuters.com/article/us-crypto-currencies-lending-insight-idUSKBN25M0GP#:~:text=price%20of%20ethereum) [dochází k](https://abcnews.go.com/Business/bitcoin-slumps-week-low-amid-renewed-worries-chinese/story?id=78399845#:~:text=cryptocurrencies%20including%20ethereum) [záměně](https://www.cnn.com/2021/03/14/tech/nft-art-buying/index.html#:~:text=price%20of%20ethereum) Etherea a etheru — když lidé odkazují na „cenu Etherea“, popisují cenu etheru.
+Je [běžné zaměňovat](https://abcnews.go.com/Business/bitcoin-slumps-week-low-amid-renewed-worries-chinese/story?id=78399845) Ethereum a ether – když se lidé zmiňují o „ceně Etherea“, popisují cenu etheru.
 
 ## Ražba etheru {#minting-ether}
 

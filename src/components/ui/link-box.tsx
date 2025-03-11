@@ -1,19 +1,15 @@
-import {
-  type BaseHTMLAttributes,
-  type ElementRef,
-  type ElementType,
-  forwardRef,
-} from "react"
+import { type BaseHTMLAttributes, type ElementRef, forwardRef } from "react"
 import { Slot } from "@radix-ui/react-slot"
 
 import { cn } from "@/lib/utils/cn"
 
 type LinkBoxElement = ElementRef<"div">
 
-type LinkBoxProps = BaseHTMLAttributes<HTMLDivElement> & { as?: ElementType }
+type LinkBoxProps = BaseHTMLAttributes<HTMLDivElement> & { asChild?: boolean }
 
 const LinkBox = forwardRef<LinkBoxElement, LinkBoxProps>(
-  ({ as: Comp = "div", className, ...props }, ref) => {
+  ({ asChild, className, ...props }, ref) => {
+    const Comp = asChild ? Slot : "div"
     return (
       <Comp ref={ref} className={cn("relative z-10", className)} {...props} />
     )

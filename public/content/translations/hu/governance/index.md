@@ -48,7 +48,7 @@ Az [Ethereum-közösségben](/community/) számos érdekelt fél van, akik szere
 - **Csomópont-operátorok**: akik csomópontokat működtetnek, amelyek blokkokat és tranzakciókat javasolnak, illetve elutasítják az érvénytelen tranzakciókat vagy blokkokat. [Bővebben a csomópontokról](/developers/docs/nodes-and-clients/).
 - **EIP-szerzők**: ők javasolnak változásokat az Ethereum-protokollt illetően Ethereum fejlesztési javaslatok (EIP) formájában. [Bővebben az EIP-ekről](/eips/).
 - **Validátorok**: ők olyan csomópontokat futtatnak, melyek új blokkokat tudnak adni az Ethereum-blokklánchoz.
-- **Protokollfejlesztők** (azaz „Magfejlesztők”): ők kezelik a különféle Ethereum-implementációkat (pl. go-ethereum, Nethermind, Besu, Erigon, Reth a végrehajtási rétegen; Prysm, Lighthouse, Nimbus, Teku, Lodestar a konszenzusrétegen). [Bővebben az Ethereum-kliensekről](/developers/docs/nodes-and-clients/).
+- **Protokollfejlesztők** (azaz „Magfejlesztők” ): ők kezelik a különféle Ethereum-implementációkat (pl. go-ethereum, Nethermind, Besu, Erigon, Reth a végrehajtási rétegen; Prysm, Lighthouse, Nimbus, Teku, Lodestar, Grandine a konszenzusrétegen). [Bővebben az Ethereum-kliensekről](/developers/docs/nodes-and-clients/).
 
 _Megjegyzés: bárki lehet több csoport tagja is (pl. a protokollfejlesztő lehet EIP-bajnok is, futtathat Beaconlánc-validátort és használhat DeFi-alkalmazásokat). A koncepcionális egyértelműség miatt könnyebb, ha megkülönböztetjük őket._
 

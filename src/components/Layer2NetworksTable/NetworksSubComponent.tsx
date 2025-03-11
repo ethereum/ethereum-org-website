@@ -1,9 +1,10 @@
 import { MdInfoOutline } from "react-icons/md"
 
-import { ButtonLink } from "@/components/Buttons"
 import NetworkUsageChart from "@/components/Layer2NetworksTable/NetworkUsageChart"
-import InlineLink from "@/components/Link"
 import Tooltip from "@/components/Tooltip"
+
+import { ButtonLink } from "../ui/buttons/Button"
+import InlineLink from "../ui/Link"
 
 const formatNumber = (num: number): string => {
   if (num >= 1e9) {
@@ -36,7 +37,7 @@ const NetworkSubComponent = ({ network }) => {
                         <p>
                           Data from{" "}
                           <InlineLink href="https://growthepie.xyz">
-                            Growthepie
+                            growthepie
                           </InlineLink>
                           .
                         </p>
@@ -118,7 +119,7 @@ const NetworkSubComponent = ({ network }) => {
                         <p>
                           Data from{" "}
                           <InlineLink href="https://growthepie.xyz">
-                            Growthepie
+                            growthepie
                           </InlineLink>
                           .
                         </p>
@@ -179,7 +180,7 @@ const NetworkSubComponent = ({ network }) => {
                     <p>
                       Data from{" "}
                       <InlineLink href="https://growthepie.xyz">
-                        Growthepie
+                        growthepie
                       </InlineLink>
                       .
                     </p>
@@ -236,7 +237,7 @@ const NetworkSubComponent = ({ network }) => {
             <div className="flex flex-col gap-0.5">
               <div>
                 <InlineLink
-                  href={network.growThePieLink}
+                  href={network.growthepieLink}
                   customEventOptions={{
                     eventCategory: "l2_networks",
                     eventAction: "analytics_profiles",

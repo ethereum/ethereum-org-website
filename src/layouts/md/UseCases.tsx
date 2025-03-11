@@ -1,6 +1,3 @@
-import { useRouter } from "next/router"
-import { useTranslation } from "next-i18next"
-
 import type { ChildOnlyProp } from "@/lib/types"
 import type { MdPageContent, UseCasesFrontmatter } from "@/lib/interfaces"
 
@@ -8,13 +5,16 @@ import BannerNotification from "@/components/Banners/BannerNotification"
 import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import Emoji from "@/components/Emoji"
 import { ContentHero } from "@/components/Hero"
-import InlineLink from "@/components/Link"
+import InlineLink from "@/components/ui/Link"
 import { List, ListItem } from "@/components/ui/list"
 
 import { getEditPath } from "@/lib/utils/editPath"
 import { getSummaryPoints } from "@/lib/utils/getSummaryPoints"
 
 import { ContentLayout } from "../ContentLayout"
+
+import { useTranslation } from "@/hooks/useTranslation"
+import { usePathname } from "@/i18n/routing"
 
 // UseCases layout components
 export const useCasesComponents = {
@@ -32,12 +32,12 @@ export const UseCasesLayout = ({
   tocItems,
   contentNotTranslated,
 }: UseCasesLayoutProps) => {
-  const { asPath: relativePath } = useRouter()
+  const pathname = usePathname()
   const { t } = useTranslation("template-usecase")
 
   const summaryPoints = getSummaryPoints(frontmatter)
 
-  const absoluteEditPath = getEditPath(relativePath)
+  const absoluteEditPath = getEditPath(pathname)
 
   const dropdownLinks: ButtonDropdownList = {
     text: t("template-usecase:template-usecase-dropdown"),
@@ -68,6 +68,15 @@ export const UseCasesLayout = ({
           eventCategory: "use cases menu",
           eventAction: "click",
           eventName: "dao",
+        },
+      },
+      {
+        text: t("template-usecase:template-usecase-dropdown-payments"),
+        href: "/payments/",
+        matomo: {
+          eventCategory: "use cases menu",
+          eventAction: "click",
+          eventName: "payments",
         },
       },
       {
