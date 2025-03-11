@@ -24,9 +24,9 @@ Modelos formais fornecem um nível de abstração sobre o qual a análise do com
 
 Diferentes técnicas são utilizadas para modelagem de contratos inteligentes para verificação formal. Por exemplo, alguns modelos são usados para racionalizar sobre o comportamento de alto nível de um contrato inteligente. Essas técnicas de modelagem aplicam uma visão de caixa preta em contratos inteligentes, visualizando-os como sistemas que aceitam entradas e executam computação com base nessas entradas.
 
-Modelos de alto nível focam na relação entre contratos inteligentes e agentes externos, como contas de propriedade externa (EOA) contas de contrato e ambiente da blockchain. Esses modelos são úteis para definir propriedades que especificam como um contrato deve se comportar em resposta a determinadas interações do usuário.
+Os modelos mais gerais focam na relação entre contratos inteligentes e agentes externos, como contas de propriedade externa (EOA), contas de contrato e ambiente da blockchain. Esses modelos são úteis para definir propriedades que especificam como um contrato deve se comportar em resposta a determinadas interações do usuário.
 
-Inversamente, outros modelos formais se concentram no comportamento de baixo nível de um contrato inteligente. Enquanto modelos de alto nível podem ajudar com racionalização sobre a funcionalidade de um contrato, eles podem falhar na captura de detalhes sobre o funcionamento interno da implementação. Modelos de baixo nível aplicam uma visualização de caixa branca para programar a análise e dependem de representações de baixo nível de aplicações de contrato inteligentes, como traços de programas e [gráficos de controle de fluxo](https://en.wikipedia.org/wiki/Control-flow_graph), justificando sobre propriedades relevantes para a execução de um contrato.
+Inversamente, outros modelos formais se concentram no comportamento de baixo nível de um contrato inteligente. Embora os modelos mais gerais possam ajudar no raciocínio sobre a funcionalidade de um contrato, eles podem não conseguir capturar detalhes sobre o funcionamento interno da implementação. Modelos de baixo nível aplicam uma visualização de caixa branca para programar a análise e dependem de representações de baixo nível de aplicações de contrato inteligentes, como traços de programas e [gráficos de controle de fluxo](https://en.wikipedia.org/wiki/Control-flow_graph), justificando sobre propriedades relevantes para a execução de um contrato.
 
 Modelos de baixo nível são considerados ideais uma vez que representam a execução real de um contrato inteligente no ambiente de execução da Ethereum (ou seja, a [EVM](/developers/docs/evm/)). Técnicas de modelagem de baixo nível são especialmente úteis para estabelecer propriedades de segurança críticas em contratos inteligentes e para detectar potenciais vulnerabilidades.
 
@@ -78,7 +78,7 @@ As especificações do estilo Hoare podem garantir _correção parcial_ ou _corr
 
 Obter a comprovação de correção total é difícil, pois algumas execuções podem atrasar antes de terminar ou nunca terminar nada. Dito isso, a questão de se a execução termina é sem dúvida um ponto discutível, já que o mecanismo de gás da Ethereum evita loops infinitos de programa (a execução termina, ou com sucesso, ou termina devido a um erro de 'falta de gás').
 
-As especificações de contrato inteligente criadas usando a lógica de Hoare terão precondições, pós-condições e invariáveis definidas para a execução de funções e loops em um contrato. Precondições geralmente incluem a possibilidade de entradas erradas para uma função, com pós-condições descrevendo a resposta esperada para essas entradas (por exemplo, lançando uma exceção específica). Desta forma, as propriedades de estilo Hoare são eficazes para assegurar a correção das implementações do contrato.
+As especificações de contrato inteligente criadas usando a lógica de Hoare terão precondições, pós-condições e invariáveis definidas para a execução de funções e loops em um contrato. Precondições geralmente incluem a possibilidade de entradas erradas para uma função, com pós-condições descrevendo a resposta esperada para essas entradas (por exemplo, lançando uma exceção específica). Dessa maneira, as propriedades do estilo Hoare são eficazes para garantir a correção das implementações de contratos.
 
 Muitas estruturas formais de verificação usam especificações no estilo Hoare para comprovar a correção semântica das funções. Também é possível adicionar propriedades do estilo Hoare (como asserções) diretamente ao código do contrato usando as instruções `require` e `assert` no Solidity.
 
@@ -88,7 +88,7 @@ As instruções `require` expressam uma precondição ou invariável e são freq
 
 Especificações baseadas em traços descrevem operações que transitam um contrato entre diferentes estados e as relações entre essas operações. Como foi explicado anteriormente, os traços são sequências de operações que alteram o estado de um contrato de uma forma específica.
 
-Essa abordagem depende do modelo de contratos inteligentes como sistemas de transição de estado com alguns estados predefinidos (descritos por variáveis de estado) junto com um conjunto de transições predefinidas (descritas pelas funções de contrato). Além disso, um [gráfico de controle de fluxo](https://www.geeksforgeeks.org/software-engineering-control-flow-graph-cfg/) (CFG), que é uma representação gráfica do fluxo de execução de um programa, é frequentemente utilizado para descrever a semântica operacional de um contrato. Aqui, cada traço representado como um caminho no gráfico do fluxo de controle.
+Essa abordagem depende do modelo de contratos inteligentes como sistemas de transição de estado com alguns estados predefinidos (descritos por variáveis de estado) junto com um conjunto de transições predefinidas (descritas pelas funções de contrato). Além disso, um [gráfico de controle de fluxo ](https://www.geeksforgeeks.org/software-engineering-control-flow-graph-cfg/) (CFG), que é uma representação gráfica do fluxo de execução de um programa, é frequentemente utilizado para descrever a semântica operacional de um contrato. Aqui, cada traço representado como um caminho no gráfico do fluxo de controle.
 
 Em primeiro lugar, as especificações de nível de traços são usadas para raciocinar sobre padrões de execução interna em contratos inteligentes. Ao criar especificações de nível de traços, afirmamos os caminhos de execução admissíveis (ou seja, transições de estado) para um contrato inteligente. Utilizando técnicas, como a execução simbólica, podemos verificar formalmente que a execução nunca segue um caminho não definido no modelo formal.
 
@@ -212,16 +212,16 @@ Além disso, nem sempre é possível que os verificadores de programa determinem
 
 ### Linguagens de especificação para criação de especificações formais {#specification-languages}
 
-**Act**: _*O Act permite a especificação de atualizações de armazenamento, condições de pré/pós e invariáveis do contrato. Seu conjunto de ferramentas também tem backends capazes de comprovar muitas propriedades via Coq, solucionadores SMT, ou hevm.*_
+**Act**: _*O Act permite a especificação de atualizações de armazenamento, condições de pré/pós e invariáveis do contrato. Seu conjunto de ferramentas também tem backends capazes de comprovar muitas propriedades via Coq, solucionadores SMT, ou hevm.**
 
 - [GitHub](https://github.com/ethereum/act)
 - [Documentação](https://ethereum.github.io/act/)
 
-**Scribble** - _*Scribble transforma anotações de código na linguagem de especificação Scribble em afirmações concretas que verificam a especificação.*_
+**Scribble** - _*Scribble transforma anotações de código na linguagem de especificação Scribble em afirmações concretas que verificam a especificação.**
 
 - [Documentação](https://docs.scribble.codes/)
 
-**Dafny** - _*Dafny é uma linguagem de programação pronta para verificação que depende de anotações de alto nível para argumentar e comprovar a exatidão do código.*_
+**Dafny** - _*Dafny é uma linguagem de programação pronta para verificação que depende de anotações de alto nível para argumentar e comprovar a exatidão do código.**
 
 - [GitHub](https://github.com/dafny-lang/dafny)
 
@@ -232,15 +232,15 @@ Além disso, nem sempre é possível que os verificadores de programa determinem
 - [Site](https://www.certora.com/)
 - [Documentação](https://docs.certora.com/en/latest/index.html)
 
-**Solidity SMTChecker** - _*Solidity’s SMTChecker é um verificador de modelos integrado com base no SMT (Teorias do Módulo de Satisfiabilidade) e na resolução de Horn. Ele confirma se o código-fonte de um contrato corresponde às especificações durante a compilação e procura estaticamente por violações de propriedades de segurança.*_
+**Solidity SMTChecker** - _*Solidity’s SMTChecker é um verificador de modelos integrado com base no SMT (Teorias do Módulo de Satisfiabilidade) e na resolução de Horn. Ele confirma se o código-fonte de um contrato corresponde às especificações durante a compilação e procura estaticamente por violações de propriedades de segurança.**
 
 - [GitHub](https://github.com/ethereum/solidity)
 
-**solc-verify** - _*solc-verify é uma versão estendida do compilador Solidity que pode executar a verificação formal automatizada no código Solidity usando anotações e verificação de programa modular.*_
+**solc-verify** - _*solc-verify é uma versão estendida do compilador Solidity que pode executar a verificação formal automatizada no código Solidity usando anotações e verificação de programa modular.**
 
 - [GitHub](https://github.com/SRI-CSL/solidity)
 
-**KEVM** - _*KEVM é uma semântica formal da Máquina Virtual Ethereum (EVM) escrita no framework K. KEVM é executável e pode comprovar determinadas declarações relacionadas à propriedade usando a lógica de alcançabilidade.*_
+**KEVM** - _*KEVM é uma semântica formal da Máquina Virtual Ethereum (EVM) escrita no framework K. KEVM é executável e pode comprovar determinadas declarações relacionadas à propriedade usando a lógica de alcançabilidade.**
 
 - [GitHub](https://github.com/runtimeverification/evm-semantics)
 - [Documentação](https://jellopaper.org/)
@@ -259,12 +259,12 @@ Além disso, nem sempre é possível que os verificadores de programa determinem
 
 ### Ferramentas de execução simbólica para detectar padrões vulneráveis em contratos inteligentes {#symbolic-execution-tools}
 
-**Manticore** - _*Uma ferramenta para analisar a ferramenta de análise de bytecode EVM com base em execução simbólica.*_
+**Manticore** - _*Uma ferramenta para analisar a ferramenta de análise de bytecode EVM com base em execução simbólica*.*
 
 - [GitHub](https://github.com/trailofbits/manticore)
 - [Documentação](https://github.com/trailofbits/manticore/wiki)
 
-**hevm** - _*hevm é um mecanismo de execução simbólico e um verificador de equivalência para bytecode EVM.*_
+**hevm** - _*hevm é um mecanismo de execução simbólico e um verificador de equivalência para bytecode EVM.**
 
 - [GitHub](https://github.com/dapphub/dapptools/tree/master/src/hevm)
 

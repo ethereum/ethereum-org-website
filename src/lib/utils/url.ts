@@ -1,4 +1,4 @@
-import { join } from "path"
+import { extname, join } from "path"
 
 import {
   DEFAULT_LOCALE,
@@ -21,6 +21,8 @@ export const isGlossary = (href: string): boolean =>
 
 export const isPdf = (href: string): boolean => href.endsWith(".pdf")
 
+export const isFile = (href: string): boolean => extname(href).length > 0
+
 export const sanitizeHitUrl = (url: string): string =>
   url
     .replace(/^https?:\/\/[^/]+(?=\/)/, "")
@@ -28,16 +30,17 @@ export const sanitizeHitUrl = (url: string): string =>
     .replace("#content", "")
     .replace("#top", "")
 
+// remove any query params or hashes from the path
+export const cleanPath = (path: string): string => path.replace(/[$#].+$/, "")
+
 export const isHrefActive = (
   href: string,
   pathname: string,
   isPartiallyActive?: boolean
-) => (isPartiallyActive ? pathname.startsWith(href) : pathname === href)
+) =>
+  isPartiallyActive ? pathname.startsWith(href) : cleanPath(pathname) === href
 
 export const isHash = (href: string): boolean => href.startsWith("#")
-
-// remove any query params or hashes from the path
-export const cleanPath = (path: string): string => path.replace(/[$#].+$/, "")
 
 export const addSlashes = (href: string): string => {
   if (isExternal(href)) return href

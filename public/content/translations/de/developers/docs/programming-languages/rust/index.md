@@ -22,11 +22,9 @@ Sind Sie an einigen grundlegenden Informationen interessiert? Dann sehen Sie sic
 
 ## Informationen für Einsteiger {#beginner-articles}
 
-- [Einen Ethereum-Client wählen](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
 - [Der Rust-Ethereum-Client](https://openethereum.github.io/) \* **Beachten Sie, dass OpenEthereum [veraltet](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) ist und nicht mehr gepflegt wird.** Nutzen Sie es mit Vorsicht und wechseln Sie besser zu einer anderen Client-Implementierung.
 - [Transaktion mit Rust an Ethereum senden](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/sending-ethereum-transactions-with-rust/)
-- [Eine Einführung in Smart Contracts mit dem Parity-Ethereum-Client](https://wiki.parity.io/Smart-Contracts)
-- [Ein Schritt-für-Schritt-Tutorial, wie Sie Verträge in Rust Wasm für Kovan verfassen können](https://github.com/paritytech/pwasm-tutorial)
+- [Ein Schritt-für-Schritt-Tutorial dazu, wie Sie Contracts in Rust Wasm für Kovan verfassen können](https://github.com/paritytech/pwasm-tutorial)
 
 ## Artikel für Fortgeschrittene {#intermediate-articles}
 
@@ -36,7 +34,6 @@ Sind Sie an einigen grundlegenden Informationen interessiert? Dann sehen Sie sic
 - [Einen dezentralisierten Chat mit JavaScript und Rust erstellen](https://medium.com/perlin-network/build-a-decentralized-chat-using-javascript-rust-webassembly-c775f8484b52)
 - [Erstelle eine dezentralisierte Todo-App mit Vue.js & Rust](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
 
-- [Eine Einführung in Secret Contracts](https://blog.enigma.co/getting-started-with-enigma-an-intro-to-secret-contracts-cdba4fe501c2)
 - [Erstellen einer Blockchain in Rust](https://blog.logrocket.com/how-to-build-a-blockchain-in-rust/)
 
 ## Rust-Projekte und Tools {#rust-projects-and-tools}
@@ -44,15 +41,17 @@ Sind Sie an einigen grundlegenden Informationen interessiert? Dann sehen Sie sic
 - [pwasm-ethereum](https://github.com/paritytech/pwasm-ethereum) - _Sammlung von Externen zur Interaktion mit einem Ethereum-ähnlichen Netzwerk_
 - [Lighthouse](https://github.com/sigp/lighthouse) – _Schneller Ethereum-Client auf Konsensebene_
 - [Ethereum WebAssembly](https://ewasm.readthedocs.io/en/mkdocs/) - _Vorgeschlagene Neugestaltung der Ausführungsebene für Ethereum Smart-Contracts mit einer deterministischen Teilmenge von WebAssembly_
-- [oasis_std](https://docs.rs/oasis-std/latest/oasis_std/index.html) - _OASIS-API-Referenz_
+- [oasis_std](https://docs.rs/oasis-std/latest/oasis_std/index.html) – _OASIS-API-Referenz_
 - [Solaris](https://github.com/paritytech/sol-rs) - _Testumgebung für Solidity Smart Contracts Einheitstests unter Verwendung der nativen Parity Client EVM._
 - [SputnikVM](https://github.com/rust-blockchain/evm) – _Implementierung der virtuellen Maschine von Rust Ethereum_
 - [Wavelet](https://wavelet.perlin.net/docs/smart-contracts) - _Wavelet Smart Contract in Rust_
-- [Foundry](https://github.com/gakonst/foundry) – _Toolkit für die Entwicklung von Ethereum-Anwendungen_
+- [Foundry](https://github.com/foundry-rs/foundry) – _Toolkit für Ethereum-Anwendungsentwicklung_
+- [Alloy](https://alloy.rs) – _Hochleistungsfähige, gut getestete und dokumentierte Bibliotheken zur Interaktion mit Ethereum und anderen EVM-basierten Ketten._
 - [Ethers_rs](https://github.com/gakonst/ethers-rs) – _Ethereum-Bibliothek und Wallet-Implementierung_
 - [SewUp](https://github.com/second-state/SewUp) – _Eine Bibliothek, die Ihnen hilft, Ihren Ethereum-Webassembly-Vertrag mit Rust zu erstellen und genau wie in einem gemeinsamen Backend zu entwickeln_
 - [Substreams](https://github.com/streamingfast/substreams) - _Indexierungstechnologie für parallele Blockchain-Daten_
-- [Reth](https://github.com/paradigmxyz/reth) Reth (kurz für Rust Ethereum) ist eine neue Implementierung eines vollständigen Knotens auf Ethereum
+- [Reth](https://github.com/paradigmxyz/reth) – Reth (kurz für Rust Ethereum) ist eine neue Full-Node-Implementierung für Ethereum
+- [Awesome Ethereum Rust](https://github.com/Vid201/awesome-ethereum-rust) – _eine kuratierte Sammlung von Projekten im Ethereum-Ökosystem, die in Rust geschrieben sind_
 
 Sind Sie an weiteren Informationen interessiert? Sehen Sie sich [ethereum.org/developers](/developers/) an.
 

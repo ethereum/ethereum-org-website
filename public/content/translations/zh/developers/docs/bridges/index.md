@@ -42,7 +42,7 @@ lang: zh
 
 - **原生链桥 –** 这些链桥通常用于加强特定区块链上的流动性，使用户更容易将资金转移到生态系统。 例如，[Arbitrum 链桥](https://bridge.arbitrum.io/)的目的就是为了方便用户从以太坊主网桥接到 Arbitrum。 其他此链类桥包括 Polygon PoS 链桥、[Optimism 网关](https://app.optimism.io/bridge)等。
 - **基于验证者或预言机的链桥 –** 这些链桥依赖于外部验证者组或预言机来验证跨链转移。 例如：Multichain 与 Across。
-- **通用信息传递链桥 – **这些链桥可以跨链传输资产、信息和任意数据。 例如：Nomad 与 LayerZero。
+- **通用信息传递链桥 – **这些链桥可以跨链传输资产、信息和任意数据。 例如：Axelar、LayerZero 与 Nomad。
 - **流动性网络 –** 这些链桥主要是通过原子交换将资产从一条链转移到另一条链。 一般来讲，它们不支持跨链信息传递。 例如：Connext 与 Hop。
 
 ## 权衡利弊 {#trade-offs}
@@ -67,8 +67,7 @@ lang: zh
 
 ## 链桥相关风险 {#risk-with-bridges}
 
-去中心化金融领域中最大的三次黑客攻击
-都是链桥造成的，而且链桥目前仍处于开发阶段早期。 使用任何链桥都有以下风险：
+去中心化金融领域中[最大的三次黑客攻击](https://rekt.news/leaderboard/)都是链桥造成的，而且链桥目前仍处于开发阶段早期。 使用任何链桥都有以下风险：
 
 - **智能合约风险 –** 虽然许多链桥已经成功通过了审计，但只需智能合约中的一个缺陷就会使资产暴露在黑客攻击中（例如：[Solana 的 Wormhole 链桥](https://rekt.news/wormhole-rekt/)）。
 - **系统性金融风险** – 许多链桥使用包装资产在新的链上铸造规范化的原始资产。 这使生态系统面临系统性风险，正如我们所看到的那样，包装代币遭到利用。
@@ -104,7 +103,7 @@ lang: zh
 
 ### 在多条链上部署去中心化应用程序 {#deploying-a-dapp-on-multiple-chains}
 
-要在多条链上部署去中心化应用程序，开发者可以使用 [Alchemy](https://www.alchemy.com/)、[安全帽](https://hardhat.org/)、[Truffle](https://trufflesuite.com/)、[Moralis](https://moralis.io/) 等开发平台。 这些平台通常提供可组合的插件，能够支持去中心化应用程序跨链。 例如，开发者可以使用[安全帽部署插件](https://github.com/wighawag/hardhat-deploy)提供的确定性部署代理。
+要在多条链上部署去中心化应用程序 (dapp)，开发者可以使用 [Alchemy](https://www.alchemy.com/)、[安全帽](https://hardhat.org/)和 [Moralis](https://moralis.io/) 等开发平台。 这些平台通常提供可组合的插件，能够支持去中心化应用程序跨链。 例如，开发者可以使用[安全帽部署插件](https://github.com/wighawag/hardhat-deploy)提供的确定性部署代理。
 
 #### 例子：
 

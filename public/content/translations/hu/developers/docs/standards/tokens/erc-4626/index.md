@@ -27,7 +27,7 @@ Az oldal könnyebben megértéséhez javasoljuk, hogy tekintse át a [Tokenszabv
 #### asset {#asset}
 
 ```solidity
-function asset() public view returns (address)
+function asset() public view returns (address assetTokenAddress)
 ```
 
 Ez a függvény visszaadja az értékmegőrzőben a könyveléshez, befizetéshez és kivonáshoz használt token címét.
@@ -59,7 +59,7 @@ Ez a függvény visszaadja az eszközök (`assets`) mennyiségét, amelyet az é
 #### maxDeposit {#maxdeposit}
 
 ```solidity
-function maxDeposit(address receiver) public view returns (uint256)
+function maxDeposit(address receiver) public view returns (uint256 maxAssets)
 ```
 
 Ez a függvény a `receiver` által egyetlen [`deposit`](#deposit) hívással letétbe helyezhető fedezeti eszközök maximális összegét adja vissza.
@@ -67,12 +67,12 @@ Ez a függvény a `receiver` által egyetlen [`deposit`](#deposit) hívással le
 #### previewDeposit {#previewdeposit}
 
 ```solidity
-function previewDeposit(uint256 assets) public view returns (uint256)
+function previewDeposit(uint256 assets) public view returns (uint256 shares)
 ```
 
 Ez a függvény lehetővé teszi a felhasználók számára, hogy szimulálják a betétük hatásait az aktuális blokkban.
 
-#### deposit {#deposit}
+#### letét {#deposit}
 
 ```solidity
 function deposit(uint256 assets, address receiver) public returns (uint256 shares)
@@ -83,7 +83,7 @@ Ez a függvény a mögöttes tokenek eszközeit (`assets`) helyezi el az érték
 #### maxMint {#maxmint}
 
 ```solidity
-function maxMint(address receiver) public view returns (uint256)
+function maxMint(address receiver) public view returns (uint256 maxShares)
 ```
 
 Ez a függvény visszaadja a `receiver` által egyetlen [`mint`](#mint) hívással kiadható részvények maximális mennyiségét.
@@ -91,12 +91,12 @@ Ez a függvény visszaadja a `receiver` által egyetlen [`mint`](#mint) híváss
 #### previewMint {#previewmint}
 
 ```solidity
-function previewMint(uint256 shares) public view returns (uint256)
+function previewMint(uint256 shares) public view returns (uint256 assets)
 ```
 
 Ez a függvény lehetővé teszi a felhasználók számára, hogy szimulálják a mintelés hatásait az aktuális blokkban.
 
-#### mint {#mint}
+#### mint (kibocsátás) {#mint}
 
 ```solidity
 function mint(uint256 shares, address receiver) public returns (uint256 assets)
@@ -107,7 +107,7 @@ Ez a függvény pontosan `shares` értékmegőrzői részvényeket ad ki a fogad
 #### maxWithdraw {#maxwithdraw}
 
 ```solidity
-function maxWithdraw(address owner) public view returns (uint256)
+function maxWithdraw(address owner) public view returns (uint256 maxAssets)
 ```
 
 Ez a függvény az `owner` egyenlegéből egyetlen [`withdraw`](#withdraw) hívással kivehető fedezeti eszközök maximális összegét adja vissza.
@@ -115,7 +115,7 @@ Ez a függvény az `owner` egyenlegéből egyetlen [`withdraw`](#withdraw) hív�
 #### previewWithdraw {#previewwithdraw}
 
 ```solidity
-function previewWithdraw(uint256 assets) public view returns (uint256)
+function previewWithdraw(uint256 assets) public view returns (uint256 shares)
 ```
 
 Ez a függvény lehetővé teszi a felhasználók számára, hogy szimulálják a kivonásuk hatásait az aktuális blokkban.
@@ -131,7 +131,7 @@ Ez a függvény részvény (`shares`) elégetését végzi a tulajdonostól (`ow
 #### maxRedeem {#maxredeem}
 
 ```solidity
-function maxRedeem(address owner) public view returns (uint256)
+function maxRedeem(address owner) public view returns (uint256 maxShares)
 ```
 
 Ez a függvény visszaadja az `owner` egyenlegéből [`redeem`](#redeem) hívással visszaváltható részvények maximális mennyiségét.
@@ -139,7 +139,7 @@ Ez a függvény visszaadja az `owner` egyenlegéből [`redeem`](#redeem) hívás
 #### previewRedeem {#previewredeem}
 
 ```solidity
-function previewRedeem(uint256 shares) public view returns (uint256)
+function previewRedeem(uint256 shares) public view returns (uint256 assets)
 ```
 
 Ez a függvény lehetővé teszi a felhasználók számára, hogy szimulálják a beváltásuk hatásait az aktuális blokkban.
@@ -167,6 +167,10 @@ function balanceOf(address owner) public view returns (uint256)
 ```
 
 Visszaadja az `owner` által jelenleg birtokolt értékmegőrző-részvények teljes mennyiségét.
+
+### Az interfész térképe {#mapOfTheInterface}
+
+![Az ERC-4626 interfész térképe](./map-of-erc-4626.png)
 
 ### Események {#events}
 

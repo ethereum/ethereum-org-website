@@ -56,6 +56,6 @@ description: ethereum.orgデベロッパー向けツールへの掲載基準
 
 本基準を満たしたツールのethereum.orgへの掲載をご希望の場合は、GitHubで問題を作成してください。
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_dev_tool.yaml">
+<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_dev_tool.yaml">
   問題の作成
 </ButtonLink>

@@ -1,7 +1,8 @@
-import { HStack } from "@chakra-ui/react"
 import { Meta, StoryObj } from "@storybook/react"
 
-import { langViewportModes } from "../../../../.storybook/modes"
+import { HStack } from "@/components/ui/flex"
+
+import { langViewportModes } from "@/storybook/modes"
 
 import MdxHeroComponent from "./"
 
@@ -18,7 +19,7 @@ const meta = {
   },
   decorators: [
     (Story) => (
-      <HStack maxW="container.2xl" m="auto" height="100vh">
+      <HStack className="mx-auto h-[100vh] max-w-screen-2xl">
         <Story />
       </HStack>
     ),

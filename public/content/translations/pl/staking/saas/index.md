@@ -39,7 +39,7 @@ Wskaźniki atrybutów są użyte poniżej, aby zasygnalizować godne uwagi mocne
 
 ## Poznaj dostawców usług stakingowych {#saas-providers}
 
-Poniżej znajduje się paru dostępnych dostawców SaaS. Skorzystaj z powyższych wskaźników, które oprowadzą cię z tymi usługami
+Poniżej znajduje się kilku dostępnych dostawców SaaS. Skorzystaj z powyższych wskaźników, które oprowadzą cię z tymi usługami
 
 <ProductDisclaimer />
 
@@ -78,7 +78,7 @@ W kwietniu 2023 r. w ramach aktualizacji Shanghai/Capella wprowadzono wypłaty z
 
 Walidatorzy mogą również w pełni wyjść jako walidator, co odblokuje ich pozostałe saldo ETH do wypłaty. Konta, które podały adres wypłaty i zakończyły proces wyjścia, otrzymają całe saldo na adres wypłaty podany podczas następnego przeglądu walidatora.
 
-<ButtonLink to="/staking/withdrawals/">Więcej o wypłatach ze stakingu</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">Więcej o wypłatach ze stakingu</ButtonLink>
 </ExpandableCard>
 
 <ExpandableCard title="Co się stanie, jeśli zostanę odcięty?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">

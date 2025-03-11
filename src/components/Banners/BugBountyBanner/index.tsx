@@ -1,17 +1,21 @@
 // Libraries
 import React from "react"
-import { Center, Text } from "@chakra-ui/react"
 
 // Components
 import BannerNotification from "@/components/Banners/BannerNotification"
+import { Center } from "@/components/ui/flex"
 
 const BugBountyBanner = () => (
   <BannerNotification shouldShow>
     <Center>
-      <Text m={0} p={0}>
-        All Dencun-related bounties currently receive a 2x bonus multiplier (up
-        to 500,000 USD) up to two weeks before the scheduled mainnet hardfork.
-      </Text>
+      <p>
+        Prague code is now in scope! The Prague Audit Competition is running on{" "}
+        <a href="https://cantina.xyz/competitions/9ab19e33-b73c-4384-83a8-b905f508ce5e">
+          Cantina
+        </a>{" "}
+        during 21st of February - 21st of March, with up to $2,000,000 in
+        rewards!
+      </p>
     </Center>
   </BannerNotification>
 )

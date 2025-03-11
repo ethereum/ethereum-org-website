@@ -41,12 +41,6 @@ A legtöbb megalapozott IDE-nek vannak beépített pluginjai, amelyek tovább fo
 - [Kódminták](https://github.com/Azure-Samples/blockchain/blob/master/blockchain-workbench/application-and-smart-contract-samples/readme.md)
 - [GitHub](https://github.com/microsoft/vscode)
 
-**Atom -** **_Egy hackelhető szövegszerkesztő a 21. századra_**
-
-- [Atom](https://atom.io/)
-- [GitHub](https://github.com/atom)
-- [Ethereum-csomagok](https://atom.io/packages/search?utf8=%E2%9C%93&q=keyword%3Aethereum&commit=Search)
-
 **JetBrains IDE-k (IntelliJ IDEA, etc.) –** **_Elengedhetetlen eszközök szoftverfejlesztőknek és csapatoknak_**
 
 - [JetBrains](https://www.jetbrains.com/)
@@ -68,4 +62,4 @@ A legtöbb megalapozott IDE-nek vannak beépített pluginjai, amelyek tovább fo
 
 - [Ethereum IDEs](https://www.alchemy.com/list-of/web3-ides-on-ethereum) _ – Alchemy listája az Ethereum IDE-okról_
 
-_Van olyan közösségi erőforrása, amely segített Önnek? Szerkessze ezt az oldalt, és adja hozzá!_
+_Ismersz olyan közösségi anyagot, amely segített neked? Módosítsd az oldalt és add hozzá!_

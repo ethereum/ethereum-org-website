@@ -1,36 +1,12 @@
-import React from "react"
-import { Box, type BoxProps } from "@chakra-ui/react"
+import type { ChildOnlyProp } from "@/lib/types"
 
-type PhoneProps = Pick<BoxProps, "children">
-
-export const Phone = ({ children }: PhoneProps) => (
-  <Box as="figure" minW="min(100%, 322px)" maxW="min(100%, 322px)" mx="auto">
+export const Phone = ({ children }: ChildOnlyProp) => (
+  <figure className="mx-auto min-w-[min(100%,322px)] max-w-[min(100%,322px)]">
     {/* Phone frame */}
-    <Box
-      h={{ base: 480, md: 600 }}
-      maxH="full"
-      w="full"
-      border="5px solid"
-      borderColor="body.medium"
-      borderRadius="3xl"
-      bg="background.base"
-      position="relative"
-      zIndex={0}
-      overflow="hidden"
-    >
+    <div className="relative z-0 h-[480px] max-h-full w-full overflow-hidden rounded-3xl border-[5px] border-body-medium bg-background md:h-[600px]">
       {children}
-    </Box>
+    </div>
     {/* Phone drop shadow */}
-    <Box
-      h={6}
-      mb={-6}
-      w="full"
-      borderRadius="100%"
-      position="relative"
-      filter="blur(14px)"
-      bg="black"
-      opacity={0.4}
-      zIndex={-1}
-    />
-  </Box>
+    <div className="relative -z-[1] -mb-6 h-6 w-full rounded-full bg-black opacity-40 blur-[14px] filter" />
+  </figure>
 )

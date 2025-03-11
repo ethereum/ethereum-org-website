@@ -8,11 +8,11 @@ alt: "以太坊路线图"
 summaryPoints:
 buttons:
   - 
-    label: 进一步升级
+    content: 进一步升级
     toId: 即将发生什么变化
   - 
-    label: 以往升级
-    to: /history/
+    content: 以往升级
+    href: /history/
     variant: 简要
 ---
 
@@ -26,28 +26,28 @@ buttons:
 
 <CardGrid>
   <RoadmapActionCard
-    to="/roadmap/scaling"
+    href="/roadmap/scaling"
     title="交易费用更低"
     image="scaling"
     description="Rollups are too expensive and rely on centralized components, causing users to place too much trust in their operators. The roadmap includes fixes for both of these problems."
     buttonText="More on reducing fees"
   />
   <RoadmapActionCard
-    to="/roadmap/security"
+    href="/roadmap/security"
     title="更安全"
     image="security"
     description="Ethereum is already very secure but it can be made even stronger, ready to withstand all kinds of attack far into the future."
     buttonText="More on security"
   />
   <RoadmapActionCard
-    to="/roadmap/user-experience"
+    href="/roadmap/user-experience"
     title="改善用户体验"
     image="userExperience"
     description="More support for smart contract wallets and light-weight nodes will make using Ethereum simpler and safer."
     buttonText="More on user experience"
   />
   <RoadmapActionCard
-    to="/roadmap/future-proofing"
+    href="/roadmap/future-proofing"
     title="面向未来"
     image="futureProofing"
     description="Ethereum researchers and developers are solving tomorrow's problems today, readying the network for future generations."
@@ -78,7 +78,7 @@ buttons:
 
 **是的，几乎肯定会**。 路线图是目前的以太坊升级计划，涵盖近期计划和未来计划。 我们预计路线图会随着新的信息和技术的出现而改变。
 
-我们将以太坊路线图视为改进以太坊的一整套计划；这是研究人员和开发人员对以太坊最佳发展道路的最佳假设。
+将以太坊路线图视为改进以太坊的一整套计划；这是研究人员和开发人员针对以太坊最优发展道路做出的最佳假设。
 
 ## 路线图将何时完成？ {#when-will-the-roadmap-be-finished}
 

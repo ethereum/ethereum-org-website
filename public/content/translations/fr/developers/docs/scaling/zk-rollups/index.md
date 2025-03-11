@@ -1,5 +1,5 @@
 ---
-title: Rollups ZK (Zero-Knowledge)
+title: Rollups Zero-knowledge (ZK)
 description: Une introduction aux rollups zero-knowledge, une solution de mise à l'échelle utilisée par la Communauté Ethereum.
 lang: fr
 ---
@@ -180,9 +180,9 @@ Le montant que les utilisateurs paient pour les transactions sur les rollups ZK 
 
 1. **Écriture d'état** : Il y a un coût fixe pour écrire dans l'état d'Ethereum (c'est-à-dire, soumettre une transaction sur la blockchain d'Ethereum). Les rollups ZK réduisent ce coût en regroupant les transactions et en répartissant les coûts fixes entre plusieurs utilisateurs.
 
-2. **Data publication** : Les rollups ZK publient les données d'état de chaque transaction vers Ethereum en tant que `calldata`. Les coûts des `calldata` sont actuellement régis par [l'EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), qui stipule un coût de 16 gaz pour les octets non nuls et de 4 gaz pour les octets nuls de `calldata`, respectivement. Le coût payé pour chaque transaction est influencé par la quantité de `calldata` qui doit être publiée sur la chaîne à cet effet.
+2. **Data publication** : Les rollups ZK publient les données d'état de chaque transaction vers Ethereum en tant que `calldata`. Les coûts des `calldata` sont actuellement régis par le [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), qui prévoit un coût de 16 gaz pour les octets non nuls et de 4 gaz pour les octets nuls de `calldata`, respectivement. Le coût payé pour chaque transaction est influencé par la quantité de `calldata` qui doit être publiée sur la chaîne à cet effet.
 
-3. **Frais d'opérateur L2** : Il s'agit du montant versé à l'opérateur de rollup en compensation des coûts de calcul encourus pour le traitement des transactions, un peu comme les frais de mineur sur Ethereum.
+3. **Frais d'opérateur L2**: Il s'agit du montant payé à l'opérateur du rollup en compensation des coûts de calcul engagés lors du traitement des transactions, un peu comme les [ frais de transaction prioritaire (pourboires)"](/developers/docs/gas/#how-are-gas-fees-calculated) sur le réseau principal d'Ethereum.
 
 4. **Génération et vérification des preuves** : Les opérateurs de rollup ZK doivent produire des preuves de validité pour les lots de transactions, ce qui est gourmand en ressources. La vérification des preuves à connaissance zéro sur le réseau principal coûte également du gaz (~ 500 000 gaz).
 
@@ -222,25 +222,23 @@ Regardez la vidéo de Finematics qui explique les rollups ZK :
 
 <YouTube id="7pWxCklcNsU" start="406" />
 
-### Utiliser les rollups ZK {#use-zk-rollups}
-
-Il existe un grand nombre d'implémentations de rollups ZK que vous pouvez intégrer dans vos dApps :
-
-<RollupProductDevDoc rollupType="zk" />
-
 ## Qui travaille sur une zkEVM ? {#zkevm-projects}
 
 Les projets fonctionnant sur les zkEVM comprennent :
 
-- **[Applied ZKP](https://github.com/privacy-scaling-explorations/zkevm-specs)** - _Applied ZKP est un projet financé par la Fondation Ethereum pour développer un rollup ZK compatible avec l'EVM et un mécanisme pour générer des preuves de validité pour les blocs Ethereum._
+- **[zkEVM](https://github.com/privacy-scaling-explorations/zkevm-specs)** - _zkEVM est un projet financé par la Fondation Ethereum pour développer un ZK-rollup compatible EVM et un mécanisme destiné à générer des preuves de validité pour les blocs Ethereum._
 
 - **[Polygon Hermez](https://polygon.technology/solutions/polygon-zkevm)** - _Hermez est un rollup ZK décentralisé sur le réseau principal Ethereum travaillant sur une machine virtuelle Ethereum à connaissance nulle (zkEVM) qui exécute les transactions Ethereum de manière transparente, y compris les contrats intelligents avec des validations de preuve à connaissance nulle._
 
 - **[Scroll](https://scroll.io/blog/zkEVM)** - _Scroll est une entreprise axée sur la technologie travaillant à la création d'une solution native zkEVM de couche 2 pour Ethereum._
 
-- **[Taiko](https://taiko.xyz)** - _Taiko est un rollup ZK décentralisé, équivalent à Ethereum (une [EVM ZK de type 1](https://vitalik.eth.limo/general/2022/08/04/zkevm.html))._
+- **[Taiko](https://taiko.xyz)** - _Taiko est un ZK-rollup décentralisé, équivalent à Ethereum (un [Type 1 ZK-EVM](https://vitalik.eth.limo/general/2022/08/04/zkevm.html))._
 
-- **[ZKsync](https://docs.zksync.io/)** - _ZKsync 2.0 est un rollup ZK compatible avec l'EVM développé par Matter Labs, propulsé par son propre zkEVM._
+- **[ZKsync](https://docs.zksync.io/)** - _Zksync Era est un ZK rollup compatible avec l'EVM développé par Matter Labs, propulsé par son propre zkEVM._
+
+- **[Starknet](https://starkware.co/starknet/)** - _StarkNet est une solution de mise à l'échelle de la couche 2 compatible avec l'EVM, conçue par StarkWare._
+
+- **[Morph](https://www.morphl2.io/)** - _Morph est une solution hybride de mise à l'échelle des rollups qui utilise la preuve zk pour résoudre le problème de l'état de la couche 2._
 
 ## Lecture supplémentaire sur les rollups ZK {#further-reading-on-zk-rollups}
 
@@ -248,6 +246,7 @@ Les projets fonctionnant sur les zkEVM comprennent :
 - [Qu'est-ce que les rollups zero-knowledge ?](https://alchemy.com/blog/zero-knowledge-rollups)
 - [STARKs vs SNARKs](https://consensys.net/blog/blockchain-explained/zero-knowledge-proofs-starks-vs-snarks/)
 - [Qu'est-ce qu'un zkEVM ?](https://www.alchemy.com/overviews/zkevm)
+- [Types de ZK-EVM : Équivalent Ethereum, équivalent EVM, Type 1, Type 4, et autres termes tendance en crypto](https://taiko.mirror.xyz/j6KgY8zbGTlTnHRFGW6ZLVPuT0IV0_KmgowgStpA0K4)
 - [Introduction au zkEVM](https://hackmd.io/@yezhang/S1_KMMbGt)
 - [Ressources géniales pour zkEVM](https://github.com/LuozhuZhang/awesome-zkevm)
 - [Les dessous de ZK-SNARKS](https://vitalik.eth.limo/general/2017/02/01/zk_snarks.html)

@@ -49,7 +49,7 @@ Ti consigliamo di ricaricare lo strumento di revoca dopo qualche minuto e di ric
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Vuoi scoprire di più?</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     Visualizza le altre guide
   </ButtonLink>
 </InfoBanner>

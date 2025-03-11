@@ -110,11 +110,11 @@ Extensiile de browser, cum ar fi extensiile Chrome sau programele de completare 
 
 Unul dintre motivele principale pentru care oamenii sunt înșelați cu cripto este în general lipsa de înțelegere. De exemplu, dacă nu înțelegeți că rețeaua Ethereum este descentralizată și că nu este deținută de nimeni, atunci este ușor să cădeți pradă cuiva care pretinde a fi un agent de servicii pentru clienți care promite să vă returneze ETH-ul pierdut în schimbul cheilor dvs. private. Informați-vă espre modul cum funcționează Ethereum, merită să vă investiţi.
 
-<DocLink to="/what-is-ethereum/">
+<DocLink href="/what-is-ethereum/">
   Ce este Ethereum?
 </DocLink>
 
-<DocLink to="/eth/">
+<DocLink href="/eth/">
   Ce este ether-ul?
 </DocLink>
 <Divider />
@@ -127,7 +127,7 @@ Unul dintre motivele principale pentru care oamenii sunt înșelați cu cripto e
 
 Cheia privată a portofelului dvs. acționează ca parolă pentru portofelul Ethereum. Acesta este singurul lucru care oprește pe cineva care știe adresa portofelului dvs. să vă golească toate activele din cont!
 
-<DocLink to="/wallets/">
+<DocLink href="/wallets/">
   Ce este un portofel Ethereum?
 </DocLink>
 

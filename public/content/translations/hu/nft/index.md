@@ -56,7 +56,7 @@ Tegyük fel, hogy Ön egy művész, aki szeretné NFT-ként megosztani az alkot�
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:" mt="8">
   <div>Fedezzen fel, vásároljon vagy készítsen saját NFT-műalkotásokat/gyűjthető tárgyakat...</div>
-  <ButtonLink to="/dapps/?category=collectibles#explore">
+  <ButtonLink href="/dapps/?category=collectibles#explore">
     Fedezzen fel NFT-műalkotásokat
   </ButtonLink>
 </InfoBanner>
@@ -75,7 +75,7 @@ Ez a weboldal egy alternatív, NFT-k által működtetett domainnévvel is rende
 
 ## Hogyan működnek az NFT-k? {#how-nfts-work}
 
-Az NFT-k, ahogy az Ethereum blokklánc többi digitális eszköze, egy speciális, Ethereum-alapú számítógépes program révén keletkeznek, amelyet okosszerződésnek neveznek. Ezek a szerződések bizonyos szabályokat követnek, például az [ERC-721](/glossary/#erc-721) vagy az [ERC-1155](/glossary/#erc-1155) szabványt, amelyek meghatározzák, hogy a szerződés mire képes.
+Az NFT-k, ahogy az Ethereum-blokklánc többi digitális eszköze, egy speciális, Ethereum-alapú számítógépes program révén keletkeznek, amelyet okosszerződésnek neveznek. Ezek a szerződések bizonyos szabályokat követnek, például az [ERC-721](/glossary/#erc-721) vagy az [ERC-1155](/glossary/#erc-1155) szabványt, amelyek meghatározzák, hogy a szerződés mire képes.
 
 Az NFT-okosszerződésekkel számos fontos dolog végrehajtható:
 
@@ -93,7 +93,7 @@ Az Ethereum biztonsága a [tét igazolásából](/glossary/#pos) származik. A r
 
 Az NFT-kkel kapcsolatos biztonsági problémák leggyakrabban adathalász csalásokhoz, az okosszerződések sebezhetőségéhez vagy felhasználói hibákhoz (például a privát kulcsok véletlen felfedéséhez) kapcsolódnak, így a megfelelő tárcabiztonság kritikus fontosságú az NFT-tulajdonosok számára.
 
-<ButtonLink to="/security/">
+<ButtonLink href="/security/">
   Bővebben a biztonságról
 </ButtonLink>
 
@@ -103,6 +103,11 @@ Az NFT-kkel kapcsolatos biztonsági problémák leggyakrabban adathalász csalá
 - [EtherscanNFT trekker](https://etherscan.io/nft-top-contracts)
 - [ERC-721 tokenszabvány](/developers/docs/standards/tokens/erc-721/)
 - [ERC-1155 tokenszabvány](/developers/docs/standards/tokens/erc-1155/)
+- [Népszerű NFT-applikációk és -eszközök](https://www.ethereum-ecosystem.com/blockchains/ethereum/nfts)
+
+## Egyéb források {#other-resources}
+
+- [NFTScan](https://nftscan.com/)
 
 <Divider />
 

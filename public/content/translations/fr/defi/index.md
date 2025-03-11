@@ -334,7 +334,7 @@ DeFi est un mouvement open source. Les protocoles et applications DeFi sont ouve
   En savoir plus sur la fabrication de dapps
 </ButtonLink>
 
-## Complément d'information {#futher-reading}
+## Complément d'information {#further-reading}
 
 ### Données DeFi {#defi-data}
 
@@ -355,3 +355,7 @@ DeFi est un mouvement open source. Les protocoles et applications DeFi sont ouve
 
 - [Serveur Discord DeFi Llama](https://discord.defillama.com/)
 - [Serveur Discord DeFi Pulse](https://discord.gg/Gx4TCTk)
+
+<Divider />
+
+<QuizWidget quizKey="defi" />

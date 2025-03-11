@@ -1,5 +1,6 @@
 ---
 title: Έξυπνα συμβόλαια
+metaTitle: "Έξυπνα συμβόλαια: Τι είναι και ποια τα οφέλη"
 description: Μια μη τεχνική εισαγωγή στα έξυπνα συμβόλαια
 lang: el
 ---
@@ -76,7 +77,6 @@ lang: el
 ## Περισσότερες πληροφορίες {#further-reading}
 
 - [Πώς θα αλλάξουν τον κόσμο τα έξυπνα συμβόλαια](https://www.youtube.com/watch?v=pA6CGuXEKtQ)
-- [Έξυπνα Συμβόλαια: Η τεχνολογία blockchain που θα αντικαταστήσει τους δικηγόρους](https://blockgeeks.com/guides/smart-contracts/)
 - [Έξυπνες συμβόλαια για προγραμματιστές](/developers/docs/smart-contracts/)
 - [Μάθετε να συντάσσετε έξυπνα συμβόλαια](/developers/learning-tools/)
 - [Mastering Ethereum - Τι είναι ένα έξυπνο συμβόλαιο;](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)

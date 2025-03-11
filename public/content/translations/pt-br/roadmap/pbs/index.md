@@ -20,7 +20,7 @@ Por exemplo, podem ser introduzidas listas de inclusão para que, quando os vali
 
 <ExpandableCard title="Que tipos de censura a PBS resolve?" eventCategory="/roadmap/pbs" eventName="clicked what kinds of censorship does PBS solve?">
 
-Organizações poderosas podem pressionar os validadores a censurar transações de ou para determinados endereços. Os validadores atendem a essa pressão ao detectar endereços na lista negra em seu pool de transações e omitindo-os dos blocos que propõem. Depois da PBS, isso não será mais possível, porque os proponentes de blocos não saberão quais transações estão transmitindo em seus blocos. Pode ser importante que indivíduos ou aplicativos específicos estejam em conformidade com as regras de censura, por exemplo, quando isso se torna uma lei na respectiva região. Nesses casos, a conformidade ocorre no nível do aplicativo, enquanto o protocolo permanece sem permissão e sem censura.
+Organizações poderosas podem pressionar os validadores a censurar transações de ou para determinados endereços. Os validadores aceitam essa pressão ao detectar endereços que fazem parte da lista de endereços não permitidos no pool de transações, omitindo-os dos blocos que propõem. Depois da PBS, isso não será mais possível, porque os proponentes de blocos não saberão quais transações estão transmitindo em seus blocos. Pode ser importante que indivíduos ou aplicativos específicos estejam em conformidade com as regras de censura, por exemplo, quando isso se torna uma lei na respectiva região. Nesses casos, a conformidade ocorre no nível do aplicativo, enquanto o protocolo permanece sem permissão e sem censura.
 
 </ExpandableCard>
 

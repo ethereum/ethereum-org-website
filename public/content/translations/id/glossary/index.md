@@ -21,7 +21,7 @@ Jenis serangan pada [jaringan](#network) terdesentralisasi di mana grup mendapat
 
 Objek yang berisi [alamat](#address), saldo, [nonce](#nonce), serta penyimpanan dan kode opsional. Sebuah akun dapat berupa [akun kontrak](#contract-account) atau [akun yang dimiliki secara eksternal (EOA)](#eoa).
 
-<DocLink to="/developers/docs/accounts">
+<DocLink href="/developers/docs/accounts">
   Akun Ethereum
 </DocLink>
 
@@ -33,7 +33,7 @@ Pada umumnya, akun ini mewakili [EOA](#eoa) atau [kontrak](#contract-account) ya
 
 Cara standar untuk berinteraksi dengan [kontrak](#contract-account) di ekosistem Ethereum, baik dari luar blockchain maupun untuk interaksi antar kontrak.
 
-<DocLink to="/developers/docs/smart-contracts/compiling/#web-applications">
+<DocLink href="/developers/docs/smart-contracts/compiling/#web-applications">
   ABI
 </DocLink>
 
@@ -49,7 +49,7 @@ Sirkuit terpadu khusus aplikasi. Ini biasanya mengacu pada sirkuit terintegrasi,
 
 Dalam [Solidity](#solidity), `assert(false)` dikompilasi menjadi `0xfe`, sebuah opcode tidak valid, yang menggunakan semua [gas](#gas) yang tersisa dan membatalkan semua perubahan. Ketika pernyataan `assert()` gagal, sesuatu yang sangat salah dan tidak terduga terjadi, dan Anda harus memperbaiki kode Anda. Anda harus menggunakan `assert()` untuk menghindari kondisi yang seharusnya tidak pernah terjadi.
 
-<DocLink to="/developers/docs/smart-contracts/security/">
+<DocLink href="/developers/docs/smart-contracts/security/">
   Keamanan kontrak pintar
 </DocLink>
 
@@ -57,7 +57,7 @@ Dalam [Solidity](#solidity), `assert(false)` dikompilasi menjadi `0xfe`, sebuah 
 
 Klaim yang dibuat oleh suatu entitas bahwa sesuatu adalah benar. Dalam konteks Ethereum, validator konsensus harus membuat klaim mengenai apa yang mereka percayai sebagai keadaan dari rantai. Pada waktu yang telah ditentukan, setiap validator memiliki tanggung jawab untuk menerbitkan atestasi yang berbeda, yang secara resmi menyatakan pandangan validator tentang keadaan rantai, termasuk pos pemeriksaan terakhir yang telah difinalisasi dan kepala rantai saat ini.
 
-<DocLink to="/developers/docs/consensus-mechanisms/pos/attestations/">
+<DocLink href="/developers/docs/consensus-mechanisms/pos/attestations/">
   Atestasi
 </DocLink>
 
@@ -69,7 +69,7 @@ Klaim yang dibuat oleh suatu entitas bahwa sesuatu adalah benar. Dalam konteks E
 
 Setiap [blok](#block) memiliki harga minimum yang dikenal sebagai 'biaya dasar'. Itu adalah harga [gas](#gas) minimum yang harus dibayar seorang pengguna untuk memasukkan transaksi dalam blok berikutnya.
 
-<DocLink to="/developers/docs/gas/">
+<DocLink href="/developers/docs/gas/">
   Gas dan biaya
 </DocLink>
 
@@ -77,7 +77,7 @@ Setiap [blok](#block) memiliki harga minimum yang dikenal sebagai 'biaya dasar'.
 
 Rantai Suar adalah rantai blok yang memperkenalkan [bukti taruhan](#pos) dan [validator](#validator) ke Ethereum. Rantai Suar berjalan berdampingan dengan Jaringan Utama Ethereum bukti kerja mulai dari Desember 2020 hingga kedua rantai tersebut digabungkan pada September 2022 untuk membentuk Ethereum saat ini.
 
-<DocLink to="/roadmap/beacon-chain/">
+<DocLink href="/roadmap/beacon-chain/">
   Rantai Suar
 </DocLink>
 
@@ -89,7 +89,7 @@ Representasi angka posisional di mana digit paling signifikan ditempatkan pertam
 
 Sebuah blok adalah unit informasi yang terikat yang mencakup daftar transaksi yang diurutkan dan informasi terkait konsensus. Blok diusulkan oleh validator bukti taruhan, pada saat itu blok tersebut dibagikan ke seluruh jaringan rekan-ke-rekan, di mana mereka dapat dengan mudah diverifikasi secara independen oleh semua simpul lainnya. Aturan konsensus mengatur konten blok yang dianggap valid, dan semua blok yang tidak valid diabaikan oleh jaringan. Urutan blok-blok ini dan transaksi di dalamnya menciptakan rangkaian peristiwa yang deterministik dengan akhirnya mewakili keadaan terkini dari jaringan.
 
-<DocLink to="/developers/docs/blocks/">
+<DocLink href="/developers/docs/blocks/">
   Block
 </DocLink>
 
@@ -134,7 +134,7 @@ Proses memeriksa bahwa blok baru mengandung transaksi dan tanda tangan yang sah,
 
 Sekumpulan [blok](#block), masing-masing menghubungkan ke pendahulunya hingga mencapai [blok genesis](#genesis-block) dengan merujuk pada hash blok sebelumnya. Keutuhan rantai blok dijamin secara kripto-ekonomi menggunakan mekanisme konsensus berbasisbukti taruhan.
 
-<DocLink to="/developers/docs/intro-to-ethereum#what-is-a-blockchain">
+<DocLink href="/developers/docs/intro-to-ethereum#what-is-a-blockchain">
   Apa itu blockchain?
 </DocLink>
 
@@ -166,7 +166,7 @@ Casper-FFG adalah protokol konsensus bukti taruhan yang digunakan bersamaan deng
 
 Mengubah kode yang ditulis dalam bahasa pemrograman tingkat tinggi (seperti [Solidity](#solidity)) menjadi bahasa dengan tingkat yang lebih rendah (seperti [kode bita](#bytecode) EVM).
 
-<DocLink to="/developers/docs/smart-contracts/compiling/">
+<DocLink href="/developers/docs/smart-contracts/compiling/">
   Mengompilasi Kontrak Pintar
 </DocLink>
 
@@ -228,7 +228,7 @@ DAG adalah singkatan dari Directed Acyclic Graph. Ini adalah struktur data yang 
 
 Aplikasi terdesentralisasi. Singkatnya, Dapp adalah sebuah [kontrak pintar](#smart-contract) dan antarmuka pengguna web. Secara lebih luas, dapp adalah aplikasi web yang dibangun di atas layanan infrastruktur rekan-ke-rekan yang terbuka dan terdesentralisasi. Selain itu, banyak dapps menyertakan penyimpanan dan/atau protokol dan platform pesan.
 
-<DocLink to="/developers/docs/dapps/">
+<DocLink href="/developers/docs/dapps/">
   Pengantar dapps
 </DocLink>
 
@@ -244,7 +244,7 @@ Konsep memindahkan kontrol dan pelaksanaan proses dari entitas pusat.
 
 Perusahaan atau organisasi lain yang beroperasi tanpa pengelolaan hierarkis. DAO bisa juga mengacu pada sebuah kontrak bernama "DAO" yang diluncurkan pada 30 April 2016, yang kemudian diretas pada Juni 2016; ini pada akhirnya memotivasi pembuatan [garpu keras](#hard-fork) (dengan nama kode DAO) di blok 1.192.000, yang membalikkan kontrak DAO yang diretas dan menyebabkan Ethereum dan Ethereum Classic terpisah menjadi dua sistem yang saling berkompetisi.
 
-<DocLink to="/dao/">
+<DocLink href="/dao/">
   Organisasi otonom terdesentralisasi (DAO)
 </DocLink>
 
@@ -252,7 +252,7 @@ Perusahaan atau organisasi lain yang beroperasi tanpa pengelolaan hierarkis. DAO
 
 Jenis [dapp](#dapp) yang memungkinkan Anda menukar token dengan rekan sejawat di jaringan. Anda memerlukan [ether](#ether) untuk menggunakannya (untuk membayar [biaya transaksi](#transaction-fee)) tapi ini bukan subjek yang tunduk pada pembatasan geografis seperti bursa terpusat – siapa pun bisa berpartisipasi.
 
-<DocLink to="/get-eth/#dex">
+<DocLink href="/get-eth/#dex">
   Bursa terdesentralisasi
 </DocLink>
 
@@ -268,7 +268,7 @@ Pintu gerbang untuk melakukan penaruhan di Ethereum. Kontrak setoran adalah kont
 
 Singkatan dari "keuangan terdesentralisasi", sebuah kategori luas dari [dapps](#dapp) yang bertujuan untuk menyediakan layanan keuangan yang didukung rantai blok, tanpa perantara mana pun, sehingga siapa pun yang memiliki koneksi internet dapat berpartisipasi.
 
-<DocLink to="/defi/">
+<DocLink href="/defi/">
   Keuangan Terdesentralisasi (DeFi)
 </DocLink>
 
@@ -316,7 +316,7 @@ Dalam konteks kriptografi, entropi berarti kurangnya prediktabilitas atau tingka
 
 Sebuah periode dari 32 [ruang](#slot), setiap slotnya berdurasi 12 detik, dengan total 6,4 menit. [Komite](#committee) validator diacak setiap jangka waktu untuk alasan keamanan. Setiap jangka waktu memiliki kesempatan untuk rantai menjadi [terfinalisasi](#finality). Setiap validator diberi tanggung jawab baru pada awal setiap jangka waktu.
 
-<DocLink to="/developers/docs/consensus-mechanisms/pos/#how-does-validation-work">
+<DocLink href="/developers/docs/consensus-mechanisms/pos/#how-does-validation-work">
   Bukti taruhan
 </DocLink>
 
@@ -328,7 +328,7 @@ Seorang validator mengirimkan dua pesan yang saling bertentangan. Salah satu con
 
 'Eth1' adalah istilah yang merujuk pada Jaringan Utama Ethereum, rantai blok bukti kerja yang telah ada. Istilah ini sudah tidak dipakai dan digantikan dengan 'lapisan eksekusi'. [Pelajari selengkapnya mengenai perubahan nama tersebut](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/).
 
-<DocLink to="/roadmap/">
+<DocLink href="/roadmap/">
   Selengkapnya tentang peningkatan Ethereum
 </DocLink>
 
@@ -336,7 +336,7 @@ Seorang validator mengirimkan dua pesan yang saling bertentangan. Salah satu con
 
 'Eth2' adalah istilah yang merujuk pada sebuah set peningkatan protokol Ethereum, termasuk transisi Ethereum ke bukti taruhan. Istilah ini sudah tidak dipakai dan digantikan dengan 'lapisan konsensus'. [Pelajari selengkapnya mengenai perubahan nama tersebut](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/).
 
-<DocLink to="/roadmap/">
+<DocLink href="/roadmap/">
   Selengkapnya tentang peningkatan Ethereum
 </DocLink>
 
@@ -344,7 +344,7 @@ Seorang validator mengirimkan dua pesan yang saling bertentangan. Salah satu con
 
 Dokumen desain yang menyediakan informasi bagi komunitas Ethereum, yang menjelaskan fitur baru yang diusulkan atau proses atau lingkungannya (lihat [ERC](#erc)).
 
-<DocLink to="/eips/">
+<DocLink href="/eips/">
   Pengantar EIP
 </DocLink>
 
@@ -370,7 +370,7 @@ Akun yang dimiliki secara eksternal (EOA) adalah [akun](#account) yang dikontrol
 
 Label yang diberikan ke beberapa [EIP](#eip) yang berusaha untuk menentukan standar spesifik penggunaan Ethereum.
 
-<DocLink to="/eips/">
+<DocLink href="/eips/">
   Pengantar EIP
 </DocLink>
 
@@ -384,7 +384,7 @@ Sebuah algoritma [bukti kerja](#pow) yang digunakan pada Ethereum sebelum bertra
 
 Mata uang kripto asli yang digunakan oleh ekosistem Ethereum, yang mencakup biaya [gas](#gas) saat mengeksekusi transaksi. Juga tertulis sebagai ETH atau simbolnya Ξ, huruf besar Yunani untuk karakter Xi.
 
-<DocLink to="/eth/">
+<DocLink href="/eth/">
   Mata uang untuk masa depan digital kita
 </DocLink>
 
@@ -392,7 +392,7 @@ Mata uang kripto asli yang digunakan oleh ekosistem Ethereum, yang mencakup biay
 
 Memungkinkan penggunaan fasilitas pembuatan log [EVM](#evm). [Dapps](#dapp) bisa mendengarkan aksi dan menggunakannya untuk memicu pemanggilan kembali JavaScript dalam antarmuka pengguna.
 
-<DocLink to="/developers/docs/smart-contracts/anatomy/#events-and-logs">
+<DocLink href="/developers/docs/smart-contracts/anatomy/#events-and-logs">
   Aksi dan Log
 </DocLink>
 
@@ -400,7 +400,7 @@ Memungkinkan penggunaan fasilitas pembuatan log [EVM](#evm). [Dapps](#dapp) bisa
 
 Mesin virtual berbasis tumpukan yang mengeksekusi [kode bita](#bytecode). Dalam Ethereum, model eksekusi menentukan cara state sistem dimodifikasi sesuai rangkaian instruksi kode bita dan tupel kecil data lingkungan. Cara ini ditentukan melalui sebuah model formal dari mesin state virtual.
 
-<DocLink to="/developers/docs/evm/">
+<DocLink href="/developers/docs/evm/">
   Mesin Virtual Ethereum
 </DocLink>
 
@@ -420,7 +420,7 @@ Fungsi default yang dipanggil saat tidak ada data atau nama fungsi yang dideklar
 
 Layanan yang dilaksanakan lewat [kontrak pintar](#smart-contract) yang mengeluarkan dana dalam bentuk ether uji coba gratis yang bisa digunakan dalam satu jaringan percobaan.
 
-<DocLink to="/developers/docs/networks/#testnet-faucets">
+<DocLink href="/developers/docs/networks/#testnet-faucets">
   Keran jaringan percobaan
 </DocLink>
 
@@ -428,7 +428,7 @@ Layanan yang dilaksanakan lewat [kontrak pintar](#smart-contract) yang mengeluar
 
 Finalitas adalah jaminan bahwa serangkaian transaksi sebelum waktu yang ditentukan tidak akan berubah dan tidak bisa dibalikkan.
 
-<DocLink to="/developers/docs/consensus-mechanisms/pos/#finality">
+<DocLink href="/developers/docs/consensus-mechanisms/pos/#finality">
   Finalitas bukti taruhan
 </DocLink>
 
@@ -448,7 +448,7 @@ Algoritma tersebut digunakan untuk mengidentifikasi kepala rantai blok. Pada lap
 
 Model keamanan untuk solusi [lapisan ke-2](#layer-2) tertentu di mana, untuk meningkatkan kecepatan, transaksi di-[roll up](#rollups) ke dalam kelompok dan dikirimkan ke Ethereum dalam transaksi tunggal. Bukti penipuan ini dianggap valid tapi bisa ditentang jika ada kecurigaan penipuan. Bukti penipuan kemudian akan menjalankan transaksi untuk memeriksa apakah penipuan terjadi. Metode ini meningkatkan kemungkinan jumlah transaksi sekaligus mempertahankan keamanan. Beberapa [rollup](#rollups) menggunakan [bukti validitas](#validity-proof).
 
-<DocLink to="/developers/docs/scaling/optimistic-rollups/">
+<DocLink href="/developers/docs/scaling/optimistic-rollups/">
   Rollup Optimistic
 </DocLink>
 
@@ -464,7 +464,7 @@ Fase pengembangan uji coba awal Ethereum, yang berlangsung dari Juli 2015 sampai
 
 Bahan bakar virtual yang digunakan di Ethereum untuk mengeksekusi kontrak pintar. [EVM](#evm) menggunakan mekanisme akuntansi untuk mengukur pemakaian gas dan membatasi pemakaian dengan menghitung sumber daya (lihat [Lengkap secara Turing](#turing-complete)).
 
-<DocLink to="/developers/docs/gas/">
+<DocLink href="/developers/docs/gas/">
   Gas dan Biaya
 </DocLink>
 
@@ -540,7 +540,7 @@ Pengodean alamat Ethereum yang setengah kompatibel dengan pengodean Kode Rekenin
 
 Antarmuka pengguna yang biasanya menggabungkan editor, pengompilasi, waktu eksekusi, dan debugger kode.
 
-<DocLink to="/developers/docs/ides/">
+<DocLink href="/developers/docs/ides/">
   Lingkungan Pengembangan Terintegrasi
 </DocLink>
 
@@ -548,7 +548,7 @@ Antarmuka pengguna yang biasanya menggabungkan editor, pengompilasi, waktu eksek
 
 Setelah kode [kontrak](#smart-contract) (atau [pustaka](#library)) disebarkan, kode menjadi abadi. Cara pengembangan perangkat lunak standar bergantung pada kemampuan untuk memperbaiki potensi bug dan menambahkan fitur baru, sehingga ini merupakan tantangan untuk pengembangan kontrak pintar.
 
-<DocLink to="/developers/docs/smart-contracts/deploying/">
+<DocLink href="/developers/docs/smart-contracts/deploying/">
   Menggunakan Kontrak Pintar
 </DocLink>
 
@@ -568,7 +568,7 @@ Pencetakan ether baru untuk memberi imbalan pada proposal blok, pengesahan, dan 
 
 Juga dikenal sebagai "algoritma perentangan kata sandi", ini digunakan oleh format [penyimpanan kunci](#keystore-file) untuk melawan serangan pemaksaan, kamus, dan tabel pelangi pada enkripsi frasa kata sandi, dengan secara berulang membuat hash dari frasa kata sandinya.
 
-<DocLink to="/developers/docs/smart-contracts/security/">
+<DocLink href="/developers/docs/smart-contracts/security/">
   Keamanan kontrak pintar
 </DocLink>
 
@@ -588,7 +588,7 @@ Fungsi [hash](#hash) kriptografi yang digunakan di Ethereum. Keccak-256 distanda
 
 Area pengembangan yang berpusat pada peningkatan pembuatan lapisan di atas protokol Ethereum. Peningkatan ini terkait dengan kecepatan [transaksi](#transaction), [biaya transaksi](#transaction-fee) yang lebih murah, dan privasi transaksi.
 
-<DocLink to="/layer-2/">
+<DocLink href="/layer-2/">
   Lapisan 2
 </DocLink>
 
@@ -600,7 +600,7 @@ Penyimpan nilai kunci pada disk sumber terbuka, yang diimplementasikan sebagai [
 
 Tipe [kontrak](#smart-contract) spesial yang tidak memiliki fungsi yang dapat dibayar, fungsi fallback, dan penyimpanan data. Oleh karena itu, tidak bisa menerima atau menampung ether, atau menyimpan data. Sebuah pustaka yang sebelumnya berfungsi sebagai kode yang disebarkan yang dapat dipanggil kontrak lainnya untuk komputasi yang hanya dapat dibaca.
 
-<DocLink to="/developers/docs/smart-contracts/libraries/">
+<DocLink href="/developers/docs/smart-contracts/libraries/">
   Pustaka Kontrak Pintar
 </DocLink>
 
@@ -620,7 +620,7 @@ Klien Ethereum yang tidak menyimpan salinan lokal dari [rantai blok](#blockchain
 
 Singkatan dari "jaringan utama", ini adalah [rantai blok](#blockchain) Ethereum publik yang utama. ETH nyata, nilai nyata, dan konsekuensi nyata. Juga dikenal sebagai lapisan ke-1 apabila membahas solusi penskalaan [lapisan ke-2](#layer-2). (Selain itu, lihat [jaringan percobaan](#testnet)).
 
-<DocLink to="/developers/docs/networks/">
+<DocLink href="/developers/docs/networks/">
   Jaringan Ethereum
 </DocLink>
 
@@ -652,7 +652,7 @@ Proses melakukan hashing pada header blok secara berulang sambil meningkatkan [n
 
 [Simpul](#node) jaringan yang menemukan [bukti kerja](#pow) yang valid untuk blok baru, melalui cara hashing dengan lintasan berulang (lihat [Ethash](#ethash)). Para penambang tidak lagi menjadi bagian dari Ethereum - mereka digantikan oleh validator ketika Ethereum beralih ke [bukti taruhan](#pos).
 
-<DocLink to="/developers/docs/consensus-mechanisms/pow/mining/">
+<DocLink href="/developers/docs/consensus-mechanisms/pow/mining/">
   Penambangan
 </DocLink>
 
@@ -668,7 +668,7 @@ Minting adalah proses membuat token baru dan memasukkannya ke peredaran agar dap
 
 Mengacu pada jaringan Ethereum, jaringan peer-to-peer yang menyebarkan transaksi dan blok ke setiap simpul Ethereum (peserta jaringan).
 
-<DocLink to="/developers/docs/networks/">
+<DocLink href="/developers/docs/networks/">
   Jaringan
 </DocLink>
 
@@ -680,10 +680,10 @@ Mengacu pada jaringan Ethereum, jaringan peer-to-peer yang menyebarkan transaksi
 
 Standar token yang juga dikenal sebagai "deed" ini diperkenalkan pada proposal ERC-721. NFT bisa dilacak dan diperdagangkan, tetapi setiap token bersifat unik dan berbeda; token ini tidak dapat dipertukarkan seperti ETH dan [token ERC-20](#token-standard). NFT bisa menunjukkan kepemilikan aset digital atau fisik.
 
-<DocLink to="/nft/">
+<DocLink href="/nft/">
   Token yang Tidak Dapat Dipertukarkan (NFT)
 </DocLink>
-<DocLink to="/developers/docs/standards/tokens/erc-721/">
+<DocLink href="/developers/docs/standards/tokens/erc-721/">
   Standar Token yang Tidak Dapat Dipertukarkan ERC-721
 </DocLink>
 
@@ -691,7 +691,7 @@ Standar token yang juga dikenal sebagai "deed" ini diperkenalkan pada proposal E
 
 Klien perangkat lunak yang berpartisipasi dalam jaringan.
 
-<DocLink to="/developers/docs/nodes-and-clients/">
+<DocLink href="/developers/docs/nodes-and-clients/">
   Simpul dan Klien
 </DocLink>
 
@@ -711,7 +711,7 @@ Ketika seorang [penambang](#miner) bukti kerja menemukan [blok](#block) yang val
 
 [Penggabungan](#rollups) transaksi yang menggunakan [bukti penipuan](#fraud-proof) untuk menawarkan peningkatan keluaran transaksi [lapisan ke-2](#layer-2), sambil menggunakan keamanan yang disediakan oleh [Jaringan Utama](#mainnet) (lapisan ke-1). Tidak seperti [Plasma](#plasma), solusi lapisan ke-2 yang serupa, rollup optimis dapat menangani jenis transaksi yang lebih rumit – segala hal yang dapat dilakukan di [EVM](#evm). Rollup ini memang memiliki masalah latensi jika dibandingkan dengan [Rollup tanpa pengetahuan](#zk-rollups) karena transaksi bisa ditantang lewat bukti penipuan.
 
-<DocLink to="/developers/docs/scaling/optimistic-rollups/">
+<DocLink href="/developers/docs/scaling/optimistic-rollups/">
   Rollup Optimistic
 </DocLink>
 
@@ -719,7 +719,7 @@ Ketika seorang [penambang](#miner) bukti kerja menemukan [blok](#block) yang val
 
 Oracle adalah jembatan antara [rantai blok](#blockchain) dan dunia nyata. Oracle berperan sebagai [API](#api) di dalam rantai yang dapat dikirimkan kueri untuk meminta informasi dan digunakan pada [kontrak pintar](#smart-contract).
 
-<DocLink to="/developers/docs/oracles/">
+<DocLink href="/developers/docs/oracles/">
   Oracle
 </DocLink>
 
@@ -743,7 +743,7 @@ Jaringan komputer ([peer](#peer)) yang secara kolektif dapat menjalankan fungsio
 
 Solusi penskalaan di luar rantai yang menggunakan [bukti penipuan](#fraud-proof), seperti [Rollup optimis](#optimistic-rollups). Plasma dibatasi pada transaksi sederhana seperti transfer dan penukaran token biasa.
 
-<DocLink to="/developers/docs/scaling/plasma">
+<DocLink href="/developers/docs/scaling/plasma">
   Plasma
 </DocLink>
 
@@ -759,7 +759,7 @@ Rantai blok yang sepenuhnya pribadi, yaitu rantai blok dengan akses yang berizin
 
 Metode yang digunakan oleh protokol rantai blok mata uang kripto untuk mencapai [konsensus](#consensus) terdistribusi. PoS meminta pengguna membuktikan kepemilikan sejumlah mata uang kripto tertentu ("taruhan" pengguna di jaringan) agar dapat berpartisipasi dalam validasi transaksi.
 
-<DocLink to="/developers/docs/consensus-mechanisms/pos/">
+<DocLink href="/developers/docs/consensus-mechanisms/pos/">
   Bukti taruhan
 </DocLink>
 
@@ -767,7 +767,7 @@ Metode yang digunakan oleh protokol rantai blok mata uang kripto untuk mencapai 
 
 Sepotong data (bukti) yang membutuhkan komputasi yang signifikan untuk dapat ditemukan.
 
-<DocLink to="/developers/docs/consensus-mechanisms/pow/">
+<DocLink href="/developers/docs/consensus-mechanisms/pow/">
   Bukti kerja
 </DocLink>
 
@@ -787,7 +787,7 @@ Data yang dihasilkan oleh klien Ethereum untuk mewakili hasil dari [transaksi](#
 
 Serangan yang memiliki ciri pemanggilan fungsi kontrak korban oleh kontrak penyerang dengan cara yang sedemikian rupa sehingga pada saat dijalankan, korban akan memanggil kontrak penyerang lagi secara berulang. Hal ini dapat mengakibatkan, misalnya, pencurian dana dengan melewatkan bagian ketika kontrak korban memperbarui saldo atau menghitung jumlah penarikan.
 
-<DocLink to="/developers/docs/smart-contracts/security/#re-entrancy">
+<DocLink href="/developers/docs/smart-contracts/security/#re-entrancy">
   Re-entrancy
 </DocLink>
 
@@ -803,7 +803,7 @@ Standar pengodean yang dirancang oleh pengembang Ethereum untuk mengodekan dan m
 
 Jenis solusi penskalaan [lapisan ke-2](#layer-2) yang membuat beberapa batch atas sejumlah transaksi dan mengirimkannya ke [rantai utama Ethereum](#mainnet) dalam satu transaksi tunggal. Dengan cara ini, penurunan biaya [gas](#gas) dan peningkatan keluaran [transaksi](#transaction) dapat dilakukan. Ada Rollup optimis dan Rollup tanpa pengetahuan yang menggunakan metode keamanan berbeda untuk memberikan perolehan pada skalabilitas ini.
 
-<DocLink to="/developers/docs/scaling/#rollups">
+<DocLink href="/developers/docs/scaling/#rollups">
   Rollup
 </DocLink>
 
@@ -823,7 +823,7 @@ Kelompok fungsi hash kriptografi yang diterbitkan oleh National Institute of Sta
 
 Tahapan pengembangan Ethereum yang memulai serangkaian penskalaan dan peningkatan berkelanjutan, yang sebelumnya dikenal sebagai 'Ethereum 2.0', atau 'Eth2'.
 
-<DocLink to="/roadmap/">
+<DocLink href="/roadmap/">
   Peningkatan Ethereum
 </DocLink>
 
@@ -835,7 +835,7 @@ Proses mengubah struktur data menjadi urutan bita.
 
 Rantai pecahan adalah bagian-bagian diskret dari total rantai blok yang dapat ditempatkan ke subset validator untuk menjadi tanggung jawabnya. Cara ini akan menawarkan peningkatan keluaran transaksi untuk Ethereum dan meningkatkan ketersediaan data untuk solusi [lapisan ke-2](#layer-2) seperti [penggabungan yang optimis](#optimistic-rollups) dan [rollup tanpa pengetahuan](#zk-rollups).
 
-<DocLink to="/roadmap/danksharding">
+<DocLink href="/roadmap/danksharding">
   Danksharding
 </DocLink>
 
@@ -843,7 +843,7 @@ Rantai pecahan adalah bagian-bagian diskret dari total rantai blok yang dapat di
 
 Solusi penskalaan yang menggunakan rantai terpisah dengan [aturan konsensus](#consensus-rules) yang berbeda dan sering kali lebih cepat. Diperlukan jembatan untuk menghubungkan rantai samping ini ke [Jaringan Utama](#mainnet). [Rollup](#rollups) juga menggunakan rantai samping, tetapi rollup beroperasi dengan kolaborasi bersama [Jaringan Utama](#mainnet), bukan dengan rantai samping.
 
-<DocLink to="/developers/docs/scaling/sidechains/">
+<DocLink href="/developers/docs/scaling/sidechains/">
   Sidechain
 </DocLink>
 
@@ -863,7 +863,7 @@ Slasher adalah entitas yang memindai pengesahan untuk mencari pelanggaran yang d
 
 Sebuah periode waktu (12 detik) agar blok-blok baru dapat diajukan oleh [validator](#validator) dalam sistem [bukti taruhan](#pos). Ruang boleh kosong. 32 ruang membentuk satu [jangka waktu](#epoch).
 
-<DocLink to="/developers/docs/consensus-mechanisms/pos/#how-does-validation-work">
+<DocLink href="/developers/docs/consensus-mechanisms/pos/#how-does-validation-work">
   Bukti taruhan
 </DocLink>
 
@@ -871,7 +871,7 @@ Sebuah periode waktu (12 detik) agar blok-blok baru dapat diajukan oleh [validat
 
 Program yang berjalan pada infrastruktur komputasi Ethereum.
 
-<DocLink to="/developers/docs/smart-contracts/">
+<DocLink href="/developers/docs/smart-contracts/">
   Pengantar kontrak pintar
 </DocLink>
 
@@ -879,7 +879,7 @@ Program yang berjalan pada infrastruktur komputasi Ethereum.
 
 Singkatan dari "argumen pengetahuan yang ringkas dan tidak interaktif", SNARK adalah sejenis [bukti tanpa pengetahuan](#zk-proof).
 
-<DocLink to="/developers/docs/scaling/zk-rollups/">
+<DocLink href="/developers/docs/scaling/zk-rollups/">
   Rollup zero-knowledge
 </DocLink>
 
@@ -891,7 +891,7 @@ Pemisahan dalam [rantai blok](#blockchain) yang terjadi ketika [aturan konsensus
 
 Bahasa pemrograman prosedural (imperatif) dengan sintaksis yang serupa dengan JavaScript, C++, atau Java. Bahasa paling populer dan paling sering digunakan untuk [kontrak pintar](#smart-contract) Ethereum. Diciptakan oleh Dr. Gavin Wood.
 
-<DocLink to="/developers/docs/smart-contracts/languages/#solidity">
+<DocLink href="/developers/docs/smart-contracts/languages/#solidity">
   Solidity
 </DocLink>
 
@@ -907,7 +907,7 @@ Bahasa perakitan [EVM](#evm) di program [Solidity](#solidity). Dukungan Solidity
 
 [Token ERC-20](#token-standard) dengan nilai yang dipatok ke nilai aset lainnya. Ada stablecoin yang didukung oleh mata uang fiat seperti dolar, logam mulia seperti emas, dan mata uang kripto lainnya seperti Bitcoin.
 
-<DocLink to="/eth/#tokens">
+<DocLink href="/eth/#tokens">
   ETH bukan satu-satunya kripto pada Ethereum
 </DocLink>
 
@@ -915,7 +915,7 @@ Bahasa perakitan [EVM](#evm) di program [Solidity](#solidity). Dukungan Solidity
 
 Menyetorkan sejumlah [ether](#ether) (taruhan Anda) untuk menjadi validator dan mengamankan [jaringan](#network). Validator memeriksa [transaksi](#transaction) dan mengusulkan [blok](#block) dalam model konsensus [bukti taruhan](#pos). Penaruhan memberi Anda insentif ekonomi untuk bertindak demi kepentingan utama jaringan. Anda akan mendapatkan imbalan untuk melaksanakan tugas [validator](#validator) Anda, tetapi akan kehilangan ETH dalam jumlah beragam jika tidak melakukannya.
 
-<DocLink to="/staking/">
+<DocLink href="/staking/">
   Pertaruhkan ETH Anda untuk menjadi validator Ethereum
 </DocLink>
 
@@ -923,7 +923,7 @@ Menyetorkan sejumlah [ether](#ether) (taruhan Anda) untuk menjadi validator dan 
 
 Gabungan ETH dengan lebih dari satu penaruh Ethereum, digunakan untuk mencapai 32 ETH yang diperlukan untuk mengaktifkan satu set kunci validator. Operator simpul menggunakan kunci-kunci ini untuk berpartisipasi dalam konsensus dan [imbalan blok](#block-reward) akan dibagi di antara pemberi stake yang berkontribusi. Pool staking atau pendelegasian taruhan tidak native pada protokol Ethereum, tetapi banyak solusi yang telah dibangun oleh komunitas.
 
-<DocLink to="/staking/pools/">
+<DocLink href="/staking/pools/">
   Penaruhan pool
 </DocLink>
 
@@ -931,7 +931,7 @@ Gabungan ETH dengan lebih dari satu penaruh Ethereum, digunakan untuk mencapai 3
 
 Singkatan dari "argumen pengetahuan yang transparan dan dapat diskalakan", STARK adalah salah satu jenis [bukti tanpa pengetahuan](#zk-proof).
 
-<DocLink to="/developers/docs/scaling/zk-rollups/">
+<DocLink href="/developers/docs/scaling/zk-rollups/">
   Rollup zero-knowledge
 </DocLink>
 
@@ -943,7 +943,7 @@ Bidikan spontan pada semua saldo dan data pada titik waktu tertentu di rantai bl
 
 Solusi [lapisan ke-2](#layer-2), yang menjadi tempat penyiapan kanal di antara para peserta sehingga mereka dapat bertransaksi dengan bebas dan murah. Hanya [transaksi](#transaction) untuk menyiapkan kanal dan menutup kanal yang akan dikirim ke [Jaringan Utama](#mainnet). Hal ini memungkinkan keluaran transaksi yang sangat tinggi, tetapi memang mengandalkan pengetahuan tentang jumlah peserta sebelumnya dan penguncian dana.
 
-<DocLink to="/developers/docs/scaling/state-channels/#state-channels">
+<DocLink href="/developers/docs/scaling/state-channels/#state-channels">
   Kanal state
 </DocLink>
 
@@ -979,7 +979,7 @@ Tingkat kesulitan total adalah jumlah tingkat kesulitan menambang Ethash untuk s
 
 Singkatan dari "jaringan percobaan," jaringan yang digunakan untuk menyimulasikan perilaku jaringan Ethereum utama (lihat [Jaringan Utama](#mainnet)).
 
-<DocLink to="/developers/docs/networks/#ethereum-testnets">
+<DocLink href="/developers/docs/networks/#ethereum-testnets">
   Jaringan percobaan
 </DocLink>
 
@@ -991,7 +991,7 @@ Barang virtual yang dapat diperdagangkan dan didefinisikan di kontrak pintar pad
 
 Diperkenalkan oleh proposal ERC-20, standar token menyediakan struktur [kontrak pintar](#smart-contract) terstandardisasi untuk token yang dapat dipertukarkan. Token dari kontrak yang sama bisa dilacak, diperdagangkan, dan dapat dipertukarkan, tidak seperti [NFT](#nft).
 
-<DocLink to="/developers/docs/standards/tokens/erc-20/">
+<DocLink href="/developers/docs/standards/tokens/erc-20/">
   Standar Token ERC-20
 </DocLink>
 
@@ -999,7 +999,7 @@ Diperkenalkan oleh proposal ERC-20, standar token menyediakan struktur [kontrak 
 
 Data yang di-commit ke Rantai Blok Ethereum dan ditandatangani oleh [akun](#account) pengirim dengan menargetkan [alamat](#address) tertentu. Transaksi berisi metadata seperti [batas gas](#gas-limit) untuk transaksi tersebut.
 
-<DocLink to="/developers/docs/transactions/">
+<DocLink href="/developers/docs/transactions/">
   Transaksi
 </DocLink>
 
@@ -1027,10 +1027,10 @@ Sebuah konsep yang dinamai menurut nama matematikawan dan ilmuwan komputer Inggr
 
 [Simpul](#node) dalam sistem [bukti taruhan](#pos) yang bertanggung jawab untuk menyimpan data, memproses transaksi, dan menambahkan blok baru ke rantai blok. Untuk mengaktifkan perangkat lunak validator, Anda harus dapat memberi [taruhan](#staking) 32 ETH.
 
-<DocLink to="/developers/docs/consensus-mechanisms/pos">
+<DocLink href="/developers/docs/consensus-mechanisms/pos">
   Bukti taruhan
 </DocLink>
-<DocLink to="/staking/">
+<DocLink href="/staking/">
   Penaruhan di Ethereum
 </DocLink>
 
@@ -1048,7 +1048,7 @@ Urutan keadaan yang dapat dialami oleh validator. Berbagai keadaan ini termasuk:
 
 Model keamanan untuk solusi [lapisan ke-2](#layer-2) tertentu di mana, untuk meningkatkan kecepatan, transaksi di-[roll up](/#rollups) ke dalam kelompok dan dikirimkan ke Ethereum dalam transaksi tunggal. Komputasi transaksi dilakukan di luar rantai dan kemudian dipasok ke rantai utama dengan bukti validitasnya. Metode ini meningkatkan kemungkinan jumlah transaksi sekaligus mempertahankan keamanan. Beberapa [rollup](#rollups) menggunakan [bukti penipuan](#fraud-proof).
 
-<DocLink to="/developers/docs/scaling/zk-rollups/">
+<DocLink href="/developers/docs/scaling/zk-rollups/">
   Rollup zero-knowledge
 </DocLink>
 
@@ -1056,7 +1056,7 @@ Model keamanan untuk solusi [lapisan ke-2](#layer-2) tertentu di mana, untuk men
 
 Solusi di luar rantai yang menggunakan [bukti validitas](#validity-proof) untuk meningkatkan keluaran transaksi. Berbeda dengan [Rollup tanpa pengetahuan](#zk-rollup), data validium tidak disimpan di lapisan 1 [Jaringan Utama](#mainnet).
 
-<DocLink to="/developers/docs/scaling/validium/">
+<DocLink href="/developers/docs/scaling/validium/">
   Validium
 </DocLink>
 
@@ -1064,7 +1064,7 @@ Solusi di luar rantai yang menggunakan [bukti validitas](#validity-proof) untuk 
 
 Bahasa pemrograman tingkat tinggi dengan sintaksis seperti Phyton. Dimaksudkan agar lebih mendekati bahasa fungsional murni. Diciptakan oleh Vitalik Buterin.
 
-<DocLink to="/developers/docs/smart-contracts/languages/#vyper">
+<DocLink href="/developers/docs/smart-contracts/languages/#vyper">
   Vyper
 </DocLink>
 
@@ -1076,7 +1076,7 @@ Bahasa pemrograman tingkat tinggi dengan sintaksis seperti Phyton. Dimaksudkan a
 
 Perangkat lunak yang menyimpan [kunci pribadi](#private-key). Digunakan untuk mengakses dan mengontrol [akun](#account) Ethereum dan berinteraksi dengan [kontrak pintar](#smart-contract). Kunci tidak perlu disimpan dalam dompet, dan sebagai gantinya dapat diambil dari penyimpanan offline (yaitu, kartu memori atau kertas) untuk meningkatkan keamanan. Berlawanan dengan namanya, dompet tidak pernah menyimpan koin atau token aktual.
 
-<DocLink to="/wallets/">
+<DocLink href="/wallets/">
   Dompet Ethereum
 </DocLink>
 
@@ -1084,7 +1084,7 @@ Perangkat lunak yang menyimpan [kunci pribadi](#private-key). Digunakan untuk me
 
 Versi ketiga web. Pertama kali diusulkan oleh Dr. Gavin Wood, Web3 melambangkan visi dan fokus baru untuk aplikasi web - dari aplikasi yang dimiliki dan dikelola secara terpusat menjadi aplikasi yang dibangun di atas protokol terdesentralisasi (lihat [dapp](#dapp)).
 
-<DocLink to="/developers/docs/web2-vs-web3/">
+<DocLink href="/developers/docs/web2-vs-web3/">
   Web2 vs Web3
 </DocLink>
 
@@ -1104,7 +1104,7 @@ Alamat Ethereum, yang seluruhnya terdiri dari angka nol, yang sering digunakan s
 
 Bukti tanpa pengetahuan adalah metode kriptografi yang memungkinkan individu membuktikan bahwa suatu pernyataan adalah benar tanpa menyampaikan informasi tambahan apa pun.
 
-<DocLink to="/developers/docs/scaling/zk-rollups/">
+<DocLink href="/developers/docs/scaling/zk-rollups/">
   Rollup zero-knowledge
 </DocLink>
 
@@ -1112,7 +1112,7 @@ Bukti tanpa pengetahuan adalah metode kriptografi yang memungkinkan individu mem
 
 [Penggabungan](#rollups) transaksi yang menggunakan [bukti validitas](#validity-proof) untuk menawarkan peningkatan keluaran transaksi [lapisan ke-2](#layer-2) sambil menggunakan keamanan yang disediakan oleh [Jaringan Utama](#mainnet) (lapisan ke-1). Sekalipun rollup ini tidak bisa menangani jenis transaksi rumit, seperti [Rollup optimis](#optimistic-rollups), rollup ini tidak memiliki masalah latensi karena transaksi terbukti valid saat dikirimkan.
 
-<DocLink to="/developers/docs/scaling/zk-rollups/">
+<DocLink href="/developers/docs/scaling/zk-rollups/">
   Rollup tanpa pengetahuan
 </DocLink>
 

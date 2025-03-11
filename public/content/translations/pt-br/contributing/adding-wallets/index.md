@@ -10,10 +10,9 @@ Queremos ter certeza de que mostramos uma variedade de carteiras abrangendo a am
 
 Qualquer pessoa pode sugerir a adição de uma carteira no ethereum.org. Se houver alguma carteira que tenhamos deixado passar, recomende-a para nós!
 
-Qualquer pessoa pode sugerir uma nova carteira. As carteiras atualmente listadas estão em:
+As carteiras atualmente listadas estão em:
 
 - [ethereum.org/pt-br/wallets/find-wallet/](/wallets/find-wallet/)
-- [ethereum.org/pt-br/wallets/](/wallets/)
 
 As carteiras estão mudando rapidamente no Ethereum. Tentamos criar uma estrutura justa a ser considerada no ethereum.org, mas os critérios listados mudarão e evoluirão com o tempo.
 
@@ -26,6 +25,12 @@ As carteiras estão mudando rapidamente no Ethereum. Tentamos criar uma estrutur
 - **Trabalhado por uma equipe ativa** — isso ajuda a garantir a qualidade e que um usuário receba suporte para suas consultas.
 - **Informações de listagem corretas e precisas** — espera-se que todas as listagens sugeridas de projetos venham com informações precisas e íntegras. Produtos que falsificam informações de listagem, como declarar que seu produto é de "código aberto" quando não é, serão removidos.
 - **Ponto de contato** — Um ponto de contato para a carteira nos ajudará muito a obter informações precisas quando houver mudanças. Isso manterá a atualização do ethereum.org gerenciável ao reunir informações futuras.
+- **Transações EIP-1559 (tipo 2)** - sua carteira precisa estar habilitada para transações EIP-1559 (tipo 2) para fazer transações na rede principal do Ethereum.
+- **Boa experiência de usuário** - Mesmo que a experiência do usuário seja subjetiva, se vários membros da equipe principal testarem o produto e encontrarem dificuldade em utilizá-lo, nos reservaremos o direito de recusar a carteira e, em vez disso, fornecer sugestões úteis para melhorá-la. Isso é feito para proteger nossa base de usuários, formada principalmente de iniciantes.
+
+### Remoções de produto {#product-removals}
+
+- **Informação atualizada** - fornecedores de carteira são responsáveis por reenviar a informação sobre suas carteiras a cada 6 meses para assegurar a validade e relevância da informação fornecida (mesmo que não haja mudanças em seus produtos). Se a equipe de produtos não fizer isso, então ethereum.org poderá remover o projeto da página.
 
 ### Outros critérios: o que é importante ter {#the-nice-to-haves}
 
@@ -45,7 +50,6 @@ As carteiras estão mudando rapidamente no Ethereum. Tentamos criar uma estrutur
 - **Personalizar taxas de gás** — sua carteira permite que os usuários personalizem as taxas de gás de suas transações (taxa base, taxa prioritária, taxa máxima).
 - **Suporte ENS** — sua carteira permite que os usuários enviem transações para nomes ENS.
 - **Suporte a ERC-20** — sua carteira permite que os usuários importem contratos de tokens ERC-20 ou exibe automaticamente os tokens ERC-20.
-- **Transações EIP-1559 (tipo 2)** — sua carteira suporta transações EIP-1559 (tipo 2).
 - **Compre criptomoedas** — sua carteira suporta a compra direta de criptomoedas e a introdução de usuários a criptomoedas.
 - **Venda para valor legal** — sua carteira dá suporte a usuários que vendam e saquem em valor legal diretamente para cartão ou conta bancária.
 - **Multisig** — sua carteira suporta várias assinaturas para assinar uma transação.
@@ -57,7 +61,7 @@ As carteiras estão mudando rapidamente no Ethereum. Tentamos criar uma estrutur
 
 Se você deseja adicionar uma carteira ao ethereum.org, crie um tíquete no GitHub.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml">
+<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml">
   Criar tíquete
 </ButtonLink>
 
@@ -68,7 +72,8 @@ O Ethereum é fluido por natureza, por isso, suas equipes e produtos vêm e vão
 - garantir que todas as carteiras e dapps listados ainda atendam aos nossos critérios
 - verificar se não há produtos sugeridos que atendam mais aos nossos critérios do que os atualmente listados
 
-O ethereum.org é mantido pela comunidade de código aberto e dependemos da comunidade para ajudar a mantê-lo atualizado. Se você notar que alguma informação sobre as carteiras listadas precisa ser atualizada, [abra um tíquete](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml) ou uma [solicitação de pull](https://github.com/ethereum/ethereum-org-website/pulls)!
+ethereum.org é mantida pela comunidade de código aberto; nós confiamos na comunidade para ajudar a mantê-la atualizada. Se você notar que alguma informação sobre as carteiras listadas precisa ser atualizada, [abra um tíquete](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml) ou uma [solicitação de pull](https://github.com/ethereum/ethereum-org-website/pulls)!
+
 
 ## Termos de uso {#terms-of-use}
 

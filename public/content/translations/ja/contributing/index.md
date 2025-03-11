@@ -68,7 +68,7 @@ ethereum.orgは、オープンソースで運営されているプロジェク�
 - [スタイルガイド](/contributing/style-guide/)
 - [行動規範](/community/code-of-conduct)
 
-<ContributorsQuizBanner mt={16} mb={8} />
+<ContributorsQuizBanner className="mt-16 mb-8" />
 
 ## サイトに関する決定 {#how-decisions-about-the-site-are-made}
 
@@ -88,7 +88,7 @@ GitHubリポジトリには、オープンソースに初めて触れるデベ�
 
 ## オンチェーン功績トークン(OAT)の申請 {#oat}
 
-あなたのコントリビューションがethereum.orgにマージされると、[Galxe](https://galxe.com/ethereumorg/)で特別なバッジを請求できるように変更されます。 オンチェーン功績トークン(OAT)は、エコシステムをささやかながらより素晴らしいものにするのに貢献したことの証拠です。
+あなたの貢献がethereum.orgにマージされると、[Galxe](https://app.galxe.com/quest/ethereumorg)で特別なバッジを請求できるようになります。 オンチェーン功績トークン(OAT)は、エコシステムをささやかながらより素晴らしいものにするのに貢献したことの証拠です。
 
 [OATの詳細](https://help.galxe.com/en/articles/7067290-galxe-oats-reward-and-celebrate-achievements)
 

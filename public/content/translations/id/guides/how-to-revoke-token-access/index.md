@@ -49,7 +49,7 @@ Kami menyarankan Anda untuk menyegarkan alat pencabutan setelah beberapa menit d
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Ingin mempelajari selengkapnya?</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     Lihat panduan lainnya
   </ButtonLink>
 </InfoBanner>

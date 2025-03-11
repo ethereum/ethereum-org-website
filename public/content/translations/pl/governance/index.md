@@ -32,7 +32,7 @@ Przeciwne podejście, zarządzanie poza łańcuchem, polega na tym, że wszelkie
 
 _Podczas gdy na poziomie protokołu zarządzanie Ethereum odbywa się poza łańcuchem, wiele przypadków użycia zbudowanych na Ethereum, takich jak DAO, wykorzystuje zarządzanie w łańcuchu._
 
-<ButtonLink to="/dao/">
+<ButtonLink href="/dao/">
   Więcej o DAO
 </ButtonLink>
 
@@ -48,7 +48,7 @@ W [społeczności Ethereum](/community/) znajdują się różni udziałowcy, a k
 - **Operatorów węzłów**: ci ludzie uruchamiają węzły, które propagują bloki i transakcje, odrzucając wszelkie nieprawidłowe transakcje lub bloki, które napotkają. [Więcej o węzłach](/developers/docs/nodes-and-clients/).
 - **Autorów EIP**: ludzie ci proponują zmiany w protokole Ethereum w formie Propozycji Ulepszeń Ethereum (EIP). [Więcej o EIP](/eips/).
 - **Walidatorów**: ci ludzie uruchamiają węzły, które mogą dodawać nowe bloki do blockchainu Ethereum.
-- **Deweloperów protokołów** (a.k.a. „główni deweloperzy” ): osoby te utrzymują różne implementacje Ethereum (np. go-ethereum, Nethermind, Besu, Erigon w warstwie wykonawczej lub Prysm, Lighthouse, Nimbus, Teku, Lodestar w warstwie konsensusu). [Więcej o klientach Ethereum](/developers/docs/nodes-and-clients/).
+- **Deweloperów protokołów** (a.k.a. „główni deweloperzy” ): osoby te utrzymują różne implementacje Ethereum (np. go-ethereum, Nethermind, Besu, Erigon, Reth w warstwie wykonawczej lub Prysm, Lighthouse, Nimbus, Teku, Lodestar w warstwie konsensusu). [Więcej o klientach Ethereum](/developers/docs/nodes-and-clients/).
 
 _Uwaga: każda osoba może być częścią wielu z tych grup (np. deweloper protokołów może być mistrzem EIP, uruchamiać walidator łańcucha śledzącego i korzystać z aplikacji DeFi). Jednak dla jasności pojęciowej najłatwiej jest je rozróżnić._
 
@@ -58,7 +58,7 @@ _Uwaga: każda osoba może być częścią wielu z tych grup (np. deweloper prot
 
 Jednym z ważniejszych procesów zarządzania Ethereum jest tzw. **Propozycja Ulepszenia Ethereum (EIP)**. EIP są standardami określającymi nowe funkcje lub procesy dla Ethereum. Każdy członek społeczności Ethereum może stworzyć EIP. Jeżeli jesteś zainteresowany stworzeniem EIP lub uczestnictwem w weryfikacji i/lub zarządzaniem zobacz:
 
-<ButtonLink to="/eips/">
+<ButtonLink href="/eips/">
   Więcej o EIP
 </ButtonLink>
 
@@ -120,7 +120,7 @@ Forki następują, wtedy kiedy należy dokonać ważnych aktualizacji techniczny
 
 Fork DAO był odpowiedzią na [atak DAO z 2016 r.](https://www.coindesk.com/understanding-dao-hack-journalists), w którym niezabezpieczony kontrakt [DAO](/glossary/#dao) został pozbawiony z ponad 3,6 miliona ETH w wyniku włamania. Fork przeniósł środki z wadliwego kontraktu do nowego kontraktu, umożliwiając każdemu, kto stracił środki w wyniku włamania, ich odzyskanie.
 
-Ten kierunek działania został przegłosowany przez społeczność Ethereum. Każdy posiadacz ETH mógł głosować za pośrednictwem transakcji na [platformie do głosowania](http://v1.carbonvote.com/). Decyzja o forku osiągnęła ponad 85% głosów.
+Ten kierunek działania został przegłosowany przez społeczność Ethereum. Każdy posiadacz ETH mógł głosować za pośrednictwem transakcji na [platformie do głosowania](https://web.archive.org/web/20170620030820/http://v1.carbonvote.com/). Decyzja o forku osiągnęła ponad 85% głosów.
 
 Należy zauważyć, że chociaż protokół został zforkowany, aby odwrócić skutki włamania, waga głosowania przy podejmowaniu decyzji o zforkowaniu jest dyskusyjna z kilku powodów:
 
@@ -154,7 +154,7 @@ Podczas gdy specyfikacja i implementacje deweloperskie zawsze były w pełni ope
 
 Kiedy łańcuch śledzący połączył się z warstwą wykonawczą Ethereum 15 września 2022 r., Połączenie zostało zakończone w ramach [aktualizacji sieci Paris](/history/#paris). Propozycja [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) została zmieniona z „Last Call” na „Final”, kończąc przejście na proof-of-stake.
 
-<ButtonLink to="/roadmap/merge/">
+<ButtonLink href="/roadmap/merge/">
   Więcej o Połączeniu
 </ButtonLink>
 

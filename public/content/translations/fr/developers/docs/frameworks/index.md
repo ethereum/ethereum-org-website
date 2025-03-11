@@ -45,6 +45,12 @@ Avant de plonger dans les infrastructures, nous vous recommandons de commencer p
 - [Documentation](https://docs.web3j.io)
 - [GitHub](https://github.com/web3j/web3j)
 
+**ethers-kt** - **_Librairie Kotlin/Java/Andoid asynchrone et haute performance pour les blockchains basées sur l'EVM_**
+
+- [GitHub](https://github.com/Kr1ptal/ethers-kt)
+- [Exemples](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
+- [Discord](https://discord.gg/rx35NzQGSb)
+
 **Créer une application Eth -** **_Créer des applications alimentées par Ethereum avec une seule commande. Fournit un panel d'infrastructures d'interface utilisateur et des modèles DeFi parmi lesquels faire votre choix._**
 
 - [GitHub](https://github.com/paulrberg/create-eth-app)
@@ -68,7 +74,7 @@ Avant de plonger dans les infrastructures, nous vous recommandons de commencer p
 
 - [alchemy.com](https://www.alchemy.com/)
 - [GitHub](https://github.com/alchemyplatform)
-- [Discord](https://discord.com/invite/A39JVCM)
+- [Discord](https://discord.com/invite/alchemyplatform)
 
 **NodeReal -** **_Plateforme de développement Ethereum._**
 
@@ -87,24 +93,52 @@ Avant de plonger dans les infrastructures, nous vous recommandons de commencer p
 - [GitHub](https://github.com/chainstack)
 - [Discord](https://discord.gg/BSb5zfp9AT)
 
+**Crossmint -** **_Plateforme de développement Web3 de niveau entreprise, qui vous permet de créer des applications NFT sur toutes les principales chaînes de l'EVM (et autres)._**
+
+- [Site Web](https://www.crossmint.com)
+- [Documentation](https://docs.crossmint.com)
+- [Discord](https://discord.com/invite/crossmint)
+
 **Brownie -** **_Environnement de développement en Python et infrastructure de test_**
 
 - [Documentation](https://eth-brownie.readthedocs.io/en/latest/)
 - [GitHub](https://github.com/eth-brownie/brownie)
 - **Brownie n'est plus développé actuellement**
 
-**Truffle -** **_ Environnement de développement, infrastructure de test, pipeline de construction et autres outils_**
-
-- [trufflesuite.com](https://www.trufflesuite.com/)
-- [GitHub](https://github.com/trufflesuite/truffle)
-- **Le développement de Truffle a été arrêté** - [en savoir plus](https://twitter.com/trufflesuite/status/1704946902393860589?t=NlIWeLTbBSAaJmS5uUAhSA&s=19)
-
-**OpenZeppelin SDK - \*\***_The Ultimate Smart Contract Toolkit : la suite d'outils par excellence pour vous aider à développer, compiler, mettre à niveau, déployer et interagir avec des contrats intelligents._\*\*
+**OpenZeppelin SDK - ****_The Ultimate Smart Contract Toolkit : la suite d'outils par excellence pour vous aider à développer, compiler, mettre à niveau, déployer et interagir avec des contrats intelligents._**
 
 - [OpenZeppelin SDK](https://openzeppelin.com/sdk/)
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-sdk)
 - [Forum communautaire](https://forum.openzeppelin.com/c/support/17)
 - **Le développement de OpenZeppelin SDK a été arrêté**
+
+**Catapulta -** **_Outil de déploiement de contrats intelligents multi-chaînes, automatisation des vérifications dans les explorateurs de blocs, suivi des contrats intelligents déployés et partage des rapports de déploiement, plug-n-play pour les projets Foundry et Hardhat._**
+
+- [Site Web](https://catapulta.sh/)
+- [Documentation](https://catapulta.sh/docs)
+- [Github](https://github.com/catapulta-sh)
+
+**Covalent** - **_APIs blockchain enrichie pour plus de 200 chaines._**
+
+- [covalenthq.com](https://www.covalenthq.com/)
+- [Documentation](https://www.covalenthq.com/docs/api/)
+- [GitHub](https://github.com/covalenthq)
+- [Discord](https://www.covalenthq.com/discord/)
+
+**Wake -** **_Cadre Python tout-en-un pour les tests de contrats, le fuzzing, le déploiement, l'analyse de vulnérabilité et la navigation dans le code._**
+
+- [Page d'accueil](https://getwake.io/)
+- [Documentation](https://ackeeblockchain.com/wake/docs/latest/)
+- [GitHub](https://github.com/Ackee-Blockchain/wake)
+- [Extension VS Code](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity)
+
+****Veramo -**** **_Un cadre open source, modulaire et agnostique qui facilite l'intégration des identités décentralisées et des justificatifs vérifiables dans les applications pour les développeurs d'applications décentralisées._**
+
+- [Page d'accueil](https://veramo.io/)
+- [Documentation](https://veramo.io/docs/basics/introduction)
+- [GitHub](https://github.com/uport-project/veramo)
+- [Discord](https://discord.com/invite/FRRBdjemHV)
+- [Package NPM](https://www.npmjs.com/package/@veramo/core)
 
 ## Complément d'information {#further-reading}
 

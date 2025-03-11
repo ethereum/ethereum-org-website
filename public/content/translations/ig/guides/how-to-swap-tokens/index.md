@@ -51,7 +51,7 @@ I nwere ike ịlele ọganihu nke azụmahịa ahụ n'ihe nchọgharị blọkc
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Chọrọ ịmụtakwu?</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     Hụ ntuziaka anyị ndị ọzọ
   </ButtonLink>
 </InfoBanner>

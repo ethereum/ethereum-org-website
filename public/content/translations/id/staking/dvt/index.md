@@ -62,13 +62,13 @@ DVT memiliki implikasi signifikan bagi industri penaruhan yang lebih luas:
 
 DVT juga memungkinkan penaruhan non-kustodial dengan memungkinkan Anda mendistribusikan kunci validator ke seluruh simpul jarak jauh sambil tetap menjaga kunci sepenuhnya offline. Ini berarti penaruh di beranda tidak selalu perlu mengeluarkan biaya untuk perangkat keras, sementara mendistribusikan pembagian kunci dapat membantu memperkuat mereka dari potensi peretasan.
 
-### Staking as a service (SaaS) Pengaturan taruhan {#saas}
+### Taruhan sebagai layanan (SaaS) {#saas}
 
 Operator (seperti pool penaruhanl dan penaruh institusional) yang mengelola banyak validator dapat menggunakan DVT untuk mengurangi risiko mereka. Dengan mendistribusikan infrastruktur, mereka bisa menambahkan redudansi pada operasional mereka dan mendiversifikasi jenis perangkat keras yang digunakan.
 
 DVT berbagi tanggung jawab untuk manajemen kunci di berbagai simpul, yang berarti beberapa biaya operasional juga dapat dibagi. DVT juga dapat mengurangi risiko operasional dan biaya asuransi bagi penyedia penaruhan.
 
-### Staking pools {#staking-pools}
+### Kolam taruhan {#staking-pools}
 
 Karena pengaturan validator standar, pool penaruhan dan penyedia penaruhan likuid dipaksa untuk memiliki tingkat kepercayaan operator tunggal yang berbeda-beda karena keuntungan dan kerugian disosialisasikan di seluruh pool. Mereka juga bergantung pada operator untuk melindungi kunci penandatanganan, karena hingga saat ini, tidak ada pilihan lain bagi mereka.
 

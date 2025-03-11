@@ -1,40 +1,26 @@
-import React from "react"
-import { Center, FlexProps, useMediaQuery } from "@chakra-ui/react"
+import { cn } from "@/lib/utils/cn"
 
-import { lightTheme as oldTheme } from "../../theme"
-
-export type BannerNotificationProps = FlexProps & {
+export type BannerNotificationProps = React.HTMLAttributes<HTMLDivElement> & {
   shouldShow?: boolean
 }
 
 const BannerNotification = ({
   children,
-  shouldShow = false,
+  shouldShow,
+  className,
   ...props
 }: BannerNotificationProps) => {
-  const [isLGScreen] = useMediaQuery(`min-width: ${oldTheme.breakpoints.l}`)
+  if (!shouldShow) return <></>
   return (
-    <>
-      {shouldShow && (
-        <Center
-          as="aside"
-          maxW={isLGScreen ? oldTheme.variables.maxPageWidth : "100%"}
-          w="100%"
-          py="4"
-          px="8"
-          bg="primary.base"
-          color="background.base"
-          sx={{
-            a: {
-              color: "background.base",
-            },
-          }}
-          {...props}
-        >
-          {children}
-        </Center>
+    <aside
+      className={cn(
+        "flex w-full items-center justify-center gap-2 bg-primary-action px-8 py-4 text-white [&_a]:text-white [&_a]:hover:text-white/80",
+        className
       )}
-    </>
+      {...props}
+    >
+      {children}
+    </aside>
   )
 }
 

@@ -89,9 +89,9 @@ Pamiętaj, że musisz podłączyć dysk do portu USB 3.0 (niebieski)
 
 ### 1. Pobierz obrazy Eth 1.0 lub Eth 2.0 {#1-download-execution-or-consensus-images}
 
-<ButtonLink to="https://ethraspbian.com/downloads/ubuntu-20.04-preinstalled-server-arm64+raspi-eth1.img.zip">Pobierz obraz Eth 1.0</ButtonLink>
+<ButtonLink href="https://ethraspbian.com/downloads/ubuntu-20.04-preinstalled-server-arm64+raspi-eth1.img.zip">Pobierz obraz Eth 1.0</ButtonLink>
 
-sha256 7fa9370d13857dd6abcc8fde637c7a9a7e3a66b307d5c28b0c0d29a09c73c55c<ButtonLink to="https://ethraspbian.com/downloads/ubuntu-20.04-preinstalled-server-arm64+raspi-eth2.img.zip">Pobierz obraz Eth2</ButtonLink>
+sha256 7fa9370d13857dd6abcc8fde637c7a9a7e3a66b307d5c28b0c0d29a09c73c55c<ButtonLink href="https://ethraspbian.com/downloads/ubuntu-20.04-preinstalled-server-arm64+raspi-eth2.img.zip">Pobierz obraz Eth2</ButtonLink>
 
 sha256 74c0c15b708720e5ae5cac324f1afded6316537fb17166109326755232cd316e
 

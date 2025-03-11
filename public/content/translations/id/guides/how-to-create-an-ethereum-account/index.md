@@ -14,7 +14,7 @@ Berbeda dengan membuka akun baru dengan perusahaan, membuat akun Ethereum dilaku
 
 Dompet adalah aplikasi yang membantu Anda mengelola akun Ethereum Anda. Dompet menggunakan kunci Anda untuk mengirim dan menerima transaksi serta masuk ke aplikasi. Ada banyak jenis dompet yang dapat dipilih - seluler, desktop, atau ekstensi browser.
 
-<ButtonLink to="/wallets/find-wallet/">
+<ButtonLink href="/wallets/find-wallet/">
   Temukan dompet
 </ButtonLink>
 
@@ -42,7 +42,7 @@ Setelah Anda menyimpan frase benih, Anda seharusnya dapat melihat dasbor dompet 
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Ingin mempelajari selengkapnya?</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     Lihat panduan lainnya
   </ButtonLink>
 </InfoBanner>

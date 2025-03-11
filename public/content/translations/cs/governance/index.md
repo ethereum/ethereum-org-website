@@ -32,7 +32,7 @@ Opačný přístup, off-chain správa, spočívá v tom, že jakákoliv rozhodnu
 
 _Zatímco na úrovni protokolu je řízení Etherea off-chain, velké množství projektů běžících na Ethereu, jako jsou DAO, používá řízení on-chain._
 
-<ButtonLink to="/dao/">
+<ButtonLink href="/dao/">
   Více o DAO
 </ButtonLink>
 
@@ -44,11 +44,11 @@ V [komunitě Etherea](/community/), jsou různé zainteresované strany, z nich�
 
 - **Držitele etheru**: Tito lidé drží libovolné množství ETH. [Více o ETH](/eth/).
 - **Uživatele aplikací**: Tito lidé komunikují s aplikacemi na blockchainu Ethereum.
-- **Vývojáře aplikací a nástrojů**: Tito lidé píší aplikace, které běží na blockchainu Ethereum (např. DeFi, NFT atd.) nebo vytvářejí nástroje pro interakci s Ethereem (např. peněženky, testovací sady atd.). [Více o decentralizovaných aplikacích](/dapps/).
+- **Vývojáře aplikací a nástrojů**: Tito lidé píší aplikace, které běží na blockchainu Ethereum (např. DeFi, NFT atd.) nebo vytvářejí nástroje pro interakci s Ethereem (např. peněženky, testovací sady atd.). [Více o dappkách](/dapps/).
 - **Operátory síťových uzlů**: Tito lidé provozují síťové uzly, které schvalují bloky a transakce a odmítají jakoukoli neplatnou transakci nebo blok, se kterým se setkají. [Více o síťových uzlech](/developers/docs/nodes-and-clients/).
 - **Autory EIP**: Tito lidé navrhují změny protokolu Ethereum ve formě návrhů na vylepšení Etherea (EIP). [Více o EIP](/eips/).
 - **Validátory**: Tito lidé provozují síťové uzly, které mohou přidávat nové bloky do blockchainu Ethereum.
-- **Vývojáře protokolu** (také známí jako  "Core Developers“ ): Tito lidé se starají o různé implementace Etherea (např. go-ethereum, Nethermind, Besu, Erigon na exekuční vrstvě nebo Prysm, Lighthouse, Nimbus, Teku, Lodestar na konsenzuální vrstvě). [Více o klientech Etherea](/developers/docs/nodes-and-clients/).
+- **Vývojáře protokolu** (také známí jako  "Klíčoví vývojáři“ ): Tito lidé se starají o různé implementace Etherea (např. go-ethereum, Nethermind, Besu, Erigon a Reth na exekuční vrstvě nebo Prysm, Lighthouse, Nimbus, Teku, Lodestar a Grandine na vrstvě konsenzu). [Více o klientech Etherea](/developers/docs/nodes-and-clients/).
 
 _Poznámka: Každý může být součástí více skupin (např. vývojář protokolu může navrhovat EIP a provozovat validátor beacon chainu a používat DeFi aplikace). Pro jednoduchost je však lepší tyto skupiny uvést odděleně._
 
@@ -58,7 +58,7 @@ _Poznámka: Každý může být součástí více skupin (např. vývojář prot
 
 Důležitým procesem používaným při správě Etherea je **návrh na zlepšení Etherea (Ethereum Improvement Proposals, EIP)**. EIP jsou standardy specifikující potenciální nové funkce nebo procesy pro Ethereum. EIP může vytvořit kdokoliv. Jestliže chcete sepsat EIP nebo se zúčastnit vzájemného hodnocení a/nebo správy, podívejte se na:
 
-<ButtonLink to="/eips/">
+<ButtonLink href="/eips/">
   Více o EIP
 </ButtonLink>
 
@@ -82,7 +82,7 @@ Formální proces zavádění změn do protokolu Ethereum je následující:
 
 4. **EIP zahrnuto ve vylepšení sítě**: Za předpokladu, že je EIP schváleno, otestováno a implementováno, je naplánováno jako součást vylepšení sítě. Vzhledem k vysokým nákladům na koordinaci vylepšení sítě (každý musí upgradovat současně) jsou EIP většinou spojovány do balíčků.
 
-5. **Aktivace vylepšení sítě**: Po aktivaci vylepšení sítě bude vaše EIP aktivní v síti Ethereum. _Poznámka: Vylepšení sítě se obvykle nejdříve aktivuje na testovacích sítích před aktivací v síti Ethereum Mainnet._
+5. **Aktivace vylepšení sítě**: Po aktivaci vylepšení sítě bude vaše EIP aktivní v síti Ethereum. _Poznámka: Vylepšení sítě se obvykle nejdříve aktivuje na testovacích sítích před aktivací v hlavní síti Ethereum._
 
 Tento postup, i když je velmi zjednodušený, poskytuje přehled hlavních fází změny protokolu, která má být implementována na Ethereu. Níže rozebíráme neformální faktory, které během tohoto procesu také hrají roli.
 
@@ -90,11 +90,11 @@ Tento postup, i když je velmi zjednodušený, poskytuje přehled hlavních fáz
 
 ### Porozumění předchozím vylepšením {#prior-work}
 
-Šampioni EIP by se měli seznámit s předchozí prací a návrhy před vytvořením EIP, které má ambice vylepšit Ethereum Mainnet. Díky tomu, doufejme, přináší EIP něco nového, co dosud nebylo zamítnuto. Tři hlavní místa, kde se můžete seznámit s prací ostatních navrhovatelů vylepšení, jsou [EIP repozitář](https://github.com/ethereum/EIPs), [Ethereum Magicians](https://ethereum-magicians.org/) a [ethresear.ch](https://ethresear.ch/).
+Šampioni EIP by se měli seznámit s předchozí prací a návrhy před vytvořením EIP, které má ambice vylepšit hlavní síť Ethereum. Díky tomu, doufejme, přináší EIP něco nového, co dosud nebylo zamítnuto. Tři hlavní místa, kde se můžete seznámit s prací ostatních navrhovatelů vylepšení, jsou [EIP repozitář](https://github.com/ethereum/EIPs), [Ethereum Magicians](https://ethereum-magicians.org/) a [ethresear.ch](https://ethresear.ch/).
 
 ### Pracovní skupiny {#working-groups}
 
-Je nepravděpodobné, že by původní návrh EIP mohl být implementován na Ethereum Mainnet bez úprav nebo změn. Obecně vzato, budou EIP šampióni vždy spolupracovat s podskupinou vývojářů protokolu na specifikaci, implementaci, testování, iteraci a finalizaci jejich návrhu. Historicky tyto pracovní skupiny vyžadovaly několik měsíců (a někdy i let!) práce. Podobně by EIP šampióni měli zapojit příslušné vývojáře aplikací/nástrojů v rané fázi jejich úsilí získat zpětnou vazbu od koncových uživatelů a zmírnit jakákoli rizika začlenění EIP do Etherea.
+Je nepravděpodobné, že by původní návrh EIP mohl být implementován na hlavní síť Ethereum bez úprav nebo změn. Obecně vzato, budou EIP šampióni vždy spolupracovat s podskupinou vývojářů protokolu na specifikaci, implementaci, testování, iteraci a finalizaci jejich návrhu. Historicky tyto pracovní skupiny vyžadovaly několik měsíců (a někdy i let!) práce. Podobně by EIP šampióni měli zapojit příslušné vývojáře aplikací/nástrojů v rané fázi jejich úsilí získat zpětnou vazbu od koncových uživatelů a zmírnit jakákoli rizika začlenění EIP do Etherea.
 
 ### Konsensus komunity {#community-consensus}
 
@@ -116,11 +116,11 @@ Obecně se neshody řeší dlouhodobou diskusí na veřejných fórech, aby se p
 
 ### Fork The DAO {#dao-fork}
 
-Forky nastávají, když je potřeba provést zásadní technická vylepšení nebo změny v síti a změnit "pravidla“ protokolu. [Klienti na Ethereu](/developers/docs/nodes-and-clients/) musí aktualizovat svůj software, aby implementovali nová pravidla forku.
+Forky nastávají, když je potřeba provést zásadní technická vylepšení nebo změny v síti a změnit "pravidla“ protokolu. [Klienty na Ethereu](/developers/docs/nodes-and-clients/) musí aktualizovat svůj software, aby implementovali nová pravidla forku.
 
 Fork The DAO byl reakcí na [útok na DAO v roce 2016](https://www.coindesk.com/understanding-dao-hack-journalists), kdy bylo z nezabezpečeného kontraktu [DAO](/glossary/#dao) odčerpáno více než 3,6 milionu ETH. Tento fork přesunul finanční prostředky z chybného smart kontraktu do nového kontraktu, který umožnil získat zpět své finanční prostředky komukoli, kdo o ně přišel během hacku.
 
-Tento postup byl odhlasován ethereovskou komunitou. Každý držitel ETH mohl hlasovat prostřednictvím transakce na [hlasovací platformě](http://v1.carbonvote.com/). Rozhodnutí o forku získalo více než 85 % hlasů.
+Tento postup byl odhlasován ethereovskou komunitou. Každý držitel ETH mohl hlasovat prostřednictvím transakce na [hlasovací platformě](https://web.archive.org/web/20170620030820/http://v1.carbonvote.com/). Rozhodnutí o forku získalo více než 85 % hlasů.
 
 Je důležité poznamenat, že i když se protokol rozdělil, aby se stav sítě vrátil do stavu před hackem, váha, kterou měl hlas při rozhodování o forku, je diskutabilní z několika důvodů:
 
@@ -148,13 +148,13 @@ Schopnost provést fork tváří v tvář významným politickým, filozofickým
 
 ## Řízení Beacon Chain {#beacon-chain}
 
-Proces správy Etherea často upozaďuje rychlost a efektivitu ve prospěch otevřenosti a inkluzivity. Aby se urychlil vývoj Beacon Chainu, byl spuštěn odděleně od sítě proof-of-work a řídil se vlastními postupy správy.
+Proces správy Etherea často upozaďuje rychlost a efektivitu ve prospěch otevřenosti a inkluzivity. Aby se urychlil vývoj Beacon Chainu, byl spuštěn odděleně od sítě důkazu prací a řídil se vlastními postupy správy.
 
 Implementace specifikací a vývoje byly i v případě Beacon Chainu vždy plně open source, ale výše popsané formální procesy používané k navrhování aktualizací použity nebyly. To umožnilo rychleji navrhnout a odsouhlasit změny a stejně tak je i implementovat.
 
-Když se 15. září 2022 sloučil Beacon Chain s realizační vrstvou Etherea, byl merge dokončen jako součást [pařížského upgradu sítě](/history/#paris). Stav návrhu [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) byl změněn z „Poslední výzva“ na „Konečný“, čímž byl dokončen přechod na proof-of-stake.
+Když se 15. září 2022 sloučil Beacon Chain s realizační vrstvou Etherea, byl merge dokončen jako součást [pařížského upgradu sítě](/history/#paris). Stav návrhu [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) byl změněn z „Poslední výzva“ na „Konečný“, čímž byl dokončen přechod na důkaz podílem.
 
-<ButtonLink to="/roadmap/merge/">
+<ButtonLink href="/roadmap/merge/">
   Více o mergi
 </ButtonLink>
 

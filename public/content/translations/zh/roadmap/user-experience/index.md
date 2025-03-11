@@ -15,7 +15,7 @@ template: roadmap
 
 这个问题的解决办法是使用[智能合约](/glossary/#smart-contract)钱包与以太坊交互。 智能合约钱包提供了在密钥丢失或被盗时保护帐户的途径以及更好地发现和防范欺诈的机会，还可以让钱包拥有新功能。 虽然智能合约钱包现在已经存在，但很难构建，因为它们需要以太坊协议的更好支持。 这种额外支持被称为帐户抽象。
 
-<ButtonLink variant="outline-color" to="/roadmap/account-abstraction/">更多关于帐户抽象的信息</ButtonLink>
+<ButtonLink variant="outline-color" href="/roadmap/account-abstraction/">更多关于帐户抽象的信息</ButtonLink>
 
 ## 人人皆有节点
 
@@ -23,7 +23,7 @@ template: roadmap
 
 以太坊将进行几项升级，使节点更容易运行，资源密集程度更低。 存储数据的方式将改为使用更具空间效率的结构，称为**沃克尔树**。 同时，通过[无状态性](/roadmap/statelessness)或[数据到期](/roadmap/statelessness/#data-expiry)升级，以太坊节点将不再需要存储完整的以太坊状态数据的副本，从而大幅降低硬盘空间需求。 [轻节点](/developers/docs/nodes-and-clients/light-clients/)将具备运行全节点的许多好处，但是在手机或简单的浏览器应用程序中就可以轻松运行。
 
-<ButtonLink variant="outline-color" to="/roadmap/verkle-trees/">阅读关于沃克尔树的信息</ButtonLink>
+<ButtonLink variant="outline-color" href="/roadmap/verkle-trees/">阅读关于沃克尔树的信息</ButtonLink>
 
 通过这些升级，运行节点的障碍实际上减少到零。 用户将可以安全、无需许可地访问以太坊，且不需要在计算机或手机上牺牲大量磁盘空间或 CPU，在使用应用程序时，也不必依赖第三方提供数据或网络访问权限。
 

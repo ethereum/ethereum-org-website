@@ -10,13 +10,13 @@ lang: el
 
 Χρειάζεστε επίσημη υποστήριξη του Ethereum; Το πρώτο πράγμα που πρέπει να γνωρίζετε είναι ότι το Ethereum είναι αποκεντρωμένο. Αυτό σημαίνει ότι κανένας κεντρικός οργανισμός, οντότητα ή άτομο δεν κατέχει το Ethereum και γι' αυτό δεν υπάρχουν επίσημα κανάλια υποστήριξης.
 
-Η κατανόηση της αποκεντρωμένης φύσης του Ethereum είναι ζωτικής σημασίας, γιατί οποιοσδήποτε παρουσιάζεται ως επίσημη υποστήριξη για το Ethereum πιθανότατα προσπαθεί να σας εξαπατήσει! Η καλύτερη προστασία από απατεώνες είναι να εκπαιδευτείτε καλύτερα και να λάβετε σοβαρά υπόψη την ασφάλεια.
+Η κατανόηση της αποκεντρωμένης φύσης του Ethereum είναι ζωτικής σημασίας, **γιατί οποιοσδήποτε παρουσιάζεται ως επίσημη υποστήριξη για το Ethereum πιθανότατα προσπαθεί να σας εξαπατήσει!** Η καλύτερη προστασία ενάντια στους κακόβουλους είναι να ενημερωθείτε σωστά και να λαμβάνετε σοβαρά υπόψη τα θέματα ασφαλείας.
 
-<DocLink to="/security/">
+<DocLink href="/security/">
   Ασφάλεια του Ethereum και πρόληψη κατά της απάτης
 </DocLink>
 
-<DocLink to="/learn/">
+<DocLink href="/learn/">
   Μάθετε τις βασικές αρχές του Ethereum
 </DocLink>
 
@@ -73,7 +73,6 @@ lang: el
 - [ethers.js](https://discord.gg/6jyGVDK6Jx)
 - [web3.js](https://discord.gg/GsABYQu4sC)
 - [Hardhat](https://discord.gg/xtrMGhmbfZ)
-- [Truffle](https://discord.gg/8uKcsccEYE)
 - [Alchemy](http://alchemy.com/discord)
 - [Tenderly](https://discord.gg/fBvDJYR)
 
@@ -92,6 +91,7 @@ lang: el
 - [Nethermind](https://discord.gg/YJx3pm8z5C)
 - [Besu](https://discord.gg/p8djYngzKN)
 - [Erigon](https://github.com/ledgerwatch/erigon/issues)
+- [Reth](https://github.com/paradigmxyz/reth/discussions)
 
 ### Προγράμματα συναίνεσης {#consensus-clients}
 
@@ -100,5 +100,6 @@ lang: el
 - [Lighthouse](https://discord.gg/cyAszAh)
 - [Teku](https://discord.gg/7hPv2T6)
 - [Lodestar](https://discord.gg/aMxzVcr)
+- [Grandine](https://discord.gg/H9XCdUSyZd)
 
 Μπορείτε επίσης να [μάθετε πώς να εκτελέσετε έναν κόμβο εδώ](/developers/docs/nodes-and-clients/run-a-node/).

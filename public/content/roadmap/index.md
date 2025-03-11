@@ -7,10 +7,10 @@ image: /images/heroes/roadmap-hub-hero.jpg
 alt: "Ethereum roadmap"
 summaryPoints:
 buttons:
-  - label: Further upgrades
+  - content: Further upgrades
     toId: what-changes-are-coming
-  - label: Past upgrades
-    to: /history/
+  - content: Past upgrades
+    href: /history/
     variant: outline
 ---
 
@@ -24,28 +24,28 @@ The Ethereum roadmap outlines the specific improvements that will be made to pro
 
 <CardGrid>
   <RoadmapActionCard
-    to="/roadmap/scaling"
+    href="/roadmap/scaling"
     title="Cheaper transactions"
     image="scaling"
     description="Rollups are too expensive and rely on centralized components, causing users to place too much trust in their operators. The roadmap includes fixes for both of these problems."
     buttonText="More on reducing fees"
   />
   <RoadmapActionCard
-    to="/roadmap/security"
+    href="/roadmap/security"
     title="Extra security"
     image="security"
     description="Ethereum is already very secure but it can be made even stronger, ready to withstand all kinds of attack far into the future."
     buttonText="More on security"
   />
   <RoadmapActionCard
-    to="/roadmap/user-experience"
+    href="/roadmap/user-experience"
     title="Better user experience"
     image="userExperience"
     description="More support for smart contract wallets and light-weight nodes will make using Ethereum simpler and safer."
     buttonText="More on user experience"
   />
   <RoadmapActionCard
-    to="/roadmap/future-proofing"
+    href="/roadmap/future-proofing"
     title="Future proofing"
     image="futureProofing"
     description="Ethereum researchers and developers are solving tomorrow's problems today, readying the network for future generations."
@@ -76,7 +76,7 @@ The roadmap is mostly the result of years of work by researchers and developers 
 
 **Yes—almost definitely**. The roadmap is the current plan for upgrading Ethereum, covering both near-term and future plans. We expect the roadmap to change as new information and technology become available.
 
-Think of Ethereum's roadmap as a set of intentions for improving Ethereum; it is the core researchers' and developers' best hypothesize of Ethereum's most optimal path forward.
+Think of Ethereum's roadmap as a set of intentions for improving Ethereum; it is the core researchers' and developers' best hypothesis of Ethereum's most optimal path forward.
 
 ## When will the roadmap be finished? {#when-will-the-roadmap-be-finished}
 
@@ -107,6 +107,7 @@ Sharding is splitting up the Ethereum blockchain so that subsets of [validators]
 
 ## Looking for specific technical upgrades? {#looking-for-specific-technical-upgrades}
 
+- [Pectra](/roadmap/pectra) - Prague/Electra hardfork that brings new approach to account abstraction, improves scalability and more.
 - [Danksharding](/roadmap/danksharding) - Danksharding makes layer 2 rollups much cheaper for users by adding “blobs” of data to Ethereum blocks.
 - [Staking withdrawals](/staking/withdrawals) - The Shanghai/Capella upgrade enabled staking withdrawals on Ethereum, allowing people to unlock their staked ETH.
 - [Single slot finality](/roadmap/single-slot-finality) - Instead of waiting for fifteen minutes, blocks could get proposed and finalized in the same slot. This is more convenient for apps and much more difficult to attack.

@@ -1,14 +1,18 @@
 import isChromatic from "chromatic/isChromatic"
 import { MotionGlobalConfig } from "framer-motion"
-import { withThemeByDataAttribute } from "@storybook/addon-themes"
 import type { Preview } from "@storybook/react"
 
 import ThemeProvider from "@/components/ThemeProvider"
+import { TooltipProvider } from "@/components/ui/tooltip"
 
-import i18n, { baseLocales } from "./i18next"
+import nextIntl, { baseLocales } from "./next-intl"
+import { withNextThemes } from "./withNextThemes"
 
 import "../src/styles/global.css"
 import "../src/styles/fonts.css"
+import "../src/styles/docsearch.css"
+
+import "@docsearch/css"
 
 MotionGlobalConfig.skipAnimations = isChromatic()
 
@@ -27,7 +31,7 @@ const preview: Preview = {
     locales: baseLocales,
   },
   decorators: [
-    withThemeByDataAttribute({
+    withNextThemes({
       themes: {
         light: "light",
         dark: "dark",
@@ -36,13 +40,14 @@ const preview: Preview = {
     }),
     (Story) => (
       <ThemeProvider>
-        <Story />
+        <TooltipProvider>
+          <Story />
+        </TooltipProvider>
       </ThemeProvider>
     ),
   ],
   parameters: {
-    i18n,
-    actions: { argTypesRegex: "^on[A-Z].*" },
+    nextIntl,
     controls: {
       matchers: {
         color: /(background|color)$/i,

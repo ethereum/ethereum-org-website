@@ -78,5 +78,5 @@ A web3 közjó-finanszírozási platformjai, mint a [Gitcoin](https://gitcoin.co
 ## Kapcsolódó témák {#related-topics}
 
 - [Az Ethereum jövőképe](/roadmap/vision/)
-- [A Beacon lánc](/roadmap/beacon-chain)
-- [A beolvadás](/roadmap/merge/)
+- [A Beacon Chain](/roadmap/beacon-chain)
+- [Az egyesítés](/roadmap/merge/)

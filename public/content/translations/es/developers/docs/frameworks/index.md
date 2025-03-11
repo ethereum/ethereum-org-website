@@ -45,6 +45,12 @@ Antes de profundizar en los marcos o frameworks, le recomendamos que lea nuestra
 - [Documentación](https://docs.web3j.io)
 - [GitHub](https://github.com/web3j/web3j)
 
+**ethers-kt:** **_Biblioteca asíncrona Kotlin/Java/Android de alto rendimiento para cadena de bloques basadas en EVM._**
+
+- [GitHub](https://github.com/Kr1ptal/ethers-kt)
+- [Ejemplos](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
+- [Discord](https://discord.gg/rx35NzQGSb)
+
 **Cree una app de Eth:** **_Cree aplicaciones basadas en Ethereum con un comando. Incluye una amplia oferta de marcos de UI y plantillas DeFi para elegir._**
 
 - [GitHub](https://github.com/paulrberg/create-eth-app)
@@ -68,7 +74,7 @@ Antes de profundizar en los marcos o frameworks, le recomendamos que lea nuestra
 
 - [alchemy.com](https://www.alchemy.com/)
 - [GitHub](https://github.com/alchemyplatform)
-- [Discord](https://discord.com/invite/A39JVCM)
+- [Discord](https://discord.com/invite/alchemyplatform)
 
 **QuikNode:** **_Plataforma de desarrollo de Ethereum._**
 
@@ -87,17 +93,17 @@ Antes de profundizar en los marcos o frameworks, le recomendamos que lea nuestra
 - [GitHub](https://github.com/chainstack)
 - [Discord](https://discord.gg/BSb5zfp9AT)
 
-**Brownie: ****_Un entorno de desarrollo y framework de pruebas basado en Python._**
+**Crossmint:****_ Plataforma de desarrollo web3 de nivel empresarial que le permite crear aplicaciones NFT en todas las cadenas principales de cadenas EVM (y otras)._**
+
+- [Sitio web](https://www.crossmint.com)
+- [Documentación](https://docs.crossmint.com)
+- [Discord](https://discord.com/invite/crossmint)
+
+**Brownie:****_ Entorno de desarrollo y marco de pruebas basados en Python._**
 
 - [Documentación](https://eth-brownie.readthedocs.io/en/latest/)
 - [GitHub](https://github.com/eth-brownie/brownie)
 - **Brownie se encuentra actualmente en mantenimiento**
-
-**Truffle:** **_Un entorno de desarrollo y de pruebas, un proceso de creación y otras herramientas._**
-
-- [trufflesuite.com](https://www.trufflesuite.com/)
-- [GitHub](https://github.com/trufflesuite/truffle)
-- **El desarrollo de Truffle ha finalizado** - [leer más](https://twitter.com/trufflesuite/status/1704946902393860589?t=NlIWeLTbBSAaJmS5uUAhSA&s=19)
 
 **OpenZeppelin SDK: ****_El kit definitivo de herramientas para contratos inteligentes; una serie de herramientas que lo ayuda a desarrollar, compilar, actualizar, implementar e interactuar con contratos inteligentes._**
 
@@ -105,6 +111,26 @@ Antes de profundizar en los marcos o frameworks, le recomendamos que lea nuestra
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-sdk)
 - [Foro de la comunidad](https://forum.openzeppelin.com/c/support/17)
 - **El desarollo de OpenZeppelin SDK ha finalizado**
+
+**Catapulta: ****_Herramienta de implementación de contratos inteligentes de cadena múltiple; automatice verificaciones en exploradores de bloques, realice un seguimiento de los contratos inteligentes implementados y comparta informes de implementación; plug-n-play para proyectos de Foundry y Hardhat._**
+
+- [Sitio web](https://catapulta.sh/)
+- [Documentación](https://catapulta.sh/docs)
+- [Github](https://github.com/catapulta-sh)
+
+**Covalente:** **_API de cadena de bloques enriquecidas para más de 200 cadenas._**
+
+- [covalenthq.com](https://www.covalenthq.com/)
+- [Documentación](https://www.covalenthq.com/docs/api/)
+- [GitHub](https://github.com/covalenthq)
+- [Discord](https://www.covalenthq.com/discord/)
+
+**Wake:****_ Marco Python todo en uno para pruebas de contratos, fuzzing, implementación, análisis de vulnerabilidades y navegación por código._**
+
+- [Página de inicio](https://getwake.io/)
+- [Documentación](https://ackeeblockchain.com/wake/docs/latest/)
+- [GitHub](https://github.com/Ackee-Blockchain/wake)
+- [Extensión de VS Code](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity)
 
 ## Leer más {#further-reading}
 

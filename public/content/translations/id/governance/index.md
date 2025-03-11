@@ -32,7 +32,7 @@ Pendekatan yang berlawanan dengan itu, tata kelola off-chain, adalah jika keputu
 
 _Sekalipun pada tingkat protokol tata kelola Ethereum bersifat off-chain, banyak kasus penggunaan yang dibangun di atas Ethereum, seperti DAO, menggunakan tata kelola on-chain._
 
-<ButtonLink to="/dao/">
+<ButtonLink href="/dao/">
   Selengkapnya tentang DAOs
 </ButtonLink>
 
@@ -48,7 +48,7 @@ Ada berbagai pemangku kepentingan dalam [komunitas Ethereum](/community/), yang 
 - **Para Operator Node**: orang-orang ini yang menjalankan node yang menyebarkan blok dan transaksi, yang menolak transaksi atau blok tidak validapa pun yang mereka temui. [Lebih lanjut tentang node](/developers/docs/nodes-and-clients/).
 - **Penulis EIP**: orang-orang ini mengusulkan perubahan pada protokol Ethereum, dalam bentuk Proposal Peningkatan Ethereum (EIP). [Selengkapnya tentang EIP](/eips/).
 - **Validator**: orang-orang ini menjalankan simpul yang dapat menambahkan blok baru ke rantai blok Ethereum.
-- **Pengembang Protokol** (alias "Pengembang Inti"): orang-orang ini menjaga berbagai implementasi Ethereum (misalnya go-ethereum, Nethermind, Besu, Erigon pada lapisan eksekusi atau Prysm, Lighthouse, Nimbus, Teku, Lodestar pada lapisan konsensus). [Lebih lanjut tentang klien Ethereum](/developers/docs/nodes-and-clients/).
+- **Pengembang Protokol** (alias "Pengembang Inti" ): orang-orang ini memelihara berbagai implementasi Ethereum (misalnya, go-ethereum, Nethermind, Besu, Erigon, Reth di lapisan eksekusi atau Prysm, Lighthouse, Nimbus, Teku, Lodestar di lapisan konsensus). [Lebih lanjut tentang klien Ethereum](/developers/docs/nodes-and-clients/).
 
 _Catatan: setiap individu bisa memiliki beberapa peran pada grup ini (misalnya seorang pengembang protokol dapat memperjuangkan EIP, dan bertugas sebagai validator rantai suar, serta menggunakan aplikasi DeFi). Namun, untuk kejelasan konseptual, paling mudah untuk membedakannya._
 
@@ -58,7 +58,7 @@ _Catatan: setiap individu bisa memiliki beberapa peran pada grup ini (misalnya s
 
 Salah satu proses penting yang digunakan dalam tata kelola Ethereum adalah proposal **Proposal Peningkatan Ethereum (EIP)**. EIP adalah standar yang menentukan fitur atau proses baru yang berpotensi untuk Ethereum. Siapa pun yang terlibat dalam komunitas Ethereum dapat membuat EIP. Jika Anda tertarik untuk menulis EIP atau berpartisipasi dalam peer-review dan/atau pemerintahan, lihat:
 
-<ButtonLink to="/eips/">
+<ButtonLink href="/eips/">
   Selengkapnya tentang EIP
 </ButtonLink>
 
@@ -120,7 +120,7 @@ Fork adalah ketika peningkatan atau perubahan teknis utama harus dibuat dalam ja
 
 Garpu DAO merupakan respons terhadap [serangan DAO 2016](https://www.coindesk.com/understanding-dao-hack-journalists) di mana kontrak [DAO](/glossary/#dao) yang tidak aman dikuras dananya sebanyak lebih dari 3,6 juta ETH dalam peretasan saat itu. Fork ini memindahkan dana dari kontrak yang bermasalah ke kontrak yang baru yang memungkinkan siapa pun yang kehilangan dananya dalam peretasan dapat memperolehnya kembali.
 
-Tindakan ini dipilih oleh komunitas Ethereum. Setiap pemegang ETH dapat memilih melalui transaksi di [platform pemilihan](http://v1.carbonvote.com/). Keputusan untuk melakukan fork mencapai lebih dari 85% suara.
+Tindakan ini dipilih oleh komunitas Ethereum. Setiap pemegang ETH dapat memilih melalui transaksi di [platform pemilihan](https://web.archive.org/web/20170620030820/http://v1.carbonvote.com/). Keputusan untuk melakukan fork mencapai lebih dari 85% suara.
 
 Penting untuk dicatat bahwa meskipun protokol melakukan fork untuk membalikkan peretasan, bobot pengambilan suara dalam memutuskan fork dapat diperdebatkan karena beberapa alasan:
 
@@ -154,7 +154,7 @@ Meskipun spesifikasi dan implementasi pengembangan selalu bersifat open source, 
 
 Ketika Rantai Suar bergabung dengan lapisan eksekusi Ethereum pada 15 September 2022, penggabungan tersebut selesai sebagai bagian dari [Peningkatan jaringan Paris](/history/#paris). Usulan [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) diubah dari status 'Last Call' menjadi 'Final', menyelesaikan transisi ke bukti taruhan.
 
-<ButtonLink to="/roadmap/merge/">
+<ButtonLink href="/roadmap/merge/">
   Selengkapnya tentang penggabungan
 </ButtonLink>
 

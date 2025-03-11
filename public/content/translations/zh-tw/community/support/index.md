@@ -10,13 +10,13 @@ lang: zh-tw
 
 你正在尋找官方的以太坊支援嗎？ 第一件你應該知道的事情是以太坊為去中心化。 這代表沒有中心組織、實體或個體會持有以太坊，也因此沒有官方支援頻道。
 
-明白以太坊的去中心化本質十分重要，因為任何聲稱是以太坊官方支援的人都可能正試圖欺詐你！ 預防騙徒的最佳保護措施是自我教育，並認真看待網路安全。
+了解以太坊的去中心化本質非常重要，因為**任何聲稱是以太坊官方支援的人都可能是想詐騙你！**對抗詐騙者的最佳防護，就是自學並認真看待安全問題。
 
-<DocLink to="/security/">
+<DocLink href="/security/">
   以太坊安全及詐騙預防
 </DocLink>
 
-<DocLink to="/learn/">
+<DocLink href="/learn/">
   學習以太坊基礎知識
 </DocLink>
 
@@ -73,7 +73,6 @@ lang: zh-tw
 - [ethers.js](https://discord.gg/6jyGVDK6Jx)
 - [web3.js](https://discord.gg/GsABYQu4sC)
 - [安全帽](https://discord.gg/xtrMGhmbfZ)
-- [Truffle](https://discord.gg/8uKcsccEYE)
 - [Alchemy](http://alchemy.com/discord)
 - [Tenderly](https://discord.gg/fBvDJYR)
 
@@ -92,6 +91,7 @@ lang: zh-tw
 - [Nethermind](https://discord.gg/YJx3pm8z5C)
 - [Besu](https://discord.gg/p8djYngzKN)
 - [Erigon](https://github.com/ledgerwatch/erigon/issues)
+- [Reth](https://github.com/paradigmxyz/reth/discussions)
 
 ### 共識用戶端 {#consensus-clients}
 
@@ -100,5 +100,6 @@ lang: zh-tw
 - [Lighthouse](https://discord.gg/cyAszAh)
 - [Teku](https://discord.gg/7hPv2T6)
 - [Lodestar](https://discord.gg/aMxzVcr)
+- [Grandine](https://discord.gg/H9XCdUSyZd)
 
 你也可以[在此學習如何運行節點](/developers/docs/nodes-and-clients/run-a-node/)。

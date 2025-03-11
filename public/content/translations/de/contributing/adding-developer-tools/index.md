@@ -56,6 +56,6 @@ Sofern die Produkte nicht ausdrücklich anders geordnet sind, z. B. alphabetisch
 
 Wenn Sie ein Entwicklertool zu ethereum.org hinzufügen möchten, das die Kriterien erfüllt, erstellen Sie einen Eintrag auf GitHub.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_dev_tool.yaml">
+<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_dev_tool.yaml">
   Ticket erstellen
 </ButtonLink>

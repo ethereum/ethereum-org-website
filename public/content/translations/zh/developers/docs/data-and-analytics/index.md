@@ -18,7 +18,7 @@ lang: zh
 
 ## 区块浏览器 {#block-explorers}
 
-许多[区块浏览器](/developers/docs/data-and-analytics/block-explorers/)提供 [RESTful](https://www.wikipedia.org/wiki/Representational_state_transfer) [应用程序接口](https://www.wikipedia.org/wiki/API)网关，它将使开发者可以看见区块上的实时数据、交易、矿工、帐户和其他链上活动。
+许多[区块浏览器](/developers/docs/data-and-analytics/block-explorers/)提供 [RESTful](https://www.wikipedia.org/wiki/Representational_state_transfer) [应用程序接口](https://www.wikipedia.org/wiki/API)网关，它将使开发者可以看见关于区块、交易、验证者、帐户和其他链上活动的实时数据。
 
 然后开发者可以处理和转换此数据，让他们的用户有独特的洞察力并与[区块链](/glossary/#blockchain)交互。 例如，[Etherscan](https://etherscan.io) 在每个 12 秒时隙都提供执行和共识数据。
 
@@ -34,7 +34,16 @@ lang: zh
 
 ## Dune Analytics {#dune-analytics}
 
-[Dune Analytics](https://dune.com/) 对区块链数据进行预处理，并存入关系型数据库（PostgreSQL 和 DatabricksSQL）表中，以便用户可以使用结构化查询语言 (SQL) 查询区块链数据并基于查询结果构建仪表板。 链上数据被组织为 4 个原始表：`blocks`、`transactions`、（事件）`logs` 和（调用）`traces`。 常见的合约和协议都已解码，并且每个都有自己的事件集和调用表。 这些事件和调用表被进一步处理并按协议类型组织成抽象表，例如去中心化交易所、借贷、稳定币等。
+[Dune Analytics](https://dune.com/) 对区块链数据进行预处理，并存入关系型数据库 (DuneSQL) 表中，以便用户能够使用结构化查询语言 (SQL) 查询区块链数据并基于查询结果构建仪表板。 链上数据被组织为 4 个原始表：`blocks`、`transactions`、（事件）`logs` 和（调用）`traces`。 常见的合约和协议都已解码，并且每个都有自己的事件集和调用表。 这些事件和调用表被进一步处理并按协议类型组织成抽象表，例如去中心化交易所、借贷、稳定币等。
+
+## SubQuery 网络 {#subquery-network}
+
+[SubQuery](https://subquery.network/) 是一个领先的数据索引器，为开发者的 Web3 项目提供快速、可靠、去中心化和定制的应用程序接口。 SubQuery 为超过 165 个生态系统（包括以太坊）的开发者赋能，利用丰富的索引数据，为他们的用户构建直观的、沉浸式体验。 SubQuery 网络通过其富有韧性且去中心化的网络基础设施，为你势不可挡的应用程序提供支持。 使用 SubQuery 的区块链开发者工具包来构建未来的 Web3 应用程序，无需花费时间为数据处理活动搭建定制的后端。
+
+在使用[ SubQuery 托管服务](https://managedservice.subquery.network/)或[ SubQuery 去中心化网络](https://app.subquery.network/dashboard)之前，请先访问[以太坊快速入门指南](https://academy.subquery.network/quickstart/quickstart_chains/ethereum-gravatar.html)，在本地 Docker 环境中花几分钟索引以太坊区块链数据作为测试。
+
+## Ethernow - 内存池数据程序 {#ethernow}
+[Blocknative](https://www.blocknative.com/) 提供对其以太坊历史[内存池数据归档](https://www.ethernow.xyz/mempool-data-archive)的开放访问。 这使得研究者和社区优秀项目能够探索以太坊主网的链前层。 该数据集得到积极维护，代表了以太坊生态系统中最全面的内存池交易事件历史记录。 在 [Ethernow](https://www.ethernow.xyz/) 了解更多信息。
 
 ## 延伸阅读 {#further-reading}
 
@@ -43,3 +52,4 @@ lang: zh
 - [EtherScan 上的应用程序接口代码示例](https://etherscan.io/apis#contracts)
 - [Beaconcha.in 信标链浏览器](https://beaconcha.in)
 - [Dune 基础知识](https://docs.dune.com/#dune-basics)
+- [SubQuery 以太坊快速入门指南](https://academy.subquery.network/indexer/quickstart/quickstart_chains/ethereum-gravatar.html)

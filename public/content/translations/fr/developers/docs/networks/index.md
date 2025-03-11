@@ -50,6 +50,7 @@ Les deux réseaux de test publics que les développeurs de clients conservent ac
 - [GitHub](https://github.com/eth-clients/sepolia)
 - [Otterscan](https://sepolia.otterscan.io/)
 - [Etherscan](https://sepolia.etherscan.io)
+- [Blockscout](https://eth-sepolia.blockscout.com/)
 
 ##### Robinets
 
@@ -60,7 +61,7 @@ Les deux réseaux de test publics que les développeurs de clients conservent ac
 - [Alchemy Sepolia faucet](https://sepoliafaucet.com/)
 - [Infura Sepolia faucet](https://www.infura.io/faucet)
 - [Robinet Sepolia Chainstack](https://faucet.chainstack.com/sepolia-faucet)
-- [Robinet pour le réseau de test Sepolia](https://testnet-faucet.com/sepolia/)
+- [Robinet de l'écosystème Ethereum](https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia)
 
 #### Goerli _(support à long terme)_ {#goerli}
 
@@ -77,6 +78,7 @@ Goerli est un réseau de test qui permet de tester, de valider et de mettre en j
 - [Site Web](https://goerli.net/)
 - [GitHub](https://github.com/eth-clients/goerli)
 - [Etherscan](https://goerli.etherscan.io)
+- [Blockscout](https://eth-goerli.blockscout.com/)
 
 ##### Robinets
 
@@ -89,7 +91,7 @@ Goerli est un réseau de test qui permet de tester, de valider et de mettre en j
 - [Coinbase Wallet Faucet | Goerli](https://coinbase.com/faucets/ethereum-goerli-faucet)
 - [Robinet Goerli Chainstack](https://faucet.chainstack.com/goerli-faucet)
 
-Pour lancer un validateur sur le réseau de test Goerli, utilisez la [plateforme de lancement "validateur goerli bon marché"](https://goerli.launchpad.ethstaker.cc/en/) d'ethstaker.
+Pour lancer un validateur sur le réseau de test Holesky, utilisez la [plateforme de lancement « validateur Holesky bon marché »](https://holesky.launchpad.ethstaker.cc/en/) d'ethstaker.
 
 ### Réseaux de test de Couche 2 {#layer-2-testnets}
 

@@ -1,6 +1,6 @@
 ---
 title: 单独质押你的以太币
-description: 简要介绍如何单独质押你的以太币
+description: 简要介绍如何开始单独质押你的以太币
 lang: zh
 template: staking
 emoji: ":money_with_wings:"
@@ -15,29 +15,29 @@ summaryPoints:
 
 ## 什么是单独质押？ {#what-is-solo-staking}
 
-单独质押是指运行一个连接到互联网的[以太坊节点](/run-a-node/)，并存入 32 个以太币以激活一个[验证者](#faq)，使你有能力直接参与网络共识。
+单独质押是指运行一个连接到互联网的[以太坊节点](/run-a-node/)，并存入 32 个以太币以激活一个[验证者](#faq)，使你能够直接参与网络共识。
 
-**单独质押增强了以太坊网络的去中心化**，使以太坊更加抗审查，更加稳健，能够抵御攻击。 其他质押方法可能不会给网络带来同样的助益。 单独质押是保护以太坊的最佳质押方案。
+**单独质押增强了以太坊网络的去中心化**，使以太坊更加抗审查并且更加稳健，能够抵御攻击。 其他质押方法可能不会给网络带来同样的助益。 单独质押是保护以太坊的最佳质押方案。
 
 一个以太坊节点既包括执行层 (EL) 客户端，也包括共识层 (CL) 客户端。 这些客户端是一套共同工作的软件，拥有一套有效的签名密钥，以验证交易和区块、证明链头的正确性、汇总认证和提交区块。
 
-单独质押用户负责操作运行这些客户端所需的硬件。 强烈建议使用一台专用机器在家进行操作，这对网络安全非常有益。
+单独质押者负责操作运行这些客户端所需的硬件。 强烈建议使用一台专用机器在家进行操作，这对网络安全非常有益。
 
-单独质押人可以直接从协议中获得奖励，以保持他们的验证者在线并正常运行。
+单独质押者由于保持他们的验证者在线并正常运行，可以直接从协议中获得奖励。
 
-## 为什么要单独质押？ {#why-stake-solo}
+## 为什么选择单独质押？ {#why-stake-solo}
 
 单独质押让你承担更大的责任，但会让你对资金和质押设置拥有最大的控制权。
 
 <CardGrid>
   <Card title="赚取以太币" emoji="💸" description="Earn ETH-denominated rewards directly from the protocol when your validator is online, without any middlemen taking a cut." />
   <Card title="完全控制" emoji="🎛️" description="Keep your own keys. Choose the combination of clients and hardware that allows you to minimize your risk and best contribute to the health and security of the network. Third-party staking services make these decisions for you, and they don't always make the safest choices." />
-  <Card title="网络安全" emoji="🔐" description="Solo staking is the most impactful way to stake. By running a validator on your own hardware at home, you strengthen the robustness, decentralization, and security of the Ethereum protocol." />
+  <Card title="网络安全" emoji="🔐" description="Home staking is the most impactful way to stake. By running a validator on your own hardware at home, you strengthen the robustness, decentralization, and security of the Ethereum protocol." />
 </CardGrid>
 
-## 单独质押前的考量 {#considerations-before-staking-solo}
+## 单独质押前的注意事项 {#considerations-before-staking-solo}
 
-尽管我们希望每个人都能无风险地进行单独质押，但这并不现实。 在选择单独质押以太币之前，有一些实际和严肃的事项需要记住。
+尽管我们希望每个人都能无风险地进行单独质押，但这并不现实。 在选择单独质押以太币之前，有一些实用和严肃的注意事项需要记住。
 
 <InfoGrid>
 <ExpandableCard title="必读内容" eventCategory="SoloStaking" eventName="clicked required reading">
@@ -93,7 +93,7 @@ Staking Launchpad 是一个开源应用程序，可帮助你成为质押人。 �
 
 ## 使用节点和客户端设置工具时应考虑的事项 {#node-tool-considerations}
 
-有越来越多的工具和服务可以帮助你单独质押以太币，但每种工具和服务的风险和收益各不相同。
+越来越多的工具和服务可以帮助你单独质押以太币，但每种工具和服务的风险和收益各不相同。
 
 下面使用属性指标来表示列出的质押工具可能具有的显著优势或劣势。 在选择帮你度过质押之旅的工具时，请使用本节作为参考，了解我们如何定义这些属性。
 
@@ -138,7 +138,7 @@ Staking Launchpad 是一个开源应用程序，可帮助你成为质押人。 �
 
 不要为一个验证者存入超过 32 以太币的资金。 这样做不会增加你的奖励。 如果为验证者设置了提款地址，超过 32 个以太币多余资金将在下一次<a href="/staking/withdrawals/#validator-sweeping">验证者扫描</a>时自动提取到该地址。
 
-如果单独质押对你来说要求太高，可以考虑使用<a href="/staking/saas/">质押即服务</a>提供商，或者如果你的资金少于 32 个以太币，则可以考虑<a href="/staking/pools/">联合质押</a>。
+如果单独质押对你来说要求太高，可以考虑使用<a href="/staking/saas/">质押即服务</a>提供商，或者如果你的资金少于 32 个以太币，则可以考虑<a href="/staking/pools/">质押池</a>。
 </ExpandableCard>
 
 <ExpandableCard title="如果我离线了会被罚没吗？ （简单地说：不会）">
@@ -190,7 +190,7 @@ Staking Launchpad 是一个开源应用程序，可帮助你成为质押人。 �
 
 要解锁并收回全部余额，还必须完成验证者退出流程。
 
-<ButtonLink to="/staking/withdrawals/">更多关于质押提款的信息</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">更多关于质押提款的信息</ButtonLink>
 </ExpandableCard>
 
 ## 延伸阅读 {#further-reading}
@@ -203,4 +203,4 @@ Staking Launchpad 是一个开源应用程序，可帮助你成为质押人。 �
 - [加入以太坊 2.0 测试网的详细步骤](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) - _Butta_
 - [以太坊 2 防止罚没小技巧](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) - _Raul Jordan 2020_
 
-<QuizWidget quizKey="solo-staking" />
+<QuizWidget quizKey="staking-solo" />

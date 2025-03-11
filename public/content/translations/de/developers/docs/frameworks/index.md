@@ -22,10 +22,12 @@ Bevor Sie sich mit Frameworks beschäftigen, empfehlen wir, dass Sie sich mit de
 
 ## Verfügbare Frameworks {#available-frameworks}
 
-**Truffle –** **_Eine Entwicklungsumgebung, Test-Framework, Build-Pipeline und weitere Tools_**
+**Foundry** – **_Foundry ist ein blitzschnelles, portables und modulares Toolkit für die Entwicklung von Ethereum-Anwendungen_**
 
-- [trufflesuite.com](https://www.trufflesuite.com/)
-- [GitHub](https://github.com/trufflesuite/truffle)
+- [Foundry installieren](https://book.getfoundry.sh/)
+- [Foundry-Buch](https://book.getfoundry.sh/)
+- [Foundry-Community-Chat auf Telegram](https://t.me/foundry_support)
+- [Fantastisches Foundry](https://github.com/crisgarner/awesome-foundry)
 
 **Hardhat –** **_Ethereum-Entwicklungsumgebung für Experten_**
 
@@ -37,33 +39,28 @@ Bevor Sie sich mit Frameworks beschäftigen, empfehlen wir, dass Sie sich mit de
 - [Dokumentation](https://docs.apeworx.io/ape/stable/)
 - [GitHub](https://github.com/ApeWorX/ape)
 
-**Brownie –** **_Python-basierte Entwicklungsumgebung und Test-Framework_**
-
-- [Dokumentation](https://eth-brownie.readthedocs.io/en/latest/)
-- [GitHub](https://github.com/eth-brownie/brownie)
-
-**Web3j –** **_Eine Plattform für die Entwicklung von Blockchain-Anwendungen auf JVM._**
+**Web3j –** **_eine Plattform für die Entwicklung von Blockchain-Anwendungen auf JVM._**
 
 - [Website](https://www.web3labs.com/web3j-sdk)
 - [Dokumentation](https://docs.web3j.io)
 - [GitHub](https://github.com/web3j/web3j)
 
-**OpenZeppelin SDK –** **_Das ultimative Smart Contract-Toolkit: Eine Reihe von Tools, die Ihnen helfen, zu entwickeln, zu kompilieren, zu aktualisieren, zu verteilen und mit Smart Contracts zu interagieren._**
+**ethers-kt – ** **_asynchrone, hochleistungsfähige Kotlin-/Java-/Android-Bibliothek für EVM-basierte Blockchains._**
 
-- [OpenZeppelin SDK](https://openzeppelin.com/sdk/)
-- [GitHub](https://github.com/OpenZeppelin/openzeppelin-sdk)
-- [Community-Forum](https://forum.openzeppelin.com/c/support/17)
+- [GitHub](https://github.com/Kr1ptal/ethers-kt)
+- [Beispiele](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
+- [Discord](https://discord.gg/rx35NzQGSb)
 
 **Create Eth App –** **_Ethereum-basierte Apps mit einem Befehl erstellen. Zur Auswahl steht ein breitest Angebot an UI-Frameworks und DeFi-Vorlagen._**
 
 - [GitHub](https://github.com/paulrberg/create-eth-app)
-- [Templates](https://github.com/PaulRBerg/create-eth-app/tree/develop/templates)
+- [Vorlagen](https://github.com/PaulRBerg/create-eth-app/tree/develop/templates)
 
-**Scaffold-Eth -** **_Ethers.js + Hardhat + React-Komponenten und Hooks für web3: alles, was Sie brauchen, um mit der Entwicklung dezentraler Anwendungen auf Basis von Smart Contracts zu beginnen._**
+**Scaffold-Eth –** **_Ethers.js + Hardhat + React-Komponenten und Hooks für web3: alles, was Sie brauchen, um mit der Entwicklung dezentraler Anwendungen auf Basis von Smart Contracts zu beginnen._**
 
 - [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 
-**Tenderly -** **_Web3-Entwicklungsplattform, die es Blockchain-Entwicklern ermöglicht, Smart Contracts zu erstellen, zu testen, zu debuggen, zu überwachen und zu betreiben bzw. die dApp-Nutzererfahrung zu verbessern._**
+**Tenderly –** **_Web3-Entwicklungsplattform, die es Blockchain-Entwicklern ermöglicht, Smart Contracts zu erstellen, zu testen, zu debuggen, zu überwachen und zu betreiben sowie die dApp-Nutzererfahrung zu verbessern._**
 
 - [Website](https://tenderly.co/)
 - [Dokumentation](https://docs.tenderly.co/ethereum-development-practices)
@@ -73,34 +70,67 @@ Bevor Sie sich mit Frameworks beschäftigen, empfehlen wir, dass Sie sich mit de
 - [Website](https://thegraph.com/)
 - [Tutorial](/developers/tutorials/the-graph-fixing-web3-data-querying/)
 
-**Alchemy-\*\***_Ehereum-Entwicklungsplattform_\*\*
+**Alchemy-****_Ehereum-Entwicklungsplattform_**
 
 - [alchemy.com](https://www.alchemy.com/)
 - [GitHub](https://github.com/alchemyplatform)
-- [Discord](https://discord.com/invite/A39JVCM)
+- [Discord](https://discord.com/invite/alchemyplatform)
 
-**Foundry –** **_Ein unglaublich schnelles, portables und modulares Toolkit für die Entwicklung von Ethereum-Anwendungen, geschrieben in Rust._**
-
-- [Dokumentation](https://book.getfoundry.sh/)
-- [GitHub](https://github.com/gakonst/foundry/)
-- [Werkzeuge für Foundry](https://github.com/crisgarner/awesome-foundry)
-
-**NodeReal -** **_Ethereum Entwicklungs-Plattform._**
+**NodeReal –** **_Ethereum-Entwicklungsplattform._**
 
 - [Nodereal.io](https://nodereal.io/)
 - [GitHub](https://github.com/node-real)
 - [Discord](https://discord.gg/V5k5gsuE)
 
-**thirdweb SDK -** **_Erstellen Sie Web3-Anwendungen, die mit Ihren Smart Contracts interagieren können, indem Sie die leistungsstarken SDKs und CLI verwenden._**
+**thirdweb SDK –** **_erstellen Sie Web3-Anwendungen, die mit Ihren Smart Contracts interagieren können, indem Sie unsere leistungsstarken SDKs und CLI verwenden._**
 
 - [Dokumentation](https://portal.thirdweb.com/sdk/)
 - [GitHub](https://github.com/thirdweb-dev/)
 
-**Chainstack -** **_Web3 (Ethereum und andere) Entwicklungsplattform._**
+**Chainstack –** **_Web3-Entwicklungsplattform (Ethereum und andere)._**
 
 - [chainstack.com](https://www.chainstack.com/)
 - [GitHub](https://github.com/chainstack)
 - [Discord](https://discord.gg/BSb5zfp9AT)
+
+**Crossmint –** **_eine Plattform für Web3-Entwicklung auf Unternehmensniveau, die es Ihnen ermöglicht, NFT-Anwendungen auf allen wichtigen EVM-Blockchains (und anderen) zu erstellen._**
+
+- [Website](https://www.crossmint.com)
+- [Dokumentation](https://docs.crossmint.com)
+- [Discord](https://discord.com/invite/crossmint)
+
+**Brownie –** **_Python-basierte Entwicklungsumgebung und Test-Framework._**
+
+- [Dokumentation](https://eth-brownie.readthedocs.io/en/latest/)
+- [GitHub](https://github.com/eth-brownie/brownie)
+- **Brownie wird derzeit nicht gewartet**
+
+**OpenZeppelin SDK –** **_das ultimative Smart-Contract-Toolkit: eine Suite an Tools, die Ihnen helfen, zu entwickeln, zu kompilieren, zu aktualisieren, bereitzustellen und mit Smart Contracts zu interagieren._**
+
+- [OpenZeppelin SDK](https://openzeppelin.com/sdk/)
+- [GitHub](https://github.com/OpenZeppelin/openzeppelin-sdk)
+- [Community-Forum](https://forum.openzeppelin.com/c/support/17)
+- **Die Entwicklung von OpenZeppelin SDK ist beendet**
+
+**Catapulta –** **_ein Tool für die Bereitstellung von Multi-Chain-Smart-Contracts, das die Verifizierung in Block-Explorern automatisiert, bereitgestellte Smart Contracts verfolgt und Bereitstellungsberichte teilt; Plug-and-Play für Foundry- und Hardhat-Projekte._**
+
+- [Website](https://catapulta.sh/)
+- [Dokumentation](https://catapulta.sh/docs)
+- [Github](https://github.com/catapulta-sh)
+
+**Covalent –** **_erweiterte Blockchain-APIs für über 200 Ketten._**
+
+- [covalenthq.com](https://www.covalenthq.com/)
+- [Dokumentation](https://www.covalenthq.com/docs/api/)
+- [GitHub](https://github.com/covalenthq)
+- [Discord](https://www.covalenthq.com/discord/)
+
+**Wake –** **_ein All-in-One-Python-Framework für das Testen von Contracts, Fuzzing, Bereitstellung, Schwachstellenscanning und Code-Navigation._**
+
+- [Website](https://getwake.io/)
+- [Dokumentation](https://ackeeblockchain.com/wake/docs/latest/)
+- [GitHub](https://github.com/Ackee-Blockchain/wake)
+- [VS-Code-Erweiterung](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity)
 
 ## Weiterführende Informationen {#further-reading}
 

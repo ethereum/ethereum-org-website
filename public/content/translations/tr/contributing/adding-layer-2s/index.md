@@ -78,7 +78,7 @@ _Veri kullanılabilirliği veya güvenlik için Ethereum kullanmayan diğer öl�
 
 **Katman 2 ekosistemindeki dapp'lere bağlantılar**
 
-- Kullanıcıların bu katman 2'de neler yapabilecekleri hakkında bilgi sağlayabilmek istiyoruz. (bkz. https://portal.arbitrum.io/, https://www.optimism.io/apps)
+- Kullanıcıların bu katman 2'de neler yapabilecekleri hakkında bilgi sağlayabilmek istiyoruz. (örn. https://portal.arbitrum.io/, https://www.optimism.io/apps)
 
 **Token sözleşme listeleri**
 

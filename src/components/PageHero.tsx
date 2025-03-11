@@ -1,16 +1,17 @@
 import type { ReactNode } from "react"
-import { Box, Center, Flex, Heading, Wrap, WrapItem } from "@chakra-ui/react"
+
+import { Image, type ImageProps } from "@/components/Image"
+
+import { cn } from "@/lib/utils/cn"
+import { type MatomoEventOptions } from "@/lib/utils/matomo"
 
 import {
   Button,
   ButtonLink,
-  type ButtonLinkProps,
-  type ButtonProps,
-} from "@/components/Buttons"
-import { Image, type ImageProps } from "@/components/Image"
-import Text from "@/components/OldText"
-
-import { type MatomoEventOptions, trackCustomEvent } from "@/lib/utils/matomo"
+  ButtonLinkProps,
+  ButtonProps,
+} from "./ui/buttons/Button"
+import { Center, Flex } from "./ui/flex"
 
 type ButtonLinkType = Omit<ButtonLinkProps, "content"> & {
   content: ReactNode
@@ -40,7 +41,7 @@ type PageHeroProps = {
 
 const isButtonLink = (
   button: ButtonType | ButtonLinkType
-): button is ButtonLinkType => (button as ButtonLinkType).to !== undefined
+): button is ButtonLinkType => (button as ButtonLinkType).href !== undefined
 
 const PageHero = ({
   content: { buttons, title, header, subtitle, image, alt },
@@ -48,111 +49,87 @@ const PageHero = ({
   children,
   className,
 }: PageHeroProps) => (
-  <Box py={4} px={8} width="full">
+  <div className="w-full px-8 py-4">
     <Flex
-      justifyContent="space-between"
-      mt={8}
-      px={{ base: 0, lg: 16 }}
-      direction={{ base: isReverse ? "column" : "column-reverse", lg: "row" }}
-      className={className}
+      className={cn(
+        "mt-8 justify-between px-0 lg:px-16",
+        isReverse ? "flex-col" : "flex-col-reverse",
+        "lg:flex-row",
+        className
+      )}
     >
-      <Box
-        maxW={{ base: "full", lg: "container.sm" }}
-        pt={{ base: isReverse ? 0 : 8, lg: 32 }}
-        pb={{ base: isReverse ? 8 : 0, lg: 32 }}
-        ps={{ base: 0, lg: 8 }}
-        me={{ base: 0, lg: 4 }}
+      <div
+        className={cn(
+          "max-w-full lg:max-w-[640px]",
+          isReverse ? "pb-8 pt-0" : "pb-0 pt-8",
+          "lg:pb-32 lg:pt-16",
+          "ps-0 lg:ps-8",
+          "me-0 lg:me-4"
+        )}
       >
-        <Heading
-          as="h1"
-          textTransform="uppercase"
-          fontSize="md"
-          fontWeight="normal"
-          mt={{ base: 0, lg: 8 }}
-          mb={4}
-          color="text300"
-          lineHeight={1.4}
-        >
+        <h1 className="mb-4 mt-0 text-md font-normal uppercase !leading-xs lg:mt-8">
           {title}
-        </Heading>
-        <Heading
-          as="h2"
-          fontWeight="bold"
-          fontSize={{ base: "2.5rem", lg: "5xl" }}
-          maxW="full"
-          mb={0}
-          mt={{ base: 8, lg: 12 }}
-          color="text00"
-          lineHeight={1.4}
-        >
+        </h1>
+
+        <h2 className="mb-0 mt-8 max-w-full text-[2.5rem] font-bold !leading-xs lg:mt-12 lg:text-5xl">
           {header}
-        </Heading>
-        <Text
-          fontSize={{ base: "xl", lg: "2xl" }}
-          lineHeight={1.4}
-          color="text200"
-          mt={4}
-          mb={8}
-        >
-          {subtitle}
-        </Text>
+        </h2>
+        <p className="mb-8 mt-4 text-xl !leading-xs lg:text-2xl">{subtitle}</p>
+
         {buttons && (
-          <Wrap spacing={2} overflow="visible" sx={{ ul: { m: 0 } }}>
+          <Flex className="gap-2 overflow-visible [&_ul]:m-0">
             {buttons.map((button, idx) => {
               const isSecondary = idx !== 0
               if (isButtonLink(button)) {
                 return (
-                  <WrapItem key={idx}>
+                  <div key={idx}>
                     <ButtonLink
                       variant={button.variant}
-                      to={button.to}
-                      onClick={() =>
-                        trackCustomEvent({
-                          eventCategory: button.matomo.eventCategory,
-                          eventAction: button.matomo.eventAction,
-                          eventName: button.matomo.eventName,
-                        })
-                      }
+                      href={button.href}
+                      customEventOptions={{
+                        eventCategory: button.matomo.eventCategory,
+                        eventAction: button.matomo.eventAction,
+                        eventName: button.matomo.eventName,
+                      }}
                       isSecondary={isSecondary}
                     >
                       {button.content}
                     </ButtonLink>
-                  </WrapItem>
+                  </div>
                 )
               }
 
               if (button.toId) {
                 return (
-                  <WrapItem key={idx}>
+                  <div key={idx}>
                     <Button
                       variant={button.variant}
                       toId={button.toId}
-                      onClick={() =>
-                        trackCustomEvent({
-                          eventCategory: button.matomo.eventCategory,
-                          eventAction: button.matomo.eventAction,
-                          eventName: button.matomo.eventName,
-                        })
-                      }
+                      customEventOptions={{
+                        eventCategory: button.matomo.eventCategory,
+                        eventAction: button.matomo.eventAction,
+                        eventName: button.matomo.eventName,
+                      }}
                       isSecondary={isSecondary}
                     >
                       {button.content}
                     </Button>
-                  </WrapItem>
+                  </div>
                 )
               }
             })}
-          </Wrap>
+          </Flex>
         )}
         {children}
-      </Box>
+      </div>
       <Center
-        flex="1 1 50%"
-        maxWidth={{ base: "560px", lg: "624px" }}
-        mt={{ base: 0, lg: 12 }}
-        ms={{ base: 0, lg: 12 }}
-        w="full"
-        alignSelf="center"
+        className={cn(
+          "flex-[1_1_50%]",
+          "max-w-[560px] lg:max-w-[624px]",
+          "mt-0 lg:mt-12",
+          "ms-0 lg:ms-12",
+          "w-full self-center"
+        )}
       >
         <Image
           src={image}
@@ -168,7 +145,7 @@ const PageHero = ({
         />
       </Center>
     </Flex>
-  </Box>
+  </div>
 )
 
 export default PageHero

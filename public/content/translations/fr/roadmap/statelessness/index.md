@@ -72,7 +72,7 @@ Pour que cela soit possible, les [arbres de Verkle](/roadmap/verkle-trees/) doiv
 
 L'absence d'état requiert que les constructeurs de blocs conservent une copie des données d'état complètes afin qu'ils puissent générer des témoins pouvant être utilisés pour vérifier le bloc. Les autres nœuds n'ont pas besoin d'accéder aux données d'état, toute l'information requise pour vérifier le bloc est disponible dans le témoin. Cela crée une situation où proposer un bloc est coûteux, mais vérifier le bloc est bon marché, ce qui implique que moins d'opérateurs vont faire fonctionner un bloc proposant des noeuds. Cependant, la décentralisation des proposants de blocs n'est pas critique tant qu'autant de participants que possible peuvent vérifier que les blocs qu'ils proposent sont valides.
 
-<ButtonLink variant="outline-color" to="https://notes.ethereum.org/WUUUXBKWQXORxpFMlLWy-w#So-why-is-it-ok-to-have-expensive-proposers">En lire plus dans les notes de Dankrad</ButtonLink>
+<ButtonLink variant="outline-color" href="https://notes.ethereum.org/WUUUXBKWQXORxpFMlLWy-w#So-why-is-it-ok-to-have-expensive-proposers">En lire plus dans les notes de Dankrad</ButtonLink>
 </ExpandableCard>
 
 Les proposants de bloc utilisent les données d'état pour créer des « témoins » - l'ensemble minimal de données qui prouvent les valeurs de l'état qui sont modifiées par les transactions dans un bloc. Les autres validateurs ne détiennent pas l'état, ils ne stockent que la racine de l'état (une empreinte numérique de l'état complet). Ils reçoivent un bloc et un témoin et les utilisent pour mettre à jour leur racine de l'état. Cela rend un nœud validant extrêmement léger.

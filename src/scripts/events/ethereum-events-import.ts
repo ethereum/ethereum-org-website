@@ -29,7 +29,7 @@ async function getPageMetadata(url: string): Promise<Record<string, string>> {
   }
 }
 
-export async function EthereumEventsImport() {
+export async function EthereumEventsImport(year: number) {
   const googleApiKey = process.env.GOOGLE_API_KEY
   const sheetId = "1NEu_FCc1hnGAuRgPmbXXpf0h2lCrCOlMKbbFEqgkVDQ"
 
@@ -39,9 +39,8 @@ export async function EthereumEventsImport() {
   }
 
   console.log("Importing Ethereum Events from Google Sheet")
-  const currentYear = new Date().getFullYear()
   const res = await fetch(
-    `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${currentYear}%20Ethereum%20Events!B:H?majorDimension=COLUMNS&key=${googleApiKey}`
+    `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${year}%20Ethereum%20Events!B:H?majorDimension=COLUMNS&key=${googleApiKey}`
   )
   const data = await res.json()
 
@@ -67,8 +66,8 @@ export async function EthereumEventsImport() {
 
     let start, end
     try {
-      start = Date.parse(`${startDate}, ${currentYear} GMT`)
-      end = Date.parse(`${endDate}, ${currentYear} GMT`)
+      start = Date.parse(`${startDate}, ${year} GMT`)
+      end = Date.parse(`${endDate}, ${year} GMT`)
       if (Number.isNaN(start) || Number.isNaN(end)) continue
     } catch (e) {
       console.log("Invalid date", i[0])
@@ -93,7 +92,7 @@ export async function EthereumEventsImport() {
       title: title,
       startDate: new Date(start).toISOString().substring(0, 10),
       endDate: new Date(end).toISOString().substring(0, 10),
-      to: websiteUrl,
+      href: websiteUrl,
       location: location,
       description: description,
       imageUrl: imageUrl,

@@ -17,7 +17,7 @@ Az Ethereum fejlesztői előtt álló kihívás az, hogy a jelenlegi [proof-of-s
 
 A [KZG elköteleződési sémák](/roadmap/danksharding/#what-is-kzg) számos helyen megtalálhatók az Ethereumban, hogy kriptográfiai titkokat állítsanak elő, és ezek sebezhetők a kvantummal szemben. Jelenleg ezt úgy kerülik meg, hogy bizalmat igénylő összeállítást használnak, tehát több entitás állítja elő a véletlenszerűséget, amit nem tud a kvantum számítógép visszakövetni. Azonban az ideális megoldás a kvantumbiztos kriptográfia lenne. Két vezető megközelítés létezik, amely képes lenne a BLS-sémát helyettesíteni: a [STARK-alapú](https://hackmd.io/@vbuterin/stark_aggregation) és a [háló alapú](https://medium.com/asecuritysite-when-bob-met-alice/so-what-is-lattice-encryption-326ac66e3175) aláírás. **Ezek kutatása és prototípusa még folyamatban van**.
 
-<ButtonLink variant="outline-color" to="/roadmap/danksharding#what-is-kzg"> Tudjon meg többet a KZG-ről és a bizalmat igénylő összeállításról</ButtonLink>
+<ButtonLink variant="outline-color" href="/roadmap/danksharding#what-is-kzg"> Tudjon meg többet a KZG-ről és a bizalmat igénylő összeállításról</ButtonLink>
 
 ## Egyszerűbb és hatékonyabb Ethereum {#simpler-more-efficient-ethereum}
 
@@ -29,7 +29,7 @@ Hasonlóan, az Ethereum-kliensek más részeit is frissíteni lehet. Például a
 
 ## Jelenlegi helyzet {#current-progress}
 
-Az Ethereum jövőbiztosságának biztosításához szükséges frissítések többsége **még a kutatási fázisban van, és több év múlva is lehet** a megvalósítás. Az olyan fejlesztések, mint a SELF-DESTRUCT eltávolítása, valamint a végrehajtási és konszenzusos kliensben lévő tömörítési séma egységesítése valószínűleg hamarabb megtörténik, mint a kvantumnak ellenálló kriptográfia megvalósítása.
+Az Ethereum jövőbiztosságának biztosításához szükséges frissítések többsége **még a kutatási fázisban van, és több év múlva is lehet** a megvalósítás. Az olyan frissítések, mint a SELFDESTRUCT eltávolítása, valamint a végrehajtási és konszenzusos kliensben lévő tömörítési séma egységesítése valószínűleg hamarabb megtörténik, mint a kvantumnak ellenálló kriptográfia megvalósítása.
 
 **További olvasnivaló**
 

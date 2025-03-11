@@ -20,7 +20,7 @@ const meta = {
   },
   decorators: [
     (Story) => (
-      <Center className='flex-col min-h-[100vh]'>
+      <Center className="min-h-[100vh] flex-col">
         <Story />
       </Center>
     ),
@@ -31,7 +31,7 @@ export default meta
 
 type Story = StoryObj<typeof meta>
 
-const headings = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'] as const 
+const headings = ["h1", "h2", "h3", "h4", "h5", "h6"] as const
 
 export const Heading: Story = {
   render: () => (
@@ -42,9 +42,7 @@ export const Heading: Story = {
       </div>
       <Stack>
         {headings.map((Heading) => (
-            <Heading key={Heading}>
-              {`${Heading} base component`}
-            </Heading>
+          <Heading key={Heading}>{`${Heading} base component`}</Heading>
         ))}
       </Stack>
     </>

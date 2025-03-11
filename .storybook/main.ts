@@ -1,5 +1,6 @@
+import path from "path"
+
 import TsconfigPathsPlugin from "tsconfig-paths-webpack-plugin"
-import { propNames } from "@chakra-ui/react"
 import type { StorybookConfig } from "@storybook/nextjs"
 
 /**
@@ -17,8 +18,8 @@ import type { StorybookConfig } from "@storybook/nextjs"
 const config: StorybookConfig = {
   stories: [
     "../src/components/**/*.stories.{ts,tsx}",
-    "../src/@chakra-ui/stories/*.stories.tsx",
     "../src/layouts/stories/*.stories.tsx",
+    "../src/styles/*.stories.tsx",
   ],
   addons: [
     "@storybook/addon-links",
@@ -29,9 +30,9 @@ const config: StorybookConfig = {
       },
     },
     "@storybook/addon-interactions",
-    "storybook-react-i18next",
     "@storybook/addon-themes",
     "@chromatic-com/storybook",
+    "storybook-next-intl",
   ],
   staticDirs: ["../public"],
   framework: {
@@ -41,12 +42,10 @@ const config: StorybookConfig = {
   docs: {
     autodocs: "tag",
   },
-  refs: {
-    "@chakra-ui/react": {
-      disable: true,
-    },
-  },
   webpackFinal: async (config) => {
+    config.module = config.module || {}
+    config.module.rules = config.module.rules || []
+
     if (config.resolve) {
       config.resolve.plugins = [
         ...(config.resolve.plugins || []),
@@ -54,29 +53,33 @@ const config: StorybookConfig = {
           extensions: config.resolve.extensions,
         }),
       ]
+
+      config.resolve.alias = {
+        ...config.resolve.alias,
+        "@/storybook/*": path.resolve(__dirname, "./.storybook/"),
+      }
     }
+
+    // This modifies the existing image rule to exclude .svg files
+    // since you want to handle those files with @svgr/webpack
+    const imageRule = config.module.rules.find((rule) =>
+      rule?.["test"]?.test(".svg")
+    )
+    if (imageRule) {
+      imageRule["exclude"] = /\.svg$/
+    }
+
+    // Configure .svg files to be loaded with @svgr/webpack
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: ["@svgr/webpack"],
+    })
+
     return config
   },
   typescript: {
     reactDocgenTypescriptOptions: {
       shouldExtractLiteralValuesFromEnum: true,
-      /**
-       * For handling bloated controls table of Chakra Props
-       *
-       * https://github.com/chakra-ui/chakra-ui/issues/2009#issuecomment-852793946
-       */
-      propFilter: (prop) => {
-        const excludedPropNames = propNames.concat([
-          "as",
-          "apply",
-          "sx",
-          "__css",
-        ])
-        const isStyledSystemProp = excludedPropNames.includes(prop.name)
-        const isHTMLElementProp =
-          prop.parent?.fileName.includes("node_modules") ?? false
-        return !(isStyledSystemProp || isHTMLElementProp)
-      },
     },
 
     reactDocgen: "react-docgen-typescript",

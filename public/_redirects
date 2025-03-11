@@ -28,6 +28,8 @@
 
 /nfts/ /en/nft/ 301!
 
+/payments/ /en/payments/ 301!
+
 /daos/ /en/dao/ 301!
 
 /layer2/ /en/layer-2/ 301!
@@ -174,6 +176,4 @@
 
 /*/deprecated-software /:splat/dapps/ 301!
 
-/*/developers/docs/smart-contracts/languages/ /:splat/developers/docs/smart-contracts/languages/
-
-/*/languages /:splat/developers/docs/programming-languages/ 301!
+/*/enterprise/private-ethereum/ /:splat/enterprise/ 301!

@@ -47,7 +47,7 @@ Aşağıda bazı mevcut SaaS sağlayıcıları bulunmaktadır. Bu hizmetlerde si
 
 <StakingProductsCardGrid category="saas" />
 
-Ağın güvenliğini iyileştirdiği ve riskinizi sınırladığı için [istemci çeşitliliğini](/developers/docs/nodes-and-clients/client-diversity/) desteklemenin önemini lütfen unutmayın. Çoğunluk istemcisi kullanımı sınırladığına dair kanıtları olan hizmetler;<em style={{ textTransform: "uppercase" }}>"yürütme istemcisi çeşitliliği"</em> ve <em style={{ textTransform: "uppercase" }}>"fikir birliği istemcisi çeşitliliği" ile belirtilir.</em>
+Ağın güvenliğini iyileştirdiği ve riskinizi sınırladığı için [istemci çeşitliliğini](/developers/docs/nodes-and-clients/client-diversity/) desteklemenin önemini lütfen unutmayın. Çoğunluk istemcisi kullanımının sınırlandığına dair kanıtları olan hizmetler, <em style={{ textTransform: "uppercase" }}>"yürütüm istemcisi çeşitliliği"</em> ve <em style={{ textTransform: "uppercase" }}>"fikir birliği istemcisi çeşitliliği"</em> ile gösterilir.
 
 ### Anahtar Üreticileri
 
@@ -64,31 +64,32 @@ Düzenlemeler sağlayıcıdan sağlayıcıya farklılık gösterecektir, ancak g
 <ExpandableCard title="Yani iki anahtar seti mi var?" eventCategory="SaasStaking" eventName="clicked so there are two sets of keys">
 Evet. Tüm hesaplar BLS <em> imzalama </em> ve BLS <em> para çekme </em> anahtarlarından oluşur. Doğrulayıcının zincirin durumunu tasdik etmesi, eşitleme kurullarına katılması ve bloklar önermesi için imzalama anahtarlarına, bir doğrulayıcı müşterisi tarafından kolayca erişilebilir olmalıdır. Bunların bir şekilde internete bağlı olması gerekir ve bu nedenle doğal olarak "kısayol" tuşları olarak kabul edilirler. Bu, doğrulayıcınızın onaylayabilmesi için bir gerekliliktir ve bu nedenle, para transfer etmek veya çekmek için kullanılan anahtarlar güvenlik nedeniyle ayrılmıştır.
 
-BLS para çekme anahtarları, hangi yürütme katmanı hesabının hisseleme ödüllerinin ve çıkış yapılan fonların gitmesi gerektiğini gösteren tek seferlik bir mesajı imzalamak için kullanılır. Bu mesaj bir kere yayınlandıktan sonra <em>BLS para çekme</em> anahtarlarına ihtiyaç duyulmaz. Bunun yerine, çekilen fonların kontrolü kalıcı bir şekilde verdiğiniz adrese devredilir. Bu kendi soğuk depolamanız tarafından güvenli kılınan bir çekim adresi ayarlayarak, başkası sizin doğrulayıcı imzalama anahtarlarınızı kontrol etse bile doğrulayıcı fonlarınızın riskini minimize eder.
+BLS para çekme anahtarları, hangi yürütme katmanı hesabının hisseleme ödüllerinin ve çıkış yapılan fonların gitmesi gerektiğini gösteren tek seferlik bir mesajı imzalamak için kullanılır. Bu mesaj bir kere yayınlandıktan sonra <em>BLS para çekme</em> anahtarlarına ihtiyaç duyulmaz. Bunun yerine, çekilen fonların kontrolü kalıcı bir şekilde verdiğiniz adrese devredilir. Bu kendi soğuk depolamanız tarafından güvenli kılınan bir para çekme adresi ayarlayarak, başkası sizin doğrulayıcı imzalama anahtarlarınızı kontrol etse bile doğrulayıcı fonlarınızın riskini minimize eder.
 
-Çekim bilgilerini güncellemek çekimi aktif hale getirmek için gerekli bir adımdır\*. Bu süreç sizin anımsatıcı güvenlik kelimenizi kullanarak çekim anahtarlarını oluşturmayı kapsar.
+Çekim bilgilerini güncellemek çekme işlemini aktif hale getirmek için gerekli bir adımdır\*. Bu süreç sizin anımsatıcı güvenlik kelimenizi kullanarak para çekme anahtarlarını oluşturmayı kapsar.
 
-<strong>Bu güvenlik kelimesini güvenli biçimde yedeklediğinizden emin olun, yoksa zamanı geldiğinde çekim anahtarlarınızı oluşturamazsınız.</strong>
+<strong>Bu güvenlik kelimesini güvenli biçimde yedeklediğinizden emin olun, yoksa zamanı geldiğinde para çekme anahtarlarınızı oluşturamazsınız.</strong>
 
-\*İlk yatırımında çekim adresi vermiş olan kilitleyicilerin bunu ayarlamasına gerek yoktur. Doğrulayıcınızı nasıl hazırlayacağınızla ilgili destek almak için SaaS sağlayıcınıza danışın.
+\*İlk yatırımında para çekme adresi vermiş olan kilitleyicilerin bunu ayarlamasına gerek yoktur. Doğrulayıcınızı nasıl hazırlayacağınızla ilgili destek almak için SaaS sağlayıcınıza danışın.
 </ExpandableCard>
 
 <ExpandableCard title="Ne zaman geri çekebilirim?" eventCategory="SaasStaking" eventName="clicked when can I withdraw">
-Kilitleme çekimleri Nisan 2023'teki Shanghai/Capella yükseltmesinde uygulanmıştır. Paydaşların (eğer ilk yatırımda verilmediyse) bir çekim adresi vermesi gerekir ve ödül ödemeleri periyodik olarak birkaç günde bir otomatik olarak dağıtılmaya başlayacaktır.
+Hisseleme çekimleri Nisan 2023'teki Shanghai/Capella yükseltmesinde uygulanmıştır. Paydaşların (eğer ilk yatırımda verilmediyse) bir para çekme adresi vermesi gerekir ve ödül ödemeleri periyodik olarak birkaç günde bir otomatik olarak dağıtılmaya başlayacaktır.
 
-Doğrulayıcılar ayrıca bir doğrulayıcı olarak tamamen çıkabilir, bu da kalan ETH bakiyelerinin çekim için kilidini kaldıracaktır. Bir yürütme çekim adresi sağlamış ve çıkış sürecini tamamlamış adresler sıradaki doğrulayıcı süpürmesinde çekim adresine tüm bakiyelerini alacaklardır.
+Doğrulayıcılar ayrıca bir doğrulayıcı olarak tamamen çıkabilir, bu da kalan ETH bakiyelerinin çekim için kilidini kaldıracaktır. Bir yürütme çekim adresi sağlamış ve çıkış sürecini tamamlamış adresler sıradaki doğrulayıcı süpürmesinde para çekme adresine tüm bakiyelerini alacaklardır.
 
-<ButtonLink to="/staking/withdrawals/">Hisseleme para çekmeleri hakkında daha fazlası</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">Hisseleme para çekme işlemleri hakkında daha fazlası</ButtonLink>
 </ExpandableCard>
 
 <ExpandableCard title="Kesik yersem ne olur?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">
 Bir SaaS sağlayıcısı kullanarak, düğümünüzün çalışmasını başka birine emanet ediyorsunuz. Bu, sizin kontrolünüzde olmayan düşük düğüm performansı riskiyle birlikte gelir. Doğrulayıcınızın kesintiye uğraması durumunda, doğrulayıcı bakiyeniz cezalandırılacak ve doğrulayıcı havuzundan zorla kaldırılacaktır.
 
-Kesinti/çıkış sürecinin tamamlanmasından sonra, bu fonlar doğrulayıcıya atanmış olan çekim adresine transfer edilecektir. Bu, aktif hale getirilmek için bir çekim adresinin sağlanmasını gerektirir. Bu ilk yatırımda sağlanabilir. Eğer sağlanmadıysa, doğrulayıcı çekim anahtarları çekim adresini belirten bir mesajı imzalamak için kullanılmalıdır. Eğer herhangi bir çekim adresi sağlanmadıysa, sağlanana kadar fonlar kilitli kalacaktır.
+Kesinti/çıkış sürecinin tamamlanmasından sonra, bu fonlar doğrulayıcıya atanmış olan para çekme adresine transfer edilecektir. Bu, aktif hale getirilmek için bir para çekme adresinin sağlanmasını gerektirir. Bu ilk yatırımda sağlanabilir. Eğer sağlanmadıysa, doğrulayıcı para çekme anahtarları çekim adresini belirten bir mesajı imzalamak için kullanılmalıdır. Eğer herhangi bir para çekme adresi sağlanmadıysa, sağlanana kadar fonlar kilitli kalacaktır.
 
-Herhangi bir garanti veya sigorta seçeneği hakkında daha fazla detay için ya da nasıl çekim adresi sağlanacağıyla ilgili yönergeler için bireysel SaaS sağlayıcınızla iletişime geçin. Doğrulayıcı kurulumunuzun tam kontrolünün sizde olmasını tercih ediyorsanız, <a href="/staking/solo/">ETH'nizi tek başına nasıl stake edeceğiniz hakkında daha fazla bilgi edinin</a>.
+Herhangi bir garanti veya sigorta seçeneği hakkında daha fazla detay için ya da nasıl para çekme adresi sağlanacağıyla ilgili yönergeler için bireysel SaaS sağlayıcınızla iletişime geçin. Doğrulayıcı kurulumunuzun tam kontrolünün sizde olmasını tercih ediyorsanız, <a href="/staking/solo/">ETH'nizi tek başına nasıl stake edeceğiniz hakkında daha fazla bilgi edinin</a>.
 </ExpandableCard>
 
 ## Daha fazla bilgi {#further-reading}
 
+- [Ethereum Hisseleme Dizini](https://www.staking.directory/) - _Eridian ve Spacesider_
 - [Staking hizmetlerini değerlendirmek](https://www.attestant.io/posts/evaluating-staking-services/) - _Jim McDonald 2020_

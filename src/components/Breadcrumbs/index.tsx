@@ -1,19 +1,24 @@
-import { useRouter } from "next/router"
-import { useTranslation } from "next-i18next"
+import { Fragment } from "react"
+import { useLocale } from "next-intl"
+
+import type { Lang } from "@/lib/types"
+
+import { isLangRightToLeft } from "@/lib/utils/translations"
+
 import {
   Breadcrumb,
   BreadcrumbItem,
   BreadcrumbLink,
-  type BreadcrumbProps as ChakraBreadcrumbProps,
-} from "@chakra-ui/react"
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbProps,
+  BreadcrumbSeparator,
+} from "../ui/breadcrumb"
 
-import type { Lang } from "@/lib/types"
+import { useTranslation } from "@/hooks/useTranslation"
+import { usePathname } from "@/i18n/routing"
 
-import { BaseLink } from "@/components/Link"
-
-import { isLangRightToLeft } from "@/lib/utils/translations"
-
-export type BreadcrumbsProps = ChakraBreadcrumbProps & {
+export type BreadcrumbsProps = BreadcrumbProps & {
   slug: string
   startDepth?: number
 }
@@ -38,10 +43,11 @@ type Crumb = {
 // ]
 const Breadcrumbs = ({ slug, startDepth = 0, ...props }: BreadcrumbsProps) => {
   const { t } = useTranslation("common")
-  const { locale, asPath } = useRouter()
+  const locale = useLocale()
+  const pathname = usePathname()
   const dir = isLangRightToLeft(locale! as Lang) ? "rtl" : "ltr"
 
-  const hasHome = asPath !== "/"
+  const hasHome = pathname !== "/"
   const slugChunk = slug.split("/")
   const sliced = slugChunk.filter((item) => !!item)
 
@@ -65,21 +71,28 @@ const Breadcrumbs = ({ slug, startDepth = 0, ...props }: BreadcrumbsProps) => {
 
   return (
     <Breadcrumb {...props} dir={dir}>
-      {crumbs.map(({ fullPath, text }) => {
-        const isCurrentPage = slug === fullPath
-        return (
-          <BreadcrumbItem key={fullPath} isCurrentPage={isCurrentPage}>
-            <BreadcrumbLink
-              as={BaseLink}
-              to={fullPath}
-              isPartiallyActive={isCurrentPage}
-              textTransform="uppercase"
-            >
-              {text}
-            </BreadcrumbLink>
-          </BreadcrumbItem>
-        )
-      })}
+      <BreadcrumbList>
+        {crumbs.map(({ fullPath, text }) => {
+          const normalizePath = (path) => path.replace(/\/$/, "") // Remove trailing slash
+          const isCurrentPage = normalizePath(slug) === normalizePath(fullPath)
+          return (
+            <Fragment key={fullPath}>
+              <BreadcrumbItem>
+                {isCurrentPage ? (
+                  <BreadcrumbPage>{text}</BreadcrumbPage>
+                ) : (
+                  <BreadcrumbLink href={fullPath}>{text}</BreadcrumbLink>
+                )}
+              </BreadcrumbItem>
+              {!isCurrentPage && (
+                <BreadcrumbSeparator className="me-[0.625rem] ms-[0.625rem] text-gray-400">
+                  /
+                </BreadcrumbSeparator>
+              )}
+            </Fragment>
+          )
+        })}
+      </BreadcrumbList>
     </Breadcrumb>
   )
 }

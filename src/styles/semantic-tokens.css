@@ -1,0 +1,228 @@
+@tailwind base;
+
+/* SEMANTIC TOKEN DECLARATIONS: Abstracted from color palettes for theming */
+
+@layer base {
+  /* Light mode (default) token declarations */
+  :root {
+    --body: var(--gray-900);
+    --body-medium: var(--gray-500);
+    --body-light: var(--gray-200);
+    --body-inverse: var(--white);
+
+    --body-menu: var(--gray-400);
+    --body-menu-low: var(--gray-400);
+    --body-menu-medium: var(--gray-500);
+    --body-menu-high: var(--gray-700);
+
+    --disabled: var(--gray-400);
+
+    --background: var(--white);
+    --background-highlight: var(--gray-50);
+    --background-low: var(--gray-100);
+    --background-medium: var(--gray-200);
+    --background-high: var(--gray-300);
+
+    --border: var(--gray-200);
+    --border-high-contrast: var(--gray-400);
+    --border-low-contrast: var(--gray-50);
+    --border-hover: var(--gray-300);
+
+    --primary: var(--purple-600);
+    --primary-high-contrast: var(--purple-800);
+    --primary-low-contrast: var(--purple-100);
+    --primary-hover: var(--purple-500);
+    --primary-visited: var(--purple-700);
+    --primary-action: var(--purple-600);
+    --primary-action-hover: var(--purple-500);
+
+    --accent-a: var(--blue-600);
+    --accent-a-hover: var(--blue-500);
+
+    --accent-b: var(--pink-600);
+    --accent-b-hover: var(--pink-500);
+
+    --accent-c: var(--teal-700);
+    --accent-c-hover: var(--teal-600);
+
+    --success: var(--green-600);
+    --success-light: var(--green-100);
+    --success-dark: var(--green-900);
+    --success-border: var(--green-700);
+
+    --error: var(--red-700);
+    --error-light: var(--red-100);
+    --error-dark: var(--red-900);
+    --error-border: var(--red-800);
+
+    --warning: var(--yellow-300);
+    --warning-light: var(--yellow-100);
+    --warning-dark: var(--yellow-900);
+    --warning-border: var(--yellow-700);
+
+    /**
+    /* Gradients (radial, conic, or linear over 3 stops)
+    /* For linear-gradient up to 3 stops, use Tailwind classes
+    /* https://tailwindcss.com/docs/background-image#linear-gradients
+    */
+    --radial-a-opacity-1: 0.08;
+    --radial-a-opacity-2: 0.24;
+    --radial-a: radial-gradient(
+      127.67% 82.36% at 50% -30.36%,
+      hsla(var(--purple-500), var(--radial-a-opacity-1)) 0%,
+      hsla(var(--purple-500), var(--radial-a-opacity-2)) 33%,
+      hsla(var(--blue-500), var(--radial-a-opacity-1)) 66%,
+      transparent 100%
+    );
+
+    --linear-bug-bounty-title: linear-gradient(
+      to left,
+      #f7cbc0 0%,
+      #f4b1ab 29.8%,
+      #8476d9 49.78%,
+      #85acf9 54.14%,
+      #1c1ce1 61.77%,
+      #000000 69.77%
+    );
+
+    /* Shadows */
+    --shadow-color-a: hsla(var(--purple-800), 0.02);
+    --shadow-color-b: hsla(var(--red-800), 0.04);
+    --shadow-color-c: hsla(var(--purple-700), 0.04);
+    --shadow-color-d: hsla(var(--purple-100), 0.08);
+
+    --shadow-svg-button-link-1: 2px 2px 12px 1px var(--shadow-color-a);
+    --shadow-svg-button-link-2: 12px 16px 12px -3px var(--shadow-color-a);
+    --shadow-svg-button-link-3: 24px 32px 24px -6px var(--shadow-color-a);
+    --shadow-svg-button-link-4: 32px 40px 40px -12px var(--shadow-color-b);
+    --shadow-svg-button-link-1-hover: 0px 0px 12px 2px var(--shadow-color-a);
+    --shadow-svg-button-link-2-hover: 0px 0px 12px 2px var(--shadow-color-a);
+    --shadow-svg-button-link-3-hover: 0px 0px 24px 2px var(--shadow-color-a);
+    --shadow-svg-button-link-4-hover: 0px 0px 40px 2px var(--shadow-color-b);
+
+    --shadow-body-color-a: hsla(var(--gray-900), 0.25);
+    --shadow-body-color-b: hsla(var(--gray-900), 0.05);
+    --shadow-body-md: 0px 4px 4px 0px var(--shadow-body-color-a);
+    --shadow-body-lg: 0px -6px 10px 0px var(--shadow-body-color-b);
+
+    --shadow-window-box-1-opacity: 0.02;
+    --shadow-window-box-2-opacity: 0.02;
+    --shadow-window-box-3-opacity: 0.02;
+    --shadow-window-box-4-opacity: 0.04;
+    --shadow-window-box-5-opacity: 0.08;
+    --shadow-window-box-1: 0px 2px 12px 1px
+      hsla(var(--purple-800), var(--shadow-window-box-1-opacity));
+    --shadow-window-box-2: 0px 16px 12px -3px hsla(var(--purple-800), var(--shadow-window-box-2-opacity));
+    --shadow-window-box-3: 0px 32px 24px -6px hsla(var(--purple-800), var(--shadow-window-box-3-opacity));
+    --shadow-window-box-4: 0px 40px 40px -12px hsla(var(--purple-700), var(--shadow-window-box-4-opacity));
+    --shadow-window-box-5: 0px -64px 120px 80px hsla(var(--purple-100), var(--shadow-window-box-5-opacity));
+
+    /* Staking */
+    --staking-gold: 43, 84%, 40%;
+    --staking-gold-fill: 40, 88%, 97%;
+    --staking-green: 151, 80%, 35%;
+    --staking-green-fill: 80, 47%, 96%;
+    --staking-blue: 206, 90%, 45%;
+    --staking-blue-fill: 142, 65%, 97%;
+    --staking-red: 4, 36%, 46%;
+    --staking-red-fill: 140, 27%, 98%;
+  }
+
+  /* Dark mode token declarations */
+  .dark {
+    --body: var(--gray-100);
+    --body-medium: var(--gray-400);
+    --body-light: var(--gray-600);
+    --body-inverse: var(--black);
+
+    --body-menu: var(--gray-400);
+    --body-menu-low: var(--gray-300);
+    --body-menu-medium: var(--gray-300);
+    --body-menu-high: var(--gray-300);
+
+    --disabled: var(--gray-500);
+
+    --background: var(--black);
+    --background-highlight: var(--gray-900);
+    --background-low: var(--gray-700);
+    --background-medium: var(--gray-600);
+    --background-high: var(--gray-800);
+
+    --border: var(--gray-600);
+    --border-high-contrast: var(--gray-300);
+    --border-low-contrast: var(--black);
+    --border-hover: var(--gray-500);
+
+    --primary: var(--purple-400);
+    --primary-high-contrast: var(--purple-200);
+    --primary-low-contrast: var(--purple-900);
+    --primary-hover: var(--purple-300);
+    --primary-visited: var(--purple-500);
+
+    --accent-a: var(--blue-400);
+    --accent-a-hover: var(--blue-300);
+
+    --accent-b: var(--pink-400);
+    --accent-b-hover: var(--pink-300);
+
+    --accent-c: var(--teal-400);
+    --accent-c-hover: var(--teal-300);
+
+    --success: var(--green-600);
+    --success-light: var(--green-100);
+    --success-dark: var(--green-900);
+    --success-border: var(--green-400);
+
+    --error: var(--red-700);
+    --error-light: var(--red-100);
+    --error-dark: var(--red-900);
+    --error-border: var(--red-300);
+
+    --warning: var(--yellow-300);
+    --warning-light: var(--yellow-100);
+    --warning-dark: var(--yellow-900);
+    --warning-border: var(--yellow-200);
+
+    /* Gradients (dark mode adjustments) */
+    --radial-a-opacity-1: 0.16;
+    --radial-a-opacity-2: 0.48;
+
+    --linear-bug-bounty-title: linear-gradient(
+      to left,
+      hsl(12, 77%, 86%) 0%,
+      #fbeae3 17.81%,
+      #f4b1ab 29.8%,
+      #8476d9 49.78%,
+      #8db4ff 69.77%
+    );
+
+    /* Shadows (dark mode adjustments) */
+    --shadow-color: hsla(var(--white), 0.04);
+    --shadow-svg-button-link-1: -2px 2px 12px 1px var(--shadow-color);
+    --shadow-svg-button-link-2: -6px 6px 12px -3px var(--shadow-color);
+    --shadow-svg-button-link-3: -12px 12px 24px -6px var(--shadow-color);
+    --shadow-svg-button-link-4: -20px 20px 40px -12px var(--shadow-color);
+    --shadow-svg-button-link-1-hover: 0px 0px 12px 2px var(--shadow-color);
+    --shadow-svg-button-link-2-hover: 0px 0px 12px 2px var(--shadow-color);
+    --shadow-svg-button-link-3-hover: 0px 0px 24px 2px var(--shadow-color);
+    --shadow-svg-button-link-4-hover: 0px 0px 40px 2px var(--shadow-color);
+    --shadow-body-color-a: hsla(var(--gray-600), 0.25);
+    --shadow-body-color-b: hsla(var(--gray-600), 0.05);
+
+    --shadow-window-box-1-opacity: 0.1;
+    --shadow-window-box-2-opacity: 0.08;
+    --shadow-window-box-3-opacity: 0.16;
+    --shadow-window-box-4-opacity: 0.06;
+    --shadow-window-box-5-opacity: 0.06;
+
+    /* Staking */
+    --staking-gold: #f2bb2f;
+    --staking-gold-fill: #373228;
+    --staking-green: #49de96;
+    --staking-green-fill: #30342b;
+    --staking-blue: #a9d3f2;
+    --staking-blue-fill: #2b352f;
+    --staking-red: #d6bbb9;
+    --staking-red-fill: #313432;
+  }
+}

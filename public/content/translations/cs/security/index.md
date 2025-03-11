@@ -6,101 +6,9 @@ lang: cs
 
 # Bezpečnost a předcházení podvodům v Ethereu {#introduction}
 
-S rostoucím zájmem o kryptoměny je nezbytné osvojit si osvědčené postupy při jejich používání. Kryptoměny mohou být zábavné a vzrušující, ale existují i vážná rizika. Pokud si předem dáte tuhle malou práci, můžete tato rizika zmírnit.
+Rostoucí zájem o kryptoměny s sebou přináší rostoucí riziko ze strany podvodníků a hackerů. Tento článek uvádí některé osvědčené postupy ke zmírnění těchto rizik.
 
-<Divider />
-
-## Bezpečnost na internetu v kostce {#web-security}
-
-### Používejte silná hesla {#use-strong-passwords}
-
-[Více než 80 % případů napadení účtu je důsledkem slabých nebo ukradených hesel](https://cloudnine.com/ediscoverydaily/electronic-discovery/80-percent-hacking-related-breaches-related-password-issues-cybersecurity-trends/). Pro zabezpečení účtů je nejlepší dlouhá kombinace znaků, čísel a symbolů.
-
-Častou chybou, které se lidi dopouštějí, je používání kombinace dvou až tří běžných, ve slovníku příbuzných, slov. Taková hesla jsou nezabezpečená, protože jsou náchylná k jednoduché hackerské technice známé jako [slovníkový útok](https://wikipedia.org/wiki/Dictionary_attack).
-
-```md
-Příklad slabého hesla: CuteFluffyKittens!
-
-Příklad silného hesla: ymv\*azu.EAC8eyp8umf
-```
-
-Další častou chybou je používání hesel, která lze snadno uhodnout nebo zjistit pomocí [sociálního inženýrství](https://wikipedia.org/wiki/Social_engineering_(security)). Uvádění jména za svobodna vaší matky, jmen dětí nebo domácích mazlíčků nebo dat narození v hesle není bezpečné a zvyšuje riziko prolomení hesla.
-
-#### Čeho se držet, když vytváříte heslo: {#good-password-practices}
-
-- Vytvářejte hesla tak dlouhá, jak to umožňuje generátor hesel nebo vyplňovaný formulář
-- Používejte kombinaci velkých a malých písmen, číslic a symbolů
-- V hesle nepoužívejte osobní údaje, například příjmení
-- Vyhněte se běžným slovům ze slovníku
-
-[Více o vytváření silných hesel](https://terranovasecurity.com/how-to-create-a-strong-password-in-7-easy-steps/)
-
-### Používejte pro všechno jedinečná hesla {#use-unique-passwords}
-
-Silné heslo neposkytuje takovou ochranu, pokud je heslo odhaleno při úniku dat. Webová stránka [Have I Been Pwned](https://haveibeenpwned.com) vám umožňuje zkontrolovat, zda se vaše účty podílely na narušení bezpečnosti dat uložených v jejich databázi. Pokud ano, **měli byste okamžitě změnit vaše uniklá hesla**. Používání jedinečných hesel pro každý účet snižuje riziko, že hackeři získají přístup ke všem vašim účtům, pokud je jedno z vašich hesel prozrazeno.
-
-### Používejte správce hesel {#use-password-manager}
-
-<InfoBanner emoji=":bulb:">
-  <div>
-    Správce hesel se postará o vytvoření silných a jedinečných hesel a jejich zapamatování! <strong>Vřele</strong> doporučujeme nějaký používat, většina z nich je zdarma!
-  </div>
-</InfoBanner>
-
-Pamatovat si silná a jedinečná hesla pro každý účet není ideální. Správce hesel nabízí bezpečné šifrované úložiště všech vašich hesel, ke kterým máte přístup prostřednictvím jednoho silného hlavního hesla. Při registraci do nové služby také doporučují silná hesla, abyste si nemuseli vytvářet vlastní. Mnoho správců hesel vám také oznámí, zda jste byli součástí úniku dat, a umožní vám změnit hesla dříve, než dojde ke škodlivým útokům.
-
-![Příklad použití správce hesel](./passwordManager.png)
-
-#### Vyzkoušejte správce hesel: {#try-password-manager}
-
-- [Bitwarden](https://bitwarden.com/)
-- [KeePass](https://keepass.info/)
-- [1Password](https://1password.com/)
-- Nebo se podívejte na další [doporučené správce hesel](https://www.privacytools.io/secure-password-manager)
-
-### Používejte dvoufaktorové ověření {#two-factor-authentication}
-
-Chcete-li prokázat, že vy jste skutečně vy, existují různé jedinečné důkazy, které lze použít k ověření. Tyto důkazy se nazývají **faktory** a jsou to tyto tři hlavní:
-
-- Něco, co víte (jako třeba heslo nebo bezpečností otázku)
-- Něco, co jste (jako třeba otisk prstu nebo sken duhovky/obličeje)
-- Něco, co vlastníte (bezpečnostní klíč nebo ověřovací aplikace v telefonu)
-
-Používání **dvoufaktorového ověřování (2FA)** poskytuje další *bezpečnostní faktor* pro vaše online účty, takže k přístupu k účtu nestačí znát pouze heslo (něco, co znáte). Druhým faktorem je nejčastěji náhodný šestimístný kód, známý jako **jednorázové heslo (TOTP)**, ke kterému získáte přístup prostřednictvím autentizační aplikace, jako je Google Authenticator nebo Authy. Fungují jako "něco, co vlastníte", protože seed, který generuje časovaný kód, je uložen ve vašem zařízení.
-
-<InfoBanner emoji=":lock:">
-  <div>
-    Poznámka: Používání 2FA pomocí SMS je náchylné k 
-    <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">
-      odcizení SIM karty
-    </a>
-     and není bezpečné. Pro nejlepší ochranu používejte službu jako{" "}
-    <a href="https://mashable.com/article/how-to-set-up-google-authenticator">
-      Google Authenticator
-    </a>
-     nebo <a href="https://authy.com/">Authy</a>.
-  </div>
-</InfoBanner>
-
-#### Bezpečnostní klíče {#security-keys}
-
-Ti, kteří chtějí udělat další krok v oblasti 2FA, mohou zvážit použití bezpečnostního klíče. Bezpečnostní klíče jsou fyzická hardwarová ověřovací zařízení, která fungují stejně jako ověřovací aplikace. Nejbezpečnějším způsobem 2FA je použití bezpečnostního klíče. Mnoho těchto klíčů využívá standard FIDO Universal 2nd Factor (U2F). [Zjistěte více o FIDO U2F](https://www.yubico.com/authentication-standards/fido-u2f/).
-
-Podívejte se na další informace o 2FA:
-
-<YouTube id="m8jlnZuV1i4" start="3479" />
-
-### Odinstalujte rozšíření prohlížeče {#uninstall-browser-extensions}
-
-Rozšíření prohlížeče, jako jsou rozšíření pro Chrome nebo doplňky pro Firefox, mohou rozšířit užitečné funkce prohlížeče a zlepšit uživatelský komfort, ale jsou spojena s riziky. Ve výchozím nastavení si většina rozšíření prohlížeče vyžádá přístup ke "čtení a změně dat webu", což jim umožňuje dělat s vašimi daty téměř cokoli. Rozšíření Chrome jsou vždy automaticky aktualizována, takže dříve bezpečné rozšíření může být později aktualizováno a obsahovat škodlivý kód. Většina rozšíření prohlížeče se nesnaží ukrást vaše data, ale měli byste vědět, že to mohou udělat.
-
-#### Zůstaňte v bezpečí tím, že: {#browser-extension-safety}
-
-- Budete instalovat rozšíření prohlížeče pouze z důvěryhodných zdrojů
-- Budete odstraňovat nepoužívaná rozšíření prohlížeče
-- Budete instalovat rozšíření Chrome lokálně, abyste zastavili automatické aktualizace (Pokročilé)
-
-[Další informace o rizicích rozšíření prohlížeče](https://www.kaspersky.co.uk/blog/browser-extensions-security/12750/)
+**Pamatujte: Nikdo z ethereum.org vás nikdy nebude kontaktovat. Neodpovídejte na e-maily, které tvrdí, že jsou od oficiální podpory Etherea.**
 
 <Divider />
 
@@ -108,32 +16,32 @@ Rozšíření prohlížeče, jako jsou rozšíření pro Chrome nebo doplňky pr
 
 ### Rozšiřte své znalosti {#level-up-your-knowledge}
 
-Jedním z největších důvodů, proč se lidé nechávají v kryptu podvádět, je obecně nedostatečné porozumění. Pokud například nechápete, že síť Ethereum je decentralizovaná a nikdo ji nevlastní, můžete se snadno stát obětí někoho, kdo se vydává za pracovníka zákaznického servisu a slibuje vám vrácení ztracených ETH výměnou za vaše privátní klíče. Vzdělávat se v oblasti fungování Etherea se vyplatí.
+Nedorozumění ohledně toho, jak kryptoměny fungují, mohou vést k nákladným chybám. Např. pokud se někdo vydává za pracovníka zákaznického servisu, který vám může vrátit ztracené ETH výměnou za vaše privátní klíče, využívá toho, že lidé nerozumí tomu, že Ethereum je decentralizovaná síť, která takovou funkčnost nemá. Vzdělávat se v oblasti fungování Etherea se vyplatí.
 
-<DocLink to="/what-is-ethereum/">
+<DocLink href="/what-is-ethereum/">
   Co je to Ethereum?
 </DocLink>
 
-<DocLink to="/eth/">
+<DocLink href="/eth/">
   Co je Ether?
 </DocLink>
 <Divider />
 
 ## Zabezpečení peněženky {#wallet-security}
 
-### Neposkytujte své privátní klíče {#protect-private-keys}
+### Nesdílejte své privátní klíče {#protect-private-keys}
 
-**Nikdy z žádného důvodu nesdílejte své privátní klíče!**
+**Nikdy, za žádných okolností, nesdílejte své privátní klíče!**
 
-Privátní klíč k vaší peněžence slouží jako heslo k vaší Ethereum peněžence. Je to jediná věc, která brání tomu, aby někdo, kdo zná adresu vaší peněženky, vybral z vašeho účtu veškerá aktiva!
+Privátní klíč k vaší peněžence slouží jako heslo k vaší peněžence Ethereum. Je to jediná věc, která brání tomu, aby někdo, kdo zná adresu vaší peněženky, vybral z vašeho účtu veškerá aktiva!
 
-<DocLink to="/wallets/">
+<DocLink href="/wallets/">
   Co je Ethereum peněženka?
 </DocLink>
 
-#### Nepořizujte si snímky obrazovky s bezpečnostními frázemi/privátními klíči {#screenshot-private-keys}
+#### Nepořizujte si snímky obrazovky s bezpečnostními frázemi / privátními klíči {#screenshot-private-keys}
 
-Pořízením snímky obrazovky bezpečnostních frází nebo privátních klíčů riskujete, že je synchronizujete do cloudu a potenciálně je zpřístupníte hackerům. Získání privátních klíčů z cloudu je pro hackery běžným terčem útoku.
+Pořízení snímku obrazovky s vašimi bezpečnostními frázemi nebo privátními klíči je může synchronizovat s poskytovatelem cloudových služeb, což by je mohlo zpřístupnit hackerům. Získání privátních klíčů z cloudu je běžným způsobem útoku hackerů.
 
 ### Používejte hardwarovou peněženku {#use-hardware-wallet}
 
@@ -148,9 +56,9 @@ Uchovávání privátních klíčů offline výrazně snižuje riziko napadení,
 
 ### Dvakrát zkontrolujte transakce před odesláním {#double-check-transactions}
 
-Častou chybou je náhodné odeslání kryptoměn na nesprávnou adresu peněženky. **Transakce odeslaná na Ethereu je nevratná.** Pokud neznáte majitele adresy a nepřesvědčíte ho, aby vám poslal vaše prostředky zpět, nebudete mít možnost je získat zpět.
+Častou chybou je náhodné odeslání kryptoměn na nesprávnou adresu peněženky. **Transakce odeslaná na Ethereu je nevratná.** Pokud neznáte vlastníka adresy a nepřesvědčíte ho, aby vám prostředky vrátil, nebudete schopni je získat zpět.
 
-Před odesláním transakce se vždy ujistěte, že adresa, na kterou odesíláte, přesně odpovídá adrese požadovaného příjemce. Při interakci s chytrým kontraktem se také doporučuje si před podpisem přečíst zprávu o transakci.
+Před odesláním transakce se vždy ujistěte, že adresa, na kterou odesíláte, přesně odpovídá adrese požadovaného příjemce. Při interakci s chytrým kontraktem je nejlepší si před podpisem přečíst zprávu o transakci.
 
 ### Nastavte si u chytrých kontraktů limity převodů {#spend-limits}
 
@@ -164,25 +72,35 @@ Mnoho Ethereum peněženek nabízí ochranu limitů, která chrání před vybí
 
 ## Běžné podvody {#common-scams}
 
-Podvodníci vždy hledají způsoby, jak vás připravit o peníze. Podvodníky nelze zcela zastavit, ale můžeme jim ztížit situaci tím, že budeme znát většinu používaných technik. Těchto podvodů existuje mnoho, ale obecně se řídí stejnými základními vzorci. Když už nic jiného, nezapomeňte:
+Podvodníky nelze zcela zastavit, ale můžeme jim ztížit situaci tím, že budeme znát většinu používaných technik. Těchto podvodů existuje mnoho, ale obecně se řídí stejnými základními vzorci. Když už nic jiného, nezapomeňte:
 
 - být vždy skeptičtí
 - že vám nikdo nedá ETH zdarma ani se slevou
 - že nikdo nepotřebuje přístup k vašim privátním klíčům nebo osobním údajům
 
+### Reklamní phishing na Twitteru {#ad-phishing}
+
+![Phishing v odkazech na Twitteru](./twitterPhishingScam.png)
+
+Existuje způsob, jak podvrhnout funkci náhledu (rozbalení) odkazu na Twitteru (také známém jako X) za účelem oklamání uživatele. Cílem je vyvolat v uživatelích dojem, že navštěvují legitimní web. Tato technika využívá mechanismus Twitteru pro generování náhledů URL adres sdílených v tweetech a ukazuje náhled například _z ethereum.org_ (viz výše), i když jsou tyto odkazy ve skutečnosti přesměrovány na škodlivý web.
+
+Vždy se ujistěte, že jste na správné doméně, obzváště poté, co kliknete na odkaz.
+
+[Další informace](https://harrydenley.com/faking-twitter-unfurling).
+
 ### Rozdávací podvod {#giveaway}
 
 Jedním z nejčastějších podvodů v oblasti kryptoměn je tzv. rozdávací podvod. Rozdávací podvod může mít mnoho podob, ale obecně funguje tak, že pokud pošlete ETH na uvedenou adresu peněženky, dostanete své ETH zpět, ale navíc zdvojnásobené. *Z tohoto důvodu je také známý jako podvod 2 za 1.*
 
-Tyto podvody obvykle stanovují omezenou dobu pro zúčastnění v rozdávání, aby podpořily špatné rozhodování a vyvolaly falešný pocit naléhavosti.
+Tyto podvody obvykle stanovují omezený čas pro možnost nároku na výhru, aby vytvořily falešný pocit naléhavosti.
 
-#### Podvody na sociálních médiích {#social-media-hacks}
+### Podvody na sociálních médiích {#social-media-hacks}
 
 K významnému případu došlo v červenci 2020, kdy byly nabourány účty významných osobností a organizací na Twitteru. Hacker zároveň na nabouraných účtech zveřejnil nabídku na rozdávání bitcoinů. Přestože byly klamavé tweety rychle zaznamenány a smazány, hackerům se přesto podařilo uniknout s 11 bitcoiny (v září 2021 to bylo 500 000 dolarů).
 
 ![Podvod na Twitteru](./appleTwitterScam.png)
 
-#### Rozdávání dárků od celebrit {#celebrity-giveaway}
+### Rozdávání dárků od celebrit {#celebrity-giveaway}
 
 Další častou formou podvodu je rozdávání dárků od celebrit. Podvodníci vezmou nahraný videorozhovor nebo konferenční přednášku celebrity a živě ji přenášejí na YouTube, aby to vypadalo, že celebrita poskytla živý videorozhovor a podpořila rozdávání kryptoměn.
 
@@ -236,9 +154,9 @@ Pokud obdržíte e-mail od neznámého odesílatele, nezapomeňte:
 
 ### Podvody s kryptomakléři {#broker-scams}
 
-Podvodní kryptomakléři tvrdí, že jsou specializovaní makléři s kryptoměnami, kteří vám nabídnou, že převezmou vaše peníze a investují je za vás. Tuto nabídku obvykle doprovázejí sliby nereálných výnosů. Poté, co podvodník obdrží vaše finanční prostředky, vás může vést dál a požádat vás o zaslání dalších prostředků, abyste nepřišli o další investiční zisky, nebo může úplně zmizet.
+Podvodní kryptomakléři tvrdí, že jsou specializovaní makléři s kryptoměnami, kteří vám nabídnou, že převezmou kontrolu nad vašimi penězi a investují je za vás. Poté, co podvodník obdrží vaše finanční prostředky, vás může vést dál a požádat vás o zaslání dalších prostředků, abyste nepřišli o další investiční zisky, nebo může úplně zmizet.
 
-Tito podvodní makléři vyhledávají své cíle využíváním falešných účtů na YouTube a začínáním zdánlivě přirozené konverzace o makléři. Tyto konverzace jsou často vysoce hodnocené, aby se zvýšila jejich legitimita, ale všechna hodnocení pocházejí od robotů.
+Tito podvodní makléři vyhledávají své cíle využíváním falešných účtů na YouTube a tím, že začínají zdánlivě přirozené konverzace o "makléři". Tyto konverzace jsou často vysoce hodnocené, aby se zvýšila jejich legitimita, ale všechna hodnocení pocházejí od robotů.
 
 **Neumožňujte cizím lidem na internetu, aby za vás investovali. Přijdete o své krypto.**
 
@@ -246,7 +164,7 @@ Tito podvodní makléři vyhledávají své cíle využíváním falešných ú�
 
 ### Podvody s kryptotěžebními pooly {#mining-pool-scams}
 
-Od září 2022 již těžba na Ethereu není možná. Podvody s těžebními pooly však stále existují. Podvody s těžebními pooly spočívají v tom, že vás nevyžádaně kontaktují lidé, kteří tvrdí, že vstupem do těžebního Ethereum poolu můžete dosáhnout vysokých zisků. Podvodník bude vznášet nároky a zůstane s vámi v kontaktu tak dlouho, jak bude potřeba. Podvodník se vás v podstatě bude snažit přesvědčit, že když se připojíte k těžebnímu Ethereum poolu, tak budou vaše kryptoměny použity k vytvoření ETH a že vám budou vyplaceny dividendy ve formě ETH. Nakonec zjistíte, že vaše kryptoměny přináší malé výnosy. Je to jen návnada, abyste investovali více. Nakonec budou všechny vaše finanční prostředky odeslány na neznámou adresu a podvodník buď zmizí, nebo v některých případech zůstane v kontaktu, jak se stalo v jednom z nedávných případů.
+Od září 2022 již těžba na Ethereu není možná. Podvody s těžebními pooly však stále existují. Podvody s těžebními pooly spočívají v tom, že vás nevyžádaně kontaktují lidé, kteří tvrdí, že vstupem do těžebního Ethereum poolu můžete dosáhnout vysokých zisků. Podvodník bude vznášet nároky a zůstane s vámi v kontaktu tak dlouho, jak bude potřeba. Podvodník se vás v podstatě bude snažit přesvědčit, že když se připojíte k těžebnímu poolu na Ethereu, budou vaše kryptoměny použity k vytvoření ETH a budou vám vyplaceny dividendy ve formě ETH. Poté uvidíte, že vaše kryptoměna přináší malé výnosy. Je to jen návnada, abyste investovali více. Nakonec budou všechny vaše finanční prostředky odeslány na neznámou adresu a podvodník buď zmizí, nebo v některých případech zůstane v kontaktu, jak se stalo v jednom z nedávných případů.
 
 Sečteno a podtrženo, buďte obezřetní vůči lidem, kteří vás kontaktují na sociálních sítích a žádají vás o účast v těžebním poolu. Jakmile o kryptoměny přijdete, jsou fuč.
 
@@ -263,6 +181,92 @@ Několik věcí k zapamatování:
 Airdropové podvody spočívají v tom, že podvodný projekt vám do peněženky airdropne aktivum (NFT, token) a pošle vás na podvodnou webovou stránku, kde si ho můžete vyzvednout. Při pokusu o vyzvednutí budete vyzváni, abyste se přihlásili pomocí vaší Ethereum peněženky a "schválili" transakci. Tato transakce kompromituje váš účet tím, že podvodníkovi odešle vaše veřejné a privátní klíče. Alternativní forma tohoto podvodu může spočívat v potvrzení transakce, která odešle finanční prostředky na účet podvodníka.
 
 [Více o airdropových podvodech](https://www.youtube.com/watch?v=LLL_nQp1lGk)
+
+<Divider />
+
+## Bezpečnost na internetu v kostce {#web-security}
+
+### Používejte silná hesla {#use-strong-passwords}
+
+[Více než 80 % případů napadení účtu je důsledkem slabých nebo ukradených hesel](https://cloudnine.com/ediscoverydaily/electronic-discovery/80-percent-hacking-related-breaches-related-password-issues-cybersecurity-trends/). Pro zabezpečení účtů je nejlepší dlouhá kombinace znaků, čísel a symbolů.
+
+Běžnou chybou je použití kombinace několika běžných, souvisejících slov. Taková hesla nejsou bezpečná, protože jsou náchylná k jednoduché hackerské technice zvané slovníkový útok.
+
+```md
+Příklad slabého hesla: CuteFluffyKittens!
+
+Příklad silného hesla: ymv\*azu.EAC8eyp8umf
+```
+
+Další častou chybou je používání hesel, která lze snadno uhodnout nebo zjistit pomocí [sociálního inženýrství](https://wikipedia.org/wiki/Social_engineering_(security)). Použití jména vaší matky za svobodna, jmen dětí nebo domácích mazlíčků nebo dat narození v hesle není bezpečné a zvyšuje riziko prolomení hesla.
+
+#### Čeho se držet, když vytváříte heslo: {#good-password-practices}
+
+- Vytvářejte hesla tak dlouhá, jak to umožňuje generátor hesel nebo vyplňovaný formulář
+- Používejte kombinaci velkých a malých písmen, číslic a symbolů
+- V hesle nepoužívejte osobní údaje, například příjmení
+- Vyhněte se běžným výrazům
+
+[Více o vytváření silných hesel](https://terranovasecurity.com/how-to-create-a-strong-password-in-7-easy-steps/)
+
+### Používejte pro všechno jedinečná hesla {#use-unique-passwords}
+
+Silné heslo, které bylo odhaleno při úniku dat, již není silným heslem. Webová stránka [Have I Been Pwned](https://haveibeenpwned.com) vám umožňuje zkontrolovat, zda vaše účty byly zahrnuty do veřejných úniků dat. Pokud ano, **okamžitě tato hesla změňte**. Používání jedinečných hesel pro každý účet snižuje riziko, že se hackeři dostanou ke všem vašim účtům, pokud jedno z vašich hesel bude kompromitováno.
+
+### Používejte správce hesel {#use-password-manager}
+
+<InfoBanner emoji=":bulb:">
+  <div>
+    Správce hesel se postará o vytvoření silných a jedinečných hesel a jejich zapamatování! <strong>Vřele</strong> doporučujeme nějaký používat, většina z nich je zdarma!
+  </div>
+</InfoBanner>
+
+Pamatovat si silná a jedinečná hesla pro každý účet není ideální. Správce hesel nabízí bezpečné šifrované úložiště všech vašich hesel, ke kterým máte přístup prostřednictvím jednoho silného hlavního hesla. Při registraci do nové služby také doporučují silná hesla, abyste si nemuseli vytvářet vlastní. Mnoho správců hesel vám také oznámí, zda jste byli součástí úniku dat, a umožní vám změnit hesla dříve, než dojde ke škodlivým útokům.
+
+![Příklad použití správce hesel](./passwordManager.png)
+
+#### Vyzkoušejte správce hesel: {#try-password-manager}
+
+- [Bitwarden](https://bitwarden.com/)
+- [KeePass](https://keepass.info/)
+- [1Password](https://1password.com/)
+- Nebo se podívejte na další [doporučené správce hesel](https://www.privacytools.io/secure-password-manager)
+
+### Používejte dvoufaktorové ověření {#two-factor-authentication}
+
+Někdy můžete být požádáni o ověření své identity prostřednictvím jedinečných důkazů. Tyto důkazy jsou známé jako **faktory**. Tři hlavní faktory jsou:
+
+- Něco, co víte (jako třeba heslo nebo bezpečností otázku)
+- Něco, co jste (jako třeba otisk prstu nebo sken duhovky/obličeje)
+- Něco, co vlastníte (bezpečnostní klíč nebo ověřovací aplikace v telefonu)
+
+Používání **dvoufaktorového ověřování (2FA)** je dalším *bezpečnostním faktorem* pro vaše online účty. 2FA zajišťuje, že pouze mít vaše heslo nestačí k přístupu k účtu. Druhým faktorem je nejčastěji náhodný šestimístný kód, známý jako **jednorázové heslo (TOTP)**, ke kterému získáte přístup prostřednictvím autentizační aplikace, jako je Google Authenticator nebo Authy. Fungují jako "něco, co vlastníte", protože seed, který generuje časovaný kód, je uložen ve vašem zařízení.
+
+<InfoBanner emoji=":lock:">
+  <div>
+    Poznámka: Používání 2FA pomocí SMS je náchylné k <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">odcizení SIM karty</a> a není bezpečné. Pro nejlepší ochranu používejte službu jako <a href="https://mashable.com/article/how-to-set-up-google-authenticator">Google Authenticator</a> nebo <a href="https://authy.com/">Authy</a>.
+  </div>
+</InfoBanner>
+
+#### Bezpečnostní klíče {#security-keys}
+
+Bezpečnostní klíč je pokročilejší a bezpečnější typ dvoufaktorového ověřování (2FA). Bezpečnostní klíče jsou fyzická hardwarová ověřovací zařízení, která fungují podobně jako ověřovací aplikace. Nejbezpečnějším způsobem 2FA je použití bezpečnostního klíče. Mnoho těchto klíčů využívá standard FIDO Universal 2nd Factor (U2F). [Zjistěte více o FIDO U2F](https://www.yubico.com/authentication-standards/fido-u2f/).
+
+Podívejte se na další informace o 2FA:
+
+<YouTube id="m8jlnZuV1i4" start="3479" />
+
+### Odinstalujte rozšíření prohlížeče {#uninstall-browser-extensions}
+
+Rozšíření pro prohlížeče, jako jsou rozšíření pro Chrome nebo doplňky pro Firefox, mohou zlepšit funkčnost prohlížeče, ale také přinášejí určitá rizika. Ve výchozím nastavení si většina rozšíření prohlížeče vyžádá přístup ke "čtení a změně dat webu", což jim umožňuje dělat s vašimi daty téměř cokoli. Rozšíření Chrome jsou vždy automaticky aktualizována, takže dříve bezpečné rozšíření může být později aktualizováno a obsahovat škodlivý kód. Většina rozšíření prohlížeče se nesnaží ukrást vaše data, ale měli byste vědět, že to mohou udělat.
+
+#### Zůstaňte v bezpečí tím, že: {#browser-extension-safety}
+
+- Budete instalovat rozšíření prohlížeče pouze z důvěryhodných zdrojů
+- Budete odstraňovat nepoužívaná rozšíření prohlížeče
+- Budete instalovat rozšíření Chrome lokálně, abyste zastavili automatické aktualizace (Pokročilé)
+
+[Další informace o rizicích rozšíření prohlížeče](https://www.kaspersky.co.uk/blog/browser-extensions-security/12750/)
 
 <Divider />
 

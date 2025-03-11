@@ -55,11 +55,17 @@ JSON-RPC 也不是轻客户端请求数据的理想选择，因为它必须要�
 - 减少对中心化提供者的依赖
 - 减少网络带宽使用
 - 最小化或零同步
-- 让资源有限的设备（<1GB ram、<100mB 磁盘、1 个 CPU）可访问
+- 可供资源有限的设备访问（<1 GB 内存、<100 MB 磁盘、1 个 CPU）
 
 下表展示了门户网络可提供的现有客户端的功能，让用户可在极低资源设备上访问它们。
 
-![门户网络表](portal-network-table2.png)
+### 门户网络
+
+| 信标轻客户端 | 状态网络    | 交易广播  | 历史数据网络 |
+| ------ | ------- | ----- | ------ |
+| 信标链轻节点 | 帐户与合约存储 | 轻量内存池 | 区块头    |
+| 协议数据   |         |       | 区块体    |
+|        |         |       | 收据     |
 
 ## 默认支持客户端多样性 {#client-diversity-as-default}
 
@@ -70,6 +76,7 @@ JSON-RPC 也不是轻客户端请求数据的理想选择，因为它必须要�
 - [Trin](https://github.com/ethereum/trin)：用 Rust 编写
 - [Fluffy](https://nimbus.team/docs/fluffy.html)：用 Nim 编写
 - [Ultralight](https://github.com/ethereumjs/ultralight)：用 Typescript 编写
+- [Shisui](https://github.com/optimism-java/shisui)：用 Go 编写
 
 多种独立客户端实现提升了以太坊网络的弹性和去中心化。
 

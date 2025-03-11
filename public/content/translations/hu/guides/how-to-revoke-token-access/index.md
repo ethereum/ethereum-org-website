@@ -49,7 +49,7 @@ Javasoljuk, hogy néhány perc múlva frissítse a visszavonási eszközt, és n
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Szeretne többet megtudni?</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     Tekintse meg a további útmutatóinkat
   </ButtonLink>
 </InfoBanner>

@@ -1,18 +1,18 @@
 ---
 title: Cómo intercambiar tókenes
-description: Una guía sobre cómo intercambiar tókenes en Ethereum.
+description: Guía sobre cómo intercambiar tokens en Ethereum
 lang: es
 ---
 
 # Cómo intercambiar tókenes
 
-¿Está cansado de buscar un intercambio que comprenda todos tus tókenes favoritos? Puede intercambiar la mayoria de los tókenes utilizando intercambios decentralizados.
+¿Está cansado de buscar un exchange que incluya todos sus tokens favoritos? Puede intercambiar la mayoría de los tokens utilizando [exchanges descentralizados](/glossary/#dex).
 
-Un intercambio de tókenes en un intercambio involucra a dos activos diferentes existentes en la red de Ethereum, por ejemplo, intercambiar ETH por DAI (un token en la red ERC-20). El proceso es bastante rápido y barato. Sólo necesita tener una cartera de criptomonedas para intercambiar tókenes.
+Un intercambio de tokens involucra el intercambio de dos activos diferentes que existen en la red de Ethereum, por ejemplo, intercambiar ETH por DAI (un token [ERC-20](/glossary/#erc-20)). El proceso es bastante rápido y barato. Solo necesita tener una billetera de criptomonedas para intercambiar tokens.
 
 **Requisitos previos:**
 
-- tenga su propia cartera de criptomonedas, para ello puede seguir este tutorial:[ Como «registrar» una cuenta de Ethereum](/guides/how-to-create-an-ethereum-account/)
+- tener una [billetera de criptomonedas](/glossary/#wallet) (puede seguir este tutorial: [Cómo "registrar" una cuenta de Ethereum](/guides/how-to-create-an-ethereum-account/)
 - añadir fondos a su cartera
 
 ## 1. Conecte su cartera al intercambio descentralizado (DEX) que prefiera
@@ -24,15 +24,15 @@ Algunos intercambios descentralizados populares son:
 - [1Inch](https://app.1inch.io/#/1/unified/swap/ETH/DAI)
 - [Curve](https://curve.fi/#/ethereum/swap)
 
-Si desea obtener mas información sobre DeFi y cómo funcionan estos nuevos tipos de cambios, le recomendamos que consulte [Kernel Library](https://library.kernel.community/Topic+-+DeFi/Topic+-+DeFi).
+¿Le interesa? Aprenda más sobre qué son las [finanzas descentralizadas (DeFi)](/defi/) y cómo funcionan estos nuevos tipos de exchanges.
 
-## 2. Seleccione el par de tókenes que desee intercambiar
+## 2. Seleccione el par de tokens que desee intercambiar
 
-Por ejemplo, Eth y DAI. Asegúrese de tener fondos en cualquiera de los dos tókenes. ![Interfaz común para el intercambio](./swap1.png)
+Por ejemplo, Eth y DAI. Asegúrese de tener fondos en cualquiera de los dos tokens. ![Interfaz común para el intercambio](./swap1.png)
 
-## 3. Ingrese la cantidad de tókenes que desee intercambiar y haga click en intercambiar
+## 3. Ingrese la cantidad de tokens que desee intercambiar y haga clic en intercambiar
 
-El intercambio calculará automaticamente cuántos tókenes obtendrá.
+El intercambio calculará automaticamente cuántos tokens obtendrá.
 
 ![Interfaz común para el intercambio](./swap2.png)
 
@@ -46,13 +46,13 @@ Revise los detalles de la transacción. Compruebe el tipo de cambio y cualquier 
 
 Puede seguir el progreso de la transacción en cualquier navegador de cadena de bloques. Este proceso no debería llevar más de 10 minutos.
 
-Recibirá automáticamente los tókenes intercambiados en su cartera una vez que la transacción sea procesada.
+Recibirá automáticamente los tokens intercambiados en su billetera una vez que la transacción sea procesada.
 <br />
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>¿Quiere saber más?</div>
-  <ButtonLink to="/guides/">
-    Consulte nuestras demás guias
+  <ButtonLink href="/guides/">
+    Consulte nuestras demás guías
   </ButtonLink>
 </InfoBanner>
 
@@ -60,8 +60,8 @@ Recibirá automáticamente los tókenes intercambiados en su cartera una vez que
 
 ### ¿Puedo cambiar ETH por BTC desde mi cartera?
 
-No, sólo puede intercambiar tókenes que sean nativos de la red de Ethereum, como ETH, tókenes ERC-20 o NFT. Solo puede intercambiar formas «envueltas» de Bitcoin que viven en Ethereum.
+No, solo puede intercambiar tokens que sean nativos de la red de Ethereum, como ETH, tokens ERC-20 o NFT. Solo puede intercambiar formas "envueltas" de Bitcoin que residan en Ethereum.
 
 ### ¿Qué es el deslizamiento?
 
-Es la diferenciaa entre el tipo de cambio esperado y el real.
+Es la diferencia entre el tipo de cambio esperado y el real.

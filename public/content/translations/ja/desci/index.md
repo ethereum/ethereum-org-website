@@ -104,10 +104,11 @@ Web3の様式を活用することで科学データへのアクセスが大幅�
 - [Bio.xyz: バイオテクノロジーDAOや分散型サイエンスプロジェクトのための資金獲得](https://www.bio.xyz/)
 - [Flemingプロトコル: 共同のバイオメディカルの発見を促進するオープンソースのデータエコノミー](http://flemingprotocol.io/)
 - [Active Inference Institute](https://www.activeinference.org/)
-- [CureDAO: コミュニティ所有のプレシジョンヘルスプラットフォーム](https://docs.curedao.org/)
 - [IdeaMarkets: 分散型科学の信ぴょう性の有効化](https://ideamarket.io/)
 - [DeSci Labs](https://www.desci.com/)
 - [ValleyDAO: オープンなグローバルコミュニティで合成生物学研究のファンディングおよび翻訳に関するサポートを提供](https://www.valleydao.bio)
+- [Cerebrum DAO: 脳の健康と神経変性を防ぐためのソリューションの調達と育成](https://www.cerebrumdao.com/)
+- [CryoDAO: 冷凍保存分野におけるムーンショット型研究へのファンディング](https://www.cryodao.org)
 
 新しいプロジェクトを提案する際には[ポリシー一覧](/contributing/adding-desci-projects/)をご覧ください。
 
@@ -125,6 +126,7 @@ Web3の様式を活用することで科学データへのアクセスが大幅�
 - [DeSci: Samuel Akinoshoによる研究の未来](https://lucidsamuel.medium.com/desci-the-future-of-research-b76cfc88c8ec)
 - [サイエンスファンディング(エピローグ: DeSciと新しい暗号プリミティブ) by Nadia](https://nadia.xyz/science-funding)
 - [分散化は薬物開発を妨害する](https://medium.com/id-theory/decentralisation-is-disrupting-drug-development-28b5ba5d447f)
+- [DeSci - 分散型科学とは何か？](​https://usadailytimes.com/2022/09/12/what-is-desci-decentralized-science/)
 
 ### 動画 {#videos}
 
@@ -133,3 +135,4 @@ Web3の様式を活用することで科学データへのアクセスが大幅�
 - [破綻している科学出版業界を Web3で救えるか?](https://www.youtube.com/watch?v=WkvzYgCvWj8)
 - [Juan Benet - DeSci、Independent Labs、及び大規模データサイエンス](https://www.youtube.com/watch?v=zkXM9H90g_E)
 - [Sebastian Brunemeier - DeSciによる生体医学研究 & ベンチャーキャピタルの転換](https://www.youtube.com/watch?v=qB4Tc3FcVbM)
+- [Paige Donner - Web3とブロックチェーンによるオープンサイエンスのツール化](https://www.youtube.com/watch?v=nC-2QWQ-lgw&t=17s)

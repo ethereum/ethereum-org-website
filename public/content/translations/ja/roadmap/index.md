@@ -8,11 +8,11 @@ alt: "イーサリアムロードマップ"
 summaryPoints:
 buttons:
   - 
-    label: 今後のアップグレード
+    content: 今後のアップグレード
     toId: 予定されている変更
   - 
-    label: 過去のアップグレード
-    to: /history/
+    content: 過去のアップグレード
+    href: /history/
     variant: 概要
 ---
 
@@ -26,28 +26,28 @@ buttons:
 
 <CardGrid>
   <RoadmapActionCard
-    to="/roadmap/scaling"
+    href="/roadmap/scaling"
     title="より安価なトランザクション"
     image="scaling"
     description="Rollups are too expensive and rely on centralized components, causing users to place too much trust in their operators. The roadmap includes fixes for both of these problems."
     buttonText="More on reducing fees"
   />
   <RoadmapActionCard
-    to="/roadmap/security"
+    href="/roadmap/security"
     title="追加のセキュリティ"
     image="security"
     description="Ethereum is already very secure but it can be made even stronger, ready to withstand all kinds of attack far into the future."
     buttonText="More on security"
   />
   <RoadmapActionCard
-    to="/roadmap/user-experience"
+    href="/roadmap/user-experience"
     title="ユーザーエクスペリエンスの向上"
     image="userExperience"
     description="More support for smart contract wallets and light-weight nodes will make using Ethereum simpler and safer."
     buttonText="More on user experience"
   />
   <RoadmapActionCard
-    to="/roadmap/future-proofing"
+    href="/roadmap/future-proofing"
     title="将来の証明技術"
     image="futureProofing"
     description="Ethereum researchers and developers are solving tomorrow's problems today, readying the network for future generations."
@@ -78,7 +78,7 @@ buttons:
 
 **はい、ほぼ間違いなく変化します。** ロードマップは、現在のイーサリアムをアップグレードするための計画です。短期的および将来にわたる長期的な計画の両方をカバーしています。 新しい情報技術が使えるようになると、ロードマップも変更される可能性があります。
 
-イーサリアムのロードマップは、イーサリアムを改善するための目的の集合と考えてください。 いわば、コアの研究者と開発者が考えた、イーサリアムが目指すべき最適なパスの仮説です。
+イーサリアムのロードマップは、イーサリアムを改善するための意思の集合と考えてください。これは、コア研究者や開発者が考える、イーサリアムにとって最適な進化の道筋に関する最良の仮説です。
 
 ## ロードマップに終わりはありますか？ {#when-will-the-roadmap-be-finished}
 

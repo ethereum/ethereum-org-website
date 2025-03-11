@@ -2,7 +2,10 @@ import { Lang } from "@/lib/types"
 
 import { Skill } from "@/components/TutorialMetadata"
 
-import { IExternalTutorial, ITutorial } from "@/pages/developers/tutorials"
+import {
+  IExternalTutorial,
+  ITutorial,
+} from "@/pages/[locale]/developers/tutorials"
 
 // Take all tutorials, and return a list of tutorials for a specific locale
 export const filterTutorialsByLang = (
@@ -12,7 +15,7 @@ export const filterTutorialsByLang = (
 ): Array<ITutorial> => {
   const internalTutorialsMap = internalTutorials.map((tutorial) => {
     return {
-      to: tutorial.to || "",
+      href: tutorial.href || "",
       title: tutorial?.title || "",
       description: tutorial?.description || "",
       author: tutorial?.author || "",
@@ -27,7 +30,7 @@ export const filterTutorialsByLang = (
 
   const externalTutorialsMap = externalTutorials.map<ITutorial>(
     (tutorial: IExternalTutorial) => ({
-      to: tutorial.url,
+      href: tutorial.url,
       title: tutorial.title,
       description: tutorial.description,
       author: tutorial.author,

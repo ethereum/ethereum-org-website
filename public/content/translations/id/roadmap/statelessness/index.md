@@ -72,7 +72,7 @@ Untuk hal ini terjadi, [pohon Verkle](/roadmap/verkle-trees/) harus sudah diimpl
 
 Keadaan tanpa status bergantung pada pembangun blok yang menyimpan salinan data negara lengkap sehingga mereka dapat menghasilkan saksi yang dapat digunakan untuk memverifikasi blok. Simpul lain tidak membutuhkan akses ke data status, semua informasi yang diperlukan untuk memverifikasi blok tersedia di saksi. Hal ini menciptakan situasi di mana mengajukan blok itu mahal, tetapi memverifikasi blok itu murah, yang berarti lebih sedikit operator yang akan menjalankan simpul pengajuan blok. Akan tetapi, desentralisasi pengusul blok tidak terlalu penting selama sebanyak mungkin peserta dapat memverifikasi secara independen bahwa blok yang mereka ajukan valid.
 
-<ButtonLink variant="outline-color" to="https://notes.ethereum.org/WUUUXBKWQXORxpFMlLWy-w#So-why-is-it-ok-to-have-expensive-proposers">Baca lebih lanjut tentang catatan Dankrad</ButtonLink>
+<ButtonLink variant="outline-color" href="https://notes.ethereum.org/WUUUXBKWQXORxpFMlLWy-w#So-why-is-it-ok-to-have-expensive-proposers">Baca lebih lanjut tentang catatan Dankrad</ButtonLink>
 </ExpandableCard>
 
 Pengusul blok menggunakan data status untuk membuat "saksi" - sekumpulan data minimal yang membuktikan nilai status yang sedang diubah oleh transaksi dalam sebuah blok. Validator lain tidak menyimpan state, mereka hanya menyimpan status akar (hash dari seluruh status). Mereka menerima sebuah blok dan sebuah saksi dan menggunakannya untuk memperbarui status akar mereka. Hal ini membuat simpul validasi menjadi sangat ringan.

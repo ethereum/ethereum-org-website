@@ -49,9 +49,9 @@ A Verkle-fák `key, value` (kulcs, érték) párokból állnak, ahol a kulcsok 3
 
 A Verkle-fa teszthálózatai már működnek, de jelentős mértékű kliensfrissítésre van még szükség ahhoz, hogy támogatni tudják ezt az adatstruktúrát. Ön is segíthet a fejlesztés meggyorsításában, ha szerződéseket hoz létre a teszthálózaton és klienseket működtet a teszthez.
 
-[Fedezze fel a Verkle Gen Devnet 2 teszthálózatot](https://verkle-gen-devnet-2.ethpandaops.io/)
+[Fedezze fel a Verkle Gen Devnet 6 teszthálózatot](https://verkle-gen-devnet-6.ethpandaops.io/)
 
-[Tekintse meg, ahogy Guillaume Ballet bemutatja a Condrieu Verkle-teszthálózatot](https://www.youtube.com/watch?v=cPLHFBeC0Vg) (a Condrieu teszthálózat még a proof-of-work mechanizmus szerint működött, és mára már Verkle Gen Devnet 2 teszthálózat váltotta fel).
+[Nézze meg, ahogy Guillaume Ballet bemutatja a Condrieu Verkle-teszthálózatot](https://www.youtube.com/watch?v=cPLHFBeC0Vg) (a Condrieu teszthálózat még a proof-of-work mechanizmus szerint működött, és mára már Verkle Gen Devnet 6 teszthálózat váltotta fel).
 
 ## További olvasnivaló {#further-reading}
 
@@ -60,7 +60,7 @@ A Verkle-fa teszthálózatai már működnek, de jelentős mértékű kliensfris
 - [Guillaume Ballet magyarázata a Verkle-fákról az ETHGlobal rendezvényen](https://www.youtube.com/watch?v=f7bEtX3Z57o)
 - [„Hogyan segítenek a Verkle-fák abban, hogy az Ethereum áttekinthető és egyszerű legyen?” – Guillaume Ballet előadása a Devcon 6 rendezvényen](https://www.youtube.com/watch?v=Q7rStTKwuYs)
 - [Piper Merriam előadása a státusztalan kliensekről az ETHDenver 2020-as rendezvényén](https://www.youtube.com/watch?v=0yiZJNciIJ4)
-- [Dankrad Fiest Verkle-fákról és státuszmentességről szóló podcastje a Zero Knowledge csatornán](https://zeroknowledge.fm/episode-202-stateless-ethereum-verkle-tries-with-dankrad-feist/)
+- [Dankrad Fiest Verkle-fákról és státuszmentességről szóló podcastja a Zero Knowledge csatornán](https://zeroknowledge.fm/episode-202-stateless-ethereum-verkle-tries-with-dankrad-feist/)
 - [Vitalik Buterin magyarázata a Verkle-fákról](https://vitalik.eth.limo/general/2021/06/18/verkle.html)
 - [Dankrad Feist magyarázata a Verkle-fákról](https://dankradfeist.de/ethereum/2021/06/18/verkle-trie-for-eth1.html)
 - [A Verkle-fák EIP-dokumentációja](https://notes.ethereum.org/@vbuterin/verkle_tree_eip#Illustration)

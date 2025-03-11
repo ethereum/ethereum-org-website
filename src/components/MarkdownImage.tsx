@@ -1,9 +1,8 @@
 import { extname } from "path"
 
-import { Flex } from "@chakra-ui/react"
+import NextLink from "next/link"
 
 import { Image, type ImageProps } from "@/components/Image"
-import Link from "@/components/Link"
 
 import { toPosixPath } from "@/lib/utils/relativePath"
 
@@ -42,8 +41,8 @@ const MarkdownImage = ({
   return (
     // display the wrapper as a `span` to avoid dom nesting warnings as mdx
     // sometimes wraps images in `p` tags
-    <Flex as="span" justify="center">
-      <Link href={transformedSrc} target="_blank" rel="noopener" locale={false}>
+    <span className="flex justify-center">
+      <NextLink href={transformedSrc} target="_blank" rel="noopener">
         <Image
           alt={alt}
           width={imageWidth}
@@ -51,11 +50,11 @@ const MarkdownImage = ({
           loading="lazy"
           src={transformedSrc}
           unoptimized={isAnimated}
-          h="auto"
+          className="h-auto"
           {...rest}
         />
-      </Link>
-    </Flex>
+      </NextLink>
+    </span>
   )
 }
 

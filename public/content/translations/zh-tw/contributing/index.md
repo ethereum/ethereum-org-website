@@ -68,7 +68,7 @@ Ethereum.org 是一個開源專案，擁有超過 **12000 名**貢獻者，幫�
 - 我們的[風格指南](/contributing/style-guide/)
 - 我們的[行為準則](/community/code-of-conduct)
 
-<ContributorsQuizBanner mt={16} mb={8} />
+<ContributorsQuizBanner className="mt-16 mb-8" />
 
 ## 如何做出有關網站的決定 {#how-decisions-about-the-site-are-made}
 
@@ -88,7 +88,7 @@ Ethereum.org 是一個開源專案，擁有超過 **12000 名**貢獻者，幫�
 
 ## 領取你的鏈上成就代幣 (OAT) {#oat}
 
-如果你的貢獻合併到 ethereum.org，你將要改到 [Galxe](https://galxe.com/ethereumorg/) 上領取特殊徽章。 鏈上成就代幣 (OAT) 證明你曾經協助生態系統變得更加出色。
+如果你的貢獻合併到 ethereum.org，你將有機會在 [Galxe](https://app.galxe.com/quest/ethereumorg) 上領取特殊徽章。 鏈上成就代幣 (OAT) 證明你曾經協助生態系統變得更加出色。
 
 [有關鏈上成就代幣的更多資訊](https://help.galxe.com/en/articles/7067290-galxe-oats-reward-and-celebrate-achievements)
 

@@ -29,7 +29,7 @@ Como mínimo:
 - Todo el código almacenado en un sistema de control de versiones, como git
 - Todas las modificaciones de código hechas a través de solicitudes de pull
 - Todas las solicitudes de pull tienen, al menos, un revisor. _Si tu proyecto es individual, plantéate encontrar a otro autor de proyecto individual para realizar revisiones de código._
-- Un solo comando compila, implementa y ejecuta un conjunto de pruebas con respecto a tu código mediante un entorno de desarrollo Ethereum (consulta: Truffle)
+- Un solo comando compila, implementa y ejecuta un conjunto de pruebas con respecto a tu código mediante un entorno de desarrollo Ethereum
 - Has ejecutado tu código a través de herramientas de análisis de código básicas como Mythril y Slither, idealmente antes de que cada solicitud de pull se fusione, comparando diferencias en la salida
 - Solidity no emite ninguna advertencia del compilador
 - Tu código está bien documentado

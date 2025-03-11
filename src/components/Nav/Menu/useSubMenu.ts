@@ -1,14 +1,12 @@
 import type { MotionProps } from "framer-motion"
-import { useRouter } from "next/router"
+import { useLocale } from "next-intl"
 
-import { useNavMenuColors } from "@/hooks/useNavMenuColors"
 import { useRtlFlip } from "@/hooks/useRtlFlip"
-
-const PADDING = 4 // Chakra-UI space token
+import { usePathname } from "@/i18n/routing"
 
 export const useSubMenu = () => {
-  const { asPath, locale } = useRouter()
-  const menuColors = useNavMenuColors()
+  const pathname = usePathname()
+  const locale = useLocale()
   const { isRtl } = useRtlFlip()
 
   const menuVariants: MotionProps["variants"] = {
@@ -17,10 +15,8 @@ export const useSubMenu = () => {
   }
 
   return {
-    asPath,
+    asPath: pathname,
     locale,
-    menuColors,
     menuVariants,
-    PADDING,
   }
 }

@@ -6,11 +6,11 @@ lang: tr
 
 # Kripto fonlarınızın akıllı sözleşme erişimini nasıl iptal edebilirsiniz?
 
-Bu rehber size fonlarınıza erişim verdiğiniz tüm akıllı sözleşmelerin listesini nasıl görebileceğinizi ve bunları nasıl iptal edebileceğinizi öğretecektir.
+Bu rehber, fonlarınıza erişim izni verdiğiniz [akıllı sözleşmelerin](/glossary/#smart-contract) listesini nasıl görebileceğinize ve izinlerinizi nasıl iptal edebileceğinize dair size bilgi verir.
 
-Bazen kötü amaçlı geliştiriciler akıllı sözleşmelere bu sözleşmelerle etkileşime geçen habersiz kullanıcıların fonlarına erişim sağlayacak arka kapılar eklerler. Genelde bu platformlar kullanıcıdan gelecekte gazdan ufak miktarlarda tasarruf etmek için **sınırsız sayıda token** harcama izni ister, ancak bu fazla riski beraberinde getirir.
+Bazen kötü amaçlı geliştiriciler akıllı sözleşmelere bu sözleşmelerle etkileşime geçen habersiz kullanıcıların fonlarına erişim sağlayacak arka kapılar eklerler. Genellikle bu tür platformlar, gelecekte küçük miktarlarda **gaz** tasarrufu sağlamak amacıyla kullanıcıdan [sınırsız sayıda jeton](/glossary/#gas) harcama izni ister ancak bu, artan riskleri de beraberinde getirir.
 
-Bir platform cüzdanınızdaki token'a sınırsız erişim hakkına sahip olduğu zaman, bu token'ları platformdan kendi cüzdanınıza çekmiş olsanız bile bu token'ların tamamını harcayabilir. Kötü amaçlı aktörler hâlâ fonlarınıza erişim sağlayabilir ve size kurtarma şansı vermeden kendi cüzdanlarına çekebilirler.
+Platformlar [cüzdanınızdaki](/glossary/#wallet) jetonlara sınırsız erişime sahip olduğu zaman, varlıklarınızı platformlardan cüzdanınıza geri çekseniz bile tüm jetonlarınızı harcayabilir. Kötü amaçlı aktörler hâlâ fonlarınıza erişim sağlayabilir ve size kurtarma şansı vermeden kendi cüzdanlarına çekebilirler.
 
 Buna karşı biricik korunma yolları test edilmemiş yeni projeleri kullanmaktan kaçınmak, sadece ihtiyacınız kadarına izin vermek veya düzenli olarak erişimi kaldırmaktır. Peki, bunu nasıl yaparsınız?
 
@@ -49,7 +49,7 @@ Kaldırılmış sözleşmenin listeden gidip gitmediğini kontrol etmek için bi
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Daha fazlasını mı öğrenmek istiyorsunuz?</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     Diğer rehberlerimizi inceleyin
   </ButtonLink>
 </InfoBanner>
@@ -58,7 +58,7 @@ Kaldırılmış sözleşmenin listeden gidip gitmediğini kontrol etmek için bi
 
 ### Token erişimini kaldırma ayrıca hisseleme, havuz oluşturma, borç verme işlemlerini de kaldırır mı?
 
-Hayır, sizin hiçbir DeFi stratejinizi etkilemez. Pozisyonlarınızda kalırsınız ve ödüller vb. elde etmeye devam edersiniz.
+Hayır, [DeFi](/glossary/#defi) stratejilerinizden herhangi birini etkilemeyecektir. Pozisyonlarınızda kalırsınız ve ödüller vb. elde etmeye devam edersiniz.
 
 ### Bir projeden cüzdanın bağlantısını kesmek fonlarımın kullanım izinlerini kaldırmakla aynı mıdır?
 

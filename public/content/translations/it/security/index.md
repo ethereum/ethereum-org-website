@@ -8,6 +8,8 @@ lang: it
 
 Il crescente interesse per le criptovalute comporta un maggiore rischio di esporsi a truffatori e hacker. Questo articolo delinea alcune delle migliori pratiche per mitigare tali rischi.
 
+**Ricorda: nessuno ti contatterà mai da ethereum.org. Non rispondere alle email che dichiarano di provenire dal supporto ufficiale di Ethereum.**
+
 <Divider />
 
 ## Sicurezza criptovalute 101 {#crypto-security}
@@ -16,11 +18,11 @@ Il crescente interesse per le criptovalute comporta un maggiore rischio di espor
 
 Le incomprensioni sul funzionamento delle criptovalute possono comportare costosi errori. Ad esempio, se qualcuno finge di essere l'agente di un servizio clienti in grado di rimborsare gli ETH perduti in cambio delle tue chiavi private, si sta approfittando delle persone che non comprendono che Ethereum è una rete decentralizzata priva di questo tipo di funzionalità. Apprendere come funziona Ethereum è un investimento utile.
 
-<DocLink to="/what-is-ethereum/">
+<DocLink href="/what-is-ethereum/">
   Cos'è Ethereum?
 </DocLink>
 
-<DocLink to="/eth/">
+<DocLink href="/eth/">
   Cos'è un ether?
 </DocLink>
 <Divider />
@@ -33,7 +35,7 @@ Le incomprensioni sul funzionamento delle criptovalute possono comportare costos
 
 La chiave privata del tuo portafoglio è una password per il tuo portafoglio di Ethereum. È l'unica cosa che impedisce a qualcuno che conosce l'indirizzo del tuo portafoglio di prosciugare il tuo conto di tutti i suoi attivi!
 
-<DocLink to="/wallets/">
+<DocLink href="/wallets/">
   Cos'è un portafoglio Ethereum?
 </DocLink>
 
@@ -242,15 +244,7 @@ L'utilizzo dell'**autenticazione a due fattori (A2F)** costituisce un ulteriore 
 
 <InfoBanner emoji=":lock:">
   <div>
-    Nota: L'utilizzo di SMS basati sul protocollo 2FA è suscettibile di 
-    <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">
-      SIM jacking
-    </a>
-     e non è sicuro. Per una migliore sicurezza, utilizzare servizi come{" "}
-    <a href="https://mashable.com/article/how-to-set-up-google-authenticator">
-      Google Authenticator
-    </a>
-     o <a href="https://authy.com/">Authy</a>.
+    Nota: l'utilizzo dell'A2F basata su SMS è soggetta a <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">SIM jacking</a> e non è sicura. Per la massima sicurezza, utilizza un servizio come <a href="https://mashable.com/article/how-to-set-up-google-authenticator">Google Authenticator</a> o <a href="https://authy.com/">Authy</a>.
   </div>
 </InfoBanner>
 

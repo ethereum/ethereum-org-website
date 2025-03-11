@@ -109,3 +109,4 @@ contract VendingMachine {
 - [Coinbase：什麼是智慧型合約？](https://www.coinbase.com/learn/crypto-basics/what-is-a-smart-contract)
 - [Chainlink：什麼是智慧型合約？](https://chain.link/education/smart-contracts)
 - [影片：智慧型合約簡介](https://youtu.be/ZE2HxTmxfrI)
+- [Cyfrin Updraft：Web3 學習與審計平台](https://updraft.cyfrin.io)

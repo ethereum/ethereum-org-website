@@ -182,7 +182,7 @@ ZK-STARK 对于量子计算机也是安全的，而 ZK-SNARK 中使用的椭圆�
 
 2. **数据发布**：零知识卷叠将每笔交易的状态数据作为 `calldata` 发布到以太坊。 `calldata` 费用目前由 [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) 监管，它规定对于 `calldata` 的非零字节和零字节费用分别为 16 单位和 4 单位燃料。 每笔交易支付的费用受需要在链上为其发布多少 `calldata` 的影响。
 
-3. **二层网络运营商费用**：这是支付给卷叠运营商的金额，用于补偿处理交易产生的计算费用，很像以太坊上的矿工费用一样。
+3. **二层网络运营商费用**：这是支付给卷叠运营商的金额，用于补偿处理交易产生的计算费用，很像以太坊主网上的[交易“优先费（小费）”](/developers/docs/gas/#how-are-gas-fees-calculated)。
 
 4. **证明生成和验证**：零知识卷叠运营商必须为交易批次生成有效性证明，该操作耗费大量资源。 在主网上验证零知识证明也需要花费燃料（约 500,000 单位燃料）。
 
@@ -222,17 +222,12 @@ ZK-STARK 对于量子计算机也是安全的，而 ZK-SNARK 中使用的椭圆�
 
 <YouTube id="7pWxCklcNsU" start="406" />
 
-### 使用零知识卷叠 {#use-zk-rollups}
-
-零知识卷叠有多种实现方式，你可以将其整合到自己的去中心化应用程序中：
-
-<RollupProductDevDoc rollupType="zk" />
 
 ## 零知识以太坊虚拟机上有哪些项目？ {#zkevm-projects}
 
 零知识以太坊虚拟机上运行的项目包括：
 
-- **[Applied ZKP](https://github.com/privacy-scaling-explorations/zkevm-specs)** - _Applied ZKP 是由以太坊基金会资助的项目，旨在开发与以太坊虚拟机兼容的零知识卷叠以及为以太坊区块生成有效性证明的机制。_
+- **[zkEVM](https://github.com/privacy-scaling-explorations/zkevm-specs)** - _zkEVM 是由以太坊基金会资助的项目，旨在开发与以太坊虚拟机兼容的零知识卷叠以及为以太坊区块生成有效性证明的机制。_
 
 - **[Polygon zkEVM](https://polygon.technology/solutions/polygon-zkevm)** - _是以太坊主网上的去中心化零知识卷叠，它在零知识以太坊虚拟机 (zkEVM) 上运行，以透明的方式执行以太坊交易，包括智能合约与零知识证明验证。_
 
@@ -240,9 +235,11 @@ ZK-STARK 对于量子计算机也是安全的，而 ZK-SNARK 中使用的椭圆�
 
 - **[Taiko](https://taiko.xyz)** - _Taiko 是一个去中心化、类似以太坊的零知识卷叠（一种[第一类零知识以太坊虚拟机](https://vitalik.eth.limo/general/2022/08/04/zkevm.html)）。_
 
-- **[ZKsync](https://docs.zksync.io/)** - _ZKsync Era 是与以太坊虚拟机兼容的零知识卷叠，由 Matter Labs 构建并由它自己的零知识以太坊虚拟机提供支持。_
+- **[ZKsync](https://docs.zksync.io/)** - _ZKsync Era 是与以太坊虚拟机兼容的零知识卷叠，由 Matter Labs 构建并由它自己的 zkEVM 提供支持。_
 
 - **[Starknet](https://starkware.co/starknet/)** - _StarkNet 是以太坊虚拟机兼容的二层网络扩容解决方案，由 StarkWare 构建。_
+
+- **[Morph](https://www.morphl2.io/)** - _Morph 是利用零知识证明来解决二层网络状态质询问题的混合卷叠扩容解决方案。_
 
 ## 进一步阅读零知识卷叠的相关内容 {#further-reading-on-zk-rollups}
 
@@ -250,6 +247,7 @@ ZK-STARK 对于量子计算机也是安全的，而 ZK-SNARK 中使用的椭圆�
 - [什么是零知识卷叠？](https://alchemy.com/blog/zero-knowledge-rollups)
 - [STARK（可扩容透明知识论证）和 SNARK（简洁非交互式知识论证）](https://consensys.net/blog/blockchain-explained/zero-knowledge-proofs-starks-vs-snarks/)
 - [什么是 zkEVM（零知识以太坊虚拟机）？](https://www.alchemy.com/overviews/zkevm)
+- [零知识以太坊虚拟机类型：以太坊等效、以太坊虚拟机等效、类型 1、类型 4 和其他晦涩的术语](https://taiko.mirror.xyz/j6KgY8zbGTlTnHRFGW6ZLVPuT0IV0_KmgowgStpA0K4)
 - [zkEVM（零知识以太坊虚拟机）简介](https://hackmd.io/@yezhang/S1_KMMbGt)
 - [超赞的 zkEVM（零知识以太坊虚拟机）资源](https://github.com/LuozhuZhang/awesome-zkevm)
 - [ZK-SNARK（零知识简洁非交互式知识论证）底层技术](https://vitalik.eth.limo/general/2017/02/01/zk_snarks.html)

@@ -8,6 +8,8 @@ lang: it
 
 ethereum.org è una risorsa open-source pubblica per la community di Ethereum a cui tutti possono contribuire. Abbiamo un piccolo team dedicato alla manutenzione e allo sviluppo del sito, cui si aggiungono gli sforzi di migliaia di membri della comunità di tutto il mondo.
 
+**Nessuno ti contatterà mai da ethereum.org. Non rispondere.**
+
 ## Una nota sui nomi {#a-note-on-names}
 
 Non è raro trovare persone che confondono nomi all’interno dell'ecosistema Ethereum, il che può portare a un'interpretazione errata del funzionamento di Ethereum. Di seguito una breve nota esplicativa di chiarimento:
@@ -90,7 +92,7 @@ Ethereum è tanta roba: include una community, una tecnologia, una serie di idee
 
 Per rendere più accessibile il nostro lavoro e rafforzare ulteriormente la partecipazione della comunità, il team centrale di ethereum.org pubblica una panoramica degli obiettivi della nostra roadmap trimestrale.
 
-[Guarda la nostra tabella di marcia dei prodotti del primo trimestre 2024](https://github.com/ethereum/ethereum-org-website/issues/12005)
+[Guarda la nostra tabella di marcia dei prodotti per il terzo trimestre 2024](https://github.com/ethereum/ethereum-org-website/issues/13399)
 
 **Che ne pensi?** Apprezziamo sempre i feedback sulla nostra roadmap - non esitare a segnalarci qualunque qualcosa su cui dovremmo ancora lavorare! Accogliamo a braccia aperte tutti i membri della community che contribuiscono con le loro idee e le PR.
 
@@ -113,6 +115,10 @@ Abbiamo una [guida di stile](/contributing/style-guide/) per standardizzare cert
 Assicurati di leggere [i nostri principi](/contributing/design-principles/) e [la nostra guida di stile](/contributing/style-guide/) se desideri [contribuire al sito](/contributing/).
 
 Apprezziamo i feedback sui nostri principi di design, sul sistema di design e sulla guida di stile. Ricorda, ethereum.org è per la community, dalla community.
+
+## Licenza {#license}
+
+Il sito web ethereum.org è open source e creato sotto una [Licenza MIT](https://github.com/ethereum/ethereum-org-website/blob/dev/LICENSE), se non altrimenti specificato. Maggiori informazioni sui [termini di utilizzo](/terms-of-use/) di ethereum.org.
 
 ## Posizioni aperte {#open-jobs}
 

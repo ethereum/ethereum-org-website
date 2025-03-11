@@ -31,7 +31,7 @@ A kliensdiverzitás nagyobb ellenállást jelent a támadásokkal szemben. Péld
 
 Egy olyan hiba a konszenzusos kliensben, amely az Ethereum-csomópontok több mint 33%-át érinti, meg tudja akadályozni azt, hogy a konszenzusréteg véglegesedjen, tehát a felhasználók nem tudhatják, hogy a tranzakcióik nem lesznek visszaforgatva vagy megváltoztatva valamikor. Ez rendkívül problémás helyzet az Ethereumra épült alkalmazások számára, főleg a decentralizált pénzügy (DeFi) területén.
 
-<Emoji text="🚨" me="1rem" /> Még ennél is rosszabb, ha egy kétharmados többséggel bíró kliensben történik hiba, ami miatt a lánc <a href="https://www.symphonious.net/2021/09/23/what-happens-if-beacon-chain-consensus-fails/" target="_blank">hibásan szétválik és véglegesedik</a>, így a validátorok egy jó része egy valótlan láncon ragad. Ha ezek a validátorok újra a helyes lánchoz akarnának csatlakozni, akkor súlyos büntetéssel, vagy egy lassú és költséges visszavonási és újraaktviálási folyamattal néznének szembe. A súlyos büntetés mértéke arányos a kétharmados többség hibás csomópontjainak számával, melynek a letétjét (32 ETH) teljesen megsemmisítik.
+<Emoji text="🚨" className="me-4" /> Még ennél is rosszabb, ha egy kétharmados többséggel bíró kliensben történik hiba, ami miatt a lánc <a href="https://www.symphonious.net/2021/09/23/what-happens-if-beacon-chain-consensus-fails/" target="_blank">hibásan szétválik és véglegesedik</a>, így a validátorok egy jó része egy valótlan láncon ragad. Ha ezek a validátorok újra a helyes lánchoz akarnának csatlakozni, akkor súlyos büntetéssel, vagy egy lassú és költséges visszavonási és újraaktviálási folyamattal néznének szembe. A súlyos büntetés mértéke arányos a kétharmados többség hibás csomópontjainak számával, melynek a letétjét (32 ETH) teljesen megsemmisítik.
 
 Habár ezek nem valószínű szcenáriók, az Ethereum ökoszisztémája képes a kockázatot csökkenteni azzal, hogy az aktív csomópontokon keresztül egyenlően oszlanak el a kliensek. Ideális esetben a teljes csomópontok 33%-át nem dominálja egy adott konszenzusos kliens.
 
@@ -57,7 +57,7 @@ Mostanáig a kliensdiverzitás fókusza inkább a konszenzusrétegen volt. Ugyan
 
 A kliensdiverzitás eléréséhez nem elég, hogy az egyéni felhasználók kisebbségi klienseket válasszanak, ehhez szükség van arra, hogy a bányász/validátor csoportok és intézmények is, mint a nagyobb dappok és tőzsdék is átálljanak. Ugyanakkor az összes felhasználó kiveheti a részét, hogy ezt az egyenlőtlenséget orvosolja, és az összes elérhető Ethereum-szoftver használva legyen. Az egyesítés (Merge) után minden csomópont-üzemeltetőnek futtatnia kell egy végrehajtási és egy konszenzusos klienst. Az alább javasolt klienskombinációkkal növelni lehet a diverzitást.
 
-### Végrehajtási kliensek {#execution-clients}
+### Végrehajtásos kliensek {#execution-clients}
 
 [Besu](https://www.hyperledger.org/use/besu)
 
@@ -90,7 +90,7 @@ Számos irányítópult vagy kimutatás ad képet az aktuális kliensdiverzitás
 - [Rated.network](https://www.rated.network/)
 - [clientdiversity.org](https://clientdiversity.org/) **Végrehajtási réteg:**
 
-- [execution-diversity.info](https://execution-diversity.info/)
+- [supermajority.info](https://supermajority.info//)
 - [Ethernodes](https://ethernodes.org/)
 
 ## További olvasnivaló {#further-reading}
@@ -106,4 +106,4 @@ Számos irányítópult vagy kimutatás ad képet az aktuális kliensdiverzitás
 ## Kapcsolódó témák {#related-topics}
 
 - [Ethereum-csomópont futtatása](/run-a-node/)
-- [ Csomópontok és kliensek](/developers/docs/nodes-and-clients/)
+- [Csomópontok és kliensek](/developers/docs/nodes-and-clients/)

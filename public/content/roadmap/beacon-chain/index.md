@@ -58,7 +58,7 @@ The Ethereum upgrades are all somewhat interrelated. So let’s recap how the Be
 
 At first, The Beacon Chain existed separately from Ethereum Mainnet, but they were merged in 2022.
 
-<ButtonLink to="/roadmap/merge/">
+<ButtonLink href="/roadmap/merge/">
   The Merge
 </ButtonLink>
 
@@ -66,7 +66,7 @@ At first, The Beacon Chain existed separately from Ethereum Mainnet, but they we
 
 Sharding can only safely enter the Ethereum ecosystem with a proof-of-stake consensus mechanism in place. The Beacon Chain introduced staking, which 'merged' with Mainnet, paving the way for sharding to help further scale Ethereum.
 
-<ButtonLink to="/roadmap/danksharding/">
+<ButtonLink href="/roadmap/danksharding/">
   Shard chains
 </ButtonLink>
 

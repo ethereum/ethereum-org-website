@@ -26,7 +26,7 @@ lang: zh
 
 ## 执行客户端规范 {#spec}
 
-[阅读 GitHub 上完整的 JSON-RPC 应用程序接口规范](https://github.com/ethereum/execution-apis)。
+[阅读 GitHub 上完整的 JSON-RPC 应用程序接口规范](https://github.com/ethereum/execution-apis)。 该应用程序接口在[执行执行应用程序接口网页](https://ethereum.github.io/execution-apis/api-documentation/)上有文档，还包含一个可试验所有可用方法的检查器。
 
 ## 约定 {#conventions}
 
@@ -53,7 +53,7 @@ lang: zh
 以下是一些示例：
 
 - 0x41（大小为 1，“A”）
-- 0x004200（大小为 3，“\0B\0”）
+- 0x004200（大小为 3，“0B0”）
 - 0x（大小为 0，“”）
 - 错误：0xf0f0f（位数必须是偶数）
 - 错误：004200（必须以 0x 为前缀）
@@ -74,7 +74,7 @@ lang: zh
 
 - `HEX String` - 整数区块号
 - `String "earliest"` - 表示最早/创世区块
-- `String "latest"` - 最新挖出的区块
+- `String "latest"` - 最新提议的区块
 - `String "safe"` - 最新且安全的头部区块
 - `String "finalized"` - 最新的最终确定的区块
 - `String "pending"` - 未决状态/交易
@@ -131,6 +131,10 @@ curl -H "Content-Type: application/json" -X POST --data '{"jsonrpc":"2.0","metho
 - [eth_getTransactionReceipt](#eth_gettransactionreceipt)
 - [eth_getUncleByBlockHashAndIndex](#eth_getunclebyblockhashandindex)
 - [eth_getUncleByBlockNumberAndIndex](#eth_getunclebyblocknumberandindex)
+
+## JSON-RPC 应用程序接口实战
+
+你可以使用[实战工具](https://ethereum-json-rpc.com)来发现与尝试应用程序接口方法。 它还为你展示了各个节点提供商支持哪些方法和网络。
 
 ## JSON-RPC 应用程序接口方法 {#json-rpc-methods}
 
@@ -382,11 +386,13 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_syncing","params":[],"id":1}
 
 返回客户端的 coinbase 地址。
 
+> **注意：**该方法已于 **v1.14.0** 版本被弃用，并不再受支持。 试图使用该方法会触发“Method not supported（不支持该方法）”错误。
+
 **参数**
 
 无
 
-**返回**
+**返回值**
 
 `DATA`，20 字节 - 当前的 coinbase 地址。
 
@@ -411,7 +417,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_coinbase","params":[],"id":6
 
 无
 
-**返回**
+**返回值**
 
 `chainId`，十六进制字符串值，代表当前链 ID 的整数。
 
@@ -436,7 +442,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_chainId","params":[],"id":67
 
 无
 
-**返回**
+**返回值**
 
 `Boolean` - 如果客户端正在挖矿，则返回 `true`，否则返回 `false`。
 
@@ -461,7 +467,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_mining","params":[],"id":71}
 
 无
 
-**返回**
+**返回值**
 
 `QUANTITY` - 每秒哈希数。
 
@@ -486,7 +492,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_hashrate","params":[],"id":7
 
 无
 
-**返回**
+**返回值**
 
 `QUANTITY` - 表示当前燃料价格（以 wei 为单位）的整数。
 
@@ -511,7 +517,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_gasPrice","params":[],"id":7
 
 无
 
-**返回**
+**返回值**
 
 `Array of DATA`，20 字节 - 客户端拥有的地址。
 
@@ -536,7 +542,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_accounts","params":[],"id":1
 
 无
 
-**返回**
+**返回值**
 
 `QUANTITY` - 表示客户端所在的当前区块编号的整数。
 
@@ -560,13 +566,13 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id
 **参数**
 
 1. `DATA`，20 字节 - 需要检查余额的地址。
-2. `QUANTITY|TAG` - 整数区块号，或字符串`“latest”`、`“earliest”`或`“pending”`，参见[默认区块参数](/developers/docs/apis/json-rpc/#default-block)
+2. `QUANTITY|TAG` - 整数区块号，或字符串 `"latest"`、`"earliest"`、`"pending"`、`"safe"` 或 `"finalized"`，参见[默认区块参数](/developers/docs/apis/json-rpc/#default-block)
 
 ```js
 params: ["0x407d73d8a49eeb85d32cf465507dd71d507100c1", "latest"]
 ```
 
-**返回**
+**返回值**
 
 `QUANTITY` - 表示当前余额的整数（以 wei 为单位）。
 
@@ -591,9 +597,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBalance","params":["0x407
 
 1. `DATA`，20 字节 - 存储地址。
 2. `QUANTITY` - 表示存储位置的整数。
-3. `QUANTITY|TAG` - 整数区块号，或字符串`“latest”`、`“earliest”`或`“pending”`，参见[默认区块参数](/developers/docs/apis/json-rpc/#default-block)
+3. `QUANTITY|TAG` - 整数区块号，或字符串 `"latest"`、`"earliest"`、`"pending"`、`"safe"` 或 `"finalized"`，参见[默认区块参数](/developers/docs/apis/json-rpc/#default-block)
 
-**返回**
+**返回值**
 
 `DATA` - 此存储位置处的值。
 
@@ -620,7 +626,7 @@ curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": [
 检索映射的元素要难一些。 映射中的元素位置通过以下方式计算：
 
 ```js
-keccack(LeftPad32(key, 0), LeftPad32(map position, 0))
+keccak(LeftPad32(key, 0), LeftPad32(map position, 0))
 ```
 
 这意味着要检索 pos1["0x391694e7e0b0cce554cb130d723a9d27458f9298"] 处的存储，我们需要通过以下方法计算位置：
@@ -657,7 +663,7 @@ curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": [
 **参数**
 
 1. `DATA`，20 字节 - 地址。
-2. `QUANTITY|TAG` - 整数区块号，或字符串`“latest”`、`“earliest”`或`“pending”`，参见[默认区块参数](/developers/docs/apis/json-rpc/#default-block)
+2. `QUANTITY|TAG` - 整数区块号，或字符串 `"latest"`、`"earliest"`、`"pending"`、`"safe"` 或 `"finalized"`，参见[默认区块参数](/developers/docs/apis/json-rpc/#default-block)
 
 ```js
 params: [
@@ -666,7 +672,7 @@ params: [
 ]
 ```
 
-**返回**
+**返回值**
 
 `QUANTITY` - 表示从该地址发送的交易数量的整数。
 
@@ -692,23 +698,23 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionCount","params
 1. `DATA`，32 字节 - 区块的哈希
 
 ```js
-params: ["0xb903239f8543d04b5dc1ba6579132b143087c68db1b2168786408fcbce568238"]
+params: ["0xd03ededb7415d22ae8bac30f96b2d1de83119632693b963642318d87d1bece5b"]
 ```
 
-**返回**
+**返回值**
 
 `QUANTITY` - 表示此区块中的交易数量的整数。
 
 **示例**
 
 ```js
-// Request
-curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockTransactionCountByHash","params":["0xb903239f8543d04b5dc1ba6579132b143087c68db1b2168786408fcbce568238"],"id":1}'
-// Result
+// 请求
+curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockTransactionCountByHash","params":["0xd03ededb7415d22ae8bac30f96b2d1de83119632693b963642318d87d1bece5b"],"id":1}'
+// 结果
 {
   "id":1,
   "jsonrpc": "2.0",
-  "result": "0xb" // 11
+  "result": "0x8b" // 139
 }
 ```
 
@@ -718,28 +724,28 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockTransactionCountByHa
 
 **参数**
 
-1. `QUANTITY|TAG` - 表示区块编号的整数，或字符串`“earliest”`、`“latest”`或`“pending”`，参见[默认区块参数](/developers/docs/apis/json-rpc/#default-block)。
+1. `QUANTITY|TAG` - 整数区块号，或字符串 `"earliest"`、`"latest"`、`"pending"`、`"safe"` 或 `"finalized"`，参见[默认区块参数](/developers/docs/apis/json-rpc/#default-block)
 
 ```js
 params: [
-  "0xe8", // 232
+  "0x13738ca", // 20396234
 ]
 ```
 
-**返回**
+**返回值**
 
 `QUANTITY` - 表示此区块中的交易数量的整数。
 
 **示例**
 
 ```js
-// Request
-curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockTransactionCountByNumber","params":["0xe8"],"id":1}'
-// Result
+// 请求
+curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockTransactionCountByNumber","params":["0x13738ca"],"id":1}'
+// 结果
 {
   "id":1,
   "jsonrpc": "2.0",
-  "result": "0xa" // 10
+  "result": "0x8b" // 139
 }
 ```
 
@@ -752,19 +758,19 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockTransactionCountByNu
 1. `DATA`，32 字节 - 区块的哈希
 
 ```js
-params: ["0xb903239f8543d04b5dc1ba6579132b143087c68db1b2168786408fcbce568238"]
+params: ["0x1d59ff54b1eb26b013ce3cb5fc9dab3705b415a67127a003c3e61eb445bb8df2"]
 ```
 
-**返回**
+**返回值**
 
 `QUANTITY` - 表示此区块中的叔块数量的整数。
 
 **示例**
 
 ```js
-// Request
-curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleCountByBlockHash","params":["0xb903239f8543d04b5dc1ba6579132b143087c68db1b2168786408fcbce568238"],"id":1}'
-// Result
+// 请求
+curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleCountByBlockHash","params":["0x1d59ff54b1eb26b013ce3cb5fc9dab3705b415a67127a003c3e61eb445bb8df2"],"id":1}'
+// 结果
 {
   "id":1,
   "jsonrpc": "2.0",
@@ -778,7 +784,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleCountByBlockHash","p
 
 **参数**
 
-1. `QUANTITY|TAG` - 表示区块编号的整数，或字符串“latest”、“earliest”或“pending”，参见[默认区块参数](/developers/docs/apis/json-rpc/#default-block)
+1. `QUANTITY|TAG` - 整数区块号，或字符串 `"latest"`、`"earliest"`、`"pending"`、`"safe"` 或 `"finalized"`，参见[默认区块参数](/developers/docs/apis/json-rpc/#default-block)
 
 ```js
 params: [
@@ -786,20 +792,20 @@ params: [
 ]
 ```
 
-**返回**
+**返回值**
 
 `QUANTITY` - 表示此区块中的叔块数量的整数。
 
 **示例**
 
 ```js
-// Request
+// 请求
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleCountByBlockNumber","params":["0xe8"],"id":1}'
-// Result
+// 结果
 {
   "id":1,
   "jsonrpc": "2.0",
-  "result": "0x1" // 1
+  "result": "0x0" // 0
 }
 ```
 
@@ -810,29 +816,29 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleCountByBlockNumber",
 **参数**
 
 1. `DATA`，20 字节 - 地址
-2. `QUANTITY|TAG` - 整数区块号，或字符串`“latest”`、`“earliest”`或`“pending”`，参见[默认区块参数](/developers/docs/apis/json-rpc/#default-block)
+2. `QUANTITY|TAG` - 整数区块号，或字符串 `"latest"`、`"earliest"`、`"pending"`、`"safe"` 或 `"finalized"`，参见[默认区块参数](/developers/docs/apis/json-rpc/#default-block)
 
 ```js
 params: [
-  "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b",
-  "0x2", // 2
+  "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+  "0x5daf3b", // 6139707
 ]
 ```
 
-**返回**
+**返回值**
 
 `DATA` - 给定地址处的代码。
 
 **示例**
 
 ```js
-// Request
-curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getCode","params":["0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b", "0x2"],"id":1}'
-// Result
+// 请求
+curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getCode","params":["0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2", "0x5daf3b"],"id":1}'
+// 结果
 {
   "id":1,
   "jsonrpc": "2.0",
-  "result": "0x600160008035811a818181146012578301005b601b6001356025565b8060005260206000f25b600060078202905091905056"
+  "result": "0x6060604052600436106100af576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806306fdde03146100b9578063095ea7b31461014757806318160ddd146101a157806323b872dd146101ca5780632e1a7d4d14610243578063313ce5671461026657806370a082311461029557806395d89b41146102e2578063a9059cbb14610370578063d0e30db0146103ca578063dd62ed3e146103d4575b6100b7610440565b005b34156100c457600080fd5b6100cc6104dd565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561010c5780820151818401526020810190506100f1565b50505050905090810190601f1680156101395780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b341561015257600080fd5b610187600480803573ffffffffffffffffffffffffffffffffffffffff1690602001909190803590602001909190505061057b565b604051808215151515815260200191505060405180910390f35b34156101ac57600080fd5b6101b461066d565b6040518082815260200191505060405180910390f35b34156101d557600080fd5b610229600480803573ffffffffffffffffffffffffffffffffffffffff1690602001909190803573ffffffffffffffffffffffffffffffffffffffff1690602001909190803590602001909190505061068c565b604051808215151515815260200191505060405180910390f35b341561024e57600080fd5b61026460048080359060200190919050506109d9565b005b341561027157600080fd5b610279610b05565b604051808260ff1660ff16815260200191505060405180910390f35b34156102a057600080fd5b6102cc600480803573ffffffffffffffffffffffffffffffffffffffff16906020019091905050610b18565b6040518082815260200191505060405180910390f35b34156102ed57600080fd5b6102f5610b30565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561033557808201518184015260208101905061031a565b50505050905090810190601f1680156103625780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b341561037b57600080fd5b6103b0600480803573ffffffffffffffffffffffffffffffffffffffff16906020019091908035906020019091905050610bce565b604051808215151515815260200191505060405180910390f35b6103d2610440565b005b34156103df57600080fd5b61042a600480803573ffffffffffffffffffffffffffffffffffffffff1690602001909190803573ffffffffffffffffffffffffffffffffffffffff16906020019091905050610be3565b6040518082815260200191505060405180910390f35b34600360003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600082825401925050819055503373ffffffffffffffffffffffffffffffffffffffff167fe1fffcc4923d04b559f4d29a8bfc6cda04eb5b0d3c460751c2402c5c5cc9109c346040518082815260200191505060405180910390a2565b60008054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156105735780601f1061054857610100808354040283529160200191610573565b820191906000526020600020905b81548152906001019060200180831161055657829003601f168201915b505050505081565b600081600460003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060008573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020819055508273ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff167f8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925846040518082815260200191505060405180910390a36001905092915050565b60003073ffffffffffffffffffffffffffffffffffffffff1631905090565b600081600360008673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002054101515156106dc57600080fd5b3373ffffffffffffffffffffffffffffffffffffffff168473ffffffffffffffffffffffffffffffffffffffff16141580156107b457507fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff600460008673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000205414155b156108cf5781600460008673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020541015151561084457600080fd5b81600460008673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600082825403925050819055505b81600360008673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000828254039250508190555081600360008573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600082825401925050819055508273ffffffffffffffffffffffffffffffffffffffff168473ffffffffffffffffffffffffffffffffffffffff167fddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef846040518082815260200191505060405180910390a3600190509392505050565b80600360003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000205410151515610a2757600080fd5b80600360003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600082825403925050819055503373ffffffffffffffffffffffffffffffffffffffff166108fc829081150290604051600060405180830381858888f193505050501515610ab457600080fd5b3373ffffffffffffffffffffffffffffffffffffffff167f7fcf532c15f0a6db0bd6d0e038bea71d30d808c7d98cb3bf7268a95bf5081b65826040518082815260200191505060405180910390a250565b600260009054906101000a900460ff1681565b60036020528060005260406000206000915090505481565b60018054600181600116156101000203166002900480601f016020809104026020016040519081016040528092919081815260200182805460018160011615610100020316600290048015610bc65780601f10610b9b57610100808354040283529160200191610bc6565b820191906000526020600020905b815481529060010190602001808311610ba957829003601f168201915b505050505081565b6000610bdb33848461068c565b905092915050565b60046020528160005260406000206020528060005260406000206000915091505054815600a165627a7a72305820deb4c2ccab3c2fdca32ab3f46728389c2fe2c165d5fafa07661e4e004f6c344a0029"
 }
 ```
 
@@ -849,7 +855,7 @@ Sign 方法如下计算以太坊特定的签名：`sign(keccak256("\x19Ethereum 
 1. `DATA`，20 字节 - 地址
 2. `DATA`，N 字节 - 要签名的消息
 
-**返回**
+**返回值**
 
 `DATA`：签名
 
@@ -883,7 +889,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sign","params":["0x9b2055d37
 - `data`: `DATA` - 合约的编译代码或调用的方法签名和编码参数的哈希。
 - `nonce`: `QUANTITY` -（可选）表示随机数的整数。 它允许覆盖你自己的使用相同随机数的待处理交易。
 
-**返回**
+**返回值**
 
 `DATA`，由指定帐户签名的 RLP 编码的交易对象。
 
@@ -930,11 +936,11 @@ params: [
 ]
 ```
 
-**返回**
+**返回值**
 
 `DATA`，32 字节 - 交易哈希，或者如果交易尚不可用，则为零哈希。
 
-创建合约时，在交易被挖掘后，使用 [eth_getTransactionReceipt](#eth_gettransactionreceipt) 获取合约地址。
+创建合约时，在交易被提议到区块后，使用 [eth_getTransactionReceipt](#eth_gettransactionreceipt) 获取合约地址。
 
 **示例**
 
@@ -963,11 +969,11 @@ params: [
 ]
 ```
 
-**返回**
+**返回值**
 
 `DATA`，32 字节 - 交易哈希，或者如果交易尚不可用，则为零哈希。
 
-创建合约时，在交易被挖掘后，使用 [eth_getTransactionReceipt](#eth_gettransactionreceipt) 获取合约地址。
+创建合约时，在交易被提议到区块后，使用 [eth_getTransactionReceipt](#eth_gettransactionreceipt) 获取合约地址。
 
 **示例**
 
@@ -997,9 +1003,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sendRawTransaction","params"
 - `value`: `QUANTITY` -（可选）表示与此交易一起发送的值的整数
 - `input`: `DATA` -（可选）方法签名和编码参数的哈希。 有关详细信息，参见 [Solidity 文档中的以太坊合约应用程序二进制接口](https://docs.soliditylang.org/en/latest/abi-spec.html)。
 
-2. `QUANTITY|TAG` - 整数区块号，或字符串`“latest”`、`“earliest”`或`“pending”`，参见[默认区块参数](/developers/docs/apis/json-rpc/#default-block)
+2. `QUANTITY|TAG` - 整数区块号，或字符串 `"latest"`、`"earliest"`、`"pending"`、`"safe"` 或 `"finalized"`，参见[默认区块参数](/developers/docs/apis/json-rpc/#default-block)
 
-**返回**
+**返回值**
 
 `DATA` - 已执行合约的返回值。
 
@@ -1024,7 +1030,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_call","params":[{see above}]
 
 参见 [eth_call](#eth_call) 的参数，但所有属性都是可选的。 如果没有指定燃料限制，geth 将使用待处理区块的区块燃料限制作为上限。 因此，当所需燃料数量高于待处理区块的燃料限制时，返回的估算值可能不足以执行调用/交易。
 
-**返回**
+**返回值**
 
 `QUANTITY` - 使用的燃料数量。
 
@@ -1057,7 +1063,7 @@ params: [
 ]
 ```
 
-**返回**
+**返回值**
 
 `Object` - 区块对象，或 `null`（当没有找到区块时）：
 
@@ -1124,7 +1130,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockByHash","params":["0
 
 **参数**
 
-1. `QUANTITY|TAG` - 表示区块编号的整数，或字符串`“earliest”`、`“latest”`或`“pending”`，参见[默认区块参数](/developers/docs/apis/json-rpc/#default-block)。
+1. `QUANTITY|TAG` - 整数区块号，或字符串 `"earliest"`、`"latest"`、`"pending"`、`"safe"` 或 `"finalized"`，参见[默认区块参数](/developers/docs/apis/json-rpc/#default-block)
 2. `Boolean` - 如果为 `true` 则返回完整的交易对象，如果为 `false` 则仅返回交易的哈希。
 
 ```js
@@ -1157,7 +1163,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockByNumber","params":[
 params: ["0x88df016429689c079f3b2f6ad39fa052532c56795b733da78a91ebe6a713944b"]
 ```
 
-**返回**
+**返回值**
 
 `Object` - 交易对象，或者如果没有找到交易，则为 `null`：
 
@@ -1215,7 +1221,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByHash","param
 
 ```js
 params: [
-  "0xe670ec64341771606e55d6b4ca35a1a6b75ee3d5145a99d05921026d1527331",
+  "0x1d59ff54b1eb26b013ce3cb5fc9dab3705b415a67127a003c3e61eb445bb8df2",
   "0x0", // 0
 ]
 ```
@@ -1225,8 +1231,8 @@ params: [
 **示例**
 
 ```js
-// Request
-curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByBlockHashAndIndex","params":["0xc6ef2fc5426d6ad6fd9e2a26abeab0aa2411b7ab17f30a99d3cb96aed1d1055b", "0x0"],"id":1}'
+// 请求
+curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByBlockHashAndIndex","params":["0x1d59ff54b1eb26b013ce3cb5fc9dab3705b415a67127a003c3e61eb445bb8df2", "0x0"],"id":1}'
 ```
 
 结果参见 [eth_getTransactionByHash](#eth_gettransactionbyhash)
@@ -1237,7 +1243,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByBlockHashAnd
 
 **参数**
 
-1. `QUANTITY|TAG` - 区块编号，或字符串`“earliest”`、`“latest”`或`“pending”`，参见[默认区块参数](/developers/docs/apis/json-rpc/#default-block)。
+1. `QUANTITY|TAG` - 整数区块号，或字符串 `"earliest"`、`"latest"`、`"pending"`、`"safe"` 或 `"finalized"`，参见[默认区块参数](/developers/docs/apis/json-rpc/#default-block)
 2. `QUANTITY` - 交易索引位置。
 
 ```js
@@ -1336,7 +1342,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionReceipt","para
 
 ```js
 params: [
-  "0xc6ef2fc5426d6ad6fd9e2a26abeab0aa2411b7ab17f30a99d3cb96aed1d1055b",
+  "0x1d59ff54b1eb26b013ce3cb5fc9dab3705b415a67127a003c3e61eb445bb8df2",
   "0x0", // 0
 ]
 ```
@@ -1346,8 +1352,8 @@ params: [
 **示例**
 
 ```js
-// Request
-curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleByBlockHashAndIndex","params":["0xc6ef2fc5426d6ad6fd9e2a26abeab0aa2411b7ab17f30a99d3cb96aed1d1055b", "0x0"],"id":1}'
+// 请求
+curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleByBlockHashAndIndex","params":["0x1d59ff54b1eb26b013ce3cb5fc9dab3705b415a67127a003c3e61eb445bb8df2", "0x0"],"id":1}'
 ```
 
 结果参见 [eth_getBlockByHash](#eth_getblockbyhash)
@@ -1360,7 +1366,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleByBlockHashAndIndex"
 
 **参数**
 
-1. `QUANTITY|TAG` - 区块编号，或字符串`“earliest”`、`“latest”`或`“pending”`，参见[默认区块参数](/developers/docs/apis/json-rpc/#default-block)。
+1. `QUANTITY|TAG` - 整数区块号，或字符串 `"earliest"`、`"latest"`、`"pending"`、`"safe"` 或 `"finalized"`，参见[默认区块参数](/developers/docs/apis/json-rpc/#default-block)
 2. `QUANTITY` - 叔块的索引位置。
 
 ```js
@@ -1398,8 +1404,8 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleByBlockNumberAndInde
 
 1. `Object` - 筛选器选项：
 
-- `fromBlock`: `QUANTITY|TAG` -（可选，默认值：`"latest"`）整数区块编号，`"latest"`（表示最后开采的区块），或`"pending"`、`"earliest"`（表示尚未开采的交易）。
-- `toBlock`: `QUANTITY|TAG` -（可选，默认值：`"latest"`）整数区块编号，`"latest"`（表示最后开采的区块），或`"pending"`、`"earliest"`（表示于尚未开采的交易）。
+- `fromBlock`: `QUANTITY|TAG` -（可选，默认值：`"latest"`）整型区块编号，或者`"latest"`表示最近提议的区块，`"safe"`表示最新的安全区块，`"finalized"`表示最近最终化的区块，或者`"pending"`、`"earliest"`表示尚未在区块中的交易。
+- `toBlock`: `QUANTITY|TAG` - (可选，默认值：`"latest"`）整型区块编号，或者`"latest"`表示最近提议的区块，`"safe"`表示最新的安全区块，`"finalized"`表示最近最终化的区块，或者`"pending"`、`"earliest"`表示尚未在区块中的交易。
 - `address`: `DATA|Array`，20 字节 -（可选）日志起源的合约地址或地址列表。
 - `topics`: `Array of DATA` -（可选）32 字节 `DATA` 主题数组。 主题是顺序相关的。 每个主题也可以是带有“或”选项的 DATA 数组。
 
@@ -1592,8 +1598,8 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getFilterLogs","params":["0x
 
 1. `Object` - 筛选器选项：
 
-- `fromBlock`: `QUANTITY|TAG` -（可选，默认值：`"latest"`）整数区块编号，`"latest"`（表示最后开采的区块），或`"pending"`、`"earliest"`（表示尚未开采的交易）。
-- `toBlock`: `QUANTITY|TAG` -（可选，默认值：`"latest"`）整数区块编号，`"latest"`（表示最后开采的区块），或`"pending"`、`"earliest"`（表示于尚未开采的交易）。
+- `fromBlock`: `QUANTITY|TAG` -（可选，默认值：`"latest"`）整型区块编号，或者`"latest"`表示最近提议的区块，`"safe"`表示最新的安全区块，`"finalized"`表示最近最终化的区块，或者`"pending"`、`"earliest"`表示尚未在区块中的交易。
+- `toBlock`: `QUANTITY|TAG` - (可选，默认值：`"latest"`）整型区块编号，或者`"latest"`表示最近提议的区块，`"safe"`表示最新的安全区块，`"finalized"`表示最近最终化的区块，或者`"pending"`、`"earliest"`表示尚未在区块中的交易。
 - `address`: `DATA|Array`，20 字节 -（可选）日志起源的合约地址或地址列表。
 - `topics`: `Array of DATA` -（可选）32 字节 `DATA` 主题数组。 主题是顺序相关的。 每个主题也可以是带有“或”选项的 DATA 数组。
 - `blockhash`: `DATA`，32 字节 -（可选，**future**），添加 EIP-234 后，`blockHash` 将是一个新的过滤器选项，它会将返回的日志限制为具有 32 字节哈希 `blockHash` 的单一区块。 使用 `blockHash` 相当于 `fromBlock` = `toBlock` = 具有哈希 `blockHash` 的区块编号。 如果 `blockHash` 出现在筛选条件中，则 `fromBlock` 和 `toBlock` 都不允许。
@@ -1645,10 +1651,10 @@ geth --http --dev console 2>>geth.log
 
 这将在 `http://localhost:8545` 上启动超文本传输协议远程过程调用接口。
 
-我们可以通过使用 [curl](https://curl.se) 检索 Coinbase 地址和余额来验证接口是否正在运行。 请注意，这些示例中的数据在你的本地节点上会有所不同。 如果你想尝试这些命令，请将第二个 curl 请求中的请求参数替换为第一个 curl 请求返回的结果。
+我们可以使用 [curl](https://curl.se) 检索 coinbase 地址（获取帐户数组的第一个地址）和余额来验证接口是否正常运行。 请注意，这些示例中的数据在你的本地节点上会有所不同。 如果你想尝试这些命令，请将第二个 curl 请求中的请求参数替换为第一个 curl 请求返回的结果。
 
 ```bash
-curl --data '{"jsonrpc":"2.0","method":"eth_coinbase", "id":1}' -H "Content-Type: application/json" localhost:8545
+curl --data '{"jsonrpc":"2.0","method":"eth_accounts","params":[]", "id":1}' -H "Content-Type: application/json" localhost:8545
 {"id":1,"jsonrpc":"2.0","result":["0x9b1d35635cc34752ca54713bb99d38614f63c955"]}
 
 curl --data '{"jsonrpc":"2.0","method":"eth_getBalance", "params": ["0x9b1d35635cc34752ca54713bb99d38614f63c955", "latest"], "id":2}' -H "Content-Type: application/json" localhost:8545
@@ -1695,7 +1701,7 @@ curl --data '{"jsonrpc":"2.0","method": "eth_getTransactionReceipt", "params": [
 {"jsonrpc":"2.0","id":7,"result":{"blockHash":"0x77b1a4f6872b9066312de3744f60020cbd8102af68b1f6512a05b7619d527a4f","blockNumber":"0x1","contractAddress":"0x4d03d617d700cf81935d7f797f4e2ae719648262","cumulativeGasUsed":"0x1c31e","from":"0x9b1d35635cc34752ca54713bb99d38614f63c955","gasUsed":"0x1c31e","logs":[],"logsBloom":"0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000","status":"0x1","to":null,"transactionHash":"0xe1f3095770633ab2b18081658bad475439f6a08c902d0915903bafff06e6febf","transactionIndex":"0x0"}}
 ```
 
-我们的合约是在 `0x4d03d617d700cf81935d7f797f4e2ae719648262` 上创建的。 结果为空而不是收据意味着该交易 尚未添加到区块中。 稍等片刻，检查你的矿工是否正在运行，然后重试。
+我们的合约是在 `0x4d03d617d700cf81935d7f797f4e2ae719648262` 上创建的。 结果为空而不是收据，意味着该交易尚未添加到区块中。 稍等片刻，检查你的共识客户端是否正在运行，然后重试。
 
 #### 与智能合约交互 {#interacting-with-smart-contract}
 
