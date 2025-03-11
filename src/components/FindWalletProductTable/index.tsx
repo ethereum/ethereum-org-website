@@ -75,6 +75,22 @@ const FindWalletProductTable = ({ wallets }: { wallets: Wallet[] }) => {
       })
   }, [wallets, filters, activeFilterKeys])
 
+  const personasWalletCounts = useMemo(() => {
+    if (!Array.isArray(wallets)) return []
+
+    return walletPersonas.map((persona) => {
+      const trueKeys = Object.keys(persona.presetFilters).filter(
+        (key) => persona.presetFilters[key] === true
+      )
+
+      return wallets.reduce(
+        (count, wallet) =>
+          count + (trueKeys.every((key) => wallet[key]) ? 1 : 0),
+        0
+      )
+    })
+  }, [wallets, walletPersonas])
+
   // Reset filters
   const resetFilters = () => {
     setFilters(walletFilterOptions)
@@ -101,6 +117,7 @@ const FindWalletProductTable = ({ wallets }: { wallets: Wallet[] }) => {
       matomoEventCategory="find-wallet"
       filters={filters}
       presetFilters={walletPersonas}
+      presetFiltersCounts={personasWalletCounts}
       resetFilters={resetFilters}
       setFilters={setFilters}
       subComponent={(wallet, listIdx) => (
