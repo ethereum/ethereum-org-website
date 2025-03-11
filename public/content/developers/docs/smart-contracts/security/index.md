@@ -115,7 +115,7 @@ The existence of audits and bug bounties doesn’t excuse your responsibility to
 
 - Use a [development environment](/developers/docs/frameworks/) for testing, compiling, deploying smart contracts
 
-- Run your code through basic code analysis tools, such as, [Cyfrin Aaderyn](https://github.com/Cyfrin/aderyn), Mythril and Slither. Ideally, you should do this before each pull request is merged and compare differences in output
+- Run your code through basic code analysis tools, such as, [Cyfrin Aderyn](https://github.com/Cyfrin/aderyn), Mythril and Slither. Ideally, you should do this before each pull request is merged and compare differences in output
 
 - Ensure your code compiles without errors, and the Solidity compiler emits no warnings
 
