@@ -39,7 +39,7 @@ Lo que estas implementaciones de clientes tienen en común es que todas siguen u
 - [Especificaciones de consenso](https://github.com/ethereum/consensus-specs)
 - [Se han implementado las EIP](https://eips.ethereum.org/) en varias [actualizaciones de red](/history/)
 
-### Nodos de rastreamiento en la red {#network-overview}
+### Rastreo de nodos en la red {#network-overview}
 
 Múltiples rastreadores ofrecen una visión general en tiempo real de los nodos en la red Ethereum. Tenga en cuenta que debido a la naturaleza de las redes descentralizadas, estos rastreadores sólo pueden proporcionar una vista limitada de la red y podrían ofrecer diferentes resultados.
 
