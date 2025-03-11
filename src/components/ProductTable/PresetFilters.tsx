@@ -17,7 +17,29 @@ const PresetFilters = ({
   showMobileSidebar = false,
   presetFilterCounts,
 }: PresetFiltersProps) => {
-  const colors = ["primary", "accent-b", "accent-c", "accent-a", "[#BEBF3B]"]
+  const colors = {
+    text: [
+      "text-primary",
+      "text-accent-b",
+      "text-accent-c",
+      "text-accent-a",
+      "text-[#BEBF3B]",
+    ],
+    border: [
+      "border-primary",
+      "border-accent-b",
+      "border-accent-c",
+      "border-accent-a",
+      "border-[#BEBF3B]",
+    ],
+    bg: [
+      "bg-primary",
+      "bg-accent-b",
+      "bg-accent-c",
+      "bg-accent-a",
+      "bg-[#BEBF3B]",
+    ],
+  }
 
   return (
     <div>
@@ -29,7 +51,7 @@ const PresetFilters = ({
         }`}
       >
         {presets.map((preset, idx) => {
-          const color = colors[idx]
+          const colorIdx = colors.text[idx] ? idx : idx % colors.text.length
           return (
             <div
               key={idx}
@@ -48,8 +70,9 @@ const PresetFilters = ({
                 <div className="items-top flex gap-2 px-1.5">
                   <div
                     className={cn(
-                      `relative mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded border-2 border-${color}`,
-                      activePresets.includes(idx) && `bg-${color}`
+                      "relative mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded border-2",
+                      colors.border[colorIdx],
+                      activePresets.includes(idx) && colors.bg[colorIdx]
                     )}
                   >
                     {activePresets.includes(idx) && (
@@ -68,12 +91,17 @@ const PresetFilters = ({
                     )}
                   </div>
                   <h3
-                    className={`duration-50 hyphens-auto text-left text-xl text-${color} transition-all`}
+                    className={cn(
+                      "duration-50 hyphens-auto text-left text-xl transition-all",
+                      colors.text[colorIdx]
+                    )}
                   >
                     {preset.title}{" "}
-                    <span className="font-normal">
-                      ({presetFilterCounts?.[idx]})
-                    </span>
+                    {presetFilterCounts?.[idx] && (
+                      <span className="font-normal">
+                        ({presetFilterCounts[idx]})
+                      </span>
+                    )}
                   </h3>
                 </div>
                 {!showMobileSidebar && (
