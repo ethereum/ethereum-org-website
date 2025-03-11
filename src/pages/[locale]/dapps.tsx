@@ -930,13 +930,6 @@ const DappsPage = () => {
 
   const avatar = [
     {
-      title: "OSUVOX",
-      description: t("page-dapps-dapp-description-osuvox"),
-      link: "https://osuvox.io/",
-      image: osuvox,
-      alt: t("page-dapps-osuvox-logo-alt"),
-    },
-    {
       title: "Spatial",
       description: t("page-dapps-dapp-description-spatial"),
       link: "https://www.spatial.io/",
