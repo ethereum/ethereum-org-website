@@ -26,6 +26,8 @@ const Search = ({ children }: Props) => {
   const searchButtonRef = useRef<HTMLButtonElement>(null)
   const { t } = useTranslation("common")
 
+  console.log(locale)
+
   const handleOpen = () => {
     onOpen()
     trackCustomEvent({
@@ -47,6 +49,8 @@ const Search = ({ children }: Props) => {
   const indexName =
     process.env.NEXT_PUBLIC_ALGOLIA_BASE_SEARCH_INDEX_NAME || "ethereumorg"
 
+  console.log(appId, apiKey, indexName)
+
   return (
     <>
       {children({ ...disclosure, onOpen: handleOpen })}
@@ -58,16 +62,28 @@ const Search = ({ children }: Props) => {
             indexName={indexName}
             onClose={onClose}
             searchParameters={{
-              facetFilters: [`lang:${locale}`],
+              facetFilters: [`language:${locale}`],
             }}
             transformItems={(items) =>
-              items.map((item: DocSearchHit) => {
-                const newItem: DocSearchHit = structuredClone(item)
-                newItem.url = sanitizeHitUrl(item.url)
-                const newTitle = sanitizeHitTitle(item.hierarchy.lvl0 || "")
-                newItem.hierarchy.lvl0 = newTitle
-                return newItem
-              })
+              items
+                .filter((item: DocSearchHit) => {
+                  // Extract language from item URL
+                  const urlLangMatch = item.url.match(
+                    /https:\/\/ethereum\.org\/([a-z]{2}(?:-[a-z]{2})?)\//i
+                  )
+                  const urlLang = urlLangMatch ? urlLangMatch[1] : "en"
+
+                  // Only keep items where URL language matches current locale
+                  return urlLang === locale
+                })
+                .map((item: DocSearchHit) => {
+                  // Your existing transformation logic
+                  const newItem: DocSearchHit = structuredClone(item)
+                  newItem.url = sanitizeHitUrl(item.url)
+                  const newTitle = sanitizeHitTitle(item.hierarchy.lvl0 || "")
+                  newItem.hierarchy.lvl0 = newTitle
+                  return newItem
+                })
             }
             placeholder={t("search-ethereum-org")}
             translations={{
