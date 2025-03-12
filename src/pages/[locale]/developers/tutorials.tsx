@@ -374,9 +374,11 @@ const TutorialPage = ({
                 )}
               </Text>
               <Text className="text-body-medium">{tutorial.description}</Text>
-              <Flex className="w-full flex-wrap">
-                <TutorialTags tags={tutorial.tags ?? []} />
-              </Flex>
+              {(tutorial.tags ?? []).length > 1 && (
+                <Flex className="w-full flex-wrap">
+                  <TutorialTags tags={tutorial.tags ?? []} />
+                </Flex>
+              )}
             </LinkFlex>
           )
         })}
