@@ -128,7 +128,7 @@ export const getStaticProps = (async ({ params }) => {
     DAI: { type: CRYPTO, url: "https://makerdao.com/en/" },
     BUSD: { type: FIAT, url: "https://www.binance.com/en/busd" },
     PAX: { type: FIAT, url: "https://www.paxos.com/pax/" },
-    TUSD: { type: FIAT, url: "https://www.trusttoken.com/trueusd" },
+    TUSD: { type: FIAT, url: "https://tusd.io/" },
     HUSD: { type: FIAT, url: "https://www.huobi.com/en-us/usd-deposit/" },
     SUSD: { type: CRYPTO, url: "https://www.synthetix.io/" },
     EURS: { type: FIAT, url: "https://eurs.stasis.net/" },
@@ -583,10 +583,12 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
         <Content>
           <CalloutBanner
             className="mx-0 mb-16 mt-8"
-            titleKey={t("page-stablecoins-stablecoins-dapp-callout-title")}
-            descriptionKey={t(
-              "page-stablecoins-stablecoins-dapp-callout-description"
-            )}
+            titleKey={
+              "page-stablecoins:page-stablecoins-stablecoins-dapp-callout-title"
+            }
+            descriptionKey={
+              "page-stablecoins:page-stablecoins-stablecoins-dapp-callout-description"
+            }
             image={dogeComputerImg}
             imageWidth={600}
             alt={t("page-stablecoins-stablecoins-dapp-callout-image-alt")}

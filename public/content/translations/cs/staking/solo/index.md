@@ -25,7 +25,7 @@ Uzamykatelé z domova jsou zodpovědní za provoz hardwaru potřebného ke spuš
 
 Uzamykatel z domova dostává odměny přímo z protokolu za to, že jejich validátor řádně funguje a je online.
 
-## Proč uzamykat z domova? {#why-stake-solo}
+## Proč stakovat z domova? {#why-stake-solo}
 
 Uzamčení z domova přináší větší odpovědnost, ale poskytuje vám maximální kontrolu nad vašimi prostředky a nastavením uzamčení.
 

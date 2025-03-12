@@ -111,6 +111,7 @@
   "page-run-a-node-sovereignty-1": "以太坊钱包允许你通过持有地址的私钥来完全保管和控制你的数字资产，但这些钥匙并不能告诉你区块链的当前状态，比如你的钱包余额。",
   "page-run-a-node-sovereignty-2": "默认情况下，以太坊钱包在查询你的余额时通常会联系第三方节点，如 Infura 或 Alchemy。如果你运行自己的节点，就可以拥有自己的以太坊区块链副本。",
   "page-run-a-node-title": "运行节点",
+  "page-run-a-node-meta-title": "如何运行以太坊节点",
   "page-run-a-node-voice-your-choice-title": "说出你的选择",
   "page-run-a-node-voice-your-choice-preview": "在发生分叉的情况下，不要放弃控制。",
   "page-run-a-node-voice-your-choice-1": "在链分叉的情况下（即两条链出现了两套不同的规则），运行你自己的节点可确保你能选择支持哪套规则。是否升级到新规则并支持提出的更改，由你决定。",
