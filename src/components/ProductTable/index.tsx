@@ -269,7 +269,7 @@ const ProductTable = <T,>({
           presets={presetFilters}
           activePresets={activePresets}
           handleSelectPreset={handleSelectPreset}
-          presetFilterCounts={presetFiltersCounts}
+          presetFiltersCounts={presetFiltersCounts}
         />
       ) : (
         <></>
@@ -281,6 +281,7 @@ const ProductTable = <T,>({
               filters={filters}
               setFilters={setFilters}
               presets={presetFilters}
+              presetFiltersCounts={presetFiltersCounts}
               activePresets={activePresets}
               handleSelectPreset={handleSelectPreset}
               dataCount={data.length}

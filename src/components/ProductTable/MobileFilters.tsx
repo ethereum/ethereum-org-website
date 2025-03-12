@@ -25,6 +25,7 @@ interface MobileFiltersProps {
   filters: FilterOption[]
   setFilters: React.Dispatch<React.SetStateAction<FilterOption[]>>
   presets: TPresetFilters
+  presetFiltersCounts?: number[]
   activePresets: number[]
   handleSelectPreset: (index: number) => void
   dataCount: number
@@ -39,6 +40,7 @@ const MobileFilters = ({
   filters,
   setFilters,
   presets,
+  presetFiltersCounts,
   activePresets,
   handleSelectPreset,
   dataCount,
@@ -84,6 +86,7 @@ const MobileFilters = ({
           <div className="flex-1 overflow-y-auto">
             <PresetFilters
               presets={presets}
+              presetFiltersCounts={presetFiltersCounts}
               activePresets={activePresets}
               handleSelectPreset={handleSelectPreset}
               showMobileSidebar={true}

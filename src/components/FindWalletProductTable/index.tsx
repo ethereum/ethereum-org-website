@@ -1,6 +1,12 @@
 import { useEffect, useMemo, useState } from "react"
 
-import { ChainName, FilterOption, Lang, Wallet } from "@/lib/types"
+import {
+  ChainName,
+  FilterOption,
+  Lang,
+  Wallet,
+  WalletFilter,
+} from "@/lib/types"
 
 import { useWalletColumns } from "@/components/FindWalletProductTable/hooks/useWalletColumns"
 import { useWalletFilters } from "@/components/FindWalletProductTable/hooks/useWalletFilters"
@@ -8,6 +14,7 @@ import { useWalletPersonaPresets } from "@/components/FindWalletProductTable/hoo
 import ProductTable from "@/components/ProductTable"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
+import { getFilteredWalletsCount } from "@/lib/utils/wallets"
 
 import FindWalletsNoResults from "./FindWalletsNoResults"
 import WalletSubComponent from "./WalletSubComponent"
@@ -76,20 +83,10 @@ const FindWalletProductTable = ({ wallets }: { wallets: Wallet[] }) => {
   }, [wallets, filters, activeFilterKeys])
 
   const personasWalletCounts = useMemo(() => {
-    if (!Array.isArray(wallets)) return []
-
-    return walletPersonas.map((persona) => {
-      const trueKeys = Object.keys(persona.presetFilters).filter(
-        (key) => persona.presetFilters[key] === true
-      )
-
-      return wallets.reduce(
-        (count, wallet) =>
-          count + (trueKeys.every((key) => wallet[key]) ? 1 : 0),
-        0
-      )
-    })
-  }, [wallets, walletPersonas])
+    return walletPersonas.map((persona) =>
+      getFilteredWalletsCount(persona.presetFilters as WalletFilter)
+    )
+  }, [walletPersonas])
 
   // Reset filters
   const resetFilters = () => {

@@ -195,3 +195,13 @@ export const getLanguageCountWalletsData = (locale: string) => {
   languageCountWalletsData.sort((a, b) => a.name.localeCompare(b.name))
   return languageCountWalletsData
 }
+
+export const getFilteredWalletsCount = (filters: WalletFilter) => {
+  return walletsData.filter((wallet) => {
+    const activeFilters = Object.entries(filters).filter(
+      ([_, value]) => value === true
+    )
+
+    return activeFilters.every(([feature]) => wallet[feature] === true)
+  }).length
+}

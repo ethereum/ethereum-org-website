@@ -7,7 +7,7 @@ export interface PresetFiltersProps {
   activePresets: number[]
   handleSelectPreset: (index: number) => void
   showMobileSidebar?: boolean
-  presetFilterCounts?: number[]
+  presetFiltersCounts?: number[]
 }
 
 const PresetFilters = ({
@@ -15,7 +15,7 @@ const PresetFilters = ({
   activePresets,
   handleSelectPreset,
   showMobileSidebar = false,
-  presetFilterCounts,
+  presetFiltersCounts,
 }: PresetFiltersProps) => {
   const colors = {
     text: [
@@ -97,9 +97,9 @@ const PresetFilters = ({
                     )}
                   >
                     {preset.title}{" "}
-                    {presetFilterCounts?.[idx] && (
+                    {presetFiltersCounts?.[idx] && (
                       <span className="font-normal">
-                        ({presetFilterCounts[idx]})
+                        ({presetFiltersCounts[idx]})
                       </span>
                     )}
                   </h3>
