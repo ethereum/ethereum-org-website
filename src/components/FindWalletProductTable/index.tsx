@@ -84,9 +84,12 @@ const FindWalletProductTable = ({ wallets }: { wallets: Wallet[] }) => {
 
   const personasWalletCounts = useMemo(() => {
     return walletPersonas.map((persona) =>
-      getFilteredWalletsCount(persona.presetFilters as WalletFilter)
+      getFilteredWalletsCount(
+        filteredData,
+        persona.presetFilters as WalletFilter
+      )
     )
-  }, [walletPersonas])
+  }, [filteredData, walletPersonas])
 
   // Reset filters
   const resetFilters = () => {

@@ -196,8 +196,11 @@ export const getLanguageCountWalletsData = (locale: string) => {
   return languageCountWalletsData
 }
 
-export const getFilteredWalletsCount = (filters: WalletFilter) => {
-  return walletsData.filter((wallet) => {
+export const getFilteredWalletsCount = (
+  wallets: WalletData[],
+  filters: WalletFilter
+) => {
+  return wallets.filter((wallet) => {
     const activeFilters = Object.entries(filters).filter(
       ([_, value]) => value === true
     )
