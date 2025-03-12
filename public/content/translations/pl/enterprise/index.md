@@ -114,8 +114,8 @@ Oto niektóre aplikacje dla przedsiębiorstw, które zostały wdrożone w public
 
 ### Finanse {#finance}
 
-- [Santander Bank](https://www.coindesk.com/santander-settles-both-sides-of-a-20-million-bond-trade-on-ethereum) _emisja i rozrachunek obligacji_
-- [Societe Generale](https://www.societegenerale.com/en/newsroom-first-financial-transaction-settled-with-a-digital-currency) _emisja obligacji_
+- [Santander Bank](https://www.coindesk.com/markets/2019/09/12/santander-settles-both-sides-of-a-20-million-bond-trade-on-ethereum) _emisja i rozrachunek obligacji_
+- [Societe Generale](https://www.societegenerale.com/en/news/newsroom/societe-generale-performs-first-financial-transaction-settled-central-bank-digital) _emisja obligacji_
 - [Cadence](https://www.forbes.com/sites/benjaminpirus/2019/10/09/fatburger-and-others-feed-30-million-into-ethereum-for-new-bond-offering/#513870be115b) _oferta obligacji i tokenizacja dla marek FAT_
 - [Sila](https://silamoney.com/) _infrastruktura bankowa i płatności ACH jako usługa_
 - [Tinlake](https://tinlake.centrifuge.io/) _finansowanie należności za pomocą stokenizowanych aktywów rzeczywistych, takich jak faktury, hipoteki lub tantiemy strumieniowe_
