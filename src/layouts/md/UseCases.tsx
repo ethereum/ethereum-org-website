@@ -115,6 +115,15 @@ export const UseCasesLayout = ({
           eventName: "refi",
         },
       },
+      {
+        text: t("template-usecase:template-usecase-dropdown-ai-agents"),
+        href: "/ai-agents/",
+        matomo: {
+          eventCategory: "use cases menu",
+          eventAction: "click",
+          eventName: "ai-agents",
+        },
+      },
     ],
   }
 
