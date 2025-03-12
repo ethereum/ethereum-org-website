@@ -1,3 +1,5 @@
+"use client"
+
 import * as React from "react"
 import { createContext, useContext } from "react"
 import { tv, type VariantProps } from "tailwind-variants"

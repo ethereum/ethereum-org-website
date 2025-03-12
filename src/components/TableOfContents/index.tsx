@@ -1,3 +1,5 @@
+"use client"
+
 import { FaGithub } from "react-icons/fa"
 
 import type { ToCItem } from "@/lib/types"

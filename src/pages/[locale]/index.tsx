@@ -218,7 +218,6 @@ const HomePage = ({
   const {
     t,
     locale,
-    asPath,
     dir,
     isModalOpen,
     setModalOpen,
@@ -241,7 +240,7 @@ const HomePage = ({
         title={t("page-index:page-index-meta-title")}
         description={t("page-index:page-index-meta-description")}
       />
-      <TranslatathonBanner pathname={asPath} />
+      <TranslatathonBanner />
       <HomeHero heroImg={Hero} className="w-full" />
       <div className="w-full space-y-32 px-4 md:mx-6 lg:space-y-48">
         <div className="my-20 grid w-full grid-cols-2 gap-x-4 gap-y-8 md:grid-cols-4 md:gap-x-10">

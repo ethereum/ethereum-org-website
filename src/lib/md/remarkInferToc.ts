@@ -1,12 +1,11 @@
 import type { BlockContent, DefinitionContent, ListItem } from "mdast"
 import { toc } from "mdast-util-toc"
 import type { List, Nodes } from "mdast-util-toc/lib"
-import type { Plugin } from "unified"
 import { visit } from "unist-util-visit"
 
 import type { IRemarkTocOptions, ToCNodeEntry, TocNodeType } from "@/lib/types"
 
-const remarkInferToc: Plugin<[IRemarkTocOptions]> = (options) => {
+const remarkInferToc = (options: IRemarkTocOptions) => {
   const { callback, maxDepth }: IRemarkTocOptions = {
     maxDepth: 6,
     ...options,

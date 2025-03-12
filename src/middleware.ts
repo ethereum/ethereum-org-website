@@ -5,6 +5,12 @@ import { routing } from "./i18n/routing"
 export default createMiddleware(routing)
 
 export const config = {
-  // Skip all paths that should not be internationalized
-  matcher: ["/((?!api|_next|_vercel|.*\\..*).*)"],
+  matcher: [
+    // Enable a redirect to a matching locale at the root
+    "/",
+
+    // Enable redirects that add missing locales
+    // (e.g. `/pathnames` -> `/en/pathnames`)
+    "/((?!api|_next|_vercel|.*\\..*).*)",
+  ],
 }

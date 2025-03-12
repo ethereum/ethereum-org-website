@@ -1,3 +1,5 @@
+"use client"
+
 import { useEffect, useState } from "react"
 import _ from "lodash"
 import { useLocale } from "next-intl"

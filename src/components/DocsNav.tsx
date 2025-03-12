@@ -1,3 +1,5 @@
+"use client"
+
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa"
 
 import { TranslationKey } from "@/lib/types"

@@ -1,3 +1,5 @@
+"use client"
+
 import { BaseHTMLAttributes, useState } from "react"
 
 import type { ChildOnlyProp, FileContributor } from "@/lib/types"
