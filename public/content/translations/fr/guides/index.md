@@ -22,6 +22,6 @@ Vous souhaitez entamer votre aventure sur Ethereum ? Nos guides pratiques vous c
 
 ## Utiliser Ethereum
 
-1. [Comment transférer des jetons vers une seconde couche](/guides/how-to-use-a-bridge/) - Les transactions sur Ethereum sont-elles trop coûteuses ? Pensez à passer aux solutions de mise à l'échelle Ethereum appelées secondes couches.
+1. [Comment transférer des jetons vers une seconde couche ](/guides/how-to-use-a-bridge/) - Les transactions sur Ethereum sont-elles trop coûteuses ? Pensez à passer aux solutions de mise à l'échelle Ethereum appelées secondes couches.
 
 2. [Comment échanger des jetons](/guides/how-to-swap-tokens/) - Souhaitez-vous échanger vos jetons contre un autre ? Ce guide simple vous montrera comment procéder.

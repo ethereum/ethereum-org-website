@@ -55,7 +55,7 @@ Les créateurs de jetons frauduleux ont recours à plusieurs astuces pour paraî
 
 - **Propriétaires légitimes**. Les jetons frauduleux créditent souvent des soldes importants à des adresses qui pourraient vraisemblablement détenir des jetons authentiques.
 
-  Par exemple, regardons à nouveau `wARB`. [Environ 16 % des jetons](https://etherscan.io/token/0xb047c8032b99841713b8e3872f06cf32beb27b82?a=0x1c8db745abe3c8162119b9ef2c13864cd1fdd72f) sont détenus par une adresse dont la balise publique est [Arbitrum Foundation: Deployer](https://etherscan.io/address/0x1c8db745abe3c8162119b9ef2c13864cd1fdd72f). Il ne s'agit _pas_ d'une fausse adresse, c'est vraiment l'adresse qui a [déployé le vrai contrat ARB sur Ethereum mainnet](https://etherscan.io/tx/0x242b50ab4fe9896cb0439cfe6e2321d23feede7eeceb31aa2dbb46fc06ed2670).
+  Par exemple, regardons à nouveau `wARB`. [Environ 16 % des jetons](https://etherscan.io/token/0xb047c8032b99841713b8e3872f06cf32beb27b82?a=0x1c8db745abe3c8162119b9ef2c13864cd1fdd72f) sont détenus par une adresse dont la balise publique est [Arbitrum Foundation: Deployer](https:// etherscan.io/address/0x1c8db745abe3c8162119b9ef2c13864cd1fdd72f). Il ne s'agit _pas_ d'une fausse adresse, c'est vraiment l'adresse qui a [déployé le vrai contrat ARB sur Ethereum mainnet](https://etherscan.io/tx/0x242b50ab4fe9896cb0439cfe6e2321d23feede7eeceb31aa2dbb46fc06ed2670).
 
   Étant donné que le solde ERC-20 d'une adresse fait partie du stockage du contrat ERC-20, il peut être spécifié par le contrat comme étant ce que souhaite le développeur du contrat. Il est également possible qu'un contrat interdise les transferts afin que les utilisateurs légitimes ne puissent pas se débarrasser de ces jetons frauduleux.
 
@@ -94,4 +94,4 @@ Tant qu'il y aura de la valeur dans le monde, il y aura des malfaiteurs qui tent
 - Les jetons malveillants imitent des jetons légitimes en utilisant le même nom, symbole, etc.
 - Les jetons malveillants _ne peuvent pas_ utiliser la même adresse de contrat.
 - La meilleure source pour l'adresse légitime du jeton est l'organisation émettrice dudit jeton.
-- À défaut, vous pouvez utiliser des applications populaires et fiables comme [Uniswap](https://app.uniswap.org/#/swap) et [Etherscan](https://etherscan.io/).
+- À défaut, vous pouvez utiliser des applications populaires et fiables comme [Uniswap](https://app.uniswap.org/#/swap) et [Etherscan](https://etherscan.io /).
