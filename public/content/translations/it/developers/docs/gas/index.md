@@ -1,5 +1,6 @@
 ---
 title: Gas e commissioni
+metaTitle: "Gas e commissioni Ethereum: panoramica tecnica"
 description:
 lang: it
 ---
