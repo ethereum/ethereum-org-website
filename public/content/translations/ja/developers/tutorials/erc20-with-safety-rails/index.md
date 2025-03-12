@@ -24,7 +24,7 @@ published: 2022-08-15
 
 ## ERC-20コントラクトの作成 {#creating-an-erc-20-contract}
 
-安全策を講じるための機能を追加する前に、ERC-20コントラクトが必要になります。 この記事では、[OpenZeppelin Contracts Wizard](https://docs.openzeppelin.com/contracts/4.x/wizard)を使って加えます。 もう一つブラウザで開いて、次の手順に従ってください。
+安全策を講じるための機能を追加する前に、ERC-20コントラクトが必要になります。 この記事では、[OpenZeppelin Contracts Wizard](https://docs.openzeppelin.com/contracts/5.x/wizard)を使って加えます。 もう一つブラウザで開いて、次の手順に従ってください。
 
 1. **ERC20**を選びます。
 2. 次の設定値を入力します。

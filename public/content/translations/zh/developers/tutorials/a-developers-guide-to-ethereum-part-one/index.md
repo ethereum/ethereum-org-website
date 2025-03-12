@@ -140,7 +140,7 @@ In [1]: from web3 import Web3
 
 </FeaturedText>
 
-试一下将一些数值转换为 wei 或反向转换。 请注意， [ETH 和 wei 之间还有其他面额](https://web3py.readthedocs.io/en/stable/examples.html#converting-currency-denominations)名称。 其中比较有名的是 **gwei**，因为它通常用于表示交易费用。
+试一下将一些数值转换为 wei 或反向转换。 请注意， [ETH 和 wei 之间还有其他面额](https://web3py.readthedocs.io/en/stable/troubleshooting.html#how-do-i-convert-currency-denominations)名称。 其中比较有名的是 **gwei**，因为它通常用于表示交易费用。
 
 ```python
 In [2]: Web3.toWei(1, 'ether')

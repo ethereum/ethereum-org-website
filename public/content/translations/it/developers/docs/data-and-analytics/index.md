@@ -47,7 +47,7 @@ Per iniziare, visita la [guida rapida per principianti di Ethereum](https://acad
 
 ## Letture consigliate {#further-reading}
 
-- [Panoramica della rete Graph](https://thegraph.com/docs/en/about/network/)
+- [Panoramica della rete Graph](https://thegraph.com/docs/en/about/)
 - [GraphQL Playground](https://thegraph.com/explorer/subgraph/graphprotocol/graph-network-mainnet?version=current)
 - [Esempi di codice API su EtherScan](https://etherscan.io/apis#contracts)
 - [Esploratore della Beacon Chain di Beaconcha.in](https://beaconcha.in)

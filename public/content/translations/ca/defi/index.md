@@ -168,7 +168,7 @@ Si la disponibilitat del mercat B cau de sobte i l'usuari no pot comprar prou ac
 
 Per a poder dur a terme l'exemple anterior en les finances tradicionals, necessitaríeu una quantitat enorme de diners. Aquest tipus d'estratègies de negoci només estan disponibles per aquells que disposin d'una gran riquesa. Els préstecs ràpids són un exemple d'un futur on tenir diners no és necessàriament un prerequisit per a guanyar diners.
 
-[Més sobre préstecs ràpids](https://aave.com/flash-loans/)
+[Més sobre préstecs ràpids](https://aave.com/docs/concepts/flash-loans/)
 
 <Divider />
 
