@@ -288,7 +288,7 @@ const TutorialPage = ({
           <Flex className="mb-4 max-w-full flex-wrap items-center gap-2">
             <div className="flex w-full flex-wrap gap-2 lg:grid lg:grid-cols-3 lg:gap-4 xl:grid-cols-4 2xl:grid-cols-5">
               {Object.entries(allTags).map(([tagName, tagCount], idx) => {
-                if (tagCount <= 1) return null
+                if ((tagCount as number) <= 1) return null
 
                 const name = `${tagName} (${tagCount})`
                 const isActive = selectedTags.includes(tagName)
