@@ -1,5 +1,5 @@
 ---
-title: Abstracción de Cuenta
+title: Abstracción de cuenta
 description: Una visión general de los planes de Ethereum para hacer que las cuentas de usuario sean más sencillas y seguras.
 lang: es
 summaryPoints:
@@ -8,7 +8,7 @@ summaryPoints:
   - Las claves perdidas y expuestas se pueden recuperar usando múltiples copias de seguridad.
 ---
 
-# Abstracción de Cuenta {#account-abstraction}
+# Abstracción de cuenta {#account-abstraction}
 
 Los usuarios interactúan con Ethereum usando **[cuentas de propiedad externa (o EOA)](/glossary/#eoa)**. Esta es la única forma de empezar una transacción o generar un contrato inteligente. Esto limita cómo los usuarios pueden interactuar con Ethereum. Por ejemplo, dificulta la creación de transacciones en lote y requiere que los usuarios siempre mantengan un saldo en ETH para costear el gas.
 

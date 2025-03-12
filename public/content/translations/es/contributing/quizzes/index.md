@@ -4,7 +4,7 @@ description: Las políticas que nosotros usamos cuando agregamos quizzes en ethe
 lang: es
 ---
 
-# Centro de cuestionarios {#quizzes}
+# Cuestionarios {#quizzes}
 
 Los Quizzes son una oportunidad para que los usuarios se prueben ellos mismo para ver si entiendieron el contenido de la página que ellos acabaron de leer. Las preguntas solo deben ser basadas en el contenido proporcionado en la página y no debería de preguntar acerca información que no es mencionada en la página.
 

@@ -1,5 +1,6 @@
 ---
 title: Tókenes no fungibles (NFT)
+metaTitle: '¿Qué son los NFT? | Beneficios y uso'
 description: Una visión general de los NFT en Ethereum
 lang: es
 template: use-cases
@@ -75,7 +76,7 @@ El nombre de dominio alternativo de esta página web también funciona a través
 
 ## ¿Cómo funcionan los NFT? {#how-nfts-work}
 
-Los NFT, como cualquiera de los objetos digitales en la cadena de bloques de Ethereum, se crean a través de un programa informático especial basado en Ethereum llamado «contrato inteligente». Estos contratos siguen ciertas reglas, como los estándares[ERC-721](/glossary/#erc-721) o [ERC-1155](/glossary/#erc-1155), que determinan qué puede hacer un contrato.
+Los NFT, como cualquier objeto digital en la cadena de bloques de Ethereum, se crean a través de un programa especial de computación llamado "contrato inteligente". Estos contratos siguen ciertas reglas, como los estándares[ERC-721](/glossary/#erc-721) o [ERC-1155](/glossary/#erc-1155), que determinan qué puede hacer un contrato.
 
 Los contratos inteligentes de NFT pueden hacer algunas cosas importantes:
 
