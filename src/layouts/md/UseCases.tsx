@@ -3,6 +3,7 @@ import type { MdPageContent, UseCasesFrontmatter } from "@/lib/interfaces"
 
 import BannerNotification from "@/components/Banners/BannerNotification"
 import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
+import AiAgentProductLists from "@/components/Content/ai-agents/AiAgentProductLists"
 import Emoji from "@/components/Emoji"
 import { ContentHero } from "@/components/Hero"
 import InlineLink from "@/components/ui/Link"
@@ -19,6 +20,7 @@ import { usePathname } from "@/i18n/routing"
 // UseCases layout components
 export const useCasesComponents = {
   // Export empty object if none needed
+  AiAgentProductLists,
 }
 
 type UseCasesLayoutProps = ChildOnlyProp &

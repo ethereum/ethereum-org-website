@@ -49,7 +49,7 @@ These factors transform AI agents from simple bots into dynamic, self-improving 
 
 We're beginning to explore the full potential of AI agents, and projects are already leveraging the synergy between AI and blockchain—particularly in transparency and monetization.
 
-TODO: CARDS HERE
+<AiAgentProductLists list="ai-agents" />
 
 <strong>Luna's first appearance as a podcast guest</strong>
 
@@ -69,7 +69,7 @@ You can skip the complicated interfaces of DeFi and manage your crypto with simp
 
 This intuitive approach makes transactions faster, easier, and less prone to errors like sending funds to the wrong address or overpaying for fees.
 
-TODO: CARDS HERE
+<AiAgentProductLists list="chat" />
 
 ## AI agents vs AI bots {#ai-agents-vs-ai-bots}
 
@@ -86,7 +86,7 @@ The distinction between AI agents and AI bots can sometimes be confusing, as bot
 
 ## Dive deeper {#dive-deeper}
 
-TODO: CARDS HERE
+<AiAgentProductLists list="dive-deeper" />
 
 ## You can build your own AI agent {#you-can-build-your-own-ai-agent}
 
