@@ -8,7 +8,6 @@ import type {
   Wallet,
 } from "@/lib/types"
 
-import BannerNotification from "@/components/Banners/BannerNotification"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import FindWalletProductTable from "@/components/FindWalletProductTable"
 import MainArticle from "@/components/MainArticle"
@@ -97,11 +96,6 @@ const FindWalletPage = ({
         description={t("page-find-wallet-meta-description")}
         image="/images/wallets/wallet-hero.png"
       />
-
-      <BannerNotification shouldShow={true}>
-        {t("page-find-wallet-footnote-1")}
-      </BannerNotification>
-
       <div className="mt-8 w-full pl-5 sm:mt-0 md:w-1/2 lg:pt-12">
         <Breadcrumbs slug={pathname} />
         <h1 className="my-4 text-[2.5rem] leading-[1.4] md:text-5xl lg:my-8">

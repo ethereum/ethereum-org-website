@@ -59,7 +59,7 @@ const PresetFilters = ({
             >
               <button
                 className={cn(
-                  "duration-50 group flex h-full w-full cursor-pointer flex-col items-start rounded-2xl border p-3 shadow-[3px_2px_8px_0px_rgba(0,0,0,0.08)] transition-all hover:bg-background-highlight lg:p-6",
+                  "duration-50 group flex h-full w-full cursor-pointer flex-col items-start rounded-2xl border p-3 shadow-svg-button-link transition-all hover:bg-background-highlight lg:p-6",
                   "focus-visible:outline focus-visible:outline-4 focus-visible:-outline-offset-4 focus-visible:outline-primary-hover",
                   activePresets.includes(idx)
                     ? "border-primary"
