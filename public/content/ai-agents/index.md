@@ -31,7 +31,7 @@ AI agents handle complex tasks, learn from experience, and continuously improve.
 
 In traditional finance, AI agents often operate in centralized environments with limited data inputs. This hinders their ability to learn or manage assets autonomously.
 
-In contrast, Ethereum’s decentralized ecosystem offers several key advantages:
+In contrast, Ethereum's decentralized ecosystem offers several key advantages:
 
 - <strong>Transparent data:</strong> Access to real-time blockchain information.
 - <strong>True asset ownership:</strong> Digital assets are fully owned by AI agents.
@@ -47,19 +47,19 @@ These factors transform AI agents from simple bots into dynamic, self-improving 
 
 ## AI agents on Ethereum {#ai-agents-on-ethereum}
 
-We’re beginning to explore the full potential of AI agents, and projects are already leveraging the synergy between AI and blockchain—particularly in transparency and monetization.
+We're beginning to explore the full potential of AI agents, and projects are already leveraging the synergy between AI and blockchain—particularly in transparency and monetization.
 
 TODO: CARDS HERE
 
-<strong>Luna’s first appearance as a podcast guest</strong>
+<strong>Luna's first appearance as a podcast guest</strong>
 
-TODO: LUNA VIDEO HERE
+<YouTube id="ZCsOMxnIruA" />
 
 ## Agent-controlled wallets {#agent-controlled-wallets}
 
-Agents like Luna or AIXBT control their own onchain wallet ([AIXBT’s wallet](https://clusters.xyz/aixbt), [Luna’s wallet](https://zapper.xyz/account/0x0d177181e3763b20d47dc3a72dd584368bd8bf43)) enabling them to tip fans and participate in economic activities.
+Agents like Luna or AIXBT control their own onchain wallet ([AIXBT's wallet](https://clusters.xyz/aixbt), [Luna's wallet](https://zapper.xyz/account/0x0d177181e3763b20d47dc3a72dd584368bd8bf43)) enabling them to tip fans and participate in economic activities.
 
-During Luna’s X social campaign #LunaMuralChallenge, Luna selected and rewarded the winners via her Base wallet — marking <strong>the first instance of an AI hiring humans for crypto reward</strong>.
+During Luna's X social campaign #LunaMuralChallenge, Luna selected and rewarded the winners via her Base wallet — marking <strong>the first instance of an AI hiring humans for crypto reward</strong>.
 
 TODO: GOOD TO KNOW SECTION
 
@@ -78,7 +78,11 @@ The distinction between AI agents and AI bots can sometimes be confusing, as bot
 - AI bots are like automated assistants — They follow specific, pre-programmed instructions to perform routine tasks.
 - AI agents are more like intelligent companions — They learn from experience, adapt to new information, and make decisions on their own.
 
-TODO: TABLE HERE
+|                           | AI agents                 | AI bots                   |
+| ------------------------- | ------------------------- | ------------------------- |
+| **Interactions**          | Complex, adaptable, autonomous                                         | Simple, pre-defined scope, hardcoded              |
+| **Learning**              | Learns continuously, can experiment and adapt to new data in real-time | Operates on pre-trained data or fixed rules       |
+| **Task completion**       | Aims to achieve broader objectives                                     | Focuses on specific tasks only                    |
 
 ## Dive deeper {#dive-deeper}
 
