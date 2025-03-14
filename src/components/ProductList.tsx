@@ -60,11 +60,13 @@ const ProductList = ({ actionLabel, content, category }: ProductListProps) => {
               </div>
               <Flex className="ms-4 w-full flex-col justify-between pb-4 sm:flex-row">
                 <div className="flex flex-1 flex-col gap-2">
-                  <div>{title}</div>
+                  <div className="text-xl font-bold">{title}</div>
                   <div className="mb-0 text-sm opacity-60">{description}</div>
-                  <div className="mb-0 flex flex-col gap-2 text-sm opacity-60">
-                    {contentItems}
-                  </div>
+                  {contentItems && (
+                    <div className="mb-0 flex flex-col gap-2 text-sm">
+                      {contentItems}
+                    </div>
+                  )}
                 </div>
                 {link && (
                   <ButtonLink
