@@ -46,7 +46,7 @@ const PresetFilters = ({
       <div
         className={`lg:pb-11 ${
           showMobileSidebar
-            ? "grid grid-cols-2 gap-2"
+            ? "grid grid-cols-2 gap-2 pb-5"
             : "grid auto-cols-[200px] grid-flow-col gap-4 overflow-x-auto px-4 lg:auto-cols-fr"
         }`}
       >
@@ -59,11 +59,12 @@ const PresetFilters = ({
             >
               <button
                 className={cn(
-                  "duration-50 group flex h-full w-full cursor-pointer flex-col items-start rounded-2xl border p-3 shadow-svg-button-link transition-all hover:bg-background-highlight lg:p-6",
+                  "duration-50 group flex h-[164px] w-full cursor-pointer flex-col items-start rounded-2xl border p-3 shadow-svg-button-link transition-all hover:bg-background-highlight lg:h-full lg:p-6",
                   "focus-visible:outline focus-visible:outline-4 focus-visible:-outline-offset-4 focus-visible:outline-primary-hover",
                   activePresets.includes(idx)
                     ? "border-primary"
-                    : "border-primary-low-contrast"
+                    : "border-primary-low-contrast",
+                  showMobileSidebar && "h-full"
                 )}
                 onClick={() => handleSelectPreset(idx)}
               >
