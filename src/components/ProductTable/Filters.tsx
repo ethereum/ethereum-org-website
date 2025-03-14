@@ -76,7 +76,7 @@ const Filters = ({
 
   return (
     <div className={`w-full lg:w-80`}>
-      <div className="width-full sticky top-0 z-10 flex flex-row items-center justify-between border-b border-b-primary bg-background px-2 py-1.5 lg:top-[76px] lg:px-6">
+      <div className="width-full sticky top-0 z-10 mb-2 flex flex-row items-center justify-between border-b border-b-background-highlight bg-background px-2 py-1.5 lg:top-[76px] lg:px-6">
         <p className="text-md font-bold">
           {t("table-filters")} ({activeFiltersCount})
         </p>

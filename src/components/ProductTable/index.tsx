@@ -24,6 +24,7 @@ interface ProductTableProps<T> {
   allDataLength: number
   filters: FilterOption[]
   presetFilters: TPresetFilters
+  presetFiltersCounts?: number[]
   resetFilters: () => void
   setFilters: Dispatch<SetStateAction<FilterOption[]>>
   subComponent?: FC<T>
@@ -39,6 +40,7 @@ const ProductTable = <T,>({
   allDataLength,
   filters,
   presetFilters,
+  presetFiltersCounts,
   resetFilters,
   setFilters,
   subComponent,
@@ -267,6 +269,7 @@ const ProductTable = <T,>({
           presets={presetFilters}
           activePresets={activePresets}
           handleSelectPreset={handleSelectPreset}
+          presetFiltersCounts={presetFiltersCounts}
         />
       ) : (
         <></>
@@ -278,6 +281,7 @@ const ProductTable = <T,>({
               filters={filters}
               setFilters={setFilters}
               presets={presetFilters}
+              presetFiltersCounts={presetFiltersCounts}
               activePresets={activePresets}
               handleSelectPreset={handleSelectPreset}
               dataCount={data.length}
