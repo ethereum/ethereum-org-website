@@ -20,7 +20,6 @@ import { usePathname } from "@/i18n/routing"
 
 // UseCases layout components
 export const useCasesComponents = {
-  // Export empty object if none needed
   AiAgentProductLists,
   BuildYourOwnAIAgent,
 }
