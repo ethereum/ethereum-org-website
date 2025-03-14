@@ -62,7 +62,7 @@ const AiAgentProductLists = ({ list }: { list: string }) => {
           <p key="aixbt-description">
             AIXBT provides crypto market analysis. This AI Agent autonomously
             delivers actionable insights, witty commentary, and market sentiment
-            analysis on Twitter/X, where he gathered almost 500k followers in
+            analysis on Twitter/X, where it gathered almost 500k followers in
             just 4 months.
           </p>,
           <p key="aixbt-description">
