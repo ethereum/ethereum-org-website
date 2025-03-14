@@ -29,7 +29,5 @@
   "page-local-environment-setup-subtitle-2": "Narito ang mga tool at framework na iyong magagamit at makakatulong sa iyo na gawin ang iyong Ethereum application.",
   "page-local-environment-setup-title": "I-set up ang iyong lokal na kapaligiran sa pagbuo",
   "page-local-environment-solidity-template-desc": "Isang GitHub template para sa naunang itinayo na setup para sa iyong Solidity smart contracts. Kabilang dito ang Hardhat local network, Waffle para sa mga pagsusuri, Ethers para sa implementasyon ng wallet, at iba pa.",
-  "page-local-environment-solidity-template-logo-alt": "Logo ng Solidity template",
-  "page-local-environment-waffle-desc": "Ang pinakamasulong na testing lib para sa mga smart contract. Gamitin mag-isa o kasama ang Scaffold-eth o Hardhat.",
-  "page-local-environment-waffle-logo-alt": "Logo ng Waffle"
+  "page-local-environment-solidity-template-logo-alt": "Logo ng Solidity template"
 }
