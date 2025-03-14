@@ -41,7 +41,7 @@ Oltre alla ricerca prospettica, si stanno studiando alcune riprogettazioni fonda
 
 - [Introduzione al proof-of-stake](/developers/docs/consensus-mechanisms/pos/)
 - [Documento Casper-FFG](https://arxiv.org/abs/1710.09437)
-- [Spiegazione di Casper-FFG](https://arxiv.org/abs/1710.09437)
+- [Spiegazione di Casper-FFG](https://medium.com/unitychain/intro-to-casper-ffg-9ed944d98b2d)
 - [Documento Gasper](https://arxiv.org/abs/2003.03052)
 
 #### Ricerca recente {#recent-research}

@@ -41,7 +41,7 @@ Genau wie zukunftsorientierte Forschung werden einige fundamentale Neugestaltung
 
 - [Einführung in Proof-of-Stake](/developers/docs/consensus-mechanisms/pos/)
 - [Casper-FFG-Artikel](https://arxiv.org/abs/1710.09437)
-- [Casper-FFG-Erklärung](https://arxiv.org/abs/1710.09437)
+- [Casper-FFG-Erklärung](https://medium.com/unitychain/intro-to-casper-ffg-9ed944d98b2d)
 - [Casper-Artikel](https://arxiv.org/abs/2003.03052)
 
 #### Aktuelle Forschung {#recent-research}
