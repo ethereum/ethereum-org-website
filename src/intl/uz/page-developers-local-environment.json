@@ -29,7 +29,5 @@
   "page-local-environment-setup-subtitle-2": "Bu yerda Ethereum ilovasini yaratishda yordam berish uchun foydalanishingiz mumkin bo‘lgan vositalar va freymvorklar keltirilgan.",
   "page-local-environment-setup-title": "Mahalliy dasturlash muhitini sozlang",
   "page-local-environment-solidity-template-desc": "Solidity aqlli shartnomalari uchun oldindan yaratilgan sozlash uchun GitHub andozasi. Hardhat mahalliy tarmog‘i, testlar uchun Waffle, hamyonni amalga oshirish uchun efirlar va boshqalarni o‘z ichiga oladi.",
-  "page-local-environment-solidity-template-logo-alt": "Mustahkamlik andozasi logotipi",
-  "page-local-environment-waffle-desc": "Aqlli shartnomalar uchun eng zamonaviy sinov kutubxonasi. Uni yakka o‘zi yoki Scaffold-eth yoxud Hardhat bilan birgalikda ishlatishingiz mumkin.",
-  "page-local-environment-waffle-logo-alt": "Waffle logotipi"
+  "page-local-environment-solidity-template-logo-alt": "Mustahkamlik andozasi logotipi"
 }

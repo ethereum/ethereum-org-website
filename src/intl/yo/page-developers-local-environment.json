@@ -29,7 +29,5 @@
   "page-local-environment-setup-subtitle-2": "Eyi ni awọn irinṣẹ ati awọn ìṣètò ìlànà ti o le lo ti o le ṣe iranlọwọ fun ọ lati kọ ohun elo Ethereum rẹ.",
   "page-local-environment-setup-title": "Ṣeto ayika idagbasoke agbegbe rẹ",
   "page-local-environment-solidity-template-desc": "Awose GitHub fún ohún èlò aṣesilẹ fún adehún ọlọgbọn Solidity rẹ. O ni afikun nẹtiwọọki agbegbe Hardhat, Waffle fún igbeyẹwo, Ethers fún iṣamulo wọlẹẹti ati bẹ́ẹ bẹ lọ.",
-  "page-local-environment-solidity-template-logo-alt": "Àwòrán ìdánimọ̀ Solidity",
-  "page-local-environment-waffle-desc": "Ohún elo to dara julọ lati ṣayẹwo adehun ọlọgbọn. O le lo lasan tabi pẹlu Scaffol-eth tabi Hardhat.",
-  "page-local-environment-waffle-logo-alt": "Àwòrán ìdánimọ̀ Waffle"
+  "page-local-environment-solidity-template-logo-alt": "Àwòrán ìdánimọ̀ Solidity"
 }
