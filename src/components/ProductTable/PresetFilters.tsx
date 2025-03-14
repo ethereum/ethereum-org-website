@@ -44,7 +44,7 @@ const PresetFilters = ({
   return (
     <div>
       <div
-        className={`mb-5 lg:pb-11 ${
+        className={`lg:pb-11 ${
           showMobileSidebar
             ? "grid grid-cols-2 gap-2"
             : "grid auto-cols-[200px] grid-flow-col gap-4 overflow-x-auto px-4 lg:auto-cols-fr"
@@ -55,7 +55,7 @@ const PresetFilters = ({
           return (
             <div
               key={idx}
-              className={showMobileSidebar ? "w-full" : "grid-rows-1"}
+              className={showMobileSidebar ? "w-full" : "grid-rows-1 pb-5"}
             >
               <button
                 className={cn(
