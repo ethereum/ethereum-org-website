@@ -25,7 +25,7 @@ On Ethereum, we’re seeing innovations of AI agents ranging from virtual influe
 
 ## What are AI agents? {#what-are-ai-agents}
 
-AI agents handle complex tasks, learn from experience, and continuously improve. They operate non-stop and can instantly detect opportunities.
+AI agents are software programs that use artificial intelligence to perform tasks or make own decisions. They learn from data, adapt to changes, and handle complex tasks. They operate non-stop and can instantly detect opportunities.
 
 ### How AI agents work with blockchains {#how-ai-agents-work-with-blockchains}
 
