@@ -1,9 +1,10 @@
+"use client"
+
 import { HTMLAttributes } from "react"
-import type { GetStaticProps } from "next/types"
 import type { ReactNode } from "react"
 import { FaDiscord } from "react-icons/fa"
 
-import type { BasePageProps, ChildOnlyProp, Lang, Params } from "@/lib/types"
+import type { ChildOnlyProp } from "@/lib/types"
 
 import Emoji from "@/components/Emoji"
 import ExpandableCard from "@/components/ExpandableCard"
@@ -31,16 +32,9 @@ import { Center, Flex, Stack, VStack } from "@/components/ui/flex"
 import InlineLink from "@/components/ui/Link"
 
 import { cn } from "@/lib/utils/cn"
-import { existsNamespace } from "@/lib/utils/existsNamespace"
-import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
-import { getLocaleTimestamp } from "@/lib/utils/time"
-import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
-
-import { DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
 
 import { useTranslation } from "@/hooks/useTranslation"
-import loadNamespaces from "@/i18n/loadNamespaces"
-import { InfoGrid } from "@/layouts/md/Staking"
+import { InfoGrid } from "@/layouts"
 import community from "@/public/images/enterprise-eth.png"
 import hackathon from "@/public/images/hackathon_transparent.png"
 import impact from "@/public/images/impact_transparent.png"
@@ -210,37 +204,6 @@ type RunANodeCard = {
   body: string[]
   alt: string
 }
-
-export async function getStaticPaths() {
-  return {
-    paths: LOCALES_CODES.map((locale) => ({ params: { locale } })),
-    fallback: false,
-  }
-}
-
-export const getStaticProps = (async ({ params }) => {
-  const { locale = DEFAULT_LOCALE } = params || {}
-
-  const requiredNamespaces = getRequiredNamespacesForPage("/run-a-node")
-
-  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
-
-  const lastDeployDate = getLastDeployDate()
-  const lastDeployLocaleTimestamp = getLocaleTimestamp(
-    locale as Lang,
-    lastDeployDate
-  )
-
-  const messages = await loadNamespaces(locale, requiredNamespaces)
-
-  return {
-    props: {
-      messages,
-      contentNotTranslated,
-      lastDeployLocaleTimestamp,
-    },
-  }
-}) satisfies GetStaticProps<BasePageProps, Params>
 
 const RunANodePage = () => {
   const { t } = useTranslation("page-run-a-node")
