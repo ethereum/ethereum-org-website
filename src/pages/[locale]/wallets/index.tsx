@@ -10,6 +10,7 @@ import CardList from "@/components/CardList"
 import FeedbackCard from "@/components/FeedbackCard"
 import HorizontalCard from "@/components/HorizontalCard"
 import { Image } from "@/components/Image"
+import ListenToPlayer from "@/components/ListenToPlayer"
 import MainArticle from "@/components/MainArticle"
 import PageHero from "@/components/PageHero"
 import PageMetadata from "@/components/PageMetadata"
@@ -31,6 +32,7 @@ import { DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
 
 import { useTranslation } from "@/hooks/useTranslation"
 import loadNamespaces from "@/i18n/loadNamespaces"
+import { usePathname } from "@/i18n/routing"
 import DappsImage from "@/public/images/doge-computer.png"
 import ETHImage from "@/public/images/eth-logo.png"
 import FindWalletImage from "@/public/images/wallets/find-wallet.png"
@@ -75,6 +77,7 @@ export const getStaticProps = (async ({ params }) => {
 }) satisfies GetStaticProps<BasePageProps, Params>
 
 const WalletsPage = () => {
+  const pathname = usePathname()
   const locale = useLocale()
   const { t } = useTranslation("page-wallets")
 
@@ -225,6 +228,9 @@ const WalletsPage = () => {
       <PageHero content={heroContent} isReverse />
 
       <div className="mt-4 w-full border-t bg-background-highlight px-0 py-16 lg:mt-8">
+        <div className="-mb-8 w-full px-8 py-4 pb-0">
+          <ListenToPlayer slug={pathname} />
+        </div>
         <div className="w-full px-8 py-4 pb-0">
           <h2 className="mb-0 mt-12 text-2xl leading-[1.4] md:text-[2rem]">
             {t("page-wallets-whats-a-wallet")}
