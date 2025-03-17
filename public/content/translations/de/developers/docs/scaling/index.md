@@ -106,7 +106,7 @@ _Beachten Sie, dass in der Erklärung im Video der Begriff „Layer 2" für alle
 - [Ein unvollständiger Leitfaden für Rollups](https://vitalik.eth.limo/general/2021/01/05/rollup.html)
 - [Ethereum-betriebene ZK-Rollups: Weltmeister](https://hackmd.io/@canti/rkUT0BD8K)
 - [Optimistische Rollups ggü. ZK-Rollups](https://limechain.tech/blog/optimistic-rollups-vs-zk-rollups/)
-- [Zero-Knowledge Blockchain Skalierung](https://ethworks.io/assets/download/zero-knowledge-blockchain-scaling-ethworks.pdf)
+- [Zero-Knowledge Blockchain Skalierung](https://www.archblock.com/poland/assets/download/zero-knowledge-blockchain-scaling-ethworks.pdf)
 - [Warum Rollups + Daten-Shards die einzige nachhaltige Lösung für hohe Skalierbarkeit sind](https://polynya.medium.com/why-rollups-data-shards-are-the-only-sustainable-solution-for-high-scalability-c9aabd6fbb48)
 
 _Kennen Sie eine Community Ressource, die Ihnen geholfen hat? Bearbeiten Sie diese Seite und fügen Sie sie hinzu!_

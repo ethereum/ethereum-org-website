@@ -59,13 +59,13 @@ yarn react-app:start
 
 通常您会直接从您的智能合约中获取数据。 想要读取上次交易的时间吗？ 只需调用 `MyContract.methods.latestTradeTime().call()`，它将数据从以太坊节点（如 Infura）提取到你的去中心化应用程序。 但如果您需要数百个不同的数据点，该怎么办？ 这将导致在节点上进行数百次数据提取操作，每次都有[往返延时](https://wikipedia.org/wiki/Round-trip_delay_time)，使你的去中心化应用程序缓慢且效率低下。 一个变通的办法是在您的合约中设置一个取数器调用函数，一次性返回多个数据。 但这并不总是理想的。
 
-然后您可能对历史数据也感兴趣。 您不仅想知道上次交易的时间，还想知道自己做过的所有交易的时间。 使用 _create-eth-app_ 子图包，阅读[文档](https://thegraph.com/docs/define-a-subgraph)并使其适合您自己的合约。 如果您正在寻找受欢迎的智能合约，甚至可能已经有了一个子图。 可以查看[子图浏览器](https://thegraph.com/explorer/)。
+然后您可能对历史数据也感兴趣。 您不仅想知道上次交易的时间，还想知道自己做过的所有交易的时间。 使用 _create-eth-app_ 子图包，阅读[文档](https://thegraph.com/docs/en/subgraphs/developing/creating/starting-your-subgraph)并使其适合您自己的合约。 如果您正在寻找受欢迎的智能合约，甚至可能已经有了一个子图。 可以查看[子图浏览器](https://thegraph.com/explorer/)。
 
 有了子图后，你可以在去中心化应用程序中编写一个简单的查询来检索所有重要的区块链数据，包括你需要的历史数据，并且只需一次提取操作即可。
 
 ### Apollo {#apollo}
 
-由于 [Apollo Boost](https://www.apollographql.com/docs/react/get-started/) 集成，你可以轻松将图集成到 React 去中心化应用程序中。 特别是在使用 [React hooks 和 Apollo](https://www.apollographql.com/blog/apollo-client-now-with-react-hooks-676d116eeae2) 时，获取数据就像在您的组件中写一个 GraphQl 查询一样简单：
+由于 [Apollo Boost](https://www.apollographql.com/docs/react/get-started/) 集成，你可以轻松将图集成到 React 去中心化应用程序中。 特别是在使用 [React hooks 和 Apollo](https://www.apollographql.com/blog/apollo-client-now-with-react-hooks) 时，获取数据就像在您的组件中写一个 GraphQl 查询一样简单：
 
 ```js
 const { loading, error, data } = useQuery(myGraphQlQuery)

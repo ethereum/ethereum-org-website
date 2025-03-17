@@ -6,7 +6,7 @@ lang: es
 
 Los contratos Inteligentes de Ethereum son extremadamente flexibles, capaces de contener grandes cantidades de tokens (A menudo más de $1B) y ejecutar una lógica inmutable basada en el código de contrato inteligente previamente desplegado. Aunque esto ha creado un ecosistema vibrante y creativo de contratos inteligentes sin confianza e interconectados, es también el ecosistema perfecto para atraer atacantes que buscan beneficios explotando las vulnerabilidades de los contratos inteligentes y los comportamientos inesperados en Ethereum. El código del contrato inteligente _normalmente_ no se puede modificar para "poner parches" a los fallos de seguridad, por lo que los activos robados de contratos inteligentes son irrecuperables, y los activos robados son extremadamente difíciles de rastrear. La cantidad total de valor robado o perdido debido a problemas de contratos inteligentes asciende fácilmente a $1B USD. Algunos de los mayores debido a errores de codificación de contrato inteligente incluyen:
 
-- [Parity multi-sig issue #1: $30 M perdidos](https://www.coindesk.com/30-million-ether-reported-stolen-parity-wallet-breach)
+- [Parity multi-sig issue #1: $30 M perdidos](https://www.coindesk.com/markets/2017/07/19/30-million-ether-reported-stolen-due-to-parity-wallet-breach)
 - [Problema de paridad multi-sig #2: $300M bloqueados](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether)
 - [TheDAO hack, 3.6M ETH! Más de $1B en los precios ETH de hoy](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/)
 

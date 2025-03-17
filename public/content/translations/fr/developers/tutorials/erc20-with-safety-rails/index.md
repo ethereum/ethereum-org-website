@@ -24,7 +24,7 @@ Si vous souhaitez consulter le code source complet :
 
 ## Création d'un contrat ERC-20 {#creating-an-erc-20-contract}
 
-Avant de pouvoir ajouter la fonctionnalité de sécurité, nous avons besoin d'un contrat ERC-20. Dans cet article, nous utiliserons [l'assistant de contrats OpenZeppelin](https://docs.openzeppelin.com/contracts/4.x/wizard). Ouvrez-le dans un autre navigateur et suivez ces instructions :
+Avant de pouvoir ajouter la fonctionnalité de sécurité, nous avons besoin d'un contrat ERC-20. Dans cet article, nous utiliserons [l'assistant de contrats OpenZeppelin](https://docs.openzeppelin.com/contracts/5.x/wizard). Ouvrez-le dans un autre navigateur et suivez ces instructions :
 
 1. Sélectionnez **ERC20**.
 2. Entrez ces paramètres :

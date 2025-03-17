@@ -257,7 +257,7 @@ ii. オプティミスティック・ロールアップを使用するデベロ�
 
 - [オプティミスティック・ロールアップの仕組み（完全ガイド）](https://www.alchemy.com/overviews/optimistic-rollups)
 - [ブロックチェーンにおけるロールアップとは何か？ 技術ガイド](https://www.ethereum-ecosystem.com/blog/what-is-a-blockchain-rollup-a-technical-introduction)
-- [Arbitrumの基本ガイド](https://newsletter.banklesshq.com/p/the-essential-guide-to-arbitrum)
-- [Optimismのロールアップはどのように機能するのか？](https://www.paradigm.xyz/2021/01/how-does-optimisms-rollup-really-work)
+- [Arbitrumの基本ガイド](https://www.bankless.com/the-essential-guide-to-arbitrum)
+- [Optimismのロールアップはどのように機能するのか？](https://www.paradigm.xyz/2021/01/how-does-optimism-s-rollup-really-work)
 - [OVMの詳細を学ぶ](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)
 - [オプティミスティック仮想マシンとは何か？](https://www.alchemy.com/overviews/optimistic-virtual-machine)
