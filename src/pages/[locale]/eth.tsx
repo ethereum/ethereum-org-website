@@ -13,6 +13,7 @@ import FeedbackCard from "@/components/FeedbackCard"
 import HorizontalCard from "@/components/HorizontalCard"
 import { Image } from "@/components/Image"
 import InfoBanner from "@/components/InfoBanner"
+import ListenToPlayer from "@/components/ListenToPlayer"
 import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
 import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
@@ -33,6 +34,7 @@ import { DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
 
 import { useTranslation } from "@/hooks/useTranslation"
 import loadNamespaces from "@/i18n/loadNamespaces"
+import { usePathname } from "@/i18n/routing"
 import eth from "@/public/images/eth.png"
 import ethCat from "@/public/images/eth-gif-cat.png"
 import defi from "@/public/images/finance_transparent.png"
@@ -206,6 +208,7 @@ export const getStaticProps = (async ({ params }) => {
 
 const EthPage = () => {
   const { t } = useTranslation("page-eth")
+  const pathname = usePathname()
 
   const tokens = [
     {
@@ -331,6 +334,9 @@ const EthPage = () => {
       </Content>
       <GrayContainer>
         <Content>
+          <div className="mb-8">
+            <ListenToPlayer slug={pathname} />
+          </div>
           <Intro>
             <Text>{t("page-eth-description")} </Text>
           </Intro>
