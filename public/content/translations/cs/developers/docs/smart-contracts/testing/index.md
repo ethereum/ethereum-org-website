@@ -130,7 +130,7 @@ Mnoho frameworků pro jednotkové testy umožňuje vytvářet tvrzení – jedno
 
 ##### 3. Změřte pokrytí kódu
 
-[Pokrytí kódu](https://en.m.wikipedia.org/wiki/Code_coverage) je metrika testování, která sleduje počet větví, řádků a příkazů v kódu provedených během testů. Testy by měly mít dobré pokrytí kódu, jinak se může stát, že kontrakt projde všemi testy, ale v kódu stále existují zranitelnosti. Zaznamenání vysokého pokrytí kódu však dává jistotu, že všechny příkazy/funkce v chytrém kontraktu byly dostatečně otestovány z hlediska správnosti.
+[Pokrytí kódu](https://en.m.wikipedia.org/wiki/Code_coverage) je metrika testování, která sleduje počet větví, řádků a příkazů v kódu provedených během testů. Testy by měly mít dobré pokrytí kódu, aby se minimalizovalo riziko netestovaných zranitelností. Bez dostatečného pokrytí se můžete mylně domnívat, že váš kontrakt je bezpečný, protože všechny testy prošly, zatímco v netestovaných cestách kódu stále existují zranitelnosti. Zaznamenání vysokého pokrytí kódu však dává jistotu, že všechny příkazy/funkce v chytrém kontraktu byly dostatečně otestovány z hlediska správnosti.
 
 ##### 4. Použijte dobře vyvinuté testovací frameworky
 
@@ -213,7 +213,7 @@ Spuštění kontraktů na lokálním blockchainu by mohlo být užitečné jako 
 
 ### Testování kontraktů v testovacích sítích {#testing-contracts-on-testnets}
 
-Testovací síť neboli testnet funguje přesně jako hlavní síť Ethereum s tím rozdílem, že používá Ether (ETH) bez reálné hodnoty. Nasazení kontraktu na [testovací síti](/developers/docs/networks/#ethereum-testnets) znamená, že s ním může kdokoli interagovat (např. prostřednictvím frontendu dappky), aniž by ohrozil finanční prostředky.
+Testovací síť neboli testnet funguje přesně jako hlavní síť Ethereum s tím rozdílem, že používá ether (ETH) bez reálné hodnoty. Nasazení kontraktu na [testovací síti](/developers/docs/networks/#ethereum-testnets) znamená, že s ním může kdokoli interagovat (např. prostřednictvím frontendu dappky), aniž by ohrozil finanční prostředky.
 
 Tato forma ručního testování je užitečná pro vyhodnocení komplexního toku aplikace z pohledu uživatele. Zde mohou beta testeři také provádět zkušební provoz a hlásit případné problémy s obchodní logikou a celkovou funkčností kontraktu.
 
