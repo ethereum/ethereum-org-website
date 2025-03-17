@@ -73,6 +73,7 @@ Now that we’re inside our project folder, we’ll use npm init to initialize t
 
 It doesn’t really matter how you answer the installation questions; here is how we did it for reference:
 
+```json
     package name: (my-nft)
     version: (1.0.0)
     description: My first NFT!
@@ -95,6 +96,7 @@ It doesn’t really matter how you answer the installation questions; here is ho
       "author": "",
       "license": "ISC"
     }
+```
 
 Approve the package.json, and we’re good to go!
 
@@ -255,6 +257,7 @@ We’ve added several dependencies and plugins so far, now we need to update har
 
 Update your hardhat.config.js to look like this:
 
+```js
     /**
     * @type import('hardhat/config').HardhatUserConfig
     */
@@ -272,6 +275,7 @@ Update your hardhat.config.js to look like this:
           }
        },
     }
+```
 
 ## Step 14: Compile our contract {#compile-contract}
 

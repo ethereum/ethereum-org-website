@@ -39,8 +39,8 @@ export const BaseLayout: StoryObj<typeof meta> = {
         <ListenToPlayer slug="/eth" />
       </div>
     ),
-    contentIsOutdated: false,
-    contentNotTranslated: false,
+    // contentIsOutdated: false,
+    // contentNotTranslated: false,
     lastDeployLocaleTimestamp: "May 14, 2021",
   },
 }

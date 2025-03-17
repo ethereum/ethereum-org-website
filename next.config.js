@@ -53,6 +53,10 @@ module.exports = (phase, { defaultConfig }) => {
           issuer: fileLoaderRule.issuer,
           resourceQuery: { not: [...fileLoaderRule.resourceQuery.not, /url/] }, // exclude if *.svg?url
           use: ["@svgr/webpack"],
+        },
+        {
+          test: /\.md$/,
+          use: ["raw-loader"],
         }
       )
 
@@ -111,9 +115,18 @@ module.exports = (phase, { defaultConfig }) => {
             "node_modules/@swc/core-linux-x64-gnu",
             "node_modules/@swc/core-linux-x64-musl",
             "node_modules/@esbuild/linux-x64",
-            "public/**/*.png",
-            "public/**/*.gif",
             "src/data",
+            "public/**/*.jpg",
+            "public/**/*.png",
+            "public/**/*.webp",
+            "public/**/*.svg",
+            "public/**/*.gif",
+            "public/**/*.json",
+            "public/**/*.txt",
+            "public/**/*.xml",
+            "public/**/*.pdf",
+            "public/fonts",
+            "public/images",
           ],
         },
       },

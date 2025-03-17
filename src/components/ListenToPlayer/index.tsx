@@ -1,3 +1,5 @@
+"use client"
+
 import { useContext, useEffect, useState } from "react"
 import { Howl } from "howler"
 import { Portal } from "@radix-ui/react-portal"
