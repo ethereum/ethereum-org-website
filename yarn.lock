@@ -2703,10 +2703,10 @@
     pump "^3.0.0"
     tar-fs "^2.1.1"
 
-"@netlify/plugin-nextjs@^5.8.0":
-  version "5.8.0"
-  resolved "https://registry.yarnpkg.com/@netlify/plugin-nextjs/-/plugin-nextjs-5.8.0.tgz#4b8e630d43868cd0cb8cdb8f1f6de2ea60b36df4"
-  integrity sha512-1hduTMFYkZRSqRAPK1+5A6T/uc543PfxX0erzJEVWb9fKgPlY24ZQMi2nXBwlQ6JlBYjZJcMEtN2vhhNqyjgXA==
+"@netlify/plugin-nextjs@^5.10.0":
+  version "5.10.0"
+  resolved "https://registry.yarnpkg.com/@netlify/plugin-nextjs/-/plugin-nextjs-5.10.0.tgz#5c8ff56732213edba6f52c99e98ad768bed4c195"
+  integrity sha512-h2ugfCAQRhp6NIYABW+20AvVkrM/ReuELBfgkH+5DALfrKrsQXYeS1YPZi9y4bCfNFj8Zxdhu4DtuVFDiUONiA==
 
 "@next/bundle-analyzer@^14.2.5":
   version "14.2.5"

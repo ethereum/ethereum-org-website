@@ -76,7 +76,7 @@ Metamaskのアカウントは[こちら](https://metamask.io/download.html)か�
     npm init
 
 インストール時の質問に対する回答方法は自由です。参考までに過去の回答方法は次のとおりです。
-
+```json
     package name: (my-nft)
     version: (1.0.0)
     description: My first NFT!
@@ -99,7 +99,7 @@ Metamaskのアカウントは[こちら](https://metamask.io/download.html)か�
       "author": "",
       "license": "ISC"
     }
-
+```
 「package.json」を承認してください。これで準備が完了しました。
 
 ## ステップ7: [Hardhat](https://hardhat.org/getting-started/#overview)をインストールする {#install-hardhat}
@@ -259,6 +259,7 @@ Hardhatは、追加のツールと拡張機能のための[プラグイン](http
 
 「hardhat.config.js」を以下のように更新してください:
 
+```js
     /**
     * @type import('hardhat/config').HardhatUserConfig
     */
@@ -276,6 +277,7 @@ Hardhatは、追加のツールと拡張機能のための[プラグイン](http
           }
        },
     }
+```
 
 ## ステップ14: コントラクトをコンパイルする {#compile-contract}
 

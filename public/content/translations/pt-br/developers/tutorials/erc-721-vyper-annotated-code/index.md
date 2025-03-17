@@ -618,7 +618,7 @@ Qualquer pessoa autorizada a transferir um token, tem permissão para queimá-lo
 
 Ao contrário do Solidity, o Vyper não tem herança. Esta é uma escolha de design deliberada para tornar o código mais claro e, com isso, mais fácil de proteger. Portanto, para criar seu próprio contrato Vyper ERC-721, você usa [este contrato](https://github.com/vyperlang/vyper/blob/master/examples/tokens/ERC721.vy) e o modifica para implementar a lógica comercial que você desejar.
 
-# Conclusão {#conclusion}
+## Conclusão {#conclusion}
 
 Recapitulando, aqui estão algumas das ideias mais importantes neste contrato:
 

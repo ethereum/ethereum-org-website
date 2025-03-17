@@ -15,7 +15,7 @@ published: 2021-04-22
 
 [Beeple](https://www.nytimes.com/2021/03/11/arts/design/nft-auction-christies-beeple.html): 69 de milioane de dolari [3LAU](https://www.forbes.com/sites/abrambrown/2021/03/03/3lau-nft-nonfungible-tokens-justin-blau/?sh=5f72ef64643b): 11 milioane de dolari [Grimes](https://www.theguardian.com/music/2021/mar/02/grimes-sells-digital-art-collection-non-fungible-tokens): 6 milioane de dolari
 
-Toți și-au emis NFT-urile folosind puternicul API al Alchemy. În acest tutorial vă vom învăța cum să faceți același lucru în <10 minute.
+Toți și-au emis NFT-urile folosind puternicul API al Alchemy. În acest tutorial vă vom învăța cum să faceți același lucru în \<10 minute.
 
 „Emiterea unui NFT” este actul de a publica o instanță unică a tokenului dvs. ERC-721 pe blockchain. Utilizând contractul nostru inteligent din [Partea 1 a acestei serii de tutoriale despre NFT-uri](/developers/tutorials/how-to-write-and-deploy-an-nft/), haideți să ne adaptăm aptitudinile pentru web3 și să emitem un NFT. La sfârșitul acestui tutorial veți fi capabili să bateți cât de multe NFT-uri vă dorește inima (și portofelul)!
 

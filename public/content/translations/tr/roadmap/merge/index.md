@@ -92,7 +92,7 @@ title="Dapp ve akıllı sözleşme geliştiricileri"
 contentPreview="The Merge was designed to have minimal impact on smart contract and dapp developers."
 id="developers">
 
-Birleşim, mutabakata değişikliklerle beraber geldi, bu değişiklikler şunlarla ilişkili olanları da içerir:<
+Birleşim, mutabakata değişikliklerle beraber geldi, bu değişiklikler şunlarla ilişkili olanları da içerir:
 
 <ul>
   <li>blok yapısı</li>
