@@ -6,6 +6,8 @@ import I18nProvider from "@/components/I18nProvider"
 import ThemeProvider from "@/components/ThemeProvider"
 import { TooltipProvider } from "@/components/ui/tooltip"
 
+import { FeedbackWidgetProvider } from "@/contexts/FeedbackWidgetContext"
+
 export default function Providers({
   children,
   locale,
@@ -18,7 +20,9 @@ export default function Providers({
   return (
     <I18nProvider locale={locale} messages={messages}>
       <ThemeProvider>
-        <TooltipProvider>{children}</TooltipProvider>
+        <FeedbackWidgetProvider>
+          <TooltipProvider>{children}</TooltipProvider>
+        </FeedbackWidgetProvider>
       </ThemeProvider>
     </I18nProvider>
   )
