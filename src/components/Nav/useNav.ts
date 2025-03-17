@@ -219,6 +219,11 @@ export const useNav = () => {
                   description: t("nav-refi-description"),
                   href: "/refi/",
                 },
+                {
+                  label: t("ai-agents"),
+                  description: t("nav-ai-agents-description"),
+                  href: "/ai-agents/",
+                },
               ],
             },
           ],
