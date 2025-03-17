@@ -53,11 +53,23 @@ module.exports = (phase, { defaultConfig }) => {
           issuer: fileLoaderRule.issuer,
           resourceQuery: { not: [...fileLoaderRule.resourceQuery.not, /url/] }, // exclude if *.svg?url
           use: ["@svgr/webpack"],
+        },
+        {
+          test: /\.md$/,
+          use: ["raw-loader"],
         }
       )
 
       // Modify the file loader rule to ignore *.svg, since we have it handled now.
       fileLoaderRule.exclude = /\.svg$/i
+
+      config.module.rules.push({
+        test: /\.(mp3)$/,
+        type: "asset/resource",
+        generator: {
+          filename: "static/media/[name][ext]",
+        },
+      })
 
       return config
     },
@@ -103,9 +115,18 @@ module.exports = (phase, { defaultConfig }) => {
             "node_modules/@swc/core-linux-x64-gnu",
             "node_modules/@swc/core-linux-x64-musl",
             "node_modules/@esbuild/linux-x64",
-            "public/**/*.png",
-            "public/**/*.gif",
             "src/data",
+            "public/**/*.jpg",
+            "public/**/*.png",
+            "public/**/*.webp",
+            "public/**/*.svg",
+            "public/**/*.gif",
+            "public/**/*.json",
+            "public/**/*.txt",
+            "public/**/*.xml",
+            "public/**/*.pdf",
+            "public/fonts",
+            "public/images",
           ],
         },
       },

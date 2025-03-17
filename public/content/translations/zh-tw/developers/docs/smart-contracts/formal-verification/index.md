@@ -70,7 +70,7 @@ lang: zh-tw
 
 ### 霍爾式屬性 {#hoare-style-properties}
 
-[霍爾邏輯](https://en.wikipedia.org/wiki/Hoare_logic)提供了一套形式化規則，用於推理包括智慧型合約等程式的正確性。 霍爾式屬性使用霍爾三元組 {_P_}_c_{_Q_} 表示，其中 _c_ 是一個程式，_P_ 和 _Q_ 為_c_（即程式）的狀態述詞，正式描述分別為_前置條件_和_後置條件_。
+[霍爾邏輯](https://en.wikipedia.org/wiki/Hoare_logic)提供了一套形式化規則，用於推理包括智慧型合約等程式的正確性。 霍爾式屬性使用霍爾三元組 \{_P_}_c_\{_Q_} 表示，其中 _c_ 是一個程式，_P_ 和 _Q_ 為_c_（即程式）的狀態述詞，正式描述分別為_前置條件_和_後置條件_。
 
 前置條件是描述正確執行函式所需條件的述詞；叫用合約的使用者必須滿足該要求。 後置條件是描述函式正確執行時所建立之條件的述詞；使用者在叫用函式後可以預計該條件為 true。 在霍爾邏輯中，_不變量_是指透過執行函式保留的述詞（即，它不會改變）。
 
@@ -212,7 +212,7 @@ function safe_add(uint x, uint y) returns(uint z){
 
 ### 用於建立形式化規範的規範語言 {#specification-languages}
 
-**Act** - _*Act 允許指定存儲更新、前置/後置條件以及合約不變量。</0>  其工具套件還具有證明後端，可透過 Coq、SMT 求解器或 hevm 來證明許多屬性。**
+**Act** - _*Act 允許指定存儲更新、前置/後置條件以及合約不變量。\{0}/0>  其工具套件還具有證明後端，可透過 Coq、SMT 求解器或 hevm 來證明許多屬性。**
 
 - [GitHub](https://github.com/ethereum/act)
 - [文檔](https://ethereum.github.io/act/)

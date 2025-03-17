@@ -27,7 +27,7 @@ import allQuestionData from "@/data/quizzes/questionBank"
 import { screens } from "./utils/screen"
 import { WALLETS_FILTERS_DEFAULT } from "./constants"
 
-import { layoutMapping } from "@/pages/[locale]/[...slug]"
+import { layoutMapping } from "@/layouts"
 
 // Credit: https://stackoverflow.com/a/52331580
 export type Unpacked<T> = T extends (infer U)[] ? U : T
@@ -49,15 +49,10 @@ export type AppPropsWithLayout = AppProps & {
 
 export type Root = {
   children: ReactNode
-  contentIsOutdated: boolean
-  contentNotTranslated: boolean
   lastDeployLocaleTimestamp: string
 }
 
-export type BasePageProps = Pick<
-  Root,
-  "contentNotTranslated" | "lastDeployLocaleTimestamp"
->
+export type BasePageProps = Pick<Root, "lastDeployLocaleTimestamp">
 
 export type Params = {
   locale: string
@@ -72,7 +67,7 @@ export type Frontmatter = RoadmapFrontmatter &
   TutorialFrontmatter
 
 export type LayoutMappingType = typeof layoutMapping
-export type Layout = keyof LayoutMappingType
+export type Layout = keyof LayoutMappingType | "docs" | "tutorial"
 
 export type Lang =
   | "en"
@@ -812,6 +807,11 @@ export interface DropdownOption {
 export type WalletSupportedLanguageContextType = {
   supportedLanguage: string
   setSupportedLanguage: (language: string) => void
+}
+
+export type FeedbackWidgetContextType = {
+  showFeedbackWidget: boolean
+  setShowFeedbackWidget: (showFeedbackWidget: boolean) => void
 }
 
 // Historical upgrades

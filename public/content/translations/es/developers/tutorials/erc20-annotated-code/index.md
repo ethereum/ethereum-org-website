@@ -587,7 +587,7 @@ La función `a.add(n)` es una adición segura. En el caso poco probable de que `
 
 Estas son las cuatro funciones que hacen el verdadero trabajo: `_transfer`, `_mint`, `_burn` y `_approve`.
 
-#### La función \_transfer {#\_transfer}
+#### La función \_transfer {#_transfer}
 
 ```solidity
     /**
@@ -652,7 +652,7 @@ Estas son las líneas que en realidad hacen la transferencia. Note que no hay **
 
 Finalmente, emite un evento `Transfer`. Los eventos no son accesibles por los contratos inteligentes, pero el código en ejecución fuera de la cadena de bloques puede escuchar eventos y reaccionar a ellos. Por ejemplo, una billetera puede mantener un registro de cuando el propietario obtiene más tokens.
 
-#### Las funciones \_mint y \_burn {#\_mint-y-\_burn}
+#### Las funciones \_mint y \_burn {#_mint-y-_burn}
 
 Estas dos funciones (`_mint` y `_burn`) modifican el suministro total de tókenes. Son internas y no hay ninguna función que las invoque en este contrato, entonces sólo son útiles si las hereda desde un contrato y añade su propia lógica para decidir en qué condiciones quiere acuñar nuevos tóekens o quemar los existentes.
 
@@ -706,7 +706,7 @@ Asegúrese de actualizar `_totalSupply` cuando la cantidad total de tókenes cam
 
 La función `_burn` es casi idéntica a `_mint`, excepto que esta va en otra dirección.
 
-#### La función \_approve {#\_approve}
+#### La función \_approve {#_approve}
 
 Esta es la función que actualmente especifica asignaciones. Observe que esta permite especificar una asignación que es mayor al balance actual de la cuenta del propietario. Esto es correcto, porque el saldo se revisa en el momento de la transferencia y puede ser diferente del saldo cuando se creó la asignación.
 
@@ -784,7 +784,7 @@ Esta función modifica la variable `_decimals` que sirve para decirle a las inte
 
 Esta es la función gancho a ser llamada durante las transferencias. Aquí está vacía, pero si necesita hacer algo puede sobrescribirla.
 
-# Conclusión {#conclusion}
+## Conclusión {#conclusion}
 
 Para revisión, he aquí hay algunas de las ideas importantes en este contrato (en mi opinión, porque usted puede pensar de otra manera):
 

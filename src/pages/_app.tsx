@@ -14,6 +14,7 @@ import { DEFAULT_LOCALE } from "@/lib/constants"
 
 import "@/styles/global.css"
 
+import { FeedbackWidgetProvider } from "@/contexts/FeedbackWidgetContext"
 import { BaseLayout } from "@/layouts/BaseLayout"
 
 // Dynamically import Wagmi/RainbowKit components
@@ -56,13 +57,17 @@ const App = ({ Component, pageProps }: AppPropsWithLayout) => {
         <TooltipProvider>
           <QueryClientProvider client={queryClient}>
             <WalletProviders locale={router.query.locale as string}>
-              <BaseLayout
-                contentIsOutdated={!!pageProps.frontmatter?.isOutdated}
-                contentNotTranslated={pageProps.contentNotTranslated}
-                lastDeployLocaleTimestamp={pageProps.lastDeployLocaleTimestamp}
-              >
-                {getLayout(<Component {...pageProps} />)}
-              </BaseLayout>
+              <FeedbackWidgetProvider>
+                <BaseLayout
+                  // contentIsOutdated={!!pageProps.frontmatter?.isOutdated}
+                  // contentNotTranslated={pageProps.contentNotTranslated}
+                  lastDeployLocaleTimestamp={
+                    pageProps.lastDeployLocaleTimestamp
+                  }
+                >
+                  {getLayout(<Component {...pageProps} />)}
+                </BaseLayout>
+              </FeedbackWidgetProvider>
             </WalletProviders>
           </QueryClientProvider>
         </TooltipProvider>

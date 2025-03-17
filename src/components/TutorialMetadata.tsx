@@ -1,3 +1,5 @@
+"use client"
+
 import { useLocale } from "next-intl"
 
 import type { Lang, TranslationKey } from "@/lib/types"

@@ -12,11 +12,15 @@ import { isLangRightToLeft } from "@/lib/utils/translations"
 
 class Document extends NextDocument {
   static async getInitialProps(ctx: DocumentContext) {
-    return await NextDocument.getInitialProps(ctx)
+    const initialProps = await NextDocument.getInitialProps(ctx)
+    // TODO: Fix this! Hacky way to get locale to fix search
+    // Get locale from query
+    const locale = ctx.query?.locale || "en"
+    return { ...initialProps, locale }
   }
 
   render() {
-    const { locale } = this.props.__NEXT_DATA__
+    const locale = this.props.locale || "en"
     const dir = isLangRightToLeft(locale as Lang) ? "rtl" : "ltr"
 
     return (
