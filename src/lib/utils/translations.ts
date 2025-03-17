@@ -98,6 +98,10 @@ const getRequiredNamespacesForPath = (relativePath: string) => {
     primaryNamespace = "page-history"
   }
 
+  if (path.startsWith("/resources/")) {
+    primaryNamespace = "page-resources"
+  }
+
   if (path.startsWith("/stablecoins/")) {
     primaryNamespace = "page-stablecoins"
   }
