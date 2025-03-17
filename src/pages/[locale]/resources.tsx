@@ -115,7 +115,7 @@ const ResourcesPage = ({ txCostsMedianUsd }) => {
         heroImg={heroImg}
       />
 
-      <div className="sticky top-1 z-10 my-8 flex flex-col items-center gap-3 py-4 text-center md:top-6 md:px-2">
+      <div className="sticky top-1 z-sticky my-8 flex flex-col items-center gap-3 py-4 text-center md:top-6 md:px-2">
         <div className="my-2 text-body-medium">
           {t("page-resources-whats-on-this-page")}
         </div>
