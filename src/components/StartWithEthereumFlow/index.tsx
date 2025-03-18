@@ -16,6 +16,7 @@ const StartWithEthereumFlow = ({
   newToCryptoWallets: Wallet[]
 }) => {
   const swiperRef = useRef<SwiperRef>(null)
+  const containerRef = useRef<HTMLDivElement>(null)
   const [activeIndex, setActiveIndex] = useState(1)
   const [totalSlides, setTotalSlides] = useState(0)
   const [slideHeights, setSlideHeights] = useState<number[]>([])
@@ -50,10 +51,9 @@ const StartWithEthereumFlow = ({
 
   const handleNext = () => {
     swiperRef.current?.swiper.slideNext()
-    const container = document.getElementById("start-with-ethereum-flow")
 
-    if (container) {
-      const containerRect = container.getBoundingClientRect()
+    if (containerRef.current) {
+      const containerRect = containerRef.current.getBoundingClientRect()
       window.scrollTo({
         top: window.scrollY + containerRect.top - 90,
         behavior: "smooth",
@@ -63,6 +63,7 @@ const StartWithEthereumFlow = ({
 
   return (
     <SwiperContainer
+      ref={containerRef}
       className={cn(
         "-mx-8",
         "w-screen",
