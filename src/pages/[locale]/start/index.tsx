@@ -70,7 +70,11 @@ const StartWithCryptoPage = () => {
     <QueryClientProvider client={queryClient}>
       <WalletProviders locale={router.query.locale as string}>
         <MainArticle className="flex w-full flex-col items-center overflow-x-hidden">
-          <PageMetadata title={""} description={""} image="" />
+          <PageMetadata
+            title={"Start with crypto"}
+            description={"Your gateway to the world of ethereum"}
+            image={HeroImage.src}
+          />
 
           <div className="mb-16 h-[240px] w-full md:h-[380px] lg:h-[398px]">
             <Image
