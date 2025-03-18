@@ -471,7 +471,7 @@ Si vous comptez interroger un oracle sur le prix des actifs, envisagez d'utilise
 
 - **[ABI Encoder](https://abi.hashex.org/)** - _ : Il s'agit d'un service gratuit en ligne pour l'encodage des fonctions de contrat Solidity et de vos arguments de constructeur._
 
-- <strong x-id=« 1 »><a href=« https://github.com/Cyfrin/aderyn »>Aderyn</a></strong> - <em x-id=« 4 »>Analyseur statique de Solidity, parcourant les arbres de syntaxe abstraite (AST) pour repérer les vulnérabilités suspectes et imprimant les problèmes dans un format markdown facile à utiliser.</em>
+- **[Aderyn](https://github.com/Cyfrin/aderyn)** - _Analyseur statique de Solidity, parcourant les arbres de syntaxe abstraite (AST) pour repérer les vulnérabilités suspectes et imprimant les problèmes dans un format markdown facile à utiliser._
 
 ### Outils de surveillance des contrats intelligents {#smart-contract-monitoring-tools}
 
