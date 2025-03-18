@@ -5,7 +5,7 @@ import { screens } from "./src/lib/utils/screen"
 
 const config = {
   darkMode: ["selector"],
-  content: ["./src/**/*.{ts,tsx}"],
+  content: ["./src/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}"],
   prefix: "",
   theme: {
     extend: {
