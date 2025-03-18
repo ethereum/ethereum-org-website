@@ -1,7 +1,8 @@
-import { GetStaticProps } from "next"
+"use client"
+
 import type { ComponentProps, HTMLAttributes } from "react"
 
-import type { BasePageProps, ChildOnlyProp, Lang, Params } from "@/lib/types"
+import type { ChildOnlyProp } from "@/lib/types"
 
 import ActionCard from "@/components/ActionCard"
 import CalloutBanner from "@/components/CalloutBanner"
@@ -25,15 +26,8 @@ import InlineLink from "@/components/ui/Link"
 import { ListItem, UnorderedList } from "@/components/ui/list"
 
 import { cn } from "@/lib/utils/cn"
-import { existsNamespace } from "@/lib/utils/existsNamespace"
-import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
-import { getLocaleTimestamp } from "@/lib/utils/time"
-import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
-
-import { DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
 
 import { useTranslation } from "@/hooks/useTranslation"
-import loadNamespaces from "@/i18n/loadNamespaces"
 import { usePathname } from "@/i18n/routing"
 import eth from "@/public/images/eth.png"
 import ethCat from "@/public/images/eth-gif-cat.png"
@@ -174,37 +168,6 @@ const CentralColumn = (props: ChildOnlyProp) => (
 const CentralActionCard = (props: ComponentProps<typeof ActionCard>) => (
   <ActionCard className="my-8" imageWidth={260} {...props} />
 )
-
-export async function getStaticPaths() {
-  return {
-    paths: LOCALES_CODES.map((locale) => ({ params: { locale } })),
-    fallback: false,
-  }
-}
-
-export const getStaticProps = (async ({ params }) => {
-  const { locale = DEFAULT_LOCALE } = params || {}
-
-  const requiredNamespaces = getRequiredNamespacesForPage("/eth")
-
-  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
-
-  const lastDeployDate = getLastDeployDate()
-  const lastDeployLocaleTimestamp = getLocaleTimestamp(
-    locale as Lang,
-    lastDeployDate
-  )
-
-  const messages = await loadNamespaces(locale, requiredNamespaces)
-
-  return {
-    props: {
-      messages,
-      contentNotTranslated,
-      lastDeployLocaleTimestamp,
-    },
-  }
-}) satisfies GetStaticProps<BasePageProps, Params>
 
 const EthPage = () => {
   const { t } = useTranslation("page-eth")

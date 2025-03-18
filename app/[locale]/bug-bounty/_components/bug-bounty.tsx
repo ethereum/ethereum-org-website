@@ -1,7 +1,8 @@
-import { HTMLAttributes } from "react"
-import type { GetStaticProps } from "next/types"
+"use client"
 
-import type { BasePageProps, ChildOnlyProp, Lang, Params } from "@/lib/types"
+import { HTMLAttributes } from "react"
+
+import type { ChildOnlyProp } from "@/lib/types"
 
 /* Uncomment for Bug Bounty Banner: */
 import BugBountyBanner from "@/components/Banners/BugBountyBanner"
@@ -24,19 +25,12 @@ import InlineLink from "@/components/ui/Link"
 import { ListItem, UnorderedList } from "@/components/ui/list"
 
 import { cn } from "@/lib/utils/cn"
-import { existsNamespace } from "@/lib/utils/existsNamespace"
-import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
-import { getLocaleTimestamp } from "@/lib/utils/time"
-import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import consensusData from "@/data/consensus-bounty-hunters.json"
 import executionData from "@/data/execution-bounty-hunters.json"
 
-import { DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
-
 import useColorModeValue from "@/hooks/useColorModeValue"
 import { useTranslation } from "@/hooks/useTranslation"
-import loadNamespaces from "@/i18n/loadNamespaces"
 import { usePathname } from "@/i18n/routing"
 import besu from "@/public/images/upgrades/besu.png"
 import erigon from "@/public/images/upgrades/erigon.png"
@@ -230,37 +224,6 @@ const sortBountyHuntersFn = (a: BountyHuntersArg, b: BountyHuntersArg) => {
   if (!a.score || !b.score) return 0
   return b.score - a.score
 }
-
-export async function getStaticPaths() {
-  return {
-    paths: LOCALES_CODES.map((locale) => ({ params: { locale } })),
-    fallback: false,
-  }
-}
-
-export const getStaticProps = (async ({ params }) => {
-  const { locale = DEFAULT_LOCALE } = params || {}
-
-  const requiredNamespaces = getRequiredNamespacesForPage("bug-bounty")
-
-  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
-
-  const lastDeployDate = getLastDeployDate()
-  const lastDeployLocaleTimestamp = getLocaleTimestamp(
-    locale as Lang,
-    lastDeployDate
-  )
-
-  const messages = await loadNamespaces(locale, requiredNamespaces)
-
-  return {
-    props: {
-      messages,
-      contentNotTranslated,
-      lastDeployLocaleTimestamp,
-    },
-  }
-}) satisfies GetStaticProps<BasePageProps, Params>
 
 const BugBountiesPage = () => {
   const pathname = usePathname()

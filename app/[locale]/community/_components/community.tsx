@@ -1,7 +1,8 @@
-import { BaseHTMLAttributes } from "react"
-import { GetStaticProps } from "next"
+"use client"
 
-import { BasePageProps, ChildOnlyProp, Lang, Params } from "@/lib/types"
+import { BaseHTMLAttributes } from "react"
+
+import { ChildOnlyProp } from "@/lib/types"
 import { ICard, IGetInvolvedCard } from "@/lib/interfaces"
 
 import ActionCard from "@/components/ActionCard"
@@ -18,58 +19,17 @@ import { Divider } from "@/components/ui/divider"
 import { Flex } from "@/components/ui/flex"
 
 import { cn } from "@/lib/utils/cn"
-import { existsNamespace } from "@/lib/utils/existsNamespace"
-import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
-import { getLocaleTimestamp } from "@/lib/utils/time"
-import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
-
-import { DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
 
 import { useTranslation } from "@/hooks/useTranslation"
-import loadNamespaces from "@/i18n/loadNamespaces"
-// Static assets
 import developersEthBlockImg from "@/public/images/developers-eth-blocks.png"
 import dogeComputerImg from "@/public/images/doge-computer.png"
 import ethImg from "@/public/images/eth.png"
 import financeTransparentImg from "@/public/images/finance_transparent.png"
 import futureTransparentImg from "@/public/images/future_transparent.png"
 import hackathonTransparentImg from "@/public/images/hackathon_transparent.png"
-// -- Hero
 import communityHeroImg from "@/public/images/heroes/community-hero.png"
-// -- Cards
 import upgradesCoreImg from "@/public/images/upgrades/core.png"
 import whatIsEthereumImg from "@/public/images/what-is-ethereum.png"
-
-export async function getStaticPaths() {
-  return {
-    paths: LOCALES_CODES.map((locale) => ({ params: { locale } })),
-    fallback: false,
-  }
-}
-
-export const getStaticProps = (async ({ params }) => {
-  const { locale = DEFAULT_LOCALE } = params || {}
-
-  const requiredNamespaces = getRequiredNamespacesForPage("/community")
-
-  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
-
-  const lastDeployDate = getLastDeployDate()
-  const lastDeployLocaleTimestamp = getLocaleTimestamp(
-    locale as Lang,
-    lastDeployDate
-  )
-
-  const messages = await loadNamespaces(locale, requiredNamespaces)
-
-  return {
-    props: {
-      messages,
-      contentNotTranslated,
-      lastDeployLocaleTimestamp,
-    },
-  }
-}) satisfies GetStaticProps<BasePageProps, Params>
 
 const CardContainer = ({ children }: ChildOnlyProp) => {
   return <Flex className="-mx-4 flex-wrap">{children}</Flex>

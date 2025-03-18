@@ -1,7 +1,8 @@
-import type { GetStaticProps, InferGetStaticPropsType } from "next/types"
+"use client"
+
 import type { ReactNode } from "react"
 
-import type { BasePageProps, ChildOnlyProp, Lang, Params } from "@/lib/types"
+import type { ChildOnlyProp } from "@/lib/types"
 
 import CalloutBanner from "@/components/CalloutBanner"
 import CardList, {
@@ -29,18 +30,10 @@ import { Stack } from "@/components/ui/flex"
 import InlineLink from "@/components/ui/Link"
 
 import { cn } from "@/lib/utils/cn"
-import { existsNamespace } from "@/lib/utils/existsNamespace"
-import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
-import { getLastModifiedDateByPath } from "@/lib/utils/gh"
 import { trackCustomEvent } from "@/lib/utils/matomo"
-import { getLocaleTimestamp } from "@/lib/utils/time"
-import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
-
-import { DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
 
 import { useBreakpointValue } from "@/hooks/useBreakpointValue"
 import { useTranslation } from "@/hooks/useTranslation"
-import loadNamespaces from "@/i18n/loadNamespaces"
 import uniswap from "@/public/images/dapps/uni.png"
 import dapps from "@/public/images/doge-computer.png"
 import bancor from "@/public/images/exchanges/bancor.png"
@@ -72,49 +65,11 @@ const TwoColumnContent = (props: ChildOnlyProp) => (
   <div className="grid grid-cols-1 gap-16 lg:grid-cols-2" {...props} />
 )
 
-type Props = BasePageProps & {
+type Props = {
   lastDataUpdateDate: string
 }
 
-export async function getStaticPaths() {
-  return {
-    paths: LOCALES_CODES.map((locale) => ({ params: { locale } })),
-    fallback: false,
-  }
-}
-
-export const getStaticProps = (async ({ params }) => {
-  const { locale = DEFAULT_LOCALE } = params || {}
-
-  const requiredNamespaces = getRequiredNamespacesForPage("get-eth")
-
-  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
-
-  const lastDataUpdateDate = getLastModifiedDateByPath(
-    "src/data/exchangesByCountry.ts"
-  )
-
-  const lastDeployDate = getLastDeployDate()
-  const lastDeployLocaleTimestamp = getLocaleTimestamp(
-    locale as Lang,
-    lastDeployDate
-  )
-
-  const messages = await loadNamespaces(locale, requiredNamespaces)
-
-  return {
-    props: {
-      messages,
-      contentNotTranslated,
-      lastDeployLocaleTimestamp,
-      lastDataUpdateDate,
-    },
-  }
-}) satisfies GetStaticProps<Props, Params>
-
-const GetEthPage = ({
-  lastDataUpdateDate,
-}: InferGetStaticPropsType<typeof getStaticProps>) => {
+const GetEthPage = ({ lastDataUpdateDate }: Props) => {
   const { t } = useTranslation("page-get-eth")
 
   const walletImageWidth = useBreakpointValue({

@@ -1,8 +1,7 @@
-import { BaseHTMLAttributes } from "react"
-import { GetStaticProps } from "next/types"
-import { MdHelpOutline } from "react-icons/md"
+"use client"
 
-import { BasePageProps, Lang, Params } from "@/lib/types"
+import { BaseHTMLAttributes } from "react"
+import { MdHelpOutline } from "react-icons/md"
 
 import CalloutBanner from "@/components/CalloutBanner"
 import DataProductCard from "@/components/DataProductCard"
@@ -28,23 +27,13 @@ import { Flex, FlexProps } from "@/components/ui/flex"
 import InlineLink from "@/components/ui/Link"
 
 import { cn } from "@/lib/utils/cn"
-import { dataLoader } from "@/lib/utils/data/dataLoader"
-import { existsNamespace } from "@/lib/utils/existsNamespace"
-import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
-import { getLocaleTimestamp } from "@/lib/utils/time"
-import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
-import { BASE_TIME_UNIT, DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
+import { Market } from "../page"
 
 import { useTranslation } from "@/hooks/useTranslation"
-import loadNamespaces from "@/i18n/loadNamespaces"
-import {
-  fetchEthereumEcosystemData,
-  fetchEthereumStablecoinsData,
-} from "@/lib/api/stablecoinsData"
 import summerfiImg from "@/public/images/dapps/summerfi.png"
 import dogeComputerImg from "@/public/images/doge-computer.png"
-// -- daps
+// -- dapps
 import aaveImg from "@/public/images/stablecoins/aave.png"
 import compoundImg from "@/public/images/stablecoins/compound.png"
 // Static assets
@@ -53,148 +42,10 @@ import heroImg from "@/public/images/stablecoins/hero.png"
 import stablecoinsWtfImg from "@/public/images/stablecoins/tools/stablecoinswtf.png"
 import usdcLargeImg from "@/public/images/stablecoins/usdc-large.png"
 
-type EthereumDataResponse = Array<{
-  id: string
-  name: string
-  market_cap: number
-  image: string
-  symbol: string
-}>
-
-type StablecoinDataResponse = Array<{
-  id: string
-  name: string
-  market_cap: number
-  image: string
-  symbol: string
-}>
-
-interface Market {
-  name: string
-  marketCap: string
-  image: string
-  type: string
-  url: string
-}
-
-type Props = BasePageProps & {
+type Props = {
   markets: Market[]
   marketsHasError: boolean
 }
-
-// In seconds
-const REVALIDATE_TIME = BASE_TIME_UNIT * 1
-
-const loadData = dataLoader<[EthereumDataResponse, StablecoinDataResponse]>(
-  [
-    ["ethereumEcosystemData", fetchEthereumEcosystemData],
-    ["ethereumStablecoinsData", fetchEthereumStablecoinsData],
-  ],
-  REVALIDATE_TIME * 1000
-)
-
-export async function getStaticPaths() {
-  return {
-    paths: LOCALES_CODES.map((locale) => ({ params: { locale } })),
-    fallback: false,
-  }
-}
-
-export const getStaticProps = (async ({ params }) => {
-  const { locale = DEFAULT_LOCALE } = params || {}
-
-  const lastDeployDate = getLastDeployDate()
-  const lastDeployLocaleTimestamp = getLocaleTimestamp(
-    locale as Lang,
-    lastDeployDate
-  )
-
-  const requiredNamespaces = getRequiredNamespacesForPage("/stablecoins")
-
-  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
-
-  let marketsHasError = false
-  let markets: Market[] = []
-
-  // Stablecoin types
-  const FIAT = "FIAT"
-  const CRYPTO = "CRYPTO"
-  const ASSET = "ASSET"
-  const ALGORITHMIC = "ALGORITHMIC"
-
-  const stablecoins = {
-    USDT: { type: FIAT, url: "https://tether.to/" },
-    USDC: { type: FIAT, url: "https://www.coinbase.com/usdc" },
-    DAI: { type: CRYPTO, url: "https://makerdao.com/en/" },
-    BUSD: { type: FIAT, url: "https://www.binance.com/en/busd" },
-    PAX: { type: FIAT, url: "https://www.paxos.com/pax/" },
-    TUSD: { type: FIAT, url: "https://tusd.io/" },
-    HUSD: { type: FIAT, url: "https://www.huobi.com/en-us/usd-deposit/" },
-    SUSD: { type: CRYPTO, url: "https://www.synthetix.io/" },
-    EURS: { type: FIAT, url: "https://eurs.stasis.net/" },
-    USDK: { type: FIAT, url: "https://www.oklink.com/usdk" },
-    MUSD: { type: CRYPTO, url: "https://mstable.org/" },
-    USDX: { type: CRYPTO, url: "https://usdx.money/" },
-    GUSD: { type: FIAT, url: "https://gemini.com/dollar" },
-    SAI: { type: CRYPTO, url: "https://makerdao.com/en/whitepaper/sai/" },
-    DUSD: { type: CRYPTO, url: "https://dusd.finance/" },
-    PAXG: { type: ASSET, url: "https://www.paxos.com/paxgold/" },
-    AMPL: { type: ALGORITHMIC, url: "https://www.ampleforth.org/" },
-    FRAX: { type: ALGORITHMIC, url: "https://frax.finance/" },
-    MIM: { type: ALGORITHMIC, url: "https://abracadabra.money/" },
-    USDP: { type: FIAT, url: "https://paxos.com/usdp/" },
-    FEI: { type: ALGORITHMIC, url: "https://fei.money/" },
-  }
-
-  try {
-    const [ethereumEcosystemData, stablecoinsData] = await loadData()
-
-    // Get the intersection of stablecoins and Ethereum tokens to only have a list of data for stablecoins in the Ethereum ecosystem
-    const ethereumStablecoinData = stablecoinsData.filter(
-      (stablecoin) =>
-        ethereumEcosystemData.findIndex(
-          // eslint-disable-next-line
-          (etherToken) => stablecoin.id == etherToken.id
-        ) > -1
-    )
-
-    marketsHasError = false
-    markets = ethereumStablecoinData
-      .filter((token) => {
-        return stablecoins[token.symbol.toUpperCase()]
-      })
-      .map((token) => {
-        return {
-          name: token.name,
-          marketCap: new Intl.NumberFormat("en-US", {
-            style: "currency",
-            currency: "USD",
-            minimumFractionDigits: 0,
-            maximumFractionDigits: 0,
-          }).format(token.market_cap),
-          image: token.image,
-          type: stablecoins[token.symbol.toUpperCase()].type,
-          url: stablecoins[token.symbol.toUpperCase()].url,
-        }
-      })
-  } catch (error) {
-    console.error(error)
-    markets = []
-    marketsHasError = true
-  }
-
-  const messages = await loadNamespaces(locale, requiredNamespaces)
-
-  return {
-    props: {
-      messages,
-      contentNotTranslated,
-      lastDeployLocaleTimestamp,
-      markets,
-      marketsHasError,
-    },
-  }
-}) satisfies GetStaticProps<Props, Params>
 
 const Content = (props: BaseHTMLAttributes<HTMLDivElement>) => (
   <div className="w-full px-8 py-4" {...props} />
@@ -228,7 +79,7 @@ const H3 = ({
   <h3 className={cn("mb-8 mt-10", className)} {...props} />
 )
 
-const StablecoinsPage = ({ markets, marketsHasError }) => {
+const StablecoinsPage = ({ markets, marketsHasError }: Props) => {
   const { t } = useTranslation("page-stablecoins")
 
   const tooltipContent = (

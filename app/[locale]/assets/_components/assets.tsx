@@ -1,7 +1,8 @@
-import { HTMLAttributes } from "react"
-import type { GetStaticProps } from "next/types"
+"use client"
 
-import type { BasePageProps, ChildOnlyProp, Lang, Params } from "@/lib/types"
+import { HTMLAttributes } from "react"
+
+import type { ChildOnlyProp } from "@/lib/types"
 
 import AssetDownload from "@/components/AssetDownload"
 import FeedbackCard from "@/components/FeedbackCard"
@@ -11,9 +12,6 @@ import PageMetadata from "@/components/PageMetadata"
 import { Center, Flex } from "@/components/ui/flex"
 import InlineLink from "@/components/ui/Link"
 
-import { existsNamespace } from "@/lib/utils/existsNamespace"
-import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
-import { getLocaleTimestamp } from "@/lib/utils/time"
 // import efLogo from "@/public/images/ef-logo.png"
 // import efLogoWhite from "@/public/images/ef-logo-white.png"
 // import ethDiamondBlackHero from "@/public/images/assets/eth-diamond-black.png"
@@ -24,13 +22,8 @@ import { getLocaleTimestamp } from "@/lib/utils/time"
 // import ethGifWaves from "@/public/images/eth-gif-waves.png"
 // import ethPortraitPurpleWhite from "@/public/images/assets/ethereum-logo-portrait-purple-white.png"
 // import leslieTheRhino from "@/public/images/upgrades/upgrade_rhino.png"
-import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
-
-import { DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
-
 import useColorModeValue from "@/hooks/useColorModeValue"
 import { useTranslation } from "@/hooks/useTranslation"
-import loadNamespaces from "@/i18n/loadNamespaces"
 import ethDiamondBlack from "@/public/images/assets/eth-diamond-black.png"
 import ethDiamondBlackGray from "@/public/images/assets/eth-diamond-black-gray.png"
 import ethDiamondBlackWhite from "@/public/images/assets/eth-diamond-black-white.jpg"
@@ -97,37 +90,6 @@ const H2 = (props: HTMLAttributes<HTMLHeadingElement>) => (
 const H3 = (props: ChildOnlyProp) => (
   <h3 className="mb-0 mt-10 leading-xs" {...props} />
 )
-
-export async function getStaticPaths() {
-  return {
-    paths: LOCALES_CODES.map((locale) => ({ params: { locale } })),
-    fallback: false,
-  }
-}
-
-export const getStaticProps = (async ({ params }) => {
-  const { locale = DEFAULT_LOCALE } = params || {}
-
-  const requiredNamespaces = getRequiredNamespacesForPage("assets")
-
-  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
-
-  const lastDeployDate = getLastDeployDate()
-  const lastDeployLocaleTimestamp = getLocaleTimestamp(
-    locale as Lang,
-    lastDeployDate
-  )
-
-  const messages = await loadNamespaces(locale, requiredNamespaces)
-
-  return {
-    props: {
-      messages,
-      contentNotTranslated,
-      lastDeployLocaleTimestamp,
-    },
-  }
-}) satisfies GetStaticProps<BasePageProps, Params>
 
 const AssetsPage = () => {
   // Ignore locale in the URL for SVG path in public directory to fix broken link

@@ -1,8 +1,9 @@
+"use client"
+
 import { useMemo, useState } from "react"
-import { GetStaticProps, InferGetStaticPropsType, NextPage } from "next"
 import { FaGithub } from "react-icons/fa"
 
-import { BasePageProps, Lang, Params, QuizKey, QuizStatus } from "@/lib/types"
+import { QuizKey, QuizStatus } from "@/lib/types"
 
 import FeedbackCard from "@/components/FeedbackCard"
 import { HubHero } from "@/components/Hero"
@@ -16,19 +17,14 @@ import { useLocalQuizData } from "@/components/Quiz/useLocalQuizData"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Flex, HStack, Stack } from "@/components/ui/flex"
 
-import { existsNamespace } from "@/lib/utils/existsNamespace"
-import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { trackCustomEvent } from "@/lib/utils/matomo"
-import { getLocaleTimestamp } from "@/lib/utils/time"
-import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { ethereumBasicsQuizzes, usingEthereumQuizzes } from "@/data/quizzes"
 
-import { DEFAULT_LOCALE, INITIAL_QUIZ, LOCALES_CODES } from "@/lib/constants"
+import { INITIAL_QUIZ } from "@/lib/constants"
 
 import { useDisclosure } from "@/hooks/useDisclosure"
 import { useTranslation } from "@/hooks/useTranslation"
-import loadNamespaces from "@/i18n/loadNamespaces"
 import HeroImage from "@/public/images/heroes/quizzes-hub-hero.png"
 
 const handleGHAdd = () =>
@@ -38,40 +34,7 @@ const handleGHAdd = () =>
     eventName: "GH_add",
   })
 
-export async function getStaticPaths() {
-  return {
-    paths: LOCALES_CODES.map((locale) => ({ params: { locale } })),
-    fallback: false,
-  }
-}
-
-export const getStaticProps = (async ({ params }) => {
-  const { locale = DEFAULT_LOCALE } = params || {}
-
-  const requiredNamespaces = getRequiredNamespacesForPage("/quizzes")
-
-  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
-
-  const lastDeployDate = getLastDeployDate()
-  const lastDeployLocaleTimestamp = getLocaleTimestamp(
-    locale as Lang,
-    lastDeployDate
-  )
-
-  const messages = await loadNamespaces(locale, requiredNamespaces)
-
-  return {
-    props: {
-      messages,
-      contentNotTranslated,
-      lastDeployLocaleTimestamp,
-    },
-  }
-}) satisfies GetStaticProps<BasePageProps, Params>
-
-const QuizzesHubPage: NextPage<
-  InferGetStaticPropsType<typeof getStaticProps>
-> = () => {
+const QuizzesPage = () => {
   const { t } = useTranslation("learn-quizzes")
 
   const [userStats, updateUserStats] = useLocalQuizData()
@@ -133,7 +96,6 @@ const QuizzesHubPage: NextPage<
             <Flex className="items-center justify-between bg-background-highlight p-8 max-xl:flex-col max-xl:gap-4 lg:rounded-lg">
               <div className="max-xl:text-center">
                 <p className="font-bold">{t("want-more-quizzes")}</p>
-
                 <p>{t("contribute")}</p>
               </div>
               <ButtonLink
@@ -165,4 +127,4 @@ const QuizzesHubPage: NextPage<
   )
 }
 
-export default QuizzesHubPage
+export default QuizzesPage

@@ -1,3 +1,5 @@
+"use client"
+
 import React, {
   BaseHTMLAttributes,
   type ComponentPropsWithRef,
@@ -6,11 +8,10 @@ import React, {
   useRef,
   useState,
 } from "react"
-import { type GetStaticProps } from "next"
 import { useRouter } from "next/router"
 import { useLocale } from "next-intl"
 
-import type { BasePageProps, ChildOnlyProp, Lang, Params } from "@/lib/types"
+import type { ChildOnlyProp } from "@/lib/types"
 
 import BoxGrid from "@/components/BoxGrid"
 import Callout from "@/components/Callout"
@@ -37,16 +38,9 @@ import InlineLink, { BaseLink } from "@/components/ui/Link"
 import { Tag } from "@/components/ui/tag"
 
 import { cn } from "@/lib/utils/cn"
-import { existsNamespace } from "@/lib/utils/existsNamespace"
-import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { trackCustomEvent } from "@/lib/utils/matomo"
-import { getLocaleTimestamp } from "@/lib/utils/time"
-import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
-
-import { DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
 
 import { useTranslation } from "@/hooks/useTranslation"
-import loadNamespaces from "@/i18n/loadNamespaces"
 import aave from "@/public/images/dapps/aave.png"
 import ankr from "@/public/images/dapps/ankr.png"
 import api3 from "@/public/images/dapps/api3.png"
@@ -290,37 +284,6 @@ interface Category {
 interface Categories {
   [key: string]: Category
 }
-
-export async function getStaticPaths() {
-  return {
-    paths: LOCALES_CODES.map((locale) => ({ params: { locale } })),
-    fallback: false,
-  }
-}
-
-export const getStaticProps = (async ({ params }) => {
-  const { locale = DEFAULT_LOCALE } = params || {}
-
-  const requiredNamespaces = getRequiredNamespacesForPage("/dapps")
-
-  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
-
-  const lastDeployDate = getLastDeployDate()
-  const lastDeployLocaleTimestamp = getLocaleTimestamp(
-    locale as Lang,
-    lastDeployDate
-  )
-
-  const messages = await loadNamespaces(locale, requiredNamespaces)
-
-  return {
-    props: {
-      messages,
-      contentNotTranslated,
-      lastDeployLocaleTimestamp,
-    },
-  }
-}) satisfies GetStaticProps<BasePageProps, Params>
 
 const DappsPage = () => {
   const { t } = useTranslation(["page-dapps", "common"])

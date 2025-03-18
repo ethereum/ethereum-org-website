@@ -1,13 +1,8 @@
-import { GetStaticProps } from "next"
+"use client"
+
 import type { HTMLAttributes, ReactNode } from "react"
 
-import type {
-  BasePageProps,
-  ChildOnlyProp,
-  Lang,
-  Params,
-  ToCItem,
-} from "@/lib/types"
+import type { ChildOnlyProp, ToCItem } from "@/lib/types"
 
 import OriginalCard, {
   type CardProps as OriginalCardProps,
@@ -26,15 +21,7 @@ import { Center, Flex, Stack } from "@/components/ui/flex"
 import InlineLink from "@/components/ui/Link"
 import { ListItem, UnorderedList } from "@/components/ui/list"
 
-import { existsNamespace } from "@/lib/utils/existsNamespace"
-import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
-import { getLocaleTimestamp } from "@/lib/utils/time"
-import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
-
-import { DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
-
 import useTranslation from "@/hooks/useTranslation"
-import loadNamespaces from "@/i18n/loadNamespaces"
 import developersEthBlocks from "@/public/images/developers-eth-blocks.png"
 import dogeComputer from "@/public/images/doge-computer.png"
 import enterprise from "@/public/images/enterprise-eth.png"
@@ -124,37 +111,6 @@ const H3 = ({ children, ...props }: HTMLAttributes<HTMLHeadingElement>) => (
 const ImageHeight200 = ({ src, alt }: ImageProps) => (
   <Image className="h-[200px] w-auto" src={src} alt={alt} />
 )
-
-export async function getStaticPaths() {
-  return {
-    paths: LOCALES_CODES.map((locale) => ({ params: { locale } })),
-    fallback: false,
-  }
-}
-
-export const getStaticProps = (async ({ params }) => {
-  const { locale = DEFAULT_LOCALE } = params || {}
-
-  const requiredNamespaces = getRequiredNamespacesForPage("/learn")
-
-  const contentNotTranslated = !existsNamespace(locale, requiredNamespaces[2])
-
-  const lastDeployDate = getLastDeployDate()
-  const lastDeployLocaleTimestamp = getLocaleTimestamp(
-    locale as Lang,
-    lastDeployDate
-  )
-
-  const messages = await loadNamespaces(locale, requiredNamespaces)
-
-  return {
-    props: {
-      messages,
-      contentNotTranslated,
-      lastDeployLocaleTimestamp,
-    },
-  }
-}) satisfies GetStaticProps<BasePageProps, Params>
 
 const LearnPage = () => {
   const { t } = useTranslation("page-learn")
