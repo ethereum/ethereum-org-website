@@ -3,7 +3,7 @@ import dynamic from "next/dynamic"
 import { useRouter } from "next/router"
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
 
-import { BasePageProps, Lang } from "@/lib/types"
+import { BasePageProps, Lang, Wallet } from "@/lib/types"
 
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
@@ -15,6 +15,7 @@ import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
+import { getNewToCryptoWallets } from "@/lib/utils/wallets"
 
 import { DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
 
@@ -54,16 +55,23 @@ export const getStaticProps = (async ({ params }) => {
 
   const messages = await loadNamespaces(locale as string, requiredNamespaces)
 
+  const newToCryptoWallets = getNewToCryptoWallets()
+
   return {
     props: {
       messages,
       contentNotTranslated,
       lastDeployLocaleTimestamp,
+      newToCryptoWallets,
     },
   }
 }) satisfies GetStaticProps<BasePageProps>
 
-const StartWithCryptoPage = () => {
+const StartWithCryptoPage = ({
+  newToCryptoWallets,
+}: {
+  newToCryptoWallets: Wallet[]
+}) => {
   const router = useRouter()
 
   return (
@@ -97,7 +105,7 @@ const StartWithCryptoPage = () => {
             </div>
 
             <div id="start-with-ethereum-flow" className="flex flex-col gap-12">
-              <StartWithEthereumFlow />
+              <StartWithEthereumFlow newToCryptoWallets={newToCryptoWallets} />
             </div>
 
             <div className="flex w-full flex-col gap-12 rounded-2xl border border-accent-c/10 bg-gradient-to-t from-accent-c/10 from-20% to-accent-c/5 to-60% px-12 py-16 md:flex-row dark:from-accent-c/20 dark:to-accent-c/10">

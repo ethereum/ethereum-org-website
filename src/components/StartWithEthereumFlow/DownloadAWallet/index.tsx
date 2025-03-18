@@ -1,24 +1,26 @@
 import { useState } from "react"
 
+import { Wallet } from "@/lib/types"
+
 import { Image } from "@/components/Image"
 import { Button, ButtonLink } from "@/components/ui/buttons/Button"
 import Checkbox from "@/components/ui/checkbox"
 import { Tag } from "@/components/ui/tag"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
-import { getNewToCryptoWallets } from "@/lib/utils/wallets"
 
 const DownloadAWallet = ({
   handleNext,
   stepIndex,
   totalSteps,
+  newToCryptoWallets,
 }: {
   handleNext: () => void
   stepIndex: number
   totalSteps: number
+  newToCryptoWallets: Wallet[]
 }) => {
   const [hasWallet, setHasWallet] = useState(false)
-  const newToCryptoWallets = getNewToCryptoWallets()
 
   return (
     <div className="flex flex-col items-center gap-8 lg:flex-row lg:gap-24">

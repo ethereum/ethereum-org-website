@@ -1,6 +1,8 @@
 import { useRef, useState } from "react"
 import type { SwiperRef } from "swiper/react"
 
+import { Wallet } from "@/lib/types"
+
 import ConnectYourWallet from "@/components/StartWithEthereumFlow/ConnectYourWallet"
 import DownloadAWallet from "@/components/StartWithEthereumFlow/DownloadAWallet"
 import LetUseSomeApps from "@/components/StartWithEthereumFlow/LetUseSomeApps"
@@ -8,7 +10,11 @@ import { Swiper, SwiperContainer, SwiperSlide } from "@/components/ui/swiper"
 
 import { cn } from "@/lib/utils/cn"
 
-const StartWithEthereumFlow = () => {
+const StartWithEthereumFlow = ({
+  newToCryptoWallets,
+}: {
+  newToCryptoWallets: Wallet[]
+}) => {
   const swiperRef = useRef<SwiperRef>(null)
   const [activeIndex, setActiveIndex] = useState(1)
   const [totalSlides, setTotalSlides] = useState(0)
@@ -97,6 +103,7 @@ const StartWithEthereumFlow = () => {
               handleNext={handleNext}
               stepIndex={activeIndex}
               totalSteps={totalSlides}
+              newToCryptoWallets={newToCryptoWallets}
             />
           </div>
         </SwiperSlide>
