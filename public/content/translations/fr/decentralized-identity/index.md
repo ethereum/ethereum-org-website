@@ -162,16 +162,10 @@ Il existe de nombreux projets ambitieux utilisant Ethereum comme base pour des s
 - **[Ethereum Attestation Service (EAS)](https://attest.sh/)** - _Un registre/protocole décentralisé pour faire des attestations en chaîne ou hors chaîne sur quoi que ce soit._
 - **[Preuve d'humanité](https://www.proofofhumanity.id)** - _Preuve d'humanité (ou PoH) est un système de vérification d'identité sociale construit sur Ethereum._
 - **[BrightID](https://www.brightid.org/)** - _Un réseau d'identité sociale décentralisé et open-source qui cherche à réformer la vérification d'identité par la création et l'analyse d'un graphe social._
-- **
-walt.id</strong> — _Infrastructure décentralisée et open source d'identité et de portefeuille qui permet aux développeurs et aux organisations de tirer parti de l'identité souveraine et des NFT/SBT._</li> 
-  
-  - **[Veramo](https://veramo.io/)** - _Un environnement JavaScript qui permet à chacun d'utiliser facilement des données vérifiables cryptographiquement dans ses applications._</ul> 
-
-
+- **[walt.id](https://walt.id)** — _Infrastructure décentralisée et open source d'identité et de portefeuille qui permet aux développeurs et aux organisations de tirer parti de l'identité souveraine et des NFT/SBT._
+- **[Veramo](https://veramo.io/)** - _Un environnement JavaScript qui permet à chacun d'utiliser facilement des données vérifiables cryptographiquement dans ses applications._
 
 ## Complément d'information {#further-reading}
-
-
 
 ### Articles {#articles}
 
@@ -181,8 +175,6 @@ walt.id</strong> — _Infrastructure décentralisée et open source d'identité 
 - [Qu'est-ce que l'identité décentralisée et pourquoi devriez-vous vous en préocupper ?](https://web3.hashnode.com/what-is-decentralized-identity) — _Emmanuel Awosika_
 - [Introduction à l'Identité Décentralisée](https://walt.id/white-paper/digital-identity)— _Dominik Beron_
 
-
-
 ### Vidéos {#videos}
 
 - [Identité décentralisée (Bonus Session Livestream)](https://www.youtube.com/watch?v=ySHNB1za_SE&t=539s) — _Une formidable vidéo explicative sur l'identité décentralisée par Andreas Antonopolous_
@@ -190,8 +182,6 @@ walt.id</strong> — _Infrastructure décentralisée et open source d'identité 
 - [BrightID - Identité décentralisée sur Ethereum](https://www.youtube.com/watch?v=D3DbMFYGRoM) — _Épisode de podcast non bancaire parlant de BrightID, une solution d'identité décentralisée pour Ethereum_
 - [The Off Chain Internet : Identités décentralisées & Références vérifiables](https://www.youtube.com/watch?v=EZ_Bb6j87mg) — Présentation EthDenver 2022 par Evin McMullen
 - [Explication des Justificatifs Vérifiables](https://www.youtube.com/watch?v=ce1IdSr-Kig) - Vidéo explicative sur YouTube avec démonstration par Tamino Baumann
-
-
 
 ### Communautés {#communities}
 

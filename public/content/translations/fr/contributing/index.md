@@ -23,16 +23,16 @@ Nous sommes une communauté accueillante qui vous aidera à grandir et à vous f
 
 **Contenu**
 - [Créer/modifier du contenu](/contributing/#how-to-update-content) – Proposez de nouvelles pages ou des modifications de ce qui existe déjà
-- [Ajouter un article pour la communauté](/contributing/content-resources/)– Ajoutez un article utile à une page pertinente
+- [Ajouter un article pour la communauté](/contributing/content-resources/) – Ajoutez un article utile à une page pertinente
 - [Suggérer une ressource de design](/contributing/design/adding-design-resources/) - Ajoutez, mettez à jour et supprimez des ressources de design utiles
-- [Ajouter un terme au glossaire ](/contributing/adding-glossary-terms/) – Aidez-nous à poursuivre le développement du [glossaire](/glossary/) Ethereum
+- [Ajouter un terme au glossaire](/contributing/adding-glossary-terms/) – Aidez-nous à poursuivre le développement du [glossaire](/glossary/) Ethereum
 - [Quiz](/contributing/quizzes/) - Ajoutez, mettez à jour et supprimez des questions de quiz sur une page pertinente
 
 **Idées de fonctionnalités**
 - [Demander une fonctionnalité](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) – Faites-nous part de vos idées pour une nouvelle fonctionnalité ou un nouveau design
 
 **Liste de produits**
-- [Ajouter une plateforme d'échange ](/contributing/adding-exchanges/)– Ajoutez une plateforme d'échange à notre [outil de recherche d'échange](/get-eth/#country-picker)
+- [Ajouter une plateforme d'échange](/contributing/adding-exchanges/) – Ajoutez une plateforme d'échange à notre [outil de recherche d'échange](/get-eth/#country-picker)
 - [Ajouter un produit/service](/contributing/adding-products/) – Ajoutez une application décentralisée (DApp) ou un portefeuille à une page pertinente
 - [Ajouter des outils de développement](/contributing/adding-developer-tools/) – Ajoutez un outil de développement à une page pertinente
 - [Ajouter une couche 2](/contributing/adding-layer-2s/) – Ajoutez une seconde couche à une page pertinente
