@@ -95,7 +95,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 
   // Get i18n messages
   const allMessages = await getMessages(locale)
-  const requiredNamespaces = getRequiredNamespacesForPage("/roadmap/vision")
+  const requiredNamespaces = getRequiredNamespacesForPage("/layer-2/networks")
   const messages = pick(allMessages, requiredNamespaces)
 
   const props = {
