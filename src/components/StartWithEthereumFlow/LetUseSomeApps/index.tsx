@@ -1,6 +1,7 @@
 import { Image } from "@/components/Image"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import Link from "@/components/ui/Link"
+import { LinkBox } from "@/components/ui/link-box"
 import { Tag } from "@/components/ui/tag"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
@@ -104,7 +105,7 @@ const LetUseSomeApps = ({
       <div className="flex flex-1 flex-col gap-8">
         <div>
           {dappsList.map((dapp) => (
-            <div
+            <LinkBox
               key={dapp.name}
               className="group flex cursor-pointer flex-col items-center justify-between gap-4 rounded-xl border-b border-background p-4 last:border-b-0 hover:bg-background-highlight sm:flex-row"
               onClick={() => {
@@ -142,7 +143,7 @@ const LetUseSomeApps = ({
                   Go
                 </ButtonLink>
               </div>
-            </div>
+            </LinkBox>
           ))}
         </div>
         <div className="mb-4 flex justify-center lg:hidden">
