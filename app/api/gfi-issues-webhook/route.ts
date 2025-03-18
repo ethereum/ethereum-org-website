@@ -1,4 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from "next"
+import { NextResponse } from "next/server"
 
 import { normalizeLabels } from "@/lib/utils/gh"
 
@@ -11,34 +11,33 @@ const LABELS_TO_EMOJI = {
   event: "🗓️",
 }
 
-type ResponseData = {
-  message: string
-}
-
 const GFI_LABEL = "good first issue"
 
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse<ResponseData>
-) {
+export async function GET(req: Request) {
   const { method } = req
 
   if (method !== "POST") {
-    return res.status(405).json({ message: "Method not allowed" })
+    return NextResponse.json({ message: "Method not allowed" }, { status: 405 })
   }
 
-  const { action, label, issue } = req.body
+  const { action, label, issue } = await req.json()
 
   if (action !== "labeled") {
-    return res.status(200).json({ message: "Not a label action" })
+    return NextResponse.json({ message: "Not a label action" }, { status: 200 })
   }
 
   if (label.name !== GFI_LABEL) {
-    return res.status(200).json({ message: "Not a good first issue" })
+    return NextResponse.json(
+      { message: "Not a good first issue" },
+      { status: 200 }
+    )
   }
 
   if (issue.assignee) {
-    return res.status(200).json({ message: "Issue already assigned" })
+    return NextResponse.json(
+      { message: "Issue already assigned" },
+      { status: 200 }
+    )
   }
 
   // send a notification to discord webhook
@@ -86,8 +85,14 @@ export default async function handler(
   if (!discordRes.ok) {
     const error = await discordRes.json()
     console.log(error)
-    return res.status(500).json({ message: "Error sending GFI to Discord" })
+    return NextResponse.json(
+      { message: "Error sending GFI to Discord" },
+      { status: 500 }
+    )
   }
 
-  res.status(200).json({ message: "New GFI sent to Discord!" })
+  return NextResponse.json(
+    { message: "New GFI sent to Discord!" },
+    { status: 200 }
+  )
 }

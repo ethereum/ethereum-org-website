@@ -1,13 +1,14 @@
-import type { NextApiRequest, NextApiResponse } from "next"
+import { revalidatePath } from "next/cache"
+import { NextRequest, NextResponse } from "next/server"
 
 import i18nConfig from "../../../i18n.config.json"
 
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
-  if (req.query.secret !== process.env.REVALIDATE_SECRET) {
-    return res.status(401).json({ message: "Invalid secret" })
+export async function GET(req: NextRequest) {
+  const searchParams = req.nextUrl.searchParams
+  const secret = searchParams.get("secret")
+
+  if (secret !== process.env.REVALIDATE_SECRET) {
+    return NextResponse.json({ message: "Invalid secret" }, { status: 401 })
   }
 
   const BUILD_LOCALES = process.env.NEXT_PUBLIC_BUILD_LOCALES
@@ -16,12 +17,12 @@ export default async function handler(
     ? BUILD_LOCALES.split(",")
     : i18nConfig.map(({ code }) => code)
 
-  const path = req.query.path as string
+  const path = searchParams.get("path")
   console.log("Revalidating", path)
 
   try {
     if (!path) {
-      return res.status(400).json({ message: "No path provided" })
+      return NextResponse.json({ message: "No path provided" }, { status: 400 })
     }
 
     const hasLocaleInPath = locales.some((locale) =>
@@ -29,10 +30,10 @@ export default async function handler(
     )
 
     if (hasLocaleInPath) {
-      await res.revalidate(path)
+      revalidatePath(path)
     } else {
       // First revalidate the default locale to cache the results
-      await res.revalidate(`/en${path}`)
+      revalidatePath(`/en${path}`)
 
       // Then revalidate all other locales
       await Promise.all(
@@ -40,7 +41,7 @@ export default async function handler(
           const localePath = `/${locale}${path}`
           console.log(`Revalidating ${localePath}`)
           try {
-            await res.revalidate(localePath)
+            revalidatePath(localePath)
           } catch (err) {
             console.error(`Error revalidating ${localePath}`, err)
             throw new Error(`Error revalidating ${localePath}`)
@@ -49,11 +50,11 @@ export default async function handler(
       )
     }
 
-    return res.json({ revalidated: true })
+    return NextResponse.json({ revalidated: true })
   } catch (err) {
     console.error(err)
     // If there was an error, Next.js will continue
     // to show the last successfully generated page
-    return res.status(500).send("Error revalidating")
+    return NextResponse.json({ message: "Error revalidating" }, { status: 500 })
   }
 }
