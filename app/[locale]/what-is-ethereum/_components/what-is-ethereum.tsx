@@ -1,16 +1,11 @@
-import { GetStaticProps, InferGetStaticPropsType } from "next"
+"use client"
+
 import type { ImageProps } from "next/image"
 import { useLocale } from "next-intl"
 import type { HTMLAttributes } from "react"
 import { MdInfoOutline } from "react-icons/md"
 
-import type {
-  BasePageProps,
-  ChildOnlyProp,
-  Lang,
-  MetricReturnData,
-  Params,
-} from "@/lib/types"
+import type { ChildOnlyProp, Lang, MetricReturnData } from "@/lib/types"
 
 import AdoptionChart from "@/components/AdoptionChart"
 import {
@@ -44,22 +39,11 @@ import {
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 import { cn } from "@/lib/utils/cn"
-import { dataLoader } from "@/lib/utils/data/dataLoader"
-import { existsNamespace } from "@/lib/utils/existsNamespace"
-import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { trackCustomEvent } from "@/lib/utils/matomo"
-import { getLocaleTimestamp } from "@/lib/utils/time"
-import {
-  getLocaleForNumberFormat,
-  getRequiredNamespacesForPage,
-} from "@/lib/utils/translations"
-
-import { DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
+import { getLocaleForNumberFormat } from "@/lib/utils/translations"
 
 import useTranslation from "@/hooks/useTranslation"
-import loadNamespaces from "@/i18n/loadNamespaces"
 import { usePathname } from "@/i18n/routing"
-import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
 import dogeComputerImg from "@/public/images/doge-computer.png"
 import ethImg from "@/public/images/eth.png"
 import diffEthAndBtc from "@/public/images/eth.png"
@@ -177,49 +161,11 @@ const Image400 = ({ src }: Pick<ImageProps, "src">) => (
   <Image src={src} alt="" width={400} />
 )
 
-type Props = BasePageProps & {
+type Props = {
   data: MetricReturnData
 }
 
-const loadData = dataLoader([["growThePieData", fetchGrowThePie]])
-
-export async function getStaticPaths() {
-  return {
-    paths: LOCALES_CODES.map((locale) => ({ params: { locale } })),
-    fallback: false,
-  }
-}
-
-export const getStaticProps = (async ({ params }) => {
-  const { locale = DEFAULT_LOCALE } = params || {}
-
-  const [data] = await loadData()
-
-  const lastDeployDate = getLastDeployDate()
-  const lastDeployLocaleTimestamp = getLocaleTimestamp(
-    locale as Lang,
-    lastDeployDate
-  )
-
-  const requiredNamespaces = getRequiredNamespacesForPage("/what-is-ethereum")
-
-  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
-
-  const messages = await loadNamespaces(locale, requiredNamespaces)
-
-  return {
-    props: {
-      messages,
-      contentNotTranslated,
-      lastDeployLocaleTimestamp,
-      data: data.txCount,
-    },
-  }
-}) satisfies GetStaticProps<Props, Params>
-
-const WhatIsEthereumPage = ({
-  data,
-}: InferGetStaticPropsType<typeof getStaticProps>) => {
+const WhatIsEthereumPage = ({ data }: Props) => {
   const { t } = useTranslation(["page-what-is-ethereum", "learn-quizzes"])
   const pathname = usePathname()
   const locale = useLocale()
