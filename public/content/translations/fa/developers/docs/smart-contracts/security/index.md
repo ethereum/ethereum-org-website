@@ -459,11 +459,11 @@ contract Attack {
 
 ### ابزارهایی برای تجزیه و تحلیل قراردادهای هوشمند و تأیید صحت کد {#code-analysis-tools}
 
-- **[ابزارها و کتابخانه‌های تست](/developers/docs/smart-contracts/testing/#testing-tools-and-libraries)** - < em x-id="4">مجموعه ای از ابزارها و کتابخانه‌های استاندارد صنعتی برای انجام تست‌های واحد، تجزیه و تحلیل استاتیک و تجزیه و تحلیل پویا در قراردادهای هوشمند است</em>
+- **[ابزارها و کتابخانه‌های تست](/developers/docs/smart-contracts/testing/#testing-tools-and-libraries)** - _مجموعه ای از ابزارها و کتابخانه‌های استاندارد صنعتی برای انجام تست‌های واحد، تجزیه و تحلیل استاتیک و تجزیه و تحلیل پویا در قراردادهای هوشمند است_
 
 - **[ابزارهای تأیید رسمی](/developers/docs/smart-contracts/formal-verification/#formal-verification-tools)** - _ابزارهایی برای تأیید صحت عملکرد در قراردادهای هوشمند و بررسی متغیرها هستند._
 
-- **[خدمات حسابرسی قراردادهای هوشمند](/developers/docs/smart-contracts/testing/#smart-contract-auditing-services)** - < em x-id="4">فهرست ‌هایی که خدمات حسابرسی قرارداد هوشمند برای پروژه‌های توسعه اتریوم ارائه می‌کنند.</em>
+- **[خدمات حسابرسی قراردادهای هوشمند](/developers/docs/smart-contracts/testing/#smart-contract-auditing-services)** - _فهرست ‌هایی که خدمات حسابرسی قرارداد هوشمند برای پروژه‌های توسعه اتریوم ارائه می‌کنند._
 
 - **[پلتفرم‌های پاداش باگ](/developers/docs/smart-contracts/testing/#bug-bounty-platforms)** - _پلتفرم‌هایی برای هماهنگی پاداش‌های اشکال و پاداش افشای مسئولانه آسیب‌پذیری‌های مهم در قراردادهای هوشمند هستند_
 
