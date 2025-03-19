@@ -1,7 +1,7 @@
 ---
 title: Críochnaitheacht sliotán aonair
 description: Míniú ar chríochnúlacht sliotán aonair
-lang: en
+lang: ga
 ---
 
 # Críochnaitheacht sliotán aonair {#single-slot-finality}

@@ -1,7 +1,7 @@
 ---
 title: An Slabhra Beacon
 description: Foghlaim faoin Beacon Slabhra - an t-uasghrádú a thug isteach cruthúnais Ethereum.
-lang: en
+lang: ga
 template: upgrade
 image: /images/upgrades/core.png
 alt:

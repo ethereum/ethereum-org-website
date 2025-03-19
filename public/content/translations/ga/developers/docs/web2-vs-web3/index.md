@@ -1,7 +1,7 @@
 ---
 title: Web2 vs Web3
 description:
-lang: en
+lang: ga
 ---
 
 Tagraíonn Web2 don leagan den idirlíon atá ar eolas ag an gcuid is mó againn inniu. Idirlíon atá faoi cheannas cuideachtaí a sholáthraíonn seirbhísí mar mhalairt ar do shonraí pearsanta. Tagraíonn Web3, i gcomhthéacs Ethereum, d'aipeanna díláraithe a ritheann ar an mblocshlabhra. Is aipeanna iad seo a ligeann d’aon duine páirt a ghlacadh gan luach airgid a chur ar a gcuid sonraí pearsanta.

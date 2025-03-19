@@ -1,7 +1,7 @@
 ---
 title: Treochlár Ethereum
 description: An cosán chuig níos mó inscálaitheachta, slándála agus inbhuanaitheachta do Ethereum.
-lang: en
+lang: ga
 template: roadmap
 image: /images/heroes/roadmap-hub-hero.jpg
 alt: "Treochlár Ethereum"

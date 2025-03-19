@@ -1,7 +1,7 @@
 ---
 title: Cad é Web3 agus cén fáth a bhfuil sé tábhachtach?
 description: Réamheolas ar Web3 - an chéad éabhlóid eile den Ghréasán Domhanda - agus cad chuige a bhfuil tábhacht leis.
-lang: en
+lang: ga
 ---
 
 # Réamhrá don Ghréasán3 {#introduction}

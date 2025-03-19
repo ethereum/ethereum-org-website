@@ -1,14 +1,14 @@
 ---
 title: Conas rochtain chonartha cliste ar do chistí crypto a chúlghairm
 description: Treoir maidir le rochtain ar chomharthaí conartha cliste dúshaothraithe a chúlghairm
-lang: en
+lang: ga
 ---
 
 # Conas rochtain chonartha cliste ar do chistí crypto a chúlghairm
 
 Míneoidh an treoir seo duit conas féachaint ar liosta de na [conarthaí cliste](/glossary/#smart-contract) a cheadaigh tú rochtain a fháil ar do chistí agus conas iad a chur ar ceal.
 
-Uaireanta tógann forbróirí mailíseach isteach, faoi choim, conarthaí cliste a cheadaíonn rochtain ar chistí úsáideoirí aineolacha a idirghníomhaíonn leis an gconradh cliste. Is é an rud a tharlaíonn go minic ná go n-iarrann ardáin dá leithéid cead ar an úsáideoir **líon neamhtheoranta dhearbán** a chaitheamh in iarracht méideanna beaga [gás](/glossary/# a shábháil gás) amach anseo, ach tagann riosca méadaithe leis seo.
+Uaireanta tógann forbróirí mailíseach isteach, faoi choim, conarthaí cliste a cheadaíonn rochtain ar chistí úsáideoirí aineolacha a idirghníomhaíonn leis an gconradh cliste. Is é an rud a tharlaíonn go minic ná go n-iarrann ardáin dá leithéid cead ar an úsáideoir **líon neamhtheoranta dhearbán** a chaitheamh in iarracht méideanna beaga [gás](/glossary/#gas) amach anseo, ach tagann riosca méadaithe leis seo.
 
 Nuair a bhíonn cearta rochtana neamhtheoranta ag ardán ar chomhartha ar do [sparán](/glossary/#wallet), is féidir leo na comharthaí sin go léir a chaitheamh fiú má tharraing tú do chistí siar óna n-ardán isteach i do sparán. Is féidir le gníomhaithe mailíseacha rochtain a fháil ar do chistí fós agus iad a tharraingt siar ina gcuid sparán gan aon rogha aisghabhála fágtha agat.
 

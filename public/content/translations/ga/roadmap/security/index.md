@@ -1,7 +1,7 @@
 ---
 title: Ethereum níos sláine
 description: Is é Ethereum an t-ardán conartha cliste is sláine agus díláraithe atá ann. Mar sin féin, tá feabhsuithe fós ar féidir a dhéanamh ionas go bhfanfaidh Ethereum athléimneach d'aon leibhéal ionsaí i bhfad amach anseo.
-lang: en
+lang: ga
 image: /images/roadmap/roadmap-security.png
 alt: "Treochlár Ethereum"
 template: roadmap

@@ -1,7 +1,7 @@
 ---
 title: Meaisín Fíorúil Ethereum (EVM)
 description: Réamhrá ar an meaisín fíorúil Ethereum agus conas a bhaineann sé le staid, idirbhearta, agus conarthaí cliste.
-lang: en
+lang: ga
 ---
 
 Is timpeallacht fhíorúil dhíláraithe é Meaisín Fíorúil Ethereum (EVM) a ritheann cód go comhsheasmhach agus go slán ar fud na nóid Ethereum go léir. Ritheann Nóid an EVM chun conarthaí cliste a dhéanamh, ag baint úsáide as "[gas](/developers/docs/gas/)" chun an iarracht ríomhaireachtúil atá ag teastáil le haghaidh [ oibríochtaí](/developers/docs/evm/opcodes/), lena gcinntítear leithdháileadh éifeachtach acmhainní agus slándáil líonra.

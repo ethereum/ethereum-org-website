@@ -2,7 +2,7 @@
 title: Airgeadas díláraithe (DeFi)
 metaTitle: Cad é DeFi? | Sochair agus Úsáid Airgeadais Dhíláraithe
 description: Forbhreathnú ar DeFi ar Ethereum
-lang: en
+lang: ga
 template: use-cases
 emoji: ":money_with_wings:"
 image: /images/use-cases/defi.png

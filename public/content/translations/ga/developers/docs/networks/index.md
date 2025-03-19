@@ -1,7 +1,7 @@
 ---
 title: Líonraí
 description: Forbhreathnú ar líonraí Ethereum agus cá háit a bhfaighidh tú éitear testnet (ETH) chun d'iarratas a thástáil.
-lang: en
+lang: ga
 ---
 
 Is grúpaí de ríomhairí nasctha iad líonraí Ethereum a dhéanann cumarsáid ag baint úsáide as prótacal Ethereum. Níl ach Ethereum Mainnet amháin ann, ach is féidir líonraí neamhspleácha a chomhlíonann na rialacha prótacail céanna a chruthú chun críocha tástála agus forbartha. Tá go leor "líonraí" neamhspleácha ann a chloíonn leis an bprótacal gan idirghníomhú lena chéile. Is féidir leat fiú ceann a thosú go háitiúil ar do ríomhaire féin chun do chonarthaí cliste agus aipeanna web3 a thástáil.

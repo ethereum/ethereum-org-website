@@ -1,7 +1,7 @@
 ---
 title: Conas comharthaí caimiléireachta a aithint
 description: Tuiscint a fháil ar dearbháin chaimiléireachta, conas a chuireann siad i gcéill go bhfuil siad fíor, agus conas iad a sheachaint.
-lang: en
+lang: ga
 ---
 
 # Conas comharthaí caimiléireachta a aithint {#identify-scam-tokens}
@@ -13,7 +13,7 @@ Tá dhá bhealach ann inar dócha go gcuirfidh siad tú amú:
 - **Ag díol comhartha camscéimeanna**, b'fhéidir gur cosúil leis an chomhartha dlisteanach atá tú ag iarraidh a cheannach, ach go n-eisíonn na scamadóirí iad agus nach fiú aon rud é.
 - **Ag cur feall ort droch-idirbhearta a shíniú**, de ghnáth trí tú a threorú chuig a gcomhéadan úsáideora féin. B’fhéidir go ndéanfaidh siad iarracht tú a mhealladh chun liúntas as do chuid dearbháin ERC-20 a thabhairt dá gconarthaí, ag nochtadh faisnéise íogair a thugann rochtain dóibh ar do shócmhainní, etc. D'fhéadfadh na comhéadain úsáideora seo a bheith gar-foirfe clón de láithreáin macánta, ach le cleasanna i bhfolach.
 
-Chun a léiriú cad is dearbháin chaimiléireachta ann, agus conas iad a aithint, féachfaimid ar shampla amháin: [`wARB` ](https://etherscan.io/token/0xb047c8032b99841713b8e3872f06cf32beb27b82). Déanann an comhartha seo iarracht cuma dhlisteanach [`ARB`](https://etherscan.io/address/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1).
+Chun a léiriú cad is dearbháin chaimiléireachta ann, agus conas iad a aithint, féachfaimid ar shampla amháin: [`wARB`](https://etherscan.io/token/0xb047c8032b99841713b8e3872f06cf32beb27b82). Déanann an comhartha seo iarracht cuma dhlisteanach [`ARB`](https://etherscan.io/address/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1).
 
 <ExpandableCard
 title="Cad é ARB?"

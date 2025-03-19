@@ -1,7 +1,7 @@
 ---
 title: Moltaí Feabhsúcháin Ethereum (EIPs)
 description: An fhaisnéis bhunúsach a theastaíonn chun EIPanna a thuiscint
-lang: en
+lang: ga
 ---
 
 # Réamhrá ar Mholtaí Feabhsúcháin Ethereum (EIPs) {#introduction-to-ethereum-improvement-proposals}
@@ -22,7 +22,7 @@ Chomh maith le sonraíocht theicniúil a sholáthar le haghaidh athruithe, is ia
 
 ## Stair na nEIPanna {#history-of-eips}
 
-Cruthaíodh stór GitHub [Tograí Feabhsúcháin Ethereum (EIPanna)](https://github.com/ethereum/EIPs) i mí Dheireadh Fómhair 2015. Tá an próiseas EIP bunaithe ar an bpróiseas [Moltaí Feabhsúcháin Bitcoin (BIPanna)](https://github.com/bitcoin/bips), atá bunaithe ar an [Próiseas Moltaí Feabhsúcháin Python (PEPanna)](https: //www.python.org/dev/peps/).
+Cruthaíodh stór GitHub [Tograí Feabhsúcháin Ethereum (EIPanna)](https://github.com/ethereum/EIPs) i mí Dheireadh Fómhair 2015. Tá an próiseas EIP bunaithe ar an bpróiseas [Moltaí Feabhsúcháin Bitcoin (BIPanna)](https://github.com/bitcoin/bips), atá bunaithe ar an [Próiseas Moltaí Feabhsúcháin Python (PEPanna)](https://www.python.org/dev/peps/).
 
 Tá sé de chúram ar eagarthóirí EIP athbhreithniú a dhéanamh ar EIPanna le haghaidh fóntacht theicniúil, saincheisteanna formáidithe, agus litriú, gramadach agus stíl chóid a cheartú. Ba iad Martin Becze, Vitalik Buterin, Gavin Wood, agus roinnt eile na heagarthóirí bunaidh EIP ó 2015 go dtí deireadh 2016.
 
@@ -46,7 +46,7 @@ Tá eagarthóirí EIP Emeritus
 
 Más mian leat a bheith i d’eagarthóir EIP, seiceáil le do thoil [EIP-5069](https://eips.ethereum.org/EIPS/eip-5069).
 
-Cinneann eagarthóirí an CEN cathain a bheidh togra réidh le bheith ina CEN, agus cuidíonn siad le húdair an CEN a gcuid tograí a chur chun cinn. Cuidíonn [Ethereum Cat Herders](https://www.ethereumcatherders.com/) cruinnithe a eagrú idir eagarthóirí an EIP agus an pobal (féach [EIPIP](https://github.com/ethereum -cat-herders/EIPIP)).
+Cinneann eagarthóirí an CEN cathain a bheidh togra réidh le bheith ina CEN, agus cuidíonn siad le húdair an CEN a gcuid tograí a chur chun cinn. Cuidíonn [Ethereum Cat Herders](https://www.ethereumcatherders.com/) cruinnithe a eagrú idir eagarthóirí an EIP agus an pobal (féach [EIPIP](https://github.com/ethereum-cat-herders/EIPIP)).
 
 Tá cur síos ar an bpróiseas caighdeánaithe iomlán in éineacht leis an gcairt i [EIP-1](https://eips.ethereum.org/EIPS/eip-1)
 
@@ -74,6 +74,6 @@ Is féidir le duine ar bith EIP a chruthú. Sula gcuirtear togra isteach, ní m�
 
 <cite class="citation">
 
-Ábhar leathanaigh arna sholáthar go páirteach ó [Phrótacal Ethereum, Rialachas Forbartha agus Comhordú Uasghrádaithe Líonra]( https://hudsonjameson.com/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) le Hudson Jameson
+Ábhar leathanaigh arna sholáthar go páirteach ó [Phrótacal Ethereum, Rialachas Forbartha agus Comhordú Uasghrádaithe Líonra](https://hudsonjameson.com/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) le Hudson Jameson
 
 </cite>

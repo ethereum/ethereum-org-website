@@ -2,7 +2,7 @@
 title: Cad is DAO ann?
 metaTitle: Cad is DAO ann? | Eagraíocht Uathrialach Dhíláraithe
 description: Forbhreathnú ar DAOnna ar Ethereum
-lang: en
+lang: ga
 template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
@@ -160,7 +160,7 @@ _Úsáidtear é go hiondúil le haghaidh forbairt díláraithe agus rialachas pr
 ### Físeáin {#videos}
 
 - [Cad é DAO in crypto?](https://youtu.be/KHm0uUPqmVE)
-- [An féidir le DAO Cathair a Thógáil?](https://www.ted.com/talks/scott_fitsimones_could_a_dao_build_the_next_great_city) – [TED ](https://www.ted.com/)
+- [An féidir le DAO Cathair a Thógáil?](https://www.ted.com/talks/scott_fitsimones_could_a_dao_build_the_next_great_city) – [TED](https://www.ted.com/)
 
 <Divider />
 

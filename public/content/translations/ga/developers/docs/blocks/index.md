@@ -1,7 +1,7 @@
 ---
 title: Bloic
 description: Forbhreathnú ar na bloic i mblocshlabhra Ethereum - a struchtúr sonraí, cén fáth a bhfuil gá leo, agus conas a dhéantar iad.
-lang: en
+lang: ga
 ---
 
 Is baisceanna idirbhearta iad bloic le hais den bhloc roimhe seo sa slabhra. Nascann sé seo bloic le chéile (i slabhra) toisc go bhfuil haiseanna díorthaithe go cripteagrafach ó na sonraí bloc. Cuireann sé seo cosc ​​​​ar chalaois, toisc go ndéanfadh athrú amháin ar aon bhloc sa stair na bloic seo a leanas go léir a neamhbhailiú mar go n-athródh gach hashes ina dhiaidh sin agus go dtabharfadh gach duine a ritheann an blockchain faoi deara.

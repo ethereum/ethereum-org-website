@@ -1,7 +1,7 @@
 ---
 title: Idirbhearta
 description: Forbhreathnú ar idirbhearta Ethereum \u2013 conas a oibríonn siad, a struchtúr sonraí, agus conas iad a sheoladh trí fheidhmchlár.
-lang: en
+lang: ga
 ---
 
 Is treoracha sínithe go cripteagrafach ó chuntais iad idirbhearta. Cuirfidh cuntas tús le hidirbheart chun staid líonra Ethereum a nuashonrú. Is é an t-idirbheart is simplí ná ETH a aistriú ó chuntas amháin go ceann eile.
@@ -204,7 +204,7 @@ Bunaithe ar an luach `TransactionType`, is féidir idirbheart a rangú mar:
 
 2. ** Idirbhearta de Chineál 1:** Arna thabhairt isteach i [EIP-2930](https://eips.ethereum.org/EIPS/eip-2930) mar mar chuid de [Uasghrádú Beirlín](/history/#berlin) Ethereum, áirítear leis na hidirbhearta seo paraiméadar `accessList`. Sonraíonn an liosta seo seoltaí agus eochracha stórála a bhfuil súil ag an idirbheart a rochtain, rud a chabhraíonn le costais [gas](/developers/docs/gas/) a laghdú d’idirbhearta casta lena mbaineann conarthaí cliste. Níl athruithe margaidh táillí EIP-1559 san áireamh in idirbhearta Cineál 1. Áirítear le hidirbhearta de chineál 1 paraiméadar `yParity` freisin, ar féidir é a bheith `0x0` nó `0x1`, rud a léiríonn an phaireacht i luach y an tsínithe secp256k1. Aithnítear iad ag tosú leis an mbeart `0x01`, agus is é `0x1` a luach TransactionCype.
 
-3. **Idirbhearta de Chineál 2**, ar a dtugtar idirbhearta EIP-1559 de ghnáth, is idirbhearta iad a thugtar isteach in [EIP-1559](https://eips.ethereum.org/EIPS/eip- 1559), i [Uasghrádú Londain](/history/#london) Ethereum. Tá siad tar éis éirí mar an cineál caighdeánach idirbheart ar líonra Ethereum. Tugann na hidirbhearta seo isteach meicníocht nua um mhargadh táillí a fheabhsaíonn intuarthacht tríd an táille idirbhirt a scaradh ina bhuntáille agus ina táille tosaíochta. Tosaíonn siad leis an mbeart `0x02` agus áirítear leo réimsí mar `maxPriorityFeePerGas` agus `maxFeePerGas`. Is iad idirbhearta Chineál 2 an réamhshocrú anois mar gheall ar a solúbthacht agus a n-éifeachtúlacht, go háirithe i bhfabhar a gcumas chun cabhrú le húsáideoirí táillí idirbhirt a bhainistiú ar bhealach níos intuartha. Is é luach an Chineál Idirbheart do na hidirbhearta seo ná `0x2`.
+3. **Idirbhearta de Chineál 2**, ar a dtugtar idirbhearta EIP-1559 de ghnáth, is idirbhearta iad a thugtar isteach in [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), i [Uasghrádú Londain](/history/#london) Ethereum. Tá siad tar éis éirí mar an cineál caighdeánach idirbheart ar líonra Ethereum. Tugann na hidirbhearta seo isteach meicníocht nua um mhargadh táillí a fheabhsaíonn intuarthacht tríd an táille idirbhirt a scaradh ina bhuntáille agus ina táille tosaíochta. Tosaíonn siad leis an mbeart `0x02` agus áirítear leo réimsí mar `maxPriorityFeePerGas` agus `maxFeePerGas`. Is iad idirbhearta Chineál 2 an réamhshocrú anois mar gheall ar a solúbthacht agus a n-éifeachtúlacht, go háirithe i bhfabhar a gcumas chun cabhrú le húsáideoirí táillí idirbhirt a bhainistiú ar bhealach níos intuartha. Is é luach an Chineál Idirbheart do na hidirbhearta seo ná `0x2`.
 
 
 

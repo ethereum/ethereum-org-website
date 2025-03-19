@@ -1,7 +1,7 @@
 ---
 title: An Comhoiriúnú
 description: Foghlaim faoi An Cumasc - nuair a ghlac Mainnet Ethereum cruthúnas-gheallta.
-lang: en
+lang: ga
 template: upgrade
 image: /images/upgrades/merge.png
 alt:
@@ -112,7 +112,7 @@ Chuir an Cumasc deireadh le cruthúnais oibre do Ethereum agus chuir sé tús le
 
 ## An Cumasc agus scálú {#merge-and-scaling}
 
-Shocraigh an Cumasc freisin an chéim le haghaidh tuilleadh uasghrádaithe inscálaithe nach bhféadfaí a dhéanamh faoi chruthúnas oibre, rud a thugann Ethereum céim níos gaire don scála iomlán, don tslándáil agus don inbhuanaitheacht a bhfuil cuntas orthu ina [fís Ethereum a bhaint amach. ](/roadmap/vision/).
+Shocraigh an Cumasc freisin an chéim le haghaidh tuilleadh uasghrádaithe inscálaithe nach bhféadfaí a dhéanamh faoi chruthúnas oibre, rud a thugann Ethereum céim níos gaire don scála iomlán, don tslándáil agus don inbhuanaitheacht a bhfuil cuntas orthu ina [fís Ethereum a bhaint amach.](/roadmap/vision/).
 
 ## Míthuiscintí faoi An Cumasc {#misconceptions}
 

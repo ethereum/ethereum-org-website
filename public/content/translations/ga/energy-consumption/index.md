@@ -1,7 +1,7 @@
 ---
 title: Tomhaltas Fuinnimh Ethereum
 description: An fhaisnéis bhunúsach a theastaíonn uait chun tomhaltas fuinnimh Ethereum a thuiscint.
-lang: en
+lang: ga
 ---
 
 # Caiteachas fuinnimh Ethereum {#proof-of-stake-energy}

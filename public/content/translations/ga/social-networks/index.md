@@ -1,7 +1,7 @@
 ---
 title: Líonraí sóisialta díláraithe
 description: Forbhreathnú ar líonraí sóisialta díláraithe ar Ethereum
-lang: en
+lang: ga
 template: use-cases
 emoji: ":mega:"
 sidebarDepth: 2
@@ -91,22 +91,15 @@ Chomh maith le Pointí Pobail a úsáid chun gnéithe speisialta a dhíghlasáil
 - [ Na meáin shóisialta a dhílárú: treoir do chruach sóisialta Web3](https://www.coinbase.com/blog/decentralizing-social-media-a-guide-to-the-web3-social-stack) - _Coinbase Ventures_
 - [Is iad Líonraí Sóisialta an Chéad Deis Díláraithe Mór Eile](https://www.coindesk.com/tech/2021/01/22/social-networks-are-the-next-big-decentralization-opportunity/) — _Ben Goertzel_
 - [Tá geallúint ag Web3 maidir le líonraí díláraithe sóisialta faoi thiomáint phobail](https://venturebeat.com/2022/02/26/web3-holds-the-promise-of-decentralized-community-powered-social-networks/) — _Sumit Ghosh_
--
-
-Forbhreathnú ar Thírdhreach Blocshlabhra sna Meáin Shóisialta_</a> — _Gemini Cryptopedia_</li> 
-  
-  - [Conas is Féidir le Blocshlabhra Príobháideacht a Réiteach sna Meáin Shóisialta](https://www.investopedia.com/news/ethereum-blockchain-social-media-privacy-problem-linkedin-indorse/) - _Prableen Bajpai_
-- [Dílárú Dóthanach do Líonraí Sóisialta](https://www.varunsrinivasan.com/2022/01/11/sufficient-decentralization-for-social-networks) — _Varun Srinivasan_</ul> 
-
-
+- [Forbhreathnú ar Thírdhreach Blocshlabhra sna Meáin Shóisialta](https://www.gemini.com/cryptopedia/blockchain-social-media-decentralized-social-media) — _Gemini Cryptopedia_
+- [Conas is Féidir le Blocshlabhra Príobháideacht a Réiteach sna Meáin Shóisialta](https://www.investopedia.com/news/ethereum-blockchain-social-media-privacy-problem-linkedin-indorse/) - _Prableen Bajpai_
+- [Dílárú Dóthanach do Líonraí Sóisialta](https://www.varunsrinivasan.com/2022/01/11/sufficient-decentralization-for-social-networks) — _Varun Srinivasan_
 
 ### Físeáin {#videos}
 
 - [Meáin Shóisialta Díláraithe arna Míniú](https://www.youtube.com/watch?v=UdT2lpcGvcQ) — _Coinmarketcap_
 - [Tá DeSo Blockchain ag iarraidh na Meáin Shóisialta a Dhílárú](https://www.youtube.com/watch?v=SG2HUiVp0rE) — _Teicneolaíocht Bloomberg_
 - [Todhchaí na Meán Sóisialta Díláraithe w/ Balaji Srinivasan, Vitalik Buterin, Juan Benet](https://www.youtube.com/watch?v=DTxE9KV3YrE) — *ETHGlobal*
-
-
 
 ### Pobail {#communities}
 

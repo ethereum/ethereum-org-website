@@ -2,7 +2,7 @@
 title: Comharthaí neamh-idirmhalartacha (NFT)
 metaTitle: Cad is NFTanna ann? | Sochair agus úsáid
 description: Forbhreathnú ar NFTanna ar Ethereum
-lang: en
+lang: ga
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2

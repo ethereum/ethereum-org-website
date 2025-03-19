@@ -2,7 +2,7 @@
 title: Íocaíochtaí Ethereum
 metaTitle: Payments on Ethereum
 description: An overview of payments on Ethereum
-lang: en
+lang: ga
 template: use-cases
 emoji: ":frame_with_picture:"
 sidebarDepth: 2

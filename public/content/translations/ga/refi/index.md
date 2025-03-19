@@ -1,7 +1,7 @@
 ---
 title: Airgeadas Athghiniúna (ReFi)
 description: Forbhreathnú ar ReFi agus a chásanna úsáide reatha.
-lang: en
+lang: ga
 template: use-cases
 emoji: ":recycle:"
 sidebarDepth: 2

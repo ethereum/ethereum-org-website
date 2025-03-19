@@ -1,7 +1,7 @@
 ---
 title: Aistarraingtí geallchuir
 description: Leathanach ag achoimriú cad is aistarraingtí brú geallchuir ann, conas a oibríonn siad, agus cad is gá do gheallsealbhóirí a dhéanamh chun a luaíochtaí a fháil
-lang: en
+lang: ga
 template: staking
 image: /images/staking/leslie-withdrawal.png
 alt: Leslie an srónbheannach lena luaíocht gheallchuir

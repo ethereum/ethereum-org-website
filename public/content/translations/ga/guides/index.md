@@ -1,7 +1,7 @@
 ---
 title: Treoraí Ethereum
 description: Bailiúchán de threoracha praiticiúla a mhíníonn na bunghnéithe a bhaineann le Ethereum a úsáid do thosaitheoirí.
-lang: en
+lang: ga
 ---
 
 # Treoraí Ethereum

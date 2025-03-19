@@ -1,7 +1,7 @@
 ---
 title: Cad é Éitear Timfhillte (WETH)
 description: Cur i láthair ar éitear timfhillte (WETH) - rapar atá comhoiriúnach le ERC20 le haghaidh éitear (ETH).
-lang: en
+lang: ga
 ---
 
 # Éitear timfhillte (WETH) {#intro-to-weth}
@@ -12,7 +12,7 @@ Chun an bhearna seo a líonadh, cruthaíodh ETH timfhillte (WETH). **Is conradh 
 
 Is féidir leat WETH a dhífhilleadh le haghaidh ETH trí úsáid a bhaint as conradh cliste WETH. Is féidir leat aon mhéid WETH a fhuascailt leis an gconradh cliste WETH, agus gheobhaidh tú an méid céanna in ETH. Déantar an WETH a taisceadh a dhó ansin agus a bhaint as an soláthar imshruthaithe WETH.
 
-**Tá thart ar ~3% den soláthar ETH atá i gcúrsaíocht faoi ghlas sa chonradh chomhartha WETH** rud a fhágann go bhfuil sé ar cheann de na [conarthaí cliste](/gluais/#conradh cliste) is mó a úsáitear. Tá tábhacht ar leith ag baint le WETH nuair a bhíonn úsáideoirí ag idirghníomhú le feidhmchláir in airgeadas díláraithe (DeFi).
+**Tá thart ar ~3% den soláthar ETH atá i gcúrsaíocht faoi ghlas sa chonradh chomhartha WETH** rud a fhágann go bhfuil sé ar cheann de na [conarthaí cliste](/glossary/#smart-contract) is mó a úsáitear. Tá tábhacht ar leith ag baint le WETH nuair a bhíonn úsáideoirí ag idirghníomhú le feidhmchláir in airgeadas díláraithe (DeFi).
 
 ## Cén fáth a gcaithfimid ETH a thimfhilleadh mar ERC-20? {#why-do-we-need-to-wrap-eth}
 

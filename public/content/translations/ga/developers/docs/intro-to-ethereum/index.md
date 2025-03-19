@@ -1,7 +1,7 @@
 ---
 title: Réamhrá le hEthereum
 description: Réamhrá forbróir dapp ar na coincheapa lárnacha Ethereum.
-lang: en
+lang: ga
 ---
 
 ## Cad é an blocshlabhra? {#what-is-a-blockchain}
@@ -100,7 +100,7 @@ Tá líon na n-idirbheart an-ard, mar sin déantar idirbhearta "tiomanta" i mbai
 
 ### Conarthaí cliste {#smart-contracts}
 
-Cuid athúsáidte de chód (clár) a fhoilsíonn forbróir i stát EVM. Is féidir le duine ar bith a iarraidh go ndéanfar an cód conartha cliste a fhorghníomhú trí iarratas idirbhirt a dhéanamh. Toisc gur féidir le forbróirí feidhmchláir inrite treallach a scríobh isteach san EVM (cluichí, áiteanna margaidh, ionstraimí airgeadais, etc.) trí chonarthaí cliste a fhoilsiú, is minic a dtugtar [dapps, nó Aipeanna Díláraithe orthu seo freisin. ](/developers/docs/dapps/).
+Cuid athúsáidte de chód (clár) a fhoilsíonn forbróir i stát EVM. Is féidir le duine ar bith a iarraidh go ndéanfar an cód conartha cliste a fhorghníomhú trí iarratas idirbhirt a dhéanamh. Toisc gur féidir le forbróirí feidhmchláir inrite treallach a scríobh isteach san EVM (cluichí, áiteanna margaidh, ionstraimí airgeadais, etc.) trí chonarthaí cliste a fhoilsiú, is minic a dtugtar [dapps, nó Aipeanna Díláraithe orthu seo freisin.](/developers/docs/dapps/).
 
 [Tuilleadh faoi chonarthaí cliste](/developers/docs/smart-contracts/)
 

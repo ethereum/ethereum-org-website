@@ -1,7 +1,7 @@
 ---
 title: Réamhrá don éitear
 description: Réamhrá forbróir ar an gcriptea-airgeadra éitear.
-lang: en
+lang: ga
 ---
 
 ## Réamhriachtanais {#prerequisites}

@@ -1,7 +1,7 @@
 ---
 title: Conas comharthaí a aistriú go ciseal 2
 description: Treoir a mhíníonn conas dearbháin a aistriú ó Ethereum go ciseal 2 ag baint úsáide as droichead.
-lang: en
+lang: ga
 ---
 
 # Conas comharthaí a aistriú go ciseal 2

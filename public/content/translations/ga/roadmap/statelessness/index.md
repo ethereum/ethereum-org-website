@@ -1,7 +1,7 @@
 ---
 title: Neamhstáit, dul in éag stáit agus dul in éag staire
 description: Míniú ar dhul in éag staire agus Ethereum gan stát
-lang: en
+lang: ga
 ---
 
 # Neamhstáit, dul in éag stáit agus dul in éag staire {#statelessness}
@@ -44,7 +44,7 @@ Tagraíonn éag stáit do stát a bhaint de nóid aonair mura bhfuarthas rochtai
 
 D’fhéadfadh éag trí chíos a bheith ina chíos díreach a ghearrtar ar chuntais chun iad a choinneáil sa bhunachar sonraí stáit gníomhach. D’fhéadfadh éag de réir ama a tarlú trí chomhaireamh síos ón idirghníomhaíocht cuntais dheireanach, nó d’fhéadfadh éag tréimhsiúil gach cuntas a bheith a bheith i gceist. D’fhéadfadh meicníochtaí a bheith ann freisin a chomhcheanglaíonn gnéithe de na samhlacha bunaithe ar am agus ar chíos araon, mar shampla go bhfanann cuntais aonair sa stát gníomhach má íocann siad táille bheag éigin roimh éag ambhunaithe. Le héag stáit tá sé tábhachtach a thabhairt faoi deara nach bhfuil an staid neamhghníomhach ** scriosta**, ní dhéantar é a stóráil ach ar leithligh ón stát gníomhach. Is féidir an stát neamhghníomhach a aiséirí isteach sa stát gníomhach.
 
-Is dócha gurb é an bealach a n-oibreodh sé seo ná crann stáit a bheith ann ar feadh tréimhsí ama ar leith (b'fhéidir ~1 bhliain). Aon uair a thosaíonn tréimhse nua, tosaítear crann staide úr iomlán. Ní féidir ach an crann staide reatha a mhodhnú, tá gach ceann eile do-athraithe. Níltear ag súil ach go gcoimeádfaidh nóid Ethereum an crann staide reatha agus an chéad cheann eile is déanaí. Éilíonn sé seo bealach chun seoladh a stampáil leis an tréimhse ina bhfuil sé. Tá [roinnt bealaí féideartha](https://ethereum-magicians.org/t/types-of-resurrection-metadata-in-state-expiry/6607) chun é seo a dhéanamh, ach éilíonn na príomhbhealaí an rogha [seoltaí a fhadú](https://ethereum-magicians.org/t/increasing-address-size-from-20-to-32-bytes/5485) chun freastal ar an bhfaisnéis bhreise agus an buntáiste breise a bheith leis go bhfuil seoltaí níos faide i bhfad níos sláine. Tugtar [síneadh spáis seoltaí ar an mír treochlár a dhéanann é seo. ](https://ethereum-magicians.org/t/increasing-address-size-from-20-to-32-bytes/5485).
+Is dócha gurb é an bealach a n-oibreodh sé seo ná crann stáit a bheith ann ar feadh tréimhsí ama ar leith (b'fhéidir ~1 bhliain). Aon uair a thosaíonn tréimhse nua, tosaítear crann staide úr iomlán. Ní féidir ach an crann staide reatha a mhodhnú, tá gach ceann eile do-athraithe. Níltear ag súil ach go gcoimeádfaidh nóid Ethereum an crann staide reatha agus an chéad cheann eile is déanaí. Éilíonn sé seo bealach chun seoladh a stampáil leis an tréimhse ina bhfuil sé. Tá [roinnt bealaí féideartha](https://ethereum-magicians.org/t/types-of-resurrection-metadata-in-state-expiry/6607) chun é seo a dhéanamh, ach éilíonn na príomhbhealaí an rogha [seoltaí a fhadú](https://ethereum-magicians.org/t/increasing-address-size-from-20-to-32-bytes/5485) chun freastal ar an bhfaisnéis bhreise agus an buntáiste breise a bheith leis go bhfuil seoltaí níos faide i bhfad níos sláine. Tugtar [síneadh spáis seoltaí ar an mír treochlár a dhéanann é seo.](https://ethereum-magicians.org/t/increasing-address-size-from-20-to-32-bytes/5485).
 
 Mar an gcéanna le héag na staire, faoi éag stáit baintear an fhreagracht as seanshonraí stáit a stóráil ó úsáideoirí aonair agus brú ar aonáin eile ar nós soláthraithe láraithe, baill soilíosacha den phobal nó réitigh díláraithe níos todhchaíochta amhail an Líonra Tairsigh.
 

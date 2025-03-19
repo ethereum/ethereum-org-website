@@ -1,7 +1,7 @@
 ---
 title: Conas a chuaigh an Cumasc i bhfeidhm ar sholáthar ETH
 description: Miondealú ar an tionchar a bhí ag an Cumasc ar sholáthar ETH
-lang: en
+lang: ga
 ---
 
 # Conas a chuaigh an Cumasc i bhfeidhm ar sholáthar ETH {#how-the-merge-impacts-ETH-supply}

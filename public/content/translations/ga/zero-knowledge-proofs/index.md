@@ -1,7 +1,7 @@
 ---
 title: Cruthúnais nialais-eolais
 description: Réamhrá neamhtheicniúil ar chruthúnas nialas-eolais do thosaitheoirí.
-lang: en
+lang: ga
 ---
 
 # Cad iad cruthúnais nial-eolais? {#what-are-zk-proofs}

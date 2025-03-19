@@ -1,7 +1,7 @@
 ---
 title: Réamhrá ar dhroichid bhlocshlabhra
 description: Ceadaíonn Droichid úsáideoirí a gcuid cistí a bhogadh thar bhlocshlabhraí éagsúla
-lang: en
+lang: ga
 ---
 
 # Droichid Bhlocshlabhra {#prerequisites}

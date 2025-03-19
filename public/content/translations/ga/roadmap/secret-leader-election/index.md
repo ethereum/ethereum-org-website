@@ -1,7 +1,7 @@
 ---
 title: Toghchán rúnda ceannaire
 description: Míniú ar conas is féidir le toghchán rúnda ceannaire cabhrú le bailíochtóirí a chosaint ar ionsaithe
-lang: en
+lang: ga
 summaryPoints:
   - Is féidir seoladh IP na moltóirí bloc a bheith ar eolas roimh ré, rud a fhágann iad i mbaol ó ionsaithe
   - Cuireann toghchán rúnda ceannaire céannacht na mbailitheoirí i bhfolach ionas nach mbíonn siad ar an eolas roimh ré

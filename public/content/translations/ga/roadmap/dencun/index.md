@@ -1,14 +1,14 @@
 ---
 title: Ceisteanna Coitianta Cancun-Deneb (Dencun)
 description: Ceisteanna coitianta maidir le huasghrádú líonra Cancun-Deneb (Dencun)
-lang: en
+lang: ga
 ---
 
 # Cancun-Deneb (Dencun) {#dencun}
 
-Is uasghrádú é Cancun-Deneb (Dencun) ar líonra Ethereum, a ghníomhaíonn **Proto-Danksharding (EIP-4844)**, ag tabhairt isteach sonraí sealadacha **blobaí** le haghaidh [ciseal 2 (L2)](/gluais/ #layer-2) stóráil rollta níos saoire.
+Is uasghrádú é Cancun-Deneb (Dencun) ar líonra Ethereum, a ghníomhaíonn **Proto-Danksharding (EIP-4844)**, ag tabhairt isteach sonraí sealadacha **blobaí** le haghaidh [ciseal 2 (L2)](/glossary/#layer-2) stóráil rollta níos saoire.
 
-Cuireann cineál nua idirbhirt ar chumas soláthraithe rolladh suas sonraí a stóráil ar bhealach níos cost-éifeachtaí i rud ar a dtugtar "blobs." Cinntítear go mbeidh Blobaí ar fáil don líonra ar feadh timpeall 18 lá (níos cruinne, 4096 [agaí](/gluais/# aga)). Tar éis na tréimhse seo, bearrtar blobaí ón líonra, ach is féidir le feidhmchláir fós bailíocht a gcuid sonraí a fhíorú ag baint úsáide as cruthúnais.
+Cuireann cineál nua idirbhirt ar chumas soláthraithe rolladh suas sonraí a stóráil ar bhealach níos cost-éifeachtaí i rud ar a dtugtar "blobs." Cinntítear go mbeidh Blobaí ar fáil don líonra ar feadh timpeall 18 lá (níos cruinne, 4096 [agaí](/glossary/#epoch)). Tar éis na tréimhse seo, bearrtar blobaí ón líonra, ach is féidir le feidhmchláir fós bailíocht a gcuid sonraí a fhíorú ag baint úsáide as cruthúnais.
 
 Laghdaíonn sé seo go mór costas rollú suas, cuireann sé teorainn le fás slabhra, agus cabhraíonn sé le tacaíocht a thabhairt do níos mó úsáideoirí agus slándáil agus sraith díláraithe oibreoirí nód á gcoinneáil ag an am céanna.
 
@@ -116,5 +116,5 @@ _Blobspace 101 le Domothy — Gan Bainc_
 - [Fógra Dencun Mainnet](https://blog.ethereum.org/2024/02/27/dencun-mainnet-announcement) - _Blog FoundationEthereum_
 - [Treoir an tSíobaire ar Ethereum: Proto-Danksharding](https://members.delphidigital.io/reports/the-hitchhikers-guide-to-ethereum/#proto-danksharding-eip-4844) - _Jon Charbonneau_
 - [Ceisteanna Coitianta Proto-Danksharding](https://notes.ethereum.org/@vbuterin/proto_danksharding_faq) - _Vitalik Buterin_
-- [Míniú domhain ar EIP-4844: Croílár Uasghrádú Cancun](https://medium.com/@ebunker.io/an-in-depth-explanation-of-eip-4844-the-core- de-an-cancun-uasghrádú-de7b13761d2c) - _Ebunker_
+- [Míniú domhain ar EIP-4844: Croílár Uasghrádú Cancun](https://medium.com/@ebunker.io/an-in-depth-explanation-of-eip-4844-the-core-of-the-cancun-upgrade-de7b13761d2c) - _Ebunker_
 - [Nuashonrú AllCoreDevs 016](https://tim.mirror.xyz/HzH5MpK1dnw7qhBSmzCfdCIxpwpD6DpwlfxtaAwEfro) - _Tim Beiko_

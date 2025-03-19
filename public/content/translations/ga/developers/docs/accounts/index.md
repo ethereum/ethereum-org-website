@@ -1,7 +1,7 @@
 ---
 title: Cuntais Ethereum
 description: Míniú ar chuntais Ethereum - a struchtúir sonraí agus a gcaidreamh le cripteagrafaíocht péire eochair-luach.
-lang: en
+lang: ga
 ---
 
 Is aonán é cuntas Ethereum le iarmhéid éitear (ETH) ar féidir leis idirbhearta a sheoladh ar Ethereum. Is féidir cuntais a rialú ag an úsáideoir nó iad a imscaradh mar chonarthaí cliste.

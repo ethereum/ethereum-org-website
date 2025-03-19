@@ -1,7 +1,7 @@
 ---
 title: Treoirchóid le haghaidh an EVM
 description: Liosta de na treoirchóid atá ar fáil le haghaidh an meaisín fíorúil Ethereum.
-lang: en
+lang: ga
 ---
 
 ## Forbhreathnú {#overview}

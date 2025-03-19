@@ -1,7 +1,7 @@
 ---
 title: Réamhrá le dapps
 description:
-lang: en
+lang: ga
 ---
 
 Is feidhmchlár díláraithe (dapp) é feidhmchlár atá bunaithe ar líonra díláraithe a chomhcheanglaíonn [conradh cliste](/developers/docs/smart-contracts/) agus comhéadan úsáideora tosaigh. Ar Ethereum, tá conarthaí cliste inrochtana agus trédhearcach - cosúil le APIs oscailte - mar sin is féidir le do dapp fiú conradh cliste a scríobh duine éigin eile a áireamh.

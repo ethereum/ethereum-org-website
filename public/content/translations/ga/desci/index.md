@@ -1,7 +1,7 @@
 ---
 title: Eolaíocht dhíláraithe (DeSci)
 description: Forbhreathnú ar eolaíocht dhíláraithe ar Ethereum
-lang: en
+lang: ga
 template: use-cases
 emoji: ":microscope:"
 sidebarDepth: 2

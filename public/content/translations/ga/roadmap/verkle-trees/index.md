@@ -1,7 +1,7 @@
 ---
 title: Crainn Verkle
 description: Cur síos ardleibhéil ar chrainn Verkle agus conas a úsáidfear iad chun Ethereum a uasghrádú
-lang: en
+lang: ga
 summaryPoints:
   - Faigh amach cad iad na crainn Verkle
   - Léigh cén fáth go bhfuil uasghrádú Crainn Verkle úsáideach do Ethereum

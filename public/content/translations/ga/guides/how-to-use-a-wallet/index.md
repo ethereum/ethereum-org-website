@@ -2,7 +2,7 @@
 title: Conas sparán a úsáid
 metaTitle: Conas Sparán Ethereum a úsáid | Céim ar Chéim
 description: Treoir a mhíníonn conas dearbháin a sheoladh, a fháil agus nascadh le tionscadail Web3.
-lang: en
+lang: ga
 ---
 
 # Conas sparán a úsáid

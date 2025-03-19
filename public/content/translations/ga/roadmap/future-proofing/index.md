@@ -1,7 +1,7 @@
 ---
 title: Todhchaí Ethereum a rathú
 description: Stroighníonn na huasghráduithe seo Ethereum mar bhunchiseal athléimneach, díláraithe don todhchaí, is cuma cad é.
-lang: en
+lang: ga
 image: /images/roadmap/roadmap-future.png
 alt: "Treochlár Ethereum"
 template: roadmap
@@ -13,9 +13,9 @@ Ní gá go mbeadh codanna áirithe den treochlár ag teastáil chun Ethereum a r
 
 Déanfar cuid den [cripteagrafaíocht](/glossary/#cryptography) a dhaingníonn Ethereum an lae inniu a chur i mbaol nuair a thiocfaidh an ríomhaireacht chandamach i gcrích. Cé gur dócha go bhfuil ríomhairí chandamach fiche nó tríocha bliain ar shiúl ó bheith ina bhagairt fíor do cripteagrafaíocht nua-aimseartha, tá Ethereum á thógáil chun a bheith slán ar feadh na gcéadta bliain amach romhainn. Ciallaíonn sé seo [Ethereum frithchandamach](https://consensys.net/blog/developers/how-will-quantum-supremacy-affect-blockchain/) a dhéanamh chomh luath agus is féidir.
 
-Is é an dúshlán atá roimh fhorbróirí Ethereum ná go mbraitheann an prótacal reatha [cruthúnas-gheallta](/glossary/#pos) ar scéim sínithe an-éifeachtach ar a dtugtar BLS chun vótaí a chomhiomlánú ar <a href= bailí "/glossary/#block">bhloic bhailí</a>. Tá an scéim sínithe seo briste ag ríomhairí chandamacha, ach níl na roghanna frithsheasmhacha chandamach chomh héifeachtach.
+Is é an dúshlán atá roimh fhorbróirí Ethereum ná go mbraitheann an prótacal reatha [cruthúnas-gheallta](/glossary/#pos) ar scéim sínithe an-éifeachtach ar a dtugtar BLS chun vótaí a chomhiomlánú ar [bhloic bhailí](/glossary/#block). Tá an scéim sínithe seo briste ag ríomhairí chandamacha, ach níl na roghanna frithsheasmhacha chandamach chomh héifeachtach.
 
-Is eol go bhfuil na scéimeanna gealltanais [ “KZG”](/roadmap/danksharding/#what-is-kzg) a úsáidtear in áiteanna éagsúla ar fud Ethereum chun rúin cripteagrafacha a ghiniúint candamach-leochaileach. Faoi láthair, déantar é seo a shárú trí úsáid a bhaint as “socruithe iontaofa” ina ngineann go leor úsáideoirí randamacht nach féidir le ríomhaire chandamach a aisiompú. Mar sin féin, is é an réiteach idéalach ná cripteagrafaíocht chandamach sábháilte a ionchorprú ina ionad. Tá dhá chur chuige cheannródaíocha ann a d’fhéadfadh a bheith ina n-ionadaí éifeachtacha don scéim BLS: [STARK-bhunaithe](https://hackmd.io/@vbuterin/stark_aggregation) agus [laitíse-bhunaithe](https://medium.com/asecuritysite-when-bob-met-alice/so-what-is-lattice-encryption-326ac66e3175) ag síniú. **Tá taighde agus fréamhshamhlú á ndéanamh orthu seo fós**.
+Is eol go bhfuil na scéimeanna gealltanais [“KZG”](/roadmap/danksharding/#what-is-kzg) a úsáidtear in áiteanna éagsúla ar fud Ethereum chun rúin cripteagrafacha a ghiniúint candamach-leochaileach. Faoi láthair, déantar é seo a shárú trí úsáid a bhaint as “socruithe iontaofa” ina ngineann go leor úsáideoirí randamacht nach féidir le ríomhaire chandamach a aisiompú. Mar sin féin, is é an réiteach idéalach ná cripteagrafaíocht chandamach sábháilte a ionchorprú ina ionad. Tá dhá chur chuige cheannródaíocha ann a d’fhéadfadh a bheith ina n-ionadaí éifeachtacha don scéim BLS: [STARK-bhunaithe](https://hackmd.io/@vbuterin/stark_aggregation) agus [laitíse-bhunaithe](https://medium.com/asecuritysite-when-bob-met-alice/so-what-is-lattice-encryption-326ac66e3175) ag síniú. **Tá taighde agus fréamhshamhlú á ndéanamh orthu seo fós**.
 
 <ButtonLink variant="outline-color" href="/roadmap/danksharding#what-is-kzg"> Léigh faoi KZG agus socruithe iontaofa</ButtonLink>
 

@@ -2,7 +2,7 @@
 title: Gás agus táillí
 metaTitle: "Gás Ethereum agus táillí: forbhreathnú teicniúil"
 description:
-lang: en
+lang: ga
 ---
 
 Tá gás riachtanach don líonra Ethereum. Is é an breosla a ligeann dó oibriú, ar an mbealach céanna a theastaíonn gásailín le carr a rith.

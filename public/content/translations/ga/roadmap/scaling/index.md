@@ -1,7 +1,7 @@
 ---
 title: Scálú Ethereum
 description: Rollups batch transactions together offchain, reducing costs for the user. Mar sin féin, tá an chaoi a n-úsáideann rolladh sonraí faoi láthair ró-chostasach, rud a chuireann srian le cé chomh saor agus is féidir idirbhearta a bheith. Réitíonn Proto-Danksharding é seo.
-lang: en
+lang: ga
 image: /images/roadmap/roadmap-transactions.png
 alt: "Treochlár Ethereum"
 template: roadmap

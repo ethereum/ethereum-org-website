@@ -1,7 +1,7 @@
 ---
 title: Doiciméadú forbartha Ethereum
 description: Doiciméadú an fhorbróra ethereum.org a thabhairt isteach.
-lang: en
+lang: ga
 ---
 
 Tá an doiciméadú seo deartha chun cabhrú leat tógáil le Ethereum. Clúdaíonn sé Ethereum mar choincheap, míníonn sé cruach teic Ethereum, agus doiciméadaíonn sé topaicí casta le haghaidh iarratais cásanna úsáide níos casta.

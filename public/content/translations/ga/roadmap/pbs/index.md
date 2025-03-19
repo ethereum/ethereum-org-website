@@ -1,7 +1,7 @@
 ---
 title: Scaradh tairgeoir-tógálaí
 description: Foghlaim conas agus cén fáth a mbeidh a gcuid freagrachtaí blocthógála agus blocchraolacháin á scoilteadh ag bailíochtóirí Ethereum.
-lang: en
+lang: ga
 ---
 
 # Scaradh tairgeoir-tógálaí {#proposer-builder-separation}

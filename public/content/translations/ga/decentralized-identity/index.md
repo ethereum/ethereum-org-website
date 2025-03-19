@@ -1,7 +1,7 @@
 ---
 title: Féiniúlacht dhíláraithe
 description: Cad is féiniúlacht dhíláraithe ann, agus cén fáth a bhfuil sé tábhachtach?
-lang: en
+lang: ga
 template: use-cases
 emoji: ":id:"
 sidebarDepth: 2

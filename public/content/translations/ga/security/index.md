@@ -1,7 +1,7 @@
 ---
 title: Slándáil Ethereum agus cosc ​​sceamála
 description: Fanacht sábháilte ar Ethereum
-lang: en
+lang: ga
 ---
 
 # Slándáil Ethereum agus cosc ​​sceamála {#introduction}

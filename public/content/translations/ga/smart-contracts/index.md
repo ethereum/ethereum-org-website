@@ -2,7 +2,7 @@
 title: Conarthaí cliste
 metaTitle: "Conarthaí cliste: Cad atá iontú agus céard iad na buntáistí"
 description: Réamhrá neamhtheicniúil ar chonarthaí cliste
-lang: en
+lang: ga
 ---
 
 # Inteoir maidir le conarthaí cliste {#introduction-to-smart-contracts}
@@ -13,7 +13,7 @@ lang: en
 
 Is iad conarthaí cliste na bloic tógála bhunúsacha de chiseal fheidhmchláir Ethereum. Is ríomhchláir iad atá stóráilte ar an [mblocshlabhra](/glossary/#blockchain) a leanann an loighic "más fíor sin, déan seo" agus ráthaítear go bhforghníomhóidh siad de réir na rialacha atá sainithe ina gcód, rud nach féidir a athrú i ndiaidh a chruthaithe.
 
-Chum Nick Szabo an téarma "conradh cliste". I 1994, scríobh sé [réamhrá ar an gcoincheap](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart.contracts.html), agus i 1996 scríobh sé [iniúchadh ar cad is féidir le conarthaí cliste a dhéanamh ](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart_contracts_2.html).
+Chum Nick Szabo an téarma "conradh cliste". I 1994, scríobh sé [réamhrá ar an gcoincheap](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart.contracts.html), agus i 1996 scríobh sé [iniúchadh ar cad is féidir le conarthaí cliste a dhéanamh](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart_contracts_2.html).
 
 Shamhlaigh Szabo margadh digiteach ina gcuireann próisis uathoibríocha, [slán go cripteagrafach](/glossary/#cryptography) ar chumas idirbhearta agus feidhmeanna gnó tarlú gan idirghabhálaithe iontaofa. Chuir conarthaí cliste ar Ethereum an fhís seo i bhfeidhm.
 

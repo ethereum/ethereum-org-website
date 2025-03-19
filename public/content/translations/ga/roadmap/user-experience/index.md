@@ -1,7 +1,7 @@
 ---
 title: Taithí úsáideora a fheabhsú
 description: Tá sé fós ró-chasta Ethereum a úsáid don chuid is mó daoine. Chun oll-uchtú a spreagadh, ní mór do Ethereum na bacainní ar iontráil a laghdú go suntasach - ní mór d'úsáideoirí na buntáistí a bhaineann le rochtain dhíláraithe, gan chead agus frithchinsireacht a fháil ar Ethereum ach caithfidh sé a bheith chomh neamhshrianta le feidhmchlár traidisiúnta Web2 a úsáid.
-lang: en
+lang: ga
 image: /images/roadmap/roadmap-ux.png
 alt: "Treochlár Ethereum"
 template: roadmap

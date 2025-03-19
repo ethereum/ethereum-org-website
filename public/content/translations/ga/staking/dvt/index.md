@@ -1,7 +1,7 @@
 ---
 title: Teicneolaíocht bhailíochtóra dáilte
 description: Cumasaíonn teicneolaíocht bhailíochtóra dáilte ilpháirtithe le hoibriú dáilte a dhéanamh ar bhailíochtóir Ethereum.
-lang: en
+lang: ga
 ---
 
 # Teicneolaíocht bhailíochtóra dáilte {#distributed-validator-technology}

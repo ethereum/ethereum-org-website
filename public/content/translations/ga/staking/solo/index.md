@@ -1,7 +1,7 @@
 ---
 title: Geallchur baile do ETH
 description: Forbhreathnú ar conas tosú sa bhaile le geallchur ldo ETH
-lang: en
+lang: ga
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-solo.png

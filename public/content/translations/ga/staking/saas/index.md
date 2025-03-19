@@ -1,7 +1,7 @@
 ---
 title: Geallchur mar sheirbhís
 description: Forbhreathnú ar conas tosú le geallta comhthiomsaithe ETH
-lang: en
+lang: ga
 template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-saas.png

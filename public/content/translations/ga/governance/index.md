@@ -1,7 +1,7 @@
 ---
 title: Rialachas Ethereum
 description: Réamheolas ar conas a dhéantar cinntí faoi Ethereum.
-lang: en
+lang: ga
 ---
 
 # Réamhrá le rialachas Ethereum {#introduction}

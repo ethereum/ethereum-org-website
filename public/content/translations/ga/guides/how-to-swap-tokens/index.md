@@ -1,7 +1,7 @@
 ---
 title: Conas comharthaí a mhalartú
 description: Treoir ar conas dearbháin a mhalartú ar Ethereum.
-lang: en
+lang: ga
 ---
 
 # Conas comharthaí a mhalartú

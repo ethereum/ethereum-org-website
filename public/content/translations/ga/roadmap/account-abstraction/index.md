@@ -1,7 +1,7 @@
 ---
 title: Astarraingt cuntais
 description: Forbhreathnú ar phleananna Ethereum chun cuntais úsáideora a dhéanamh níos simplí agus níos sábháilte
-lang: en
+lang: ga
 summaryPoints:
   - Le hastarraingt cuntais bíonn sé i bhfad níos éasca sparáin chonartha cliste a thógáil
   - Le sparáin chonartha cliste bíonn sé i bhfad níos éasca rochtain ar chuntais Ethereum a bhainistiú
@@ -12,7 +12,7 @@ summaryPoints:
 
 Idirghníomhaíonn úsáideoirí le Ethereum trí úsáid a bhaint as **[cuntais faoi úinéireacht sheachtrach (EOAs)](/glossary/#eoa)**. Is é seo an t-aon bhealach chun idirbheart a thosú nó conradh cliste a fhorghníomhú. Cuireann sé seo teorainn le conas is féidir le húsáideoirí idirghníomhú le Ethereum. Mar shampla, bíonn sé deacair baisceanna idirbheart a dhéanamh agus bíonn ar úsáideoirí iarmhéid ETH a choinneáil i gcónaí chun gás a chlúdach.
 
-Is bealach é astarraingt cuntais chun na fadhbanna seo a réiteach trí ligean d’úsáideoirí níos mó slándála agus eispéiris úsáideora níos fearr a ríomhchlárú go solúbtha ina gcuntais. Féadfaidh sé seo tarlú trí [EOAs a uasghrádú](https://eips.ethereum.org/EIPS/eip-3074) ionas gur féidir iad a rialú trí chonarthaí cliste, nó trí [conarthaí cliste a uasghrádú](https: //eips.ethereum.org/EIPS/eip-2938) ionas gur féidir leo idirbhearta a thionscnamh. Éilíonn an dá rogha seo athruithe ar phrótacal Ethereum. Tá an tríú cosán ann freisin a bhaineann le [dara córas idirbhirt ar leith](https://eips.ethereum.org/EIPS/eip-4337) a chur leis le rith ag an am céanna leis an bprótacal reatha. Beag beann ar an mbealach, bíonn rochtain ar Ethereum trí sparán conartha cliste dá thoradh, le tacaíocht dhúchasach mar chuid den phrótacal reatha nó trí líonra idirbheart breiseán.
+Is bealach é astarraingt cuntais chun na fadhbanna seo a réiteach trí ligean d’úsáideoirí níos mó slándála agus eispéiris úsáideora níos fearr a ríomhchlárú go solúbtha ina gcuntais. Féadfaidh sé seo tarlú trí [EOAs a uasghrádú](https://eips.ethereum.org/EIPS/eip-3074) ionas gur féidir iad a rialú trí chonarthaí cliste, nó trí [conarthaí cliste a uasghrádú](https://eips.ethereum.org/EIPS/eip-2938) ionas gur féidir leo idirbhearta a thionscnamh. Éilíonn an dá rogha seo athruithe ar phrótacal Ethereum. Tá an tríú cosán ann freisin a bhaineann le [dara córas idirbhirt ar leith](https://eips.ethereum.org/EIPS/eip-4337) a chur leis le rith ag an am céanna leis an bprótacal reatha. Beag beann ar an mbealach, bíonn rochtain ar Ethereum trí sparán conartha cliste dá thoradh, le tacaíocht dhúchasach mar chuid den phrótacal reatha nó trí líonra idirbheart breiseán.
 
 Díghlasálann sparán conartha cliste go leor buntáistí don úsáideoir, lena n-áirítear:
 

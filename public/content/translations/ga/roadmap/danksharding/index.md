@@ -1,7 +1,7 @@
 ---
 title: Danksharding
 description: Foghlaim faoi Proto-Danksharding agus Danksharding - dhá uasghrádú seicheamhach le haghaidh Ethereum a scálú.
-lang: en
+lang: ga
 summaryPoints:
   - Is uasghrádú ilchéime é Danksharding chun inscálaitheacht agus cumas Ethereum a fheabhsú.
   - Cuireann an chéad chéim, Proto-Danksharding, Blobaí sonraí le bloic
@@ -15,7 +15,7 @@ Is le **Danksharding** a dhéanfar bhlocshlabhra inscálaithe fíor den Ethereum
 
 ## Cad is Proto-Danksharding ann? {#what-is-protodanksharding}
 
-Is bealach é Proto-Danksharding, ar a dtugtar [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844) freisin, le haghaidh [rollups](/layer-2 /#rollups) chun sonraí níos saoire a chur le bloic. Tagann an t-ainm ón dá thaighdeoir a mhol an smaoineamh: Protolambda agus Dankrad Feist. Go stairiúil, bhí teorainn le rolladh suas maidir le cé chomh saor is féidir leo idirbhearta úsáideora a dhéanamh toisc go bpostálann siad a n-idirbheart i `CALLDATA`.
+Is bealach é Proto-Danksharding, ar a dtugtar [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844) freisin, le haghaidh [rollups](/layer-2/#rollups) chun sonraí níos saoire a chur le bloic. Tagann an t-ainm ón dá thaighdeoir a mhol an smaoineamh: Protolambda agus Dankrad Feist. Go stairiúil, bhí teorainn le rolladh suas maidir le cé chomh saor is féidir leo idirbhearta úsáideora a dhéanamh toisc go bpostálann siad a n-idirbheart i `CALLDATA`.
 
 This is expensive because it is processed by all Ethereum nodes and lives onchain forever, even though rollups only need the data for a short time. Tugann Proto-Danksharding isteach bllobaí sonraí ar féidir iad a sheoladh agus a cheangal le bloic. Níl rochtain ag an EVM ar na sonraí sna blobaí seo agus scriostar iad go huathoibríoch tar éis tréimhse ama socraithe (socraithe go 4096 ré ag am scríofa, nó thart ar 18 lá). Ciallaíonn sé seo gur féidir le rollaí suas a gcuid sonraí a sheoladh i bhfad níos saoire agus an coigilteas a chur ar aghaidh chuig úsáideoirí deiridh i bhfoirm idirbhearta níos saoire.
 
