@@ -115,7 +115,7 @@ contract VendingMachine {
 
 - 在[开发环境](/developers/docs/frameworks/)下测试、编译、和部署智能合约
 
-- 通过基本代码分析工具运行代码，例如 [Cyfrin Aderyn](https://github.com/Cyfrin/aderyn) 、Mythril 和 Slither。 理想情况下，应在合并每个拉取请求前进行这一操作，并比较输出中的不同之处
+- 通过基本代码分析工具运行代码，例如 [Cyfrin Aaderyn](https://github.com/Cyfrin/aderyn) 、Mythril 和 Slither。 理想情况下，应在合并每个拉取请求前进行这一操作，并比较输出中的不同之处
 
 - 确保代码在编译时没有错误，并且 Solidity 编译器没有发出警告
 
