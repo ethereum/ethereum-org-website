@@ -127,6 +127,11 @@ module.exports = (phase, { defaultConfig }) => {
             "public/**/*.pdf",
             "public/fonts",
             "public/images",
+            // web3 libraries
+            "node_modules/@rainbow-me/**",
+            "node_modules/@tanstack/**",
+            "node_modules/viem/**",
+            "node_modules/wagmi/**",
           ],
         },
       },
