@@ -23,7 +23,7 @@ Nous sommes une communauté accueillante qui vous aidera à grandir et à vous f
 
 **Contenu**
 - [Créer/modifier du contenu](/contributing/#how-to-update-content) – Proposez de nouvelles pages ou des modifications de ce qui existe déjà
-- [Ajouter un article pour la communauté](/contributing/content-resources/) – Ajoutez un article utile à une page pertinente
+- [Ajouter un article pour la communauté](/contributing/content-resources/)– Ajoutez un article utile à une page pertinente
 - [Suggérer une ressource de design](/contributing/design/adding-design-resources/) - Ajoutez, mettez à jour et supprimez des ressources de design utiles
 - [Ajouter un terme au glossaire](/contributing/adding-glossary-terms/) – Aidez-nous à poursuivre le développement du [glossaire](/glossary/) Ethereum
 - [Quiz](/contributing/quizzes/) - Ajoutez, mettez à jour et supprimez des questions de quiz sur une page pertinente
