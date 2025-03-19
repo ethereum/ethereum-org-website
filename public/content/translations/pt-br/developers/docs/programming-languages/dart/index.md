@@ -16,9 +16,7 @@ incomplete: true
 - Se você preferir aprender assistindo a um vídeo, acesse [Criando seu primeiro app blockchain com Flutter](https://www.youtube.com/watch?v=3Eeh3pJ6PeA), que dura 1 hora
 - Se você é impaciente, talvez prefira o [Building a Blockchain Decentralized-app with Flutter and Dart on Ethereum](https://www.youtube.com/watch?v=jaMFEOCq_1s), que leva apenas vinte minutos
 - [Integrando MetaMask no aplicativo Flutter com Web3Modal da WalletConnect](https://www.youtube.com/watch?v=v_M2buHCpc4) - este vídeo curto mostra as etapas de integração do MetaMask dentro do aplicativo Flutter com a biblioteca da WalletConnect [Web3Modal](https://pub.dev/packages/web3modal_flutter)
--  Curso Bootcamp para Desenvolvedores de Blockchain Móvel com Solidity e Flutter - playlist de cursos para desenvolvedores de blockchain móvel full stack</li> </ul> 
-  
-  
+- [Curso Bootcamp para Desenvolvedores de Blockchain Móvel com Solidity e Flutter](https://youtube.com/playlist?list=PL4V4Unlk5luhQ26ERO6hWEbcUwHDSSmVH) - playlist de cursos para desenvolvedores de blockchain móvel full stack
 
 ## Trabalhando com clientes Ethereum {#working-with-ethereum-clients}
 
