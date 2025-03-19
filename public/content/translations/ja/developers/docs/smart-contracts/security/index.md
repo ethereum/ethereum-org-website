@@ -115,7 +115,7 @@ contract VendingMachine {
 
 - スマートコントラクトのテスト、コンパイル、デプロイに[開発環境](/developers/docs/frameworks/)を使用する
 
-- [Cyfrin Aderyn](https://github.com/Cyfrin/aderyn)、Mythril、Slitherなど、基本的なコード解析ツールを使用してコードを実行する。 これは、各プルリクエストがマージされる前に実行し、出力の違いを比較しておくのが理想的である
+- [Cyfrin Aaderyn](https://github.com/Cyfrin/aderyn)、Mythril、Slitherなど、基本的なコード解析ツールを使用してコードを実行する。 これは、各プルリクエストがマージされる前に実行し、出力の違いを比較しておくのが理想的である
 
 - コードがエラーなくコンパイルされ、Solidityコンパイラが警告を発していないことを確認する
 
