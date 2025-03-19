@@ -115,7 +115,7 @@ A existência de auditorias e recompensas por bugs não dispensa sua responsabil
 
 - Use um [ambiente de desenvolvimento](/developers/docs/frameworks/) para testar, compilar e implantar contratos inteligentes
 
-- Execute seu código por meio de ferramentas básicas de análise de código, como [Cyfrin Aderyn](https://github.com/Cyfrin/aderyn), Mythril e Slither. Idealmente, você deve fazer isso antes de cada solicitação de pull ser mesclado (merge) e comparar as diferenças na saída
+- Execute seu código por meio de ferramentas básicas de análise de código, como [Cyfrin Aaderyn](https://github.com/Cyfrin/aderyn), Mythril e Slither. Idealmente, você deve fazer isso antes de cada solicitação de pull ser mesclado (merge) e comparar as diferenças na saída
 
 - Garanta que seu código seja compilado sem erros e que o compilador Solidity não emita alertas
 
