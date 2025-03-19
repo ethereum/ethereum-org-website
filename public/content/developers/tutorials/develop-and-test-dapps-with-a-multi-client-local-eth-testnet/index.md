@@ -37,8 +37,8 @@ In this guide, the Kurtosis eth-network-package spins up a local Ethereum testne
 
 Before you proceed, make sure you have:
 
-- [Installed and started the Docker engine](https://docs.kurtosis.com/next/install#i-install--start-docker) on your local machine
-- [Installed the Kurtosis CLI](https://docs.kurtosis.com/next/install#ii-install-the-cli) (or upgraded it to the latest release, if you already have the CLI installed)
+- [Installed and started the Docker engine](https://docs.kurtosis.com/install/#i-install--start-docker) on your local machine
+- [Installed the Kurtosis CLI](https://docs.kurtosis.com/install#ii-install-the-cli) (or upgraded it to the latest release, if you already have the CLI installed)
 - Installed [Node.js](https://nodejs.org/en), [yarn](https://classic.yarnpkg.com/lang/en/docs/install/#mac-stable), and [npx](https://www.npmjs.com/package/npx) (for your dApp environment)
 
 ## Instantiating a local Ethereum testnet {#instantiate-testnet}
@@ -95,9 +95,9 @@ Congratulations! You used Kurtosis to instantiate a local Ethereum testnet, with
 
 ### Review {#review-instantiate-testnet}
 
-In this section, you executed a command that directed Kurtosis to use the [`eth-network-package` hosted remotely on GitHub](https://github.com/kurtosis-tech/eth-network-package) to spin up a local Ethereum testnet within a Kurtosis [Enclave](https://docs.kurtosis.com/concepts-reference/enclaves/). Inside your enclave, you will find both "file artifacts" and "user services".
+In this section, you executed a command that directed Kurtosis to use the [`eth-network-package` hosted remotely on GitHub](https://github.com/kurtosis-tech/eth-network-package) to spin up a local Ethereum testnet within a Kurtosis [Enclave](https://docs.kurtosis.com/advanced-concepts/enclaves/). Inside your enclave, you will find both "file artifacts" and "user services".
 
-The [File Artifacts](https://docs.kurtosis.com/concepts-reference/files-artifacts/) in your enclave include all the data generated and utilized to bootstrap the EL and CL clients. The data was created using the `prelaunch-data-generator` service built from this [Docker image](https://github.com/ethpandaops/ethereum-genesis-generator)
+The [File Artifacts](https://docs.kurtosis.com/advanced-concepts/files-artifacts/) in your enclave include all the data generated and utilized to bootstrap the EL and CL clients. The data was created using the `prelaunch-data-generator` service built from this [Docker image](https://github.com/ethpandaops/ethereum-genesis-generator)
 
 User services display all the containerized services operating in your enclave. You will notice that a single node, featuring both an EL client and a CL client, has been created.
 
