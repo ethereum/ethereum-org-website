@@ -61,6 +61,7 @@ IPFS é um sistema distribuído para armazenamento e acesso a arquivos, sites, a
 - [Verificação IPFS](https://ipfs-scan.io) _(explorador de fixação de IPFS)_
 - [4EVERLAND](https://www.4everland.org/)_ (Serviço de fixação IPFS) _
 - [Filebase](https://filebase.com) _(Serviço de Fixação IPFS)_
+- [Spheron Network](https://spheron.network/) _(serviço de pinning IPFS/Filecoin)_
 
 SWARM é uma tecnologia descentralizada de armazenamento e distribuição de dados com um sistema de incentivo ao armazenamento e um oráculo de preços de aluguel de armazenamento.
 
@@ -87,7 +88,6 @@ Não há ótimas ferramentas para medir o nível de descentralização das plata
 
 Ferramentas descentralizadas sem KYC:
 
-- Züs (implementação de uma edição não-KYC)
 - Skynet
 - Arweave
 - Filecoin
@@ -144,7 +144,7 @@ Baseado em prova de participação (proof-of-stake):
 - [Documentação](https://docs.arweave.org/info/)
 - [Arweave](https://github.com/ArweaveTeam/arweave/)
 
-**Züs - _Züs é uma plataforma de prova de participação dStorage com fragmentação e blobbers._**
+**Züs - _Züs é uma plataforma de dStorage baseada em prova de participação, com suporte a fragmentação e blobbers._**
 
 - [zus.network](https://zus.network/)
 - [Documentação](https://0chaindocs.gitbook.io/zus-docs)
@@ -197,6 +197,12 @@ Baseado em prova de participação (proof-of-stake):
 - [Kaleido](https://kaleido.io/)
 - [Documentação](https://docs.kaleido.io/kaleido-services/ipfs/)
 - [GitHub](https://github.com/kaleido-io)
+
+**Spheron Network - _Spheron é uma plataforma como serviço (PaaS) projetada para dApps que busca lançar seus aplicativos em infraestrutura descentralizada com o melhor desempenho. Oferece computação, armazenamento descentralizado, CDN e hospedagem web prontos para uso._**
+
+- [spheron.network](https://spheron.network/)
+- [Documentação](https://docs.spheron.network/)
+- [GitHub](https://github.com/spheronFdn)
 
 ## Leitura adicional {#further-reading}
 
