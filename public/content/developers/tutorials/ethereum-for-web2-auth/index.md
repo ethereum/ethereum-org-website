@@ -86,6 +86,17 @@ Because of the decentralized nature of Ethereum, any user can make attestations.
 
 ## Setup
 
+Create keys with self-signed certificates.
+
+See https://docs.openssl.org/master/man1/openssl-req/ . 
+
+```sh
+mkdir keys
+cd keys
+openssl req -new -x509 -days 365 -nodes -sha256 -out saml-sp.crt -keyout saml-sp.pem -subj /CN=sp/
+openssl req -new -x509 -days 365 -nodes -sha256 -out saml-idp.crt -keyout saml-idp.pem -subj /CN=idp/
+cd ..
+```
 
 1. Introduction: Why do this?
     1. SAML for Ethereum people
