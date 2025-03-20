@@ -86,7 +86,7 @@ The way wallets work would also change under EIP-4337. Instead of each wallet re
 
 ## Current progress {#current-progress}
 
-**The next two Ethereum upgrades (Pectra and later Fusaka) will address these improvements.** Pectra will be released soon in upcomming months. Smart contract wallets are already available. EIP-4337 is a mature proposal that does not require any changes to Ethereum's protocol, so many wallets have started adopting this standard.
+**The next two Ethereum upgrades ([Pectra](/roadmap/pectra/) and later Fusaka) will address these improvements.** Pectra will be released soon in upcomming months. Smart contract wallets are already available. EIP-4337 is a mature proposal that does not require any changes to Ethereum's protocol, so many wallets have started adopting this standard.
 
 **Note**: You can track adoption of ERC-4337 smart contract wallets [via this dashboard](https://www.bundlebear.com/overview/all).
 
