@@ -107,7 +107,7 @@ Here are some of the enterprise applications that have been built on top of the 
 - [Fasset](https://www.fasset.com/) - _a platform for supporting sustainable infrastructure_
 - [Nori](https://nori.com/) - _open source market infrastructure to allow for carbon removal projects to measure and monetize their activity_
 - [Propy](https://propy.com/) - _a platform to automate residential real estate transactions with smart contracts_
-- [0xequity](https://www.0xequity.com/) - _People around the globe can buy into the US real estate market through fully-compliant, fractional, tokenized ownership_
+- [0xequity](https://www.0xequity.com/) - _Access Real World Assets like properties, gold, and bonds, plus top DeFi strategies with secure, transparent, and on-chain passive income._
 - [RealT](https://realt.co/) - _investors around the globe can buy into the US real estate market through fully-compliant, fractional, tokenized ownership_
 - [Rubey](https://www.rubey.be/) - _a platform that tokenizes high-end art to make it accessible to retail investors_
 - [Swarm](https://swarm.com/) - _a platform focused on the digitization and trading of real-world assets in a regulatory compliant manner_
