@@ -21,7 +21,7 @@ import {
   RSS_DISPLAY_COUNT,
 } from "@/lib/constants"
 
-import HomePage from "./_pages/index"
+import HomePage from "./_components/home"
 
 import { getMessages } from "@/i18n/loadMessages"
 import { fetchCommunityEvents } from "@/lib/api/calendarEvents"
