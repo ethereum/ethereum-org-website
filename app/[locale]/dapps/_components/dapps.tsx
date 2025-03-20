@@ -8,7 +8,7 @@ import React, {
   useRef,
   useState,
 } from "react"
-import { useRouter } from "next/router"
+import { useSearchParams } from "next/navigation"
 import { useLocale } from "next-intl"
 
 import type { ChildOnlyProp } from "@/lib/types"
@@ -287,7 +287,7 @@ interface Categories {
 
 const DappsPage = () => {
   const { t } = useTranslation(["page-dapps", "common"])
-  const { query } = useRouter()
+  const searchParams = useSearchParams()
   const locale = useLocale()
 
   const [selectedCategory, setCategory] = useState<CategoryType>(
@@ -295,9 +295,8 @@ const DappsPage = () => {
   )
   const explore = useRef<HTMLDivElement>(null)
 
+  const queryParamCategories = searchParams.get("category") || ""
   useEffect(() => {
-    // Fetch category on load
-    const queryParamCategories = (query.category as string) || ""
     const selectedCategory = queryParamCategories
       ? (queryParamCategories.split(",")[0] as CategoryType)
       : CategoryType.FINANCE // Default to finance category if empty
@@ -319,7 +318,7 @@ const DappsPage = () => {
         behavior: "smooth",
       })
     }
-  }, [query.category])
+  }, [queryParamCategories])
 
   const updatePath = (
     selectedCategory: CategoryType,
