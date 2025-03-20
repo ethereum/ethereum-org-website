@@ -1,9 +1,12 @@
+import { Suspense } from "react"
 import pick from "lodash.pick"
 import { IBM_Plex_Mono, Inter } from "next/font/google"
 import { notFound } from "next/navigation"
 import { getMessages, setRequestLocale } from "next-intl/server"
 
 import { Lang } from "@/lib/types"
+
+import Matomo from "@/components/Matomo"
 
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLocaleTimestamp } from "@/lib/utils/time"
@@ -60,6 +63,10 @@ export default async function LocaleLayout({
     >
       <body>
         <Providers locale={locale} messages={messages}>
+          <Suspense>
+            <Matomo />
+          </Suspense>
+
           <BaseLayout lastDeployLocaleTimestamp={lastDeployLocaleTimestamp}>
             {children}
           </BaseLayout>
