@@ -1,4 +1,5 @@
 import pick from "lodash.pick"
+import { IBM_Plex_Mono, Inter } from "next/font/google"
 import { notFound } from "next/navigation"
 import { getMessages, setRequestLocale } from "next-intl/server"
 
@@ -13,6 +14,20 @@ import "@/styles/global.css"
 
 import { routing } from "@/i18n/routing"
 import { BaseLayout } from "@/layouts/BaseLayout"
+
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter",
+  preload: true,
+})
+
+const ibmPlexMono = IBM_Plex_Mono({
+  subsets: ["latin"],
+  weight: ["400"],
+  display: "swap",
+  variable: "--font-mono",
+})
 
 export default async function LocaleLayout({
   children,
@@ -38,7 +53,11 @@ export default async function LocaleLayout({
   )
 
   return (
-    <html lang={locale} suppressHydrationWarning>
+    <html
+      lang={locale}
+      className={`${inter.variable} ${ibmPlexMono.variable}`}
+      suppressHydrationWarning
+    >
       <body>
         <Providers locale={locale} messages={messages}>
           <BaseLayout lastDeployLocaleTimestamp={lastDeployLocaleTimestamp}>
