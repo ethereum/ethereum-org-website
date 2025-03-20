@@ -1,9 +1,11 @@
 import pick from "lodash.pick"
+import { getTranslations } from "next-intl/server"
 
 import { Lang } from "@/lib/types"
 
 import I18nProvider from "@/components/I18nProvider"
 
+import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import CommunityPage from "./_components/community"
@@ -27,4 +29,21 @@ export default async function Page({
       <CommunityPage />
     </I18nProvider>
   )
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params
+
+  const t = await getTranslations({ locale, namespace: "page-community" })
+
+  return await getMetadata({
+    locale,
+    slug: ["community"],
+    title: t("page-community-meta-title"),
+    description: t("page-community-meta-description"),
+  })
 }

@@ -1,10 +1,12 @@
 import pick from "lodash.pick"
+import { getTranslations } from "next-intl/server"
 
 import { Lang } from "@/lib/types"
 
 import I18nProvider from "@/components/I18nProvider"
 
 import { getLastModifiedDateByPath } from "@/lib/utils/gh"
+import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import GetEthPage from "./_components/get-eth"
@@ -32,4 +34,21 @@ export default async function Page({
       <GetEthPage lastDataUpdateDate={lastDataUpdateDate} />
     </I18nProvider>
   )
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params
+
+  const t = await getTranslations({ locale, namespace: "page-get-eth" })
+
+  return await getMetadata({
+    locale,
+    slug: ["get-eth"],
+    title: t("page-get-eth-meta-title"),
+    description: t("page-get-eth-meta-desc"),
+  })
 }

@@ -13,7 +13,6 @@ import { Image } from "@/components/Image"
 import InfoBanner from "@/components/InfoBanner"
 import MainArticle from "@/components/MainArticle"
 import PageHero from "@/components/PageHero"
-import PageMetadata from "@/components/PageMetadata"
 import ProductList from "@/components/ProductList"
 import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import StablecoinAccordion from "@/components/StablecoinAccordion"
@@ -260,11 +259,6 @@ const StablecoinsPage = ({ markets, marketsHasError }: Props) => {
   return (
     <Page asChild>
       <MainArticle>
-        <PageMetadata
-          title={t("page-stablecoins-meta-title")}
-          description={t("page-stablecoins-meta-description")}
-          image="/images/stablecoins/hero.png"
-        />
         <PageHero isReverse content={heroContent} />
         <Divider />
         <Content>

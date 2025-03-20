@@ -8,7 +8,6 @@ import { Framework } from "@/lib/interfaces"
 import FeedbackCard from "@/components/FeedbackCard"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
-import PageMetadata from "@/components/PageMetadata"
 import ProductCard from "@/components/ProductCard"
 import Translation from "@/components/Translation"
 import { Flex, VStack } from "@/components/ui/flex"
@@ -44,10 +43,6 @@ const LocalEnvironmentPage = ({ frameworksList }: Props) => {
 
   return (
     <VStack className="mx-auto mt-16 w-full">
-      <PageMetadata
-        title={t("page-local-environment-setup-meta-title")}
-        description={t("page-local-environment-setup-meta-desc")}
-      />
       <div className="mb-8 w-full justify-center px-8 pb-8 pt-0 xl:pb-4 xl:pt-4">
         <h1 className="mb-[1.625rem] text-center font-monospace text-[2rem] font-semibold uppercase not-italic leading-[1.4]">
           <Translation id="page-developers-local-environment:page-local-environment-setup-title" />

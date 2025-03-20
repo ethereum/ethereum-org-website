@@ -8,7 +8,6 @@ import { QuizKey, QuizStatus } from "@/lib/types"
 import FeedbackCard from "@/components/FeedbackCard"
 import { HubHero } from "@/components/Hero"
 import MainArticle from "@/components/MainArticle"
-import PageMetadata from "@/components/PageMetadata"
 import QuizWidget from "@/components/Quiz/QuizWidget"
 import QuizzesList from "@/components/Quiz/QuizzesList"
 import QuizzesModal from "@/components/Quiz/QuizzesModal"
@@ -53,11 +52,6 @@ const QuizzesPage = () => {
 
   return (
     <MainArticle>
-      <PageMetadata
-        title={t("common:quizzes-title")}
-        description={t("quizzes-subtitle")}
-        image="/images/heroes/quizzes-hub-hero.png"
-      />
       <HubHero
         title={t("common:quizzes-title")}
         description={t("quizzes-subtitle")}

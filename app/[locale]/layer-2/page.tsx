@@ -5,6 +5,7 @@ import { Lang } from "@/lib/types"
 import I18nProvider from "@/components/I18nProvider"
 
 import { dataLoader } from "@/lib/utils/data/dataLoader"
+import { getMetadata } from "@/lib/utils/metadata"
 import { networkMaturity } from "@/lib/utils/networkMaturity"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
@@ -70,6 +71,24 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
       />
     </I18nProvider>
   )
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params
+
+  return await getMetadata({
+    locale,
+    slug: ["layer-2"],
+    /* TODO: Clarify title and description here */
+    /* TODO: Setup for translation */
+    title: "Intro to Ethereum Layer 2: benefits and uses",
+    description: "Learn about Ethereum layer 2 networks",
+    image: "/images/layer-2/learn-hero.png",
+  })
 }
 
 export default Page

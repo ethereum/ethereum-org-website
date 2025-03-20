@@ -1,9 +1,11 @@
 import pick from "lodash.pick"
+import { getTranslations } from "next-intl/server"
 
 import { Lang } from "@/lib/types"
 
 import I18nProvider from "@/components/I18nProvider"
 
+import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import {
   getNonSupportedLocaleWallets,
@@ -42,6 +44,27 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
       <FindWalletPage wallets={wallets} />
     </I18nProvider>
   )
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params
+
+  const t = await getTranslations({
+    locale,
+    namespace: "page-wallets-find-wallet",
+  })
+
+  return await getMetadata({
+    locale,
+    slug: ["wallets", "find-wallet"],
+    title: t("page-find-wallet-meta-title"),
+    description: t("page-find-wallet-meta-description"),
+    image: "/images/wallets/wallet-hero.png",
+  })
 }
 
 export default Page

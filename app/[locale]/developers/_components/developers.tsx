@@ -10,7 +10,6 @@ import FeedbackCard from "@/components/FeedbackCard"
 import HubHero from "@/components/Hero/HubHero"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
-import PageMetadata from "@/components/PageMetadata"
 import Translation from "@/components/Translation"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Flex, Stack, VStack } from "@/components/ui/flex"
@@ -183,10 +182,6 @@ const DevelopersPage = () => {
 
   return (
     <Page>
-      <PageMetadata
-        title={t("page-developers-index:page-developer-meta-title")}
-        description={t("page-developers-index:page-developers-meta-desc")}
-      />
       <HubHero
         heroImg={HeroImage}
         header={`${t("page-developers-index:page-developers-title-1")} ${t(

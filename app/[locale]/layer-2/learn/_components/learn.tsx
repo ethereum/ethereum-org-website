@@ -5,7 +5,6 @@ import Card from "@/components/Card"
 import { ContentHero, type ContentHeroProps } from "@/components/Hero"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
-import PageMetadata from "@/components/PageMetadata"
 import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import Translation from "@/components/Translation"
 import { ButtonLink } from "@/components/ui/buttons/Button"
@@ -91,12 +90,6 @@ const Layer2Learn = () => {
 
   return (
     <MainArticle className="relative flex flex-col">
-      <PageMetadata
-        title={t("page-layer-2-learn-meta-title")}
-        description={t("page-layer-2-learn-description")}
-        image="/images/layer-2/learn-hero.png"
-      />
-
       <ContentHero {...heroProps} />
 
       <div

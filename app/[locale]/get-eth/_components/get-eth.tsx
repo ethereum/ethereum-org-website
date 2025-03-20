@@ -14,7 +14,6 @@ import EthPriceCard from "@/components/EthPriceCard"
 import FeedbackCard from "@/components/FeedbackCard"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
-import PageMetadata from "@/components/PageMetadata"
 import Translation from "@/components/Translation"
 import { Alert, AlertContent, AlertDescription } from "@/components/ui/alert"
 import { ButtonLink } from "@/components/ui/buttons/Button"
@@ -115,11 +114,6 @@ const GetEthPage = ({ lastDataUpdateDate }: Props) => {
   return (
     <MainArticle>
       <Stack className="gap-16 p-8">
-        <PageMetadata
-          title={t("page-get-eth-meta-title")}
-          description={t("page-get-eth-meta-description")}
-        />
-
         <div className="relative flex w-full flex-col-reverse justify-center lg:mx-auto lg:mb-8 lg:flex-col">
           <Image
             src={hero}

@@ -16,7 +16,6 @@ import { ITutorial, Lang } from "@/lib/types"
 import Emoji from "@/components/Emoji"
 import FeedbackCard from "@/components/FeedbackCard"
 import MainArticle from "@/components/MainArticle"
-import PageMetadata from "@/components/PageMetadata"
 import Translation from "@/components/Translation"
 import { getSkillTranslationId } from "@/components/TutorialMetadata"
 import TutorialTags from "@/components/TutorialTags"
@@ -36,7 +35,6 @@ import {
 import externalTutorials from "@/data/externalTutorials.json"
 
 import { useBreakpointValue } from "@/hooks/useBreakpointValue"
-import { useTranslation } from "@/hooks/useTranslation"
 
 type LinkFlexProps = FlexProps & {
   href: string
@@ -110,7 +108,6 @@ const TutorialPage = ({
     [filteredTutorialsByLang]
   )
 
-  const { t } = useTranslation()
   const [isModalOpen, setModalOpen] = useState(false)
   const [filteredTutorials, setFilteredTutorials] = useState(
     filteredTutorialsByLang
@@ -159,12 +156,6 @@ const TutorialPage = ({
     <MainArticle
       className={`mx-auto my-0 mt-16 flex w-full flex-col items-center ${dir}`}
     >
-      <PageMetadata
-        title={t("page-developers-tutorials:page-tutorials-meta-title")}
-        description={t(
-          "page-developers-tutorials:page-tutorials-meta-description"
-        )}
-      />
       <h1 className="no-italic mb-4 text-center font-monospace text-[2rem] font-semibold uppercase leading-[1.4] max-sm:mx-4 max-sm:mt-4 sm:mb-[1.625rem]">
         <Translation id="page-developers-tutorials:page-tutorial-title" />
       </h1>

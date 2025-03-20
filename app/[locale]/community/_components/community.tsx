@@ -13,7 +13,6 @@ import { HubHero } from "@/components/Hero"
 import type { HubHeroProps } from "@/components/Hero/HubHero"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
-import PageMetadata from "@/components/PageMetadata"
 import { ButtonLink, ButtonLinkProps } from "@/components/ui/buttons/Button"
 import { Divider } from "@/components/ui/divider"
 import { Flex } from "@/components/ui/flex"
@@ -159,10 +158,6 @@ const CommunityPage = () => {
 
   return (
     <Page>
-      <PageMetadata
-        title={t("page-community-meta-title")}
-        description={t("page-community-meta-description")}
-      />
       <HubHero {...heroContent} />
       <Divider />
       <Flex className="-mt-px h-full w-full flex-row-reverse items-center border-b border-b-border-high-contrast bg-[#ccfcff] py-8 ps-0 lg:h-[720px] lg:py-0 lg:ps-8 dark:bg-[#293233]">

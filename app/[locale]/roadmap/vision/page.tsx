@@ -1,9 +1,11 @@
 import pick from "lodash.pick"
+import { getTranslations } from "next-intl/server"
 
 import { Lang } from "@/lib/types"
 
 import I18nProvider from "@/components/I18nProvider"
 
+import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import VisionPage from "./_components/vision"
@@ -23,6 +25,23 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
       <VisionPage />
     </I18nProvider>
   )
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params
+
+  const t = await getTranslations({ locale, namespace: "page-roadmap-vision" })
+
+  return await getMetadata({
+    locale,
+    slug: ["roadmap", "vision"],
+    title: t("page-roadmap-vision-meta-title"),
+    description: t("page-roadmap-vision-meta-desc"),
+  })
 }
 
 export default Page

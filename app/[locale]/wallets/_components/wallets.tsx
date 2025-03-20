@@ -12,7 +12,6 @@ import { Image } from "@/components/Image"
 import ListenToPlayer from "@/components/ListenToPlayer"
 import MainArticle from "@/components/MainArticle"
 import PageHero from "@/components/PageHero"
-import PageMetadata from "@/components/PageMetadata"
 import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import { Simulator } from "@/components/Simulator"
 import { SIMULATOR_ID } from "@/components/Simulator/constants"
@@ -179,12 +178,6 @@ const WalletsPage = () => {
 
   return (
     <MainArticle className="mx-auto flex w-full flex-col items-center">
-      <PageMetadata
-        title={t("page-wallets-meta-title")}
-        description={t("page-wallets-meta-description")}
-        image="/images/wallets/wallet-hero.png"
-      />
-
       <PageHero content={heroContent} isReverse />
 
       <div className="mt-4 w-full border-t bg-background-highlight px-0 py-16 lg:mt-8">

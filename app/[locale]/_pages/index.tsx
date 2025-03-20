@@ -24,7 +24,6 @@ import Calendar from "@/components/icons/calendar.svg"
 import CalendarAdd from "@/components/icons/calendar-add.svg"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
-import PageMetadata from "@/components/PageMetadata"
 import { TranslatathonBanner } from "@/components/Translatathon/TranslatathonBanner"
 import {
   Accordion,
@@ -119,10 +118,6 @@ const HomePage = ({
 
   return (
     <MainArticle className="flex w-full flex-col items-center" dir={dir}>
-      <PageMetadata
-        title={t("page-index:page-index-meta-title")}
-        description={t("page-index:page-index-meta-description")}
-      />
       <TranslatathonBanner />
       <HomeHero heroImg={Hero} className="w-full" />
       <div className="w-full space-y-32 px-4 md:mx-6 lg:space-y-48">

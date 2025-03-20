@@ -7,7 +7,6 @@ import Breadcrumbs from "@/components/Breadcrumbs"
 import FindWalletProductTable from "@/components/FindWalletProductTable"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
-import PageMetadata from "@/components/PageMetadata"
 import InlineLink from "@/components/ui/Link"
 
 import { cn } from "@/lib/utils/cn"
@@ -32,12 +31,6 @@ const FindWalletPage = ({ wallets }: Props) => {
 
   return (
     <MainArticle className="relative flex flex-col">
-      <PageMetadata
-        title={t("page-find-wallet-meta-title")}
-        description={t("page-find-wallet-meta-description")}
-        image="/images/wallets/wallet-hero.png"
-      />
-
       <BannerNotification shouldShow={true}>
         {t("page-find-wallet-footnote-1")}
       </BannerNotification>

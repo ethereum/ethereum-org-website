@@ -9,7 +9,6 @@ import BannerNotification from "@/components/Banners/BannerNotification"
 import { HubHero } from "@/components/Hero"
 import StackIcon from "@/components/icons/stack.svg"
 import MainArticle from "@/components/MainArticle"
-import PageMetadata from "@/components/PageMetadata"
 import { ResourceItem, ResourcesContainer } from "@/components/Resources"
 import { useResources } from "@/components/Resources/useResources"
 import Translation from "@/components/Translation"
@@ -39,12 +38,6 @@ const ResourcesPage = ({ txCostsMedianUsd }: ResourcesPageProps) => {
 
   return (
     <MainArticle className="relative flex flex-col">
-      <PageMetadata
-        title={t("page-resources-meta-title")}
-        description={t("page-resources-meta-description")}
-        image="/images/heroes/guides-hub-hero.jpg"
-      />
-
       <BannerNotification shouldShow className="text-center max-md:flex-col">
         {t("page-resources-banner-notification-message")}{" "}
         <Link

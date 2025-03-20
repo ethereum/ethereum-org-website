@@ -1,9 +1,11 @@
 import pick from "lodash.pick"
+import { getTranslations } from "next-intl/server"
 
 import { Lang } from "@/lib/types"
 
 import I18nProvider from "@/components/I18nProvider"
 
+import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import Acknowledgements from "./_components/acknowledgements"
@@ -25,6 +27,30 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
       <Acknowledgements />
     </I18nProvider>
   )
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params
+
+  const t = await getTranslations({
+    locale,
+    namespace: "page-contributing-translation-program-acknowledgements",
+  })
+
+  return await getMetadata({
+    locale,
+    slug: ["contributing", "translation-program", "acknowledgements"],
+    title: t(
+      "page-contributing-translation-program-acknowledgements-meta-title"
+    ),
+    description: t(
+      "page-contributing-translation-program-acknowledgements-meta-description"
+    ),
+  })
 }
 
 export default Page

@@ -13,7 +13,6 @@ import { Image } from "@/components/Image"
 import InfoBanner from "@/components/InfoBanner"
 import MainArticle from "@/components/MainArticle"
 import PageHero from "@/components/PageHero"
-import PageMetadata from "@/components/PageMetadata"
 import Translation from "@/components/Translation"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Divider } from "@/components/ui/divider"
@@ -118,10 +117,6 @@ const GasPage = () => {
 
   return (
     <Page>
-      <PageMetadata
-        title={t("page-gas-meta-title")}
-        description={t("page-gas-meta-description")}
-      />
       <div className="w-full bg-gradient-to-r from-accent-a/10 to-accent-c/10 dark:from-accent-a/20 dark:to-accent-c-hover/20">
         <div className="pb-8">
           <PageHero

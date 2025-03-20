@@ -1,9 +1,11 @@
 import pick from "lodash.pick"
+import { getTranslations } from "next-intl/server"
 
 import { Lang } from "@/lib/types"
 
 import I18nProvider from "@/components/I18nProvider"
 
+import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import QuizzesPage from "./_components/quizzes"
@@ -23,6 +25,24 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
       <QuizzesPage />
     </I18nProvider>
   )
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params
+
+  const t = await getTranslations({ locale })
+
+  return await getMetadata({
+    locale,
+    slug: ["quizzes"],
+    title: t("common.quizzes-title"),
+    description: t("learn-quizzes.quizzes-subtitle"),
+    image: "/images/heroes/quizzes-hub-hero.png",
+  })
 }
 
 export default Page

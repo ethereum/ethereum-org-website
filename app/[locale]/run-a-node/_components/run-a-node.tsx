@@ -23,7 +23,6 @@ import {
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import PageHero from "@/components/PageHero"
-import PageMetadata from "@/components/PageMetadata"
 import { StandaloneQuizWidget as QuizWidget } from "@/components/Quiz/QuizWidget"
 import Translation from "@/components/Translation"
 import { Button, ButtonLink } from "@/components/ui/buttons/Button"
@@ -294,11 +293,6 @@ const RunANodePage = () => {
 
   return (
     <GappedPage>
-      <PageMetadata
-        title={t("page-run-a-node-meta-title")}
-        description={t("page-run-a-node-meta-description")}
-        image="/images/run-a-node/ethereum-inside.png"
-      />
       <div className="w-full bg-gradient-to-br from-accent-b/5 via-primary/10 to-accent-b/15 dark:from-accent-b/20 dark:via-primary/15 dark:to-accent-a/20">
         <div className="pb-8">
           <PageHero content={heroContent} isReverse />

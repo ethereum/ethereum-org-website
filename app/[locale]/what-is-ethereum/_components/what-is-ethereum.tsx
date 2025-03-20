@@ -22,7 +22,6 @@ import FeedbackCard from "@/components/FeedbackCard"
 import { Image } from "@/components/Image"
 import ListenToPlayer from "@/components/ListenToPlayer"
 import MainArticle from "@/components/MainArticle"
-import PageMetadata from "@/components/PageMetadata"
 import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import StatErrorMessage from "@/components/StatErrorMessage"
 import Tooltip from "@/components/Tooltip"
@@ -271,11 +270,6 @@ const WhatIsEthereumPage = ({ data }: Props) => {
   return (
     <VStack className="mx-0 my-auto w-full gap-0" asChild>
       <MainArticle>
-        <PageMetadata
-          title={t("page-what-is-ethereum-meta-title")}
-          description={t("page-what-is-ethereum-meta-description")}
-          image="/images/what-is-ethereum.png"
-        />
         <Content>
           <Flex className="flex-col-reverse items-center justify-between md:flex-row">
             <Stack className="mb-6 gap-4" asChild>

@@ -16,7 +16,6 @@ import { Image } from "@/components/Image"
 import InfoBanner from "@/components/InfoBanner"
 import ListenToPlayer from "@/components/ListenToPlayer"
 import MainArticle from "@/components/MainArticle"
-import PageMetadata from "@/components/PageMetadata"
 import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import Translation from "@/components/Translation"
 import { ButtonLink } from "@/components/ui/buttons/Button"
@@ -267,11 +266,6 @@ const EthPage = () => {
 
   return (
     <Page>
-      <PageMetadata
-        title={t("page-eth-whats-eth-meta-title")}
-        description={t("page-eth-whats-eth-meta-desc")}
-        image="/images/eth.png"
-      />
       <Content>
         <HeroContainer>
           <Header>

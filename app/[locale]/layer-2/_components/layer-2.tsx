@@ -8,7 +8,6 @@ import ExpandableCard from "@/components/ExpandableCard"
 import HubHero, { HubHeroProps } from "@/components/Hero/HubHero"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
-import PageMetadata from "@/components/PageMetadata"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import InlineLink from "@/components/ui/Link"
 
@@ -90,14 +89,6 @@ const Layer2Hub = ({
 
   return (
     <MainArticle className="relative flex flex-col">
-      {/* TODO: Clarify title and description here */}
-      {/* TODO: Setup for translation */}
-      <PageMetadata
-        title={"Intro to Ethereum Layer 2: benefits and uses"}
-        description={"Learn about Ethereum layer 2 networks"}
-        image="/images/layer-2/learn-hero.png"
-      />
-
       <HubHero {...heroContent} />
 
       {/* TODO: Setup for translation */}

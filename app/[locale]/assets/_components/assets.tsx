@@ -8,7 +8,6 @@ import AssetDownload from "@/components/AssetDownload"
 import FeedbackCard from "@/components/FeedbackCard"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
-import PageMetadata from "@/components/PageMetadata"
 import { Center, Flex } from "@/components/ui/flex"
 import InlineLink from "@/components/ui/Link"
 
@@ -103,10 +102,6 @@ const AssetsPage = () => {
   )
   return (
     <Flex className="w-full flex-col">
-      <PageMetadata
-        title={t("page-assets-meta-title")}
-        description={t("page-assets-meta-desc")}
-      />
       <MainArticle className="px-8 py-4">
         <Flex className="flex-col px-8 py-4">
           <Center>

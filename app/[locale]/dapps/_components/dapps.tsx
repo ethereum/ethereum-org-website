@@ -25,7 +25,6 @@ import { Image } from "@/components/Image"
 import InfoBanner from "@/components/InfoBanner"
 import MainArticle from "@/components/MainArticle"
 import PageHero from "@/components/PageHero"
-import PageMetadata from "@/components/PageMetadata"
 import ProductCard from "@/components/ProductCard"
 import ProductListComponent, {
   type ProductListProps,
@@ -1169,11 +1168,6 @@ const DappsPage = () => {
   }
   return (
     <Page>
-      <PageMetadata
-        title={t("common:decentralized-applications-dapps")}
-        description={t("page-dapps-desc")}
-        image="/images/doge-computer.png"
-      />
       <PageHero content={heroContent} />
       <Divider />
       <Content>

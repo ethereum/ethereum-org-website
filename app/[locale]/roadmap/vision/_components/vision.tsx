@@ -13,7 +13,6 @@ import MainArticle from "@/components/MainArticle"
 import PageHero, {
   type ContentType as PageHeroContent,
 } from "@/components/PageHero"
-import PageMetadata from "@/components/PageMetadata"
 import Trilemma from "@/components/Trilemma"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Divider } from "@/components/ui/divider"
@@ -118,10 +117,6 @@ const VisionPage = () => {
 
   return (
     <Page>
-      <PageMetadata
-        title={t("page-roadmap-vision-meta-title")}
-        description={t("page-roadmap-vision-meta-desc")}
-      />
       <PageHero content={heroContent} />
       <Divider />
       <PageContent>

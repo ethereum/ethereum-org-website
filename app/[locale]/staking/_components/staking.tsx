@@ -12,7 +12,6 @@ import LeftNavBar from "@/components/LeftNavBar"
 import { ContentContainer, Page } from "@/components/MdComponents"
 import MobileButtonDropdown from "@/components/MobileButtonDropdown"
 import PageHero from "@/components/PageHero"
-import PageMetadata from "@/components/PageMetadata"
 import StakingCommunityCallout from "@/components/Staking/StakingCommunityCallout"
 import StakingHierarchy from "@/components/Staking/StakingHierarchy"
 import StakingStatsBox from "@/components/Staking/StakingStatsBox"
@@ -238,11 +237,6 @@ const StakingPage = ({ data }: Props) => {
 
   return (
     <PageContainer>
-      <PageMetadata
-        title={t("page-staking-meta-title")}
-        description={t("page-staking-meta-description")}
-        image="/images/upgrades/upgrade_rhino.png"
-      />
       <HeroStatsWrapper>
         <PageHero content={heroContent} />
         <StakingStatsBox data={data} />

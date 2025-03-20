@@ -16,7 +16,6 @@ import FeedbackCard from "@/components/FeedbackCard"
 import { Image, type ImageProps } from "@/components/Image"
 import Leaderboard from "@/components/Leaderboard"
 import MainArticle from "@/components/MainArticle"
-import PageMetadata from "@/components/PageMetadata"
 import Translation from "@/components/Translation"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Divider } from "@/components/ui/divider"
@@ -355,10 +354,6 @@ const BugBountiesPage = () => {
   }
   return (
     <Page>
-      <PageMetadata
-        title={t("page-upgrades-bug-bounty-meta-title")}
-        description={t("page-upgrades-bug-bounty-meta-description")}
-      />
       {/* Uncomment for Bug Bounty Banner: */}
       <BugBountyBanner />
       <Content>

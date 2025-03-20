@@ -5,6 +5,7 @@ import { Lang } from "@/lib/types"
 import I18nProvider from "@/components/I18nProvider"
 
 import { dataLoader } from "@/lib/utils/data/dataLoader"
+import { getMetadata } from "@/lib/utils/metadata"
 import { networkMaturity } from "@/lib/utils/networkMaturity"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
@@ -118,6 +119,23 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
       <Layer2Networks {...props} />
     </I18nProvider>
   )
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params
+
+  return await getMetadata({
+    locale,
+    slug: ["layer-2", "networks"],
+    title: "Ethereum Layer 2:Explore networks",
+    description:
+      "Using Ethereum today means interacting with hundreds of different networks and apps. All backed by Ethereum as the foundational backbone.",
+    image: "/images/layer-2/learn-hero.png",
+  })
 }
 
 export default Page

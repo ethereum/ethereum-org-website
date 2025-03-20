@@ -5,7 +5,6 @@ import { ContentHero, ContentHeroProps } from "@/components/Hero"
 import Layer2NetworksTable from "@/components/Layer2NetworksTable"
 import MainArticle from "@/components/MainArticle"
 import NetworkMaturity from "@/components/NetworkMaturity"
-import PageMetadata from "@/components/PageMetadata"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 
 import { usePathname } from "@/i18n/routing"
@@ -26,12 +25,6 @@ const Layer2Networks = ({ layer2Data, locale, mainnetData }) => {
 
   return (
     <MainArticle className="relative flex flex-col">
-      <PageMetadata
-        title="Ethereum Layer 2:Explore networks"
-        description="Using Ethereum today means interacting with hundreds of different networks and apps. All backed by Ethereum as the foundational backbone."
-        image="/images/layer-2/learn-hero.png"
-      />
-
       <ContentHero {...heroProps} />
 
       <Layer2NetworksTable

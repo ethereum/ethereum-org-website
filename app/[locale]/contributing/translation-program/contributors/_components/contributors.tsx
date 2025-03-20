@@ -7,7 +7,6 @@ import { CostLeaderboardData } from "@/lib/types"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import FeedbackCard from "@/components/FeedbackCard"
 import MainArticle from "@/components/MainArticle"
-import PageMetadata from "@/components/PageMetadata"
 import { Flex } from "@/components/ui/flex"
 import InlineLink from "@/components/ui/Link"
 import { List, ListItem } from "@/components/ui/list"
@@ -42,15 +41,6 @@ const Contributors = () => {
 
   return (
     <Flex className="w-full flex-col items-center">
-      <PageMetadata
-        title={t(
-          "page-contributing-translation-program-contributors-meta-title"
-        )}
-        description={t(
-          "page-contributing-translation-program-contributors-meta-description"
-        )}
-      />
-
       <Content>
         <Breadcrumbs slug={pathname} className="mt-12" />
         <h1 className="my-8 leading-xs">

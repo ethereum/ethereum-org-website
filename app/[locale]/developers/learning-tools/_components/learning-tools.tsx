@@ -10,7 +10,6 @@ import FeedbackCard from "@/components/FeedbackCard"
 import InfoBanner from "@/components/InfoBanner"
 import LearningToolsCardGrid from "@/components/LearningToolsCardGrid"
 import MainArticle from "@/components/MainArticle"
-import PageMetadata from "@/components/PageMetadata"
 import Translation from "@/components/Translation"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 
@@ -401,14 +400,6 @@ const LearningToolsPage = () => {
 
   return (
     <Page>
-      <PageMetadata
-        title={t(
-          "page-developers-learning-tools:page-learning-tools-meta-title"
-        )}
-        description={t(
-          "page-developers-learning-tools:page-learning-tools-meta-desc"
-        )}
-      />
       <MainArticle className="w-full">
         <div className="w-full">
           <Header>

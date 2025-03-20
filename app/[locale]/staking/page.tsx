@@ -1,4 +1,5 @@
 import pick from "lodash.pick"
+import { getTranslations } from "next-intl/server"
 
 import {
   EpochResponse,
@@ -10,6 +11,7 @@ import {
 import I18nProvider from "@/components/I18nProvider"
 
 import { dataLoader } from "@/lib/utils/data/dataLoader"
+import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { BASE_TIME_UNIT } from "@/lib/constants"
@@ -70,6 +72,24 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
       <StakingPage data={data} />
     </I18nProvider>
   )
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params
+
+  const t = await getTranslations({ locale, namespace: "page-staking" })
+
+  return await getMetadata({
+    locale,
+    slug: ["staking"],
+    title: t("page-staking-meta-title"),
+    description: t("page-staking-meta-description"),
+    image: "/images/upgrades/upgrade_rhino.png",
+  })
 }
 
 export default Page

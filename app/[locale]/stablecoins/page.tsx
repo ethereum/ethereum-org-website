@@ -1,10 +1,12 @@
 import pick from "lodash.pick"
+import { getTranslations } from "next-intl/server"
 
 import { Lang } from "@/lib/types"
 
 import I18nProvider from "@/components/I18nProvider"
 
 import { dataLoader } from "@/lib/utils/data/dataLoader"
+import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { BASE_TIME_UNIT } from "@/lib/constants"
@@ -52,11 +54,7 @@ const loadData = dataLoader<[EthereumDataResponse, StablecoinDataResponse]>(
   REVALIDATE_TIME * 1000
 )
 
-export default async function Page({
-  params,
-}: {
-  params: Promise<{ locale: Lang }>
-}) {
+async function Page({ params }: { params: Promise<{ locale: Lang }> }) {
   const { locale } = await params
 
   // Get i18n messages
@@ -140,3 +138,23 @@ export default async function Page({
     </I18nProvider>
   )
 }
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params
+
+  const t = await getTranslations({ locale, namespace: "page-stablecoins" })
+
+  return await getMetadata({
+    locale,
+    slug: ["stablecoins"],
+    title: t("page-stablecoins-meta-title"),
+    description: t("page-stablecoins-meta-description"),
+    image: "/images/stablecoins/hero.png",
+  })
+}
+
+export default Page

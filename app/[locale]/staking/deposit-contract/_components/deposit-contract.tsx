@@ -13,7 +13,6 @@ import FeedbackCard from "@/components/FeedbackCard"
 import { Image } from "@/components/Image"
 import InfoBanner from "@/components/InfoBanner"
 import MainArticle from "@/components/MainArticle"
-import PageMetadata from "@/components/PageMetadata"
 import Tooltip from "@/components/Tooltip"
 import Translation from "@/components/Translation"
 import {
@@ -258,10 +257,6 @@ const DepositContractPage = () => {
   return (
     <MainArticle className="w-full">
       <FlexBox>
-        <PageMetadata
-          title={t("page-staking-deposit-contract-meta-title")}
-          description={t("page-staking-deposit-contract-meta-desc")}
-        />
         <LeftColumn>
           <Breadcrumbs slug={pathname} startDepth={1} />
           <Title>{t("page-staking-deposit-contract-title")}</Title>

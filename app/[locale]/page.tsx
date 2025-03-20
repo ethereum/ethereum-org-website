@@ -125,7 +125,6 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 export async function generateMetadata() {
   const t = await getTranslations()
 
-  // TODO: Add metadata
   return {
     title: t("page-index.page-index-meta-title"),
     description: t("page-index.page-index-meta-description"),

@@ -15,7 +15,6 @@ import { Image, type ImageProps } from "@/components/Image"
 import LeftNavBar from "@/components/LeftNavBar"
 import MainArticle from "@/components/MainArticle"
 import { ContentContainer } from "@/components/MdComponents"
-import PageMetadata from "@/components/PageMetadata"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Center, Flex, Stack } from "@/components/ui/flex"
 import InlineLink from "@/components/ui/Link"
@@ -170,12 +169,6 @@ const LearnPage = () => {
 
   return (
     <div className="relative w-full">
-      <PageMetadata
-        title={t("page-learn-meta-title")}
-        description={t("hero-subtitle")}
-        image="/images/heroes/learn-hub-hero.png"
-      />
-
       <HubHero {...heroContent} />
 
       <Flex
