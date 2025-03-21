@@ -212,16 +212,16 @@ Also, it is not always possible for program verifiers to determine if a property
 
 ### Specification languages for creating formal specifications {#specification-languages}
 
-**Act**: _*Act allows specification of storage updates, pre/post conditions and contract invariants. Its tool suite also has proof backends able to prove many properties via Coq, SMT solvers, or hevm.*_
+**Act**: _Act allows specification of storage updates, pre/post conditions and contract invariants. Its tool suite also has proof backends able to prove many properties via Coq, SMT solvers, or hevm._
 
 - [GitHub](https://github.com/ethereum/act)
 - [Documentation](https://ethereum.github.io/act/)
 
-**Scribble** - _*Scribble transforms code annotations in the Scribble specification language into concrete assertions that check the specification.*_
+**Scribble** - _Scribble transforms code annotations in the Scribble specification language into concrete assertions that check the specification._
 
 - [Documentation](https://docs.scribble.codes/)
 
-**Dafny** - _*Dafny is a verification-ready programming language that relies on high-level annotations to reason about and prove correctness of code.*_
+**Dafny** - _Dafny is a verification-ready programming language that relies on high-level annotations to reason about and prove correctness of code._
 
 - [GitHub](https://github.com/dafny-lang/dafny)
 
@@ -232,15 +232,15 @@ Also, it is not always possible for program verifiers to determine if a property
 - [Website](https://www.certora.com/)
 - [Documentation](https://docs.certora.com/en/latest/index.html)
 
-**Solidity SMTChecker** - _*Solidity’s SMTChecker is a built-in model checker based on SMT (Satisfiability Modulo Theories) and Horn solving. It confirms if a contract’s source code matches specifications during compilation and statically checks for violations of safety properties.*_
+**Solidity SMTChecker** - _Solidity’s SMTChecker is a built-in model checker based on SMT (Satisfiability Modulo Theories) and Horn solving. It confirms if a contract’s source code matches specifications during compilation and statically checks for violations of safety properties._
 
 - [GitHub](https://github.com/ethereum/solidity)
 
-**solc-verify** - _*solc-verify is an extended version of the Solidity compiler that can perform automated formal verification on Solidity code using annotations and modular program verification.*_
+**solc-verify** - _solc-verify is an extended version of the Solidity compiler that can perform automated formal verification on Solidity code using annotations and modular program verification._
 
 - [GitHub](https://github.com/SRI-CSL/solidity)
 
-**KEVM** - _*KEVM is a formal semantics of the Ethereum Virtual Machine (EVM) written in the K framework. KEVM is executable and can prove certain property-related assertions using reachability logic.*_
+**KEVM** - _KEVM is a formal semantics of the Ethereum Virtual Machine (EVM) written in the K framework. KEVM is executable and can prove certain property-related assertions using reachability logic._
 
 - [GitHub](https://github.com/runtimeverification/evm-semantics)
 - [Documentation](https://jellopaper.org/)
@@ -259,16 +259,16 @@ Also, it is not always possible for program verifiers to determine if a property
 
 ### Symbolic execution-based tools for detecting vulnerable patterns in smart contracts {#symbolic-execution-tools}
 
-**Manticore** - _*A tool for analyzing EVM bytecode analysis tool based on symbolic execution*._
+**Manticore** - _A tool for analyzing EVM bytecode analysis tool based on symbolic execution._
 
 - [GitHub](https://github.com/trailofbits/manticore)
 - [Documentation](https://github.com/trailofbits/manticore/wiki)
 
-**hevm** - _*hevm is a symbolic execution engine and equivalence checker for EVM bytecode.*_
+**hevm** - _hevm is a symbolic execution engine and equivalence checker for EVM bytecode._
 
 - [GitHub](https://github.com/dapphub/dapptools/tree/master/src/hevm)
 
-**Mythril** - _A symbolic execution tool for detecting vulnerabilities in Ethereum smart contracts_
+**Mythril** - _A symbolic execution tool for detecting vulnerabilities in Ethereum smart contracts._
 
 - [GitHub](https://github.com/ConsenSys/mythril-classic)
 - [Documentation](https://mythril-classic.readthedocs.io/en/develop/)
