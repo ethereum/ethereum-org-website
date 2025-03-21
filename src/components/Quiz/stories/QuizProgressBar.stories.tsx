@@ -1,4 +1,3 @@
-import { useTranslations } from "next-intl"
 import type { Meta, StoryObj } from "@storybook/react"
 
 import allQuizzesData from "@/data/quizzes"
@@ -8,6 +7,8 @@ import { QuizProgressBar } from "../QuizWidget/QuizProgressBar"
 
 import { LAYER_2_QUIZ_KEY, layer2Questions } from "./utils"
 
+import useTranslation from "@/hooks/useTranslation"
+
 const meta = {
   title: "Molecules / Display Content / Quiz / QuizWidget / ProgressBar",
   component: QuizProgressBar,
@@ -16,7 +17,7 @@ const meta = {
   },
   decorators: [
     (Story, { args }) => {
-      const t = useTranslations()
+      const { t } = useTranslation()
 
       return (
         <QuizContent
