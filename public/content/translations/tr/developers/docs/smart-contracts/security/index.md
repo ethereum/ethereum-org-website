@@ -115,7 +115,7 @@ Denetimlerin ve hata ödüllerinin varlığı, yüksek kalitede kod yazma soruml
 
 - Akıllı sözleşmeleri test etmek, derlemek ve dağıtmak için bir [geliştirme ortamı](/developers/docs/frameworks/) kullanın
 
-- Kodunuzu [Cyfrin Aaderyn](https://github.com/Cyfrin/aderyn), Mythril ve Slither gibi temel kod analiz araçlarından geçirin. İdeal olarak, bunu her çekme isteği birleştirmesinden önce yapmalı ve çıktılardaki farkları karşılaştırmalısınız
+- Kodunuzu [Cyfrin Aderyn](https://github.com/Cyfrin/aderyn), Mythril ve Slither gibi temel kod analiz araçlarından geçirin. İdeal olarak, bunu her çekme isteği birleştirmesinden önce yapmalı ve çıktılardaki farkları karşılaştırmalısınız
 
 - Kodunuzun hatasız bir şekilde derlendiğinden ve Solidity derleyicisinin herhangi bir uyarı vermediğinden emin olun
 
