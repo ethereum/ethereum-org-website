@@ -53,7 +53,7 @@ const tableVariants = tv({
         table: "caption-bottom text-sm",
         thead: "[&-tr:last-child]:border-0",
         tbody: "&_tr:last-child]:border-0",
-        tr: "hover:bg-muted/50 data-[state=selected]:bg-muted border-b transition-colors",
+        tr: "hover:bg-muted/50 data-[state=selected]:bg-muted border-t transition-colors first-of-type:border-t-0",
         th: "text-muted-foreground h-12 px-4 text-left align-middle font-medium [&:has([role=checkbox])]:pr-0",
         td: "align-middle p-4 [&:has([role=checkbox])]:pr-0",
       },
