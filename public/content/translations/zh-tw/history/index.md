@@ -516,8 +516,7 @@ Spurious Dragon 分叉為對阻斷服務 (DoS) 攻擊（2016 年 9 月/10 月）
 
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-150">EIP-150</a> – <em>增加可用於垃圾郵件攻擊的操作碼的燃料成本</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-158">EIP-158</a> – <em>透過刪除大量空帳戶來減少狀態大小，這些空帳戶由於早期版本的以太坊協定中的缺陷而以非常低的成本置於狀態中。</em>
-</li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-158">EIP-158</a> – <em>透過刪除大量空帳戶來減少狀態大小，這些空帳戶由於早期版本的以太坊協定中的缺陷而以非常低的成本置於狀態中。</em></li>
 </ul>
 
 </ExpandableCard>

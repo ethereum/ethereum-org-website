@@ -126,7 +126,7 @@ Uvítáme návrhy na nové projekty, které je třeba uvést na seznam – pro z
 - [DeSci: Budoucnost výzkumu od Samuela Akinosho](https://lucidsamuel.medium.com/desci-the-future-of-research-b76cfc88c8ec)
 - [Financování vědy (Epilolog: DeSci a nové krypto základní prvky) od Nadie](https://nadia.xyz/science-funding)
 - [Decentralizace narušuje vývoj léků](https://medium.com/id-theory/decentralisation-is-disrupting-drug-development-28b5ba5d447f)
-- [Co je DeSci – decentralizovaná věda?](​https://usadailytimes.com/2022/09/12/what-is-desci-decentralized-science/)
+- [Co je DeSci – decentralizovaná věda?](https://usadailytimes.com/2022/09/12/what-is-desci-decentralized-science/)
 
 ### Videa {#videos}
 
