@@ -50,7 +50,7 @@ const Nav = () => {
           <div className="ms-3 flex w-full justify-end md:justify-between xl:ms-8">
             {/* avoid rendering desktop Menu version on mobile */}
             {isClient && desktopScreen ? (
-              <Menu className="hidden md:block" sections={linkSections} />
+              <Menu className="hidden lg:block" sections={linkSections} />
             ) : (
               <div />
             )}
@@ -62,7 +62,7 @@ const Nav = () => {
                 return (
                   <div className="flex items-center">
                     {/* Desktop */}
-                    <div className="hidden md:flex">
+                    <div className="hidden lg:flex">
                       <SearchButton className="xl:hidden" onClick={onOpen} />
                       <SearchInputButton
                         className="hidden xl:flex"
