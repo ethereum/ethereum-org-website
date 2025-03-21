@@ -1,6 +1,6 @@
 import { GetStaticProps } from "next"
 import dynamic from "next/dynamic"
-import { useRouter } from "next/router"
+import { useLocale } from "next-intl"
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
 
 import { BasePageProps, Lang, Wallet } from "@/lib/types"
@@ -72,11 +72,11 @@ const StartWithCryptoPage = ({
 }: {
   newToCryptoWallets: Wallet[]
 }) => {
-  const router = useRouter()
+  const locale = useLocale()
 
   return (
     <QueryClientProvider client={queryClient}>
-      <WalletProviders locale={router.query.locale as string}>
+      <WalletProviders locale={locale}>
         <MainArticle className="flex w-full flex-col items-center overflow-x-hidden">
           <PageMetadata
             title={"Start with crypto"}
