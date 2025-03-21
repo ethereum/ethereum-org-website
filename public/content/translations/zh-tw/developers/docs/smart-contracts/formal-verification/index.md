@@ -212,7 +212,7 @@ function safe_add(uint x, uint y) returns(uint z){
 
 ### 用於建立形式化規範的規範語言 {#specification-languages}
 
-**Act** - _*Act 允許指定存儲更新、前置/後置條件以及合約不變量。</0>  其工具套件還具有證明後端，可透過 Coq、SMT 求解器或 hevm 來證明許多屬性。**
+**Act** - _*Act 允許指定存儲更新、前置/後置條件以及合約不變量。`</0>`  其工具套件還具有證明後端，可透過 Coq、SMT 求解器或 hevm 來證明許多屬性。**
 
 - [GitHub](https://github.com/ethereum/act)
 - [文檔](https://ethereum.github.io/act/)

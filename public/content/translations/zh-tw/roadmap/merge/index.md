@@ -92,7 +92,7 @@ title="去中心化應用程式和智慧型合約開發者"
 contentPreview="The Merge was designed to have minimal impact on smart contract and dapp developers."
 id="developers">
 
-合併過程中共識機制亦發生變更，包括以下方面的相關變更：<
+合併過程中共識機制亦發生變更，包括以下方面的相關變更：
 
 <ul>
   <li>區塊結構</li>
