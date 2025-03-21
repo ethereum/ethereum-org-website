@@ -671,6 +671,17 @@ const chains = [
     chain: "Dogether",
   },
   {
+    name: "Perennial",
+    infoURL: "https://perennial.finance",
+    chainId: 1424,
+    nativeCurrency: {
+      name: "Ether",
+      symbol: "ETH",
+      decimals: 18,
+    },
+    chain: "perennial",
+  },
+  {
     name: "ZKBase Mainnet",
     infoURL: "https://zkbase.org/",
     chainId: 1456,
@@ -1661,17 +1672,6 @@ const chains = [
     chain: "ETH",
   },
   {
-    name: "Plume Devnet",
-    infoURL: "https://plumenetwork.xyz/",
-    chainId: 98864,
-    nativeCurrency: {
-      name: "Plume Sepolia Ether",
-      symbol: "ETH",
-      decimals: 18,
-    },
-    chain: "ETH",
-  },
-  {
     name: "Plume (Legacy)",
     infoURL: "https://plumenetwork.xyz/",
     chainId: 98865,
@@ -1680,7 +1680,7 @@ const chains = [
       symbol: "ETH",
       decimals: 18,
     },
-    chain: "ETH",
+    chain: "PLUME Legacy",
   },
   {
     name: "re.al",
