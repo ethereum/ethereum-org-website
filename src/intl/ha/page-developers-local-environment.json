@@ -29,7 +29,5 @@
   "page-local-environment-setup-subtitle-2": "Anan akwai kayan aiki da ma tsarin da zaku iya amfani da su don taimaka muku wurin gina manhajojin Ethereum.",
   "page-local-environment-setup-title": "Saita yanayin ci gaba na gida",
   "page-local-environment-solidity-template-desc": "Samfurin GitHub don saitin da aka riga aka gina don smart contracts na Solidity. Ya haɗa da cibiyar sadarwar gida ta Hardhat, Waffle don gwaje-gwaje, Ethers don aiwatar da walat, da ƙari.",
-  "page-local-environment-solidity-template-logo-alt": "Tambarin samfurin Solidity",
-  "page-local-environment-waffle-desc": "Laburaren gwada smart contracts mafi inganci, ana amfani da shi kaɗai ko da Scaffold-eth ko kuma da Hardhat.",
-  "page-local-environment-waffle-logo-alt": "Tambarin waffle"
+  "page-local-environment-solidity-template-logo-alt": "Tambarin samfurin Solidity"
 }
