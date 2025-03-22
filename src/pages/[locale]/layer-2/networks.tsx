@@ -56,13 +56,25 @@ export async function getStaticPaths() {
 export const getStaticProps = (async ({ params }) => {
   const { locale = DEFAULT_LOCALE } = params || {}
 
+  const data = await loadData()
+
+  //If whole data is undefined
+  if (!data) {
+    throw new Error("Data fetch failed: loadData() returned undefined")
+  }
+
+  //If a particular API reponded with undefined
+  if (Object.values(data).some((val) => val === undefined)) {
+    throw new Error("Build Failed: Some API returned undefined response")
+  }
+
   const [
     ethereumMarketcapData,
     growThePieData,
     growThePieBlockspaceData,
     growThePieMasterData,
     l2beatData,
-  ] = await loadData()
+  ] = data
 
   const lastDeployDate = getLastDeployDate()
   const lastDeployLocaleTimestamp = getLocaleTimestamp(
