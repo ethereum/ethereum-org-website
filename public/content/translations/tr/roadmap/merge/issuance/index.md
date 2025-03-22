@@ -57,7 +57,7 @@ Toplam ETH arzı: **~120.520.000 ETH** (Birleşim gerçekleştiğinde Eylül 202
 <InfoBanner>
 <strong>Toplam yıllık dağıtım oranı (Birleşim öncesi): \~%4,61</strong> (%4,09 + %0,52)<br/><br/>
 Dağıtımın <strong>\~%88,7'i</strong> yürütüm katmanındaki madencilere gidiyordu (4,09/4,61 * 100)<br/><br/>
-<strong>~%11,3'i</strong> fikir birliği katmanındaki paydaşlara dağıtılıyordu (0,52/4,61 * 100)
+<strong>\~%11,3'i</strong> fikir birliği katmanındaki paydaşlara dağıtılıyordu (0,52/4,61 * 100)
 </InfoBanner>
 
 ## Birleşim sonrası (günümüz) {#post-merge}
