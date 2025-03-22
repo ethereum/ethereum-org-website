@@ -12,6 +12,7 @@ import summerfiImg from "@/public/images/dapps/summerfi.png"
 // Static assets
 // -- dapps
 import uniImg from "@/public/images/dapps/uni.png"
+import ethImg from "@/public/images/eth-org-logo.png"
 import oneInchImg from "@/public/images/exchanges/1inch.png"
 import binanceImg from "@/public/images/exchanges/binance.png"
 // -- exchanges
@@ -19,7 +20,6 @@ import coinbaseImg from "@/public/images/exchanges/coinbase.png"
 import coinmamaImg from "@/public/images/exchanges/coinmama.png"
 import geminiImg from "@/public/images/exchanges/gemini.png"
 import krakenImg from "@/public/images/exchanges/kraken.png"
-import ethImg from "@/public/images/favicon.png"
 
 export const useStablecoinAccordion = () => {
   const { t } = useTranslation("page-stablecoins")
