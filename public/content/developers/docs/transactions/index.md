@@ -217,6 +217,8 @@ Based on the `TransactionType` value, a transaction can be classified as:
 
 3. **Type 2 Transactions**, commonly referred to as EIP-1559 transactions, are transactions introduced in [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), in Ethereum's [London Upgrade](/history/#london). They have become the standard transaction type on the Ethereum network. These transactions introduce a new fee market mechanism that improves predictability by separating the transaction fee into a base fee and a priority fee. They start with the byte `0x02` and include fields such as `maxPriorityFeePerGas` and `maxFeePerGas`. Type 2 transactions are now the default due to their flexibility and efficiency, especially favored during periods of high network congestion for their ability to help users manage transaction fees more predictably. The TransactionType value for these transactions is `0x2`.
 
+4. **Type 3 Transactions:**, Introduced in [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844) as part of Ethereum’s [Cancun-Deneb](/history/#dencun) upgrade, blob transactions are designed to support [proto-danksharding](/roadmap/scaling/#proto-danksharding), which introduces a new data storage mechanism for blobs—large data chunks that are temporarily stored and used primarily for rollups. These transactions help scale Ethereum by providing a cost-efficient way for rollups to include large amounts of data without bloating the Ethereum state. They start with the byte 0x03 in their serialized form and include new fields such as blobVersionedHashes, blobs, and kzgCommitments. The TransactionType value for these transactions is 0x3. Instead of gasPrice, blob transactions use a new maxFeePerBlobGas parameter.
+
 
 
 ## Further reading {#further-reading}
