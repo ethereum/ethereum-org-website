@@ -718,5 +718,23 @@
     "location": "Nairobi, KEN",
     "description": "",
     "imageUrl": ""
+  },
+  {
+    "title": "ETH Canal",
+    "startDate": "2025-04-22",
+    "endDate": "2025-04-25",
+    "href": "https://ethcanal.xyz",
+    "location": "Panama City, PAN",
+    "description": "Join us at ETH Canal, in Panama, the pivotal blockchain conference series for Ethereum business &amp; blockchain enthusiasts and developers. Discover real-world applications of Ethereum technology, engage with top-tier talent, and explore partnership opportunities in a crypto-friendly environment.",
+    "imageUrl": "https://www.ethcanal.xyz/web/image/2180-32d6b8d6/StockCake-Cryptocurrency%2520Enthusiast%2520Smiling_1713136212.svg"
+  },
+  {
+    "title": "ETHVietnam 2025",
+    "startDate": "2025-05-23",
+    "endDate": "2025-05-24",
+    "href": "https://eth-vietnam.com",
+    "location": "HCMC, VNM",
+    "description": "",
+    "imageUrl": "http://static1.squarespace.com/static/629856e64f44db3799f8e3f6/t/6761041c2c3aab15bfbb0ec1/1734411300379/Group+2612.png?format=1500w"
   }
 ]
