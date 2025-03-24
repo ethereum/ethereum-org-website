@@ -175,8 +175,8 @@ Apabila Rantai Beacon bergabung dengan lapisan pelaksanaan Ethereum pada 15 Sept
 Tadbir urus di Ethereum tidak ditakrifkan secara tegar. Pelbagai peserta komuniti mempunyai perspektif yang pelbagai tentangnya. Berikut adalah antaranya:
 
 - [Nota tentang Blok Rantai Tadbir Urus](https://vitalik.eth.limo/general/2017/12/17/voting.html) - _Vitalik Buterin_
-- [Bagaimanakah Tadbir Urus Ethereum berfungsi?](https://cryptotesters.com/blog/ethereum-governance) – _Cryptotesters_
+- [Bagaimanakah Tadbir Urus Ethereum berfungsi? ](https://cryptotesters.com/blog/ethereum-governance) – _Cryptotesters_
 - [Bagaimanakah tadbir urus Ethereum berfungsi](https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a) - _Micah Zoltu_
-- [Apakah yang merupakan pemaju teras Ethereum?](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) - _Hudson Jameson_
+- [Apakah yang merupakan pemaju teras Ethereum? ](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) - _Hudson Jameson_
 - [Tadbir Urus, Bahagian 2: Plutokrasi Masih Teruk](https://vitalik.eth.limo/general/2018/03/28/plutocracy.html) - _Vitalik Buterin_
-- [Melepasi tadbir urus pengundian syiling](https://vitalik.eth.limo/general/2021/08/16/voting3.html) - _Vitalik Buterin_
+- [Melepasi tadbir urus pengundian syiling ](https://vitalik.eth.limo/general/2021/08/16/voting3.html) - _Vitalik Buterin_

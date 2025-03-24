@@ -1,3 +1,5 @@
+"use client"
+
 import React, { type ReactNode, useState } from "react"
 
 import { Flex, HStack, VStack } from "@/components/ui/flex"

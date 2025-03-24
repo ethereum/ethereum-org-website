@@ -1,9 +1,14 @@
+"use client"
+
 import DismissableBanner from "@/components/Banners/DismissableBanner"
 
 import { ButtonLink } from "../ui/buttons/Button"
 import { Center } from "../ui/flex"
 
-export const TranslatathonBanner = ({ pathname }) => {
+import { usePathname } from "@/i18n/routing"
+
+export const TranslatathonBanner = () => {
+  const pathname = usePathname()
   const todaysDate = new Date()
   const translatathonStartDate = new Date("August 9, 2024 12:00:00 UTC")
 

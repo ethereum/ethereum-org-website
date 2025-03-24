@@ -37,7 +37,6 @@ lang: zh-tw
 **Visual Studio Code -** **_專業跨平台整合開發環境，獲以太坊官方支援_**
 
 - [Visual Studio Code](https://code.visualstudio.com/)
-- [Azure Blockchain Workbench](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/microsoft-azure-blockchain.azure-blockchain-workbench?tab=Overview)
 - [程式碼範例](https://github.com/Azure-Samples/blockchain/blob/master/blockchain-workbench/application-and-smart-contract-samples/readme.md)
 - [GitHub](https://github.com/microsoft/vscode)
 

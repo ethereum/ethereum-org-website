@@ -1,3 +1,5 @@
+"use client"
+
 import { AnchorHTMLAttributes, ComponentProps, forwardRef } from "react"
 import NextLink from "next/link"
 import { RxExternalLink } from "react-icons/rx"

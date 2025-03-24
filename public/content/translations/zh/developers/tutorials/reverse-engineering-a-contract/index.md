@@ -55,8 +55,8 @@ _区块链上没有秘密_，发生的一切都是持续的、可验证的、公
 |      4 | MSTORE       | 空                   |
 |      5 | PUSH1 0x04   | 0x04                 |
 |      7 | CALLDATASIZE | CALLDATASIZE 0x04    |
-|      8 | LT           | CALLDATASIZE<4       |
-|      9 | PUSH2 0x005e | 0x5E CALLDATASIZE<4  |
+|      8 | LT           | CALLDATASIZE\<4       |
+|      9 | PUSH2 0x005e | 0x5E CALLDATASIZE\<4  |
 |      C | JUMPI        | 空                   |
 
 这段代码执行了两项操作：
@@ -121,8 +121,8 @@ _区块链上没有秘密_，发生的一切都是持续的、可验证的、公
 | -----: | ------------ | --------------------------------------------------------------------------- |
 |    1AC | DUP3         | Value\* 2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE         |
 |    1AD | GT           | Value\*>2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE         |
-|    1AE | ISZERO       | Value\*<=2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE        |
-|    1AF | PUSH2 0x01df | 0x01DF Value\*<=2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE |
+|    1AE | ISZERO       | Value\*\<=2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE        |
+|    1AF | PUSH2 0x01df | 0x01DF Value\*\<=2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE |
 |    1B2 | JUMPI        |                                                                             |
 
 如果 `Value*` 小于 2^256-CALLVALUE-1 或等于它，则跳转。 这看起来像是防止溢出的逻辑。 事实上，我们看到在偏移量 0x01DE 处进行了一些无意义的操作（例如，写入内存后马上删除）后，如果检测到溢出，合约将回滚，这是正常行为。
@@ -433,7 +433,7 @@ Etherscan 指出 `1C` 是一个未知操作码，因为[它是在 Etherscan 编�
 |    194 | DUP3         | 0x04 0x20 0x00 0x04 CALLDATASIZE 0x0153 0xDA                 |
 |    195 | DUP5         | CALLDATASIZE 0x04 0x20 0x00 0x04 CALLDATASIZE 0x0153 0xDA    |
 |    196 | SUB          | CALLDATASIZE-4 0x20 0x00 0x04 CALLDATASIZE 0x0153 0xDA       |
-|    197 | SLT          | CALLDATASIZE-4<32 0x00 0x04 CALLDATASIZE 0x0153 0xDA         |
+|    197 | SLT          | CALLDATASIZE-4\<32 0x00 0x04 CALLDATASIZE 0x0153 0xDA         |
 |    198 | ISZERO       | CALLDATASIZE-4>=32 0x00 0x04 CALLDATASIZE 0x0153 0xDA        |
 |    199 | PUSH2 0x01a0 | 0x01A0 CALLDATASIZE-4>=32 0x00 0x04 CALLDATASIZE 0x0153 0xDA |
 |    19C | JUMPI        | 0x00 0x04 CALLDATASIZE 0x0153 0xDA                           |
@@ -473,8 +473,8 @@ Etherscan 指出 `1C` 是一个未知操作码，因为[它是在 Etherscan 编�
 |    172 | DUP2         | 0x04 calldataload(4) 0x04 calldataload(4) 0xDA                               |
 |    173 | SLOAD        | Storage[4] calldataload(4) 0x04 calldataload(4) 0xDA                         |
 |    174 | DUP2         | calldataload(4) Storage[4] calldataload(4) 0x04 calldataload(4) 0xDA         |
-|    175 | LT           | calldataload(4)<Storage[4] calldataload(4) 0x04 calldataload(4) 0xDA         |
-|    176 | PUSH2 0x017e | 0x017EC calldataload(4)<Storage[4] calldataload(4) 0x04 calldataload(4) 0xDA |
+|    175 | LT           | calldataload(4)\<Storage[4] calldataload(4) 0x04 calldataload(4) 0xDA         |
+|    176 | PUSH2 0x017e | 0x017EC calldataload(4)\<Storage[4] calldataload(4) 0x04 calldataload(4) 0xDA |
 |    179 | JUMPI        | calldataload(4) 0x04 calldataload(4) 0xDA                                    |
 
 如果第一个字不小于 Storage[4]，则函数失败。 此函数回滚且没有任何返回值：

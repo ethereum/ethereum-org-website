@@ -127,7 +127,7 @@ We welcome suggestions for new projects to list - please look at our [listing po
 - [DeSci: The Future of Research by Samuel Akinosho](https://lucidsamuel.medium.com/desci-the-future-of-research-b76cfc88c8ec)
 - [Science Funding (Epilogue: DeSci and new crypto primitives) by Nadia](https://nadia.xyz/science-funding)
 - [Decentralisation is Disrupting Drug Development](https://medium.com/id-theory/decentralisation-is-disrupting-drug-development-28b5ba5d447f)
-- [What Is DeSci – Decentralized Science?](​https://usadailytimes.com/2022/09/12/what-is-desci-decentralized-science/)
+- [What Is DeSci – Decentralized Science?](https://usadailytimes.com/2022/09/12/what-is-desci-decentralized-science/)
 
 ### Videos {#videos}
 

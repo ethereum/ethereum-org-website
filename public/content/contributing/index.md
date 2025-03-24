@@ -25,7 +25,6 @@ We are a welcoming community that will help you grow and educate in the Ethereum
 - [Create/edit content](/contributing/#how-to-update-content) – Suggest new pages or make tweaks to what's here already
 - [Add community resources](/contributing/content-resources/) – Add a helpful article or resource to a relevant page
 - [Suggest a design resource](/contributing/design/adding-design-resources/) – Add, update, and delete helpful design resources
-- [Add a glossary term](/contributing/adding-glossary-terms/) – Help us continue to expand the Ethereum [glossary](/glossary/)
 - [Quizzes](/contributing/quizzes/) – Add, update, and delete quiz question banks for a relevant page
 
 **Feature ideas**

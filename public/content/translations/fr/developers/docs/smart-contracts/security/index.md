@@ -115,7 +115,7 @@ L’existence d’audits et de primes de bogue n'exclut pas votre responsabilit�
 
 - Utilisez un [environnement de développement](/developers/docs/frameworks/) pour tester, compiler, déployer des contrats intelligents
 
-- Exécutez votre code sur des outils d'analyse de code basiques, tels que [Cyfrin Aderyn](https://github.com/Cyfrin/aderyn), Mythril et Slither. Idéalement, vous devriez le faire avant de fusionner chaque pull request et comparer les différences de sortie
+- Exécutez votre code sur des outils d'analyse de code basiques, tels que [Cyfrin Aaderyn](https://github.com/Cyfrin/aderyn), Mythril et Slither. Idéalement, vous devriez le faire avant de fusionner chaque pull request et comparer les différences de sortie
 
 - Assurez-vous que votre code est compilé sans erreurs, et que le compilateur Solidity n'émet aucun avertissement
 
@@ -519,7 +519,7 @@ Si vous comptez interroger un oracle sur le prix des actifs, envisagez d'utilise
 
 - **[Oxorio](https://oxor.io/)** - _Audits de contrats intelligents et services de sécurité blockchain avec expertise concernant l'EVM, Solidity, le ZK, la technologie inter-chaînes pour les entreprises de crypto et les projets de DeFi._
 
-- **[Inference](https://inference.ag/)** - _Entreprise d'audit de sécurité spécialisée dans l'audit de contrats intelligents pour les blockchains basées sur l'EVM. Grâce à ces auditeurs experts, elle identifie les problèmes potentiels et suggèrent des solutions opérationnelles pour les régler avant leur déploiement._
+- **[Inference](https://inference.ag/)** - _Entreprise d'audit de sécurité spécialisée dans l'audit de contrats intelligents pour les blockchains basées sur l'EVM. Grâce à ces auditeurs experts, elle identifie les problèmes potentiels et suggèrent des solutions opérationnelles pour les régler avant leur déploiement. _
 
 ### Plateformes de récompense de bug {#bug-bounty-platforms}
 
@@ -563,7 +563,7 @@ Si vous comptez interroger un oracle sur le prix des actifs, envisagez d'utilise
 
 - **[Norme de vérification de la sécurité des contrats intelligents](https://github.com/securing/SCSVS)** - _Liste de contrôle de quatorze parties créée pour standardiser la sécurité des contrats intelligents pour les développeurs, architectes, réviseurs de sécurité et fournisseurs._
 
-- **[Apprendre la sécurité et l'audit des contrats intelligents](https://updraft.cyfrin.io/courses/security)** - _Le cours ultime sur la sécurité et l'audit des contrats intelligents, conçu pour les développeurs de contrats intelligents souhaitant améliorer leurs pratiques en matière de sécurité et devenir des chercheurs en sécurité._
+- **[Apprendre la sécurité et l'audit des contrats intelligents](https://updraft.cyfrin.io/courses/security) - _Le cours ultime sur la sécurité et l'audit des contrats intelligents, conçu pour les développeurs de contrats intelligents souhaitant améliorer leurs pratiques en matière de sécurité et devenir des chercheurs en sécurité._
 
 ### Tutoriels sur la sécurité des contrats intelligents {#tutorials-on-smart-contract-security}
 

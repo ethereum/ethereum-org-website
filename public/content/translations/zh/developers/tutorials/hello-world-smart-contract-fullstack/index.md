@@ -260,7 +260,7 @@ Ethers.js 是一个程序库，通过以更加方便用户的方法打包[标准
 npm install --save-dev @nomiclabs/hardhat-ethers "ethers@^5.0.0"
 ```
 
-### 步骤 13：更新 hardhat.config.js {#step-13-update-hardhat.configjs}
+### 步骤 13：更新 hardhat.config.js {#step-13-update-hardhat-configjs}
 
 到目前为止，我们已经添加了几个依赖库和插件，现在我们需要更新 `hardhat.config.js`，以便项目使用所有这些新的组件。
 
