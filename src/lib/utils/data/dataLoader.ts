@@ -3,6 +3,10 @@ import { loadMockData } from "./loadMockData"
 
 const USE_MOCK_DATA = process.env.USE_MOCK_DATA === "true"
 
+if (USE_MOCK_DATA) {
+  console.warn("Using mock data")
+}
+
 type DataLoaderFunction<T> = () => Promise<T>
 
 /**
@@ -28,7 +32,6 @@ export function dataLoader<T extends unknown[]>(
   },
   cacheTimeout?: number
 ): () => Promise<T> {
-  if (USE_MOCK_DATA) console.warn("Using mock data")
   const cachedLoaders = loaders.map(([key, loader]) => {
     const cachedLoader = cacheAsyncFn(key, loader, {
       cacheTimeout,

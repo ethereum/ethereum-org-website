@@ -18,6 +18,12 @@
 // In-memory cache object
 const memoryCache: Record<string, { value: unknown; timestamp: number }> = {}
 
+const log = (message: string) => {
+  if (process.env.NODE_ENV === "development") {
+    console.log(message)
+  }
+}
+
 export function cacheAsyncFn<T>(
   key: string,
   fn: () => Promise<T>,
@@ -34,19 +40,19 @@ export function cacheAsyncFn<T>(
         options?.cacheTimeout && cacheAge > options.cacheTimeout
 
       if (!isCacheExpired) {
-        console.log("Cache hit", key)
+        log(`Cache hit: ${key}`)
         return cachedItem.value as T
       }
-      console.log("Cache expired", key)
+      log(`Cache expired: ${key}`)
     }
 
     // Fetch fresh data
-    console.log("Running function", key)
+    log(`Running function: ${key}`)
     const value = await fn()
 
     // Store in memory cache
     memoryCache[key] = { value: value, timestamp: now }
-    console.log("Function result cached", key)
+    log(`Function result cached: ${key}`)
 
     return value as T
   }
