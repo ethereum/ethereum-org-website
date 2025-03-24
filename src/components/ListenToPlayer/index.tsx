@@ -1,3 +1,5 @@
+"use client"
+
 import { useContext, useEffect, useState } from "react"
 import { Howl } from "howler"
 import { Portal } from "@radix-ui/react-portal"
@@ -223,6 +225,7 @@ const ListenToPlayer = ({ slug }: { slug: string }) => {
             isExpanded ? "bottom-4" : "bottom-0",
             "fixed left-1/2 right-auto z-10 -translate-x-1/2 sm:left-auto sm:right-5 sm:translate-x-0"
           )}
+          data-testid="player-widget-modal"
         >
           <div className="relative">
             <PlayerWidget

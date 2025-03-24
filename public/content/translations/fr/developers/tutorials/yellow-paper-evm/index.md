@@ -167,7 +167,7 @@ Nous avons un arrêt exceptionnel si l'une de ces conditions est vraie :
 
   La fonction _W(w,μ)_ est définie plus tard dans l'équation 150. _W(w,μ)_ est vraie si l'une de ces conditions est vraie :
 
-  - **_w ∈ {CREATE, CREATE2, SSTORE, SELFDESTRUCT}_** Ces opcodes modifient l'état, soit en créant un nouveau contrat, soit en stockant une valeur, soit en détruisant le contrat actuel.
+  - **_w ∈ \{CREATE, CREATE2, SSTORE, SELFDESTRUCT}_** Ces opcodes modifient l'état, soit en créant un nouveau contrat, soit en stockant une valeur, soit en détruisant le contrat actuel.
 
   - **_LOG0≤w ∧ w≤LOG4_** Si nous sommes appelés de manière statique, nous ne pouvons pas émettre d'entrées de journal. Les opcodes de journal sont tous dans la plage entre [`LOG0` (A0)](https://www.evm.codes/#a0) et [`LOG4` (A4)](https://www.evm.codes/#a4). Le nombre après l'opcode de journal spécifie combien de sujets l'entrée de journal contient.
   - **_w=CALL ∧ μ<sub>s</sub>[2]≠0_** Vous pouvez appeler un autre contrat lorsque vous êtes statique, mais si vous le faites, vous ne pouvez pas lui transférer de l'ETH.
@@ -228,7 +228,7 @@ L'adresse dont nous avons besoin pour trouver le solde est _μ<sub>s</sub>[0] mo
 
 Si _σ[μ<sub>s</sub>[0] mod 2<sup>160</sup>] ≠ ∅_, cela signifie qu'il y a des informations sur cette adresse. Dans ce cas, _σ[μ<sub>s</sub>[0] mod 2<sup>160</sup>]<sub>b</sub>_ est le solde de cette adresse. Si _σ[μ<sub>s</sub>[0] mod 2<sup>160</sup>] = ∅_, cela signifie que cette adresse n'est pas initialisée et le solde est zéro. Vous pouvez voir la liste des champs d'information du compte dans la section 4.1 à la page 4.
 
-La deuxième équation, _A'<sub>a</sub> ≡ A<sub>a</sub> ∪ {μ<sub>s</sub>[0] mod 2<sup>160</sup>}_, est liée à la différence de coût entre l'accès au stockage chaud (stockage qui a récemment été accédé et est susceptible d'être mis en cache) et le stockage froid (stockage qui n'a pas été accédé et est susceptible de se trouver dans un stockage plus lent qui est plus coûteux à récupérer). _A<sub>a</sub>_ est la liste des adresses précédemment accédées par la transaction, qui devraient donc être moins chères à accéder, comme défini dans la section 6.1 à la page 8. Vous pouvez en savoir plus sur ce sujet dans [l'EIP-2929](https://eips.ethereum.org/EIPS/eip-2929).
+La deuxième équation, _A'<sub>a</sub> ≡ A<sub>a</sub> ∪ \{μ<sub>s</sub>[0] mod 2<sup>160</sup>}_, est liée à la différence de coût entre l'accès au stockage chaud (stockage qui a récemment été accédé et est susceptible d'être mis en cache) et le stockage froid (stockage qui n'a pas été accédé et est susceptible de se trouver dans un stockage plus lent qui est plus coûteux à récupérer). _A<sub>a</sub>_ est la liste des adresses précédemment accédées par la transaction, qui devraient donc être moins chères à accéder, comme défini dans la section 6.1 à la page 8. Vous pouvez en savoir plus sur ce sujet dans [l'EIP-2929](https://eips.ethereum.org/EIPS/eip-2929).
 
 | Valeur | Mnemonic | δ  | α  | Description                             |
 | ------:| -------- | -- | -- | --------------------------------------- |

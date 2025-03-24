@@ -95,7 +95,7 @@ const ResourcesPage = ({ txCostsMedianUsd }) => {
         image="/images/heroes/guides-hub-hero.jpg"
       />
 
-      <BannerNotification shouldShow>
+      <BannerNotification shouldShow className="text-center max-md:flex-col">
         {t("page-resources-banner-notification-message")}{" "}
         <Link
           href={new URL(
@@ -115,11 +115,11 @@ const ResourcesPage = ({ txCostsMedianUsd }) => {
         heroImg={heroImg}
       />
 
-      <div className="sticky top-1 z-sticky my-8 flex flex-col items-center gap-3 py-4 text-center md:top-6 md:px-2">
+      <div className="sticky top-1 my-8 flex flex-col items-center gap-3 py-4 text-center md:top-6 md:px-2">
         <div className="my-2 text-body-medium">
           {t("page-resources-whats-on-this-page")}
         </div>
-        <nav className="mx-4 flex max-w-full gap-1 overflow-x-auto bg-background p-2 shadow md:max-w-[calc(100%-2rem)] md:rounded-2xl md:border md:p-0.5 md:shadow-lg">
+        <nav className="z-sticky mx-4 flex max-w-full gap-1 overflow-x-auto bg-background p-2 shadow md:max-w-[calc(100%-2rem)] md:rounded-2xl md:border md:p-0.5 md:shadow-lg">
           {resourceSections.map(({ key, title, icon }) => (
             <ButtonLink
               key={key}

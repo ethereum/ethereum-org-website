@@ -1,5 +1,6 @@
 ---
 title: Gaz et frais
+metaTitle: "Gaz et frais Ethereum : aperçu technique"
 description:
 lang: fr
 ---

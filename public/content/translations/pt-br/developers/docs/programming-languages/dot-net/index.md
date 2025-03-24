@@ -76,9 +76,9 @@ Procurando por mais recursos? Confira [ethereum.org/developers](/developers/).
 
 ## Colaboradores comunitários .NET {#dot-net-community-contributors}
 
-Na Nethereum, nós geralmente nos encontramos no [Gitter](https://gitter.im/Nethereum/Nethereum) onde todos são bem vindos para fazer e responder perguntas, obter ajuda ou simplesmente relaxar. Sinta-se à vontade para fazer uma PR ou abrir uma questão no [repositório da Nethereum no GitHub](https://github.com/Nethereum), ou apenas para navegar pelos vários projetos paralelos e exemplos que temos. Você também pode nos encontrar em [Discord](https://discord.gg/jQPrR58FxX)!
+Na Nethereum, nós geralmente nos encontramos no [Gitter](https://gitter.im/Nethereum/Nethereum) onde todos são bem vindos para fazer e responder perguntas, obter ajuda ou simplesmente relaxar. Sinta-se à vontade para fazer uma PR ou abrir uma questão no [repositório da Nethereum no Github](https://github.com/Nethereum), ou apenas para navegar pelos vários projetos paralelos e exemplos que temos. Você também pode nos encontrar em [Discord](https://discord.gg/jQPrR58FxX)!
 
-Se você é novo no Nethermind e precisa de ajuda para começar, junte-se ao nosso [Discord](http://discord.gg/PaCMRFdvWT). Os nossos desenvolvedores estão prontos para responder às suas perguntas. Para PRs ou problemas, confira o [repositório do GitHub da Nethermind](https://github.com/NethermindEth/nethermind).
+Se você é novo no Nethermind e precisa de ajuda para começar, junte-se ao nosso [Discord](http://discord.gg/PaCMRFdvWT). Os nossos desenvolvedores estão prontos para responder às suas perguntas. Para PRs ou problemas, confira o [repositório do Github da Nethermind](https://github.com/NethermindEth/nethermind).
 
 ## Outras listas agregadas {#other-aggregated-lists}
 

@@ -87,7 +87,7 @@ Para cualquier software personalizado o contratos inteligentes involucrados:
 
 Para productos de software relacionados con la configuración de nodo o cliente, administración o migración:
 
-**¿Qué clientes de la capa de consenso (por ejemplo, Lighthouse, Teku, Nimbus, Prysm) se permiten? **
+**¿Qué clientes de la capa de consenso (por ejemplo, ¿Se admiten Lighthouse, Teku, Nimbus, Prysm, Grandine)?**
 
 - ¿Qué clientes se admiten? ¿Puede elegir el usuario?
 - Esto se utiliza para determinar la puntuación «multicliente» de los productos.

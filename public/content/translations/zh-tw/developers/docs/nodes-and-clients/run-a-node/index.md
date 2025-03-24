@@ -311,7 +311,7 @@ reth node \
     --authrpc.port 8551
 ```
 
-請參閱[設定 Reth](https://reth.rs/run/config.html?highlight=data%20directory#configuring-reth) 以瞭解有關預設資料目錄的更多資訊。 [Besu 文件](https://reth.rs/run/mainnet.html)包含了額外的選項及設定細節。
+查看[設定 Reth](https://reth.rs/run/config.html?highlight=data%20directory#configuring-reth) 以了解更多有關預設資料目錄的資訊。 [Besu 文件](https://reth.rs/run/mainnet.html)包含了額外的選項及設定細節。
 
 #### 啟動共識用戶端 {#starting-the-consensus-client}
 
