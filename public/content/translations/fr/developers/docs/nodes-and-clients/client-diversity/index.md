@@ -79,6 +79,8 @@ Pour résoudre le problème de la diversité des clients, il ne suffit pas que l
 
 [Prysm](https://docs.prylabs.network/docs/getting-started)
 
+[Grandine](https://docs.grandine.io/)
+
 Les utilisateurs techniques peuvent aider à accélérer ce processus en rédigeant plus de tutoriels et de documentation pour les clients minoritaires et ainsi encourager leurs pairs à migrer loin des clients dominants. Des guides pour basculer vers un client de consensus minoritaire sont disponibles sur [clientdiversity.org](https://clientdiversity.org/).
 
 ## Tableaux de bord relatif à la diversité des clients {#client-diversity-dashboards}

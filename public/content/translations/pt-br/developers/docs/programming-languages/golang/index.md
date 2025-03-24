@@ -64,6 +64,7 @@ Precisa de uma introdução geral? Confira [ethereum.org/learn](/learn/) ou [eth
 - [Multi Geth](https://github.com/multi-geth/multi-geth) - _Suporte para muitos tipos de redes Ethereum_
 - [Geth Light Cliente](https://github.com/zsfelfoldi/go-ethereum/wiki/Geth-Light-Client) - _Implementação do Geth do Subprotocolo Light Ethereum_
 - [Ethereum Golang SDK](https://github.com/everFinance/goether) - _Uma implementação simples de carteira Ethereum e utilitários em Golang_
+- [Covalent Golang SDK](https://github.com/covalenthq/covalent-api-sdk-go) - _Acesso eficiente a dados blockchain via SDK Go para mais de 200 blockchains_
 
 Procurando por mais recursos? Confira [ethereum.org/developers](/developers/)
 

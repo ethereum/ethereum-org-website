@@ -74,7 +74,7 @@ Utiliser les méthodes de proxy nécessite une compréhension de la fonction **d
 
 Selon la [documentation Solidity](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#delegatecall-callcode-and-libraries) :
 
-> _Il existe une variante spéciale de l'appel de message, nommée **delegatecall** qui est identique à un appel de message à part le fait que le code à l'adresse cible est exécuté dans le contexte (c'est-à-dire à l'adresse) du contrat appelant et `msg.sender` et `msg.value` ne changent pas leurs valeurs. __Cela signifie qu'un contrat peut charger dynamiquement du code depuis une adresse différente à l'exécution. Le stockage, l'adresse actuelle et le solde font toujours référence au contrat appelant, seul le code est pris à partir de l'adresse appelée._
+> _Il existe une variante spéciale de l'appel de message, nommée **delegatecall** qui est identique à un appel de message à part le fait que le code à l'adresse cible est exécuté dans le contexte (c'est-à-dire à l'adresse) du contrat appelant et `msg.sender` et `msg.value` ne changent pas leurs valeurs. \_\_Cela signifie qu'un contrat peut charger dynamiquement du code depuis une adresse différente à l'exécution. Le stockage, l'adresse actuelle et le solde font toujours référence au contrat appelant, seul le code est pris à partir de l'adresse appelée._
 
 Le contrat proxy sait invoquer `delegatecall` chaque fois qu'un utilisateur appelle une fonction car il dispose d'une fonction `fallback` intégrée. En programmation Solidity, la [fonction fallback](https://docs.soliditylang.org/en/latest/contracts.html#fallback-function) est exécutée lorsqu'un appel de fonction ne correspond pas aux fonctions spécifiées dans un contrat.
 
@@ -160,6 +160,6 @@ Les timelocks donnent aux utilisateurs un certain temps pour quitter le système
 
 - [L'état des mises à jour des contrats intelligents](https://blog.openzeppelin.com/the-state-of-smart-contract-upgrades/) par Santiago Palladino
 - [Plusieurs façons de mettre à jour un contrat intelligent Solidity](https://cryptomarketpool.com/multiple-ways-to-upgrade-a-solidity-smart-contract/) - Blog Crypto Market Pool
-- [Apprendre à mettre à jour un contrat intelligent](https://docs.openzeppelin.com/learn/upgrading-smart-contracts) - OpenZeppelin Docs
+- [ Apprendre à mettre à jour un contrat intelligent](https://docs.openzeppelin.com/learn/upgrading-smart-contracts) - OpenZeppelin Docs
 - [La méthode proxy pour mettre à jour les contrats en Solidity : Proxy Transparent vs UUPS](https://mirror.xyz/0xB38709B8198d147cc9Ff9C133838a044d78B064B/M7oTptQkBGXxox-tk9VJjL66E1V8BUF0GF79MMK4YG0) par Naveen Samu
 - [Comment les mises à jour en diamant fonctionnent ?](https://dev.to/mudgen/how-diamond-upgrades-work-417j) par Nick Mudge
