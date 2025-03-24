@@ -116,7 +116,6 @@ module.exports = (phase, { defaultConfig }) => {
             "node_modules/@swc/core-linux-x64-musl",
             "node_modules/@esbuild/linux-x64",
             "src/data",
-            "src/intl",
             "public/**/*.jpg",
             "public/**/*.png",
             "public/**/*.webp",
