@@ -1,5 +1,6 @@
 ---
 title: Finance Décentralisée (DeFi)
+metaTitle: Qu'est-ce que DeFi ? | Avantages et utilisation de la finance décentralisée
 description: Un aperçu de la DeFi sur Ethereum
 lang: fr
 template: use-cases
@@ -324,7 +325,7 @@ Vous pouvez voir la DeFi comme des couches :
 3. Les protocoles, [contrats intelligents](/glossary/#smart-contract) qui offrent des fonctionnalités comme les prêts d'actifs décentralisés.
 4. [Les applications](/dapps/) les produits que vous utilisez pour accéder et gérer les protocoles.
 
-Note : Beaucoup de DeFi utilisent la [norme ERC-20](/glossary/#erc-20). Les applications de la DeFi utilisent un wrapper pour ETH, appelé Wrapped Ether (WETH). [En apprendre plus à propos de l'ether symbolique](/wrapped-eth).
+Note : Beaucoup de DeFi utilisent la [norme ERC-20](/glossary/#erc-20). Les applications de DeFi utilisent un "wrapper" pour l'ETH appelé Wrapped Ether (WETH). [En apprendre plus à propos de l'ether symbolique](/wrapped-eth).
 
 ## Fabriquer une DeFi {#build-defi}
 

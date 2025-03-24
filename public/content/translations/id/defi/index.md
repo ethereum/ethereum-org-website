@@ -1,5 +1,6 @@
 ---
 title: Keuangan terdesentralisasi (DeFi)
+metaTitle: Apa yang dimaksud dengan DeFi? | Manfaat dan Kegunaan Keuangan Terdesentralisasi
 description: Gambaran umum tentang DeFi di Ethereum
 lang: id
 template: use-cases
@@ -324,7 +325,7 @@ Anda dapat membayangkan tentang DeFi dalam lapisan:
 3. Protokol – [kontrak pintar](/glossary/#smart-contract) yang menyediakan fungsionalitas, misalnya, layanan yang memungkinkan pemberian pinjaman aset yang terdesentralisasi.
 4. [Aplikasi](/dapps/) – produk yang kita gunakan untuk mengelola dan mengakses protokol.
 
-Catatan: sebagian besar DeFi menggunakan [standar ERC-20](/glossary/#erc-20). Aplikasi di DeFi menggunakan pembungkus untuk ETH yang disebut Wrapped Ether (WETH). [Pelajari lebih lanjut tentang wrapped ether](/wrapped-eth).
+Catatan: sebagian besar DeFi menggunakan [standar ERC-20](/glossary/#erc-20). Aplikasi di DeFi menggunakan pembungkus ETH yang disebut Wrapped ether (WETH). [Pelajari lebih lanjut tentang wrapped ether](/wrapped-eth).
 
 ## Bangun DeFi {#build-defi}
 

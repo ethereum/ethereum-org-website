@@ -1,5 +1,6 @@
 ---
 title: Finanzas descentralizadas (DeFi)
+metaTitle: '¿Qué son las DeFi? | Beneficios y usos de las Finanzas Descentralizadas'
 description: Una visión de las finanzas descentralizadas en Ethereum
 lang: es
 template: use-cases
