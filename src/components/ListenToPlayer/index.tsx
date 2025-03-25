@@ -86,12 +86,14 @@ const ListenToPlayer = ({ slug }: { slug: string }) => {
       }
       audioPlayer.unload()
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentTrackIndex])
 
   useEffect(() => {
     if (sound && autoplay && isPlaying) {
       sound.play()
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [sound])
 
   useEffect(() => {
