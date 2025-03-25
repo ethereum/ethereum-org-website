@@ -2,6 +2,7 @@
 
 import { useContext, useEffect, useState } from "react"
 import { Howl } from "howler"
+import { useLocale } from "next-intl"
 import { Portal } from "@radix-ui/react-portal"
 
 import PlayerWidget from "@/components/ListenToPlayer/PlayerWidget"
@@ -16,6 +17,7 @@ import { FeedbackWidgetContext } from "@/contexts/FeedbackWidgetContext"
 import { useTranslation } from "@/hooks/useTranslation"
 
 const ListenToPlayer = ({ slug }: { slug: string }) => {
+  const locale = useLocale()
   const { setShowFeedbackWidget } = useContext(FeedbackWidgetContext)
   const { playlist, index } = getPlaylistBySlug(slug)
 
@@ -208,6 +210,8 @@ const ListenToPlayer = ({ slug }: { slug: string }) => {
   }
 
   if (!playlist.length || index === -1) return null
+
+  if (locale !== "en") return null
 
   return (
     <>
