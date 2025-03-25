@@ -40,7 +40,7 @@ Ang ideya ng 'Web 3.0' ay nagmula sa co-founder ng [Ethereum](/what-is-ethereum/
 
 ### Ano ang Web3? {#what-is-web3}
 
-Web3 ang naging katawagan sa pananaw ng makabago at mas maayos na internet. Ang Web3 ay gumagamit ng mga blockchain, cryptocurrency, at NFT upang ibigay sa mga user nito ang kapangyarihan sa pamamagitan ng pagmamay-ari. Ipinaliwanag ito nang mabuti sa [isang post sa Twitter noong 2020](https://twitter.com/himgajria/status/1266415636789334016): read-only ang Web1, read-write ang Web2, at magiging read-write-own ang Web 3.
+Web3 ang naging katawagan sa pananaw ng makabago at mas maayos na internet. Ang Web3 ay gumagamit ng mga blockchain, cryptocurrency, at NFT upang ibigay sa mga user nito ang kapangyarihan sa pamamagitan ng pagmamay-ari. Ipinaliwanag ito nang mabuti sa [isang post sa Twitter noong 2020](https://x.com/himgajria/status/1266415636789334016): read-only ang Web1, read-write ang Web2, at magiging read-write-own ang Web 3.
 
 #### Mga pangunahing ideya ng Web3 {#core-ideas}
 

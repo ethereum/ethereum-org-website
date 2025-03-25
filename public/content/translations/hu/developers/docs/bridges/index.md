@@ -128,7 +128,7 @@ A láncok szerződéses tevékenységének nyomon követéséhez a fejlesztők a
 - [Clusters: Hogyan alakítják a bizalomigénytől mentes és a minimális bizalomigényű hidak a többláncos képet?](https://blog.celestia.org/clusters/) 2021. október 4. – Mustafa Al-Bassam
 - [LI.FI: A hidaknál a bizalomigény széles tartománya van jelen](https://blog.li.fi/li-fi-with-bridges-trust-is-a-spectrum-354cd5a1a6d8) 2022. április 28. – Arjun Chand
 
-Ezen kívül [James Prestwich](https://twitter.com/_prestwich) tanulságos előadásai segíthetnek a hidak mélyebb megértésében:
+Ezen kívül [James Prestwich](https://x.com/_prestwich) tanulságos előadásai segíthetnek a hidak mélyebb megértésében:
 
 - [Hidakat építsünk, ne fallal körülvett kerteket](https://youtu.be/ZQJWMiX4hT0)
 - [A hidak részletes bemutatása](https://youtu.be/b0mC-ZqN8Oo)

@@ -1537,4 +1537,4 @@ Ebaaaaa, você chegou até o fim deste tutorial! Para recapitular, você aprende
 
 Agora você está totalmente equipado para aplicar suas habilidades deste tutorial para construir seu próprio projeto dapp customizado! Como sempre, se você tiver questões, não hesite em nos contatar para pedir ajuda no[Discord da Alchemy](https://discord.gg/gWuC7zB). 🧙‍♂️
 
-Uma vez que você terminou este tutorial, nos diga como foi sua experiência ou se você tem alguma opinião, nos marcando no Twitter [@alchemyplatform](https://twitter.com/AlchemyPlatform)!
+Uma vez que você terminou este tutorial, nos diga como foi sua experiência ou se você tem alguma opinião, nos marcando no Twitter [@alchemyplatform](https://x.com/AlchemyPlatform)!

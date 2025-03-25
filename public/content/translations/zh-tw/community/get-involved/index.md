@@ -120,16 +120,16 @@ lang: zh-tw
 
 「DAO」是指去中心化自治組織。 這些群體會利用以太坊技術加速整合及合作。 例如，為了控制會員，他們會針對提案進行投票，或者管理質押池內的資產。 當去中心化自治組織仍維持在試驗狀態時，他們讓你有機會去尋找你認同的群體、合作者，然後在以太坊的社群內培養你的影響力。 [更多去中心化自治組織相關資訊](/dao/)
 
-- [DAOSquare](https://daosquare.io/) [@DAOSquare](https://twitter.com/DAOSquare) - _在科技界以外推廣去中心化自治組織的概念，並幫助大家透過此等組織創造價值_
-- [開發者去中心化自治組織](https://www.developerdao.com/) [@developer_dao](https://twitter.com/developer_dao) - _一個認為網際網路為集體所有的開發者社群_
-- [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) - _由一些協助開發 Web3 的自由工作者所組成的去中心化自治組織_
-- [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) - _DAOhaus 的社群管理體系_
-- [LexDAO](https://lexdao.org) [@lex_DAO](https://twitter.com/lex_DAO) - _法律建設_
-- [Machi X](https://machix.com) [@MachiXOfficial](https://twitter.com/MachiXOfficial) - _藝術群體_
-- [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://twitter.com/VENTURE_DAO) - _投資 pre-seed 輪加密貨幣專案的風投基金_
-- [MetaGame](https://metagame.wtf) [@MetaFam](https://twitter.com/MetaFam) - _現實生活的 MMORPG 遊戲機制_
-- [MetaFactory](https://metafactory.ai) [@TheMetaFactory](https://twitter.com/TheMetaFactory) - _數字物理衣物品牌_
-- [MolochDAO](https://molochdao.com) [@MolochDAO](https://twitter.com/MolochDAO) - _一個致力於為以太坊發展提供資金的社群_
-- [Raid Guild](https://raidguild.org) [@RaidGuild](https://twitter.com/RaidGuild) - _Web3 建造者集中地_
+- [DAOSquare](https://daosquare.io/) [@DAOSquare](https://x.com/DAOSquare) - _在科技界以外推廣去中心化自治組織的概念，並幫助大家透過此等組織創造價值_
+- [開發者去中心化自治組織](https://www.developerdao.com/) [@developer_dao](https://x.com/developer_dao) - _一個認為網際網路為集體所有的開發者社群_
+- [dOrg](https://dOrg.tech) [@dOrg_tech](https://x.com/dOrg_tech) - _由一些協助開發 Web3 的自由工作者所組成的去中心化自治組織_
+- [HausDAO](https://daohaus.club) [@nowdaoit](https://x.com/nowdaoit) - _DAOhaus 的社群管理體系_
+- [LexDAO](https://lexdao.org) [@lex_DAO](https://x.com/lex_DAO) - _法律建設_
+- [Machi X](https://machix.com) [@MachiXOfficial](https://x.com/MachiXOfficial) - _藝術群體_
+- [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://x.com/VENTURE_DAO) - _投資 pre-seed 輪加密貨幣專案的風投基金_
+- [MetaGame](https://metagame.wtf) [@MetaFam](https://x.com/MetaFam) - _現實生活的 MMORPG 遊戲機制_
+- [MetaFactory](https://metafactory.ai) [@TheMetaFactory](https://x.com/TheMetaFactory) - _數字物理衣物品牌_
+- [MolochDAO](https://molochdao.com) [@MolochDAO](https://x.com/MolochDAO) - _一個致力於為以太坊發展提供資金的社群_
+- [Raid Guild](https://raidguild.org) [@RaidGuild](https://x.com/RaidGuild) - _Web3 建造者集中地_
 
 無論何時、無論以何種方式，當你為 ethereum.org 出力時，請記得遵守 ethereum.org 的[行為守則](/community/code-of-conduct)！

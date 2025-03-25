@@ -288,6 +288,6 @@ Chrome uzantıları ve Firefox Eklentileri gibi tarayıcı uzantıları, tarayı
 - [Rehber: Dolandırıcılık token'ları nasıl tespit edilir](/guides/how-to-id-scam-tokens/)
 - [Güvende Kalmak: Yaygın Dolandırıcılıklar](https://support.mycrypto.com/staying-safe/common-scams) - _MyCrypto_
 - [Dolandırıcılıklardan Kaçınmak](https://bitcoin.org/en/scams) - _Bitcoin.org_
-- [Yaygın kripto kimlik avı e-postaları ve mesajları hakkında Twitter ileti dizisi](https://twitter.com/tayvano_/status/1516225457640787969) - _Taylor Monahan_
+- [Yaygın kripto kimlik avı e-postaları ve mesajları hakkında Twitter ileti dizisi](https://x.com/tayvano_/status/1516225457640787969) - _Taylor Monahan_
 
 <QuizWidget quizKey="security" />

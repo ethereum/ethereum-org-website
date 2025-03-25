@@ -290,6 +290,6 @@ Las extensiones del navegador, como las extensiones de Chrome o los complementos
 - [Guía: cómo identificar tókenes fraudulentos](/guides/how-to-id-scam-tokens/)
 - [Operar con seguridad: estafas comunes](https://support.mycrypto.com/staying-safe/common-scams) - _MyCrypto_
 - [Evitar estafas](https://bitcoin.org/en/scams), _Bitcoin.org_
-- [Hilo de Twitter sobre correos electrónicos y mensajes comunes de phishing de criptomonedas](https://twitter.com/tayvano_/status/1516225457640787969) - _Taylor Monahan_
+- [Hilo de Twitter sobre correos electrónicos y mensajes comunes de phishing de criptomonedas](https://x.com/tayvano_/status/1516225457640787969) - _Taylor Monahan_
 
 <QuizWidget quizKey="security" />

@@ -40,7 +40,7 @@ Remix IDEは、SolidityとVyperの両方でコントラクトを作成および�
 - [Solidity Gitterチャットルーム](https://gitter.im/ethereum/solidity)は、[Solidity Matrixチャットルーム](https://matrix.to/#/#ethereum_solidity:gitter.im)へブリッジされました。
 - [チートシート](https://reference.auditless.com/cheatsheet)
 - [Solidityブログ](https://blog.soliditylang.org/)
-- [Solidity Twitter](https://twitter.com/solidity_lang)
+- [Solidity Twitter](https://x.com/solidity_lang)
 
 ### コントラクトのコード例 {#example-contract}
 
@@ -268,7 +268,7 @@ def endAuction():
 - [Feに関するアナウンス](https://snakecharmers.ethereum.org/fe-a-new-language-for-the-ethereum-ecosystem/)
 - [2021年のFeのロードマップ](https://notes.ethereum.org/LVhaTF30SJOpkbG1iVw1jg)
 - [FeのDiscordチャット](https://discord.com/invite/ywpkAXFjZH)
-- [Twitter](https://twitter.com/official_fe)
+- [Twitter](https://x.com/official_fe)
 
 ### コントラクトのコード例 {#example-contract-3}
 

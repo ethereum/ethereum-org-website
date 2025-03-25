@@ -377,7 +377,7 @@ Bei Angriffen auf Ethereum werden meist Schwachstellen von bestimmten Anwendunge
 
 - [Bericht zur Wormhole-Sicherheitslücke](https://blog.chainalysis.com/reports/wormhole-hack-february-2022/)
 - [Liste der Nachbetrachtungen von Ethereum-Vertrags-Hacks](https://forum.openzeppelin.com/t/list-of-ethereum-smart-contracts-post-mortems/1191)
-- [Rekt News](https://twitter.com/RektHQ?s=20\&t=3otjYQdM9Bqk8k3n1a1Adg)
+- [Rekt News](https://x.com/RektHQ?s=20\&t=3otjYQdM9Bqk8k3n1a1Adg)
 
 #### Aktuelle Forschung {#recent-research-19}
 

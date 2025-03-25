@@ -40,7 +40,7 @@ Pojam „Web 3.0“ skovao je suosnivač [Ethereum-a](/what-is-ethereum/) Gevin 
 
 ### Šta je Web3? {#what-is-web3}
 
-Web3 je postao sveobuhvatan termin za viziju novog, boljeg interneta. U svojoj srži, Web3 koristi lance blokova, kriptovalute i NFT-ove kako bi vratio moć korisnicima u obliku vlasništva. [Objava na Twitter-u iz 2020. godine](https://twitter.com/himgajria/status/1266415636789334016) je to najbolje objasnila: Web1 je bio samo za čitanje, Web2 za čitanje i upisivanje, a Web3 će biti za čitanje, upisivanje i vlasništvo.
+Web3 je postao sveobuhvatan termin za viziju novog, boljeg interneta. U svojoj srži, Web3 koristi lance blokova, kriptovalute i NFT-ove kako bi vratio moć korisnicima u obliku vlasništva. [Objava na Twitter-u iz 2020. godine](https://x.com/himgajria/status/1266415636789334016) je to najbolje objasnila: Web1 je bio samo za čitanje, Web2 za čitanje i upisivanje, a Web3 će biti za čitanje, upisivanje i vlasništvo.
 
 #### Osnovne ideje Web3 {#core-ideas}
 

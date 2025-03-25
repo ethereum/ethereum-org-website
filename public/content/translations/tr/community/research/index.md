@@ -377,7 +377,7 @@ Ethereum'a yönelik saldırılar, genellikle protokolün kendisindeki güvenlik 
 
 - [Wormhole istismar raporu](https://blog.chainalysis.com/reports/wormhole-hack-february-2022/)
 - [Ethereum sözleşme saldırıları sonrası analizlerin listesi](https://forum.openzeppelin.com/t/list-of-ethereum-smart-contracts-post-mortems/1191)
-- [Rekt Haberleri](https://twitter.com/RektHQ?s=20\&t=3otjYQdM9Bqk8k3n1a1Adg)
+- [Rekt Haberleri](https://x.com/RektHQ?s=20\&t=3otjYQdM9Bqk8k3n1a1Adg)
 
 #### Yakın geçmişteki araştırmalar {#recent-research-19}
 

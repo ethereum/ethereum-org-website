@@ -71,7 +71,7 @@ export const QuizButtonGroup = ({
     )}`
 
     window.open(
-      `https://twitter.com/intent/tweet?text=${tweet}&hashtags=${hashtags}`
+      `https://x.com/intent/tweet?text=${tweet}&hashtags=${hashtags}`
     )
   }
 

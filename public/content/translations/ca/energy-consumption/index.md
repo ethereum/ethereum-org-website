@@ -38,7 +38,7 @@ Així com a mecanisme de construcció de confiança en la prova de participació
 
 <p style={{ textAlign: "center" }}><small><i>Estimació del consum energètic de la prova de treball per tx utilitzada en una figura en base a les <a href="https://blog.ethereum.org/2021/05/18/country-power-no-more/" target="_blank" rel="noopener noreferrer">dades de maig de 2021</a>, al moment d'escriure la mateixa font suggeria un consum de fins a <a href="https://digiconomist.net/ethereum-energy-consumption" target="_blank" rel="noopener noreferrer">175,56 kWh</a></i></small></p>
 
-Comparem aquests nombres amb un servei com ara Visa. 100.000 transaccions de Visa utilitzen 149 kWh d'energia<sup>[^2]</sup>. Assumint que la fragmentació o «sharding» s'ha implementat, la tasa actual de transaccions d'Ethereum (15 transaccions per segon) s'incrementaria al menys en 64 vegades (el nombre de «shards»), sense comptabilitzar les optimitzacions adicionals dels «rollups». Una estimació realista per a un Ethereum posfusió i fragmentat amb «rollups» és de [25.000 - 100.000](https://twitter.com/VitalikButerin/status/1312905884549300224?s=20) transaccions per segon. Podem utilitzar aquesta informació per a estimar una quantitat màxima i mínima de consum energètic per cada 100.000 transaccions.
+Comparem aquests nombres amb un servei com ara Visa. 100.000 transaccions de Visa utilitzen 149 kWh d'energia<sup>[^2]</sup>. Assumint que la fragmentació o «sharding» s'ha implementat, la tasa actual de transaccions d'Ethereum (15 transaccions per segon) s'incrementaria al menys en 64 vegades (el nombre de «shards»), sense comptabilitzar les optimitzacions adicionals dels «rollups». Una estimació realista per a un Ethereum posfusió i fragmentat amb «rollups» és de [25.000 - 100.000](https://x.com/VitalikButerin/status/1312905884549300224?s=20) transaccions per segon. Podem utilitzar aquesta informació per a estimar una quantitat màxima i mínima de consum energètic per cada 100.000 transaccions.
 
 - 25.000 transaccions per segon.
 - `100.000 / 25.000 = 4` segons per processar 100.000 transaccions.
@@ -71,7 +71,7 @@ Mentre que el consum energètic d'Ethereum històricament ha estat substancial, 
 - [Consum energètic d'Ethereum](https://mirror.xyz/jmcook.eth/ODpCLtO4Kq7SCVFbU4He8o8kXs418ZZDTj0lpYlZkR8)
 - [Emissions d'Ethereum: una estimació integral](https://kylemcdonald.github.io/ethereum-emissions/)_ Kyle McDonald_
 - [Índex de consum energètic d'Ethereum](https://digiconomist.net/ethereum-energy-consumption/) – _Digiconomist_
-- [ETHMerge.com](https://ethmerge.com/) — *[@InsideTheSim](https://twitter.com/InsideTheSim)*
+- [ETHMerge.com](https://ethmerge.com/) — *[@InsideTheSim](https://x.com/InsideTheSim)*
 
 ## Temes relacionats {#related-topics}
 

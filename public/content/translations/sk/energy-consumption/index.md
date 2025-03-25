@@ -71,7 +71,7 @@ Natívne platformy pre financovanie verejných statkov fungujúcich na princípo
 - [Správa Bieleho domu o proof-of-work blockchainoch](https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
 - [Emisie Etherea: súhrnný odhad](https://kylemcdonald.github.io/ethereum-emissions/) – _Kyle McDonald_
 - [Index spotreby energie Ethera](https://digiconomist.net/ethereum-energy-consumption/) – _Digiconomist_
-- [ETHMerge.com](https://ethmerge.com/) – _[@InsideTheSim](https://twitter.com/InsideTheSim)_
+- [ETHMerge.com](https://ethmerge.com/) – _[@InsideTheSim](https://x.com/InsideTheSim)_
 - [Zlúčenie – vplyvy na spotrebu elektriny a uhlíkovú stopu siete Ethereum](https://carbon-ratings.com/eth-report-2022) – _CCRI_
 - [Spotreba energie Etherea](https://mirror.xyz/jmcook.eth/ODpCLtO4Kq7SCVFbU4He8o8kXs418ZZDTj0lpYlZkR8)
 

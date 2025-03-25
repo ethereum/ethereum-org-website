@@ -269,4 +269,4 @@ Con este tutorial, podemos entender conceptos fundamentales de Ethereum y cómo 
 
 El panel que contiene todo el código utilizado en este tutorial se puede encontrar [aquí](https://duneanalytics.com/paulapivat/Learn-Ethereum).
 
-Para más usos de datos para explorar web3 [encuéntreme en Twitter](https://twitter.com/paulapivat).
+Para más usos de datos para explorar web3 [encuéntreme en Twitter](https://x.com/paulapivat).

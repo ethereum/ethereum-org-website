@@ -60,8 +60,8 @@ lang: el
 ## YouTube και Twitter {#youtube-and-twitter}
 
 <SocialListItem socialIcon="youtube"><Link href="https://www.youtube.com/c/EthereumFoundation">Ethereum Foundation</Link> - Μείνετε ενημερωμένοι με ό,τι πιο πρόσφατο από το Ίδρυμα Ethereum.</SocialListItem>
-<SocialListItem socialIcon="twitter"><Link href="https://twitter.com/ethereum">@ethereum</Link> - Επίσημος λογαριασμός του Ιδρύματος Ethereum.</SocialListItem>
-<SocialListItem socialIcon="twitter"><Link href="https://twitter.com/ethdotorg">@ethdotorg</Link> - Η πύλη στο Ethereum που δημιουργήθηκε για την αναπτυσσόμενη παγκόσμια κοινότητα μας.</SocialListItem>
+<SocialListItem socialIcon="twitter"><Link href="https://x.com/ethereum">@ethereum</Link> - Επίσημος λογαριασμός του Ιδρύματος Ethereum.</SocialListItem>
+<SocialListItem socialIcon="twitter"><Link href="https://x.com/ethdotorg">@ethdotorg</Link> - Η πύλη στο Ethereum που δημιουργήθηκε για την αναπτυσσόμενη παγκόσμια κοινότητα μας.</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://hive.one/c/ethereum?page=1">Λίστα με σημαντικούς λογαριασμούς Ethereum twitter.</Link></SocialListItem>
 
 <Divider />

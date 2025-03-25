@@ -1727,4 +1727,4 @@ Fantastico, sei arrivato alla fine del tutorial! Per ricapitolare, hai imparato 
 
 Ora hai tutti gli strumenti applicare le competenze apprese in questo tutorial per costruire il tuo progetto dapp! Come sempre, se hai domande, non esitare a contattarci per chiedere aiuto sul [Discord di Alchemy](https://discord.gg/gWuC7zB). 🧙‍♂️
 
-Una volta completato questo tutorial, facci sapere come è stata la tua esperienza o se hai qualche feedback taggandoci su Twitter [@alchemyplatform](https://twitter.com/AlchemyPlatform)!
+Una volta completato questo tutorial, facci sapere come è stata la tua esperienza o se hai qualche feedback taggandoci su Twitter [@alchemyplatform](https://x.com/AlchemyPlatform)!

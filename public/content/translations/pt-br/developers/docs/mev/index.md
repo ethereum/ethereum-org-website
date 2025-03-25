@@ -78,7 +78,7 @@ No entanto, uma vez que as transações NFT acontecem na mesma blockchain compar
 
 Por exemplo, se há o lançamento de um NFT popular e um buscador quer um determinado NFT ou um determinado conjunto de NFTs, ele pode programar uma transação de tal forma a ser o primeiro a comprar a NFT ou ele pode comprar todo o conjunto de NFTs em uma única transação. Ou se um NFT estiver [listado por um preço baixo de maneira equivocada](https://www.theblockcrypto.com/post/113546/mistake-sees-69000-cryptopunk-sold-for-less-than-a-cent), um buscador pode se adiantar por meio de frontrun a outros compradores e adquiri-lo por baixo custo.
 
-Um exemplo proeminente de NFT com MEV ocorreu quando um buscador gastou US$ 7 milhões para [comprar](https://etherscan.io/address/0x650dCdEB6ecF05aE3CAF30A70966E2F395d5E9E5) cada Cryptopunk ao preço mínimo. Um pesquisador de blockchain [explicou no Twitter](https://twitter.com/IvanBogatyy/status/1422232184493121538) como o comprador trabalhou com um provedor de MEV para manter a compra em segredo.
+Um exemplo proeminente de NFT com MEV ocorreu quando um buscador gastou US$ 7 milhões para [comprar](https://etherscan.io/address/0x650dCdEB6ecF05aE3CAF30A70966E2F395d5E9E5) cada Cryptopunk ao preço mínimo. Um pesquisador de blockchain [explicou no Twitter](https://x.com/IvanBogatyy/status/1422232184493121538) como o comprador trabalhou com um provedor de MEV para manter a compra em segredo.
 
 ### A cauda longa {#mev-examples-long-tail}
 
@@ -214,7 +214,7 @@ Alguns projetos, como MEV Boost, usam a Builder API como parte de uma estrutura 
 - [O Ethereum é uma Floresta Sombria](https://www.paradigm.xyz/2020/08/ethereum-is-a-dark-forest/)
 - [Escapando da Floresta Sombria](https://samczsun.com/escaping-the-dark-forest/)
 - [Flashbots: Superando a crise MEV](https://medium.com/flashbots/frontrunning-the-mev-crisis-40629a613752)
-- [Tópicos sobre MEV de @bertcmiller](https://twitter.com/bertcmiller/status/1402665992422047747)
+- [Tópicos sobre MEV de @bertcmiller](https://x.com/bertcmiller/status/1402665992422047747)
 - [MEV-Boost: Arquitetura Flashbots pronta para a Fusão](https://ethresear.ch/t/mev-boost-merge-ready-flashbots-architecture/11177)
 - [O que é MEV Boost](https://www.alchemy.com/overviews/mev-boost)
 - [Por que executar mev-boost?](https://writings.flashbots.net/writings/why-run-mevboost/)

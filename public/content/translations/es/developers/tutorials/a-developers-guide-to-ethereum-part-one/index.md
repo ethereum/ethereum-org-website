@@ -290,4 +290,4 @@ Más información sobre el [gas](/developers/docs/gas/#post-london)
 
 ## Tómese un respiro {#and-breathe}
 
-Después de todo lo que hemos aprendido hasta ahora, es un buen momento para hacer una pausa. Todavía hay mucho por indagar, por lo que continuaremos explorando en la parte 2 de esta serie. Algunos conceptos que trataremos posteriormente: conectarse a un nodo real, contratos inteligentes y tokens. ¿Tiene alguna pregunta? Si la tiene, adelante, ¡pregúntemela! Sus comentarios ayudarán a definir el camino a seguir. Puede hacer solicitudes a través de [Twitter](https://twitter.com/wolovim).
+Después de todo lo que hemos aprendido hasta ahora, es un buen momento para hacer una pausa. Todavía hay mucho por indagar, por lo que continuaremos explorando en la parte 2 de esta serie. Algunos conceptos que trataremos posteriormente: conectarse a un nodo real, contratos inteligentes y tokens. ¿Tiene alguna pregunta? Si la tiene, adelante, ¡pregúntemela! Sus comentarios ayudarán a definir el camino a seguir. Puede hacer solicitudes a través de [Twitter](https://x.com/wolovim).

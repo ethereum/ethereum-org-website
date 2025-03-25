@@ -90,7 +90,7 @@ Setelah menguji kontrak Anda, ada baiknya meminta seseorang untuk memeriksa kode
 
 Melakukan uji coba audit kontrak pintar adalah satu cara untuk melakukan tinjauan kode secara independen. Pihak auditor berperan penting dalam memastikan bahwa kontrak pintar aman dan bebas dari cacat kualitas serta kesalahan desain.
 
-Meskipun demikian, jangan menganggap audit sebagai solusi ajaib untuk semua masalah. Audit kontrak pintar tidak akan menemukan setiap bug dan sebagian besar audit dirancang untuk memberikan babak tinjauan tambahan, yang dapat membantu mendeteksi masalah yang terlewatkan oleh pengembang selama pengembangan awal dan pengujian. Sebaiknya Anda juga mengikuti [praktik terbaik dalam bekerja sama dengan auditor](https://twitter.com/tinchoabbate/status/1400170232904400897), seperti mendokumentasikan kode dengan benar dan menambahkan komentar dalam kode, guna memaksimalkan manfaat audit kontrak pintar.
+Meskipun demikian, jangan menganggap audit sebagai solusi ajaib untuk semua masalah. Audit kontrak pintar tidak akan menemukan setiap bug dan sebagian besar audit dirancang untuk memberikan babak tinjauan tambahan, yang dapat membantu mendeteksi masalah yang terlewatkan oleh pengembang selama pengembangan awal dan pengujian. Sebaiknya Anda juga mengikuti [praktik terbaik dalam bekerja sama dengan auditor](https://x.com/tinchoabbate/status/1400170232904400897), seperti mendokumentasikan kode dengan benar dan menambahkan komentar dalam kode, guna memaksimalkan manfaat audit kontrak pintar.
 
 #### Hadiah bounty bug {#bug-bounties}
 

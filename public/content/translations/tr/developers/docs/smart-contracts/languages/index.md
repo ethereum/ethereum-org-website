@@ -40,7 +40,7 @@ Programlama dilleri, özellikle JavaScript veya Python hakkında önceden bilgiy
 - [Solidity Matrix Chatroom](https://matrix.to/#/#ethereum_solidity:gitter.im) ile köprülenmiş [Solidity Gitter Chatroom](https://gitter.im/ethereum/solidity)
 - [Kopya Kağıdı](https://reference.auditless.com/cheatsheet)
 - [Solidity Bloğu](https://blog.soliditylang.org/)
-- [Solidity Twitter](https://twitter.com/solidity_lang)
+- [Solidity Twitter](https://x.com/solidity_lang)
 
 ### Örnek sözleşme {#example-contract}
 
@@ -268,7 +268,7 @@ Hâlihazırda akıllı sözleşmeler konusunda deneyimliyseniz, [buradan](https:
 - [Fe Duyurusu](https://snakecharmers.ethereum.org/fe-a-new-language-for-the-ethereum-ecosystem/)
 - [Fe 2021 Yol Haritası](https://notes.ethereum.org/LVhaTF30SJOpkbG1iVw1jg)
 - [Fe Discord Sohbeti](https://discord.com/invite/ywpkAXFjZH)
-- [Fe Twitter](https://twitter.com/official_fe)
+- [Fe Twitter](https://x.com/official_fe)
 
 ### Örnek sözleşme {#example-contract-3}
 

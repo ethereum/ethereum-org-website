@@ -19,7 +19,7 @@ A EF não é uma empresa, nem mesmo uma organização tradicional sem fins lucra
 
 O [Programa de Apoio ao Ecossistema](https://esp.ethereum.foundation/) foi criado para fornecer suporte financeiro ou não financeiro a projetos e entidades dentro da maior comunidade Ethereum, a fim de acelerar o crescimento do ecossistema. O Programa de Apoio ao Ecossistema é uma expansão do Programa de Bolsas Ethereum, cujo foco principal é oferecer apoio financeiro.
 
-Saiba mais sobre o Programa de Apoio ao Ecossistema, o antigo programa de bolsas e o processo de concessão de novas aplicações em [esp.ethereum.foundation](https://esp.ethereum.foundation/). Você também pode visualizar o [Blog do Programa de Apoio ao Ecossistema](https://blog.ethereum.org/category/ecosystem-support-program/) ou seguir a [@EF_ESP](https://twitter.com/EF_ESP) para saber das últimas notícias e comunicados.
+Saiba mais sobre o Programa de Apoio ao Ecossistema, o antigo programa de bolsas e o processo de concessão de novas aplicações em [esp.ethereum.foundation](https://esp.ethereum.foundation/). Você também pode visualizar o [Blog do Programa de Apoio ao Ecossistema](https://blog.ethereum.org/category/ecosystem-support-program/) ou seguir a [@EF_ESP](https://x.com/EF_ESP) para saber das últimas notícias e comunicados.
 
 ### Devcon {#devcon}
 
@@ -27,7 +27,7 @@ Desde 2014, a Fundação Ethereum organiza a Devcon, uma conferência anual para
 
 Você pode acessar todo o conteúdo de vídeo das conferências de cada ano em [archive.devcon.org](https://archive.devcon.org/).
 
-Saiba mais em [devcon.org](https://devcon.org/), confira o [Blog da Devcon](https://devcon.org/en/blogs/) ou siga [@efdevcon](https://twitter.com/EFDevcon) para ler os últimos comunicados.
+Saiba mais em [devcon.org](https://devcon.org/), confira o [Blog da Devcon](https://devcon.org/en/blogs/) ou siga [@efdevcon](https://x.com/EFDevcon) para ler os últimos comunicados.
 
 ### Programa de Bolsas {#fellowship-program}
 

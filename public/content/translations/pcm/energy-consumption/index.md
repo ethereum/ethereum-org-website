@@ -71,7 +71,7 @@ Web3 native publik goods wey dey fund platfoms laik [Gitcoin](https://gitcoin.co
 - [White House report on proof-of-work blockchains](https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
 - [Ethereum Emissions: Estimate wey start from down go up](https://kylemcdonald.github.io/ethereum-emissions/) - _Kyle McDonald_
 - [Ethereum Energy Consumption Index](https://digiconomist.net/ethereum-energy-consumption/) - _Digiconomist_
-- [ETHMerge.com](https://ethmerge.com/) - _[@InsideTheSim](https://twitter.com/InsideTheSim)_
+- [ETHMerge.com](https://ethmerge.com/) - _[@InsideTheSim](https://x.com/InsideTheSim)_
 - [The Merge - How e take affect as the Ethereum Network dey take consume Electricity and hin carbon footprints](https://carbon-ratings.com/eth-report-2022) - _CCRI_
 - [As Ethereum dey take consume energy](https://mirror.xyz/jmcook.eth/ODpCLtO4Kq7SCVFbU4He8o8kXs418ZZDTj0lpYlZkR8)
 

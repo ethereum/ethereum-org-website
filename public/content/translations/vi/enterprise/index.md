@@ -80,10 +80,10 @@ Mạng Ethereum công cộng và riêng tư có thể cần các tính năng c�
 
 - [Alethio Discord](https://discord.gg/d2t8NuU)
 - [Đàm luận về Infura](https://community.infura.io/)
-- [Kaleido Twitter](https://twitter.com/Kaleido_io)
+- [Kaleido Twitter](https://x.com/Kaleido_io)
 - [Hyperledger Rocketchat](https://chat.hyperledger.org/)
 - [Hyperledger Rocketchat ̣̣̣(Kênh Besu)](https://chat.hyperledger.org/channel/besu)
 - [Hyperledger Rocketchat (Kênh Burrow)](https://chat.hyperledger.org/channel/burrow)
-- [PegaSys Twitter](https://twitter.com/Kaleido_io)
+- [PegaSys Twitter](https://x.com/Kaleido_io)
 - [Kênh Quorum Slack](http://bit.ly/quorum-slack)
 - [Chainstack Gitter](https://gitter.im/chainstack/Lobby)

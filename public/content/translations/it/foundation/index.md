@@ -19,7 +19,7 @@ Non è un'azienda, né una no-profit tradizionale. Il suo ruolo non è quello di
 
 Il [programma di supporto dell'ecosistema](https://esp.ethereum.foundation/) esiste per dare sostegno sia finanziario che non a progetti ed entità all'interno di tutta la community Ethereum, con lo scopo di accelerare la crescita dell'ecosistema. È un'espansione dell'originario Ethereum Grants Program, che si concentrava soprattutto sul supporto finanziario.
 
-Scopri di più sul programma di supporto dell'ecosistema, sui destinatari delle sovvenzioni passati e sul processo di candidatura per le sovvenzioni su [esp.ethereum.foundation](https://esp.ethereum.foundation/). Puoi anche consultare l'[Ecosystem Support Program Blog](https://blog.ethereum.org/category/ecosystem-support-program/) o seguire [@EF_ESP](https://twitter.com/EF_ESP) per rimanere al passo con gli ultimi annunci e le notizie più recenti.
+Scopri di più sul programma di supporto dell'ecosistema, sui destinatari delle sovvenzioni passati e sul processo di candidatura per le sovvenzioni su [esp.ethereum.foundation](https://esp.ethereum.foundation/). Puoi anche consultare l'[Ecosystem Support Program Blog](https://blog.ethereum.org/category/ecosystem-support-program/) o seguire [@EF_ESP](https://x.com/EF_ESP) per rimanere al passo con gli ultimi annunci e le notizie più recenti.
 
 ### Devcon {#devcon}
 
@@ -27,7 +27,7 @@ Fin dal 2014, Ethereum Foundation ha organizzato Devcon, la conferenza annuale p
 
 Puoi accedere ai contenuti video o alle conferenze di ogni anno, a partire da quello di creazione, su [archive.devcon.org](https://archive.devcon.org/).
 
-Scopri di più su [devcon.org](https://devcon.org/), dai un'occhiata al [Blog del Devcon](https://devcon.org/en/blogs/), o segui [@efdevcon](https://twitter.com/EFDevcon) per gli ultimi annunci.
+Scopri di più su [devcon.org](https://devcon.org/), dai un'occhiata al [Blog del Devcon](https://devcon.org/en/blogs/), o segui [@efdevcon](https://x.com/EFDevcon) per gli ultimi annunci.
 
 ### Programma Fellowship {#fellowship-program}
 

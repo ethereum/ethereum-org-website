@@ -246,4 +246,4 @@ curl https://eth-mainnet.alchemyapi.io/v2/your-api-key
 
 ---
 
-無料で[Alchemyに登録し](https://auth.alchemyapi.io/signup)、[ドキュメント](https://docs.alchemyapi.io/)を確認しましょう。また[Twitter](https://twitter.com/AlchemyPlatform)をフォローして最新のニュースをチェックしてください。
+無料で[Alchemyに登録し](https://auth.alchemyapi.io/signup)、[ドキュメント](https://docs.alchemyapi.io/)を確認しましょう。また[Twitter](https://x.com/AlchemyPlatform)をフォローして最新のニュースをチェックしてください。

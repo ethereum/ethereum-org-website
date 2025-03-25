@@ -19,7 +19,7 @@ lang: zh-tw
 
 [生態系支援計畫](https://esp.ethereum.foundation/)旨在為更大以太坊社群內的專案和實體提供經濟及非經濟支援，從而刺激生態系成長。 生態系統支援計畫是最初以太坊資助計畫之擴充，後者關注經濟支援。
 
-請造訪 [esp.ethereum.foundation](https://esp.ethereum.foundation/) 了解更多有關生態系統支持計畫、過去資助接收者及資助申請流程的資訊。 你也可閱覽[生態系統支持計畫部落格](https://blog.ethereum.org/category/ecosystem-support-program/)或關注 [@EF_ESP](https://twitter.com/EF_ESP) 取得最新消息及公告。
+請造訪 [esp.ethereum.foundation](https://esp.ethereum.foundation/) 了解更多有關生態系統支持計畫、過去資助接收者及資助申請流程的資訊。 你也可閱覽[生態系統支持計畫部落格](https://blog.ethereum.org/category/ecosystem-support-program/)或關注 [@EF_ESP](https://x.com/EF_ESP) 取得最新消息及公告。
 
 ### 開發者展會 {#devcon}
 
@@ -27,7 +27,7 @@ lang: zh-tw
 
 你可造訪 [archive.devcon.org](https://archive.devcon.org/) 閱覽自成立以來的年度會議影片資料。
 
-請造訪 [devcon.org](https://devcon.org/) 了解更多資訊，查看 [Devcon 部落格](https://devcon.org/en/blogs/)，或關注 [@efdevcon](https://twitter.com/EFDevcon) 取得最新公告。
+請造訪 [devcon.org](https://devcon.org/) 了解更多資訊，查看 [Devcon 部落格](https://devcon.org/en/blogs/)，或關注 [@efdevcon](https://x.com/EFDevcon) 取得最新公告。
 
 ### 夥伴計畫 {#fellowship-program}
 

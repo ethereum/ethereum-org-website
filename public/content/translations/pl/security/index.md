@@ -288,6 +288,6 @@ Rozszerzenia przeglądarki, takie jak rozszerzenia Chrome lub dodatki do Firefok
 - [Przewodnik: Jak zidentyfikować fałszywe tokeny](/guides/how-to-id-scam-tokens/)
 - [Bądź bezpieczny: Najczęstsze oszustwa](https://support.mycrypto.com/staying-safe/common-scams) — _MyCrypto_
 - [Unikanie oszustw](https://bitcoin.org/en/scams) — _Bitcoin.org_
-- [Wątek na Twitterze o powszechnych wiadomościach phishingowych dotyczących kryptowalut](https://twitter.com/tayvano_/status/1516225457640787969) — _Taylor Monahan_
+- [Wątek na Twitterze o powszechnych wiadomościach phishingowych dotyczących kryptowalut](https://x.com/tayvano_/status/1516225457640787969) — _Taylor Monahan_
 
 <QuizWidget quizKey="security" />

@@ -75,7 +75,7 @@ Ethereum.org 是一個開源專案，擁有超過 **12000 名**貢獻者，幫�
 有關個人提取請求、設計演進和主要更新的決定由來自整個以太坊生態系統的人員組成的團隊作出。 該團隊包括專案管理人、開發者、設計師、市場和溝通部門，以及內容專家。 社群意見為每個決定提供參考：因此，請在議題中提出問題、提交提取請求或聯絡團隊：
 
 - [website@ethereum.org](mailto:website@ethereum.org)
-- [@ethdotorg](https://twitter.com/ethdotorg)
+- [@ethdotorg](https://x.com/ethdotorg)
 - [Discord服務器](https://discord.gg/ethereum-org)
 
 ### 有關抄襲的說明 {#plagiarism}

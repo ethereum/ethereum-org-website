@@ -128,7 +128,7 @@ lang: zh
 - [群集：可信链桥和信任最小化链桥如何打造多链格局](https://blog.celestia.org/clusters/) 2021 年 10 月 4 日 – Mustafa Al-Bassam
 - [LI.FI：有了链桥，信任就是一种范围](https://blog.li.fi/li-fi-with-bridges-trust-is-a-spectrum-354cd5a1a6d8) 2022 年 4 月 28 日 – Arjun Chand
 
-此外，以下是 [James Prestwich](https://twitter.com/_prestwich) 的一些有颇有见解的讲解，可以帮助我们更深入地理解链桥：
+此外，以下是 [James Prestwich](https://x.com/_prestwich) 的一些有颇有见解的讲解，可以帮助我们更深入地理解链桥：
 
 - [构建链桥，而非构建有围墙的花园](https://youtu.be/ZQJWMiX4hT0)
 - [破坏链桥](https://youtu.be/b0mC-ZqN8Oo)

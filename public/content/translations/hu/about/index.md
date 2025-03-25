@@ -96,7 +96,7 @@ Az ethereum.org csapat negyedéves ütemtervet publikál az aktuális célokról
 
 **Hogy hangzik?** Nagyra értékeljük, ha visszajelzést ad az ütemtervükkel kapcsolatban! Ha bármivel kapcsolatban úgy véli, hogy foglalkoznunk kellene vele, tudassa velünk! Szívesen fogadjuk a közösség bármelyik tagjától az ötleteket és a beadott kérvényeket (PR, mint pull request).
 
-**Szeretne Ön is részt venni?** [Tudjon meg többet a közreműködésről](/contributing/), [kövessen minket Twitteren](https://twitter.com/ethdotorg), vagy csatlakozzon a közösségi megbeszélésekhez a [Discord szerveren](https://discord.gg/ethereum-org).
+**Szeretne Ön is részt venni?** [Tudjon meg többet a közreműködésről](/contributing/), [kövessen minket Twitteren](https://x.com/ethdotorg), vagy csatlakozzon a közösségi megbeszélésekhez a [Discord szerveren](https://discord.gg/ethereum-org).
 
 ## Tervezési elvek {#design-principles}
 

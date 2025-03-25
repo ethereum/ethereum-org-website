@@ -40,7 +40,7 @@ Tiêu đề của “Web 3.0” được đặt ra bởi co-Founder [Ethereum](/
 
 ### Web3 là gì? {#what-is-web3}
 
-Web3 đã trở thành một thuật ngữ chung cho tầm nhìn về một mạng internet mới, tốt hơn. Hiểu đơn giản, Web3 sử dụng blockchain, tiền điện tử và NFT để cung cấp lại quyền lực cho người dùng dưới hình thức sở hữu. [Một bài đăng năm 2020 trên Twitter](https://twitter.com/himgajria/status/1266415636789334016) cho biết điều tốt nhất: Web1 là chỉ đọc, Web2 là đọc-ghi, Web3 sẽ là đọc-ghi-sở hữu.
+Web3 đã trở thành một thuật ngữ chung cho tầm nhìn về một mạng internet mới, tốt hơn. Hiểu đơn giản, Web3 sử dụng blockchain, tiền điện tử và NFT để cung cấp lại quyền lực cho người dùng dưới hình thức sở hữu. [Một bài đăng năm 2020 trên Twitter](https://x.com/himgajria/status/1266415636789334016) cho biết điều tốt nhất: Web1 là chỉ đọc, Web2 là đọc-ghi, Web3 sẽ là đọc-ghi-sở hữu.
 
 #### Ý tưởng cốt lõi của Web3 {#core-ideas}
 

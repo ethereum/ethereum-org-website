@@ -290,6 +290,6 @@ Is féidir le síntí brabhsálaí, cosúil le síntí Chrome nó Breiseáin le 
 - [Treoir: Conas comharthaí sceamála a aithint](/guides/how-to-id-scam-tokens/)
 - [Fan Sábháilte: Camscéimeanna Coitianta](https://support.mycrypto.com/staying-safe/common-scams) - _MyCrypto_
 - [Camscéimeanna a Sheachaint](https://bitcoin.org/en/scams) - _Bitcoin.org_
-- [Snáithe Twitter ar ríomhphoist agus teachtaireachtaí coitianta fioscaireachta criptithe](https://twitter.com/tayvano_/status/1516225457640787969) - _Taylor Monahan_
+- [Snáithe Twitter ar ríomhphoist agus teachtaireachtaí coitianta fioscaireachta criptithe](https://x.com/tayvano_/status/1516225457640787969) - _Taylor Monahan_
 
 <QuizWidget quizKey="security" />

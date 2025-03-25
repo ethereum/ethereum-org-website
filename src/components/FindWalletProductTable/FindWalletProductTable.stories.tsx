@@ -77,7 +77,7 @@ const walletsData = [
     url: "https://foxwallet.com/en",
     active_development_team: true,
     languages_supported: ["en", "zh", "uk", "ru", "es", "id"],
-    twitter: "https://twitter.com/FoxWallet",
+    twitter: "https://x.com/FoxWallet",
     discord: "https://discord.com/invite/JVjVbe3Zth",
     reddit: "",
     telegram: "https://t.me/FoxWallet_EN",

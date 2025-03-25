@@ -120,16 +120,16 @@ ETHをステーキングすると、イーサリアムネットワークの保�
 
 「DAO」とは分散型自律組織のことで、 メンバーシップの管理、提案への投票、またはプールされた資産の管理など、イーサリアム技術を活用し、組織やコラボレーションを円滑化しているグループを指します 。 分散型自律組織(DAO)はまだ実験段階ではありますが、自分が共感できるグループを見つけ、協力者を探し、イーサリアムコミュニティへの影響力を拡大する機会を提供してくれます。 [分散型自律組織(DAO)の詳細](/dao/)
 
-- [DAOSquare](https://daosquare.io/) [@DAOSquare](https://twitter.com/DAOSquare) - _非技術分野で分散型自律組織(DAO)の概念をプロモーションし、価値の創造を支援_
-- [Developer DAO](https://www.developerdao.com/) [@developer_dao](https://twitter.com/developer_dao) - _インターネットは共同所有されるべきという信念を共有するデベロッパーコミュニティ_
-- [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) - _分散型自律組織(DAO)として機能しているフリーランスのWeb3開発共同体_
-- [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) - _DAOhausのコミュニティガバナンス_
-- [LexDAO](https://lexdao.org) [@lex_DAO](https://twitter.com/lex_DAO) - _リーガル・エンジニアリング_
-- [Machi X](https://machix.com) [@MachiXOfficial](https://twitter.com/MachiXOfficial) - _アート・コミュニティ_
-- [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://twitter.com/VENTURE_DAO) - _プレシード暗号プロジェクトのベンチャー_
-- [MetaGame](https://metagame.wtf) [@MetaFam](https://twitter.com/MetaFam) - _実際のMMORPGゲームメカニクス_
-- [MetaFactory](https://metafactory.ai) [@TheMetaFactory](https://twitter.com/TheMetaFactory) - _デジ・フィジカルのアパレルブランド_
-- [MolochDAO](https://molochdao.com) [@MolochDAO](https://twitter.com/MolochDAO) - _イーサリアム開発の資金調達に注力するコミュニティ_
-- [Raid Guild](https://raidguild.org) [@RaidGuild](https://twitter.com/RaidGuild) - _Web3デベロッパーの共同体_
+- [DAOSquare](https://daosquare.io/) [@DAOSquare](https://x.com/DAOSquare) - _非技術分野で分散型自律組織(DAO)の概念をプロモーションし、価値の創造を支援_
+- [Developer DAO](https://www.developerdao.com/) [@developer_dao](https://x.com/developer_dao) - _インターネットは共同所有されるべきという信念を共有するデベロッパーコミュニティ_
+- [dOrg](https://dOrg.tech) [@dOrg_tech](https://x.com/dOrg_tech) - _分散型自律組織(DAO)として機能しているフリーランスのWeb3開発共同体_
+- [HausDAO](https://daohaus.club) [@nowdaoit](https://x.com/nowdaoit) - _DAOhausのコミュニティガバナンス_
+- [LexDAO](https://lexdao.org) [@lex_DAO](https://x.com/lex_DAO) - _リーガル・エンジニアリング_
+- [Machi X](https://machix.com) [@MachiXOfficial](https://x.com/MachiXOfficial) - _アート・コミュニティ_
+- [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://x.com/VENTURE_DAO) - _プレシード暗号プロジェクトのベンチャー_
+- [MetaGame](https://metagame.wtf) [@MetaFam](https://x.com/MetaFam) - _実際のMMORPGゲームメカニクス_
+- [MetaFactory](https://metafactory.ai) [@TheMetaFactory](https://x.com/TheMetaFactory) - _デジ・フィジカルのアパレルブランド_
+- [MolochDAO](https://molochdao.com) [@MolochDAO](https://x.com/MolochDAO) - _イーサリアム開発の資金調達に注力するコミュニティ_
+- [Raid Guild](https://raidguild.org) [@RaidGuild](https://x.com/RaidGuild) - _Web3デベロッパーの共同体_
 
 ethereum.orgに貢献するときは、いつでも、どのような形であれethereum.org の[行動規範](/community/code-of-conduct)を必ず遵守することを忘れずに！

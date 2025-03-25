@@ -297,4 +297,4 @@ More on [gas](/developers/docs/gas/#post-london)
 
 ## And breathe {#and-breathe}
 
-We’ve been at this for a while, so this seems as good a place as any to take a break. The rabbit hole continues on, and we’ll continue exploring in part two of this series. Some concepts to come: connecting to a real node, smart contracts, and tokens. Have follow-up questions? Let me know! Your feedback will influence where we go from here. Requests welcome via [Twitter](https://twitter.com/wolovim).
+We’ve been at this for a while, so this seems as good a place as any to take a break. The rabbit hole continues on, and we’ll continue exploring in part two of this series. Some concepts to come: connecting to a real node, smart contracts, and tokens. Have follow-up questions? Let me know! Your feedback will influence where we go from here. Requests welcome via [Twitter](https://x.com/wolovim).

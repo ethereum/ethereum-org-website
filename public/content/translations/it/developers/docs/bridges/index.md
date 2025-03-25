@@ -128,7 +128,7 @@ Per monitorare l'attività del contratto tra le catene, gli sviluppatori possono
 - [Cluster: come i ponti fidati & a fiducia minimizzata danno forma al paesaggio multi-catena](https://blog.celestia.org/clusters/) 4 Ott 2021 – Mustafa Al-Bassam
 - [LI.FI: con i ponti, la fiducia è uno spettro](https://blog.li.fi/li-fi-with-bridges-trust-is-a-spectrum-354cd5a1a6d8) 28 Apr 2022 – Arjun Chand
 
-Inoltre, ecco alcune presentazioni intuitive di [James Prestwich](https://twitter.com/_prestwich) che possono contribuire a sviluppare una comprensione più profonda dei ponti:
+Inoltre, ecco alcune presentazioni intuitive di [James Prestwich](https://x.com/_prestwich) che possono contribuire a sviluppare una comprensione più profonda dei ponti:
 
 - [Costruire ponti, giardini non recintati](https://youtu.be/ZQJWMiX4hT0)
 - [Rompere i ponti](https://youtu.be/b0mC-ZqN8Oo)

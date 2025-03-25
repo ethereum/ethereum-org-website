@@ -290,7 +290,7 @@ Erigon (в прошлом — Turbo-Geth) представляет собой о
 
 ### Ethereum на одноплатном компьютере {#ethereum-on-a-single-board-computer}
 
-Самый удобный и дешевый способ запустить узел Ethereum — использовать одноплатный компьютер с архитектурой ARM, такой как Raspberry Pi. [Ethereum на ARM](https://twitter.com/EthereumOnARM) предоставляет образы клиентов Geth, OpenEthereum, Nethermind и Besu. Вот простое руководство [как создать и настроить клиент ARM](/developers/tutorials/run-node-raspberry-pi/).
+Самый удобный и дешевый способ запустить узел Ethereum — использовать одноплатный компьютер с архитектурой ARM, такой как Raspberry Pi. [Ethereum на ARM](https://x.com/EthereumOnARM) предоставляет образы клиентов Geth, OpenEthereum, Nethermind и Besu. Вот простое руководство [как создать и настроить клиент ARM](/developers/tutorials/run-node-raspberry-pi/).
 
 Такие небольшие, доступные и эффективные устройства идеально подходят для работы узла дома.
 

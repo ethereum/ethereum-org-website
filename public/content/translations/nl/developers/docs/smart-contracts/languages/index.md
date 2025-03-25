@@ -40,7 +40,7 @@ Voorkennis van programmeertalen, vooral van JavaScript of Python, kan u helpen o
 - [Solidity Gitter Chatroom](https://gitter.im/ethereum/solidity) overbrugd naar [Solidity Matrix Chatroom](https://matrix.to/#/#ethereum_solidity:gitter.im)
 - [Cheat sheet](https://reference.auditless.com/cheatsheet)
 - [Solidity-blog](https://blog.soliditylang.org/)
-- [Solidity op X (Twitter)](https://twitter.com/solidity_lang)
+- [Solidity op X (Twitter)](https://x.com/solidity_lang)
 
 ### Voorbeeldcontract {#example-contract}
 
@@ -268,7 +268,7 @@ Heeft u al ervaring met smart contracts? Dan kunt u [hier](https://solidity.read
 - [Fe-aankondiging](https://snakecharmers.ethereum.org/fe-a-new-language-for-the-ethereum-ecosystem/)
 - [Fe 2021-routekaart](https://notes.ethereum.org/LVhaTF30SJOpkbG1iVw1jg)
 - [Fe Discord Chat](https://discord.com/invite/ywpkAXFjZH)
-- [Fe X (Twitter)](https://twitter.com/official_fe)
+- [Fe X (Twitter)](https://x.com/official_fe)
 
 ### Voorbeeldcontract {#example-contract-3}
 

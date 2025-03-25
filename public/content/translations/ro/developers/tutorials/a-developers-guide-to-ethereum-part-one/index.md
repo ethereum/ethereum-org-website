@@ -291,4 +291,4 @@ Acesta din urmă arată bine! Soldul a trecut de la 1.000.000 la 1.000.003 ether
 
 ## Și respirați {#and-breathe}
 
-Ne-am ocupat de aceste lucruri de ceva vreme, așa că acum este un moment la fel de bun ca oricare altul pentru a lua o pauză. Aventura continuă şi ne vom continua explorarea în partea a doua a acestei serii. Câteva concepte care vor urma: conectarea la un nod real, contracte inteligente și tokenuri. Aveți întrebări în continuare? Anunțați-mă! Feedback-ul dvs. va influența direcția în care vom merge de aici încolo. Primim cu plăcere solicitări prin [Twitter](https://twitter.com/wolovim).
+Ne-am ocupat de aceste lucruri de ceva vreme, așa că acum este un moment la fel de bun ca oricare altul pentru a lua o pauză. Aventura continuă şi ne vom continua explorarea în partea a doua a acestei serii. Câteva concepte care vor urma: conectarea la un nod real, contracte inteligente și tokenuri. Aveți întrebări în continuare? Anunțați-mă! Feedback-ul dvs. va influența direcția în care vom merge de aici încolo. Primim cu plăcere solicitări prin [Twitter](https://x.com/wolovim).

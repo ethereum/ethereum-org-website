@@ -269,4 +269,4 @@ Bu öğretici ile, temel Ethereum kavramlarını ve zincir üzerindeki verileri 
 
 Bu öğreticide kullanılan tüm kodları tutan gösterge paneli [burada](https://duneanalytics.com/paulapivat/Learn-Ethereum) bulunabilir.
 
-Verinin web3 keşfi amaçlı daha fazla kullanımı için [bana Twitter'dan ulaşın](https://twitter.com/paulapivat).
+Verinin web3 keşfi amaçlı daha fazla kullanımı için [bana Twitter'dan ulaşın](https://x.com/paulapivat).

@@ -40,7 +40,7 @@ Les prémisses du « Web 3.0 » ont été élaborés par le co-fondateur d'[Ethe
 
 ### Qu'est-ce que Web3 ? {#what-is-web3}
 
-Web3 est devenu un terme fourre-tout pour la vision d'un nouvel et meilleur internet. Web3 utilise des blockchains, des cryptomonnaies et des NFT pour rendre le pouvoir aux utilisateurs sous forme de propriété. [Un post de 2021 sur Twitter](https://twitter.com/j1mmyeth/status/1459003044067258370) le résume parfaitement : Web1 était en lecture seule, Web2 est en lecture/écriture, Web3 sera lu/écrit/possédé.
+Web3 est devenu un terme fourre-tout pour la vision d'un nouvel et meilleur internet. Web3 utilise des blockchains, des cryptomonnaies et des NFT pour rendre le pouvoir aux utilisateurs sous forme de propriété. [Un post de 2021 sur Twitter](https://x.com/j1mmyeth/status/1459003044067258370) le résume parfaitement : Web1 était en lecture seule, Web2 est en lecture/écriture, Web3 sera lu/écrit/possédé.
 
 #### Principes fondamentaux du Web3 {#core-ideas}
 

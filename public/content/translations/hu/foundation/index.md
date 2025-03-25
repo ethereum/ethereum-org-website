@@ -19,7 +19,7 @@ Az Ethereum Alapítvány (EF) nem egy cég, még csak nem is hagyományos non-pr
 
 Az [Ökoszisztéma Támogatási Program](https://esp.ethereum.foundation/) célja, hogy pénzügyi és nem pénzügyi támogatást nyújtson projekteknek és egyéneknek a tágabb Ethereum közösségen belül, hogy felgyorsítsa az ökoszisztéma növekedését. Az Ökoszisztéma Támogatási Program az eredeti Ethereum támogatási/ösztöndíj program kibővítése, amely főként a pénzügyi támogatásra összpontosított.
 
-Tudjon meg többet az Ökoszisztéma Támogatási Programról, korábbi ösztöndíjasokról és az ösztöndíj jelentkezési folyamatáról az [esp.ethereum.foundation](https://esp.ethereum.foundation/) oldalon. Ezenkívül megnézheti az [Ökoszisztéma Támogatási Program Blogját](https://blog.ethereum.org/category/ecosystem-support-program/) vagy követheti az [@EF_ESP](https://twitter.com/EF_ESP) oldalt a legfrissebb hírekért és bejelentésekért.
+Tudjon meg többet az Ökoszisztéma Támogatási Programról, korábbi ösztöndíjasokról és az ösztöndíj jelentkezési folyamatáról az [esp.ethereum.foundation](https://esp.ethereum.foundation/) oldalon. Ezenkívül megnézheti az [Ökoszisztéma Támogatási Program Blogját](https://blog.ethereum.org/category/ecosystem-support-program/) vagy követheti az [@EF_ESP](https://x.com/EF_ESP) oldalt a legfrissebb hírekért és bejelentésekért.
 
 ### Devcon {#devcon}
 
@@ -27,7 +27,7 @@ Az Ethereum Alapítvány 2014 óta szervezi a Devcont, az Ethereum éves konfere
 
 Hozzáférhet az összes konferencián elhangzó előadás videójához a kezdetektől az [archive.devcon.org](https://archive.devcon.org/) oldalon.
 
-Tudjon meg többet a [devcon.org](https://devcon.org/) oldalon, tekintse meg a [Devcon blogot](https://devcon.org/en/blogs/), vagy kövesse a [@efdevcon](https://twitter.com/EFDevcon) csatornát a legfrissebb információkért.
+Tudjon meg többet a [devcon.org](https://devcon.org/) oldalon, tekintse meg a [Devcon blogot](https://devcon.org/en/blogs/), vagy kövesse a [@efdevcon](https://x.com/EFDevcon) csatornát a legfrissebb információkért.
 
 ### Ösztöndíjas program {#fellowship-program}
 

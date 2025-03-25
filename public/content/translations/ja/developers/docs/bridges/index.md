@@ -128,7 +128,7 @@ To deploy a dapp on multiple chains, developers can use development platforms li
 - [クラスタ: 信頼ベースおよび信頼最小化のブリッジは、マルチチェーン環境をどのように変化させるか](https://blog.celestia.org/clusters/) 2021年10月4日、ムスタファ・アル＝バッサム作成。
 - [LI.FI: ブリッジの信頼依存度は様々に異なる](https://blog.li.fi/li-fi-with-bridges-trust-is-a-spectrum-354cd5a1a6d8) 2022年4月28日 、アルジュン・チャンド作成。
 
-ブリッジについてさらに理解を深めたい方は、 [ジェイムズ・プレストウィッチ](https://twitter.com/_prestwich)による洞察溢れる講演をご覧ください:
+ブリッジについてさらに理解を深めたい方は、 [ジェイムズ・プレストウィッチ](https://x.com/_prestwich)による洞察溢れる講演をご覧ください:
 
 - [塀に囲まれたガーデンではなく、ブリッジを構築する](https://youtu.be/ZQJWMiX4hT0)
 - [ブリッジを破壊する](https://youtu.be/b0mC-ZqN8Oo)

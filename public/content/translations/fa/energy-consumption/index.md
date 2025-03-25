@@ -71,7 +71,7 @@ lang: fa
 - [گزارش کاخ سفید درباره اثبات کار بلاک‌چین‌ها](https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
 - [انتشارات اتریوم: یک برآورد پایین به بالا](https://kylemcdonald.github.io/ethereum-emissions/) - _ کیلی مک دونالد_
 - [شاخص مصرف انرژی اتریوم](https://digiconomist.net/ethereum-energy-consumption/) – _Digiconomist_
-- [ETHMerge.com](https://ethmerge.com/) — _[@InsideTheSim](https://twitter.com/InsideTheSim)_
+- [ETHMerge.com](https://ethmerge.com/) — _[@InsideTheSim](https://x.com/InsideTheSim)_
 - [ادغام - مفاهیم مصرف برق و میزان انتشار کربن در شبکه اتریوم](https://carbon-ratings.com/eth-report-2022) - _CCRI_
 - [مصرف انرژی اتریوم](https://mirror.xyz/jmcook.eth/ODpCLtO4Kq7SCVFbU4He8o8kXs418ZZDTj0lpYlZkR8)
 

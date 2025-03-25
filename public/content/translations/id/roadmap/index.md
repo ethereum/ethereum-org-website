@@ -92,7 +92,7 @@ Peningkatan cenderung tidak berdampak pada pengguna akhir, kecuali meningkatkan 
 
 ## Bagaimana dengan The Verge, The Splurge, dll? {#what-about-the-verge-splurge-etc}
 
-[Vitalik Buterin mengajukan visi untuk peta perjalanan Ethereum](https://twitter.com/VitalikButerin/status/1741190491578810445) yang diorganisasikan dalam beberapa kategori yang dihubungkan dengan pengaruhnya terhadap arsitektur Ethereum. Termasuk di dalamnya:
+[Vitalik Buterin mengajukan visi untuk peta perjalanan Ethereum](https://x.com/VitalikButerin/status/1741190491578810445) yang diorganisasikan dalam beberapa kategori yang dihubungkan dengan pengaruhnya terhadap arsitektur Ethereum. Termasuk di dalamnya:
 
 - **Penggabungan**: peningkatan yang berkaitan dengan peralihan dari [bukti kerja](/glossary/#pow) ke [bukti taruhan](/glossary/#pos)
 - **Lonjakan**: peningkatan yang terkait dengan skalabilitas dengan [rollup](/glossary/#rollups) dan pecahan data

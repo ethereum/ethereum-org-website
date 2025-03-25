@@ -373,7 +373,7 @@ lang: fa
 
 - [گزارش سوءاستفاده از Wormhole](https://blog.chainalysis.com/reports/wormhole-hack-february-2022/)
 - [فهرست قراردادهای اتریوم‌های پس از هک](https://forum.openzeppelin.com/t/list-of-ethereum-smart-contracts-post-mortems/1191)
-- [Rekt News](https://twitter.com/RektHQ?s=20&t=3otjYQdM9Bqk8k3n1a1Adg)
+- [Rekt News](https://x.com/RektHQ?s=20&t=3otjYQdM9Bqk8k3n1a1Adg)
 
 #### جدیدترین تحقیقات {#recent-research-19}
 

@@ -377,7 +377,7 @@ lang: el
 
 - [Αναφορά εκμετάλλευσης Wormhole](https://blog.chainalysis.com/reports/wormhole-hack-february-2022/)
 - [Κατάλογος μεταθανάτιων παραβιάσεων με συμβόλαιο Ethereum](https://forum.openzeppelin.com/t/list-of-ethereum-smart-contracts-post-mortems/1191)
-- [Ειδήσεις Rekt](https://twitter.com/RektHQ?s=20&t=3otjYQdM9Bqk8k3n1a1Adg)
+- [Ειδήσεις Rekt](https://x.com/RektHQ?s=20&t=3otjYQdM9Bqk8k3n1a1Adg)
 
 #### Πρόσφατη έρευνα {#recent-research-19}
 

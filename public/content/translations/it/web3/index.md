@@ -40,7 +40,7 @@ Il principio di “Web 3.0” fu coniato dal co-fondatore di [Ethereum](/what-is
 
 ### Cos'è Web3? {#what-is-web3}
 
-Web3 è diventato un termine che indica complessivamente la visione di un'Internet nuova e migliore. Alla base, Web3 usa le blockchain, le criptovalute e gli NFT per restituire potere sotto forma di proprietà. [In un post del 2021 su Twitter](https://twitter.com/j1mmyeth/status/1459003044067258370) questo è espresso perfettamente: il Web1 era in sola lettura, il Web2 era in lettura e scrittura, il Web3 sarà in lettura, scrittura e proprietà.
+Web3 è diventato un termine che indica complessivamente la visione di un'Internet nuova e migliore. Alla base, Web3 usa le blockchain, le criptovalute e gli NFT per restituire potere sotto forma di proprietà. [In un post del 2021 su Twitter](https://x.com/j1mmyeth/status/1459003044067258370) questo è espresso perfettamente: il Web1 era in sola lettura, il Web2 era in lettura e scrittura, il Web3 sarà in lettura, scrittura e proprietà.
 
 #### Idee principali di Web3 {#core-ideas}
 

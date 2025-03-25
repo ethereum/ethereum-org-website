@@ -40,7 +40,7 @@ Remix 整合開發環境提供一個全面的開發環境，用於透過 Solidit
 - [Solidity Gitter Chatroom](https://gitter.im/ethereum/solidity) 橋接至 [Solidity Matrix Chatroom](https://matrix.to/#/#ethereum_solidity:gitter.im)
 - [懶人包](https://reference.auditless.com/cheatsheet)
 - [Solidity 部落格](https://blog.soliditylang.org/)
-- [Solidity Twitter](https://twitter.com/solidity_lang)
+- [Solidity Twitter](https://x.com/solidity_lang)
 
 ### 合約範例 {#example-contract}
 
@@ -265,7 +265,7 @@ def endAuction():
 - [Fe 發布聲明](https://snakecharmers.ethereum.org/fe-a-new-language-for-the-ethereum-ecosystem/)
 - [Fe 2021 開發藍圖](https://notes.ethereum.org/LVhaTF30SJOpkbG1iVw1jg)
 - [Fe Discord 聊天室](https://discord.com/invite/ywpkAXFjZH)
-- [Fe Twitter](https://twitter.com/official_fe)
+- [Fe Twitter](https://x.com/official_fe)
 
 ### 合約範例 {#example-contract-3}
 

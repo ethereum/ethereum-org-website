@@ -36,8 +36,8 @@ lang: uk
 ## YouTube і Twitter {#youtube-and-twitter}
 
 <SocialListItem socialIcon="youtube"><Link href="https://www.youtube.com/c/EthereumFoundation">Ethereum Foundation</Link> — будьте в курсі останніх подій від Ethereum Foundation</SocialListItem>
-<SocialListItem socialIcon="twitter"><Link href="https://twitter.com/ethereum">@ethereum</Link> - Офіційний акаунт Ethereum Foundation</SocialListItem>
-<SocialListItem socialIcon="twitter"><Link href="https://twitter.com/ethdotorg">@ethdotorg</Link> — портал Ethereum, створений для нашої глобальної спільноти, яка розширюється</SocialListItem>
+<SocialListItem socialIcon="twitter"><Link href="https://x.com/ethereum">@ethereum</Link> - Офіційний акаунт Ethereum Foundation</SocialListItem>
+<SocialListItem socialIcon="twitter"><Link href="https://x.com/ethdotorg">@ethdotorg</Link> — портал Ethereum, створений для нашої глобальної спільноти, яка розширюється</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://hive.one/c/ethereum?page=1">Перелік важливих акаунтів Ethereum у Twitter</Link></SocialListItem>
 
 <Divider />

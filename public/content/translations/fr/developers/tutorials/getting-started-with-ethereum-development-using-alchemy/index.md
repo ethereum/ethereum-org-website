@@ -151,4 +151,4 @@ The latest block number is 11043912
 
 Vous ne savez pas quoi faire ensuite ? Essayez de déployer votre premier contrat intelligent et mettez la main à la pâte avec un peu de programmation Solidity dans notre [Guide de contrats intelligents « Hello World »](https://docs.alchemyapi.io/tutorials/hello-world-smart-contract), ou testez vos connaissances avec le [Tableau de bord de démonstration](https://docs.alchemyapi.io/tutorials/demo-app) !
 
-_[S'inscrire gratuitement à Alchemy](https://auth.alchemyapi.io/signup), consulter notre [documentation](https://docs.alchemyapi.io/), et pour les dernières nouvelles, nous suivre sur [Twitter](https://twitter.com/AlchemyPlatform)_.
+_[S'inscrire gratuitement à Alchemy](https://auth.alchemyapi.io/signup), consulter notre [documentation](https://docs.alchemyapi.io/), et pour les dernières nouvelles, nous suivre sur [Twitter](https://x.com/AlchemyPlatform)_.

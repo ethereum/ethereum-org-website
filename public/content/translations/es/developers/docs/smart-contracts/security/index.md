@@ -92,7 +92,7 @@ Encargar una auditoría de un contrato inteligente es una forma de realizar una 
 
 Dicho esto, hay que evitar tratar las auditorías como una bala de plata. Las auditorías no detectarán todos los errores y están diseñadas principalmente para proporcionar una ronda adicional de revisiones, que puede ayudar a detectar los problemas que los desarrolladores pasaron por alto durante el desarrollo y las pruebas iniciales. También es necesario cumplir con buenas prácticas para trabajar con los auditores, como documentar el código adecuadamente y añadir comentarios en línea, para maximizar el beneficio de una auditoría del contrato inteligente.
 
-- [Consejos y trucos de auditoría de contratos inteligentes](https://twitter.com/tinchoabbate/status/1400170232904400897) - _@tinchoabbate_
+- [Consejos y trucos de auditoría de contratos inteligentes](https://x.com/tinchoabbate/status/1400170232904400897) - _@tinchoabbate_
 - [Aproveche al máximo su auditoría](https://inference.ag/blog/2023-08-14-tips/) - _Inference_
 
 #### Dar recompensas por detección de errores {#bug-bounties}

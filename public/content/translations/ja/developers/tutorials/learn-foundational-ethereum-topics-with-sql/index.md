@@ -269,4 +269,4 @@ ORDER BY block_time DESC
 
 このチュートリアルで使用したすべてのコードをまとめたダッシュボードは、[こちら](https://duneanalytics.com/paulapivat/Learn-Ethereum)からアクセスしてください。
 
-データを通じてWeb3の知識をさらに深めたい方は、[私をTwitterでフォローしてください](https://twitter.com/paulapivat)。
+データを通じてWeb3の知識をさらに深めたい方は、[私をTwitterでフォローしてください](https://x.com/paulapivat)。

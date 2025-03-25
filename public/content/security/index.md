@@ -291,6 +291,6 @@ Browser extensions, like Chrome extensions or Add-ons for Firefox, can improve b
 - [Guide: How to identify scam tokens](/guides/how-to-id-scam-tokens/)
 - [Staying Safe: Common Scams](https://support.mycrypto.com/staying-safe/common-scams) - _MyCrypto_
 - [Avoiding Scams](https://bitcoin.org/en/scams) - _Bitcoin.org_
-- [Twitter thread on common crypto phishing emails and messages](https://twitter.com/tayvano_/status/1516225457640787969) - _Taylor Monahan_
+- [Twitter thread on common crypto phishing emails and messages](https://x.com/tayvano_/status/1516225457640787969) - _Taylor Monahan_
 
 <QuizWidget quizKey="security" />

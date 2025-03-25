@@ -1537,4 +1537,4 @@ Tebrikler, öğreticinin sonuna geldiniz! Hatırlatma olarak, burada şunları n
 
 Artık bu öğreticide size verilmiş olan bu becerileri kullanarak kendi kişisel merkeziyetsiz uygulama projenizi yapabilirsiniz! Her zamanki gibi, herhangi bir sorunuz varsa yardım istemek için bize [Alchemy Discord](https://discord.gg/gWuC7zB) aracılığıyla ulaşmaktan çekinmeyin. 🧙‍♂️
 
-Bu öğreticiyi bitirdiğinize, yaşadığınız deneyimi ya da yorumlarınızı Twitter'dan [@alchemyplatform](https://twitter.com/AlchemyPlatform) bizi etiketleyerek aktarabilirsiniz!
+Bu öğreticiyi bitirdiğinize, yaşadığınız deneyimi ya da yorumlarınızı Twitter'dan [@alchemyplatform](https://x.com/AlchemyPlatform) bizi etiketleyerek aktarabilirsiniz!

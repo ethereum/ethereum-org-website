@@ -243,7 +243,7 @@ Prima dată trebuie să creaţi manual un cont rulând „validatorul” binar �
 
 Am muncit mult încercând să instalăm Raspberry Pi 4 ca nod complet Ethereum, deoarece știm că imensa bază de utilizatori ai acestui dispozitiv ar putea avea un impact foarte benefic pentru rețea.
 
-Vă rugăm să luaţi în considerare faptul că aceasta este prima imagine bazată pe Ubuntu 20.04, astfel încât ar putea exista unele bug-uri. În acest caz, deschideți o problemă pe [GitHub](https://github.com/diglos/ethereumonarm) sau contactați-ne pe [Twitter](https://twitter.com/EthereumOnARM).
+Vă rugăm să luaţi în considerare faptul că aceasta este prima imagine bazată pe Ubuntu 20.04, astfel încât ar putea exista unele bug-uri. În acest caz, deschideți o problemă pe [GitHub](https://github.com/diglos/ethereumonarm) sau contactați-ne pe [Twitter](https://x.com/EthereumOnARM).
 
 ## Referințe {#references}
 

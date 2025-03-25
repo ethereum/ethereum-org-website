@@ -120,16 +120,16 @@ Ethereum ekosistemi, kamu mallarını ve etkili projeleri finanse etme misyonuna
 
 "DAO'lar", merkeziyetsiz otonom organizasyonlardır. Bu gruplar, organizasyonu ve iş birliğini kolaylaştırmak için Ethereum teknolojisinden yararlanır. Örneğin; üyeliği kontrol etmek, teklifleri oylamak veya havuza alınan varlıkları yönetmek için. DAO'lar hâlâ deneysel olsalar da aynı fikirde olduğunuz gruplar ile iş ortakları bulmanız ve Ethereum topluluğu üzerindeki etkinizi artırmanız için fırsatlar sunar. [DAO'lar hakkında daha fazlası](/dao/)
 
-- [DAOSquare](https://daosquare.io/) [@DAOSquare](https://twitter.com/DAOSquare) - _DAO konseptinin teknoloji harici alanlarda tanıtılması ve insanların DAO aracılığıyla değer yaratmalarına yardım edilmesi_
-- [Developer DAO](https://www.developerdao.com/) [@developer_dao](https://twitter.com/developer_dao) - _İnternetin ortaklaşa sahipliğine inanan yapımcıların topluluğu_
-- [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) - _DAO olarak çalışan bir freelancer Web3 geliştirme kolektifi_
-- [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) - _DAOHaus'un topluluk yönetimi_
-- [LexDAO](https://lexdao.org) [@lex_DAO](https://twitter.com/lex_DAO) - _Hukuk mühendisliği_
-- [Machi X](https://machix.com) [@MachiXOfficial](https://twitter.com/MachiXOfficial) - _Sanat topluluğu_
-- [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://twitter.com/VENTURE_DAO) - _Başlangıç öncesi kripto projeleri için girişimler_
-- [MetaGame](https://metagame.wtf) [@MetaFam](https://twitter.com/MetaFam) - _Gerçek Hayat için MMORPG Oyun Mekanikleri_
-- [MetaFactory](https://metafactory.ai) [@TheMetaFactory](https://twitter.com/TheMetaFactory) - _Dijifiziksel Giyim Firmaları_
-- [MolochDAO](https://molochdao.com) [@MolochDAO](https://twitter.com/MolochDAO) - _Ethereum geliştirmelerini desteklemeye odaklı bir topluluk_
-- [Raid Guild](https://raidguild.org) [@RaidGuild](https://twitter.com/RaidGuild) - _Web3 yapımcılar kolektifi_
+- [DAOSquare](https://daosquare.io/) [@DAOSquare](https://x.com/DAOSquare) - _DAO konseptinin teknoloji harici alanlarda tanıtılması ve insanların DAO aracılığıyla değer yaratmalarına yardım edilmesi_
+- [Developer DAO](https://www.developerdao.com/) [@developer_dao](https://x.com/developer_dao) - _İnternetin ortaklaşa sahipliğine inanan yapımcıların topluluğu_
+- [dOrg](https://dOrg.tech) [@dOrg_tech](https://x.com/dOrg_tech) - _DAO olarak çalışan bir freelancer Web3 geliştirme kolektifi_
+- [HausDAO](https://daohaus.club) [@nowdaoit](https://x.com/nowdaoit) - _DAOHaus'un topluluk yönetimi_
+- [LexDAO](https://lexdao.org) [@lex_DAO](https://x.com/lex_DAO) - _Hukuk mühendisliği_
+- [Machi X](https://machix.com) [@MachiXOfficial](https://x.com/MachiXOfficial) - _Sanat topluluğu_
+- [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://x.com/VENTURE_DAO) - _Başlangıç öncesi kripto projeleri için girişimler_
+- [MetaGame](https://metagame.wtf) [@MetaFam](https://x.com/MetaFam) - _Gerçek Hayat için MMORPG Oyun Mekanikleri_
+- [MetaFactory](https://metafactory.ai) [@TheMetaFactory](https://x.com/TheMetaFactory) - _Dijifiziksel Giyim Firmaları_
+- [MolochDAO](https://molochdao.com) [@MolochDAO](https://x.com/MolochDAO) - _Ethereum geliştirmelerini desteklemeye odaklı bir topluluk_
+- [Raid Guild](https://raidguild.org) [@RaidGuild](https://x.com/RaidGuild) - _Web3 yapımcılar kolektifi_
 
 Ne zaman ve nerede ethereum.org'a katkı verirseniz verin, lütfen ethereum.org'un [misyon ve değerlerine](/community/code-of-conduct) uymayı unutmayın!

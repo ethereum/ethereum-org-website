@@ -92,7 +92,7 @@ Zajištění auditu smart kontraktů je jedním ze způsobů, jak provést nezá
 
 Je však důležité nenahlížet na audity jako na všelék. Audity smart kontraktů neodhalí každou chybu a jsou navrženy především pro poskytování dalšího kola kontrol, které mohou pomoci odhalit problémy, které vývojáři během počátečního vývoje a testování přehlédli. Doporučuje se dodržovat osvědčené postupy při práci s auditory, jako je řádné dokumentování kódu a přidávání komentářů, aby se přínos takového auditu maximalizoval.
 
-- [Smart contract auditing tips & tricks](https://twitter.com/tinchoabbate/status/1400170232904400897) – _@tinchoabbate_
+- [Smart contract auditing tips & tricks](https://x.com/tinchoabbate/status/1400170232904400897) – _@tinchoabbate_
 - [Make the most out of your audit](https://inference.ag/blog/2023-08-14-tips/) – _Inference_
 
 #### Odměna za vyřešení chyby {#bug-bounties}

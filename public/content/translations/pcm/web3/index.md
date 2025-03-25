@@ -40,7 +40,7 @@ Dem form di premise of 'Web 3.0' by [Ethereum](/what-is-ethereum/)Gavin Wood wey
 
 ### Wetin bi web3? {#what-is-web3}
 
-Web3 don bikom one katch-all term for di vishon of new, betta intanet. At im kore, Web 3 dey yus blockchains, cryptocurrencies, and NFTs to give pawa bak to di users in di form of ownaship. [One 2020 post on Twitter](https://twitter.com/himgajria/status/1266415636789334016) tok am wella: Web1 na read-only, Web2 na read-write, Web3 go bi read-write-own.
+Web3 don bikom one katch-all term for di vishon of new, betta intanet. At im kore, Web 3 dey yus blockchains, cryptocurrencies, and NFTs to give pawa bak to di users in di form of ownaship. [One 2020 post on Twitter](https://x.com/himgajria/status/1266415636789334016) tok am wella: Web1 na read-only, Web2 na read-write, Web3 go bi read-write-own.
 
 #### Di main idias of Web3 {#core-ideas}
 

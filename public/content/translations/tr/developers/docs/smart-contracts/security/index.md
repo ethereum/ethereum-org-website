@@ -92,7 +92,7 @@ Akıllı sözleşme denetim hizmeti almak, bağımsız bir kod incelemesi gerçe
 
 Bununla birlikte, denetimleri sihirli değnek gibi görmemelisiniz. Akıllı sözleşme denetimleri her hatayı yakalamaz ve çoğunlukla ek bir dizi inceleme sunmak üzere tasarlanmıştır, bu da geliştiriciler tarafından ilk geliştirme ve test esnasında gözden kaçırılabilecek sorunları tespit etmeye yardımcı olur. Ayrıca akıllı sözleşme denetiminin faydasını maksimuma çıkarmak için kodu düzgün biçimde belgelemek ve satır içi yorumlar eklemek gibi denetimcilerle çalışmaya yönelik en iyi pratikleri takip etmelisiniz.
 
-- [Akıllı sözleşme denetim ipuçları ve püf noktaları](https://twitter.com/tinchoabbate/status/1400170232904400897) - _@tinchoabbate_
+- [Akıllı sözleşme denetim ipuçları ve püf noktaları](https://x.com/tinchoabbate/status/1400170232904400897) - _@tinchoabbate_
 - [Denetiminizden en iyi şekilde yararlanın](https://inference.ag/blog/2023-08-14-tips/) - _Inference_
 
 #### Hata ödülleri {#bug-bounties}

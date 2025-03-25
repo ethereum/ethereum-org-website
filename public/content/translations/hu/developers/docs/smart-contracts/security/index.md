@@ -92,7 +92,7 @@ Az okosszerződés auditálása az egyik módja a független kódvizsgálatnak. 
 
 Mindazonáltal fontos megjegyezni, hogy az audit nem old meg minden problémát. Az okosszerződés-auditok nem tárnak fel minden egyes hibát, és a terv általában egy második körös ellenőrzés, hogy azokat a problémákat kiszúrja, ami a fejlesztőknek nem vált világossá a fejlesztés és tesztelés során. Kövesse a bevált gyakorlatokat az auditorokkal való munka kapcsán, mint amilyen a kód megfelelő dokumentálása és a sorokhoz kapcsolt kommentek, amelyek révén az okosszerződés-auditból a lehető legtöbb előnyt ki lehet hozni.
 
-- [Okosszerződés auditáláshoz tippek és trükkök](https://twitter.com/tinchoabbate/status/1400170232904400897) - _@tinchoabbate_
+- [Okosszerződés auditáláshoz tippek és trükkök](https://x.com/tinchoabbate/status/1400170232904400897) - _@tinchoabbate_
 - [Hozza ki a legtöbbet az auditból](https://inference.ag/blog/2023-08-14-tips/) - _Inference_
 
 #### Hibavadászatok {#bug-bounties}

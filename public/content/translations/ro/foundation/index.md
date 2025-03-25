@@ -19,7 +19,7 @@ EF nu este o companie, nici chiar o organizație non-profit tradițională. Rolu
 
 [Programul de sprijin pentru ecosistem](https://esp.ethereum.foundation/) există pentru a oferi atât sprijin financiar, cât și non-financiar proiectelor și entităților din comunitatea mai mare Ethereum, ca să accelereze creșterea ecosistemului. Programul de sprijin pentru ecosistem este o prelungire a Programului original de granturi Ethereum, care se axa în principal pe sprijinul financiar.
 
-Aflaţi mai multe despre Programul de sprijin pentru ecosistem, beneficiarii de granturi anteriori și procesul de solicitare a granturilor la [esp.ethereum.foundation](https://esp.ethereum.foundation/). De asemenea, puteţi vedea [Blogul Programului de sprijin pentru ecosistem](https://blog.ethereum.org/category/ecosystem-support-program/) sau puteţi urmări [@ EF_ESP](https://twitter.com/EF_ESP) ca să aflaţi știrile și anunțurile de ultimă oră.
+Aflaţi mai multe despre Programul de sprijin pentru ecosistem, beneficiarii de granturi anteriori și procesul de solicitare a granturilor la [esp.ethereum.foundation](https://esp.ethereum.foundation/). De asemenea, puteţi vedea [Blogul Programului de sprijin pentru ecosistem](https://blog.ethereum.org/category/ecosystem-support-program/) sau puteţi urmări [@ EF_ESP](https://x.com/EF_ESP) ca să aflaţi știrile și anunțurile de ultimă oră.
 
 ### Devcon {#devcon}
 
@@ -27,7 +27,7 @@ Din 2014, Fundația Ethereum a organizat Devcon, conferința anuală pentru toț
 
 Puteți accesa conținutul video al prezentărilor conferinței pentru fiecare an, de la înființarea sa, la [archive.devcon.org](https://archive.devcon.org/).
 
-Aflaţi mai multe la [devcon.org](https://devcon.org/), consultaţi [Devcon Blog](https://devcon.org/en/blogs/) sau urmăriţi [@efdevcon](https://twitter.com/EFDevcon) pentru a afla anunţurile de ultimă oră.
+Aflaţi mai multe la [devcon.org](https://devcon.org/), consultaţi [Devcon Blog](https://devcon.org/en/blogs/) sau urmăriţi [@efdevcon](https://x.com/EFDevcon) pentru a afla anunţurile de ultimă oră.
 
 ### Programul de burse {#fellowship-program}
 

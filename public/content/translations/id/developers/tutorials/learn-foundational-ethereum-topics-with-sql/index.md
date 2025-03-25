@@ -274,4 +274,4 @@ Dengan tutorial ini, kita memahami konsep dasar Ethereum dan cara blockchain Eth
 
 Dasbor yang menyimpan semua kode yang digunakan dalam tutorial ini dapat ditemukan [di sini](https://duneanalytics.com/paulapivat/Learn-Ethereum).
 
-Untuk penggunaan data selengkapnya untuk menjelajah web3 [hubungi saya di Twitter](https://twitter.com/paulapivat).
+Untuk penggunaan data selengkapnya untuk menjelajah web3 [hubungi saya di Twitter](https://x.com/paulapivat).

@@ -269,4 +269,4 @@ Com este tutorial, entendemos os conceitos fundamentais do Ethereum e como a blo
 
 O painel que contém todo o código usado neste tutorial pode ser encontrado [aqui](https://duneanalytics.com/paulapivat/Learn-Ethereum).
 
-Para mais uso de dados para explorar a web3 [siga-me no Twitter](https://twitter.com/paulapivat).
+Para mais uso de dados para explorar a web3 [siga-me no Twitter](https://x.com/paulapivat).

@@ -288,7 +288,7 @@ Bagan ini menunjukkan bagaimana persyaratan kapasitas penyimpanan selalu berubah
 
 ### Ethereum pada komputer papan tunggal {#ethereum-on-a-single-board-computer}
 
-Cara paling nyaman dan murah untuk menjalankan node Ethereum adalah menggunakan komputer papan tungggal dengan arstitektur ARM seperti Raspberry Pi. [Ethereum di ARM](https://twitter.com/EthereumOnARM) menyediakan gambar dari klien Geth, Parity, Nethermind, dan Besu. Ini adalah tutorial sederhana tentang [bagaimana menyusun dan menyiapkan klien ARM](/developers/tutorials/run-node-raspberry-pi/).
+Cara paling nyaman dan murah untuk menjalankan node Ethereum adalah menggunakan komputer papan tungggal dengan arstitektur ARM seperti Raspberry Pi. [Ethereum di ARM](https://x.com/EthereumOnARM) menyediakan gambar dari klien Geth, Parity, Nethermind, dan Besu. Ini adalah tutorial sederhana tentang [bagaimana menyusun dan menyiapkan klien ARM](/developers/tutorials/run-node-raspberry-pi/).
 
 Perangkat kecil, terjangkau dan efisien seperti ini, ideal untuk menjalankan node di rumah.
 

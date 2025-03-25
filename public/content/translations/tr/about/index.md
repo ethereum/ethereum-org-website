@@ -94,7 +94,7 @@ Ethereum büyük bir olaydır: toplum, teknoloji, fikir ve ideoloji topluluklar�
 
 **Kulağa nasıl geliyor?** Yol haritamız hakkındaki geribildirimleri memnuniyetle karşılarız, üzerinde çalışmamız gerektiğini düşündüğünüz bir şey varsa lütfen bildirin! Topluluktaki herhangi birinden gelecek fikir ve PR'lere açığız.
 
-**Sürecin parçası olmak mı istiyorsunuz?** [Katkıda bulunma hakkında daha fazla bilgi edinin](/contributing/), [bize Twitter'dan ulaşın](https://twitter.com/ethdotorg) veya [Discord sunucumuzdaki](https://discord.gg/ethereum-org) topluluk tartışmalarına katılın.
+**Sürecin parçası olmak mı istiyorsunuz?** [Katkıda bulunma hakkında daha fazla bilgi edinin](/contributing/), [bize Twitter'dan ulaşın](https://x.com/ethdotorg) veya [Discord sunucumuzdaki](https://discord.gg/ethereum-org) topluluk tartışmalarına katılın.
 
 ## Tasarım ilkeleri {#design-principles}
 

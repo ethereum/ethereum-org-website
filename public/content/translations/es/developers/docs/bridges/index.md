@@ -128,7 +128,7 @@ Para monitorear la actividad de los contratos entre cadenas, los desarrolladores
 - [Clústeres: cómo los puentes de confianza y de confianza minimizada dan forma al panorama multicadena](https://blog.celestia.org/clusters/) 4 de octubre de 2021, Mustafa Al-Bassam
 - [LI.FI: con los puentes, la confianza es un espectro](https://blog.li.fi/li-fi-with-bridges-trust-is-a-spectrum-354cd5a1a6d8) 28 de abril de 2022, Arjun Chand
 
-Además, aquí hay algunas presentaciones útiles de [James Prestwich](https://twitter.com/_prestwich) que pueden ayudar a desarrollar una comprensión más profunda de los puentes:
+Además, aquí hay algunas presentaciones útiles de [James Prestwich](https://x.com/_prestwich) que pueden ayudar a desarrollar una comprensión más profunda de los puentes:
 
 - [Crear puentes, no jardines amurallados](https://youtu.be/ZQJWMiX4hT0)
 - [Breaking Down Bridges](https://youtu.be/b0mC-ZqN8Oo)

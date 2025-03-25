@@ -19,7 +19,7 @@ Die EF ist kein Unternehmen, auch kein gemeinnütziges im herkömmlichen Sinne. 
 
 Das [Ökosystem-Förderprogramm](https://esp.ethereum.foundation/) existiert, um Projekte und Einrichtungen innerhalb der übergeordneten Ethereum-Community sowohl finanziell als auch nicht finanziell zu unterstützen, um das Wachstum des Ökosystems zu beschleunigen. Das Ökosystem-Förderprogramm ist eine Erweiterung des ursprünglichen Ethereum-Förderprogramms, welches hauptsächlich auf finanzielle Unterstützung fokussiert war.
 
-Erfahren Sie mehr über das Ökosystem-Förderprogramm, ehemalige Zuschussempfänger sowie den Bewerbungsprozess für Förderungen unter [esp.ethereum.foundation](https://esp.ethereum.foundation/). Alternativ können Sie dem [Ökosystem-Förderprogramm-Blog](https://blog.ethereum.org/category/ecosystem-support-program/) oder [@EF_ESP](https://twitter.com/EF_ESP) für deren aktuellste Nachrichten und Ankündigungen folgen.
+Erfahren Sie mehr über das Ökosystem-Förderprogramm, ehemalige Zuschussempfänger sowie den Bewerbungsprozess für Förderungen unter [esp.ethereum.foundation](https://esp.ethereum.foundation/). Alternativ können Sie dem [Ökosystem-Förderprogramm-Blog](https://blog.ethereum.org/category/ecosystem-support-program/) oder [@EF_ESP](https://x.com/EF_ESP) für deren aktuellste Nachrichten und Ankündigungen folgen.
 
 ### Devcon {#devcon}
 
@@ -27,7 +27,7 @@ Seit 2014 organisiert die Ethereum Foundation die jährliche Konferenz Devcon f�
 
 Auf Videoinhalte der Konferenzpräsentationen aus jedem Jahr seit ihrer Gründung können Sie unter [archive.devcon.org](https://archive.devcon.org/) zugreifen.
 
-Informieren Sie sich unter [devcon.org](https://devcon.org/), folgn Sie dem [Devcon Blog](https://devcon.org/en/blogs/) oder [@efdevcon](https://twitter.com/EFDevcon) für aktuelle Ankündigungen.
+Informieren Sie sich unter [devcon.org](https://devcon.org/), folgn Sie dem [Devcon Blog](https://devcon.org/en/blogs/) oder [@efdevcon](https://x.com/EFDevcon) für aktuelle Ankündigungen.
 
 ### Stipendienprogramm {#fellowship-program}
 

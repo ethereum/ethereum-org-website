@@ -75,7 +75,7 @@ Katkıda bulunmadan önce şunlara aşina olduğunuzdan emin olun:
 Bireysel PR'ler, tasarım evrimi ve büyük yükseltmeler hakkındaki kararlar, Ethereum ekosisteminden bir ekip tarafından verilir. Bu ekip; proje yöneticilerini, geliştiricileri, tasarımcıları, pazarlama ve iletişimleri ve konu uzmanlarını kapsar. Topluluk girdisi her kararı etkiler: Bu nedenle lütfen sorunlarla ilgili sorular sorun, PR gönderin veya ekiple iletişime geçin:
 
 - [website@ethereum.org](mailto:website@ethereum.org)
-- [@ethdotorg](https://twitter.com/ethdotorg)
+- [@ethdotorg](https://x.com/ethdotorg)
 - [Discord sunucusu](https://discord.gg/ethereum-org)
 
 ### İntihal üzerine bir not {#plagiarism}

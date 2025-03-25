@@ -269,4 +269,4 @@ Avec ce tutoriel, nous comprenons les concepts fondateurs d'Ethereum et comment 
 
 Le tableau de bord qui contient tout le code utilisé dans ce tutoriel peut être trouvé [ici](https://duneanalytics.com/paulapivat/Learn-Ethereum).
 
-Pour une plus grande utilisation des données à des fins d'analyse de web3 [vous pouvez me retrouver sur Twitter](https://twitter.com/paulapivat).
+Pour une plus grande utilisation des données à des fins d'analyse de web3 [vous pouvez me retrouver sur Twitter](https://x.com/paulapivat).

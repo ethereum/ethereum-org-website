@@ -377,7 +377,7 @@ lang: ru
 
 - [Отчет об эксплойте Wormhole](https://blog.chainalysis.com/reports/wormhole-hack-february-2022/)
 - [Анализ причин взломов контрактов Ethereum](https://forum.openzeppelin.com/t/list-of-ethereum-smart-contracts-post-mortems/1191)
-- [Новости Rekt](https://twitter.com/RektHQ?s=20\&t=3otjYQdM9Bqk8k3n1a1Adg)
+- [Новости Rekt](https://x.com/RektHQ?s=20\&t=3otjYQdM9Bqk8k3n1a1Adg)
 
 #### Недавние исследования {#recent-research-19}
 

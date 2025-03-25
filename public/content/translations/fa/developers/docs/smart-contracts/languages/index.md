@@ -40,7 +40,7 @@ Remix IDE یک محیط توسعه جامع برای ایجاد و تست قرا
 - [چت روم گیتر Solidity](https://gitter.im/ethereum/solidity) با پلی به [چت روم ماتریس Solidity](https://matrix.to/#/#ethereum_solidity:gitter.im)
 - [برگه تقلب](https://reference.auditless.com/cheatsheet)
 - [وبلاگ Solidity](https://blog.soliditylang.org/)
-- [توییتر Solidity](https://twitter.com/solidity_lang)
+- [توییتر Solidity](https://x.com/solidity_lang)
 
 ### قرارداد نمونه {#example-contract}
 
@@ -268,7 +268,7 @@ def endAuction():
 - [اطلاعیه Fe](https://snakecharmers.ethereum.org/fe-a-new-language-for-the-ethereum-ecosystem/)
 - [نقشه‌ی راه ۲۰۲۱ Fe](https://notes.ethereum.org/LVhaTF30SJOpkbG1iVw1jg)
 - [چت دیسکورد Fe](https://discord.com/invite/ywpkAXFjZH)
-- [توییتر Fe](https://twitter.com/official_fe)
+- [توییتر Fe](https://x.com/official_fe)
 
 ### قرارداد نمونه {#example-contract-3}
 

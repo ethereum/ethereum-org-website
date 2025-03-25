@@ -1580,4 +1580,4 @@ Es simple y claro. Y adivine qué... ¡SU DAPP ESTÁ TERMINADA!
 
 Ya estás preparado para aplicar los conocimientos que ha adquirido en este tutorial, ¡y así, crear su propio proyecto de DApp personalizada! Está de más decir que, ante cualquier duda, siempre puede pedirnos ayuda en el canal [Discord de Alchemy](https://discord.gg/gWuC7zB). 🧙‍♂️
 
-Cuando finalice este tutorial, cuéntenos cómo fue su experiencia o comparta algún comentario etiquetándonos en Twitter [@alchemyplatform](https://twitter.com/AlchemyPlatform).
+Cuando finalice este tutorial, cuéntenos cómo fue su experiencia o comparta algún comentario etiquetándonos en Twitter [@alchemyplatform](https://x.com/AlchemyPlatform).

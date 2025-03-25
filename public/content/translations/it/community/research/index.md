@@ -377,7 +377,7 @@ Gli attacchi su Ethereum generalmente sfruttano le vulnerabilità di singole app
 
 - [Rapporto sull'exploit "wormhole"](https://blog.chainalysis.com/reports/wormhole-hack-february-2022/)
 - [Elenco degli hack post-mortem dei contratti Ethereum](https://forum.openzeppelin.com/t/list-of-ethereum-smart-contracts-post-mortems/1191)
-- [Ultime notizie su Rekt](https://twitter.com/RektHQ?s=20&t=3otjYQdM9Bqk8k3n1a1Adg)
+- [Ultime notizie su Rekt](https://x.com/RektHQ?s=20&t=3otjYQdM9Bqk8k3n1a1Adg)
 
 #### Ricerca recente {#recent-research-19}
 

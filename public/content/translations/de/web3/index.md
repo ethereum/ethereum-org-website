@@ -40,7 +40,7 @@ Der Begriff "Web 3.0" wurde von [Ethereum](/what-is-ethereum/)-Mitbegründer Gav
 
 ### Was ist Web3? {#what-is-web3}
 
-Web3 wurde zu einem Sammelbegriff für die Vision eines neuen, besseren Internets. Im Kern nutzt Web3 Blockchains, Kryptowährungen und NFTs, um den Nutzern Macht in Form von Eigentum zurückzugeben. [Ein Twitter-Beitrag aus dem Jahr 2021](https://twitter.com/j1mmyeth/status/1459003044067258370) bringt es auf den Punkt: Web1 war nur lesen, Web2 ist lesen und schreiben, Web3 wird lesen, schreiben und besitzen sein.
+Web3 wurde zu einem Sammelbegriff für die Vision eines neuen, besseren Internets. Im Kern nutzt Web3 Blockchains, Kryptowährungen und NFTs, um den Nutzern Macht in Form von Eigentum zurückzugeben. [Ein Twitter-Beitrag aus dem Jahr 2021](https://x.com/j1mmyeth/status/1459003044067258370) bringt es auf den Punkt: Web1 war nur lesen, Web2 ist lesen und schreiben, Web3 wird lesen, schreiben und besitzen sein.
 
 #### Der Kern von Web3 {#core-ideas}
 

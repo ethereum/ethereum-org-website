@@ -92,7 +92,7 @@ Demander un audit des contrats intelligents est une façon de procéder à un ex
 
 Cela dit, évitez de considérer les audits comme un remède miracle. Les audits de contrats intelligents ne saisiront pas chaque bogue et sont principalement conçus pour fournir une série de revues complémentaires, qui peut aider à détecter les problèmes qui auront échappé aux développeurs lors du développement et du test initial. Vous devez également suivre les bonnes pratiques pour travailler avec les auditeurs, comme documenter le code correctement et ajouter des commentaires en ligne, pour maximiser les avantages d'un audit de contrats intelligents.
 
-- [Trucs & astuces d'audit de contrat intelligent](https://twitter.com/tinchoabbate/status/1400170232904400897) - _tinchoabbate_
+- [Trucs & astuces d'audit de contrat intelligent](https://x.com/tinchoabbate/status/1400170232904400897) - _tinchoabbate_
 - [Tirer le meilleur de votre audit](https://inference.ag/blog/2023-08-14-tips/) - _Inference_
 
 #### Chasse à la prime {#bug-bounties}

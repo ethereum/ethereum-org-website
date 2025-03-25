@@ -92,7 +92,7 @@ contract VendingMachine {
 
 但是，你應該避免把審核當成一勞永逸地的解決方案。 智慧型合約審核不可能發現每一個錯誤，其主要目的是再次進行審查，幫助開發者偵測在開發初期和測試階段沒有發現的問題。 你也應該遵循與審核者合作的最佳案例，例如製作完整的程式碼記錄以及新增內嵌注釋，才能從智慧型合約審核中獲得最大效益。
 
-- [智慧型合約審核提示和技巧](https://twitter.com/tinchoabbate/status/1400170232904400897) - _@tinchoabbate_
+- [智慧型合約審核提示和技巧](https://x.com/tinchoabbate/status/1400170232904400897) - _@tinchoabbate_
 - [充分利用你的審核](https://inference.ag/blog/2023-08-14-tips/) - _推理_
 
 #### 漏洞懸賞 {#bug-bounties}

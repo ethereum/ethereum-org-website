@@ -40,7 +40,7 @@ Web 2.0 davri 2004-yilda ijtimoiy media platformalarining paydo boʻlishi bilan 
 
 ### Web3 nima? {#what-is-web3}
 
-Web3 yangi, yaxshiroq internetni tasavvur qilish uchun umumiy atamaga aylandi. Web3 o‘z mohiyatiga ko‘ra, blokcheynlar, kriptovalyutalar va NFTlardan foydalanuvchilarga egalik qilish shaklida hokimiyatni qaytarish uchun foydalanadi. [Twitterdagi 2020-yilgi post](https://twitter.com/himgajria/status/1266415636789334016) buni eng yaxshi deb aytdi: Web1 faqat o‘qish uchun, Web2 o‘qish-yozish uchun, Web3 o‘qish-yozish-egalik qilish uchun.
+Web3 yangi, yaxshiroq internetni tasavvur qilish uchun umumiy atamaga aylandi. Web3 o‘z mohiyatiga ko‘ra, blokcheynlar, kriptovalyutalar va NFTlardan foydalanuvchilarga egalik qilish shaklida hokimiyatni qaytarish uchun foydalanadi. [Twitterdagi 2020-yilgi post](https://x.com/himgajria/status/1266415636789334016) buni eng yaxshi deb aytdi: Web1 faqat o‘qish uchun, Web2 o‘qish-yozish uchun, Web3 o‘qish-yozish-egalik qilish uchun.
 
 #### Web3ning asosiy gʻoyalari {#core-ideas}
 

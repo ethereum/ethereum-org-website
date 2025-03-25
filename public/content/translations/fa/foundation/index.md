@@ -19,7 +19,7 @@ lang: fa
 
 [برنامه پشتیبانی اکوسیستم](https://esp.ethereum.foundation/) برای شتابدهی به رشد اکوسیستم، برای پروژه ها و افراد فعال در جامعه اتریوم حمایت مالی و غیر مالی فراهم میکند. برنامه پشتیبانی اکوسیستم نسخه ای گسترش داده شده از برنامه حمایت مالی اتریوم است که بر حمایت مالی از اکوسیستم تمرکز داشت.
 
-درباره برنامه پشتیبانی اتریوم، دریافت کنندگان قبلی پشتیبانی، و روند درخواست کمک هزینه در [esp.ethereum.foundation](https://esp.ethereum.foundation/) اطلاعات بیشتر دریافت کنید. همچنین برای آگاهی از آخرین اخبار و اطلاعیه ها میتوانید [ وبلاگ برنامه پشتیبانی اکوسیستم](https://blog.ethereum.org/category/ecosystem-support-program/) و یا [@EF_ESP](https://twitter.com/EF_ESP) را دنبال کنید.
+درباره برنامه پشتیبانی اتریوم، دریافت کنندگان قبلی پشتیبانی، و روند درخواست کمک هزینه در [esp.ethereum.foundation](https://esp.ethereum.foundation/) اطلاعات بیشتر دریافت کنید. همچنین برای آگاهی از آخرین اخبار و اطلاعیه ها میتوانید [ وبلاگ برنامه پشتیبانی اکوسیستم](https://blog.ethereum.org/category/ecosystem-support-program/) و یا [@EF_ESP](https://x.com/EF_ESP) را دنبال کنید.
 
 ### Devcon {#devcon}
 
@@ -27,7 +27,7 @@ lang: fa
 
 شما میتوانید در [archive.devcon.org](https://archive.devcon.org/) به تمام محتوای ویدیویی مطالب ارائه شده در هر کنفرانس از زمان پیدایش آن دسترسی پیدا کنید.
 
-برای اطلاعات بیشتر، نگاه کنید به [devcon.org](https://devcon.org/)، و نگاهی به [وبلاگ دِوکان](https://devcon.org/en/blogs/) بیندازید، یا برای اخرین اطلاعیه ها، صفحه[@efdevcon](https://twitter.com/EFDevcon) را دنبال کنید.
+برای اطلاعات بیشتر، نگاه کنید به [devcon.org](https://devcon.org/)، و نگاهی به [وبلاگ دِوکان](https://devcon.org/en/blogs/) بیندازید، یا برای اخرین اطلاعیه ها، صفحه[@efdevcon](https://x.com/EFDevcon) را دنبال کنید.
 
 ### برنامه فلوشیپ {#fellowship-program}
 

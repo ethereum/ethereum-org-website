@@ -294,4 +294,4 @@ Out[13]: 1000003000000000000000000
 
 ## Ve derin bir nefes alın {#and-breathe}
 
-Bir süredir bu işle uğraştığımız için şu anda biraz mola vermek iyi gelebilir. Derine dalmaya devam ediyoruz ve bu serinin ikinci bölümünde keşfe devam edeceğiz. Yakında ele alacağımız bazı kavramlar: gerçek bir düğüme bağlanma, akıllı sözleşmeler ve jetonlar. Yukarıdakilerle ilgili sorularınız mı var? Bana sorabilirsiniz! Geribildiriminiz konunun ilerleyişini etkileyecektir. [Twitter](https://twitter.com/wolovim) aracılığıyla isteklerinizi iletebilirsiniz.
+Bir süredir bu işle uğraştığımız için şu anda biraz mola vermek iyi gelebilir. Derine dalmaya devam ediyoruz ve bu serinin ikinci bölümünde keşfe devam edeceğiz. Yakında ele alacağımız bazı kavramlar: gerçek bir düğüme bağlanma, akıllı sözleşmeler ve jetonlar. Yukarıdakilerle ilgili sorularınız mı var? Bana sorabilirsiniz! Geribildiriminiz konunun ilerleyişini etkileyecektir. [Twitter](https://x.com/wolovim) aracılığıyla isteklerinizi iletebilirsiniz.

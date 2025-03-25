@@ -92,7 +92,7 @@ Upgrades hebben meestal geen impact op eindgebruikers, behalve door betere gebru
 
 ## Wat met The Verge, The Splurge, enzovoort? {#what-about-the-verge-splurge-etc}
 
-[Vitalik Buterin stelde een visie voor de routekaart van Ethereum](https://twitter.com/VitalikButerin/status/1741190491578810445) voor die georganiseerd werd in verschillende categorieën die verbonden waren door hun effecten op de architectuur van Ethereum. Hierin bevond zich het volgende:
+[Vitalik Buterin stelde een visie voor de routekaart van Ethereum](https://x.com/VitalikButerin/status/1741190491578810445) voor die georganiseerd werd in verschillende categorieën die verbonden waren door hun effecten op de architectuur van Ethereum. Hierin bevond zich het volgende:
 
 - **De samenvoeging**: upgrades met betrekking tot de overgang van [proof-of-work](/glossary/#pow) naar [proof-of-stake](/glossary/#pos)
 - **The Surge**: upgrades met betrekking tot schaalbaarheid door [rollups](/glossary/#rollups) en data sharding

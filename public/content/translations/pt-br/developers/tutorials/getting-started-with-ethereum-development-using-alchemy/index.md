@@ -151,4 +151,4 @@ O último número de bloco é 11043912
 
 Não tem certeza do que fazer a seguir? Experimente implementar seu primeiro contrato inteligente e colocar a mão na massa com um pouco de programação Solidity em nosso [Guia de contratos inteligentes “Olá, mundo”](https://docs.alchemyapi.io/tutorials/hello-world-smart-contract), ou teste seus conhecimentos sobre painel de controle com o [Aplicativo de demonstração do painel](https://docs.alchemyapi.io/tutorials/demo-app)!
 
-_[Cadastre-se com o Alchemy](https://auth.alchemyapi.io/signup) gratuitamente, confira [a nossa documentação](https://docs.alchemyapi.io/), e para receber as últimas notícias, siga-nos no [Twitter](https://twitter.com/AlchemyPlatform)_.
+_[Cadastre-se com o Alchemy](https://auth.alchemyapi.io/signup) gratuitamente, confira [a nossa documentação](https://docs.alchemyapi.io/), e para receber as últimas notícias, siga-nos no [Twitter](https://x.com/AlchemyPlatform)_.

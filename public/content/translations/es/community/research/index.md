@@ -378,7 +378,7 @@ Por lo general, los hackeos en Ethereum se aprovechan de puntos flacos en aplica
 
 - [Informe de explotación de agujero de gusano](https://blog.chainalysis.com/reports/wormhole-hack-february-2022/)
 - [Lista de hackeo de contratos de Ethereum post mórtem](https://forum.openzeppelin.com/t/list-of-ethereum-smart-contracts-post-mortems/1191)
-- [Rekt News](https://twitter.com/RektHQ?s=20\&t=3otjYQdM9Bqk8k3n1a1Adg)
+- [Rekt News](https://x.com/RektHQ?s=20\&t=3otjYQdM9Bqk8k3n1a1Adg)
 
 #### Investigación reciente {#recent-research-19}
 

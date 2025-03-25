@@ -78,7 +78,7 @@ Cu toate acestea, deoarece tranzacțiile NFT au loc pe același blockchain parta
 
 De exemplu, dacă există o scădere populară a NFT-ului și un căutător dorește un anumit NFT sau un set de NFT-uri, acesta poate programa o tranzacție astfel încât să fie primul la rând pentru a cumpăra NFT-ul sau poate cumpăra întregul set de NFT-uri într-o singură tranzacție. Sau, dacă un NFT este listat [din greșeală la un preț scăzut](https://www.theblockcrypto.com/post/113546/mistake-sees-69000-cryptopunk-sold-for-less-than-a-cent), un căutător poate să devanseze alți cumpărători și să îl achiziționeze la preț redus.
 
-Un exemplu proeminent de NFT MEV a avut loc atunci când un căutător a cheltuit 7 milioane USD pentru a [cumpăra](https://etherscan.io/address/0x650dCdEB6ecF05aE3CAF30A70966E2F395d5E9E5) fiecare Cryptopunk la prețul minim. Un cercetător blockchain [a explicat pe Twitter](https://twitter.com/IvanBogatyy/status/1422232184493121538) cum cumpărătorul a lucrat cu un furnizor MEV pentru a-și păstra secretă achiziția.
+Un exemplu proeminent de NFT MEV a avut loc atunci când un căutător a cheltuit 7 milioane USD pentru a [cumpăra](https://etherscan.io/address/0x650dCdEB6ecF05aE3CAF30A70966E2F395d5E9E5) fiecare Cryptopunk la prețul minim. Un cercetător blockchain [a explicat pe Twitter](https://x.com/IvanBogatyy/status/1422232184493121538) cum cumpărătorul a lucrat cu un furnizor MEV pentru a-și păstra secretă achiziția.
 
 ### The long tail {#mev-examples-long-tail}
 
@@ -126,4 +126,4 @@ Pe măsură ce DeFi se dezvoltă și cresc în popularitate, MEV ar putea în cu
 - [Ethereum este o pădure întunecată](https://www.paradigm.xyz/2020/08/ethereum-is-a-dark-forest/)
 - [Evadarea din pădurea întunecată](https://samczsun.com/escaping-the-dark-forest/)
 - [Flashbots: Frontrunning-ul crizei MEV](https://medium.com/flashbots/frontrunning-the-mev-crisis-40629a613752)
-- [@bertcmiller's MEV Threads](https://twitter.com/bertcmiller/status/1402665992422047747)
+- [@bertcmiller's MEV Threads](https://x.com/bertcmiller/status/1402665992422047747)

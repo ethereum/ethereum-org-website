@@ -35,8 +35,8 @@ Cientos de miles de entusiastas de Ethereum se reúnen en estos foros en línea 
 ## YouTube y Twitter {#youtube-and-twitter}
 
 <SocialListItem socialIcon="youtube"><Link href="https://www.youtube.com/c/EthereumFoundation">Ethereum Foundation</Link>: para estar al corriente de todas las novedades sobre Ethereum Foundation</SocialListItem>
-<SocialListItem socialIcon="twitter"><Link href="https://twitter.com/ethereum">@ethereum</Link>: cuenta oficial de Ethereum Foundation</SocialListItem>
-<SocialListItem socialIcon="twitter"><Link href="https://twitter.com/ethdotorg">@ethdotorg</Link>: el portal de Ethereum, creado para nuestra comunidad global cada vez más numerosa</SocialListItem>
+<SocialListItem socialIcon="twitter"><Link href="https://x.com/ethereum">@ethereum</Link>: cuenta oficial de Ethereum Foundation</SocialListItem>
+<SocialListItem socialIcon="twitter"><Link href="https://x.com/ethdotorg">@ethdotorg</Link>: el portal de Ethereum, creado para nuestra comunidad global cada vez más numerosa</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://hive.one/c/ethereum?page=1">Lista de las cuentas influyentes de Ethereum en twitter</Link></SocialListItem>
 
 <Divider />

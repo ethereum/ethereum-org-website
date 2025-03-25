@@ -40,7 +40,7 @@ A web3 kifejezést az [Ethereum](/what-is-ethereum/) társalapítója, Gavin Woo
 
 ### Mi az a Web3? {#what-is-web3}
 
-A Web3 egy magával ragadó szóvá vált, amelyet minden olyanra értünk, ami újjá és jobbá teszi az internetet. A Web3 blokkláncokat, kriptovalutákat és nem helyettesíthető tokeneket (NFT) használ, hogy visszaadja a felhasználónak a tulajdonjogot. [Egy 2020-as Twitter-bejegyzés](https://twitter.com/himgajria/status/1266415636789334016) foglalta össze a legjobban: a web1 csak olvasás volt, a web2-nél az olvasásé és írásé a főszerep, a web3 az olvasás-írás-tulajdonlás világa lesz.
+A Web3 egy magával ragadó szóvá vált, amelyet minden olyanra értünk, ami újjá és jobbá teszi az internetet. A Web3 blokkláncokat, kriptovalutákat és nem helyettesíthető tokeneket (NFT) használ, hogy visszaadja a felhasználónak a tulajdonjogot. [Egy 2020-as Twitter-bejegyzés](https://x.com/himgajria/status/1266415636789334016) foglalta össze a legjobban: a web1 csak olvasás volt, a web2-nél az olvasásé és írásé a főszerep, a web3 az olvasás-írás-tulajdonlás világa lesz.
 
 #### A Web3 központi elképzelései {#core-ideas}
 

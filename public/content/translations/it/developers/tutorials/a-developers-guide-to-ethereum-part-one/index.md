@@ -294,4 +294,4 @@ Maggiori informazioni sul [gas](/developers/docs/gas/#post-london)
 
 ## E respira {#and-breathe}
 
-Ci siamo soffermati su questo argomento per un po' di tempo, quindi sembra un buon momento per prendersi una pausa. L'argomento non è esaurito e continueremo a parlarne nella seconda parte di questa serie. Alcuni concetti che affronteremo: connettersi a un nodo reale, contratti intelligenti e token. Hai domande d'approfondimento? Fammelo sapere! Il tuo feedback influenzerà il contenuto della seconda parte. Le richieste sono benvenute tramite [Twitter](https://twitter.com/wolovim).
+Ci siamo soffermati su questo argomento per un po' di tempo, quindi sembra un buon momento per prendersi una pausa. L'argomento non è esaurito e continueremo a parlarne nella seconda parte di questa serie. Alcuni concetti che affronteremo: connettersi a un nodo reale, contratti intelligenti e token. Hai domande d'approfondimento? Fammelo sapere! Il tuo feedback influenzerà il contenuto della seconda parte. Le richieste sono benvenute tramite [Twitter](https://x.com/wolovim).

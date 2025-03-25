@@ -120,16 +120,16 @@ L'écosystème Ethereum a pour mission de financer des biens publics et des proj
 
 Les « DAO » sont des organisations autonomes décentralisées. Ces groupes tirent parti de la technologie Ethereum pour faciliter l'organisation et la collaboration. Par exemple, pour contrôler l'adhésion, voter sur des propositions ou gérer des actifs mis en commun. Bien que les DAO soient encore expérimentales, elles vous offrent la possibilité de trouver des groupes auxquels vous vous identifiez, de trouver des collaborateurs et d'accroître votre impact sur la communauté Ethereum. [En savoir plus sur les DAO](/dao/)
 
-- [DAOSquare](https://daosquare.io/) [@DAOSquare](https://twitter.com/DAOSquare) - _Promouvoir le concept de DAO dans le domaine non technologique et aider les personnes à créer de la valeur grâce au DAO_
-- [Développeur DAO](https://www.developerdao.com/) [@developer_dao](https://twitter.com/developer_dao) - _Communauté de constructeurs qui croient en la propriété collective d'Internet_
-- [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) - *Collectif de développement Web3 indépendant travaillant en tant que DAO*
-- [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) - *Gouvernance communautaire de DAOhaus*
-- [LexDAO](https://lexdao.org) [@lex_DAO](https://twitter.com/lex_DAO) - *Ingénierie juridique*
-- [Machi X](https://machix.com) [@MachiXOfficial](https://twitter.com/MachiXOfficial) - *Communauté artistique*
-- [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://twitter.com/VENTURE_DAO) - *Venture pour des projets de crypto pré-amorçage*
-- [MetaGame](https://metagame.wtf) [@MetaFam](https://twitter.com/MetaFam) - *Mécaniques de jeu MMORPG pour la vraie vie*
-- [MetaFactory](https://metafactory.ai) [@TheMetaFactory](https://twitter.com/TheMetaFactory) - *Marques de vêtements digiphysiques*
-- [MolochDAO](https://molochdao.com) [@MolochDAO](https://twitter.com/MolochDAO) - *Communauté axée sur le financement du développement d'Ethereum*
-- [Guilde Raid](https://raidguild.org) [@RaidGuild](https://twitter.com/RaidGuild) - *Collectif de constructeurs Web3*
+- [DAOSquare](https://daosquare.io/) [@DAOSquare](https://x.com/DAOSquare) - _Promouvoir le concept de DAO dans le domaine non technologique et aider les personnes à créer de la valeur grâce au DAO_
+- [Développeur DAO](https://www.developerdao.com/) [@developer_dao](https://x.com/developer_dao) - _Communauté de constructeurs qui croient en la propriété collective d'Internet_
+- [dOrg](https://dOrg.tech) [@dOrg_tech](https://x.com/dOrg_tech) - *Collectif de développement Web3 indépendant travaillant en tant que DAO*
+- [HausDAO](https://daohaus.club) [@nowdaoit](https://x.com/nowdaoit) - *Gouvernance communautaire de DAOhaus*
+- [LexDAO](https://lexdao.org) [@lex_DAO](https://x.com/lex_DAO) - *Ingénierie juridique*
+- [Machi X](https://machix.com) [@MachiXOfficial](https://x.com/MachiXOfficial) - *Communauté artistique*
+- [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://x.com/VENTURE_DAO) - *Venture pour des projets de crypto pré-amorçage*
+- [MetaGame](https://metagame.wtf) [@MetaFam](https://x.com/MetaFam) - *Mécaniques de jeu MMORPG pour la vraie vie*
+- [MetaFactory](https://metafactory.ai) [@TheMetaFactory](https://x.com/TheMetaFactory) - *Marques de vêtements digiphysiques*
+- [MolochDAO](https://molochdao.com) [@MolochDAO](https://x.com/MolochDAO) - *Communauté axée sur le financement du développement d'Ethereum*
+- [Guilde Raid](https://raidguild.org) [@RaidGuild](https://x.com/RaidGuild) - *Collectif de constructeurs Web3*
 
 À chaque fois et quelle que soit la façon dont vous contribuez à ethereum.org, pensez à respecter le [code de conduite](/community/code-of-conduct) !

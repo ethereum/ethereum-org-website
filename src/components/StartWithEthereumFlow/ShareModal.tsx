@@ -20,7 +20,7 @@ export const shareOnTwitter = (): void => {
   const tweet = `${encodeURI(`I connected to ethereum on ethereum.org! Try it yourself at ${url}`)}`
 
   window.open(
-    `https://twitter.com/intent/tweet?text=${tweet}&hashtags=${hashtags}`
+    `https://x.com/intent/tweet?text=${tweet}&hashtags=${hashtags}`
   )
 }
 

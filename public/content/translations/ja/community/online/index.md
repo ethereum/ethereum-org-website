@@ -35,8 +35,8 @@ lang: ja
 ## YouTubeとTwitter {#youtube-and-twitter}
 
 <SocialListItem socialIcon="youtube"><Link href="https://www.youtube.com/c/EthereumFoundation">イーサリアム・ファウンデーション</Link> - イーサリアム・ファウンデーションの最新情報</SocialListItem>
-<SocialListItem socialIcon="twitter"><Link href="https://twitter.com/ethereum">@ethereum</Link> - イーサリアム・ファウンデーションの公式アカウント</SocialListItem>
-<SocialListItem socialIcon="twitter"><Link href="https://twitter.com/ethdotorg">@ethdotorg</Link> - 日々拡大するグローバルコミュニティのために作られたイーサリアムへのポータル</SocialListItem>
+<SocialListItem socialIcon="twitter"><Link href="https://x.com/ethereum">@ethereum</Link> - イーサリアム・ファウンデーションの公式アカウント</SocialListItem>
+<SocialListItem socialIcon="twitter"><Link href="https://x.com/ethdotorg">@ethdotorg</Link> - 日々拡大するグローバルコミュニティのために作られたイーサリアムへのポータル</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://hive.one/c/ethereum?page=1">影響力のあるイーサリアムに関するTwitterアカウントリスト</Link></SocialListItem>
 
 <Divider />

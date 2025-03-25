@@ -288,6 +288,6 @@ Chrome拡張機能やFirefoxのアドオンなどのブラウザ拡張機能は�
 - [ガイド: 詐欺トークンの見分け方](/guides/how-to-id-scam-tokens/)
 - [安全に利用: よくある詐欺](https://support.mycrypto.com/staying-safe/common-scams) - _MyCrypto_
 - [詐欺の回避](https://bitcoin.org/en/scams) - _Bitcoin.org_
-- [一般的な暗号通貨フィッシングメールとメッセージ](https://twitter.com/tayvano_/status/1516225457640787969) - _Taylor Monahan_
+- [一般的な暗号通貨フィッシングメールとメッセージ](https://x.com/tayvano_/status/1516225457640787969) - _Taylor Monahan_
 
 <QuizWidget quizKey="security" />

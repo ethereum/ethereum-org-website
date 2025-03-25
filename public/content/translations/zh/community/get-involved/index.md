@@ -120,16 +120,16 @@ lang: zh
 
 “DAO”是指去中心化自治组织。 这些团队利用以太坊技术促进组织和协作。 例如，用于成员资格管理、提案投票或联合资产管理。 虽然去中心化自治组织仍处于试验阶段，但它们提供了机会，让你找到自己认同的团队，找到合作者并且扩大自己对以太坊社区的影响。 [更多关于去中心化自治组织的信息](/dao/)
 
-- [DAOSquare](https://daosquare.io/) [@DAOSquare](https://twitter.com/DAOSquare) - _在非技术领域推广去中心化自治组织这一概念，帮助人们通过去中心化自治组织创造价值_
-- [Developer DAO](https://www.developerdao.com/) [@developer_dao](https://twitter.com/developer_dao) - _由相信互联网为集体所有的构建者组成的社区_
-- [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) - _以去中心化自治组织形式运行的自由职业者 Web3 开发团队_
-- [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) - _DAOhaus 社区治理_
-- [LexDAO](https://lexdao.org) [@lex_DAO](https://twitter.com/lex_DAO) - _法律工程_
-- [Machi X](https://machix.com) [@MachiXOfficial](https://twitter.com/MachiXOfficial) - _艺术社区_
-- [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://twitter.com/VENTURE_DAO) - _为种子阶段前的加密项目提供风险投资_
-- [MetaGame](https://metagame.wtf) [@MetaFam](https://twitter.com/MetaFam) - _面向现实世界的 MMORPG 游戏机制_
-- [MetaFactory](https://metafactory.ai) [@TheMetaFactory](https://twitter.com/TheMetaFactory) - _数字化实体服装品牌_
-- [MolochDAO](https://molochdao.com) [@MolochDAO](https://twitter.com/MolochDAO) - _专注于资助以太坊发展的社区_
-- [Raid Guild](https://raidguild.org) [@RaidGuild](https://twitter.com/RaidGuild) - _由 Web3 构建者组成的团队_
+- [DAOSquare](https://daosquare.io/) [@DAOSquare](https://x.com/DAOSquare) - _在非技术领域推广去中心化自治组织这一概念，帮助人们通过去中心化自治组织创造价值_
+- [Developer DAO](https://www.developerdao.com/) [@developer_dao](https://x.com/developer_dao) - _由相信互联网为集体所有的构建者组成的社区_
+- [dOrg](https://dOrg.tech) [@dOrg_tech](https://x.com/dOrg_tech) - _以去中心化自治组织形式运行的自由职业者 Web3 开发团队_
+- [HausDAO](https://daohaus.club) [@nowdaoit](https://x.com/nowdaoit) - _DAOhaus 社区治理_
+- [LexDAO](https://lexdao.org) [@lex_DAO](https://x.com/lex_DAO) - _法律工程_
+- [Machi X](https://machix.com) [@MachiXOfficial](https://x.com/MachiXOfficial) - _艺术社区_
+- [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://x.com/VENTURE_DAO) - _为种子阶段前的加密项目提供风险投资_
+- [MetaGame](https://metagame.wtf) [@MetaFam](https://x.com/MetaFam) - _面向现实世界的 MMORPG 游戏机制_
+- [MetaFactory](https://metafactory.ai) [@TheMetaFactory](https://x.com/TheMetaFactory) - _数字化实体服装品牌_
+- [MolochDAO](https://molochdao.com) [@MolochDAO](https://x.com/MolochDAO) - _专注于资助以太坊发展的社区_
+- [Raid Guild](https://raidguild.org) [@RaidGuild](https://x.com/RaidGuild) - _由 Web3 构建者组成的团队_
 
 请记住，无论何时，无论通过何种方式，在为 ethereum.org 做贡献时，都请遵守 ethereum.org [行为准则](/community/code-of-conduct)！

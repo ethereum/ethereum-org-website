@@ -243,7 +243,7 @@ Beim ersten Mal ist es erforderlich, manuell ein Konto zu erstellen. Führen Sie
 
 Wir haben viel Arbeit investiert, um den Raspberry Pi 4 als vollwertigen Ethereum-Node einzurichten, da wir wissen, dass die große Nutzerbasis dieses Geräts einen sehr positiven Einfluss auf das Netzwerk haben kann.
 
-Beachten Sie, dass dies das erste Image auf Basis von Ubuntu 20.04 ist und es daher noch einige Fehler enthalten kann. Wenn Sie das feststellen, eröffnen Sie ein Thema auf [GitHub](https://github.com/diglos/ethereumonarm) oder kontaktieren Sie uns auf [Twitter](https://twitter.com/EthereumOnARM).
+Beachten Sie, dass dies das erste Image auf Basis von Ubuntu 20.04 ist und es daher noch einige Fehler enthalten kann. Wenn Sie das feststellen, eröffnen Sie ein Thema auf [GitHub](https://github.com/diglos/ethereumonarm) oder kontaktieren Sie uns auf [Twitter](https://x.com/EthereumOnARM).
 
 ## Referenzen {#references}
 

@@ -294,4 +294,4 @@ Mais sobre [gás](/developers/docs/gas/#post-london)
 
 ## Agora uma pausa {#and-breathe}
 
-Já estamos nisso por um tempo, então este parece um lugar tão bom quanto qualquer um para fazer uma pausa. A descoberta continua, e vamos continuar com a parte dois desta série. Alguns conceitos que surgem: conectar a um nó real, contratos inteligentes e tokens. Tem perguntas adicionais? Queremos saber! Seu feedback influenciará o caminho a seguir. Suas perguntas são bem-vindas no [Twitter](https://twitter.com/wolovim).
+Já estamos nisso por um tempo, então este parece um lugar tão bom quanto qualquer um para fazer uma pausa. A descoberta continua, e vamos continuar com a parte dois desta série. Alguns conceitos que surgem: conectar a um nó real, contratos inteligentes e tokens. Tem perguntas adicionais? Queremos saber! Seu feedback influenciará o caminho a seguir. Suas perguntas são bem-vindas no [Twitter](https://x.com/wolovim).

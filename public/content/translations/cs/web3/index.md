@@ -40,7 +40,7 @@ Koncepci "Webu 3.0" navrhl krátce po spuštění [Etherea](/what-is-ethereum/) 
 
 ### Co je Web3? {#what-is-web3}
 
-Termín Web3 se stal obecným označením pro vizi nového a lepšího internetu. Ve své podstatě využívá Web3 blockchainové technologie, kryptoměny a NFT, díky kterým vrací kontrolu nad vlastnictvím obsahu do rukou uživatelů. [Tweet z roku 2020](https://twitter.com/himgajria/status/1266415636789334016) to vyjádřil nejlépe: Web1 sloužil pouze ke čtení, Web2 ke čtení a tvorbě obsahu, Web3 bude ke čtení, tvorbě a vlastnictví obsahu.
+Termín Web3 se stal obecným označením pro vizi nového a lepšího internetu. Ve své podstatě využívá Web3 blockchainové technologie, kryptoměny a NFT, díky kterým vrací kontrolu nad vlastnictvím obsahu do rukou uživatelů. [Tweet z roku 2020](https://x.com/himgajria/status/1266415636789334016) to vyjádřil nejlépe: Web1 sloužil pouze ke čtení, Web2 ke čtení a tvorbě obsahu, Web3 bude ke čtení, tvorbě a vlastnictví obsahu.
 
 #### Klíčové myšlenky Web3 {#core-ideas}
 

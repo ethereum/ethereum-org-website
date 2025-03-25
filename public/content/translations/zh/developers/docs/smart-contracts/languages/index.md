@@ -40,7 +40,7 @@ Remix 集成开发环境提供了一个全面的开发环境，用于创建和�
 - 桥接到 [Solidity Matrix 聊天室](https://matrix.to/#/#ethereum_solidity:gitter.im)的 [Solidity Gitter 聊天室](https://gitter.im/ethereum/solidity)
 - [备忘单](https://reference.auditless.com/cheatsheet)
 - [Solidity 博客](https://blog.soliditylang.org/)
-- [Solidity Twitter](https://twitter.com/solidity_lang)
+- [Solidity Twitter](https://x.com/solidity_lang)
 
 ### 合约示例 {#example-contract}
 
@@ -262,7 +262,7 @@ def endAuction():
 - [Fe 公告](https://snakecharmers.ethereum.org/fe-a-new-language-for-the-ethereum-ecosystem/)
 - [Fe 2021 路线图](https://notes.ethereum.org/LVhaTF30SJOpkbG1iVw1jg)
 - [Fe Discord 聊天室](https://discord.com/invite/ywpkAXFjZH)
-- [Fe Twitter](https://twitter.com/official_fe)
+- [Fe Twitter](https://x.com/official_fe)
 
 ### 合约示例 {#example-contract-3}
 

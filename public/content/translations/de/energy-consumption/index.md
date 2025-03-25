@@ -71,7 +71,7 @@ Native Web3-Finanzierungsplattformen für öffentliche Güter wie [Gitcoin](http
 - [Bericht des Weißen Hauses zu Blockchains mit Proof-of-Work](https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
 - [Ethereum-Emissionen: Eine Bottom-up-Schätzung](https://kylemcdonald.github.io/ethereum-emissions/) - _Kyle McDonald_
 - [Ethereum Index des Energieverbrauchs](https://digiconomist.net/ethereum-energy-consumption/) - _Digiconomist_
-- [ETHMerge.com](https://ethmerge.com/) - _[@InsideTheSim](https://twitter.com/InsideTheSim)_
+- [ETHMerge.com](https://ethmerge.com/) - _[@InsideTheSim](https://x.com/InsideTheSim)_
 - [Die Zusammenführung - Auswirkungen auf den Stromverbrauch und den CO2-Footprint des Ethereum-Netzwerks](https://carbon-ratings.com/eth-report-2022) - _CCRI_
 - [Der Energieverbrauch von Ethereum](https://mirror.xyz/jmcook.eth/ODpCLtO4Kq7SCVFbU4He8o8kXs418ZZDTj0lpYlZkR8)
 

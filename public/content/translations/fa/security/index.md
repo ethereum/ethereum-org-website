@@ -288,6 +288,6 @@ _توجه: توکن‌ها/تیکرهای مشتقی وجود دارند که م
 - [راهنما: تشخیص توکن های کلاهبرداری](/guides/how-to-id-scam-tokens/)
 - [ایمن ماندن: کلاهبرداری‌های رایج](https://support.mycrypto.com/staying-safe/common-scams) - _MyCrypto_
 - [جلوگیری از کلاهبرداری](https://bitcoin.org/en/scams) - _Bitcoin.org_
-- [رشته توییتر در ایمیل‌ها و پیام‌های رایج فیشینگ رمزنگاری](https://twitter.com/tayvano_/status/1516225457640787969) - _تیلور موناهان_
+- [رشته توییتر در ایمیل‌ها و پیام‌های رایج فیشینگ رمزنگاری](https://x.com/tayvano_/status/1516225457640787969) - _تیلور موناهان_
 
 <QuizWidget quizKey="security" />

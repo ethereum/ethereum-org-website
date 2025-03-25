@@ -40,7 +40,7 @@ Premis 'Web 3.0' diciptakan oleh salah satu co-founder [Ethereum](/what-is-ether
 
 ### Apa itu Web3? {#what-is-web3}
 
-Web3 telah menjadi istilah umum untuk visi internet baru yang lebih baik. Pada intinya, Web3 menggunakan rantai blok, mata uang kripto, dan NFT untuk memberikan kekuatan kembali kepada pengguna dalam bentuk kepemilikan. [Sebuah postingan pada tahun 2020 di Twitter](https://twitter.com/himgajria/status/1266415636789334016) menjelaskan dengan sangat baik: Web1 hanya bisa-dibaca, Web2 bisa dibaca-ditulis, Web3 akan bisa dibaca/ditulis/dimiliki.
+Web3 telah menjadi istilah umum untuk visi internet baru yang lebih baik. Pada intinya, Web3 menggunakan rantai blok, mata uang kripto, dan NFT untuk memberikan kekuatan kembali kepada pengguna dalam bentuk kepemilikan. [Sebuah postingan pada tahun 2020 di Twitter](https://x.com/himgajria/status/1266415636789334016) menjelaskan dengan sangat baik: Web1 hanya bisa-dibaca, Web2 bisa dibaca-ditulis, Web3 akan bisa dibaca/ditulis/dimiliki.
 
 #### Inti ide Web3 {#core-ideas}
 

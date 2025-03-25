@@ -276,4 +276,4 @@ _참고: 스테이킹된 ETH를 나타내기 위한 파생 토큰/티커가 있�
 
 - [안전한 암호화폐: 흔한 사기 유형들](https://support.mycrypto.com/staying-safe/common-scams) - _MyCrypto_
 - [사기 예방하기](https://bitcoin.org/en/scams) - _Bitcoin.org_
-- [일반적인 암호화폐 피싱 이메일과 메시지에 대한 트위터 글](https://twitter.com/tayvano_/status/1516225457640787969) - *Taylor Monahan*
+- [일반적인 암호화폐 피싱 이메일과 메시지에 대한 트위터 글](https://x.com/tayvano_/status/1516225457640787969) - *Taylor Monahan*

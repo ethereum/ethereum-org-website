@@ -60,8 +60,8 @@ Si vous pensez qu'une communauté devrait être ajoutée ou supprimée selon ces
 ## YouTube et Twitter {#youtube-and-twitter}
 
 <SocialListItem socialIcon="youtube"><Link href="https://www.youtube.com/c/EthereumFoundation">Ethereum Foundation</Link> - Tenez-vous au courant des dernières nouvelles de la fondation Ethereum</SocialListItem>
-<SocialListItem socialIcon="twitter"><Link href="https://twitter.com/ethereum">@ethereum</Link> - Compte officiel de la Fondation Ethereum</SocialListItem>
-<SocialListItem socialIcon="twitter"><Link href="https://twitter.com/ethdotorg">@ethdotorg</Link> - Le portail vers Ethereum, construit pour notre communauté mondiale grandissante</SocialListItem>
+<SocialListItem socialIcon="twitter"><Link href="https://x.com/ethereum">@ethereum</Link> - Compte officiel de la Fondation Ethereum</SocialListItem>
+<SocialListItem socialIcon="twitter"><Link href="https://x.com/ethdotorg">@ethdotorg</Link> - Le portail vers Ethereum, construit pour notre communauté mondiale grandissante</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://hive.one/c/ethereum?page=1">Liste des comptes Twitter Ethereum influents</Link></SocialListItem>
 
 <Divider />

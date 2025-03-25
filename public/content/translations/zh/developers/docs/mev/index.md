@@ -78,7 +78,7 @@ NFT 领域的 MEV 是一种新兴现象，而且不一定能赚钱。
 
 例如，如果有一个流行的 NFT 下降，并且搜索者想要某个 NFT 或一组NFT，他们可以写一个交易，使他们成为第一个排队购买 NFT 的人，或者他们可以在一个交易中购买整个 NFT 组合。 或者，如果一个 NFT 被[错误地以低价挂出](https://www.theblockcrypto.com/post/113546/mistake-sees-69000-cryptopunk-sold-for-less-than-a-cent)，搜寻者就可以抢在其他购买者前面，低价抢购。
 
-NFT MEV的一个显著例子发生在一个搜寻者花费 700 万美元来[购买](https://etherscan.io/address/0x650dCdEB6ecF05aE3CAF30A70966E2F395d5E9E5)价格底线的每一个 Cryptopunk。 一位区块链研究员[在Twitter](https://twitter.com/IvanBogatyy/status/1422232184493121538)上解释了买家是如何与 MEV 供应商合作以保持其购买的秘密。
+NFT MEV的一个显著例子发生在一个搜寻者花费 700 万美元来[购买](https://etherscan.io/address/0x650dCdEB6ecF05aE3CAF30A70966E2F395d5E9E5)价格底线的每一个 Cryptopunk。 一位区块链研究员[在Twitter](https://x.com/IvanBogatyy/status/1422232184493121538)上解释了买家是如何与 MEV 供应商合作以保持其购买的秘密。
 
 ### 长尾 {#mev-examples-long-tail}
 
@@ -214,7 +214,7 @@ MEV Boost 运行机制与原来的 Flashbots 拍卖相同，但增加了一些�
 - [以太坊黑暗森林](https://www.paradigm.xyz/2020/08/ethereum-is-a-dark-forest/)
 - [逃离黑暗森林](https://samczsun.com/escaping-the-dark-forest/)
 - [Flashbos：在 MEV 危机中抢跑](https://medium.com/flashbots/frontrunning-the-mev-crisis-40629a613752)
-- [@bertcmiller's MEV 评论](https://twitter.com/bertcmiller/status/1402665992422047747)
+- [@bertcmiller's MEV 评论](https://x.com/bertcmiller/status/1402665992422047747)
 - [MEV-Boost：直接适用于合并的 Flashbots 架构](https://ethresear.ch/t/mev-boost-merge-ready-flashbots-architecture/11177)
 - [什么是 MEV Boost](https://www.alchemy.com/overviews/mev-boost)
 - [为什么运行 mev-boost？](https://writings.flashbots.net/writings/why-run-mevboost/)

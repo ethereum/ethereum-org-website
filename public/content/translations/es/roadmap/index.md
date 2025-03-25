@@ -92,7 +92,7 @@ Las actualizaciones tienden a no afectar a los usuarios finales, excepto al prop
 
 ## ¿Y qué pasa con The Verge, The Splurge, etc? {#what-about-the-verge-splurge-etc}
 
-[Vitalik Buterin propuso una visión para la hoja de ruta de Ethereum](https://twitter.com/VitalikButerin/status/1741190491578810445) que estaba organizada en varias categorías vinculadas por sus efectos en la arquitectura de Ethereum. Incluía:
+[Vitalik Buterin propuso una visión para la hoja de ruta de Ethereum](https://x.com/VitalikButerin/status/1741190491578810445) que estaba organizada en varias categorías vinculadas por sus efectos en la arquitectura de Ethereum. Incluía:
 
 - **La Fusión**: actualizaciones relacionadas con el cambio de [prueba de trabajo](/glossary/#pow) a [prueba de participación](/glossary/#pos)
 - **El Surge**: actualizaciones relacionadas con la escalabilidad por medio de [rollups](/glossary/#rollups) y fragmentación de datos

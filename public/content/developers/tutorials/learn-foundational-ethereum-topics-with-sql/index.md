@@ -266,4 +266,4 @@ With this tutorial, we understand foundational Ethereum concepts and how the Eth
 
 The dashboard that holds all code used in this tutorial can be found [here](https://duneanalytics.com/paulapivat/Learn-Ethereum).
 
-For more use of data to explore web3 [find me on Twitter](https://twitter.com/paulapivat).
+For more use of data to explore web3 [find me on Twitter](https://x.com/paulapivat).

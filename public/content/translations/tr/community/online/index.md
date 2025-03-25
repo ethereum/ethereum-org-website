@@ -35,8 +35,8 @@ Yüz binlerce Ethereum meraklısı, haberleri paylaşmak, son gelişmeler hakkı
 ## YouTube ve Twitter {#youtube-and-twitter}
 
 <SocialListItem socialIcon="youtube"><Link href="https://www.youtube.com/c/EthereumFoundation">Ethereum Vakfı</Link> - Ethereum Vakfı'ndan en son haberleri takip edin</SocialListItem>
-<SocialListItem socialIcon="twitter"><Link href="https://twitter.com/ethereum">@ethereum</Link> - Ethereum Foundation'ın resmi hesabı</SocialListItem>
-<SocialListItem socialIcon="twitter"><Link href="https://twitter.com/ethdotorg">@ethdotorg</Link>- Büyüyen küresel topluluğumuz için oluşturulmuş Ethereum portalı</SocialListItem>
+<SocialListItem socialIcon="twitter"><Link href="https://x.com/ethereum">@ethereum</Link> - Ethereum Foundation'ın resmi hesabı</SocialListItem>
+<SocialListItem socialIcon="twitter"><Link href="https://x.com/ethdotorg">@ethdotorg</Link>- Büyüyen küresel topluluğumuz için oluşturulmuş Ethereum portalı</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://hive.one/c/ethereum?page=1">Etkili Ethereum twitter hesaplarının listesi</Link></SocialListItem>
 
 <Divider />

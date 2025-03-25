@@ -78,7 +78,7 @@ MEV در فضای NFT یک پدیده نوظهور است و لزوماً سود
 
 به عنوان مثال، اگر یک افت NFT محبوب وجود داشته باشد و یک جستجوگر یک NFT خاص یا مجموعه ای از NFT ها را بخواهد، می تواند یک تراکنش را طوری برنامه ریزی کند که اولین نفر در صف خرید NFT باشد، یا می تواند کل مجموعه NFT ها را در یک تراکنش خریداری کند. یا اگر یک NFT [به اشتباه با قیمت پایین فهرست شده باشد](https://www.theblockcrypto.com/post/113546/mistake-sees-69000-cryptopunk-sold-for-less-than-a-cent)، جستجوگر می تواند از سایر خریداران پیشی گرفته و آن را با قیمت ارزان خریداری کند.
 
-یکی از نمونه‌های برجسته MEV در NFT زمانی رخ داد که یک جستجوگر 7 میلیون دلار برای [خرید](https://etherscan.io/address/0x650dCdEB6ecF05aE3CAF30A70966E2F395d5E9E5) هر Cryptopunk در کف قیمت هزینه کرد. یک محقق بلاک چین [در توییتر توضیح داد](https://twitter.com/IvanBogatyy/status/1422232184493121538) چگونه خریدار با یک ارائه دهنده MEV کار می کرد تا خرید خود را مخفی نگه دارد.
+یکی از نمونه‌های برجسته MEV در NFT زمانی رخ داد که یک جستجوگر 7 میلیون دلار برای [خرید](https://etherscan.io/address/0x650dCdEB6ecF05aE3CAF30A70966E2F395d5E9E5) هر Cryptopunk در کف قیمت هزینه کرد. یک محقق بلاک چین [در توییتر توضیح داد](https://x.com/IvanBogatyy/status/1422232184493121538) چگونه خریدار با یک ارائه دهنده MEV کار می کرد تا خرید خود را مخفی نگه دارد.
 
 ### قصه طولانی {#mev-examples-long-tail}
 
@@ -214,7 +214,7 @@ MEV Boost همان حراج Flashbots اصلی را حفظ می کند، الب�
 - [اتریوم یک جنگل تاریک است](https://www.paradigm.xyz/2020/08/ethereum-is-a-dark-forest/)
 - [فرار از جنگل تاریک](https://samczsun.com/escaping-the-dark-forest/)
 - [Flashbotها: فرار رو به جلو در بحران MEV](https://medium.com/flashbots/frontrunning-the-mev-crisis-40629a613752)
-- [@bertcmiller's MEV Threads](https://twitter.com/bertcmiller/status/1402665992422047747)
+- [@bertcmiller's MEV Threads](https://x.com/bertcmiller/status/1402665992422047747)
 - [MEV-Boost: معماری Flashbots آماده ادغام](https://ethresear.ch/t/mev-boost-merge-ready-flashbots-architecture/11177)
 - [MEV Boost چیست؟](https://www.alchemy.com/overviews/mev-boost)
 - [چرا mev-boost را اجرا کنید؟](https://writings.flashbots.net/writings/why-run-mevboost/)

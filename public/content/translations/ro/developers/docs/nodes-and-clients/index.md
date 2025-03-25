@@ -290,7 +290,7 @@ Aceste diagrame arată cum cerințele de stocare sunt mereu în schimbare. Pentr
 
 ### Ethereum pe un computer cu o singură placă (SBC) {#ethereum-on-a-single-board-computer}
 
-Cel mai convenabil și mai ieftin mod de a rula nodul Ethereum este de a utiliza un computer cu o singură placă bazată pe arhitectură ARM precum Raspberry Pi. [Ethereum pe ARM](https://twitter.com/EthereumOnARM) oferă imagini ale clienților Geth, OpenEthereum, Nethermind și Besu. Iată un tutorial simplu despre modul [cum se construiește și se configurează un client ARM](/developers/tutorials/run-node-raspberry-pi/).
+Cel mai convenabil și mai ieftin mod de a rula nodul Ethereum este de a utiliza un computer cu o singură placă bazată pe arhitectură ARM precum Raspberry Pi. [Ethereum pe ARM](https://x.com/EthereumOnARM) oferă imagini ale clienților Geth, OpenEthereum, Nethermind și Besu. Iată un tutorial simplu despre modul [cum se construiește și se configurează un client ARM](/developers/tutorials/run-node-raspberry-pi/).
 
 Astfel de dispozitive mici, accesibile și eficiente sunt ideale pentru rularea unui nod la domiciliu.
 

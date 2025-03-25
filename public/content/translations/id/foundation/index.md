@@ -19,7 +19,7 @@ EF bukan sebuah perusahaan, atau bahkan sebuah organisasi nirlaba tradisional. P
 
 [Program Dukungan Ekosistem](https://esp.ethereum.foundation/) ada untuk menyediakan baik dukungan finansial maupun non finansial bagi proyek dan entitas dalam komunitas Ethereum yang lebih besar, dengan tujuan mempercepat pertumbuhan dari ekosistem. Program Dukungan Ekosistem adalah perluasan dari Program Hibah Ethereum yang berfokus terutama pada dukungan finansial.
 
-Pelajari lebih lanjut tentang Program Dukungan Ekosistem, penerima hibah sebelumnya, dan proses pengajuan hibah di [esp.ethereum.foundation](https://esp.ethereum.foundation/). Anda juga bisa melihat [Blog Program Dukungan Ekosistem](https://blog.ethereum.org/category/ecosystem-support-program/) atau ikuti [@EF_ESP](https://twitter.com/EF_ESP) untuk berita dan pengumuman terkini mereka.
+Pelajari lebih lanjut tentang Program Dukungan Ekosistem, penerima hibah sebelumnya, dan proses pengajuan hibah di [esp.ethereum.foundation](https://esp.ethereum.foundation/). Anda juga bisa melihat [Blog Program Dukungan Ekosistem](https://blog.ethereum.org/category/ecosystem-support-program/) atau ikuti [@EF_ESP](https://x.com/EF_ESP) untuk berita dan pengumuman terkini mereka.
 
 ### Devcon {#devcon}
 
@@ -27,7 +27,7 @@ Sejak 2014, Yayasan Ethereum telah mengadakan Devcon, konferensi tahunan untuk s
 
 Anda bisa mengakses konten video presentasi konferensi untuk tiap tahunnya bahkan sejak konferensi pertama di [archive.devcon.org](https://archive.devcon.org/).
 
-Pelajari lebih lanjut di [devcon.org](https://devcon.org/), lihat [Blog Devcon](https://devcon.org/en/blogs/), atau ikuti [@efdevcon](https://twitter.com/EFDevcon) untuk pengumuman terbaru mereka.
+Pelajari lebih lanjut di [devcon.org](https://devcon.org/), lihat [Blog Devcon](https://devcon.org/en/blogs/), atau ikuti [@efdevcon](https://x.com/EFDevcon) untuk pengumuman terbaru mereka.
 
 ### Program Beasiswa {#fellowship-program}
 

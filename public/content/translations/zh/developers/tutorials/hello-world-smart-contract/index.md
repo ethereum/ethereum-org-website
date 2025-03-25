@@ -355,4 +355,4 @@ Contract deployed to address: 0x6cd7d44516a20882cEa2DE9f205bF401c0d23570
 
 这是本教程第 1 部分的全部内容，在第 2 部分中，我们将更新我们的初始信息，从而[与我们的智能合约交互](https://docs.alchemyapi.io/alchemy/tutorials/hello-world-smart-contract#part-2-interact-with-your-smart-contract)；在第 3 部分，我们将[在 Etherscan 上发布我们的智能合约](https://docs.alchemyapi.io/alchemy/tutorials/hello-world-smart-contract#optional-part-3-publish-your-smart-contract-to-etherscan)，使得每个人都会知道如何与之交互。
 
-**想了解更多有关 Alchemy 的信息吗？ 查看我们的[网站](https://alchemyapi.io/eth)。 不想错过更新？ [在这里](https://www.alchemyapi.io/newsletter)订阅我们的新闻通讯！ 请务必关注我们的 [Twitter](https://twitter.com/alchemyplatform) 并加入我们的 [Discord](https://discord.com/invite/u72VCg3)**。
+**想了解更多有关 Alchemy 的信息吗？ 查看我们的[网站](https://alchemyapi.io/eth)。 不想错过更新？ [在这里](https://www.alchemyapi.io/newsletter)订阅我们的新闻通讯！ 请务必关注我们的 [Twitter](https://x.com/alchemyplatform) 并加入我们的 [Discord](https://discord.com/invite/u72VCg3)**。

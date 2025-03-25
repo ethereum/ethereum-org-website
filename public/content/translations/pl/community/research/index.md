@@ -377,7 +377,7 @@ Włamania na Ethereum zazwyczaj wykorzystują luki w poszczególnych aplikacjach
 
 - [Raport o exploicie Wormhole](https://blog.chainalysis.com/reports/wormhole-hack-february-2022/)
 - [Lista przypadków włamań na kontrakty w Ethereum](https://forum.openzeppelin.com/t/list-of-ethereum-smart-contracts-post-mortems/1191)
-- [Wiadomości Rekt](https://twitter.com/RektHQ?s=20\&t=3otjYQdM9Bqk8k3n1a1Adg)
+- [Wiadomości Rekt](https://x.com/RektHQ?s=20\&t=3otjYQdM9Bqk8k3n1a1Adg)
 
 #### Ostatnie badania {#recent-research-19}
 

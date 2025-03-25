@@ -60,8 +60,8 @@ Pokud si myslíte, že by komunita měla být na základě těchto pokynů přid
 ## YouTube a Twitter {#youtube-and-twitter}
 
 <SocialListItem socialIcon="youtube"><Link href="https://www.youtube.com/c/EthereumFoundation">Ethereum Foundation</Link> – sledujte aktuální dění z Ethereum Foundation</SocialListItem>
-<SocialListItem socialIcon="twitter"><Link href="https://twitter.com/ethereum">@ethereum</Link> – oficiální účet Ethereum Foundation</SocialListItem>
-<SocialListItem socialIcon="twitter"><Link href="https://twitter.com/ethdotorg">@ethdotorg</Link> – portál do světa Etherea, vytvořený pro naši rostoucí globální komunitu</SocialListItem>
+<SocialListItem socialIcon="twitter"><Link href="https://x.com/ethereum">@ethereum</Link> – oficiální účet Ethereum Foundation</SocialListItem>
+<SocialListItem socialIcon="twitter"><Link href="https://x.com/ethdotorg">@ethdotorg</Link> – portál do světa Etherea, vytvořený pro naši rostoucí globální komunitu</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://hive.one/c/ethereum?page=1">Seznam vlivných účtů na Twitteru o Ethereu</Link></SocialListItem>
 
 <Divider />

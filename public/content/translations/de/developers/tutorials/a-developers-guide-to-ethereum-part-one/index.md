@@ -292,4 +292,4 @@ Letzteres sieht gut aus. Der Saldo hat sich von 1.000.000 auf 1.000.003 Ether er
 
 ## Und atmen {#and-breathe}
 
-Wir sind schon eine ganze Weile dabei, daher ist jetzt ein guter Zeitpunkt für eine Pause. Im zweiten Teil unserer Serie befassen wir uns weiter mit der Materie. Einige der weiteren Konzepte: Verbindung zu einem echten Node, Smart Contracts und Token. Haben Sie weitere Fragen? Lassen Sie es mich wissen. Ihr Feedback hat Einfluss darauf, wohin die Reise geht. Anfragen können Sie gerne über [Twitter](https://twitter.com/wolovim) stellen.
+Wir sind schon eine ganze Weile dabei, daher ist jetzt ein guter Zeitpunkt für eine Pause. Im zweiten Teil unserer Serie befassen wir uns weiter mit der Materie. Einige der weiteren Konzepte: Verbindung zu einem echten Node, Smart Contracts und Token. Haben Sie weitere Fragen? Lassen Sie es mich wissen. Ihr Feedback hat Einfluss darauf, wohin die Reise geht. Anfragen können Sie gerne über [Twitter](https://x.com/wolovim) stellen.

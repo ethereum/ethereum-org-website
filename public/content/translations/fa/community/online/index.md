@@ -35,8 +35,8 @@ lang: fa
 ## یوتیوب و توییتر {#youtube-and-twitter}
 
 <SocialListItem socialIcon="youtube"><Link href="https://www.youtube.com/c/EthereumFoundation">بنیاد اتریوم</Link> - از تازه‌ترین اخبار «بنیاد اتریوم» مطلع شوید</SocialListItem>
-<SocialListItem socialIcon="twitter"><Link href="https://twitter.com/ethereum">@ethereum</Link> - حساب رسمی بنیاد اتریوم</SocialListItem>
-<SocialListItem socialIcon="twitter"><Link href="https://twitter.com/ethdotorg">@ethdotorg</Link> - پایگاه اینترنتی اتریوم، ساخته‌شده برای جامعه‌ی جهانی در حال رشد ما</SocialListItem>
+<SocialListItem socialIcon="twitter"><Link href="https://x.com/ethereum">@ethereum</Link> - حساب رسمی بنیاد اتریوم</SocialListItem>
+<SocialListItem socialIcon="twitter"><Link href="https://x.com/ethdotorg">@ethdotorg</Link> - پایگاه اینترنتی اتریوم، ساخته‌شده برای جامعه‌ی جهانی در حال رشد ما</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://hive.one/c/ethereum?page=1">فهرست حساب‌های تأثیرگذار اتریوم در توییتر</Link></SocialListItem>
 
 <Divider />

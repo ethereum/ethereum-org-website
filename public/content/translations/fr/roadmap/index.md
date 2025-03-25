@@ -92,7 +92,7 @@ Les mises à niveau n'ont généralement pas d'impact sur les utilisateurs finau
 
 ## Qu'en est-il de The Verge, The Splurge… ? {#what-about-the-verge-splurge-etc}
 
-[Vitalik Buterin a proposé une vision de la feuille de route d'Ethereum](https://twitter.com/VitalikButerin/status/1741190491578810445) organisée en plusieurs catégories liées par leurs effets sur l'architecture d'Ethereum. Elle comprenait :
+[Vitalik Buterin a proposé une vision de la feuille de route d'Ethereum](https://x.com/VitalikButerin/status/1741190491578810445) organisée en plusieurs catégories liées par leurs effets sur l'architecture d'Ethereum. Elle comprenait :
 
 - **La Fusion** : mises à niveau liées au passage de la [preuve de travail](/glossary/#pow) à la [preuve d'enjeu](/glossary/#pos)
 - **The Surge** : mises à niveau liées à l'évolutivité grâce aux [rollups](/glossary/#rollups) et à la fragmentation des données

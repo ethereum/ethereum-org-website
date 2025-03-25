@@ -75,7 +75,7 @@ Sebelum berkontribusi, pastikan Anda memahami:
 Keputusan tentang PR individual, perubahan desain, dan peningkatan besar dibuat oleh tim dari keseluruhan ekosistem Ethereum. Tim ini mencakup para manajer proyek, pengembang, perancang, pemasaran dan komunikasi, dan ahli di bidang tertentu. Masukan dari komunitas mempengaruhi setiap keputusan: jadi silakan buat pertanyaan dalam isu, kirimkan PR, atau hubungi tim:
 
 - [website@ethereum.org](mailto:website@ethereum.org)
-- [@ethdotorg](https://twitter.com/ethdotorg)
+- [@ethdotorg](https://x.com/ethdotorg)
 - [Server discord](https://discord.gg/ethereum-org)
 
 ### Catatan tentang plagiarisme {#plagiarism}

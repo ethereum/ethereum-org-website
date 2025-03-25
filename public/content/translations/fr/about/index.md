@@ -96,7 +96,7 @@ Afin de rendre notre travail plus accessible et de favoriser davantage la collab
 
 **Comment avez-vous trouvé cela ?** Nous nous réjouissons toujours de recevoir des feedbacks sur notre feuille de route - Y a-t-il encore des choses auxquelles nous devrions travailler ? N'hésitez pas à nous le faire savoir ! Nous accueillons avec plaisir les idées et les RP de n'importe quel membre de la communauté.
 
-**Vous voulez vous impliquer ? ** [En savoir plus sur les contributions](/contributing/), [nous contacter sur Twitter](https://twitter.com/ethdotorg), ou rejoindre les discussions de la communauté sur [notre serveur Discord](https://discord.gg/ethereum-org).
+**Vous voulez vous impliquer ? ** [En savoir plus sur les contributions](/contributing/), [nous contacter sur Twitter](https://x.com/ethdotorg), ou rejoindre les discussions de la communauté sur [notre serveur Discord](https://discord.gg/ethereum-org).
 
 ## Principes de conception {#design-principles}
 

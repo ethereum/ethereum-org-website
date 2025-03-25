@@ -92,7 +92,7 @@ Upgrades haben in der Regel keine Auswirkungen auf die Endnutzer, außer dass si
 
 ## Was ist mit The Verge, The Splurge, usw.? {#what-about-the-verge-splurge-etc}
 
-[Vitalik Buterin schlug eine Vision für die Ethereum-Roadmap](https://twitter.com/VitalikButerin/status/1741190491578810445) vor, die in mehrere Kategorien unterteilt war, die durch ihre Auswirkungen auf die Ethereum-Architektur miteinander verbunden sind. Sie enthielt:
+[Vitalik Buterin schlug eine Vision für die Ethereum-Roadmap](https://x.com/VitalikButerin/status/1741190491578810445) vor, die in mehrere Kategorien unterteilt war, die durch ihre Auswirkungen auf die Ethereum-Architektur miteinander verbunden sind. Sie enthielt:
 
 - **The Merge**: Upgrades im Zusammenhang mit der Umstellung von [Proof-of-Work](/glossary/#pow) auf [Proof-of-Stake](/glossary/#pos)
 - **The Surge**: Upgrades im Zusammenhang mit der Skalierbarkeit durch [Rollups](/glossary/#rollups) und Daten-Sharding

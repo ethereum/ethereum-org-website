@@ -290,6 +290,6 @@ Chrome 扩展程序或 Firefox 插件等浏览器扩展程序可以增强浏览�
 - [指南：如何识别诈骗代币](/guides/how-to-id-scam-tokens/)
 - [保持安全：常见骗局](https://support.mycrypto.com/staying-safe/common-scams) - _MyCrypto_
 - [避免骗局](https://bitcoin.org/en/scams) - _Bitcoin.org_
-- [关于常见加密货币网络钓鱼电子邮件和消息的 Twitter 线程](https://twitter.com/tayvano_/status/1516225457640787969) - _Taylor Monahan_
+- [关于常见加密货币网络钓鱼电子邮件和消息的 Twitter 线程](https://x.com/tayvano_/status/1516225457640787969) - _Taylor Monahan_
 
 <QuizWidget quizKey="security" />

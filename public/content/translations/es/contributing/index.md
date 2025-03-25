@@ -75,7 +75,7 @@ Antes de empezar a colaborar, asegúrese de estar familiarizado con:
 Las decisiones acerca de las pull requests (PR) individuales, la evolución del diseño y las mejoras importantes las toma un equipo del ecosistema de Ethereum. Este equipo está compuesto por gestores de proyectos, desarrolladores, diseñadores, especialistas en marketing y comunicación, y otros expertos en la materia. El aporte de la comunidad se tiene en cuenta en cada decisión. Por lo tanto, exprese sus dudas y preguntas en las incidencias abiertas, envíe PR o póngase en contacto con el equipo:
 
 - [website@ethereum.org](mailto:website@ethereum.org)
-- [@ethdotorg](https://twitter.com/ethdotorg)
+- [@ethdotorg](https://x.com/ethdotorg)
 - [Servidor Discord](https://discord.gg/ethereum-org)
 
 ### Aclaraciones acerca del plagio {#plagiarism}

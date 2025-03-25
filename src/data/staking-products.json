@@ -58,7 +58,7 @@
       "ui": ["CLI"],
       "socials": {
         "discord": "https://discord.gg/rocketpool",
-        "twitter": "https://twitter.com/Rocket_Pool",
+        "twitter": "https://x.com/Rocket_Pool",
         "github": "https://github.com/rocket-pool"
       },
       "matomo": {
@@ -90,7 +90,7 @@
       "ui": ["GUI"],
       "socials": {
         "discord": "https://discord.com/invite/4vxZnyEDty",
-        "twitter": "https://twitter.com/stereumdev",
+        "twitter": "https://x.com/stereumdev",
         "github": "https://github.com/stereum-dev"
       },
       "matomo": {
@@ -117,7 +117,7 @@
       "ui": ["GUI"],
       "socials": {
         "discord": "https://discord.gg/c28an8dA5k",
-        "twitter": "https://twitter.com/dappnode",
+        "twitter": "https://x.com/dappnode",
         "github": "https://github.com/dappnode"
       },
       "matomo": {
@@ -204,7 +204,7 @@
       "ui": ["CLI"],
       "socials": {
         "discord": "https://invite.gg/attestant",
-        "twitter": "https://twitter.com/attestantio",
+        "twitter": "https://x.com/attestantio",
         "telegram": "https://t.me/attestant",
         "github": "https://github.com/attestantio"
       },
@@ -231,7 +231,7 @@
       "platforms": ["Browser"],
       "ui": ["GUI"],
       "socials": {
-        "twitter": "https://twitter.com/AvadoCloud",
+        "twitter": "https://x.com/AvadoCloud",
         "github": "https://github.com/AvadoDServer",
         "telegram": "https://t.me/joinchat/SZowfxO-_KgJZcnz"
       },
@@ -258,7 +258,7 @@
       "platforms": ["Linux", "macOS", "Windows"],
       "ui": ["CLI", "AWS", "Azure"],
       "socials": {
-        "twitter": "https://twitter.com/launchnodes",
+        "twitter": "https://x.com/launchnodes",
         "youtube": "https://www.youtube.com/channel/UC5tEUUlx11httS9Y9RvIzJw",
         "linkedin": "https://www.linkedin.com/company/67972177/",
         "discord": "https://discord.gg/w5pjfWqdyT"
@@ -292,7 +292,7 @@
       "ui": ["GUI"],
       "socials": {
         "discord": "https://discord.gg/ethstaker",
-        "twitter": "https://twitter.com/wagyutools",
+        "twitter": "https://x.com/wagyutools",
         "github": "https://github.com/stake-house/wagyu-key-gen"
       },
       "matomo": {
@@ -344,7 +344,7 @@
       "platforms": ["Browser"],
       "ui": ["GUI"],
       "socials": {
-        "twitter": "https://twitter.com/AvadoCloud",
+        "twitter": "https://x.com/AvadoCloud",
         "github": "https://github.com/AvadoDServer",
         "telegram": "https://t.me/joinchat/SZowfxO-_KgJZcnz"
       },
@@ -379,7 +379,7 @@
       "ui": ["GUI"],
       "socials": {
         "discord": "https://discord.gg/3xmHwXxk",
-        "twitter": "https://twitter.com/ChainLabo",
+        "twitter": "https://x.com/ChainLabo",
         "github": "https://github.com/ChainLabo",
         "telegram": "https://web.telegram.org/a/#-1919442359"
       },
@@ -425,7 +425,7 @@
       "ui": ["GUI"],
       "socials": {
         "github": "https://github.com/stakefish",
-        "twitter": "https://twitter.com/stakefish",
+        "twitter": "https://x.com/stakefish",
         "telegram": "https://t.me/stakefish",
         "linkedin": "https://www.linkedin.com/company/14396078",
         "youtube": "https://www.youtube.com/@stakefish"
@@ -468,7 +468,7 @@
       "ui": ["GUI"],
       "socials": {
         "linkedin": "https://www.linkedin.com/company/p2p-org/",
-        "twitter": "https://twitter.com/P2Pvalidator",
+        "twitter": "https://x.com/P2Pvalidator",
         "telegram": "https://t.me/P2Pstaking",
         "github": "https://github.com/p2p-org",
         "youtube": "https://www.youtube.com/channel/UC9pRzyJx5YrUNfmg1vLZ-bQ/"
@@ -511,7 +511,7 @@
       "ui": ["GUI"],
       "socials": {
         "linkedin": "https://www.linkedin.com/company/28150174",
-        "twitter": "https://twitter.com/Kiln_finance",
+        "twitter": "https://x.com/Kiln_finance",
         "github": "https://github.com/kilnfi/"
       },
       "matomo": {
@@ -543,7 +543,7 @@
       "ui": ["GUI"],
       "socials": {
         "discord": "https://discord.allnodes.com/",
-        "twitter": "https://twitter.com/allnodes",
+        "twitter": "https://x.com/allnodes",
         "github": null
       },
       "matomo": {
@@ -601,7 +601,7 @@
       "ui": ["GUI"],
       "socials": {
         "discord": "https://discord.io/ethpool",
-        "twitter": "https://twitter.com/ethpool_staking"
+        "twitter": "https://x.com/ethpool_staking"
       },
       "matomo": {
         "eventCategory": "StakingProductCard",
@@ -631,7 +631,7 @@
       "platforms": ["Browser"],
       "ui": ["GUI"],
       "socials": {
-        "twitter": "https://twitter.com/AbyssFinance",
+        "twitter": "https://x.com/AbyssFinance",
         "telegram": "https://t.me/abyssfinance",
         "github": "https://github.com/abyssfinance"
       },
@@ -666,7 +666,7 @@
       "platforms": ["Browser"],
       "ui": ["GUI"],
       "socials": {
-        "twitter": "https://twitter.com/senseinode",
+        "twitter": "https://x.com/senseinode",
         "medium": "https://medium.com/@senseinode",
         "github": "https://github.com/Sensei-Node"
       },
@@ -702,7 +702,7 @@
       "ui": ["GUI"],
       "socials": {
         "discord": "https://discord.gg/YJzs4UwsTp",
-        "twitter": "https://twitter.com/rockx_official",
+        "twitter": "https://x.com/rockx_official",
         "linkedin": "https://www.linkedin.com/company/rockx-official",
         "youtube": "https://www.youtube.com/channel/UCur9s16EemOPuY_YAXhtG9A"
       },
@@ -740,7 +740,7 @@
       "ui": ["GUI"],
       "socials": {
         "discord": "https://discord.gg/NvcW47V3Xb",
-        "twitter": "https://twitter.com/everstake_pool",
+        "twitter": "https://x.com/everstake_pool",
         "medium": "https://medium.com/everstake"
       },
       "matomo": {
@@ -769,7 +769,7 @@
       "platforms": ["Browser"],
       "ui": ["GUI"],
       "socials": {
-        "twitter": "https://twitter.com/Figment_io",
+        "twitter": "https://x.com/Figment_io",
         "linkedin": "https://www.linkedin.com/company/figment-io"
       },
       "matomo": {
@@ -872,7 +872,7 @@
       "ui": ["GUI"],
       "socials": {
         "discord": "https://discord.gg/rocketpool",
-        "twitter": "https://twitter.com/Rocket_Pool",
+        "twitter": "https://x.com/Rocket_Pool",
         "github": "https://github.com/rocket-pool"
       },
       "matomo": {
@@ -920,7 +920,7 @@
       "ui": ["GUI"],
       "socials": {
         "discord": "https://discord.com/invite/vgdPfhZ",
-        "twitter": "https://twitter.com/lidofinance",
+        "twitter": "https://x.com/lidofinance",
         "telegram": "https://t.me/lidofinance",
         "reddit": "https://www.reddit.com/r/lidofinance/",
         "github": "https://github.com/lidofinance/lido-dao"
@@ -983,7 +983,7 @@
       "ui": ["GUI"],
       "socials": {
         "discord": "https://discord.com/invite/2BSdr2g",
-        "twitter": "https://twitter.com/stakewise_io",
+        "twitter": "https://x.com/stakewise_io",
         "telegram": "https://t.me/stakewise_io",
         "github": "https://github.com/stakewise"
       },
@@ -1033,7 +1033,7 @@
       "ui": ["GUI"],
       "socials": {
         "telegram": "https://t.me/stkrsupport",
-        "twitter": "https://twitter.com/ankr",
+        "twitter": "https://x.com/ankr",
         "github": "https://github.com/Ankr-network/stkr-smart-contract"
       },
       "matomo": {
@@ -1074,7 +1074,7 @@
       "socials": {
         "discord": "https://discord.com/invite/jB77etn",
         "telegram": "https://t.co/9MsQSkT34Q",
-        "twitter": "https://twitter.com/Stafi_Protocol",
+        "twitter": "https://x.com/Stafi_Protocol",
         "github": "https://github.com/stafiprotocol/stafi-node"
       },
       "matomo": {
@@ -1161,7 +1161,7 @@
       "socials": {
         "telegram": "https://t.me/originprotocol",
         "reddit": "https://www.reddit.com/r/originprotocol/",
-        "twitter": "https://twitter.com/OriginProtocol",
+        "twitter": "https://x.com/OriginProtocol",
         "discord": "https://discord.com/invite/ogn",
         "github": "https://github.com/originprotocol",
         "youtube": "https://www.youtube.com/c/originprotocol",
@@ -1202,7 +1202,7 @@
       "ui": ["GUI"],
       "socials": {
         "discord": "https://discord.gg/NvcW47V3Xb",
-        "twitter": "https://twitter.com/everstake_pool",
+        "twitter": "https://x.com/everstake_pool",
         "medium": "https://medium.com/everstake"
       },
       "matomo": {

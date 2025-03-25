@@ -78,7 +78,7 @@ Mivel azonban az NFT tranzakciók ugyanazon a blokkláncon történnek, amelyet 
 
 Például, ha van egy népszerű NFT-kiadás, és egy kereső egy bizonyos NFT-t vagy NFT-készletet szeretne, akkor beprogramozhat egy tranzakciót úgy, hogy ő legyen az első a sorban, vagy egyetlen tranzakcióban megvásárolhatja az egész készletet. Vagy ha egy NFT [tévesen alacsony áron szerepel](https://www.theblockcrypto.com/post/113546/mistake-sees-69000-cryptopunk-sold-for-less-than-a-cent), a kereső megelőzheti a többi vevőt, és olcsón megveheti.
 
-Az NFT MEV egyik kiemelkedő példája az volt, amikor egy kereső 7 millió dollárt költött arra, hogy [megvásárolja](https://etherscan.io/address/0x650dCdEB6ecF05aE3CAF30A70966E2F395d5E9E5) az összes Cryptopunkot a legalacsonyabb áron. Egy blokklánckutató [magyarázta a Twitteren](https://twitter.com/IvanBogatyy/status/1422232184493121538), hogy a vevő egy MEV-szolgáltatóval dolgozott, hogy titokban tartsa a vásárlást.
+Az NFT MEV egyik kiemelkedő példája az volt, amikor egy kereső 7 millió dollárt költött arra, hogy [megvásárolja](https://etherscan.io/address/0x650dCdEB6ecF05aE3CAF30A70966E2F395d5E9E5) az összes Cryptopunkot a legalacsonyabb áron. Egy blokklánckutató [magyarázta a Twitteren](https://x.com/IvanBogatyy/status/1422232184493121538), hogy a vevő egy MEV-szolgáltatóval dolgozott, hogy titokban tartsa a vásárlást.
 
 ### Hosszú távú lehetőségek (long tail) {#mev-examples-long-tail}
 
@@ -214,7 +214,7 @@ Egyes projektek, mint például a MEV Boost, az építő API-t egy olyan átfog�
 - [Az Ethereum egy sötét erdő](https://www.paradigm.xyz/2020/08/ethereum-is-a-dark-forest/)
 - [Kijutni a sötét erdőből](https://samczsun.com/escaping-the-dark-forest/)
 - [Flashbots: megelőzni (frontrunning) a MEV-krízist](https://medium.com/flashbots/frontrunning-the-mev-crisis-40629a613752)
-- [@bertcmiller MEV írásai](https://twitter.com/bertcmiller/status/1402665992422047747)
+- [@bertcmiller MEV írásai](https://x.com/bertcmiller/status/1402665992422047747)
 - [MEV-Boost: A Beolvadásra kész Flashbots-architektúra](https://ethresear.ch/t/mev-boost-merge-ready-flashbots-architecture/11177)
 - [Mi az a MEV Boost](https://www.alchemy.com/overviews/mev-boost)
 - [Miért futtassunk MEV Boost-ot?](https://writings.flashbots.net/writings/why-run-mevboost/)

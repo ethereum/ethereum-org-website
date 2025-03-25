@@ -120,16 +120,16 @@ Ekosystém Etherea má za cíl financovat veřejné statky a významné projekty
 
 „DAO“ jsou decentralizované autonomní organizace. Tyto skupiny využívají technologii Etherea k usnadnění organizace a spolupráce. Například ke kontrole členství, hlasování o návrzích nebo správě sdružených aktiv. I když jsou DAOs stále experimentální, nabízejí příležitosti, jak najít skupiny, se kterými se identifikujete, najít spolupracovníky a rozšířit svůj vliv na komunitu Etherea. [Další informace o DAO](/dao/)
 
-- [DAOSquare](https://daosquare.io/) [@DAOSquare](https://twitter.com/DAOSquare) – _Propagujte koncept DAO v netechnických oblastech a pomáhejte lidem vytvářet hodnoty prostřednictvím DAO_
-- [Developer DAO](https://www.developerdao.com/) [@developer_dao](https://twitter.com/developer_dao) – _Komunita stavitelů, kteří věří v kolektivní vlastnictví internetu_
-- [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) – _Vývojový Web3 kolektiv na volné noze pracující jako DAO_
-- [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) – _Správa komunity DAOhaus_
-- [LexDAO](https://lexdao.org) [@lex_DAO](https://twitter.com/lex_DAO) – _Právní inženýrství_
-- [Machi X](https://machix.com) [@MachiXOfficial](https://twitter.com/MachiXOfficial) – _Umělecká komunita_
-- [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://twitter.com/VENTURE_DAO) – _Podnik pro pre-seed krypto projekty_
-- [MetaGame](https://metagame.wtf) [@MetaFam](https://twitter.com/MetaFam) – _MMORPG herní mechanismy pro reálný život_
-- [MetaFactory](https://metafactory.ai) [@TheMetaFactory](https://twitter.com/TheMetaFactory) – _Digifyzické oděvní značky_
-- [MolochDAO](https://molochdao.com) [@MolochDAO](https://twitter.com/MolochDAO) – _Komunita zaměřená na financování vývoje Etherea_
-- [Raid Guild](https://raidguild.org) [@RaidGuild](https://twitter.com/RaidGuild) – _Kolektiv stavitelů Web3_
+- [DAOSquare](https://daosquare.io/) [@DAOSquare](https://x.com/DAOSquare) – _Propagujte koncept DAO v netechnických oblastech a pomáhejte lidem vytvářet hodnoty prostřednictvím DAO_
+- [Developer DAO](https://www.developerdao.com/) [@developer_dao](https://x.com/developer_dao) – _Komunita stavitelů, kteří věří v kolektivní vlastnictví internetu_
+- [dOrg](https://dOrg.tech) [@dOrg_tech](https://x.com/dOrg_tech) – _Vývojový Web3 kolektiv na volné noze pracující jako DAO_
+- [HausDAO](https://daohaus.club) [@nowdaoit](https://x.com/nowdaoit) – _Správa komunity DAOhaus_
+- [LexDAO](https://lexdao.org) [@lex_DAO](https://x.com/lex_DAO) – _Právní inženýrství_
+- [Machi X](https://machix.com) [@MachiXOfficial](https://x.com/MachiXOfficial) – _Umělecká komunita_
+- [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://x.com/VENTURE_DAO) – _Podnik pro pre-seed krypto projekty_
+- [MetaGame](https://metagame.wtf) [@MetaFam](https://x.com/MetaFam) – _MMORPG herní mechanismy pro reálný život_
+- [MetaFactory](https://metafactory.ai) [@TheMetaFactory](https://x.com/TheMetaFactory) – _Digifyzické oděvní značky_
+- [MolochDAO](https://molochdao.com) [@MolochDAO](https://x.com/MolochDAO) – _Komunita zaměřená na financování vývoje Etherea_
+- [Raid Guild](https://raidguild.org) [@RaidGuild](https://x.com/RaidGuild) – _Kolektiv stavitelů Web3_
 
 Mějte prosím na paměti, že při přispívání na ethereum.org je třeba se řídit [kodexem chování](/community/code-of-conduct)!

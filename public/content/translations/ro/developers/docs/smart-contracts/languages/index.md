@@ -38,7 +38,7 @@ Dacă aveţi deja cunoştinţe de limbaje de programare, în special JavaScript 
 - [Camera de chat Solidity Gitter](https://gitter.im/ethereum/solidity) legată de [Camera de chat Solidity Matrix](https://matrix.to/#/#ethereum_solidity:gitter.im)
 - [Cheat Sheet](https://reference.auditless.com/cheatsheet)
 - [Blogul Solidity](https://blog.soliditylang.org/)
-- [Contul de Twitter Solidity](https://twitter.com/solidity_lang)
+- [Contul de Twitter Solidity](https://x.com/solidity_lang)
 
 ### Exemplu de contract {#example-contract}
 
@@ -259,7 +259,7 @@ Dacă aveţi deja suficientă experienţă privind contractele inteligente, pute
 - [Anunțul despre Fe](https://snakecharmers.ethereum.org/fe-a-new-language-for-the-ethereum-ecosystem/)
 - [Foaia de parcurs Fe 2021](https://notes.ethereum.org/LVhaTF30SJOpkbG1iVw1jg)
 - [Chat-ul Discord Fe](https://discord.com/invite/ywpkAXFjZH)
-- [Contul de Twitter Fe](https://twitter.com/official_fe)
+- [Contul de Twitter Fe](https://x.com/official_fe)
 
 ### Exemplu de contract {#example-contract-3}
 

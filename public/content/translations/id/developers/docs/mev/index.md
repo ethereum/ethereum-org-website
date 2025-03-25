@@ -76,7 +76,7 @@ Namun, karena transaksi NFT terjadi di blockchain yang sama seperti yang digunak
 
 Misalnya, jika ada satu drop NFT populer dan seorang pencari menginginkan NFT tertentu atau rangkaian NFT, mereka dapat memrogram transaksi sedemikian rupa sehingga mereka ada di urutan pertama dalam antrian untuk membeli NFT tersebut, atau mereka dapat membeli seluruh rangkaian NFT dalam satu transaksi. Atau jika sebuah NFT [secara keliru dicantumkan dengan harga yang rendah](https://www.theblockcrypto.com/post/113546/mistake-sees-69000-cryptopunk-sold-for-less-than-a-cent), seorang pencari dapat melakukan frontrun terhadap para pembeli yang lain dan membelinya segera dengan harga yang murah.
 
-Satu contoh menonjol dari MEV NFT terjadi ketika seorang pencari menghabiskan $7 juta untuk [membeli](https://etherscan.io/address/0x650dCdEB6ecF05aE3CAF30A70966E2F395d5E9E5) setiap Cryptopunck dengan harga dasar. Seorang peneliti blockchain [menjelaskan di Twitter](https://twitter.com/IvanBogatyy/status/1422232184493121538) bagaimana pembeli tersebut bekerja dengan seorang penyedia MEV untuk menjaga pembelian mereka tetap rahasia.
+Satu contoh menonjol dari MEV NFT terjadi ketika seorang pencari menghabiskan $7 juta untuk [membeli](https://etherscan.io/address/0x650dCdEB6ecF05aE3CAF30A70966E2F395d5E9E5) setiap Cryptopunck dengan harga dasar. Seorang peneliti blockchain [menjelaskan di Twitter](https://x.com/IvanBogatyy/status/1422232184493121538) bagaimana pembeli tersebut bekerja dengan seorang penyedia MEV untuk menjaga pembelian mereka tetap rahasia.
 
 ### Ekor panjang {#mev-examples-long-tail}
 
@@ -124,4 +124,4 @@ Seiring pertumbuhan dan peningkatan kepopuleran DeFi, MEV mungkin akan segera me
 - [Ethereum merupakan sebuah Dark Forest](https://www.paradigm.xyz/2020/08/ethereum-is-a-dark-forest/)
 - [Melarikan diri dari Dark Forest](https://samczsun.com/escaping-the-dark-forest/)
 - [Flashbot: Melakukan frontrunning terhadap Krisis MEV](https://medium.com/flashbots/frontrunning-the-mev-crisis-40629a613752)
-- [Thread MEV @bertcmiller](https://twitter.com/bertcmiller/status/1402665992422047747)
+- [Thread MEV @bertcmiller](https://x.com/bertcmiller/status/1402665992422047747)

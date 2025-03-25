@@ -377,7 +377,7 @@ lang: ja
 
 - [Wormholeの脆弱性報告書](https://blog.chainalysis.com/reports/wormhole-hack-february-2022/)
 - [イーサリアムコントラクトのハッキング事後分析リスト](https://forum.openzeppelin.com/t/list-of-ethereum-smart-contracts-post-mortems/1191)
-- [Rekt News](https://twitter.com/RektHQ?s=20\&t=3otjYQdM9Bqk8k3n1a1Adg)
+- [Rekt News](https://x.com/RektHQ?s=20\&t=3otjYQdM9Bqk8k3n1a1Adg)
 
 #### 最近の研究 {#recent-research-19}
 

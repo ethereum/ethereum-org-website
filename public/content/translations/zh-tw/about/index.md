@@ -96,7 +96,7 @@ ethereum.org 是一個屬於以太坊社群的開放原始碼資源，所有人�
 
 **這聽起來怎麽樣？**我們始終感謝對我們開發藍圖提出的意見回饋——如果你認爲我們有某些方面需要改善，請告訴我們！ 我們歡迎來自社群中任何人的想法和提取請求。
 
-**想要參與？**[瞭解更多有關貢獻的資訊](/contributing/)，[在 X（前身為 Twitter）上聯係我們](https://twitter.com/ethdotorg)，或者加入我們在 [ Discord 服務器](https://discord.gg/ethereum-org)上的社群討論。
+**想要參與？**[瞭解更多有關貢獻的資訊](/contributing/)，[在 X（前身為 Twitter）上聯係我們](https://x.com/ethdotorg)，或者加入我們在 [ Discord 服務器](https://discord.gg/ethereum-org)上的社群討論。
 
 ## 設計理念 {#design-principles}
 

@@ -96,7 +96,7 @@ ethereum.org 是一个面向以太坊社区的开源公共网站和教育资源�
 
 **这看起来怎么样？**我们始终感谢为我们的路线图提供的反馈 - 如有改进之处，请告诉我们! 我们欢迎社区里的任何人提出想法和建议。
 
-**想要参与吗？**[了解更多关于做贡献的信息](/contributing/)，[在 Twitter 上联系我们](https://twitter.com/ethdotorg)或加入我们在 [ Discord 服务器](https://discord.gg/ethereum-org)上的社区讨论。
+**想要参与吗？**[了解更多关于做贡献的信息](/contributing/)，[在 Twitter 上联系我们](https://x.com/ethdotorg)或加入我们在 [ Discord 服务器](https://discord.gg/ethereum-org)上的社区讨论。
 
 ## 设计原则 {#design-principles}
 

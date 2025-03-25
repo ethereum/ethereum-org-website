@@ -290,6 +290,6 @@ Browsa ekstenshons, laik Chrome ekstenshons abi Add-ons for Firefox, fit impruf 
 - [Guide: Hau yu fit sabi skam tokens](/guides/how-to-id-scam-tokens/)
 - [To Stay Safe: Komon Skams](https://support.mycrypto.com/staying-safe/common-scams) - _MyCrypto_
 - [To Avoid Skams](https://bitcoin.org/en/scams) - _Bitcoin.org_
-- [Twitter thread on komon crypto phishing emailsand mesajis](https://twitter.com/tayvano_/status/1516225457640787969) - _Taylor Monahan_
+- [Twitter thread on komon crypto phishing emailsand mesajis](https://x.com/tayvano_/status/1516225457640787969) - _Taylor Monahan_
 
 <QuizWidget quizKey="security" />

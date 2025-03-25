@@ -243,7 +243,7 @@ Pertama-tama, Anda perlu membuat akun secara manual dengan menjalankan binari "v
 
 Kami berusaha keras menyiapkan Raspberry Pi 4 sebagai node Ethereum penuh, karena seperti yang kita ketahui basis pengguna perangkat ini yang besar bisa berdampak positif pada jaringan.
 
-Tolong diperhitungkan, karena ini adalah gambar pertama berbasis Ubuntu 20.04, jadi mungkin ada beberapa bug. Jika ada, ajukan masalah di [GitHub](https://github.com/diglos/ethereumonarm) atau hubungi kami di [Twitter](https://twitter.com/EthereumOnARM).
+Tolong diperhitungkan, karena ini adalah gambar pertama berbasis Ubuntu 20.04, jadi mungkin ada beberapa bug. Jika ada, ajukan masalah di [GitHub](https://github.com/diglos/ethereumonarm) atau hubungi kami di [Twitter](https://x.com/EthereumOnARM).
 
 ## Referensi {#references}
 

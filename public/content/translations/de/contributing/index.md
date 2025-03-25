@@ -57,7 +57,7 @@ Bevor Sie einen Beitrag leisten, sollten Sie sich mit folgenden Themen vertraut 
 Entscheidungen zu individuellen PRs, zur Designentwicklung und zu großen Upgrades werden von einem Team aus dem Ethereum-Ökösystem getroffen. In diesem Team finden sich Projektmanager, Entwickler, Designer, Marketing-, Kommunikations- und Fachexperten. Der Input der Community fließt in jede Entscheidung ein: Stellen Sie also Fragen zu Problmen, reichen Sie PRs ein oder kontaktieren Sie das Team:
 
 - [website@ethereum.org](mailto:website@ethereum.org)
-- [@ethdotorg](https://twitter.com/ethdotorg)
+- [@ethdotorg](https://x.com/ethdotorg)
 - [Discord-Server](https://discord.gg/ethereum-org)
 
 ### Ein Hinweis zu Plagiaten {#plagiarism}

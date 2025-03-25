@@ -179,4 +179,4 @@ The latest block number is 11043912
 
 不知道下一步该怎么做？ 尝试部署你的第一个智能合约，开始练习 Solidity 编程同时参阅我们的 [Hello World 智能合约指南](https://docs.alchemyapi.io/tutorials/hello-world-smart-contract)，或使用 [Dashboard Demo App](https://docs.alchemyapi.io/tutorials/demo-app) 测试你的仪表板知识！
 
-免费_[注册 Alchemy](https://auth.alchemyapi.io/signup)，查看我们的[相关文档](https://docs.alchemyapi.io/)，并关注我们的 [Twitter](https://twitter.com/AlchemyPlatform)_ 了解最新消息。
+免费_[注册 Alchemy](https://auth.alchemyapi.io/signup)，查看我们的[相关文档](https://docs.alchemyapi.io/)，并关注我们的 [Twitter](https://x.com/AlchemyPlatform)_ 了解最新消息。

@@ -19,7 +19,7 @@ La EF no es una empresa, ni siquiera una organización sin ánimo de lucro tradi
 
 El [Programa de apoyo al ecosistema](https://esp.ethereum.foundation/) existe para proporcionar apoyo financiero y no financiero a proyectos y entidades dentro de la gran comunidad de Ethereum, con el fin de acelerar la crecimiento del ecosistema. El Programa de apoyo al ecosistema es una expansión del Programa original de subvenciones de Ethereum, que se centró principalmente en el apoyo financiero.
 
-Obtén más información sobre el Programa de apoyo al ecosistema, los beneficiarios de subvenciones anteriores y el proceso de solicitud de subvenciones en el [sitio oficial del Programa](https://esp.ethereum.foundation/). También puede visitar el [blog del Programa de apoyo al ecosistema](https://blog.ethereum.org/category/ecosystem-support-program/) o seguir [@EF_ESP](https://twitter.com/EF_ESP) para conocer sus últimas noticias y anuncios.
+Obtén más información sobre el Programa de apoyo al ecosistema, los beneficiarios de subvenciones anteriores y el proceso de solicitud de subvenciones en el [sitio oficial del Programa](https://esp.ethereum.foundation/). También puede visitar el [blog del Programa de apoyo al ecosistema](https://blog.ethereum.org/category/ecosystem-support-program/) o seguir [@EF_ESP](https://x.com/EF_ESP) para conocer sus últimas noticias y anuncios.
 
 ### Devcon {#devcon}
 
@@ -27,7 +27,7 @@ Desde 2014, Ethereum Foundation ha organizado Devcon, la conferencia anual para 
 
 Puede acceder al contenido en vídeo de las presentaciones de la conferencia para cada año desde su inicio en el sitio [archive.devcon.org](https://archive.devcon.org/).
 
-Obtenga más información en [devcon.org](https://devcon.org/), eche un vistazo al [Blog de Devcon](https://devcon.org/en/blogs/), o siga [@efdevcon](https://twitter.com/EFDevcon) para ver las últimas notificaciones.
+Obtenga más información en [devcon.org](https://devcon.org/), eche un vistazo al [Blog de Devcon](https://devcon.org/en/blogs/), o siga [@efdevcon](https://x.com/EFDevcon) para ver las últimas notificaciones.
 
 ### Programa de becas {#fellowship-program}
 

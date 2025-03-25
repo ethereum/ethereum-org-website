@@ -40,7 +40,7 @@ A programozási nyelvek, különösen a JavaScript vagy a Python korábbi ismere
 - [Solidity Gitter Chatroom](https://gitter.im/ethereum/solidity) összekötve a [Solidity Matrix Chatroom](https://matrix.to/#/#ethereum_solidity:gitter.im)-mal
 - [Puska](https://reference.auditless.com/cheatsheet)
 - [Solidity Blog](https://blog.soliditylang.org/)
-- [Solidity Twitter](https://twitter.com/solidity_lang)
+- [Solidity Twitter](https://x.com/solidity_lang)
 
 ### Példaszerződés {#example-contract}
 
@@ -268,7 +268,7 @@ Ha már nagy tapasztalatra tett szert az okosszerződésekkel kapcsolatban, akko
 - [Fe bejelentés](https://snakecharmers.ethereum.org/fe-a-new-language-for-the-ethereum-ecosystem/)
 - [Fe 2021-es ütemterv](https://notes.ethereum.org/LVhaTF30SJOpkbG1iVw1jg)
 - [Fe Discord-csevegés](https://discord.com/invite/ywpkAXFjZH)
-- [Fe Twitter](https://twitter.com/official_fe)
+- [Fe Twitter](https://x.com/official_fe)
 
 ### Példa szerződés {#example-contract-3}
 

@@ -79,10 +79,10 @@ Offentliga och privata Ethereum-nätverk kan behöva specifika funktioner som kr
 
 - [Alethio Discord](https://discord.gg/d2t8NuU)
 - [Infura Discourse](https://community.infura.io/)
-- [Kaleido Twitter](https://twitter.com/Kaleido_io)
+- [Kaleido Twitter](https://x.com/Kaleido_io)
 - [Hyperledger Rocketchat](https://chat.hyperledger.org/)
 - [Hyperledger Rocketchat (Besu kanal)](https://chat.hyperledger.org/channel/besu)
 - [Hyperledger Rocketchat (Burrow kanal)](https://chat.hyperledger.org/channel/burrow)
-- [PegaSys Twitter](https://twitter.com/Kaleido_io)
+- [PegaSys Twitter](https://x.com/Kaleido_io)
 - [Quorum Slack kanal](http://bit.ly/quorum-slack)
 - [Chainstack Gitter](https://gitter.im/chainstack/Lobby)

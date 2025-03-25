@@ -288,6 +288,6 @@ Browserextensies, zoals Chrome-extensies of Add-ons voor Firefox, kunnen de func
 - [Gids: Hoe scam-tokens identificeren](/guides/how-to-id-scam-tokens/)
 - [Staying Safe: Common Scams](https://support.mycrypto.com/staying-safe/common-scams) - _MyCrypto_
 - [Scams Vermijden](https://bitcoin.org/en/scams) - _Bitcoin.org_
-- [Twitter-thread over veelvoorkomende crypto-phishingmails en -berichten](https://twitter.com/tayvano_/status/1516225457640787969) - _Taylor Monahan_
+- [Twitter-thread over veelvoorkomende crypto-phishingmails en -berichten](https://x.com/tayvano_/status/1516225457640787969) - _Taylor Monahan_
 
 <QuizWidget quizKey="security" />

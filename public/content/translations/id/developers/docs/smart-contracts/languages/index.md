@@ -38,7 +38,7 @@ Pengetahuan dasar bahasa pemrograman, khususnya JavaScript atau Pyhton, bisa men
 - [Ruang Obrolan Gitter Solidity](https://gitter.im/ethereum/solidity) menjembatani [Ruang Obrolan Matrix Solidity](https://matrix.to/#/#ethereum_solidity:gitter.im)
 - [Lembar Kecurangan](https://reference.auditless.com/cheatsheet)
 - [Blog Solidity](https://blog.soliditylang.org/)
-- [Twitter Solidity](https://twitter.com/solidity_lang)
+- [Twitter Solidity](https://x.com/solidity_lang)
 
 ### Contoh kontrak {#example-contract}
 
@@ -266,7 +266,7 @@ Jika Anda telah sangat berpengalaman dalam kontrak pintar, implementasi ERC20 pe
 - [Pengumuman Fe](https://snakecharmers.ethereum.org/fe-a-new-language-for-the-ethereum-ecosystem/)
 - [Roadmap Fe 2021](https://notes.ethereum.org/LVhaTF30SJOpkbG1iVw1jg)
 - [Obrolan Discord Fe](https://discord.com/invite/ywpkAXFjZH)
-- [Twitter Fe](https://twitter.com/official_fe)
+- [Twitter Fe](https://x.com/official_fe)
 
 ### Contoh kontrak {#example-contract-3}
 

@@ -290,6 +290,6 @@ _Σημείωση: Υπάρχουν παράγωγα token/tickers που μπο
 - [Οδηγός: Πως να αναγνωρίσετε τα μη αυθεντικά κρυπτονομίσματα](/guides/how-to-id-scam-tokens/)
 - [Μείνετε ασφαλής: Κοινές απάτες](https://support.mycrypto.com/staying-safe/common-scams) - _MyCrypto_
 - [Αποφεύγοντας τις απάτες](https://bitcoin.org/en/scams) - _Bitcoin.org_
-- [Νήμα στο Twitter για κοινές απάτες ηλεκτρονικού ψαρέματος email και μηνυμάτων για κρυπτονομίσματα](https://twitter.com/tayvano_/status/1516225457640787969) - _Taylor Monahan_
+- [Νήμα στο Twitter για κοινές απάτες ηλεκτρονικού ψαρέματος email και μηνυμάτων για κρυπτονομίσματα](https://x.com/tayvano_/status/1516225457640787969) - _Taylor Monahan_
 
 <QuizWidget quizKey="security" />

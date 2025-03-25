@@ -269,4 +269,4 @@ ORDER BY block_time DESC
 
 包含本教程中所用全部代码的仪表板可以在[此处](https://duneanalytics.com/paulapivat/Learn-Ethereum)找到。
 
-若要更多地使用数据来探索 Web3，[请在推特上找到我](https://twitter.com/paulapivat)。
+若要更多地使用数据来探索 Web3，[请在推特上找到我](https://x.com/paulapivat)。

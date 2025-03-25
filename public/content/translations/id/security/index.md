@@ -288,6 +288,6 @@ Ekstensi browser, seperti ekstensi Chrome atau Add-on untuk Firefox, dapat menin
 - [Panduan: Cara mengidentifikasi token penipuan](/guides/how-to-id-scam-tokens/)
 - [Tetap Aman: Penipuan Umum](https://support.mycrypto.com/staying-safe/common-scams) - _MyCrypto_
 - [Menghindari penipuan](https://bitcoin.org/en/scams) - _Bitcoin.org_
-- [Utasan Twitter tentang Email dan Pesan Penipuan Umum Kripto](https://twitter.com/tayvano_/status/1516225457640787969) - _Taylor Monahan_
+- [Utasan Twitter tentang Email dan Pesan Penipuan Umum Kripto](https://x.com/tayvano_/status/1516225457640787969) - _Taylor Monahan_
 
 <QuizWidget quizKey="security" />

@@ -120,16 +120,16 @@ Az Ethereum-ökoszisztéma missziója, hogy közjóval kapcsolatos és nagy hat�
 
 A DAO-k decentralizált autonóm szervezetek. Ezek az Ethereum technológiára építve működtetnek szerveződéseket és együttműködéseket. Például a tagság kezelése, a javaslatok megszavazása vagy összegyűjtött eszközök kezelése kapcsán. Bár kísérleti fázisban vannak, de rengeteg lehetőséget ajánlanak, hogy találjon egy hasonlóan gondolkodó csoportot, együttműködő partnereket és hatást gyakoroljon az Ethereum közösségre. [Bővebben a DAO-król](/dao/)
 
-- [DAOSquare](https://daosquare.io/) [@DAOSquare](https://twitter.com/DAOSquare) – _A DAO koncepció támogatása a nem technikai területeken, illetve hogy az emberek értéket teremtsenek a DAO által_
-- [Developer DAO](https://www.developerdao.com/) [@developer_dao](https://twitter.com/developer_dao) – _Fejlesztők közössége, akik hisznek az internet közös tulajdonlásában_
-- [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) – _egy szabadúszó web3-fejlesztői csapat, amely DAO-ként működik_
-- [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) – _A DAOhaus közösségi irányítása_
-- [LexDAO](https://lexdao.org) [@lex_DAO](https://twitter.com/lex_DAO) – _Jogi szerepkörök_
-- [Machi X](https://machix.com) [@MachiXOfficial](https://twitter.com/MachiXOfficial) - _Művészeti közösség_
-- [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://twitter.com/VENTURE_DAO) – _kockázati tőke a korai fázisban lévő kriptoprojektek számára_
-- [MetaGame](https://metagame.wtf) [@MetaFam](https://twitter.com/MetaFam) – _MMORPG játékmechanika a való élethez_
-- [MetaFactory](https://metafactory.ai) [@TheMetaFactory](https://twitter.com/TheMetaFactory) – _Digifizikális ruházati márkák_
-- [MolochDAO](https://molochdao.com) [@MolochDAO](https://twitter.com/MolochDAO) – _Az Ethereum-fejlesztések finanszírozását intéző közösség_
-- [Raid Guild](https://raidguild.org) [@RaidGuild](https://twitter.com/RaidGuild) – _Web3-fejlesztők csoportja_
+- [DAOSquare](https://daosquare.io/) [@DAOSquare](https://x.com/DAOSquare) – _A DAO koncepció támogatása a nem technikai területeken, illetve hogy az emberek értéket teremtsenek a DAO által_
+- [Developer DAO](https://www.developerdao.com/) [@developer_dao](https://x.com/developer_dao) – _Fejlesztők közössége, akik hisznek az internet közös tulajdonlásában_
+- [dOrg](https://dOrg.tech) [@dOrg_tech](https://x.com/dOrg_tech) – _egy szabadúszó web3-fejlesztői csapat, amely DAO-ként működik_
+- [HausDAO](https://daohaus.club) [@nowdaoit](https://x.com/nowdaoit) – _A DAOhaus közösségi irányítása_
+- [LexDAO](https://lexdao.org) [@lex_DAO](https://x.com/lex_DAO) – _Jogi szerepkörök_
+- [Machi X](https://machix.com) [@MachiXOfficial](https://x.com/MachiXOfficial) - _Művészeti közösség_
+- [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://x.com/VENTURE_DAO) – _kockázati tőke a korai fázisban lévő kriptoprojektek számára_
+- [MetaGame](https://metagame.wtf) [@MetaFam](https://x.com/MetaFam) – _MMORPG játékmechanika a való élethez_
+- [MetaFactory](https://metafactory.ai) [@TheMetaFactory](https://x.com/TheMetaFactory) – _Digifizikális ruházati márkák_
+- [MolochDAO](https://molochdao.com) [@MolochDAO](https://x.com/MolochDAO) – _Az Ethereum-fejlesztések finanszírozását intéző közösség_
+- [Raid Guild](https://raidguild.org) [@RaidGuild](https://x.com/RaidGuild) – _Web3-fejlesztők csoportja_
 
 Kérjük, hogy az ethereum.org [magatartási szabályait](/community/code-of-conduct) vegye figyelembe, amikor bármilyen kezdeményezésben közreműködik!

@@ -71,7 +71,7 @@ CCRI का अनुमान है कि मर्ज ने एथेरि
 - [प्रूफ-ऑफ-वर्क ब्लॉकचेन पर व्हाइट हाउस की रिपोर्ट](https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
 - [इथेरियम इमिशन्स: एक निचले से ऊपर का अनुमान](https://kylemcdonald.github.io/ethereum-emissions/) - _काइल मैकडोनाल्ड_
 - [इथेरियम ऊर्जा खपत सूचकांक](https://digiconomist.net/ethereum-energy-consumption/) - _Digiconomist_
-- [ETHMerge.com](https://ethmerge.com/) - _[@InsideTheSim](https://twitter.com/InsideTheSim)_
+- [ETHMerge.com](https://ethmerge.com/) - _[@InsideTheSim](https://x.com/InsideTheSim)_
 - [मर्ज - इथेरियम नेटवर्क की बिजली की खपत और कार्बन फ़ुटप्रिंट पर प्रभाव](https://carbon-ratings.com/eth-report-2022) - _CCRI_
 - [इथेरियम की ऊर्जा खपत](https://mirror.xyz/jmcook.eth/ODpCLtO4Kq7SCVFbU4He8o8kXs418ZZDTj0lpYlZkR8)
 

@@ -32,8 +32,8 @@ Mamia ya maelfu ya wapenzi wa Ethereum hukusanyika kwenye majukwaa haya ya mtand
 ## YouTube na Twitter {#youtube-and-twitter}
 
 <SocialListItem socialIcon="youtube"><Link href="https://www.youtube.com/c/EthereumFoundation">Msingi wa Ethereum</Link> - Fahamu yanayojiri kutoka Msingi wa </SocialListItem>
-<SocialListItem socialIcon="twitter"><Link href="https://twitter.com/ethereum">@ethereum</Link> - Akaunti rasmi ya Msingi wa </SocialListItem>
-<SocialListItem socialIcon="twitter"><Link href="https://twitter.com/ethdotorg">@ethdotorg</Link> - Tovuti ya Ethereum, imeundwa kwa ajili ya kukuza jamii ya kimataifa</SocialListItem>
+<SocialListItem socialIcon="twitter"><Link href="https://x.com/ethereum">@ethereum</Link> - Akaunti rasmi ya Msingi wa </SocialListItem>
+<SocialListItem socialIcon="twitter"><Link href="https://x.com/ethdotorg">@ethdotorg</Link> - Tovuti ya Ethereum, imeundwa kwa ajili ya kukuza jamii ya kimataifa</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://hive.one/c/Ethereum?page=1">Orodha ya akaunti za twitter za Ethereum zenye ushawishi</Link></SocialListItem>
 
 <Divider />

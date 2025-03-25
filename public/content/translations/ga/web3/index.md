@@ -44,7 +44,7 @@ Ba é Gavin Wood comhbhunaitheoir [Ethereum](/what-is-ethereum/), a bhunaigh ‘
 
 ### Cad é Web3? {#what-is-web3}
 
-Is téarma uileghabhálach é Web3 don fhís d’idirlíon nua níos fearr. Ag a chroílár, úsáideann Web3 blocshlabhraí, criptea-airgeadraí, agus NFTanna chun cumhacht a thabhairt ar ais do na húsáideoirí i bhfoirm úinéireachta. [Dúirt postáil 2020 ar Twitter](https://twitter.com/himgajria/status/1266415636789334016) is fearr é: Bhí Web1 inléite amháin, tá Web2 léite-scríobh, beidh Web3 inléite-scríobh-úinéireacht.
+Is téarma uileghabhálach é Web3 don fhís d’idirlíon nua níos fearr. Ag a chroílár, úsáideann Web3 blocshlabhraí, criptea-airgeadraí, agus NFTanna chun cumhacht a thabhairt ar ais do na húsáideoirí i bhfoirm úinéireachta. [Dúirt postáil 2020 ar Twitter](https://x.com/himgajria/status/1266415636789334016) is fearr é: Bhí Web1 inléite amháin, tá Web2 léite-scríobh, beidh Web3 inléite-scríobh-úinéireacht.
 
 #### Smaointe lárnacha Web3 {#core-ideas}
 

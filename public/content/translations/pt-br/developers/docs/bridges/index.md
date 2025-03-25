@@ -128,7 +128,7 @@ Para monitorar atividades de contrato entre cadeias, os desenvolvedores podem us
 - [Clusters: How Trusted & Trust-Minimized Bridges Shape the Multi-Chain Landscape](https://blog.celestia.org/clusters/) 4 out, 2021 – Mustafa Al-assam
 - [LI.FI: With Bridges, Trust is a Spectrum](https://blog.li.fi/li-fi-with-bridges-trust-is-a-spectrum-354cd5a1a6d8) 28 abril, 2022 – Arjun Chand
 
-Além disso, aqui estão algumas grandes apresentações úteis por[James Prestwich](https://twitter.com/_prestwich) que podem ajudar a desenvolver uma compreensão mais profunda das bridges:
+Além disso, aqui estão algumas grandes apresentações úteis por[James Prestwich](https://x.com/_prestwich) que podem ajudar a desenvolver uma compreensão mais profunda das bridges:
 
 - [Building Bridges, Not Walled Gardens](https://youtu.be/ZQJWMiX4hT0)
 - [Breaking Down Bridges](https://youtu.be/b0mC-ZqN8Oo)

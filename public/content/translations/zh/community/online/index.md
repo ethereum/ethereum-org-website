@@ -60,8 +60,8 @@ lang: zh
 ## YouTube 和 Twitter {#youtube-and-twitter}
 
 <SocialListItem socialIcon="youtube"><Link href="https://www.youtube.com/c/EthereumFoundation">以太坊基金会</Link> - 及时了解以太坊基金会的最新动态</SocialListItem>
-<SocialListItem socialIcon="twitter"><Link href="https://twitter.com/ethereum">@ethereum</Link> -以太坊基金会官方账号</SocialListItem>
-<SocialListItem socialIcon="twitter"><Link href="https://twitter.com/ethdotorg">@ethdotorg</Link> - 为我们不断发展的全球社区构建的以太坊门户网站</SocialListItem>
+<SocialListItem socialIcon="twitter"><Link href="https://x.com/ethereum">@ethereum</Link> -以太坊基金会官方账号</SocialListItem>
+<SocialListItem socialIcon="twitter"><Link href="https://x.com/ethdotorg">@ethdotorg</Link> - 为我们不断发展的全球社区构建的以太坊门户网站</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://hive.one/c/ethereum?page=1">有影响力的以太坊 Twitter 帐户清单</Link></SocialListItem>
 
 <Divider />

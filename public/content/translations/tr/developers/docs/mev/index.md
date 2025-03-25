@@ -78,7 +78,7 @@ Bununla birlikte NFT işlemleri, diğer tüm Ethereum işlemleri tarafından pay
 
 Örneğin, popüler bir NFT yayınlanacaksa ve bir arayıcı belirli bir NFT veya NFT seti istiyorsa, NFT'yi satın almak için ilk sırada olacak şekilde bir işlemi programlayabilir veya NFT setinin tamamını tek seferde tek işlemde satın alabilir. Veya bir NFT [hatayla düşük bir fiyata listelenirse](https://www.theblockcrypto.com/post/113546/mistake-sees-69000-cryptopunk-sold-for-less-than-a-cent), bir arayıcı diğer alıcıların önüne geçebilir ve onu ucuza kapabilir.
 
-Önde gelen bir NFT MEV örneği, bir arayıcı her bir Cryptopunk'u taban fiyatta [satın almak](https://etherscan.io/address/0x650dCdEB6ecF05aE3CAF30A70966E2F395d5E9E5) için 7 milyon $ harcadığında gerçekleşti. Bir blok zinciri araştırmacısı, [Twitter'da](https://twitter.com/IvanBogatyy/status/1422232184493121538) alıcının satın alım işlemini gizlemek için bir MEV sağlayıcısıyla nasıl çalıştığını açıkladı.
+Önde gelen bir NFT MEV örneği, bir arayıcı her bir Cryptopunk'u taban fiyatta [satın almak](https://etherscan.io/address/0x650dCdEB6ecF05aE3CAF30A70966E2F395d5E9E5) için 7 milyon $ harcadığında gerçekleşti. Bir blok zinciri araştırmacısı, [Twitter'da](https://x.com/IvanBogatyy/status/1422232184493121538) alıcının satın alım işlemini gizlemek için bir MEV sağlayıcısıyla nasıl çalıştığını açıkladı.
 
 ### Uzun kuyruk {#mev-examples-long-tail}
 
@@ -214,7 +214,7 @@ MEV Boost gibi bazı projeler, genelleştirilmiş öncü/sandviç saldırıları
 - [Ethereum Karanlık bir Ormandır](https://www.paradigm.xyz/2020/08/ethereum-is-a-dark-forest/)
 - [Karanlık Ormandan Kaçış](https://samczsun.com/escaping-the-dark-forest/)
 - [Flashbotlar: MEV Krizine Öncülük Etmek](https://medium.com/flashbots/frontrunning-the-mev-crisis-40629a613752)
-- [@bertcmiller'ın MEV Yazıları](https://twitter.com/bertcmiller/status/1402665992422047747)
+- [@bertcmiller'ın MEV Yazıları](https://x.com/bertcmiller/status/1402665992422047747)
 - [MEV-Boost: Birleşime hazır Flashbot'lar Mimarisi](https://ethresear.ch/t/mev-boost-merge-ready-flashbots-architecture/11177)
 - [MEV-Boost nedir?](https://www.alchemy.com/overviews/mev-boost)
 - [MEV-Boost neden çalıştırılmalı?](https://writings.flashbots.net/writings/why-run-mevboost/)

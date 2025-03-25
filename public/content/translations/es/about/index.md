@@ -94,7 +94,7 @@ Para hacer que nuestro trabajo sea más accesible y fomentar una mayor colaborac
 
 **¿Qué le parece? ** Siempre apreciamos los comentarios sobre nuestra hoja de ruta. Si hay algo en lo que cree que deberíamos trabajar, ¡por favor, díganoslo! Damos la bienvenida a ideas y relaciones públicas de cualquier persona de la comunidad.
 
-**¿Quiere involucrarse? ** [Obtenga más información sobre cómo contribuir](/contributing/), [contáctenos en Twitter](https://twitter.com/ethdotorg), o únase a las conversaciones de la comunidad en [nuestro servidor de Discord](https://discord.gg/ethereum-org).
+**¿Quiere involucrarse? ** [Obtenga más información sobre cómo contribuir](/contributing/), [contáctenos en Twitter](https://x.com/ethdotorg), o únase a las conversaciones de la comunidad en [nuestro servidor de Discord](https://discord.gg/ethereum-org).
 
 ## Principios de diseño {#design-principles}
 

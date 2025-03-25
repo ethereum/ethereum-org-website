@@ -40,7 +40,7 @@ Vorwissen über andere Programmiersprachen, insbesondere JavaScript oder Python,
 - [Solidity Gitter Chatroom](https://gitter.im/ethereum/solidity) verbunden mit [Solidity Matrix Chatroom](https://matrix.to/#/#ethereum_solidity:gitter.im)
 - [Spickzettel](https://reference.auditless.com/cheatsheet)
 - [Solidity-Blog](https://blog.soliditylang.org/)
-- [Solidity Twitter](https://twitter.com/solidity_lang)
+- [Solidity Twitter](https://x.com/solidity_lang)
 
 ### Beispiel {#example-contract}
 
@@ -268,7 +268,7 @@ Wenn Sie bereits Erfahrung mit Smart Contracts haben, finden Sie [hier](https://
 - [Fe-Ankündigung](https://snakecharmers.ethereum.org/fe-a-new-language-for-the-ethereum-ecosystem/)
 - [Fe 2021-Roadmap](https://notes.ethereum.org/LVhaTF30SJOpkbG1iVw1jg)
 - [Fe-Chat auf Discord](https://discord.com/invite/ywpkAXFjZH)
-- [Fe Twitter](https://twitter.com/official_fe)
+- [Fe Twitter](https://x.com/official_fe)
 
 ### Beispiel {#example-contract-3}
 

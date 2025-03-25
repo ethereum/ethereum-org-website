@@ -151,4 +151,4 @@ The latest block number is 11043912
 
 Şimdi ne yapacağınızdan emin değil misiniz? İlk akıllı sözleşmenizi dağıtmayı deneyin ve [Merhaba Dünya Akıllı Sözleşme Kılavuzumuzda](https://docs.alchemyapi.io/tutorials/hello-world-smart-contract) biraz sağlamlık programlamasıyla uğraşın veya [Dashboard Demo App](https://docs.alchemyapi.io/tutorials/demo-app) ile gösterge paneli bilginizi test edin!
 
-_[Alchemy'ye ücretsiz kaydolun](https://auth.alchemyapi.io/signup), [belgelerimize](https://docs.alchemyapi.io/) göz atın ve en son haberler için bizi [Twitter](https://twitter.com/AlchemyPlatform) adresinden takip edin_.
+_[Alchemy'ye ücretsiz kaydolun](https://auth.alchemyapi.io/signup), [belgelerimize](https://docs.alchemyapi.io/) göz atın ve en son haberler için bizi [Twitter](https://x.com/AlchemyPlatform) adresinden takip edin_.

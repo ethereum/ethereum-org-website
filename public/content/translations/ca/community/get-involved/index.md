@@ -99,15 +99,15 @@ L'ecosistema Ethereum té com a missió aportar fons a béns públics i projecte
 
 Les «DAO» són organitzacions autònomes descentralitzades. Aquests grups aprofiten la tecnologia Ethereum per facilitar l'organització i la col·laboració. Per exemple, per controlar la pertinença, votar les propostes o gestionar els actius grupals. Com que les DAO són encara experimentals, us ofereixen oportunitats de trobar grups amb els quals us pugueu identificar, trobar col·laboradors i augmentar el vostre impacte dins la comunitat Ethereum. [Més informació sobre les DAO](/dao/)
 
-- [LexDAO](https://lexdao.org)[@lex_DAO](https://twitter.com/lex_DAO) - _Enginyeria legal_
-- [Machi X](https://machix.com) [@MachiXOfficial](https://twitter.com/MachiXOfficial) - _Comunitat artística_
-- [MetaCartel](https://metacartel.org) [@Meta_Cartel](https://twitter.com/Meta_Cartel) - _Incubadora DAO_
-- [MetaCartel Ventures](https://metacartel.xyz) [ @VENTURE_DAO](https://twitter.com/VENTURE_DAO) - _Inversions en projectes criptogràfics prellavor_
-- [MetaGame](https://metagame.wtf) [@MetaFam](https://twitter.com/MetaFam) - _Mecànica del joc per a la vida real MMORPG_
-- [MetaFactory](https://metafactory.ai) [@TheMetaFactory](https://twitter.com/TheMetaFactory) - _Marques de roba Digiphysical_
-- [MolochDAO](https://molochdao.com)[@MolochDAO](https://twitter.com/MolochDAO) -_Comunitat enfocada a donar suport a desenvolupaments en Ethereum_
-- [Raid Guild](https://raidguild.org) [@RaidGuild](https://twitter.com/RaidGuild) - _Col·lectiu de constructors de Web3_
-- [DAOSquare](https://www.daosquare.io) [@DAOSquare](https://twitter.com/DAOSquare) - _Promou el concepte DAO en un camp no tècnic i ajuda a la gent a crear valor a través de les DAO._
-- [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) - _Col·lectiu de desenvolupament de Web3 autònom treballant com una DAO_
-- [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) -_Comunitat de governança de DAOhaus_
-- [Developer DAO](https://www.developerdao.com/) [@developer_dao](https://twitter.com/developer_dao) - _Comunitat de constructors que creuen en la propietat col·lectiva d'internet_
+- [LexDAO](https://lexdao.org)[@lex_DAO](https://x.com/lex_DAO) - _Enginyeria legal_
+- [Machi X](https://machix.com) [@MachiXOfficial](https://x.com/MachiXOfficial) - _Comunitat artística_
+- [MetaCartel](https://metacartel.org) [@Meta_Cartel](https://x.com/Meta_Cartel) - _Incubadora DAO_
+- [MetaCartel Ventures](https://metacartel.xyz) [ @VENTURE_DAO](https://x.com/VENTURE_DAO) - _Inversions en projectes criptogràfics prellavor_
+- [MetaGame](https://metagame.wtf) [@MetaFam](https://x.com/MetaFam) - _Mecànica del joc per a la vida real MMORPG_
+- [MetaFactory](https://metafactory.ai) [@TheMetaFactory](https://x.com/TheMetaFactory) - _Marques de roba Digiphysical_
+- [MolochDAO](https://molochdao.com)[@MolochDAO](https://x.com/MolochDAO) -_Comunitat enfocada a donar suport a desenvolupaments en Ethereum_
+- [Raid Guild](https://raidguild.org) [@RaidGuild](https://x.com/RaidGuild) - _Col·lectiu de constructors de Web3_
+- [DAOSquare](https://www.daosquare.io) [@DAOSquare](https://x.com/DAOSquare) - _Promou el concepte DAO en un camp no tècnic i ajuda a la gent a crear valor a través de les DAO._
+- [dOrg](https://dOrg.tech) [@dOrg_tech](https://x.com/dOrg_tech) - _Col·lectiu de desenvolupament de Web3 autònom treballant com una DAO_
+- [HausDAO](https://daohaus.club) [@nowdaoit](https://x.com/nowdaoit) -_Comunitat de governança de DAOhaus_
+- [Developer DAO](https://www.developerdao.com/) [@developer_dao](https://x.com/developer_dao) - _Comunitat de constructors que creuen en la propietat col·lectiva d'internet_

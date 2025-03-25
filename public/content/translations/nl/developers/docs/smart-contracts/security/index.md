@@ -92,7 +92,7 @@ Het laten uitvoeren van een audit voor uw smart contract is een mogelijkheid om 
 
 Toch moet u audits niet zien als een wondermiddel. Audits op smart contracts kunnen niet elke bug opsporen en zijn vooral bedoeld voor een extra beoordelingsronde, die kan helpen bij het opsporen van problemen die ontwikkelaars hebben gemist tijdens de initiële ontwikkeling en het testen. U moet ook best practices volgen voor het werken met auditors, zoals het goed documenteren van code en het toevoegen van inline opmerkingen, om het voordeel van een audit op uw smart contract te maximaliseren.
 
-- [Auditingtips en -trucs voor smart contracts](https://twitter.com/tinchoabbate/status/1400170232904400897) - _@tinchoabbate_
+- [Auditingtips en -trucs voor smart contracts](https://x.com/tinchoabbate/status/1400170232904400897) - _@tinchoabbate_
 - [Haal het meeste uit uw audit](https://inference.ag/blog/2023-08-14-tips/) - _Inference_
 
 #### Bug bounties {#bug-bounties}

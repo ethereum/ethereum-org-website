@@ -40,7 +40,7 @@ lang: el
 - Το [Solidity Gitter Chatroom](https://gitter.im/ethereum/solidity) συνδέθηκε στο [Solidity Matrix Chatroom](https://matrix.to/#/#ethereum_solidity:gitter.im)
 - [Φύλλο σημειώσεων](https://reference.auditless.com/cheatsheet)
 - [Ιστολόγιο της Solidity](https://blog.soliditylang.org/)
-- [Solidity Twitter](https://twitter.com/solidity_lang)
+- [Solidity Twitter](https://x.com/solidity_lang)
 
 ### Παράδειγμα συμβολαίου {#example-contract}
 
@@ -268,7 +268,7 @@ def endAuction():
 - [Ανακοινώσεις Fe](https://snakecharmers.ethereum.org/fe-a-new-language-for-the-ethereum-ecosystem/)
 - [Fe 2021 χρονοδιάγραμμα](https://notes.ethereum.org/LVhaTF30SJOpkbG1iVw1jg)
 - [Συνομιλία Fe Discord](https://discord.com/invite/ywpkAXFjZH)
-- [Fe Twitter](https://twitter.com/official_fe)
+- [Fe Twitter](https://x.com/official_fe)
 
 ### Παράδειγμα συμβολαίου {#example-contract-3}
 

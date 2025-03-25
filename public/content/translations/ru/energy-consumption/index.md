@@ -71,7 +71,7 @@ Ethereum — экологичный блокчейн. Механизм конс�
 - [Доклад Белого дома о блокчейнах с доказательством работы](https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
 - [Выбросы от Ethereum: полная оценка](https://kylemcdonald.github.io/ethereum-emissions/) — _Кайл Макдональд_
 - [Индекс энергопотребления Ethereum](https://digiconomist.net/ethereum-energy-consumption/) — _Digiconomist_
-- [ETHMerge.com](https://ethmerge.com/) — _[@InsideTheSim](https://twitter.com/InsideTheSim)_
+- [ETHMerge.com](https://ethmerge.com/) — _[@InsideTheSim](https://x.com/InsideTheSim)_
 - [Слияние — последствия для потребления электроэнергии и углеродного следа от сети Ethereum](https://carbon-ratings.com/eth-report-2022) — _CCRI_
 - [Энергопотребление Ethereum](https://mirror.xyz/jmcook.eth/ODpCLtO4Kq7SCVFbU4He8o8kXs418ZZDTj0lpYlZkR8)
 

@@ -19,7 +19,7 @@ EFは企業でも、伝統的な非営利団体でもありません。 彼ら�
 
 [エコシステムサポートプログラム](https://esp.ethereum.foundation/)は、より大きなイーサリアムコミュニティ内のプロジェクトとエンティティに財政的および非財務的なサポートを提供するために存在します。その目的はエコシステムの成長を加速させることにあります。 エコシステムサポートプログラムは、主に財政支援に焦点を当てた元のイーサリアム助成プログラムの拡大です。
 
-[esp.ethereum.found](https://esp.ethereum.foundation/)で、エコシステムサポートプログラム、過去の助成金の受領者、助成申請プロセスについて詳しく説明します。 もしくは、[エコシステムサポートプログラムブログ](https://blog.ethereum.org/category/ecosystem-support-program/)をご覧いただくか、[@EF_ESP](https://twitter.com/EF_ESP)をフォローして最新のニュースやお知らせをご覧ください。
+[esp.ethereum.found](https://esp.ethereum.foundation/)で、エコシステムサポートプログラム、過去の助成金の受領者、助成申請プロセスについて詳しく説明します。 もしくは、[エコシステムサポートプログラムブログ](https://blog.ethereum.org/category/ecosystem-support-program/)をご覧いただくか、[@EF_ESP](https://x.com/EF_ESP)をフォローして最新のニュースやお知らせをご覧ください。
 
 ### Devcon {#devcon}
 
@@ -27,7 +27,7 @@ EFは企業でも、伝統的な非営利団体でもありません。 彼ら�
 
 [archive.devcon.org](https://archive.devcon.org/)にて、毎年の会議プレゼンテーションのビデオコンテンツにアクセスできます。
 
-詳細については、[devcon.org](https://devcon.org/)および[Devconブログ](https://devcon.org/en/blogs/)をご覧ください。また、[@efdevcon](https://twitter.com/EFDevcon)をフォローして最新のお知らせをご覧ください。
+詳細については、[devcon.org](https://devcon.org/)および[Devconブログ](https://devcon.org/en/blogs/)をご覧ください。また、[@efdevcon](https://x.com/EFDevcon)をフォローして最新のお知らせをご覧ください。
 
 ### フェローシッププログラム {#fellowship-program}
 

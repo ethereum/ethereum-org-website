@@ -78,7 +78,7 @@ Da NEU-Transaktionen jedoch auf derselben Blockchain stattfinden, die auch von a
 
 Wenn es beispielsweise eine beliebte NFT-Abgabe gibt und ein Suchender eine bestimmte NFT oder eine Reihe von NFTs haben möchte, kann er eine Transaktion so programmieren, dass er der erste in der Schlange ist, um die NFT zu kaufen, oder er kann die gesamte Reihe von NFTs in einer einzigen Transaktion kaufen. Oder wenn ein NFT [fälschlicherweise zu einem niedrigen Preis](https://www.theblockcrypto.com/post/113546/mistake-sees-69000-cryptopunk-sold-for-less-than-a-cent) angeboten wird, kann ein Suchender anderen Käufern zuvorkommen und es billig ergattern.
 
-Ein prominentes Beispiel für NFT MEV entstand, als ein Sucher 7 Millionen Dollar ausgab, um [jeden einzelnen Cryptopunk zum Mindestpreis zu kaufen](https://etherscan.io/address/0x650dCdEB6ecF05aE3CAF30A70966E2F395d5E9E5). Ein Blockchain-Forscher [erläuterte auf Twitter](https://twitter.com/IvanBogatyy/status/1422232184493121538), wie der Käufer mit einem MEV-Anbieter zusammenarbeitete, um seinen Kauf geheim zu halten.
+Ein prominentes Beispiel für NFT MEV entstand, als ein Sucher 7 Millionen Dollar ausgab, um [jeden einzelnen Cryptopunk zum Mindestpreis zu kaufen](https://etherscan.io/address/0x650dCdEB6ecF05aE3CAF30A70966E2F395d5E9E5). Ein Blockchain-Forscher [erläuterte auf Twitter](https://x.com/IvanBogatyy/status/1422232184493121538), wie der Käufer mit einem MEV-Anbieter zusammenarbeitete, um seinen Kauf geheim zu halten.
 
 ### Der lange Schwanz {#mev-examples-long-tail}
 
@@ -126,4 +126,4 @@ Mit dem Wachstum und der zunehmenden Beliebtheit von DeFi könnte MEV schon bald
 - [Ethereum ist ein dunkler Wald](https://www.paradigm.xyz/2020/08/ethereum-is-a-dark-forest/)
 - [Flucht aus dem dunklen Wald](https://samczsun.com/escaping-the-dark-forest/)
 - [Flashbots: Vorläufer in der MEV-Krise](https://medium.com/flashbots/frontrunning-the-mev-crisis-40629a613752)
-- [@bertcmillers MEV-Themen](https://twitter.com/bertcmiller/status/1402665992422047747)
+- [@bertcmillers MEV-Themen](https://x.com/bertcmiller/status/1402665992422047747)

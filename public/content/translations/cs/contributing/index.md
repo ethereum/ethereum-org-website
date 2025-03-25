@@ -75,7 +75,7 @@ Než začnete přispívat, ujistěte se, že jste obeznámeni s:
 Rozhodnutí o jednotlivých PR, vývoji designu a významných aktualizacích přijímá tým z celého ekosystému Etherea. Tento tým zahrnuje projektové manažery, vývojáře, designéry, pracovníky v marketingu, komunikátory a odborníky na danou problematiku. Každé rozhodnutí je ovlivněno názory komunity: proto prosím vznášejte dotazy v otázkách, zasílejte PR nebo kontaktujte tým:
 
 - [website@ethereum.org](mailto:website@ethereum.org)
-- [@ethdotorg](https://twitter.com/ethdotorg)
+- [@ethdotorg](https://x.com/ethdotorg)
 - [Discord server](https://discord.gg/ethereum-org)
 
 ### Poznámka k plagiátorství {#plagiarism}

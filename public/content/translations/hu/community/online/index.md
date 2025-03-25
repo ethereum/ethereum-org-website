@@ -60,8 +60,8 @@ Ha úgy gondolja, hogy egy közösséget hozzá kellene adni vagy el kellene tá
 ## YouTube és Twitter {#youtube-and-twitter}
 
 <SocialListItem socialIcon="youtube"><Link href="https://www.youtube.com/c/EthereumFoundation">Ethereum Alapítvány</Link> – legyen napra kész az Ethereum Alapítvány újdonságaival kapcsolatban</SocialListItem>
-<SocialListItem socialIcon="twitter"><Link href="https://twitter.com/ethereum">@ethereum</Link> – az Ethereum Alapítvány hivatalos profilja</SocialListItem>
-<SocialListItem socialIcon="twitter"><Link href="https://twitter.com/ethdotorg">@ethdotorg</Link> – portál az Ethereumhoz, a növekvő globális közösségünk számára</SocialListItem>
+<SocialListItem socialIcon="twitter"><Link href="https://x.com/ethereum">@ethereum</Link> – az Ethereum Alapítvány hivatalos profilja</SocialListItem>
+<SocialListItem socialIcon="twitter"><Link href="https://x.com/ethdotorg">@ethdotorg</Link> – portál az Ethereumhoz, a növekvő globális közösségünk számára</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://hive.one/c/ethereum?page=1">Nagy befolyással bíró Ethereum Twitter-fiókok listája</Link></SocialListItem>
 
 <Divider />

@@ -377,7 +377,7 @@ Az Ethereum elleni támadások általában az egyéni alkalmazások gyenge pontj
 
 - [Féreglyuk-kihasználási jelentés](https://blog.chainalysis.com/reports/wormhole-hack-february-2022/)
 - [Az Ethereum-szerződések meghackelésének vizsgálatai](https://forum.openzeppelin.com/t/list-of-ethereum-smart-contracts-post-mortems/1191)
-- [Rekt hírek](https://twitter.com/RektHQ?s=20\&t=3otjYQdM9Bqk8k3n1a1Adg)
+- [Rekt hírek](https://x.com/RektHQ?s=20\&t=3otjYQdM9Bqk8k3n1a1Adg)
 
 #### Jelenlegi kutatás {#recent-research-19}
 

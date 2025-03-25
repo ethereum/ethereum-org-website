@@ -294,4 +294,4 @@ En savoir plus sur les[gaz](/developers/docs/gas/#post-london)
 
 ## Et respirez... {#and-breathe}
 
-Nous y sommes depuis un bon moment et il semble donc intéressant de faire une pause. Le terrier du lapin est toujours ouvert et nous continuerons à l'explorer dans la deuxième partie de cette série. Quelques concepts à venir : la connexion à un vrai nœud, les contrats intelligents et les jetons. Vous avez des questions complémentaires ? Faites-le moi savoir ! Vos commentaires influenceront notre chemin à partir d’ici. Vos demandes sont les bienvenues sur [Twitter](https://twitter.com/wolovim).
+Nous y sommes depuis un bon moment et il semble donc intéressant de faire une pause. Le terrier du lapin est toujours ouvert et nous continuerons à l'explorer dans la deuxième partie de cette série. Quelques concepts à venir : la connexion à un vrai nœud, les contrats intelligents et les jetons. Vous avez des questions complémentaires ? Faites-le moi savoir ! Vos commentaires influenceront notre chemin à partir d’ici. Vos demandes sont les bienvenues sur [Twitter](https://x.com/wolovim).

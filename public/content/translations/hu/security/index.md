@@ -290,6 +290,6 @@ A böngészőbővítmények (mint a Chrome-bővítmények vagy Firefox kiegész�
 - [Útmutató: hogyan azonosítsa be a hamis tokeneket](/guides/how-to-id-scam-tokens/)
 - [Maradjon biztonságban: általános csalások](https://support.mycrypto.com/staying-safe/common-scams) – _MyCrypto_
 - [A csalások elkerülése](https://bitcoin.org/en/scams) – _Bitcoin.org_
-- [Twitter-beszélgetés a tipikus kripto-adathalász e-mailekről és üzenetekről](https://twitter.com/tayvano_/status/1516225457640787969) – _Taylor Monahan_
+- [Twitter-beszélgetés a tipikus kripto-adathalász e-mailekről és üzenetekről](https://x.com/tayvano_/status/1516225457640787969) – _Taylor Monahan_
 
 <QuizWidget quizKey="security" />

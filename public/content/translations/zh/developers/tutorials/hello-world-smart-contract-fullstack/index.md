@@ -1537,4 +1537,4 @@ const onUpdatePressed = async () => {
 
 现在，你已经完全掌握本教程中的技能，可以着手开发属于自己的个性化去中心化应用程序项目了！ 一如既往，如果你有任何问题，欢迎随时在 [Alchemy Discord](https://discord.gg/gWuC7zB) 频道联系我们寻求帮助。 🧙‍♂️
 
-完成本教程后，请在 Twitter 上标记我们 [@alchemyplatform](https://twitter.com/AlchemyPlatform)，告诉我们你的体验如何，或者你是否有任何反馈！
+完成本教程后，请在 Twitter 上标记我们 [@alchemyplatform](https://x.com/AlchemyPlatform)，告诉我们你的体验如何，或者你是否有任何反馈！

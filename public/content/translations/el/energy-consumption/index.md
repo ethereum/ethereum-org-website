@@ -71,7 +71,7 @@ lang: el
 - [Έκθεση του Λευκού Οίκου για κρυπτοαλυσίδες με απόδειξη εργασίας](https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
 - [Εκπομπές Ethereum: Εκτίμηση από κάτω προς τα πάνω](https://kylemcdonald.github.io/ethereum-emissions/) - _Kyle McDonald_
 - [Δείκτης κατανάλωσης ενέργειας Ethereum](https://digiconomist.net/ethereum-energy-consumption/) - _Digiconomist_
-- [ETHMerge.com](https://ethmerge.com/) - _[@InsideTheSim](https://twitter.com/InsideTheSim)_
+- [ETHMerge.com](https://ethmerge.com/) - _[@InsideTheSim](https://x.com/InsideTheSim)_
 - [Η «Συγχώνευση» - Επιπτώσεις στην κατανάλωση ηλεκτρικής ενέργειας και το αποτύπωμα άνθρακα του δικτύου Ethereum](https://carbon-ratings.com/eth-report-2022) - *CCRI*
 - [Κατανάλωση ενέργειας του Ethereum](https://mirror.xyz/jmcook.eth/ODpCLtO4Kq7SCVFbU4He8o8kXs418ZZDTj0lpYlZkR8)
 

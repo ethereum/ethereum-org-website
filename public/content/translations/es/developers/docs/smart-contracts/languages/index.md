@@ -40,7 +40,7 @@ El conocimiento previo de lenguajes de programación, especialmente de JavaScrip
 - [Sala de chat de Solidity (Glitter)](https://gitter.im/ethereum/solidity) enlazada con la [Sala de chat de Solidity (Matrix)](https://matrix.to/#/#ethereum_solidity:gitter.im)
 - [Hoja de trampas](https://reference.auditless.com/cheatsheet)
 - [Blog de Solidity](https://blog.soliditylang.org/)
-- [Twitter de Solidity](https://twitter.com/solidity_lang)
+- [Twitter de Solidity](https://x.com/solidity_lang)
 
 ### Ejemplo de contrato {#example-contract}
 
@@ -268,7 +268,7 @@ Si ya tiene experiencia con contratos inteligentes, puede encontrar una implemen
 - [Anuncio de Fe](https://snakecharmers.ethereum.org/fe-a-new-language-for-the-ethereum-ecosystem/)
 - [Hoja de ruta de Fe 2021](https://notes.ethereum.org/LVhaTF30SJOpkbG1iVw1jg)
 - [Chat sobre Fe de Discord](https://discord.com/invite/ywpkAXFjZH)
-- [Twitter de Fe](https://twitter.com/official_fe)
+- [Twitter de Fe](https://x.com/official_fe)
 
 ### Ejemplo de contrato {#example-contract-3}
 

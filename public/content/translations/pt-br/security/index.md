@@ -290,6 +290,6 @@ Extensões do navegador, como extensões do Chrome ou complementos para o Firefo
 - [Guia: Como identificar tokens fraudulentos](/guides/how-to-id-scam-tokens/)
 - [Como se proteger: golpes comuns](https://support.mycrypto.com/staying-safe/common-scams) - _MyCrypto_
 - [Como evitar golpes](https://bitcoin.org/en/scams) - _Bitcoin.org_
-- [Discussão no Twitter sobre e-mails e mensagens comuns de phishing de criptografia](https://twitter.com/tayvano_/status/1516225457640787969) - _Taylor Monahan_
+- [Discussão no Twitter sobre e-mails e mensagens comuns de phishing de criptografia](https://x.com/tayvano_/status/1516225457640787969) - _Taylor Monahan_
 
 <QuizWidget quizKey="security" />

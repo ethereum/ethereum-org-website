@@ -128,7 +128,7 @@ Pour surveiller l'activité des contrats dans les chaînes, les développeurs pe
 - [Clusters: How Trusted & Trust-Minimized Bridges Shape the Multi-Chain Landscape](https://blog.celestia.org/clusters/) Oct 4, 2021 – Mustafa Al-Bassam
 - [LI.FI: With Bridges, Trust is a Spectrum](https://blog.li.fi/li-fi-with-bridges-trust-is-a-spectrum-354cd5a1a6d8) Apr 28, 2022 – Arjun Chand
 
-En outre, voici quelques présentations perspicaces de [James Prestwich](https://twitter.com/_prestwich) qui peuvent aider à développer une compréhension plus approfondie des ponts :
+En outre, voici quelques présentations perspicaces de [James Prestwich](https://x.com/_prestwich) qui peuvent aider à développer une compréhension plus approfondie des ponts :
 
 - [Construire des ponts, pas des jardins clos](https://youtu.be/ZQJWMiX4hT0)
 - [Faire tomber les ponts](https://youtu.be/b0mC-ZqN8Oo)

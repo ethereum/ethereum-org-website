@@ -92,7 +92,7 @@ Ulepszenia zwykle nie mają wpływu na użytkowników końcowych, z wyjątkiem z
 
 ## Co z The Verge, The Splurge itp.? {#what-about-the-verge-splurge-etc}
 
-[Vitalik Buterin zaproponował wizję planu działania Ethereum](https://twitter.com/VitalikButerin/status/1741190491578810445), który został podzielony na kilka kategorii powiązanych ich wpływem na architekturę Ethereum. Obejmował on:
+[Vitalik Buterin zaproponował wizję planu działania Ethereum](https://x.com/VitalikButerin/status/1741190491578810445), który został podzielony na kilka kategorii powiązanych ich wpływem na architekturę Ethereum. Obejmował on:
 
 - **The Merge** (Połączenie): ulepszenia związane z przejściem z [proof-of-work](/glossary/#pow) na [proof-of-stake](/glossary/#pos)
 - **The Surge**: aktualizacje związane ze skalowalnością przez [pakiety zbiorcze](/glossary/#rollups) i shardingiem danych

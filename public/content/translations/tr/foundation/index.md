@@ -19,7 +19,7 @@ Ethereum Vakfı, bir şirket veya kâr amacı gütmeyen geleneksel bir kuruluş 
 
 [Ekosistem Destek Programı](https://esp.ethereum.foundation/), ekosisteminin büyümesini hızlandırmak için Ethereum topluluğu genelinde proje ve kuruluşlara hem finansal hemde finansal olmayan destekler sağlamak için vardır. Ekosistem Destek Programı, esas olarak finansal desteğe odaklanan orijinal Ethereum Hibe Programının genişletilmiş hâlidir.
 
-[esp.ethereum.foundation](https://esp.ethereum.foundation/) adresinden Ekosistem Destek Programı, geçmişte hibe alanlar ve hibe başvuru süreci hakkında daha fazla bilgi alabilirsiniz. Ayrıca [Ekosistem Destek Programı Blog](https://blog.ethereum.org/category/ecosystem-support-program/)'unu görüntüleyebilir, en son haberler ve duyurular için [@EF_ESP](https://twitter.com/EF_ESP)'yi takip edebilirsiniz.
+[esp.ethereum.foundation](https://esp.ethereum.foundation/) adresinden Ekosistem Destek Programı, geçmişte hibe alanlar ve hibe başvuru süreci hakkında daha fazla bilgi alabilirsiniz. Ayrıca [Ekosistem Destek Programı Blog](https://blog.ethereum.org/category/ecosystem-support-program/)'unu görüntüleyebilir, en son haberler ve duyurular için [@EF_ESP](https://x.com/EF_ESP)'yi takip edebilirsiniz.
 
 ### Devcon {#devcon}
 
@@ -27,7 +27,7 @@ Ethereum Vakfı, bir şirket veya kâr amacı gütmeyen geleneksel bir kuruluş 
 
 Başlangıcından bu yana her yılın konferans sunumlarının video içeriğine [archive.devcon.org](https://archive.devcon.org/)'dan erişebilirsiniz.
 
-[Devcon.org](https://devcon.org/)'dan daha fazla bilgi edinin, [Devcon Blog](https://devcon.org/en/blogs/)'a göz atın veya en son duyurular için [@efdevcon](https://twitter.com/EFDevcon)'u takip edin.
+[Devcon.org](https://devcon.org/)'dan daha fazla bilgi edinin, [Devcon Blog](https://devcon.org/en/blogs/)'a göz atın veya en son duyurular için [@efdevcon](https://x.com/EFDevcon)'u takip edin.
 
 ### Burs Programı {#fellowship-program}
 

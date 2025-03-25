@@ -78,7 +78,7 @@ Vendar pa glede na to, da se transakcije NFT dogajajo na isti blokovni verigi, d
 
 Na primer, če obstaja priljubljena izdaja NFT in iskalec želi določen NFT ali več njih, lahko sprogramirajo takšno transakcijo, da so prvi v vrsti za nakup NFT-ja ali pa lahko kupijo celoten set NFT-jev z eno transakcijo. Ali če je NFT [po pomoti na voljo po nizki ceni](https://www.theblockcrypto.com/post/113546/mistake-sees-69000-cryptopunk-sold-for-less-than-a-cent), lahko iskalec prehiti druge kupce in ga poceni ukrade.
 
-Izrazit primer NFT MEV se je pojavil, ko je iskalec porabil 7 milijonov dolarjev za [nakup](https://etherscan.io/address/0x650dCdEB6ecF05aE3CAF30A70966E2F395d5E9E5) vseh Cryptopunkov na spodnjem pragu cene. Raziskovalec blokovnih verig je [na Twitterju pojasnil](https://twitter.com/IvanBogatyy/status/1422232184493121538), kako je kupec sodeloval s ponudnikom MEV, da je nakup ohranil tajen.
+Izrazit primer NFT MEV se je pojavil, ko je iskalec porabil 7 milijonov dolarjev za [nakup](https://etherscan.io/address/0x650dCdEB6ecF05aE3CAF30A70966E2F395d5E9E5) vseh Cryptopunkov na spodnjem pragu cene. Raziskovalec blokovnih verig je [na Twitterju pojasnil](https://x.com/IvanBogatyy/status/1422232184493121538), kako je kupec sodeloval s ponudnikom MEV, da je nakup ohranil tajen.
 
 ### Dolgi rep {#mev-examples-long-tail}
 
@@ -126,4 +126,4 @@ Medtem ko DeFi raste in pridobiva na popularnosti, bo MEV kmalu lahko konkretno 
 - [Ethereum je Temen gozd](https://www.paradigm.xyz/2020/08/ethereum-is-a-dark-forest/)
 - [Pobeg iz Temnega gozda](https://samczsun.com/escaping-the-dark-forest/)
 - [Flashbots: prehitevanje krize MEV](https://medium.com/flashbots/frontrunning-the-mev-crisis-40629a613752)
-- [Zapisi MEV, ki jih je pripravil @bertcmiller](https://twitter.com/bertcmiller/status/1402665992422047747)
+- [Zapisi MEV, ki jih je pripravil @bertcmiller](https://x.com/bertcmiller/status/1402665992422047747)

@@ -152,4 +152,4 @@ Cel mai recent număr de bloc este 11.043.912
 
 Not sure what to do next? Try deploying your first smart contract and get your hands dirty with some solidity programming in our [Hello World Smart Contract Guide](https://docs.alchemyapi.io/tutorials/hello-world-smart-contract), or test your dashboard knowledge with the [Dashboard Demo App](https://docs.alchemyapi.io/tutorials/demo-app)!
 
-_[Înregistrează-te la Alchemy gratis](https://auth.alchemyapi.io/signup), consultă [documentația](https://docs.alchemyapi.io/) și, pentru cele mai recente știri, urmărește-ne pe [Twitter](https://twitter.com/AlchemyPlatform)_.
+_[Înregistrează-te la Alchemy gratis](https://auth.alchemyapi.io/signup), consultă [documentația](https://docs.alchemyapi.io/) și, pentru cele mai recente știri, urmărește-ne pe [Twitter](https://x.com/AlchemyPlatform)_.

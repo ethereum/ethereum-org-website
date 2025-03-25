@@ -377,7 +377,7 @@ Hackeři na Ethereu obvykle využívají zranitelnosti v jednotlivých aplikací
 
 - [Zpráva o zneužití Wormhole](https://blog.chainalysis.com/reports/wormhole-hack-february-2022/)
 - [Seznam následných rozborů hacků kontraktů na Ethereu](https://forum.openzeppelin.com/t/list-of-ethereum-smart-contracts-post-mortems/1191)
-- [Rekt News](https://twitter.com/RektHQ?s=20&t=3otjYQdM9Bqk8k3n1a1Adg)
+- [Rekt News](https://x.com/RektHQ?s=20&t=3otjYQdM9Bqk8k3n1a1Adg)
 
 #### Nedávný výzkum {#recent-research-19}
 

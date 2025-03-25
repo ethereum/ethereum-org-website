@@ -118,17 +118,17 @@ lang: fa
 
 «DAOها» سازمان‌های مستقل غیرمتمرکز هستند. این گروه‌ها از فناوری اتریوم برای تسهیل سازماندهی و همکاری استفاده می‌کنند. به عنوان مثال، برای کنترل عضویت، رأی دادن در مورد پیشنهادها، یا مدیریت دارایی‌های مشارکتی. درست است که DAOها هنوز آزمایشی هستند، اما فرصت‌هایی را برای شما فراهم می کنند تا گروه‌هایی را که با آن‌ها همسو هستید پیدا کنید و تأثیر خود را روی جامعه‌ اتریوم افزایش دهید. [درباره‌ DAOها بیشتر بدانید](/dao/)
 
-- [DAOSquare](https://www.daosquare.io) [@DAOSquare](https://twitter.com/DAOSquare) - _مفهوم DAO را در زمینه غیر فناوری ترویج می‌کند و به مردم کمک در ایجاد ارزش از طریق DAO کمک می‌کند_
-- [Developer DAO](https://www.developerdao.com/) [@developer_dao](https://twitter.com/developer_dao) - _جامعه‌ی سازندگانی که به مالکیت جمعی اینترنت اعتقاد دارند_
-- [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) - *شرکت جمعی توسعه‌ی Web3 Freelancer که به‌عنوان DAO کار می‌کند*
-- [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) - *حاکمیت اجتماعی DAOhaus*
-- [LexDAO](https://lexdao.org) [@lex_DAO](https://twitter.com/lex_DAO) - *مهندسی حقوقی*
-- [Machi X](https://machix.com) [@MachiXOfficial](https://twitter.com/MachiXOfficial) - *جامعه‌ی هنری*
-- [MetaCartel](https://metacartel.org) [@Meta_Cartel](https://twitter.com/Meta_Cartel) - *مرکز پرورش DAO*
-- [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://twitter.com/VENTURE_DAO) - *سرمایه گذاری برای پروژه های کریپتو پیش از آغاز به کار*
-- [MetaGame](https://metagame.wtf) [@MetaFam](https://twitter.com/MetaFam) - *مکانیزم‌های بازی‌های MMORPG در زمان حال*
-- [MetaFactory](https://metafactory.ai) [@TheMetaFactory](https://twitter.com/TheMetaFactory) - *برندهای پوشاک دیجیتالی*
-- [MolochDAO](https://molochdao.com) [@MolochDAO](https://twitter.com/MolochDAO) - *جامعه‌ای با تمرکز بر تأمین مالی توسعه‌ی اتریوم*
-- [Raid Guild](https://raidguild.org) [@RaidGuild](https://twitter.com/RaidGuild) - *مجموعه‌ی سازندگان Web3*
+- [DAOSquare](https://www.daosquare.io) [@DAOSquare](https://x.com/DAOSquare) - _مفهوم DAO را در زمینه غیر فناوری ترویج می‌کند و به مردم کمک در ایجاد ارزش از طریق DAO کمک می‌کند_
+- [Developer DAO](https://www.developerdao.com/) [@developer_dao](https://x.com/developer_dao) - _جامعه‌ی سازندگانی که به مالکیت جمعی اینترنت اعتقاد دارند_
+- [dOrg](https://dOrg.tech) [@dOrg_tech](https://x.com/dOrg_tech) - *شرکت جمعی توسعه‌ی Web3 Freelancer که به‌عنوان DAO کار می‌کند*
+- [HausDAO](https://daohaus.club) [@nowdaoit](https://x.com/nowdaoit) - *حاکمیت اجتماعی DAOhaus*
+- [LexDAO](https://lexdao.org) [@lex_DAO](https://x.com/lex_DAO) - *مهندسی حقوقی*
+- [Machi X](https://machix.com) [@MachiXOfficial](https://x.com/MachiXOfficial) - *جامعه‌ی هنری*
+- [MetaCartel](https://metacartel.org) [@Meta_Cartel](https://x.com/Meta_Cartel) - *مرکز پرورش DAO*
+- [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://x.com/VENTURE_DAO) - *سرمایه گذاری برای پروژه های کریپتو پیش از آغاز به کار*
+- [MetaGame](https://metagame.wtf) [@MetaFam](https://x.com/MetaFam) - *مکانیزم‌های بازی‌های MMORPG در زمان حال*
+- [MetaFactory](https://metafactory.ai) [@TheMetaFactory](https://x.com/TheMetaFactory) - *برندهای پوشاک دیجیتالی*
+- [MolochDAO](https://molochdao.com) [@MolochDAO](https://x.com/MolochDAO) - *جامعه‌ای با تمرکز بر تأمین مالی توسعه‌ی اتریوم*
+- [Raid Guild](https://raidguild.org) [@RaidGuild](https://x.com/RaidGuild) - *مجموعه‌ی سازندگان Web3*
 
 لطفا هر زمان خواستید در ethereum.org مشارکت کنید به یاد داشته باشید از [منشور اخلاقی](/community/code-of-conduct) ethereum.org پیروی کنید!

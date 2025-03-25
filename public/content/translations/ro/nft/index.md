@@ -403,7 +403,7 @@ La sfârșitul anului încheiat în septembrie 2020 au procesat 140.839.000.000 
 
 Se estimează că actualizările de scalabilitate vor permite rețelei să proceseze între 25.000 și 100.000 de tranzacții pe secundă, [,100.000 fiind maximul teoretic în acest moment](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698).
 
-[Vitalik Buterin despre potențialul tranzacțiilor pe secundă cu sistemul de fragmentare](https://twitter.com/VitalikButerin/status/1312905884549300224)
+[Vitalik Buterin despre potențialul tranzacțiilor pe secundă cu sistemul de fragmentare](https://x.com/VitalikButerin/status/1312905884549300224)
 
 Fragmentarea va permite cel puțin un număr de tranzacții de 64 de ori mai mare decât numărul actual, care este de aproximativ 15 tranzacții. Este cantitatea de lanțuri de fragmente (date și capacitate în plus) care va fi introdusă. [Mai multe informații despre lanțurile de fragmente](/roadmap/danksharding/)
 

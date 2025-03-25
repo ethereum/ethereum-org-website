@@ -92,7 +92,7 @@ A fejlesztések általában nem érintik a felhasználókat, kivéve, hogy jobb 
 
 ## Mi a helyzet a Verge, Splurge stb. fejlesztésekkel? {#what-about-the-verge-splurge-etc}
 
-[Vitalik Buterin egy elképzelést javasolt az Ethereum ütemtervéhez](https://twitter.com/VitalikButerin/status/1741190491578810445), amelyet az Ethereum architektúrára gyakorolt hatásai alapján több kategóriába soroltak. Ennek részei:
+[Vitalik Buterin egy elképzelést javasolt az Ethereum ütemtervéhez](https://x.com/VitalikButerin/status/1741190491578810445), amelyet az Ethereum architektúrára gyakorolt hatásai alapján több kategóriába soroltak. Ennek részei:
 
 - **Az összevonás**: a [munkaigazolásról](/glossary/#pow) a [tét igazolására](/glossary/#pos) való átállással kapcsolatos frissítések
 - **The Surge**: a méretezhetőséghez kapcsolódó frissítések [összegzésekkel](/glossary/#rollups) és adatfelosztással

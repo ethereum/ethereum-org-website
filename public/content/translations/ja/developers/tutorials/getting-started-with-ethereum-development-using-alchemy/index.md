@@ -151,4 +151,4 @@ The latest block number is 11043912
 
 次は何を学べば良いのかわからない場合は、 [「ハローワールド・スマートコントラクトガイド」](https://docs.alchemyapi.io/tutorials/hello-world-smart-contract)を使って、はじめてのスマートコントラクトのデプロイとSolidityプログラミングに挑戦するか、[ダッシュボード・デモアプリ](https://docs.alchemyapi.io/tutorials/demo-app)でダッシュボードに関するあなたの知識をテストしてみましょう！
 
-_[Alchemyに無料登録し](https://auth.alchemyapi.io/signup)、[ドキュメンテーション](https://docs.alchemyapi.io/)を確認してください。また、[Twitter](https://twitter.com/AlchemyPlatform)_をフォローして、最新ニュースをチェックしてください。
+_[Alchemyに無料登録し](https://auth.alchemyapi.io/signup)、[ドキュメンテーション](https://docs.alchemyapi.io/)を確認してください。また、[Twitter](https://x.com/AlchemyPlatform)_をフォローして、最新ニュースをチェックしてください。

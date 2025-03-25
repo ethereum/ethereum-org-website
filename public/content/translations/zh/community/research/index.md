@@ -377,7 +377,7 @@ Proto-Danksharding 是完整 Danksharding 的先决条件 ，在 Cancun-Deneb ("
 
 - [虫洞攻击报告](https://blog.chainalysis.com/reports/wormhole-hack-february-2022/)
 - [以太坊合约黑客攻击事后分析列表](https://forum.openzeppelin.com/t/list-of-ethereum-smart-contracts-post-mortems/1191)
-- [Rekt 新闻](https://twitter.com/RektHQ?s=20&t=3otjYQdM9Bqk8k3n1a1Adg)
+- [Rekt 新闻](https://x.com/RektHQ?s=20&t=3otjYQdM9Bqk8k3n1a1Adg)
 
 #### 近期的研究 {#recent-research-19}
 

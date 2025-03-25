@@ -92,7 +92,7 @@ To dey komishon one smart kontract audit na one way to dey konduct one indipende
 
 As wi don toks am, yu suppose afoid to dey trit audits as one silver bullet. Smart kontract audits nor go katch efri bug and dem dey disign to provide adishonal round of reviews, wey fit helep sabi issues dem don miss by divelopas durin di first divelopment and testin. Yu suppose also folow di praktis wey betta pass to dey wok wit auditors, laik to dey dokument kode wella and dey add inline koments, to maximize di benefit of one smart kontract audit.
 
-- [Smart kontract auditing tips & tricks](https://twitter.com/tinchoabbate/status/1400170232904400897) - _@tinchoabbate_
+- [Smart kontract auditing tips & tricks](https://x.com/tinchoabbate/status/1400170232904400897) - _@tinchoabbate_
 - [Make yu yus yor audit wella](https://inference.ag/blog/2023-08-14-tips/) - _Inference_
 
 #### Bug bountis {#bug-bounties}

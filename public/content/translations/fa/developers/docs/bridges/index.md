@@ -128,7 +128,7 @@ To deploy a dapp on multiple chains, developers can use development platforms li
 - [خوشه‌ها: پل‌های قابل اعتماد و & دارای اعتماد حداقل چگونه دورنمای مالتی‌چین را شکل می‌دهند](https://blog.celestia.org/clusters/)4 اکتبر 2021 – Mustafa Al-Bassam
 - [LI.FI: با پلها، اعتماد یک طیف است](https://blog.li.fi/li-fi-with-bridges-trust-is-a-spectrum-354cd5a1a6d8) 28 آوریل 2022 – Arjun Chand
 
-همچنین، اینجا بعضی تعاریف پرمعنی از [James Prestwich](https://twitter.com/_prestwich) وجود دارد که می‌توانند به درک عمیق‌تر از پلها کمک کنند:
+همچنین، اینجا بعضی تعاریف پرمعنی از [James Prestwich](https://x.com/_prestwich) وجود دارد که می‌توانند به درک عمیق‌تر از پلها کمک کنند:
 
 - [ساختن پلها، نه باغ‌های دیواردار](https://youtu.be/ZQJWMiX4hT0)
 - [فرو ریختن پلها](https://youtu.be/b0mC-ZqN8Oo)

@@ -290,6 +290,6 @@ Rozšíření pro prohlížeče, jako jsou rozšíření pro Chrome nebo doplňk
 - [Návod: Jak rozpoznat podvodné tokeny](/guides/how-to-id-scam-tokens/)
 - [Jak zůstat v bezpečí: Časté podvody](https://support.mycrypto.com/staying-safe/common-scams) - _MyCrypto_
 - [Předcházení podvodům](https://bitcoin.org/en/scams) - _Bitcoin.org_
-- [Vlákno na Twitteru o běžných kryptophishingových e-mailech a zprávách](https://twitter.com/tayvano_/status/1516225457640787969) - _Taylor Monahan_
+- [Vlákno na Twitteru o běžných kryptophishingových e-mailech a zprávách](https://x.com/tayvano_/status/1516225457640787969) - _Taylor Monahan_
 
 <QuizWidget quizKey="security" />

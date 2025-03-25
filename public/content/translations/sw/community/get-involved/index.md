@@ -99,15 +99,15 @@ Ikolojia ya Ethereum iko njiani katika kufadhili bidhaa za umma na miradi inayol
 
 "DAOs" ni mashirika huru yaliogatuliwa. Haya makundi yanainua teknolojia ya Ethereum ili kuwezesha ushirikiano. Kwa mfano, kudhibiti uanachama, upigaji kura wa mapendekezo, ama kusimamia mali zilizokusanywa. Huku DAO bado ziko kwenye majaribio, zinatoa fursa ya kupata makundi unayofanana nayo, utapata washiriki na kukuza mchango wako kwenye jumuiya ya Ethereum. [Zaidi juu ya DAOs](/dao/)
 
-- [DAOSquare](https://www.daosquare.io) [@DAOSquare](https://twitter.com/DAOSquare) - _Tangaza dhana ya DAO katika nyanja zisizo za kiufundi na usaidie watu kupata thamani kupitia DAO._
-- [Msanidi DAO](https://www.developerdao.com/) [@Msanidi_dao](https://twitter.com/developer_dao) - _Jumuiya ya wajenzi wanaoamini katika umiliki wa ushirika wa mtandao_
-- [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) - _Mfanyakazi huru wa Web3 akiafanya kazi kama DAO_
-- [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) - _Utawala wa jumuiya ya DAOhaus_
-- [LexDAO](https://lexdao.org)[@lex_DAO](https://twitter.com/lex_DAO) - _Uhandisi wa kisheria_
-- [Machi X](https://machix.com) [@MachiXOfficial](https://twitter.com/MachiXOfficial) - _Jumuiya ya wasanii_
-- [MetaCartel](https://metacartel.org) [@Metaa_Cartel](https://twitter.com/Meta_Cartel) - _kiota cha DAO_
-- [Ubia wa MetaCartel](https://metacartel.xyz) [@VENTURE_DAO](https://twitter.com/VENTURE_DAO) - _Ubia wa kripto za kabla ya kuanzishwa_
-- [MetaMchezo](https://metagame.wtf) [@MetaShamba](https://twitter.com/MetaFam) - _MMORPG makanika ya Mchezo kwenye maisha halisi_
-- [KiwandaMeta](https://metafactory.ai) [@KiwandaMeta](https://twitter.com/TheMetaFactory) - _Chapa ya Mavazi ya Nusu dijiti na halisi_
-- [Moloch](https://molochdao.com) [@MolochDAO](https://twitter.com/MolochDAO) - _Jumuiya inayolenga kutegemeza uboreshwaji wa Ethereum_
-- [Chama cha Uvamizi](https://raidguild.org) [@ChamachaUmavimizi](https://twitter.com/RaidGuild) - _Mkusanyiko wa wajenzi wa Web3_
+- [DAOSquare](https://www.daosquare.io) [@DAOSquare](https://x.com/DAOSquare) - _Tangaza dhana ya DAO katika nyanja zisizo za kiufundi na usaidie watu kupata thamani kupitia DAO._
+- [Msanidi DAO](https://www.developerdao.com/) [@Msanidi_dao](https://x.com/developer_dao) - _Jumuiya ya wajenzi wanaoamini katika umiliki wa ushirika wa mtandao_
+- [dOrg](https://dOrg.tech) [@dOrg_tech](https://x.com/dOrg_tech) - _Mfanyakazi huru wa Web3 akiafanya kazi kama DAO_
+- [HausDAO](https://daohaus.club) [@nowdaoit](https://x.com/nowdaoit) - _Utawala wa jumuiya ya DAOhaus_
+- [LexDAO](https://lexdao.org)[@lex_DAO](https://x.com/lex_DAO) - _Uhandisi wa kisheria_
+- [Machi X](https://machix.com) [@MachiXOfficial](https://x.com/MachiXOfficial) - _Jumuiya ya wasanii_
+- [MetaCartel](https://metacartel.org) [@Metaa_Cartel](https://x.com/Meta_Cartel) - _kiota cha DAO_
+- [Ubia wa MetaCartel](https://metacartel.xyz) [@VENTURE_DAO](https://x.com/VENTURE_DAO) - _Ubia wa kripto za kabla ya kuanzishwa_
+- [MetaMchezo](https://metagame.wtf) [@MetaShamba](https://x.com/MetaFam) - _MMORPG makanika ya Mchezo kwenye maisha halisi_
+- [KiwandaMeta](https://metafactory.ai) [@KiwandaMeta](https://x.com/TheMetaFactory) - _Chapa ya Mavazi ya Nusu dijiti na halisi_
+- [Moloch](https://molochdao.com) [@MolochDAO](https://x.com/MolochDAO) - _Jumuiya inayolenga kutegemeza uboreshwaji wa Ethereum_
+- [Chama cha Uvamizi](https://raidguild.org) [@ChamachaUmavimizi](https://x.com/RaidGuild) - _Mkusanyiko wa wajenzi wa Web3_

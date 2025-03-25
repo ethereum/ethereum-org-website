@@ -75,7 +75,7 @@ Mielőtt nekilát, ismerkedjen meg:
 A PR-okról, dizájnfejlesztésről, főbb frissítésekről a döntéseket egy olyan csapat hozza, mely az Ethereum ökoszisztémához tartozik. Ebben a csapatban projekt menedzserek, fejlesztők, tervezők, marketingesek, kommunikációs szakemberek és szakértők vannak. Minden döntés alapja a közösségi input, ezért tegye fel a kérdését, adjon be PR-t vagy keresse meg a csapatot:
 
 - [website@ethereum.org](mailto:website@ethereum.org)
-- [@ethdotorg](https://twitter.com/ethdotorg)
+- [@ethdotorg](https://x.com/ethdotorg)
 - [Discord szerver](https://discord.gg/ethereum-org)
 
 ### Megjegyzés a plágiumról {#plagiarism}

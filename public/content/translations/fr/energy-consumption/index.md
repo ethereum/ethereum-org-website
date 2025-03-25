@@ -71,7 +71,7 @@ Les plateformes de financement de biens publics natifs Web3 telles que [Gitcoin]
 - [Rapport de la Maison-Blanche sur les blockchains de preuve de travail](https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
 - [Les Émissions d'Ethereum : une estimation de bas à haut](https://kylemcdonald.github.io/ethereum-emissions/) - _Kyle McDonald_
 - [Index de Consommation d'Énergie d'Ethereum](https://digiconomist.net/ethereum-energy-consumption/) - _Digiconomist_
-- [ETHMerge.com](https://ethmerge.com/) - _[@InsideTheSim](https://twitter.com/InsideTheSim)_
+- [ETHMerge.com](https://ethmerge.com/) - _[@InsideTheSim](https://x.com/InsideTheSim)_
 - [La Fusion - Implications sur la consommation d'électricité et l'empreinte carbone du réseau Ethereum](https://carbon-ratings.com/eth-report-2022) - _CCRI_
 - [Consommation énergétique d'Ethereum](https://mirror.xyz/jmcook.eth/ODpCLtO4Kq7SCVFbU4He8o8kXs418ZZDTj0lpYlZkR8)
 

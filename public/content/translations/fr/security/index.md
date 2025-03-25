@@ -290,6 +290,6 @@ Les extensions de navigateur, comme les extensions de Chrome ou les modules comp
 - [Guide : Comment identifier les jetons frauduleux](/guides/how-to-id-scam-tokens/)
 - [Staying Safe: Common Scams](https://support.mycrypto.com/staying-safe/common-scams) - _MyCrypto_
 - [Avoiding Scams](https://bitcoin.org/en/scams) - _Bitcoin.org_
-- [Fil Twitter sur les courriels et messages communs de phishing en cryptomonnaies](https://twitter.com/tayvano_/status/1516225457640787969) - _Taylor Monahan_
+- [Fil Twitter sur les courriels et messages communs de phishing en cryptomonnaies](https://x.com/tayvano_/status/1516225457640787969) - _Taylor Monahan_
 
 <QuizWidget quizKey="security" />

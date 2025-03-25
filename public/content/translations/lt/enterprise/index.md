@@ -80,10 +80,10 @@ Viešiesiems ir privatiems Ethereum tinklams gali prireikti specifinių savybių
 
 - [Alethio Discord](https://discord.gg/d2t8NuU)
 - [Infura Discourse](https://community.infura.io/)
-- [Kaleido Twitter](https://twitter.com/Kaleido_io)
+- [Kaleido Twitter](https://x.com/Kaleido_io)
 - [Hyperledger Rocketchat](https://chat.hyperledger.org/)
 - [Hyperledger Rocketchat (Besu kanalas)](https://chat.hyperledger.org/channel/besu)
 - [Hyperledger Rocketchat (Burrow kanalas)](https://chat.hyperledger.org/channel/burrow)
-- [PegaSys Twitter](https://twitter.com/Kaleido_io)
+- [PegaSys Twitter](https://x.com/Kaleido_io)
 - [Quorum Slack kanalas](http://bit.ly/quorum-slack)
 - [Chainstack Gitter](https://gitter.im/chainstack/Lobby)

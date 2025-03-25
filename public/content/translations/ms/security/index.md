@@ -290,6 +290,6 @@ Sambungan pelayar, seperti sambungan Chrome atau Tambahan untuk Firefox, boleh m
 - [Panduan: Cara mengenal pasti token penipuan](/guides/how-to-id-scam-tokens/)
 - [Kekal Selamat: Penipuan Lazim](https://support.mycrypto.com/staying-safe/common-scams) - _MyCrypto_
 - [Mengelakkan Penipuan](https://bitcoin.org/en/scams) - _ Bitcoin.org _
-- [Twitter merungkai e-mel dan mesej pancingan data kripto lazim](https://twitter.com/tayvano_/status/1516225457640787969) - _Taylor Monahan_
+- [Twitter merungkai e-mel dan mesej pancingan data kripto lazim](https://x.com/tayvano_/status/1516225457640787969) - _Taylor Monahan_
 
 <QuizWidget quizKey="security" />

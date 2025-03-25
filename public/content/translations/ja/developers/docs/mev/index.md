@@ -78,7 +78,7 @@ NFTを用いたMEVの抽出は、最近発生しつつある現象であり、�
 
 例えば、人気が高いNFTドロップが実行され、サーチャーが特定のNFTあるいは複数のNFTを持つセットを獲得したい場合、このNFTの購入リストの先頭になるようにトランザクションをプログラミングしたり、1回のトランザクションで当該NFTのセット全体を購入したりすることができます。 また、NFTが [ミスにより低価格で出品](https://www.theblockcrypto.com/post/113546/mistake-sees-69000-cryptopunk-sold-for-less-than-a-cent)されている場合、サーチャーは他の購入者を先回りして取引を実行し、安価で手に入れることができます。
 
-NFTを使ったMEV抽出の顕著な事例としては、あるサーチャーが700万ドルを投じて、Cryptopunkを底値ですべて[購入した](https://etherscan.io/address/0x650dCdEB6ecF05aE3CAF30A70966E2F395d5E9E5)ケースがあります。 この事例については、買い手がMEVプロバイダーと連携してどのようにこの購入を秘匿したかについて、あるブロックチェーン研究者が[ツイッター](https://twitter.com/IvanBogatyy/status/1422232184493121538)上で説明しています。
+NFTを使ったMEV抽出の顕著な事例としては、あるサーチャーが700万ドルを投じて、Cryptopunkを底値ですべて[購入した](https://etherscan.io/address/0x650dCdEB6ecF05aE3CAF30A70966E2F395d5E9E5)ケースがあります。 この事例については、買い手がMEVプロバイダーと連携してどのようにこの購入を秘匿したかについて、あるブロックチェーン研究者が[ツイッター](https://x.com/IvanBogatyy/status/1422232184493121538)上で説明しています。
 
 ### ロングテール {#mev-examples-long-tail}
 
@@ -214,7 +214,7 @@ MEV Boostをはじめとするいくつかのプロジェクトでは、フロ�
 - [イーサリアムはダークな森である](https://www.paradigm.xyz/2020/08/ethereum-is-a-dark-forest/)
 - [ダークな森から抜け出すには](https://samczsun.com/escaping-the-dark-forest/)
 - [フラッシュボッツ: MEV危機をフロントランニングするには](https://medium.com/flashbots/frontrunning-the-mev-crisis-40629a613752)
-- [@bertcmillerのMEV関連スレッド](https://twitter.com/bertcmiller/status/1402665992422047747)
+- [@bertcmillerのMEV関連スレッド](https://x.com/bertcmiller/status/1402665992422047747)
 - [MEV-Boost: マージに対応したFlashbotsのアーキテクチャ](https://ethresear.ch/t/mev-boost-merge-ready-flashbots-architecture/11177)
 - [MEV Boostとは](https://www.alchemy.com/overviews/mev-boost)
 - [mev-boostを実行する理由](https://writings.flashbots.net/writings/why-run-mevboost/)

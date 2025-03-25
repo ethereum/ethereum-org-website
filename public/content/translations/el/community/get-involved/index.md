@@ -120,16 +120,16 @@ lang: el
 
 Οι «DAO» είναι Αποκεντρωμένοι Αυτόνομοι Οργανισμοί. Οι παρακάτω ομάδες αξιοποιούν την τεχνολογία Ethereum για να διευκολύνουν την οργάνωση και τη συνεργασία. Για παράδειγμα, για τον έλεγχο των μελών, την ψηφοφορία επί προτάσεων ή τη διαχείριση κοινών περιουσιακών στοιχείων. Καθώς οι DAO είναι ακόμα σε πειραματικό στάδιο, προσφέρουν ευκαιρίες για να βρείτε ομάδες με τις οποίες ταυτίζεστε. Βρείτε συνεργάτες και αναπτύξτε τις δεξιότητές σας στην κοινότητα του Ethereum. [Περισσότερα για τους DAO](/dao/)
 
-- [DAOSquare](https://daosquare.io/) [@DAOSquare](https://twitter.com/DAOSquare) - _Προώθηση της έννοιας DAO σε μη τεχνολογικό πεδίο για να βοηθήσει τους ανθρώπους να δημιουργήσουν αξίες μέσω ενός DAO_
-- [Προγραμματιστής DAO](https://www.developerdao.com/) [@developer_dao](https://twitter.com/developer_dao) - _Κοινότητα δημιουργών που πιστεύουν στη συλλογική ιδιοκτησία του διαδικτύου_
-- [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) - _Ελεύθεροι επαγγελματίες προγραμματισμού Web3 που λειτουργούν ως ένας DAO_
-- [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) - _Κοινοτική διακυβέρνηση DAOhaus_
-- [LexDAO](https://lexdao.org) [@lex_DAO](https://twitter.com/lex_DAO) - _Legal engineering_
-- [Machi X](https://machix.com) [@MachiXOfficial](https://twitter.com/MachiXOfficial) - _Κοινότητα Τέχνης_
-- [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://twitter.com/VENTURE_DAO) - _Χρηματοδότηση έργων κρυπτονομισμάτων σε αρχικό στάδιο_
-- [MetaGame](https://metagame.wtf) [@MetaFam](https://twitter.com/MetaFam) - _Μηχανική παιχνιδιού MMORPG για Πραγματική Ζωή_
-- [MetaFactory](https://metafactory.ai) [@TheMetaFactory](https://twitter.com/TheMetaFactory) - _Digiphysical Apparel Brands_
-- [MolochDAO](https://molochdao.com) [@MolochDAO](https://twitter.com/MolochDAO) - _Επικέντρωση της κοινότητας στη χρηματοδότηση ανάπτυξης Ethereum_
-- [Raid Guild](https://raidguild.org) [@RaidGuild](https://twitter.com/RaidGuild) - _Συλλογικότητα δημιουργών Web3_
+- [DAOSquare](https://daosquare.io/) [@DAOSquare](https://x.com/DAOSquare) - _Προώθηση της έννοιας DAO σε μη τεχνολογικό πεδίο για να βοηθήσει τους ανθρώπους να δημιουργήσουν αξίες μέσω ενός DAO_
+- [Προγραμματιστής DAO](https://www.developerdao.com/) [@developer_dao](https://x.com/developer_dao) - _Κοινότητα δημιουργών που πιστεύουν στη συλλογική ιδιοκτησία του διαδικτύου_
+- [dOrg](https://dOrg.tech) [@dOrg_tech](https://x.com/dOrg_tech) - _Ελεύθεροι επαγγελματίες προγραμματισμού Web3 που λειτουργούν ως ένας DAO_
+- [HausDAO](https://daohaus.club) [@nowdaoit](https://x.com/nowdaoit) - _Κοινοτική διακυβέρνηση DAOhaus_
+- [LexDAO](https://lexdao.org) [@lex_DAO](https://x.com/lex_DAO) - _Legal engineering_
+- [Machi X](https://machix.com) [@MachiXOfficial](https://x.com/MachiXOfficial) - _Κοινότητα Τέχνης_
+- [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://x.com/VENTURE_DAO) - _Χρηματοδότηση έργων κρυπτονομισμάτων σε αρχικό στάδιο_
+- [MetaGame](https://metagame.wtf) [@MetaFam](https://x.com/MetaFam) - _Μηχανική παιχνιδιού MMORPG για Πραγματική Ζωή_
+- [MetaFactory](https://metafactory.ai) [@TheMetaFactory](https://x.com/TheMetaFactory) - _Digiphysical Apparel Brands_
+- [MolochDAO](https://molochdao.com) [@MolochDAO](https://x.com/MolochDAO) - _Επικέντρωση της κοινότητας στη χρηματοδότηση ανάπτυξης Ethereum_
+- [Raid Guild](https://raidguild.org) [@RaidGuild](https://x.com/RaidGuild) - _Συλλογικότητα δημιουργών Web3_
 
 Θυμηθείτε να τηρείτε τον [κώδικα συμπεριφοράς](/community/code-of-conduct) του ethereum.org με οποιονδήποτε τρόπο συνεισφέρετε στο ethereum.org!

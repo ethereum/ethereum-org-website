@@ -152,4 +152,4 @@ The latest block number is 11043912
 
 Not sure what to do next? Try deploying your first smart contract and get your hands dirty with some solidity programming in our [Hello World Smart Contract Guide](https://docs.alchemyapi.io/tutorials/hello-world-smart-contract), or test your dashboard knowledge with the [Dashboard Demo App](https://docs.alchemyapi.io/tutorials/demo-app)!
 
-_[Daftar Alchemy secara gratis](https://auth.alchemyapi.io/signup), lihat [dokumentasi](https://docs.alchemyapi.io/) kami, dan untuk berita terbaru, ikuti kami di [Twitter](https://twitter.com/AlchemyPlatform)_.
+_[Daftar Alchemy secara gratis](https://auth.alchemyapi.io/signup), lihat [dokumentasi](https://docs.alchemyapi.io/) kami, dan untuk berita terbaru, ikuti kami di [Twitter](https://x.com/AlchemyPlatform)_.

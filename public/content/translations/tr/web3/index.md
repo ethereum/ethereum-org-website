@@ -40,7 +40,7 @@ Web 2.0 dönemi, 2004 yılında sosyal medya platformlarının ortaya çıkması
 
 ### Web3 nedir? {#what-is-web3}
 
-Web3, yeni ve daha iyi bir internet vizyonu için her şeyi kapsayan bir terim haline geldi. Web3 özünde gücü kullanıcılara mülkiyet biçiminde geri vermek için blok zincirleri, kripto para birimlerini ve NFT'leri kullanır. [2020'de Twitter](https://twitter.com/j1mmyeth/status/1459003044067258370)'da yayınlanan bir gönderi durumu en iyi şekilde özetliyor: Web1 salt okunurdu, Web2 okunur/yazılır, Web3 okunur/yazılır/sahip olunur olacak.
+Web3, yeni ve daha iyi bir internet vizyonu için her şeyi kapsayan bir terim haline geldi. Web3 özünde gücü kullanıcılara mülkiyet biçiminde geri vermek için blok zincirleri, kripto para birimlerini ve NFT'leri kullanır. [2020'de Twitter](https://x.com/j1mmyeth/status/1459003044067258370)'da yayınlanan bir gönderi durumu en iyi şekilde özetliyor: Web1 salt okunurdu, Web2 okunur/yazılır, Web3 okunur/yazılır/sahip olunur olacak.
 
 #### Web3'ün temel fikirleri {#core-ideas}
 

@@ -40,7 +40,7 @@ Shi muhallin 'Web 3.0' an kiro shine daga [Ethereum](/what-is-ethereum/), ɗaya 
 
 ### Menene Web3? {#what-is-web3}
 
-Web3 ya zamanto ya tattara dukkan wasu sare-saren mahangan akan sababbi, mafificin yanar gizo. A wajen core, Web3 yana amfani da blockchains, kuɗaɗen kiripto, da NFTs dan dawo da karfi wa masu asusu da shi ta nau'in mallakanshi. [A a 2020 ya wallafa a shafinsa na twitter](https://twitter.com/himgajria/status/1266415636789334016) yace shi ne yafi: Web1 shi karantawa-kawai, Web1 shi karantawa-rubutawa, Web3 zai zama karantawa-rubutawa-mallaka.
+Web3 ya zamanto ya tattara dukkan wasu sare-saren mahangan akan sababbi, mafificin yanar gizo. A wajen core, Web3 yana amfani da blockchains, kuɗaɗen kiripto, da NFTs dan dawo da karfi wa masu asusu da shi ta nau'in mallakanshi. [A a 2020 ya wallafa a shafinsa na twitter](https://x.com/himgajria/status/1266415636789334016) yace shi ne yafi: Web1 shi karantawa-kawai, Web1 shi karantawa-rubutawa, Web3 zai zama karantawa-rubutawa-mallaka.
 
 #### Ra'ayoyin cibiyar Web3 {#core-ideas}
 

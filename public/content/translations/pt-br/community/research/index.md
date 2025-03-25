@@ -373,7 +373,7 @@ Os hacks na Ethereum geralmente exploram vulnerabilidades em aplicativos individ
 
 - [Relatório de exploração de wormhole](https://blog.chainalysis.com/reports/wormhole-hack-february-2022/)
 - [Lista de post-mortems de hack de contratos do Ethereum](https://forum.openzeppelin.com/t/list-of-ethereum-smart-contracts-post-mortems/1191)
-- [Rekt News](https://twitter.com/RektHQ?s=20&t=3otjYQdM9Bqk8k3n1a1Adg)
+- [Rekt News](https://x.com/RektHQ?s=20&t=3otjYQdM9Bqk8k3n1a1Adg)
 
 #### Pesquisa recente {#recent-research-19}
 

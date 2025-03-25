@@ -92,7 +92,7 @@ buttons:
 
 ## 邊際 (The Verge)、誇耀 (The Splurge) 等等將如何？ {#what-about-the-verge-splurge-etc}
 
-[Vitalik Buterin 提出了以太坊開發藍圖的願景](https://twitter.com/VitalikButerin/status/1741190491578810445)，開發藍圖中的事項被整理為多個類別，根據各自對以太坊架構的影響相互關聯。 其中包括：
+[Vitalik Buterin 提出了以太坊開發藍圖的願景](https://x.com/VitalikButerin/status/1741190491578810445)，開發藍圖中的事項被整理為多個類別，根據各自對以太坊架構的影響相互關聯。 其中包括：
 
 - **合併 (The Merge)**：涉及從[工作量證明](/glossary/#pow)過渡到[權益證明](/glossary/#pos)的升級
 - **激增 (The Surge)**：透過[卷軸](/glossary/#rollups)和資料分片進行與可擴容性相關的升級

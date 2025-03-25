@@ -287,6 +287,6 @@ Sa mga airdrop scam, may scam project na mag-e-airdrop ng asset (NFT, token) sa 
 - [Gabay: Paano tukuyin ang mga scam token](/guides/how-to-id-scam-tokens/)
 - [Pananatiling Ligtas: Mga Karaniwang Scam](https://support.mycrypto.com/staying-safe/common-scams) - _MyCrypto_
 - [Pag-iwas sa Mga Scam](https://bitcoin.org/en/scams)- _Bitcoin.org_
-- [Twitter thread tungkol sa mga karaniwang crypto phishing email at message](https://twitter.com/tayvano_/status/1516225457640787969)- _Taylor Monahan_
+- [Twitter thread tungkol sa mga karaniwang crypto phishing email at message](https://x.com/tayvano_/status/1516225457640787969)- _Taylor Monahan_
 
 <QuizWidget quizKey="security" />

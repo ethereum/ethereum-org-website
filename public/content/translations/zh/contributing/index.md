@@ -75,7 +75,7 @@ Ethereum.org 是一个开源项目，有超过 **12,000** 名贡献者帮助翻�
 关于个人拉取请求、设计演变和重大升级的决策，由来自整个以太坊生态系统的团队做出。 该团队包括项目管理人员、开发者、设计师、营销和通信人员以及主题专家。 社区的参与将为每项决策提供信息：因此请提出问题、提交拉取请求或联系该团队：
 
 - [website@ethereum.org](mailto:website@ethereum.org)
-- [@ethdotorg](https://twitter.com/ethdotorg)
+- [@ethdotorg](https://x.com/ethdotorg)
 - [Discord 服务器](https://discord.gg/ethereum-org)
 
 ### 关于抄袭的说明 {#plagiarism}

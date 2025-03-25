@@ -40,7 +40,7 @@ Předchozí znalosti programovacích jazyků, zejména JavaScriptu nebo Pythonu,
 - [Solidity Gitter Chatroom](https://gitter.im/ethereum/solidity) propojeno se [Solidity Matrix Chatroom](https://matrix.to/#/#ethereum_solidity:gitter.im)
 - [Tahák](https://reference.auditless.com/cheatsheet)
 - [Blog Solidity](https://blog.soliditylang.org/)
-- [Twitter Solidity](https://twitter.com/solidity_lang)
+- [Twitter Solidity](https://x.com/solidity_lang)
 
 ### Ukázkový kontrakt {#example-contract}
 
@@ -268,7 +268,7 @@ Pokud již máte se smart kontrakty bohaté zkušenosti, plnou implementaci ERC2
 - [Oznámení Fe](https://snakecharmers.ethereum.org/fe-a-new-language-for-the-ethereum-ecosystem/)
 - [Plán vylepšení Fe pro rok 2021](https://notes.ethereum.org/LVhaTF30SJOpkbG1iVw1jg)
 - [Chat na Discordu Fe](https://discord.com/invite/ywpkAXFjZH)
-- [Twitter Fe](https://twitter.com/official_fe)
+- [Twitter Fe](https://x.com/official_fe)
 
 ### Ukázkový kontrakt {#example-contract-3}
 

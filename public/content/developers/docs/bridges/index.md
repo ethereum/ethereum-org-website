@@ -130,7 +130,7 @@ To monitor contract activity across chains, developers can use subgraphs and dev
 - [The State Of Rollup Interoperability Solutions](https://research.2077.xyz/the-state-of-rollup-interoperability) - June 20, 2024 – Alex Hook
 - [Harnessing Shared Security For Secure Cross-Chain Interoperability: Lagrange State Committees And Beyond](https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - June 12, 2024 – Emmanuel Awosika
 
-Additionally, here are some insightful presentations by [James Prestwich](https://twitter.com/_prestwich) that can help develop a deeper understanding of bridges:
+Additionally, here are some insightful presentations by [James Prestwich](https://x.com/_prestwich) that can help develop a deeper understanding of bridges:
 
 - [Building Bridges, Not Walled Gardens](https://youtu.be/ZQJWMiX4hT0)
 - [Breaking Down Bridges](https://youtu.be/b0mC-ZqN8Oo)

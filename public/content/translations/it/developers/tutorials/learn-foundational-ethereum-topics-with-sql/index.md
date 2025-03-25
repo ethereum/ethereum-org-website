@@ -269,4 +269,4 @@ Con questo tutorial esaminiamo i concetti fondamentali di Ethereum e come funzio
 
 La dashboard che contiene tutto il codice usato in questo tutorial si può trovare [qui](https://duneanalytics.com/paulapivat/Learn-Ethereum).
 
-Per altri usi dei dati per l'esplorazione di web3 [cercami su Twitter](https://twitter.com/paulapivat).
+Per altri usi dei dati per l'esplorazione di web3 [cercami su Twitter](https://x.com/paulapivat).

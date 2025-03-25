@@ -128,7 +128,7 @@ Geliştiriciler, akıllı sözleşmelerin zincirler arasındaki etkinliğini izl
 - [Clusters: How Trusted & Trust-Minimized Bridges Shape the Multi-Chain Landscape](https://blog.celestia.org/clusters/) 4 Ekim 2021 – Mustafa Al-Bassam
 - [LI.FI: With Bridges, Trust is a Spectrum](https://blog.li.fi/li-fi-with-bridges-trust-is-a-spectrum-354cd5a1a6d8) 28 Nisan 2022 – Arjun Chand
 
-Ayrıca, aşağıdaki [James Prestwich](https://twitter.com/_prestwich) tarafından sunulan bazı aydınlatıcı sunumlar köprüler hakkında daha derinlemesine bir anlayış geliştirmenize yardımcı olabilir:
+Ayrıca, aşağıdaki [James Prestwich](https://x.com/_prestwich) tarafından sunulan bazı aydınlatıcı sunumlar köprüler hakkında daha derinlemesine bir anlayış geliştirmenize yardımcı olabilir:
 
 - [Duvarlı Bahçeler Değil, Köprüler İnşa Etmek](https://youtu.be/ZQJWMiX4hT0)
 - [Köprüleri Yıkmak](https://youtu.be/b0mC-ZqN8Oo)

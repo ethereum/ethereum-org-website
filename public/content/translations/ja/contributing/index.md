@@ -75,7 +75,7 @@ ethereum.orgは、オープンソースで運営されているプロジェク�
 個々のPR、デザインの進化、メジャーなアップグレードに関する決定は、イーサリアムのエコシステム全体からなるチームによって行われます。 このチームには、プロジェクトマネージャー、デベロッパー、デザイナー、マーケティングとコミュニケーションなど各領域の専門家が含まれます。 コミュニティからの情報は、すべての決定に反映されるため、イシューの質問、PRの送信、チームへの連絡をお願いします。
 
 - [website@ethereum.org](mailto:website@ethereum.org)
-- [@ethdotorg](https://twitter.com/ethdotorg)
+- [@ethdotorg](https://x.com/ethdotorg)
 - [Discordサーバー](https://discord.gg/ethereum-org)
 
 ### 盗用に関する注意点 {#plagiarism}

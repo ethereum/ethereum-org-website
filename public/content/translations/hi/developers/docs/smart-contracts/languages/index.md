@@ -40,7 +40,7 @@ lang: hi
 - [Solidity Gitter चैटरूम](https://gitter.im/ethereum/solidity) को [Solidity Matrix चैटरूम](https://matrix.to/#/#ethereum_solidity:gitter.im) से जोड़ा गया
 - [चीट शीट](https://reference.auditless.com/cheatsheet)
 - [Solidity ब्लॉग](https://blog.soliditylang.org/)
-- [Solidity Twitter](https://twitter.com/solidity_lang)
+- [Solidity Twitter](https://x.com/solidity_lang)
 
 ### उदाहरण अनुबंध {#example-contract}
 
@@ -268,7 +268,7 @@ def endAuction():
 - [Fe की घोषणा](https://snakecharmers.ethereum.org/fe-a-new-language-for-the-ethereum-ecosystem/)
 - [Fe 2021 रोडमैप](https://notes.ethereum.org/LVhaTF30SJOpkbG1iVw1jg)
 - [Fe Discord चैट](https://discord.com/invite/ywpkAXFjZH)
-- [Fe Twitter](https://twitter.com/official_fe)
+- [Fe Twitter](https://x.com/official_fe)
 
 ### उदाहरण अनुबंध {#example-contract-3}
 

@@ -290,6 +290,6 @@ Le estensioni del browser, come le estensioni di Chrome o gli Addon di Firefox, 
 - [Guida: come identificare i token fraudolenti](/guides/how-to-id-scam-tokens/)
 - [Restare al sicuro: le truffe più comuni](https://support.mycrypto.com/staying-safe/common-scams) - _MyCrypto_
 - [Evitare le truffe](https://bitcoin.org/en/scams) - _Bitcoin.org_
-- [Discussione di Twitter sulle e-mail e i messaggi di phishing di criptovalute comuni](https://twitter.com/tayvano_/status/1516225457640787969) - _Taylor Monahan_
+- [Discussione di Twitter sulle e-mail e i messaggi di phishing di criptovalute comuni](https://x.com/tayvano_/status/1516225457640787969) - _Taylor Monahan_
 
 <QuizWidget quizKey="security" />

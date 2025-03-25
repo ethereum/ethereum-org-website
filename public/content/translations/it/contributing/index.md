@@ -75,7 +75,7 @@ Prima di contribuire, assicurati di avere familiarità con:
 Le decisioni sui singoli PR, l'evoluzione del design e gli aggiornamenti principali sono prese da un team facente capo all'ecosistema di Ethereum. Questo team include manager del progetto, sviluppatori, designer, marketing e comunicazioni, oltre a esperti settoriali. I contributi della community vengono utilizzati come base per ogni decisione: ti invitiamo quindi a porre domande tramite ticket, inviare PR o contattare il team:
 
 - [website@ethereum.org](mailto:website@ethereum.org)
-- [@ethdotorg](https://twitter.com/ethdotorg)
+- [@ethdotorg](https://x.com/ethdotorg)
 - [Server Discord](https://discord.gg/ethereum-org)
 
 ### Due parole sul plagio {#plagiarism}

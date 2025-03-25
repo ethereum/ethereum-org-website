@@ -71,7 +71,7 @@ Platform pendanaan barang publik asli Web3 seperti [Gitcoin](https://gitcoin.co)
 - [Laporan Gedung Putih tentang rantai blok bukti kerja](https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
 - [Emisi Ethereum: Perkiraan dari Bawah ke Atas](https://kylemcdonald.github.io/ethereum-emissions/) - _Kyle McDonald_
 - [Indeks Konsumsi Energi Ethereum](https://digiconomist.net/ethereum-energy-consumption/) - _Digiconomist_
-- [ETHMerge.com](https://ethmerge.com/) - _[@InsideTheSim](https://twitter.com/InsideTheSim)_
+- [ETHMerge.com](https://ethmerge.com/) - _[@InsideTheSim](https://x.com/InsideTheSim)_
 - [Penggabungan - Implikasi pada Konsumsi Listrik dan Jejak Karbon Jaringan Ethereum](https://carbon-ratings.com/eth-report-2022) - _CCRI_
 - [Konsumsi energi Ethereum](https://mirror.xyz/jmcook.eth/ODpCLtO4Kq7SCVFbU4He8o8kXs418ZZDTj0lpYlZkR8)
 

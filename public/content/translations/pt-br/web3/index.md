@@ -40,7 +40,7 @@ A premissa da 'Web 3.0' foi criada pelo cofundador do [Ethereum](/what-is-ethere
 
 ### O que é Web3? {#what-is-web3}
 
-A Web 3 tornou-se um termo abrangente para a visão de uma Internet nova e melhor. Na sua essência, a Web3 usa blockchains, criptomoedas e NFTs para devolver poder aos usuários sob a forma de propriedade. [Uma publicação de 2021 no Twitter](https://twitter.com/j1mmyeth/status/1459003044067258370) resumiu bem: Web1 foi somente leitura, Web2 é leitura/escrita, Web3 será leitura/escrita/própria.
+A Web 3 tornou-se um termo abrangente para a visão de uma Internet nova e melhor. Na sua essência, a Web3 usa blockchains, criptomoedas e NFTs para devolver poder aos usuários sob a forma de propriedade. [Uma publicação de 2021 no Twitter](https://x.com/j1mmyeth/status/1459003044067258370) resumiu bem: Web1 foi somente leitura, Web2 é leitura/escrita, Web3 será leitura/escrita/própria.
 
 #### Principais ideias da Web3 {#core-ideas}
 

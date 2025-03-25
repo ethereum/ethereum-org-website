@@ -92,7 +92,7 @@ Is gnách nach mbíonn tionchar ag uasghráduithe ar úsáideoirí deiridh ach a
 
 ## Cad mar gheall ar The Verge, The Splurge, srl? {#what-about-the-verge-splurge-etc}
 
-[ Mhol Vitalik Buterin fís don treochlár Ethereum](https://twitter.com/VitalikButerin/status/1741190491578810445) a eagraíodh i roinnt catagóirí a bhí nasctha ag a n-iarmhairtí ar ailtireacht Ethereum. Áiríodh leis:
+[ Mhol Vitalik Buterin fís don treochlár Ethereum](https://x.com/VitalikButerin/status/1741190491578810445) a eagraíodh i roinnt catagóirí a bhí nasctha ag a n-iarmhairtí ar ailtireacht Ethereum. Áiríodh leis:
 
 - **An Cumasc**: uasghráduithe a bhaineann leis an athrú ó [cruthúna oibre](/glossary/#pow) go [cruthúnas-gheallta](/glossary/#pos)
 - **An Borradh**: uasghráduithe a bhaineann le hinscálaitheacht trí [rolluithe](/glossary/#rollups) agus sciartha sonraí

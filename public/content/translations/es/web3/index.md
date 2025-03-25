@@ -40,7 +40,7 @@ La premisa de Web 3.0 fue acuñada por el cofundador de [Ethereum](/what-is-ethe
 
 ### ¿Qué es la Web3? {#what-is-web3}
 
-La Web3 se ha convertido en un término general para la visión de un Internet nuevo y mejor. En esencia, Web3 utiliza cadenas de bloques, criptomonedas y NFT para devolver el poder a los usuarios en forma de propiedad. [Una publicación de 2020 en Twitter](https://twitter.com/himgajria/status/1266415636789334016) captó mejor la esencia: Web 1.0 fue de solo lectura, Web 2.0 es de lectura-escritura, Web3 será de lectura-escritura-propiedad.
+La Web3 se ha convertido en un término general para la visión de un Internet nuevo y mejor. En esencia, Web3 utiliza cadenas de bloques, criptomonedas y NFT para devolver el poder a los usuarios en forma de propiedad. [Una publicación de 2020 en Twitter](https://x.com/himgajria/status/1266415636789334016) captó mejor la esencia: Web 1.0 fue de solo lectura, Web 2.0 es de lectura-escritura, Web3 será de lectura-escritura-propiedad.
 
 #### Ideas centrales de la Web3 {#core-ideas}
 

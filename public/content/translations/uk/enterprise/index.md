@@ -80,10 +80,10 @@ sidebarDepth: 1
 
 - [Alethio в Discord](https://discord.gg/d2t8NuU)
 - [Обмін ідеями в Infura](https://community.infura.io/)
-- [Kaleido в Twitter](https://twitter.com/Kaleido_io)
+- [Kaleido в Twitter](https://x.com/Kaleido_io)
 - [Hyperledger Rocketchat](https://chat.hyperledger.org/)
 - [Hyperledger Rocketchat (канал Besu)](https://chat.hyperledger.org/channel/besu)
 - [Hyperledger Rocketchat (канал Burrow)](https://chat.hyperledger.org/channel/burrow)
-- [PegaSys у Twitter](https://twitter.com/Kaleido_io)
+- [PegaSys у Twitter](https://x.com/Kaleido_io)
 - [Канал Quorum Slack](http://bit.ly/quorum-slack)
 - [Chainstack Gitter](https://gitter.im/chainstack/Lobby)

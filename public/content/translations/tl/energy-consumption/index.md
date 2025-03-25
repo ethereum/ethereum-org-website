@@ -71,7 +71,7 @@ Ang mga public goods funding platform na native sa Web3 tulad ng [Gitcoin](https
 - [Ulat mula sa White House tungkol sa mga blockchain na patunay ng gawain](https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
 - [Ethereum Emissions: A Bottom-up Estimate](https://kylemcdonald.github.io/ethereum-emissions/) - _Kyle McDonald_
 - [Ethereum Energy Consumption Index](https://digiconomist.net/ethereum-energy-consumption/) - _Digiconomist_
-- [ETHMerge.com](https://ethmerge.com/) - _[@InsideTheSim](https://twitter.com/InsideTheSim)_
+- [ETHMerge.com](https://ethmerge.com/) - _[@InsideTheSim](https://x.com/InsideTheSim)_
 - [The Merge - Mga Epekto sa Pagkonsumo ng Kuryente at Carbon Footprint ng Ethereum Network](https://carbon-ratings.com/eth-report-2022) - _CCRI_
 - [Ang kinokonsumong enerhiya ng Ethereum](https://mirror.xyz/jmcook.eth/ODpCLtO4Kq7SCVFbU4He8o8kXs418ZZDTj0lpYlZkR8)
 

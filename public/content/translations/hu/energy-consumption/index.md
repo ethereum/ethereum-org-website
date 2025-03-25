@@ -71,7 +71,7 @@ A web3 közjó-finanszírozási platformjai, mint a [Gitcoin](https://gitcoin.co
 - [Fehérházi jelentése a proof-of-work alapú blokkláncokról](https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
 - [Ethereum-kibocsátás: egy alulról építkező becslés](https://kylemcdonald.github.io/ethereum-emissions/) – _Kyle McDonald_
 - [Ethereum energiafelhasználási index](https://digiconomist.net/ethereum-energy-consumption/) – _Digiconomist_
-- [ETHMerge.com](https://ethmerge.com/) – _[@InsideTheSim](https://twitter.com/InsideTheSim)_
+- [ETHMerge.com](https://ethmerge.com/) – _[@InsideTheSim](https://x.com/InsideTheSim)_
 - [Az egyesítés (The Merge) – az Ethereum-hálózat áramfogyasztására és karbonlábnyomára gyakorolt hatása](https://carbon-ratings.com/eth-report-2022) – _CCRI_
 - [Az Ethereum energiafogyasztása](https://mirror.xyz/jmcook.eth/ODpCLtO4Kq7SCVFbU4He8o8kXs418ZZDTj0lpYlZkR8)
 

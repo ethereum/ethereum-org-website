@@ -1537,4 +1537,4 @@ const onUpdatePressed = async () => {
 
 これで、このチュートリアルのスキルを応用して独自のカスタムdappプロジェクトを構築するための準備が整いました。 何かご質問がございましたら、[Alchemy Discord](https://discord.gg/gWuC7zB)でいつでもお気軽にお問い合わせください。 🧙‍♂️
 
-このチュートリアルを通して体験したことやフィードバックがあれば、Twitter[@alchemyplatform](https://twitter.com/AlchemyPlatform)でタグ付けしてお知らせください。
+このチュートリアルを通して体験したことやフィードバックがあれば、Twitter[@alchemyplatform](https://x.com/AlchemyPlatform)でタグ付けしてお知らせください。

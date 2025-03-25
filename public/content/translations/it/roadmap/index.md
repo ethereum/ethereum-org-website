@@ -92,7 +92,7 @@ Gli aggiornamenti tendono a non influenzare gli utenti finali e forniscono migli
 
 ## Che cosa sono l'Orlo, lo Spreco, ecc.? {#what-about-the-verge-splurge-etc}
 
-[Vitalik Buterin ha proposto una visione per la tabella di marcia di Ethereum](https://twitter.com/VitalikButerin/status/1741190491578810445) organizzata in diverse categorie legate dai loro effetti sull'architettura di Ethereum. Tale visione comprendeva:
+[Vitalik Buterin ha proposto una visione per la tabella di marcia di Ethereum](https://x.com/VitalikButerin/status/1741190491578810445) organizzata in diverse categorie legate dai loro effetti sull'architettura di Ethereum. Tale visione comprendeva:
 
 - **La Fusione**: aggiornamenti relativi al passaggio dal [proof-of-work](/glossary/#pow) al [proof-of-stake](/glossary/#pos)
 - **L'Ondata**: aggiornamenti relativi alla scalabilità tramite [rollup](/glossary/#rollups) e frammentazione dei dati

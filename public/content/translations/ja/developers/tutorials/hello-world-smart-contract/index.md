@@ -362,4 +362,4 @@ Contract deployed to address: 0x6cd7d44516a20882cEa2DE9f205bF401c0d23570
 
 こちらのチュートリアルのパート1は以上となります。パート2では初期メッセージの更新による[スマートコントラクトとの実際のやり取り](https://docs.alchemyapi.io/alchemy/tutorials/hello-world-smart-contract#part-2-interact-with-your-smart-contract)を、パート3では[Etherscanへのスマートコントラクトの公開](https://docs.alchemyapi.io/alchemy/tutorials/hello-world-smart-contract#optional-part-3-publish-your-smart-contract-to-etherscan)を行い、やり取りする方法を学びます。
 
-**Alchemyの詳細については、 [ウェブサイト](https://alchemyapi.io/eth)をご覧ください。 アップデートを見逃したくない場合は、 [こちら](https://www.alchemyapi.io/newsletter)でニュースレターを購読してください。 [Twitter](https://twitter.com/alchemyplatform)もあわせてフォローし、[Discord](https://discord.com/invite/u72VCg3)**にもご参加ください。
+**Alchemyの詳細については、 [ウェブサイト](https://alchemyapi.io/eth)をご覧ください。 アップデートを見逃したくない場合は、 [こちら](https://www.alchemyapi.io/newsletter)でニュースレターを購読してください。 [Twitter](https://x.com/alchemyplatform)もあわせてフォローし、[Discord](https://discord.com/invite/u72VCg3)**にもご参加ください。

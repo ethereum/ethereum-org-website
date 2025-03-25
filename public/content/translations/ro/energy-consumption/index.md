@@ -38,7 +38,7 @@ Pe lângă consolidarea încrederii în mecanismul dovezii-mizei, Lanțul Beacon
 
 <p style={{ textAlign: "center" }}><small><i>O estimare a consumului de energie per tranzacție (tx) al dovezii-muncii (PoW) pe baza <a href="https://blog.ethereum.org/2021/05/18/country-power-no-more/" target="_blank" rel="noopener noreferrer">datelor din mai 2021</a>, la momentul redactării acestui articol, a sugerat o valoare de până la <a href="https://digiconomist.net/ethereum-energy-consumption" target="_blank" rel="noopener noreferrer">175,56 kWh</a></i></small></p>
 
-Să facem o comparație între aceste cifre și un serviciu precum Visa. 100.000 de tranzacții Visa consumă 149 kWh de energie<sup>[^2]</sup>. Să presupunem că fragmentarea a fost implementată, iar rata actuală de tranzacții pe Ethereum (15 tranzacții pe secundă) va crește de cel puțin 64x (numărul de fragmente), fără a lua în considerare optimizarea suplimentară datorată rollup-urilor. O estimare realistă pentru un Ethereum post-fuziune, fragmentat și cu rollup-uri, este de [25.000 - 100.000](https://twitter.com/VitalikButerin/status/1312905884549300224?s=20) de tranzacții pe secundă. Putem folosi aceste informații pentru a estima cheltuielile maxime și minime de energie pentru 100.000 de tranzacții.
+Să facem o comparație între aceste cifre și un serviciu precum Visa. 100.000 de tranzacții Visa consumă 149 kWh de energie<sup>[^2]</sup>. Să presupunem că fragmentarea a fost implementată, iar rata actuală de tranzacții pe Ethereum (15 tranzacții pe secundă) va crește de cel puțin 64x (numărul de fragmente), fără a lua în considerare optimizarea suplimentară datorată rollup-urilor. O estimare realistă pentru un Ethereum post-fuziune, fragmentat și cu rollup-uri, este de [25.000 - 100.000](https://x.com/VitalikButerin/status/1312905884549300224?s=20) de tranzacții pe secundă. Putem folosi aceste informații pentru a estima cheltuielile maxime și minime de energie pentru 100.000 de tranzacții.
 
 - 25.000 de tranzacții pe secundă.
 - `100.000 / 25.000 = 4` secunde pentru a procesa 100.000 de tranzacții.
@@ -70,7 +70,7 @@ _Totodată, trebuie să luăm în considerare că Ethereum nu se limitează la s
 - [Consum de energie cât o țară, niciodată](https://blog.ethereum.org/2021/05/18/country-power-no-more/) – _Cart Beekhuizen, 18 mai 2021_
 - [Emisiile Ethereum: O estimare de jos în sus](https://kylemcdonald.github.io/ethereum-emissions/) _ Kyle McDonald_
 - [Indicele consumului de energie al lui Ethereum](https://digiconomist.net/ethereum-energy-consumption/) – _Digiconomist_
-- [ETHMerge.com](https://ethmerge.com/) — *[@InsideTheSim](https://twitter.com/InsideTheSim)*
+- [ETHMerge.com](https://ethmerge.com/) — *[@InsideTheSim](https://x.com/InsideTheSim)*
 
 ## Subiecte corelate {#related-topics}
 

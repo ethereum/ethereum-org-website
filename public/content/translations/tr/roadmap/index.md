@@ -92,7 +92,7 @@ Yükseltmeler; Ethereum ile nasıl etkileşileceği konusunda daha iyi kullanıc
 
 ## Peki ya Verge, Splurge ve diğerleri? {#what-about-the-verge-splurge-etc}
 
-[Vitalik Buterin, Ethereum mimarisi üzerindeki etkilerine göre bağlantı verilen çeşitli kategorilere ayrılmış bir Ethereum yol haritası vizyonu önerdi](https://twitter.com/VitalikButerin/status/1741190491578810445). Şunları içeriyordu:
+[Vitalik Buterin, Ethereum mimarisi üzerindeki etkilerine göre bağlantı verilen çeşitli kategorilere ayrılmış bir Ethereum yol haritası vizyonu önerdi](https://x.com/VitalikButerin/status/1741190491578810445). Şunları içeriyordu:
 
 - **Birleşim**: [İş ispatı](/glossary/#pow)ndan [hisse ispatı](/glossary/#pos)na geçişle ilgili yükseltmeler
 - **Patlama**: [Toplamalar](/glossary/#rollups) ve veri parçalama yoluyla ölçeklenebilirlik ile ilgili yükseltmeler

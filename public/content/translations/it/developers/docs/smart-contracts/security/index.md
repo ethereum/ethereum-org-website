@@ -92,7 +92,7 @@ Commissionare il controllo di un contratto intelligente è un modo di condurre u
 
 Detto ciò, dovresti evitare di trattare i controlli come una bacchetta magica. I controlli del contratto intelligente non troveranno ogni bug e sono principalmente progettati per fornire un ulteriore ciclo di revisioni, che possono aiutare a rilevare i problemi non identificati dagli sviluppatori durante lo sviluppo e test iniziali. Inoltre, dovresti seguire le migliori pratiche per lavorare con i revisori, come documentare correttamente il codice e aggiungere commenti inline, per massimizzare i benefici del controllo di un contratto intelligente.
 
-- [Consigli e trucchi di controllo dei contratti intelligenti](https://twitter.com/tinchoabbate/status/1400170232904400897) - _@tinchoabbate_
+- [Consigli e trucchi di controllo dei contratti intelligenti](https://x.com/tinchoabbate/status/1400170232904400897) - _@tinchoabbate_
 - [Ottieni il massimo dal tuo controllo](https://inference.ag/blog/2023-08-14-tips/) - _Inference_
 
 #### Caccia ai bug {#bug-bounties}

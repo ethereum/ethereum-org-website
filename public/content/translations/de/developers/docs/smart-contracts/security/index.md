@@ -92,7 +92,7 @@ Die Beauftragung eines Smart Contract-Audits ist eine Möglichkeit zur Durchfüh
 
 Dennoch sollten Sie Audits nicht als Wunderwaffe betrachten. Smart Contract-Audits können nicht jeden Fehler aufspüren und sind hauptsächlich dazu gedacht, eine zusätzliche Runde von Überprüfungen durchzuführen, die dazu beitragen können, Probleme zu entdecken, die von den Entwicklern während der anfänglichen Entwicklung und Tests übersehen wurden. Sie sollten auch die Best Practices für die Zusammenarbeit mit Prüfern befolgen, z. B. den Code ordnungsgemäß dokumentieren und Inline-Kommentare hinzufügen, um den Nutzen eines Smart Contract-Audits zu maximieren.
 
-- [Tipps und Tricks zum Smart-Contract-Auditing](https://twitter.com/tinchoabbate/status/1400170232904400897) – _@tinchoabbate_
+- [Tipps und Tricks zum Smart-Contract-Auditing](https://x.com/tinchoabbate/status/1400170232904400897) – _@tinchoabbate_
 - [Holen Sie das Beste aus Ihrem Audit heraus](https://inference.ag/blog/2023-08-14-tips/) – _Inference_
 
 #### Aufdecken von Fehlern {#bug-bounties}

@@ -74,7 +74,7 @@ Before contributing, make sure you're familiar with:
 Decisions about individual PRs, design evolution and major upgrades are made by a team from across the Ethereum ecosystem. This team includes project managers, developers, designers, marketing and communications, and subject matter experts. Community input informs every decision: so please raise questions in issues, submit PRs, or contact the team:
 
 - [website@ethereum.org](mailto:website@ethereum.org)
-- [@ethdotorg](https://twitter.com/ethdotorg)
+- [@ethdotorg](https://x.com/ethdotorg)
 - [Discord server](https://discord.gg/ethereum-org)
 
 ### A note on plagiarism {#plagiarism}

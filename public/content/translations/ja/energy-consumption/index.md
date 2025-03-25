@@ -71,7 +71,7 @@ CCRIによる推定では、マージによってイーサリアムの年間電�
 - [プルーフオブワークのブロックチェーンに関するホワイトハウス報告書](https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
 - [イーサリアムの二酸化炭素排出量: ボトムアップ推定値](https://kylemcdonald.github.io/ethereum-emissions/) – _Kyle McDonald_
 - [イーサリアムエネルギー消費量インデックス](https://digiconomist.net/ethereum-energy-consumption/) - _Digiconomist_
-- [ETHMerge.com](https://ethmerge.com/) - _[@InsideTheSim](https://twitter.com/InsideTheSim)_
+- [ETHMerge.com](https://ethmerge.com/) - _[@InsideTheSim](https://x.com/InsideTheSim)_
 - [マージ - イーサリアムネットワークの電力消費量と二酸化炭素排出量への影響](https://carbon-ratings.com/eth-report-2022) - _CCRI_
 - [イーサリアムのエネルギー消費](https://mirror.xyz/jmcook.eth/ODpCLtO4Kq7SCVFbU4He8o8kXs418ZZDTj0lpYlZkR8)
 

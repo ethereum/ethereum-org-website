@@ -58,7 +58,7 @@ lang: ko
 - [이더리움 에너지 소비](https://mirror.xyz/jmcook.eth/ODpCLtO4Kq7SCVFbU4He8o8kXs418ZZDTj0lpYlZkR8)
 - [이더리움 배출량: 세부 추정치](https://kylemcdonald.github.io/ethereum-emissions/) – 카일 맥도널드
 - [이더리움 에너지 소비 인덱스](https://digiconomist.net/ethereum-energy-consumption/) – _디지코노미스트_
-- [ETHMerge.com](https://ethmerge.com/) — *[@InsideTheSim](https://twitter.com/InsideTheSim)*
+- [ETHMerge.com](https://ethmerge.com/) — *[@InsideTheSim](https://x.com/InsideTheSim)*
 
 ## 관련 주제 {#related-topics}
 

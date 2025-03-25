@@ -96,7 +96,7 @@ Para tornar nosso trabalho mais acessível e fomentar mais colaboração comunit
 
 **O que você acha disso?** Nós sempre agradecemos o feedback sobre nosso roadmap — se houver algo em que você acha que deveríamos melhorar, por favor nos avise! Agradecemos o envio de ideias e PRs (pull requests) de qualquer pessoa da comunidade.
 
-**Quer se envolver?** [Saiba mais sobre como contribuir](/contributing/), [visite-nos no Twitter](https://twitter.com/ethdotorg) ou junte-se às discussões da comunidade em [nosso servidor Discord](https://discord.gg/ethereum-org).
+**Quer se envolver?** [Saiba mais sobre como contribuir](/contributing/), [visite-nos no Twitter](https://x.com/ethdotorg) ou junte-se às discussões da comunidade em [nosso servidor Discord](https://discord.gg/ethereum-org).
 
 ## Princípios de design {#design-principles}
 

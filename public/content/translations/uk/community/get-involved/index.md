@@ -106,15 +106,15 @@ lang: uk
 
 DAO — це децентралізовані автономні організації. Ці групи використовують технології Ethereum для полегшення організації та співпраці. Наприклад, для керування складом учасників, голосуванням за пропозиції або керуванням об’єднаними активами. Хоча використання децентралізованих автономних організацій (DAO) усе ще є експериментальним, вони пропонують вам можливість знайти групи, з якими ви себе ототожнюєте, знайти співробітників і збільшити ваш вплив на спільноту Ethereum. [Докладніше про DAO](/dao/)
 
-- [DAOSquare](https://www.daosquare.io) [@DAOSquare](https://twitter.com/DAOSquare) — _просування концепції децентралізованої автономної організації (DAO) у нетехнологічних сферах і допомога в створенні вартості за допомогою DAO_
-- [Developer DAO](https://www.developerdao.com/) [@developer_dao](https://twitter.com/developer_dao) — _спільнота розробників, які вірять у колективне володіння Інтернетом_
-- [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) — _колектив розробників-фрилансерів Web3, які працюють як DAO_
-- [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) — _управління спільнотою DAOhaus_
-- [LexDAO](https://lexdao.org) [@lex_DAO](https://twitter.com/lex_DAO) — _розробки в галузі юридичних питань_
-- [Махі X](https://machix.com) [@MachiXОfficial](https://twitter.com/MachiXOfficial) — _спільнота митців_
-- [MetaCartel](https://metacartel.org) [@Meta_Cartel](https://twitter.com/Meta_Cartel) — _інкубатор DAO _
-- [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://twitter.com/VENTURE_DAO) — _венчурний капітал для попереднього етапу криптовалютних проєктів_
-- [MetaGame](https://metagame.wtf) [@MetaFam](https://twitter.com/MetaFam) — _механіка ігор MMORPG для реального життя_
-- [MetaFactory](https://metafactory.ai) [@TheMetaFactory](https://twitter.com/TheMetaFactory) — _бренди цифро-фізичних речей_
-- [MolochDAO](https://molochdao.com) [@MolochDAO](https://twitter.com/MolochDAO) — _спільнота, орієнтована на фінансування розробки Ethereum_
-- [Raid Guild](https://raidguild.org) [@RaidGuild](https://twitter.com/RaidGuild) — _колектив розробників Web3_
+- [DAOSquare](https://www.daosquare.io) [@DAOSquare](https://x.com/DAOSquare) — _просування концепції децентралізованої автономної організації (DAO) у нетехнологічних сферах і допомога в створенні вартості за допомогою DAO_
+- [Developer DAO](https://www.developerdao.com/) [@developer_dao](https://x.com/developer_dao) — _спільнота розробників, які вірять у колективне володіння Інтернетом_
+- [dOrg](https://dOrg.tech) [@dOrg_tech](https://x.com/dOrg_tech) — _колектив розробників-фрилансерів Web3, які працюють як DAO_
+- [HausDAO](https://daohaus.club) [@nowdaoit](https://x.com/nowdaoit) — _управління спільнотою DAOhaus_
+- [LexDAO](https://lexdao.org) [@lex_DAO](https://x.com/lex_DAO) — _розробки в галузі юридичних питань_
+- [Махі X](https://machix.com) [@MachiXОfficial](https://x.com/MachiXOfficial) — _спільнота митців_
+- [MetaCartel](https://metacartel.org) [@Meta_Cartel](https://x.com/Meta_Cartel) — _інкубатор DAO _
+- [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://x.com/VENTURE_DAO) — _венчурний капітал для попереднього етапу криптовалютних проєктів_
+- [MetaGame](https://metagame.wtf) [@MetaFam](https://x.com/MetaFam) — _механіка ігор MMORPG для реального життя_
+- [MetaFactory](https://metafactory.ai) [@TheMetaFactory](https://x.com/TheMetaFactory) — _бренди цифро-фізичних речей_
+- [MolochDAO](https://molochdao.com) [@MolochDAO](https://x.com/MolochDAO) — _спільнота, орієнтована на фінансування розробки Ethereum_
+- [Raid Guild](https://raidguild.org) [@RaidGuild](https://x.com/RaidGuild) — _колектив розробників Web3_

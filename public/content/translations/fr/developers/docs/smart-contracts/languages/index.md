@@ -40,7 +40,7 @@ La connaissance de langages de programmation comme JavaScript ou Python peut vou
 - [Salle de chat Gitter Solidity](https://gitter.im/ethereum/solidity) reliée à [Salle de chat Matrix Solidity](https://matrix.to/#/#ethereum_solidity:gitter.im)
 - [Cheat Sheet](https://reference.auditless.com/cheatsheet)
 - [Blog Solidity](https://blog.soliditylang.org/)
-- [Twitter Solidity](https://twitter.com/solidity_lang)
+- [Twitter Solidity](https://x.com/solidity_lang)
 
 ### Exemple de contrat {#example-contract}
 
@@ -268,7 +268,7 @@ Si vous avez déjà une bonne expérience en développement de contrats intellig
 - [Annonce de Fe](https://snakecharmers.ethereum.org/fe-a-new-language-for-the-ethereum-ecosystem/)
 - [Feuille de route 2021 pour Fe](https://notes.ethereum.org/LVhaTF30SJOpkbG1iVw1jg)
 - [Chat de discussion Fe](https://discord.com/invite/ywpkAXFjZH)
-- [Twitter Fe](https://twitter.com/official_fe)
+- [Twitter Fe](https://x.com/official_fe)
 
 ### Exemple de contrat {#example-contract-3}
 

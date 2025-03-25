@@ -290,6 +290,6 @@ _注意：有些衍生的代幣/行情指示器可能代表被質押的以太幣
 - [指南：如何識別詐騙性代幣](/guides/how-to-id-scam-tokens/)
 - [保障安全：常見騙局](https://support.mycrypto.com/staying-safe/common-scams) - _MyCrypto_
 - [防範詐騙](https://bitcoin.org/en/scams) - _Bitcoin.org_
-- [從 Twitter 對話一探常見的加密貨幣網路釣魚電郵與訊息](https://twitter.com/tayvano_/status/1516225457640787969) - _Taylor Monahan_
+- [從 Twitter 對話一探常見的加密貨幣網路釣魚電郵與訊息](https://x.com/tayvano_/status/1516225457640787969) - _Taylor Monahan_
 
 <QuizWidget quizKey="security" />

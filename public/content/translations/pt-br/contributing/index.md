@@ -75,7 +75,7 @@ Antes de contribuir, certifique-se de está familiarizado com:
 As decisões sobre PRs individuais, desenvolvimento do design e melhorias importantes são feitas por uma equipe formada no ecossistema Ethereum. Esta equipe inclui gerentes de projeto, desenvolvedores, designers, gerentes de marketing e comunicação, e especialistas no assunto. Cada decisão considera as contribuições da comunidadem. Portanto, não duvide em fazer perguntas via tíquetes, enviar PRs ou entrar em contato com a equipe:
 
 - [website@ethereum.org](mailto:website@ethereum.org)
-- [@ethdotorg](https://twitter.com/ethdotorg)
+- [@ethdotorg](https://x.com/ethdotorg)
 - [Servidor do Discord](https://discord.gg/ethereum-org)
 
 ### Observação sobre plágio {#plagiarism}

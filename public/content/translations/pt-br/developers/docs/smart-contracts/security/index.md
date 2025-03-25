@@ -92,7 +92,7 @@ A comissão de uma auditoria de contrato inteligente é uma forma de realizar um
 
 Com isto em mente, há que evitar tratar as auditorias como uma bala de prata. Auditorias de contratos inteligentes não irão detectar todos os bugs e são concebidas principalmente para fornecer uma rodada adicional de revisões, o qual pode ajudar a detectar problemas perdidos pelos desenvolvedores durante o desenvolvimento e testes iniciais. Você também deve seguir as práticas recomendadas para trabalhar com auditores, como documentar o código apropriadamente e adicionar comentários em linha, para maximizar o benefício de uma auditoria de contrato inteligente.
 
-- [Dicas e sugestões para a auditoria de contratos inteligentes](https://twitter.com/tinchoabbate/status/1400170232904400897) - _@tinchoabbate_
+- [Dicas e sugestões para a auditoria de contratos inteligentes](https://x.com/tinchoabbate/status/1400170232904400897) - _@tinchoabbate_
 - [Aproveite ao máximo sua auditoria](https://inference.ag/blog/2023-08-14-tips/) - _Inferência_
 
 #### Recompensa por bugs {#bug-bounties}

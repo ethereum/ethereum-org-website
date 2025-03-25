@@ -1841,4 +1841,4 @@ Wooooo, vous êtes arrivé à la fin du tutoriel ! Pour récapituler, vous avez 
 
 Maintenant, vous êtes pleinement équipé pour appliquer les compétences de ce tutoriel à la construction de votre propre projet de DApp personnalisé ! Comme toujours, si vous avez des questions, n'hésitez pas à nous demander de l'aide dans le [Discord d'Alchemy](https://discord.gg/gWuC7zB). 🧙‍♂️
 
-Une fois ce tutoriel terminé, faites-nous savoir comment s'est passée votre expérience ou si vous avez des commentaires en nous identifiant sur Twitter [@alchemyplatform](https://twitter.com/AlchemyPlatform) !
+Une fois ce tutoriel terminé, faites-nous savoir comment s'est passée votre expérience ou si vous avez des commentaires en nous identifiant sur Twitter [@alchemyplatform](https://x.com/AlchemyPlatform) !

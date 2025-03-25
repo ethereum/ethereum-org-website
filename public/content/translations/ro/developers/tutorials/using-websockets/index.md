@@ -250,4 +250,4 @@ curl https://eth-mainnet.alchemyapi.io/v2/your-api-key
 
 ---
 
-[nregistrează-te la Alchemy](https://auth.alchemyapi.io/signup) gratis, consultă [documentația noastră](https://docs.alchemyapi.io/) și pentru cele mai recente știri, urmărește-ne pe [Twitter](https://twitter.com/AlchemyPlatform).
+[nregistrează-te la Alchemy](https://auth.alchemyapi.io/signup) gratis, consultă [documentația noastră](https://docs.alchemyapi.io/) și pentru cele mai recente știri, urmărește-ne pe [Twitter](https://x.com/AlchemyPlatform).

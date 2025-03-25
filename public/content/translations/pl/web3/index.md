@@ -40,7 +40,7 @@ Założenie „Web 3.0” zostało wymyślone przez współzałożyciela [Ethere
 
 ### Co to jest Web3? {#what-is-web3}
 
-Web3 stał się terminem określającym wizję nowego, lepszego Internetu. U podstaw, Web3 wykorzystuje blockchainy, kryptowaluty i NFT, aby oddać władzę użytkownikom w formie własności. [Post z 2020 roku na Twitterze](https://twitter.com/himgajria/status/1266415636789334016) ujął to najlepiej: Web1 był tylko do odczytu, Web2 jest do odczytu i zapisu, Web3 będzie do odczytu, zapisu i posiadania.
+Web3 stał się terminem określającym wizję nowego, lepszego Internetu. U podstaw, Web3 wykorzystuje blockchainy, kryptowaluty i NFT, aby oddać władzę użytkownikom w formie własności. [Post z 2020 roku na Twitterze](https://x.com/himgajria/status/1266415636789334016) ujął to najlepiej: Web1 był tylko do odczytu, Web2 jest do odczytu i zapisu, Web3 będzie do odczytu, zapisu i posiadania.
 
 #### Główne założenia Web3 {#core-ideas}
 

@@ -40,7 +40,7 @@ Agbekalẹ ọ̀rọ̀ "Wẹ́ẹ̀bù kẹta" jẹ yọ lati ọdọ oludasil�
 
 ### Kí ni Web3? {#what-is-web3}
 
-Wẹẹbu kẹta tí dí ọ̀rọ̀ amuyẹ fún ifojusún fún intanẹẹti titún, ti yoo dara julọ. Ní àárín gbùngbùn rẹ, Wẹ́ẹ̀bù kẹta ń lo àwọn blockchain, owó crypto ati NFTs lati fún àwọn oluṣamulo ní agbara pada nipasẹ níní akoso. [Atẹjade 2020 kan ni oju opo ayelujara Twitter](https://twitter.com/himgajria/status/1266415636789334016) ṣọọ́ ni ọna to dara ju: Wẹẹbu kíní jẹ kìkà-nikan, Wẹ́ẹ̀bù keji jẹ kíkà-kikọ, Wẹẹbù kẹta yóò jẹ kíkà-kikọ-Níní.
+Wẹẹbu kẹta tí dí ọ̀rọ̀ amuyẹ fún ifojusún fún intanẹẹti titún, ti yoo dara julọ. Ní àárín gbùngbùn rẹ, Wẹ́ẹ̀bù kẹta ń lo àwọn blockchain, owó crypto ati NFTs lati fún àwọn oluṣamulo ní agbara pada nipasẹ níní akoso. [Atẹjade 2020 kan ni oju opo ayelujara Twitter](https://x.com/himgajria/status/1266415636789334016) ṣọọ́ ni ọna to dara ju: Wẹẹbu kíní jẹ kìkà-nikan, Wẹ́ẹ̀bù keji jẹ kíkà-kikọ, Wẹẹbù kẹta yóò jẹ kíkà-kikọ-Níní.
 
 #### Àwọn koko ẹ̀ro Wẹẹbù kẹta {#core-ideas}
 

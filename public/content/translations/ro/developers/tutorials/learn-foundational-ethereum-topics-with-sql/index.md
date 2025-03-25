@@ -273,4 +273,4 @@ Acest tutorial ne ajută să înțelegem conceptele fundamentale ale lui Ethereu
 
 Puteți vedea tabloul de bord care conține tot codul utilizat în acest tutorial [aici](https://duneanalytics.com/paulapivat/Learn-Ethereum).
 
-Ca să aflați și alte moduri de utilizare a datelor pentru a explora web3, [mă găsiți pe Twitter](https://twitter.com/paulapivat).
+Ca să aflați și alte moduri de utilizare a datelor pentru a explora web3, [mă găsiți pe Twitter](https://x.com/paulapivat).

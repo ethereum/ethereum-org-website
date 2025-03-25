@@ -92,7 +92,7 @@ buttons:
 
 ## Verge、Splurge 等升级是什么？ {#what-about-the-verge-splurge-etc}
 
-[Vitalik Buterin 提出了以太坊线路图](https://twitter.com/VitalikButerin/status/1741190491578810445)的愿景，根据对以太坊架构的影响，该路线图分为几个类别。 其中包括：
+[Vitalik Buterin 提出了以太坊线路图](https://x.com/VitalikButerin/status/1741190491578810445)的愿景，根据对以太坊架构的影响，该路线图分为几个类别。 其中包括：
 
 - **Merge**：涉及从[工作量证明](/glossary/#pow)过渡到[权益证明](/glossary/#pos)的升级
 - **Surge**：涉及通过[卷叠](/glossary/#rollups)和数据分片进行扩展的升级
