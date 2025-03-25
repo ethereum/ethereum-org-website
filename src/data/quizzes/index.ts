@@ -100,7 +100,13 @@ const quizzes = {
   },
   "smart-contracts": {
     title: "smart-contracts",
-    questions: ["n001", "n002", "n003", "n004", "n005"],
+    questions: [
+      "smart-contracts-1",
+      "smart-contracts-2",
+      "smart-contracts-3",
+      "smart-contracts-4",
+      "smart-contracts-5",
+    ],
   },
 } satisfies RawQuizzes
 
