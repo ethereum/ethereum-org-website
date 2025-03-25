@@ -120,6 +120,9 @@ const ListenToPlayer = ({ slug }: { slug: string }) => {
     }
   }, [playbackSpeed, sound])
 
+  // Only show the player if the locale is English and there is a playlist, renders null early
+  if (!playlist.length || index === -1 || locale !== "en") return null
+
   const handlePlayPause = () => {
     if (!sound) return
 
@@ -208,10 +211,6 @@ const ListenToPlayer = ({ slug }: { slug: string }) => {
       eventName: `speed (${speed})`,
     })
   }
-
-  if (!playlist.length || index === -1) return null
-
-  if (locale !== "en") return null
 
   return (
     <>
