@@ -28,8 +28,6 @@
   "page-local-environment-setup-subtitle": "如果你准备好开始建造，就选择你的堆栈。",
   "page-local-environment-setup-subtitle-2": "这里是你可以用来帮助你构建你的以太坊应用的工具和框架。",
   "page-local-environment-setup-title": "设置你的本地开发环境",
-  "page-local-environment-solidity-template-desc": "一个GitHub模板，用于为Solidity智能合约预构建设置。包括一个安全帽本地网络，用于测试的华夫饼，用于钱包实现的以太等等。",
-  "page-local-environment-solidity-template-logo-alt": "Solidity template徽标",
-  "page-local-environment-waffle-desc": "智能合约最先进的测试版块。单独使用或使用Scaffold-eth或安全帽。",
-  "page-local-environment-waffle-logo-alt": "Waffle徽标"
+  "page-local-environment-solidity-template-desc": "GitHub模板，用于为您的Solidity智能合约预先构建设置。包括Hardhat本地网络、Ethers钱包实现等。",
+  "page-local-environment-solidity-template-logo-alt": "Solidity template徽标"
 }
