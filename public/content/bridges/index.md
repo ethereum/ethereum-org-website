@@ -24,7 +24,7 @@ But, what do you do if you want to make a similar exchange to use a different [b
 
 All blockchains have their limitations. For Ethereum to scale and keep up with demand, it has required [rollups](/glossary/#rollups). Alternatively, L1s like Solana and Avalanche are designed differently to enable higher throughput but at the cost of decentralization.
 
-However, all blockchains develop in isolated environments and have different rules and [consensus](/glossary/#consensus) mechanisms. This means they cannot natively communicate, and tokens cannot move freely between blockchains.
+However, all blockchains are developed in isolated environments and have different rules and [consensus](/glossary/#consensus) mechanisms. This means they cannot natively communicate, and tokens cannot move freely between blockchains.
 
 Bridges exist to connect blockchains, allowing the transfer of information and tokens between them.
 
