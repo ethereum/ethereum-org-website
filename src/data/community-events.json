@@ -718,5 +718,14 @@
     "location": "Nairobi, KEN",
     "description": "",
     "imageUrl": ""
+  },
+  {
+    "title": "EthAsia",
+    "startDate": "2025-04-09",
+    "endDate": "2025-04-09",
+    "href": "https://www.ethasia.org/",
+    "location": "Hong Kong, HKG",
+    "description": "A commmunity gathering festival: Make ETHEREUM Asia Great Again",
+    "imageUrl": "https://www.ethasia.org/_next/image?url=%2FBG.png&w=3840&q=75"
   }
 ]
