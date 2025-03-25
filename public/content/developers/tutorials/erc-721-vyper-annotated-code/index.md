@@ -689,7 +689,7 @@ Anybody who is allowed to transfer a token is allowed to burn it. While a burn a
 transfer to the zero address, the zero address does not actually receives the token. This allows us to
 free up all the storage that was used for the token, which can reduce the gas cost of the transaction.
 
-# Using this Contract {#using-contract}
+## Using this Contract {#using-contract}
 
 In contrast to Solidity, Vyper does not have inheritance. This is a deliberate design choice to make the
 code clearer and therefore easier to secure. So to create your own Vyper ERC-721 contract you take [this
