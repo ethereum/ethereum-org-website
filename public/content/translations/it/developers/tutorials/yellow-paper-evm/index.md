@@ -169,7 +169,7 @@ Abbiamo un arresto eccezionale se una di queste condizioni è True:
 
   La funzione _W(w,μ)_ è definita successivamente nell'equazione 150. _W(w,μ)_ è True se una di queste condizioni è True:
 
-  - **_w ∈ {CREATE, CREATE2, SSTORE, SELFDESTRUCT}_** Questi opcode modificano lo stato, creando un nuovo contratto, memorizzando un valore o distruggendo il contratto attuale.
+  - **_w ∈ \{CREATE, CREATE2, SSTORE, SELFDESTRUCT}_** Questi opcode modificano lo stato, creando un nuovo contratto, memorizzando un valore o distruggendo il contratto attuale.
 
   - **_LOG0≤w ∧ w≤LOG4_** Se siamo chiamati staticamente, non possiamo emettere voci di registro. Gli opcode del registro sono tutti compresi nell'intervallo tra [`LOG0` (A0)](https://www.evm.codes/#a0) e [`LOG4` (A4)](https://www.evm.codes/#a4). Il numero dopo l'opcode del registro specifica quanti argomenti contiene la voce del registro.
 
@@ -231,7 +231,7 @@ L'indirizzo di cui dobbiamo trovare il saldo è _μ<sub>s</sub>[0] mod 2<sup>160
 
 Se _σ[μ<sub>s</sub>[0] mod 2<sup>160</sup>] ≠ ∅_, significa che esistono informazioni su questo indirizzo. In questo caso, _σ[μ<sub>s</sub>[0] mod 2<sup>160</sup>]<sub>b</sub>_ è il saldo per quell'indirizzo. Se _σ[μ<sub>s</sub>[0] mod 2<sup>160</sup>] = ∅_, significa che questo indirizzo non è inizializzato e il saldo è zero. L'elenco dei campi informativi del conto è riportato nella sezione 4.1 a pag. 4.
 
-La seconda equazione, _A'<sub>a</sub> ≡ A<sub>a</sub> ∪ {μ<sub>s</sub>[0] mod 2<sup>160</sup>}_, è relativa alla differenza di costo tra l'accesso all'archiviazione calda (archiviazione a cui si è acceduto di recente e che probabilmente è memorizzata nella cache) e all'archiviazione fredda (archiviazione a cui non si è acceduto e che probabilmente si trova in un'archiviazione più lenta e più costosa da recuperare). _A<sub>a</sub>_ è l'elenco degli indirizzi precedentemente consultati dalla transazione, che quindi dovrebbero essere meno costosi da raggiungere, come definito nella sezione 6.1 a pag. 8. Per ulteriori informazioni su questo argomento, puoi consultare [EIP-2929](https://eips.ethereum.org/EIPS/eip-2929).
+La seconda equazione, _A'<sub>a</sub> ≡ A<sub>a</sub> ∪ \{μ<sub>s</sub>[0] mod 2<sup>160</sup>}_, è relativa alla differenza di costo tra l'accesso all'archiviazione calda (archiviazione a cui si è acceduto di recente e che probabilmente è memorizzata nella cache) e all'archiviazione fredda (archiviazione a cui non si è acceduto e che probabilmente si trova in un'archiviazione più lenta e più costosa da recuperare). _A<sub>a</sub>_ è l'elenco degli indirizzi precedentemente consultati dalla transazione, che quindi dovrebbero essere meno costosi da raggiungere, come definito nella sezione 6.1 a pag. 8. Per ulteriori informazioni su questo argomento, puoi consultare [EIP-2929](https://eips.ethereum.org/EIPS/eip-2929).
 
 | Valore | Mnemonica | δ   | α   | Descrizione                             |
 | -----: | --------- | --- | --- | --------------------------------------- |

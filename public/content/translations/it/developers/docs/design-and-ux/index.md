@@ -23,20 +23,22 @@ Questo è un elenco curato di ricerche utente fatte nel web3 che potrebbero esse
 
 | Area di interesse                                                     | Nome                                                                                                                                                                                      |
 |:--------------------------------------------------------------------- |:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <Badge colorScheme="green">Integrazione delle criptovalute</Badge>    | [CRADL: la UX nelle criptovalute](https://docs.google.com/presentation/d/1s2OPSH5sMJzxRYaJSSRTe8W2iIoZx0PseIV-WeZWD1s/edit?usp=sharing)                                                   |
-| <Badge colorScheme="green">Integrazione delle criptovalute</Badge>    | [CRADL: ingresso nelle criptovalute](https://docs.google.com/presentation/d/1R9nFuzA-R6SxaGCKhoMbE4Vxe0JxQSTiHXind3LVq_w/edit?usp=sharing)                                                |
-| <Badge colorScheme="green">Integrazione delle criptovalute</Badge>    | [Report sulla UX Bitcoin](https://github.com/patestevao/BitcoinUX-report/blob/master/report.md)                                                                                           |
-| <Badge colorScheme="green">Integrazione delle criptovalute</Badge>    | [ConSensys: lo stato della percezione del Web3 nel mondo nel 2023](https://consensys.io/insight-report/web3-and-crypto-global-survey-2023)                                                |
-| <Badge colorScheme="green">Integrazione delle criptovalute</Badge>    | [NEAR: accelerare il percorso di adozione](https://drive.google.com/file/d/1VuaQP4QSaQxR5ddQKTMGI0b0rWdP7uGn/view)                                                                        |
-| <Badge colorScheme="purple">Staking</Badge>                           | [Staking: Tendenze fondamentali, risultati e previsioni - Eth Staker](https://lookerstudio.google.com/u/0/reporting/cafcee00-e1af-4148-bae8-442a88ac75fa/page/p_ja2srdhh2c?s=hmbTWDh9hJo) |
-| <Badge colorScheme="purple">Staking</Badge>                           | [Staking a Più App](https://github.com/threshold-network/UX-User-Research/blob/main/Multi-App%20Staking%20(MAS)/iterative-user-study/MAS%20Iterative%20User%20Study.pdf)                  |
-| <Badge colorScheme="red">OAD</Badge>                                  | [Aggiornamento 2022 sulla ricerca delle DAO: di cosa hanno bisogno i costruttori di DAO?](https://blog.aragon.org/2022-dao-research-update/)                                              |
-| <Badge colorScheme="pink">DeFi</Badge>                                | [Lo stato della Defi 2024](https://stateofdefi.org/) (sondaggio in corso)                                                                                                                 |
-| <Badge colorScheme="pink">DeFi</Badge>                                | [Gruppi di copertura](https://github.com/threshold-network/UX-User-Research/tree/main/Keep%20Coverage%20Pool)                                                                             |
-| <Badge colorScheme="pink">DeFi</Badge>                                | [ConSensys: rapporto di ricerca sugli utenti DeFI 2022](https://cdn2.hubspot.net/hubfs/4795067/ConsenSys%20Codefi-Defi%20User%20ResearchReport.pdf)                                       |
-| <Badge colorScheme="gray">Metaverso</Badge>                           | [Metaverso: report di ricerca sugli utenti](https://www.politico.com/f/?id=00000187-7685-d820-a7e7-7e85d1420000)                                                                          |
-| <Badge colorScheme="gray">Metaverso</Badge>                           | [Andare ad un Safari: ricerca sugli utenti nel Metaverso](https://archive.devcon.org/archive/watch/6/going-on-safari-researching-users-in-the-metaverse/?tab=YouTube) (video, 27 minuti)  |
-| <Badge colorScheme="blue">Statistiche dell'UX di Ethereum.org</Badge> | [Pannello di controllo del sondaggio sull'utilizzabilità e soddisfazione degli utenti - Ethereum.org](https://lookerstudio.google.com/reporting/0a189a7c-a890-40db-a5c6-009db52c81c9)     |
+| <Tag variant="solid" status="success">Integrazione delle criptovalute</Tag>    | [WalletConnect Pulse 2024: Opinione e utilizzo del cripto-consumatore](https://walletconnect.com/pulse-2024-crypto-consumer-report)                                                       |
+| <Tag variant="solid" status="success">Integrazione delle criptovalute</Tag>    | [CRADL: la UX nelle criptovalute](https://docs.google.com/presentation/d/1s2OPSH5sMJzxRYaJSSRTe8W2iIoZx0PseIV-WeZWD1s/edit?usp=sharing)                                                   |
+| <Tag variant="solid" status="success">Integrazione delle criptovalute</Tag>    | [CRADL: ingresso nelle criptovalute](https://docs.google.com/presentation/d/1R9nFuzA-R6SxaGCKhoMbE4Vxe0JxQSTiHXind3LVq_w/edit?usp=sharing)                                                |
+| <Tag variant="solid" status="success">Integrazione delle criptovalute</Tag>    | [Report sulla UX Bitcoin](https://github.com/patestevao/BitcoinUX-report/blob/master/report.md)                                                                                           |
+| <Tag variant="solid" status="success">Integrazione delle criptovalute</Tag>    | [ConSensys: lo stato della percezione del Web3 nel mondo nel 2023](https://consensys.io/insight-report/web3-and-crypto-global-survey-2023)                                                |
+| <Tag variant="solid" status="success">Integrazione delle criptovalute</Tag>    | [NEAR: accelerare il percorso di adozione](https://drive.google.com/file/d/1VuaQP4QSaQxR5ddQKTMGI0b0rWdP7uGn/view)                                                                        |
+| <Tag status="tag">Staking</Tag>                           | [OpenUX: UX dell'operatore del nodo in pool di Rocket](https://storage.googleapis.com/rocketpool/RocketPool-NodeOperator-UX-Report-Jan-2024.pdf)                                          |
+| <Tag status="tag">Staking</Tag>                           | [Staking: Tendenze fondamentali, risultati e previsioni - Eth Staker](https://lookerstudio.google.com/u/0/reporting/cafcee00-e1af-4148-bae8-442a88ac75fa/page/p_ja2srdhh2c?s=hmbTWDh9hJo) |
+| <Tag status="tag">Staking</Tag>                           | [Staking a Più App](https://github.com/threshold-network/UX-User-Research/blob/main/Multi-App%20Staking%20(MAS)/iterative-user-study/MAS%20Iterative%20User%20Study.pdf)                  |
+| <Tag status="error">OAD</Tag>                                  | [Aggiornamento 2022 sulla ricerca delle DAO: di cosa hanno bisogno i costruttori di DAO?](https://blog.aragon.org/2022-dao-research-update/)                                              |
+| <Tag status="error">DeFi</Tag>                                | [Lo stato della Defi 2024](https://stateofdefi.org/) (sondaggio in corso)                                                                                                                 |
+| <Tag status="error">DeFi</Tag>                                | [Gruppi di copertura](https://github.com/threshold-network/UX-User-Research/tree/main/Keep%20Coverage%20Pool)                                                                             |
+| <Tag status="error">DeFi</Tag>                                | [ConSensys: rapporto di ricerca sugli utenti DeFI 2022](https://cdn2.hubspot.net/hubfs/4795067/ConsenSys%20Codefi-Defi%20User%20ResearchReport.pdf)                                       |
+| <Tag variant="solid">Metaverso</Tag>                           | [Metaverso: report di ricerca sugli utenti](https://www.politico.com/f/?id=00000187-7685-d820-a7e7-7e85d1420000)                                                                          |
+| <Tag variant="solid">Metaverso</Tag>                           | [Andare ad un Safari: ricerca sugli utenti nel Metaverso](https://archive.devcon.org/archive/watch/6/going-on-safari-researching-users-in-the-metaverse/?tab=YouTube) (video, 27 minuti)  |
+| <Tag variant="solid" status="tag">Statistiche dell'UX di Ethereum.org</Tag> | [Pannello di controllo del sondaggio sull'utilizzabilità e soddisfazione degli utenti - Ethereum.org](https://lookerstudio.google.com/reporting/0a189a7c-a890-40db-a5c6-009db52c81c9)     |
 
 ## Progettazione per il web3 {#design-for-web3}
 
@@ -47,6 +49,11 @@ Questo è un elenco curato di ricerche utente fatte nel web3 che potrebbero esse
 - [W3design.io](https://w3design.io/) - Una libreria curata di flussi di UI di vari progetti nell'ecosistema
 - [Neueux.com](https://neueux.com/apps) - Una libreria UI di flussi di utenti con diversi opzioni di filtro
 - [Web3's Usability Crisis: What You NEED to Know!](https://www.youtube.com/watch?v=oBSXT_6YDzg) - Una tavola rotonda sulle insidie della creazione di progetti incentrati sugli sviluppatori (video, 34 minuti)
+
+## Primi passi {#getting-started}
+
+- [Euristiche per il Web3](/developers/docs/design-and-ux/heuristics-for-web3/): 7 euristiche per la progettazione dell'interfaccia di Web3
+- [Migliori pratiche di progettazione delle DEX](/developers/docs/design-and-ux/dex-design-best-practice/): Una guida alla progettazione di borse decentralizzate
 
 ## Casi di studio di progettazione Web3 {#design-case-studies}
 

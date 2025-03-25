@@ -100,7 +100,7 @@ _Upozornění: Ve videu je pojem „Vrstva 2“ používán k označení všech 
 
 ## Další informace {#further-reading}
 
-- [A rollup-centric Ethereum roadmap](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698)– _Vitalik Buterin_
+- [A rollup-centric Ethereum roadmap](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698) – _Vitalik Buterin_
 - [Aktuální analytika škálovacích řešení vrstvy 2 pro Ethereum](https://www.l2beat.com/)
 - [Hodnocení škálovacích řešení vrstvy 2 pro Ethereum: Porovnávací rámec](https://medium.com/matter-labs/evaluating-ethereum-l2-scaling-solutions-a-comparison-framework-b6b2f410f955)
 - [Neúplný průvodce rollupy](https://vitalik.eth.limo/general/2021/01/05/rollup.html)

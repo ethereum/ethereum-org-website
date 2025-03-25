@@ -140,6 +140,10 @@
     "path": "/developers/docs/programming-languages/ruby/index.md"
   },
   {
+    "id": 12422,
+    "path": "/developers/docs/programming-languages/elixir/index.md"
+  },
+  {
     "id": 2958,
     "path": "/whitepaper/index.md"
   },
@@ -162,10 +166,6 @@
   {
     "id": 2876,
     "path": "/developers/docs/oracles/index.md"
-  },
-  {
-    "id": 5521,
-    "path": "/developers/docs/standards/tokens/erc-777/index.md"
   },
   {
     "id": 5525,
@@ -206,6 +206,10 @@
   {
     "id": 12058,
     "path": "/developers/docs/standards/tokens/erc-223/index.md"
+  },
+  {
+    "id": 12540,
+    "path": "/developers/docs/standards/tokens/erc-777/index.md"
   },
   {
     "id": 2672,
@@ -488,10 +492,6 @@
     "path": "/developers/docs/consensus-mechanisms/pos/rewards-and-penalties/index.md"
   },
   {
-    "id": 7503,
-    "path": "/developers/docs/consensus-mechanisms/pos/attack-and-defense/index.md"
-  },
-  {
     "id": 7507,
     "path": "/developers/docs/consensus-mechanisms/pos/keys/index.md"
   },
@@ -506,6 +506,10 @@
   {
     "id": 7927,
     "path": "/developers/docs/consensus-mechanisms/pos/pos-vs-pow/index.md"
+  },
+  {
+    "id": 12536,
+    "path": "/developers/docs/consensus-mechanisms/pos/attack-and-defense/index.md"
   },
   {
     "id": 2710,
@@ -588,10 +592,6 @@
     "path": "/developers/docs/scaling/validium/index.md"
   },
   {
-    "id": 5485,
-    "path": "/developers/docs/scaling/state-channels/index.md"
-  },
-  {
     "id": 5487,
     "path": "/developers/docs/scaling/sidechains/index.md"
   },
@@ -608,12 +608,12 @@
     "path": "/developers/docs/scaling/optimistic-rollups/index.md"
   },
   {
-    "id": 2680,
-    "path": "/enterprise/index.md"
+    "id": 12538,
+    "path": "/developers/docs/scaling/state-channels/index.md"
   },
   {
-    "id": 2684,
-    "path": "/enterprise/private-ethereum/index.md"
+    "id": 2680,
+    "path": "/enterprise/index.md"
   },
   {
     "id": 2962,

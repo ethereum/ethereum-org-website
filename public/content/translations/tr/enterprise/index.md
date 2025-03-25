@@ -63,7 +63,6 @@ Ethereum'u işletme dostu hâle getirmek için farklı kuruluşlar tarafından b
 - [Baseline Project](https://www.baseline-protocol.org/) - _Baseline Protokolü, işletmelerin karmaşık, çok taraflı iş süreçlerini ve iş akışlarını gizlilik içinde koordine etmesine ve verileri ilgili kayıt sistemlerinde tutmasına yardımcı olan bir dizi araç ve kütüphaneler bütünüdür. Standart, iki veya daha fazla durum makinesinin, bir ağı ortak bir referans çerçevesi olarak kullanarak veri tutarlılığı ve iş akışı sürekliliği elde etmesine ve bunu sürdürmesine olanak tanır._
 - [Chainlens](https://www.chainlens.com/) - _Web3 Labs'in geliştirdiği SaaS ve şirket içi blokzincir veri ve analizleri platformudur_
 - [Ernst& Young's 'Nightfall'](https://github.com/EYBlockchain/nightfall_3) - _ERC20, ERC721 ve ERC1155 uygulamalarını İyimser Toplama kullanarak Sıfır Bilgi kapsamında transfer etmeye yarayan bir uygulamadır_
-- [Truffle Suite](https://trufflesuite.com) - _blokzincir geliştirme paketi (Truffle, Ganache, Drizzle)_
 
 ### Ölçeklenebilirlik çözümleri {#scalability-solutions}
 

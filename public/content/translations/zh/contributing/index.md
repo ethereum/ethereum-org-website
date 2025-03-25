@@ -19,7 +19,7 @@ Ethereum.org 是一个开源项目，有超过 **12,000** 名贡献者帮助翻�
 - [处理有待解决的问题](https://github.com/ethereum/ethereum-org-website/issues) - 我们确定需要开展的工作
 
 **设计**
-- [帮助设计网站](/contributing/design/) - 任何水平的设计师都可以为改进网站做出贡献
+- [帮助设计网站](/contributing/design/) — 任何水平的设计者都可以做出贡献来改进网站。
 
 **内容**
 - [创建/编辑内容](/contributing/#how-to-update-content) – 建议新页面或对现有内容进行调整
@@ -68,7 +68,7 @@ Ethereum.org 是一个开源项目，有超过 **12,000** 名贡献者帮助翻�
 - 我们的[风格指南](/contributing/style-guide/)
 - 我们的[行为准则](/community/code-of-conduct)
 
-<ContributorsQuizBanner mt={16} mb={8} />
+<ContributorsQuizBanner className="mt-16 mb-8" />
 
 ## 如何做出有关网站的决定 {#how-decisions-about-the-site-are-made}
 
@@ -94,7 +94,7 @@ Ethereum.org 是一个开源项目，有超过 **12,000** 名贡献者帮助翻�
 
 ### 如何领取
 1. 加入我们的 [Discord 服务器](https://discord.gg/ethereum-org)。
-2. 将指向你的贡献内容的链接粘贴至 `#🥇 | proof-of-contribution` 频道。
+2. 在 `#🥇 | proof-of-contribution` 频道中粘贴指向你贡献的链接。
 3. 等待我们团队的成员向你发送链上成就代币链接。
 4. 领取你的链上成就代币！
 

@@ -41,6 +41,7 @@ export const getRequiredNamespacesForPage = (
   const baseNamespaces = ["common"]
 
   const requiredNamespacesForPath = getRequiredNamespacesForPath(path)
+  // TODO remove layout case since we can't use it anymore
   const requiredNamespacesForLayout = getRequiredNamespacesForLayout(layout)
 
   return [
@@ -95,6 +96,10 @@ const getRequiredNamespacesForPath = (relativePath: string) => {
 
   if (path.startsWith("/history/")) {
     primaryNamespace = "page-history"
+  }
+
+  if (path.startsWith("/resources/")) {
+    primaryNamespace = "page-resources"
   }
 
   if (path.startsWith("/stablecoins/")) {
@@ -165,11 +170,20 @@ const getRequiredNamespacesForPath = (relativePath: string) => {
 
   if (path.endsWith("/wallets/find-wallet/")) {
     primaryNamespace = "page-wallets-find-wallet"
-    requiredNamespaces = [...requiredNamespaces, "page-wallets"]
+    requiredNamespaces = [...requiredNamespaces, "page-wallets", "table"]
   }
 
+  // TODO: Remove this when the page is translated
   if (path.startsWith("/layer-2/")) {
     primaryNamespace = "page-layer-2"
+  }
+
+  if (path.startsWith("/layer-2/learn/")) {
+    primaryNamespace = "page-layer-2-learn"
+  }
+
+  if (path.startsWith("/layer-2/networks/")) {
+    requiredNamespaces = [...requiredNamespaces, "table"]
   }
 
   if (path.startsWith("/contributing/translation-program/translatathon/")) {
@@ -180,6 +194,7 @@ const getRequiredNamespacesForPath = (relativePath: string) => {
   if (
     path.startsWith("/dapps/") ||
     path.startsWith("/layer-2/") ||
+    path.startsWith("/layer-2/learn/") ||
     path.startsWith("/get-eth/") ||
     path.startsWith("/stablecoins/") ||
     path.startsWith("/staking/") ||
@@ -197,6 +212,7 @@ const getRequiredNamespacesForPath = (relativePath: string) => {
   if (
     path.startsWith("/eth/") ||
     path.startsWith("/layer-2/") ||
+    path.startsWith("/layer-2/learn/") ||
     path.startsWith("/nft/") ||
     path.startsWith("/roadmap/merge/") ||
     path.startsWith("/roadmap/scaling/") ||
@@ -208,7 +224,8 @@ const getRequiredNamespacesForPath = (relativePath: string) => {
     path.startsWith("/what-is-ethereum/") ||
     path.startsWith("/quizzes/") ||
     path.startsWith("/stablecoins/") ||
-    path.startsWith("/smart-contracts/")
+    path.startsWith("/smart-contracts/") ||
+    path.startsWith("/defi/")
   ) {
     requiredNamespaces = [...requiredNamespaces, "learn-quizzes"]
   }

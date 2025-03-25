@@ -48,7 +48,7 @@ _雖然以太坊管理體系在協定層級為鏈下，但許多建立在以太�
 - **節點運營商**：其執行能廣播區塊及交易的節點，拒絕發現的任何無效的交易或區塊。 [更多節點相關資訊](/developers/docs/nodes-and-clients/)。
 - **以太坊改進提案作者**：其提出以太坊改進提案，提議變更以太坊協定。 [更多以太坊改進提案相關資訊](/eips/)。
 - **驗證者**：其執行能為以太坊區塊鏈新增區塊的節點。
-- **協定開發者**（俗稱 「核心開發者」）：這些人維護著各種以太坊實作（例如，執行層的 go-ethereum、Nethermind、Besu、Erigon、Reth 或共識層的 Prysm、Lighthouse、Nimbus、Teku、Lodestar）。 [更多以太坊用戶端相關資訊](/developers/docs/nodes-and-clients/)。
+- **協定開發者**（俗稱 「核心開發者」）：這些人負責維護各種以太坊實作（如執行層的 go-ethereum、Nethermind、Besu、Erigon、Reth；共識層的 Prysm、Lighthouse、Nimbus、Teku、Lodestar、Grandine）。 [更多以太坊用戶端相關資訊](/developers/docs/nodes-and-clients/)。
 
 _注意：任何人都能參與多個組別，例如，協定開發者可以支援以太坊改進提案、執行信標鏈驗證者，並使用去中心化金融應用程式。 但為了清楚交代概念，區分這些相關方是最簡易的作法。_
 

@@ -31,7 +31,7 @@ La diversità dei client offre anche resistenza agli attacchi. Ad esempio, un at
 
 Un bug in un client di consenso con oltre il 33% dei nodi di Ethereum potrebbe impedire la finalizzazione del livello di consenso, il che significa che gli utenti non possono essere sicuri che le transazioni non vengano annullate o modificate ad un certo punto. Questo sarebbe molto problematico per molte delle app basate su Ethereum, in particolare, le DeFi.
 
-<Emoji text="🚨" me="1rem" /> Ancora peggio, un bug critico in un client con una maggioranza di due terzi potrebbe causare la <a href="https://www.symphonious.net/2021/09/23/what-happens-if-beacon-chain-consensus-fails/" target="_blank">una divisione e finalizzazione errata</a> della catena, bloccando un gran numero di validatori su una catena non valida. Se vogliono rientrare nella catena corretta, quei validatori devo sottoporsi a tagli (slashing) o a un prelievo volontario, costoso e lento, e alla riattivazione. L'ammontare del taglio (slashing) aumenta col numero di nodi colpevoli, potendo interessare al massimo una maggioranza di due terzi (32 ETH).
+<Emoji text="🚨" className="me-4" /> Ancora peggio, un bug critico in un client con una maggioranza di due terzi potrebbe causare la <a href="https://www.symphonious.net/2021/09/23/what-happens-if-beacon-chain-consensus-fails/" target="_blank">una divisione e finalizzazione errata</a> della catena, bloccando un gran numero di validatori su una catena non valida. Se vogliono rientrare nella catena corretta, quei validatori devo sottoporsi a tagli (slashing) o a un prelievo volontario, costoso e lento, e alla riattivazione. L'ammontare del taglio (slashing) aumenta col numero di nodi colpevoli, potendo interessare al massimo una maggioranza di due terzi (32 ETH).
 
 Sebbene questi siano scenari improbabili, l'ecosistema di Ethereum può mitigarne il rischio equilibrando la distribuzione dei client tra i nodi attivi. Idealmente, nessun client del consenso dovrebbe mai raggiungere una quota del 33% dei nodi totali.
 
@@ -78,6 +78,8 @@ Per "indirizzare" la diversità dei client non basta che i singoli utenti scelga
 [Lodestar](https://github.com/ChainSafe/lodestar)
 
 [Prysm](https://docs.prylabs.network/docs/getting-started)
+
+[Grandine](https://docs.grandine.io/)
 
 Gli utenti tecnici possono aiutare ad accelerare questo processo scrivendo più tutorial e documentazioni per i client di minoranza e incoraggiando i propri peer che eseguono dei nodi a migrare dai client dominanti. Le guide per passare a un client di consenso di minoranza sono disponibili su [clientdiversity.org](https://clientdiversity.org/).
 

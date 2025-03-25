@@ -1,4 +1,4 @@
-import { useRouter } from "next/router"
+import { useLocale } from "next-intl"
 import type { HTMLAttributes } from "react"
 
 import type { ChildOnlyProp, Lang } from "@/lib/types"
@@ -7,13 +7,13 @@ import type { MdPageContent, StaticFrontmatter } from "@/lib/interfaces"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import Callout from "@/components/Callout"
 import Contributors from "@/components/Contributors"
-import DevconGrantsBanner from "@/components/DevconGrantsBanner"
 import EnergyConsumptionChart from "@/components/EnergyConsumptionChart"
 import FeedbackCard from "@/components/FeedbackCard"
 import GlossaryDefinition from "@/components/Glossary/GlossaryDefinition"
 import GlossaryTooltip from "@/components/Glossary/GlossaryTooltip"
 import { HubHero } from "@/components/Hero"
 import NetworkUpgradeSummary from "@/components/History/NetworkUpgradeSummary"
+import ListenToPlayer from "@/components/ListenToPlayer"
 import Logo from "@/components/Logo"
 import MainArticle from "@/components/MainArticle"
 import MatomoOptOut from "@/components/MatomoOptOut"
@@ -70,6 +70,7 @@ export const staticComponents = {
   SocialListItem,
   TranslationChartImage,
   UpcomingEventsList,
+  ListenToPlayer,
 }
 
 type StaticLayoutProps = ChildOnlyProp &
@@ -87,14 +88,13 @@ export const StaticLayout = ({
   lastEditLocaleTimestamp,
   contentNotTranslated,
 }: StaticLayoutProps) => {
-  const { locale, asPath } = useRouter()
+  const locale = useLocale()
 
   const absoluteEditPath = getEditPath(slug)
 
   return (
     <div className="w-full">
-      <TranslatathonBanner pathname={asPath} />
-      <DevconGrantsBanner pathname={asPath} />
+      <TranslatathonBanner />
       <Flex
         className="mx-auto mb-16 w-full justify-between p-8 lg:pt-16"
         dir={contentNotTranslated ? "ltr" : "unset"}
@@ -111,7 +111,7 @@ export const StaticLayout = ({
             <Stack className="gap-8">
               <Breadcrumbs slug={slug} />
 
-              {!asPath.includes("/whitepaper") && (
+              {!slug.includes("/whitepaper") && (
                 <p
                   className="text-body-medium"
                   dir={isLangRightToLeft(locale as Lang) ? "rtl" : "ltr"}
@@ -125,8 +125,7 @@ export const StaticLayout = ({
 
           <MainArticle className="max-w-3xl">
             <TableOfContents
-              position="relative"
-              zIndex={2}
+              className="relative"
               items={tocItems}
               isMobile
               maxDepth={frontmatter.sidebarDepth || 2}

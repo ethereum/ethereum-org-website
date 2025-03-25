@@ -2,11 +2,7 @@ import * as AccordionPrimitive from "@radix-ui/react-accordion"
 
 import { cn } from "@/lib/utils/cn"
 
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-} from "../../../../tailwind/ui/accordion"
+import { Accordion, AccordionContent, AccordionItem } from "../../ui/accordion"
 
 type AccordionTriggerProps = {
   heading?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6"

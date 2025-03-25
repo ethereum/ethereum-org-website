@@ -9,8 +9,12 @@ const BugBountyBanner = () => (
   <BannerNotification shouldShow>
     <Center>
       <p>
-        All Dencun-related bounties currently receive a 2x bonus multiplier (up
-        to 500,000 USD) up to two weeks before the scheduled mainnet hardfork.
+        Prague code is now in scope! The Prague Audit Competition is running on{" "}
+        <a href="https://cantina.xyz/competitions/9ab19e33-b73c-4384-83a8-b905f508ce5e">
+          Cantina
+        </a>{" "}
+        during 21st of February - 21st of March, with up to $2,000,000 in
+        rewards!
       </p>
     </Center>
   </BannerNotification>

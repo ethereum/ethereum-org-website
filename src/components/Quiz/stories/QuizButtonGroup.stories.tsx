@@ -4,7 +4,9 @@ import { fn } from "@storybook/test"
 import { QuizButtonGroup } from "../QuizWidget/QuizButtonGroup"
 import { QuizContent } from "../QuizWidget/QuizContent"
 
-import { LAYER_2_QUIZ_TITLE, layer2Questions } from "./utils"
+import { LAYER_2_QUIZ_TITLE_KEY, layer2Questions } from "./utils"
+
+import useTranslation from "@/hooks/useTranslation"
 
 const meta = {
   title: "Molecules / Display Content / Quiz / QuizWidget / ButtonGroup",
@@ -18,7 +20,7 @@ const meta = {
     quizPageProps: false,
     quizScore: 0,
     showResults: false,
-    title: LAYER_2_QUIZ_TITLE,
+    title: LAYER_2_QUIZ_TITLE_KEY,
     userQuizProgress: [],
     handleReset: fn(),
     setCurrentQuestionAnswerChoice: fn(),
@@ -26,11 +28,17 @@ const meta = {
     setUserQuizProgress: fn(),
   },
   decorators: [
-    (Story, { args }) => (
-      <QuizContent title={LAYER_2_QUIZ_TITLE} answerStatus={args.answerStatus}>
-        <Story />
-      </QuizContent>
-    ),
+    (Story, { args }) => {
+      const { t } = useTranslation()
+      return (
+        <QuizContent
+          title={t(LAYER_2_QUIZ_TITLE_KEY)}
+          answerStatus={args.answerStatus}
+        >
+          <Story />
+        </QuizContent>
+      )
+    },
   ],
 } satisfies Meta<typeof QuizButtonGroup>
 
@@ -42,7 +50,7 @@ export const NoSelectedAnswer: Story = {}
 
 export const SelectedAnswer: Story = {
   args: {
-    currentQuestionAnswerChoice: { answerId: "g001-a", isCorrect: true },
+    currentQuestionAnswerChoice: { answerId: "rollups-1-a", isCorrect: true },
   },
 }
 

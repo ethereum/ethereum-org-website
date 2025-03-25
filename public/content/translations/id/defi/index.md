@@ -1,5 +1,6 @@
 ---
 title: Keuangan terdesentralisasi (DeFi)
+metaTitle: Apa yang dimaksud dengan DeFi? | Manfaat dan Kegunaan Keuangan Terdesentralisasi
 description: Gambaran umum tentang DeFi di Ethereum
 lang: id
 template: use-cases
@@ -168,7 +169,7 @@ Jika pasokan bursa B menurun secara tiba-tiba dan pengguna tidak dapat membeli d
 
 Agar dapat melakukan contoh di atas dalam dunia keuangan tradisional, Anda akan membutuhkan jumlah yang sangat besar. Strategi penghasil uang ini hanya dapat dijangkau oleh mereka yang memiliki kekayaan. Pinjaman flash adalah sebuah contoh dari masa depan di mana kepemilikan sejumlah uang tidak harus merupakan prasyarat untuk menghasilkan uang.
 
-<ButtonLink isSecondary href="https://aave.com/flash-loans/">
+<ButtonLink isSecondary href="https://aave.com/docs/concepts/flash-loans">
   Lebih lanjut tentang pinjaman flash
 </ButtonLink>
 
@@ -324,7 +325,7 @@ Anda dapat membayangkan tentang DeFi dalam lapisan:
 3. Protokol – [kontrak pintar](/glossary/#smart-contract) yang menyediakan fungsionalitas, misalnya, layanan yang memungkinkan pemberian pinjaman aset yang terdesentralisasi.
 4. [Aplikasi](/dapps/) – produk yang kita gunakan untuk mengelola dan mengakses protokol.
 
-Catatan: sebagian besar DeFi menggunakan [standar ERC-20](/glossary/#erc-20). Aplikasi di DeFi menggunakan pembungkus untuk ETH yang disebut Wrapped Ether (WETH). [Pelajari lebih lanjut tentang wrapped ether](/wrapped-eth).
+Catatan: sebagian besar DeFi menggunakan [standar ERC-20](/glossary/#erc-20). Aplikasi di DeFi menggunakan pembungkus ETH yang disebut Wrapped ether (WETH). [Pelajari lebih lanjut tentang wrapped ether](/wrapped-eth).
 
 ## Bangun DeFi {#build-defi}
 
@@ -355,3 +356,7 @@ DeFi adalah gerakan sumber terbuka. Anda bisa memeriksa, melakukan fork, dan ber
 
 - [Server Discord DeFi Llama](https://discord.defillama.com/)
 - [Server Discord DeFi Pulse](https://discord.gg/Gx4TCTk)
+
+<Divider />
+
+<QuizWidget quizKey="defi" />

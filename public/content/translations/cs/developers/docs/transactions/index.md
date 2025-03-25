@@ -22,7 +22,7 @@ Transakce vyžadují poplatek a musí být zahrnuty do validovaného bloku. Abyc
 
 Odeslaná transakce obsahuje následující informace:
 
-- `from` – adresa odesílatele, který transakci podepíše. Toto bude externě vlastněný účet, protože kontraktové účty nemohou odesílat transakce.
+- `from` – adresa odesílatele, který transakci podepíše. Toto bude externě vlastněný účet, protože kontraktové účty nemohou odesílat transakce
 - `to` – adresa příjemce. Pokud jde o externě vlastněný účet, transakce převede hodnotu. Pokud jde o kontraktový účet, transakce vykoná kód kontraktu.
 - `signature` – podpis, který je identifikátorem odesílatele. Tento identifikátor je vygenerován, když odesílatelův privátní klíč podepíše transakci a potvrdí, že odesílatel tuto transakci autorizoval.
 - `nonce` – postupně se zvyšující čítač, který označuje číslo transakce z účtu.
@@ -162,7 +162,7 @@ Jakékoliv palivo, které nebude v transakci použito, bude vráceno na účet o
 
 Palivo je potřeba pro jakoukoliv transakci, která zahrnuje chytrý kontrakt.
 
-Chytré kontrakty mohou také obsahovat funkce známé jako [`view`](https://docs.soliditylang.org/en/latest/contracts.html#view-functions) nebo [`pure`](https://docs.soliditylang.org/en/latest/contracts.html#pure-functions), které nemění stav kontraktu. Volání těchto funkcí z externě vlastněného účtu tedy nevyžaduje žádné palivo. Základní volání RPC pro tento scénář je [`eth_call`](/developers/docs/apis/json-rpc#eth_call).
+Chytré kontrakty mohou také obsahovat funkce známé jako [`view`](https://docs.soliditylang.org/en/latest/contracts.html#view-functions) nebo [`pure`](https://docs.soliditylang.org/en/latest/contracts.html#pure-functions), které nemění stav kontraktu. Volání těchto funkcí z externě vlastněného účtu tedy nevyžaduje žádné palivo. Základní RPC volání pro tento scénář je [`eth_call`](/developers/docs/apis/json-rpc#eth_call).
 
 Na rozdíl od volání pomocí `eth_call` jsou tyto funkce `view` nebo `pure` často volány interně (tj. z kontraktu samotného nebo z jiného kontraktu), což stojí palivo.
 
@@ -198,7 +198,7 @@ Kde jsou pole definována jako:
 - `TransactionType` – číslo mezi 0 a 0x7f, což umožňuje celkem 128 možných typů transakcí.
 - `TransactionPayload` – libovolné pole bajtů definované typem transakce.
 
-Na základě hodnoty `TransactionType` může být transakce klasifikována jako
+Na základě hodnoty `TransactionType` může být transakce klasifikována jako:
 
 1. **Transakce typu 0 (Legacy):** Původní formát transakce používaný od spuštění Etherea. Neobsahuje funkce z [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), jako je dynamický výpočet poplatků za palivo nebo seznamy přístupu pro chytré kontrakty. Legacy transakce nemají specifický prefix označující jejich typ ve svém serializovaném formátu, začínají bajtem `0xf8` při použití kódování [Recursive Length Prefix (RLP)](/developers/docs/data-structures-and-encoding/rlp). Hodnota TransactionType pro tyto transakce je `0x0`.
 

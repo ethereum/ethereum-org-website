@@ -1,5 +1,6 @@
 ---
 title: Nezaměnitelné tokeny (NFT)
+metaTitle: Co jsou NFTéčka? | Výhody a využití
 description: Přehled NFT na Ethereu
 lang: cs
 template: use-cases
@@ -75,7 +76,7 @@ Tato webová stránka má také alternativní název domény využívající NFT
 
 ## Jak fungují NFT? {#how-nfts-work}
 
-Stejně jako kterékoliv digitální předměty na Ethereum blockchainu jsou NFT vytvářeny skrze speciální počítačový program založený na Ethereu s názvem "chytrý kontrakt." Tyto kontrakty fungují podle specifických pravidel, jako jsou standardy [ERC-721](/glossary/#erc-721) nebo [ERC-1155](/glossary/#erc-1155), které určují, jaké operace může kontrakt vykonávat.
+Stejně jako kterékoliv digitální předměty na Ethereum blockchainu jsou NFT vytvářeny skrze speciální počítačový program založený na Ethereu s názvem „chytrý kontrakt“. Tyto kontrakty fungují podle specifických pravidel, jako jsou standardy [ERC-721](/glossary/#erc-721) nebo [ERC-1155](/glossary/#erc-1155), které určují, jaké operace může kontrakt vykonávat.
 
 Chytrý kontrakt NFT může dělat několik klíčových věcí:
 

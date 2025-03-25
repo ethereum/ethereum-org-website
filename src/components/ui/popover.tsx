@@ -5,11 +5,17 @@ import { cn } from "@/lib/utils/cn"
 
 const Popover = PopoverPrimitive.Root
 
+type PopoverProps = React.ComponentPropsWithoutRef<typeof PopoverPrimitive.Root>
+
 const PopoverTrigger = PopoverPrimitive.Trigger
+
+type PopoverContentProps = React.ComponentPropsWithoutRef<
+  typeof PopoverPrimitive.Content
+>
 
 const PopoverContent = React.forwardRef<
   React.ElementRef<typeof PopoverPrimitive.Content>,
-  React.ComponentPropsWithoutRef<typeof PopoverPrimitive.Content>
+  PopoverContentProps
 >(
   (
     { className, children, align = "center", sideOffset = 4, ...props },
@@ -38,4 +44,11 @@ const PopoverClose = PopoverPrimitive.Close
 
 PopoverClose.displayName = "PopoverClose"
 
-export { Popover, PopoverClose, PopoverContent, PopoverTrigger }
+export {
+  Popover,
+  PopoverClose,
+  PopoverContent,
+  type PopoverContentProps,
+  type PopoverProps,
+  PopoverTrigger,
+}

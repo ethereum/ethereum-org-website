@@ -14,7 +14,7 @@ published: 2021-04-22
 
 [Beeple](https://www.nytimes.com/2021/03/11/arts/design/nft-auction-christies-beeple.html): 69 Milyon ABD Doları[3LAU](https://www.forbes.com/sites/abrambrown/2021/03/03/3lau-nft-nonfungible-tokens-justin-blau/?sh=5f72ef64643b): 11 Milyon ABD Doları [Grimes](https://www.theguardian.com/music/2021/mar/02/grimes-sells-digital-art-collection-non-fungible-tokens): 6 Milyon ABD Doları
 
-Hepsi, Alchemy'nin güçlü API'sini kullanarak NFT'lerini bastı. Bu öğreticide, aynısını <10 dakikada nasıl yapacağınızı size öğreteceğiz.
+Hepsi, Alchemy'nin güçlü API'sini kullanarak NFT'lerini bastı. Bu öğreticide, aynısını \<10 dakikada nasıl yapacağınızı size öğreteceğiz.
 
 “NFT basımı”, blok zincirinde ERC-721 token'ınızın benzersiz bir örneğini yayınlama eylemidir. [NFT eğitim serisinin 1. Bölümündeki](/developers/tutorials/how-to-write-and-deploy-an-nft/) akıllı sözleşmemizi kullanarak Web3 becerilerimizi geliştirelim ve bir NFT basalım. Bu eğitimin sonunda, keyfinizin (ve cüzdanınızın) istediği kadar NFT basabileceksiniz!
 

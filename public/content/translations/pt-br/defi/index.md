@@ -355,3 +355,7 @@ DeFi é um movimento de código aberto. Os protocolos e aplicações DeFi são t
 
 - [Servidor DeFi Llama no Discord](https://discord.defillama.com/)
 - [Servidor DeFi Pulse no Discord](https://discord.gg/Gx4TCTk)
+
+<Divider />
+
+<QuizWidget quizKey="defi" />

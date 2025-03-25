@@ -1,5 +1,6 @@
 ---
-title: Decentralizované autonomní organizace (DAO)
+title: Co je DAO?
+metaTitle: Co je DAO? | Decentralizovaná autonomní organizace
 description: Přehled DAO na Ethereu
 lang: cs
 template: use-cases
@@ -48,7 +49,7 @@ Několik příkladů, k čemu je možné DAO využít:
 
 ## Jak fungují DAO? {#how-daos-work}
 
-Základem DAO je [smart kontrakt](/glossary/#smart-contract), který definuje pravidla organizace a spravuje majetek celé skupiny. Jakmile je kontrakt nasazen na Ethereu, nikdo nemůže změnit pravidla jinak než hlasováním. Pokud by se tedy někdo prokusil provést akci, která není definována pravidly a logikou počítačového kódu, skončí to neúspěchem. Stejně tak i finanční prostředky jsou řízeny chytrým kontraktem, takže nikdo nemůže utratit peníze bez souhlasu skupiny Znamená to tedy, že DAO nepotřebuje žádnou ústřední entitu a namísto toho jsou všechna rozhodnutí i platby prováděny kolektivně na základě společného hlasování.
+Základem DAO je [chytrý kontrakt](/glossary/#smart-contract), který definuje pravidla organizace a spravuje majetek celé skupiny. Jakmile je kontrakt nasazen na Ethereu, nikdo nemůže změnit pravidla jinak než hlasováním. Pokud by se tedy někdo prokusil provést akci, která není definována pravidly a logikou počítačového kódu, skončí to neúspěchem. Stejně tak i finanční prostředky jsou řízeny chytrým kontraktem, takže nikdo nemůže utratit peníze bez souhlasu skupiny Znamená to tedy, že DAO nepotřebuje žádnou ústřední entitu a namísto toho jsou všechna rozhodnutí i platby prováděny kolektivně na základě společného hlasování.
 
 To je možné z toho důvodu, že chytré kontrakty jsou po nasazení na Ethereum chráněny proti nedovolené manipulaci. Pravidla DAO jsou totiž zapsaná pomocí veřejně dostupného kódu a nelze je tak upravovat bez povšimnutí.
 
@@ -99,7 +100,7 @@ Existují různé typy členství v DAO. Na základně nich je pak určeno, jak 
 
 ### Členství založené na tokenech {#token-based-membership}
 
-Obvykle zcela [bez nutnosti povolení](/glossary/#permissionless), v závislosti na použitém tokenu. Takové tokeny jsou typicky volně obchodovány na [decentralizovaných burzách](/glossary/#dex). získávány poskytnutím likvidity anebo těženy nějakým „proof-of-work“ způsobem. Ve všech případech ale pouhé držení tokenu umožňuje přístup k hlasování.
+Obvykle zcela [bez nutnosti povolení](/glossary/#permissionless), v závislosti na použitém tokenu. Takové tokeny jsou typicky volně obchodovány na [decentralizovaných burzách](/glossary/#dex). získávány poskytnutím likvidity anebo těženy nějakým „důkazem prací“. Ve všech případech ale pouhé držení tokenu umožňuje přístup k hlasování.
 
 _Obvykle se používá k řízení rozsáhlých decentralizovaných protokolů a/nebo tokenů samotných._
 
@@ -121,7 +122,7 @@ _Obvykle se používá u lidskoprávních organizací, jako jsou charity a odbor
 
 Reputace je důkazem účasti a poskytuje hlasovací práva v DAO. Na rozdíl od tokenových či podílových členství, organizace DAO založené na reputaci nepřevádějí vlastnictví na přispěvatele. Reputaci nelze koupit, převést či delegovat; členové DAO si ji musí získat prostřednictvím účasti. Hlasování na blockchainuje je veřejně dostupné a budoucí členové mohou svobodně předložit návrhy na vstup do DAO a požádat o získání reputace a tokenů jako odměnu za své příspěvky.
 
-_Tento přístup se obvykle používá při decentralizovaném vývoji a řízení protokolů a [decentralizovaných aplikací](/glossary/#dapp), ale hodí se i pro další organizace, jako je charita, pracovní družstva, investiční kluby atd._
+_Tento přístup se obvykle používá při decentralizovaném vývoji a řízení protokolů a [dappek](/glossary/#dapp), ale hodí se i pro další organizace, jako je charita, pracovní družstva, investiční kluby atd._
 
 #### Příklad z praxe {#reputation-example}
 
@@ -160,3 +161,7 @@ _Tento přístup se obvykle používá při decentralizovaném vývoji a řízen
 
 - [Co je to DAO?](https://youtu.be/KHm0uUPqmVE)
 - [Dokáže DAO vybudovat město?](https://www.ted.com/talks/scott_fitsimones_could_a_dao_build_the_next_great_city) – [TED](https://www.ted.com/)
+
+<Divider />
+
+<QuizWidget quizKey="daos" />

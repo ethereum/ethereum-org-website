@@ -44,11 +44,18 @@
   "page-community-try-ethereum": "Próbálja ki az Ethereumot",
   "page-community-upcoming-events-no-events": "Nincs a közeljövőben esemény. Ön esetleg tud ilyenről?",
   "page-community-upcoming-events-load-more": "Továbbiak betöltése",
+  "page-community-upcoming-events-view-event": "Esemény megtekintése",
   "page-community-why-get-involved-title": "Miért kapcsolódjon be?",
   "page-community-why-get-involved-card-1-title": "Találja meg a csoportját",
   "page-community-why-get-involved-card-1-description": "Mindenkinek van egy megfelelő csoport. Találjon hasonlóan gondolkodó embereket és kapcsolódjon velük, hogy megvitassa, átgondolja és ünnepelje az Ethereumot velük együtt.",
   "page-community-why-get-involved-card-2-title": "Találjon megélhetést",
   "page-community-why-get-involved-card-2-description": "Mindenkinek vannak kifizetendő számlái. Az Ethereum segít, hogy értelmes munkát végezzen és rendesen megfizessék ezért.",
   "page-community-why-get-involved-card-3-title": "Változtasson",
-  "page-community-why-get-involved-card-3-description": "A közreműködése az Ethereumon lehetővé teszi, hogy Ön aktív érdekeltje legyen egy olyan technológiának, mely pozitív hatást gyakorol milliónyi emberre."
+  "page-community-why-get-involved-card-3-description": "A közreműködése az Ethereumon lehetővé teszi, hogy Ön aktív érdekeltje legyen egy olyan technológiának, mely pozitív hatást gyakorol milliónyi emberre.",
+  "page-index-internet-image-alt": "Illusztráció egy futurisztikus számítógépről, amelyet Ethereum-kristályok táplálnak.",
+  "page-index-get-started-image-alt": "Illusztráció egy számítógépen dolgozó személyről.",
+  "page-index-get-started-wallet-image-alt": "Egy robot illusztrációja, melynek a teste egy kamra, és amely egy Ethereum-tárcát reprezentál.",
+  "page-index-get-started-eth-image-alt": "Egy ether (ETH) karaktert csodáló embercsoport képe.",
+  "page-index-get-started-dapps-image-alt": "Illusztráció egy számítógépet használó doge-kutyáról.",
+  "page-index-get-started-devs-image-alt": "Illusztráció egy kézről, amely egy ETH-logót épít LEGO-kockákból."
 }

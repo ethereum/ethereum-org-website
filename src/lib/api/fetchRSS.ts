@@ -42,6 +42,10 @@ export const fetchRSS = async (xmlUrl: string | string[]) => {
         // Map to RSSItem object
         .map((item) => {
           const getImgSrc = () => {
+            if (url.includes("medium.com/feed/"))
+              return item["content:encoded"]?.[0].match(
+                /https?:\/\/[^"]*?\.(jpe?g|png|webp)/g
+              )
             if (item.enclosure) return item.enclosure[0].$.url
             if (item["media:content"]) return item["media:content"][0].$.url
             return channelImage

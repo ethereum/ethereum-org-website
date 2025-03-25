@@ -4,17 +4,25 @@ import { expect, fireEvent, fn, within } from "@storybook/test"
 import { QuizContent } from "../QuizWidget/QuizContent"
 import { QuizRadioGroup } from "../QuizWidget/QuizRadioGroup"
 
-import { LAYER_2_QUIZ_TITLE, layer2Questions } from "./utils"
+import { LAYER_2_QUIZ_TITLE_KEY, layer2Questions } from "./utils"
+
+import useTranslation from "@/hooks/useTranslation"
 
 const meta = {
   title: "Molecules / Display Content / Quiz / QuizWidget / RadioGroup",
   component: QuizRadioGroup,
   decorators: [
-    (Story, { args }) => (
-      <QuizContent title={LAYER_2_QUIZ_TITLE} answerStatus={args.answerStatus}>
-        <Story />
-      </QuizContent>
-    ),
+    (Story, { args }) => {
+      const { t } = useTranslation()
+      return (
+        <QuizContent
+          title={t(LAYER_2_QUIZ_TITLE_KEY)}
+          answerStatus={args.answerStatus}
+        >
+          <Story />
+        </QuizContent>
+      )
+    },
   ],
 } satisfies Meta<typeof QuizRadioGroup>
 
@@ -32,7 +40,7 @@ export const StartQuestion: Story = {
 }
 
 const clickAnswer = async (
-  selectedId: `g001-${string}`,
+  selectedId: `rollups-1-${string}`,
   answers: HTMLElement[]
 ) => {
   const selectedAnswer = answers.find((answer) => answer.id === selectedId)
@@ -50,7 +58,7 @@ export const SelectedAnswer: Story = {
     const answers = canvas.getAllByTestId("quiz-question-answer")
 
     // Click the first answer ("which is the correct answer")
-    await clickAnswer("g001-a", answers)
+    await clickAnswer("rollups-1-a", answers)
   },
 }
 
@@ -73,6 +81,6 @@ export const SelectedIncorrectAnswer: Story = {
     const answers = canvas.getAllByTestId("quiz-question-answer")
 
     // Click the second answer ("which is the incorrect answer")
-    await clickAnswer("g001-b", answers)
+    await clickAnswer("rollups-1-b", answers)
   },
 }

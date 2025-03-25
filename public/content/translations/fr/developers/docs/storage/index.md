@@ -45,7 +45,7 @@ Les plateformes avec persistance basée sur contrat :
 - [Filecoin](https://docs.filecoin.io/about-filecoin/what-is-filecoin/)
 - [Skynet](https://siasky.net/)
 - [Storj](https://storj.io/)
-- [0Chain](https://0chain.net/)
+- [Züs](https://zus.network/)
 - [Réseau Crust](https://crust.network)
 - [Swarm](https://www.ethswarm.org/)
 - [4EVERLAND](https://www.4everland.org/)
@@ -75,7 +75,7 @@ Un des moyens les plus populaires pour s'assurer que les données sont conservé
 
 Types de dStorage avec mécanisme de challenge :
 
-- 0Chain
+- Züs
 - Skynet
 - Arweave
 - Filecoin
@@ -88,7 +88,6 @@ Il n'existe pas de bons outils pour mesurer le niveau de décentralisation des p
 
 Outils décentralisés sans KYC :
 
-- 0Chaine (implémentant une édition non KYC)
 - Skynet
 - Arweave
 - Filecoin
@@ -110,7 +109,7 @@ Preuve d'enjeu (PoS) :
 
 - Ethereum
 - Filecoin
-- 0Chain
+- Züs
 - Réseau Crust
 
 ## Outils connexes {#related-tools}
@@ -145,10 +144,10 @@ Preuve d'enjeu (PoS) :
 - [Documentation](https://docs.arweave.org/info/)
 - [Arweave](https://github.com/ArweaveTeam/arweave/)
 
-**0chain - _0Chain est une plateforme dStorage basée sur la Preuve d'enjeu avec des fragments et des blobbers._**
+**Züs - _Züs est une plateforme dStorage basée sur la Preuve d'enjeu avec des fragments et des blobbers._**
 
-- [0Chain.net](https://0chain.net/)
-- [Documentation](https://docs.0chain.net/0chain/)
+- [zus.network](https://zus.network/)
+- [Documentation](https://0chaindocs.gitbook.io/zus-docs)
 - [GitHub](https://github.com/0chain/)
 
 **Réseau Crust - _Crust est une plateforme dStorage basée sur IPFS_**

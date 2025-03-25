@@ -35,7 +35,7 @@ Um contrato inteligente é um código presente na blockchain Ethereum e funciona
 - **Completar a integridade dos dados**: os dados armazenados na blockchain são imutáveis e indiscutíveis, graças aos primitivos criptográficos. Atores mal-intencionados não podem forjar transações ou outros dados que já foram tornados públicos.
 - **Computação sem confiança/comportamento verificável** – Contratos inteligentes podem ser analisados e têm garantia de execução de maneiras previsíveis, sem a necessidade de confiar em uma autoridade central. Isso não é verdade nos modelos tradicionais; por exemplo, quando usamos sistemas bancários on-line, temos que confiar que as instituições financeiras não usarão indevidamente nossos dados financeiros, adulterarão registros ou serão hackeadas.
 
-## Benefícios do desenvolvimento de dapps {#drawbacks-of-dapp-development}
+## Desvantagens do desenvolvimento de dapps {#drawbacks-of-dapp-development}
 
 - **Manutenção**: os dapps podem ser mais difíceis de manter, porque o código e os dados publicados na blockchain são mais difíceis de modificar. É difícil para os desenvolvedores fazerem atualizações em seus dapps (ou nos dados armazenados sob um dapp) uma vez que eles foram implantados, mesmo se bugs ou riscos de segurança forem identificados em uma versão antiga.
 - **Impactos no desempenho**: há um grande impacto no desempenho, e o dimensionamento é realmente difícil. Para alcançar o nível de segurança, integridade, transparência e confiabilidade que o Ethereum aspira, cada nó executa e armazena cada transação. Além disso, o consenso de prova de participação também leva tempo.
@@ -49,7 +49,7 @@ Um contrato inteligente é um código presente na blockchain Ethereum e funciona
 
 ## Ferramentas para criar dapps {#dapp-tools}
 
-**Scaffold-ETH _: experimente rápido com Solidity usando um front-end que se adapta ao seu contrato inteligente._**
+**Scaffold-ETH _: experimente rapidamente com Solidity usando um front-end que se adapta ao seu contrato inteligente._**
 
 - [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 - [Exemplo de dapp](https://punkwallet.io/)
@@ -84,7 +84,7 @@ Um contrato inteligente é um código presente na blockchain Ethereum e funciona
 
 - [Ver dapps](/dapps)
 - [A arquitetura de um aplicativo Web 3.0](https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application) - _Preethi Kasireddy_
-- [Um guia de 2021 para aplicativos descentralizados](https://limechain. tech/blog/what-are-dapps-the-2021-guide/) - _LimeChain_
+- [Um guia de 2021 para aplicativos descentralizados](https://limechain.tech/blog/what-are-dapps-the-2021-guide/) - _LimeChain_
 - [O que são aplicativos descentralizados?](https://www.gemini.com/cryptopedia/decentralized-applications-defi-dapps) - _Gemini_
 - [Dapps populares](https://www.alchemy.com/dapps) - _Alchemy_
 

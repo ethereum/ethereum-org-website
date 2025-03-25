@@ -105,12 +105,6 @@ lang: zh
 - [GitHub](https://github.com/eth-brownie/brownie)
 - **Brownie 当前未维护**
 
-**Truffle -** **_开发环境、测试框架、构建管道及其他工具。_**
-
-- [trufflesuite.com](https://www.trufflesuite.com/)
-- [GitHub](https://github.com/trufflesuite/truffle)
-- **Truffle 开发已结束** - [了解更多](https://twitter.com/trufflesuite/status/1704946902393860589?t=NlIWeLTbBSAaJmS5uUAhSA&s=19)
-
 **OpenZeppelin SDK -** **_终极智能合约工具包：一套帮助你开发、编译、升级、部署智能合约并与之交互的工具。_**
 
 - [OpenZeppelin SDK](https://openzeppelin.com/sdk/)
@@ -137,6 +131,14 @@ lang: zh
 - [相关文档](https://ackeeblockchain.com/wake/docs/latest/)
 - [GitHub](https://github.com/Ackee-Blockchain/wake)
 - [VS Code 扩展程序](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity)
+
+**Veramo -** **_开源、模块化且不受限的框架，使去中心化应用程序开发者能够轻松在其应用程序内构建去中心化身份和可验证凭证。_**
+
+- [主页](https://veramo.io/)
+- [相关文档](https://veramo.io/docs/basics/introduction)
+- [GitHub](https://github.com/uport-project/veramo)
+- [Discord](https://discord.com/invite/FRRBdjemHV)
+- [NPM 软件包](https://www.npmjs.com/package/@veramo/core)
 
 ## 延伸阅读 {#further-reading}
 

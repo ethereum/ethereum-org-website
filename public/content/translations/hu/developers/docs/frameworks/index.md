@@ -105,12 +105,6 @@ Mielőtt elmerülne a keretrendszerekben, javasoljuk, hogy olvassa át a bevezet
 - [GitHub](https://github.com/eth-brownie/brownie)
 - **A Brownie karbantartása jelenleg szünetel**
 
-**Truffle -** **_Fejlesztői környezet, tesztelési keretrendszer, folyamatépítő és további eszközök._**
-
-- [trufflesuite.com](https://www.trufflesuite.com/)
-- [GitHub](https://github.com/trufflesuite/truffle)
-- **A Truffle fejlesztése befejeződött** – [további információk](https://twitter.com/trufflesuite/status/1704946902393860589?t=NlIWeLTbBSAaJmS5uUAhSA&s=19)
-
 **OpenZeppelin SDK -** **_The Ultimate Smart Contract Toolkit: egy eszköztár okosszerződések fejlesztéséhez, összeállításához, továbbfejlesztéséhez, telepítéséhez és az okosszerződésekkel való interakciókhoz._**
 
 - [OpenZeppelin SDK](https://openzeppelin.com/sdk/)
@@ -137,6 +131,14 @@ Mielőtt elmerülne a keretrendszerekben, javasoljuk, hogy olvassa át a bevezet
 - [Dokumentáció](https://ackeeblockchain.com/wake/docs/latest/)
 - [GitHub](https://github.com/Ackee-Blockchain/wake)
 - [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity)
+
+**Veramo -** **_Egy nyílt forráskódú, moduláris és agnosztikus keretrendszer, amely megkönnyíti a decentralizált alkalmazások fejlesztői számára a decentralizált identitások és ellenőrizhető hitelesítő adatok beépítését az alkalmazásaikba._**
+
+- [Honlap](https://veramo.io/)
+- [Dokumentáció](https://veramo.io/docs/basics/introduction)
+- [GitHub](https://github.com/uport-project/veramo)
+- [Discord](https://discord.com/invite/FRRBdjemHV)
+- [NPM-csomag](https://www.npmjs.com/package/@veramo/core)
 
 ## További olvasnivaló {#further-reading}
 

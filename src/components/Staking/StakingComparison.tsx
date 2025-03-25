@@ -1,5 +1,4 @@
-import { useTranslation } from "next-i18next"
-import { Box, Heading, useTheme } from "@chakra-ui/react"
+"use client"
 
 import type { StakingPage, TranslationKey } from "@/lib/types"
 
@@ -8,21 +7,21 @@ import {
   StakingGlyphCPUIcon,
   StakingGlyphTokenWalletIcon,
 } from "@/components/icons/staking"
-import InlineLink from "@/components/Link"
-import OldHeading from "@/components/OldHeading"
-import Text from "@/components/OldText"
 
 import { cn } from "@/lib/utils/cn"
 import { MatomoEventOptions, trackCustomEvent } from "@/lib/utils/matomo"
 
 import { Flex } from "../ui/flex"
+import InlineLink from "../ui/Link"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 interface DataType {
   title: TranslationKey
   linkText: TranslationKey
   href: string
   matomo: MatomoEventOptions
-  color: string
+  colorClassName: string
   glyph: JSX.Element
 }
 
@@ -32,8 +31,6 @@ export type StakingComparisonProps = {
 }
 
 const StakingComparison = ({ page, className }: StakingComparisonProps) => {
-  const theme = useTheme()
-  const { stakingGold, stakingGreen, stakingBlue } = theme.colors
   const { t } = useTranslation("page-staking")
 
   const solo: DataType = {
@@ -45,9 +42,9 @@ const StakingComparison = ({ page, className }: StakingComparisonProps) => {
       eventAction: `Clicked`,
       eventName: "clicked solo staking",
     },
-    color: stakingGold,
+    colorClassName: "text-staking-gold",
     glyph: (
-      <StakingGlyphCPUIcon className="h-[50px] w-[50px]" color="stakingGold" />
+      <StakingGlyphCPUIcon className="h-[50px] w-[50px] text-staking-gold" />
     ),
   }
   const saas: DataType = {
@@ -59,12 +56,9 @@ const StakingComparison = ({ page, className }: StakingComparisonProps) => {
       eventAction: `Clicked`,
       eventName: "clicked staking as a service",
     },
-    color: stakingGreen,
+    colorClassName: "text-staking-green",
     glyph: (
-      <StakingGlyphCloudIcon
-        className="h-[28px] w-[50px]"
-        color="stakingGreen"
-      />
+      <StakingGlyphCloudIcon className="h-[28px] w-[50px] text-staking-green" />
     ),
   }
   const pools: DataType = {
@@ -76,12 +70,9 @@ const StakingComparison = ({ page, className }: StakingComparisonProps) => {
       eventAction: `Clicked`,
       eventName: "clicked pooled staking",
     },
-    color: stakingBlue,
+    colorClassName: "text-staking-blue",
     glyph: (
-      <StakingGlyphTokenWalletIcon
-        className="h-[39px] w-[50px]"
-        color="stakingBlue"
-      />
+      <StakingGlyphTokenWalletIcon className="h-[39px] w-[50px] text-staking-blue" />
     ),
   }
   const data: {
@@ -131,22 +122,25 @@ const StakingComparison = ({ page, className }: StakingComparisonProps) => {
         className
       )}
     >
-      <OldHeading fontSize="2rem">
+      <h2 className="mb-4 text-3xl">
         {t("page-staking-comparison-with-other-options")}
-      </OldHeading>
+      </h2>
       {selectedData.map(
-        ({ title, linkText, href, color, content, glyph, matomo }, idx) => (
+        (
+          { title, linkText, href, colorClassName, content, glyph, matomo },
+          idx
+        ) => (
           <Flex className="flex-col gap-6 md:flex-row" key={idx}>
             {!!glyph && (
               <Flex className="max-h-12 w-12 flex-col items-center justify-start">
                 {glyph}
               </Flex>
             )}
-            <Box>
-              <Heading as="h3" fontSize="2xl" color={color} mb={2}>
+            <div>
+              <h3 className={cn("mb-2 text-2xl", colorClassName)}>
                 {t(title)}
-              </Heading>
-              <Text>{t(content)}</Text>
+              </h3>
+              <p>{t(content)}</p>
               <InlineLink
                 onClick={() => {
                   trackCustomEvent(matomo)
@@ -155,7 +149,7 @@ const StakingComparison = ({ page, className }: StakingComparisonProps) => {
               >
                 {t(linkText)}
               </InlineLink>
-            </Box>
+            </div>
           </Flex>
         )
       )}

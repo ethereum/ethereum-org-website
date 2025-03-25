@@ -96,7 +96,7 @@
   "multisig-term": "Firma Multipla",
   "multisig-definition": "Multifirma si riferisce a un portafoglio o conto digitale che richiede più firme o approvazioni per eseguire le transazioni, migliorandone la sicurezza.",
   "nft-term": "Token non fungibile (NFT)",
-  "nft-definition": "Un token non fungibile (NFT) è un articolo digitale unico che puoi possedere, come arte od oggetti da collezione, verificato dalla tecnologia della blockchain. <a href=\"/nft/\">Maggiori informazioni sui token non fungibili (NFT)</a>.",
+  "nft-definition": "Un elemento digitale univoco che puoi possedere, come opere d'arte od oggetti da collezione, verificato dalla tecnologia della blockchain. <a href=\"/nft/\">Maggiori informazioni sui token non fungibili (NFT)</a>.",
   "node-term": "Nodo",
   "node-definition": "Un client software che partecipa alla rete. <a href=\"/developers/docs/nodes-and-clients/\">Maggiori informazioni sui nodi e i client</a>.",
   "ommer-term": "Blocco ommer (zio)",

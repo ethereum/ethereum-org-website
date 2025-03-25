@@ -1,12 +1,14 @@
-import React from "react"
-import { useTranslation } from "next-i18next"
-import { Flex } from "@chakra-ui/react"
+"use client"
 
-import { ButtonLink } from "@/components/Buttons"
+import React from "react"
+
 import CalloutBanner from "@/components/CalloutBanner"
+import { ButtonLink } from "@/components/ui/buttons/Button"
+import { Flex } from "@/components/ui/flex"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
+import { useTranslation } from "@/hooks/useTranslation"
 import image from "@/public/images/enterprise-eth.png"
 
 export type StakingCommunityCalloutProps =
@@ -26,8 +28,9 @@ const StakingCommunityCallout = (props: StakingCommunityCalloutProps) => {
       descriptionKey={"page-staking-join-community-desc"}
       imageWidth={350}
     >
-      <Flex gap={4} direction={{ base: "column", md: "row" }}>
+      <Flex className="flex-col gap-4 md:flex-row">
         <ButtonLink
+          className="w-full md:w-auto"
           onClick={() => {
             trackCustomEvent({
               eventCategory: `StakingCommunityCallout`,
@@ -36,11 +39,11 @@ const StakingCommunityCallout = (props: StakingCommunityCalloutProps) => {
             })
           }}
           href="https://discord.gg/ethstaker"
-          w={{ base: "full", md: "auto" }}
         >
           Discord
         </ButtonLink>
         <ButtonLink
+          className="w-full md:w-auto"
           onClick={() => {
             trackCustomEvent({
               eventCategory: `StakingCommunityCallout`,
@@ -49,11 +52,11 @@ const StakingCommunityCallout = (props: StakingCommunityCalloutProps) => {
             })
           }}
           href="https://reddit.com/r/ethstaker"
-          w={{ base: "full", md: "auto" }}
         >
           Reddit
         </ButtonLink>
         <ButtonLink
+          className="w-full md:w-auto"
           onClick={() => {
             trackCustomEvent({
               eventCategory: `StakingCommunityCallout`,
@@ -62,7 +65,6 @@ const StakingCommunityCallout = (props: StakingCommunityCalloutProps) => {
             })
           }}
           href="https://ethstaker.cc"
-          w={{ base: "full", md: "auto" }}
         >
           {t("common:rollup-component-website")}
         </ButtonLink>

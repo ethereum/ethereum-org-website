@@ -103,7 +103,7 @@ Dappにブリッジやブリッジアグリゲーターを組み込む場合、�
 
 ### 複数のチェーン上でDappをデプロイする {#deploying-a-dapp-on-multiple-chains}
 
-複数のブロックチェーン上でDappをデプロイするには、[Alchemy](https://www.alchemy.com/)、[Hardhat](https://hardhat.org/)、あるいは[Truffle](https://trufflesuite.com/), [Moralis](https://moralis.io/)などの開発プラットフォームを利用することができます。 一般にこれらのプラットフォームには、Dappのクロスチェーン化を実現するコンポーザブルなプラグインが含まれています。 例えば、 [hardhat-deploy plugin](https://github.com/wighawag/hardhat-deploy)で提供される決定論的なデプロイ用プロキシを活用することができます。
+To deploy a dapp on multiple chains, developers can use development platforms like [Alchemy](https://www.alchemy.com/), [Hardhat](https://hardhat.org/), [Moralis](https://moralis.io/), etc. 一般にこれらのプラットフォームには、Dappのクロスチェーン化を実現するコンポーザブルなプラグインが含まれています。 例えば、 [hardhat-deploy plugin](https://github.com/wighawag/hardhat-deploy)で提供される決定論的なデプロイ用プロキシを活用することができます。
 
 #### 例:
 

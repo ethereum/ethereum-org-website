@@ -14,7 +14,7 @@ summaryPoint3: Inaendeshwa na mikataba erevu kwenye mnyororo wa bloku wa Ethereu
 
 ## Nini ni NFTs? {#what-are-nfts}
 
-Tokeni zisizoweza kubadilishwa(NFTs) ni tokeni ambazo **kila moja ni ya kipekee**. Kila NTF ina sifa tofauti (haziwezi kubadilishwa) na ni chache. Hii ni tofauti kutokana na tokeni kama [ETH](/glossary/#ether) au Ethereum nyinginezo ukizingatia tokeni kama USDC ambapo kila tokeni ni sawa na ina vipengele sawa('ya kujirudia'). Hutojali ni noti gani ya dola (au ETH) unayo kwenye pochi lako, kwa sababu zote zinafanana na zina thamani sawa. Hata hivyo, _unajali_ NFT unayomiliki, kwa sababu zote huwa na sifa zao za binafsi na unaweza kuzitofautisha kutoka kwa nyingine ('haziwezi kuigwa').
+Tokeni zisizoweza kubadilishwa(NFTs) ni tokeni ambazo **kila moja ni ya kipekee**. Kila NFT ina sifa tofauti (haziwezi kubadilishwa) na ni chache. Hii ni tofauti kutokana na tokeni kama [ETH](/glossary/#ether) au Ethereum nyinginezo ukizingatia tokeni kama USDC ambapo kila tokeni ni sawa na ina vipengele sawa('ya kujirudia'). Hutojali ni noti gani ya dola (au ETH) unayo kwenye pochi lako, kwa sababu zote zinafanana na zina thamani sawa. Hata hivyo, _unajali_ NFT unayomiliki, kwa sababu zote huwa na sifa zao za binafsi na unaweza kuzitofautisha kutoka kwa nyingine ('haziwezi kuigwa').
 
 Upekee wa kila NFT ni kuwezesha ishara ya vitu kama sanaa, vitu vinavyokusanywa ama mali isiyohamishika, ambapo kila NFT huwakilisha ulimwengu halisi ama bidhaa ya kidijitali. Umiliki wa mali uko wazi kuhakikishwa na umma kwenye [kiambajengo](/glossary/#blockchain) cha Ethereum.
 

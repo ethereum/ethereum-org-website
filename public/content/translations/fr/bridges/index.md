@@ -1,5 +1,5 @@
 ---
-title: Introduction aux ponts blockchain
+title: Introduction aux ponts de blockchain
 description: Les ponts permettent aux utilisateurs de déplacer leurs fonds à travers différentes blockchains
 lang: fr
 ---
@@ -92,6 +92,15 @@ Un point de contrôle manuel est similaire à un modèle de confiance puisque qu
 L'enregistrement automatique s'apparente à un modèle risqué car il supprime le rôle de l'opérateur et utilise la technologie pour ses opérations. Les utilisateurs gardent toujours le contrôle de leurs données et ne doivent pas confier leurs informations privées à un tiers.
 
 De nombreuses solutions de transition adoptent des modèles entre ces deux extrêmes, avec des degrés de confiance variables.
+
+<Divider />
+
+## Utiliser des ponts {#use-bridge}
+
+L'utilisation des ponts vous permet de déplacer vos fonds entre différentes blockchains. Voici quelques ressources pour vous aider à trouver et utiliser des ponts :
+
+- **[Liste des ponts L2BEAT](https://l2beat.com/bridges/summary)&[Analyse des risques L2BEAT des ponts](https://l2beat.com/bridges/risk)** : Une liste complète de divers ponts, incluant des détails sur leur part de marché, le type de pont et les chaînes de destination. L2BEAT propose également une analyse des risques des ponts, aidant les utilisateurs à prendre des décisions éclairées lors de la sélection d'un pont.
+- **[Liste des ponts de DefiLlama](https://defillama.com/bridges/Ethereum)** : Un résumé des volumes des ponts sur les réseaux Ethereum.
 
 <Divider />
 

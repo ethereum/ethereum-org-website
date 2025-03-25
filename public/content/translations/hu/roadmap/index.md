@@ -8,10 +8,10 @@ alt: "Ethereum-ütemterv"
 summaryPoints:
 buttons:
   - 
-    label: Várható fejlesztések
+    content: Várható fejlesztések
     toId: what-changes-are-coming
   - 
-    label: Korábbi fejlesztések
+    content: Korábbi fejlesztések
     href: /history/
     variant: vázlat
 ---
@@ -61,7 +61,7 @@ Az Ethereumot folyamatosan fejlesztik, hogy javítsák a skálázhatóságot, a 
 
 <RoadmapImageContent title="Hogyan határozzák meg az ütemtervet">
 
-Az ütemterv a kutatók és fejlesztők több évnyi munkájának eredménye, mivel a protokoll maga nagyon technikai, de emellett bárki, aki elég elkötelezett, részt vehet benne. Az ötletek általában beszélgetés formájában kezdődnek a fórumokon, mint amilyen az ethresear.ch (https://ethresear.ch/), az Ethereum Magicians (https://ethereum-magicians.org/) vagy az Eth R&D discord szerver. <0>A teljes hontalanság még a kutatási fázisban van</0>, és valószínűleg több év múlva kerül végrehajtásra. Miután ezeket az ötleteket kellőképpen körüljárták, javaslatot készíthetnek belőlük: [Ethereum-fejlesztési javaslatok (EIP)](https://eips.ethereum.org/). Ez az egész folyamat nyilvános, így a közösség bármelyik tagja mérlegelheti a javaslatokat.
+Az ütemterv a kutatók és fejlesztők több évnyi munkájának eredménye, mivel a protokoll maga nagyon technikai, de emellett bárki, aki elég elkötelezett, részt vehet benne. Az ötletek általában beszélgetés formájában kezdődnek a fórumokon, mint amilyen az ethresear.ch (https://ethresear.ch/), az Ethereum Magicians (https://ethereum-magicians.org/) vagy az Eth R&D discord szerver. Ezek lehetnek válaszok az újonnan feltár gyenge pontokra, az alkalmazási rétegen működő szervezetek javaslatai (mint a [dappok](/glossary/#dapp) és tőzsdék), vagy a felhasználók ismert problémái (mint a költségek vagy a tranzakciósebességek). Miután ezeket az ötleteket kellőképpen körüljárták, javaslatot készíthetnek belőlük: [Ethereum-fejlesztési javaslatok (EIP)](https://eips.ethereum.org/). Ez az egész folyamat nyilvános, így a közösség bármelyik tagja mérlegelheti a javaslatokat.
 
 [Bővebben az Ethereum irányításáról](/governance/)
 

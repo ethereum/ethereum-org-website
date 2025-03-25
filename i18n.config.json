@@ -136,6 +136,14 @@
     "dateFormat": "DD/MM/YYYY"
   },
   {
+    "code": "ga",
+    "crowdinCode": "ga-IE",
+    "name": "Irish",
+    "localName": "Gaeilge",
+    "langDir": "ltr",
+    "dateFormat": "DD/MM/YYYY"
+  },
+  {
     "code": "gl",
     "crowdinCode": "gl",
     "name": "Galician",
@@ -148,6 +156,14 @@
     "crowdinCode": "gu-IN",
     "name": "Gujarati",
     "localName": "ગુજરાતી",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY"
+  },
+  {
+    "code": "ha",
+    "crowdinCode": "ha",
+    "name": "Hausa",
+    "localName": "Hausa",
     "langDir": "ltr",
     "dateFormat": "MM/DD/YYYY"
   },
@@ -400,6 +416,14 @@
     "dateFormat": "MM/DD/YYYY"
   },
   {
+    "code": "sn",
+    "crowdinCode": "sn",
+    "name": "Shona",
+    "localName": "Shona",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY"
+  },
+  {
     "code": "sr",
     "crowdinCode": "sr-CS",
     "name": "Serbian",
@@ -448,10 +472,26 @@
     "dateFormat": "MM/DD/YYYY"
   },
   {
+    "code": "tl",
+    "crowdinCode": "tl",
+    "name": "Tagalog",
+    "localName": "Tagalog",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY"
+  },
+  {
     "code": "tr",
     "crowdinCode": "tr",
     "name": "Turkish",
     "localName": "Türkçe",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY"
+  },
+  {
+    "code": "tw",
+    "crowdinCode": "tw",
+    "name": "Akan, Twi",
+    "localName": "Twi",
     "langDir": "ltr",
     "dateFormat": "MM/DD/YYYY"
   },
@@ -484,6 +524,14 @@
     "crowdinCode": "vi",
     "name": "Vietnamese",
     "localName": "Tiếng Việt",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY"
+  },
+  {
+    "code": "yo",
+    "crowdinCode": "yo",
+    "name": "Yoruba",
+    "localName": "Yorùbá",
     "langDir": "ltr",
     "dateFormat": "MM/DD/YYYY"
   },

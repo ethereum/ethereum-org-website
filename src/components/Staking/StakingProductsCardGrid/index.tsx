@@ -1,3 +1,5 @@
+"use client"
+
 import { StakingProductCard } from "./StakingProductCard"
 import { StakingProductsCategoryKeys } from "./types"
 import { useStakingProductsCardGrid } from "./useStakingProductsCardGrid"
@@ -14,7 +16,7 @@ const StakingProductsCardGrid = ({
   return (
     <div
       className={
-        "mx-0 my-12 grid grid-cols-[repeat(auto-fill,minmax(280px,1fr))] gap-8"
+        "mx-0 my-12 grid grid-cols-[repeat(auto-fill,minmax(280px,1fr))] gap-6"
       }
     >
       {rankedProducts.map((product) => (

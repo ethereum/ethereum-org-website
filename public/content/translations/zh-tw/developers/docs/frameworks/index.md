@@ -105,12 +105,6 @@ lang: zh-tw
 - [GitHub](https://github.com/eth-brownie/brownie)
 - **Brownie 目前未有維護**
 
-**Truffle -** **_開發環境、測試架構、部署通道及其他工具。 _**
-
-- [trufflesuite.com](https://www.trufflesuite.com/)
-- [GitHub](https://github.com/trufflesuite/truffle)
-- **Truffle 開發已結束** - [瞭解更多](https://twitter.com/trufflesuite/status/1704946902393860589?t=NlIWeLTbBSAaJmS5uUAhSA&s=19)
-
 **OpenZeppelin 軟體開發套件 -** **_終極智慧型合約工具組：一套幫助你開發、編譯、升級、部署智慧型合約以及與智慧型合約互動的工具。_**
 
 - [OpenZeppelin 軟體開發套件](https://openzeppelin.com/sdk/)
@@ -137,6 +131,14 @@ lang: zh-tw
 - [文件](https://ackeeblockchain.com/wake/docs/latest/)
 - [GitHub](https://github.com/Ackee-Blockchain/wake)
 - [VS Code 擴充功能](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity)
+
+**Veramo -** **_開放原始碼、模組化且不受限的框架，讓去中心化應用程式開發者能輕鬆地將去中心化身分和可驗證憑證整合到他們的應用程式中。_**
+
+- [首頁](https://veramo.io/)
+- [文件](https://veramo.io/docs/basics/introduction)
+- [GitHub](https://github.com/uport-project/veramo)
+- [Discord](https://discord.com/invite/FRRBdjemHV)
+- [節點包裹管理器 (NPM) 包裹](https://www.npmjs.com/package/@veramo/core)
 
 ## 了解更多 {#further-reading}
 

@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react"
+import isChromatic from "chromatic"
 
 import type { PhoneScreenProps } from "@/lib/types"
 
@@ -24,7 +25,8 @@ import { Success } from "./Success"
 export const SendReceive = ({ nav, ctaLabel }: PhoneScreenProps) => {
   const { progressStepper, step } = nav
   const fetchedPrice = useEthPrice()
-  const ethPrice = fetchedPrice > 1 ? fetchedPrice : FALLBACK_ETH_PRICE
+  const ethPrice =
+    fetchedPrice > 1 && !isChromatic() ? fetchedPrice : FALLBACK_ETH_PRICE
   const ethReceiveAmount = USD_RECEIVE_AMOUNT / ethPrice
   const [chosenAmount, setChosenAmount] = useState(0)
   const ethChosenAmount = chosenAmount / ethPrice
@@ -103,7 +105,7 @@ export const SendReceive = ({ nav, ctaLabel }: PhoneScreenProps) => {
       {[1, 3, 5].includes(step) && (
         <ProgressCta
           isAnimated={step === 0}
-          isDisabled={step === 3 && !chosenAmount}
+          disabled={step === 3 && !chosenAmount}
           progressStepper={progressStepper}
         >
           {ctaLabel}

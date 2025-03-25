@@ -91,7 +91,7 @@ A Goerli egy olyan teszthálózat, ahol a validálást és a letétbe helyezést
 - [Coinbase Wallet csap | Goerli](https://coinbase.com/faucets/ethereum-goerli-faucet)
 - [Chainstack Goerli csap](https://faucet.chainstack.com/goerli-faucet)
 
-Ha szeretne egy validátort indítani a Goerli teszthálózaton, akkor használja az ethstaker [olcsó goerli validátor launchpad-et](https://goerli.launchpad.ethstaker.cc/en/).
+Ha szeretne egy validátort indítani a Holesky teszthálózaton, akkor használja az ethstaker [„olcsó Holesky validátor” indítópultot](https://holesky.launchpad.ethstaker.cc/en/).
 
 ### Második blokkláncréteg (L2) teszthálózatok {#layer-2-testnets}
 

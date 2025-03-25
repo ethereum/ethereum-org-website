@@ -1,6 +1,6 @@
 ---
 title: Anatomie von Smart Contracts
-description: "Ein tiefgreifender Einblick in die Anatomie eines Smart Contracts: Funktionen, Daten und Variablen"
+description: 'Ein tiefgreifender Einblick in die Anatomie eines Smart Contracts: Funktionen, Daten und Variablen'
 lang: de
 ---
 
@@ -100,7 +100,7 @@ function update_name(string value) public {
 - Es wird `public` deklariert. Das bedeutet, dass jeder darauf zugreifen kann.
 - `view` wird nicht deklariert, damit eine Änderung des Vertragsstatus möglich ist.
 
-### View-Funktionen {#view-functions}
+### Ansicht-Funktionen {#view-functions}
 
 Diese Funktionen verpflichten sich, den Zustand der Vertragsdaten nicht zu ändern. Gängige Beispiele sind "Getter"-Funktionen, mit denen Sie z. B. den Kontostand eines Benutzers abfragen können.
 
@@ -167,7 +167,7 @@ Zusätzlich zu den Variablen, die Sie in Ihrem Vertrag definieren, gibt es einig
 
 Diese erlauben es Smart Contracts, ETH an andere Konten zu senden.
 
-## Funktionen entwickeln {#writing-functions}
+## Funktionen schreiben {#writing-functions}
 
 Ihre Funktion benötigt folgende Elemente:
 
@@ -203,13 +203,13 @@ Ein vollständiger Smart Contract könnte so aussehen. Hier stellt die `construc
 
 ## Ereignisse und Protokolle {#events-and-logs}
 
-Ereignisse ermöglichen Ihnen die Kommunikation mit Ihrem Smart Contract von Ihrem Frontend oder anderen verbundenen Anwendungen aus. Wenn eine Transaktion verifiziert wird, können Smart Contracts Events emittieren und Protokolle in die Blockchain schreiben, die das Frontend dann verarbeiten kann.
+Ereignisse ermöglichen es Ihrem Smart Contract, mit Ihrem Frontend oder anderen abonnierenden Anwendungen zu kommunizieren. Sobald eine Transaktion validiert und einem Block hinzugefügt wurde, können Smart Contracts Ereignisse auslösen und Informationen protokollieren, die das Frontend dann verarbeiten und nutzen kann.
 
 ## Kommentierte Beispiele {#annotated-examples}
 
 Das sind einige Beispiele in Solidity. Wenn Sie mit dem Code spielen möchten, können Sie mit ihm in [Remix](http://remix.ethereum.org) interagieren.
 
-### Hallo Welt {#hello-world}
+### Hello world {#hello-world}
 
 ```solidity
 // Bestimmt die Version von Solidity mit semantischer Versionierung.

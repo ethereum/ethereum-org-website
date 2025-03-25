@@ -28,24 +28,14 @@ lang: zh-tw
 
 **注意**：大多數[開發架構](/developers/docs/frameworks/)包含一個內建開發網路。 推薦你從一個架構開始[設定你的本地開發環境](/developers/local-environment/)。
 
-### Ganache {#ganache}
-
-快速啟動個人以太坊區塊鏈，你可以使用該區塊鏈運行測試、執行命令和檢查狀態，同時控制鏈的運作方式。
-
-Ganache 提供桌面應用程式 (Ganache UI) 和命令列工具 (`ganache-cli`)。 它是 Truffle 工具套件的一部分。
-
-- [網站](https://www.trufflesuite.com/ganache)
-- [Github](https://github.com/trufflesuite/ganache)
-- [文件](https://www.trufflesuite.com/docs/ganache/overview)
-
 ### Hardhat 網路 {#hardhat-network}
 
 專為開發而設計的本地以太坊網路。 它讓你能夠部署合約、運行測試和偵錯程式碼。
 
 Hardhat 網路內建了 Hardhat，這是一個專業以太坊開發環境。
 
-- [官網](https://hardhat.org/)
-- [GitHub](https://github.com/nomiclabs/hardhat)
+- [網站](https://hardhat.org/)
+- [Github](https://github.com/nomiclabs/hardhat)
 
 ### 本地信標鏈 {#local-beacon-chains}
 
@@ -69,7 +59,7 @@ Kurtosis 是一個用於多容器測試環境的構建系統，讓開發者能�
 以太坊 Kurtosis 套件可用於透過 Docker 或 Kubernetes 快速具現化一個可參數化、高擴展性的私人以太坊測試網。 此套件支援所有主要的執行層 (EL) 和共識層 (CL) 用戶端。 Kurtosis 從容處理代表網路的所有本地端口映射和服務連線，以用於與以太坊核心基礎設施相關的驗證和測試工作流程。
 
 - [以太坊網路套件](https://github.com/kurtosis-tech/ethereum-package)
-- [網站](https://www.kurtosis.com/)
+- [官網](https://www.kurtosis.com/)
 - [GitHub](https://github.com/kurtosis-tech/kurtosis)
 - [文件](https://docs.kurtosis.com/)
 

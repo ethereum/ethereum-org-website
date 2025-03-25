@@ -253,12 +253,6 @@ Se espera que la introducción de la [fragmentación de datos](/roadmap/dankshar
 
 <YouTube id="7pWxCklcNsU" start="263" />
 
-### Uso de rollups optimistas {#use-optimistic-rollups}
-
-Existen múltiples implementaciones de rollups optimistas que puede integrar en sus dApps:
-
-<RollupProductDevDoc rollupType="optimistic" />
-
 ## Bibliografía para profundizar sobre los rollups optimistas
 
 - [¿Cómo funcionan los rollups optimistas? (La guía completa)](https://www.alchemy.com/overviews/optimistic-rollups)

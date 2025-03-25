@@ -1,14 +1,10 @@
-import * as React from "react"
-import { createIcon } from "@chakra-ui/react"
+import { createIconBase } from "./icon-base"
 
-export const HighlightDarkIcon = createIcon({
+export const HighlightDarkIcon = createIconBase({
   displayName: "HighlightDarkIcon",
   viewBox: "0 0 280 28",
-  defaultProps: {
-    width: "280px",
-    height: "28px",
-  },
-  path: (
+  className: "w-[280px] h-[28px]",
+  children: (
     <path
       fill="#4f4f4f"
       fillRule="evenodd"

@@ -111,7 +111,7 @@ There are now several Layer 2 protocols that scale Ethereum using different tech
 #### Recent research {#recent-research-2}
 
 - [Arbitrum's fair-ordering for sequencers](https://eprint.iacr.org/2021/1465)
-- [ethresear.ch Layer 2](https://ethresear.ch/c/layer-2/32)
+- [Ethresear.ch Layer 2](https://ethresear.ch/c/layer-2/32)
 - [Rollup-centric roadmap](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698)
 - [L2Beat](https://l2beat.com/)
 
@@ -189,7 +189,7 @@ Ethereum wallets can be browser extensions, desktop and mobile apps or smart con
 
 - [Introduction to wallets](/wallets/)
 - [Introduction to wallet security](/security/)
-- [ethresear.ch Security](https://ethresear.ch/tag/security)
+- [Ethresear.ch Security](https://ethresear.ch/tag/security)
 - [EIP-2938 Account Abstraction](https://eips.ethereum.org/EIPS/eip-2938)
 - [EIP-4337 Account Abstraction](https://eips.ethereum.org/EIPS/eip-4337)
 
@@ -358,13 +358,13 @@ Tools for Ethereum developers are rapidly improving. There is lots of active res
 
 ### Oracles {#oracles}
 
-Oracles import off-chain data onto the blockchain in a permissionless and decentralized way. Getting this data on-chain enables dapps to be reactive to real-world phenomena such as price fluctuations in real-world assets, events in off-chain apps, or even changes in the weather.
+Oracles import offchain data onto the blockchain in a permissionless and decentralized way. Getting this data onchain enables dapps to be reactive to real-world phenomena such as price fluctuations in real-world assets, events in offchain apps, or even changes in the weather.
 
 #### Background reading {#background-reading-18}
 
 - [Introduction to Oracles](/developers/docs/oracles/)
 
-#### Recent Research {#recent-research-18}
+#### Recent research {#recent-research-18}
 
 - [Survey of blockchain oracles](https://arxiv.org/pdf/2004.07140.pdf)
 - [Chainlink white paper](https://chain.link/whitepaper)
@@ -381,7 +381,7 @@ Hacks on Ethereum generally exploit vulnerabilities in individual applications r
 
 #### Recent research {#recent-research-19}
 
-- [ethresear.ch Applications](https://ethresear.ch/c/applications/18)
+- [Ethresear.ch Applications](https://ethresear.ch/c/applications/18)
 
 ### Technology stack {#technology-stack}
 

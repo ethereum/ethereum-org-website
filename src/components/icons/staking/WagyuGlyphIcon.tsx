@@ -3,7 +3,7 @@ import { createIconBase } from "../icon-base"
 export const WagyuGlyphIcon = createIconBase({
   displayName: "WagyuGlyphIcon",
   viewBox: "0 0 28 32",
-  className: "h-auto w-[28px]",
+  className: "size-[1em]",
   fill: "currentColor",
   children: (
     <>
