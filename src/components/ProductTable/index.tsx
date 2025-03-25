@@ -11,14 +11,14 @@ import { ColumnDef } from "@tanstack/react-table"
 
 import type { FilterOption, TPresetFilters } from "@/lib/types"
 
-import Table from "@/components/DataTable"
+import Table, { TableRowData } from "@/components/DataTable"
 import Filters from "@/components/ProductTable/Filters"
 import MobileFilters from "@/components/ProductTable/MobileFilters"
 import PresetFilters from "@/components/ProductTable/PresetFilters"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
-interface ProductTableProps<T> {
+interface ProductTableProps<T extends TableRowData> {
   columns: ColumnDef<T>[]
   data: T[]
   allDataLength: number
@@ -33,7 +33,7 @@ interface ProductTableProps<T> {
   meta?: Record<string, string | number | boolean>
 }
 
-const ProductTable = <T,>({
+const ProductTable = <T extends TableRowData>({
   columns,
   data,
   allDataLength,
