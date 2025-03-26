@@ -26,6 +26,7 @@ sidebarDepth: 3
 - [EthVM](https://www.ethvm.com/)
 - [OKLink](https://www.oklink.com/eth)
 - [Rantom](https://rantom.app/)
+- [Ethseer](https://ethseer.io)
 
 ## 開源工具 {#open-source-tools}
 
@@ -239,8 +240,8 @@ sidebarDepth: 3
 
 - [Etherscan](https://etherscan.io/) - 可用於擷取以太坊主網及 Goerli 測試網資料的區塊瀏覽器
 - [3xpl](https://3xpl.com/ethereum) - 一個允許下載其資料集的無廣告開源以太坊瀏覽器
-- [Beaconcha.in](https://beaconcha.in/) -用於以太坊主網及 Goerli 測試網的開源區塊瀏覽器
-- <0>Blockchair</0> -- 最私密的以太坊瀏覽器。 也用於排序和篩選（記憶體池）資料
+- [Beaconcha.in](https://beaconcha.in/) - 用於以太坊主網及 Goerli 測試網的開源區塊瀏覽器
+- [Blockchair](https://blockchair.com/ethereum) - 最私密的以太坊瀏覽器。 也用於排序和篩選（記憶體池）資料
 - [Etherchain](https://www.etherchain.org/) - 以太坊主網的區塊瀏覽器
 - [Ethplorer](https://ethplorer.io/) - 專為以太坊主網及 Kovan 測試網代幣打造的區塊瀏覽器
 - [Rantom](https://rantom.app/) - 方便使用的開源去中心化金融及非同質化代幣交易檢視器，可提供詳細的訊息

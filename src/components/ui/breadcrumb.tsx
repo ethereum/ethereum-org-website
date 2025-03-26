@@ -1,5 +1,4 @@
 import * as React from "react"
-import { ComponentProps } from "react"
 import { LuChevronRight, LuMoreHorizontal } from "react-icons/lu"
 import { Slot } from "@radix-ui/react-slot"
 
@@ -48,7 +47,7 @@ BreadcrumbItem.displayName = "BreadcrumbItem"
 const BreadcrumbLink = React.forwardRef<
   HTMLAnchorElement,
   React.ComponentPropsWithoutRef<"a"> &
-    ComponentProps<typeof Link> & {
+    React.ComponentPropsWithoutRef<typeof Link> & {
       asChild?: boolean
     }
 >(({ asChild, className, ...props }, ref) => {

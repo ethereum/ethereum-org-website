@@ -1,5 +1,6 @@
 ---
 title: Kontrak pintar
+metaTitle: "Kontrak pintar: Kegunaan dan manfaatnya"
 description: Pengantar non-teknis untuk kontrak pintar
 lang: id
 ---
@@ -76,7 +77,6 @@ Mereka dapat melakukan komputasi, membuat mata uang, menyimpan data, mencetak [N
 ## Bacaan lebih lanjut {#further-reading}
 
 - [Bagaimana Kontrak Pintar Akan Mengubah Dunia](https://www.youtube.com/watch?v=pA6CGuXEKtQ)
-- [Kontrak Pintar: Teknologi Rantai Blok Yang Akan Menggantikan Pengacara](https://blockgeeks.com/guides/smart-contracts/)
 - [Kontrak pintar untuk pengembang](/developers/docs/smart-contracts/)
 - [Belajar cara menulis kontrak pintar](/developers/learning-tools/)
 - [Penguasaan Ethereum - Apa itu Kontrak Pintar?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)

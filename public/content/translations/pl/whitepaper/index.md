@@ -31,15 +31,21 @@ Oto wpis na blogu od Vitalika Buterina, założyciela Ethereum, na temat [prehis
 
 Z technicznego punktu widzenia księga kryptowalut takich jak Bitcoin może być uważana za system transformacji stanu, gdzie jest "stan" składający się ze statusu własności wszystkich istniejących bitcoinów i "funkcja transformacji stanu", która przyjmuje stan i transakcję oraz wygeneruje nowy stan, który jest rezultatem. Przykładowo w standardowym systemie bankowym stan jest bilansem, transakcja jest prośbą o przeniesienie $X z A do B, a funkcja przejścia stanu zmniejsza wartość na koncie A o $X i zwiększa wartość na koncie B o $X. Jeśli konto A ma w pierwszej kolejności mniej niż X Usd, to stan funkcja przejścia zwraca błąd. Można zatem formalnie zdefiniować:
 
+```
     ZASTOSUJ(S,TX) —>> S' lub BŁĄD
+```
 
 W systemie bankowym zdefiniowanym powyżej:
 
+```
     Zastosuj ({ Alice: $50, Bob: $50 },"wyślij $20 z Alice do Bob") = { Alice: $30, Bob: $70 }
+```
 
 Ale:
 
+```
     ZASTOSUJ({ Alice: $50, Bob: $50 }:,"wyślij 70 USD od Alicji do Roberta") = BŁĄD
+```
 
 "Stan" w Bitcoinach to kolekcja wszystkich monet (technicznie, "niewykorzystane wyniki transakcji" lub UTXO, które zostały wydobyte i jeszcze nie zostały wydane, z każdym UTXO o nazwie i właścicielu (określonym przez 20-bajtowy adres, który zasadniczo jest publicznym kluczem kryptograficznym<sup>[fn. 1](#notes)</sup>). Transakcja zawiera jedno lub więcej danych wejściowych, przy każdym wejściu zawierającym odniesienie do istniejącego UTXO i podpisu kryptograficznego wygenerowanego przez prywatny klucz powiązany z adresem właściciela, i jedno lub więcej wyjść z każdym wyjściem zawierającym nowe UTXO dodawane do stanu.
 

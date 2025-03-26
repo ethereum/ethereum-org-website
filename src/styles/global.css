@@ -7,6 +7,7 @@
 @import "@/styles/semantic-tokens.css";
 @import "@/styles/fonts.css";
 @import "@/styles/docsearch.css";
+@import "@rainbow-me/rainbowkit/styles.css";
 
 @layer base {
   :root {
@@ -81,7 +82,7 @@
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-border scroll-smooth;
   }
 
   body {
