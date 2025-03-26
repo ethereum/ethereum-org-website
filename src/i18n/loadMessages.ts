@@ -1,8 +1,6 @@
 import fs from "fs"
 import path from "path"
 
-import { cache } from "react"
-
 function getNamespaces(localePath: string): string[] {
   return fs
     .readdirSync(localePath)
@@ -34,4 +32,4 @@ async function loadMessages(locale: string) {
 }
 
 // Keep the React cache wrapper as well for RSC optimization
-export const getMessages = cache(loadMessages)
+export const getMessages = loadMessages
