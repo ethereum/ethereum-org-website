@@ -13,7 +13,7 @@ import { ResourceItem, ResourcesContainer } from "@/components/Resources"
 import { useResources } from "@/components/Resources/useResources"
 import Translation from "@/components/Translation"
 import { ButtonLink } from "@/components/ui/buttons/Button"
-import { Stack } from "@/components/ui/flex"
+import { Stack, VStack } from "@/components/ui/flex"
 import Link from "@/components/ui/Link"
 import { Section } from "@/components/ui/section"
 
@@ -184,9 +184,14 @@ const ResourcesPage = ({ txCostsMedianUsd }) => {
           ))}
         </Stack>
 
-        <div className="mb-20 text-center">
-          <Translation id="page-resources:page-resources-find-more" />
-        </div>
+        <VStack className="gap-4 py-16">
+          <div className="text-center font-bold">
+            <Translation id="page-resources:page-resources-find-more" />
+          </div>
+          <ButtonLink href="https://ethereumdashboards.com" size="lg">
+            ethereumdashboards.com
+          </ButtonLink>
+        </VStack>
 
         <Section
           id="contribute"
