@@ -294,7 +294,7 @@ const DappsPage = () => {
   )
   const explore = useRef<HTMLDivElement>(null)
 
-  const queryParamCategories = searchParams.get("category") || ""
+  const queryParamCategories = searchParams?.get("category") || ""
   useEffect(() => {
     const selectedCategory = queryParamCategories
       ? (queryParamCategories.split(",")[0] as CategoryType)
