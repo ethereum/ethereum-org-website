@@ -144,40 +144,45 @@ const ResourcesPage = ({ txCostsMedianUsd }) => {
             ))}
           </nav>
         </div>
-
-        {resourceSections.map(({ key, icon, title: sectionTitle, boxes }) => (
-          <section id={key} key={key} className="mb-16 scroll-mt-40">
-            <div className="group flex w-full items-center gap-3 border-b bg-transparent px-4 py-6">
-              <div className="grid size-12 place-items-center rounded-lg border border-border-low-contrast text-2xl [&_svg]:shrink-0">
-                {icon || <StackIcon />}
-              </div>
-              <h2 className="flex-1 text-start font-black">{sectionTitle}</h2>
-            </div>
-            <div className="grid grid-cols-1 gap-8 px-4 pb-12 pt-8 md:pb-12 md:pt-8 lg:grid-cols-2">
-              {boxes.map(({ title, metric, items, className }) => (
-                <div
-                  className={cn(
-                    "overflow-hidden rounded-2xl border shadow-lg",
-                    className
-                  )}
-                  key={title}
-                >
-                  <div className="border-b bg-[#ffffff] px-6 py-4 font-bold dark:bg-[#171717]">
-                    {title}
+        <Stack className="gap-11 pt-12 md:gap-16 lg:gap-24">
+          {resourceSections.map(({ key, icon, title: sectionTitle, boxes }) => (
+            <Stack key={key} asChild>
+              <section id={key} className="scroll-mt-40 gap-8 md:gap-6">
+                <div className="group flex w-full items-center gap-4 border-b bg-transparent px-2 py-4">
+                  <div className="grid size-12 place-items-center rounded-lg border border-border-low-contrast text-2xl [&_svg]:shrink-0">
+                    {icon || <StackIcon />}
                   </div>
-                  <div className="h-full bg-background bg-gradient-to-br from-white to-primary/10 px-2 py-6 dark:from-transparent dark:to-primary/10">
-                    {metric && metric}
-                    <ResourcesContainer>
-                      {items.map((item) => (
-                        <ResourceItem item={item} key={item.title} />
-                      ))}
-                    </ResourcesContainer>
-                  </div>
+                  <h2 className="flex-1 text-start font-black">
+                    {sectionTitle}
+                  </h2>
                 </div>
-              ))}
-            </div>
-          </section>
-        ))}
+                <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-y-6">
+                  {boxes.map(({ title, metric, items, className }) => (
+                    <div
+                      className={cn(
+                        "overflow-hidden rounded-2xl border shadow-lg",
+                        className
+                      )}
+                      key={title}
+                    >
+                      <div className="border-b bg-[#ffffff] px-6 py-4 font-bold dark:bg-[#171717]">
+                        {title}
+                      </div>
+                      <div className="h-full bg-background bg-gradient-to-br from-white to-primary/10 px-2 py-6 dark:from-transparent dark:to-primary/10">
+                        {metric && metric}
+                        <ResourcesContainer>
+                          {items.map((item) => (
+                            <ResourceItem item={item} key={item.title} />
+                          ))}
+                        </ResourcesContainer>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </section>
+            </Stack>
+          ))}
+        </Stack>
 
         <div className="mb-20 text-center">
           <Translation id="page-resources:page-resources-find-more" />
