@@ -180,17 +180,7 @@ const TableCaption = React.forwardRef<
 ))
 TableCaption.displayName = "TableCaption"
 
-const mdxTableComponents = {
-  table: Table,
-  td: ({ align, ...rest }) => <TableCell align={align} {...rest} />,
-  th: ({ align, ...rest }) => <TableHead align={align} {...rest} />,
-  tr: (props) => <TableRow {...props} />,
-  tbody: (props) => <TableBody {...props} />,
-  thead: (props) => <TableHeader {...props} />,
-}
-
 export {
-  mdxTableComponents,
   Table,
   TableBody,
   TableCaption,
