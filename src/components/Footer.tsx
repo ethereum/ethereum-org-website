@@ -180,10 +180,6 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
           href: "/enterprise/",
           text: t("enterprise-mainnet"),
         },
-        {
-          href: "/enterprise/private-ethereum/",
-          text: t("enterprise-private"),
-        },
       ],
     },
     {
