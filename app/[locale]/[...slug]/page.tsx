@@ -6,10 +6,11 @@ import I18nProvider from "@/components/I18nProvider"
 import mdComponents from "@/components/MdComponents"
 
 import { dataLoader } from "@/lib/utils/data/dataLoader"
+import { dateToString } from "@/lib/utils/date"
 import { getPostSlugs } from "@/lib/utils/md"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
-import { LOCALES_CODES } from "@/lib/constants"
+import { DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
 
 import { componentsMapping, layoutMapping } from "@/layouts"
 import { fetchGFIs } from "@/lib/api/fetchGFIs"
@@ -17,6 +18,18 @@ import { getPageData } from "@/lib/md/data"
 import { getMdMetadata } from "@/lib/md/metadata"
 
 const loadData = dataLoader([["gfissues", fetchGFIs]])
+
+function getLayoutFromSlug(slug: string) {
+  if (slug.includes("developers/docs")) {
+    return "docs"
+  }
+
+  if (slug.includes("developers/tutorials")) {
+    return "tutorial"
+  }
+
+  return "static"
+}
 
 export default async function Page({
   params,
@@ -26,7 +39,7 @@ export default async function Page({
   const { locale, slug: slugArray } = await params
 
   // Check if this specific path is in our valid paths
-  const validPaths = await generateStaticParams()
+  const validPaths = await pagesToBuild()
   const isValidPath = validPaths.some(
     (path) =>
       path.locale === locale && path.slug.join("/") === slugArray.join("/")
@@ -49,6 +62,7 @@ export default async function Page({
     tocItems,
     lastEditLocaleTimestamp,
     isTranslated,
+    contributors,
   } = await getPageData({
     locale,
     slug,
@@ -61,8 +75,13 @@ export default async function Page({
   })
 
   // Determine the actual layout after we have the frontmatter
-  const layout = frontmatter.template || "static"
+  const layout = frontmatter.template || getLayoutFromSlug(slug)
   const Layout = layoutMapping[layout]
+
+  // If the page has a published date, format it
+  if ("published" in frontmatter) {
+    frontmatter.published = dateToString(frontmatter.published)
+  }
 
   // Get i18n messages
   const allMessages = await getMessages({ locale })
@@ -77,6 +96,9 @@ export default async function Page({
         tocItems={tocItems}
         lastEditLocaleTimestamp={lastEditLocaleTimestamp}
         contentNotTranslated={!isTranslated}
+        contributors={contributors}
+        // TODO: Remove this once we have a real timeToRead value
+        timeToRead={2}
       >
         {content}
       </Layout>
@@ -84,8 +106,8 @@ export default async function Page({
   )
 }
 
-export async function generateStaticParams() {
-  const slugs = await getPostSlugs("/", /\/developers/)
+async function pagesToBuild() {
+  const slugs = await getPostSlugs("/")
 
   return LOCALES_CODES.flatMap((locale) =>
     slugs.map((slug) => ({
@@ -94,6 +116,19 @@ export async function generateStaticParams() {
     }))
   )
 }
+
+export async function generateStaticParams() {
+  const allPages = await pagesToBuild()
+
+  if (process.env.IS_PREVIEW_DEPLOY === "true") {
+    // Only build default locale
+    return allPages.filter((page) => page.locale === DEFAULT_LOCALE)
+  }
+
+  return allPages
+}
+
+export const dynamicParams = true
 
 export async function generateMetadata({
   params,
