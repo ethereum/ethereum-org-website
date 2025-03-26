@@ -1,14 +1,21 @@
 import { Meta, StoryObj } from "@storybook/react"
 
-import LeftNavBar from "."
+import LeftNavBarComponent from "."
 
-const meta: Meta<typeof LeftNavBar> = {
+const meta = {
   title: "Molecules / Navigation / LeftNavBar",
-  component: LeftNavBar,
+  component: LeftNavBarComponent,
   parameters: {
-    layout: "centered",
+    layout: "fullscreen",
   },
-}
+  decorators: [
+    (Story) => (
+      <div className="max-w-[496px]">
+        <Story />
+      </div>
+    ),
+  ],
+} satisfies Meta<typeof LeftNavBarComponent>
 
 export default meta
 
@@ -34,29 +41,7 @@ const mockTocItems = [
   },
 ]
 
-const mockDropdownLinks = {
-  text: "More",
-  ariaLabel: "More links",
-  items: [
-    { text: "Link 1", to: "/link1" },
-    { text: "Link 2", to: "/link2" },
-  ],
-}
-
-export const Default: Story = {
-  args: {
-    tocItems: mockTocItems,
-  },
-}
-
-export const WithDropdown: Story = {
-  args: {
-    tocItems: mockTocItems,
-    dropdownLinks: mockDropdownLinks,
-  },
-}
-
-export const CustomMaxDepth: Story = {
+export const LeftNavBar: Story = {
   args: {
     tocItems: mockTocItems,
     maxDepth: 2,
