@@ -127,7 +127,6 @@ module.exports = (phase, { defaultConfig }) => {
             "public/**/*.pdf",
             "public/fonts",
             "public/images",
-            "public/content",
           ],
         },
       },
