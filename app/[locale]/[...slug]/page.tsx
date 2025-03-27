@@ -10,7 +10,7 @@ import { dateToString } from "@/lib/utils/date"
 import { getPostSlugs } from "@/lib/utils/md"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
-import { DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
+import { LOCALES_CODES } from "@/lib/constants"
 
 import { componentsMapping, layoutMapping } from "@/layouts"
 import { fetchGFIs } from "@/lib/api/fetchGFIs"
@@ -39,7 +39,7 @@ export default async function Page({
   const { locale, slug: slugArray } = await params
 
   // Check if this specific path is in our valid paths
-  const validPaths = await pagesToBuild()
+  const validPaths = await generateStaticParams()
   const isValidPath = validPaths.some(
     (path) =>
       path.locale === locale && path.slug.join("/") === slugArray.join("/")
@@ -106,7 +106,7 @@ export default async function Page({
   )
 }
 
-async function pagesToBuild() {
+export async function generateStaticParams() {
   const slugs = await getPostSlugs("/")
 
   return LOCALES_CODES.flatMap((locale) =>
@@ -117,18 +117,7 @@ async function pagesToBuild() {
   )
 }
 
-export async function generateStaticParams() {
-  const allPages = await pagesToBuild()
-
-  if (process.env.IS_PREVIEW_DEPLOY === "true") {
-    // Only build default locale
-    return allPages.filter((page) => page.locale === DEFAULT_LOCALE)
-  }
-
-  return allPages
-}
-
-export const dynamicParams = true
+export const dynamicParams = false
 
 export async function generateMetadata({
   params,
