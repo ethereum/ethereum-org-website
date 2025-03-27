@@ -20,28 +20,28 @@ const NetworkMaturityTooltip = ({ maturity }: { maturity: MaturityLevel }) => {
       label: t("page-layer-2-networks-robust-label"),
       description: t("page-layer-2-networks-robust-description"),
       tag: {
-        className: "bg-blue-100 text-black border-none",
+        className: "bg-blue-600 text-white border-none",
       },
     },
     maturing: {
       label: t("page-layer-2-networks-maturing-label"),
       description: t("page-layer-2-networks-maturing-description"),
       tag: {
-        className: "bg-blue-200 text-black border-none",
+        className: "bg-blue-400 text-white border-none",
       },
     },
     developing: {
       label: t("page-layer-2-networks-developing-label"),
       description: t("page-layer-2-networks-developing-description"),
       tag: {
-        className: "bg-blue-400 text-white border-none",
+        className: "bg-blue-200 text-black border-none",
       },
     },
     emerging: {
       label: t("page-layer-2-networks-emerging-label"),
       description: t("page-layer-2-networks-emerging-description"),
       tag: {
-        className: "bg-blue-600 text-white border-none",
+        className: "bg-blue-100 text-black border-none",
       },
     },
   } as const

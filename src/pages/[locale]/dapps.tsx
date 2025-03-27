@@ -76,6 +76,7 @@ import golem from "@/public/images/dapps/golem.png"
 import graph from "@/public/images/dapps/graph.png"
 import index from "@/public/images/dapps/index-coop.png"
 import ipfs from "@/public/images/dapps/ipfs.png"
+import kiwinews from "@/public/images/dapps/kiwinews.png"
 import krystal from "@/public/images/dapps/krystal.png"
 import kyberswap from "@/public/images/dapps/kyberswap.png"
 import lido from "@/public/images/dapps/lido.png"
@@ -88,7 +89,6 @@ import nexus from "@/public/images/dapps/nexus.png"
 import nifty from "@/public/images/dapps/nifty.png"
 import opensea from "@/public/images/dapps/opensea.png"
 import opera from "@/public/images/dapps/opera.png"
-import osuvox from "@/public/images/dapps/osuvox.png"
 import poap from "@/public/images/dapps/poap.png"
 import polymarket from "@/public/images/dapps/polymarket.png"
 import pooltogether from "@/public/images/dapps/pooltogether.png"
@@ -127,38 +127,6 @@ const Page = (props: ChildOnlyProp & FlexProps) => (
 
 const Content = (props: ChildOnlyProp) => (
   <div className="w-full px-8 py-4" {...props} />
-)
-
-const OptionContainer = (props: ChildOnlyProp) => (
-  <Flex
-    className="mb-8 w-full flex-col justify-center px-8 lg:w-auto lg:flex-row"
-    {...props}
-  />
-)
-
-const Option = (
-  props: Pick<ButtonProps, "children" | "onClick"> & { isActive: boolean }
-) => {
-  return (
-    <Button
-      variant="outline"
-      className={cn(
-        `my-2 flex w-full items-center justify-center rounded-4xl border px-6 py-4 transition-none lg:mx-2 lg:w-auto lg:justify-start ${
-          props.isActive
-            ? "border-primary text-primary shadow-table-box"
-            : "border-body text-body"
-        } hover:border-primary hover:text-primary active:bg-transparent`
-      )}
-      {...props}
-    />
-  )
-}
-
-const OptionText = (props: ChildOnlyProp) => (
-  <span
-    className="text-center text-md font-semibold md:text-2xl md:font-normal"
-    {...props}
-  />
 )
 
 const ButtonPrimary = (props: Pick<ButtonProps, "children" | "onClick">) => (
@@ -961,13 +929,6 @@ const DappsPage = () => {
 
   const avatar = [
     {
-      title: "OSUVOX",
-      description: t("page-dapps-dapp-description-osuvox"),
-      link: "https://osuvox.io/",
-      image: osuvox,
-      alt: t("page-dapps-osuvox-logo-alt"),
-    },
-    {
       title: "Spatial",
       description: t("page-dapps-dapp-description-spatial"),
       link: "https://www.spatial.io/",
@@ -1014,6 +975,13 @@ const DappsPage = () => {
       link: "https://link3.to/cyberconnect",
       image: cyberconnect,
       alt: t("page-dapps-cyberconnect-logo-alt"),
+    },
+    {
+      title: "Kiwi News",
+      description: t("page-dapps-dapp-description-kiwinews"),
+      link: "https://news.kiwistand.com/",
+      image: kiwinews,
+      alt: t("page-dapps-kiwinews-logo-alt"),
     },
   ]
 
@@ -1339,14 +1307,21 @@ const DappsPage = () => {
         <H2 id="explore">{t("page-dapps-explore-dapps-title")}</H2>
         <CenterText>{t("page-dapps-explore-dapps-description")}</CenterText>
         <H3>{t("page-dapps-choose-category")}</H3>
-        <OptionContainer>
+        <div className="mb-8 grid w-full grid-cols-1 justify-center gap-4 px-8 sm:grid-cols-2 lg:w-auto lg:grid-cols-3 2xl:grid-cols-6">
           {categoryKeys.map((key, idx) => {
             const categoryType = key as CategoryType
             const category = categories[categoryType]
             return (
-              <Option
+              <Button
                 key={idx}
-                isActive={selectedCategory === categoryType}
+                variant="outline"
+                className={cn(
+                  "flex items-center justify-center rounded-4xl border px-6 py-4 transition-none lg:justify-start",
+                  selectedCategory === categoryType
+                    ? "border-primary text-primary shadow-table-box"
+                    : "border-body text-body",
+                  "hover:border-primary hover:text-primary active:bg-transparent"
+                )}
                 onClick={() => {
                   handleCategorySelect(categoryType, false)
                   trackCustomEvent({
@@ -1356,12 +1331,17 @@ const DappsPage = () => {
                   })
                 }}
               >
-                <Emoji className="me-4 text-2xl" text={category.emoji} />
-                <OptionText>{category.title}</OptionText>
-              </Option>
+                <Emoji
+                  className="me-4 shrink-0 text-2xl"
+                  text={category.emoji}
+                />
+                <span className="text-center text-md font-semibold md:text-2xl md:font-normal">
+                  {category.title}
+                </span>
+              </Button>
             )
           })}
-        </OptionContainer>
+        </div>
         {/* Category-specific content */}
         {selectedCategory === CategoryType.FINANCE && (
           <Content>

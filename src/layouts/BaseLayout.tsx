@@ -1,5 +1,4 @@
 // import { join } from "path"
-
 import dynamic from "next/dynamic"
 
 import type { Root } from "@/lib/types"

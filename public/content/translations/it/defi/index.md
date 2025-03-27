@@ -1,5 +1,6 @@
 ---
 title: Finanza decentralizzata (DeFi)
+metaTitle: Cos'è la DeFi? | Benefici e utilizzi della finanza decentralizzata
 description: Una panoramica sulla DeFi su Ethereum
 lang: it
 template: use-cases
@@ -168,7 +169,7 @@ Se l'offerta sulla piattaforma di scambio B cala improvvisamente, e l'utente non
 
 Per applicare l'esempio precedente nel mondo finanziario tradizionale, necessiteresti di un ingente importo di denaro. Queste strategie di guadagno sono accessibili soltanto a persone già ricche. I prestiti istantanei sono l'esempio ddi un futuro in cui possedere denaro non è necessariamente un prerequisito per guadagnare.
 
-<ButtonLink isSecondary href="https://aave.com/flash-loans/">
+<ButtonLink isSecondary href="https://aave.com/docs/concepts/flash-loans">
   Di più sui prestiti istantanei
 </ButtonLink>
 
@@ -324,7 +325,7 @@ Puoi pensare alla DeFi in termini di strati:
 3. I protocolli: [contratti intelligenti](/glossary/#smart-contract) che forniscono la funzionalità, ad esempio, un servizio che consente il prestito decentralizzato delle risorse.
 4. [Le applicazioni](/dapps/): i prodotti che utilizziamo per gestire e accedere ai protocolli.
 
-Nota: la DeFi usa in buona parte lo [standard ERC-20](/glossary/#erc-20). Le applicazioni in DeFi usano un wrapper per ETH chiamato Wrapped Ether (WETH). [Scopri di più sul wrapped ether](/wrapped-eth).
+Nota: la DeFi usa in buona parte lo [standard ERC-20](/glossary/#erc-20). Le applicazioni nella DeFi utilizzano la versione "wrapped" di ETH, chiamata Wrapped Ether (WETH). [Scopri di più sul wrapped ether](/wrapped-eth).
 
 ## Creare DeFi {#build-defi}
 

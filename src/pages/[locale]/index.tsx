@@ -218,7 +218,6 @@ const HomePage = ({
   const {
     t,
     locale,
-    asPath,
     dir,
     isModalOpen,
     setModalOpen,
@@ -241,7 +240,7 @@ const HomePage = ({
         title={t("page-index:page-index-meta-title")}
         description={t("page-index:page-index-meta-description")}
       />
-      <TranslatathonBanner pathname={asPath} />
+      <TranslatathonBanner />
       <HomeHero heroImg={Hero} className="w-full" />
       <div className="w-full space-y-32 px-4 md:mx-6 lg:space-y-48">
         <div className="my-20 grid w-full grid-cols-2 gap-x-4 gap-y-8 md:grid-cols-4 md:gap-x-10">
@@ -364,6 +363,18 @@ const HomePage = ({
               <Suspense fallback={<SkeletonLines noOfLines={10} />}>
                 <StatsBoxGrid metricResults={metricResults} />
               </Suspense>
+              {/* className="mt-12 mx-auto" */}
+
+              <div className="mt-12 flex justify-center">
+                <ButtonLink
+                  size="lg"
+                  href="/resources/"
+                  isSecondary
+                  variant="outline"
+                >
+                  {t("page-index:page-index-activity-action")} <ChevronNext />
+                </ButtonLink>
+              </div>
             </div>
           </SectionContent>
         </Section>
@@ -493,7 +504,7 @@ const HomePage = ({
                   <button
                     key={title}
                     className={cn(
-                      "flex flex-col gap-y-0.5 border-t px-6 py-4 hover:bg-background-highlight max-md:hidden",
+                      "flex flex-col gap-y-0.5 border-t px-6 py-4 text-start hover:bg-background-highlight max-md:hidden",
                       isModalOpen &&
                         idx === activeCode &&
                         "bg-background-highlight"

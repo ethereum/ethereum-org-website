@@ -1,10 +1,11 @@
-import { useTranslations } from "next-intl"
 import type { Meta, StoryObj } from "@storybook/react"
 
 import { QuizContent } from "../QuizWidget/QuizContent"
 import { QuizSummary } from "../QuizWidget/QuizSummary"
 
 import { LAYER_2_QUIZ_TITLE_KEY, layer2Questions } from "./utils"
+
+import useTranslation from "@/hooks/useTranslation"
 
 const meta = {
   title: "Molecules / Display Content / Quiz / QuizWidget / Summary",
@@ -14,7 +15,7 @@ const meta = {
   },
   decorators: [
     (Story) => {
-      const t = useTranslations()
+      const { t } = useTranslation()
       return (
         <QuizContent title={t(LAYER_2_QUIZ_TITLE_KEY)} answerStatus={null}>
           <Story />

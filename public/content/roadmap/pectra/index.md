@@ -34,7 +34,7 @@ But the benefit of a better reward system for validators is only a part of this 
 
 Blobs are the new efficient way of storing L2 rollup data introduced in [the previous upgrade](/roadmap/dencun/). Since then, blobs have been adopted by Ethereum L2s and heavily utilized. With blob usage at capacity, rollup fees are increasing and their scalability is limited to throughput given by blob size.
 
-Currently, network targets average 3 blobs per block with a maximum of 6 blobs. With [EIP-7691](https://eips.ethereum.org/EIPS/eip-7691), the blob count will be increased to 6 targets with a maximum of 9, resulting in more space for data, therefore increased scalability and cheaper fees in Ethereum rollups.
+Currently, network targets average 3 blobs per block with a maximum of 6 blobs. With [EIP-7691](https://eips.ethereum.org/EIPS/eip-7691), the blob count will be increased to 6 targets with a maximum of 9, resulting in more space for data, therefore increased scalability and cheaper fees in Ethereum rollups. This moderate throughput boost helps bridge the gap until [PeerDAS](https://eips.ethereum.org/EIPS/eip-7594) enables even higher blob counts.
 
 ### Increase calldata cost {#7623}
 
