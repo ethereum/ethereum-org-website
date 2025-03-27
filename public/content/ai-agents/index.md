@@ -57,7 +57,7 @@ We're beginning to explore the full potential of AI agents, and projects are alr
 
 ## Agent-controlled wallets {#agent-controlled-wallets}
 
-Agents like Luna or AIXBT control their own onchain wallet ([AIXBT's wallet](https://clusters.xyz/aixbt), [Luna's wallet](https://zapper.xyz/account/0x0d177181e3763b20d47dc3a72dd584368bd8bf43)) enabling them to tip fans and participate in economic activities.
+Agents like Freysa, Luna, or AIXBT control their own onchain wallet ([Freysa's Wallet](https://basescan.org/address/0x54f3C7E175528eB376002c488db31C74a8107767), [AIXBT's wallet](https://clusters.xyz/aixbt), [Luna's wallet](https://zapper.xyz/account/0x0d177181e3763b20d47dc3a72dd584368bd8bf43)) enabling them to tip fans and participate in economic activities.
 
 During Luna's X social campaign #LunaMuralChallenge, Luna selected and rewarded the winners via her Base wallet — marking <strong>the first instance of an AI hiring humans for crypto reward</strong>.
 
