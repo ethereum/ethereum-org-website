@@ -1,3 +1,5 @@
+"use client"
+
 import { PauseCircleIcon, PlayCircleIcon } from "@/components/icons/listen-to"
 import { Button } from "@/components/ui/buttons/Button"
 
