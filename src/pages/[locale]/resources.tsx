@@ -115,7 +115,7 @@ const ResourcesPage = ({ txCostsMedianUsd }) => {
         description={t("page-resources-hero-description")}
         heroImg={heroImg}
       />
-      <Stack className="gap-4 px-2 py-4 md:gap-8 md:px-4 lg:px-8 xl:gap-11">
+      <Stack className="gap-4 px-2 py-6 md:gap-8 md:px-4 lg:px-8 xl:gap-11">
         <div className="sticky top-5 flex flex-col items-center gap-3 text-center md:top-6 md:px-2">
           <div className="my-2 text-body-medium">
             {t("page-resources-whats-on-this-page")}
