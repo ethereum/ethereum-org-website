@@ -22,10 +22,18 @@ const PlayerButton = ({
   children: React.ReactNode
   tooltipContent: string
 }) => {
-  return isMobile() ? (
+  const [isMobileDevice, setIsMobileDevice] = useState(false)
+
+  useEffect(() => {
+    setIsMobileDevice(isMobile())
+  }, [])
+
+  return isMobileDevice ? (
     children
   ) : (
-    <Tooltip content={tooltipContent}>{children}</Tooltip>
+    <Tooltip content={tooltipContent}>
+      <span>{children}</span>
+    </Tooltip>
   )
 }
 
@@ -134,6 +142,14 @@ const PlayerWidget = ({
 
   const speedOptions = [0.5, 1.0, 1.5, 2.0]
 
+  // First, let's create a reusable KeyboardEvent handler
+  const handleKeyPress = (callback: () => void) => (e: React.KeyboardEvent) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault()
+      callback()
+    }
+  }
+
   return (
     <div
       className={cn(
@@ -147,9 +163,10 @@ const PlayerWidget = ({
         <div className="flex justify-between">
           <p className="text-sm font-bold leading-base">{title}</p>
           <Tooltip content={"Collapse"}>
-            <button
+            <div
+              role="button"
+              tabIndex={0}
               className="cursor-pointer text-body-medium hover:text-body"
-              aria-label={"Collapse"}
               onClick={() => {
                 setIsExpanded(!isExpanded)
                 trackCustomEvent({
@@ -158,9 +175,18 @@ const PlayerWidget = ({
                   eventName: "minimize",
                 })
               }}
+              onKeyDown={handleKeyPress(() => {
+                setIsExpanded(!isExpanded)
+                trackCustomEvent({
+                  eventCategory: "Audio",
+                  eventAction: "click",
+                  eventName: "minimize",
+                })
+              })}
+              aria-label={"Collapse"}
             >
               <CollapseIcon />
-            </button>
+            </div>
           </Tooltip>
         </div>
         <div className="flex items-center justify-between">
@@ -189,14 +215,18 @@ const PlayerWidget = ({
         <div className="flex items-center justify-between gap-10">
           <div className="relative">
             <PlayerButton tooltipContent={"Playback speed"}>
-              <button
+              <div
+                role="button"
+                tabIndex={0}
                 className="w-[24px] cursor-pointer text-right text-xs font-bold leading-base text-body-medium hover:text-body"
                 onClick={() => setShowSpeedMenu(!showSpeedMenu)}
-                title={`Playback speed`}
+                onKeyDown={handleKeyPress(() =>
+                  setShowSpeedMenu(!showSpeedMenu)
+                )}
                 aria-label={"Playback speed"}
               >
                 {playbackSpeed}x
-              </button>
+              </div>
             </PlayerButton>
             {showSpeedMenu && (
               <div
@@ -204,45 +234,57 @@ const PlayerWidget = ({
                 className="absolute bottom-full left-0 mb-2 rounded-lg border bg-background shadow-lg"
               >
                 {speedOptions.map((speed) => (
-                  <button
+                  <div
                     key={speed}
+                    role="button"
+                    tabIndex={0}
                     className="cursor-pointer px-4 py-1 text-xs hover:bg-background-highlight"
                     onClick={() => {
                       handlePlaybackSpeed(speed)
                       setShowSpeedMenu(false)
                     }}
+                    onKeyDown={handleKeyPress(() => {
+                      handlePlaybackSpeed(speed)
+                      setShowSpeedMenu(false)
+                    })}
                   >
                     {speed}x
-                  </button>
+                  </div>
                 ))}
               </div>
             )}
           </div>
           <PlayerButton tooltipContent={"Previous"}>
-            <button
+            <div
+              role="button"
+              tabIndex={0}
               className={cn(
                 "cursor-pointer text-2xl hover:text-primary",
                 currentTrackIndex === 0 ? "text-disabled" : "text-body-medium"
               )}
               onClick={handlePrevious}
-              title="Previous"
+              onKeyDown={handleKeyPress(handlePrevious)}
               aria-label={"Previous"}
             >
               <ArrowIcon />
-            </button>
+            </div>
           </PlayerButton>
           <PlayerButton tooltipContent={isPlaying ? "Pause" : "Play"}>
-            <button
+            <div
+              role="button"
+              tabIndex={0}
               className="cursor-pointer text-[32px] text-primary hover:text-primary-hover"
               onClick={handlePlayPause}
-              title={isPlaying ? "Pause" : "Play"}
+              onKeyDown={handleKeyPress(handlePlayPause)}
               aria-label={isPlaying ? "Pause" : "Play"}
             >
               {isPlaying ? <PauseCircleIcon /> : <PlayCircleIcon />}
-            </button>
+            </div>
           </PlayerButton>
           <PlayerButton tooltipContent={"Next"}>
-            <button
+            <div
+              role="button"
+              tabIndex={0}
               className={cn(
                 "cursor-pointer text-2xl hover:text-primary",
                 currentTrackIndex === totalTracks - 1
@@ -250,27 +292,29 @@ const PlayerWidget = ({
                   : "text-body-medium"
               )}
               onClick={handleNext}
-              title="Next"
+              onKeyDown={handleKeyPress(handleNext)}
               aria-label={"Next"}
             >
               <ArrowIcon className="rotate-180" />
-            </button>
+            </div>
           </PlayerButton>
           <PlayerButton
             tooltipContent={autoplay ? "Disable autoplay" : "Enable autoplay"}
           >
-            <button
+            <div
+              role="button"
+              tabIndex={0}
               className={cn(
                 "cursor-pointer text-base",
                 autoplay ? "text-primary" : "text-disabled",
                 "hover:text-primary-hover"
               )}
               onClick={() => setAutoplay(!autoplay)}
-              title={autoplay ? "Disable autoplay" : "Enable autoplay"}
+              onKeyDown={handleKeyPress(() => setAutoplay(!autoplay))}
               aria-label={autoplay ? "Disable autoplay" : "Enable autoplay"}
             >
               <AutoplayIcon />
-            </button>
+            </div>
           </PlayerButton>
         </div>
       </div>
@@ -283,14 +327,16 @@ const PlayerWidget = ({
       >
         <div className="flex flex-row items-center gap-2">
           <PlayerButton tooltipContent={isPlaying ? "Pause" : "Play"}>
-            <button
+            <div
+              role="button"
+              tabIndex={0}
               className="cursor-pointer text-[32px] text-primary hover:text-primary-hover"
               onClick={handlePlayPause}
-              title={isPlaying ? "Pause" : "Play"}
+              onKeyDown={handleKeyPress(handlePlayPause)}
               aria-label={isPlaying ? "Pause" : "Play"}
             >
               {isPlaying ? <PauseCircleIcon /> : <PlayCircleIcon />}
-            </button>
+            </div>
           </PlayerButton>
           <div className="text-sm text-body-medium">
             {`${Math.floor(timeRemaining / 60)}:${String(Math.floor(timeRemaining % 60)).padStart(2, "0")}`}
@@ -298,10 +344,10 @@ const PlayerWidget = ({
         </div>
         <div className="flex flex-row gap-6">
           <PlayerButton tooltipContent={"Expand"}>
-            <button
+            <div
+              role="button"
+              tabIndex={0}
               className="cursor-pointer text-disabled hover:text-body"
-              title={"Expand"}
-              aria-label={"Expand"}
               onClick={() => {
                 setIsExpanded(!isExpanded)
                 trackCustomEvent({
@@ -310,22 +356,36 @@ const PlayerWidget = ({
                   eventName: "expand",
                 })
               }}
+              onKeyDown={handleKeyPress(() => {
+                setIsExpanded(!isExpanded)
+                trackCustomEvent({
+                  eventCategory: "Audio",
+                  eventAction: "click",
+                  eventName: "expand",
+                })
+              })}
+              aria-label={"Expand"}
             >
               <ExpandIcon />
-            </button>
+            </div>
           </PlayerButton>
           <PlayerButton tooltipContent={"Close"}>
-            <button
+            <div
+              role="button"
+              tabIndex={0}
               className="cursor-pointer text-disabled hover:text-body"
-              title={"Close"}
-              aria-label={"Close"}
               onClick={() => {
                 setIsExpanded(!isExpanded)
                 handleCloseWidget()
               }}
+              onKeyDown={handleKeyPress(() => {
+                setIsExpanded(!isExpanded)
+                handleCloseWidget()
+              })}
+              aria-label={"Close"}
             >
               <IoClose />
-            </button>
+            </div>
           </PlayerButton>
         </div>
       </div>
