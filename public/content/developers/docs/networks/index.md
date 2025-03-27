@@ -34,7 +34,7 @@ ETH on testnets is supposed to have no real value; however, there have been mark
 
 #### Which Testnet should I use?
 
-The two public testnets that client developers are currently maintaining are Sepolia and Goerli. Sepolia is a network for contract and application developers to test their applications. The Goerli network lets protocol developers test network upgrades, and lets stakers test running validators.
+The two public testnets that client developers are currently maintaining are Sepolia and Hoodi. Sepolia is a network for contract and application developers to test their applications. The Hoodi network lets protocol developers test network upgrades, and lets stakers test running validators.
 
 #### Sepolia {#sepolia}
 
@@ -64,11 +64,9 @@ The Sepolia network uses a permissioned validator set. It's fairly new, meaning 
 - [Chainstack Sepolia faucet](https://faucet.chainstack.com/sepolia-faucet)
 - [Ethereum Ecosystem faucet](https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia)
 
-#### Goerli _(long-term support)_ {#goerli}
+#### Hoodi {#hoodi}
 
-_Note: [the Goerli testnet is deprecated](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17) and will be replaced by [Holesovice](https://github.com/eth-clients/holesovice) in 2023. Please consider migrating your applications to Sepolia._
-
-Goerli is a testnet for testing validating and staking. The Goerli network is open for users wanting to run a testnet validator. Stakers wanting to test protocol upgrades before they are deployed to mainnet should therefore use Goerli.
+Hoodi is a testnet for testing validating and staking. The Hoodi network is open for users wanting to run a testnet validator. Stakers wanting to test protocol upgrades before they are deployed to mainnet should therefore use Hoodi.
 
 - Open validator set, stakers can test network upgrades
 - Large state, useful for testing complex smart contract interactions
@@ -76,44 +74,38 @@ Goerli is a testnet for testing validating and staking. The Goerli network is op
 
 ##### Resources
 
-- [Website](https://goerli.net/)
-- [GitHub](https://github.com/eth-clients/goerli)
-- [Etherscan](https://goerli.etherscan.io)
-- [Blockscout](https://eth-goerli.blockscout.com/)
+- [Website](https://hoodi.ethpandaops.io/)
+- [GitHub](https://github.com/eth-clients/hoodi)
+- [Explorer](https://explorer.hoodi.ethpandaops.io/)
+- [Checkpoint Sync](https://checkpoint-sync.hoodi.ethpandaops.io/)
 
 ##### Faucets
 
-- [QuickNode Goerli Faucet](https://faucet.quicknode.com/drip)
-- [Grabteeth](https://grabteeth.xyz/)
-- [PoW faucet](https://goerli-faucet.pk910.de/)
-- [Paradigm faucet](https://faucet.paradigm.xyz/)
-- [Alchemy Goerli Faucet](https://goerlifaucet.com/)
-- [All That Node Goerli Faucet](https://www.allthatnode.com/faucet/ethereum.dsrv)
-- [Coinbase Wallet Faucet | Goerli](https://coinbase.com/faucets/ethereum-goerli-faucet)
-- [Chainstack Goerli faucet](https://faucet.chainstack.com/goerli-faucet)
+- [Hoodi Faucet](https://hoodi.ethpandaops.io/)
 
-To launch a Validator on Holesky testnet, use ethstaker's ["cheap Holesky validator" launchpad](https://holesky.launchpad.ethstaker.cc/en/).
+To launch a Validator on Hoodi testnet, use [Hoodi launchpad](https://hoodi.launchpad.ethereum.org/en/).
 
 ### Layer 2 testnets {#layer-2-testnets}
 
 [Layer 2 (L2)](/layer-2/) is a collective term to describe a specific set of Ethereum scaling solutions. A layer 2 is a separate blockchain that extends Ethereum and inherits the security guarantees of Ethereum. Layer 2 testnets are usually tightly coupled to public Ethereum testnets.
 
-#### Arbitrum Goerli {#arbitrum-goerli}
+#### Arbitrum Sepolia {#arbitrum-sepolia}
 
 A testnet for [Arbitrum](https://arbitrum.io/).
 
 ##### Faucets
 
-- [Chainlink faucet](https://faucets.chain.link/)
+- [Chainlink faucet](https://faucets.chain.link/arbitrum-sepolia)
+- [Alchemy faucet](https://www.alchemy.com/faucets/arbitrum-sepolia)
 
-#### Optimistic Goerli {#optimistic-goerli}
+#### Optimistic Sepolia {#optimistic-sepolia}
 
 A testnet for [Optimism](https://www.optimism.io/).
 
 ##### Faucets
 
-- [Paradigm faucet](https://faucet.paradigm.xyz/)
-- [Coinbase Wallet Faucet | Optimism Goerli](https://coinbase.com/faucets/optimism-goerli-faucet)
+- [Chainlink faucet](https://faucets.chain.link/optimism-sepolia)
+- [Alchemy faucet](https://www.alchemy.com/faucets/optimism-sepolia)
 
 #### Starknet Goerli {#starknet-goerli}
 
@@ -121,7 +113,7 @@ A testnet for [Starknet](https://www.starknet.io).
 
 ##### Faucets
 
-- [Starknet faucet](https://faucet.goerli.starknet.io)
+- [Alchemy faucet](https://www.alchemy.com/faucets/starknet-sepolia)
 
 ## Private networks {#private-networks}
 
