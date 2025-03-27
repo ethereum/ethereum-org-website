@@ -195,41 +195,41 @@ const ResourcesPage = ({ txCostsMedianUsd }) => {
 
         <Section
           id="contribute"
-          className={cn(
-            "before:absolute before:-inset-px before:bottom-0 before:z-hide before:rounded-[calc(theme(borderRadius.4xl)+1px)] before:content-['']", // Border/gradient positioning
-            "before:bg-gradient-to-b before:from-primary-hover/[0.24] before:to-primary-hover/[0.08] before:dark:from-primary-hover/40 before:dark:to-primary-hover/20", // Border/gradient coloring
-            "relative inset-0 rounded-4xl bg-background" // Paint background color over card portion
-          )}
+          className="relative rounded-4xl border border-body/5 bg-background"
         >
-          <div className="mb-12 flex flex-col gap-y-8 rounded-4xl bg-radial-a px-8 py-12 lg:mb-32 xl:mb-36">
-            <div className="flex flex-col gap-y-4 text-center">
-              <h2>{t("page-resources-contribute-title")}</h2>
-              <p>{t("page-resources-contribute-description")}</p>
-            </div>
-            <div className="mx-auto grid grid-cols-1 gap-16 md:grid-cols-2">
-              {/* TODO: Add issue template for resource listing and redirect to new template */}
-              <ButtonLink
-                href={new URL(
-                  "issues/new?template=feature_request.yaml",
-                  GITHUB_REPO_URL
-                ).toString()}
-                variant="outline"
-                isSecondary
-              >
-                {t("page-resources-suggest-resource")}
-              </ButtonLink>
-              <ButtonLink
-                href={new URL(
-                  "issues/new?template=bug_report.yaml",
-                  GITHUB_REPO_URL
-                ).toString()}
-                variant="outline"
-                isSecondary
-              >
-                <FaGithub /> {t("page-resources-found-bug")}
-              </ButtonLink>
-            </div>
-          </div>
+          <VStack className="rounded-4xl bg-radial-a px-4 py-6 md:py-12">
+            <Stack className="max-w-xl gap-y-10 py-6 lg:max-w-[700px]">
+              <div className="flex flex-col gap-y-4 text-center">
+                <h2>{t("page-resources-contribute-title")}</h2>
+                <p className="text-lg">
+                  {t("page-resources-contribute-description")}
+                </p>
+              </div>
+              <div className="mx-auto grid grid-cols-1 gap-x-3 gap-y-4 md:grid-cols-2">
+                {/* TODO: Add issue template for resource listing and redirect to new template */}
+                <ButtonLink
+                  href={new URL(
+                    "issues/new?template=feature_request.yaml",
+                    GITHUB_REPO_URL
+                  ).toString()}
+                  variant="outline"
+                  isSecondary
+                >
+                  {t("page-resources-suggest-resource")}
+                </ButtonLink>
+                <ButtonLink
+                  href={new URL(
+                    "issues/new?template=bug_report.yaml",
+                    GITHUB_REPO_URL
+                  ).toString()}
+                  variant="outline"
+                  isSecondary
+                >
+                  <FaGithub /> {t("page-resources-found-bug")}
+                </ButtonLink>
+              </div>
+            </Stack>
+          </VStack>
         </Section>
       </Stack>
     </MainArticle>
