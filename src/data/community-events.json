@@ -18,15 +18,6 @@
     "imageUrl": "https://ethbucharest.ro/images/og-image.png"
   },
   {
-    "title": "ETH Seoul",
-    "startDate": "2025-04-06",
-    "endDate": "2025-04-13",
-    "href": "https://ethseoul.org",
-    "location": "Seoul",
-    "description": "",
-    "imageUrl": ""
-  },
-  {
     "title": "ETHDublin 2025",
     "startDate": "2025-05-23",
     "endDate": "2025-05-25",
@@ -649,12 +640,12 @@
   },
   {
     "title": "ETH Seoul",
-    "startDate": "2025-04-12",
-    "endDate": "2025-04-12",
+    "startDate": "2025-04-14",
+    "endDate": "2025-04-14",
     "href": "https://ethseoul.org",
     "location": "Seoul, KR",
     "description": "",
-    "imageUrl": ""
+    "imageUrl": "https://www.ethseoul.org/img/website-logo.png"
   },
   {
     "title": "ETH Cinco de Mayo",
