@@ -21,6 +21,7 @@ import { cn } from "@/lib/utils/cn"
 import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
+import { trackCustomEvent } from "@/lib/utils/matomo"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
@@ -36,6 +37,8 @@ import { useTranslation } from "@/hooks/useTranslation"
 import loadNamespaces from "@/i18n/loadNamespaces"
 import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
 import heroImg from "@/public/images/heroes/guides-hub-hero.jpg"
+
+const EVENT_CATEGORY = "dashboard"
 
 // In seconds
 const REVALIDATE_TIME = BASE_TIME_UNIT * 1
@@ -104,6 +107,13 @@ const ResourcesPage = ({ txCostsMedianUsd }) => {
             GITHUB_REPO_URL
           ).toString()}
           className="visited:text-white"
+          onClick={() => {
+            trackCustomEvent({
+              eventCategory: EVENT_CATEGORY,
+              eventAction: "links",
+              eventName: "Ethereum.org Github Page Feedback",
+            })
+          }}
         >
           {t("page-resources-share-feedback")}
         </Link>
@@ -131,6 +141,14 @@ const ResourcesPage = ({ txCostsMedianUsd }) => {
                   "relative text-nowrap rounded-xl px-4 py-2 text-sm [&_svg]:shrink-0 [&_svg]:text-sm",
                   activeSection === key && "!text-primary"
                 )}
+                onClick={() =>
+                  trackCustomEvent({
+                    eventCategory: EVENT_CATEGORY,
+                    eventAction: "whats_on_this_page",
+                    eventName:
+                      "network,using, scaling, resilience, privacy_security",
+                  })
+                }
               >
                 {activeSection === key && (
                   <motion.div
@@ -188,7 +206,17 @@ const ResourcesPage = ({ txCostsMedianUsd }) => {
           <div className="text-center font-bold">
             <Translation id="page-resources:page-resources-find-more" />
           </div>
-          <ButtonLink href="https://ethereumdashboards.com" size="lg">
+          <ButtonLink
+            href="https://ethereumdashboards.com"
+            size="lg"
+            onClick={() => {
+              trackCustomEvent({
+                eventCategory: EVENT_CATEGORY,
+                eventAction: "links",
+                eventName: "ethereumdashboards.com",
+              })
+            }}
+          >
             ethereumdashboards.com
           </ButtonLink>
         </VStack>
@@ -214,6 +242,13 @@ const ResourcesPage = ({ txCostsMedianUsd }) => {
                   ).toString()}
                   variant="outline"
                   isSecondary
+                  onClick={() => {
+                    trackCustomEvent({
+                      eventCategory: EVENT_CATEGORY,
+                      eventAction: "links",
+                      eventName: "Ethereum.org Github Feature Request",
+                    })
+                  }}
                 >
                   {t("page-resources-suggest-resource")}
                 </ButtonLink>
@@ -224,6 +259,13 @@ const ResourcesPage = ({ txCostsMedianUsd }) => {
                   ).toString()}
                   variant="outline"
                   isSecondary
+                  onClick={() => {
+                    trackCustomEvent({
+                      eventCategory: EVENT_CATEGORY,
+                      eventAction: "links",
+                      eventName: "Ethereum.org Github Bug Report",
+                    })
+                  }}
                 >
                   <FaGithub /> {t("page-resources-found-bug")}
                 </ButtonLink>
