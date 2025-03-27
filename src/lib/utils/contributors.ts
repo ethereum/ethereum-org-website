@@ -2,7 +2,7 @@ import { join } from "path"
 
 import type { CommitHistory, FileContributor, Lang, Layout } from "@/lib/types"
 
-import { DEFAULT_LOCALE } from "@/lib/constants"
+import { CONTENT_DIR, CONTENT_PATH, DEFAULT_LOCALE } from "@/lib/constants"
 
 import {
   convertToFileContributorFromCrowdin,
@@ -13,14 +13,15 @@ import { getLastModifiedDate } from "./gh"
 import { fetchAndCacheGitContributors } from "@/lib/api/fetchGitHistory"
 
 export const getFileContributorInfo = async (
-  mdDir: string,
-  mdPath: string,
   slug: string,
   locale: string,
   fileLang: string,
   layout: Layout,
   cache: CommitHistory
 ) => {
+  const mdPath = join(CONTENT_PATH, slug)
+  const mdDir = join(CONTENT_DIR, slug)
+
   const gitContributors = await fetchAndCacheGitContributors(
     join("/", mdDir, "index.md"),
     cache

@@ -173,7 +173,7 @@ We have an exceptional halt if any of these conditions is true:
 
   The function _W(w,μ)_ is defined later in equation 150. _W(w,μ)_ is true if one of these conditions is true:
 
-  - **_w ∈ {CREATE, CREATE2, SSTORE, SELFDESTRUCT}_**
+  - **_w ∈ \{CREATE, CREATE2, SSTORE, SELFDESTRUCT}_**
     These opcodes change the state, either by creating a new contract, storing a value, or destroying the current contract.
 
   - **_LOG0≤w ∧ w≤LOG4_**
@@ -240,7 +240,7 @@ The address whose balance we need to find is _μ<sub>s</sub>[0] mod 2<sup>160</s
 
 If _σ[μ<sub>s</sub>[0] mod 2<sup>160</sup>] ≠ ∅_, it means that there is information about this address. In that case, _σ[μ<sub>s</sub>[0] mod 2<sup>160</sup>]<sub>b</sub>_ is the balance for that address. If _σ[μ<sub>s</sub>[0] mod 2<sup>160</sup>] = ∅_, it means that this address is uninitialized and the balance is zero. You can see the list of account information fields in section 4.1 on p. 4.
 
-The second equation, _A'<sub>a</sub> ≡ A<sub>a</sub> ∪ {μ<sub>s</sub>[0] mod 2<sup>160</sup>}_, is related to the difference in cost between access to warm storage (storage that has recently been accessed and is likely to be cached) and cold storage (storage that hasn't been accessed and is likely to be in slower storage that is more expensive to retrieve). _A<sub>a</sub>_ is the list of addresses previously accessed by the transaction, which should therefore be cheaper to access, as defined in section 6.1 on p. 8. You can read more about this subject in [EIP-2929](https://eips.ethereum.org/EIPS/eip-2929).
+The second equation, _A'<sub>a</sub> ≡ A<sub>a</sub> ∪ \{μ<sub>s</sub>[0] mod 2<sup>160</sup>}_, is related to the difference in cost between access to warm storage (storage that has recently been accessed and is likely to be cached) and cold storage (storage that hasn't been accessed and is likely to be in slower storage that is more expensive to retrieve). _A<sub>a</sub>_ is the list of addresses previously accessed by the transaction, which should therefore be cheaper to access, as defined in section 6.1 on p. 8. You can read more about this subject in [EIP-2929](https://eips.ethereum.org/EIPS/eip-2929).
 
 | Value | Mnemonic | δ   | α   | Description                             |
 | ----: | -------- | --- | --- | --------------------------------------- |

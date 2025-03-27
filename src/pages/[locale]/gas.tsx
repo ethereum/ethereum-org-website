@@ -399,11 +399,11 @@ const GasPage = () => {
           <Callout
             className="min-h-full flex-[1_1_416px]"
             image={whatIsEthereumImg}
-            titleKey={t("page-gas-how-do-i-pay-less-gas-card-3-title")}
+            titleKey={"page-gas:page-gas-how-do-i-pay-less-gas-card-3-title"}
             alt=""
-            descriptionKey={t(
-              "page-gas-how-do-i-pay-less-gas-card-3-description"
-            )}
+            descriptionKey={
+              "page-gas:page-gas-how-do-i-pay-less-gas-card-3-description"
+            }
           >
             <div>
               <ButtonLink href="/layer-2/">
@@ -414,11 +414,11 @@ const GasPage = () => {
           <Callout
             className="min-h-full flex-[1_1_416px]"
             image={dogeComputerImg}
-            titleKey={t("page-community:page-community-explore-dapps-title")}
+            titleKey={"page-community:page-community-explore-dapps-title"}
             alt={t("page-community:page-community-explore-dapps-alt")}
-            descriptionKey={t(
+            descriptionKey={
               "page-community:page-community-explore-dapps-description"
-            )}
+            }
           >
             <div>
               <ButtonLink href="/dapps/">

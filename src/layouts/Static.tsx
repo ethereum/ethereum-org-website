@@ -13,6 +13,7 @@ import GlossaryDefinition from "@/components/Glossary/GlossaryDefinition"
 import GlossaryTooltip from "@/components/Glossary/GlossaryTooltip"
 import { HubHero } from "@/components/Hero"
 import NetworkUpgradeSummary from "@/components/History/NetworkUpgradeSummary"
+import ListenToPlayer from "@/components/ListenToPlayer"
 import Logo from "@/components/Logo"
 import MainArticle from "@/components/MainArticle"
 import MatomoOptOut from "@/components/MatomoOptOut"
@@ -35,7 +36,6 @@ import UpcomingEventsList from "@/components/UpcomingEventsList"
 import { getEditPath } from "@/lib/utils/editPath"
 import { isLangRightToLeft } from "@/lib/utils/translations"
 
-import { usePathname } from "@/i18n/routing"
 import GuideHeroImage from "@/public/images/heroes/guides-hub-hero.jpg"
 
 const Heading1 = (props: HTMLAttributes<HTMLHeadingElement>) => (
@@ -70,6 +70,7 @@ export const staticComponents = {
   SocialListItem,
   TranslationChartImage,
   UpcomingEventsList,
+  ListenToPlayer,
 }
 
 type StaticLayoutProps = ChildOnlyProp &
@@ -88,13 +89,12 @@ export const StaticLayout = ({
   contentNotTranslated,
 }: StaticLayoutProps) => {
   const locale = useLocale()
-  const pathname = usePathname()
 
   const absoluteEditPath = getEditPath(slug)
 
   return (
     <div className="w-full">
-      <TranslatathonBanner pathname={pathname} />
+      <TranslatathonBanner />
       <Flex
         className="mx-auto mb-16 w-full justify-between p-8 lg:pt-16"
         dir={contentNotTranslated ? "ltr" : "unset"}
@@ -111,7 +111,7 @@ export const StaticLayout = ({
             <Stack className="gap-8">
               <Breadcrumbs slug={slug} />
 
-              {!pathname.includes("/whitepaper") && (
+              {!slug.includes("/whitepaper") && (
                 <p
                   className="text-body-medium"
                   dir={isLangRightToLeft(locale as Lang) ? "rtl" : "ltr"}

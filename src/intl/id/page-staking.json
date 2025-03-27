@@ -232,7 +232,7 @@
   "page-staking-join-community": "Bergabung dengan komunitas penaruh",
   "page-staking-join-community-desc": "EthStaker adalah komunitas bagi semua orang untuk berdiskusi dan belajar tentang penaruhan di Ethereum. Bergabunglah dengan puluhan ribu anggota dari seluruh dunia untuk mendapatkan saran, dukungan, dan berbicara segala hal tentang penaruhan.",
   "page-staking-meta-description": "Gambaran umum tentang penaruhan Ethereum: risiko, imbalan, persyaratan, dan tempat melakukannya.",
-  "page-staking-meta-title": "Penaruhan Ethereum",
+  "page-staking-meta-title": "Penaruhan Ethereum: Bagaimana cara kerjanya?",
   "page-staking-withdrawals-important-notices": "Pemberitahuan Penting",
   "page-staking-withdrawals-important-notices-desc": "Penarikan masih belum tersedia. Silakan baca <a href=\"https://blog.ethereum.org/2021/12/01/eth2-merge-and-post-merge-faq/\" target=\"_blank\">FAQ Eth2 Merge dan pasca-merge</a> untuk informasi lebih lanjut.",
   "page-upgrades-merge-btn": "Selengkapnya tentang penggabungan",

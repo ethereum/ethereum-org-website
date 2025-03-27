@@ -2,7 +2,8 @@ import type { Meta, StoryObj } from "@storybook/react"
 
 import { Center } from "@/components/ui/flex"
 
-import { langViewportModes } from "../../../.storybook/modes"
+import { langViewportModes } from "@/storybook/modes"
+
 import { BaseLayout as BaseLayoutComponent } from "../BaseLayout"
 
 const meta = {
@@ -42,8 +43,8 @@ export const BaseLayout: StoryObj<typeof meta> = {
         Content Here
       </Center>
     ),
-    contentIsOutdated: false,
-    contentNotTranslated: false,
+    // contentIsOutdated: false,
+    // contentNotTranslated: false,
     lastDeployLocaleTimestamp: "May 14, 2021",
   },
 }

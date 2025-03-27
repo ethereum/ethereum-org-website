@@ -6,6 +6,7 @@ import Callout from "@/components/Callout"
 import { ContentHero, ContentHeroProps } from "@/components/Hero"
 import Layer2NetworksTable from "@/components/Layer2NetworksTable"
 import MainArticle from "@/components/MainArticle"
+import NetworkMaturity from "@/components/NetworkMaturity"
 import PageMetadata from "@/components/PageMetadata"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 
@@ -78,7 +79,7 @@ export const getStaticProps = (async ({ params }) => {
       return {
         ...network,
         txCosts: growThePieData.dailyTxCosts[network.growthepieID],
-        tvl: l2beatData.data.projects[network.l2beatID].tvl.breakdown.total,
+        tvl: l2beatData.data.projects[network.l2beatID].tvs.breakdown.total,
         networkMaturity: networkMaturity(
           l2beatData.data.projects[network.l2beatID]
         ),
@@ -193,6 +194,8 @@ const Layer2Networks = ({ layer2Data, locale, mainnetData }) => {
           </div>
         </div>
       </div>
+
+      <NetworkMaturity />
 
       <div
         id="callout-cards"
