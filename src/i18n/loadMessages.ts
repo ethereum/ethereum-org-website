@@ -10,7 +10,7 @@ function getNamespaces(localePath: string): string[] {
 
 const messagesCache: Record<string, Record<string, string>> = {}
 
-async function loadMessages(locale: string) {
+export async function loadMessages(locale: string) {
   if (messagesCache[locale]) {
     return messagesCache[locale]
   }
@@ -30,6 +30,3 @@ async function loadMessages(locale: string) {
   messagesCache[locale] = messages
   return messages
 }
-
-// Keep the React cache wrapper as well for RSC optimization
-export const getMessages = loadMessages
