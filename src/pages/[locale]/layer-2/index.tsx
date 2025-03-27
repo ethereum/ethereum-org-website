@@ -119,7 +119,6 @@ const Layer2Hub = ({
       ? { error: growThePieData.txCostsMedianUsd.error }
       : growThePieData.txCostsMedianUsd.value
 
-  // TODO: setup translation
   const heroContent: HubHeroProps = {
     title: t("page-layer-2-hero-title"),
     header: t("page-layer-2-hero-header"),
@@ -147,7 +146,6 @@ const Layer2Hub = ({
     ],
   }
 
-  // TODO: Setup for translation
   const calloutCards = [
     {
       title: t("page-layer-2-calloutCard-1-title"),
@@ -168,8 +166,6 @@ const Layer2Hub = ({
 
   return (
     <MainArticle className="relative flex flex-col">
-      {/* TODO: Clarify title and description here */}
-      {/* TODO: Setup for translation */}
       <PageMetadata
         title={t("page-layer-2-meta-title")}
         description={t("page-layer-2-meta-description")}
@@ -178,7 +174,6 @@ const Layer2Hub = ({
 
       <HubHero {...heroContent} />
 
-      {/* TODO: Setup for translation */}
       <div
         id="layer-2-powered-by-ethereum"
         className="flex w-full flex-col gap-8 px-8 py-9"
@@ -208,7 +203,6 @@ const Layer2Hub = ({
         </div>
       </div>
 
-      {/* TODO: Setup for translation */}
       <div id="layer-2-stats-box" className="w-full px-8 py-9">
         <div className="m-auto max-w-[992px] py-9">
           <div className="flex flex-col gap-8 border border-body-light p-8 md:flex-row md:gap-14">
@@ -243,17 +237,8 @@ const Layer2Hub = ({
             </div>
           </div>
         </div>
-        {/* TODO: Commented out for now, remove before release if we don't ship with it. */}
-        {/* <div className="relative m-auto -mt-4 h-44 w-44 -rotate-12 rounded-full bg-primary sm:absolute sm:right-10 sm:-mt-28 md:-mt-80 xl:right-52">
-          <div className="flex h-full w-full flex-col items-center justify-center">
-            <p className="text-background">over</p>
-            <p className="text-5xl text-background">100x</p>
-            <p className="text-background">cheaper</p>
-          </div>
-        </div> */}
       </div>
 
-      {/* TODO: Setup for translation */}
       <div id="layer-2-the-network-of-networks" className="w-full py-9 sm:px-8">
         <div className="flex flex-col gap-8 overflow-hidden bg-[#B9B9F1] bg-opacity-20 px-4 py-10 text-center">
           <h2>{t("page-layer-2-network-of-networks-title")}</h2>
@@ -391,7 +376,6 @@ const Layer2Hub = ({
         </div>
       </div>
 
-      {/* TODO: Setup for translation */}
       <div id="layer-2-ready-to-start" className="w-full px-8 py-9">
         <div className="flex flex-col items-center gap-8">
           <h2>{t("page-layer-2-ready-to-start-title")}</h2>
@@ -411,7 +395,6 @@ const Layer2Hub = ({
         </div>
       </div>
 
-      {/* TODO: Setup for translation */}
       <div id="layer-2-cta" className="w-full px-8 py-9">
         <div className="mx-auto flex max-w-[640px] flex-col gap-6 rounded bg-main-gradient p-8">
           <div className="flex flex-col gap-6">
@@ -476,7 +459,6 @@ const Layer2Hub = ({
         </div>
       </div>
 
-      {/* TODO: Setup for translation */}
       <div
         id="layer-2-why-do-we-need-multiple-networks"
         className="w-full px-8 py-9"
@@ -504,7 +486,6 @@ const Layer2Hub = ({
         </div>
       </div>
 
-      {/* TODO: Setup for translation */}
       <div
         id="layer-2-faq"
         className="flex w-full max-w-[832px] flex-col gap-12 px-8 py-9"
@@ -564,7 +545,6 @@ const Layer2Hub = ({
         </div>
       </div>
 
-      {/* TODO: Setup for translation */}
       <div
         id="layer-2-callout-cards"
         className="flex w-full flex-col px-8 py-8 md:flex-row"
