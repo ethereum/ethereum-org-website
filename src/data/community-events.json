@@ -18,15 +18,6 @@
     "imageUrl": "https://ethbucharest.ro/images/og-image.png"
   },
   {
-    "title": "ETH Seoul",
-    "startDate": "2025-04-06",
-    "endDate": "2025-04-13",
-    "href": "https://ethseoul.org",
-    "location": "Seoul",
-    "description": "",
-    "imageUrl": ""
-  },
-  {
     "title": "ETHDublin 2025",
     "startDate": "2025-05-23",
     "endDate": "2025-05-25",
@@ -241,15 +232,6 @@
     "location": "Seoul, KR",
     "description": "",
     "imageUrl": ""
-  },
-  {
-    "title": "ETHDubai",
-    "to": "https://www.ethdubaiconf.org/",
-    "location": "Dubai, UAE",
-    "description": "The Ethereum dev conference and hackathon in Dubai on everything DeFi, privacy, L2s, AVS, AI Agents, intents, Account Abstraction and more with a focus on decentralization and community projects. ETHDubai also organizes a Demo Pitch Day with VCs.",
-    "startDate": "2025-04-28",
-    "endDate": "2025-04-29",
-    "imageUrl": "https://www.ethdubaiconf.org/ethdubaicard1.png"
   },
   {
     "title": "Staking Summit*",
@@ -649,12 +631,12 @@
   },
   {
     "title": "ETH Seoul",
-    "startDate": "2025-04-12",
-    "endDate": "2025-04-12",
+    "startDate": "2025-04-14",
+    "endDate": "2025-04-14",
     "href": "https://ethseoul.org",
     "location": "Seoul, KR",
     "description": "",
-    "imageUrl": ""
+    "imageUrl": "https://www.ethseoul.org/img/website-logo.png"
   },
   {
     "title": "ETH Cinco de Mayo",
@@ -682,15 +664,6 @@
     "location": "Bratislava, SVK",
     "description": "Two-day conference and hackathon focused on sharing knowledge and sparking innovative ideas aimed at energizing the entire ethereum ecosystem.",
     "imageUrl": "https://framerusercontent.com/assets/IBAFZwu44FpNo95n3OoOapeFUyw.png"
-  },
-  {
-    "title": "Invisible Garden",
-    "startDate": "2025-04-21",
-    "endDate": "2025-05-31",
-    "href": "https://invisible.garden",
-    "location": "San Jose, Costa Rica",
-    "description": "",
-    "imageUrl": ""
   },
   {
     "title": "Code Africa Conference",
