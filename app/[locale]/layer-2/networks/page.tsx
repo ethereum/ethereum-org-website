@@ -1,4 +1,5 @@
 import pick from "lodash.pick"
+import { getTranslations } from "next-intl/dist/types/src/server/react-server"
 
 import { Lang } from "@/lib/types"
 
@@ -128,12 +129,16 @@ export async function generateMetadata({
 }) {
   const { locale } = await params
 
+  const t = await getTranslations({
+    locale,
+    namespace: "page-layer-2-networks",
+  })
+
   return await getMetadata({
     locale,
     slug: ["layer-2", "networks"],
-    title: "Ethereum Layer 2:Explore networks",
-    description:
-      "Using Ethereum today means interacting with hundreds of different networks and apps. All backed by Ethereum as the foundational backbone.",
+    title: t("page-layer-2-networks-meta-title"),
+    description: t("page-layer-2-networks-hero-description"),
     image: "/images/layer-2/learn-hero.png",
   })
 }
