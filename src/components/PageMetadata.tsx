@@ -94,11 +94,11 @@ const PageMetadata = ({
       ))}
       <link rel="canonical" key={canonical} href={canonical} />
       <link rel="alternate" hrefLang="x-default" href={xDefault} />
-      {locales.filter(isLocaleValidISO639_1).map((loc) => (
+      {locales.map((loc) => (
         <link
           key={loc}
           rel="alternate"
-          hrefLang={loc}
+          hrefLang={isLocaleValidISO639_1(loc) ? loc : undefined}
           href={getFullUrl(loc, path)}
         />
       ))}
