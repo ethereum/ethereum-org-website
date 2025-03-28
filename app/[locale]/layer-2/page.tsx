@@ -16,7 +16,7 @@ import { BASE_TIME_UNIT } from "@/lib/constants"
 
 import Layer2Page from "./_components/layer-2"
 
-import { getMessages } from "@/i18n/loadMessages"
+import { loadMessages } from "@/i18n/loadMessages"
 import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
 import { fetchL2beat } from "@/lib/api/fetchL2beat"
 
@@ -58,7 +58,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const userRandomL2s = getRandomL2s()
 
   // Get i18n messages
-  const allMessages = await getMessages(locale)
+  const allMessages = await loadMessages(locale)
   const requiredNamespaces = getRequiredNamespacesForPage("/layer-2")
   const messages = pick(allMessages, requiredNamespaces)
 

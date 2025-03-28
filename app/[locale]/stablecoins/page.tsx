@@ -13,7 +13,7 @@ import { BASE_TIME_UNIT } from "@/lib/constants"
 
 import StablecoinsPage from "./_components/stablecoins"
 
-import { getMessages } from "@/i18n/loadMessages"
+import { loadMessages } from "@/i18n/loadMessages"
 import {
   fetchEthereumEcosystemData,
   fetchEthereumStablecoinsData,
@@ -58,7 +58,7 @@ async function Page({ params }: { params: Promise<{ locale: Lang }> }) {
   const { locale } = await params
 
   // Get i18n messages
-  const allMessages = await getMessages(locale)
+  const allMessages = await loadMessages(locale)
   const requiredNamespaces = getRequiredNamespacesForPage("/stablecoins")
   const messages = pick(allMessages, requiredNamespaces)
 

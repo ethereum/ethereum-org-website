@@ -17,7 +17,7 @@ import { BASE_TIME_UNIT } from "@/lib/constants"
 
 import Layer2Networks from "./_components/networks"
 
-import { getMessages } from "@/i18n/loadMessages"
+import { loadMessages } from "@/i18n/loadMessages"
 import { fetchEthereumMarketcap } from "@/lib/api/fetchEthereumMarketcap"
 import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
 import { fetchGrowThePieBlockspace } from "@/lib/api/fetchGrowThePieBlockspace"
@@ -96,7 +96,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     })
 
   // Get i18n messages
-  const allMessages = await getMessages(locale)
+  const allMessages = await loadMessages(locale)
   const requiredNamespaces = getRequiredNamespacesForPage("/layer-2/networks")
   const messages = pick(allMessages, requiredNamespaces)
 

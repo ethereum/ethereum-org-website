@@ -23,7 +23,7 @@ import {
 
 import HomePage from "./_components/home"
 
-import { getMessages } from "@/i18n/loadMessages"
+import { loadMessages } from "@/i18n/loadMessages"
 import { fetchCommunityEvents } from "@/lib/api/calendarEvents"
 import { fetchEthPrice } from "@/lib/api/fetchEthPrice"
 import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
@@ -83,7 +83,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     .slice(0, CALENDAR_DISPLAY_COUNT)
 
   // Get i18n messages
-  const allMessages = await getMessages(locale)
+  const allMessages = await loadMessages(locale)
   const requiredNamespaces = getRequiredNamespacesForPage("/")
   const messages = pick(allMessages, requiredNamespaces)
 

@@ -13,7 +13,7 @@ import { BASE_TIME_UNIT } from "@/lib/constants"
 
 import ResourcesPage from "./_components/resources"
 
-import { getMessages } from "@/i18n/loadMessages"
+import { loadMessages } from "@/i18n/loadMessages"
 import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
 
 // In seconds
@@ -28,7 +28,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const { locale } = await params
 
   // Get i18n messages
-  const allMessages = await getMessages(locale)
+  const allMessages = await loadMessages(locale)
   const requiredNamespaces = getRequiredNamespacesForPage("/resources")
   const messages = pick(allMessages, requiredNamespaces)
 

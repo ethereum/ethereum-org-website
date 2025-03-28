@@ -15,7 +15,7 @@ import {
 
 import FindWalletPage from "./_components/find-wallet"
 
-import { getMessages } from "@/i18n/loadMessages"
+import { loadMessages } from "@/i18n/loadMessages"
 
 const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const { locale } = await params
@@ -33,7 +33,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   }))
 
   // Get i18n messages
-  const allMessages = await getMessages(locale)
+  const allMessages = await loadMessages(locale)
   const requiredNamespaces = getRequiredNamespacesForPage(
     "/wallets/find-wallet"
   )

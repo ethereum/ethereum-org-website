@@ -10,13 +10,13 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import BugBountiesPage from "./_components/bug-bounty"
 
-import { getMessages } from "@/i18n/loadMessages"
+import { loadMessages } from "@/i18n/loadMessages"
 
 export default async function Page({ params }: { params: Promise<Params> }) {
   const { locale } = await params
 
   // Get i18n messages
-  const allMessages = await getMessages(locale)
+  const allMessages = await loadMessages(locale)
   const requiredNamespaces = getRequiredNamespacesForPage("/bug-bounty")
   const messages = pick(allMessages, requiredNamespaces)
 

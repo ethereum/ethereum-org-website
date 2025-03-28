@@ -10,13 +10,13 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import WalletsPage from "./_components/wallets"
 
-import { getMessages } from "@/i18n/loadMessages"
+import { loadMessages } from "@/i18n/loadMessages"
 
 const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const { locale } = await params
 
   // Get i18n messages
-  const allMessages = await getMessages(locale)
+  const allMessages = await loadMessages(locale)
   const requiredNamespaces = getRequiredNamespacesForPage("/wallets")
   const messages = pick(allMessages, requiredNamespaces)
 
