@@ -1,5 +1,5 @@
 import pick from "lodash.pick"
-import { getTranslations } from "next-intl/dist/types/src/server/react-server"
+import { getTranslations } from "next-intl/server"
 
 import { Lang } from "@/lib/types"
 
