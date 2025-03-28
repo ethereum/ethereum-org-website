@@ -48,8 +48,8 @@ const App = ({ Component, pageProps }: AppPropsWithLayout) => {
         <TooltipProvider>
           <FeedbackWidgetProvider>
             <BaseLayout
-              contentIsOutdated={!!pageProps.frontmatter?.isOutdated}
-              contentNotTranslated={pageProps.contentNotTranslated}
+              // contentIsOutdated={!!pageProps.frontmatter?.isOutdated}
+              // contentNotTranslated={pageProps.contentNotTranslated}
               lastDeployLocaleTimestamp={pageProps.lastDeployLocaleTimestamp}
             >
               {getLayout(<Component {...pageProps} />)}

@@ -1,5 +1,6 @@
 ---
 title: Come utilizzare un portafoglio
+metaTitle: Come utilizzare i portafogli di Ethereum | Passo dopo passo
 description: Una guida che spiega come inviare, ricevere token e connettersi a progetti web3.
 lang: it
 ---

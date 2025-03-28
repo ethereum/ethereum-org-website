@@ -26,6 +26,7 @@ Először meg kellene értened az Ethereum alapvető fogalmait ahhoz, hogy érte
 - [EthVM](https://www.ethvm.com/)
 - [OKLink](https://www.oklink.com/eth)
 - [Rantom](https://rantom.app/)
+- [Ethseer](https://ethseer.io)
 
 ## Nyílt forráskódú eszközök {#open-source-tools}
 

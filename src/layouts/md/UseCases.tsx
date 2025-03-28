@@ -16,7 +16,6 @@ import { getSummaryPoints } from "@/lib/utils/getSummaryPoints"
 import { ContentLayout } from "../ContentLayout"
 
 import { useTranslation } from "@/hooks/useTranslation"
-import { usePathname } from "@/i18n/routing"
 
 // UseCases layout components
 export const useCasesComponents = {
@@ -35,12 +34,11 @@ export const UseCasesLayout = ({
   tocItems,
   contentNotTranslated,
 }: UseCasesLayoutProps) => {
-  const pathname = usePathname()
   const { t } = useTranslation("template-usecase")
 
   const summaryPoints = getSummaryPoints(frontmatter)
 
-  const absoluteEditPath = getEditPath(pathname)
+  const absoluteEditPath = getEditPath(slug)
 
   const dropdownLinks: ButtonDropdownList = {
     text: t("template-usecase:template-usecase-dropdown"),

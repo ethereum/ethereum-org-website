@@ -30,7 +30,7 @@ export default meta
 
 export const MdxHero: StoryObj<typeof meta> = {
   args: {
-    breadcrumbs: { slug: "/en/staking/solo/" },
+    breadcrumbs: { slug: "/staking/solo/" },
     title: "Solo stake your Eth",
   },
 }

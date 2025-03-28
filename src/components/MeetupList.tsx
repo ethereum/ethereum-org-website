@@ -1,3 +1,5 @@
+"use client"
+
 import { useState } from "react"
 import sortBy from "lodash/sortBy"
 import { FaChevronRight } from "react-icons/fa6"
