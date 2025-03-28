@@ -118,7 +118,7 @@ Genel olarak anlaşmazlıklar, sorunun kökenini anlamak ve herkesin durumu öl�
 
 Çatallar, ağda büyük teknik yükseltmeler veya değişiklikler yapılması ve protokolün "kurallarının" değiştirilmesi gerekmesidir. [Ethereum istemcileri](/developers/docs/nodes-and-clients/) yeni çatal kurallarını uygulamak için yazılımlarını güncellemelidir.
 
-DAO çatalı, güvenli olmayan bir [DAO](/glossary/#dao) sözleşmesinin bir hackte 3,6 milyon ETH boşaltıldığı [2016 DAO saldırısına](https://www.coindesk.com/understanding-dao-hack-journalists) yanıt olarak yapıldı. Çatal, fonları hatalı sözleşmeden yeni bir sözleşmeye taşıdı ve hack sırasında fon kaybeden herkesin fonlarını geri almasını sağladı.
+DAO çatalı, güvenli olmayan bir [DAO](/glossary/#dao) sözleşmesinin bir hackte 3,6 milyon ETH boşaltıldığı [2016 DAO saldırısına](https://www.coindesk.com/learn/understanding-the-dao-attack) yanıt olarak yapıldı. Çatal, fonları hatalı sözleşmeden yeni bir sözleşmeye taşıdı ve hack sırasında fon kaybeden herkesin fonlarını geri almasını sağladı.
 
 Bu eylem planı, Ethereum topluluğu tarafından oylandı. Tüm ETH sahipleri, [bir oylama platformunda](https://web.archive.org/web/20170620030820/http://v1.carbonvote.com/) bir işlem aracılığıyla oy kullanabildi. Çatallanma kararı oyların %85'inden fazlasına ulaştı.
 

@@ -91,7 +91,7 @@ Bunun neden optimal olmadığını görebilirsiniz:
 
 <img src="https://cdn0.scrvt.com/b095ee27d37b3d7b6b150adba9ac6ec8/42226f4816a77656/bc5c8b270798/graphql-querygif.gif" width="100%" />
 
-İki görüntü, GraphQL'in özünü hemen hemen yakalar. Sağdaki sorgu ile tam olarak hangi verileri istediğimizi tanımlayabiliriz, böylece orada her şeyi tek bir istekte alırız ve tam olarak ihtiyacımız olandan fazlasını elde ederiz. Bir GraphQL sunucusu, gerekli tüm verilerin alınmasını yönetir, bu nedenle ön uç tüketici tarafının kullanımı inanılmaz derecede kolaydır. [Bu, ilgileniyorsanız sunucunun bir sorguyu tam olarak nasıl ele aldığının güzel bir açıklamasıdır](https://www.apollographql.com/blog/graphql-explained-5844742f195e/).
+İki görüntü, GraphQL'in özünü hemen hemen yakalar. Sağdaki sorgu ile tam olarak hangi verileri istediğimizi tanımlayabiliriz, böylece orada her şeyi tek bir istekte alırız ve tam olarak ihtiyacımız olandan fazlasını elde ederiz. Bir GraphQL sunucusu, gerekli tüm verilerin alınmasını yönetir, bu nedenle ön uç tüketici tarafının kullanımı inanılmaz derecede kolaydır. [Bu, ilgileniyorsanız sunucunun bir sorguyu tam olarak nasıl ele aldığının güzel bir açıklamasıdır](https://www.apollographql.com/blog/graphql-explained).
 
 Şimdi bu bilgiyle, nihayet blok zinciri alanına ve The Graph'a geçelim.
 
@@ -167,7 +167,7 @@ dataSources:
 - BigInt
 - BigDecimal
 
-İlişkileri tanımlamak için varlıkları tür olarak da kullanabilirsiniz. Örneğimizde, oyuncudan bahislere "1'e çok" ilişkisi tanımladık. "!", değerin boş olamayacağı anlamına gelir. Belgelerin tamamına [buradan](https://thegraph.com/docs/define-a-subgraph#the-graphql-schema) erişilebilir.
+İlişkileri tanımlamak için varlıkları tür olarak da kullanabilirsiniz. Örneğimizde, oyuncudan bahislere "1'e çok" ilişkisi tanımladık. "!", değerin boş olamayacağı anlamına gelir. Belgelerin tamamına [buradan](https://thegraph.com/docs/en/subgraphs/developing/creating/ql-schema) erişilebilir.
 
 ```graphql
 type Bet @entity {
@@ -196,7 +196,7 @@ Sonrasında yeni bir Bet varlığı oluştururuz. Bunun kimliği, her zaman benz
 
 Son olarak Player varlığını tüm verilerle güncelleyebiliriz. Diziler doğrudan aktarılamaz, ancak burada gösterildiği gibi güncellenmesi gerekir. Bahise başvurmak için id'yi kullanırız. Ve bir varlığı saklamak için sonunda `.save()` gereklidir.
 
-Belgelerin tamamına buradan erişilebilir: https://thegraph.com/docs/define-a-subgraph#writing-mappings. Ayrıca eşleştirme dosyasında kayıt çıktısı da ekleyebilirsiniz, [buraya](https://thegraph.com/docs/assemblyscript-api#api-reference) göz atın.
+Belgelerin tamamına buradan erişilebilir: https://thegraph.com/docs/en/subgraphs/developing/creating/assemblyscript-mappings/#writing-mappings. Ayrıca eşleştirme dosyasında kayıt çıktısı da ekleyebilirsiniz, [buraya](https://thegraph.com/docs/en/subgraphs/developing/creating/graph-ts/api/#api-reference) göz atın.
 
 ```typescript
 import { Bet, Player } from "../generated/schema"

@@ -47,7 +47,7 @@ Um loszulegen, sehen Sie sich die [Ethereum-Schnellstartanleitung](https://acade
 
 ## Weiterführende Informationen {#further-reading}
 
-- [Graph Network-Übersicht](https://thegraph.com/docs/en/about/network/)
+- [Graph Network-Übersicht](https://thegraph.com/docs/en/about/)
 - [Graph-Abfrageplatz](https://thegraph.com/explorer/subgraph/graphprotocol/graph-network-mainnet?version=current)
 - [API-Code-Beispiele auf EtherScan](https://etherscan.io/apis#contracts)
 - [Beaconcha.in Beacon Chain Explorer](https://beaconcha.in)

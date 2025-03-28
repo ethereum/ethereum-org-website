@@ -20,7 +20,6 @@ lang: ja
 
 - [Ethallowance (イーサアラウアンス)](https://ethallowance.com/) (イーサリアム)
 - [Etherscan (イーサスキャン)](https://etherscan.io/tokenapprovalchecker) (イーサリアム)
-- [Cointool (コインツール)](https://cointool.app/approve/eth) (複数のネットワーク)
 - [Revoke (リボーク)](https://revoke.cash/) (複数のネットワーク)
 - [Unrekt (アンレクト)](https://app.unrekt.net/) (複数のネットワーク)
 - [EverRevoke (エバーリボーク)](https://everrise.com/everrevoke/) (複数のネットワーク)

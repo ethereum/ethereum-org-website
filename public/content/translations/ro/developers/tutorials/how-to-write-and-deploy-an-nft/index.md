@@ -47,7 +47,7 @@ Odată ce v-ați creat un cont Alchemy, puteți să generați o cheie API creân
 
 Avem nevoie de un cont Ethereum pentru a trimite și primi tranzacții. În acest tutorial vom folosi un portofel virtual în browser, MetaMask, pentru a gestiona adresa contului Ethereum. Dacă doriți să înțelegeți mai multe despre cum funcționează tranzacțiile pe Ethereum, consultaţi [această pagină](/developers/docs/transactions/) de la fundația Ethereum.
 
-Puteți descărca și crea un cont MetaMask pe gratis [aici](https://metamask.io/download.html). Atunci când vă creați un cont sau dacă aveți deja unul, aveţi grijă să comutaţi pe „Ropsten Test Network” („Rețeaua de testare Ropsten”) în dreapta sus (pentru a nu avea de-a face cu bani reali).
+Puteți descărca și crea un cont MetaMask pe gratis [aici](https://metamask.io/download). Atunci când vă creați un cont sau dacă aveți deja unul, aveţi grijă să comutaţi pe „Ropsten Test Network” („Rețeaua de testare Ropsten”) în dreapta sus (pentru a nu avea de-a face cu bani reali).
 
 ![Setați Ropsten ca rețeaua dvs.](./metamask-goerli.png)
 

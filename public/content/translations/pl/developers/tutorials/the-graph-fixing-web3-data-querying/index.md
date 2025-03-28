@@ -91,7 +91,7 @@ Najpierw porozmawiajmy o GraphQL, pierwotnie zaprojektowanym i zaimplementowanym
 
 <img src="https://cdn0.scrvt.com/b095ee27d37b3d7b6b150adba9ac6ec8/42226f4816a77656/bc5c8b270798/graphql-querygif.gif" width="100%" />
 
-Te dwa obrazy w dużym stopniu oddają istotę GraphQL. Za pomocą zapytania po prawej stronie możemy zdefiniować dokładnie, jakich danych chcemy, dzięki czemu otrzymujemy wszystko w jednym żądaniu i nic więcej niż dokładnie to, czego potrzebujemy. Serwer GraphQL obsługuje pobieranie wszystkich wymaganych danych, dzięki czemu jest niezwykle łatwy w użyciu dla użytkownika frontendu. [To dobre wyjaśnienie](https://www.apollographql.com/blog/graphql-explained-5844742f195e/), jak dokładnie serwer obsługuje zapytanie, jeśli jesteś zainteresowany.
+Te dwa obrazy w dużym stopniu oddają istotę GraphQL. Za pomocą zapytania po prawej stronie możemy zdefiniować dokładnie, jakich danych chcemy, dzięki czemu otrzymujemy wszystko w jednym żądaniu i nic więcej niż dokładnie to, czego potrzebujemy. Serwer GraphQL obsługuje pobieranie wszystkich wymaganych danych, dzięki czemu jest niezwykle łatwy w użyciu dla użytkownika frontendu. [To dobre wyjaśnienie](https://www.apollographql.com/blog/graphql-explained), jak dokładnie serwer obsługuje zapytanie, jeśli jesteś zainteresowany.
 
 Teraz, mając tę ​​wiedzę, w końcu wskoczmy w przestrzeń blockchain i The Graph.
 
@@ -124,7 +124,7 @@ Tutaj możesz zdefiniować wiele kontraktów i programów obsługi. Typowa konfi
 
 Dla wygody możesz również użyć narzędzia szablonu, takiego jak wąsy. Następnie tworzysz subgraph.template.yaml i wstawiasz adresy oparte na najnowszych wdrożeniach. Aby zapoznać się z bardziej zaawansowaną przykładową konfiguracją, zobacz na przykład [Repozytorium subgrafów Aave](https://github.com/aave/aave-protocol/tree/master/thegraph).
 
-A pełną dokumentację można zobaczyć tutaj: https://thegraph.com/docs/define-a-subgraph#the-subgraph-manifest.
+A pełną dokumentację można zobaczyć tutaj: https://thegraph.com/docs/en/subgraphs/developing/creating/subgraph-manifest.
 
 ```yaml
 specVersion: 0.0.1
@@ -167,7 +167,7 @@ Schematem jest definicja danych GraphQL. Pozwoli to na zdefiniowanie istniejący
 - BigInt
 - BigDecimal
 
-Możesz również używać obiektów jako typu do definiowania relacji. W naszym przykładzie definiujemy relacje od gracza do zakładów. ! oznacza, że ​​wartość nie może być pusta. Pełną dokumentację można zobaczyć tutaj: https://thegraph.com/docs/define-a-subgraph#the-graphql-schema.
+Możesz również używać obiektów jako typu do definiowania relacji. W naszym przykładzie definiujemy relacje od gracza do zakładów. ! oznacza, że ​​wartość nie może być pusta. Pełną dokumentację można zobaczyć tutaj: https://thegraph.com/docs/en/subgraphs/developing/creating/ql-schema.
 
 ```graphql
 type Bet @entity {
@@ -196,7 +196,7 @@ Następnie tworzymy nową jednostkę zakładu. Identyfikatorem dla tego będzie 
 
 Na koniec możemy zaktualizować podmiot Player, który będzie zawierał wszystkie dane. Tablice nie mogą być wypychane bezpośrednio, ale muszą zostać zaktualizowane, jak pokazano tutaj. Używamy identyfikatora, aby odnieść się do zakładu. A .save() jest wymagane na końcu do przechowywania obiektu.
 
-Pełną dokumentację można zobaczyć tutaj: https://thegraph.com/docs/define-a-subgraph#writing-mappings. Możesz także dodać dane wyjściowe rejestrowania do pliku mapowania, zobacz [tutaj](https://thegraph.com/docs/assemblyscript-api#api-reference).
+Pełną dokumentację można zobaczyć tutaj: https://thegraph.com/docs/en/subgraphs/developing/creating/assemblyscript-mappings/#writing-mappings. Możesz także dodać dane wyjściowe rejestrowania do pliku mapowania, zobacz [tutaj](https://thegraph.com/docs/en/subgraphs/developing/creating/graph-ts/api/#api-reference).
 
 ```typescript
 import { Bet, Player } from "../generated/schema"
