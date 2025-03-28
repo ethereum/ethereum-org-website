@@ -34,7 +34,7 @@ Ini membuka begitu banyak peluang baharu untuk kerjasama dan penyelarasan global
 | Undian diperlukan oleh ahli untuk sebarang perubahan dilaksanakan.                                                             | Bergantung kepada struktur, perubahan boleh dituntut daripada parti tunggal, atau undian boleh ditawarkan.  |
 | Undi dikira, dan hasil dilaksanakan secara automatik tanpa perantara yang dipercayai.                                          | Jika undi dibenarkan, undian akan dikira secara dalaman, dan hasil undian mesti dikendalikan secara manual. |
 | Perkhidmatan yang ditawarkan dikendalikan secara automatik dengan cara terdesentralisasi (contohnya pengedaran dana dermawan). | Memerlukan pengendalian manusia, atau automasi terkawal secara pusat, terdedah pada manipulasi.             |
-| Semua aktiviti iadalah telus dan umum sepenuhnya.                                                                              | Aktiviti biasanya peribadi, dan terhad kepada orang ramai.                                                  |
+| Semua aktiviti adalah telus dan umum sepenuhnya.                                                                               | Aktiviti biasanya peribadi, dan terhad kepada orang ramai.                                                  |
 
 ### Contoh DAO {#dao-examples}
 
