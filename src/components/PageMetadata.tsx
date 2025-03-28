@@ -2,7 +2,10 @@ import Head from "next/head"
 import { useLocale } from "next-intl"
 
 import { getOgImage } from "@/lib/utils/metadata"
-import { filterRealLocales } from "@/lib/utils/translations"
+import {
+  filterRealLocales,
+  isLocaleValidISO639_1,
+} from "@/lib/utils/translations"
 import { getFullUrl } from "@/lib/utils/url"
 
 import { DEFAULT_LOCALE, LOCALES_CODES, SITE_URL } from "@/lib/constants"
@@ -91,7 +94,7 @@ const PageMetadata = ({
       ))}
       <link rel="canonical" key={canonical} href={canonical} />
       <link rel="alternate" hrefLang="x-default" href={xDefault} />
-      {locales.map((loc) => (
+      {locales.filter(isLocaleValidISO639_1).map((loc) => (
         <link
           key={loc}
           rel="alternate"
