@@ -96,6 +96,7 @@ const ProductTable = <T,>({
       // TODO: Fix this, removed to avoid infinite re-renders
       // router.replace(pathname, undefined, { shallow: true })
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchParams])
 
   // Update or remove preset filters

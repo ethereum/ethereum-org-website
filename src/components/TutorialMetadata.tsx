@@ -73,7 +73,7 @@ const TutorialMetadata = ({
         )}
         <div>
           <Emoji className="me-2 text-sm" text=":stopwatch:" />
-          {timeToRead} {t("comp-tutorial-metadata-minute-read")} minute read
+          {timeToRead} {t("comp-tutorial-metadata-minute-read")}
         </div>
       </Flex>
       {address && (

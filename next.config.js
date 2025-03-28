@@ -81,6 +81,14 @@ module.exports = (phase, { defaultConfig }) => {
           protocol: "https",
           hostname: "crowdin-static.downloads.crowdin.com",
         },
+        {
+          protocol: "https",
+          hostname: "avatars.githubusercontent.com",
+        },
+        {
+          protocol: "https",
+          hostname: "coin-images.coingecko.com",
+        },
       ],
     },
     async headers() {

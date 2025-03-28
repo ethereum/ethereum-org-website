@@ -423,6 +423,15 @@
     "imageUrl": "https://ethglobal.com/og.png"
   },
   {
+    "title": "ProdFest Jos",
+    "startDate": "2025-08-19",
+    "endDate": "2025-08-23",
+    "href": "https://prodfest.blockfuselabs.com/ ",
+    "location": "Jos, NGA",
+    "description": "Spotlighting the finest of African Innovation at the Web3 Jos Community Conference, Products Showcase and Hackathon",
+    "imageUrl": "https://drive.google.com/file/d/1JZlK8HFj0wB7woBlfvdJJ8_mpQUsGmCA/view?usp=sharing"
+  },
+  {
     "title": "Web3 Lagos Conference",
     "startDate": "2025-08-28",
     "endDate": "2025-08-30",
@@ -511,15 +520,6 @@
     "location": "Oxford, UK",
     "description": "Join the best builders for a 3 day hackathon hosted at Oxford University.",
     "imageUrl": "https://ethoxford.io/assets/images/share.jpg?v=7e796eda"
-  },
-  {
-    "title": "ETHVietnam 2025",
-    "startDate": "2025-04-12",
-    "endDate": "2025-04-12",
-    "href": "https://eth-vietnam.com",
-    "location": "HCMC, VNM",
-    "description": "",
-    "imageUrl": "http://static1.squarespace.com/static/629856e64f44db3799f8e3f6/t/65c04e1059e3477a33a1c105/1707101732532/COVER.png?format=1500w"
   },
   {
     "title": "ETHDam III",
@@ -702,15 +702,6 @@
     "imageUrl": ""
   },
   {
-    "title": "ETHVietnam 2025",
-    "startDate": "2025-05-21",
-    "endDate": "2025-05-25",
-    "href": "https://eth-vietnam.com",
-    "location": "HCMC, VNM",
-    "description": "",
-    "imageUrl": "http://static1.squarespace.com/static/629856e64f44db3799f8e3f6/t/65c04e1059e3477a33a1c105/1707101732532/COVER.png?format=1500w"
-  },
-  {
     "title": "Ethsafari",
     "startDate": "2025-09-07",
     "endDate": "2025-09-14",
@@ -718,5 +709,32 @@
     "location": "Nairobi, KEN",
     "description": "",
     "imageUrl": ""
+  },
+  {
+    "title": "ETH Canal",
+    "startDate": "2025-04-22",
+    "endDate": "2025-04-25",
+    "href": "https://ethcanal.xyz",
+    "location": "Panama City, PAN",
+    "description": "Join us at ETH Canal, in Panama, the pivotal blockchain conference series for Ethereum business &amp; blockchain enthusiasts and developers. Discover real-world applications of Ethereum technology, engage with top-tier talent, and explore partnership opportunities in a crypto-friendly environment.",
+    "imageUrl": "https://www.ethcanal.xyz/web/image/2180-32d6b8d6/StockCake-Cryptocurrency%2520Enthusiast%2520Smiling_1713136212.svg"
+  },
+  {
+    "title": "ETHVietnam 2025",
+    "startDate": "2025-05-23",
+    "endDate": "2025-05-24",
+    "href": "https://eth-vietnam.com",
+    "location": "HCMC, VNM",
+    "description": "",
+    "imageUrl": "http://static1.squarespace.com/static/629856e64f44db3799f8e3f6/t/6761041c2c3aab15bfbb0ec1/1734411300379/Group+2612.png?format=1500w"
+  },
+  {
+    "title": "EthAsia",
+    "startDate": "2025-04-09",
+    "endDate": "2025-04-09",
+    "href": "https://www.ethasia.org/",
+    "location": "Hong Kong, HKG",
+    "description": "A commmunity gathering festival: Make ETHEREUM Asia Great Again",
+    "imageUrl": "https://www.ethasia.org/_next/image?url=%2FBG.png&w=3840&q=75"
   }
 ]

@@ -1,4 +1,5 @@
 import pick from "lodash.pick"
+import { getTranslations } from "next-intl/server"
 
 import { Lang } from "@/lib/types"
 
@@ -80,13 +81,13 @@ export async function generateMetadata({
 }) {
   const { locale } = await params
 
+  const t = await getTranslations({ locale, namespace: "page-layer-2" })
+
   return await getMetadata({
     locale,
     slug: ["layer-2"],
-    /* TODO: Clarify title and description here */
-    /* TODO: Setup for translation */
-    title: "Intro to Ethereum Layer 2: benefits and uses",
-    description: "Learn about Ethereum layer 2 networks",
+    title: t("page-layer-2-meta-title"),
+    description: t("page-layer-2-meta-description"),
     image: "/images/layer-2/learn-hero.png",
   })
 }
