@@ -30,7 +30,9 @@ const NetworkMaturity = () => {
               </InlineLink>{" "}
               (<strong>{t("page-layer-2-network-maturity-component-3")}</strong>
               ),{" "}
-              <strong>{t("page-layer-2-network-maturity-component-4")}</strong>,{" "}
+              <strong>
+                {t("page-layer-2-network-maturity-component-4")}
+              </strong>,{" "}
               <strong>{t("page-layer-2-network-maturity-component-5")}</strong>.{" "}
               {t("page-layer-2-network-maturity-component-6")}
             </p>
