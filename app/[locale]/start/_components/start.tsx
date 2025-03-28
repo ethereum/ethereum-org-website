@@ -1,25 +1,16 @@
-import { GetStaticProps } from "next"
+"use client"
+
 import dynamic from "next/dynamic"
 import { useLocale } from "next-intl"
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
 
-import { BasePageProps, Lang, Wallet } from "@/lib/types"
+import { Wallet } from "@/lib/types"
 
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
-import PageMetadata from "@/components/PageMetadata"
 import StartWithEthereumFlow from "@/components/StartWithEthereumFlow"
 import ShareModal from "@/components/StartWithEthereumFlow/ShareModal"
 
-import { existsNamespace } from "@/lib/utils/existsNamespace"
-import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
-import { getLocaleTimestamp } from "@/lib/utils/time"
-import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
-import { getNewToCryptoWallets } from "@/lib/utils/wallets"
-
-import { DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
-
-import loadNamespaces from "@/i18n/loadNamespaces"
 import HeroImage from "@/public/images/heroes/developers-hub-hero.jpg"
 import ManDogeImage from "@/public/images/start-with-ethereum/man-doge-playing.png"
 
@@ -29,43 +20,6 @@ const WalletProviders = dynamic(() => import("@/components/WalletProviders"), {
 })
 
 const queryClient = new QueryClient()
-
-export async function getStaticPaths() {
-  return {
-    paths: LOCALES_CODES.map((locale) => ({ params: { locale } })),
-    fallback: false,
-  }
-}
-
-export const getStaticProps = (async ({ params }) => {
-  const { locale = DEFAULT_LOCALE } = params || {}
-
-  const lastDeployDate = getLastDeployDate()
-  const lastDeployLocaleTimestamp = getLocaleTimestamp(
-    locale as Lang,
-    lastDeployDate
-  )
-
-  const requiredNamespaces = getRequiredNamespacesForPage("/start")
-
-  const contentNotTranslated = !existsNamespace(
-    locale! as string,
-    requiredNamespaces[2]
-  )
-
-  const messages = await loadNamespaces(locale as string, requiredNamespaces)
-
-  const newToCryptoWallets = getNewToCryptoWallets()
-
-  return {
-    props: {
-      messages,
-      contentNotTranslated,
-      lastDeployLocaleTimestamp,
-      newToCryptoWallets,
-    },
-  }
-}) satisfies GetStaticProps<BasePageProps>
 
 const StartWithCryptoPage = ({
   newToCryptoWallets,
@@ -78,12 +32,6 @@ const StartWithCryptoPage = ({
     <QueryClientProvider client={queryClient}>
       <WalletProviders locale={locale}>
         <MainArticle className="flex w-full flex-col items-center overflow-x-hidden">
-          <PageMetadata
-            title={"Start with crypto"}
-            description={"Your gateway to the world of ethereum"}
-            image={HeroImage.src}
-          />
-
           <div className="mb-16 h-[240px] w-full md:h-[380px] lg:h-[398px]">
             <Image
               src={HeroImage}
