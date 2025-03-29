@@ -347,11 +347,6 @@ const GetEthPage = ({
               </Stack>
             </Stack>
           </TwoColumnContent>
-          <FileContributors
-            className="my-10 border-t"
-            contributors={contributors}
-            lastEditLocaleTimestamp={lastEditLocaleTimestamp}
-          />
         </Stack>
 
         <Divider className="mx-auto my-16 md:my-32" />
@@ -370,6 +365,12 @@ const GetEthPage = ({
             </ButtonLink>
           </div>
         </CalloutBanner>
+
+        <FileContributors
+          className="border-t"
+          contributors={contributors}
+          lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        />
 
         <FeedbackCard />
       </Stack>

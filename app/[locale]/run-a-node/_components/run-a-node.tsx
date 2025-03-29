@@ -697,11 +697,6 @@ const RunANodePage = ({ contributors, lastEditLocaleTimestamp }) => {
             - <i>{t("page-run-a-node-further-reading-3-author")}</i>
           </li>
         </ul>
-        <FileContributors
-          className="my-10 border-t"
-          contributors={contributors}
-          lastEditLocaleTimestamp={lastEditLocaleTimestamp}
-        />
       </Content>
 
       <Divider />
@@ -762,6 +757,11 @@ const RunANodePage = ({ contributors, lastEditLocaleTimestamp }) => {
       </Content>
       <Content>
         <QuizWidget quizKey="run-a-node" />
+        <FileContributors
+          className="my-10 border-t"
+          contributors={contributors}
+          lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        />
         <FeedbackCard />
       </Content>
     </GappedPage>

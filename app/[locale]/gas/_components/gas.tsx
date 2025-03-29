@@ -349,11 +349,6 @@ const GasPage = ({ contributors, lastEditLocaleTimestamp }) => {
             <p className="mb-6">{t("page-gas-faq-question-3-a-2")}</p>
           </ExpandableCard>
         </div>
-        <FileContributors
-          className="my-10 border-t"
-          contributors={contributors}
-          lastEditLocaleTimestamp={lastEditLocaleTimestamp}
-        />
       </Content>
       <Divider />
       <Content>
@@ -391,6 +386,11 @@ const GasPage = ({ contributors, lastEditLocaleTimestamp }) => {
         </Flex>
       </Content>
       <Content>
+        <FileContributors
+          className="my-10 border-t"
+          contributors={contributors}
+          lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        />
         <FeedbackCard />
       </Content>
     </Page>

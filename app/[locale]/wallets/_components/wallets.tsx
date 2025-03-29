@@ -379,11 +379,6 @@ const WalletsPage = ({ contributors, lastEditLocaleTimestamp }) => {
       </div>
 
       <div className="w-full px-8 py-4">
-        <FileContributors
-          className="my-10 border-t"
-          contributors={contributors}
-          lastEditLocaleTimestamp={lastEditLocaleTimestamp}
-        />
         <Divider />
 
         <h2 className="mb-8 mt-12 text-2xl leading-[1.4] md:text-[2rem]">
@@ -424,6 +419,11 @@ const WalletsPage = ({ contributors, lastEditLocaleTimestamp }) => {
       </div>
 
       <div className="w-full px-8 py-4">
+        <FileContributors
+          className="my-10 border-t"
+          contributors={contributors}
+          lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        />
         <FeedbackCard />
       </div>
     </MainArticle>

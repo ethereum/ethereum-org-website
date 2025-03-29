@@ -807,11 +807,6 @@ const WhatIsEthereumPage = ({
               {t("page-what-is-ethereum-kernel-dreamers-desc")}
             </p>
           </Stack>
-          <FileContributors
-            className="my-10 border-t"
-            contributors={contributors}
-            lastEditLocaleTimestamp={lastEditLocaleTimestamp}
-          />
         </Section>
 
         <Section>
@@ -852,6 +847,11 @@ const WhatIsEthereumPage = ({
         </Section>
 
         <Section>
+          <FileContributors
+            className="my-10 border-t"
+            contributors={contributors}
+            lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+          />
           <FeedbackCard />
         </Section>
       </MainArticle>
