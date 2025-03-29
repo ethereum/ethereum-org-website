@@ -229,6 +229,7 @@ const getRequiredNamespacesForPath = (relativePath: string) => {
     path.startsWith("/what-is-ethereum/") ||
     path.startsWith("/quizzes/") ||
     path.startsWith("/stablecoins/") ||
+    path.startsWith("/smart-contracts/") ||
     path.startsWith("/defi/")
   ) {
     requiredNamespaces = [...requiredNamespaces, "learn-quizzes"]
