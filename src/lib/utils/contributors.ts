@@ -2,7 +2,7 @@ import { join } from "path"
 
 import type { CommitHistory, FileContributor, Lang } from "@/lib/types"
 
-import { DEFAULT_LOCALE } from "@/lib/constants"
+import { CONTENT_DIR, CONTENT_PATH, DEFAULT_LOCALE } from "@/lib/constants"
 
 import {
   convertToFileContributorFromCrowdin,
@@ -14,13 +14,14 @@ import { getLocaleTimestamp } from "./time"
 import { fetchAndCacheGitContributors } from "@/lib/api/fetchGitHistory"
 
 export const getFileContributorInfo = async (
-  mdDir: string,
-  mdPath: string,
   slug: string,
   locale: string,
   fileLang: string,
   cache: CommitHistory
 ) => {
+  const mdPath = join(CONTENT_PATH, slug)
+  const mdDir = join(CONTENT_DIR, slug)
+
   const gitContributors = await fetchAndCacheGitContributors(
     join("/", mdDir, "index.md"),
     cache
@@ -51,10 +52,13 @@ export const getPageContributorInfo = async (
 ) => {
   const gitContributors = [
     ...(await fetchAndCacheGitContributors(
-      join("src/pages/[locale]", pagePath),
+      join("app/[locale]", pagePath, "page.tsx"),
       cache
     )),
-    ...(await fetchAndCacheGitContributors(join("src/pages", pagePath), cache)),
+    ...(await fetchAndCacheGitContributors(
+      join("app/[locale]", pagePath, "_components", `${pagePath}.tsx`),
+      cache
+    )),
   ]
 
   const uniqueGitContributors = gitContributors.filter(

@@ -1,5 +1,6 @@
 ---
 title: Jetons non fongibles (NFT)
+metaTitle: Que sont les NFT ? | Avantages et utilisation
 description: Un aperçu des NFT sur Ethereum
 lang: fr
 template: use-cases

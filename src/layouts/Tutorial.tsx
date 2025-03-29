@@ -22,12 +22,10 @@ import TableOfContents from "@/components/TableOfContents"
 import TooltipLink from "@/components/TooltipLink"
 import TutorialMetadata from "@/components/TutorialMetadata"
 import { ButtonLink } from "@/components/ui/buttons/Button"
-import { mdxTableComponents } from "@/components/ui/table"
+import { mdxTableComponents } from "@/components/ui/mdx-table-components"
 import YouTube from "@/components/YouTube"
 
 import { getEditPath } from "@/lib/utils/editPath"
-
-import { usePathname } from "@/i18n/routing"
 
 const Heading1 = (props: HTMLAttributes<HTMLHeadingElement>) => (
   <MdHeading1
@@ -87,7 +85,10 @@ export const tutorialsComponents = {
   YouTube,
 }
 type TutorialLayoutProps = ChildOnlyProp &
-  Pick<MdPageContent, "tocItems" | "contributors" | "contentNotTranslated"> &
+  Pick<
+    MdPageContent,
+    "tocItems" | "contributors" | "contentNotTranslated" | "slug"
+  > &
   Required<Pick<MdPageContent, "lastEditLocaleTimestamp">> & {
     frontmatter: TutorialFrontmatter
     timeToRead: number
@@ -95,6 +96,7 @@ type TutorialLayoutProps = ChildOnlyProp &
 
 export const TutorialLayout = ({
   children,
+  slug,
   frontmatter,
   tocItems,
   timeToRead,
@@ -102,8 +104,7 @@ export const TutorialLayout = ({
   contributors,
   contentNotTranslated,
 }: TutorialLayoutProps) => {
-  const pathname = usePathname()
-  const absoluteEditPath = getEditPath(pathname)
+  const absoluteEditPath = getEditPath(slug)
 
   return (
     <div className="flex w-full gap-8 border-b bg-background p-8 lg:mx-auto lg:bg-background-highlight lg:shadow">

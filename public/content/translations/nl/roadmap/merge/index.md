@@ -92,7 +92,7 @@ title="Ontwikkelaars van dapp en smart contracts"
 contentPreview="The Merge was designed to have minimal impact on smart contract and dapp developers."
 id="developers">
 
-De samenvoeging ging gepaard met wijzigingen in de consensus, waaronder ook wijzigingen met betrekking tot:<
+De samenvoeging ging gepaard met wijzigingen in de consensus, waaronder ook wijzigingen met betrekking tot:
 
 <ul>
   <li>blockstructuur</li>

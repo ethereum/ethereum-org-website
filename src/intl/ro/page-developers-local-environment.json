@@ -25,7 +25,5 @@
   "page-local-environment-setup-subtitle-2": "Iată instrumentele și framework-urile pe care le puteți utiliza ca să vă ajute la crearea aplicației Ethereum.",
   "page-local-environment-setup-title": "Configurați-vă mediul de dezvoltare locală",
   "page-local-environment-solidity-template-desc": "Un șablon GitHub pentru o configurație preconstruită pentru contractele dvs. inteligente Solidity. Include o rețea locală Hardhat, Waffle pentru testare, Ethers pentru implementarea portofelului și multe altele.",
-  "page-local-environment-solidity-template-logo-alt": "Sigla șablonului Solidity",
-  "page-local-environment-waffle-desc": "Cea mai avansată bibliotecă de testare pentru contractele inteligente. Se utilizează singură sau împreună cu Scafold-eth sau Hardhat.",
-  "page-local-environment-waffle-logo-alt": "Sigla Waffle"
+  "page-local-environment-solidity-template-logo-alt": "Sigla șablonului Solidity"
 }

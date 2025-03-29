@@ -5,7 +5,7 @@ lang: pt-br
 sidebarDepth: 3
 ---
 
-Exploradores de blocos são o seu portal para os dados do Ethereum. Você pode usá-los para ver dados em tempo real sobre blocos, transações, mineradores, contas e outras atividades em cadeia.
+Exploradores de blocos são o seu portal para os dados do Ethereum. Você pode usá-los para ver dados em tempo real sobre blocos, transações, validadores, contas e outras atividades on-chain.
 
 ## Pré-requisitos {#prerequisites}
 
@@ -14,15 +14,24 @@ Você deve entender os conceitos básicos do Ethereum; para que você possa ente
 ## Serviços {#services}
 
 - [Etherscan](https://etherscan.io/) -_Também disponível em chinês, coreano, russo e japonês_
+- [3xpl](https://3xpl.com/ethereum)
 - [Beaconcha.in](https://beaconcha.in/)
 - [Blockchair](https://blockchair.com/ethereum) -_ Também disponível em espanhol, francês, italiano, holandês, português, russo, chinês e persa_
 - [Blockscout](https://eth.blockscout.com/)
 - [Chainlens](https://www.chainlens.com/)
+- [Explorador de Blocos DexGuru](https://ethereum.dex.guru/)
 - [Etherchain](https://www.etherchain.org/)
+- [Ethernow](https://www.ethernow.xyz/)
 - [Ethplorer](https://ethplorer.io/) -_ Também disponível em chinês, espanhol, francês, turco, russo, coreano e vietnamita_
 - [EthVM](https://www.ethvm.com/)
 - [OKLink](https://www.oklink.com/eth)
+- [Rantom](https://rantom.app/)
+- [Ethseer](https://ethseer.io)
+
+## Ferramentas de código aberto {#open-source-tools}
+
 - [Otterscan](https://otterscan.io/)
+- [lazy-etherscan](https://github.com/woxjro/lazy-etherscan)
 
 ## Dados {#data}
 
@@ -46,7 +55,7 @@ Novos blocos são adicionados à Ethereum a cada 12 segundos (a menos que um pro
 - Limite de Gás - Os limites totais de gás definidos pelas transações no bloco
 - Taxa base por gás - O multiplicador mínimo necessário para que uma transação seja incluída em um bloco
 - Taxas queimadas - Quanto ETH é queimado no bloco
-- Dados extras - Quaisquer dados extras que o minerador incluiu no bloco
+- Dados extras - Quaisquer dados extras que o construtor tenha incluído no bloco
 
 **Dados avançados**
 
@@ -74,12 +83,12 @@ Os exploradores de blocos se tornaram um lugar comum para as pessoas acompanhare
 - Hash da transação - Um hash gerado quando a transação é enviada
 - Status - Uma indicação de se a transação está pendente, falhou ou foi concluída
 - Bloco - O bloco em que a transação foi incluída
-- Carimbo de tempo - A hora em que o mineiro minerou a transação
+- Carimbo de data/hora: a hora em que uma transação foi incluída em um bloco proposto por um validador
 - De - O endereço da conta que enviou a transação
 - Para - O endereço do destinatário ou o contrato inteligente com que a transação interagem
 - Tokens transferidos - Uma lista de tokens que foram transferidos como parte da transação
 - Valor - O valor total de ETH que está sendo transferido
-- Taxa de transação - O valor pago ao minerador para processar a transação (calculado pelo preço do gás\*gás usado)
+- Taxa de transação - O valor pago ao validador para processar a transação (calculado pelo preço do gás\*gás usado)
 
 **Dados avançados**
 
@@ -134,7 +143,7 @@ Alguns dados do bloco estão preocupados com a funcionalidade da Ethereum de for
 - Transações por segundo - O número de transações processáveis em um segundo
 - Preço ETH - As avaliações atuais de 1 ETTH
 - Fornecimento total de ETH – Número de ETH em circulação – lembre-se de que o novo ETH é criado com a criação de cada bloco sob a forma de recompensas por bloco
-- Capitalização de mercado - Cálculo do preço \ \* oferta
+- Capitalização de mercado - Cálculo do preço \ * oferta
 
 ## Dados de camada de consenso {#consensus-layer-data}
 
@@ -230,10 +239,13 @@ Os dados de nível superior da camada consensual incluem os seguintes:
 ## Exploradores de bloco {#block-explorers}
 
 - [Etherscan](https://etherscan.io/) - um explorador de bloco que você pode usar para buscar dados da rede principal Ethereum e rede de testes Goerli
+- [3xpl](https://3xpl.com/ethereum) - um explorador Ethereum de código aberto e sem anúncios que permite o download de seus conjuntos de dados
 - [Beaconcha.in](https://beaconcha.in/) - um explorador de bloco de código aberto para Ethereum Mainnet e Goerli Testnet
 - [Blockchair](https://blockchair.com/ethereum) - o explorador Ethereum mais privado. Também para classificação e filtragem de dados (mempool)
 - [Etherchain](https://www.etherchain.org/) - um explorador de blocos para a rede principal Ethereum
 - [Ethplorer](https://ethplorer.io/) - um explorador de blocos com foco nos tokens da rede principal Ethereum e rede de testes Kovan
+- [Rantom](https://rantom.app/) - Um DeFi amigável de código aberto & Visualizador de transação NFT para visões detalhadas
+- [Ethernow](https://www.ethernow.xyz/) - um explorador de transações em tempo real que permite que você veja a camada pré-cadeia da rede principal de Ethereum
 
 ## Leitura adicional {#further-reading}
 

@@ -2,7 +2,8 @@ import type { Meta, StoryObj } from "@storybook/react"
 
 import { Center } from "@/components/ui/flex"
 
-import { langViewportModes } from "../../../.storybook/modes"
+import { langViewportModes } from "@/storybook/modes"
+
 import { ContentLayout as ContentLayoutComponent } from "../ContentLayout"
 
 const meta = {

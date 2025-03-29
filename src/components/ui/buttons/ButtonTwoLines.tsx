@@ -45,12 +45,13 @@ export const ButtonTwoLines = ({
   className,
   iconAlignment = "start",
   size = "md",
+  variant,
   ...props
 }: ButtonTwoLinesProps) => {
   const isIconLeft = ["left", "start"].includes(iconAlignment)
 
   const [childProps, ownProps] = createSplitProps<ButtonTwoLinesProps>()(
-    { ...props, isIconLeft, size },
+    { ...props, isIconLeft, size, variant },
     [
       "reverseTextOrder",
       "mainText",
@@ -70,6 +71,7 @@ export const ButtonTwoLines = ({
         size === "md" ? "py-4" : "py-2",
         className
       )}
+      variant={variant}
       {...ownProps}
     >
       <ChildContent {...childProps} />
@@ -86,12 +88,13 @@ export const ButtonLinkTwoLines = ({
   className,
   iconAlignment = "start",
   size = "md",
+  variant,
   ...props
 }: ButtonLinkTwoLinesProps) => {
   const isIconLeft = ["left", "start"].includes(iconAlignment)
 
   const [childProps, ownProps] = createSplitProps<ButtonLinkTwoLinesProps>()(
-    { ...props, isIconLeft, size },
+    { ...props, isIconLeft, size, variant },
     [
       "reverseTextOrder",
       "mainText",
@@ -111,6 +114,7 @@ export const ButtonLinkTwoLines = ({
         size === "md" ? "py-4" : "py-2",
         className
       )}
+      variant={variant}
       {...ownProps}
     >
       <ChildContent {...childProps} />

@@ -41,6 +41,7 @@ export const getRequiredNamespacesForPage = (
   const baseNamespaces = ["common"]
 
   const requiredNamespacesForPath = getRequiredNamespacesForPath(path)
+  // TODO remove layout case since we can't use it anymore
   const requiredNamespacesForLayout = getRequiredNamespacesForLayout(layout)
 
   return [
@@ -95,6 +96,10 @@ const getRequiredNamespacesForPath = (relativePath: string) => {
 
   if (path.startsWith("/history/")) {
     primaryNamespace = "page-history"
+  }
+
+  if (path.startsWith("/resources/")) {
+    primaryNamespace = "page-resources"
   }
 
   if (path.startsWith("/stablecoins/")) {
@@ -178,7 +183,12 @@ const getRequiredNamespacesForPath = (relativePath: string) => {
   }
 
   if (path.startsWith("/layer-2/networks/")) {
+    primaryNamespace = "page-layer-2-networks"
     requiredNamespaces = [...requiredNamespaces, "table"]
+  }
+
+  if (path.startsWith("/start/")) {
+    requiredNamespaces = [...requiredNamespaces]
   }
 
   if (path.startsWith("/contributing/translation-program/translatathon/")) {

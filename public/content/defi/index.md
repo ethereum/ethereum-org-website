@@ -32,7 +32,7 @@ One of the best ways to see the potential of DeFi is to understand the problems 
 - Financial services can block you from getting paid.
 - A hidden charge of financial services is your personal data.
 - Governments and centralized institutions can close down markets at will.
-- Trading hours are often limited to business hours of specific time zone.
+- Trading hours are often limited to business hours of a specific time zone.
 - Money transfers can take days due to internal human processes.
 - There's a premium to financial services because intermediary institutions need their cut.
 

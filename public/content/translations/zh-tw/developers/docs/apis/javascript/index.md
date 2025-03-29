@@ -14,7 +14,7 @@ lang: zh-tw
 
 ## 基本資訊 {#prerequisites}
 
-除了瞭解 JavaScript 之外，瞭解<0>以太坊堆疊</0>和<1>以太坊用戶端</1>可能也會有所幫助。
+除了瞭解 JavaScript 之外，瞭解[以太坊堆疊](/developers/docs/ethereum-stack/)和[以太坊用戶端](/developers/docs/nodes-and-clients/)可能也會有所幫助。
 
 ## 為何使用資料圖書庫 {#why-use-a-library}
 

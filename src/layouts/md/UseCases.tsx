@@ -3,6 +3,8 @@ import type { MdPageContent, UseCasesFrontmatter } from "@/lib/interfaces"
 
 import BannerNotification from "@/components/Banners/BannerNotification"
 import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
+import AiAgentProductLists from "@/components/Content/ai-agents/AiAgentProductLists"
+import BuildYourOwnAIAgent from "@/components/Content/ai-agents/BuildYourOwnAIAgent"
 import Emoji from "@/components/Emoji"
 import { ContentHero } from "@/components/Hero"
 import InlineLink from "@/components/ui/Link"
@@ -14,11 +16,11 @@ import { getSummaryPoints } from "@/lib/utils/getSummaryPoints"
 import { ContentLayout } from "../ContentLayout"
 
 import { useTranslation } from "@/hooks/useTranslation"
-import { usePathname } from "@/i18n/routing"
 
 // UseCases layout components
 export const useCasesComponents = {
-  // Export empty object if none needed
+  AiAgentProductLists,
+  BuildYourOwnAIAgent,
 }
 
 type UseCasesLayoutProps = ChildOnlyProp &
@@ -41,12 +43,11 @@ export const UseCasesLayout = ({
   contributors,
   lastEditLocaleTimestamp,
 }: UseCasesLayoutProps) => {
-  const pathname = usePathname()
   const { t } = useTranslation("template-usecase")
 
   const summaryPoints = getSummaryPoints(frontmatter)
 
-  const absoluteEditPath = getEditPath(pathname)
+  const absoluteEditPath = getEditPath(slug)
 
   const dropdownLinks: ButtonDropdownList = {
     text: t("template-usecase:template-usecase-dropdown"),
@@ -122,6 +123,15 @@ export const UseCasesLayout = ({
           eventCategory: "use cases menu",
           eventAction: "click",
           eventName: "refi",
+        },
+      },
+      {
+        text: t("template-usecase:template-usecase-dropdown-ai-agents"),
+        href: "/ai-agents/",
+        matomo: {
+          eventCategory: "use cases menu",
+          eventAction: "click",
+          eventName: "ai-agents",
         },
       },
     ],

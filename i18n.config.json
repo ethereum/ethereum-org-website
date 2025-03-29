@@ -136,6 +136,14 @@
     "dateFormat": "DD/MM/YYYY"
   },
   {
+    "code": "ga",
+    "crowdinCode": "ga-IE",
+    "name": "Irish",
+    "localName": "Gaeilge",
+    "langDir": "ltr",
+    "dateFormat": "DD/MM/YYYY"
+  },
+  {
     "code": "gl",
     "crowdinCode": "gl",
     "name": "Galician",
