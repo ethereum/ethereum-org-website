@@ -9,6 +9,7 @@ import type { ChildOnlyProp } from "@/lib/types"
 import Emoji from "@/components/Emoji"
 import ExpandableCard from "@/components/ExpandableCard"
 import FeedbackCard from "@/components/FeedbackCard"
+import FileContributors from "@/components/FileContributors"
 import type { IconBaseType } from "@/components/icons/icon-base"
 import {
   DecentralizationGlyphIcon,
@@ -204,7 +205,7 @@ type RunANodeCard = {
   alt: string
 }
 
-const RunANodePage = () => {
+const RunANodePage = ({ contributors, lastEditLocaleTimestamp }) => {
   const { t } = useTranslation("page-run-a-node")
   const heroContent = {
     title: t("page-run-a-node-title"),
@@ -756,6 +757,11 @@ const RunANodePage = () => {
       </Content>
       <Content>
         <QuizWidget quizKey="run-a-node" />
+        <FileContributors
+          className="my-10 border-t"
+          contributors={contributors}
+          lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        />
         <FeedbackCard />
       </Content>
     </GappedPage>

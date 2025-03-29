@@ -20,6 +20,7 @@ import Card from "@/components/Card"
 import DocLink from "@/components/DocLink"
 import Emoji from "@/components/Emoji"
 import FeedbackCard from "@/components/FeedbackCard"
+import FileContributors from "@/components/FileContributors"
 import GhostCard from "@/components/GhostCard"
 import { Image } from "@/components/Image"
 import InfoBanner from "@/components/InfoBanner"
@@ -284,7 +285,7 @@ interface Categories {
   [key: string]: Category
 }
 
-const DappsPage = () => {
+const DappsPage = ({ contributors, lastEditLocaleTimestamp }) => {
   const { t } = useTranslation(["page-dapps", "common"])
   const searchParams = useSearchParams()
   const locale = useLocale()
@@ -1753,6 +1754,11 @@ const DappsPage = () => {
         </Row>
       </Content>
       <Content>
+        <FileContributors
+          className="my-10 border-t"
+          contributors={contributors}
+          lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        />
         <FeedbackCard />
       </Content>
     </Page>

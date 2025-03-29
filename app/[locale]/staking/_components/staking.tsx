@@ -2,12 +2,17 @@
 
 import { type HTMLAttributes, ReactNode } from "react"
 
-import type { ChildOnlyProp, StakingStatsData } from "@/lib/types"
+import type {
+  ChildOnlyProp,
+  FileContributor,
+  StakingStatsData,
+} from "@/lib/types"
 
 import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import Card from "@/components/Card"
 import ExpandableCard from "@/components/ExpandableCard"
 import FeedbackCard from "@/components/FeedbackCard"
+import FileContributors from "@/components/FileContributors"
 import LeftNavBar from "@/components/LeftNavBar"
 import { ContentContainer, Page } from "@/components/MdComponents"
 import MobileButtonDropdown from "@/components/MobileButtonDropdown"
@@ -102,9 +107,15 @@ const StyledCard = (props: {
 
 type Props = {
   data: StakingStatsData
+  contributors: FileContributor[]
+  lastEditLocaleTimestamp: string
 }
 
-const StakingPage = ({ data }: Props) => {
+const StakingPage = ({
+  data,
+  contributors,
+  lastEditLocaleTimestamp,
+}: Props) => {
   const { t } = useTranslation("page-staking")
 
   const heroContent = {
@@ -539,6 +550,11 @@ const StakingPage = ({ data }: Props) => {
                   </InlineLink>
                 </ListItem>
               </UnorderedList>
+              <FileContributors
+                className="my-10 border-t"
+                contributors={contributors}
+                lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+              />
             </div>
             <div>
               <FeedbackCard />

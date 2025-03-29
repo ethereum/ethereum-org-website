@@ -7,6 +7,7 @@ import Callout from "@/components/Callout"
 import Card from "@/components/Card"
 import CardList from "@/components/CardList"
 import FeedbackCard from "@/components/FeedbackCard"
+import FileContributors from "@/components/FileContributors"
 import HorizontalCard from "@/components/HorizontalCard"
 import { Image } from "@/components/Image"
 import ListenToPlayer from "@/components/ListenToPlayer"
@@ -35,7 +36,7 @@ export const StyledCard = (props: ComponentPropsWithRef<typeof Card>) => (
   />
 )
 
-const WalletsPage = () => {
+const WalletsPage = ({ contributors, lastEditLocaleTimestamp }) => {
   const pathname = usePathname()
   const locale = useLocale()
   const { t } = useTranslation("page-wallets")
@@ -418,6 +419,11 @@ const WalletsPage = () => {
       </div>
 
       <div className="w-full px-8 py-4">
+        <FileContributors
+          className="my-10 border-t"
+          contributors={contributors}
+          lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        />
         <FeedbackCard />
       </div>
     </MainArticle>
