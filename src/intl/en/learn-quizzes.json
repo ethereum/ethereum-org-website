@@ -649,7 +649,7 @@
   "smart-contracts-4-c-label": "Non Fungible Assets",
   "smart-contracts-4-c-explanation": "Smart contracts are used to define a wide range of NFTs, ranging from digital art to asset ownership certificates.",
   "smart-contracts-4-d-label": "DAOs",
-  "smart-contracts-4-d-explanation": "The governing and voting rules of Decentralized Autonomous Organisations are defined within smart contracts for transparency.",
+  "smart-contracts-4-d-explanation": "The governing and voting rules of DAOs are defined within smart contracts for transparency.",
   "smart-contracts-5-prompt": "Who coined the term 'smart contract'?",
   "smart-contracts-5-a-label": "Nick Szabo",
   "smart-contracts-5-a-explanation": "The computer scientist and cryptographer Nick Szabo coined the term 'smart contract' in an essay from 1994. In 1996, he wrote an exploration of what they could do. Smart contracts on Ethereum later put this vision into practice.",
