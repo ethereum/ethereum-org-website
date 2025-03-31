@@ -18,7 +18,7 @@ import { BASE_TIME_UNIT } from "@/lib/constants"
 
 import StakingPage from "./_components/staking"
 
-import { getMessages } from "@/i18n/loadMessages"
+import { loadMessages } from "@/i18n/loadMessages"
 
 const fetchBeaconchainData = async (): Promise<StakingStatsData> => {
   // Fetch Beaconcha.in data
@@ -63,7 +63,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const [data] = await loadData()
 
   // Get i18n messages
-  const allMessages = await getMessages(locale)
+  const allMessages = await loadMessages(locale)
   const requiredNamespaces = getRequiredNamespacesForPage("/staking")
   const messages = pick(allMessages, requiredNamespaces)
 

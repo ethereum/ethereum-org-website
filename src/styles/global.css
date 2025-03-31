@@ -6,6 +6,7 @@
 @import "@/styles/colors.css";
 @import "@/styles/semantic-tokens.css";
 @import "@/styles/docsearch.css";
+@import "@rainbow-me/rainbowkit/styles.css";
 
 @layer base {
   :root {

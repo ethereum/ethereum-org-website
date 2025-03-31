@@ -1,4 +1,5 @@
 import pick from "lodash.pick"
+import { getTranslations } from "next-intl/server"
 
 import { Lang } from "@/lib/types"
 
@@ -15,7 +16,7 @@ import { BASE_TIME_UNIT } from "@/lib/constants"
 
 import Layer2Page from "./_components/layer-2"
 
-import { getMessages } from "@/i18n/loadMessages"
+import { loadMessages } from "@/i18n/loadMessages"
 import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
 import { fetchL2beat } from "@/lib/api/fetchL2beat"
 
@@ -57,7 +58,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const userRandomL2s = getRandomL2s()
 
   // Get i18n messages
-  const allMessages = await getMessages(locale)
+  const allMessages = await loadMessages(locale)
   const requiredNamespaces = getRequiredNamespacesForPage("/layer-2")
   const messages = pick(allMessages, requiredNamespaces)
 
@@ -80,13 +81,13 @@ export async function generateMetadata({
 }) {
   const { locale } = await params
 
+  const t = await getTranslations({ locale, namespace: "page-layer-2" })
+
   return await getMetadata({
     locale,
     slug: ["layer-2"],
-    /* TODO: Clarify title and description here */
-    /* TODO: Setup for translation */
-    title: "Intro to Ethereum Layer 2: benefits and uses",
-    description: "Learn about Ethereum layer 2 networks",
+    title: t("page-layer-2-meta-title"),
+    description: t("page-layer-2-meta-description"),
     image: "/images/layer-2/learn-hero.png",
   })
 }

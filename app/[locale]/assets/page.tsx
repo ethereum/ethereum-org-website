@@ -10,7 +10,7 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import AssetsPage from "./_components/assets"
 
-import { getMessages } from "@/i18n/loadMessages"
+import { loadMessages } from "@/i18n/loadMessages"
 
 export default async function Page({
   params,
@@ -20,7 +20,7 @@ export default async function Page({
   const { locale } = await params
 
   // Get i18n messages
-  const allMessages = await getMessages(locale)
+  const allMessages = await loadMessages(locale)
   const requiredNamespaces = getRequiredNamespacesForPage("/assets")
   const messages = pick(allMessages, requiredNamespaces)
 

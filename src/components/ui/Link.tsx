@@ -56,7 +56,7 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
   const { twFlipForRtl } = useRtlFlip()
 
   if (!href) {
-    console.warn("Link component is missing href prop")
+    console.warn(`Link component missing href prop, pathname: ${pathname}`)
     return <a {...props} />
   }
 

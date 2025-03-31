@@ -2,6 +2,7 @@ import { cacheAsyncFn } from "./cacheAsyncFn"
 import { loadMockData } from "./loadMockData"
 
 const USE_MOCK_DATA = process.env.USE_MOCK_DATA === "true"
+if (USE_MOCK_DATA) console.warn("Using mock data")
 
 if (USE_MOCK_DATA) {
   console.warn("Using mock data")

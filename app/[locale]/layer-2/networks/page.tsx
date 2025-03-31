@@ -1,4 +1,5 @@
 import pick from "lodash.pick"
+import { getTranslations } from "next-intl/server"
 
 import { Lang } from "@/lib/types"
 
@@ -16,7 +17,7 @@ import { BASE_TIME_UNIT } from "@/lib/constants"
 
 import Layer2Networks from "./_components/networks"
 
-import { getMessages } from "@/i18n/loadMessages"
+import { loadMessages } from "@/i18n/loadMessages"
 import { fetchEthereumMarketcap } from "@/lib/api/fetchEthereumMarketcap"
 import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
 import { fetchGrowThePieBlockspace } from "@/lib/api/fetchGrowThePieBlockspace"
@@ -95,7 +96,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     })
 
   // Get i18n messages
-  const allMessages = await getMessages(locale)
+  const allMessages = await loadMessages(locale)
   const requiredNamespaces = getRequiredNamespacesForPage("/layer-2/networks")
   const messages = pick(allMessages, requiredNamespaces)
 
@@ -128,12 +129,16 @@ export async function generateMetadata({
 }) {
   const { locale } = await params
 
+  const t = await getTranslations({
+    locale,
+    namespace: "page-layer-2-networks",
+  })
+
   return await getMetadata({
     locale,
     slug: ["layer-2", "networks"],
-    title: "Ethereum Layer 2:Explore networks",
-    description:
-      "Using Ethereum today means interacting with hundreds of different networks and apps. All backed by Ethereum as the foundational backbone.",
+    title: t("page-layer-2-networks-meta-title"),
+    description: t("page-layer-2-networks-hero-description"),
     image: "/images/layer-2/learn-hero.png",
   })
 }

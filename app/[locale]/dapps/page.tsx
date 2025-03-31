@@ -10,13 +10,13 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import DappsPage from "./_components/dapps"
 
-import { getMessages } from "@/i18n/loadMessages"
+import { loadMessages } from "@/i18n/loadMessages"
 
 export default async function Page({ params }: { params: Promise<Params> }) {
   const { locale } = await params
 
   // Get i18n messages
-  const allMessages = await getMessages(locale)
+  const allMessages = await loadMessages(locale)
   const requiredNamespaces = getRequiredNamespacesForPage("/dapps")
   const pickedMessages = pick(allMessages, requiredNamespaces)
 

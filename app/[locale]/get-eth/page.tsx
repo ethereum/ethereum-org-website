@@ -11,7 +11,7 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import GetEthPage from "./_components/get-eth"
 
-import { getMessages } from "@/i18n/loadMessages"
+import { loadMessages } from "@/i18n/loadMessages"
 
 export default async function Page({
   params,
@@ -25,7 +25,7 @@ export default async function Page({
   )
 
   // Get i18n messages
-  const allMessages = await getMessages(locale)
+  const allMessages = await loadMessages(locale)
   const requiredNamespaces = getRequiredNamespacesForPage("/get-eth")
   const pickedMessages = pick(allMessages, requiredNamespaces)
 

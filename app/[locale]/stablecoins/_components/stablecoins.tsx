@@ -105,7 +105,7 @@ const StablecoinsPage = ({ markets, marketsHasError }: Props) => {
       ],
       links: [
         { text: "USDC", url: "https://www.coinbase.com/usdc" },
-        { text: "TrueUSD", url: "https://www.trusttoken.com/trueusd" },
+        { text: "TrueUSD", url: "https://tusd.io/" },
       ],
     },
     {

@@ -11,7 +11,7 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import LocalEnvironmentPage from "./_components/local-environment"
 
-import { getMessages } from "@/i18n/loadMessages"
+import { loadMessages } from "@/i18n/loadMessages"
 import { getLocalEnvironmentFrameworkData } from "@/lib/api/ghRepoData"
 
 const loadData = dataLoader([
@@ -24,7 +24,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const [frameworksListData] = await loadData()
 
   // Get i18n messages
-  const allMessages = await getMessages(locale)
+  const allMessages = await loadMessages(locale)
   const requiredNamespaces = getRequiredNamespacesForPage(
     "/developers/local-environment"
   )
