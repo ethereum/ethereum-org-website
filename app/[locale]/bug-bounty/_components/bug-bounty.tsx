@@ -2,7 +2,7 @@
 
 import { HTMLAttributes } from "react"
 
-import type { ChildOnlyProp } from "@/lib/types"
+import type { ChildOnlyProp, PageWithContributorsProps } from "@/lib/types"
 
 /* Uncomment for Bug Bounty Banner: */
 import BugBountyBanner from "@/components/Banners/BugBountyBanner"
@@ -225,7 +225,10 @@ const sortBountyHuntersFn = (a: BountyHuntersArg, b: BountyHuntersArg) => {
   return b.score - a.score
 }
 
-const BugBountiesPage = ({ contributors, lastEditLocaleTimestamp }) => {
+const BugBountiesPage = ({
+  contributors,
+  lastEditLocaleTimestamp,
+}: PageWithContributorsProps) => {
   const pathname = usePathname()
   const { t } = useTranslation("page-bug-bounty")
 

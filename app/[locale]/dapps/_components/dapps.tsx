@@ -11,7 +11,7 @@ import React, {
 import { useSearchParams } from "next/navigation"
 import { useLocale } from "next-intl"
 
-import type { ChildOnlyProp } from "@/lib/types"
+import type { ChildOnlyProp, PageWithContributorsProps } from "@/lib/types"
 
 import BoxGrid from "@/components/BoxGrid"
 import Callout from "@/components/Callout"
@@ -285,7 +285,10 @@ interface Categories {
   [key: string]: Category
 }
 
-const DappsPage = ({ contributors, lastEditLocaleTimestamp }) => {
+const DappsPage = ({
+  contributors,
+  lastEditLocaleTimestamp,
+}: PageWithContributorsProps) => {
   const { t } = useTranslation(["page-dapps", "common"])
   const searchParams = useSearchParams()
   const locale = useLocale()

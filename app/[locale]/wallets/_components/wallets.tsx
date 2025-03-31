@@ -3,6 +3,8 @@
 import { ComponentPropsWithRef } from "react"
 import { useLocale } from "next-intl"
 
+import { PageWithContributorsProps } from "@/lib/types"
+
 import Callout from "@/components/Callout"
 import Card from "@/components/Card"
 import CardList from "@/components/CardList"
@@ -36,7 +38,10 @@ export const StyledCard = (props: ComponentPropsWithRef<typeof Card>) => (
   />
 )
 
-const WalletsPage = ({ contributors, lastEditLocaleTimestamp }) => {
+const WalletsPage = ({
+  contributors,
+  lastEditLocaleTimestamp,
+}: PageWithContributorsProps) => {
   const pathname = usePathname()
   const locale = useLocale()
   const { t } = useTranslation("page-wallets")

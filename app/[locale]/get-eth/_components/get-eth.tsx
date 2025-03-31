@@ -2,7 +2,7 @@
 
 import type { ReactNode } from "react"
 
-import type { ChildOnlyProp, FileContributor } from "@/lib/types"
+import type { ChildOnlyProp, PageWithContributorsProps } from "@/lib/types"
 
 import CalloutBanner from "@/components/CalloutBanner"
 import CardList, {
@@ -65,10 +65,8 @@ const TwoColumnContent = (props: ChildOnlyProp) => (
   <div className="grid grid-cols-1 gap-16 lg:grid-cols-2" {...props} />
 )
 
-type Props = {
+type Props = PageWithContributorsProps & {
   lastDataUpdateDate: string
-  contributors: FileContributor[]
-  lastEditLocaleTimestamp: string
 }
 
 const GetEthPage = ({

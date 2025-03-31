@@ -2,6 +2,8 @@
 
 import { BaseHTMLAttributes, ComponentPropsWithRef } from "react"
 
+import { PageWithContributorsProps } from "@/lib/types"
+
 import Callout from "@/components/Callout"
 import Card from "@/components/Card"
 import Emoji from "@/components/Emoji"
@@ -78,7 +80,10 @@ const H3 = ({
   <h3 className={cn("mb-8 mt-10 text-xl md:text-2xl", className)} {...props} />
 )
 
-const GasPage = ({ contributors, lastEditLocaleTimestamp }) => {
+const GasPage = ({
+  contributors,
+  lastEditLocaleTimestamp,
+}: PageWithContributorsProps) => {
   const { t } = useTranslation("page-gas")
 
   const benefits = [

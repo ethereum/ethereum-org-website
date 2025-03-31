@@ -7,9 +7,9 @@ import { MdInfoOutline } from "react-icons/md"
 
 import type {
   ChildOnlyProp,
-  FileContributor,
   Lang,
   MetricReturnData,
+  PageWithContributorsProps,
 } from "@/lib/types"
 
 import AdoptionChart from "@/components/AdoptionChart"
@@ -166,10 +166,8 @@ const Image400 = ({ src }: Pick<ImageProps, "src">) => (
   <Image src={src} alt="" width={400} />
 )
 
-type Props = {
+type Props = PageWithContributorsProps & {
   data: MetricReturnData
-  contributors: FileContributor[]
-  lastEditLocaleTimestamp: string
 }
 
 const WhatIsEthereumPage = ({

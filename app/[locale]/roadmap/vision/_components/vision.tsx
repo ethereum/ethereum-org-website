@@ -2,7 +2,7 @@
 
 import type { ComponentProps, ComponentPropsWithRef } from "react"
 
-import type { ChildOnlyProp } from "@/lib/types"
+import type { ChildOnlyProp, PageWithContributorsProps } from "@/lib/types"
 
 import Breadcrumbs from "@/components/Breadcrumbs"
 import Card from "@/components/Card"
@@ -91,7 +91,10 @@ const TrilemmaContent = (props: ChildOnlyProp) => (
   />
 )
 
-const VisionPage = ({ contributors, lastEditLocaleTimestamp }) => {
+const VisionPage = ({
+  contributors,
+  lastEditLocaleTimestamp,
+}: PageWithContributorsProps) => {
   const { t } = useTranslation(["page-roadmap-vision", "page-upgrades-index"])
   const pathname = usePathname()
 

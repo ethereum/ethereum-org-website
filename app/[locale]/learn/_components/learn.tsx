@@ -2,7 +2,11 @@
 
 import type { HTMLAttributes, ReactNode } from "react"
 
-import type { ChildOnlyProp, ToCItem } from "@/lib/types"
+import type {
+  ChildOnlyProp,
+  PageWithContributorsProps,
+  ToCItem,
+} from "@/lib/types"
 
 import OriginalCard, {
   type CardProps as OriginalCardProps,
@@ -112,7 +116,10 @@ const ImageHeight200 = ({ src, alt }: ImageProps) => (
   <Image className="h-[200px] w-auto" src={src} alt={alt} />
 )
 
-const LearnPage = ({ contributors, lastEditLocaleTimestamp }) => {
+const LearnPage = ({
+  contributors,
+  lastEditLocaleTimestamp,
+}: PageWithContributorsProps) => {
   const { t } = useTranslation("page-learn")
 
   const tocItems = [

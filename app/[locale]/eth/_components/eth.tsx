@@ -2,7 +2,7 @@
 
 import type { ComponentProps, HTMLAttributes } from "react"
 
-import type { ChildOnlyProp } from "@/lib/types"
+import type { ChildOnlyProp, PageWithContributorsProps } from "@/lib/types"
 
 import ActionCard from "@/components/ActionCard"
 import CalloutBanner from "@/components/CalloutBanner"
@@ -169,7 +169,10 @@ const CentralActionCard = (props: ComponentProps<typeof ActionCard>) => (
   <ActionCard className="my-8" imageWidth={260} {...props} />
 )
 
-const EthPage = ({ contributors, lastEditLocaleTimestamp }) => {
+const EthPage = ({
+  contributors,
+  lastEditLocaleTimestamp,
+}: PageWithContributorsProps) => {
   const { t } = useTranslation("page-eth")
   const pathname = usePathname()
 

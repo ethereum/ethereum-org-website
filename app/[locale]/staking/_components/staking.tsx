@@ -4,7 +4,7 @@ import { type HTMLAttributes, ReactNode } from "react"
 
 import type {
   ChildOnlyProp,
-  FileContributor,
+  PageWithContributorsProps,
   StakingStatsData,
 } from "@/lib/types"
 
@@ -105,10 +105,8 @@ const StyledCard = (props: {
   </Card>
 )
 
-type Props = {
+type Props = PageWithContributorsProps & {
   data: StakingStatsData
-  contributors: FileContributor[]
-  lastEditLocaleTimestamp: string
 }
 
 const StakingPage = ({

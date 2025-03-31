@@ -1,5 +1,7 @@
 "use client"
 
+import { PageWithContributorsProps } from "@/lib/types"
+
 import Callout from "@/components/Callout"
 import Card from "@/components/Card"
 import FileContributors from "@/components/FileContributors"
@@ -20,7 +22,10 @@ import Callout1Image from "@/public/images/man-and-dog-playing.png"
 import DAOImage from "@/public/images/use-cases/dao-2.png"
 import WhatIsEthereumImage from "@/public/images/what-is-ethereum.png"
 
-const Layer2Learn = ({ contributors, lastEditLocaleTimestamp }) => {
+const Layer2Learn = ({
+  contributors,
+  lastEditLocaleTimestamp,
+}: PageWithContributorsProps) => {
   const { t } = useTranslation("page-layer-2-learn")
   const pathname = usePathname()
 

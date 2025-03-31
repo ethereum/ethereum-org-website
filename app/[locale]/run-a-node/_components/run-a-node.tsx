@@ -4,7 +4,7 @@ import { HTMLAttributes } from "react"
 import type { ReactNode } from "react"
 import { FaDiscord } from "react-icons/fa"
 
-import type { ChildOnlyProp } from "@/lib/types"
+import type { ChildOnlyProp, PageWithContributorsProps } from "@/lib/types"
 
 import Emoji from "@/components/Emoji"
 import ExpandableCard from "@/components/ExpandableCard"
@@ -205,7 +205,10 @@ type RunANodeCard = {
   alt: string
 }
 
-const RunANodePage = ({ contributors, lastEditLocaleTimestamp }) => {
+const RunANodePage = ({
+  contributors,
+  lastEditLocaleTimestamp,
+}: PageWithContributorsProps) => {
   const { t } = useTranslation("page-run-a-node")
   const heroContent = {
     title: t("page-run-a-node-title"),
