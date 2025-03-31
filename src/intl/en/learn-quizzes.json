@@ -633,7 +633,7 @@
   "smart-contracts-2-d-label": "A website",
   "smart-contracts-2-d-explanation": "A website is the frontend which captures user directions. A smart contract is the backend logic where these directions are executed, and the result may be returned.",
   "smart-contracts-3-prompt": "What is not one of the main characteristics of a smart contract?",
-  "smart-contracts-3-a-label": "Automatic execution",
+  "smart-contracts-3-a-label": "Deterministic execution",
   "smart-contracts-3-a-explanation": "The main benefit of a smart contract is that it deterministically executes unambiguous code when certain conditions are met.",
   "smart-contracts-3-b-label": "Public record",
   "smart-contracts-3-b-explanation": "With smart contracts on a public blockchain, anyone can instantly track asset transfers and other related information.",
