@@ -648,7 +648,7 @@
   "smart-contracts-4-b-explanation": "While protocol changes are enacted through a smart contract, their creation and definition are proposed through transparent online forums such as Github or Forum.",
   "smart-contracts-4-c-label": "Non Fungible Assets",
   "smart-contracts-4-c-explanation": "Smart contracts are used to define a wide range of NFTs, ranging from digital art to asset ownership certificates.",
-  "smart-contracts-4-d-label": "DAOs",
+  "smart-contracts-4-d-label": "Decentralized autonomous organizations (DAOs)",
   "smart-contracts-4-d-explanation": "The governing and voting rules of DAOs are defined within smart contracts for transparency.",
   "smart-contracts-5-prompt": "Who coined the term 'smart contract'?",
   "smart-contracts-5-a-label": "Nick Szabo",
