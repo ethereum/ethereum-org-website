@@ -618,7 +618,7 @@
   "smart-contracts-1-a-label": "Smart contracts are just like real (paper) contracts, but stored digitally on the blockchain to save the content securely.",
   "smart-contracts-1-a-explanation": "Smart contracts use a similar logic to traditional contracts, but otherwise have little in common.",
   "smart-contracts-1-b-label": "Linked to autonomous AI systems that execute transactions",
-  "smart-contracts-1-b-explanation": "Smart contracts can actually execute transactions automatically, but only according to an ‘if this then that’ logic that is prescribed in the code. They do not use AI.",
+  "smart-contracts-1-b-explanation": "Smart contracts execute transactions predictably according to 'if-this-then-that' logic prescribed in the code—they do not use AI",
   "smart-contracts-1-c-label": "They are programs stored on the blockchain that follow an 'if this then that' logic, and are guaranteed to execute according to the rules defined by the code.",
   "smart-contracts-1-c-explanation": "A smart contract is a piece of code that can be executed automatically according to an 'if this then that' logic.",
   "smart-contracts-1-d-label": "They are the rules behind the Ethereum Blockchain, developed together with lawyers to ensure legal compliance.",
