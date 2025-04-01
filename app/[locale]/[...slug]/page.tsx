@@ -7,10 +7,10 @@ import mdComponents from "@/components/MdComponents"
 
 import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { dateToString } from "@/lib/utils/date"
-import { getPostSlugs } from "@/lib/utils/md"
+import { getMdSlugs, getPostSlugs } from "@/lib/utils/md"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
-import { DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
+import { DEFAULT_LOCALE } from "@/lib/constants"
 
 import { componentsMapping, layoutMapping } from "@/layouts"
 import { fetchGFIs } from "@/lib/api/fetchGFIs"
@@ -39,10 +39,9 @@ export default async function Page({
   const { locale, slug: slugArray } = await params
 
   // Check if this specific path is in our valid paths
-  const validPaths = await pagesToBuild()
+  const validPaths = await getPostSlugs("/")
   const isValidPath = validPaths.some(
-    (path) =>
-      path.locale === locale && path.slug.join("/") === slugArray.join("/")
+    (path) => path.split("/").filter(Boolean).join("/") === slugArray.join("/")
   )
 
   if (!isValidPath) {
@@ -106,26 +105,39 @@ export default async function Page({
   )
 }
 
-async function pagesToBuild() {
-  const slugs = await getPostSlugs("/")
-
-  return LOCALES_CODES.flatMap((locale) =>
-    slugs.map((slug) => ({
-      slug: slug.split("/").slice(1),
-      locale,
-    }))
-  )
-}
-
 export async function generateStaticParams() {
-  const allPages = await pagesToBuild()
+  const sourceSlugs = await getPostSlugs("/")
 
-  if (process.env.IS_PREVIEW_DEPLOY === "true") {
-    // Only build default locale
-    return allPages.filter((page) => page.locale === DEFAULT_LOCALE)
-  }
+  // build statically only those pages that have an existing md file,
+  // the rest is built on demand
+  const mdPaths = await getMdSlugs("/")
 
-  return allPages
+  return mdPaths
+    .map((path) => {
+      const slugArray = path.split("/").filter(Boolean)
+      const [translationFolder, locale, ...slug] = slugArray
+
+      if (translationFolder === "translations") {
+        const sourceSlug = sourceSlugs.find(
+          (s) => s.split("/").filter(Boolean).join("/") === slug.join("/")
+        )
+
+        if (!sourceSlug) {
+          return null
+        }
+
+        return {
+          slug,
+          locale,
+        }
+      }
+
+      return {
+        slug: slugArray,
+        locale: DEFAULT_LOCALE,
+      }
+    })
+    .filter(Boolean)
 }
 
 export const dynamicParams = true

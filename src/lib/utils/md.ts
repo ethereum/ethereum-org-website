@@ -59,6 +59,37 @@ export const getPostSlugs = async (dir: string, filterRegex?: RegExp) => {
   return files
 }
 
+export const getMdSlugs = async (dir: string) => {
+  const contentRoot = getContentRoot()
+  const _dir = join(contentRoot, dir)
+
+  const dirContents = await fsp.readdir(_dir)
+
+  const files: string[] = []
+
+  for (const fileOrDir of dirContents) {
+    const path = join(_dir, fileOrDir)
+    const stats = await fsp.stat(path)
+
+    if (stats.isDirectory()) {
+      const nestedDir = join(dir, fileOrDir)
+      const nestedFiles = await getMdSlugs(nestedDir)
+      files.push(...nestedFiles)
+      continue
+    }
+
+    if (extname(path) !== ".md") continue
+
+    const sanitizedPath = toPosixPath(
+      path.replace(contentRoot, "").replace("/index.md", "")
+    )
+
+    files.push(sanitizedPath)
+  }
+
+  return files
+}
+
 export const getTutorialsData = (locale: string): ITutorial[] => {
   const contentRoot = getContentRoot()
   const fullPath = join(
