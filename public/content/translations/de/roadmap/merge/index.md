@@ -92,7 +92,7 @@ title="dApp und Smart Contract Entwickler"
 contentPreview="The Merge was designed to have minimal impact on smart contract and dapp developers."
 id="developers">
 
-The Merge trat ein, indem es Änderungen an der Konsens-Methode mit sich brachte, darunter Änderungen an:<
+The Merge trat ein, indem es Änderungen an der Konsens-Methode mit sich brachte, darunter Änderungen an:
 
 <ul>
   <li>Block-Struktur</li>

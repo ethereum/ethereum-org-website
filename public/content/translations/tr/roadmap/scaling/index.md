@@ -44,7 +44,7 @@ Geçici blok verilerini ilerletmenin ikinci aşaması karmaşıktır çünkü to
 
 ## Güncel ilerleme {#current-progress}
 
-Proto-Danksharding, 2024 yılının Mart ayında Cancun-Deneb ("Dencun") ağ yükseltmesi ile uygulanmaya alınacak olan bu yol haritasının ilk parçasıdır. **Tam Danksharding** ise yol haritasındaki diğer parçaların tamamlanmasına ihtiyaç duyduğundan <0>birkaç yıl daha uzaktadır</0>. Toplama altyapısını merkeziyetsiz hale getirme işlemi muhtemelen kademeli bir süreç olacak, farklı toplamalar farklı işlemler inşa ediyor. Bu nedenle farklı hızlarda merkeziyetsizleşme gerçekleşecektir.
+Proto-Danksharding, 2024 yılının Mart ayında Cancun-Deneb ("Dencun") ağ yükseltmesi ile uygulanmaya alınacak olan bu yol haritasının ilk parçasıdır. **Tam Danksharding** ise yol haritasındaki diğer parçaların tamamlanmasına ihtiyaç duyduğundan **birkaç yıl daha uzaktadır**. Toplama altyapısını merkeziyetsiz hale getirme işlemi muhtemelen kademeli bir süreç olacak, farklı toplamalar farklı işlemler inşa ediyor. Bu nedenle farklı hızlarda merkeziyetsizleşme gerçekleşecektir.
 
 [Dencun ağ yükseltmesine dair daha fazla bilgi](/roadmap/dencun/)
 
