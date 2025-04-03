@@ -13,7 +13,7 @@ Blockchain-Anwendungen helfen Unternehmen:
 - Sie erschaffen neue Geschäftsmodelle und Wertschöpfungsmöglichkeiten.
 - Sie bieten für ihre Organisation einen wettbewerbsorientierten Zukunftsschutz.
 
-Enterprise-Blockchain-Anwendungen können auf dem öffentlichen Ethereum-[Mainnet](/glossary/#mainnet) oder auf privaten Blockchains, die auf der Ethereum-Technologie basieren, aufgebaut werden. Weitere Informationen zu [privaten Enterprise-Ethereum-Ketten](/enterprise/private-ethereum/)
+Enterprise-Blockchain-Anwendungen können auf dem öffentlichen Ethereum-[Mainnet](/glossary/#mainnet) oder auf privaten Blockchains, die auf der Ethereum-Technologie basieren, aufgebaut werden.
 
 ## Öffentliches gegenüber privatem Ethereum {#private-vs-public}
 
