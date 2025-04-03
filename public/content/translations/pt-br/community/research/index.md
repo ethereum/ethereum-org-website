@@ -41,7 +41,7 @@ Além da pesquisa voltada para o futuro, algumas reformulações fundamentais do
 
 - [Introdução à prova de participação](/developers/docs/consensus-mechanisms/pos/)
 - [Artigo sobre o Casper-FFG](https://arxiv.org/abs/1710.09437)
-- [Artigo sobre Casper-FFG](https://arxiv.org/abs/1710.09437)
+- [Artigo sobre Casper-FFG](https://medium.com/unitychain/intro-to-casper-ffg-9ed944d98b2d)
 - [Artigo sobre o Gasper](https://arxiv.org/abs/2003.03052)
 
 #### Pesquisa recente {#recent-research}
