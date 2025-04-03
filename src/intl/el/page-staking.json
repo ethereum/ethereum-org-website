@@ -10,7 +10,7 @@
   "comp-withdrawal-comparison-new-link": "Μετάβαση στην Πλατφόρμα Αποθήκευσης Κεφαλαίου",
   "comp-withdrawal-credentials-placeholder": "Ευρετήριο επικυρωτή",
   "comp-withdrawal-credentials-error": "Ελέγξτε ξανά τον αριθμό ευρετηρίου του επικυρωτή και προσπαθήστε ξανά.",
-  "comp-withdrawal-credentials-upgraded-1": "Το ευρετήριο επικυρωτή {{validatorIndex}} είναι έτοιμο να αρχίσει να λαμβάνει επιβραβεύσεις!",
+  "comp-withdrawal-credentials-upgraded-1": "Το ευρετήριο επικυρωτή {validatorIndex} είναι έτοιμο να αρχίσει να λαμβάνει επιβραβεύσεις!",
   "comp-withdrawal-credentials-upgraded-2": "Διαπιστευτήρια ανάληψης που συνδέονται με τη διεύθυνση εκτέλεσης:",
   "comp-withdrawal-credentials-not-upgraded-1": "Ο επικυρωτής χρειάζεται αναβάθμιση.",
   "comp-withdrawal-credentials-not-upgraded-1-testnet": "Ο επικυρωτής του δικτύου δοκιμών Holesky χρειάζεται αναβάθμιση.",
