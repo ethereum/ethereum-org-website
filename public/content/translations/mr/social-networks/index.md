@@ -105,7 +105,7 @@ r/क्रिप्टोकरंसी सबरेडिट ["मून" न
 - [Web3 विकेंद्रित, समुदाय- समर्थित सोशल नेटवर्क्स](https://venturebeat.com/2022/02/26/web3-holds-the-promise-of-decentralized-community-powered-social-networks/) — _सुमित घोष_
 - [ब्लॉकचेन सोशल मीडिया लँडस्केपचे विहंगावलोकन](https://www.gemini.com/cryptopedia/blockchain-social-media-decentralized-social-media) — _जेमिनी क्रिप्टोपीडिया_
 - [ब्लॉकचेन सोशल मीडिया गोपनीयता कशी सोडवू शकते](https://www.investopedia.com/news/ethereum-blockchain-social-media-privacy-problem-linkedin-indorse/) — _प्रबलेन बाजपेयी_
-- [सोशल मीडिया नेटवर्क्स ब्लॉकचेनवर येत आहेत](https://businesstechguides.co/what-are-decentralized-social-networks) — _इमॅन्युएल अवोसिका_
+- [सोशल मीडिया नेटवर्क्स ब्लॉकचेनवर येत आहेत](https://eawosika.com/what-are-decentralized-social-networks) — _इमॅन्युएल अवोसिका_
 - [सामाजिक नेटवर्कसाठी पुरेसे विकेंद्रीकरण](https://www.varunsrinivasan.com/2022/01/11/sufficient-decentralization-for-social-networks) — _वरुण श्रीनिवासन_
 
 ### Videos {#videos}
