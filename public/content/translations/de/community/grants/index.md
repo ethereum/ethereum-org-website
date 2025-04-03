@@ -31,7 +31,7 @@ Diese Projekte haben ihre eigenen Zuschüsse für Projektvorhaben zur Entwicklun
 - [Lido Ecosystem Grants Organisation (LEGO)](https://lido.fi/lego) – _[Lido](https://lido.fi/)-Finanzökosystem_
 - [MetaMask-Programm](https://metamaskgrants.org/) – _Mitarbeitergeleitete DAO für[MetaMask](https://metamask.io/)-Zuschüsse_
 - [SKALE-Network-Förderprogramm](https://skale.space/developers#grants) – _[SKALE-Network](https://skale.space/)-Ökosystem_
-- [Swarm Foundation-Förderprogramm](https://my.ethswarm.org/grants) – _[Swarm Foundation](https://www.ethswarm.org/)-Ökosystem_
+- [Swarm Foundation-Förderprogramm](https://my.ethswarm.org) – _[Swarm Foundation](https://www.ethswarm.org/)-Ökosystem_
 - [The Graph](https://thegraph.com/ecosystem/grants/) – _[The Graph](https://thegraph.com/)-Ökosystem_
 - [Uniswap-Förderprogramm](https://www.uniswapfoundation.org/approach) – _[Uniswap](https://uniswap.org/)-Community_
 

@@ -30,6 +30,6 @@ Dezvoltatorii pot apoi procesa și transforma aceste date pentru a le oferi util
 
 ## Referințe suplimentare {#further-reading}
 
-- [Prezentare generală Graph Network](https://thegraph.com/docs/en/about/network/)
+- [Prezentare generală Graph Network](https://thegraph.com/docs/en/about/)
 - [Graph Query Playground](https://thegraph.com/explorer/subgraph/graphprotocol/graph-network-mainnet?version=current)
 - [Exemple de cod API pe EtherScan](https://etherscan.io/apis#contracts)

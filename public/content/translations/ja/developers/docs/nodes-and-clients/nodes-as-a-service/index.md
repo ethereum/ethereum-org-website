@@ -264,7 +264,7 @@ sidebarDepth: 2
     - ダイレクト技術サポート
 
 - [**NodeReal MegaNode**](https://nodereal.io/)
-  - [ドキュメント](https://docs.nodereal.io/nodereal/meganode/introduction)
+  - [ドキュメント](https://docs.nodereal.io/docs/introduction)
   - 機能
     - 信頼性の高い、高速かつスケーラブルなRPC APIサービス
     - Web3デベロッパー向けに改良されたAPI

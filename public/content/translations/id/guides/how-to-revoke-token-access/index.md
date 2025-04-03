@@ -20,7 +20,6 @@ Beberapa situs web memungkinkan Anda untuk melihat dan mencabut kontrak pintar y
 
 - [Ethallowance](https://ethallowance.com/) (Ethereum)
 - [Etherscan](https://etherscan.io/tokenapprovalchecker) (Ethereum)
-- [Cointool](https://cointool.app/approve/eth) (beberapa jaringan)
 - [Pencabutan](https://revoke.cash/) (beberapa jaringan)
 - [Unrekt](https://app.unrekt.net/) (beberapa jaringan)
 - [EverRevoke](https://everrise.com/everrevoke/) (beberapa jaringan)

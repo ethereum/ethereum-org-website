@@ -168,7 +168,7 @@ Se a oferta do exchange B caísse subitamente e o utilizador não conseguisse co
 
 Para poder aplicar o exemplo anterior no mundo financeiro tradicional, seria necessária uma enorme quantidade de dinheiro. Estas estratégias para ganhar dinheiro só são acessíveis a quem já tem património. Os empréstimos instantâneos são um exemplo de um futuro em que ter dinheiro não é necessariamente um pré-requisito para ganhar dinheiro.
 
-[Mais informações sobre empréstimos instantâneos](https://aave.com/flash-loans/)
+[Mais informações sobre empréstimos instantâneos](https://aave.com/docs/concepts/flash-loans/)
 
 <Divider />
 

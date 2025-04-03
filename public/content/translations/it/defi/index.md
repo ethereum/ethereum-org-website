@@ -169,7 +169,7 @@ Se l'offerta sulla piattaforma di scambio B cala improvvisamente, e l'utente non
 
 Per applicare l'esempio precedente nel mondo finanziario tradizionale, necessiteresti di un ingente importo di denaro. Queste strategie di guadagno sono accessibili soltanto a persone già ricche. I prestiti istantanei sono l'esempio ddi un futuro in cui possedere denaro non è necessariamente un prerequisito per guadagnare.
 
-<ButtonLink isSecondary href="https://aave.com/docs/concepts/flash-loans">
+<ButtonLink isSecondary href="https://aave.com/docs/concepts/flash-loans/">
   Di più sui prestiti istantanei
 </ButtonLink>
 
