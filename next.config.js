@@ -71,6 +71,10 @@ module.exports = (phase, { defaultConfig }) => {
         },
       })
 
+      // WalletConnect related packages are not needed for the bundle
+      // https://docs.reown.com/appkit/next/core/installation#extra-configuration
+      config.externals.push("pino-pretty", "lokijs", "encoding")
+
       return config
     },
     trailingSlash: true,
@@ -80,6 +84,14 @@ module.exports = (phase, { defaultConfig }) => {
         {
           protocol: "https",
           hostname: "crowdin-static.downloads.crowdin.com",
+        },
+        {
+          protocol: "https",
+          hostname: "avatars.githubusercontent.com",
+        },
+        {
+          protocol: "https",
+          hostname: "coin-images.coingecko.com",
         },
       ],
     },
@@ -116,7 +128,6 @@ module.exports = (phase, { defaultConfig }) => {
             "node_modules/@swc/core-linux-x64-musl",
             "node_modules/@esbuild/linux-x64",
             "src/data",
-            "src/intl",
             "public/**/*.jpg",
             "public/**/*.png",
             "public/**/*.webp",

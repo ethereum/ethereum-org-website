@@ -24,8 +24,8 @@ const socialLinks = [
   },
   {
     icon: FaXTwitter,
-    href: "https://twitter.com/ethdotorg",
-    ariaLabel: "Twitter",
+    href: "https://x.com/ethdotorg",
+    ariaLabel: "X",
   },
   {
     icon: FaDiscord,
