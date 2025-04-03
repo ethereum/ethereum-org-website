@@ -1,3 +1,5 @@
+import { normalizeSlug } from "@/lib/utils/url"
+
 import ethAudio from "@/data/audio/eth/eth.mp3"
 import smartContractsAudio from "@/data/audio/smart-contracts/smart-contracts.mp3"
 import walletsAudio from "@/data/audio/wallets/wallets.mp3"
@@ -41,7 +43,9 @@ export const getPlaylistBySlug = (
   index: number
 } => {
   for (const playlist of Object.values(listenToPlaylists)) {
-    const index = playlist.findIndex((item) => item.slug === slug)
+    const index = playlist.findIndex(
+      (item) => normalizeSlug(item.slug) === normalizeSlug(slug)
+    )
     if (index !== -1) {
       return { playlist, index }
     }

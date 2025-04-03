@@ -29,7 +29,5 @@
   "page-local-environment-setup-subtitle-2": " Tady jsou nástroje a rámce, které můžete použít k budování Vaší Ethereum aplikace.",
   "page-local-environment-setup-title": "Nastavení vlastního místního vývojářského prostředí",
   "page-local-environment-solidity-template-desc": "GitHub šablona pro předem vytvořené nastavení chytrých kontraktů Solidity. Zahrnuje místní síť Hardhat, Waffle pro testy, Ethery pro implementaci peněženky a další.",
-  "page-local-environment-solidity-template-logo-alt": "Logo Solidity template",
-  "page-local-environment-waffle-desc": "Nejpokročilejší testovací lib pro chytré kontrakty. Používejte samostatně nebo systémy Scaffold-eth a Hardhat.",
-  "page-local-environment-waffle-logo-alt": "Logo Waffle"
+  "page-local-environment-solidity-template-logo-alt": "Logo Solidity template"
 }

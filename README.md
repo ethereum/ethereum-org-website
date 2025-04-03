@@ -1945,6 +1945,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/jenish-thapa"><img src="https://avatars.githubusercontent.com/u/141203631?v=4?s=100" width="100px;" alt="Jenish Thapa"/><br /><sub><b>Jenish Thapa</b></sub></a><br /><a href="#ideas-jenish-thapa" title="Ideas, Planning, & Feedback">🤔</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://jiangxue.org/~ritsu"><img src="https://avatars.githubusercontent.com/u/57232813?v=4?s=100" width="100px;" alt="iusx"/><br /><sub><b>iusx</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=iusx" title="Code">💻</a></td>
     </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/JJOptimist"><img src="https://avatars.githubusercontent.com/u/86833563?v=4?s=100" width="100px;" alt="JJOptimist"/><br /><sub><b>JJOptimist</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3AJJOptimist" title="Bug reports">🐛</a></td>
+    </tr>
   </tbody>
 </table>
 
