@@ -68,7 +68,7 @@ JSON-RPC API یک انتخاب ایده‌آل برای درخواست داده�
 کاربران شبکه پورتال عبارتند از:
 
 - [Trin](https://github.com/ethereum/trin): نوشته شده در Rust
-- [Fluffy](https://nimbus.team/docs/fluffy.html): نوشته شده به زبان Nim
+- [Fluffy](https://fluffy.guide): نوشته شده به زبان Nim
 - [فوق سبک](https://github.com/ethereumjs/ultralight): نوشته شده در تایپ اسکریپت
 - [Shisui](https://github.com/GrapeBaBa/shisui): نوشته شده در Go
 
