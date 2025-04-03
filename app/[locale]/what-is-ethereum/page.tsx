@@ -16,15 +16,13 @@ import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
 
 const loadData = dataLoader([["growThePieData", fetchGrowThePie]])
 
-const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
-  const { locale } = await params
+const Page = async ({ params }: { params: { locale: Lang } }) => {
+  const { locale } = params
 
-  // Get i18n messages
   const allMessages = await loadMessages(locale)
   const requiredNamespaces = getRequiredNamespacesForPage("/what-is-ethereum")
   const messages = pick(allMessages, requiredNamespaces)
 
-  // Load data
   const [data] = await loadData()
 
   return (
@@ -37,9 +35,9 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ locale: string }>
+  params: { locale: string }
 }) {
-  const { locale } = await params
+  const { locale } = params
 
   const t = await getTranslations({
     locale,
