@@ -2,6 +2,7 @@ import pick from "lodash.pick"
 import { getTranslations } from "next-intl/server"
 
 import {
+  CommitHistory,
   EpochResponse,
   EthStoreResponse,
   Lang,
@@ -10,6 +11,7 @@ import {
 
 import I18nProvider from "@/components/I18nProvider"
 
+import { getPageContributorInfo } from "@/lib/utils/contributors"
 import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
@@ -67,9 +69,17 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("/staking")
   const messages = pick(allMessages, requiredNamespaces)
 
+  const commitHistoryCache: CommitHistory = {}
+  const { contributors, lastEditLocaleTimestamp } =
+    await getPageContributorInfo("staking", locale as Lang, commitHistoryCache)
+
   return (
     <I18nProvider locale={locale} messages={messages}>
-      <StakingPage data={data} />
+      <StakingPage
+        data={data}
+        contributors={contributors}
+        lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+      />
     </I18nProvider>
   )
 }
