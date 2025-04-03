@@ -183,7 +183,12 @@ const getRequiredNamespacesForPath = (relativePath: string) => {
   }
 
   if (path.startsWith("/layer-2/networks/")) {
+    primaryNamespace = "page-layer-2-networks"
     requiredNamespaces = [...requiredNamespaces, "table"]
+  }
+
+  if (path.startsWith("/start/")) {
+    requiredNamespaces = [...requiredNamespaces]
   }
 
   if (path.startsWith("/contributing/translation-program/translatathon/")) {
