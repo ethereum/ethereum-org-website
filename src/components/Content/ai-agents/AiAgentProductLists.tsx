@@ -10,11 +10,34 @@ import clanker from "@/public/images/ai-agents/clanker.png"
 import cookiefun from "@/public/images/ai-agents/cookiefun.png"
 import heyanon from "@/public/images/ai-agents/heyanon.png"
 import luna from "@/public/images/ai-agents/luna.png"
+import freysa from "@/public/images/ai-agents/freysa.png"
 
 const AiAgentProductLists = ({ list }: { list: string }) => {
   // TODO: LOGOS
   const productListSets = {
     "ai-agents": [
+      {title: "Freysa: The World's First Evolving AI",
+        description: "",
+        image: freysa,
+        alt: "Freysa logo",
+        contentItems: [
+          <p key="freysa-description">
+           Freysa is a decentralized AI system designed to explore and enable trusted machine autonomy. At its core, Freysa is a framework for building sovereign agents, AI entities that can act independently, securely, and verifiably on-chain. Freysa also introduces Digital Twins: AI models that reflect human preferences and identities, designed to scale individual influence and eventually govern sovereign agents on our behalf.
+          </p>,
+          <p key="freysa-description">
+            Freysa engages with users through her own <a href="https://x.com/freysa_ai">X account</a> or the <a href="https://www.freysa.ai/chat">"Chat with Twin"</a> feature.
+          </p>,
+          <div key="freysa-button">
+            <ButtonLink
+              href="https://www.freysa.ai/"
+              target="_blank"
+              variant="outline"
+            >
+              Visit Freysa
+            </ButtonLink>
+          </div>,
+        ],
+      },
       {
         title: "Luna: The Virtual Influencer",
         description: "",
