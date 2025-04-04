@@ -155,7 +155,7 @@ ERC-20 jetonları, ERC-20 jetonlarını işlemek üzere tasarlanmamış bir akı
 3.  Yerleşik işlemenin olmaması
     -   ERC-20 standardının sözleşmelerin uygulanması için zorunlu bir fonksiyon barındırmaması, birçok sözleşmenin gelen jetonları düzgün bir şekilde yönetememesine yol açar
 
-Bu sorundan dolayı [ERC-223](/developers/docs/standards/tokens/erc-223) gibi bazı alternatif standartlar ortaya çıktı
+Bu sorundan dolayı [ERC-223](/developers/docs/standards/tokens/erc-223) [ERC-1363](/developers/docs/standards/tokens/erc-1363) gibi bazı alternatif standartlar ortaya çıktı
 
 ## daha fazla okuma {#further-reading}
 
@@ -168,5 +168,6 @@ Bu sorundan dolayı [ERC-223](/developers/docs/standards/tokens/erc-223) gibi ba
 ## Diğer değiştirilebilir jeton standartları {#fungible-token-standards}
 
 - [ERC-223](/developers/docs/standards/tokens/erc-223)
+- [ERC-1363](/developers/docs/standards/tokens/erc-1363)
 - [ERC-777](/developers/docs/standards/tokens/erc-777)
 - [ERC-4626 - Jetonlaştırılmış kasalar](/developers/docs/standards/tokens/erc-4626)
