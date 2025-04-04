@@ -12715,6 +12715,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "JJOptimist",
+      "name": "JJOptimist",
+      "avatar_url": "https://avatars.githubusercontent.com/u/86833563?v=4",
+      "profile": "https://github.com/JJOptimist",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,

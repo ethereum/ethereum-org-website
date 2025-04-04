@@ -25,7 +25,7 @@ Gli staker domestici sono responsabili di utilizzare l'hardware necessario a ese
 
 Uno staker domestico riceve ricompense direttamente dal protocollo per mantenere il proprio validatore correttamente in funzione e online.
 
-## Perché fare staking domestico? {#why-stake-solo}
+## Perché fare staking da casa? {#why-stake-solo}
 
 Lo staking domestico richiede maggiori responsabilità, ma fornisce il massimo controllo sui propri fondi e sulla propria configurazione di staking.
 

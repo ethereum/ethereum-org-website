@@ -1,5 +1,6 @@
 import isChromatic from "chromatic/isChromatic"
 import { MotionGlobalConfig } from "framer-motion"
+import { IBM_Plex_Mono, Inter } from "next/font/google"
 import type { Preview } from "@storybook/react"
 
 import ThemeProvider from "@/components/ThemeProvider"
@@ -9,10 +10,23 @@ import nextIntl, { baseLocales } from "./next-intl"
 import { withNextThemes } from "./withNextThemes"
 
 import "../src/styles/global.css"
-import "../src/styles/fonts.css"
 import "../src/styles/docsearch.css"
 
 import "@docsearch/css"
+
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter",
+  preload: true,
+})
+
+const ibmPlexMono = IBM_Plex_Mono({
+  subsets: ["latin"],
+  weight: ["400"],
+  display: "swap",
+  variable: "--font-mono",
+})
 
 MotionGlobalConfig.skipAnimations = isChromatic()
 
@@ -39,11 +53,13 @@ const preview: Preview = {
       defaultTheme: "light",
     }),
     (Story) => (
-      <ThemeProvider>
-        <TooltipProvider>
-          <Story />
-        </TooltipProvider>
-      </ThemeProvider>
+      <div className={`${inter.variable} ${ibmPlexMono.variable}`}>
+        <ThemeProvider>
+          <TooltipProvider>
+            <Story />
+          </TooltipProvider>
+        </ThemeProvider>
+      </div>
     ),
   ],
   parameters: {
