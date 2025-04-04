@@ -155,7 +155,7 @@ print("Addr Balance:", addr_balance)
 3.  بدون مدیریت داخلی
     -   استاندارد ERC-20 دارای یک تابع اجباری برای اجرای دریافت قراردادها نیست، که این امر منجر به وضعیتی می‌شود که بسیاری از قراردادها قادر به مدیریت صحیح توکن‌های دریافتی نیستند
 
-برخی استانداردهای جایگزین بر این مشکل فائق آمده‌اند، مانند [ERC-223](/developers/docs/standards/tokens/erc-223)
+برخی استانداردهای جایگزین بر این مشکل فائق آمده‌اند، مانند [ERC-223](/developers/docs/standards/tokens/erc-223) [ERC-1363](/developers/docs/standards/tokens/erc-1363)
 
 ## اطلاعات بیشتر {#further-reading}
 
@@ -168,5 +168,6 @@ print("Addr Balance:", addr_balance)
 ## سایر استانداردهای توکن قابل تعویض {#fungible-token-standards}
 
 - [ERC-223](/developers/docs/standards/tokens/erc-223)
+- [ERC-1363](/developers/docs/standards/tokens/erc-1363)
 - [ERC-777](/developers/docs/standards/tokens/erc-777)
 - [ERC-4626 - خزانه‌های توکنیزه شده](/developers/docs/standards/tokens/erc-4626)
