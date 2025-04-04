@@ -54,7 +54,7 @@ ERC-1363 is also useful for avoiding token loss or token locking in smart contra
 
 Unlike other ERC-20 extension proposals, ERC-1363 doesn't override the ERC-20 `transfer` and `transferFrom` methods and defines the interfaces IDs to be implemented maintaining backward compatibility with ERC-20.
 
-From [EIP-1363](/developers/docs/standards/tokens/erc-1363/):
+From [EIP-1363](https://eips.ethereum.org/EIPS/eip-1363):
 
 ### Methods {#methods}
 
