@@ -209,5 +209,5 @@ interface ERC1363Spender {
 
 ## Further reading {#further-reading}
 
-- [ERC-1363: Payable Token Standard](/developers/docs/standards/tokens/erc-1363/)
+- [ERC-1363: Payable Token Standard](https://eips.ethereum.org/EIPS/eip-1363)
 - [ERC-1363: GitHub Repo](https://github.com/vittominacori/erc1363-payable-token)
