@@ -1,5 +1,6 @@
+"use client"
+
 import React, { useState } from "react"
-import { useTranslation } from "next-i18next"
 import Highlight, {
   defaultProps,
   Language,
@@ -17,6 +18,7 @@ import { cn } from "@/lib/utils/cn"
 import { LINES_BEFORE_COLLAPSABLE } from "@/lib/constants"
 
 import useColorModeValue from "@/hooks/useColorModeValue"
+import { useTranslation } from "@/hooks/useTranslation"
 ;(typeof global !== "undefined" ? global : window).Prism = Prism
 require("prismjs/components/prism-solidity")
 

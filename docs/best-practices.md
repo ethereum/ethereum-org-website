@@ -8,7 +8,7 @@ How to prepare your content for translation depends on whether you're working on
 
 **- MDX pages (`public/content/page/`)**
 
-Markdown will be translated as whole pages of content, so no specific action is required. Simply create a new folder within `public/content/` with the name of the page, then place index markdown file (ie. `index.md`) within the new folder.
+Markdown will be translated as whole pages of content, so no specific action is required. Simply create a new folder within `public/content/` with the name of the page, then place an index markdown file (ie. `index.md`) within the new folder.
 
 **- React component page**
 
@@ -52,7 +52,7 @@ Markdown will be translated as whole pages of content, so no specific action is 
 
   - _tl;dr Each individual JSON entry should be a complete phrase by itself_
 
-- This is done using the `Translation` component. However there is an alternative method for regular JS: using the `t` function from `next-i18next`
+- This is done using the `Translation` component. However there is an alternative method for regular JS: using the `t` function from `@/hooks/useTranslation`
 
   - **Method one: `<Translation />` component (preferred if only needed in JSX)**
 
@@ -66,7 +66,7 @@ Markdown will be translated as whole pages of content, so no specific action is 
   - **Method two: `t()`**
 
     ```tsx
-    import { useTranslation } from "next-i18next"
+    import { useTranslation } from "@/hooks/useTranslation"
 
     // Utilize anywhere in JS using
     const { t } = useTranslation()
@@ -137,7 +137,7 @@ Center things using the `<Center />` component
 
 - Breakpoints
 
-Use [the Chakra default breakpoints](https://chakra-ui.com/docs/styled-system/theme#breakpoints).
+Use [the Chakra default breakpoints](https://www.chakra-ui.com/docs/theming/customization/breakpoints).
 
 ```tsx
 <Container display={{ base: "block", sm: "flex" }} />
@@ -167,7 +167,7 @@ import Emoji from "./Emoji"
 ```
 
 - **Icons**: We use [React Icons](https://react-icons.github.io/react-icons/)
-  with [Chakra UI Icon component](https://chakra-ui.com/docs/components/icon/usage)
+  with [Chakra UI Icon component](https://www.chakra-ui.com/docs/components/concepts/overview)
 
 ```tsx
 import { Icon } from "@chakra-ui/react"

@@ -1,5 +1,6 @@
+"use client"
+
 import React from "react"
-import { useTranslation } from "next-i18next"
 
 import CalloutBanner from "@/components/CalloutBanner"
 import { ButtonLink } from "@/components/ui/buttons/Button"
@@ -7,6 +8,7 @@ import { Flex } from "@/components/ui/flex"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
+import { useTranslation } from "@/hooks/useTranslation"
 import image from "@/public/images/enterprise-eth.png"
 
 export type StakingCommunityCalloutProps =

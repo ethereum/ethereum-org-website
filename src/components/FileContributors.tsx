@@ -1,9 +1,9 @@
+"use client"
+
 import { BaseHTMLAttributes, useState } from "react"
-import { Avatar } from "@chakra-ui/react"
 
 import type { ChildOnlyProp, FileContributor } from "@/lib/types"
 
-import InlineLink from "@/components/Link"
 import Translation from "@/components/Translation"
 import { Button } from "@/components/ui/buttons/Button"
 import { Flex, VStack } from "@/components/ui/flex"
@@ -12,7 +12,9 @@ import { ScrollArea } from "@/components/ui/scroll-area"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
+import { Avatar } from "./ui/avatar"
 import Modal from "./ui/dialog-modal"
+import InlineLink from "./ui/Link"
 
 import { useBreakpointValue } from "@/hooks/useBreakpointValue"
 
@@ -22,19 +24,27 @@ const ContributorList = ({ children }: Required<ChildOnlyProp>) => (
   </ScrollArea>
 )
 
+const ContributorAvatar = ({
+  contributor,
+  label,
+}: ContributorProps & { label?: string }) => (
+  <Avatar
+    src={contributor.avatar_url}
+    name={contributor.login}
+    href={`https://github.com/${contributor.login}`}
+    // `size-10` is not part of the "size" variants
+    className="me-2 size-10"
+    label={label}
+  />
+)
+
 type ContributorProps = { contributor: FileContributor }
 const Contributor = ({ contributor }: ContributorProps) => (
   <ListItem className="flex items-center p-2">
-    <Avatar
-      height="40px"
-      width="40px"
-      src={contributor.avatar_url}
-      name={contributor.login}
-      me={2}
+    <ContributorAvatar
+      contributor={contributor}
+      label={"@" + contributor.login}
     />
-    <InlineLink href={"https://github.com/" + contributor.login}>
-      @{contributor.login}
-    </InlineLink>
   </ListItem>
 )
 
@@ -84,13 +94,7 @@ const FileContributors = ({
 
       <Flex className="flex-col p-0 md:flex-row md:p-2" {...props}>
         <Flex className="invisible me-4 flex-1 items-center md:visible md:flex">
-          <Avatar
-            height="40px"
-            width="40px"
-            src={lastContributor.avatar_url}
-            name={lastContributor.login}
-            me={2}
-          />
+          <ContributorAvatar contributor={lastContributor} />
 
           <p className="m-0 text-body-medium">
             <Translation id="last-edit" />:{" "}

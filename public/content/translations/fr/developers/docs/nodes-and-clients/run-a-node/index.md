@@ -311,7 +311,7 @@ nœud reth \
     --authrpc.port 8551
 ```
 
-Consultez [Configurer Reth](https://reth.rs/run/config.html?highlight=data%20directory#configuring-reth) pour en savoir plus sur les répertoires de données par défaut. [La documentation de Reth](https://reth.rs/run/mainnet.html) contient des options supplémentaires et des détails de configuration.
+Voir [Configurer Reth](https://reth.rs/run/config.html?highlight=data%20directory#configuring-reth) pour en savoir plus sur les répertoires de données par défaut. [La documentation de Reth](https://reth.rs/run/mainnet.html) contient des options supplémentaires et des détails de configuration.
 
 #### Démarrer le client de consensus {#starting-the-consensus-client}
 

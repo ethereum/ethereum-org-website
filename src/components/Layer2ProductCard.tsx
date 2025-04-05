@@ -1,11 +1,12 @@
 import { StaticImageData } from "next/image"
-import { useTranslation } from "next-i18next"
 
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 
 import { ButtonLink } from "./ui/buttons/Button"
 import InlineLink from "./ui/Link"
-import { TwImage } from "./Image"
+import { Image } from "./Image"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 export type Layer2ProductCardProps = {
   children?: React.ReactNode
@@ -42,7 +43,7 @@ const Layer2ProductCard = ({
         className="mb-4 flex min-h-[200px] items-center justify-center border-b"
         style={{ backgroundColor: background }}
       >
-        <TwImage
+        <Image
           src={image}
           alt={alt}
           width={100}

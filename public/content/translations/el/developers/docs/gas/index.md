@@ -1,5 +1,6 @@
 ---
 title: Κρατήσεις και τέλη
+metaTitle: "Ethereum gas και χρεώσεις: τεχνική επισκόπηση"
 description:
 lang: el
 ---

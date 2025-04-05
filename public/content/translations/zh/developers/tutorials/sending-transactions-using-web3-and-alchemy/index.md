@@ -58,7 +58,7 @@ sourceUrl: https://docs.alchemy.com/alchemy/tutorials/sending-txs
 
 好了，现在我们把这些问题都解决了，让我们继续学习教程。 请随时在 Alchemy [discord](https://discord.gg/gWuC7zB) 中提问！
 
-### 7. 如何发起安全、燃料优化且私密的交易？ {how-to-send-secure-gas-optimized-and-private-transactions}
+### 7. 如何发起安全、燃料优化且私密的交易？ {#how-to-send-secure-gas-optimized-and-private-transactions}
 
 - [Alchemy 有一套交易应用程序接口。](https://docs.alchemy.com/reference/transact-api-quickstart)。 你可以使用它们发起强化交易，在交易发生之前模拟交易，发起私密交易，和发起燃料优化交易。
 - 你也可以使用 [Notify 应用程序接口](https://docs.alchemy.com/docs/alchemy-notify)在你的交易被从内存池添加到链上时收到提醒。

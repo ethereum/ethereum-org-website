@@ -16,7 +16,7 @@ Des disques durs moins coûteux peuvent être utilisés pour stocker les donnée
 
 Il y a plusieurs façons de réduire la quantité de données que chaque nœud doit stocker, chacune nécessitant que le protocole au cœur d'Ethereum soit mis à jour à des degrés différents :
 
-- **Expiration de l'historique** : permet aux noeuds de se débarrasser des données d'état plus anciennes que X blocs, mais ne change pas la manière dont les clients Ethereum gèrent les données d'état
+- **Expiration de l'historique** : permet aux noeuds de se débarrasser des données d'état plus anciennes que X blocs, mais ne change pas la manière dont les clients Ethereum gèrent les données d'état.
 - **Expiration d'état** : permet aux données d'état qui ne sont pas utilisées fréquemment de devenir inactives. Les données inactives peuvent être ignorées par les clients jusqu'à ce qu'elles soient ressuscitées.
 - **Absence d'état faible** : seuls les producteurs de blocs ont besoin d'accéder aux données d'état complètes, les autres noeuds peuvent vérifier les blocs sans base de données locale.
 - **Absence d'état forte** : aucun noeud n'a besoin d'accéder aux données d'état complètes.

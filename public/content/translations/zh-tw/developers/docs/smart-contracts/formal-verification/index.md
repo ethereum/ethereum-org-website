@@ -70,7 +70,7 @@ lang: zh-tw
 
 ### 霍爾式屬性 {#hoare-style-properties}
 
-[霍爾邏輯](https://en.wikipedia.org/wiki/Hoare_logic)提供了一套形式化規則，用於推理包括智慧型合約等程式的正確性。 霍爾式屬性使用霍爾三元組 {_P_}_c_{_Q_} 表示，其中 _c_ 是一個程式，_P_ 和 _Q_ 為_c_（即程式）的狀態述詞，正式描述分別為_前置條件_和_後置條件_。
+[霍爾邏輯](https://en.wikipedia.org/wiki/Hoare_logic)提供了一套形式化規則，用於推理包括智慧型合約等程式的正確性。 A Hoare-style property is represented by a Hoare triple \{_P_}_c_\{_Q_}, where _c_ is a program and _P_ and _Q_ are predicates on the state of the _c_ (i.e., the program), formally described as _preconditions_ and _postconditions_, respectively.
 
 前置條件是描述正確執行函式所需條件的述詞；叫用合約的使用者必須滿足該要求。 後置條件是描述函式正確執行時所建立之條件的述詞；使用者在叫用函式後可以預計該條件為 true。 在霍爾邏輯中，_不變量_是指透過執行函式保留的述詞（即，它不會改變）。
 
@@ -212,16 +212,16 @@ function safe_add(uint x, uint y) returns(uint z){
 
 ### 用於建立形式化規範的規範語言 {#specification-languages}
 
-**Act** - _*Act 允許指定存儲更新、前置/後置條件以及合約不變量。</0>  其工具套件還具有證明後端，可透過 Coq、SMT 求解器或 hevm 來證明許多屬性。**
+**Act** - _Act 允許指定存儲更新、前置/後置條件以及合約不變量。 其工具套件還具有證明後端，可透過 Coq、SMT 求解器或 hevm 來證明許多屬性。_
 
 - [GitHub](https://github.com/ethereum/act)
 - [文檔](https://ethereum.github.io/act/)
 
-**Scribble** - _*Scribble 將以 Scribble 規範語言編寫的程式碼注解轉換爲用於檢查規範的具體斷言。**
+**Scribble** - _Scribble 將以 Scribble 規範語言編寫的程式碼注解轉換爲用於檢查規範的具體斷言。_
 
 - [文件](https://docs.scribble.codes/)
 
-**Dafny** — _*Dafny 是一種驗證就緒的程式設計語言，仰賴高階註釋來推理和證明程式碼的正確性。**
+**Dafny** — _Dafny 是一種驗證就緒的程式設計語言，仰賴高階註釋來推理和證明程式碼的正確性。_
 
 - [GitHub](https://github.com/dafny-lang/dafny)
 
@@ -232,15 +232,15 @@ function safe_add(uint x, uint y) returns(uint z){
 - [網站](https://www.certora.com/)
 - [文檔](https://docs.certora.com/en/latest/index.html)
 
-**Solidity SMTChecker** - _* Solidity 的 SMTChecker 是一個基於 SMT（可滿足性模數理論）和 Horn 求解的内置模型檢查器。 它在編譯期間確認合約的源程式碼是否符合規範，並以靜態方式檢查安全屬性的違反情況。**
+**Solidity SMTChecker** - _Solidity 的 SMTChecker 是一個基於 SMT（可滿足性模數理論）和 Horn 求解的内置模型檢查器。 它在編譯期間確認合約的源程式碼是否符合規範，並以靜態方式檢查安全屬性的違反情況。_
 
 - [GitHub](https://github.com/ethereum/solidity)
 
-**solc-verify** - _*solc-verify 是 Solidity 編譯器的一個延伸版本，可以使用注解和模組化程式驗證在 Solidity 程式碼上執行自動形式化驗證。**
+**solc-verify** - _solc-verify 是 Solidity 編譯器的一個延伸版本，可以使用注解和模組化程式驗證在 Solidity 程式碼上執行自動形式化驗證。_
 
 - [GitHub](https://github.com/SRI-CSL/solidity)
 
-**KEVM** - _*KEVM 是用 K 框架編寫的以太坊虛擬機 (EVM) 的形式化語義。 KEVM 是可執行的，並且可以用可達性邏輯來證明某些與屬性相關的斷言。**
+**KEVM** - _KEVM 是用 K 框架編寫的以太坊虛擬機 (EVM) 的形式化語義。 KEVM 是可執行的，並且可以用可達性邏輯來證明某些與屬性相關的斷言。_
 
 - [GitHub](https://github.com/runtimeverification/evm-semantics)
 - [文檔](https://jellopaper.org/)
@@ -259,16 +259,16 @@ function safe_add(uint x, uint y) returns(uint z){
 
 ### 用於偵測智慧型合約中易受攻擊模式的基於符號執行的工具 {#symbolic-execution-tools}
 
-**Manticore** – _*一種基於符號執行的以太坊虛擬機位元組碼分析工具*。*
+**Manticore** – _一種基於符號執行的以太坊虛擬機位元組碼分析工具。_
 
 - [GitHub](https://github.com/trailofbits/manticore)
 - [文檔](https://github.com/trailofbits/manticore/wiki)
 
-**hevm** - _*hevm 是用於以太坊虛擬機位元組碼的符號執行引擎和等價性檢查器。**
+**hevm** - _hevm 是用於以太坊虛擬機位元組碼的符號執行引擎和等價性檢查器。_
 
 - [GitHub](https://github.com/dapphub/dapptools/tree/master/src/hevm)
 
-**Mythril** - _用於檢測以太坊智慧型合約漏洞的符號執行工具_
+**Mythril** - _用於檢測以太坊智慧型合約漏洞的符號執行工具。_
 
 - [GitHub](https://github.com/ConsenSys/mythril-classic)
 - [文檔](https://mythril-classic.readthedocs.io/en/develop/)

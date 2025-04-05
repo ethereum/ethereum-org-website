@@ -1,5 +1,6 @@
 ---
 title: 非同质化代币 (NFT)
+metaTitle: 什么是非同质化代币？ | 优势和作用
 description: 以太坊上的非同质化代币简介
 lang: zh
 template: use-cases

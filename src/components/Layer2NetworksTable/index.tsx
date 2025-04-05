@@ -10,6 +10,8 @@ import ProductTable from "@/components/ProductTable"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
+import useTranslation from "@/hooks/useTranslation"
+
 const Layer2NetworksTable = ({
   layer2Data,
   locale,
@@ -21,6 +23,7 @@ const Layer2NetworksTable = ({
 }) => {
   const networkFilterOptions = useNetworkFilters()
   const [filters, setFilters] = useState<FilterOption[]>(networkFilterOptions)
+  const { t } = useTranslation("page-layer-2-networks")
 
   const filteredData = useMemo(() => {
     const networks = [mainnetData, ...layer2Data]
@@ -72,7 +75,7 @@ const Layer2NetworksTable = ({
       noResultsComponent={() => (
         <NetworksNoResults resetFilters={resetFilters} />
       )}
-      mobileFiltersLabel={"See networks"}
+      mobileFiltersLabel={t("page-layer-2-networks-transaction-see-networks")}
     />
   )
 }

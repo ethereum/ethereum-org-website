@@ -480,6 +480,18 @@
     "link": "https://www.eventbrite.it/e/863744451907/"
   },
   {
+    "title": "Ethereum Venezuela",
+    "emoji": ":venezuela:",
+    "location": "Venezuela",
+    "link": "https://www.meetup.com/ethereumvenezuela/"
+  },
+  {
+    "title": "Ethereum Aragua",
+    "emoji": ":venezuela:",
+    "location": "Aragua",
+    "link": "https://www.aragua.org"
+  },
+  {
     "title": "Ethereum Minnesota",
     "emoji": ":us:",
     "location": "Minnesota",
@@ -550,5 +562,17 @@
     "emoji": ":romania:",
     "location": "Cluj-Napoca",
     "link": "https://www.meetup.com/ethcluj"
-  }    
+  },
+  {
+    "title": "ERC55",
+    "emoji": ":brazil:",
+    "location": "São Paulo",
+    "link": "https://lu.ma/user/erc55"
+  },      
+  {
+    "title": "ETHBelgium ",
+    "emoji": ":belgium:",
+    "location": "Belgium",
+    "link": "https://lu.ma/ethbelgium"
+  }   
 ]

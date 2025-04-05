@@ -1,19 +1,20 @@
 import { BaseHTMLAttributes, ReactNode, useState } from "react"
-import { useTranslation } from "next-i18next"
 
 import type { ChildOnlyProp } from "@/lib/types"
 
 import { Flex } from "@/components/ui/flex"
-import { Tag } from "@/components/ui/tag"
+import { Tag, TagProps } from "@/components/ui/tag"
 
+import Emoji from "../Emoji"
 import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "../../../tailwind/ui/accordion"
-import Emoji from "../Emoji"
+} from "../ui/accordion"
 
 import { accordionButtonContent, CategoryNameType } from "./utils"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 type LeftColumnPanelElement = BaseHTMLAttributes<HTMLDivElement>
 
@@ -82,13 +83,12 @@ export const AccordionCustomItem = (props: AccordionCustomItemProps) => {
               <h3 className="text-xl text-body hover:text-body md:text-2xl">
                 {t(contentObj.title)}
               </h3>
-              {!!contentObj.pill && (
+              {!!contentObj.tag && (
                 <Tag
+                  status={contentObj.tag.status as TagProps["status"]}
                   className="ms-4"
-                  variant="solid"
-                  status={contentObj.pill.color}
                 >
-                  {t(contentObj.pill.name)}
+                  {t(contentObj.tag.name)}
                 </Tag>
               )}
             </Flex>
