@@ -47,9 +47,9 @@ Algunos clientes de consenso tienen herramientas integradas para implementar cad
 
 ### Cadenas de prueba públicas de Ethereum {#public-beacon-testchains}
 
-También hay dos implantaciones de prueba públicas mantenidas de Ethereum: Goerli y Sepolia. La red de prueba recomendada con soporte a largo plazo es Goerli, en la que cualquiera es libre de validar. Sepolia es una cadena más nueva y más pequeña que también se espera que se mantenga en el futuro próximo, con un conjunto de validadores autorizados (lo que significa que no hay acceso general a nuevos validadores en esta red de prueba). Se espera que la cadena Ropsten quede obsoleta en el cuarto trimestre de 2022 y que la cadena Rinkeby quede obsoleta en el segundo o tercer trimestre de 2023.
+También hay dos implantaciones de prueba públicas mantenidas de Ethereum: Hoodi y Sepolia. La red de prueba recomendada con soporte a largo plazo es Hoodi, en la que cualquiera es libre de validar. Sepolia es una cadena más nueva y más pequeña que también se espera que se mantenga en el futuro próximo, con un conjunto de validadores autorizados (lo que significa que no hay acceso general a nuevos validadores en esta red de prueba). Se espera que la cadena Ropsten quede obsoleta en el cuarto trimestre de 2022 y que la cadena Rinkeby quede obsoleta en el segundo o tercer trimestre de 2023.
 
-- [Launchpad de staking de Goerli](https://goerli.launchpad.ethereum.org/)
+- [Launchpad de staking de Hoodi](https://hoodi.launchpad.ethereum.org/)
 - [Anuncio de baja de Ropsten, Rinkeby y Kiln](https://blog.ethereum.org/2022/06/21/testnet-deprecation)
 
 ### Paquete de Ethereum de Kurtosis {#kurtosis}

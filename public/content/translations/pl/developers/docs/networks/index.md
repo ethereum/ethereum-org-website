@@ -34,7 +34,7 @@ ETH w sieciach testowych nie powinno mieć żadnej realnej wartości, jednak pow
 
 #### Której sieci testowej powinienem użyć?
 
-Dwie publiczne sieci testowe, które obecnie wykorzystują programiści klientów, to Sepolia i Goerli. Sepolia to sieć dla twórców kontraktów i aplikacji przeznaczona do testowania aplikacji. Sieć Goerli pozwala programistom protokołów testować aktualizacje sieci, a stakerom testować uruchomienie walidatorów.
+Dwie publiczne sieci testowe, które obecnie wykorzystują programiści klientów, to Sepolia i Hoodi. Sepolia to sieć dla twórców kontraktów i aplikacji przeznaczona do testowania aplikacji. Sieć Hoodi pozwala programistom protokołów testować aktualizacje sieci, a stakerom testować uruchomienie walidatorów.
 
 #### Sepolia {#sepolia}
 
@@ -63,11 +63,11 @@ Dwie publiczne sieci testowe, które obecnie wykorzystują programiści klientó
 - [Kran Chainstack Sepolia](https://faucet.chainstack.com/sepolia-faucet)
 - [Kran Ethereum Ecosystem](https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia)
 
-#### Goerli _(wsparcie długoterminowe)_ {#goerli}
+#### Hoodi {#hoodi}
 
-_Uwaga: [sieć testowa Goerli jest przestarzała](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17) i zostanie zastąpiona przez [Holesovice](https://github.com/eth-clients/holesovice) w 2023 r. Zachęcamy do rozważenia migracji aplikacji do Sepolii._
+_Uwaga: [sieć testowa Goerli jest przestarzała](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17) i została zastąpiona przez Hoodi. Zachęcamy do rozważenia migracji aplikacji do Sepolii._
 
-Goerli to sieć testowa do testowania, walidacji i stakowania. Sieć Goerli jest otwarta dla użytkowników, którzy chcą uruchomić walidator sieci testowej. Stakerzy chcący przetestować aktualizacje protokołu przed jego wdrożeniem do sieci głównej powinni zatem korzystać z Goerli.
+Hoodi to sieć testowa do testowania walidacji i stakowania. Sieć Hoodi jest otwarta dla użytkowników, którzy chcą uruchomić walidator sieci testowej. Stakerzy chcący przetestować aktualizacje protokołu przed jego wdrożeniem do sieci głównej powinni zatem korzystać z Hoodi.
 
 - Otwarty zestaw walidatorów, stakerzy mogą testować aktualizacje sieci
 - Duży stan, przydatny do testowania złożonych interakcji inteligentnych kontraktów
@@ -75,56 +75,50 @@ Goerli to sieć testowa do testowania, walidacji i stakowania. Sieć Goerli jest
 
 ##### Źródła
 
-- [Strona internetowa](https://goerli.net/)
-- [GitHub](https://github.com/eth-clients/goerli)
-- [Etherscan](https://goerli.etherscan.io)
-- [Blockscout](https://eth-goerli.blockscout.com/)
+- [Strona internetowa](https://hoodi.ethpandaops.io/)
+- [GitHub](https://github.com/eth-clients/hoodi)
+- [Explorer](https://explorer.hoodi.ethpandaops.io/)
+- [Checkpoint Sync](https://checkpoint-sync.hoodi.ethpandaops.io/)
 
 ##### Krany
 
-- [Kran QuickNode Goerli](https://faucet.quicknode.com/drip)
-- [Grabteeth](https://grabteeth.xyz/)
-- [Kran PoW](https://goerli-faucet.pk910.de/)
-- [Kran Paradigm](https://faucet.paradigm.xyz/)
-- [Kran Alchemy Goerli](https://goerlifaucet.com/)
-- [Kran All That Node Goerli](https://www.allthatnode.com/faucet/ethereum.dsrv)
-- [Kran Coinbase Wallet | Goerli](https://coinbase.com/faucets/ethereum-goerli-faucet)
-- [Kran Chainstack Goerli](https://faucet.chainstack.com/goerli-faucet)
+- [Kran Hoodi](https://hoodi.ethpandaops.io/)
 
-Aby uruchomić walidator w sieci testowej Goerli, użyj [launchpada „tani walidator goerli”](https://goerli.launchpad.ethstaker.cc/en/) ethstaker.
+Aby uruchomić walidator w sieci testowej Hoodi, użyj [platformy startowej Hoodi](https://hoodi.launchpad.ethereum.org/en/).
 
 ### Sieci testowe warstwy 2 {#layer-2-testnets}
 
 [Warstwa 2 (L2)](/layer-2/) to zbiorczy termin opisujący określony zestaw rozwiązań do skalowania Ethereum. Warstwa 2 to oddzielny blockchain, który rozszerza Ethereum i dziedziczy gwarancje bezpieczeństwa Ethereum. Sieci testowe warstwy 2 są zazwyczaj ściśle powiązane z publicznymi sieciami testowymi Ethereum.
 
-#### Arbitrum Goerli {#arbitrum-goerli}
+#### Arbitrum Sepolia {#arbitrum-sepolia}
 
 Sieć testowa dla [Arbitrum](https://arbitrum.io/).
 
 ##### Krany
 
-- [Kran Chainlink](https://faucets.chain.link/)
+- [Kran Chainlink](https://faucets.chain.link/arbitrum-sepolia)
+- [Kran Alchemy](https://www.alchemy.com/faucets/arbitrum-sepolia)
 
-#### Optimistic Goerli {#optimistic-goerli}
+#### Optimistic Sepolia {#optimistic-sepolia}
 
 Sieć testowa dla [Optimism](https://www.optimism.io/).
 
 ##### Krany
 
-- [Kran Paradigm](https://faucet.paradigm.xyz/)
-- [Kran Coinbase Wallet | Optimism Goerli](https://coinbase.com/faucets/optimism-goerli-faucet)
+- [Kran Chainlink](https://faucets.chain.link/optimism-sepolia)
+- [Kran Alchemy](https://www.alchemy.com/faucets/optimism-sepolia)
 
-#### Starknet Goerli {#starknet-goerli}
+#### Starknet Sepolia {#starknet-sepolia}
 
 Sieć testowa dla [Starknet](https://www.starknet.io).
 
 ##### Krany
 
-- [Kran Starknet](https://faucet.goerli.starknet.io)
+- [Kran Alchemy](https://www.alchemy.com/faucets/starknet-sepolia)
 
 ## Sieci prywatne {#private-networks}
 
-Sieć Ethereum jest siecią prywatną, jeśli jej węzły nie są połączone z siecią publiczną (tj. sieć główna albo sieć testowa). W tym kontekście „prywatna” oznacza jedynie sieć zastrzeżoną lub odizolowaną, a nie chronioną lub bezpieczną.
+Sieć Ethereum jest siecią prywatną, jeśli jej węzły nie są połączone z siecią publiczną (tj. sieć główna albo sieć testowa). W tym kontekście "prywatna" oznacza jedynie sieć zastrzeżoną lub odizolowaną, a nie chronioną lub bezpieczną.
 
 ### Frameworki programistyczne {#development-networks}
 

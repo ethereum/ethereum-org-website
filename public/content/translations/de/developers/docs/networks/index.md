@@ -34,7 +34,7 @@ ETH in Testnets soll keinen wirklichen Wert haben. Es wurden jedoch Märkte für
 
 #### Welches Testnet soll ich benutzen?
 
-Die beiden öffentlichen Testnets, die die Client-Entwickler derzeit betreiben, sind Sepolia und Goerli. Sepolia ist ein Netz für Smart Contract- und Anwendungsentwickler zum Testen ihrer Anwendungen. Das Goerli-Netz ermöglicht es Protokollentwicklern, Netzwerk-Upgrades zu testen, bzw. erlaubt es Stakern, laufende Validatoren zu testen.
+Die beiden öffentlichen Testnets, die die Client-Entwickler derzeit betreiben, sind Sepolia und Hoodi. Sepolia ist ein Netz für Smart Contract- und Anwendungsentwickler zum Testen ihrer Anwendungen. Das Hoodi-Netz ermöglicht es Protokollentwicklern, Netzwerk-Upgrades zu testen, bzw. erlaubt es Stakern, laufende Validatoren zu testen.
 
 #### Sepolia {#sepolia}
 
@@ -57,17 +57,15 @@ Die beiden öffentlichen Testnets, die die Client-Entwickler derzeit betreiben, 
 - [QuickNode Sepolia Faucet](https://faucet.quicknode.com/drip)
 - [Grabteeth](https://grabteeth.xyz/)
 - [PoW-Faucet](https://sepolia-faucet.pk910.de/)
-- [Faucet für Coinbase-Wallet | Sepolia](https://coinbase.com/faucets/ethereum-sepolia-faucet)
-- [Faucet für Alchemy Sepolia](https://sepoliafaucet.com/)
-- [Faucet für Infura Sepolia](https://www.infura.io/faucet)
-- [Faucet für Chainstack Sepolia](https://faucet.chainstack.com/sepolia-faucet)
+- [Coinbase Wallet Faucet | Sepolia](https://coinbase.com/faucets/ethereum-sepolia-faucet)
+- [Alchemy Sepolia faucet](https://sepoliafaucet.com/)
+- [Infura Sepolia faucet](https://www.infura.io/faucet)
+- [Chainstack Sepolia faucet](https://faucet.chainstack.com/sepolia-faucet)
 - [Ethereum-Ökosystem-Faucet](https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia)
 
-#### Goerli _(Langzeit-Support)_ {#goerli}
+#### Hoodi {#hoodi}
 
-_Hinweis: [Das Goerli-Testnetz ist veraltet](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17) und wird 2023 durch [Holesovice](https://github.com/eth-clients/holesovice) ersetzt. Sie sollten die Migration Ihrer Anwendungen auf Sepolia in Erwägung ziehen._
-
-Goerli ist ein Testnet zum Testen, Validieren und Staking. Das Goerli-Netzwerk ist offen für Benutzer, die einen Testnet-Validator betreiben möchten. Staker, die Protokoll-Upgrades testen wollen, bevor sie im Mainnet eingesetzt werden, sollten daher Goerli benutzen.
+Hoodi ist ein Testnet zum Testen von Validierung und Staking. Das Hoodi-Netzwerk ist offen für Benutzer, die einen Testnet-Validator betreiben möchten. Staker, die Protokoll-Upgrades testen wollen, bevor sie im Mainnet eingesetzt werden, sollten daher Hoodi benutzen.
 
 - Offenes Validator-Set, Staker können Netzwerk-Upgrades testen
 - Großer State, nützlich zum Testen komplexer Smart-Contract-Interaktionen
@@ -75,52 +73,46 @@ Goerli ist ein Testnet zum Testen, Validieren und Staking. Das Goerli-Netzwerk i
 
 ##### Ressourcen
 
-- [Website](https://goerli.net/)
-- [GitHub](https://github.com/eth-clients/goerli)
-- [Etherscan](https://goerli.etherscan.io)
-- [Blockscout](https://eth-goerli.blockscout.com/)
+- [Website](https://hoodi.ethpandaops.io/)
+- [GitHub](https://github.com/eth-clients/hoodi)
+- [Explorer](https://explorer.hoodi.ethpandaops.io/)
+- [Checkpoint Sync](https://checkpoint-sync.hoodi.ethpandaops.io/)
 
 ##### Faucets
 
-- [QuickNode Goerli Faucet](https://faucet.quicknode.com/drip)
-- [Grabteeth](https://grabteeth.xyz/)
-- [PoW-Faucet](https://goerli-faucet.pk910.de/)
-- [Paradigm-Faucet](https://faucet.paradigm.xyz/)
-- [Alchemy Goerli Faucet](https://goerlifaucet.com/)
-- [All That Node Goerli Faucet](https://www.allthatnode.com/faucet/ethereum.dsrv)
-- [Coinbase Wallet Faucet | Goerli](https://coinbase.com/faucets/ethereum-goerli-faucet)
-- [Chainstack Goerli-Faucet](https://faucet.chainstack.com/goerli-faucet)
+- [Hoodi Faucet](https://hoodi.ethpandaops.io/)
 
-Um einen Validator im Goerli-Testnet zu starten, verwenden Sie das [Launchpad "cheap goerli validator"](https://holesky.launchpad.ethstaker.cc/en/) von ethstaker.
+Um einen Validator im Hoodi-Testnet zu starten, verwenden Sie das [Hoodi launchpad](https://hoodi.launchpad.ethereum.org/en/).
 
 ### Layer-2-Testnets {#layer-2-testnets}
 
 [Layer-2 (L2)](/layer-2/) ist ein Sammelbegriff, der eine bestimmte Gruppe von Ethereum-Skalierungslösungen beschreibt. Ein Layer-2 ist eine separate Blockchain, die Ethereum erweitert und die Sicherheitsgarantien von Ethereum erbt. Layer-2-Testnets sind in der Regel eng mit öffentlichen Ethereum-Testnets gekoppelt.
 
-#### Arbitrum Goerli {#arbitrum-goerli}
+#### Arbitrum Sepolia {#arbitrum-sepolia}
 
 Ein Testnet für [Arbitrum](https://arbitrum.io/).
 
 ##### Faucets
 
-- [Chainlink-Faucet](https://faucets.chain.link/)
+- [Chainlink-Faucet](https://faucets.chain.link/arbitrum-sepolia)
+- [Alchemy-Faucet](https://www.alchemy.com/faucets/arbitrum-sepolia)
 
-#### Optimistic Goerli {#optimistic-goerli}
+#### Optimistic Sepolia {#optimistic-sepolia}
 
 Ein Testnet für [Optimism](https://www.optimism.io/).
 
 ##### Faucets
 
-- [Paradigm-Faucet](https://faucet.paradigm.xyz/)
-- [Coinbase Wallet Faucet | Optimism Goerli](https://coinbase.com/faucets/optimism-goerli-faucet)
+- [Chainlink-Faucet](https://faucets.chain.link/optimism-sepolia)
+- [Alchemy-Faucet](https://www.alchemy.com/faucets/optimism-sepolia)
 
-#### Starknet Goerli {#starknet-goerli}
+#### Starknet Sepolia {#starknet-sepolia}
 
-Ein Testnetz für [Starknet](https://www.starknet.io).
+Ein Testnet für [Starknet](https://www.starknet.io).
 
 ##### Faucets
 
-- [Starknet-Faucet](https://faucet.goerli.starknet.io)
+- [Alchemy-Faucet](https://www.alchemy.com/faucets/starknet-sepolia)
 
 ## Private Netzwerke {#private-networks}
 

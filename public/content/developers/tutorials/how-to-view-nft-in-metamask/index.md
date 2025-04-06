@@ -13,6 +13,7 @@ This tutorial is Part 3/3 in the NFT Tutorial series, where we view our newly mi
 Congrats! You’ve made it to the shortest and simplest part of our NFT tutorial series — how to view your freshly minted NFT on a virtual wallet. We’ll be using MetaMask for this example since it is what we used in the previous two parts.
 
 As a prerequisite, you should already have MetaMask on mobile installed, and it should include the account to which you minted your NFT — you can get the app for free on [iOS](https://apps.apple.com/us/app/metamask-blockchain-wallet/id1438144202) or [Android](https://play.google.com/store/apps/details?id=io.metamask&hl=en_US&gl=US).
+<!-- TODO:: Changes this tutorial .gif to used Sepolia  -->
 
 ## Step 1: Set your network to Sepolia {#set-network-to-sepolia}
 

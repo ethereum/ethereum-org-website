@@ -107,7 +107,7 @@ A testnet for [Optimism](https://www.optimism.io/).
 - [Chainlink faucet](https://faucets.chain.link/optimism-sepolia)
 - [Alchemy faucet](https://www.alchemy.com/faucets/optimism-sepolia)
 
-#### Starknet Goerli {#starknet-goerli}
+#### Starknet Sepolia {#starknet-sepolia}
 
 A testnet for [Starknet](https://www.starknet.io).
 
