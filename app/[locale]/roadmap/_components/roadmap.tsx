@@ -1,9 +1,12 @@
+import BannerNotification from "@/components/Banners/BannerNotification"
 import MainArticle from "@/components/MainArticle"
 
 const RoadmapPage = () => {
   return (
     <MainArticle>
-      {/* TODO: BANNER */}
+      <BannerNotification shouldShow>
+        <p>Ethereum’s development is community-driven and subject to change.</p>
+      </BannerNotification>
       {/* TODO: PAGE HERO */}
       {/* TODO: ROADMAP CAROUSAL */}
       {/* TODO: WHAT CHANGES ARE COMING UP */}
