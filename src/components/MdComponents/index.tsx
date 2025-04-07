@@ -6,6 +6,7 @@ import Contributors from "@/components/Contributors"
 import MarkdownImage from "@/components/MarkdownImage"
 import TooltipLink from "@/components/TooltipLink"
 import YouTube from "@/components/YouTube"
+import { PieChart } from "@/components/PieChart"
 
 import { cn } from "@/lib/utils/cn"
 
@@ -166,6 +167,7 @@ export const reactComponents = {
   GlossaryTooltip,
   InfoBanner,
   Page,
+  PieChart,
   QuizWidget: StandaloneQuizWidget,
   IssuesList,
   Tag,
