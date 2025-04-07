@@ -1,46 +1,42 @@
 import type { Meta, StoryObj } from "@storybook/react"
+import { expect } from "@storybook/test"
+import { waitFor } from "@storybook/test"
+import { fireEvent } from "@storybook/test"
+import { within } from "@storybook/test"
 
-import { langViewportModes } from "../../../.storybook/modes"
-import { BaseLayout as BaseLayoutComponent } from "../../layouts/BaseLayout"
-
-import ListenToPlayer from "."
+import Component from "."
 
 const meta = {
-  title: "Atoms / Media & Icons / ListenToPlayer / ListenToPlayer",
-  component: BaseLayoutComponent,
-  parameters: {
-    layout: "fullscreen",
-    chromatic: {
-      modes: {
-        ...langViewportModes,
-      },
-    },
+  title: "Atoms / Media & Icons / ListenToPlayer",
+  component: Component,
+  args: {
+    slug: "/eth/",
   },
-  argTypes: {
-    children: {
-      table: {
-        disable: true,
-      },
-    },
-    lastDeployLocaleTimestamp: {
-      table: {
-        disable: true,
-      },
-    },
-  },
-} satisfies Meta<typeof BaseLayoutComponent>
+} satisfies Meta<typeof Component>
 
 export default meta
 
-export const BaseLayout: StoryObj<typeof meta> = {
-  args: {
-    children: (
-      <div className="flex w-full flex-col items-center gap-4 px-8 py-9 md:flex-row">
-        <ListenToPlayer slug="/eth" />
-      </div>
-    ),
-    // contentIsOutdated: false,
-    // contentNotTranslated: false,
-    lastDeployLocaleTimestamp: "May 14, 2021",
+type Story = StoryObj<typeof meta>
+
+export const PlayerButton: Story = {}
+
+export const PlayerWidget: Story = {
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement)
+    const canvasParent = within(canvasElement.parentElement!)
+
+    const playerButton = canvas.getByRole("button")
+    await waitFor(() => {
+      // TODO: hacky way to wait for the sound to be loaded
+      expect(playerButton.textContent).not.toContain("0 min")
+    })
+
+    fireEvent.click(playerButton)
+
+    await waitFor(async () => {
+      await expect(
+        canvasParent.getByTestId("player-widget-modal")
+      ).toBeVisible()
+    })
   },
 }

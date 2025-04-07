@@ -22,7 +22,7 @@ import TableOfContents from "@/components/TableOfContents"
 import TooltipLink from "@/components/TooltipLink"
 import TutorialMetadata from "@/components/TutorialMetadata"
 import { ButtonLink } from "@/components/ui/buttons/Button"
-import { mdxTableComponents } from "@/components/ui/table"
+import { mdxTableComponents } from "@/components/ui/mdx-table-components"
 import YouTube from "@/components/YouTube"
 
 import { getEditPath } from "@/lib/utils/editPath"

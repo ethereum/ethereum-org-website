@@ -76,7 +76,7 @@ La propiedad intelectual (PI) es un gran problema en la ciencia tradicional: des
 
 De la misma manera que los NFT pueden transferir ingresos de vuelta al creador original, puede establecer cadenas transparentes de atribución de valor para recompensar a investigadores, organismos gubernamentales (como DAO), o incluso a los sujetos cuyos datos se recolectan.
 
-Los [IP-NFT](https://medium.com/molecule-blog/ip-nfts-for-researchers-a-new-biomedical-funding-paradigm-91312d8d92e6) también pueden servir como una llave para acceder a un repositorio descentralizado de datos de experimentos de investigación y conectarse con la financiación de NFT y [DeFi](/glossary/#defi) (desde el fraccionamiento hasta los pools de préstamos y la valoración). También permite a entidades nativas en cadena como las DAO similares a [VitaDAO](https://www.vitadao.com/) realizar investigaciones directamente en cadena. La llegada de los tokens ["AlmaDestinados" no transferibles](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) también puede desempeñar un papel importante en DeSci al permitir a las personas demostrar su experiencia y credenciales vinculadas a su dirección de Ethereum.
+Los [IP-NFT](https://medium.com/molecule-blog/ip-nfts-for-researchers-a-new-biomedical-funding-paradigm-91312d8d92e6) también pueden servir como una llave para acceder a un repositorio descentralizado de datos de experimentos de investigación y conectarse con la financiación de NFT y [DeFi](/glossary/#defi) (desde el fraccionamiento hasta los pools de préstamos y la valoración). También permite a entidades nativas en cadena como las DAO similares a [VitaDAO](https://www.vitadao.com/) realizar investigaciones directamente en cadena. La llegada de los tokens [ "AlmaDestinados" no transferibles](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) también puede desempeñar un papel importante en DeSci al permitir a las personas demostrar su experiencia y credenciales vinculadas a su dirección de Ethereum.
 
 ### Almacenamiento de datos, acceso y arquitectura {#data-storage}
 
@@ -126,7 +126,7 @@ Estamos abiertos a recibir sugerencias sobre nuevos proyectos por incluir, por f
 - [DeSci: El futuro de la investigación por Samuel Akinosho](https://lucidsamuel.medium.com/desci-the-future-of-research-b76cfc88c8ec)
 - [La fundación científica (epílogo: DeSci y las nuevas primitivas cripto) por Nadia](https://nadia.xyz/science-funding)
 - [La descentralización está provocando una disrupción en el desarrollo de fármacos](https://medium.com/id-theory/decentralisation-is-disrupting-drug-development-28b5ba5d447f)
-- [¿Qué es DeSci: Ciencia Descentralizada?](https://usadailytimes.com/2022/09/12/what-is-desci-decentralized-science/)
+- [¿Qué es DeSci: Ciencia Descentralizada?](​https://usadailytimes.com/2022/09/12/what-is-desci-decentralized-science/)
 
 ### Videos {#videos}
 

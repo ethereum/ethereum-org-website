@@ -32,7 +32,7 @@ Sea tan amable de facilitar la siguiente información:
 
 ## Añadir una pregunta tipo test
 
-Si existe una pregunta que quiera añadir a la ronda de preguntas de un test, [abra una incidencia](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml) y proporcione la siguiente información:
+Si existe una pregunta que quiera añadir a la ronda de preguntas de un test, [ abra una incidencia ](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml) y proporcione la siguiente información:
 
 - La página en la que quiera añadir la pregunta tipo test.
 - Para cada pregunta, proporcione la siguiente información:
@@ -43,7 +43,7 @@ Si existe una pregunta que quiera añadir a la ronda de preguntas de un test, [a
 
 ## Actualizar una pregunta tipo test
 
-Si existe una pregunta que quiera actualizar en la ronde de preguntas de un test, [abra una incidencia](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml) y proporcione la siguiente información:
+Si existe una pregunta que quiera actualizar en la ronde de preguntas de un test, [ abra una incidencia ](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=&template=suggest_quiz.yaml) y proporcione la siguiente información:
 
 - La página para la que quiere actualizar la pregunta.
 - Por cada pregunta que se actualice, proporcione la siguiente información:

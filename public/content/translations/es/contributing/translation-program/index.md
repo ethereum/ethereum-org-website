@@ -48,7 +48,7 @@ Miles de miembros de la comunidad traducen ethereum. org y ellos son la pieza cl
 
 #### Certificado {#certificate}
 
-Si ha contribuido al Programa de traduccion y se han aprobado al menos 5.000 de las palabras que haya traducido, puede recibir un Certificado de traductor de ethereum.org. [Más información sobre los certificados](/contributing/translation-program/acknowledgements/#certificate)
+Si ha contribuido al Programa de traduccion y se han aprobado al menos 5.000 de las palabras que haya traducido, puede recibir un Certificado de traductor de ethereum.org. [ Más información sobre los certificados](/contributing/translation-program/acknowledgements/#certificate)
 
 #### OAT {#oats}
 
@@ -56,11 +56,11 @@ Los colaboradores del Programa de Traducción son elegibles para diferentes OAT 
 
 #### Reconocimientos a los traductores {#translator-acknowledgements}
 
-Reconocimientos públicos a nuestros mejores traductores a través de las [Tablas de clasificacion](/contributing/translation-program/acknowledgements/) y una lista[de todos los contribuyentes al Programa de traduccion](/contributing/translation-program/contributors/).
+Reconocimientos públicos a nuestros mejores traductores a través de las [ Tablas de clasificacion ](/contributing/translation-program/acknowledgements/) y una lista[ de todos los contribuyentes al Programa de traduccion](/contributing/translation-program/contributors/).
 
 #### Recompensas {#rewards}
 
-En el pasado, hemos recompensado retroactivamente a nuestros contribuyentes mas activos con entradas para conferencias de Ethereum, como [Devcon](https://devcon.org/en/) y [Devconnect](https://devconnect.org/), además de ofrecerles productos exclusivos de ethereum.org.
+En el pasado, hemos recompensado retroactivamente a nuestros contribuyentes mas activos con entradas para conferencias de Ethereum, como [ Devcon ](https://devcon.org/en/) y [ Devconnect ](https://devconnect.org/), además de ofrecerles productos exclusivos de ethereum.org.
 
 Ideamos constantemente novedosas maneras de recompensar a nuestros colaboradores, ¡así que esté al tanto!
 
