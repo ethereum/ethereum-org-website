@@ -34,7 +34,7 @@ Er wordt aangenomen dat ETH op testnetten geen echte waarde heeft, maar er zijn 
 
 #### Welk testnet moet ik gebruiken?
 
-De twee openbare testnetten die clientontwikkelaars op dit moment beheren zijn Sepolia en Goerli. Sepolia is een netwerk voor contract- en applicatieontwikkelaars om hun applicaties te testen. Via het Goerli-netwerk kunnen protocolontwikkelaars netwerkupgrades testen en kunnen stakers validators testen.
+De twee openbare testnetten die clientontwikkelaars op dit moment beheren zijn Sepolia en Hoodi. Sepolia is een netwerk voor contract- en applicatieontwikkelaars om hun applicaties te testen. Via het Hoodi-netwerk kunnen protocolontwikkelaars netwerkupgrades testen en kunnen stakers validators testen.
 
 #### Sepolia {#sepolia}
 
@@ -63,11 +63,11 @@ De twee openbare testnetten die clientontwikkelaars op dit moment beheren zijn S
 - [Chainstack Sepolia faucet](https://faucet.chainstack.com/sepolia-faucet)
 - [Ethereum Ecosystem faucet](https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia)
 
-#### Goerli _(ondersteuning op lange termijn)_ {#goerli}
+#### Hoodi {#hoodi}
 
-_Opmerking: [het Goerli-testnet is verouderd](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17) en zal worden vervangen door [Holesovice](https://github.com/eth-clients/holesovice) in 2023. Overweeg alstublieft om uw applicaties naar Sepolia te migreren._
+_Opmerking: [het Goerli-testnet is verouderd](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17) en is vervangen door Hoodi. Overweeg alstublieft om uw applicaties naar Sepolia te migreren._
 
-Goerli is een testnet om te testen, valideren en te staken. Het Goerli-netwerk is beschikbaar voor gebruikers die een testnetvalidator willen uitvoeren. Stakers die protocolupgrades willen testen voordat ze worden uitgerold op het hoofdnet, moeten daarom Goerli gebruiken.
+Hoodi is een testnet om te testen, valideren en te staken. Het Hoodi-netwerk is beschikbaar voor gebruikers die een testnetvalidator willen uitvoeren. Stakers die protocolupgrades willen testen voordat ze worden uitgerold op het hoofdnet, moeten daarom Hoodi gebruiken.
 
 - Open validatorset, stakers kunnen netwerkupgrades testen
 - Grote status, handig voor het testen van complexe smart contract-interacties
@@ -75,52 +75,46 @@ Goerli is een testnet om te testen, valideren en te staken. Het Goerli-netwerk i
 
 ##### Bronnen
 
-- [Website](https://goerli.net/)
-- [Github](https://github.com/eth-clients/goerli)
-- [Etherscan](https://goerli.etherscan.io)
-- [Blokscout](https://eth-goerli.blockscout.com/)
+- [Website](https://hoodi.ethpandaops.io/)
+- [Github](https://github.com/eth-clients/hoodi)
+- [Explorer](https://explorer.hoodi.ethpandaops.io/)
+- [Checkpoint Sync](https://checkpoint-sync.hoodi.ethpandaops.io/)
 
 ##### Faucets
 
-- [QuickNode Goerli Faucet](https://faucet.quicknode.com/drip)
-- [Grabteeth](https://grabteeth.xyz/)
-- [PoW faucet](https://goerli-faucet.pk910.de/)
-- [Paradigm faucet](https://faucet.paradigm.xyz/)
-- [Alchemy Goerli Faucet](https://goerlifaucet.com/)
-- [All That Node Goerli Faucet](https://www.allthatnode.com/faucet/ethereum.dsrv)
-- [Coinbase Wallet Faucet | Goerli](https://coinbase.com/faucets/ethereum-goerli-faucet)
-- [Chainstack Goerli faucet](https://faucet.chainstack.com/goerli-faucet)
+- [Hoodi Faucet](https://hoodi.ethpandaops.io/)
 
-Om een validator te lanceren op het Goerli-testnet, gebruikt u het ["goedkope goerli validator"-launchpad](https://goerli.launchpad.ethstaker.cc/en/) van ethstaker.
+Om een validator te lanceren op het Hoodi-testnet, gebruikt u het [Hoodi launchpad](https://hoodi.launchpad.ethereum.org/en/).
 
 ### Laag 2-testnetten {#layer-2-testnets}
 
 [Laag 2 (L2)](/layer-2/) is een verzamelnaam om een specifieke set van Ethereum-opschalingsoplossingen te beschrijven. Een laag 2 is een aparte blockchain die Ethereum uitbreidt en de veiligheidsgaranties van Ethereum overneemt. Laag 2-testnetten zijn meestal nauw gekoppeld aan publieke Ethereum-testnetten.
 
-#### Arbitrum Goerli {#arbitrum-goerli}
+#### Arbitrum Sepolia {#arbitrum-sepolia}
 
 Een testnet voor [Arbitrum](https://arbitrum.io/).
 
 ##### Faucets
 
-- [Chainlink faucet](https://faucets.chain.link/)
+- [Chainlink faucet](https://faucets.chain.link/arbitrum-sepolia)
+- [Alchemy faucet](https://www.alchemy.com/faucets/arbitrum-sepolia)
 
-#### Optimistic Goerli {#optimistic-goerli}
+#### Optimistic Sepolia {#optimistic-sepolia}
 
 Een testnet voor [Optimism](https://www.optimism.io/).
 
 ##### Faucets
 
-- [Paradigm faucet](https://faucet.paradigm.xyz/)
-- [Coinbase Wallet Faucet | Optimism Goerli](https://coinbase.com/faucets/optimism-goerli-faucet)
+- [Chainlink faucet](https://faucets.chain.link/optimism-sepolia)
+- [Alchemy faucet](https://www.alchemy.com/faucets/optimism-sepolia)
 
-#### Starknet Goerli {#starknet-goerli}
+#### Starknet Sepolia {#starknet-sepolia}
 
 Een testnet voor [Starknet](https://www.starknet.io).
 
 ##### Faucets
 
-- [Starknet faucet](https://faucet.goerli.starknet.io)
+- [Alchemy faucet](https://www.alchemy.com/faucets/starknet-sepolia)
 
 ## Persoonlijke netwerken {#private-networks}
 

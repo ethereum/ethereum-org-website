@@ -34,7 +34,7 @@ lang: ru
 
 #### Какую тестовую сеть мне использовать?
 
-Две общедоступные тестовые сети, которые в настоящее время поддерживают разработчики клиентов, — это Sepolia и Goerli. Sepolia — это сеть для разработчиков контрактов и приложений для тестирования своих приложений. Сеть Goerli позволяет разработчикам протоколов тестировать обновления сети, а заинтересованным сторонам — тестировать работающие валидаторы.
+Две общедоступные тестовые сети, которые в настоящее время поддерживают разработчики клиентов, — это Sepolia и Hoodi. Sepolia — это сеть для разработчиков контрактов и приложений для тестирования своих приложений. Сеть Hoodi позволяет разработчикам протоколов тестировать обновления сети, а заинтересованным сторонам — тестировать работающие валидаторы.
 
 #### Sepolia {#sepolia}
 
@@ -63,11 +63,11 @@ lang: ru
 - [Кран Chainstack Sepolia](https://faucet.chainstack.com/sepolia-faucet)
 - [Кран Ethereum Ecosystem](https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia)
 
-#### Goerli _(долгосрочная поддержка)_ {#goerli}
+#### Hoodi {#hoodi}
 
-_Обратите внимание: [тестовая сеть Goerli является устаревшей](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17) и будет заменена на [Holesovice](https://github.com/eth-clients/holesovice) в 2023 году. Подумайте о переносе ваших приложений в Sepolia._
+_Обратите внимание: [тестовая сеть Goerli является устаревшей](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17) и была заменена на Hoodi. Подумайте о переносе ваших приложений в Sepolia._
 
-Goerli — тестовая сеть для проверки валидации и стейкинга. Сеть Goerli открыта для пользователей, желающих запустить валидатор в тестовой сети. Поэтому стейкерам, желающим протестировать обновления протокола до его развертывания в главной сети, следует использовать Goerli.
+Hoodi — тестовая сеть для проверки валидации и стейкинга. Сеть Hoodi открыта для пользователей, желающих запустить валидатор в тестовой сети. Поэтому стейкерам, желающим протестировать обновления протокола до его развертывания в главной сети, следует использовать Hoodi.
 
 - Открытый набор валидаторов, стейкеры могут тестировать обновления сети
 - Состояние большого размера, полезно для тестирования сложных взаимодействий со смарт-контрактами
@@ -75,52 +75,46 @@ Goerli — тестовая сеть для проверки валидации 
 
 ##### Ресурсы
 
-- [Сайт](https://goerli.net/)
-- [GitHub](https://github.com/eth-clients/goerli)
-- [Etherscan](https://goerli.etherscan.io)
-- [Blockscout](https://eth-goerli.blockscout.com/)
+- [Сайт](https://hoodi.ethpandaops.io/)
+- [GitHub](https://github.com/eth-clients/hoodi)
+- [Explorer](https://explorer.hoodi.ethpandaops.io/)
+- [Checkpoint Sync](https://checkpoint-sync.hoodi.ethpandaops.io/)
 
 ##### Краны
 
-- [Кран QuickNode Goerli](https://faucet.quicknode.com/drip)
-- [Grabteeth](https://grabteeth.xyz/)
-- [Кран PoW](https://goerli-faucet.pk910.de/)
-- [Кран Paradigm](https://faucet.paradigm.xyz/)
-- [Кран Alchemy Goerli](https://goerlifaucet.com/)
-- [Кран Goerli All That Node](https://www.allthatnode.com/faucet/ethereum.dsrv)
-- [Кран Coinbase Wallet | Goerli](https://coinbase.com/faucets/ethereum-goerli-faucet)
-- [Кран Goerli от Chainstack](https://faucet.chainstack.com/goerli-faucet)
+- [Кран Hoodi](https://hoodi.ethpandaops.io/)
 
-Чтобы стать валидатором в тестовой сети Goerli, используйте [панель запуска cheap goerli validator](https://holesky.launchpad.ethstaker.cc/en/) от EthStaker.
+Чтобы стать валидатором в тестовой сети Hoodi, используйте [панель запуска Hoodi](https://hoodi.launchpad.ethereum.org/en/).
 
 ### Тестовые сети уровня 2 {#layer-2-testnets}
 
 [Уровень 2 (L2)](/layer-2/) — это общий термин для описания определенного набора решений для масштабирования Ethereum. Уровень 2 является отдельным блокчейном, который расширяет Ethereum и наследует гарантии безопасности Ethereum. Тестовые сети уровня 2 обычно тесно связаны с публичными тестовыми сетями Ethereum.
 
-#### Arbitrum Goerli {#arbitrum-goerli}
+#### Arbitrum Sepolia {#arbitrum-sepolia}
 
 Тестовая сеть для [Arbitrum](https://arbitrum.io/).
 
 ##### Краны
 
-- [Кран Chainlink](https://faucets.chain.link/)
+- [Кран Chainlink](https://faucets.chain.link/arbitrum-sepolia)
+- [Кран Alchemy](https://www.alchemy.com/faucets/arbitrum-sepolia)
 
-#### Optimistic Goerli {#optimistic-goerli}
+#### Optimistic Sepolia {#optimistic-sepolia}
 
 Тестовая сеть для [Optimism](https://www.optimism.io/).
 
 ##### Краны
 
-- [Кран Paradigm](https://faucet.paradigm.xyz/)
-- [Кран Coinbase Wallet | Optimism Goerli](https://coinbase.com/faucets/optimism-goerli-faucet)
+- [Кран Chainlink](https://faucets.chain.link/optimism-sepolia)
+- [Кран Alchemy](https://www.alchemy.com/faucets/optimism-sepolia)
 
-#### Starknet Goerli {#starknet-goerli}
+#### Starknet Sepolia {#starknet-sepolia}
 
 Тестовая сеть для [Starknet](https://www.starknet.io).
 
 ##### Краны
 
-- [Кран Starknet](https://faucet.goerli.starknet.io)
+- [Кран Alchemy](https://www.alchemy.com/faucets/starknet-sepolia)
 
 ## Частные сети {#private-networks}
 

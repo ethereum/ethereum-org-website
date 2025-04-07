@@ -32,75 +32,85 @@ Majoritatea testnet-urilor utilizează un mecanism de consens pentru dovada-auto
 
 ETH-ul pe testnet-uri nu are o valoare reală; de aceea, nu există piețe pentru ETH-ul testnet. Din moment ce aveţi nevoie de ETH pentru a interacționa într-adevăr cu Ethereum, cei mai mulți obțin ETH de la un faucet. Cele mai multe faucet-uri sunt aplicații web în care puteţi introduce o adresă la care să solicitaţi să se trimită ETH.
 
-#### Arbitrum Rinkeby {#arbitrum-rinkeby}
+#### Sepolia {#sepolia}
 
-A testnet for [Arbitrum](https://arbitrum.io/).
+**Sepolia este testnet-ul implicit recomandat pentru dezvoltarea aplicațiilor**. Rețeaua Sepolia utilizează un set de validatori autorizat. Este relativ nouă, ceea ce înseamnă că atât starea sa, cât și istoricul său sunt destul de mici. Aceasta înseamnă că rețeaua se poate sincroniza rapid și că rularea unui nod pe ea necesită mai puțin spațiu de stocare. Acest lucru este util pentru utilizatorii care doresc să pornească rapid un nod și să interacționeze direct cu rețeaua.
 
-##### Arbitrum Rinkeby faucets
+- Set de validatori închis, controlat de echipele de clienți și de testare
+- Testnet nou, mai puține aplicații implementate decât pe alte testnet-uri
+- Sincronizare rapidă și rularea unui nod necesită un spațiu minim pe disc
 
-- [FaucETH](https://fauceth.komputing.org)(Multi-Chain faucet without the need for social account)
-- [Chainlink faucet](https://faucets.chain.link/)
-- [Paradigm faucet](https://faucet.paradigm.xyz/)
+##### Resurse
 
-#### Görli {#goerli}
+- [Site web](https://sepolia.dev/)
+- [GitHub](https://github.com/eth-clients/sepolia)
+- [Otterscan](https://sepolia.otterscan.io/)
+- [Etherscan](https://sepolia.etherscan.io)
+- [Blockscout](https://eth-sepolia.blockscout.com/)
 
-Un testnet bazat pe dovada-autorității care funcționează la nivelul tuturor clienţilor.
+##### Faucet-uri
 
-##### Görli faucets
+- [Faucet QuickNode Sepolia](https://faucet.quicknode.com/drip)
+- [Grabteeth](https://grabteeth.xyz/)
+- [Faucet PoW](https://sepolia-faucet.pk910.de/)
+- [Faucet Coinbase Wallet | Sepolia](https://coinbase.com/faucets/ethereum-sepolia-faucet)
+- [Faucet Alchemy Sepolia](https://sepoliafaucet.com/)
+- [Faucet Infura Sepolia](https://www.infura.io/faucet)
+- [Faucet Chainstack Sepolia](https://faucet.chainstack.com/sepolia-faucet)
+- [Faucet Ecosistem Ethereum](https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia)
 
-- [Faucet-ul Görli](https://faucet.goerli.mudit.blog/)
-- [Chainlink faucet](https://faucets.chain.link/)
-- [Alchemy Goerli Faucet](https://goerlifaucet.com/)
+#### Hoodi {#hoodi}
 
-#### Kintsugi {#kintsugi}
+_Notă: [testnet-ul Goerli este învechit](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17) și a fost înlocuit de Hoodi. Vă rugăm să luați în considerare migrarea aplicațiilor dvs. către Sepolia._
 
-A merge testnet for Ethereum.
+Hoodi este un testnet pentru testarea validării și staking-ului. Rețeaua Hoodi este deschisă pentru utilizatorii care doresc să ruleze un validator de testnet. Stakerii care doresc să testeze actualizările de protocol înainte de implementarea lor pe Mainnet ar trebui, prin urmare, să folosească Hoodi.
 
-##### Kintsugi faucets
+- Set de validatori deschis, stakerii pot testa actualizările rețelei
+- Stare mare, utilă pentru testarea interacțiunilor complexe ale contractelor inteligente
+- Sincronizare mai îndelungată și necesită mai mult spațiu de stocare pentru rularea unui nod
 
-- [FaucETH](https://fauceth.komputing.org)(Multi-Chain faucet without the need for social account)
-- [Kintsugi faucet](https://faucet.kintsugi.themerge.dev/)
+##### Resurse
 
-#### Kovan {#kovan}
+- [Site web](https://hoodi.ethpandaops.io/)
+- [GitHub](https://github.com/eth-clients/hoodi)
+- [Explorer](https://explorer.hoodi.ethpandaops.io/)
+- [Checkpoint Sync](https://checkpoint-sync.hoodi.ethpandaops.io/)
 
-Un testnet bazat pe dovada-autorității pentru cei care rulează clienții OpenEthereum.
+##### Faucet-uri
 
-##### Kovan faucets
+- [Faucet Hoodi](https://hoodi.ethpandaops.io/)
 
-- [FaucETH](https://fauceth.komputing.org)(Multi-Chain faucet without the need for social account)
-- [Faucet-ul Kovan](https://faucet.kovan.network/)
-- [Chainlink faucet](https://faucets.chain.link/)
-- [Paradigm faucet](https://faucet.paradigm.xyz/)
+Pentru a lansa un Validator pe testnet-ul Hoodi, utilizați [platforma de lansare Hoodi](https://hoodi.launchpad.ethereum.org/en/).
 
-#### Optimistic Kovan {#optimistic-kovan}
+### Rețele de testare Layer 2 {#layer-2-testnets}
 
-A testnet for [Optimism](https://www.optimism.io/).
+[Layer 2 (L2)](/layer-2/) este un termen colectiv pentru a descrie un set specific de soluții de scalare Ethereum. Un Layer 2 este un blockchain separat care extinde Ethereum și moștenește garanțiile de securitate ale Ethereum. Rețelele de testare Layer 2 sunt de obicei strâns cuplate cu rețelele de testare publice Ethereum.
 
-##### Optimistic Kovan faucets
+#### Arbitrum Sepolia {#arbitrum-sepolia}
 
-- [FaucETH](https://fauceth.komputing.org)(Multi-Chain faucet without the need for social account)
-- [Paradigm faucet](https://faucet.paradigm.xyz/)
+O rețea de testare pentru [Arbitrum](https://arbitrum.io/).
 
-#### Rinkeby {#rinkeby}
+##### Faucet-uri
 
-Un testnet bazat pe dovada-autorității pentru cei care rulează clienții OpenEthereum.
+- [Faucet Chainlink](https://faucets.chain.link/arbitrum-sepolia)
+- [Faucet Alchemy](https://www.alchemy.com/faucets/arbitrum-sepolia)
 
-##### Rinkeby faucets
+#### Optimistic Sepolia {#optimistic-sepolia}
 
-- [FaucETH](https://fauceth.komputing.org)(Multi-Chain faucet without the need for social account)
-- [Alchemy faucet](https://RinkebyFaucet.com)
-- [Chainlink faucet](https://faucets.chain.link/)
-- [Paradigm faucet](https://faucet.paradigm.xyz/)
-- [Faucet-ul Rinkeby](https://faucet.rinkeby.io/)
+O rețea de testare pentru [Optimism](https://www.optimism.io/).
 
-#### Ropsten {#ropsten}
+##### Faucet-uri
 
-Un testnet bazat pe dovada-muncii. Aceasta înseamnă că este reprezentarea cea mai apropiată de Ethereum.
+- [Faucet Chainlink](https://faucets.chain.link/optimism-sepolia)
+- [Faucet Alchemy](https://www.alchemy.com/faucets/optimism-sepolia)
 
-##### Ropsten faucets
+#### Starknet Sepolia {#starknet-sepolia}
 
-- [FaucETH](https://fauceth.komputing.org)(Multi-Chain faucet without the need for social account)
-- [Paradigm faucet](https://faucet.paradigm.xyz/)
+O rețea de testare pentru [Starknet](https://www.starknet.io).
+
+##### Faucet-uri
+
+- [Faucet Alchemy](https://www.alchemy.com/faucets/starknet-sepolia)
 
 ## Rețele private {#private-networks}
 
@@ -125,4 +135,5 @@ Dacă o rețea publică Ethereum este ca internetul public, puteţi considera c�
 
 ## Referințe suplimentare {#further-reading}
 
-_Cunoaşteţi o resursă comunitară care v-a ajutat? Editaţi această pagină și adăugaţi-o!_
+- [Propunere: ciclu de viață previzibil al testnet-urilor Ethereum](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17)
+- [Evoluția testnet-urilor Ethereum](https://etherworld.co/2022/08/19/the-evolution-of-ethereum-testnet/)
