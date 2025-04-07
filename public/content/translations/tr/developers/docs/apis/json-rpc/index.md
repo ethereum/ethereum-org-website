@@ -208,7 +208,7 @@ Mevcut ağ kimliklerinin tam listesi [chainlist.org](https://chainlist.org) adre
 
 - `1`: Ethereum Ana Ağı
 - `11155111`: Sepolia test ağı
-- `560048` : Hoodi test ağı
+- `17000`: Hoodi test ağı
 
 **Örnek**
 

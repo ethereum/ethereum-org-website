@@ -37,6 +37,14 @@ Sieć Hardhat jest wbudowana w Hardhat, środowisko programistyczne Ethereum dla
 - [Strona internetowa](https://hardhat.org/)
 - [GitHub](https://github.com/nomiclabs/hardhat)
 
+### Publiczne łańcuchy testowe Ethereum {#public-beacon-testchains}
+
+Istnieją również dwie publiczne implementacje testowe Ethereum: Sepolia i Hoodi. Sepolia to zalecana standardowa sieć testowa do tworzenia aplikacji, z zamkniętym zestawem walidatorów zapewniającym szybką synchronizację. Hoodi to sieć testowa do walidacji i stakingu, która wykorzystuje otwarty zestaw walidatorów i potencjalnie umożliwia walidację każdemu.
+
+- [Launchpad stakingu Hoodi](https://hoodi.launchpad.ethereum.org/en/)
+- [Strona internetowa Sepolia](https://sepolia.dev/)
+- [Strona internetowa Hoodi](https://hoodi.ethpandaops.io/)
+
 ## Dalsza lektura {#further-reading}
 
 _Znasz jakieś zasoby społeczności, które Ci pomogły? Wyedytuj tę stronę i dodaj je!_

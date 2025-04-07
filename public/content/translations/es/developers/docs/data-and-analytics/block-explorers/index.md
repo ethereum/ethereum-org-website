@@ -13,16 +13,16 @@ Es necesario que comprenda los conceptos básicos de Ethereum para poder entende
 
 ## Servicios {#services}
 
-- [Etherscan:](https://etherscan.io/) _También disponible en chino, coreano, ruso y japonés_
+- [Etherscan](https://etherscan.io/) -_También disponible en chino, coreano, ruso y japonés_
 - [3xpl](https://3xpl.com/ethereum)
 - [Beaconcha.in](https://beaconcha.in/)
-- [Blockchair:](https://blockchair.com/ethereum) _También disponible en inglés, francés, italiano, neerlandés, portugués, ruso, chino y farsi_
+- [Blockchair](https://blockchair.com/ethereum) -_También disponible en inglés, francés, italiano, neerlandés, portugués, ruso, chino y farsi_
 - [Blockscout](https://eth.blockscout.com/)
 - [Chainlens](https://www.chainlens.com/)
 - [Explorador de bloques DexGuru](https://ethereum.dex.guru/)
 - [Etherchain](https://www.etherchain.org/)
 - [Ethernow](https://www.ethernow.xyz/)
-- [Ethplorer:](https://ethplorer.io/) _También disponible en chino, español, francés, turco, ruso, coreano y vietnamita_
+- [Ethplorer](https://ethplorer.io/) -_También disponible en chino, español, francés, turco, ruso, coreano y vietnamita_
 - [EthVM](https://www.ethvm.com/)
 - [OKLink](https://www.oklink.com/eth)
 - [Rantom](https://rantom.app/)
