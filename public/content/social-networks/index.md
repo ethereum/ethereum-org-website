@@ -76,13 +76,18 @@ Users use the platform's native [ERC-20](/glossary/#erc-20) token $MIND to pay f
 
 [Web3](/glossary/#web3) native social platforms aren't the only ones trying to incorporate blockchain technology into social media. Many centralized platforms are also planning to integrate Ethereum into their infrastructure:
 
-### Reddit {#reddit}
+### Twitter/X (NFT & Crypto Payments)  {#twitter}
 
-Reddit has [touted Community Points](https://cointelegraph.com/news/reddit-to-reportedly-tokenize-karma-points-and-onboard-500m-new-users), which are ERC-20 tokens that users can earn by posting quality content and contributing to online communities (subreddits). You can redeem these tokens within a subreddit to get exclusive privileges and perks. For this project, Reddit is working with Arbitrum, a [layer 2](/glossary/#layer-2) network designed to scale Ethereum transactions.
+[Twitter](x.com) (now X) has incorporated blockchain technology in multiple ways to enhance creator monetization and digital identity verification:
 
-The program is already live, with the r/CryptoCurrency subreddit [running its version of Community Points called "Moons"](https://www.reddit.com/r/CryptoCurrency/wiki/moons_wiki). Per the official description, Moons "reward posters, commenters, and moderators for their contributions to the subreddit." Because these tokens are on the blockchain (users receive them in wallets), they are independent of Reddit and cannot be taken away.
+- **NFT Profile Pictures**: X allows users to verify and display Ethereum-based NFTs as profile pictures. These NFT avatars are authenticated through blockchain metadata and appear with a hexagonal frame to distinguish them from regular profile images.
 
-Besides using Community Points to unlock special features, users can also trade them for fiat on exchanges. Also, the amount of Community Points a user owns determines their influence on the decision-making process within the community.
+- **Crypto Tipping**: The platform has integrated Ethereum tipping, enabling users to send payments via Ethereum-based wallets like Strike.
+
+- **Tokenized Content & Payments**: With its shift towards a financial “everything app,” X is reportedly exploring deeper crypto and token integrations, potentially using Ethereum-based assets in the future.
+
+By integrating blockchain features, X is bridging the gap between Web2 social experiences and decentralized digital ownership.
+
 
 ## Further reading {#further-reading}
 
