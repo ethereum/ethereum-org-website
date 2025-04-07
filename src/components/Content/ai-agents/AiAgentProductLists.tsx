@@ -89,8 +89,8 @@ const AiAgentProductLists = ({ list }: { list: string }) => {
         contentItems: [
           <p key="botto-description">
             Botto creates art and NFTs, with the community voting on its best
-            work. Users formed a DAO that guides Botto’s artistic evolution while also
-            earning token rewards for participation.
+            work. Users formed a DAO that guides Botto’s artistic evolution
+            while also earning token rewards for participation.
           </p>,
           <div key="botto-button">
             <ButtonLink

@@ -6,6 +6,7 @@ import I18nProvider from "@/components/I18nProvider"
 import mdComponents from "@/components/MdComponents"
 
 import { dataLoader } from "@/lib/utils/data/dataLoader"
+import { dateToString } from "@/lib/utils/date"
 import { getPostSlugs } from "@/lib/utils/md"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
@@ -17,6 +18,18 @@ import { getPageData } from "@/lib/md/data"
 import { getMdMetadata } from "@/lib/md/metadata"
 
 const loadData = dataLoader([["gfissues", fetchGFIs]])
+
+function getLayoutFromSlug(slug: string) {
+  if (slug.includes("developers/docs")) {
+    return "docs"
+  }
+
+  if (slug.includes("developers/tutorials")) {
+    return "tutorial"
+  }
+
+  return "static"
+}
 
 export default async function Page({
   params,
@@ -49,6 +62,7 @@ export default async function Page({
     tocItems,
     lastEditLocaleTimestamp,
     isTranslated,
+    contributors,
   } = await getPageData({
     locale,
     slug,
@@ -61,8 +75,13 @@ export default async function Page({
   })
 
   // Determine the actual layout after we have the frontmatter
-  const layout = frontmatter.template || "static"
+  const layout = frontmatter.template || getLayoutFromSlug(slug)
   const Layout = layoutMapping[layout]
+
+  // If the page has a published date, format it
+  if ("published" in frontmatter) {
+    frontmatter.published = dateToString(frontmatter.published)
+  }
 
   // Get i18n messages
   const allMessages = await getMessages({ locale })
@@ -77,6 +96,9 @@ export default async function Page({
         tocItems={tocItems}
         lastEditLocaleTimestamp={lastEditLocaleTimestamp}
         contentNotTranslated={!isTranslated}
+        contributors={contributors}
+        // TODO: Remove this once we have a real timeToRead value
+        timeToRead={2}
       >
         {content}
       </Layout>
@@ -85,7 +107,7 @@ export default async function Page({
 }
 
 export async function generateStaticParams() {
-  const slugs = await getPostSlugs("/", /\/developers/)
+  const slugs = await getPostSlugs("/")
 
   return LOCALES_CODES.flatMap((locale) =>
     slugs.map((slug) => ({
@@ -94,6 +116,8 @@ export async function generateStaticParams() {
     }))
   )
 }
+
+export const dynamicParams = false
 
 export async function generateMetadata({
   params,

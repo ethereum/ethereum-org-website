@@ -1,6 +1,6 @@
 {
   "name": "ethereum-org-website",
-  "version": "9.7.0",
+  "version": "10.0.0",
   "license": "MIT",
   "private": true,
   "scripts": {
@@ -47,7 +47,9 @@
     "@radix-ui/react-tabs": "^1.1.0",
     "@radix-ui/react-tooltip": "^1.1.2",
     "@radix-ui/react-visually-hidden": "^1.1.0",
+    "@rainbow-me/rainbowkit": "^2.2.3",
     "@socialgouv/matomo-next": "^1.8.0",
+    "@tanstack/react-query": "^5.66.7",
     "@tanstack/react-table": "^8.19.3",
     "chart.js": "^4.4.2",
     "chartjs-plugin-datalabels": "^2.2.0",
@@ -62,7 +64,7 @@
     "lodash.merge": "^4.6.2",
     "lodash.shuffle": "^4.2.0",
     "lodash.union": "^4.6.0",
-    "next": "^14.2.21",
+    "next": "^14.2.25",
     "next-intl": "^3.26.3",
     "next-mdx-remote": "^5.0.0",
     "next-sitemap": "^4.2.3",
@@ -86,6 +88,8 @@
     "tailwindcss-animate": "^1.0.7",
     "usehooks-ts": "^3.1.0",
     "vaul": "^1.0.0",
+    "viem": "^2.23.3",
+    "wagmi": "^2.14.11",
     "yaml-loader": "^0.8.0"
   },
   "devDependencies": {

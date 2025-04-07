@@ -24,7 +24,7 @@ But, what do you do if you want to make a similar exchange to use a different [b
 
 All blockchains have their limitations. For Ethereum to scale and keep up with demand, it has required [rollups](/glossary/#rollups). Alternatively, L1s like Solana and Avalanche are designed differently to enable higher throughput but at the cost of decentralization.
 
-However, all blockchains develop in isolated environments and have different rules and [consensus](/glossary/#consensus) mechanisms. This means they cannot natively communicate, and tokens cannot move freely between blockchains.
+However, all blockchains are developed in isolated environments and have different rules and [consensus](/glossary/#consensus) mechanisms. This means they cannot natively communicate, and tokens cannot move freely between blockchains.
 
 Bridges exist to connect blockchains, allowing the transfer of information and tokens between them.
 
@@ -65,7 +65,7 @@ Let’s say you want to own native Bitcoin (BTC), but you only have funds on Eth
 
 <Divider />
 
-## Types of bridge {#types-of-bridge}
+## Types of bridges {#types-of-bridge}
 
 Bridges have many types of designs and intricacies. Generally, bridges fall into two categories: trusted and trustless bridges.
 
@@ -95,7 +95,7 @@ Many bridging solutions adopt models between these two extremes with varying deg
 
 <Divider />
 
-## Use bridge {#use-bridge}
+## Use bridges {#use-bridge}
 
 Using bridges allows you to move your assets across different blockchains. Here are some resources that can help you find and use bridges:
 
@@ -104,7 +104,7 @@ Using bridges allows you to move your assets across different blockchains. Here 
 
 <Divider />
 
-## Risk using bridges {#bridge-risk}
+## Risk of using bridges {#bridge-risk}
 
 Bridges are in the early stages of development. It is likely that the optimal bridge design has not yet been discovered. Interacting with any type of bridge carries risk:
 
