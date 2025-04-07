@@ -208,7 +208,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"web3_sha3","params":["0x68656c6c
 
 - `1`: イーサリアムメインネット
 - `11155111`: Sepoliaテストネット
-- `560048` : Hoodiテストネット
+- `17000`: Hoodiテストネット
 
 **例**
 

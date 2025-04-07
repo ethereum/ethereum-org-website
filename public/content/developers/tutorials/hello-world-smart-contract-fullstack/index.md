@@ -17,7 +17,6 @@ skill: beginner
 lang: en
 published: 2021-10-25
 ---
-<!-- TODO:: Changes this tutorial to used Sepolia  -->
 
 This guide is for you if you are new to blockchain development and don't know where to start or how to deploy and interact with smart contracts. We will walk through creating and deploying a simple, smart contract on the Goerli test network using [MetaMask](https://metamask.io), [Solidity](https://docs.soliditylang.org/en/v0.8.0/), [Hardhat](https://hardhat.org), and [Alchemy](https://alchemyapi.io/eth).
 

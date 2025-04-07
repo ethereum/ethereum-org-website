@@ -34,53 +34,53 @@ ETH-ul pe testnet-uri nu are o valoare reală; de aceea, nu există piețe pentr
 
 #### Sepolia {#sepolia}
 
-**Sepolia este testnet-ul implicit recomandat pentru dezvoltarea aplicațiilor**. Rețeaua Sepolia utilizează un set de validatori autorizat. Este relativ nouă, ceea ce înseamnă că atât starea sa, cât și istoricul său sunt destul de mici. Aceasta înseamnă că rețeaua se poate sincroniza rapid și că rularea unui nod pe ea necesită mai puțin spațiu de stocare. Acest lucru este util pentru utilizatorii care doresc să pornească rapid un nod și să interacționeze direct cu rețeaua.
+**Sepolia este rețeaua de testare implicită recomandată pentru dezvoltarea aplicațiilor**. Rețeaua Sepolia utilizează un set închis de validatori. Este relativ nouă, ceea ce înseamnă că atât starea sa cât și istoricul său sunt foarte mici. Acest lucru înseamnă că rețeaua se sincronizează rapid și că rularea unui nod necesită mai puțin spațiu de stocare. Acest lucru este util pentru utilizatorii care doresc să pornească rapid un nod și să comunice direct cu rețeaua.
 
-- Set de validatori închis, controlat de echipele de clienți și de testare
-- Testnet nou, mai puține aplicații implementate decât pe alte testnet-uri
-- Sincronizare rapidă și rularea unui nod necesită un spațiu minim pe disc
+- Set închis de validatori, gestionat de echipele de clienți și teste
+- Rețea de testare nouă, mai puține aplicații distribuite decât în alte rețele de testare
+- Sincronizare rapidă și necesită spațiu minim pe disc pentru rularea unui nod
 
 ##### Resurse
 
-- [Site web](https://sepolia.dev/)
+- [Website](https://sepolia.dev/)
 - [GitHub](https://github.com/eth-clients/sepolia)
 - [Otterscan](https://sepolia.otterscan.io/)
 - [Etherscan](https://sepolia.etherscan.io)
 - [Blockscout](https://eth-sepolia.blockscout.com/)
 
-##### Faucet-uri
+##### Robinete
 
-- [Faucet QuickNode Sepolia](https://faucet.quicknode.com/drip)
+- [QuickNode Sepolia Faucet](https://faucet.quicknode.com/drip)
 - [Grabteeth](https://grabteeth.xyz/)
-- [Faucet PoW](https://sepolia-faucet.pk910.de/)
-- [Faucet Coinbase Wallet | Sepolia](https://coinbase.com/faucets/ethereum-sepolia-faucet)
-- [Faucet Alchemy Sepolia](https://sepoliafaucet.com/)
-- [Faucet Infura Sepolia](https://www.infura.io/faucet)
-- [Faucet Chainstack Sepolia](https://faucet.chainstack.com/sepolia-faucet)
-- [Faucet Ecosistem Ethereum](https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia)
+- [PoW Faucet](https://sepolia-faucet.pk910.de/)
+- [Coinbase Wallet Faucet | Sepolia](https://coinbase.com/faucets/ethereum-sepolia-faucet)
+- [Alchemy Sepolia Faucet](https://sepoliafaucet.com/)
+- [Infura Sepolia Faucet](https://www.infura.io/faucet)
+- [Chainstack Sepolia Faucet](https://faucet.chainstack.com/sepolia-faucet)
+- [Ethereum Ecosystem Faucets](https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia)
 
 #### Hoodi {#hoodi}
 
-_Notă: [testnet-ul Goerli este învechit](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17) și a fost înlocuit de Hoodi. Vă rugăm să luați în considerare migrarea aplicațiilor dvs. către Sepolia._
+_Notă: [Rețeaua de testare Goerli este învechită](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17) și a fost înlocuită de Hoodi. Luați în considerare migrarea aplicațiilor dvs. către Sepolia._
 
-Hoodi este un testnet pentru testarea validării și staking-ului. Rețeaua Hoodi este deschisă pentru utilizatorii care doresc să ruleze un validator de testnet. Stakerii care doresc să testeze actualizările de protocol înainte de implementarea lor pe Mainnet ar trebui, prin urmare, să folosească Hoodi.
+Hoodi este o rețea de testare pentru testarea validării și stakingului. Rețeaua Hoodi este deschisă pentru utilizatorii care doresc să ruleze un validator al rețelei de testare. Stakerii care doresc să testeze actualizările protocolului înainte de a fi implementate pe rețeaua principală ar trebui să folosească Hoodi.
 
-- Set de validatori deschis, stakerii pot testa actualizările rețelei
-- Stare mare, utilă pentru testarea interacțiunilor complexe ale contractelor inteligente
-- Sincronizare mai îndelungată și necesită mai mult spațiu de stocare pentru rularea unui nod
+- Set deschis de validatori, stakerii pot testa actualizările rețelei
+- Stare mare, utilă pentru testarea interacțiunilor complexe cu contractele inteligente
+- Timp mai lung de sincronizare și necesită mai mult spațiu de stocare pentru rularea unui nod
 
 ##### Resurse
 
-- [Site web](https://hoodi.ethpandaops.io/)
+- [Website](https://hoodi.ethpandaops.io/)
 - [GitHub](https://github.com/eth-clients/hoodi)
 - [Explorer](https://explorer.hoodi.ethpandaops.io/)
 - [Checkpoint Sync](https://checkpoint-sync.hoodi.ethpandaops.io/)
 
 ##### Faucet-uri
 
-- [Faucet Hoodi](https://hoodi.ethpandaops.io/)
+- [Hoodi Faucet](https://hoodi.ethpandaops.io/)
 
-Pentru a lansa un Validator pe testnet-ul Hoodi, utilizați [platforma de lansare Hoodi](https://hoodi.launchpad.ethereum.org/en/).
+Pentru a lansa un Validator pe rețeaua de testare Hoodi, folosiți [Hoodi launchpad](https://hoodi.launchpad.ethereum.org/en/).
 
 ### Rețele de testare Layer 2 {#layer-2-testnets}
 
@@ -114,7 +114,7 @@ O rețea de testare pentru [Starknet](https://www.starknet.io).
 
 ## Rețele private {#private-networks}
 
-O rețea Ethereum este o rețea privată dacă nodurile sale nu sunt conectate la o rețea publică (de exemplu, Mainnet sau tesnet). În acest context, „privat” înseamnă doar rezervat sau izolat, mai degrabă decât protejat sau sigur.
+O rețea Ethereum este o rețea privată dacă nodurile sale nu sunt conectate la o rețea publică (de exemplu, Mainnet sau tesnet). În acest context, "privat" înseamnă doar rezervat sau izolat, mai degrabă decât protejat sau sigur.
 
 ### Rețele de dezvoltare {#development-networks}
 

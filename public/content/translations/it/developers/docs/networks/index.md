@@ -65,8 +65,6 @@ Le due reti di prova pubbliche che gli sviluppatori di client stanno mantenendo 
 
 #### Hoodi {#hoodi}
 
-_Nota: [la rete di prova Goerli è obsoleta](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17) e è stata sostituita da Hoodi. Sei pregato di considerare la migrazione delle tue applicazioni a Sepolia._
-
 Hoodi è una rete di prova per testare la convalida e lo staking. La rete Hoodi è aperta per gli utenti che vogliono eseguire un validatore della rete di prova. Gli staker che desiderano testare gli aggiornamenti del protocollo prima che siano distribuiti sulla rete principale dovrebbero quindi utilizzare Hoodi.
 
 - Insieme di validatori aperto, gli staker possono testare gli aggiornamenti di rete

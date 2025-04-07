@@ -38,7 +38,7 @@ As duas redes de testes públicas que os desenvolvedores dos clientes estão atu
 
 #### Sepolia {#sepolia}
 
-****Sepolia é a rede de teste padrão recomendada para desenvolvimento de aplicativos. A rede Sepolia usa um conjunto de validadores autorizados. É bastante novo, o que significa que seu estado e história são bastante pequenos. Isso significa que a rede é rápida para sincronizar e que a execução de um nó requer menos armazenamento. Isso é útil para usuários que desejam ativar rapidamente um nó e interagir diretamente com a rede.
+**Sepolia é a rede de teste padrão recomendada para desenvolvimento de aplicativos**. A rede Sepolia usa um conjunto de validadores autorizados. É bastante novo, o que significa que seu estado e história são bastante pequenos. Isso significa que a rede é rápida para sincronizar e que a execução de um nó requer menos armazenamento. Isso é útil para usuários que desejam ativar rapidamente um nó e interagir diretamente com a rede.
 
 - Conjunto de validadores fechado, controlado pelo cliente & equipes de teste
 - Nova rede de teste, menos aplicativos implantados que outras redes de teste
