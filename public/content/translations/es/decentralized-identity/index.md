@@ -87,7 +87,7 @@ Los identificadores tradicionales como tu nombre jurídico o dirección de corre
 
 Los identificadores descentralizados son emitidos, mantenidos y controlados por individuos. Una [cuenta de Ethereum](/glossary/#account) es un ejemplo de un identificador descentralizado. Puede crear tantas cuentas como quiera sin el permiso de nadie y sin necesidad de almacenarlas en un registro central.
 
-Los identificadores descentralizados son almacenados en "ledgers" distribuidos ([cadena de bloques](/glossary/#blockchain)) o [redes persona a persona](/glossary/#peer-to-peer-network) (peer-to-peer). Esto hace a los DIDs [globalmente únicos, resolubles con alta disponibilidad, y criptográficamente verificables](https://w3c-ccg.github.io/did-primer/). Un identificador descentralizado puede ser asociado con diferentes entidades, incluyendo personas, organizaciones o instituciones gubernamentales.
+Los identificadores descentralizados son almacenados en "ledgers" distribuidos ([cadena de bloques](/glossary/#blockchain)[) o `<1>`redes persona a persona](/glossary/#peer-to-peer-network) (peer-to-peer). Esto hace a los DIDs [globalmente únicos, resolubles con alta disponibilidad, y criptográficamente verificables](https://w3c-ccg.github.io/did-primer/). Un identificador descentralizado puede ser asociado con diferentes entidades, incluyendo personas, organizaciones o instituciones gubernamentales.
 
 ## ¿Qué hace que los identificadores descentralizados sean posibles? {#what-makes-decentralized-identifiers-possible}
 
