@@ -4,9 +4,9 @@ import type { ChildOnlyProp } from "@/lib/types"
 
 import Contributors from "@/components/Contributors"
 import MarkdownImage from "@/components/MarkdownImage"
+import { PieChart } from "@/components/PieChart"
 import TooltipLink from "@/components/TooltipLink"
 import YouTube from "@/components/YouTube"
-import { PieChart } from "@/components/PieChart"
 
 import { cn } from "@/lib/utils/cn"
 
