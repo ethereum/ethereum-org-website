@@ -62,7 +62,7 @@ There is also a human cost to having majority clients. It puts excess strain and
 
 ## Current client diversity {#current-client-diversity}
 
-![Pie chart showing client diversity](./client-diversity.png)
+
 
 <div style={{ display: 'flex', gap: '1rem' }}>
   <div style={{ flex: 1 }}>
@@ -72,6 +72,8 @@ There is also a human cost to having majority clients. It puts excess strain and
     <PieChart data={consensusData} title="Consensus Clients" />
   </div>
 </div>
+
+![Pie chart showing client diversity](./client-diversity.png)
 
 _Diagram data from [ethernodes.org](https://ethernodes.org) and [clientdiversity.org](https://clientdiversity.org/)_
 
