@@ -5,27 +5,6 @@ lang: en
 sidebarDepth: 2
 ---
 
-import { PieChart } from "@/components/PieChart"
-
-const executionData = [
-  { name: "Geth", value: 43 },
-  { name: "Nethermind", value: 36 },
-  { name: "Besu", value: 16 },
-  { name: "Erigon", value: 3 },
-  { name: "Reth", value: 2 },
-  { name: "Other", value: 0 },
-]
-
-const consensusData = [
-  { name: "Lighthouse", value: 32.59 },
-  { name: "Prysm", value: 31.31 },
-  { name: "Teku", value: 27.06 },
-  { name: "Nimbus", value: 5.63 },
-  { name: "Grandine", value: 2.0 },
-  { name: "Lodestar", value: 1.42 },
-  { name: "Others", value: 0.15 },
-]
-
 The behavior of an Ethereum node is controlled by the client software it runs. There are several production-level Ethereum clients, each one developed and maintained in different languages by separate teams. The clients are built to a common spec that ensures the clients seamlessly communicate with each other and have the same functionality and provide an equivalent user experience. However, at the moment the distribution of clients across nodes is not equal enough to realize this network fortification to its full potential. Ideally, users divide roughly equally across the various clients to bring as much client diversity as possible to the network.
 
 ## Prerequisites {#prerequisites}
@@ -62,17 +41,35 @@ There is also a human cost to having majority clients. It puts excess strain and
 
 ## Current client diversity {#current-client-diversity}
 
-
-
-<div style={{ display: 'flex', gap: '1rem' }}>
+<div style={{ display: "flex", gap: "1rem" }}>
   <div style={{ flex: 1 }}>
-    <PieChart data={executionData} title="Execution Clients" />
+    <PieChart 
+      data={[
+        { name: "Geth", value: 43 },
+        { name: "Nethermind", value: 36 },
+        { name: "Besu", value: 16 },
+        { name: "Erigon", value: 3 },
+        { name: "Reth", value: 2 },
+        { name: "Other", value: 0 }
+      ]}
+      title="Execution Clients"
+    />
   </div>
   <div style={{ flex: 1 }}>
-    <PieChart data={consensusData} title="Consensus Clients" />
+    <PieChart 
+      data={[
+        { name: "Lighthouse", value: 32.59 },
+        { name: "Prysm", value: 31.31 },
+        { name: "Teku", value: 27.06 },
+        { name: "Nimbus", value: 5.63 },
+        { name: "Grandine", value: 2.0 },
+        { name: "Lodestar", value: 1.42 },
+        { name: "Others", value: 0.15 }
+      ]}
+      title="Consensus Clients"
+    />
   </div>
 </div>
-
 ![Pie chart showing client diversity](./client-diversity.png)
 
 _Diagram data from [ethernodes.org](https://ethernodes.org) and [clientdiversity.org](https://clientdiversity.org/)_
