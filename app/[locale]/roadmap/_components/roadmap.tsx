@@ -7,10 +7,13 @@ import {
   ExtraSecurityIcon,
   FutureProofingIcon,
 } from "@/components/icons/roadmap"
+import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import { ButtonLink } from "@/components/ui/buttons/Button"
+import Link from "@/components/ui/Link"
 
 import { useTranslation } from "@/hooks/useTranslation"
+import communityHeroImg from "@/public/images/heroes/community-hero.png"
 import roadmapHeroImg from "@/public/images/heroes/roadmap-hub-hero.jpg"
 
 const RoadmapPage = () => {
@@ -105,7 +108,48 @@ const RoadmapPage = () => {
           </div>
         </div>
 
-        {/* TODO: WHY DOES ETHEREUM NEED ROADMAP */}
+        <div className="flex flex-col gap-12 px-12 py-8">
+          <div>
+            <h2>Why does Ethereum need a roadmap?</h2>
+            <p>
+              Ethereum gets regular upgrades that enhance its scalability,
+              security, or sustainability. One of Ethereum&apos;s core strengths
+              is adapting as new ideas emerge from research and development.
+              Adaptability gives Ethereum the flexibility to tackle emerging
+              challenges and keep up with the most advanced technological
+              breakthroughs.
+            </p>
+            <h3>How the roadmap is defined</h3>
+            <p>
+              The roadmap is mostly the result of years of work by researchers
+              and developers - because the protocol is very technical - but any
+              motivated person can participate.
+            </p>
+            <p>
+              Ideas usually start off as discussions on a forum such as{" "}
+              <Link href="https://ethresear.ch">ethresear.ch</Link>,{" "}
+              <Link href="https://ethereum-magicians.org">
+                Ethereum Magicians
+              </Link>{" "}
+              or the Eth R&D discord server. They may be responses to new
+              vulnerabilities that are discovered, suggestions from
+              organizations working in the application layer (such as dapps and
+              exchanges) or from known frictions for end users (such as costs or
+              transaction speeds).
+            </p>
+            <p>
+              When these ideas mature, they can be proposed as{" "}
+              <Link href="https://eips.ethereum.org">
+                Ethereum Improvement Proposals
+              </Link>
+              . This is all done in public so that anyone from the community can
+              weigh in at any time.
+            </p>
+          </div>
+          <div>
+            <Image src={communityHeroImg} alt="Ethereum roadmap" />
+          </div>
+        </div>
 
         {/* TODO: LOOKING FOR SPECIFIC UPGRADES? */}
 
