@@ -1,7 +1,7 @@
 "use client"
 
 import { FaArrowTrendUp } from "react-icons/fa6"
-import { Pie, PieChart as RechartsPieChart } from "recharts"
+import { Pie, PieChart as RechartsPieChart, Legend } from "recharts"
 
 import {
   Card,
@@ -29,7 +29,6 @@ type PieChartDataPoint = { name: string; value: number }
  * @property {string} [footerText] - The footer text of the chart.
  * @property {string} [footerSubText] - The footer subtext of the chart.
  */
-
 type PieChartProps = {
   data: PieChartDataPoint[]
   title?: string
@@ -51,7 +50,6 @@ const defaultChartConfig = {
  * @param {PieChartProps} props - The properties for the PieChart component.
  * @returns {JSX.Element} The rendered PieChart component.
  */
-
 export function PieChart({
   data,
   title,
@@ -78,6 +76,7 @@ export function PieChart({
             }}
           >
             <ChartTooltip cursor={false} content={<ChartTooltipContent />} />
+            <Legend layout="horizontal" verticalAlign="bottom" align="center" />
             <Pie
               data={data}
               dataKey="value"
