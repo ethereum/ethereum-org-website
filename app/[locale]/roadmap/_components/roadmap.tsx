@@ -69,12 +69,15 @@ const RoadmapPage = () => {
   return (
     <MainArticle className="mx-auto flex w-full flex-col items-center">
       <BannerNotification shouldShow>
-        <p>Ethereum’s development is community-driven and subject to change.</p>
+        <p>
+          Ethereum&apos;s development is community-driven and subject to change.
+        </p>
       </BannerNotification>
       <div className="flex flex-col gap-16">
         <HubHero {...heroContent} />
+
         {/* TODO: ROADMAP CAROUSAL */}
-        {/* TODO: WHAT CHANGES ARE COMING UP */}
+
         <div className="flex w-full flex-col gap-8 px-8 py-4">
           <h2 className="m-0">What changes are coming to Ethereum?</h2>
           <p className="text-lg">
@@ -83,12 +86,17 @@ const RoadmapPage = () => {
             from its current form into a fully scaled, maximally resilient
             platform.
           </p>
-          <div className="flex flex-col gap-4">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4">
             {changesComingItems.map((item) => (
-              <div key={item.title} className="flex flex-col gap-4">
-                {item.icon}
-                <h3>{item.title}</h3>
-                <p>{item.description}</p>
+              <div
+                key={item.title}
+                className="flex h-full flex-col gap-4 rounded-3xl border bg-roadmap-card-gradient p-6"
+              >
+                <div className="flex items-center justify-between gap-4">
+                  <h3 className="m-0">{item.title}</h3>
+                  {item.icon}
+                </div>
+                <p className="flex-grow">{item.description}</p>
                 <ButtonLink href={item.button.href} variant="outline">
                   {item.button.label}
                 </ButtonLink>
@@ -96,8 +104,11 @@ const RoadmapPage = () => {
             ))}
           </div>
         </div>
+
         {/* TODO: WHY DOES ETHEREUM NEED ROADMAP */}
+
         {/* TODO: LOOKING FOR SPECIFIC UPGRADES? */}
+
         {/* TODO: FAQ */}
       </div>
     </MainArticle>
