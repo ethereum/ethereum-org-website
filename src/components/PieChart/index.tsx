@@ -1,7 +1,7 @@
 "use client"
 
 import { FaArrowTrendUp } from "react-icons/fa6"
-import { Legend,Pie, PieChart as RechartsPieChart } from "recharts"
+import { Cell, Legend, Pie, PieChart as RechartsPieChart } from "recharts"
 
 import {
   Card,
@@ -45,10 +45,22 @@ const defaultChartConfig = {
 } satisfies ChartConfig
 
 /**
- * PieChart component renders a pie chart with the provided data and optional title, description, footer text, and footer subtext.
- *
- * @param {PieChartProps} props - The properties for the PieChart component.
- * @returns {JSX.Element} The rendered PieChart component.
+ * Color palette for blue shades, ordered from deep blue (largest share) to light blue (smallest share).
+ * Ensure your data is sorted from largest to smallest for this to work as intended.
+ */
+const COLORS = [
+  "#00008B", // Deep Blue
+  "#0000CD",
+  "#0000FF",
+  "#4169E1",
+  "#6495ED",
+  "#87CEFA",
+  "#ADD8E6",
+  "#B0E0E6", // Light Blue
+]
+
+/**
+ * PieChart component renders a pie chart with distinct blue colors and a vertical legend.
  */
 export function PieChart({
   data,
@@ -66,8 +78,8 @@ export function PieChart({
       <CardContent>
         <ChartContainer config={defaultChartConfig}>
           <RechartsPieChart
-            accessibilityLayer
-            data={data}
+            width={400}
+            height={400}
             margin={{
               left: 12,
               right: 12,
@@ -76,17 +88,25 @@ export function PieChart({
             }}
           >
             <ChartTooltip cursor={false} content={<ChartTooltipContent />} />
-            <Legend layout="horizontal" verticalAlign="bottom" align="center" />
+            {/* Vertical legend on the right */}
+            <Legend layout="vertical" verticalAlign="middle" align="right" />
             <Pie
               data={data}
               dataKey="value"
               nameKey="name"
-              cx="50%"
+              // Shift the pie chart leftward to make room for the legend
+              cx="40%"
               cy="50%"
               outerRadius={80}
-              fill="hsl(var(--accent-a))"
               label
-            />
+            >
+              {data.map((_, index) => (
+                <Cell
+                  key={`cell-${index}`}
+                  fill={COLORS[index % COLORS.length]}
+                />
+              ))}
+            </Pie>
           </RechartsPieChart>
         </ChartContainer>
       </CardContent>
