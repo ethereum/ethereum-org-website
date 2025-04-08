@@ -1,7 +1,7 @@
 "use client"
 
 import { FaArrowTrendUp } from "react-icons/fa6"
-import { Pie, PieChart as RechartsPieChart, Legend } from "recharts"
+import { Legend,Pie, PieChart as RechartsPieChart } from "recharts"
 
 import {
   Card,
