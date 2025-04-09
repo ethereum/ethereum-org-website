@@ -108,10 +108,10 @@ const RoadmapPage = () => {
           </div>
         </div>
 
-        <div className="flex flex-col gap-12 px-12 py-8">
-          <div>
-            <h2>Why does Ethereum need a roadmap?</h2>
-            <p>
+        <div className="flex flex-col-reverse gap-12 px-12 py-8 md:w-full md:flex-row md:px-0">
+          <div className="flex-1 md:px-12">
+            <h2 className="mb-8">Why does Ethereum need a roadmap?</h2>
+            <p className="mb-10">
               Ethereum gets regular upgrades that enhance its scalability,
               security, or sustainability. One of Ethereum&apos;s core strengths
               is adapting as new ideas emerge from research and development.
@@ -119,13 +119,13 @@ const RoadmapPage = () => {
               challenges and keep up with the most advanced technological
               breakthroughs.
             </p>
-            <h3>How the roadmap is defined</h3>
-            <p>
+            <h3 className="mb-6">How the roadmap is defined</h3>
+            <p className="mb-6">
               The roadmap is mostly the result of years of work by researchers
               and developers - because the protocol is very technical - but any
               motivated person can participate.
             </p>
-            <p>
+            <p className="mb-6">
               Ideas usually start off as discussions on a forum such as{" "}
               <Link href="https://ethresear.ch">ethresear.ch</Link>,{" "}
               <Link href="https://ethereum-magicians.org">
@@ -137,7 +137,7 @@ const RoadmapPage = () => {
               exchanges) or from known frictions for end users (such as costs or
               transaction speeds).
             </p>
-            <p>
+            <p className="mb-6">
               When these ideas mature, they can be proposed as{" "}
               <Link href="https://eips.ethereum.org">
                 Ethereum Improvement Proposals
@@ -145,9 +145,21 @@ const RoadmapPage = () => {
               . This is all done in public so that anyone from the community can
               weigh in at any time.
             </p>
+            <ButtonLink
+              href="/governance"
+              variant="outline"
+              className="w-full md:w-auto"
+            >
+              More on Ethereum governance
+            </ButtonLink>
           </div>
-          <div>
-            <Image src={communityHeroImg} alt="Ethereum roadmap" />
+          <div className="relative min-h-[272px] w-full flex-shrink-0 overflow-hidden rounded-3xl md:w-1/2 xl:w-1/3">
+            <Image
+              src={communityHeroImg}
+              alt="Ethereum roadmap"
+              className="absolute inset-0 h-full w-full object-cover"
+              fill
+            />
           </div>
         </div>
 
