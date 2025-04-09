@@ -1,4 +1,5 @@
 import BannerNotification from "@/components/Banners/BannerNotification"
+import FeedbackCard from "@/components/FeedbackCard"
 import { HubHero } from "@/components/Hero"
 import type { HubHeroProps } from "@/components/Hero/HubHero"
 import {
@@ -176,8 +177,8 @@ const RoadmapPage = () => {
           </div>
         </div>
 
-        <div className="flex flex-col-reverse gap-12 px-12 py-8 md:w-full md:flex-row md:px-0">
-          <div className="flex-1 md:px-12">
+        <div className="flex flex-col-reverse gap-12 px-8 py-16 md:w-full md:flex-row lg:px-20">
+          <div className="flex-1">
             <h2 className="mb-8">Why does Ethereum need a roadmap?</h2>
             <p className="mb-10">
               Ethereum gets regular upgrades that enhance its scalability,
@@ -253,6 +254,8 @@ const RoadmapPage = () => {
         </div>
 
         {/* TODO: FAQ */}
+
+        <FeedbackCard />
       </div>
     </MainArticle>
   )
