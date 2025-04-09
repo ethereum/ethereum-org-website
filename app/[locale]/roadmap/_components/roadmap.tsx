@@ -1,4 +1,5 @@
 import BannerNotification from "@/components/Banners/BannerNotification"
+import ExpandableCard from "@/components/ExpandableCard"
 import FeedbackCard from "@/components/FeedbackCard"
 import { HubHero } from "@/components/Hero"
 import type { HubHeroProps } from "@/components/Hero/HubHero"
@@ -23,6 +24,7 @@ import Link from "@/components/ui/Link"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 
 import { useTranslation } from "@/hooks/useTranslation"
+import ethBlocksImage from "@/public/images/developers-eth-blocks.png"
 import communityHeroImg from "@/public/images/heroes/community-hero.png"
 import roadmapHeroImg from "@/public/images/heroes/roadmap-hub-hero.jpg"
 
@@ -138,6 +140,7 @@ const RoadmapPage = () => {
     },
   ]
 
+  // TODO: MATOMO EVENTS
   return (
     <MainArticle className="mx-auto flex w-full flex-col items-center">
       <BannerNotification shouldShow>
@@ -253,7 +256,129 @@ const RoadmapPage = () => {
           </div>
         </div>
 
-        {/* TODO: FAQ */}
+        <div className="flex flex-col gap-8 px-8 lg:flex-row">
+          <div className="flex flex-1 items-start">
+            <Image
+              src={ethBlocksImage}
+              alt="Ethereum blocks"
+              className="object-contain"
+            />
+          </div>
+          <div className="flex flex-1 flex-col gap-8">
+            <h2>What is the timeline for these upgrades?</h2>
+            <div>
+              <ExpandableCard title="What was ETH2?" className="mb-0">
+                <p>
+                  The term &apos;Eth2&apos; was commonly used to describe the
+                  future of Ethereum before the switch to{" "}
+                  <Link href="/glossary/#pos">proof-of-stake</Link> but it was{" "}
+                  <strong>
+                    phased out in favor of more precise terminology.
+                  </strong>{" "}
+                  It was originally used to differentiate the Ethereum network
+                  before the switch to proof-of-stake and the network after, or
+                  sometimes to refer to the different Ethereum clients (
+                  <Link href="/glossary/#execution-client">
+                    execution clients
+                  </Link>{" "}
+                  were sometimes referred to as ETH1 clients and{" "}
+                  <Link href="/glossary/#consensus-client">
+                    consensus clients
+                  </Link>{" "}
+                  were sometimes referred to as ETH2 clients).
+                </p>
+              </ExpandableCard>
+              <ExpandableCard
+                title="Will Ethereum's roadmap change over time?"
+                className="mb-0"
+              >
+                <div className="flex flex-col gap-4">
+                  <p>
+                    <strong>Yes—almost definitely.</strong> The roadmap is the
+                    current plan for upgrading Ethereum, covering both near-term
+                    and future plans. We expect the roadmap to change as new
+                    information and technology become available.
+                  </p>
+                  <p>
+                    Think of Ethereum&apos;s roadmap as a set of intentions for
+                    improving Ethereum; it is the core researchers&apos; and
+                    developers&apos; best hypothesis of Ethereum&apos;s most
+                    optimal path forward.
+                  </p>
+                </div>
+              </ExpandableCard>
+              <ExpandableCard
+                title="When will the roadmap be finished?"
+                className="mb-0"
+              >
+                <div className="flex flex-col gap-4">
+                  <p>
+                    Some upgrades are lower priority and likely not to be
+                    implemented for the next 5-10 years (e.g. quantum
+                    resistance).{" "}
+                    <strong>
+                      Giving precise timing of each upgrade is complicated
+                    </strong>{" "}
+                    to predict as many roadmap items are worked on in parallel
+                    and developed at different speeds. The urgency of an upgrade
+                    can also change over time depending on external factors
+                    (e.g. a sudden leap in the performance and availability of
+                    quantum computers may make quantum-resistant cryptography
+                    more urgent).
+                  </p>
+                  <p>
+                    One way to think about Ethereum development is by analogy to
+                    biological evolution. A network that is able to adapt to new
+                    challenges and maintain fitness is more likely to succeed
+                    that one that is resistant to change, although as the
+                    network becomes more and more performant, scalable and
+                    secure fewer changes to the protocol will be required.
+                  </p>
+                </div>
+              </ExpandableCard>
+              <ExpandableCard
+                title="Do I have to do anything to prepare for these upgrades?"
+                className="mb-0"
+              >
+                <div className="flex flex-col gap-4">
+                  <p>
+                    Upgrades tend not to impact end-users except by providing
+                    better user-experiences and a more secure protocol and
+                    perhaps more <i>options</i> for how to interact with
+                    Ethereum.{" "}
+                    <strong>
+                      Regular users are not required to actively participate in
+                      an upgrade, nor are they required to do anything** to
+                      secure their assets.
+                    </strong>{" "}
+                    <Link href="/glossary/#node">Node</Link> operators will need
+                    to update their clients to prepare for an upgrade. Some
+                    upgrades may lead to changes for application developers. For
+                    example, history expiry upgrades may lead application
+                    developers to grab historical data from new sources.
+                  </p>
+                </div>
+              </ExpandableCard>
+              <ExpandableCard title="What about sharding?" className="mb-0">
+                <div className="flex flex-col gap-4">
+                  <p>
+                    Sharding is splitting up the Ethereum blockchain so that
+                    subsets of{" "}
+                    <Link href="/glossary/#validator">validators</Link> are only
+                    responsible for a fraction of the total data. This was
+                    originally intended to be the way for Ethereum to scale.
+                    However, <Link href="/glossary/#layer-2">layer 2</Link>{" "}
+                    rollups have developed much faster than expected and have
+                    provided a lot of scaling already, and will provide much
+                    more after Proto-Danksharding is implemented. This means
+                    &quot;shard chains&quot; are no longer needed and have been
+                    dropped from the roadmap.
+                  </p>
+                </div>
+              </ExpandableCard>
+            </div>
+          </div>
+        </div>
 
         <FeedbackCard />
       </div>
