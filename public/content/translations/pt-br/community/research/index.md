@@ -62,7 +62,7 @@ A camada de execução se preocupa com a execução de transações, com a execu
 #### Leitura de apoio {#background-reading-1}
 
 - [Introdução à EVM](/developers/docs/evm)
-- [Camada de execução Etheresear.ch](https://ethresear.ch/c/execution-layer-research/37)
+- [Camada de execução Ethresear.ch](https://ethresear.ch/c/execution-layer-research/37)
 
 #### Pesquisa recente {#recent-research-1}
 
