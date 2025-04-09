@@ -104,7 +104,7 @@ Por último, al decidir si incluir o no una biblioteca, considera su uso general
 
 **thirdweb Solidity SDK:****_ Proporciona las herramientas necesarias para crear contratos inteligentes personalizados de forma eficiente_**
 
-- [Documentación](https://portal.thirdweb.com/solidity/)
+- [Documentación](https://portal.thirdweb.com/contracts/build/overview)
 - [GitHub](https://github.com/thirdweb-dev/contracts)
 
 ## Tutoriales relacionados {#related-tutorials}

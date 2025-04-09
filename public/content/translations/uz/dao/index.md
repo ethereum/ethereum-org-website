@@ -91,7 +91,7 @@ DAOlarda minglab ovoz beruvchi a’zolar bo‘lishi mumkin, lekin mablag‘lar i
 
 ### Yorqin namuna {#law-example}
 
-[CityDAO](https://citydao.io) tashkiloti Vayomingning DAO qonunidan foydalanib, Yellowstone milliy bog‘i yaqinidagi 16 gektarlik yerni sotib oldi.
+[CityDAO](https://citizen.citydao.io/) tashkiloti Vayomingning DAO qonunidan foydalanib, Yellowstone milliy bog‘i yaqinidagi 16 gektarlik yerni sotib oldi.
 
 ## DAO aʼzosi {#dao-membership}
 

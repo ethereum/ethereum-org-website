@@ -41,7 +41,7 @@ A rede Hardhat vem integrada com Hardhat, um ambiente de desenvolvimento para pr
 
 Alguns clientes de consenso têm ferramentas integradas para ativar as cadeias Beacon locais para fins de teste. Instruções para Lighthouse, Nimbus e Lodestar estão disponíveis:
 
-- [Testnet local usando Lodestar](https://chainsafe.github.io/lodestar/usage/local/)
+- [Testnet local usando Lodestar](https://chainsafe.github.io/lodestar/contribution/advanced-topics/setting-up-a-testnet#post-merge-local-testnet/)
 - [Testnet local usando Lighthouse](https://lighthouse-book.sigmaprime.io/setup.html#local-testnets)
 - [Testnet local usando Nimbus](https://github.com/status-im/nimbus-eth1/blob/master/fluffy/docs/local_testnet.md)
 

@@ -257,7 +257,7 @@ Se espera que la introducción de la [fragmentación de datos](/roadmap/dankshar
 
 - [¿Cómo funcionan los rollups optimistas? (La guía completa)](https://www.alchemy.com/overviews/optimistic-rollups)
 - [¿Qué es un rollup de cadena de bloques?: introducción técnica](https://www.ethereum-ecosystem.com/blog/what-is-a-blockchain-rollup-a-technical-introduction)
-- [Guía esencial sobre Arbitrum](https://newsletter.banklesshq.com/p/the-essential-guide-to-arbitrum)
-- [¿Cómo funcionan realmente los rollup optimistas?](https://www.paradigm.xyz/2021/01/how-does-optimisms-rollup-really-work)
+- [Guía esencial sobre Arbitrum](https://www.bankless.com/the-essential-guide-to-arbitrum)
+- [¿Cómo funcionan realmente los rollup optimistas?](https://www.paradigm.xyz/2021/01/how-does-optimism-s-rollup-really-work)
 - [Análisis detallado de OVM](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)
 - [¿Qué es la máquina virtual optimista?](https://www.alchemy.com/overviews/optimistic-virtual-machine)

@@ -20,7 +20,6 @@ lang: zh
 
 - [Ethallowance](https://ethallowance.com/)（以太坊）
 - [Etherscan](https://etherscan.io/tokenapprovalchecker)（以太坊）
-- [Cointool](https://cointool.app/approve/eth)（多个网络）
 - [Revoke](https://revoke.cash/)（多个网络）
 - [Unrekt](https://app.unrekt.net/)（多个网络）
 - [EverRevoke](https://everrise.com/everrevoke/)（多个网络）

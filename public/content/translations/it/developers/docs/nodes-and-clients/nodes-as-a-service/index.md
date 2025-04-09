@@ -264,7 +264,7 @@ Ecco una lista di alcuni dei più popolari fornitori di nodi Ethereum. Aggiungin
     - Supporto tecnico diretto
 
 - [**NodeReal MegaNode**](https://nodereal.io/)
-  - [Documentazione](https://docs.nodereal.io/nodereal/meganode/introduction)
+  - [Documentazione](https://docs.nodereal.io/docs/introduction)
   - Caratteristiche
     - Servizi API RPC affidabili, veloci e scalabili
     - API migliorata per sviluppatori web3
