@@ -2,15 +2,24 @@ import BannerNotification from "@/components/Banners/BannerNotification"
 import { HubHero } from "@/components/Hero"
 import type { HubHeroProps } from "@/components/Hero/HubHero"
 import {
+  AccountAbstractionIcon,
   BetterUserExperienceIcon,
   CheaperTransactionsIcon,
+  DankshardingIcon,
   ExtraSecurityIcon,
   FutureProofingIcon,
+  ProposerBuilderSeparationIcon,
+  SecretLeaderElectionIcon,
+  SingleSlotFinalityIcon,
+  StakingWithdrawalsIcon,
+  StatelessnessIcon,
+  VerkleTreesIcon,
 } from "@/components/icons/roadmap"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import Link from "@/components/ui/Link"
+import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 
 import { useTranslation } from "@/hooks/useTranslation"
 import communityHeroImg from "@/public/images/heroes/community-hero.png"
@@ -66,6 +75,65 @@ const RoadmapPage = () => {
         label: "More on future-proofing",
         href: "/roadmap/future-proofing",
       },
+    },
+  ]
+
+  const technicalUpgradesItems = [
+    {
+      icon: <DankshardingIcon />,
+      title: "Danksharding",
+      description:
+        "Danksharding makes L2 rollups much cheaper for users by adding “blobs” of data to Ethereum blocks.",
+      href: "/roadmap/danksharding",
+    },
+    {
+      icon: <StakingWithdrawalsIcon />,
+      title: "Staking widthdrawals",
+      description:
+        "The Shanghai/Capella upgrade enabled staking withdrawals on Ethereum, allowing people to unlock their staked ETH.",
+      href: "/",
+    },
+    {
+      icon: <SingleSlotFinalityIcon />,
+      title: "Single slot finality",
+      description:
+        "Instead of waiting for fifteen minutes, blocks could get proposed and finalized in the same slot. This is more convenient for apps and difficult to attack.",
+      href: "/roadmap/single-slot-finality",
+    },
+    {
+      icon: <ProposerBuilderSeparationIcon />,
+      title: "Proposer-builder separation",
+      description:
+        "Splitting the block building and block proposal tasks across separate validators creates a fairer, more censorship resistant and efficient way for Ethereum to come to consensus.",
+      href: "/roadmap/pbs",
+    },
+    {
+      icon: <SecretLeaderElectionIcon />,
+      title: "Secret leader election",
+      description:
+        "Clever cryptography can be used to ensure that the identity of the current block proposer is not made public, protecting them from certain types of attack.",
+      href: "/roadmap/secret-leader-election",
+    },
+    {
+      icon: <AccountAbstractionIcon />,
+      title: "Account abstraction",
+      description:
+        "Account abstraction is a class of upgrades that support smart contract wallets natively on Ethereum, rather than having to use complex middleware.",
+      href: "/roadmap/account-abstraction",
+    },
+    {
+      icon: <VerkleTreesIcon />,
+      title: "Verkle trees",
+      description:
+        "Verkle trees are a data structure that can be used to enable stateless clients on Ethereum. These clients will require a small amount of storage space but will still be able to verify new blocks.",
+      href: "/roadmap/verkle-trees",
+    },
+    {
+      icon: <StatelessnessIcon />,
+      title: "Statelessness",
+      description:
+        "Stateless clients will be able to verify new blocks without having to store large amounts of data. This will provide all the benefits of running a node with only a tiny fraction of today’s costs.",
+      href: "/roadmap/statelessness",
     },
   ]
 
@@ -163,7 +231,26 @@ const RoadmapPage = () => {
           </div>
         </div>
 
-        {/* TODO: LOOKING FOR SPECIFIC UPGRADES? */}
+        <div className="flex w-full flex-col gap-8 px-8">
+          <h2 className="text-center">
+            What technical upgrades are coming to Ethereum?
+          </h2>
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {technicalUpgradesItems.map((item) => (
+              <LinkBox
+                key={item.title}
+                className="flex flex-col rounded-3xl border border-[rgba(159,43,212,0.11)] bg-roadmap-upgrade-card-gradient p-6"
+              >
+                <div className="mb-3 flex gap-4">
+                  {item.icon}
+                  <h3 className="text-xl">{item.title}</h3>
+                </div>
+                <p className="m-0 p-0 text-body-medium">{item.description}</p>
+                <LinkOverlay href={item.href} />
+              </LinkBox>
+            ))}
+          </div>
+        </div>
 
         {/* TODO: FAQ */}
       </div>

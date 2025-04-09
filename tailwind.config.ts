@@ -232,6 +232,7 @@ const config = {
         "linear-bug-bounty-title": "var(--linear-bug-bounty-title)",
         "gradient-staking": "var(--gradient-staking)",
         "roadmap-card-gradient": "var(--roadmap-card-gradient)",
+        "roadmap-upgrade-card-gradient": "var(--roadmap-upgrade-card-gradient)",
       },
       boxShadow: {
         "table-box": "var(--table-box-shadow)",
