@@ -22,6 +22,7 @@ const meta = {
       daos: [false, 0],
       stablecoins: [false, 0],
       defi: [false, 0],
+      gas: [false, 0],
     },
     totalCorrectAnswers: 0,
   },
