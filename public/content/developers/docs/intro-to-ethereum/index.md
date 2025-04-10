@@ -22,6 +22,13 @@ Watch Anders explain hashes in blockchains:
 
 <YouTube id="_160oMzblY8" />
 
+
+**Why are SHA-256 hashes used in blockchains?**
+
+SHA-256 is used in blockchains because it ensures data integrity, security, and immutability by generating a unique cryptographic hash for each block. Even a minor change in a block alters its hash completely (avalanche effect), making tampering easily detectable. Since each block's hash is stored in the next block, modifying one block would invalidate all subsequent blocks unless an attacker recomputes all hashes, which is practically impossible due to Proof of Work. Additionally, SHA-256 is fast to compute but nearly impossible to reverse (pre-image resistance), ensuring blockchain data remains secure and verifiable in a decentralized system.
+
+
+
 ## What is Ethereum? {#what-is-ethereum}
 
 Ethereum is a blockchain with a computer embedded in it. It is the foundation for building apps and organizations in a decentralized, permissionless, censorship-resistant way.
