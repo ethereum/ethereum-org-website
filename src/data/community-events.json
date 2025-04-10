@@ -709,5 +709,50 @@
     "location": "Hong Kong, HKG",
     "description": "A commmunity gathering festival: Make ETHEREUM Asia Great Again",
     "imageUrl": "https://www.ethasia.org/_next/image?url=%2FBG.png&w=3840&q=75"
+  },
+  {
+    "title": "ETH Seoul",
+    "startDate": "2025-04-12",
+    "endDate": "2025-04-12",
+    "href": "https://ethseoul.org",
+    "location": "Seoul, KR",
+    "description": "",
+    "imageUrl": ""
+  },
+  {
+    "title": "Invisible Garden",
+    "startDate": "2025-04-21",
+    "endDate": "2025-05-31",
+    "href": "https://invisible.garden",
+    "location": "San Jose, CRI",
+    "description": "",
+    "imageUrl": ""
+  },
+  {
+    "title": "EthereumBrasil",
+    "startDate": "2025-06-09",
+    "endDate": "2025-06-10",
+    "href": "https://ethereumbrasil.com",
+    "location": "São Paulo, BR",
+    "description": "Growing &amp; supporting the Web3 builder community in Brazil.",
+    "imageUrl": "http://static1.squarespace.com/static/627921e48d48986f142cbeb0/t/67ea9c60b9673100d70d72c0/1743428704537/ethereu+brasil+logo+w+BG.png?format=1500w"
+  },
+  {
+    "title": "ETH Latam",
+    "startDate": "2025-11-08",
+    "endDate": "2025-03-09",
+    "href": "https://ethlatam.org/en",
+    "location": "São Paulo, BR",
+    "description": "ETH Latam is a gathering place for builders and enthusiasts of Ethereum in Latin America.",
+    "imageUrl": "https://strapi.ethkipu.org/uploads/Metadata_ETH_Latam_2025_ING_759a4fae04.png"
+  },
+  {
+    "title": "ETH Boston",
+    "startDate": "2025-09-09",
+    "endDate": "2025-09-12",
+    "href": "https://bostonblockchainweek.com/",
+    "location": "BOSTON, USA",
+    "description": "Boston Blockchain Week is the preeminent annual event celebrating the global blockchain and Web3 hub that is Greater Boston.",
+    "imageUrl": ""
   }
 ]
