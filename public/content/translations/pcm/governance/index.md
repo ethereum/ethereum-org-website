@@ -46,7 +46,7 @@ Plenti stakeholdas dey for [Ethereum komunity](/community/), wey ish dey play on
 - **Aplikashon Users**: dis pipol dey interact wit aplikashon on di Ethereum blockchain.
 - **Aplikashon/Tooling Divelopas**: dis pipol dey write aplikashons wey dey run ontop di Ethereum blockchain (e.g. DeFi, NFTs, etc.) dem dey also build tooling wey pipol fit yus wit Ethereum (e.g. wallets, test suites, etc.). [More on dapps](/dapps/).
 - **Pipol wey dey operate Node**: dis pipol dey run nodes wey dey propagate blocks and transakshons, di node dey also reject any transakshon abi block wey nor koret wey dem kome akross. [More on nodes](/developers/docs/nodes-and-clients/).
-- **EIP Authors**: na dis pipol dey propose shanjis to di Ethereun protokol, in di form of Ethereum Imprufment Proposals (EIPs). [More on EIPs](/eips/).
+- **EIP Authors**: na dis pipol dey propose shanjis to di Ethereum protokol, in di form of Ethereum Imprufment Proposals (EIPs). [More on EIPs](/eips/).
 - **Validators**: na dis pipol dey run nodes wey fit add new blocks to di Ethereum blockchain.
 - **Protokol Divelopas** (a.k.a. "Kore Divelopas"): dis pipol dey maintain di varios Ethereum implimentashons (e.g. go-ethereum, Nethermind, Besu, Erigon, Reth at di exekushon layer abi Prysm, Lighthouse, Nimbus, Teku, Lodestar, Grandie at di konsensus layer). [More on Ethereum klients](/developers/docs/nodes-and-clients/).
 

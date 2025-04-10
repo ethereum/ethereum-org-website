@@ -171,7 +171,7 @@ Nethermind 也為高級使用者提供[詳細文件](https://docs.nethermind.io)
 
 ### Reth {#reth}
 
-Reth（Rust Etherum 的簡稱）是以太坊全節點的實作，致力於達成使用者友善、高度模組化、快速高效等目標。 Reth 最初由 Paradigm 開發並推動，且使用了 Apache 和 MIT 授權。
+Reth（Rust Ethereum 的簡稱）是以太坊全節點的實作，致力於達成使用者友善、高度模組化、快速高效等目標。 Reth 最初由 Paradigm 開發並推動，且使用了 Apache 和 MIT 授權。
 
 Reth 是生產就緒的執行用戶端，且適用於質押或高正常運作時間的服務等重要任務上。 在一些高效能、高利潤下的使用案例中表現優秀，如遠端程序呼叫、最大可提取價值、索引、模擬和點對點活動等。
 

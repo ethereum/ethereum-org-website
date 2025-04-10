@@ -664,7 +664,7 @@ Successfully verified contract HelloWorld on Etherscan.
 https://goerli.etherscan.io/address/<contract-address>#contracts
 ```
 
-Congrats! Your smart contract code is on Etherescan!
+Congrats! Your smart contract code is on Etherscan!
 
 ### Check out your smart contract on Etherscan! {#check-out-your-smart-contract-on-etherscan}
 
