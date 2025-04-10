@@ -41,7 +41,7 @@ lang: ru
 
 - [Введение в доказательство доли владения](/developers/docs/consensus-mechanisms/pos/)
 - [Документ Casper-FFG](https://arxiv.org/abs/1710.09437)
-- [Поясняющая статья Casper-FFG](https://arxiv.org/abs/1710.09437)
+- [Поясняющая статья Casper-FFG](https://medium.com/unitychain/intro-to-casper-ffg-9ed944d98b2d)
 - [Документ Gasper](https://arxiv.org/abs/2003.03052)
 
 #### Недавние исследования {#recent-research}
