@@ -5,7 +5,6 @@ import {
   FileContributor,
   Frontmatter,
   Lang,
-  Layout,
   ToCItem,
 } from "@/lib/types"
 
@@ -21,7 +20,6 @@ interface GetPageDataParams {
   locale: string
   slug: string
   components: MDXRemoteProps["components"]
-  layout?: Layout
   scope?: Record<string, unknown>
 }
 
@@ -38,7 +36,6 @@ export async function getPageData({
   locale,
   slug,
   components,
-  layout: layoutFromProps,
   scope,
 }: GetPageDataParams): Promise<PageData> {
   const slugArray = slug.split("/")
@@ -53,8 +50,6 @@ export async function getPageData({
     scope,
   })
 
-  const layout = layoutFromProps || frontmatter.template || "static"
-
   // Process TOC items
   const tocItems =
     tocNodeItems.length === 1 && "items" in tocNodeItems[0]
@@ -66,7 +61,6 @@ export async function getPageData({
     slug,
     locale,
     frontmatter.lang as string,
-    layout,
     commitHistoryCache
   )
 
