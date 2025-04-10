@@ -140,7 +140,7 @@ This allows you to borrow money without credit checks or handing over private in
 
 #### Access to global funds {#access-global-funds}
 
-When you use a decentralized lender you have access to funds deposited from all over the globe, not just the funds in the custody of your chosen bank or institution. This make loans more accessible and improves the interest rates.
+When you use a decentralized lender you have access to funds deposited from all over the globe, not just the funds in the custody of your chosen bank or institution. This makes loans more accessible and improves the interest rates.
 
 #### Tax-efficiencies {#tax-efficiencies}
 
