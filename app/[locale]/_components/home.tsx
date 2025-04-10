@@ -122,7 +122,10 @@ const HomePage = ({
         <p>
           Let&apos;s celebrate 10 years of Ethereum! How did ethereum change
           your life? -{" "}
-          <Link href="https://ethereumstory.paperform.co/">
+          <Link
+            href="https://ethereumstory.paperform.co/"
+            className="text-white"
+          >
             share your story
           </Link>
         </p>
