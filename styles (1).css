@@ -1,0 +1,16 @@
+/* Define the focus-visible class */
+.focus-visible:focus-visible {
+  outline: 2px solid #000; /* Example outline style */
+  border-radius: 0.125rem; /* Example rounded-sm style */
+}
+
+/* Define the rounded-sm class */
+.rounded-sm {
+  border-radius: 0.125rem; /* Example border-radius */
+}
+
+/* Ensure the button has appropriate styles */
+button.focus-visible:focus-visible {
+  border-radius: 0.125rem; /* Example rounded-sm style */
+  outline: 2px solid #000; /* Example outline style */
+}
