@@ -207,8 +207,8 @@ Egyik sem
 A jelenlegi hálózati azonosítók teljes listája a [chainlist.org](https://chainlist.org) oldalon érhető el. Néhány jellemző példa:
 
 - `1`: Ethereum főhálózata
-- `5`: Goerli teszthálózat
 - `11155111`: Sepolia teszthálózat
+- `560048` : Hoodi teszthálózat
 
 **Példa**
 

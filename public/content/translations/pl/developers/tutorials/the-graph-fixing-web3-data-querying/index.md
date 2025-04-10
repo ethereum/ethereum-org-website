@@ -299,7 +299,7 @@ Najprostszym sposobem jest skorzystanie z usługi hostowanej. Postępuj zgodnie 
 
 ### Uruchamianie własnego węzła {#running-your-own-node}
 
-Alternatywnie możesz uruchomić własny węzeł: https://github.com/graphprotocol/graph-node#quick-start. Jednym z powodów, aby to zrobić, może być korzystanie z sieci, która nie jest obsługiwana przez hostowaną usługę. Obecnie obsługiwane są sieć główna, Kovan, Rinkeby, Ropsten, Goerli, PoA-Core, xDAI i Sokol.
+Alternatywnie możesz uruchomić własny węzeł: https://github.com/graphprotocol/graph-node#quick-start. Jednym z powodów, aby to zrobić, może być korzystanie z sieci, która nie jest obsługiwana przez hostowaną usługę. Obecnie obsługiwane są sieć główna, Sepolia, xDAI i inne popularne sieci.
 
 ## Zdecentralizowana przyszłość {#the-decentralized-future}
 

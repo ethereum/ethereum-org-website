@@ -207,8 +207,8 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"web3_sha3","params":["0x68656c6c
 現在のネットワークIDの全リストは、[chainlist.org](https://chainlist.org)で入手できます。 よく使われるネットワークIDは、以下の通りです。
 
 - `1`: イーサリアムメインネット
-- `5`: Goerliテストネット
 - `11155111`: Sepoliaテストネット
+- `17000`: Hoodiテストネット
 
 **例**
 

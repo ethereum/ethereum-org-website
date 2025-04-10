@@ -47,9 +47,14 @@ Some consensus clients have built-in tools for spinning up local beacon chains f
 
 ### Public Ethereum Test-chains {#public-beacon-testchains}
 
-There are also two maintained public test implementations of Ethereum: Goerli and Sepolia. The recommended testnet with long-term support is Goerli, which anyone is free to validate on. Sepolia is a newer, smaller chain also expected to be maintained for the foreseeable future, with a permissioned validator set (meaning there is no general access to new validators on this testnet). The Ropsten chain is expected to be deprecated in Q4 2022, and the Rinkeby chain is expected to be deprecated in Q2/Q3 2023.
+There are also two maintained public test implementations of Ethereum: Sepolia and Hoodi. 
+Sepolia is a proof-of-stake (PoS) testnet that is currently the recommended testnet for smart contract and application development.
+It is more stable and is also more representative of the Ethereum mainnet.
+Hoodi is a newer testnet that will replace Holesky and is the recommended testnet for staking and validator testing. 
+The Goerli (Görli) chain is expected to be deprecated in Q1 2023, the Ropsten chain is expected to be deprecated in Q4 2022, and the Rinkeby chain is expected to be deprecated in Q2/Q3 2023.
 
-- [Goerli Staking Launchpad](https://goerli.launchpad.ethereum.org/)
+- [Holesky and Hoodi Testnet Updates](https://blog.ethereum.org/2025/03/18/hoodi-holesky)
+- [Goerli Deprecation Announcement](https://blog.ethereum.org/2023/11/30/goerli-lts-update)
 - [Ropsten, Rinkeby & Kiln Deprecation Announcement](https://blog.ethereum.org/2022/06/21/testnet-deprecation)
 
 ### Kurtosis Ethereum Package {#kurtosis}

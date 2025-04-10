@@ -237,14 +237,15 @@ sidebarDepth: 3
 
 ## ブロックエクスプローラー {#block-explorers}
 
-- [Etherscan](https://etherscan.io/) - イーサリアムメインネット、Goerliテストネットのデータを取得するために使用できるブロックエクスプローラー
+- [Etherscan](https://etherscan.io/) - イーサリアムメインネット、Sepoliaテストネットのデータを取得するために使用できるブロックエクスプローラー
 - [3xpl](https://3xpl.com/ethereum) - 広告無しのオープンソース・イーサリアム・エクスプローラでデータセットのダウンロードが可能
-- [Beaconcha.in](https://beaconcha.in/) - イーサリアムメインネットとGoerliテストネットのオープンソースブロックエクスプローラー
+- [Beaconcha.in](https://beaconcha.in/) - イーサリアムメインネットとSepoliaテストネットのオープンソースブロックエクスプローラー
 - [Blockchair](https://blockchair.com/ethereum) - 最もプライベートなイーサリアムエクスプローラー。 データのソートやフィルタリング(メンプール)も可能
 - [Etherchain](https://www.etherchain.org/) - イーサリアムメインネットのブロックエクスプローラー
-- [Ethplorer](https://ethplorer.io/) - イーサリアムメインネットとKovanテストネットのトークンを中心としたブロックエクスプローラー
+- [Ethplorer](https://ethplorer.io/) - イーサリアムメインネットとSepoliaテストネットのトークンを中心としたブロックエクスプローラー
 - [Rantom](https://rantom.app/) - ユーザーフレンドリーで、DeFi&NFTトランザクションを詳細に把握できるオープンソースのビューア
 - [Ethernow](https://www.ethernow.xyz/) - リアルタイムのトランザクションエクスプローラーで、イーサリアムメインネットのプリチェーンレイヤーを確認可能
+- [Otterscan](https://otterscan.io/) - イーサリアム用のオープンソースの代替ブロックエクスプローラー
 
 ## 参考文献 {#further-reading}
 

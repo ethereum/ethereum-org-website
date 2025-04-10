@@ -6,7 +6,7 @@ lang: ga
 
 Is grúpaí de ríomhairí nasctha iad líonraí Ethereum a dhéanann cumarsáid ag baint úsáide as prótacal Ethereum. Níl ach Ethereum Mainnet amháin ann, ach is féidir líonraí neamhspleácha a chomhlíonann na rialacha prótacail céanna a chruthú chun críocha tástála agus forbartha. Tá go leor "líonraí" neamhspleácha ann a chloíonn leis an bprótacal gan idirghníomhú lena chéile. Is féidir leat fiú ceann a thosú go háitiúil ar do ríomhaire féin chun do chonarthaí cliste agus aipeanna web3 a thástáil.
 
-Oibreoidh do chuntas Ethereum thar na líonraí éagsúla, ach ní thabharfar iarmhéid do chuntais agus stair idirbheart anonn ó phríomhlíonra Ethereum. Chun críocha tástála, tá sé úsáideach go mbeadh a fhios agat cé na líonraí atá ar fáil agus conas testnet ETH a fháil chun triail a bhaint as. Go ginearálta, ó thaobh slándála, ní mholtar cuntais mainnet a athúsáid ar líonraí tástála nó a mhalairt.
+Oibreoidh do chuntas Ethereum thar na líonraí éagsúla, ach ní thabharfar iarmhéid do chuntais ag stair idirbheart anonn ó phríomhlíonra Ethereum. Chun críocha tástála, tá sé úsáideach go mbeadh a fhios agat cé na líonraí atá ar fáil agus conas testnet ETH a fháil chun triail a bhaint as. Go ginearálta, ó thaobh slándála, ní mholtar cuntais mainnet a athúsáid ar líonraí tástála nó a mhalairt.
 
 ## Réamhriachtanais {#prerequisites}
 
@@ -34,7 +34,7 @@ Tá sé ceaptha nach bhfuil aon luach fíor ag ETH ar testnets; ach, cruthaíodh
 
 #### Cén Testnet ba cheart dom a úsáid?
 
-Is iad Sepolia agus Goerli an dá líonra tástála poiblí atá á gcothabháil ag forbróirí cliant faoi láthair. Is líonra é Sepolia d’fhorbróirí conarthaí agus feidhmchlár chun a bhfeidhmchláir a thástáil. Ligeann líonra Goerli d'fhorbróirí prótacail uasghráduithe líonra a thástáil, agus ligeann sé do gheallsealbhóirí bailíochtaithe reatha a thástáil.
+Is iad Sepolia agus Hoodi an dá líonra tástála poiblí atá á gcothabháil ag forbróirí cliant faoi láthair. Is líonra é Sepolia d'fhorbróirí conarthaí agus feidhmchlár chun a bhfeidhmchláir a thástáil. Ligeann líonra Hoodi d'fhorbróirí prótacail uasghráduithe líonra a thástáil, agus ligeann sé do gheallsealbhóirí bailíochtaithe reatha a thástáil.
 
 #### Sepolia {#sepolia}
 
@@ -63,11 +63,9 @@ Is iad Sepolia agus Goerli an dá líonra tástála poiblí atá á gcothabháil
 - [Sconna Sepolia Chainstack](https://faucet.chainstack.com/sepolia-faucet)
 - [Sconna Éiceachórais Ethereum](https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia)
 
-#### Goerli _(tacaíocht fhadtéarmach)_ {#goerli}
+#### Hoodi {#hoodi}
 
-_Nóta: [tá testnet Goerli imithe i léig](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17) agus cuirfear [Holesovice](https://github.com/eth-clients/holesovice) in 2023. Déan machnamh le do thoil ar d'iarratais a aistriú go Seplia._
-
-Is líonra tástála é Goerli chun bailíochtú agus gealltóireacht a thástáil. Tá líonra Goerli ar oscailt d'úsáideoirí ar mian leo bailíochtóir testnet a rith. Dá bhrí sin, ba cheart do gheallsealbhóirí atá ag iarraidh uasghráduithe prótacail a thástáil sula n-imscartar iad chuig mainnet úsáid a bhaint as Goerli.
+Is líonra tástála é Hoodi chun bailíochtú agus gealltóireacht a thástáil. Tá líonra Hoodi ar oscailt d'úsáideoirí ar mian leo bailíochtóir testnet a rith. Dá bhrí sin, ba cheart do gheallsealbhóirí atá ag iarraidh uasghráduithe prótacail a thástáil sula n-imscartar iad chuig mainnet úsáid a bhaint as Hoodi.
 
 - Tacar bailíochtóra oscailte, is féidir le geallsealbhóirí uasghrádú líonra a thástáil
 - Staid mhór, úsáideach le haghaidh idirghníomhaíochtaí conartha cliste casta a thástáil
@@ -75,52 +73,46 @@ Is líonra tástála é Goerli chun bailíochtú agus gealltóireacht a thástá
 
 ##### Acmhainní
 
-- [Suíomh Gréasáin](https://goerli.net/)
-- [GitHub](https://github.com/eth-clients/goerli)
-- [Etherscan](https://goerli.etherscan.io)
-- [Blockscout](https://eth-goerli.blockscout.com/)
+- [Suíomh Gréasáin](https://hoodi.ethpandaops.io/)
+- [GitHub](https://github.com/eth-clients/hoodi)
+- [Explorer](https://explorer.hoodi.ethpandaops.io/)
+- [Checkpoint Sync](https://checkpoint-sync.hoodi.ethpandaops.io/)
 
 ##### Sconnaí
 
-- [Sconna Goerli QuickNode](https://faucet.quicknode.com/drip)
-- [Grabteeth](https://grabteeth.xyz/)
-- [Sconna PoW](https://goerli-faucet.pk910.de/)
-- [Sconna Paradigm](https://faucet.paradigm.xyz/)
-- [Sconna Goerli Alchemy](https://goerlifaucet.com/)
-- [Sconna Goerli All That Node](https://www.allthatnode.com/faucet/ethereum.dsrv)
-- [Sconna Sparán Coinbase | Goerli](https://coinbase.com/faucets/ethereum-goerli-faucet)
-- [Sconna Goerli Chainstack](https://faucet.chainstack.com/goerli-faucet)
+- [Sconna Hoodi](https://hoodi.ethpandaops.io/)
 
-Chun Baioíochtóir a sheoladh ar Holesky testnet, bain úsáid as [ "bailíochtóir Cheap Holesky"](https://holesky.launchpad.ethstaker.cc/ga/) ethstaker.
+Chun Baioíochtóir a sheoladh ar Hoodi testnet, bain úsáid as [ "bailíochtóir Cheap Hoodi"](https://hoodi.launchpad.ethereum.org/ga/) ethstaker.
 
 ### Testnets Ciseal 2 {#layer-2-testnets}
 
 Is téarma comhchoiteann é [Ciseal 2 (L2)](/layer-2/) chun cur síos a dhéanamh ar thacar sonrach de réitigh scálaithe Ethereum. Is blocshlabhra ar leith é ciseal 2 a leathnaíonn Ethereum agus a fhaigheann ráthaíochtaí slándála Ethereum le hoidhreacht. De ghnáth bíonn líontáin tástála Ciseal 2 ceangailte go docht le líonraí tástála poiblí Ethereum.
 
-#### Arbitrum Goerli {#arbitrum-goerli}
+#### Arbitrum Sepolia {#arbitrum-sepolia}
 
 Líonra tástála le haghaidh [Arbitrum](https://arbitrum.io/).
 
 ##### Sconnaí
 
-- [Sconna Chainlink](https://faucets.chain.link/)
+- [Sconna Chainlink](https://faucets.chain.link/arbitrum-sepolia)
+- [Sconna Alchemy](https://www.alchemy.com/faucets/arbitrum-sepolia)
 
-#### Optimistic Goerli {#optimistic-goerli}
+#### Optimistic Sepolia {#optimistic-sepolia}
 
 Líonra tástála le haghaidh [Optimism](https://www.optimism.io/).
 
 ##### Sconnaí
 
-- [Sconna Paradigm](https://faucet.paradigm.xyz/)
-- [Sconna Sparán Coinbase | Optimism Goerli](https://coinbase.com/faucets/optimism-goerli-faucet)
+- [Sconna Chainlink](https://faucets.chain.link/optimism-sepolia)
+- [Sconna Alchemy](https://www.alchemy.com/faucets/optimism-sepolia)
 
-#### Starknet Goerli {#starknet-goerli}
+#### Starknet Sepolia {#starknet-sepolia}
 
 Líonra tástála le haghaidh [Starknet](https://www.starknet.io).
 
 ##### Sconnaí
 
-- [Sconna Starknet](https://faucet.goerli.starknet.io)
+- [Sconna Alchemy](https://www.alchemy.com/faucets/starknet-sepolia)
 
 ## Líonraí príobháideacha {#private-networks}
 
@@ -134,7 +126,7 @@ Tá tionscadail agus uirlisí tiomnaithe chun cabhrú leis seo. Foghlaim tuillea
 
 ### Líonraí cuibhreannais {#consortium-networks}
 
-Tá an próiseas comhthola á rialú ag sraith nóid réamhshainithe iontaofa. Mar shampla, líonra príobháideach d’institiúidí acadúla aitheanta a rialaíonn nód amháin, agus bloic a bhailíochtaíonn tairseach sínitheoirí laistigh den líonra.
+Tá an próiseas comhthola á rialú ag sraith nóid réamhshainithe iontaofa. Mar shampla, líonra príobháideach d'institiúidí acadúla aitheanta a rialaíonn nód amháin, agus bloic a bhailíochtaíonn tairseach sínitheoirí laistigh den líonra.
 
 Má tá líonra poiblí Ethereum cosúil leis an idirlíon poiblí, tá líonra cuibhreannais cosúil le inlíon príobháideach.
 

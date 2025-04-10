@@ -158,7 +158,7 @@ Jika Anda belum terbiasa dengan road map, lihat [gambaran umum kami tentang peni
 Rantai Suar akan membuat komite validator yang dipilih secara acak pada akhir dari setiap epoch (setiap 6,4 menit) untuk alasan keamanan. Data epoch meliputi:
 
 - Nomor epoch.
-- Status terselesaikan – Apakah epoch telah diselesaikan (Ya/Tidak).
+- Status terselesaikan – Apakah epoch telah diselesaikan (Ya/Tidak).
 - Waktu – Waktu berakhirnya epoch.
 - Atestasi – Jumlah atestasi dalam epoch (pengambilan suara untuk blok dalam slot).
 - Deposito – Jumlah deposito ETH yang termasuk dalam epoch (validator harus mempertaruhkan ETH untuk menjadi validator).
@@ -244,17 +244,15 @@ Data tingkat atas lapisan konsensus mencakup berikut ini:
 
 ## Penjelajah blok {#block-explorers}
 
-- [Etherscan](https://etherscan.io/) – penjelajah blok yang bisa Anda gunakan mengambil data untuk Jaringan Utama Ethereum, Testnet Ropsten, Testnet Kovan, Testnet Rinkeby, dan Testnet Goerli.
+- [Etherscan](https://etherscan.io/) – penjelajah blok yang bisa Anda gunakan mengambil data untuk Jaringan Utama Ethereum dan Testnet Sepolia.
 - [Blockscout](https://eth.blockscout.com/) – berfokus pada jaringan berikut:
   - xDai – kombinasi pintar dari stablecoin DAI MakerDAO dan sidechain POA serta teknologi tokenbridge.
   - POA – Sidechain dan jaringan otonom yang diamankan oleh satu grup validator terpercaya. Semua validator pada jaringan adalah notaris Amerika Serikat, dan informasi mereka tersedia secara publik.
-  - Testnet Sokol POA.
-  - ARTIS – blockchain yang berkesesuaian dengan Ethereum.
-  - [LUKSO L14](https://blockscout.com/lukso/l14) – fungsi L14 sebagai jaringan percobaan pertama, untuk memungkinkan komunitas LUKSO membangun dan menguji coba infrastruktur umum.
-  - qDai.
-- [Etherchain](https://www.etherchain.org/) – penjelajah blok untuk Jaringan Utama Ethereum.
-- [Ethplorer](https://ethplorer.io/) – penjelajah blok dengan fokus pada token untuk Jaringan Utama Ethereum dan testnet Kovan.
-- [Blockchair](https://blockchair.com/ethereum) - penjelajah Ethereum yang paling privat. Juga digunakan untuk pemilihan dan penyaringan (mempool) data.
+- [Otterscan](https://otterscan.io/) – penjelajah blok sumber terbuka alternatif untuk Ethereum
+- [Blockchair](https://blockchair.com/ethereum) – penjelajah Ethereum yang paling privat. Juga bagus untuk menyortir dan memfilter data (mempool)
+- [3xpl](https://3xpl.com/ethereum) – penjelajah blockchain tanpa iklan dengan fokus pada UX yang bersih
+- [Beaconcha.in](https://beaconcha.in) – penjelajah blok sumber terbuka untuk lapisan konsensus di Jaringan Utama dan Sepolia
+- [Blockscout](https://blockscout.com/eth/mainnet/) – Fokus pada lapisan eksekusi Jaringan Utama Ethereum dan Testnet Sepolia
 
 ## Penjelajah blok (lapisan konsensus) rantai suar {#beacon-chain-block-explorers}
 

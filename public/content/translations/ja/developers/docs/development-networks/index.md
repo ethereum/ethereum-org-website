@@ -47,10 +47,11 @@ Hardhat Networkには、プロフェッショナルのためのイーサリア�
 
 ### 公開イーサリアムテストチェーン {#public-beacon-testchains}
 
-また、イーサリアムにはGoerliとSepoliaという、2つの維持されている公開テスト環境の実装もあります。 長期的なサポートが受けられる推奨テストネットはGoerliです。Goerliは、誰でも自由に検証できます。 Sepoliaは、より新しい小規模なチェーンであり、当面は維持されると予測されています。許可されたバリデータのみがアクセスできます(つまり、このテストネットには、新規のバリデータは通常アクセスできません)。 Ropstenチェーンは、2022年の第4期に廃止される予定です。Rinkebyチェーンは、2023年の第2期または第3期に廃止される予定です。
+また、イーサリアムにはSepoliaとHoodiという、2つの維持されている公開テスト環境の実装もあります。 Sepoliaは、アプリケーション開発のための推奨される標準テストネットで、高速な同期のための閉じたバリデータセットを持っています。 Hoodiは、検証とステーキングのためのテストネットで、オープンなバリデータセットを使用し、誰でも検証できる可能性があります。
 
-- [Goerliステーキングランチパッド](https://goerli.launchpad.ethereum.org/)
-- [Ropsten、Rinkeby、Kilnの廃止のお知らせ](https://blog.ethereum.org/2022/06/21/testnet-deprecation)
+- [Hoodiステーキングランチパッド](https://hoodi.launchpad.ethereum.org/en/)
+- [Sepoliaウェブサイト](https://sepolia.dev/)
+- [Hoodiウェブサイト](https://hoodi.ethpandaops.io/)
 
 ### Kurtosisイーサリアムパッケージ {#kurtosis}
 

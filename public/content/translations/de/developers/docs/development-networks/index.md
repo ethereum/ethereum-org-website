@@ -47,10 +47,11 @@ Einige Konsensclients verfügen über integrierte Tools, um lokale Beacon Chains
 
 ### Öffentliche Ethereum Test-Chains {#public-beacon-testchains}
 
-Es gibt auch zwei öffentliche Testimplementierungen von Ethereum: Goerli und Sepolia. Das empfohlene Testnetz mit langfristiger Unterstützung ist Goerli, auf dem potenziell jeder validieren kann. Bei Sepolia handelt es sich um eine neuere, kleinere Chain, die ebenfalls auf absehbare Zeit gewartet werden soll und deren Validatoren ausgewählt sind (d. h. es gibt keinen offnen Zugang zu neuen Validatoren in diesem Testnetz). Die Ropsten Chain wird voraussichtlich im 4. Quartal 2022 und die Rinkeby Chain im 2. und 3. Quartal 2023 veraltet sein.
+Es gibt auch zwei öffentliche Testimplementierungen von Ethereum: Sepolia und Hoodi. Sepolia ist das empfohlene Standard-Testnetz für die Anwendungsentwicklung, mit einem geschlossenen Validatorsatz für schnelle Synchronisation. Hoodi ist ein Testnetz für Validierung und Staking, das einen offenen Validatorsatz verwendet und es potenziell jedem ermöglicht, zu validieren.
 
-- [Goerli Staking Launchpad](https://goerli.launchpad.ethereum.org/)
-- [Ropsten, Rinkeby & Kiln, Ankündigung der Abschaltung](https://blog.ethereum.org/2022/06/21/testnet-deprecation)
+- [Hoodi Staking Launchpad](https://hoodi.launchpad.ethereum.org/en/)
+- [Sepolia Website](https://sepolia.dev/)
+- [Hoodi Website](https://hoodi.ethpandaops.io/)
 
 ### Kurtosis Ethereum-Paket {#kurtosis}
 

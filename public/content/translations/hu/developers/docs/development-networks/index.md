@@ -47,10 +47,11 @@ Néhány konszenzusos kliens rendelkezik olyan beépített eszközökkel, amelly
 
 ### Nyilvános Ethereum-tesztláncok {#public-beacon-testchains}
 
-Az Ethereum két karbantartott, nyilvános tesztimplementációval is rendelkezik: Goerli és Sepolia. A Goerli a javasolt teszthálózat, mely hosszú távú támogatással bír, és mindenkinek ingyenesen használható validálásra. A Sepolia egy újabb, kisebb lánc, melyet szintén fenn akarnak tartani a jövőben, és amelynek része egy engedélyhez kötött validátorszett (nem működhet bárki validátorként). A Ropsten lánc 2022. 4. negyedévében, a Rinkeby lánc pedig 2023. 2./3. negyedévében kerül lezárásra.
+Az Ethereum két karbantartott, nyilvános tesztimplementációval is rendelkezik: Sepolia és Hoodi. A Sepolia az alkalmazásfejlesztéshez ajánlott standard teszthálózat, zárt validátorszettel a gyors szinkronizáláshoz. A Hoodi egy validálásra és letétbe helyezésre szolgáló teszthálózat, amely nyílt validátorszettet használ, és potenciálisan bárki számára lehetővé teszi a validálást.
 
-- [Goerli letétbe helyezési indítópult](https://goerli.launchpad.ethereum.org/)
-- [Ropsten, Rinkeby és Kiln kivezetési bejelentés](https://blog.ethereum.org/2022/06/21/testnet-deprecation)
+- [Hoodi letétbe helyezési indítópult](https://hoodi.launchpad.ethereum.org/en/)
+- [Sepolia honlap](https://sepolia.dev/)
+- [Hoodi honlap](https://hoodi.ethpandaops.io/)
 
 ### Kurtosis Ethereum csomag {#kurtosis}
 

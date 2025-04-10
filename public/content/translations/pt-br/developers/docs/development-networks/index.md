@@ -47,10 +47,11 @@ Alguns clientes de consenso têm ferramentas integradas para ativar as cadeias B
 
 ### Cadeias de teste públicas do Ethereum {#public-beacon-testchains}
 
-Existem também duas implementações públicas de testes da Ethereum: Goerli e Sepolia. A rede de testes recomendada com apoio em longo prazo é Goerli, sobre a qual qualquer pessoa tem liberdade para validar. Sepolia é uma cadeia mais nova e menor que também deve ser mantida em um futuro previsível, com um conjunto de validadores autorizados (o que significa que não há acesso geral a novos validadores nesta rede de teste). Espera-se que a cadeia de Ropsten seja descontinuada no quarto trimestre de 2022, e espera-se que a cadeia de Rinkeby seja descontinuada no segundo ou terceiro trimestre de 2023.
+Existem também duas implementações públicas de testes da Ethereum: Sepolia e Hoodi. Sepolia é a rede de testes padrão recomendada para o desenvolvimento de aplicativos, com um conjunto fechado de validadores para sincronização rápida. Hoodi é uma rede de testes para validação e staking, que usa um conjunto aberto de validadores e permite potencialmente que qualquer pessoa valide.
 
-- [Plataforma de lançamento de staking Goerli](https://goerli.launchpad.ethereum.org/)
-- [Anúncio de descontinuação da Ropsten, Rinkeby & Kiln](https://blog.ethereum.org/2022/06/21/testnet-deprecation)
+- [Plataforma de lançamento de staking Hoodi](https://hoodi.launchpad.ethereum.org/en/)
+- [Website Sepolia](https://sepolia.dev/)
+- [Website Hoodi](https://hoodi.ethpandaops.io/)
 
 ### Pacote Kurtosis do Ethereum {#kurtosis}
 

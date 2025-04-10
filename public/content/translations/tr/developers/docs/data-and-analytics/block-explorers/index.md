@@ -237,14 +237,15 @@ Fikir birliği katmanı üst düzey verileri şunları içerir:
 
 ## Blok arayıcıları {#block-explorers}
 
-- [Etherscan](https://etherscan.io/) - Ethereum Ana Ağı ve Goerli Test Ağı'ndan veri çekmek için kullanabileceğiniz bir blok arayıcısı
+- [Etherscan](https://etherscan.io/) - Ethereum Ana Ağı ve Sepolia Test Ağı'ndan veri çekmek için kullanabileceğiniz bir blok arayıcısı
 - [3xpl](https://3xpl.com/ethereum) - veri kümelerini indirmeye izin veren reklamsız, açık kaynaklı bir Ethereum arayıcısı
-- [Beaconcha.in](https://beaconcha.in/) - Ethereum Ana Ağı ve Goerli Test Ağı için açık kaynaklı bir blok arayıcısı
+- [Beaconcha.in](https://beaconcha.in/) - Ethereum Ana Ağı ve Sepolia Test Ağı için açık kaynaklı bir blok arayıcısı
 - [Blockchair](https://blockchair.com/ethereum) - en özel Ethereum arayıcısı. Ayrıca (bellek havuzu) verileri sıralamak ve filtrelemek için kullanılır
 - [Etherchain](https://www.etherchain.org/) - Ethereum Ana Ağı için bir blok arayıcısı
-- [Ethplorer](https://ethplorer.io/) - Ethereum Ana Ağı ve Kovan test ağı için token'lar üzerine odaklı bir blok arayıcısı
+- [Ethplorer](https://ethplorer.io/) - Ethereum Ana Ağı ve Sepolia test ağı için token'lar üzerine odaklı bir blok arayıcısı
 - [Rantom](https://rantom.app/) - Detaylı anlayış için kullanıcı dostu açık kaynaklı bir DeFi & NFT işlem görüntüleyicisi
 - [Ethernow](https://www.ethernow.xyz/) - Ethereum ana ağı ön zincir katmanını görmenizi sağlayan gerçek zamanlı bir işlem kâşifi
+- [Otterscan](https://otterscan.io/) - Ethereum için açık kaynaklı alternatif bir blok arayıcısı
 
 ## Daha fazla bilgi {#further-reading}
 

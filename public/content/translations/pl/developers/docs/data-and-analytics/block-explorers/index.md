@@ -244,7 +244,15 @@ Dane najwyższego poziomu Eth2 obejmują:
 
 ## Eksploratory bloków {#block-explorers}
 
-- [Etherscan](https://etherscan.io/) – eksplorator bloków, którego możesz użyć do pobrania danych dla głównej sieci Ethereum, sieci testowej Ropsten, sieci testowej Kovan, sieci testowej Rinkeby i sieci testowej Goerli.
+- [Etherscan](https://etherscan.io/) – eksplorator bloków, którego możesz użyć do pobrania danych dla głównej sieci Ethereum i sieci testowej Sepolia.
+- [3xpl](https://3xpl.com/ethereum) – eksplorator Ethereum typu open source bez reklam, pozwalający na pobieranie własnych zestawów danych.
+- [Beaconcha.in](https://beaconcha.in/) – eksplorator bloków open source dla sieci głównej Ethereum i sieci testowej Sepolia.
+- [Blockchair](https://blockchair.com/ethereum) – najbardziej prywatny eksplorator Ethereum. Także do sortowania i filtrowania danych (mempool).
+- [Etherchain](https://www.etherchain.org/) – eksplorator bloków dla głównej sieci Ethereum.
+- [Ethplorer](https://ethplorer.io/) – eksplorator bloków z naciskiem na tokeny dla głównej sieci Ethereum i sieci testowej Sepolia.
+- [Rantom](https://rantom.app/) – otwarty i przyjazny dla użytkownika eksplorator transakcji NFT i DeFi dla bardziej szczegółowego wglądu.
+- [Ethernow](https://www.ethernow.xyz/) – eksplorator transakcji w czasie rzeczywistym, który pozwala zobaczyć warstwę pre-chain głównej sieci Ethereum.
+- [Otterscan](https://otterscan.io/) – alternatywny eksplorator bloków typu open source dla Ethereum.
 - [Blockscout](https://eth.blockscout.com/) – koncentruje się na następujących sieciach:
   - xDai – mądre połączenie technologii stablecoin DAI MakerDAO, a także technologii łańcucha bocznego POA i tokenbridge.
   - POA – łańcuch boczny i autonomiczna sieć zabezpieczona przez grupę zaufanych walidatorów. Wszyscy walidatorzy w sieci są notariuszami Stanów Zjednoczonych, a ich informacje są publicznie dostępne.
@@ -252,9 +260,6 @@ Dane najwyższego poziomu Eth2 obejmują:
   - ARTIS – blockchain zgodny z Ethereum.
   - [LUKSO L14](https://blockscout.com/lukso/l14) – L14 pełni funkcję pierwszej sieci testowej, aby umożliwić społeczności LUKSO budowę i przetestowanie wspólnej infrastruktury.
   - qDai.
-- [Etherchain](https://www.etherchain.org/) – eksplorator bloków dla głównej sieci Ethereum.
-- [Ethplorer](https://ethplorer.io/) – eksplorator bloków z naciskiem na tokeny dla sieci głównej Ethereum i testnetu Kovan.
-- [Blockchair](https://blockchair.com/ethereum) – najbardziej prywatny eksplorator Ethereum. Także dla sortowania i filtrowania danych (mempool).
 
 ## Eksploratory bloków Eth2 {#beacon-chain-block-explorers}
 

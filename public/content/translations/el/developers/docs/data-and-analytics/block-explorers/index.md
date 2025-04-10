@@ -238,12 +238,12 @@ sidebarDepth: 3
 
 ## Εξερευνητές Block {#block-explorers}
 
-- [Etherscan](https://etherscan.io/) - ένας εξερευνητής μπλοκ που μπορείτε να χρησιμοποιήσετε για την ανάκτηση δεδομένων για το Ethereum Mainnet και το Goerli Testnet
+- [Etherscan](https://etherscan.io/) - ένας εξερευνητής μπλοκ που μπορείτε να χρησιμοποιήσετε για την ανάκτηση δεδομένων για το Ethereum Mainnet και τα δίκτυα δοκιμών Sepolia και Hoodi
 - [3xpl](https://3xpl.com/ethereum): Ένας ανοιχτού κώδικα εξερευνητής Ethereum χωρίς διαφημίσεις που επιτρέπει τη λήψη των συνόλων δεδομένων του.
-- [Beaconcha.in](https://beaconcha.in/): Ένας ανοιχτού κώδικα εξερευνητής μπλοκ για το κύριο δίκτυο του Ethereum και το δοκιμαστικό δίκτυο Goerli.
+- [Beaconcha.in](https://beaconcha.in/): Ένας ανοιχτού κώδικα εξερευνητής μπλοκ για το κύριο δίκτυο του Ethereum και τα δίκτυα δοκιμών Sepolia και Hoodi.
 - [Blockchair](https://blockchair.com/ethereum): ο πιο ιδιωτικός εξερευνητής Ethereum. Επίσης για ταξινόμηση και φιλτράρισμα δεδομένων του mempool.
 - [Etherchain](https://www.etherchain.org/) - ένας εξερευνητής μπλοκ για το κεντρικό δίκτυο του Ethereum
-- [Ethplorer](https://ethplorer.io/): Ένας εξερευνητής μπλοκ με έμφαση στα tokens για το κύριο δίκτυο του Ethereum και το δοκιμαστικό δίκτυο Kovan.
+- [Ethplorer](https://ethplorer.io/): Ένας εξερευνητής μπλοκ με έμφαση στα tokens για το κύριο δίκτυο του Ethereum και τα δίκτυα δοκιμών Sepolia και Hoodi.
 - [Rantom](https://rantom.app/) - Ένας φιλικός προς το χρήστη ανοιχτού κώδικα DeFi & NFT προβολής συναλλαγών για λεπτομερείς πληροφορίες
 - [Ethernow](https://www.ethernow.xyz/): Ένας εξερευνητής συναλλαγών σε πραγματικό χρόνο που σας επιτρέπει να δείτε το προ-αλυσίδα επίπεδο του κύριου δικτύου Ethereum.
 

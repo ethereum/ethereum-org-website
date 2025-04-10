@@ -202,13 +202,7 @@ Ninguno
 
 **Devuelve**
 
-`String`: El ID de red actual.
-
-La lista completa de los ID de red actuales está disponible en [chainlist.org](https://chainlist.org). Algunos comunes son:
-
-- `1`: Red principal de Ethereum
-- `5`: Red de prueba Goerli
-- `11155111`: Red de prueba Sepolia
+`String`: ID de la red actual.
 
 **Ejemplo**
 
@@ -219,9 +213,15 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"net_version","params":[],"id":67
 {
   "id":67,
   "jsonrpc": "2.0",
-  "result": "3"
+  "result": "1"
 }
 ```
+
+> **Nota**: Los siguientes son los ID de red actuales:
+>
+> - `1`: Red principal de Ethereum
+> - `11155111`: Red de prueba Sepolia
+> - `17000`: Red de prueba Hoodi
 
 ### net_listening {#net_listening}
 

@@ -47,10 +47,14 @@ Hardhat 網路內建了 Hardhat，這是一個專業以太坊開發環境。
 
 ### 公共以太坊測試鏈 {#public-beacon-testchains}
 
-以太坊還有兩個維護中的公共測試實作​​：Goerli 和 Sepolia。 推薦使用受長期受支援的測試網 Goerli，任何人都可以自由在其上驗證。 Sepolia 是一個較新、規模較小的測試鏈，預計在可見未來也會得到維護。Sepolia 上有獲得許可的驗證者集，這意味著不可以對此測試網上的新驗證者進行常規存取。 Ropsten 鏈預計將於 2022 年第四季棄用，Rinkeby 鏈預計將於 2023 年第二/第三季棄用。
+以太坊目前有兩個維護中的公共測試網：Sepolia 和 Hoodi。 推薦開發者使用 Sepolia 作為主要測試網，因為它是一個輕量級的測試鏈，預計在可預見的未來會繼續維護。Sepolia 上有獲得許可的驗證者集，這意味著普通用戶無法在此測試網上部署新的驗證者。Hoodi 是一個較新的測試網，允許任何人自由成為驗證者，適合進行質押和驗證者測試。
 
-- [Goerli 質押啟動面板](https://goerli.launchpad.ethereum.org/)
-- [Ropsten、Rinkeby 和 Kiln 棄用公告](https://blog.ethereum.org/2022/06/21/testnet-deprecation)
+- [Sepolia 水龍頭](https://faucet.sepolia.dev/)
+- [Hoodi 質押啟動面板](https://holesky.launchpad.ethereum.org/)
+
+請注意，Goerli 已被棄用，Ropsten、Rinkeby 和 Kiln 測試網已停用。
+
+- [測試網棄用公告](https://blog.ethereum.org/2022/06/21/testnet-deprecation)
 
 ### Kurtosis 以太坊套件 {#kurtosis}
 
