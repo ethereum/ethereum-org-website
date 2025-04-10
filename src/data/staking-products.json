@@ -889,16 +889,54 @@
       "url": "https://lido.fi/",
       "audits": [
         {
-          "name": "Quantstamp",
-          "url": "https://github.com/lidofinance/audits/blob/main/QSP%20Lido%20Report%2012-2020.pdf"
+          "name": "All Audits",
+          "date": "01-2025",
+          "url": "https://docs.lido.fi/security/audits/"
         },
         {
-          "name": "MixBytes()",
-          "url": "https://github.com/lidofinance/audits/blob/main/MixBytes%20ETH2%20Oracle%20Security%20Audit%20Report%2004-2021.pdf"
+          "name": "Hexens Lido V2 Smart Contract Audit",
+          "date": "04-2023",
+          "url": "https://github.com/lidofinance/audits/blob/main/Hexens%20Lido%20V2%20Smart%20Contract%20Audit%20Report%2004-23.pdf"
         },
         {
-          "name": "Sigma Prime",
-          "url": "https://github.com/lidofinance/audits/blob/main/Sigma%20Prime%20-%20Lido%20Finance%20Security%20Assessment%20Report%20v2.1.pdf"
+          "name": "MixBytes Camp Lido V2 Contest",
+          "date": "04-2023",
+          "url": "https://github.com/lidofinance/audits/blob/main/MixBytes%20Camp%20Lido%20V2%20Contest%20Report%2004-23.pdf"
+        },
+        {
+          "name": "Certora Lido V2 Audit",
+          "date": "04-2023",
+          "url": "https://github.com/lidofinance/audits/blob/main/Certora%20Lido%20V2%20Audit%20Report%2004-23.pdf"
+        },
+        {
+          "name": "Statemind Lido V2 Audit",
+          "date": "04-2023",
+          "url": "https://github.com/lidofinance/audits/blob/main/Statemind%20Lido%20V2%20Audit%20Report%2004-23.pdf"
+        },
+        {
+          "name": "Statemind Lido V2 Upgrade Template Audit",
+          "date": "05-2023",
+          "url": "https://github.com/lidofinance/audits/blob/main/Statemind%20Lido%20V2%20Upgrade%20Template%20Audit%20Report%2005-2023.pdf"
+        },
+        {
+          "name": "Hexens Lido V2 Oracle Security Review",
+          "date": "05-2023",
+          "url": "https://github.com/lidofinance/audits/blob/main/Hexens%20Lido%20V2%20Oracle%20Security%20Review%20Report%2005-23.pdf"
+        },
+        {
+          "name": "Oxorio Lido V2 On-chain Audit",
+          "date": "06-2023",
+          "url": "https://github.com/lidofinance/audits/blob/main/Oxorio%20Lido%20V2%20On-chain%20Audit%20Report%2006-23.pdf"
+        },
+        {
+          "name": "Ackee Blockchain Audit of Community Staking Module (LIP-26)",
+          "date": "10-2024",
+          "url": "https://github.com/lidofinance/audits/blob/main/Ackee%20Blockchain%20Lido%20Community%20Staking%20Module%20Report%2010-24.pdf"
+        },
+        {
+          "name": "MixBytes On-chain Audit of Community Staking Module (LIP-23, LIP-25, LIP-26)",
+          "date": "10-2024",
+          "url": "https://github.com/lidofinance/audits/blob/main/MixBytes%20Lido%20CSM%20Security%20Audit%20Report%2010-24.pdf"
         }
       ],
       "minEth": 0,
@@ -913,17 +951,15 @@
       "isFoss": true,
       "hasBugBounty": true,
       "isTrustless": true,
-      "hasPermissionlessNodes": false,
-      "pctMajorityExecutionClient": null,
-      "pctMajorityConsensusClient": 42.83,
+      "hasPermissionlessNodes": true,
+      "pctMajorityExecutionClient": 38.89,
+      "pctMajorityConsensusClient": 24.14,
       "platforms": ["Browser", "Wallet"],
       "ui": ["GUI"],
       "socials": {
         "discord": "https://discord.com/invite/vgdPfhZ",
         "twitter": "https://twitter.com/lidofinance",
-        "telegram": "https://t.me/lidofinance",
-        "reddit": "https://www.reddit.com/r/lidofinance/",
-        "github": "https://github.com/lidofinance/lido-dao"
+        "github": "https://github.com/lidofinance/core"
       },
       "matomo": {
         "eventCategory": "StakingProductCard",
