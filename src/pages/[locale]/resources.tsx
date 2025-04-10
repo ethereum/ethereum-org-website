@@ -21,7 +21,6 @@ import { cn } from "@/lib/utils/cn"
 import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
-import { trackCustomEvent } from "@/lib/utils/matomo"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
@@ -107,12 +106,10 @@ const ResourcesPage = ({ txCostsMedianUsd }) => {
             GITHUB_REPO_URL
           ).toString()}
           className="visited:text-white"
-          onClick={() => {
-            trackCustomEvent({
-              eventCategory: EVENT_CATEGORY,
-              eventAction: "links",
-              eventName: "Ethereum.org Github Page Feedback",
-            })
+          customEventOptions={{
+            eventCategory: EVENT_CATEGORY,
+            eventAction: "links",
+            eventName: "Ethereum.org Github Page Feedback",
           }}
         >
           {t("page-resources-share-feedback")}
@@ -141,14 +138,11 @@ const ResourcesPage = ({ txCostsMedianUsd }) => {
                   "relative text-nowrap rounded-xl px-4 py-2 text-sm [&_svg]:shrink-0 [&_svg]:text-sm",
                   activeSection === key && "!text-primary"
                 )}
-                onClick={() =>
-                  trackCustomEvent({
-                    eventCategory: EVENT_CATEGORY,
-                    eventAction: "whats_on_this_page",
-                    eventName:
-                      "network,using, scaling, resilience, privacy_security",
-                  })
-                }
+                customEventOptions={{
+                  eventCategory: EVENT_CATEGORY,
+                  eventAction: "whats_on_this_page",
+                  eventName: key,
+                }}
               >
                 {activeSection === key && (
                   <motion.div
@@ -209,12 +203,10 @@ const ResourcesPage = ({ txCostsMedianUsd }) => {
           <ButtonLink
             href="https://ethereumdashboards.com"
             size="lg"
-            onClick={() => {
-              trackCustomEvent({
-                eventCategory: EVENT_CATEGORY,
-                eventAction: "links",
-                eventName: "ethereumdashboards.com",
-              })
+            customEventOptions={{
+              eventCategory: EVENT_CATEGORY,
+              eventAction: "links",
+              eventName: "ethereumdashboards.com",
             }}
           >
             ethereumdashboards.com
@@ -242,12 +234,10 @@ const ResourcesPage = ({ txCostsMedianUsd }) => {
                   ).toString()}
                   variant="outline"
                   isSecondary
-                  onClick={() => {
-                    trackCustomEvent({
-                      eventCategory: EVENT_CATEGORY,
-                      eventAction: "links",
-                      eventName: "Ethereum.org Github Feature Request",
-                    })
+                  customEventOptions={{
+                    eventCategory: EVENT_CATEGORY,
+                    eventAction: "links",
+                    eventName: "Ethereum.org Github Feature Request",
                   }}
                 >
                   {t("page-resources-suggest-resource")}
@@ -259,12 +249,10 @@ const ResourcesPage = ({ txCostsMedianUsd }) => {
                   ).toString()}
                   variant="outline"
                   isSecondary
-                  onClick={() => {
-                    trackCustomEvent({
-                      eventCategory: EVENT_CATEGORY,
-                      eventAction: "links",
-                      eventName: "Ethereum.org Github Bug Report",
-                    })
+                  customEventOptions={{
+                    eventCategory: EVENT_CATEGORY,
+                    eventAction: "links",
+                    eventName: "Ethereum.org Github Bug Report",
                   }}
                 >
                   <FaGithub /> {t("page-resources-found-bug")}
