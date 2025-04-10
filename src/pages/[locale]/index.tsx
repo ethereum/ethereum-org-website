@@ -371,11 +371,6 @@ const HomePage = ({
                   href="/resources/"
                   isSecondary
                   variant="outline"
-                  customEventOptions={{
-                    eventCategory: eventCategory,
-                    eventAction: "ethereum_activity",
-                    eventName: "ethereum_activity",
-                  }}
                 >
                   {t("page-index:page-index-activity-action")} <ChevronNext />
                 </ButtonLink>
