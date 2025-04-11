@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import { FaArrowTrendUp } from "react-icons/fa6"
-import { Cell, Legend, Pie, PieChart as RechartsPieChart } from "recharts"
+import { FaArrowTrendUp } from "react-icons/fa6";
+import { Cell, Legend, Pie, PieChart as RechartsPieChart } from "recharts";
 
 import {
   Card,
@@ -10,15 +10,15 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
+} from "@/components/ui/card";
 import {
   ChartConfig,
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from "@/components/ui/chart"
+} from "@/components/ui/chart";
 
-type PieChartDataPoint = { name: string; value: number }
+type PieChartDataPoint = { name: string; value: number };
 
 /**
  * PieChartProps defines the properties for the PieChart component.
@@ -30,34 +30,35 @@ type PieChartDataPoint = { name: string; value: number }
  * @property {string} [footerSubText] - The footer subtext of the chart.
  */
 type PieChartProps = {
-  data: PieChartDataPoint[]
-  title?: string
-  description?: string
-  footerText?: string
-  footerSubText?: string
-}
+  data: PieChartDataPoint[];
+  title?: string;
+  description?: string;
+  footerText?: string;
+  footerSubText?: string;
+};
 
 const defaultChartConfig = {
   value: {
     label: "Value",
     color: "hsl(var(--accent-a))",
   },
-} satisfies ChartConfig
+} satisfies ChartConfig;
 
 /**
  * Color palette for blue shades, ordered from deep blue (largest share) to light blue (smallest share).
  * Ensure your data is sorted from largest to smallest for this to work as intended.
  */
 const COLORS = [
-  "#00008B", // Deep Blue
-  "#0000CD",
-  "#0000FF",
-  "#4169E1",
-  "#6495ED",
-  "#87CEFA",
-  "#ADD8E6",
-  "#B0E0E6", // Light Blue
-]
+  "#43128c", // Deep Purple
+  "#561ab6",
+  "#6c24e0",
+  "#9357f3",
+  "#b58ef1",
+  "#ccb0fd",
+  "#dac4fd",
+  "#ebe0fe",
+  "#f3eaff", // Light Purple
+];
 
 /**
  * PieChart component renders a pie chart with distinct blue colors and a vertical legend.
@@ -129,5 +130,5 @@ export function PieChart({
         </CardFooter>
       )}
     </Card>
-  )
+  );
 }
