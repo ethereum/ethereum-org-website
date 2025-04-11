@@ -980,3 +980,36 @@ export type MaturityLevel =
   | "maturing"
   | "developing"
   | "emerging"
+
+// Tutorials
+export enum Skill {
+  BEGINNER = "beginner",
+  INTERMEDIATE = "intermediate",
+  ADVANCED = "advanced",
+}
+
+export interface IExternalTutorial {
+  url: string
+  title: string
+  description: string
+  author: string
+  authorGithub: string
+  tags: Array<string>
+  skillLevel: string
+  timeToRead?: string
+  lang: string
+  publishDate: string
+}
+
+export interface ITutorial {
+  href: string
+  title: string
+  description: string
+  author: string
+  tags?: Array<string>
+  skill?: Skill
+  timeToRead?: number | null
+  published?: string | null
+  lang: string
+  isExternal: boolean
+}

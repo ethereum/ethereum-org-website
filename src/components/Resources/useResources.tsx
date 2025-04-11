@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { useRouter } from "next/router"
+import { useLocale } from "next-intl"
 
 import { Lang } from "@/lib/types"
 
@@ -60,7 +60,7 @@ const formatSmallUSD = (value: number, locale: string): string =>
 
 export const useResources = ({ txCostsMedianUsd }): DashboardSection[] => {
   const { t } = useTranslation("page-resources")
-  const { locale } = useRouter()
+  const locale = useLocale()
   const localeForNumberFormat = getLocaleForNumberFormat(locale! as Lang)
 
   const medianTxCost =

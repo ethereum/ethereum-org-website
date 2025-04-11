@@ -883,7 +883,7 @@ export const walletsData: WalletData[] = [
       "zkSync Mainnet",
       "Base",
       "Arbitrum One",
-      "OP Mainnet"
+      "OP Mainnet",
     ],
   },
   {

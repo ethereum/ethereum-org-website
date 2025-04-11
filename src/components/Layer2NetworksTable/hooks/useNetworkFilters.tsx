@@ -11,10 +11,14 @@ import SwitchFilterInput from "@/components/ProductTable/FilterInputs/SwitchFilt
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
+import useTranslation from "@/hooks/useTranslation"
+
 export const useNetworkFilters = (): FilterOption[] => {
+  const { t } = useTranslation("page-layer-2-networks")
+
   return [
     {
-      title: "Wallet support",
+      title: t("page-layer-2-networks-wallet-support"),
       showFilterOption: true,
       items: [
         {
@@ -45,29 +49,25 @@ export const useNetworkFilters = (): FilterOption[] => {
       ],
     },
     {
-      title: "Network maturity",
+      title: t("page-layer-2-networks-network-maturity"),
       showFilterOption: true,
       items: [
         {
           filterKey: "robust",
-          filterLabel: "Robust",
-          description:
-            "Fully decentralized and secure network that cannot be tampered with or stopped by any individual or group, including its creators.",
+          filterLabel: t("page-layer-2-networks-robust-label"),
+          description: t("page-layer-2-networks-robust-description-1"),
           inputState: true,
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
               <SwitchFilterInput
                 Icon={RobustIcon}
-                label="Robust"
+                label={t("page-layer-2-networks-robust-label")}
                 description={
                   <>
-                    Fully decentralized and secure network that cannot be
-                    tampered with or stopped by any individual or group,
-                    including its creators.
+                    {t("page-layer-2-networks-robust-description-1")}
                     <br />
                     <br />
-                    This is a network that fulfills Ethereum&apos;s vision of
-                    decentralization.
+                    {t("page-layer-2-networks-robust-description-2")}
                   </>
                 }
                 filterIndex={filterIndex}
@@ -88,21 +88,16 @@ export const useNetworkFilters = (): FilterOption[] => {
         },
         {
           filterKey: "maturing",
-          filterLabel: "Maturing",
-          description:
-            "A network transitions to being decentralized. A group of actors still may be able to halt the network in extreme situations.",
+          filterLabel: t("page-layer-2-networks-maturing-label"),
+          description: t("page-layer-2-networks-maturing-description"),
           inputState: true,
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
               <SwitchFilterInput
                 Icon={MaturingIcon}
-                label="Maturing"
+                label={t("page-layer-2-networks-maturing-label")}
                 description={
-                  <>
-                    A network transitioning to being decentralized. A group of
-                    actors still may be able to halt the network in extreme
-                    situations.
-                  </>
+                  <>{t("page-layer-2-networks-maturing-description")}</>
                 }
                 filterIndex={filterIndex}
                 itemIndex={itemIndex}
@@ -122,20 +117,16 @@ export const useNetworkFilters = (): FilterOption[] => {
         },
         {
           filterKey: "developing",
-          filterLabel: "Developing",
-          description:
-            "Single operator is running the network with public data visibility for transparency. ",
+          filterLabel: t("page-layer-2-networks-developing-label"),
+          description: t("page-layer-2-networks-developing-description-1"),
           inputState: true,
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
               <SwitchFilterInput
                 Icon={DevelopingIcon}
-                label="Developing"
+                label={t("page-layer-2-networks-developing-label")}
                 description={
-                  <>
-                    A centralized operator runs the network but adds fail-safe
-                    features to reduce risks of centralization.
-                  </>
+                  <>{t("page-layer-2-networks-developing-description")}</>
                 }
                 filterIndex={filterIndex}
                 itemIndex={itemIndex}
@@ -155,21 +146,16 @@ export const useNetworkFilters = (): FilterOption[] => {
         },
         {
           filterKey: "emerging",
-          filterLabel: "Emerging",
-          description:
-            "Single operator is running the network in private and works towards transparency.",
+          filterLabel: t("page-layer-2-networks-emerging-label"),
+          description: t("page-layer-2-networks-emerging-description-1"),
           inputState: true,
           input: (filterIndex, itemIndex, inputState, updateFilterState) => {
             return (
               <SwitchFilterInput
                 Icon={EmergingIcon}
-                label="Emerging"
+                label={t("page-layer-2-networks-emerging-label")}
                 description={
-                  <>
-                    A centralized operator runs the network. The data is
-                    publicly visible on Ethereum to verify whether the operator
-                    is being honest.
-                  </>
+                  <>{t("page-layer-2-networks-emerging-description")}</>
                 }
                 filterIndex={filterIndex}
                 itemIndex={itemIndex}
