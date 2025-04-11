@@ -5,7 +5,7 @@ import { screens } from "./src/lib/utils/screen"
 
 const config = {
   darkMode: ["selector"],
-  content: ["./src/**/*.{ts,tsx}"],
+  content: ["./src/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}"],
   prefix: "",
   theme: {
     extend: {
@@ -15,6 +15,7 @@ const config = {
         body: "var(--font-inter)",
         monospace: "var(--font-mono)",
         mono: "var(--font-mono)",
+        sans: "var(--font-inter)",
       },
       fontSize: {
         "7xl": ["4rem", "1.1"], // [7xl, 6xs]

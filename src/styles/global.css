@@ -5,7 +5,6 @@
 @import "@docsearch/css";
 @import "@/styles/colors.css";
 @import "@/styles/semantic-tokens.css";
-@import "@/styles/fonts.css";
 @import "@/styles/docsearch.css";
 @import "@rainbow-me/rainbowkit/styles.css";
 
@@ -82,7 +81,7 @@
 
 @layer base {
   * {
-    @apply border-border scroll-smooth;
+    @apply scroll-smooth border-border;
   }
 
   body {
