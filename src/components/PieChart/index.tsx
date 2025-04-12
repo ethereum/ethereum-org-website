@@ -44,25 +44,16 @@ const defaultChartConfig = {
   },
 } satisfies ChartConfig;
 
-/**
- * Color palette for blue shades, ordered from deep blue (largest share) to light blue (smallest share).
- * Ensure your data is sorted from largest to smallest for this to work as intended.
- */
 const COLORS = [
-  "#43128c", // Deep Purple
-  "#561ab6",
-  "#6c24e0",
-  "#9357f3",
-  "#b58ef1",
-  "#ccb0fd",
-  "#dac4fd",
-  "#ebe0fe",
-  "#f3eaff", // Light Purple
+  "hsla(var(--accent-a))",
+  "hsla(var(--accent-b))",
+  "hsla(var(--accent-c))",
 ];
 
-/**
- * PieChart component renders a pie chart with distinct blue colors and a vertical legend.
- */
+/*
+PieChart component renders a pie chart with the provided data, utilizing accent colors,
+and a vertical legend positioned to the right.
+*/
 export function PieChart({
   data,
   title,
