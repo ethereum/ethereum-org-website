@@ -80,17 +80,35 @@ export function PieChart({
             }}
           >
             <ChartTooltip cursor={false} content={<ChartTooltipContent />} />
-            {/* Vertical legend on the right */}
-            <Legend layout="vertical" verticalAlign="middle" align="right" />
+
+            {/* 
+  The formatter prop on the Legend receives two arguments:
+   1) 'value' (the name of the data slice) 
+   2) 'entry' (the full legend payload)
+  
+  We retrieve entry.payload.value and append '%' 
+  to display the stored percentage for each item. 
+*/}
+            <Legend
+              layout="vertical"
+              verticalAlign="middle"
+              align="right"
+              formatter={(value, entry) => {
+                const { value: sliceValue } =
+                  entry.payload as PieChartDataPoint;
+                return `${value} (${sliceValue}%)`;
+              }}
+            />
+
             <Pie
               data={data}
               dataKey="value"
               nameKey="name"
-              // Shift the pie chart leftward to make room for the legend
               cx="40%"
               cy="50%"
               outerRadius={80}
-              label
+              // Remove numeric labels on the slices themselves
+              label={false}
             >
               {data.map((_, index) => (
                 <Cell
@@ -102,6 +120,7 @@ export function PieChart({
           </RechartsPieChart>
         </ChartContainer>
       </CardContent>
+
       {(footerText || footerSubText) && (
         <CardFooter>
           <div className="flex w-full items-start gap-2 text-sm">
