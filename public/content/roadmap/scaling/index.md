@@ -44,7 +44,7 @@ This second step is known as ["Danksharding"](/roadmap/danksharding/). Implement
 
 ## Current progress {#current-progress}
 
-Proto-Danksharding was successfully implemented as part of the Cancun-Deneb ("Dencun") network upgrade in March 2024. Since its implementation, rollups have begun utilizing blob storage, resulting in reduced transaction costs for users. The ecosystem has seen increased adoption of blob transactions, with rollups like [specific rollups that have adopted blobs] leading the way in implementation.
+Proto-Danksharding was successfully implemented as part of the Cancun-Deneb ("Dencun") network upgrade in March 2024. Since its implementation, rollups have begun utilizing blob storage, resulting in reduced transaction costs for users and millions of transactions processed in blobs.
 
 Work on full Danksharding continues, with progress being made on its prerequisites like PBS (Proposer-Builder Separation) and DAS (Data Availability Sampling). Decentralizing rollup infrastructure is a gradual process - there are many different rollups that are building slightly different systems and will fully decentralize at different rates.
 
