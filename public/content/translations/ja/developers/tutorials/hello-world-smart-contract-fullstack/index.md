@@ -602,7 +602,7 @@ ETHERSCAN_API_KEY = "your-etherscan-key"
 
 #### hardhat-etherscanのインストール {#install-hardhat-etherscan}
 
-あなたのコントラクトをEtherescanへ公開するのは、Hardhatを使って簡単にできます。 はじめに、まず`hardhat-etherscan`プラグインをインストールしてください。 `hardhat-etherscan`は、スマートコントラクトのソースコードとEtherscan上のABIを自動的に検証します。 インストールするには、`hello-world`ディレクトリで次のコマンドを実行します。
+あなたのコントラクトをEtherscanへ公開するのは、Hardhatを使って簡単にできます。 はじめに、まず`hardhat-etherscan`プラグインをインストールしてください。 `hardhat-etherscan`は、スマートコントラクトのソースコードとEtherscan上のABIを自動的に検証します。 インストールするには、`hello-world`ディレクトリで次のコマンドを実行します。
 
 ```text
 npm install --save-dev @nomiclabs/hardhat-etherscan
