@@ -1,5 +1,7 @@
+import { docsComponents, DocsLayout } from "./Docs"
 import * as mdLayouts from "./md"
 import { staticComponents, StaticLayout } from "./Static"
+import { TutorialLayout, tutorialsComponents } from "./Tutorial"
 
 export * from "./BaseLayout"
 export * from "./Docs"
@@ -14,6 +16,8 @@ export const layoutMapping = {
   roadmap: mdLayouts.RoadmapLayout,
   upgrade: mdLayouts.UpgradeLayout,
   translatathon: mdLayouts.TranslatathonLayout,
+  docs: DocsLayout,
+  tutorial: TutorialLayout,
 }
 
 export const componentsMapping = {
@@ -23,4 +27,6 @@ export const componentsMapping = {
   ...mdLayouts.roadmapComponents,
   ...mdLayouts.upgradeComponents,
   ...mdLayouts.translatathonComponents,
+  ...docsComponents,
+  ...tutorialsComponents,
 } as const
