@@ -432,15 +432,6 @@
     "imageUrl": ""
   },
   {
-    "title": "EthSafari",
-    "startDate": "2025-09-08",
-    "endDate": "2025-09-15",
-    "href": "https://ethsafari.xyz/",
-    "location": "https://ethsafari.xyz/",
-    "description": "ETHSafari 2025 - web3 builders conference East Africa Kenya",
-    "imageUrl": ""
-  },
-  {
     "title": "Pragma New Delhi",
     "startDate": "2025-09-25",
     "endDate": "2025-09-25",
@@ -652,17 +643,17 @@
     "startDate": "2025-05-19",
     "endDate": "2025-05-23",
     "href": "https://codeafrica.io",
-    "location": "Nairobi,  Kenya",
+    "location": "Nairobi, Kenya",
     "description": "",
     "imageUrl": ""
   },
   {
-    "title": "Ethsafari",
+    "title": "ETHSafari",
     "startDate": "2025-09-07",
     "endDate": "2025-09-14",
-    "href": "https://g.co/kgs/gQYT2iY",
-    "location": "Nairobi, KEN",
-    "description": "",
+    "href": "https://ethsafari.xyz/",
+    "location": "Nairobi, Kenya",
+    "description": "ETHSafari 2025 - web3 builders conference East Africa Kenya",
     "imageUrl": ""
   },
   {
