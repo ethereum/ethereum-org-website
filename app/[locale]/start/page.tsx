@@ -1,4 +1,5 @@
 import pick from "lodash.pick"
+import { getMessages, setRequestLocale } from "next-intl/server"
 
 import { Lang } from "@/lib/types"
 
@@ -10,13 +11,13 @@ import { getNewToCryptoWallets } from "@/lib/utils/wallets"
 
 import StartPage from "./_components/start"
 
-import { loadMessages } from "@/i18n/loadMessages"
-
 const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const { locale } = await params
 
+  setRequestLocale(locale)
+
   // Get i18n messages
-  const allMessages = await loadMessages(locale)
+  const allMessages = await getMessages({ locale })
   const requiredNamespaces = getRequiredNamespacesForPage("/start")
   const messages = pick(allMessages, requiredNamespaces)
 
