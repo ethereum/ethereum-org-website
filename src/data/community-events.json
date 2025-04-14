@@ -441,15 +441,6 @@
     "imageUrl": ""
   },
   {
-    "title": "Boston Blockchain Week",
-    "startDate": "2025-09-08",
-    "endDate": "2025-09-11",
-    "href": "https://bostonblockchainweek.com",
-    "location": "QUINCY, Massachusetts, USA",
-    "description": "Boston Blockchain Week is the preeminent annual event celebrating the global blockchain and Web3 hub that is Greater Boston.",
-    "imageUrl": ""
-  },
-  {
     "title": "Pragma New Delhi",
     "startDate": "2025-09-25",
     "endDate": "2025-09-25",
@@ -733,8 +724,17 @@
     "startDate": "2025-09-09",
     "endDate": "2025-09-12",
     "href": "https://bostonblockchainweek.com/",
-    "location": "BOSTON, USA",
+    "location": "Boston, USA",
     "description": "Boston Blockchain Week is the preeminent annual event celebrating the global blockchain and Web3 hub that is Greater Boston.",
-    "imageUrl": ""
+    "imageUrl": "https://bostonblockchainweek.com/wp-content/uploads/2025/02/Vector.png"
+  },
+  {
+    "title": "Invisible Garden",
+    "startDate": "2025-10-27",
+    "endDate": "2025-11-16",
+    "href": "https://invisible.garden",
+    "location": "Buenos Aires, Argentina",
+    "description": "Pop-up dev city #1 - Ethereum | Zero Knowledge | Artificial Inteligence | Cybersecurity",
+    "imageUrl": "https://cdn.prod.website-files.com/6695a56b501ba1fda80ae466/67851f884a16785150e18e2c_Group%20116.svg"
   }
 ]
