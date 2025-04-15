@@ -84,7 +84,7 @@ Choose people who share your vision and complement your skills. Some teams work 
 
 Different Ethereum organizer teams have different roles in their teams, but they all have in common people who are working on logistics, budgeting, marketing, program, design, and partnerships.
 
-##  The key aspect of a quality conference — program
+##  The program: A key element of a successful event
 
 When it comes to organizing a truly valuable and memorable conference, **the program is everything**. This is not an area where you can afford to compromise. While sponsors are important and often crucial for financing the event, the audience’s experience and the value they receive must always take precedence. A program overloaded with promotional content and endless sponsor pitches will alienate your attendees and undermine the credibility of your event.
 
