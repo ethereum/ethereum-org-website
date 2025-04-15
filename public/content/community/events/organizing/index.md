@@ -180,7 +180,7 @@ Volunteers are often the backbone of many conferences, providing critical suppor
 
 While it's challenging to offer monetary compensation to volunteers, it's essential to provide them with something of value that will make their experience worthwhile. Consider offering them networking opportunities, skill development, some exclusive perks, certificates or letters of recommendation.
 
-## Legal Must-Knows for Event Organizers
+## Compliance essentials for event organizers
 
 When organizing an event, there are several essential legal and logistical considerations to keep in mind:
 
