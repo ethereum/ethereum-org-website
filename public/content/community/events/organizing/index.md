@@ -130,7 +130,7 @@ When choosing a location for your conference, it’s important to think beyond t
 
 For less well-known locations, this becomes especially crucial. Attendees and sponsors from around the world need to feel confident that they can travel easily and safely. Look into aspects like airport connectivity, public transportation, and accommodation options. It’s also wise to consider the cultural and political climate of the region to avoid any complications that might deter international participants, such as visa policy.
 
-## How to promote an event
+## How to promote the event
 
 Promoting your event effectively is key to attracting the right audience and building excitement. A well-thought-out promotion strategy ensures your conference gets the visibility and engagement it deserves. Design plays an important role in your brand as well, so you should definitely budget for that as well.
 
