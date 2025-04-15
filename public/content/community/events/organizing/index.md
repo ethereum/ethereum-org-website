@@ -206,7 +206,7 @@ A big thank you to everyone who contributed to this article by sharing their ins
 # Resources
 
 Template:
-- [Ethereum timeline](https://cryptpad.fr/sheet/#/2/sheet/view/yhGnwo2bKxgA13SnkG9tS76+0+MtO0I6ZUFYEYP0J7w/)
+- [Ethereum event checklist](https://cryptpad.fr/sheet/#/2/sheet/view/yhGnwo2bKxgA13SnkG9tS76+0+MtO0I6ZUFYEYP0J7w/)
 
 Podcast: How to organise and promote an ETH event from A-Z:
 - [The ETHWarsaw case study, by Out of Ordinary](https://www.youtube.com/watch?v=io2Dx1ouz8o)
