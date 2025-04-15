@@ -9,6 +9,20 @@ const createNextIntlPlugin = require("next-intl/plugin")
 
 const withNextIntl = createNextIntlPlugin()
 
+const LIMIT_CPUS = Number(process.env.LIMIT_CPUS ?? 2)
+
+const experimental = LIMIT_CPUS
+  ? {
+      // This option could be enabled in the future when flagged as stable, to speed up builds
+      // (see https://nextjs.org/docs/pages/building-your-application/configuring/mdx#using-the-rust-based-mdx-compiler-experimental)
+      // mdxRs: true,
+
+      // Reduce the number of cpus and disable parallel threads in prod envs to consume less memory
+      workerThreads: false,
+      cpus: 4,
+    }
+  : {}
+
 /** @type {import('next').NextConfig} */
 module.exports = (phase, { defaultConfig }) => {
   let nextConfig = {
@@ -100,6 +114,7 @@ module.exports = (phase, { defaultConfig }) => {
     nextConfig = {
       ...nextConfig,
       experimental: {
+        ...experimental,
         outputFileTracingExcludes: {
           "*": [
             /**

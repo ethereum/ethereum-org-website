@@ -1,7 +1,6 @@
 import { MDXRemoteProps } from "next-mdx-remote"
 
 import {
-  CommitHistory,
   FileContributor,
   Frontmatter,
   Lang,
@@ -9,13 +8,12 @@ import {
   ToCItem,
 } from "@/lib/types"
 
-import { getFileContributorInfo } from "@/lib/utils/contributors"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 
 import { compile } from "./compile"
 import { importMd } from "./import"
 
-const commitHistoryCache: CommitHistory = {}
+// const commitHistoryCache: CommitHistory = {}
 
 interface GetPageDataParams {
   locale: string
@@ -38,7 +36,7 @@ export async function getPageData({
   locale,
   slug,
   components,
-  layout: layoutFromProps,
+  // layout: layoutFromProps,
   scope,
 }: GetPageDataParams): Promise<PageData> {
   const slugArray = slug.split("/")
@@ -53,7 +51,7 @@ export async function getPageData({
     scope,
   })
 
-  const layout = layoutFromProps || frontmatter.template || "static"
+  // const layout = layoutFromProps || frontmatter.template || "static"
 
   // Process TOC items
   const tocItems =
@@ -62,13 +60,15 @@ export async function getPageData({
       : tocNodeItems
 
   // Get contributor information
-  const { contributors, lastUpdatedDate } = await getFileContributorInfo(
-    slug,
-    locale,
-    frontmatter.lang as string,
-    layout,
-    commitHistoryCache
-  )
+  const contributors = []
+  const lastUpdatedDate = new Date().toISOString()
+  // const { contributors, lastUpdatedDate } = await getFileContributorInfo(
+  //   slug,
+  //   locale,
+  //   frontmatter.lang as string,
+  //   layout,
+  //   commitHistoryCache
+  // )
 
   // Format timestamp
   const lastEditLocaleTimestamp = getLocaleTimestamp(
