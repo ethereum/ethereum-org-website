@@ -1,5 +1,9 @@
 import pick from "lodash.pick"
-import { getTranslations } from "next-intl/server"
+import {
+  getMessages,
+  getTranslations,
+  setRequestLocale,
+} from "next-intl/server"
 
 import { Lang } from "@/lib/types"
 
@@ -15,10 +19,10 @@ import {
 
 import FindWalletPage from "./_components/find-wallet"
 
-import { loadMessages } from "@/i18n/loadMessages"
-
 const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const { locale } = await params
+
+  setRequestLocale(locale)
 
   const supportedLocaleWallets = getSupportedLocaleWallets(locale!)
   const noSupportedLocaleWallets = getNonSupportedLocaleWallets(locale!)
@@ -33,7 +37,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   }))
 
   // Get i18n messages
-  const allMessages = await loadMessages(locale)
+  const allMessages = await getMessages({ locale })
   const requiredNamespaces = getRequiredNamespacesForPage(
     "/wallets/find-wallet"
   )
