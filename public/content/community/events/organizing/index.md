@@ -193,7 +193,7 @@ When organizing an event, there are several essential legal and logistical consi
 * **Customs clearance for merchandise** – If you are importing sponsor merchandise, it is recommended to hire a customs agent to handle the process efficiently.  
 *** Photography and media policy** – Clearly define guidelines on photography and media coverage, ensuring participants are informed about consent and opt-out options.
 
-# What after the conference
+# After the event: What’s next?
 
 After the event concludes, it's crucial to gather feedback from attendees, speakers, and sponsors and create an internal report so you can be better prepared for future events. This helps identify what went well and where improvements can be made. Use surveys or one-on-one interviews to gather valuable insights that will guide future iterations. Take the time to review any mistakes or areas of inefficiency, as they can be avoided in the next conference, making the process smoother. 
 
