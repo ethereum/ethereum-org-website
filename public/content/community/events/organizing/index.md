@@ -148,7 +148,7 @@ Partnerships with different Ethereum organizers can help amplify your reach by t
 
 Reach out to technical and economics faculties in town through student clubs or professors to promote the event. Engaging with universities can help attract young talent, researchers, and future industry professionals, fostering a stronger connection between academia and the Ethereum ecosystem. This is especially great if you're organizing a hackathon, as students often bring fresh ideas, enthusiasm, and a strong technical foundation.
 
-### media
+### Media
 
 Reach out to web3-focused media outlets and newsletters for event coverage. Although Web3 Media expects to be paid for their PR articles, you can offer them free tickets or interviews with some high-profile speakers and sponsors if you don’t have a budget for paid promotion. Create a PR package with a press release and some visuals ready for promotion on social media or a website in different formats. Also, broaden the scope to local journalists or even content creators (as long as they have a decent reputation) who can cover tech, as that can be crucial to showcasing the event to larger audiences. This helps bridge the gap between the crypto industry and the broader public, attracting interest from mainstream tech and business communities.
 
