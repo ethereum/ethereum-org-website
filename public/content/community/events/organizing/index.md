@@ -212,13 +212,13 @@ Template:
 - [Ethereum timeline](https://cryptpad.fr/sheet/#/2/sheet/view/yhGnwo2bKxgA13SnkG9tS76+0+MtO0I6ZUFYEYP0J7w/)
 
 Podcast: How to organise and promote an ETH event from A-Z:
-- [The ETHWarsaw case study, by Out of Ordinary](https://www.youtube.com/watch?v=io2Dx1ouz8o)\]
+- [The ETHWarsaw case study, by Out of Ordinary](https://www.youtube.com/watch?v=io2Dx1ouz8o)
 
 Twitter space:
 - [ETH Community AMA](https://x.com/NapulETH/status/1905732699094151623) 
 
 Articles:
-- [Building ETHKL, by Danny H.](https://sekto.tech/ethkl24)\]
+- [Building ETHKL, by Danny H.](https://sekto.tech/ethkl24)
 - [POKT Events Playbook](https://docs.pokt.network/community/pokt-events-playbook) 
 
 
