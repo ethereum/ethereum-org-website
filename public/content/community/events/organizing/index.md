@@ -12,8 +12,7 @@ Building a strong and vibrant community is at the heart of growing the Ethereum 
 
 A successful Ethereum conference is built on an active and engaged community. If you already have one, you’re ahead of the game — but if you don’t, the essential pre-step is to build that foundation. It’s important to distinguish between a scene and a community: a scene might include companies and individuals present in a certain area, but they often operate independently with only occasional joint initiatives — like the traditional web2 ecosystem in many places. A community, on the other hand, is a network of interconnected people and organizations collaborating and supporting each other, which is often seen in web3 ecosystems.
 
-Your first steps should be:
-
+**Your first steps should be:**
 * Explore local startups and companies — having strong, active companies in your city or country is often the most critical prerequisite for building a community.  
 * Check if there are already some meetups — ethereum.org [events page](https://ethereum.org/en/community/events/)  
 * [The ethereum.org website](https://ethereum.org/en/community/events/) and ethereum.org Discord — to check if there are local Ethereum events, developers, and contributors.  
@@ -26,14 +25,14 @@ If you find most of these elements, it’s a strong sign that the conditions to 
 
 If you realize that many of these elements are missing, don’t worry — building a community from the ground up is a challenging but deeply rewarding process. A strong Ethereum community doesn’t appear overnight; it requires patience, consistency, and a clear vision. Here’s how you can start:
 
-* Set up a communication channel — this could be Telegram, Signal, WhatsApp, WeChat, or a Discord server, whatever is more popular where you’re at, so people can connect, ask questions, and share resources.  
-* Find your early adopters. Identify a few people who are passionate about Ethereum and Web3. They will become your core supporters and collaborators.  
-* Host small, consistent events. Start with informal meetups, study groups, or workshops. Consistency is key — even if the group is small at first, regular events build trust and momentum.   
-* Try reaching out to local companies, educational institutions, or coworking spaces to provide you with space free of charge. If you can not find speakers from your country, invite online speakers but gather people physically. It’s crucial to keep your audience physically present in one place.   
-* Collaborate with existing tech communities. If there are developer groups, startup ecosystems, or blockchain meetups already established, partner with them to introduce Ethereum topics and expand your reach.  
-* Share educational content about Ethereum’s potential.  
-* Reach out to global communities. Connect with established Ethereum groups and projects worldwide for support, mentorship, and potential collaboration. Ethereum communities across the globe have at least one thing in common: They are all eager to help.  
-* Try and secure funding — whether from local web3 companies or through some grants programme such as [ESP](https://esp.ethereum.foundation/). 
+* **Set up a communication channel** — this could be Telegram, Signal, WhatsApp, WeChat, or a Discord server, whatever is more popular where you’re at, so people can connect, ask questions, and share resources.  
+* **Find your early adopters.** Identify a few people who are passionate about Ethereum and Web3. They will become your core supporters and collaborators.  
+* **Host small, consistent events.** Start with informal meetups, study groups, or workshops. Consistency is key — even if the group is small at first, regular events build trust and momentum.   
+*** Try reaching out to local companies**, educational institutions, or coworking spaces to provide you with space free of charge. If you can not find speakers from your country, invite online speakers but gather people physically. It’s crucial to keep your audience physically present in one place.   
+* **Collaborate with existing tech communities.** If there are developer groups, startup ecosystems, or blockchain meetups already established, partner with them to introduce Ethereum topics and expand your reach.  
+* **Share educational content** about Ethereum’s potential.  
+* **Reach out to global communities.** Connect with established Ethereum groups and projects worldwide for support, mentorship, and potential collaboration. Ethereum communities across the globe have at least one thing in common: They are all eager to help.  
+* **Try and secure funding** — whether from local web3 companies or through some grants programme such as [ESP](https://esp.ethereum.foundation/). 
 
 ### **If yes, how to maintain and grow it**
 
@@ -41,10 +40,10 @@ Once you have an established community, the work doesn’t stop — in fact, it�
 
 Here are some strategies for maintaining a vibrant Ethereum community:
 
-* Diversify your event formats: Don’t just stick to one type of gathering. Mix things up with meetups, short hackathons, panel discussions, and networking events. You can try organizing co-work days or educational courses.   
-* Diversify topics: Ethereum is not just a technology; it is also a set of values that involves legal, marketing, and business.  
-* Ask your community for feedback and ideas.  
-* Engage with different audience segments. Tailor content and events to different levels of experience — from beginners exploring Ethereum for the first time to seasoned developers and entrepreneurs.
+* **Diversify your event formats:** Don’t just stick to one type of gathering. Mix things up with meetups, short hackathons, panel discussions, and networking events. You can try organizing co-work days or educational courses.   
+* **Diversify topics:** Ethereum is not just a technology; it is also a set of values that involves legal, marketing, and business.  
+*** Ask your community** for feedback and ideas.  
+* **Engage with different audience** segments. Tailor content and events to different levels of experience — from beginners exploring Ethereum for the first time to seasoned developers and entrepreneurs.
 
 By providing diverse opportunities for learning, collaboration, and growth, you ensure that your community remains active and ready for bigger initiatives like organizing a conference.
 
@@ -70,14 +69,14 @@ When it comes to organizing a conference, the first steps can feel overwhelming.
 
 Starting with a structured approach will help you stay organized and reduce stress as you move through the various stages of organizing your event. Each decision you make should bring you closer to delivering an experience that meets the needs of your community.
 
-The first thing is to build an organizing team with clear roles and responsibilities.
+**The first thing is to build an organizing team with clear roles and responsibilities.**
 
 Another important step before starting to build a program or reaching out to sponsors is to choose a date. Although that sounds like an easy step, there are a few important factors that you should consider beforehand. Some of them are: 
 
-* Avoid conflicting dates with major conferences or events  
-* Consider local conditions and circumstances (such as season of the year, major holidays, etc.)  
-* Take into consideration market conditions  
-* Give yourself enough time to organize everything — at least nine months
+* **Avoid conflicting dates with major conferences** or events  
+* **Consider local conditions and circumstances** (such as season of the year, major holidays, etc.)  
+* **Take into consideration market conditions ** 
+* **Give yourself enough time to organize everything** — at least nine months
 
 ## How to assemble a team
 
@@ -87,11 +86,11 @@ Different Ethereum organizer teams have different roles in their teams, but they
 
 ##  The key aspect of a quality conference — program
 
-When it comes to organizing a truly valuable and memorable conference, the program is everything. This is not an area where you can afford to compromise. While sponsors are important and often crucial for financing the event, the audience’s experience and the value they receive must always take precedence. A program overloaded with promotional content and endless sponsor pitches will alienate your attendees and undermine the credibility of your event.
+When it comes to organizing a truly valuable and memorable conference, **the program is everything**. This is not an area where you can afford to compromise. While sponsors are important and often crucial for financing the event, the audience’s experience and the value they receive must always take precedence. A program overloaded with promotional content and endless sponsor pitches will alienate your attendees and undermine the credibility of your event.
 
 Every session, panel, and workshop should inform, inspire, and engage the community. Listen to your audience—understand their interests, needs, and challenges. What topics resonate with them? At the same time, introduce fresh perspectives and innovative formats to keep the program dynamic. Balance familiar and trending subjects with cutting-edge ideas, ensuring a well-rounded agenda that covers different aspects of the Ethereum ecosystem—from technical deep dives and community-building sessions to policy discussions and hands-on workshops. Additionally, consider the language of the conference—while English is the default in most Ethereum events, offering sessions in the local language can make the event more accessible to regional developers and enthusiasts.
 
-When selecting speakers, open the call at least six months before the conference to attract high-quality submissions and allow enough time for agenda curation. The person responsible for speaker selection should have significant experience in the industry and a deep understanding of the ecosystem. This ensures they can identify valuable, insightful contributions and maintain a high standard of content.
+**When selecting speakers, open the call at least six months before the conference to attract high-quality submissions and allow enough time for agenda curation.** The person responsible for speaker selection should have significant experience in the industry and a deep understanding of the ecosystem. This ensures they can identify valuable, insightful contributions and maintain a high standard of content.
 
 ## Where to find financial support
 
@@ -99,17 +98,17 @@ Organizing a high-quality conference comes with significant costs — venue rent
 
 ### How to create a deck?
 
-First, you are going to need a deck. Ask other conference organizers for advice, even to share their decks so you can create your packages based on that. You should be realistic when it comes to pricing the packages and aim to cover the costs, not to earn money, especially in the beginning. 
+First, you are going to need a deck. **Ask other conference organizers for advice**, even to share their decks so you can create your packages based on that. You should be realistic when it comes to pricing the packages and aim to cover the costs, not to earn money, especially in the beginning. 
 
-Every sponsorship deck should provide a clear and compelling overview of the event, ensuring potential sponsors understand its scope, focus, and value. Start with the fundamentals—venue, date, and details about the organizing team—to establish credibility. Then, highlight the event’s primary focus, as different Ethereum conferences cater to different audiences. Some are heavily builder-oriented, featuring deep technical discussions, while others may focus more on DeFi, DAOs, or policy topics.
+**Every sponsorship deck should provide a clear and compelling overview of the event**, ensuring potential sponsors understand its scope, focus, and value. Start with the fundamentals—venue, date, and details about the organizing team—to establish credibility. Then, highlight the event’s primary focus, as different Ethereum conferences cater to different audiences. Some are heavily builder-oriented, featuring deep technical discussions, while others may focus more on DeFi, DAOs, or policy topics.
 
-Beyond just describing the event, set clear expectations. Outline the anticipated number of attendees and any key speakers already confirmed, as this helps sponsors gauge their potential reach. Most importantly, clearly define what they will receive in return for their sponsorship—booth space, speaking opportunities, social media promotion, branding visibility, or exclusive networking access. A well-structured deck not only informs but also excites potential sponsors about the opportunity to be part of your event.
+Beyond just describing the event, set clear expectations.** Outline the anticipated number of attendees and any key speakers already confirmed**, as this helps sponsors gauge their potential reach. Most importantly, clearly define what they will receive in return for their sponsorship—booth space, speaking opportunities, social media promotion, branding visibility, or exclusive networking access. A well-structured deck not only informs but also excites potential sponsors about the opportunity to be part of your event.
 
 ### Who might support your event?
 
-Start by reaching out to companies within the Ethereum and broader tech ecosystem in your city or country. These organizations often have a vested interest in supporting local events that foster community growth and innovation. They’re also more likely to recognize the value of investing in the local ecosystem and see your conference as an opportunity to connect with talent, partners, and users. 
+Start by reaching out to companies within the Ethereum and broader tech ecosystem in your city or country. These **organizations often have a vested interest in supporting local events** that foster community growth and innovation. They’re also more likely to recognize the value of investing in the local ecosystem and see your conference as an opportunity to connect with talent, partners, and users. 
 
-Once you’ve tapped into local support, expand your outreach to global players in the web3 space. Established protocols, DAOs, and ecosystem funds often allocate budgets for community-driven events. This can be a bit challenging for first-time organizers, as they haven’t yet built a track record to showcase but try and craft a compelling sponsorship package that clearly outlines the benefits of supporting your event — brand visibility, speaking opportunities, and meaningful engagement with a targeted audience. Try to find your unique value that others may not have.
+Once you’ve tapped into local support, expand your outreach to global players in the web3 space. **Established protocols, DAOs, and ecosystem funds often allocate budgets for community-driven events**. This can be a bit challenging for first-time organizers, as they haven’t yet built a track record to showcase but try and craft a compelling sponsorship package that clearly outlines the benefits of supporting your event — brand visibility, speaking opportunities, and meaningful engagement with a targeted audience. Try to find your unique value that others may not have.
 
 ### Alternative forms of funding your event
 
@@ -157,18 +156,17 @@ Reach out to web3-focused media outlets and newsletters for event coverage. Alth
 
 Organizing a hackathon can be beneficial because hackathons can be a great way to engage the developer community and foster innovation. It also provides hands-on opportunities to collaborate and build projects, which could lead to tangible outcomes for the ecosystem. Hackathons attract developers who may not usually attend conferences but are keen on the challenge of building and testing new ideas. If your conference is aimed at developers, innovation, and hands-on projects, hosting a hackathon is a natural fit.
 
-But, before organizing one, consider if you have enough resources and time. A hackathon requires significant resources in terms of time, workforce, and financial investment. Ensure that you have a dedicated team to handle it, especially if you're also managing a conference. Also, check if there is interest in your community. If your community is more builder-oriented, then it probably makes sense to organize it. 
+But, before organizing one, consider if you have enough resources and time. **A hackathon requires significant resources in terms of time, workforce, and financial investment**. Ensure that you have a dedicated team to handle it, especially if you're also managing a conference. Also, check if there is interest in your community. If your community is more builder-oriented, then it probably makes sense to organize it. 
 
 Although there are a lot of benefits to organizing it, take in consideration that, depending on the scale of the conference, adding a hackathon might be overwhelming. You should evaluate whether managing both will dilute the quality of either. You may opt for a smaller, focused hackathon or stagger the events across different months.
 
 ## (Almost inevitable) Challenges that you will face
 
-One of the biggest challenges when organizing a conference, especially in the Ethereum space, is securing enough funding. Many event organizers struggle to raise the capital needed to cover venue costs, catering, and other logistical expenses.  
-Sponsorship is often essential, but building relationships and convincing companies to invest in your event can take time. Moreover, the difficulty of attracting sponsors can increase during market downturns, as companies may be less willing to invest in non-core activities.  
-Managing the budget effectively is key. Unforeseen expenses, such as last-minute venue changes and additional event tech requirements, can quickly blow your budget.
+One of the biggest challenges when organizing a conference, especially in the Ethereum space, is securing enough funding. **Many event organizers struggle to raise the capital needed to cover venue costs**, catering, and other logistical expenses. Sponsorship is often essential, but building relationships and convincing companies to invest in your event can take time. Moreover, the difficulty of attracting sponsors can increase during market downturns, as companies may be less willing to invest in non-core activities.  
 
-For new events, getting high-quality speakers can be especially difficult. Established thought leaders or influencers in the Ethereum space may already have full schedules and might be hesitant to commit to a new event without a proven track record.  
-Be prepared to spend time networking and reaching out to potential speakers long before the event.
+Managing the budget effectively is key. **Unforeseen expenses**, such as last-minute venue changes and additional event tech requirements, can quickly blow your budget.
+
+For new events, **getting high-quality speakers can be especially difficult**. Established thought leaders or influencers in the Ethereum space may already have full schedules and might be hesitant to commit to a new event without a proven track record. Be prepared to spend time networking and reaching out to potential speakers long before the event.
 
 Also, when it comes to speakers, have clear and constant communication with them — set the deadline for sending presentations and avoid any last-minute changes. 
 
@@ -182,19 +180,18 @@ Volunteers are often the backbone of many conferences, providing critical suppor
 
 While it's challenging to offer monetary compensation to volunteers, it's essential to provide them with something of value that will make their experience worthwhile. Consider offering them networking opportunities, skill development, some exclusive perks, certificates or letters of recommendation.
 
-\*\*\*\*\*\*\*\*  
-Legal Must-Knows for Event Organizers
+## Legal Must-Knows for Event Organizers
 
 When organizing an event, there are several essential legal and logistical considerations to keep in mind:
 
-* Sponsorship agreement – Ensure you have a clear contract for sponsors, including a well-defined cancellation policy.  
-* Code of conduct – Prepare a Code of Conduct tailored to the specific event type (conference/hackathon, hacker houses etc).  
-* Privacy policy – Draft a privacy policy for your website to comply with data protection regulations and imae  
-* Local authorities notification – Even if your event is a closed gathering, it is advisable to report it to the local police station.  
-* Ticketing agreement – Establish a formal agreement with your ticketing service provider to clarify terms and responsibilities.  
-* Regulatory compliance – Check in advance if the country where you are hosting the conference has specific regulations or restrictions for the crypto industry  
-* Customs clearance for merchandise – If you are importing sponsor merchandise, it is recommended to hire a customs agent to handle the process efficiently.  
-* Photography and media policy – Clearly define guidelines on photography and media coverage, ensuring participants are informed about consent and opt-out options.
+*** Sponsorship agreement** – Ensure you have a clear contract for sponsors, including a well-defined cancellation policy.  
+*** Code of conduct** – Prepare a Code of Conduct tailored to the specific event type (conference/hackathon, hacker houses etc).  
+* **Privacy policy** – Draft a privacy policy for your website to comply with data protection regulations and imae  
+* **Local authorities notification** – Even if your event is a closed gathering, it is advisable to report it to the local police station.  
+* **Ticketing agreement** – Establish a formal agreement with your ticketing service provider to clarify terms and responsibilities.  
+* **Regulatory compliance** – Check in advance if the country where you are hosting the conference has specific regulations or restrictions for the crypto industry  
+* **Customs clearance for merchandise** – If you are importing sponsor merchandise, it is recommended to hire a customs agent to handle the process efficiently.  
+*** Photography and media policy** – Clearly define guidelines on photography and media coverage, ensuring participants are informed about consent and opt-out options.
 
 # What after the conference
 
