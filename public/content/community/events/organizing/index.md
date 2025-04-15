@@ -42,7 +42,7 @@ Here are some strategies for maintaining a vibrant Ethereum community:
 
 * **Diversify your event formats:** Don’t just stick to one type of gathering. Mix things up with meetups, short hackathons, panel discussions, and networking events. You can try organizing co-work days or educational courses.   
 * **Diversify topics:** Ethereum is not just a technology; it is also a set of values that involves legal, marketing, and business.  
-*** Ask your community** for feedback and ideas.  
+* **Ask your community** for feedback and ideas.  
 * **Engage with different audience** segments. Tailor content and events to different levels of experience — from beginners exploring Ethereum for the first time to seasoned developers and entrepreneurs.
 
 By providing diverse opportunities for learning, collaboration, and growth, you ensure that your community remains active and ready for bigger initiatives like organizing a conference.
