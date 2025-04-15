@@ -118,7 +118,7 @@ const HomePage = ({
 
   return (
     <MainArticle className="flex w-full flex-col items-center" dir={dir}>
-      <BannerNotification shouldShow>
+      <BannerNotification shouldShow={locale === "en"}>
         <p>
           Let&apos;s celebrate 10 years of Ethereum! How did ethereum change
           your life? -{" "}
