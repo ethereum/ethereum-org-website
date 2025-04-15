@@ -32,7 +32,7 @@ If you realize that many of these elements are missing, don’t worry — buildi
 * **Collaborate with existing tech communities.** If there are developer groups, startup ecosystems, or blockchain meetups already established, partner with them to introduce Ethereum topics and expand your reach.  
 * **Share educational content** about Ethereum’s potential.  
 * **Reach out to global communities.** Connect with established Ethereum groups and projects worldwide for support, mentorship, and potential collaboration. Ethereum communities across the globe have at least one thing in common: They are all eager to help.  
-* **Try and secure funding** — whether from local web3 companies or through some grants programme such as [ESP](https://esp.ethereum.foundation/). 
+* **Try and secure funding** — whether from local web3 companies or through some grants program such as [ESP](https://esp.ethereum.foundation/). 
 
 ### **If yes, how to maintain and grow it**
 
