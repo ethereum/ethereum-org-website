@@ -102,7 +102,7 @@ First, you are going to need a deck. **Ask other conference organizers for advic
 
 **Every sponsorship deck should provide a clear and compelling overview of the event**, ensuring potential sponsors understand its scope, focus, and value. Start with the fundamentals—venue, date, and details about the organizing team—to establish credibility. Then, highlight the event’s primary focus, as different Ethereum conferences cater to different audiences. Some are heavily builder-oriented, featuring deep technical discussions, while others may focus more on DeFi, DAOs, or policy topics.
 
-Beyond just describing the event, set clear expectations.** Outline the anticipated number of attendees and any key speakers already confirmed**, as this helps sponsors gauge their potential reach. Most importantly, clearly define what they will receive in return for their sponsorship—booth space, speaking opportunities, social media promotion, branding visibility, or exclusive networking access. A well-structured deck not only informs but also excites potential sponsors about the opportunity to be part of your event.
+Beyond just describing the event, set clear expectations. **Outline the anticipated number of attendees and any key speakers already confirmed**, as this helps sponsors gauge their potential reach. Most importantly, clearly define what they will receive in return for their sponsorship—booth space, speaking opportunities, social media promotion, branding visibility, or exclusive networking access. A well-structured deck not only informs but also excites potential sponsors about the opportunity to be part of your event.
 
 ### Who might support your event?
 
