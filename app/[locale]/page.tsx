@@ -1,5 +1,9 @@
 import pick from "lodash.pick"
-import { getTranslations } from "next-intl/server"
+import {
+  getMessages,
+  getTranslations,
+  setRequestLocale,
+} from "next-intl/server"
 
 import type { AllMetricData, CommunityBlog, Lang } from "@/lib/types"
 
@@ -23,7 +27,6 @@ import {
 
 import HomePage from "./_components/home"
 
-import { loadMessages } from "@/i18n/loadMessages"
 import { fetchCommunityEvents } from "@/lib/api/calendarEvents"
 import { fetchEthPrice } from "@/lib/api/fetchEthPrice"
 import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
@@ -56,6 +59,8 @@ const loadData = dataLoader(
 const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const { locale } = await params
 
+  setRequestLocale(locale)
+
   const [
     ethPrice,
     totalEthStaked,
@@ -83,7 +88,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     .slice(0, CALENDAR_DISPLAY_COUNT)
 
   // Get i18n messages
-  const allMessages = await loadMessages(locale)
+  const allMessages = await getMessages({ locale })
   const requiredNamespaces = getRequiredNamespacesForPage("/")
   const messages = pick(allMessages, requiredNamespaces)
 
