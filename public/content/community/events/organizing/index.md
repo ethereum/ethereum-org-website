@@ -96,7 +96,7 @@ Every session, panel, and workshop should inform, inspire, and engage the commun
 
 Organizing a high-quality conference comes with significant costs — venue rental, promotional materials, food and beverages, production, and countless other expenses. Securing financial support early on is essential to ensure your event meets professional standards and delivers a great experience for your attendees.
 
-### How to create a deck?
+### How to create a sponsorship deck?
 
 First, you are going to need a deck. **Ask other conference organizers for advice**, even to share their decks so you can create your packages based on that. You should be realistic when it comes to pricing the packages and aim to cover the costs, not to earn money, especially in the beginning. 
 
