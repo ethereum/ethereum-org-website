@@ -75,7 +75,7 @@ Another important step before starting to build a program or reaching out to spo
 
 * **Avoid conflicting dates with major conferences** or events  
 * **Consider local conditions and circumstances** (such as season of the year, major holidays, etc.)  
-* **Take into consideration market conditions ** 
+* **Take into consideration market conditions** 
 * **Give yourself enough time to organize everything** — at least nine months
 
 ## How to assemble a team
