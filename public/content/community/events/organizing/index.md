@@ -124,7 +124,7 @@ In parallel with securing funding your main focus should be logistics. A well-or
 
 A person responsible for logistics should choose a venue, production company, and different vendors for food, beverages, and merch, as well as an easy-to-use online ticketing system that allows attendees to register and pay in crypto as well. 
 
-## Location Infrastructure
+## Location infrastructure
 
 When choosing a location for your conference, it’s important to think beyond the venue itself and consider the broader city and country infrastructure. Factors like weather, mobility, safety, and the political environment play a huge role in shaping the attendee experience.
 
