@@ -47,7 +47,7 @@ Here are some strategies for maintaining a vibrant Ethereum community:
 
 By providing diverse opportunities for learning, collaboration, and growth, you ensure that your community remains active and ready for bigger initiatives like organizing a conference.
 
-# Conference
+# Event
 
 ## When is the right time to organize an event?
 
