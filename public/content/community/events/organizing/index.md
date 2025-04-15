@@ -191,7 +191,7 @@ When organizing an event, there are several essential legal and logistical consi
 * **Ticketing agreement** – Establish a formal agreement with your ticketing service provider to clarify terms and responsibilities.  
 * **Regulatory compliance** – Check in advance if the country where you are hosting the conference has specific regulations or restrictions for the crypto industry  
 * **Customs clearance for merchandise** – If you are importing sponsor merchandise, it is recommended to hire a customs agent to handle the process efficiently.  
-*** Photography and media policy** – Clearly define guidelines on photography and media coverage, ensuring participants are informed about consent and opt-out options.
+* **Photography and media policy** – Clearly define guidelines on photography and media coverage, ensuring participants are informed about consent and opt-out options.
 
 # After the event: What’s next?
 
