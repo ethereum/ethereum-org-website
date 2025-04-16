@@ -15,6 +15,8 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import GetEthPage from "./_components/get-eth"
 
+import { routing } from "@/i18n/routing"
+
 export default async function Page({
   params,
 }: {
@@ -38,6 +40,10 @@ export default async function Page({
       <GetEthPage lastDataUpdateDate={lastDataUpdateDate} />
     </I18nProvider>
   )
+}
+
+export async function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }))
 }
 
 export async function generateMetadata({
