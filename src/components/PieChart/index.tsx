@@ -54,8 +54,12 @@ const COLORS = [
   "hsla(var(--accent-a))",
   "hsla(var(--accent-b))",
   "hsla(var(--accent-c))",
+  "hsla(var(--accent-a) / 0.7)",
+  "hsla(var(--accent-b) / 0.7)",
+  "hsla(var(--accent-c) / 0.7)",
+  "hsla(var(--accent-a) / 0.5)",
+  "hsla(var(--accent-b) / 0.5)",
 ];
-
 /*
 PieChart component renders a pie chart with the provided data, utilizing accent colors,
 and a vertical legend positioned to the right.
@@ -76,9 +80,8 @@ export function PieChart({
       </CardHeader>
       <CardContent>
         <ChartContainer config={defaultChartConfig}>
-          {/* Flexible container: bigger aspect ratio to allow legend on the right */}
-          <div style={{ width: "100%", minHeight: "300px" }}>
-            <ResponsiveContainer width="100%" height="100%" aspect={1.4}>
+          <div className="w-full min-h-[300px]">
+            <ResponsiveContainer width="100%" height={300}>
               <RechartsPieChart
                 margin={{ top: 16, bottom: 16, left: 8, right: 8 }}
               >
@@ -90,8 +93,11 @@ export function PieChart({
                   layout="vertical"
                   verticalAlign="middle"
                   align="right"
-                  // Slightly reduce font size so legend doesn't dominate on small screens
-                  wrapperStyle={{ fontSize: "0.9rem", marginRight: "8px" }}
+                  wrapperStyle={{
+                    fontSize: "0.9rem",
+                    marginRight: "8px",
+                    whiteSpace: "nowrap",
+                  }}
                   formatter={(value, entry) => {
                     const payload =
                       entry.payload as unknown as PieChartDataPoint;
@@ -102,10 +108,9 @@ export function PieChart({
                   data={data}
                   dataKey="value"
                   nameKey="name"
-                  // Shift the pie so there's room on the right for the legend
                   cx="35%"
                   cy="50%"
-                  outerRadius={70} // Adjust as needed so it doesn't collide with legend
+                  outerRadius={70}
                   label={false}
                 >
                   {data.map((_, index) => (
