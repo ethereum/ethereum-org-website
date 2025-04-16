@@ -39,8 +39,9 @@ Although these are unlikely scenarios, the Ethereum eco-system can mitigate thei
 
 There is also a human cost to having majority clients. It puts excess strain and responsibility on a small development team. The lesser the client diversity, the greater the burden of responsibility for the developers maintaining the majority client. Spreading this responsibility across multiple teams is good for both the health of Ethereum's network of nodes and its network of people.
 
-## Current client diversity {#current-client-diversity}
-<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+### Current client diversity {#current-client-diversity}
+<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+  {/* Execution Clients */}
   <PieChart
     data={[
       { name: "Geth", value: 43 },
@@ -52,6 +53,7 @@ There is also a human cost to having majority clients. It puts excess strain and
     ]}
     title="Execution Clients"
   />
+  {/* Consensus Clients */}
   <PieChart
     data={[
       { name: "Lighthouse", value: 32.59 },

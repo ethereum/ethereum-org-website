@@ -74,40 +74,40 @@ export function PieChart({
         {description && <CardDescription>{description}</CardDescription>}
       </CardHeader>
       <CardContent>
-        {/* 
-          Wrap the RechartsPieChart in ResponsiveContainer
-          so that the chart scales to the container size.
-        */}
         <ChartContainer config={defaultChartConfig}>
-          <div style={{ width: "100%", height: "400px" }}>
-            <ResponsiveContainer width="100%" aspect={1}>
-              <RechartsPieChart margin={{ top: 12, bottom: 12 }}>
+          {/* 
+            Keep a flexible container that expands on large screens 
+            but doesn't shrink below 300px on small screens
+          */}
+          <div style={{ width: "100%", minHeight: "300px" }}>
+            <ResponsiveContainer width="100%" height="100%" aspect={1.2}>
+              <RechartsPieChart margin={{ top: 8, bottom: 8 }}>
                 <ChartTooltip
                   cursor={false}
                   content={<ChartTooltipContent />}
                 />
-
                 <Legend
                   layout="vertical"
                   verticalAlign="middle"
                   align="right"
+                  // Scale down the legend text to avoid crowding on mobile
+                  wrapperStyle={{ fontSize: "0.9rem" }}
                   formatter={(value, entry) => {
+                    // Cast payload to get the numeric value for the legend
                     const payload =
                       entry.payload as unknown as PieChartDataPoint;
                     return `${value} (${payload.value}%)`;
                   }}
                 />
-
                 <Pie
                   data={data}
                   dataKey="value"
                   nameKey="name"
-                  // Disable slice labels (we're showing percentages in the legend)
-                  label={false}
-                  // Center the chart horizontally by adjusting cx
+                  // Slightly shift the pie left to allow room for vertical legend on the right
                   cx="40%"
                   cy="50%"
                   outerRadius={80}
+                  label={false} // We'll rely on the legend for percentages
                 >
                   {data.map((_, index) => (
                     <Cell
