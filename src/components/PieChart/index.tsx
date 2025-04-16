@@ -68,16 +68,18 @@ export function PieChart({
   footerSubText,
 }: PieChartProps) {
   return (
-    <Card className="w-full max-w-md">
+    <Card className="w-full">
       <CardHeader>
         {title && <CardTitle className="text-center">{title}</CardTitle>}
         {description && <CardDescription>{description}</CardDescription>}
       </CardHeader>
       <CardContent>
         <ChartContainer config={defaultChartConfig}>
-          <div className="w-full min-h-[300px]">
-            <ResponsiveContainer width="100%" height={300}>
-              <RechartsPieChart>
+          <div className="w-full min-h-[350px]">
+            <ResponsiveContainer width="100%" height={350}>
+              <RechartsPieChart
+                margin={{ top: 10, right: 10, bottom: 10, left: 10 }}
+              >
                 <ChartTooltip
                   cursor={false}
                   content={<ChartTooltipContent />}
@@ -87,25 +89,30 @@ export function PieChart({
                   verticalAlign="middle"
                   align="right"
                   wrapperStyle={{
-                    fontSize: "0.9rem",
+                    fontSize: "0.85rem",
                     paddingLeft: "10px",
                     lineHeight: "1.8em",
+                    maxWidth: "40%", // Control legend width
                   }}
                   formatter={(value, entry) => {
                     const payload =
                       entry.payload as unknown as PieChartDataPoint;
-                    return `${value} (${payload.value}%)`;
+                    // Format to 2 decimal places if needed
+                    const formattedValue = Number.isInteger(payload.value)
+                      ? payload.value
+                      : payload.value.toFixed(2);
+                    return `${value} (${formattedValue}%)`;
                   }}
                 />
                 <Pie
                   data={data}
                   dataKey="value"
                   nameKey="name"
-                  cx="40%"
+                  cx="35%"
                   cy="50%"
-                  outerRadius={80}
+                  outerRadius={75}
                   innerRadius={0}
-                  paddingAngle={0}
+                  paddingAngle={1}
                   label={false}
                 >
                   {data.map((_, index) => (
