@@ -41,7 +41,7 @@ lang: fa
 
 - [Introduction to proof-of-stake](/developers/docs/consensus-mechanisms/pos/)
 - [Casper-FFG paper](https://arxiv.org/abs/1710.09437)
-- [توضیح‌دهنده Casper-FFG](https://arxiv.org/abs/1710.09437)
+- [توضیح‌دهنده Casper-FFG](https://medium.com/unitychain/intro-to-casper-ffg-9ed944d98b2d)
 - [Gasper paper](https://arxiv.org/abs/2003.03052)
 
 #### جدیدترین تحقیقات {#recent-research}

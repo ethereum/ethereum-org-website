@@ -41,7 +41,7 @@ lang: el
 
 - [Είσοδος στην απόδειξη συμμετοχής](/developers/docs/consensus-mechanisms/pos/)
 - [Έγγραφο Casper-FFG](https://arxiv.org/abs/1710.09437)
-- [Εξήγηση Casper-FFG](https://arxiv.org/abs/1710.09437)
+- [Εξήγηση Casper-FFG](https://medium.com/unitychain/intro-to-casper-ffg-9ed944d98b2d)
 - [Έγγραφο Gasper](https://arxiv.org/abs/2003.03052)
 
 #### Πρόσφατη έρευνα {#recent-research}
