@@ -76,26 +76,22 @@ export function PieChart({
       </CardHeader>
       <CardContent>
         <ChartContainer config={defaultChartConfig}>
-          {/* 
-            Container div with 100% width and a flexible minHeight 
-            to prevent the chart from looking too small on mobile.
-          */}
+          {/* Flexible container: bigger aspect ratio to allow legend on the right */}
           <div style={{ width: "100%", minHeight: "300px" }}>
-            <ResponsiveContainer width="100%" height="100%" aspect={1.2}>
-              <RechartsPieChart margin={{ top: 4, bottom: 4 }}>
+            <ResponsiveContainer width="100%" height="100%" aspect={1.4}>
+              <RechartsPieChart
+                margin={{ top: 16, bottom: 16, left: 8, right: 8 }}
+              >
                 <ChartTooltip
                   cursor={false}
                   content={<ChartTooltipContent />}
                 />
-                {/* Legend below the chart */}
                 <Legend
-                  layout="horizontal"
-                  verticalAlign="bottom"
-                  align="center"
-                  wrapperStyle={{
-                    fontSize: "clamp(0.7rem, 2vw, 0.9rem)",
-                    marginTop: 4,
-                  }}
+                  layout="vertical"
+                  verticalAlign="middle"
+                  align="right"
+                  // Slightly reduce font size so legend doesn't dominate on small screens
+                  wrapperStyle={{ fontSize: "0.9rem", marginRight: "8px" }}
                   formatter={(value, entry) => {
                     const payload =
                       entry.payload as unknown as PieChartDataPoint;
@@ -106,10 +102,11 @@ export function PieChart({
                   data={data}
                   dataKey="value"
                   nameKey="name"
-                  cx="50%"
+                  // Shift the pie so there's room on the right for the legend
+                  cx="35%"
                   cy="50%"
-                  outerRadius={90}
-                  label={false} // Hide slice labels in favor of legend
+                  outerRadius={70} // Adjust as needed so it doesn't collide with legend
+                  label={false}
                 >
                   {data.map((_, index) => (
                     <Cell
