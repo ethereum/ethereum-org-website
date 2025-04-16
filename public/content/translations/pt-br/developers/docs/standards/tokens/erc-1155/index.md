@@ -23,7 +23,7 @@ Para entender melhor esta página, recomendamos ler primeiro sobre [padrões de 
 - [Transferências em lote](#batch_transfers): transfira vários ativos em uma única chamada.
 - [Saldo em lote](#batch_balance): obtenha os saldos de vários ativos em uma única chamada.
 - [Aprovação em lote](#batch_approval): aprove todos os tokens de um endereço.
-- [Hooks](#recieve_hook): receba hook de tokens.
+- [Hooks](#receive_hook): receba hook de tokens.
 - [Suporte para NFT](#nft_support): se a cunhagem for de apenas 1, tratar como NFT.
 - [Regras de transferência segura](#safe_transfer_rule): conjunto de regras para transferências seguras.
 
