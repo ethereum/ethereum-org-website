@@ -41,38 +41,34 @@ There is also a human cost to having majority clients. It puts excess strain and
 
 ## Current client diversity {#current-client-diversity}
 
-<div
-  style={{
-    display: "grid",
-    gridTemplateColumns: "1fr 1fr",
-    gap: "2rem",
-    alignItems: "start",
-    marginTop: "2rem",
-  }}
->
-  <PieChart
-    data={[
-      { name: "Geth", value: 43 },
-      { name: "Nethermind", value: 36 },
-      { name: "Besu", value: 16 },
-      { name: "Erigon", value: 3 },
-      { name: "Reth", value: 2 },
-      { name: "Other", value: 0 },
-    ]}
-    title="Execution Clients"
-  />
-  <PieChart
-    data={[
-      { name: "Lighthouse", value: 32.59 },
-      { name: "Prysm", value: 31.31 },
-      { name: "Teku", value: 27.06 },
-      { name: "Nimbus", value: 5.63 },
-      { name: "Grandine", value: 2.0 },
-      { name: "Lodestar", value: 1.42 },
-      { name: "Others", value: 0.15 },
-    ]}
-    title="Consensus Clients"
-  />
+<div className="flex flex-wrap gap-4 mt-8">
+  <div className="w-full md:w-1/2">
+    <PieChart
+      data={[
+        { name: "Geth", value: 43 },
+        { name: "Nethermind", value: 36 },
+        { name: "Besu", value: 16 },
+        { name: "Erigon", value: 3 },
+        { name: "Reth", value: 2 },
+        { name: "Other", value: 0 },
+      ]}
+      title="Execution Clients"
+    />
+  </div>
+  <div className="w-full md:w-1/2">
+    <PieChart
+      data={[
+        { name: "Lighthouse", value: 32.59 },
+        { name: "Prysm", value: 31.31 },
+        { name: "Teku", value: 27.06 },
+        { name: "Nimbus", value: 5.63 },
+        { name: "Grandine", value: 2.0 },
+        { name: "Lodestar", value: 1.42 },
+        { name: "Others", value: 0.15 },
+      ]}
+      title="Consensus Clients"
+    />
+  </div>
 </div>
 
 ![Pie chart showing client diversity](./client-diversity.png)
