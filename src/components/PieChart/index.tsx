@@ -60,6 +60,7 @@ const COLORS = [
 PieChart component renders a pie chart with the provided data, utilizing accent colors,
 and a vertical legend positioned to the right.
 */
+
 export function PieChart({
   data,
   title,
@@ -75,20 +76,26 @@ export function PieChart({
       </CardHeader>
       <CardContent>
         <ChartContainer config={defaultChartConfig}>
-          {/* Let the container grow while ensuring a minimum height */}
+          {/* 
+            Container div with 100% width and a flexible minHeight 
+            to prevent the chart from looking too small on mobile.
+          */}
           <div style={{ width: "100%", minHeight: "300px" }}>
-            <ResponsiveContainer width="100%" height="100%" aspect={1.3}>
-              <RechartsPieChart margin={{ top: 8, bottom: 8 }}>
+            <ResponsiveContainer width="100%" height="100%" aspect={1.2}>
+              <RechartsPieChart margin={{ top: 4, bottom: 4 }}>
                 <ChartTooltip
                   cursor={false}
                   content={<ChartTooltipContent />}
                 />
-                {/* Legend on the bottom so the pie is centered */}
+                {/* Legend below the chart */}
                 <Legend
                   layout="horizontal"
                   verticalAlign="bottom"
                   align="center"
-                  wrapperStyle={{ fontSize: "0.9rem" }}
+                  wrapperStyle={{
+                    fontSize: "clamp(0.7rem, 2vw, 0.9rem)",
+                    marginTop: 4,
+                  }}
                   formatter={(value, entry) => {
                     const payload =
                       entry.payload as unknown as PieChartDataPoint;
@@ -101,8 +108,8 @@ export function PieChart({
                   nameKey="name"
                   cx="50%"
                   cy="50%"
-                  outerRadius={90} // Big enough to fill space, not too big on small screens
-                  label={false} // No slice labels, rely on legend for percentages
+                  outerRadius={90}
+                  label={false} // Hide slice labels in favor of legend
                 >
                   {data.map((_, index) => (
                     <Cell
