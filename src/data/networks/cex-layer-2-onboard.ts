@@ -20,6 +20,6 @@ export const cexOnboardData: CexOnboard[] = [
       "Kucoin",
       "OKX",
     ],
-    network_support: ["Arbitrum", "Loopring", "Optimism", "zkSpace", "ZKsync"],
+    network_support: ["Arbitrum", "Optimism", "zkSpace", "ZKsync"],
   },
 ]

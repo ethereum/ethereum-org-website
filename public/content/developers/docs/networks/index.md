@@ -38,12 +38,7 @@ The two public testnets that client developers are currently maintaining are Sep
 
 #### Sepolia {#sepolia}
 
-**Sepolia is the recommended default testnet for application development**.
-The Sepolia network uses a permissioned validator set. It's fairly new, meaning its state and history are both quite small. This means the network is quick to sync to and that running a node on it requires less storage. This is useful for users who want to quickly spin up a node and interact with the network directly.
-
-- Closed validator set, controlled by client & testing teams
-- New testnet, less applications deployed than other testnets
-- Fast to sync and running a node requires minimal disk space
+**Sepolia is the recommended default testnet for application development**. The Sepolia network uses a permissioned validator set controlled by client & testing teams.
 
 ##### Resources
 
@@ -55,14 +50,14 @@ The Sepolia network uses a permissioned validator set. It's fairly new, meaning 
 
 ##### Faucets
 
-- [QuickNode Sepolia Faucet](https://faucet.quicknode.com/drip)
+- [QuickNode Sepolia Faucet](https://faucet.quicknode.com/ethereum/sepolia)
 - [Grabteeth](https://grabteeth.xyz/)
 - [PoW faucet](https://sepolia-faucet.pk910.de/)
-- [Coinbase Wallet Faucet | Sepolia](https://coinbase.com/faucets/ethereum-sepolia-faucet)
-- [Alchemy Sepolia faucet](https://sepoliafaucet.com/)
+- [Alchemy Sepolia faucet](https://www.alchemy.com/faucets/ethereum-sepolia)
 - [Infura Sepolia faucet](https://www.infura.io/faucet)
-- [Chainstack Sepolia faucet](https://faucet.chainstack.com/sepolia-faucet)
+- [Chainstack Sepolia faucet](https://faucet.chainstack.com/sepolia-testnet-faucet)
 - [Ethereum Ecosystem faucet](https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia)
+- [Google Cloud Web3 Sepolia faucet](https://cloud.google.com/application/web3/faucet/ethereum/sepolia)
 
 #### Hoodi {#hoodi}
 
@@ -78,10 +73,35 @@ Hoodi is a testnet for testing validating and staking. The Hoodi network is open
 - [GitHub](https://github.com/eth-clients/hoodi)
 - [Explorer](https://explorer.hoodi.ethpandaops.io/)
 - [Checkpoint Sync](https://checkpoint-sync.hoodi.ethpandaops.io/)
+- [Otterscan](https://hoodi.otterscan.io/)
+- [Etherscan](https://hoodi.etherscan.io/)
+- [Blockscout](https://hoodi.cloud.blockscout.com/)
 
 ##### Faucets
 
 - [Hoodi Faucet](https://hoodi.ethpandaops.io/)
+- [PoW faucet](https://hoodi-faucet.pk910.de/)
+
+#### Holesky {#holesky}
+
+The Holesky testnet will be [deprecated in September 2025](https://blog.ethereum.org/en/2025/03/18/hoodi-holesky). Staking operators and infrastructure providers should use Hoodi for validator testing instead.
+
+##### Resources
+
+- [Website](https://holesky.ethpandaops.io/)
+- [GitHub](https://github.com/eth-clients/holesky)
+- [Otterscan](https://holesky.otterscan.io/)
+- [Etherscan](https://holesky.etherscan.io/)
+- [Blockscout](https://eth-holesky.blockscout.com/)
+
+##### Faucets
+
+- [QuickNode Holesky Faucet](https://faucet.quicknode.com/ethereum/holesky)
+- [PoW faucet](https://holesky-faucet.pk910.de/)
+- [Alchemy Holesky Faucet](https://www.alchemy.com/faucets/ethereum-holesky)
+- [Chainstack Holesky faucet](https://faucet.chainstack.com/holesky-testnet-faucet)
+- [Ethereum Ecosystem faucet](https://www.ethereum-ecosystem.com/faucets/ethereum-holesky)
+- [Google Cloud Web3 Holesky faucet](https://cloud.google.com/application/web3/faucet/ethereum/holesky)
 
 To launch a Validator on Hoodi testnet, use [Hoodi launchpad](https://hoodi.launchpad.ethereum.org/en/).
 
@@ -93,27 +113,47 @@ To launch a Validator on Hoodi testnet, use [Hoodi launchpad](https://hoodi.laun
 
 A testnet for [Arbitrum](https://arbitrum.io/).
 
+##### Resources
+
+- [Etherscan](https://sepolia.arbiscan.io/)
+- [Blockscout](https://sepolia-explorer.arbitrum.io/)
+
 ##### Faucets
 
 - [Chainlink faucet](https://faucets.chain.link/arbitrum-sepolia)
 - [Alchemy faucet](https://www.alchemy.com/faucets/arbitrum-sepolia)
+- [QuickNode Arbitrum Sepolia Faucet](https://faucet.quicknode.com/arbitrum/sepolia)
+- [Alchemy Arbitrum Sepolia Faucet](https://www.alchemy.com/faucets/arbitrum-sepolia)
+- [Chainlink Arbitrum Sepolia faucet](https://faucets.chain.link/arbitrum-sepolia)
 
 #### Optimistic Sepolia {#optimistic-sepolia}
 
 A testnet for [Optimism](https://www.optimism.io/).
 
+##### Resources
+
+- [Etherscan](https://sepolia-optimistic.etherscan.io/)
+- [Blockscout](https://optimism-sepolia.blockscout.com/)
+
 ##### Faucets
 
 - [Chainlink faucet](https://faucets.chain.link/optimism-sepolia)
 - [Alchemy faucet](https://www.alchemy.com/faucets/optimism-sepolia)
+- [Testnet faucets](https://docs.optimism.io/builders/tools/build/faucets)
 
 #### Starknet Sepolia {#starknet-sepolia}
 
 A testnet for [Starknet](https://www.starknet.io).
 
+##### Resources
+
+- [Starkscan](https://sepolia.starkscan.co/)
+
 ##### Faucets
 
 - [Alchemy faucet](https://www.alchemy.com/faucets/starknet-sepolia)
+- [Starknet faucet](https://starknet-faucet.vercel.app/)
+- [Blast Starknet Sepolia faucet](https://blastapi.io/faucets/starknet-sepolia-eth)
 
 ## Private networks {#private-networks}
 

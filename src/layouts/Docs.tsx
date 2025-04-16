@@ -28,7 +28,7 @@ import Translation from "@/components/Translation"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Divider } from "@/components/ui/divider"
 import InlineLink from "@/components/ui/Link"
-import { mdxTableComponents } from "@/components/ui/table"
+import { mdxTableComponents } from "@/components/ui/mdx-table-components"
 import YouTube from "@/components/YouTube"
 
 import { cn } from "@/lib/utils/cn"

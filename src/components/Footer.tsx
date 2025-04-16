@@ -2,6 +2,7 @@
 
 import { FaDiscord, FaGithub, FaXTwitter } from "react-icons/fa6"
 import { IoChevronUpSharp } from "react-icons/io5"
+import { SiFarcaster } from "react-icons/si"
 
 import type { FooterLink, FooterLinkSection } from "@/lib/types"
 
@@ -23,9 +24,14 @@ const socialLinks = [
     ariaLabel: "GitHub",
   },
   {
+    icon: SiFarcaster,
+    href: "https://warpcast.com/ethdotorg",
+    ariaLabel: "Farcaster",
+  },
+  {
     icon: FaXTwitter,
-    href: "https://twitter.com/ethdotorg",
-    ariaLabel: "Twitter",
+    href: "https://x.com/ethdotorg",
+    ariaLabel: "X",
   },
   {
     icon: FaDiscord,
