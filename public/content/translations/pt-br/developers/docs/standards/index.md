@@ -40,7 +40,7 @@ Encontre informações mais detalhadas sobre esses tipos e categorias diferentes
 ### Padrões de token {#token-standards}
 
 - [ERC-20](/developers/docs/standards/tokens/erc-20/) - Uma interface padrão para tokens fungíveis (intermutáveis), como tokens de votação, tokens de staking ou moedas virtuais.
-  - [ERC-1363:](https://eips.ethereum.org/EIPS/eip-1363)define uma interface de token para tokens ERC-20 que suportam a execução do código destinatário após a transferência (ou transferFrom), ou o código do gastador após a aprovação
+  - [ERC-1363:](/developers/docs/standards/tokens/erc-1363/)define uma interface de token para tokens ERC-20 que suportam a execução do código destinatário após a transferência (ou transferFrom), ou o código do gastador após a aprovação
 - [ERC-721](/developers/docs/standards/tokens/erc-721/) - Uma interface padrão para tokens não fungíveis, como uma ação para obra de arte ou uma música.
   - [ERC-2309](https://eips.ethereum.org/EIPS/eip-2309): um evento padronizado emitido ao criar/transferir um ou muitos tokens não-fungíveis usando identificadores de token consecutivos.
   - [ERC-4400:](https://eips.ethereum.org/EIPS/eip-4400)extensão da interface para o papel do consumidor EIP-721
