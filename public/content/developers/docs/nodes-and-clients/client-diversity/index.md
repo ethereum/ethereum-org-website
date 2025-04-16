@@ -40,32 +40,34 @@ Although these are unlikely scenarios, the Ethereum eco-system can mitigate thei
 There is also a human cost to having majority clients. It puts excess strain and responsibility on a small development team. The lesser the client diversity, the greater the burden of responsibility for the developers maintaining the majority client. Spreading this responsibility across multiple teams is good for both the health of Ethereum's network of nodes and its network of people.
 
 ### Current client diversity {#current-client-diversity}
-<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-  {/* Execution Clients */}
-  <PieChart
-    data={[
-      { name: "Geth", value: 43 },
-      { name: "Nethermind", value: 36 },
-      { name: "Besu", value: 16 },
-      { name: "Erigon", value: 3 },
-      { name: "Reth", value: 2 },
-      { name: "Other", value: 0 },
-    ]}
-    title="Execution Clients"
-  />
-  {/* Consensus Clients */}
-  <PieChart
-    data={[
-      { name: "Lighthouse", value: 32.59 },
-      { name: "Prysm", value: 31.31 },
-      { name: "Teku", value: 27.06 },
-      { name: "Nimbus", value: 5.63 },
-      { name: "Grandine", value: 2.0 },
-      { name: "Lodestar", value: 1.42 },
-      { name: "Others", value: 0.15 },
-    ]}
-    title="Consensus Clients"
-  />
+<div className="flex flex-col md:flex-row justify-center items-start gap-8">
+  <div className="w-full md:w-1/2 max-w-xl mx-auto md:mx-0">
+    <PieChart
+      data={[
+        { name: "Geth", value: 43 },
+        { name: "Nethermind", value: 36 },
+        { name: "Besu", value: 16 },
+        { name: "Erigon", value: 3 },
+        { name: "Reth", value: 2 },
+        { name: "Other", value: 0 },
+      ]}
+      title="Execution Clients"
+    />
+  </div>
+  <div className="w-full md:w-1/2 max-w-xl mx-auto md:mx-0">
+    <PieChart
+      data={[
+        { name: "Lighthouse", value: 32.59 },
+        { name: "Prysm", value: 31.31 },
+        { name: "Teku", value: 27.06 },
+        { name: "Nimbus", value: 5.63 },
+        { name: "Grandine", value: 2.0 },
+        { name: "Lodestar", value: 1.42 },
+        { name: "Others", value: 0.15 },
+      ]}
+      title="Consensus Clients"
+    />
+  </div>
 </div>
 
 ![Pie chart showing client diversity](./client-diversity.png)
