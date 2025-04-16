@@ -1,7 +1,13 @@
 "use client";
 
 import { FaArrowTrendUp } from "react-icons/fa6";
-import { Cell, Legend, Pie, PieChart as RechartsPieChart } from "recharts";
+import {
+  Cell,
+  Legend,
+  Pie,
+  PieChart as RechartsPieChart,
+  ResponsiveContainer,
+} from "recharts";
 
 import {
   Card,
@@ -68,47 +74,51 @@ export function PieChart({
         {description && <CardDescription>{description}</CardDescription>}
       </CardHeader>
       <CardContent>
+        {/* 
+          Wrap the RechartsPieChart in ResponsiveContainer
+          so that the chart scales to the container size.
+        */}
         <ChartContainer config={defaultChartConfig}>
-          <RechartsPieChart
-            width={400}
-            height={400}
-            margin={{
-              left: 12,
-              right: 12,
-              top: 12,
-              bottom: 12,
-            }}
-          >
-            <ChartTooltip cursor={false} content={<ChartTooltipContent />} />
-            <Legend
-              layout="vertical"
-              verticalAlign="middle"
-              align="right"
-              formatter={(value, entry) => {
-                // Cast payload to unknown and then to PieChartDataPoint to access .value
-                const payload = entry.payload as unknown as PieChartDataPoint;
-                return `${value} (${payload.value}%)`;
-              }}
-            />
-            <Pie
-              data={data}
-              dataKey="value"
-              nameKey="name"
-              // Shift the pie chart leftward to make room for the vertical legend
-              cx="40%"
-              cy="50%"
-              outerRadius={80}
-              // Disable labels on the slices
-              label={false}
-            >
-              {data.map((_, index) => (
-                <Cell
-                  key={`cell-${index}`}
-                  fill={COLORS[index % COLORS.length]}
+          <div style={{ width: "100%", height: "400px" }}>
+            <ResponsiveContainer width="100%" aspect={1}>
+              <RechartsPieChart margin={{ top: 12, bottom: 12 }}>
+                <ChartTooltip
+                  cursor={false}
+                  content={<ChartTooltipContent />}
                 />
-              ))}
-            </Pie>
-          </RechartsPieChart>
+
+                <Legend
+                  layout="vertical"
+                  verticalAlign="middle"
+                  align="right"
+                  formatter={(value, entry) => {
+                    const payload =
+                      entry.payload as unknown as PieChartDataPoint;
+                    return `${value} (${payload.value}%)`;
+                  }}
+                />
+
+                <Pie
+                  data={data}
+                  dataKey="value"
+                  nameKey="name"
+                  // Disable slice labels (we're showing percentages in the legend)
+                  label={false}
+                  // Center the chart horizontally by adjusting cx
+                  cx="40%"
+                  cy="50%"
+                  outerRadius={80}
+                >
+                  {data.map((_, index) => (
+                    <Cell
+                      key={`cell-${index}`}
+                      fill={COLORS[index % COLORS.length]}
+                    />
+                  ))}
+                </Pie>
+              </RechartsPieChart>
+            </ResponsiveContainer>
+          </div>
         </ChartContainer>
       </CardContent>
       {(footerText || footerSubText) && (
