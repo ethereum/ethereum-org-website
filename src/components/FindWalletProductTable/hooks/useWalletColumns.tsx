@@ -6,6 +6,7 @@ import { Wallet } from "@/lib/types"
 
 import type { TableMeta } from "@/components/DataTable"
 import WalletInfo from "@/components/FindWalletProductTable/WalletInfo"
+import Translation from "@/components/Translation"
 import { Button } from "@/components/ui/buttons/Button"
 import { TableCell } from "@/components/ui/table"
 
@@ -35,15 +36,16 @@ export const useWalletColumns: ColumnDef<Wallet>[] = [
           </Button>
           {meta.dataLength === meta.allDataLength ? (
             <p>
-              Showing all wallets <b>({meta.dataLength})</b>
+              <Translation id="page-wallets-find-wallet:page-find-wallet-showing-all-wallets" />
+              <b>({meta.dataLength})</b>
             </p>
           ) : (
             <p>
-              Showing{" "}
+              <Translation id="page-wallets-find-wallet:page-find-wallet-showing" />{" "}
               <b>
                 {meta.dataLength}/{meta.allDataLength}
               </b>{" "}
-              wallets
+              <Translation id="page-wallets-find-wallet:page-find-wallet-wallets" />
             </p>
           )}
         </div>
