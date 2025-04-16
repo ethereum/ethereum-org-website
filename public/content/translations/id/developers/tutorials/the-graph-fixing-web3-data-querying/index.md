@@ -91,7 +91,7 @@ Pertama, mari kita bicara tentang GraphQL, yang semula dirancang dan diimplement
 
 <img src="https://cdn0.scrvt.com/b095ee27d37b3d7b6b150adba9ac6ec8/42226f4816a77656/bc5c8b270798/graphql-querygif.gif" width="100%" />
 
-Kedua gambar cukup menangkap inti GraphQL. Dengan kueri di sebelah kanan, kita bisa secara persis menentukan data apa yang kita inginkan, sehingga di sana kita mendapatkan semua hal dalam satu permintaan dan tidak lebih dari yang benar-benar kita butuhkan. Server GraphQL menangani pengambilan semua data yang diperlukan, sehingga itu sangat mudah digunakan dari sisi pengguna frontend. [Ini adalah penjelasan baik](https://www.apollographql.com/blog/graphql-explained-5844742f195e/) tentang bagaimana sebenarnya server menangani kueri jika Anda tertarik.
+Kedua gambar cukup menangkap inti GraphQL. Dengan kueri di sebelah kanan, kita bisa secara persis menentukan data apa yang kita inginkan, sehingga di sana kita mendapatkan semua hal dalam satu permintaan dan tidak lebih dari yang benar-benar kita butuhkan. Server GraphQL menangani pengambilan semua data yang diperlukan, sehingga itu sangat mudah digunakan dari sisi pengguna frontend. [Ini adalah penjelasan baik](https://www.apollographql.com/blog/graphql-explained) tentang bagaimana sebenarnya server menangani kueri jika Anda tertarik.
 
 Sekarang dengan pengetahuan itu, mari akhirnya masuk ke dalam ruang blockchain dan The Graph.
 
@@ -124,7 +124,7 @@ Anda bisa menentukan kontrak dan handler beragam di sini. Pengaturan umumnya aka
 
 Untuk alasan kenyamanan, Anda mungkin juga mau menggunakan peralatan templat seperti mustache. Then you create a `subgraph.template.yaml` and insert the addresses based on the latest deployments. Untuk pengaturan percontohan yang lebih canggih, lihat contoh [repo subgraph Aave](https://github.com/aave/aave-protocol/tree/master/thegraph).
 
-Dan dokumentasi lengkapnya bisa dilihat di sini: https://thegraph.com/docs/define-a-subgraph#the-subgraph-manifest.
+Dan dokumentasi lengkapnya bisa dilihat di sini: https://thegraph.com/docs/en/subgraphs/developing/creating/subgraph-manifest.
 
 ```yaml
 specVersion: 0.0.1
@@ -167,7 +167,7 @@ Skema adalah definisi data GraphQL. Skema akan memungkinkan Anda menentukan enti
 - BigInt
 - BigDecimal
 
-Anda bisa juga menggunakan entitas sebagai jenis untuk menentukan hubungan. Dalam contoh kita, kita menentukan 1 untuk banyak hubungan dari pemain ke taruhan. Tanda ! berarti nilai tidak boleh kosong. Dokumentasi lengkapnya bisa dilihat di sini: https://thegraph.com/docs/define-a-subgraph#the-graphql-schema.
+Anda bisa juga menggunakan entitas sebagai jenis untuk menentukan hubungan. Dalam contoh kita, kita menentukan 1 untuk banyak hubungan dari pemain ke taruhan. Tanda ! berarti nilai tidak boleh kosong. Dokumentasi lengkapnya bisa dilihat di sini: https://thegraph.com/docs/en/subgraphs/developing/creating/ql-schema.
 
 ```graphql
 type Bet @entity {
@@ -196,7 +196,7 @@ Lalu kita membuat entitas Bet baru. The id for this will be `event.transaction.h
 
 Lastly we can update the Player entity with all the data. Array tidak boleh didorong secara langsung, tapi perlu diperbarui seperti yang ditunjukkan di sini. Kita menggunakan id untuk merujuk pada taruhannya. And `.save()` is required at the end to store an entity.
 
-Dokumentasi lengkapnya bisa dilihat di sini: https://thegraph.com/docs/define-a-subgraph#writing-mappings. Anda juga bisa menambahkan output yang membuat log ke file pemetaan, lihat [di sini](https://thegraph.com/docs/assemblyscript-api#api-reference).
+Dokumentasi lengkapnya bisa dilihat di sini: https://thegraph.com/docs/en/subgraphs/developing/creating/assemblyscript-mappings/#writing-mappings. Anda juga bisa menambahkan output yang membuat log ke file pemetaan, lihat [di sini](https://thegraph.com/docs/en/subgraphs/developing/creating/graph-ts/api/#api-reference).
 
 ```typescript
 import { Bet, Player } from "../generated/schema"

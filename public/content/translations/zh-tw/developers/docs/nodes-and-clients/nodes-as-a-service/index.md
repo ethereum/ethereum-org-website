@@ -264,7 +264,7 @@ sidebarDepth: 2
     - 直接技術支援
 
 - [**NodeReal MegaNode**](https://nodereal.io/)
-  - [文件](https://docs.nodereal.io/nodereal/meganode/introduction)
+  - [文件](https://docs.nodereal.io/docs/introduction)
   - 功能
     - 可靠、快速和可擴充的遠端程序呼叫應用程式介面服務
     - 專為 Web3 開發者打造的增強版應用程式介面
