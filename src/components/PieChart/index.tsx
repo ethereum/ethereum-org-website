@@ -54,11 +54,6 @@ const COLORS = [
   "hsla(var(--accent-a))",
   "hsla(var(--accent-b))",
   "hsla(var(--accent-c))",
-  "hsla(var(--accent-a) / 0.7)",
-  "hsla(var(--accent-b) / 0.7)",
-  "hsla(var(--accent-c) / 0.7)",
-  "hsla(var(--accent-a) / 0.5)",
-  "hsla(var(--accent-b) / 0.5)",
 ];
 /*
 PieChart component renders a pie chart with the provided data, utilizing accent colors,
@@ -73,18 +68,16 @@ export function PieChart({
   footerSubText,
 }: PieChartProps) {
   return (
-    <Card>
+    <Card className="w-full max-w-md">
       <CardHeader>
-        {title && <CardTitle>{title}</CardTitle>}
+        {title && <CardTitle className="text-center">{title}</CardTitle>}
         {description && <CardDescription>{description}</CardDescription>}
       </CardHeader>
       <CardContent>
         <ChartContainer config={defaultChartConfig}>
           <div className="w-full min-h-[300px]">
             <ResponsiveContainer width="100%" height={300}>
-              <RechartsPieChart
-                margin={{ top: 16, bottom: 16, left: 8, right: 8 }}
-              >
+              <RechartsPieChart>
                 <ChartTooltip
                   cursor={false}
                   content={<ChartTooltipContent />}
@@ -95,8 +88,8 @@ export function PieChart({
                   align="right"
                   wrapperStyle={{
                     fontSize: "0.9rem",
-                    marginRight: "8px",
-                    whiteSpace: "nowrap",
+                    paddingLeft: "10px",
+                    lineHeight: "1.8em",
                   }}
                   formatter={(value, entry) => {
                     const payload =
@@ -108,9 +101,11 @@ export function PieChart({
                   data={data}
                   dataKey="value"
                   nameKey="name"
-                  cx="35%"
+                  cx="40%"
                   cy="50%"
-                  outerRadius={70}
+                  outerRadius={80}
+                  innerRadius={0}
+                  paddingAngle={0}
                   label={false}
                 >
                   {data.map((_, index) => (
