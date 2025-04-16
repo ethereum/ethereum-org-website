@@ -207,8 +207,8 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"web3_sha3","params":["0x68656c6c
 当前网络 ID 的完整列表可在 [chainlist.org](https://chainlist.org) 获得。 下面是部分常见网络 ID：
 
 - `1`：以太坊主网
-- `5`：Goerli 测试网
 - `11155111`：Sepolia 测试网
+- `17000`：Hoodi 测试网
 
 **示例**
 

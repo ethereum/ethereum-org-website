@@ -61,18 +61,25 @@ The two public testnets that client developers are currently maintaining are Sep
 
 #### Hoodi {#hoodi}
 
-**Hoodi is the recommended testnet for testing validating and staking**. The Hoodi network is open for users wanting to run a testnet validator. Stakers wanting to test protocol upgrades before they are deployed to mainnet should therefore use Hoodi.
+Hoodi is a testnet for testing validating and staking. The Hoodi network is open for users wanting to run a testnet validator. Stakers wanting to test protocol upgrades before they are deployed to mainnet should therefore use Hoodi.
+
+- Open validator set, stakers can test network upgrades
+- Large state, useful for testing complex smart contract interactions
+- Longer to sync and requires more storage to run a node
 
 ##### Resources
 
 - [Website](https://hoodi.ethpandaops.io/)
 - [GitHub](https://github.com/eth-clients/hoodi)
+- [Explorer](https://explorer.hoodi.ethpandaops.io/)
+- [Checkpoint Sync](https://checkpoint-sync.hoodi.ethpandaops.io/)
 - [Otterscan](https://hoodi.otterscan.io/)
 - [Etherscan](https://hoodi.etherscan.io/)
 - [Blockscout](https://hoodi.cloud.blockscout.com/)
 
 ##### Faucets
 
+- [Hoodi Faucet](https://hoodi.ethpandaops.io/)
 - [PoW faucet](https://hoodi-faucet.pk910.de/)
 
 #### Holesky {#holesky}
@@ -96,7 +103,7 @@ The Holesky testnet will be [deprecated in September 2025](https://blog.ethereum
 - [Ethereum Ecosystem faucet](https://www.ethereum-ecosystem.com/faucets/ethereum-holesky)
 - [Google Cloud Web3 Holesky faucet](https://cloud.google.com/application/web3/faucet/ethereum/holesky)
 
-To launch a Validator on Holesky testnet, use ethstaker's ["cheap Holesky validator" launchpad](https://holesky.launchpad.ethstaker.cc/en/).
+To launch a Validator on Hoodi testnet, use [Hoodi launchpad](https://hoodi.launchpad.ethereum.org/en/).
 
 ### Layer 2 testnets {#layer-2-testnets}
 
@@ -113,6 +120,8 @@ A testnet for [Arbitrum](https://arbitrum.io/).
 
 ##### Faucets
 
+- [Chainlink faucet](https://faucets.chain.link/arbitrum-sepolia)
+- [Alchemy faucet](https://www.alchemy.com/faucets/arbitrum-sepolia)
 - [QuickNode Arbitrum Sepolia Faucet](https://faucet.quicknode.com/arbitrum/sepolia)
 - [Alchemy Arbitrum Sepolia Faucet](https://www.alchemy.com/faucets/arbitrum-sepolia)
 - [Chainlink Arbitrum Sepolia faucet](https://faucets.chain.link/arbitrum-sepolia)
@@ -128,6 +137,8 @@ A testnet for [Optimism](https://www.optimism.io/).
 
 ##### Faucets
 
+- [Chainlink faucet](https://faucets.chain.link/optimism-sepolia)
+- [Alchemy faucet](https://www.alchemy.com/faucets/optimism-sepolia)
 - [Testnet faucets](https://docs.optimism.io/builders/tools/build/faucets)
 
 #### Starknet Sepolia {#starknet-sepolia}
@@ -140,6 +151,7 @@ A testnet for [Starknet](https://www.starknet.io).
 
 ##### Faucets
 
+- [Alchemy faucet](https://www.alchemy.com/faucets/starknet-sepolia)
 - [Starknet faucet](https://starknet-faucet.vercel.app/)
 - [Blast Starknet Sepolia faucet](https://blastapi.io/faucets/starknet-sepolia-eth)
 
