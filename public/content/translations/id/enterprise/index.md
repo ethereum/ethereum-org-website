@@ -13,7 +13,7 @@ Aplikasi blockchain membantu perusahaan untuk:
 - Membangun model bisnis baru dan peluang penciptaan nilai
 - Secara kompetitif memastikan organisasi mereka tetap akan relevan di masa depan
 
-Aplikasi blockchain perusahaan bisa dibangun di [Jaringan Utama](/glossary/#mainnet) Ethereum publik tanpa izin, atau di blockchain privat yang didasarkan pada teknologi Ethereum. Temukan Informasi lebih lanjut tentang [rantai Enterprise Ethereum privat](/enterprise/private-ethereum/).
+Aplikasi blockchain perusahaan bisa dibangun di [Jaringan Utama](/glossary/#mainnet) Ethereum publik tanpa izin, atau di blockchain privat yang didasarkan pada teknologi Ethereum.
 
 ## Ethereum publik vs privat {#private-vs-public}
 
