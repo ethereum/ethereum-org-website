@@ -102,7 +102,7 @@ Pierwszy przykład wywoła metodę „stałą” i wykona metodę inteligentnego
 Możesz uzyskać dostęp do metod utworzonej instancji kontraktu inteligentnego, dla którego podano ABI, w następujący sposób: `yourContract.methods.methodname`. Używając funkcji `call`, otrzymasz wynik wykonania funkcji.
 
 ```js
-daiToken.methods.balanceOf(senderAddress).call(function (err, res) {  if (err) {    console.log("An error occured", err)    return  }  console.log("The balance is: ", res)})
+daiToken.methods.balanceOf(senderAddress).call(function (err, res) {  if (err) {    console.log("An error occurred", err)    return  }  console.log("The balance is: ", res)})
 ```
 
 Pamiętaj, że DAI ERC20 ma 18 miejsc po przecinku, co oznacza, że ​​musisz usunąć 18 zer, aby uzyskać prawidłową kwotę. uint256 są zwracane jako ciągi, ponieważ JavaScript nie obsługuje dużych wartości numerycznych. Jeśli nie masz pewności, [jak radzić sobie z dużymi liczbami w JS, sprawdź nasz samouczek na temat bignumber.js](https://ethereumdev.io/how-to-deal-with-big-numbers-in-javascript/).
@@ -116,7 +116,7 @@ daiToken.methods
   .transfer(receiverAddress, "100000000000000000000")
   .send({ from: senderAddress }, function (err, res) {
     if (err) {
-      console.log("An error occured", err)
+      console.log("An error occurred", err)
       return
     }
     console.log("Hash of the transaction: " + res)
