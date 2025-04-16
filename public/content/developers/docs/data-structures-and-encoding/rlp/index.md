@@ -62,7 +62,7 @@ def encode_length(L, offset):
     elif L < 256**8:
          BL = to_binary(L)
          return chr(len(BL) + offset + 55) + BL
-     raise Exception("input too long")
+    raise Exception("input too long")
 
 def to_binary(x):
     if x == 0:
