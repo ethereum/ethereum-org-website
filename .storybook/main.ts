@@ -68,6 +68,11 @@ const config: StorybookConfig = {
     if (imageRule) {
       imageRule["exclude"] = /\.svg$/
     }
+    // Configure YAML loader
+    config.module.rules.push({
+      test: /\.ya?ml$/,
+      use: "yaml-loader",
+    })
 
     // Configure .svg files to be loaded with @svgr/webpack
     config.module.rules.push({
