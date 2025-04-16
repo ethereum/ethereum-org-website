@@ -3,10 +3,28 @@ import { ButtonLink } from "@/components/ui/buttons/Button"
 
 import ai16z from "@/public/images/ai-agents/ai16z.png"
 import game from "@/public/images/ai-agents/game.png"
+import freysa from "@/public/images/ai-agents/freysa_2.png"
 
 const BuildYourOwnAIAgent = () => {
   return (
     <div className="flex flex-col gap-8 md:flex-row">
+      <div className="flex flex-1 flex-col gap-4 rounded-xl border bg-gradient-to-br from-transparent to-purple-200/10 p-8">
+        <Image
+          src={freysa}
+          alt="freysa"
+          width={128}
+          className="rounded-xl shadow-lg dark:shadow-body-light"
+        />
+        <p className="text-2xl font-semibold">Sovereign Agent Framework</p>
+        <p>
+        A framework for autonomous agents with cryptographic verifications and evolution governance.
+        </p>
+        <div>
+          <ButtonLink href="https://github.com/0xfreysa/sovereign-freysa" variant="outline">
+            Use Freysa
+          </ButtonLink>
+        </div>
+      </div>
       <div className="flex flex-1 flex-col gap-4 rounded-xl border bg-gradient-to-br from-transparent to-purple-200/10 p-8">
         <Image
           src={ai16z}
