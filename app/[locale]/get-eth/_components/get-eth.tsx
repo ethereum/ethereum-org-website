@@ -1,5 +1,6 @@
 "use client"
 
+import dynamic from "next/dynamic"
 import type { ReactNode } from "react"
 
 import type { ChildOnlyProp } from "@/lib/types"
@@ -8,7 +9,6 @@ import CalloutBanner from "@/components/CalloutBanner"
 import CardList, {
   type CardProps as CardListCardProps,
 } from "@/components/CardList"
-import CentralizedExchanges from "@/components/CentralizedExchanges"
 import Emoji from "@/components/Emoji"
 import EthPriceCard from "@/components/EthPriceCard"
 import FeedbackCard from "@/components/FeedbackCard"
@@ -38,6 +38,11 @@ import dapps from "@/public/images/doge-computer.png"
 import bancor from "@/public/images/exchanges/bancor.png"
 import hero from "@/public/images/get-eth.png"
 import wallet from "@/public/images/wallet.png"
+
+const CentralizedExchanges = dynamic(
+  () => import("@/components/CentralizedExchanges"),
+  { ssr: false }
+)
 
 type CardProps = {
   children: ReactNode
