@@ -23,7 +23,7 @@ Za boljše razumevanje vam priporočamo, da si najprej preberete o [standardih z
 - [Skupinski prenos](#batch_transfers): prenos več sredstev v enem klicu.
 - [Skupinsko stanje](#batch_balance): pridobite stanje več sredstev z enim klicem.
 - [Skupinska odobritev](#batch_approval): odobrite vse žetone na določenem naslovu.
-- [Kavlji](#recieve_hook): prejmite kavelj žetonov.
+- [Kavlji](#receive_hook): prejmite kavelj žetonov.
 - [Podpora NFT](#nft_support): če je ponudba le 1, to smatrajte kot NFT.
 - [Pravila varnih prenosov](#safe_transfer_rule): set pravil za varen prenos.
 
