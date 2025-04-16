@@ -2,7 +2,7 @@
 
 import { HTMLAttributes } from "react"
 
-import type { ChildOnlyProp } from "@/lib/types"
+import type { ChildOnlyProp, PageWithContributorsProps } from "@/lib/types"
 
 /* Uncomment for Bug Bounty Banner: */
 import BugBountyBanner from "@/components/Banners/BugBountyBanner"
@@ -13,6 +13,7 @@ import CardList from "@/components/CardList"
 import Emoji from "@/components/Emoji"
 import ExpandableCard from "@/components/ExpandableCard"
 import FeedbackCard from "@/components/FeedbackCard"
+import FileContributors from "@/components/FileContributors"
 import { Image, type ImageProps } from "@/components/Image"
 import Leaderboard from "@/components/Leaderboard"
 import MainArticle from "@/components/MainArticle"
@@ -224,7 +225,10 @@ const sortBountyHuntersFn = (a: BountyHuntersArg, b: BountyHuntersArg) => {
   return b.score - a.score
 }
 
-const BugBountiesPage = () => {
+const BugBountiesPage = ({
+  contributors,
+  lastEditLocaleTimestamp,
+}: PageWithContributorsProps) => {
   const pathname = usePathname()
   const { t } = useTranslation("page-bug-bounty")
 
@@ -768,6 +772,11 @@ const BugBountiesPage = () => {
             </ExpandableCard>
           </RightColumn>
         </Faq>
+        <FileContributors
+          className="my-10 border-t"
+          contributors={contributors}
+          lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        />
       </Content>
       <Divider />
       <Contact>

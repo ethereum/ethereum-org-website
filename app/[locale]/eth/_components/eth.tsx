@@ -2,7 +2,7 @@
 
 import type { ComponentProps, HTMLAttributes } from "react"
 
-import type { ChildOnlyProp } from "@/lib/types"
+import type { ChildOnlyProp, PageWithContributorsProps } from "@/lib/types"
 
 import ActionCard from "@/components/ActionCard"
 import CalloutBanner from "@/components/CalloutBanner"
@@ -11,6 +11,7 @@ import CardList from "@/components/CardList"
 import EthPriceCard from "@/components/EthPriceCard"
 import EthVideo from "@/components/EthVideo"
 import FeedbackCard from "@/components/FeedbackCard"
+import FileContributors from "@/components/FileContributors"
 import HorizontalCard from "@/components/HorizontalCard"
 import { Image } from "@/components/Image"
 import InfoBanner from "@/components/InfoBanner"
@@ -168,7 +169,10 @@ const CentralActionCard = (props: ComponentProps<typeof ActionCard>) => (
   <ActionCard className="my-8" imageWidth={260} {...props} />
 )
 
-const EthPage = () => {
+const EthPage = ({
+  contributors,
+  lastEditLocaleTimestamp,
+}: PageWithContributorsProps) => {
   const { t } = useTranslation("page-eth")
   const pathname = usePathname()
 
@@ -448,6 +452,11 @@ const EthPage = () => {
         <StandaloneQuizWidget quizKey="what-is-ether" />
       </Content>
       <Content>
+        <FileContributors
+          className="my-10 border-t"
+          contributors={contributors}
+          lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        />
         <FeedbackCard />
       </Content>
     </Page>
