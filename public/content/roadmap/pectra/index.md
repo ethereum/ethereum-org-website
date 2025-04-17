@@ -30,6 +30,8 @@ The current effective balance of the validator is exactly 32 ETH. It's the minim
 
 But the benefit of a better reward system for validators is only a part of this improvement. [Stakers](/staking/) running multiple validators can now aggregate them into a single one, which enables easier operation and reduces network overhead. Because every validator in Beacon Chain submits a signature in every epoch, the bandwidth requirements grow with more validators and a large number of signatures to propagate. Aggregating validators will take load off of the network and open new scaling options while keeping the same economic security.
 
+Read a deeper dive on maxEB [here](./maxeb/)
+
 ### Blob throughput increase {#7691}
 
 Blobs are the new efficient way of storing L2 rollup data introduced in [the previous upgrade](/roadmap/dencun/). Since then, blobs have been adopted by Ethereum L2s and heavily utilized. With blob usage at capacity, rollup fees are increasing and their scalability is limited to throughput given by blob size.
