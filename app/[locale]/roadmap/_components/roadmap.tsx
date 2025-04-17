@@ -23,6 +23,8 @@ import { ButtonLink } from "@/components/ui/buttons/Button"
 import Link from "@/components/ui/Link"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 
+import ReleaseCarousel from "./ReleaseCarousel"
+
 import { useTranslation } from "@/hooks/useTranslation"
 import ethBlocksImage from "@/public/images/developers-eth-blocks.png"
 import communityHeroImg from "@/public/images/heroes/community-hero.png"
@@ -151,7 +153,9 @@ const RoadmapPage = () => {
       <div className="flex flex-col gap-16">
         <HubHero {...heroContent} />
 
-        {/* TODO: ROADMAP CAROUSAL */}
+        <div className="flex w-full px-8 py-4">
+          <ReleaseCarousel />
+        </div>
 
         <div className="flex w-full flex-col gap-8 px-8 py-4">
           <h2 className="m-0">What changes are coming to Ethereum?</h2>
