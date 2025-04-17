@@ -81,7 +81,7 @@ const ReleaseCarousel = () => {
                       <h2 className="text-4xl font-bold lg:text-6xl">
                         {release.releaseName}
                       </h2>
-                      <p className="mb-4 text-md">
+                      <p className="text-md">
                         {new Date(release.releaseDate).toLocaleDateString(
                           "en-US",
                           {
@@ -95,7 +95,9 @@ const ReleaseCarousel = () => {
 
                     <div>
                       <p className="mb-3 text-xl font-bold">Main features</p>
-                      {release.content}
+                      <div className="flex flex-col gap-4">
+                        {release.content.map((item) => item)}
+                      </div>
                     </div>
                     <ButtonLink href={release.href} className="w-full lg:w-fit">
                       Learn more

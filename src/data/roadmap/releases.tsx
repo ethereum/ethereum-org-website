@@ -12,7 +12,7 @@ interface Release {
   image: StaticImageData
   releaseName: string
   releaseDate: string
-  content: React.ReactNode
+  content: React.ReactNode[]
   href: string
 }
 
@@ -21,28 +21,38 @@ export const releasesData: Release[] = [
     image: GardenHeroImage,
     releaseName: "Garden",
     releaseDate: "2024-03-13",
-    content: <div>test</div>,
+    content: [<div key="1">test</div>],
     href: "/roadmap/garden",
   },
   {
     image: DevelopersHubHeroImage,
     releaseName: "Dencun",
     releaseDate: "2024-03-13",
-    content: <div>test</div>,
+    content: [<div key="1">test</div>],
     href: "/roadmap/dencun",
   },
   {
     image: PectraImage,
     releaseName: "Pectra",
     releaseDate: "2025-05-07",
-    content: <div>test</div>,
+    content: [
+      <div key="1">
+        <p>EOA account code</p>
+        <ul>
+          <li>
+            Users can set their address to be represented by a code of an
+            existing smart contract
+          </li>
+        </ul>
+      </div>,
+    ],
     href: "/roadmap/pectra",
   },
   {
     image: CommunityHeroImage,
     releaseName: "Fusaka",
     releaseDate: "2026",
-    content: <div>test</div>,
+    content: [<div key="1">test</div>],
     href: "/roadmap/fusaka",
   },
 ]
