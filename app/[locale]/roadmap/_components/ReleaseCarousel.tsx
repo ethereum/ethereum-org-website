@@ -4,7 +4,8 @@ import { useRef, useState } from "react"
 import { SwiperRef } from "swiper/react"
 
 import { ChevronNext, ChevronPrev } from "@/components/Chevron"
-import { Button } from "@/components/ui/buttons/Button"
+import { Image } from "@/components/Image"
+import { Button, ButtonLink } from "@/components/ui/buttons/Button"
 import { Swiper, SwiperContainer, SwiperSlide } from "@/components/ui/swiper"
 
 import { releasesData } from "@/data/roadmap/releases"
@@ -47,7 +48,7 @@ const ReleaseCarousel = () => {
   }
 
   return (
-    <div className="flex w-full flex-col rounded-2xl bg-background-highlight p-4">
+    <div className="flex w-full flex-col gap-6 rounded-2xl bg-background-highlight p-6">
       <div className="flex flex-row justify-between gap-2 lg:hidden">
         <PreviousButton />
         <NextButton />
@@ -67,7 +68,40 @@ const ReleaseCarousel = () => {
           >
             {releasesData.map((release) => (
               <SwiperSlide key={release.releaseName}>
-                {release.releaseName}
+                <div className="flex w-full flex-col gap-6 lg:flex-row">
+                  <div className="w-full rounded-2xl lg:max-w-[351px]">
+                    <Image
+                      src={release.image}
+                      alt={release.releaseName}
+                      className="h-[240px] rounded-2xl object-cover md:h-[266px] lg:h-[551px]"
+                    />
+                  </div>
+                  <div className="flex flex-col gap-8">
+                    <div>
+                      <h2 className="text-4xl font-bold lg:text-6xl">
+                        {release.releaseName}
+                      </h2>
+                      <p className="mb-4 text-md">
+                        {new Date(release.releaseDate).toLocaleDateString(
+                          "en-US",
+                          {
+                            month: "long",
+                            day: "numeric",
+                            year: "numeric",
+                          }
+                        )}
+                      </p>
+                    </div>
+
+                    <div>
+                      <p className="mb-3 text-xl font-bold">Main features</p>
+                      {release.content}
+                    </div>
+                    <ButtonLink href={release.href} className="w-full lg:w-fit">
+                      Learn more
+                    </ButtonLink>
+                  </div>
+                </div>
               </SwiperSlide>
             ))}
           </Swiper>
