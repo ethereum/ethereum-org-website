@@ -12724,7 +12724,14 @@
       "contributions": [
         "bug"
       ]
-    }
+    },
+    {
+      "login": "hotequil",
+      "name": "João Paulo Hotequil",
+      "avatar_url": "https://avatars.githubusercontent.com/u/46814712?v=4",
+      "profile": "https://github.com/hotequil",
+      "contributions": ["code", "translation"]
+    },
   ],
   "contributorsPerLine": 7,
   "projectName": "ethereum-org-website",

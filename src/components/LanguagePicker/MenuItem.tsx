@@ -73,7 +73,10 @@ const MenuItem = ({ displayInfo, ...props }: ItemProps) => {
           <p className="text-xs uppercase text-body">{sourceName}</p>
         </div>
         {isCurrent && (
-          <BsCheck className="text-2xl text-primary-high-contrast" />
+          <BsCheck
+            aria-hidden={true}
+            className="text-2xl text-primary-high-contrast"
+          />
         )}
       </div>
       <p className="max-w-full text-xs lowercase text-body-medium">
