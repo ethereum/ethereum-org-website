@@ -1,24 +1,47 @@
 "use client"
 
+import { useRef, useState } from "react"
+import { SwiperRef } from "swiper/react"
+
 import { ChevronNext, ChevronPrev } from "@/components/Chevron"
 import { Button } from "@/components/ui/buttons/Button"
+import { Swiper, SwiperContainer, SwiperSlide } from "@/components/ui/swiper"
+
+import { releasesData } from "@/data/roadmap/releases"
 
 const ReleaseCarousel = () => {
-  // const swiperRef = useRef<Swiper>(null)
-  // const [activeSlide, setActiveSlide] = useState(releasesData.length - 2)
+  const swiperRef = useRef<SwiperRef>(null)
+  const containerRef = useRef<HTMLDivElement>(null)
+  const [activeSlide, setActiveSlide] = useState(releasesData.length - 2)
 
   const PreviousButton = () => {
     return (
-      <Button variant="secondary" size="icon" className="rounded-full">
-        <ChevronPrev className="h-10 w-10" />
+      <Button
+        variant={"outline"}
+        size="xs"
+        className="rounded-full"
+        onClick={() => {
+          swiperRef.current?.swiper.slidePrev()
+        }}
+        disabled={activeSlide === 0}
+      >
+        <ChevronPrev className="h-8 w-8" />
       </Button>
     )
   }
 
   const NextButton = () => {
     return (
-      <Button variant="secondary" size="icon" className="rounded-full">
-        <ChevronNext className="h-10 w-10" />
+      <Button
+        variant={"outline"}
+        size="xs"
+        className="rounded-full"
+        onClick={() => {
+          swiperRef.current?.swiper.slideNext()
+        }}
+        disabled={activeSlide === releasesData.length - 1}
+      >
+        <ChevronNext className="h-8 w-8" />
       </Button>
     )
   }
@@ -33,6 +56,22 @@ const ReleaseCarousel = () => {
         <div className="hidden lg:flex">
           <PreviousButton />
         </div>
+        <SwiperContainer className="w-full overflow-hidden" ref={containerRef}>
+          <Swiper
+            slidesPerView="auto"
+            ref={swiperRef}
+            onSlideChange={(swiper) => {
+              setActiveSlide(swiper.activeIndex)
+            }}
+            initialSlide={activeSlide}
+          >
+            {releasesData.map((release) => (
+              <SwiperSlide key={release.releaseName}>
+                {release.releaseName}
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </SwiperContainer>
         <div className="hidden lg:flex">
           <NextButton />
         </div>
