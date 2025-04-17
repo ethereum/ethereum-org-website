@@ -86,11 +86,11 @@ const ReleaseCarousel = () => {
                 key={release.releaseName}
                 className="!w-1/3 items-center justify-center text-center"
               >
-                <div className="h-6">
+                <div className="mb-3 h-6">
                   {pastReleases[pastReleases.length - 1].releaseDate ===
                     release.releaseDate && (
-                    <div className="font-mono text-sm text-body-medium">
-                      We are here
+                    <div className="m-auto w-fit rounded-full bg-primary-low-contrast px-2 py-1">
+                      <p className="text-sm font-bold">We are here</p>
                     </div>
                   )}
                 </div>
