@@ -207,8 +207,8 @@ Keine
 Die vollständige Liste der aktuellen Netzwerk-IDs ist verfügbar unter [chainlist.org](https://chainlist.org). Einige häufige sind:
 
 - `1`: Ethereum Mainnet
-- `5`: Goerli Testnetz
 - `11155111`: Sepolia Testnetz
+- `560048` : Hoodi Testnetz
 
 **Beispiel**
 

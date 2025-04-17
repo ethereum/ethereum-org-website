@@ -209,6 +209,7 @@ The full list of current network IDs is available at [chainlist.org](https://cha
 
 - `1`: Ethereum Mainnet
 - `11155111`: Sepolia testnet
+- `560048` : Hoodi Testnet
 
 **Example**
 
