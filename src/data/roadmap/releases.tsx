@@ -20,7 +20,7 @@ export const releasesData: Release[] = [
   {
     image: GardenHeroImage,
     releaseName: "Garden",
-    releaseDate: "2024-03-13",
+    releaseDate: "2023-03-13",
     content: [<div key="1">test</div>],
     href: "/roadmap/garden",
   },
