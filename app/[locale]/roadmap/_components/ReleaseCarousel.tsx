@@ -23,12 +23,39 @@ const formatReleaseDate = (date: string) => {
   })
 }
 
+const findLatestReleaseIndex = () => {
+  const today = new Date()
+  const twoMonthsFromNow = new Date()
+  twoMonthsFromNow.setMonth(today.getMonth() + 2)
+
+  // First try to find a release within the next 2 months
+  const upcomingReleaseIndex = releasesData.findIndex((release) => {
+    const releaseDate = new Date(release.releaseDate)
+    return releaseDate > today && releaseDate <= twoMonthsFromNow
+  })
+
+  // If no upcoming release found, find the most recent release up to today
+  if (upcomingReleaseIndex === -1) {
+    const pastReleases = releasesData.filter(
+      (release) => new Date(release.releaseDate) <= today
+    )
+    if (pastReleases.length > 0) {
+      const mostRecentRelease = pastReleases[pastReleases.length - 1]
+      return releasesData.findIndex(
+        (release) => release.releaseDate === mostRecentRelease.releaseDate
+      )
+    }
+  }
+
+  return upcomingReleaseIndex
+}
+
 const ReleaseCarousel = () => {
   const swiperRef = useRef<SwiperRef>(null)
   const swiperRef2 = useRef<SwiperRef>(null)
   const containerRef = useRef<HTMLDivElement>(null)
   const containerRef2 = useRef<HTMLDivElement>(null)
-  const [activeSlide, setActiveSlide] = useState(releasesData.length - 2)
+  const [activeSlide, setActiveSlide] = useState(findLatestReleaseIndex())
   const pastReleases = releasesData.filter(
     (release) => release.releaseDate < new Date().toISOString().split("T")[0]
   )
@@ -81,50 +108,74 @@ const ReleaseCarousel = () => {
             initialSlide={activeSlide}
             centeredSlides={true}
           >
-            {releasesData.map((release, index) => (
-              <SwiperSlide
-                key={release.releaseName}
-                className="!w-1/3 items-center justify-center text-center"
-              >
-                <div className="mb-3 h-6">
-                  {pastReleases[pastReleases.length - 1].releaseDate ===
-                    release.releaseDate && (
-                    <div className="m-auto w-fit rounded-full bg-primary-low-contrast px-2 py-1">
-                      <p className="text-sm font-bold">We are here</p>
-                    </div>
-                  )}
-                </div>
-                <div className="flex w-full items-center justify-center text-center">
-                  <div
-                    className={cn(
-                      "flex flex-1 border-2",
-                      index !== 0 ? "border-primary" : "border-transparent"
+            {releasesData.map((release, index) => {
+              const releaseDate = new Date(release.releaseDate)
+              const today = new Date()
+              const twoMonthsFromNow = new Date()
+              twoMonthsFromNow.setMonth(today.getMonth() + 2)
+              const nextRelease =
+                releaseDate > today && releaseDate <= twoMonthsFromNow
+
+              return (
+                <SwiperSlide
+                  key={release.releaseName}
+                  className="!w-1/3 items-center justify-center text-center"
+                >
+                  <div className="mb-3 h-6">
+                    {pastReleases[pastReleases.length - 1].releaseDate ===
+                      release.releaseDate && (
+                      <div className="m-auto w-fit rounded-lg bg-primary-low-contrast px-2 py-1">
+                        <p className="text-sm font-bold">We are here</p>
+                      </div>
                     )}
-                  />
-                  <div
-                    className={cn(
-                      "h-7 w-7 rounded-full",
-                      release.releaseDate <
-                        new Date().toISOString().split("T")[0]
-                        ? "bg-primary"
-                        : "bg-primary-low-contrast"
+                    {nextRelease && (
+                      <div className="m-auto w-fit rounded-lg bg-warning-light px-2 py-1">
+                        <p className="text-sm font-bold">Coming soon</p>
+                      </div>
                     )}
-                  />
-                  <div
-                    className={cn(
-                      "flex flex-1 border-2",
-                      index !== releasesData.length - 1
-                        ? "border-primary"
-                        : "border-transparent"
-                    )}
-                  />
-                </div>
-                <p className="text-md font-bold">{release.releaseName}</p>
-                <p className="font-mono text-sm text-body-medium">
-                  {formatReleaseDate(release.releaseDate)}
-                </p>
-              </SwiperSlide>
-            ))}
+                  </div>
+                  <div className="flex w-full items-center justify-center text-center">
+                    <div
+                      className={cn(
+                        "flex h-1 flex-1",
+                        index !== 0
+                          ? nextRelease
+                            ? "bg-gradient-to-r from-primary to-primary-low-contrast"
+                            : release.releaseDate <
+                                new Date().toISOString().split("T")[0]
+                              ? "bg-primary"
+                              : "bg-primary-low-contrast"
+                          : "bg-transparent"
+                      )}
+                    />
+                    <div
+                      className={cn(
+                        "h-7 w-7 rounded-full",
+                        release.releaseDate <
+                          new Date().toISOString().split("T")[0]
+                          ? "bg-primary"
+                          : "bg-primary-low-contrast",
+                        nextRelease && "border-2 border-primary bg-background"
+                      )}
+                    />
+                    <div
+                      className={cn(
+                        "flex h-1 flex-1",
+                        index !== releasesData.length - 1
+                          ? index < findLatestReleaseIndex()
+                            ? "bg-primary"
+                            : "bg-primary-low-contrast"
+                          : "bg-transparent"
+                      )}
+                    />
+                  </div>
+                  <p className="text-md font-bold">{release.releaseName}</p>
+                  <p className="font-mono text-sm text-body-medium">
+                    {formatReleaseDate(release.releaseDate)}
+                  </p>
+                </SwiperSlide>
+              )
+            })}
           </Swiper>
         </SwiperContainer>
         <div className="flex lg:hidden">
