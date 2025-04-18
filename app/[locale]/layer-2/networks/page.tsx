@@ -1,5 +1,9 @@
 import pick from "lodash.pick"
-import { getTranslations } from "next-intl/server"
+import {
+  getMessages,
+  getTranslations,
+  setRequestLocale,
+} from "next-intl/server"
 
 import { Lang } from "@/lib/types"
 
@@ -17,7 +21,6 @@ import { BASE_TIME_UNIT } from "@/lib/constants"
 
 import Layer2Networks from "./_components/networks"
 
-import { loadMessages } from "@/i18n/loadMessages"
 import { fetchEthereumMarketcap } from "@/lib/api/fetchEthereumMarketcap"
 import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
 import { fetchGrowThePieBlockspace } from "@/lib/api/fetchGrowThePieBlockspace"
@@ -40,6 +43,8 @@ const loadData = dataLoader(
 
 const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const { locale } = await params
+
+  setRequestLocale(locale)
 
   const [
     ethereumMarketcapData,
@@ -96,7 +101,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     })
 
   // Get i18n messages
-  const allMessages = await loadMessages(locale)
+  const allMessages = await getMessages({ locale })
   const requiredNamespaces = getRequiredNamespacesForPage("/layer-2/networks")
   const messages = pick(allMessages, requiredNamespaces)
 

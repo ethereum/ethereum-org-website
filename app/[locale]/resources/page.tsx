@@ -1,5 +1,9 @@
 import pick from "lodash.pick"
-import { getTranslations } from "next-intl/server"
+import {
+  getMessages,
+  getTranslations,
+  setRequestLocale,
+} from "next-intl/server"
 
 import { Lang } from "@/lib/types"
 
@@ -13,7 +17,6 @@ import { BASE_TIME_UNIT } from "@/lib/constants"
 
 import ResourcesPage from "./_components/resources"
 
-import { loadMessages } from "@/i18n/loadMessages"
 import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
 
 // In seconds
@@ -27,8 +30,10 @@ const loadData = dataLoader(
 const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const { locale } = await params
 
+  setRequestLocale(locale)
+
   // Get i18n messages
-  const allMessages = await loadMessages(locale)
+  const allMessages = await getMessages({ locale })
   const requiredNamespaces = getRequiredNamespacesForPage("/resources")
   const messages = pick(allMessages, requiredNamespaces)
 
