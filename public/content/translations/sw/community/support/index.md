@@ -30,7 +30,7 @@ Je unapata shida na pochi yako? Pochi nyingi zina timu inayojiyuma inayoweza kuk
 - [Argent](https://support.argent.xyz/hc/)
 - [MyEtherWallet](https://help.myetherwallet.com/)
 
-_Hii sio orodha kamili. Unahitaji msaada kupata huduma juu ya pochi maalum? Jiunge na [ discord ya etehreum.org](https://discord.gg/ethereum-org) na tutajaribu kusaidia._
+_Hii sio orodha kamili. Unahitaji msaada kupata huduma juu ya pochi maalum? Jiunge na [ discord ya ethereum.org](https://discord.gg/ethereum-org) na tutajaribu kusaidia._
 
 Unatafuta pochi ya Ethereum? [Chunguza orodha yetu yote ya Ethereum](/wallets/find-wallet/).
 

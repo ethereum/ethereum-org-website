@@ -13,6 +13,8 @@ hideEditButton: true
 
 This is a non-exhaustive list maintained by our community. Know of an upcoming Ethereum event to add to this list? [Please add it](https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-events.json)!
 
+<EventsOrganizerBanner className="mt-16" />
+
 ## Ethereum meetups {#meetups}
 
 Don't see an event that works for you? Try joining a meetup. Meetups are smaller events held by groups of Ethereum enthusiasts - a chance for people interested in Ethereum to get together, talk about Ethereum, and learn about recent developments.
