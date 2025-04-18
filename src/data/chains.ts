@@ -1045,6 +1045,17 @@ const chains = [
     chain: "ETH",
   },
   {
+    name: "Settlus",
+    infoURL: "https://settlus.org",
+    chainId: 5371,
+    nativeCurrency: {
+      name: "Ether",
+      symbol: "ETH",
+      decimals: 18,
+    },
+    chain: "ETH",
+  },
+  {
     name: "Nahmii 2 Mainnet",
     infoURL: "https://nahmii.io",
     chainId: 5551,
@@ -1439,17 +1450,6 @@ const chains = [
       decimals: 18,
     },
     chain: "Liveplex OracleEVM Network",
-  },
-  {
-    name: "Reddio Devnet",
-    infoURL: "https://www.reddio.com",
-    chainId: 50341,
-    nativeCurrency: {
-      name: "Red",
-      symbol: "RED",
-      decimals: 18,
-    },
-    chain: "ETH",
   },
   {
     name: "BirdLayer",
