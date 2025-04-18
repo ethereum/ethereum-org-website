@@ -1,5 +1,9 @@
 import pick from "lodash.pick"
-import { getTranslations } from "next-intl/server"
+import {
+  getMessages,
+  getTranslations,
+  setRequestLocale,
+} from "next-intl/server"
 
 import {
   EpochResponse,
@@ -17,8 +21,6 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import { BASE_TIME_UNIT } from "@/lib/constants"
 
 import StakingPage from "./_components/staking"
-
-import { loadMessages } from "@/i18n/loadMessages"
 
 const fetchBeaconchainData = async (): Promise<StakingStatsData> => {
   // Fetch Beaconcha.in data
@@ -60,10 +62,12 @@ const loadData = dataLoader(
 const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const { locale } = await params
 
+  setRequestLocale(locale)
+
   const [data] = await loadData()
 
   // Get i18n messages
-  const allMessages = await loadMessages(locale)
+  const allMessages = await getMessages({ locale })
   const requiredNamespaces = getRequiredNamespacesForPage("/staking")
   const messages = pick(allMessages, requiredNamespaces)
 

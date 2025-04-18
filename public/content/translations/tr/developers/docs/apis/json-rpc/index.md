@@ -207,8 +207,8 @@ Hiçbiri
 Mevcut ağ kimliklerinin tam listesi [chainlist.org](https://chainlist.org) adresinde bulunabilir. Bazı yaygın olanları:
 
 - `1`: Ethereum Ana Ağı
-- `5`: Goerli test ağı
 - `11155111`: Sepolia test ağı
+- `17000`: Hoodi test ağı
 
 **Örnek**
 
