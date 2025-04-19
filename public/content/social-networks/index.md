@@ -76,15 +76,43 @@ Users use the platform's native [ERC-20](/glossary/#erc-20) token $MIND to pay f
 
 [Web3](/glossary/#web3) native social platforms aren't the only ones trying to incorporate blockchain technology into social media. Many centralized platforms are also planning to integrate Ethereum into their infrastructure:
 
-### Twitter/X (NFT & Crypto Payments)  {#twitter}
+### Brave Browser {#brave}
 
-[Twitter](x.com) (now X) has incorporated blockchain technology in multiple ways to enhance creator monetization and digital identity verification:
+- Brave has integrated the **[Basic Attention Token (BAT)](https://basicattentiontoken.org/)**, an ERC-20 token built on Ethereum, into its browser ecosystem to revolutionize digital advertising and content creator support.
 
-- **NFT Profile Pictures**: X allows users to verify and display Ethereum-based NFTs as profile pictures. These NFT avatars are authenticated through blockchain metadata and appear with a hexagonal frame to distinguish them from regular profile images.
+- The **[Brave Rewards program](https://brave.com/brave-rewards/)** allows users to earn BAT by viewing privacy-respecting ads and then automatically contribute to websites and content creators across various platforms like YouTube, Twitter, and GitHub based on attention time.
 
-- **Crypto Tipping**: The platform has integrated Ethereum tipping, enabling users to send payments via Ethereum-based wallets like Strike.
+- Content creators can register as **[Brave verified creators](https://creators.brave.com/)** to receive these contributions directly to their Ethereum wallets, creating a bridge between traditional web platforms and blockchain-based monetization.
 
-- **Tokenized Content & Payments**: With its shift towards a financial “everything app,” X is reportedly exploring deeper crypto and token integrations, potentially using Ethereum-based assets in the future.
+- BAT tokens exist independently on the Ethereum blockchain, allowing users to transfer them to personal wallets or exchanges once earned.
+
+
+### Audius Music Platform {#audius}
+
+- **[Audius](https://audius.co/)** is a music streaming platform that uses Ethereum blockchain technology to connect artists directly with fans.
+
+- The platform features a hybrid decentralized architecture where content is stored on IPFS while utilizing blockchain for ownership rights and the **[AUDIO token](https://etherscan.io/token/0x18aaa7115705e8be94bffebde57af9bfc265b998)**.
+
+- Audius has established a **[partnership with TikTok](https://audius.co/tiktok)**, bringing Web3 functionality to mainstream audiences and allowing artists to monetize their content through blockchain technology.
+
+- The platform's technical details are available in their **[whitepaper](https://whitepaper.audius.co/)**, showing how they've built upon Ethereum's infrastructure.
+
+
+### Sorare Fantasy Sports {#sorare}
+
+- **[Sorare](https://sorare.com/)** is a **[fantasy sports platform built on Ethereum](https://sorare.com/help/a/4402888626577/what-is-a-sorare-wallet)** that allows users to collect, trade, and play with official NFT player cards.
+
+- Player cards are verifiable NFTs on the Ethereum blockchain, and the platform's smart contracts can be viewed on **[Etherscan](https://etherscan.io/address/0x629a673a8242c2ac4b7b8c5d8735fbeac21a6205)**.
+
+- Sorare combines traditional fantasy sports gameplay with blockchain ownership of digital assets, bringing **[Ethereum to fund](https://sorare.com/help/a/10969733392797/what-network-should-i-use-to-fund-my-eth-wallet)** functionality to mainstream sports fans.
+
+
+### Twitter/X (Crypto Tipping)  {#twitter}
+
+**[Twitter](x.com)** (now X) has incorporated blockchain technology in multiple ways to enhance creator monetization and digital identity verification:
+
+- **Crypto Tipping**: The platform has integrated **[Ethereum tipping](https://help.x.com/en/using-x/tips)**, enabling users to send payments via Ethereum-based wallets like Strike.
+
 
 By integrating blockchain features, X is bridging the gap between Web2 social experiences and decentralized digital ownership.
 
