@@ -39,20 +39,52 @@ Although these are unlikely scenarios, the Ethereum eco-system can mitigate thei
 
 There is also a human cost to having majority clients. It puts excess strain and responsibility on a small development team. The lesser the client diversity, the greater the burden of responsibility for the developers maintaining the majority client. Spreading this responsibility across multiple teams is good for both the health of Ethereum's network of nodes and its network of people.
 
-## Current client diversity {#current-client-diversity}
+### Current client diversity {#current-client-diversity}
 
-![Pie chart showing client diversity](./client-diversity.png)
-_Diagram data from [ethernodes.org](https://ethernodes.org) and [clientdiversity.org](https://clientdiversity.org/)_
+<div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start mt-6 pb-16">
+  <div className="flex justify-center">
+    <PieChart
+      data={[
+        { name: "Geth", value: 41 },
+        { name: "Nethermind", value: 38 },
+        { name: "Besu", value: 16 },
+        { name: "Erigon", value: 3 },
+        { name: "Reth", value: 2 },
+        { name: "Other", value: 0 },
+      ]}
+      title="Execution Clients"
+    />
+  </div>
+  <div className="flex justify-center">
+    <PieChart
+      data={[
+        { name: "Prysm", value: 36.09 },
+        { name: "Lighthouse", value: 34.06 },
+        { name: "Teku", value: 21.47 },
+        { name: "Nimbus", value: 4.85 },
+        { name: "Grandine", value: 1.97 },
+        { name: "Lodestar", value: 1.57 },
+        { name: "Others", value: 0.0 },
+      ]}
+      title="Consensus Clients"
+    />
+  </div>
+</div>
 
-The two pie charts above show snapshots of the current client diversity for the execution and consensus layers (at time of writing in January 2022). The execution layer is overwhelmingly dominated by [Geth](https://geth.ethereum.org/), with [Open Ethereum](https://openethereum.github.io/) a distant second, [Erigon](https://github.com/ledgerwatch/erigon) third and [Nethermind](https://nethermind.io/) fourth, with other clients comprising less than 1 % of the network. The most commonly used client on the consensus layer - [Prysm](https://prysmaticlabs.com/#projects) - is not as dominant as Geth but still represents over 60% of the network. [Lighthouse](https://lighthouse.sigmaprime.io/) and [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) make up ~20% and ~14% respectively, and other clients are rarely used.
+<div className="mt-8 prose prose-sm">
+  _This diagram may be outdated — go to [ethernodes.org](https://ethernodes.org) and [clientdiversity.org](https://clientdiversity.org/) for up‑to‑date information._
+</div>
 
-The execution layer data were obtained from [Ethernodes](https://ethernodes.org) on 23-Jan-2022. Data for consensus clients was obtained from [Michael Sproul](https://github.com/sigp/blockprint). Consensus client data is more difficult to obtain because the consensus layer clients do not always have unambiguous traces that can be used to identify them. The data was generated using a classification algorithm that sometimes confuses some of the minority clients (see [here](https://twitter.com/sproulM_/status/1440512518242197516) for more details). In the diagram above, these ambiguous classifications are treated with an either/or label (e.g. Nimbus/Teku). Nevertheless, it is clear that the majority of the network is running Prysm. The data is a snapshot over a fixed set of blocks (in this case Beacon blocks in slots 2048001 to 2164916) and Prysm's dominance has sometimes been higher, exceeding 68%. Despite only being snapshots, the values in the diagram provide a good general sense of the current state of client diversity.
+
+The two pie charts above show snapshots of the current client diversity for the execution and consensus layers (at time of writing in April 2025). Client diversity has improved over the years, and the execution layer has seen a reduction in the domination by [Geth](https://geth.ethereum.org/), with [Nethermind](https://www.nethermind.io/nethermind-client) a close second, [Besu](https://besu.hyperledger.org/) third and [Erigon](https://github.com/ledgerwatch/erigon) fourth, with other clients comprising less than 3 % of the network. The most commonly used client on the consensus layer - [Prysm](https://prysmaticlabs.com/#projects) - is quite close with the second most used. [Lighthouse](https://lighthouse.sigmaprime.io/) and [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) make up ~34% and ~21% respectively, and other clients are rarely used.
+
+The execution layer data were obtained from [supermajority.info](https://supermajority.info/) on 18-Apr-2025. Data for consensus clients was obtained from [Michael Sproul](https://github.com/sigp/blockprint). Consensus client data is more difficult to obtain because the consensus layer clients do not always have unambiguous traces that can be used to identify them. The data was generated using a classification algorithm that sometimes confuses some of the minority clients (see [here](https://twitter.com/sproulM_/status/1440512518242197516) for more details). In the diagram above, these ambiguous classifications are treated with an either/or label (e.g. Nimbus/Teku). Nevertheless, it is clear that the majority of the network is running Prysm. Despite only being snapshots, the values in the diagram provide a good general sense of the current state of client diversity.
 
 Up to date client diversity data for the consensus layer is now available at [clientdiversity.org](https://clientdiversity.org/).
 
 ## Execution layer {#execution-layer}
 
-Until now, the conversation around client diversity has focused mainly on the consensus layer. However, the execution client [Geth](https://geth.ethereum.org) currently accounts for around 85% of all nodes. This percentage is problematic for the same reasons as for consensus clients. For example, a bug in Geth affecting transaction handling or constructing execution payloads could lead to consensus clients finalizing problematic or bugged transactions. Therefore, Ethereum would be healthier with a more even distribution of execution clients, ideally with no client representing more than 33% of the network.
+Until now, the conversation around client diversity has focused mainly on the consensus layer. However, the execution client [Geth](https://geth.ethereum.org) currently accounts for around 41% of all nodes. This percentage is problematic for the same reasons as for consensus clients. For example, a bug in Geth affecting transaction handling or constructing execution payloads could lead to consensus clients finalizing problematic or bugged transactions. Therefore, Ethereum would be healthier with a more even distribution of execution clients, ideally with no client representing more than 33% of the network.
 
 ## Use a minority client {#use-minority-client}
 
@@ -65,6 +97,8 @@ Addressing client diversity requires more than individual users to choose minori
 [Nethermind](https://downloads.nethermind.io/)
 
 [Erigon](https://github.com/ledgerwatch/erigon)
+
+[Reth](https://github.com/paradigmxyz/reth)
 
 [Go-Ethereum](https://geth.ethereum.org/)
 
