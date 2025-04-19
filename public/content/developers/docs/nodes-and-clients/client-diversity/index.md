@@ -72,7 +72,7 @@ There is also a human cost to having majority clients. It puts excess strain and
 </div>
 
 <div className="mt-8 prose prose-sm">
-  _This diagram may be outdated — go to [ethernodes.org](https://ethernodes.org) ad[clientdiversity.org](https://clientdiversity.org/) for up‑to‑date information._
+  _This diagram may be outdated — go to [ethernodes.org](https://ethernodes.org) and [clientdiversity.org](https://clientdiversity.org/) for up‑to‑date information._
 </div>
 
 
