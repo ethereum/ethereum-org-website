@@ -1,4 +1,4 @@
-import { EXT_URLS } from "../constants"
+import { EXT_URLS } from "../variables"
 
 const extUrlRefs = EXT_URLS
 
@@ -20,7 +20,7 @@ const rgxCurlyEscapeIncludeAnchor = {
   // this beautifully named regex fails with 'named capturing groups available for ^ES2018
   // tsconfig.json contains "ES2021.String" only ¯\_(ツ)_/¯ not sure why, but I won't add/change
   /*     search: /^(?<heading>#{1,6}.*?)\{(?<anchor>#[\w-]+)\}/gm,
-    replace: `$<heading>\\{$<anchor>\\}` */
+      replace: `$<heading>\\{$<anchor>\\}` */
 
   search: /^(#{1,6}.*?)\{(#[\w-]+)\}/gm,
   replace: `$1\\{$2\\}`,
