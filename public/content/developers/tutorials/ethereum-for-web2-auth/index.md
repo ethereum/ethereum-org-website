@@ -5,7 +5,7 @@ author: Ori Pomerantz
 tags: ["web2", "authentication", "eas"]
 skill: beginner
 lang: en
-published: 2025-04-15
+published: 2025-04-30
 ---
 
 ## Introduction
@@ -96,14 +96,14 @@ sequenceDiagram
 
 -->
 
-The signature only provides the address. To get other user attributes, you typically use [attestations](https://attest.org/). An attestation typically has these fields:
+The signature only verifies the Ethereum address. To get other user attributes, you typically use [attestations](https://attest.org/). An attestation typically has these fields:
 
 - **Attestor**, the address that made the attestation
 - **Recipient**, the address to which the attestation applies
 - **Data**, the data being attested, such as name, permissions, etc.
 - **Schema**, the ID of the schema used to interpret the data.
 
-Because of the decentralized nature of Ethereum, any user can make attestations. The attestor's identity is important to identify which attestations we want to consider reliable.
+Because of the decentralized nature of Ethereum, any user can make attestations. The attestor's identity is important to identify which attestations we consider reliable.
 
 ## Setup
 
@@ -127,7 +127,7 @@ The first step is to have a SAML SP and a SAML IdP communicating between themsel
     cd ..
     ```
 
-3. Start the servers
+3. Start the servers (both SP and IdP)
 
     ```sh
     pnpm start
@@ -250,7 +250,7 @@ const fs = await import("fs")
 const saml = await import("samlify")
 ```
 
-We use the [`samlify`](https://www.npmjs.com/package/samlify) to implement SAML.
+We use the [`samlify`](https://www.npmjs.com/package/samlify) library to implement SAML.
 
 ```typescript
 import * as validator from "@authenio/samlify-node-xmllint"
@@ -543,11 +543,11 @@ This is the endpoint that receives a login request from the service provider. Th
       res.send(getLoginPage(samlRequest["samlp:AuthnRequest"]["@_ID"]))
 ```
 
-We should be able to use [`idp.parseLoginRequest`](https://github.com/tngan/samlify/blob/master/src/entity-idp.ts#L127-L144) to read the authentication request's ID. However, I could get it working and it wasn't worth spending a lot of time on it so I just use a [general-purpose XML parser](https://www.npmjs.com/package/fast-xml-parser). The information we need is the `ID` attribute inside the `<samlp:AuthnRequest>` tag, which is at the top level of the XML.
+We should be able to use [`idp.parseLoginRequest`](https://github.com/tngan/samlify/blob/master/src/entity-idp.ts#L127-L144) to read the authentication request's ID. However, I couldn't get it working and it wasn't worth spending a lot of time on it so I just use a [general-purpose XML parser](https://www.npmjs.com/package/fast-xml-parser). The information we need is the `ID` attribute inside the `<samlp:AuthnRequest>` tag, which is at the top level of the XML.
 
 ## Using Ethereum signatures
 
-Now that we can send a user identity to the service provider, the next step is to obtain the user identity in a trusted manner. Viem allows us to just ask the wallet for the user address, but this means asking the browser for the information. We don't control the browser, so we can't trust any response we get from it.
+Now that we can send a user identity to the service provider, the next step is to obtain the user identity in a trusted manner. Viem allows us to just ask the wallet for the user address, but this means asking the browser for the information. We don't control the browser, so we can't automatically trust the response we get from it.
 
 Instead, the IdP is going to send the browser a string to sign. If the wallet in the browser signs this string, it means that it really is that address (that is, it knows the private key that corresponds to the address).
 
@@ -813,7 +813,7 @@ query GetAttestationsByRecipient {
 }
 ```
 
-This [`schemaId`](https://optimism.easscan.org/schema/view/0xfa2eff59a916e3cc3246f9aec5e0ca00874ae9d09e4678e5016006f07622f977) includes just an e-mail address. This query asks for attestations of this schema. The subject of the attestation is called the `recipient`, is always an address.
+This [`schemaId`](https://optimism.easscan.org/schema/view/0xfa2eff59a916e3cc3246f9aec5e0ca00874ae9d09e4678e5016006f07622f977) includes just an e-mail address. This query asks for attestations of this schema. The subject of the attestation is called the `recipient`. It is always an Ethereum address.
 
 Warning: The way we are getting attestations here has two security issues.
 
@@ -932,7 +932,7 @@ We are looking for attestations.
         }
 ```
 
-The attestations we want are those in our schema, where the recipient is `getAddress(ethAddr)`. The [`getAddress`](https://viem.sh/docs/utilities/getAddress#getaddress) function makes sure our address has the correct [checksum](https://github.com/ethereum/ercs/blob/master/ERCS/erc-55.md).
+The attestations we want are those in our schema, where the recipient is `getAddress(ethAddr)`. The [`getAddress`](https://viem.sh/docs/utilities/getAddress#getaddress) function makes sure our address has the correct [checksum](https://github.com/ethereum/ercs/blob/master/ERCS/erc-55.md). This is necessary about GraphQL is case-significant. "0xBAD060A7", "0xBad060A7", and "0xbad060a7" are differemt values.
 
 ```typescript
         take: 1
@@ -991,9 +991,9 @@ Use the new function to get the e-mail address.
 
 ## What about decentralization?
 
-In this configuration users cannot pretend to be somebody they aren't, as long as we rely on trustworthy attesters for the Ethereum to e-mail address mapping. However, our identity provider is still a centralized component. Whoever has the private key of the identity provider can send false information to the service provider.
+In this configuration users cannot pretend to be somebody they are not, as long as we rely on trustworthy attesters for the Ethereum to e-mail address mapping. However, our identity provider is still a centralized component. Whoever has the private key of the identity provider can send false information to the service provider.
 
-There may be a solution using [multi-party computation (MPC)](https://ethresear.ch/c/cryptography/mpc/14). If I get it working, I hope to write about it in a future tutorial.
+There may be a solution using [multi-party computation (MPC)](https://en.wikipedia.org/wiki/Secure_multi-party_computation). I hope to write about it in a future tutorial.
 
 ## Conclusion
 
