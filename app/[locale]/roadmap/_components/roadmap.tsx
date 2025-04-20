@@ -250,7 +250,7 @@ const RoadmapPage = () => {
             {technicalUpgradesItems.map((item) => (
               <LinkBox
                 key={item.title}
-                className="flex flex-col rounded-3xl border border-[rgba(159,43,212,0.11)] bg-roadmap-upgrade-card-gradient p-6"
+                className="flex flex-col rounded-3xl border border-[rgba(159,43,212,0.11)] bg-roadmap-upgrade-card-gradient p-6 hover:bg-roadmap-upgrade-card-gradient-hover hover:shadow-lg"
               >
                 <div className="mb-3 flex gap-4">
                   {item.icon}
@@ -259,8 +259,15 @@ const RoadmapPage = () => {
                 <p className="m-0 p-0 pb-3 text-body-medium">
                   {item.description}
                 </p>
-                <InlineLink href={item.href}>Learn more</InlineLink>
-                <LinkOverlay href={item.href} />
+
+                <LinkOverlay href={item.href}>
+                  <InlineLink
+                    href={item.href}
+                    className="hover:text-primary-hover"
+                  >
+                    Learn more
+                  </InlineLink>
+                </LinkOverlay>
               </LinkBox>
             ))}
           </div>

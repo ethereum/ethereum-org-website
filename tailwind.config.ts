@@ -233,6 +233,8 @@ const config = {
         "gradient-staking": "var(--gradient-staking)",
         "roadmap-card-gradient": "var(--roadmap-card-gradient)",
         "roadmap-upgrade-card-gradient": "var(--roadmap-upgrade-card-gradient)",
+        "roadmap-upgrade-card-gradient-hover":
+          "var(--roadmap-upgrade-card-gradient-hover)",
       },
       boxShadow: {
         "table-box": "var(--table-box-shadow)",
