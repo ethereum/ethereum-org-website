@@ -125,7 +125,7 @@ const ReleaseCarousel = () => {
                     {pastReleases[pastReleases.length - 1].releaseDate ===
                       release.releaseDate && (
                       <div className="m-auto w-fit rounded-lg bg-primary-low-contrast px-2 py-1">
-                        <p className="text-sm font-bold">We are here</p>
+                        <p className="text-sm font-bold">In production</p>
                       </div>
                     )}
                     {nextRelease && (

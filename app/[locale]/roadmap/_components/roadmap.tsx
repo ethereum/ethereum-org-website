@@ -21,6 +21,7 @@ import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import Link from "@/components/ui/Link"
+import InlineLink from "@/components/ui/Link"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 
 import ReleaseCarousel from "./ReleaseCarousel"
@@ -171,9 +172,11 @@ const RoadmapPage = () => {
                 key={item.title}
                 className="flex h-full flex-col gap-4 rounded-3xl border bg-roadmap-card-gradient p-6"
               >
-                <div className="flex items-center justify-between gap-4">
+                <div className="flex flex-row items-center justify-between gap-4">
                   <h3 className="m-0">{item.title}</h3>
-                  {item.icon}
+                  <div className="flex h-12 w-12 items-center justify-center">
+                    {item.icon}
+                  </div>
                 </div>
                 <p className="flex-grow">{item.description}</p>
                 <ButtonLink href={item.button.href} variant="outline">
@@ -184,7 +187,7 @@ const RoadmapPage = () => {
           </div>
         </div>
 
-        <div className="flex flex-col-reverse gap-12 px-8 py-16 md:w-full md:flex-row lg:px-20">
+        <div className="flex flex-col-reverse gap-12 px-8 py-4 md:w-full md:flex-row">
           <div className="flex-1">
             <h2 className="mb-8">Why does Ethereum need a roadmap?</h2>
             <p className="mb-10">
@@ -253,7 +256,10 @@ const RoadmapPage = () => {
                   {item.icon}
                   <h3 className="text-xl">{item.title}</h3>
                 </div>
-                <p className="m-0 p-0 text-body-medium">{item.description}</p>
+                <p className="m-0 p-0 pb-3 text-body-medium">
+                  {item.description}
+                </p>
+                <InlineLink href={item.href}>Learn more</InlineLink>
                 <LinkOverlay href={item.href} />
               </LinkBox>
             ))}
