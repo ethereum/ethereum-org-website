@@ -91,6 +91,8 @@ The validator must...
 - not be in an exiting state (or slashed)
 - not have pending manually-triggered withdrawals (does not apply to sweeps)
 
+![conversion illustration](/images/maxeb/conversion.png)
+
 ## Requirements for consolidating
 
 This is the *same operation* as converting but is when the *source validator* is different from the *target validator*. The target validator's index is preserved and accepts the balance from the source validator. The source validator's index is put into an `EXITED` state.
@@ -103,6 +105,8 @@ The target validator must
 
 - have **Type 2** withdrawal credentials
 - not be in an exiting state.
+
+![consolidation illustration](/images/maxeb/consolidation.png)
 
 ## The consolidation request
 
