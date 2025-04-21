@@ -44,11 +44,18 @@
   "page-community-try-ethereum": "Δοκιμάστε το Ethereum μόνοι σας",
   "page-community-upcoming-events-no-events": "Δε γνωρίζουμε κάποια επερχόμενα γεγονότα. Γνωρίζετε εσείς;",
   "page-community-upcoming-events-load-more": "Εμφάνιση περισσότερων",
+  "page-community-upcoming-events-view-event": "Προβολή συμβάντος",
   "page-community-why-get-involved-title": "Γιατί να συμμετάσχετε;",
   "page-community-why-get-involved-card-1-title": "Βρείτε τα ενδιαφέροντά σας",
   "page-community-why-get-involved-card-1-description": "Υπάρχει χώρος για όλους. Βρείτε και συνδεθείτε με άτομα με παρόμοια ενδιαφέροντα για να συζητήσετε, να συλλογιστείτε και να γιορτάσετε μαζί το Ethereum.",
   "page-community-why-get-involved-card-2-title": "Κερδίστε τα προς το ζήν",
   "page-community-why-get-involved-card-2-description": "Όλοι έχουν λογαριασμούς να πληρώσουν. Το Ethereum σάς επιτρέπει να βρίσκετε ουσιαστική εργασία και να πληρωθείτε καλά για αυτό.",
   "page-community-why-get-involved-card-3-title": "Κάντε τη διαφορά",
-  "page-community-why-get-involved-card-3-description": "Η ενασχόληση με το Ethereum σάς επιτρέπει να είστε ενεργοί συμμετέχοντες σε μια τεχνολογία που έχει θετικό αντίκτυπο σε εκατομμύρια ανθρώπους."
+  "page-community-why-get-involved-card-3-description": "Η ενασχόληση με το Ethereum σάς επιτρέπει να είστε ενεργοί συμμετέχοντες σε μια τεχνολογία που έχει θετικό αντίκτυπο σε εκατομμύρια ανθρώπους.",
+  "page-index-internet-image-alt": "Απεικόνιση φουτουριστικού υπολογιστή, που λειτουργεί με κρυστάλλους Ethereum.",
+  "page-index-get-started-image-alt": "Απεικόνιση ανθρώπου που δουλεύει σε υπολογιστή.",
+  "page-index-get-started-wallet-image-alt": "Απεικόνιση ενός ρομπότ με ένα θησαυροφυλάκιο για σώμα, που αντιπροσωπεύει ένα πορτοφόλι Ethereum.",
+  "page-index-get-started-eth-image-alt": "Απεικόνιση ομάδας ανθρώπων που κοιτάζουν ένα ether (ETH) με θαυμασμό.",
+  "page-index-get-started-dapps-image-alt": "Απεικόνιση σκύλου που χρησιμοποιεί υπολογιστή.",
+  "page-index-get-started-devs-image-alt": "Aπεικόνιση ενός χεριού που δημιουργεί το λογότυπο του ETH από τουβλάκια Lego."
 }

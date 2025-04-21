@@ -1,5 +1,6 @@
 ---
 title: 智能合约
+metaTitle: "智能合约：有什么优势？"
 description: 智能合约的非技术性介绍
 lang: zh
 ---
@@ -76,7 +77,6 @@ Alice 和 Bob 要进行一场自行车比赛。 假设 Alice 和 Bob 打赌 $10 
 ## 延伸阅读 {#further-reading}
 
 - [智能合约将如何改变世界](https://www.youtube.com/watch?v=pA6CGuXEKtQ)
-- [智能合约：将要取代律师的区块链技术](https://blockgeeks.com/guides/smart-contracts/)
 - [面向开发者的智能合约](/developers/docs/smart-contracts/)
 - [学习编写智能合约](/developers/learning-tools/)
 - [精通以太坊 — 什么是智能合约？](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)

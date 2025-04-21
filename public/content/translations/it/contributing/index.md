@@ -19,7 +19,7 @@ Siamo un'accogliente community che ti aiuterà a crescere e a istruirti nell'eco
 - [Lavora a un ticket aperto](https://github.com/ethereum/ethereum-org-website/issues): attività che abbiamo identificato come necessarie
 
 **Progettazione**
-- [Aiuta a progettare il sito web](/contributing/design/): i progettisti di tutti i livelli possono contribuire a migliorare il sito web
+- [Aiuta a progettare il sito web](/contributing/design/) - Possono contribuire a migliorare il sito i designer di qualsiasi livello
 
 **Contenuto**
 - [Crea/modifica i contenuti](/contributing/#how-to-update-content): suggerisci nuove pagine o apporta modifiche a ciò che esiste già
@@ -68,7 +68,7 @@ Prima di contribuire, assicurati di avere familiarità con:
 - la nostra [guida di stile](/contributing/style-guide/)
 - il nostro [codice di condotta](/community/code-of-conduct)
 
-<ContributorsQuizBanner mt={16} mb={8} />
+<ContributorsQuizBanner className="mt-16 mb-8" />
 
 ## Come vengono prese le decisioni sul sito {#how-decisions-about-the-site-are-made}
 
@@ -94,7 +94,7 @@ Se il tuo contributo viene aggiunto a ethereum.org, avrai una possibilità di ri
 
 ### Come reclamare
 1. Unisciti al nostro [server Discord](https://discord.gg/ethereum-org).
-2. Incolla un collegamento ai tuoi contributi nel canale `#🥇 | proof-of-contribution`
+2. Incolla un link ai tuoi contributi nel canale `#🥇 | proof-of-contribution`.
 3. Attendi che un membro del nostro team ti invii un collegamento al tuo OAT.
 4. Rivendica il tuo OAT!
 

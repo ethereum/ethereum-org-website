@@ -26,6 +26,7 @@ I block explorer sono il tuo portale sui dati di Ethereum. Puoi usarli per veder
 - [EthVM](https://www.ethvm.com/)
 - [OKLink](https://www.oklink.com/eth)
 - [Rantom](https://rantom.app/)
+- [Ethseer](https://ethseer.io)
 
 ## Strumenti open source {#open-source-tools}
 
@@ -237,14 +238,15 @@ I dati di livello superiore del livello di consenso includono quanto segue:
 
 ## Block explorer {#block-explorers}
 
-- [Etherscan](https://etherscan.io/) - un esploratore di blocchi che puoi usare per recuperare i dati per la Rete Principale di Ethereum e le reti di prova di Ropsten, Kovan, Rinkeby e Goerli
+- [Etherscan](https://etherscan.io/) - un esploratore di blocchi che puoi usare per recuperare i dati per la Rete Principale di Ethereum e la rete di prova Sepolia
 - [3xpl](https://3xpl.com/ethereum) - un esploratore di Ethereum open source e privo di inserzioni che consente di scaricare i propri dataset
-- [Beaconcha.in](https://beaconcha.in/) - un esploratore di blocchi open source per la Rete Principale di Ethereum e la rete di prova di Goerli
+- [Beaconcha.in](https://beaconcha.in/) - un esploratore di blocchi open source per la Rete Principale di Ethereum e la rete di prova di Sepolia
 - [Blockchair](https://blockchair.com/ethereum): l'esploratore di Ethereum più privato. Anche per ordinare e filtrare i dati (mempool)
 - [Etherchain](https://www.etherchain.org/) - un esploratore di blocchi per la rete principale di Ethereum
-- [Ethplorer](https://ethplorer.io/) - un esploratore di blocchi incentrato sui token per la Rete Principale di Ethereum e la rete di prova di Kovan
+- [Ethplorer](https://ethplorer.io/) - un esploratore di blocchi incentrato sui token per la Rete Principale di Ethereum e la rete di prova di Sepolia
 - [Rantom](https://rantom.app/): Un visualizzatore di transazioni NFT e DeFi open source e intuitivo per gli utenti, per una visione dettagliata
 - [Ethernow](https://www.ethernow.xyz/): un esploratore in tempo reale delle transazioni che ti consente di visualizzare il livello pre-catena della Rete Principale di Ethereum
+- [Otterscan](https://otterscan.io/) - un esploratore di blocchi open source alternativo per Ethereum
 
 ## Approfondimenti {#further-reading}
 

@@ -126,11 +126,11 @@ contract RecipientContract is IERC223Recipient {
     address tokenA; // The only token that we want to accept.
     function tokenReceived(address _from, uint _value, bytes memory _data) public override
     {
-        // It is important to understand that within this function
-        // msg.sender is the address of a token that is being received,
-        // msg.value  is always 0 as the token contract does not own or send Ether in most cases,
-        // _from      is the sender of the token transfer,
-        // _value     is the amount of tokens that was deposited.
+        // 在此函数中理解这一点很重要
+        // msg.sender 是正在被接收的一个代币的地址，
+        // 由于代币合约在大多数情况下不拥有或发送以太币，msg.value 始终为 0，
+        // _from      是代币转账的发送者，
+        // _value     是存入的代币数量。
         require(msg.sender == tokenA);
         deposits += _value;
         emit Deposit(_from);

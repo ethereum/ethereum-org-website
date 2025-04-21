@@ -1,12 +1,9 @@
-import { useRouter } from "next/router"
 import type { HTMLAttributes } from "react"
-import { Badge } from "@chakra-ui/react"
 
 import { ChildOnlyProp } from "@/lib/types"
 import type { DocsFrontmatter, MdPageContent } from "@/lib/interfaces"
 
 import BannerNotification from "@/components/Banners/BannerNotification"
-import { ButtonLink } from "@/components/Buttons"
 import CallToContribute from "@/components/CallToContribute"
 import Card from "@/components/Card"
 import Codeblock from "@/components/Codeblock"
@@ -28,9 +25,10 @@ import SideNav from "@/components/SideNav"
 import SideNavMobile from "@/components/SideNavMobile"
 import TableOfContents from "@/components/TableOfContents"
 import Translation from "@/components/Translation"
+import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Divider } from "@/components/ui/divider"
 import InlineLink from "@/components/ui/Link"
-import { mdxTableComponents } from "@/components/ui/Table"
+import { mdxTableComponents } from "@/components/ui/mdx-table-components"
 import YouTube from "@/components/YouTube"
 
 import { cn } from "@/lib/utils/cn"
@@ -81,7 +79,6 @@ export const docsComponents = {
   h4: H4,
   pre: Codeblock,
   ...mdxTableComponents,
-  Badge,
   ButtonLink,
   Card,
   CallToContribute,
@@ -108,6 +105,7 @@ type DocsLayoutProps = Pick<
 
 export const DocsLayout = ({
   children,
+  slug,
   frontmatter,
   tocItems,
   lastEditLocaleTimestamp,
@@ -115,12 +113,11 @@ export const DocsLayout = ({
   contentNotTranslated,
 }: DocsLayoutProps) => {
   const isPageIncomplete = !!frontmatter.incomplete
-  const { asPath: relativePath } = useRouter()
-  const absoluteEditPath = getEditPath(relativePath)
+  const absoluteEditPath = getEditPath(slug)
 
   return (
     <div className="flex w-full flex-col border-b">
-      <SideNavMobile path={relativePath} />
+      <SideNavMobile path={slug} />
       {isPageIncomplete && (
         <BannerNotification shouldShow={isPageIncomplete}>
           <Translation id="page-developers-docs:banner-page-incomplete" />
@@ -130,7 +127,7 @@ export const DocsLayout = ({
         className="flex justify-between bg-background-highlight lg:pe-8"
         dir={contentNotTranslated ? "ltr" : "unset"}
       >
-        <SideNav path={relativePath} />
+        <SideNav path={slug} />
         <MainArticle className="min-w-0 flex-1 px-8 pb-8 pt-8 md:px-16 md:pb-16 md:pt-12">
           <H1 id="top">{frontmatter.title}</H1>
           <FileContributors
@@ -154,11 +151,11 @@ export const DocsLayout = ({
         </MainArticle>
         {tocItems && (
           <TableOfContents
+            className={isPageIncomplete ? "pt-20" : "pt-12"}
             editPath={absoluteEditPath}
             items={tocItems}
             maxDepth={frontmatter.sidebarDepth!}
             hideEditButton={!!frontmatter.hideEditButton}
-            pt={isPageIncomplete ? "5rem" : "3rem"}
           />
         )}
       </div>

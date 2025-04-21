@@ -55,7 +55,7 @@ The benefits of this network design are:
 - reduce dependence on centralized providers
 - Reduce Internet bandwidth usage
 - Minimized or zero syncing
-- Accessible to resource-constrained devices (<1 GB RAM, <100 MB disk space, 1 CPU)
+- Accessible to resource-constrained devices (\<1 GB RAM, \<100 MB disk space, 1 CPU)
 
 The diagram below shows the functions of existing clients that can be delivered by the Portal Network, enabling users to access these functions on very low-resource devices.
 
@@ -74,7 +74,7 @@ The Portal Network developers also made the design choice to build three separat
 The Portal Network clients are:
 
 - [Trin](https://github.com/ethereum/trin): written in Rust
-- [Fluffy](https://nimbus.team/docs/fluffy.html): written in Nim
+- [Fluffy](https://fluffy.guide): written in Nim
 - [Ultralight](https://github.com/ethereumjs/ultralight): written in Typescript
 - [Shisui](https://github.com/optimism-java/shisui): written in Go
 
@@ -82,7 +82,7 @@ Having multiple independent client implementations enhances the resilience and d
 
 If one client experiences issues or vulnerabilities, other clients can continue to operate smoothly, preventing a single point of failure. Additionally, diverse client implementations foster innovation and competition, driving improvements and reducing monoculture risk within the ecosystem.
 
-## Further reading {#futher-reading}
+## Further reading {#further-reading}
 
 - [The Portal Network (Piper Merriam at Devcon Bogota)](https://www.youtube.com/watch?v=0stc9jnQLXA).
 - [The Portal Network discord](https://discord.gg/CFFnmE7Hbs)

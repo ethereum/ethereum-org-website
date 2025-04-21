@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils/cn"
  * Wrapper to generate an icon component, using the react-icons `IconBase` component.
  * Requires setting `displayName` and `children` props.
  *
- * **NOTE:** Setting SVG attributes in the `options` object become default values, which are overriden when passing props on render.
+ * **NOTE:** Setting SVG attributes in the `options` object become default values, which are overridden when passing props on render.
  */
 export const createIconBase = (
   options: IconBaseProps & {

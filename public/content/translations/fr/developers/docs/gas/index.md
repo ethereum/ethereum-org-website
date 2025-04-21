@@ -1,5 +1,6 @@
 ---
 title: Gaz et frais
+metaTitle: "Gaz et frais Ethereum : aperçu technique"
 description:
 lang: fr
 ---
@@ -122,6 +123,7 @@ La mise à l'échelle de la couche 2 est une initiative primordiale pour amélio
 Si vous voulez surveiller les prix du gaz et pouvoir envoyer votre ETH à moindre coût, vous pouvez utiliser différents outils comme :
 
 - [Etherscan](https://etherscan.io/gastracker) _- Évaluateur du prix du gaz pour une transaction_
+- [Suivi du gaz ETH](https://www.ethgastracker.com/) _Surveillez et suivez les prix du gaz sur Ethereum et des solutions de niveau 2 pour réduire les frais de transaction et économiser de l'argent_
 - [Blocknative ETH Gas Estimator](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) _Extension Chrome pour estimer le gaz à la fois pour les transactions de Type 0 et les transactions de Type 2 EIP-1559 ._
 - [Cryptoneur Gas Fees Calculator](https://www.cryptoneur.xyz/gas-fees-calculator) _Calculez les frais de gaz dans votre devise locale pour différents types de transaction sur le réseau principal, Arbitrum et Polygon._
 

@@ -1,55 +1,47 @@
-import React, { useState } from "react"
+import { type ReactNode, useState } from "react"
 import { motion } from "framer-motion"
-import { MdInfoOutline } from "react-icons/md"
+import { MdClose, MdInfoOutline } from "react-icons/md"
+
+import { Button } from "../ui/buttons/Button"
 import {
-  Button,
-  Icon,
   Popover,
-  PopoverArrow,
-  PopoverBody,
-  type PopoverBodyProps,
-  PopoverCloseButton,
+  PopoverClose,
   PopoverContent,
   PopoverTrigger,
-} from "@chakra-ui/react"
+} from "../ui/popover"
 
 import { PulseAnimation } from "./PulseAnimation"
 
 const MotionButton = motion(Button)
 
-type MoreInfoPopover = Pick<PopoverBodyProps, "children"> & {
+type MoreInfoPopover = {
   isFirstStep: boolean
+  children: ReactNode
 }
 export const MoreInfoPopover = ({ isFirstStep, children }: MoreInfoPopover) => {
   const [clicked, setClicked] = useState(false)
   return (
     <Popover>
-      <PopoverTrigger>
+      <PopoverTrigger asChild>
         <MotionButton
-          rightIcon={<Icon as={MdInfoOutline} size={24} />}
           variant="ghost"
-          sx={{ paddingInlineStart: 0 }}
-          color="body.medium"
-          fontSize="sm"
-          p={0}
+          className="relative min-h-0 p-0 text-sm text-body-medium"
           onClick={() => setClicked(true)}
-          position="relative"
+          data-testid="more-info-popover-trigger"
         >
           More info
+          <MdInfoOutline size={24} />
           {isFirstStep && !clicked && <PulseAnimation type="narrow-button" />}
         </MotionButton>
       </PopoverTrigger>
       <PopoverContent
-        px={4}
-        py={6}
-        insetStart={{ base: 4, sm: 8 }}
-        w={{ base: "calc(100vw - 3rem)", sm: "calc(100vw - 5rem)" }}
+        className="relative start-4 w-[calc(100vw-3rem)] max-w-xs bg-background-highlight px-4 py-6 text-sm shadow-none sm:start-8 sm:w-[calc(100vw-5rem)]"
+        data-testid="more-info-popover-content"
       >
-        <PopoverArrow />
-        <PopoverCloseButton ms="auto" />
-        <PopoverBody sx={{ "p:last-of-type": { mb: 2 } }}>
-          {children}
-        </PopoverBody>
+        <PopoverClose className="absolute right-2 top-1 ms-auto flex size-6 items-center justify-center text-xl leading-none">
+          <MdClose />
+        </PopoverClose>
+        <div className="px-3 py-2 last-of-type:[&_p]:mb-2">{children}</div>
       </PopoverContent>
     </Popover>
   )

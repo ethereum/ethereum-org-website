@@ -1,5 +1,6 @@
 ---
-title: Αποκεντρωμένοι Αυτόνομοι Οργανισμοί (DAO)
+title: Τι είναι ο DAO;
+metaTitle: Τι είναι ο DAO; | Αποκεντρωμένος Αυτόνομος Οργανισμός
 description: Μια επισκόπηση των DAO στο Ethereum
 lang: el
 template: use-cases

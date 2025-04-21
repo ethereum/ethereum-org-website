@@ -70,7 +70,7 @@ Especificações formais de baixo nível podem ser fornecidas como propriedades 
 
 ### Propriedades do estilo Hoare {#hoare-style-properties}
 
-[Hore Logic](https://en.wikipedia.org/wiki/Hoare_logic) fornece um conjunto de regras formais para raciocinar sobre a correção de programas, incluindo contratos inteligentes. Uma propriedade de estilo Hoare é representada por um triplo Hoare {_P_}_c_{_Q_}, onde _c_ é um programa e _P_ e _Q_ são predicados no estado do _c_ (ou seja, o programa), formalmente descritos como _precondições_ e _pós-condições_, respectivamente.
+[Hore Logic](https://en.wikipedia.org/wiki/Hoare_logic) fornece um conjunto de regras formais para raciocinar sobre a correção de programas, incluindo contratos inteligentes. Uma propriedade de estilo Hoare é representada por um triplo Hoare `{P}c{Q}`, onde `c` é um programa e `P` e `Q` são predicados no estado do `c` (ou seja, o programa), formalmente descritos como _precondições_ e _pós-condições_, respectivamente.
 
 Uma precondição é um predicado que descreve as condições necessárias para a execução correta de uma função; os usuários que chamam um contrato devem satisfazer este requisito. Uma pós-condição é um predicado que descreve a condição que uma função estabelece se executada corretamente; os usuários podem esperar que essa condição seja verdadeira após chamar a função. Uma _invariável_ na lógica Hoare é um predicado que é preservado pela execução de uma função (ou seja, não muda).
 
@@ -88,7 +88,7 @@ As instruções `require` expressam uma precondição ou invariável e são freq
 
 Especificações baseadas em traços descrevem operações que transitam um contrato entre diferentes estados e as relações entre essas operações. Como foi explicado anteriormente, os traços são sequências de operações que alteram o estado de um contrato de uma forma específica.
 
-Essa abordagem depende do modelo de contratos inteligentes como sistemas de transição de estado com alguns estados predefinidos (descritos por variáveis de estado) junto com um conjunto de transições predefinidas (descritas pelas funções de contrato). Além disso, um [gráfico de controle de fluxo](https://www.geeksforgeeks.org/software-engineering-control-flow-graph-cfg/) (CFG), que é uma representação gráfica do fluxo de execução de um programa, é frequentemente utilizado para descrever a semântica operacional de um contrato. Aqui, cada traço representado como um caminho no gráfico do fluxo de controle.
+Essa abordagem depende do modelo de contratos inteligentes como sistemas de transição de estado com alguns estados predefinidos (descritos por variáveis de estado) junto com um conjunto de transições predefinidas (descritas pelas funções de contrato). Além disso, um [gráfico de controle de fluxo ](https://www.geeksforgeeks.org/software-engineering-control-flow-graph-cfg/) (CFG), que é uma representação gráfica do fluxo de execução de um programa, é frequentemente utilizado para descrever a semântica operacional de um contrato. Aqui, cada traço representado como um caminho no gráfico do fluxo de controle.
 
 Em primeiro lugar, as especificações de nível de traços são usadas para raciocinar sobre padrões de execução interna em contratos inteligentes. Ao criar especificações de nível de traços, afirmamos os caminhos de execução admissíveis (ou seja, transições de estado) para um contrato inteligente. Utilizando técnicas, como a execução simbólica, podemos verificar formalmente que a execução nunca segue um caminho não definido no modelo formal.
 

@@ -23,20 +23,20 @@ lang: ja
 
 | フォーカス分野                                              | 名前                                                                                                                                                                   |
 |:---------------------------------------------------- |:-------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <Badge colorScheme="green">暗号通過へのオンボーディング</Badge>    | [CRADL: 暗号通貨のUX](https://docs.google.com/presentation/d/1s2OPSH5sMJzxRYaJSSRTe8W2iIoZx0PseIV-WeZWD1s/edit?usp=sharing)                                               |
-| <Badge colorScheme="green">暗号通過へのオンボーディング</Badge>    | [CRADL: 暗号通貨の勉強会](https://docs.google.com/presentation/d/1R9nFuzA-R6SxaGCKhoMbE4Vxe0JxQSTiHXind3LVq_w/edit?usp=sharing)                                              |
-| <Badge colorScheme="green">暗号通過へのオンボーディング</Badge>    | [ビットコインUXレポート](https://github.com/patestevao/BitcoinUX-report/blob/master/report.md)                                                                                 |
-| <Badge colorScheme="green">暗号通過へのオンボーディング</Badge>    | [ConSensys: 2023年の世界におけるWeb3への認識に関する状態](https://consensys.io/insight-report/web3-and-crypto-global-survey-2023)                                                      |
-| <Badge colorScheme="green">暗号通過へのオンボーディング</Badge>    | [NEAR: 導入へのプロセスを加速](https://drive.google.com/file/d/1VuaQP4QSaQxR5ddQKTMGI0b0rWdP7uGn/view)                                                                          |
-| <Badge colorScheme="purple">ステーキング</Badge>           | [ステーキング: 主要なトレンド、要点、予測 - ETHステーカー](https://lookerstudio.google.com/u/0/reporting/cafcee00-e1af-4148-bae8-442a88ac75fa/page/p_ja2srdhh2c?s=hmbTWDh9hJo)               |
-| <Badge colorScheme="purple">ステーキング</Badge>           | [複数のアプリのステーキング](https://github.com/threshold-network/UX-User-Research/blob/main/Multi-App%20Staking%20(MAS)/iterative-user-study/MAS%20Iterative%20User%20Study.pdf) |
-| <Badge colorScheme="red">自律分散型組織</Badge>             | [2022年DAOリサーチのアップデート: DAOビルダーが必要なことは何か？](https://blog.aragon.org/2022-dao-research-update/)                                                                          |
-| <Badge colorScheme="pink">分散型金融(DeFi)</Badge>        | [2024年のDefiの状態](https://stateofdefi.org/) (調査中)                                                                                                                      |
-| <Badge colorScheme="pink">分散型金融(DeFi)</Badge>        | [カバレッジプール](https://github.com/threshold-network/UX-User-Research/tree/main/Keep%20Coverage%20Pool)                                                                   |
-| <Badge colorScheme="pink">分散型金融(DeFi)</Badge>        | [ConSensys: 2022年DeFiユーザーリサーチレポート](https://cdn2.hubspot.net/hubfs/4795067/ConsenSys%20Codefi-Defi%20User%20ResearchReport.pdf)                                       |
-| <Badge colorScheme="gray">メタバース</Badge>              | [メタバース: ユーザーリサーチレポート](https://www.politico.com/f/?id=00000187-7685-d820-a7e7-7e85d1420000)                                                                           |
-| <Badge colorScheme="gray">メタバース</Badge>              | [Going on Safari: メタバースでのユーザリサーチ](https://archive.devcon.org/archive/watch/6/going-on-safari-researching-users-in-the-metaverse/?tab=YouTube) (27分間のビデオ)             |
-| <Badge colorScheme="blue">Ethereum.org UXの状況</Badge> | [ユーザビリティとユーザ満足度調査ダッシュボード - Ethereum.org](https://lookerstudio.google.com/reporting/0a189a7c-a890-40db-a5c6-009db52c81c9)                                             |
+| <Tag variant="solid" status="success">暗号通過へのオンボーディング</Tag>    | [CRADL: 暗号通貨のUX](https://docs.google.com/presentation/d/1s2OPSH5sMJzxRYaJSSRTe8W2iIoZx0PseIV-WeZWD1s/edit?usp=sharing)                                               |
+| <Tag variant="solid" status="success">暗号通過へのオンボーディング</Tag>    | [CRADL: 暗号通貨の勉強会](https://docs.google.com/presentation/d/1R9nFuzA-R6SxaGCKhoMbE4Vxe0JxQSTiHXind3LVq_w/edit?usp=sharing)                                              |
+| <Tag variant="solid" status="success">暗号通過へのオンボーディング</Tag>    | [ビットコインUXレポート](https://github.com/patestevao/BitcoinUX-report/blob/master/report.md)                                                                                 |
+| <Tag variant="solid" status="success">暗号通過へのオンボーディング</Tag>    | [ConSensys: 2023年の世界におけるWeb3への認識に関する状態](https://consensys.io/insight-report/web3-and-crypto-global-survey-2023)                                                      |
+| <Tag variant="solid" status="success">暗号通過へのオンボーディング</Tag>    | [NEAR: 導入へのプロセスを加速](https://drive.google.com/file/d/1VuaQP4QSaQxR5ddQKTMGI0b0rWdP7uGn/view)                                                                          |
+| <Tag status="tag">ステーキング</Tag>           | [ステーキング: 主要なトレンド、要点、予測 - ETHステーカー](https://lookerstudio.google.com/u/0/reporting/cafcee00-e1af-4148-bae8-442a88ac75fa/page/p_ja2srdhh2c?s=hmbTWDh9hJo)               |
+| <Tag status="tag">ステーキング</Tag>           | [複数のアプリのステーキング](https://github.com/threshold-network/UX-User-Research/blob/main/Multi-App%20Staking%20(MAS)/iterative-user-study/MAS%20Iterative%20User%20Study.pdf) |
+| <Tag variant="solid" status="error">自律分散型組織</Tag>             | [2022年DAOリサーチのアップデート: DAOビルダーが必要なことは何か？](https://blog.aragon.org/2022-dao-research-update/)                                                                          |
+| <Tag status="error">分散型金融(DeFi)</Tag>        | [2024年のDefiの状態](https://stateofdefi.org/) (調査中)                                                                                                                      |
+| <Tag status="error">分散型金融(DeFi)</Tag>        | [カバレッジプール](https://github.com/threshold-network/UX-User-Research/tree/main/Keep%20Coverage%20Pool)                                                                   |
+| <Tag status="error">分散型金融(DeFi)</Tag>        | [ConSensys: 2022年DeFiユーザーリサーチレポート](https://cdn2.hubspot.net/hubfs/4795067/ConsenSys%20Codefi-Defi%20User%20ResearchReport.pdf)                                       |
+| <Tag variant="solid">メタバース</Tag>              | [メタバース: ユーザーリサーチレポート](https://www.politico.com/f/?id=00000187-7685-d820-a7e7-7e85d1420000)                                                                           |
+| <Tag variant="solid">メタバース</Tag>              | [Going on Safari: メタバースでのユーザリサーチ](https://archive.devcon.org/archive/watch/6/going-on-safari-researching-users-in-the-metaverse/?tab=YouTube) (27分間のビデオ)             |
+| <Tag variant="solid" status="tag">Ethereum.org UXの状況</Tag> | [ユーザビリティとユーザ満足度調査ダッシュボード - Ethereum.org](https://lookerstudio.google.com/reporting/0a189a7c-a890-40db-a5c6-009db52c81c9)                                             |
 
 ## Web3のデザイン {#design-for-web3}
 

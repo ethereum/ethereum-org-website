@@ -100,7 +100,7 @@ function update_name(string value) public {
 - Il est déclaré `public`, ce qui signifie que n'importe qui peut y accéder.
 - Il n'est pas déclaré comme `view`, il peut donc modifier l'état du contrat
 
-### Fonctions "view" {#view-functions}
+### Voir les fonctions {#view-functions}
 
 Ces fonctions promettent de ne pas modifier l’état des données du contrat. Les exemples courants sont les fonctions « getter » - vous pouvez utiliser ceci pour obtenir le solde d'un utilisateur par exemple.
 
@@ -131,7 +131,7 @@ Voici ce qui est considéré comme une modification d'état :
 7. Utilisation d'appels de bas niveau
 8. Utilisation d'un assemblage en ligne conteant certains opcodes
 
-### Fonctions « constructor » {#constructor-functions}
+### Fonctions du constructeur {#constructor-functions}
 
 Les fonctions `constructor` ne sont exécutées qu'une seule fois lors du premier déploiement du contrat. Comme `constructor` dans de nombreux langages de programmation basés sur des classes, ces fonctions initialisent souvent les variables d'état à leurs valeurs spécifiées.
 
@@ -203,7 +203,7 @@ Un contrat complet pourrait ressembler à cela. Ici la fonction `constructor` fo
 
 ## Événements et journaux {#events-and-logs}
 
-Les événements vous permettent de communiquer avec votre contrat intelligent depuis votre interface frontend ou d'autres applications abonnées. Lorsqu'une transaction est minée, les contrats intelligents peuvent émettre des événements et écrire des journaux sur la blockchain, que le frontend peut alors traiter.
+Les événements permettent à votre contrat intelligent de communiquer avec votre frontend ou d'autres applications abonnées. Une fois qu'une transaction est validée et ajoutée à un bloc, les contrats intelligents peuvent émettre des événements et enregistrer des informations, que le frontend peut ensuite traiter et utiliser.
 
 ## Exemples annotés {#annotated-examples}
 

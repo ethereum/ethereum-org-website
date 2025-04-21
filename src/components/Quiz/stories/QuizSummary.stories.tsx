@@ -3,7 +3,9 @@ import type { Meta, StoryObj } from "@storybook/react"
 import { QuizContent } from "../QuizWidget/QuizContent"
 import { QuizSummary } from "../QuizWidget/QuizSummary"
 
-import { LAYER_2_QUIZ_TITLE, layer2Questions } from "./utils"
+import { LAYER_2_QUIZ_TITLE_KEY, layer2Questions } from "./utils"
+
+import useTranslation from "@/hooks/useTranslation"
 
 const meta = {
   title: "Molecules / Display Content / Quiz / QuizWidget / Summary",
@@ -12,11 +14,14 @@ const meta = {
     questionsLength: layer2Questions.length,
   },
   decorators: [
-    (Story) => (
-      <QuizContent title={LAYER_2_QUIZ_TITLE} answerStatus={null}>
-        <Story />
-      </QuizContent>
-    ),
+    (Story) => {
+      const { t } = useTranslation()
+      return (
+        <QuizContent title={t(LAYER_2_QUIZ_TITLE_KEY)} answerStatus={null}>
+          <Story />
+        </QuizContent>
+      )
+    },
   ],
 } satisfies Meta<typeof QuizSummary>
 

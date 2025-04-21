@@ -1,4 +1,4 @@
-import { Box, Flex, List, ListItem, useToken, VStack } from "@chakra-ui/react"
+"use client"
 
 import type { StakingPage } from "@/lib/types"
 
@@ -8,10 +8,11 @@ import {
   GreenCheckProductGlyphIcon,
   WarningProductGlyphIcon,
 } from "@/components/icons/staking"
-import OldHeading from "@/components/OldHeading"
-import Text from "@/components/OldText"
 import Translation from "@/components/Translation"
+import { Flex, VStack } from "@/components/ui/flex"
+import { List, ListItem } from "@/components/ui/list"
 
+import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import { useStakingConsiderations } from "@/hooks/useStakingConsiderations"
@@ -37,11 +38,11 @@ const IndicatorGroup = ({
     return <WarningProductGlyphIcon style={style} />
   }
   return (
-    <VStack spacing={2} flex={1}>
+    <VStack className="flex-1 gap-2">
       <IndicatorIcon style={styleObj} />
-      <Text fontSize="xs" textAlign="center" maxW="{40}">
+      <p className="max-w-[10rem] text-center text-xs">
         <Translation id={label} />
-      </Text>
+      </p>
     </VStack>
   )
 }
@@ -51,9 +52,6 @@ export type StakingConsiderationsProps = {
 }
 
 const StakingConsiderations = ({ page }: StakingConsiderationsProps) => {
-  // TODO: Replace with direct token implementation after UI migration is completed
-  const mdBp = useToken("breakpoints", "md")
-
   const {
     StyledSvg,
     caution,
@@ -68,19 +66,13 @@ const StakingConsiderations = ({ page }: StakingConsiderationsProps) => {
     activeIndex,
   } = useStakingConsiderations({ page })
 
-  const activeStyles = {
-    bg: "background.highlight",
-    color: "body.base",
-    transition: "background 0.5s, color 0.5s",
-  }
-
   return (
-    <Flex flexDir={{ base: "column", md: "row" }}>
+    <Flex className="flex-col md:flex-row">
       <ButtonDropdown list={dropdownLinks} className="mb-4 md:hidden" />
       {/* TODO: Improve a11y */}
-      <Box flex={1} hideBelow={mdBp}>
+      <div className="hidden flex-1 md:block">
         {!!pageData && (
-          <List m={0}>
+          <List className="m-0">
             {/* TODO: Make mobile responsive */}
             {pageData.map(({ title, matomo }, idx) => (
               <ListItem
@@ -89,45 +81,24 @@ const StakingConsiderations = ({ page }: StakingConsiderationsProps) => {
                   handleSelection(idx)
                   trackCustomEvent(matomo)
                 }}
-                py={1}
-                cursor="pointer"
-                display="table"
-                w="full"
-                h={8}
-                p="3"
-                mb="0"
-                _hover={activeStyles}
-                position="relative"
-                {...(idx === activeIndex
-                  ? activeStyles
-                  : { color: "primary.base" })}
+                className={cn(
+                  "transition-background relative mb-0 table h-8 w-full cursor-pointer p-3 duration-500 hover:bg-background-highlight hover:text-body",
+                  idx === activeIndex
+                    ? "bg-background-highlight text-body"
+                    : "text-primary"
+                )}
               >
                 {title}
               </ListItem>
             ))}
           </List>
         )}
-      </Box>
-      <Flex
-        alignItems="center"
-        flexDir="column"
-        bg="background.highlight"
-        flex={2}
-        minH="410px"
-        p={6}
-      >
+      </div>
+      <Flex className="min-h-[410px] flex-[2] flex-col items-center bg-background-highlight p-6">
         <StyledSvg />
-        <OldHeading
-          as="h3"
-          fontWeight={700}
-          fontSize="27px"
-          lineHeight={1.4}
-          mt={10}
-        >
-          {title}
-        </OldHeading>
-        <Text>{description}</Text>
-        <Flex gap={8} justifyContent="center" mt="auto">
+        <h3 className="mt-10 text-2xl font-bold leading-[1.4]">{title}</h3>
+        <p>{description}</p>
+        <Flex className="mt-auto justify-center gap-8">
           {!!valid && (
             <IndicatorGroup
               label={valid}

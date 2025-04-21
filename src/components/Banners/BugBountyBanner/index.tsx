@@ -9,8 +9,8 @@ const BugBountyBanner = () => (
   <BannerNotification shouldShow>
     <Center>
       <p>
-        All Dencun-related bounties currently receive a 2x bonus multiplier (up
-        to 500,000 USD) up to two weeks before the scheduled mainnet hardfork.
+        Pectra is now in scope. After the cantina competition until mainnet
+        activation, Pectra issues have a 2x reward multiplier!
       </p>
     </Center>
   </BannerNotification>

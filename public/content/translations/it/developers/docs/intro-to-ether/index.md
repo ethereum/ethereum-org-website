@@ -26,7 +26,7 @@ La criptovaluta ether supporta un meccanismo di determinazione dei prezzi per la
 
 Pertanto, anche se una dApp malevola inviasse un ciclo infinito, a un certo punto la transazione terminerebbe gli ether e si arresterebbe, consentendo alla rete di tornare alla normalità.
 
-Capita [spesso](https://www.reuters.com/article/us-crypto-currencies-lending-insight-idUSKBN25M0GP#:~:text=price%20of%20ethereum) [di](https://abcnews.go.com/Business/bitcoin-slumps-week-low-amid-renewed-worries-chinese/story?id=78399845#:~:text=cryptocurrencies%20including%20ethereum) [confondere](https://www.cnn.com/2021/03/14/tech/nft-art-buying/index.html#:~:text=price%20of%20ethereum) Ethereum con ether; quando qualcuno si riferisce al "prezzo di Ethereum", è facile che stia parlando del prezzo dell'ether.
+È [comune confondere](https://abcnews.go.com/Business/bitcoin-slumps-week-low-amid-renewed-worries-chinese/story?id=78399845) Ethereum e gli ether: quando le persone si riferiscono al "prezzo di Ethereum", stanno descrivendo il prezzo degli ether.
 
 ## Coniare ether {#minting-ether}
 

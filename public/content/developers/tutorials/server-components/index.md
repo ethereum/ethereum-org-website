@@ -1,10 +1,10 @@
 ---
 title: "Server components and agents for web3 apps"
-description: After reading this tutorial, you will be able to write TypeScript servers that listen to events on a blockchain and respond accordingly with their own transactions. This will enable you to write centralized applications (because the server is a point of failure), but can interact with web3 entities. The same techniques can also be used to write an agent that responds to on-chain events without a human in the loop.
+description: After reading this tutorial, you will be able to write TypeScript servers that listen to events on a blockchain and respond accordingly with their own transactions. This will enable you to write centralized applications (because the server is a point of failure), but can interact with web3 entities. The same techniques can also be used to write an agent that responds to onchain events without a human in the loop.
 
 author: Ori Pomerantz
 lang: en
-tags: ["agent", "server", "offchain", "centralized"]
+tags: ["agent", "server", "offchain"]
 skill: beginner
 published: 2024-07-15
 ---
@@ -169,7 +169,7 @@ const greeter = getContract({
 })
 ```
 
-Now that we have all the prerequisites, we can finally create a [contract instance](https://viem.sh/docs/contract/getContract). We will use this contract instance to communicate with the on-chain contract.
+Now that we have all the prerequisites, we can finally create a [contract instance](https://viem.sh/docs/contract/getContract). We will use this contract instance to communicate with the onchain contract.
 
 
 ##### Reading from the blockchain

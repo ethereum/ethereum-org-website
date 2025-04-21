@@ -1,11 +1,11 @@
-import { useTranslation } from "next-i18next"
+import CardList, { type CardProps } from "@/components/CardList"
 
-import CardList, { type CardListItem } from "@/components/CardList"
+import { useTranslation } from "@/hooks/useTranslation"
 
 const MergeArticleList = () => {
   const { t } = useTranslation(["page-upgrades", "page-upgrades-index"])
 
-  const reads: CardListItem[] = [
+  const reads: CardProps[] = [
     {
       title: t("page-upgrades-index:page-upgrade-article-title-ethmerge"),
       description: t(

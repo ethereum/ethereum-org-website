@@ -1,12 +1,12 @@
-// Libraries
 import { StaticImageData } from "next/image"
-import { useTranslation } from "next-i18next"
-import { Box, Center, Flex, Heading } from "@chakra-ui/react"
 
-import { ButtonLink } from "@/components/Buttons"
-import { Image } from "@/components/Image"
-import InlineLink from "@/components/Link"
-import Text from "@/components/OldText"
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
+
+import { ButtonLink } from "./ui/buttons/Button"
+import InlineLink from "./ui/Link"
+import { Image } from "./Image"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 export type Layer2ProductCardProps = {
   children?: React.ReactNode
@@ -38,72 +38,75 @@ const Layer2ProductCard = ({
   const { t } = useTranslation("page-layer-2")
 
   return (
-    <Flex
-      color="text"
-      boxShadow={"0px 14px 66px rgba(0, 0, 0, 0.07)"}
-      direction="column"
-      justify="space-between"
-      bg="searchBackground"
-      borderRadius="base"
-      border={"1px solid lightBorder"}
-      textDecoration="none"
-      padding={2}
-      _hover={{ transition: "transform 0.1s", transform: "scale(1.02)" }}
-    >
-      <Center
-        bg={background}
-        boxShadow="inset 0px -1px 0px rgba(0, 0, 0, 0.1)"
-        minH="200px"
+    <Card className="flex flex-col justify-between rounded-md border-0 bg-background-highlight p-2 shadow-lg transition-transform duration-100 hover:scale-[1.02]">
+      <div
+        className="mb-4 flex min-h-[200px] items-center justify-center border-b"
+        style={{ backgroundColor: background }}
       >
         <Image
           src={image}
           alt={alt}
           width={100}
-          maxH={"257px"}
-          style={{ objectFit: "contain" }}
+          className="max-h-[257px] object-cover"
         />
-      </Center>
-      <Flex p={6} h="100%" direction="column">
-        <Box>
-          <Heading as="h3" fontSize={{ base: "xl", md: "2xl" }} mb={3}>
-            {name}
-          </Heading>
-          {children && (
-            <Box mt={4} mb={4}>
-              {children}
-            </Box>
-          )}
-          <Text fontSize="sm" mb={2} lineHeight="140%">
-            {description}
-          </Text>
-          {note.length > 0 && (
-            <Text fontSize="sm" mb={2} lineHeight="140%">
+      </div>
+
+      <CardHeader className="py-0">
+        <div className="space-y-4">
+          <h3 className="mb-3 text-xl font-semibold md:text-2xl">{name}</h3>
+          {children && <div>{children}</div>}
+        </div>
+      </CardHeader>
+
+      <CardContent className="flex flex-grow flex-col gap-0 space-y-1 px-6 py-4">
+        <div className="space-y-2">
+          <p className="text-sm leading-snug">{description}</p>
+
+          {note && (
+            <p className="text-sm leading-snug">
               {t("layer-2-note")} {note}
-            </Text>
+            </p>
           )}
-        </Box>
-        {bridge && (
-          <InlineLink href={bridge}>
-            {name} {t("layer-2-bridge")}
-          </InlineLink>
+        </div>
+
+        <div className="space-y-1">
+          {bridge && (
+            <InlineLink
+              href={bridge}
+              className="block text-primary underline hover:text-primary/80"
+            >
+              {name} {t("layer-2-bridge")}
+            </InlineLink>
+          )}
+
+          {ecosystemPortal && (
+            <InlineLink
+              href={ecosystemPortal}
+              className="block text-primary underline hover:text-primary/80"
+            >
+              {name} {t("layer-2-ecosystem-portal")}
+            </InlineLink>
+          )}
+
+          {tokenLists && (
+            <InlineLink
+              href={tokenLists}
+              className="block text-primary underline hover:text-primary/80"
+            >
+              {name} {t("layer-2-token-lists")}
+            </InlineLink>
+          )}
+        </div>
+      </CardContent>
+
+      <CardFooter className="mt-2 p-2">
+        {url && (
+          <ButtonLink className="w-full" href={url}>
+            {t("layer-2-explore")} {name}
+          </ButtonLink>
         )}
-        {ecosystemPortal && (
-          <InlineLink href={ecosystemPortal}>
-            {name} {t("layer-2-ecosystem-portal")}
-          </InlineLink>
-        )}
-        {tokenLists && (
-          <InlineLink href={tokenLists}>
-            {name} {t("layer-2-token-lists")}
-          </InlineLink>
-        )}
-      </Flex>
-      <Box>
-        <ButtonLink m={2} href={url} display="flex">
-          {t("layer-2-explore")} {name}
-        </ButtonLink>
-      </Box>
-    </Flex>
+      </CardFooter>
+    </Card>
   )
 }
 

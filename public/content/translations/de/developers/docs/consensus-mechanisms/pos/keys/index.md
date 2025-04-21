@@ -14,7 +14,7 @@ Dieser neue Schlüsseltyp verwendet das Signaturschema [**Boneh-Lynn-Shacham (BL
 
 ## Die beiden Arten von Validatorenschlüsseln {#two-types-of-keys}
 
-Vor dem Wechsel zu Proof-of-Stake verfügten Ethereum-Benutzer nur über einen einzigen auf einer elliptischen Kurve basierenden privaten Schlüssel, mit dem sie auf ihre Assets zugreifen konnten. Mit der Einführung von Proof-of-Stake brauchten Benutzer, die Solo-Staker sein wollten, auch einen **Validatorenschlüssel** und einen **Auszahlungsschlüssel**.
+Vor dem Wechsel zu Proof-of-Stake verfügten Ethereum-Benutzer nur über einen einzigen auf einer elliptischen Kurve basierenden privaten Schlüssel, mit dem sie auf ihre Geldmittel zugreifen konnten. Mit der Einführung von Proof-of-Stake brauchten Benutzer, die Solo-Staker sein wollten, auch einen **Validatorenschlüssel** und einen **Auszahlungsschlüssel**.
 
 ### Der Validatorenschlüssel {#validator-key}
 

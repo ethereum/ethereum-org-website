@@ -109,6 +109,6 @@ _請注意，此影片中的解釋使用「二層網路」指代所有鏈外擴�
 - [零知識區塊鏈可擴展性](https://ethworks.io/assets/download/zero-knowledge-blockchain-scaling-ethworks.pdf)
 - [爲什麽說卷軸 + 資料分片是提高可擴展性的唯一可持續解決方案](https://polynya.medium.com/why-rollups-data-shards-are-the-only-sustainable-solution-for-high-scalability-c9aabd6fbb48)
 - [什麽類型的三層網路才有意義？](https://vitalik.eth.limo/general/2022/09/17/layer_3.html)
-- [Data Availability Or: How Rollups Learned To Stop Worrying And Love Ethereum](https://ethereum2077.substack.com/p/data-availability-in-ethereum-rollups)
+- [資料可用性或：卷軸如何學會停止擔憂並熱愛以太坊](https://ethereum2077.substack.com/p/data-availability-in-ethereum-rollups)
 
 _知道對你有幫助的社群資源嗎？ 請編輯此頁面並新增資源！_
