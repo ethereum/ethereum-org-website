@@ -58,7 +58,11 @@ const formatSmallUSD = (value: number, locale: string): string =>
     maximumSignificantDigits: 2,
   }).format(value)
 
-export const useResources = ({ txCostsMedianUsd }): DashboardSection[] => {
+export const useResources = ({
+  txCostsMedianUsd,
+  txFeesSaved,
+  totalBlobs,
+}): DashboardSection[] => {
   const { t } = useTranslation("page-resources")
   const locale = useLocale()
   const localeForNumberFormat = getLocaleForNumberFormat(locale! as Lang)
@@ -355,7 +359,22 @@ export const useResources = ({ txCostsMedianUsd }): DashboardSection[] => {
     },
     {
       title: t("page-resources-blobs-title"),
-      // TODO: Add metric
+      metric: (
+        <div className="flex [&>*]:grid [&>*]:flex-1 [&>*]:place-items-center">
+          <div>
+            <div className="text-[42px] font-bold leading-2xs">
+              {totalBlobs}
+            </div>
+            <div className="text-sm text-body-medium">Total blobs</div>
+          </div>
+          <div>
+            <div className="text-[42px] font-bold leading-2xs">
+              {txFeesSaved}
+            </div>
+            <div className="text-sm text-body-medium">Total Tx Fees Saved</div>
+          </div>
+        </div>
+      ),
       items: [
         {
           title: "Blob Scan",

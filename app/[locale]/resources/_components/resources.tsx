@@ -26,13 +26,23 @@ import { useTranslation } from "@/hooks/useTranslation"
 import heroImg from "@/public/images/heroes/guides-hub-hero.jpg"
 interface ResourcesPageProps {
   txCostsMedianUsd: MetricReturnData
+  txFeesSaved: string
+  totalBlobs: string
 }
 
 const EVENT_CATEGORY = "dashboard"
 
-const ResourcesPage = ({ txCostsMedianUsd }: ResourcesPageProps) => {
+const ResourcesPage = ({
+  txCostsMedianUsd,
+  txFeesSaved,
+  totalBlobs,
+}: ResourcesPageProps) => {
   const { t } = useTranslation("page-resources")
-  const resourceSections = useResources({ txCostsMedianUsd })
+  const resourceSections = useResources({
+    txCostsMedianUsd,
+    txFeesSaved,
+    totalBlobs,
+  })
   const activeSection = useActiveHash(
     resourceSections.map(({ key }) => key),
     "0% 0% -70% 0%"
@@ -122,14 +132,14 @@ const ResourcesPage = ({ txCostsMedianUsd }: ResourcesPageProps) => {
                       <div className="border-b bg-[#ffffff] px-6 py-4 font-bold dark:bg-[#171717]">
                         {title}
                       </div>
-                      <div className="h-full bg-background bg-gradient-to-br from-white to-primary/10 px-2 py-6 dark:from-transparent dark:to-primary/10">
+                      <Stack className="h-full gap-2 bg-background bg-gradient-to-br from-white to-primary/10 px-2 py-6 dark:from-transparent dark:to-primary/10">
                         {metric && metric}
                         <ResourcesContainer>
                           {items.map((item) => (
                             <ResourceItem item={item} key={item.title} />
                           ))}
                         </ResourcesContainer>
-                      </div>
+                      </Stack>
                     </div>
                   ))}
                 </div>

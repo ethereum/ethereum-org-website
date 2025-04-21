@@ -17,13 +17,17 @@ import { BASE_TIME_UNIT } from "@/lib/constants"
 
 import ResourcesPage from "./_components/resources"
 
+import { fetchBlobscanStats } from "@/lib/api/fetchBlobscanStats"
 import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
 
 // In seconds
 const REVALIDATE_TIME = BASE_TIME_UNIT * 1
 
 const loadData = dataLoader(
-  [["growThePieData", fetchGrowThePie]],
+  [
+    ["growThePieData", fetchGrowThePie],
+    ["blobscanOverallStats", fetchBlobscanStats],
+  ],
   REVALIDATE_TIME * 1000
 )
 
@@ -38,12 +42,36 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const messages = pick(allMessages, requiredNamespaces)
 
   // Load data
-  const [growThePieData] = await loadData()
+  const [growThePieData, blobscanOverallStats] = await loadData()
+
   const { txCostsMedianUsd } = growThePieData
+
+  const { totalBlobAsCalldataFee, totalBlobFee, totalBlobs } =
+    blobscanOverallStats
+
+  const txFeesSaved = Number(
+    // Formatting trick to reduce big int to only two whole numbers
+    // @ts-expect-error Can not use exponentiation with BigInt in ES6
+    (BigInt(totalBlobAsCalldataFee) - BigInt(totalBlobFee)) / 10n ** 9n
+  )
+
+  const formattedTxFeesSaved = new Intl.NumberFormat(undefined, {
+    notation: "compact",
+    maximumFractionDigits: 2,
+  }).format(txFeesSaved)
+
+  const formattedTotalBlobs = new Intl.NumberFormat(undefined, {
+    notation: "compact",
+    maximumFractionDigits: 1,
+  }).format(totalBlobs)
 
   return (
     <I18nProvider locale={locale} messages={messages}>
-      <ResourcesPage txCostsMedianUsd={txCostsMedianUsd} />
+      <ResourcesPage
+        txCostsMedianUsd={txCostsMedianUsd}
+        txFeesSaved={formattedTxFeesSaved}
+        totalBlobs={formattedTotalBlobs}
+      />
     </I18nProvider>
   )
 }
