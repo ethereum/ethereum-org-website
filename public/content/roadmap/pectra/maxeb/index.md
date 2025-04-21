@@ -41,11 +41,11 @@ A validator opts into the maxEB change by converting from **Type 1** to **Type 2
 
     1. **Type 0** withdrawal credentials: If your validator’s withdrawal credentials begin with `0x00…`, you deposited before the Shapella hard fork and do not yet have a withdrawal address set.
 
-        ![Screenshot 2025-04-05 at 10.35.13.png](attachment:6ac56a57-1833-4273-85e9-ee435a6a71bd:Screenshot_2025-04-05_at_10.35.13.png)
+        ![Type 0 withdrawal credential](/images/maxeb/0x00-wd.png)
 
     2. **Type 1** withdrawal credentials: If your validator’s withdrawal credentials begin with `0x01…`, you deposited after the Shapella hard fork or already converted your **Type 0** credentials to **Type 1** credentials.
 
-        ![Screenshot 2025-04-05 at 10.35.02.png](attachment:776b1056-559b-465e-9e98-b6d00d54a682:Screenshot_2025-04-05_at_10.35.02.png)
+        ![Type 1 withdrawal credential](/images/maxeb/0x01-wd.png)
 
     3. **Type 2** withdrawal credentials: This new withdrawal credential type will begin with `0x02…` and will be enabled after Pectra. Validators with **Type 2** withdrawal credentials are sometimes called “**compounding validators**”
 
