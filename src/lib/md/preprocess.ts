@@ -4,7 +4,8 @@ const extUrlRefs = EXT_URLS
 
 type RegexSearchAndReplace = {
   search: RegExp
-  replace: RegExp
+  // type union for current 'escapeAnchorChars()' implementation
+  replace: RegExp | string
 }
 
 // Match {myVar} styled placeholders
@@ -78,7 +79,11 @@ const escapeAnchorChars = (
   if (!content) {
     return content
   }
-  content = content.replace(regex.search, regex.replace)
+
+  //type guard for current implementation
+  if (typeof regex.replace === "string") {
+    content = content.replace(regex.search, regex.replace)
+  }
 
   return content
 }
