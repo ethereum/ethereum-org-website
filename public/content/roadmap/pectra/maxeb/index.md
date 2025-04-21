@@ -35,20 +35,19 @@ maxEB = the MAXimum Effective Balance of a validator. Until the Pectra hard fork
 
 A validator opts into the maxEB change by converting from **Type 1** to **Type 2** withdrawal credentials. This can be done on the [Launchpad](https://launchpad.ethereum.org/) after the Pectra hard fork goes live. As with **Type 0** → **Type 1**, converting from **Type 1** → **Type 2** is an irreversible process.
 
-<Details summary="What’s a withdrawal credential?">
+### What's a withdrawal credential?
 
-    When you run a validator, you have a set of withdrawal credentials. These can be found in your deposit data json or you can view them on your validator’s beaconcha.in [deposit tab](https://beaconcha.in/validator/12345#deposits).
+When you run a validator, you have a set of withdrawal credentials. These can be found in your deposit data json or you can view them on your validator's beaconcha.in [deposit tab](https://beaconcha.in/validator/12345#deposits).
 
-    1. **Type 0** withdrawal credentials: If your validator’s withdrawal credentials begin with `0x00...`, you deposited before the Shapella hard fork and do not yet have a withdrawal address set.
+1. **Type 0** withdrawal credentials: If your validator's withdrawal credentials begin with `0x00...`, you deposited before the Shapella hard fork and do not yet have a withdrawal address set.
 
-        ![Type 0 withdrawal credential](/images/maxeb/0x00-wd.png)
+![Type 0 withdrawal credential](/images/maxeb/0x00-wd.png)
 
-    2. **Type 1** withdrawal credentials: If your validator’s withdrawal credentials begin with `0x01...`, you deposited after the Shapella hard fork or already converted your **Type 0** credentials to **Type 1** credentials.
+2. **Type 1** withdrawal credentials: If your validator's withdrawal credentials begin with `0x01...`, you deposited after the Shapella hard fork or already converted your **Type 0** credentials to **Type 1** credentials.
 
-        ![Type 1 withdrawal credential](/images/maxeb/0x01-wd.png)
+ ![Type 1 withdrawal credential](/images/maxeb/0x01-wd.png)
 
-    3. **Type 2** withdrawal credentials: This new withdrawal credential type will begin with `0x02...` and will be enabled after Pectra. Validators with **Type 2** withdrawal credentials are sometimes called "**compounding validators**"
-</Details>
+3. **Type 2** withdrawal credentials: This new withdrawal credential type will begin with `0x02...` and will be enabled after Pectra. Validators with **Type 2** withdrawal credentials are sometimes called "**compounding validators**"
 
 | **Allowed** | **Not allowed** |
 | --- | --- |
@@ -59,14 +58,14 @@ A validator opts into the maxEB change by converting from **Type 1** to **Type 2
 
 ## Risks
 
-MaxEB enables a validator to send its entire balance to another validator. Users submitting a consolidation request should verify the source and contents of the transaction they’re signing. The official tool for taking advantage of maxEB features is the Launchpad. If you do decide to use a third-party tool, you should verify that:
+MaxEB enables a validator to send its entire balance to another validator. Users submitting a consolidation request should verify the source and contents of the transaction they're signing. The official tool for taking advantage of maxEB features is the Launchpad. If you do decide to use a third-party tool, you should verify that:
 
-- The source validator’s pubkey and withdrawal address match the validator they control
-- The target validator’s pubkey is correct and belongs to them
-- The request is a conversion, not a consolidation, if they don’t intend to send funds to another validator
+- The source validator's pubkey and withdrawal address match the validator they control
+- The target validator's pubkey is correct and belongs to them
+- The request is a conversion, not a consolidation, if they don't intend to send funds to another validator
 - The transaction is being signed by the correct withdrawal address
 
-We **strongly recommend** discussing any third-party tool you plan to use with the [EthStaker community](https://ethstaker.org/about). It’s a helpful place to sanity-check your approach and avoid mistakes. If you use a malicious or misconfigured tool, **your entire validator balance could be sent to a validator you don’t control** — with no way to get it back.
+We **strongly recommend** discussing any third-party tool you plan to use with the [EthStaker community](https://ethstaker.org/about). It's a helpful place to sanity-check your approach and avoid mistakes. If you use a malicious or misconfigured tool, **your entire validator balance could be sent to a validator you don't control** — with no way to get it back.
 
 # 2. Technical details
 
@@ -83,7 +82,7 @@ To consolidate validators, you must have a *target validator* that has a **Type 
 
 ## Requirements for converting to Type 2
 
-This will be required for the first validator you convert to **Type 2**. This validator’s index is preserved and active. For a conversion, the *source validator* == the *target validator.*
+This will be required for the first validator you convert to **Type 2**. This validator's index is preserved and active. For a conversion, the *source validator* == the *target validator.*
 
 The validator must...
 
@@ -94,7 +93,7 @@ The validator must...
 
 ## Requirements for consolidating
 
-This is the *same operation* as converting but is when the *source validator* is different from the *target validator*. The target validator’s index is preserved and accepts the balance from the source validator. The source validator’s index is put into an `EXITED` state.
+This is the *same operation* as converting but is when the *source validator* is different from the *target validator*. The target validator's index is preserved and accepts the balance from the source validator. The source validator's index is put into an `EXITED` state.
 
 In this case, the source validator has all the same requirements as above plus:
 
@@ -157,7 +156,7 @@ A minimum of 27.3 hours but consolidations are also subject to a queue. This que
 
 ### Can I keep my validator index?
 
-Yes. In-place conversion keeps the same validator index. If you consolidate multiple validators, you’ll only be able to keep the index of the *target validator*.
+Yes. In-place conversion keeps the same validator index. If you consolidate multiple validators, you'll only be able to keep the index of the *target validator*.
 
 ### Will I miss attestations?
 
@@ -177,7 +176,7 @@ Yes. With **Type 2** credentials, rewards above 32 ETH are automatically restake
 
 ### Can I still get automatic sweeps after converting?
 
-Automatic sweeps will only happen with excess balances over 2048. For all other partial withdrawals, you’ll need to manually trigger them.
+Automatic sweeps will only happen with excess balances over 2048. For all other partial withdrawals, you'll need to manually trigger them.
 
 ### Can I change my mind and go back from Type 2 to Type 1?
 
@@ -189,7 +188,7 @@ Yes. As long as it's active (not exited) and you can sign with its withdrawal ad
 
 # Resources
 
-- [Electra consensus specs](https://github.com/ethereum/consensus-specs/blob/dev/specs/electra/beacon-chain.md): This is the ‘truest’ version that you should rely on. When in doubt, read the specs
+- [Electra consensus specs](https://github.com/ethereum/consensus-specs/blob/dev/specs/electra/beacon-chain.md): This is the ‘truest' version that you should rely on. When in doubt, read the specs
 - Not everybody is comfortable wading through code, so [this maxEB-GPT](https://chatgpt.com/g/g-67f1650fb48081918f555e0c8d1c2ae9-maxeb-gpt) can help interpret the specs. *Disclaimer: The specs, not the AI, should be relied on as truth, as the AI may misinterpret information or hallucinate answers*
 - [pectrified.com](https://pectrified.com/): View the state of consolidations, deposits, and queue waiting times
 - [Ethereal](https://github.com/wealdtech/ethereal): Community-created CLI tool for managing common validator tasks
