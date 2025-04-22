@@ -347,7 +347,14 @@ export const useResources = ({
   const scalingBoxes: DashboardBox[] = [
     {
       title: t("page-resources-roadmap-title"),
-      // TODO: Add metric
+      metric: (
+        <div className="grid place-items-center py-5">
+          <div className="text-sm">Next upgrade</div>
+          <div className="text-5xl font-bold">Pectra</div>
+          {/* TODO: Convert date to a countdown */}
+          <div className="text-xl font-bold text-body-medium">07 May 2025</div>
+        </div>
+      ),
       items: [
         {
           title: "Ethereum Roadmap",
