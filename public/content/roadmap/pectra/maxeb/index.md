@@ -1,51 +1,40 @@
+---
+title: Pectra MaxEB
+description: Learn more about MaxEB in the Pectra release
+lang: en
+---
+
+# MaxEB {#maxeb}
+
 *tl;dr:* The Pectra hard fork allows Ethereum validators to opt into a higher max effective balance and compounding by converting from **Type 1** to **Type 2** withdrawal credentials. The official tool to do this is the Launchpad. This operation cannot be reversed.
 
-# Contents
+## Overview {#overview}
 
-### 1. Overview
+### Who is affected? {#who-is-affected}
 
-- Who is affected?
-- What is "MaxEB"?
-- How does a validator opt in?
-- Risks
-
-### 2. Technical details
-
-- The flow
-- Requirements for converting to Type 2
-- Requirements for consolidating
-- The consolidation request
-- Partial withdrawals
-
-### 3. FAQ
-
-# 1. Overview
-
-## Who is affected?
-
-Anyone who runs a validator - this is likely someone who knows the index (e.g. [Validator #12345](https://beaconcha.in/validator/12345)) of a validator that they control. If you use a protocol to run a validator (e.g. Lido CSM or Rocket Pool), you will have to check with them to see if and when they support maxEB
+Anyone who runs a validator - this is likely someone who knows the index (e.g. [Validator #12345](https://beaconcha.in/validator/12345)) of a validator that they control. If you use a protocol to run a validator (e.g. Lido CSM or Rocket Pool), you will have to check with them to see if and when they support maxEB.
 
 If you stake using a liquid staking token (e.g. rETH or stETH), no action is required or recommended.
 
-## What is "maxEB"?
+### What is "maxEB"? {#what-is-maxeb}
 
 maxEB = the MAXimum Effective Balance of a validator. Until the Pectra hard fork, every validator earns on a maximum 32 ETH. After Pectra, validators have the option to earn on any balance between 32 and 2048 ETH, in 1 ETH increments by opting in to the change.
 
-## How does a validator opt in?
+### How does a validator opt in? {#how-does-a-validator-opt-in}
 
 A validator opts into the maxEB change by converting from **Type 1** to **Type 2** withdrawal credentials. This can be done on the [Launchpad](https://launchpad.ethereum.org/) after the Pectra hard fork goes live. As with **Type 0** → **Type 1**, converting from **Type 1** → **Type 2** is an irreversible process.
 
-### What's a withdrawal credential?
+### What's a withdrawal credential? {#whats-a-withdrawal-credential}
 
 When you run a validator, you have a set of withdrawal credentials. These can be found in your deposit data json or you can view them on your validator's beaconcha.in [deposit tab](https://beaconcha.in/validator/12345#deposits).
 
 1. **Type 0** withdrawal credentials: If your validator's withdrawal credentials begin with `0x00...`, you deposited before the Shapella hard fork and do not yet have a withdrawal address set.
 
-![Type 0 withdrawal credential](/images/maxeb/0x00-wd.png)
+![Type 0 withdrawal credential](./0x00-wd.png)
 
 2. **Type 1** withdrawal credentials: If your validator's withdrawal credentials begin with `0x01...`, you deposited after the Shapella hard fork or already converted your **Type 0** credentials to **Type 1** credentials.
 
- ![Type 1 withdrawal credential](/images/maxeb/0x01-wd.png)
+ ![Type 1 withdrawal credential](./0x01-wd.png)
 
 3. **Type 2** withdrawal credentials: This new withdrawal credential type will begin with `0x02...` and will be enabled after Pectra. Validators with **Type 2** withdrawal credentials are sometimes called "**compounding validators**"
 
@@ -56,7 +45,7 @@ When you run a validator, you have a set of withdrawal credentials. These can be
 |  | ❌ Type 2 → Type 1 |
 |  | ❌ Type 2 → Type 0 |
 
-## Risks
+### Risks {#risks}
 
 MaxEB enables a validator to send its entire balance to another validator. Users submitting a consolidation request should verify the source and contents of the transaction they're signing. The official tool for taking advantage of maxEB features is the Launchpad. If you do decide to use a third-party tool, you should verify that:
 
@@ -67,9 +56,9 @@ MaxEB enables a validator to send its entire balance to another validator. Users
 
 We **strongly recommend** discussing any third-party tool you plan to use with the [EthStaker community](https://ethstaker.org/about). It's a helpful place to sanity-check your approach and avoid mistakes. If you use a malicious or misconfigured tool, **your entire validator balance could be sent to a validator you don't control** — with no way to get it back.
 
-# 2. Technical details
+## Technical details {#technical-details}
 
-## The flow
+### The flow {#the-flow}
 
 There will be two uses of the `ConsolidationRequest` operation:
 
@@ -80,7 +69,7 @@ In a conversion of a **Type 1** to a **Type 2** validator, both the *source* and
 
 To consolidate validators, you must have a *target validator* that has a **Type 2** withdrawal credential. This is the destination of any validator balances being consolidated, and the index being preserved.
 
-## Requirements for converting to Type 2
+### Requirements for converting to Type 2 {#requirements-for-converting-to-type-2}
 
 This will be required for the first validator you convert to **Type 2**. This validator's index is preserved and active. For a conversion, the *source validator* == the *target validator.*
 
@@ -91,9 +80,9 @@ The validator must...
 - not be in an exiting state (or slashed)
 - not have pending manually-triggered withdrawals (does not apply to sweeps)
 
-![conversion illustration](/images/maxeb/conversion.png)
+![conversion illustration](./conversion.png)
 
-## Requirements for consolidating
+### Requirements for consolidating {#requirements-for-consolidating}
 
 This is the *same operation* as converting but is when the *source validator* is different from the *target validator*. The target validator's index is preserved and accepts the balance from the source validator. The source validator's index is put into an `EXITED` state.
 
@@ -106,9 +95,9 @@ The target validator must
 - have **Type 2** withdrawal credentials
 - not be in an exiting state.
 
-![consolidation illustration](/images/maxeb/consolidation.png)
+![consolidation illustration](./consolidation.png)
 
-## The consolidation request
+### The consolidation request {#the-consolidation-request}
 
 The consolidation request will be signed by the withdrawal address associated with the source validator and have:
 
@@ -118,11 +107,11 @@ The consolidation request will be signed by the withdrawal address associated wi
 
 In a conversion, 2 & 3 will be the same. This operation can be done on [the Launchpad](https://launchpad.ethereum.org/).
 
-## Signing requirements
+### Signing requirements {#signing-requirements}
 
 To submit a `ConsolidationRequest`, the **withdrawal address of the source validator** must sign the request. This proves control over the validator funds.
 
-### What is signed?
+### What is signed? {#what-is-signed}
 
 A domain-separated [signing root](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/beacon-chain.md#compute_signing_root) of the `ConsolidationRequest` object is used.
 
@@ -136,11 +125,11 @@ The resulting **BLS signature** is submitted alongside the request.
 
 Note: The signing is done by the withdrawal address, not the validator key.
 
-## Partial withdrawals
+### Partial withdrawals {#partial-withdrawals}
 
 Validators with **Type 1** credentials get automatic, gasless sweeps of their excess balance (anything over 32 ETH) to their withdrawal address. Because **Type 2** allows a validator to compound balances in 1 ETH increments, it will not automatically sweep balances until it reaches 2048 ETH. Balances on **Type 2** validators must be manually triggered and will cost gas.
 
-# 3. FAQ
+## FAQ {#FAQ}
 
 ### **Does opting-in change my proposal luck or rewards?**
 
@@ -190,7 +179,7 @@ No. Converting to **Type 2** is irreversible.
 
 Yes. As long as it's active (not exited) and you can sign with its withdrawal address, you can convert it.
 
-# Resources
+## Resources {#resources}
 
 - [Electra consensus specs](https://github.com/ethereum/consensus-specs/blob/dev/specs/electra/beacon-chain.md): This is the ‘truest' version that you should rely on. When in doubt, read the specs
 - Not everybody is comfortable wading through code, so [this maxEB-GPT](https://chatgpt.com/g/g-67f1650fb48081918f555e0c8d1c2ae9-maxeb-gpt) can help interpret the specs. *Disclaimer: The specs, not the AI, should be relied on as truth, as the AI may misinterpret information or hallucinate answers*
