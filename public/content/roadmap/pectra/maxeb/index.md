@@ -127,7 +127,7 @@ Note: The signing is done by the withdrawal address, not the validator key.
 
 ### Partial withdrawals {#partial-withdrawals}
 
-Validators with **Type 1** credentials get automatic, gasless sweeps of their excess balance (anything over 32 ETH) to their withdrawal address. Because **Type 2** allows a validator to compound balances in 1 ETH increments, it will not automatically sweep balances until it reaches 2048 ETH. Balances on **Type 2** validators must be manually triggered and will cost gas.
+Validators with **Type 1** credentials get automatic, gasless sweeps of their excess balance (anything over 32 ETH) to their withdrawal address. Because **Type 2** allows a validator to compound balances in 1 ETH increments, it will not automatically sweep balances until it reaches 2048 ETH. Partial withdrawals on **Type 2** validators must be manually triggered and will cost gas.
 
 ## FAQ {#FAQ}
 
