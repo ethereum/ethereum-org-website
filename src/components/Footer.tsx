@@ -9,7 +9,7 @@ import type { FooterLink, FooterLinkSection } from "@/lib/types"
 import Translation from "@/components/Translation"
 
 import { cn } from "@/lib/utils/cn"
-import { scrollIntoView } from "@/lib/utils/scrollIntoView"
+import { scrollToTop } from "@/lib/utils/ScrollToTop"
 
 import { Button } from "./ui/buttons/Button"
 import { BaseLink } from "./ui/Link"
@@ -317,11 +317,7 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
           <Translation id="website-last-updated" />: {lastDeployLocaleTimestamp}
         </p>
 
-        <Button
-          variant="outline"
-          isSecondary
-          onClick={() => scrollIntoView("__next")}
-        >
+        <Button variant="outline" isSecondary onClick={() => scrollToTop()}>
           <IoChevronUpSharp /> Go to top
         </Button>
       </div>
