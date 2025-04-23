@@ -28,7 +28,7 @@ jobs:
     steps:
       # 👇 Version 2 of the action
       - name: Checkout repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0 # 👈 Required to retrieve git history
       - name: Install deps
