@@ -1,4 +1,8 @@
-# 77O2 guidelines
+---
+title: Pectra 77O2 guidelines
+description: Learn more about 7702 in the Pectra release
+lang: en
+---
 
 ## Abstract
 
