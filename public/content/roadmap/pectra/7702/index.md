@@ -4,11 +4,11 @@ description: Learn more about 7702 in the Pectra release
 lang: en
 ---
 
-## Abstract
+# Pectra 77O2
+
+## Abstract {#abstract}
 
 ![7702 diagram](7702_diagram.png)
-
-
 
 EIP 7702 defines a mechanism to add code to an EOA. This proposal allows EOAs, the legacy ethereum accounts, to receive short-term functionality improvements, increasing the usability of applications. This is done by setting a pointer to already deployed code using a new transaction type: 4.
 
@@ -27,7 +27,7 @@ A delegation can be reset by delegating to the null address.
 
 The private key of the EOA retains full control over the account after the delegation. For example delegating to a Safe doesn't make the account a multisig because there's still a single key that can bypass any signing policy. Going forward, developers should design with the assumption that any participant in the system could be a smart contract. For smart contract developers, it’s no longer safe to assume that `tx.origin` refers to an EOA.
 
-## **Best practices**
+## Best practices {#best-practices}
 
 **Account Abstraction**: A delegation contract should align with Ethereum’s broader account abstraction (AA) standards to maximize compatibility. In particular, it should ideally be ERC-4337 compliant or compatible.
 
@@ -76,7 +76,7 @@ Cons of the Proxy Pattern:
 - **Reliance on external actors**: You have to rely on an external team to not upgrade to an unsafe contract. 
 
 
-## **Security Considerations**
+## Security Considerations {#security-considerations}
 
 
 **Reentrancy guard**: With the introduction of EIP-7702 delegation, a user’s account can dynamically switch between an Externally Owned Account (EOA) and a Smart Contract (SC). This flexibility enables the account to both initiate transactions and be the target of calls. As a result, scenarios where an account calls itself and makes external calls will have `msg.sender` equal to `tx.origin`, which undermines certain security assumptions that previously relied on `tx.origin` always being an EOA.
@@ -112,7 +112,7 @@ When users perform delegated signatures, the target contract receiving the deleg
 
 **Minimal Trusted Surface & Security**: While offering flexibility, a delegation contract should keep its core logic minimal and auditable. The contract is effectively an extension of the user’s EOA, so any flaw can be catastrophic. Implementations should follow best practices from the smart contract security community. For instance, constructor or initializer functions must be carefully secured – as highlighted by Alchemy, if using a proxy pattern under 7702, an unprotected initializer could let an attacker take over the account. Teams should aim to keep the on-chain code simple: Ambire’s 7702 contract is only ~200 lines of Solidity, deliberately minimizing complexity to reduce bugs. A balance must be struck between feature-rich logic and the simplicity that eases auditing. 
 
-### **Known implementations**
+### Known implementations {#known-implementations}
 
 Due to the nature of EIP 7702, it is recommended wallets use caution when helping users delegate to a 3rd party contract. Listed below is a collection of known implementations that have been audited:
 
@@ -121,30 +121,30 @@ Due to the nature of EIP 7702, it is recommended wallets use caution when helpin
 - address TBD [[MetaMask/delegation-framework]](https://github.com/MetaMask/delegation-framework) / [audits](https://github.com/MetaMask/delegation-framework/tree/main/audits)
 - 0x4Cd241E8d1510e30b2076397afc7508Ae59C66c9 [[Ethereum Foundation AA team]](https://github.com/eth-infinitism/account-abstraction/blob/develop/contracts/accounts/Simple7702Account.sol) / [audits](https://github.com/eth-infinitism/account-abstraction/blob/develop/audits/SpearBit%20Account%20Abstraction%20Security%20Review%20-%20Mar%202025.pdf)
 
-## **Hardware wallet guidelines**
+## Hardware wallet guidelines {#hardware-wallet-guidelines}
 
 Hardware wallets shouldn't expose arbitrary delegation. The consensus in the  Hardware wallet space is to use a list of trusted delegator contracts. We suggest to allow known implementations listed above and to consider others on a case by case basis. As delegating your EOA to a contract gives control over all the assets, hardware wallets should be cautious with the way they implement 7702.
 
 
-### **Integration scenarios for companion apps**
+### Integration scenarios for companion apps {#integration-scenarios-for-companion-apps}
 
-#### **Lazy**
+#### Lazy {#lazy}
 
 As the EOA still operates as usual, there's nothing to do.
 
 Note : some assets could be automatically rejected by the delegation code, such as ERC 1155 NFTs, and support should be aware of it.
 
-#### **Aware**
+#### Aware {#aware}
 
 Notify the user that a delegation is in place for the EOA by checking its code, and optionally offer to remove the delegation.
 
-#### **Common delegation**
+#### Common delegation {#common-delegation}
 
 Hardware provider whitelists known delegation contracts and implements their support in software companion. It is recommended to choose a contract with full ERC 4337 support.
 
 EOAs delegated to a different one will be handled as standard EOAs.
 
-#### **Custom delegation**
+#### Custom delegation {#custom-delegation}
 
 Hardware provider implements its own delegation contract and adds it to the lists implements its support in softaware companion. It is recommended to build a contract with full ERC 4337 support.
 
