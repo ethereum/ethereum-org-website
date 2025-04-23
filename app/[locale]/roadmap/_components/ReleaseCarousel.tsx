@@ -186,7 +186,7 @@ const ReleaseCarousel = () => {
         <div className="hidden lg:flex">
           <PreviousButton />
         </div>
-        <SwiperContainer className="w-full overflow-hidden" ref={containerRef}>
+        <SwiperContainer className="!w-full overflow-hidden" ref={containerRef}>
           <Swiper
             slidesPerView="auto"
             ref={swiperRef}
