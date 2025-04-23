@@ -83,7 +83,7 @@ Cons of the Proxy Pattern:
 
 For smart contract developers, it's no longer safe to assume that `tx.origin` refers to an EOA. Likewise, using `msg.sender == tx.origin` as a safeguard against reentrancy attacks is no longer a reliable strategy.
 
-Going forward, developers should design with the assumption that any participant in the system could be a smart contract. Alternatively they could implement explicit reentrancy protection using reentrancy guards (`nonReentrant` modifier patterns). We recommand following an audited modifier e.g [Open Zeppelin ReentrancyGuard](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/ReentrancyGuard.sol). 
+Going forward, developers should design with the assumption that any participant in the system could be a smart contract. Alternatively they could implement explicit reentrancy protection using reentrancy guards with a `nonReentrant` modifier patterns. We recommend following an audited modifier e.g [Open Zeppelin Reentrancy Guard](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/ReentrancyGuard.sol). They could also use a [transient storage variable](https://docs.soliditylang.org/en/latest/internals/layout_in_storage.html). 
 
 **Initialization Security Considerations**
 
