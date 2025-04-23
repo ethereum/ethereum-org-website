@@ -4,11 +4,9 @@ description: Learn more about 7702 in the Pectra release
 lang: en
 ---
 
-# Pectra 77O2
+# Pectra 7702 
 
-## Abstract {#abstract}
-
-![7702 diagram](7702_diagram.png)
+## Abstract
 
 EIP 7702 defines a mechanism to add code to an EOA. This proposal allows EOAs, the legacy ethereum accounts, to receive short-term functionality improvements, increasing the usability of applications. This is done by setting a pointer to already deployed code using a new transaction type: 4.
 
@@ -83,7 +81,7 @@ Cons of the Proxy Pattern:
 
 For smart contract developers, it's no longer safe to assume that `tx.origin` refers to an EOA. Likewise, using `msg.sender == tx.origin` as a safeguard against reentrancy attacks is no longer a reliable strategy.
 
-Going forward, developers should design with the assumption that any participant in the system could be a smart contract. Alternatively they could implement explicit reentrancy protection using reentrancy guards with a `nonReentrant` modifier patterns. We recommend following an audited modifier e.g [Open Zeppelin Reentrancy Guard](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/ReentrancyGuard.sol). They could also use a [transient storage variable](https://docs.soliditylang.org/en/latest/internals/layout_in_storage.html). 
+Going forward, developers should design with the assumption that any participant in the system could be a smart contract. Alternatively they could implement explicit reentrancy protection using reentrancy guards with a `nonReentrant` modifier patterns. We recommend following an audited modifier e.g [Open Zeppelin's Reentrancy Guard](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/ReentrancyGuard.sol). They could also use a [transient storage variable](https://docs.soliditylang.org/en/latest/internals/layout_in_storage.html). 
 
 **Initialization Security Considerations**
 
