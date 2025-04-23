@@ -22,6 +22,8 @@ Pectra brings the biggest number of [EIPs](https://eips.ethereum.org/) of any pr
 
 With this EIP, users can opt in to programmable wallets that allow new features like transaction bundling, gasless transacting and custom asset access for alternative recovery schemes. This hybrid approach combines the simplicity of EOAs with the programmability of contract-based accounts. 
 
+Read a deeper dive on 7702 [here](/roadmap/pectra/7702/)
+
 ### Increase the max effective balance {#7251}
 
 The current effective balance of the validator is exactly 32 ETH. It's the minimum necessary amount to participate in the consensus but at the same time the maximum a single validator can stake.
