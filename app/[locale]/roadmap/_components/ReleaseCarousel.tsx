@@ -1,27 +1,30 @@
 "use client"
 
-import { useRef, useState } from "react"
-import { SwiperRef } from "swiper/react"
+import { useEffect, useState } from "react"
 
-import { ChevronNext, ChevronPrev } from "@/components/Chevron"
-import { Image } from "@/components/Image"
-import { Button, ButtonLink } from "@/components/ui/buttons/Button"
-import { Swiper, SwiperContainer, SwiperSlide } from "@/components/ui/swiper"
+// import { Image } from "@/components/Image"
+import {
+  Carousel,
+  type CarouselApi,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
 
-import { cn } from "@/lib/utils/cn"
-
+// import { cn } from "@/lib/utils/cn"
 import { releasesData } from "@/data/roadmap/releases"
 
-const formatReleaseDate = (date: string) => {
-  if (/^\d{4}$/.test(date)) {
-    return date
-  }
-  return new Date(date).toLocaleDateString("en-US", {
-    month: "long",
-    day: "numeric",
-    year: "numeric",
-  })
-}
+// const formatReleaseDate = (date: string) => {
+//   if (/^\d{4}$/.test(date)) {
+//     return date
+//   }
+//   return new Date(date).toLocaleDateString("en-US", {
+//     month: "long",
+//     day: "numeric",
+//     year: "numeric",
+//   })
+// }
 
 const findLatestReleaseIndex = () => {
   const today = new Date()
@@ -51,62 +54,115 @@ const findLatestReleaseIndex = () => {
 }
 
 const ReleaseCarousel = () => {
-  const swiperRef = useRef<SwiperRef>(null)
-  const swiperRef2 = useRef<SwiperRef>(null)
-  const containerRef = useRef<HTMLDivElement>(null)
-  const containerRef2 = useRef<HTMLDivElement>(null)
-  const [activeSlide, setActiveSlide] = useState(findLatestReleaseIndex())
-  const pastReleases = releasesData.filter(
-    (release) => release.releaseDate < new Date().toISOString().split("T")[0]
-  )
+  const [api1, setApi1] = useState<CarouselApi>()
+  const [api2, setApi2] = useState<CarouselApi>()
 
-  const PreviousButton = () => {
-    return (
-      <Button
-        variant={"outline"}
-        size="xs"
-        className="h-8 w-8 rounded-full"
-        onClick={() => {
-          swiperRef.current?.swiper.slidePrev()
-          swiperRef2.current?.swiper.slidePrev()
-        }}
-        disabled={activeSlide === 0}
-      >
-        <ChevronPrev className="h-8 w-8" />
-      </Button>
-    )
-  }
+  useEffect(() => {
+    if (!api1 || !api2) {
+      return
+    }
 
-  const NextButton = () => {
-    return (
-      <Button
-        variant={"outline"}
-        size="xs"
-        className="h-8 w-8 rounded-full"
-        onClick={() => {
-          swiperRef.current?.swiper.slideNext()
-          swiperRef2.current?.swiper.slideNext()
-        }}
-        disabled={activeSlide === releasesData.length - 1}
-      >
-        <ChevronNext className="h-8 w-8" />
-      </Button>
-    )
-  }
+    api1.on("select", () => {
+      api2.scrollTo(api1.selectedScrollSnap())
+    })
+
+    api2.on("select", () => {
+      api1.scrollTo(api2.selectedScrollSnap())
+    })
+  }, [api1, api2])
 
   return (
-    <div className="flex w-full flex-col gap-6 rounded-2xl bg-background-highlight p-6">
-      <div className="flex w-full flex-row items-center justify-between gap-2">
+    <div className="w-full max-w-[100vw] overflow-hidden">
+      <div className="mx-auto w-full max-w-screen-2xl px-4 sm:px-6">
+        <div className="w-full rounded-2xl bg-background-highlight py-6">
+          <div className="flex flex-col gap-6">
+            {/* First Carousel */}
+            <Carousel
+              setApi={setApi1}
+              className="w-full px-16"
+              opts={{
+                align: "center",
+                containScroll: false,
+                loop: false,
+                startIndex: findLatestReleaseIndex(),
+              }}
+            >
+              <CarouselContent>
+                {releasesData.map((release) => (
+                  <CarouselItem
+                    key={release.releaseName}
+                    className="w-full lg:basis-1/3"
+                  >
+                    <div className="flex w-full flex-col items-center justify-center bg-blue-400">
+                      <p>{release.releaseName}</p>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <div className="lg:hidden">
+                <CarouselPrevious />
+                <CarouselNext />
+              </div>
+            </Carousel>
+
+            {/* Second Carousel */}
+            <Carousel
+              setApi={setApi2}
+              className="w-full px-4 lg:px-16"
+              opts={{
+                align: "center",
+                containScroll: false,
+                loop: false,
+                startIndex: findLatestReleaseIndex(),
+              }}
+            >
+              <CarouselContent>
+                {releasesData.map((release) => (
+                  <CarouselItem
+                    key={release.releaseName}
+                    className="w-full pl-4"
+                  >
+                    <div className="flex w-full flex-col items-center justify-center bg-red-500">
+                      <p>{release.releaseDate}</p>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <div className="hidden lg:block">
+                <CarouselPrevious />
+                <CarouselNext />
+              </div>
+            </Carousel>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default ReleaseCarousel
+
+{
+  /* <div className="gap-6 rounded-2xl bg-background-highlight p-6">
+      <div className="items-center justify-between gap-2">
         <div className="flex lg:hidden">
           <PreviousButton />
         </div>
-        <SwiperContainer className="w-full overflow-hidden" ref={containerRef2}>
+        <div className="flex flex-1">
+        <SwiperContainer className="" ref={containerRef2}>
           <Swiper
-            slidesPerView={3}
             spaceBetween={0}
             ref={swiperRef2}
             initialSlide={activeSlide}
             centeredSlides={true}
+            breakpoints={{
+              320: {
+                slidesPerView: 1,
+              },
+              768: {
+                slidesPerView: 3,
+              },
+            }}
           >
             {releasesData.map((release, index) => {
               const releaseDate = new Date(release.releaseDate)
@@ -119,7 +175,7 @@ const ReleaseCarousel = () => {
               return (
                 <SwiperSlide
                   key={release.releaseName}
-                  className="!w-1/3 items-center justify-center text-center"
+                  className="items-center justify-center text-center md:!w-1/3"
                 >
                   <div className="mb-3 h-6">
                     {pastReleases[pastReleases.length - 1].releaseDate ===
@@ -169,15 +225,18 @@ const ReleaseCarousel = () => {
                       )}
                     />
                   </div>
-                  <p className="text-md font-bold">{release.releaseName}</p>
-                  <p className="font-mono text-sm text-body-medium">
-                    {formatReleaseDate(release.releaseDate)}
-                  </p>
+                  <div className="flex flex-col items-center justify-center text-center">
+                    <p className="text-md font-bold">{release.releaseName}</p>
+                    <p className="font-mono text-sm text-body-medium">
+                      {formatReleaseDate(release.releaseDate)}
+                    </p>
+                  </div>
                 </SwiperSlide>
               )
             })}
           </Swiper>
         </SwiperContainer>
+        </div>
         <div className="flex lg:hidden">
           <NextButton />
         </div>
@@ -234,8 +293,5 @@ const ReleaseCarousel = () => {
           <NextButton />
         </div>
       </div>
-    </div>
-  )
+    </div> */
 }
-
-export default ReleaseCarousel

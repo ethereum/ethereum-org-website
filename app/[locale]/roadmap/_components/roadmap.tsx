@@ -154,7 +154,7 @@ const RoadmapPage = () => {
       <div className="flex flex-col gap-16">
         <HubHero {...heroContent} />
 
-        <div className="flex w-full px-8 py-4">
+        <div className="py-4">
           <ReleaseCarousel />
         </div>
 
