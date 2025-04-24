@@ -12,19 +12,20 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel"
 
-// import { cn } from "@/lib/utils/cn"
+import { cn } from "@/lib/utils/cn"
+
 import { releasesData } from "@/data/roadmap/releases"
 
-// const formatReleaseDate = (date: string) => {
-//   if (/^\d{4}$/.test(date)) {
-//     return date
-//   }
-//   return new Date(date).toLocaleDateString("en-US", {
-//     month: "long",
-//     day: "numeric",
-//     year: "numeric",
-//   })
-// }
+const formatReleaseDate = (date: string) => {
+  if (/^\d{4}$/.test(date)) {
+    return date
+  }
+  return new Date(date).toLocaleDateString("en-US", {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+  })
+}
 
 const findLatestReleaseIndex = () => {
   const today = new Date()
@@ -54,8 +55,13 @@ const findLatestReleaseIndex = () => {
 }
 
 const ReleaseCarousel = () => {
+  const todayDate = new Date()
+  const twoMonthsFromNow = new Date()
+  twoMonthsFromNow.setMonth(todayDate.getMonth() + 2)
+
   const [api1, setApi1] = useState<CarouselApi>()
   const [api2, setApi2] = useState<CarouselApi>()
+  const [currentIndex, setCurrentIndex] = useState(findLatestReleaseIndex())
 
   useEffect(() => {
     if (!api1 || !api2) {
@@ -63,10 +69,12 @@ const ReleaseCarousel = () => {
     }
 
     api1.on("select", () => {
+      setCurrentIndex(api1.selectedScrollSnap())
       api2.scrollTo(api1.selectedScrollSnap())
     })
 
     api2.on("select", () => {
+      setCurrentIndex(api2.selectedScrollSnap())
       api1.scrollTo(api2.selectedScrollSnap())
     })
   }, [api1, api2])
@@ -88,16 +96,105 @@ const ReleaseCarousel = () => {
               }}
             >
               <CarouselContent>
-                {releasesData.map((release) => (
-                  <CarouselItem
-                    key={release.releaseName}
-                    className="w-full lg:basis-1/3"
-                  >
-                    <div className="flex w-full flex-col items-center justify-center bg-blue-400">
-                      <p>{release.releaseName}</p>
-                    </div>
-                  </CarouselItem>
-                ))}
+                {releasesData.map((release, index) => {
+                  const releaseDate = new Date(release.releaseDate)
+                  const nextRelease =
+                    releaseDate > todayDate && releaseDate <= twoMonthsFromNow
+                  const labelType =
+                    releaseDate < todayDate
+                      ? 1
+                      : releaseDate < twoMonthsFromNow
+                        ? 2
+                        : 3
+
+                  return (
+                    <CarouselItem
+                      key={release.releaseName}
+                      className="w-full md:basis-1/3"
+                    >
+                      <div className="flex w-full flex-col items-center justify-center gap-3">
+                        <div className="mb-3 !h-6">
+                          {labelType === 1 && (
+                            <div
+                              className={cn(
+                                "w-fit rounded-lg bg-primary-low-contrast px-2 py-1",
+                                currentIndex !== index && "hidden"
+                              )}
+                            >
+                              <p className="text-sm font-bold">In production</p>
+                            </div>
+                          )}
+                          {labelType === 2 && (
+                            <div
+                              className={cn(
+                                "w-fit rounded-lg bg-warning-light px-2 py-1",
+                                currentIndex !== index && "hidden"
+                              )}
+                            >
+                              <p className="text-sm font-bold">Coming soon</p>
+                            </div>
+                          )}
+                          {labelType === 3 && (
+                            <div
+                              className={cn(
+                                "w-fit rounded-lg bg-warning-light px-2 py-1",
+                                currentIndex !== index && "hidden"
+                              )}
+                            >
+                              <p className="text-sm font-bold">
+                                In development
+                              </p>
+                            </div>
+                          )}
+                        </div>
+                        <div className="flex w-full items-center justify-center text-center">
+                          <div
+                            className={cn(
+                              "flex h-1 flex-1",
+                              index !== 0
+                                ? nextRelease
+                                  ? "bg-gradient-to-r from-primary to-primary-low-contrast"
+                                  : release.releaseDate <
+                                      new Date().toISOString().split("T")[0]
+                                    ? "bg-primary"
+                                    : "bg-primary-low-contrast"
+                                : "bg-transparent"
+                            )}
+                          />
+                          <div
+                            className={cn(
+                              "h-7 w-7 rounded-full",
+                              release.releaseDate <
+                                new Date().toISOString().split("T")[0]
+                                ? "bg-primary"
+                                : "bg-primary-low-contrast",
+                              nextRelease &&
+                                "border-2 border-primary bg-background"
+                            )}
+                          />
+                          <div
+                            className={cn(
+                              "flex h-1 flex-1",
+                              index !== releasesData.length - 1
+                                ? index < findLatestReleaseIndex()
+                                  ? "bg-primary"
+                                  : "bg-primary-low-contrast"
+                                : "bg-transparent"
+                            )}
+                          />
+                        </div>
+                        <div className="flex flex-col items-center justify-center text-center">
+                          <p className="text-md font-bold">
+                            {release.releaseName}
+                          </p>
+                          <p className="font-mono text-sm text-body-medium">
+                            {formatReleaseDate(release.releaseDate)}
+                          </p>
+                        </div>
+                      </div>
+                    </CarouselItem>
+                  )
+                })}
               </CarouselContent>
               <div className="lg:hidden">
                 <CarouselPrevious />
