@@ -2,7 +2,8 @@
 
 import { useEffect, useState } from "react"
 
-// import { Image } from "@/components/Image"
+import { Image } from "@/components/Image"
+import { ButtonLink } from "@/components/ui/buttons/Button"
 import {
   Carousel,
   type CarouselApi,
@@ -219,8 +220,39 @@ const ReleaseCarousel = () => {
                     key={release.releaseName}
                     className="w-full pl-4"
                   >
-                    <div className="flex w-full flex-col items-center justify-center bg-red-500">
-                      <p>{release.releaseDate}</p>
+                    <div className="flex w-full flex-col gap-6 lg:flex-row">
+                      <div className="w-full rounded-2xl lg:max-w-[351px]">
+                        <Image
+                          src={release.image}
+                          alt={release.releaseName}
+                          className="h-[240px] rounded-2xl object-cover md:h-[266px] lg:h-[551px]"
+                        />
+                      </div>
+                      <div className="flex flex-col gap-8">
+                        <div>
+                          <h2 className="text-4xl font-bold lg:text-6xl">
+                            {release.releaseName}
+                          </h2>
+                          <p className="text-md">
+                            {formatReleaseDate(release.releaseDate)}
+                          </p>
+                        </div>
+
+                        <div>
+                          <p className="mb-3 text-xl font-bold">
+                            Main features
+                          </p>
+                          <div className="flex flex-col gap-4">
+                            {release.content.map((item) => item)}
+                          </div>
+                        </div>
+                        <ButtonLink
+                          href={release.href}
+                          className="w-full lg:w-fit"
+                        >
+                          Learn more
+                        </ButtonLink>
+                      </div>
                     </div>
                   </CarouselItem>
                 ))}
@@ -238,157 +270,3 @@ const ReleaseCarousel = () => {
 }
 
 export default ReleaseCarousel
-
-{
-  /* <div className="gap-6 rounded-2xl bg-background-highlight p-6">
-      <div className="items-center justify-between gap-2">
-        <div className="flex lg:hidden">
-          <PreviousButton />
-        </div>
-        <div className="flex flex-1">
-        <SwiperContainer className="" ref={containerRef2}>
-          <Swiper
-            spaceBetween={0}
-            ref={swiperRef2}
-            initialSlide={activeSlide}
-            centeredSlides={true}
-            breakpoints={{
-              320: {
-                slidesPerView: 1,
-              },
-              768: {
-                slidesPerView: 3,
-              },
-            }}
-          >
-            {releasesData.map((release, index) => {
-              const releaseDate = new Date(release.releaseDate)
-              const today = new Date()
-              const twoMonthsFromNow = new Date()
-              twoMonthsFromNow.setMonth(today.getMonth() + 2)
-              const nextRelease =
-                releaseDate > today && releaseDate <= twoMonthsFromNow
-
-              return (
-                <SwiperSlide
-                  key={release.releaseName}
-                  className="items-center justify-center text-center md:!w-1/3"
-                >
-                  <div className="mb-3 h-6">
-                    {pastReleases[pastReleases.length - 1].releaseDate ===
-                      release.releaseDate && (
-                      <div className="m-auto w-fit rounded-lg bg-primary-low-contrast px-2 py-1">
-                        <p className="text-sm font-bold">In production</p>
-                      </div>
-                    )}
-                    {nextRelease && (
-                      <div className="m-auto w-fit rounded-lg bg-warning-light px-2 py-1">
-                        <p className="text-sm font-bold">Coming soon</p>
-                      </div>
-                    )}
-                  </div>
-                  <div className="flex w-full items-center justify-center text-center">
-                    <div
-                      className={cn(
-                        "flex h-1 flex-1",
-                        index !== 0
-                          ? nextRelease
-                            ? "bg-gradient-to-r from-primary to-primary-low-contrast"
-                            : release.releaseDate <
-                                new Date().toISOString().split("T")[0]
-                              ? "bg-primary"
-                              : "bg-primary-low-contrast"
-                          : "bg-transparent"
-                      )}
-                    />
-                    <div
-                      className={cn(
-                        "h-7 w-7 rounded-full",
-                        release.releaseDate <
-                          new Date().toISOString().split("T")[0]
-                          ? "bg-primary"
-                          : "bg-primary-low-contrast",
-                        nextRelease && "border-2 border-primary bg-background"
-                      )}
-                    />
-                    <div
-                      className={cn(
-                        "flex h-1 flex-1",
-                        index !== releasesData.length - 1
-                          ? index < findLatestReleaseIndex()
-                            ? "bg-primary"
-                            : "bg-primary-low-contrast"
-                          : "bg-transparent"
-                      )}
-                    />
-                  </div>
-                  <div className="flex flex-col items-center justify-center text-center">
-                    <p className="text-md font-bold">{release.releaseName}</p>
-                    <p className="font-mono text-sm text-body-medium">
-                      {formatReleaseDate(release.releaseDate)}
-                    </p>
-                  </div>
-                </SwiperSlide>
-              )
-            })}
-          </Swiper>
-        </SwiperContainer>
-        </div>
-        <div className="flex lg:hidden">
-          <NextButton />
-        </div>
-      </div>
-      <div className="flex max-w-full flex-row items-center justify-between gap-8">
-        <div className="hidden lg:flex">
-          <PreviousButton />
-        </div>
-        <SwiperContainer className="!w-full overflow-hidden" ref={containerRef}>
-          <Swiper
-            slidesPerView="auto"
-            ref={swiperRef}
-            onSlideChange={(swiper) => {
-              setActiveSlide(swiper.activeIndex)
-            }}
-            initialSlide={activeSlide}
-          >
-            {releasesData.map((release) => (
-              <SwiperSlide key={release.releaseName}>
-                <div className="flex w-full flex-col gap-6 lg:flex-row">
-                  <div className="w-full rounded-2xl lg:max-w-[351px]">
-                    <Image
-                      src={release.image}
-                      alt={release.releaseName}
-                      className="h-[240px] rounded-2xl object-cover md:h-[266px] lg:h-[551px]"
-                    />
-                  </div>
-                  <div className="flex flex-col gap-8">
-                    <div>
-                      <h2 className="text-4xl font-bold lg:text-6xl">
-                        {release.releaseName}
-                      </h2>
-                      <p className="text-md">
-                        {formatReleaseDate(release.releaseDate)}
-                      </p>
-                    </div>
-
-                    <div>
-                      <p className="mb-3 text-xl font-bold">Main features</p>
-                      <div className="flex flex-col gap-4">
-                        {release.content.map((item) => item)}
-                      </div>
-                    </div>
-                    <ButtonLink href={release.href} className="w-full lg:w-fit">
-                      Learn more
-                    </ButtonLink>
-                  </div>
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </SwiperContainer>
-        <div className="hidden lg:flex">
-          <NextButton />
-        </div>
-      </div>
-    </div> */
-}
