@@ -138,7 +138,7 @@ const ReleaseCarousel = () => {
                           {labelType === 3 && (
                             <div
                               className={cn(
-                                "w-fit rounded-lg bg-warning-light px-2 py-1",
+                                "w-fit rounded-lg bg-roadmap-upgrade-card-gradient-hover px-2 py-1",
                                 currentIndex !== index && "hidden"
                               )}
                             >
@@ -221,14 +221,14 @@ const ReleaseCarousel = () => {
                     className="w-full pl-4"
                   >
                     <div className="flex w-full flex-col gap-6 lg:flex-row">
-                      <div className="w-full rounded-2xl lg:max-w-[351px]">
+                      <div className="w-full flex-1 rounded-2xl">
                         <Image
                           src={release.image}
                           alt={release.releaseName}
                           className="h-[240px] rounded-2xl object-cover md:h-[266px] lg:h-[551px]"
                         />
                       </div>
-                      <div className="flex flex-col gap-8">
+                      <div className="flex flex-1 flex-col gap-8">
                         <div>
                           <h2 className="text-4xl font-bold lg:text-6xl">
                             {release.releaseName}
