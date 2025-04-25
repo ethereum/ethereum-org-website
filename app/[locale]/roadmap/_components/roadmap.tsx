@@ -94,10 +94,10 @@ const RoadmapPage = () => {
     },
     {
       icon: <StakingWithdrawalsIcon />,
-      title: "Staking widthdrawals",
+      title: "Staking withdrawals",
       description:
         "The Shanghai/Capella upgrade enabled staking withdrawals on Ethereum, allowing people to unlock their staked ETH.",
-      href: "/",
+      href: "/staking/withdrawals",
     },
     {
       icon: <SingleSlotFinalityIcon />,
