@@ -192,3 +192,17 @@ export const releasesData: Release[] = [
     href: "https://eips.ethereum.org/EIPS/eip-7773",
   },
 ]
+
+// TODO: Add future releases when implementing /roadmap/tracks
+// const futureRelease: Release = {
+//   image: CommunityHeroImage,
+//   releaseName: "Future releases",
+//   releaseDate: "Future",
+//   content: [],
+//   href: "https://eips.ethereum.org/EIPS/eip-7773",
+// }
+
+export const releasesDataWithFuture: Release[] = [
+  ...releasesData,
+  // futureRelease,
+]

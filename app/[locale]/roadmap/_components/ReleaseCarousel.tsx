@@ -15,9 +15,13 @@ import {
 
 import { cn } from "@/lib/utils/cn"
 
-import { releasesData } from "@/data/roadmap/releases"
+import { releasesDataWithFuture } from "@/data/roadmap/releases"
 
 const formatReleaseDate = (date: string) => {
+  if (date === "Future") {
+    return "Future"
+  }
+
   if (/^\d{4}$/.test(date)) {
     return date
   }
@@ -34,19 +38,19 @@ const findLatestReleaseIndex = () => {
   twoMonthsFromNow.setMonth(today.getMonth() + 2)
 
   // First try to find a release within the next 2 months
-  const upcomingReleaseIndex = releasesData.findIndex((release) => {
+  const upcomingReleaseIndex = releasesDataWithFuture.findIndex((release) => {
     const releaseDate = new Date(release.releaseDate)
     return releaseDate > today && releaseDate <= twoMonthsFromNow
   })
 
   // If no upcoming release found, find the most recent release up to today
   if (upcomingReleaseIndex === -1) {
-    const pastReleases = releasesData.filter(
+    const pastReleases = releasesDataWithFuture.filter(
       (release) => new Date(release.releaseDate) <= today
     )
     if (pastReleases.length > 0) {
       const mostRecentRelease = pastReleases[pastReleases.length - 1]
-      return releasesData.findIndex(
+      return releasesDataWithFuture.findIndex(
         (release) => release.releaseDate === mostRecentRelease.releaseDate
       )
     }
@@ -97,7 +101,7 @@ const ReleaseCarousel = () => {
               }}
             >
               <CarouselContent>
-                {releasesData.map((release, index) => {
+                {releasesDataWithFuture.map((release, index) => {
                   const releaseDate = new Date(release.releaseDate)
                   const nextRelease =
                     releaseDate > todayDate && releaseDate <= twoMonthsFromNow
@@ -176,7 +180,7 @@ const ReleaseCarousel = () => {
                           <div
                             className={cn(
                               "flex h-1 flex-1",
-                              index !== releasesData.length - 1
+                              index !== releasesDataWithFuture.length - 1
                                 ? index < findLatestReleaseIndex()
                                   ? "bg-primary"
                                   : "bg-primary-low-contrast"
@@ -215,7 +219,7 @@ const ReleaseCarousel = () => {
               }}
             >
               <CarouselContent>
-                {releasesData.map((release) => (
+                {releasesDataWithFuture.map((release) => (
                   <CarouselItem
                     key={release.releaseName}
                     className="w-full pl-4"
@@ -234,7 +238,9 @@ const ReleaseCarousel = () => {
                             {release.releaseName}
                           </h2>
                           <p className="text-md">
-                            {formatReleaseDate(release.releaseDate)}
+                            {release.releaseDate === "Future"
+                              ? "Future"
+                              : formatReleaseDate(release.releaseDate)}
                           </p>
                         </div>
 
