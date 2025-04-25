@@ -1,51 +1,32 @@
-import { NextRequest, NextResponse } from "next/server"
 import createMiddleware from "next-intl/middleware"
-
-import { DEFAULT_LOCALE } from "@/lib/constants"
 
 import { routing } from "./i18n/routing"
 
-// Create a custom middleware handler that wraps the next-intl middleware
-export default async function middleware(request: NextRequest) {
-  const pathname = request.nextUrl.pathname
+// This middleware handles automatic locale detection and redirects
+export default createMiddleware({
+  // Use the same locales configuration from routing.ts
+  locales: routing.locales,
 
-  // Skip middleware for static assets and API routes
-  if (
-    pathname.startsWith("/_next") ||
-    pathname.startsWith("/api") ||
-    pathname.includes(".")
-  ) {
-    return
-  }
+  // Use the default locale from routing.ts
+  defaultLocale: routing.defaultLocale,
 
-  // Handle root path
-  if (pathname === "/") {
-    return NextResponse.redirect(new URL(`/${DEFAULT_LOCALE}`, request.url))
-  }
+  // Enable locale detection from Accept-Language headers
+  localeDetection: true,
 
-  // Check if pathname already has a locale prefix
-  const pathnameHasLocale = routing.locales.some(
-    (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
-  )
+  // Always use locale prefixes in URLs
+  localePrefix: "always",
+})
 
-  // If no locale in path, redirect to default locale
-  if (!pathnameHasLocale) {
-    return NextResponse.redirect(
-      new URL(`/${DEFAULT_LOCALE}${pathname}`, request.url)
-    )
-  }
-
-  // Otherwise, let next-intl handle the request
-  return createMiddleware(routing)(request)
-}
-
+// Update matcher pattern to be specific and exclude static files and API routes
 export const config = {
   matcher: [
-    // Enable a redirect to a matching locale at the root
+    // Match the root path
     "/",
 
-    // Enable redirects that add missing locales
-    // (e.g. `/pathnames` -> `/en/pathnames`)
-    "/((?!api|_next|_vercel|.*\\..*).*)",
+    // Match all paths except those that start with:
+    // - api (API routes)
+    // - _next (Next.js internals)
+    // - public files with extensions (e.g. favicon.ico)
+    "/((?!api|_next|.*\\.[^/]*$).*)",
   ],
 }
