@@ -160,7 +160,7 @@ const RoadmapPage = () => {
 
         <div className="flex w-full flex-col gap-8 px-8 py-4">
           <h2 className="m-0">What changes are coming to Ethereum?</h2>
-          <p className="text-lg">
+          <p className="max-w-screen-md text-lg">
             Ethereum is already a powerful platform, but it is still being
             improved. An ambitious set of improvements will upgrade Ethereum
             from its current form into a fully scaled, maximally resilient
@@ -188,7 +188,7 @@ const RoadmapPage = () => {
         </div>
 
         <div className="flex flex-col-reverse gap-12 px-8 py-4 md:w-full md:flex-row">
-          <div className="flex-1">
+          <div className="max-w-screen-md flex-1">
             <h2 className="mb-8">Why does Ethereum need a roadmap?</h2>
             <p className="mb-10">
               Ethereum gets regular upgrades that enhance its scalability,
@@ -274,7 +274,7 @@ const RoadmapPage = () => {
         </div>
 
         <div className="flex flex-col gap-8 px-8 lg:flex-row">
-          <div className="flex flex-1 items-start">
+          <div className="sticky top-24 flex h-fit flex-1 items-start">
             <Image
               src={ethBlocksImage}
               alt="Ethereum blocks"
