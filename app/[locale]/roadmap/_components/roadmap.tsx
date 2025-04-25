@@ -274,7 +274,7 @@ const RoadmapPage = () => {
         </div>
 
         <div className="flex flex-col gap-8 px-8 lg:flex-row">
-          <div className="sticky top-24 flex h-fit flex-1 items-start">
+          <div className="top-24 flex h-fit flex-1 items-start lg:sticky">
             <Image
               src={ethBlocksImage}
               alt="Ethereum blocks"
