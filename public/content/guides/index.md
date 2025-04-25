@@ -18,7 +18,7 @@ Do you want to start your Ethereum journey? Our practical guides lead you step-b
 
 1. [How to revoke smart contract access to your crypto funds](/guides/how-to-revoke-token-access/) - If you suddenly see a transaction in your wallet that you did not initiate, this guide will teach you how to prevent that from happening again.
 
-2. [How to identify scam tokens](/guides/how-to-id-scam-tokens/) - What are scam tokens, how do they make themselves look legitimate, and how to identify them to protect yourself and avoid being scammed.
+2. [How to identify scam tokens](/guides/how-to-id-scam-tokens/) - What are scam tokens? How do they make themselves look legitimate, and how do you identify them to protect yourself and avoid being scammed?
 
 ## Using Ethereum
 
