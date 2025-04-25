@@ -260,7 +260,7 @@ const RoadmapPage = () => {
                   {item.description}
                 </p>
 
-                <LinkOverlay href={item.href}>
+                <LinkOverlay href={item.href} asChild>
                   <InlineLink
                     href={item.href}
                     className="hover:text-primary-hover"
