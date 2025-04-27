@@ -1,5 +1,9 @@
 import pick from "lodash.pick"
-import { getTranslations } from "next-intl/server"
+import {
+  getMessages,
+  getTranslations,
+  setRequestLocale,
+} from "next-intl/server"
 
 import { Lang } from "@/lib/types"
 
@@ -11,7 +15,6 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import LocalEnvironmentPage from "./_components/local-environment"
 
-import { loadMessages } from "@/i18n/loadMessages"
 import { getLocalEnvironmentFrameworkData } from "@/lib/api/ghRepoData"
 
 const loadData = dataLoader([
@@ -21,10 +24,12 @@ const loadData = dataLoader([
 const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const { locale } = await params
 
+  setRequestLocale(locale)
+
   const [frameworksListData] = await loadData()
 
   // Get i18n messages
-  const allMessages = await loadMessages(locale)
+  const allMessages = await getMessages({ locale })
   const requiredNamespaces = getRequiredNamespacesForPage(
     "/developers/local-environment"
   )
