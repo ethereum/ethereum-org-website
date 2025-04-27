@@ -47,10 +47,11 @@ lang: zh
 
 ### 公共以太坊测试链 {#public-beacon-testchains}
 
-以太坊还有两个维护中的公共测试网实现：Goerli 和 Sepolia。 推荐使用获得长期支持的测试网 Goerli，任何人都可以自由地在其上验证。 Sepolia 是一个较新、较小的测试链，预计在可预见的未来也会得到维护。Sepolia 上有具有权限的验证者集，这意味着不可以对此测试网上的新验证者进行常规访问。 Ropsten 链预计在 2022 第四季度弃用，Rinkeby 链预计将在 2023 第二/第三季度弃用。
+以太坊还有两个维护中的公共测试网实现：Sepolia 和 Hoodi。 Sepolia 是推荐的应用程序开发标准测试网，具有封闭的验证器集以实现快速同步。 Hoodi 是一个用于验证和质押的测试网，它使用开放的验证器集，并允许任何人进行验证。
 
-- [Goerli 质押启动板](https://goerli.launchpad.ethereum.org/)
-- [Ropsten、Rinkeby 和 Kiln 弃用公告](https://blog.ethereum.org/2022/06/21/testnet-deprecation)
+- [Hoodi 质押启动板](https://hoodi.launchpad.ethereum.org/en/)
+- [Sepolia 网站](https://sepolia.dev/)
+- [Hoodi 网站](https://hoodi.ethpandaops.io/)
 
 ### Kurtosis 以太坊包 {#kurtosis}
 

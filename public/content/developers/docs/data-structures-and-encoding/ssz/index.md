@@ -5,7 +5,7 @@ lang: en
 sidebarDepth: 2
 ---
 
-**Simple serialize (SSZ)** is the serialization method used on the Beacon Chain. It replaces the RLP serialization used on the execution layer everywhere across the consensus layer except the peer discovery protocol. SSZ is designed to be deterministic and also to Merkleize efficiently. SSZ can be thought of as having two components: a serialization scheme and a Merkleization scheme that is designed to work efficiently with the serialized data structure.
+**Simple serialize (SSZ)** is the serialization method used on the Beacon Chain. It replaces the RLP serialization used on the execution layer everywhere across the consensus layer except the peer discovery protocol. To learn more about RLP serialization, see [Recursive-length prefix (RLP)](/developers/docs/data-structures-and-encoding/rlp/). SSZ is designed to be deterministic and also to Merkleize efficiently. SSZ can be thought of as having two components: a serialization scheme and a Merkleization scheme that is designed to work efficiently with the serialized data structure.
 
 ## How does SSZ work? {#how-does-ssz-work}
 
