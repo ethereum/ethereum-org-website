@@ -1,5 +1,6 @@
 "use client"
 
+import { cloneElement } from "react"
 import { motion } from "framer-motion"
 
 import BannerNotification from "@/components/Banners/BannerNotification"
@@ -65,6 +66,37 @@ const RoadmapTracksPage = () => {
             </ButtonLink>
           ))}
         </nav>
+      </div>
+
+      <div className="flex flex-col gap-6 px-4 2xl:px-0">
+        {tracks.map(({ key, icon, contentData }) => (
+          <div
+            key={key}
+            id={key}
+            className="flex scroll-mt-40 flex-col gap-3 rounded-2xl border bg-background p-4 shadow-lg sm:p-6"
+          >
+            <div className="flex flex-row items-center gap-3">
+              <div className="flex items-center justify-center rounded-2xl border bg-background-highlight p-2">
+                <span className="flex h-9 w-9 items-center justify-center lg:h-10 lg:w-10">
+                  {cloneElement(icon as React.ReactElement, {
+                    className: "w-full h-full",
+                  })}
+                </span>
+              </div>
+              <h2>{contentData.title}</h2>
+            </div>
+            <div className="flex flex-row gap-8">
+              <div className="w-full lg:w-[360px]">
+                <p className="font-bold">Goals:</p>
+                <p>{contentData.goalDescription}</p>
+              </div>
+              <div className="hidden lg:block">
+                <p className="font-bold">Benefits:</p>
+                <p>{contentData.benefits}</p>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
 
       <FeedbackCard />

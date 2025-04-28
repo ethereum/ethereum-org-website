@@ -7,5 +7,17 @@
   "page-roadmap-tracks-scourge-title": "Scourge",
   "page-roadmap-tracks-purge-title": "Purge",
   "page-roadmap-tracks-verge-title": "Verge",
-  "page-roadmap-tracks-splurge-title": "Splurge"
+  "page-roadmap-tracks-splurge-title": "Splurge",
+  "page-roadmap-tracks-merge-content-title": "The Merge",
+  "page-roadmap-tracks-merge-goal-description": "Join the old Ethereum system with the new energy-efficient one, while making Ethereum greener and ready for future upgrades.", 
+  "page-roadmap-tracks-surge-content-title": "The Surge",
+  "page-roadmap-tracks-surge-goal-description": "Make Ethereum faster and cheaper to use by introducing ways to handle lots of transactions at once (using rollups and sharding).",
+  "page-roadmap-tracks-scourge-content-title": "The Scourge",
+  "page-roadmap-tracks-scourge-goal-description": "Keep Ethereum fair by stopping big groups or companies from controlling how transactions are processed or prioritised.",
+  "page-roadmap-tracks-purge-content-title": "The Purge",
+  "page-roadmap-tracks-purge-goal-description": "Get rid of unnecessary data and history on the network to keep Ethereum efficient and manageable over time.",
+  "page-roadmap-tracks-verge-content-title": "The Verge",
+  "page-roadmap-tracks-verge-goal-description": "Make Ethereum easier to use and run by simplifying how data is stored and processed, so more users can participate in securing the network.",
+  "page-roadmap-tracks-splurge-content-title": "The Splurge",
+  "page-roadmap-tracks-splurge-goal-description": "Add extra features and upgrades to make Ethereum as smooth, user-friendly, and powerful as possible."
 }
