@@ -92,7 +92,23 @@ const RoadmapTracksPage = () => {
               </div>
               <div className="hidden lg:block">
                 <p className="font-bold">Benefits:</p>
-                <p>{contentData.benefits}</p>
+                <div className="flex flex-col gap-2">
+                  {contentData.benefits.map((benefit) => (
+                    <div
+                      key={benefit.title}
+                      className="flex flex-row items-center gap-2 text-primary"
+                    >
+                      <div className="flex items-center justify-center rounded-full border p-1">
+                        <span className="flex h-[15px] w-[15px]">
+                          {cloneElement(benefit.icon as React.ReactElement, {
+                            className: "w-full h-full",
+                          })}
+                        </span>
+                      </div>
+                      <span>{benefit.title}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>

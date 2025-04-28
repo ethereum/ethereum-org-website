@@ -1,4 +1,11 @@
 import {
+  BetterUserExperienceIcon,
+  CheaperTransactionsIcon,
+  EnergyEfficiencyIcon,
+  ExtraSecurityIcon,
+  FutureProofingIcon,
+  GeneralImprovementsIcon,
+  GreenBlockchainIcon,
   MergeIcon,
   PurgeIcon,
   ScourgeIcon,
@@ -16,7 +23,7 @@ type Track = {
   contentData: {
     title: string
     goalDescription: string
-    benefits: string[]
+    benefits: { icon: React.ReactNode; title: string }[]
     nodes: []
   }
 }
@@ -32,7 +39,16 @@ export const useTracks = (): Track[] => {
       contentData: {
         title: t("page-roadmap-tracks-merge-content-title"),
         goalDescription: t("page-roadmap-tracks-merge-goal-description"),
-        benefits: [],
+        benefits: [
+          {
+            icon: <EnergyEfficiencyIcon />,
+            title: t("page-roadmap-tracks-energy-efficiency"),
+          },
+          {
+            icon: <GreenBlockchainIcon />,
+            title: t("page-roadmap-tracks-green-blockchain"),
+          },
+        ],
         nodes: [],
       },
     },
@@ -43,7 +59,12 @@ export const useTracks = (): Track[] => {
       contentData: {
         title: t("page-roadmap-tracks-surge-content-title"),
         goalDescription: t("page-roadmap-tracks-surge-goal-description"),
-        benefits: [],
+        benefits: [
+          {
+            icon: <CheaperTransactionsIcon />,
+            title: t("page-roadmap-tracks-cheaper-transactions"),
+          },
+        ],
         nodes: [],
       },
     },
@@ -54,7 +75,12 @@ export const useTracks = (): Track[] => {
       contentData: {
         title: t("page-roadmap-tracks-scourge-content-title"),
         goalDescription: t("page-roadmap-tracks-scourge-goal-description"),
-        benefits: [],
+        benefits: [
+          {
+            icon: <ExtraSecurityIcon />,
+            title: t("page-roadmap-tracks-extra-security"),
+          },
+        ],
         nodes: [],
       },
     },
@@ -65,7 +91,12 @@ export const useTracks = (): Track[] => {
       contentData: {
         title: t("page-roadmap-tracks-purge-content-title"),
         goalDescription: t("page-roadmap-tracks-purge-goal-description"),
-        benefits: [],
+        benefits: [
+          {
+            icon: <FutureProofingIcon />,
+            title: t("page-roadmap-tracks-future-proofing"),
+          },
+        ],
         nodes: [],
       },
     },
@@ -76,7 +107,12 @@ export const useTracks = (): Track[] => {
       contentData: {
         title: t("page-roadmap-tracks-verge-content-title"),
         goalDescription: t("page-roadmap-tracks-verge-goal-description"),
-        benefits: [],
+        benefits: [
+          {
+            icon: <BetterUserExperienceIcon />,
+            title: t("page-roadmap-tracks-better-user-experience"),
+          },
+        ],
         nodes: [],
       },
     },
@@ -87,7 +123,12 @@ export const useTracks = (): Track[] => {
       contentData: {
         title: t("page-roadmap-tracks-splurge-content-title"),
         goalDescription: t("page-roadmap-tracks-splurge-goal-description"),
-        benefits: [],
+        benefits: [
+          {
+            icon: <GeneralImprovementsIcon />,
+            title: t("page-roadmap-tracks-general-improvements"),
+          },
+        ],
         nodes: [],
       },
     },

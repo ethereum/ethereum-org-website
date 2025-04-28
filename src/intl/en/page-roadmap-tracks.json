@@ -19,5 +19,12 @@
   "page-roadmap-tracks-verge-content-title": "The Verge",
   "page-roadmap-tracks-verge-goal-description": "Make Ethereum easier to use and run by simplifying how data is stored and processed, so more users can participate in securing the network.",
   "page-roadmap-tracks-splurge-content-title": "The Splurge",
-  "page-roadmap-tracks-splurge-goal-description": "Add extra features and upgrades to make Ethereum as smooth, user-friendly, and powerful as possible."
+  "page-roadmap-tracks-splurge-goal-description": "Add extra features and upgrades to make Ethereum as smooth, user-friendly, and powerful as possible.",
+  "page-roadmap-tracks-energy-efficiency": "Energy efficiency",
+  "page-roadmap-tracks-green-blockchain": "Green blockchain",
+  "page-roadmap-tracks-cheaper-transactions": "Cheaper transactions",
+  "page-roadmap-tracks-extra-security": "Extra security",
+  "page-roadmap-tracks-future-proofing": "Future-proofing",
+  "page-roadmap-tracks-better-user-experience": "Better user experience",
+  "page-roadmap-tracks-general-improvements": "General improvements"
 }
