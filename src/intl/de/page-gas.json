@@ -53,7 +53,7 @@
   "page-gas-faq-header": "Häufig gestellte Fragen",
   "page-gas-faq-question-1-q": "Wer erhält die Spritgebühr in meiner Transaktion?",
   "page-gas-faq-question-1-a-1": "Der Hauptteil der Gasgebühr – die Basisgebühr – wird durch das Protokoll zerstört (verbrannt). Die Prioritätsgebühr, die ggf. in Ihrer Transaktion inbegriffen ist, wird dem Validator übergeben, der Ihre Transaktion vorgeschlagen hat.",
-  "page-gas-faq-question-1-a-2": "Eine detaillierte Beschreibung des Prozesses finden Sie in den <a href=“/developers/docs/gas/” translate=“no”>Sprit-Entwicklerdokumenten</a>.",
+  "page-gas-faq-question-1-a-2": "Eine detaillierte Beschreibung des Prozesses finden Sie in den <a href=\"/developers/docs/gas/\" translate=\"no\">Sprit-Entwicklerdokumenten</a>.",
   "page-gas-faq-question-2-q": "Muss ich Sprit in ETH bezahlen?",
   "page-gas-faq-question-2-a-1": "Ja. Alle Spritgebühren auf Ethereum müssen in der nativen ETH-Währung bezahlt werden.",
   "page-gas-faq-question-2-a-2": "Mehr zu ETH",
