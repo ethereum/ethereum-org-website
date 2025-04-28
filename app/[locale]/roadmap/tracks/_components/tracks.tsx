@@ -90,7 +90,7 @@ const RoadmapTracksPage = () => {
                 <p className="font-bold">Goals:</p>
                 <p>{contentData.goalDescription}</p>
               </div>
-              <div className="hidden lg:block">
+              <div className="hidden flex-col gap-2 lg:flex">
                 <p className="font-bold">Benefits:</p>
                 <div className="flex flex-col gap-2">
                   {contentData.benefits.map((benefit) => (
