@@ -70,10 +70,10 @@ export const useResources = ({
 
   const ethPrice = useEthPrice()
   const avgBlobFeeUsd = formatSmallUSD(
-    // Converting value from gwei to USD
-    avgBlobFee * 1e-9 * ethPrice,
+    // Converting value from wei to USD
+    avgBlobFee * 1e-18 * ethPrice,
     localeForNumberFormat
-  ).replace(/[A-Za-z]$/, "")
+  )
 
   const medianTxCost =
     "error" in txCostsMedianUsd
