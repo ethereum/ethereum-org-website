@@ -46,19 +46,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 
   const { txCostsMedianUsd } = growThePieData
 
-  const { totalBlobAsCalldataFee, totalBlobFee, totalBlobs } =
-    blobscanOverallStats
-
-  const txFeesSaved = Number(
-    // Formatting trick to reduce big int to only two whole numbers
-    // @ts-expect-error Can not use exponentiation with BigInt in ES6
-    (BigInt(totalBlobAsCalldataFee) - BigInt(totalBlobFee)) / 10n ** 9n
-  )
-
-  const formattedTxFeesSaved = new Intl.NumberFormat(undefined, {
-    notation: "compact",
-    maximumFractionDigits: 2,
-  }).format(txFeesSaved)
+  const { totalBlobs, avgBlobFee } = blobscanOverallStats
 
   const formattedTotalBlobs = new Intl.NumberFormat(undefined, {
     notation: "compact",
@@ -69,8 +57,8 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     <I18nProvider locale={locale} messages={messages}>
       <ResourcesPage
         txCostsMedianUsd={txCostsMedianUsd}
-        txFeesSaved={formattedTxFeesSaved}
         totalBlobs={formattedTotalBlobs}
+        avgBlobFee={avgBlobFee}
       />
     </I18nProvider>
   )

@@ -16,6 +16,7 @@ import RadialChart from "../RadialChart"
 
 import type { DashboardBox, DashboardSection } from "./types"
 
+import { useEthPrice } from "@/hooks/useEthPrice"
 import { useTranslation } from "@/hooks/useTranslation"
 import IconBeaconchain from "@/public/images/resources/beaconcha-in.png"
 import IconBlobsGuru from "@/public/images/resources/blobsguru.png"
@@ -60,12 +61,19 @@ const formatSmallUSD = (value: number, locale: string): string =>
 
 export const useResources = ({
   txCostsMedianUsd,
-  txFeesSaved,
   totalBlobs,
+  avgBlobFee,
 }): DashboardSection[] => {
   const { t } = useTranslation("page-resources")
   const locale = useLocale()
   const localeForNumberFormat = getLocaleForNumberFormat(locale! as Lang)
+
+  const ethPrice = useEthPrice()
+  const avgBlobFeeUsd = formatSmallUSD(
+    // Converting value from gwei to USD
+    avgBlobFee * 1e-9 * ethPrice,
+    localeForNumberFormat
+  ).replace(/[A-Za-z]$/, "")
 
   const medianTxCost =
     "error" in txCostsMedianUsd
@@ -376,9 +384,9 @@ export const useResources = ({
           </div>
           <div>
             <div className="text-[42px] font-bold leading-2xs">
-              {txFeesSaved}
+              {avgBlobFeeUsd}
             </div>
-            <div className="text-sm text-body-medium">Total Tx Fees Saved</div>
+            <div className="text-sm text-body-medium">Average Blob Fee</div>
           </div>
         </div>
       ),

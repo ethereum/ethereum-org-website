@@ -26,22 +26,23 @@ import { useTranslation } from "@/hooks/useTranslation"
 import heroImg from "@/public/images/heroes/guides-hub-hero.jpg"
 interface ResourcesPageProps {
   txCostsMedianUsd: MetricReturnData
-  txFeesSaved: string
   totalBlobs: string
+  avgBlobFee: number
 }
 
 const EVENT_CATEGORY = "dashboard"
 
 const ResourcesPage = ({
   txCostsMedianUsd,
-  txFeesSaved,
   totalBlobs,
+  avgBlobFee,
 }: ResourcesPageProps) => {
   const { t } = useTranslation("page-resources")
+
   const resourceSections = useResources({
     txCostsMedianUsd,
-    txFeesSaved,
     totalBlobs,
+    avgBlobFee,
   })
   const activeSection = useActiveHash(
     resourceSections.map(({ key }) => key),
