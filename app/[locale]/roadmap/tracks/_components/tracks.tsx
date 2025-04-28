@@ -10,18 +10,21 @@ import { ButtonLink } from "@/components/ui/buttons/Button"
 
 import { cn } from "@/lib/utils/cn"
 
+import { useTracks } from "./useTracks"
+
 import { useActiveHash } from "@/hooks/useActiveHash"
 import { useTranslation } from "@/hooks/useTranslation"
 
 const RoadmapTracksPage = () => {
   const { t } = useTranslation("page-roadmap-tracks")
+  const tracks = useTracks()
   const activeSection = useActiveHash(
-    [].map(({ key }) => key),
+    tracks.map(({ key }) => key),
     "0% 0% -70% 0%"
   ).replace(/^#/, "")
 
   return (
-    <MainArticle className="mx-auto flex w-full flex-col items-center">
+    <MainArticle className="relative flex flex-col">
       <BannerNotification shouldShow>
         <p>
           Ethereum&apos;s development is community-driven and subject to change.
@@ -40,7 +43,7 @@ const RoadmapTracksPage = () => {
           {t("page-roadmap-tracks-whats-on-this-page")}
         </div>
         <nav className="z-sticky mx-4 flex max-w-full gap-1 overflow-x-auto bg-background p-2 shadow md:max-w-[calc(100%-2rem)] md:rounded-2xl md:border md:p-0.5 md:shadow-lg">
-          {[].map(({ key, title, icon }) => (
+          {tracks.map(({ key, title, icon }) => (
             <ButtonLink
               key={key}
               href={`#${key}`}
