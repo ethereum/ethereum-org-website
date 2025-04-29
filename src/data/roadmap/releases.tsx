@@ -11,7 +11,7 @@ interface Release {
   image: StaticImageData
   releaseName: string
   releaseDate: string
-  content: React.ReactNode[]
+  content: React.ReactNode
   href: string
 }
 
@@ -20,8 +20,8 @@ export const releasesData: Release[] = [
     image: DevelopersHubHeroImage,
     releaseName: "Paris (The Merge)",
     releaseDate: "2022-09-15",
-    content: [
-      <div key="1">
+    content: (
+      <div>
         <p className="font-bold">Transition to Proof of Stake</p>
         <ul>
           <li>Replaced energy-intensive mining with staking-based consensus</li>
@@ -39,16 +39,16 @@ export const releasesData: Release[] = [
           </li>
           <li>Ensured smooth transition to the new consensus mechanism</li>
         </ul>
-      </div>,
-    ],
+      </div>
+    ),
     href: "/upgrades/merge",
   },
   {
     image: QuizzesHubHeroImage,
     releaseName: "Shapella",
     releaseDate: "2023-04-12",
-    content: [
-      <div key="1">
+    content: (
+      <div>
         <p className="font-bold">Staking withdrawals</p>
         <ul>
           <li>Enabled validators to withdraw their staked ETH and rewards</li>
@@ -66,16 +66,16 @@ export const releasesData: Release[] = [
           <li>Reduced gas costs for accessing the COINBASE address</li>
           <li>Improved efficiency of certain smart contract operations</li>
         </ul>
-      </div>,
-    ],
+      </div>
+    ),
     href: "/staking/withdrawals",
   },
   {
     image: Layer2HubHeroImage,
     releaseName: "Dencun",
     releaseDate: "2024-03-13",
-    content: [
-      <div key="1">
+    content: (
+      <div>
         <p className="font-bold">Proto-danksharding (EIP-4844)</p>
         <ul>
           <li>
@@ -104,16 +104,16 @@ export const releasesData: Release[] = [
             Enables new trust-minimized applications and cross-chain bridges
           </li>
         </ul>
-      </div>,
-    ],
+      </div>
+    ),
     href: "/roadmap/dencun",
   },
   {
     image: PectraImage,
     releaseName: "Pectra",
     releaseDate: "2025-05-07",
-    content: [
-      <div key="1">
+    content: (
+      <div>
         <p className="font-bold">EOA account code</p>
         <ul>
           <li>
@@ -135,16 +135,16 @@ export const releasesData: Release[] = [
             of 9, resulting in cheaper fees in Ethereum rollups
           </li>
         </ul>
-      </div>,
-    ],
+      </div>
+    ),
     href: "/roadmap/pectra",
   },
   {
     image: CommunityHeroImage,
     releaseName: "Fusaka",
     releaseDate: "2026",
-    content: [
-      <div key="1">
+    content: (
+      <div>
         <p className="font-bold">
           PeerDAS (Peer-to-Peer Data Availability Sampling)
         </p>
@@ -173,22 +173,22 @@ export const releasesData: Release[] = [
             Further improvements to validator efficiency and network performance
           </li>
         </ul>
-      </div>,
-    ],
+      </div>
+    ),
     href: "/roadmap/fusaka",
   },
   {
     image: GuidesHubHeroImage,
     releaseName: "Glamsterdam",
     releaseDate: "2026",
-    content: [
-      <div key="1">
+    content: (
+      <div>
         <p className="font-bold">Discussed for Glamsterdam</p>
         <ul>
           <li>Verkle trees</li>
         </ul>
-      </div>,
-    ],
+      </div>
+    ),
     href: "https://eips.ethereum.org/EIPS/eip-7773",
   },
 ]
