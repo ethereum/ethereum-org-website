@@ -44,7 +44,6 @@ const buttonVariants = cva(
         lg: "text-lg py-3 px-8 [&>svg]:text-2xl rounded-lg focus-visible:rounded-lg",
         md: "min-h-10.5 px-4 py-2 [&>svg]:text-2xl",
         sm: "text-xs min-h-[31px] py-1.5 px-2 [&>svg]:text-md",
-        xs: "text-xs py-1 px-1 [&>svg]:text-md",
       },
     },
     defaultVariants: {

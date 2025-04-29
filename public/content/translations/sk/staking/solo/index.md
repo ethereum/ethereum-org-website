@@ -146,7 +146,7 @@ Prechod do režimu offline v čase, keď sa sieť správne dokončuje, NEBUDE ma
 
 Všimnite si, že sankcie za nečinnosť sú úmerné tomu, koľko validátorov je súčasne offline. V prípadoch, keď je veľká časť siete offline naraz, budú postihy pre každý z týchto validátorov vyššie, než keď je jeden validátor nedostupný.
 
-V extrémnych prípadoch, ak sa sieť prestane dokončovať v dôsledku toho, že viac ako tretina validátorov je offline, títo používatelia utrpia takzvaný <em>kvadratický únik nečinnosti</em>, čo je exponenciálny odliv ETH z účtov offline validátora. To umožňuje, aby sa sieť časom samoopravila spotrebovaním ETH neaktívnych validátorov, pokiaľ ich zostatok nebude 16 EHT, pričom následne budú automaticky vyradené z fondu validátorov. Zostávajúci online validátori budú nakoniec opäť zahŕňať viac ako 2/3 siete, čím uspokoja nadpolovičnú väčšinu potrebnú na opätovné dokončenie reťazca.
+V extrémnych prípadoch, ak sa sieť prestane dokončovať v dôsledku toho, že viac ako tretina validátorov je offline, títo používatelia utrpia takzvaný <em>kvadratický únik nečinnosti</em>, čo je exponenciálny odliv ETH z účtov offline validátora. To umožňuje, aby sa sieť časom samoopravila spotrebovaním ETH neaktívnych validátorov, pokiaľ ich zostatok nebude 16 ETH, pričom následne budú automaticky vyradené z fondu validátorov. Zostávajúci online validátori budú nakoniec opäť zahŕňať viac ako 2/3 siete, čím uspokoja nadpolovičnú väčšinu potrebnú na opätovné dokončenie reťazca.
 </ExpandableCard>
 
 <ExpandableCard title="Ako zaistím, že nebudem potrestaný?">

@@ -170,7 +170,7 @@ const RoadmapPage = () => {
             {changesComingItems.map((item) => (
               <div
                 key={item.title}
-                className="flex h-full flex-col gap-4 rounded-3xl border bg-roadmap-card-gradient p-6"
+                className="bg-roadmap-card-gradient flex h-full flex-col gap-4 rounded-3xl border p-6"
               >
                 <div className="flex flex-row items-center justify-between gap-4">
                   <h3 className="m-0">{item.title}</h3>
@@ -250,7 +250,7 @@ const RoadmapPage = () => {
             {technicalUpgradesItems.map((item) => (
               <LinkBox
                 key={item.title}
-                className="flex flex-col rounded-3xl border border-[rgba(159,43,212,0.11)] bg-roadmap-upgrade-card-gradient p-6 hover:bg-roadmap-upgrade-card-gradient-hover hover:shadow-lg"
+                className="flex flex-col rounded-3xl border border-[rgba(159,43,212,0.11)] bg-card-gradient-secondary p-6 hover:bg-card-gradient-secondary-hover hover:shadow-lg"
               >
                 <div className="mb-3 flex gap-4">
                   {item.icon}

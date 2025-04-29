@@ -1947,6 +1947,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     </tr>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/JJOptimist"><img src="https://avatars.githubusercontent.com/u/86833563?v=4?s=100" width="100px;" alt="JJOptimist"/><br /><sub><b>JJOptimist</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3AJJOptimist" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://pwn.xyz"><img src="https://avatars.githubusercontent.com/u/61500778?v=4?s=100" width="100px;" alt="microHoffman"/><br /><sub><b>microHoffman</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3AmicroHoffman" title="Bug reports">🐛</a></td>
     </tr>
   </tbody>
 </table>

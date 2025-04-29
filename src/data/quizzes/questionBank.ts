@@ -107,6 +107,13 @@ const questionBankConfig: QuestionBankConfig = {
     { totalAnswers: 2, correctAnswer: 2 },
     { totalAnswers: 4, correctAnswer: 2 },
   ],
+  gas: [
+    { totalAnswers: 4, correctAnswer: 4 },
+    { totalAnswers: 4, correctAnswer: 4 },
+    { totalAnswers: 4, correctAnswer: 1 },
+    { totalAnswers: 4, correctAnswer: 2 },
+    { totalAnswers: 4, correctAnswer: 2 },
+  ],
   daos: [
     { totalAnswers: 4, correctAnswer: 4 },
     { totalAnswers: 4, correctAnswer: 4 },

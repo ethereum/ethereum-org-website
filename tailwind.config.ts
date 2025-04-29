@@ -231,10 +231,9 @@ const config = {
         "radial-a": "var(--radial-a)",
         "linear-bug-bounty-title": "var(--linear-bug-bounty-title)",
         "gradient-staking": "var(--gradient-staking)",
-        "roadmap-card-gradient": "var(--roadmap-card-gradient)",
-        "roadmap-upgrade-card-gradient": "var(--roadmap-upgrade-card-gradient)",
-        "roadmap-upgrade-card-gradient-hover":
-          "var(--roadmap-upgrade-card-gradient-hover)",
+        "card-gradient": "var(--card-gradient)",
+        "card-gradient-secondary": "var(--card-gradient-secondary)",
+        "card-gradient-secondary-hover": "var(--card-gradient-secondary-hover)",
       },
       boxShadow: {
         "table-box": "var(--table-box-shadow)",

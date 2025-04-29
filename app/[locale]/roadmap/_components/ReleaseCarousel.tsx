@@ -14,23 +14,9 @@ import {
 } from "@/components/ui/carousel"
 
 import { cn } from "@/lib/utils/cn"
+import { formatDate } from "@/lib/utils/date"
 
 import { releasesDataWithFuture } from "@/data/roadmap/releases"
-
-const formatReleaseDate = (date: string) => {
-  if (date === "Future") {
-    return "Future"
-  }
-
-  if (/^\d{4}$/.test(date)) {
-    return date
-  }
-  return new Date(date).toLocaleDateString("en-US", {
-    month: "long",
-    day: "numeric",
-    year: "numeric",
-  })
-}
 
 const findLatestReleaseIndex = () => {
   const today = new Date()
@@ -66,7 +52,9 @@ const ReleaseCarousel = () => {
 
   const [api1, setApi1] = useState<CarouselApi>()
   const [api2, setApi2] = useState<CarouselApi>()
-  const [currentIndex, setCurrentIndex] = useState(findLatestReleaseIndex())
+  const [currentIndex, setCurrentIndex] = useState(() =>
+    findLatestReleaseIndex()
+  )
 
   useEffect(() => {
     if (!api1 || !api2) {
@@ -136,13 +124,15 @@ const ReleaseCarousel = () => {
                                 currentIndex !== index && "hidden"
                               )}
                             >
-                              <p className="text-sm font-bold">Coming soon</p>
+                              <p className="text-sm font-bold text-black">
+                                Coming soon
+                              </p>
                             </div>
                           )}
                           {labelType === 3 && (
                             <div
                               className={cn(
-                                "w-fit rounded-lg bg-roadmap-upgrade-card-gradient-hover px-2 py-1",
+                                "w-fit rounded-lg bg-card-gradient-secondary-hover px-2 py-1",
                                 currentIndex !== index && "hidden"
                               )}
                             >
@@ -159,8 +149,7 @@ const ReleaseCarousel = () => {
                               index !== 0
                                 ? nextRelease
                                   ? "bg-gradient-to-r from-primary to-primary-low-contrast"
-                                  : release.releaseDate <
-                                      new Date().toISOString().split("T")[0]
+                                  : releaseDate.getTime() < todayDate.getTime()
                                     ? "bg-primary"
                                     : "bg-primary-low-contrast"
                                 : "bg-transparent"
@@ -169,8 +158,7 @@ const ReleaseCarousel = () => {
                           <div
                             className={cn(
                               "h-7 w-7 rounded-full",
-                              release.releaseDate <
-                                new Date().toISOString().split("T")[0]
+                              releaseDate.getTime() < todayDate.getTime()
                                 ? "bg-primary"
                                 : "bg-primary-low-contrast",
                               nextRelease &&
@@ -193,7 +181,7 @@ const ReleaseCarousel = () => {
                             {release.releaseName}
                           </p>
                           <p className="font-mono text-sm text-body-medium">
-                            {formatReleaseDate(release.releaseDate)}
+                            {formatDate(release.releaseDate)}
                           </p>
                         </div>
                       </div>
@@ -238,9 +226,7 @@ const ReleaseCarousel = () => {
                             {release.releaseName}
                           </h2>
                           <p className="text-md">
-                            {release.releaseDate === "Future"
-                              ? "Future"
-                              : formatReleaseDate(release.releaseDate)}
+                            {formatDate(release.releaseDate)}
                           </p>
                         </div>
 
@@ -249,7 +235,7 @@ const ReleaseCarousel = () => {
                             Main features
                           </p>
                           <div className="flex flex-col gap-4">
-                            {release.content.map((item) => item)}
+                            {release.content}
                           </div>
                         </div>
                         <ButtonLink
