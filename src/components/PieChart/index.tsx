@@ -67,17 +67,30 @@ export function PieChart({
   footerText,
   footerSubText,
 }: PieChartProps) {
+  // Function to calculate optimal chart dimensions based on data size
+  const getChartDimensions = () => {
+    const baseHeight = data.length <= 4 ? 320 : 350;
+    return {
+      height: baseHeight,
+      outerRadius: data.length <= 4 ? 70 : 65,
+      cx: data.length <= 5 ? "35%" : "30%",
+    };
+  };
+
+  // Get optimal dimensions
+  const dimensions = getChartDimensions();
+
   return (
     <Card className="w-full">
-      <CardHeader>
-        {title && <CardTitle className="text-center">{title}</CardTitle>}
+      <CardHeader className="pb-2">
+        {title && <CardTitle className="text-center text-lg sm:text-xl">{title}</CardTitle>}
         {description && <CardDescription>{description}</CardDescription>}
       </CardHeader>
-      <CardContent>
+      <CardContent className="px-2 sm:px-6">
         <ChartContainer config={defaultChartConfig}>
-          <div className="w-full min-h-[350px]">
-            <ResponsiveContainer width="100%" height={350}>
-              <RechartsPieChart margin={{ top: 10, right: 10, bottom: 10, left: 10 }}>
+          <div className="w-full min-h-[300px]">
+            <ResponsiveContainer width="100%" height={dimensions.height}>
+              <RechartsPieChart margin={{ top: 10, right: 0, bottom: 10, left: 0 }}>
                 <ChartTooltip cursor={false} content={<ChartTooltipContent />} />
 
                 <Legend
@@ -85,17 +98,29 @@ export function PieChart({
                   verticalAlign="middle"
                   align="right"
                   wrapperStyle={{
-                    fontSize:  "0.85rem",
-                    paddingLeft: "8px",
-                    lineHeight:  "1.2", 
-                    maxWidth:   "40%",
+                    fontSize: "0.8rem",
+                    paddingLeft: "4px",
+                    lineHeight: "1.2", 
+                    maxWidth: "45%",
+                    overflowWrap: "break-word",
                   }}
                   formatter={(value, entry) => {
                     const payload = (entry.payload as unknown) as PieChartDataPoint;
                     const val = Number.isInteger(payload.value)
                       ? payload.value
                       : payload.value.toFixed(2);
-                    return `${value} (${val}%)`;
+                    
+                    // Limit label length for mobile
+                    const maxLength = 15;
+                    const displayName = value.length > maxLength 
+                      ? `${value.substring(0, maxLength)}...`
+                      : value;
+                      
+                    return (
+                      <span className="text-xs sm:text-sm">
+                        {displayName} ({val}%)
+                      </span>
+                    );
                   }}
                 />
 
@@ -103,14 +128,14 @@ export function PieChart({
                   data={data}
                   dataKey="value"
                   nameKey="name"
-                  cx="35%"
+                  cx={dimensions.cx}
                   cy="50%"
-                  outerRadius={75}
+                  outerRadius={dimensions.outerRadius}
                   paddingAngle={1}
                   label={false}
                 >
-                  {data.map((_, i) => (
-                    <Cell key={i} fill={COLORS[i % COLORS.length]} />
+                  {data.map((entry, i) => (
+                    <Cell key={`cell-${i}`} fill={COLORS[i % COLORS.length]} />
                   ))}
                 </Pie>
               </RechartsPieChart>
