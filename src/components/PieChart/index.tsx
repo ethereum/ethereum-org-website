@@ -7,6 +7,7 @@ import {
   PieChart as RechartsPieChart,
   ResponsiveContainer,
 } from "recharts";
+
 import {
   Card,
   CardContent,
@@ -76,15 +77,24 @@ export function PieChart({
   return (
     <Card className="w-full">
       <CardHeader className="pb-2">
-        {title && <CardTitle className="text-center text-lg sm:text-xl">{title}</CardTitle>}
+        {title && (
+          <CardTitle className="text-center text-lg sm:text-xl">
+            {title}
+          </CardTitle>
+        )}
         {description && <CardDescription>{description}</CardDescription>}
       </CardHeader>
       <CardContent className="px-2 sm:px-6">
         <ChartContainer config={defaultChartConfig}>
           <div className="w-full min-h-[300px]">
             <ResponsiveContainer width="100%" height={dimensions.height}>
-              <RechartsPieChart margin={{ top: 10, right: 0, bottom: 10, left: 0 }}>
-                <ChartTooltip cursor={false} content={<ChartTooltipContent />} />
+              <RechartsPieChart
+                margin={{ top: 10, right: 0, bottom: 10, left: 0 }}
+              >
+                <ChartTooltip
+                  cursor={false}
+                  content={<ChartTooltipContent />}
+                />
 
                 <Legend
                   layout="vertical"
@@ -93,22 +103,24 @@ export function PieChart({
                   wrapperStyle={{
                     fontSize: "0.8rem",
                     paddingLeft: "4px",
-                    lineHeight: "1.2", 
+                    lineHeight: "1.2",
                     maxWidth: "45%",
                     overflowWrap: "break-word",
                   }}
                   formatter={(value, legendEntry) => {
-                    const payload = (legendEntry.payload as unknown) as PieChartDataPoint;
+                    const payload =
+                      legendEntry.payload as unknown as PieChartDataPoint;
                     const val = Number.isInteger(payload.value)
                       ? payload.value
                       : payload.value.toFixed(2);
-                    
+
                     // Limit label length for mobile
                     const maxLength = 15;
-                    const displayName = value.length > maxLength 
-                      ? `${value.substring(0, maxLength)}...`
-                      : value;
-                      
+                    const displayName =
+                      value.length > maxLength
+                        ? `${value.substring(0, maxLength)}...`
+                        : value;
+
                     return (
                       <span className="text-xs sm:text-sm">
                         {displayName} ({val}%)
@@ -127,7 +139,7 @@ export function PieChart({
                   paddingAngle={1}
                   label={false}
                 >
-                  {data.map((entry, i) => (
+                  {data.map((_, i) => (
                     <Cell key={`cell-${i}`} fill={COLORS[i % COLORS.length]} />
                   ))}
                 </Pie>
