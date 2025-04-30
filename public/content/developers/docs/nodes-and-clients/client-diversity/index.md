@@ -41,7 +41,7 @@ There is also a human cost to having majority clients. It puts excess strain and
 
 ### Current client diversity {#current-client-diversity}
 
-<div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start mt-6 pb-32">
+<div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start mt-6 pb-16 md:pb-32">
   <div className="flex justify-center">
     <PieChart
       data={[

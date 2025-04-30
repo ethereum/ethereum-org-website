@@ -93,7 +93,7 @@ export function PieChart({
                     maxWidth:   '40%',
                   }}
                   formatter={(value, entry) => {
-                    const payload = entry.payload as PieChartDataPoint;
+                    const payload = (entry.payload as unknown) as PieChartDataPoint;
                     const val = Number.isInteger(payload.value)
                       ? payload.value
                       : payload.value.toFixed(2);
