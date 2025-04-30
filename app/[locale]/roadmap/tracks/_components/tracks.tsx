@@ -2,6 +2,7 @@
 
 import { cloneElement, useState } from "react"
 import { motion } from "framer-motion"
+import { ReactFlow } from "@xyflow/react"
 
 import BannerNotification from "@/components/Banners/BannerNotification"
 import FeedbackCard from "@/components/FeedbackCard"
@@ -18,6 +19,8 @@ import { ButtonLink } from "@/components/ui/buttons/Button"
 import { cn } from "@/lib/utils/cn"
 
 import { useTracks } from "./useTracks"
+
+import "@xyflow/react/dist/style.css"
 
 import { useActiveHash } from "@/hooks/useActiveHash"
 import { useTranslation } from "@/hooks/useTranslation"
@@ -145,14 +148,12 @@ const RoadmapTracksPage = () => {
                 </div>
               </AccordionTrigger>
               <AccordionContent className="!pt-0">
-                <div className="rounded-2xl border bg-background p-4">
-                  <p>Hello</p>
-                  <p>Hello</p>
-                  <p>Hello</p>
-                  <p>Hello</p>
-                  <p>Hello</p>
-                  <p>Hello</p>
-                  <p>Hello</p>
+                <div className="h-[400px] w-full overflow-hidden rounded-2xl border bg-background">
+                  <ReactFlow
+                    nodes={contentData.nodes.nodes}
+                    edges={contentData.nodes.edges}
+                    preventScrolling={false}
+                  />
                 </div>
               </AccordionContent>
             </AccordionItem>

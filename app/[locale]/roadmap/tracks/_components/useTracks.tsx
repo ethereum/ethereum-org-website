@@ -1,3 +1,5 @@
+import { Edge, Node } from "@xyflow/react"
+
 import {
   BetterUserExperienceIcon,
   CheaperTransactionsIcon,
@@ -16,6 +18,12 @@ import {
 
 import { useTranslation } from "@/hooks/useTranslation"
 
+const initialNodes = [
+  { id: "1", position: { x: 20, y: 20 }, data: { label: "1" } },
+  { id: "2", position: { x: 20, y: 120 }, data: { label: "2" } },
+]
+const initialEdges = [{ id: "e1-2", source: "1", target: "2" }]
+
 type Track = {
   key: string
   title: string
@@ -24,7 +32,7 @@ type Track = {
     title: string
     goalDescription: string
     benefits: { icon: React.ReactNode; title: string }[]
-    nodes: []
+    nodes: { nodes: Node[]; edges: Edge[] }
   }
 }
 
@@ -49,7 +57,10 @@ export const useTracks = (): Track[] => {
             title: t("page-roadmap-tracks-green-blockchain"),
           },
         ],
-        nodes: [],
+        nodes: {
+          nodes: initialNodes,
+          edges: initialEdges,
+        },
       },
     },
     {
@@ -65,7 +76,10 @@ export const useTracks = (): Track[] => {
             title: t("page-roadmap-tracks-cheaper-transactions"),
           },
         ],
-        nodes: [],
+        nodes: {
+          nodes: initialNodes,
+          edges: initialEdges,
+        },
       },
     },
     {
@@ -81,7 +95,10 @@ export const useTracks = (): Track[] => {
             title: t("page-roadmap-tracks-extra-security"),
           },
         ],
-        nodes: [],
+        nodes: {
+          nodes: initialNodes,
+          edges: initialEdges,
+        },
       },
     },
     {
@@ -97,7 +114,10 @@ export const useTracks = (): Track[] => {
             title: t("page-roadmap-tracks-future-proofing"),
           },
         ],
-        nodes: [],
+        nodes: {
+          nodes: initialNodes,
+          edges: initialEdges,
+        },
       },
     },
     {
@@ -113,7 +133,10 @@ export const useTracks = (): Track[] => {
             title: t("page-roadmap-tracks-better-user-experience"),
           },
         ],
-        nodes: [],
+        nodes: {
+          nodes: initialNodes,
+          edges: initialEdges,
+        },
       },
     },
     {
@@ -129,7 +152,10 @@ export const useTracks = (): Track[] => {
             title: t("page-roadmap-tracks-general-improvements"),
           },
         ],
-        nodes: [],
+        nodes: {
+          nodes: initialNodes,
+          edges: initialEdges,
+        },
       },
     },
   ]
