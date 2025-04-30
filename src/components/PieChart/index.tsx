@@ -80,30 +80,27 @@ export function PieChart({
               <RechartsPieChart
                 margin={{ top: 10, right: 10, bottom: 10, left: 10 }}
               >
-                <ChartTooltip
-                  cursor={false}
-                  content={<ChartTooltipContent />}
-                />
+                <ChartTooltip cursor={false} content={<ChartTooltipContent />} />
+
                 <Legend
                   layout="vertical"
                   verticalAlign="middle"
                   align="right"
                   wrapperStyle={{
-                    fontSize: "0.85rem",
-                    paddingLeft: "10px",
-                    lineHeight: "1.8em",
-                    maxWidth: "40%", // Control legend width
+                    fontSize:  '0.85rem',
+                    paddingLeft: '8px',
+                    lineHeight:  '1.2',   
+                    maxWidth:   '40%',
                   }}
                   formatter={(value, entry) => {
-                    const payload =
-                      entry.payload as unknown as PieChartDataPoint;
-                    // Format to 2 decimal places if needed
-                    const formattedValue = Number.isInteger(payload.value)
+                    const payload = entry.payload as PieChartDataPoint;
+                    const val = Number.isInteger(payload.value)
                       ? payload.value
                       : payload.value.toFixed(2);
-                    return `${value} (${formattedValue}%)`;
+                    return `${value} (${val}%)`;
                   }}
                 />
+
                 <Pie
                   data={data}
                   dataKey="value"
@@ -111,14 +108,13 @@ export function PieChart({
                   cx="35%"
                   cy="50%"
                   outerRadius={75}
-                  innerRadius={0}
                   paddingAngle={1}
                   label={false}
                 >
-                  {data.map((_, index) => (
+                  {data.map((_, i) => (
                     <Cell
-                      key={`cell-${index}`}
-                      fill={COLORS[index % COLORS.length]}
+                      key={`cell-${i}`}
+                      fill={COLORS[i % COLORS.length]}
                     />
                   ))}
                 </Pie>
@@ -127,6 +123,7 @@ export function PieChart({
           </div>
         </ChartContainer>
       </CardContent>
+
       {(footerText || footerSubText) && (
         <CardFooter>
           <div className="flex w-full items-start gap-2 text-sm">
