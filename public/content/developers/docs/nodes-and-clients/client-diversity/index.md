@@ -41,8 +41,9 @@ There is also a human cost to having majority clients. It puts excess strain and
 
 ### Current client diversity {#current-client-diversity}
 
-<div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12 items-start mt-6">
-  <div className="flex justify-center">
+<div className="flex flex-col items-stretch gap-8"> 
+<div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 items-start mt-6 pb-8 md:pb-16">
+  <div className="w-full">
     <PieChart
       data={[
         { name: "Geth", value: 41 },
@@ -55,7 +56,7 @@ There is also a human cost to having majority clients. It puts excess strain and
       title="Execution Clients"
     />
   </div>
- <div className="flex justify-center">
+  <div className="w-full">
     <PieChart
       data={[
         { name: "Prysm", value: 36.09 },
@@ -71,9 +72,9 @@ There is also a human cost to having majority clients. It puts excess strain and
   </div>
 </div>
 
-<p className="mt-8 text-sm italic max-w-none">
+<div className="text-sm italic text-gray-600 mt-4 mb-8">
   This diagram may be outdated — go to [ethernodes.org](https://ethernodes.org) and [clientdiversity.org](https://clientdiversity.org/) for up-to-date information.
-</p>
+</div> </div>
 
 The two pie charts above show snapshots of the current client diversity for the execution and consensus layers (at time of writing in April 2025). Client diversity has improved over the years, and the execution layer has seen a reduction in the domination by [Geth](https://geth.ethereum.org/), with [Nethermind](https://www.nethermind.io/nethermind-client) a close second, [Besu](https://besu.hyperledger.org/) third and [Erigon](https://github.com/ledgerwatch/erigon) fourth, with other clients comprising less than 3 % of the network. The most commonly used client on the consensus layer - [Prysm](https://prysmaticlabs.com/#projects) - is quite close with the second most used. [Lighthouse](https://lighthouse.sigmaprime.io/) and [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) make up ~34% and ~21% respectively, and other clients are rarely used.
 
