@@ -63,7 +63,7 @@ export function PieChart({
 }: PieChartProps) {
   // Function to calculate optimal chart dimensions based on data size
   const getChartDimensions = () => {
-    const baseHeight = data.length <= 4 ? 320 : 350;
+    const baseHeight = data.length <= 4 ? 320 : 380;
     return {
       height: baseHeight,
       outerRadius: data.length <= 4 ? 70 : 65,
@@ -86,10 +86,10 @@ export function PieChart({
       </CardHeader>
       <CardContent className="px-2 sm:px-6">
         <ChartContainer config={defaultChartConfig}>
-          <div className="w-full min-h-[300px]">
+          <div className="w-full">
             <ResponsiveContainer width="100%" height={dimensions.height}>
               <RechartsPieChart
-                margin={{ top: 10, right: 0, bottom: 10, left: 0 }}
+                margin={{ top: 10, right: 30, bottom: 30, left: 0 }}
               >
                 <ChartTooltip
                   cursor={false}
@@ -103,7 +103,7 @@ export function PieChart({
                   wrapperStyle={{
                     fontSize: "0.8rem",
                     paddingLeft: "4px",
-                    lineHeight: "1.2",
+                    lineHeight: "1.0",
                     maxWidth: "45%",
                     overflowWrap: "break-word",
                   }}
@@ -115,7 +115,7 @@ export function PieChart({
                       : payload.value.toFixed(2);
 
                     // Limit label length for mobile
-                    const maxLength = 15;
+                    const maxLength = 12;
                     const displayName =
                       value.length > maxLength
                         ? `${value.substring(0, maxLength)}...`
@@ -136,7 +136,7 @@ export function PieChart({
                   cx={dimensions.cx}
                   cy="50%"
                   outerRadius={dimensions.outerRadius}
-                  paddingAngle={1}
+                  paddingAngle={1.5}
                   label={false}
                 >
                   {data.map((_, i) => (
