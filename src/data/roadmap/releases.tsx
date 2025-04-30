@@ -114,11 +114,11 @@ export const releasesData: Release[] = [
     releaseDate: "2025-05-07",
     content: (
       <div>
-        <p className="font-bold">EOA account code</p>
+        <p className="font-bold">Enhance EOA wallets with smart contract functionality</p>
         <ul>
           <li>
             Users can set their address to be represented by a code of an
-            existing smart contract
+            existing smart contract and gain benefits such as transaction batching, transaction fee sponsorship or better recovery mechanisms
           </li>
         </ul>
         <p className="font-bold">Increase the max effective balance</p>
@@ -155,20 +155,12 @@ export const releasesData: Release[] = [
             decentralization
           </li>
         </ul>
-        <p className="font-bold">Ethereum Object Format (EOF)</p>
-        <ul>
-          <li>
-            Modernizes smart contract structure by separating code from data
-          </li>
-          <li>
-            Improves security and makes contract development more reliable
-          </li>
-        </ul>
         <p className="font-bold">Potential Additional Features</p>
         <ul>
           <li>
             EIP-7688: Enhanced smart contract access to network information
           </li>
+          <li>Blob fee market improvementse</li>
           <li>
             Further improvements to validator efficiency and network performance
           </li>
