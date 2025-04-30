@@ -144,8 +144,16 @@ const RoadmapTracksPage = () => {
                   </div>
                 </div>
               </AccordionTrigger>
-              <AccordionContent>
-                <p>Hello</p>
+              <AccordionContent className="!pt-0">
+                <div className="rounded-2xl border bg-background p-4">
+                  <p>Hello</p>
+                  <p>Hello</p>
+                  <p>Hello</p>
+                  <p>Hello</p>
+                  <p>Hello</p>
+                  <p>Hello</p>
+                  <p>Hello</p>
+                </div>
               </AccordionContent>
             </AccordionItem>
           ))}
