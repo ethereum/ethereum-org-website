@@ -104,18 +104,19 @@ export function PieChart({
                     maxWidth: "45%",
                     overflowWrap: "break-word",
                   }}
-                  formatter={(value, entry) => {
-                    const payload = (entry.payload as unknown) as PieChartDataPoint;
-                    const val = Number.isInteger(payload.value)
-                      ? payload.value
-                      : payload.value.toFixed(2);
+                  formatter={( value,{ payload }: { payload: unknown }) => {const pt = (payload as PieChartDataPoint);
+                    const val = Number.isInteger(pt.value)
+                      ? pt.value
+                      : pt.value.toFixed(2);
                     
                     // Limit label length for mobile
                     const maxLength = 15;
-                    const displayName = value.length > maxLength 
-                      ? `${value.substring(0, maxLength)}...`
-                      : value;
-                      
+                    const name = String(value);
+                    const displayName =
+                      name.length > maxLength
+                        ? `${name.slice(0, maxLength)}…`
+                        : name;
+                    
                     return (
                       <span className="text-xs sm:text-sm">
                         {displayName} ({val}%)
