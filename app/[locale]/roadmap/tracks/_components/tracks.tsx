@@ -1,6 +1,6 @@
 "use client"
 
-import { cloneElement } from "react"
+import { cloneElement, useState } from "react"
 import { motion } from "framer-motion"
 
 import BannerNotification from "@/components/Banners/BannerNotification"
@@ -25,6 +25,9 @@ import { useTranslation } from "@/hooks/useTranslation"
 const RoadmapTracksPage = () => {
   const { t } = useTranslation("page-roadmap-tracks")
   const tracks = useTracks()
+  const [openItems, setOpenItems] = useState<string[]>(() =>
+    tracks.map(({ key }) => key)
+  )
   const activeSection = useActiveHash(
     tracks.map(({ key }) => key),
     "0% 0% -70% 0%"
@@ -75,32 +78,34 @@ const RoadmapTracksPage = () => {
       </div>
 
       <div className="flex flex-col gap-6 px-4 2xl:px-0">
-        {tracks.map(({ key, icon, contentData }) => (
-          <div
-            key={key}
-            id={key}
-            className="flex scroll-mt-40 rounded-2xl border bg-background shadow-lg"
-          >
-            <Accordion
-              type="single"
-              collapsible
-              className="w-full items-start px-0"
+        <Accordion
+          type="multiple"
+          value={openItems}
+          onValueChange={setOpenItems}
+          className="flex w-full flex-col items-start gap-4 px-0"
+        >
+          {tracks.map(({ key, icon, contentData }) => (
+            <AccordionItem
+              key={key}
+              id={key}
+              value={key}
+              className="flex w-full scroll-mt-40 flex-col items-start rounded-2xl border bg-background px-0 shadow-lg hover:bg-background-highlight"
             >
-              <AccordionItem value={key} className="w-full items-start px-0">
-                <AccordionTrigger
-                  hideIcon
-                  className="w-full flex-col items-start gap-3 rounded-2xl hover:!text-inherit [&[data-state=open]]:!bg-transparent [&[data-state=open]]:hover:!bg-background-highlight [&]:!p-4 [&]:hover:!bg-background-highlight sm:[&]:!p-6"
-                >
-                  <div className="flex flex-row items-center gap-3">
-                    <div className="flex items-center justify-center rounded-2xl border bg-background-highlight p-2">
-                      <span className="flex h-9 w-9 items-center justify-center lg:h-10 lg:w-10">
-                        {cloneElement(icon as React.ReactElement, {
-                          className: "w-full h-full",
-                        })}
-                      </span>
-                    </div>
-                    <h2>{contentData.title}</h2>
+              <AccordionTrigger
+                hideIcon
+                className="w-full flex-col items-start gap-3 rounded-2xl hover:!text-inherit [&[data-state=open]]:!bg-transparent [&[data-state=open]]:!text-inherit [&[data-state=open]]:hover:!bg-background-highlight [&]:!p-4 [&]:hover:!bg-background-highlight sm:[&]:!p-6"
+              >
+                <div className="flex flex-row items-center gap-3">
+                  <div className="flex items-center justify-center rounded-2xl border bg-background-highlight p-2">
+                    <span className="flex h-9 w-9 items-center justify-center lg:h-10 lg:w-10">
+                      {cloneElement(icon as React.ReactElement, {
+                        className: "w-full h-full",
+                      })}
+                    </span>
                   </div>
+                  <h2>{contentData.title}</h2>
+                </div>
+                <div className="flex w-full flex-col justify-between gap-4 lg:flex-row">
                   <div className="flex flex-row gap-8">
                     <div className="w-full text-start lg:w-[360px]">
                       <p className="font-bold">Goals:</p>
@@ -130,14 +135,21 @@ const RoadmapTracksPage = () => {
                       </div>
                     </div>
                   </div>
-                </AccordionTrigger>
-                <AccordionContent>
-                  <p>Hello</p>
-                </AccordionContent>
-              </AccordionItem>
-            </Accordion>
-          </div>
-        ))}
+                  <div className="flex items-start">
+                    <div className="min-w-[98px] rounded-full border border-primary px-4 py-2 text-primary">
+                      <span>
+                        {openItems.includes(key) ? "CLOSE -" : "OPEN +"}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </AccordionTrigger>
+              <AccordionContent>
+                <p>Hello</p>
+              </AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
       </div>
 
       <FeedbackCard />
