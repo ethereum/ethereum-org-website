@@ -77,9 +77,7 @@ export function PieChart({
         <ChartContainer config={defaultChartConfig}>
           <div className="w-full min-h-[350px]">
             <ResponsiveContainer width="100%" height={350}>
-              <RechartsPieChart
-                margin={{ top: 10, right: 10, bottom: 10, left: 10 }}
-              >
+              <RechartsPieChart margin={{ top: 10, right: 10, bottom: 10, left: 10 }}>
                 <ChartTooltip cursor={false} content={<ChartTooltipContent />} />
 
                 <Legend
@@ -87,10 +85,10 @@ export function PieChart({
                   verticalAlign="middle"
                   align="right"
                   wrapperStyle={{
-                    fontSize:  '0.85rem',
-                    paddingLeft: '8px',
-                    lineHeight:  '1.2',   
-                    maxWidth:   '40%',
+                    fontSize:  "0.85rem",
+                    paddingLeft: "8px",
+                    lineHeight:  "1.2", 
+                    maxWidth:   "40%",
                   }}
                   formatter={(value, entry) => {
                     const payload = (entry.payload as unknown) as PieChartDataPoint;
@@ -112,10 +110,7 @@ export function PieChart({
                   label={false}
                 >
                   {data.map((_, i) => (
-                    <Cell
-                      key={`cell-${i}`}
-                      fill={COLORS[i % COLORS.length]}
-                    />
+                    <Cell key={i} fill={COLORS[i % COLORS.length]} />
                   ))}
                 </Pie>
               </RechartsPieChart>
