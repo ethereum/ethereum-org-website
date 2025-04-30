@@ -155,20 +155,12 @@ export const releasesData: Release[] = [
             decentralization
           </li>
         </ul>
-        <p className="font-bold">Ethereum Object Format (EOF)</p>
-        <ul>
-          <li>
-            Modernizes smart contract structure by separating code from data
-          </li>
-          <li>
-            Improves security and makes contract development more reliable
-          </li>
-        </ul>
         <p className="font-bold">Potential Additional Features</p>
         <ul>
           <li>
             EIP-7688: Enhanced smart contract access to network information
           </li>
+          <li>Blob fee market improvementse</li>
           <li>
             Further improvements to validator efficiency and network performance
           </li>

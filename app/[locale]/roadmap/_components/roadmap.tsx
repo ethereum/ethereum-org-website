@@ -13,7 +13,6 @@ import {
   ProposerBuilderSeparationIcon,
   SecretLeaderElectionIcon,
   SingleSlotFinalityIcon,
-  StakingWithdrawalsIcon,
   StatelessnessIcon,
   VerkleTreesIcon,
 } from "@/components/icons/roadmap"
@@ -91,13 +90,6 @@ const RoadmapPage = () => {
       description:
         "Danksharding makes L2 rollups much cheaper for users by adding “blobs” of data to Ethereum blocks.",
       href: "/roadmap/danksharding",
-    },
-    {
-      icon: <StakingWithdrawalsIcon />,
-      title: "Staking withdrawals",
-      description:
-        "The Shanghai/Capella upgrade enabled staking withdrawals on Ethereum, allowing people to unlock their staked ETH.",
-      href: "/staking/withdrawals",
     },
     {
       icon: <SingleSlotFinalityIcon />,
@@ -253,7 +245,7 @@ const RoadmapPage = () => {
                 className="flex flex-col rounded-3xl border border-[rgba(159,43,212,0.11)] bg-card-gradient-secondary p-6 hover:bg-card-gradient-secondary-hover hover:shadow-lg"
               >
                 <div className="mb-3 flex gap-4">
-                  {item.icon}
+                  <div className="text-primary">{item.icon}</div>
                   <h3 className="text-xl">{item.title}</h3>
                 </div>
                 <p className="m-0 p-0 pb-3 text-body-medium">
@@ -284,27 +276,6 @@ const RoadmapPage = () => {
           <div className="flex flex-1 flex-col gap-8">
             <h2>What is the timeline for these upgrades?</h2>
             <div>
-              <ExpandableCard title="What was ETH2?" className="mb-0">
-                <p>
-                  The term &apos;Eth2&apos; was commonly used to describe the
-                  future of Ethereum before the switch to{" "}
-                  <Link href="/glossary/#pos">proof-of-stake</Link> but it was{" "}
-                  <strong>
-                    phased out in favor of more precise terminology.
-                  </strong>{" "}
-                  It was originally used to differentiate the Ethereum network
-                  before the switch to proof-of-stake and the network after, or
-                  sometimes to refer to the different Ethereum clients (
-                  <Link href="/glossary/#execution-client">
-                    execution clients
-                  </Link>{" "}
-                  were sometimes referred to as ETH1 clients and{" "}
-                  <Link href="/glossary/#consensus-client">
-                    consensus clients
-                  </Link>{" "}
-                  were sometimes referred to as ETH2 clients).
-                </p>
-              </ExpandableCard>
               <ExpandableCard
                 title="Will Ethereum's roadmap change over time?"
                 className="mb-0"
