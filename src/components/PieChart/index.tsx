@@ -2,7 +2,6 @@
 import { FaArrowTrendUp } from "react-icons/fa6";
 import {
   Cell,
-  Legend,
   Pie,
   PieChart as RechartsPieChart,
   ResponsiveContainer,
@@ -61,18 +60,9 @@ export function PieChart({
   footerText,
   footerSubText,
 }: PieChartProps) {
-  // Function to calculate optimal chart dimensions based on data size
-  const getChartDimensions = () => {
-    const baseHeight = data.length <= 4 ? 320 : 380;
-    return {
-      height: baseHeight,
-      outerRadius: data.length <= 4 ? 70 : 65,
-      cx: data.length <= 5 ? "35%" : "30%",
-    };
-  };
-
-  // Get optimal dimensions
-  const dimensions = getChartDimensions();
+  // adjust height / radius based on slice count
+  const height = data.length <= 4 ? 300 : 340;
+  const radius = data.length <= 4 ? 70 : 60;
 
   return (
     <Card className="w-full">
@@ -84,86 +74,75 @@ export function PieChart({
         )}
         {description && <CardDescription>{description}</CardDescription>}
       </CardHeader>
-      <CardContent className="px-2 sm:px-6">
+
+      <CardContent className="px-4 pb-4">
         <ChartContainer config={defaultChartConfig}>
-          <div className="w-full">
-            <ResponsiveContainer width="100%" height={dimensions.height}>
-              <RechartsPieChart
-                margin={{ top: 10, right: 30, bottom: 30, left: 0 }}
-              >
-                <ChartTooltip
-                  cursor={false}
-                  content={<ChartTooltipContent />}
-                />
-
-                <Legend
-                  layout="vertical"
-                  verticalAlign="middle"
-                  align="right"
-                  wrapperStyle={{
-                    fontSize: "0.8rem",
-                    paddingLeft: "4px",
-                    lineHeight: "1.0",
-                    maxWidth: "45%",
-                    overflowWrap: "break-word",
-                  }}
-                  formatter={(value, legendEntry) => {
-                    const payload =
-                      legendEntry.payload as unknown as PieChartDataPoint;
-                    const val = Number.isInteger(payload.value)
-                      ? payload.value
-                      : payload.value.toFixed(2);
-
-                    // Limit label length for mobile
-                    const maxLength = 12;
-                    const displayName =
-                      value.length > maxLength
-                        ? `${value.substring(0, maxLength)}...`
-                        : value;
-
-                    return (
-                      <span className="text-xs sm:text-sm">
-                        {displayName} ({val}%)
-                      </span>
-                    );
-                  }}
-                />
-
-                <Pie
-                  data={data}
-                  dataKey="value"
-                  nameKey="name"
-                  cx={dimensions.cx}
-                  cy="50%"
-                  outerRadius={dimensions.outerRadius}
-                  paddingAngle={1.5}
-                  label={false}
+          {/* flex-col on mobile, flex-row from md up */}
+          <div className="flex flex-col md:flex-row items-center md:items-start gap-4">
+            {/* Pie chart */}
+            <div className="w-full md:w-1/2 h-[300px]">
+              <ResponsiveContainer width="100%" height={height}>
+                <RechartsPieChart
+                  margin={{ top: 8, right: 0, bottom: 8, left: 0 }}
                 >
-                  {data.map((_, i) => (
-                    <Cell key={`cell-${i}`} fill={COLORS[i % COLORS.length]} />
-                  ))}
-                </Pie>
-              </RechartsPieChart>
-            </ResponsiveContainer>
+                  <ChartTooltip
+                    cursor={false}
+                    content={<ChartTooltipContent />}
+                  />
+                  <Pie
+                    data={data}
+                    dataKey="value"
+                    nameKey="name"
+                    cx="50%"
+                    cy="50%"
+                    outerRadius={radius}
+                    innerRadius={0}
+                    paddingAngle={1}
+                    label={false}
+                  >
+                    {data.map((_, i) => (
+                      <Cell key={i} fill={COLORS[i % COLORS.length]} />
+                    ))}
+                  </Pie>
+                </RechartsPieChart>
+              </ResponsiveContainer>
+            </div>
+
+            {/* custom legend */}
+            <ul className="w-full md:w-1/2 list-none text-sm space-y-2 px-2">
+              {data.map((pt, i) => (
+                <li key={pt.name} className="flex items-center">
+                  <span
+                    className="inline-block w-3 h-3 rounded-sm mr-2 shrink-0"
+                    style={{ backgroundColor: COLORS[i % COLORS.length] }}
+                  />
+                  <span className="truncate">
+                    {pt.name} (
+                    {Number.isInteger(pt.value)
+                      ? pt.value
+                      : pt.value.toFixed(2)}
+                    %)
+                  </span>
+                </li>
+              ))}
+            </ul>
           </div>
         </ChartContainer>
       </CardContent>
 
       {(footerText || footerSubText) && (
         <CardFooter>
-          <div className="flex w-full items-start gap-2 text-sm">
-            <div className="grid gap-2">
-              {footerText && (
-                <div className="flex items-center gap-2 font-medium leading-none">
-                  {footerText} <FaArrowTrendUp className="h-4 w-4" />
-                </div>
-              )}
-              {footerSubText && (
-                <div className="text-muted-foreground flex items-center gap-2 leading-none">
-                  {footerSubText}
-                </div>
-              )}
-            </div>
+          <div className="flex w-full flex-col sm:flex-row items-start gap-2 text-sm">
+            {footerText && (
+              <div className="flex items-center gap-2 font-medium leading-none">
+                {footerText} <FaArrowTrendUp className="h-4 w-4" />
+              </div>
+            )}
+            {footerSubText && (
+              <div className="text-muted-foreground flex items-center gap-2 leading-none">
+                {footerSubText}
+              </div>
+            )}
           </div>
         </CardFooter>
       )}
