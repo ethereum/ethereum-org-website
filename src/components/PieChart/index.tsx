@@ -1,5 +1,4 @@
 "use client";
-
 import { FaArrowTrendUp } from "react-icons/fa6";
 import {
   Cell,
@@ -8,7 +7,6 @@ import {
   PieChart as RechartsPieChart,
   ResponsiveContainer,
 } from "recharts";
-
 import {
   Card,
   CardContent,
@@ -23,9 +21,7 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
-
 type PieChartDataPoint = { name: string; value: number };
-
 /**
  * PieChartProps defines the properties for the PieChart component.
  *
@@ -42,14 +38,12 @@ type PieChartProps = {
   footerText?: string;
   footerSubText?: string;
 };
-
 const defaultChartConfig = {
   value: {
     label: "Value",
     color: "hsl(var(--accent-a))",
   },
 } satisfies ChartConfig;
-
 const COLORS = [
   "hsla(var(--accent-a))",
   "hsla(var(--accent-b))",
@@ -59,7 +53,6 @@ const COLORS = [
 PieChart component renders a pie chart with the provided data, utilizing accent colors,
 and a vertical legend positioned to the right.
 */
-
 export function PieChart({
   data,
   title,
@@ -104,19 +97,18 @@ export function PieChart({
                     maxWidth: "45%",
                     overflowWrap: "break-word",
                   }}
-                  formatter={( value,{ payload }: { payload: unknown }) => {const pt = (payload as PieChartDataPoint);
-                    const val = Number.isInteger(pt.value)
-                      ? pt.value
-                      : pt.value.toFixed(2);
+                  formatter={(value, legendEntry) => {
+                    const payload = (legendEntry.payload as unknown) as PieChartDataPoint;
+                    const val = Number.isInteger(payload.value)
+                      ? payload.value
+                      : payload.value.toFixed(2);
                     
                     // Limit label length for mobile
                     const maxLength = 15;
-                    const name = String(value);
-                    const displayName =
-                      name.length > maxLength
-                        ? `${name.slice(0, maxLength)}…`
-                        : name;
-                    
+                    const displayName = value.length > maxLength 
+                      ? `${value.substring(0, maxLength)}...`
+                      : value;
+                      
                     return (
                       <span className="text-xs sm:text-sm">
                         {displayName} ({val}%)
