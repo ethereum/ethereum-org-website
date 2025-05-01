@@ -3,6 +3,9 @@ import type { NetworkUpgradeData } from "@/lib/types"
 const NetworkUpgradeSummaryData: NetworkUpgradeData = {
   pectra: {
     isPending: true,
+    dateTimeAsString: "2025-05-07T10:05:11.000Z",
+    epochNumber: 364032,
+    slotNumber: 364032 * 32,
   },
   dencun: {
     dateTimeAsString: "2024-03-13T13:55:35.000Z",
