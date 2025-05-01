@@ -40,7 +40,7 @@ Kromě vytváření etheru prostřednictvím odměn za bloky může být ether t
 
 K pálení etheru dochází při každé transakci na Ethereu. Když uživatelé platí za transakce, základní poplatek za palivo, který je stanoven sítí podle poptávky po transakcích, je zničen. Tento proces, ve spojení s proměnlivými velikostmi bloků a maximálním poplatkem za palivo, zjednodušuje odhad poplatků za transakce na Ethereu. Když je poptávka po síti vysoká, [bloky](https://etherscan.io/block/12965263) mohou spálit více etheru, než kolik se vyrazí, což efektivně kompenzuje vydávání nových etherů.
 
-Pálení základního poplatku omezuje schopnost producenta bloku manipulovat s transakcemi. Např. kdyby producenti bloků dostávali základní poplatek, mohli by zahrnout své vlastní transakce zdarma a zvýšit základní poplatek pro všechny ostatní. Alternativně by mohli vrátit základní poplatek některým uživatelům mimo řetězec, což by vedlo k méně transparentnímu a složitějšímu trhu s transakčními poplatky.
+Pálení základního poplatku omezuje schopnost producenta bloku manipulovat s transakcemi. Např. kdyby producenti bloků dostávali základní poplatek, mohli by zahrnout své vlastní transakce zdarma a zvýšit základní poplatek pro všechny ostatní. Alternativně by mohli vrátit základní poplatek některým uživatelům mimo blockchain, což by vedlo k méně transparentnímu a složitějšímu trhu s transakčními poplatky.
 
 ## Denominace etheru {#denominations}
 
@@ -71,7 +71,7 @@ Uživatelé mohou zjistit zůstatek etheru na jakémkoliv [účtu](/developers/d
 
 ## Další informace {#further-reading}
 
-- [Definování Etheru a Etherea](https://www.cmegroup.com/education/courses/introduction-to-ether/defining-ether-and-ethereum.html) – _CME Group_
+- [Definování etheru a Etherea](https://www.cmegroup.com/education/courses/introduction-to-ether/defining-ether-and-ethereum.html) – _CME Group_
 - [Ethereum Whitepaper](/whitepaper/): Původní návrh Etherea. Tento dokument obsahuje popis etheru a motivaci za jeho vytvořením.
 - [Kalkulačka gwei](https://www.alchemy.com/gwei-calculator): Použijte tuto kalkulačku gwei pro snadnou konverzi mezi wei, gwei a etherem. Stačí zadat jakoukoliv částku ve wei, gwei nebo ETH a automaticky vypočítat konverzi.
 

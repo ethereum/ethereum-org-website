@@ -70,7 +70,9 @@ Formální specifikace na nízké úrovni mohou být uvedeny buď jako vlastnost
 
 ### Vlastnosti ve stylu Hoareovy logiky {#hoare-style-properties}
 
-[Hoareova logika](https://en.wikipedia.org/wiki/Hoare_logic) poskytuje sadu formálních pravidel pro uvažování o správnosti programů, včetně chytrých kontraktů. Vlastnost ve stylu Hoareovy logiky je reprezentována jako Hoareův trojúhelník `{P}c{Q}`, kde `c` je program a `P` a `Q` jsou predikáty na stavu `c` (tj. programu), formálně popsané jako _předpoklady_ a _podmínky následku_.
+[Hoareova logika](https://en.wikipedia.org/wiki/Hoare_logic) poskytuje sadu formálních pravidel pro uvažování o správnosti programů, včetně chytrých kontraktů. Vlastnost ve stylu Hoareovy logiky je reprezentována jako Hoareova trojice \{_P_}_c_\{_Q_}, kde _c_ je program a _P_ a _Q_ jsou predikáty na stavu _c_ (tj. programu), formálně popsané jako _předpoklady_ a _podmínky následku_.
+
+Předpoklad je predikát popisující podmínky potřebné pro správné provedení funkce; uživatelé volající kontrakt musí tuto podmínku splnit. Podmínka následku je predikát popisující podmínku, kterou funkce stanoví, pokud je správně provedena; uživatelé mohou očekávat, že tato podmínka bude po volání funkce pravdivá. _Invariant_ v Hoareově logice je predikát, který je zachován při provádění funkce (tj. nemění se).
 
 Specifikace ve stylu Hoareovy logiky mohou zaručit buď _částečnou správnost_, _nebo úplnou správnost_. Implementace funkce kontraktu je „částečně správná“, pokud předpoklad platí před provedením funkce a když provedení končí, podmínka následku je také pravdivá. Důkaz úplné správnosti je obdržen, pokud je předpoklad pravdivý před provedením funkce, dále je zaručeno, že provádění funkce bude ukončeno, a když k tomu dojde, následek bude pravdivý.
 
