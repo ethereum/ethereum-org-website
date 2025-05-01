@@ -74,7 +74,7 @@ There are many ways to use forecasting tools outside of financial gain. For exam
 This would help the organizers determine which location would lead to the largest event, compared to which location would lead to the most internationally accessible. The benefits of this mean the organizers of DevCon can expedite the amount of time required to screen multiple
 visa policies, airport access, and cost of living in the area while also gathering data on where prospective attendees would be excited to go.
 
-### Further reading {#further-reading}
+## Further reading {#further-reading}
 
 [From prediction markets to info finance](https://vitalik.eth.limo/general/2024/11/09/infofinance.html) - Vitalik Buterin  
 [Decentralized Prediction Market Development on Ethereum](https://blockchain.oodles.io/dev-blog/decentralized-prediction-market-development-ethereum/)  
