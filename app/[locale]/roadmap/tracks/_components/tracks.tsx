@@ -18,12 +18,17 @@ import { ButtonLink } from "@/components/ui/buttons/Button"
 
 import { cn } from "@/lib/utils/cn"
 
+import ShippedNodes from "./CustomNodes/ShippedNodes"
 import { useTracks } from "./useTracks"
 
 import "@xyflow/react/dist/style.css"
 
 import { useActiveHash } from "@/hooks/useActiveHash"
 import { useTranslation } from "@/hooks/useTranslation"
+
+const nodeTypes = {
+  shipped: ShippedNodes,
+}
 
 const RoadmapTracksPage = () => {
   const { t } = useTranslation("page-roadmap-tracks")
@@ -153,6 +158,7 @@ const RoadmapTracksPage = () => {
                     nodes={contentData.nodes.nodes}
                     edges={contentData.nodes.edges}
                     preventScrolling={false}
+                    nodeTypes={nodeTypes}
                   />
                 </div>
               </AccordionContent>

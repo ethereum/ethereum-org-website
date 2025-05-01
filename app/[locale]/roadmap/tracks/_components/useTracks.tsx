@@ -1,4 +1,4 @@
-import { Edge, Node } from "@xyflow/react"
+import { Edge, MarkerType, Node } from "@xyflow/react"
 
 import {
   BetterUserExperienceIcon,
@@ -19,10 +19,41 @@ import {
 import { useTranslation } from "@/hooks/useTranslation"
 
 const initialNodes = [
-  { id: "1", position: { x: 20, y: 20 }, data: { label: "1" } },
-  { id: "2", position: { x: 20, y: 120 }, data: { label: "2" } },
+  {
+    id: "1",
+    position: { x: 20, y: 20 },
+    type: "shipped",
+    data: {
+      label: "Warmup fork (Altair)",
+      topNode: true,
+      leftNode: true,
+      rightNode: true,
+      bottomNode: true,
+    },
+  },
+  {
+    id: "2",
+    position: { x: 250, y: 180 },
+    type: "shipped",
+    data: {
+      label: "2",
+      topNode: true,
+      leftNode: true,
+      rightNode: true,
+      bottomNode: true,
+    },
+  },
 ]
-const initialEdges = [{ id: "e1-2", source: "1", target: "2" }]
+const initialEdges = [
+  {
+    id: "e1-2",
+    source: "1",
+    target: "2",
+    type: "smoothstep",
+    markerEnd: { type: MarkerType.ArrowClosed, color: "hsla(var(--success))" },
+    style: { stroke: "hsla(var(--success))" },
+  },
+]
 
 type Track = {
   key: string
