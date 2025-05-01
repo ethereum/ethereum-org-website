@@ -55,13 +55,14 @@ Ha úgy gondolja, hogy egy közösséget hozzá kellene adni vagy el kellene tá
 <SocialListItem socialIcon="webpage"><Link href="https://gitter.im/ethereum/solidity">Solidity Gitter</Link> – solidity fejlesztésről (Gitter) szóló csevegés</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> – solidity fejlesztősről (Matrix) szóló csevegés</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> *–kérdések és válaszok fóruma*</SocialListItem>
-<SocialListItem socialIcon="webpage"><Link href="https://peeranha.io/">Peeranha</Link> *– decentralizált kérdések és válaszok fóruma*</SocialListItem>
+<SocialListItem socialIcon="webpage"><Link href="https://app.peera.ai/">Peera Community Forum</Link> *– decentralizált kérdések és válaszok fóruma*</SocialListItem>
 
-## YouTube és Twitter {#youtube-and-twitter}
+## YouTube és X (korábban Twitter) {#youtube-and-twitter}
 
 <SocialListItem socialIcon="youtube"><Link href="https://www.youtube.com/c/EthereumFoundation">Ethereum Alapítvány</Link> – legyen napra kész az Ethereum Alapítvány újdonságaival kapcsolatban</SocialListItem>
-<SocialListItem socialIcon="twitter"><Link href="https://twitter.com/ethereum">@ethereum</Link> – az Ethereum Alapítvány hivatalos profilja</SocialListItem>
-<SocialListItem socialIcon="twitter"><Link href="https://twitter.com/ethdotorg">@ethdotorg</Link> – portál az Ethereumhoz, a növekvő globális közösségünk számára</SocialListItem>
+<SocialListItem socialIcon="twitter"><Link href="https://x.com/ethereum">@ethereum</Link> – fő Ethereum-számla a közösség számára</SocialListItem>
+<SocialListItem socialIcon="twitter"><Link href="https://x.com/ethereumfndn">@ethereumfndn</Link> – az Ethereum Alapítvány hivatalos profilja</SocialListItem>
+<SocialListItem socialIcon="twitter"><Link href="https://x.com/ethdotorg">@ethdotorg</Link> – portál az Ethereumhoz, a növekvő globális közösségünk számára</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://hive.one/c/ethereum?page=1">Nagy befolyással bíró Ethereum Twitter-fiókok listája</Link></SocialListItem>
 
 <Divider />
