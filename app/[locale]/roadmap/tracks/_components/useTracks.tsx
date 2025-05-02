@@ -43,6 +43,14 @@ const initialNodes = [
       bottomNode: true,
     },
   },
+  {
+    id: "3",
+    position: { x: 20, y: 180 },
+    type: "endGoal",
+    data: {
+      label: "Quantum-safe SNARKs (eg. STARKs)",
+    },
+  },
 ]
 const initialEdges = [
   {
@@ -50,7 +58,12 @@ const initialEdges = [
     source: "1",
     target: "2",
     type: "smoothstep",
-    markerEnd: { type: MarkerType.ArrowClosed, color: "hsla(var(--success))" },
+    markerEnd: {
+      type: MarkerType.Arrow,
+      color: "hsla(var(--success))",
+      width: 32,
+      height: 32,
+    },
     style: { stroke: "hsla(var(--success))" },
   },
 ]

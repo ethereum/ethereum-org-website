@@ -1,6 +1,6 @@
 "use client"
 
-import { cloneElement, useState } from "react"
+import { cloneElement, useMemo, useState } from "react"
 import { motion } from "framer-motion"
 import { ReactFlow } from "@xyflow/react"
 
@@ -18,6 +18,7 @@ import { ButtonLink } from "@/components/ui/buttons/Button"
 
 import { cn } from "@/lib/utils/cn"
 
+import EndGoalNodes from "./CustomNodes/EndGoalNodes"
 import ShippedNodes from "./CustomNodes/ShippedNodes"
 import { useTracks } from "./useTracks"
 
@@ -26,15 +27,18 @@ import "@xyflow/react/dist/style.css"
 import { useActiveHash } from "@/hooks/useActiveHash"
 import { useTranslation } from "@/hooks/useTranslation"
 
-const nodeTypes = {
-  shipped: ShippedNodes,
-}
-
 const RoadmapTracksPage = () => {
   const { t } = useTranslation("page-roadmap-tracks")
   const tracks = useTracks()
   const [openItems, setOpenItems] = useState<string[]>(() =>
     tracks.map(({ key }) => key)
+  )
+  const nodeTypes = useMemo(
+    () => ({
+      endGoal: EndGoalNodes,
+      shipped: ShippedNodes,
+    }),
+    []
   )
   const activeSection = useActiveHash(
     tracks.map(({ key }) => key),
