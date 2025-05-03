@@ -31,6 +31,11 @@ export const ResourceItem = ({
       "flex gap-2 border-b p-3 text-body no-underline last-of-type:border-0 hover:bg-background-highlight hover:text-body",
       className
     )}
+    customEventOptions={{
+      eventCategory: "dashboard",
+      eventAction: "links",
+      eventName: title,
+    }}
     hideArrow
   >
     <div className="my-1 size-[18px] shrink-0">

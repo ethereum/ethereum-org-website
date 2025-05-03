@@ -391,6 +391,8 @@
   "web3-definition": "Web3 is the new internet with blockchain, where users control their data and transactions, not companies. No need to share any personal information. <a href=\"/web3/\">More on web3</a>.",
   "wei-term": "Wei",
   "wei-definition": "The smallest denomination of ether. 10<sup>18</sup> wei = 1 ether.",
+  "wrapped-token-term": "Wrapped token",
+  "wrapped-token-definition": "A blockchain-based token that represents another cryptocurrency or asset on a different network. For example, <a href=\"/wrapped-eth/#intro-to-weth\">Wrapped Ether (WETH)</a> represents Ether (ETH) in a format that complies with Ethereum's <a href=\"/glossary/#erc-20\">ERC-20</a> token standard. The original asset is securely locked by a <a href=\"/glossary/#smart-contract\">smart contract</a>, and an equivalent wrapped token is minted. This mechanism enables interoperability within and between blockchains, allowing assets like ETH to be used seamlessly in decentralized applications while retaining their value.",
   "zero-address-term": "Zero address",
   "zero-address-definition": "An Ethereum address, composed entirely of zeros, that is frequently used as an address to remove tokens from owned circulation. A distinction is drawn between tokens formally removed from a smart contract's index via the burn() method and those sent to this address.",
   "zk-proof-term": "Zero-knowledge proof",
