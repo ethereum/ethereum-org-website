@@ -2,6 +2,7 @@ import EndGoalNode from "./EndGoalNode"
 import FeatureResearchNode from "./FeatureResearchNode"
 import FeatureScheduledNode from "./FeatureScheduledNode"
 import FeatureShippedNode from "./FeatureShippedNode"
+import GroupNode from "./GroupNode"
 import TaskIdeaNode from "./TaskIdeaNode"
 import TaskResearchNode from "./TaskResearchNode"
 import TaskScheduledNode from "./TaskScheduledNode"
@@ -12,6 +13,7 @@ export {
   FeatureResearchNode,
   FeatureScheduledNode,
   FeatureShippedNode,
+  GroupNode,
   TaskIdeaNode,
   TaskResearchNode,
   TaskScheduledNode,

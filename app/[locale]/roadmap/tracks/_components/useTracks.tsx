@@ -20,6 +20,21 @@ import { useTranslation } from "@/hooks/useTranslation"
 
 const initialNodes = [
   {
+    id: "group-1",
+    position: { x: 20, y: 20 },
+    style: {
+      width: 200,
+      height: 200,
+      border: "1px solid hsla(var(--primary))",
+      borderRadius: "10px",
+      backgroundColor: "#B38DF01A",
+    },
+    type: "group",
+    data: {
+      label: "Group",
+    },
+  },
+  {
     id: "1",
     position: { x: 20, y: 20 },
     type: "taskShipped",
@@ -30,6 +45,8 @@ const initialNodes = [
       rightNode: true,
       bottomNode: true,
     },
+    parentNode: "group-1",
+    extent: "parent" as const,
   },
   {
     id: "2",
@@ -42,6 +59,8 @@ const initialNodes = [
       rightNode: true,
       bottomNode: true,
     },
+    parentNode: "group-1",
+    extent: "parent" as const,
   },
   {
     id: "3",
