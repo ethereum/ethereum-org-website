@@ -18,7 +18,12 @@ import { ButtonLink } from "@/components/ui/buttons/Button"
 
 import { cn } from "@/lib/utils/cn"
 
-import { EndGoalNode, TaskIdeaNode, TaskShippedNode } from "./CustomNodes"
+import {
+  EndGoalNode,
+  TaskIdeaNode,
+  TaskResearchNode,
+  TaskShippedNode,
+} from "./CustomNodes"
 import { useTracks } from "./useTracks"
 
 import "@xyflow/react/dist/style.css"
@@ -35,8 +40,9 @@ const RoadmapTracksPage = () => {
   const nodeTypes = useMemo(
     () => ({
       endGoal: EndGoalNode,
-      taskShipped: TaskShippedNode,
       taskIdea: TaskIdeaNode,
+      taskResearch: TaskResearchNode,
+      taskShipped: TaskShippedNode,
     }),
     []
   )

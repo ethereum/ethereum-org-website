@@ -63,6 +63,19 @@ const initialNodes = [
       bottomNode: true,
     },
   },
+  {
+    id: "5",
+    position: { x: 600, y: 20 },
+    type: "taskResearch",
+    data: {
+      label: "SNARK for Verkle proofs",
+      topNode: true,
+      leftNode: true,
+      rightNode: true,
+      bottomNode: true,
+      percentage: 80,
+    },
+  },
 ]
 const initialEdges = [
   {
