@@ -1,12 +1,12 @@
 "use client"
 
-type EndGoalNodesProps = {
+type EndGoalNodeProps = {
   data: {
     label: string
   }
 }
 
-const EndGoalNodes = ({ data }: EndGoalNodesProps) => {
+const EndGoalNode = ({ data }: EndGoalNodeProps) => {
   return (
     <div className="flex h-36 max-h-36 w-36 max-w-36 items-center justify-center rounded-full bg-primary p-4 text-center">
       <p className="font-inter text-[14px] font-bold leading-[160%] text-body-inverse">
@@ -16,4 +16,4 @@ const EndGoalNodes = ({ data }: EndGoalNodesProps) => {
   )
 }
 
-export default EndGoalNodes
+export default EndGoalNode

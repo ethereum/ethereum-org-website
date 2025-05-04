@@ -22,7 +22,7 @@ const initialNodes = [
   {
     id: "1",
     position: { x: 20, y: 20 },
-    type: "shipped",
+    type: "taskShipped",
     data: {
       label: "Warmup fork (Altair)",
       topNode: true,
@@ -34,7 +34,7 @@ const initialNodes = [
   {
     id: "2",
     position: { x: 250, y: 180 },
-    type: "shipped",
+    type: "taskShipped",
     data: {
       label: "2",
       topNode: true,
@@ -49,6 +49,18 @@ const initialNodes = [
     type: "endGoal",
     data: {
       label: "Quantum-safe SNARKs (eg. STARKs)",
+    },
+  },
+  {
+    id: "4",
+    position: { x: 400, y: 20 },
+    type: "taskIdea",
+    data: {
+      label: "SNARK for Verkle proofs",
+      topNode: true,
+      leftNode: true,
+      rightNode: true,
+      bottomNode: true,
     },
   },
 ]

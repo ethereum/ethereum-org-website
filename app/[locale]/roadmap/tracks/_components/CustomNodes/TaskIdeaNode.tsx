@@ -2,7 +2,7 @@
 
 import { Handle, Position } from "@xyflow/react"
 
-type ShippedNodesProps = {
+type TaskIdeaNodeProps = {
   data: {
     label: string
     topNode: boolean
@@ -12,7 +12,7 @@ type ShippedNodesProps = {
   }
 }
 
-const ShippedNodes = ({ data }: ShippedNodesProps) => {
+const TaskIdeaNode = ({ data }: TaskIdeaNodeProps) => {
   const { topNode, leftNode, rightNode, bottomNode } = data
 
   return (
@@ -24,7 +24,7 @@ const ShippedNodes = ({ data }: ShippedNodesProps) => {
           style={{
             width: "14px",
             height: "14px",
-            border: "2px solid hsla(var(--success))",
+            border: "2px solid hsla(var(--primary))",
             backgroundColor: "hsla(var(--background))",
           }}
           isConnectable={true}
@@ -38,7 +38,7 @@ const ShippedNodes = ({ data }: ShippedNodesProps) => {
           style={{
             width: "14px",
             height: "14px",
-            border: "2px solid hsla(var(--success))",
+            border: "2px solid hsla(var(--primary))",
             backgroundColor: "hsla(var(--background))",
           }}
           isConnectable={true}
@@ -52,7 +52,7 @@ const ShippedNodes = ({ data }: ShippedNodesProps) => {
           style={{
             width: "14px",
             height: "14px",
-            border: "2px solid hsla(var(--success))",
+            border: "2px solid hsla(var(--primary))",
             backgroundColor: "hsla(var(--background))",
           }}
           isConnectable={true}
@@ -66,23 +66,23 @@ const ShippedNodes = ({ data }: ShippedNodesProps) => {
           style={{
             width: "14px",
             height: "14px",
-            border: "2px solid hsla(var(--success))",
+            border: "2px solid hsla(var(--primary))",
             backgroundColor: "hsla(var(--background))",
           }}
           isConnectable={true}
           isConnectableStart={true}
         />
       )}
-      <div className="z-0 flex w-44 max-w-44 flex-col items-center justify-center gap-2 rounded-lg border border-success bg-background-low p-8">
+      <div className="z-0 flex w-44 max-w-44 flex-col items-center justify-center gap-2 rounded-lg border border-primary px-8 py-3">
         <div className="text-center">
           <p className="text-sm font-bold">{data.label}</p>
         </div>
-        <div className="rounded-full bg-green-500 px-2 py-1">
-          <p className="text-xs">SHIPPED</p>
+        <div className="rounded-full bg-background-high px-2 py-1">
+          <p className="text-xs">IDEA</p>
         </div>
       </div>
     </>
   )
 }
 
-export default ShippedNodes
+export default TaskIdeaNode

@@ -1,4 +1,5 @@
-import EndGoalNodes from "./EndGoalNodes"
-import ShippedNodes from "./ShippedNodes"
+import EndGoalNode from "./EndGoalNode"
+import TaskIdeaNode from "./TaskIdeaNode"
+import TaskShippedNode from "./TaskShippedNode"
 
-export { EndGoalNodes, ShippedNodes }
+export { EndGoalNode, TaskIdeaNode, TaskShippedNode }
