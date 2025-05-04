@@ -20,6 +20,8 @@ import { cn } from "@/lib/utils/cn"
 
 import {
   EndGoalNode,
+  FeatureResearchNode,
+  FeatureScheduledNode,
   TaskIdeaNode,
   TaskResearchNode,
   TaskScheduledNode,
@@ -41,6 +43,8 @@ const RoadmapTracksPage = () => {
   const nodeTypes = useMemo(
     () => ({
       endGoal: EndGoalNode,
+      featureResearch: FeatureResearchNode,
+      featureScheduled: FeatureScheduledNode,
       taskIdea: TaskIdeaNode,
       taskResearch: TaskResearchNode,
       taskScheduled: TaskScheduledNode,

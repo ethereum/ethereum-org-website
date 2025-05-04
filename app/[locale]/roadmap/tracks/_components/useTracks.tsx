@@ -33,7 +33,7 @@ const initialNodes = [
   },
   {
     id: "2",
-    position: { x: 250, y: 180 },
+    position: { x: 200, y: 125 },
     type: "taskShipped",
     data: {
       label: "2",
@@ -78,8 +78,32 @@ const initialNodes = [
   },
   {
     id: "6",
-    position: { x: 600, y: 200 },
+    position: { x: 600, y: 135 },
     type: "taskScheduled",
+    data: {
+      label: "SNARK for Verkle proofs",
+      topNode: true,
+      leftNode: true,
+      rightNode: true,
+      bottomNode: true,
+    },
+  },
+  {
+    id: "7",
+    position: { x: 600, y: 250 },
+    type: "featureResearch",
+    data: {
+      label: "SNARK for Verkle proofs",
+      topNode: true,
+      leftNode: true,
+      rightNode: true,
+      bottomNode: true,
+    },
+  },
+  {
+    id: "8",
+    position: { x: 400, y: 135 },
+    type: "featureScheduled",
     data: {
       label: "SNARK for Verkle proofs",
       topNode: true,
