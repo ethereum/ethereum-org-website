@@ -75,7 +75,7 @@ const TaskIdeaNode = ({ data }: TaskIdeaNodeProps) => {
       )}
       <div className="z-0 flex w-44 max-w-44 flex-col items-center justify-center gap-2 rounded-lg border border-primary px-8 py-3">
         <div className="text-center">
-          <p className="text-sm font-bold">{data.label}</p>
+          <p className="text-xs font-bold">{data.label}</p>
         </div>
         <div className="rounded-full bg-background-high px-2 py-1">
           <p className="text-xs">IDEA</p>

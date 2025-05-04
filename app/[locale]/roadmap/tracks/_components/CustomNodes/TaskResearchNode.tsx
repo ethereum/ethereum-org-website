@@ -83,7 +83,7 @@ const TaskResearchNode = ({ data }: TaskResearchNodeProps) => {
           }}
         />
         <div className="z-10 text-center">
-          <p className="text-sm font-bold">{data.label}</p>
+          <p className="text-xs font-bold">{data.label}</p>
         </div>
         <div className="z-10 rounded-full bg-background-medium px-2 py-1">
           <p className="text-xs">RESEARCH</p>

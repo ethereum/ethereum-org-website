@@ -75,9 +75,9 @@ const TaskShippedNode = ({ data }: TaskShippedNodeProps) => {
       )}
       <div className="z-0 flex w-44 max-w-44 flex-col items-center justify-center gap-2 rounded-lg border border-success bg-background-low px-8 py-3">
         <div className="text-center">
-          <p className="text-sm font-bold">{data.label}</p>
+          <p className="text-xs font-bold">{data.label}</p>
         </div>
-        <div className="rounded-full bg-green-500 px-2 py-1">
+        <div className="rounded-full bg-success px-2 py-1">
           <p className="text-xs">SHIPPED</p>
         </div>
       </div>
