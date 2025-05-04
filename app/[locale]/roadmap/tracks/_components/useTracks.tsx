@@ -112,6 +112,18 @@ const initialNodes = [
       bottomNode: true,
     },
   },
+  {
+    id: "9",
+    position: { x: 400, y: 315 },
+    type: "featureShipped",
+    data: {
+      label: "SNARK for Verkle proofs",
+      topNode: true,
+      leftNode: true,
+      rightNode: true,
+      bottomNode: true,
+    },
+  },
 ]
 const initialEdges = [
   {
