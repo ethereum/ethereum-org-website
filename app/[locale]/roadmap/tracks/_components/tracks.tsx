@@ -22,6 +22,7 @@ import {
   EndGoalNode,
   TaskIdeaNode,
   TaskResearchNode,
+  TaskScheduledNode,
   TaskShippedNode,
 } from "./CustomNodes"
 import { useTracks } from "./useTracks"
@@ -42,6 +43,7 @@ const RoadmapTracksPage = () => {
       endGoal: EndGoalNode,
       taskIdea: TaskIdeaNode,
       taskResearch: TaskResearchNode,
+      taskScheduled: TaskScheduledNode,
       taskShipped: TaskShippedNode,
     }),
     []

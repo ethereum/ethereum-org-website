@@ -2,10 +2,9 @@
 
 import { Handle, Position } from "@xyflow/react"
 
-type TaskResearchNodeProps = {
+type TaskScheduledNodeProps = {
   data: {
     label: string
-    percentage: number
     topNode: boolean
     leftNode: boolean
     rightNode: boolean
@@ -13,8 +12,8 @@ type TaskResearchNodeProps = {
   }
 }
 
-const TaskResearchNode = ({ data }: TaskResearchNodeProps) => {
-  const { topNode, leftNode, rightNode, bottomNode, percentage } = data
+const TaskScheduledNode = ({ data }: TaskScheduledNodeProps) => {
+  const { topNode, leftNode, rightNode, bottomNode } = data
 
   return (
     <>
@@ -27,7 +26,6 @@ const TaskResearchNode = ({ data }: TaskResearchNodeProps) => {
             height: "14px",
             border: "2px solid hsla(var(--primary))",
             backgroundColor: "hsla(var(--background))",
-            zIndex: 10,
           }}
           isConnectable={true}
           isConnectableEnd={true}
@@ -42,7 +40,6 @@ const TaskResearchNode = ({ data }: TaskResearchNodeProps) => {
             height: "14px",
             border: "2px solid hsla(var(--primary))",
             backgroundColor: "hsla(var(--background))",
-            zIndex: 10,
           }}
           isConnectable={true}
           isConnectableEnd={true}
@@ -57,7 +54,6 @@ const TaskResearchNode = ({ data }: TaskResearchNodeProps) => {
             height: "14px",
             border: "2px solid hsla(var(--primary))",
             backgroundColor: "hsla(var(--background))",
-            zIndex: 10,
           }}
           isConnectable={true}
           isConnectableStart={true}
@@ -72,29 +68,21 @@ const TaskResearchNode = ({ data }: TaskResearchNodeProps) => {
             height: "14px",
             border: "2px solid hsla(var(--primary))",
             backgroundColor: "hsla(var(--background))",
-            zIndex: 10,
           }}
           isConnectable={true}
           isConnectableStart={true}
         />
       )}
-      <div className="relative z-0 flex w-44 max-w-44 flex-col items-center justify-center gap-2 overflow-hidden rounded-lg border border-primary px-8 py-3">
-        {/* Progress background */}
-        <div
-          className="absolute left-0 top-0 z-0 h-full bg-primary-low-contrast"
-          style={{
-            width: `${percentage}%`,
-          }}
-        />
-        <div className="z-10 text-center">
+      <div className="z-0 flex w-44 max-w-44 flex-col items-center justify-center gap-2 rounded-lg border border-primary bg-primary-low-contrast px-8 py-3">
+        <div className="text-center">
           <p className="text-xs font-bold">{data.label}</p>
         </div>
-        <div className="z-10 rounded-full bg-background-medium px-2 py-1">
-          <p className="text-xs">RESEARCH</p>
+        <div className="rounded-full bg-warning px-2 py-1">
+          <p className="text-xs">SCHEDULED</p>
         </div>
       </div>
     </>
   )
 }
 
-export default TaskResearchNode
+export default TaskScheduledNode
