@@ -20,6 +20,7 @@ const TrackNode = ({ data }: TrackNodeProps) => {
     <>
       {topNode && (
         <Handle
+          id="top"
           type="target"
           position={Position.Top}
           style={{
@@ -34,6 +35,7 @@ const TrackNode = ({ data }: TrackNodeProps) => {
       )}
       {leftNode && (
         <Handle
+          id="left"
           type="target"
           position={Position.Left}
           style={{
@@ -48,6 +50,7 @@ const TrackNode = ({ data }: TrackNodeProps) => {
       )}
       {rightNode && (
         <Handle
+          id="right"
           type="source"
           position={Position.Right}
           style={{
@@ -62,7 +65,8 @@ const TrackNode = ({ data }: TrackNodeProps) => {
       )}
       {bottomNode && (
         <Handle
-          type="source"
+          id="bottom"
+          type="target"
           position={Position.Bottom}
           style={{
             width: "14px",
@@ -71,6 +75,7 @@ const TrackNode = ({ data }: TrackNodeProps) => {
             backgroundColor: "hsla(var(--background))",
           }}
           isConnectable={true}
+          isConnectableEnd={true}
           isConnectableStart={true}
         />
       )}

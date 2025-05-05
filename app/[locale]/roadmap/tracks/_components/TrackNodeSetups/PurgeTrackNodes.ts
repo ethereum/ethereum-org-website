@@ -1,0 +1,290 @@
+import { MarkerType } from "@xyflow/react"
+import { Edge, Node } from "@xyflow/react"
+
+const purgeNodes: Node[] = [
+  {
+    id: "1",
+    position: { x: 20, y: 20 },
+    type: "track",
+    data: {
+      label: "The Verge",
+      sublabel: "Verkle trees",
+      bottomNode: true,
+    },
+  },
+  {
+    id: "group-1",
+    position: { x: 180, y: 140 },
+    style: {
+      width: 616,
+      height: 164,
+      border: "1px solid hsla(var(--primary))",
+      borderRadius: "10px",
+      backgroundColor: "#B38DF01A",
+    },
+    type: "group",
+    data: {
+      label: "EVM simplification track",
+    },
+  },
+  {
+    id: "2",
+    position: { x: 20, y: 50 },
+    type: "taskShipped",
+    data: {
+      label: "Ban SELF-DESTRUCT",
+    },
+    parentId: "group-1",
+    extent: "parent" as const,
+  },
+  {
+    id: "3",
+    position: { x: 220, y: 50 },
+    type: "taskResearch",
+    data: {
+      label: "Simplify gas mechanics",
+      percentage: 25,
+    },
+    parentId: "group-1",
+    extent: "parent" as const,
+  },
+  {
+    id: "4",
+    position: { x: 420, y: 50 },
+    type: "taskResearch",
+    data: {
+      label: "Precompiles -> EVM impls",
+      percentage: 25,
+    },
+    parentId: "group-1",
+    extent: "parent" as const,
+  },
+  {
+    id: "5",
+    position: { x: 100, y: 350 },
+    type: "taskShipped",
+    data: {
+      label: "EIP-4844 specification",
+      rightNode: true,
+    },
+  },
+  {
+    id: "6",
+    position: { x: 330, y: 350 },
+    type: "taskResearch",
+    data: {
+      label: "EIP-4444 implementation",
+      leftNode: true,
+      rightNode: true,
+      percentage: 80,
+    },
+  },
+  {
+    id: "7",
+    position: { x: 600, y: 350 },
+    type: "featureResearch",
+    data: {
+      label: "History expiry (EIP-4444)",
+      leftNode: true,
+      bottomNode: true,
+    },
+  },
+  {
+    id: "8",
+    position: { x: 330, y: 480 },
+    type: "taskShipped",
+    data: {
+      label: "P2P history (eg. Portal)",
+      rightNode: true,
+    },
+  },
+  {
+    id: "9",
+    position: { x: 330, y: 600 },
+    type: "taskShipped",
+    data: {
+      label: "Beacon chain fast sync",
+      rightNode: true,
+    },
+  },
+  {
+    id: "10",
+    position: { x: 100, y: 480 },
+    type: "taskShipped",
+    data: {
+      label: "Eliminate most gas refunds",
+    },
+  },
+  {
+    id: "11",
+    position: { x: 800, y: 460 },
+    type: "track",
+    data: {
+      label: "The Splurge",
+      sublabel: "Endgame EVM",
+      topNode: true,
+    },
+  },
+  {
+    id: "12",
+    position: { x: 1000, y: 200 },
+    type: "taskResearch",
+    data: {
+      label: "Address space extension",
+      rightNode: true,
+      percentage: 20,
+    },
+  },
+  {
+    id: "13",
+    position: { x: 1220, y: 209.5 },
+    type: "taskResearch",
+    data: {
+      label: "State expiry",
+      leftNode: true,
+      percentage: 20,
+    },
+  },
+  {
+    id: "14",
+    position: { x: 1000, y: 320 },
+    type: "taskResearch",
+    data: {
+      label: "LOG reform",
+      percentage: 20,
+    },
+  },
+  {
+    id: "15",
+    position: { x: 1000, y: 420 },
+    type: "taskResearch",
+    data: {
+      label: "Remove old Tx types",
+      rightNode: true,
+      percentage: 20,
+    },
+  },
+  {
+    id: "16",
+    position: { x: 1220, y: 420 },
+    type: "taskResearch",
+    data: {
+      label: "Serialization harmonization",
+      leftNode: true,
+      percentage: 20,
+    },
+  },
+]
+
+const purgeEdges: Edge[] = [
+  {
+    id: "e-group-1-1",
+    source: "group-1",
+    sourceHandle: "left",
+    target: "1",
+    targetHandle: "bottom",
+    type: "smoothstep",
+    markerEnd: {
+      type: MarkerType.Arrow,
+      color: "hsla(var(--primary))",
+      width: 32,
+      height: 32,
+    },
+    style: { stroke: "hsla(var(--primary))", strokeDasharray: "5,5" },
+  },
+  {
+    id: "e5-6",
+    source: "5",
+    target: "6",
+    type: "smoothstep",
+    markerEnd: {
+      type: MarkerType.Arrow,
+      color: "hsla(var(--success))",
+      width: 32,
+      height: 32,
+    },
+    style: { stroke: "hsla(var(--success))" },
+  },
+  {
+    id: "e8-7",
+    source: "8",
+    target: "7",
+    type: "smoothstep",
+    markerEnd: {
+      type: MarkerType.Arrow,
+      color: "hsla(var(--success))",
+      width: 32,
+      height: 32,
+    },
+    style: { stroke: "hsla(var(--success))" },
+  },
+  {
+    id: "e6-7",
+    source: "6",
+    target: "7",
+    type: "smoothstep",
+    markerEnd: {
+      type: MarkerType.Arrow,
+      color: "hsla(var(--primary))",
+      width: 32,
+      height: 32,
+    },
+    style: { stroke: "hsla(var(--primary))" },
+  },
+  {
+    id: "e9-7",
+    source: "9",
+    target: "7",
+    targetHandle: "bottom",
+    type: "smoothstep",
+    markerEnd: {
+      type: MarkerType.Arrow,
+      color: "hsla(var(--success))",
+      width: 32,
+      height: 32,
+    },
+    style: { stroke: "hsla(var(--success))" },
+  },
+  {
+    id: "e-group-1-11",
+    source: "group-1",
+    sourceHandle: "right",
+    target: "11",
+    targetHandle: "top",
+    type: "smoothstep",
+    markerEnd: {
+      type: MarkerType.Arrow,
+      color: "hsla(var(--primary))",
+      width: 32,
+      height: 32,
+    },
+    style: { stroke: "hsla(var(--primary))", strokeDasharray: "5,5" },
+  },
+  {
+    id: "e12-13",
+    source: "12",
+    target: "13",
+    type: "smoothstep",
+    markerEnd: {
+      type: MarkerType.Arrow,
+      color: "hsla(var(--primary))",
+      width: 32,
+      height: 32,
+    },
+    style: { stroke: "hsla(var(--primary))" },
+  },
+  {
+    id: "e15-16",
+    source: "15",
+    target: "16",
+    type: "smoothstep",
+    markerEnd: {
+      type: MarkerType.Arrow,
+      color: "hsla(var(--primary))",
+      width: 32,
+      height: 32,
+    },
+    style: { stroke: "hsla(var(--primary))" },
+  },
+]
+export { purgeEdges, purgeNodes }
