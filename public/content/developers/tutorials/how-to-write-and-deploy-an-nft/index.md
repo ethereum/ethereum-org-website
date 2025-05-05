@@ -186,7 +186,7 @@ Open up the my-nft project in your favorite editor (we like [VSCode](https://cod
    }
    ```
 
-3. Because we are inheriting classes from the OpenZeppelin contracts library, in your command line run `npm install @openzeppelin/contracts` to install the library into our folder.
+3. Because we are inheriting classes from the OpenZeppelin contracts library, in your command line run `npm install @openzeppelin/contracts^4.0.0` to install the library into our folder.
 
 So, what does this code _do_ exactly? Let’s break it down, line-by-line.
 
