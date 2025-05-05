@@ -17,6 +17,7 @@ import {
 } from "@/components/icons/roadmap"
 
 import { mergeEdges, mergeNodes } from "./TrackNodeSetups/MergeTrackNodes"
+import { scourgeEdges, scourgeNodes } from "./TrackNodeSetups/ScourgeTrackNodes"
 import { surgeEdges, surgeNodes } from "./TrackNodeSetups/SurgeTrackNodes"
 
 import { useTranslation } from "@/hooks/useTranslation"
@@ -235,8 +236,8 @@ export const useTracks = (): Track[] => {
           },
         ],
         nodes: {
-          nodes: initialNodes,
-          edges: initialEdges,
+          nodes: scourgeNodes,
+          edges: scourgeEdges,
         },
       },
     },
