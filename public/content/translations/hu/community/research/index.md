@@ -41,7 +41,7 @@ Emellett a jövőbe előretekintő kutatások, a protokoll alapvető újratervez
 
 - [Bevezetés a proof-of-stake mechanizmusba](/developers/docs/consensus-mechanisms/pos/)
 - [Casper-FFG dokumentáció](https://arxiv.org/abs/1710.09437)
-- [Casper-FFG magyarázat](https://arxiv.org/abs/1710.09437)
+- [Casper-FFG magyarázat](https://medium.com/unitychain/intro-to-casper-ffg-9ed944d98b2d)
 - [Gasper dokumentáció](https://arxiv.org/abs/2003.03052)
 
 #### Jelenlegi kutatás {#recent-research}
