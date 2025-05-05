@@ -29,6 +29,23 @@ const FeatureResearchNode = ({ data }: FeatureResearchNodeProps) => {
             backgroundColor: "hsla(var(--background))",
           }}
           isConnectable={true}
+          isConnectableStart={true}
+          isConnectableEnd={true}
+        />
+      )}
+      {topNode && (
+        <Handle
+          id="top-source"
+          type="source"
+          position={Position.Top}
+          style={{
+            width: "14px",
+            height: "14px",
+            border: "2px solid hsla(var(--primary))",
+            backgroundColor: "hsla(var(--background))",
+          }}
+          isConnectable={true}
+          isConnectableStart={true}
           isConnectableEnd={true}
         />
       )}

@@ -33,6 +33,7 @@ const TaskIdeaNode = ({ data }: TaskIdeaNodeProps) => {
       )}
       {leftNode && (
         <Handle
+          id="left"
           type="target"
           position={Position.Left}
           style={{

@@ -51,7 +51,7 @@ const TrackNode = ({ data }: TrackNodeProps) => {
       {rightNode && (
         <Handle
           id="right"
-          type="source"
+          type="target"
           position={Position.Right}
           style={{
             width: "14px",
@@ -61,6 +61,7 @@ const TrackNode = ({ data }: TrackNodeProps) => {
           }}
           isConnectable={true}
           isConnectableStart={true}
+          isConnectableEnd={true}
         />
       )}
       {bottomNode && (
