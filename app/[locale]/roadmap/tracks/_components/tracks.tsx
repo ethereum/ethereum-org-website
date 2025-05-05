@@ -24,10 +24,12 @@ import {
   FeatureScheduledNode,
   FeatureShippedNode,
   GroupNode,
+  RollupStageNode,
   TaskIdeaNode,
   TaskResearchNode,
   TaskScheduledNode,
   TaskShippedNode,
+  TrackNode,
 } from "./CustomNodes"
 import { useTracks } from "./useTracks"
 
@@ -49,10 +51,12 @@ const RoadmapTracksPage = () => {
       featureScheduled: FeatureScheduledNode,
       featureShipped: FeatureShippedNode,
       group: GroupNode,
+      rollupStage: RollupStageNode,
       taskIdea: TaskIdeaNode,
       taskResearch: TaskResearchNode,
       taskScheduled: TaskScheduledNode,
       taskShipped: TaskShippedNode,
+      track: TrackNode,
     }),
     []
   )
