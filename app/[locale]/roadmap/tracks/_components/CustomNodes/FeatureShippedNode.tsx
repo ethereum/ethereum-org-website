@@ -75,7 +75,7 @@ const FeatureShippedNode = ({ data }: FeatureShippedNodeProps) => {
       )}
       <div className="z-0 flex w-44 max-w-44 flex-col items-center justify-center gap-2 rounded-lg border border-success bg-background-low p-8">
         <div className="text-center">
-          <p className="text-md font-bold">{data.label}</p>
+          <p className="whitespace-pre-line text-md font-bold">{data.label}</p>
         </div>
         <div className="rounded-full bg-success px-2 py-1">
           <p className="text-xs">SHIPPED</p>

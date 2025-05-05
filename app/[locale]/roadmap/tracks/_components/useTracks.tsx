@@ -16,6 +16,8 @@ import {
   VergeIcon,
 } from "@/components/icons/roadmap"
 
+import { mergeEdges, mergeNodes } from "./TrackNodeSetups/MergeTrackNodes"
+
 import { useTranslation } from "@/hooks/useTranslation"
 
 const initialNodes = [
@@ -34,34 +36,34 @@ const initialNodes = [
       label: "Group",
     },
   },
-  // {
-  //   id: "1",
-  //   position: { x: 20, y: 20 },
-  //   type: "taskShipped",
-  //   data: {
-  //     label: "Warmup fork (Altair)",
-  //     topNode: true,
-  //     leftNode: true,
-  //     rightNode: true,
-  //     bottomNode: true,
-  //   },
-  //   parentNode: "group-1",
-  //   extent: "parent" as const,
-  // },
-  // {
-  //   id: "2",
-  //   position: { x: 200, y: 125 },
-  //   type: "taskShipped",
-  //   data: {
-  //     label: "2",
-  //     topNode: true,
-  //     leftNode: true,
-  //     rightNode: true,
-  //     bottomNode: true,
-  //   },
-  //   parentNode: "group-1",
-  //   extent: "parent" as const,
-  // },
+  {
+    id: "1",
+    position: { x: 20, y: 20 },
+    type: "taskShipped",
+    data: {
+      label: "Warmup fork (Altair)",
+      topNode: true,
+      leftNode: true,
+      rightNode: true,
+      bottomNode: true,
+    },
+    parentNode: "group-1",
+    extent: "parent" as const,
+  },
+  {
+    id: "2",
+    position: { x: 200, y: 125 },
+    type: "taskShipped",
+    data: {
+      label: "2",
+      topNode: true,
+      leftNode: true,
+      rightNode: true,
+      bottomNode: true,
+    },
+    parentNode: "group-1",
+    extent: "parent" as const,
+  },
   {
     id: "3",
     position: { x: 20, y: 180 },
@@ -194,8 +196,8 @@ export const useTracks = (): Track[] => {
           },
         ],
         nodes: {
-          nodes: initialNodes,
-          edges: initialEdges,
+          nodes: mergeNodes,
+          edges: mergeEdges,
         },
       },
     },

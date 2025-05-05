@@ -19,6 +19,7 @@ const FeatureResearchNode = ({ data }: FeatureResearchNodeProps) => {
     <>
       {topNode && (
         <Handle
+          id="top"
           type="target"
           position={Position.Top}
           style={{
@@ -33,6 +34,7 @@ const FeatureResearchNode = ({ data }: FeatureResearchNodeProps) => {
       )}
       {leftNode && (
         <Handle
+          id="left"
           type="target"
           position={Position.Left}
           style={{
@@ -47,6 +49,7 @@ const FeatureResearchNode = ({ data }: FeatureResearchNodeProps) => {
       )}
       {rightNode && (
         <Handle
+          id="right"
           type="source"
           position={Position.Right}
           style={{
@@ -61,7 +64,8 @@ const FeatureResearchNode = ({ data }: FeatureResearchNodeProps) => {
       )}
       {bottomNode && (
         <Handle
-          type="source"
+          id="bottom"
+          type="target"
           position={Position.Bottom}
           style={{
             width: "14px",

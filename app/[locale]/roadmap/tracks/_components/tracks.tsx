@@ -179,6 +179,7 @@ const RoadmapTracksPage = () => {
                     edges={contentData.nodes.edges}
                     preventScrolling={false}
                     nodeTypes={nodeTypes}
+                    fitView
                   />
                 </div>
               </AccordionContent>
