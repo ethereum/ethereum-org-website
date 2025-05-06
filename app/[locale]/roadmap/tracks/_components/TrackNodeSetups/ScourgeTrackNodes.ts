@@ -38,6 +38,7 @@ const scourgeNodes: Node[] = [
     type: "taskShipped",
     data: {
       label: "Extra-protocol MEV markets",
+      track: "Scourge",
       rightNode: true,
     },
     parentId: "group-1",
@@ -49,6 +50,7 @@ const scourgeNodes: Node[] = [
     type: "taskResearch",
     data: {
       label: "Explore ePBS",
+      track: "Scourge",
       leftNode: true,
       rightNode: true,
       percentage: 50,
@@ -62,6 +64,7 @@ const scourgeNodes: Node[] = [
     type: "taskResearch",
     data: {
       label: "Inclusion lists",
+      track: "Scourge",
       rightNode: true,
       percentage: 90,
     },
@@ -74,6 +77,7 @@ const scourgeNodes: Node[] = [
     type: "taskResearch",
     data: {
       label: "Explore MEV burn in ePBS",
+      track: "Scourge",
       leftNode: true,
       rightNode: true,
       percentage: 30,
@@ -87,6 +91,7 @@ const scourgeNodes: Node[] = [
     type: "taskResearch",
     data: {
       label: "Distributed block building",
+      track: "Scourge",
       rightNode: true,
       percentage: 20,
     },
@@ -99,6 +104,7 @@ const scourgeNodes: Node[] = [
     type: "taskResearch",
     data: {
       label: "Explore execution tickets",
+      track: "Scourge",
       rightNode: true,
       percentage: 20,
     },
@@ -111,6 +117,7 @@ const scourgeNodes: Node[] = [
     type: "featureResearch",
     data: {
       label: "Explore execution tickets",
+      track: "Scourge",
       leftNode: true,
       percentage: 20,
     },
@@ -123,6 +130,7 @@ const scourgeNodes: Node[] = [
     type: "taskResearch",
     data: {
       label: "App-layer MEV minimization",
+      track: "Scourge",
       percentage: 20,
     },
     parentId: "group-1",
@@ -134,6 +142,7 @@ const scourgeNodes: Node[] = [
     type: "taskResearch",
     data: {
       label: "Explore pre-confirmations",
+      track: "Scourge",
       percentage: 20,
     },
     parentId: "group-1",
@@ -145,6 +154,7 @@ const scourgeNodes: Node[] = [
     type: "taskScheduled",
     data: {
       label: "Raise max effective balance",
+      track: "Scourge",
     },
     parentId: "group-2",
     extent: "parent" as const,
@@ -155,6 +165,7 @@ const scourgeNodes: Node[] = [
     type: "taskResearch",
     data: {
       label: "Improve node operator usability",
+      track: "Scourge",
       percentage: 80,
     },
     parentId: "group-2",
@@ -166,6 +177,7 @@ const scourgeNodes: Node[] = [
     type: "taskResearch",
     data: {
       label: "Explore total stake capping",
+      track: "Scourge",
       percentage: 20,
     },
     parentId: "group-2",
@@ -177,6 +189,7 @@ const scourgeNodes: Node[] = [
     type: "taskResearch",
     data: {
       label: "Explore solutions to liquid staking centralization",
+      track: "Scourge",
       percentage: 60,
     },
     parentId: "group-2",

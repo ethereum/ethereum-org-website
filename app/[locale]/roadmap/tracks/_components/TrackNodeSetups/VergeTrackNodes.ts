@@ -8,6 +8,7 @@ const vergeNodes: Node[] = [
     type: "taskShipped",
     data: {
       label: "Most serious EVM DoS issues solved",
+      track: "Verge",
     },
   },
   {
@@ -16,6 +17,7 @@ const vergeNodes: Node[] = [
     type: "taskShipped",
     data: {
       label: "Basic light client support (sync committees)",
+      track: "Verge",
       rightNode: true,
     },
   },
@@ -25,6 +27,7 @@ const vergeNodes: Node[] = [
     type: "taskResearch",
     data: {
       label: "SNARK-based light clients",
+      track: "Verge",
       leftNode: true,
       rightNode: true,
       percentage: 80,
@@ -36,6 +39,7 @@ const vergeNodes: Node[] = [
     type: "taskIdea",
     data: {
       label: "SNARK for consensus state transition",
+      track: "Verge",
       leftNode: true,
       rightNode: true,
     },
@@ -46,6 +50,7 @@ const vergeNodes: Node[] = [
     type: "taskIdea",
     data: {
       label: "SNARK for Verkle proofs",
+      track: "Verge",
       leftNode: true,
       rightNode: true,
     },
@@ -56,6 +61,7 @@ const vergeNodes: Node[] = [
     type: "featureResearch",
     data: {
       label: "Verkle trees",
+      track: "Verge",
       leftNode: true,
       rightNode: true,
       topNode: true,
@@ -67,6 +73,7 @@ const vergeNodes: Node[] = [
     type: "taskResearch",
     data: {
       label: "Transition spec + impl",
+      track: "Verge",
       rightNode: true,
       percentage: 80,
     },
@@ -77,6 +84,7 @@ const vergeNodes: Node[] = [
     type: "taskResearch",
     data: {
       label: "Verkle trees spec + impl",
+      track: "Verge",
       rightNode: true,
       percentage: 80,
     },
@@ -87,6 +95,7 @@ const vergeNodes: Node[] = [
     type: "taskResearch",
     data: {
       label: "Code chunking + gas cost update",
+      track: "Verge",
       bottomNode: true,
       percentage: 50,
     },
@@ -97,6 +106,7 @@ const vergeNodes: Node[] = [
     type: "taskIdea",
     data: {
       label: "SNARK for L1 EVM",
+      track: "Verge",
       rightNode: true,
     },
   },
@@ -106,6 +116,7 @@ const vergeNodes: Node[] = [
     type: "featureResearch",
     data: {
       label: "Fully SNARKed Ethereum",
+      track: "Verge",
       rightNode: true,
       leftNode: true,
       topNode: true,
@@ -117,7 +128,8 @@ const vergeNodes: Node[] = [
     type: "track",
     data: {
       label: "The Scourge",
-      sublabel: "Improve operator  node usability",
+      sublabel: "Improve operator node usability",
+      track: "Scourge",
       leftNode: true,
       rightNode: true,
     },
@@ -128,6 +140,7 @@ const vergeNodes: Node[] = [
     type: "taskResearch",
     data: {
       label: "SNARK / STARK ASICs",
+      track: "Verge",
       percentage: 30,
     },
   },
@@ -137,6 +150,7 @@ const vergeNodes: Node[] = [
     type: "taskIdea",
     data: {
       label: "Explore EVM verification precompile",
+      track: "Verge",
     },
   },
   {
@@ -145,6 +159,7 @@ const vergeNodes: Node[] = [
     type: "endGoal",
     data: {
       label: "Quantum-safe SNARKs (eg. STARKs)",
+      track: "Verge",
       leftNode: true,
     },
   },

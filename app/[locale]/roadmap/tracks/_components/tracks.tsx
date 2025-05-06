@@ -3,6 +3,7 @@
 import { cloneElement, useMemo, useState } from "react"
 import { motion } from "framer-motion"
 import isEqual from "lodash/isEqual"
+import { MdClose } from "react-icons/md"
 import { Node, ReactFlow } from "@xyflow/react"
 
 import BannerNotification from "@/components/Banners/BannerNotification"
@@ -15,7 +16,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
-import { ButtonLink } from "@/components/ui/buttons/Button"
+import { Button, ButtonLink } from "@/components/ui/buttons/Button"
 import {
   Popover,
   PopoverContent,
@@ -46,6 +47,7 @@ import { useTranslation } from "@/hooks/useTranslation"
 
 type NodeData = {
   label?: string
+  track?: string
   description?: string
   sublabel?: string
   stage?: string
@@ -83,6 +85,69 @@ const RoadmapTracksPage = () => {
     tracks.map(({ key }) => key),
     "0% 0% -70% 0%"
   ).replace(/^#/, "")
+
+  const popoverConfig = {
+    endGoal: {
+      border: "border-primary",
+      background: "bg-primary-high-contrast-linear-gradient",
+      pillStyles: "bg-primary text-body-inverse",
+      pillText: "END GOAL",
+    },
+    featureResearch: {
+      border: "border-border",
+      background: "bg-background-medium-linear-gradient",
+      pillStyles: "bg-background-medium",
+      pillText: "RESEARCH",
+    },
+    featureScheduled: {
+      border: "border-warning",
+      background: "bg-warning-linear-gradient",
+      pillStyles: "bg-warning",
+      pillText: "SCHEDULED",
+    },
+    featureShipped: {
+      border: "border-success",
+      background: "bg-success-linear-gradient",
+      pillStyles: "bg-success",
+      pillText: "SHIPPED",
+    },
+    rollupStage: {
+      border: "border-primary-high-contrast",
+      background: "bg-primary-high-contrast-linear-gradient",
+      pillStyles: "bg-primary-high-contrast text-body-inverse",
+      pillText: "STAGE",
+    },
+    taskIdea: {
+      border: "border-background-highlight",
+      background: "bg-background-high-linear-gradient",
+      pillStyles: "bg-background-high",
+      pillText: "IDEA",
+    },
+    taskResearch: {
+      border: "border-border",
+      background: "bg-background-medium-linear-gradient",
+      pillStyles: "bg-background-medium",
+      pillText: "RESEARCH",
+    },
+    taskScheduled: {
+      border: "border-warning",
+      background: "bg-warning-linear-gradient",
+      pillStyles: "bg-warning",
+      pillText: "SCHEDULED",
+    },
+    taskShipped: {
+      border: "border-success",
+      background: "bg-success-linear-gradient",
+      pillStyles: "bg-success",
+      pillText: "SHIPPED",
+    },
+    track: {
+      border: "border-primary",
+      background: "bg-primary-high-contrast-linear-gradient",
+      pillStyles: "bg-primary-high-contrast text-body-inverse",
+      pillText: "TRACK",
+    },
+  }
 
   return (
     <MainArticle className="relative flex flex-col">
@@ -210,6 +275,8 @@ const RoadmapTracksPage = () => {
                     panOnDrag={true}
                     proOptions={{ hideAttribution: true }}
                     onNodeClick={(_, node) => {
+                      if (node.type === "group") return
+
                       if (isEqual(node, selectedNode)) {
                         setSelectedNode(null)
                       } else {
@@ -232,33 +299,50 @@ const RoadmapTracksPage = () => {
           <div className="fixed right-4 top-24" />
         </PopoverTrigger>
         <PopoverContent
-          className="w-80"
+          className={cn(
+            "mt-16 min-h-64 w-64 overflow-hidden rounded-2xl border p-0 shadow-lg sm:w-72 md:w-96",
+            popoverConfig[selectedNode?.type as keyof typeof popoverConfig]
+              ?.border
+          )}
           side="right"
           align="start"
           sideOffset={0}
         >
-          <div className="flex flex-col gap-2">
-            <h4 className="font-bold">{selectedNode?.data?.label}</h4>
-            {selectedNode?.data?.description && (
-              <p className="text-muted-foreground">
-                {selectedNode.data.description}
-              </p>
+          <div
+            className={cn(
+              "flex min-h-64 flex-col p-4 lg:p-8",
+              popoverConfig[selectedNode?.type as keyof typeof popoverConfig]
+                ?.background
             )}
-            {selectedNode?.data?.sublabel && (
-              <p className="text-muted-foreground mt-2">
-                {selectedNode.data.sublabel}
+          >
+            <div className="mb-2 flex flex-row justify-end">
+              <Button
+                variant="ghost"
+                className="text-body-medium"
+                onClick={() => setSelectedNode(null)}
+              >
+                <MdClose />
+              </Button>
+            </div>
+            <div
+              className={cn(
+                "mb-4 w-fit rounded-full px-2 py-1 text-xs",
+                popoverConfig[selectedNode?.type as keyof typeof popoverConfig]
+                  ?.pillStyles
+              )}
+            >
+              {
+                popoverConfig[selectedNode?.type as keyof typeof popoverConfig]
+                  ?.pillText
+              }
+            </div>
+            <div className="mb-5">
+              <p className="font-mono text-body-medium">
+                {selectedNode?.data.track}
               </p>
-            )}
-            {selectedNode?.data?.stage && (
-              <p className="text-muted-foreground mt-2">
-                Stage: {selectedNode.data.stage}
-              </p>
-            )}
-            {selectedNode?.data?.percentage !== undefined && (
-              <p className="text-muted-foreground mt-2">
-                Progress: {selectedNode.data.percentage}%
-              </p>
-            )}
+              <p className="text-2xl font-bold">{selectedNode?.data.label}</p>
+            </div>
+            <div></div>
           </div>
         </PopoverContent>
       </Popover>

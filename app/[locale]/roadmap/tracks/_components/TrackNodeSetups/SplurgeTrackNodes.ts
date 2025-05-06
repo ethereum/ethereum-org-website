@@ -24,6 +24,7 @@ const splurgeNodes: Node[] = [
     type: "taskResearch",
     data: {
       label: "EOF",
+      track: "Splurge",
       percentage: 90,
     },
     parentId: "group-1",
@@ -35,6 +36,7 @@ const splurgeNodes: Node[] = [
     type: "taskResearch",
     data: {
       label: "Big modular arithmetic",
+      track: "Splurge",
       percentage: 75,
     },
     parentId: "group-1",
@@ -46,6 +48,7 @@ const splurgeNodes: Node[] = [
     type: "taskResearch",
     data: {
       label: "Futher EVM improvements",
+      track: "Splurge",
       percentage: 30,
     },
     parentId: "group-1",
@@ -57,6 +60,7 @@ const splurgeNodes: Node[] = [
     type: "featureResearch",
     data: {
       label: "Endgame EVM",
+      track: "Splurge",
       leftNode: true,
     },
   },
@@ -83,6 +87,7 @@ const splurgeNodes: Node[] = [
     type: "taskShipped",
     data: {
       label: "ERC-4337 rollout",
+      track: "Splurge",
       rightNode: true,
     },
     parentId: "group-2",
@@ -94,6 +99,7 @@ const splurgeNodes: Node[] = [
     type: "taskScheduled",
     data: {
       label: "Voluntary EOA conversion",
+      track: "Splurge",
       leftNode: true,
       rightNode: true,
     },
@@ -106,6 +112,7 @@ const splurgeNodes: Node[] = [
     type: "taskScheduled",
     data: {
       label: "In-protocol enshrining",
+      track: "Splurge",
       leftNode: true,
       rightNode: true,
     },
@@ -118,6 +125,7 @@ const splurgeNodes: Node[] = [
     type: "featureScheduled",
     data: {
       label: "Endgame account abstraction",
+      track: "Splurge",
       leftNode: true,
     },
   },
@@ -127,6 +135,7 @@ const splurgeNodes: Node[] = [
     type: "taskShipped",
     data: {
       label: "EIP-4337 specification",
+      track: "Splurge",
       rightNode: true,
     },
   },
@@ -136,6 +145,7 @@ const splurgeNodes: Node[] = [
     type: "taskResearch",
     data: {
       label: "Endgame EIP-1559",
+      track: "Splurge",
       leftNode: true,
       percentage: 30,
     },
@@ -146,6 +156,7 @@ const splurgeNodes: Node[] = [
     type: "taskShipped",
     data: {
       label: "EIP-1559",
+      track: "Splurge",
       rightNode: true,
     },
   },
@@ -155,6 +166,7 @@ const splurgeNodes: Node[] = [
     type: "taskResearch",
     data: {
       label: "Explore delay-encrypted mempools",
+      track: "Splurge",
       percentage: 10,
     },
   },
@@ -164,6 +176,7 @@ const splurgeNodes: Node[] = [
     type: "taskResearch",
     data: {
       label: "VDFs",
+      track: "Splurge",
       percentage: 30,
     },
   },
@@ -173,6 +186,7 @@ const splurgeNodes: Node[] = [
     type: "taskResearch",
     data: {
       label: "Explore deep-crypto (eg. obfuscation)",
+      track: "Splurge",
       percentage: 10,
     },
   },

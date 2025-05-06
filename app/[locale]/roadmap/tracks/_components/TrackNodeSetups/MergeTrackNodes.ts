@@ -7,6 +7,7 @@ const mergeNodes: Node[] = [
     type: "taskShipped",
     data: {
       label: "Beacon chain launch",
+      track: "Merge",
       rightNode: true,
     },
   },
@@ -16,6 +17,7 @@ const mergeNodes: Node[] = [
     type: "taskShipped",
     data: {
       label: "Warmup fork (Altair)",
+      track: "Merge",
       leftNode: true,
       rightNode: true,
     },
@@ -26,6 +28,7 @@ const mergeNodes: Node[] = [
     type: "featureShipped",
     data: {
       label: "Merge!\nNo more PoW",
+      track: "Merge",
       leftNode: true,
       rightNode: true,
     },
@@ -36,6 +39,7 @@ const mergeNodes: Node[] = [
     type: "taskShipped",
     data: {
       label: "Distributed validators",
+      track: "Merge",
     },
   },
   {
@@ -44,6 +48,7 @@ const mergeNodes: Node[] = [
     type: "taskShipped",
     data: {
       label: "Withdrawals",
+      track: "Merge",
       leftNode: true,
     },
   },
@@ -53,6 +58,7 @@ const mergeNodes: Node[] = [
     type: "taskResearch",
     data: {
       label: "Per-slot participant selection",
+      track: "Merge",
       rightNode: true,
       percentage: 45,
     },
@@ -63,6 +69,7 @@ const mergeNodes: Node[] = [
     type: "taskResearch",
     data: {
       label: "SSF specification",
+      track: "Merge",
       rightNode: true,
       percentage: 30,
     },
@@ -73,6 +80,7 @@ const mergeNodes: Node[] = [
     type: "taskIdea",
     data: {
       label: "Implementation",
+      track: "Merge",
       rightNode: true,
     },
   },
@@ -82,6 +90,7 @@ const mergeNodes: Node[] = [
     type: "featureResearch",
     data: {
       label: "Single slot finality (SSF)",
+      track: "Merge",
       topNode: true,
       leftNode: true,
       bottomNode: true,
@@ -93,6 +102,7 @@ const mergeNodes: Node[] = [
     type: "taskResearch",
     data: {
       label: "Secret leader election",
+      track: "Merge",
       percentage: 70,
     },
   },
@@ -102,6 +112,7 @@ const mergeNodes: Node[] = [
     type: "taskResearch",
     data: {
       label: "Increase validator count",
+      track: "Merge",
       percentage: 50,
     },
   },
@@ -111,6 +122,7 @@ const mergeNodes: Node[] = [
     type: "endGoal",
     data: {
       label: "Increase validator count",
+      track: "Merge",
     },
   },
 ]

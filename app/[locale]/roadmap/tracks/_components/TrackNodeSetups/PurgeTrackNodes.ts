@@ -8,6 +8,7 @@ const purgeNodes: Node[] = [
     type: "track",
     data: {
       label: "The Verge",
+      track: "Verge",
       sublabel: "Verkle trees",
       bottomNode: true,
     },
@@ -33,6 +34,7 @@ const purgeNodes: Node[] = [
     type: "taskShipped",
     data: {
       label: "Ban SELF-DESTRUCT",
+      track: "Purge",
     },
     parentId: "group-1",
     extent: "parent" as const,
@@ -43,6 +45,7 @@ const purgeNodes: Node[] = [
     type: "taskResearch",
     data: {
       label: "Simplify gas mechanics",
+      track: "Purge",
       percentage: 25,
     },
     parentId: "group-1",
@@ -54,6 +57,7 @@ const purgeNodes: Node[] = [
     type: "taskResearch",
     data: {
       label: "Precompiles -> EVM impls",
+      track: "Purge",
       percentage: 25,
     },
     parentId: "group-1",
@@ -65,6 +69,7 @@ const purgeNodes: Node[] = [
     type: "taskShipped",
     data: {
       label: "EIP-4844 specification",
+      track: "Purge",
       rightNode: true,
     },
   },
@@ -74,6 +79,7 @@ const purgeNodes: Node[] = [
     type: "taskResearch",
     data: {
       label: "EIP-4444 implementation",
+      track: "Purge",
       leftNode: true,
       rightNode: true,
       percentage: 80,
@@ -85,6 +91,7 @@ const purgeNodes: Node[] = [
     type: "featureResearch",
     data: {
       label: "History expiry (EIP-4444)",
+      track: "Purge",
       leftNode: true,
       bottomNode: true,
     },
@@ -95,6 +102,7 @@ const purgeNodes: Node[] = [
     type: "taskShipped",
     data: {
       label: "P2P history (eg. Portal)",
+      track: "Purge",
       rightNode: true,
     },
   },
@@ -104,6 +112,7 @@ const purgeNodes: Node[] = [
     type: "taskShipped",
     data: {
       label: "Beacon chain fast sync",
+      track: "Purge",
       rightNode: true,
     },
   },
@@ -113,6 +122,7 @@ const purgeNodes: Node[] = [
     type: "taskShipped",
     data: {
       label: "Eliminate most gas refunds",
+      track: "Purge",
     },
   },
   {
@@ -121,6 +131,7 @@ const purgeNodes: Node[] = [
     type: "track",
     data: {
       label: "The Splurge",
+      track: "Splurge",
       sublabel: "Endgame EVM",
       topNode: true,
     },
@@ -131,6 +142,7 @@ const purgeNodes: Node[] = [
     type: "taskResearch",
     data: {
       label: "Address space extension",
+      track: "Purge",
       rightNode: true,
       percentage: 20,
     },
@@ -141,6 +153,7 @@ const purgeNodes: Node[] = [
     type: "taskResearch",
     data: {
       label: "State expiry",
+      track: "Purge",
       leftNode: true,
       percentage: 20,
     },
@@ -151,6 +164,7 @@ const purgeNodes: Node[] = [
     type: "taskResearch",
     data: {
       label: "LOG reform",
+      track: "Purge",
       percentage: 20,
     },
   },
@@ -160,6 +174,7 @@ const purgeNodes: Node[] = [
     type: "taskResearch",
     data: {
       label: "Remove old Tx types",
+      track: "Purge",
       rightNode: true,
       percentage: 20,
     },
@@ -170,6 +185,7 @@ const purgeNodes: Node[] = [
     type: "taskResearch",
     data: {
       label: "Serialization harmonization",
+      track: "Purge",
       leftNode: true,
       percentage: 20,
     },

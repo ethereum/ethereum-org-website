@@ -8,6 +8,7 @@ const surgeNodes: Node[] = [
     type: "taskShipped",
     data: {
       label: "EIP-4844 specification",
+      track: "Surge",
       rightNode: true,
     },
   },
@@ -17,6 +18,7 @@ const surgeNodes: Node[] = [
     type: "taskShipped",
     data: {
       label: "EIP-4844 implementation",
+      track: "Surge",
       leftNode: true,
       rightNode: true,
     },
@@ -27,6 +29,7 @@ const surgeNodes: Node[] = [
     type: "featureShipped",
     data: {
       label: "Basic rollup scaling",
+      track: "Surge",
       leftNode: true,
       bottomNode: true,
     },
@@ -37,6 +40,7 @@ const surgeNodes: Node[] = [
     type: "taskResearch",
     data: {
       label: "peerDAS",
+      track: "Surge",
       rightNode: true,
       percentage: 65,
     },
@@ -47,6 +51,7 @@ const surgeNodes: Node[] = [
     type: "taskResearch",
     data: {
       label: "Efficient DA self-healing",
+      track: "Surge",
       rightNode: true,
       percentage: 25,
     },
@@ -57,6 +62,7 @@ const surgeNodes: Node[] = [
     type: "featureResearch",
     data: {
       label: "Full rollup scaling",
+      track: "Surge",
       leftNode: true,
       bottomNode: true,
     },
@@ -67,6 +73,7 @@ const surgeNodes: Node[] = [
     type: "endGoal",
     data: {
       label: "Q-safe, no setup commitments",
+      track: "Surge",
     },
   },
   {
@@ -75,6 +82,7 @@ const surgeNodes: Node[] = [
     type: "taskResearch",
     data: {
       label: "Improve cross-rollup standards + interop",
+      track: "Surge",
       percentage: 25,
     },
   },
@@ -85,6 +93,7 @@ const surgeNodes: Node[] = [
     data: {
       label: "Optimistic rollup fraud provers",
       stage: "STAGE 0 & 1",
+      track: "Surge",
       percentage: 65,
       rightNode: true,
     },
@@ -96,6 +105,7 @@ const surgeNodes: Node[] = [
     data: {
       label: "ZK-EVMs",
       stage: "STAGE 0",
+      track: "Surge",
       percentage: 50,
       rightNode: true,
     },
@@ -107,6 +117,7 @@ const surgeNodes: Node[] = [
     data: {
       label: "The Verge",
       sublabel: "SNARK for L1 EVM",
+      track: "Verge",
       topNode: true,
     },
   },
