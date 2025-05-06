@@ -56,6 +56,8 @@ Separating the validator keys from the Ethereum account keys enables multiple va
 
 ![validator key schematic](validator-key-schematic.png)
 
+**Note**: Exiting from staking duties and withdrawing a validator's balance currently requires signing a [voluntary exit message (VEM)](https://mirror.xyz/ladislaus.eth/wmoBbUBes2Wp1_6DvP6slPabkyujSU7MZOFOC3QpErs&1) with the validator key. However, [EIP-7002](https://eips.ethereum.org/EIPS/eip-7002) is a proposal that will allow a user to trigger a validator's exit and withdrawals its balance by signing exit messages with the withdrawal key in the future. This will reduce trust assumptions by enabling stakers who delegate ETH to [staking-as-a-service providers](https://ethereum.org/en/staking/saas/#what-is-staking-as-a-service) to remain in control of their funds. 
+
 ## Deriving keys from a seed phrase {#deriving-keys-from-seed}
 
 If every 32 ETH staked required a new set of 2 completely independent keys, key management would quickly become unwieldy, especially for users running multiple validators. Instead, multiple validator keys can be derived from a single common secret and storing that single secret allows access to multiple validator keys.
@@ -94,3 +96,5 @@ Each branch is separated by a `/` so `m/2` means start with the master key and f
 
 - [Ethereum Foundation blog post by Carl Beekhuizen](https://blog.ethereum.org/2020/05/21/keys/)
 - [EIP-2333 BLS12-381 key generation](https://eips.ethereum.org/EIPS/eip-2333)
+- [EIP-7002: Execution Layer Triggered Exits](https://research.2077.xyz/eip-7002-unpacking-improvements-to-staking-ux-post-merge)
+- [Key management at scale](https://docs.ethstaker.cc/ethstaker-knowledge-base/scaled-node-operators/key-management-at-scale)

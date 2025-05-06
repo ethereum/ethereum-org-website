@@ -25,7 +25,7 @@ Uzamykatelé z domova jsou zodpovědní za provoz hardwaru potřebného ke spuš
 
 Uzamykatel z domova dostává odměny přímo z protokolu za to, že jejich validátor řádně funguje a je online.
 
-## Proč uzamykat z domova? {#why-stake-solo}
+## Proč stakovat z domova? {#why-stake-solo}
 
 Uzamčení z domova přináší větší odpovědnost, ale poskytuje vám maximální kontrolu nad vašimi prostředky a nastavením uzamčení.
 
@@ -203,4 +203,4 @@ Chcete-li odemknout a získat zpět celý zůstatek, musíte také dokončit pro
 - [Krok za krokem: Jak se připojit k testovací síti Ethereum 2.0](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) – _ Butta_
 - [Tipy pro prevenci trestu Eth2](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) – _Raul Jordan 2020 _
 
-<QuizWidget quizKey="solo-staking" />
+<QuizWidget quizKey="staking-solo" />

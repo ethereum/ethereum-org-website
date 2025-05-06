@@ -111,6 +111,7 @@
   "page-run-a-node-sovereignty-1": "Un portafoglio Ethereum ti permette di assumere la piena custodia e il controllo dei tuoi attivi digitali detenendo le chiavi private dei tuoi indirizzi. Queste chiavi però non ti dicono lo stato attuale della blockchain, come il saldo del tuo portafoglio.",
   "page-run-a-node-sovereignty-2": "Come impostazione predefinita, i portafogli Ethereum di solito raggiungono un nodo di terze parti, come Infura o Alchemy, per la consultazione dei tuoi saldi. Eseguire il proprio nodo autonomamente permette di avere la propria copia della blockchain di Ethereum.",
   "page-run-a-node-title": "Esegui un nodo",
+  "page-run-a-node-meta-title": "Come gestire un nodo di Ethereum",
   "page-run-a-node-voice-your-choice-title": "Dai voce alla tua scelta",
   "page-run-a-node-voice-your-choice-preview": "Non rinunciare al controllo in caso di fork.",
   "page-run-a-node-voice-your-choice-1": "In caso di fork della catena, ovvero qualora emergessero due catene con due serie di regole diverse, l'esecuzione del proprio nodo garantisce la possibilità di scegliere quale set di regole supportare. Sta a te decidere se adeguarti o meno alle nuove regole e se supportare o meno i cambiamenti proposti.",

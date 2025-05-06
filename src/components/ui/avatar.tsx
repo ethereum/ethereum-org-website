@@ -1,3 +1,5 @@
+"use client"
+
 import * as React from "react"
 import upperCase from "lodash/upperCase"
 import { tv, type VariantProps } from "tailwind-variants"
@@ -151,25 +153,22 @@ const Avatar = React.forwardRef<
 
     const _ref = ref as React.ForwardedRef<HTMLDivElement>
     return (
-      <LinkBox
-        // !! Inconsistent strategy, using `as` prop instead of `asChild` bool
-        as={Center}
-        ref={_ref}
-        className={cn(_direction, "gap-x-1 gap-y-0")}
-      >
-        <LinkOverlay
-          asChild
-          className={cn(
-            "peer z-overlay inline-flex items-center gap-1 p-1",
-            size !== "md" ? "text-xs" : "text-sm"
-          )}
-        >
-          <BaseLink {...commonLinkProps}>{label}</BaseLink>
-        </LinkOverlay>
-        <AvatarBase size={size}>
-          <AvatarImage src={src} />
-          <AvatarFallback>{fallbackInitials}</AvatarFallback>
-        </AvatarBase>
+      <LinkBox ref={_ref} className={cn(_direction, "gap-x-1 gap-y-0")} asChild>
+        <Center>
+          <LinkOverlay
+            asChild
+            className={cn(
+              "peer z-overlay inline-flex items-center gap-1 p-1",
+              size !== "md" ? "text-xs" : "text-sm"
+            )}
+          >
+            <BaseLink {...commonLinkProps}>{label}</BaseLink>
+          </LinkOverlay>
+          <AvatarBase size={size}>
+            <AvatarImage src={src} />
+            <AvatarFallback>{fallbackInitials}</AvatarFallback>
+          </AvatarBase>
+        </Center>
       </LinkBox>
     )
   }

@@ -1,8 +1,9 @@
-import { useTranslation } from "next-i18next"
+"use client"
 
 import { Image } from "@/components/Image"
 
 import useColorModeValue from "@/hooks/useColorModeValue"
+import { useTranslation } from "@/hooks/useTranslation"
 import darkImage from "@/public/images/ef-logo.png"
 import lightImage from "@/public/images/ef-logo-white.png"
 

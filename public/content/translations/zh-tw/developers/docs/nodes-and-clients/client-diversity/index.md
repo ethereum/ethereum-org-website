@@ -79,6 +79,8 @@ sidebarDepth: 2
 
 [Prysm](https://docs.prylabs.network/docs/getting-started)
 
+[Grandine](https://docs.grandine.io/)
+
 技術性使用者可以透過為小眾用戶端撰寫更多教學和文檔，並鼓勵其節點營運的對等節點從主導用戶端遷出，以幫助加速此流程。 [clientdiversity.org](https://clientdiversity.org/) 上有切換到小眾共識用戶端的指南。
 
 ## 用戶端多樣性儀表板 {#client-diversity-dashboards}

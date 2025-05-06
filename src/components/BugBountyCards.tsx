@@ -1,5 +1,4 @@
 import { BaseHTMLAttributes } from "react"
-import { useTranslation } from "next-i18next"
 
 import type { ChildOnlyProp, TranslationKey } from "@/lib/types"
 
@@ -7,6 +6,8 @@ import { cn } from "@/lib/utils/cn"
 
 import { ButtonLink, ButtonLinkProps } from "./ui/buttons/Button"
 import { Center, Flex, Stack } from "./ui/flex"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 type FlexProps = BaseHTMLAttributes<HTMLDivElement>
 

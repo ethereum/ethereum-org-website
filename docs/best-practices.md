@@ -8,7 +8,7 @@ How to prepare your content for translation depends on whether you're working on
 
 **- MDX pages (`public/content/page/`)**
 
-Markdown will be translated as whole pages of content, so no specific action is required. Simply create a new folder within `public/content/` with the name of the page, then place index markdown file (ie. `index.md`) within the new folder.
+Markdown will be translated as whole pages of content, so no specific action is required. Simply create a new folder within `public/content/` with the name of the page, then place an index markdown file (ie. `index.md`) within the new folder.
 
 **- React component page**
 
@@ -52,7 +52,7 @@ Markdown will be translated as whole pages of content, so no specific action is 
 
   - _tl;dr Each individual JSON entry should be a complete phrase by itself_
 
-- This is done using the `Translation` component. However there is an alternative method for regular JS: using the `t` function from `next-i18next`
+- This is done using the `Translation` component. However there is an alternative method for regular JS: using the `t` function from `@/hooks/useTranslation`
 
   - **Method one: `<Translation />` component (preferred if only needed in JSX)**
 
@@ -66,7 +66,7 @@ Markdown will be translated as whole pages of content, so no specific action is 
   - **Method two: `t()`**
 
     ```tsx
-    import { useTranslation } from "next-i18next"
+    import { useTranslation } from "@/hooks/useTranslation"
 
     // Utilize anywhere in JS using
     const { t } = useTranslation()

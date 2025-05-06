@@ -132,6 +132,14 @@ lang: zh-tw
 - [GitHub](https://github.com/Ackee-Blockchain/wake)
 - [VS Code 擴充功能](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity)
 
+**Veramo -** **_開放原始碼、模組化且不受限的框架，讓去中心化應用程式開發者能輕鬆地將去中心化身分和可驗證憑證整合到他們的應用程式中。_**
+
+- [首頁](https://veramo.io/)
+- [文件](https://veramo.io/docs/basics/introduction)
+- [GitHub](https://github.com/uport-project/veramo)
+- [Discord](https://discord.com/invite/FRRBdjemHV)
+- [節點包裹管理器 (NPM) 包裹](https://www.npmjs.com/package/@veramo/core)
+
 ## 了解更多 {#further-reading}
 
 _知道對你有幫助的社群資源嗎？ 請編輯此頁面並新增資源！_

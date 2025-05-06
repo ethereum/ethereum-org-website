@@ -115,7 +115,7 @@ contract VendingMachine {
 
 - 使用[開發環境](/developers/docs/frameworks/)來測試、編譯、部署智慧型合約
 
-- 透過基本的程式碼分析工具，例如 [Cyfrin Aaderyn](https://github.com/Cyfrin/aderyn)、Mythril 和 Slither，來執行程式碼。 理想情况下，這應該在合併提取請求及檢查輸出結果異同前完成
+- 透過基本的程式碼分析工具，例如 [Cyfrin Aderyn](https://github.com/Cyfrin/aderyn)、Mythril 和 Slither，來執行程式碼。 理想情况下，這應該在合併提取請求及檢查輸出結果異同前完成
 
 - 確認程式碼編譯沒有錯誤，且 Solidity 編譯器不會傳出警告
 
@@ -563,7 +563,7 @@ contract Attack {
 
 - **[智慧型合約安全性驗證標準](https://github.com/securing/SCSVS)** - _適用於開發者、架構師、安全性審查者和廠商的標準化智慧型合約安全性 14 點檢查清單。_
 
-- **[學習智慧型合約安全與審核](https://updraft.cyfrin.io/courses/security)** - _出色的智慧型合約安全與審核課程，為希望提升安全最佳做法並成為安全研究人員的智慧型合約開發人員而設。_
+- **[學習智慧型合約安全與審核](https://updraft.cyfrin.io/courses/security) - _出色的智慧型合約安全與審核課程，為希望提升安全最佳做法並成為安全研究人員的智慧型合約開發人員而設。_
 
 ### 關於智慧型合約安全性的使用教學 {#tutorials-on-smart-contract-security}
 

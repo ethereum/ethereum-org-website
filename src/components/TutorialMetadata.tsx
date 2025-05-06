@@ -1,7 +1,8 @@
-import { useRouter } from "next/router"
-import { useTranslation } from "next-i18next"
+"use client"
 
-import type { Lang, TranslationKey } from "@/lib/types"
+import { useLocale } from "next-intl"
+
+import { Lang, Skill, TranslationKey } from "@/lib/types"
 import { TutorialFrontmatter } from "@/lib/interfaces"
 
 import CopyToClipboard from "@/components/CopyToClipboard"
@@ -15,15 +16,11 @@ import { Flex } from "./ui/flex"
 import InlineLink from "./ui/Link"
 import { Tag } from "./ui/tag"
 
+import { useTranslation } from "@/hooks/useTranslation"
+
 export type TutorialMetadataProps = {
   frontmatter: TutorialFrontmatter
   timeToRead: number
-}
-
-export enum Skill {
-  BEGINNER = "beginner",
-  INTERMEDIATE = "intermediate",
-  ADVANCED = "advanced",
 }
 
 export const getSkillTranslationId = (skill: Skill): TranslationKey =>
@@ -35,7 +32,7 @@ const TutorialMetadata = ({
   frontmatter,
   timeToRead,
 }: TutorialMetadataProps) => {
-  const { locale } = useRouter()
+  const locale = useLocale()
   const { t } = useTranslation("page-developers-tutorials")
 
   const hasSource = frontmatter.source && frontmatter.sourceUrl
@@ -76,7 +73,7 @@ const TutorialMetadata = ({
         )}
         <div>
           <Emoji className="me-2 text-sm" text=":stopwatch:" />
-          {timeToRead} {t("comp-tutorial-metadata-minute-read")} minute read
+          {timeToRead} {t("comp-tutorial-metadata-minute-read")}
         </div>
       </Flex>
       {address && (

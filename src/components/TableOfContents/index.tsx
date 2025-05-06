@@ -1,4 +1,5 @@
-import { useTranslation } from "next-i18next"
+"use client"
+
 import { FaGithub } from "react-icons/fa"
 
 import type { ToCItem } from "@/lib/types"
@@ -11,6 +12,7 @@ import { cn } from "@/lib/utils/cn"
 import { ButtonLink } from "../ui/buttons/Button"
 
 import { useActiveHash } from "@/hooks/useActiveHash"
+import { useTranslation } from "@/hooks/useTranslation"
 
 export type TableOfContentsProps = {
   items: Array<ToCItem>

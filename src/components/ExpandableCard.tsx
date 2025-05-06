@@ -1,8 +1,10 @@
+"use client"
+
 import React, { type ReactNode, useState } from "react"
-import { useTranslation } from "next-i18next"
 
 import { Flex, HStack, VStack } from "@/components/ui/flex"
 
+import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import type { IconBaseType } from "./icons/icon-base"
@@ -13,6 +15,8 @@ import {
   AccordionTrigger,
 } from "./ui/accordion"
 
+import { useTranslation } from "@/hooks/useTranslation"
+
 export type ExpandableCardProps = {
   children?: ReactNode
   contentPreview?: ReactNode
@@ -22,6 +26,7 @@ export type ExpandableCardProps = {
   eventCategory?: string
   eventName?: string
   visible?: boolean
+  className?: string
 }
 
 const ExpandableCard = ({
@@ -33,6 +38,7 @@ const ExpandableCard = ({
   eventCategory = "",
   eventName = "",
   visible = false,
+  className,
 }: ExpandableCardProps) => {
   const [isVisible, setIsVisible] = useState(visible)
   const { t } = useTranslation("common")
@@ -59,7 +65,7 @@ const ExpandableCard = ({
       <Accordion
         type="single"
         collapsible
-        className="mb-4"
+        className={cn("mb-4", className)}
         defaultValue={visible ? "item-1" : undefined}
       >
         <AccordionItem

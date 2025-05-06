@@ -1,4 +1,3 @@
-import { useRouter } from "next/router"
 import type { HTMLAttributes } from "react"
 
 import type { ChildOnlyProp } from "@/lib/types"
@@ -23,7 +22,7 @@ import TableOfContents from "@/components/TableOfContents"
 import TooltipLink from "@/components/TooltipLink"
 import TutorialMetadata from "@/components/TutorialMetadata"
 import { ButtonLink } from "@/components/ui/buttons/Button"
-import { mdxTableComponents } from "@/components/ui/table"
+import { mdxTableComponents } from "@/components/ui/mdx-table-components"
 import YouTube from "@/components/YouTube"
 
 import { getEditPath } from "@/lib/utils/editPath"
@@ -86,7 +85,10 @@ export const tutorialsComponents = {
   YouTube,
 }
 type TutorialLayoutProps = ChildOnlyProp &
-  Pick<MdPageContent, "tocItems" | "contributors" | "contentNotTranslated"> &
+  Pick<
+    MdPageContent,
+    "tocItems" | "contributors" | "contentNotTranslated" | "slug"
+  > &
   Required<Pick<MdPageContent, "lastEditLocaleTimestamp">> & {
     frontmatter: TutorialFrontmatter
     timeToRead: number
@@ -94,6 +96,7 @@ type TutorialLayoutProps = ChildOnlyProp &
 
 export const TutorialLayout = ({
   children,
+  slug,
   frontmatter,
   tocItems,
   timeToRead,
@@ -101,8 +104,7 @@ export const TutorialLayout = ({
   contributors,
   contentNotTranslated,
 }: TutorialLayoutProps) => {
-  const { asPath: relativePath } = useRouter()
-  const absoluteEditPath = getEditPath(relativePath)
+  const absoluteEditPath = getEditPath(slug)
 
   return (
     <div className="flex w-full gap-8 border-b bg-background p-8 lg:mx-auto lg:bg-background-highlight lg:shadow">

@@ -61,3 +61,4 @@ src/data/crowdin/bucketsUntranslatedWordsReport.csv
 # Storybook
 build-storybook.log
 storybook-static
+

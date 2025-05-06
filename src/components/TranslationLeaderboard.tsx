@@ -1,7 +1,6 @@
 import React, { useState } from "react"
 import reverse from "lodash/reverse"
 import sortBy from "lodash/sortBy"
-import { useTranslation } from "next-i18next"
 
 import type { CostLeaderboardData } from "@/lib/types"
 
@@ -12,6 +11,8 @@ import { cn } from "@/lib/utils/cn"
 
 import Emoji from "./Emoji"
 import { Image } from "./Image"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 const RadioCard = ({ value, children, checked, onChange }) => {
   return (

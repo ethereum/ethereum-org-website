@@ -31,15 +31,21 @@ Iată o postare de pe blogul lui Vitalik Buterin, fondatorul Ethereum, despre [P
 
 Din punct de vedere tehnic, registrul unei criptomonede precum Bitcoin poate fi considerat un sistem de tranziție de stare, acolo unde există o „stare” constând din starea de proprietate a tuturor bitcoin-urilor existente și o „funcție de tranziție de stare” care ia o stare și o tranzacție și generează o nouă stare care este rezultatul. Într-un sistem bancar standard, de exemplu, starea este un bilanț, o tranzacție este o cerere să muți $X de la A la B, iar funcția de tranziție a stării reduce valoarea valoarea contului lui A cu $X și crește valoarea contului lui B cu $X. Când contul lui A are mai puțin de $X, în primul rând, starea funcției de tranziție returnează o eroare. Prin urmare, se pot defini formal:
 
+```
     APPLY(S,TX) -> S' sau ERROR
+```
 
 În sistemul bancar definit mai sus:
 
+```
     APPLY({ Alice: $50, Bob: $50 },"trimite $20 de la Alice la Bob") = { Alice: $30, Bob: $70 }
+```
 
 Dar:
 
+```
     APPLY({ Alice: $50, Bob: $50 },"trimite $70 de la Alice la Bob") = ERROR
+```
 
 „Starea” din Bitcoin este colecția tuturor monedelor (din punct de vedere tehnic, „ieșiri de tranzacție necheltuite” sau UTXO) care au fost exploatate dau nu au fost încă cheltuite, fiecare UTXO având o denumire și un proprietar (definit de o adresă de 20 de byți, care este în esență o cheie publică criptografică<sup>[fn. 1](#notes)</sup>). A tranzacția conține una sau mai multe intrări, fiecare intrare conținând o referință la un UTXO existent și la o semnătură criptografică produsă de cheia privată asociată cu adresa proprietarului și una sau mai multe ieșiri, fiecare ieșire conținând un nou UTXO care va fi adăugat la stare.
 

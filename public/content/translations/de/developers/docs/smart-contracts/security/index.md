@@ -563,7 +563,7 @@ Wenn Sie vorhaben, ein On-Chain-Orakel für Asset-Preise abzufragen, sollten Sie
 
 - **[Smart Contract Security Verification Standard](https://github.com/securing/SCSVS)** - _Vierzehnteilige Checkliste zur Standardisierung der Sicherheit von Smart Contracts für Entwickler, Architekten, Sicherheitsüberprüfer und Anbieter._
 
-- **[Smart-Contract-Sicherheit und -Auditing erlernen](https://updraft.cyfrin.io/courses/security)** – _der ultimative Kurs für Smart-Contract-Sicherheit und -Auditing, der für Smart-Contract-Entwickler erstellt wurde, die ihre Best Practices zur Sicherheit verbessern und Sicherheitsforscher werden möchten._
+- **[Smart-Contract-Sicherheit und -Auditing erlernen](https://updraft.cyfrin.io/courses/security) – _der ultimative Kurs für Smart-Contract-Sicherheit und -Auditing, der für Smart-Contract-Entwickler erstellt wurde, die ihre Best Practices zur Sicherheit verbessern und Sicherheitsforscher werden möchten._
 
 ### Tutorials zur Sicherheit von Smart Contracts {#tutorials-on-smart-contract-security}
 

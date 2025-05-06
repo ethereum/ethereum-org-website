@@ -111,6 +111,7 @@
   "page-run-a-node-sovereignty-1": "Díky peněžence Ethereum máte možnost plně dohlížet na vlastní digitální aktiva a řídit jejich tok, protože máte k dispozici privátní klíče na všechny své adresy. Tyto klíče však nevypovídají o aktuálním stavu blockchainu, například nesdělují aktuální zůstatek v peněžence.",
   "page-run-a-node-sovereignty-2": "Ve výchozím nastavení se peněženky Etherea při vyhledávání zůstatků obvykle obracejí na uzly třetích stran, například Infura nebo Alchemy. Provozování vlastního uzlu vám umožní mít vlastní kopii blockchainu Etherea.",
   "page-run-a-node-title": "Provozování vlastního uzlu",
+  "page-run-a-node-meta-title": "Jak provozovat Ethereum uzel",
   "page-run-a-node-voice-your-choice-title": "I váš hlas se počítá",
   "page-run-a-node-voice-your-choice-preview": "Mějte vše pod kontrolou, i když se blockchain rozštěpí.",
   "page-run-a-node-voice-your-choice-1": "V případě rozštěpení blockchainu, kdy vznikají dva blockchainy se dvěma různými soubory pravidel, zaručuje provoz vlastního uzlu možnost výběru sady pravidel, která je vám bližší. Je na vás, zda se přizpůsobíte novým pravidlům a podpoříte navrhované změny, nebo ne.",
