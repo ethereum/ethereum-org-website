@@ -25,6 +25,18 @@ const GroupNode = ({ data }: GroupNodeProps) => {
         isConnectableEnd={true}
       />
       <Handle
+        id="left-target"
+        type="target"
+        position={Position.Left}
+        style={{
+          backgroundColor: "transparent",
+          border: "none",
+        }}
+        isConnectable={true}
+        isConnectableStart={true}
+        isConnectableEnd={true}
+      />
+      <Handle
         id="right"
         type="source"
         position={Position.Right}

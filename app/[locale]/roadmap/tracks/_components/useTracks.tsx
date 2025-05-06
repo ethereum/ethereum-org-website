@@ -1,4 +1,4 @@
-import { Edge, MarkerType, Node } from "@xyflow/react"
+import { Edge, Node } from "@xyflow/react"
 
 import {
   BetterUserExperienceIcon,
@@ -19,152 +19,11 @@ import {
 import { mergeEdges, mergeNodes } from "./TrackNodeSetups/MergeTrackNodes"
 import { purgeEdges, purgeNodes } from "./TrackNodeSetups/PurgeTrackNodes"
 import { scourgeEdges, scourgeNodes } from "./TrackNodeSetups/ScourgeTrackNodes"
+import { splurgeEdges, splurgeNodes } from "./TrackNodeSetups/SplurgeTrackNodes"
 import { surgeEdges, surgeNodes } from "./TrackNodeSetups/SurgeTrackNodes"
 import { vergeEdges, vergeNodes } from "./TrackNodeSetups/VergeTrackNodes"
 
 import { useTranslation } from "@/hooks/useTranslation"
-
-const initialNodes = [
-  {
-    id: "group-1",
-    position: { x: 20, y: 20 },
-    style: {
-      width: 200,
-      height: 200,
-      border: "1px solid hsla(var(--primary))",
-      borderRadius: "10px",
-      backgroundColor: "#B38DF01A",
-    },
-    type: "group",
-    data: {
-      label: "Group",
-    },
-  },
-  {
-    id: "1",
-    position: { x: 20, y: 20 },
-    type: "taskShipped",
-    data: {
-      label: "Warmup fork (Altair)",
-      topNode: true,
-      leftNode: true,
-      rightNode: true,
-      bottomNode: true,
-    },
-    parentNode: "group-1",
-    extent: "parent" as const,
-  },
-  {
-    id: "2",
-    position: { x: 200, y: 125 },
-    type: "taskShipped",
-    data: {
-      label: "2",
-      topNode: true,
-      leftNode: true,
-      rightNode: true,
-      bottomNode: true,
-    },
-    parentNode: "group-1",
-    extent: "parent" as const,
-  },
-  {
-    id: "3",
-    position: { x: 20, y: 180 },
-    type: "endGoal",
-    data: {
-      label: "Quantum-safe SNARKs (eg. STARKs)",
-    },
-  },
-  {
-    id: "4",
-    position: { x: 400, y: 20 },
-    type: "taskIdea",
-    data: {
-      label: "SNARK for Verkle proofs",
-      topNode: true,
-      leftNode: true,
-      rightNode: true,
-      bottomNode: true,
-    },
-  },
-  {
-    id: "5",
-    position: { x: 600, y: 20 },
-    type: "taskResearch",
-    data: {
-      label: "SNARK for Verkle proofs",
-      topNode: true,
-      leftNode: true,
-      rightNode: true,
-      bottomNode: true,
-      percentage: 80,
-    },
-  },
-  {
-    id: "6",
-    position: { x: 600, y: 135 },
-    type: "taskScheduled",
-    data: {
-      label: "SNARK for Verkle proofs",
-      topNode: true,
-      leftNode: true,
-      rightNode: true,
-      bottomNode: true,
-    },
-  },
-  {
-    id: "7",
-    position: { x: 600, y: 250 },
-    type: "featureResearch",
-    data: {
-      label: "SNARK for Verkle proofs",
-      topNode: true,
-      leftNode: true,
-      rightNode: true,
-      bottomNode: true,
-    },
-  },
-  {
-    id: "8",
-    position: { x: 400, y: 135 },
-    type: "featureScheduled",
-    data: {
-      label: "SNARK for Verkle proofs",
-      topNode: true,
-      leftNode: true,
-      rightNode: true,
-      bottomNode: true,
-    },
-  },
-  {
-    id: "9",
-    position: { x: 400, y: 315 },
-    type: "featureShipped",
-    data: {
-      label: "SNARK for Verkle proofs",
-      topNode: true,
-      leftNode: true,
-      rightNode: true,
-      bottomNode: true,
-    },
-  },
-]
-const initialEdges = [
-  {
-    id: "e1-2",
-    source: "1",
-    target: "2",
-    type: "smoothstep",
-    markerEnd: {
-      type: MarkerType.Arrow,
-      color: "hsla(var(--success))",
-      width: 32,
-      height: 32,
-    },
-    style: { stroke: "hsla(var(--success))" },
-  },
-]
 
 type Track = {
   key: string
@@ -295,8 +154,8 @@ export const useTracks = (): Track[] => {
           },
         ],
         nodes: {
-          nodes: initialNodes,
-          edges: initialEdges,
+          nodes: splurgeNodes,
+          edges: splurgeEdges,
         },
       },
     },
