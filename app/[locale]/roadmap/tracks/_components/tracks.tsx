@@ -2,7 +2,8 @@
 
 import { cloneElement, useMemo, useState } from "react"
 import { motion } from "framer-motion"
-import { ReactFlow } from "@xyflow/react"
+import isEqual from "lodash/isEqual"
+import { Node, ReactFlow } from "@xyflow/react"
 
 import BannerNotification from "@/components/Banners/BannerNotification"
 import FeedbackCard from "@/components/FeedbackCard"
@@ -15,6 +16,12 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 import { ButtonLink } from "@/components/ui/buttons/Button"
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog"
 
 import { cn } from "@/lib/utils/cn"
 
@@ -38,12 +45,25 @@ import "@xyflow/react/dist/style.css"
 import { useActiveHash } from "@/hooks/useActiveHash"
 import { useTranslation } from "@/hooks/useTranslation"
 
+type NodeData = {
+  label?: string
+  description?: string
+  sublabel?: string
+  stage?: string
+  percentage?: number
+  topNode?: boolean
+  leftNode?: boolean
+  rightNode?: boolean
+  bottomNode?: boolean
+}
+
 const RoadmapTracksPage = () => {
   const { t } = useTranslation("page-roadmap-tracks")
   const tracks = useTracks()
   const [openItems, setOpenItems] = useState<string[]>(() =>
     tracks.map(({ key }) => key)
   )
+  const [selectedNode, setSelectedNode] = useState<Node<NodeData> | null>(null)
   const nodeTypes = useMemo(
     () => ({
       endGoal: EndGoalNode,
@@ -190,6 +210,16 @@ const RoadmapTracksPage = () => {
                     nodesConnectable={false}
                     panOnDrag={true}
                     proOptions={{ hideAttribution: true }}
+                    onNodeClick={(_, node) => {
+                      if (isEqual(node, selectedNode)) {
+                        setSelectedNode(null)
+                      } else {
+                        setSelectedNode({
+                          ...node,
+                          data: node.data as NodeData,
+                        })
+                      }
+                    }}
                   />
                 </div>
               </AccordionContent>
@@ -197,6 +227,36 @@ const RoadmapTracksPage = () => {
           ))}
         </Accordion>
       </div>
+
+      <Dialog open={!!selectedNode} onOpenChange={() => setSelectedNode(null)}>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle>{selectedNode?.data?.label}</DialogTitle>
+          </DialogHeader>
+          <div className="mt-4">
+            {selectedNode?.data?.description && (
+              <p className="text-muted-foreground">
+                {selectedNode.data.description}
+              </p>
+            )}
+            {selectedNode?.data?.sublabel && (
+              <p className="text-muted-foreground mt-2">
+                {selectedNode.data.sublabel}
+              </p>
+            )}
+            {selectedNode?.data?.stage && (
+              <p className="text-muted-foreground mt-2">
+                Stage: {selectedNode.data.stage}
+              </p>
+            )}
+            {selectedNode?.data?.percentage !== undefined && (
+              <p className="text-muted-foreground mt-2">
+                Progress: {selectedNode.data.percentage}%
+              </p>
+            )}
+          </div>
+        </DialogContent>
+      </Dialog>
 
       <FeedbackCard />
     </MainArticle>
