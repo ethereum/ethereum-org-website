@@ -17,11 +17,10 @@ import {
 } from "@/components/ui/accordion"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-} from "@/components/ui/dialog"
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover"
 
 import { cn } from "@/lib/utils/cn"
 
@@ -228,12 +227,18 @@ const RoadmapTracksPage = () => {
         </Accordion>
       </div>
 
-      <Dialog open={!!selectedNode} onOpenChange={() => setSelectedNode(null)}>
-        <DialogContent>
-          <DialogHeader>
-            <DialogTitle>{selectedNode?.data?.label}</DialogTitle>
-          </DialogHeader>
-          <div className="mt-4">
+      <Popover open={!!selectedNode}>
+        <PopoverTrigger asChild>
+          <div className="fixed right-4 top-24" />
+        </PopoverTrigger>
+        <PopoverContent
+          className="w-80"
+          side="right"
+          align="start"
+          sideOffset={0}
+        >
+          <div className="flex flex-col gap-2">
+            <h4 className="font-bold">{selectedNode?.data?.label}</h4>
             {selectedNode?.data?.description && (
               <p className="text-muted-foreground">
                 {selectedNode.data.description}
@@ -255,8 +260,8 @@ const RoadmapTracksPage = () => {
               </p>
             )}
           </div>
-        </DialogContent>
-      </Dialog>
+        </PopoverContent>
+      </Popover>
 
       <FeedbackCard />
     </MainArticle>
