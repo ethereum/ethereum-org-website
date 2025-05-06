@@ -22,7 +22,6 @@
     "markdown-checker": "ts-node -O '{ \"module\": \"commonjs\" }' src/scripts/markdownChecker.ts",
     "events-import": "ts-node -O '{ \"module\": \"commonjs\" }' src/scripts/events-import.ts",
     "crowdin-needs-review": "ts-node -O '{ \"module\": \"commonjs\" }' src/scripts/crowdin/reports/generateReviewReport.ts",
-    "crowdin-untranslated": "ts-node -O '{ \"module\": \"commonjs\" }' src/scripts/crowdin/reports/generateUntranslatedWordsReport.ts",
     "prepare": "husky"
   },
   "dependencies": {
