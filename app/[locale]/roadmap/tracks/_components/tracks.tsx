@@ -80,10 +80,11 @@ const RoadmapTracksPage = () => {
         breadcrumbs={{ slug: "roadmap/tracks", startDepth: 1 }}
       />
 
-      <div className="sticky top-1 my-8 flex flex-col items-center gap-3 py-4 text-center md:top-6 md:px-2">
-        <div className="my-2 text-body-medium">
-          {t("page-roadmap-tracks-whats-on-this-page")}
-        </div>
+      <div className="my-8 flex flex-col items-center pt-4 text-center md:top-6 md:px-2">
+        {t("page-roadmap-tracks-whats-on-this-page")}
+      </div>
+
+      <div className="sticky top-1 z-sticky mb-8 flex flex-col items-center pb-4 text-center md:top-24 md:px-2">
         <nav className="z-sticky mx-4 flex max-w-full gap-1 overflow-x-auto bg-background p-2 shadow md:max-w-[calc(100%-2rem)] md:rounded-2xl md:border md:p-0.5 md:shadow-lg">
           {tracks.map(({ key, title, icon }) => (
             <ButtonLink
@@ -99,11 +100,11 @@ const RoadmapTracksPage = () => {
               {activeSection === key && (
                 <motion.div
                   layoutId="active-section-highlight"
-                  className="absolute inset-0 z-0 rounded-xl bg-primary-low-contrast"
+                  className="absolute inset-0 z-sticky rounded-xl bg-primary-low-contrast"
                 />
               )}
-              {icon && <span className="z-10 text-lg">{icon}</span>}
-              <span className="relative z-10">{title}</span>
+              {icon && <span className="z-sticky text-lg">{icon}</span>}
+              <span className="relative z-sticky">{title}</span>
             </ButtonLink>
           ))}
         </nav>
@@ -128,10 +129,11 @@ const RoadmapTracksPage = () => {
                 className="w-full flex-col items-start gap-3 rounded-2xl hover:!text-inherit [&[data-state=open]]:!bg-transparent [&[data-state=open]]:!text-inherit [&[data-state=open]]:hover:!bg-background-highlight [&]:!p-4 [&]:hover:!bg-background-highlight sm:[&]:!p-6"
               >
                 <div className="flex flex-row items-center gap-3">
-                  <div className="flex items-center justify-center rounded-2xl border bg-background-highlight p-2">
-                    <span className="flex h-9 w-9 items-center justify-center lg:h-10 lg:w-10">
+                  <div className="box-border flex items-center justify-center rounded-2xl border bg-background-highlight p-2">
+                    <span className="flex aspect-square h-9 w-9 items-center justify-center lg:h-10 lg:w-10">
                       {cloneElement(icon as React.ReactElement, {
-                        className: "w-full h-full",
+                        className: "w-8 h-8",
+                        style: { overflow: "visible" },
                       })}
                     </span>
                   </div>
@@ -184,6 +186,10 @@ const RoadmapTracksPage = () => {
                     preventScrolling={false}
                     nodeTypes={nodeTypes}
                     fitView
+                    nodesDraggable={false}
+                    nodesConnectable={false}
+                    panOnDrag={true}
+                    proOptions={{ hideAttribution: true }}
                   />
                 </div>
               </AccordionContent>
