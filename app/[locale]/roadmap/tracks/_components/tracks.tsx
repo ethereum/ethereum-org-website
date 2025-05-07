@@ -4,9 +4,14 @@ import { cloneElement, useMemo, useState } from "react"
 import { motion } from "framer-motion"
 import isEqual from "lodash/isEqual"
 import { MdClose } from "react-icons/md"
-import { Node, ReactFlow } from "@xyflow/react"
+import {
+  ControlButton,
+  Controls,
+  Node,
+  ReactFlow,
+  useReactFlow,
+} from "@xyflow/react"
 
-import BannerNotification from "@/components/Banners/BannerNotification"
 import FeedbackCard from "@/components/FeedbackCard"
 import { ContentHero } from "@/components/Hero"
 import MainArticle from "@/components/MainArticle"
@@ -188,13 +193,35 @@ const RoadmapTracksPage = () => {
     }
   }
 
+  const CustomControls = () => {
+    const { zoomIn, zoomOut } = useReactFlow()
+
+    return (
+      <Controls
+        showInteractive={false}
+        showFitView={false}
+        showZoom={false}
+        orientation="horizontal"
+        className="flex gap-2 !shadow-none"
+      >
+        <ControlButton
+          onClick={() => zoomOut()}
+          className="rounded-full border border-border bg-background p-2 shadow hover:bg-background-highlight active:bg-background-highlight"
+        >
+          <p className="text-sm text-body-medium">-</p>
+        </ControlButton>
+        <ControlButton
+          onClick={() => zoomIn()}
+          className="rounded-full border border-border bg-background p-2 shadow hover:bg-background-highlight active:bg-background-highlight"
+        >
+          <p className="text-sm text-body-medium">+</p>
+        </ControlButton>
+      </Controls>
+    )
+  }
+
   return (
     <MainArticle className="relative flex flex-col">
-      <BannerNotification shouldShow>
-        <p>
-          Ethereum&apos;s development is community-driven and subject to change.
-        </p>
-      </BannerNotification>
       <ContentHero
         title="Roadmap tracks"
         description="The Ethereum roadmap, like Ethereum itself, doesn't have a single person or group in charge. One interpretation comes from Ethereum co-founder Vitalik Buterin's 2022 vision, with development shaped by contributions from across the Ethereum community."
@@ -295,7 +322,7 @@ const RoadmapTracksPage = () => {
                       </div>
                     </div>
                     <hr className="flex lg:hidden" />
-                    <div className="flex items-start">
+                    <div className="flex items-center">
                       <div className="min-w-[98px] rounded-full border border-primary px-4 py-2 text-primary">
                         <span>
                           {openItems.includes(key) ? "CLOSE -" : "OPEN +"}
@@ -339,7 +366,6 @@ const RoadmapTracksPage = () => {
                       edges={contentData.nodes.edges}
                       preventScrolling={false}
                       nodeTypes={nodeTypes}
-                      fitView
                       nodesDraggable={false}
                       nodesConnectable={false}
                       panOnDrag={true}
@@ -356,7 +382,9 @@ const RoadmapTracksPage = () => {
                           })
                         }
                       }}
-                    />
+                    >
+                      <CustomControls />
+                    </ReactFlow>
                   </div>
                 </AccordionContent>
               </AccordionItem>
