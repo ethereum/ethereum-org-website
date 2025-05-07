@@ -9,6 +9,21 @@ const vergeNodes: Node[] = [
     data: {
       label: "Most serious EVM DoS issues solved",
       track: "Verge",
+      description: ["TODO: Add description", "TODO: Add description"],
+      releaseDate: "TODO",
+      releaseLabel: "TODO",
+      releasePageURL: "/",
+      benefits: ["TODO: Add benefits", "TODO: Add benefits"],
+      furtherReading: [
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+      ],
     },
   },
   {
@@ -19,6 +34,21 @@ const vergeNodes: Node[] = [
       label: "Basic light client support (sync committees)",
       track: "Verge",
       rightNode: true,
+      description: ["TODO: Add description", "TODO: Add description"],
+      releaseDate: "TODO",
+      releaseLabel: "TODO",
+      releasePageURL: "/",
+      benefits: ["TODO: Add benefits", "TODO: Add benefits"],
+      furtherReading: [
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+      ],
     },
   },
   {
@@ -31,6 +61,19 @@ const vergeNodes: Node[] = [
       leftNode: true,
       rightNode: true,
       percentage: 80,
+      description: ["TODO: Add description", "TODO: Add description"],
+      releaseDate: "TODO",
+      benefits: ["TODO: Add benefits", "TODO: Add benefits"],
+      furtherReading: [
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+      ],
     },
   },
   {
@@ -42,6 +85,19 @@ const vergeNodes: Node[] = [
       track: "Verge",
       leftNode: true,
       rightNode: true,
+      description: ["TODO: Add description", "TODO: Add description"],
+      releaseDate: "TODO",
+      benefits: ["TODO: Add benefits", "TODO: Add benefits"],
+      furtherReading: [
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+      ],
     },
   },
   {
@@ -53,6 +109,19 @@ const vergeNodes: Node[] = [
       track: "Verge",
       leftNode: true,
       rightNode: true,
+      description: ["TODO: Add description", "TODO: Add description"],
+      releaseDate: "TODO",
+      benefits: ["TODO: Add benefits", "TODO: Add benefits"],
+      furtherReading: [
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+      ],
     },
   },
   {
@@ -65,6 +134,19 @@ const vergeNodes: Node[] = [
       leftNode: true,
       rightNode: true,
       topNode: true,
+      description: ["TODO: Add description", "TODO: Add description"],
+      releaseDate: "TODO",
+      benefits: ["TODO: Add benefits", "TODO: Add benefits"],
+      furtherReading: [
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+      ],
     },
   },
   {
@@ -76,6 +158,19 @@ const vergeNodes: Node[] = [
       track: "Verge",
       rightNode: true,
       percentage: 80,
+      description: ["TODO: Add description", "TODO: Add description"],
+      releaseDate: "TODO",
+      benefits: ["TODO: Add benefits", "TODO: Add benefits"],
+      furtherReading: [
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+      ],
     },
   },
   {
@@ -87,6 +182,19 @@ const vergeNodes: Node[] = [
       track: "Verge",
       rightNode: true,
       percentage: 80,
+      description: ["TODO: Add description", "TODO: Add description"],
+      releaseDate: "TODO",
+      benefits: ["TODO: Add benefits", "TODO: Add benefits"],
+      furtherReading: [
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+      ],
     },
   },
   {
@@ -98,6 +206,19 @@ const vergeNodes: Node[] = [
       track: "Verge",
       bottomNode: true,
       percentage: 50,
+      description: ["TODO: Add description", "TODO: Add description"],
+      releaseDate: "TODO",
+      benefits: ["TODO: Add benefits", "TODO: Add benefits"],
+      furtherReading: [
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+      ],
     },
   },
   {
@@ -108,6 +229,19 @@ const vergeNodes: Node[] = [
       label: "SNARK for L1 EVM",
       track: "Verge",
       rightNode: true,
+      description: ["TODO: Add description", "TODO: Add description"],
+      releaseDate: "TODO",
+      benefits: ["TODO: Add benefits", "TODO: Add benefits"],
+      furtherReading: [
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+      ],
     },
   },
   {
@@ -120,6 +254,19 @@ const vergeNodes: Node[] = [
       rightNode: true,
       leftNode: true,
       topNode: true,
+      description: ["TODO: Add description", "TODO: Add description"],
+      releaseDate: "TODO",
+      benefits: ["TODO: Add benefits", "TODO: Add benefits"],
+      furtherReading: [
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+      ],
     },
   },
   {
@@ -132,6 +279,19 @@ const vergeNodes: Node[] = [
       track: "Scourge",
       leftNode: true,
       rightNode: true,
+      description: ["TODO: Add description", "TODO: Add description"],
+      releaseDate: "TODO",
+      benefits: ["TODO: Add benefits", "TODO: Add benefits"],
+      furtherReading: [
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+      ],
     },
   },
   {
@@ -142,6 +302,19 @@ const vergeNodes: Node[] = [
       label: "SNARK / STARK ASICs",
       track: "Verge",
       percentage: 30,
+      description: ["TODO: Add description", "TODO: Add description"],
+      releaseDate: "TODO",
+      benefits: ["TODO: Add benefits", "TODO: Add benefits"],
+      furtherReading: [
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+      ],
     },
   },
   {
@@ -151,6 +324,19 @@ const vergeNodes: Node[] = [
     data: {
       label: "Explore EVM verification precompile",
       track: "Verge",
+      description: ["TODO: Add description", "TODO: Add description"],
+      releaseDate: "TODO",
+      benefits: ["TODO: Add benefits", "TODO: Add benefits"],
+      furtherReading: [
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+      ],
     },
   },
   {
@@ -161,6 +347,19 @@ const vergeNodes: Node[] = [
       label: "Quantum-safe SNARKs (eg. STARKs)",
       track: "Verge",
       leftNode: true,
+      description: ["TODO: Add description", "TODO: Add description"],
+      releaseDate: "TODO",
+      benefits: ["TODO: Add benefits", "TODO: Add benefits"],
+      furtherReading: [
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+      ],
     },
   },
 ]

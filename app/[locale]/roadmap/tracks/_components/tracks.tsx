@@ -17,6 +17,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 import { Button, ButtonLink } from "@/components/ui/buttons/Button"
+import Link from "@/components/ui/Link"
 import {
   Popover,
   PopoverContent,
@@ -48,7 +49,8 @@ import { useTranslation } from "@/hooks/useTranslation"
 type NodeData = {
   label?: string
   track?: string
-  description?: string
+  description?: string[]
+  releaseDate?: string
   sublabel?: string
   stage?: string
   percentage?: number
@@ -56,6 +58,13 @@ type NodeData = {
   leftNode?: boolean
   rightNode?: boolean
   bottomNode?: boolean
+  releaseLabel?: string
+  releasePageURL?: string
+  benefits?: string[]
+  furtherReading?: {
+    title: string
+    url: string
+  }[]
 }
 
 const RoadmapTracksPage = () => {
@@ -300,7 +309,7 @@ const RoadmapTracksPage = () => {
         </PopoverTrigger>
         <PopoverContent
           className={cn(
-            "mt-16 min-h-64 w-64 overflow-hidden rounded-2xl border p-0 shadow-lg sm:w-72 md:w-96",
+            "mt-0 max-h-[calc(100vh-8rem)] min-h-64 w-64 overflow-scroll rounded-2xl border p-0 shadow-lg sm:w-72 md:mt-16 md:w-96",
             popoverConfig[selectedNode?.type as keyof typeof popoverConfig]
               ?.border
           )}
@@ -342,7 +351,54 @@ const RoadmapTracksPage = () => {
               </p>
               <p className="text-2xl font-bold">{selectedNode?.data.label}</p>
             </div>
-            <div></div>
+            <div className="flex flex-col gap-2">
+              {selectedNode?.data?.description?.map((description) => (
+                <p key={description} className="text-md">
+                  {description}
+                </p>
+              ))}
+            </div>
+            <hr className="my-5" />
+            <div className="mb-8 flex flex-col gap-8">
+              <div className="flex flex-col gap-1">
+                <p className="text-md font-bold">
+                  {popoverConfig[
+                    selectedNode?.type as keyof typeof popoverConfig
+                  ]?.pillText === "SHIPPED"
+                    ? "Shipped:"
+                    : "Estimated release:"}
+                </p>
+                <p className="text-md">{selectedNode?.data?.releaseDate}</p>
+              </div>
+              {selectedNode?.data?.releaseLabel && (
+                <div className="flex flex-col gap-1">
+                  <p className="text-md font-bold">Related upgrade:</p>
+                  <Link href={selectedNode?.data?.releasePageURL}>
+                    {selectedNode?.data?.releaseLabel}
+                  </Link>
+                </div>
+              )}
+              <div className="flex flex-col gap-1">
+                <p className="text-md font-bold">Benefits:</p>
+                <ul className="mb-0">
+                  {selectedNode?.data?.benefits?.map((benefit) => (
+                    <li key={benefit} className="last:mb-0">
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="flex flex-col gap-1">
+                <p className="text-md font-bold">Further reading:</p>
+                <ul className="mb-0">
+                  {selectedNode?.data?.furtherReading?.map((reading) => (
+                    <li key={reading.title} className="last:mb-0">
+                      <Link href={reading.url}>{reading.title}</Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           </div>
         </PopoverContent>
       </Popover>

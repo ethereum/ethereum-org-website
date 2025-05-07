@@ -11,6 +11,19 @@ const purgeNodes: Node[] = [
       track: "Verge",
       sublabel: "Verkle trees",
       bottomNode: true,
+      description: ["TODO: Add description", "TODO: Add description"],
+      releaseDate: "TODO",
+      benefits: ["TODO: Add benefits", "TODO: Add benefits"],
+      furtherReading: [
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+      ],
     },
   },
   {
@@ -35,6 +48,21 @@ const purgeNodes: Node[] = [
     data: {
       label: "Ban SELF-DESTRUCT",
       track: "Purge",
+      description: ["TODO: Add description", "TODO: Add description"],
+      releaseDate: "TODO",
+      releaseLabel: "TODO",
+      releasePageURL: "/",
+      benefits: ["TODO: Add benefits", "TODO: Add benefits"],
+      furtherReading: [
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+      ],
     },
     parentId: "group-1",
     extent: "parent" as const,
@@ -47,6 +75,19 @@ const purgeNodes: Node[] = [
       label: "Simplify gas mechanics",
       track: "Purge",
       percentage: 25,
+      description: ["TODO: Add description", "TODO: Add description"],
+      releaseDate: "TODO",
+      benefits: ["TODO: Add benefits", "TODO: Add benefits"],
+      furtherReading: [
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+      ],
     },
     parentId: "group-1",
     extent: "parent" as const,
@@ -59,6 +100,19 @@ const purgeNodes: Node[] = [
       label: "Precompiles -> EVM impls",
       track: "Purge",
       percentage: 25,
+      description: ["TODO: Add description", "TODO: Add description"],
+      releaseDate: "TODO",
+      benefits: ["TODO: Add benefits", "TODO: Add benefits"],
+      furtherReading: [
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+      ],
     },
     parentId: "group-1",
     extent: "parent" as const,
@@ -71,6 +125,21 @@ const purgeNodes: Node[] = [
       label: "EIP-4844 specification",
       track: "Purge",
       rightNode: true,
+      description: ["TODO: Add description", "TODO: Add description"],
+      releaseDate: "TODO",
+      releaseLabel: "TODO",
+      releasePageURL: "/",
+      benefits: ["TODO: Add benefits", "TODO: Add benefits"],
+      furtherReading: [
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+      ],
     },
   },
   {
@@ -83,6 +152,19 @@ const purgeNodes: Node[] = [
       leftNode: true,
       rightNode: true,
       percentage: 80,
+      description: ["TODO: Add description", "TODO: Add description"],
+      releaseDate: "TODO",
+      benefits: ["TODO: Add benefits", "TODO: Add benefits"],
+      furtherReading: [
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+      ],
     },
   },
   {
@@ -94,6 +176,19 @@ const purgeNodes: Node[] = [
       track: "Purge",
       leftNode: true,
       bottomNode: true,
+      description: ["TODO: Add description", "TODO: Add description"],
+      releaseDate: "TODO",
+      benefits: ["TODO: Add benefits", "TODO: Add benefits"],
+      furtherReading: [
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+      ],
     },
   },
   {
@@ -104,6 +199,21 @@ const purgeNodes: Node[] = [
       label: "P2P history (eg. Portal)",
       track: "Purge",
       rightNode: true,
+      description: ["TODO: Add description", "TODO: Add description"],
+      releaseDate: "TODO",
+      releaseLabel: "TODO",
+      releasePageURL: "/",
+      benefits: ["TODO: Add benefits", "TODO: Add benefits"],
+      furtherReading: [
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+      ],
     },
   },
   {
@@ -114,6 +224,21 @@ const purgeNodes: Node[] = [
       label: "Beacon chain fast sync",
       track: "Purge",
       rightNode: true,
+      description: ["TODO: Add description", "TODO: Add description"],
+      releaseDate: "TODO",
+      releaseLabel: "TODO",
+      releasePageURL: "/",
+      benefits: ["TODO: Add benefits", "TODO: Add benefits"],
+      furtherReading: [
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+      ],
     },
   },
   {
@@ -123,6 +248,21 @@ const purgeNodes: Node[] = [
     data: {
       label: "Eliminate most gas refunds",
       track: "Purge",
+      description: ["TODO: Add description", "TODO: Add description"],
+      releaseDate: "TODO",
+      releaseLabel: "TODO",
+      releasePageURL: "/",
+      benefits: ["TODO: Add benefits", "TODO: Add benefits"],
+      furtherReading: [
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+      ],
     },
   },
   {
@@ -134,6 +274,19 @@ const purgeNodes: Node[] = [
       track: "Splurge",
       sublabel: "Endgame EVM",
       topNode: true,
+      description: ["TODO: Add description", "TODO: Add description"],
+      releaseDate: "TODO",
+      benefits: ["TODO: Add benefits", "TODO: Add benefits"],
+      furtherReading: [
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+      ],
     },
   },
   {
@@ -145,6 +298,19 @@ const purgeNodes: Node[] = [
       track: "Purge",
       rightNode: true,
       percentage: 20,
+      description: ["TODO: Add description", "TODO: Add description"],
+      releaseDate: "TODO",
+      benefits: ["TODO: Add benefits", "TODO: Add benefits"],
+      furtherReading: [
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+      ],
     },
   },
   {
@@ -156,6 +322,19 @@ const purgeNodes: Node[] = [
       track: "Purge",
       leftNode: true,
       percentage: 20,
+      description: ["TODO: Add description", "TODO: Add description"],
+      releaseDate: "TODO",
+      benefits: ["TODO: Add benefits", "TODO: Add benefits"],
+      furtherReading: [
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+      ],
     },
   },
   {
@@ -166,6 +345,19 @@ const purgeNodes: Node[] = [
       label: "LOG reform",
       track: "Purge",
       percentage: 20,
+      description: ["TODO: Add description", "TODO: Add description"],
+      releaseDate: "TODO",
+      benefits: ["TODO: Add benefits", "TODO: Add benefits"],
+      furtherReading: [
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+      ],
     },
   },
   {
@@ -177,6 +369,19 @@ const purgeNodes: Node[] = [
       track: "Purge",
       rightNode: true,
       percentage: 20,
+      description: ["TODO: Add description", "TODO: Add description"],
+      releaseDate: "TODO",
+      benefits: ["TODO: Add benefits", "TODO: Add benefits"],
+      furtherReading: [
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+      ],
     },
   },
   {
@@ -188,6 +393,19 @@ const purgeNodes: Node[] = [
       track: "Purge",
       leftNode: true,
       percentage: 20,
+      description: ["TODO: Add description", "TODO: Add description"],
+      releaseDate: "TODO",
+      benefits: ["TODO: Add benefits", "TODO: Add benefits"],
+      furtherReading: [
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+      ],
     },
   },
 ]

@@ -10,6 +10,21 @@ const surgeNodes: Node[] = [
       label: "EIP-4844 specification",
       track: "Surge",
       rightNode: true,
+      description: ["TODO: Add description", "TODO: Add description"],
+      releaseDate: "TODO",
+      releaseLabel: "TODO",
+      releasePageURL: "/",
+      benefits: ["TODO: Add benefits", "TODO: Add benefits"],
+      furtherReading: [
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+      ],
     },
   },
   {
@@ -21,6 +36,21 @@ const surgeNodes: Node[] = [
       track: "Surge",
       leftNode: true,
       rightNode: true,
+      description: ["TODO: Add description", "TODO: Add description"],
+      releaseDate: "TODO",
+      releaseLabel: "TODO",
+      releasePageURL: "/",
+      benefits: ["TODO: Add benefits", "TODO: Add benefits"],
+      furtherReading: [
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+      ],
     },
   },
   {
@@ -32,6 +62,21 @@ const surgeNodes: Node[] = [
       track: "Surge",
       leftNode: true,
       bottomNode: true,
+      description: ["TODO: Add description", "TODO: Add description"],
+      releaseDate: "TODO",
+      releaseLabel: "TODO",
+      releasePageURL: "/",
+      benefits: ["TODO: Add benefits", "TODO: Add benefits"],
+      furtherReading: [
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+      ],
     },
   },
   {
@@ -43,6 +88,19 @@ const surgeNodes: Node[] = [
       track: "Surge",
       rightNode: true,
       percentage: 65,
+      description: ["TODO: Add description", "TODO: Add description"],
+      releaseDate: "TODO",
+      benefits: ["TODO: Add benefits", "TODO: Add benefits"],
+      furtherReading: [
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+      ],
     },
   },
   {
@@ -54,6 +112,19 @@ const surgeNodes: Node[] = [
       track: "Surge",
       rightNode: true,
       percentage: 25,
+      description: ["TODO: Add description", "TODO: Add description"],
+      releaseDate: "TODO",
+      benefits: ["TODO: Add benefits", "TODO: Add benefits"],
+      furtherReading: [
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+      ],
     },
   },
   {
@@ -65,6 +136,19 @@ const surgeNodes: Node[] = [
       track: "Surge",
       leftNode: true,
       bottomNode: true,
+      description: ["TODO: Add description", "TODO: Add description"],
+      releaseDate: "TODO",
+      benefits: ["TODO: Add benefits", "TODO: Add benefits"],
+      furtherReading: [
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+      ],
     },
   },
   {
@@ -74,6 +158,19 @@ const surgeNodes: Node[] = [
     data: {
       label: "Q-safe, no setup commitments",
       track: "Surge",
+      description: ["TODO: Add description", "TODO: Add description"],
+      releaseDate: "TODO",
+      benefits: ["TODO: Add benefits", "TODO: Add benefits"],
+      furtherReading: [
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+      ],
     },
   },
   {
@@ -84,6 +181,19 @@ const surgeNodes: Node[] = [
       label: "Improve cross-rollup standards + interop",
       track: "Surge",
       percentage: 25,
+      description: ["TODO: Add description", "TODO: Add description"],
+      releaseDate: "TODO",
+      benefits: ["TODO: Add benefits", "TODO: Add benefits"],
+      furtherReading: [
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+      ],
     },
   },
   {
@@ -96,6 +206,19 @@ const surgeNodes: Node[] = [
       track: "Surge",
       percentage: 65,
       rightNode: true,
+      description: ["TODO: Add description", "TODO: Add description"],
+      releaseDate: "TODO",
+      benefits: ["TODO: Add benefits", "TODO: Add benefits"],
+      furtherReading: [
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+      ],
     },
   },
   {
@@ -108,6 +231,19 @@ const surgeNodes: Node[] = [
       track: "Surge",
       percentage: 50,
       rightNode: true,
+      description: ["TODO: Add description", "TODO: Add description"],
+      releaseDate: "TODO",
+      benefits: ["TODO: Add benefits", "TODO: Add benefits"],
+      furtherReading: [
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+      ],
     },
   },
   {
@@ -119,6 +255,19 @@ const surgeNodes: Node[] = [
       sublabel: "SNARK for L1 EVM",
       track: "Verge",
       topNode: true,
+      description: ["TODO: Add description"],
+      releaseDate: "TODO",
+      benefits: ["TODO: Add benefits", "TODO: Add benefits"],
+      furtherReading: [
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+      ],
     },
   },
 ]

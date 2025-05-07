@@ -26,6 +26,19 @@ const splurgeNodes: Node[] = [
       label: "EOF",
       track: "Splurge",
       percentage: 90,
+      description: ["TODO: Add description", "TODO: Add description"],
+      releaseDate: "TODO",
+      benefits: ["TODO: Add benefits", "TODO: Add benefits"],
+      furtherReading: [
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+      ],
     },
     parentId: "group-1",
     extent: "parent" as const,
@@ -38,6 +51,19 @@ const splurgeNodes: Node[] = [
       label: "Big modular arithmetic",
       track: "Splurge",
       percentage: 75,
+      description: ["TODO: Add description", "TODO: Add description"],
+      releaseDate: "TODO",
+      benefits: ["TODO: Add benefits", "TODO: Add benefits"],
+      furtherReading: [
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+      ],
     },
     parentId: "group-1",
     extent: "parent" as const,
@@ -50,6 +76,19 @@ const splurgeNodes: Node[] = [
       label: "Futher EVM improvements",
       track: "Splurge",
       percentage: 30,
+      description: ["TODO: Add description", "TODO: Add description"],
+      releaseDate: "TODO",
+      benefits: ["TODO: Add benefits", "TODO: Add benefits"],
+      furtherReading: [
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+      ],
     },
     parentId: "group-1",
     extent: "parent" as const,
@@ -62,6 +101,19 @@ const splurgeNodes: Node[] = [
       label: "Endgame EVM",
       track: "Splurge",
       leftNode: true,
+      description: ["TODO: Add description", "TODO: Add description"],
+      releaseDate: "TODO",
+      benefits: ["TODO: Add benefits", "TODO: Add benefits"],
+      furtherReading: [
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+      ],
     },
   },
   {
@@ -89,6 +141,21 @@ const splurgeNodes: Node[] = [
       label: "ERC-4337 rollout",
       track: "Splurge",
       rightNode: true,
+      description: ["TODO: Add description", "TODO: Add description"],
+      releaseDate: "TODO",
+      releaseLabel: "TODO",
+      releasePageURL: "/",
+      benefits: ["TODO: Add benefits", "TODO: Add benefits"],
+      furtherReading: [
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+      ],
     },
     parentId: "group-2",
     extent: "parent" as const,
@@ -102,6 +169,19 @@ const splurgeNodes: Node[] = [
       track: "Splurge",
       leftNode: true,
       rightNode: true,
+      description: ["TODO: Add description", "TODO: Add description"],
+      releaseDate: "TODO",
+      benefits: ["TODO: Add benefits", "TODO: Add benefits"],
+      furtherReading: [
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+      ],
     },
     parentId: "group-2",
     extent: "parent" as const,
@@ -115,6 +195,19 @@ const splurgeNodes: Node[] = [
       track: "Splurge",
       leftNode: true,
       rightNode: true,
+      description: ["TODO: Add description", "TODO: Add description"],
+      releaseDate: "TODO",
+      benefits: ["TODO: Add benefits", "TODO: Add benefits"],
+      furtherReading: [
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+      ],
     },
     parentId: "group-2",
     extent: "parent" as const,
@@ -127,6 +220,19 @@ const splurgeNodes: Node[] = [
       label: "Endgame account abstraction",
       track: "Splurge",
       leftNode: true,
+      description: ["TODO: Add description", "TODO: Add description"],
+      releaseDate: "TODO",
+      benefits: ["TODO: Add benefits", "TODO: Add benefits"],
+      furtherReading: [
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+      ],
     },
   },
   {
@@ -137,6 +243,21 @@ const splurgeNodes: Node[] = [
       label: "EIP-4337 specification",
       track: "Splurge",
       rightNode: true,
+      description: ["TODO: Add description", "TODO: Add description"],
+      releaseDate: "TODO",
+      releaseLabel: "TODO",
+      releasePageURL: "/",
+      benefits: ["TODO: Add benefits", "TODO: Add benefits"],
+      furtherReading: [
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+      ],
     },
   },
   {
@@ -148,6 +269,19 @@ const splurgeNodes: Node[] = [
       track: "Splurge",
       leftNode: true,
       percentage: 30,
+      description: ["TODO: Add description", "TODO: Add description"],
+      releaseDate: "TODO",
+      benefits: ["TODO: Add benefits", "TODO: Add benefits"],
+      furtherReading: [
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+      ],
     },
   },
   {
@@ -158,6 +292,21 @@ const splurgeNodes: Node[] = [
       label: "EIP-1559",
       track: "Splurge",
       rightNode: true,
+      description: ["TODO: Add description", "TODO: Add description"],
+      releaseDate: "TODO",
+      releaseLabel: "TODO",
+      releasePageURL: "/",
+      benefits: ["TODO: Add benefits", "TODO: Add benefits"],
+      furtherReading: [
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+      ],
     },
   },
   {
@@ -168,6 +317,19 @@ const splurgeNodes: Node[] = [
       label: "Explore delay-encrypted mempools",
       track: "Splurge",
       percentage: 10,
+      description: ["TODO: Add description", "TODO: Add description"],
+      releaseDate: "TODO",
+      benefits: ["TODO: Add benefits", "TODO: Add benefits"],
+      furtherReading: [
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+      ],
     },
   },
   {
@@ -178,6 +340,19 @@ const splurgeNodes: Node[] = [
       label: "VDFs",
       track: "Splurge",
       percentage: 30,
+      description: ["TODO: Add description", "TODO: Add description"],
+      releaseDate: "TODO",
+      benefits: ["TODO: Add benefits", "TODO: Add benefits"],
+      furtherReading: [
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+      ],
     },
   },
   {
@@ -188,6 +363,19 @@ const splurgeNodes: Node[] = [
       label: "Explore deep-crypto (eg. obfuscation)",
       track: "Splurge",
       percentage: 10,
+      description: ["TODO: Add description", "TODO: Add description"],
+      releaseDate: "TODO",
+      benefits: ["TODO: Add benefits", "TODO: Add benefits"],
+      furtherReading: [
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+      ],
     },
   },
 ]

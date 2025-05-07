@@ -40,6 +40,21 @@ const scourgeNodes: Node[] = [
       label: "Extra-protocol MEV markets",
       track: "Scourge",
       rightNode: true,
+      description: ["TODO: Add description", "TODO: Add description"],
+      releaseDate: "TODO",
+      releaseLabel: "TODO",
+      releasePageURL: "/",
+      benefits: ["TODO: Add benefits", "TODO: Add benefits"],
+      furtherReading: [
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+      ],
     },
     parentId: "group-1",
     extent: "parent" as const,
@@ -54,6 +69,19 @@ const scourgeNodes: Node[] = [
       leftNode: true,
       rightNode: true,
       percentage: 50,
+      description: ["TODO: Add description", "TODO: Add description"],
+      releaseDate: "TODO",
+      benefits: ["TODO: Add benefits", "TODO: Add benefits"],
+      furtherReading: [
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+      ],
     },
     parentId: "group-1",
     extent: "parent" as const,
@@ -67,6 +95,19 @@ const scourgeNodes: Node[] = [
       track: "Scourge",
       rightNode: true,
       percentage: 90,
+      description: ["TODO: Add description", "TODO: Add description"],
+      releaseDate: "TODO",
+      benefits: ["TODO: Add benefits", "TODO: Add benefits"],
+      furtherReading: [
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+      ],
     },
     parentId: "group-1",
     extent: "parent" as const,
@@ -81,6 +122,19 @@ const scourgeNodes: Node[] = [
       leftNode: true,
       rightNode: true,
       percentage: 30,
+      description: ["TODO: Add description", "TODO: Add description"],
+      releaseDate: "TODO",
+      benefits: ["TODO: Add benefits", "TODO: Add benefits"],
+      furtherReading: [
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+      ],
     },
     parentId: "group-1",
     extent: "parent" as const,
@@ -94,6 +148,19 @@ const scourgeNodes: Node[] = [
       track: "Scourge",
       rightNode: true,
       percentage: 20,
+      description: ["TODO: Add description", "TODO: Add description"],
+      releaseDate: "TODO",
+      benefits: ["TODO: Add benefits", "TODO: Add benefits"],
+      furtherReading: [
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+      ],
     },
     parentId: "group-1",
     extent: "parent" as const,
@@ -107,6 +174,19 @@ const scourgeNodes: Node[] = [
       track: "Scourge",
       rightNode: true,
       percentage: 20,
+      description: ["TODO: Add description", "TODO: Add description"],
+      releaseDate: "TODO",
+      benefits: ["TODO: Add benefits", "TODO: Add benefits"],
+      furtherReading: [
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+      ],
     },
     parentId: "group-1",
     extent: "parent" as const,
@@ -120,6 +200,19 @@ const scourgeNodes: Node[] = [
       track: "Scourge",
       leftNode: true,
       percentage: 20,
+      description: ["TODO: Add description", "TODO: Add description"],
+      releaseDate: "TODO",
+      benefits: ["TODO: Add benefits", "TODO: Add benefits"],
+      furtherReading: [
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+      ],
     },
     parentId: "group-1",
     extent: "parent" as const,
@@ -132,6 +225,19 @@ const scourgeNodes: Node[] = [
       label: "App-layer MEV minimization",
       track: "Scourge",
       percentage: 20,
+      description: ["TODO: Add description", "TODO: Add description"],
+      releaseDate: "TODO",
+      benefits: ["TODO: Add benefits", "TODO: Add benefits"],
+      furtherReading: [
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+      ],
     },
     parentId: "group-1",
     extent: "parent" as const,
@@ -144,6 +250,19 @@ const scourgeNodes: Node[] = [
       label: "Explore pre-confirmations",
       track: "Scourge",
       percentage: 20,
+      description: ["TODO: Add description", "TODO: Add description"],
+      releaseDate: "TODO",
+      benefits: ["TODO: Add benefits", "TODO: Add benefits"],
+      furtherReading: [
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+      ],
     },
     parentId: "group-1",
     extent: "parent" as const,
@@ -155,6 +274,19 @@ const scourgeNodes: Node[] = [
     data: {
       label: "Raise max effective balance",
       track: "Scourge",
+      description: ["TODO: Add description", "TODO: Add description"],
+      releaseDate: "TODO",
+      benefits: ["TODO: Add benefits", "TODO: Add benefits"],
+      furtherReading: [
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+      ],
     },
     parentId: "group-2",
     extent: "parent" as const,
@@ -167,6 +299,19 @@ const scourgeNodes: Node[] = [
       label: "Improve node operator usability",
       track: "Scourge",
       percentage: 80,
+      description: ["TODO: Add description", "TODO: Add description"],
+      releaseDate: "TODO",
+      benefits: ["TODO: Add benefits", "TODO: Add benefits"],
+      furtherReading: [
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+      ],
     },
     parentId: "group-2",
     extent: "parent" as const,
@@ -179,6 +324,19 @@ const scourgeNodes: Node[] = [
       label: "Explore total stake capping",
       track: "Scourge",
       percentage: 20,
+      description: ["TODO: Add description", "TODO: Add description"],
+      releaseDate: "TODO",
+      benefits: ["TODO: Add benefits", "TODO: Add benefits"],
+      furtherReading: [
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+      ],
     },
     parentId: "group-2",
     extent: "parent" as const,
@@ -191,6 +349,19 @@ const scourgeNodes: Node[] = [
       label: "Explore solutions to liquid staking centralization",
       track: "Scourge",
       percentage: 60,
+      description: ["TODO: Add description", "TODO: Add description"],
+      releaseDate: "TODO",
+      benefits: ["TODO: Add benefits", "TODO: Add benefits"],
+      furtherReading: [
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+        {
+          title: "TODO: Add title",
+          url: "/",
+        },
+      ],
     },
     parentId: "group-2",
     extent: "parent" as const,
