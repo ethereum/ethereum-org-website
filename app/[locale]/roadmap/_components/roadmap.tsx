@@ -29,6 +29,7 @@ import { useTranslation } from "@/hooks/useTranslation"
 import ethBlocksImage from "@/public/images/developers-eth-blocks.png"
 import communityHeroImg from "@/public/images/heroes/community-hero.png"
 import roadmapHeroImg from "@/public/images/heroes/roadmap-hub-hero.jpg"
+import roadmapTracksImage from "@/public/images/roadmap/roadmap-tracks-image.png"
 
 const RoadmapPage = () => {
   const { t } = useTranslation("page-roadmap")
@@ -162,7 +163,7 @@ const RoadmapPage = () => {
             {changesComingItems.map((item) => (
               <div
                 key={item.title}
-                className="bg-roadmap-card-gradient flex h-full flex-col gap-4 rounded-3xl border p-6"
+                className="flex h-full flex-col gap-4 rounded-3xl border bg-card-gradient p-6"
               >
                 <div className="flex flex-row items-center justify-between gap-4">
                   <h3 className="m-0">{item.title}</h3>
@@ -176,6 +177,36 @@ const RoadmapPage = () => {
                 </ButtonLink>
               </div>
             ))}
+          </div>
+        </div>
+
+        <div className="flex w-full px-8 py-4">
+          <div className="flex w-full flex-col overflow-hidden rounded-3xl border bg-card-gradient lg:flex-row-reverse">
+            <div className="relative flex max-h-[300px] min-h-[250px] flex-1">
+              <Image
+                src={roadmapTracksImage}
+                alt="Ethereum roadmap"
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background/90 lg:bg-gradient-to-l" />
+            </div>
+            <div className="z-10 -mt-10 flex flex-col justify-center gap-4 p-8 lg:mt-0 lg:flex-1">
+              <h3>Explore Ethereum&apos;s roadmap</h3>
+              <p>
+                Ethereum&apos;s future is shaped by everyone, not just one
+                person.
+              </p>
+              <p>
+                In 2022, Vitalik Buterin shared a vision for what could come
+                next. Today, developers, researchers, and the community continue
+                to evolve Ethereum with their own ideas and proposals.
+              </p>
+              <div className="flex w-full lg:w-fit">
+                <ButtonLink href="/roadmap/tracks">
+                  View the progress
+                </ButtonLink>
+              </div>
+            </div>
           </div>
         </div>
 
