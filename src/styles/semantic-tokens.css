@@ -85,6 +85,10 @@
       #000000 69.77%
     );
 
+    --card-gradient: linear-gradient(123deg, rgba(255, 255, 255, 0.20) 58.99%, rgba(174, 110, 203, 0.13) 104.04%);
+    --card-gradient-secondary: linear-gradient(95deg, rgba(211, 145, 242, 0.12) 0%, rgba(159, 43, 212, 0.12) 102.78%);
+    --card-gradient-secondary-hover: linear-gradient(95deg, rgba(211, 145, 242, 0.2) 0%, rgba(159, 43, 212, 0.2) 102.78%);
+
     /* Shadows */
     --shadow-color-a: hsla(var(--purple-800), 0.02);
     --shadow-color-b: hsla(var(--red-800), 0.04);
@@ -197,6 +201,8 @@
       #8476d9 49.78%,
       #8db4ff 69.77%
     );
+
+    --roadmap-card-gradient: linear-gradient(123deg, rgba(34, 34, 34, 0.20) 40.53%, rgba(174, 110, 203, 0.13) 104.05%);
 
     /* Shadows (dark mode adjustments) */
     --shadow-color: hsla(var(--white), 0.04);
