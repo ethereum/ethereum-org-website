@@ -158,6 +158,36 @@ const RoadmapTracksPage = () => {
     },
   }
 
+  const progressBar = (track) => {
+    const nodes = track.nodes.nodes.filter(
+      (node) =>
+        node.type !== "track" &&
+        node.type !== "group" &&
+        node.type !== "featureResearch"
+    )
+    const completionPercentage =
+      nodes.reduce((acc, node) => {
+        if (node.type.includes("Shipped")) {
+          return acc + 100
+        }
+        if (node.type.includes("Scheduled")) {
+          return acc + 100
+        }
+        if (node.type.includes("Research")) {
+          return acc + node.data.percentage
+        }
+        return acc
+      }, 0) / nodes.length
+
+    return {
+      percentage: Math.round(completionPercentage),
+      textColor: completionPercentage >= 50 ? "text-success" : "text-warning",
+      backgroundColor:
+        completionPercentage >= 50 ? "bg-success/20" : "bg-warning/20",
+      progressColor: completionPercentage >= 50 ? "bg-success" : "bg-warning",
+    }
+  }
+
   return (
     <MainArticle className="relative flex flex-col">
       <BannerNotification shouldShow>
@@ -210,96 +240,128 @@ const RoadmapTracksPage = () => {
           onValueChange={setOpenItems}
           className="flex w-full flex-col items-start gap-4 px-0"
         >
-          {tracks.map(({ key, icon, contentData }) => (
-            <AccordionItem
-              key={key}
-              id={key}
-              value={key}
-              className="flex w-full scroll-mt-40 flex-col items-start rounded-2xl border bg-background px-0 shadow-lg hover:bg-background-highlight"
-            >
-              <AccordionTrigger
-                hideIcon
-                className="w-full flex-col items-start gap-3 rounded-2xl hover:!text-inherit [&[data-state=open]]:!bg-transparent [&[data-state=open]]:!text-inherit [&[data-state=open]]:hover:!bg-background-highlight [&]:!p-4 [&]:hover:!bg-background-highlight sm:[&]:!p-6"
+          {tracks.map(({ key, icon, contentData }) => {
+            const progressData = progressBar(contentData)
+            return (
+              <AccordionItem
+                key={key}
+                id={key}
+                value={key}
+                className="flex w-full scroll-mt-40 flex-col items-start rounded-2xl border bg-background px-0 shadow-lg hover:bg-background-highlight"
               >
-                <div className="flex flex-row items-center gap-3">
-                  <div className="box-border flex items-center justify-center rounded-2xl border bg-background-highlight p-2">
-                    <span className="flex aspect-square h-9 w-9 items-center justify-center lg:h-10 lg:w-10">
-                      {cloneElement(icon as React.ReactElement, {
-                        className: "w-8 h-8",
-                        style: { overflow: "visible" },
-                      })}
-                    </span>
-                  </div>
-                  <h2>{contentData.title}</h2>
-                </div>
-                <div className="flex w-full flex-col justify-between gap-4 lg:flex-row">
-                  <div className="flex flex-row gap-8">
-                    <div className="w-full text-start lg:w-[360px]">
-                      <p className="font-bold">Goals:</p>
-                      <p>{contentData.goalDescription}</p>
+                <AccordionTrigger
+                  hideIcon
+                  className="w-full flex-col items-start gap-3 rounded-2xl hover:!text-inherit [&[data-state=open]]:!bg-transparent [&[data-state=open]]:!text-inherit [&[data-state=open]]:hover:!bg-background-highlight [&]:!p-4 [&]:hover:!bg-background-highlight sm:[&]:!p-6"
+                >
+                  <div className="flex flex-row items-center gap-3">
+                    <div className="box-border flex items-center justify-center rounded-2xl border bg-background-highlight p-2">
+                      <span className="flex aspect-square h-9 w-9 items-center justify-center lg:h-10 lg:w-10">
+                        {cloneElement(icon as React.ReactElement, {
+                          className: "w-8 h-8",
+                          style: { overflow: "visible" },
+                        })}
+                      </span>
                     </div>
-                    <div className="hidden flex-col gap-2 text-start lg:flex">
-                      <p className="font-bold">Benefits:</p>
-                      <div className="flex flex-col gap-2">
-                        {contentData.benefits.map((benefit) => (
-                          <div
-                            key={benefit.title}
-                            className="flex flex-row items-center gap-2 text-primary"
-                          >
-                            <div className="flex items-center justify-center rounded-full border p-1">
-                              <span className="flex h-[15px] w-[15px]">
-                                {cloneElement(
-                                  benefit.icon as React.ReactElement,
-                                  {
-                                    className: "w-full h-full",
-                                  }
-                                )}
-                              </span>
+                    <h2>{contentData.title}</h2>
+                  </div>
+                  <div className="flex w-full flex-col justify-between gap-4 lg:flex-row">
+                    <div className="flex flex-row gap-8">
+                      <div className="w-full text-start lg:w-[360px]">
+                        <p className="font-bold">Goals:</p>
+                        <p>{contentData.goalDescription}</p>
+                      </div>
+                      <div className="hidden flex-col gap-2 text-start lg:flex">
+                        <p className="font-bold">Benefits:</p>
+                        <div className="flex flex-col gap-2">
+                          {contentData.benefits.map((benefit) => (
+                            <div
+                              key={benefit.title}
+                              className="flex flex-row items-center gap-2 text-primary"
+                            >
+                              <div className="flex items-center justify-center rounded-full border p-1">
+                                <span className="flex h-[15px] w-[15px]">
+                                  {cloneElement(
+                                    benefit.icon as React.ReactElement,
+                                    {
+                                      className: "w-full h-full",
+                                    }
+                                  )}
+                                </span>
+                              </div>
+                              <span>{benefit.title}</span>
                             </div>
-                            <span>{benefit.title}</span>
-                          </div>
-                        ))}
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                    <hr className="flex lg:hidden" />
+                    <div className="flex items-start">
+                      <div className="min-w-[98px] rounded-full border border-primary px-4 py-2 text-primary">
+                        <span>
+                          {openItems.includes(key) ? "CLOSE -" : "OPEN +"}
+                        </span>
                       </div>
                     </div>
                   </div>
-                  <div className="flex items-start">
-                    <div className="min-w-[98px] rounded-full border border-primary px-4 py-2 text-primary">
-                      <span>
-                        {openItems.includes(key) ? "CLOSE -" : "OPEN +"}
-                      </span>
+                  <div className="flex w-full flex-col items-center gap-2 text-start lg:flex-row">
+                    <div className="flex w-full text-start lg:w-fit">
+                      <p
+                        className={cn(
+                          progressData.textColor,
+                          "whitespace-nowrap text-start"
+                        )}
+                      >
+                        {progressData.percentage}% completed
+                      </p>
+                    </div>
+                    <div
+                      className={cn(
+                        progressData.backgroundColor,
+                        "relative h-3 w-full rounded-full"
+                      )}
+                    >
+                      <div
+                        className={cn(
+                          progressData.progressColor,
+                          "absolute left-0 top-0 h-full rounded-full"
+                        )}
+                        style={{
+                          width: `${progressData.percentage}%`,
+                        }}
+                      />
                     </div>
                   </div>
-                </div>
-              </AccordionTrigger>
-              <AccordionContent className="!pt-0">
-                <div className="h-[400px] w-full overflow-hidden rounded-2xl border bg-background">
-                  <ReactFlow
-                    nodes={contentData.nodes.nodes}
-                    edges={contentData.nodes.edges}
-                    preventScrolling={false}
-                    nodeTypes={nodeTypes}
-                    fitView
-                    nodesDraggable={false}
-                    nodesConnectable={false}
-                    panOnDrag={true}
-                    proOptions={{ hideAttribution: true }}
-                    onNodeClick={(_, node) => {
-                      if (node.type === "group") return
+                </AccordionTrigger>
+                <AccordionContent className="!pt-0">
+                  <div className="h-[400px] w-full overflow-hidden rounded-2xl border bg-background">
+                    <ReactFlow
+                      nodes={contentData.nodes.nodes}
+                      edges={contentData.nodes.edges}
+                      preventScrolling={false}
+                      nodeTypes={nodeTypes}
+                      fitView
+                      nodesDraggable={false}
+                      nodesConnectable={false}
+                      panOnDrag={true}
+                      proOptions={{ hideAttribution: true }}
+                      onNodeClick={(_, node) => {
+                        if (node.type === "group") return
 
-                      if (isEqual(node, selectedNode)) {
-                        setSelectedNode(null)
-                      } else {
-                        setSelectedNode({
-                          ...node,
-                          data: node.data as NodeData,
-                        })
-                      }
-                    }}
-                  />
-                </div>
-              </AccordionContent>
-            </AccordionItem>
-          ))}
+                        if (isEqual(node, selectedNode)) {
+                          setSelectedNode(null)
+                        } else {
+                          setSelectedNode({
+                            ...node,
+                            data: node.data as NodeData,
+                          })
+                        }
+                      }}
+                    />
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
+            )
+          })}
         </Accordion>
       </div>
 
