@@ -162,7 +162,7 @@ sidebarDepth: 2
 ##### सहमति ग्राहक
 
 - [लाइटहाउस](https://github.com/sigp/lighthouse/releases/latest)
-- [Lodestar](https://chainsafe.github.io/lodestar/install/source/) (एक पहले से तैयार बाइनरी, केवल एक डॉकर इमेज प्रदान नहीं करता है या उसे स्रोत से बनाया जा सकता है)
+- [Lodestar](https://chainsafe.github.io/lodestar/run/getting-started/installation#build-from-source/) (एक पहले से तैयार बाइनरी, केवल एक डॉकर इमेज प्रदान नहीं करता है या उसे स्रोत से बनाया जा सकता है)
 - [निम्बस](https://github.com/status-im/nimbus-eth2/releases/latest)
 - [प्रिज़्म](https://github.com/prysmaticlabs/prysm/releases/latest)
 - [टेकु](https://github.com/ConsenSys/teku/releases)
@@ -256,7 +256,7 @@ Besu में एक लॉन्चर विकल्प भी आता ह
 besu --Xlauncher
 ```
 
-[Besu का प्रलेखन](https://besu.hyperledger.org/en/latest/HowTo/Get-Started/Starting-node/) अतिरिक्त विकल्प और कॉन्फ़िगरेशन विवरण शामिल करता है।
+[Besu का प्रलेखन](https://besu.hyperledger.org/public-networks/get-started/start-node/) अतिरिक्त विकल्प और कॉन्फ़िगरेशन विवरण शामिल करता है।
 
 ##### Erigon चलाना
 
@@ -288,7 +288,7 @@ geth --mainnet \
 
 ##### Nethermind चलाना
 
-Nethermind विभिन्न [इंस्टॉलेशन विकल्प](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/getting-started) प्रदान करता है। पैकेज में विभिन्न बाइनरी आते हैं, जिसमें एक निर्देशित सेटअप के साथ एक लॉन्चर शामिल है, जो आपको कॉन्फ़िगरेशन को इंटरैक्टिव रूप से बनाने में मदद करेगा। वैकल्पिक रूप से, आप रनर पा सकते हैं जो स्वयं एक्जीक्यूटेबल है और आप इसे कॉन्फ़िग ध्वजों के साथ चला सकते हैं। JSON-RPC डिफ़ॉल्ट रूप से सक्षम है।
+Nethermind विभिन्न [इंस्टॉलेशन विकल्प](https://docs.nethermind.io/get-started/installing-nethermind) प्रदान करता है। पैकेज में विभिन्न बाइनरी आते हैं, जिसमें एक निर्देशित सेटअप के साथ एक लॉन्चर शामिल है, जो आपको कॉन्फ़िगरेशन को इंटरैक्टिव रूप से बनाने में मदद करेगा। वैकल्पिक रूप से, आप रनर पा सकते हैं जो स्वयं एक्जीक्यूटेबल है और आप इसे कॉन्फ़िग ध्वजों के साथ चला सकते हैं। JSON-RPC डिफ़ॉल्ट रूप से सक्षम है।
 
 ```sh
 Nethermind.Runner --config mainnet \
@@ -296,7 +296,7 @@ Nethermind.Runner --config mainnet \
     --JsonRpc.JwtSecretFile=/path/to/jwtsecret
 ```
 
-Nethermind दस्तावेज़, सहमति क्लाइंट के साथ Nethermind चलाने पर एक [पूर्ण मार्गदर्शिका](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/running-nethermind-post-merge) प्रदान करते हैं।
+Nethermind दस्तावेज़, सहमति क्लाइंट के साथ Nethermind चलाने पर एक [पूर्ण मार्गदर्शिका](https://docs.nethermind.io/first-steps-with-nethermind/running-nethermind-post-merge) प्रदान करते हैं।
 
 एक निष्पादन क्लाइंट अपने मुख्य कार्यों, चुने गए एंडपॉइंट्स को आरंभ करेगा और पीयर्स की खोज शुरू करेगा। पीयर्स की सफलतापूर्वक खोज के बाद, क्लाइंट सिंक्रनाइज़ेशन शुरू करता है। निष्पादन क्लाइंट, सहमति क्लाइंट से कनेक्शन की प्रतीक्षा करेगा। वर्तमान ब्लॉकचेन डेटा तब उपलब्ध होगा जब क्लाइंट वर्तमान स्थिति के साथ सफलतापूर्वक सिंक हो जाएगा।
 

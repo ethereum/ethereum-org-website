@@ -11,7 +11,7 @@ Contractele inteligente sunt publice pe Ethereum și pot fi considerate API-uri 
 
 ## Tutoriale corelate {#related-tutorials}
 
-- [Combinabilitatea contractului: elementele de bază ale dezvoltării contractelor inteligente Ethereum](https://blog.decentlabs.io/contract-composability-the-building-blocks-of-ethereum-smart-contract-development/)
+- [Combinabilitatea contractului: elementele de bază ale dezvoltării contractelor inteligente Ethereum](https://medium.com/decentlabs/contract-composability-the-building-blocks-of-ethereum-smart-contract-development-bdf3219ffeb9/)
 - [Lansează dezvoltarea frontend-ului aplicației dapp cu create-eth-app](/developers/tutorials/kickstart-your-dapp-frontend-development-with-create-eth-app/) _– O prezentare generală a modului de utilizare a create-eth-app pentru a crea aplicații cu contracte inteligente populare gata de funcţionare._
 
 ## Referințe suplimentare {#further-reading}

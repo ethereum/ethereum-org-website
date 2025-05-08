@@ -515,7 +515,7 @@ Si planea consultar a un oráculo en cadena precios de activos, considere el uso
 
 - **[Cyfrin:](https://cyfrin.io)** _Plataforma de seguridad web3 que incuba la seguridad criptográfica a través de productos y servicios de auditoría de contratos inteligentes._
 
-- **[ImmuneBytes](https://www.immunebytes.com//smart-contract-audit/)**: _empresa de seguridad en Web3 que ofrece auditorías de seguridad para sistemas de cadena de bloque mediante un equipo de auditores expertos y las mejores herramientas existentes._
+- **[ImmuneBytes](https://immunebytes.com/smart-contract-audit/)**: _empresa de seguridad en Web3 que ofrece auditorías de seguridad para sistemas de cadena de bloque mediante un equipo de auditores expertos y las mejores herramientas existentes._
 
 - **[Oxorio:](https://oxor.io/)** _Auditorías de contratos inteligentes y servicios de seguridad de cadena de bloques con experiencia en EVM, Solidity, ZK y tecnología de cadena cruzada para empresas criptográficas y proyectos DeFi._
 
