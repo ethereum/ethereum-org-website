@@ -172,7 +172,7 @@ const ReleaseCarousel = () => {
                                 ? index < findLatestReleaseIndex()
                                   ? "bg-primary"
                                   : "bg-primary-low-contrast"
-                                : "bg-transparent"
+                                : "border-2 border-dashed border-primary-low-contrast"
                             )}
                           />
                         </div>
@@ -181,7 +181,9 @@ const ReleaseCarousel = () => {
                             {release.releaseName}
                           </p>
                           <p className="font-mono text-sm text-body-medium">
-                            {formatDate(release.releaseDate)}
+                            {release.releaseDate === "Future"
+                              ? "Future"
+                              : formatDate(release.releaseDate)}
                           </p>
                         </div>
                       </div>
@@ -226,7 +228,9 @@ const ReleaseCarousel = () => {
                             {release.releaseName}
                           </h2>
                           <p className="text-md">
-                            {formatDate(release.releaseDate)}
+                            {release.releaseDate === "Future"
+                              ? "Future"
+                              : formatDate(release.releaseDate)}
                           </p>
                         </div>
 

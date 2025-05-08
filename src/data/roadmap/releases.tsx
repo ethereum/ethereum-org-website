@@ -6,6 +6,7 @@ import GuidesHubHeroImage from "@/public/images/heroes/guides-hub-hero.jpg"
 import Layer2HubHeroImage from "@/public/images/heroes/layer-2-hub-hero.jpg"
 import QuizzesHubHeroImage from "@/public/images/heroes/quizzes-hub-hero.png"
 import PectraImage from "@/public/images/roadmap/roadmap-pectra.png"
+import RoadmapNodeImage from "@/public/images/roadmap/roadmap-tracks-image.png"
 
 interface Release {
   image: StaticImageData
@@ -114,11 +115,14 @@ export const releasesData: Release[] = [
     releaseDate: "2025-05-07",
     content: (
       <div>
-        <p className="font-bold">Enhance EOA wallets with smart contract functionality</p>
+        <p className="font-bold">
+          Enhance EOA wallets with smart contract functionality
+        </p>
         <ul>
           <li>
             Users can set their address to be represented by a code of an
-            existing smart contract and gain benefits such as transaction batching, transaction fee sponsorship or better recovery mechanisms
+            existing smart contract and gain benefits such as transaction
+            batching, transaction fee sponsorship or better recovery mechanisms
           </li>
         </ul>
         <p className="font-bold">Increase the max effective balance</p>
@@ -186,15 +190,21 @@ export const releasesData: Release[] = [
 ]
 
 // TODO: Add future releases when implementing /roadmap/tracks
-// const futureRelease: Release = {
-//   image: CommunityHeroImage,
-//   releaseName: "Future releases",
-//   releaseDate: "Future",
-//   content: [],
-//   href: "https://eips.ethereum.org/EIPS/eip-7773",
-// }
+const futureRelease: Release = {
+  image: RoadmapNodeImage,
+  releaseName: "Future releases",
+  releaseDate: "Future",
+  content: (
+    <div>
+      <p>
+        Ethereum&apos;s roadmap continues to be developed, with more to come!
+      </p>
+    </div>
+  ),
+  href: "/roadmap/tracks",
+}
 
 export const releasesDataWithFuture: Release[] = [
   ...releasesData,
-  // futureRelease,
+  futureRelease,
 ]
