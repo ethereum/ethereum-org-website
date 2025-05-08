@@ -78,7 +78,7 @@ const FeatureScheduledNode = ({ data }: FeatureScheduledNodeProps) => {
           <p className="text-md font-bold">{data.label}</p>
         </div>
         <div className="rounded-full bg-warning px-2 py-1">
-          <p className="text-xs">SCHEDULED</p>
+          <p className="text-xs text-black">SCHEDULED</p>
         </div>
       </div>
     </>

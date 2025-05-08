@@ -49,7 +49,6 @@ import { useTracks } from "./useTracks"
 import "@xyflow/react/dist/style.css"
 
 import { useActiveHash } from "@/hooks/useActiveHash"
-import { useTranslation } from "@/hooks/useTranslation"
 
 type NodeData = {
   label?: string
@@ -73,7 +72,6 @@ type NodeData = {
 }
 
 const RoadmapTracksPage = () => {
-  const { t } = useTranslation("page-roadmap-tracks")
   const tracks = useTracks()
   const [openItems, setOpenItems] = useState<string[]>(() =>
     tracks.map(({ key }) => key)
@@ -206,15 +204,15 @@ const RoadmapTracksPage = () => {
       >
         <ControlButton
           onClick={() => zoomOut()}
-          className="rounded-full border border-border bg-background p-2 shadow hover:bg-background-highlight active:bg-background-highlight"
+          className="rounded-full !border-r-0 !bg-background-highlight p-2 !shadow-none hover:!bg-background-low active:!bg-background-low"
         >
-          <p className="text-sm text-body-medium">-</p>
+          <p className="text-sm !text-body-medium">-</p>
         </ControlButton>
         <ControlButton
           onClick={() => zoomIn()}
-          className="rounded-full border border-border bg-background p-2 shadow hover:bg-background-highlight active:bg-background-highlight"
+          className="rounded-full !border-r-0 !bg-background-highlight p-2 !shadow-none hover:!bg-background-low active:!bg-background-low"
         >
-          <p className="text-sm text-body-medium">+</p>
+          <p className="text-sm !text-body-medium">+</p>
         </ControlButton>
       </Controls>
     )
@@ -230,12 +228,12 @@ const RoadmapTracksPage = () => {
         breadcrumbs={{ slug: "roadmap/tracks", startDepth: 1 }}
       />
 
-      <div className="my-8 flex flex-col items-center pt-4 text-center md:top-6 md:px-2">
-        {t("page-roadmap-tracks-whats-on-this-page")}
+      <div className="mb-4 mt-8 flex flex-col items-center pt-4 text-center md:top-6 md:px-2">
+        View the tracks
       </div>
 
-      <div className="sticky top-1 z-sticky mb-8 flex flex-col items-center pb-4 text-center md:top-24 md:px-2">
-        <nav className="z-sticky mx-4 flex max-w-full gap-1 overflow-x-auto bg-background p-2 shadow md:max-w-[calc(100%-2rem)] md:rounded-2xl md:border md:p-0.5 md:shadow-lg">
+      <div className="sticky top-1 z-50 mb-8 flex flex-col items-center pb-4 text-center md:top-24 md:px-2">
+        <nav className="z-50 mx-4 flex max-w-full gap-1 overflow-x-auto bg-background p-2 shadow md:max-w-[calc(100%-2rem)] md:rounded-2xl md:border md:p-0.5 md:shadow-lg">
           {tracks.map(({ key, title, icon }) => (
             <ButtonLink
               key={key}
@@ -335,7 +333,7 @@ const RoadmapTracksPage = () => {
                       <p
                         className={cn(
                           progressData.textColor,
-                          "whitespace-nowrap text-start"
+                          "whitespace-nowrap text-start font-mono"
                         )}
                       >
                         {progressData.percentage}% completed

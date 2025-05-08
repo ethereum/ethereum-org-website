@@ -167,7 +167,7 @@ const RoadmapPage = () => {
               >
                 <div className="flex flex-row items-center justify-between gap-4">
                   <h3 className="m-0">{item.title}</h3>
-                  <div className="flex h-12 w-12 items-center justify-center">
+                  <div className="flex h-12 w-12 items-center justify-center text-primary">
                     {item.icon}
                   </div>
                 </div>
