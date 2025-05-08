@@ -311,6 +311,8 @@
   "nav-roadmap-options": "Roadmap Options",
   "nav-roadmap-options-alt": "Roadmap options dropdown menu",
   "nav-roadmap-overview-description": "The future of Ethereum",
+  "nav-roadmap-tracks-label": "Roadmap tracks",
+  "nav-roadmap-tracks-description": "Visualize Ethereum's roadmap in a more detailed way",
   "nav-roadmap-scaling": "Scaling",
   "nav-roadmap-scaling-description": "Network updates to further reduce transaction costs and speed",
   "nav-roadmap-scaling-label": "Cheaper transactions",

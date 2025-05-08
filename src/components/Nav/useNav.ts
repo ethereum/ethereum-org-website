@@ -428,6 +428,11 @@ export const useNav = () => {
               href: "/roadmap/",
             },
             {
+              label: t("nav-roadmap-tracks-label"),
+              description: t("nav-roadmap-tracks-description"),
+              href: "/roadmap/tracks/",
+            },
+            {
               label: t("nav-roadmap-security-label"),
               description: t("nav-roadmap-security-description"),
               href: "/roadmap/security/",
