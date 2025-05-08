@@ -1540,6 +1540,17 @@ const chains = [
     chain: "ETH",
   },
   {
+    name: "Animechain Mainnet",
+    infoURL: "https://www.anime.xyz",
+    chainId: 69000,
+    nativeCurrency: {
+      name: "Animecoin",
+      symbol: "ANIME",
+      decimals: 18,
+    },
+    chain: "ETH",
+  },
+  {
     name: "Condrieu",
     infoURL: "https://condrieu.ethdevops.io",
     chainId: 69420,
