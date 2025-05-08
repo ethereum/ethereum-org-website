@@ -232,7 +232,7 @@ const RoadmapTracksPage = () => {
         View the tracks
       </div>
 
-      <div className="sticky top-1 z-50 mb-8 flex flex-col items-center pb-4 text-center md:top-24 md:px-2">
+      <div className="sticky top-1 top-[70px] z-50 mb-8 flex flex-col items-center pb-4 text-center md:top-24 md:px-2">
         <nav className="z-50 mx-4 flex max-w-full gap-1 overflow-x-auto bg-background p-2 shadow md:max-w-[calc(100%-2rem)] md:rounded-2xl md:border md:p-0.5 md:shadow-lg">
           {tracks.map(({ key, title, icon }) => (
             <ButtonLink
@@ -391,13 +391,20 @@ const RoadmapTracksPage = () => {
         </Accordion>
       </div>
 
-      <Popover open={!!selectedNode}>
+      <Popover
+        open={!!selectedNode}
+        onOpenChange={(open) => {
+          if (!open) {
+            setSelectedNode(null)
+          }
+        }}
+      >
         <PopoverTrigger asChild>
           <div className="fixed right-4 top-24" />
         </PopoverTrigger>
         <PopoverContent
           className={cn(
-            "mt-0 max-h-[calc(100vh-8rem)] min-h-64 w-64 overflow-scroll rounded-2xl border p-0 shadow-lg sm:w-72 md:mt-16 md:w-96",
+            "mt-0 max-h-[calc(100vh-7rem)] min-h-64 w-64 overflow-scroll rounded-2xl border p-0 shadow-lg sm:w-72 md:w-96",
             popoverConfig[selectedNode?.type as keyof typeof popoverConfig]
               ?.border
           )}
@@ -407,12 +414,12 @@ const RoadmapTracksPage = () => {
         >
           <div
             className={cn(
-              "flex min-h-64 flex-col p-4 lg:p-8",
+              "flex flex-col p-4 lg:p-8",
               popoverConfig[selectedNode?.type as keyof typeof popoverConfig]
                 ?.background
             )}
           >
-            <div className="mb-2 flex flex-row justify-end">
+            <div className="h sticky top-4 z-10 mb-2 w-full bg-inherit text-end">
               <Button
                 variant="ghost"
                 className="text-body-medium"
