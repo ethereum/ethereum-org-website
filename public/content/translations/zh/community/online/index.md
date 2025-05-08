@@ -55,13 +55,14 @@ lang: zh
 <SocialListItem socialIcon="webpage"><Link href="https://gitter.im/ethereum/solidity">Solidity Gitter</Link> - 有关 Solidity 开发的聊天 (Gitter)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> - 有关 Solidity 开发的聊天 (Matrix)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://ethereum.stackexchange.com/">以太坊堆栈交易所</Link> *- 问答论坛*</SocialListItem>
-<SocialListItem socialIcon="webpage"><Link href="https://peeranha.io/">Peeranha</Link> *- 去中心化问答论坛*</SocialListItem>
+<SocialListItem socialIcon="webpage"><Link href="https://app.peera.ai/">Peera Community Forum</Link> *- 去中心化问答论坛*</SocialListItem>
 
-## YouTube 和 Twitter {#youtube-and-twitter}
+## YouTube 和 X（原 Twitter） {#youtube-and-twitter}
 
 <SocialListItem socialIcon="youtube"><Link href="https://www.youtube.com/c/EthereumFoundation">以太坊基金会</Link> - 及时了解以太坊基金会的最新动态</SocialListItem>
-<SocialListItem socialIcon="twitter"><Link href="https://twitter.com/ethereum">@ethereum</Link> -以太坊基金会官方账号</SocialListItem>
-<SocialListItem socialIcon="twitter"><Link href="https://twitter.com/ethdotorg">@ethdotorg</Link> - 为我们不断发展的全球社区构建的以太坊门户网站</SocialListItem>
+<SocialListItem socialIcon="twitter"><Link href="https://x.com/ethereum">@ethereum</Link> - 以太坊社区的主帐户</SocialListItem>
+<SocialListItem socialIcon="twitter"><Link href="https://x.com/ethereumfndn">@ethereumfndn</Link> - 以太坊基金会的官方帐户</SocialListItem>
+<SocialListItem socialIcon="twitter"><Link href="https://x.com/ethdotorg">@ethdotorg</Link> - 为我们不断发展的全球社区构建的以太坊门户网站</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://hive.one/c/ethereum?page=1">有影响力的以太坊 Twitter 帐户清单</Link></SocialListItem>
 
 <Divider />

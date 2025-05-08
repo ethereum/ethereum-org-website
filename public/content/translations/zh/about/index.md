@@ -90,9 +90,9 @@ ethereum.org 是一个面向以太坊社区的开源公共网站和教育资源�
 
 ## 产品路线图 {#roadmap}
 
-为了使我们的工作更易于了解，并促进更多的社区合作，ethereum.org 核心团队发布了一份季度目标路线图概览。
+为了使我们的工作更易于了解，并促进更多的社区合作，ethereum.org 核心团队发布了一份 [Shape Up（规划-构建）周期](https://www.productplan.com/glossary/shape-up-method/)路线图概览。
 
-[查看我们的 2024 年第 3 季度产品路线图](https://github.com/ethereum/ethereum-org-website/issues/13399)
+[查看我们的 2025 年第 1 周期产品路线图](https://github.com/ethereum/ethereum-org-website/issues/14726)
 
 **这看起来怎么样？**我们始终感谢为我们的路线图提供的反馈 - 如有改进之处，请告诉我们! 我们欢迎社区里的任何人提出想法和建议。
 

@@ -82,7 +82,7 @@ description: 使用 Crowdin 翻译 ethereum.org 的操作指南
 
 ### 联系我们 {#get-in-touch}
 
-还有其他问题吗？ 或者想与我们的团队和其他翻译人员合作？ 请在我们的 [ethereum.org Discord 服务器](/discord/)的 #translations 频道中发帖
+还有其他问题？ 或者想与我们的团队和其他翻译人员合作？ 请在我们的 [ethereum.org Discord 服务器](/discord/)的 #translations 频道中发帖
 
 也可以通过向 translations@ethereum.org 发送邮件联系我们
 

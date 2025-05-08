@@ -82,7 +82,7 @@ JSON-RPC 也不是轻客户端请求数据的理想选择，因为它必须要�
 
 如果一种客户端遇到问题或者出现漏洞，其他客户端能继续平稳运行，防止单点故障。 另外，多样化的客户端实现促进了创新和竞争，推动改进并降低生态系统内的单一作物风险。
 
-## 延伸阅读 {#futher-reading}
+## 延伸阅读 {#further-reading}
 
 - [门户网络（Piper Merriam 在 Devcon Bogota 上的讲解）](https://www.youtube.com/watch?v=0stc9jnQLXA)。
 - [门户网络 discord](https://discord.gg/CFFnmE7Hbs)
