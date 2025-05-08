@@ -60,7 +60,7 @@ A két nyilvános teszthálózat, amelyet a kliens fejlesztők jelenleg fenntart
 - [Coinbase Wallet csap | Sepolia](https://coinbase.com/faucets/ethereum-sepolia-faucet)
 - [Alchemy Sepolia csap](https://sepoliafaucet.com/)
 - [Infura Sepolia csap](https://www.infura.io/faucet)
-- [Chainstack Sepolia csap](https://faucet.chainstack.com/sepolia-faucet)
+- [Chainstack Sepolia csap](https://faucet.chainstack.com/sepolia-testnet-faucet)
 - [Ethereum-ökoszisztéma csap](https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia)
 
 #### Hoodi {#hoodi}

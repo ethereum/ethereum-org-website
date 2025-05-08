@@ -63,6 +63,7 @@ lang: el
 - [Chainstack Sepolia faucet](https://faucet.chainstack.com/sepolia-faucet)
 - [Ethereum Ecosystem faucet](https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia)
 
+
 #### Hoodi {#hoodi}
 
 Το Hoodi είναι ένα δοκιμαστικό δίκτυο για τη δοκιμή επικύρωσης και συμμετοχής. Το δίκτυο Hoodi είναι ανοιχτό για χρήστες που θέλουν να εκτελέσουν έναν επικυρωτή δοκιμαστικού δικτύου. Επομένως, οι συμμετέχοντες που επιθυμούν να δοκιμάσουν αναβαθμίσεις πρωτοκόλλου πριν από την ανάπτυξή τους στο κεντρικό δίκτυο θα πρέπει να χρησιμοποιούν το Hoodi.

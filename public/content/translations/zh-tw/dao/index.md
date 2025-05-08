@@ -92,7 +92,7 @@ summaryPoint3: 一個將資產投入特定事業的安全場所。
 
 ### 知名案例 {#law-example}
 
-[CityDAO](https://citydao.io) – CityDAO 透過懷俄明州去中心化自治組織的相關法律購買了黃石國家公園附近 40 英畝的地。
+[CityDAO](https://citizen.citydao.io/) – CityDAO 透過懷俄明州去中心化自治組織的相關法律購買了黃石國家公園附近 40 英畝的地。
 
 ## 去中心化自治組織成員 {#dao-membership}
 

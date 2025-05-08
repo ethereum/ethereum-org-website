@@ -60,7 +60,7 @@ lang: ru
 - [Кран кошелька Coinbase | Sepolia](https://coinbase.com/faucets/ethereum-sepolia-faucet)
 - [Кран Alchemy Sepolia](https://sepoliafaucet.com/)
 - [Кран Infura Sepolia](https://www.infura.io/faucet)
-- [Кран Chainstack Sepolia](https://faucet.chainstack.com/sepolia-faucet)
+- [Кран Chainstack Sepolia](https://faucet.chainstack.com/sepolia-testnet-faucet)
 - [Кран Ethereum Ecosystem](https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia)
 
 #### Hoodi {#hoodi}

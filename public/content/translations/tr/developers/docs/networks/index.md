@@ -60,7 +60,7 @@ Mevcut olarak istemci geliştiricilerin sürdürdüğü iki genel test ağı Sep
 - [Coinbase Cüzdanı Musluğu | Sepolia](https://coinbase.com/faucets/ethereum-sepolia-faucet)
 - [Alchemy Sepolia musluğu](https://sepoliafaucet.com/)
 - [Infura Sepolia Musluğu](https://www.infura.io/faucet)
-- [Chainstack Sepolia Musluğu](https://faucet.chainstack.com/sepolia-faucet)
+- [Chainstack Sepolia Musluğu](https://faucet.chainstack.com/sepolia-testnet-faucet)
 - [Ethereum Ekosistemi musluğu](https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia)
 
 #### Hoodi {#hoodi}

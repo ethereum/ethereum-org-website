@@ -60,7 +60,7 @@ Las dos redes públicas de prueba que los desarrolladores de clientes están man
 - [Faucet de cartera Coinbase | Sepolia](https://coinbase.com/faucets/ethereum-sepolia-faucet)
 - [Alchemy Sepolia faucet](https://sepoliafaucet.com/)
 - [Faucet Infura Sepolia](https://www.infura.io/faucet)
-- [Faucet Chainstack Sepolia](https://faucet.chainstack.com/sepolia-faucet)
+- [Faucet Chainstack Sepolia](https://faucet.chainstack.com/sepolia-testnet-faucet)
 - [Faucet del ecosistema Ethereum](https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia)
 
 #### Hoodi {#hoodi}

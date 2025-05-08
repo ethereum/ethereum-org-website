@@ -24,7 +24,7 @@ Se desideri visualizzare il codice sorgente completo:
 
 ## Creare un contratto ERC-20 {#creating-an-erc-20-contract}
 
-Prima di poter aggiungere la funzionalità della barriera di sicurezza, ci occorre un contratto ERC-20. In questo articolo utilizzeremo [la procedura guidata dei contratti di OpenZeppelin](https://docs.openzeppelin.com/contracts/4.x/wizard). Aprila in un altro browser e segui queste istruzioni:
+Prima di poter aggiungere la funzionalità della barriera di sicurezza, ci occorre un contratto ERC-20. In questo articolo utilizzeremo [la procedura guidata dei contratti di OpenZeppelin](https://docs.openzeppelin.com/contracts/5.x/wizard). Aprila in un altro browser e segui queste istruzioni:
 
 1. Seleziona **ERC20**.
 2. Inserisci queste impostazioni:
