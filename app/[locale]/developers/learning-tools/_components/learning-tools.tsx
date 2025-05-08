@@ -6,11 +6,12 @@ import shuffle from "lodash/shuffle"
 import { LearningTool } from "@/lib/types"
 
 import CalloutBanner from "@/components/CalloutBanner"
+import Emoji from "@/components/Emoji"
 import FeedbackCard from "@/components/FeedbackCard"
-import InfoBanner from "@/components/InfoBanner"
 import LearningToolsCardGrid from "@/components/LearningToolsCardGrid"
 import MainArticle from "@/components/MainArticle"
 import Translation from "@/components/Translation"
+import { Alert } from "@/components/ui/alert"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 
 import { cn } from "@/lib/utils/cn"
@@ -419,9 +420,10 @@ const LearningToolsPage = () => {
             <Translation id="page-developers-learning-tools:page-learning-tools-sandbox-desc" />
           </p>
           <LearningToolsCardGrid category={randomizedSandboxes} />
-          <InfoBanner emoji=":point_up:" shouldCenter>
+          <Alert variant="update" className="mx-auto max-w-[55rem]">
+            <Emoji text=":point_up:" className="text-5xl" />
             <Translation id="page-developers-learning-tools:page-learning-tools-remix-description-2" />
-          </InfoBanner>
+          </Alert>
         </StackContainer>
         <StackContainer>
           <SubtitleTwo>

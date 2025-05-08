@@ -10,11 +10,11 @@ import FeedbackCard from "@/components/FeedbackCard"
 import GhostCard from "@/components/GhostCard"
 import HorizontalCard from "@/components/HorizontalCard"
 import { Image } from "@/components/Image"
-import InfoBanner from "@/components/InfoBanner"
 import MainArticle from "@/components/MainArticle"
 import PageHero from "@/components/PageHero"
 import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import Translation from "@/components/Translation"
+import { Alert, AlertTitle } from "@/components/ui/alert"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Divider } from "@/components/ui/divider"
 import { Flex, FlexProps } from "@/components/ui/flex"
@@ -137,13 +137,18 @@ const GasPage = () => {
       <Content className="mb-16 mt-16 lg:mb-32">
         <Flex className="w-full flex-col items-center lg:flex-row lg:items-start">
           <div className="me-auto w-full flex-[60%] lg:me-2">
-            <InfoBanner className="mb-8" title={t("page-gas-summary-title")}>
-              <UnorderedList>
-                <ListItem>{t("page-gas-summary-item-1")}</ListItem>
-                <ListItem>{t("page-gas-summary-item-2")}</ListItem>
-                <ListItem>{t("page-gas-summary-item-3")}</ListItem>
-              </UnorderedList>
-            </InfoBanner>
+            <Alert variant="update" className="mb-8">
+              <div>
+                <AlertTitle className="mb-6">
+                  {t("page-gas-summary-title")}
+                </AlertTitle>
+                <UnorderedList>
+                  <ListItem>{t("page-gas-summary-item-1")}</ListItem>
+                  <ListItem>{t("page-gas-summary-item-2")}</ListItem>
+                  <ListItem>{t("page-gas-summary-item-3")}</ListItem>
+                </UnorderedList>
+              </div>
+            </Alert>
             <H2 className="mt-0" id="what-is-gas">
               {t("page-gas-what-are-gas-fees-header")}
             </H2>

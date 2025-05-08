@@ -22,7 +22,6 @@ import Emoji from "@/components/Emoji"
 import FeedbackCard from "@/components/FeedbackCard"
 import GhostCard from "@/components/GhostCard"
 import { Image } from "@/components/Image"
-import InfoBanner from "@/components/InfoBanner"
 import MainArticle from "@/components/MainArticle"
 import PageHero from "@/components/PageHero"
 import ProductCard from "@/components/ProductCard"
@@ -30,6 +29,7 @@ import ProductListComponent, {
   type ProductListProps,
 } from "@/components/ProductList"
 import Translation from "@/components/Translation"
+import { Alert } from "@/components/ui/alert"
 import { Button, ButtonLink, ButtonProps } from "@/components/ui/buttons/Button"
 import { Divider } from "@/components/ui/divider"
 import { Flex, FlexProps } from "@/components/ui/flex"
@@ -169,8 +169,8 @@ const StyledH3 = (props: ChildOnlyProp) => (
   <h3 className="mb-2 mt-6 text-xl font-bold" {...props} />
 )
 
-const StyledInfoBanner = (props: ComponentPropsWithRef<typeof InfoBanner>) => (
-  <InfoBanner className="lg:w-1/2" {...props} />
+const StyledAlert = (props: ComponentPropsWithRef<typeof Alert>) => (
+  <Alert className="lg:w-1/2" {...props} />
 )
 
 const Column = (props: ChildOnlyProp) => (
@@ -1153,10 +1153,12 @@ const DappsPage = () => {
                 </StyledH2>
                 <Subtitle>{t("page-dapps-finance-description")}</Subtitle>
               </Column>
-              <StyledInfoBanner isWarning>
-                <StyledH2>{t("page-dapps-warning-header")}</StyledH2>
-                {t("page-dapps-warning-message")}
-              </StyledInfoBanner>
+              <StyledAlert variant="warning">
+                <div>
+                  <StyledH2>{t("page-dapps-warning-header")}</StyledH2>
+                  {t("page-dapps-warning-message")}
+                </div>
+              </StyledAlert>
             </IntroRow>
             <TwoColumnContent>
               <LeftColumn>
@@ -1280,10 +1282,12 @@ const DappsPage = () => {
                 </StyledH2>
                 <Subtitle>{t("page-dapps-technology-description")}</Subtitle>
               </Column>
-              <StyledInfoBanner isWarning>
-                <StyledH2>{t("page-dapps-warning-header")}</StyledH2>
-                {t("page-dapps-warning-message")}
-              </StyledInfoBanner>
+              <StyledAlert variant="warning">
+                <div>
+                  <StyledH2>{t("page-dapps-warning-header")}</StyledH2>
+                  {t("page-dapps-warning-message")}
+                </div>
+              </StyledAlert>
             </IntroRow>
             <TwoColumnContent>
               <LeftColumn>
@@ -1328,10 +1332,12 @@ const DappsPage = () => {
                 </StyledH2>
                 <Subtitle>{t("page-dapps-collectibles-description")}</Subtitle>
               </Column>
-              <StyledInfoBanner isWarning>
-                <StyledH2>{t("page-dapps-warning-header")}</StyledH2>
-                {t("page-dapps-warning-message")}
-              </StyledInfoBanner>
+              <StyledAlert variant="warning">
+                <div>
+                  <StyledH2>{t("page-dapps-warning-header")}</StyledH2>
+                  {t("page-dapps-warning-message")}
+                </div>
+              </StyledAlert>
             </IntroRow>
             <TwoColumnContent>
               <LeftColumn>
@@ -1377,10 +1383,12 @@ const DappsPage = () => {
                 </H2>
                 <Subtitle>{t("page-dapps-social-description")}</Subtitle>
               </Column>
-              <StyledInfoBanner isWarning>
-                <H2>{t("page-dapps-warning-header")}</H2>
-                {t("page-dapps-warning-message")}
-              </StyledInfoBanner>
+              <StyledAlert variant="warning">
+                <div>
+                  <H2>{t("page-dapps-warning-header")}</H2>
+                  {t("page-dapps-warning-message")}
+                </div>
+              </StyledAlert>
             </IntroRow>
             <TwoColumnContent>
               <LeftColumn>
