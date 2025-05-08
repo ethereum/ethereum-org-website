@@ -10,7 +10,6 @@ import FeedbackCard from "@/components/FeedbackCard"
 import GhostCard from "@/components/GhostCard"
 import HorizontalCard from "@/components/HorizontalCard"
 import { Image } from "@/components/Image"
-import InfoBanner from "@/components/InfoBanner"
 import MainArticle from "@/components/MainArticle"
 import PageHero from "@/components/PageHero"
 import ProductList from "@/components/ProductList"
@@ -20,6 +19,7 @@ import StablecoinBoxGrid from "@/components/StablecoinBoxGrid"
 import StablecoinsTable from "@/components/StablecoinsTable"
 import Tooltip from "@/components/Tooltip"
 import Translation from "@/components/Translation"
+import { Alert } from "@/components/ui/alert"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Divider } from "@/components/ui/divider"
 import { Flex, FlexProps } from "@/components/ui/flex"
@@ -402,9 +402,10 @@ const StablecoinsPage = ({ markets, marketsHasError }: Props) => {
                 <MdHelpOutline className="ms-2 fill-body" size={16} />
               </Tooltip>
             </H3>
-            <InfoBanner className="mb-4" emoji="⚠️" isWarning>
+            <Alert className="mb-4" variant="warning">
+              <Emoji text="⚠️" className="text-8xl" />
               {t("page-stablecoins-algorithmic-disclaimer")}
-            </InfoBanner>
+            </Alert>
             <p className="mb-6">
               {t("page-stablecoins-top-coins-intro")}{" "}
               {t("page-stablecoins-top-coins-intro-code")}
@@ -480,12 +481,15 @@ const StablecoinsPage = ({ markets, marketsHasError }: Props) => {
         <Divider />
         <Content id="how">
           <H2 className="mt-0">{t("page-stablecoins-types-of-stablecoin")}</H2>
-          <InfoBanner emoji="⚠️" isWarning>
-            <H3 className="mb-4 mt-0">
-              {t("page-stablecoins-research-warning-title")}
-            </H3>
-            {t("page-stablecoins-algorithmic-disclaimer")}
-          </InfoBanner>
+          <Alert variant="warning">
+            <Emoji text="⚠️" className="text-8xl" />
+            <div>
+              <H3 className="mb-4 mt-0">
+                {t("page-stablecoins-research-warning-title")}
+              </H3>
+              {t("page-stablecoins-algorithmic-disclaimer")}
+            </div>
+          </Alert>
           <StablecoinBoxGrid items={features} />
         </Content>
         <div id="tools" className="w-full px-8 py-12">

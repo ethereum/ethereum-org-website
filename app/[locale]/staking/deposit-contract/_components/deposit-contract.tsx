@@ -11,10 +11,10 @@ import CopyToClipboard from "@/components/CopyToClipboard"
 import Emoji from "@/components/Emoji"
 import FeedbackCard from "@/components/FeedbackCard"
 import { Image } from "@/components/Image"
-import InfoBanner from "@/components/InfoBanner"
 import MainArticle from "@/components/MainArticle"
 import Tooltip from "@/components/Tooltip"
 import Translation from "@/components/Translation"
+import { Alert } from "@/components/ui/alert"
 import {
   Button,
   ButtonLink,
@@ -397,7 +397,8 @@ const DepositContractPage = () => {
                   </ButtonRow>
                 </>
               )}
-              <InfoBanner isWarning emoji=":warning:">
+              <Alert variant="warning">
+                <Emoji text=":warning:" className="text-8xl" />
                 <div>
                   {t("page-staking-deposit-contract-warning-2")}{" "}
                   <InlineLink
@@ -407,7 +408,7 @@ const DepositContractPage = () => {
                     {t("page-staking-deposit-contract-launchpad-2")}
                   </InlineLink>
                 </div>
-              </InfoBanner>
+              </Alert>
             </div>
           </AddressCard>
         </RightColumn>

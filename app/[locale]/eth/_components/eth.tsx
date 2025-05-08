@@ -8,16 +8,17 @@ import ActionCard from "@/components/ActionCard"
 import CalloutBanner from "@/components/CalloutBanner"
 import Card from "@/components/Card"
 import CardList from "@/components/CardList"
+import Emoji from "@/components/Emoji"
 import EthPriceCard from "@/components/EthPriceCard"
 import EthVideo from "@/components/EthVideo"
 import FeedbackCard from "@/components/FeedbackCard"
 import HorizontalCard from "@/components/HorizontalCard"
 import { Image } from "@/components/Image"
-import InfoBanner from "@/components/InfoBanner"
 import ListenToPlayer from "@/components/ListenToPlayer"
 import MainArticle from "@/components/MainArticle"
 import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import Translation from "@/components/Translation"
+import { Alert } from "@/components/ui/alert"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Divider } from "@/components/ui/divider"
 import { Flex, VStack } from "@/components/ui/flex"
@@ -307,14 +308,17 @@ const EthPage = () => {
               />
             ))}
           </CardContainer>
-          <InfoBanner emoji=":wave:" shouldCenter>
-            <b>{t("page-eth-buy-some")}</b>{" "}
-            <Translation id="page-eth:page-eth-buy-some-desc" />{" "}
-            <InlineLink href="/what-is-ethereum/">
-              {t("page-eth-more-on-ethereum-link")}
-            </InlineLink>
-            {t("page-eth-period")}
-          </InfoBanner>
+          <Alert variant="update" className="mx-auto max-w-[55rem]">
+            <Emoji text=":wave:" className="text-7xl" />
+            <div>
+              <b>{t("page-eth-buy-some")}</b>{" "}
+              <Translation id="page-eth:page-eth-buy-some-desc" />{" "}
+              <InlineLink href="/what-is-ethereum/">
+                {t("page-eth-more-on-ethereum-link")}
+              </InlineLink>
+              {t("page-eth-period")}
+            </div>
+          </Alert>
         </Content>
       </GrayContainer>
       <Content>
@@ -357,9 +361,11 @@ const EthPage = () => {
               description={t("page-eth-whats-defi-description")}
               image={defi}
             />
-            <InfoBanner isWarning>
-              <Translation id="page-eth:page-eth-weth" />
-            </InfoBanner>
+            <Alert variant="warning">
+              <div>
+                <Translation id="page-eth:page-eth-weth" />
+              </div>
+            </Alert>
           </div>
           <TextDivider />
           <div>
