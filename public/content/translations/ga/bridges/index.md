@@ -49,7 +49,7 @@ Cuir is gcás go bhfuil ETH agat ar Ethereum Mainnet ach ba mhaith leat táillí
 
 ### Daipeanna ar bhlocshlabhraí eile {#dapps-other-chains}
 
-If you’ve been using Aave on Ethereum Mainnet to supply USDT but the interest rate you may receive for supplying USDT using Aave on Polygon is higher.
+Má tá Aave á úsáid agat ar Ethereum Príomhlíonra chun USDT a sholáthar ach tá an ráta úis a fhéadfaidh tú a fháil chun USDT a sholáthar ag baint úsáide as Aave ar Polygon níos airde.
 
 ### Déan iniúchadh ar éiceachórais blocshlabhra {#explore-ecosystems}
 
@@ -131,9 +131,9 @@ Tá droichid ríthábhachtach chun úsáideoirí a chur ar bord ar Ethereum L2an
 <Divider />
 
 ## Tuilleadh léitheoireachta {#further-reading}
-- [EIP-5164: Cross-Chain Execution](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) - _June 18, 2022 - Brendan Asselstine_
-- [L2Bridge Risk Framework](https://gov.l2beat.com/t/l2bridge-risk-framework/31) - _July 5, 2022 - Bartek Kiepuszewski_
-- ["Why the future will be multi-chain, but it will not be cross-chain."](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) - _January 8, 2022 - Vitalik Buterin_
-- [Harnessing Shared Security For Secure Cross-Chain Interoperability: Lagrange State Committees And Beyond](https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - _June 12, 2024 - Emmanuel Awosika_
-- [The State Of Rollup Interoperability Solutions](https://research.2077.xyz/the-state-of-rollup-interoperability) - _June 20, 2024 - Alex Hook_
+- [EIP-5164: Forghníomhú Trasshlabhra](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) - _ 18 Meitheamh, 2022 - Brendan Asselstine_
+- [Creat Riosca L2Bridge](https://gov.l2beat.com/t/l2bridge-risk-framework/31) - _ 5 Iúil, 2022 - Bartek Kiepuszewski_
+- [ "Cén fáth go mbeidh an todhchaí ilshlabhra, ach ní bheidh sé tras-shlabhra." ](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) - _Eanáir 8, 2022 - Vitalik Buterin_
+- [Feabhas a chur ar Shlándáil Roinnte Chun Idir-inoibritheacht Slán Trasshlabhra: Coistí Stáit Lagrange Agus Thall](https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - _ 12 Meitheamh, 2024 - Emmanuel Awosika_
+- [Staid na Réitigh Idir-inoibritheachta Rolla suas](https://research.2077.xyz/the-state-of-rollup-interoperability) - _ 20 Meitheamh, 2024 - Alex Hook_
 
