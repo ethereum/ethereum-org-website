@@ -106,4 +106,4 @@ lang: el
 
 - [Κρυπτόρυξη](/developers/docs/consensus-mechanisms/pow/mining/)
 - [Απόδειξη συμμετοχής](/developers/docs/consensus-mechanisms/pos/)
-- [Proof-of-authority](/developers/docs/consensus-mechanisms/poa/)
+- [Απόδειξη Αρχής](/developers/docs/consensus-mechanisms/poa/)

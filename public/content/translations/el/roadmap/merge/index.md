@@ -98,7 +98,7 @@ id="developers">
   <li>δομή μπλοκ</li>
   <li>θέση/ χρόνος μπλοκ</li>
   <li>αλλαγές opcode</li>
-  <li>τυχαίες πηγές επί της αλυσίδας</li>
+  <li>Τυχαίες πηγές τυχαίας στην αλυσίδα.</li>
   <li>έννοιες <em>safe head</em> και <em>finalized blocks</em></li>
 </ul>
 

@@ -89,4 +89,4 @@ _Γνωρίζετε κάποιο πόρο της κοινότητας που σ�
 - [Απόδειξη της εργασίας](/developers/docs/consensus-mechanisms/pow/)
 - [Εξόρυξη](/developers/docs/consensus-mechanisms/pow/mining/)
 - [Απόδειξη συμμετοχής](/developers/docs/consensus-mechanisms/pos/)
-- [Proof-of-authority](/developers/docs/consensus-mechanisms/poa/)
+- [Απόδειξη Αρχής](/developers/docs/consensus-mechanisms/poa/)
