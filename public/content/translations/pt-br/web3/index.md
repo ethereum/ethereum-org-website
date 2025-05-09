@@ -6,6 +6,10 @@ lang: pt-br
 
 # Introdução à Web3 {#introduction}
 
+<div className="mt-4">
+<ListenToPlayer slug="/web3/" />
+</div>
+
 A centralização ajudou a integrar bilhões de pessoas à World Wide Web e criou a infraestrutura estável e robusta em que ela vive. Ao mesmo tempo, um punhado de entidades centralizadas tem uma fortaleza em grandes áreas da World Wide Web, decidindo unilateralmente o que deve e o que não deve ser permitido.
 
 Web3 é a resposta para este dilema. Em vez de uma Web monopolizada por grandes empresas de tecnologia, a Web3 adota a descentralização e está sendo construída, operada e de propriedade de seus usuários. A Web3 coloca o poder nas mãos dos indivíduos e não das corporações. Antes de falarmos sobre Web3, vamos explorar como chegamos aqui.
