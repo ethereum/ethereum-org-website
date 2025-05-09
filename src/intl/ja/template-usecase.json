@@ -1,7 +1,9 @@
 {
+  "template-usecase-dropdown-ai-agents": "AIエージェント",
   "template-usecase-dropdown-defi": "分散型金融(DeFi)",
   "template-usecase-dropdown-nft": "非代替性トークン(NFT)",
   "template-usecase-dropdown-dao": "分散型自律組織(DAO)",
+  "template-usecase-dropdown-payments": "イーサリアム支払い",
   "template-usecase-dropdown-social-networks": "分散型ソーシャルネットワーク",
   "template-usecase-dropdown-identity": "分散型アイデンティティ",
   "template-usecase-dropdown-desci": "分散型科学 (DeSci)",
