@@ -1,5 +1,5 @@
 {
-  "page-get-eth-article-keeping-crypto-safe": "I segreti per tenere al sicuro le tue criptovalute",
+  "page-get-eth-article-keeping-crypto-safe": "Le chiavi per tenere al sicuro le tue criptovalute",
   "page-get-eth-article-protecting-yourself": "Proteggere te e i tuoi fondi",
   "page-get-eth-article-store-digital-assets": "Come conservare attivi digitali su Ethereum",
   "page-get-eth-article-protecting-yourself-desc": "MyCrypto",
@@ -75,5 +75,5 @@
   "page-get-eth-your-address-desc-3": "Puoi considerarlo come un indirizzo email, su cui invece delle email riceverai ETH. Se vuoi trasferire ETH da una borsa al tuo portafoglio, usa questo indirizzo come destinazione. Controlla sempre due volte prima di confermare l'invio!",
   "page-get-eth-your-address-wallet-link": "Scopri i portafogli",
   "listing-policy-raise-issue-link": "Apri segnalazione",
-  "page-find-wallet-last-updated": "Ultimo aggiornamento"
+  "page-find-wallet-last-updated": "Ultimo aggiornamento:"
 }
