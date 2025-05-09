@@ -12,7 +12,7 @@ lang: es
 
 1. [Cómo «crear» una cuenta de Ethereum](/guides/how-to-create-an-ethereum-account/): cualquiera puede crear una cartera de forma gratuita. Esta guía le mostrará por dónde empezar.
 
-2. [Cómo usar una cartera](/guides/how-to-use-a-wallet/): una introducción a las características básicas de cualquier cartera y cómo usarlas.
+2. [Cómo utilizar una cartera](/guides/how-to-use-a-wallet/) - Aprende a enviar y recibir tókenes en tu cartera y cómo conectar tu cartera a distintos proyectos.
 
 ## Aspectos básicos de la seguridad
 
