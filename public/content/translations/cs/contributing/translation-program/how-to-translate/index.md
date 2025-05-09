@@ -84,6 +84,6 @@ Jakmile dokončíte překlad (tj. všechny soubory pro obsahový blok ukazují 1
 
 Máte nějaké otázky? Nebo chcete spolupracovat s naším týmem a dalšími překladateli? Prosím, napište nám na kanálu #translations na našem [Discord serveru ethereum.org](/discord/).
 
-Můžete se také obrátit na translations@ethereum.org.
+Můžete se také obrátit na translations@ethereum.org
 
 Děkujeme vám za vaši účast v překladatelském programu ethereum.org!

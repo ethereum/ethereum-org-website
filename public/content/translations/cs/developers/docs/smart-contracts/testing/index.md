@@ -207,7 +207,7 @@ Přestože automatizované testování prováděné v lokálním vývojovém pro
 
 Testování kontraktu na lokálním blockchainu (známém také jako [vývojová síť](/developers/docs/development-networks/)) je doporučenou alternativou k testování na hlavní síti. Lokální blockchain je kopie blockchainu Etherea spuštěná lokálně na vašem počítači, která simuluje chování exekuční vrstvy Etherea. Proto můžete naprogramovat transakce pro interakci s kontraktem, aniž byste museli vynaložit značné režijní náklady.
 
-Spuštění kontraktů na lokálním blockchainu by mohlo být užitečné jako forma ručního integračního testování. [Chytré kontrakty jsou vysoce modulární](/developers/docs/smart-contracts/composability/), což umožňuje integraci se stávajícími protokoly, ale stále je třeba zajistit, aby tyto složité interakce v řetězci vedly ke správným výsledkům.
+Spuštění kontraktů na lokálním blockchainu by mohlo být užitečné jako forma ručního integračního testování. [Chytré kontrakty jsou vysoce modulární](/developers/docs/smart-contracts/composability/), což umožňuje integraci se stávajícími protokoly, ale stále je třeba zajistit, aby tyto složité interakce na blockchainu vedly ke správným výsledkům.
 
 [Další informace o vývojových sítích.](/developers/docs/development-networks/)
 
@@ -259,7 +259,7 @@ Hlavní rozdíl spočívá v tom, že programy odměn za vyřešení chyb jsou o
 
 - **[Brownie unit testing framework](https://eth-brownie.readthedocs.io/en/v1.0.0_a/tests.html)** – _Brownie využívá Pytest, funkčně bohatý testovací framework, který umožňuje psát malé testy s minimem kódu, dobře se škáluje pro velké projekty a je vysoce rozšiřitelný._
 
-- **[Foundry Tests](https://github.com/foundry-rs/foundry/tree/master/forge)** – _Foundry nabízí Forge, rychlý a flexibilní framework pro testování na Ethereu, který dokáže provádět jednoduché jednotkové testy, kontroly optimalizace paliva a fuzzing kontraktů._
+- **[Foundry Tests](https://github.com/foundry-rs/foundry/tree/master/crates/forge)** – _Foundry nabízí Forge, rychlý a flexibilní framework pro testování na Ethereu, který dokáže provádět jednoduché jednotkové testy, kontroly optimalizace paliva a fuzzing kontraktů._
 
 - **[Hardhat Tests](https://hardhat.org/hardhat-runner/docs/guides/test-contracts)** – _Framework pro testování chytrých kontraktů založený na ethers.js, Mocha a Chai._
 

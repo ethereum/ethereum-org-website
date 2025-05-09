@@ -17,7 +17,7 @@ summaryPoints:
 
 Vkladový fond je přístup založený na spolupráci, který umožňuje mnoha lidem s menším množsvím ETH získat 32 ETH potřebných k aktivaci sady validátorových klíčů. Funkce stakingových fondů není v rámci protokolu nativně podporována, takže řešením byla vytvořena tato samostatná funkce, aby potřebu řešila.
 
-Některé fondy fungují pomocí chytrých kontraktů, kde lze vložit prostředky do kontraktu, který důvěryhodně spravuje a sleduje váš vklad a vydává vám token, který představuje tuto hodnotu. Jiné fondy nemusí zahrnovat chytré kontrakty a jsou místo toho zprostředkovány mimo řetězec.
+Některé fondy fungují pomocí chytrých kontraktů, kde lze vložit prostředky do kontraktu, který důvěryhodně spravuje a sleduje váš vklad a vydává vám token, který představuje tuto hodnotu. Jiné fondy nemusí zahrnovat chytré kontrakty a jsou místo toho zprostředkovány mimo blockchain.
 
 ## Proč vkládat s fondem? {#why-stake-with-a-pool}
 
