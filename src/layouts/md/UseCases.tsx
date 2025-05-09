@@ -5,6 +5,8 @@ import BannerNotification from "@/components/Banners/BannerNotification"
 import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import AiAgentProductLists from "@/components/Content/ai-agents/AiAgentProductLists"
 import BuildYourOwnAIAgent from "@/components/Content/ai-agents/BuildYourOwnAIAgent"
+import {Restaking_List, Eigen_Layer} from "@/components/Content/ai-agents/restaking/Restaking_List"
+import TabbedSection from "@/components/Content/ai-agents/restaking/Restaking_Tab"
 import Emoji from "@/components/Emoji"
 import { ContentHero } from "@/components/Hero"
 import InlineLink from "@/components/ui/Link"
@@ -21,6 +23,9 @@ import { useTranslation } from "@/hooks/useTranslation"
 export const useCasesComponents = {
   AiAgentProductLists,
   BuildYourOwnAIAgent,
+  Restaking_List,
+  TabbedSection,
+  Eigen_Layer
 }
 
 type UseCasesLayoutProps = ChildOnlyProp &
@@ -70,6 +75,15 @@ export const UseCasesLayout = ({
           eventAction: "click",
           eventName: "dao",
         },
+      },
+      {
+        text: t("template-usecase:template-usecase-dropdown-restaking"), 
+        href: "/restaking/",
+        matomo: {
+          eventCategory: "use cases menu",
+          eventAction: "click",
+          eventName: "restaking",
+        }
       },
       {
         text: t("template-usecase:template-usecase-dropdown-payments"),
