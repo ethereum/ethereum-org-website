@@ -23,7 +23,7 @@ Per comprendere meglio questa pagina, consigliamo innanzi tutto di leggere [toke
 - [Batch Transfer](#batch_transfers): trasferire più risorse con una singola chiamata.
 - [Batch Balance](#batch_transfers): richiedere i saldi di più risorse con una singola chiamata.
 - [Batch Approval](#batch_approval): approvare tutti i token ad un indirizzo.
-- [Hook](#recieve_hook): ricevere l'hook dei token.
+- [Hook](#receive_hook): ricevere l'hook dei token.
 - [Supporto NFT](#nft_support): Se la quantità è solo 1, trattatala come NFT.
 - [Regole di trasferimento sicure](#safe_transfer_rule): insieme di regole per il trasferimento sicuro.
 

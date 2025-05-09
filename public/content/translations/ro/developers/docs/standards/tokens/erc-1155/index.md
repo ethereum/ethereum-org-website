@@ -23,7 +23,7 @@ Pentru o mai bună înțelegere a acestei pagini, vă recomandăm să citiți ma
 - [Transfer în loturi](#batch_transfers): Transferați mai multe active într-un singur apel.
 - [Sold în loturi](#batch_balance): Obțineți soldurile mai multor active într-un singur apel.
 - [Aprobare în loturi](#batch_approval): Aprobați toate tokenurile de la o adresă.
-- [Hook-uri](#recieve_hook): Primiți hook-ul tokenurilor.
+- [Hook-uri](#receive_hook): Primiți hook-ul tokenurilor.
 - [Acceptarea NFT-urilor](#nft_support): Dacă este disponibil numai 1, tratați-l ca pe un NFT.
 - [Reguli de transfer securizat](#safe_transfer_rule): Are o serie de reguli pentru securizarea transferului.
 

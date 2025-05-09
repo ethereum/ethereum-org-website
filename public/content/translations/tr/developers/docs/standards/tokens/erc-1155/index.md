@@ -23,7 +23,7 @@ Bu sayfayı daha iyi anlamak için öncelikle [token standartları](/developers/
 - [Toplu Aktarım](#batch_transfers): Tek bir aramada birden çok varlığı aktarın.
 - [Toplu Bakiye](#batch_balance): Birden fazla varlığın bakiyesini tek bir çağrıda alın.
 - [Toplu Onay](#batch_approval): Bir adres için tüm token'ları onaylayın.
-- [Kancalar](#recieve_hook): Token kancalarını alın.
+- [Kancalar](#receive_hook): Token kancalarını alın.
 - [NFT Desteği](#nft_support): Arz yalnızca 1 ise, bunu NFT olarak düşünün.
 - [Güvenli Aktarım Kuralları](#safe_transfer_rule): Güvenli aktarım için birtakım kurallar.
 
