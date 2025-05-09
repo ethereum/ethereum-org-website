@@ -10,6 +10,7 @@ import clanker from "@/public/images/ai-agents/clanker.png"
 import cookiefun from "@/public/images/ai-agents/cookiefun.png"
 import heyanon from "@/public/images/ai-agents/heyanon.png"
 import luna from "@/public/images/ai-agents/luna.png"
+import dexcheck from "@/public/images/ai-agents/dexcheck.png"
 
 const AiAgentProductLists = ({ list }: { list: string }) => {
   // TODO: LOGOS
@@ -175,6 +176,14 @@ const AiAgentProductLists = ({ list }: { list: string }) => {
         image: clanker,
         alt: "Clanker logo",
         link: "https://warpcast.com/clanker",
+      },
+       {
+        title: "DexCheck.ai",
+        description:
+          "AI-Powered Crypto Analytics Terminal",
+        image: dexcheck,
+        alt: "DexCheck AI logo",
+        link: "https://dexcheck.ai/app",
       },
     ],
   }
