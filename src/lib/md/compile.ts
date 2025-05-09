@@ -11,16 +11,11 @@ import remarkHeadingId from "remark-heading-id"
 import { CONTENT_DIR, CONTENT_PATH } from "../constants"
 import { Frontmatter, TocNodeType } from "../types"
 
+import { preprocessMarkdown } from "./preprocess"
+
 import rehypeImg from "@/lib/md/rehypeImg"
 import remarkInferToc from "@/lib/md/remarkInferToc"
 import { remarkPreserveJsx } from "@/lib/md/remarkPreserveJsx"
-
-// Preprocess the markdown content
-function preprocessMarkdown(content: string) {
-  // Replace heading IDs without escaping to escaped version
-  // TODO: move to a separate file and test it more
-  return content.replace(/^(#{1,6}.*?)\{(#[\w-]+)\}/gm, "$1\\{$2\\}")
-}
 
 export const compile = async ({
   markdown,
@@ -54,7 +49,7 @@ export const compile = async ({
     rehypePlugins: [[rehypeImg, { dir: mdDir, srcPath: mdPath, locale }]],
   } satisfies SerializeOptions["mdxOptions"]
 
-  const source = preprocessMarkdown(markdown)
+  const source = await preprocessMarkdown(markdown)
 
   const { content, frontmatter } = await compileMDX<Frontmatter>({
     source,
