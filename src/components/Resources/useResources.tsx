@@ -13,6 +13,7 @@ import { getLocaleForNumberFormat } from "@/lib/utils/translations"
 
 import BigNumber from "../BigNumber"
 import RadialChart from "../RadialChart"
+import { BaseLink } from "../ui/Link"
 
 import type { DashboardBox, DashboardSection } from "./types"
 
@@ -397,7 +398,12 @@ export const useResources = ({
       metric: (
         <div className="grid place-items-center py-5">
           <div className="text-sm">Next upgrade</div>
-          <div className="text-5xl font-bold">Pectra</div>
+          <BaseLink
+            href="/roadmap/pectra/"
+            className="text-5xl font-bold text-body no-underline hover:text-primary"
+          >
+            Pectra
+          </BaseLink>
           <div className="text-xl font-bold text-body-medium">
             {scalingUpgradeCountdown ? (
               scalingUpgradeCountdown
