@@ -16,6 +16,22 @@ Az ERC-4626 a hozamtartó értékmegőrzőkben csökkenti az integrációs erőf
 
 Az ERC-4626 token teljes körű leírását az [EIP-4626](https://eips.ethereum.org/EIPS/eip-4626) tartalmazza.
 
+**Aszinkron értékmegőrző-bővítés (ERC-7540)**
+
+Az ERC-4626 az atomi befizetésekre és visszaváltásokra van optimalizálva egy bizonyos határértékig. Ha a limitet elérte, nem lehet új befizetéseket vagy visszaváltásokat benyújtani. Ez a korlátozás nem működik jól olyan okosszerződés-rendszerek esetében, amelyeknél az aszinkron műveletek vagy késleltetések előfeltételei az értékmegőrzővel való kapcsolódásnak (pl. valós világbeli eszközprotokollok, alulbiztosított hitelezési protokollok, láncközi hitelezési protokollok, likvid tétes tokenek vagy biztosítási biztonsági modulok).
+
+Az ERC-7540 kiterjeszti az ERC-4626 értékmegőrzők hasznosságát aszinkron felhasználási esetekre. A meglévő értékmegőrző-interfészt (`deposit`/`withdraw`/`mint`/`redeem`) használják az aszinkron kérésekre.
+
+Az ERC-7540 bővítésének teljes körű leírását az [ERC-7540](https://eips.ethereum.org/EIPS/eip-7540) tartalmazza.
+
+**Több eszközös értékmegőrző-bővítés (ERC-7575)**
+
+Az ERC-4626 által nem támogatott egyik felhasználási eset a több eszközzel vagy belépési ponttal rendelkező értékmegőrzők, például a likviditásszolgáltató (LP) tokenek. Ezek általában nehézkesek vagy nem megfelelők, mivel az ERC-4626 követelménye, hogy maga is ERC-20 legyen.
+
+Az ERC-7575 támogatja a több eszközzel rendelkező értékmegőrzőket az ERC-20 token implementációjának az ERC-4626 implementációból történő kiszervezésével.
+
+Az ERC-7575 bővítésének teljes körű leírását az [ERC-7575](https://eips.ethereum.org/EIPS/eip-7575) tartalmazza.
+
 ## Előfeltételek {#prerequisites}
 
 Az oldal könnyebben megértéséhez javasoljuk, hogy tekintse át a [Tokenszabványok](/developers/docs/standards/tokens/) és az [ERC-20](/developers/docs/standards/tokens/erc-20/) című cikkeket.
@@ -176,7 +192,7 @@ Visszaadja az `owner` által jelenleg birtokolt értékmegőrző-részvények te
 
 #### Letétbe helyezési esemény
 
-Akkor **KELL** kiadni, amikor tokeneket helyeznek el az értékmegőrzőben a [`mint`](#mint) és a [`deposit`](#deposit) metódusokon keresztül
+Akkor **KELL** kiadni, amikor tokeneket helyeznek el az értékmegőrzőben a [`mint`](#mint) és a [`deposit`](#deposit) metódusokon keresztül.
 
 ```solidity
 event Deposit(

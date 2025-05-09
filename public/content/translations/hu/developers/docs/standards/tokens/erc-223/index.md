@@ -128,7 +128,7 @@ contract RecipientContract is IERC223Recipient {
     {
         // It is important to understand that within this function
         // msg.sender is the address of a token that is being received,
-        // msg.value  is always 0 as the token contract does not own or send Ether in most cases,
+        // msg.value  is always 0 as the token contract does not own or send ether in most cases,
         // _from      is the sender of the token transfer,
         // _value     is the amount of tokens that was deposited.
         require(msg.sender == tokenA);
@@ -154,7 +154,7 @@ Ha ERC-20 tokent küldenek a „RecipientContract” szerződésnek, akkor az á
 
 ### Mi van, ha szeretnénk függvényt végrehajtani, miután a token letét végbement? {#function-execution}
 
-Ennek többféle módja van. Ebben a példában megnézzük a metódust, amitől az ERC-223 átadás egyenértékű lesz az ether-küldéssel:
+Ennek többféle módja van. Ebben a példában megnézzük a metódust, amitől az ERC-223-átadás egyenértékű lesz az ether-küldéssel:
 
 ```solidity
 contract RecipientContract is IERC223Recipient {
@@ -177,7 +177,7 @@ contract RecipientContract is IERC223Recipient {
 }
 ```
 
-Amikor a „RecipientContract” kap egy ERC-223 tokent, a szerződés a token tranzakció „_data” paramétereként kódolt függvényt hajt végre, ugyanúgy, ahogy az ether-tranzakciók kódolják a függvényhívásokat a tranzakció „data” paramétereként. Tekintse meg [az adatmezőt](https://ethereum.org/en/developers/docs/transactions/#the-data-field) további információért.
+Amikor a „RecipientContract” kap egy ERC-223 tokent, a szerződés a token tranzakció „_data” paramétereként kódolt függvényt hajt végre ugyanúgy, ahogy az ether-tranzakciók kódolják a függvényhívásokat a tranzakció „data” paramétereként. Tekintse meg [az adatmezőt](https://ethereum.org/en/developers/docs/transactions/#the-data-field) további információért.
 
 A fenti példában az ERC-223 tokent a „RecipientContract” címre a „transfer(address,uin256,bytes calldata _data)” függvénnyel kell küldeni. Ha az adatparaméter „0xc2985578” (ami a „foo()” függvény jele), akkor a foo() függvény indul el a token letétbe helyezése után, és a Foo() eseményt adja.
 

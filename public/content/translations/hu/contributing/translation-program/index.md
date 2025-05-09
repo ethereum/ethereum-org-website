@@ -36,9 +36,9 @@ Tudjon meg többet az ethereum.org fordítási program [missziójáról és víz
 
 ### Eddigi eredményeink {#our-progress}
 
-- [**Több mint 6000** fordító](/contributing/translation-program/contributors/)
-- **62** nyelv elérhető a honlapon
-- [**3 millió** szó került lefordításra 2023-ban](/contributing/translation-program/acknowledgements/)
+- [**Több mint 6900** fordító](/contributing/translation-program/contributors/)
+- **68** nyelv elérhető a honlapon
+- [**2,89 millió** szó került lefordításra 2024-ben](/contributing/translation-program/acknowledgements/)
 
 <TranslationChartImage />
 

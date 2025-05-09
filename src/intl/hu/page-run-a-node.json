@@ -111,6 +111,7 @@
   "page-run-a-node-sovereignty-1": "Egy Ethereum-tárca segítségével teljes felügyeletet és irányítást gyakorolhat digitális eszközei felett, mivel biztonságban tartja a címeihez tartozó privát kulcsokat – ezek a kulcsok azonban nem adnak információt a blokklánc aktuális állapotáról, mint például a pénztárca egyenlegéről.",
   "page-run-a-node-sovereignty-2": "Az alapértelmezés szerint az Ethereum-tárcák általában egy harmadik fél csomópontján keresztül kérik le az egyenleget, ilyen például az Infura vagy az Alchemy. Saját csomópont futtatásával saját példánya lehet az Ethereum-blokkláncról.",
   "page-run-a-node-title": "Csomópont futtatása",
+  "page-run-a-node-meta-title": "Hogyan lehet Ethereum-csomópontot futtatni",
   "page-run-a-node-voice-your-choice-title": "Adjon hangot a véleményének",
   "page-run-a-node-voice-your-choice-preview": "Ne adja ki a kezéből az irányítást elágazás esetén sem.",
   "page-run-a-node-voice-your-choice-1": "Láncelágazás esetén, amikor két lánc jön létre különböző szabályokkal, a saját csomópont futtatása garantálja, hogy kiválaszthatja, melyik szabályokat kívánja támogatni. Önön múlik, hogy frissít-e az új szabályokra, és támogatja-e a javasolt változtatásokat, vagy sem.",

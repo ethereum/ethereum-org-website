@@ -97,7 +97,7 @@
   "page-upgrades-question-6-answer-5": "Emellett csatlakozhat az Ethereum-kutatási és -fejlesztési fórumhoz is az ethresear.ch oldalon.",
   "page-upgrades-question-6-title": "Mit kell csinálnom a dappommal?",
   "page-upgrades-question-6-desc": "Az egyesítést (Merge) úgy tervezték meg, hogy minimális hatást gyakoroljon a dapp-fejlesztőkre, azonban történt néhány említésre méltó változtatás.",
-  "page-upgrades-question-6-answer-1": "A beolvadás előtti Ethereumot ismerő dapp-fejlesztőknek tisztában kell lenniük néhány változással. Ezek közé sorolható a blokkstruktúra és -időzítés változása, néhány műveletikód-változás, a láncon belüli (on-chain) véletlenszerűség forrása és a korszak-véglegesítés koncepciója.",
+  "page-upgrades-question-6-answer-1": "A beolvadás előtti Ethereumot ismerő dapp-fejlesztőknek tisztában kell lenniük néhány változással. Ezek közé sorolható a blokkstruktúra és -időzítés változása, néhány műveletikód-változás, a láncon belüli (onchain) véletlenszerűség forrása és a korszak-véglegesítés koncepciója.",
   "page-upgrades-question-6-answer-1-link": "Az egyesítés (Merge) hatása az Ethereum alkalmazási rétegére",
   "page-upgrades-question-6-answer-2": "Az alkalmazások szinte teljesen érintetlenek maradtak.",
   "page-upgrades-question-7-desc": "A közösség egészéből sok különböző csapat dolgozik a különféle Ethereum-frissítéseken.",
