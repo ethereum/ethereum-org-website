@@ -126,7 +126,7 @@
   "bug-bounty-faq-q5-content-1": "We aim to respond to submissions as fast as possible. Feel free to email us at <a href=\"mailto:bounty@ethereum.org\" target=\"_blank\" rel=\"noreferrer\">bounty@ethereum.org</a> if you have not received a response within a day or two.",
   "bug-bounty-faq-q6-title": "I want to be anonymous / I do not want my name on the leader board.",
   "bug-bounty-faq-q6-contentPreview": "You can do this, but it might make you ineligble for rewards.",
-  "bug-bounty-faq-q6-content-1": "Submitting anonymously or with a pseudonym is OK, but will make you ineligible for ETH/DAI rewards. To be eligible for ETH/DAI rewards, we require your real name and a proof of your identity. Donating your bounty to a charity doesn’t require your identity.",
+  "bug-bounty-faq-q6-content-1": "Submitting anonymously or with a pseudonym is OK, but will make you ineligible for ETH/DAI rewards. To be eligible for ETH/DAI rewards, we require your real name and a proof of your identity to be sent, encrypted using PGP on our secure drop website, to our legal team at the Ethereum Foundation who are the sole reviewers of the documentation. Donating your bounty to a charity doesn’t require your identity.",
   "bug-bounty-faq-q6-content-2": "Please let us know if you do not want your name/nick displayed on the leader board.",
   "bug-bounty-faq-q7-title": "What are the points in the leaderboard?",
   "bug-bounty-faq-q7-contentPreview": "Every found vulnerability / issue is assigned a score",
