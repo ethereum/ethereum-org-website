@@ -72,14 +72,14 @@
   {
     "languageId": "ca",
     "words": {
-      "approved": 27103,
+      "approved": 27112,
       "total": 281165
     }
   },
   {
     "languageId": "cs",
     "words": {
-      "approved": 140318,
+      "approved": 140321,
       "total": 281165
     }
   },
@@ -114,7 +114,7 @@
   {
     "languageId": "el",
     "words": {
-      "approved": 259024,
+      "approved": 269545,
       "total": 281165
     }
   },
@@ -177,7 +177,7 @@
   {
     "languageId": "fr",
     "words": {
-      "approved": 268444,
+      "approved": 268454,
       "total": 281165
     }
   },
@@ -254,7 +254,7 @@
   {
     "languageId": "id",
     "words": {
-      "approved": 131019,
+      "approved": 131029,
       "total": 281165
     }
   },
@@ -275,7 +275,7 @@
   {
     "languageId": "ja",
     "words": {
-      "approved": 251234,
+      "approved": 251244,
       "total": 281165
     }
   },
@@ -303,7 +303,7 @@
   {
     "languageId": "kn",
     "words": {
-      "approved": 42416,
+      "approved": 42418,
       "total": 281165
     }
   },
@@ -450,7 +450,7 @@
   {
     "languageId": "pl",
     "words": {
-      "approved": 110128,
+      "approved": 110137,
       "total": 281165
     }
   },
@@ -464,14 +464,14 @@
   {
     "languageId": "pt-BR",
     "words": {
-      "approved": 265206,
+      "approved": 265836,
       "total": 281165
     }
   },
   {
     "languageId": "pt-PT",
     "words": {
-      "approved": 36946,
+      "approved": 36951,
       "total": 281165
     }
   },
@@ -485,7 +485,7 @@
   {
     "languageId": "ru",
     "words": {
-      "approved": 117280,
+      "approved": 117296,
       "total": 281165
     }
   },
@@ -555,7 +555,7 @@
   {
     "languageId": "sw",
     "words": {
-      "approved": 24807,
+      "approved": 24835,
       "total": 281165
     }
   },
@@ -583,7 +583,7 @@
   {
     "languageId": "th",
     "words": {
-      "approved": 7419,
+      "approved": 7445,
       "total": 281165
     }
   },
@@ -611,7 +611,7 @@
   {
     "languageId": "tr",
     "words": {
-      "approved": 251894,
+      "approved": 251906,
       "total": 281165
     }
   },
@@ -653,7 +653,7 @@
   {
     "languageId": "vi",
     "words": {
-      "approved": 34827,
+      "approved": 34849,
       "total": 281165
     }
   },
