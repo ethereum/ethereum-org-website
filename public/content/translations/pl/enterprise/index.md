@@ -13,7 +13,7 @@ Aplikacje blockchain pomagają przedsiębiorstwom w następujących obszarach:
 - Budowanie nowych modeli biznesowych i możliwości tworzenia wartości
 - Przyszłościowa konkurencyjność ich organizacji
 
-Aplikacje korporacyjnego blockchainu można budować na publicznej [sieci głównej](/glossary/#mainnet) Ethereum lub na prywatnych blockchainach opartych na technologii Ethereum. Znajdź więcej informacji o [prywatnych sieciach Enterprise Ethereum](/enterprise/private-ethereum/).
+Aplikacje korporacyjnego blockchainu można budować na publicznej [sieci głównej](/glossary/#mainnet) Ethereum lub na prywatnych blockchainach opartych na technologii Ethereum.
 
 ## Ethereum publiczne vs prywatne {#private-vs-public}
 
