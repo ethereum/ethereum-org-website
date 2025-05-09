@@ -6,6 +6,10 @@ lang: id
 
 # Pengenalan kepada Web3 {#introduction}
 
+<div className="mt-4">
+<ListenToPlayer slug="/web3/" />
+</div>
+
 Sentralisasi telah membantu memasukkan miliaran orang ke World Wide Web dan menciptakan infrastruktur yang stabil serta kuat di mana ia hidup. Namun pada saat yang bersamaan, sebagian entitas sentralisasi memiliki kekuasaan yang luar biasa pada World Wide Web, memungkinkan mereka untuk secara sepihak memutuskan apa yang boleh dan yang tidak diizinkan.
 
 Web3 adalah jawaban untuk dilema ini. Alih-alih Web yang dimonopoli oleh perusahaan teknologi besar, Web3 merangkul desentralisasi dan dibangun, dioperasikan, dan dimiliki oleh para penggunanya. Web3 menempatkan kekuatan di tangan individu daripada perusahaan. Sebelum kita berbicara tentang Web3, mari kita jelajahi bagaimana kita sampai sini.
