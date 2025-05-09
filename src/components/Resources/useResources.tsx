@@ -82,6 +82,48 @@ export const useResources = ({
 
   const [timeToNextBlock, setTimeToNextBlock] = useState(12)
 
+  const [scalingUpgradeCountdown, setPectraCountdown] = useState<string | null>(
+    "Loading..."
+  )
+
+  useEffect(() => {
+    // Countdown time for Scaling Upgrade to the final date of May 7 2025
+    const scalingUpgradeDate = new Date("2025-05-07T00:00:00Z")
+    const scalingUpgradeDateTime = scalingUpgradeDate.getTime()
+    const SECONDS = 1000
+    const MINUTES = SECONDS * 60
+    const HOURS = MINUTES * 60
+    const DAYS = HOURS * 24
+
+    const countdown = () => {
+      const now = Date.now()
+      const timeLeft = scalingUpgradeDateTime - now
+
+      // If the date has past, set the countdown to null
+      if (timeLeft < 0) return setPectraCountdown(null)
+
+      const daysLeft = Math.floor(timeLeft / DAYS)
+      const hoursLeft = Math.floor((timeLeft % DAYS) / HOURS)
+      const minutesLeft = Math.floor((timeLeft % HOURS) / MINUTES)
+      const secondsLeft = Math.floor((timeLeft % MINUTES) / SECONDS)
+
+      setPectraCountdown(
+        `${daysLeft}days :: ${hoursLeft}h ${minutesLeft}m ${secondsLeft}s`
+      )
+    }
+    countdown()
+
+    let interval: NodeJS.Timeout | undefined
+
+    if (scalingUpgradeCountdown !== null) {
+      // Only run the interval if the date has not passed
+      interval = setInterval(countdown, SECONDS)
+    }
+
+    return () => clearInterval(interval)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
   useEffect(() => {
     const genesisTime = new Date("2020-12-01T12:00:23Z").getTime()
     const updateTime = () => {
@@ -356,8 +398,15 @@ export const useResources = ({
         <div className="grid place-items-center py-5">
           <div className="text-sm">Next upgrade</div>
           <div className="text-5xl font-bold">Pectra</div>
-          {/* TODO: Convert date to a countdown */}
-          <div className="text-xl font-bold text-body-medium">07 May 2025</div>
+          <div className="text-xl font-bold text-body-medium">
+            {scalingUpgradeCountdown ? (
+              scalingUpgradeCountdown
+            ) : (
+              <div className="rounded-full bg-success px-2 py-1 text-xs font-normal uppercase text-success-light">
+                Live Since April 2025
+              </div>
+            )}
+          </div>
         </div>
       ),
       items: [
