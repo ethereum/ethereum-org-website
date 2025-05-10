@@ -1,5 +1,5 @@
 {
-  "page-find-wallet-clear": "Futa vichujaji",
+  "page-find-wallet-clear": "Ondoa vichujaji",
   "page-find-wallet-desc-2": "Je hufahamu pochi ni nini?",
   "page-find-wallet-desc-2-wallets-link": "Jufunze kuhusu pochi.",
   "page-find-wallet-description": "Pochi hutunza na kuhamisha ETH yako. unaweza kuchagua kutoka katika bidhaa nyingi zinazofaa katika uhitaji wako.",
@@ -12,7 +12,7 @@
   "page-find-wallet-open-source": "Chanzo cha wazi",
   "page-find-wallet-open-source-desc": "Programu za vyanzo-vya-wazi huruhusu mtu yeyote kukagua uadilifu na usalama wa programu hio",
   "page-find-wallet-self-custody": "Ulizi wa kibinafsi",
-  "page-find-wallet-non-custodial": "Umiliki binafsi",
+  "page-find-wallet-non-custodial": "Umiliki wa kibinafsi",
   "page-find-wallet-non-custodial-desc": "Pochi ambazo hazidhibiti funguo zako za faragha",
   "page-find-wallet-hardware-wallet-support": "Msaada wa vifaa kwa pochi",
   "page-find-wallet-hardware-wallet-support-desc": "Pochi zinazoweza kuunganishwa na pochi ya maunzi kwa usalama zaidi",
