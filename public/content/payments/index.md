@@ -65,6 +65,39 @@ In countries where their means of payment have been disconnected from the rest o
   </ButtonLink>
 </InfoBanner>
 
+## Pay with Self-Custodial Crypto Cards {#pay-with-self-custodial-crypto-cards}
+
+Self-custodial crypto cards work like using your own backpack instead of locking your money in someone else’s vault. With a traditional card, a bank or custodian holds your funds and releases them when you spend. With self-custodial cards, you stay in control of your assets the whole time—no middleman—while still being able to tap or swipe to pay for coffee, groceries, or even a flight.
+
+These cards link directly to non-custodial wallets or smart contract accounts, allowing users to spend ETH and stablecoins in everyday settings without giving up ownership. Unlike custodial cards, which require users to deposit funds with a third party, self-custodial cards enable real-world payments such as Visa and Mastercard while preserving onchain control.
+
+### Examples include:
+
+- **MetaMask Card:** Linked to the MetaMask wallet, this Mastercard debit card lets users spend ETH, stablecoins, and other supported tokens. It supports Apple Pay and Google Pay, includes crypto cashback rewards, and offers yield-earning options.
+
+- **Tuyo Card:** A smart contract–based Visa card that auto-converts crypto to USDC for spending anywhere Visa is accepted. Users keep custody of their assets, with access to yield, trading, and spending features.
+
+- **Gnosis Pay:** The first self-custodial Visa card tied to a Gnosis Safe smart account. Users spend crypto directly from their wallet with no gas, FX, or off-ramping fees. Card personalization via Ethereum Name Service (ENS) is also supported.
+
+- **ether.fi Card:** Integrated with ether.fi’s staking protocol, this card lets users spend while their ETH remains staked. Payments are handled via smart contracts, maintaining self-custody even while spending.
+
+### Self-Custodial Crypto Card Comparison
+
+| **Crypto Card** | **Self-Custodial** | **Non-Custodial** | **Key Notes**                                                |
+| --------------- | :----------------: | :---------------: | ------------------------------------------------------------ |
+| MetaMask Card   |         ✅          |         ✅         | Wallet stays in MetaMask; auto off-ramp at payment.          |
+| Tuyo Card       |         ✅          |         ✅         | Smart wallet converts to USDC; user retains control.         |
+| Gnosis Pay      |         ✅          |         ✅         | Linked to user’s Gnosis Safe; no custody shift during use.   |
+| ether.fi Card   |         ✅          |         ✅         | ETH remains staked; smart contract controls spending access. |
+
+<div 
+  class="border text-sm rounded px-4 py-3 my-4"   
+>
+  <strong>Note:</strong> "Self-Custodial" refers to user-controlled wallets where the user has full access and control over their funds. 
+  "Non-Custodial" refers to wallets where funds are managed without third-party custody, often through smart contracts.
+  While all self-custodial cards are non-custodial, not all non-custodial cards are self-custodial.
+</div>
+
 ## Salary Payments {#salary-payments}
 
 Many forward-thinking companies are now offering employees the option to receive their salaries, or a portion of them, in cryptocurrencies like ether (ETH):
@@ -99,14 +132,14 @@ There were also similar response times for tragedies that happened in India and 
 
 To truly appreciate the impact of Ethereum payments, it's worth comparing them to traditional fiat currencies:
 
-|  | **Ethereum** | **Traditional banks** |
-| ----------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Speed** | Seconds to minutes | Hours to days |
-| **Global Reach** | Borderless, 24/7 | Subject to international banking restrictions and work hours |
-| **Transparency** | Fully transparent | Varies by institution |
-| **Programmability** | Smart contracts enabled | Limited to basic transactions |
-| **Inflation Control** | Predictable issuance | Subject to central bank policies |
-| **Accessibility** | Anyone with internet | Subject to national and international restrictions |
+|                       | **Ethereum**            | **Traditional banks**                                        |
+| --------------------- | ----------------------- | ------------------------------------------------------------ |
+| **Speed**             | Seconds to minutes      | Hours to days                                                |
+| **Global Reach**      | Borderless, 24/7        | Subject to international banking restrictions and work hours |
+| **Transparency**      | Fully transparent       | Varies by institution                                        |
+| **Programmability**   | Smart contracts enabled | Limited to basic transactions                                |
+| **Inflation Control** | Predictable issuance    | Subject to central bank policies                             |
+| **Accessibility**     | Anyone with internet    | Subject to national and international restrictions           |
 
 At its core, Ethereum is a decentralized platform that allows for secure, fast, and transparent transactions. However, many components set it apart from traditional payment methods. Let's dive into the benefits that make Ethereum payments a game-changer:
 
