@@ -24,27 +24,7 @@ export default async function middleware(request) {
     return NextResponse.next()
   }
 
-  // Check if path already has a locale
-  const pathname = request.nextUrl.pathname
-  const pathnameHasLocale = routing.locales.some(
-    (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
-  )
-
-  if (pathnameHasLocale) {
-    console.log("⏭️  Path already has locale, skipping middleware")
-    return NextResponse.next()
-  }
-
-  // Force redirect to default locale for root path
-  if (pathname === "/") {
-    const response = NextResponse.redirect(
-      new URL(`/${routing.defaultLocale}`, request.url)
-    )
-    console.log(`📤 Redirecting root to: ${routing.defaultLocale}`)
-    return response
-  }
-
-  // Call the next-intl middleware for all other paths
+  // Call the next-intl middleware for all paths
   const response = await intlMiddleware(request)
 
   // Log the response
