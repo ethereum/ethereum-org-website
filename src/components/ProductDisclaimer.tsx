@@ -1,10 +1,17 @@
-import InfoBanner from "@/components/InfoBanner"
 import Translation from "@/components/Translation"
 
+import { Alert, AlertContent, AlertDescription } from "./ui/alert"
+import Emoji from "./Emoji"
+
 const ProductDisclaimer = () => (
-  <InfoBanner emoji="⚠️" isWarning>
-    <Translation id="product-disclaimer" />
-  </InfoBanner>
+  <Alert variant="warning">
+    <Emoji text="⚠️" className="text-4xl" />
+    <AlertContent>
+      <AlertDescription>
+        <Translation id="product-disclaimer" />
+      </AlertDescription>
+    </AlertContent>
+  </Alert>
 )
 
 export default ProductDisclaimer

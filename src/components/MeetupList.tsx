@@ -5,7 +5,6 @@ import sortBy from "lodash/sortBy"
 import { FaChevronRight } from "react-icons/fa6"
 
 import Emoji from "@/components/Emoji"
-import InfoBanner from "@/components/InfoBanner"
 import Translation from "@/components/Translation"
 
 import { cn } from "@/lib/utils/cn"
@@ -13,6 +12,7 @@ import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import meetups from "@/data/community-meetups.json"
 
+import { Alert, AlertContent, AlertDescription } from "./ui/alert"
 import { Flex } from "./ui/flex"
 import Input from "./ui/input"
 import InlineLink, { BaseLink } from "./ui/Link"
@@ -102,12 +102,17 @@ const MeetupList = () => {
       </ul>
       <div aria-live="assertive" aria-atomic>
         {!filteredMeetups.length && (
-          <InfoBanner emoji=":information_source:">
-            <Translation id="page-community:page-community-meetuplist-no-meetups" />{" "}
-            <InlineLink href="https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-meetups.json">
-              <Translation id="page-community:page-community-please-add-to-page" />
-            </InlineLink>
-          </InfoBanner>
+          <Alert variant="update">
+            <Emoji text=":information_source:" className="text-4xl" />
+            <AlertContent>
+              <AlertDescription>
+                <Translation id="page-community:page-community-meetuplist-no-meetups" />{" "}
+                <InlineLink href="https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-meetups.json">
+                  <Translation id="page-community:page-community-please-add-to-page" />
+                </InlineLink>
+              </AlertDescription>
+            </AlertContent>
+          </Alert>
         )}
       </div>
     </div>
