@@ -230,6 +230,10 @@ export const COMMUNITY_BLOGS: CommunityBlog[] = [
     href: "https://medium.com/ethereum-cat-herders/newsletter",
     feed: "https://medium.com/feed/ethereum-cat-herders",
   },
+  {
+    href: "http://geodework.com/blog",
+    feed: "http://geodework.com/feed.xml",
+  },
 ]
 
 export const BLOG_FEEDS = COMMUNITY_BLOGS.map(({ feed }) => feed).filter(
