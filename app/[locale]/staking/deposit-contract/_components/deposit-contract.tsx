@@ -140,7 +140,8 @@ const StyledFakeLink = (props: ButtonProps) => (
   />
 )
 
-const CHUNKED_ADDRESS = DEPOSIT_CONTRACT_ADDRESS.match(/.{1,3}/g)?.join(" ")
+const CHUNKED_ADDRESS =
+  DEPOSIT_CONTRACT_ADDRESS.match(/(?:^0x|.{4})/g)?.join(" ")
 
 const blockieSrc = makeBlockie(DEPOSIT_CONTRACT_ADDRESS)
 
