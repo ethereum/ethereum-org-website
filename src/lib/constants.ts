@@ -199,7 +199,7 @@ export const COMMUNITY_BLOGS: CommunityBlog[] = [
   },
   {
     href: "https://ethpandaops.io/posts/",
-    feed: "https://ethpandaops.io/posts/index.xml",
+    feed: "https://ethpandaops.io/posts/rss.xml",
   },
   {
     href: "https://ethstaker.cc/blog",

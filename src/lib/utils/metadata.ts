@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import { getTranslations } from "next-intl/server"
 
-import { DEFAULT_OG_IMAGE } from "@/lib/constants"
+import { DEFAULT_OG_IMAGE, SITE_URL } from "@/lib/constants"
 
 import { getFullUrl } from "./url"
 
@@ -65,7 +65,7 @@ export const getMetadata = async ({
   return {
     title,
     description,
-    metadataBase: new URL(url),
+    metadataBase: new URL(SITE_URL),
     alternates: {
       canonical: url,
       languages: {

@@ -2,6 +2,7 @@
 
 import { FaDiscord, FaGithub, FaXTwitter } from "react-icons/fa6"
 import { IoChevronUpSharp } from "react-icons/io5"
+import { SiFarcaster } from "react-icons/si"
 
 import type { FooterLink, FooterLinkSection } from "@/lib/types"
 
@@ -21,6 +22,11 @@ const socialLinks = [
     icon: FaGithub,
     href: "https://github.com/ethereum/ethereum-org-website",
     ariaLabel: "GitHub",
+  },
+  {
+    icon: SiFarcaster,
+    href: "https://warpcast.com/ethdotorg",
+    ariaLabel: "Farcaster",
   },
   {
     icon: FaXTwitter,
@@ -179,10 +185,6 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
         {
           href: "/enterprise/",
           text: t("enterprise-mainnet"),
-        },
-        {
-          href: "/enterprise/private-ethereum/",
-          text: t("enterprise-private"),
         },
       ],
     },

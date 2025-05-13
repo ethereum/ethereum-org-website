@@ -1045,6 +1045,17 @@ const chains = [
     chain: "ETH",
   },
   {
+    name: "Settlus",
+    infoURL: "https://settlus.org",
+    chainId: 5371,
+    nativeCurrency: {
+      name: "Ether",
+      symbol: "ETH",
+      decimals: 18,
+    },
+    chain: "ETH",
+  },
+  {
     name: "Nahmii 2 Mainnet",
     infoURL: "https://nahmii.io",
     chainId: 5551,
@@ -1441,17 +1452,6 @@ const chains = [
     chain: "Liveplex OracleEVM Network",
   },
   {
-    name: "Reddio Devnet",
-    infoURL: "https://www.reddio.com",
-    chainId: 50341,
-    nativeCurrency: {
-      name: "Red",
-      symbol: "RED",
-      decimals: 18,
-    },
-    chain: "ETH",
-  },
-  {
     name: "BirdLayer",
     infoURL: "https://www.dodochain.com",
     chainId: 53456,
@@ -1535,6 +1535,17 @@ const chains = [
     nativeCurrency: {
       name: "Ether",
       symbol: "ETH",
+      decimals: 18,
+    },
+    chain: "ETH",
+  },
+  {
+    name: "Animechain Mainnet",
+    infoURL: "https://www.anime.xyz",
+    chainId: 69000,
+    nativeCurrency: {
+      name: "Animecoin",
+      symbol: "ANIME",
       decimals: 18,
     },
     chain: "ETH",
@@ -1692,6 +1703,17 @@ const chains = [
       decimals: 18,
     },
     chain: "re.al",
+  },
+  {
+    name: "Eventum Mainnet",
+    infoURL: "https://evedex.com",
+    chainId: 161803,
+    nativeCurrency: {
+      name: "Ether",
+      symbol: "ETH",
+      decimals: 18,
+    },
+    chain: "Eventum",
   },
   {
     name: "Taiko Alethia",
@@ -2267,6 +2289,17 @@ const chains = [
       decimals: 18,
     },
     chain: "ETH",
+  },
+  {
+    name: "Yominet",
+    infoURL: "https://www.kamigotchi.io/",
+    chainId: 428962654539583,
+    nativeCurrency: {
+      name: "Ether",
+      symbol: "ETH",
+      decimals: 18,
+    },
+    chain: "YOMINET",
   },
   {
     name: "DCHAIN",
