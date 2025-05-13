@@ -100,7 +100,7 @@ const UpcomingEventsList = () => {
   if (Object.keys(monthGroupedEvents)?.length) {
     return (
       <Alert variant="update">
-        <Emoji text=":information_source:" className="text-5xl" />
+        <Emoji text=":information_source:" className="text-4xl" />
         <AlertContent>
           <AlertDescription>
             {t("page-community-upcoming-events-no-events")}{" "}

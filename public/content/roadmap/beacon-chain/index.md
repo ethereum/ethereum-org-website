@@ -36,9 +36,14 @@ The transition to proof-of-stake made Ethereum significantly more secure and dec
 
 And using proof-of-stake as consensus mechanism is a foundational component for [the secure, environmentally friendly and scalable Ethereum we have now](/roadmap/vision/).
 
-<InfoBanner emoji=":money_bag:">
+<Alert variant="update">
+<Emoji text=":money_bag:" className="text-4xl"/>
+<AlertContent>
+<AlertDescription>
   If you're interested in becoming a validator and helping secure Ethereum, <a href="/staking/">learn more about staking</a>.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ### Setting up for sharding {#setting-up-for-sharding}
 

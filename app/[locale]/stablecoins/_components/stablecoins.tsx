@@ -482,7 +482,7 @@ const StablecoinsPage = ({ markets, marketsHasError }: Props) => {
         <Content id="how">
           <H2 className="mt-0">{t("page-stablecoins-types-of-stablecoin")}</H2>
           <Alert variant="warning">
-            <Emoji text="⚠️" className="text-8xl" />
+            <Emoji text="⚠️" className="text-4xl" />
             <div>
               <H3 className="mb-4 mt-0">
                 {t("page-stablecoins-research-warning-title")}
