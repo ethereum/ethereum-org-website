@@ -54,11 +54,15 @@ Celková nabídka ETH: **~120 520 000 ETH** (v době Sloučení v září 2022)
 - Výsledkem je **~620 500** ETH vydaných za rok
 - To vedlo k inflaci **přibližně 0,52 %** (620,5 tis. za rok / 119,3 mil. celkem)
 
-<InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
 <strong>Celková anualizovaná míra vydávání (před Sloučením): ~4,61 %</strong> (4,09 % + 0,52 %)<br/><br/>
 <strong>~88,7 %</strong> vydávaných ETH směřovalo k těžařům v exekuční vrstvě (4,09 / 4,61 * 100)<br/><br/>
 <strong>~11,3 %</strong> bylo vydáváno uzamykatelům ve vrstvě konsenzu (0,52 / 4,61 * 100)
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## Po Sloučení (současnost) {#post-merge}
 
@@ -84,18 +88,26 @@ Přibližně 0,33 % z celkového počtu validátorů může odejít během jedno
 - Vydávání v exekuční vrstvě: **0**
 - Vydávání ve vrstvě konsenzu: Stejné jako výše, roční míra vydávání (při celkovém uzamčení 14 milionů ETH) je **~0,52 %**
 
-<InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
 Celková roční míra vydávání: <strong>~0,52 %</strong><br/><br/>
 Čisté snížení ročního vydávání ETH: <strong>~88,7 %</strong> ((4,61 % - 0,52 %) / 4,61 % * 100)
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## <Emoji text=":fire:" size="1" />Pálení {#the-burn}
 
 Opakem vydávání ETH je stupeň, při které je ETH pálen. Aby byla transakce na Ethereu provedena, musí být zaplacen minimální poplatek (známý jako „základní poplatek“), který se neustále mění (blok od bloku) v závislosti na aktivitě sítě. Poplatek je placen v ETH a je _nezbytný_ pro to, aby byla transakce považována za platnou. Tento poplatek je během transakčního procesu _pálen_, čímž se odstraňuje z oběhu.
 
-<InfoBanner>
+<Alert variant="update">
+<AlertContent>
+<AlertDescription>
 Pálení poplatků bylo spuštěno s <a href="/history/#london">vylepšením London</a> v srpnu 2021 a od Sloučení zůstává beze změn.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 Kromě pálení poplatků zavedeného s vylepšením London mohou validátoři také dostávat pokuty za to, že jsou offline, nebo hůře, mohou být „potrestáni“ za porušení specifických pravidel, které ohrožuje bezpečnost sítě. Tyto pokuty vedou k odečtení ETH od zůstatku validátora, aniž by byly převedeny jako odměna jinému účtu, čímž se efektivně pálí/odstraňují z oběhu.
 

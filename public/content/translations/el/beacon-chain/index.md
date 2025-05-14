@@ -34,9 +34,14 @@ summaryPoint3: Η Κύρια Αλυσίδα εισήγαγε τη λογική �
 
 Η χρήση της απόδειξης συμμετοχής ως συναινετικός μηχανισμός είναι ένα θεμελιώδες στοιχείο για [το ασφαλές, φιλικό προς το περιβάλλον και επεκτάσιμο Ethereum που έχουμε τώρα](/roadmap/vision/).
 
-<InfoBanner emoji=":money_bag:">
+<Alert variant="update">
+<Emoji text=":money_bag:" className="text-4xl"/>
+<AlertContent>
+<AlertDescription>
   Αν ενδιαφέρεστε να γίνετε επικυρωτής και να συμβάλετε στην ενίσχυση της ασφάλειας του Ethereum, <a href="/staking/">μάθετε περισσότερα για την αποθήκευση (staking)</a>.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ### Ρυθμίζοντας την τμηματοποίηση (sharding) {#setting-up-for-sharding}
 
