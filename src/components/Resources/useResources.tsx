@@ -36,6 +36,7 @@ import IconEtherscan from "@/public/images/resources/etherscan.png"
 import IconEthproofs from "@/public/images/resources/ethproofs.png"
 import IconEthstaker from "@/public/images/resources/ethstaker.png"
 import IconFarcaster from "@/public/images/resources/farcaster.png"
+import IconGasTracker from "@/public/images/resources/gas.png"
 import IconGrowthepie from "@/public/images/resources/growthepie.png"
 import IconL2beat from "@/public/images/resources/l2beat.png"
 import IconNftgo from "@/public/images/resources/nftgo.png"
@@ -200,10 +201,16 @@ export const useResources = ({ txCostsMedianUsd }): DashboardSection[] => {
       // TODO: Add metric
       items: [
         {
-          title: "Ethereum Gas Tracker",
+          title: "Etherscan Gas",
           description: t("page-resources-gas-etherscan-description"),
           href: "https://etherscan.io/gastracker",
           imgSrc: IconEthGlyphBlueCircle,
+        },
+        {
+          title: "ETH Gas Tracker",
+          description: t("page-resources-gas-ethgastracker-description"),
+          href: "https://www.ethgastracker.com/",
+          imgSrc: IconGasTracker,
         },
         {
           title: "Blocknative Gas Estimator",

@@ -23,7 +23,7 @@ lang: zh
 - [批量传输](#batch_transfers)：通过一次合约调用传输多种资产。
 - [批量余额](#batch_balance)：在一次调用中获取多个资产的余额。
 - [批量审批](#batch_approval)：审批同一地址的所有代币。
-- [Hook](#recieve_hook)：接收代币的钩子函数。
+- [Hook](#receive_hook)：接收代币的钩子函数。
 - [支持非同质化代币](#nft_support)：如果供应量仅为 1，将其作为非同质化代币处理。
 - [安全转账规则](#safe_transfer_rule)：安全转账规则集。
 

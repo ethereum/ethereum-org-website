@@ -10,6 +10,7 @@
   "comp-withdrawal-comparison-new-link": "Téigh chuig Ardán Geallchuir",
   "comp-withdrawal-credentials-placeholder": "Innéacs bailíochtóra",
   "comp-withdrawal-credentials-error": "Úps! Seiceáil uimhir innéacs an bhailitheora agus bain triail eile as.",
+  "comp-withdrawal-credentials-upgraded-1": "Tá innéacs Validator {validatorIndex} réidh le tosú ar luaíochtaí a fháil!",
   "comp-withdrawal-credentials-upgraded-2": "Dintiúir aistarraingthe atá nasctha le seoladh forghníomhaithe:",
   "comp-withdrawal-credentials-not-upgraded-1": "Ní mór an bailíochtóir seo a nuashonrú.",
   "comp-withdrawal-credentials-not-upgraded-1-testnet": "Ní mór an bailíochtóir Holesky Testnet seo a uasghrádú.",

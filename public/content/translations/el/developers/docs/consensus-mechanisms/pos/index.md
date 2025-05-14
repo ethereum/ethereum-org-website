@@ -96,4 +96,4 @@ lang: el
 ## Σχετικά θέματα {#related-topics}
 
 - [Απόδειξη της εργασίας (Proof of work)](/developers/docs/consensus-mechanisms/pow/)
-- [Proof-of-authority](/developers/docs/consensus-mechanisms/poa/)
+- [Απόδειξη Αρχής](/developers/docs/consensus-mechanisms/poa/)
