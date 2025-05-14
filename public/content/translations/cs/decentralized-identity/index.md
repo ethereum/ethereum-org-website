@@ -145,7 +145,7 @@ Zde je příklad toho, jak by mohla fungovat blockchainová atestace v praxi:
 
 1. Společnost (XYZ s. r. o.) plánuje prodat vlastnické akcie pomocí chytrého kontraktu, ale chce pouze kupce, kteří dokončili prověření minulosti.
 
-2. XYZ s. r. o. může nechat společnost, která prověřuje minulost, vydávat atestace na blockchainu Etherea. Tato atestace potvrzuje, že jednotlivec prošel prověřením minulosti, aniž by odhalil jakékoli osobní údaje.
+2. XYZ s. r. o. může nechat společnost, která prověřuje minulost, vydávat atestace na blockchainu Ethereum. Tato atestace potvrzuje, že jednotlivec prošel prověřením minulosti, aniž by odhalil jakékoli osobní údaje.
 
 3. Chytrý kontrakt o prodeji akcií může zkontrolovat registrační kontrakt k nalezení identity zkontrolovaných kupců, což chytrému kontraktu umožňuje určit, kdo smí akcie koupit a kdo ne.
 
