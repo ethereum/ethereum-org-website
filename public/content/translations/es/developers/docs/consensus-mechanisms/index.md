@@ -56,7 +56,7 @@ Los validadores crean bloques. Un validador se selecciona aleatoriamente en cada
 
 Un sistema de prueba de participación es criptoeconómicamente seguro, porque un atacante que intente tomar el control de la cadena debe destruir una cantidad masiva de ETH. Un sistema de recompensas alienta a participantes individuales a comportarse honestamente, y las penalizaciones desaniman a los participantes a actuar malintencionadamente.
 
-Más información sobre la [prueba de participación](/developers/docs/consensus-mechanisms/pos/).
+Más información sobre la [prueba de participación](/developers/docs/consensus-mechanisms/pos/)
 
 ### Una guía visual {#types-of-consensus-video}
 

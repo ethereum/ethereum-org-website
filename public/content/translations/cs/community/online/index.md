@@ -55,13 +55,14 @@ Pokud si myslíte, že by komunita měla být na základě těchto pokynů přid
 <SocialListItem socialIcon="webpage"><Link href="https://gitter.im/ethereum/solidity">Solidity Gitter</Link> – chat pro vývoj v Solidity (Gitter)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> – chat pro vývoj v Solidity (Matrix)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link>* – fórum otázek a odpovědí*</SocialListItem>
-<SocialListItem socialIcon="webpage"><Link href="https://peeranha.io/">Peeranha</Link>* – decentralizované fórum pro otázky a odpovědi*</SocialListItem>
+<SocialListItem socialIcon="webpage"><Link href="https://app.peera.ai/">Komunitní fórum Peera </Link>*– decentralizované fórum pro otázky a odpovědi*</SocialListItem>
 
-## YouTube a Twitter {#youtube-and-twitter}
+## YouTube a X (dříve Twitter) {#youtube-and-twitter}
 
 <SocialListItem socialIcon="youtube"><Link href="https://www.youtube.com/c/EthereumFoundation">Ethereum Foundation</Link> – sledujte aktuální dění z Ethereum Foundation</SocialListItem>
-<SocialListItem socialIcon="twitter"><Link href="https://twitter.com/ethereum">@ethereum</Link> – oficiální účet Ethereum Foundation</SocialListItem>
-<SocialListItem socialIcon="twitter"><Link href="https://twitter.com/ethdotorg">@ethdotorg</Link> – portál do světa Etherea, vytvořený pro naši rostoucí globální komunitu</SocialListItem>
+<SocialListItem socialIcon="twitter"><Link href="https://x.com/ethereum">@ethereum</Link> – Hlavní Ethereum účet pro komunitu</SocialListItem>
+<SocialListItem socialIcon="twitter"><Link href="https://x.com/ethereumfndn">@ethereumfndn</Link> – Oficiální účet pro Nadaci Ethereum</SocialListItem>
+<SocialListItem socialIcon="twitter"><Link href="https://x.com/ethdotorg">@ethdotorg</Link> – portál do světa Etherea, vytvořený pro naši rostoucí globální komunitu</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://hive.one/c/ethereum?page=1">Seznam vlivných účtů na Twitteru o Ethereu</Link></SocialListItem>
 
 <Divider />
