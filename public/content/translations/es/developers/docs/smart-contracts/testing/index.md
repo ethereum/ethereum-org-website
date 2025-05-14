@@ -259,7 +259,7 @@ La diferencia principal es que los programas de recompensas por errores están a
 
 - **[Marco de pruebas unitarias de Brownie:](https://eth-brownie.readthedocs.io/en/v1.0.0_a/tests.html)** _Brownie utiliza Pytest, un marco de pruebas rico en funciones que le permite escribir pequeñas pruebas con código mínimo, escala bien para proyectos grandes y es altamente extendible._
 
-- **[Foundry Tests:](https://github.com/foundry-rs/foundry/tree/master/forge)** _Foundry ofrece Forge, un marco de pruebas de Ethereum rápido y flexible capaz de ejecutar pruebas unitarias simples, comprobaciones de optimización de gas y fuzzing de contratos._
+- **[Foundry Tests:](https://github.com/foundry-rs/foundry/tree/master/crates/forge)** _Foundry ofrece Forge, un marco de pruebas de Ethereum rápido y flexible capaz de ejecutar pruebas unitarias simples, comprobaciones de optimización de gas y fuzzing de contratos._
 
 - **[Hardhat Tests:](https://hardhat.org/hardhat-runner/docs/guides/test-contracts)** _Marco para probar contratos inteligentes basado en ethers.js, Mocha y Chai._
 
