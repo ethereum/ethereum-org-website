@@ -125,6 +125,15 @@ export const UseCasesLayout = ({
           eventName: "ai-agents",
         },
       },
+      {
+        text: t("template-usecase:template-usecase-dropdown-onchain-gaming"),
+        href: "/gaming/",
+        matomo: {
+          eventCategory: "use cases menu",
+          eventAction: "click",
+          eventName: "onchain-gaming",
+        },
+      },
     ],
   }
 
