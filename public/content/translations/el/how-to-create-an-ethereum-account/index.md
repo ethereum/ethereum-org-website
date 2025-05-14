@@ -41,7 +41,7 @@ lang: el
 
 <div>
 <Alert variant="update">
-<Emoji text=":eyes:" className="text-4xl">
+<Emoji text=":eyes:" className="text-4xl"/>
 <AlertContent className="flex-row items-center justify-between">
   <div><b>Εγκαταστήσατε εφαρμογή πορτοφολιού;</b><br/> Μάθετε πώς να τη χρησιμοποιείτε.</div>
   <ButtonLink href="/guides/how-to-use-a-wallet">
