@@ -191,14 +191,14 @@ sidebarDepth: 2
 
 Υπάρχουν πολλαπλοί πελάτες συναίνεσης (γνωστοί παλαιότερα ως πελάτες «Eth2») για την υποστήριξη των [αναβαθμίσεων συναίνεσης](/roadmap/beacon-chain/). Είναι υπεύθυνοι για όλη τη λογική που σχετίζεται με τη συναίνεση, συμπεριλαμβανομένου του αλγόριθμου επιλογής ενσωμάτωσης (fork), της επεξεργασίας των βεβαιώσεων και της διαχείρισης των ανταμοιβών και των ποινών [απόδειξης συμμετοχής](/developers/docs/consensus-mechanisms/pos).
 
-| Πελάτης                                                       | Γλώσσα     | Λειτουργικά συστήματα | Δίκτυα                                                           |
-| ------------------------------------------------------------- | ---------- | --------------------- | ---------------------------------------------------------------- |
-| [Lighthouse](https://lighthouse.sigmaprime.io/)               | Rust       | Linux, Windows, macOS | Beacon Chain, Goerli, Pyrmont, Sepolia, Ropsten και άλλα         |
-| [Lodestar](https://lodestar.chainsafe.io/)                    | TypeScript | Linux, Windows, macOS | Beacon Chain, Goerli, Sepolia, Ropsten και άλλα                  |
-| [Nimbus](https://nimbus.team/)                                | Nim        | Linux, Windows, macOS | Beacon Chain, Goerli, Sepolia, Ropsten και άλλα                  |
-| [Prysm](https://docs.prylabs.network/docs/getting-started/)   | Μετάβαση   | Linux, Windows, macOS | Beacon Chain, Gnosis, Goerli, Pyrmont, Sepolia, Ropsten και άλλα |
-| [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) | Java       | Linux, Windows, macOS | Beacon Chain, Gnosis, Goerli, Sepolia, Ropsten και άλλα          |
-| [Grandine](https://docs.grandine.io/) (beta)                  | Rust       | Linux, Windows, macOS | Beacon Chain, Goerli, Sepolia και άλλα                           |
+| Πελάτης                                                       | Γλώσσα     | Λειτουργικά συστήματα | Δίκτυα                                              |
+| ------------------------------------------------------------- | ---------- | --------------------- | --------------------------------------------------- |
+| [Lighthouse](https://lighthouse.sigmaprime.io/)               | Rust       | Linux, Windows, macOS | Beacon Chain, Holesky, Pyrmont, Sepolia κτλ         |
+| [Lodestar](https://lodestar.chainsafe.io/)                    | TypeScript | Linux, Windows, macOS | Beacon Chain, Holesky, Sepolia κτλ                  |
+| [Nimbus](https://nimbus.team/)                                | Nim        | Linux, Windows, macOS | Beacon Chain, Holesky, Sepolia κτλ                  |
+| [Prysm](https://docs.prylabs.network/docs/getting-started/)   | Μετάβαση   | Linux, Windows, macOS | Beacon Chain, Gnosis, Holesky, Pyrmont, Sepolia κτλ |
+| [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) | Java       | Linux, Windows, macOS | Beacon Chain, Gnosis, Holesky, Sepolia κτλ          |
+| [Grandine](https://docs.grandine.io/)                         | Rust       | Linux, Windows, macOS | Beacon Chain, Holesky, Sepolia κτλ                  |
 
 ### Lighthouse {#lighthouse}
 
