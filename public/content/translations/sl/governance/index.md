@@ -14,7 +14,7 @@ _Če si nihče ne lasti Ethereuma, kako so potem sprejete odločitve o prihodnji
 
 Upravljanje je sistem, ki omogoča sprejemanje odločitev. V tipični organizacijski strukturi ima lahko zadnjo besedo pri sprejemanju odločitev izvršna ekipa ali upravni odbor. Ali pa morda delničarji glasujejo o predlogih za uveljavitev sprememb. V političnem sistemu izvoljeni uradniki lahko uveljavijo zakonodajo, ki poskuša predstavljati interese njihovih volivcev.
 
-## Decentralizirano upravljanje {#decentalized-governance}
+## Decentralizirano upravljanje {#decentralized-governance}
 
 Nobena oseba si ne lasti ali kontrolira Ethereum protokola, vendar odločitve o implementaciji sprememb morajo biti kljub temu sprejete, da bi lahko zagotovili dolgoživost in blaginjo omrežja. To pomanjkanje lastništva pomeni, da je tradicionalno organizacijsko upravljanje nezdružljiva rešitev.
 
