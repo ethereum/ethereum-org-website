@@ -66,8 +66,7 @@ Le go leor seirbhísí ar líne a úsáid ní mór do dhaoine fianuithe agus din
 Le céannacht díláraithe ligtear do chuideachtaí scipeáil ar ghnáthphróisis [Know-Your-Customer (KYC)](https://en.wikipedia.org/wiki/Know_your_customer) agus féiniúlachtaí úsáideora a fhíordheimhniú trí Dintiúir Infhíoraithe. Leis sin laghdaítear costas bainistíochta aitheantais agus cuireann sé cosc ​​​​ar úsáid doiciméadú falsa.
 
 ### 3. Pobail vótála agus ar líne {#voting-and-online-communities}
-
-Dhá fheidhmchlár nua ar chéannacht dhíláraithe iad vótáil ar líne agus na meáin shóisialta. Tá scéimeanna vótála ar líne so-ghabhálach i leith cúblála, go háirithe má chruthaíonn gníomhaithe mailíseacha céannachtaí bréagacha chun vóta a chaitheamh. Má iarrtar ar dhaoine fianuithe ar slabhra a chur i láthair, féadtar sláine na bpróiseas vótála ar líne a fheabhsú.
+.pDhá fheidhmchlár nua ar chéannacht dhíláraithe iad vótáil ar líne agus na meáin shóisialta. Tá scéimeanna vótála ar líne so-ghabhálach i leith cúblála, go háirithe má chruthaíonn gníomhaithe mailíseacha céannachtaí bréagacha chun vóta a chaitheamh. Má iarrtar ar dhaoine fianuithe ar slabhra a chur i láthair, féadtar sláine na bpróiseas vótála ar líne a fheabhsú.
 
 Is féidir le céannacht dhíláraithe cabhrú le pobail ar líne a chruthú atá saor ó chuntais bhréige. Mar shampla, d'fhéadfadh go mbeadh ar gach úsáideoir a bhféiniúlacht a fhíordheimhniú trí úsáid a bhaint as córas aitheantais ar slabhra, cosúil leis Seirbhís Ainmneacha Ethereum, rud a laghdódh féidearthacht róbónna.
 
