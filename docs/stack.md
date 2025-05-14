@@ -10,7 +10,7 @@
 - [React](https://reactjs.org/) - A JavaScript library for building component-based user interfaces
 - [Typescript](https://www.typescriptlang.org/) - TypeScript is a strongly typed programming language that builds on JavaScript
 - [Chakra UI](https://chakra-ui.com/) - A UI library (Migration in progress)
-- [Algolia](https://www.algolia.com/) - Site indexing, rapid intra-site search results, and search analytics. [Learn more on how we implement Algolia for site search](./docs/ALGOLIA_DOCSEARCH.md).
+- [Algolia](https://www.algolia.com/) - Site indexing, rapid intra-site search results, and search analytics. [Learn more on how we implement Algolia for site search](./site-search.md).
   - Primary implementation: `/src/components/Search/index.ts`
 - [Crowdin](https://crowdin.com/) - crowdsourcing for our translation efforts (See "Translation initiative" below)
 - [GitHub Actions](https://github.com/features/actions) - Manages CI/CD, and issue tracking

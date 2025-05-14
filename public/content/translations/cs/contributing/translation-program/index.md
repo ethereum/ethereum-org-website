@@ -36,9 +36,9 @@ Přečtěte si více o [poslání a vizi](/contributing/translation-program/miss
 
 ### Naše dosavadní pokroky {#our-progress}
 
-- [**6 000+** překladatelů](/contributing/translation-program/contributors/)
-- **62** jazyků dostupných na webu
-- [**3 miliony** přeložených slov v roce 2023](/contributing/translation-program/acknowledgements/)
+- [**6 900 +** překladatelů](/contributing/translation-program/contributors/)
+- **68** jazyků dostupných na webu
+- [**2,89 milionu** přeložených slov v roce 2024](/contributing/translation-program/acknowledgements/)
 
 <TranslationChartImage />
 

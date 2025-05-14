@@ -116,7 +116,7 @@ Nejlepší způsob, jak pracovat s odkazy, je kopírovat je přímo ze zdroje, b
 
 ![Příklad odkazu.png](./example-of-link.png)
 
-Odkazy se také zobrazují ve zdrojovém textu ve formě tagů (tj. `<0>` `</0>`). Pokud na tag umístíte kurzor, editor zobrazí jeho celý obsah – někdy tyto tagy představují odkazy.
+Odkazy se také zobrazují ve zdrojovém textu ve formě tagů (tj. \<0> \</0>). Pokud na tag umístíte kurzor, editor zobrazí jeho celý obsah – někdy tyto tagy představují odkazy.
 
 Je velmi důležité zkopírovat odkazy ze zdroje a neměnit jejich pořadí.
 
@@ -154,7 +154,7 @@ nonce – _text, který není určen k překladu_
 
 Zdrojový text také obsahuje zkrácené tagy, které obsahují pouze čísla, což znamená, že jejich funkce není okamžitě zřejmá. Můžete na tyto tagy najet kurzorem, abyste přesně zjistili, jakou funkci plní.
 
-V příkladu níže můžete vidět, že když najedete kurzorem na tag `<0>` , zobrazí se, že představuje `<code>` a obsahuje úryvek kódu, takže obsah uvnitř těchto tagů by neměl být přeložen.
+V příkladu níže můžete vidět, že když najedete kurzorem na tag \<0> , zobrazí se, že představuje `<code>` a obsahuje úryvek kódu, takže obsah uvnitř těchto tagů by neměl být přeložen.
 
 ![Příklad nejednoznačných tagů.png](./example-of-ambiguous-tags.png)
 

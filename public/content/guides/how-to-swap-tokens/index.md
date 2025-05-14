@@ -12,7 +12,7 @@ A token swap involves the exchange of two different assets that exist on the Eth
 
 **Prerequisite:**
 
-- have a [crypto wallet](/glossary/#wallet), you can follow this tutorial: [How to: "Register" an Ethereum account](/guides/how-to-create-an-ethereum-account/)
+- have a [crypto wallet](/glossary/#wallet); if you don't, you can follow this guide on [how to create an Ethereum account](/guides/how-to-create-an-ethereum-account/)
 - add funds to your wallet
 
 ## 1. Connect your wallet to the decentralized exchange (DEX) of your choice

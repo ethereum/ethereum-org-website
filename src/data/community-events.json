@@ -718,5 +718,50 @@
     "location": "Buenos Aires, Argentina",
     "description": "Pop-up dev city #1 - Ethereum | Zero Knowledge | Artificial Inteligence | Cybersecurity",
     "imageUrl": "https://cdn.prod.website-files.com/6695a56b501ba1fda80ae466/67851f884a16785150e18e2c_Group%20116.svg"
+  },
+  {
+    "title": "Crecimiento",
+    "startDate": "2025-04-18",
+    "endDate": "2025-03-28",
+    "href": "https://crecimientoar",
+    "location": "TBD, ARG",
+    "description": "",
+    "imageUrl": ""
+  },
+  {
+    "title": "ETHVietnam 2025",
+    "startDate": "2025-05-24",
+    "endDate": "2025-05-25",
+    "href": "https://eth-vietnam.com",
+    "location": "HCMC, VNM",
+    "description": "",
+    "imageUrl": "http://static1.squarespace.com/static/629856e64f44db3799f8e3f6/t/6761041c2c3aab15bfbb0ec1/1734411300379/Group+2612.png?format=1500w"
+  },
+  {
+    "title": "ETHBratislava",
+    "startDate": "2025-05-23",
+    "endDate": "2025-05-25",
+    "href": "https://ethbratislava.com/",
+    "location": "Bratislava, SVK",
+    "description": "Two-day conference and hackathon focused on sharing knowledge and sparking innovative ideas aimed at energizing the entire ethereum ecosystem.",
+    "imageUrl": "https://framerusercontent.com/assets/IBAFZwu44FpNo95n3OoOapeFUyw.png"
+  },
+  {
+    "title": "Boston Blockchain Week",
+    "startDate": "2025-09-08",
+    "endDate": "2025-09-11",
+    "href": "https://bostonblockchainweek.com/",
+    "location": "Quincy, Massachusetts, USA",
+    "description": "Boston Blockchain Week is the preeminent annual event celebrating the global blockchain and Web3 hub that is Greater Boston.",
+    "imageUrl": ""
+  },
+  {
+    "title": "DevConnect",
+    "startDate": "2025-11-17",
+    "endDate": "2025-11-22",
+    "href": "https://devconnect.org",
+    "location": "Buenos Aires, ARG",
+    "description": "A collaborative Ethereum week, built by and for everyone.",
+    "imageUrl": "https://devconnect.org/og-argentina.png?reset=1"
   }
 ]
