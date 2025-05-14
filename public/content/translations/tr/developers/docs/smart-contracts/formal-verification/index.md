@@ -70,7 +70,7 @@ Düşük düzeyli resmi spesifikasyonlar Hoare tarzı özellikler veya yürütme
 
 ### Hoare tarzı özellikler {#hoare-style-properties}
 
-[Hoare Mantığı](https://en.wikipedia.org/wiki/Hoare_logic), akıllı sözleşmeleri de kapsayan programların doğruluğu hakkında resmi bir gerekçelendirme kural sınıfı sağlar. Hoare-tarzı bir özellik, Hoare üçlüsü tarafından temsil edilir {_P_}_c_{_Q_}, burada _c_ bir programdır ve _P_ ile _Q_ da _c_ (yani program) durumuna yönelik ifadelerdir, resmi olarak sırayla _ön koşullar_ ve _art koşullar_ olarak tanımlanmışlardır.
+[Hoare Mantığı](https://en.wikipedia.org/wiki/Hoare_logic), akıllı sözleşmeleri de kapsayan programların doğruluğu hakkında resmi bir gerekçelendirme kural sınıfı sağlar. Hoare-tarzı bir özellik, Hoare üçlüsü tarafından temsil edilir `{P}c{Q}`, burada `c` bir programdır ve `P` ile `Q` da `c` (yani program) durumuna yönelik ifadelerdir, resmi olarak sırayla _ön koşullar_ ve _art koşullar_ olarak tanımlanmışlardır.
 
 Bir ön koşul, bir fonksiyonun doğru yürütülmesi için gerekli koşulları açıklayan bir ifadedir; bu sözleşmeyi çağıran kullanıcılar bu gerekliliği karşılamak zorundadır. Bir art koşul ise doğru biçimde yürütülmesi şartıyla bir fonksiyonun tesis ettiği koşulu açıklayan bir ifadedir; kullanıcılar, fonksiyona çağrı sonrası bu koşulun doğru olmasını bekler. Hoare mantığındaki bir _değişmez_, fonksiyonun yürütülmesi ile korunan bir ifadedir (örneğin, değişmez).
 

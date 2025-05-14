@@ -23,7 +23,7 @@ Pour mieux comprendre cette page, nous vous recommandons de commencer par lire c
 - [Transfert par lot](#batch_transfers) : Transférer plusieurs actifs en un seul appel.
 - [Solde par lot](#batch_balance) : Obtenez les soldes de plusieurs actifs en un seul appel.
 - [Approbation par lot](#batch_approval) : Approuver tous les jetons à une adresse.
-- [Crochets](#recieve_hook) : Recevoir des crochets de jetons.
+- [Crochets](#receive_hook) : Recevoir des crochets de jetons.
 - [Support NFT](#nft_support) : Si l'échange est unique, le traiter comme NFT.
 - [Règles de transfert sécurisées](#safe_transfer_rule) : Ensemble de règles pour sécuriser un transfert.
 

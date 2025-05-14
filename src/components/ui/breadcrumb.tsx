@@ -1,9 +1,11 @@
 import * as React from "react"
-import Link, { LinkProps } from "next/link"
-import { LuChevronRight, LuMoreHorizontal } from "react-icons/lu"
+import { LuChevronRight } from "react-icons/lu"
+import { MdMoreHoriz } from "react-icons/md"
 import { Slot } from "@radix-ui/react-slot"
 
 import { cn } from "@/lib/utils/cn"
+
+import { Link } from "@/i18n/routing"
 
 interface BreadcrumbProps extends React.ComponentPropsWithoutRef<"nav"> {
   separator?: React.ReactNode
@@ -46,7 +48,7 @@ BreadcrumbItem.displayName = "BreadcrumbItem"
 const BreadcrumbLink = React.forwardRef<
   HTMLAnchorElement,
   React.ComponentPropsWithoutRef<"a"> &
-    LinkProps & {
+    React.ComponentPropsWithoutRef<typeof Link> & {
       asChild?: boolean
     }
 >(({ asChild, className, ...props }, ref) => {
@@ -106,7 +108,7 @@ const BreadcrumbEllipsis = ({
     className={cn("flex h-9 w-9 items-center justify-center", className)}
     {...props}
   >
-    <LuMoreHorizontal className="h-4 w-4" />
+    <MdMoreHoriz className="h-4 w-4" />
     <span className="sr-only">More</span>
   </span>
 )

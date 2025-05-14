@@ -114,7 +114,7 @@ lang: el
 
 Για παράδειγμα, ας δούμε [αυτή τη συναλλαγή](https://etherscan.io/tx/0xd0dcbe007569fcfa1902dae0ab8b4e078efe42e231786312289b1eee5590f6a1). Χρησιμοποιήστε το **Click to see More** για να δείτε τα δεδομένα κλήσεων.
 
-Ο εκλέκτορας λειτουργίας είναι `0xa9059cbb`. Υπάρχουν πολλές [γνωστές λειτουργίες με αυτήν την υπογραφή](https://www.4byte.directory/signatures/?bytes4_signature=0xa9059cbb). [Σε αυτήν την περίπτωση <0>ο πηγαίος κώδικας της συμβολαίου](https://etherscan.io/address/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48#code) έχει μεταφορτωθεί στο Etherscan, επομένως γνωρίζουμε ότι η λειτουργία είναι `transfer(address,uint256)`.
+Ο εκλέκτορας λειτουργίας είναι `0xa9059cbb`. Υπάρχουν πολλές [γνωστές λειτουργίες με αυτήν την υπογραφή](https://www.4byte.directory/signatures/?bytes4_signature=0xa9059cbb). Σε αυτήν την περίπτωση [ο πηγαίος κώδικας της συμβολαίου](https://etherscan.io/address/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48#code) έχει μεταφορτωθεί στο Etherscan, επομένως γνωρίζουμε ότι η λειτουργία είναι `transfer(address,uint256)`.
 
 Τα υπόλοιπα στοιχεία είναι:
 
@@ -162,7 +162,7 @@ lang: el
 
 Το gas απαιτείται για κάθε συναλλαγή που περιλαμβάνει έξυπνο συμβόλαιο.
 
-Τα έξυπνα συμβόλαια μπορούν επίσης να περιέχουν λειτουργίες γνωστές ως λειτουργίες < [`view`](https://docs.soliditylang.org/en/latest/contracts.html#view-functions) ή [`pure`](https://docs.soliditylang.org/en/latest/contracts.html#pure-functions), οι οποίες δεν αλλάζουν την κατάσταση της συμβολαίου. Ως εκ τούτου, η κλήση αυτών των λειτουργιών από έναν EOA δεν απαιτεί gas. Η υποκείμενη κλήση RPC για αυτό το σενάριο είναι [`eth_call`](/developers/docs/apis/json-rpc#eth_call).
+Τα έξυπνα συμβόλαια μπορούν επίσης να περιέχουν λειτουργίες γνωστές ως λειτουργίες [`view`](https://docs.soliditylang.org/en/latest/contracts.html#view-functions) ή [`pure`](https://docs.soliditylang.org/en/latest/contracts.html#pure-functions), οι οποίες δεν αλλάζουν την κατάσταση της συμβολαίου. Ως εκ τούτου, η κλήση αυτών των λειτουργιών από έναν EOA δεν απαιτεί gas. Η υποκείμενη κλήση RPC για αυτό το σενάριο είναι [`eth_call`](/developers/docs/apis/json-rpc#eth_call).
 
 Σε αντίθεση με την πρόσβαση μέσω του `eth_call`, αυτές οι συναρτήσεις `view` ή `pure` καλούνται επίσης συνήθως εσωτερικά (δηλαδή από το ίδιο το συμβόλαιο ή από άλλο συμβόλαιο) το οποίο κοστίζει gas.
 

@@ -70,7 +70,7 @@ Formální specifikace na nízké úrovni mohou být uvedeny buď jako vlastnost
 
 ### Vlastnosti ve stylu Hoareovy logiky {#hoare-style-properties}
 
-[Hoareova logika](https://en.wikipedia.org/wiki/Hoare_logic) poskytuje sadu formálních pravidel pro uvažování o správnosti programů, včetně chytrých kontraktů. Vlastnost ve stylu Hoareovy logiky je reprezentována jako Hoareův trojúhelník {{_P_}_c_{_Q_}, kde _c_ je program a _P_ a _Q_ jsou predikáty na stavu _c_ (tj. programu), formálně popsané jako _předpoklady_ a _podmínky následku_.
+[Hoareova logika](https://en.wikipedia.org/wiki/Hoare_logic) poskytuje sadu formálních pravidel pro uvažování o správnosti programů, včetně chytrých kontraktů. Vlastnost ve stylu Hoareovy logiky je reprezentována jako Hoareova trojice \{_P_}_c_\{_Q_}, kde _c_ je program a _P_ a _Q_ jsou predikáty na stavu _c_ (tj. programu), formálně popsané jako _předpoklady_ a _podmínky následku_.
 
 Předpoklad je predikát popisující podmínky potřebné pro správné provedení funkce; uživatelé volající kontrakt musí tuto podmínku splnit. Podmínka následku je predikát popisující podmínku, kterou funkce stanoví, pokud je správně provedena; uživatelé mohou očekávat, že tato podmínka bude po volání funkce pravdivá. _Invariant_ v Hoareově logice je predikát, který je zachován při provádění funkce (tj. nemění se).
 

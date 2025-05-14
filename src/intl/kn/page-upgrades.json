@@ -1,0 +1,22 @@
+{
+  "page-upgrades-merge-infographic-el": "ಎಥೆರಿಯಮ್ ಸ್ಟೇಟ್: ವಹಿವಾಟುಗಳು, ಅಪ್ಲಿಕೇಶನ್‌ಗಳು, ಒಪ್ಪಂದಗಳು, ಬ್ಯಾಲೆನ್ಸ್‌ಗಳು",
+  "page-upgrades-merge-infographic-alt-text": "ಪ್ರೂಫ್-ಆಫ್-ವರ್ಕ್‌ನಿಂದ ಪ್ರೂಫ್-ಆಫ್-ಸ್ಟೇಕ್‌ಗೆ ಪರಿವರ್ತನೆಯ ಸಮಯದಲ್ಲಿ ಬೀಕನ್ ಚೈನ್ ಎಥೆರಿಯಮ್‌ನ ಎಕ್ಸಿಕ್ಯೂಶನ್ ಲೇಯರ್‌ನಲ್ಲಿ ಹೇಗೆ ವಿಲೀನಗೊಳ್ಳುತ್ತದೆ ಎಂಬುದನ್ನು ವಿವರಿಸುವ ಇನ್ಫೋಗ್ರಾಫಿಕ್.",
+  "page-upgrades-beacon-date": "ರವಾನಿಸಲಾಗಿದೆ!",
+  "page-upgrades-merge-date": "ಸೆಪ್ಟೆಂಬರ್ 2022",
+  "page-upgrades-shards-date": "~2023",
+  "page-upgrades-pbs": "ಸನ್ನಿಹಿತವಾಗಿಲ್ಲ - 2024/25 ನಿರೀಕ್ಷಿಸಿ",
+  "page-upgrades-post-merge-banner-tutorial-ood": "ವಿಲೀನದ ನಂತರ ಈ ಟ್ಯುಟೋರಿಯಲ್ ಹಳೆಯದಾಗಿದೆ ಮತ್ತು ಕೆಲಸ ಮಾಡದಿರಬಹುದು. ನೀವು ಕೊಡುಗೆ ನೀಡಲು ಬಯಸಿದರೆ ದಯವಿಟ್ಟು PR ಅನ್ನು ಹೆಚ್ಚಿಸಿ.",
+  "page-upgrades-upgrades-guide": "ಎಥೆರಿಯಮ್ ನವೀಕರಣಗಳಿಗೆ ಮಾರ್ಗದರ್ಶಿ",
+  "page-upgrades-shard-title": "ಶಾರ್ಡಿಂಗ್",
+  "page-upgrades-upgrades-beacon-chain": "ಬೀಕನ್ ಚೈನ್",
+  "consensus-beaconscan-title": "ಬೀಕಾನ್ಸ್ಕನ್",
+  "consensus-beaconscan-in-title": "beaconcha.in",
+  "consensus-beaconcha-in-desc": "ಓಪನ್ ಸೋರ್ಸ್ ಬೀಕನ್ ಚೈನ್ ಎಕ್ಸ್‌ಪ್ಲೋರರ್",
+  "consensus-beaconscan-desc": "ಬೀಕನ್ ಚೈನ್ ಎಕ್ಸ್‌ಪ್ಲೋರರ್ - ಒಮ್ಮತದ ಪದರಕ್ಕಾಗಿ ಈಥರ್‌ಸ್ಕ್ಯಾನ್",
+  "consensus-become-staker": "ಹೋಲ್ಡರ್ ಆಗಿ",
+  "consensus-become-staker-desc": "ಸ್ಟೇಕಿಂಗ್ ಲೈವ್ ಆಗಿದೆ! ನೆಟ್‌ವರ್ಕ್ ಅನ್ನು ಸುರಕ್ಷಿತಗೊಳಿಸಲು ನಿಮ್ಮ ETH ಪ್ರೀತಿಪಾತ್ರರನ್ನು ಪಣಕ್ಕಿಡಲು ನೀವು ಬಯಸಿದರೆ, ಅಪಾಯಗಳ ಬಗ್ಗೆ ನಿಮಗೆ ತಿಳಿದಿದೆಯೆ ಎಂದು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಿ.",
+  "consensus-explore": "ಡೇಟಾವನ್ನು ಅನ್ವೇಷಿಸಿ",
+  "consensus-run-beacon-chain": "ಒಮ್ಮತದ ಕ್ಲೈಂಟ್ ಅನ್ನು ರನ್ ಮಾಡಿ",
+  "consensus-run-beacon-chain-desc": "Ethereum ಗೆ ಸಾಧ್ಯವಾದಷ್ಟು ಕ್ಲೈಂಟ್‌ಗಳು ಚಾಲನೆಯಲ್ಲಿರಬೇಕು. ಈ Ethereum ಸಾರ್ವಜನಿಕ ಒಳಿತಿಗಾಗಿ ಸಹಾಯ ಮಾಡಿ!",
+  "read-more": "ಹೆಚ್ಚು ಓದಿ"
+}

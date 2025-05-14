@@ -260,7 +260,7 @@ Hardhatを使用すると、追加のツールと拡張機能のための[プラ
 npm install --save-dev @nomiclabs/hardhat-ethers "ethers@^5.0.0"
 ```
 
-### ステップ13: hardhat.config.jsをアップデートする {#step-13-update-hardhat.configjs}
+### ステップ13: hardhat.config.jsをアップデートする {#step-13-update-hardhat-configjs}
 
 ここまでで、いくつかの依存関係とプラグインを追加しました。次に、`hardhat.config.js`を更新して、プロジェクトがそれらすべてについて認識できるようにする必要があります。
 
@@ -602,7 +602,7 @@ ETHERSCAN_API_KEY = "your-etherscan-key"
 
 #### hardhat-etherscanのインストール {#install-hardhat-etherscan}
 
-あなたのコントラクトをEtherescanへ公開するのは、Hardhatを使って簡単にできます。 はじめに、まず`hardhat-etherscan`プラグインをインストールしてください。 `hardhat-etherscan`は、スマートコントラクトのソースコードとEtherscan上のABIを自動的に検証します。 インストールするには、`hello-world`ディレクトリで次のコマンドを実行します。
+あなたのコントラクトをEtherscanへ公開するのは、Hardhatを使って簡単にできます。 はじめに、まず`hardhat-etherscan`プラグインをインストールしてください。 `hardhat-etherscan`は、スマートコントラクトのソースコードとEtherscan上のABIを自動的に検証します。 インストールするには、`hello-world`ディレクトリで次のコマンドを実行します。
 
 ```text
 npm install --save-dev @nomiclabs/hardhat-etherscan

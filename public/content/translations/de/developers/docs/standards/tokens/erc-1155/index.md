@@ -23,7 +23,7 @@ Um diese Seite besser zu verstehen, empfehlen wir Ihnen, zuerst etwas über [Tok
 - [Batch-Transfer](#batch_transfers): Übertragen Sie mehrere Assets in einem einzigen Schritt.
 - [Batch-Balance](#batch_balance): Abrufen der Salden mehrerer Anlagen in einem einzigen Schritt.
 - [Batch-Genehmigung](#batch_approval): Genehmige alle Token für eine Adresse.
-- [Haken](#recieve_hook): Haken für den Empfang von Token.
+- [Haken](#receive_hook): Haken für den Empfang von Token.
 - [NFT-Support](#nft_support): Wenn das Angebot nur 1 ist, wird es als NFT behandelt.
 - [Sichere Übertragungsregeln](#safe_transfer_rule): Regelwerk für die sichere Übertragung.
 

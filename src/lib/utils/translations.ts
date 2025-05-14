@@ -41,6 +41,7 @@ export const getRequiredNamespacesForPage = (
   const baseNamespaces = ["common"]
 
   const requiredNamespacesForPath = getRequiredNamespacesForPath(path)
+  // TODO remove layout case since we can't use it anymore
   const requiredNamespacesForLayout = getRequiredNamespacesForLayout(layout)
 
   return [
@@ -97,6 +98,10 @@ const getRequiredNamespacesForPath = (relativePath: string) => {
     primaryNamespace = "page-history"
   }
 
+  if (path.startsWith("/resources/")) {
+    primaryNamespace = "page-resources"
+  }
+
   if (path.startsWith("/stablecoins/")) {
     primaryNamespace = "page-stablecoins"
   }
@@ -138,8 +143,11 @@ const getRequiredNamespacesForPath = (relativePath: string) => {
   }
 
   if (path.startsWith("/roadmap/vision/")) {
-    primaryNamespace = "page-roadmap-vision"
-    requiredNamespaces = [...requiredNamespaces, "page-upgrades-index"]
+    requiredNamespaces = [
+      ...requiredNamespaces,
+      "page-upgrades-index",
+      "page-roadmap-vision",
+    ]
   }
 
   if (path.startsWith("/gas/")) {
@@ -178,7 +186,16 @@ const getRequiredNamespacesForPath = (relativePath: string) => {
   }
 
   if (path.startsWith("/layer-2/networks/")) {
+    primaryNamespace = "page-layer-2-networks"
     requiredNamespaces = [...requiredNamespaces, "table"]
+  }
+
+  if (path.startsWith("/roadmap/")) {
+    primaryNamespace = "page-roadmap"
+  }
+
+  if (path.startsWith("/start/")) {
+    requiredNamespaces = [...requiredNamespaces]
   }
 
   if (path.startsWith("/contributing/translation-program/translatathon/")) {
@@ -219,7 +236,8 @@ const getRequiredNamespacesForPath = (relativePath: string) => {
     path.startsWith("/what-is-ethereum/") ||
     path.startsWith("/quizzes/") ||
     path.startsWith("/stablecoins/") ||
-    path.startsWith("/defi/")
+    path.startsWith("/defi/") ||
+    path.startsWith("/gas/")
   ) {
     requiredNamespaces = [...requiredNamespaces, "learn-quizzes"]
   }

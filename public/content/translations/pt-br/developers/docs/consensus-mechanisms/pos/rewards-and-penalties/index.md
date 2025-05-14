@@ -84,6 +84,8 @@ O design de recompensa, penalidade e corte do mecanismo de consenso incentiva os
 - [Incentivos no protocolo Casper híbrido do Ethereum](https://arxiv.org/pdf/1903.04205.pdf)
 - [Especificação anotada de Vitalik](https://github.com/ethereum/annotated-spec/blob/master/phase0/beacon-chain.md#rewards-and-penalties-1)
 - [Dicas para evitar remoções no Eth2](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50)
+- [EIP-7251 explicado: aumentando o saldo máximo efetivo para validadores](https://research.2077.xyz/eip-7251_Increase_MAX_EFFECTIVE_BALANCE)
+- [Análise das penalidades de remoção sob o EIP-7251](https://ethresear.ch/t/slashing-penalty-analysis-eip-7251/16509)
 
 _Fontes_
 

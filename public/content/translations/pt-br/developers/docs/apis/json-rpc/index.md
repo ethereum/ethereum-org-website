@@ -22,11 +22,11 @@ Embora você possa optar por interagir diretamente com clientes da Ethereum usan
 
 Esta página trata principalmente da API JSON-RPC usada pelos clientes de execução Ethereum. No entanto, os clientes de consenso também têm uma API RPC que permite aos usuários consultar informações sobre o nó, solicitar blocos Beacon, estado do Beacon, e outras informações relacionadas ao consenso diretamente de um nó. Essa API está documentada na [página da Web da API Beacon](https://ethereum.github.io/beacon-APIs/#/).
 
-Uma API interna também é usada para comunicação entre clientes dentro de um nó - ou seja, permite que o cliente de consenso e o cliente de execução troquem dados. Ela é chamada de “API Engine” e suas especificações estão disponíveis no [GitHub](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md).
+Uma API interna também é usada para comunicação entre clientes dentro de um nó - ou seja, permite que o cliente de consenso e o cliente de execução troquem dados. Ela é chamada de “API Engine” e suas especificações estão disponíveis no [Github](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md).
 
 ## Especificação do cliente de execução {#spec}
 
-[Leia a especificação completa da API JSON-RPC no GitHub](https://github.com/ethereum/execution-apis).
+[Leia a especificação completa da API JSON-RPC no GitHub](https://github.com/ethereum/execution-apis). Esta API está documentada na [página da Web da API de execução](https://ethereum.github.io/execution-apis/api-documentation/) e inclui um Inspetor para testar todos os métodos disponíveis.
 
 ## Convenções {#conventions}
 
@@ -53,7 +53,7 @@ Ao codificar dados não formatados (arrays de bytes, endereços de contas, hashe
 Aqui estão alguns exemplos:
 
 - 0x41 (tamanho 1, "A")
-- 0x004200 (tamanho 3, "\0B\0")
+- 0x004200 (tamanho 3, "0B0")
 - 0x (tamanho 0, "")
 - ERRADO: 0xf0f0f (deve ser um número par de dígitos)
 - ERRADO: 004200 (deve ser prefixado 0x)
@@ -74,7 +74,7 @@ As seguintes opções são possíveis para o parâmetro defaultBlock:
 
 - `String HEX` - um número de bloco inteiro
 - `String "earliest"` para o bloco mais antigo/de início
-- `String "latest"` - para o bloco minerado mais recente
+- `String "latest"` - para o último bloco proposto
 - `String "safe"` – para o último bloco de cabeçalho seguro
 - `String "finalized"` – para o último bloco finalizado
 - `String "pendente"` – para o estado/transações pendentes
@@ -132,6 +132,10 @@ Alguns dos métodos JSON-RPC principais exigem dados da rede Ethereum, se enquad
 - [eth_getUncleByBlockHashAndIndex](#eth_getunclebyblockhashandindex)
 - [eth_getUncleByBlockNumberAndIndex](#eth_getunclebyblocknumberandindex)
 
+## Playground da API JSON-RPC
+
+Você pode usar a [ferramenta de playground](https://ethereum-json-rpc.com) para descobrir e testar os métodos da API. Ele também mostra quais métodos e redes são suportados por vários provedores de nós.
+
 ## Métodos de API JSON-RPC {#json-rpc-methods}
 
 ### web3_clientVersion {#web3_clientversion}
@@ -142,20 +146,20 @@ Retorna a versão atual do cliente.
 
 Nenhum
 
-**Retorna**
+**Returnos**
 
 `String` - A versão atual do cliente
 
 **Exemplo**
 
 ```js
-// Request
+// Solicitação
 curl -X POST --data '{"jsonrpc":"2.0","method":"web3_clientVersion","params":[],"id":67}'
-// Result
+// Resultado
 {
   "id":67,
   "jsonrpc":"2.0",
-  "result": "Mist/v0.9.3/darwin/go1.4.1"
+  "result": "Geth/v1.12.1-stable/linux-amd64/go1.19.1"
 }
 ```
 
@@ -165,7 +169,7 @@ Retorna Keccak-256 (_não_ o SHA3-256 padronizado) dos dados fornecidos.
 
 **Parâmetros**
 
-1. `DATA` - Os dados para converter em um hash SHA3
+1. `DATA` - Os dados a serem convertidos em um hash SHA3
 
 ```js
 params: ["0x68656c6c6f20776f726c64"]
@@ -203,8 +207,8 @@ Nenhum
 A lista completa das IDs da rede atual está disponível em [chainlist.org](https://chainlist.org). Alguns exemplos comuns são:
 
 - `1`: Ethereum Mainnet
-- `5`: Goerli testnet
 - `11155111`: Sepolia testnet
+- `560048` : Hoodi testnet
 
 **Exemplo**
 
@@ -304,11 +308,56 @@ Nenhum
 
 **Retorna**
 
-`Object|Boolean`, um objeto com dados de status da sincronização ou `FALSE`, quando não sincronizado:
+Os dados de retorno precisos variam entre as implementações do cliente. Todos os clientes retornam `False` quando o nó não está sincronizando, e todos os clientes retornam os seguintes campos.
+
+`Object|Boolean`, um objeto com dados de status da sincronização ou `FALSE`, quando não está sincronizando:
 
 - `startingBlock`: `QUANTITY` — O bloco no qual a importação começou (só será reiniciado após a sincronização atingir seu cabeçalho)
 - `currentBlock`: `QUANTITY` — O bloco atual, o mesmo que eth_blockNumber
 - `highestBlock`: `QUANTITY` — O bloco mais alto estimado
+
+No entanto, os clientes individuais também podem fornecer dados adicionais. Por exemplo, Geth retorna o seguinte:
+
+```json
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": {
+    "currentBlock": "0x3cf522",
+    "healedBytecodeBytes": "0x0",
+    "healedBytecodes": "0x0",
+    "healedTrienodes": "0x0",
+    "healingBytecode": "0x0",
+    "healingTrienodes": "0x0",
+    "highestBlock": "0x3e0e41",
+    "startingBlock": "0x3cbed5",
+    "syncedAccountBytes": "0x0",
+    "syncedAccounts": "0x0",
+    "syncedBytecodeBytes": "0x0",
+    "syncedBytecodes": "0x0",
+    "syncedStorage": "0x0",
+    "syncedStorageBytes": "0x0"
+  }
+}
+```
+
+Enquanto Besu retorna:
+
+```json
+{
+  "jsonrpc": "2.0",
+  "id": 51,
+  "result": {
+    "startingBlock": "0x0",
+    "currentBlock": "0x1518",
+    "highestBlock": "0x9567a3",
+    "pulledStates": "0x203ca",
+    "knownStates": "0x200636"
+  }
+}
+```
+
+Consulte a documentação do seu cliente específico para obter mais detalhes.
 
 **Exemplo**
 
@@ -337,11 +386,13 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_syncing","params":[],"id":1}
 
 Retorna o endereço de coinbase do cliente.
 
+> **Nota:** Este método foi descontinuado a partir da versão **v1.14.0** e não é mais suportado. Tentar usar este método resultará em um erro de "Método não suportado".
+
 **Parâmetros**
 
 Nenhum
 
-**Retorna**
+**Returnos**
 
 `DATA`, 20 bytes - O endereço atual da coinbase.
 
@@ -358,7 +409,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_coinbase","params":[],"id":6
 }
 ```
 
-## eth_chainId {#eth_chainId}
+### eth_chainId {#eth_chainId}
 
 Retorna a ID da cadeia usada para assinar transações protegidas contra reprodução.
 
@@ -366,7 +417,7 @@ Retorna a ID da cadeia usada para assinar transações protegidas contra reprodu
 
 Nenhum
 
-**Retorna**
+**Returnos**
 
 `chainId`, valor hexadecimal como uma cadeia de caracteres representando o inteiro da ID da cadeia atual.
 
@@ -385,13 +436,13 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_chainId","params":[],"id":67
 
 ### eth_mining {#eth_mining}
 
-Retorna `true` se o cliente estiver ativamente minerando novos blocos.
+Retorna `true` se o cliente estiver minerando novos blocos de maneira ativa. Isso só pode retornar `true` para redes de prova de trabalho e pode não estar disponível em alguns clientes desde a [Fusão](/roadmap/merge/).
 
 **Parâmetros**
 
 Nenhum
 
-**Retorna**
+**Returnos**
 
 `Boolean` — retorna `true` do cliente que está minerando, caso contrário, `false`.
 
@@ -410,13 +461,13 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_mining","params":[],"id":71}
 
 ### eth_hashrate {#eth_hashrate}
 
-Retorna o número de hashes por segundo do nó que está minerando.
+Retorna o número de hashes por segundo do nó que está minerando. Isso só pode retornar `true` para redes de prova de trabalho e pode não estar disponível em alguns clientes desde a [Fusão](/roadmap/merge/).
 
 **Parâmetros**
 
 Nenhum
 
-**Retorna**
+**Returnos**
 
 `QUANTITY` — número de hashes por segundo.
 
@@ -435,13 +486,13 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_hashrate","params":[],"id":7
 
 ### eth_gasPrice {#eth_gasprice}
 
-Retorna o preço atual por gás em Wei.
+Retorna uma estimativa do preço atual por unidade de gás em wei. Por exemplo, o cliente Besu examina os últimos 100 blocos e retorna o preço unitário médio do gás por padrão.
 
 **Parâmetros**
 
 Nenhum
 
-**Retorna**
+**Returnos**
 
 `QUANTITY` — Número inteiro do preço atual do gás em Wei.
 
@@ -466,9 +517,9 @@ Retorna uma lista de endereços de propriedade do cliente.
 
 Nenhum
 
-**Retorna**
+**Returnos**
 
-`Matriz de DADOS`, 20 Bytes — endereços de propriedade do cliente.
+`Array of DATA`, 20 Bytes — endereços de propriedade do cliente.
 
 **Exemplo**
 
@@ -491,7 +542,7 @@ Retorna o número do bloco mais recente.
 
 Nenhum
 
-**Retorna**
+**Returnos**
 
 `QUANTITY` — Inteiro do número do bloco atual no qual o cliente está.
 
@@ -515,13 +566,13 @@ Retorna o saldo da conta do endereço fornecido.
 **Parâmetros**
 
 1. `DATA`, 20 Bytes - Endereço para verificar o saldo.
-2. `QUANTITY|TAG` – número de bloco inteiro, ou a cadeia de caracteres `"latest"`, `"earliest"` ou `"pending"`. Consulte o [parâmetro de bloco padrão](/developers/docs/apis/json-rpc/#default-block)
+2. `QUANTITY|TAG` - número de bloco inteiro ou a string `"latest"`, `"earliest"`, `"pending"`, `"safe"` ou `"finalized"`. Consulte o [parâmetro de bloco padrão](/developers/docs/apis/json-rpc/#default-block)
 
 ```js
 params: ["0x407d73d8a49eeb85d32cf465507dd71d507100c1", "latest"]
 ```
 
-**Retorna**
+**Returnos**
 
 `QUANTITY` — Inteiro do saldo atual em Wei.
 
@@ -546,9 +597,9 @@ Retorna o valor de uma posição de armazenamento em um determinado endereço.
 
 1. `DATA`, 20 Bytes - Endereço do armazenamento.
 2. `QUANTITY` - Número inteiro da posição no armazenamento.
-3. `QUANTITY|TAG` – número de bloco inteiro, ou a cadeia de caracteres `"latest"`, `"earliest"` ou `"pending"`. Consulte o [parâmetro de bloco padrão](/developers/docs/apis/json-rpc/#default-block)
+3. `QUANTITY|TAG` - número de bloco inteiro ou a string `"latest"`, `"earliest"`, `"pending"`, `"safe"`, `"finalized"`. Veja o [parâmetro de bloco padrão](/developers/docs/apis/json-rpc/#default-block)
 
-**Retorna**
+**Returnos**
 
 `DATA` — O valor nessa posição de armazenamento.
 
@@ -578,7 +629,7 @@ Recuperar um elemento do mapa é mais difícil. A posição de um elemento no ma
 keccak(LeftPad32(key, 0), LeftPad32(map position, 0))
 ```
 
-Isso significa que, para recuperar o armazenamento na pos1["0x391694e7e0b0cce554cb130d723a9d27458f9298"] precisamos calcular a posição com:
+Isso significa que para recuperar o armazenamento na pos1["0x391694e7e0b0cce554cb130d723a9d27458f9298"] precisamos calcular a posição com:
 
 ```js
 keccak(
@@ -612,7 +663,7 @@ Retorna o número de transações _enviadas_ a partir de um endereço.
 **Parâmetros**
 
 1. `DATA`, 20 Bytes - Endereço.
-2. `QUANTITY|TAG` – número de bloco inteiro, ou a cadeia de caracteres `"latest"`, `"earliest"` ou `"pending"`. Consulte o [parâmetro de bloco padrão](/developers/docs/apis/json-rpc/#default-block)
+2. `QUANTITY|TAG` - número de bloco inteiro ou a string `"latest"`, `"earliest"`, `"pending"`, `"safe"` ou `"finalized"`. Consulte o [parâmetro de bloco padrão](/developers/docs/apis/json-rpc/#default-block)
 
 ```js
 params: [
@@ -621,7 +672,7 @@ params: [
 ]
 ```
 
-**Retorna**
+**Returnos**
 
 `QUANTITY` — Inteiro do número de transações enviadas a partir desse endereço.
 
@@ -647,10 +698,10 @@ Retorna o número de transações em um bloco a partir de um bloco que correspon
 1. `DATA`, 32 bytes - Hash de um bloco
 
 ```js
-params: ["0xb903239f8543d04b5dc1ba6579132b143087c68db1b2168786408fcbce568238"]
+params: ["0xd03ededb7415d22ae8bac30f96b2d1de83119632693b963642318d87d1bece5b"]
 ```
 
-**Retorna**
+**Returnos**
 
 `QUANTITY` — Inteiro do número de transações nesse bloco.
 
@@ -658,12 +709,12 @@ params: ["0xb903239f8543d04b5dc1ba6579132b143087c68db1b2168786408fcbce568238"]
 
 ```js
 // Request
-curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockTransactionCountByHash","params":["0xb903239f8543d04b5dc1ba6579132b143087c68db1b2168786408fcbce568238"],"id":1}'
+curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockTransactionCountByHash","params":["0xd03ededb7415d22ae8bac30f96b2d1de83119632693b963642318d87d1bece5b"],"id":1}'
 // Result
 {
   "id":1,
   "jsonrpc": "2.0",
-  "result": "0xb" // 11
+  "result": "0x8b" // 139
 }
 ```
 
@@ -673,15 +724,15 @@ Retorna o número de transações em um bloco a partir de um bloco que correspon
 
 **Parâmetros**
 
-1. `QUANTITY|TAG` – número inteiro de um bloco, ou a cadeira de caracteres `"earliest"`, `"latest"` ou `"pending"`, como no [parâmetro de bloco padrão](/developers/docs/apis/json-rpc/#default-block).
+1. `QUANTITY|TAG` - inteiro de um número de bloco, ou a string `"earliest"`, `"latest"`, `"pending"`, `"safe"` ou `"finalized"`, como no [parâmetro de bloco padrão](/developers/docs/apis/json-rpc/#default-block).
 
 ```js
 params: [
-  "0xe8", // 232
+  "0x13738ca", // 20396234
 ]
 ```
 
-**Retorna**
+**Returnos**
 
 `QUANTITY` — Inteiro do número de transações nesse bloco.
 
@@ -689,12 +740,12 @@ params: [
 
 ```js
 // Request
-curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockTransactionCountByNumber","params":["0xe8"],"id":1}'
+curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockTransactionCountByNumber","params":["0x13738ca"],"id":1}'
 // Result
 {
   "id":1,
   "jsonrpc": "2.0",
-  "result": "0xa" // 10
+  "result": "0x8b" // 139
 }
 ```
 
@@ -707,10 +758,10 @@ Retorna o número de transações em um bloco a partir de um bloco que correspon
 1. `DADOS`, 32 bytes - hash de um bloco
 
 ```js
-params: ["0xb903239f8543d04b5dc1ba6579132b143087c68db1b2168786408fcbce568238"]
+params: ["0x1d59ff54b1eb26b013ce3cb5fc9dab3705b415a67127a003c3e61eb445bb8df2"]
 ```
 
-**Retorna**
+**Returnos**
 
 `QUANTITY` — Inteiro do número de transações nesse bloco.
 
@@ -718,7 +769,7 @@ params: ["0xb903239f8543d04b5dc1ba6579132b143087c68db1b2168786408fcbce568238"]
 
 ```js
 // Request
-curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleCountByBlockHash","params":["0xb903239f8543d04b5dc1ba6579132b143087c68db1b2168786408fcbce568238"],"id":1}'
+curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleCountByBlockHash","params":["0x1d59ff54b1eb26b013ce3cb5fc9dab3705b415a67127a003c3e61eb445bb8df2"],"id":1}'
 // Result
 {
   "id":1,
@@ -733,7 +784,7 @@ Retorna o número de transações em um bloco a partir de um bloco que correspon
 
 **Parâmetros**
 
-1. `QUANTITY|TAG` – número inteiro de um bloco ou a cadeia de caracteres "latest", "earliest" ou "pending". Consulte [parâmetro de bloco padrão](/developers/docs/apis/json-rpc/#default-block)
+1. `QUANTITY|TAG` - inteiro de um número de bloco, ou a string `"latest"`, `"earliest"`, `"pending"`, `"safe"` ou `"finalized"`. Veja o [parâmetro de bloco padrão](/developers/docs/apis/json-rpc/#default-block)
 
 ```js
 params: [
@@ -741,7 +792,7 @@ params: [
 ]
 ```
 
-**Retorna**
+**Returnos**
 
 `QUANTITY` — Inteiro do número de transações nesse bloco.
 
@@ -754,7 +805,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleCountByBlockNumber",
 {
   "id":1,
   "jsonrpc": "2.0",
-  "result": "0x1" // 1
+  "result": "0x0" // 0
 }
 ```
 
@@ -765,16 +816,16 @@ Retorna o código em um endereço fornecido.
 **Parâmetros**
 
 1. `DATA`, 20 Bytes - Endereço
-2. `QUANTITY|TAG` – número de bloco inteiro, ou a cadeia de caracteres `"latest"`, `"earliest"` ou `"pending"`. Consulte o [parâmetro de bloco padrão](/developers/docs/apis/json-rpc/#default-block)
+2. `QUANTITY|TAG` - número de bloco inteiro ou a string `"latest"`, `"earliest"`, `"pending"`, `"safe"` ou `"finalized"`. Consulte o [parâmetro de bloco padrão](/developers/docs/apis/json-rpc/#default-block)
 
 ```js
 params: [
-  "0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b",
-  "0x2", // 2
+  "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+  "0x5daf3b", // 6139707
 ]
 ```
 
-**Retorna**
+**Returnos**
 
 `DATA` — O código do endereço fornecido.
 
@@ -782,12 +833,12 @@ params: [
 
 ```js
 // Request
-curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getCode","params":["0xa94f5374fce5edbc8e2a8697c15331677e6ebf0b", "0x2"],"id":1}'
+curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getCode","params":["0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2", "0x5daf3b"],"id":1}'
 // Result
 {
   "id":1,
   "jsonrpc": "2.0",
-  "result": "0x600160008035811a818181146012578301005b601b6001356025565b8060005260206000f25b600060078202905091905056"
+  "result": "0x6060604052600436106100af576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806306fdde03146100b9578063095ea7b31461014757806318160ddd146101a157806323b872dd146101ca5780632e1a7d4d14610243578063313ce5671461026657806370a082311461029557806395d89b41146102e2578063a9059cbb14610370578063d0e30db0146103ca578063dd62ed3e146103d4575b6100b7610440565b005b34156100c457600080fd5b6100cc6104dd565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561010c5780820151818401526020810190506100f1565b50505050905090810190601f1680156101395780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b341561015257600080fd5b610187600480803573ffffffffffffffffffffffffffffffffffffffff1690602001909190803590602001909190505061057b565b604051808215151515815260200191505060405180910390f35b34156101ac57600080fd5b6101b461066d565b6040518082815260200191505060405180910390f35b34156101d557600080fd5b610229600480803573ffffffffffffffffffffffffffffffffffffffff1690602001909190803573ffffffffffffffffffffffffffffffffffffffff1690602001909190803590602001909190505061068c565b604051808215151515815260200191505060405180910390f35b341561024e57600080fd5b61026460048080359060200190919050506109d9565b005b341561027157600080fd5b610279610b05565b604051808260ff1660ff16815260200191505060405180910390f35b34156102a057600080fd5b6102cc600480803573ffffffffffffffffffffffffffffffffffffffff16906020019091905050610b18565b6040518082815260200191505060405180910390f35b34156102ed57600080fd5b6102f5610b30565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561033557808201518184015260208101905061031a565b50505050905090810190601f1680156103625780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b341561037b57600080fd5b6103b0600480803573ffffffffffffffffffffffffffffffffffffffff16906020019091908035906020019091905050610bce565b604051808215151515815260200191505060405180910390f35b6103d2610440565b005b34156103df57600080fd5b61042a600480803573ffffffffffffffffffffffffffffffffffffffff1690602001909190803573ffffffffffffffffffffffffffffffffffffffff16906020019091905050610be3565b6040518082815260200191505060405180910390f35b34600360003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600082825401925050819055503373ffffffffffffffffffffffffffffffffffffffff167fe1fffcc4923d04b559f4d29a8bfc6cda04eb5b0d3c460751c2402c5c5cc9109c346040518082815260200191505060405180910390a2565b60008054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156105735780601f1061054857610100808354040283529160200191610573565b820191906000526020600020905b81548152906001019060200180831161055657829003601f168201915b505050505081565b600081600460003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060008573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020819055508273ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff167f8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925846040518082815260200191505060405180910390a36001905092915050565b60003073ffffffffffffffffffffffffffffffffffffffff1631905090565b600081600360008673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002054101515156106dc57600080fd5b3373ffffffffffffffffffffffffffffffffffffffff168473ffffffffffffffffffffffffffffffffffffffff16141580156107b457507fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff600460008673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000205414155b156108cf5781600460008673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020541015151561084457600080fd5b81600460008673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600082825403925050819055505b81600360008673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000828254039250508190555081600360008573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600082825401925050819055508273ffffffffffffffffffffffffffffffffffffffff168473ffffffffffffffffffffffffffffffffffffffff167fddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef846040518082815260200191505060405180910390a3600190509392505050565b80600360003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000205410151515610a2757600080fd5b80600360003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600082825403925050819055503373ffffffffffffffffffffffffffffffffffffffff166108fc829081150290604051600060405180830381858888f193505050501515610ab457600080fd5b3373ffffffffffffffffffffffffffffffffffffffff167f7fcf532c15f0a6db0bd6d0e038bea71d30d808c7d98cb3bf7268a95bf5081b65826040518082815260200191505060405180910390a250565b600260009054906101000a900460ff1681565b60036020528060005260406000206000915090505481565b60018054600181600116156101000203166002900480601f016020809104026020016040519081016040528092919081815260200182805460018160011615610100020316600290048015610bc65780601f10610b9b57610100808354040283529160200191610bc6565b820191906000526020600020905b815481529060010190602001808311610ba957829003601f168201915b505050505081565b6000610bdb33848461068c565b905092915050565b60046020528160005260406000206020528060005260406000206000915091505054815600a165627a7a72305820deb4c2ccab3c2fdca32ab3f46728389c2fe2c165d5fafa07661e4e004f6c344a0029"
 }
 ```
 
@@ -804,7 +855,7 @@ Observação: o endereço de assinatura deve estar desbloqueado.
 1. `DADOS`, 20 Bytes - endereço
 2. `DATA`, N Bytes - Mensagem para assinar
 
-**Retorna**
+**Returnos**
 
 `DATA`: assinatura
 
@@ -829,17 +880,18 @@ Assina uma transação que pode ser enviada à rede posteriormente usando [eth_s
 
 1. `Objeto` - O objeto da transação
 
-- `from`: `DATA`, 20 Bytes - O endereço de onde a transação é enviada.
-- `to`: `DATA`, 20 Bytes - (opcional ao criar um novo contrato) O endereço para o qual a transação é direcionada.
-- `gas`: `QUANTITY` - (opcional, padrão: 90000) Inteiro do gás fornecido para a execução da transação. Retornará o gás não utilizado.
+- `type`:
+- `from`: `DATA`, 20 Bytes — Endereço de onde a transação é enviada.
+- `to`: `DATA`, 20 Bytes — (opcional ao criar um novo contrato) O endereço para o qual a transação é direcionada.
+- `gas`: `QUANTITY` — (opcional, padrão: 90000) Inteiro do gás fornecido para a execução da transação. Retornará o gás não utilizado.
 - `gasPrice`: `QUANTITY` — (opcional, padrão: a ser determinado) Inteiro do gasPrice usado para cada gás pago, em Wei.
 - `valor`: `QUANTITY` — (opcional) Inteiro do valor enviado com esta transação, em Wei.
-- `dados`: `DADOS` - O código compilado de um contrato OU o hash da assinatura do método invocado e os parâmetros codificados.
-- `nonce`: `QUANTITY` - (opcional) Inteiro de um nonce. Isso permite sobrescrever suas próprias transações pendentes que usam o mesmo nonce.
+- `data`: `DATA` — Código compilado de um contrato OU do hash da assinatura do método invocado e parâmetros codificados.
+- `nonce`: `QUANTITY` — (opcional) Inteiro de um nonce. Isso permite substituir suas próprias transações pendentes que usam o mesmo nonce.
 
-**Retorna**
+**Returnos**
 
-`DATA` — O objeto da transação assinada.
+`DATA`: o objeto de transação codificado em RLP assinado pela conta especificada.
 
 **Exemplo**
 
@@ -856,7 +908,7 @@ curl -X POST --data '{"id": 1,"jsonrpc": "2.0","method": "eth_signTransaction","
 
 ### eth_sendTransaction {#eth_sendtransaction}
 
-Cria uma nova transação de chamada de mensagem ou uma criação de contrato, se o campo de dados contiver código.
+Cria uma nova transação de chamada de mensagem ou uma criação de contrato, se o campo de dados contiver código, e o assina usando a conta especificada `em`.
 
 **Parâmetros**
 
@@ -867,7 +919,7 @@ Cria uma nova transação de chamada de mensagem ou uma criação de contrato, s
 - `gas`: `QUANTITY` — (opcional, padrão: 90000) Inteiro do gás fornecido para a execução da transação. Retornará o gás não utilizado.
 - `gasPrice`: `QUANTITY` — (opcional, padrão: a ser determinado) Inteiro do gasPrice usado para cada gás pago.
 - `valor`: `QUANTITY` — (opcional) Inteiro do valor enviado com esta transação.
-- `data`: `DATA` — Código compilado de um contrato OU do hash da assinatura do método invocado e parâmetros codificados.
+- `input`: `DATA` - O código compilado de um contrato OU o hash da assinatura do método invocado e dos parâmetros codificados.
 - `nonce`: `QUANTITY` — (opcional) Inteiro de um nonce. Isso permite substituir suas próprias transações pendentes que usam o mesmo nonce.
 
 ```js
@@ -878,16 +930,17 @@ params: [
     gas: "0x76c0", // 30400
     gasPrice: "0x9184e72a000", // 10000000000000
     value: "0x9184e72a", // 2441406250
-    data: "0xd46e8dd67c5d32be8d46e8dd67c5d32be8058bb8eb970870f072445675058bb8eb970870f072445675",
+    input:
+      "0xd46e8dd67c5d32be8d46e8dd67c5d32be8058bb8eb970870f072445675058bb8eb970870f072445675",
   },
 ]
 ```
 
-**Retorna**
+**Returnos**
 
-`DATA`, 32 bytes - o hash da transação ou o hash zero se a transação ainda não estiver disponível.
+`DATA`, 32 Bytes — O hash da transação ou o hash zero se a transação ainda não estiver disponível.
 
-Use [eth_getTransactionReceipt](#eth_gettransactionreceipt) para obter o endereço do contrato, após a transação ter sido minerada, quando você criou um contrato.
+Use [eth_getTransactionReceipt](#eth_gettransactionreceipt) para obter o endereço do contrato, depois de a transação ter sido proposta em um bloco, quando você criou um contrato.
 
 **Exemplo**
 
@@ -916,11 +969,11 @@ params: [
 ]
 ```
 
-**Retorna**
+**Returnos**
 
 `DATA`, 32 Bytes — O hash da transação ou o hash zero se a transação ainda não estiver disponível.
 
-Use [eth_getTransactionReceipt](#eth_gettransactionreceipt) para obter o endereço do contrato, após a transação ter sido minerada, quando você criou um contrato.
+Use [eth_getTransactionReceipt](#eth_gettransactionreceipt) para obter o endereço do contrato, depois de a transação ter sido proposta em um bloco, quando você criou um contrato.
 
 **Exemplo**
 
@@ -937,7 +990,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sendRawTransaction","params"
 
 ### eth_call {#eth_call}
 
-Executa uma nova chamada de mensagem imediatamente sem criar uma transação na blockchain.
+Executa uma nova chamada de mensagem imediatamente sem criar uma transação na blockchain. Frequentemente usado para executar funções de contrato inteligente somente leitura, por exemplo, o `balanceOf` para um contrato ERC-20.
 
 **Parâmetros**
 
@@ -948,11 +1001,11 @@ Executa uma nova chamada de mensagem imediatamente sem criar uma transação na 
 - `gas`: `QUANTITY` — (opcional) Inteiro do gás fornecido para a execução da transação. eth_call consome zero gás, mas este parâmetro pode ser necessário para algumas execuções.
 - `gasPrice`: `QUANTITY` — (opcional) Inteiro do gasPrice usado para cada gás pago
 - `valor`: `QUANTITY` — (opcional) Inteiro do valor enviado com esta transação
-- `data`: `DATA` — (opcional) Hash da assinatura do método e parâmetros codificados. Para obter mais detalhes, consulte o [Contrato Ethereum ABI na documentação do Solidity](https://docs.soliditylang.org/en/latest/abi-spec.html)
+- `input`: `DATA` - (opcional) Hash da assinatura do método e parâmetros codificados. Para obter mais detalhes, consulte o [Contrato Ethereum ABI na documentação do Solidity](https://docs.soliditylang.org/en/latest/abi-spec.html).
 
-2. `QUANTITY|TAG` – número de bloco inteiro, ou a cadeia de caracteres `"latest"`, `"earliest"` ou `"pending"`. Consulte o [parâmetro de bloco padrão](/developers/docs/apis/json-rpc/#default-block)
+2. `QUANTITY|TAG` - número de bloco inteiro ou a string `"latest"`, `"earliest"`, `"pending"`, `"safe"` ou `"finalized"`. Consulte o [parâmetro de bloco padrão](/developers/docs/apis/json-rpc/#default-block)
 
-**Retorna**
+**Returnos**
 
 `DATA` — O valor de retorno do contrato executado.
 
@@ -971,13 +1024,13 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_call","params":[{see above}]
 
 ### eth_estimateGas {#eth_estimategas}
 
-Gera e retorna uma estimativa de quanto gás é necessário para permitir que a transação seja concluída. A transação não será adicionada à blockchain. Observe que a estimativa pode ser significativamente maior do que a quantidade de gás realmente usada pela transação, por vários motivos, incluindo a mecânica do EVM e o desempenho do nó.
+Gera e retorna uma estimativa de quantas unidades de gás são necessárias para permitir que a transação seja concluída. A transação não será adicionada à blockchain. Observe que a estimativa pode ser significativamente maior do que a quantidade de gás realmente usada pela transação, por vários motivos, incluindo a mecânica do EVM e o desempenho do nó.
 
 **Parâmetros**
 
-Veja os parâmetros do [eth_call](#eth_call), embora todas as propriedades sejam opcionais. Se nenhum limite de gás for especificado, o geth usa o limite de gás do bloco pendente como um limite superior. Consequentemente, a estimativa retornada poderá não ser suficiente para executar a chamada/transação quando a quantidade de gás for maior que o limite de gás do bloco pendente.
+Veja os parâmetros do [eth_call](#eth_call), a menos que todas as propriedades sejam opcionais. Se nenhum limite de gás é especificado, o geth usa o limite de gás do bloco pendente como um limite superior. Consequentemente, a estimativa retornada poderá não ser suficiente para executar a chamada/transação quando a quantidade de gás for maior que o limite de gás do bloco pendente.
 
-**Retorna**
+**Returnos**
 
 `QUANTITY` — A quantidade de gás usada.
 
@@ -1010,7 +1063,7 @@ params: [
 ]
 ```
 
-**Retorna**
+**Returnos**
 
 `Object` — Um objeto de bloco, ou `null` quando nenhum bloco foi encontrado:
 
@@ -1077,7 +1130,7 @@ Retorna informações sobre um bloco por número de bloco.
 
 **Parâmetros**
 
-1. `QUANTITY|TAG` – número inteiro de um bloco, ou a cadeira de caracteres `"earliest"`, `"latest"` ou `"pending"`, como no [parâmetro de bloco padrão](/developers/docs/apis/json-rpc/#default-block).
+1. `QUANTITY|TAG` - inteiro de um número de bloco, ou a string `"earliest"`, `"latest"`, `"pending"`, `"safe"` ou `"finalized"`, como no [parâmetro de bloco padrão](/developers/docs/apis/json-rpc/#default-block).
 2. `Boolean` - Se `true` retorna os objetos de transação completos, se `false` apenas os hashes das transações.
 
 ```js
@@ -1087,7 +1140,7 @@ params: [
 ]
 ```
 
-**Retorno** Consulte [eth_getBlockByHash](#eth_getblockbyhash)
+**Retorna** Consulte [eth_getBlockByHash](#eth_getblockbyhash)
 
 **Exemplo**
 
@@ -1110,7 +1163,7 @@ Retorna as informações sobre uma transação solicitada pelo hash de transaç�
 params: ["0x88df016429689c079f3b2f6ad39fa052532c56795b733da78a91ebe6a713944b"]
 ```
 
-**Retorna**
+**Returnos**
 
 `Object` — Um objeto de transação ou `null` quando nenhuma transação foi encontrada:
 
@@ -1168,7 +1221,7 @@ Retorna informações sobre uma transação por hash de bloco e a posição do �
 
 ```js
 params: [
-  "0xe670ec64341771606e55d6b4ca35a1a6b75ee3d5145a99d05921026d1527331",
+  "0x1d59ff54b1eb26b013ce3cb5fc9dab3705b415a67127a003c3e61eb445bb8df2",
   "0x0", // 0
 ]
 ```
@@ -1179,10 +1232,10 @@ params: [
 
 ```js
 // Request
-curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByBlockHashAndIndex","params":["0xc6ef2fc5426d6ad6fd9e2a26abeab0aa2411b7ab17f30a99d3cb96aed1d1055b", "0x0"],"id":1}'
+curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByBlockHashAndIndex","params":["0x1d59ff54b1eb26b013ce3cb5fc9dab3705b415a67127a003c3e61eb445bb8df2", "0x0"],"id":1}'
 ```
 
-Resultado veja [eth_getTransactionByHash](#eth_gettransactionbyhash)
+Resultado. Veja [eth_getTransactionByHash](#eth_gettransactionbyhash)
 
 ### eth_getTransactionByBlockNumberAndIndex {#eth_gettransactionbyblocknumberandindex}
 
@@ -1190,7 +1243,7 @@ Retorna informações sobre uma transação pelo número do bloco e posição do
 
 **Parâmetros**
 
-1. `QUANTITY|TAG` – um número de bloco ou a cadeia de caracteres `"earliest"`, `"latest"` ou `"pending"`, como no [parâmetro de bloco padrão](/developers/docs/apis/json-rpc/#default-block).
+1. `QUANTITY|TAG` - um número de bloco ou a string `"earliest"`, `"latest"`, `"pending"`, `"safe"` ou `"finalized"`, como no [parâmetro de bloco padrão](/developers/docs/apis/json-rpc/#default-block).
 2. `QUANTITY` - A posição do índice da transação.
 
 ```js
@@ -1209,7 +1262,7 @@ params: [
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByBlockNumberAndIndex","params":["0x9c47cf", "0x24"],"id":1}'
 ```
 
-Resultado veja [eth_getTransactionByHash](#eth_gettransactionbyhash)
+Resultado. Veja [eth_getTransactionByHash](#eth_gettransactionbyhash)
 
 ### eth_getTransactionReceipt {#eth_gettransactionreceipt}
 
@@ -1239,7 +1292,10 @@ params: ["0x85d995eba9763907fdf35cd2034144dd9d53ce32cbec21349d4b12823c6860c5"]
 - `contractAddress`: `DATA`, 20 Bytes — O endereço do contrato criado, se a transação era uma criação do contrato, caso contrário `null`.
 - `logs`: `Array` — Matriz de objetos de log gerados por esta transação.
 - `logsBloom`: `DATA`, 256 Bytes — Filtro Bloom para clientes leves para recuperar rapidamente os logs relacionados.
-- `type`: `QUANTITY` — Inteiro do tipo de transação, `0x0` para transações herdadas, `0x1` para tipos de lista de acesso, `0x2` para taxas dinâmicas. Ele também retorna _seja_ :
+- `type`: `QUANTITY` — Inteiro do tipo de transação, `0x0` para transações herdadas, `0x1` para tipos de lista de acesso, `0x2` para taxas dinâmicas.
+
+Ele também retorna _seja_ :
+
 - `root` : `DATA` 32 bytes de stateRoot pós-transação (anterior à atualização Byzantium)
 - `status`: `QUANTITY` seja `1` (êxito) ou `0` (falha)
 
@@ -1286,7 +1342,7 @@ Retorna informações sobre o tio de um bloco por hash e a posição do índice 
 
 ```js
 params: [
-  "0xc6ef2fc5426d6ad6fd9e2a26abeab0aa2411b7ab17f30a99d3cb96aed1d1055b",
+  "0x1d59ff54b1eb26b013ce3cb5fc9dab3705b415a67127a003c3e61eb445bb8df2",
   "0x0", // 0
 ]
 ```
@@ -1297,7 +1353,7 @@ params: [
 
 ```js
 // Request
-curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleByBlockHashAndIndex","params":["0xc6ef2fc5426d6ad6fd9e2a26abeab0aa2411b7ab17f30a99d3cb96aed1d1055b", "0x0"],"id":1}'
+curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleByBlockHashAndIndex","params":["0x1d59ff54b1eb26b013ce3cb5fc9dab3705b415a67127a003c3e61eb445bb8df2", "0x0"],"id":1}'
 ```
 
 Veja o resultado [eth_getBlockByHash](#eth_getblockbyhash)
@@ -1310,7 +1366,7 @@ Retorna informações sobre um tio de um bloco por número e posição do índic
 
 **Parâmetros**
 
-1. `QUANTITY|TAG` – um número de bloco ou a cadeia de caracteres `"earliest"`, `"latest"` ou `"pending"`, como no [parâmetro de bloco padrão](/developers/docs/apis/json-rpc/#default-block).
+1. `QUANTITY|TAG` - um número de bloco ou a string `"earliest"`, `"latest"`, `"pending"`, `"safe"`, `"finalized"`, como no [parâmetro de bloco padrão](/developers/docs/apis/json-rpc/#default-block).
 2. `QUANTITY` - A posição do índice tio.
 
 ```js
@@ -1320,7 +1376,7 @@ params: [
 ]
 ```
 
-**Retorno** Consulte [eth_getBlockByHash](#eth_getblockbyhash)
+**Retorna** Consulte [eth_getBlockByHash](#eth_getblockbyhash)
 
 **Observação**: um tio (bloco) não contém transações individuais.
 
@@ -1332,142 +1388,6 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleByBlockNumberAndInde
 ```
 
 Veja o resultado [eth_getBlockByHash](#eth_getblockbyhash)
-
-### eth_getCompilers {#eth_getcompilers}
-
-Retorna uma lista de compiladores disponíveis no cliente.
-
-**Parâmetros** Nenhum
-
-**Retorna** `Array` — Matriz de compiladores disponíveis.
-
-**Exemplo**
-
-```js
-// Request
-curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getCompilers","params":[],"id":1}'
-// Result
-{
-  "id":1,
-  "jsonrpc": "2.0",
-  "result": ["solidity", "lll", "serpent"]
-}
-```
-
-### eth_compileSolidity {#eth_compile_solidity}
-
-Retorna o código Solidity compilado.
-
-**Parâmetros**
-
-1. `String` - O código-fonte.
-
-```js
-params: [
-  "contract test { function multiply(uint a) returns(uint d) {   return a * 7;   } }",
-]
-```
-
-**Retorna** `DATA` — O código-fonte compilado.
-
-**Exemplo**
-
-```js
-// Request
-curl -X POST --data '{"jsonrpc":"2.0","method":"eth_compileSolidity","params":["contract test { function multiply(uint a) returns(uint d) {   return a * 7;   } }"],"id":1}'
-// Result
-{
-  "id":1,
-  "jsonrpc": "2.0",
-  "result": {
-      "code": "0x605880600c6000396000f3006000357c010000000000000000000000000000000000000000000000000000000090048063c6888fa114602e57005b603d6004803590602001506047565b8060005260206000f35b60006007820290506053565b91905056",
-      "info": {
-        "source": "contract test {\n   function multiply(uint a) constant returns(uint d) {\n       return a * 7;\n   }\n}\n",
-        "language": "Solidity",
-        "languageVersion": "0",
-        "compilerVersion": "0.9.19",
-        "abiDefinition": [
-          {
-            "constant": true,
-            "inputs": [
-              {
-                "name": "a",
-                "type": "uint256"
-              }
-            ],
-            "name": "multiply",
-            "outputs": [
-              {
-                "name": "d",
-                "type": "uint256"
-              }
-            ],
-            "type": "function"
-          }
-        ],
-        "userDoc": {
-          "methods": {}
-        },
-        "developerDoc": {
-          "methods": {}
-        }
-      }
-}
-```
-
-### eth_compileLLL {#eth_compileLLL}
-
-Retorna código LLL compilado.
-
-**Parâmetros**
-
-1. `String` - O código-fonte.
-
-```js
-params: ["(returnlll (suicide (caller)))"]
-```
-
-**Retorna** `DATA` — O código-fonte compilado.
-
-**Exemplo**
-
-```js
-// Request
-curl -X POST --data '{"jsonrpc":"2.0","method":"eth_compileLLL","params":["(returnlll (suicide (caller)))"],"id":1}'
-// Result
-{
-  "id":1,
-  "jsonrpc": "2.0",
-  "result": "0x603880600c6000396000f3006001600060e060020a600035048063c6888fa114601857005b6021600435602b565b8060005260206000f35b600081600702905091905056" // the compiled source code
-}
-```
-
-### eth_compileSerpent {#eth_compileserpent}
-
-Retorna o código Serpent compilado.
-
-**Parâmetros**
-
-1. `String` - O código fonte.
-
-```js
-params: ["/* some serpent */"]
-```
-
-**Retorna** `DATA` — O código-fonte compilado.
-
-**Exemplo**
-
-```js
-// Request
-curl -X POST --data '{"jsonrpc":"2.0","method":"eth_compileSerpent","params":["/* some serpent */"],"id":1}'
-// Result
-{
-  "id":1,
-  "jsonrpc": "2.0",
-  "result": "0x603880600c6000396000f3006001600060e060020a600035048063c6888fa114601857005b6021600435602b565b8060005260206000f35b600081600702905091905056" // the compiled source code
-}
-```
 
 ### eth_newFilter {#eth_newfilter}
 
@@ -1484,10 +1404,10 @@ Cria um objeto de filtro, com base nas opções de filtro, para notificar quando
 
 1. `Object` - As opções de filtro:
 
-- `fromBlock`: `QUANTITY|TAG` — (opcional, padrão: `"latest"`) Número de bloco inteiro ou `"latest"` para o último bloco minerado ou `"pending"`, `"earliest"` para as transações ainda não mineradas.
-- `toBlock`: `QUANTITY|TAG` — (opcional, padrão: `"latest"`) Número do bloco inteiro ou `"latest"` para o último bloco minerado ou `"pending"`, `"earliest"` para as transações ainda não mineradas.
-- `address`: `DATA|Array`, 20 Bytes — (opcional) Endereço do contrato ou uma lista de endereços dos quais os logs devem ser provenientes.
-- `topics`: `Array of DATA`, — (opcional) Matriz de tópicos de `DATA` de 32 Bytes. Os tópicos são dependentes da ordem. Cada tópico também pode ser uma matriz de DADOS (array of DATA) com opções “ou”.
+- `fromBlock`: `QUANTITY|TAG` - (opcional, padrão: `"latest"`) Número de bloco inteiro ou `"latest"` para o último bloco proposto, `"safe"` para o último bloco seguro, `"finalized"` para o último bloco finalizado ou `"pending"`, `"earliest"` para transações que ainda não estão em um bloco.
+- `toBlock`: `QUANTITY|TAG` - (opcional, padrão: `"latest"`) Número de bloco inteiro, ou `"latest"` para o último bloco proposto, `"safe"` para o último bloco seguro, `"finalized"` para o último bloco finalizado, ou `"pending"`, `"earliest"` para transações que ainda não estão em um bloco.
+- `endereço`: `DATA|Array`, 20 Bytes - (opcional) Endereço do contrato ou uma lista de endereços dos quais os logs devem se originar.
+- `topics`: `Array of DATA`, - (opcional) Array de tópicos de `DATA` de 32 Bytes. Os tópicos são dependentes da ordem. Cada tópico também pode ser uma matriz de DADOS com opções "ou".
 
 ```js
 params: [
@@ -1566,7 +1486,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_newPendingTransactionFilter"
 
 ### eth_uninstallFilter {#eth_uninstallfilter}
 
-Desinstala um filtro com a ID fornecida. Deve ser sempre chamado quando o relógio não for mais necessário. Além disso, filtra o tempo limite quando não são solicitados com [eth_getFilterChanges](#eth_getfilterchanges) por um período de tempo.
+Desinstala um filtro com a ID fornecida. Deve ser sempre chamado quando nenhum tipo de observação é necessária. Além disso, os filtros expiram quando não são solicitados com [eth_getFilterChanges](#eth_getfilterchanges) por um período de tempo.
 
 **Parâmetros**
 
@@ -1595,7 +1515,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_uninstallFilter","params":["
 
 ### eth_getFilterChanges {#eth_getfilterchanges}
 
-Método de sondagem para um filtro, que retorna uma matriz de logs que ocorreram desde a última sondagem.
+Método de sondagem para um filtro, que retorna uma matriz de logs produzidos desde a última sondagem.
 
 **Parâmetros**
 
@@ -1619,7 +1539,7 @@ params: [
   - `blockHash`: `DATA`, 32 Bytes — Hash do bloco onde este log estava localizado. `null` quando está pendente. `null` quando o log estiver pendente.
   - `blockNumber`: `QUANTITY` — O número do bloco onde este log estava localizado. `null` quando está pendente. `null` quando o log estiver pendente.
   - `endereço`: `DADOS`, 20 Bytes — Endereço de origem deste log.
-  - `data`: `DATA` — Contém um ou mais argumentos não indexados de 32 Bytes do log.
+  - `data`: `DATA` - contém zero ou mais argumentos não indexados de 32 bytes do log.
   - `topics`: `Array of DATA` — Matriz de 0 a 4 32 Bytes `DATA` de argumentos de log indexados. (No _Solidity_: O primeiro tópico é o _hash_ da assinatura do evento (por exemplo, ` Deposit(address,bytes32,uint256)`), exceto se você declarou o evento com o especificador `anonymous`.)
 - **Exemplo**
 
@@ -1651,7 +1571,7 @@ Retorna uma matriz de todos os logs correspondentes ao filtro com a ID fornecida
 
 **Parâmetros**
 
-1. `QUANTITY` - O ID do filtro.
+1. `QUANTITY` - A ID do filtro.
 
 ```js
 params: [
@@ -1668,7 +1588,7 @@ params: [
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getFilterLogs","params":["0x16"],"id":74}'
 ```
 
-Resultado veja [eth_getFilterChanges](#eth_getfilterchanges)
+Resultado. Veja [eth_getFilterChanges](#eth_getfilterchanges)
 
 ### eth_getLogs {#eth_getlogs}
 
@@ -1678,10 +1598,10 @@ Retorna uma matriz de todos os logs que correspondem a um determinado objeto de 
 
 1. `Object` - As opções de filtro:
 
-- `fromBlock`: `QUANTITY|TAG` — (opcional, padrão: `"latest"`) Número de bloco inteiro ou `"latest"` para o último bloco minerado ou `"pending"`, `"earliest"` para as transações ainda não mineradas.
-- `toBlock`: `QUANTITY|TAG` — (opcional, padrão: `"latest"`) Número do bloco inteiro ou `"latest"` para o último bloco minerado ou `"pending"`, `"earliest"` para as transações ainda não mineradas.
-- `address`: `DATA|Array`, 20 Bytes — (opcional) Endereço do contrato ou uma lista de endereços dos quais os logs devem ser provenientes.
-- `topics`: `Array of DATA`, — (opcional) Matriz de tópicos de `DATA` de 32 Bytes. Os tópicos são dependentes da ordem. Cada tópico também pode ser uma matriz de DADOS (array of DATA) com opções “ou”.
+- `fromBlock`: `QUANTITY|TAG` - (opcional, padrão: `"latest"`) Número de bloco inteiro ou `"latest"` para o último bloco proposto, `"safe"` para o último bloco seguro, `"finalized"` para o último bloco finalizado ou `"pending"`, `"earliest"` para transações que ainda não estão em um bloco.
+- `toBlock`: `QUANTITY|TAG` - (opcional, padrão: `"latest"`) Número de bloco inteiro, ou `"latest"` para o último bloco proposto, `"safe"` para o último bloco seguro, `"finalized"` para o último bloco finalizado, ou `"pending"`, `"earliest"` para transações que ainda não estão em um bloco.
+- `endereço`: `DATA|Array`, 20 Bytes - (opcional) Endereço do contrato ou uma lista de endereços dos quais os logs devem se originar.
+- `topics`: `Array of DATA`, - (opcional) Array de tópicos de `DATA` de 32 Bytes. Os tópicos são dependentes da ordem. Cada tópico também pode ser uma matriz de DADOS com opções "ou".
 - `blockhash`: `DATA`, 32 Bytes — (opcional, **futuro**) Com a adição do EIP-234, `blockHash` será uma nova opção de filtro, que restringe os logs retornados ao bloco único com o hash de 32 bytes `blockHash`. Usar `blockHash` é equivalente a `fromBlock` = `toBlock` = o número do bloco com hash `blockHash`. Se `blockHash` estiver presente nos critérios de filtro, nem `fromBlock`, nem `toBlock` serão permitidos.
 
 ```js
@@ -1703,538 +1623,9 @@ params: [
 curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getLogs","params":[{"topics":["0x000000000000000000000000a94f5374fce5edbc8e2a8697c15331677e6ebf0b"]}],"id":74}'
 ```
 
-Resultado veja [eth_getFilterChanges](#eth_getfilterchanges)
+Resultado. Veja [eth_getFilterChanges](#eth_getfilterchanges)
 
-### eth_getWork {#eth_getwork}
-
-Retorna o hash do bloco atual, o seedHash e a condição de limite a ser atendida (“alvo”).
-
-**Parâmetros** Nenhum
-
-**Retorna** `Array` — Matriz com as seguintes propriedades:
-
-1. `DATA`, 32 Bytes - Cabeçalho do bloco atual pow-hash
-2. `DATA`, 32 Bytes - O hash da semente usada para o DAG.
-3. `DATA`, 32 Bytes - A condição de contorno ("alvo"), 2^256 / dificuldade.
-
-**Exemplo**
-
-```js
-// Request
-curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getWork","params":[],"id":73}'
-// Result
-{
-  "id":1,
-  "jsonrpc":"2.0",
-  "result": [
-      "0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef",
-      "0x5EED00000000000000000000000000005EED0000000000000000000000000000",
-      "0xd1ff1c01710000000000000000000000d1ff1c01710000000000000000000000"
-    ]
-}
-```
-
-### eth_submitWork {#eth_submitwork}
-
-Usado para enviar uma solução de prova de trabalho.
-
-**Parâmetros**
-
-1. `DATA`, 8 Bytes - O nonce encontrado (64 bits)
-2. `DATA`, 32 Bytes - O pow-hash do cabeçalho (256 bits)
-3. `DATA`, 32 Bytes - O mix digest (256 bits)
-
-```js
-params: [
-  "0x0000000000000001",
-  "0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef",
-  "0xD1FE5700000000000000000000000000D1FE5700000000000000000000000000",
-]
-```
-
-**Retorna** `Boolean` — retorna `true` se a solução fornecida for válida, caso contrário, `false`.
-
-**Exemplo**
-
-```js
-// Request
-curl -X POST --data '{"jsonrpc":"2.0", "method":"eth_submitWork", "params":["0x0000000000000001", "0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef", "0xD1GE5700000000000000000000000000D1GE5700000000000000000000000000"],"id":73}'
-// Result
-{
-  "id":73,
-  "jsonrpc":"2.0",
-  "result": true
-}
-```
-
-### eth_submitHashrate {#eth_submithashrate}
-
-Usado para enviar hashrate de mineração.
-
-**Parâmetros**
-
-1. `Hashrate`, uma representação de string hexadecimal (32 bytes) do hashrate
-2. `ID`, String - Uma ID hexadecimal aleatória (32 bytes) que identifica o cliente
-
-```js
-params: [
-  "0x0000000000000000000000000000000000000000000000000000000000500000",
-  "0x59daa26581d0acd1fce254fb7e85952f4c09d0915afd33d3886cd914bc7d283c",
-]
-```
-
-**Retorna** `Boolean` — Retorna `true` se o envio foi realizado com sucesso e, caso contrário, `false`.
-
-**Exemplo**
-
-```js
-// Request
-curl -X POST --data '{"jsonrpc":"2.0", "method":"eth_submitHashrate", "params":["0x0000000000000000000000000000000000000000000000000000000000500000", "0x59daa26581d0acd1fce254fb7e85952f4c09d0915afd33d3886cd914bc7d283c"],"id":73}'
-// Result
-{
-  "id":73,
-  "jsonrpc":"2.0",
-  "result": true
-}
-```
-
-### db_putString (deprecated) {#db_putstring}
-
-Armazena uma cadeia de caracteres no banco de dados local.
-
-**Observação:** Essa função foi preterida.
-
-**Parâmetros**
-
-1. `String` - Nome do banco de dados.
-2. `String` - Nome da chave.
-3. `String` - String para armazenar.
-
-```js
-params: ["testDB", "myKey", "myString"]
-```
-
-**Retorna** `Boolean` — Retorna `true` se o valor foi armazenado, caso contrário `false`.
-
-**Exemplo**
-
-```js
-// Request
-curl -X POST --data '{"jsonrpc":"2.0","method":"db_putString","params":["testDB","myKey","myString"],"id":73}'
-// Result
-{
-  "id":1,
-  "jsonrpc":"2.0",
-  "result": true
-}
-```
-
-### db_getString (deprecated) {#db_getstring}
-
-Retorna a cadeia de caracteres do banco de dados local. **Observação:** Essa função foi preterida.
-
-**Parâmetros**
-
-1. `String` - Nome do banco de dados.
-2. `String` - Nome da chave.
-
-```js
-params: ["testDB", "myKey"]
-```
-
-**Retorna** `String` — A cadeia de caracteres armazenada anteriormente.
-
-**Exemplo**
-
-```js
-// Request
-curl -X POST --data '{"jsonrpc":"2.0","method":"db_getString","params":["testDB","myKey"],"id":73}'
-// Result
-{
-  "id":1,
-  "jsonrpc":"2.0",
-  "result": "myString"
-}
-```
-
-### db_putHex (deprecated) {#db_puthex}
-
-Armazena dados binários no banco de dados local. **Observação:** Essa função foi preterida.
-
-**Parâmetros**
-
-1. `String` - Nome do banco de dados.
-2. `String` - Nome da chave.
-3. `DADOS` - Os dados a serem armazenados.
-
-```js
-params: ["testDB", "myKey", "0x68656c6c6f20776f726c64"]
-```
-
-**Retorna** `Boolean` — Retorna `true` se o valor foi armazenado, caso contrário `false`.
-
-**Exemplo**
-
-```js
-// Request
-curl -X POST --data '{"jsonrpc":"2.0","method":"db_putHex","params":["testDB","myKey","0x68656c6c6f20776f726c64"],"id":73}'
-// Result
-{
-  "id":1,
-  "jsonrpc":"2.0",
-  "result": true
-}
-```
-
-### db_getHex (deprecated) {#db_gethex}
-
-Armazena dados binários do banco de dados local. **Observação:** Essa função foi preterida.
-
-**Parâmetros**
-
-1. `String` - Nome do banco de dados.
-2. `String` - Nome da chave.
-
-```js
-params: ["testDB", "myKey"]
-```
-
-**Retorna** `DATA` — Os dados previamente armazenados.
-
-**Exemplo**
-
-```js
-// Request
-curl -X POST --data '{"jsonrpc":"2.0","method":"db_getHex","params":["testDB","myKey"],"id":73}'
-// Result
-{
-  "id":1,
-  "jsonrpc":"2.0",
-  "result": "0x68656c6c6f20776f726c64"
-}
-```
-
-### shh_version (deprecated) {#shh_post}
-
-Retorna a versão atual do protocolo Whisper.
-
-**Observação:** Essa função foi preterida.
-
-**Parâmetros** Nenhum
-
-**Retorna** `String` — A versão atual do protocolo Whisper
-
-**Exemplo**
-
-```js
-// Request
-curl -X POST --data '{"jsonrpc":"2.0","method":"shh_version","params":[],"id":67}'
-// Result
-{
-  "id":67,
-  "jsonrpc": "2.0",
-  "result": "2"
-}
-```
-
-### shh_post (deprecated) {#shh_version}
-
-Envia uma mensagem do Whisper.
-
-**Observação:** Essa função foi preterida.
-
-**Parâmetros**
-
-1. `Objeto` - O objeto de postagem do Whisper:
-
-- `de`: `DATA`, 60 Bytes — (opcional) A identidade do remetente.
-- `para`: `DATA`, 60 Bytes — (opcional) A identidade do destinatário. Quando presente, o Whisper criptografará a mensagem para que apenas o destinatário possa descriptografá-la.
-- `tópicos`: `Array of DATA` — Matriz de tópicos de `DATA` para o destinatário identificar as mensagens.
-- `carga`: `DATA` — O conteúdo da mensagem.
-- `prioridade`: `QUANTITY` — O inteiro da prioridade em um intervalo de... (?).
-- `ttl`: `QUANTITY` — Inteiro do tempo residual em segundos.
-
-```js
-params: [
-  {
-    from: "0x04f96a5e25610293e42a73908e93ccc8c4d4dc0edcfa9fa872f50cb214e08ebf61a03e245533f97284d442460f2998cd41858798ddfd4d661997d3940272b717b1",
-    to: "0x3e245533f97284d442460f2998cd41858798ddf04f96a5e25610293e42a73908e93ccc8c4d4dc0edcfa9fa872f50cb214e08ebf61a0d4d661997d3940272b717b1",
-    topics: [
-      "0x776869737065722d636861742d636c69656e74",
-      "0x4d5a695276454c39425154466b61693532",
-    ],
-    payload: "0x7b2274797065223a226d6",
-    priority: "0x64",
-    ttl: "0x64",
-  },
-]
-```
-
-**Retorna** `Boolean` — Retorna `true` se a mensagem foi enviada, caso contrário `false`.
-
-**Exemplo**
-
-```js
-// Request
-curl -X POST --data '{"jsonrpc":"2.0","method":"shh_post","params":[{"from":"0xc931d93e97ab07fe42d923478ba2465f2..","topics": ["0x68656c6c6f20776f726c64"],"payload":"0x68656c6c6f20776f726c64","ttl":0x64,"priority":0x64}],"id":73}'
-// Result
-{
-  "id":1,
-  "jsonrpc":"2.0",
-  "result": true
-}
-```
-
-### shh_newIdentity (depreciado){#shh_newidentity}
-
-Cria uma nova identidade Whisper no cliente.
-
-**Observação:** Essa função foi preterida.
-
-**Parâmetros** Nenhum
-
-**Retorna** `DATA`, 60 Bytes — O endereço da nova identidade.
-
-**Exemplo**
-
-```js
-// Request
-curl -X POST --data '{"jsonrpc":"2.0","method":"shh_newIdentity","params":[],"id":73}'
-// Result
-{
-  "id":1,
-  "jsonrpc": "2.0",
-  "result": "0xc931d93e97ab07fe42d923478ba2465f283f440fd6cabea4dd7a2c807108f651b7135d1d6ca9007d5b68aa497e4619ac10aa3b27726e1863c1fd9b570d99bbaf"
-}
-```
-
-### shh_hasIdentity (deprecated){#shh_hasidentity}
-
-Verifica se o cliente mantém as chaves privadas de uma determinada identidade.
-
-**Observação:** Essa função foi preterida.
-
-**Parâmetros**
-
-1. `DATA`, 60 Bytes - O endereço de identidade a ser verificado.
-
-```js
-params: [
-  "0x04f96a5e25610293e42a73908e93ccc8c4d4dc0edcfa9fa872f50cb214e08ebf61a03e245533f97284d442460f2998cd41858798ddfd4d661997d3940272b717b1",
-]
-```
-
-**Retorna** `Boolean` — Retorna `true` se o cliente possui a chave privada para essa identidade, caso contrário `false`.
-
-**Exemplo**
-
-```js
-// Request
-curl -X POST --data '{"jsonrpc":"2.0","method":"shh_hasIdentity","params":["0x04f96a5e25610293e42a73908e93ccc8c4d4dc0edcfa9fa872f50cb214e08ebf61a03e245533f97284d442460f2998cd41858798ddfd4d661997d3940272b717b1"],"id":73}'
-// Result
-{
-  "id":1,
-  "jsonrpc": "2.0",
-  "result": true
-}
-```
-
-### shh_newGroup (deprecated){#shh_newgroup}
-
-**Observação:** Essa função foi preterida.
-
-**Parâmetros** Nenhum
-
-**Retorna** `DATA`, 60 Bytes — O endereço do novo grupo. (?)
-
-**Exemplo**
-
-```js
-// Request
-curl -X POST --data '{"jsonrpc":"2.0","method":"shh_newGroup","params":[],"id":73}'
-// Result
-{
-  "id":1,
-  "jsonrpc": "2.0",
-  "result": "0xc65f283f440fd6cabea4dd7a2c807108f651b7135d1d6ca90931d93e97ab07fe42d923478ba2407d5b68aa497e4619ac10aa3b27726e1863c1fd9b570d99bbaf"
-}
-```
-
-### shh_addToGroup (deprecated){#shh_addtogroup}
-
-**Observação:** Essa função foi preterida.
-
-**Parâmetros**
-
-1. `DATA`, 60 Bytes - O endereço de identidade para adicionar a um grupo (?).
-
-```js
-params: [
-  "0x04f96a5e25610293e42a73908e93ccc8c4d4dc0edcfa9fa872f50cb214e08ebf61a03e245533f97284d442460f2998cd41858798ddfd4d661997d3940272b717b1",
-]
-```
-
-**Retorna** `Boolean` — Retorna `true` se a identidade foi adicionada com sucesso ao grupo, caso contrário `false` (?).
-
-**Exemplo**
-
-```js
-// Request
-curl -X POST --data '{"jsonrpc":"2.0","method":"shh_addToGroup","params":["0x04f96a5e25610293e42a73908e93ccc8c4d4dc0edcfa9fa872f50cb214e08ebf61a03e245533f97284d442460f2998cd41858798ddfd4d661997d3940272b717b1"],"id":73}'
-// Result
-{
-  "id":1,
-  "jsonrpc": "2.0",
-  "result": true
-}
-```
-
-### shh_newFilter (deprecated){#shh_newfilter}
-
-Cria um filtro para notificar quando o cliente recebe a mensagem do Whisper que corresponde às opções do filtro. **Observação:** Essa função foi preterida.
-
-**Parâmetros**
-
-1. `Object` - As opções de filtro:
-
-- `to`: `DATA`, 60 Bytes — (opcional) Identidade do destinatário. _Quando apresentado, ele tentará descriptografar qualquer mensagem recebida se o cliente possuir a chave privada dessa identidade._
-- `tópicos`: `Array of DATA` — Matriz de tópicos de `DATA` que devem corresponder aos tópicos das mensagens recebidas. Você pode usar as seguintes combinações:
-  - `[A, B] = A && B`
-  - `[A, [B, C]] = A && (B || C)`
-  - `[null, A, B] = ANYTHING && A && B` `null` funciona como um curinga
-  -
-
-```js
-params: [
-  {
-    topics: ["0x12341234bf4b564f"],
-    to: "0x04f96a5e25610293e42a73908e93ccc8c4d4dc0edcfa9fa872f50cb214e08ebf61a03e245533f97284d442460f2998cd41858798ddfd4d661997d3940272b717b1",
-  },
-]
-```
-
-**Retorna** `QUANTITY` — O filtro recém-criado.
-
-**Exemplo**
-
-```js
-// Request
-curl -X POST --data '{"jsonrpc":"2.0","method":"shh_newFilter","params":[{"topics": ['0x12341234bf4b564f'],"to": "0x2341234bf4b2341234bf4b564f..."}],"id":73}'
-// Result
-{
-  "id":1,
-  "jsonrpc":"2.0",
-  "result": "0x7" // 7
-}
-```
-
-### shh_uninstallFilter (deprecated){#shh_uninstallfilter}
-
-Desinstala um filtro com a ID fornecida. Deve ser sempre chamado quando o relógio não for mais necessário. Adicionalmente, filtra o tempo limite quando não são solicitados com [shh_getFilterChanges](#shh_getfilterchanges) por um determinado período. **Observação:** Essa função foi preterida.
-
-**Parâmetros**
-
-1. `QUANTITY` - O filtro id.
-
-```js
-params: [
-  "0x7", // 7
-]
-```
-
-**Retorna** `Boolean` — `true` se o filtro foi desinstalado com sucesso, caso contrário `false`.
-
-**Exemplo**
-
-```js
-// Request
-curl -X POST --data '{"jsonrpc":"2.0","method":"shh_uninstallFilter","params":["0x7"],"id":73}'
-// Result
-{
-  "id":1,
-  "jsonrpc":"2.0",
-  "result": true
-}
-```
-
-### shh_getFilterChanges (deprecated){#shh_getfilterchanges}
-
-Método de sondagem para filtros do Whisper. Retorna novas mensagens desde a última chamada desse método. **Observação:** chamar o método [shh_getMessages](#shh_getmessages) redefinirá o buffer desse método para que você não receba mensagens duplicadas. **Observação:** Essa função foi preterida.
-
-**Parâmetros**
-
-1. `QUANTITY` - O filtro id.
-
-```js
-params: [
-  "0x7", // 7
-]
-```
-
-**Retorna** `Array` — Matriz de mensagens recebidas desde a última sondagem:
-
-- `hash`: `DATA`, 32 Bytes (?) — O hash da mensagem.
-- `from`: `DATA`, 60 Bytes — O remetente da mensagem, se um remetente foi especificado.
-- `to`: `DATA`, 60 Bytes — O destinatário da mensagem, se um destinatário foi especificado.
-- `expiry`: `QUANTITY` — Inteiro do tempo em segundos quando esta mensagem deve expirar (?).
-- `ttl`: `QUANTITY` — Inteiro do tempo que a mensagem deve flutuar no sistema em segundos (?).
-- `sent`: `QUANTITY` — Inteiro do carimbo de data/hora unix quando a mensagem foi enviada.
-- `tópicos`: `Array of DATA` — Matriz de tópicos de `DATA` contidos na mensagem.
-- `carga`: `DATA` — O conteúdo da mensagem.
-- `workProved`: `QUANTITY` — Inteiro do trabalho que esta mensagem exigiu antes de ser enviada (?).
-
-**Exemplo**
-
-```js
-// Request
-curl -X POST --data '{"jsonrpc":"2.0","method":"shh_getFilterChanges","params":["0x7"],"id":73}'
-// Result
-{
-  "id":1,
-  "jsonrpc":"2.0",
-  "result": [{
-    "hash": "0x33eb2da77bf3527e28f8bf493650b1879b08c4f2a362beae4ba2f71bafcd91f9",
-    "from": "0x3ec052fc33..",
-    "to": "0x87gdf76g8d7fgdfg...",
-    "expiry": "0x54caa50a", // 1422566666
-    "sent": "0x54ca9ea2", // 1422565026
-    "ttl": "0x64", // 100
-    "topics": ["0x6578616d"],
-    "payload": "0x7b2274797065223a226d657373616765222c2263686...",
-    "workProved": "0x0"
-    }]
-}
-```
-
-### shh_getMessages (deprecated) {#shh_getmessages}
-
-Obtenha todas as mensagens correspondentes a um filtro. Ao contrário de `shh_getFilterChanges`, isso retorna todas as mensagens.
-
-**Observação:** Essa função foi preterida.
-
-**Parâmetros**
-
-1. `QUANTIDADE` - O filtro id.
-
-```js
-params: [
-  "0x7", // 7
-]
-```
-
-**Retorna** Consulte [shh_getFilterChanges](#shh_getfilterchanges)
-
-**Exemplo**
-
-```js
-// Request
-curl -X POST --data '{"jsonrpc":"2.0","method":"shh_getMessages","params":["0x7"
-],"id":73}'
-```
-
-Consulte o resultado [shh_getFilterChanges](#shh_getfilterchanges)
-
-## Exemplo de utilização {#usage-example}
+## Exemplos de uso {#usage-example}
 
 ### Implementando um contrato usando JSON_RPC {#deploying-contract}
 
@@ -2260,10 +1651,10 @@ geth --http --dev console 2>>geth.log
 
 Isso iniciará a interface HTTP RPC em `http://localhost:8545`.
 
-Podemos verificar se a interface está funcionando recuperando o endereço e o saldo da Coinbase usando [curl](https://curl.se). Observe que os dados nesses exemplos serão diferentes no seu nó local. Se você quiser tentar esses comandos, substitua os parâmetros de solicitação na segunda solicitação curl pelo resultado retornado da primeira.
+Podemos verificar se a interface está em execução recuperando o endereço da coinbase (obtendo o primeiro endereço da matriz de contas) e o saldo usando [curl](https://curl.se). Observe que os dados nesses exemplos serão diferentes no seu nó local. Se você quiser tentar esses comandos, substitua os parâmetros de solicitação na segunda solicitação curl pelo resultado retornado da primeira.
 
 ```bash
-curl --data '{"jsonrpc":"2.0","method":"eth_coinbase", "id":1}' -H "Content-Type: application/json" localhost:8545
+curl --data '{"jsonrpc":"2.0","method":"eth_accounts","params":[]", "id":1}' -H "Content-Type: application/json" localhost:8545
 {"id":1,"jsonrpc":"2.0","result":["0x9b1d35635cc34752ca54713bb99d38614f63c955"]}
 
 curl --data '{"jsonrpc":"2.0","method":"eth_getBalance", "params": ["0x9b1d35635cc34752ca54713bb99d38614f63c955", "latest"], "id":2}' -H "Content-Type: application/json" localhost:8545
@@ -2277,7 +1668,7 @@ web3.fromWei("0x1639e49bba16280000", "ether")
 // "410"
 ```
 
-Agora que já temos alguns ethers em nossa cadeia de desenvolvimento privada, podemos implantar o contrato. O primeiro passo é compilar o contrato Multiply7 em byte code, que pode ser enviado para a EVM. Para instalar o solc, o compilador do Solidity, confira a [documentação do Solidity](https://docs.soliditylang.org/en/latest/installing-solidity.html). (Você pode usar uma versão do `solc` mais antiga que corresponda [à versão do compilador usada em nosso exemplo](https://github.com/ethereum/solidity/releases/tag/v0.4.20).)
+Agora que já temos alguns Ether em nossa cadeia de desenvolvimento privada, podemos implantar o contrato. O primeiro passo é compilar o contrato Multiply7 em byte code, que pode ser enviado para a EVM. Para instalar o solc, o compilador do Solidity, confira a [documentação do Solidity](https://docs.soliditylang.org/en/latest/installing-solidity.html). (Você pode usar uma versão do `solc` mais antiga que corresponda [à versão do compilador usada em nosso exemplo](https://github.com/ethereum/solidity/releases/tag/v0.4.20).)
 
 O próximo passo é compilar o contrato Multiply7 em byte code, que pode ser enviado para a EVM.
 
@@ -2310,15 +1701,15 @@ curl --data '{"jsonrpc":"2.0","method": "eth_getTransactionReceipt", "params": [
 {"jsonrpc":"2.0","id":7,"result":{"blockHash":"0x77b1a4f6872b9066312de3744f60020cbd8102af68b1f6512a05b7619d527a4f","blockNumber":"0x1","contractAddress":"0x4d03d617d700cf81935d7f797f4e2ae719648262","cumulativeGasUsed":"0x1c31e","from":"0x9b1d35635cc34752ca54713bb99d38614f63c955","gasUsed":"0x1c31e","logs":[],"logsBloom":"0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000","status":"0x1","to":null,"transactionHash":"0xe1f3095770633ab2b18081658bad475439f6a08c902d0915903bafff06e6febf","transactionIndex":"0x0"}}
 ```
 
-Nosso contrato foi criado em `0x4d03d617d700cf81935d7f797f4e2ae719648262`. Um resultado nulo em vez de um recibo significa que a transação ainda não foi incluída em um bloco. Aguarde um momento, verifique se o seu minerador está em execução e tente novamente.
+Nosso contrato foi criado em `0x4d03d617d700cf81935d7f797f4e2ae719648262`. Um resultado nulo em vez de um recibo significa que a transação ainda não foi incluída em um bloco. Espere um momento e verifique se o termo de consentimento do cliente está ativo e tente novamente.
 
 #### Interagindo com contratos inteligentes {#interacting-with-smart-contract}
 
 Neste exemplo, enviaremos uma transação usando `eth_sendTransaction` para o método `multiply` do contrato.
 
-`eth_sendTransaction` requer vários argumentos, especificamente `from`, `to` e `data`. `From` é o endereço público de nossa conta, e `to` é o endereço do contrato. O argumento `data` contém um conteúdo que define qual método deve ser chamado e com quais argumentos. É aqui que a [ABI (application binary interface ou interface binária do aplicativo)](https://docs.soliditylang.org/en/latest/abi-spec.html) entra em ação. A ABI é um arquivo JSON que estabelece como definir e codificar dados para a EVM.
+`eth_sendTransaction` requer vários argumentos, especificamente `from`, `to` e `data`. `From` é o endereço público de nossa conta, e `to` é o endereço do contrato. O argumento `data` contém uma carga que define qual método deve ser chamado e com quais argumentos. É aqui que a [interface binária do aplicativo (ABI, na sigla em inglês)](https://docs.soliditylang.org/en/latest/abi-spec.html) entra em ação. A ABI é um arquivo JSON que estabelece como definir e codificar dados para a EVM.
 
-Os bytes do conteúdo definem qual método no contrato é chamado. Esses são os primeiros 4 bytes do hash Keccak sobre o nome da função e seus tipos de argumento, com codificação hexadecimal. A função multiplicar aceita um uint, que é um alias de uint256. Isso nos deixa com:
+Os bytes da carga definem qual método no contrato é chamado. Esses são os primeiros 4 bytes do hash Keccak sobre o nome da função e seus tipos de argumento, com codificação hexadecimal. A função multiplicar aceita um uint, que é um alias de uint256. Isso nos deixa com:
 
 ```javascript
 web3.sha3("multiply(uint256)").substring(0, 10)
@@ -2378,5 +1769,5 @@ Esta foi apenas uma breve introdução a algumas das tarefas mais comuns, demons
 - [Especificações do JSON-RPC](http://www.jsonrpc.org/specification)
 - [ Nós e clientes](/developers/docs/nodes-and-clients/)
 - [APIs JavaScript](/developers/docs/apis/javascript/)
-- [APIs de Backend](/developers/docs/apis/backend/)
+- [APIs de back-end](/developers/docs/apis/backend/)
 - [Clientes de execução](/developers/docs/nodes-and-clients/#execution-clients)

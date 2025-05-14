@@ -131,6 +131,7 @@
   "page-stablecoins-stablecoins-table-type-precious-metals-backed": "Logam mulia",
   "page-stablecoins-table-error": "Tidak dapat memuat stablecoin. Coba muat ulang halaman.",
   "page-stablecoins-title": "Stablecoin",
+  "page-stablecoins-meta-title": "Penjelasan stablecoin: Apa kegunaannya?",
   "page-stablecoins-top-coins": "Stablecoin teratas berdasarkan kapitalisasi pasar",
   "page-stablecoins-top-coins-intro": "Kapitalisasi pasar adalah",
   "page-stablecoins-top-coins-intro-code": "jumlah total token yang ada dikalikan dengan nilai per token. Daftar ini dinamis dan proyek yang tercantum di sini tidak wajib didukung oleh tim ethereum.org.",

@@ -358,7 +358,7 @@ Nástroje pro vývojáře Etherea se rychle zlepšují. V této obecné oblasti 
 
 ### Orákula {#oracles}
 
-Orákula importují data mimo blockchain dovnitř decentralizovaným způsobem bez nutnosti oprávnění. Získávání těchto dat do blockchainu umožňuje dappkám reagovat na jevy reálného světa, jako jsou výkyvy cen reálných aktiv, události v aplikacích mimo blockchain nebo dokonce změny počasí.
+Orákula importují data mimo blockchain do blockchainu decentralizovaným způsobem bez nutnosti povolení. Získávání těchto dat na blockchain umožňuje decentralizovaným aplikacím reagovat na jevy reálného světa, jako jsou výkyvy cen reálných aktiv, události v aplikacích mimo blockchain, nebo dokonce změny počasí.
 
 #### Základní podklady {#background-reading-18}
 

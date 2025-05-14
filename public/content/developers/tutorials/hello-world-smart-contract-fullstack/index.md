@@ -263,7 +263,7 @@ In your project directory type:
 npm install --save-dev @nomiclabs/hardhat-ethers "ethers@^5.0.0"
 ```
 
-### Step 13: Update hardhat.config.js {#step-13-update-hardhat.configjs}
+### Step 13: Update hardhat.config.js {#step-13-update-hardhat-configjs}
 
 We’ve added several dependencies and plugins so far, now we need to update `hardhat.config.js` so that our project knows about all of them.
 
@@ -664,7 +664,7 @@ Successfully verified contract HelloWorld on Etherscan.
 https://goerli.etherscan.io/address/<contract-address>#contracts
 ```
 
-Congrats! Your smart contract code is on Etherescan!
+Congrats! Your smart contract code is on Etherscan!
 
 ### Check out your smart contract on Etherscan! {#check-out-your-smart-contract-on-etherscan}
 

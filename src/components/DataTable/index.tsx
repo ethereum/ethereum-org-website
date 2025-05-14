@@ -97,7 +97,7 @@ const DataTable = <TData, TValue>({
     }
 
     previousExpandedRef.current = expanded
-  }, [expanded])
+  }, [expanded, matomoEventCategory, table])
 
   useEffect(() => {
     if (JSON.stringify(data) !== JSON.stringify(previousDataRef.current)) {
@@ -111,7 +111,7 @@ const DataTable = <TData, TValue>({
 
       return () => clearTimeout(timer)
     }
-  }, [data])
+  }, [data, table])
 
   return (
     <div className="relative">
