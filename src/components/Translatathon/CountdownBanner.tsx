@@ -1,12 +1,18 @@
-import { useEffect, useState } from "react"
+import { useEffect, useMemo, useState } from "react"
 
 import BannerNotification from "@/components/Banners/BannerNotification"
 
 export const CountdownBanner = () => {
   const [countdown, setCountdown] = useState("")
 
-  const translatathonStartDate = new Date("August 9, 2024 12:00:00 UTC")
-  const translatathonEndDate = new Date("August 18, 2024 12:00:00 UTC")
+  const translatathonStartDate = useMemo(
+    () => new Date("August 9, 2024 12:00:00 UTC"),
+    []
+  )
+  const translatathonEndDate = useMemo(
+    () => new Date("August 18, 2024 12:00:00 UTC"),
+    []
+  )
 
   const calculateCountdown = (targetDate: Date) => {
     const currentTime = new Date()
@@ -36,7 +42,7 @@ export const CountdownBanner = () => {
     return () => {
       clearInterval(interval)
     }
-  }, [])
+  }, [translatathonEndDate, translatathonStartDate])
 
   return new Date() < translatathonStartDate ? (
     <>

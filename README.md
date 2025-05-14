@@ -155,9 +155,9 @@ Learn more about how we review pull requests [here](docs/review-process.md).
 
 > An Onchain Achievement Token (OAT) is a special badge on [Galxe](https://app.galxe.com/quest/ethereumorg). It's a proof of your contribution to the ecosystem. [More on OATs](https://medium.com/galxe-news/introducing-galaxy-oat-on-chain-achievement-token-7e89779242b4).
 
-### ethereum.org 2024 Contributor OATs
+### ethereum.org 2025 Contributor OATs
 
-- If you have committed any changes in 2024 so far that were merged into our repo or if you have translated a certain amount of words, you can claim your OATs!
+- If you have committed any changes in 2025 so far that were merged into our repo or if you have translated a certain amount of words, you can claim your OATs!
 - There are OATs for GitHub, content, design and translation contributions.
 
   [![Discord](https://img.shields.io/discord/714888181740339261?color=1C1CE1&label=Claim%20Your%20POAP!%20%7C%20Discord%20%F0%9F%91%8B%20&style=flat)](https://discord.gg/ethereum-org)
@@ -1942,6 +1942,12 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/itzVarsha"><img src="https://avatars.githubusercontent.com/u/138134029?v=4?s=100" width="100px;" alt="Varshitha"/><br /><sub><b>Varshitha</b></sub></a><br /><a href="#maintenance-itzVarsha" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://alexandriaroberts.dev/"><img src="https://avatars.githubusercontent.com/u/31341867?v=4?s=100" width="100px;" alt="Alexandria Roberts"/><br /><sub><b>Alexandria Roberts</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=alexandriaroberts" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/colinlyguo"><img src="https://avatars.githubusercontent.com/u/102356659?v=4?s=100" width="100px;" alt="colin"/><br /><sub><b>colin</b></sub></a><br /><a href="#content-colinlyguo" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/jenish-thapa"><img src="https://avatars.githubusercontent.com/u/141203631?v=4?s=100" width="100px;" alt="Jenish Thapa"/><br /><sub><b>Jenish Thapa</b></sub></a><br /><a href="#ideas-jenish-thapa" title="Ideas, Planning, & Feedback">🤔</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://jiangxue.org/~ritsu"><img src="https://avatars.githubusercontent.com/u/57232813?v=4?s=100" width="100px;" alt="iusx"/><br /><sub><b>iusx</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=iusx" title="Code">💻</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/JJOptimist"><img src="https://avatars.githubusercontent.com/u/86833563?v=4?s=100" width="100px;" alt="JJOptimist"/><br /><sub><b>JJOptimist</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3AJJOptimist" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://pwn.xyz"><img src="https://avatars.githubusercontent.com/u/61500778?v=4?s=100" width="100px;" alt="microHoffman"/><br /><sub><b>microHoffman</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3AmicroHoffman" title="Bug reports">🐛</a></td>
     </tr>
   </tbody>
 </table>

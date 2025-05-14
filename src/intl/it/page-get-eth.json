@@ -1,5 +1,5 @@
 {
-  "page-get-eth-article-keeping-crypto-safe": "I segreti per tenere al sicuro le tue criptovalute",
+  "page-get-eth-article-keeping-crypto-safe": "Le chiavi per tenere al sicuro le tue criptovalute",
   "page-get-eth-article-protecting-yourself": "Proteggere te e i tuoi fondi",
   "page-get-eth-article-store-digital-assets": "Come conservare attivi digitali su Ethereum",
   "page-get-eth-article-protecting-yourself-desc": "MyCrypto",
@@ -46,7 +46,7 @@
   "page-get-eth-hero-image-alt": "Ottieni l'immagine dell'eroe di ETH",
   "page-get-eth-keep-it-safe": "Proteggere i tuoi ETH",
   "page-get-eth-meta-description": "Come acquistare ETH a seconda di dove vivi e consigli su come prendersene cura.",
-  "page-get-eth-meta-title": "Come ottenere ETH",
+  "page-get-eth-meta-title": "Come acquistare Ether (ETH)",
   "page-get-eth-need-wallet": "Ti servirà un portafoglio per usare una DEX.",
   "page-get-eth-new-to-eth": "Alle prime armi con ETH? Ecco una panoramica per muovere i primi passi.",
   "page-get-eth-other-cryptos": "Acquista con altre criptovalute",
@@ -75,5 +75,5 @@
   "page-get-eth-your-address-desc-3": "Puoi considerarlo come un indirizzo email, su cui invece delle email riceverai ETH. Se vuoi trasferire ETH da una borsa al tuo portafoglio, usa questo indirizzo come destinazione. Controlla sempre due volte prima di confermare l'invio!",
   "page-get-eth-your-address-wallet-link": "Scopri i portafogli",
   "listing-policy-raise-issue-link": "Apri segnalazione",
-  "page-find-wallet-last-updated": "Ultimo aggiornamento"
+  "page-find-wallet-last-updated": "Ultimo aggiornamento:"
 }

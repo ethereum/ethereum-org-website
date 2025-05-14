@@ -25,7 +25,7 @@ Les validateurs à domicile sont responsables du fonctionnement du matériel né
 
 Un validateur à domicile reçoit des récompenses directement du protocole pour le maintien de son validateur en bon état de fonctionnement et en ligne.
 
-## Pourquoi miser à domicile ? {#why-stake-solo}
+## Pourquoi effectuer des mises en jeu depuis chez soi ? {#why-stake-solo}
 
 La mise en jeu à domicile demande plus de responsabilités, mais vous donne un contrôle maximal sur vos fonds et votre configuration de mise en jeu.
 

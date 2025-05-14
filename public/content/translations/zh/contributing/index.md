@@ -19,13 +19,12 @@ Ethereum.org 是一个开源项目，有超过 **12,000** 名贡献者帮助翻�
 - [处理有待解决的问题](https://github.com/ethereum/ethereum-org-website/issues) - 我们确定需要开展的工作
 
 **设计**
-- [帮助设计网站](/contributing/design/) - 任何水平的设计师都可以为改进网站做出贡献
+- [帮助设计网站](/contributing/design/) — 任何水平的设计者都可以做出贡献来改进网站。
 
 **内容**
 - [创建/编辑内容](/contributing/#how-to-update-content) – 建议新页面或对现有内容进行调整
 - [添加社区资源](/contributing/content-resources/) – 将有用的文章或资源添加到相关页面
 - [对设计资源提出建议](/contributing/design/adding-design-resources/) - 添加、更新和删除有用的设计资源
-- [添加词汇表术语](/contributing/adding-glossary-terms/) – 帮助我们继续扩充以太坊[词汇表](/glossary/)
 - [测验](/contributing/quizzes/) – 为相关页面添加、更新和删除测试题库
 
 **功能创意**
@@ -90,11 +89,11 @@ Ethereum.org 是一个开源项目，有超过 **12,000** 名贡献者帮助翻�
 
 如果你的贡献被合并到 ethereum.org 中，你将有机会在 [Galxe](https://app.galxe.com/quest/ethereumorg) 上领取特殊徽章。 链上成就代币 (OAT) 是你助力改善生态系统的证明。
 
-[关于链上成就代币的更多信息](https://help.galxe.com/en/articles/7067290-galxe-oats-reward-and-celebrate-achievements)
+[关于链上成就代币的更多信息](https://help.galxe.com/en/articles/9645630-create-quest-rewards#h_1c5d63ba03)
 
 ### 如何领取
 1. 加入我们的 [Discord 服务器](https://discord.gg/ethereum-org)。
-2. 将指向你的贡献内容的链接粘贴至 `#🥇 | proof-of-contribution` 频道。
+2. 在 `#🥇 | proof-of-contribution` 频道中粘贴指向你贡献的链接。
 3. 等待我们团队的成员向你发送链上成就代币链接。
 4. 领取你的链上成就代币！
 

@@ -14,7 +14,7 @@ published: 2021-04-22
 
 [Beeple](https://www.nytimes.com/2021/03/11/arts/design/nft-auction-christies-beeple.html): $69,000,000 [3LAU](https://www.forbes.com/sites/abrambrown/2021/03/03/3lau-nft-nonfungible-tokens-justin-blau/?sh=5f72ef64643b): $11,000,000 [Grimes](https://www.theguardian.com/music/2021/mar/02/grimes-sells-digital-art-collection-non-fungible-tokens): $6,000,000
 
-いずれもAlchemyの強力なAPIを使ってNFTをミントしています。 このチュートリアルでは、<10分以内でNFTをミントする方法を説明します。
+いずれもAlchemyの強力なAPIを使ってNFTをミントしています。 このチュートリアルでは、\<10分以内でNFTをミントする方法を説明します。
 
 「NFTのミント」とは、ブロックチェーン上にERC-721トークンのユニークなインスタンスを公開することです。 [NFTチュートリアルシリーズのパート1](/developers/tutorials/how-to-write-and-deploy-an-nft/)で作成したスマートコントラクトを使って、Web3のスキルを駆使し、NFTをミントしてみましょう。 このチュートリアルが終わるころには、あなた(とウォレット) の望むがままにNFTをミントできるようになります。
 

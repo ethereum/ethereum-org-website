@@ -1,7 +1,9 @@
 {
+  "template-usecase-dropdown-ai-agents": "Agentes de IA",
   "template-usecase-dropdown-defi": "Finanzas descentralizadas (DeFi)",
   "template-usecase-dropdown-nft": "Tókenes No Fungibles (NFT)",
   "template-usecase-dropdown-dao": "Organizaciones Autónomas Descentralizadas (DAO)",
+  "template-usecase-dropdown-payments": "Pagos con Ethereum",
   "template-usecase-dropdown-social-networks": "Redes sociales descentralizadas",
   "template-usecase-dropdown-identity": "Identidad descentralizada",
   "template-usecase-dropdown-desci": "Ciencia descentralizada (DeSci)",
