@@ -1,6 +1,6 @@
 ---
 title: Muungano
-description: Jifunze kuhusu muunganiko - ambapo mtandao mkuu wa Etheream utakapoungana na Mnyororo Kioleza ulioratibu mfumo wa uthibitisho-wa-hisa.
+description: Jifunze kuhusu muunganiko - ambapo mtandao mkuu wa Ethereum utakapoungana na Mnyororo Kioleza ulioratibu mfumo wa uthibitisho-wa-hisa.
 lang: sw
 template: upgrade
 image: /images/upgrades/merge.png

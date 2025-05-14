@@ -1,5 +1,9 @@
 import pick from "lodash.pick"
-import { getTranslations } from "next-intl/server"
+import {
+  getMessages,
+  getTranslations,
+  setRequestLocale,
+} from "next-intl/server"
 
 import { Lang } from "@/lib/types"
 
@@ -11,7 +15,7 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import GetEthPage from "./_components/get-eth"
 
-import { loadMessages } from "@/i18n/loadMessages"
+import { routing } from "@/i18n/routing"
 
 export default async function Page({
   params,
@@ -20,12 +24,14 @@ export default async function Page({
 }) {
   const { locale } = await params
 
+  setRequestLocale(locale)
+
   const lastDataUpdateDate = getLastModifiedDateByPath(
     "src/data/exchangesByCountry.ts"
   )
 
   // Get i18n messages
-  const allMessages = await loadMessages(locale)
+  const allMessages = await getMessages({ locale })
   const requiredNamespaces = getRequiredNamespacesForPage("/get-eth")
   const pickedMessages = pick(allMessages, requiredNamespaces)
 
@@ -34,6 +40,10 @@ export default async function Page({
       <GetEthPage lastDataUpdateDate={lastDataUpdateDate} />
     </I18nProvider>
   )
+}
+
+export async function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }))
 }
 
 export async function generateMetadata({

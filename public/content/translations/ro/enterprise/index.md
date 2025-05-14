@@ -13,7 +13,7 @@ Aplicațiile Blockchain ajută întreprinderile:
 - să construiască noi modele de afaceri și oportunități de creare a valorii
 - să garanteze competitivitatea organizației în viitor
 
-Aplicațiile blockchain pentru întreprinderi pot fi construite pe [Mainnet-ul](/glossary/#mainnet) Ethereum, care este un sistem public fără autorizare sau pe blockchain-uri private bazate pe tehnologia Ethereum. Aflaţi mai multe informații despre [lanțurile private Ethereum pentru întreprinderi](/enterprise/private-ethereum/).
+Aplicațiile blockchain pentru întreprinderi pot fi construite pe [Mainnet-ul](/glossary/#mainnet) Ethereum, care este un sistem public fără autorizare sau pe blockchain-uri private bazate pe tehnologia Ethereum.
 
 ## Ethereum-ul public în comparaţie cu cel privat {#private-vs-public}
 
