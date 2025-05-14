@@ -82,7 +82,7 @@ A több független kliensimplementáció növeli az Ethereum-hálózat rugalmass
 
 Ha az egyik kliensnél problémák vagy sebezhetőségek merülnek fel, a többi kliens zavartalanul működhet tovább, megelőzve az egyetlen hibapont kialakulását. Emellett az eltérő klienshasználat elősegíti az innovációt és a versenyt, ösztönzi a fejlesztéseket és csökkenti a monokultúra kockázatát az ökoszisztémán belül.
 
-## További olvasnivaló {#futher-reading}
+## További olvasnivaló {#further-reading}
 
 - [A Portal Network (Piper Merriam előadása a Devconon, Bogotában)](https://www.youtube.com/watch?v=0stc9jnQLXA).
 - [A Portal Network Discord csatornája](https://discord.gg/CFFnmE7Hbs)
