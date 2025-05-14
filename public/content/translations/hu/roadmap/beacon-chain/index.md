@@ -34,9 +34,14 @@ A proof-of-stake mechanizmusra való áttérés jelentősen fokozta az Ethereum 
 
 A proof-of-stake használata, mint konszenzusmechanizmus, egy alapvető komponens [a ma használt biztonságos, környezetbarát és skálázható Ethereum számára](/roadmap/vision/).
 
-<InfoBanner emoji=":money_bag:">
+<Alert variant="update">
+<Emoji text=":money_bag:" className="text-4xl"/>
+<AlertContent>
+<AlertDescription>
   Ha Ön szeretne validátorrá válni és segítene az Ethereum biztosításában, akkor <a href="/staking/">tudjon meg többet a letétbe helyezésről</a>.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ### Felkészülés a szilánkolásra {#setting-up-for-sharding}
 

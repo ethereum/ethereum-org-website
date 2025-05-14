@@ -124,11 +124,12 @@ Como regra geral, o pessoal de suporte nunca se comunicará com você por meio d
 - Nunca permita que alguém acesse remotamente o seu computador
 - Nunca comunicar fora dos canais designados por uma organização
 
-<InfoBanner emoji=":lock:">
+<Alert variant="update">
+<Emoji text=":lock:" className="text-4xl"/>
   <div>
     Cuidado: embora fraudes ao estilo de suporte ocorram normalmente no Discord, elas também podem acontecer em qualquer aplicativo de bate-papo onde ocorram discussões sobre criptomoedas, incluindo e-mail.
   </div>
-</InfoBanner>
+</Alert>
 
 ### Golpe com o token 'Eth2' {#eth2-token-scam}
 
@@ -215,11 +216,12 @@ Uma senha forte que foi revelada em uma violação de dados não é mais uma sen
 
 ### Use um gerenciador de senhas {#use-password-manager}
 
-<InfoBanner emoji=":bulb:">
+<Alert variant="update">
+<Emoji text=":bulb:" className="text-4xl"/>
   <div>
     Usar um gerenciador de senhas faz com que ele crie senhas fortes, únicas e que sejam lembradas! Nós <strong>fortemente</strong> recomendamos usar um, e a maioria deles é gratuita!
   </div>
-</InfoBanner>
+</Alert>
 
 Lembrar de senhas fortes e exclusivas para cada conta que você possui não é o ideal. Um gerenciador de senhas oferece um cofre seguro e criptografado para todas as suas senhas que você pode acessar por meio de uma senha mestra forte. Eles também sugerem senhas fortes quando você se inscreve em um novo serviço, para que você não precise criar as suas próprias. Muitos gerenciadores de senhas também irão informar se você esteve envolvido em uma violação de dados, permitindo que você altere as senhas antes de qualquer ataque malicioso.
 
@@ -242,11 +244,12 @@ Lembrar de senhas fortes e exclusivas para cada conta que você possui não é o
 
 Usar a **Autenticação de dois fatores (2FA)** fornece um *fator de segurança* adicional para suas contas online. A 2FA garante que o fato de ter somente a senha não é suficiente para acessar uma conta. Mais comumente, o segundo fator é um código de 6 dígitos aleatórios, conhecido como **uma senha de uso único (TOTP, na sigla em inglês)**, que você pode acessar através de um aplicativo de autenticação, como o Google Authenticator ou Authy. Estes funcionam como um fator de "algo que você possui" porque a seed que gera o código temporizado é armazenado em seu dispositivo.
 
-<InfoBanner emoji=":lock:">
+<Alert variant="update">
+<Emoji text=":lock:" className="text-4xl"/>
   <div>
     Observação: usar 2FA baseada em SMS é suscetível a <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">sequestro de SIM</a> e não é seguro. Para melhor segurança, use um serviço como o <a href="https://mashable.com/article/how-to-set-up-google-authenticator">Google Authenticator</a> ou o <a href="https://authy.com/">Authy</a>.
   </div>
-</InfoBanner>
+</Alert>
 
 #### Chaves de segurança {#security-keys}
 

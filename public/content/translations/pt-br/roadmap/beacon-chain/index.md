@@ -34,9 +34,14 @@ A transição para a prova de participação tornou o Ethereum consideravelmente
 
 E utilizar a prova de participação como mecanismo de consenso é um componente fundamental para [o Ethereum seguro, ecológico e dimensionável que temos agora](/roadmap/vision/).
 
-<InfoBanner emoji=":money_bag:">
+<Alert variant="update">
+<Emoji text=":money_bag:" className="text-4xl"/>
+<AlertContent>
+<AlertDescription>
   Se você estiver interessado em se tornar um validador e ajudar a manter o Ethereum seguro, <a href="/staking/">saiba mais sobre o conceito de participação</a>.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ### Preparação para a fragmentação {#setting-up-for-sharding}
 

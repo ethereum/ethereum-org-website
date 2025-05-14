@@ -34,9 +34,14 @@ Mar gheall ar an aistriú go cruthúnais-gheallta bhí Ethereum i bhfad níos sl
 
 Agus is comhpháirt bhunúsach do [cruthúnas-gheallta a úsáid mar mheicníocht chomhthoiliúil don Ethereum slán, neamhdhíobhálach don timpeallacht agus inscálaithe atá againn anois](/roadmap/vision/).
 
-<InfoBanner emoji=":money_bag:">
+<Alert variant="update">
+<Emoji text=":money_bag:" className="text-4xl"/>
+<AlertContent>
+<AlertDescription>
   Más spéis leat a bheith i do bhailíochtóir agus cabhrú le Ethereum a shlánú, <a href="/staking/">foghlaim tuilleadh faoi ghealltóireacht</a>.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ### Socrú le haghaidh roinnte {#setting-up-for-sharding}
 

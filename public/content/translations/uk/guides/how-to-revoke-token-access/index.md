@@ -47,12 +47,15 @@ lang: uk
 
  <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<Emoji text=":eyes:" className="text-4xl"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Хочете дізнатися більше?</div>
   <ButtonLink href="/guides/">
     Перегляньте наші інші посібники
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Поширені запитання
 

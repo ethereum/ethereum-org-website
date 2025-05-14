@@ -57,9 +57,9 @@ Als iemand de willekeurige locaties kent die gebruikt zijn voor de verbintenis, 
 
 </ExpandableCard>
 
-<InfoBanner isWarning mb={8}>
+<Alert variant="warning" className="mb-8">
   Danksharding noch Proto-Danksharding volgen het traditionele “sharding”-model dat erop gericht is om de blockchain in meerdere delen op te splitsen. Shard chains maken niet langer deel uit van de routekaart. In plaats daarvan gebruikt Danksharding een gespreide steekproef van gegevens over blobs om Ethereum op te schalen. Dit is veel eenvoudiger te implementeren. Dit model wordt ook wel "data-sharding" genoemd.
-</InfoBanner>
+</Alert>
 
 ## Wat is Danksharding? {#what-is-danksharding}
 

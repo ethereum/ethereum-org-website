@@ -40,12 +40,15 @@ Setelah Anda menyimpan frase benih, Anda seharusnya dapat melihat dasbor dompet 
 
  <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<Emoji text=":eyes:" className="text-4xl"/>
+<AlertContent className="flex-row justify-between items-center">
   <div>Ingin mempelajari selengkapnya?</div>
   <ButtonLink href="/guides/">
     Lihat panduan lainnya
   </ButtonLink>
-</InfoBanner>
+ </AlertContent>
+</Alert>
 
 ## Pertanyaan yang sering diajukan
 

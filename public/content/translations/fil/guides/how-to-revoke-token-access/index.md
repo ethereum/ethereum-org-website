@@ -47,12 +47,15 @@ Ipinapayo naming i-refresh mo ang tool para sa pagbawi pagkalipas ng ilang minut
 
  <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<Emoji text=":eyes:" className="text-4xl"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Gusto mong magbasa pa?</div>
   <ButtonLink href="/guides/">
     Tingnan ang iba pa naming gabay
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Mga karaniwang itanong
 

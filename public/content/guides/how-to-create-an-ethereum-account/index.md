@@ -47,7 +47,7 @@ Some apps will request you to save a secret "recovery phrase" (sometimes called 
   <ButtonLink href="/guides/how-to-use-a-wallet">
     How to use a wallet
   </ButtonLink>
-  </AlertContent>
+</AlertContent>
 </Alert>
 </div>
 

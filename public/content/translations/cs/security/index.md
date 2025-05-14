@@ -124,11 +124,12 @@ Obecně platí, že zaměstnanci s vámi nikdy nebudou komunikovat soukromými, 
 - Nikdy nikomu neumožňujte vzdálený přístup k vašemu počítači
 - Nikdy nekomunikujte mimo kanály určené organizací
 
-<InfoBanner emoji=":lock:">
+<Alert variant="update">
+<Emoji text=":lock:" className="text-4xl"/>
   <div>
     Pozor: ačkoli k podvodům s podporou běžně dochází na Discordu, mohou se vyskytovat i v jiných chatovacích aplikacích, kde se diskutuje o kryptoměnách, včetně e-mailu.
   </div>
-</InfoBanner>
+</Alert>
 
 ### Podvod s 'Eth2' tokenem {#eth2-token-scam}
 
@@ -215,11 +216,12 @@ Silné heslo, které bylo odhaleno při úniku dat, již není silným heslem. W
 
 ### Používejte správce hesel {#use-password-manager}
 
-<InfoBanner emoji=":bulb:">
+<Alert variant="update">
+<Emoji text=":bulb:" className="text-4xl"/>
   <div>
     Správce hesel se postará o vytvoření silných a jedinečných hesel a jejich zapamatování! <strong>Vřele</strong> doporučujeme nějaký používat, většina z nich je zdarma!
   </div>
-</InfoBanner>
+</Alert>
 
 Pamatovat si silná a jedinečná hesla pro každý účet není ideální. Správce hesel nabízí bezpečné šifrované úložiště všech vašich hesel, ke kterým máte přístup prostřednictvím jednoho silného hlavního hesla. Při registraci do nové služby také doporučují silná hesla, abyste si nemuseli vytvářet vlastní. Mnoho správců hesel vám také oznámí, zda jste byli součástí úniku dat, a umožní vám změnit hesla dříve, než dojde ke škodlivým útokům.
 
@@ -242,11 +244,12 @@ Někdy můžete být požádáni o ověření své identity prostřednictvím je
 
 Používání **dvoufaktorového ověřování (2FA)** je dalším *bezpečnostním faktorem* pro vaše online účty. 2FA zajišťuje, že pouze mít vaše heslo nestačí k přístupu k účtu. Druhým faktorem je nejčastěji náhodný šestimístný kód, známý jako **jednorázové heslo (TOTP)**, ke kterému získáte přístup prostřednictvím autentizační aplikace, jako je Google Authenticator nebo Authy. Fungují jako "něco, co vlastníte", protože seed, který generuje časovaný kód, je uložen ve vašem zařízení.
 
-<InfoBanner emoji=":lock:">
+<Alert variant="update">
+<Emoji text=":lock:" className="text-4xl"/>
   <div>
     Poznámka: Používání 2FA pomocí SMS je náchylné k <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">odcizení SIM karty</a> a není bezpečné. Pro nejlepší ochranu používejte službu jako <a href="https://mashable.com/article/how-to-set-up-google-authenticator">Google Authenticator</a> nebo <a href="https://authy.com/">Authy</a>.
   </div>
-</InfoBanner>
+</Alert>
 
 #### Bezpečnostní klíče {#security-keys}
 

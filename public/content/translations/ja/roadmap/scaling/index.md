@@ -9,14 +9,19 @@ template: roadmap
 
 イーサリアムは、[レイヤー2](/layer-2/#rollups)(ロールアップとも呼ばれます)と呼ばれるスケーリング技術で、トランザクションをまとめて処理し、出力をイーサリアムに送信します。 ロールアップでは、イーサリアムメインネットよりも最大8倍安価に取引を行うことができますが、ロールアップのさらなる最適化によって、さらにコストを削減できる可能性があります。 ただし、ロールアップには一部の集中化されたコンポーネントも含まれており、これはロールアップが成熟するにつれてデベロッパーによって取り除かれる予定です。
 
-<InfoBanner mb={8} title="トランザクションコスト">
+<Alert variant="update" className="mb-8">
+<AlertContent>
+<AlertTitle className="mb-4">
+  トランザクションコスト
+</AlertTitle>
   <ul style={{ marginBottom: 0 }}>
     <li>今日のロールアップはイーサリアムレイヤー1よりも<strong>約5～20倍</strong>安価</li>
     <li>ゼロ知識ロールアップはまもなく、<strong>約40～100倍</strong>安くなる予定</li>
     <li>イーサリアムの今後の仕様変更により、さらに<strong>約100～1000倍</strong>のスケーリングが実現</li>
     <li style={{ marginBottom: 0 }}>ユーザーは、トランザクションのコストが<strong>0.001ドル未満</strong>というメリットを享受</li>
   </ul>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## データ費用の削減 {#making-data-cheaper}
 

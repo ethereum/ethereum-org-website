@@ -47,12 +47,15 @@ lang: ja
 
  <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<Emoji text=":eyes:" className="text-4xl"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>さらに詳しく知りたいですか？</div>
   <ButtonLink href="/guides/">
     他のガイドを参照する
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## よくある質問
 

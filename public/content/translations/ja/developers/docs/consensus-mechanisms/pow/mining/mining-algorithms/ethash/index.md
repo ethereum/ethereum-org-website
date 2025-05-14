@@ -4,9 +4,14 @@ description: Ethashアルゴリズムの詳細
 lang: ja
 ---
 
-<InfoBanner emoji=":wave:">
+<Alert variant="update">
+<Emoji text=":wave:" className="text-4xl"/>
+<AlertContent>
+<AlertDescription>
    Ethashは、イーサリアムのプルーフ・オブ・ワークのマイニングアルゴリズムでした。 プルーフ・オブ・ワークは、今『完全に廃止』されており、イーサリアムは現在<a href="/developers/docs/consensus-mechanisms/pos/">プルーフ・オブ・ステーク</a>により安全が確保されています。 詳細については、<a href="/roadmap/merge/">マージ</a>、<a href="/developers/docs/consensus-mechanisms/pos/">プルーフ・オブ・ステーク</a>および<a href="/staking/">ステーキング</a>を参照してください。 このページについては、これまでのイーサリアムの歩みを学ぶための参考としてお読みください。  
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 [Ethash](https://github.com/ethereum/wiki/wiki/Ethash)は、[ダガーハシモト](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto)アルゴリズムを部分的に修正したバージョンです。 Ethashプルーフ・オブ・ワークは、[メモリハード](https://wikipedia.org/wiki/Memory-hard_function)になっており、アルゴリズムでASIC耐性が高まると考えられました。 最終的には、Ethash ASICが開発されましたが、GPUマイニングは、プルーフ・オブ・ワークが停止されるまでが実行可能なオプションでした。 Ethashは現在でも、イーサリアム以外のプルール・オブ・ワーク・ネットワークで他のコインのマイニングに使われています。
 

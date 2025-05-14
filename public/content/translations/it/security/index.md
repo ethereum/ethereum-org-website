@@ -124,11 +124,12 @@ Come regola generale, il personale non comunicherà mai con te attraverso canali
 - Non consentire a nessuno l'accesso remoto al tuo computer
 - Non comunicare mai al di fuori dai canali designati dall'organizzazione
 
-<InfoBanner emoji=":lock:">
+<Alert variant="update">
+<Emoji text=":lock:" className="text-4xl"/>
   <div>
     Attenzione: anche se le truffe di questo tipo avvengono comunemente su Discord, possono anche essere prevalenti su qualsiasi applicazione di chat dove si discute di criptovalute, comprese le e-mail.
   </div>
-</InfoBanner>
+</Alert>
 
 ### Truffa del token "Eth2" {#eth2-token-scam}
 
@@ -215,11 +216,12 @@ Una password forte rivelata in una violazione di dati non è più una password f
 
 ### Usa un gestore di password {#use-password-manager}
 
-<InfoBanner emoji=":bulb:">
+<Alert variant="update">
+<Emoji text=":bulb:" className="text-4xl"/>
   <div>
     L'utilizzo di un gestore di password consente di creare password forti e uniche e di ricordarle. <strong>Consigliamo vivamente</strong> di utilizzarne uno, molti di essi sono gratuiti.
   </div>
-</InfoBanner>
+</Alert>
 
 Ricordare password forti e univoche per ogni tuo conto, non è ideale. Un gestore di password offre un deposito sicuro e criptato per tutte le tue password a cui puoi accedere attraverso una password principale forte. Suggeriscono inoltre password forti quando ci si iscrive a un nuovo servizio, in modo da non doverne creare una propria. Molti gestori di password dicono anche se si è subita una violazione dei dati, permettendo di cambiare le password prima di qualsiasi attacco malevolo.
 
@@ -242,11 +244,12 @@ Talvolta, ti potrebbe essere richiesto di autenticare la tua identità tramite p
 
 L'utilizzo dell'**autenticazione a due fattori (A2F)** costituisce un ulteriore *fattore di sicurezza* per i tuoi conti online. La 2FA assicura che non basti semplicemente avere la tua password per accedere a un conto. Più comunemente, il secondo fattore è un codice casuale di 6 cifre, noto come **password monouso a tempo (TOTP)**, a cui si può accedere attraverso un'app di autenticazione come Google Authenticator o Authy. Esse funzionano come fattore "qualcosa che possiedi" perché il seme che genera il codice a tempo è memorizzato sul tuo dispositivo.
 
-<InfoBanner emoji=":lock:">
+<Alert variant="update">
+<Emoji text=":lock:" className="text-4xl"/>
   <div>
     Nota: l'utilizzo dell'A2F basata su SMS è soggetta a <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">SIM jacking</a> e non è sicura. Per la massima sicurezza, utilizza un servizio come <a href="https://mashable.com/article/how-to-set-up-google-authenticator">Google Authenticator</a> o <a href="https://authy.com/">Authy</a>.
   </div>
-</InfoBanner>
+</Alert>
 
 #### Chiavi di sicurezza {#security-keys}
 

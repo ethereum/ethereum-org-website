@@ -9,14 +9,19 @@ template: roadmap
 
 以太坊利用[二層網路](/layer-2/#rollups)（也稱「卷軸」）實現擴容，可批次處理交易並將輸出傳送至以太坊。 儘管成本已比以太坊主網低八倍，卷軸還有進一步最佳化的空間，進而幫助降低終端使用者的成本。 此外，卷軸還仰賴於一些中心化組件，隨著其不斷發展成熟，開發者可以移除這些組件。
 
-<InfoBanner mb={8} title="交易成本">
+<Alert variant="update" className="mb-8">
+<AlertContent>
+<AlertTitle className="mb-4">
+  交易成本
+</AlertTitle>
   <ul style={{ marginBottom: 0 }}>
     <li>現今卷軸的成本比以太坊一層網路便宜<strong>大約 5 - 20 倍</strong></li>
     <li>零知識卷軸很快會讓費用降低<strong>大約 40-100 倍</strong></li>
     <li>以太坊即將變更，會帶來<strong>大約 100-1000 倍</strong>的擴容</li>
     <li style={{ marginBottom: 0 }}>使用者應該能夠從<strong>成本低於 $0.001</strong> 的交易中受益</li>
   </ul>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## 降低資料使用費用 {#making-data-cheaper}
 

@@ -9,14 +9,19 @@ template: roadmap
 
 Ethereum wird mit Hilfe von [Layer 2s](/layer-2/#rollups) (auch bekannt als Rollups) skaliert, die Transaktionen zusammenfassen und den Output an Ethereum senden. Obwohl Rollups bis zu achtmal günstiger sind als das Ethereum Mainnet, kann man Rollups noch weiter optimieren, um die Kosten für die Endnutzer zu senken. Rollups stützen sich auch auf einige zentralisierte Komponenten, die mit zunehmender Reife der Rollups von den Entwicklern entfernt werden können.
 
-<InfoBanner mb={8} title="Transaktionskosten">
+<Alert variant="update" className="mb-8">
+<AlertContent>
+<AlertTitle className="mb-4">
+  Transaktionskosten
+</AlertTitle>
   <ul style={{ marginBottom: 0 }}>
     <li>Die Rollups von heute sind etwa <strong>5- bis 20-mal</strong> günstiger als die Ethereum-Layer-1</li>
     <li>ZK-Rollups werden bald die Gebühren um <strong>~40-100x</strong> senken</li>
     <li>Bevorstehende Änderungen an Ethereum werden eine weitere <strong>~100-1000-fache</strong> Skalierung ermöglichen</li>
     <li style={{ marginBottom: 0 }}>Benutzer könnten von Transaktionskosten <strong>unter $0.001 </strong>profitieren</li>
   </ul>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Daten günstiger machen {#making-data-cheaper}
 

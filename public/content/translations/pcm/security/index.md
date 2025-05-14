@@ -124,11 +124,12 @@ As one general rule, staff go neva komunikate wit yu thru private, shanels wey n
 - Neva allow anyone remote access into yor komputa
 - Neva komunikate one organisashon shanels for outside
 
-<InfoBanner emoji=":lock:">
+<Alert variant="update">
+<Emoji text=":lock:" className="text-4xl"/>
   <div>
     Dey kiaful: aldoh suppot-style skam dey always hapun on Discord, dem fit also plenti on any chat aplikashons wia crypto diskushon dey hapun, inkludin email.
   </div>
-</InfoBanner>
+</Alert>
 
 ### 'Eth2' token skam {#eth2-token-scam}
 
@@ -215,11 +216,12 @@ One strong passwods wey don show di data breach nor bi strong passwod again. Di 
 
 ### Make yu yus one passwod manaja {#use-password-manager}
 
-<InfoBanner emoji=":bulb:">
+<Alert variant="update">
+<Emoji text=":bulb:" className="text-4xl"/>
   <div>
     To dey yus passwod manaja dey take kia of kreatin strong, unik passwods and dey rimemba dem! We rekomend <strong>strongly</strong> to dey yus one, and plenti of dem dey free!
   </div>
-</InfoBanner>
+</Alert>
 
 Make yu dey rimember strong, unik passwods for efri akant yu get nor gud. Passwod manaja dey offa sekure, enkrypted atore for all yor passwods wey yu fit access thru one strong masta passwod. Dem also sujest strong passwods wen yu dey sign up for new savis, so yu nor nid to kreate yor own. Plenti passwod manajas go also tell yu if yu don enta data breach, to allow yu shanj di passwods bifor any bad attak.
 
@@ -242,11 +244,12 @@ Dem fit somtaims ask make yu autentikate yor identity thru unik prufs. Dem sabi 
 
 To dey yus **Two-Faktor Autentikashon (2FA)** dey provide one *sekurity faktor* join for yor online akants. 2FA dey make sure sey to get yor passwod nor dey enuf to access one akant. As im komon, di sekond faktor na randomaiz 6-digit kode, wey dem sabi as one **taim-base one-taim passwod (TOTP)**, wey yu fit access thru one autentikator app laik Google Autentikator abi Authy. Dis dey wok as one "somtin yu get" faktor bikos dem store di seed wey dey generate di taim kode on yor device.
 
-<InfoBanner emoji=":lock:">
+<Alert variant="update">
+<Emoji text=":lock:" className="text-4xl"/>
   <div>
     Note: To dey yus 2FA dipend on <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">SIM jacking</a> and im nor dey sekure. For di sekurity wey betta pass, yus one savis laik <a href="https://mashable.com/article/how-to-set-up-google-authenticator">Google Autentikator</a> abi <a href="https://authy.com/">Authy</a>.
   </div>
-</InfoBanner>
+</Alert>
 
 #### Sekurity keys {#security-keys}
 

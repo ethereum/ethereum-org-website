@@ -36,9 +36,14 @@ summaryPoint3: قدمت سلسلة المنارة منطق إجماع الآرا
 
 وقد جعل الانتقال إلى إثبات الحصة إثيريوم أكثر أمنًا ولا مركزية بالمقارنة مع إثبات العمل. وكلما زاد عدد الأشخاص الذين يشاركون في الشبكة، زادت اللامركزية وأصبحت الشبكة أكثر أمانًا ضد الهجمات.
 
-<InfoBanner emoji=":money_bag:">
+<Alert variant="update">
+<Emoji text=":money_bag:" className="text-4xl"/>
+<AlertContent>
+<AlertDescription>
   إذا كنت مهتمًا بأن تصبح مدققًا وتساعد على تأمين الإثيريوم، <a href="/staking/">فتعلم المزيد عن تجميد العملات</a>.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ### إعداد التقسيم {#setting-up-for-sharding}
 

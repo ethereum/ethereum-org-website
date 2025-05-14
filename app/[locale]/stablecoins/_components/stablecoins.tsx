@@ -403,7 +403,7 @@ const StablecoinsPage = ({ markets, marketsHasError }: Props) => {
               </Tooltip>
             </H3>
             <Alert className="mb-4" variant="warning">
-              <Emoji text="⚠️" className="text-8xl" />
+              <Emoji text="⚠️" className="text-4xl" />
               {t("page-stablecoins-algorithmic-disclaimer")}
             </Alert>
             <p className="mb-6">

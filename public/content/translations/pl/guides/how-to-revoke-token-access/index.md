@@ -47,12 +47,15 @@ Zalecamy odświeżenie narzędzia do unieważniania po kilku minutach i ponowne 
 
  <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<Emoji text=":eyes:" className="text-4xl"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Chcesz dowiedzieć się więcej?</div>
   <ButtonLink href="/guides/">
     Zobacz nasze inne przewodniki
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Często zadawane pytania
 

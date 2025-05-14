@@ -43,9 +43,9 @@ ARM 单板机是一种便宜、灵活的小型计算机。 它们价格低廉、
 
 Ethereum on Arm 相关文档解释了如何设置执行客户端*或*共识客户端，两个以太坊测试网（Kiln 和 Ropsten）除外。 这种可选性只有在以太坊从工作量证明过渡到权益证明（称为[合并](/roadmap/merge)）之前才有可能。
 
-<InfoBanner>
+<Alert variant="update">
 合并后，将无法单独运行执行客户端和共识客户端 — 它们必须成对运行。 因此，在本教程中，我们将在以太坊测试网 (Kiln) 上运行一对执行客户端和共识客户端。
-</InfoBanner>
+</Alert>
 
 ## Kiln 树莓派 4 映像 {#the-kiln-raspberry-pi-4-image}
 

@@ -122,11 +122,12 @@ Sebagai aturan umum, staf tidak akan pernah berkomunikasi dengan Anda melalui sa
 - Jangan pernah izinkan siapa pun mengakses komputer Anda dari jarak jauh
 - Jangan pernah berkomunikasi di luar kanal yang ditunjuk organisasi
 
-<InfoBanner emoji=":lock:">
+<Alert variant="update">
+<Emoji text=":lock:" className="text-4xl"/>
   <div>
     Hati-hati: meskipun penipuan gaya dukungan biasanya terjadi di Discord, penipuan ini juga dapat terjadi pada aplikasi obrolan tempat diskusi kripto berlangsung, termasuk email.
   </div>
-</InfoBanner>
+</Alert>
 
 ### Penipuan token 'Eth2' {#eth2-token-scam}
 
@@ -213,11 +214,12 @@ Kata sandi yang kuat yang telah terungkap dalam pelanggaran data tidak lagi meru
 
 ### Menggunakan pengelola kata sandi {#use-password-manager}
 
-<InfoBanner emoji=":bulb:">
+<Alert variant="update">
+<Emoji text=":bulb:" className="text-4xl"/>
   <div>
     Menggunakan pengelola kata sandi akan membantu Anda membuat kata sandi yang kuat dan unik serta mengingatnya! Kami <strong>sangat</strong> menyarankan untuk menggunakannya, dan sebagian besar dari mereka gratis!
   </div>
-</InfoBanner>
+</Alert>
 
 Mengingat kata sandi yang kuat dan unik untuk setiap akun tidaklah ideal. Pengatur kata sandi memberikan tempat yang terenkripsi dan aman untuk setiap kata sandi Anda. Mereka juga menyarankan kata sandi yang kuat saat mendaftar ke layanan baru, jadi Anda tidak perlu membuatnya sendiri. Banyak pengelola kata sandi akan memberitahukan Anda jika kata sandi Anda diretas, sehingga memberikan Anda kesemaptan untuk mengubah kata sandi Anda sebelum serangan yang berbahaya.
 
@@ -240,11 +242,12 @@ Anda mungkin terkadang diminta untuk mengautentikasi identitas melalui bukti uni
 
 Menggunakan **Autentikasi Dua Faktor (2FA)** memberikan *faktor keamanan* tambahan untuk akun online Anda. 2FA memastikan bahwa hanya memiliki kata sandi saja tidak cukup untuk mengakses akun. Umumnya, faktor autentikasi kedua adalah 6 digit kode yang dikenal sebagai **kata sandi satu kali berbais waktu (TOTP)**, yang Anda dapat akses dengan sebuah aplikasi autentikasi seperti Google Authenticator atau Authy. Ini berfungsi sebagai faktor "sesuatu yang Anda miliki" karena benih yang menghasilkan kode waktunya disimpan di perangkat Anda.
 
-<InfoBanner emoji=":lock:">
+<Alert variant="update">
+<Emoji text=":lock:" className="text-4xl"/>
   <div>
     Catatan: Menggunakan 2FA berbasis SMS rentan terhadap <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">SIM jacking</a> dan tidak aman. Untuk keamanan terbaik, gunakan layanan seperti <a href="https://mashable.com/article/how-to-set-up-google-authenticator">Google Authenticator</a> atau <a href="https://authy.com/">Authy</a>.
   </div>
-</InfoBanner>
+</Alert>
 
 #### Kunci keamanan {#security-keys}
 

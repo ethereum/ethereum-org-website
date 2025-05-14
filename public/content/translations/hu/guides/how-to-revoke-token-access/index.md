@@ -47,12 +47,15 @@ Javasoljuk, hogy néhány perc múlva frissítse a visszavonási eszközt, és n
 
  <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<Emoji text=":eyes:" className="text-4xl"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Szeretne többet megtudni?</div>
   <ButtonLink href="/guides/">
     Tekintse meg a további útmutatóinkat
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Gyakran ismételt kérdések
 
