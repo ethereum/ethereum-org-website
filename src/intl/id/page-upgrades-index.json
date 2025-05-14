@@ -97,7 +97,7 @@
   "page-upgrades-question-6-answer-5": "Anda juga dapat bergabung dalam diskusi tentang penelitian dan pengembangan Ethereum di ethresear.ch.",
   "page-upgrades-question-6-title": "Apa yang harus saya lakukan dengan dapp saya?",
   "page-upgrades-question-6-desc": "Penggabungan dirancang agar memiliki dampak minimal bagi pengembang dapp, meskipun ada beberapa perubahan kecil yang perlu dicatat.",
-  "page-upgrades-question-6-answer-1": "Para pengembang dapp yang sudah terbiasa dengan Ethereum sebelum terjadinya Penggabungan seharusnya menyadari beberapa perubahan. Perubahan-perubahan ini meliputi struktur dan waktu blok, beberapa perubahan opcode, sumber-sumber acak di dalam rantai blok, dan konsep finalitas jangka waktu.",
+  "page-upgrades-question-6-answer-1": "Para pengembang Dapp yang terbiasa dengan Ethereum pra-gabungan harus menyadari beberapa perubahan. Perubahan ini termasuk struktur dan pengaturan waktu blok, beberapa perubahan opcode, sumber keacakan onchain, dan konsep finalisasi jangka waktu.",
   "page-upgrades-question-6-answer-1-link": "Bagaimana Penggabungan berpengaruh terhadapan Lapisan Aplikasi Ethereum",
   "page-upgrades-question-6-answer-2": "Aplikasi hampir tidak terpengaruh secara keseluruhan.",
   "page-upgrades-question-7-desc": "Banyak tim berbeda dari seluruh komunitas sedang mengerjakan berbagai peningkatan Ethereum.",

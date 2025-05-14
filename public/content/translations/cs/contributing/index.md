@@ -25,7 +25,6 @@ Jsme přátelská komunita, která vám pomůže rozvíjet se a vzdělávat v ek
 - [Vytvářejte/upravujte obsah](/contributing/#how-to-update-content) – navrhněte nové stránky nebo upravte ty, které zde již jsou
 - [Přidejte komunitní zdroje](/contributing/content-resources/) – přidejte užitečný článek nebo zdroje na příslušnou stránku
 - [Navrhněte zdroj návrhu](/contributing/design/adding-design-resources/) – přidejte, aktualizujte a mažte užitečné zdroje designu
-- [Přidejte termín do glosáře](/contributing/adding-glossary-terms/) – pomozte nám nadále rozšiřovat [glosář Etherea](/glossary/)
 - [Kvízy](/contributing/quizzes/) – přidejte, aktualizujte a mažte ze sbírky kvízových otázek pro příslušnou stránku
 
 **Nápady na funkce**
@@ -90,7 +89,7 @@ V našem GitHub repozitáři máme nízké vstupní bariéry speciálně určen�
 
 Pokud bude váš příspěvek začleněn do ethereum.org, budete mít možnost získat speciální odznak na [Galxe](https://app.galxe.com/quest/ethereumorg). Onchain Achievement Token (OAT) je důkazem, že jste pomohli udělat ekosystém o něco úžasnějším.
 
-[Více o OATech](https://help.galxe.com/en/articles/7067290-galxe-oats-reward-and-celebrate-achievements)
+[Více o OATech](https://help.galxe.com/en/articles/9645630-create-quest-rewards#h_1c5d63ba03)
 
 ### Jak vyzvednout
 1. Připojte se k našemu [Discord serveru](https://discord.gg/ethereum-org).

@@ -97,7 +97,7 @@
   "page-upgrades-question-6-answer-5": "你也可以访问 ethresear.ch，参与以太坊研发相关讨论。",
   "page-upgrades-question-6-title": "我需要对我的去中心化应用程序做什么？",
   "page-upgrades-question-6-desc": "合并旨在对去中心化应用程序开发者产生最小的影响，便仍有一些细微变化值得注意。",
-  "page-upgrades-question-6-answer-1": "熟悉合并前以太坊的去中心化应用程序开发者应该注意到一些变化。这些变化包括区块结构和时序、一些操作码的变化，链上随机性的来源和时段最终确定的概念。",
+  "page-upgrades-question-6-answer-1": "熟悉合并前以太坊的去中心化应用程序开发者应该注意到一些变化。这些变化包括区块结构和时序、一些操作码、链上随机性的来源和时段最终确定性的概念。",
   "page-upgrades-question-6-answer-1-link": "合并如何影响以太坊的应用程序层",
   "page-upgrades-question-6-answer-2": "应用程序几乎完全未受影响。",
   "page-upgrades-question-7-desc": "社区中很多不同的团队都在为以太坊的各项升级而努力。",

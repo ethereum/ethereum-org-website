@@ -63,7 +63,7 @@ A calldata azokat a bájtokat jelenti, melyeket a tranzakció részeként külde
 
 Így lehet a legolcsóbban adatot tenni a blokkba állandó tárolásra. A bájtonkénti költsége 4 végrehajtási gáz (ha a bájt nulla) vagy 16 gáz (minden más értéknél). Ha az adat tömörítve van, ami egy bevett gyakorlat, akkor minden bájtérték ugyanolyan valószínű, így az átlagköltség kb. 15,95 gáz bájtonként.
 
-A jelen írás idején az ár 12 gwei/gáz és 2300 $/ETH, mely szerint a költség kb. 45 cent kilóbájtonként. Mivel az EIP-4844 előtt ez volt a legolcsóbb módszer, ezért a rollupok így tárolták a tranzakciós információkat, hogy azok elérhetők legyenek a [hiba kivizsgálásra](https://docs.optimism.io/stack/protocol/overview#fault-proofs), de nem kell azokat közvetlenül elérni a láncon.
+A jelen írás idején az ár 12 gwei/gáz és 2300 $/ETH, mely szerint a költség kb. 45 cent kilobájtonként. Mivel az EIP-4844 előtt ez volt a legolcsóbb módszer, ezért a rollupok így tárolták a tranzakciós információkat, hogy azok elérhetők legyenek a [hiba kivizsgálásra](https://docs.optimism.io/stack/protocol/overview#fault-proofs), de nem kell azokat közvetlenül elérni a láncon.
 
 A következőben láthatóak azok a címek, melyekre néhány ismert rollup posztolja a tranzakciókat.
 
