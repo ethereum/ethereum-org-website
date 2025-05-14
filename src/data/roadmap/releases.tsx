@@ -114,11 +114,14 @@ export const releasesData: Release[] = [
     releaseDate: "2025-05-07",
     content: (
       <div>
-        <p className="font-bold">Enhance EOA wallets with smart contract functionality</p>
+        <p className="font-bold">
+          Enhance EOA wallets with smart contract functionality
+        </p>
         <ul>
           <li>
             Users can set their address to be represented by a code of an
-            existing smart contract and gain benefits such as transaction batching, transaction fee sponsorship or better recovery mechanisms
+            existing smart contract and gain benefits such as transaction
+            batching, transaction fee sponsorship or better recovery mechanisms
           </li>
         </ul>
         <p className="font-bold">Increase the max effective balance</p>
