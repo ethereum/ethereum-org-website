@@ -229,6 +229,11 @@ export const useNav = () => {
                   description: t("nav-ai-agents-description"),
                   href: "/ai-agents/",
                 },
+                {
+                  label: t("prediction-markets"),
+                  description: t("nav-prediction-markets-description"),
+                  href: "/prediction-markets/",
+                },
               ],
             },
           ],
