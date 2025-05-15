@@ -127,9 +127,11 @@ As a general rule, staff will never communicate with you through private, unoffi
 
 <Alert variant="update">
 <Emoji text=":lock:" className="text-4xl"/>
-  <div>
+<AlertContent>
+<AlertDescription>
     Beware: although support-style scams commonly happen on Discord, they can also be prevalent on any chat applications where crypto discussion happens, including email.
-  </div>
+</AlertDescription>
+</AlertContent>
 </Alert>
 
 ### 'Eth2' token scam {#eth2-token-scam}
@@ -219,9 +221,11 @@ A strong password that has been revealed in a data breach is no longer a strong 
 
 <Alert variant="update">
 <Emoji text=":bulb:" className="text-4xl"/>
-  <div>
+<AlertContent>
+<AlertDescription>
     Using a password manager takes care of creating strong, unique passwords and remembering them! We <strong>strongly</strong> recommend using one, and most of them are free!
-  </div>
+</AlertDescription>
+</AlertContent>
 </Alert>
 
 Remembering strong, unique passwords for every account you have isn't ideal. A password manager offers a secure, encrypted store for all your passwords that you can access through one strong master password. They also suggest strong passwords when signing up for a new service, so you don't have to create your own. Many password managers will also tell you if you have been involved in a data breach, allowing you to change the passwords before any malicious attacks.
@@ -247,9 +251,11 @@ Using **Two-Factor Authentication (2FA)** provides an additional *security fa
 
 <Alert variant="update">
 <Emoji text=":lock:" className="text-4xl"/>
-  <div>
+<AlertContent>
+<AlertDescription>
     Note: Using SMS-based 2FA is susceptible to <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">SIM jacking</a> and is not secure. For the best security, use a service like <a href="https://mashable.com/article/how-to-set-up-google-authenticator">Google Authenticator</a> or <a href="https://authy.com/">Authy</a>.
-  </div>
+</AlertDescription>
+</AlertContent>
 </Alert>
 
 #### Security keys {#security-keys}

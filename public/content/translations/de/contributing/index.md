@@ -8,7 +8,7 @@ lang: de
 
 Die ethereum.org-Website, wie Ethereum im Großen und Ganzen, ist ein Open-Source-Projekt. Möchten Sie helfen, [den Zugang zu Ethereum zu verbessern](/about/), dann finden Sie hier Informationen, was Sie tun können.
 
-<Alert>
+<Alert variant="update">
 <Emoji text=":tada:" className="text-4xl"/>
 <AlertContent>
 <AlertDescription>

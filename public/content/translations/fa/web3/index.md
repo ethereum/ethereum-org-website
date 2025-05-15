@@ -65,7 +65,7 @@ lang: fa
 
 Web3 امکان مالکیت مستقیم را از طریق [توکن‌های غیرقابل معاوضه (NFTها)](/glossary/#nft) فراهم می کند. هیچ‌کس، حتی سازندگان بازی، قدرت سلب مالکیت شما را ندارند. و اگر بازی را متوقف کنید، می‌توانید آیتم‌های درون بازی خود را در بازارهای آزاد بفروشید یا معامله کنید و ارزش آن‌ها را بازپس بگیرید.
 
-<Alert>
+<Alert variant="update">
 <Emoji text=":eyes:" className="text-4xl"/>
 <AlertContent className="flex-row items-center justify-between">
   <div>درباره‌ی NFTها بیشتر بدانید</div>
@@ -93,7 +93,7 @@ DAOها از نظر فنی با عنوان [قراردادهای هوشمند](/
 
 با این حال، مردم، بسیاری از جوامع Web3 را به عنوان DAO تعریف می کنند. همه این جوامع، سطوح مختلفی از تمرکززدایی و اتوماسیون با کد دارند. در حال حاضر، ما در حال بررسی این هستیم که DAO چیست و چگونه ممکن است در آینده تکامل یابد.
 
-<Alert>
+<Alert variant="update">
 <Emoji text=":eyes:" className="text-4xl"/>
 <AlertContent className="flex-row items-center justify-between">
   <div>درباره DAO ها بیشتر بیاموزید</div>

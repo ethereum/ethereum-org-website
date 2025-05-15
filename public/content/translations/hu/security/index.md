@@ -126,9 +126,11 @@ Az interakciók többsége Discordon történik. A támogatást színlelő csal�
 
 <Alert variant="update">
 <Emoji text=":lock:" className="text-4xl"/>
-  <div>
+<AlertContent>
+<AlertDescription>
     Legyen tudatában: hogy a támogatást ajánló csalók gyakran a Discordon jelennek meg, de bármilyen kommunikációs formában ott lehetnek, legyen az chat vagy email.
-  </div>
+</AlertDescription>
+</AlertContent>
 </Alert>
 
 ### „ETH2” hamis token {#eth2-token-scam}
@@ -218,9 +220,11 @@ Egy erős jelszó, amely egy adatvédelmi incidens során nyilvánossá vált, m
 
 <Alert variant="update">
 <Emoji text=":bulb:" className="text-4xl"/>
-  <div>
+<AlertContent>
+<AlertDescription>
     A jelszókezelő erős, egyedi jelszavakat hoz létre és meg is jegyzi azokat! <strong>Erősen</strong> ajánljuk, hogy használjon ilyet, és a legtöbb ingyen van!
-  </div>
+</AlertDescription>
+</AlertContent>
 </Alert>
 
 Az erős, egyedi jelszavakat nem túl ideális megjegyezni az összes számlához. A jelszókezelő egy biztonságos, titkosított tárhelyet biztosít az összes jelszónak, amit egy erős mesterjelszóval tud elérni. Az új szolgáltatásokra való bejelentkezéseknél is erős jelszavakat ajánl, így Önnek nem kell kitalálnia azt. Számos jelszókezelő azt is megmondja, hogy Ön érintett-e adatszivárgásban, így lecserélheti a jelszavait, mielőtt támadás érné.
@@ -246,9 +250,11 @@ A **kétfaktoros hitelesítés (2FA)** használata további *biztonsági tén
 
 <Alert variant="update">
 <Emoji text=":lock:" className="text-4xl"/>
-  <div>
+<AlertContent>
+<AlertDescription>
     Megjegyzés: az SMS-alapú 2FA azonosítás ki van téve a <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">SIM jacking</a> támadásnak, ezért nem biztonságos. A legmagasabb fokú biztonság érdekében használjon olyan szolgáltatást, mint a <a href="https://mashable.com/article/how-to-set-up-google-authenticator">Google Authenticator </a>vagy az <a href="https://authy.com/">Authy</a>.
-  </div>
+</AlertDescription>
+</AlertContent>
 </Alert>
 
 #### Biztonsági kulcsok {#security-keys}

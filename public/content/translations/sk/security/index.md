@@ -124,9 +124,11 @@ Vo všeobecnosti, personál s vami nikdy nebude komunikovať prostredníctvom s�
 
 <Alert variant="update">
 <Emoji text=":lock:" className="text-4xl"/>
-  <div>
+<AlertContent>
+<AlertDescription>
     Dávajte si pozor: aj keď sa na Discorde bežne vyskytujú podvody v štýle zákazníckej podpory, môžu sa vyskytovať aj v akýchkoľvek chatovacích aplikáciách, kde prebieha kryptografická diskusia, vrátane e-mailu.
-  </div>
+</AlertDescription>
+</AlertContent>
 </Alert>
 
 ### Podvod s tokenom „Eth2“ {#eth2-token-scam}
@@ -216,9 +218,11 @@ Silné heslo, ktoré bolo odhalené pri úniku dát, už nie je silným heslom. 
 
 <Alert variant="update">
 <Emoji text=":bulb:" className="text-4xl"/>
-  <div>
+<AlertContent>
+<AlertDescription>
     Správca hesiel sa postará o vytvorenie silných a jedinečných hesiel a ich zapamätanie! <strong>Vrelo</strong> odporúčame nejaký používať, väčšina z nich je zadarmo!
-  </div>
+</AlertDescription>
+</AlertContent>
 </Alert>
 
 Pamätať si silné a jedinečné heslá pre každý účet nie je ideálne. Správca hesiel ponúka bezpečné šifrované úložisko všetkých vašich hesiel, ku ktorým máte prístup prostredníctvom jedného silného hlavného hesla. Pri registrácii do novej služby tiež odporúčajú silné heslá, aby ste si nemuseli vytvárať vlastné. Mnoho správcov hesiel vám tiež oznámi, či ste boli súčasťou úniku dát, a umožní vám zmeniť heslá skôr, než dôjde k škodlivým útokom.
@@ -244,9 +248,11 @@ Používanie **dvojfaktorového overenia (2FA) **je ďalším* bezpečnostným f
 
 <Alert variant="update">
 <Emoji text=":lock:" className="text-4xl"/>
-  <div>
+<AlertContent>
+<AlertDescription>
     Poznámka: Používanie 2FA pomocou SMS je náchylné na <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">odcudzenie SIM</a> a nie je bezpečné. Pre najlepšiu ochranu používajte službu ako <a href="https://mashable.com/article/how-to-set-up-google-authenticator">Google Authenticator</a> alebo <a href="https://authy.com/">Authy</a>.
-  </div>
+</AlertDescription>
+</AlertContent>
 </Alert>
 
 #### Bezpečnostné kľúče {#security-keys}

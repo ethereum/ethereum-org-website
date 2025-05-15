@@ -65,7 +65,7 @@ Tugann Web3 úinéireacht duit ar do shócmhainní digiteacha ar bhealach nach b
 
 Ligeann Web3 d’úinéireacht dhíreach trí [chomharthaí neamh‑idirmhalartacha (NFTanna)](/glossary/#nft). Níl an cumhacht ag aon duine, ní fiú ag cruthaitheoirí an chluiche, d'úinéireacht a bhaint. Agus, má stopann tú an imirt, is féidir leat do chuid earraí ion-chluiche a dhíol nó a thrádáil ar mhargaí oscailte agus a luach a fháil ar ais.
 
-<Alert>
+<Alert variant="update">
 <Emoji text=":eyes:" className="text-4xl"/>
 <AlertContent className="flex-row items-center justify-between">
   <div>Foghlaim tuilleadh faoi NFTanna</div>
@@ -93,7 +93,7 @@ Sainmhínítear DAOnna go teicniúil mar [chonarthaí cliste](/glossary/#smart-c
 
 Mar sin féin, sainíonn daoine go leor pobail Web3 mar DAOnna. Tá leibhéil dhifriúla díláraithe agus uathoibrithe de réir cód ag na pobail seo go léir. Faoi láthair, táimid ag fiosrú cad is DAOnna ann agus conas a d’fhéadfaidís éabhlóid a dhéanamh amach anseo.
 
-<Alert>
+<Alert variant="update">
 <Emoji text=":eyes:" className="text-4xl"/>
 <AlertContent className="flex-row items-center justify-between">
   <div>Foghlaim tuilleadh faoi DAOanna</div>

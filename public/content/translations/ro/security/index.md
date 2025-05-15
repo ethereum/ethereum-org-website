@@ -43,9 +43,11 @@ O parolă puternică nu oferă la fel de multă protecție dacă parola este dez
 
 <Alert variant="update">
 <Emoji text=":bulb:" className="text-4xl"/>
-  <div>
+<AlertContent>
+<AlertDescription>
     Folosirea unui gestionar de parole vă asigură că acesta se va ocupa de crearea de parole puternice, unice și de memorarea acestora! Vă recomandăm <strong>insistent</strong> să folosiți unul, iar majoritatea acestora sunt gratuite!
-  </div>
+</AlertDescription>
+</AlertContent>
 </Alert>
 
 Memorarea parolelor puternice și unice pentru fiecare cont nu este o situație ideală. Un gestionar de parole, oferă o stocare sigură și criptată pentru toate parolele dvs., pe care le puteți accesa printr-o singură parolă principală unică. De asemenea, acestea sugerează parole puternice atunci când vă înscrieți la un nou serviciu, deci nu trebuie să vă creați propriile parole. Mulți gestionari de parole vă vor spune și dacă ați fost implicat într-o breșă de securitate a datelor, permițându-vă să vă schimbați parolele înainte de orice atac rău intenționat.
@@ -71,7 +73,8 @@ Utilizarea **Autentificării cu doi factori (2FA)**  oferă un *factor de sec
 
 <Alert variant="update">
 <Emoji text=":lock:" className="text-4xl"/>
-  <div>
+<AlertContent>
+<AlertDescription>
     Observaţie: Utilizarea 2FA bazată pe SMS este vulnerabilă la 
     <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">
      piratarea SIM (SIM jacking)
@@ -81,7 +84,8 @@ Utilizarea **Autentificării cu doi factori (2FA)**  oferă un *factor de sec
       Google Authenticator
     </a>
      sau <a href="https://authy.com/">Authy</a>.
-  </div>
+</AlertDescription>
+</AlertContent>
 </Alert>
 
 #### Cheile de securitate {#security-keys}
@@ -208,9 +212,11 @@ Ca regulă generală, personalul nu va comunica niciodată cu dvs. prin canale p
 
 <Alert variant="update">
 <Emoji text=":lock:" className="text-4xl"/>
-  <div>
+<AlertContent>
+<AlertDescription>
     Atenție: deși escrocheriile prin pretinsă asistență au loc pe Discord, acestea pot predomina şi pe orice aplicație de chat pe care au loc discuții despre cripto, inclusiv pe e-mail.
-  </div>
+</AlertDescription>
+</AlertContent>
 </Alert>
 
 ### Înșelătorii prin phishing {#phishing-scams}

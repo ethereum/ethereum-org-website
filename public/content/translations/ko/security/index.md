@@ -43,9 +43,11 @@ lang: ko
 
 <Alert variant="update">
 <Emoji text=":bulb:" className="text-4xl"/>
-  <div>
+<AlertContent>
+<AlertDescription>
     비밀번호 관리 프로그램은 자동으로 강력하고 고유한 비밀번호를 생성하고 저장합니다. 해당하는 프로그램을 사용할 것을 <strong>강력하게</strong> 권하며, 대부분은 무료입니다!
-  </div>
+</AlertDescription>
+</AlertContent>
 </Alert>
 
 모든 계정마다 강력하고 유일한 비밀번호를 만들고 기억하는 것은 거의 불가능합니다. 비밀번호 관리 프로그램은 모든 비밀번호에 대해 하나의 강력한 마스터 비밀번호를 통해 액세스할 수 있는 안전하고 암호화된 저장소를 제공합니다. 해당 프로그램은 새로운 서비스에 가입할 때 강력한 비밀번호를 제안하므로, 직접 고민하여 만들지 않아도 됩니다. 다수의 비밀번호 관리 프로그램은 비밀번호가 유출되었을 경우에 알림을 보내며, 악의적인 공격이 발생하기 전에 비밀번호를 변경할 수 있게 합니다.
@@ -71,9 +73,11 @@ lang: ko
 
 <Alert variant="update">
 <Emoji text=":lock:" className="text-4xl"/>
-  <div>
+<AlertContent>
+<AlertDescription>
     참고: 문자(SMS) 기반 2FA는 <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">SIM 탈취</a> 공격에 노출되므로 보안에 취약합니다. 가장 안전한 방법은 <a href="https://mashable.com/article/how-to-set-up-google-authenticator">Google Authenticator</a> 또는 <a href="https://authy.com/">Authy</a>와 같은 서비스를 사용하는 것입니다.
-  </div>
+</AlertDescription>
+</AlertContent>
 </Alert>
 
 #### 보안 키 {#security-keys}
@@ -200,9 +204,11 @@ Chrome 확장 프로그램 또는 Firefox 애드온과 같은 브라우저 확�
 
 <Alert variant="update">
 <Emoji text=":lock:" className="text-4xl"/>
-  <div>
+<AlertContent>
+<AlertDescription>
     명심하세요: 대부분의 후원 사기는 디스코드에서 발생하지만, 이외에 이메일 등 암호화폐 관련 논의가 오가는 채팅 애플리케이션에서도 일어날 수 있습니다.
-  </div>
+</AlertDescription>
+</AlertContent>
 </Alert>
 
 ### 'Eth2' 토큰 사기 {#eth2-token-scam}

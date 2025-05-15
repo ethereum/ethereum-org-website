@@ -124,9 +124,11 @@ Zasadniczo pracownicy nigdy nie będą komunikować się z użytkownikiem za po�
 
 <Alert variant="update">
 <Emoji text=":lock:" className="text-4xl"/>
-  <div>
+<AlertContent>
+<AlertDescription>
     Uwaga: chociaż oszustwa w stylu wsparcia technicznego często zdarzają się na Discordzie, mogą one również występować w innych aplikacjach komunikacyjnych, w których odbywają się dyskusje na temat kryptowalut, w tym w wiadomościach e-mail.
-  </div>
+</AlertDescription>
+</AlertContent>
 </Alert>
 
 ### Oszustwo na token „Eth2” {#eth2-token-scam}
@@ -216,9 +218,11 @@ Silne hasło, które zostało ujawnione w wycieku danych nie jest już silnym ha
 
 <Alert variant="update">
 <Emoji text=":bulb:" className="text-4xl"/>
-  <div>
+<AlertContent>
+<AlertDescription>
     Korzystanie z menedżera haseł umożliwia tworzenie silnych, unikalnych haseł i ich zapamiętywanie! <strong>Zdecydowanie zalecamy</strong> korzystać z jednego z nich, a większość z nich jest bezpłatna!
-  </div>
+</AlertDescription>
+</AlertContent>
 </Alert>
 
 Zapamiętywanie silnych, unikalnych haseł do każdego posiadanego konta nie jest idealnym rozwiązaniem. Menedżer haseł oferuje bezpieczny, zaszyfrowany magazyn dla wszystkich Twoich haseł, do którego można uzyskać dostęp za pomocą jednego silnego hasła głównego. Sugerują również silne hasła podczas rejestracji w nowym serwisie, aby nie trzeba było tworzyć własnych. Wiele menedżerów haseł poinformuje cię również, gdy Twoje dane znajdą się w wycieku danych, umożliwiając zmianę haseł, zanim dojdzie do jakichkolwiek złośliwych ataków.
@@ -244,9 +248,11 @@ Stosowanie **uwierzytelnienia dwuskładnikowego (2FA)** wprowadza dodatkowy *
 
 <Alert variant="update">
 <Emoji text=":lock:" className="text-4xl"/>
-  <div>
+<AlertContent>
+<AlertDescription>
     Uwaga: korzystanie z 2FA opartego na wiadomościach SMS jest podatne na tzw. <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">SIM jacking</a> i nie jest bezpieczne. Dla najlepszej ochrony korzystaj z takich usług, jak <a href="https://mashable.com/article/how-to-set-up-google-authenticator">Google Authenticator</a> lub <a href="https://authy.com/">Authy</a>.
-  </div>
+</AlertDescription>
+</AlertContent>
 </Alert>
 
 #### Klucze bezpieczeństwa {#security-keys}

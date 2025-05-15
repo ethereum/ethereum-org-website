@@ -126,9 +126,11 @@ Sebagai peraturan umum, kakitangan tidak akan berkomunikasi dengan anda melalui 
 
 <Alert variant="update">
 <Emoji text=":lock:" className="text-4xl"/>
-  <div>
+<AlertContent>
+<AlertDescription>
     Berhati-hati: walaupun penipuan gaya sokongan biasanya berlaku pada Discord, mereka juga berleluasa di mana-mana aplikasi sembang di mana perbincangan kripto berlaku, termasuk e-mel.
-  </div>
+</AlertDescription>
+</AlertContent>
 </Alert>
 
 ### Penipuan token 'Eth2' {#eth2-token-scam}
@@ -218,9 +220,11 @@ Kata laluan yang kuat yang telah didedahkan dalam pelanggaran data bukan lagi ka
 
 <Alert variant="update">
 <Emoji text=":bulb:" className="text-4xl"/>
-  <div>
+<AlertContent>
+<AlertDescription>
     Menggunakan pengurus kata laluan memastikan ciptaan kata laluan yang kuat, unik dan diingati! Kami <strong>menggesa</strong> anda menggunakannya, dan kebanyakan daripadanya adalah percuma!
-  </div>
+</AlertDescription>
+</AlertContent>
 </Alert>
 
 Mengingati kata laluan yang kuat dan unik untuk setiap akaun yang anda miliki bukanlah sesuatu yang ideal. Pengurus kata laluan menawarkan penyimpanan yang selamat dan disulitkan untuk semua kata laluan anda, yang boleh anda akses melalui satu kata laluan utama yang kukuh. Ia juga mencadangkan kata laluan yang kukuh apabila mendaftar untuk perkhidmatan baru, jadi anda tidak perlu mencipta kata laluan sendiri. Banyak pengurus kata laluan juga akan memberitahu anda jika anda telah terlibat dalam pelanggaran data, membolehkan anda menukar kata laluan sebelum sebarang serangan berniat jahat.
@@ -246,9 +250,11 @@ Menggunakan **Pengesahan Dua Faktor (2FA)** menyediakan *faktor keselamatan tamb
 
 <Alert variant="update">
 <Emoji text=":lock:" className="text-4xl"/>
-  <div>
+<AlertContent>
+<AlertDescription>
     Nota: Menggunakan 2FA berasaskan SMS terdedah kepada <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">pencurian SIM</a> dan tidak selamat. Untuk keselamatan terbaik, gunakan perkhidmatan seperti <a href="https://mashable.com/article/how-to-set-up-google-authenticator">Google Authenticator</a> atau <a href="https://authy.com/">Authy</a>.
-  </div>
+</AlertDescription>
+</AlertContent>
 </Alert>
 
 #### Kunci keselamatan {#security-keys}

@@ -65,7 +65,7 @@ Web3は、前例のない方法でデジタル資産の所有権を提供しま�
 
 Web3では、 [ 非代替性トークン(NFT)](/glossary/#nft) を通じて直接所有することができます。 所有権は、誰からも、ゲームのクリエイターからも奪い取られることはありません。 また、ゲームをするのをやめても、ゲーム内のアイテムをオープンマーケットで売却・取引することで、その価値を回収することができます。
 
-<Alert>
+<Alert variant="update">
 <Emoji text=":eyes:" className="text-4xl"/>
 <AlertContent className="flex-row items-center justify-between">
   <div>非代替性トークン(NFT)について学ぶ</div>
@@ -93,7 +93,7 @@ Web3では、自分のデータを所有するだけでなく、企業の株式�
 
 しかし、多くのWeb3コミュニティが分散型自律組織(DAO)として定義されています。 これらのコミュニティはすべて、コードによる分散化と自動化のレベルが異なります。 現在、分散型自律組織(DAO)とは何か、今後どのような進化を遂げるかを模索が行われているところです。
 
-<Alert>
+<Alert variant="update">
 <Emoji text=":eyes:" className="text-4xl"/>
 <AlertContent className="flex-row items-center justify-between">
   <div>分散型自律組織(DAO)についてもっと知る</div>

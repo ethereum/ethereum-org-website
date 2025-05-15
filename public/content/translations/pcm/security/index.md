@@ -126,9 +126,11 @@ As one general rule, staff go neva komunikate wit yu thru private, shanels wey n
 
 <Alert variant="update">
 <Emoji text=":lock:" className="text-4xl"/>
-  <div>
+<AlertContent>
+<AlertDescription>
     Dey kiaful: aldoh suppot-style skam dey always hapun on Discord, dem fit also plenti on any chat aplikashons wia crypto diskushon dey hapun, inkludin email.
-  </div>
+</AlertDescription>
+</AlertContent>
 </Alert>
 
 ### 'Eth2' token skam {#eth2-token-scam}
@@ -218,9 +220,11 @@ One strong passwods wey don show di data breach nor bi strong passwod again. Di 
 
 <Alert variant="update">
 <Emoji text=":bulb:" className="text-4xl"/>
-  <div>
+<AlertContent>
+<AlertDescription>
     To dey yus passwod manaja dey take kia of kreatin strong, unik passwods and dey rimemba dem! We rekomend <strong>strongly</strong> to dey yus one, and plenti of dem dey free!
-  </div>
+</AlertDescription>
+</AlertContent>
 </Alert>
 
 Make yu dey rimember strong, unik passwods for efri akant yu get nor gud. Passwod manaja dey offa sekure, enkrypted atore for all yor passwods wey yu fit access thru one strong masta passwod. Dem also sujest strong passwods wen yu dey sign up for new savis, so yu nor nid to kreate yor own. Plenti passwod manajas go also tell yu if yu don enta data breach, to allow yu shanj di passwods bifor any bad attak.
@@ -246,9 +250,11 @@ To dey yus **Two-Faktor Autentikashon (2FA)** dey provide one *sekurity faktor* 
 
 <Alert variant="update">
 <Emoji text=":lock:" className="text-4xl"/>
-  <div>
+<AlertContent>
+<AlertDescription>
     Note: To dey yus 2FA dipend on <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">SIM jacking</a> and im nor dey sekure. For di sekurity wey betta pass, yus one savis laik <a href="https://mashable.com/article/how-to-set-up-google-authenticator">Google Autentikator</a> abi <a href="https://authy.com/">Authy</a>.
-  </div>
+</AlertDescription>
+</AlertContent>
 </Alert>
 
 #### Sekurity keys {#security-keys}

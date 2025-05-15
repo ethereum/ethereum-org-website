@@ -43,9 +43,11 @@ Una contrasenya forta no aporta molta més protecció si la contrasenya es revel
 
 <Alert variant="update">
 <Emoji text=":bulb:" className="text-4xl"/>
-  <div>
+<AlertContent>
+<AlertDescription>
     Un gestor de contrasenyes s'encarrega de crear contrasenyes úniques i fortes i se'n recordar d'elles! <strong>Recomanem</strong> encaridament utilitzar-ne un i la majoria són gratuïts!
-  </div>
+</AlertDescription>
+</AlertContent>
 </Alert>
 
 Recordar contrasenyes úniques i fortes per a cada compte que tingueu no és ideal. Un gestor de contrasenyes ofereix un emmagatzematge segur i encriptat per a totes les contrasenyes, a les quals podeu accedir amb una contrasenya mestra. També suggereixen una contrasenya forta quan us inscriviu a un nou servei, per tal que no hàgiu de crear-ne una. Molts gestors de contrasenyes també us diran si heu patit alguna violació de dades, la qual cosa us permetrà canviar les vostres contrasenyes abans de qualsevol atac maliciós.
@@ -71,7 +73,8 @@ La utilització de l'**autenticació de dos factors (2FA, per les seves sigles e
 
 <Alert variant="update">
 <Emoji text=":lock:" className="text-4xl"/>
-  <div>
+<AlertContent>
+<AlertDescription>
     Nota: L'ús d'un 2FA basat en SMS és susceptible de
 <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">
 pirateig de la tarjeta SIM
@@ -81,7 +84,8 @@ i no és segur. Per una millor seguretat, utilitzeu un servei com ara{" "}
       Google Authenticator
     </a>
      o <a href="https://authy.com/">Authy</a>.
-  </div>
+</AlertDescription>
+</AlertContent>
 </Alert>
 
 #### Claus de seguretat {#security-keys}
@@ -208,9 +212,11 @@ Com a norma general, el personal no es comunicarà mai a través de canals priva
 
 <Alert variant="update">
 <Emoji text=":lock:" className="text-4xl"/>
-  <div>
+<AlertContent>
+<AlertDescription>
     Atenció: encara que les estafes del tipus suport tinguin lloc generalment al Discord, també es poden donar en qualsevol aplicació de xat on hi hagi discussions sobre criptomonedes, incloent-hi el correu electrònic.
-  </div>
+</AlertDescription>
+</AlertContent>
 </Alert>
 
 ### Estafes de pesca de credencials {#phishing-scams}

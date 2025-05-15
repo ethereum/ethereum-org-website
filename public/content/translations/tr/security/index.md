@@ -124,9 +124,11 @@ Genel bir kural olarak, ekip sizinle asla özel ve resmi olmayan kanallar aracı
 
 <Alert variant="update">
 <Emoji text=":lock:" className="text-4xl"/>
-  <div>
+<AlertContent>
+<AlertDescription>
     Dikkat: Destek tarzı dolandırıcılıklar genellikle Discord'da gerçekleşse de, e-posta da dahil olmak üzere kripto tartışmalarının gerçekleştiği herhangi bir sohbet uygulamasında da yaygın olabilir.
-  </div>
+</AlertDescription>
+</AlertContent>
 </Alert>
 
 ### "Eth2" token dolandırıcılığı {#eth2-token-scam}
@@ -216,9 +218,11 @@ Bir veri sızıntısında açığa çıkmış olan güçlü bir parola, artık g
 
 <Alert variant="update">
 <Emoji text=":bulb:" className="text-4xl"/>
-  <div>
+<AlertContent>
+<AlertDescription>
     Bir şifre yöneticisi kullanmak; güçlü, benzersiz şifreler oluşturmak ve bunları hatırlama işini sizin için çözer! Bunlardan birini kullanmanızı <strong>şiddetle</strong> öneririz ve çoğu ücretsizdir!
-  </div>
+</AlertDescription>
+</AlertContent>
 </Alert>
 
 Sahip olduğunuz her hesap için güçlü, benzersiz şifreleri ezberlemeye çalışmak pek kolay değildir. Bir şifre yöneticisi, tek bir güçlü ana şifre aracılığıyla erişebileceğiniz tüm şifreleriniz için güvenli, şifrelenmiş bir depo sunar. Ayrıca, yeni bir hizmete kaydolurken güçlü şifreler önerirler, böylece kendinizinkini oluşturmak zorunda kalmazsınız. Birçok şifre yöneticisi, herhangi bir kötü niyetli saldırıdan önce şifreleri değiştirmenize izin vererek, bir veri ihlaline karışıp karışmadığınızı da size söyler.
@@ -244,9 +248,11 @@ Bazen sizden kimliğinizi benzersiz kanıtlarla doğrulamanız istenebilir. Bunl
 
 <Alert variant="update">
 <Emoji text=":lock:" className="text-4xl"/>
-  <div>
+<AlertContent>
+<AlertDescription>
     Not: SMS tabanlı 2FA kullanımı, <a href="https://www.vice.com/tr/makale/3kx4ej/sim-jacking-mobile-phone-fraud">SIM hırsızlığı</a> tehlikesine karşı açıktır ve güvenli değildir. En iyi güvenlik için <a href="https://mashable.com/article/how-to-set-up-google-authenticator">Google Authenticator</a> ya da <a href="https://authy.com/">Authy</a> gibi bir hizmet kullanın.
-  </div>
+</AlertDescription>
+</AlertContent>
 </Alert>
 
 #### Güvenlik anahtarları {#security-keys}

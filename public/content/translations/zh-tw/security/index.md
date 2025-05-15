@@ -126,9 +126,11 @@ lang: zh-tw
 
 <Alert variant="update">
 <Emoji text=":lock:" className="text-4xl"/>
-  <div>
+<AlertContent>
+<AlertDescription>
     請注意：支援服務型騙局常發生在 Discord 平台上，但在任何討論加密貨幣的聊天應用程式上也可能很盛行，包括電子郵件。
-  </div>
+</AlertDescription>
+</AlertContent>
 </Alert>
 
 ### 「以太坊 2」代幣騙局 {#eth2-token-scam}
@@ -218,9 +220,11 @@ _注意：有些衍生的代幣/行情指示器可能代表被質押的以太幣
 
 <Alert variant="update">
 <Emoji text=":bulb:" className="text-4xl"/>
-  <div>
+<AlertContent>
+<AlertDescription>
     使用密碼管理器能幫你建立獨特的強式密碼，並且記住密碼！ 我們<strong>非常</strong>建議使用密碼管理器，而且大多數免費！
-  </div>
+</AlertDescription>
+</AlertContent>
 </Alert>
 
 記住每個帳戶獨一的強式密碼，並不是最理想的方式。 密碼管理員為你所有的密碼提供一個安全的加密儲存位置，只要透過一個強效的主密碼就能取用。 註冊新的服務時，密碼管理器也會自行建議強式密碼，無需自己建立。 許多密碼管理器也會告知你是否涉入資料外洩事件，方便提早更換密碼，以免遭受惡意攻擊。
@@ -246,9 +250,11 @@ _注意：有些衍生的代幣/行情指示器可能代表被質押的以太幣
 
 <Alert variant="update">
 <Emoji text=":lock:" className="text-4xl"/>
-  <div>
+<AlertContent>
+<AlertDescription>
     注意：使用基於簡訊的雙因素驗證容易受到 <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">SIM 卡交換攻擊</a>，因此並不安全。 為了獲得最佳安全性，請使用 <a href="https://mashable.com/article/how-to-set-up-google-authenticator">Google Authenticator</a> 或 <a href="https://authy.com/">Authy</a> 等服務。
-  </div>
+</AlertDescription>
+</AlertContent>
 </Alert>
 
 #### 安全金鑰 {#security-keys}

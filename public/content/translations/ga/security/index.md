@@ -126,9 +126,11 @@ Mar riail ghinearálta, ní bheidh an fhoireann i dteagmháil leat trí bhealaí
 
 <Alert variant="update">
 <Emoji text=":lock:" className="text-4xl"/>
-  <div>
+<AlertContent>
+<AlertDescription>
     Tabhair faoi deara: cé go dtarlaíonn camscéimeanna ar stíl tacaíochta go coitianta ar Discord, is féidir leo a bheith coitianta freisin ar aon fheidhmchláir chomhrá ina dtarlaíonn plé crypto, lena n-áirítear ríomhphost.
-  </div>
+</AlertDescription>
+</AlertContent>
 </Alert>
 
 ### Scam chomhartha 'Eth2' {#eth2-token-scam}
@@ -218,9 +220,11 @@ Ní focal faire láidir a thuilleadh é pasfhocal láidir a nochtaíodh i sárú
 
 <Alert variant="update">
 <Emoji text=":bulb:" className="text-4xl"/>
-  <div>
+<AlertContent>
+<AlertDescription>
     Trí úsáid a bhaint as bainisteoir phasfhocail déantar cúram de phasfhocail láidre, uathúla a chruthú agus de chuimhneamh orthu! Molaimid go <strong>láidir</strong> ceann a úsáid, agus tá an chuid is mó acu saor in aisce!
-  </div>
+</AlertDescription>
+</AlertContent>
 </Alert>
 
 Ní rud iontach é pasfhocail láidre uathúla a mheabhrú do gach cuntas atá agat. Tairgeann bainisteoir pasfhocail stór slán, criptithe do gach pasfhocal ar féidir leat rochtain a fháil air trí mháistirfhocal láidir amháin. Molann siad freisin pasfhocail láidre agus tú ag clárú le haghaidh seirbhís nua, mar sin ní gá duit do chuid féin a chruthú. Inseoidh go leor bainisteoirí pasfhocal duit freisin má bhí baint agat le sárú sonraí, rud a ligeann duit na pasfhocail a athrú roimh aon ionsaithe mailíseach.
@@ -246,9 +250,11 @@ Má úsáidtear **Fíordheimhniú Dhá Fhachtóir (2FA)** soláthraítear *fac
 
 <Alert variant="update">
 <Emoji text=":lock:" className="text-4xl"/>
-  <div>
+<AlertContent>
+<AlertDescription>
     Nóta: Trí 2FA atá SMS-bhunaithe a úsáid beidh tú leochailleach roimh ionsaithe <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">Jacking SIM</a> agus níl sé slán. Ar mhaithe leis an tslándáil is fearr, úsáid seirbhís amhail <a href="https://mashable.com/article/how-to-set-up-google-authenticator">Google Authenticator</a> nó <a href="https://authy.com/">Authy</a>.
-  </div>
+</AlertDescription>
+</AlertContent>
 </Alert>
 
 #### Eochracha slándála {#security-keys}

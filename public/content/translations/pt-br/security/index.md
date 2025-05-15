@@ -126,9 +126,11 @@ Como regra geral, o pessoal de suporte nunca se comunicará com você por meio d
 
 <Alert variant="update">
 <Emoji text=":lock:" className="text-4xl"/>
-  <div>
+<AlertContent>
+<AlertDescription>
     Cuidado: embora fraudes ao estilo de suporte ocorram normalmente no Discord, elas também podem acontecer em qualquer aplicativo de bate-papo onde ocorram discussões sobre criptomoedas, incluindo e-mail.
-  </div>
+</AlertDescription>
+</AlertContent>
 </Alert>
 
 ### Golpe com o token 'Eth2' {#eth2-token-scam}
@@ -218,9 +220,11 @@ Uma senha forte que foi revelada em uma violação de dados não é mais uma sen
 
 <Alert variant="update">
 <Emoji text=":bulb:" className="text-4xl"/>
-  <div>
+<AlertContent>
+<AlertDescription>
     Usar um gerenciador de senhas faz com que ele crie senhas fortes, únicas e que sejam lembradas! Nós <strong>fortemente</strong> recomendamos usar um, e a maioria deles é gratuita!
-  </div>
+</AlertDescription>
+</AlertContent>
 </Alert>
 
 Lembrar de senhas fortes e exclusivas para cada conta que você possui não é o ideal. Um gerenciador de senhas oferece um cofre seguro e criptografado para todas as suas senhas que você pode acessar por meio de uma senha mestra forte. Eles também sugerem senhas fortes quando você se inscreve em um novo serviço, para que você não precise criar as suas próprias. Muitos gerenciadores de senhas também irão informar se você esteve envolvido em uma violação de dados, permitindo que você altere as senhas antes de qualquer ataque malicioso.
@@ -246,9 +250,11 @@ Usar a **Autenticação de dois fatores (2FA)** fornece um *fator de segurança*
 
 <Alert variant="update">
 <Emoji text=":lock:" className="text-4xl"/>
-  <div>
+<AlertContent>
+<AlertDescription>
     Observação: usar 2FA baseada em SMS é suscetível a <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">sequestro de SIM</a> e não é seguro. Para melhor segurança, use um serviço como o <a href="https://mashable.com/article/how-to-set-up-google-authenticator">Google Authenticator</a> ou o <a href="https://authy.com/">Authy</a>.
-  </div>
+</AlertDescription>
+</AlertContent>
 </Alert>
 
 #### Chaves de segurança {#security-keys}

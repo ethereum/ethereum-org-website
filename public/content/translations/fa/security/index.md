@@ -124,9 +124,11 @@ lang: fa
 
 <Alert variant="update">
 <Emoji text=":lock:" className="text-4xl"/>
-  <div>
+<AlertContent>
+<AlertDescription>
     آگاه باشید: درست است که کلاهبرداری‌های پشتیبانی عموماً در Discord رخ می‌دهند، اما امکان رخ دادن آن‌ها در هر برنامه‌ پیام‌رسان که در آن بحث و گفتگو با محوریت ارزهای رمزنگاری‌شده انجام می‌شود نیز وجود دارد؛ از جمله ایمیل.
-  </div>
+</AlertDescription>
+</AlertContent>
 </Alert>
 
 ### کلاهبرداری توکن 'Eth2' {#eth2-token-scam}
@@ -216,9 +218,11 @@ _توجه: توکن‌ها/تیکرهای مشتقی وجود دارند که م
 
 <Alert variant="update">
 <Emoji text=":bulb:" className="text-4xl"/>
-  <div>
+<AlertContent>
+<AlertDescription>
     استفاده از برنامه‌های مدیریت رمز می‌تواند خیال شما را از حیث ساخت رمزهای قوی و منحصربه‌فرد و به‌خاطرسپاری آن‌ها راحت کند! ما <strong>قویاً</strong> توصیه می‌کنیم از یک برنامه‌ مدیریت رمز استفاده کنید. بیشتر این برنامه‌ها رایگان هستند!
-  </div>
+</AlertDescription>
+</AlertContent>
 </Alert>
 
 به‌خاطرسپاری رمزهای قوی و منحصربه‌فرد برای هر حساب راهکار ایده‌آلی نیست. یک برنامه‌ مدیریت رمز، محلی امن و رمزنگاری‌شده برای تمام رمزها در اختیارتان قرار می‌دهد که می‌توانید از طریق یک رمز مادر به آن دسترسی داشته باشید. به‌علاوه، این برنامه‌ها هنگام ثبت‌نام در یک سرویس جدید به شما رمزهای قوی پیشنهاد می‌دهند تا لازم نباشد خودتان رمز بسازید. بسیاری از برنامه‌های مدیریت رمز همچنین به شما خواهند گفت که اطلاعاتتان در نشت داده ها درز کرده‌ است یا خیر. در این صورت می‌توانید پیش از هرگونه حمله‌ خرابکارانه رمزهایتان را عوض کنید.
@@ -244,9 +248,11 @@ _توجه: توکن‌ها/تیکرهای مشتقی وجود دارند که م
 
 <Alert variant="update">
 <Emoji text=":lock:" className="text-4xl"/>
-  <div>
+<AlertContent>
+<AlertDescription>
     توجه: استفاده از 2FA پیامکی، در معرض <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">استراق سمع سیم کارت</a> است و ایمن نیست. برای بهترین امنیت، از سرویسی مانند <a href="https://mashable.com/article/how-to-set-up-google-authenticator">Google Authenticator</a> یا <a href="https://authy.com/">Authy</a> استفاده کنید.
-  </div>
+</AlertDescription>
+</AlertContent>
 </Alert>
 
 #### کلید امنیتی {#security-keys}

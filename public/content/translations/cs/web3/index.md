@@ -61,7 +61,7 @@ Web3 vám umožňuje vlastnit vaše digitální aktiva dosud nevídaným způsob
 
 Web3 umožňuje přímé vlastnictví prostřednictvím [nezaměnitelných tokenů (NFT)](/glossary/#nft). Nikdo, ani tvůrci hry, nemají moc vás vlastnictví zbavit. A pokud přestanete hrát, můžete své herní předměty prodat nebo vyměnit na veřejně přístupných tržištíích a získat tak zpět prostředky, které jste vynaložili na jejich pořízení.
 
-<Alert>
+<Alert variant="update">
 <Emoji text=":eyes:" className="text-4xl"/>
 <AlertContent className="flex-row items-center justify-between">
   <div>Další informace o NFT</div>
@@ -89,7 +89,7 @@ DAO jsou technicky definovány jako [chytré kontrakty](/glossary/#smart-contrac
 
 Lidé definují spoustu Web3 komunit jako DAO. Všechny tyto komunity mají různé úrovně decentralizace a automatizace v závislosti na kódu. V současné době jsme ve fázi výzkumu, co DAO jsou a jak by se mohly v budoucnu vyvíjet.
 
-<Alert>
+<Alert variant="update">
 <Emoji text=":eyes:" className="text-4xl"/>
 <AlertContent className="flex-row items-center justify-between">
   <div>Více o DAO</div>

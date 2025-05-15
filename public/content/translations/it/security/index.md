@@ -126,9 +126,11 @@ Come regola generale, il personale non comunicherà mai con te attraverso canali
 
 <Alert variant="update">
 <Emoji text=":lock:" className="text-4xl"/>
-  <div>
+<AlertContent>
+<AlertDescription>
     Attenzione: anche se le truffe di questo tipo avvengono comunemente su Discord, possono anche essere prevalenti su qualsiasi applicazione di chat dove si discute di criptovalute, comprese le e-mail.
-  </div>
+</AlertDescription>
+</AlertContent>
 </Alert>
 
 ### Truffa del token "Eth2" {#eth2-token-scam}
@@ -218,9 +220,11 @@ Una password forte rivelata in una violazione di dati non è più una password f
 
 <Alert variant="update">
 <Emoji text=":bulb:" className="text-4xl"/>
-  <div>
+<AlertContent>
+<AlertDescription>
     L'utilizzo di un gestore di password consente di creare password forti e uniche e di ricordarle. <strong>Consigliamo vivamente</strong> di utilizzarne uno, molti di essi sono gratuiti.
-  </div>
+</AlertDescription>
+</AlertContent>
 </Alert>
 
 Ricordare password forti e univoche per ogni tuo conto, non è ideale. Un gestore di password offre un deposito sicuro e criptato per tutte le tue password a cui puoi accedere attraverso una password principale forte. Suggeriscono inoltre password forti quando ci si iscrive a un nuovo servizio, in modo da non doverne creare una propria. Molti gestori di password dicono anche se si è subita una violazione dei dati, permettendo di cambiare le password prima di qualsiasi attacco malevolo.
@@ -246,9 +250,11 @@ L'utilizzo dell'**autenticazione a due fattori (A2F)** costituisce un ulteriore 
 
 <Alert variant="update">
 <Emoji text=":lock:" className="text-4xl"/>
-  <div>
+<AlertContent>
+<AlertDescription>
     Nota: l'utilizzo dell'A2F basata su SMS è soggetta a <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">SIM jacking</a> e non è sicura. Per la massima sicurezza, utilizza un servizio come <a href="https://mashable.com/article/how-to-set-up-google-authenticator">Google Authenticator</a> o <a href="https://authy.com/">Authy</a>.
-  </div>
+</AlertDescription>
+</AlertContent>
 </Alert>
 
 #### Chiavi di sicurezza {#security-keys}

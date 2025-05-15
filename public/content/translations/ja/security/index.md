@@ -124,9 +124,11 @@ Twitter (Xとも知られています) のリンクプレビュー機能 (アン
 
 <Alert variant="update">
 <Emoji text=":lock:" className="text-4xl"/>
-  <div>
+<AlertContent>
+<AlertDescription>
     注: サポート詐欺はよくディスコードで起きていますが、暗号通貨に関する議論が行われているチャットアプリケーションや電子メールなどでも起きる可能性があります。
-  </div>
+</AlertDescription>
+</AlertContent>
 </Alert>
 
 ### 「ETH2」トークン詐欺 {#eth2-token-scam}
@@ -216,9 +218,11 @@ _注: ステークされたETHを表す、Rocket PoolのrETH、LidoのstETH、Co
 
 <Alert variant="update">
 <Emoji text=":bulb:" className="text-4xl"/>
-  <div>
+<AlertContent>
+<AlertDescription>
     パスワードマネージャーを利用すると、強力で一意のパスワードを作成し、それらを覚えておくことができます! パスワードマネージャーの利用を<strong>強く推奨します</strong>(多くは無料で利用可能)。
-  </div>
+</AlertDescription>
+</AlertContent>
 </Alert>
 
 すべてのアカウントで固有の強力なパスワードを覚えておくことは理想的とはいえません。 パスワードマネージャーは、すべてのパスワードを安全に暗号化して保存し、強力なマスターパスワードを利用してそれらにアクセスすることができます。 また、新しいサービスに登録する際、強力なパスワードを提案するため、自分自身でパスワードを作成する必要がなくなります。 また、情報漏洩が起こった場合は、多くのパスワードマネージャーには通知機能があるため、悪意のある攻撃の前にパスワードを変更することができます。
@@ -244,9 +248,11 @@ _注: ステークされたETHを表す、Rocket PoolのrETH、LidoのstETH、Co
 
 <Alert variant="update">
 <Emoji text=":lock:" className="text-4xl"/>
-  <div>
+<AlertContent>
+<AlertDescription>
     注意: SMSベースの二要素認証は、<a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud"> SIMジャッキング</a> のリスクがあり、安全ではありません。 最高のセキュリティを確保するために、<a href="https://mashable.com/article/how-to-set-up-google-authenticator">Google Authenticator</a> や<a href="https://authy.com/">Authy</a>のようなサービスを使用することをお勧めします。
-  </div>
+</AlertDescription>
+</AlertContent>
 </Alert>
 
 #### セキュリティキー {#security-keys}

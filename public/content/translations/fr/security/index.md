@@ -126,9 +126,11 @@ En principe, l'équipe d'Ethereum ne communiquera jamais avec vous par le biais 
 
 <Alert variant="update">
 <Emoji text=":lock:" className="text-4xl"/>
-  <div>
+<AlertContent>
+<AlertDescription>
     Attention : bien que les arnaques à l'assistance se produisent généralement sur Discord, elles peuvent aussi vous arriver sur toutes les plateformes où des discussions autour de la cryptomonnaie ont lieu, y compris par e-mail.
-  </div>
+</AlertDescription>
+</AlertContent>
 </Alert>
 
 ### Arnaque au jeton « Eth2 » {#eth2-token-scam}
@@ -218,9 +220,11 @@ Un mot de passe qui a été révélé par une faille de sécurité n'est plus un
 
 <Alert variant="update">
 <Emoji text=":bulb:" className="text-4xl"/>
-  <div>
+<AlertContent>
+<AlertDescription>
     Un gestionnaire de mots de passe prend soin de créer des mots de passe forts et uniques et de les retenir ! Nous <strong>recommandons fortement</strong> d'en utiliser un, et la plupart d'entre eux sont gratuits !
-  </div>
+</AlertDescription>
+</AlertContent>
 </Alert>
 
 Se souvenir de mots de passe forts et uniques pour chaque compte que vous avez n'est pas idéal. Un gestionnaire de mots de passe offre un stockage sécurisé et chiffré pour tous vos mots de passe auxquels vous pouvez accéder par un seul mot de passe maître fort. Ils suggèrent également des mots de passe forts lors de l'inscription à un nouveau service, de sorte que vous n'ayez pas à créer le vôtre. De nombreux gestionnaires de mots de passe vous diront également si vous avez été impliqué dans une violation de données, vous permettant de modifier les mots de passe avant toute attaque malveillante.
@@ -246,9 +250,11 @@ Utilisez **l'authentification à deux facteurs (2FA)** fournit un *facteur de s�
 
 <Alert variant="update">
 <Emoji text=":lock:" className="text-4xl"/>
-  <div>
+<AlertContent>
+<AlertDescription>
     Note : Utiliser l'envoi d'un code SMS comme 2FA n'est pas une méthode sûre à cause des possibilités de <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">piratage de la SIM </a>. Pour une sécurité maximale, utilisez un service comme <a href="https://mashable.com/article/how-to-set-up-google-authenticator"> Google Authenticator</a> ou <a href="https://authy.com/">Authy</a>.
-  </div>
+</AlertDescription>
+</AlertContent>
 </Alert>
 
 #### Clés de sécurité {#security-keys}

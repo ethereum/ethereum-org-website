@@ -126,9 +126,11 @@ Como norma general, el personal nunca se comunicará con usted a través de cana
 
 <Alert variant="update">
 <Emoji text=":lock:" className="text-4xl"/>
-  <div>
+<AlertContent>
+<AlertDescription>
     Atención: aunque las estafas del estilo del soporte técnico suelen ocurrir en Discord, también pueden prevalecer en cualquier aplicación de chat en la que se hable de criptomonedas, incluido el correo electrónico.
-  </div>
+</AlertDescription>
+</AlertContent>
 </Alert>
 
 ### Estafa del token Eth2 {#eth2-token-scam}
@@ -218,9 +220,11 @@ Una contraseña segura que ha sido revelada en una violación de datos deja de s
 
 <Alert variant="update">
 <Emoji text=":bulb:" className="text-4xl"/>
-  <div>
+<AlertContent>
+<AlertDescription>
     Un gestor de contraseñas se encarga de crear contraseñas seguras, únicas y recordarlas. Le <strong>aconsejamos vivamente</strong> que utilice uno, ¡y la mayoría de ellos son gratis!
-  </div>
+</AlertDescription>
+</AlertContent>
 </Alert>
 
 Recordar contraseñas seguras y únicas para cada cuenta que tenga no es la solución perfecta. Un gestor de contraseñas ofrece un espacio seguro y cifrado para todas sus contraseñas, a las que puede acceder a través de una contraseña maestra segura. También le sugiere contraseñas seguras al registrarse en un nuevo servicio, por lo que no tiene que crear sus propias contraseñas. Muchos administradores de contraseñas también le dirán si sus datos han sido filtrados, permitiéndole cambiar las contraseñas antes de cualquier ataque malicioso.
@@ -246,9 +250,11 @@ Usar un **Factor de Doble Autenticación (2FA)** provee un *factor de segurid
 
 <Alert variant="update">
 <Emoji text=":lock:" className="text-4xl"/>
-  <div>
+<AlertContent>
+<AlertDescription>
     Nota: El uso de 2FA basado en SMS es susceptible a <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">SIM jacking</a> y no es seguro. Para lograr mayor seguridad, utilice un servicio como <a href="https://mashable.com/article/how-to-set-up-google-authenticator">Google Authenticator</a> o <a href="https://authy.com/">Authy</a>.
-  </div>
+</AlertDescription>
+</AlertContent>
 </Alert>
 
 #### Herramientas de seguridad {#security-keys}

@@ -14,7 +14,7 @@ import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import Tooltip from "@/components/Tooltip"
 import Translation from "@/components/Translation"
-import { Alert } from "@/components/ui/alert"
+import { Alert, AlertContent, AlertDescription } from "@/components/ui/alert"
 import {
   Button,
   ButtonLink,
@@ -399,16 +399,18 @@ const DepositContractPage = () => {
                 </>
               )}
               <Alert variant="warning">
-                <Emoji text=":warning:" className="text-8xl" />
-                <div>
-                  {t("page-staking-deposit-contract-warning-2")}{" "}
-                  <InlineLink
-                    className="text-primary"
-                    href="https://launchpad.ethereum.org"
-                  >
-                    {t("page-staking-deposit-contract-launchpad-2")}
-                  </InlineLink>
-                </div>
+                <Emoji text=":warning:" className="text-4xl" />
+                <AlertContent>
+                  <AlertDescription>
+                    {t("page-staking-deposit-contract-warning-2")}{" "}
+                    <InlineLink
+                      className="text-primary"
+                      href="https://launchpad.ethereum.org"
+                    >
+                      {t("page-staking-deposit-contract-launchpad-2")}
+                    </InlineLink>
+                  </AlertDescription>
+                </AlertContent>
               </Alert>
             </div>
           </AddressCard>
