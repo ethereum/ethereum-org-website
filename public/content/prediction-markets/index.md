@@ -50,10 +50,15 @@ There are several Ethereum-based prediction markets available. These are some of
 
 <PredictionMarketLists />
 
-<InfoBanner isWarning emoji="💡">
+<Alert variant="warning">
+<Emoji text="💡" className="text-4xl"/>
+<AlertContent>
+<AlertDescription>
   <p className="mt-0"><strong>Stay mindful of the risks</strong></p>
   <p className="mt-2">Only bet what you can afford, and be aware of potential addictive behaviors.</p>
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## Challenges & Risks {#challenges-and-risks}
 
