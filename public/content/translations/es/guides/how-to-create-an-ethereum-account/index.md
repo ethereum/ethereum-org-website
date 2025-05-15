@@ -41,7 +41,7 @@ Algunas aplicaciones le pedirán que guarde una "frase de recuperación" secreta
 
 <div>
 <Alert variant="update">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
   <div><b>¿Billetera instalada?</b><br/> Aprenda a usarla.</div>
   <ButtonLink href="/guides/how-to-use-a-wallet">

@@ -55,7 +55,7 @@ NFTs ni a ń lò fún ọ̀pọ̀lọpọ̀ àwọn nǹkan, tó pẹ̀lú:
 Bóyá o jẹ́ oníṣẹ́ ọnà tó fẹ́ pín iṣẹ́ rẹ̀ nípa lílo NFTs, láì pàdánù àkóso àti fífi èrè rẹ rúbọ fún àwọn alárinà. O lè ṣẹ̀dá àdéhùn tuntun àti pàtó nọ́mbà àwọn NFT, àwọn àbùdá wọn àti ọ̀nà àsopọ̀ sí díẹ̀ nínú àwọn iṣẹ́ ọ̀nà pàtó. Gẹ́gẹ́ bíi oníṣẹ́ ọnà, **o lè ṣètò sínú àdéhùn ọlọ́gbọ́n àwọn owó-orí** tó yẹ kí o san (fún àpẹẹrẹ gbígbé 5% ti owó títà fún oní àdéhùn ní gbogbo ìgbà tí a bá gbé NFT kan). O tún lè fìdí rẹ múlẹ̀ pé o sẹ̀dá NFTs náà nítorí pé o ni [wọ́lẹ́ẹ́tì](/glossary/#wallet) tó mú àdéhùn náà ṣiṣẹ́. Àwọn oníbàárà rẹ lè fi hàn pé àwọn ní **ojúlówó NFT** kan láti inú àkójọpọ̀ rẹ nítorí pé [àdírẹ́sì](/glossary/#address) wọ́lẹ́ẹ́tì wọn ní nǹkan ṣe pẹ̀lú àmì kan nínú àdéhùn ọlọ́gbọ́n rẹ. Wọ́n lè lò ó káàkiri àyíká Ethereum, ní ìdánilójú nínú ojúlówó rẹ̀.
 
 <Alert variant="update" className="mt-8">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>Ṣàwárí, rà tàbí ṣẹ̀dá iṣẹ́ ọnà NFT tìrẹ / àwọn ìkójọpọ̀...</div>
   <ButtonLink href="/dapps/?category=collectibles#explore">

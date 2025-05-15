@@ -56,7 +56,7 @@ Les NFT sont utilisés pour de nombreuses choses, notamment :
 Vous êtes peut-être un artiste qui souhaite partager ses œuvres à l'aide de NFT, sans en perdre le contrôle et sans sacrifier ses bénéfices à des intermédiaires. Vous pouvez créer un nouveau contrat et spécifier le nombre de NFT, leurs propriétés et un lien vers une œuvre d'art spécifique. En tant qu'artiste, **vous pouvez programmer dans le contrat intelligent les redevances** qui doivent vous être versées (par exemple transférer 5 % du prix de vente au détenteur du contrat chaque fois qu'un NFT est transféré). Vous pouvez également toujours prouver que vous êtes le créateur des NFT car vous détenez le [portefeuille](/glossary/#wallet) qui a déployé le contrat. Vos acheteurs peuvent facilement prouver qu'ils possèdent un **authentique NFT** de votre collection car leur [adresse](/glossary/#address) de portefeuille est associée à un jeton dans votre contrat intelligent. Ils peuvent l'utiliser dans l'écosystème Ethereum, sûrs de son authenticité.
 
 <Alert variant="update" className="mt-8">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>Explorez, achetez ou créez vos propres collections NFT...</div>
   <ButtonLink href="/dapps/?category=collectibles#explore">

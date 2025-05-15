@@ -62,7 +62,7 @@ Web3 cung cấp cho bạn sở hữu các tài sản kỹ thuật số. Giả s�
 Web3 cho phép quyền sở hữu trực tiếp thông qua các [NFT (token không thể thay thế)](/glossary/#nft). Kể cả nhà phát hành trò chơi cũng không thể tước đi quyền sở hữu của bạn. Và nếu bạn ngừng chơi, bạn có thể bán hoặc trao đổi các vật phẩm được Nft hoá để thu lại giá trị.
 
 <Alert variant="update">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row items-center justify-between">
   <div>Tìm hiểu thêm về NFT</div>
   <ButtonLink href="/nft/">
@@ -90,7 +90,7 @@ Về mặt kỹ thuật, DAO được định nghĩa là các hợp đồng thô
 Tuy nhiên, mọi người định nghĩa nhiều cộng đồng Web3 là DAO. Các cộng đồng này đều có các mức độ phân quyền và tự động hóa khác nhau theo mã. Hiện tại, chúng tôi đang khám phá các DAO là gì và chúng có thể phát triển như thế nào trong tương lai.
 
 <Alert variant="update">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row items-center justify-between">
   <div>Tìm hiểu thêm về DAOs</div>
   <ButtonLink href="/dao/">

@@ -7,7 +7,7 @@ lang: el
 Το δίκτυο Ethereum ξεκίνησε χρησιμοποιώντας έναν μηχανισμό συναίνεσης που περιλάμβανε την **[Απόδειξη εργασίας (PoW)](/developers/docs/consensus-mechanisms/pow)**. Αυτό επέτρεψε στους κόμβους του δικτύου Ethereum να συμφωνήσουν για την κατάσταση όλων των πληροφοριών που καταγράφονται στο Ethereum blockchain και απέτρεψε ορισμένα είδη οικονομικών επιθέσεων. Ωστόσο, το Ethereum απενεργοποίησε την απόδειξη εργασίας το 2022 και άρχισε να χρησιμοποιεί την [απόδειξη συμμετοχής](/developers/docs/consensus-mechanisms/pos).
 
 <Alert variant="update">
-<Emoji text=":wave:" className="text-4xl"/>
+<AlertEmoji text=":wave:"/>
 <AlertContent>
 <AlertDescription>
     Η απόδειξη εργασίας έχει πλέον καταργηθεί. Το Ethereum δε χρησιμοποιεί πλέον την απόδειξη εργασίας ως μέρος του μηχανισμού συναίνεσής του. Αντίθετα, χρησιμοποιεί την απόδειξη συμμετοχής. Διαβάστε περισσότερα για την <a href="/developers/docs/consensus-mechanisms/pos/">απόδειξη συμμετοχής</a> και την <a href="/staking/">αποθήκευση κεφαλαίου</a>.

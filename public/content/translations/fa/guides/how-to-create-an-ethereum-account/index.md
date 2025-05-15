@@ -41,7 +41,7 @@ lang: fa
  <br />
 
 <Alert variant="update">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
   <div>می‌خواهید بیشتر بدانید؟</div>
   <ButtonLink href="/guides/">

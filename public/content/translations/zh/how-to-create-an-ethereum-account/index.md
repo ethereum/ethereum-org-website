@@ -41,7 +41,7 @@ lang: zh
 
 <div>
 <Alert variant="update">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
   <div><b>已安装钱包？</b><br/>了解如何使用它。</div>
   <ButtonLink href="/guides/how-to-use-a-wallet">

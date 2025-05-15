@@ -41,7 +41,7 @@ Sommige apps vragen je om een geheime "herstelzin" op te slaan (soms een "zaadzi
 
 <div>
 <Alert variant="update">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
   <div><b>Portemonnee geïnstalleerd? </b><br/>Leer hoe je deze moet gebruiken.</div>
   <ButtonLink href="/guides/how-to-use-a-wallet">

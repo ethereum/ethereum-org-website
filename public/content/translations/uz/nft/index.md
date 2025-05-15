@@ -55,7 +55,7 @@ NFT ko‘p narsalar uchun ishlatiladi, jumladan:
 Ehtimol, siz o‘z ijodingizda nazoratni yo‘qotmasdan va daromadingizni vositachilarga berib yubormasdan, NFTʼlar orqali ulashishni istaydigan san’atkordirsiz. Siz yangi shartnoma yaratib, NFTlar miqdorini, ularning xususiyatlarini va muayyan san’at asariga bo‘lgan havolani belgilashingiz mumkin. Sanʼatkor sifatida **siz aqlli shartnomaga o‘zingizga to‘lanishi kerak bo‘lgan royaltilarni dasturlashtirishingiz mumkin** (masalan, har safar NFT boshqa shaxsga o‘tkazilganda, sotuv narxining 5 foizini shartnoma egasiga o‘tkazish). Siz har doim NFTʼlarni yaratganingizni isbotlay olasiz, chunki shartnomani joylashtirgan [hamyon](/glossary/#wallet) sizning ixtiyoringizda. Xaridorlaringiz kolleksiyangizdan **haqiqiy NFTʼga** egalik qilishlarini osongina isbotlay olishlari mumkin, chunki ularning hamyon [manzili](/glossary/#address) aqlli shartnomaningizdagi token bilan bog‘langan. Ular Ethereum ekotizimi bo‘ylab uning haqiqiyligiga to‘la ishonch bilan foydalana oladi.
 
 <Alert variant="update" className="mt-8">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>NFT san’at asarlari va kolleksiyalarini o‘rganing, sotib oling yoki o‘zingiznikini yarating...</div>
   <ButtonLink href="/dapps/?category=collectibles#explore">

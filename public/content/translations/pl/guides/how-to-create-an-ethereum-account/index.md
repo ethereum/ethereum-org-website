@@ -41,7 +41,7 @@ Niektóre aplikacje poproszą o zapisanie tajnej „frazy odzyskiwania” (czasa
 
 <div>
 <Alert variant="update">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
   <div><b>Portfel już zainstalowany?</b><br/>Naucz się z niego korzystać.</div>
   <ButtonLink href="/guides/how-to-use-a-wallet">

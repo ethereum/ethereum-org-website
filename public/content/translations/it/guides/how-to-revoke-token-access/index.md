@@ -48,7 +48,7 @@ Ti consigliamo di ricaricare lo strumento di revoca dopo qualche minuto e di ric
  <br />
 
 <Alert variant="update">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>Vuoi scoprire di più?</div>
   <ButtonLink href="/guides/">

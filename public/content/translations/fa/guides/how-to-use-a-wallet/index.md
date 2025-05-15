@@ -63,7 +63,7 @@ lang: fa
 6. همین! استفاده از اپلیکیشن را شروع کنید. در [صفحه برنامه های غیرمتمرکز](/dapps/#explore) می توانید پروژه های جالبی را پیدا کنید. <br />
 
 <Alert variant="update">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>می‌خواهید بیشتر بدانید؟</div>
   <ButtonLink href="/guides/">

@@ -50,7 +50,7 @@ Riceverai automaticamente i token scambiati nel tuo portafoglio, una volta elabo
 <br />
 
 <Alert variant="update">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>Vuoi scoprire di più?</div>
   <ButtonLink href="/guides/">

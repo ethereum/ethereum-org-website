@@ -48,7 +48,7 @@ Anyị na-adụ ọdụ ka i megharịa akụrụngwa i ji eme nkagbu mgbe nkeji
  <br />
 
 <Alert variant="update">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>Chọrọ ịmụtakwu?</div>
   <ButtonLink href="/guides/">

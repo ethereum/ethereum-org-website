@@ -44,7 +44,7 @@ Avant la mise à niveau de Shanghai/Capella, vous ne pouviez pas utiliser l'ETH 
 Fournir une adresse de retrait est une étape requise pour tout compte de validateur avant d'être admissible à un retrait d'ETH sur son solde.
 
 <Alert variant="warning">
-<Emoji text="⚠️" className="text-4xl"/>
+<AlertEmoji text="⚠️"/>
 <AlertContent>
 <AlertDescription>
   <strong>Chaque compte de validateur ne peut se voir attribué qu'une seule adresse de retrait.</strong> Une fois qu'une adresse est choisie et soumise à la couche de consensus, elle ne peut pas être annulée ou modifiée à nouveau. Vérifiez la propriété et l'exactitude de l'adresse fournie avant de la soumettre.
@@ -88,7 +88,7 @@ Consultez cette explication de Finematics sur les retraits de staking d'Ethereum
 Lorsqu'un validateur doit proposer le bloc suivant, il est tenu de constituer une file d'attente de retraits, pouvant aller jusqu'à 16 retraits éligibles. Pour ce faire, on commence par l'index 0 du validateur, on détermine s'il existe un retrait éligible pour ce compte selon les règles du protocole et on l'ajoute à la file d'attente si tel est le cas. Le validateur configuré pour proposer le bloc suivant reprendra là où le précédent s'est arrêté, progressant dans l'ordre indéfiniment.
 
 <Alert variant="update">
-<Emoji text="🕛" className="text-4xl"/>
+<AlertEmoji text="🕛"/>
 <AlertContent>
 <AlertDescription>
 Pensez à une horloge analogique. L'aiguille de l’horloge pointe vers l’heure, progresse dans une direction, ne saute pas d’heures, et finit par revenir au début après que le dernier nombre est atteint.<br/><br/>

@@ -44,7 +44,7 @@ summaryPoints:
 잔액에서 ETH를 인출할 수 있으려면 검증자 계정에 대한 출금 주소를 제공해야 합니다.
 
 <Alert variant="warning">
-<Emoji text="⚠️" className="text-4xl"/>
+<AlertEmoji text="⚠️"/>
 <AlertContent>
 <AlertDescription>
   <strong>각 검증자 계정은 단 한 번, 한 개의 출금 주소만 할당받을 수 있습니다.</strong> 주소를 선택하고 합의 계층에 제출하면 취소하거나 다시 변경할 수 없습니다. 제출하기 전에 제공된 주소의 소유권과 정확성을 다시 확인하십시오.
@@ -88,7 +88,7 @@ Finematics 제공 이더리움 스테이킹 출금에 대한 다음 설명을 �
 검증자가 다음 블록을 제안할 예정이면 최대 16개의 적합한 출금으로 구성된 출금 대기열을 구축해야 합니다. 이 작업은 원래 검증자 인덱스 0부터 시작하여 프로토콜 규칙에 따라 이 계정에 대한 적합한 출금이 있는지 확인한 후 대기열에 추가합니다. 다음 블록을 제안하도록 설정된 검증자는 마지막 블록이 중단된 부분부터 무기한 순서대로 진행합니다.
 
 <Alert variant="update">
-<Emoji text="🕛" className="text-4xl"/>
+<AlertEmoji text="🕛"/>
 <AlertContent>
 <AlertDescription>
 이는 아날로그 시계와 유사합니다. 시계의 시침은 시간을 가리키고, 한 방향으로 진행하며, 어떤 시간도 거르지 않고, 마지막 시간에 도달하면 다시 처음으로 돌아갑니다.<br/><br/>

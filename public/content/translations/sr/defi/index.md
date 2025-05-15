@@ -64,7 +64,7 @@ Ethereum počiva na tome. Kao i Bitcoin, pravila se ne mogu promeniti za vas i s
 Ovo zvuči čudno… „Zašto bih želeo/la da programiram svoj novac?” Međutim, to je samo osnovna karakteristika tokena u mreži Ethereum. Svako može da programira logiku u plaćanja. Tako da vi možete dobijete kontrolu i sigurnost koju ima Bitcoin, zajedno sa uslugama koje pružaju finansijske institucije. To omogućava da radite stvari sa kriptovalutama koje ne možete da radite sa valutom Bitcoin, npr. da dajete pozajmice ili pozajmljujete, zakazujete plaćanja, investirate u indeksne fondove i još mnogo toga.
 
 <Alert variant="update">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>Istražite i isprobajte naše predloge za aplikacije decentralizovanih finansija ako ste novi u mreži Ethereum.</div>
   <ButtonLink href="/dapps/?category=finance#explore">

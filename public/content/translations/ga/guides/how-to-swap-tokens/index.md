@@ -50,7 +50,7 @@ Gheobhaidh tú na comharthaí malartaithe i do sparán go huathoibríoch nuair a
 <br />
 
 <Alert variant="update">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>Ar mhaith leat níos mó a fhoghlaim?</div>
   <ButtonLink href="/guides/">

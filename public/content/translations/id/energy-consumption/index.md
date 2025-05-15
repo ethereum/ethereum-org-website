@@ -62,7 +62,7 @@ Meskipun konsumsi energi Ethereum sangat rendah, ada juga komunitas [**keuangan 
 Platform pendanaan barang publik asli Web3 seperti [Gitcoin](https://gitcoin.co) menjalankan putaran iklim untuk menstimulasi pembangunan yang sadar lingkungan pada lapisan aplikasi Ethereum. Melalui pengembangan inisiatif-inisiatif ini (dan yang lainnya, misalnya [DeSci](/desci/)), Ethereum menjadi teknologi yang positif bagi lingkungan dan sosial.
 
 <Alert variant="update">
-<Emoji text=":evergreen_tree:" className="text-4xl"/>
+<AlertEmoji text=":evergreen_tree:" />
 <AlertContent>
 <AlertDescription>
   Jika menurut Anda halaman ini dapat dibuat lebih akurat, silakan ajukan masalah atau PR. Statistik di halaman ini adalah perkiraan berdasarkan data yang tersedia untuk umum - statistik ini tidak mewakili pernyataan atau janji resmi dari tim ethereum.org, atau Ethereum Foundation.

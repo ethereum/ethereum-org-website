@@ -62,7 +62,7 @@ Terwijl het energieverbruik van Ethereum zeer laag is, is er ook een substantië
 Web3-financieringsplatforms voor eigen publieke goederen zoals [Gitcoin](https://gitcoin.co) voeren klimaatrondes uit om milieubewust bouwen op de toepassingslaag van Ethereum te stimuleren. Door de ontwikkeling van deze initiatieven (en andere, bijv. [DeSci](/desci/)) wordt Ethereum een ecologisch en sociaal netto positieve technologie.
 
 <Alert variant="update">
-<Emoji text=":evergreen_tree:" className="text-4xl"/>
+<AlertEmoji text=":evergreen_tree:" />
 <AlertContent>
 <AlertDescription>
   Als je denkt dat deze pagina nauwkeuriger kan worden gemaakt, meld dan een probleem of open een PR. De statistieken op deze pagina zijn schattingen gebaseerd op openbaar beschikbare gegevens - ze vertegenwoordigen geen officiële verklaringen of beloftes van het ethereum.org team of de Ethereum Foundation.

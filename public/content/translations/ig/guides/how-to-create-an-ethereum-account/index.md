@@ -41,7 +41,7 @@ Ozugbo i chekwachara mkpụrụ nkebi ahịrịokwu gị, ị ga-ahụ dashbọ�
  <br />
 
 <Alert variant="update">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
   <div>Chọrọ ịmụtakwu?</div>
   <ButtonLink href="/guides/">

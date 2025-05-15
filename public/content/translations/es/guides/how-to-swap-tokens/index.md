@@ -50,7 +50,7 @@ Recibirá automáticamente los tokens intercambiados en su billetera una vez que
 <br />
 
 <Alert variant="update">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>¿Quiere saber más?</div>
   <ButtonLink href="/guides/">

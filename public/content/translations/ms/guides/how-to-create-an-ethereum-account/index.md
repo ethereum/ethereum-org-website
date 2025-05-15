@@ -41,7 +41,7 @@ Setelah anda menyimpan frasa benih anda, anda sepatutnya melihat papan pemuka do
  <br />
 
 <Alert variant="update">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
   <div>Mahu belajar lebih lanjut?</div>
   <ButtonLink href="/guides/">

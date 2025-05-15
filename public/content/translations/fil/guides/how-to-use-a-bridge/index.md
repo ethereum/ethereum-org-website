@@ -53,7 +53,7 @@ Maaari kang gumamit ng [chainlist.org](http://chainlist.org) upang makita ang de
 <br />
 
 <Alert variant="update">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>Gusto mong magbasa pa?</div>
   <ButtonLink href="/guides/">

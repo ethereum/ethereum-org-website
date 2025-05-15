@@ -64,7 +64,7 @@ Ethereum ita ma ta ɗaura ne akan wannan. Kamar dai Bitcoin, dokokin ba za su ca
 Wannan kun ji shi wani iri... ''Mesa zan so na tsara kuɗina''? Koda yake, wannan ya fi asalin yanayin siffar kuɗi ne akan Ethereum. Kowa zai iya tsara fikira har zuwa biyan kuɗi. Kuna iya samun damar sarrafawa da ma tsaro na Bitcoin da ke cakuɗe da sabis da kuka samar a cibiyar hada-hadar kuɗaɗe. Wannan na ba ku damar yin abubuwa da kuɗin kiripto da baza ku iya yi ba tare da Bitcoin kamar dai ba da aro da bashi, tsara jadawalin biyan kuɗi, saka hannun jarin kuɗi da ma sauran su.
 
 <Alert variant="update">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>Gano shawarwari na amfani da DeFi don gwadawa idan ku sabbi ne a Ethereum.</div>
   <ButtonLink href="/dapps/?category=finance#explore">

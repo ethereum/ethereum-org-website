@@ -62,7 +62,7 @@ Ethereum'un enerji tüketiminin aşırı düşük olduğu esnada, aynı zamanda 
 [Gitcoin](https://gitcoin.co) gibi Web3'ye ait kamu malı fonlama platformları Ethereum'un uygulama katmanı üzerinde çevresel olarak bilinçli inşayı teşvik etmek için iklim rauntları oluştururlar. Bu inisiyatiflerin gelişimi aracılığıyla (ve [DeSci](/desci/) gibi diğerleri) Ethereum, çevresel ve sosyal bir net pozitif teknoloji haline geliyor.
 
 <Alert variant="update">
-<Emoji text=":evergreen_tree:" className="text-4xl"/>
+<AlertEmoji text=":evergreen_tree:" />
 <AlertContent>
 <AlertDescription>
   Eğer bu sayfanın daha isabetli olabileceğini düşünüyorsanız, lütfen bir konu veya PR açın. Bu sayfadaki istatistikler herkese açık veriye dayalı tahminlerdir - ethereum.org takımından veya Ethereum Foundation'dan resmi bir açıklama veya sözü temsil etmezler.

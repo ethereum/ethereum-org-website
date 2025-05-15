@@ -64,7 +64,7 @@ Ethereum dey build on dis. Laik Bitcoin, di rules nor fit shanj on yu and efrion
 E dey sound odd... "why i go wan program mai monie"? As e dey, dis pass just one default feature of tokens on Ethereum. Anyone fit program logik into payments. So yu fit get di kontrol and sekurity of Bitcoin wey dem mix wit di savis dem provide by finanshia institushons. Dis dey allow yu do tins wit cryptocurrencies wey yu nor fit do wit Bitcoin laik to dey lend and borrow, dey prosess payments, dey invest in index funds and more.
 
 <Alert variant="update">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>Make yu eksplore awa suggeshons for DeFi aplikashons to try out if yu dey new to Ethereum.</div>
   <ButtonLink href="/dapps/?category=finance#explore">

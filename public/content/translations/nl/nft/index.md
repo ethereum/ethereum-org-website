@@ -55,7 +55,7 @@ NFT's worden voor veel dingen gebruikt, waaronder:
 Misschien ben je een artiest die zijn werk wil delen via NFT's, zonder de controle te verliezen en inkomsten op te offeren aan tussenpersonen. Je kunt een nieuw contract aanmaken en het aantal NFT's, hun eigenschappen en een koppeling naar een uniek kunstwerk specificeren. Als artiest kun je de **royalty's waar je recht op hebt programmeren in het slimme contract** (bijv. 5% van de verkoopprijs naar het contract van de eigenaar overmaken elke keer dat een NFT wordt overgedragen). Je kunt ook altijd bewijzen dat je de NFT's hebt gemaakt, want je bent in het bezit van de [portemonnee](/glossary/#wallet) via welke het contract is ingezet. Je kopers kunnen eenvoudig bewijzen dat ze een **authentieke NFT** uit jouw collectie bezitten, omdat het [adres](/glossary/#address) van hun portemonnee geassocieerd is met een token in jouw slimme contract. Ze kunnen het gebruiken in het hele Ethereum-ecosysteem en vertrouwen hebben in de authenticiteit ervan.
 
 <Alert variant="update" className="mt-8">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>Verken, koop of maak je eigen NFT-kunst/-verzamelobjecten...</div>
   <ButtonLink href="/dapps/?category=collectibles#explore">

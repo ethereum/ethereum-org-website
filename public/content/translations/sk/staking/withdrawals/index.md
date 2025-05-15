@@ -44,7 +44,7 @@ Pred upgradom Shanghai/Capella ste nemohli používať svoj vsadený ETH ani k n
 Poskytnutie adresy pre výber je povinným krokom pre akýkoľvek účet validátora, než bude mať nárok na výber ETH zo svojho zostatku.
 
 <Alert variant="warning">
-<Emoji text="⚠️" className="text-4xl"/>
+<AlertEmoji text="⚠️"/>
 <AlertContent>
 <AlertDescription>
   <strong>Každému účtu validátora je možné priradiť iba jednu adresu pre výber, a to raz.</strong> Akonáhle je adresa vybraná a odoslaná do konsenzuálnej vrstvy, nemožno to vrátiť späť ani znovu zmeniť. Pred odoslaním znova skontrolujte vlastníctvo a správnosť poskytnutej adresy.
@@ -88,7 +88,7 @@ Pozrite sa na toto vysvetlenie výberov zo stakovania Ethereum od Finematics:
 Keď je naplánované, že validátor navrhne ďalší blok, je nutné zostaviť front pre výber až 16 oprávnených výberov. To sa robí tak, že sa pôvodne začne s indexom validátora 0, určí sa, či pre tento účet existuje oprávnený výber podľa pravidiel protokolu, a ak áno, pridá sa do frontu. Validátor nastavený tak, aby navrhoval nasledujúci blok, bude pokračovať tam, kde skončil posledný, pričom postupuje v poradí neobmedzene dlho.
 
 <Alert variant="update">
-<Emoji text="🕛" className="text-4xl"/>
+<AlertEmoji text="🕛"/>
 <AlertContent>
 <AlertDescription>
 Predstavte si analógové hodiny. Ručička na hodinách ukazuje na hodinu, postupuje jedným smerom, nepreškoči žiadnu hodinu a nakoniec sa po dosiahnutí posledného čísla opäť pretočí na začiatok.<br/><br/>

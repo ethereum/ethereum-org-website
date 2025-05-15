@@ -41,7 +41,7 @@ Iarrfaidh roinnt aipeanna ort "frása athshlánaithe" rúnda a shábháil (ar a 
 
 <div>
 <Alert variant="update">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
   <div><b>Sparán suiteáilte?</b><br/>Foghlaim conas é a úsáid.</div>
   <ButtonLink href="/guides/how-to-use-a-wallet">

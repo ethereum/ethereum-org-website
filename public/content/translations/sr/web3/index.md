@@ -62,7 +62,7 @@ Web3 vam daje vlasništvo nad vašom digitalnom imovinom na do sada neviđen na�
 Web3 omogućava direktno vlasništvo putem [nezamenjivih tokena (NFT-ova)](/glossary/#nft). Niko, čak ni tvorci igre, nema moć da vam oduzme vlasništvo. A ako prestanete da igrate, možete prodati ili zameniti predmete iz igre na otvorenim tržištima i povratiti njihovu vrednost.
 
 <Alert variant="update">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row items-center justify-between">
   <div>Saznajte više o NFT-ovima</div>
   <ButtonLink href="/nft/">
@@ -90,7 +90,7 @@ DAO-ovi se tehnički definišu kao unapred dogovoreni [pametni ugovori](/glossar
 Međutim, mnoge Web3 zajednice se definišu kao DAO-i. Ove zajednice imaju različite nivoe decentralizacije i automatizacije putem koda. Trenutno istražujemo koncept DAO-a i razmatramo kako bi se oni mogli razvijati u budućnosti.
 
 <Alert variant="update">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row items-center justify-between">
   <div>Saznajte više o DAO-ima</div>
   <ButtonLink href="/dao/">

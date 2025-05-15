@@ -62,7 +62,7 @@ lang: zh-tw
 [Gitcoin](https://gitcoin.co) 等 Web 3 原生公共財募資平台，舉辦氣候募資輪，以促進以太坊應用程式層開展具環保意識的構建。 透過開發這些倡議 (以及[去中心化科研](/desci/)等等)，以太坊正成為一項對環境及社會具有淨正效益的科技。
 
 <Alert variant="update">
-<Emoji text=":evergreen_tree:" className="text-4xl"/>
+<AlertEmoji text=":evergreen_tree:" />
 <AlertContent>
 <AlertDescription>
   如果你認為此頁內容能更加準確，請提出議題或提取請求 (PR)。 呈現在此頁面上的統計數據皆是基於公開數據的估計值 - 它們不代表 ethereum.org 團隊或以太坊基金會的官方聲明或承諾。

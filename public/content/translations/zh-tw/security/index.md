@@ -125,7 +125,7 @@ lang: zh-tw
 - 切勿以非官方指定管道來交流
 
 <Alert variant="update">
-<Emoji text=":lock:" className="text-4xl"/>
+<AlertEmoji text=":lock:"/>
 <AlertContent>
 <AlertDescription>
     請注意：支援服務型騙局常發生在 Discord 平台上，但在任何討論加密貨幣的聊天應用程式上也可能很盛行，包括電子郵件。
@@ -219,7 +219,7 @@ _注意：有些衍生的代幣/行情指示器可能代表被質押的以太幣
 ### 使用密碼管理器 {#use-password-manager}
 
 <Alert variant="update">
-<Emoji text=":bulb:" className="text-4xl"/>
+<AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
     使用密碼管理器能幫你建立獨特的強式密碼，並且記住密碼！ 我們<strong>非常</strong>建議使用密碼管理器，而且大多數免費！
@@ -249,7 +249,7 @@ _注意：有些衍生的代幣/行情指示器可能代表被質押的以太幣
 使用**雙因素驗證 (2FA)** 時，可以為你的線上帳戶提供一層額外的*安全因素*。 雙因素驗證保障了即使取得你的密碼，仍不足以存取你的帳戶。 最常見的是，第二組因素是一個隨機的 6 位數代碼，稱為**基於時間的一次性密碼 (TOTP)**，可透過 Google authenticator 或 Authy 等驗證工具應用程式來取得。 這些因素取材自「你擁有之物」，因為產生定時碼的種子，儲存在你的裝置上。
 
 <Alert variant="update">
-<Emoji text=":lock:" className="text-4xl"/>
+<AlertEmoji text=":lock:"/>
 <AlertContent>
 <AlertDescription>
     注意：使用基於簡訊的雙因素驗證容易受到 <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">SIM 卡交換攻擊</a>，因此並不安全。 為了獲得最佳安全性，請使用 <a href="https://mashable.com/article/how-to-set-up-google-authenticator">Google Authenticator</a> 或 <a href="https://authy.com/">Authy</a> 等服務。

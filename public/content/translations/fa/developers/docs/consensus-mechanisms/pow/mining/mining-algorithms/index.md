@@ -5,7 +5,7 @@ lang: fa
 ---
 
 <Alert variant="update">
-<Emoji text=":wave:" className="text-4xl"/>
+<AlertEmoji text=":wave:"/>
 <AlertContent>
 <AlertDescription>
 اثبات-کار دیگر مکانیزم اجماع اتریوم نیست، و در نتیجه استخراج اتریوم متوفف شده است. در عوض، اتریوم توسط اعتبارسنج‌هایی که اتریوم را سهام گذاری می‌کنند، ایمن می‌شود. شما می‌توانید از امروز شروع به سهام‌گذاری اتر خود کنید. درباره‌ <a href='/roadmap/merge/'>ادغام</a>، <a href='/developers/docs/consensus-mechanisms/pos/'>اثبات سهام</a> و <a href='/staking/'>سهام‌گذاری</a> بیشتر بخوانید. این صفحه تنها برای علاقمندان به تاریخچه پروژه است.

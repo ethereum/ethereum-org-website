@@ -41,7 +41,7 @@ Após salvar a frase semente, você verá o painel da carteira com o saldo. Conf
  <br />
 
 <Alert variant="update">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
   <div>Quer saber mais?</div>
   <ButtonLink href="/guides/">

@@ -62,7 +62,7 @@ Obecnie zużycie energii przez Ethereum jest bardzo niskie, a ponadto istnieje r
 Natywne platformy Web3 do finansowania dóbr publicznych, takie jak [Gitcoin](https://gitcoin.co), przeprowadzają rundy klimatyczne w celu stymulowania świadomego i ekologicznego budowania w warstwie aplikacji Ethereum. Dzięki rozwojowi tych inicjatyw (i innych, takich jak [DeSci](/desci/)) Ethereum staje się technologią o pozytywnym wpływie środowiskowym i społecznym.
 
 <Alert variant="update">
-<Emoji text=":evergreen_tree:" className="text-4xl"/>
+<AlertEmoji text=":evergreen_tree:" />
 <AlertContent>
 <AlertDescription>
   Jeśli uważasz, że ta strona może być dokładniejsza, zgłoś problem lub PR. Statystyki na tej stronie są szacunkami opartymi na danych, które są dostępne publicznie — nie stanowią one oficjalnego oświadczenia ani obietnicy ze strony zespołu ethereum.org lub Fundacji Ethereum.

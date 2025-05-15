@@ -64,7 +64,7 @@ Ethereum kọ́ lórí èyí. Bíi Bitcoin, àwọn òfin kò lè yipada lórí 
 Eyi dabi ohun àjẹ́jì... "Kilódé tí ma fẹ́ fi ṣètò owó mi"? Sibẹsibẹ, èyí jẹ́ díẹ̀ síi ju ẹ̀yà àiyipada ti àwọn token lórí Ethereum. Ẹnikẹ́ni lè ṣe ètò ọgbọ́n sínú àwọn sisanwo. Nítorí náà, o lè gba iṣakoso àti aabo Bitcoin pẹ̀lú àwọn ìsẹ̀ tí àwọn ilé-iṣẹ inawo n pese. Èyí jẹ́ kí o ṣe àwọn nkan pẹ̀lú àwọn owó crypto tí o kò lè ṣe pẹ̀lú Bitcoin, bíi yíyà àti rírà, ṣètò àwọn sisanwo, ìdoko-owo nínú àwọn owó atọka, àti diẹ̀ síi.
 
 <Alert variant="update">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>Ṣàwárí àwọn ìmọ̀ràn wa fún àwọn ohun elo DeFi lati gbìyanju e tí o bá jẹ́ tuntun sí Ethereum.</div>
   <ButtonLink href="/dapps/?category=finance#explore">

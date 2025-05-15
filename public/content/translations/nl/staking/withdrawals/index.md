@@ -44,7 +44,7 @@ Vóór de upgrade van Shanghai/Capella kon je je gestakete ETH niet gebruiken of
 Het opgeven van een opnameadres is een vereiste stap voor elk validatoraccount voordat er ETH van het saldo kan worden opgenomen.
 
 <Alert variant="warning">
-<Emoji text="⚠️" className="text-4xl"/>
+<AlertEmoji text="⚠️"/>
 <AlertContent>
 <AlertDescription>
   <strong>Aan elk validatoraccount kan slechts één opnameadres worden toegewezen, en wel één keer.</strong> Zodra een adres is gekozen en ingediend bij de consensuslaag, kan dit niet meer ongedaan worden gemaakt of worden gewijzigd. Controleer nogmaals of het opgegeven adres juist is en of het eigendomsrechtelijk is vastgelegd voordat je het indient.
@@ -88,7 +88,7 @@ Bekijk deze uitleg van Finematics over Ethereum staking-opnames:
 Wanneer een validator het volgende blok moet voorstellen, moet hij een opnamewachtrij samenstellen van maximaal 16 in aanmerking komende opnames. Dit wordt gedaan door te beginnen met de validatorindex 0 en te bepalen of er een opname in aanmerking komt voor dit account volgens de regels van het protocol. Als dit het geval is, wordt het account toegevoegd aan de wachtrij. De validator die is ingesteld om het volgende blok voor te stellen, gaat verder waar het vorige blok is gestopt en gaat oneindig door.
 
 <Alert variant="update">
-<Emoji text="🕛" className="text-4xl"/>
+<AlertEmoji text="🕛"/>
 <AlertContent>
 <AlertDescription>
 Denk aan een analoge klok. De wijzer op de klok wijst naar het uur, beweegt in één richting, slaat geen uren over en komt uiteindelijk weer terecht bij het begin nadat het laatste nummer is bereikt.<br/><br/>

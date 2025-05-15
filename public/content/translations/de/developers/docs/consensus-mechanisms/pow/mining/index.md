@@ -5,7 +5,7 @@ lang: de
 ---
 
 <Alert variant="update">
-<Emoji text=":wave:" className="text-4xl"/>
+<AlertEmoji text=":wave:"/>
 <AlertContent>
 <AlertDescription>
 Proof-of-Work ist nicht mehr der zugrunde liegende Konsensmechanismus von Ethereum, was bedeutet, dass das Mining ausgeschaltet wurde. Stattdessen wird Ethereum von Validatoren gesichert, die ETH staken. Du kannst schon heute mit dem Staking deiner ETH beginnen. Lese mehr dazu unter <a href='/roadmap/merge/'>den Merge</a>, <a href='/developers/docs/consensus-mechanisms/pos/'>Proof-of-Stake</a>, und <a href='/staking/'>Staking</a>. Diese Seite dient ausschließlich zu Archivierungszwecken, um Ereignisse rund um Ethereum zu dokumentieren.

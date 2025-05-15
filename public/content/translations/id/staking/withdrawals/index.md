@@ -44,7 +44,7 @@ Sebelum peningkatan Shanghai/Capella, Anda tidak dapat menggunakan atau mengakse
 Memberikan alamat penarikan adalah langkah yang diperlukan untuk setiap akun validator sebelum akun tersebut memenuhi syarat untuk menarik ETH dari saldonya.
 
 <Alert variant="warning">
-<Emoji text="⚠️" className="text-4xl"/>
+<AlertEmoji text="⚠️"/>
 <AlertContent>
 <AlertDescription>
   <strong>Setiap akun validator hanya dapat diberikan satu alamat penarikan, satu kali.</strong> Setelah alamat dipilih dan dikirimkan ke lapisan konsensus, alamat tersebut tidak dapat dibatalkan atau diubah lagi. Periksa kembali kepemilikan dan keakuratan alamat yang diberikan sebelum mengirim.
@@ -88,7 +88,7 @@ Simak penjelasan mengenai penarikan penaruhan Ethereum dari Finematics berikut i
 Ketika validator dijadwalkan untuk mengajukan blok berikutnya, diperlukan antrean penarikan hingga 16 penarikan yang memenuhi syarat. Hal ini dilakukan dengan memulai dengan indeks validator 0, menentukan apakah ada penarikan yang memenuhi syarat untuk akun ini sesuai dengan aturan protokol, dan menambahkannya ke antrean jika ada. Validator yang ditetapkan untuk mengajukan blok berikutnya akan melanjutkan blok yang terakhir ditinggalkan, dan terus maju tanpa batas waktu.
 
 <Alert variant="update">
-<Emoji text="🕛" className="text-4xl"/>
+<AlertEmoji text="🕛"/>
 <AlertContent>
 <AlertDescription>
 Pikirkan tentang jam analog. Jarum jam menunjuk ke arah jam, bergerak ke satu arah, tidak melewatkan satu jam pun, dan akhirnya berputar ke awal lagi setelah angka terakhir tercapai.<br/><br/>

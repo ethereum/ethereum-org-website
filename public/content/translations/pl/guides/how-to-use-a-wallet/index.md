@@ -63,7 +63,7 @@ Twój adres będzie taki sam we wszystkich projektach Ethereum. Nie musisz rejes
 6. Gotowe! Zacznij używać aplikacji. Możesz znaleźć kilka interesujących projektów na naszej [stronie zdecentralizowanych aplikacji](/dapps/#explore). <br />
 
 <Alert variant="update">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>Chcesz dowiedzieć się więcej?</div>
   <ButtonLink href="/guides/">

@@ -5,7 +5,7 @@ lang: de
 ---
 
 <Alert variant="update">
-<Emoji text=":wave:" className="text-4xl"/>
+<AlertEmoji text=":wave:"/>
 <AlertContent>
 <AlertDescription>
    Ethash war der Proof-of-Work-Mining-Algorithmus von Ethereum. Proof-of-work wurde nun **komplett abgeschaltet** und Ethereum wird jetzt stattdessen durch <a href="/developers/docs/consensus-mechanisms/pos/">Proof-of-Stake</a> gesichert. Lesen Sie mehr über <a href="/roadmap/merge/">die Zusammenführung</a>, <a href="/developers/docs/consensus-mechanisms/pos/">Proof-of-Stake</a> und <a href="/staking/">Staking</a>. Diese Seite dient dem geschichtlichen Interesse!  

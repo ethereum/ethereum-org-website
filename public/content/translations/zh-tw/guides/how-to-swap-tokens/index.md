@@ -50,7 +50,7 @@ lang: zh-tw
 <br />
 
 <Alert variant="update">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>想要學習更多功能嗎？</div>
   <ButtonLink href="/guides/">

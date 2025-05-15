@@ -65,7 +65,7 @@ Ethereum si basa su questo. Come per Bitcoin, le regole non sono modificabili e 
 Sembra strano... "perché dovrei voler programmare il mio denaro"? Eppure, questa è più che altro una funzionalità predefinita dei token su Ethereum. Chiunque può programmare la logica nei pagamenti. Così, puoi ottenere il controllo e la sicurezza di Bitcoin, insieme ai servizi forniti dalle istituzioni finanziarie. Ciò consente di fare cose con le criptovalute che non potresti fare con Bitcoin, come assumere ed erogare prestiti, pianificare pagamenti, investire in fondi indicizzati, e molto altro.
 
 <Alert variant="update">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>Esplora i nostri suggerimenti per le applicazioni della DeFi da provare, se sei nuovo su Ethereum.</div>
   <ButtonLink href="/dapps/?category=finance#explore">

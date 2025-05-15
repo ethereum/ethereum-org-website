@@ -55,7 +55,7 @@ Az NFT-ket számtalan esetben használják, ilyen például:
 Tegyük fel, hogy Ön egy művész, aki szeretné NFT-ként megosztani az alkotását, anélkül hogy elveszítené az ellenőrzést felette és közvetítőkre áldozná a profitját. Létrehozhat egy új szerződést, amelyben megadja az NFT-k számát, jellemzőiket, és hozzákapcsolja az adott műalkotást. Művészként **beprogramozhatja az intelligens szerződésbe a fizetendő jogdíjakat** (pl. az eladási ár 5%-át utalja át a szerződés tulajdonosának minden alkalommal, amikor NFT-t utalnak át). Azt is mindig bizonyíthatja, hogy Ön hozta létre az NFT-ket, mert Ön a [pénztárca](/glossary/#wallet) tulajdonosa, amely a szerződést telepítette. Vásárlói könnyen igazolhatják, hogy egy **hiteles NFT-vel** rendelkeznek az Ön gyűjteményéből, mert pénztárcájuk [címe](/glossary/#address) az intelligens szerződésben szereplő tokenhez van társítva. Az egész Ethereum-ökoszisztémában használhatják az NFT-t, teljes bizonyossággal az eredetiségét illetően.
 
 <Alert variant="update" className="mt-8">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>Fedezzen fel, vásároljon vagy készítsen saját NFT-műalkotásokat/gyűjthető tárgyakat...</div>
   <ButtonLink href="/dapps/?category=collectibles#explore">

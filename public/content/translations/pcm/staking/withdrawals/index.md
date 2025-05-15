@@ -44,7 +44,7 @@ Bifor di Shenghai/Capella upgrade, yu nor fit yus abi access yor ETH wey yu stak
 To dey provide witdrawal address na step wi nid for any validator akant bifor im go dey eligibol to witdraw ETH from im balans.
 
 <Alert variant="warning">
-<Emoji text="⚠️" className="text-4xl"/>
+<AlertEmoji text="⚠️"/>
 <AlertContent>
 <AlertDescription>
   <strong> Ish validator akant fit only get one singol witdrawal address, one taim.</strong> Wons dem don shuse one address and don submit to di konsensus layer, wi nor fit undo abi shanj am again. Make yu doubol-sheck ownaship and akurasy of di address wey dem provide bifor yu submit.
@@ -88,7 +88,7 @@ Make yu shek dis explanashon of Ethereum staking withdrawals by Finematiks:
 Wen dem schedule one validator to propose di next block, dem nid am to build one witdrawal queue, of up to 16 eligibol witdrawals. Dem dey do dis by orijinaly starting wit validator index 0, wey dey ditamin if dia is one eligibol witdrawal for dis akant par di rules of di protokol, and dey add am to di queue if im dey. Di validator wan propose di folowing block go pick up wia di last one wey rimain, dey progress in order indefinitely.
 
 <Alert variant="update">
-<Emoji text="🕛" className="text-4xl"/>
+<AlertEmoji text="🕛"/>
 <AlertContent>
 <AlertDescription>
 Tink abou one analogue clock. Di hand on di clock dey point to di hawa, dey progress on one direkshon, nor dey skip any hawas, and wraps around las las to di start again afta di last numba don rish.<br/><br/>

@@ -62,7 +62,7 @@ Wẹẹbù kẹta fún o ní anfaani lati ní àwọn dukia digitali fúnra rẹ
 Wẹ́ẹ̀bù kẹta fún o ni àáye lati ni ohún-ini taara nipasẹ [àwọn token ohun-ini alailegbe (NFTs)](/glossary/#nft). Kò sí enikankan, koda kò jẹ awon oluṣẹda ere idaraya, to ní agbara lati gba ini rẹ. Atipe, ti o kò ba gba ere idaraya mọ, o le ta tabi paarọ ohún ini rẹ lori ọja gbangba lati gba deede iye owo rẹ pada.
 
 <Alert variant="update">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row items-center justify-between">
   <div>Ko sí nipa NFTs</div>
   <ButtonLink href="/nft/">
@@ -90,7 +90,7 @@ Pẹ̀lú bí o ti ní àwọn data tirẹ ní Wẹẹbu kẹta, otún le ní oj
 Àmọ àwọn eniyan túnmọ̀ ọpọlọpọ awujo wẹẹbù kẹta sí DAOs. Àwọn awujo yii ni ipele orisirisi alailakoso ati koodu ti o ń siṣe fúnra rẹ. Lọwọlọwọ, a ń ṣe iṣawari àwọn nkan tí DAOs jẹ, ati idagbasoke wọn ni ojo iwaju.
 
 <Alert variant="update">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row items-center justify-between">
   <div>Learn more about DAOs</div>
   <ButtonLink href="/dao/">

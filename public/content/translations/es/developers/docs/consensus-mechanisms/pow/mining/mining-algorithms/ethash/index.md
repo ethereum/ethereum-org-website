@@ -5,7 +5,7 @@ lang: es
 ---
 
 <Alert variant="update">
-<Emoji text=":wave:" className="text-4xl"/>
+<AlertEmoji text=":wave:"/>
 <AlertContent>
 <AlertDescription>
    Ethash era el algoritmo de minería de prueba de trabajo de Ethereum. La prueba de trabajo ahora se ha **desactivado por completo** y Ethereum ahora está protegido utilizando la <a href="/developers/docs/consensus-mechanisms/pos/">prueba de participación</a> en su lugar. Descubra más en <a href="/roadmap/merge/">La Fusión</a>, <a href="/developers/docs/consensus-mechanisms/pos/">prueba de participación (PoS)</a> y la <a href="/staking/">participación</a>. ¡Esta página es de interés histórico!  

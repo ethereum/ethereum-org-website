@@ -48,7 +48,7 @@ Aconselhamos que você atualize a ferramenta de revogação após alguns minutos
  <br />
 
 <Alert variant="update">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>Quer saber mais?</div>
   <ButtonLink href="/guides/">

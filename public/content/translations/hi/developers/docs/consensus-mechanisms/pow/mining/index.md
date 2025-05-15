@@ -5,7 +5,7 @@ lang: hi
 ---
 
 <Alert variant="update">
-<Emoji text=":wave:" className="text-4xl"/>
+<AlertEmoji text=":wave:"/>
 <AlertContent>
 <AlertDescription>
 प्रूफ-ऑफ-वर्क अब एथेरियम के सर्वसम्मति मैकेनिज्म में अंतर्निहित नहीं है, जिसका अर्थ है कि माईनिंग बंद कर दी गई है। इसके बजाय, एथेरियम को ऐसे सत्यापनकर्ताओं द्वारा सुरक्षित किया जाता है जो ETH को स्टेक पर लगाते हैं। आप आज ही अपने ETH की स्टेकिंग शुरू कर सकते हैं। <a href='/roadmap/merge/'>द मर्ज</a>, <a href='/developers/docs/consensus-mechanisms/pos/'>हिस्सेदारी का सबूत</a> और <a href='/staking/'>स्टेकिंग</a>। यह पृष्ठ केवल ऐतिहासिक रुचि के लिए है।

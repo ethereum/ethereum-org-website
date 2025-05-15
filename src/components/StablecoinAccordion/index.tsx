@@ -8,10 +8,9 @@ import InlineLink, { BaseLink } from "@/components/ui/Link"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 
 import CardList from "../CardList"
-import Emoji from "../Emoji"
 import Translation from "../Translation"
 import { Accordion } from "../ui/accordion"
-import { Alert, AlertContent } from "../ui/alert"
+import { Alert, AlertContent, AlertEmoji } from "../ui/alert"
 
 import {
   AccordionCustomItem,
@@ -86,7 +85,7 @@ const StablecoinAccordion = () => {
             />
           </StepBoxContainer>
           <Alert variant="update">
-            <Emoji text=":light_bulb:" className="text-4xl" />
+            <AlertEmoji text=":light_bulb:" />
             <AlertContent>
               <H4>{t("page-stablecoins-accordion-swap-editors-tip")}</H4>
               <p className="mb-6 leading-6">

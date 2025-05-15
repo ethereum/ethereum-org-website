@@ -41,7 +41,7 @@ Some apps will request you to save a secret "recovery phrase" (sometimes called 
 
 <div>
 <Alert variant="update">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
   <div><b>Wallet installed?</b><br/>Learn how to use it.</div>
   <ButtonLink href="/guides/how-to-use-a-wallet">

@@ -41,7 +41,7 @@ lang: ಎನ್
 
 <div>
 <Alert variant="update">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
   <div><b>ವ್ಯಾಲೆಟ್ ಸ್ಥಾಪಿಸಲಾಗಿದೆಯೇ?</b><br/>ಅದನ್ನು ಹೇಗೆ ಬಳಸಬೇಕೆಂದು ಕಲಿಯಿರಿ.</div>
   <ButtonLink href="/guides/how-to-use-a-wallet">

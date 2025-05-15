@@ -64,7 +64,7 @@ Ethereum terbina atas perkara ini. Seperti Bitcoin, peraturan tidak boleh beruba
 Ini kedengaran aneh... "mengapa saya mahu memprogramkan wang saya"? Walau bagaimanapun, ini lebih sekadar ciri lalai token pada Ethereum. Sesiapa sahaja boleh memprogramkan logik ke dalam pembayaran. Jadi anda boleh mendapatkan kawalan dan keselamatan Bitcoin dicampur dengan perkhidmatan yang disediakan oleh institusi kewangan. Ini membolehkan anda melakukan perkara dengan mata wang kripto yang anda tidak boleh lakukan dengan Bitcoin seperti meminjamkan dan meminjami, menjadualkan pembayaran, melabur dalam dana indeks dan banyak lagi.
 
 <Alert variant="update">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>Terokai cadangan kami untuk aplikasi DeFi untuk dicuba jika anda baru menggunakan Ethereum.</div>
   <ButtonLink href="/dapps/?category=finance#explore">

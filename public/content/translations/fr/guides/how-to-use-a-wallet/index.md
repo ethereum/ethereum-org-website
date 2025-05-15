@@ -64,7 +64,7 @@ Votre adresse sera la même pour tous les projets Ethereum. Vous n'avez pas beso
 6. C’est tout! Commencez à utiliser l'application. Vous pouvez trouver des projets intéressants sur notre page [dApps](/dapps/#explore). <br />
 
 <Alert variant="update">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>Vous voulez en savoir plus ?</div>
   <ButtonLink href="/guides/">

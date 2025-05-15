@@ -55,7 +55,7 @@ NFT hutumika kwa mambo mengi, ikiwa ni pamoja na:
 Labda wewe ni msanii amabaye angependa kushiriki kazi yake kupitia NFT bila wewe kupoteza udhibiti ama kuwapa waamuzi faida zako. Wewe unaweza kutengeneza mkataba mpya na kuweka bayana hesabu ya NFT, vipengele vyao na kiungo chao kwa kazi mahususi ya sanaa. Kama msanii, **unaweza kuprogramu ndani ya mkataba-erevu mrabaha** unaofaa kulipwa (kwa mfano hamisha 5% ya bei ya mauzo kwa mwenye mkataba kila wakati tokeni inapohamishwa). Vile vile unaweza kuthibitisha kwamba wewe ndiwe umetengeneza NFT kwa sababu wewe ndiwe mmiliki wa [mkoba](/glossary/#wallet) iliyotuma mkataba huo. Wanunuzi wako wanaweza kuthibitisha kwa urahisi kwamba wao ndio wamiliki wa **NFT halisi** kutoka kwenye mkusanyiko wako kwa sababu pochi yao ya[anwani](/glossary/#address) ya mkoba zao inashirikishwa na tokeni kutoka kwenye mkataba wako. Wanaweza kuitumia katika mfumo wa ikologia ya Ethereum, inayoaminika kwa uhalisi wake.
 
 <Alert variant="update" className="mt-8">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>Chunguza, nunu au tengeneza sanaa ya NFT...</div>
   <ButtonLink href="/dapps/?category=collectibles#explore">

@@ -55,7 +55,7 @@ NFT'ler, şunlar dahil olmak üzere pek çok şey için kullanılabilir:
 Belki de eserlerinizi NFT'leri kullanarak paylaşmak isteyen, eserlerinizin kontrolünü kaybetmeden ve kazançlarınızı aracılara feda etmeden çalışmak isteyen bir sanatçısınızdır. NFT'lerin sayısını, özelliklerini ve belirli bir sanat eserine olan bağlantısını belirleyebildiğiniz yeni bir sözleşme oluşturabilirsiniz. Sanatçı olarak, bir NFT transfer edilirken almanız gereken **telif hakkı bedelini akıllı sözleşmeye gömebilirsiniz** (yani NFT her transfer edildiğinde satış bedelinin %5'inin sözleşme sahibine geri transferi gibi). Ayrıca, sözleşmeyi dağıtan [cüzdan](/glossary/#wallet) size ait olduğu için NFT'lerin yaratıcısı olduğunuzu her zaman kanıtlayabilirsiniz. Alıcılarınız, cüzdan [adreslerinin](/glossary/#address) akıllı sözleşmenizde yer alan bir jeton ile ilişkilendirilmiş olmasından dolayı sizin koleksiyonunuzdan **özgün bir NFT**'ye sahip olduklarını kolayca kanıtlayabilir. Alıcılar, özgünlüğünden ve kontrolünden emin olarak bunu Ethereum ekosistemi içerisinde kullanabilirler.
 
 <Alert variant="update" className="mt-8">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>NFT eserlerini/koleksiyon parçalarını keşfedin, satın alın veya kendinizinkileri yaratın...</div>
   <ButtonLink href="/dapps/?category=collectibles#explore">

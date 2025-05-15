@@ -41,7 +41,7 @@ Bazı uygulamalar sizden gizli bir "kurtarma ifadesi" (bazen "güvenlik kelimele
 
 <div>
 <Alert variant="update">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
   <div><b>Cüzdan yüklendi mi?</b><br/>Nasıl kullanacağınızı öğrenin.</div>
   <ButtonLink href="/guides/how-to-use-a-wallet">

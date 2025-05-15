@@ -60,7 +60,7 @@ Ak máte ETH na Ethereum Mainnet a chcete preskúmať alternatívne L1 blockchai
 Povedzme, že chcete vlastniť natívny bitcoin (BTC), ale máte prostriedky iba na Ethereum Mainnet. Aby ste získali BTC zastupený na Ethereu, môžete si kúpiť Wrapped Bitcoin (WBTC). WBTC je však token [ERC-20](/glossary/#erc-20), ktorý je natívny v sieti Ethereum, čo znamená, že ide o Ethereum verziu Bitcoinu a nie o pôvodné aktívum na Bitcoin blockchaine. Aby ste mohli vlastniť natívny BTC, museli by ste premostiť svoje aktíva z Etherea do Bitcoinu pomocou mosta. To premostí vaše WBTC a prevedie ich na natívny BTC. Prípadne môžete vlastniť BTC a používať ho v Ethereum [DeFi](/glossary/#defi) protokoloch. To by si vyžadovalo premostenie iným spôsobom, z BTC na WBTC, ktoré potom možno použiť ako aktívum v Ethereu.
 
 <Alert variant="update">
-<Emoji text=":bulb:" className="text-4xl"/>
+<AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
   Všetky vyššie uvedené činnosti môžete vykonať aj pomocou <a href="/get-eth/">centralizovanej výmeny</a>. Zahŕňalo by to viacero krokov a pravdepodobne by bolo lepšie použiť most, ak však vaše prostriedky už nemáte na centralizovanej burze.

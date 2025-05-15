@@ -62,7 +62,7 @@ Bagama't napakaliit ng kinokonsumong enerhiya ng Ethereum, mayroon ding mahalaga
 Ang mga public goods funding platform na native sa Web3 tulad ng [Gitcoin](https://gitcoin.co) ay nagsasagawa ng mga climate round upang isulong ang makakalikasan na paggawa sa application layer ng Ethereum. Sa pamamagitan ng paggawa ng mga inisyatibang ito (at iba pa, hal. [DeSci](/desci/)), ang Ethereum ay nagiging isang teknolohiyang may positibong epekto sa kapaligiran at lipunan.
 
 <Alert variant="update">
-<Emoji text=":evergreen_tree:" className="text-4xl"/>
+<AlertEmoji text=":evergreen_tree:" />
 <AlertContent>
 <AlertDescription>
   Kung sa tingin mo ay mas mapapatumpak pa ang page na ito, maghain ng isyu o pull request (PR). Ang stats sa page na ito ay mga pagtatantya batay sa data na available sa publiko - hindi kumakatawan ang mga ito sa isang opisyal na pahayag o pangako mula sa ethereum.org team, o sa Ethereum Foundation.

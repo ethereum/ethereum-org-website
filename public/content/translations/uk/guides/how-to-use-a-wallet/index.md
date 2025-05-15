@@ -63,7 +63,7 @@ lang: uk
 6. Готово! Почніть користуватися додатком. Ви можете знайти деякі цікаві проєкти на нашій [сторінці децентралізованих додатків (dApp)](/dapps/#explore). <br />
 
 <Alert variant="update">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>Хочете дізнатися більше?</div>
   <ButtonLink href="/guides/">

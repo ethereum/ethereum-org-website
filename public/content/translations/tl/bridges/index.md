@@ -60,7 +60,7 @@ Kung mayroon kang ETH sa Ethereum Mainnet at nais mong magsaliksik ng isang alte
 Sabihin nating gusto mong magkaroon ng orihinal na Bitcoin (BTC), ngunit nasa Ethereum Mainnet lang ang iyong pondo. Upang magkaroon ng pagkakalantad sa BTC sa Ethereum, maaari kang bumili ng Wrapped Bitcoin (WBTC). Gayunpaman, ang WBTC ay isang [ERC-20](/glossary/#erc-20) orihinal na token sa network ng Ethereum, na nangangahulugang ito ay isang bersyon ng Bitcoin sa Ethereum at hindi ang orihinal na asset sa Bitcoin blockchain. Para magkaroon ng native na BTC, kailangan mong i-bridge ang iyong mga asset sa Bitcoin mula sa Ethereum gamit ang bridge. Ibi-bridge nito ang WBTC mo at gagawin nito itong original na BTC. Bilang kahalili, maaari kang magmay-ari ng BTC at gusto mong gamitin sa mga protocol [DeFi](/glossary/#defi) sa Ethereum. Magiging baliktad ang pag-bridge nito, mula sa BTC patungong WBTC na siyang magagamit bilang asset sa Ethereum.
 
 <Alert variant="update">
-<Emoji text=":bulb:" className="text-4xl"/>
+<AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
   Maaari mo ring gawin ang lahat ng nabanggit gamit ang isang <a href="/get-eth/">sentralisadong palitan</a>. Gayunpaman, maliban kung nasa isang palitan na ang iyong mga pondo, maraming hakbang ang kailangan para dito, at magiging mas mainam kung gumamit ka na lang ng bridge.

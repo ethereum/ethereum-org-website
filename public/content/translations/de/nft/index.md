@@ -55,7 +55,7 @@ NFTs werden unter anderem für folgende Zwecke eingesetzt:
 Vielleicht sind Sie ein Künstler, der seine Werke mithilfe von NFTs verbreiten möchte, ohne die Kontrolle abzugeben und seine Gewinne an Zwischenhändler zu opfern. Sie können einen neuen Contract erstellen und die Anzahl der NFTs, ihre Eigenschaften und eine Verknüpfung zu einem bestimmten Kunstwerk angeben. Als Künstler **können Sie die Lizenzgebühren in den Smart Contract einprogrammieren**, die Ihnen gezahlt werden sollen (z. B. bei jeder Übertragung eines NFT werden 5 % des Verkaufspreises an den Vertragsinhaber überwiesen). Sie können auch jederzeit nachweisen, dass Sie die NFTs erstellt haben, da Sie die [Wallet](/glossary/#wallet) besitzen, die den Vertrag bereitgestellt hat. Ihre Käufer können leicht nachweisen, dass sie ein **authentisches NFT** aus Ihrer Sammlung besitzen, da ihre Wallet-[Adresse](/glossary/#address) mit einem Token in Ihrem Smart Contract verknüpft ist. Sie können ihn im gesamten Ethereum-Ökosystem verwenden und sich seiner Authentizität gewiss sein.
 
 <Alert variant="update" className="mt-8">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>Entdecken, kaufen oder erstellen Sie Ihre eigene(n) NFT-Kunst/Sammelgegenstände ...</div>
   <ButtonLink href="/dapps/?category=collectibles#explore">

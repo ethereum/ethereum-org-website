@@ -35,7 +35,7 @@ La transition vers la preuve d'enjeu a rendu Ethereum nettement plus sûr et dé
 De plus, l'utilisation de la preuve d'enjeu comme mécanisme de consensus est un composant fondamental pour un [Ethereum sécurisé, respectueux de l'environnement et évolutif tel que nous le connaissons maintenant](/roadmap/vision/).
 
 <Alert variant="update">
-<Emoji text=":money_bag:" className="text-4xl"/>
+<AlertEmoji text=":money_bag:"/>
 <AlertContent>
 <AlertDescription>
   Si vous souhaitez devenir validateur et aider à sécuriser Ethereum, <a href="/staking/">familiarisez-vous avec le concept de mise en jeu</a>.

@@ -56,7 +56,7 @@ NFT digunakan untuk banyak hal, termasuk:
 Mungkin Anda adalah seorang seniman yang ingin berbagi karya mereka menggunakan NFT, tanpa kehilangan kontrol dan mengorbankan keuntungan Anda kepada perantara. Anda dapat membuat kontrak baru dan menentukan jumlah NFT, propertinya, dan tautan ke beberapa karya seni khusus. Sebagai seniman, **Anda dapat memprogramkan royalti yang seharusnya Anda terima ke dalam kontrak pintar** (misalnya, mentransfer 5% dari harga jual kepada pemilik kontrak setiap kali NFT ditransfer). Anda juga selalu dapat membuktikan bahwa Anda membuat NFT tersebut karena Anda memiliki [dompet](/glossary/#wallet) yang menerbitkan kontrak tersebut. Pembeli Anda dapat dengan mudah membuktikan bahwa mereka memiliki **NFT asli** dari koleksi Anda karena [alamat](/glossary/#address) dompet mereka terkait dengan token dalam kontrak pintar Anda. Mereka dapat menggunakannya di seluruh ekosistem Ethereum, dengan keyakinan akan keasliannya.
 
 <Alert variant="update" className="mt-8">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>Jelajahi, beli, atau buat karya seni/barang koleksi NFT Anda sendiri...</div>
   <ButtonLink href="/dapps/?category=collectibles#explore">

@@ -44,7 +44,7 @@ Antes da atualização de Xangai/Capella, não podia utilizar ou aceder ao seu E
 Fornecer um endereço de levantamento é um passo necessário para qualquer conta de validador antes de ser elegível para ter ETH retirado do seu saldo.
 
 <Alert variant="warning">
-<Emoji text="⚠️" className="text-4xl"/>
+<AlertEmoji text="⚠️"/>
 <AlertContent>
 <AlertDescription>
   <strong>A cada conta de validador só pode ser atribuído um único endereço de levantamento e uma única vez.</strong> Uma vez escolhido e submetido à camada de consenso, o endereço não pode ser revogado ou alterado novamente. Verifique novamente a titularidade e a exatidão do endereço fornecido antes de o enviar.
@@ -88,7 +88,7 @@ Consulte esta explicação de levantamento de staking na Ethereum da Finematics:
 Se um validador estiver agendado para propor o próximo bloco, é necessário construir uma fila de levantamento composta por um máximo de 16 levantamentos elegíveis. Isto consegue-se começando com um validador de índice 0, determinando se existe um levantamento elegível para esta conta de acordo com as regras do protocolo e adicionando à lista, se existir. O validador definido para propor o bloco seguinte retoma o trabalho no ponto em que foi deixado, fazendo a ordem avançar indefinidamente.
 
 <Alert variant="update">
-<Emoji text="🕛" className="text-4xl"/>
+<AlertEmoji text="🕛"/>
 <AlertContent>
 <AlertDescription>
 Imagine um relógio analógico. O ponteiro do relógio que aponta para as horas avança numa direção, não salta horas e, eventualmente, volta ao início depois de alcançar o último número.<br/><br/>

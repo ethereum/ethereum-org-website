@@ -12,7 +12,7 @@ import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import meetups from "@/data/community-meetups.json"
 
-import { Alert, AlertContent, AlertDescription } from "./ui/alert"
+import { Alert, AlertContent, AlertDescription, AlertEmoji } from "./ui/alert"
 import { Flex } from "./ui/flex"
 import Input from "./ui/input"
 import InlineLink, { BaseLink } from "./ui/Link"
@@ -103,7 +103,7 @@ const MeetupList = () => {
       <div aria-live="assertive" aria-atomic>
         {!filteredMeetups.length && (
           <Alert variant="update">
-            <Emoji text=":information_source:" className="text-4xl" />
+            <AlertEmoji text=":information_source:" />
             <AlertContent>
               <AlertDescription>
                 <Translation id="page-community:page-community-meetuplist-no-meetups" />{" "}

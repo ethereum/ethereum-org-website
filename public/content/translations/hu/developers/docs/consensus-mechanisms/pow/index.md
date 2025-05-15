@@ -7,7 +7,7 @@ lang: hu
 Az Ethereum-hálózat kezdetben egy olyan konszenzusmechanizmust használt, amely a **[proof-of-work (PoW)](/developers/docs/consensus-mechanisms/pow)** koncepciót használta. Ez lehetővé tette az Ethereum-hálózat csomópontjai számára, hogy az összes Ethereum-blokkláncra feljegyzett információ állapotáról megegyezzenek és kivédjenek bizonyos gazdasági támadásokat. Ugyanakkor az Ethereum 2022-ben leváltotta a proof-of-work mechanizmust, és helyette a [proof-of-stake (letéti igazolás)](/developers/docs/consensus-mechanisms/pos) koncepcióját vezette be.
 
 <Alert variant="update">
-<Emoji text=":wave:" className="text-4xl"/>
+<AlertEmoji text=":wave:"/>
 <AlertContent>
 <AlertDescription>
     A proof-of-work ezzel kivezetésre került. A konszenzusmechanizmusnak többé nem része a proof-of-work az Ethereumon. Ehelyett a proof-of-stake mechanizmus működik. Tudjon meg többet a <a href="/developers/docs/consensus-mechanisms/pos/">proof-of-stake-ről</a> és a <a href="/staking/">letétbe helyezésről</a>.

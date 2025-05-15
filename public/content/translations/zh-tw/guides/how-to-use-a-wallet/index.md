@@ -64,7 +64,7 @@ lang: zh-tw
 6. 大功告成！ 開始使用應用程式。 你可在我們的[去中心化應用程式頁面](/dapps/#explore)找到許多有趣的專案。 <br />
 
 <Alert variant="update">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>想要學習更多功能嗎？</div>
   <ButtonLink href="/guides/">

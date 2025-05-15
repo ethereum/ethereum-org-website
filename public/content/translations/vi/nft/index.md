@@ -55,7 +55,7 @@ NFT được dùng cho nhiều thứ, bao gồm:
 Có thể bạn là một nghệ sĩ muốn chia sẻ tác phẩm của mình bằng NFT mà không bị mất quyền kiểm soát chúng hoặc hy sinh lợi nhuận của mình cho các bên trung gian. Bạn có thể tạo một hợp đồng mới và định sẵn số lượng NFT, thuộc tính của chúng và một liên kết tới một tác phẩm nghệ thuật cụ thể nào đó. Là nghệ sĩ, **bạn có thể lập trình vào hợp đồng thông minh phí bản quyền** sẽ được trả cho bạn (ví dụ như giữ lại 5% giá chuyển nhượng tới người tạo ra NFT mỗi lần NFT này được chuyển đi). Bạn có thể chứng minh rằng bạn đã tạo ra những NFT đó bởi vì bạn sở hữu [địa chỉ ví](/glossary/#wallet) dùng để triển khai hợp đồng đó. Người mua NFT của bạn có thể dễ dàng chứng minh rằng họ sở hữu **NFT xác thực** từ bộ sưu tập của bạn bởi vì [địa chỉ](/glossary/#address) ví của họ được liên kết với một token trong hợp đồng thông minh của bạn. Họ có thể dùng nó trong hệ sinh thái Ethereum và yên tâm về tính xác thực của nó.
 
 <Alert variant="update" className="mt-8">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>Khám phá, mua hay tạo ra các tác phẩm nghệ thuật/bộ sưu tập NFT của riêng bạn...</div>
   <ButtonLink href="/dapps/?category=collectibles#explore">

@@ -62,7 +62,7 @@ Miközben az Ethereum energiafogyasztása nagyon alacsony, egy jelentős, fejlő
 A web3 közjó-finanszírozási platformjai, mint a [Gitcoin](https://gitcoin.co) klímaköröket működtetnek, hogy elősegítsék az Ethereum alkalmazási rétegének környezettudatos építését. Ezen kezdeményezések (és mások, mint a [decentralizált tudomány / DeSci](/desci/)) kialakulása által az Ethereum egy környezeti és közösségi szempontból pozitív technológia.
 
 <Alert variant="update">
-<Emoji text=":evergreen_tree:" className="text-4xl"/>
+<AlertEmoji text=":evergreen_tree:" />
 <AlertContent>
 <AlertDescription>
   Ha szeretne az oldallal kapcsolatban fejlesztést javasolni, akkor naplózzon egy kérést (issue) vagy PR-t. A statisztikák nyilvánosan elérhető adatokból készült becslések, nem hivatalos állítások vagy ígéretek az ethereum.org csapat vagy az Ethereum Alapítvány részéről.

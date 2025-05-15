@@ -62,7 +62,7 @@ Web3 дае вам магчымасць валодання вашымі лічб
 Web3 дазваляе прамое валоданне праз [нятоесныя токены (NFT)](/glossary/#nft). Ніхто, нават стваральнікі гульні, не маюць улады забраць у вас права валодання. І, калі вы спыніце гульню, вы можаце прадаць або абмяняць свае прадметы ў гульні на адкрытых рынках і вярнуць іх каштоўнасць.
 
 <Alert variant="update">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row items-center justify-between">
   <div>Даведайцеся больш пра NFT</div>
   <ButtonLink href="/nft/">
@@ -90,7 +90,7 @@ DAOs тэхнічна вызначаюцца як дамоўленасці [ра
 Тым не менш, многія Web3 супольнасці вызначаюцца як DAOs. Гэтыя супольнасці маюць розныя ўзроўні дэцэнтралізацыі і аўтаматызацыі праз код. У дадзены момант мы даследуем, што такое DAOs, і як яны могуць развівацца ў будучыні.
 
 <Alert variant="update">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row items-center justify-between">
   <div>Learn more about DAOs</div>
   <ButtonLink href="/dao/">

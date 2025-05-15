@@ -62,7 +62,7 @@ CCRIによる推定では、マージによってイーサリアムの年間電�
 [Gitcoin](https://gitcoin.co)のようなWeb3ネイティブの公共財資金調達プラットフォームは、イーサリアムのアプリケーションレイヤー上で環境に配慮した構築を促進するために気候ラウンドを実行します。 これらの開発(例:[DeSci](/desci/)など)を通じて、イーサリアムは環境的にも社会的にもネットポジティブな技術になりつつあります。
 
 <Alert variant="update">
-<Emoji text=":evergreen_tree:" className="text-4xl"/>
+<AlertEmoji text=":evergreen_tree:" />
 <AlertContent>
 <AlertDescription>
   このページの精度の向上に貢献できるとお考えの方は、問題またはPRを提起してください。 このページの統計は、公開されているデータに基づく推定値であり、ethereum.orgチームやイーサリアム・ファウンデーションの公式声明や約束を示すものではありません。

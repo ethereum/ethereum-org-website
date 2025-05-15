@@ -44,7 +44,7 @@ Roimh uasghrádú Shanghai/Capella, ní raibh tú in ann do ETH geallta a úsái
 Is céim riachtanach é seoladh aistarraingthe a sholáthar d’aon chuntas bailíochtóra sula mbeidh sé incháilithe ETH a aistarraingt óna iarmhéid.
 
 <Alert variant="warning">
-<Emoji text="⚠️" className="text-4xl"/>
+<AlertEmoji text="⚠️"/>
 <AlertContent>
 <AlertDescription>
   <strong>Ní féidir ach seoladh aistarraingthe amháin a shannadh do gach cuntas bailíochtóra, uair amháin.</strong> Nuair a roghnaítear seoladh agus a chuirtear isteach sa tsraith chomhthola é, ní féidir é seo a chealú nó a athrú arís. Déan seiceáil faoi dhó ar úinéireacht agus ar chruinneas an tseolta a cuireadh ar fáil sula gcuirtear isteach é.
@@ -88,7 +88,7 @@ Breathnaigh ar an míniú seo ar aistarraingtí geallchuir Ethereum ag Finematic
 Nuair atá bailíochtóir sceidealta chun an chéad bhloc eile a mholadh, ní mór dó scuaine aistarraingthe a thógáil, de suas le 16 aistarraingt incháilithe. Déantar é seo trí thosú ar dtús le hinnéacs bailíochtóra 0, ag cinneadh an bhfuil aistarraingt incháilithe don chuntas seo de réir rialacha an phrótacail, agus é a chur leis an scuaine má tá. Tógfaidh an bailíochtóir atá socraithe chun an bloc seo a leanas a mholadh an áit atá fágtha ag an gceann deireanach, ag dul ar aghaidh in ord ar feadh tréimhse éiginnte.
 
 <Alert variant="update">
-<Emoji text="🕛" className="text-4xl"/>
+<AlertEmoji text="🕛"/>
 <AlertContent>
 <AlertDescription>
 Smaoinigh ar chlog analógach. Díríonn an lámh ar an gclog go dtí an uair, téann sí ar aghaidh i dtreo amháin, ní scipeann sí uaireanta ar bith, agus sa deireadh filleann sí ar ais go dtí an tús arís tar éis an uimhir dheireanach a shroicheadh.<br/><br/>

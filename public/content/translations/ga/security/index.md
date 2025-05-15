@@ -125,7 +125,7 @@ Mar riail ghinearálta, ní bheidh an fhoireann i dteagmháil leat trí bhealaí
 - Ná déan cumarsáid riamh lasmuigh de bhealaí ainmnithe eagraíochta
 
 <Alert variant="update">
-<Emoji text=":lock:" className="text-4xl"/>
+<AlertEmoji text=":lock:"/>
 <AlertContent>
 <AlertDescription>
     Tabhair faoi deara: cé go dtarlaíonn camscéimeanna ar stíl tacaíochta go coitianta ar Discord, is féidir leo a bheith coitianta freisin ar aon fheidhmchláir chomhrá ina dtarlaíonn plé crypto, lena n-áirítear ríomhphost.
@@ -219,7 +219,7 @@ Ní focal faire láidir a thuilleadh é pasfhocal láidir a nochtaíodh i sárú
 ### Bain úsáid as bainisteoir phasfhocal {#use-password-manager}
 
 <Alert variant="update">
-<Emoji text=":bulb:" className="text-4xl"/>
+<AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
     Trí úsáid a bhaint as bainisteoir phasfhocail déantar cúram de phasfhocail láidre, uathúla a chruthú agus de chuimhneamh orthu! Molaimid go <strong>láidir</strong> ceann a úsáid, agus tá an chuid is mó acu saor in aisce!
@@ -249,7 +249,7 @@ Ar uairibh iarrtar ort d’aitheantas a fhíordheimhniú trí chruthúnas uathú
 Má úsáidtear **Fíordheimhniú Dhá Fhachtóir (2FA)** soláthraítear *fachtóir slándála* breise do do chuntais ar líne. Cinntíonn 2FA nach leor do phasfhocal a bheith agat chun rochtain a fháil ar chuntas. Go coitianta, is é an dara fachtóir cód randamach 6-dhigit, ar a dtugtar **focal faire aonuaire (TOTP) ama-bhunaithe**, ar féidir leat rochtain a fháil air trí aip fíordheimhnitheora mar Google Authenticator nó Authy. Feidhmíonn siad seo mar fhachtóir "rud éigin leat" toisc go bhfuil an síol a ghineann an cód uainithe stóráilte ar do ghléas.
 
 <Alert variant="update">
-<Emoji text=":lock:" className="text-4xl"/>
+<AlertEmoji text=":lock:"/>
 <AlertContent>
 <AlertDescription>
     Nóta: Trí 2FA atá SMS-bhunaithe a úsáid beidh tú leochailleach roimh ionsaithe <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">Jacking SIM</a> agus níl sé slán. Ar mhaithe leis an tslándáil is fearr, úsáid seirbhís amhail <a href="https://mashable.com/article/how-to-set-up-google-authenticator">Google Authenticator</a> nó <a href="https://authy.com/">Authy</a>.

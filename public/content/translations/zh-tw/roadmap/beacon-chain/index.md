@@ -35,7 +35,7 @@ summaryPoint3: 信標鏈引入共識邏輯和區塊廣播協定，現在可保�
 使用權益證明作為共識機制是[我們現在擁有的安全、環保、可擴容的以太坊](/roadmap/vision/)的基石。
 
 <Alert variant="update">
-<Emoji text=":money_bag:" className="text-4xl"/>
+<AlertEmoji text=":money_bag:"/>
 <AlertContent>
 <AlertDescription>
   若有興趣成為驗證者或幫助保障以太坊安全，請<a href="/staking/">瞭解有關質押的更多資訊</a>。

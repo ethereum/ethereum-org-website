@@ -66,7 +66,7 @@ H πρώτη σύλληψη της ιδέας του Berners-Lee, γνωστή �
 Το Web3 επιτρέπει την άμεση κυριότητα μέσω των [μη εναλλάξιμων κρυπτοπαραστατικών (NFT)](/glossary/#nft). Κανείς, ούτε καν οι δημιουργοί του παιχνιδιού, έχουν τη δυνατότητα να πάρουν αυτά που σας ανήκουν. Αν σταματήσετε να παίζετε, μπορείτε να πουλήσετε ή να ανταλλάξετε τα αντικείμενα εντός του παιχνιδιού, στην ελεύθερη αγορά και να ανακτήσετε την αξία τους.
 
 <Alert variant="update">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row items-center justify-between">
   <div>Μάθετε περισσότερα για τα NFT</div>
   <ButtonLink href="/nft/">
@@ -94,7 +94,7 @@ H πρώτη σύλληψη της ιδέας του Berners-Lee, γνωστή �
 Ωστόσο, αρκετοί ορίζουν πολλές κοινότητες Web3 ως DAO. Όλες αυτές οι κοινότητες έχουν διαφορετικά επίπεδα αποκέντρωσης και αυτοματοποίησης με κώδικα. Επί τους παρόντος, διερευνούμε τι είναι οι DAO και πως μπορούν να εξελιχθούν στο μέλλον.
 
 <Alert variant="update">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row items-center justify-between">
   <div>Μάθετε περισσότερα για τους DAO</div>
   <ButtonLink href="/dao/">

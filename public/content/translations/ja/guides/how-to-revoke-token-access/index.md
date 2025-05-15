@@ -48,7 +48,7 @@ lang: ja
  <br />
 
 <Alert variant="update">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>さらに詳しく知りたいですか？</div>
   <ButtonLink href="/guides/">

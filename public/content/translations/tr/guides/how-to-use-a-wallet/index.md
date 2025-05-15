@@ -63,7 +63,7 @@ Adresiniz tüm Ethereum projelerinde aynı olacaktır. Hiçbir projeye tek tek k
 6. Bu kadar! Uygulamayı kullanmaya başlayın. [Merkeziyetsiz uygulamalar sayfamızda](/dapps/#explore) bazı ilgi çekici projeleri bulabilirsiniz. <br />
 
 <Alert variant="update">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>Daha fazlasını mı öğrenmek istiyorsunuz?</div>
   <ButtonLink href="/guides/">

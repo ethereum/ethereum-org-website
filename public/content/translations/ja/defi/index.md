@@ -64,7 +64,7 @@ summaryPoint3: オープンソース技術に基づき、誰でもプログラ�
 これは一見奇妙なことのように聞こえます。「なぜ自分のお金をプログラムする必要があるのでしょうか?」 しかし、これはむしろイーサリアムのトークンのデフォルト機能に過ぎません。 誰でも支払いに論理をプログラムすることができます。 プログラミングにより、金融機関が提供するサービスに、ビットコインのコントロールとセキュリティを混在させることができます。 貸し借りや支払いのスケジューリング、インデックスファンドへの投資など、ビットコインではできないことを暗号通貨で行うことができます。
 
 <Alert variant="update">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>イーサリアムを初めて使う方にお勧めの分散型金融(DeFi)アプリケーション</div>
   <ButtonLink href="/dapps/?category=finance#explore">

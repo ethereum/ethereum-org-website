@@ -123,7 +123,7 @@ Zasadniczo pracownicy nigdy nie będą komunikować się z użytkownikiem za po�
 - Nigdy nie komunikuj się poza określonymi kanałami organizacji
 
 <Alert variant="update">
-<Emoji text=":lock:" className="text-4xl"/>
+<AlertEmoji text=":lock:"/>
 <AlertContent>
 <AlertDescription>
     Uwaga: chociaż oszustwa w stylu wsparcia technicznego często zdarzają się na Discordzie, mogą one również występować w innych aplikacjach komunikacyjnych, w których odbywają się dyskusje na temat kryptowalut, w tym w wiadomościach e-mail.
@@ -217,7 +217,7 @@ Silne hasło, które zostało ujawnione w wycieku danych nie jest już silnym ha
 ### Używaj menedżera haseł {#use-password-manager}
 
 <Alert variant="update">
-<Emoji text=":bulb:" className="text-4xl"/>
+<AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
     Korzystanie z menedżera haseł umożliwia tworzenie silnych, unikalnych haseł i ich zapamiętywanie! <strong>Zdecydowanie zalecamy</strong> korzystać z jednego z nich, a większość z nich jest bezpłatna!
@@ -247,7 +247,7 @@ Czasami możemy zostać poproszeni o uwierzytelnienie swojej tożsamości za pom
 Stosowanie **uwierzytelnienia dwuskładnikowego (2FA)** wprowadza dodatkowy *czynnik bezpieczeństwa*  dla Twoich kont online. 2FA gwarantuje, że samo posiadanie hasła nie wystarczy, aby uzyskać dostęp do konta. Najczęściej drugim czynnikiem jest losowy 6-cyfrowy kod, znany jako **jednorazowe hasło czasowe (TOTP)**, do którego można uzyskać dostęp za pośrednictwem aplikacji uwierzytelniającej, takiej jak Google Authenticator lub Authy. Działają one jako „coś, co posiadasz”, ponieważ ziarno, które generuje kod czasowy, jest przechowywane na twoim urządzeniu.
 
 <Alert variant="update">
-<Emoji text=":lock:" className="text-4xl"/>
+<AlertEmoji text=":lock:"/>
 <AlertContent>
 <AlertDescription>
     Uwaga: korzystanie z 2FA opartego na wiadomościach SMS jest podatne na tzw. <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">SIM jacking</a> i nie jest bezpieczne. Dla najlepszej ochrony korzystaj z takich usług, jak <a href="https://mashable.com/article/how-to-set-up-google-authenticator">Google Authenticator</a> lub <a href="https://authy.com/">Authy</a>.

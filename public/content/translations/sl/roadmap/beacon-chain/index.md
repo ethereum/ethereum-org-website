@@ -37,7 +37,7 @@ Zastavljanje deluje podobno, kot je prej [rudarjenje](/developers/docs/consensus
 S prehodom na mehanizem dokaza o deležu je Ethereum postal občutno varnejši in bolj decentraliziran v primerjavi z mehanizmom dokaza o delu. Več ljudi kot sodeluje v omrežju, bolj decentralizirano in varno pred napadi postane.
 
 <Alert variant="update">
-<Emoji text=":money_bag:" className="text-4xl"/>
+<AlertEmoji text=":money_bag:"/>
 <AlertContent>
 <AlertDescription>
   Če želite postati validator in pomagati pri zaščiti Ethereuma, <a href="/staking/">preberite več o zastavljanju</a>.

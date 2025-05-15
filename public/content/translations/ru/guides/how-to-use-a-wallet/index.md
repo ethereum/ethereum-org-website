@@ -63,7 +63,7 @@ lang: ru
 6. Вот и все! Начните пользоваться приложением. Вы найдете некоторые интересные проекты на нашей [странице децентрализованных приложений (dApp)](/dapps/#explore). <br />
 
 <Alert variant="update">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>Хотите узнать больше?</div>
   <ButtonLink href="/guides/">

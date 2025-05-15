@@ -123,7 +123,7 @@ Genel bir kural olarak, ekip sizinle asla özel ve resmi olmayan kanallar aracı
 - Asla bir kuruluşun belirlenmiş kanalları dışında iletişim kurmayın
 
 <Alert variant="update">
-<Emoji text=":lock:" className="text-4xl"/>
+<AlertEmoji text=":lock:"/>
 <AlertContent>
 <AlertDescription>
     Dikkat: Destek tarzı dolandırıcılıklar genellikle Discord'da gerçekleşse de, e-posta da dahil olmak üzere kripto tartışmalarının gerçekleştiği herhangi bir sohbet uygulamasında da yaygın olabilir.
@@ -217,7 +217,7 @@ Bir veri sızıntısında açığa çıkmış olan güçlü bir parola, artık g
 ### Bir şifre yöneticisi kullanın {#use-password-manager}
 
 <Alert variant="update">
-<Emoji text=":bulb:" className="text-4xl"/>
+<AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
     Bir şifre yöneticisi kullanmak; güçlü, benzersiz şifreler oluşturmak ve bunları hatırlama işini sizin için çözer! Bunlardan birini kullanmanızı <strong>şiddetle</strong> öneririz ve çoğu ücretsizdir!
@@ -247,7 +247,7 @@ Bazen sizden kimliğinizi benzersiz kanıtlarla doğrulamanız istenebilir. Bunl
 **İki Faktörlü Doğrulama (2FA)** kullanmak, çevrimiçi hesaplarınıza ekstra bir *güvenlik faktörü* eklemenizi sağlar. 2FA, sadece bir parolaya sahip olmanın bir hesaba girmek için yeterli olmamasını sağlar. En yaygın olarak, ikinci faktör **zaman esaslı tek seferlik şifre (TOTP)** olarak bilinen, Google Authenticator veya Authy gibi bir doğrulayıcı uygulamadan ulaşabileceğiniz rastgele seçilmiş 6 haneli bir koddur. Bunlar "senin sahip olduğun bir şey" faktörü ile çalışırlar çünkü zamanlı kodu oluşturan tohum, sizin aygıtınızda depolanır.
 
 <Alert variant="update">
-<Emoji text=":lock:" className="text-4xl"/>
+<AlertEmoji text=":lock:"/>
 <AlertContent>
 <AlertDescription>
     Not: SMS tabanlı 2FA kullanımı, <a href="https://www.vice.com/tr/makale/3kx4ej/sim-jacking-mobile-phone-fraud">SIM hırsızlığı</a> tehlikesine karşı açıktır ve güvenli değildir. En iyi güvenlik için <a href="https://mashable.com/article/how-to-set-up-google-authenticator">Google Authenticator</a> ya da <a href="https://authy.com/">Authy</a> gibi bir hizmet kullanın.

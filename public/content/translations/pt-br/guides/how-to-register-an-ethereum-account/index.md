@@ -39,7 +39,7 @@ Depois de salvar sua frase de recuperação, você verá o painel da sua carteir
  <br />
 
 <Alert variant="update">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
   <div>Quer saber mais?</div>
   <ButtonLink href="/guides/">

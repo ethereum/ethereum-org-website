@@ -53,7 +53,7 @@ Sie können [chainlist.org](http://chainlist.org) verwenden, um die RPC-Details 
 <br />
 
 <Alert variant="update">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>Möchten Sie mehr erfahren?</div>
   <ButtonLink href="/guides/">

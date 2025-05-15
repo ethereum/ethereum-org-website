@@ -44,7 +44,7 @@ Trước bản nâng cấp Shanghai/Capella, bạn không thể sử dụng ho�
 Cung cấp địa chỉ rút tiền là bước bắt buộc đối với tất cả tài khoản nút xác thực trước khi có thể rút ETH từ số dư của tài khoản đó.
 
 <Alert variant="warning">
-<Emoji text="⚠️" className="text-4xl"/>
+<AlertEmoji text="⚠️"/>
 <AlertContent>
 <AlertDescription>
   <strong>Mỗi tài khoản nút xác thực chỉ có một địa chỉ rút tiền duy nhất, vào một thời điểm.</strong> Sau khi chọn và gửi địa chỉ lên lớp đồng thuận, bạn sẽ không thể hoàn tác hoặc thay đổi lại. Hãy kiểm tra thật kỹ quyền sở hữu và độ chính xác của địa chỉ được cung cấp trước khi nộp.
@@ -88,7 +88,7 @@ Hãy xem qua giải thích này của Finematics về rút cổ phần Ethereum:
 Khi một nút xác thực được chọn để đề xuất khối tiếp theo, cần xây dựng một hàng đợi rút tiền, tối đa 16 lệnh rút tiền hợp lệ. Quá trình này được thực hiện bằng cách bắt đầu với nút xác thực có chỉ số 0, kiểm tra xem theo quy tắc của giao thức, tài khoản này có lệnh rút tiền hợp lệ không và thêm nó vào danh sách nếu có. Nút xác thực được chọn để đề xuất khối tiếp theo sẽ bắt đầu từ vị trí nút xác thực trước đó dừng lại và tiếp tục theo thứ tự vô hạn.
 
 <Alert variant="update">
-<Emoji text="🕛" className="text-4xl"/>
+<AlertEmoji text="🕛"/>
 <AlertContent>
 <AlertDescription>
 Hãy tưởng tượng một chiếc đồng hồ kim. Kim đồng hồ chỉ giờ, di chuyển theo một hướng, không bỏ qua giờ nào và cuối cùng quay trở lại vị trí ban đầu sau khi đến số cuối cùng.<br/><br/>

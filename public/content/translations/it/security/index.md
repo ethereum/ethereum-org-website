@@ -125,7 +125,7 @@ Come regola generale, il personale non comunicherà mai con te attraverso canali
 - Non comunicare mai al di fuori dai canali designati dall'organizzazione
 
 <Alert variant="update">
-<Emoji text=":lock:" className="text-4xl"/>
+<AlertEmoji text=":lock:"/>
 <AlertContent>
 <AlertDescription>
     Attenzione: anche se le truffe di questo tipo avvengono comunemente su Discord, possono anche essere prevalenti su qualsiasi applicazione di chat dove si discute di criptovalute, comprese le e-mail.
@@ -219,7 +219,7 @@ Una password forte rivelata in una violazione di dati non è più una password f
 ### Usa un gestore di password {#use-password-manager}
 
 <Alert variant="update">
-<Emoji text=":bulb:" className="text-4xl"/>
+<AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
     L'utilizzo di un gestore di password consente di creare password forti e uniche e di ricordarle. <strong>Consigliamo vivamente</strong> di utilizzarne uno, molti di essi sono gratuiti.
@@ -249,7 +249,7 @@ Talvolta, ti potrebbe essere richiesto di autenticare la tua identità tramite p
 L'utilizzo dell'**autenticazione a due fattori (A2F)** costituisce un ulteriore *fattore di sicurezza* per i tuoi conti online. La 2FA assicura che non basti semplicemente avere la tua password per accedere a un conto. Più comunemente, il secondo fattore è un codice casuale di 6 cifre, noto come **password monouso a tempo (TOTP)**, a cui si può accedere attraverso un'app di autenticazione come Google Authenticator o Authy. Esse funzionano come fattore "qualcosa che possiedi" perché il seme che genera il codice a tempo è memorizzato sul tuo dispositivo.
 
 <Alert variant="update">
-<Emoji text=":lock:" className="text-4xl"/>
+<AlertEmoji text=":lock:"/>
 <AlertContent>
 <AlertDescription>
     Nota: l'utilizzo dell'A2F basata su SMS è soggetta a <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">SIM jacking</a> e non è sicura. Per la massima sicurezza, utilizza un servizio come <a href="https://mashable.com/article/how-to-set-up-google-authenticator">Google Authenticator</a> o <a href="https://authy.com/">Authy</a>.

@@ -55,7 +55,7 @@ Els NFT són útils per a moltes coses, com ara:
 Potser sou un artista i voleu compartir la vostra obra utilitzant els NFT, sense perdre'n el control ni sacrificant els vostres beneficis en favor dels intermediaris. Podeu crear un nou contracte i especificar el número d'NFT, les seves propietats i un enllaç a alguna obra d'art específica. Com a artista, **podeu programar dins el contracte intel·ligent els drets d'autor** que hauríeu de pagar (p. ex. transferir el 5 % del preu de venda al propietari del contracte cada vegada que es transfereix un NFT). També podeu demostrar que heu creat els NFT perquè teniu la [cartera](/glossary/#wallet) que va desplegar el contracte. Els vostres compradors poden demostrar fàcilment que posseeixen un **NFT autèntic** de la vostra col·lecció perquè l'[adreça](/glossary/#address) de la seva cartera està associada amb un testimoni en el vostre contracte intel·ligent. Poden utilitzar-ho en tot l'ecosistema Ethereum, totalment segurs de la seva autenticitat.
 
 <Alert variant="update" className="mt-8">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>Exploreu, compreu o creeu els vostres propis NFT d'art o col·leccionables...</div>
   <ButtonLink href="/dapps/?category=collectibles#explore">

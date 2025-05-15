@@ -44,7 +44,7 @@ Shanghai/Capella yangilanishidan oldin siz garovga qo‘yilgan ETHingizdan foyda
 Har qanday validator hisobi uchun pul yechib olish manzilini taqdim etish - bu hisob balansidan ETH yechib olishga huquq qozonishidan oldingi majburiy qadamdir.
 
 <Alert variant="warning">
-<Emoji text="⚠️" className="text-4xl"/>
+<AlertEmoji text="⚠️"/>
 <AlertContent>
 <AlertDescription>
   <strong>Har bir validator hisobi uchun faqat bitta yechib olish manzili, bir martalik tayinlanishi mumkin.</strong> Manzil tanlanib, konsensus qatlamiga yuborilgandan so‘ng, uni bekor qilish yoki qayta o‘zgartirish mutlaqo imkonsiz bo‘ladi. Yuborishdan avval taqdim etilgan manzilning to‘g‘riligini va uning egasini ikki marta sinchiklab tekshirib chiqing.
@@ -88,7 +88,7 @@ Finematics tomonidan taqdim etilgan Ethereum steykingi yechib olish jarayoni haq
 Validator keyingi blokni taklif etish uchun rejalashtirilganda, u 16 tagacha muvofiq yechib olishlardan iborat yechib olish navbatini tuzishi shart bo‘ladi. Bu jarayon dastlab validator indeksi 0 dan boshlanib, protokol qoidalariga ko‘ra ushbu hisob uchun mablag‘ yechib olishga huquq bor-yo‘qligi aniqlanadi va agar bunday huquq mavjud bo‘lsa, u navbatga qo‘shiladi. Keyingi blokni taklif etish uchun tanlangan tekshiruvchilar to‘plami, oldingi blok yakunlangan joydan boshlab, belgilangan tartibda cheksiz davom etadi.
 
 <Alert variant="update">
-<Emoji text="🕛" className="text-4xl"/>
+<AlertEmoji text="🕛"/>
 <AlertContent>
 <AlertDescription>
 Analog soat haqida o‘ylab ko‘ring. Soat mili vaqtni ko‘rsatadi, faqat bir yo‘nalishda aylanadi, hech qanday soatni o‘tkazib yubormaydi va oxirgi raqamga yetgandan so‘ng yana boshiga qaytadi.<br/><br/>

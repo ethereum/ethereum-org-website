@@ -5,7 +5,7 @@ lang: hi
 ---
 
 <Alert variant="update">
-<Emoji text=":wave:" className="text-4xl"/>
+<AlertEmoji text=":wave:"/>
 <AlertContent>
 <AlertDescription>
    एथाश एथेरियम का प्रूफ-ऑफ-वर्क माइनिंग एल्गोरिथम था। प्रूफ-ऑफ-वर्क को अब **पूरी तरह से बंद कर दिया गया है** और एथेरियम अब इसके बजाय <a href="/developers/docs/consensus-mechanisms/pos/">प्रूफ-ऑफ-स्टेक</a> का उपयोग करके सुरक्षित है। <a href="/roadmap/merge/">द मर्ज</a>, <a href="/developers/docs/consensus-mechanisms/pos/">हिस्सेदारी के सबूत</a> और <a href="/staking/">स्टेकिंग</a> पर अधिक। यह पृष्ठ ऐतिहासिक रुचि के लिए है!  

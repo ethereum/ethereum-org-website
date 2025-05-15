@@ -44,7 +44,7 @@ Sebelum naik taraf Shanghai/Capella, anda tidak boleh menggunakan atau mengakses
 Menyediakan alamat pengeluaran adalah langkah yang diperlukan untuk mana-mana akaun pengesah sebelum ia layak untuk mengeluarkan ETH daripada bakinya.
 
 <Alert variant="warning">
-<Emoji text="⚠️" className="text-4xl"/>
+<AlertEmoji text="⚠️"/>
 <AlertContent>
 <AlertDescription>
   <strong>Setiap akaun pengesah hanya boleh diberikan satu alamat pengeluaran, sekali sahaja.</strong> Setelah alamat dipilih dan diserahkan ke lapisan persetujuan, ini tidak boleh dibuat asal atau ditukar lagi. Periksa semula pemilikan dan ketepatan alamat yang diberikan sebelum menyerahkan.
@@ -88,7 +88,7 @@ Lihat penjelasan ini mengenai pengeluaran pertaruhan Ethereum oleh Finematics:
 Apabila pengesah dijadualkan untuk mencadangkan blok seterusnya, ia dikehendaki membina baris gilir pengeluaran, sehingga 16 pengeluaran yang layak. Ini dilakukan dengan asalnya bermula dengan indeks pengesah 0, menentukan sama ada terdapat pengeluaran yang layak untuk akaun ini mengikut peraturan protokol dan menambahkannya pada baris giliran, jika ada. Pengesah yang ditetapkan untuk mencadangkan blok berikut akan bersambung di tempat terakhir berhenti, maju mengikut urutan secara kekal.
 
 <Alert variant="update">
-<Emoji text="🕛" className="text-4xl"/>
+<AlertEmoji text="🕛"/>
 <AlertContent>
 <AlertDescription>
 Fikirkan tentang jam analog. Jarum pada jam menunjukkan jam, bergerak ke satu arah, tidak melangkau sebarang jam dan akhirnya berputar ke permulaan semula selepas nombor terakhir dicapai.<br/><br/> Sekarang bukannya 1 hingga 12, bayangkan jam mempunyai 0 hingga N <em>(jumlah bilangan akaun pengesah yang pernah didaftarkan pada lapisan persetujuan, lebih 500,000 pada Januari 2023).</em><br/><br/>

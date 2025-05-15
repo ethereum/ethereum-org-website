@@ -65,7 +65,7 @@ Ethereum se basa en esto. Al igual que Bitcoin, las reglas no pueden cambiar en 
 Esto puede sonar extraño... ¿por qué querría programar mi dinero? Sin embargo, esto no es más que una característica natural de los tókenes en Ethereum. Cualquier persona puede programar operaciones lógicas dentro de los pagos. De esta manera, puede obtener el control y la seguridad de Bitcoin combinado con los servicios que proveen las instituciones financieras. Esto le permite realizar actividades con las criptomonedas que no podría hacer en Bitcoin como prestar o pedir un préstamo, planificar pagos, invertir en fondos indexados y más.
 
 <Alert variant="update">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>Si es nuevo en Ethereum, explore y pruebe algunas de nuestras sugerencias de aplicaciones DeFi.</div>
   <ButtonLink href="/dapps/?category=finance#explore">

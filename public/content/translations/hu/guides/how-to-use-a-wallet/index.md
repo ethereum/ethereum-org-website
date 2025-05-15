@@ -63,7 +63,7 @@ Az Ön címe minden Ethereum-projekt esetében azonos. Nem kell regisztrálnia k
 6. Készen is van! Kezdje el használni az alkalmazást. Számos érdekes projektet találhat a [dapp oldalunkon](/dapps/#explore). <br />
 
 <Alert variant="update">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>Szeretne többet megtudni?</div>
   <ButtonLink href="/guides/">

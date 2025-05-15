@@ -5,7 +5,7 @@ lang: el
 ---
 
 <Alert variant="update">
-<Emoji text=":wave:" className="text-4xl"/>
+<AlertEmoji text=":wave:"/>
 <AlertContent>
 <AlertDescription>
    Το Ethash ήταν ο αλγόριθμος κρυπτόρυξης της απόδειξης εργασίας του Ethereum. Η απόδειξη εργασίας έχει τώρα **απενεργοποιηθεί εντελώς** και το Ethereum είναι πλέον ασφαλισμένο χρησιμοποιώντας <a href="/developers/docs/consensus-mechanisms/pos/">απόδειξη συμμετοχής</a>. Διαβάστε περισσότερα για τη <a href="/roadmap/merge/">Συγχώνευση</a>, <a href="/developers/docs/consensus-mechanisms/pos/">την Απόδειξη συμμετοχής</a> και την <a href="/staking/">Αποθήκευση κεφαλαίου</a>. Αυτή η σελίδα είναι για ιστορικό ενδιαφέρον!  

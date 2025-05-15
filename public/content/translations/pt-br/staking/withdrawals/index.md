@@ -44,7 +44,7 @@ Antes da atualização Shanghai/Capella, não era possível usar ou acessar seu 
 Fornecer um endereço de saque é uma etapa necessária para qualquer conta de validador, antes que ele seja elegível para sacar ETH de seu saldo.
 
 <Alert variant="warning">
-<Emoji text="⚠️" className="text-4xl"/>
+<AlertEmoji text="⚠️"/>
 <AlertContent>
 <AlertDescription>
   <strong>Cada conta de validador pode ser atribuída a um único endereço de saque, uma única vez.</strong> Após a seleção e envio do endereço à camada de consenso, isso não pode ser desfeito ou alterado novamente. Verifique a propriedade e a precisão do endereço fornecido antes de enviar.
@@ -88,7 +88,7 @@ Confira esta explicação sobre saques de staking do Ethereum pela Finematics:
 Quando um validador está agendado para propor o próximo bloco, ele é necessário para construir uma fila de saque de até 16 saques elegíveis. Isso é feito originalmente começando com o validador de índice 0, determinando se há um saque elegível para essa conta, conforme as regras do protocolo, e adicionando-o à fila, se houver. O validador definido para propor o bloco seguinte continuará de onde o último parou, progredindo em ordem indefinidamente.
 
 <Alert variant="update">
-<Emoji text="🕛" className="text-4xl"/>
+<AlertEmoji text="🕛"/>
 <AlertContent>
 <AlertDescription>
 Pense em um relógio analógico. O ponteiro no relógio aponta para a hora, avança em uma direção, não pula nenhuma hora e, por fim, volta ao início após alcançar o último número.<br/><br/>

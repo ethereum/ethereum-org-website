@@ -1,11 +1,10 @@
 import Translation from "@/components/Translation"
 
-import { Alert, AlertContent, AlertDescription } from "./ui/alert"
-import Emoji from "./Emoji"
+import { Alert, AlertContent, AlertDescription, AlertEmoji } from "./ui/alert"
 
 const ProductDisclaimer = () => (
   <Alert variant="warning">
-    <Emoji text="⚠️" className="text-4xl" />
+    <AlertEmoji text="⚠️" />
     <AlertContent>
       <AlertDescription>
         <Translation id="product-disclaimer" />

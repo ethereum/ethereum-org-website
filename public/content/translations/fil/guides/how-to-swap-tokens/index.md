@@ -50,7 +50,7 @@ Awtomatiko mong matatanggap ang mga na-swap na token sa wallet mo kapag naiprose
 <br />
 
 <Alert variant="update">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>Gusto mong magbasa pa?</div>
   <ButtonLink href="/guides/">

@@ -63,7 +63,7 @@ O ní láti fún ẹnikẹ́ni tó bá fẹ́ fi owó ránṣẹ́ sí ọ ní àd
 6. Òhun nìyẹn! Bẹ̀rẹ̀ sí ní lo ohun èlò náà. O le rí díẹ̀ nínú àwọn iṣẹ́ àkànṣe tó wúni lórí[ojú-ewè Dapps wa](/dapps/#explore). <br />
 
 <Alert variant="update">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>Ṣe o f mọ̀ síi?</div>
   <ButtonLink href="/guides/">

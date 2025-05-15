@@ -44,7 +44,7 @@ Kafin shi Shanghai/Capella su inganta, bazaka iya anfani ko samun ribar ba ETH. 
 Samar da adireshi na cirewa ana buƙatan shi a duk wata gaba a duk wata asusun da aka ingantaahi kafin yazama halastacce wajen samun cire ETH daga abinda ka ajiye.
 
 <Alert variant="warning">
-<Emoji text="⚠️" className="text-4xl"/>
+<AlertEmoji text="⚠️"/>
 <AlertContent>
 <AlertDescription>
   <strong> A kowane ingancaccan asusu akan sanya adireshi cirewa gudaɗaya, sau ɗaya.</strong> matukar adireshin da aka zaɓa aka bada shi wa masu dedetawa, wannan asusun bazai tabuɓa ko kuma a canzuwa. Dubar mallaka sau biyu da kwarewar adireshin da aka samar kafin kaddamarwa.
@@ -88,7 +88,7 @@ Ka duba wannan bayanan ajiyar Ethereum da cirewa na Finematics:
 Lokacin da tabbatarwa an tsara hi ta tallafawa kullewa na gaba, yana bukatar gina layin cirewa, na har sawan halastaccan cirewa sau 16. Wannan na yuwuwane daga asalin farawa da tabbatarwa lissafin 0, duba yuwuwar halastan cirewa a wanna asusun a duk dokokin da sare-saren, da karawa akan intanet ɗin akwai. Mai tabbatarwa zai shirya tallafawa makullai masu zuwa wajen ɗaukan na ƙarshe da aka bari, da cigaban saboda rashin iyaka.
 
 <Alert variant="update">
-<Emoji text="🕛" className="text-4xl"/>
+<AlertEmoji text="🕛"/>
 <AlertContent>
 <AlertDescription>
 Yi tunani akan agogo mai juyawa. Hannun da yake jan agogon yana nuna sa'a ne, cigabanshi akan hanyarshi, bai sallake wani sa'a, kuma daga bisani yakan dawo farkon inda ya fara bayan lamban karshe.<br/><br/>

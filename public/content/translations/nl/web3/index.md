@@ -68,7 +68,7 @@ Web3 geeft je op ongekende manier eigendom van je digitale activa. Bijvoorbeeld,
 Web3 staat directe eigendom toe via [niet-fungibele tokens (NFT's)](/glossary/#nft). Niemand, zelfs niet de makers van het spel, heeft de macht om je je eigendom af te nemen. En als je stopt met spelen, kun je je in-game items verkopen of verhandelen op open markten en hun waarde terugverdienen.
 
 <Alert variant="update">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row items-center justify-between">
   <div>Lees meer over NFT's</div>
   <ButtonLink href="/nft/">
@@ -98,7 +98,7 @@ DAO's worden technisch gedefinieerd als overeengekomen [slimme contracten](/glos
 Veel Web3-gemeenschappen worden echter gedefinieerd als DAO's. Deze gemeenschappen hebben allemaal verschillende niveaus van decentralisatie en automatisering per code. Momenteel onderzoeken we wat DAO's zijn en hoe ze in de toekomst kunnen evolueren.
 
 <Alert variant="update">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row items-center justify-between">
   <div>Leer meer over DAO's</div>
   <ButtonLink href="/dao/">

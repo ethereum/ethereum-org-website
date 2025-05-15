@@ -63,7 +63,7 @@ Adreesị gị ga-abụ otu na nkwekọrịta Ethereum niile. I kwesighị ịde
 6. Ọ bụ ya! Malitezie iji ngwa ahụ. I nwere ike ịhụ ụfọdụ ọrụ dị mma na [peeji Ngwa nbipu anyị](/dapps/#explore). <br />
 
 <Alert variant="update">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>Chọrọ ịmụtakwu?</div>
   <ButtonLink href="/guides/">

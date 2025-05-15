@@ -14,7 +14,12 @@ import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import Tooltip from "@/components/Tooltip"
 import Translation from "@/components/Translation"
-import { Alert, AlertContent, AlertDescription } from "@/components/ui/alert"
+import {
+  Alert,
+  AlertContent,
+  AlertDescription,
+  AlertEmoji,
+} from "@/components/ui/alert"
 import {
   Button,
   ButtonLink,
@@ -399,7 +404,7 @@ const DepositContractPage = () => {
                 </>
               )}
               <Alert variant="warning">
-                <Emoji text=":warning:" className="text-4xl" />
+                <AlertEmoji text=":warning:" />
                 <AlertContent>
                   <AlertDescription>
                     {t("page-staking-deposit-contract-warning-2")}{" "}

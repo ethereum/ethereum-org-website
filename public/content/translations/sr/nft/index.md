@@ -55,7 +55,7 @@ NFT-ovi se koriste u mnoge svrhe, uključujući:
 Možda ste umetnik koji želi da podeli svoj rad koristeći NFT-ove, bez gubljenja kontrole i žrtvovanja profita u korist posrednika. Možete kreirati novi ugovor i tačno odrediti broj NFT-ova, njihove karakteristike i link ka određenom umetničkom delu. Kao umetnik, **u pametni ugovor možete da programirate autorske naknade ** koje treba da vam se isplate (na primer, preneti 5% od prodajne cene vlasniku ugovora svaki put kada se NFT prenese). Takođe, uvek možete dokazati da ste vi kreirali NFT jer posedujete [novčanik](/glossary/#wallet) koji je sproveo ugovor. Kupci mogu jednostavno da dokažu vlasništvo nad **jedinstvenim NFT-om** iz vaše kolekcije zato što je njihova [adresa](/glossary/#address) novčanika povezana sa tokenom u pametnom ugovoru. Mogu da koriste taj NFT u Ethereum ekosistemu sa uverenjem u njegovu autentičnost.
 
 <Alert variant="update" className="mt-8">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>Istražite, kupite ili kreirajte vlastitu NFT umetninu/kolikcionarske predmete...</div>
   <ButtonLink href="/dapps/?category=collectibles#explore">

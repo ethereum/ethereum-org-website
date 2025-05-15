@@ -42,7 +42,7 @@ O parolă puternică nu oferă la fel de multă protecție dacă parola este dez
 ### Folosiți un gestionar de parole {#use-password-manager}
 
 <Alert variant="update">
-<Emoji text=":bulb:" className="text-4xl"/>
+<AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
     Folosirea unui gestionar de parole vă asigură că acesta se va ocupa de crearea de parole puternice, unice și de memorarea acestora! Vă recomandăm <strong>insistent</strong> să folosiți unul, iar majoritatea acestora sunt gratuite!
@@ -72,7 +72,7 @@ Pentru a dovedi că sunteți cu adevărat dvs., există diferite dovezi unice ca
 Utilizarea **Autentificării cu doi factori (2FA)**  oferă un *factor de securitate* suplimentar pentru conturile dvs. online, în așa fel încât numai cunoașterea parolei (ceva ce știți) nu este suficientă pentru a accesa un cont. Cel mai frecvent, al doilea factor este un cod de cifre aleatoriu, cunoscut sub numele de **parolă unică temporară (TOTP)**, care poate fi accesat cu ajutorul unei aplicații de autentificare cum ar fi Google Authenticator sau Authy. Acesta funcționează ca un factor de tipul „ceva ce dețineți”, deoarece fraza de securitate („seed”) care generează codul temporar este stocată pe dispozitivul dvs.
 
 <Alert variant="update">
-<Emoji text=":lock:" className="text-4xl"/>
+<AlertEmoji text=":lock:"/>
 <AlertContent>
 <AlertDescription>
     Observaţie: Utilizarea 2FA bazată pe SMS este vulnerabilă la 
@@ -211,7 +211,7 @@ Ca regulă generală, personalul nu va comunica niciodată cu dvs. prin canale p
 - nu comunicați niciodată cu nimeni din afara canalelor oficiale autorizate de organizație
 
 <Alert variant="update">
-<Emoji text=":lock:" className="text-4xl"/>
+<AlertEmoji text=":lock:"/>
 <AlertContent>
 <AlertDescription>
     Atenție: deși escrocheriile prin pretinsă asistență au loc pe Discord, acestea pot predomina şi pe orice aplicație de chat pe care au loc discuții despre cripto, inclusiv pe e-mail.

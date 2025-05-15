@@ -15,7 +15,12 @@ import FeedbackCard from "@/components/FeedbackCard"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import Translation from "@/components/Translation"
-import { Alert, AlertContent, AlertDescription } from "@/components/ui/alert"
+import {
+  Alert,
+  AlertContent,
+  AlertDescription,
+  AlertEmoji,
+} from "@/components/ui/alert"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import {
   Card,
@@ -207,7 +212,7 @@ const GetEthPage = ({ lastDataUpdateDate }: Props) => {
           </p>
           <Alert className="mx-auto w-fit" variant="update">
             <AlertContent className="flex flex-row items-center gap-4">
-              <Emoji className="text-4xl" text=":wave:" />
+              <AlertEmoji text=":wave:" />
               <AlertDescription>
                 {t("page-get-eth-new-to-eth")}{" "}
                 <InlineLink href="/eth/">

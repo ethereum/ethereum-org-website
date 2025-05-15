@@ -53,7 +53,7 @@ Anda boleh menggunakan [chainlist.org](http://chainlist.org) untuk mencari butir
 <br />
 
 <Alert variant="update">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>Mahu belajar lebih lanjut?</div>
   <ButtonLink href="/guides/">

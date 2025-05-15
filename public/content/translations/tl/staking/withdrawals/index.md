@@ -44,7 +44,7 @@ Bago ang Shanghai/Capella upgrade, hindi mo magamit o ma-access ang iyong na-sta
 Ang pagbibigay ng withdrawal address ay isang kinakailangang hakbang para sa anumang validator account bago ito maging eligible na mag-withdraw ng ETH mula sa balanse nito.
 
 <Alert variant="warning">
-<Emoji text="⚠️" className="text-4xl"/>
+<AlertEmoji text="⚠️"/>
 <AlertContent>
 <AlertDescription>
   <strong>Ang bawat validator account ay maaari lang magkaroon ng isang withdrawal address, nang isang beses lang.</strong> Kapag nakapili na ng address at naisumite na ito sa consensus layer, hindi na ito maaaring bawiin o baguhin ulit. I-double check ang pagmamay-ari at katumpakan ng address na ibinigay bago ito isumite.
@@ -88,7 +88,7 @@ Tingnan ang paliwanag ng Finematics tungkol sa mga pag-withdraw sa staking ng Et
 Kapag nakaiskedyul ang isang validator na magmungkahi ng susunod na block, kailangan nitong gumawa ng withdrawal queue ng hanggang 16 na karapat-dapat na withdrawal. Ito ay ginagawa sa pamamagitan ng pagsisimula sa validator index 0, pagtukoy kung may karapat-dapat na withdrawal para sa account na ito batay sa mga panuntunan ng protokol, at pagdadagdag nito sa queue kung mayroon man. Ang validator na nakatakda na mag-propose ng susunod na bloke ay magpapatuloy kung saan iniwan ng huling bloke, at magpapatuloy ito nang sunod-sunod ng walang katapusan.
 
 <Alert variant="update">
-<Emoji text="🕛" className="text-4xl"/>
+<AlertEmoji text="🕛"/>
 <AlertContent>
 <AlertDescription>
 Para lang itong analog na orasan. Itinuturo ng kamay sa orasan ang oras, umuusad ito sa isang direksyon, wala itong nilalaktawang anumang oras, at sa huli ay bumabalik ito sa simula kapag naabot na nito ang huling numero.<br/><br/>

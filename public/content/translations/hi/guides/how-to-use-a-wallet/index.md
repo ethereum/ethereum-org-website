@@ -63,7 +63,7 @@ lang: hi
 6. बस इतना ही! ऐप का इस्तेमाल शुरू करें। आपको हमारे [dApps पेज](/dapps/#explore) पर कुछ दिलचस्प प्रोजेक्ट मिल सकते हैं। <br />
 
 <Alert variant="update">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>और अधिक सीखना चाहते है?</div>
   <ButtonLink href="/guides/">

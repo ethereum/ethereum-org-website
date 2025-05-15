@@ -5,7 +5,7 @@ lang: fa
 ---
 
 <Alert variant="update">
-<Emoji text=":wave:" className="text-4xl"/>
+<AlertEmoji text=":wave:"/>
 <AlertContent>
 <AlertDescription>
    Ethash الگوریتم استخراج اثبات کار اتریوم بود. اثبات کار اکنون **به طور کامل خاموش شده** و اتریوم اکنون با استفاده از <a href="/developers/docs/consensus-mechanisms/pos/">اثبات سهام</a> امن شده است. درباره‌ <a href="/roadmap/merge/">ادغام</a> و <a href="/developers/docs/consensus-mechanisms/pos/">اثبات سهام</a> و <a href="/staking/">سهام گذاری</a> بیشتر بخوانید. این صفحه صرفاً برای علاقه‌مندان به تاریخ است!  

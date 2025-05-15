@@ -77,7 +77,7 @@ Chcete se dozvědět více? Neváhejte a podívejte se na [dokumentaci k použí
 Jakmile dokončíte překlad (tj. všechny soubory pro obsahový blok ukazují 100 %), náš profesionální překladatelský servis obsah zkontroluje (a případně upraví). Jakmile je kontrola dokončena (tj. pokrok kontroly je 100 %), přidáme ho na web.
 
 <Alert variant="update">
-<Emoji text=":warning:" className="text-4xl"/>
+<AlertEmoji text=":warning:"/>
 <AlertContent>
   Prosím, nepoužívejte strojový překlad. Všechny překlady budou před přidáním na web zkontrolovány. Pokud zjistíme, že vaše navržené překlady jsou strojové, budou odmítnuty a přispěvatelé, kteří často používají strojový překlad, budou z projektu odstraněni.
 </AlertContent>

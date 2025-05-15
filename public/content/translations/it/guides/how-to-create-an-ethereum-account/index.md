@@ -41,7 +41,7 @@ Alcune applicazioni chiederanno di salvare una "frase di recupero" segreta (a vo
 
 <div>
 <Alert variant="update">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
   <div><b>Portafoglio installato?</b><br/>Impara come usarlo.</div>
   <ButtonLink href="/guides/how-to-use-a-wallet">

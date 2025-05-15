@@ -63,7 +63,7 @@ Alamat anda akan sama dalam semua projek Ethereum. Anda tidak perlu mendaftar se
 6. Itu sahaja! Mula menggunakan aplikasi. Anda boleh menjumpai beberapa projek menarik di [halaman dApp](/dapps/#explore) kami. <br />
 
 <Alert variant="update">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>Mahu belajar lebih lanjut?</div>
   <ButtonLink href="/guides/">

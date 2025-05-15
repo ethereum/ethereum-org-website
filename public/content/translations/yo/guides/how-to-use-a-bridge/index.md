@@ -53,7 +53,7 @@ O le lò [chainlist.org](http://chainlist.org) látí wa alaye nẹtiwọọki R
 <br />
 
 <Alert variant="update">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>Ṣe o f mọ̀ síi?</div>
   <ButtonLink href="/guides/">

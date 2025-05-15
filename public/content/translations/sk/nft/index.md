@@ -55,7 +55,7 @@ NFT sa používajú na mnohé účely vrátane:
 Možno ste umelec, ktorý chce zverejniť svoju prácu pomocou NFT bez toho, aby stratil kontrolu a prišiel o svoje zisky kvôli prostredníkom. Môžete vytvoriť nový kontrakt a zadať počet NFT, ich vlastnosti a pridať odkaz na konkrétne umelecké dielo. Ako umelec **môžete do smart kontraktu naprogramovať licenčné poplatky**, ktoré by vám mali byť vyplatené (napr. 5 % z predajnej ceny, čo je vlastníkovi kontraktu vyplatené zakaždým, keď je NFT prevedené na novú adresu). Vždy tiež môžete preukázať, že ste vytvorili NFT, pretože vlastníte [peňaženku](/glossary/#wallet), ktorá kontrakt vytvorila. Vaši kupujúci môžu ľahko preukázať, že vlastnia **autentické NFT** z vašej zbierky, pretože [adresa](/glossary/#address) ich peňaženky je spojená s tokenom vo vašom smart kontrakte. Môžu ho používať v celom ekosystéme Etherea a sú si istí jeho pravosťou.
 
 <Alert variant="update" className="mt-8">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>Preskúmajte, kúpte alebo si vytvorte vlastné NFT umenie/zberateľské predmety…</div>
   <ButtonLink href="/dapps/?category=collectibles#explore">

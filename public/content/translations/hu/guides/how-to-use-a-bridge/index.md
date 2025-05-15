@@ -53,7 +53,7 @@ A [chainlist.org](http://chainlist.org) segít az adott hálózat RPC-adatait me
 <br />
 
 <Alert variant="update">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>Szeretne többet megtudni?</div>
   <ButtonLink href="/guides/">

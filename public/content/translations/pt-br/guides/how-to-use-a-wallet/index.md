@@ -63,7 +63,7 @@ Seu endereço será o mesmo em todos os projetos do Ethereum. Você não precisa
 6. É isso! Comece a usar o app. Você pode encontrar alguns projetos interessantes em nossa [página de dApps](/dapps/#explore). <br />
 
 <Alert variant="update">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>Quer saber mais?</div>
   <ButtonLink href="/guides/">

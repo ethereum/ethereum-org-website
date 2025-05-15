@@ -5,7 +5,7 @@ lang: zh
 ---
 
 <Alert variant="update">
-<Emoji text=":wave:" className="text-4xl"/>
+<AlertEmoji text=":wave:"/>
 <AlertContent>
 <AlertDescription>
    Ethash 是以太坊的工作量证明挖矿算法。 工作量证明现在已经被**完全关闭**，取而代之，以太坊现在使用<a href="/developers/docs/consensus-mechanisms/pos/">权益证明</a>来保证安全。 阅读更多关于<a href="/roadmap/merge/">合并</a>、<a href="/developers/docs/consensus-mechanisms/pos/">权益证明</a>和<a href="/staking/">质押</a>的信息。 此页面是为了满足对历史的兴趣！  

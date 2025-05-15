@@ -35,7 +35,7 @@ Transisi ke bukti taruhan membuat Ethereum secara signifikan lebih aman dan terd
 Dan menggunakan bukti taruhan sebagai mekanisme konsensus adalah komponen dasar untuk [Ethereum yang aman, ramah lingkungan, dan dapat diskalakan yang kita miliki saat ini](/roadmap/vision/).
 
 <Alert variant="update">
-<Emoji text=":money_bag:" className="text-4xl"/>
+<AlertEmoji text=":money_bag:"/>
 <AlertContent>
 <AlertDescription>
   Jika Anda tertarik untuk menjadi validator dan membantu mengamankan Ethereum, <a href="/staking/">pelajari lebih lanjut tentang penaruhan</a>.

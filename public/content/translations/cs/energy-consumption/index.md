@@ -62,7 +62,7 @@ Zatímco spotřeba energie Etherea je velmi nízká, existuje také významné, 
 Nativní platformy pro financování veřejných statků fungujících na principech web3, jako je [Gitcoin](https://gitcoin.co) mají i kola zaměřená na ochranu klimatu, díky čemuž stimulují ekologicky uvědomělý rozvoj na aplikační vrstvě Etherea. Prostřednictvím rozvoje těchto iniciativ (a dalších, např. [DeSci](/desci/)), se Ethereum stává environmentálně a sociálně pozitivní technologií.
 
 <Alert variant="update">
-<Emoji text=":evergreen_tree:" className="text-4xl"/>
+<AlertEmoji text=":evergreen_tree:" />
 <AlertContent>
 <AlertDescription>
   Pokud si myslíte, že by tato stránka mohla být přesnější, založze prosím issue nebo PR. Statistiky na této stránce jsou odhady založené na veřejně dostupných datech – nepředstavují oficiální prohlášení nebo příslib týmu ethereum.org nebo Ethereum Foundation.

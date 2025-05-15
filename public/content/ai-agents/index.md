@@ -62,7 +62,7 @@ Agents like Luna or AIXBT control their own onchain wallet ([AIXBT's wallet](htt
 During Luna's X social campaign #LunaMuralChallenge, Luna selected and rewarded the winners via her Base wallet — marking <strong>the first instance of an AI hiring humans for crypto reward</strong>.
 
 <Alert variant="warning">
-<Emoji text="💡" className="text-4xl"/>
+<AlertEmoji text="💡"/>
 <AlertContent>
 <p className="mt-0"><strong>Good to know</strong></p>
 <p className="mt-2">AI agents and related tools are still in early development and very experimental—use with caution.</p>

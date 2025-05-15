@@ -62,7 +62,7 @@ Ethereum gradi na tem. Kot pri Bitcoinu se pravila ne morejo spremeniti in prav 
 To zveni čudno... "zakaj bi želel programirati svoj denar"? Kakorkoli, to je več kot le privzeta funkcija žetonov na Ethereumu. Kdorkoli lahko v plačila sprogramira logiko. Tako da lahko dobite kontrolo in varnost Bitcoina, zmešano z storitvami, ki jih ponujajo finančne institucije. To vam omogoča, da s kriptovalutami počnete stvari, ki jih z Bitcoinom ne morete. Kot so na primer posojanje in sposojanje, načrtovanje plačil, investiranje v indeksne sklade in še več.
 
 <Alert variant="update">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>Raziščite naše predloge za DeFi aplikacije, ki jih lahko preizkusite, če ste novi v Ethereumu.</div>
   <ButtonLink href="/dapps/?category=finance#explore">Raziščite DeFi Aplikacije</ButtonLink>

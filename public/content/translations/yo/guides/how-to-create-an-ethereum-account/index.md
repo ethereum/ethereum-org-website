@@ -41,7 +41,7 @@ Díẹ̀ nínú àwọn ohun èlò yóò bèèrè fún ọ láti kọ àṣírí
 
 <div>
 <Alert variant="update">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
   <div><b>Ṣé àpamọ́wọ́ ti wà ní orí ẹ̀rọ àgbéká rẹ?</b><br/> Kọ́ bí o ṣe le lòó.</div>
   <ButtonLink href="/guides/how-to-use-a-wallet">

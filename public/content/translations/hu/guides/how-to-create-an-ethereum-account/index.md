@@ -41,7 +41,7 @@ Néhány alkalmazás arra kéri Önt, hogy tároljon el egy titkos kulcsmondatot
 
 <div>
 <Alert variant="update">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
   <div><b>A tárca elkészült?</b><br/>Tanulja meg használni azt.</div>
   <ButtonLink href="/guides/how-to-use-a-wallet">

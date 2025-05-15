@@ -5,7 +5,7 @@ lang: zh-tw
 ---
 
 <Alert variant="update">
-<Emoji text=":wave:" className="text-4xl"/>
+<AlertEmoji text=":wave:"/>
 <AlertContent>
 <AlertDescription>
 工作量證明不再是以太坊共識機制的基礎，這意味著挖礦已完結。 取而代之的是，以太坊由抵押以太幣的驗證者來保障安全。 你能從現在開始質押ETH. 閱讀更多關於<a href='/roadmap/merge/'>合併</a>、<a href='/developers/docs/consensus-mechanisms/pos/'>權益證明</a>和<a href='/staking/'>質押</a>的資訊。 此頁面僅為滿足對歷史的興趣。

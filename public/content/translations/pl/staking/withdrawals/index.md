@@ -44,7 +44,7 @@ Przed aktualizacją Shanghai/Capella nie można było używać ani uzyskiwać do
 Podanie adresu wypłaty jest wymaganym krokiem dla każdego konta walidatora, zanim będzie ono uprawnione do wypłaty ETH ze swojego salda.
 
 <Alert variant="warning">
-<Emoji text="⚠️" className="text-4xl"/>
+<AlertEmoji text="⚠️"/>
 <AlertContent>
 <AlertDescription>
   <strong>Każde konto walidatora może mieć przypisany tylko jeden adres wypłaty, jeden raz.</strong> Po wybraniu adresu i przesłaniu go do warstwy konsensusu nie można tego cofnąć ani zmienić ponownie. Przed wysłaniem sprawdź dwukrotnie własność i poprawność podanego adresu.
@@ -88,7 +88,7 @@ Sprawdź to wyjaśnienie dotyczące wypłat ze stakingu Ethereum przez Finematic
 Gdy walidator ma zaproponować następny blok, musi utworzyć kolejkę wypłat, składającą się z maksymalnie 16 kwalifikujących się wypłat. Odbywa się to poprzez pierwotne rozpoczęcie od indeksu walidatora 0, określając, czy istnieje kwalifikująca się wypłata dla tego konta zgodnie z zasadami protokołu i dodanie jej do kolejki, jeśli tak. Walidator ustawiony na proponowanie następnego bloku będzie kontynuował w miejscu, w którym poprzedni został pozostawiony, postępując w kolejności w nieskończoność.
 
 <Alert variant="update">
-<Emoji text="🕛" className="text-4xl"/>
+<AlertEmoji text="🕛"/>
 <AlertContent>
 <AlertDescription>
 Pomyśl o zegarku analogowym. Wskazówka na zegarze wskazuje godzinę, przesuwa się w jednym kierunku, nie pomija żadnych godzin i ostatecznie zawija się do początku po osiągnięciu ostatniej liczby.<br/><br/>

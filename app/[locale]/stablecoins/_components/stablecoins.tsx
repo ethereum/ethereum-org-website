@@ -19,7 +19,7 @@ import StablecoinBoxGrid from "@/components/StablecoinBoxGrid"
 import StablecoinsTable from "@/components/StablecoinsTable"
 import Tooltip from "@/components/Tooltip"
 import Translation from "@/components/Translation"
-import { Alert } from "@/components/ui/alert"
+import { Alert, AlertEmoji } from "@/components/ui/alert"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Divider } from "@/components/ui/divider"
 import { Flex, FlexProps } from "@/components/ui/flex"
@@ -403,7 +403,7 @@ const StablecoinsPage = ({ markets, marketsHasError }: Props) => {
               </Tooltip>
             </H3>
             <Alert className="mb-4" variant="warning">
-              <Emoji text="⚠️" className="text-4xl" />
+              <AlertEmoji text="⚠️" />
               {t("page-stablecoins-algorithmic-disclaimer")}
             </Alert>
             <p className="mb-6">
@@ -482,7 +482,7 @@ const StablecoinsPage = ({ markets, marketsHasError }: Props) => {
         <Content id="how">
           <H2 className="mt-0">{t("page-stablecoins-types-of-stablecoin")}</H2>
           <Alert variant="warning">
-            <Emoji text="⚠️" className="text-4xl" />
+            <AlertEmoji text="⚠️" />
             <div>
               <H3 className="mb-4 mt-0">
                 {t("page-stablecoins-research-warning-title")}

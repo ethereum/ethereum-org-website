@@ -41,7 +41,7 @@ Kapag na-save mo na ang iyong seed phrase, makikita mo ang iyong balanse sa dash
  <br />
 
 <Alert variant="update">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
   <div>Gusto mong magbasa pa?</div>
   <ButtonLink href="/guides/">

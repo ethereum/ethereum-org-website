@@ -62,7 +62,7 @@ _També hem de tenir en compte que Ethereum no està limitat a simples transacci
 Mentre que el consum energètic d'Ethereum històricament ha estat substancial, hi ha hagut una gran inversió en temps de desenvolupament i intel·lecte en la transició des d'una validació de bloc més àvida d'energia a una més energèticament eficient. Citant [Bankless](http://podcast.banklesshq.com/), la millor forma de reduir l'energia consumida mitjançant la prova de treball és simplement «desconectant-la», que és l'aproximació que Ethereum s'ha proposat fer.
 
 <Alert variant="update">
-<Emoji text=":evergreen_tree:" className="text-4xl"/>
+<AlertEmoji text=":evergreen_tree:" />
 <AlertContent>
 <AlertDescription>
   Si creieu que aquestes afirmacions són incorrectes o poden ser més exactes, plantegeu un problema o una PR. Són estimacions fetes per l'equip d'ethereum.org utilitzant informació accessible públicament i l'actual mapa d'Ethereum. Aquestes afirmacions no representen una promesa oficial des de la Fundació Ethereum.

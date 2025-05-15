@@ -65,7 +65,7 @@ summaryPoint3: 基於所有人都可以編寫的開放原始碼技術。
 這聽起來很奇怪……「我幹嘛把我的錢程式化？」 不過，這只是以太坊代幣的預設功能之一。 所有人都可以在付款時加入程式邏輯。 因此，你可以結合比特幣的控制權和安全性，以及金融機構提供的各種金融服務， 用加密貨幣來做一些比特幣辦不到的事，例如借貸、安排付款、投資指數型基金等等。
 
 <Alert variant="update">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>如果你是剛開始使用以太坊，請嘗試我們推薦的去中心化金融應用程式。</div>
   <ButtonLink href="/dapps/?category=finance#explore">

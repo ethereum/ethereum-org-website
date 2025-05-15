@@ -51,7 +51,7 @@ There are several Ethereum-based prediction markets available. These are some of
 <PredictionMarketLists />
 
 <Alert variant="warning">
-<Emoji text="💡" className="text-4xl"/>
+<AlertEmoji text="💡"/>
 <AlertContent>
 <AlertDescription>
   <p className="mt-0"><strong>Stay mindful of the risks</strong></p>

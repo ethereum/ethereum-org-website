@@ -125,7 +125,7 @@ Az interakciók többsége Discordon történik. A támogatást színlelő csal�
 - Sose kommunikáljon senkivel a szervezet dedikált csatornáin kívül
 
 <Alert variant="update">
-<Emoji text=":lock:" className="text-4xl"/>
+<AlertEmoji text=":lock:"/>
 <AlertContent>
 <AlertDescription>
     Legyen tudatában: hogy a támogatást ajánló csalók gyakran a Discordon jelennek meg, de bármilyen kommunikációs formában ott lehetnek, legyen az chat vagy email.
@@ -219,7 +219,7 @@ Egy erős jelszó, amely egy adatvédelmi incidens során nyilvánossá vált, m
 ### Használjon jelszókezelőt {#use-password-manager}
 
 <Alert variant="update">
-<Emoji text=":bulb:" className="text-4xl"/>
+<AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
     A jelszókezelő erős, egyedi jelszavakat hoz létre és meg is jegyzi azokat! <strong>Erősen</strong> ajánljuk, hogy használjon ilyet, és a legtöbb ingyen van!
@@ -249,7 +249,7 @@ Előfordulhat, hogy arra kérik Önt, hogy egyedi igazolásokkal hitelesítse sz
 A **kétfaktoros hitelesítés (2FA)** használata további *biztonsági tényezőt* biztosít online számlái számára. A 2FA biztosítja, hogy a számlához való hozzáféréshez nem elegendő pusztán a jelszó megléte. Általában a második tényező egy véletlenszerű hatjegyű kód, ami egy **időzített egyszeri jelszó (TOTP)**, amit egy azonosítási alkalmazással ér el, mint a Google Authenticator vagy Authy. Ez az a tényező, ami az Ön birtokában van, mert a kódot adó mag az Ön eszközén található.
 
 <Alert variant="update">
-<Emoji text=":lock:" className="text-4xl"/>
+<AlertEmoji text=":lock:"/>
 <AlertContent>
 <AlertDescription>
     Megjegyzés: az SMS-alapú 2FA azonosítás ki van téve a <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">SIM jacking</a> támadásnak, ezért nem biztonságos. A legmagasabb fokú biztonság érdekében használjon olyan szolgáltatást, mint a <a href="https://mashable.com/article/how-to-set-up-google-authenticator">Google Authenticator </a>vagy az <a href="https://authy.com/">Authy</a>.

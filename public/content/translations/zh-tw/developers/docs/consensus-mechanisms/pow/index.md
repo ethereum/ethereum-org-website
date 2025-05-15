@@ -7,7 +7,7 @@ lang: zh-tw
 在以太坊網路的初期，我們使用一種涉及**[工作量證明 (PoW)](/developers/docs/consensus-mechanisms/pow)** 的共識機制。 這個機制讓以太坊網路的節點對所有在以太坊區塊鏈上紀錄的資訊的狀態達成共識，並可防範某些種類的經濟攻擊。 但是，以太坊於 2022 年停止使用工作量證明，並轉為使用[權益證明](/developers/docs/consensus-mechanisms/pos)。
 
 <Alert variant="update">
-<Emoji text=":wave:" className="text-4xl"/>
+<AlertEmoji text=":wave:"/>
 <AlertContent>
 <AlertDescription>
     現在，業界普遍都已棄用工作量證明。 以太坊亦不在其共識機制內使用工作量證明。 取而代之的，是權益證明。 閱讀更多關於<a href="/developers/docs/consensus-mechanisms/pos/">權益證明</a>和<a href="/staking/">質押</a>的資訊。

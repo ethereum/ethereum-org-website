@@ -77,7 +77,7 @@ Möchten Sie mehr erfahren? Sehen Sie sich die [Dokumentation zur Verwendung des
 Sobald Sie die Übersetzung abgeschlossen haben (d.h. alle Dateien für einen Inhaltsbereich 100% anzeigen), wird unser professioneller Übersetzungsdienst den Inhalt überprüfen (und möglicherweise bearbeiten). Sobald die Überprüfung abgeschlossen ist (d. h. der Überprüfungsfortschritt beträgt 100%), werden wir sie zur Website hinzufügen.
 
 <Alert variant="update">
-<Emoji text=":warning:" className="text-4xl"/>
+<AlertEmoji text=":warning:"/>
 <AlertContent>
   Verwenden Sie keine maschinell erstellten Übersetzungen für das Projekt. Alle Übersetzungen werden vor der Veröffentlichung auf der Website überprüft. Wenn sich herausstellt, dass die von Ihnen vorgeschlagenen Übersetzungen maschinell erstellt wurden, werden sie abgelehnt und Übersetzerinnen und Übersetzer, die häufig maschinelle Übersetzungen verwenden, werden aus dem Projekt entfernt.
 </AlertContent>

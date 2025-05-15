@@ -5,7 +5,7 @@ lang: es
 ---
 
 <Alert variant="update">
-<Emoji text=":wave:" className="text-4xl"/>
+<AlertEmoji text=":wave:"/>
 <AlertContent>
 <AlertDescription>
 La prueba de trabajo ya no es parte de la base del mecanismo de consenso de Ethereum, esto quiere decir que el minado ha sido apagado. En cambio, Ethereum está asegurado por validadores que participan en ETH. Puede comenzar su participación con ETH hoy. Descubrá más cosas sobre <a href='/roadmap/merge/'>La Fusión</a>, <a href='/developers/docs/consensus-mechanisms/pos/'>la prueba de participación (PoS)</a> y <a href='/staking/'>la participación</a>. Esta página es solo de interés histórico.

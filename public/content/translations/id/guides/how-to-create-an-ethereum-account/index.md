@@ -41,7 +41,7 @@ Setelah Anda menyimpan frase benih, Anda seharusnya dapat melihat dasbor dompet 
  <br />
 
 <Alert variant="update">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
   <div>Ingin mempelajari selengkapnya?</div>
   <ButtonLink href="/guides/">

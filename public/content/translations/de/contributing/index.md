@@ -9,7 +9,7 @@ lang: de
 Die ethereum.org-Website, wie Ethereum im Großen und Ganzen, ist ein Open-Source-Projekt. Möchten Sie helfen, [den Zugang zu Ethereum zu verbessern](/about/), dann finden Sie hier Informationen, was Sie tun können.
 
 <Alert variant="update">
-<Emoji text=":tada:" className="text-4xl"/>
+<AlertEmoji text=":tada:"/>
 <AlertContent>
 <AlertDescription>
   Beanspruchen Sie Ihren POAP-Token an. Haben Sie 2022 einen Beitrag zu ethereum.org geleistet, dann wartet ein einzigartiger POAP auf Sie.{" "}<a href="#poap">Mehr zu POAPs</a>.

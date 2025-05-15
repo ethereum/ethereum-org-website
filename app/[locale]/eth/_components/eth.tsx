@@ -8,7 +8,6 @@ import ActionCard from "@/components/ActionCard"
 import CalloutBanner from "@/components/CalloutBanner"
 import Card from "@/components/Card"
 import CardList from "@/components/CardList"
-import Emoji from "@/components/Emoji"
 import EthPriceCard from "@/components/EthPriceCard"
 import EthVideo from "@/components/EthVideo"
 import FeedbackCard from "@/components/FeedbackCard"
@@ -18,7 +17,12 @@ import ListenToPlayer from "@/components/ListenToPlayer"
 import MainArticle from "@/components/MainArticle"
 import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import Translation from "@/components/Translation"
-import { Alert } from "@/components/ui/alert"
+import {
+  Alert,
+  AlertContent,
+  AlertDescription,
+  AlertEmoji,
+} from "@/components/ui/alert"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Divider } from "@/components/ui/divider"
 import { Flex, VStack } from "@/components/ui/flex"
@@ -309,15 +313,17 @@ const EthPage = () => {
             ))}
           </CardContainer>
           <Alert variant="update" className="mx-auto max-w-[55rem]">
-            <Emoji text=":wave:" className="text-7xl" />
-            <div>
-              <b>{t("page-eth-buy-some")}</b>{" "}
-              <Translation id="page-eth:page-eth-buy-some-desc" />{" "}
-              <InlineLink href="/what-is-ethereum/">
-                {t("page-eth-more-on-ethereum-link")}
-              </InlineLink>
-              {t("page-eth-period")}
-            </div>
+            <AlertEmoji text=":wave:" />
+            <AlertContent>
+              <AlertDescription>
+                <b>{t("page-eth-buy-some")}</b>{" "}
+                <Translation id="page-eth:page-eth-buy-some-desc" />{" "}
+                <InlineLink href="/what-is-ethereum/">
+                  {t("page-eth-more-on-ethereum-link")}
+                </InlineLink>
+                {t("page-eth-period")}
+              </AlertDescription>
+            </AlertContent>
           </Alert>
         </Content>
       </GrayContainer>

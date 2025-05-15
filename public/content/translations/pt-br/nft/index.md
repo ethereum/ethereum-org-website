@@ -55,7 +55,7 @@ NFTs são utilizados para diversos fins, incluindo:
 Você talvez seja um artista que deseja compartilhar seu trabalho usando NFTs, sem perder o controle e sacrificar seus lucros para intermediários. Você pode criar um novo contrato e especificar o número de NFTs, as propriedades e um link para um trabalho artístico específico. Como artista, ** você pode programar em um contrato inteligente** os "royalties" que você deve receber (por exemplo, 5% do valor da venda estipulado pelo proprietário sempre que um NFT for transferido). Você também pode provar que criou de fato o NFT, porque você é quem detém a [carteira](/glossary/#wallet) que implantou o contrato. Os compradores podem facilmente provar que eles são donos de um ** NFT autêntico** da sua coleção porque os [endereços](/glossary/#address) da carteira deles está associado com o token do seu contrato inteligente. Eles podem usá-lo em todo o ecossistema Ethereum, com certeza da autenticidade.
 
 <Alert variant="update" className="mt-8">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>Conheça, compre ou crie seus próprios colecionáveis/arte de NFT...</div>
   <ButtonLink href="/dapps/?category=collectibles#explore">

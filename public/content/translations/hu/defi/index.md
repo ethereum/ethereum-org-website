@@ -64,7 +64,7 @@ Az Ethereum is erre épít. A Bitcoinhoz hasonlóan a szabályokat nem változta
 Ez furcsán hangzik... „miért akarnám programozni a pénzemet”? Ez azonban több, mint az Ethereum tokenjeinek alaptulajdonsága. Bárki programozhat valamilyen logikát a kifizetések kezelésébe. Így rendelkezhet a Bitcoin által nyújtott kontrollal és biztonsággal, a pénzügyi intézmények által nyújtott szolgáltatásokkal kombinálva azt. Lehetővé válik, hogy a kriptovalutával olyan műveleteket is véghezvigyen a felhasználó, amit a Bitcoin nem támogat, mint például kölcsön adás és kölcsön vétel, időzített kifizetések, indexalapokba való befektetés stb.
 
 <Alert variant="update">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>Tekintse át azokat a DeFi alkalmazásokat, melyeket kipróbálásra javaslunk, amennyiben Ön most ismerkedik az Ethereummal.</div>
   <ButtonLink href="/dapps/?category=finance#explore">

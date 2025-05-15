@@ -125,7 +125,7 @@ Bilang pangkalahatang panuntunan, hinding-hindi makikipag-usap sa iyo ang staff 
 - Huwag makipag-ugnayan sa labas ng mga itinakdang channel ng organisasyon
 
 <Alert variant="update">
-<Emoji text=":lock:" className="text-4xl"/>
+<AlertEmoji text=":lock:"/>
 <AlertContent>
 <AlertDescription>
     Babala: bagama't madalas mangyari sa Discord ang mga support-style na scam, maaari din itong mangyari sa anumang chat application kung saan nagaganap ang diskusyon tungkol sa crypto, kasama na ang email.
@@ -219,7 +219,7 @@ Ang isang mahirap hulaan na password na nalantad sa isang data breach ay hindi n
 ### Gumamit ng password manager {#use-password-manager}
 
 <Alert variant="update">
-<Emoji text=":bulb:" className="text-4xl"/>
+<AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
     Kapag gumamit ng password manager, ito ang bahalang gumawa ng mga password na mahirap hulaan at walang katulad, at tatandaan nito ang mga ito para sa iyo! <strong>Lubos</strong> naming inirerekomendang gumamit nito, at libre ang karamihan sa mga ito!
@@ -249,7 +249,7 @@ Minsan maaaring hingin sa iyo na patunayan ang iyong pagkakakilanlan sa pamamagi
 Ang paggamit ng **Two-Factor Authentication (2FA)** ay nagbibigay ng karagdagang *security factor* para sa iyong mga online account. Tinitiyak ng 2FA na ang pagkakaroon lamang ng iyong password ay hindi sapat upang ma-access ang isang account. Pinakakaraniwan, ang pangalawang factor ay isang randomized na 6-digit code, na kilala bilang **time-based one-time password (TOTP)**, na maa-access mo sa pamamagitan ng isang authenticator app tulad ng Google Authenticator o Authy. Ito ay gumagana bilang isang factor na "isang bagay na pagmamay-ari mo" dahil ang seed na gumagawa ng timed code ay naka-store sa iyong device.
 
 <Alert variant="update">
-<Emoji text=":lock:" className="text-4xl"/>
+<AlertEmoji text=":lock:"/>
 <AlertContent>
 <AlertDescription>
     Tandaan: Ang paggamit ng SMS-based na 2FA ay madaling mabiktima ng <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud"> SIM jacking </a> at hindi ito secure. Para sa pinakamaigting na seguridad, gumamit ng serbisyo tulad ng <a href="https://mashable.com/article/how-to-set-up-google-authenticator">Google Authenticator</a> o <a href="https://authy.com/">Authy</a>.

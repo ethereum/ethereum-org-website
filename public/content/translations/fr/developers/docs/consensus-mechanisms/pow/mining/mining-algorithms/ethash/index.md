@@ -5,7 +5,7 @@ lang: fr
 ---
 
 <Alert variant="update">
-<Emoji text=":wave:" className="text-4xl"/>
+<AlertEmoji text=":wave:"/>
 <AlertContent>
 <AlertDescription>
    Ethash était l'algorithme de minage par preuve de travail d'Ethereum. La preuve de travail est maintenant **arrêtée entièrement** et Ethereum est maintenant sécurisé en utilisant <a href="/developers/docs/consensus-mechanisms/pos/">la preuve d'enjeu</a> à la place. En savoir plus sur <a href="/roadmap/merge/">La Fusion</a>, <a href="/developers/docs/consensus-mechanisms/pos/">la preuve d'enjeu</a> et la <a href="/staking/">mise en jeu</a>. Cette page n'a qu'un intérêt historique !  

@@ -63,7 +63,7 @@ Hindi magbabago ang iyong address sa lahat ng Ethereum project. Hindi mo kailang
 6. Tapos na! Simulan nang gamitin ang app. Makakakita ka ng mga kawili-wiling proyekto sa aming [dApps page](/dapps/#explore). <br />
 
 <Alert variant="update">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>Gusto mong magbasa pa?</div>
   <ButtonLink href="/guides/">

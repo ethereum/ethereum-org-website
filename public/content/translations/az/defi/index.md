@@ -64,7 +64,7 @@ Ethereum bunun üzərində qurulur. Bitcoin kimi, qaydalar sizin üzərinizdə d
 Bu qəribə səslənir... "Mən niyə pulumu proqramlaşdırmaq istəyim"? Bununla belə, bu daha çox Ethereum-da tokenlərin standart xüsusiyyətidir. Hər kəs məntiqi ödənişlərə proqramlaşdıra bilər. Beləliklə, Bitcoin-in nəzarətini və təhlükəsizliyini maliyyə institutları tərəfindən göstərilən xidmətlərlə qarışdıra bilərsiniz. Bu, kriptovalyutalarla Bitcoin ilə edə bilməyəcəyiniz işləri yerinə yetirməyə imkan verir, məsələn, borc vermək və borc götürmək, ödənişləri planlaşdırmaq, indeks fondlarına investisiya qoymaq və s.
 
 <Alert variant="update">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row justify-between items-center">
   <div>Ethereum-da yenisinizsə, sınamaq məqsədilə DeFi tətbiqləri üçün təkliflərimizi araşdırın.</div>
   <ButtonLink href="/dapps/?category=finance">

@@ -15,8 +15,7 @@ import { getLocaleTimestamp } from "@/lib/utils/time"
 
 import communityEvents from "@/data/community-events.json"
 
-import { Alert, AlertContent, AlertDescription } from "./ui/alert"
-import Emoji from "./Emoji"
+import { Alert, AlertContent, AlertDescription, AlertEmoji } from "./ui/alert"
 
 import { useTranslation } from "@/hooks/useTranslation"
 
@@ -100,7 +99,7 @@ const UpcomingEventsList = () => {
   if (Object.keys(monthGroupedEvents)?.length) {
     return (
       <Alert variant="update">
-        <Emoji text=":information_source:" className="text-4xl" />
+        <AlertEmoji text=":information_source:" />
         <AlertContent>
           <AlertDescription>
             {t("page-community-upcoming-events-no-events")}{" "}

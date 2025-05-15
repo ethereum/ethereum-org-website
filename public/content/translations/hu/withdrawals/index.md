@@ -44,7 +44,7 @@ A Shanghai/Capella frissítés előtt nem lehetett használni vagy elérni ezt a
 A visszavonási cím megadása szükséges ahhoz, hogy a validátorszámla egyenlegéből ETH visszavonás történjen.
 
 <Alert variant="warning">
-<Emoji text="⚠️" className="text-4xl"/>
+<AlertEmoji text="⚠️"/>
 <AlertContent>
 <AlertDescription>
   <strong>Minden validátorszámlához egyszer, egyetlen visszavonási cím adható meg.</strong> Amint ezt a címet kiválasztották és elküldték a konszenzus rétegnek, nem lehet visszahívni vagy megváltoztatni. Ellenőrizze le a cím tulajdonosát és pontosságát, mielőtt elküldi azt.
@@ -88,7 +88,7 @@ Nézze meg az Ethereum letétvisszavonásról szóló magyarázatát a Finematic
 Amikor egy adott validátor be van ütemezve, hogy a következő blokkot ő fogja javasolni, akkor készítenie kell egy 16 tételből álló visszavonási listát. Kezdve a 0 validátorindexel, meghatározza, hogy az adott számla a protokoll szabályai szerint visszavonásra jogosult-e, és ha igen, akkor beteszi a listába. A validátorcsoport ott száll be, ahol az előző abbahagyta és a végtelenségig folytatja.
 
 <Alert variant="update">
-<Emoji text="🕛" className="text-4xl"/>
+<AlertEmoji text="🕛"/>
 <AlertContent>
 <AlertDescription>
 Képzeljen el egy analóg módon működő órát. Az óramutató egy irányba halad és sorban végigmegy minden számon, majd miután elérte az utolsó számot, visszaér a kezdőpontra. <br/><br/>

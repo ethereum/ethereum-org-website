@@ -62,7 +62,7 @@ Web3 sizga raqamli aktivlaringizga misli koʻrilmagan tarzda egalik qilish imkon
 Web3 [o‘zgarmas tokenlar (NFTlar)](/glossary/#nft) orqali to‘g‘ridan-to‘g‘ri egalik qilish imkonini beradi. Hech kim, hatto o‘yin yaratuvchilari ham sizning mulkingizni tortib olish huquqiga ega emas. Agar o‘ynashni to‘xtatsangiz, o‘yin ichidagi buyumlarni ochiq bozorlarda sotish yoki ayirboshlashingiz va ularning qiymatini to‘ldirishingiz mumkin.
 
 <Alert variant="update">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row items-center justify-between">
   <div>NFTlar haqida batafsil</div>
   <ButtonLink href="/nft/">
@@ -90,7 +90,7 @@ DAOlar texnik jihatdan resurslar fondi (tokenlar) bo‘yicha markazlashmagan qar
 Biroq, odamlar ko‘plab Web3 hamjamiyatlarini DAO deb ta’riflaydilar. Ushbu jamoalarning barchasi kod bo‘yicha markazlashtirishni cheklash va avtomatlashtirishning turli darajalariga ega. Hozirda biz DAO nima ekanligi va ular kelajakda qanday rivojlanishi mumkinligini o‘rganmoqdamiz.
 
 <Alert variant="update">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="flex-row items-center justify-between">
   <div>Learn more about DAOs</div>
   <ButtonLink href="/dao/">

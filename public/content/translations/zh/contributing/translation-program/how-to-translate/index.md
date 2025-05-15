@@ -77,7 +77,7 @@ description: 使用 Crowdin 翻译 ethereum.org 的操作指南
 一旦你完成翻译（即内容存储桶的所有文件均显示 100%），我们的专业翻译服务机构将审核（并可能编辑）你完成的内容。 一旦审核完成（即审核进度为 100%），我们会将内容添加到网站上。
 
 <Alert variant="update">
-<Emoji text=":warning:" className="text-4xl"/>
+<AlertEmoji text=":warning:"/>
 <AlertContent>
   请不要使用机器翻译来翻译项目。 所有译文在添加到网站之前均会进行审核。 如果发现你提供的译文是机器翻译的，你的译文将不会被应用，经常使用机器翻译的贡献者将被从项目中移除。
 </AlertContent>

@@ -44,7 +44,7 @@ summaryPoints:
 为任何验证器帐户提供提款地址是一个必需的步骤，否则无法从其余额中提取以太币。
 
 <Alert variant="warning">
-<Emoji text="⚠️" className="text-4xl"/>
+<AlertEmoji text="⚠️"/>
 <AlertContent>
 <AlertDescription>
   <strong>每个验证者帐户一次只能分配一个提款地址。</strong>一旦选择地址并提交到共识层，就无法撤消或再次更改。 在提交前，请仔细检查所提供地址的所有权和准确性。
@@ -88,7 +88,7 @@ summaryPoints:
 当验证者被安排提议下一个区块时，需要构建一个最多包含 16 个合格提款的提款队列。 首先从验证者索引 0 开始，根据协议规则判断该帐户是否有合格的提款，如果有，则将其添加到队列中。 被安排提议下一个区块的验证者将从上一个验证者离开的地方继续，无限期地按顺序进行。
 
 <Alert variant="update">
-<Emoji text="🕛" className="text-4xl"/>
+<AlertEmoji text="🕛"/>
 <AlertContent>
 <AlertDescription>
 想象一个模拟时钟。 时钟的指针指向小时，朝一个方向前进，不跳过任何小时，最后在达到最后一个数字后再次回到开始。<br/><br/>

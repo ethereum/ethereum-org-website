@@ -64,7 +64,7 @@ Beidh do sheoladh mar an gcéanna i ngach tionscadal Ethereum. Ní gá duit clá
 6. Sin é! Tosaigh ag baint úsáide as an aip. Is féidir leat roinnt tionscadal suimiúil a fháil ar ár [leathanach dApps](/dapps/#explore). <br />
 
 <Alert variant="update">
-<Emoji text=":eyes:" className="text-4xl"/>
+<AlertEmoji text=":eyes:"/>
 <AlertContent className="justify-between flex-row items-center">
   <div>Ar mhaith leat níos mó a fhoghlaim?</div>
   <ButtonLink href="/guides/">

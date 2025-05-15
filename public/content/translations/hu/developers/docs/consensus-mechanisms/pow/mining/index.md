@@ -5,7 +5,7 @@ lang: hu
 ---
 
 <Alert variant="update">
-<Emoji text=":wave:" className="text-4xl"/>
+<AlertEmoji text=":wave:"/>
 <AlertContent>
 <AlertDescription>
 A proof-of-work (munkaigazolás) már nem az Ethereum konszenzusmechanizmus alapja, tehát a bányászatot kikapcsolták. Ehelyett az Ethereumot úgy biztosítják a validátorok, hogy letétbe helyeznek ETH-t. Ön is letétbe helyezheti a rendelkezésére álló ETH-t. Tudjon meg többet a <a href='/roadmap/merge/'>egyesítés (Merge)</a>, <a href='/developers/docs/consensus-mechanisms/pos/'>proof-of-stake (letéti igazolás)</a> és <a href='/staking/'>letétbe helyezés</a> témákról. Ez az oldal csak elavult témákat tartalmaz.

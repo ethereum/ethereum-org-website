@@ -60,7 +60,7 @@ If yu get ETH on top Ethereum Mainnet and yu wan eksplor one alt L1 to try out d
 Make wi sey yu wan own mative Bitcoin (BTC), but yu only get funds for Ethereum Mainnet. If yu wan gain eksposure to BTC for Ethereum, yu fit buy Wrapped Bitcoin (WBTC). Haueva, WBTC na [ERC-20](/glossary/#erc-20) token native to Ethereum netwok, and dis tin mean sey na Ethereum vashon of Bitcoin, and nor bi original asset for Bitcoin blockchain. To own native BTC, yu go nid bridge yor assets from Ethereum to Bitcoin as yu dey yus one bridge. Dis go bridge yor WBTC and konvert am into native BTC. Also, yu fit own BTC and wan yus am for Ethereum [DeFi](/glossary/#defi) protokols. Dis go nid to dey bridge di oda way, from BTC to WBTC wey dem fit kon yus as one asset on Ethereum.
 
 <Alert variant="update">
-<Emoji text=":bulb:" className="text-4xl"/>
+<AlertEmoji text=":bulb:"/>
 <AlertContent>
 <AlertDescription>
   Yu fit also do all of di above as yu dey yus one <a href="/get-eth/">sentralized ekshanj</a>. Haueva, onless yor funds don already dey on one ekshanj, im go nid plenti steps, and yu go fit get betta as yu dey yus bridge.

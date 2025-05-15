@@ -17,7 +17,7 @@ Naš napredek do zdaj:
 Če se želite pridružiti in nam pomagati povečati globalno Ethereum skupnost s prevajanjem spletne strani v vaš jezik, sledite spodnjim korakom!
 
 <Alert variant="update">
-<Emoji text=":tada:" className="text-4xl"/>
+<AlertEmoji text=":tada:"/>
 <AlertContent>
 <AlertDescription>
   Prevzemite svoj POAP žeton! Če ste prevajali ethereum.org v letu 2021, vas čaka edinstven POAP. <a href="/contributing/#poap">Več o POAP-ih</a>
@@ -100,7 +100,7 @@ Prav tako nas lahko kontaktirate prek translations@ethereum.org
 Hvala za vaše sodelovanje pri ethereum.org prevajalskem programu!
 
 <Alert variant="update">
-<Emoji text=":information_source:" className="text-4xl"/>
+<AlertEmoji text=":information_source:"/>
 <AlertContent>
 <AlertDescription>
   Če nam pomagate pri prevajanju, boste morda našli uporabne informacije v naši prevajalski FAQ sekciji. 
