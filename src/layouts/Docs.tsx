@@ -35,8 +35,7 @@ import YouTube from "@/components/YouTube"
 import { cn } from "@/lib/utils/cn"
 import { getEditPath } from "@/lib/utils/editPath"
 
-const baseHeadingClasses =
-  "font-mono uppercase font-bold scroll-mt-40 break-words"
+const baseHeadingClasses = "font-bold scroll-mt-40 break-words"
 
 const H1 = (props: HTMLAttributes<HTMLHeadingElement>) => (
   <MdHeading1
