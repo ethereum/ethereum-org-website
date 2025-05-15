@@ -10,11 +10,8 @@ import {
   DankshardingIcon,
   ExtraSecurityIcon,
   FutureProofingIcon,
-  ProposerBuilderSeparationIcon,
-  SecretLeaderElectionIcon,
   SingleSlotFinalityIcon,
   StatelessnessIcon,
-  VerkleTreesIcon,
 } from "@/components/icons/roadmap"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
@@ -99,32 +96,11 @@ const RoadmapPage = () => {
       href: "/roadmap/single-slot-finality",
     },
     {
-      icon: <ProposerBuilderSeparationIcon />,
-      title: "Proposer-builder separation",
-      description:
-        "Splitting the block building and block proposal tasks across separate validators creates a fairer, more censorship resistant and efficient way for Ethereum to come to consensus.",
-      href: "/roadmap/pbs",
-    },
-    {
-      icon: <SecretLeaderElectionIcon />,
-      title: "Secret leader election",
-      description:
-        "Clever cryptography can be used to ensure that the identity of the current block proposer is not made public, protecting them from certain types of attack.",
-      href: "/roadmap/secret-leader-election",
-    },
-    {
       icon: <AccountAbstractionIcon />,
       title: "Account abstraction",
       description:
         "Account abstraction is a class of upgrades that support smart contract wallets natively on Ethereum, rather than having to use complex middleware.",
       href: "/roadmap/account-abstraction",
-    },
-    {
-      icon: <VerkleTreesIcon />,
-      title: "Verkle trees",
-      description:
-        "Verkle trees are a data structure that can be used to enable stateless clients on Ethereum. These clients will require a small amount of storage space but will still be able to verify new blocks.",
-      href: "/roadmap/verkle-trees",
     },
     {
       icon: <StatelessnessIcon />,
@@ -238,7 +214,7 @@ const RoadmapPage = () => {
           <h2 className="text-center">
             What technical upgrades are coming to Ethereum?
           </h2>
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
             {technicalUpgradesItems.map((item) => (
               <LinkBox
                 key={item.title}
