@@ -1,3 +1,4 @@
+import { MDXRemoteProps } from "next-mdx-remote"
 import type { HTMLAttributes } from "react"
 
 import { ChildOnlyProp } from "@/lib/types"
@@ -72,12 +73,18 @@ const BackToTop = (props: ChildOnlyProp) => (
   </div>
 )
 
+const Pre = (props: React.HTMLAttributes<HTMLDivElement>) => {
+  const match = props.className?.match(/(language-\S+)/)
+  const codeLanguage = match ? match[0] : "plain-text"
+  return <Codeblock codeLanguage={codeLanguage} {...props} />
+}
+
 export const docsComponents = {
   h1: H1,
   h2: H2,
   h3: H3,
   h4: H4,
-  pre: Codeblock,
+  pre: Pre,
   ...mdxTableComponents,
   ButtonLink,
   Card,
@@ -88,7 +95,7 @@ export const docsComponents = {
   GlossaryTooltip,
   InfoBanner,
   YouTube,
-}
+} as MDXRemoteProps["components"]
 
 type DocsLayoutProps = Pick<
   MdPageContent,
