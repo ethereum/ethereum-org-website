@@ -1,5 +1,9 @@
 import pick from "lodash.pick"
-import { getTranslations } from "next-intl/server"
+import {
+  getMessages,
+  getTranslations,
+  setRequestLocale,
+} from "next-intl/server"
 
 import { Lang } from "@/lib/types"
 
@@ -16,7 +20,6 @@ import { BASE_TIME_UNIT } from "@/lib/constants"
 
 import Layer2Page from "./_components/layer-2"
 
-import { loadMessages } from "@/i18n/loadMessages"
 import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
 import { fetchL2beat } from "@/lib/api/fetchL2beat"
 
@@ -33,6 +36,8 @@ const loadData = dataLoader(
 
 const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const { locale } = await params
+
+  setRequestLocale(locale)
 
   const [growThePieData, l2beatData] = await loadData()
 
@@ -58,7 +63,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const userRandomL2s = getRandomL2s()
 
   // Get i18n messages
-  const allMessages = await loadMessages(locale)
+  const allMessages = await getMessages({ locale })
   const requiredNamespaces = getRequiredNamespacesForPage("/layer-2")
   const messages = pick(allMessages, requiredNamespaces)
 

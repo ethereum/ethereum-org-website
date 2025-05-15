@@ -63,6 +63,7 @@ export default async function Page({
     lastEditLocaleTimestamp,
     isTranslated,
     contributors,
+    timeToRead,
   } = await getPageData({
     locale,
     slug,
@@ -97,8 +98,7 @@ export default async function Page({
         lastEditLocaleTimestamp={lastEditLocaleTimestamp}
         contentNotTranslated={!isTranslated}
         contributors={contributors}
-        // TODO: Remove this once we have a real timeToRead value
-        timeToRead={2}
+        timeToRead={Math.round(timeToRead.minutes)}
       >
         {content}
       </Layout>

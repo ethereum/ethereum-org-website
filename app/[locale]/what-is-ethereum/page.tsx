@@ -1,5 +1,9 @@
 import pick from "lodash.pick"
-import { getTranslations } from "next-intl/server"
+import {
+  getMessages,
+  getTranslations,
+  setRequestLocale,
+} from "next-intl/server"
 
 import type { CommitHistory, Lang } from "@/lib/types"
 
@@ -12,7 +16,6 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import WhatIsEthereumPage from "./_components/what-is-ethereum"
 
-import { loadMessages } from "@/i18n/loadMessages"
 import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
 
 const loadData = dataLoader([["growThePieData", fetchGrowThePie]])
@@ -20,8 +23,10 @@ const loadData = dataLoader([["growThePieData", fetchGrowThePie]])
 const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const { locale } = await params
 
+  setRequestLocale(locale)
+
   // Get i18n messages
-  const allMessages = await loadMessages(locale)
+  const allMessages = await getMessages({ locale })
   const requiredNamespaces = getRequiredNamespacesForPage("/what-is-ethereum")
   const messages = pick(allMessages, requiredNamespaces)
 

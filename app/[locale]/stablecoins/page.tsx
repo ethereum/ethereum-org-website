@@ -1,5 +1,9 @@
 import pick from "lodash.pick"
-import { getTranslations } from "next-intl/server"
+import {
+  getMessages,
+  getTranslations,
+  setRequestLocale,
+} from "next-intl/server"
 
 import { Lang } from "@/lib/types"
 
@@ -13,7 +17,6 @@ import { BASE_TIME_UNIT } from "@/lib/constants"
 
 import StablecoinsPage from "./_components/stablecoins"
 
-import { loadMessages } from "@/i18n/loadMessages"
 import {
   fetchEthereumEcosystemData,
   fetchEthereumStablecoinsData,
@@ -57,8 +60,10 @@ const loadData = dataLoader<[EthereumDataResponse, StablecoinDataResponse]>(
 async function Page({ params }: { params: Promise<{ locale: Lang }> }) {
   const { locale } = await params
 
+  setRequestLocale(locale)
+
   // Get i18n messages
-  const allMessages = await loadMessages(locale)
+  const allMessages = await getMessages({ locale })
   const requiredNamespaces = getRequiredNamespacesForPage("/stablecoins")
   const messages = pick(allMessages, requiredNamespaces)
 

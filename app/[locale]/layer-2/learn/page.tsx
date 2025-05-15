@@ -1,5 +1,9 @@
 import pick from "lodash.pick"
-import { getTranslations } from "next-intl/server"
+import {
+  getMessages,
+  getTranslations,
+  setRequestLocale,
+} from "next-intl/server"
 
 import type { CommitHistory, Lang } from "@/lib/types"
 
@@ -11,13 +15,13 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import LearnPage from "./_components/learn"
 
-import { loadMessages } from "@/i18n/loadMessages"
-
 const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const { locale } = await params
 
+  setRequestLocale(locale)
+
   // Get i18n messages
-  const allMessages = await loadMessages(locale)
+  const allMessages = await getMessages({ locale })
   const requiredNamespaces = getRequiredNamespacesForPage("/layer-2/learn")
   const messages = pick(allMessages, requiredNamespaces)
 

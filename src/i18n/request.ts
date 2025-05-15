@@ -17,7 +17,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
 
   const allLocaleMessages = await loadMessages(locale)
   const allDefaultMessages = await loadMessages(routing.defaultLocale)
-  const messages = merge(allDefaultMessages, allLocaleMessages)
+  const messages = merge({}, allDefaultMessages, allLocaleMessages)
 
   return {
     locale,

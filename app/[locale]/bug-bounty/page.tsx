@@ -1,5 +1,9 @@
 import pick from "lodash.pick"
-import { getTranslations } from "next-intl/server"
+import {
+  getMessages,
+  getTranslations,
+  setRequestLocale,
+} from "next-intl/server"
 
 import type { CommitHistory, Lang, Params } from "@/lib/types"
 
@@ -11,13 +15,13 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import BugBountiesPage from "./_components/bug-bounty"
 
-import { loadMessages } from "@/i18n/loadMessages"
-
 export default async function Page({ params }: { params: Promise<Params> }) {
   const { locale } = await params
 
+  setRequestLocale(locale)
+
   // Get i18n messages
-  const allMessages = await loadMessages(locale)
+  const allMessages = await getMessages({ locale })
   const requiredNamespaces = getRequiredNamespacesForPage("/bug-bounty")
   const messages = pick(allMessages, requiredNamespaces)
 

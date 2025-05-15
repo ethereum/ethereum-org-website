@@ -13,6 +13,7 @@ import type {
 } from "@/lib/types"
 import { CommunityEvent } from "@/lib/interfaces"
 
+import BannerNotification from "@/components/Banners/BannerNotification"
 import { ChevronNext } from "@/components/Chevron"
 import CodeModal from "@/components/CodeModal"
 import HomeHero from "@/components/Hero/HomeHero"
@@ -24,7 +25,6 @@ import Calendar from "@/components/icons/calendar.svg"
 import CalendarAdd from "@/components/icons/calendar-add.svg"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
-import { TranslatathonBanner } from "@/components/Translatathon/TranslatathonBanner"
 import {
   Accordion,
   AccordionContent,
@@ -118,7 +118,18 @@ const HomePage = ({
 
   return (
     <MainArticle className="flex w-full flex-col items-center" dir={dir}>
-      <TranslatathonBanner />
+      <BannerNotification shouldShow={locale === "en"}>
+        <p>
+          Let&apos;s celebrate 10 years of Ethereum! How did ethereum change
+          your life? -{" "}
+          <Link
+            href="https://ethereumstory.paperform.co/"
+            className="text-white"
+          >
+            share your story
+          </Link>
+        </p>
+      </BannerNotification>
       <HomeHero heroImg={Hero} className="w-full" />
       <div className="w-full space-y-32 px-4 md:mx-6 lg:space-y-48">
         <div className="my-20 grid w-full grid-cols-2 gap-x-4 gap-y-8 md:grid-cols-4 md:gap-x-10">
@@ -249,6 +260,11 @@ const HomePage = ({
                   href="/resources/"
                   isSecondary
                   variant="outline"
+                  customEventOptions={{
+                    eventCategory: eventCategory,
+                    eventAction: "ethereum_activity",
+                    eventName: "ethereum_activity",
+                  }}
                 >
                   {t("page-index:page-index-activity-action")} <ChevronNext />
                 </ButtonLink>
@@ -382,7 +398,7 @@ const HomePage = ({
                   <button
                     key={title}
                     className={cn(
-                      "flex flex-col gap-y-0.5 border-t px-6 py-4 hover:bg-background-highlight max-md:hidden",
+                      "flex flex-col gap-y-0.5 border-t px-6 py-4 text-start hover:bg-background-highlight max-md:hidden",
                       isModalOpen &&
                         idx === activeCode &&
                         "bg-background-highlight"
@@ -397,9 +413,7 @@ const HomePage = ({
                     }}
                   >
                     <p className="font-bold">{title}</p>
-                    <p className="text-start text-sm text-body-medium">
-                      {description}
-                    </p>
+                    <p className="text-sm text-body-medium">{description}</p>
                   </button>
                 ))}
                 {/* Mobile */}

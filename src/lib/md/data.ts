@@ -1,4 +1,5 @@
 import { MDXRemoteProps } from "next-mdx-remote"
+import readingTime, { ReadTimeResults } from "reading-time"
 
 import {
   CommitHistory,
@@ -30,6 +31,7 @@ interface PageData {
   lastEditLocaleTimestamp: string
   contributors: FileContributor[]
   isTranslated: boolean
+  timeToRead: ReadTimeResults
 }
 
 export async function getPageData({
@@ -70,6 +72,8 @@ export async function getPageData({
     lastUpdatedDate
   )
 
+  const timeToRead = readingTime(markdown)
+
   return {
     content,
     frontmatter,
@@ -77,5 +81,6 @@ export async function getPageData({
     lastEditLocaleTimestamp,
     contributors,
     isTranslated,
+    timeToRead,
   }
 }

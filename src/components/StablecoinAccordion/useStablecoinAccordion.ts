@@ -6,7 +6,6 @@ import aaveImg from "@/public/images/dapps/aave.png"
 import compoundImg from "@/public/images/dapps/compound.png"
 // -- earn
 import gitcoinImg from "@/public/images/dapps/gitcoin.png"
-import loopringImg from "@/public/images/dapps/loopring.png"
 import matchaImg from "@/public/images/dapps/matcha.png"
 import summerfiImg from "@/public/images/dapps/summerfi.png"
 // Static assets
@@ -30,12 +29,6 @@ export const useStablecoinAccordion = () => {
       image: uniImg,
       link: "https://uniswap.org",
       alt: t("uniswap-logo"),
-    },
-    {
-      title: "Loopring",
-      image: loopringImg,
-      link: "https://loopring.io/#/pro",
-      alt: t("loopring-logo"),
     },
     {
       title: "1inch",

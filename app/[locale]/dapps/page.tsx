@@ -1,5 +1,9 @@
 import pick from "lodash.pick"
-import { getTranslations } from "next-intl/server"
+import {
+  getMessages,
+  getTranslations,
+  setRequestLocale,
+} from "next-intl/server"
 
 import type { CommitHistory, Lang, Params } from "@/lib/types"
 
@@ -11,13 +15,11 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import DappsPage from "./_components/dapps"
 
-import { loadMessages } from "@/i18n/loadMessages"
-
 export default async function Page({ params }: { params: Promise<Params> }) {
   const { locale } = await params
 
   // Get i18n messages
-  const allMessages = await loadMessages(locale)
+  const allMessages = await getMessages({ locale })
   const requiredNamespaces = getRequiredNamespacesForPage("/dapps")
   const pickedMessages = pick(allMessages, requiredNamespaces)
 
@@ -41,6 +43,8 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>
 }) {
   const { locale } = await params
+
+  setRequestLocale(locale)
 
   const t = await getTranslations({ locale })
 

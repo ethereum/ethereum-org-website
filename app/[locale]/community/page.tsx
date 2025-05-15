@@ -1,5 +1,9 @@
 import pick from "lodash.pick"
-import { getTranslations } from "next-intl/server"
+import {
+  getMessages,
+  getTranslations,
+  setRequestLocale,
+} from "next-intl/server"
 
 import { Lang } from "@/lib/types"
 
@@ -10,8 +14,6 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import CommunityPage from "./_components/community"
 
-import { loadMessages } from "@/i18n/loadMessages"
-
 export default async function Page({
   params,
 }: {
@@ -19,8 +21,10 @@ export default async function Page({
 }) {
   const { locale } = await params
 
+  setRequestLocale(locale)
+
   // Get i18n messages
-  const allMessages = await loadMessages(locale)
+  const allMessages = await getMessages({ locale })
   const requiredNamespaces = getRequiredNamespacesForPage("/community")
   const pickedMessages = pick(allMessages, requiredNamespaces)
 

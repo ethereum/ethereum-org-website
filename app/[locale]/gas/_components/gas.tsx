@@ -16,6 +16,7 @@ import { Image } from "@/components/Image"
 import InfoBanner from "@/components/InfoBanner"
 import MainArticle from "@/components/MainArticle"
 import PageHero from "@/components/PageHero"
+import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import Translation from "@/components/Translation"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Divider } from "@/components/ui/divider"
@@ -389,6 +390,9 @@ const GasPage = ({
             </div>
           </Callout>
         </Flex>
+      </Content>
+      <Content>
+        <StandaloneQuizWidget quizKey="gas" />
       </Content>
       <Content>
         <FileContributors

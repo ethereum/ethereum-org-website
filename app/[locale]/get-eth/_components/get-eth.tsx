@@ -37,7 +37,6 @@ import { useTranslation } from "@/hooks/useTranslation"
 import uniswap from "@/public/images/dapps/uni.png"
 import dapps from "@/public/images/doge-computer.png"
 import bancor from "@/public/images/exchanges/bancor.png"
-import kyber from "@/public/images/exchanges/kyber.png"
 import hero from "@/public/images/get-eth.png"
 import wallet from "@/public/images/wallet.png"
 
@@ -93,12 +92,6 @@ const GetEthPage = ({
       title: "Bancor",
       link: "https://www.carbondefi.xyz/",
       image: bancor,
-      alt: "",
-    },
-    {
-      title: "Kyber",
-      link: "https://kyberswap.com/#/swap/",
-      image: kyber,
       alt: "",
     },
   ]
