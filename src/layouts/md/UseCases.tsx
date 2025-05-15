@@ -5,6 +5,7 @@ import BannerNotification from "@/components/Banners/BannerNotification"
 import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import AiAgentProductLists from "@/components/Content/ai-agents/AiAgentProductLists"
 import BuildYourOwnAIAgent from "@/components/Content/ai-agents/BuildYourOwnAIAgent"
+import OnchainGamingProductList from "@/components/Content/gaming/OnchainGamingProductList"
 import Emoji from "@/components/Emoji"
 import { ContentHero } from "@/components/Hero"
 import InlineLink from "@/components/ui/Link"
@@ -21,6 +22,7 @@ import { useTranslation } from "@/hooks/useTranslation"
 export const useCasesComponents = {
   AiAgentProductLists,
   BuildYourOwnAIAgent,
+  OnchainGamingProductList,
 }
 
 type UseCasesLayoutProps = ChildOnlyProp &

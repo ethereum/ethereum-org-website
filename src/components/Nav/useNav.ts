@@ -229,6 +229,11 @@ export const useNav = () => {
                   description: t("nav-ai-agents-description"),
                   href: "/ai-agents/",
                 },
+                {
+                  label: t("onchain-gaming"),
+                  description: t("nav-gaming-description"),
+                  href: "/gaming/",
+                },
               ],
             },
           ],

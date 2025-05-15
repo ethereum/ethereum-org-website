@@ -9,11 +9,12 @@ summaryPoint2: Higher quality games are starting to leverage blockchain
 summaryPoint3: In game assets can be used across several game modes
 buttons:
   - content: Learn more
-    toId: the-current-state-of-gaming
+    toId: how-onchain-gaming-works
   - content: Explore apps
     toId: popular-games-built-on-ethereum
     isSecondary: false
 ---
+## How Onchain Gaming Works {#how-onchain-gaming-works}
 
 Onchain games give players true ownership of in‑game assets. No central servers, no intermediaries—just transparent, player‑driven experiences and economy. Ethereum gives players true ownership of their in‑game items. These items exist as NFTs (non‑fungible tokens) on the Ethereum blockchain. That means:
 
@@ -26,18 +27,24 @@ Play‑to‑earn (P2E) is also possible. Instead of just playing for fun, gamers
 
 ## The current state of gaming {#the-current-state-of-gaming}
 
-- **Frustration Over Locked Assets:** 51% of gamers feel frustrated that they can’t gift or re‑sell in‑game items they buy, and 23% are annoyed by how difficult it is to recover money from in‑game purchases.  
-- **Frequent Game Shutdowns:** In 2023 alone, 60+ games were shut down, and 11 game studios closed entirely, leaving players with nothing to show for their in‑game investments.  
-- **High Spending with No Return:** Gamers spend an average of \$6,425 on virtual items over their lifetime, with \$8.74 spent per month or \$104 per year.  
+- **Frustration Over Locked Assets:** [51% of gamers feel frustrated](https://www.starknet.io/blog/blockchain-gaming/) that they can’t gift or re‑sell in‑game items they buy, and 23% are annoyed by how difficult it is to recover money from in‑game purchases.  
+- **Frequent Game Shutdowns:** In 2023 alone, [60+ games were shut down](https://tech4gamers.com/game-studios-shut-down-2023/), and 11 game studios closed entirely, leaving players with nothing to show for their in‑game investments.  
+- **High Spending with No Return:** [Gamers spend an average of \$6,425](https://www.starknet.io/blog/blockchain-gaming/) on virtual items over their lifetime, with \$8.74 spent per month or \$104 per year.  
 
 ## Popular Games Built on Ethereum {#popular-games-built-on-ethereum}
 
 Developers are exploring new ways to make P2E more engaging and go beyond simple reward mechanics to deepen, skill‑based gameplay.
 
+<OnchainGamingProductList list="game" />
+
+
 
 ## Play-to-Earn (P2E) {#play-to-earn-p2e}
 
 With Play‑to‑Earn (P2E) games, you can earn assets with real value. Unlike early P2E models that relied on unsustainable rewards, newer games focus on long‑term value. For example, [Wolf Game](https://wolfgame.example.com) combines strategic gameplay with real asset ownership. Players manage virtual sheep and wolves, earning the in‑game currency WOOL, which can be traded or sold.
+
+<OnchainGamingProductList list="p2e" />
+
 
 
 ## Interoperability & Cross‑Chain Play {#interoperability-and-cross-chain-play}
