@@ -316,7 +316,7 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
         <Button
           variant="outline"
           isSecondary
-          onClick={() => scrollIntoView("__next")}
+          onClick={() => scrollIntoView("h1")}
         >
           <IoChevronUpSharp /> Go to top
         </Button>
