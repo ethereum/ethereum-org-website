@@ -31,7 +31,7 @@ const OnchainGamingProductList = ({ list }: { list: string }) => {
           </ul>,
           <div key="wagmi-button">
             <ButtonLink
-              href="https://wagmi.game/"
+              href="https://www.wagmigames.com/en"
               target="_blank"
               variant="outline"
             >
@@ -40,6 +40,7 @@ const OnchainGamingProductList = ({ list }: { list: string }) => {
           </div>,
         ],
         tag: "TOWER DEFENSE",
+        colorVar: "bg-customYellow text-black border-customYellow",
       },
       {
         title: "Illuvium",
@@ -59,6 +60,7 @@ const OnchainGamingProductList = ({ list }: { list: string }) => {
           </div>,
         ],
         tag: "RPG",
+        colorVar: "bg-customCyan text-black border-customCyan",
       },
       {
         title: "Gods Unchained",
@@ -78,6 +80,7 @@ const OnchainGamingProductList = ({ list }: { list: string }) => {
           </div>,
         ],
         tag: "CARD GAME",
+        colorVar: "bg-customPurple text-black border-customPurple",
       },
     ],
     p2e: [
@@ -103,7 +106,7 @@ const OnchainGamingProductList = ({ list }: { list: string }) => {
           "MMORPG where players build, explore, and trade in a fantasy world of floating islands.",
         image: worldShards,
         alt: "WorldShards logo",
-        link: "https://worldshards.com/",
+        link: "https://www.worldshards.online/en",
       },
       {
         title: "Sandbox",
@@ -111,7 +114,7 @@ const OnchainGamingProductList = ({ list }: { list: string }) => {
           "This is a virtual world where you can create, own, and monetize your gaming experiences. It uses NFTs to ensure you have true ownership of your creations.",
         image: sandbox,
         alt: "Sandbox logo",
-        link: "https://www.sandbox.game/",
+        link: "https://chainplay.gg/games/the-sandbox/",
       },
       {
         title: "Guild of Guardians",

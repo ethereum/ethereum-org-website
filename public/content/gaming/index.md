@@ -41,7 +41,7 @@ Developers are exploring new ways to make P2E more engaging and go beyond simple
 
 ## Play-to-Earn (P2E) {#play-to-earn-p2e}
 
-With Play‑to‑Earn (P2E) games, you can earn assets with real value. Unlike early P2E models that relied on unsustainable rewards, newer games focus on long‑term value. For example, [Wolf Game](https://wolfgame.example.com) combines strategic gameplay with real asset ownership. Players manage virtual sheep and wolves, earning the in‑game currency WOOL, which can be traded or sold.
+With Play‑to‑Earn (P2E) games, you can earn assets with real value. Unlike early P2E models that relied on unsustainable rewards, newer games focus on long‑term value. For example, [Wolf Game](https://gam3s.gg/wolf-game/) combines strategic gameplay with real asset ownership. Players manage virtual sheep and wolves, earning the in‑game currency WOOL, which can be traded or sold.
 
 <OnchainGamingProductList list="p2e" />
 
@@ -51,9 +51,9 @@ With Play‑to‑Earn (P2E) games, you can earn assets with real value. Unlike e
 
 While this is still in development, some game networks are already interoperable, where in‑game items (NFTs) can be used across multiple games.
 
-For instance, in Illuvium, players can collect creatures called Illuvials, which are NFTs. These Illuvials can be used across various games within the Illuvium universe. An Illuvial captured in Illuvium Overworld can also be used in Illuvium Arena for battles.
+For instance, in Illuvium, [players can collect creatures called Illuvials](https://gam3s.gg/news/illuvium-three-web3-games/), which are NFTs. These Illuvials can be used across various games within the Illuvium universe. An Illuvial captured in Illuvium Overworld can also be used in Illuvium Arena for battles.
 
-Another example is Galaxy Fight Club. In this game, players can use different NFT collections to participate in battles, meaning NFTs from various projects can be used within the game.
+Another example is Galaxy Fight Club. In this game, [players can use different NFT collections](https://gam3s.gg/galaxy-fight-club/) to participate in battles, meaning NFTs from various projects can be used within the game.
 
 ## Scalability & Gas Fee Improvements {#scalability-and-gas-fee-improvements}
 
@@ -68,7 +68,7 @@ The challenge with most Ethereum gaming is high gas fees and slow transactions, 
 Getting into Ethereum gaming is easier than you might think. With just a few steps, you can start playing and enjoying your progress:
 
 - Set up a wallet.  
-- Find Ethereum games on [ChainPlay](https://chainplay.example.com), [Gam3s.GG](https://gam3s.gg), [DappRadar](https://dappradar.com), [OpenSea](https://opensea.io), and [PlayToEarn.net](https://playtoearn.net).  
+- Find Ethereum games on [ChainPlay](https://chainplay.gg/chain/ethereum/), [Gam3s.GG](https://gam3s.gg/), [DappRadar](https://dappradar.com/rankings/protocol/ethereum/category/games), [OpenSea](https://opensea.io/), and [PlayToEarn.net](https://playtoearn.com/blockchaingames).  
 - Understand the game economy.  
 - Start playing and exploring.  
 - Choose a game, connect your wallet, and start playing.

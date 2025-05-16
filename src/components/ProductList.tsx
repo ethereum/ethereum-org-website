@@ -5,6 +5,7 @@ import { Image } from "@/components/Image"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Flex } from "@/components/ui/flex"
 import { List, ListItem } from "@/components/ui/list"
+import { Tag } from "@/components/ui/tag"
 
 import { cn } from "@/lib/utils/cn"
 
@@ -16,6 +17,8 @@ type Content = {
   image?: ImageProps["src"]
   alt: string
   id?: string
+  tag?: string
+  colorVar?: string
 }
 
 export type ProductListProps = {
@@ -39,7 +42,20 @@ const ProductList = ({ actionLabel, content, category }: ProductListProps) => {
       )}
       <List aria-labelledby={CATEGORY_NAME} className="m-0 mb-4">
         {content.map(
-          ({ title, description, link, image, alt, id, contentItems }, idx) => (
+          (
+            {
+              title,
+              description,
+              link,
+              image,
+              alt,
+              id,
+              contentItems,
+              tag,
+              colorVar,
+            },
+            idx
+          ) => (
             <ListItem
               key={id || idx}
               color="text"
@@ -60,7 +76,18 @@ const ProductList = ({ actionLabel, content, category }: ProductListProps) => {
               </div>
               <Flex className="ms-4 w-full flex-col justify-between pb-4 sm:flex-row">
                 <div className="flex flex-1 flex-col gap-2">
-                  <div className="text-xl font-bold">{title}</div>
+                  <div className="flex items-center gap-2">
+                    <div className="text-xl font-bold">{title}</div>
+                    {tag && (
+                      <Tag
+                        status="tag"
+                        size="small"
+                        className={cn("ms-2", colorVar)}
+                      >
+                        {tag}
+                      </Tag>
+                    )}
+                  </div>
                   <div className="mb-0 text-sm opacity-60">{description}</div>
                   {contentItems && (
                     <div className="mb-0 flex flex-col gap-2 text-sm">
