@@ -21,7 +21,7 @@ const Link = ({
     <BaseLink
       href={url}
       className={cn(
-        "group relative inline-block w-full p-2 ps-0 text-body-medium no-underline lg:w-auto",
+        "group relative inline-block w-full p-1 text-body-medium no-underline lg:w-auto",
         isActive && "visited"
       )}
     >
