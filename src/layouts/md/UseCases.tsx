@@ -18,8 +18,16 @@ import { ContentLayout } from "../ContentLayout"
 
 import { useTranslation } from "@/hooks/useTranslation"
 
+const CardGrid = (props: ChildOnlyProp) => (
+  <div
+    className="grid grid-cols-[repeat(auto-fill,_minmax(min(100%,_280px),_1fr))] gap-8"
+    {...props}
+  />
+)
+
 // UseCases layout components
 export const useCasesComponents = {
+  CardGrid,
   AiAgentProductLists,
   BuildYourOwnAIAgent,
   PredictionMarketLists,

@@ -1,3 +1,7 @@
+import { MDXRemoteProps } from "next-mdx-remote"
+
+import { Layout } from "@/lib/types"
+
 import { docsComponents, DocsLayout } from "./Docs"
 import * as mdLayouts from "./md"
 import { staticComponents, StaticLayout } from "./Static"
@@ -20,13 +24,13 @@ export const layoutMapping = {
   tutorial: TutorialLayout,
 }
 
-export const componentsMapping = {
-  ...staticComponents,
-  ...mdLayouts.useCasesComponents,
-  ...mdLayouts.stakingComponents,
-  ...mdLayouts.roadmapComponents,
-  ...mdLayouts.upgradeComponents,
-  ...mdLayouts.translatathonComponents,
-  ...docsComponents,
-  ...tutorialsComponents,
-} as const
+export const componentsMapping: Record<Layout, MDXRemoteProps["components"]> = {
+  static: staticComponents,
+  "use-cases": mdLayouts.useCasesComponents,
+  staking: mdLayouts.stakingComponents,
+  roadmap: mdLayouts.roadmapComponents,
+  upgrade: mdLayouts.upgradeComponents,
+  translatathon: mdLayouts.translatathonComponents,
+  docs: docsComponents,
+  tutorial: tutorialsComponents,
+}

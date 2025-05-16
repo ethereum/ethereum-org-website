@@ -9,7 +9,7 @@ import remarkGfm from "remark-gfm"
 import remarkHeadingId from "remark-heading-id"
 
 import { CONTENT_DIR, CONTENT_PATH } from "../constants"
-import { Frontmatter, TocNodeType } from "../types"
+import { Frontmatter, Layout, TocNodeType } from "../types"
 
 import rehypeImg from "@/lib/md/rehypeImg"
 import remarkInferToc from "@/lib/md/remarkInferToc"
@@ -79,4 +79,16 @@ export const compile = async ({
     frontmatter,
     tocNodeItems,
   }
+}
+
+export const extractLayoutFromMarkdown = async (
+  markdown: string
+): Promise<Layout | undefined> => {
+  const source = preprocessMarkdown(markdown)
+
+  const { frontmatter } = await compileMDX<Frontmatter>({
+    source,
+    options: { parseFrontmatter: true },
+  })
+  return frontmatter.template
 }

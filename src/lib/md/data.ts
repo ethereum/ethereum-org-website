@@ -13,7 +13,9 @@ import {
 import { getFileContributorInfo } from "@/lib/utils/contributors"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 
-import { compile } from "./compile"
+import { getLayoutFromSlug } from "../utils/layout"
+
+import { compile, extractLayoutFromMarkdown } from "./compile"
 import { importMd } from "./import"
 
 const commitHistoryCache: CommitHistory = {}
@@ -21,7 +23,8 @@ const commitHistoryCache: CommitHistory = {}
 interface GetPageDataParams {
   locale: string
   slug: string
-  components: MDXRemoteProps["components"]
+  baseComponents: MDXRemoteProps["components"]
+  componentsMapping: Record<Layout, MDXRemoteProps["components"]>
   layout?: Layout
   scope?: Record<string, unknown>
 }
@@ -39,7 +42,8 @@ interface PageData {
 export async function getPageData({
   locale,
   slug,
-  components,
+  baseComponents,
+  componentsMapping,
   layout: layoutFromProps,
   scope,
 }: GetPageDataParams): Promise<PageData> {
@@ -47,6 +51,17 @@ export async function getPageData({
 
   // Import and compile markdown
   const { markdown, isTranslated } = await importMd(locale, slug)
+  // Determine layout first to finalize list of components
+  const layout =
+    layoutFromProps ||
+    (await extractLayoutFromMarkdown(markdown)) ||
+    getLayoutFromSlug(slug)
+
+  const components: MDXRemoteProps["components"] = {
+    ...baseComponents,
+    ...(layout ? componentsMapping[layout] : {}),
+  }
+
   const { content, frontmatter, tocNodeItems } = await compile({
     markdown,
     slugArray,
@@ -54,8 +69,6 @@ export async function getPageData({
     components,
     scope,
   })
-
-  const layout = layoutFromProps || frontmatter.template || "static"
 
   // Process TOC items
   const tocItems =
