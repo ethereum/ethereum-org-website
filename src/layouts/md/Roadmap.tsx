@@ -11,13 +11,8 @@ import { ContentLayout } from "../ContentLayout"
 import { useTranslation } from "@/hooks/useTranslation"
 import RoadmapHubHeroImage from "@/public/images/heroes/roadmap-hub-hero.jpg"
 
-const CardGrid = (props: ChildOnlyProp) => (
-  <div className="grid grid-cols-1 gap-8 md:grid-cols-2" {...props} />
-)
-
 // Roadmap layout components
 export const roadmapComponents = {
-  CardGrid,
   RoadmapActionCard,
   RoadmapImageContent,
 }
