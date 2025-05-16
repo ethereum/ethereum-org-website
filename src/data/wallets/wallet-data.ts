@@ -2349,7 +2349,6 @@ export const walletsData: WalletData[] = [
       "th",
       "ar",
       "tr",
-      "my",
       "ur",
       "bg",
       "cs",
