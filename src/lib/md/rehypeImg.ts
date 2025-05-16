@@ -1,19 +1,14 @@
-import fs from "fs"
 import path from "path"
 
 import sizeOf from "image-size"
-import { getPlaiceholder } from "plaiceholder"
 import { visit } from "unist-util-visit"
 
-import { getHashFromBuffer } from "@/lib/utils/crypto"
 import {
   checkIfImageIsTranslated,
   getTranslatedImgPath,
 } from "@/lib/utils/i18n"
 
-import { DEFAULT_LOCALE, PLACEHOLDER_IMAGE_DIR } from "@/lib/constants"
-
-import { toPosixPath } from "../utils/relativePath"
+import { DEFAULT_LOCALE } from "@/lib/constants"
 
 interface Options {
   dir: string
@@ -34,14 +29,14 @@ type ImageNode = {
   }
 }
 
-type Path = string
+// type Path = string
 
-type Placeholder = {
-  hash: string
-  base64: string
-}
+// type Placeholder = {
+//   hash: string
+//   base64: string
+// }
 
-type PlaceholderData = Record<Path, Placeholder>
+// type PlaceholderData = Record<Path, Placeholder>
 
 /**
  * Handles:
@@ -72,73 +67,73 @@ const getImageSize = (src: string, dir: string) => {
  * @param srcPath - The source page path for the images.
  * @returns A promise that resolves to void.
  */
-const setImagePlaceholders = async (
-  images: ImageNode[],
-  srcPath: string
-): Promise<void> => {
-  // Generate kebab-case filename from srcPath, ie: /content/nft => content-nft-data.json
-  const FILENAME = toPosixPath(path.join(srcPath, "data.json"))
-    .replaceAll("/", "-")
-    .slice(1)
+// const setImagePlaceholders = async (
+//   images: ImageNode[],
+//   srcPath: string
+// ): Promise<void> => {
+//   // Generate kebab-case filename from srcPath, ie: /content/nft => content-nft-data.json
+//   const FILENAME = toPosixPath(path.join(srcPath, "data.json"))
+//     .replaceAll("/", "-")
+//     .slice(1)
 
-  // Make directory for current page if none exists
-  if (!fs.existsSync(PLACEHOLDER_IMAGE_DIR))
-    fs.mkdirSync(PLACEHOLDER_IMAGE_DIR, { recursive: true })
+//   // Make directory for current page if none exists
+//   if (!fs.existsSync(PLACEHOLDER_IMAGE_DIR))
+//     fs.mkdirSync(PLACEHOLDER_IMAGE_DIR, { recursive: true })
 
-  const DATA_PATH = path.join(PLACEHOLDER_IMAGE_DIR, FILENAME)
-  const existsCache = fs.existsSync(DATA_PATH)
-  const placeholdersCached: PlaceholderData = existsCache
-    ? JSON.parse(fs.readFileSync(DATA_PATH, "utf8"))
-    : {}
-  let isChanged = false
+//   const DATA_PATH = path.join(PLACEHOLDER_IMAGE_DIR, FILENAME)
+//   const existsCache = fs.existsSync(DATA_PATH)
+//   const placeholdersCached: PlaceholderData = existsCache
+//     ? JSON.parse(fs.readFileSync(DATA_PATH, "utf8"))
+//     : {}
+//   let isChanged = false
 
-  // Generate placeholder for internal images
-  for (const image of images) {
-    const { src } = image.properties
+//   // Generate placeholder for internal images
+//   for (const image of images) {
+//     const { src } = image.properties
 
-    // Skip externally hosted images
-    if (src.startsWith("http")) continue
+//     // Skip externally hosted images
+//     if (src.startsWith("http")) continue
 
-    // Load image data from file system as buffer
-    const buffer: Buffer = fs.readFileSync(path.join("public", src))
+//     // Load image data from file system as buffer
+//     const buffer: Buffer = fs.readFileSync(path.join("public", src))
 
-    // Get hash fingerprint of image data (no security implications; fast algorithm prioritized)
-    const hash = await getHashFromBuffer(buffer, {
-      algorithm: "SHA-1",
-      length: 8,
-    })
+//     // Get hash fingerprint of image data (no security implications; fast algorithm prioritized)
+//     const hash = await getHashFromBuffer(buffer, {
+//       algorithm: "SHA-1",
+//       length: 8,
+//     })
 
-    // Look for cached placeholder data with matching hash
-    const cachedPlaceholder: Placeholder | null =
-      placeholdersCached[src]?.hash === hash ? placeholdersCached[src] : null
+//     // Look for cached placeholder data with matching hash
+//     const cachedPlaceholder: Placeholder | null =
+//       placeholdersCached[src]?.hash === hash ? placeholdersCached[src] : null
 
-    // Get base64 from cached placeholder if available, else generate new placeholder
-    const { base64 } =
-      cachedPlaceholder || (await getPlaiceholder(buffer, { size: 16 }))
+//     // Get base64 from cached placeholder if available, else generate new placeholder
+//     const { base64 } =
+//       cachedPlaceholder || (await getPlaiceholder(buffer, { size: 16 }))
 
-    // Assign base64 placeholder data to image node `blurDataURL` property
-    image.properties.blurDataURL = base64
-    image.properties.placeholder = "blur"
+//     // Assign base64 placeholder data to image node `blurDataURL` property
+//     image.properties.blurDataURL = base64
+//     image.properties.placeholder = "blur"
 
-    // If cached value was not available, add newly generated placeholder data
-    if (!cachedPlaceholder) {
-      placeholdersCached[src] = { hash, base64 }
-      isChanged = true
-    }
-  }
+//     // If cached value was not available, add newly generated placeholder data
+//     if (!cachedPlaceholder) {
+//       placeholdersCached[src] = { hash, base64 }
+//       isChanged = true
+//     }
+//   }
 
-  // If cache is still empty, delete JSON file and return
-  if (Object.keys(placeholdersCached).length === 0) {
-    fs.rmSync(DATA_PATH, { recursive: true, force: true })
-    return
-  }
+//   // If cache is still empty, delete JSON file and return
+//   if (Object.keys(placeholdersCached).length === 0) {
+//     fs.rmSync(DATA_PATH, { recursive: true, force: true })
+//     return
+//   }
 
-  // If cached value has not changed, return without writing to file system
-  if (!isChanged) return
+//   // If cached value has not changed, return without writing to file system
+//   if (!isChanged) return
 
-  // Write results to cache file
-  fs.writeFileSync(DATA_PATH, JSON.stringify(placeholdersCached, null, 2))
-}
+//   // Write results to cache file
+//   fs.writeFileSync(DATA_PATH, JSON.stringify(placeholdersCached, null, 2))
+// }
 
 /**
  * NOTE: source code copied from the `rehype-img-size` plugin and adapted to our
@@ -189,7 +184,7 @@ const rehypeImg = (options: Options) => {
       }
     })
 
-    await setImagePlaceholders(images, srcPath)
+    // await setImagePlaceholders(images, srcPath)
   }
 }
 
