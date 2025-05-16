@@ -159,6 +159,13 @@ export const useResources = ({ txCostsMedianUsd }): DashboardSection[] => {
           imgSrc: IconBeaconchain,
         },
         {
+          title: "Beacon Block Production Live",
+          description:
+            "Live dashboard for Ethereum beacon chain block production by ethPandaOps.",
+          href: "https://lab.ethpandaops.io/beacon/block-production/live",
+          imgSrc: IconBeaconchain,
+        },
+        {
           title: "Txcity.io",
           description: t("page-resources-block-explorers-txcity-description"),
           href: "https://txcity.io/",
