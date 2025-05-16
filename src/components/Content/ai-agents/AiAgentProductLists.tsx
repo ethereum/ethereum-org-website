@@ -9,6 +9,7 @@ import botto from "@/public/images/ai-agents/botto.png"
 import clanker from "@/public/images/ai-agents/clanker.png"
 import cookiefun from "@/public/images/ai-agents/cookiefun.png"
 import heyanon from "@/public/images/ai-agents/heyanon.png"
+import loomlay from "@/public/images/ai-agents/loomlay.png"
 import luna from "@/public/images/ai-agents/luna.png"
 
 const AiAgentProductLists = ({ list }: { list: string }) => {
@@ -175,6 +176,14 @@ const AiAgentProductLists = ({ list }: { list: string }) => {
         image: clanker,
         alt: "Clanker logo",
         link: "https://warpcast.com/clanker",
+      },
+      {
+        title: "Loomlay",
+        description:
+          "No-code platform for building web3 AI agents with over 40 web3 plugins",
+        image: loomlay,
+        alt: "Loomlay logo",
+        link: "https://dev.loomlay.com",
       },
     ],
   }
