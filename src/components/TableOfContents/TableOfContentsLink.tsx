@@ -22,7 +22,7 @@ const Link = ({
       href={url}
       className={cn(
         "group relative inline-block w-full p-1 text-body-medium no-underline lg:w-auto",
-        isActive && "visited"
+        isActive && "visited text-primary"
       )}
     >
       <div
