@@ -40,12 +40,15 @@ Díẹ̀ nínú àwọn ohun èlò yóò bèèrè fún ọ láti kọ àṣírí
 **Ẹnikẹ́ni tó bá mọ gbólóhùn náà lè wà ní àkóso gbogbo owó rẹ.** Má ṣe sọ èyí fún ẹnikẹ́ni. Ọ̀rọ̀ yìí gbọ́dọ̀ ní ọ̀rọ̀ méjìlá sí mẹ́rìnlélógún tí wọ́n dá sílẹ̀ lóòrèkóòrè (ọ̀nà tí wọ́n gbà tòó ọ̀rọ̀ náà ṣe pàtàkì).
 
 <div>
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="flex-row justify-between items-center">
   <div><b>Ṣé àpamọ́wọ́ ti wà ní orí ẹ̀rọ àgbéká rẹ?</b><br/> Kọ́ bí o ṣe le lòó.</div>
   <ButtonLink href="/guides/how-to-use-a-wallet">
     Bí o ṣe lè lo wọ́lẹ́ẹ́tì kan
   </ButtonLink>
-</InfoBanner>
+ </AlertContent>
+</Alert>
 </div>
 
 Ṣé o fẹ́ mọ àwọn ìtọ́sọ́nà míì? Ṣàyẹ̀wò àwọn: [ìtọ́nisọ́nà ìgbésẹ̀ lọ́kọ̀ọ̀kan](/guides/) wa

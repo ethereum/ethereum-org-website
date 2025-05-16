@@ -49,12 +49,15 @@ lang: uk
 Щойно транзакцію буде оброблено, ви автоматично отримаєте на свій гаманець обміняні токени.
 <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Хочете дізнатися більше?</div>
   <ButtonLink href="/guides/">
     Перегляньте наші інші посібники
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Поширені запитання
 

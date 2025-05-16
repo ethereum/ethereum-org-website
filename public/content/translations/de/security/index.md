@@ -122,11 +122,14 @@ Allgemein gilt: Mitarbeiter kommunizieren mit Ihnen nie über private, inoffizie
 - Erlauben Sie niemandem den Remote-Zugriff auf Ihren Computer
 - Kommunizieren Sie niemals außerhalb der von einer Organisation ausgewiesenen Kanäle
 
-<InfoBanner emoji=":lock:">
-  <div>
+<Alert variant="update">
+<AlertEmoji text=":lock:"/>
+<AlertContent>
+<AlertDescription>
     Achtung: Obwohl Unterstützungsbetrug oft auf Discord erfolgt, ist es auch möglich, dass diese und auch andere Arten von Betrug auf anderen Chat-Plattformen, einschließlich per E-Mail, vorkommen können.
-  </div>
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ### „Eth2“-Token-Betrug {#eth2-token-scam}
 
@@ -213,11 +216,14 @@ Ein starkes Passwort, das im Rahmen einer Datenpanne offenbart wurde, ist kein s
 
 ### Verwendung von Kennwortmanagern {#use-password-manager}
 
-<InfoBanner emoji=":bulb:">
-  <div>
+<Alert variant="update">
+<AlertEmoji text=":bulb:"/>
+<AlertContent>
+<AlertDescription>
     Ein Kennwortmanager ist hilfreich bei der Erstellung starker, einzigartiger Kennwörter und dabei sich diese zu merken! Wir empfehlen <strong>dringend</strong> die Verwendung eines Kennwortmanagers! Es gibt viele gute, kostenlose Angebote.
-  </div>
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 Es ist nicht möglich, sich starke, einzigartige Kennwörter für jedes Konto zu merken, das Sie eingerichtet haben. Ein Kennwortmanager bietet Ihnen einen sicheren, verschlüsselten Speicher für all Ihre Kennwörter, auf den Sie über ein starkes Master-Kennwort zugreifen können. Ein solches Tool schlägt Ihnen auch starke Kennwörter vor, wenn Sie sich für einen neuen Dienst anmelden, sodass Sie keine eigenen erstellen müssen. Viele Kennwortmanager informieren Sie auch, wenn Sie von einem Datenleck betroffen sind, sodass Sie Ihre Kennwörter vor böswilligen Angriffen ändern können.
 
@@ -240,11 +246,14 @@ Sie werden möglicherweise gelegentlich aufgefordert, Ihre Identität mit einzig
 
 Die Nutzung der **Zwei-Faktor-Authentifizierung (2FA)** bietet einen zusätzlichen *Sicherheitsfaktor* für Ihre Online-Konten. 2FA sorgt dafür, dass Ihr Passwort allein nicht reicht, um auf ein Konto zuzugreifen. Meist ist der zweite Faktor ein zufälliger 6-stelliger Code, bekannt als ein **zeitabhängiges einmaliges Kennwort (Time-based One-time Password, TOTP)**, auf das Sie über eine Authentifizierungs-App wie Google Authenticator oder Authy Zugriff haben. Solche Apps funktionieren als „etwas, das Sie besitzen“-Faktor, da der Seed, der den Zeitcode generiert, auf Ihrem Gerät gespeichert ist.
 
-<InfoBanner emoji=":lock:">
-  <div>
+<Alert variant="update">
+<AlertEmoji text=":lock:"/>
+<AlertContent>
+<AlertDescription>
     Hinweis: SMS-basierte 2FA ist anfällig für <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">SIM Jacking</a> und daher nicht sicher. Für das höchste Maß an Sicherheit nutzen Sie am besten einen Dienst wie <a href="https://mashable.com/article/how-to-set-up-google-authenticator">Google Authenticator</a> oder <a href="https://authy.com/">Authy</a>.
-  </div>
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 #### Sicherheitsschlüssel {#security-keys}
 

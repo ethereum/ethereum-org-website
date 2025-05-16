@@ -40,12 +40,15 @@ lang: ಎನ್
 **ಪದಗುಚ್ಛವನ್ನು ತಿಳಿದಿರುವ ಯಾವುದೇ ವ್ಯಕ್ತಿಯು ಎಲ್ಲಾ ನಿಧಿಗಳ ನಿಯಂತ್ರಣವನ್ನು ತೆಗೆದುಕೊಳ್ಳಬಹುದು.** ಇದನ್ನು ಯಾರೊಂದಿಗೂ ಹಂಚಿಕೊಳ್ಳಬೇಡಿ. ಈ ನುಡಿಗಟ್ಟು ಯಾದೃಚ್ಛಿಕವಾಗಿ ಉತ್ಪತ್ತಿಯಾದ 12 ರಿಂದ 24 ಪದಗಳನ್ನು ಹೊಂದಿರಬೇಕು (ಪದಗಳ ಕ್ರಮವು ಮುಖ್ಯವಾಗಿದೆ).
 
 <div>
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="flex-row justify-between items-center">
   <div><b>ವ್ಯಾಲೆಟ್ ಸ್ಥಾಪಿಸಲಾಗಿದೆಯೇ?</b><br/>ಅದನ್ನು ಹೇಗೆ ಬಳಸಬೇಕೆಂದು ಕಲಿಯಿರಿ.</div>
   <ButtonLink href="/guides/how-to-use-a-wallet">
     ವ್ಯಾಲೆಟ್ ಬಳಸುವುದು ಹೇಗೆ
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 </div>
 
 ಇತರ ಮಾರ್ಗದರ್ಶಿಗಳಲ್ಲಿ ಆಸಕ್ತಿ ಇದೆಯೇ? ನಮ್ಮದನ್ನು ಪರಿಶೀಲಿಸಿ: [ಹಂತ ಹಂತದ ಮಾರ್ಗದರ್ಶಿಗಳು](/guides/)

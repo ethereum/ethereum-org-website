@@ -9,14 +9,19 @@ template: roadmap
 
 Ethereum jest skalowane przy użyciu [warstwy 2](/layer-2/#rollups) (znanej również jako pakiety zbiorcze), która łączy transakcje i wysyła dane do Ethereum. Mimo że pakiety zbiorcze są do ośmiu razy tańsze niż sieć główna Ethereum, możliwa jest dalsza optymalizacja pakietów zbiorczych w celu dalszego obniżenia kosztów dla użytkowników końcowych. Pakiety zbiorcze opierają się również na niektórych scentralizowanych elementach, które deweloperzy mogą usuwać w miarę rozwoju pakietów zbiorczych.
 
-<InfoBanner mb={8} title="Koszty transakcji">
+<Alert variant="update" className="mb-8">
+<AlertContent>
+<AlertTitle className="mb-4">
+  Koszty transakcji
+</AlertTitle>
   <ul style={{ marginBottom: 0 }}>
     <li>Obecne pakiety zbiorcze są <strong>około 5-20 razy</strong> tańsze niż warstwa 1 Ethereum</li>
     <li>Pakiety zbiorcze o wiedzy zerowej (ZK-rollups) wkrótce obniżą opłaty o <strong>około 40-100 razy</strong></li>
     <li>Nadchodzące zmiany w Ethereum zapewnią kolejne <strong>około 100-1000 razy</strong> skalowania</li>
     <li style={{ marginBottom: 0 }}>Użytkownicy powinni skorzystać z transakcji <strong>kosztujących mniej niż 0,001 USD</strong></li>
   </ul>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Tańsze dane {#making-data-cheaper}
 

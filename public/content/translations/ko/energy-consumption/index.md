@@ -48,9 +48,14 @@ lang: ko
 
 [이더리움이 지분 증명을 구현하는 방법](/developers/docs/consensus-mechanisms/pos)과 작업 증명과 지분 증명의 차이점에 대해서 자세히 알아보세요.
 
-<InfoBanner emoji=":evergreen_tree:">
+<Alert variant="update">
+<AlertEmoji text=":evergreen_tree:" />
+<AlertContent>
+<AlertDescription>
   이러한 통계가 잘못되었거나 더 정확하게 만들 수 있다고 생각하는 경우 문제 제기 또는 풀 리퀘스트(Pull Request)를 하십시오. 이 추정치는 공개적으로 액세스할 수 있는 정보와 현재 이더리움 로드맵을 사용하여 나온 것입니다. 이 발언들은 이더리움 재단의 공식적 약속으로 한 것이 아닙니다. 
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## 더 읽을 거리 {#further-reading}
 

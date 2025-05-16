@@ -40,12 +40,15 @@ lang: el
 **Οποιοσδήποτε γνωρίζει τη μυστική φράση μπορεί να αναλάβει τον έλεγχο όλων των κεφαλαίων.** Μην την κοινοποιείτε σε άλλους. Αυτή η φράση πρέπει να περιέχει από 12 έως 24 λέξεις που δημιουργούνται τυχαία (η σειρά των λέξεων είναι σημαντική).
 
 <div>
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="flex-row items-center justify-between">
   <div><b>Εγκαταστήσατε εφαρμογή πορτοφολιού;</b><br/> Μάθετε πώς να τη χρησιμοποιείτε.</div>
   <ButtonLink href="/guides/how-to-use-a-wallet">
     Πώς να χρησιμοποιήσετε ένα πορτοφόλι
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 </div>
 
 Ενδιαφέρεστε και για άλλους οδηγούς; Δείτε το: [Αναλυτικοί οδηγοί](/guides/)

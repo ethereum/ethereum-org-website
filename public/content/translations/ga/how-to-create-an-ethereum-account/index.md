@@ -40,12 +40,15 @@ Iarrfaidh roinnt aipeanna ort "frása athshlánaithe" rúnda a shábháil (ar a 
 **Is féidir le duine ar bith a bhfuil an frása ar eolas aige smacht a fháil ar na cistí go léir.** Ná roinn é seo le haon duine choíche. Ba chóir go mbeadh idir 12 agus 24 focal a gineadh go randamach san abairt seo (tá ord na bhfocal tábhachtach).
 
 <div>
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="flex-row justify-between items-center">
   <div><b>Sparán suiteáilte?</b><br/>Foghlaim conas é a úsáid.</div>
   <ButtonLink href="/guides/how-to-use-a-wallet">
     Conas sparán a úsáid
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 </div>
 
 Spéis agat i dtreoracha eile? Breathnaigh ar ár: [dtreoracha céim ar chéim](/guides/)

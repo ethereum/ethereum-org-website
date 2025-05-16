@@ -57,9 +57,9 @@ Pokud někdo zná náhodné body použité pro vytvoření závazku, je pro něj
 
 </ExpandableCard>
 
-<InfoBanner isWarning mb={8}>
+<Alert variant="warning" className="mb-8">
   Ani Danksharding, ani Proto-Danksharding nesledují tradiční model „tříštění“, který má za cíl rozdělit blockchain do více částí. Shard chainy již nejsou součástí plánu. Místo toho Danksharding využívá ke škálování Etherea distribuované vzorkování dat napříč bloby. To je mnohem jednodušší na implementaci. Tento model je někdy označován jako „tříštění dat“.
-</InfoBanner>
+</Alert>
 
 ## Co je Danksharding? {#what-is-danksharding}
 

@@ -57,9 +57,9 @@ EIP-4844 KZG 仪式曾经公开过，成千上万的人参与其中，并添加�
 
 </ExpandableCard>
 
-<InfoBanner isWarning mb={8}>
+<Alert variant="warning" className="mb-8">
   Danksharding 和 Proto-Danksharding 都没有采用传统的旨在将区块链分成多个部分的“分片”模式。 分片链不再是路线图的一部分。 相反，Danksharding 使用跨数据块的分布式数据采样来扩展以太坊。 这实施起来要简单得多。 这种模式有时被称为“数据分片”。
-</InfoBanner>
+</Alert>
 
 ## 什么是 Danksharding？ {#what-is-danksharding}
 

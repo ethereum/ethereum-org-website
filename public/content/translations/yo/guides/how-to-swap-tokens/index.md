@@ -49,12 +49,15 @@ O lè wo ìlọsíwájú ti ìdúnàádúrà lórí èyíkéyìí aṣàwárí b
 Ìwọ yóò gba àwọn tọ́kẹ̀n tí a ṣe pàṣípààrọ̀ wọn láìfọwọ́yí nínú wọ́lẹ́ẹ́tì rẹ ní kété tí a bá ṣe ìlànà ìdúnàádúrà náà.
 <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Ṣe o f mọ̀ síi?</div>
   <ButtonLink href="/guides/">
     Wo àwọn ìtọ́sọ́nà wa mìíràn
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Awon ibere gbogbo ìgbà
 

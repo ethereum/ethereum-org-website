@@ -10,7 +10,6 @@ import Emoji from "@/components/Emoji"
 import EnvWarningBanner from "@/components/EnvWarningBanner"
 import FeedbackCard from "@/components/FeedbackCard"
 import FileContributors from "@/components/FileContributors"
-import InfoBanner from "@/components/InfoBanner"
 import MainArticle from "@/components/MainArticle"
 import {
   Heading1 as MdHeading1,
@@ -81,7 +80,6 @@ export const tutorialsComponents = {
   Card,
   Emoji,
   EnvWarningBanner,
-  InfoBanner,
   YouTube,
 }
 type TutorialLayoutProps = ChildOnlyProp &
