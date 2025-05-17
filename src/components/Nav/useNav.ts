@@ -234,6 +234,11 @@ export const useNav = () => {
                   description: t("nav-gaming-description"),
                   href: "/gaming/",
                 },
+                {
+                  label: t("prediction-markets"),
+                  description: t("nav-prediction-markets-description"),
+                  href: "/prediction-markets/",
+                },
               ],
             },
           ],
