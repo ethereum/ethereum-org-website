@@ -2,12 +2,13 @@
 
 import type { ComponentProps, ComponentPropsWithRef } from "react"
 
-import type { ChildOnlyProp } from "@/lib/types"
+import type { ChildOnlyProp, PageWithContributorsProps } from "@/lib/types"
 
 import Breadcrumbs from "@/components/Breadcrumbs"
 import Card from "@/components/Card"
 import Emoji from "@/components/Emoji"
 import FeedbackCard from "@/components/FeedbackCard"
+import FileContributors from "@/components/FileContributors"
 import InfoBanner from "@/components/InfoBanner"
 import MainArticle from "@/components/MainArticle"
 import PageHero, {
@@ -90,7 +91,10 @@ const TrilemmaContent = (props: ChildOnlyProp) => (
   />
 )
 
-const VisionPage = () => {
+const VisionPage = ({
+  contributors,
+  lastEditLocaleTimestamp,
+}: PageWithContributorsProps) => {
   const { t } = useTranslation(["page-roadmap-vision", "page-upgrades-index"])
   const pathname = usePathname()
 
@@ -240,6 +244,11 @@ const VisionPage = () => {
             </ButtonLink>
           </InfoBanner>
         </CentralContent>
+        <FileContributors
+          className="my-10 border-t"
+          contributors={contributors}
+          lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        />
       </PageContent>
       <Divider />
       <FeedbackCard />

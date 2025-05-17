@@ -5,7 +5,12 @@ import { useLocale } from "next-intl"
 import type { HTMLAttributes } from "react"
 import { MdInfoOutline } from "react-icons/md"
 
-import type { ChildOnlyProp, Lang, MetricReturnData } from "@/lib/types"
+import type {
+  ChildOnlyProp,
+  Lang,
+  MetricReturnData,
+  PageWithContributorsProps,
+} from "@/lib/types"
 
 import AdoptionChart from "@/components/AdoptionChart"
 import {
@@ -19,6 +24,7 @@ import Callout from "@/components/Callout"
 import Card from "@/components/Card"
 import EnergyConsumptionChart from "@/components/EnergyConsumptionChart"
 import FeedbackCard from "@/components/FeedbackCard"
+import FileContributors from "@/components/FileContributors"
 import { Image } from "@/components/Image"
 import ListenToPlayer from "@/components/ListenToPlayer"
 import MainArticle from "@/components/MainArticle"
@@ -160,11 +166,15 @@ const Image400 = ({ src }: Pick<ImageProps, "src">) => (
   <Image src={src} alt="" width={400} />
 )
 
-type Props = {
+type Props = PageWithContributorsProps & {
   data: MetricReturnData
 }
 
-const WhatIsEthereumPage = ({ data }: Props) => {
+const WhatIsEthereumPage = ({
+  data,
+  contributors,
+  lastEditLocaleTimestamp,
+}: Props) => {
   const { t } = useTranslation(["page-what-is-ethereum", "learn-quizzes"])
   const pathname = usePathname()
   const locale = useLocale()
@@ -835,6 +845,11 @@ const WhatIsEthereumPage = ({ data }: Props) => {
         </Section>
 
         <Section>
+          <FileContributors
+            className="my-10 border-t"
+            contributors={contributors}
+            lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+          />
           <FeedbackCard />
         </Section>
       </MainArticle>

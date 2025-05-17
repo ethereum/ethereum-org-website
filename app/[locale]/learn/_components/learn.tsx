@@ -2,13 +2,18 @@
 
 import type { HTMLAttributes, ReactNode } from "react"
 
-import type { ChildOnlyProp, ToCItem } from "@/lib/types"
+import type {
+  ChildOnlyProp,
+  PageWithContributorsProps,
+  ToCItem,
+} from "@/lib/types"
 
 import OriginalCard, {
   type CardProps as OriginalCardProps,
 } from "@/components/Card"
 import DocLink from "@/components/DocLink"
 import FeedbackCard from "@/components/FeedbackCard"
+import FileContributors from "@/components/FileContributors"
 import { HubHero } from "@/components/Hero"
 import type { HubHeroProps } from "@/components/Hero/HubHero"
 import { Image, type ImageProps } from "@/components/Image"
@@ -111,7 +116,10 @@ const ImageHeight200 = ({ src, alt }: ImageProps) => (
   <Image className="h-[200px] w-auto" src={src} alt={alt} />
 )
 
-const LearnPage = () => {
+const LearnPage = ({
+  contributors,
+  lastEditLocaleTimestamp,
+}: PageWithContributorsProps) => {
   const { t } = useTranslation("page-learn")
 
   const tocItems = [
@@ -681,6 +689,11 @@ const LearnPage = () => {
               </Stack>
             </Section>
 
+            <FileContributors
+              className="my-10 border-t"
+              contributors={contributors}
+              lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+            />
             <FeedbackCard />
           </ContentContainer>
         </MainArticle>

@@ -972,6 +972,11 @@ export type EventCardProps = {
   imageUrl?: string
 }
 
+export type PageWithContributorsProps = {
+  contributors: FileContributor[]
+  lastEditLocaleTimestamp: string
+}
+
 export type BreakpointKey = keyof typeof screens
 
 export type MaturityLevel =

@@ -2,11 +2,14 @@
 
 import { BaseHTMLAttributes, ComponentPropsWithRef } from "react"
 
+import { PageWithContributorsProps } from "@/lib/types"
+
 import Callout from "@/components/Callout"
 import Card from "@/components/Card"
 import Emoji from "@/components/Emoji"
 import ExpandableCard from "@/components/ExpandableCard"
 import FeedbackCard from "@/components/FeedbackCard"
+import FileContributors from "@/components/FileContributors"
 import GhostCard from "@/components/GhostCard"
 import HorizontalCard from "@/components/HorizontalCard"
 import { Image } from "@/components/Image"
@@ -78,7 +81,10 @@ const H3 = ({
   <h3 className={cn("mb-8 mt-10 text-xl md:text-2xl", className)} {...props} />
 )
 
-const GasPage = () => {
+const GasPage = ({
+  contributors,
+  lastEditLocaleTimestamp,
+}: PageWithContributorsProps) => {
   const { t } = useTranslation("page-gas")
 
   const benefits = [
@@ -389,6 +395,11 @@ const GasPage = () => {
         <StandaloneQuizWidget quizKey="gas" />
       </Content>
       <Content>
+        <FileContributors
+          className="my-10 border-t"
+          contributors={contributors}
+          lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        />
         <FeedbackCard />
       </Content>
     </Page>

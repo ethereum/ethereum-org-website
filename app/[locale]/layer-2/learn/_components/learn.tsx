@@ -1,7 +1,10 @@
 "use client"
 
+import { PageWithContributorsProps } from "@/lib/types"
+
 import Callout from "@/components/Callout"
 import Card from "@/components/Card"
+import FileContributors from "@/components/FileContributors"
 import { ContentHero, type ContentHeroProps } from "@/components/Hero"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
@@ -19,7 +22,10 @@ import Callout1Image from "@/public/images/man-and-dog-playing.png"
 import DAOImage from "@/public/images/use-cases/dao-2.png"
 import WhatIsEthereumImage from "@/public/images/what-is-ethereum.png"
 
-const Layer2Learn = () => {
+const Layer2Learn = ({
+  contributors,
+  lastEditLocaleTimestamp,
+}: PageWithContributorsProps) => {
   const { t } = useTranslation("page-layer-2-learn")
   const pathname = usePathname()
 
@@ -274,6 +280,11 @@ const Layer2Learn = () => {
             </p>
           </div>
         </div>
+        <FileContributors
+          className="my-10 border-t"
+          contributors={contributors}
+          lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        />
       </div>
 
       <div id="callout-cards" className="px-8 py-9">
