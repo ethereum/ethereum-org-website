@@ -26,7 +26,24 @@ const extractDateFromGitLogInfo = (logInfo: string): string => {
 }
 
 // This util filters the git log to get the file last commit info, and then the commit date (last update)
-export const getLastModifiedDate = (slug: string, locale: string): string => {
+export const getLastModifiedDate = (
+  slug: string,
+  locale: string,
+  isMarkdown?: boolean
+): string => {
+  if (!isMarkdown) {
+    const appPagePaths = [
+      join("app/[locale]", slug, "page.tsx"),
+      join("app/[locale]", slug, "_components", `${slug.split("/").pop()}.tsx`),
+    ]
+    const logs = appPagePaths.map(getGitLogFromPath)
+    const dates = logs.map(extractDateFromGitLogInfo)
+    const latestCommitDate = dates.reduce((a, b) =>
+      new Date(a) > new Date(b) ? a : b
+    )
+    return latestCommitDate
+  }
+
   const translatedContentPath = join(TRANSLATIONS_DIR, locale, slug, "index.md")
   const contentIsNotTranslated = !fs.existsSync(translatedContentPath)
   let filePath = ""

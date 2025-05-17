@@ -27,7 +27,7 @@ export const getFileContributorInfo = async (
     cache
   )
 
-  const latestCommitDate = getLastModifiedDate(slug, locale!)
+  const latestCommitDate = getLastModifiedDate(slug, locale!, true)
   const gitHubLastEdit = gitContributors[0]?.date
   const lastUpdatedDate = gitHubLastEdit || latestCommitDate
 
@@ -90,10 +90,12 @@ export const getPageContributorInfo = async (
   const latestCommitDate = getLastModifiedDate(pagePath, locale!)
   const gitHubLastEdit = uniqueGitContributors[0]?.date
 
-  const lastEditLocaleTimestamp = getLocaleTimestamp(
-    locale,
-    gitHubLastEdit || latestCommitDate
-  )
+  let lastEditLocaleTimestamp = ""
+  if (latestCommitDate) {
+    lastEditLocaleTimestamp = getLocaleTimestamp(locale, latestCommitDate)
+  } else if (gitHubLastEdit) {
+    lastEditLocaleTimestamp = getLocaleTimestamp(locale, gitHubLastEdit)
+  }
 
   return { contributors: uniqueGitContributors, lastEditLocaleTimestamp }
 }
