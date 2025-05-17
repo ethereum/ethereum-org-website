@@ -194,6 +194,10 @@ const getRequiredNamespacesForPath = (relativePath: string) => {
     primaryNamespace = "page-roadmap"
   }
 
+  if (path.startsWith("/roadmap/tracks/")) {
+    primaryNamespace = "page-roadmap-tracks"
+  }
+
   if (path.startsWith("/start/")) {
     requiredNamespaces = [...requiredNamespaces]
   }

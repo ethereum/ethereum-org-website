@@ -51,6 +51,7 @@
     "@socialgouv/matomo-next": "^1.8.0",
     "@tanstack/react-query": "^5.66.7",
     "@tanstack/react-table": "^8.19.3",
+    "@xyflow/react": "^12.6.0",
     "chart.js": "^4.4.2",
     "chartjs-plugin-datalabels": "^2.2.0",
     "class-variance-authority": "^0.7.0",

@@ -6,6 +6,7 @@ import GuidesHubHeroImage from "@/public/images/heroes/guides-hub-hero.jpg"
 import Layer2HubHeroImage from "@/public/images/heroes/layer-2-hub-hero.jpg"
 import QuizzesHubHeroImage from "@/public/images/heroes/quizzes-hub-hero.png"
 import PectraImage from "@/public/images/roadmap/roadmap-pectra.png"
+import RoadmapNodeImage from "@/public/images/roadmap/roadmap-tracks-image.png"
 
 interface Release {
   image: StaticImageData
@@ -186,4 +187,24 @@ export const releasesData: Release[] = [
     ),
     href: "https://eips.ethereum.org/EIPS/eip-7773",
   },
+]
+
+// TODO: Add future releases when implementing /roadmap/tracks
+const futureRelease: Release = {
+  image: RoadmapNodeImage,
+  releaseName: "Future releases",
+  releaseDate: "Future",
+  content: (
+    <div>
+      <p>
+        Ethereum&apos;s roadmap continues to be developed, with more to come!
+      </p>
+    </div>
+  ),
+  href: "/roadmap/tracks",
+}
+
+export const releasesDataWithFuture: Release[] = [
+  ...releasesData,
+  futureRelease,
 ]
