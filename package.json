@@ -90,7 +90,7 @@
     "usehooks-ts": "^3.1.0",
     "vaul": "^1.0.0",
     "viem": "^2.23.3",
-    "wagmi": "^2.14.11",
+    "wagmi": "^2.14.16",
     "yaml-loader": "^0.8.0"
   },
   "devDependencies": {
