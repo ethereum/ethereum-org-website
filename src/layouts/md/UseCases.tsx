@@ -138,6 +138,15 @@ export const UseCasesLayout = ({
           eventName: "prediction-markets",
         },
       },
+      {
+        text: t("template-usecase:template-usecase-dropdown-rwa"),
+        href: "/real-world-assets/",
+        matomo: {
+          eventCategory: "use cases menu",
+          eventAction: "click",
+          eventName: "real-world-assets",
+        },
+      },
     ],
   }
 
