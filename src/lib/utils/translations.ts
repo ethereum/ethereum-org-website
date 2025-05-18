@@ -143,8 +143,11 @@ const getRequiredNamespacesForPath = (relativePath: string) => {
   }
 
   if (path.startsWith("/roadmap/vision/")) {
-    primaryNamespace = "page-roadmap-vision"
-    requiredNamespaces = [...requiredNamespaces, "page-upgrades-index"]
+    requiredNamespaces = [
+      ...requiredNamespaces,
+      "page-upgrades-index",
+      "page-roadmap-vision",
+    ]
   }
 
   if (path.startsWith("/gas/")) {
