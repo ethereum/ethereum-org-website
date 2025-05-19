@@ -200,7 +200,7 @@ contract Oracle {
 
 Az orákulum-csomópont az orákulumszolgáltatás láncon kívüli összetevője. Információkat szerez külső forrásokból, például harmadik fél szerverein tárolt API-okból, és a láncon belülre helyezi, hogy az okosszerződések felhasználhassák azokat. Az orákulum-csomópontok figyelik a láncon belüli orákulumszerződés eseményeit, és folytatják a naplóban leírt feladat elvégzését.
 
-Az orákulum-csomópontok gyakori feladata, hogy [HTTP GET](https://www.w3schools.com/tags/ref_httpmethods.asp) kérést küldjenek egy API-szolgáltatáshoz, elemezzék a választ a releváns adatok kinyeréséhez, formázzák az adatokat a blokklánc által olvasható kimenetté, és elküldjék a láncon belül egy tranzakcióba foglalva az orákulumszerződéshez. Az orákulum-csomópontnak a benyújtott információk érvényességét és sértetlenségét „hitelességi bizonyítékok” segítségével is igazolnia kell, amelyeket később vizsgálunk meg.
+Az orákulum-csomópontok gyakori feladata, hogy [HTTP GET](https://www.w3schools.com/tags/ref_httpmethods.asp) kérést küldjenek egy API-szolgáltatásnak, elemezzék a választ a releváns adatok kinyeréséhez, formázzák az adatokat a blokklánc által olvasható kimenetté, és elküldjék a láncon belül egy tranzakcióba foglalva az orákulumszerződéshez. Az orákulum-csomópontnak a benyújtott információk érvényességét és sértetlenségét „hitelességi bizonyítékok” segítségével is igazolnia kell, amelyeket később vizsgálunk meg.
 
 A számítási orákulumok a láncon kívüli csomópontokra is támaszkodnak olyan számítási feladatok elvégzésében, amelyeket a láncon belül nem lenne célszerű végrehajtani, tekintettel a gázköltségekre és a blokkméretkorlátokra. Az orákulum-csomópont feladata lehet például egy ellenőrizhetően véletlenszerű szám előállítása (például blokkláncalapú játékok esetében).
 
@@ -264,7 +264,7 @@ A decentralizált orákulumok bizonyos osztályai megkövetelik, hogy az orákul
 
 #### Az információk konszenzusalapú validálása {#consensus-based-validation-of-information}
 
-A centralizált orákulumok az igazság egyetlen forrására támaszkodnak, amikor adatokat szolgáltatnak az okosszerződéseknek, ami magában hordozza a pontatlan információk közzétételének lehetőségét. A decentralizált orákulumok úgy oldják meg ezt a problémát, hogy több orákulum-csomópontra támaszkodva kérdezik le a láncon kívüli információkat. A több forrásból származó adatok összehasonlításával a decentralizált orákulumok csökkentik azt a kockázatot, hogy az érvénytelen információkat adnak a láncon belüli szerződéseknek.
+A centralizált orákulumok az igazság egyetlen forrására támaszkodnak, amikor adatokat szolgáltatnak az okosszerződéseknek, ami magában hordozza a pontatlan információk közzétételének lehetőségét. A decentralizált orákulumok úgy oldják meg ezt a problémát, hogy több orákulum-csomópontra támaszkodva kérdezik le a láncon kívüli információkat. A több forrásból származó adatok összehasonlításával a decentralizált orákulumok csökkentik azt a kockázatot, hogy érvénytelen információkat adjanak a láncon belüli szerződéseknek.
 
 A decentralizált orákulumoknak azonban kezelniük kell a több, láncon kívüli forrásból származó információk közötti eltéréseket. Az információkülönbségek minimalizálása és annak biztosítása érdekében, hogy az orákulumszerződéshez továbbított adatok az orákulum-csomópontok kollektív véleményét tükrözzék, a decentralizált orákulumok a következő mechanizmusokat használják:
 
@@ -284,7 +284,7 @@ Ennek egyik korai ötlete volt a [SchellingCoin](https://blog.ethereum.org/2014/
 
 Bár SchellingCoin ma még nem létezik, számos decentralizált orákulum – nevezetesen a [Maker Protocol's Oracles](https://docs.makerdao.com/smart-contract-modules/oracle-module) – használja a schelling-pont mechanizmust az orákulumadatok pontosságának javítására. Minden Maker Oracle csomópont két komponensből áll: a csomópontok („közvetítők” és „ellátók/betáplálók”) láncon kívüli peer-to-peer (P2P) hálózatból, amelyek a biztosítéki eszközök piaci árait megadják, valamint egy láncon belüli „Medianizer” szerződésből, amely kiszámítja a megadott értékek mediánját. A megadott késleltetési időszak lejártával ez a mediánérték lesz a kapcsolódó eszköz új referenciaára.
 
-További példák a Schelling-pont mechanizmusokat használó orákulumokra: [Chainlink Off-Chain Reporting](https://docs.chain.link/docs/off-chain-reporting/) és [Witnet](https://witnet.io/). Mindkét rendszerben a peer-to-peer hálózat orákulum-csomópontjaitól érkező válaszokat egyetlen összesített értékké, például átlagértékké vagy mediánná aggregálják. A csomópontokat aszerint jutalmazzák vagy büntetik, hogy válaszaik milyen mértékben igazodnak az összesített értékhez vagy térnek el attól.
+További példák a Schelling-pont mechanizmusokat használó orákulumokra: [Chainlink Off-Chain Reporting](https://docs.chain.link/docs/offchain-reporting/) és [Witnet](https://witnet.io/). Mindkét rendszerben a peer-to-peer hálózat orákulum-csomópontjaitól érkező válaszokat egyetlen összesített értékké, például átlagértékké vagy mediánná aggregálják. A csomópontokat aszerint jutalmazzák vagy büntetik, hogy válaszaik milyen mértékben igazodnak az összesített értékhez vagy térnek el attól.
 
 A Schelling-pont mechanizmusok azért vonzók, mert minimalizálják a láncon belüli lábnyomot (egy tranzakció kell hozzá), miközben garantálják a decentralizációt. Ez utóbbi azért lehetséges, mert a csomópontoknak alá kell írniuk a benyújtott válaszok listáját, mielőtt az bekerül az átlag/középértéket előállító algoritmusba.
 
@@ -388,6 +388,8 @@ Többféle orákulumalkalmazást is integrálhat az Ethereum dappba:
 
 **[Chainlink](https://chain.link/)** – _A Chainlink decentralizált orákulumhálózatok hamisításbiztos bemeneteket, kimeneteket és számításokat biztosítanak a fejlett okosszerződések támogatásához bármely blokkláncon._
 
+**[RedStone Oracles](https://redstone.finance/)** - _A RedStone egy decentralizált moduláris orákulum, amely gázoptimalizált adatátvitelt biztosít. A cég arra specializálódott, hogy árfolyam-előfizetéseket kínáljon a feltörekvő eszközökhöz, mint például a likvid letéti tokenek (LST), likvid újraletétbe helyezési tokenek (LRT) és Bitcoin letéti derivatívák._
+
 **[Chronicle](https://chroniclelabs.org/)** - _A Chronicle megoldja a láncon belüli adatátvitel jelenlegi korlátait azáltal, hogy valóban skálázható, költséghatékony, decentralizált és ellenőrizhető orákulumokat készít._
 
 **[Witnet](https://witnet.io/)** – _A Witnet egy engedély nélküli, decentralizált és cenzúrának ellenálló orákulum, amely segíti az okosszerződéseket, hogy erős kriptogazdasági garanciákkal reagáljanak a valós világ eseményeire._
@@ -404,7 +406,7 @@ Többféle orákulumalkalmazást is integrálhat az Ethereum dappba:
 
 **[API3 DAO](https://www.api3.org/)** – _Az API3 DAO olyan, első féltől származó orákulummegoldásokat kínál, amelyek nagyobb forrásátláthatóságot, biztonságot és skálázhatóságot biztosítanak egy decentralizált megoldásában az okosszerződések számára._
 
-**[Supra](https://supra.com/)** - Egy vertikálisan integrált eszközrendszer a láncok közötti megoldások számára, amely összekapcsolja az összes blokkláncot, legyen az publikus (L1-ek és L2-k) vagy privát (vállalati), decentralizáltorákulum-árfolyamadatokat biztosítva, melyet láncon belüli és kívüli projektek is használhatnak.
+**[Supra](https://supra.com/)** – Egy vertikálisan integrált eszközrendszer a láncok közötti megoldások számára, amely összekapcsolja az összes blokkláncot, legyen az publikus (L1-ek és L2-k) vagy privát (vállalati), decentralizáltorákulum-árfolyamadatokat biztosítva, melyet láncon belüli és kívüli projektek is használhatnak.
 
 ## További olvasnivaló {#further-reading}
 
