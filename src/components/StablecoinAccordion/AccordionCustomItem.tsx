@@ -1,4 +1,4 @@
-import { BaseHTMLAttributes, ReactNode, useState } from "react"
+import { BaseHTMLAttributes, ReactNode } from "react"
 
 import type { ChildOnlyProp } from "@/lib/types"
 
@@ -51,15 +51,26 @@ interface AccordionCustomItemProps {
    * The category name of each accordion section
    */
   category: CategoryNameType
+  /**
+   * Whether the accordion item is open
+   */
+  isOpen?: boolean
+  /**
+   * Callback when open state changes
+   */
+  onOpenChange?: (isOpen: boolean) => void
   children: ReactNode
 }
 
 export const AccordionCustomItem = (props: AccordionCustomItemProps) => {
-  const { category, children } = props
+  const { category, children, isOpen = false, onOpenChange } = props
   const { t } = useTranslation("page-stablecoins")
-  const [open, setOpen] = useState(false)
 
-  const handleOpen = () => setOpen(!open)
+  const handleOpen = () => {
+    if (onOpenChange) {
+      onOpenChange(!isOpen)
+    }
+  }
 
   const contentObj = accordionButtonContent[category]
 
@@ -97,7 +108,7 @@ export const AccordionCustomItem = (props: AccordionCustomItemProps) => {
             </p>
           </div>
         </Flex>
-        <MoreOrLessLink isOpen={open} />
+        <MoreOrLessLink isOpen={isOpen} />
       </AccordionTrigger>
       <AccordionContent className="-mx-px -mb-px mt-0 border border-border bg-background p-0 text-md md:p-0">
         <Flex className="flex-col justify-between p-8 lg:flex-row">
