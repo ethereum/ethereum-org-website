@@ -10,7 +10,7 @@ import type { CommitHistory, Lang } from "@/lib/types"
 import I18nProvider from "@/components/I18nProvider"
 
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
-import { getLastModifiedDateByPath } from "@/lib/utils/gh"
+import { getLastGitCommitDateByPath } from "@/lib/utils/gh"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
@@ -27,7 +27,7 @@ export default async function Page({
 
   setRequestLocale(locale)
 
-  const lastDataUpdateDate = getLastModifiedDateByPath(
+  const lastDataUpdateDate = getLastGitCommitDateByPath(
     "src/data/exchangesByCountry.ts"
   )
 

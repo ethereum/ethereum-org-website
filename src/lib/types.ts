@@ -395,7 +395,7 @@ export type FileContributor = {
   login: string
   avatar_url: string
   html_url: string
-  date?: string
+  date: string
 }
 
 type FilePath = string

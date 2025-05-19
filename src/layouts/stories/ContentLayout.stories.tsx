@@ -63,8 +63,18 @@ export const ContentLayout: StoryObj<typeof meta> = {
     },
     maxDepth: 2,
     contributors: [
-      { login: "github", avatar_url: "/", html_url: "https://github.com" },
-      { login: "crowdin", avatar_url: "/", html_url: "https://crowdin.com" },
+      {
+        login: "github",
+        avatar_url: "/",
+        html_url: "https://github.com",
+        date: "2025-04-20T12:00:00.000Z",
+      },
+      {
+        login: "crowdin",
+        avatar_url: "/",
+        html_url: "https://crowdin.com",
+        date: "2025-04-20T12:00:00.000Z",
+      },
     ],
     lastEditLocaleTimestamp: "MM DD, YY",
     heroSection: (

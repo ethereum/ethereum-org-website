@@ -4,6 +4,8 @@ import { join } from "path"
 
 import { CONTENT_DIR, DEFAULT_LOCALE, TRANSLATIONS_DIR } from "@/lib/constants"
 
+import { FileContributor } from "../types"
+
 const getGitLogFromPath = (path: string): string => {
   // git command to show file last commit info
   const gitCommand = `git log -1 -- ${path}`
@@ -25,17 +27,20 @@ const extractDateFromGitLogInfo = (logInfo: string): string => {
   }
 }
 
-export const getAppPageLastCommitDate = (slug: string): string => {
-  const appPagePaths = [
-    join("app/[locale]", slug, "page.tsx"),
-    join("app/[locale]", slug, "_components", `${slug.split("/").pop()}.tsx`),
-  ]
-  const logs = appPagePaths.map(getGitLogFromPath)
-  const dates = logs.map(extractDateFromGitLogInfo)
-  const latestCommitDate = dates.reduce((a, b) =>
-    new Date(a) > new Date(b) ? a : b
-  )
-  return latestCommitDate
+export const getAppPageLastCommitDate = (
+  gitHubContributors: FileContributor[]
+) =>
+  gitHubContributors
+    .reduce((latest, contributor) => {
+      const commitDate = new Date(contributor.date)
+      return commitDate > latest ? commitDate : latest
+    }, new Date(0))
+    .toString()
+
+export const getLastGitCommitDateByPath = (path: string): string => {
+  if (!fs.existsSync(path)) throw new Error(`File not found: ${path}`)
+  const logInfo = getGitLogFromPath(path)
+  return extractDateFromGitLogInfo(logInfo)
 }
 
 // This util filters the git log to get the file last commit info, and then the commit date (last update)
@@ -55,14 +60,7 @@ export const getMarkdownLastCommitDate = (
     filePath = join(TRANSLATIONS_DIR, locale, slug, "index.md")
   }
 
-  const logInfo = getGitLogFromPath(filePath)
-  return extractDateFromGitLogInfo(logInfo)
-}
-
-export const getLastModifiedDateByPath = (path: string): string => {
-  if (!fs.existsSync(path)) throw new Error(`File not found: ${path}`)
-  const logInfo = getGitLogFromPath(path)
-  return extractDateFromGitLogInfo(logInfo)
+  return getLastGitCommitDateByPath(filePath)
 }
 
 const LABELS_TO_SEARCH = [

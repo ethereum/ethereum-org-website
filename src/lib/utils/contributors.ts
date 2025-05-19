@@ -89,7 +89,7 @@ export const getAppPageContributorInfo = async (
       index === self.findIndex((t) => t.login === contributor.login)
   )
 
-  const latestCommitDate = getAppPageLastCommitDate(pagePath)
+  const latestCommitDate = getAppPageLastCommitDate(gitHubContributors)
   const lastEditLocaleTimestamp = getLocaleTimestamp(locale, latestCommitDate)
 
   if (!uniqueGitHubContributors.length || !lastEditLocaleTimestamp) {
