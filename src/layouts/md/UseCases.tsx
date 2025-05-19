@@ -6,8 +6,8 @@ import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import AiAgentProductLists from "@/components/Content/ai-agents/AiAgentProductLists"
 import BuildYourOwnAIAgent from "@/components/Content/ai-agents/BuildYourOwnAIAgent"
 
-import {Restaking_List, Eigen_Layer} from "@/components/Content/ai-agents/restaking/Restaking_List"
-import TabbedSection from "@/components/Content/ai-agents/restaking/Restaking_Tab"
+import {Restaking_List, Eigen_Layer} from "@/components/Content/restaking/Restaking_List"
+import TabbedSection from "@/components/Content/restaking/Restaking_Tab"
 
 import PredictionMarketLists from "@/components/Content/prediction-markets/PredictionMarketLists"
 
