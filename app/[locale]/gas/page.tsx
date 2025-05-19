@@ -9,7 +9,7 @@ import type { CommitHistory, Lang } from "@/lib/types"
 
 import I18nProvider from "@/components/I18nProvider"
 
-import { getPageContributorInfo } from "@/lib/utils/contributors"
+import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
@@ -27,7 +27,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 
   const commitHistoryCache: CommitHistory = {}
   const { contributors, lastEditLocaleTimestamp } =
-    await getPageContributorInfo("gas", locale as Lang, commitHistoryCache)
+    await getAppPageContributorInfo("gas", locale as Lang, commitHistoryCache)
 
   return (
     <I18nProvider locale={locale} messages={messages}>

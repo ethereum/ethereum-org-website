@@ -8,12 +8,12 @@ import {
   convertToFileContributorFromCrowdin,
   getCrowdinContributors,
 } from "./crowdin"
-import { getLastModifiedDate } from "./gh"
+import { getAppPageLastCommitDate, getMarkdownLastCommitDate } from "./gh"
 import { getLocaleTimestamp } from "./time"
 
-import { fetchAndCacheGitContributors } from "@/lib/api/fetchGitHistory"
+import { fetchAndCacheGitHubContributors } from "@/lib/api/fetchGitHistory"
 
-export const getFileContributorInfo = async (
+export const getMarkdownFileContributorInfo = async (
   slug: string,
   locale: string,
   fileLang: string,
@@ -22,25 +22,25 @@ export const getFileContributorInfo = async (
   const mdPath = join(CONTENT_PATH, slug)
   const mdDir = join(CONTENT_DIR, slug)
 
-  const gitContributors = await fetchAndCacheGitContributors(
+  const gitHubContributors = await fetchAndCacheGitHubContributors(
     join("/", mdDir, "index.md"),
     cache
   )
 
-  const latestCommitDate = getLastModifiedDate(slug, locale!, true)
-  const gitHubLastEdit = gitContributors[0]?.date
+  const latestCommitDate = getMarkdownLastCommitDate(slug, locale!)
+  const gitHubLastEdit = gitHubContributors[0]?.date
   const lastUpdatedDate = gitHubLastEdit || latestCommitDate
 
   const crowdinContributors = convertToFileContributorFromCrowdin(
     getCrowdinContributors(mdPath, locale as Lang)
   )
 
-  const useGitHubContributors: boolean =
+  const englishOnly: boolean =
     fileLang === DEFAULT_LOCALE || crowdinContributors.length === 0
 
-  const contributors: FileContributor[] = useGitHubContributors
-    ? gitContributors
-    : [...crowdinContributors, ...gitContributors]
+  const contributors: FileContributor[] = englishOnly
+    ? gitHubContributors
+    : [...crowdinContributors, ...gitHubContributors]
 
   return { contributors, lastUpdatedDate }
 }
@@ -69,33 +69,34 @@ const getAllHistoricalPaths = (pagePath: string): string[] => [
   join("app/[locale]", pagePath, "_components", `${pagePath}.tsx`),
 ]
 
-export const getPageContributorInfo = async (
+export const getAppPageContributorInfo = async (
   pagePath: string,
   locale: Lang,
   cache: CommitHistory
 ) => {
-  const gitContributors = await getAllHistoricalPaths(pagePath).reduce(
+  // TODO: Incorporate Crowdin contributor information
+
+  const gitHubContributors = await getAllHistoricalPaths(pagePath).reduce(
     async (acc, path) => {
-      const contributors = await fetchAndCacheGitContributors(path, cache)
+      const contributors = await fetchAndCacheGitHubContributors(path, cache)
       return [...(await acc), ...contributors]
     },
     Promise.resolve([] as FileContributor[])
   )
 
-  const uniqueGitContributors = gitContributors.filter(
+  const uniqueGitHubContributors = gitHubContributors.filter(
     (contributor, index, self) =>
       index === self.findIndex((t) => t.login === contributor.login)
   )
 
-  const latestCommitDate = getLastModifiedDate(pagePath, locale!)
-  const gitHubLastEdit = uniqueGitContributors[0]?.date
+  const latestCommitDate = getAppPageLastCommitDate(pagePath)
+  const lastEditLocaleTimestamp = getLocaleTimestamp(locale, latestCommitDate)
 
-  let lastEditLocaleTimestamp = ""
-  if (latestCommitDate) {
-    lastEditLocaleTimestamp = getLocaleTimestamp(locale, latestCommitDate)
-  } else if (gitHubLastEdit) {
-    lastEditLocaleTimestamp = getLocaleTimestamp(locale, gitHubLastEdit)
+  if (!uniqueGitHubContributors.length || !lastEditLocaleTimestamp) {
+    throw new Error(
+      `No contributors found, path: ${pagePath}, locale: ${locale}`
+    )
   }
 
-  return { contributors: uniqueGitContributors, lastEditLocaleTimestamp }
+  return { contributors: uniqueGitHubContributors, lastEditLocaleTimestamp }
 }

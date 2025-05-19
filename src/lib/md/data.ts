@@ -9,7 +9,7 @@ import {
   ToCItem,
 } from "@/lib/types"
 
-import { getFileContributorInfo } from "@/lib/utils/contributors"
+import { getMarkdownFileContributorInfo } from "@/lib/utils/contributors"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 
 import { compile } from "./compile"
@@ -59,12 +59,13 @@ export async function getPageData({
       : tocNodeItems
 
   // Get contributor information
-  const { contributors, lastUpdatedDate } = await getFileContributorInfo(
-    slug,
-    locale,
-    frontmatter.lang as string,
-    commitHistoryCache
-  )
+  const { contributors, lastUpdatedDate } =
+    await getMarkdownFileContributorInfo(
+      slug,
+      locale,
+      frontmatter.lang as string,
+      commitHistoryCache
+    )
 
   // Format timestamp
   const lastEditLocaleTimestamp = getLocaleTimestamp(

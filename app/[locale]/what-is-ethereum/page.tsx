@@ -9,7 +9,7 @@ import type { CommitHistory, Lang } from "@/lib/types"
 
 import I18nProvider from "@/components/I18nProvider"
 
-import { getPageContributorInfo } from "@/lib/utils/contributors"
+import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
@@ -32,7 +32,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 
   const commitHistoryCache: CommitHistory = {}
   const { contributors, lastEditLocaleTimestamp } =
-    await getPageContributorInfo(
+    await getAppPageContributorInfo(
       "what-is-ethereum",
       locale as Lang,
       commitHistoryCache
