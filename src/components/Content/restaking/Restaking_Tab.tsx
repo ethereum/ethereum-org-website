@@ -1,9 +1,11 @@
 'use client';
 
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import Image from "next/image";
-import { Center } from "@/components/ui/flex"
+
 import type { ChildOnlyProp } from "@/lib/types"
+
+import { Center } from "@/components/ui/flex"
+import { Tabs, TabsContent,TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 
 const Width60 = (props: ChildOnlyProp) => (

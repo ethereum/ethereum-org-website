@@ -5,12 +5,9 @@ import BannerNotification from "@/components/Banners/BannerNotification"
 import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import AiAgentProductLists from "@/components/Content/ai-agents/AiAgentProductLists"
 import BuildYourOwnAIAgent from "@/components/Content/ai-agents/BuildYourOwnAIAgent"
-
-import {Restaking_List, Eigen_Layer} from "@/components/Content/restaking/Restaking_List"
-import TabbedSection from "@/components/Content/restaking/Restaking_Tab"
-
 import PredictionMarketLists from "@/components/Content/prediction-markets/PredictionMarketLists"
-
+import {Eigen_Layer,Restaking_List} from "@/components/Content/restaking/Restaking_List"
+import TabbedSection from "@/components/Content/restaking/Restaking_Tab"
 import Emoji from "@/components/Emoji"
 import { ContentHero } from "@/components/Hero"
 import InlineLink from "@/components/ui/Link"

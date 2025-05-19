@@ -1,11 +1,11 @@
 import ProductListComponent from "@/components/ProductList"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 
-import Symbiotic from "@/public/images/use-cases/Symbiotic.png"
-import Omni from "@/public/images/use-cases/Omni.png"
-import Obol from "@/public/images/use-cases/Obol.png"
-import Lido from "@/public/images/use-cases/Lido.png"
 import eigen_layer from "@/public/images/EigenLayer-logo.png"
+import Lido from "@/public/images/use-cases/Lido.png"
+import Obol from "@/public/images/use-cases/Obol.png"
+import Omni from "@/public/images/use-cases/Omni.png"
+import Symbiotic from "@/public/images/use-cases/Symbiotic.png"
 
 
 
