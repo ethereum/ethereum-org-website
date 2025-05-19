@@ -1,5 +1,6 @@
 import { parseString } from "xml2js"
 
+import { RSS_DISPLAY_COUNT } from "../constants"
 import type { AtomElement, AtomResult, RSSItem, RSSResult } from "../types"
 import { isValidDate } from "../utils/date"
 
@@ -116,13 +117,14 @@ export const fetchRSS = async (xmlUrl: string | string[]) => {
         allItems.push(parsedAtomItems)
       }
     } catch (error) {
-      console.error(
-        `Failed to fetch or parse RSS feed from ${url}:`,
-        error instanceof Error ? error.message : error
-      )
+      console.error(error instanceof Error ? error.message : error)
       continue
     }
   }
+
+  if (allItems.length < RSS_DISPLAY_COUNT)
+    throw new Error("Insufficient number of RSS items fetched")
+
   return allItems
 }
 
@@ -142,7 +144,6 @@ export const fetchXml = async (url: string) => {
       })
     })
   } catch (error) {
-    console.error("Error fetching or parsing XML:", url, error)
-    throw error
+    throw new Error(`Error fetching or parsing XML: ${url}`)
   }
 }
