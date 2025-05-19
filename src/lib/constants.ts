@@ -199,7 +199,7 @@ export const COMMUNITY_BLOGS: CommunityBlog[] = [
   },
   {
     href: "https://ethpandaops.io/posts/",
-    feed: "https://ethpandaops.io/posts/index.xml",
+    feed: "https://ethpandaops.io/posts/rss.xml",
   },
   {
     href: "https://ethstaker.cc/blog",
@@ -229,6 +229,10 @@ export const COMMUNITY_BLOGS: CommunityBlog[] = [
   {
     href: "https://medium.com/ethereum-cat-herders/newsletter",
     feed: "https://medium.com/feed/ethereum-cat-herders",
+  },
+  {
+    href: "http://geodework.com/blog",
+    feed: "http://geodework.com/feed.xml",
   },
 ]
 

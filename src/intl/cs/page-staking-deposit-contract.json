@@ -1,6 +1,6 @@
 {
   "page-staking-deposit-contract-address": "Adresa smlouvy o vkladu",
-  "page-staking-deposit-contract-address-caption": "Přidali jsme mezery, aby bylo snažší adresu přečíst",
+  "page-staking-deposit-contract-address-caption": "Přidali jsme mezery, aby bylo snazší adresu přečíst",
   "page-staking-deposit-contract-address-check-btn": "Zkontrolovat adresu smlouvy o vkladu",
   "page-staking-deposit-contract-checkbox1": "Již jsem použil spouštěcí panel k nastavení mého Ethereum validátoru.",
   "page-staking-deposit-contract-checkbox2": "Rozumím, že musím ke vkladu použít spouštěcí panel. Jednoduché převody na tuto adresu nebudou fungovat.",
