@@ -5,8 +5,12 @@ import BannerNotification from "@/components/Banners/BannerNotification"
 import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import AiAgentProductLists from "@/components/Content/ai-agents/AiAgentProductLists"
 import BuildYourOwnAIAgent from "@/components/Content/ai-agents/BuildYourOwnAIAgent"
+
 import {Restaking_List, Eigen_Layer} from "@/components/Content/ai-agents/restaking/Restaking_List"
 import TabbedSection from "@/components/Content/ai-agents/restaking/Restaking_Tab"
+
+import PredictionMarketLists from "@/components/Content/prediction-markets/PredictionMarketLists"
+
 import Emoji from "@/components/Emoji"
 import { ContentHero } from "@/components/Hero"
 import InlineLink from "@/components/ui/Link"
@@ -23,9 +27,13 @@ import { useTranslation } from "@/hooks/useTranslation"
 export const useCasesComponents = {
   AiAgentProductLists,
   BuildYourOwnAIAgent,
+
   Restaking_List,
   TabbedSection,
   Eigen_Layer
+
+  PredictionMarketLists,
+
 }
 
 type UseCasesLayoutProps = ChildOnlyProp &
@@ -137,6 +145,17 @@ export const UseCasesLayout = ({
           eventCategory: "use cases menu",
           eventAction: "click",
           eventName: "ai-agents",
+        },
+      },
+      {
+        text: t(
+          "template-usecase:template-usecase-dropdown-prediction-markets"
+        ),
+        href: "/prediction-markets/",
+        matomo: {
+          eventCategory: "use cases menu",
+          eventAction: "click",
+          eventName: "prediction-markets",
         },
       },
     ],

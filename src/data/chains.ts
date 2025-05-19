@@ -320,11 +320,11 @@ const chains = [
   },
   {
     name: "Blast Mainnet",
-    infoURL: "https://docs.blastblockchain.com",
+    infoURL: "https://docs.blastchain.org",
     chainId: 238,
     nativeCurrency: {
-      name: "Ether",
-      symbol: "ETH",
+      name: "One World Chain",
+      symbol: "OWCT",
       decimals: 18,
     },
     chain: "ETH",
@@ -1540,6 +1540,17 @@ const chains = [
     chain: "ETH",
   },
   {
+    name: "Animechain Mainnet",
+    infoURL: "https://www.anime.xyz",
+    chainId: 69000,
+    nativeCurrency: {
+      name: "Animecoin",
+      symbol: "ANIME",
+      decimals: 18,
+    },
+    chain: "ETH",
+  },
+  {
     name: "Condrieu",
     infoURL: "https://condrieu.ethdevops.io",
     chainId: 69420,
@@ -1880,6 +1891,17 @@ const chains = [
       decimals: 18,
     },
     chain: "DUSTBOY",
+  },
+  {
+    name: "Ethereum Hoodi",
+    infoURL: "https://hoodi.ethpandaops.io",
+    chainId: 560048,
+    nativeCurrency: {
+      name: "Hoodi Ether",
+      symbol: "ETH",
+      decimals: 18,
+    },
+    chain: "ETH",
   },
   {
     name: "Zether Mainnet",
