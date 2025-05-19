@@ -30,7 +30,7 @@ export const useCasesComponents = {
 
   Restaking_List,
   TabbedSection,
-  Eigen_Layer
+  Eigen_Layer,
 
   PredictionMarketLists,
 
