@@ -115,6 +115,10 @@ export const fetchRSS = async (xmlUrl: string | string[]) => {
           })
 
         allItems.push(parsedAtomItems)
+      } else {
+        throw new Error(
+          `Error parsing XML, invalid RSSResult or AtomResult type: ${url}`
+        )
       }
     } catch (error) {
       console.error(error instanceof Error ? error.message : error)
