@@ -159,10 +159,8 @@ export const releasesData: Release[] = [
         </ul>
         <p className="font-bold">Potential Additional Features</p>
         <ul>
-          <li>
-            EIP-7688: Enhanced smart contract access to network information
-          </li>
-          <li>Blob fee market improvementse</li>
+          <li>Support for secure enclaves on mobile devices to improve UX</li>
+          <li>Blob fee market improvements</li>
           <li>
             Further improvements to validator efficiency and network performance
           </li>
