@@ -38,13 +38,16 @@ export async function generateMetadata({
 }) {
   const { locale } = await params
 
-  const t = await getTranslations({ locale, namespace: "page-developers" })
+  const t = await getTranslations({
+    locale,
+    namespace: "page-developers-index",
+  })
 
   return await getMetadata({
     locale,
     slug: ["developers"],
-    title: t("page-developers-index:page-developer-meta-title"),
-    description: t("page-developers-index:page-developers-meta-desc"),
+    title: t("page-developer-meta-title"),
+    description: t("page-developers-meta-desc"),
   })
 }
 
