@@ -31,7 +31,7 @@
   "content-standardization": "Content standardization",
   "contributing": "Contributing",
   "contributors": "Contributors",
-  "contributors-thanks": "Everyone who has contributed to this page – thank you!",
+  "contributors-thanks": "Everyone who has <a href=\"/contributing\" target=\"_blank\">contributed</a> to this page – thank you!",
   "cookie-policy": "Cookie policy",
   "copied": "Copied",
   "copy": "Copy",
@@ -199,7 +199,7 @@
   "language-zh-tw": "Chinese Traditional",
   "languages": "Languages",
   "last-24-hrs": "Last 24 hours",
-  "last-edit": "Last edit",
+  "page-last-update": "Page last update:",
   "last-updated": "Last updated",
   "layer-2": "Layer 2",
   "learn": "Learn",
@@ -449,5 +449,6 @@
   "withdrawals": "Staking withdrawals",
   "wrapped-ether": "Wrapped Ether",
   "yes": "Yes",
-  "zero-knowledge-proofs": "Zero-knowledge proofs"
+  "zero-knowledge-proofs": "Zero-knowledge proofs",
+  "translator": "Translator"
 }
