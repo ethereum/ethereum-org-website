@@ -145,7 +145,7 @@ export const releasesData: Release[] = [
   {
     image: CommunityHeroImage,
     releaseName: "Fusaka",
-    releaseDate: "2026",
+    releaseDate: "2025",
     content: (
       <div>
         <p className="font-bold">
