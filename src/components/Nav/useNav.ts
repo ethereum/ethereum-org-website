@@ -230,6 +230,11 @@ export const useNav = () => {
                   href: "/ai-agents/",
                 },
                 {
+                  label: t("onchain-gaming"),
+                  description: t("nav-gaming-description"),
+                  href: "/gaming/",
+                },
+                {
                   label: t("prediction-markets"),
                   description: t("nav-prediction-markets-description"),
                   href: "/prediction-markets/",
