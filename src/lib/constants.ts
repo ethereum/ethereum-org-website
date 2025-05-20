@@ -199,7 +199,7 @@ export const COMMUNITY_BLOGS: CommunityBlog[] = [
   },
   {
     href: "https://ethpandaops.io/posts/",
-    feed: "https://ethpandaops.io/posts/testing-error-revert-me.xml",
+    feed: "https://ethpandaops.io/posts/rss.xml",
   },
   {
     href: "https://ethstaker.cc/blog",
@@ -232,7 +232,7 @@ export const COMMUNITY_BLOGS: CommunityBlog[] = [
   },
   {
     href: "http://geodework.com/blog",
-    feed: "http://geodework.com/testing-error-revert-me.xml",
+    feed: "http://geodework.com/feed.xml",
   },
 ]
 
