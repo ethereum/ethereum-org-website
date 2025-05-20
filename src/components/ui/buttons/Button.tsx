@@ -105,7 +105,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     ref
   ) => {
     const handleOnClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-      toId && scrollIntoView(toId)
+      toId && scrollIntoView("#" + toId)
       customEventOptions && trackCustomEvent(customEventOptions)
 
       onClick?.(e)

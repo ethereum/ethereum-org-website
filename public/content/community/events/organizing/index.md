@@ -184,8 +184,8 @@ While it's challenging to offer monetary compensation to volunteers, it's essent
 
 When organizing an event, there are several essential legal and logistical considerations to keep in mind:
 
-**Sponsorship agreement** – Ensure you have a clear contract for sponsors, including a well-defined cancellation policy.  
-**Code of conduct** – Prepare a Code of Conduct tailored to the specific event type (conference/hackathon, hacker houses etc).  
+* **Sponsorship agreement** – Ensure you have a clear contract for sponsors, including a well-defined cancellation policy.  
+* **Code of conduct** – Prepare a Code of Conduct tailored to the specific event type (conference/hackathon, hacker houses etc).  
 * **Privacy policy** – Draft a privacy policy for your website to comply with data protection regulations and imae  
 * **Local authorities notification** – Even if your event is a closed gathering, it is advisable to report it to the local police station.  
 * **Ticketing agreement** – Establish a formal agreement with your ticketing service provider to clarify terms and responsibilities.  
