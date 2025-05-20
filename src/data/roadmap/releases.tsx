@@ -1,12 +1,11 @@
 import { StaticImageData } from "next/image"
 
-import CommunityHeroImage from "@/public/images/heroes/community-hero.png"
 import DevelopersHubHeroImage from "@/public/images/heroes/developers-hub-hero.jpg"
 import GuidesHubHeroImage from "@/public/images/heroes/guides-hub-hero.jpg"
 import Layer2HubHeroImage from "@/public/images/heroes/layer-2-hub-hero.jpg"
 import QuizzesHubHeroImage from "@/public/images/heroes/quizzes-hub-hero.png"
+import FusakaImage from "@/public/images/roadmap/roadmap-fusaka.png"
 import PectraImage from "@/public/images/roadmap/roadmap-pectra.png"
-
 interface Release {
   image: StaticImageData
   releaseName: string
@@ -143,7 +142,7 @@ export const releasesData: Release[] = [
     href: "/roadmap/pectra",
   },
   {
-    image: CommunityHeroImage,
+    image: FusakaImage,
     releaseName: "Fusaka",
     releaseDate: "2025",
     content: (
