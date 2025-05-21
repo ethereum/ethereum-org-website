@@ -42,6 +42,7 @@ import IconL2beat from "@/public/images/resources/l2beat.png"
 import IconNftgo from "@/public/images/resources/nftgo.png"
 import IconNodewatch from "@/public/images/resources/nodewatch.png"
 import IconPandaOps from "@/public/images/resources/panda.png"
+import IconPectrified from "@/public/images/resources/prectrified.png"
 import IconRatedNetwork from "@/public/images/resources/rated-network.png"
 import IconRelayscan from "@/public/images/resources/relayscan.png"
 import IconRwa from "@/public/images/resources/rwa.png"
@@ -416,6 +417,12 @@ export const useResources = ({ txCostsMedianUsd }): DashboardSection[] => {
           description: t("page-resources-nodes-luckystaker-description"),
           href: "https://luckystaker.com",
           imgSrc: IconEthstaker,
+        },
+        {
+          title: "Validators Overview after Pectra",
+          description: "Ethereum Pectra fork statistics for validators",
+          href: "https://pectrified.com/mainnet",
+          imgSrc: IconPectrified,
         },
         {
           title: "Ethereum Validator Queue",
