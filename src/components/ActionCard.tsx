@@ -41,7 +41,7 @@ const ActionCard = ({
   return (
     <LinkBox
       className={cn(
-        "flex shadow-table hover:scale-[1.02] hover:rounded hover:bg-background-highlight hover:shadow-table-box-hover hover:duration-100 focus:scale-[1.02] focus:rounded focus:shadow-table-box-hover focus:duration-100",
+        "flex flex-col md:flex-row shadow-table hover:scale-[1.02] hover:rounded hover:bg-background-highlight hover:shadow-table-box-hover hover:duration-100 focus:scale-[1.02] focus:rounded focus:shadow-table-box-hover focus:duration-100",
         className
       )}
       {...props}
@@ -57,7 +57,7 @@ const ActionCard = ({
           src={image}
           alt={alt || ""}
           width={imageWidth}
-          className="max-h-full object-cover p-4"
+          className="max-h-full object-cover p-4 self-center"
         />
       </Flex>
       <div className="flex flex-col justify-center p-6">
