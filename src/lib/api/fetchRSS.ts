@@ -1,5 +1,6 @@
 import { parseString } from "xml2js"
 
+import { RSS_DISPLAY_COUNT } from "../constants"
 import type { AtomElement, AtomResult, RSSItem, RSSResult } from "../types"
 import { isValidDate } from "../utils/date"
 
@@ -124,6 +125,10 @@ export const fetchRSS = async (xmlUrl: string | string[]) => {
       continue
     }
   }
+
+  if (allItems.length < RSS_DISPLAY_COUNT)
+    throw new Error("Insufficient number of RSS items fetched")
+
   return allItems
 }
 
