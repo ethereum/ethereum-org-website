@@ -45,6 +45,7 @@ import IconPandaOps from "@/public/images/resources/panda.png"
 import IconPectrified from "@/public/images/resources/prectrified.png"
 import IconRatedNetwork from "@/public/images/resources/rated-network.png"
 import IconRelayscan from "@/public/images/resources/relayscan.png"
+import IconReserves from "@/public/images/resources/reserves.png"
 import IconRwa from "@/public/images/resources/rwa.png"
 import IconStablecoinsWtf from "@/public/images/resources/stablecoins-wtf.png"
 import IconSupermajority from "@/public/images/resources/supermajority.png"
@@ -351,6 +352,13 @@ export const useResources = ({ txCostsMedianUsd }): DashboardSection[] => {
           description: t("page-resources-adoption-cryptowerk-description"),
           href: "https://cryptwerk.com/analytics/ethereum/",
           imgSrc: IconCryptwerk,
+        },
+        {
+          title: "Strategic Ethereum Reserve",
+          description:
+            "A dashboard for the Strategic Ethereum Reserve initiative.",
+          href: "https://www.strategicethreserve.xyz",
+          imgSrc: IconReserves,
         },
       ],
     },
