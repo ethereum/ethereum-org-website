@@ -41,6 +41,7 @@ import IconGrowthepie from "@/public/images/resources/growthepie.png"
 import IconL2beat from "@/public/images/resources/l2beat.png"
 import IconNftgo from "@/public/images/resources/nftgo.png"
 import IconNodewatch from "@/public/images/resources/nodewatch.png"
+import IconPandaOps from "@/public/images/resources/panda.png"
 import IconRatedNetwork from "@/public/images/resources/rated-network.png"
 import IconRelayscan from "@/public/images/resources/relayscan.png"
 import IconRwa from "@/public/images/resources/rwa.png"
@@ -163,7 +164,7 @@ export const useResources = ({ txCostsMedianUsd }): DashboardSection[] => {
           description:
             "Live dashboard for Ethereum beacon chain block production by ethPandaOps.",
           href: "https://lab.ethpandaops.io/beacon/block-production/live",
-          imgSrc: IconBeaconchain,
+          imgSrc: IconPandaOps,
         },
         {
           title: "Txcity.io",
