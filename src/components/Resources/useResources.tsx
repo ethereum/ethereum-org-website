@@ -378,6 +378,7 @@ export const useResources = ({ txCostsMedianUsd }): DashboardSection[] => {
           description:
             "Dashboards and analytics for ERC-4337 and EIP-7702 smart accounts.",
           href: "https://www.bundlebear.com",
+          className: "dark:[&_img]:invert",
           imgSrc: IconBundleBear,
         },
       ],
