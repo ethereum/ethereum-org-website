@@ -191,7 +191,7 @@ export const StakingProductCard = ({
           {data.map(({ label, status }, idx) => (
             <li
               key={idx}
-              className={`my-4 me-0 ms-auto flex items-center gap-1 text-md leading-3 ${status === "false" && "text-body-medium"}`}
+              className={`my-4 me-0 ms-auto flex items-center gap-1 text-md leading-4 ${status === "false" && "text-body-medium"}`}
             >
               <Status status={status} />
               {label}
