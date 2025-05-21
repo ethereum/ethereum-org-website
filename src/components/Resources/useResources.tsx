@@ -21,6 +21,7 @@ import IconBeaconchain from "@/public/images/resources/beaconcha-in.png"
 import IconBlobsGuru from "@/public/images/resources/blobsguru.png"
 import IconBlocknative from "@/public/images/resources/blocknative.png"
 import IconBlockscout from "@/public/images/resources/blockscout.webp"
+import IconBundleBear from "@/public/images/resources/bundlebear.png"
 import IconCryptwerk from "@/public/images/resources/cryptowerk.png"
 import IconDefiLlama from "@/public/images/resources/defi-llama.png"
 import IconDefiMarketCap from "@/public/images/resources/defi-market-cap.png"
@@ -52,6 +53,7 @@ import IconSupermajority from "@/public/images/resources/supermajority.png"
 import IconTxCity from "@/public/images/resources/txcity.png"
 import IconUltrasoundMoney from "@/public/images/resources/ultrasound-money.png"
 import IconVisaOnchainAnalytics from "@/public/images/resources/visa-onchain-analytcs.png"
+import IconWalletBeat from "@/public/images/resources/walletbeat.png"
 
 const formatSmallUSD = (value: number, locale: string): string =>
   new Intl.NumberFormat(locale, {
@@ -359,6 +361,24 @@ export const useResources = ({ txCostsMedianUsd }): DashboardSection[] => {
             "A dashboard for the Strategic Ethereum Reserve initiative.",
           href: "https://www.strategicethreserve.xyz",
           imgSrc: IconReserves,
+        },
+      ],
+    },
+    {
+      title: "Wallets",
+      items: [
+        {
+          title: "Wallet Beat",
+          description: "A simple Ethereum wallet dashboard and summary tool.",
+          href: "https://wallet.page/",
+          imgSrc: IconWalletBeat,
+        },
+        {
+          title: "BundleBear",
+          description:
+            "Dashboards and analytics for ERC-4337 and EIP-7702 smart accounts.",
+          href: "https://www.bundlebear.com",
+          imgSrc: IconBundleBear,
         },
       ],
     },
