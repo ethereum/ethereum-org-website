@@ -15,32 +15,34 @@ This list is curated by our community. If there's something missing or incorrect
 These programs support the broad Ethereum ecosystem by offering grants to a wide scope of projects. These include solutions for scalability, community building, security, privacy, and more. These grants are not specific to any one Ethereum platform and are a good place to start if you're unsure.
 
 - [EF Ecosystem Support Program](https://esp.ethereum.foundation) - _Funding open source projects that benefit Ethereum, with a particular focus on universal tools, infrastructure, research and public goods_
-- [Moloch DAO](https://www.molochdao.com/) - _Privacy, layer 2 scaling, client security, and more_
-- [DAO Grants](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _Google spreadsheet of organizations offering grants_
 - [Academic Grants](https://esp.ethereum.foundation/academic-grants) - _Grants to support Ethereum-related academic work_
+
+## Grant list aggregators
+
+These resources compile and organize various grant opportunities across the Ethereum ecosystem, making it easier to discover funding opportunities that match your project's needs. They often include detailed information about application requirements, funding amounts, and deadlines.
+
+- [DAO Grants](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _Google spreadsheet of organizations offering grants_
 - [Blockworks Grantfarm](https://blockworks.co/grants/programs) - _Blockworks has compiled a comprehensive directory of all grants, RFPs, and bug bounties._
-
-## Project specific {#project-specific}
-
-These projects have created their own grants for projects aimed at developing and experimenting with their own technology.
-
-- [Aave Grants Program](https://aavegrants.org/) – _[Aave](https://aave.com/) grants DAO_
-- [Balancer](https://grants.balancer.community/) – _[Balancer](https://balancer.fi/) ecosystem fund_
-- [Chainlink Grants Program](https://chain.link/community/grants) - _[Chainlink](https://chain.link/) community grants_
-- [Decentraland Grants Program](https://governance.decentraland.org/grants/) – _[Decentraland](https://decentraland.org/) DAO Metaverse_
-- [Lido Ecosystem Grants Organisation (LEGO)](https://lido.fi/lego) – _[Lido](https://lido.fi/) finance ecosystem_
-- [MetaMask Program](https://metamaskgrants.org/) - _[MetaMask](https://metamask.io/) employee-led grants DAO_
-- [SKALE Network Grants Program](https://skale.space/developers#grants) - _[SKALE Network](https://skale.space/) ecosystem_
-- [Swarm Foundation Grants Program](https://my.ethswarm.org/grants) - _[Swarm Foundation](https://www.ethswarm.org/) ecosystem_
-- [The Graph](https://thegraph.com/ecosystem/grants/) – _[The Graph](https://thegraph.com/) ecosystem_
-- [Uniswap Grants Program](https://www.uniswapfoundation.org/approach) – _[Uniswap](https://uniswap.org/) community_
+- [Blockchain Grants](https://www.blockchaingrants.org/) - _Directory of blockchain and crypto grants_
+- [Web3 Grants](https://www.notion.so/Web3-Grants-dae38f9b5f524d36a15aaee1b6fa3089) - _Notion database of Web3 grant opportunities_
+- [Grant Programs Viewer](https://airtable.com/shr86elKgWTSCP4AY) - _Public Airtable database of grant programs_
+- [Grantr](https://grantr.app/) - _Platform for discovering and applying to Web3 grants_
+- [LlamaoGrants](https://wiki.defillama.com/wiki/LlamaoGrants) - _DeFi Llama's grant program directory_
+- [Cryptoneur Web3 Grants](https://www.cryptoneur.xyz/web3-grants) - _Platform for finding Web3 project funding_
+- [Pentacle Grants](https://pentacle.xyz/grants) - _Grant opportunities in the Web3 space_
+- [AlphaGrowth Grants](https://alphagrowth.io/crypto-web3-grants-list) - _Comprehensive list of crypto and Web3 grants_
+- [Find Blockchain Grants](https://findblockchaingrants.com/) - _Searchable database of blockchain grants_
+- [Web3Native](https://www.web3native.co/) - _Directory of Web3 grants, investors, and accelerator programs_
+- [Web3 Summits Grants](https://www.web3summits.io/grants) - _Grant opportunities from Web3 Summits_
+- [MetaGov Database](https://docs.google.com/spreadsheets/d/1e5g-dlWWsK2DZoZGBgfxyfGNSddLk-V7sLEgfPjEhbA/edit#gid=780420708) - _Comprehensive Web3 grants map_
+- [Anke's Directory](https://docs.google.com/spreadsheets/d/1IdCCG-U7cGsih_nCNt7Yo4wXstZdCip1UKWbCK0qCZk/edit#gid=938115517) - _Web3 grant program directory_
+- [Web3 Grants Spreadsheet](https://docs.google.com/spreadsheets/d/1c8koZCI-GLnD8MG-eFcXPOBCNu1v8-aXIfwAAvc7AMc/edit#gid=0) - _Google spreadsheet of Web3 grant opportunities_
 
 ## Quadratic funding {#quadratic-funding}
 
 The open source roots of Ethereum have led to the growth of an interesting new fundraising model: quadratic funding. This has the potential to improve the way we fund all types of public goods in the future. Quadratic funding makes sure that the projects that receive the most funding are those with the most unique demand. In other words, projects that stand to improve the lives of the most people. [More on quadratic funding.](/defi/#quadratic-funding)
 
 - [Gitcoin](https://gitcoin.co/grants)
-- [clr.fund](https://clr.fund/)
 
 ## Work in Ethereum {#work-in-ethereum}
 
