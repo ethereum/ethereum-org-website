@@ -165,8 +165,9 @@ export const useResources = ({ txCostsMedianUsd }): DashboardSection[] => {
         },
         {
           title: "Beacon Block Production Live",
-          description:
-            "Live dashboard for Ethereum beacon chain block production by ethPandaOps.",
+          description: t(
+            "page-resources-block-explorers-panda-ops-description"
+          ),
           href: "https://lab.ethpandaops.io/beacon/block-production/live",
           imgSrc: IconPandaOps,
         },
@@ -357,26 +358,24 @@ export const useResources = ({ txCostsMedianUsd }): DashboardSection[] => {
         },
         {
           title: "Strategic Ethereum Reserve",
-          description:
-            "A dashboard for the Strategic Ethereum Reserve initiative.",
+          description: t("page-resources-reserves-cryptowerk-description"),
           href: "https://www.strategicethreserve.xyz",
           imgSrc: IconReserves,
         },
       ],
     },
     {
-      title: "Wallets",
+      title: t("page-resources-wallets-title"),
       items: [
         {
           title: "Wallet Beat",
-          description: "A simple Ethereum wallet dashboard and summary tool.",
+          description: t("page-resources-wallets-wallet-beat-description"),
           href: "https://wallet.page/",
           imgSrc: IconWalletBeat,
         },
         {
           title: "BundleBear",
-          description:
-            "Dashboards and analytics for ERC-4337 and EIP-7702 smart accounts.",
+          description: t("page-resources-wallets-bundlebear-description"),
           href: "https://www.bundlebear.com",
           className: "dark:[&_img]:invert",
           imgSrc: IconBundleBear,
@@ -449,7 +448,7 @@ export const useResources = ({ txCostsMedianUsd }): DashboardSection[] => {
         },
         {
           title: "Validators Overview after Pectra",
-          description: "Ethereum Pectra fork statistics for validators",
+          description: t("page-resources-nodes-pectrified-description"),
           href: "https://pectrified.com/mainnet",
           imgSrc: IconPectrified,
         },
