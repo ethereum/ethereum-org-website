@@ -1,4 +1,5 @@
 import { useParams } from "next/navigation"
+import { useLocale } from "next-intl"
 
 import { ButtonLink } from "@/components/ui/buttons/Button"
 
@@ -186,20 +187,21 @@ const LanguagePickerMenu = ({ languages, onClose, onSelect }) => {
 
 const LanguagePickerFooter = ({ onTranslationProgramClick }) => {
   const { t } = useTranslation("common")
+  const locale = useLocale()
 
   return (
-    <div className="sticky bottom-0 flex justify-center border-t-2 border-primary bg-primary-low-contrast p-3">
-      <div className="flex w-full max-w-sm flex-col items-start px-4 sm:flex-row sm:items-center sm:justify-between">
+    <div className="sticky bottom-0 flex border-t-2 border-primary bg-primary-low-contrast p-0 pb-1 pt-1">
+      <div className="flex w-full max-w-sm items-center justify-between px-4">
         <div className="flex min-w-0 flex-col items-start">
-          <p className="overflow-hidden text-ellipsis whitespace-nowrap text-sm font-bold text-body">
-            Translate to _______
+          <p className="overflow-hidden text-ellipsis whitespace-nowrap text-xs font-bold text-body">
+            Translate to {t(`language-${locale}`)}
           </p>
           <p className="text-xs text-body">
             {t("page-languages-recruit-community")}
           </p>
         </div>
         <ButtonLink
-          className="w-full"
+          className="w-min whitespace-nowrap px-1 py-0 text-xs sm:flex-shrink-0 sm:flex-grow-0"
           href="/contributing/translation-program/"
           customEventOptions={onTranslationProgramClick}
         >
