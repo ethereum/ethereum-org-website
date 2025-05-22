@@ -1136,7 +1136,7 @@ const DappsPage = ({
                 }}
               >
                 <Emoji
-                  className="me-4 shrink-0 text-2xl"
+                  className="me-2 shrink-0 text-2xl"
                   text={category.emoji}
                 />
                 <span className="text-center text-md font-semibold md:text-2xl md:font-normal">
