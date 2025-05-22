@@ -9,7 +9,7 @@
   },
   {
     "id": 6161,
-    "path": "/events/index.md"
+    "path": "/community/events/index.md"
   },
   {
     "id": 6428,
@@ -17,7 +17,7 @@
   },
   {
     "id": 7525,
-    "path": "/how-to-create-an-ethereum-account/index.md"
+    "path": "/guides/how-to-create-an-ethereum-account/index.md"
   },
   {
     "id": 2716,
@@ -241,11 +241,11 @@
   },
   {
     "id": 7591,
-    "path": "/withdrawals/index.md"
+    "path": "/staking/withdrawals/index.md"
   },
   {
     "id": 8019,
-    "path": "/code-of-conduct/index.md"
+    "path": "/community/code-of-conduct/index.md"
   },
   {
     "id": 8035,
@@ -277,7 +277,7 @@
   },
   {
     "id": 6167,
-    "path": "/support/index.md"
+    "path": "/community/support/index.md"
   },
   {
     "id": 7515,
@@ -285,15 +285,15 @@
   },
   {
     "id": 7713,
-    "path": "/account-abstraction/index.md"
+    "path": "/roadmap/account-abstraction/index.md"
   },
   {
     "id": 7717,
-    "path": "/danksharding/index.md"
+    "path": "/roadmap/danksharding/index.md"
   },
   {
     "id": 7745,
-    "path": "/statelessness/index.md"
+    "path": "/roadmap/statelessness/index.md"
   },
   {
     "id": 5553,
@@ -380,6 +380,14 @@
     "path": "/zero-knowledge-proofs/index.md"
   },
   {
+    "id": 12582,
+    "path": "/prediction-markets/index.md"
+  },
+  {
+    "id": 12584,
+    "path": "/ai-agents/index.md"
+  },
+  {
     "id": 2962,
     "path": "/foundation/index.md"
   },
@@ -417,7 +425,7 @@
   },
   {
     "id": 2946,
-    "path": "/beacon-chain/index.md"
+    "path": "/roadmap/beacon-chain/index.md"
   },
   {
     "id": 2950,
@@ -429,23 +437,23 @@
   },
   {
     "id": 7721,
-    "path": "/future-proofing/index.md"
+    "path": "/roadmap/future-proofing/index.md"
   },
   {
     "id": 7729,
-    "path": "/scaling/index.md"
+    "path": "/roadmap/scaling/index.md"
   },
   {
     "id": 7737,
-    "path": "/security/index.md"
+    "path": "/roadmap/security/index.md"
   },
   {
     "id": 7749,
-    "path": "/user-experience/index.md"
+    "path": "/roadmap/user-experience/index.md"
   },
   {
     "id": 7919,
-    "path": "/dvt/index.md"
+    "path": "/staking/dvt/index.md"
   },
   {
     "id": 2776,

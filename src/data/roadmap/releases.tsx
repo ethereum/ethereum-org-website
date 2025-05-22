@@ -1,12 +1,11 @@
 import { StaticImageData } from "next/image"
 
-import CommunityHeroImage from "@/public/images/heroes/community-hero.png"
 import DevelopersHubHeroImage from "@/public/images/heroes/developers-hub-hero.jpg"
 import GuidesHubHeroImage from "@/public/images/heroes/guides-hub-hero.jpg"
 import Layer2HubHeroImage from "@/public/images/heroes/layer-2-hub-hero.jpg"
 import QuizzesHubHeroImage from "@/public/images/heroes/quizzes-hub-hero.png"
+import FusakaImage from "@/public/images/roadmap/roadmap-fusaka.png"
 import PectraImage from "@/public/images/roadmap/roadmap-pectra.png"
-
 interface Release {
   image: StaticImageData
   releaseName: string
@@ -114,11 +113,14 @@ export const releasesData: Release[] = [
     releaseDate: "2025-05-07",
     content: (
       <div>
-        <p className="font-bold">Enhance EOA wallets with smart contract functionality</p>
+        <p className="font-bold">
+          Enhance EOA wallets with smart contract functionality
+        </p>
         <ul>
           <li>
             Users can set their address to be represented by a code of an
-            existing smart contract and gain benefits such as transaction batching, transaction fee sponsorship or better recovery mechanisms
+            existing smart contract and gain benefits such as transaction
+            batching, transaction fee sponsorship or better recovery mechanisms
           </li>
         </ul>
         <p className="font-bold">Increase the max effective balance</p>
@@ -140,9 +142,9 @@ export const releasesData: Release[] = [
     href: "/roadmap/pectra",
   },
   {
-    image: CommunityHeroImage,
+    image: FusakaImage,
     releaseName: "Fusaka",
-    releaseDate: "2026",
+    releaseDate: "2025",
     content: (
       <div>
         <p className="font-bold">
@@ -157,17 +159,15 @@ export const releasesData: Release[] = [
         </ul>
         <p className="font-bold">Potential Additional Features</p>
         <ul>
-          <li>
-            EIP-7688: Enhanced smart contract access to network information
-          </li>
-          <li>Blob fee market improvementse</li>
+          <li>Support for secure enclaves on mobile devices to improve UX</li>
+          <li>Blob fee market improvements</li>
           <li>
             Further improvements to validator efficiency and network performance
           </li>
         </ul>
       </div>
     ),
-    href: "/roadmap/fusaka",
+    href: "https://eips.ethereum.org/EIPS/eip-7607",
   },
   {
     image: GuidesHubHeroImage,
