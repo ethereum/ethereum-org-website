@@ -1,5 +1,7 @@
 import { useParams } from "next/navigation"
 
+import { ButtonLink } from "@/components/ui/buttons/Button"
+
 import { cn } from "@/lib/utils/cn"
 
 import {
@@ -10,7 +12,6 @@ import {
   CommandList,
 } from "../ui/command"
 import { Dialog, DialogContent, DialogTrigger } from "../ui/dialog"
-import { BaseLink } from "../ui/Link"
 import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover"
 
 import MenuItem from "./MenuItem"
@@ -188,16 +189,23 @@ const LanguagePickerFooter = ({ onTranslationProgramClick }) => {
 
   return (
     <div className="sticky bottom-0 flex justify-center border-t-2 border-primary bg-primary-low-contrast p-3">
-      <p className="text-center text-xs text-body">
-        {t("page-languages-recruit-community")}{" "}
-        {/* TODO migrate once #13411 is merged */}
-        <BaseLink
-          href="/contributing/translation-program"
-          onClick={onTranslationProgramClick}
+      <div className="flex w-full max-w-sm flex-col items-start px-4 sm:flex-row sm:items-center sm:justify-between">
+        <div className="flex min-w-0 flex-col items-start">
+          <p className="overflow-hidden text-ellipsis whitespace-nowrap text-sm font-bold text-body">
+            Translate to _______
+          </p>
+          <p className="text-xs text-body">
+            {t("page-languages-recruit-community")}
+          </p>
+        </div>
+        <ButtonLink
+          className="w-full"
+          href="/contributing/translation-program/"
+          customEventOptions={onTranslationProgramClick}
         >
-          {t("common:learn-more")}
-        </BaseLink>
-      </p>
+          {t("get-involved")}
+        </ButtonLink>
+      </div>
     </div>
   )
 }
