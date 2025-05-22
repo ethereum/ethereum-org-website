@@ -2,7 +2,7 @@
 
 import type { ReactNode } from "react"
 
-import type { ChildOnlyProp } from "@/lib/types"
+import type { ChildOnlyProp, PageWithContributorsProps } from "@/lib/types"
 
 import CalloutBanner from "@/components/CalloutBanner"
 import CardList, {
@@ -12,6 +12,7 @@ import CentralizedExchanges from "@/components/CentralizedExchanges"
 import Emoji from "@/components/Emoji"
 import EthPriceCard from "@/components/EthPriceCard"
 import FeedbackCard from "@/components/FeedbackCard"
+import FileContributors from "@/components/FileContributors"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import Translation from "@/components/Translation"
@@ -63,11 +64,15 @@ const TwoColumnContent = (props: ChildOnlyProp) => (
   <div className="grid grid-cols-1 gap-16 lg:grid-cols-2" {...props} />
 )
 
-type Props = {
+type Props = PageWithContributorsProps & {
   lastDataUpdateDate: string
 }
 
-const GetEthPage = ({ lastDataUpdateDate }: Props) => {
+const GetEthPage = ({
+  lastDataUpdateDate,
+  contributors,
+  lastEditLocaleTimestamp,
+}: Props) => {
   const { t } = useTranslation("page-get-eth")
 
   const walletImageWidth = useBreakpointValue({
@@ -351,6 +356,12 @@ const GetEthPage = ({ lastDataUpdateDate }: Props) => {
             </ButtonLink>
           </div>
         </CalloutBanner>
+
+        <FileContributors
+          className="border-t"
+          contributors={contributors}
+          lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        />
 
         <FeedbackCard />
       </Stack>

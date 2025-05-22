@@ -124,10 +124,12 @@ const Layer2Hub = ({
               <div className="max-w-[224px]">
                 <p className="text-5xl">
                   $
-                  {growThePieData.dailyTxCosts["ethereum"].toLocaleString(
-                    locale as Lang,
-                    { minimumFractionDigits: 2, maximumFractionDigits: 2 }
-                  )}
+                  {(
+                    growThePieData.dailyTxCosts["ethereum"] || 0
+                  ).toLocaleString(locale as Lang, {
+                    minimumFractionDigits: 2,
+                    maximumFractionDigits: 2,
+                  })}
                 </p>
                 <p className="text-body-medium">
                   {t("page-layer-2-blockchain-transaction-cost")}

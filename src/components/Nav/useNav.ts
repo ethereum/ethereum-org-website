@@ -234,6 +234,11 @@ export const useNav = () => {
                   description: t("nav-prediction-markets-description"),
                   href: "/prediction-markets/",
                 },
+                {
+                  label: t("real-world-assets"),
+                  description: t("nav-rwa-description"),
+                  href: "/real-world-assets/",
+                },
               ],
             },
           ],
