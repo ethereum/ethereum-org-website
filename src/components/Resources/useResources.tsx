@@ -252,12 +252,6 @@ export const useResources = ({ txCostsMedianUsd }): DashboardSection[] => {
           imgSrc: IconDefiLlama,
         },
         {
-          title: "DeFi Market Cap",
-          description: t("page-resources-defi-defimarketcap-description"),
-          href: "https://defimarketcap.io",
-          imgSrc: IconDefiMarketCap,
-        },
-        {
           title: "EigenPhi",
           description: t("page-resources-defi-eigenphi-description"),
           href: "https://www.eigenphi.io",
