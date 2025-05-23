@@ -404,7 +404,7 @@ export const useResources = ({
       title: t("page-resources-roadmap-title"),
       metric: (
         <div className="grid place-items-center py-5">
-          <div className="text-sm">Next upgrade</div>
+          <div className="text-sm">Latest upgrade</div>
           <BaseLink
             href="/roadmap/pectra/"
             className="text-5xl font-bold text-body no-underline hover:text-primary"
