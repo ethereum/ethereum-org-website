@@ -125,6 +125,7 @@ export const TutorialLayout = ({
         />
         {children}
         <FileContributors
+          className="my-10 border-t"
           contributors={contributors}
           lastEditLocaleTimestamp={lastEditLocaleTimestamp}
         />

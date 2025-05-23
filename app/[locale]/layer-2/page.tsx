@@ -20,6 +20,7 @@ import { BASE_TIME_UNIT } from "@/lib/constants"
 
 import Layer2Page from "./_components/layer-2"
 
+import { routing } from "@/i18n/routing"
 import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
 import { fetchL2beat } from "@/lib/api/fetchL2beat"
 
@@ -78,6 +79,14 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     </I18nProvider>
   )
 }
+
+export async function generateStaticParams() {
+  return routing.locales.map((locale) => ({
+    locale,
+  }))
+}
+
+export const dynamicParams = false
 
 export async function generateMetadata({
   params,

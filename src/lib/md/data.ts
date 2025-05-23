@@ -1,16 +1,16 @@
 import { MDXRemoteProps } from "next-mdx-remote"
 import readingTime, { ReadTimeResults } from "reading-time"
 
+import type { Layout } from "@/lib/types"
 import {
   CommitHistory,
   FileContributor,
   Frontmatter,
   Lang,
-  Layout,
   ToCItem,
 } from "@/lib/types"
 
-import { getFileContributorInfo } from "@/lib/utils/contributors"
+import { getMarkdownFileContributorInfo } from "@/lib/utils/contributors"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 
 import { getLayoutFromSlug } from "../utils/layout"
@@ -77,13 +77,13 @@ export async function getPageData({
       : tocNodeItems
 
   // Get contributor information
-  const { contributors, lastUpdatedDate } = await getFileContributorInfo(
-    slug,
-    locale,
-    frontmatter.lang as string,
-    layout,
-    commitHistoryCache
-  )
+  const { contributors, lastUpdatedDate } =
+    await getMarkdownFileContributorInfo(
+      slug,
+      locale,
+      frontmatter.lang as string,
+      commitHistoryCache
+    )
 
   // Format timestamp
   const lastEditLocaleTimestamp = getLocaleTimestamp(

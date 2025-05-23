@@ -34,7 +34,14 @@ export const useCasesComponents = {
 }
 
 type UseCasesLayoutProps = ChildOnlyProp &
-  Pick<MdPageContent, "slug" | "tocItems" | "contentNotTranslated"> & {
+  Pick<
+    MdPageContent,
+    | "slug"
+    | "tocItems"
+    | "contentNotTranslated"
+    | "contributors"
+    | "lastEditLocaleTimestamp"
+  > & {
     frontmatter: UseCasesFrontmatter
   }
 export const UseCasesLayout = ({
@@ -43,6 +50,8 @@ export const UseCasesLayout = ({
   slug,
   tocItems,
   contentNotTranslated,
+  contributors,
+  lastEditLocaleTimestamp,
 }: UseCasesLayoutProps) => {
   const { t } = useTranslation("template-usecase")
 
@@ -146,6 +155,15 @@ export const UseCasesLayout = ({
           eventName: "prediction-markets",
         },
       },
+      {
+        text: t("template-usecase:template-usecase-dropdown-rwa"),
+        href: "/real-world-assets/",
+        matomo: {
+          eventCategory: "use cases menu",
+          eventAction: "click",
+          eventName: "real-world-assets",
+        },
+      },
     ],
   }
 
@@ -180,6 +198,8 @@ export const UseCasesLayout = ({
         tocItems={tocItems}
         dropdownLinks={dropdownLinks}
         maxDepth={frontmatter.sidebarDepth}
+        contributors={contributors}
+        lastEditLocaleTimestamp={lastEditLocaleTimestamp}
         heroSection={<ContentHero {...heroProps} />}
       >
         {children}
