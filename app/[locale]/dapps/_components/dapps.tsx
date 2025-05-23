@@ -542,7 +542,7 @@ const DappsPage = ({
     {
       title: "Curve",
       description: t("page-dapps-dapp-description-curve"),
-      link: "https://curve.fi/",
+      link: "https://www.curve.finance/",
       image: curve,
       alt: t("page-dapps-curve-logo-alt"),
     },
