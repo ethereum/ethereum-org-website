@@ -65,7 +65,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
         </div>
 
         <div className="w-full px-8 py-8">
-          <div className="flex min-h-[500px] flex-col items-center gap-4 rounded-4xl bg-radial-a p-8 lg:p-14">
+          <div className="flex min-h-[500px] flex-col items-center gap-4 rounded-4xl bg-radial-a px-8 pt-8 lg:px-14 lg:pt-14">
             <div className="flex max-w-[770px] flex-col gap-4 text-center">
               <h2 className="text-4xl font-black">Join the party</h2>
               <p className="text-md">
@@ -117,13 +117,10 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                   >
                     <div className="flex flex-col">
                       {Object.entries(eventsByCountry).map(
-                        ([country, countryEvents], index, array) => (
+                        ([country, countryEvents]) => (
                           <div
                             key={country}
-                            className={cn(
-                              "flex flex-col px-4 py-6",
-                              index !== array.length - 1 && "border-b"
-                            )}
+                            className={cn("flex flex-col border-b px-4 py-6")}
                           >
                             <h3 className="mb-2 flex items-center gap-2 text-2xl font-bold text-body-medium">
                               <span className="flex h-6 w-6 items-center justify-center overflow-hidden rounded-full bg-primary-low-contrast">
@@ -172,6 +169,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             </Tabs>
           </div>
         </div>
+        <div className="bg-gradient-step-1 w-full rounded-2xl px-8"></div>
       </MainArticle>
     </I18nProvider>
   )

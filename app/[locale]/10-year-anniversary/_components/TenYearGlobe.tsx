@@ -19,8 +19,8 @@ const TenYearGlobe = () => {
   const width = useBreakpointValue({
     base: 300,
     sm: 400,
-    md: 600,
-    lg: 700,
+    md: 500,
+    lg: 600,
   })
 
   useEffect(() => {
@@ -33,7 +33,7 @@ const TenYearGlobe = () => {
       globeRef.current.controls().autoRotateSpeed = 2.0
 
       // Set initial position
-      globeRef.current.pointOfView({ lat: 0, lng: 0, altitude: 2.5 })
+      globeRef.current.pointOfView({ lat: 0, lng: 0, altitude: 1.8 })
 
       // Create cloud layer
       const cloudGeometry = new THREE.SphereGeometry(1.02, 32, 32)
@@ -65,7 +65,6 @@ const TenYearGlobe = () => {
       bumpImageUrl="//unpkg.com/three-globe/example/img/earth-topology.png"
       backgroundColor="rgba(0,0,0,0)"
       atmosphereColor={atmosphereColor}
-      atmosphereAltitude={0.25}
       animateIn={false}
       hexPolygonsData={countries.features}
       hexPolygonResolution={3}
