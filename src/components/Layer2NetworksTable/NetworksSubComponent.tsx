@@ -1,5 +1,7 @@
 import { MdInfoOutline } from "react-icons/md"
 
+import { ExtendedRollup } from "@/lib/types"
+
 import NetworkUsageChart from "@/components/Layer2NetworksTable/NetworkUsageChart"
 import Tooltip from "@/components/Tooltip"
 
@@ -21,7 +23,11 @@ const formatNumber = (num: number): string => {
   return num.toString()
 }
 
-const NetworkSubComponent = ({ network }) => {
+type NetworkSubComponentProps = {
+  network: ExtendedRollup
+}
+
+const NetworkSubComponent = ({ network }: NetworkSubComponentProps) => {
   const { t } = useTranslation("page-layer-2-networks")
 
   return (
@@ -60,6 +66,7 @@ const NetworkSubComponent = ({ network }) => {
                 </p>
                 <p>
                   {(() => {
+                    if (!network.launchDate) return "-"
                     const launch = new Date(network.launchDate)
                     const today = new Date()
                     const yearDiff = today.getFullYear() - launch.getFullYear()
@@ -141,7 +148,11 @@ const NetworkSubComponent = ({ network }) => {
                   </Tooltip>
                 </p>
               </div>
-              <p>{formatNumber(network.activeAddresses)}</p>
+              <p>
+                {network.activeAddresses
+                  ? formatNumber(network.activeAddresses)
+                  : "-"}
+              </p>
             </div>
             <div className="flex-1">
               <div>

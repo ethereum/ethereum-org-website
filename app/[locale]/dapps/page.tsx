@@ -5,10 +5,11 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import { Params } from "@/lib/types"
+import type { CommitHistory, Lang, Params } from "@/lib/types"
 
 import I18nProvider from "@/components/I18nProvider"
 
+import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
@@ -22,9 +23,16 @@ export default async function Page({ params }: { params: Promise<Params> }) {
   const requiredNamespaces = getRequiredNamespacesForPage("/dapps")
   const pickedMessages = pick(allMessages, requiredNamespaces)
 
+  const commitHistoryCache: CommitHistory = {}
+  const { contributors, lastEditLocaleTimestamp } =
+    await getAppPageContributorInfo("dapps", locale as Lang, commitHistoryCache)
+
   return (
     <I18nProvider locale={locale} messages={pickedMessages}>
-      <DappsPage />
+      <DappsPage
+        contributors={contributors}
+        lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+      />
     </I18nProvider>
   )
 }

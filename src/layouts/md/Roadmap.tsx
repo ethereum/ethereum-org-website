@@ -23,7 +23,14 @@ export const roadmapComponents = {
 }
 
 type RoadmapLayoutProps = ChildOnlyProp &
-  Pick<MdPageContent, "slug" | "tocItems" | "contentNotTranslated"> & {
+  Pick<
+    MdPageContent,
+    | "slug"
+    | "tocItems"
+    | "contentNotTranslated"
+    | "contributors"
+    | "lastEditLocaleTimestamp"
+  > & {
     frontmatter: RoadmapFrontmatter
   }
 export const RoadmapLayout = ({
@@ -31,6 +38,8 @@ export const RoadmapLayout = ({
   frontmatter,
   slug,
   tocItems,
+  contributors,
+  lastEditLocaleTimestamp,
   contentNotTranslated,
 }: RoadmapLayoutProps) => {
   const { t } = useTranslation("common")
@@ -99,6 +108,8 @@ export const RoadmapLayout = ({
       tocItems={tocItems}
       dropdownLinks={dropdownLinks}
       maxDepth={frontmatter.sidebarDepth}
+      contributors={contributors}
+      lastEditLocaleTimestamp={lastEditLocaleTimestamp}
       heroSection={
         slug === "/roadmap/" ? (
           <HubHero
