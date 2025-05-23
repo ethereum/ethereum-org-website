@@ -14,6 +14,7 @@ import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import CountDown from "./_components/CountDown"
+import TenYearGlobe from "./_components/TenYearGlobe"
 import TenYearHero from "./_components/TenYearHero"
 
 const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
@@ -30,10 +31,10 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 
   return (
     <I18nProvider locale={locale} messages={messages}>
-      <MainArticle className="mx-auto flex w-full flex-col items-center gap-16">
+      <MainArticle className="mx-auto flex w-full flex-col items-center">
         <TenYearHero />
 
-        <div className="flex w-full flex-col gap-16 px-8 py-8 md:flex-row">
+        <div className="mt-16 flex w-full flex-col gap-16 px-8 py-8 md:flex-row">
           <div className="flex flex-1 flex-col gap-5">
             <div>
               <h1 className="text-4xl font-bold">
@@ -54,6 +55,22 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           </div>
           <div className="flex flex-1 flex-row items-center justify-center">
             <CountDown />
+          </div>
+        </div>
+
+        <div className="w-full px-8 py-8">
+          <div className="flex min-h-[500px] flex-col items-center gap-4 rounded-4xl bg-radial-a p-14">
+            <div className="flex max-w-[770px] flex-col gap-4 text-center">
+              <h2 className="text-4xl font-black">Join the party</h2>
+              <p className="text-md">
+                As we mark this historic milestone, we invite you to join us in
+                commemorating ten years of Ethereum. If you want to host an
+                event, please let us know!
+              </p>
+            </div>
+            <div>
+              <TenYearGlobe />
+            </div>
           </div>
         </div>
       </MainArticle>
