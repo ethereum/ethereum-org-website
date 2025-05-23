@@ -130,7 +130,10 @@ export const fetchRSS = async (xmlUrl: string | string[]) => {
  */
 export const fetchXml = async (url: string) => {
   try {
-    const response = await fetch(url)
+    const response = await fetch(url, {
+      headers: { Cookie: "", DNT: "1" }, // Empty cookie header and do-not-track
+      credentials: "omit", // Don't send or receive cookies
+    })
     const xml = await response.text()
     let returnObject: Record<string, unknown> = {}
     parseString(xml, (err, result) => {
