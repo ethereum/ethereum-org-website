@@ -7,11 +7,17 @@ import {
 
 import type { Lang } from "@/lib/types"
 
+import Emoji from "@/components/Emoji"
 import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
+import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
+import { cn } from "@/lib/utils/cn"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
+
+import eventData from "@/data/10-year-anniversary/eventData"
 
 import CountDown from "./_components/CountDown"
 import TenYearGlobe from "./_components/TenYearGlobe"
@@ -59,7 +65,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
         </div>
 
         <div className="w-full px-8 py-8">
-          <div className="flex min-h-[500px] flex-col items-center gap-4 rounded-4xl bg-radial-a p-14">
+          <div className="flex min-h-[500px] flex-col items-center gap-4 rounded-4xl bg-radial-a p-8 lg:p-14">
             <div className="flex max-w-[770px] flex-col gap-4 text-center">
               <h2 className="text-4xl font-black">Join the party</h2>
               <p className="text-md">
@@ -71,6 +77,99 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             <div>
               <TenYearGlobe />
             </div>
+          </div>
+        </div>
+
+        <div className="w-full px-8">
+          <div className="w-full">
+            <Tabs defaultValue={Object.keys(eventData)[0]} className="w-full">
+              <TabsList className="w-full flex-nowrap justify-start overflow-x-auto overflow-y-hidden rounded-none border-b-2 border-b-primary p-0">
+                {Object.entries(eventData).map(([key, data]) => (
+                  <TabsTrigger
+                    key={key}
+                    value={key}
+                    className="whitespace-nowrap border-0 text-primary"
+                  >
+                    {data.label}
+                  </TabsTrigger>
+                ))}
+              </TabsList>
+              {Object.entries(eventData).map(([key, data]) => {
+                const events = data.events.sort((a, b) =>
+                  a.country.localeCompare(b.country)
+                )
+                const eventsByCountry = events.reduce(
+                  (acc, event) => {
+                    if (!acc[event.country]) {
+                      acc[event.country] = []
+                    }
+                    acc[event.country].push(event)
+                    return acc
+                  },
+                  {} as Record<string, typeof events>
+                )
+
+                return (
+                  <TabsContent
+                    key={key}
+                    value={key}
+                    className="w-full border-none px-0 py-0"
+                  >
+                    <div className="flex flex-col">
+                      {Object.entries(eventsByCountry).map(
+                        ([country, countryEvents], index, array) => (
+                          <div
+                            key={country}
+                            className={cn(
+                              "flex flex-col px-4 py-6",
+                              index !== array.length - 1 && "border-b"
+                            )}
+                          >
+                            <h3 className="mb-2 flex items-center gap-2 text-2xl font-bold text-body-medium">
+                              <span className="flex h-6 w-6 items-center justify-center overflow-hidden rounded-full bg-primary-low-contrast">
+                                <Emoji
+                                  text={countryEvents[0].countryEmoji}
+                                  className="scale-[1.75]"
+                                />
+                              </span>
+                              {country}
+                            </h3>
+                            <div className="flex flex-col py-4">
+                              {countryEvents.map((event, index) => (
+                                <LinkBox
+                                  key={index}
+                                  className="flex flex-col justify-between gap-2 rounded-lg py-2 hover:bg-background-highlight md:flex-row"
+                                >
+                                  <div className="flex flex-col gap-2 md:flex-row">
+                                    <div>
+                                      <span className="text-lg font-bold">
+                                        {event.city}
+                                      </span>
+                                    </div>
+                                    <div>
+                                      <span>
+                                        {event.startTime} to {event.endTime}{" "}
+                                        (local time)
+                                      </span>
+                                    </div>
+                                  </div>
+                                  <LinkOverlay
+                                    href={event.link}
+                                    className="text-sm text-body-medium no-underline"
+                                  >
+                                    LINK TO EVENT
+                                  </LinkOverlay>
+                                </LinkBox>
+                              ))}
+                            </div>
+                          </div>
+                        )
+                      )}
+                    </div>
+                  </TabsContent>
+                )
+              })}
+            </Tabs>
           </div>
         </div>
       </MainArticle>
