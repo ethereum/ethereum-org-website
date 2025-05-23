@@ -220,6 +220,7 @@ const config = {
         "tooltip-shadow": "var(--tooltip-shadow)",
         "hub-hero-content": "var(--hub-hero-content)",
         "search-background": "var(--search-background)",
+        "gradient-step-1": "var(--gradient-step-1)",
       },
 
       backgroundImage: {

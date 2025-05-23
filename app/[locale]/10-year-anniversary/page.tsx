@@ -10,6 +10,7 @@ import type { Lang } from "@/lib/types"
 import Emoji from "@/components/Emoji"
 import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
+import { ButtonLink } from "@/components/ui/buttons/Button"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
@@ -169,7 +170,18 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             </Tabs>
           </div>
         </div>
-        <div className="bg-gradient-step-1 w-full rounded-2xl px-8"></div>
+        <div className="w-full px-8 py-8">
+          <div className="flex flex-col items-center gap-4 rounded-2xl bg-gradient-step-1 p-8">
+            <h2 className="text-2xl font-bold">Host event</h2>
+            <p className="text-md">
+              If you want to host an event in your city. Ethereum Foundation is
+              giving out a grant for the celebration.
+            </p>
+            <ButtonLink href="https://ethereum.org/" hideArrow>
+              add your event
+            </ButtonLink>
+          </div>
+        </div>
       </MainArticle>
     </I18nProvider>
   )
