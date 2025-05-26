@@ -19,6 +19,8 @@ type StoriesProps = {
   stories: Story[]
 }
 
+const STORIES_SHOWN = 5
+
 const Stories = ({ stories }: StoriesProps) => {
   const [flippedCards, setFlippedCards] = useState<Record<string, boolean>>({})
   const [expandedStories, setExpandedStories] = useState<
@@ -26,6 +28,7 @@ const Stories = ({ stories }: StoriesProps) => {
   >({})
   const [fading, setFading] = useState<Record<string, boolean>>({})
   const [clamped, setClamped] = useState<Record<string, boolean>>({})
+  const [storiesToShow, setStoriesToShow] = useState(STORIES_SHOWN)
 
   // Refs for each story's English and original text
   const englishRefs = useRef<Record<string, HTMLParagraphElement | null>>({})
@@ -79,9 +82,11 @@ const Stories = ({ stories }: StoriesProps) => {
     }))
   }
 
+  const visibleStories = stories.slice(0, storiesToShow)
+
   return (
     <div className="flex flex-1 flex-col gap-8">
-      {stories.map((story) => {
+      {visibleStories.map((story) => {
         const isFlipped = flippedCards[story.name]
         const isFading = fading[story.name]
         const isClamped = clamped[story.name]
@@ -205,6 +210,21 @@ const Stories = ({ stories }: StoriesProps) => {
           </div>
         )
       })}
+      {/* Show more button only if there are more stories to show */}
+      {storiesToShow < stories.length && (
+        <div className="mt-4 flex justify-center">
+          <Button
+            onClick={() =>
+              setStoriesToShow((n) =>
+                Math.min(n + STORIES_SHOWN, stories.length)
+              )
+            }
+            variant="outline"
+          >
+            Show more
+          </Button>
+        </div>
+      )}
     </div>
   )
 }
