@@ -125,8 +125,12 @@ const ResourcesPage = ({ txCostsMedianUsd }: ResourcesPageProps) => {
                       <div className="h-full bg-background bg-gradient-to-br from-white to-primary/10 px-2 py-6 dark:from-transparent dark:to-primary/10">
                         {metric && metric}
                         <ResourcesContainer>
-                          {items.map((item) => (
-                            <ResourceItem item={item} key={item.title} />
+                          {items.map(({ className, ...item }) => (
+                            <ResourceItem
+                              item={item}
+                              key={item.title}
+                              className={className}
+                            />
                           ))}
                         </ResourcesContainer>
                       </div>
