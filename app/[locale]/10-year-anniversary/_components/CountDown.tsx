@@ -2,7 +2,13 @@
 
 import { useEffect, useState } from "react"
 
-const CountDown = () => {
+import { cn } from "@/lib/utils/cn"
+
+interface CountDownProps {
+  className?: string
+}
+
+const CountDown = ({ className }: CountDownProps) => {
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
@@ -49,25 +55,45 @@ const CountDown = () => {
 
   return (
     <div className="flex items-center justify-center gap-10">
-      <div className="flex h-20 w-20 flex-col items-center justify-center rounded-2xl border text-center [box-shadow:-2.372px_2.372px_14.234px_1.186px_rgba(52,43,64,0.02),-18.979px_18.979px_14.234px_-3.559px_rgba(52,43,64,0.02),-37.958px_37.958px_28.469px_-7.117px_rgba(52,43,64,0.02),-47.448px_47.448px_47.448px_-14.234px_rgba(88,55,131,0.04)] dark:bg-[#171717]">
+      <div
+        className={cn(
+          "flex h-20 w-20 flex-col items-center justify-center rounded-2xl border text-center [box-shadow:-2.372px_2.372px_14.234px_1.186px_rgba(52,43,64,0.02),-18.979px_18.979px_14.234px_-3.559px_rgba(52,43,64,0.02),-37.958px_37.958px_28.469px_-7.117px_rgba(52,43,64,0.02),-47.448px_47.448px_47.448px_-14.234px_rgba(88,55,131,0.04)] dark:bg-[#171717]",
+          className
+        )}
+      >
         <div className="font-mono text-4xl font-bold text-accent-a">
           {timeLeft.days}
         </div>
         <div className="font-mono text-xs text-accent-a">days</div>
       </div>
-      <div className="flex h-20 w-20 flex-col items-center justify-center rounded-2xl border text-center [box-shadow:-2.372px_2.372px_14.234px_1.186px_rgba(52,43,64,0.02),-18.979px_18.979px_14.234px_-3.559px_rgba(52,43,64,0.02),-37.958px_37.958px_28.469px_-7.117px_rgba(52,43,64,0.02),-47.448px_47.448px_47.448px_-14.234px_rgba(88,55,131,0.04)] dark:bg-[#171717]">
+      <div
+        className={cn(
+          "flex h-20 w-20 flex-col items-center justify-center rounded-2xl border text-center [box-shadow:-2.372px_2.372px_14.234px_1.186px_rgba(52,43,64,0.02),-18.979px_18.979px_14.234px_-3.559px_rgba(52,43,64,0.02),-37.958px_37.958px_28.469px_-7.117px_rgba(52,43,64,0.02),-47.448px_47.448px_47.448px_-14.234px_rgba(88,55,131,0.04)] dark:bg-[#171717]",
+          className
+        )}
+      >
         <div className="font-mono text-4xl font-bold text-accent-a">
           {timeLeft.hours}
         </div>
         <div className="font-mono text-xs text-accent-a">hours</div>
       </div>
-      <div className="flex h-20 w-20 flex-col items-center justify-center rounded-2xl border text-center [box-shadow:-2.372px_2.372px_14.234px_1.186px_rgba(52,43,64,0.02),-18.979px_18.979px_14.234px_-3.559px_rgba(52,43,64,0.02),-37.958px_37.958px_28.469px_-7.117px_rgba(52,43,64,0.02),-47.448px_47.448px_47.448px_-14.234px_rgba(88,55,131,0.04)] dark:bg-[#171717]">
+      <div
+        className={cn(
+          "flex h-20 w-20 flex-col items-center justify-center rounded-2xl border text-center [box-shadow:-2.372px_2.372px_14.234px_1.186px_rgba(52,43,64,0.02),-18.979px_18.979px_14.234px_-3.559px_rgba(52,43,64,0.02),-37.958px_37.958px_28.469px_-7.117px_rgba(52,43,64,0.02),-47.448px_47.448px_47.448px_-14.234px_rgba(88,55,131,0.04)] dark:bg-[#171717]",
+          className
+        )}
+      >
         <div className="font-mono text-4xl font-bold text-accent-a">
           {timeLeft.minutes}
         </div>
         <div className="font-mono text-xs text-accent-a">minutes</div>
       </div>
-      <div className="hidden h-20 w-20 flex-col items-center justify-center rounded-2xl border text-center [box-shadow:-2.372px_2.372px_14.234px_1.186px_rgba(52,43,64,0.02),-18.979px_18.979px_14.234px_-3.559px_rgba(52,43,64,0.02),-37.958px_37.958px_28.469px_-7.117px_rgba(52,43,64,0.02),-47.448px_47.448px_47.448px_-14.234px_rgba(88,55,131,0.04)] lg:flex dark:bg-[#171717]">
+      <div
+        className={cn(
+          "hidden h-20 w-20 flex-col items-center justify-center rounded-2xl border text-center [box-shadow:-2.372px_2.372px_14.234px_1.186px_rgba(52,43,64,0.02),-18.979px_18.979px_14.234px_-3.559px_rgba(52,43,64,0.02),-37.958px_37.958px_28.469px_-7.117px_rgba(52,43,64,0.02),-47.448px_47.448px_47.448px_-14.234px_rgba(88,55,131,0.04)] lg:flex dark:bg-[#171717]",
+          className
+        )}
+      >
         <div className="font-mono text-4xl font-bold text-accent-a">
           {timeLeft.seconds}
         </div>
