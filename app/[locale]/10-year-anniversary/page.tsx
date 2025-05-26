@@ -9,6 +9,7 @@ import type { Lang } from "@/lib/types"
 
 import Emoji from "@/components/Emoji"
 import I18nProvider from "@/components/I18nProvider"
+import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
@@ -20,13 +21,16 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import eventData from "@/data/10-year-anniversary/eventData"
 
+import AdoptionSwiper from "./_components/AdoptionSwiper"
 import CountDown from "./_components/CountDown"
 import InnovationSwiper from "./_components/InnovationSwiper"
 import TenYearGlobe from "./_components/TenYearGlobe"
 import TenYearHero from "./_components/TenYearHero"
+import { use10YearAnniversary } from "./_components/use10YearAnniversary"
 
 const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const { locale } = await params
+  const { adoptionCards, adoptionStyles } = use10YearAnniversary()
 
   setRequestLocale(locale)
 
@@ -205,6 +209,44 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             </p>
           </div>
           <InnovationSwiper />
+        </div>
+
+        <div className="flex w-full flex-col gap-8 px-8 py-8 pt-32 lg:flex-row">
+          <div className="relative flex flex-1 flex-col gap-6">
+            <div className="flex flex-col gap-6 lg:sticky lg:top-32 lg:mb-24">
+              <h2 className="text-5xl font-black md:text-7xl">adoption</h2>
+              <p className="text-xl font-bold">
+                From a whitepaper to 24M+ transactions a day within ethereum
+                ecosystem
+              </p>
+              <p>
+                Ethereum has become a global computing platform that powers
+                thousands of applications used by millions of people daily,
+                crossing borders and industries while continuing to expand its
+                reach into new territories and use cases.
+              </p>
+            </div>
+          </div>
+          <AdoptionSwiper />
+          <div className="hidden flex-1 flex-col gap-6 md:flex">
+            {adoptionCards.map((card, index) => (
+              <div
+                key={card.title}
+                className={cn("w-[70%] rounded-2xl p-8", adoptionStyles[index])}
+              >
+                <Image
+                  src={card.image}
+                  alt={card.title}
+                  className="mx-auto mb-4"
+                />
+                <h3 className="mb-4 text-2xl font-bold">{card.title}</h3>
+                {card.description}
+                <ButtonLink href={card.href} hideArrow variant="outline">
+                  {card.linkText}
+                </ButtonLink>
+              </div>
+            ))}
+          </div>
         </div>
       </MainArticle>
     </I18nProvider>

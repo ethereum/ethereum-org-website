@@ -1,3 +1,6 @@
+import Adoption1Image from "@/public/images/10-year-anniversary/adoption-1.png"
+import Adoption2Image from "@/public/images/10-year-anniversary/adoption-2.png"
+import Adoption3Image from "@/public/images/10-year-anniversary/adoption-3.png"
 import DefiSummerImage from "@/public/images/10-year-anniversary/defi-summer.png"
 import EthETFImage from "@/public/images/10-year-anniversary/eth-etf.png"
 import EthereumLaunchImage from "@/public/images/10-year-anniversary/ethereum-launch.png"
@@ -73,7 +76,57 @@ export const use10YearAnniversary = () => {
     },
   ]
 
+  const adoptionCards = [
+    {
+      image: Adoption1Image,
+      title: "Decade of Decentralization",
+      description: (
+        <p className="mb-8">
+          What began as a specialized ecosystem now spans <b>80+ countries</b>{" "}
+          with <b>870,000 validators</b>, <b>13,600 physical nodes</b>, and
+          millions of users across continents.
+        </p>
+      ),
+      href: "/resources",
+      linkText: "Check Ethereum stats",
+    },
+    {
+      image: Adoption2Image,
+      title: "10 years, 16 upgrades, 0 downtime",
+      description: (
+        <p className="mb-8">
+          Ethereum has turned continuous innovation into a decade-long uptime
+          record. While few times Ethereum network became congested, it never
+          went down.
+        </p>
+      ),
+      href: "/roadmap",
+      linkText: "See Roadmap",
+    },
+    {
+      image: Adoption3Image,
+      title: "$3.2 trillion stablecoin volume",
+      description: (
+        <p className="mb-8">
+          In Q1 2025, Ethereum and its extensions moved over $3.2 trillion in
+          stablecoins — thats 1.3x more than Visa and 2.6x more than Mastercard
+          in the same period.
+        </p>
+      ),
+      href: "/stablecoins",
+      linkText: "More on stablecoins",
+    },
+  ]
+
+  const adoptionStyles = [
+    "bg-gradient-to-t from-20% to-60% from-accent-c/10 to-accent-c/5 dark:from-accent-c/20 dark:to-accent-c/10 border-accent-c/10",
+    "bg-gradient-to-b from-20% to-60% from-accent-b/10 to-accent-b/5 dark:from-accent-b/20 dark:to-accent-b/10 border-accent-b/10 ml-auto -mt-20",
+    "bg-gradient-to-r from-20% to-60% from-accent-a/10 to-accent-a/5 dark:from-accent-a/20 dark:to-accent-a/10 border-accent-a/10 -mt-20",
+  ]
+
   return {
+    adoptionCards,
+    adoptionStyles,
     innovationCards,
   }
 }
