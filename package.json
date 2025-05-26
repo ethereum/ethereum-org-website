@@ -72,7 +72,7 @@
     "next-themes": "^0.3.0",
     "prism-react-renderer": "1.1.0",
     "prismjs": "^1.30.0",
-    "react": "^18.2.0",
+    "react": "^18.3.1",
     "react-chartjs-2": "^5.2.0",
     "react-dom": "^18.2.0",
     "react-emoji-render": "^2.0.1",
