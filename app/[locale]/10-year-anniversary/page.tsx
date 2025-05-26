@@ -29,6 +29,8 @@ import TenYearGlobe from "./_components/TenYearGlobe"
 import TenYearHero from "./_components/TenYearHero"
 import { use10YearAnniversary } from "./_components/use10YearAnniversary"
 
+import TenYearLogo from "@/public/images/10-year-anniversary/10year-logo.png"
+
 const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const { locale } = await params
   const { adoptionCards, adoptionStyles, stories } = use10YearAnniversary()
@@ -177,7 +179,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           </div>
         </div>
         <div className="w-full px-8 py-8">
-          <div className="flex flex-col items-center gap-4 rounded-2xl bg-gradient-step-1 p-8">
+          <div className="bg-gradient-pink-purple flex flex-col items-center gap-4 rounded-2xl p-8">
             <h2 className="text-2xl font-bold">Host event</h2>
             <p className="text-md">
               If you want to host an event in your city. Ethereum Foundation is
@@ -269,6 +271,24 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             </div>
           </div>
           <Stories stories={stories} />
+        </div>
+
+        <div className="w-full gap-8 px-8 py-8 pt-32">
+          <div className="flex flex-col items-center gap-4 rounded-2xl bg-ten-year-gradient p-8">
+            <Image
+              src={TenYearLogo}
+              alt="10 year anniversary logo"
+              className="-mb-4 max-h-80 object-contain sm:-mb-16"
+            />
+            <h3>have an idea for....</h3>
+            <p>
+              filler test here, need to come up wtih something for this
+              component
+            </p>
+            <ButtonLink href="https://ethereum.org/" hideArrow>
+              submit your ideas
+            </ButtonLink>
+          </div>
         </div>
       </MainArticle>
     </I18nProvider>

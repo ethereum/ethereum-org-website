@@ -235,6 +235,7 @@ const config = {
         "card-gradient": "var(--card-gradient)",
         "card-gradient-secondary": "var(--card-gradient-secondary)",
         "card-gradient-secondary-hover": "var(--card-gradient-secondary-hover)",
+        "ten-year-gradient": "var(--ten-year-gradient)",
       },
       boxShadow: {
         "table-box": "var(--table-box-shadow)",
