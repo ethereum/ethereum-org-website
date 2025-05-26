@@ -622,15 +622,15 @@ const HomePage = ({
                 alt=""
                 className="-mb-2 -mt-16 max-h-[415px] object-contain sm:-mb-12 sm:-mt-24 md:-mb-16 md:-mt-32 lg:-mb-20 lg:-mt-40 xl:-mb-24 xl:-mt-52"
               />
-              <h3 className="text-4xl">10 Years of ethereum</h3>
-              <div className="flex flex-col gap-2">
+              <h3 className="mb-4 text-4xl">10 Years of ethereum</h3>
+              <div className="mb-4 flex flex-col gap-2">
                 <p>
                   <strong>On July 30, 2015, at 3:44 p.m. UTC,</strong> the first
                   block of the Ethereum blockchain came to life.
                 </p>
                 <p>Ten years down, infinity to go! 🚀</p>
               </div>
-              <Countdown className="my-8 bg-background" />
+              <Countdown className="mb-8 mt-4 bg-background" />
               <ButtonLink href="/10-year-anniversary/">
                 Join the party
               </ButtonLink>
