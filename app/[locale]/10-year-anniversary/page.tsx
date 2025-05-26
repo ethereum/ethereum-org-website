@@ -21,6 +21,7 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import eventData from "@/data/10-year-anniversary/eventData"
 
 import CountDown from "./_components/CountDown"
+import InnovationSwiper from "./_components/InnovationSwiper"
 import TenYearGlobe from "./_components/TenYearGlobe"
 import TenYearHero from "./_components/TenYearHero"
 
@@ -81,7 +82,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           </div>
         </div>
 
-        <div className="w-full px-8">
+        <div className="w-full px-8 pb-8">
           <div className="w-full">
             <Tabs defaultValue={Object.keys(eventData)[0]} className="w-full">
               <TabsList className="w-full flex-nowrap justify-start overflow-x-auto overflow-y-hidden rounded-none border-b-2 border-b-primary p-0">
@@ -181,6 +182,29 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               add your event
             </ButtonLink>
           </div>
+        </div>
+
+        <div className="flex w-full flex-col items-center gap-8 px-8 py-8 pt-32 lg:flex-row">
+          <div className="flex flex-1 flex-col gap-6">
+            <h2 className="flex flex-col gap-2 font-black">
+              <span className="pl-2.5 text-4xl text-accent-a">10 years of</span>
+              <span className="text-5xl text-body md:text-7xl">innovation</span>
+            </h2>
+            <p className="text-xl font-bold">
+              Ethereum revolutionized blockchain by introducing smart contracts
+            </p>
+            <p>
+              Self-executing programs that run when conditions are met. Ethereum
+              transformed blockchain from a simple ledger into a world computer.
+            </p>
+            <p>
+              This innovation launched entirely new industries including{" "}
+              <b>DeFi</b>, <b>NFTs</b>, and <b>DAOs</b>, expanding blockchain
+              far beyond digital currency into a platform that reimagined how we
+              create and exchange value in the digital age.
+            </p>
+          </div>
+          <InnovationSwiper />
         </div>
       </MainArticle>
     </I18nProvider>
