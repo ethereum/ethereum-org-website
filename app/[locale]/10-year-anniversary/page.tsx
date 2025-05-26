@@ -24,13 +24,14 @@ import eventData from "@/data/10-year-anniversary/eventData"
 import AdoptionSwiper from "./_components/AdoptionSwiper"
 import CountDown from "./_components/CountDown"
 import InnovationSwiper from "./_components/InnovationSwiper"
+import Stories from "./_components/Stories"
 import TenYearGlobe from "./_components/TenYearGlobe"
 import TenYearHero from "./_components/TenYearHero"
 import { use10YearAnniversary } from "./_components/use10YearAnniversary"
 
 const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const { locale } = await params
-  const { adoptionCards, adoptionStyles } = use10YearAnniversary()
+  const { adoptionCards, adoptionStyles, stories } = use10YearAnniversary()
 
   setRequestLocale(locale)
 
@@ -213,7 +214,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 
         <div className="flex w-full flex-col gap-8 px-8 py-8 pt-32 lg:flex-row">
           <div className="relative flex flex-1 flex-col gap-6">
-            <div className="flex flex-col gap-6 lg:sticky lg:top-32 lg:mb-24">
+            <div className="flex flex-col gap-6 lg:sticky lg:top-64 lg:mb-24">
               <h2 className="text-5xl font-black md:text-7xl">adoption</h2>
               <p className="text-xl font-bold">
                 From a whitepaper to 24M+ transactions a day within ethereum
@@ -247,6 +248,27 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               </div>
             ))}
           </div>
+        </div>
+
+        <div className="flex w-full flex-col gap-8 px-8 py-8 pt-32 lg:flex-row">
+          <div className="flex flex-1 flex-col gap-6">
+            <div className="flex flex-col gap-6 lg:sticky lg:top-64 lg:mb-24">
+              <h2 className="text-5xl font-black md:text-7xl">stories</h2>
+              <p className="text-xl font-bold">
+                An overview of how Ethereum is used in daily life
+              </p>
+              <p>
+                From millions of wallets to every corner of the world, people
+                are using Ethereum in ways that inspire. This collection shares
+                real stories of creativity, freedom, and connection—powered by a
+                decentralized network.
+              </p>
+              <ButtonLink href="https://ethereumstory.paperform.co/">
+                Share your story
+              </ButtonLink>
+            </div>
+          </div>
+          <Stories stories={stories} />
         </div>
       </MainArticle>
     </I18nProvider>
