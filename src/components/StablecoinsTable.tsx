@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { Suspense, useState } from "react"
 import { MdOutlineFilterList } from "react-icons/md"
 
 import type { StablecoinType } from "@/lib/types"
@@ -17,6 +17,7 @@ import {
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu"
 import { Flex } from "./ui/flex"
+import { Skeleton } from "./ui/skeleton"
 import {
   Table,
   TableBody,
@@ -118,13 +119,17 @@ const StablecoinsTable = ({ content, hasError }: StablecoinsTableProps) => {
 
   const selectOnlyType = (type: string) => {
     setVisibleTypes(
-      Object.fromEntries(Object.keys(visibleTypes).map((k) => [k, k === type]))
+      Object.fromEntries(
+        Object.keys(visibleTypes).map((k) => [k, k === type])
+      ) as Record<StablecoinType, boolean>
     )
   }
 
   const showAllTypes = () => {
     setVisibleTypes(
-      Object.fromEntries(Object.keys(visibleTypes).map((k) => [k, true]))
+      Object.fromEntries(
+        Object.keys(visibleTypes).map((k) => [k, true])
+      ) as Record<StablecoinType, boolean>
     )
   }
 
@@ -275,73 +280,76 @@ const StablecoinsTable = ({ content, hasError }: StablecoinsTableProps) => {
     <div className="mx-auto w-full max-w-screen-xl overflow-x-auto px-8 py-4">
       <Table className="my-8 min-w-[720px] bg-background">
         <TableHeader>
-          <TableRow>
-            {columns.map((column, idx) => (
-              <TableHead key={idx}>{column}</TableHead>
-            ))}
-            x
-            {content && content[0]?.url && (
-              <TableHead className="text-right font-normal">
-                <span className={cn("inline-block", twFlipForRtl)}>↗</span>
-              </TableHead>
-            )}
-          </TableRow>
-        </TableHeader>
-        <TableBody>
-          {hasError && (
-            <TableRow className="p-4">
-              <TableCell colSpan={4}>
-                {t("page-stablecoins-table-error")}
-              </TableCell>
-            </TableRow>
-          )}
-
-          {noFiltersActive && (
+          <Suspense fallback={<Skeleton className="h-8 w-full" />}>
             <TableRow>
-              <TableCell colSpan={4} className="py-8 text-center">
-                {t("page-stablecoins-no-results")}
-              </TableCell>
+              {columns.map((column, idx) => (
+                <TableHead key={idx}>{column}</TableHead>
+              ))}
+              {content && content[0]?.url && (
+                <TableHead className="text-right font-normal">
+                  <span className={cn("inline-block", twFlipForRtl)}>↗</span>
+                </TableHead>
+              )}
             </TableRow>
-          )}
-
-          {content.map(
-            ({ name, marketCap, image, type, url, symbol, peg }, idx) => (
-              <TableRow key={idx}>
-                <TableCell>
-                  <Flex>
-                    {image && (
-                      <Image
-                        src={image}
-                        alt=""
-                        className="me-4 h-6 w-6"
-                        width={24}
-                        height={24}
-                      />
-                    )}
-                    <span>
-                      {name}{" "}
-                      <span className="text-sm uppercase text-body-medium">
-                        {symbol}
-                      </span>
-                    </span>
-                  </Flex>
+          </Suspense>
+        </TableHeader>
+        <Suspense fallback={<Skeleton className="h-8 w-full" />}>
+          <TableBody>
+            {hasError && (
+              <TableRow className="p-4">
+                <TableCell colSpan={4}>
+                  {t("page-stablecoins-table-error")}
                 </TableCell>
-                <TableCell className="text-end">{marketCap}</TableCell>
-                <TableCell className="text-end">
-                  {stablecoinsType[type]}
-                </TableCell>
-                <TableCell className="text-end">{peg}</TableCell>
-                {url && (
-                  <TableCell className="text-right">
-                    <ButtonLink href={url} size="sm" hideArrow>
-                      {t("page-stablecoins-go-to")} {name}
-                    </ButtonLink>
-                  </TableCell>
-                )}
               </TableRow>
-            )
-          )}
-        </TableBody>
+            )}
+
+            {noFiltersActive && (
+              <TableRow>
+                <TableCell colSpan={4} className="py-8 text-center">
+                  {t("page-stablecoins-no-results")}
+                </TableCell>
+              </TableRow>
+            )}
+
+            {displayedContent.map(
+              ({ name, marketCap, image, type, url, symbol, peg }, idx) => (
+                <TableRow key={idx}>
+                  <TableCell>
+                    <Flex>
+                      {image && (
+                        <Image
+                          src={image}
+                          alt=""
+                          className="me-4 h-6 w-6"
+                          width={24}
+                          height={24}
+                        />
+                      )}
+                      <span>
+                        {name}{" "}
+                        <span className="text-sm uppercase text-body-medium">
+                          {symbol}
+                        </span>
+                      </span>
+                    </Flex>
+                  </TableCell>
+                  <TableCell className="text-end">{marketCap}</TableCell>
+                  <TableCell className="text-end">
+                    {stablecoinsType[type]}
+                  </TableCell>
+                  <TableCell className="text-end">{peg}</TableCell>
+                  {url && (
+                    <TableCell className="text-right">
+                      <ButtonLink href={url} size="sm" hideArrow>
+                        {t("page-stablecoins-go-to")} {name}
+                      </ButtonLink>
+                    </TableCell>
+                  )}
+                </TableRow>
+              )
+            )}
+          </TableBody>
+        </Suspense>
       </Table>
       {hasMoreRows && (
         <div className="mt-4 flex justify-center">
@@ -353,7 +361,7 @@ const StablecoinsTable = ({ content, hasError }: StablecoinsTableProps) => {
           </Button>
         </div>
       )}
-      {displayedContent.length === 0 && (
+      {displayedContent.length === 0 && !noFiltersActive && (
         <div className="flex flex-col items-center justify-center py-12">
           <p className="mb-4 text-lg text-body-medium">
             {t("page-stablecoins-no-results")}
