@@ -1,6 +1,13 @@
+import ethereumEcosystem from "@/data/ethereum-ecosystem.json"
+
 import { COINGECKO_API_BASE_URL, COINGECKO_API_URL_PARAMS } from "../constants"
 
 export async function fetchEthereumEcosystemData() {
+  // ethereumEcosystem is json array; return it safely
+  if (Array.isArray(ethereumEcosystem)) {
+    return ethereumEcosystem
+  }
+
   const url = `${COINGECKO_API_BASE_URL}ethereum-ecosystem${COINGECKO_API_URL_PARAMS}`
 
   try {
