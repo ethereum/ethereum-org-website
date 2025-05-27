@@ -20,8 +20,6 @@ import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
-import eventData from "@/data/10-year-anniversary/eventData"
-
 import { BASE_TIME_UNIT } from "@/lib/constants"
 
 import AdoptionSwiper from "./_components/AdoptionSwiper"
@@ -55,7 +53,6 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 
   const [fetched10YearEvents, fetched10YearStories] = await loadData()
 
-  console.log(fetched10YearEvents)
   console.log(fetched10YearStories)
 
   // Get i18n messages
@@ -112,9 +109,12 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 
         <div className="w-full px-8 pb-8">
           <div className="w-full">
-            <Tabs defaultValue={Object.keys(eventData)[0]} className="w-full">
+            <Tabs
+              defaultValue={Object.keys(fetched10YearEvents)[0]}
+              className="w-full"
+            >
               <TabsList className="w-full flex-nowrap justify-start overflow-x-auto overflow-y-hidden rounded-none border-b-2 border-b-primary p-0">
-                {Object.entries(eventData).map(([key, data]) => (
+                {Object.entries(fetched10YearEvents).map(([key, data]) => (
                   <TabsTrigger
                     key={key}
                     value={key}
@@ -124,7 +124,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                   </TabsTrigger>
                 ))}
               </TabsList>
-              {Object.entries(eventData).map(([key, data]) => {
+              {Object.entries(fetched10YearEvents).map(([key, data]) => {
                 const events = data.events.sort((a, b) =>
                   a.country.localeCompare(b.country)
                 )
@@ -155,7 +155,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                             <h3 className="mb-2 flex items-center gap-2 text-2xl font-bold text-body-medium">
                               <span className="flex h-6 w-6 items-center justify-center overflow-hidden rounded-full bg-primary-low-contrast">
                                 <Emoji
-                                  text={countryEvents[0].countryEmoji}
+                                  text={countryEvents[0].countryFlag}
                                   className="scale-[1.75]"
                                 />
                               </span>
@@ -174,14 +174,11 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                                       </span>
                                     </div>
                                     <div>
-                                      <span>
-                                        {event.startTime} to {event.endTime}{" "}
-                                        (local time)
-                                      </span>
+                                      <span>{event.host}</span>
                                     </div>
                                   </div>
                                   <LinkOverlay
-                                    href={event.link}
+                                    href={event.eventLink}
                                     className="text-sm text-body-medium no-underline"
                                   >
                                     LINK TO EVENT
