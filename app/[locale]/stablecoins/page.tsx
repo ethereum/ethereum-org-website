@@ -23,7 +23,7 @@ import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import StablecoinAccordion from "@/components/StablecoinAccordion"
 import StablecoinsTable from "@/components/StablecoinsTable"
 import Tooltip from "@/components/Tooltip"
-import TranslationSSR from "@/components/TranslationSSR"
+import Translation from "@/components/Translation"
 import { Alert, AlertContent, AlertDescription } from "@/components/ui/alert"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Divider } from "@/components/ui/divider"
@@ -95,6 +95,7 @@ const loadData = dataLoader<[CoinGeckoCoinMarketResponse]>(
 async function Page({ params }: { params: Promise<{ locale: Lang }> }) {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: "page-stablecoins" })
+
   setRequestLocale(locale)
 
   // Get i18n messages
@@ -166,19 +167,27 @@ async function Page({ params }: { params: Promise<{ locale: Lang }> }) {
   const tokens = [
     {
       emoji: ":globe_showing_americas:",
-      description: t("page-stablecoins-stablecoins-feature-1"),
+      description: (
+        <Translation id="page-stablecoins:page-stablecoins-stablecoins-feature-1" />
+      ),
     },
     {
       emoji: ":chart_with_upwards_trend:",
-      description: t("page-stablecoins-stablecoins-feature-2"),
+      description: (
+        <Translation id="page-stablecoins:page-stablecoins-stablecoins-feature-2" />
+      ),
     },
     {
       emoji: ":handshake:",
-      description: t("page-stablecoins-stablecoins-feature-3"),
+      description: (
+        <Translation id="page-stablecoins:page-stablecoins-stablecoins-feature-3" />
+      ),
     },
     {
       emoji: ":key:",
-      description: t("page-stablecoins-stablecoins-feature-4"),
+      description: (
+        <Translation id="page-stablecoins:page-stablecoins-stablecoins-feature-4" />
+      ),
     },
   ]
 
@@ -331,7 +340,7 @@ async function Page({ params }: { params: Promise<{ locale: Lang }> }) {
     {
       title: t("page-stablecoins-precious-metals"),
       description: (
-        <TranslationSSR id="page-stablecoins:page-stablecoins-precious-metals-description" />
+        <Translation id="page-stablecoins:page-stablecoins-precious-metals-description" />
       ),
       emoji: ":gem_stone:",
       pros: [t("page-stablecoins-precious-metals-pro-1")],
@@ -543,7 +552,7 @@ async function Page({ params }: { params: Promise<{ locale: Lang }> }) {
                       </div>
                       <div className="text-center text-sm text-body-medium">
                         {t(
-                          "page-stablecoins:page-stablecoins-stablecoins-table-header-column-2"
+                          "page-stablecoins-stablecoins-table-header-column-2"
                         )}
                       </div>
                     </div>
@@ -737,7 +746,7 @@ async function Page({ params }: { params: Promise<{ locale: Lang }> }) {
             )}
           >
             <ProductList
-              actionLabel={t("page-stablecoins:page-dapps-ready-button")}
+              actionLabel={t("page-dapps-ready-button")}
               category={t("page-stablecoins-category-dashboard-and-education")}
               content={toolsData}
             />
