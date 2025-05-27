@@ -37,10 +37,11 @@
   "page-index-cta-dapps-label": "Try apps",
   "page-index-cta-get-eth-description": "The currency of Ethereum",
   "page-index-cta-get-eth-label": "Get ETH",
-  "page-index-cta-networks-description": "Enjoy minimal fees",
-  "page-index-cta-networks-label": "Choose a network",
+
   "page-index-cta-wallet-description": "Create accounts & manage assets",
   "page-index-cta-wallet-label": "Pick a wallet",
+  "page-index-cta-build-apps-description": "Put your idea on chain",
+  "page-index-cta-build-apps-label": "Build apps",
   "page-index-description": "The leading platform for innovative apps and blockchain networks",
   "page-index-developers-code-example-description-0": "Build a bank powered by logic you've programmed",
   "page-index-developers-code-example-description-1": "Create tokens that you can transfer and use across applications",

@@ -115,8 +115,8 @@ export const useHome = () => {
       eventName: "dapps",
     },
     {
-      label: "Build apps",
-      description: "Put your idea on chain",
+      label: t("page-index:page-index-cta-build-apps-label"),
+      description: t("page-index:page-index-cta-build-apps-description"),
       href: "/developers/",
       Svg: ChooseNetworkIcon,
       className: "text-accent-b hover:text-accent-b-hover",
