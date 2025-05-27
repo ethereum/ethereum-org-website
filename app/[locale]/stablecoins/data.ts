@@ -1,4 +1,4 @@
-type StablecoinType = "FIAT" | "CRYPTO" | "ASSET" | "ALGORITHMIC"
+import type { StablecoinType } from "./types"
 
 export const stablecoins: Record<
   string,

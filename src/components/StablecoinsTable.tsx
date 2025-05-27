@@ -1,3 +1,7 @@
+"use client"
+
+import { Image } from "@/components/Image"
+
 import { cn } from "@/lib/utils/cn"
 
 import { ButtonLink } from "./ui/buttons/Button"
@@ -10,7 +14,6 @@ import {
   TableHeader,
   TableRow,
 } from "./ui/table"
-import { Image } from "./Image"
 
 import { useRtlFlip } from "@/hooks/useRtlFlip"
 import { useTranslation } from "@/hooks/useTranslation"
@@ -21,29 +24,27 @@ export interface TableRow {
   image?: string
   type: string
   url?: string
+  symbol: string
+  peg: string
 }
 
 export type StablecoinsTableProps = {
-  columns: Array<string>
+  columns: Array<React.ReactNode>
   content: Array<TableRow>
+  intlTypeNames: Record<string, string>
   hasError: boolean
+  noFiltersActive: boolean
 }
 
 const StablecoinsTable = ({
   columns,
   content,
+  intlTypeNames,
   hasError,
+  noFiltersActive,
 }: StablecoinsTableProps) => {
   const { twFlipForRtl } = useRtlFlip()
   const { t } = useTranslation("page-stablecoins")
-
-  const stablecoinsType = {
-    FIAT: t("page-stablecoins-stablecoins-table-type-fiat-backed"),
-    CRYPTO: t("page-stablecoins-stablecoins-table-type-crypto-backed"),
-    ASSET: t("page-stablecoins-stablecoins-table-type-precious-metals-backed"),
-    ALGORITHMIC: t("page-stablecoins-algorithmic"),
-  }
-
   return (
     <Table className="my-8 min-w-[720px] bg-background">
       <TableHeader>
@@ -68,25 +69,49 @@ const StablecoinsTable = ({
           </TableRow>
         )}
 
-        {content.map(({ name, marketCap, image, type, url }, idx) => (
-          <TableRow key={idx}>
-            <TableCell>
-              <Flex>
-                {image && <Image src={image} alt="" className="me-4 h-6 w-6" />}
-                <>{name}</>
-              </Flex>
+        {noFiltersActive && (
+          <TableRow>
+            <TableCell colSpan={4} className="py-8 text-center">
+              {t("page-stablecoins-no-results")}
             </TableCell>
-            <TableCell>{marketCap}</TableCell>
-            <TableCell>{stablecoinsType[type]}</TableCell>
-            {url && (
-              <TableCell className="text-right">
-                <ButtonLink href={url} size="sm">
-                  {t("page-stablecoins-go-to")} {name}
-                </ButtonLink>
-              </TableCell>
-            )}
           </TableRow>
-        ))}
+        )}
+
+        {content.map(
+          ({ name, marketCap, image, type, url, symbol, peg }, idx) => (
+            <TableRow key={idx}>
+              <TableCell>
+                <Flex>
+                  {image && (
+                    <Image
+                      src={image}
+                      alt=""
+                      className="me-4 h-6 w-6"
+                      width={24}
+                      height={24}
+                    />
+                  )}
+                  <span>
+                    {name}{" "}
+                    <span className="text-sm uppercase text-body-medium">
+                      {symbol}
+                    </span>
+                  </span>
+                </Flex>
+              </TableCell>
+              <TableCell className="text-end">{marketCap}</TableCell>
+              <TableCell className="text-end">{intlTypeNames[type]}</TableCell>
+              <TableCell className="text-end">{peg}</TableCell>
+              {url && (
+                <TableCell className="text-right">
+                  <ButtonLink href={url} size="sm">
+                    {t("page-stablecoins-go-to")} {name}
+                  </ButtonLink>
+                </TableCell>
+              )}
+            </TableRow>
+          )
+        )}
       </TableBody>
     </Table>
   )

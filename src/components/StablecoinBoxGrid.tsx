@@ -41,7 +41,7 @@ interface ILink {
 }
 
 type GridItemProps = {
-  description: string
+  description: React.ReactNode | string | JSX.Element
   emoji: string
   index: number
   title: string
