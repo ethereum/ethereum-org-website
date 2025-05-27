@@ -7,10 +7,10 @@ import type { CodeExample } from "@/lib/interfaces"
 
 import { useBentoBox } from "@/components/Homepage/useBentoBox"
 import BlockHeap from "@/components/icons/block-heap.svg"
+import BuildAppsIcon from "@/components/icons/build-apps.svg"
 import EthGlyphIcon from "@/components/icons/eth-glyph.svg"
 import EthTokenIcon from "@/components/icons/eth-token.svg"
 import PickWalletIcon from "@/components/icons/eth-wallet.svg"
-import ChooseNetworkIcon from "@/components/icons/network-layers.svg"
 import TryAppsIcon from "@/components/icons/phone-homescreen.svg"
 import RoadmapSign from "@/components/icons/roadmap-sign.svg"
 import Whitepaper from "@/components/icons/whitepaper.svg"
@@ -118,7 +118,7 @@ export const useHome = () => {
       label: t("page-index:page-index-cta-build-apps-label"),
       description: t("page-index:page-index-cta-build-apps-description"),
       href: "/developers/",
-      Svg: ChooseNetworkIcon,
+      Svg: BuildAppsIcon,
       className: "text-accent-b hover:text-accent-b-hover",
       eventName: "build apps",
     },
