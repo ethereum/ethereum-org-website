@@ -16,10 +16,10 @@ import PageHero from "@/components/PageHero"
 import ProductList from "@/components/ProductList"
 import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import StablecoinAccordion from "@/components/StablecoinAccordion"
-import StablecoinBoxGrid from "@/components/StablecoinBoxGrid"
 import StablecoinsTable from "@/components/StablecoinsTable"
 import Tooltip from "@/components/Tooltip"
 import Translation from "@/components/Translation"
+import { Alert, AlertContent, AlertDescription } from "@/components/ui/alert"
 import { Button, ButtonLink } from "@/components/ui/buttons/Button"
 import { Divider } from "@/components/ui/divider"
 import {
@@ -30,6 +30,7 @@ import {
 } from "@/components/ui/dropdown-menu"
 import { Flex, FlexProps } from "@/components/ui/flex"
 import InlineLink from "@/components/ui/Link"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 import { cn } from "@/lib/utils/cn"
 
@@ -828,13 +829,89 @@ const StablecoinsPage = ({ markets, marketsHasError }: Props) => {
         <Divider />
         <Content id="how">
           <h2 className="mb-8">{t("page-stablecoins-types-of-stablecoin")}</h2>
-          <InfoBanner emoji="⚠️" isWarning>
-            <H3 className="mb-4 mt-0">
-              {t("page-stablecoins-research-warning-title")}
-            </H3>
-            {t("page-stablecoins-algorithmic-disclaimer")}
-          </InfoBanner>
-          <StablecoinBoxGrid items={features} />
+          <Alert variant="warning" className="mx-auto mb-12 max-w-screen-lg">
+            <Emoji text="⚠️" />
+            <AlertContent>
+              <span className="font-bold">
+                {t("page-stablecoins-research-warning-title")}
+              </span>
+              <AlertDescription>
+                {t("page-stablecoins-algorithmic-disclaimer")}
+              </AlertDescription>
+            </AlertContent>
+          </Alert>
+          <Tabs defaultValue={features[0].title} className="mt-8">
+            <TabsList className="mb-4 flex h-fit flex-wrap items-end">
+              {features.map((feature) => (
+                <TabsTrigger
+                  key={feature.title}
+                  value={feature.title}
+                  className="h-fit"
+                >
+                  <Emoji text={feature.emoji} className="me-2 shrink-0" />
+                  {feature.title}
+                </TabsTrigger>
+              ))}
+            </TabsList>
+            {features.map((feature) => (
+              <TabsContent key={feature.title} value={feature.title}>
+                <div className="flex flex-col gap-6 md:flex-row md:items-start">
+                  <div className="mb-4 flex-shrink-0 text-7xl md:mb-0 md:me-8 md:text-8xl">
+                    <Emoji text={feature.emoji} />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="mb-4 text-3xl font-bold">{feature.title}</h3>
+                    <div className="mb-6 text-lg">{feature.description}</div>
+                    <div className="mb-6 grid grid-cols-1 gap-6 md:grid-cols-2">
+                      {feature.pros && (
+                        <div>
+                          <h4 className="mb-2 bg-success/25 p-2 text-xl font-semibold">
+                            {t("pros")}
+                          </h4>
+                          <ul className="list-inside list-disc">
+                            {feature.pros.map((pro, idx) => (
+                              <li key={idx}>{pro}</li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
+                      {feature.cons && (
+                        <div>
+                          <h4 className="mb-2 bg-error/25 p-2 text-xl font-semibold">
+                            {t("cons")}
+                          </h4>
+                          <ul className="list-inside list-disc">
+                            {feature.cons.map((con, idx) => (
+                              <li key={idx}>{con}</li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
+                    </div>
+                    {feature.links && feature.links.length > 0 && (
+                      <div>
+                        <h4 className="mb-2 text-xl font-semibold">
+                          {t("example-projects")}
+                        </h4>
+                        <ul className="list-inside list-disc">
+                          {feature.links.map((link, idx) => (
+                            <li key={idx}>
+                              <InlineLink
+                                href={link.url}
+                                className="text-primary hover:underline"
+                              >
+                                {link.text}
+                              </InlineLink>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </TabsContent>
+            ))}
+          </Tabs>
         </Content>
         <div id="tools" className="w-full px-8 py-12">
           <h2 className="mb-8">{t("page-stablecoins-tools-title")}</h2>
