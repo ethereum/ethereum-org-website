@@ -83,7 +83,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                 On July 30, 2015, at 3:44 p.m. UTC, the first block of the
                 Ethereum blockchain came to life. The moment—when the Genesis
                 block was mined—marked the beginning of a revolutionary journey
-                that would forever change how we think about the internet,
+                that would forever change how the world thinks about the internet,
                 finance, and digital ownership.
               </p>
               <p className="text-lg">Ten years down, infinity to go! 🚀</p>
@@ -99,9 +99,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             <div className="flex max-w-[770px] flex-col gap-4 text-center">
               <h2 className="text-4xl font-black">Join the party</h2>
               <p className="text-md">
-                As we mark this historic milestone, we invite you to join us in
-                commemorating ten years of Ethereum. If you want to host an
-                event, please let us know!
+                Join the worldwide celebration of 10 Years of Ethereum. Find an event near you or host your own! 
               </p>
             </div>
             <div>
@@ -203,11 +201,10 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           <div className="flex flex-col items-center gap-4 rounded-2xl bg-gradient-step-1 p-8">
             <h2 className="text-2xl font-bold">Host event</h2>
             <p className="text-md">
-              If you want to host an event in your city. Ethereum Foundation is
-              giving out a grant for the celebration.
+              If you want to host an event and would like to apply for funding, grants are available for a limited time. 
             </p>
-            <ButtonLink href="https://ethereum.org/" hideArrow>
-              add your event
+            <ButtonLink href="https://blog.ethereum.org/2025/04/24/ten-years" hideArrow>
+              Add Your Event
             </ButtonLink>
           </div>
         </div>
@@ -219,11 +216,11 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               <span className="text-5xl text-body md:text-7xl">innovation</span>
             </h2>
             <p className="text-xl font-bold">
-              Ethereum revolutionized blockchain by introducing smart contracts
+              Ethereum transformed blockchain by introducing smart contracts
             </p>
             <p>
-              Self-executing programs that run when conditions are met. Ethereum
-              transformed blockchain from a simple ledger into a world computer.
+              Ethereum transformed blockchain from a simple ledger into a world
+              computer of self-executing programs that run when conditions are met.
             </p>
             <p>
               This innovation launched entirely new industries including{" "}
@@ -301,13 +298,12 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               alt="10 year anniversary logo"
               className="-mb-4 max-h-80 object-contain sm:-mb-16"
             />
-            <h3>have an idea for....</h3>
+            <h3>Have an idea for how the community can celebrate?</h3>
             <p>
-              filler test here, need to come up wtih something for this
-              component
+              Onchain artefacts, a worldwide game of Ethereum trivia, the sky's the limit! Reach out with your idea below. 
             </p>
             <ButtonLink href="https://ethereum.org/" hideArrow>
-              submit your ideas
+              Submit your Idea
             </ButtonLink>
           </div>
         </div>
