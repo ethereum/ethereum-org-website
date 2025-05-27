@@ -67,7 +67,7 @@ const H4 = (props: HTMLAttributes<HTMLHeadingElement>) => (
 const BackToTop = (props: ChildOnlyProp) => (
   <div className="display-none mt-12 flex border-t pt-8" {...props}>
     <InlineLink href="#top">
-      <Translation id="back-to-top" /> ↑
+      <Translation id="page-developers-docs:back-to-top" /> ↑
     </InlineLink>
   </div>
 )
