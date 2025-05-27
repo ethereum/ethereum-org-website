@@ -1,0 +1,115 @@
+type StablecoinType = "FIAT" | "CRYPTO" | "ASSET" | "ALGORITHMIC"
+
+export const stablecoins: Record<
+  string,
+  { type: StablecoinType; url: string; peg?: string }
+> = {
+  // USD-backed stablecoins
+  USDT: { type: "FIAT", url: "https://tether.to/" },
+  USDC: { type: "FIAT", url: "https://www.circle.com/usdc" },
+  TUSD: { type: "FIAT", url: "https://tusd.io/" },
+  FDUSD: { type: "FIAT", url: "https://firstdigitallabs.com/" },
+  PYUSD: { type: "FIAT", url: "https://www.paypal.com/pyusd/" },
+  USDY: { type: "FIAT", url: "https://ondo.finance/usdy" },
+  USDA: { type: "FIAT", url: "https://www.avalonfinance.xyz/" },
+  USDO: { type: "FIAT", url: "https://openeden.com/" },
+  USDP: { type: "FIAT", url: "https://www.paxos.com/usdp" },
+  GUSD: { type: "FIAT", url: "https://www.gemini.com/dollar" },
+  USDR: { type: "FIAT", url: "https://www.stablr.com/usdr" },
+  USDQ: { type: "FIAT", url: "https://www.quantoz.com/" },
+  AUDD: { type: "FIAT", url: "https://www.audd.digital/" },
+  SUSDA: { type: "FIAT", url: "https://www.sperax.io/" },
+  XUSD: { type: "FIAT", url: "https://www.straitsx.com/xusd" },
+  USDGLO: { type: "CRYPTO", url: "https://www.glodollar.org/" },
+  // EUR-backed stablecoins
+  EURC: { type: "FIAT", url: "https://www.circle.com/eurc", peg: "EUR" },
+  EURS: { type: "FIAT", url: "https://eurs.stasis.net/", peg: "EUR" },
+  EURT: { type: "FIAT", url: "https://tether.to/", peg: "EUR" },
+  EUROE: { type: "FIAT", url: "https://euroe.com/", peg: "EUR" },
+  EURR: { type: "FIAT", url: "https://www.stablr.com/eurr", peg: "EUR" },
+  EURQ: { type: "FIAT", url: "https://www.quantoz.com/", peg: "EUR" },
+  // Other fiat-backed stablecoins
+  GYEN: { type: "FIAT", url: "https://stablecoin.z.com/gyen/", peg: "JPY" },
+  TRYB: { type: "FIAT", url: "https://bilira.co/", peg: "TRY" },
+  XSGD: { type: "FIAT", url: "https://www.straitsx.com/xsgd", peg: "SGD" },
+  IDRT: { type: "FIAT", url: "https://rupiahtoken.com/", peg: "IDR" },
+  XIDR: { type: "FIAT", url: "https://www.straitsx.com/xidr", peg: "IDR" },
+  CNHT: { type: "FIAT", url: "https://tether.to/", peg: "CNH" },
+  CADC: { type: "FIAT", url: "https://www.paytrie.com/cadc", peg: "CAD" },
+
+  // Crypto-backed stablecoins
+  USDS: { type: "CRYPTO", url: "https://sky.money/" },
+  DAI: { type: "CRYPTO", url: "https://makerdao.com/" },
+  LUSD: { type: "CRYPTO", url: "https://www.liquity.org/" },
+  CRVUSD: { type: "CRYPTO", url: "https://www.curve.finance/" },
+  GHO: { type: "CRYPTO", url: "https://aave.com/gho" },
+  SUSD: { type: "CRYPTO", url: "https://www.synthetix.io/" },
+  SUSDS: { type: "CRYPTO", url: "https://sperax.io/" },
+  DEUSD: { type: "CRYPTO", url: "https://www.elixir.xyz/" },
+  LVLUSD: { type: "CRYPTO", url: "https://level.finance/" },
+  AUSD: { type: "CRYPTO", url: "https://www.agora.finance/" },
+  USDL: { type: "CRYPTO", url: "https://liftdollar.com/" },
+  RLUSD: { type: "CRYPTO", url: "https://ripple.com/solutions/stablecoin/" },
+  REUSD: { type: "CRYPTO", url: "https://resupply.fi/" },
+  DOLA: { type: "CRYPTO", url: "https://www.inverse.finance/" },
+  RUSD: { type: "CRYPTO", url: "https://www.reservoir.fi/" },
+  FRXUSD: { type: "CRYPTO", url: "https://frax.finance/" },
+  ALUSD: { type: "CRYPTO", url: "https://alchemix.fi/" },
+  OUSD: { type: "CRYPTO", url: "https://www.originprotocol.com/ousd" },
+  SCRVUSD: { type: "CRYPTO", url: "https://www.curve.finance/" },
+  THUSD: { type: "CRYPTO", url: "https://threshold.network/" },
+  MKUSD: { type: "CRYPTO", url: "https://mirror.xyz/prismafinance.eth" },
+  MNEE: { type: "CRYPTO", url: "https://www.mnee.io/" },
+  GRAI: { type: "CRYPTO", url: "https://www.gravitaprotocol.com/" },
+  // Crypto-backed stablecoins: not pegged to USD
+  ZCHF: { type: "CRYPTO", url: "https://www.frankencoin.com/", peg: "CHF" },
+  HAI: { type: "CRYPTO", url: "https://letsgethai.com/", peg: "SELF" },
+  PAR: { type: "CRYPTO", url: "https://par.mimo.capital/", peg: "EUR" },
+  EURA: { type: "CRYPTO", url: "https://angle.money/", peg: "EUR" },
+  ZARP: {
+    type: "CRYPTO",
+    url: "https://www.zarpstablecoin.com/",
+    peg: "ZAR",
+  },
+  DEURO: { type: "CRYPTO", url: "https://deuro.com/", peg: "EUR" },
+  CJPY: { type: "CRYPTO", url: "https://app.yamato.fi/", peg: "JPY" },
+
+  // TODO: Asset-backed stablecoins, AKA RWA -- [ ] REMOVE THESE
+  PAXG: { type: "ASSET", url: "https://www.paxos.com/pax-gold", peg: "XAU" },
+  XAUT: { type: "ASSET", url: "https://gold.tether.to/", peg: "XAU" },
+
+  // Algorithmic stablecoins
+  FRAX: { type: "ALGORITHMIC", url: "https://frax.finance/" },
+  USR: { type: "ALGORITHMIC", url: "https://resolv.finance/" },
+  AMPL: {
+    type: "ALGORITHMIC",
+    url: "https://www.ampleforth.org/",
+    peg: "SELF",
+  },
+  MIM: { type: "ALGORITHMIC", url: "https://abracadabra.money/" },
+  USDE: { type: "ALGORITHMIC", url: "https://ethena.fi/" },
+  USD0: {
+    type: "ALGORITHMIC",
+    url: "https://docs.usual.money/usual-products/usd0-stablecoin",
+  },
+  USDD: { type: "ALGORITHMIC", url: "https://usdd.io/" },
+  USDX: { type: "ALGORITHMIC", url: "https://stableslabs.com/" },
+  USDZ: { type: "ALGORITHMIC", url: "https://anzen.finance/" },
+  SYRUPUSDC: { type: "ALGORITHMIC", url: "https://maple.finance/" },
+  FXUSD: { type: "ALGORITHMIC", url: "https://fx.aladdin.club/" },
+  USD3: {
+    type: "ALGORITHMIC",
+    url: "https://app.reserve.org/ethereum/token/0x0d86883faf4ffd7aeb116390af37746f45b6f378/overview",
+  },
+
+  USDM: { type: "ALGORITHMIC", url: "https://mountainprotocol.com/" },
+  EURCV: {
+    type: "ALGORITHMIC",
+    url: "https://www.sgforge.com/product/coinvertible/",
+    peg: "EUR",
+  },
+  USN: { type: "ALGORITHMIC", url: "https://noon.capital/" },
+  ZUSD: { type: "ALGORITHMIC", url: "https://stablecoin.z.com/zusd/" },
+  WUSD: { type: "ALGORITHMIC", url: "https://wspn.io/" },
+  DUSD: { type: "ALGORITHMIC", url: "https://davos.xyz/" },
+}

@@ -16,6 +16,7 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import { BASE_TIME_UNIT } from "@/lib/constants"
 
 import StablecoinsPage from "./_components/stablecoins"
+import { stablecoins } from "./data"
 
 import {
   fetchEthereumEcosystemData,
@@ -44,6 +45,8 @@ export interface Market {
   image: string
   type: string
   url: string
+  peg: string
+  symbol: string
 }
 
 // In seconds
@@ -68,39 +71,12 @@ async function Page({ params }: { params: Promise<{ locale: Lang }> }) {
   const messages = pick(allMessages, requiredNamespaces)
 
   let marketsHasError = false
-  let markets: Market[] = []
-
-  // Stablecoin types
-  const FIAT = "FIAT"
-  const CRYPTO = "CRYPTO"
-  const ASSET = "ASSET"
-  const ALGORITHMIC = "ALGORITHMIC"
-
-  const stablecoins = {
-    USDT: { type: FIAT, url: "https://tether.to/" },
-    USDC: { type: FIAT, url: "https://www.coinbase.com/usdc" },
-    DAI: { type: CRYPTO, url: "https://makerdao.com/en/" },
-    BUSD: { type: FIAT, url: "https://www.binance.com/en/busd" },
-    PAX: { type: FIAT, url: "https://www.paxos.com/pax/" },
-    TUSD: { type: FIAT, url: "https://tusd.io/" },
-    HUSD: { type: FIAT, url: "https://www.huobi.com/en-us/usd-deposit/" },
-    SUSD: { type: CRYPTO, url: "https://www.synthetix.io/" },
-    EURS: { type: FIAT, url: "https://eurs.stasis.net/" },
-    USDK: { type: FIAT, url: "https://www.oklink.com/usdk" },
-    MUSD: { type: CRYPTO, url: "https://mstable.org/" },
-    USDX: { type: CRYPTO, url: "https://usdx.money/" },
-    GUSD: { type: FIAT, url: "https://gemini.com/dollar" },
-    SAI: { type: CRYPTO, url: "https://makerdao.com/en/whitepaper/sai/" },
-    DUSD: { type: CRYPTO, url: "https://dusd.finance/" },
-    PAXG: { type: ASSET, url: "https://www.paxos.com/paxgold/" },
-    AMPL: { type: ALGORITHMIC, url: "https://www.ampleforth.org/" },
-    FRAX: { type: ALGORITHMIC, url: "https://frax.finance/" },
-    MIM: { type: ALGORITHMIC, url: "https://abracadabra.money/" },
-    USDP: { type: FIAT, url: "https://paxos.com/usdp/" },
-    FEI: { type: ALGORITHMIC, url: "https://fei.money/" },
-  }
+  const markets: Market[] = []
 
   try {
+    marketsHasError = false
+
+    // const stablecoinsData = await fetchEthereumStablecoinsData()
     const [ethereumEcosystemData, stablecoinsData] = await loadData()
 
     // Get the intersection of stablecoins and Ethereum tokens to only have a list of data for stablecoins in the Ethereum ecosystem
@@ -112,13 +88,10 @@ async function Page({ params }: { params: Promise<{ locale: Lang }> }) {
         ) > -1
     )
 
-    marketsHasError = false
-    markets = ethereumStablecoinData
-      .filter((token) => {
-        return stablecoins[token.symbol.toUpperCase()]
-      })
-      .map((token) => {
-        return {
+    markets.push(
+      ...ethereumStablecoinData
+        .filter((stablecoin) => stablecoin.symbol.toUpperCase() in stablecoins)
+        .map((token) => ({
           name: token.name,
           marketCap: new Intl.NumberFormat("en-US", {
             style: "currency",
@@ -129,11 +102,12 @@ async function Page({ params }: { params: Promise<{ locale: Lang }> }) {
           image: token.image,
           type: stablecoins[token.symbol.toUpperCase()].type,
           url: stablecoins[token.symbol.toUpperCase()].url,
-        }
-      })
+          peg: stablecoins[token.symbol.toUpperCase()].peg || "USD",
+          symbol: token.symbol,
+        }))
+    )
   } catch (error) {
     console.error(error)
-    markets = []
     marketsHasError = true
   }
 
