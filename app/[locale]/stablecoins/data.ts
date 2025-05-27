@@ -1,4 +1,4 @@
-import type { StablecoinType } from "./types"
+import type { StablecoinType } from "@/lib/types"
 
 export const stablecoins: {
   symbol: string

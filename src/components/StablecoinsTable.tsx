@@ -3,11 +3,11 @@
 import { useState } from "react"
 import { MdOutlineFilterList } from "react-icons/md"
 
+import type { StablecoinType } from "@/lib/types"
+
 import { Image } from "@/components/Image"
 
 import { cn } from "@/lib/utils/cn"
-
-import { StablecoinType } from "../../app/[locale]/stablecoins/types"
 
 import { Button, ButtonLink } from "./ui/buttons/Button"
 import {
@@ -48,7 +48,9 @@ const StablecoinsTable = ({ content, hasError }: StablecoinsTableProps) => {
   const { t } = useTranslation("page-stablecoins")
 
   const [visibleRows, setVisibleRows] = useState(10)
-  const [visibleTypes, setVisibleTypes] = useState<Record<string, boolean>>({
+  const [visibleTypes, setVisibleTypes] = useState<
+    Record<StablecoinType, boolean>
+  >({
     FIAT: true,
     CRYPTO: true,
     ASSET: true,

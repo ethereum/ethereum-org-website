@@ -1028,3 +1028,5 @@ export interface ITutorial {
   lang: string
   isExternal: boolean
 }
+
+export type StablecoinType = "FIAT" | "CRYPTO" | "ASSET" | "ALGORITHMIC"
