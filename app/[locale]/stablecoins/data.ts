@@ -50,8 +50,8 @@ export const stablecoins: {
     id: "ondo-us-dollar-yield",
   },
   {
-    symbol: "USDA",
-    type: "FIAT",
+    symbol: "USDa",
+    type: "CRYPTO",
     url: "https://www.avalonfinance.xyz/",
     peg: "USD",
     id: "usda-2",
@@ -289,7 +289,7 @@ export const stablecoins: {
   },
   {
     symbol: "RLUSD",
-    type: "CRYPTO",
+    type: "FIAT",
     url: "https://ripple.com/solutions/stablecoin/",
     peg: "USD",
     id: "ripple-usd",
@@ -422,7 +422,7 @@ export const stablecoins: {
   },
   {
     symbol: "FRAX",
-    type: "ALGORITHMIC",
+    type: "CRYPTO",
     url: "https://frax.finance/",
     peg: "USD",
     id: "frax",
@@ -457,14 +457,14 @@ export const stablecoins: {
   },
   {
     symbol: "USD0",
-    type: "ALGORITHMIC",
+    type: "FIAT",
     url: "https://docs.usual.money/usual-products/usd0-stablecoin",
     peg: "USD",
     id: "usual-usd",
   },
   {
     symbol: "USDD",
-    type: "ALGORITHMIC",
+    type: "CRYPTO",
     url: "https://usdd.io/",
     peg: "USD",
     id: "usdd",
@@ -472,7 +472,7 @@ export const stablecoins: {
   {
     symbol: "USDX",
     type: "ALGORITHMIC",
-    url: "https://stableslabs.com/",
+    url: "https://usdx.money/",
     peg: "USD",
     id: "usdx-money-usdx",
   },
@@ -485,7 +485,7 @@ export const stablecoins: {
   },
   {
     symbol: "SYRUPUSDC",
-    type: "ALGORITHMIC",
+    type: "CRYPTO",
     url: "https://maple.finance/",
     peg: "USD",
     id: "syrupusdc",
@@ -510,13 +510,6 @@ export const stablecoins: {
     url: "https://mountainprotocol.com/",
     peg: "USD",
     id: "mountain-protocol-usdm",
-  },
-  {
-    symbol: "USD0",
-    type: "ALGORITHMIC",
-    url: "https://docs.usual.money/usual-products/usd0-stablecoin",
-    peg: "USD",
-    id: "usual-usd",
   },
   {
     symbol: "EURCV",
