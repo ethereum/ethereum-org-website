@@ -550,12 +550,21 @@
   },
   {
     "title": "ETHRome Hackathon",
-    "startDate": "2025-04-11",
-    "endDate": "2025-04-13",
+    "startDate": "2025-10-17",
+    "endDate": "2025-10-19",
     "href": "https://ethrome.org",
     "location": "Rome, ITA",
     "description": "The hackathon for builders by builders",
     "imageUrl": "https://www.ethrome.org/opengraph-image.png"
+  },
+  {
+    "title": "Urbe Village",
+    "startDate": "2025-10-05",
+    "endDate": "2025-10-19",
+    "href": "https://urbe.build/urbe-village",
+    "location": "Rome, ITA",
+    "description": "The Web3 Popup Village by builders for builders",
+    "imageUrl": "https://framerusercontent.com/images/b1WtEoffV6kSBqG9o3cJEUvjkY.png"
   },
   {
     "title": "ETHDubai",
