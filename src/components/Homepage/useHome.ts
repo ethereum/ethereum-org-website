@@ -104,14 +104,6 @@ export const useHome = () => {
       eventName: "get eth",
     },
     {
-      label: t("page-index:page-index-cta-networks-label"),
-      description: t("page-index:page-index-cta-networks-description"),
-      href: "/layer-2/", // TODO: Update with new networks page when ready
-      Svg: ChooseNetworkIcon,
-      className: "text-accent-b hover:text-accent-b-hover",
-      eventName: "L2",
-    },
-    {
       label: t("page-index:page-index-cta-dapps-label"),
       description: t("page-index:page-index-cta-dapps-description"),
       href: "/dapps/",
@@ -121,6 +113,14 @@ export const useHome = () => {
         isRtl && "[&_svg]:-scale-x-100"
       ),
       eventName: "dapps",
+    },
+    {
+      label: "Build apps",
+      description: "Put your idea on chain",
+      href: "/developers/",
+      Svg: ChooseNetworkIcon,
+      className: "text-accent-b hover:text-accent-b-hover",
+      eventName: "build apps",
     },
   ]
 
