@@ -179,7 +179,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           </div>
         </div>
         <div className="w-full px-8 py-8">
-          <div className="bg-gradient-pink-purple flex flex-col items-center gap-4 rounded-2xl p-8">
+          <div className="flex flex-col items-center gap-4 rounded-2xl bg-gradient-step-1 p-8">
             <h2 className="text-2xl font-bold">Host event</h2>
             <p className="text-md">
               If you want to host an event in your city. Ethereum Foundation is
