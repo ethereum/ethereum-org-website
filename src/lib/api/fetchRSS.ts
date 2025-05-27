@@ -122,10 +122,12 @@ export const fetchRSS = async (xmlUrl: string | string[]) => {
       }
     } catch (error) {
       console.error(error instanceof Error ? error.message : error)
+      // Do not break build for single fetch failure
       continue
     }
   }
 
+  // Only break build if insufficient number of items fetched
   if (allItems.length < RSS_DISPLAY_COUNT)
     throw new Error("Insufficient number of RSS items fetched")
 
