@@ -16,10 +16,13 @@ import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 import { cn } from "@/lib/utils/cn"
+import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import eventData from "@/data/10-year-anniversary/eventData"
+
+import { BASE_TIME_UNIT } from "@/lib/constants"
 
 import AdoptionSwiper from "./_components/AdoptionSwiper"
 import CountDown from "./_components/CountDown"
@@ -29,13 +32,31 @@ import TenYearGlobe from "./_components/TenYearGlobe"
 import TenYearHero from "./_components/TenYearHero"
 import { use10YearAnniversary } from "./_components/use10YearAnniversary"
 
+import { fetch10YearEvents } from "@/lib/api/fetch10YearEvents"
+import { fetch10YearStories } from "@/lib/api/fetch10YearStories"
 import TenYearLogo from "@/public/images/10-year-anniversary/10year-logo.png"
+
+// In seconds
+const REVALIDATE_TIME = BASE_TIME_UNIT * 1
+
+const loadData = dataLoader(
+  [
+    ["fetched10YearEvents", fetch10YearEvents],
+    ["fetched10YearStories", fetch10YearStories],
+  ],
+  REVALIDATE_TIME * 1000
+)
 
 const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const { locale } = await params
   const { adoptionCards, adoptionStyles, stories } = use10YearAnniversary()
 
   setRequestLocale(locale)
+
+  const [fetched10YearEvents, fetched10YearStories] = await loadData()
+
+  console.log(fetched10YearEvents)
+  console.log(fetched10YearStories)
 
   // Get i18n messages
   const allMessages = await getMessages({ locale })
