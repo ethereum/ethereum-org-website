@@ -87,7 +87,7 @@ export const stablecoins: Record<
     peg: "SELF",
   },
   MIM: { type: "ALGORITHMIC", url: "https://abracadabra.money/" },
-  USDE: { type: "ALGORITHMIC", url: "https://ethena.fi/" },
+  USDE: { type: "CRYPTO", url: "https://ethena.fi/" },
   USD0: {
     type: "ALGORITHMIC",
     url: "https://docs.usual.money/usual-products/usd0-stablecoin",

@@ -104,7 +104,7 @@ const StablecoinsTable = ({
               <TableCell className="text-end">{peg}</TableCell>
               {url && (
                 <TableCell className="text-right">
-                  <ButtonLink href={url} size="sm">
+                  <ButtonLink href={url} size="sm" hideArrow>
                     {t("page-stablecoins-go-to")} {name}
                   </ButtonLink>
                 </TableCell>
