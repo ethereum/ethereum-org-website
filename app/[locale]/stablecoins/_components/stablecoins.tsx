@@ -10,7 +10,6 @@ import FeedbackCard from "@/components/FeedbackCard"
 import GhostCard from "@/components/GhostCard"
 import HorizontalCard from "@/components/HorizontalCard"
 import { Image } from "@/components/Image"
-import InfoBanner from "@/components/InfoBanner"
 import MainArticle from "@/components/MainArticle"
 import PageHero from "@/components/PageHero"
 import ProductList from "@/components/ProductList"
@@ -161,9 +160,12 @@ const StablecoinsPage = ({ markets, marketsHasError }: Props) => {
     },
     {
       title: t("page-stablecoins-precious-metals"),
-      description: t(
-        "page-stablecoins:page-stablecoins-precious-metals-description"
+      description: (
+        <Translation id="page-stablecoins:page-stablecoins-precious-metals-description" />
       ),
+      // description: t(
+      //   "page-stablecoins:page-stablecoins-precious-metals-description"
+      // ),
       emoji: ":gem_stone:",
       pros: [t("page-stablecoins-precious-metals-pro-1")],
       cons: [
@@ -729,9 +731,13 @@ const StablecoinsPage = ({ markets, marketsHasError }: Props) => {
                 <MdHelpOutline className="ms-2 fill-body" size={16} />
               </Tooltip>
             </H3>
-            <InfoBanner className="mb-4" emoji="⚠️" isWarning>
-              {t("page-stablecoins-algorithmic-disclaimer")}
-            </InfoBanner>
+            <Alert variant="warning" className="mb-4">
+              <Emoji text="⚠️" className="mx-2 shrink-0 text-4xl" />
+              <AlertContent>
+                {t("page-stablecoins-algorithmic-disclaimer")}
+              </AlertContent>
+            </Alert>
+
             <p className="mb-6">
               {t("page-stablecoins-top-coins-intro")}{" "}
               {t("page-stablecoins-top-coins-intro-code")}
@@ -829,8 +835,8 @@ const StablecoinsPage = ({ markets, marketsHasError }: Props) => {
         <Divider />
         <Content id="how">
           <h2 className="mb-8">{t("page-stablecoins-types-of-stablecoin")}</h2>
-          <Alert variant="warning" className="mx-auto mb-12 max-w-screen-lg">
-            <Emoji text="⚠️" />
+          <Alert variant="warning" className="mb-12">
+            <Emoji text="⚠️" className="mx-2 shrink-0 text-4xl" />
             <AlertContent>
               <span className="font-bold">
                 {t("page-stablecoins-research-warning-title")}
@@ -848,7 +854,10 @@ const StablecoinsPage = ({ markets, marketsHasError }: Props) => {
                   value={feature.title}
                   className="h-fit"
                 >
-                  <Emoji text={feature.emoji} className="me-2 shrink-0" />
+                  <Emoji
+                    text={feature.emoji}
+                    className="me-2 hidden shrink-0 data-[state=active]:inline-block"
+                  />
                   {feature.title}
                 </TabsTrigger>
               ))}
@@ -862,10 +871,10 @@ const StablecoinsPage = ({ markets, marketsHasError }: Props) => {
                   <div className="flex-1">
                     <h3 className="mb-4 text-3xl font-bold">{feature.title}</h3>
                     <div className="mb-6 text-lg">{feature.description}</div>
-                    <div className="mb-6 grid grid-cols-1 gap-6 md:grid-cols-2">
+                    <div className="my-6 grid grid-cols-1 gap-6 md:grid-cols-2">
                       {feature.pros && (
                         <div>
-                          <h4 className="mb-2 bg-success/25 p-2 text-xl font-semibold">
+                          <h4 className="mb-2 rounded bg-success/25 p-2 text-xl font-semibold">
                             {t("pros")}
                           </h4>
                           <ul className="list-inside list-disc">
@@ -877,7 +886,7 @@ const StablecoinsPage = ({ markets, marketsHasError }: Props) => {
                       )}
                       {feature.cons && (
                         <div>
-                          <h4 className="mb-2 bg-error/25 p-2 text-xl font-semibold">
+                          <h4 className="mb-2 rounded bg-error/25 p-2 text-xl font-semibold">
                             {t("cons")}
                           </h4>
                           <ul className="list-inside list-disc">
@@ -920,7 +929,8 @@ const StablecoinsPage = ({ markets, marketsHasError }: Props) => {
             className={cn(
               "[&_[aria-labelledby='category-name']]:grid [&_[aria-labelledby='category-name']]:grid-cols-1 [&_[aria-labelledby='category-name']]:gap-x-16 md:[&_[aria-labelledby='category-name']]:grid-cols-2",
               toolsData.length % 2 === 0 &&
-                "md:[&_[aria-labelledby='category-name']>:not(:nth-last-child(-n+2))]:border-b md:[&_[aria-labelledby='category-name']>:nth-last-child(-n+2)]:border-b-0"
+                "md:[&_[aria-labelledby='category-name']>:not(:nth-last-child(-n+2))]:border-b md:[&_[aria-labelledby='category-name']>:nth-last-child(-n+2)]:border-b-0",
+              "[&_img]:shadow-none"
             )}
           >
             <ProductList

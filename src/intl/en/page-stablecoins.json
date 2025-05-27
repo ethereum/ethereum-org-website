@@ -99,7 +99,7 @@
   "page-stablecoins-precious-metals": "Precious metals",
   "page-stablecoins-precious-metals-con-1": "Centralized – someone must issue the tokens.",
   "page-stablecoins-precious-metals-con-2": "You need to trust the token issuer and the precious metal reserves.",
-  "page-stablecoins-precious-metals-description": "Like fiat-backed coins, instead these stablecoins use resources like gold to maintain their value. These are 'stable' in that their price is consistently pegged to the value of another asset, and are akin to onchain ownership tracking of real-world assets",
+  "page-stablecoins-precious-metals-description": "Like fiat-backed coins, instead these stablecoins use resources like gold to maintain their value. These are 'stable' in that their price is consistently pegged to the value of another asset, and are akin to onchain ownership tracking of <a href=\"/real-world-assets/\">real-world assets</a>",
   "page-stablecoins-precious-metals-pro-1": "Safe against crypto volatility.",
   "page-stablecoins-prices": "Stablecoin prices",
   "page-stablecoins-prices-definition": "Stablecoins are cryptocurrencies without the volatility. They share a lot of the same powers as ETH but their value is steady, more like a traditional currency. So you have access to stable money that you can use on Ethereum. ",
