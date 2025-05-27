@@ -1111,7 +1111,7 @@ const DappsPage = ({
         <H2 id="explore">{t("page-dapps-explore-dapps-title")}</H2>
         <CenterText>{t("page-dapps-explore-dapps-description")}</CenterText>
         <H3>{t("page-dapps-choose-category")}</H3>
-        <div className="mb-8 grid w-full grid-cols-1 justify-center gap-4 px-8 sm:grid-cols-2 lg:w-auto lg:grid-cols-3 2xl:grid-cols-6">
+        <div className="mb-8 grid w-full grid-cols-1 justify-center gap-1 px-8 sm:grid-cols-2 lg:w-auto lg:grid-cols-3 2xl:grid-cols-6">
           {categoryKeys.map((key, idx) => {
             const categoryType = key as CategoryType
             const category = categories[categoryType]
@@ -1136,7 +1136,7 @@ const DappsPage = ({
                 }}
               >
                 <Emoji
-                  className="me-4 shrink-0 text-2xl"
+                  className="me-2 shrink-0 text-2xl"
                   text={category.emoji}
                 />
                 <span className="text-center text-md font-semibold md:text-2xl md:font-normal">
