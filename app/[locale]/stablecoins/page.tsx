@@ -18,12 +18,9 @@ import { BASE_TIME_UNIT } from "@/lib/constants"
 import StablecoinsPage from "./_components/stablecoins"
 import { stablecoins } from "./data"
 
-import {
-  fetchEthereumEcosystemData,
-  fetchEthereumStablecoinsData,
-} from "@/lib/api/stablecoinsData"
+import { fetchEthereumStablecoinsData } from "@/lib/api/stablecoinsData"
 
-type EthereumDataResponse = Array<{
+type CoinGeckoCoinMarketResponse = Array<{
   id: string
   name: string
   market_cap: number
@@ -31,15 +28,7 @@ type EthereumDataResponse = Array<{
   symbol: string
 }>
 
-type StablecoinDataResponse = Array<{
-  id: string
-  name: string
-  market_cap: number
-  image: string
-  symbol: string
-}>
-
-export interface Market {
+export type CoinDetails = {
   name: string
   marketCap: string
   image: string
@@ -52,11 +41,8 @@ export interface Market {
 // In seconds
 const REVALIDATE_TIME = BASE_TIME_UNIT * 1
 
-const loadData = dataLoader<[EthereumDataResponse, StablecoinDataResponse]>(
-  [
-    ["ethereumEcosystemData", fetchEthereumEcosystemData],
-    ["ethereumStablecoinsData", fetchEthereumStablecoinsData],
-  ],
+const loadData = dataLoader<[CoinGeckoCoinMarketResponse]>(
+  [["ethereumStablecoinsData", fetchEthereumStablecoinsData]],
   REVALIDATE_TIME * 1000
 )
 
@@ -71,41 +57,29 @@ async function Page({ params }: { params: Promise<{ locale: Lang }> }) {
   const messages = pick(allMessages, requiredNamespaces)
 
   let marketsHasError = false
-  const markets: Market[] = []
+  const markets: CoinDetails[] = []
 
   try {
     marketsHasError = false
 
-    // const stablecoinsData = await fetchEthereumStablecoinsData()
-    const [ethereumEcosystemData, stablecoinsData] = await loadData()
+    const [stablecoinsData] = await loadData()
 
-    // Get the intersection of stablecoins and Ethereum tokens to only have a list of data for stablecoins in the Ethereum ecosystem
-    const ethereumStablecoinData = stablecoinsData.filter(
-      (stablecoin) =>
-        ethereumEcosystemData.findIndex(
-          // eslint-disable-next-line
-          (etherToken) => stablecoin.id == etherToken.id
-        ) > -1
+    const ethereumStablecoinData = stablecoins.map(
+      ({ symbol, type, url, peg, id }) => {
+        const coinMarketData = stablecoinsData.find((coin) => coin.id === id)
+        if (!coinMarketData)
+          throw new Error("Stablecoin data not found from CoinGecko for " + id)
+        const { name, image } = coinMarketData
+        const marketCap = new Intl.NumberFormat("en-US", {
+          style: "currency",
+          currency: "USD",
+          minimumFractionDigits: 0,
+          maximumFractionDigits: 0,
+        }).format(coinMarketData.market_cap)
+        return { name, marketCap, image, type, url, peg, symbol }
+      }
     )
-
-    markets.push(
-      ...ethereumStablecoinData
-        .filter((stablecoin) => stablecoin.symbol.toUpperCase() in stablecoins)
-        .map((token) => ({
-          name: token.name,
-          marketCap: new Intl.NumberFormat("en-US", {
-            style: "currency",
-            currency: "USD",
-            minimumFractionDigits: 0,
-            maximumFractionDigits: 0,
-          }).format(token.market_cap),
-          image: token.image,
-          type: stablecoins[token.symbol.toUpperCase()].type,
-          url: stablecoins[token.symbol.toUpperCase()].url,
-          peg: stablecoins[token.symbol.toUpperCase()].peg || "USD",
-          symbol: token.symbol,
-        }))
-    )
+    markets.push(...ethereumStablecoinData)
   } catch (error) {
     console.error(error)
     marketsHasError = true

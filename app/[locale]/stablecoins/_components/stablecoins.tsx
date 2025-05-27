@@ -33,7 +33,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 import { cn } from "@/lib/utils/cn"
 
-import { Market } from "../page"
+import { type CoinDetails } from "../page"
 import { StablecoinType } from "../types"
 
 import { useTranslation } from "@/hooks/useTranslation"
@@ -57,7 +57,7 @@ import usdcLargeImg from "@/public/images/stablecoins/usdc-large.png"
 import usdsLargeImg from "@/public/images/stablecoins/usds-large.png"
 
 type Props = {
-  markets: Market[]
+  markets: CoinDetails[]
   marketsHasError: boolean
 }
 
