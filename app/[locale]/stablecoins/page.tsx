@@ -40,6 +40,7 @@ export type CoinDetails = {
 
 // In seconds
 const REVALIDATE_TIME = BASE_TIME_UNIT * 1
+const MIN_MARKET_CAP_USD = 500_000
 
 const loadData = dataLoader<[CoinGeckoCoinMarketResponse]>(
   [["ethereumStablecoinsData", fetchEthereumStablecoinsData]],
@@ -64,21 +65,24 @@ async function Page({ params }: { params: Promise<{ locale: Lang }> }) {
 
     const [stablecoinsData] = await loadData()
 
-    const ethereumStablecoinData = stablecoins.map(
-      ({ symbol, type, url, peg, id }) => {
+    const ethereumStablecoinData = stablecoins
+      .map(({ id, ...rest }) => {
         const coinMarketData = stablecoinsData.find((coin) => coin.id === id)
         if (!coinMarketData)
-          throw new Error("Stablecoin data not found from CoinGecko for " + id)
-        const { name, image } = coinMarketData
-        const marketCap = new Intl.NumberFormat("en-US", {
+          throw new Error("CoinGecko stablecoin data not found:" + id)
+        return { ...coinMarketData, ...rest }
+      })
+      .filter((coin) => coin.market_cap >= MIN_MARKET_CAP_USD)
+      .sort((a, b) => b.market_cap - a.market_cap)
+      .map(({ market_cap, ...rest }) => ({
+        ...rest,
+        marketCap: new Intl.NumberFormat("en-US", {
           style: "currency",
           currency: "USD",
           minimumFractionDigits: 0,
           maximumFractionDigits: 0,
-        }).format(coinMarketData.market_cap)
-        return { name, marketCap, image, type, url, peg, symbol }
-      }
-    )
+        }).format(market_cap),
+      }))
     markets.push(...ethereumStablecoinData)
   } catch (error) {
     console.error(error)
