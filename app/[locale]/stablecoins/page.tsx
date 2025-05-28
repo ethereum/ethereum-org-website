@@ -331,9 +331,7 @@ async function Page({ params }: { params: Promise<{ locale: Lang }> }) {
       ],
       links: [
         { text: "USDS", url: "https://sky.money/" },
-        { text: "LUSD", url: "https://www.liquity.org/" },
-        { text: "crvUSD", url: "https://www.curve.finance/" },
-        { text: "HAI", url: "https://letsgethai.com/" },
+        { text: "Ethena USDe", url: "https://ethena.fi/" },
       ],
     },
     {
@@ -364,10 +362,7 @@ async function Page({ params }: { params: Promise<{ locale: Lang }> }) {
         t("page-stablecoins-algorithmic-con-1"),
         t("page-stablecoins-algorithmic-con-2"),
       ],
-      links: [
-        { text: "Ampleforth", url: "https://www.ampleforth.org/" },
-        { text: "FRAX", url: "https://frax.finance/" },
-      ],
+      links: [{ text: "USDX", url: "https://usdx.money/" }],
     },
   ]
 

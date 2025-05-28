@@ -449,7 +449,7 @@ export const stablecoins: {
     id: "magic-internet-money",
   },
   {
-    symbol: "USDE",
+    symbol: "USDe",
     type: "CRYPTO",
     url: "https://ethena.fi/",
     peg: "USD",
