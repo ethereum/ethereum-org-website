@@ -24,7 +24,6 @@ import StablecoinAccordion from "@/components/StablecoinAccordion"
 import StablecoinsTable from "@/components/StablecoinsTable"
 import Tooltip from "@/components/Tooltip"
 import Translation from "@/components/Translation"
-import { Alert, AlertContent, AlertDescription } from "@/components/ui/alert"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Divider } from "@/components/ui/divider"
 import { Flex } from "@/components/ui/flex"
@@ -356,7 +355,6 @@ async function Page({ params }: { params: Promise<{ locale: Lang }> }) {
     {
       title: t("page-stablecoins-algorithmic"),
       description: t("page-stablecoins-algorithmic-description"),
-      disclaimer: t("page-stablecoins-algorithmic-disclaimer"),
       emoji: ":chart_with_downwards_trend:",
       pros: [
         t("page-stablecoins-algorithmic-pro-1"),
@@ -561,18 +559,12 @@ async function Page({ params }: { params: Promise<{ locale: Lang }> }) {
               ))}
             </div>
 
-            <h3 className="mb-8 mt-12">
+            <h3 id="stablecoin-markets" className="mb-8 mt-12">
               {t("page-stablecoins-top-coins")}
               <Tooltip content={tooltipContent}>
                 <MdHelpOutline className="ms-2 fill-body" size={16} />
               </Tooltip>
             </h3>
-            <Alert variant="warning" className="mb-4">
-              <Emoji text="⚠️" className="mx-2 shrink-0 text-4xl" />
-              <AlertContent>
-                {t("page-stablecoins-algorithmic-disclaimer")}
-              </AlertContent>
-            </Alert>
 
             <p className="mb-6">
               {t("page-stablecoins-top-coins-intro")}{" "}
@@ -647,17 +639,6 @@ async function Page({ params }: { params: Promise<{ locale: Lang }> }) {
         <Divider />
         <Section id="how">
           <h2 className="mb-8">{t("page-stablecoins-types-of-stablecoin")}</h2>
-          <Alert variant="warning" className="mb-12">
-            <Emoji text="⚠️" className="mx-2 shrink-0 text-4xl" />
-            <AlertContent>
-              <span className="font-bold">
-                {t("page-stablecoins-research-warning-title")}
-              </span>
-              <AlertDescription>
-                {t("page-stablecoins-algorithmic-disclaimer")}
-              </AlertDescription>
-            </AlertContent>
-          </Alert>
           <Tabs defaultValue={features[0].title} className="mt-8">
             <TabsList className="mb-4 flex h-fit flex-wrap items-end">
               {features.map((feature) => (

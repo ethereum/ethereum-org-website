@@ -57,7 +57,6 @@
   "page-stablecoins-algorithmic-con-1": "You need to trust (or be able to read) the algorithm.",
   "page-stablecoins-algorithmic-con-2": "Your balance of coins will change based on total supply.",
   "page-stablecoins-algorithmic-description": "These stablecoins aren't backed by any other asset. Instead an algorithm will sell tokens if the price falls below the desired value and supply tokens if the value goes beyond the desired amount. Because the number of these tokens in circulation changes regularly, the number of tokens you own will change, but will always reflect your share.",
-  "page-stablecoins-algorithmic-disclaimer": "Algorithmic stablecoins are experimental technology. You should be aware of the risks before using them.",
   "page-stablecoins-algorithmic-pro-1": "No collateral needed.",
   "page-stablecoins-algorithmic-pro-2": "Controlled by a public algorithm.",
   "page-stablecoins-bank-apy": "0.05%",
