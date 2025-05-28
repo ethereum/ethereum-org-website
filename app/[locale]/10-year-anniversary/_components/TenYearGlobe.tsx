@@ -9,8 +9,9 @@ import * as THREE from "three"
 import countries from "./countries.json"
 
 import { useBreakpointValue } from "@/hooks/useBreakpointValue"
+import EthLogo from "@/public/images/assets/eth-glyph-colored.png"
 
-const TenYearGlobe = () => {
+const TenYearGlobe = ({ events }) => {
   const globeRef = useRef<GlobeMethods>()
   const { resolvedTheme } = useTheme()
 
@@ -58,6 +59,17 @@ const TenYearGlobe = () => {
     }
   }, [])
 
+  const htmlElementsData = events.map((event) => ({
+    lat: event.lat,
+    lng: event.lng,
+    html: `<img src="${EthLogo.src}" style="
+      width: 32px;
+      height: 32px;
+      object-fit: contain;
+      display: block;
+    " alt="Ethereum marker" />`,
+  }))
+
   return (
     <Globe
       ref={globeRef}
@@ -75,6 +87,14 @@ const TenYearGlobe = () => {
           .toString(16)
           .padStart(6, "0")}`
       }
+      htmlElementsData={htmlElementsData}
+      htmlLat="lat"
+      htmlLng="lng"
+      htmlElement={(d) => {
+        const el = document.createElement("div")
+        el.innerHTML = d.html
+        return el
+      }}
       width={width}
       height={width}
     />
