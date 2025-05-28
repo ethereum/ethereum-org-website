@@ -8,6 +8,7 @@ import type { StablecoinType } from "@/lib/types"
 import { Image } from "@/components/Image"
 
 import { cn } from "@/lib/utils/cn"
+import { scrollIntoView } from "@/lib/utils/scrollIntoView"
 
 import { Button, ButtonLink } from "./ui/buttons/Button"
 import {
@@ -45,10 +46,12 @@ export type StablecoinsTableProps = {
   hasError: boolean
 }
 
+const PAGE_SIZE = 10
+
 const StablecoinsTable = ({ content, hasError }: StablecoinsTableProps) => {
   const { t } = useTranslation("page-stablecoins")
 
-  const [visibleRows, setVisibleRows] = useState(10)
+  const [visibleRows, setVisibleRows] = useState(PAGE_SIZE)
   const [visibleTypes, setVisibleTypes] = useState<
     Record<StablecoinType, boolean>
   >({
@@ -156,12 +159,21 @@ const StablecoinsTable = ({ content, hasError }: StablecoinsTableProps) => {
     showAllTypes()
     showAllPegs()
   }
+  const resetState = () => {
+    setVisibleRows(PAGE_SIZE)
+    resetFilters()
+    scrollIntoView("#stablecoin-markets", { behavior: "instant" })
+  }
 
   // Count active filters for type and peg
   const activeTypeCount = Object.values(visibleTypes).filter(Boolean).length
   const activePegCount = Object.values(visiblePegs).filter(Boolean).length
   const totalTypeCount = Object.keys(visibleTypes).length
   const totalPegCount = Object.keys(visiblePegs).length
+  const isTouched =
+    Object.values(visibleTypes).some((v) => !v) ||
+    Object.values(visiblePegs).some((v) => !v) ||
+    visibleRows > PAGE_SIZE
 
   const columns = [
     t("page-stablecoins-stablecoins-table-header-column-1"),
@@ -351,23 +363,29 @@ const StablecoinsTable = ({ content, hasError }: StablecoinsTableProps) => {
           </TableBody>
         </Suspense>
       </Table>
-      {hasMoreRows && (
-        <div className="mt-4 flex justify-center">
-          <Button
-            onClick={() => setVisibleRows((prev) => prev + 10)}
-            variant="outline"
-          >
-            {t("page-stablecoins-show-more")}
-          </Button>
-        </div>
-      )}
+      <div className="flex flex-wrap items-center justify-center gap-4">
+        {hasMoreRows && (
+          <div className="mt-4 flex justify-center">
+            <Button onClick={() => setVisibleRows((prev) => prev + PAGE_SIZE)}>
+              {t("page-stablecoins-show-more")}
+            </Button>
+          </div>
+        )}
+        {isTouched && (
+          <div className="mt-4 flex justify-center">
+            <Button variant="outline" onClick={resetState}>
+              {t("page-stablecoins-reset-list")}
+            </Button>
+          </div>
+        )}
+      </div>
       {displayedContent.length === 0 && !noFiltersActive && (
         <div className="flex flex-col items-center justify-center py-12">
           <p className="mb-4 text-lg text-body-medium">
             {t("page-stablecoins-no-results")}
           </p>
           <Button variant="outline" onClick={resetFilters}>
-            {t("page-stablecoins-reset-filters")}
+            {t("page-stablecoins-reset-list")}
           </Button>
         </div>
       )}
