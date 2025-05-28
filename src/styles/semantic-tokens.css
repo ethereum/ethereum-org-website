@@ -89,12 +89,6 @@
     --card-gradient-secondary: linear-gradient(95deg, rgba(211, 145, 242, 0.12) 0%, rgba(159, 43, 212, 0.12) 102.78%);
     --card-gradient-secondary-hover: linear-gradient(95deg, rgba(211, 145, 242, 0.2) 0%, rgba(159, 43, 212, 0.2) 102.78%);
 
-    --success-linear-gradient: linear-gradient(to bottom, hsla(var(--green-600), 0.10), hsla(var(--white), 1));
-    --warning-linear-gradient: linear-gradient(to bottom, hsla(var(--yellow-300), 0.10), hsla(var(--white), 1));
-    --background-medium-linear-gradient: linear-gradient(to bottom, hsla(var(--background-medium), 0.10), hsla(var(--white), 1));
-    --background-high-linear-gradient: linear-gradient(to bottom, hsla(var(--background-high), 0.10), hsla(var(--white), 1));
-    --primary-high-contrast-linear-gradient: linear-gradient(to bottom, hsla(var(--primary-high-contrast), 0.10), hsla(var(--white), 1));
-
     /* Shadows */
     --shadow-color-a: hsla(var(--purple-800), 0.02);
     --shadow-color-b: hsla(var(--red-800), 0.04);
@@ -209,12 +203,6 @@
     );
 
     --roadmap-card-gradient: linear-gradient(123deg, rgba(34, 34, 34, 0.20) 40.53%, rgba(174, 110, 203, 0.13) 104.05%);
-
-    --success-linear-gradient: linear-gradient(to bottom, hsla(var(--green-600), 0.10), hsla(var(--black), 1));
-    --warning-linear-gradient: linear-gradient(to bottom, hsla(var(--yellow-300), 0.10), hsla(var(--black), 1));
-    --background-medium-linear-gradient: linear-gradient(to bottom, hsla(var(--background-medium), 0.10), hsla(var(--black), 1));
-    --background-high-linear-gradient: linear-gradient(to bottom, hsla(var(--background-high), 0.10), hsla(var(--black), 1));
-    --primary-high-contrast-linear-gradient: linear-gradient(to bottom, hsla(var(--primary-high-contrast), 0.10), hsla(var(--black), 1));
 
     /* Shadows (dark mode adjustments) */
     --shadow-color: hsla(var(--white), 0.04);

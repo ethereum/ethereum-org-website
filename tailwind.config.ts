@@ -234,14 +234,6 @@ const config = {
         "card-gradient": "var(--card-gradient)",
         "card-gradient-secondary": "var(--card-gradient-secondary)",
         "card-gradient-secondary-hover": "var(--card-gradient-secondary-hover)",
-        "success-linear-gradient": "var(--success-linear-gradient)",
-        "warning-linear-gradient": "var(--warning-linear-gradient)",
-        "background-medium-linear-gradient":
-          "var(--background-medium-linear-gradient)",
-        "background-high-linear-gradient":
-          "var(--background-high-linear-gradient)",
-        "primary-high-contrast-linear-gradient":
-          "var(--primary-high-contrast-linear-gradient)",
       },
       boxShadow: {
         "table-box": "var(--table-box-shadow)",
