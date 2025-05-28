@@ -15,7 +15,7 @@ lang: it
 
 Per usare le risorse del L1 su Optimism (o su qualsiasi altro L2), le risorse devono essere collegate con un [ponte](/bridges/#prerequisites). Un modo per farlo è che gli utenti blocchino le risorse (ETH e [token ERC-20](/developers/docs/standards/tokens/erc-20/) sono le più comuni) nel L1 e ricevano le risorse equivalenti da usare nel L2. In definitiva, chiunque le riceva potrebbe volerle ricollegare al L1. Così facendo, le risorse sono bruciate nel L2 e poi rilasciate nuovamente all'utente nel L1.
 
-Questo è il modo in cui funziona il [ponte standard di Optimism](https://community.optimism.io/docs/developers/bridge/standard-bridge). In questo articolo esaminiamo il codice sorgente di quel ponte, per vedere come funziona e per studiarlo come un esempio di codice di Solidity ben scritto.
+Questo è il modo in cui funziona il [ponte standard di Optimism](https://docs.optimism.io/app-developers/bridging/standard-bridge). In questo articolo esaminiamo il codice sorgente di quel ponte, per vedere come funziona e per studiarlo come un esempio di codice di Solidity ben scritto.
 
 ## Flussi di controllo {#control-flows}
 
@@ -1270,7 +1270,7 @@ Se un utente ha commesso un errore rilevabile usando l'indirizzo del token L2 er
 
 ## Conclusioni {#conclusion}
 
-Il ponte standard è il meccanismo più flessibile per i trasferimenti di risorse. Tuttavia, essendo così generico, non è sempre il metodo più facile da usare. Specialmente per i prelievi, gran parte degli utenti preferisce usare [ponti di terze parti](https://www.optimism.io/apps/bridges) che non attendono il periodo di contestazione dell'errore e non richiedono una prova di Merkle per finalizzare il prelievo.
+Il ponte standard è il meccanismo più flessibile per i trasferimenti di risorse. Tuttavia, essendo così generico, non è sempre il metodo più facile da usare. Specialmente per i prelievi, gran parte degli utenti preferisce usare [ponti di terze parti](https://optimism.io/apps#bridge) che non attendono il periodo di contestazione dell'errore e non richiedono una prova di Merkle per finalizzare il prelievo.
 
 Questi ponti funzionano tipicamente avendo delle risorse sul L1, che forniscono immediatamente per una ridotta commissione (spesso inferiore al costo del gas per un prelievo del ponte standard). Quando il ponte (o le persone che lo gestiscono) prevede di avere poche risorse su L1, trasferisce delle sufficienti risorse da L2. Poiché questi sono prelievi molto grandi, il costo di prelievo è ammortizzato su un grande importo e ha un'incidenza minore.
 

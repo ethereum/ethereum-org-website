@@ -168,7 +168,7 @@ Kung biglang bumaba ang supply ng exchange B at kulang ang binili ng user para s
 
 Para magawa ang halimbawa sa itaas sa tradisyonal na mundo ng pinansyal, kakailanganin mo ng napakalaking halaga ng pera. Ang mga may pera lang ang makakagamit ng mga pamamaraang ito ng pagkakapera. Ang mga flash loan ay halimbawa ng hinaharap kung saan hindi kailangang magkaroon ng pera para kumita ng pera.
 
-<ButtonLink isSecondary href="https://aave.com/flash-loans/">
+<ButtonLink isSecondary href="https://aave.com/docs/concepts/flash-loans/">
   Iba pang detalye tungkol sa mga flash loan
 </ButtonLink>
 

@@ -119,7 +119,7 @@ lang: fa
 
 سرنیتی "Serenity" یا ETH 2.0 به ارتقای بزرگ بعدی پروتکل اتریوم هسته اتلاق می‌شود که از ترکیب چندین مرحله بهسازی پروتکل هسته اتریوم یا "لایه 1" تشکیل می‌شود.
 
-- [8 Teams Are Sprinting to Build the Next Generation of Ethereum](https://www.coindesk.com/next-gen-buidlers-the-8-teams-working-on-ethereum-2-0) _Dec 9, 2018 - Christine Kim_
+- [8 Teams Are Sprinting to Build the Next Generation of Ethereum](https://www.coindesk.com/markets/2018/12/09/8-teams-are-sprinting-to-build-the-next-generation-of-ethereum) _Dec 9, 2018 - Christine Kim_
 - [ETH 2.0 - The Road to Scaling Ethereum - Vitalik Buterin](https://youtu.be/kCVpDrlVesA) _(Video) November, 2018 - YouTube_
 - [9 Things You Didn't Know About Ethereum 2.0](https://our.status.im/9-things-you-didnt-know-about-ethereum-2-0/) _July 18, 2019 - Bruno Škvorc_
 

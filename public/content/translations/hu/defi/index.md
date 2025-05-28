@@ -168,7 +168,7 @@ Ha a B tőzsdén lévő kínálat hirtelen lezuhan, és a felhasználó nem tudo
 
 Ha a hagyományos pénzügyi világban szeretne ugyanilyen ügyletet végrehajtani, akkor hatalmas pénzösszegre van szüksége. Ezek a pénzkereső stratégiák csak azoknak elérhetők, akik már most is vagyonosak. A villámkölcsön egy olyan jövőt fest elénk, melyben a pénzcsinálásnak nem előfeltétele az, hogy az ember vagyonos legyen.
 
-<ButtonLink isSecondary href="https://aave.com/flash-loans/">
+<ButtonLink isSecondary href="https://aave.com/docs/concepts/flash-loans/">
   Bővebben a villámkölcsönökről
 </ButtonLink>
 

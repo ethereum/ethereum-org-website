@@ -168,7 +168,7 @@ Dacă oferta schimbului B ar scădea brusc și utilizatorul nu ar fi putut cump�
 
 Pentru a putea realiza cele din exemplul de mai sus în lumea financiară tradițională, ați avea nevoie de o sumă enormă de bani. Aceste strategii producătoare de bani sunt accesibile doar celor care au deja o avere. Împrumuturile flash sunt un exemplu al unui viitor în care nu este o condiție prealabilă să aveți bani pentru a produce bani.
 
-[Mai multe despre împrumuturile flash](https://aave.com/flash-loans/)
+[Mai multe despre împrumuturile flash](https://aave.com/docs/concepts/flash-loans/)
 
 <Divider />
 

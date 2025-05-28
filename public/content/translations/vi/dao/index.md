@@ -93,7 +93,7 @@ Vào năm 1977, Wyoming đã phát minh ra LLC để bảo vệ các doanh nhân
 
 ### Một ví dụ phổ biến {#law-example}
 
-[CityDAO](https://citydao.io) – CityDAO đã sử dụng luật DAO của Wyoming để mua 40 mẫu đất gần Công viên Quốc gia Yellowstone.
+[CityDAO](https://citizen.citydao.io/) – CityDAO đã sử dụng luật DAO của Wyoming để mua 40 mẫu đất gần Công viên Quốc gia Yellowstone.
 
 ## Hội viên của tổ chức tự trị phi tập trung (DAO membership) {#dao-membership}
 

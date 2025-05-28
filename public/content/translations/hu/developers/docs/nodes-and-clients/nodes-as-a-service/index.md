@@ -264,7 +264,7 @@ Az alábbiak a legnépszerűbb Ethereum-csomópontszolgáltatók – ha ismer ol
     - Közvetlen, technikai támogatás
 
 - [**NodeReal MegaNode**](https://nodereal.io/)
-  - [Dokumentáció](https://docs.nodereal.io/nodereal/meganode/introduction)
+  - [Dokumentáció](https://docs.nodereal.io/docs/introduction)
   - Jellemzők
     - Megbízható, gyors és skálázható RPC API-szolgáltatások
     - Továbbfejlesztett API a web3-fejlesztőknek

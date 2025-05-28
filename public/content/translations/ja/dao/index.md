@@ -91,7 +91,7 @@ DAOは、共通の目的のために行動する、集団所有された組織�
 
 ### 有名な事例 {#law-example}
 
-[CityDAO](https://citydao.io) – CityDAOは、ワイオミング州の分散型自律組織(DAO)法を利用して、イエローストーン国立公園近くの40エーカーの土地を購入しました。
+[CityDAO](https://citizen.citydao.io/) – CityDAOは、ワイオミング州の分散型自律組織(DAO)法を利用して、イエローストーン国立公園近くの40エーカーの土地を購入しました。
 
 ## 分散型自律組織(DAO)のメンバーシップ {#dao-membership}
 

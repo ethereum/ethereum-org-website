@@ -91,7 +91,7 @@ Lọ́dún 1977, ìpínlẹ̀ Wyoming dá LLC sílẹ̀, èyí tó ń dáàbò bo �
 
 ### Àpẹẹrẹ olókìkí kan {#law-example}
 
-[CityDAO](https://citydao.io) – CityDAO lo òfin DAO ti Wyoming láti ra ilẹ̀ 40 acres nítòsí Yellowstone National Park.
+[CityDAO](https://citizen.citydao.io/) – CityDAO lo òfin DAO ti Wyoming láti ra ilẹ̀ 40 acres nítòsí Yellowstone National Park.
 
 ## Ọmọ ẹgbẹ́ DAO {#dao-membership}
 

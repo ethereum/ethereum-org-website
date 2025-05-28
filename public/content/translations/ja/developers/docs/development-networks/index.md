@@ -41,7 +41,7 @@ Hardhat Networkには、プロフェッショナルのためのイーサリア�
 
 一部のコンセンサスクライアントには、テスト用にローカルビーコンチェーンをスピンアップするためのツールが組み込まれています。 Lighthouse、Nimbus、Lodestarでの手順は、以下で確認できます。
 
-- [Lodestarを使用したローカルテストネット](https://chainsafe.github.io/lodestar/usage/local/)
+- [Lodestarを使用したローカルテストネット](https://chainsafe.github.io/lodestar/contribution/advanced-topics/setting-up-a-testnet#post-merge-local-testnet/)
 - [Lighthouseを使用したローカルテストネット](https://lighthouse-book.sigmaprime.io/setup.html#local-testnets)
 - [Nimbusを使用したローカルテストネット](https://github.com/status-im/nimbus-eth1/blob/master/fluffy/docs/local_testnet.md)
 

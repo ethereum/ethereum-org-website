@@ -30,6 +30,6 @@ Pengembang kemudian dapat memroses dan mengubah data ini untuk memberikan wawasa
 
 ## Bacaan Lebih Lanjut {#further-reading}
 
-- [Gambaran Umum Graph Network](https://thegraph.com/docs/network#overview)
+- [Gambaran Umum Graph Network](https://thegraph.com/docs/en/about)
 - [Playground Query Graph](https://thegraph.com/explorer/subgraph/graphprotocol/graph-network-mainnet?version=current)
 - [Contoh kode API pada EtherScan](https://etherscan.io/apis#contracts)

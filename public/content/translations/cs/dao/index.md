@@ -92,7 +92,7 @@ V roce 1977 představil stát Wyoming LLC, typ společnosti ekvivalentní k čes
 
 ### Příklad z praxe {#law-example}
 
-[CityDAO](https://citydao.io) – CityDAO používal zákon DAO státu Wyoming ke koupi 40 akrů půdy poblíž Yellowstonského národního parku.
+[CityDAO](https://citizen.citydao.io/) – CityDAO používal zákon DAO státu Wyoming ke koupi 40 akrů půdy poblíž Yellowstonského národního parku.
 
 ## Členství v DAO {#dao-membership}
 

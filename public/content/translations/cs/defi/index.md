@@ -168,7 +168,7 @@ Pokud zásoby burzy B náhle poklesly a uživatel nebyl schopen koupit dostatek 
 
 Abyste mohli provést výše uvedený příklad v tradičním finančním systému, potřebovali byste obrovské množství peněz. Tyto strategie vydělávání peněz jsou přístupné pouze těm, kteří jsou již bohatí. Bleskové úvěry jsou příkladem budoucnosti, kdy mít peníze není nutně podmínkou pro jejich vydělávání.
 
-<ButtonLink isSecondary href="https://aave.com/flash-loans/">
+<ButtonLink isSecondary href="https://aave.com/docs/concepts/flash-loans/">
   Více o bleskových úvěrech
 </ButtonLink>
 

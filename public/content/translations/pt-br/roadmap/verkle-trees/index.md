@@ -60,7 +60,7 @@ As redes de testes de Verkle Trees já estão em execução, mas ainda há atual
 - [Guillaume Ballet explica árvores de Verkle no ETHGlobal](https://www.youtube.com/watch?v=f7bEtX3Z57o)
 - ["Como as Verkle Trees tornam o Ethereum simples e eficiente", por Guillaume Ballet na Devcon 6](https://www.youtube.com/watch?v=Q7rStTKwuYs)
 - [Piper Merriam sobre clientes sem estado da ETHDenver 2020](https://www.youtube.com/watch?v=0yiZJNciIJ4)
-- [Dankrad Fiest explica as árvores Verkle e a falta de estado no podcast da Zero Knowledge](https://zeroknowledge.fm/episode-202-stateless-ethereum-verkle-tries-with-dankrad-feist/)
+- [Dankrad Fiest explica as árvores Verkle e a falta de estado no podcast da Zero Knowledge](https://zeroknowledge.fm/podcast/202/)
 - [Vitalik Buterin sobre Verkle Trees](https://vitalik.eth.limo/general/2021/06/18/verkle.html)
 - [Dankrad Feist sobre Verkle Trees](https://dankradfeist.de/ethereum/2021/06/18/verkle-trie-for-eth1.html)
 - [Documentação de EIO da Verkle Tree](https://notes.ethereum.org/@vbuterin/verkle_tree_eip#Illustration)

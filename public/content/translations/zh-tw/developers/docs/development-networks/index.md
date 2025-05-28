@@ -41,7 +41,7 @@ Hardhat 網路內建了 Hardhat，這是一個專業以太坊開發環境。
 
 一些共識用戶端具有內建工具，用於啟動本地信標鏈以進行測試。 Lighthouse、Nimbus 和 Lodestar 的說明如下：
 
-- [使用 Lodestar 的本地測試網](https://chainsafe.github.io/lodestar/usage/local/)
+- [使用 Lodestar 的本地測試網](https://chainsafe.github.io/lodestar/contribution/advanced-topics/setting-up-a-testnet#post-merge-local-testnet/)
 - [使用 Lighthouse 的本地測試網](https://lighthouse-book.sigmaprime.io/setup.html#local-testnets)
 - [使用 Nimbus 的本地測試網](https://github.com/status-im/nimbus-eth1/blob/master/fluffy/docs/local_testnet.md)
 

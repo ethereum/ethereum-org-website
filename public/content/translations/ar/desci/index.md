@@ -96,7 +96,7 @@ Web3 لديه القدرة على تعطيل نموذج التمويل المع�
 - [VitaDAO: تلقي التمويل من خلال اتفاقيات البحث المدعومة للأبحاث طويلة العمر](https://www.vitadao.com/)
 - [ResearchHub: انشر نتيجة علمية وانخرط في محادثة مع نظرائك](https://www.researchhub.com/)
 - [LabDAO: إدماج البروتين في الحاسوب](https://alphafodl.vercel.app/)
-- [dClimate API: الاستعلام عن البيانات المناخية التي تم جمعها من قبل مجتمع لامركزي](https://api.dclimate.net/)
+- [dClimate API: الاستعلام عن البيانات المناخية التي تم جمعها من قبل مجتمع لامركزي](https://www.dclimate.net/)
 - [DeSci Foundation: منشئ أداة نشر العلوم اللامركزية](https://descifoundation.org/)
 - [DeSci.World: متجر شامل يتيح للمستخدمين عرض العلوم اللامركزية والتفاعل معها](https://desci.world)
 - [Fleming Protocol: اقتصاد بيانات مفتوحة المصدر يغذي اكتشاف الطب الحيوي التعاوني](https://medium.com/@FlemingProtocol/a-data-economy-for-patient-driven-biomedical-innovation-9d56bf63d3dd)
@@ -120,7 +120,7 @@ Web3 لديه القدرة على تعطيل نموذج التمويل المع�
 - [دليل للتكنولوجيا الحيوية اللامركزية بقلم جوسلين بيرل لمستقبل a16z](https://future.a16z.com/a-guide-to-decentralized-biotech/)
 - [حالة العلوم اللامركزية](https://gitcoin.co/blog/desci-the-case-for-decentralised-science/)
 - [دليل إلى العلوم اللامركزية](https://future.com/what-is-decentralized-science-aka-desci/)
-- [موارد العلوم اللامركزية](https://www.vincentweisser.com/decentralized-science)
+- [موارد العلوم اللامركزية](https://www.vincentweisser.com/desci)
 - [Molecule's Biopharma IP-NFTs - وصف تقني](https://molecule.to/blog/molecules-biopharma-ip-nfts-a-technical-description)
 - [بناء أنظمة علمية غير موثوقة بقلم جون ستار](https://medium.com/@jringo/building-systems-of-trustless-science-1cd2d072f673)
 - [ظهور DAOs للتكنولوجيا الحيوية](https://molecule.to/blog/the-emergence-of-biotech-daos)

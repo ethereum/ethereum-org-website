@@ -7,7 +7,7 @@ lang: en
 # Ethereum for enterprise {#ethereum-for-enterprise}
 
 Ethereum can help many kinds of businesses, including large companies:
- 
+
 - Increase trust and reduce the cost of coordination between business parties
 - Improve business network accountability and operational efficiency
 - Build new business models and value creation opportunities
@@ -77,15 +77,15 @@ Here are some of the enterprise applications that have been built on top of the 
 - [hCaptcha](https://www.hcaptcha.com/) - _Bot prevention CAPTCHA system which pays web site operators for the work done by users to label data for machine learning. Now deployed by Cloudflare_
 - [Opera MiniPay](https://www.opera.com/products/minipay) - _makes mobile payments more accessible and secure for people in Africa with a non-custodial wallet and leverages phone numbers for easy transactions_
 - [Roxpay](https://www.roxpay.ch/) - _automates pay-per-use asset invoicing and payments_
-- [SAP Digital Currency Hub](https://community.sap.com/t5/technology-blogs-by-sap/cross-border-payments-made-easy-with-digital-money-experience-the-future/ba-p/13560384) - _cross border payments with stablecoins_ 
-- [Toku](https://www.toku.com/) - _payroll, token grant administration, tax compliance, local employment, benefits & distributed HR solutions_ 
+- [SAP Digital Currency Hub](https://community.sap.com/t5/technology-blogs-by-sap/cross-border-payments-made-easy-with-digital-money-experience-the-future/ba-p/13560384) - _cross border payments with stablecoins_
+- [Toku](https://www.toku.com/) - _payroll, token grant administration, tax compliance, local employment, benefits & distributed HR solutions_
 - [Xerof](https://www.xerof.com/) - _facilitates fast and inexpensive international (cross-border) B2B payments_
 
 ### Finance {#finance}
 
 - [ABN AMRO](https://tokeny.com/tokeny-fuels-abn-amro-bank-in-tokenizing-green-bonds-on-polygon/) - _with Tokeny, tokenized green bonds_
 - [Anvil](https://anvil.xyz/) - _a system of Ethereum-based smart contracts that manages collateral and issues fully secured credit_
-- [Mata Capital](https://consensys.io/blockchain-use-cases/finance/mata-capital) - _real estate investment tokenization_ 
+- [Mata Capital](https://consensys.io/blockchain-use-cases/finance/mata-capital) - _real estate investment tokenization_
 - [Obligate](https://www.obligate.com/) - _regulated and KYC'd on-chain bonds and commercial paper_
 - [Siemens](https://press.siemens.com/global/en/pressrelease/siemens-remains-pioneer-another-digital-bond-successfully-issued-blockchain) - _bond issuance_
 - [Sila](https://silamoney.com/) - _banking and ACH payments infrastructure-as-a-service, using a stablecoin_
@@ -96,7 +96,7 @@ Here are some of the enterprise applications that have been built on top of the 
 ### Asset tokenization {#tokenization}
 
 - [AgroToken](https://agrotoken.io/en/) - _tokenizing and trading agricultural commodities_
-- [Bitbond](https://www.bitbond.com/) - _improves the issuance, settlement and custody of financial assets with tokenization_ 
+- [Bitbond](https://www.bitbond.com/) - _improves the issuance, settlement and custody of financial assets with tokenization_
 - [Blocksquare](https://blocksquare.io/) - _tokenization infrastructure for real estate_
 - [Centrifuge](https://centrifuge.io/) - _tokenized receivables financing, debt, and assets_
 - [Clearmatics](https://www.clearmatics.com) - _builds decentralised network platforms for the p2p exchange of tokenised value_
@@ -107,7 +107,7 @@ Here are some of the enterprise applications that have been built on top of the 
 - [Rubey](https://www.rubey.be/) - _a platform that tokenizes high-end art to make it accessible to retail investors_
 - [Swarm](https://swarm.com/) - _a platform focused on the digitization and trading of real-world assets in a regulatory compliant manner_
 - [Thallo](https://www.thallo.io/) - _a platform to integrate digital carbon credits into business transactions_
-- [Tokenchampions](https://tokenchampions.com/) - _tokenizes European football players' image rights_ 
+- [Tokenchampions](https://tokenchampions.com/) - _tokenizes European football players' image rights_
 
 ### Notarization of data {#notarization-of-data}
 

@@ -91,7 +91,7 @@ Primero hablemos de GraphQL, que fue originalmente desarrollado e implementado p
 
 <img src="https://cdn0.scrvt.com/b095ee27d37b3d7b6b150adba9ac6ec8/42226f4816a77656/bc5c8b270798/graphql-querygif.gif" width="100%" />
 
-Las dos imágenes representan en términos generales la esencia de GraphQL. Con la consulta de la derecha podemos definir exactamente qué datos queremos, así que ahí recibimos todo en una única solicitud y nada más que exactamente lo que necesitamos. Un servidor de GraphQL maneja la obtención de todos los datos requeridos, por lo que es increíblemente fácil de usar desde el lado del consumidor del frontend. [Esta es una buena explicación](https://www.apollographql.com/blog/graphql-explained-5844742f195e/) de cómo exactamente el servidor gestiona una consulta si usted está interesado.
+Las dos imágenes representan en términos generales la esencia de GraphQL. Con la consulta de la derecha podemos definir exactamente qué datos queremos, así que ahí recibimos todo en una única solicitud y nada más que exactamente lo que necesitamos. Un servidor de GraphQL maneja la obtención de todos los datos requeridos, por lo que es increíblemente fácil de usar desde el lado del consumidor del frontend. [Esta es una buena explicación](https://www.apollographql.com/blog/graphql-explained) de cómo exactamente el servidor gestiona una consulta si usted está interesado.
 
 Ahora, con ese conocimiento, vayamos finalmente al campo de la cadena de bloques y The Graph.
 
@@ -196,7 +196,7 @@ Luego creamos una nueva entidad Bet. El id para esto será `event.transaction.ha
 
 Por último, podemos actualizar la entidad Player con todos los datos. Los arrays no pueden empujarse directamente, sino que necesitan ser actualizados como se muestra aquí. Utilizamos el id para referenciar la apuesta. `.save()` es necesario al final para almacenar una entidad.
 
-La documentación completa puede obtenerse aquí: https://thegraph.com/docs/en/developing/creating-a-subgraph/#writing-mappings. También puede añadir salida de registro al archivo de mapeo; consulte [aquí](https://thegraph.com/docs/assemblyscript-api#api-reference).
+La documentación completa puede obtenerse aquí: https://thegraph.com/docs/en/developing/creating-a-subgraph/#writing-mappings. También puede añadir salida de registro al archivo de mapeo; consulte [aquí](https://thegraph.com/docs/en/subgraphs/developing/creating/graph-ts/api/#api-reference).
 
 ```typescript
 import { Bet, Player } from "../generated/schema"

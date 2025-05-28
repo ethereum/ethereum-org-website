@@ -27,13 +27,13 @@ Aceste programe sprijină ecosistemul Ethereum extins oferind granturi pentru o 
 Aceste proiecte și-au creat propriile granturi pentru proiecte care vizează dezvoltarea și experimentarea propriei tehnologii.
 
 - [Aave Grants Program](https://aavegrants.org/) – _[Aave](https://aave.com/) grants DAO_
-- [Balancer](https://balancergrants.notion.site/Balancer-Community-Grants-23e562c5bc4347cd8304637bff0058e6) – _[Balancer](https://balancer.fi/) ecosystem fund_
-- [Compound Grants Program](https://compoundgrants.org/) – _[Compound](https://compound.finance/) finance ecosystem_
+- [Compound Grants Program](https://compoundgrants.questbook.app/) – _[Compound](https://compound.finance/) finance ecosystem_
+- [Balancer](https://quark-ceres-740.notion.site/Balancer-Grants-938f1b979810427f8d903a904315da41) – _[Balancer](https://balancer.fi/) ecosystem fund_
 - [Lido Ecosystem Grants Organisation (LEGO)](https://lego.lido.fi/) – _[Lido](https://lido.fi/) finance ecosystem_
 - [MetaMask Program](https://metamaskgrants.org/) - _[MetaMask](https://metamask.io/) employee-led grants DAO_
 - [mStable Grants Program](https://docs.mstable.org/advanced/grants-program) - _[mStable](https://mstable.org/) community_
 - [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) – _[The Graph](https://thegraph.com/) ecosystem_
-- [Uniswap Grants Program](https://www.unigrants.org/) – _[Uniswap](https://uniswap.org/) community_
+- [Uniswap Grants Program](https://www.uniswapfoundation.org/) – _[Uniswap](https://uniswap.org/) community_
 
 ## Finanțarea cuadratică {#quadratic-funding}
 
