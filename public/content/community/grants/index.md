@@ -17,32 +17,59 @@ These programs support the broad Ethereum ecosystem by offering grants to a wide
 - [EF Ecosystem Support Program](https://esp.ethereum.foundation) - _Funding open source projects that benefit Ethereum, with a particular focus on universal tools, infrastructure, research and public goods_
 - [Academic Grants](https://esp.ethereum.foundation/academic-grants) - _Grants to support Ethereum-related academic work_
 
-## Grant list aggregators
+## Grant list aggregators and platforms
 
-These resources compile and organize various grant opportunities across the Ethereum ecosystem, making it easier to discover funding opportunities that match your project's needs. They often include detailed information about application requirements, funding amounts, and deadlines.
+These resources compile and organize various grant opportunities across the Ethereum ecosystem, making it easier to discover funding opportunities that match your project's needs. We've organized them by persona to help you get you started finding the most relevant resources based on your specific funding needs.
 
-- [DAO Grants](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _Google spreadsheet of organizations offering grants_
+### For all grant seekers: Comprehensive directories
+
+These general platforms offer broad coverage of grants across the entire Web3 space and are useful starting points for anyone looking for funding:
+
 - [Blockworks Grantfarm](https://blockworks.co/grants/programs) - _Blockworks has compiled a comprehensive directory of all grants, RFPs, and bug bounties._
+- [Find Blockchain Grants](https://findblockchaingrants.com/) - _Searchable database of blockchain grants_
+- [Grantr](https://grantr.app/) - _Platform for discovering and applying to Web3 grants_
 - [Blockchain Grants](https://www.blockchaingrants.org/) - _Directory of blockchain and crypto grants_
+
+### For developers and builders
+
 - [Web3 Grants](https://www.notion.so/Web3-Grants-dae38f9b5f524d36a15aaee1b6fa3089) - _Notion database of Web3 grant opportunities_
 - [Grant Programs Viewer](https://airtable.com/shr86elKgWTSCP4AY) - _Public Airtable database of grant programs_
-- [Grantr](https://grantr.app/) - _Platform for discovering and applying to Web3 grants_
-- [LlamaoGrants](https://wiki.defillama.com/wiki/LlamaoGrants) - _DeFi Llama's grant program directory_
-- [Cryptoneur Web3 Grants](https://www.cryptoneur.xyz/web3-grants) - _Platform for finding Web3 project funding_
-- [Pentacle Grants](https://pentacle.xyz/grants) - _Grant opportunities in the Web3 space_
-- [AlphaGrowth Grants](https://alphagrowth.io/crypto-web3-grants-list) - _Comprehensive list of crypto and Web3 grants_
-- [Find Blockchain Grants](https://findblockchaingrants.com/) - _Searchable database of blockchain grants_
-- [Web3Native](https://www.web3native.co/) - _Directory of Web3 grants, investors, and accelerator programs_
-- [Web3 Summits Grants](https://www.web3summits.io/grants) - _Grant opportunities from Web3 Summits_
-- [MetaGov Database](https://docs.google.com/spreadsheets/d/1e5g-dlWWsK2DZoZGBgfxyfGNSddLk-V7sLEgfPjEhbA/edit#gid=780420708) - _Comprehensive Web3 grants map_
-- [Anke's Directory](https://docs.google.com/spreadsheets/d/1IdCCG-U7cGsih_nCNt7Yo4wXstZdCip1UKWbCK0qCZk/edit#gid=938115517) - _Web3 grant program directory_
 - [Web3 Grants Spreadsheet](https://docs.google.com/spreadsheets/d/1c8koZCI-GLnD8MG-eFcXPOBCNu1v8-aXIfwAAvc7AMc/edit#gid=0) - _Google spreadsheet of Web3 grant opportunities_
 
-## Quadratic funding {#quadratic-funding}
+### For DeFi projects and financial applications
 
-The open source roots of Ethereum have led to the growth of an interesting new fundraising model: quadratic funding. This has the potential to improve the way we fund all types of public goods in the future. Quadratic funding makes sure that the projects that receive the most funding are those with the most unique demand. In other words, projects that stand to improve the lives of the most people. [More on quadratic funding.](/defi/#quadratic-funding)
+- [LlamaoGrants](https://wiki.defillama.com/wiki/LlamaoGrants) - _DeFi Llama's grant program directory_
+- [AlphaGrowth Grants](https://alphagrowth.io/crypto-web3-grants-list) - _Comprehensive list of crypto and Web3 grants_
 
-- [Gitcoin](https://gitcoin.co/grants)
+### For DAO contributors and governance innovators
+
+Resources for community-driven projects and governance experiments:
+
+- [DAO Grants](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _Google spreadsheet of organizations offering grants_
+- [MetaGov Database](https://docs.google.com/spreadsheets/d/1e5g-dlWWsK2DZoZGBgfxyfGNSddLk-V7sLEgfPjEhbA/edit#gid=780420708) - _Comprehensive Web3 grants map_
+
+### For entrepreneurs and startups
+
+Resources for those building products and seeking investment beyond just grants:
+
+- [Web3Native](https://www.web3native.co/) - _Directory of Web3 grants, investors, and accelerator programs_
+- [Cryptoneur Web3 Grants](https://www.cryptoneur.xyz/web3-grants) - _Platform for finding Web3 project funding_
+- [Pentacle Grants](https://pentacle.xyz/grants) - _Grant opportunities in the Web3 space_
+
+### Public goods and impact
+
+These programs focus on funding projects that benefit the broader community, public goods, and impact initiatives. These include grant providers, as well as donation platforms utilizing onchain funding allocation mechanisms including [quadratic funding](/defi/#quadratic-funding):
+
+- [Gitcoin](https://www.gitcoin.co/program) - _Gitcoin Grants utilizes multiple capital allocation mechanisms to fund open source projects and public goods in the Ethereum ecosystem_
+- [Octant](https://octant.app/home) - _Public goods funding ecosystem that balances the common good and individual financial empowerment_
+- [Giveth](https://giveth.io/) - _Crypto donation platform enabling direct donations from for-good projects with zero added fees_
+- [Artizen](https://artizen.fund/) - _Helping creators match fund new projects at the frontier of art, science, technology and culture_
+- [Quadratic Accelerator](https://qacc.giveth.io/) - _Start-up accelerator program that uses quadratic funding to support projects that benefit the public good_
+
+### Additional resources
+
+- [Web3 Summits Grants](https://www.web3summits.io/grants) - _Grant opportunities from Web3 Summits_
+- [Anke's Directory](https://docs.google.com/spreadsheets/d/1IdCCG-U7cGsih_nCNt7Yo4wXstZdCip1UKWbCK0qCZk/edit#gid=938115517) - _Web3 grant program directory_
 
 ## Work in Ethereum {#work-in-ethereum}
 
