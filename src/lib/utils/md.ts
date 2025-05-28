@@ -5,17 +5,13 @@ import { extname, join } from "path"
 import matter from "gray-matter"
 import readingTime from "reading-time"
 
-import type { Frontmatter } from "@/lib/types"
-
-import { Skill } from "@/components/TutorialMetadata"
+import type { Frontmatter, ITutorial, Skill } from "@/lib/types"
 
 import { dateToString } from "@/lib/utils/date"
 
 import { CONTENT_DIR } from "@/lib/constants"
 
 import { toPosixPath } from "./relativePath"
-
-import { ITutorial } from "@/pages/[locale]/developers/tutorials"
 
 function getContentRoot() {
   return join(process.cwd(), CONTENT_DIR)

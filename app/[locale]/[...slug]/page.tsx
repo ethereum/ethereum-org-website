@@ -7,6 +7,7 @@ import mdComponents from "@/components/MdComponents"
 
 import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { dateToString } from "@/lib/utils/date"
+import { getLayoutFromSlug } from "@/lib/utils/layout"
 import { getPostSlugs } from "@/lib/utils/md"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
@@ -18,18 +19,6 @@ import { getPageData } from "@/lib/md/data"
 import { getMdMetadata } from "@/lib/md/metadata"
 
 const loadData = dataLoader([["gfissues", fetchGFIs]])
-
-function getLayoutFromSlug(slug: string) {
-  if (slug.includes("developers/docs")) {
-    return "docs"
-  }
-
-  if (slug.includes("developers/tutorials")) {
-    return "tutorial"
-  }
-
-  return "static"
-}
 
 export default async function Page({
   params,
@@ -63,12 +52,14 @@ export default async function Page({
     lastEditLocaleTimestamp,
     isTranslated,
     contributors,
+    timeToRead,
   } = await getPageData({
     locale,
     slug,
     // TODO: Address component typing error here (flip `FC` types to prop object types)
     // @ts-expect-error Incompatible component function signatures
-    components: { ...mdComponents, ...componentsMapping },
+    baseComponents: mdComponents,
+    componentsMapping,
     scope: {
       gfissues,
     },
@@ -97,8 +88,7 @@ export default async function Page({
         lastEditLocaleTimestamp={lastEditLocaleTimestamp}
         contentNotTranslated={!isTranslated}
         contributors={contributors}
-        // TODO: Remove this once we have a real timeToRead value
-        timeToRead={2}
+        timeToRead={Math.round(timeToRead.minutes)}
       >
         {content}
       </Layout>

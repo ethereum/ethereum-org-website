@@ -34,7 +34,7 @@ Test ağlarındaki ETH'nin gerçek değeri olmamalıdır; ancak nadirleşmiş ve
 
 #### Hangi Test Ağını kullanmalıyım?
 
-Mevcut olarak istemci geliştiricilerin sürdürdüğü iki genel test ağı Sepolia ve Goerli'dir. Sepolia, sözleşme ve uygulama geliştiricilerinin uygulamalarını test etmek için kullandığı bir ağdır. Goerli ağı, protokol geliştiricilerinin ağ yükseltmelerini test etmelerine ve paydaşların doğrulayıcıları çalıştırmayı test etmelerine olanak sağlar.
+Mevcut olarak istemci geliştiricilerin sürdürdüğü iki genel test ağı Sepolia ve Hoodi'dir. Sepolia, sözleşme ve uygulama geliştiricilerinin uygulamalarını test etmek için kullandığı bir ağdır. Hoodi ağı, protokol geliştiricilerinin ağ yükseltmelerini test etmelerine ve paydaşların doğrulayıcıları çalıştırmayı test etmelerine olanak sağlar.
 
 #### Sepolia {#sepolia}
 
@@ -63,11 +63,11 @@ Mevcut olarak istemci geliştiricilerin sürdürdüğü iki genel test ağı Sep
 - [Chainstack Sepolia Musluğu](https://faucet.chainstack.com/sepolia-faucet)
 - [Ethereum Ekosistemi musluğu](https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia)
 
-#### Goerli _(uzun vadeli destek)_ {#goerli}
+#### Hoodi {#hoodi}
 
-_Not: [Goerli test ağı kullanımdan kaldırılmış](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17) ve 2023 yılında [Holesovice](https://github.com/eth-clients/holesovice) ile değiştirilecektir. Lütfen uygulamalarınızı Sepolia'ya taşımayı düşünün._
+_Not: [Goerli test ağı kullanımdan kaldırılmıştır](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17) ve Hoodi ile değiştirilmiştir. Lütfen uygulamalarınızı Sepolia'ya taşımayı düşünün._
 
-Goerli doğrulama ve hisselemeyi test etme amaçlı bir test ağıdır. Goerli ağı, bir test ağı doğrulayıcısı çalıştırmak isteyen kullanıcılara açıktır. Protokol yükseltmelerini ana ağa dağıtılmadan önce test etmek isteyen paydaşlar bundan dolayı Goerli'yi kullanmalıdır.
+Hoodi doğrulama ve hisselemeyi test etme amaçlı bir test ağıdır. Hoodi ağı, bir test ağı doğrulayıcısı çalıştırmak isteyen kullanıcılara açıktır. Protokol yükseltmelerini ana ağa dağıtılmadan önce test etmek isteyen paydaşlar bundan dolayı Hoodi'yi kullanmalıdır.
 
 - Açık doğrulayıcı dizisi, paydaşlar ağ yükseltmelerini test edebilirler
 - Büyük durum, kompleks akıllı sözleşme etkileşimlerini test etmek için kullanışlıdır
@@ -75,52 +75,46 @@ Goerli doğrulama ve hisselemeyi test etme amaçlı bir test ağıdır. Goerli a
 
 ##### Kaynaklar
 
-- [Web sitesi](https://goerli.net/)
-- [GitHub](https://github.com/eth-clients/goerli)
-- [Etherscan](https://goerli.etherscan.io)
-- [Blockscout](https://eth-goerli.blockscout.com/)
+- [Web sitesi](https://hoodi.ethpandaops.io/)
+- [GitHub](https://github.com/eth-clients/hoodi)
+- [Explorer](https://explorer.hoodi.ethpandaops.io/)
+- [Checkpoint Sync](https://checkpoint-sync.hoodi.ethpandaops.io/)
 
 ##### Musluklar
 
-- [QuickNode Goerli Musluğu](https://faucet.quicknode.com/drip)
-- [Grabteeth](https://grabteeth.xyz/)
-- [İş İspatı Musluğu](https://goerli-faucet.pk910.de/)
-- [Paradigm musluğu](https://faucet.paradigm.xyz/)
-- [Alchemy Goerli Musluğu](https://goerlifaucet.com/)
-- [All That Node Goerli Musluğu](https://www.allthatnode.com/faucet/ethereum.dsrv)
-- [Coinbase Cüzdanı Musluğu | Goerli](https://coinbase.com/faucets/ethereum-goerli-faucet)
-- [Chainstack Goerli musluğu](https://faucet.chainstack.com/goerli-faucet)
+- [Hoodi Musluğu](https://hoodi.ethpandaops.io/)
 
-Goerli test ağında bir Doğrulayıcı başlatmak için, ethstaker'ın ["ucuz goerli doğrulayıcısı" başlama noktasını](https://holesky.launchpad.ethstaker.cc/en/) kullanın.
+Hoodi test ağında bir Doğrulayıcı başlatmak için, [Hoodi başlangıç platformunu](https://hoodi.launchpad.ethereum.org/en/) kullanın.
 
 ### Katman 2 test ağları {#layer-2-testnets}
 
 [Katman 2 (L2)](/layer-2/), belirli Ethereum ölçeklendirme çözümlerini tanımlamak için kullanılan toplu bir terimdir. Katman 2, Ethereum'u genişleten ve Ethereum'un güvenlik garantilerini devralan ayrı bir blok zincirdir. Katman 2 test ağları genellikle genel Ethereum test ağlarına sıkı sıkıya bağlıdır.
 
-#### Arbitrum Goerli {#arbitrum-goerli}
+#### Arbitrum Sepolia {#arbitrum-sepolia}
 
 [Arbitrum](https://arbitrum.io/) için bir test ağı.
 
 ##### Musluklar
 
-- [Chainlink musluğu](https://faucets.chain.link/)
+- [Chainlink musluğu](https://faucets.chain.link/arbitrum-sepolia)
+- [Alchemy musluğu](https://www.alchemy.com/faucets/arbitrum-sepolia)
 
-#### Optimistic Goerli {#optimistic-goerli}
+#### Optimistic Sepolia {#optimistic-sepolia}
 
 [Optimism](https://www.optimism.io/) için test ağı.
 
 ##### Musluklar
 
-- [Paradigm musluğu](https://faucet.paradigm.xyz/)
-- [Coinbase Cüzdanı Musluğu | Optimism Goerli](https://coinbase.com/faucets/optimism-goerli-faucet)
+- [Chainlink musluğu](https://faucets.chain.link/optimism-sepolia)
+- [Alchemy musluğu](https://www.alchemy.com/faucets/optimism-sepolia)
 
-#### Starknet Goerli {#starknet-goerli}
+#### Starknet Sepolia {#starknet-sepolia}
 
 [Starknet](https://www.starknet.io) için test ağı.
 
 ##### Musluklar
 
-- [Starknet musluğu](https://faucet.goerli.starknet.io)
+- [Alchemy musluğu](https://www.alchemy.com/faucets/starknet-sepolia)
 
 ## Özel ağlar {#private-networks}
 

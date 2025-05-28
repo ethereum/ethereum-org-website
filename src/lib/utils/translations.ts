@@ -147,8 +147,11 @@ const getRequiredNamespacesForPath = (relativePath: string) => {
   }
 
   if (path.startsWith("/roadmap/vision/")) {
-    primaryNamespace = "page-roadmap-vision"
-    requiredNamespaces = [...requiredNamespaces, "page-upgrades-index"]
+    requiredNamespaces = [
+      ...requiredNamespaces,
+      "page-upgrades-index",
+      "page-roadmap-vision",
+    ]
   }
 
   if (path.startsWith("/gas/")) {
@@ -189,6 +192,10 @@ const getRequiredNamespacesForPath = (relativePath: string) => {
   if (path.startsWith("/layer-2/networks/")) {
     primaryNamespace = "page-layer-2-networks"
     requiredNamespaces = [...requiredNamespaces, "table"]
+  }
+
+  if (path.startsWith("/roadmap/")) {
+    primaryNamespace = "page-roadmap"
   }
 
   if (path.startsWith("/start/")) {
@@ -233,7 +240,8 @@ const getRequiredNamespacesForPath = (relativePath: string) => {
     path.startsWith("/what-is-ethereum/") ||
     path.startsWith("/quizzes/") ||
     path.startsWith("/stablecoins/") ||
-    path.startsWith("/defi/")
+    path.startsWith("/defi/") ||
+    path.startsWith("/gas/")
   ) {
     requiredNamespaces = [...requiredNamespaces, "learn-quizzes"]
   }

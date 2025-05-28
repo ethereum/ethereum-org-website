@@ -86,9 +86,9 @@ Další informace o [komponovatelnosti smart kontraktů](/developers/docs/smart-
 
 ## Omezení {#limitations}
 
-Samotné smart kontrakty nemohou získávat informace o „skutečných“ událostech, protože nemohou získávat data z off-chain zdrojů. To znamená, že nemohou reagovat na události ve skutečném světě. Tento design je úmyslný. Spoléhat se na externí informace by mohlo ohrozit konsenzus, což je důležité pro bezpečnost a decentralizaci.
+Samotné chytré kontrakty nemohou získávat informace o „skutečných“ událostech, protože nemohou získávat data ze zdrojů mimo blockchain. To znamená, že nemohou reagovat na události ve skutečném světě. Tento design je úmyslný. Spoléhat se na externí informace by mohlo ohrozit konsenzus, což je důležité pro bezpečnost a decentralizaci.
 
-Nicméně je důležité, aby blockchainové aplikace mohly používat off-chain data. Řešením jsou [orákly](/developers/docs/oracles/), což jsou nástroje, které přinášejí off-chain data a zpřístupňují je smart kontraktům.
+Nicméně je důležité, aby blockchainové aplikace mohly používat data, která jsou mimo blockchain. Řešením jsou [orákula](/developers/docs/oracles/), což jsou nástroje, které zpracovávají data mimo blockchain a zpřístupňují je chytrým kontraktům.
 
 Dalším omezením smart kontraktů je maximální velikost kontraktu. Smart kontrakt může mít maximálně 24 Kb, jinak dojde k vyčerpání paliva. Toto lze obejít pomocí tzv. [Diamond Pattern](https://eips.ethereum.org/EIPS/eip-2535).
 

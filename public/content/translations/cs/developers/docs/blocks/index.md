@@ -33,7 +33,7 @@ Důkaz podílem znamená následující:
 - Ostatní validátoři, kteří se dozvědí o novém bloku, znovu provedou transakce, aby se ujistili, že souhlasí s navrženou změnou globálního stavu. Pokud je blok platný, přidají jej do své vlastní databáze.
 - Pokud validátor obdrží informace o dvou konfliktních blocích pro stejný slot, použije svůj algoritmus pro volbu větve, aby vybral ten, který podpořilo nejvíce uzamčených ETH.
 
-[Více o proof of stake](/developers/docs/consensus-mechanisms/pos)
+[Více o důkazu podílem](/developers/docs/consensus-mechanisms/pos)
 
 ## Co je v bloku? {#block-anatomy}
 

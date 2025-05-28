@@ -25,7 +25,7 @@ Uzamykatelé z domova jsou zodpovědní za provoz hardwaru potřebného ke spuš
 
 Uzamykatel z domova dostává odměny přímo z protokolu za to, že jejich validátor řádně funguje a je online.
 
-## Proč stakovat z domova? {#why-stake-solo}
+## Proč uzamykat z domova? {#why-stake-solo}
 
 Uzamčení z domova přináší větší odpovědnost, ale poskytuje vám maximální kontrolu nad vašimi prostředky a nastavením uzamčení.
 
@@ -58,7 +58,7 @@ Stejně jako privátní klíče zajišťují vaši adresu Ethereum, budete muset
 <a href="/security/">Zabezpečení Etherea a prevence podvodů</a>
 </ExpandableCard>
 
-<ExpandableCard title="Maintenance" eventCategory="SoloStaking" eventName="clicked maintenance">
+<ExpandableCard title="Údržba" eventCategory="SoloStaking" eventName="clicked maintenance">
 Hardware občas selže, dojde k chybě síťových připojení a klientský software občas potřebuje upgrade. Údržba uzlů je nevyhnutelná a občas bude vyžadovat vaši pozornost. Budete si chtít být jisti, že budete informováni o všech očekávaných upgradech sítě nebo jiných důležitých upgradech klientů.
 </ExpandableCard>
 

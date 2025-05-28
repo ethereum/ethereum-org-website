@@ -71,6 +71,10 @@ module.exports = (phase, { defaultConfig }) => {
         },
       })
 
+      // WalletConnect related packages are not needed for the bundle
+      // https://docs.reown.com/appkit/next/core/installation#extra-configuration
+      config.externals.push("pino-pretty", "lokijs", "encoding")
+
       return config
     },
     trailingSlash: true,

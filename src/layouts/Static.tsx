@@ -4,11 +4,13 @@ import type { HTMLAttributes } from "react"
 import type { ChildOnlyProp, Lang } from "@/lib/types"
 import type { MdPageContent, StaticFrontmatter } from "@/lib/interfaces"
 
+import EventsOrganizerBanner from "@/components/Banners/EventsOrganizerBanner"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import Callout from "@/components/Callout"
 import Contributors from "@/components/Contributors"
 import EnergyConsumptionChart from "@/components/EnergyConsumptionChart"
 import FeedbackCard from "@/components/FeedbackCard"
+import FileContributors from "@/components/FileContributors"
 import GlossaryDefinition from "@/components/Glossary/GlossaryDefinition"
 import GlossaryTooltip from "@/components/Glossary/GlossaryTooltip"
 import { HubHero } from "@/components/Hero"
@@ -60,6 +62,7 @@ export const staticComponents = {
   Callout,
   Contributors,
   EnergyConsumptionChart,
+  EventsOrganizerBanner,
   GlossaryDefinition,
   GlossaryTooltip,
   Link,
@@ -76,7 +79,11 @@ export const staticComponents = {
 type StaticLayoutProps = ChildOnlyProp &
   Pick<
     MdPageContent,
-    "slug" | "tocItems" | "lastEditLocaleTimestamp" | "contentNotTranslated"
+    | "slug"
+    | "tocItems"
+    | "lastEditLocaleTimestamp"
+    | "contentNotTranslated"
+    | "contributors"
   > & {
     frontmatter: StaticFrontmatter
   }
@@ -87,6 +94,7 @@ export const StaticLayout = ({
   tocItems,
   lastEditLocaleTimestamp,
   contentNotTranslated,
+  contributors,
 }: StaticLayoutProps) => {
   const locale = useLocale()
 
@@ -133,6 +141,11 @@ export const StaticLayout = ({
             />
             {children}
 
+            <FileContributors
+              className="my-10 border-t"
+              contributors={contributors}
+              lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+            />
             <FeedbackCard isArticle />
           </MainArticle>
         </div>

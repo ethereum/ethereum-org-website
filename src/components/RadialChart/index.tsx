@@ -1,7 +1,7 @@
 "use client"
 
 import { type ReactNode, useEffect, useState } from "react"
-import { useRouter } from "next/router"
+import { useLocale } from "next-intl"
 import { MdInfoOutline } from "react-icons/md"
 import { PolarAngleAxis, RadialBar, RadialBarChart } from "recharts"
 
@@ -53,7 +53,7 @@ const RadialChart = ({
   displayValue,
 }: RadialChartProps) => {
   const { t } = useTranslation("common")
-  const { locale } = useRouter()
+  const locale = useLocale()
   const [isMounted, setIsMounted] = useState(false)
 
   useEffect(() => {

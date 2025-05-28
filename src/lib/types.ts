@@ -395,7 +395,7 @@ export type FileContributor = {
   login: string
   avatar_url: string
   html_url: string
-  date?: string
+  date: string
 }
 
 type FilePath = string
@@ -559,8 +559,8 @@ export type StatsBoxState = ValueOrError<string>
 export type GrowThePieMetricKey = "txCount" | "txCostsMedianUsd"
 
 export type GrowThePieData = Record<GrowThePieMetricKey, MetricReturnData> & {
-  dailyTxCosts: Record<string, number>
-  activeAddresses: Record<string, number>
+  dailyTxCosts: Record<string, number | undefined>
+  activeAddresses: Record<string, number | undefined>
 }
 
 export type MetricName =
@@ -642,9 +642,19 @@ export type NonEVMChainName = "Starknet"
 
 export type ExtendedRollup = Rollup & {
   networkMaturity: MaturityLevel
-  txCosts: number
+  txCosts: number | undefined
   tvl: number
   walletsSupported: string[]
+  activeAddresses: number | undefined
+  launchDate: string | null
+  walletsSupportedCount: number
+  blockspaceData: {
+    nft: number
+    defi: number
+    social: number
+    token_transfers: number
+    unlabeled: number
+  } | null
 }
 
 // Wallets
@@ -972,6 +982,11 @@ export type EventCardProps = {
   imageUrl?: string
 }
 
+export type PageWithContributorsProps = {
+  contributors: FileContributor[]
+  lastEditLocaleTimestamp: string
+}
+
 export type BreakpointKey = keyof typeof screens
 
 export type MaturityLevel =
@@ -980,3 +995,36 @@ export type MaturityLevel =
   | "maturing"
   | "developing"
   | "emerging"
+
+// Tutorials
+export enum Skill {
+  BEGINNER = "beginner",
+  INTERMEDIATE = "intermediate",
+  ADVANCED = "advanced",
+}
+
+export interface IExternalTutorial {
+  url: string
+  title: string
+  description: string
+  author: string
+  authorGithub: string
+  tags: Array<string>
+  skillLevel: string
+  timeToRead?: string
+  lang: string
+  publishDate: string
+}
+
+export interface ITutorial {
+  href: string
+  title: string
+  description: string
+  author: string
+  tags?: Array<string>
+  skill?: Skill
+  timeToRead?: number | null
+  published?: string | null
+  lang: string
+  isExternal: boolean
+}

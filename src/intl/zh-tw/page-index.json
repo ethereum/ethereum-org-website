@@ -1,7 +1,8 @@
 {
   "page-index-activity-description": "來自所有以太坊網路的活動",
   "page-index-activity-tag": "活動",
-  "page-index-activity-header": "最強的生態系統",
+  "page-index-activity-header": "最強大的生態系統",
+  "page-index-activity-action": "更多以太坊的活動",
   "page-index-bento-header": "使用網路的新方法",
   "page-index-bento-assets-action": "更多非同質化代幣相關資訊",
   "page-index-bento-assets-content": "藝術品、認證或甚至是房地產都可以被代幣化，不管什麼東西都能變成可交易的代幣，並且所有權公開且可驗證。",
@@ -31,7 +32,7 @@
   "page-index-community-description-2": "我們歡迎大家來問問題、與世界各地的人交朋友或是為網站做出貢獻，在過程中還可以獲得實務經驗和指導！",
   "page-index-community-description-3": "Ethereum.org 的社群是開始學習的最佳起點。",
   "page-index-community-tag": "Ethereum.org 社群",
-  "page-index-community-header": "社群創立",
+  "page-index-community-header": "由社群共同打造",
   "page-index-cta-dapps-description": "金融、遊戲、社交",
   "page-index-cta-dapps-label": "嘗試應用程式",
   "page-index-cta-get-eth-description": "以太坊的貨幣",

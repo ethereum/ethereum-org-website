@@ -2,7 +2,7 @@
 
 import { useLocale } from "next-intl"
 
-import type { Lang, TranslationKey } from "@/lib/types"
+import { Lang, Skill, TranslationKey } from "@/lib/types"
 import { TutorialFrontmatter } from "@/lib/interfaces"
 
 import CopyToClipboard from "@/components/CopyToClipboard"
@@ -21,12 +21,6 @@ import { useTranslation } from "@/hooks/useTranslation"
 export type TutorialMetadataProps = {
   frontmatter: TutorialFrontmatter
   timeToRead: number
-}
-
-export enum Skill {
-  BEGINNER = "beginner",
-  INTERMEDIATE = "intermediate",
-  ADVANCED = "advanced",
 }
 
 export const getSkillTranslationId = (skill: Skill): TranslationKey =>

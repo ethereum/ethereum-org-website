@@ -56,6 +56,8 @@ A validátorkulcsok és az Ethereum-számlakulcsok szétválasztása lehetővé 
 
 ![validátorkulcs ábrája](validator-key-schematic.png)
 
+**Megjegyzés**: A letétbe helyezésből való kilépéshez és a validátor egyenlegének visszavonásához jelenleg egy [önkéntes kilépési üzenet (VEM)](https://mirror.xyz/ladislaus.eth/wmoBbUBes2Wp1_6DvP6slPabkyujSU7MZOFOC3QpErs&1) aláírása szükséges a validátorkulccsal. Az [EIP-7002](https://eips.ethereum.org/EIPS/eip-7002) azonban egy olyan javaslat, amely lehetővé teszi a felhasználó számára, hogy a jövőben a kilépési üzeneteknek a kivételi kulccsal történő aláírásával elindítsa a validátor kilépését és kivegye az egyenlegét. Ez csökkenti a bizalomigényt, mivel azok a letétesek, akik az ETH-t [letétbe helyezési szolgáltatóknak](https://ethereum.org/en/staking/saas/#what-is-staking-as-a-service) delegálják, továbbra is ellenőrzésük alatt tarthatják pénzeszközeiket.
+
 ## Kulcsok származtatása egy kulcsmondatból {#deriving-keys-from-seed}
 
 Ha minden 32 ETH feltöltéséhez 2 független kulcsból álló új készletre lenne szükség, a kulcskezelés nehézkessé válna, különösen a több validátort futtató felhasználók számára. Ehelyett több validátorkulcsot lehet egyetlen titokból levezetni, és ennek a titoknak a tárolása lehetővé teszi a hozzáférést több validátorkulcshoz.
@@ -94,3 +96,5 @@ Az egyes ágakat `/` választja el egymástól, így `m/2` azt jelenti, hogy a m
 
 - [Ethereum Alapítvány blogbejegyzés Carl Beekhuizentől](https://blog.ethereum.org/2020/05/21/keys/)
 - [EIP-2333 BLS12-381 kulcsgenerálás](https://eips.ethereum.org/EIPS/eip-2333)
+- [EIP-7002: A végrehajtási réteg által indított kilépések](https://research.2077.xyz/eip-7002-unpacking-improvements-to-staking-ux-post-merge)
+- [Kulcskezelés méretarányosan](https://docs.ethstaker.cc/ethstaker-knowledge-base/scaled-node-operators/key-management-at-scale)
