@@ -61,7 +61,7 @@
   "page-resources-network-resilience-clientdiversity-description": "Improve Ethereum's resilience by using a minority client.",
   "page-resources-network-resilience-supermajority-description": "The supermajority client risk of the Ethereum execution layer, especially the client usage of staking services.",
   "page-resources-attestations-title": "Attestations",
-  "page-resources-attestations-eas-description": "EAS enables anyone to create and validate on-chain and off-chain attestations on Ethereum.",
+  "page-resources-attestations-eas-description": "EAS enables anyone to create and validate onchain and off-chain attestations on Ethereum.",
   "page-resources-relays-title": "Relays",
   "page-resources-relays-beaconchain-description": "Validators can use relays to outsource their block production to entities specialized in extracting extra revenue.",
   "page-resources-relays-ratednetwork-description": "MEV relay market share, total value relayed, value per block, and other statistics for Ethereum network.",
