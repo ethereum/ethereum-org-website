@@ -17,11 +17,11 @@ These programs support the broad Ethereum ecosystem by offering grants to a wide
 - [EF Ecosystem Support Program](https://esp.ethereum.foundation) - _Funding open source projects that benefit Ethereum, with a particular focus on universal tools, infrastructure, research and public goods_
 - [Academic Grants](https://esp.ethereum.foundation/academic-grants) - _Grants to support Ethereum-related academic work_
 
-## Grant list aggregators and platforms
+## Grant list aggregators and platforms {#grant-list-aggregators}
 
 These resources compile and organize various grant opportunities across the Ethereum ecosystem, making it easier to discover funding opportunities that match your project's needs. We've organized them by persona to help you get you started finding the most relevant resources based on your specific funding needs.
 
-### For all grant seekers: Comprehensive directories
+### For all grant seekers: Comprehensive directories {#comprehensive-directories}
 
 These general platforms offer broad coverage of grants across the entire Web3 space and are useful starting points for anyone looking for funding:
 
@@ -30,25 +30,25 @@ These general platforms offer broad coverage of grants across the entire Web3 sp
 - [Grantr](https://grantr.app/) - _Platform for discovering and applying to Web3 grants_
 - [Blockchain Grants](https://www.blockchaingrants.org/) - _Directory of blockchain and crypto grants_
 
-### For developers and builders
+### For developers and builders {#for-developers-and-builders}
 
 - [Web3 Grants](https://www.notion.so/Web3-Grants-dae38f9b5f524d36a15aaee1b6fa3089) - _Notion database of Web3 grant opportunities_
 - [Grant Programs Viewer](https://airtable.com/shr86elKgWTSCP4AY) - _Public Airtable database of grant programs_
 - [Web3 Grants Spreadsheet](https://docs.google.com/spreadsheets/d/1c8koZCI-GLnD8MG-eFcXPOBCNu1v8-aXIfwAAvc7AMc/edit#gid=0) - _Google spreadsheet of Web3 grant opportunities_
 
-### For DeFi projects and financial applications
+### For DeFi projects and financial applications {#for-defi-projects}
 
 - [LlamaoGrants](https://wiki.defillama.com/wiki/LlamaoGrants) - _DeFi Llama's grant program directory_
 - [AlphaGrowth Grants](https://alphagrowth.io/crypto-web3-grants-list) - _Comprehensive list of crypto and Web3 grants_
 
-### For DAO contributors and governance innovators
+### For DAO contributors and governance innovators {#for-dao-contributors}
 
 Resources for community-driven projects and governance experiments:
 
 - [DAO Grants](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _Google spreadsheet of organizations offering grants_
 - [MetaGov Database](https://docs.google.com/spreadsheets/d/1e5g-dlWWsK2DZoZGBgfxyfGNSddLk-V7sLEgfPjEhbA/edit#gid=780420708) - _Comprehensive Web3 grants map_
 
-### For entrepreneurs and startups
+### For entrepreneurs and startups {#for-entrepreneurs-and-startups}
 
 Resources for those building products and seeking investment beyond just grants:
 
@@ -56,7 +56,7 @@ Resources for those building products and seeking investment beyond just grants:
 - [Cryptoneur Web3 Grants](https://www.cryptoneur.xyz/web3-grants) - _Platform for finding Web3 project funding_
 - [Pentacle Grants](https://pentacle.xyz/grants) - _Grant opportunities in the Web3 space_
 
-### Public goods and impact
+### Public goods and impact {#public-goods-and-impact}
 
 These programs focus on funding projects that benefit the broader community, public goods, and impact initiatives. These include grant providers, as well as donation platforms utilizing onchain funding allocation mechanisms including [quadratic funding](/defi/#quadratic-funding):
 
@@ -66,7 +66,7 @@ These programs focus on funding projects that benefit the broader community, pub
 - [Artizen](https://artizen.fund/) - _Helping creators match fund new projects at the frontier of art, science, technology and culture_
 - [Quadratic Accelerator](https://qacc.giveth.io/) - _Start-up accelerator program that uses quadratic funding to support projects that benefit the public good_
 
-### Additional resources
+### Additional resources {#additional-resources}
 
 - [Web3 Summits Grants](https://www.web3summits.io/grants) - _Grant opportunities from Web3 Summits_
 - [Anke's Directory](https://docs.google.com/spreadsheets/d/1IdCCG-U7cGsih_nCNt7Yo4wXstZdCip1UKWbCK0qCZk/edit#gid=938115517) - _Web3 grant program directory_
