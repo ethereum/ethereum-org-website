@@ -47,13 +47,11 @@ const loadData = dataLoader(
 
 const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const { locale } = await params
-  const { adoptionCards, adoptionStyles, stories } = use10YearAnniversary()
+  const { adoptionCards, adoptionStyles } = use10YearAnniversary()
 
   setRequestLocale(locale)
 
   const [fetched10YearEvents, fetched10YearStories] = await loadData()
-
-  console.log(fetched10YearStories)
 
   // Get i18n messages
   const allMessages = await getMessages({ locale })
@@ -288,7 +286,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               </ButtonLink>
             </div>
           </div>
-          <Stories stories={stories} />
+          <Stories stories={fetched10YearStories} />
         </div>
 
         <div className="w-full gap-8 px-8 py-8 pt-32">

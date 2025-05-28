@@ -23,25 +23,25 @@ type StoriesProps = {
 const STORIES_SHOWN = 5
 
 const Stories = ({ stories }: StoriesProps) => {
-  const [flippedCards, setFlippedCards] = useState<Record<string, boolean>>({})
+  const [flippedCards, setFlippedCards] = useState<Record<number, boolean>>({})
   const [expandedStories, setExpandedStories] = useState<
-    Record<string, boolean>
+    Record<number, boolean>
   >({})
-  const [fading, setFading] = useState<Record<string, boolean>>({})
+  const [fading, setFading] = useState<Record<number, boolean>>({})
   const [storiesToShow, setStoriesToShow] = useState(STORIES_SHOWN)
 
-  const handleFlip = (name: string) => {
-    setFading((prev) => ({ ...prev, [name]: true }))
+  const handleFlip = (index: number) => {
+    setFading((prev) => ({ ...prev, [index]: true }))
     setTimeout(() => {
-      setFlippedCards((prev) => ({ ...prev, [name]: !prev[name] }))
-      setFading((prev) => ({ ...prev, [name]: false }))
+      setFlippedCards((prev) => ({ ...prev, [index]: !prev[index] }))
+      setFading((prev) => ({ ...prev, [index]: false }))
     }, 200) // 200ms fade duration
   }
 
-  const handleExpand = (name: string) => {
+  const handleExpand = (index: number) => {
     setExpandedStories((prev) => ({
       ...prev,
-      [name]: !prev[name],
+      [index]: !prev[index],
     }))
   }
 
@@ -49,9 +49,9 @@ const Stories = ({ stories }: StoriesProps) => {
 
   return (
     <div className="flex flex-1 flex-col gap-8">
-      {visibleStories.map((story) => {
-        const isFlipped = flippedCards[story.name]
-        const isFading = fading[story.name]
+      {visibleStories.map((story, index) => {
+        const isFlipped = flippedCards[index]
+        const isFading = fading[index]
         return (
           <div
             key={story.name}
@@ -65,7 +65,8 @@ const Stories = ({ stories }: StoriesProps) => {
               <div
                 className={cn(
                   "transition-opacity duration-200",
-                  isFading ? "opacity-0" : "opacity-100"
+                  isFading && "opacity-0",
+                  !isFading && "opacity-100"
                 )}
               >
                 {!isFlipped && (
@@ -101,15 +102,15 @@ const Stories = ({ stories }: StoriesProps) => {
                       <p
                         className={cn(
                           "mb-1 line-clamp-3",
-                          expandedStories[story.name] && "line-clamp-none"
+                          expandedStories[index] && "line-clamp-none"
                         )}
                       >
                         {story.storyEnglish}
                       </p>
-                      {!expandedStories[story.name] && (
+                      {!expandedStories[index] && (
                         <div className="mb-2">
                           <Button
-                            onClick={() => handleExpand(story.name)}
+                            onClick={() => handleExpand(index)}
                             variant="ghost"
                             className="h-auto min-h-0 p-0 text-start text-sm"
                           >
@@ -124,7 +125,7 @@ const Stories = ({ stories }: StoriesProps) => {
                           English translation
                         </p>
                         <Button
-                          onClick={() => handleFlip(story.name)}
+                          onClick={() => handleFlip(index)}
                           variant="ghost"
                           className="h-auto min-h-0 p-0 text-start text-sm"
                         >
@@ -170,15 +171,15 @@ const Stories = ({ stories }: StoriesProps) => {
                       <p
                         className={cn(
                           "mb-1 line-clamp-3",
-                          expandedStories[story.name] && "line-clamp-none"
+                          expandedStories[index] && "line-clamp-none"
                         )}
                       >
                         {story.storyOriginal}
                       </p>
-                      {!expandedStories[story.name] && (
+                      {!expandedStories[index] && (
                         <div className="mb-2">
                           <Button
-                            onClick={() => handleExpand(story.name)}
+                            onClick={() => handleExpand(index)}
                             variant="ghost"
                             className="h-auto min-h-0 p-0 text-start text-sm"
                           >
@@ -192,7 +193,7 @@ const Stories = ({ stories }: StoriesProps) => {
                         Original language
                       </p>
                       <Button
-                        onClick={() => handleFlip(story.name)}
+                        onClick={() => handleFlip(index)}
                         variant="ghost"
                         className="h-auto min-h-0 p-0 text-start text-sm"
                       >
