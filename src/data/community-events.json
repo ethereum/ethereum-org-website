@@ -763,5 +763,32 @@
     "location": "Buenos Aires, ARG",
     "description": "A collaborative Ethereum week, built by and for everyone.",
     "imageUrl": "https://devconnect.org/og-argentina.png?reset=1"
+  },
+  {
+    "title": "Builders Week Istanbul",
+    "startDate": "2025-09-01",
+    "endDate": "2025-09-07",
+    "href": "https://buildersweekistanbul.com/",
+    "location": "Istanbul, TR",
+    "description": "BWI is a week-long series of permissionless events designed to scale the blockchain development ecosystem.",
+    "imageUrl": "https://buildersweekistanbul.com/img/meta/meta.webp"
+  },
+  {
+    "title": "Cryptist",
+    "startDate": "2025-09-01",
+    "endDate": "2025-09-01",
+    "href": "https://cryptist.org/",
+    "location": "Istanbul, TR",
+    "description": "Cryptist is an annual, day-long, zero-knowledge community event in Istanbul to learn, connect, and share amongst the Turkish ZK community.",
+    "imageUrl": "https://cryptist.org/img/meta.webp"
+  },
+  {
+    "title": "EthIstanbul",
+    "startDate": "2025-09-05",
+    "endDate": "2025-09-07",
+    "href": "https://ethistanbul.io/",
+    "location": "Istanbul, TR",
+    "description": "ETHIstanbul is a conference and hackathon connecting you with global talents, industry professionals, and web3 companies advancing technology.",
+    "imageUrl": "https://ethistanbul.io/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fistanbul-background.99d6ad2a.webp&w=3840&q=75"
   }
 ]
