@@ -100,8 +100,12 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             </div>
             <div>
               <TenYearGlobe
-                events={Object.values(fetched10YearEvents).flatMap(
-                  (region) => region.events
+                events={Object.values(fetched10YearEvents).flatMap((region) =>
+                  region.events.map((event) => ({
+                    ...event,
+                    lat: Number(event.lat),
+                    lng: Number(event.lng),
+                  }))
                 )}
               />
             </div>
