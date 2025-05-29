@@ -82,7 +82,7 @@ const ProductCard = ({
   return (
     <Flex
       className={cn(
-        "flex-col justify-between bg-background-highlight text-center",
+        "flex-col justify-between bg-background-highlight",
         "rounded-base border no-underline",
         "hover:scale-[1.02] hover:transition-transform"
       )}
@@ -127,7 +127,7 @@ const ProductCard = ({
             </SubjectBadge>
           ))}
       </HStack>
-      <ButtonLink href={url} className="m-4 h-20">
+      <ButtonLink href={url} className="m-4 h-20 text-center">
         {t("open")} {name}
       </ButtonLink>
     </Flex>
