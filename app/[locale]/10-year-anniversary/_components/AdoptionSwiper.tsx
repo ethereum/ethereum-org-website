@@ -11,11 +11,9 @@ import {
 
 import { cn } from "@/lib/utils/cn"
 
-import { use10YearAnniversary } from "./use10YearAnniversary"
+import { adoptionCards, adoptionStyles } from "./data"
 
 const AdoptionSwiper = () => {
-  const { adoptionCards, adoptionStyles } = use10YearAnniversary()
-
   return (
     <div className="flex flex-1 flex-col gap-6 md:hidden">
       <SwiperContainer className="mx-auto w-full max-w-[550px]">

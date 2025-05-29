@@ -8,11 +8,9 @@ import {
   SwiperSlide,
 } from "@/components/ui/swiper"
 
-import { use10YearAnniversary } from "./use10YearAnniversary"
+import { innovationCards } from "./data"
 
 export default function InnovationSwiper() {
-  const { innovationCards } = use10YearAnniversary()
-
   return (
     <div className="w-[100%]">
       <SwiperContainer className="mx-auto w-full max-w-[550px] xl:max-w-[700px]">

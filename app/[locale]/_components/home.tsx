@@ -620,7 +620,7 @@ const HomePage = ({
               <Image
                 src={TenYearGraphicImage}
                 alt=""
-                className="-mb-2 -mt-16 max-h-[415px] object-contain sm:-mb-12 sm:-mt-24 md:-mb-16 md:-mt-32 lg:-mb-20 lg:-mt-40 xl:-mb-24 xl:-mt-52"
+                className="mx-auto -mb-2 -mt-16 max-w-[500px] object-contain sm:-mt-24 md:-mt-32"
               />
               <h3 className="mb-4 text-4xl">10 Years of ethereum</h3>
               <div className="mb-4 flex flex-col gap-2">
