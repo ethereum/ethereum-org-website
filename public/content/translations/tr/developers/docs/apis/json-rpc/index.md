@@ -1093,7 +1093,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockByHash","params":["0
 // Result
 {
 {
-"jsonrpc": "2.0",
+  "jsonrpc": "2.0",
 "id": 1,
 "result": {
     "difficulty": "0x4ea3f27bc",
@@ -1600,7 +1600,7 @@ Belirli bir filtre nesnesiyle eşleşen tüm günlüklerin bir dizisini döndür
 - `toBlock`: `QUANTITY|TAG` - (isteğe bağlı, default: `"latest"`) Tamsayı blok numarası veya son önerilen blok için `"latest"`, en son güvenli blok için `"safe"`, en son sonlandırılmış blok için `"finalized"`, henüz bir blokta olmayan işlemler için `"pending"` ve `"earliest"`.
 - `address`: `DATA|Array`, 20 Bayt - (isteğe bağlı) Sözleşme adresi veya günlüklerin kaynaklanması gereken adreslerin listesi.
 - `topics`: `Array of DATA`, - (isteğe bağlı) 32 Baytlık dizi `DATA` konu. Konular sıraya bağlıdır. Her konu, "veya" seçenekleriyle birlikte bir VERİ dizisi de olabilir.
-- `blockhash`: `DATA`, 32 Bayt - (isteğe bağlı, **gelecek**) EIP-234 eklenmesiyle, `blockHash`, 32 baytlık `blockHash` ile tek bloka döndürülen günlükleri kısıtlayan yeni bir filtre seçeneği olacaktır. `blockHash` kullanımı, `fromBlock` ile eş değerdir = `toBlock` = `blockHash` karmalı blok numarası. Filtre ölçütlerinde `blockHash` varsa, ne `fromBlock` ne de `toBlock`'a izin verilmez.
+- `blockHash`: `DATA`, 32 Bayt - (isteğe bağlı, **gelecek**) EIP-234 eklenmesiyle, `blockHash`, 32 baytlık `blockHash` ile tek bloka döndürülen günlükleri kısıtlayan yeni bir filtre seçeneği olacaktır. `blockHash` kullanımı, `fromBlock` ile eş değerdir = `toBlock` = `blockHash` karmalı blok numarası. Filtre ölçütlerinde `blockHash` varsa, ne `fromBlock` ne de `toBlock`'a izin verilmez.
 
 ```js
 params: [
