@@ -1,9 +1,11 @@
+// TODO: Fix RTL compatibility
+
 import * as React from "react"
 import useEmblaCarousel, {
   type UseEmblaCarouselType,
 } from "embla-carousel-react"
+import { MdChevronLeft, MdChevronRight } from "react-icons/md"
 
-import { ChevronNext, ChevronPrev } from "@/components/Chevron"
 import { Button } from "@/components/ui/buttons/Button"
 
 import { cn } from "@/lib/utils/cn"
@@ -215,7 +217,7 @@ const CarouselPrevious = React.forwardRef<
       onClick={scrollPrev}
       {...props}
     >
-      <ChevronPrev className="h-8 w-8" />
+      <MdChevronLeft className="h-8 w-8" />
       <span className="sr-only">Previous slide</span>
     </Button>
   )
@@ -244,7 +246,7 @@ const CarouselNext = React.forwardRef<
       onClick={scrollNext}
       {...props}
     >
-      <ChevronNext className="h-8 w-8" />
+      <MdChevronRight className="h-8 w-8" />
       <span className="sr-only">Next slide</span>
     </Button>
   )

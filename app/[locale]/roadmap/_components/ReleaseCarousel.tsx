@@ -1,5 +1,8 @@
 "use client"
 
+// TODO: Extract intl strings
+// TODO: Fix RTL compatibility; currenly forced to LTR flow
+
 import { useEffect, useState } from "react"
 
 import { Image } from "@/components/Image"
@@ -73,7 +76,7 @@ const ReleaseCarousel = () => {
   }, [api1, api2])
 
   return (
-    <div className="w-full max-w-[100vw] overflow-hidden">
+    <div className="w-full max-w-[100vw] overflow-hidden" dir="ltr">
       <div className="mx-auto w-full max-w-screen-2xl px-4 sm:px-6">
         <div className="w-full rounded-2xl bg-background-highlight py-6">
           <div className="flex flex-col gap-6">
@@ -84,6 +87,7 @@ const ReleaseCarousel = () => {
               opts={{
                 align: "center",
                 containScroll: false,
+                direction: "ltr",
                 loop: false,
                 startIndex: findLatestReleaseIndex(),
               }}
@@ -202,6 +206,7 @@ const ReleaseCarousel = () => {
               opts={{
                 align: "center",
                 containScroll: false,
+                direction: "ltr",
                 loop: false,
                 startIndex: findLatestReleaseIndex(),
               }}
