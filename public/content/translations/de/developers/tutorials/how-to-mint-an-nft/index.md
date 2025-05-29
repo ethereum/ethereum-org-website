@@ -15,7 +15,7 @@ published: 2021-04-22
 
 [Beeple](https://www.nytimes.com/2021/03/11/arts/design/nft-auction-christies-beeple.html): 69 Millionen USD [3LAU](https://www.forbes.com/sites/abrambrown/2021/03/03/3lau-nft-nonfungible-tokens-justin-blau/?sh=5f72ef64643b): 11 Millionen USD [Grimes](https://www.theguardian.com/music/2021/mar/02/grimes-sells-digital-art-collection-non-fungible-tokens): 6 Millionen USD
 
-Sie alle haben ihre NFTs mit der leistungsstarken API von Alchemy geprägt. In diesem Tutorial zeigen wir Ihnen, wie das in <10 Minuten geht.
+Sie alle haben ihre NFTs mit der leistungsstarken API von Alchemy geprägt. In diesem Tutorial zeigen wir Ihnen, wie das in \<10 Minuten geht.
 
 "NFTs prägen" – ist die Veröffentlichung einer einzigartigen Instanz Ihres ERC-721-Tokens auf der Blockchain. Mit unserem Smart Contract aus [Teil 1 dieser NFT-Tutorialserie](/developers/tutorials/how-to-write-and-deploy-an-nft/) möchten wir unsere Web3-Fähigkeiten unter Beweis stellen und einen NFT prägen. Am Ende dieses Tutorials sind Sie selbst in der Lage, so viele NFTs zu prägen, wie Ihr Herz (und Ihr Wallet) begehrt.
 

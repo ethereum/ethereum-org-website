@@ -45,6 +45,7 @@ const EventCard: React.FC<EventCardProps> = ({
       </CardHeader>
       <div className="flex items-center justify-center">
         {imageUrl ? (
+          // eslint-disable-next-line @next/next/no-img-element
           <img
             src={imageUrl}
             alt={title}

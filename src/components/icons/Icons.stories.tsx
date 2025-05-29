@@ -2,8 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react"
 
 import { Center, Flex } from "../ui/flex"
 
-import EthHomeIcon from "./eth-home-icon.svg"
-import FeedbackThumbsUpIcon from "./feedback-thumbs-up-icon.svg"
+import { FilterBurgerIcon } from "./wallets/FilterBurgerIcon"
 import { HighlightDarkIcon } from "./HighlightDarkIcon"
 import { HighlightIcon } from "./HighlightIcon"
 import {
@@ -79,7 +78,6 @@ import {
   DesktopIcon,
   ENSSupportIcon,
   ERC20SupportIcon,
-  FilterBurgerIcon,
   GasFeeCustomizationIcon,
   HardwareIcon,
   HardwareSupportIcon,
@@ -95,6 +93,7 @@ import {
   SwapIcon,
   WithdrawCryptoIcon,
 } from "./wallets"
+import { EthHomeIcon, FeedbackThumbsUpIcon } from "."
 
 const meta = {
   title: "Atoms / Media & Icons / Icons",
@@ -193,17 +192,19 @@ const iconsDefinitions = [
 iconsDefinitions.sort((a, b) =>
   (a?.displayName || "") > (b?.displayName || "") ? 1 : -1
 )
-const items = iconsDefinitions.map((IconDef) => (
-  <Flex
-    key={IconDef.displayName}
-    className="flex-col gap-4 border border-background-highlight p-4"
-  >
-    <Center>
-      <IconDef className="size-[50px]" />
-    </Center>
-    <Center>{IconDef.displayName}</Center>
-  </Flex>
-))
+const items = iconsDefinitions.map((IconDef, idx) => {
+  return (
+    <Flex
+      key={idx}
+      className="flex-col gap-4 border border-background-highlight p-4"
+    >
+      <Center>
+        <IconDef className="size-[50px]" />
+      </Center>
+      <Center>{IconDef.displayName}</Center>
+    </Flex>
+  )
+})
 
 export const Icons: StoryObj<typeof meta> = {
   render: () => {

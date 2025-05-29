@@ -33,7 +33,6 @@ This is a curated list of user research done in web3 that may help with design a
 | <Tag status="tag">Staking</Tag>             | [Staking: Key trends, takeaways, and predictions - Eth Staker](https://lookerstudio.google.com/u/0/reporting/cafcee00-e1af-4148-bae8-442a88ac75fa/page/p_ja2srdhh2c?s=hmbTWDh9hJo) |
 | <Tag status="tag">Staking</Tag>             | [Multi App Staking](<https://github.com/threshold-network/UX-User-Research/blob/main/Multi-App%20Staking%20(MAS)/iterative-user-study/MAS%20Iterative%20User%20Study.pdf>)         |
 | <Tag variant="solid" status="error">DAO</Tag>                    | [2022 DAO Research Update: What do DAO Builders Need?](https://blog.aragon.org/2022-dao-research-update/)                                                                          |
-| <Tag status="error">DeFi</Tag>                  | [The state of Defi 2024](https://stateofdefi.org/) (ongoing survey)                                                                                                                                |
 | <Tag status="error">DeFi</Tag>                  | [Coverage pools](https://github.com/threshold-network/UX-User-Research/tree/main/Keep%20Coverage%20Pool)                                                                           |
 | <Tag status="error">DeFi</Tag>                  | [ConSensys: DeFi User Research Report 2022](https://cdn2.hubspot.net/hubfs/4795067/ConsenSys%20Codefi-Defi%20User%20ResearchReport.pdf)                                            |
 | <Tag variant="solid">Metaverse</Tag>             | [Metaverse: User Research Report](https://www.politico.com/f/?id=00000187-7685-d820-a7e7-7e85d1420000)                                                                             |
@@ -45,7 +44,6 @@ This is a curated list of user research done in web3 that may help with design a
 - [Web3 UX Design Handbook](https://web3ux.design/) - Practical guide to designing Web3 apps
 - [Web3 Design Principles](https://medium.com/@lyricalpolymath/web3-design-principles-f21db2f240c1) - A framework of UX rules for blockchain based dapps
 - [Blockchain Design Principles](https://medium.com/design-ibm/blockchain-design-principles-599c5c067b6e) - Lessons learned by the blockchain design team at IBM
-- [W3design.io](https://w3design.io/) - A curated library of UI flows of different projects in the ecosystem
 - [Neueux.com](https://neueux.com/apps) - UI library of user flows with diverse filtering options
 - [Web3's Usability Crisis: What You NEED to Know!](https://www.youtube.com/watch?v=oBSXT_6YDzg) - A panel discussion on pitfalls of developer focused project building (video, 34 min)
 
@@ -72,7 +70,6 @@ Get involved in professional community-driven organizations or join design group
 
 - [Vectordao.com](https://vectordao.com/)
 - [Deepwork.studio](https://www.deepwork.studio/)
-- [Designer-dao.xyz](https://www.designer-dao.xyz/)
 - [We3.co](https://we3.co/)
 - [Openux.xyz](https://openux.xyz/)
 - [Open Source Web3Design](https://www.web3designers.org/)

@@ -79,6 +79,8 @@ Per "indirizzare" la diversità dei client non basta che i singoli utenti scelga
 
 [Prysm](https://docs.prylabs.network/docs/getting-started)
 
+[Grandine](https://docs.grandine.io/)
+
 Gli utenti tecnici possono aiutare ad accelerare questo processo scrivendo più tutorial e documentazioni per i client di minoranza e incoraggiando i propri peer che eseguono dei nodi a migrare dai client dominanti. Le guide per passare a un client di consenso di minoranza sono disponibili su [clientdiversity.org](https://clientdiversity.org/).
 
 ## Pannelli di controllo sulla diversità dei client {#client-diversity-dashboards}

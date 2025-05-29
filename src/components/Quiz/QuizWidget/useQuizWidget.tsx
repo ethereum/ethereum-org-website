@@ -64,6 +64,7 @@ export const useQuizWidget = ({
     setQuizData(quiz)
   }
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(initialize, [quizKey])
 
   const currentQuestionIndex = userQuizProgress.length

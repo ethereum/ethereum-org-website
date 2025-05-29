@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useState } from "react"
 import Highlight, {
   defaultProps,
@@ -39,10 +41,6 @@ const TopBarItem = ({
 
 const codeTheme = {
   light: {
-    plain: {
-      backgroundColor: "#f7f7f7", // background-highlight (gray-50)
-      color: "#6C24DF", // primary (purple-600)
-    },
     styles: [
       {
         style: { color: "#6c6783" },
@@ -111,10 +109,6 @@ const codeTheme = {
   },
   dark: {
     // Pulled from `defaultProps.theme` for potential customization
-    plain: {
-      backgroundColor: "#121212", // background-highlight (gray-900)
-      color: "#B38DF0", // primary (purple-400)
-    },
     styles: [
       {
         style: { color: "#6c6783" },
@@ -251,7 +245,7 @@ const Codeblock = ({
     /* Context: https://github.com/ethereum/ethereum-org-website/issues/6202 */
     <div className={cn("relative", className)} dir="ltr">
       <div
-        className="overflow-scroll rounded"
+        className="overflow-scroll rounded bg-background-highlight text-primary"
         style={{
           maxHeight: isCollapsed
             ? `calc((1.2rem * ${LINES_BEFORE_COLLAPSABLE}) + 4.185rem)`

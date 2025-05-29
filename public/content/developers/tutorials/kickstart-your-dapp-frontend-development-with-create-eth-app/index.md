@@ -3,7 +3,7 @@ title: Kickstart your dapp frontend development with create-eth-app
 description: An overview of how to use create-eth-app and its features
 author: "Markus Waas"
 tags:
-  ["create-eth-app", "frontend", "javascript", "ethers.js", "the graph", "defi"]
+  ["frontend", "javascript", "ethers.js", "the graph", "defi"]
 skill: beginner
 lang: en
 published: 2020-04-27

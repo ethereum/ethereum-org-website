@@ -16,7 +16,7 @@ Goedkopere harde schijven kunnen worden gebruikt om oudere gegevens op te slaan,
 
 Er zijn verschillende manieren om de hoeveelheid gegevens die elke node moet opslaan te verminderen, waarbij voor elke manier het kernprotocol van Ethereum in verschillende mate moet worden bijgewerkt:
 
-- **Vervallen van de geschiedenis**: stelt nodes in staat om statusgegevens ouder dan X blocks te verwerpen, maar verandert niet hoe Ethereum-clients statusgegevens verwerken
+- **Geschiedenisverval**: stelt nodes in staat om statusgegevens ouder dan X blokken te verwerpen, maar verandert niet hoe Ethereum-clients statusgegevens verwerken.
 - **Vervallen van de status**: staat toe dat statusgegevens die niet vaak gebruikt worden inactief worden. Inactieve gegevens kunnen door clients worden genegeerd totdat ze weer worden geactiveerd.
 - **Zwakke statusloosheid**: alleen blockproducenten hebben toegang nodig tot volledige statusgegevens, andere nodes kunnen blocks verifiëren zonder een lokale statusdatabase.
 - **Sterke statusloosheid**: geen nodes hebben toegang nodig tot de volledige statusgegevens.

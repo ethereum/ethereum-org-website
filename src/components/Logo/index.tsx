@@ -1,3 +1,5 @@
+"use client"
+
 import { Image } from "@/components/Image"
 
 import useColorModeValue from "@/hooks/useColorModeValue"

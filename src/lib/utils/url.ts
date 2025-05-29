@@ -49,3 +49,8 @@ export const addSlashes = (href: string): string => {
 
 export const getFullUrl = (locale: string | undefined, path: string) =>
   addSlashes(new URL(join(locale || DEFAULT_LOCALE, path), SITE_URL).href)
+
+// Remove trailing slash from slug and add leading slash
+export const normalizeSlug = (slug: string) => {
+  return `/${slug.replace(/^\/+|\/+$/g, "")}`
+}

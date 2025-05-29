@@ -84,7 +84,7 @@ const CentralizedExchanges = ({
       <p className="mb-8 max-w-screen-md text-center">
         {t("page-get-eth-exchanges-intro")}
       </p>
-      <div className="w-full max-w-screen-sm">
+      <div className="relative z-50 w-full max-w-screen-sm">
         <Select
           instanceId="eth-exchange-region"
           aria-label={t("page-get-eth-exchanges-header")}
@@ -93,6 +93,7 @@ const CentralizedExchanges = ({
           placeholder={placeholderString}
           isSearchable
           variant="outline"
+          className="z-50"
         />
       </div>
       {!hasSelectedCountry && (

@@ -70,7 +70,7 @@ Low-level formal specifications can be given as either Hoare-style properties or
 
 ### Hoare-style properties {#hoare-style-properties}
 
-[Hoare Logic](https://en.wikipedia.org/wiki/Hoare_logic) provides a set of formal rules for reasoning about the correctness of programs, including smart contracts. A Hoare-style property is represented by a Hoare triple {_P_}_c_{_Q_}, where _c_ is a program and _P_ and _Q_ are predicates on the state of the _c_ (i.e., the program), formally described as _preconditions_ and _postconditions_, respectively.
+[Hoare Logic](https://en.wikipedia.org/wiki/Hoare_logic) provides a set of formal rules for reasoning about the correctness of programs, including smart contracts. A Hoare-style property is represented by a Hoare triple `{P}c{Q}`, where `c` is a program and `P` and `Q` are predicates on the state of the `c` (i.e., the program), formally described as _preconditions_ and _postconditions_, respectively.
 
 A precondition is a predicate describing the conditions required for the correct execution of a function; users calling into the contract must satisfy this requirement. A postcondition is a predicate describing the condition that a function establishes if correctly executed; users can expect this condition to be true after calling into the function. An _invariant_ in Hoare logic is a predicate that is preserved by execution of a function (i.e., it doesn't change).
 

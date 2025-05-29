@@ -1,10 +1,7 @@
 import { useTranslations } from "next-intl"
-import type { CSSProperties } from "react"
-import { Meta, StoryObj } from "@storybook/react"
+import type { Meta, StoryObj } from "@storybook/react/*"
 
-import { screens } from "@/lib/utils/screen"
-
-import { langViewportModes } from "../../../../.storybook/modes"
+import { langViewportModes } from "@/storybook/modes"
 
 import HubHeroComponent, { type HubHeroProps } from "./"
 
@@ -23,10 +20,7 @@ const meta = {
   },
   decorators: [
     (Story) => (
-      <div
-        style={{ "--hero-decorator-max-w": screens["2xl"] } as CSSProperties}
-        className="mx-auto max-w-[var(--hero-decorator-max-w)]"
-      >
+      <div className="mx-auto max-w-screen-2xl">
         <Story />
       </div>
     ),

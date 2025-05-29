@@ -1,3 +1,5 @@
+"use client"
+
 import WithdrawalCredentials from "@/components/Staking/WithdrawalCredentials"
 import Translation from "@/components/Translation"
 import { ListItem, UnorderedList } from "@/components/ui/list"

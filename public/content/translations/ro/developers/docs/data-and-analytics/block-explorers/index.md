@@ -244,17 +244,20 @@ Datele din nivelul cel mai de sus al stratului de consens includ următoarele:
 
 ## Exploratori de blocuri {#block-explorers}
 
-- [Etherscan](https://etherscan.io/) – un explorator de blocuri pe care îl puteți utiliza pentru Mainnet-ul Ethereum, Testnet-ul Ropsten, Testnet-ul Kovan, Testnet-ul Rinkeby și Testnet-ul Goerli.
+- [Etherscan](https://etherscan.io/) – un explorator de blocuri pe care îl puteți utiliza pentru Mainnet-ul Ethereum și Testnet-ul Sepolia.
+- [3xpl](https://3xpl.com/ethereum) – un explorator Ethereum open source fără reclame, care vă permite să vă descărcați propriile seturi de date.
+- [Beaconcha.in](https://beaconcha.in/) – un explorator de blocuri open source pentru Mainnet și Testnet-ul Sepolia.
+- [Blockchair](https://blockchair.com/ethereum) - cel mai privat explorator Ethereum. De asemenea, pentru sortarea și filtrarea datelor (mempool).
+- [Etherchain](https://www.etherchain.org/) – un explorator de bloc pentru Mainnet-ul Ethereum.
+- [Ethplorer](https://ethplorer.io/) – un explorator de bloc ce se axează pe tokenuri pentru Mainnet-ul Ethereum și testnet-ul Sepolia.
+- [Rantom](https://rantom.app/) – un explorator de tranzacții NFT și DeFi open source și prietenos cu utilizatorul pentru perspective mai detaliate.
+- [Ethernow](https://www.ethernow.xyz/) – un explorator de tranzacții în timp real care vă permite să vedeți stratul pre-lanț al Mainnet-ului Ethereum.
+- [Otterscan](https://otterscan.io/) – un explorator de bloc Ethereum alternativ open source.
 - [Blockscout](https://eth.blockscout.com/) – focuses on the following networks:
   - xDai – o combinație ingenioasă între tehnologia MakerDAO de monede stabile DAI și a tehnologiei POA de sidechain și tokenbridge.
   - POA – Un sidechain şi o reţea autonomă securizată de un grup de validatori de încredere. Toți validatorii din rețea sunt notari din Statele Unite, iar informațiile lor sunt accesibile publicului.
-  - Rețea de testare POA Sokol.
-  - ARTIS – un blockchain compatibil cu Ethereum.
   - [LUKSO L14](https://blockscout.com/lukso/l14) – L14 funcționează ca prima rețea de testare, pentru a permite comunității LUKSO să construiască și să testeze pe o infrastructură comună.
   - qDai.
-- [Etherchain](https://www.etherchain.org/) – un explorator de bloc pentru Mainnet-ul Ethereum.
-- [Ethplorer](https://ethplorer.io/) – un explorator de bloc ce se axează pe tokenuri pentru Mainnet-ul Ethereum și testnet-ul Kovan.
-- [Blockchair](https://blockchair.com/ethereum) - cel mai privat explorator Ethereum. De asemenea, pentru sortarea și filtrarea datelor (mempool).
 
 ## Exploratorii de blocuri ale Lanțului Beacon (nivelului de consens) {#beacon-chain-block-explorers}
 

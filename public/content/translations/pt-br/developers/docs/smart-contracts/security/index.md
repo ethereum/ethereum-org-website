@@ -115,7 +115,7 @@ A existência de auditorias e recompensas por bugs não dispensa sua responsabil
 
 - Use um [ambiente de desenvolvimento](/developers/docs/frameworks/) para testar, compilar e implantar contratos inteligentes
 
-- Execute seu código por meio de ferramentas básicas de análise de código, como [Cyfrin Aaderyn](https://github.com/Cyfrin/aderyn), Mythril e Slither. Idealmente, você deve fazer isso antes de cada solicitação de pull ser mesclado (merge) e comparar as diferenças na saída
+- Execute seu código por meio de ferramentas básicas de análise de código, como [Cyfrin Aderyn](https://github.com/Cyfrin/aderyn), Mythril e Slither. Idealmente, você deve fazer isso antes de cada solicitação de pull ser mesclado (merge) e comparar as diferenças na saída
 
 - Garanta que seu código seja compilado sem erros e que o compilador Solidity não emita alertas
 
@@ -563,7 +563,7 @@ Se você planeja consultar um oráculo on-chain para preços de ativos, consider
 
 - **[Padrão de Verificação de Segurança de Contrato Inteligente](https://github.com/securing/SCSVS)** - _Lista de verificação de quatorze partes criadas para padronizar a segurança de contratos inteligentes para desenvolvedores, arquitetos, revisores de segurança e fornecedores._
 
-- **[Aprenda sobre segurança e auditoria de contratos inteligentes](https://updraft.cyfrin.io/courses/security)** - _Curso definitivo de segurança e auditoria de contratos inteligentes, criado para desenvolvedores de contratos inteligentes que desejam melhorar suas práticas recomendadas de segurança e se tornar pesquisadores de segurança._
+- **[Aprenda sobre segurança e auditoria de contratos inteligentes](https://updraft.cyfrin.io/courses/security) - _Curso definitivo de segurança e auditoria de contratos inteligentes, criado para desenvolvedores de contratos inteligentes que desejam melhorar suas práticas recomendadas de segurança e se tornar pesquisadores de segurança._
 
 ### Tutoriais sobre segurança de contratos inteligentes {#tutorials-on-smart-contract-security}
 

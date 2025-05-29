@@ -92,7 +92,7 @@ title="Deweloperzy dapp i inteligentnych kontraktów"
 contentPreview="The Merge was designed to have minimal impact on smart contract and dapp developers."
 id="developers">
 
-Połączenie nastąpiło wraz ze zmianami w konsensusie, które obejmują również zmiany związane z:<
+Połączenie nastąpiło wraz ze zmianami w konsensusie, które obejmują również zmiany związane z:
 
 <ul>
   <li>struktura bloków</li>

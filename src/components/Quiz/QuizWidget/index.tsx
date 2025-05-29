@@ -1,3 +1,4 @@
+"use client"
 import { Dispatch, SetStateAction, useEffect, useRef } from "react"
 
 import type { QuizKey, QuizStatus, UserStats } from "@/lib/types"
