@@ -127,7 +127,7 @@ const ProductCard = ({
             </SubjectBadge>
           ))}
       </HStack>
-      <ButtonLink href={url} className="m-4 h-20 text-center">
+      <ButtonLink href={url} className="m-4 py-4 text-center">
         {t("open")} {name}
       </ButtonLink>
     </Flex>
