@@ -31,7 +31,7 @@
   "content-standardization": "Content standardization",
   "contributing": "Contributing",
   "contributors": "Contributors",
-  "contributors-thanks": "Everyone who has contributed to this page – thank you!",
+  "contributors-thanks": "Everyone who has <a href=\"/contributing\" target=\"_blank\">contributed</a> to this page – thank you!",
   "cookie-policy": "Cookie policy",
   "copied": "Copied",
   "copy": "Copy",
@@ -199,7 +199,7 @@
   "language-zh-tw": "Chinese Traditional",
   "languages": "Languages",
   "last-24-hrs": "Last 24 hours",
-  "last-edit": "Last edit",
+  "page-last-update": "Page last update:",
   "last-updated": "Last updated",
   "layer-2": "Layer 2",
   "learn": "Learn",
@@ -320,6 +320,7 @@
   "nav-roadmap-user-experience": "Better user experience",
   "nav-roadmap-ux-description": "Using Ethereum needs to be simplified",
   "nav-roadmap-ux-label": "Better user experience",
+  "nav-rwa-description": "A method for turning valuable commodities into digital tokens.",
   "nav-run-a-node-description": "Become fully sovereign while helping secure the network",
   "nav-security-description": "Learn best practices when using cryptocurrency",
   "nav-smart-contracts-description": "The fundamental building blocks of the Ethereum ecosystem",
@@ -389,6 +390,7 @@
   "rollup-component-technology-and-risk-summary": "Technology and risk summary",
   "rollup-component-website": "Website",
   "run-a-node": "Run a node",
+  "real-world-assets": "RWAs - Real-world assets",
   "saas": "Staking as a service",
   "scaling": "Scaling",
   "search": "Search",
@@ -449,5 +451,6 @@
   "withdrawals": "Staking withdrawals",
   "wrapped-ether": "Wrapped Ether",
   "yes": "Yes",
-  "zero-knowledge-proofs": "Zero-knowledge proofs"
+  "zero-knowledge-proofs": "Zero-knowledge proofs",
+  "translator": "Translator"
 }

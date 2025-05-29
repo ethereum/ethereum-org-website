@@ -21,34 +21,38 @@ import IconBeaconchain from "@/public/images/resources/beaconcha-in.png"
 import IconBlobsGuru from "@/public/images/resources/blobsguru.png"
 import IconBlocknative from "@/public/images/resources/blocknative.png"
 import IconBlockscout from "@/public/images/resources/blockscout.webp"
+import IconBundleBear from "@/public/images/resources/bundlebear.png"
 import IconCryptwerk from "@/public/images/resources/cryptowerk.png"
 import IconDefiLlama from "@/public/images/resources/defi-llama.png"
-import IconDefiMarketCap from "@/public/images/resources/defi-market-cap.png"
 import IconDefiScan from "@/public/images/resources/defi-scan.png"
 import IconEas from "@/public/images/resources/eas.png"
 import IconEigenphi from "@/public/images/resources/eigenphi.png"
 import IconEthGlyphBlack from "@/public/images/resources/eth-glyph-black.png"
 import IconEthGlyphBlueCircle from "@/public/images/resources/eth-glyph-blue-circle.png"
 import IconEthGlyphEOrg from "@/public/images/resources/eth-glyph-e-org.png"
-import IconEthGlyphRainbowFrame from "@/public/images/resources/eth-glyph-rainbow.frame.png"
+import IconEthGlyphRainbowFrame from "@/public/images/resources/eth-glyph-rainbow-frame.png"
 import IconEtherealize from "@/public/images/resources/etherealize.png"
 import IconEtherscan from "@/public/images/resources/etherscan.png"
 import IconEthproofs from "@/public/images/resources/ethproofs.png"
-import IconEthstaker from "@/public/images/resources/ethstaker.png"
 import IconFarcaster from "@/public/images/resources/farcaster.png"
 import IconGasTracker from "@/public/images/resources/gas.png"
 import IconGrowthepie from "@/public/images/resources/growthepie.png"
 import IconL2beat from "@/public/images/resources/l2beat.png"
+import IconLuckyStaker from "@/public/images/resources/lucky-staker.png"
 import IconNftgo from "@/public/images/resources/nftgo.png"
 import IconNodewatch from "@/public/images/resources/nodewatch.png"
+import IconPandaOps from "@/public/images/resources/panda.png"
+import IconPectrified from "@/public/images/resources/pectrified.png"
 import IconRatedNetwork from "@/public/images/resources/rated-network.png"
 import IconRelayscan from "@/public/images/resources/relayscan.png"
+import IconReserves from "@/public/images/resources/reserves.png"
 import IconRwa from "@/public/images/resources/rwa.png"
 import IconStablecoinsWtf from "@/public/images/resources/stablecoins-wtf.png"
 import IconSupermajority from "@/public/images/resources/supermajority.png"
 import IconTxCity from "@/public/images/resources/txcity.png"
 import IconUltrasoundMoney from "@/public/images/resources/ultrasound-money.png"
 import IconVisaOnchainAnalytics from "@/public/images/resources/visa-onchain-analytcs.png"
+import IconWalletBeat from "@/public/images/resources/walletbeat.png"
 
 const formatSmallUSD = (value: number, locale: string): string =>
   new Intl.NumberFormat(locale, {
@@ -159,6 +163,14 @@ export const useResources = ({ txCostsMedianUsd }): DashboardSection[] => {
           imgSrc: IconBeaconchain,
         },
         {
+          title: "Beacon Block Production Live",
+          description: t(
+            "page-resources-block-explorers-panda-ops-description"
+          ),
+          href: "https://lab.ethpandaops.io/beacon/block-production/live",
+          imgSrc: IconPandaOps,
+        },
+        {
           title: "Txcity.io",
           description: t("page-resources-block-explorers-txcity-description"),
           href: "https://txcity.io/",
@@ -240,12 +252,6 @@ export const useResources = ({ txCostsMedianUsd }): DashboardSection[] => {
           imgSrc: IconDefiLlama,
         },
         {
-          title: "DeFi Market Cap",
-          description: t("page-resources-defi-defimarketcap-description"),
-          href: "https://defimarketcap.io",
-          imgSrc: IconDefiMarketCap,
-        },
-        {
           title: "EigenPhi",
           description: t("page-resources-defi-eigenphi-description"),
           href: "https://www.eigenphi.io",
@@ -282,6 +288,7 @@ export const useResources = ({ txCostsMedianUsd }): DashboardSection[] => {
           description: t("page-resources-stablecoins-rwa-description"),
           href: "https://app.rwa.xyz/stablecoins",
           imgSrc: IconRwa,
+          className: "dark:[&_img]:invert",
         },
       ],
     },
@@ -342,6 +349,30 @@ export const useResources = ({ txCostsMedianUsd }): DashboardSection[] => {
           description: t("page-resources-adoption-cryptowerk-description"),
           href: "https://cryptwerk.com/analytics/ethereum/",
           imgSrc: IconCryptwerk,
+        },
+        {
+          title: "Strategic Ethereum Reserve",
+          description: t("page-resources-reserves-cryptowerk-description"),
+          href: "https://www.strategicethreserve.xyz",
+          imgSrc: IconReserves,
+        },
+      ],
+    },
+    {
+      title: t("page-resources-wallets-title"),
+      items: [
+        {
+          title: "Wallet Beat",
+          description: t("page-resources-wallets-wallet-beat-description"),
+          href: "https://wallet.page/",
+          imgSrc: IconWalletBeat,
+        },
+        {
+          title: "BundleBear",
+          description: t("page-resources-wallets-bundlebear-description"),
+          href: "https://www.bundlebear.com",
+          className: "dark:[&_img]:invert",
+          imgSrc: IconBundleBear,
         },
       ],
     },
@@ -404,10 +435,17 @@ export const useResources = ({ txCostsMedianUsd }): DashboardSection[] => {
           imgSrc: IconEtherscan,
         },
         {
-          title: "luckystaker.com",
+          title: "LuckyStaker",
           description: t("page-resources-nodes-luckystaker-description"),
           href: "https://luckystaker.com",
-          imgSrc: IconEthstaker,
+          imgSrc: IconLuckyStaker,
+          className: "dark:[&_img]:invert",
+        },
+        {
+          title: "Validators Overview after Pectra",
+          description: t("page-resources-nodes-pectrified-description"),
+          href: "https://pectrified.com/mainnet",
+          imgSrc: IconPectrified,
         },
         {
           title: "Ethereum Validator Queue",
@@ -483,6 +521,7 @@ export const useResources = ({ txCostsMedianUsd }): DashboardSection[] => {
           description: t("page-resources-relays-ratednetwork-description"),
           href: "https://explorer.rated.network/relays?network=mainnet",
           imgSrc: IconRatedNetwork,
+          className: "dark:[&_img]:invert",
         },
         {
           title: "Relay Scan",

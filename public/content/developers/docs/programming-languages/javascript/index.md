@@ -46,17 +46,15 @@ This will help you understand things like "what's the data structure of an accou
 
 If you prefer to read code, this JavaScript could be a great alternative to reading through our docs.
 
-**Check out the monorepo**  
-[`ethereumjs`](https://github.com/ethereumjs/ethereumjs-vm)
+**Check out the EVM**  
+[`@ethereumjs/evm`](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/evm)
 
 ### Nodes and clients {#nodes-and-clients}
 
 An Ethereumjs client is in active development that lets you dig into how Ethereum clients work in a language you understand; JavaScript!
 
-It used to be housed in a standalone [`repository`](https://github.com/ethereumjs/ethereumjs-client), however, was later merged into the EthereumVM monorepo as a package.
-
 **Check out the client**  
-[`ethereumjs-client`](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/client)
+[`@ethereumjs/client`](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/client)
 
 ## Other projects {#other-projects}
 

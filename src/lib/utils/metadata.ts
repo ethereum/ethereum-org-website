@@ -3,6 +3,7 @@ import { getTranslations } from "next-intl/server"
 
 import { DEFAULT_OG_IMAGE, SITE_URL } from "@/lib/constants"
 
+import { isLocaleValidISO639_1 } from "./translations"
 import { getFullUrl } from "./url"
 
 import { routing } from "@/i18n/routing"
@@ -71,10 +72,9 @@ export const getMetadata = async ({
       languages: {
         "x-default": xDefault,
         ...Object.fromEntries(
-          routing.locales.map((locale) => [
-            locale,
-            getFullUrl(locale, slugString),
-          ])
+          routing.locales
+            .filter(isLocaleValidISO639_1)
+            .map((locale) => [locale, getFullUrl(locale, slugString)])
         ),
       },
     },

@@ -651,6 +651,8 @@ const HomePage = ({
                           e.currentTarget.onerror = null
                           e.currentTarget.src = EventFallback.src
                         }}
+                        referrerPolicy="no-referrer"
+                        crossOrigin="anonymous"
                       />
                     </CardBanner>
                     <CardContent>
@@ -738,6 +740,8 @@ const HomePage = ({
                           }}
                           className="max-w-full object-cover object-center"
                           loading="lazy"
+                          referrerPolicy="no-referrer"
+                          crossOrigin="anonymous"
                         />
                       ) : (
                         <Image src={EventFallback} alt="" />

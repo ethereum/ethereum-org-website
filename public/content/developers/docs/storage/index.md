@@ -43,7 +43,7 @@ In most cases, instead of storing all data onchain, the hash of where the data i
 Platforms with contract-based persistence:
 
 - [Filecoin](https://docs.filecoin.io/about-filecoin/what-is-filecoin/)
-- [Skynet](https://siasky.net/)
+- [Skynet](https://sia.tech/)
 - [Storj](https://storj.io/)
 - [Züs](https://zus.network/)
 - [Crust Network](https://crust.network)
@@ -126,11 +126,11 @@ Proof-of-stake based:
 - [Documentation](https://docs.storj.io/)
 - [GitHub](https://github.com/storj/storj)
 
-**Skynet - _Skynet is a decentralized PoW chain dedicated to a decentralized web._**
+**Sia - _Harnesseses cryptography to create a trustless cloud storage marketplace, allowing buyers and sellers to transact directly._**
 
-- [Skynet.net](https://siasky.net/)
-- [Documentation](https://siasky.net/docs/)
-- [GitHub](https://github.com/SkynetLabs/)
+- [Skynet.net](https://sia.tech/)
+- [Documentation](https://docs.sia.tech/)
+- [GitHub](https://github.com/SiaFoundation/)
 
 **Filecoin - _Filecoin was created from the same team behind IPFS. It is an incentive layer on top of the IPFS ideals._**
 

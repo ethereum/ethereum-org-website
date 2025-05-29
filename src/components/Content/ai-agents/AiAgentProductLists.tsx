@@ -12,7 +12,7 @@ import heyanon from "@/public/images/ai-agents/heyanon.png"
 import luna from "@/public/images/ai-agents/luna.png"
 
 const AiAgentProductLists = ({ list }: { list: string }) => {
-  // TODO: LOGOS
+  // TODO: LOGOS, extract intl strings
   const productListSets = {
     "ai-agents": [
       {
@@ -40,7 +40,7 @@ const AiAgentProductLists = ({ list }: { list: string }) => {
             Luna engages with users constantly through own X account and live
             stream. You might receive an X reply if you tag her handle or a
             voice message if you comment on her stream and own her token! Luna
-            controls own on-chain wallet.
+            controls own onchain wallet.
           </p>,
           <div key="luna-button">
             <ButtonLink

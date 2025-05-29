@@ -395,7 +395,7 @@ export type FileContributor = {
   login: string
   avatar_url: string
   html_url: string
-  date?: string
+  date: string
 }
 
 type FilePath = string
@@ -559,8 +559,8 @@ export type StatsBoxState = ValueOrError<string>
 export type GrowThePieMetricKey = "txCount" | "txCostsMedianUsd"
 
 export type GrowThePieData = Record<GrowThePieMetricKey, MetricReturnData> & {
-  dailyTxCosts: Record<string, number>
-  activeAddresses: Record<string, number>
+  dailyTxCosts: Record<string, number | undefined>
+  activeAddresses: Record<string, number | undefined>
 }
 
 export type MetricName =
@@ -642,9 +642,19 @@ export type NonEVMChainName = "Starknet"
 
 export type ExtendedRollup = Rollup & {
   networkMaturity: MaturityLevel
-  txCosts: number
+  txCosts: number | undefined
   tvl: number
   walletsSupported: string[]
+  activeAddresses: number | undefined
+  launchDate: string | null
+  walletsSupportedCount: number
+  blockspaceData: {
+    nft: number
+    defi: number
+    social: number
+    token_transfers: number
+    unlabeled: number
+  } | null
 }
 
 // Wallets
@@ -970,6 +980,11 @@ export type EventCardProps = {
   className?: string
   location: string
   imageUrl?: string
+}
+
+export type PageWithContributorsProps = {
+  contributors: FileContributor[]
+  lastEditLocaleTimestamp: string
 }
 
 export type BreakpointKey = keyof typeof screens

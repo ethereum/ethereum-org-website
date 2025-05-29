@@ -5,6 +5,7 @@ export type Item = {
   description: string
   href: string
   imgSrc: StaticImageData
+  className?: string
 }
 
 export type DashboardBox = {

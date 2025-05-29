@@ -49,6 +49,7 @@ export const useNetworkColumns: ColumnDef<ExtendedRollup>[] = [
     },
     cell: ({ table, row }) => {
       const meta = table.options.meta as TableMeta
+
       return (
         <TableCell
           className={cn(
@@ -78,11 +79,20 @@ export const useNetworkColumns: ColumnDef<ExtendedRollup>[] = [
                   <Translation id="page-layer-2-networks:page-layer-2-networks-avg-transaction-fee" />
                 </p>
                 <p>
-                  $
-                  {row.original.txCosts.toLocaleString(meta.locale as Lang, {
-                    minimumFractionDigits: 2,
-                    maximumFractionDigits: 3,
-                  })}
+                  {row.original.txCosts ? (
+                    <>
+                      $
+                      {(row.original.txCosts || 0).toLocaleString(
+                        meta.locale as Lang,
+                        {
+                          minimumFractionDigits: 2,
+                          maximumFractionDigits: 3,
+                        }
+                      )}
+                    </>
+                  ) : (
+                    <p>-</p>
+                  )}
                 </p>
               </div>
               <div>
@@ -160,11 +170,17 @@ export const useNetworkColumns: ColumnDef<ExtendedRollup>[] = [
             row.original.canExpand === false && "border-b-4"
           )}
         >
-          $
-          {row.original.txCosts.toLocaleString(meta.locale as Lang, {
-            minimumFractionDigits: 2,
-            maximumFractionDigits: 3,
-          })}
+          {row.original.txCosts ? (
+            <p>
+              $
+              {row.original.txCosts.toLocaleString(meta.locale as Lang, {
+                minimumFractionDigits: 2,
+                maximumFractionDigits: 3,
+              })}
+            </p>
+          ) : (
+            <p>-</p>
+          )}
         </TableCell>
       )
     },

@@ -34,6 +34,8 @@ import {
 
 import externalTutorials from "@/data/externalTutorials.json"
 
+import { DEFAULT_LOCALE } from "@/lib/constants"
+
 import { useBreakpointValue } from "@/hooks/useBreakpointValue"
 
 type LinkFlexProps = FlexProps & {
@@ -93,14 +95,15 @@ const TutorialPage = ({
   contentNotTranslated,
 }: TutorialPageProps) => {
   const locale = useLocale()
+  const effectiveLocale = internalTutorials.length > 0 ? locale : DEFAULT_LOCALE
   const filteredTutorialsByLang = useMemo(
     () =>
       filterTutorialsByLang(
         internalTutorials,
         externalTutorials,
-        locale as Lang
+        effectiveLocale as Lang
       ),
-    [internalTutorials, locale]
+    [internalTutorials, effectiveLocale]
   )
 
   const allTags = useMemo(
