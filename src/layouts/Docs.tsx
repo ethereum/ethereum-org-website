@@ -1,3 +1,5 @@
+import { join } from "path"
+
 import { MDXRemoteProps } from "next-mdx-remote"
 import type { HTMLAttributes } from "react"
 
@@ -120,6 +122,7 @@ export const DocsLayout = ({
 }: DocsLayoutProps) => {
   const isPageIncomplete = !!frontmatter.incomplete
   const absoluteEditPath = getEditPath(slug)
+  const slugWithSlashes = join("/", slug, "/")
 
   return (
     <div className="flex w-full flex-col border-b">
@@ -133,7 +136,7 @@ export const DocsLayout = ({
         className="flex justify-between bg-background-highlight lg:pe-8"
         dir={contentNotTranslated ? "ltr" : "unset"}
       >
-        <SideNav path={slug} />
+        <SideNav path={slugWithSlashes} />
         <MainArticle className="min-w-0 flex-1 px-8 pb-8 pt-8 md:px-16 md:pb-16 md:pt-12">
           <H1 id="top">{frontmatter.title}</H1>
           <FileContributors
