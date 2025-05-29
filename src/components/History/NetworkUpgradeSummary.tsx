@@ -1,6 +1,7 @@
+"use client"
+
 import { useEffect, useState } from "react"
-import { useRouter } from "next/router"
-import { useTranslation } from "next-i18next"
+import { useLocale } from "next-intl"
 
 import type { Lang } from "@/lib/types"
 
@@ -12,13 +13,15 @@ import NetworkUpgradeSummaryData from "../../data/NetworkUpgradeSummaryData"
 import Emoji from "../Emoji"
 import InlineLink from "../ui/Link"
 
+import { useTranslation } from "@/hooks/useTranslation"
+
 type NetworkUpgradeSummaryProps = {
   name: string
 }
 
 const NetworkUpgradeSummary = ({ name }: NetworkUpgradeSummaryProps) => {
   const [formattedUTC, setFormattedUTC] = useState("")
-  const { locale } = useRouter()
+  const locale = useLocale()
   const localeForStatsBoxNumbers = getLocaleForNumberFormat(locale as Lang)
   const { t } = useTranslation("page-history")
 

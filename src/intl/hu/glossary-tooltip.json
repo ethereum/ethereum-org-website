@@ -102,7 +102,7 @@
   "ommer-term": "Ommer (nagybácsi) blokk",
   "ommer-definition": "Amikor egy proof-of-work (munkaigazolás) mechanizmus <a href=\"/glossary/#miner\">bányásza</a> talált egy érvényes <a href=\"/glossary/#block\">blokkot</a>, egy másik bányász talán beküldött egy ezzel versenyző blokkot, amelyet először tettek hozzá a blokklánc elejéhez. Ez az érvényes, de elévült blokk bekerülhet az újabb blokkokba <em>ommer-ként</em> (a szülőblokk testvére) és részleges blokkjutalmat lehet érte kapni. Ez a kifejezés a semleges megfogalmazása a szülőblokk testvérére vonatkozóan, de néha nagybácsinak (uncle) is nevezik. Ez általános volt az Ethereum esetében, amikor még <a href=\"/glossary/#pow\">proof-of-work</a>-alapú hálózat volt. Most, hogy az Ethereum <a href=\"/glossary/#pos\">proof-of-stake</a> alapra váltott, helyenként csak egy blokkjavaslat van kiválasztva.",
   "onchain-term": "Láncon belüli",
-  "onchain-definition": "Olyan műveletekre vagy tranzakciókra utal, amelyek a blokkláncon történnek és nyilvánosan elérhetőek.",
+  "onchain-definition": "Olyan műveletekre vagy tranzakciókra utal, amelyek a blokkláncon történnek és nyilvánosan elérhetők.",
   "optimistic-rollup-term": "Optimista típusú összevont tranzakciók",
   "optimistic-rollup-definition": "Az optimista összesítés egy 2. rétegű megoldás, amely felgyorsítja a tranzakciókat az Ethereumon, azt feltételezve, hogy alapértelmezés szerint érvényesek, hacsak nem támadják meg őket. <a href=\"/developers/docs/scaling/optimistic-rollups/\">További információk az optimista összesítésekről</a>.",
   "peer-to-peer-network-term": "Közvetítőmentes (peer-to-peer) hálózat",

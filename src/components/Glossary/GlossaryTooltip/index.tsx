@@ -1,5 +1,6 @@
+"use client"
+
 import React, { ReactNode } from "react"
-import { useRouter } from "next/router"
 
 import Tooltip, { type TooltipProps } from "@/components/Tooltip"
 import Translation from "@/components/Translation"
@@ -7,6 +8,8 @@ import InlineLink from "@/components/ui/Link"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { cleanPath } from "@/lib/utils/url"
+
+import { usePathname } from "@/i18n/routing"
 
 type GlossaryTooltipProps = Omit<TooltipProps, "content"> & {
   children: ReactNode
@@ -18,7 +21,7 @@ const GlossaryTooltip = ({
   termKey,
   ...props
 }: GlossaryTooltipProps) => {
-  const { asPath } = useRouter()
+  const pathname = usePathname()
 
   return (
     <span className="inline-block">
@@ -29,7 +32,7 @@ const GlossaryTooltip = ({
             <h6>
               <Translation
                 id={termKey + "-term"}
-                options={{ ns: "glossary-tooltip" }}
+                ns="glossary-tooltip"
                 // Override the default `a` tag transformation to avoid circular
                 // dependency issues
                 transform={{ a: InlineLink }}
@@ -44,7 +47,7 @@ const GlossaryTooltip = ({
             <span>
               <Translation
                 id={termKey + "-definition"}
-                options={{ ns: "glossary-tooltip" }}
+                ns="glossary-tooltip"
                 // Override the default `a` tag transformation to avoid circular
                 // dependency issues
                 transform={{ a: InlineLink }}
@@ -55,7 +58,7 @@ const GlossaryTooltip = ({
         onBeforeOpen={() => {
           trackCustomEvent({
             eventCategory: "Glossary Tooltip",
-            eventAction: cleanPath(asPath),
+            eventAction: cleanPath(pathname),
             eventName: termKey,
           })
         }}

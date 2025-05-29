@@ -1,4 +1,3 @@
-import { useTranslation } from "next-i18next"
 import { MdArrowForward } from "react-icons/md"
 
 import { ChildOnlyProp, TranslationKey } from "@/lib/types"
@@ -19,6 +18,8 @@ import {
   RightColumnPanel,
 } from "./AccordionCustomItem"
 import { useStablecoinAccordion } from "./useStablecoinAccordion"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 const SectionTitle = (props: ChildOnlyProp) => (
   <h4 className="mb-8 mt-0 text-start text-xl font-bold" {...props} />

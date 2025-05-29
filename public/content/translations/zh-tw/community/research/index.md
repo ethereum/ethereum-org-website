@@ -111,7 +111,7 @@ lang: zh-tw
 #### 近期研究 {#recent-research-2}
 
 - [排序者的 Arbitrum 公平排序](https://eprint.iacr.org/2021/1465)
-- [ethresear.ch 二層網路](https://ethresear.ch/c/layer-2/32)
+- [Ethresear.ch 二層網路](https://ethresear.ch/c/layer-2/32)
 - [以卷軸為中心的開發藍圖](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698)
 - [L2Beat](https://l2beat.com/)
 
@@ -189,7 +189,7 @@ lang: zh-tw
 
 - [錢包簡介](/wallets/)
 - [錢包安全簡介](/security/)
-- [ethresear.ch 安全性](https://ethresear.ch/tag/security)
+- [Ethresear.ch 安全性](https://ethresear.ch/tag/security)
 - [EIP-2938 帳戶抽象](https://eips.ethereum.org/EIPS/eip-2938)
 - [EIP-4337 帳戶抽象](https://eips.ethereum.org/EIPS/eip-4337)
 
@@ -377,11 +377,11 @@ lang: zh-tw
 
 - [Wormhole 漏洞報告](https://blog.chainalysis.com/reports/wormhole-hack-february-2022/)
 - [遭駭以太坊合約事後分析列表](https://forum.openzeppelin.com/t/list-of-ethereum-smart-contracts-post-mortems/1191)
-- [Rekt 新聞](https://twitter.com/RektHQ?s=20\&t=3otjYQdM9Bqk8k3n1a1Adg)
+- [Rekt 新聞](https://twitter.com/RektHQ?s=20&t=3otjYQdM9Bqk8k3n1a1Adg)
 
 #### 近期研究 {#recent-research-19}
 
-- [ethresear.ch 應用程式](https://ethresear.ch/c/applications/18)
+- [Ethresear.ch 應用程式](https://ethresear.ch/c/applications/18)
 
 ### 技術堆疊 {#technology-stack}
 

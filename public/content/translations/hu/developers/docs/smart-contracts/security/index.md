@@ -115,7 +115,7 @@ Az auditok és hibavadászatok nem csökkentik az Ön felelősségét, hogy jó 
 
 - Használjon [fejlesztői környezetet](/developers/docs/frameworks/) az okosszerződések tesztelésére, átfordítására és telepítésére
 
-- Futtassa le a kódját olyan alapvető kódelemző eszközökön, mint a [Cyfrin Aaderyn](https://github.com/Cyfrin/aderyn), Mythril és Slither. Ideális esetben ezt minden egyes pullrequest-beolvasztás előtt meg kell tenni, majd összehasonlítani az eredmények különbségeit
+- Futtassa le a kódját olyan alapvető kódelemző eszközökön, mint a [Cyfrin Aderyn](https://github.com/Cyfrin/aderyn), Mythril és Slither. Ideális esetben ezt minden egyes pullrequest-beolvasztás előtt meg kell tenni, majd összehasonlítani az eredmények különbségeit
 
 - Biztosítsa, hogy a kód hibák nélkül kerül átfordításra, és a Solidity átfordító nem ad figyelmeztetéseket
 
@@ -563,7 +563,7 @@ Ha Ön azt tervezi, hogy egy láncon lévő orákulumot kérdez le eszközárak�
 
 - **[Smart Contract Security Verification Standard](https://github.com/securing/SCSVS)** – _Egy tizennégy részes ellenőrző lista fejlesztők, architektúrával foglalkozók, biztonság-ellenőrzők és beszállítók számára az okosszerződések biztonságának szabványosításához._
 
-- **[Az okosszerződések biztonságának és auditálásának elsajátítása](https://updraft.cyfrin.io/courses/security)** – _Az okosszerződések biztonságát és auditálását oktató tanfolyamot olyan fejlesztőknek hozták létre, akik a legjobb biztonsági gyakorlatok mentén szeretnének fejleszteni és biztonsági kutatókká válni._
+- **[Az okosszerződések biztonságának és auditálásának elsajátítása](https://updraft.cyfrin.io/courses/security) – _Az okosszerződések biztonságát és auditálását oktató tanfolyamot olyan fejlesztőknek hozták létre, akik a legjobb biztonsági gyakorlatok mentén szeretnének fejleszteni és biztonsági kutatókká válni._
 
 ### Útmutatók az okosszerződés-biztonságról {#tutorials-on-smart-contract-security}
 

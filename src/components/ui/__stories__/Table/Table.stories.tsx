@@ -1,7 +1,4 @@
-import type { CSSProperties } from "react"
 import { Meta, StoryObj } from "@storybook/react"
-
-import { screens } from "@/lib/utils/screen"
 
 import { Flex } from "../../flex"
 import { Table as TableComponent } from "../../table"
@@ -17,10 +14,7 @@ const meta = {
   component: TableComponent,
   decorators: [
     (Story) => (
-      <Flex
-        style={{ "--table-decorator-max-w": screens["md"] } as CSSProperties}
-        className="max-w-[var(--table-decorator-max-w)] flex-col gap-16"
-      >
+      <Flex className="max-w-screen-md flex-col gap-16">
         <Story />
       </Flex>
     ),

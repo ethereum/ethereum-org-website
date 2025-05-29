@@ -36,12 +36,20 @@ Some collaborative efforts to make Ethereum enterprise friendly have been made b
 
 ## Enterprise developer resources {#enterprise-developer-resources}
 
-### Products and services {#products-and-services}
+### Scalability solutions {#scalability-solutions}
+
+Most new blockchain applications are being built on [Layer 2](/layer-2) chains. Layer 2 is a set of technologies or systems that run on top of Ethereum (Layer 1), inherit security properties from Layer 1, and provide greater transaction processing capacity (throughput), lower transaction fees (operating cost), and faster transaction confirmations than Layer 1. Layer 2 scaling solutions are secured by Layer 1, but they enable blockchain applications to handle many more users or actions or data than Layer 1 could accommodate. Many of them leverage recent advances in cryptography and zero-knowledge (ZK) proofs to maximize performance and security, and some offer an additional level of privacy.
+
+[L2 Beat](https://l2beat.com/scaling/summary) maintains an up to date list of Layer 2 networks and key metrics.
+
+### Products, services, and tools {#products-and-services}
 
 - [4EVERLAND](https://www.4everland.org/) - _provides APIs, RPC services and tools for hosting decentralized applications and enabling decentralized storage on Ethereum_
 - [Alchemy](https://www.alchemy.com/) - _provides API services and tools for building and monitoring applications on Ethereum_
+- [Baseline Project](https://www.baseline-protocol.org/) - _a set of tools and libraries that helps enterprises coordinate complex, multi-party business processes and workflows with privacy while keeping data in respective systems of record. The standard enables two or more state machines to achieve and maintain data consistency and workflow continuity by using a network as a common frame of reference._
 - [Blast](https://blastapi.io/) - _an API platform that provides RPC/WSS APIs for Ethereum Archive Mainnet and Testnets._
 - [Blockapps](https://blockapps.net/) - _implementation of the Enterprise Ethereum protocol, tooling and APIs that form the STRATO platform_
+- [Chainlens](https://www.chainlens.com/) - _SaaS and on-prem blockchain data and analytics platform from Web3 Labs_
 - [Chainstack](https://chainstack.com/) - _mainnet and testnet Ethereum infrastructure hosted in public & isolated customer clouds_
 - [ConsenSys](https://consensys.io/) - _provides a range of products and tools for building on Ethereum, as well as consulting and custom development services_
 - [Crossmint](http://crossmint.com/) _Enterprise-grade web3 development platform to deploy smart contracts, enable credit-card and cross chain payments, and use APIs to create, distribute, sell, store, and edit NFTs._
@@ -50,32 +58,21 @@ Some collaborative efforts to make Ethereum enterprise friendly have been made b
 - [Hyperledger Besu](https://www.hyperledger.org/use/besu) - _an enterprise focused open-source Ethereum client developed under the Apache 2.0 license and written in Java_
 - [Infura](https://infura.io/) - _scalable API access to the Ethereum and IPFS networks_
 - [Kaleido](https://kaleido.io/) - _an enterprise-focused development platform that offers simplified blockchain and digital asset applications_
-- [NodeReal](https://nodereal.io/) - _provides scalable blockchain infrastructure and API services provider for the Web3 ecosystem_
 - [Moralis](http://moralis.io/) - _enterprise grade APIs and Nodes with a SOC2 type 2 certification_
-- [Provide](https://provide.services/) - _enterprise zero-knowledge middleware_
+- [Nightfall](https://github.com/EYBlockchain/nightfall_3) - _an application for transferring ERC20, ERC721 and ERC1155 applications under Zero Knowledge, using an Optimistic Rollup, from Ernst & Young_
+- [NodeReal](https://nodereal.io/) - _provides scalable blockchain infrastructure and API services provider for the Web3 ecosystem_
 - [QuickNode](https://www.quicknode.com/) - _provides reliable and fast nodes with high-level APIs like NFT API, Token API, etc., while delivering a unified product suite and enterprise-grade solutions_
 - [Tenderly](https://tenderly.co) - _a Web3 development platform that provides debugging, observability, and infrastructure building blocks for developing, testing, monitoring, and operating smart contracts_
 - [Unibright](https://unibright.io/) - _a team of blockchain specialists, architects, developers and consultants with 20+ years of experience in business processes and integration_
 - [Zeeve](https://www.zeeve.io/) - _provides a range of products and tools for building on Ethereum, also infrastructure and APIs for Enterprise Web3 applications._
 
-### Tooling and libraries {#tooling-and-libraries}
-
-- [Baseline Project](https://www.baseline-protocol.org/) - _The Baseline Protocol is a set of tools and libraries that helps enterprises coordinate complex, multi-party business processes and workflows with privacy while keeping data in respective systems of record. The standard enables two or more state machines to achieve and maintain data consistency and workflow continuity by using a network as a common frame of reference._
-- [Chainlens](https://www.chainlens.com/) - _SaaS and on-prem blockchain data and analytics platform from Web3 Labs_
-- [Ernst & Young's 'Nightfall'](https://github.com/EYBlockchain/nightfall_3) - _an application for transferring ERC20, ERC721 and ERC1155 applications under Zero Knowledge, using an Optimistic Rollup_
-
-### Scalability solutions {#scalability-solutions}
-
-Most new blockchain applications are being built on [Layer 2](/layer-2) chains. Layer 2 is a set of technologies or systems that run on top of Ethereum (Layer 1), inherit security properties from Layer 1, and provide greater transaction processing capacity (throughput), lower transaction fees (operating cost), and faster transaction confirmations than Layer 1. Layer 2 scaling solutions are secured by Layer 1, but they enable blockchain applications to handle many more users or actions or data than Layer 1 could accommodate. Many of them leverage recent advances in cryptography and zero-knowledge (ZK) proofs to maximize performance and security, and some offer an additional level of privacy.
-
-## Enterprise applications live on Ethereum Mainnet {#enterprise-live-on-mainnet}
+## Enterprise applications built on Ethereum {#enterprise-applications-on-ethereum}
 
 Here are some of the enterprise applications that have been built on top of the public Ethereum Mainnet and L2s by and for traditional, non-blockchain based companies.
 
 ### Payments {#payments}
 
 - [Brave Browser](https://basicattentiontoken.org/) - _pays users for their attention to advertisements and users can pay publishers to support them, via the Basic Attention Token_
-- [City of Lugano, Switzerland](https://bitcoinsuisse.com/news/city-of-lugano-accepts-crypto-payments) - _payment of taxes and other municipal services_ 
 - [EthereumAds](https://ethereumads.com/) - _lets web site operators sell advertising space and get paid via Ethereum_
 - [hCaptcha](https://www.hcaptcha.com/) - _Bot prevention CAPTCHA system which pays web site operators for the work done by users to label data for machine learning. Now deployed by Cloudflare_
 - [Opera MiniPay](https://www.opera.com/products/minipay) - _makes mobile payments more accessible and secure for people in Africa with a non-custodial wallet and leverages phone numbers for easy transactions_
@@ -87,13 +84,14 @@ Here are some of the enterprise applications that have been built on top of the 
 ### Finance {#finance}
 
 - [ABN AMRO](https://tokeny.com/tokeny-fuels-abn-amro-bank-in-tokenizing-green-bonds-on-polygon/) - _with Tokeny, tokenized green bonds_
-- [Crowdz](https://crowdz.io/) - _invoice/receivables financing and factoring platform_
+- [Anvil](https://anvil.xyz/) - _a system of Ethereum-based smart contracts that manages collateral and issues fully secured credit_
 - [Mata Capital](https://consensys.io/blockchain-use-cases/finance/mata-capital) - _real estate investment tokenization_ 
 - [Obligate](https://www.obligate.com/) - _regulated and KYC'd onchain bonds and commercial paper_
-- [Siemens](https://press.siemens.com/global/en/pressrelease/siemens-issues-first-digital-bond-blockchain ) - _bond issuance_
+- [Siemens](https://press.siemens.com/global/en/pressrelease/siemens-remains-pioneer-another-digital-bond-successfully-issued-blockchain) - _bond issuance_
 - [Sila](https://silamoney.com/) - _banking and ACH payments infrastructure-as-a-service, using a stablecoin_
 - [Societe Generale FORGE](https://www.sgforge.com/product/bonds/) - _bond issuance_
 - [Taurus](https://www.taurushq.com/) - _issues tokenized securities_
+- [Visa Tokenized Asset Plaform](https://developer.visa.com/capabilities/visa-tokenized-asset-platform) - _provides the tools and infrastructure for banks to tokenize fiat currencies on blockchain networks_
 
 ### Asset tokenization {#tokenization}
 
@@ -104,8 +102,6 @@ Here are some of the enterprise applications that have been built on top of the 
 - [Clearmatics](https://www.clearmatics.com) - _builds decentralised network platforms for the p2p exchange of tokenised value_
 - [dClimate](https://www.dclimate.net/) - _decentralized climate information ecosystem_
 - [Fabrica](https://www.fabrica.land/) - _a platform for digitizing real estate assets, enabling DeFi borrowing and property trading_
-- [Fasset](https://www.fasset.com/) - _a platform for supporting sustainable infrastructure_
-- [Nori](https://nori.com/) - _open source market infrastructure to allow for carbon removal projects to measure and monetize their activity_
 - [Propy](https://propy.com/) - _a platform to automate residential real estate transactions with smart contracts_
 - [RealT](https://realt.co/) - _investors around the globe can buy into the US real estate market through fully-compliant, fractional, tokenized ownership_
 - [Rubey](https://www.rubey.be/) - _a platform that tokenizes high-end art to make it accessible to retail investors_
@@ -116,25 +112,26 @@ Here are some of the enterprise applications that have been built on top of the 
 ### Notarization of data {#notarization-of-data}
 
 - [ANSA](https://www.ansa.it/english/news/science_tecnology/2020/04/06/ansa-using-blockchain-to-help-readers_af820b4f-0947-439b-843e-52e114f53318.html) - _Italian news agency fights fake news and enables readers to verify the origin of news stories by recording them on Mainnet_
-- [Breitling](https://www.coindesk.com/breitling-arianee-all-new-watches-ethereum) - _records provenance and repair history of watches on Ethereum_
+- [Breitling](https://www.breitling.com/us-en/about/digital-passport/) - _records provenance and repair history of watches on Ethereum_
 - [BRØK](https://www.xn--brk-1na.no/) - _a cap tables platform for unlisted companies on the public, provided by The Norwegian Government_
 - [Certifaction](https://certifaction.com/) - _legally valid eSignatures with by privacy-by-design_
 - [EthSign](https://ethsign.xyz/) - _records signed electronic documents on the Ethereum blockchain_
 - [Stacktical](https://stacktical.com/) - _enables the software development, digital issuance and digital signature of Service Level Agreements (SLA) with native escrowing capabilities_
-- [Verizon](https://decrypt.co/46745/verizon-news-press-releases-ethereum-full-transparency) - _logs press releases on Ethereum to ensure corporate accountability and trust_
+- [Verizon Full Transparency](https://www.verizon.com/about/news/transparency-technology) - _logs press releases to ensure corporate accountability and trust_
+- [Verify](https://www.verifymedia.com/) - _by Fox Corporation stores hashes of media content on a Layer 2 to facilitate content licensing and combating deepfakes_
 - [WolfTown](https://www.mef.net/edge-view-blog/automated-secure-timely-sla-reporting-is-finally-a-reality/) - _by MEF and Sage Management automates Service Level Agreement reporting between telecom carriers_
 
 ### Supply chain {#supply-chain}
 
-- [Birra Peroni](https://www.ey.com/en_gl/news/2021/05/birra-peroni-is-the-first-industrial-organization-to-mint-unique-non-fungible-tokens-using-ey-opschain-traceability) _mints NFTs for each new batch of beer, enabling greater visibility and efficiency across its supply chain_
 - [CargoX](https://cargox.io/) - _electronic bill of lading and document transfer provider for shipping_
 - [Circularize](https://www.circularise.com/) - _an end-to-end traceability solution for raw materials made into products_
-- [EY OpsChain Contract Manager](https://blockchain.ey.com/products/contract-manager) - _enables companies to engage in a procurement workflow by issuing RFQ’s, contracts, purchase orders, and invoices across a network of business partners_
+- [EY OpsChain Contract Manager](https://blockchain.ey.com/) - _enables companies to engage in a procurement workflow by issuing RFQ’s, contracts, purchase orders, and invoices across a network of business partners_
+- [Global Battery Passport project](https://dlt.mobi/gbp-mvp/) _uses DIDs anchored on Ethereum through MOBI's Integrated Trust Network to track EV batteries, for compliance with EU regulations_
 - [Minespider](https://www.minespider.com/) - _supply chain tracking and provenance, and CO2 emissions tracking_
 - [Morpheus.network](https://morpheus.network/) - _supply chain automation platform_
 - [StaTwig](https://statwig.com/) - _supply chain operations_
 - [TradeTrust](https://www.tradetrust.io/) - _verifies electronic Bills of Lading (eBLs) for international shipping_
-- [Transmute](https://transmute.industries/) - _data exchange platform for global trade; supports Transactions with Decentralized Identity on Ethereum_
+- [Tradeverifyd](https://tradeverifyd.com/) - _data exchange platform for global trade; supports Transactions with Decentralized Identity on Ethereum_
 
 ### Insurance {#insurance}
 
@@ -145,17 +142,20 @@ Here are some of the enterprise applications that have been built on top of the 
 ### Identity, credentials and certifications {#credentials}
 
 - [BCdiploma](https://www.bcdiploma.com/) - _digitizes and verifies diplomas, certificates, and micro-credentials_
+- [Bhutan National Digital Identity](https://www.bhutanndi.com/) - _a foundation for Bhutan’s digital economy, facilitating trusted interactions between individuals and organizations
 - [Hyland Credentials](https://www.hylandcredentials.com) - _digital diplomas and other education credentials, licenses, and certificates_
 - [Palau Digital Residency Program](https://rns.id/) - _offers global citizens the ability to have a legal Palau government-issued ID_
+- [QuarkID](https://quarkid.org/) _is a self-soverign identity protocol for managing essential personal documents such as birth and marriage certificates, academic credentials, and proof of income, developed by the government of Buenos Aires for use in Argentia and other South American countries_
 - [Spherity](https://www.spherity.com/) - _offers digital identity management solutions to establish digital trust in ecosystems, focusing on decentralized identities and verifiable credentials_
 - [Zug Digital ID](https://ezug.ch/en/) - _is a blockchain-based identity system in Switzerland, offering residents digital access to government services and supporting functionalities like e-bike borrowing and municipal voting_
 
 ### Entertainment, NFTs, and Loyalty
 
-- [Adidas Virtual Gear](https://www.adidas.com/metaverse) - _a virtual gear NFT collection_
 - [The British Museum's Sandbox](https://decrypt.co/150405/british-museum-enter-metaverse-via-sandbox) - _an NFT collection_
 - [Fruitlab](https://fruitlab.com/) - _a platform for gamers to earn from watching, sharing and playing online games_
+- [Lamborghini](https://venturebeat.com/games/lamborghini-and-animocas-motorverse-tap-base-blockchain-for-in-game-assets/) - _creates in-game assets for Animoca’s Web3 racing game Motorverse_
 - [Nike Swoosh](https://www.swoosh.nike/) - _an NFT platform_
 - [Sothbebys Metaverse](https://metaverse.sothebys.com/) - _a digital art NFT marketplace by Sothebys_
+- [Soneium](https://soneium.org/) - _a Layer 2 by Sony to support Web3 games and NFTs
 
 If you would like to add to this list, please see [instructions for contributing](/contributing/).

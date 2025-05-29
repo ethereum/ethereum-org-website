@@ -1,5 +1,4 @@
-import { useRouter } from "next/router"
-import { useTranslation } from "next-i18next"
+import { useLocale } from "next-intl"
 
 import type { ChildOnlyProp, Lang } from "@/lib/types"
 
@@ -14,6 +13,7 @@ import { WEBSITE_EMAIL } from "@/lib/constants"
 import Select from "../Select"
 
 import { useCentralizedExchanges } from "@/hooks/useCentralizedExchanges"
+import { useTranslation } from "@/hooks/useTranslation"
 
 const ListContainer = (props: ChildOnlyProp) => (
   <div className="mt-16 flex flex-col gap-4" {...props} />
@@ -66,7 +66,7 @@ const CentralizedExchanges = ({
   lastDataUpdateDate,
 }: CentralizedExchangesProps) => {
   const { t } = useTranslation("page-get-eth")
-  const { locale } = useRouter()
+  const locale = useLocale()
   const {
     selectOptions,
     handleSelectChange,
@@ -84,7 +84,7 @@ const CentralizedExchanges = ({
       <p className="mb-8 max-w-screen-md text-center">
         {t("page-get-eth-exchanges-intro")}
       </p>
-      <div className="w-full max-w-screen-sm">
+      <div className="relative z-50 w-full max-w-screen-sm">
         <Select
           instanceId="eth-exchange-region"
           aria-label={t("page-get-eth-exchanges-header")}
@@ -93,6 +93,7 @@ const CentralizedExchanges = ({
           placeholder={placeholderString}
           isSearchable
           variant="outline"
+          className="z-50"
         />
       </div>
       {!hasSelectedCountry && (

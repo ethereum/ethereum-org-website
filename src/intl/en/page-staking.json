@@ -10,7 +10,7 @@
   "comp-withdrawal-comparison-new-link": "Visit Staking Launchpad",
   "comp-withdrawal-credentials-placeholder": "Validator index",
   "comp-withdrawal-credentials-error": "Oops! Double check validator index number and try again.",
-  "comp-withdrawal-credentials-upgraded-1": "Validator index {{validatorIndex}} is ready to start receiving rewards!",
+  "comp-withdrawal-credentials-upgraded-1": "Validator index {validatorIndex} is ready to start receiving rewards!",
   "comp-withdrawal-credentials-upgraded-2": "Withdrawal credentials linked to execution address:",
   "comp-withdrawal-credentials-not-upgraded-1": "This validator needs to be upgraded.",
   "comp-withdrawal-credentials-not-upgraded-1-testnet": "This Holesky testnet validator needs to be upgraded.",

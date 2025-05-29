@@ -1,6 +1,7 @@
+"use client"
+
 import { useEffect, useState } from "react"
 import { motion } from "framer-motion"
-import { useTranslation } from "next-i18next"
 import { MdChevronRight } from "react-icons/md"
 
 import { ChildOnlyProp } from "@/lib/types"
@@ -10,6 +11,8 @@ import docLinks from "../data/developer-docs-links.yaml"
 
 import { HStack } from "./ui/flex"
 import { BaseLink, LinkProps } from "./ui/Link"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 export const dropdownIconContainerVariant = {
   open: {

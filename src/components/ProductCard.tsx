@@ -1,5 +1,4 @@
 import type { ImageProps } from "next/image"
-import { useTranslation } from "next-i18next"
 import type { ReactNode } from "react"
 
 import { cn } from "@/lib/utils/cn"
@@ -9,6 +8,8 @@ import { Center, Flex, HStack } from "./ui/flex"
 import { Tag } from "./ui/tag"
 import GitStars from "./GitStars"
 import { Image } from "./Image"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 type SubjectBadgeProps = {
   subject: string
@@ -126,7 +127,7 @@ const ProductCard = ({
             </SubjectBadge>
           ))}
       </HStack>
-      <ButtonLink href={url} className="m-4 h-20">
+      <ButtonLink href={url} className="m-4 py-4 text-center">
         {t("open")} {name}
       </ButtonLink>
     </Flex>

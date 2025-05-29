@@ -2,7 +2,8 @@ import type { Meta, StoryObj } from "@storybook/react"
 
 import { Center } from "@/components/ui/flex"
 
-import { langViewportModes } from "../../../.storybook/modes"
+import { langViewportModes } from "@/storybook/modes"
+
 import { ContentLayout as ContentLayoutComponent } from "../ContentLayout"
 
 const meta = {
@@ -61,6 +62,21 @@ export const ContentLayout: StoryObj<typeof meta> = {
       ],
     },
     maxDepth: 2,
+    contributors: [
+      {
+        login: "github",
+        avatar_url: "/",
+        html_url: "https://github.com",
+        date: "2025-04-20T12:00:00.000Z",
+      },
+      {
+        login: "crowdin",
+        avatar_url: "/",
+        html_url: "https://crowdin.com",
+        date: "2025-04-20T12:00:00.000Z",
+      },
+    ],
+    lastEditLocaleTimestamp: "MM DD, YY",
     heroSection: (
       <Center className="h-[400px] border-2 border-dashed border-primary">
         Hero section

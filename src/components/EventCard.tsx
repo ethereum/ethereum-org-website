@@ -1,6 +1,5 @@
 import React from "react"
-import { useRouter } from "next/router"
-import { useTranslation } from "next-i18next"
+import { useLocale } from "next-intl"
 import { BsCalendar3 } from "react-icons/bs"
 
 import type { EventCardProps } from "@/lib/types"
@@ -12,6 +11,7 @@ import { cn } from "@/lib/utils/cn"
 
 import { Image } from "./Image"
 
+import { useTranslation } from "@/hooks/useTranslation"
 import EventFallback from "@/public/images/events/event-placeholder.png"
 
 const EventCard: React.FC<EventCardProps> = ({
@@ -24,7 +24,7 @@ const EventCard: React.FC<EventCardProps> = ({
   endDate,
   startDate,
 }) => {
-  const { locale } = useRouter()
+  const locale = useLocale()
   const { t } = useTranslation("page-community")
 
   const formatedDate = new Intl.DateTimeFormat(locale, {
@@ -45,6 +45,7 @@ const EventCard: React.FC<EventCardProps> = ({
       </CardHeader>
       <div className="flex items-center justify-center">
         {imageUrl ? (
+          // eslint-disable-next-line @next/next/no-img-element
           <img
             src={imageUrl}
             alt={title}

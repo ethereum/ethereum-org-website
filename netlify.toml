@@ -39,4 +39,4 @@
     path = "en/developers/tutorials/creating-a-wagmi-ui-for-your-contract/"
 
 [functions]
-  included_files = ["i18n.config.json","src/data/mocks/**/*"]
+  included_files = ["i18n.config.json", "src/intl/**/*", "src/data/mocks/**/*"]

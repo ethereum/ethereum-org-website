@@ -1,11 +1,11 @@
-import { useTranslation } from "next-i18next"
-
 import type { TranslationKey } from "@/lib/types"
 
 import Emoji from "@/components/Emoji"
 import { Image, type ImageProps } from "@/components/Image"
 
 import { cn } from "@/lib/utils/cn"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 export type CalloutProps = {
   children?: React.ReactNode

@@ -32,7 +32,7 @@ With Proto-Danksharding, it is possible to add many blobs to Ethereum blocks. Th
 
 The second stage of expanding blob data is complicated because it requires new methods for checking rollup data is available on the network and relies on [validators](/glossary/#validator) separating their [block](/glossary/#block) building and block proposal responsibilities. It also requires a way to cryptographically prove that validators have verified small subsets of the blob data.
 
-This second step is known as [“Danksharding”](/roadmap/danksharding/). **It is likely several years away** from being fully implemented. Danksharding relies on other developments such as [separating block building and block proposal](/roadmap/pbs) and new network designs that enable the network to efficiently confirm that data is available by randomly sampling a few kilobytes at a time, known as [data availability sampling (DAS)](/developers/docs/data-availability).
+This second step is known as ["Danksharding"](/roadmap/danksharding/). Implementation work continues, with progress being made on prerequisites like [separating block building and block proposal](/roadmap/pbs) and new network designs that enable the network to efficiently confirm that data is available by randomly sampling a few kilobytes at a time, known as [data availability sampling (DAS)](/developers/docs/data-availability).
 
 <ButtonLink variant="outline-color" href="/roadmap/danksharding/">More on Danksharding</ButtonLink>
 
@@ -44,9 +44,10 @@ This second step is known as [“Danksharding”](/roadmap/danksharding/). **It 
 
 ## Current progress {#current-progress}
 
-Proto-Danksharding is the first of these roadmap items to be implemented as part of the Cancun-Deneb ("Dencun") network upgrade in March of 2024. 
-**Full Danksharding is likely several years away**, as it relies upon several other roadmap items being completed first. Decentralizing rollup infrastructure is likely to be a gradual process - there are many different rollups that are building slightly different systems and will fully decentralize at different rates.
+Proto-Danksharding was successfully implemented as part of the Cancun-Deneb ("Dencun") network upgrade in March 2024. Since its implementation, rollups have begun utilizing blob storage, resulting in reduced transaction costs for users and millions of transactions processed in blobs.
 
-[More on the Dencun network upgrade](/roadmap/dencun/)
+Work on full Danksharding continues, with progress being made on its prerequisites like PBS (Proposer-Builder Separation) and DAS (Data Availability Sampling). Decentralizing rollup infrastructure is a gradual process - there are many different rollups that are building slightly different systems and will fully decentralize at different rates.
+
+[More on the Dencun network upgrade and its impact](/roadmap/dencun/)
 
 <QuizWidget quizKey="scaling" />

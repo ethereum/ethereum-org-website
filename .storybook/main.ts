@@ -1,3 +1,5 @@
+import path from "path"
+
 import TsconfigPathsPlugin from "tsconfig-paths-webpack-plugin"
 import type { StorybookConfig } from "@storybook/nextjs"
 
@@ -28,9 +30,9 @@ const config: StorybookConfig = {
       },
     },
     "@storybook/addon-interactions",
-    "storybook-react-i18next",
     "@storybook/addon-themes",
     "@chromatic-com/storybook",
+    "storybook-next-intl",
   ],
   staticDirs: ["../public"],
   framework: {
@@ -51,6 +53,11 @@ const config: StorybookConfig = {
           extensions: config.resolve.extensions,
         }),
       ]
+
+      config.resolve.alias = {
+        ...config.resolve.alias,
+        "@/storybook/*": path.resolve(__dirname, "./.storybook/"),
+      }
     }
 
     // This modifies the existing image rule to exclude .svg files

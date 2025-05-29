@@ -70,7 +70,7 @@ Formale Spezifizierungen auf Low-Level-Ebene können in Form von entweder Eigens
 
 ### Hoare-Stil-Eigenschaften {#hoare-style-properties}
 
-Die [Hoare-Logik](https://en.wikipedia.org/wiki/Hoare_logic) bietet eine Reihe von formalen Regeln für Schlussfolgerungen über die Korrektheit von Programmen, einschließlich der von Smart Contracts. Eine Eigenschaft im Hoare-Stil wird durch ein Hoare-Tripel {_P_}_c_{_Q_} dargestellt, wobei _c_ ein Programm ist und _P_ und _Q_ Prädikate über den Zustand von _c_ (d.h. das Programm) sind, die formal als _Präkonditionen_ bzw. _Postkonditionen_ beschrieben werden.
+Die [Hoare-Logik](https://en.wikipedia.org/wiki/Hoare_logic) bietet eine Reihe von formalen Regeln für Schlussfolgerungen über die Korrektheit von Programmen, einschließlich der von Smart Contracts. Eine Eigenschaft im Hoare-Stil wird durch ein Hoare-Tripel `{P}c{Q}` dargestellt, wobei `c` ein Programm ist und `P` und `Q` Prädikate über den Zustand von `c` (d.h. das Programm) sind, die formal als _Präkonditionen_ bzw. _Postkonditionen_ beschrieben werden.
 
 Eine Präkondition ist ein Prädikat, das die für die korrekte Ausführung einer Funktion erforderlichen Bedingungen beschreibt; Benutzer, die den Vertrag aufrufen, müssen diese Bedingung erfüllen. Eine Nachbedingung ist ein Prädikat, das die Bedingung beschreibt, die eine Funktion bei korrekter Ausführung festlegt; die Benutzer können davon ausgehen, dass diese Bedingung nach dem Aufruf der Funktion als erfüllt gilt. Eine _Invariante_ in der Hoare-Logik ist ein Prädikat, das durch die Ausführung einer Funktion erhalten bleibt (d. h. sich nicht verändert).
 

@@ -1,4 +1,6 @@
-import { useRouter } from "next/router"
+"use client"
+
+import { useLocale } from "next-intl"
 import { FaDiscord } from "react-icons/fa"
 
 import type { Lang } from "@/lib/types"
@@ -53,7 +55,7 @@ const events = [
 ]
 
 export const TranslatathonCalendar = () => {
-  const { locale } = useRouter()
+  const locale = useLocale()
 
   return (
     <Flex className="w-full flex-col py-16 lg:flex-row">

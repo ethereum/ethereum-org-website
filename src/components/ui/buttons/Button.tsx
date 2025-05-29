@@ -1,3 +1,5 @@
+"use client"
+
 import * as React from "react"
 import { cva, type VariantProps } from "class-variance-authority"
 import { Slot } from "@radix-ui/react-slot"
@@ -103,7 +105,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     ref
   ) => {
     const handleOnClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-      toId && scrollIntoView(toId)
+      toId && scrollIntoView("#" + toId)
       customEventOptions && trackCustomEvent(customEventOptions)
 
       onClick?.(e)

@@ -837,7 +837,7 @@ export const walletsData: WalletData[] = [
     supported_chains: ["Ethereum Mainnet", "OP Mainnet", "Arbitrum One"],
   },
   {
-    last_updated: "2024-09-26",
+    last_updated: "2025-03-19",
     name: "MEW wallet",
     image: MewImage,
     twBackgroundColor: "bg-[#05C0A5]",
@@ -884,6 +884,7 @@ export const walletsData: WalletData[] = [
       "zkSync Mainnet",
       "Base",
       "Arbitrum One",
+      "OP Mainnet",
     ],
   },
   {
