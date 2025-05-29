@@ -19,6 +19,14 @@ const TenYearHero = () => {
     setPosition({ x, y })
   })
 
+  const [prefersReducedMotion] = useMediaQuery([
+    "(prefers-reduced-motion: reduce)",
+  ])
+  const transform = {
+    transform: `translate(${position.x}px, ${position.y}px)`,
+  }
+  const style = prefersReducedMotion ? {} : transform
+
   return (
     <div className="relative">
       <Image src={TenYearBackgroundImage} alt="10 Year Anniversary" />
