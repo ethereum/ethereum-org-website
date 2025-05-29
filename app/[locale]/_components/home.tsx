@@ -67,10 +67,9 @@ import { breakpointAsNumber } from "@/lib/utils/screen"
 
 import { GITHUB_REPO_URL } from "@/lib/constants"
 
-import Countdown from "../10-year-anniversary/_components/CountDown"
+import TenYearHomeBanner from "../10-year-anniversary/_components/TenYearHomeBanner"
 
 import { useClipboard } from "@/hooks/useClipboard"
-import TenYearGraphicImage from "@/public/images/10-year-anniversary/10year-logo.png"
 import EventFallback from "@/public/images/events/event-placeholder.png"
 import BuildersImage from "@/public/images/heroes/developers-hub-hero.jpg"
 import ActivityImage from "@/public/images/heroes/layer-2-hub-hero.jpg"
@@ -614,28 +613,7 @@ const HomePage = ({
         </Section>
 
         <Section id="10-year-anniversary">
-          <div className="relative rounded-2xl bg-[url('/images/10-year-anniversary/10-year-background.png')] bg-cover bg-center text-center">
-            <div className="absolute h-full w-full rounded-2xl bg-ten-year-gradient opacity-80" />
-            <div className="relative rounded-2xl p-8">
-              <Image
-                src={TenYearGraphicImage}
-                alt=""
-                className="mx-auto -mb-2 -mt-16 max-w-[500px] object-contain sm:-mt-24 md:-mt-32"
-              />
-              <h3 className="mb-4 text-4xl">10 Years of ethereum</h3>
-              <div className="mb-4 flex flex-col gap-2">
-                <p>
-                  <strong>On July 30, 2015, at 3:44 p.m. UTC,</strong> the first
-                  block of the Ethereum blockchain came to life.
-                </p>
-                <p>Ten years down, infinity to go! 🚀</p>
-              </div>
-              <Countdown className="mb-8 mt-4 bg-background" />
-              <ButtonLink href="/10-year-anniversary/">
-                Join the party
-              </ButtonLink>
-            </div>
-          </div>
+          <TenYearHomeBanner />
         </Section>
 
         {/* Recent posts */}
