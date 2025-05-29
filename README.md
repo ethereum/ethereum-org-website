@@ -1947,8 +1947,10 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     </tr>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/JJOptimist"><img src="https://avatars.githubusercontent.com/u/86833563?v=4?s=100" width="100px;" alt="JJOptimist"/><br /><sub><b>JJOptimist</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3AJJOptimist" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/hotequil"><img src="https://avatars.githubusercontent.com/u/46814712?v=4?s=100" width="100px;" alt="João Paulo Hotequil"/><br /><sub><b>João Paulo Hotequil</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=hotequil" title="Code">💻</a> <a href="#translation-hotequil" title="Translation">🌍</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://pwn.xyz"><img src="https://avatars.githubusercontent.com/u/61500778?v=4?s=100" width="100px;" alt="microHoffman"/><br /><sub><b>microHoffman</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3AmicroHoffman" title="Bug reports">🐛</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/smithrashell"><img src="https://avatars.githubusercontent.com/u/36465023?v=4?s=100" width="100px;" alt="Rashell Smith"/><br /><sub><b>Rashell Smith</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Asmithrashell" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/aolson078"><img src="https://avatars.githubusercontent.com/u/69769089?v=4?s=100" width="100px;" alt="Alex Olson"/><br /><sub><b>Alex Olson</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Aaolson078" title="Bug reports">🐛</a></td>
     </tr>
   </tbody>
 </table>
@@ -1963,3 +1965,5 @@ This project follows the [all-contributors](https://github.com/all-contributors/
 ### Join our Discord server
 
 We have a space to discuss all things ethereum.org – share your ideas or just say hi over [on Discord](https://discord.gg/ethereum-org).
+
+[🔼Back to top!](#Table-of-contents)

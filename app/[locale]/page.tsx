@@ -13,6 +13,7 @@ import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { isValidDate } from "@/lib/utils/date"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
+import { getMetadata } from "@/lib/utils/metadata"
 import { polishRSSList } from "@/lib/utils/rss"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
@@ -130,13 +131,21 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 
 export const generateStaticParams = async () => LOCALES_CODES
 
-export async function generateMetadata() {
-  const t = await getTranslations()
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params
 
-  return {
-    title: t("page-index.page-index-meta-title"),
-    description: t("page-index.page-index-meta-description"),
-  }
+  const t = await getTranslations({ locale, namespace: "page-index" })
+
+  return await getMetadata({
+    locale,
+    slug: [""],
+    title: t("page-index-meta-title"),
+    description: t("page-index-meta-description"),
+  })
 }
 
 export default Page

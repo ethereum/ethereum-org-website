@@ -12726,6 +12726,16 @@
       ]
     },
     {
+      "login": "hotequil",
+      "name": "João Paulo Hotequil",
+      "avatar_url": "https://avatars.githubusercontent.com/u/46814712?v=4",
+      "profile": "https://github.com/hotequil",
+      "contributions": [
+        "code",
+        "translation"
+      ]
+    },
+    {
       "login": "microHoffman",
       "name": "microHoffman",
       "avatar_url": "https://avatars.githubusercontent.com/u/61500778?v=4",
@@ -12739,6 +12749,15 @@
       "name": "Rashell Smith",
       "avatar_url": "https://avatars.githubusercontent.com/u/36465023?v=4",
       "profile": "https://github.com/smithrashell",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "aolson078",
+      "name": "Alex Olson",
+      "avatar_url": "https://avatars.githubusercontent.com/u/69769089?v=4",
+      "profile": "https://github.com/aolson078",
       "contributions": [
         "bug"
       ]
