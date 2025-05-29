@@ -4,6 +4,8 @@ import { useEffect, useState } from "react"
 
 import { Image } from "@/components/Image"
 
+import { useEventListener } from "@/hooks/useEventListener"
+import { useMediaQuery } from "@/hooks/useMediaQuery"
 import TenYearBackgroundImage from "@/public/images/10-year-anniversary/10-year-background.png"
 import TenYearGraphicImage from "@/public/images/10-year-anniversary/10-year-graphic.png"
 
