@@ -6,6 +6,7 @@ import { Wallet } from "@/lib/types"
 
 import type { TableMeta } from "@/components/DataTable"
 import WalletInfo from "@/components/FindWalletProductTable/WalletInfo"
+import Translation from "@/components/Translation"
 import { TableCell } from "@/components/ui/table"
 
 export const useWalletColumns: ColumnDef<Wallet>[] = [
@@ -17,7 +18,7 @@ export const useWalletColumns: ColumnDef<Wallet>[] = [
       return (
         <div className="flex w-full flex-row items-center justify-between border-none px-4 py-2">
           <p className="text-body-medium">
-            Showing all wallets{" "}
+            <Translation id="page-wallets-find-wallet:page-find-wallet-showing-all-wallets" />{" "}
             <span className="text-body">({meta.dataLength})</span>
           </p>
         </div>
