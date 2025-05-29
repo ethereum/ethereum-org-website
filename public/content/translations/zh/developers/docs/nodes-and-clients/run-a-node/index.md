@@ -311,7 +311,7 @@ reth node \
     --authrpc.port 8551
 ```
 
-查看[配置 Reth](https://reth.rs/run/config.html?highlight=data%20directory#configuring-reth) 以了解更多关于默认数据目录的信息。 [Reth 的相关文档](https://reth.rs/run/mainnet.html)包含更多选项和配置详情。
+查看[配置 Reth](https://reth.rs/run/config.html?highlight=data%20directory#configuring-reth) 以了解更多有关默认数据目录的信息。 [Reth 的相关文档](https://reth.rs/run/mainnet.html)包含更多选项和配置详情。
 
 #### 启动共识客户端 {#starting-the-consensus-client}
 

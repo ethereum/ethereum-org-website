@@ -1,11 +1,11 @@
 {
-  "page-find-wallet-clear": "Réinitialiser les filtres",
+  "page-find-wallet-clear": "Effacer les filtres",
   "page-find-wallet-desc-2": "Vous ne savez pas ce qu'est un portefeuille ?",
   "page-find-wallet-desc-2-wallets-link": "En savoir plus sur les portefeuilles.",
   "page-find-wallet-description": "Les portefeuilles stockent et font des transactions avec vos ETH. Vous pouvez choisir une multitude de produits qui correspondent à vos besoins.",
   "page-find-wallet-last-updated": "Dernière mise à jour",
   "page-find-wallet-meta-description": "Trouvez et comparez les portefeuilles Ethereum en fonction des fonctionnalités que vous souhaitez.",
-  "page-find-wallet-meta-title": "Trouver un portefeuille Ethereum",
+  "page-find-wallet-meta-title": "Liste des portefeuilles Ethereum | ethereum.org",
   "page-find-wallet-title": "Choisissez votre portefeuille",
   "page-find-wallet-try-removing": "Essayez de supprimer une ou deux fonctionnalités",
   "page-stake-eth": "Mettre en jeu de l'ETH",

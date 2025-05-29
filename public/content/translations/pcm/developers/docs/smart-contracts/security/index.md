@@ -115,7 +115,7 @@ Di existens of audits and bug bountis nor dey komot yor responsibility to write 
 
 - Make yu yus [divelopment environment ](/developers/docs/frameworks/)to dey test, kompile, deploy smart kontracts
 
-- Make yu run yor kode thru basik kode analysis tools, laik [Cyfrin Aaderyn](https://github.com/Cyfrin/aderyn), Mythril and Slither. Normal, yu suppose do dis bifor ish pull rikwest join togeda and kompia difrens in output
+- Make yu run yor kode thru basik kode analysis tools, laik [Cyfrin Aderyn](https://github.com/Cyfrin/aderyn), Mythril and Slither. Normal, yu suppose do dis bifor ish pull rikwest join togeda and kompia difrens in output
 
 - Make sure sey yor kode dey kompile witout errors, and di Solidity kompila nor dey show warnings
 

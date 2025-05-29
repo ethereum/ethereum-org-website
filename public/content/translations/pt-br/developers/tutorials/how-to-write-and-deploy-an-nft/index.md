@@ -76,7 +76,7 @@ Agora que estamos dentro da pasta do nosso projeto, vamos usar npm init para ini
     npm init
 
 Não importa realmente como você responde às questões de instalação; aqui está o que utilizamos de referência:
-
+```json
     package name: (my-nft)
     version: (1.0.0)
     description: My first NFT!
@@ -99,7 +99,7 @@ Não importa realmente como você responde às questões de instalação; aqui e
       "author": "",
       "license": "ISC"
     }
-
+```
 Aprove o package.json e estamos prontos para começar!
 
 ## Etapa 7: Instalar o [Hardhat](https://hardhat.org/getting-started/#overview) {#install-hardhat}
@@ -259,6 +259,7 @@ Até aqui, já adicionamos diversas dependências e plugins. Agora precisamos at
 
 Atualize seu hardhat.config.js para ficar assim:
 
+```js
     /**
     * @type import('hardhat/config').HardhatUserConfig
     */
@@ -276,6 +277,7 @@ Atualize seu hardhat.config.js para ficar assim:
           }
        },
     }
+```
 
 ## Etapa 14: Compilar nosso contrato {#compile-contract}
 

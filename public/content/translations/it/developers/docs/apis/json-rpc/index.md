@@ -207,8 +207,8 @@ Nessuno
 L'elenco completo degli ID di rete correnti è disponibile su [chainlist.org](https://chainlist.org). Alcuni ID comuni sono:
 
 - `1`: Rete Principale di Ethereum
-- `5`: rete di prova Goerli
 - `11155111`: rete di prova Sepolia
+- `560048`: rete di prova Hoodi
 
 **Esempio**
 

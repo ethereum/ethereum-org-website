@@ -236,16 +236,18 @@ Les données de couches de consensus de haut niveau comprennent les éléments s
 - Staked ETH (ETH absorbé) - Quantité d'ETH misé dans le réseau
 - Average balance (solde moyen) - Solde moyen ETH des validateurs
 
-## Explorateurs de bloc {#block-explorers}
+## Explorateurs de blocs {#block-explorers}
 
-- [Etherscan](https://etherscan.io/) - un explorateur de blocs que vous pouvez utiliser pour récupérer des données pour le réseau principal Ethereum et le réseau de test Goerli
-- [3xpl](https://3xpl.com/ethereum) - Un explorateur Ethereum open source sans publicité qui autorise le téléchargement de ses ensembles de données
-- [Beaconcha.in](https://beaconcha.in/) - un explorateur de blocs open source pour le réseau principal Ethereum et le réseau de test Goerli
-- [Blockchair](https://blockchair.com/ethereum) - L'explorateur Ethereum le plus privé. Egalement pour trier et filtrer des données (mempool).
+- [Etherscan](https://etherscan.io/) - un explorateur de blocs que vous pouvez utiliser pour récupérer des données pour le réseau principal Ethereum
+- [Etherscan Sepolia](https://sepolia.etherscan.io/) - un explorateur de blocs que vous pouvez utiliser pour récupérer des données pour le réseau de test Sepolia
+- [Etherscan Hoodi](https://hoodi.etherscan.io/) - un explorateur de blocs que vous pouvez utiliser pour récupérer des données pour le réseau de test Hoodi
+- [3xpl](https://3xpl.com/ethereum) - un explorateur Ethereum open source sans publicité qui permet de télécharger ses ensembles de données
+- [Beaconcha.in](https://beaconcha.in/) - un explorateur de blocs open source pour le réseau principal Ethereum
+- [Blockchair](https://blockchair.com/ethereum) - l'explorateur Ethereum le plus privé. Également pour le tri et le filtrage des données (mempool)
 - [Etherchain](https://www.etherchain.org/) - un explorateur de blocs pour le réseau principal Ethereum
-- [Ethplorer](https://ethplorer.io/) - un explorateur de blocs avec une focalisation sur les jetons pour le réseau principal Ethereum et le réseau de test Kovan
-- [Rantom](https://rantom.app/) - Un service crypto-friendly open-source, intégré à sa plateforme de finance décentralisée (DeFi) & Visualisation du volume de transactions des NFT pour une vision détaillée
-- [Ethernow](https://www.ethernow.xyz/) - Un explorateur de transaction en temps réel qui vous permet de voir la couche pré-chaîne du réseau principal Ethereum
+- [Ethplorer](https://ethplorer.io/) - un explorateur de blocs axé sur les jetons pour le réseau principal Ethereum et le réseau de test Kovan
+- [Rantom](https://rantom.app/) - Un visualiseur de transactions DeFi et NFT open source convivial pour des informations détaillées
+- [Ethernow](https://www.ethernow.xyz/) - un explorateur de transactions en temps réel qui vous permet de voir la couche pré-chaîne du réseau principal Ethereum
 
 ## En savoir plus {#further-reading}
 

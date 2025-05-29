@@ -1,5 +1,6 @@
 ---
 title: Contrats intelligents
+metaTitle: "Contrats intelligents : quels sont les avantages"
 description: Une introduction non technique aux contrats intelligents
 lang: fr
 ---
@@ -76,7 +77,6 @@ Ils peuvent effectuer des calculs, produire de la monnaie, stocker des données,
 ## Complément d'information {#further-reading}
 
 - [Comment les contrats intelligents vont changer le monde](https://www.youtube.com/watch?v=pA6CGuXEKtQ)
-- [Contrats intelligents : la technologie de la blockchain qui va remplacer les juristes](https://blockgeeks.com/guides/smart-contracts/)
 - [Les contrats intelligents pour les développeurs](/developers/docs/smart-contracts/)
 - [Apprenez à rédiger des contrats intelligents](/developers/learning-tools/)
 - [Maîtriser Ethereum - Qu'est-ce qu'un contrat intelligent ?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)

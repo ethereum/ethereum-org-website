@@ -618,7 +618,7 @@ def burn(_tokenId: uint256):
 
 Solidityとは異なり、Viperは相続機能を提供しません。 これは、コードをより明確にし、セキュリティを確保しやすくするための意図的な設計上の選択によるものです。 このため、あなた自身がVyperでERC-721コントラクトを作成する際は、[このコントラクト](https://github.com/vyperlang/vyper/blob/master/examples/tokens/ERC721.vy)を用いて修正し、必要なビジネスロジックを実装してください。
 
-# まとめ {#conclusion}
+## まとめ {#conclusion}
 
 このコントラクトにつき、最も重要なポイントを以下にまとめました：
 

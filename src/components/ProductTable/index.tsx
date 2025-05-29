@@ -6,7 +6,7 @@ import {
   useMemo,
   useState,
 } from "react"
-import { useRouter } from "next/router"
+import { useSearchParams } from "next/navigation"
 import { ColumnDef } from "@tanstack/react-table"
 
 import type { FilterOption, TPresetFilters } from "@/lib/types"
@@ -24,6 +24,7 @@ interface ProductTableProps<T> {
   allDataLength: number
   filters: FilterOption[]
   presetFilters: TPresetFilters
+  presetFiltersCounts?: number[]
   resetFilters: () => void
   setFilters: Dispatch<SetStateAction<FilterOption[]>>
   subComponent?: FC<T>
@@ -39,6 +40,7 @@ const ProductTable = <T,>({
   allDataLength,
   filters,
   presetFilters,
+  presetFiltersCounts,
   resetFilters,
   setFilters,
   subComponent,
@@ -47,7 +49,8 @@ const ProductTable = <T,>({
   matomoEventCategory,
   meta,
 }: ProductTableProps<T>) => {
-  const router = useRouter()
+  const searchParams = useSearchParams()
+
   const [activePresets, setActivePresets] = useState<number[]>([])
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
 
@@ -74,25 +77,29 @@ const ProductTable = <T,>({
 
   // Update filters based on router query
   useEffect(() => {
-    if (Object.keys(router.query).length > 0) {
+    const query = Object.fromEntries(searchParams?.entries() ?? [])
+
+    if (Object.keys(query).length > 0) {
       const updatedFilters = filters.map((filter) => ({
         ...filter,
         items: filter.items.map((item) => ({
           ...item,
           inputState:
-            parseQueryParams(router.query[item.filterKey]) || item.inputState,
+            parseQueryParams(query[item.filterKey]) || item.inputState,
           options: item.options.map((option) => ({
             ...option,
             inputState:
-              parseQueryParams(router.query[option.filterKey]) ||
-              option.inputState,
+              parseQueryParams(query[option.filterKey]) || option.inputState,
           })),
         })),
       }))
       setFilters(updatedFilters)
-      router.replace(router.pathname, undefined, { shallow: true })
+
+      // TODO: Fix this, removed to avoid infinite re-renders
+      // router.replace(pathname, undefined, { shallow: true })
     }
-  }, [router])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [searchParams])
 
   // Update or remove preset filters
   const handleSelectPreset = (idx: number) => {
@@ -265,6 +272,7 @@ const ProductTable = <T,>({
           presets={presetFilters}
           activePresets={activePresets}
           handleSelectPreset={handleSelectPreset}
+          presetFiltersCounts={presetFiltersCounts}
         />
       ) : (
         <></>
@@ -276,6 +284,7 @@ const ProductTable = <T,>({
               filters={filters}
               setFilters={setFilters}
               presets={presetFilters}
+              presetFiltersCounts={presetFiltersCounts}
               activePresets={activePresets}
               handleSelectPreset={handleSelectPreset}
               dataCount={data.length}

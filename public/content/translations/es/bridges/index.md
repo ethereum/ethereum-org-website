@@ -95,6 +95,15 @@ Muchas soluciones de puente adoptan modelos entre estos dos extremos con diferen
 
 <Divider />
 
+## Usar puentes {#use-bridge}
+
+Usar puentes le permite mover sus activos a través de diferentes cadenas de bloques. He aquí algunos recursos que le pueden ayudar a encontrar y usar puentes:
+
+- **[Resumen de los puentes L2BEAT ](https://l2beat.com/bridges/summary) & [Análisis de riesgo de puentes L2BEAT](https://l2beat.com/bridges/risk)**: Un resumen que comprende varios puentes, incluyendo detalles sobre la cuota de mercado, el tipo de puente y las cadenas de destino. L2BEAT también tiene análisis de riesgo de puentes, ayudando a los usuarios a tomar decisiones informadas a lo largo del proceso de elección de un puente.
+- **[Resumen de los puentes DefiLlama](https://defillama.com/bridges/Ethereum)**: Un resumen de los volúmenes de puentes a lo largo de la red de Ethereum.
+
+<Divider />
+
 ## Riesgo al utilizar puentes {#bridge-risk}
 
 Los puentes se encuentran en las primeras etapas de desarrollo. Es probable que todavía no se haya descubierto el diseño óptimo de estos. Interactuar con cualquier tipo de puente conlleva riesgos:

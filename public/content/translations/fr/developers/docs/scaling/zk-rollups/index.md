@@ -222,6 +222,7 @@ Regardez la vidéo de Finematics qui explique les rollups ZK :
 
 <YouTube id="7pWxCklcNsU" start="406" />
 
+
 ## Qui travaille sur une zkEVM ? {#zkevm-projects}
 
 Les projets fonctionnant sur les zkEVM comprennent :

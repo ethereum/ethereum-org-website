@@ -1,7 +1,12 @@
 import { useEffect, useMemo, useState } from "react"
-import { useTranslation } from "next-i18next"
 
-import { ChainName, FilterOption, Lang, Wallet } from "@/lib/types"
+import {
+  ChainName,
+  FilterOption,
+  Lang,
+  Wallet,
+  WalletFilter,
+} from "@/lib/types"
 
 import { useWalletColumns } from "@/components/FindWalletProductTable/hooks/useWalletColumns"
 import { useWalletFilters } from "@/components/FindWalletProductTable/hooks/useWalletFilters"
@@ -9,9 +14,12 @@ import { useWalletPersonaPresets } from "@/components/FindWalletProductTable/hoo
 import ProductTable from "@/components/ProductTable"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
+import { getFilteredWalletsCount } from "@/lib/utils/wallets"
 
 import FindWalletsNoResults from "./FindWalletsNoResults"
 import WalletSubComponent from "./WalletSubComponent"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 const FindWalletProductTable = ({ wallets }: { wallets: Wallet[] }) => {
   const { t } = useTranslation("page-wallets-find-wallet")
@@ -74,6 +82,15 @@ const FindWalletProductTable = ({ wallets }: { wallets: Wallet[] }) => {
       })
   }, [wallets, filters, activeFilterKeys])
 
+  const personasWalletCounts = useMemo(() => {
+    return walletPersonas.map((persona) =>
+      getFilteredWalletsCount(
+        filteredData,
+        persona.presetFilters as WalletFilter
+      )
+    )
+  }, [filteredData, walletPersonas])
+
   // Reset filters
   const resetFilters = () => {
     setFilters(walletFilterOptions)
@@ -100,6 +117,7 @@ const FindWalletProductTable = ({ wallets }: { wallets: Wallet[] }) => {
       matomoEventCategory="find-wallet"
       filters={filters}
       presetFilters={walletPersonas}
+      presetFiltersCounts={personasWalletCounts}
       resetFilters={resetFilters}
       setFilters={setFilters}
       subComponent={(wallet, listIdx) => (

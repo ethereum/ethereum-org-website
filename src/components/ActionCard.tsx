@@ -1,7 +1,7 @@
 import { StaticImageData } from "next/image"
 import type { BaseHTMLAttributes, ElementType, ReactNode } from "react"
 
-import { TwImage } from "@/components/Image"
+import { Image } from "@/components/Image"
 import InlineLink from "@/components/ui/Link"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 
@@ -41,7 +41,7 @@ const ActionCard = ({
   return (
     <LinkBox
       className={cn(
-        "flex shadow-table hover:scale-[1.02] hover:rounded hover:bg-background-highlight hover:shadow-table-box-hover hover:duration-100 focus:scale-[1.02] focus:rounded focus:shadow-table-box-hover focus:duration-100",
+        "flex flex-col shadow-table hover:scale-[1.02] hover:rounded hover:bg-background-highlight hover:shadow-table-box-hover hover:duration-100 focus:scale-[1.02] focus:rounded focus:shadow-table-box-hover focus:duration-100 md:flex-row",
         className
       )}
       {...props}
@@ -53,11 +53,11 @@ const ActionCard = ({
           isRight ? "justify-end" : "justify-center"
         )}
       >
-        <TwImage
+        <Image
           src={image}
           alt={alt || ""}
           width={imageWidth}
-          className="max-h-full object-cover p-4"
+          className="max-h-full self-center object-cover p-4"
         />
       </Flex>
       <div className="flex flex-col justify-center p-6">

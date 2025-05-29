@@ -90,6 +90,7 @@ export const ReceivedEther = ({
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
+            data-testid="received-ether-toast"
           >
             <MdInfo className="text-xl" />
             <p className="m-0 text-xs font-bold">

@@ -3,7 +3,7 @@ import type { IconType } from "react-icons"
 
 import { FilterInputState } from "@/lib/types"
 
-import Switch from "@/../tailwind/ui/Switch"
+import Switch from "@/components/ui/switch"
 
 interface SwitchFilterInputProps {
   Icon?: IconType

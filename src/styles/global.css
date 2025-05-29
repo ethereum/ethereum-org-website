@@ -5,8 +5,8 @@
 @import "@docsearch/css";
 @import "@/styles/colors.css";
 @import "@/styles/semantic-tokens.css";
-@import "@/styles/fonts.css";
 @import "@/styles/docsearch.css";
+@import "@rainbow-me/rainbowkit/styles.css";
 
 @layer base {
   :root {
@@ -43,9 +43,14 @@
       rgba(145, 234, 228, 0.2) 100%
     );
     --search-background: var(--background);
+    --gradient-staking: linear-gradient(
+      rgba(237, 194, 84, 0.1) 13.39%,
+      rgba(75, 231, 156, 0.1) 44.21%,
+      rgba(231, 202, 200, 0.1) 82.88%
+    );
   }
 
-  [data-theme="dark"] {
+  .dark {
     /* Misc semantics: dark mode */
     --tooltip-shadow: rgba(255, 255, 255, 0.24);
     --switch-background: rgba(255, 255, 255, 0.24);
@@ -75,8 +80,12 @@
 }
 
 @layer base {
+  * {
+    @apply scroll-smooth border-border;
+  }
+
   body {
-    @apply !bg-background font-body !text-body;
+    @apply bg-background font-body leading-base text-body;
   }
 
   a {
@@ -152,6 +161,41 @@
     & > p {
       margin-bottom: calc(1.45rem / 2);
     }
+  }
+}
+
+@layer components {
+  .staking-grid {
+    grid-template-areas:
+      "ether header glyph"
+      "decorator content content";
+  }
+
+  .staking-grid-stacked {
+    grid-template-areas:
+      "ether"
+      "header"
+      "content";
+  }
+
+  .area-ether {
+    grid-area: ether;
+  }
+
+  .area-header {
+    grid-area: header;
+  }
+
+  .area-content {
+    grid-area: content;
+  }
+
+  .area-glyph {
+    grid-area: glyph;
+  }
+
+  .gold {
+    @apply font-bold text-staking-gold;
   }
 }
 

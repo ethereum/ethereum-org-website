@@ -29,7 +29,5 @@
   "page-local-environment-setup-subtitle-2": " Voici les outils et les frameworks que vous pouvez utiliser pour vous aider à créer votre application Ethereum.",
   "page-local-environment-setup-title": "Configurez votre environnement de développement local",
   "page-local-environment-solidity-template-desc": "Un modèle GitHub pour une configuration prédéfinie pour vos contrats intelligents Solidity. Comprend un réseau local Hardhat, Waffle pour les tests, Ethers pour l'implémentation de portefeuille, et plus encore.",
-  "page-local-environment-solidity-template-logo-alt": "Logo de modèle Solidity",
-  "page-local-environment-waffle-desc": "La bibliothèque de test la plus avancée pour les contrats intelligents. Utiliser seul ou avec Scaffold-eth ou Hardhat.",
-  "page-local-environment-waffle-logo-alt": "Logo Waffle"
+  "page-local-environment-solidity-template-logo-alt": "Logo de modèle Solidity"
 }

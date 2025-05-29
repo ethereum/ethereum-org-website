@@ -1,4 +1,4 @@
-import { useTranslation } from "next-i18next"
+import { cn } from "@/lib/utils/cn"
 
 import { ButtonLink } from "./ui/buttons/Button"
 import { Flex } from "./ui/flex"
@@ -9,9 +9,11 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "./ui/Table"
+} from "./ui/table"
+import { Image } from "./Image"
 
 import { useRtlFlip } from "@/hooks/useRtlFlip"
+import { useTranslation } from "@/hooks/useTranslation"
 
 export interface TableRow {
   name: string
@@ -32,7 +34,7 @@ const StablecoinsTable = ({
   content,
   hasError,
 }: StablecoinsTableProps) => {
-  const { flipForRtl } = useRtlFlip()
+  const { twFlipForRtl } = useRtlFlip()
   const { t } = useTranslation("page-stablecoins")
 
   const stablecoinsType = {
@@ -52,9 +54,7 @@ const StablecoinsTable = ({
 
           {content && content[0]?.url && (
             <TableHead className="text-right font-normal">
-              <span className="inline-block" style={{ transform: flipForRtl }}>
-                ↗
-              </span>
+              <span className={cn("inline-block", twFlipForRtl)}>↗</span>
             </TableHead>
           )}
         </TableRow>
@@ -72,7 +72,7 @@ const StablecoinsTable = ({
           <TableRow key={idx}>
             <TableCell>
               <Flex>
-                {image && <img src={image} alt="" className="me-4 h-6 w-6" />}
+                {image && <Image src={image} alt="" className="me-4 h-6 w-6" />}
                 <>{name}</>
               </Flex>
             </TableCell>

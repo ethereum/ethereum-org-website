@@ -1,8 +1,10 @@
+"use client"
+
 import { useEffect, useState } from "react"
 
 import { MATOMO_LS_KEY } from "@/lib/utils/matomo"
 
-import Checkbox from "../../tailwind/ui/Checkbox"
+import Checkbox from "./ui/checkbox"
 
 const MatomoOptOut = () => {
   const [loading, setLoading] = useState<boolean>(true)
