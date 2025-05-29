@@ -2,8 +2,8 @@
 
 // TODO: Extract intl strings
 // TODO: Fix RTL compatibility; currenly forced to LTR flow
-
-import { useEffect, useState } from "react"
+import { useCallback, useEffect, useMemo, useState } from "react"
+import { useLocale } from "next-intl"
 
 import { Image } from "@/components/Image"
 import { ButtonLink } from "@/components/ui/buttons/Button"
@@ -19,45 +19,39 @@ import {
 import { cn } from "@/lib/utils/cn"
 import { formatDate } from "@/lib/utils/date"
 
-import { releasesData } from "@/data/roadmap/releases"
-
-const findLatestReleaseIndex = () => {
-  const today = new Date()
-  const twoMonthsFromNow = new Date()
-  twoMonthsFromNow.setMonth(today.getMonth() + 2)
-
-  // First try to find a release within the next 2 months
-  const upcomingReleaseIndex = releasesData.findIndex((release) => {
-    const releaseDate = new Date(release.releaseDate)
-    return releaseDate > today && releaseDate <= twoMonthsFromNow
-  })
-
-  // If no upcoming release found, find the most recent release up to today
-  if (upcomingReleaseIndex === -1) {
-    const pastReleases = releasesData.filter(
-      (release) => new Date(release.releaseDate) <= today
-    )
-    if (pastReleases.length > 0) {
-      const mostRecentRelease = pastReleases[pastReleases.length - 1]
-      return releasesData.findIndex(
-        (release) => release.releaseDate === mostRecentRelease.releaseDate
-      )
-    }
-  }
-
-  return upcomingReleaseIndex
-}
+import { Release, releasesData } from "@/data/roadmap/releases"
 
 const ReleaseCarousel = () => {
-  const todayDate = new Date()
-  const twoMonthsFromNow = new Date()
-  twoMonthsFromNow.setMonth(todayDate.getMonth() + 2)
+  const locale = useLocale()
 
   const [api1, setApi1] = useState<CarouselApi>()
   const [api2, setApi2] = useState<CarouselApi>()
-  const [currentIndex, setCurrentIndex] = useState(() =>
-    findLatestReleaseIndex()
-  )
+
+  const startIndex = useMemo(() => {
+    const now = new Date()
+
+    // Production: has a releaseDate in the past
+    const productionReleases = releasesData.filter((release) => {
+      if (!("releaseDate" in release) || !release.releaseDate) return false
+      const releaseDate = new Date(release.releaseDate)
+      return releaseDate <= now
+    })
+
+    // Upcoming: has a releaseDate, but is in the future
+    const upcomingReleases = releasesData.filter((release) => {
+      if (!("releaseDate" in release) || !release.releaseDate) return false
+      const releaseDate = new Date(release.releaseDate)
+      return releaseDate > now
+    })
+
+    // If upcoming releases exist, start index after production releases
+    if (upcomingReleases.length > 0) return productionReleases.length
+
+    // If no upcoming releases, start at the last production release
+    return productionReleases.length - 1
+  }, [])
+
+  const [currentIndex, setCurrentIndex] = useState(startIndex)
 
   useEffect(() => {
     if (!api1 || !api2) {
@@ -75,6 +69,27 @@ const ReleaseCarousel = () => {
     })
   }, [api1, api2])
 
+  const getStatus = useCallback((release: Release) => {
+    if (!("releaseDate" in release) || !release.releaseDate) return "dev"
+    if (new Date(release.releaseDate) <= new Date()) return "prod"
+    return "soon"
+  }, [])
+
+  const getDisplayDate = (release: Release): string => {
+    if (!("releaseDate" in release || "plannedReleaseYear" in release))
+      return ""
+
+    if ("plannedReleaseYear" in release && release.plannedReleaseYear)
+      return new Intl.DateTimeFormat(locale, {
+        year: "numeric",
+      }).format(new Date(Number(release.plannedReleaseYear), 0, 1))
+
+    if ("releaseDate" in release && release.releaseDate)
+      return formatDate(release.releaseDate)
+
+    return ""
+  }
+
   return (
     <div className="w-full max-w-[100vw] overflow-hidden" dir="ltr">
       <div className="mx-auto w-full max-w-screen-2xl px-4 sm:px-6">
@@ -89,21 +104,13 @@ const ReleaseCarousel = () => {
                 containScroll: false,
                 direction: "ltr",
                 loop: false,
-                startIndex: findLatestReleaseIndex(),
+                startIndex,
               }}
             >
               <CarouselContent>
                 {releasesData.map((release, index) => {
-                  const releaseDate = new Date(release.releaseDate)
-                  const nextRelease =
-                    releaseDate > todayDate && releaseDate <= twoMonthsFromNow
-                  const labelType =
-                    releaseDate < todayDate
-                      ? 1
-                      : releaseDate < twoMonthsFromNow
-                        ? 2
-                        : 3
-
+                  const status = getStatus(release)
+                  const displayDate = getDisplayDate(release)
                   return (
                     <CarouselItem
                       key={release.releaseName}
@@ -111,7 +118,7 @@ const ReleaseCarousel = () => {
                     >
                       <div className="flex w-full flex-col items-center justify-center gap-3">
                         <div className="mb-3 !h-6">
-                          {labelType === 1 && (
+                          {status === "prod" && (
                             <div
                               className={cn(
                                 "w-fit rounded-lg bg-primary-low-contrast px-2 py-1",
@@ -121,7 +128,7 @@ const ReleaseCarousel = () => {
                               <p className="text-sm font-bold">In production</p>
                             </div>
                           )}
-                          {labelType === 2 && (
+                          {status === "soon" && (
                             <div
                               className={cn(
                                 "w-fit rounded-lg bg-warning-light px-2 py-1",
@@ -133,7 +140,7 @@ const ReleaseCarousel = () => {
                               </p>
                             </div>
                           )}
-                          {labelType === 3 && (
+                          {status === "dev" && (
                             <div
                               className={cn(
                                 "w-fit rounded-lg bg-card-gradient-secondary-hover px-2 py-1",
@@ -146,14 +153,15 @@ const ReleaseCarousel = () => {
                             </div>
                           )}
                         </div>
+                        {/* Line-circle-line decoration —•— */}
                         <div className="flex w-full items-center justify-center text-center">
                           <div
                             className={cn(
                               "flex h-1 flex-1",
                               index !== 0
-                                ? nextRelease
+                                ? status === "soon"
                                   ? "bg-gradient-to-r from-primary to-primary-low-contrast"
-                                  : releaseDate.getTime() < todayDate.getTime()
+                                  : status === "prod"
                                     ? "bg-primary"
                                     : "bg-primary-low-contrast"
                                 : "bg-transparent"
@@ -162,21 +170,21 @@ const ReleaseCarousel = () => {
                           <div
                             className={cn(
                               "h-7 w-7 rounded-full",
-                              releaseDate.getTime() < todayDate.getTime()
+                              status === "prod"
                                 ? "bg-primary"
                                 : "bg-primary-low-contrast",
-                              nextRelease &&
+                              status === "soon" &&
                                 "border-2 border-primary bg-background"
                             )}
                           />
                           <div
                             className={cn(
                               "flex h-1 flex-1",
-                              index !== releasesData.length - 1
-                                ? index < findLatestReleaseIndex()
-                                  ? "bg-primary"
-                                  : "bg-primary-low-contrast"
-                                : "bg-transparent"
+                              index < startIndex
+                                ? "bg-primary"
+                                : "bg-primary-low-contrast",
+                              index === releasesData.length - 1 &&
+                                "bg-transparent"
                             )}
                           />
                         </div>
@@ -185,7 +193,7 @@ const ReleaseCarousel = () => {
                             {release.releaseName}
                           </p>
                           <p className="font-mono text-sm text-body-medium">
-                            {formatDate(release.releaseDate)}
+                            {displayDate}
                           </p>
                         </div>
                       </div>
@@ -208,7 +216,7 @@ const ReleaseCarousel = () => {
                 containScroll: false,
                 direction: "ltr",
                 loop: false,
-                startIndex: findLatestReleaseIndex(),
+                startIndex,
               }}
             >
               <CarouselContent>
@@ -230,9 +238,7 @@ const ReleaseCarousel = () => {
                           <h2 className="text-4xl font-bold lg:text-6xl">
                             {release.releaseName}
                           </h2>
-                          <p className="text-md">
-                            {formatDate(release.releaseDate)}
-                          </p>
+                          <p className="text-md">{getDisplayDate(release)}</p>
                         </div>
 
                         <div>
