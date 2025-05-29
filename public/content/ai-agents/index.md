@@ -19,7 +19,7 @@ buttons:
     isSecondary: false
 ---
 
-Imagine navigating Ethereum with an AI assistant that studies on-chain market trends 24/7, answers questions, and even executes transactions on your behalf. Welcome to the world of AI Agents—intelligent systems designed to simplify your digital life.
+Imagine navigating Ethereum with an AI assistant that studies onchain market trends 24/7, answers questions, and even executes transactions on your behalf. Welcome to the world of AI Agents—intelligent systems designed to simplify your digital life.
 
 On Ethereum, we’re seeing innovations of AI agents ranging from virtual influencers and autonomous content creators to real-time market analysis platforms, empowering users by delivering insights, entertainment, and operational efficiency.
 
