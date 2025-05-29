@@ -169,7 +169,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                               {countryEvents.map((event, index) => (
                                 <LinkBox
                                   key={index}
-                                  className="flex flex-col justify-between gap-2 rounded-lg py-2 hover:bg-background-highlight md:flex-row"
+                                  className="flex flex-col justify-between gap-2 rounded-lg p-2 hover:bg-background-highlight md:flex-row"
                                 >
                                   <div className="flex flex-col gap-2 md:flex-row">
                                     <div>
