@@ -12,20 +12,12 @@ import TenYearGraphicImage from "@/public/images/10-year-anniversary/10-year-gra
 const TenYearHero = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 })
 
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      const x = (e.clientX / window.innerWidth - 0.5) * 10
-      const y = (e.clientY / window.innerHeight - 0.5) * 10
+  useEventListener("mousemove", (e: MouseEvent) => {
+    const x = (e.clientX / window.innerWidth - 0.5) * 10
+    const y = (e.clientY / window.innerHeight - 0.5) * 10
 
-      setPosition({ x, y })
-    }
-
-    window.addEventListener("mousemove", handleMouseMove)
-
-    return () => {
-      window.removeEventListener("mousemove", handleMouseMove)
-    }
-  }, [])
+    setPosition({ x, y })
+  })
 
   return (
     <div className="relative">
