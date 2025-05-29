@@ -34,9 +34,7 @@ const TenYearHero = () => {
         src={TenYearGraphicImage}
         alt="10 Year Anniversary"
         className="absolute left-0 top-0 transition-transform duration-200 ease-out"
-        style={{
-          transform: `translate(${position.x}px, ${position.y}px)`,
-        }}
+        style={style}
       />
     </div>
   )
