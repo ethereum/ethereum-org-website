@@ -59,7 +59,7 @@
   "page-developers-networks-link": "Sítě",
   "page-developers-node-clients-desc": "Jakým způsobem jsou v síti ověřovány bloky a transakce",
   "page-developers-node-clients-link": " Uzly a klienty",
-  "page-developers-oracle-desc": "Jak dostat data mimo síť (off-chain) do chytrých kontraktů",
+  "page-developers-oracle-desc": "Jak dostat data mimo blockchain do chytrých kontraktů",
   "page-developers-oracles-link": "Data oracle",
   "page-developers-play-code": "Hrát si s kódem",
   "page-developers-read-docs": "Přečíst dokumentaci",

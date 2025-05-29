@@ -5,8 +5,8 @@
 @import "@docsearch/css";
 @import "@/styles/colors.css";
 @import "@/styles/semantic-tokens.css";
-@import "@/styles/fonts.css";
 @import "@/styles/docsearch.css";
+@import "@rainbow-me/rainbowkit/styles.css";
 
 @layer base {
   :root {
@@ -50,7 +50,7 @@
     );
   }
 
-  [data-theme="dark"] {
+  .dark {
     /* Misc semantics: dark mode */
     --tooltip-shadow: rgba(255, 255, 255, 0.24);
     --switch-background: rgba(255, 255, 255, 0.24);
@@ -80,8 +80,12 @@
 }
 
 @layer base {
+  * {
+    @apply scroll-smooth border-border;
+  }
+
   body {
-    @apply !bg-background font-body !text-body;
+    @apply bg-background font-body leading-base text-body;
   }
 
   a {

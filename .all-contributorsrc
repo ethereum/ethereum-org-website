@@ -6239,10 +6239,10 @@
       ]
     },
     {
-      "login": "mradziwon",
-      "name": "mradziwon",
+      "login": "maciejrrr",
+      "name": "maciejrrr",
       "avatar_url": "https://avatars.githubusercontent.com/u/6785984?v=4",
-      "profile": "http://www.linkedin.com/in/mradziwon",
+      "profile": "http://www.linkedin.com/in/maciejrrr",
       "contributions": [
         "code",
         "bug"
@@ -12696,6 +12696,70 @@
       "profile": "https://github.com/colinlyguo",
       "contributions": [
         "content"
+      ]
+    },
+    {
+      "login": "jenish-thapa",
+      "name": "Jenish Thapa",
+      "avatar_url": "https://avatars.githubusercontent.com/u/141203631?v=4",
+      "profile": "https://github.com/jenish-thapa",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "iusx",
+      "name": "iusx",
+      "avatar_url": "https://avatars.githubusercontent.com/u/57232813?v=4",
+      "profile": "https://jiangxue.org/~ritsu",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "JJOptimist",
+      "name": "JJOptimist",
+      "avatar_url": "https://avatars.githubusercontent.com/u/86833563?v=4",
+      "profile": "https://github.com/JJOptimist",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "hotequil",
+      "name": "João Paulo Hotequil",
+      "avatar_url": "https://avatars.githubusercontent.com/u/46814712?v=4",
+      "profile": "https://github.com/hotequil",
+      "contributions": [
+        "code",
+        "translation"
+      ]
+    },
+    {
+      "login": "microHoffman",
+      "name": "microHoffman",
+      "avatar_url": "https://avatars.githubusercontent.com/u/61500778?v=4",
+      "profile": "http://pwn.xyz",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "smithrashell",
+      "name": "Rashell Smith",
+      "avatar_url": "https://avatars.githubusercontent.com/u/36465023?v=4",
+      "profile": "https://github.com/smithrashell",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "aolson078",
+      "name": "Alex Olson",
+      "avatar_url": "https://avatars.githubusercontent.com/u/69769089?v=4",
+      "profile": "https://github.com/aolson078",
+      "contributions": [
+        "bug"
       ]
     }
   ],

@@ -1,7 +1,6 @@
-import * as React from "react"
-import { Flex } from "@chakra-ui/react"
 import { Meta, StoryObj } from "@storybook/react"
 
+import { Flex } from "../../flex"
 import { Table as TableComponent } from "../../table"
 
 import {
@@ -15,7 +14,7 @@ const meta = {
   component: TableComponent,
   decorators: [
     (Story) => (
-      <Flex flexDir="column" gap={16} maxW="container.md">
+      <Flex className="max-w-screen-md flex-col gap-16">
         <Story />
       </Flex>
     ),

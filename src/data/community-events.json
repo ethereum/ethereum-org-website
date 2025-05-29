@@ -14,17 +14,8 @@
     "endDate": "2025-04-05",
     "href": "https://www.ethbucharest.xyz/",
     "location": "Bucharest, Romania",
-    "description": "Join ETH Bucharest in 25 - 27 March 2025 for a pivotal blockchain event in Eastern Europe. Engage in workshops, networking, and a hackathon to drive Ethereum innovation and adoption.",
-    "imageUrl": ""
-  },
-  {
-    "title": "ETH Seoul",
-    "startDate": "2025-04-06",
-    "endDate": "2025-04-13",
-    "href": "https://ethseoul.org",
-    "location": "Seoul",
-    "description": "",
-    "imageUrl": ""
+    "description": "Join ETH Bucharest 2025: Hackathon (2-5 April) & Conference (4-5 April). Be part of the second edition driving Ethereum innovation in Eastern Europe!",
+    "imageUrl": "https://ethbucharest.ro/images/og-image.png"
   },
   {
     "title": "ETHDublin 2025",
@@ -42,7 +33,7 @@
     "href": "https://ethkyiv.com",
     "location": "Kyiv, Ukraine",
     "description": "Welcome to the 1st edition of ETHKyiv, hosted this June 21-23 and bringing together participants from diverse backgrounds, including developers, designers, entrepreneurs, and blockchain enthusiasts!",
-    "imageUrl": ""
+    "imageUrl": "https://ethkyiv.com/_next/image?url=%2Fimages%2Fmain-banner_01.png&w=1920&q=75"
   },
   {
     "title": "DappCon",
@@ -50,7 +41,7 @@
     "endDate": "2025-06-18",
     "href": "https://dappcon.io",
     "location": "Berlin",
-    "description": "The leading summit for applications &amp; infrastructure for an open internet",
+    "description": "The leading summit for applications & infrastructure for an open internet",
     "imageUrl": "https://framerusercontent.com/assets/EwcloiP4dkmBNB8xV0UhgCy5jE.png"
   },
   {
@@ -59,7 +50,7 @@
     "endDate": "2025-07-03",
     "href": "https://ethcc.io",
     "location": "Cannes, FR",
-    "description": "Ethereum Community Conference &amp; Workshops: June 30th to July 3rd, 2025 in Cannes",
+    "description": "Ethereum Community Conference & Workshops: June 30th to July 3rd, 2025 in Cannes",
     "imageUrl": "https://ethcc.io/ethcc7.jpg"
   },
   {
@@ -237,19 +228,10 @@
     "title": "BUIDL Asia",
     "startDate": "2025-04-15",
     "endDate": "2025-04-16",
-    "href": "https://-",
+    "href": "https://www.buidl.asia/",
     "location": "Seoul, KR",
     "description": "",
     "imageUrl": ""
-  },
-  {
-    "title": "ETHDubai",
-    "to": "https://www.ethdubaiconf.org/",
-    "location": "Dubai, UAE",
-    "description": "The Ethereum dev conference and hackathon in Dubai on everything DeFi, privacy, L2s, AVS, AI Agents, intents, Account Abstraction and more with a focus on decentralization and community projects. ETHDubai also organizes a Demo Pitch Day with VCs.",
-    "startDate": "2025-04-28",
-    "endDate": "2025-04-29",
-    "imageUrl": "https://www.ethdubaiconf.org/ethdubaicard1.png"
   },
   {
     "title": "Staking Summit*",
@@ -423,6 +405,15 @@
     "imageUrl": "https://ethglobal.com/og.png"
   },
   {
+    "title": "ProdFest Jos",
+    "startDate": "2025-08-19",
+    "endDate": "2025-08-23",
+    "href": "https://prodfest.blockfuselabs.com/ ",
+    "location": "Jos, NGA",
+    "description": "Spotlighting the finest of African Innovation at the Web3 Jos Community Conference, Products Showcase and Hackathon",
+    "imageUrl": "https://drive.google.com/file/d/1JZlK8HFj0wB7woBlfvdJJ8_mpQUsGmCA/view?usp=sharing"
+  },
+  {
     "title": "Web3 Lagos Conference",
     "startDate": "2025-08-28",
     "endDate": "2025-08-30",
@@ -438,24 +429,6 @@
     "href": "https://ethwarsaw.dev",
     "location": "Warsaw, POL",
     "description": "EthWarsaw 2025",
-    "imageUrl": ""
-  },
-  {
-    "title": "EthSafari",
-    "startDate": "2025-09-08",
-    "endDate": "2025-09-15",
-    "href": "https://ethsafari.xyz/",
-    "location": "https://ethsafari.xyz/",
-    "description": "ETHSafari 2025 - web3 builders conference East Africa Kenya",
-    "imageUrl": ""
-  },
-  {
-    "title": "Boston Blockchain Week",
-    "startDate": "2025-09-08",
-    "endDate": "2025-09-11",
-    "href": "https://bostonblockchainweek.com",
-    "location": "QUINCY, Massachusetts, USA",
-    "description": "Boston Blockchain Week is the preeminent annual event celebrating the global blockchain and Web3 hub that is Greater Boston.",
     "imageUrl": ""
   },
   {
@@ -513,15 +486,6 @@
     "imageUrl": "https://ethoxford.io/assets/images/share.jpg?v=7e796eda"
   },
   {
-    "title": "ETHVietnam 2025",
-    "startDate": "2025-04-12",
-    "endDate": "2025-04-12",
-    "href": "https://eth-vietnam.com",
-    "location": "HCMC, VNM",
-    "description": "",
-    "imageUrl": "http://static1.squarespace.com/static/629856e64f44db3799f8e3f6/t/65c04e1059e3477a33a1c105/1707101732532/COVER.png?format=1500w"
-  },
-  {
     "title": "ETHDam III",
     "href": "https://www.ethdam.com",
     "location": "Amsterdam, Netherlands",
@@ -536,17 +500,17 @@
     "endDate": "2025-06-24",
     "href": "https://ethmilan.xyz",
     "location": "Milan, ITALY",
-    "description": "ETHMilan 2025 – Italy&#x27;s Largest ETH &amp; Web3 Conference",
+    "description": "ETHMilan 2025 – Italy&#x27;s Largest ETH & Web3 Conference",
     "imageUrl": ""
   },
   {
     "title": "Crecimiento",
     "startDate": "2025-03-05",
     "endDate": "2025-03-28",
-    "href": "https://crecimientoar",
-    "location": "TBD, ARG",
-    "description": "",
-    "imageUrl": ""
+    "href": "https://aleph.crecimiento.build/",
+    "location": "Buenos Aires, Argentina",
+    "description": "The Crecimiento Pop-Up City is a moment-in-time for these visionaries to come together with renowned experts, and transform Argentina into a world-leading startup & innovation hub.",
+    "imageUrl": "https://cdn.prod.website-files.com/6661b1a3c1bce60cd61fc966/669e83df3c3a7535a9cc05fa_1200xlogo.png"
   },
   {
     "title": "EthereumSF",
@@ -555,7 +519,7 @@
     "href": "https://ethereumsf.org/",
     "location": "San Francisco, US",
     "description": "ETHSF&#39;25 is a decentralized, week-long event series across the Bay Area, featuring events focused on d/acc, blockchain, AI and beyond.",
-    "imageUrl": ""
+    "imageUrl": "https://static.wixstatic.com/media/4ae173_bcefbce48625440083d62f9dc78450b6%7Emv2.png/v1/fit/w_2500,h_1330,al_c/4ae173_bcefbce48625440083d62f9dc78450b6%7Emv2.png"
   },
   {
     "title": "Building Blocks",
@@ -572,7 +536,7 @@
     "endDate": "2025-04-11",
     "href": "https://www.p2p.paris",
     "location": "Paris, FR",
-    "description": "The Parisian community interested in P2P, Security &amp; Cryptography technologies",
+    "description": "The Parisian community interested in P2P, Security & Cryptography technologies",
     "imageUrl": "https://p2p.paris/images/paris-p2p-thumbnail.jpg"
   },
   {
@@ -617,7 +581,7 @@
     "endDate": "2025-09-06",
     "href": "https://ethaccra.xyz",
     "location": "Accra, GHA",
-    "description": "",
+    "description": "ETHAccra",
     "imageUrl": "http://eth-accra-website.vercel.app/assets/pngs/meta_image.png"
   },
   {
@@ -628,5 +592,203 @@
     "location": "Tokyo, JAP",
     "description": "View and subscribe to events from ETHTokyo on Luma. ETHTokyo",
     "imageUrl": "https://images.lumacdn.com/calendar-cover-images/rv/316a4b25-a9fb-4ff0-ab1a-d7f23a2ba0e0"
+  },
+  {
+    "title": "Edge City Austin",
+    "startDate": "2025-03-02",
+    "endDate": "2025-03-07",
+    "href": "https://www.edgecity.live/austin",
+    "location": "Austin, USA",
+    "description": "Edge City Austin",
+    "imageUrl": "https://cdn.prod.website-files.com/65b2cb5abdecf7cd7747e170/67aba5d16f625f40658dde92_edge-sxsw-10.png"
+  },
+  {
+    "title": "Edge Expedition South Africa",
+    "startDate": "2025-04-03",
+    "endDate": "2025-04-12",
+    "href": "https://www.edgecity.live/southafrica",
+    "location": "Capetown, ZA",
+    "description": "Edge Expedition | South Africa",
+    "imageUrl": "https://cdn.prod.website-files.com/65b2cb5abdecf7cd7747e170/67802a19fb53c877dd9f5eb0_og-southafricaexpedition%20(1).png"
+  },
+  {
+    "title": "ETH Seoul",
+    "startDate": "2025-04-14",
+    "endDate": "2025-04-14",
+    "href": "https://ethseoul.org",
+    "location": "Seoul, KR",
+    "description": "",
+    "imageUrl": "https://www.ethseoul.org/img/website-logo.png"
+  },
+  {
+    "title": "ETH Cinco de Mayo",
+    "startDate": "2025-05-01",
+    "endDate": "2025-05-04",
+    "href": "https://ethcdm.com/",
+    "location": "Mexico, MX",
+    "description": "ETH Cinco de Mayo Hackathon, Feb. 2nd-4th 2024, Puebla, Mexico. A perfect combination of competition, workshops, networking, entrepreneurship and culture!",
+    "imageUrl": "https://ethcdm.com/assets/images/og-918.jpg"
+  },
+  {
+    "title": "World Expo on Blockchain*",
+    "startDate": "2025-05-10",
+    "endDate": "2025-06-03",
+    "href": "https://web2025.world/",
+    "location": "Osaka, JPN",
+    "description": "A future without financial inclusion, digital trust, data privacy and security is no future at all. Blockchain isn’t just relevant—it’s essential.",
+    "imageUrl": "https://framerusercontent.com/images/Ivp1oWg8CFUDERZIoey9dadW7E.png"
+  },
+  {
+    "title": "Code Africa Conference",
+    "startDate": "2025-05-19",
+    "endDate": "2025-05-23",
+    "href": "https://codeafrica.io",
+    "location": "Nairobi, Kenya",
+    "description": "",
+    "imageUrl": ""
+  },
+  {
+    "title": "ETHSafari",
+    "startDate": "2025-09-07",
+    "endDate": "2025-09-14",
+    "href": "https://ethsafari.xyz/",
+    "location": "Nairobi, Kenya",
+    "description": "ETHSafari 2025 - web3 builders conference East Africa Kenya",
+    "imageUrl": ""
+  },
+  {
+    "title": "ETH Canal",
+    "startDate": "2025-04-22",
+    "endDate": "2025-04-25",
+    "href": "https://ethcanal.xyz",
+    "location": "Panama City, PAN",
+    "description": "Join us at ETH Canal, in Panama, the pivotal blockchain conference series for Ethereum business & blockchain enthusiasts and developers. Discover real-world applications of Ethereum technology, engage with top-tier talent, and explore partnership opportunities in a crypto-friendly environment.",
+    "imageUrl": "https://www.ethcanal.xyz/web/image/2180-32d6b8d6/StockCake-Cryptocurrency%2520Enthusiast%2520Smiling_1713136212.svg"
+  },
+  {
+    "title": "ETHVietnam 2025",
+    "startDate": "2025-05-23",
+    "endDate": "2025-05-24",
+    "href": "https://eth-vietnam.com",
+    "location": "HCMC, VNM",
+    "description": "",
+    "imageUrl": "http://static1.squarespace.com/static/629856e64f44db3799f8e3f6/t/6761041c2c3aab15bfbb0ec1/1734411300379/Group+2612.png?format=1500w"
+  },
+  {
+    "title": "EthAsia",
+    "startDate": "2025-04-09",
+    "endDate": "2025-04-09",
+    "href": "https://www.ethasia.org/",
+    "location": "Hong Kong, HKG",
+    "description": "A commmunity gathering festival: Make ETHEREUM Asia Great Again",
+    "imageUrl": "https://www.ethasia.org/_next/image?url=%2FBG.png&w=3840&q=75"
+  },
+  {
+    "title": "EthereumBrasil",
+    "startDate": "2025-06-09",
+    "endDate": "2025-06-10",
+    "href": "https://ethereumbrasil.com",
+    "location": "São Paulo, BR",
+    "description": "Growing & supporting the Web3 builder community in Brazil.",
+    "imageUrl": "http://static1.squarespace.com/static/627921e48d48986f142cbeb0/t/67ea9c60b9673100d70d72c0/1743428704537/ethereu+brasil+logo+w+BG.png?format=1500w"
+  },
+  {
+    "title": "ETH Latam",
+    "startDate": "2025-11-08",
+    "endDate": "2025-11-09",
+    "href": "https://ethlatam.org",
+    "location": "São Paulo, BR",
+    "description": "ETH Latam is a gathering place for builders and enthusiasts of Ethereum in Latin America.",
+    "imageUrl": "https://strapi.ethkipu.org/uploads/Metadata_ETH_Latam_2025_ING_759a4fae04.png"
+  },
+  {
+    "title": "ETH Boston",
+    "startDate": "2025-09-09",
+    "endDate": "2025-09-12",
+    "href": "https://bostonblockchainweek.com/",
+    "location": "Boston, USA",
+    "description": "Boston Blockchain Week is the preeminent annual event celebrating the global blockchain and Web3 hub that is Greater Boston.",
+    "imageUrl": "https://bostonblockchainweek.com/wp-content/uploads/2025/02/Vector.png"
+  },
+  {
+    "title": "Invisible Garden",
+    "startDate": "2025-10-27",
+    "endDate": "2025-11-16",
+    "href": "https://invisible.garden",
+    "location": "Buenos Aires, Argentina",
+    "description": "Pop-up dev city #1 - Ethereum | Zero Knowledge | Artificial Inteligence | Cybersecurity",
+    "imageUrl": "https://cdn.prod.website-files.com/6695a56b501ba1fda80ae466/67851f884a16785150e18e2c_Group%20116.svg"
+  },
+  {
+    "title": "Crecimiento",
+    "startDate": "2025-04-18",
+    "endDate": "2025-03-28",
+    "href": "https://crecimientoar",
+    "location": "TBD, ARG",
+    "description": "",
+    "imageUrl": ""
+  },
+  {
+    "title": "ETHVietnam 2025",
+    "startDate": "2025-05-24",
+    "endDate": "2025-05-25",
+    "href": "https://eth-vietnam.com",
+    "location": "HCMC, VNM",
+    "description": "",
+    "imageUrl": "http://static1.squarespace.com/static/629856e64f44db3799f8e3f6/t/6761041c2c3aab15bfbb0ec1/1734411300379/Group+2612.png?format=1500w"
+  },
+  {
+    "title": "ETHBratislava",
+    "startDate": "2025-05-23",
+    "endDate": "2025-05-25",
+    "href": "https://ethbratislava.com/",
+    "location": "Bratislava, SVK",
+    "description": "Two-day conference and hackathon focused on sharing knowledge and sparking innovative ideas aimed at energizing the entire ethereum ecosystem.",
+    "imageUrl": "https://framerusercontent.com/assets/IBAFZwu44FpNo95n3OoOapeFUyw.png"
+  },
+  {
+    "title": "Boston Blockchain Week",
+    "startDate": "2025-09-08",
+    "endDate": "2025-09-11",
+    "href": "https://bostonblockchainweek.com/",
+    "location": "Quincy, Massachusetts, USA",
+    "description": "Boston Blockchain Week is the preeminent annual event celebrating the global blockchain and Web3 hub that is Greater Boston.",
+    "imageUrl": ""
+  },
+  {
+    "title": "DevConnect",
+    "startDate": "2025-11-17",
+    "endDate": "2025-11-22",
+    "href": "https://devconnect.org",
+    "location": "Buenos Aires, ARG",
+    "description": "A collaborative Ethereum week, built by and for everyone.",
+    "imageUrl": "https://devconnect.org/og-argentina.png?reset=1"
+  },
+  {
+    "title": "Builders Week Istanbul",
+    "startDate": "2025-09-01",
+    "endDate": "2025-09-07",
+    "href": "https://buildersweekistanbul.com/",
+    "location": "Istanbul, TR",
+    "description": "BWI is a week-long series of permissionless events designed to scale the blockchain development ecosystem.",
+    "imageUrl": "https://buildersweekistanbul.com/img/meta/meta.webp"
+  },
+  {
+    "title": "Cryptist",
+    "startDate": "2025-09-01",
+    "endDate": "2025-09-01",
+    "href": "https://cryptist.org/",
+    "location": "Istanbul, TR",
+    "description": "Cryptist is an annual, day-long, zero-knowledge community event in Istanbul to learn, connect, and share amongst the Turkish ZK community.",
+    "imageUrl": "https://cryptist.org/img/meta.webp"
+  },
+  {
+    "title": "EthIstanbul",
+    "startDate": "2025-09-05",
+    "endDate": "2025-09-07",
+    "href": "https://ethistanbul.io/",
+    "location": "Istanbul, TR",
+    "description": "ETHIstanbul is a conference and hackathon connecting you with global talents, industry professionals, and web3 companies advancing technology.",
+    "imageUrl": "https://ethistanbul.io/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fistanbul-background.99d6ad2a.webp&w=3840&q=75"
   }
 ]

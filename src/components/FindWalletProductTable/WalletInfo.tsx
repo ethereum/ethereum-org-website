@@ -1,18 +1,20 @@
-import { useTranslation } from "next-i18next"
 import { IoChevronDownSharp, IoChevronUpSharp } from "react-icons/io5"
 
 import { Wallet } from "@/lib/types"
 
-import { ButtonLink } from "@/components/Buttons"
 import { SupportedLanguagesTooltip } from "@/components/FindWalletProductTable/SupportedLanguagesTooltip"
 import { DevicesIcon, LanguagesIcon } from "@/components/icons/wallets"
-import { TwImage } from "@/components/Image"
+import { Image } from "@/components/Image"
 import Tooltip from "@/components/Tooltip"
 import { Tag } from "@/components/ui/tag"
 
 import { formatStringList, getWalletPersonas } from "@/lib/utils/wallets"
 
 import { ethereumNetworkData, layer2Data } from "@/data/networks/networks"
+
+import { ButtonLink } from "../ui/buttons/Button"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 interface WalletInfoProps {
   wallet: Wallet
@@ -38,7 +40,7 @@ const WalletInfo = ({ wallet, isExpanded }: WalletInfoProps) => {
       <div className="flex flex-row items-center justify-between gap-4">
         <div className="flex flex-col gap-4">
           <div className="hidden flex-row gap-4 lg:flex">
-            <TwImage
+            <Image
               src={wallet.image}
               alt=""
               style={{ objectFit: "contain", width: "56px", height: "56px" }}
@@ -69,7 +71,7 @@ const WalletInfo = ({ wallet, isExpanded }: WalletInfoProps) => {
                       className="-ml-1.5 overflow-hidden rounded-full"
                     >
                       <Tooltip content={chainData?.name || ""}>
-                        <TwImage
+                        <Image
                           src={chainData?.logo || ""}
                           alt=""
                           className="rounded-full"
@@ -88,7 +90,7 @@ const WalletInfo = ({ wallet, isExpanded }: WalletInfoProps) => {
           </div>
           <div className="flex flex-col gap-4 lg:hidden">
             <div className="flex flex-row items-center gap-4">
-              <TwImage
+              <Image
                 src={wallet.image}
                 alt=""
                 style={{ objectFit: "contain", width: "24px", height: "24px" }}
@@ -121,7 +123,7 @@ const WalletInfo = ({ wallet, isExpanded }: WalletInfoProps) => {
                     className="-ml-1.5 overflow-hidden rounded-full"
                   >
                     <Tooltip content={chainData?.name || ""}>
-                      <TwImage
+                      <Image
                         src={chainData?.logo || ""}
                         alt=""
                         className="rounded-full"
@@ -184,8 +186,7 @@ const WalletInfo = ({ wallet, isExpanded }: WalletInfoProps) => {
           <ButtonLink
             href={wallet.url}
             variant="outline"
-            w={{ base: "full", sm: "auto" }}
-            isExternal
+            className="max-sm:w-full"
             size="sm"
             customEventOptions={{
               eventCategory: "WalletExternalLinkList",

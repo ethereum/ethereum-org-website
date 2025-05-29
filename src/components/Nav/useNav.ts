@@ -1,4 +1,3 @@
-import { useTranslation } from "next-i18next"
 import { useTheme } from "next-themes"
 import {
   BsBook,
@@ -18,7 +17,6 @@ import {
   BsUiChecksGrid,
 } from "react-icons/bs"
 import { PiFlask, PiUsersFourLight } from "react-icons/pi"
-import { useColorMode } from "@chakra-ui/react"
 
 import EthereumIcon from "@/components/icons/ethereum-icon.svg"
 
@@ -26,10 +24,11 @@ import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import type { NavSections } from "./types"
 
+import useTranslation from "@/hooks/useTranslation"
+
 export const useNav = () => {
   const { t } = useTranslation("common")
   const { setTheme, resolvedTheme } = useTheme()
-  const { setColorMode } = useColorMode()
 
   const linkSections: NavSections = {
     learn: {
@@ -123,6 +122,11 @@ export const useNav = () => {
           description: t("nav-get-started-description"),
           icon: BsPinAngle,
           items: [
+            {
+              label: t("nav-start-with-crypto-title"),
+              description: t("nav-start-with-crypto-description"),
+              href: "/start/",
+            },
             {
               label: t("nav-find-wallet-label"),
               description: t("nav-find-wallet-description"),
@@ -219,6 +223,21 @@ export const useNav = () => {
                   label: t("regenerative-finance"),
                   description: t("nav-refi-description"),
                   href: "/refi/",
+                },
+                {
+                  label: t("ai-agents"),
+                  description: t("nav-ai-agents-description"),
+                  href: "/ai-agents/",
+                },
+                {
+                  label: t("prediction-markets"),
+                  description: t("nav-prediction-markets-description"),
+                  href: "/prediction-markets/",
+                },
+                {
+                  label: t("real-world-assets"),
+                  description: t("nav-rwa-description"),
+                  href: "/real-world-assets/",
                 },
               ],
             },
@@ -475,7 +494,6 @@ export const useNav = () => {
     const targetTheme = resolvedTheme === "dark" ? "light" : "dark"
 
     setTheme(targetTheme)
-    setColorMode(targetTheme)
 
     trackCustomEvent({
       eventCategory: "nav bar",

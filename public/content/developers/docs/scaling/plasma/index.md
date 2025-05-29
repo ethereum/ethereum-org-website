@@ -6,7 +6,7 @@ incomplete: true
 sidebarDepth: 3
 ---
 
-A Plasma chain is a separate blockchain anchored to Ethereum Mainnet but executing transactions off-chain with its own mechanism for block validation. Plasma chains are sometimes referred to as "child" chains, essentially smaller copies of the Ethereum Mainnet. Plasma chains use [fraud proofs](/glossary/#fraud-proof) (like [optimistic rollups](/developers/docs/scaling/optimistic-rollups/)) to arbitrate disputes.
+A Plasma chain is a separate blockchain anchored to Ethereum Mainnet but executing transactions offchain with its own mechanism for block validation. Plasma chains are sometimes referred to as "child" chains, essentially smaller copies of the Ethereum Mainnet. Plasma chains use [fraud proofs](/glossary/#fraud-proof) (like [optimistic rollups](/developers/docs/scaling/optimistic-rollups/)) to arbitrate disputes.
 
 Merkle trees enable the creation of an endless stack of these chains that can work to offload bandwidth from parent chains (including Ethereum Mainnet). However, while these chains derive some security from Ethereum (via fraud proofs), their security and efficiency are affected by several design limitations.
 
@@ -24,7 +24,7 @@ The Plasma contract functions, among other things, as a [bridge](/developers/doc
 
 The basic components of the Plasma framework are:
 
-### Off-chain computation {#off-chain-computation}
+### Offchain computation {#offchain-computation}
 
 Ethereum's current processing speed is limited to ~ 15-20 transactions per second, reducing the short-term possibility of scaling to handle more users. This problem exists mainly because Ethereum's [consensus mechanism](/developers/docs/consensus-mechanisms/) requires many peer-to-peer nodes to verify every update to the blockchain's state.
 
@@ -32,17 +32,17 @@ Although Ethereum's consensus mechanism is necessary for security, it may not ap
 
 Plasma supposes that Ethereum Mainnet doesn't need to verify all transactions. Instead, we can process transactions off Mainnet, freeing nodes from having to validate every transaction.
 
-Off-chain computation is necessary since Plasma chains can optimize for speed and cost. For example, a Plasma chain may—and most often does—use a single "operator" to manage the ordering and execution of transactions. With just one entity verifying transactions, processing times on a plasma chain are faster than Ethereum Mainnet.
+Offchain computation is necessary since Plasma chains can optimize for speed and cost. For example, a Plasma chain may—and most often does—use a single "operator" to manage the ordering and execution of transactions. With just one entity verifying transactions, processing times on a plasma chain are faster than Ethereum Mainnet.
 
 ### State commitments {#state-commitments}
 
-While Plasma executes transactions off-chain, they are settled on the main Ethereum execution layer—otherwise, Plasma chains cannot benefit from Ethereum's security guarantees. But finalizing off-chain transactions without knowing the state of the plasma chain would break the security model and allow the proliferation of invalid transactions. This is why the operator, the entity responsible for producing blocks on the plasma chain, is required to publish "state commitments" on Ethereum periodically.
+While Plasma executes transactions offchain, they are settled on the main Ethereum execution layer—otherwise, Plasma chains cannot benefit from Ethereum's security guarantees. But finalizing offchain transactions without knowing the state of the plasma chain would break the security model and allow the proliferation of invalid transactions. This is why the operator, the entity responsible for producing blocks on the plasma chain, is required to publish "state commitments" on Ethereum periodically.
 
 A [commitment scheme](https://en.wikipedia.org/wiki/Commitment_scheme) is a cryptographic technique for committing to a value or statement without revealing it to another party. Commitments are "binding" in the sense that you cannot change the value or statement once you've committed to it. State commitments in Plasma take the form of "Merkle roots" (derived from a [Merkle tree](/whitepaper/#merkle-trees)) which the operator sends at intervals to the Plasma contract on the Ethereum chain.
 
 Merkle roots are cryptographic primitives that enable compressing of large amounts of information. A Merkle root (also called a "block root" in this case) could represent all the transactions in a block. Merkle roots also make it easier to verify that a small piece of data is part of the larger dataset. For instance, a user can produce a [Merkle proof](/developers/tutorials/merkle-proofs-for-offline-data-integrity/#main-content) to prove the inclusion of a transaction in a specific block.
 
-Merkle roots are important for providing information about the off-chain's state to Ethereum. You can think of Merkle roots as "save points": the operator is saying, "This is the state of the Plasma chain at x point in time, and this is the Merkle root as proof." The operator is committing to the _current state_ of the plasma chain with a Merkle root, which is why it is called a "state commitment".
+Merkle roots are important for providing information about the offchain's state to Ethereum. You can think of Merkle roots as "save points": the operator is saying, "This is the state of the Plasma chain at x point in time, and this is the Merkle root as proof." The operator is committing to the _current state_ of the plasma chain with a Merkle root, which is why it is called a "state commitment".
 
 ### Entries and exits {#entries-and-exits}
 
@@ -86,9 +86,9 @@ The mass exit problem occurs when a large number of users try to withdraw from a
 
 Data availability is the ability to verify that the information for a proposed block was actually published on the blockchain network. A block is "unavailable" if the producer publishes the block itself but withholds data used to create the block.
 
-Blocks must be available if nodes are to be able to download the block and verify the validity of transactions. Blockchains ensure data availability by forcing block producers to post all transaction data on-chain.
+Blocks must be available if nodes are to be able to download the block and verify the validity of transactions. Blockchains ensure data availability by forcing block producers to post all transaction data onchain.
 
-Data availability also helps with securing off-chain scaling protocols that build on Ethereum's base layer. By forcing operators on these chains to publish transaction data on Ethereum, anyone can challenge invalid blocks by constructing fraud proofs referencing the correct state of the chain.
+Data availability also helps with securing offchain scaling protocols that build on Ethereum's base layer. By forcing operators on these chains to publish transaction data on Ethereum, anyone can challenge invalid blocks by constructing fraud proofs referencing the correct state of the chain.
 
 Plasma chains primarily store transaction data with the operator and **do not publish any data on Mainnet** (i.e., besides periodic state commitments). This means users must rely on the operator to provide block data if they need to create fraud proofs challenging invalid transactions. If this system works, then users can always use fraud proofs to secure funds.
 
@@ -111,7 +111,7 @@ Although exit games sound nice in theory, real-life mass exits will likely trigg
 | Offers high throughput and low cost per transaction.                                                                                                                                                                             | Does not support general computation (cannot run smart contracts). Only basic token transfers, swaps, and a few other transaction types are supported via predicate logic.    |
 | Good for transactions between arbitrary users (no overhead per user pair if both are established on the plasma chain)                                                                                                            | Need to periodically watch the network (liveness requirement) or delegate this responsibility to someone else to ensure the security of your funds.                          |
 | Plasma chains can be adapted to specific use-cases that are unrelated to the main chain. Anyone, including businesses, can customize Plasma smart contracts to provide scalable infrastructure that works in different contexts. | Relies on one or more operators to store data and serve it upon request.                                                                                                     |
-| Reduces load on Ethereum Mainnet by moving computation and storage off-chain.                                                                                                                                                    | Withdrawals are delayed by several days to allow for challenges. For fungible assets, this can be mitigated by liquidity providers, but there is an associated capital cost. |
+| Reduces load on Ethereum Mainnet by moving computation and storage offchain.                                                                                                                                                    | Withdrawals are delayed by several days to allow for challenges. For fungible assets, this can be mitigated by liquidity providers, but there is an associated capital cost. |
 |                                                                                                                                                                                                                                  | If too many users try to exit simultaneously, Ethereum Mainnet could get congested.                                                                                          |
 
 ## Plasma vs layer 2 scaling protocols {#plasma-vs-layer-2}
@@ -120,7 +120,7 @@ While Plasma was once considered a useful scaling solution for Ethereum, it has 
 
 ### Efficiency {#efficiency}
 
-[Zero-Knowledge rollups](/developers/docs/scaling/zk-rollups) generate cryptographic proofs of the validity of each batch of transactions processed off-chain. This prevents the users (and operators) from advancing invalid state transitions, eliminating the need for challenge periods and exit games. It also means users don't have to watch the chain periodically to secure their funds.
+[Zero-Knowledge rollups](/developers/docs/scaling/zk-rollups) generate cryptographic proofs of the validity of each batch of transactions processed offchain. This prevents the users (and operators) from advancing invalid state transitions, eliminating the need for challenge periods and exit games. It also means users don't have to watch the chain periodically to secure their funds.
 
 ### Support for smart contracts {#support-for-smart-contracts}
 

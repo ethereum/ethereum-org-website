@@ -115,7 +115,7 @@ contract VendingMachine {
 
 - 在[开发环境](/developers/docs/frameworks/)下测试、编译、和部署智能合约
 
-- 通过基本代码分析工具运行代码，例如 [Cyfrin Aaderyn](https://github.com/Cyfrin/aderyn) 、Mythril 和 Slither。 理想情况下，应在合并每个拉取请求前进行这一操作，并比较输出中的不同之处
+- 通过基本代码分析工具运行代码，例如 [Cyfrin Aderyn](https://github.com/Cyfrin/aderyn) 、Mythril 和 Slither。 理想情况下，应在合并每个拉取请求前进行这一操作，并比较输出中的不同之处
 
 - 确保代码在编译时没有错误，并且 Solidity 编译器没有发出警告
 
@@ -563,7 +563,7 @@ contract Attack {
 
 - **[智能合约安全验证标准](https://github.com/securing/SCSVS)** - _旨在确立智能合约安全性标准的第十四部分检查清单，面向开发者、架构师、安全审核者和供应商。_
 
-- **[学习智能合约安全与审计](https://updraft.cyfrin.io/courses/security)** - _智能合约安全与审计终极课程，专为寻求提升其安全性最佳做法和希望成为安全研究者的智能合约开发者而创建。_
+- **[学习智能合约安全与审计](https://updraft.cyfrin.io/courses/security) - _智能合约安全与审计终极课程，专为寻求提升其安全性最佳做法和希望成为安全研究者的智能合约开发者而创建。_
 
 ### 智能合约安全性教程 {#tutorials-on-smart-contract-security}
 

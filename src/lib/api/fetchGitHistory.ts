@@ -11,7 +11,7 @@ async function fetchWithRateLimit(filepath: string): Promise<Commit[]> {
   url.searchParams.set("path", filepath)
   url.searchParams.set("sha", "master")
 
-  const gitHubToken = process.env.GITHUB_TOKEN_READ_ONLY
+  const gitHubToken = process.env.NEXT_PUBLIC_GITHUB_TOKEN_READ_ONLY
 
   // If no token available, return empty array
   if (!gitHubToken) return []
@@ -46,7 +46,7 @@ async function fetchWithRateLimit(filepath: string): Promise<Commit[]> {
 }
 
 // Fetch commit history and save it to a JSON file
-export const fetchAndCacheGitContributors = async (
+export const fetchAndCacheGitHubContributors = async (
   filepath: string,
   cache: CommitHistory
 ) => {

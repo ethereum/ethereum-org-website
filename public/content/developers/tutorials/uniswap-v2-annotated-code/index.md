@@ -755,7 +755,7 @@ This is the main function of the factory, to create a pair exchange between two 
         (address token0, address token1) = tokenA < tokenB ? (tokenA, tokenB) : (tokenB, tokenA);
 ```
 
-We want the address of the new exchange to be deterministic, so it can be calculated in advance off chain (this can be useful for [layer 2 transactions](/developers/docs/scaling/)).
+We want the address of the new exchange to be deterministic, so it can be calculated in advance offchain (this can be useful for [layer 2 transactions](/developers/docs/scaling/)).
 To do this we need to have a consistent order of the token addresses, regardless of the order in which we have received them, so we sort them here.
 
 ```solidity
@@ -817,7 +817,7 @@ These two functions allow `feeSetter` to control the fee recipient (if any), and
 [This contract](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2ERC20.sol) implements the ERC-20 liquidity token. It is similar to the [OpenZeppelin ERC-20 contract](/developers/tutorials/erc20-annotated-code), so I will only explain the part that is different, the `permit` functionality.
 
 Transactions on Ethereum cost ether (ETH), which is equivalent to real money. If you have ERC-20 tokens but not ETH, you can't send transactions, so you can't do anything with them. One solution to avoid this problem is [meta-transactions](https://docs.uniswap.org/contracts/v2/guides/smart-contract-integration/supporting-meta-transactions).
-The owner of the tokens signs a transaction that allows somebody else to withdraw tokens off chain and sends it using the Internet to the recipient. The recipient, which does have ETH, then submits the permit on behalf of the owner.
+The owner of the tokens signs a transaction that allows somebody else to withdraw tokens offchain and sends it using the Internet to the recipient. The recipient, which does have ETH, then submits the permit on behalf of the owner.
 
 ```solidity
     bytes32 public DOMAIN_SEPARATOR;

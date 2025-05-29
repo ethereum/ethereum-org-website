@@ -8,7 +8,7 @@ import {
 
 import type { PhoneScreenProps } from "@/lib/types"
 
-import { TwImage as Image } from "@/components/Image"
+import { Image } from "@/components/Image"
 import { Button } from "@/components/ui/buttons/Button"
 import { Flex } from "@/components/ui/flex"
 

@@ -1,11 +1,23 @@
 [
   {
-    "id": 5559,
-    "path": "/dao/index.md"
+    "id": 7521,
+    "path": "/guides/index.md"
   },
   {
-    "id": 5565,
-    "path": "/nft/index.md"
+    "id": 7803,
+    "path": "/roadmap/index.md"
+  },
+  {
+    "id": 6161,
+    "path": "/community/events/index.md"
+  },
+  {
+    "id": 6428,
+    "path": "/web3/index.md"
+  },
+  {
+    "id": 7525,
+    "path": "/guides/how-to-create-an-ethereum-account/index.md"
   },
   {
     "id": 2716,
@@ -212,20 +224,36 @@
     "path": "/developers/docs/standards/tokens/erc-777/index.md"
   },
   {
-    "id": 2672,
-    "path": "/history/index.md"
+    "id": 6183,
+    "path": "/energy-consumption/index.md"
   },
   {
-    "id": 2954,
-    "path": "/glossary/index.md"
+    "id": 7314,
+    "path": "/social-networks/index.md"
+  },
+  {
+    "id": 7316,
+    "path": "/decentralized-identity/index.md"
+  },
+  {
+    "id": 7461,
+    "path": "/desci/index.md"
+  },
+  {
+    "id": 7591,
+    "path": "/staking/withdrawals/index.md"
+  },
+  {
+    "id": 8019,
+    "path": "/community/code-of-conduct/index.md"
+  },
+  {
+    "id": 8035,
+    "path": "/refi/index.md"
   },
   {
     "id": 5557,
     "path": "/community/grants/index.md"
-  },
-  {
-    "id": 6161,
-    "path": "/community/events/index.md"
   },
   {
     "id": 6163,
@@ -236,16 +264,8 @@
     "path": "/community/online/index.md"
   },
   {
-    "id": 6167,
-    "path": "/community/support/index.md"
-  },
-  {
     "id": 6185,
     "path": "/community/language-resources/index.md"
-  },
-  {
-    "id": 8019,
-    "path": "/community/code-of-conduct/index.md"
   },
   {
     "id": 12036,
@@ -256,36 +276,24 @@
     "path": "/roadmap/merge/index.md"
   },
   {
-    "id": 2946,
-    "path": "/roadmap/beacon-chain/index.md"
-  },
-  {
-    "id": 2950,
-    "path": "/eips/index.md"
+    "id": 6167,
+    "path": "/community/support/index.md"
   },
   {
     "id": 7515,
     "path": "/roadmap/merge/issuance/index.md"
   },
   {
-    "id": 7721,
-    "path": "/roadmap/future-proofing/index.md"
+    "id": 7713,
+    "path": "/roadmap/account-abstraction/index.md"
   },
   {
-    "id": 7729,
-    "path": "/roadmap/scaling/index.md"
+    "id": 7717,
+    "path": "/roadmap/danksharding/index.md"
   },
   {
-    "id": 7737,
-    "path": "/roadmap/security/index.md"
-  },
-  {
-    "id": 7749,
-    "path": "/roadmap/user-experience/index.md"
-  },
-  {
-    "id": 7803,
-    "path": "/roadmap/index.md"
+    "id": 7745,
+    "path": "/roadmap/statelessness/index.md"
   },
   {
     "id": 5553,
@@ -368,20 +376,24 @@
     "path": "/staking/solo/index.md"
   },
   {
-    "id": 7591,
-    "path": "/staking/withdrawals/index.md"
+    "id": 7465,
+    "path": "/zero-knowledge-proofs/index.md"
   },
   {
-    "id": 7919,
-    "path": "/staking/dvt/index.md"
+    "id": 12582,
+    "path": "/prediction-markets/index.md"
+  },
+  {
+    "id": 12584,
+    "path": "/ai-agents/index.md"
+  },
+  {
+    "id": 2962,
+    "path": "/foundation/index.md"
   },
   {
     "id": 5563,
     "path": "/governance/index.md"
-  },
-  {
-    "id": 6183,
-    "path": "/energy-consumption/index.md"
   },
   {
     "id": 6187,
@@ -392,48 +404,56 @@
     "path": "/bridges/index.md"
   },
   {
-    "id": 7465,
-    "path": "/zero-knowledge-proofs/index.md"
+    "id": 5559,
+    "path": "/dao/index.md"
   },
   {
     "id": 5561,
     "path": "/defi/index.md"
   },
   {
-    "id": 6428,
-    "path": "/web3/index.md"
+    "id": 5565,
+    "path": "/nft/index.md"
   },
   {
     "id": 6440,
     "path": "/smart-contracts/index.md"
   },
   {
-    "id": 7521,
-    "path": "/guides/index.md"
+    "id": 12565,
+    "path": "/payments/index.md"
   },
   {
-    "id": 7525,
-    "path": "/guides/how-to-create-an-ethereum-account/index.md"
+    "id": 2946,
+    "path": "/roadmap/beacon-chain/index.md"
   },
   {
-    "id": 7529,
-    "path": "/guides/how-to-revoke-token-access/index.md"
+    "id": 2950,
+    "path": "/eips/index.md"
   },
   {
-    "id": 7533,
-    "path": "/guides/how-to-swap-tokens/index.md"
+    "id": 2966,
+    "path": "/about/index.md"
   },
   {
-    "id": 7537,
-    "path": "/guides/how-to-use-a-bridge/index.md"
+    "id": 7721,
+    "path": "/roadmap/future-proofing/index.md"
   },
   {
-    "id": 7541,
-    "path": "/guides/how-to-use-a-wallet/index.md"
+    "id": 7729,
+    "path": "/roadmap/scaling/index.md"
   },
   {
-    "id": 8027,
-    "path": "/guides/how-to-id-scam-tokens/index.md"
+    "id": 7737,
+    "path": "/roadmap/security/index.md"
+  },
+  {
+    "id": 7749,
+    "path": "/roadmap/user-experience/index.md"
+  },
+  {
+    "id": 7919,
+    "path": "/staking/dvt/index.md"
   },
   {
     "id": 2776,
@@ -616,36 +636,32 @@
     "path": "/enterprise/index.md"
   },
   {
-    "id": 2962,
-    "path": "/foundation/index.md"
+    "id": 2672,
+    "path": "/history/index.md"
   },
   {
-    "id": 2966,
-    "path": "/about/index.md"
+    "id": 7529,
+    "path": "/guides/how-to-revoke-token-access/index.md"
   },
   {
-    "id": 7314,
-    "path": "/social-networks/index.md"
+    "id": 7533,
+    "path": "/guides/how-to-swap-tokens/index.md"
   },
   {
-    "id": 7316,
-    "path": "/decentralized-identity/index.md"
+    "id": 7537,
+    "path": "/guides/how-to-use-a-bridge/index.md"
   },
   {
-    "id": 7461,
-    "path": "/desci/index.md"
+    "id": 7541,
+    "path": "/guides/how-to-use-a-wallet/index.md"
   },
   {
-    "id": 8035,
-    "path": "/refi/index.md"
+    "id": 8027,
+    "path": "/guides/how-to-id-scam-tokens/index.md"
   },
   {
-    "id": 7713,
-    "path": "/roadmap/account-abstraction/index.md"
-  },
-  {
-    "id": 7717,
-    "path": "/roadmap/danksharding/index.md"
+    "id": 2954,
+    "path": "/glossary/index.md"
   },
   {
     "id": 7725,
@@ -658,10 +674,6 @@
   {
     "id": 7741,
     "path": "/roadmap/single-slot-finality/index.md"
-  },
-  {
-    "id": 7745,
-    "path": "/roadmap/statelessness/index.md"
   },
   {
     "id": 7753,

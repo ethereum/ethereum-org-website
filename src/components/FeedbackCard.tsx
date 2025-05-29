@@ -1,6 +1,7 @@
+"use client"
+
 import { type ReactNode, useState } from "react"
-import { useRouter } from "next/router"
-import { useTranslation } from "next-i18next"
+import { useLocale } from "next-intl"
 
 import type { Lang } from "@/lib/types"
 
@@ -13,6 +14,8 @@ import { Button } from "./ui/buttons/Button"
 import Translation from "./Translation"
 
 import { useSurvey } from "@/hooks/useSurvey"
+import { useTranslation } from "@/hooks/useTranslation"
+import { usePathname } from "@/i18n/routing"
 
 type FeedbackCardProps = {
   prompt?: string
@@ -23,10 +26,11 @@ const FeedbackCard = ({ prompt, isArticle, ...props }: FeedbackCardProps) => {
   const { t } = useTranslation("common")
   const [feedbackSubmitted, setFeedbackSubmitted] = useState(false)
   const surveyUrl = useSurvey(feedbackSubmitted)
-  const { locale, asPath } = useRouter()
+  const locale = useLocale()
+  const pathname = usePathname()
   const dir = isLangRightToLeft(locale! as Lang) ? "rtl" : "ltr"
 
-  const isTutorial = asPath?.includes("tutorials")
+  const isTutorial = pathname?.includes("tutorials")
 
   const getTitle = (feedbackSubmitted: boolean): ReactNode => {
     if (!feedbackSubmitted) {

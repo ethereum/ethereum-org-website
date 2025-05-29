@@ -1,8 +1,8 @@
-import { useTranslation } from "next-i18next"
-
 import { MAIN_CONTENT_ID } from "@/lib/constants"
 
 import { BaseLink } from "./ui/Link"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 export const SkipLink = () => {
   const { t } = useTranslation()

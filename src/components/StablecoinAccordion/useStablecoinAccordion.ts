@@ -1,18 +1,17 @@
-import { useTranslation } from "next-i18next"
-
 import { type CardProps } from "@/components/CardList"
 
+import { useTranslation } from "@/hooks/useTranslation"
 import aaveImg from "@/public/images/dapps/aave.png"
 // -- borrow
 import compoundImg from "@/public/images/dapps/compound.png"
 // -- earn
 import gitcoinImg from "@/public/images/dapps/gitcoin.png"
-import loopringImg from "@/public/images/dapps/loopring.png"
 import matchaImg from "@/public/images/dapps/matcha.png"
 import summerfiImg from "@/public/images/dapps/summerfi.png"
 // Static assets
 // -- dapps
 import uniImg from "@/public/images/dapps/uni.png"
+import ethImg from "@/public/images/eth-org-logo.png"
 import oneInchImg from "@/public/images/exchanges/1inch.png"
 import binanceImg from "@/public/images/exchanges/binance.png"
 // -- exchanges
@@ -20,7 +19,6 @@ import coinbaseImg from "@/public/images/exchanges/coinbase.png"
 import coinmamaImg from "@/public/images/exchanges/coinmama.png"
 import geminiImg from "@/public/images/exchanges/gemini.png"
 import krakenImg from "@/public/images/exchanges/kraken.png"
-import ethImg from "@/public/images/favicon.png"
 
 export const useStablecoinAccordion = () => {
   const { t } = useTranslation("page-stablecoins")
@@ -31,12 +29,6 @@ export const useStablecoinAccordion = () => {
       image: uniImg,
       link: "https://uniswap.org",
       alt: t("uniswap-logo"),
-    },
-    {
-      title: "Loopring",
-      image: loopringImg,
-      link: "https://loopring.io/#/pro",
-      alt: t("loopring-logo"),
     },
     {
       title: "1inch",

@@ -1,8 +1,10 @@
 {
+  "template-usecase-dropdown-ai-agents": "AI agents",
   "template-usecase-dropdown-defi": "Decentralized finance (DeFi)",
   "template-usecase-dropdown-nft": "Non-fungible tokens (NFTs)",
   "template-usecase-dropdown-dao": "Decentralized autonomous organisations (DAOs)",
   "template-usecase-dropdown-payments": "Ethereum Payments",
+  "template-usecase-dropdown-prediction-markets": "Prediction Markets",
   "template-usecase-dropdown-social-networks": "Decentralized social networks",
   "template-usecase-dropdown-identity": "Decentralized identity",
   "template-usecase-dropdown-desci": "Decentralized science (DeSci)",
@@ -10,5 +12,6 @@
   "template-usecase-dropdown": "Ethereum use cases",
   "template-usecase-banner": "Uses of Ethereum are always developing and evolving. Add any info you think will make things clearer or more up to date.",
   "template-usecase-edit-link": "Edit page",
-  "template-usecase-dropdown-aria": "Use case dropdown menu"
+  "template-usecase-dropdown-aria": "Use case dropdown menu",
+  "template-usecase-dropdown-rwa": "Real-world assets (RWAs)"
 }

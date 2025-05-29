@@ -1,3 +1,5 @@
+"use client"
+
 import TwImage, { type ImageProps } from "next/image"
 import type { ReactNode } from "react"
 

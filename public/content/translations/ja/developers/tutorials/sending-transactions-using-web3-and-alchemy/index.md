@@ -58,7 +58,7 @@ Web3を使用する場合、 `eth_sendRawTransaction`は [web3.eth.sendSignedTra
 
 さて、これらの疑問が解消できたところで、さっそくチュートリアルを始めましょう。 疑問があれば、Alchemy [discord](https://discord.gg/gWuC7zB)で気軽に質問してください。
 
-### 7. 安全でガス最適化されたプライベートなトランザクションを送信する方法は？ {how-to-send-secure-gas-optimized-and-private-transactions}
+### 7. 安全でガス最適化されたプライベートなトランザクションを送信する方法は？ {#how-to-send-secure-gas-optimized-and-private-transactions}
 
 - [Alchemyには、トランザクションAPIのスイートがあります](https://docs.alchemy.com/reference/transact-api-quickstart)。 これにより、強化されたトランザクションの送信、トランザクションが発生する前のシミュレーション、プライベートなトランザクションの送信、ガス最適化されたトランザクションの送信が可能です。
 - [Notify API](https://docs.alchemy.com/docs/alchemy-notify)では、トランザクションがメモリプールからプルされチェーンに追加されたときに通知を受け取ることが可能です。

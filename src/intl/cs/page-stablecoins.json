@@ -131,6 +131,7 @@
   "page-stablecoins-stablecoins-table-type-precious-metals-backed": "Drahé kovy",
   "page-stablecoins-table-error": "Nepodařilo se načíst stablecoiny. Zkuste obnovit stránku.",
   "page-stablecoins-title": "Stabilní kryptoměny (stablecoins)",
+  "page-stablecoins-meta-title": "Vysvětlení Stablecoinů: K čemu slouží?",
   "page-stablecoins-top-coins": "Největší stablecoiny podle tržní kapitalizace",
   "page-stablecoins-top-coins-intro": "Tržní kapitalizace je",
   "page-stablecoins-top-coins-intro-code": "celkový počet existujících tokenů vynásobený hodnotou jednoho tokenu. Tento seznam se často mění a projekty v něm obsažené nemusí být podporovány týmem ethereum.org.",

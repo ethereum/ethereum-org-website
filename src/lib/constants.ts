@@ -6,8 +6,9 @@ import i18nConfig from "../../i18n.config.json"
 
 import type { CommunityBlog } from "./types"
 
-export const OLD_CONTENT_DIR = "src/content"
+export const OLD_CONTENT_DIR = "src/content" // For old git commit history -- do not remove
 export const CONTENT_DIR = "public/content"
+export const CONTENT_PATH = "/content"
 export const TRANSLATIONS_DIR = "public/content/translations"
 export const TRANSLATED_IMAGES_DIR = "/content/translations"
 export const PLACEHOLDER_IMAGE_DIR = "src/data/placeholders"
@@ -19,7 +20,7 @@ export const NULL_VALUE = "—"
 export const DEFAULT_LOCALE = "en"
 export const FAKE_LOCALE = "default"
 // Sorted list of supported locales codes, defined in `i18n.config.json`
-const BUILD_LOCALES = process.env.BUILD_LOCALES
+const BUILD_LOCALES = process.env.NEXT_PUBLIC_BUILD_LOCALES
 export const LOCALES_CODES = BUILD_LOCALES
   ? BUILD_LOCALES.split(",")
   : i18nConfig.map(({ code }) => code)
@@ -28,7 +29,7 @@ export const LOCALES_CODES = BUILD_LOCALES
 export const SITE_URL = "https://ethereum.org"
 export const DISCORD_PATH = "/discord/"
 export const GITHUB_REPO_URL =
-  "https://github.com/ethereum/ethereum-org-website"
+  "https://github.com/ethereum/ethereum-org-website/"
 export const EDIT_CONTENT_URL = `https://github.com/ethereum/ethereum-org-website/tree/dev/`
 export const MAIN_CONTENT_ID = "main-content"
 export const WEBSITE_EMAIL = "website@ethereum.org"
@@ -198,7 +199,7 @@ export const COMMUNITY_BLOGS: CommunityBlog[] = [
   },
   {
     href: "https://ethpandaops.io/posts/",
-    feed: "https://ethpandaops.io/posts/index.xml",
+    feed: "https://ethpandaops.io/posts/rss.xml",
   },
   {
     href: "https://ethstaker.cc/blog",
@@ -228,6 +229,10 @@ export const COMMUNITY_BLOGS: CommunityBlog[] = [
   {
     href: "https://medium.com/ethereum-cat-herders/newsletter",
     feed: "https://medium.com/feed/ethereum-cat-herders",
+  },
+  {
+    href: "http://geodework.com/blog",
+    feed: "http://geodework.com/feed.xml",
   },
 ]
 

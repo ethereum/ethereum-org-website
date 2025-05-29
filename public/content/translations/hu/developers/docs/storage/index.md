@@ -88,7 +88,6 @@ A platformok decentralitását nem lehet könnyen mérni, de általában olyan e
 
 Decentralizált eszközök KYC nélkül:
 
-- Züs (egy KYC nélküli kiadást implementál)
 - Skynet
 - Arweave
 - Filecoin
@@ -147,7 +146,7 @@ Proof-of-stake-alapú:
 
 **Züs – _A Züs egy proof-of-stake dStorage platform shardinggal és blobberekkel._**
 
-- - [zus.network](https://zus.network/)
+- [zus.network](https://zus.network/)
 - [Dokumentáció](https://0chaindocs.gitbook.io/zus-docs)
 - [GitHub](https://github.com/0chain/)
 

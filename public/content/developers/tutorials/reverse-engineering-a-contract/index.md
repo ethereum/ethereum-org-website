@@ -51,8 +51,8 @@ Contracts are always executed from the first byte. This is the initial part of t
 |      4 | MSTORE       | Empty                    |
 |      5 | PUSH1 0x04   | 0x04                     |
 |      7 | CALLDATASIZE | CALLDATASIZE 0x04        |
-|      8 | LT           | CALLDATASIZE<4           |
-|      9 | PUSH2 0x005e | 0x5E CALLDATASIZE<4      |
+|      8 | LT           | CALLDATASIZE\<4           |
+|      9 | PUSH2 0x005e | 0x5E CALLDATASIZE\<4      |
 |      C | JUMPI        | Empty                    |
 
 This code does two things:
@@ -117,8 +117,8 @@ The `NOT` is bitwise, so it reverses the value of every bit in the call value.
 | -----: | ------------ | --------------------------------------------------------------------------- |
 |    1AC | DUP3         | Value\* 2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE         |
 |    1AD | GT           | Value\*>2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE         |
-|    1AE | ISZERO       | Value\*<=2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE        |
-|    1AF | PUSH2 0x01df | 0x01DF Value\*<=2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE |
+|    1AE | ISZERO       | Value\*\<=2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE        |
+|    1AF | PUSH2 0x01df | 0x01DF Value\*\<=2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE |
 |    1B2 | JUMPI        |
 
 We jump if `Value*` is smaller than 2^256-CALLVALUE-1 or equal to it. This looks like logic to prevent overflow. And indeed, we see that after a few nonsense operations (writing to memory is about to get deleted, for example) at offset 0x01DE the contract reverts if the overflow is detected, which is normal behavior.
@@ -429,7 +429,7 @@ The code in offsets 0x138-0x143 is identical to what we saw in 0x103-0x10E in `s
 |    194 | DUP3         | 0x04 0x20 0x00 0x04 CALLDATASIZE 0x0153 0xDA                 |
 |    195 | DUP5         | CALLDATASIZE 0x04 0x20 0x00 0x04 CALLDATASIZE 0x0153 0xDA    |
 |    196 | SUB          | CALLDATASIZE-4 0x20 0x00 0x04 CALLDATASIZE 0x0153 0xDA       |
-|    197 | SLT          | CALLDATASIZE-4<32 0x00 0x04 CALLDATASIZE 0x0153 0xDA         |
+|    197 | SLT          | CALLDATASIZE-4\<32 0x00 0x04 CALLDATASIZE 0x0153 0xDA         |
 |    198 | ISZERO       | CALLDATASIZE-4>=32 0x00 0x04 CALLDATASIZE 0x0153 0xDA        |
 |    199 | PUSH2 0x01a0 | 0x01A0 CALLDATASIZE-4>=32 0x00 0x04 CALLDATASIZE 0x0153 0xDA |
 |    19C | JUMPI        | 0x00 0x04 CALLDATASIZE 0x0153 0xDA                           |
@@ -469,8 +469,8 @@ Let's see what happens if the function _does_ get the call data it needs.
 |    172 | DUP2         | 0x04 calldataload(4) 0x04 calldataload(4) 0xDA                               |
 |    173 | SLOAD        | Storage[4] calldataload(4) 0x04 calldataload(4) 0xDA                         |
 |    174 | DUP2         | calldataload(4) Storage[4] calldataload(4) 0x04 calldataload(4) 0xDA         |
-|    175 | LT           | calldataload(4)<Storage[4] calldataload(4) 0x04 calldataload(4) 0xDA         |
-|    176 | PUSH2 0x017e | 0x017EC calldataload(4)<Storage[4] calldataload(4) 0x04 calldataload(4) 0xDA |
+|    175 | LT           | calldataload(4)\<Storage[4] calldataload(4) 0x04 calldataload(4) 0xDA         |
+|    176 | PUSH2 0x017e | 0x017EC calldataload(4)\<Storage[4] calldataload(4) 0x04 calldataload(4) 0xDA |
 |    179 | JUMPI        | calldataload(4) 0x04 calldataload(4) 0xDA                                    |
 
 If the first word is not less than Storage[4], the function fails. It reverts without any returned value:

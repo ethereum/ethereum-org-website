@@ -40,7 +40,6 @@ export const SendReceiveButtons = ({
         onClick={nav?.progressStepper}
         isDisabled={disableReceive}
         isHighlighted={highlightReceive}
-        // @ts-expect-error icon component needs to be migrated to use react-icons base
         icon={QrCodeIcon}
         isAnimated
       >

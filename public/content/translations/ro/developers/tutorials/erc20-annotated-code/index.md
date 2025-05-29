@@ -587,7 +587,7 @@ Funcția `a.add(b)` este o adunare sigură („safe add”). În cazul improbabi
 
 Există patru funcții care efeectuează cu adevărat munca: `_transfer`, `_mint`, `_burn`, și `_approve`.
 
-#### Funcția \_transfer {#\_transfer}
+#### Funcția \_transfer {#_transfer}
 
 ```solidity
     /**
@@ -652,7 +652,7 @@ Acestea sunt liniile care execută practic transferul. Observați că nu există
 
 În cele din urmă, va emite evenimentul `Transfer`. Evenimentele nu sunt accesibile contractelor inteligente, dar codul care rulează în afara blockchain-ului poate să detecteze prin ascultare evenimente și să reacționeze la ele. De exemplu, un portofel poate monitoriza când proprietarul obține mai multe tokenuri.
 
-#### Funcțiile \_mint și \_burn {#\_mint-and-\_burn}
+#### Funcțiile \_mint și \_burn {#_mint-and-_burn}
 
 Cele două funcții (`_mint` și `_burn`) modifică numărul total de tokenuri furnizate. Deoarece acestea sunt interne, nu există nicio funcție care să le apeleze în acest contract, iar ele sunt utile numai dacă moșteniți din contract și adăugați propria logică prin care să decideți în ce condiții să emiteţi noi tokenuri sau să le ardeți pe cele existente.
 
@@ -706,7 +706,7 @@ Aveţi grijă să actualizați `_totalSupply` atunci când se modifică numărul
 
 Funcția `_burn` este identică aproape cu `_mint`, cu excepția faptului că funcționează în sens invers.
 
-#### Funcția \_approve {#\_approve}
+#### Funcția \_approve {#_approve}
 
 Aceasta este funcția care specifică de fapt alocațiile. Rețineți că permite unui proprietar să specifice o alocație mai mare decât soldul curent al proprietarului. Acest lucru este în regulă, deoarece soldul este verificat în momentul transferului, când ar putea fi diferit de cel de la momentul în care a fost creată alocația.
 
@@ -784,7 +784,7 @@ Această funcție modifică variabila `_decimals`, care este utilizată pentru a
 
 Aceasta este funcția „hook” care va fi apelată în timpul transferurilor. It is empty here, but if you need it to do something you just override it.
 
-# Concluzie {#conclusion}
+## Concluzie {#conclusion}
 
 În recapitulare, iată câteva dintre cele mai importante idei din acest contract (după părerea mea - părerea dvs. ar putea să fie diferită):
 

@@ -26,7 +26,7 @@ import { ButtonLink } from "../ui/buttons/Button"
 import { Divider } from "../ui/divider"
 import { Flex } from "../ui/flex"
 import { ListItem, OrderedList, UnorderedList } from "../ui/list"
-import { mdxTableComponents } from "../ui/table"
+import { mdxTableComponents } from "../ui/mdx-table-components"
 import { Tag } from "../ui/tag"
 
 export const commonHeadingAttributes = (className: string, id?: string) => ({
