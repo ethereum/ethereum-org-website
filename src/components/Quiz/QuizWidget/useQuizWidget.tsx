@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react"
 import isChromatic from "chromatic"
+import { shuffle } from "lodash"
 
 import type {
   AnswerChoice,
@@ -9,8 +10,6 @@ import type {
   RawQuestion,
   RawQuiz,
 } from "@/lib/types"
-
-import { shuffle } from "@/lib/utils/lodash"
 
 import allQuizzesData from "@/data/quizzes"
 import questionBank from "@/data/quizzes/questionBank"

@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { reverse, sortBy } from "lodash"
 
 import type { CostLeaderboardData } from "@/lib/types"
 
@@ -6,7 +7,6 @@ import { Button } from "@/components/ui/buttons/Button"
 import { Flex } from "@/components/ui/flex"
 
 import { cn } from "@/lib/utils/cn"
-import { reverse, sortBy } from "@/lib/utils/lodash"
 
 import Emoji from "./Emoji"
 import { Image } from "./Image"

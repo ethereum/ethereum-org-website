@@ -1,10 +1,10 @@
 import { type ReactNode } from "react"
+import { capitalize } from "lodash"
 import type { Meta, StoryObj } from "@storybook/react"
 
 import { HStack, Stack, VStack } from "@/components/ui/flex"
 
 import { cn } from "@/lib/utils/cn"
-import { capitalize } from "@/lib/utils/lodash"
 
 const meta = {
   title: "Design System / Colors",

@@ -1,5 +1,6 @@
+import { shuffle, union } from "lodash"
+
 import { getLanguageCodeName } from "@/lib/utils/intl"
-import { shuffle, union } from "@/lib/utils/lodash"
 import { capitalize } from "@/lib/utils/string"
 
 import { newToCrypto } from "@/data/wallets/new-to-crypto"

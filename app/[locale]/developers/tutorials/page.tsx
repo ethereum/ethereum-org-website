@@ -1,3 +1,4 @@
+import { pick } from "lodash"
 import {
   getMessages,
   getTranslations,
@@ -9,7 +10,6 @@ import { Lang } from "@/lib/types"
 import I18nProvider from "@/components/I18nProvider"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
-import { pick } from "@/lib/utils/lodash"
 import { getTutorialsData } from "@/lib/utils/md"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"

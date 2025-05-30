@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react"
+import { shuffle } from "lodash"
 
 import type { TranslationKey } from "@/lib/types"
-
-import { shuffle } from "@/lib/utils/lodash"
 
 import InlineLink from "./ui/Link"
 import Translation from "./Translation"

@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
+import { groupBy } from "lodash"
 import { useLocale } from "next-intl"
 
 import type { CommunityConference, Lang } from "@/lib/types"
@@ -10,7 +11,6 @@ import InfoBanner from "@/components/InfoBanner"
 import { Button } from "@/components/ui/buttons/Button"
 import Link from "@/components/ui/Link"
 
-import { groupBy } from "@/lib/utils/lodash"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 

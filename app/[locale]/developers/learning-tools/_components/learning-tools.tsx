@@ -1,6 +1,7 @@
 "use client"
 
 import { BaseHTMLAttributes } from "react"
+import { shuffle } from "lodash"
 
 import { LearningTool } from "@/lib/types"
 
@@ -13,7 +14,6 @@ import Translation from "@/components/Translation"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 
 import { cn } from "@/lib/utils/cn"
-import { shuffle } from "@/lib/utils/lodash"
 
 import { useTranslation } from "@/hooks/useTranslation"
 import AlchemyUniversityImage from "@/public/images/dev-tools/alchemyuniversity.png"

@@ -1,13 +1,12 @@
 "use client"
 
 import { useEffect, useState } from "react"
+import { shuffle } from "lodash"
 
 import { Image } from "@/components/Image"
 import { Flex } from "@/components/ui/flex"
 import InlineLink from "@/components/ui/Link"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
-
-import { shuffle } from "@/lib/utils/lodash"
 
 import data from "!!raw-loader!@/../.all-contributorsrc"
 

@@ -1,8 +1,7 @@
+import { merge } from "lodash"
 import { getRequestConfig } from "next-intl/server"
 
 import { Lang } from "@/lib/types"
-
-import { merge } from "@/lib/utils/lodash"
 
 import { loadMessages } from "./loadMessages"
 import { routing } from "./routing"

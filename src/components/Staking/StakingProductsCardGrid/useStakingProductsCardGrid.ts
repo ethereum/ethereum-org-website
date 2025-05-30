@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react"
-
-import { shuffle } from "@/lib/utils/lodash"
+import { shuffle } from "lodash"
 
 import stakingProducts from "@/data/staking-products.json"
 

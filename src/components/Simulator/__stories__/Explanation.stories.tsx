@@ -1,7 +1,6 @@
+import { pickBy } from "lodash"
 import type { Meta, StoryObj } from "@storybook/react"
 import { fn } from "@storybook/test"
-
-import { pickBy } from "@/lib/utils/lodash"
 
 import { viewportModes } from "@/storybook/modes"
 
