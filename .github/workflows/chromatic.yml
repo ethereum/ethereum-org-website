@@ -33,7 +33,7 @@ jobs:
           fetch-depth: 0 # 👈 Required to retrieve git history
       - name: Install deps
         # 👇 Install dependencies with the same package manager used in the project (replace it as needed), e.g. yarn, npm, pnpm
-        run: yarn
+        run: pnpm
       - name: Publish to Chromatic
         # 👇 Adds Chromatic as a step in the workflow
         uses: chromaui/action@v1
