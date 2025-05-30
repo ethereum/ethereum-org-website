@@ -27,7 +27,7 @@
         "country": "Zimbabwe",
         "region": "Africa",
         "continent": "Africa",
-        "lat": "17.8263",
+        "lat": "-17.8263",
         "lng": "31.0504",
         "readyToShow": "TRUE",
         "countryFlag": "🇿🇼"
@@ -72,7 +72,7 @@
         "country": "Democratic Republic of the Congo",
         "region": "Africa",
         "continent": "Africa",
-        "lat": "4.3033",
+        "lat": "-4.3033",
         "lng": "15.3105",
         "readyToShow": "TRUE",
         "countryFlag": "🇨🇩"
@@ -202,8 +202,8 @@
         "country": "Argentina",
         "region": "Central & South America",
         "continent": "Central & South Ameirca",
-        "lat": "37.3288",
-        "lng": "59.1367",
+        "lat": "-37.3288",
+        "lng": "-59.1367",
         "readyToShow": "TRUE",
         "countryFlag": "🇦🇷"
       },
@@ -218,7 +218,7 @@
         "region": "Central & South America",
         "continent": "Central & South Ameirca",
         "lat": "25.6866",
-        "lng": "100.3161",
+        "lng": "-100.3161",
         "readyToShow": "TRUE",
         "countryFlag": "🇲🇽"
       },
@@ -232,8 +232,8 @@
         "country": "Bolivia",
         "region": "Central & South America",
         "continent": "Central & South Ameirca",
-        "lat": "17.382",
-        "lng": "66.1596",
+        "lat": "-17.382",
+        "lng": "-66.1596",
         "readyToShow": "TRUE",
         "countryFlag": "🇧🇴"
       },
@@ -247,8 +247,8 @@
         "country": "Brazil",
         "region": "Central & South America",
         "continent": "Central & South Ameirca",
-        "lat": "27.5969",
-        "lng": "48.5468",
+        "lat": "-27.5969",
+        "lng": "-48.5468",
         "readyToShow": "TRUE",
         "countryFlag": "🇧🇷"
       }
@@ -283,7 +283,7 @@
         "region": "Europe",
         "continent": "Europe",
         "lat": "51.5072",
-        "lng": "0.1276",
+        "lng": "-0.1276",
         "readyToShow": "TRUE",
         "countryFlag": "🇬🇧"
       },
@@ -298,7 +298,7 @@
         "region": "Europe",
         "continent": "Europe",
         "lat": "50.8229",
-        "lng": "0.1363",
+        "lng": "-0.1363",
         "readyToShow": "TRUE",
         "countryFlag": "🇬🇧"
       },
@@ -359,11 +359,11 @@
         "eventLocation": "2410 San Antonio Ave, Austin TX",
         "address": "2410 San Antonio Ave, Austin TX",
         "city": "Austin",
-        "country": "TX",
+        "country": "United States",
         "region": "North America",
         "continent": "North America",
         "lat": "30.2672",
-        "lng": "97.7431",
+        "lng": "-97.7431",
         "readyToShow": "TRUE",
         "countryFlag": "🇺🇸"
       }
@@ -382,7 +382,7 @@
         "country": "Australia",
         "region": "Oceania",
         "continent": "Oceania",
-        "lat": "33.8688",
+        "lat": "-33.8688",
         "lng": "151.2093",
         "readyToShow": "TRUE",
         "countryFlag": "🇦🇺"

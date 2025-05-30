@@ -6,6 +6,8 @@ import Globe from "react-globe.gl"
 import { type GlobeMethods } from "react-globe.gl"
 import * as THREE from "three"
 
+import Link from "@/components/ui/Link"
+
 import countries from "./countries.json"
 
 import { useBreakpointValue } from "@/hooks/useBreakpointValue"
@@ -18,6 +20,13 @@ type EventData = {
   city?: string
   host?: string
   eventLink?: string
+  country: string
+}
+
+type CountryFeature = {
+  properties: {
+    ADMIN: string
+  }
 }
 
 const TenYearGlobe = ({ events }: { events: EventData[] }) => {
@@ -35,18 +44,25 @@ const TenYearGlobe = ({ events }: { events: EventData[] }) => {
   })
 
   const hexPolygonColors = useMemo(() => {
-    return countries.features.map(
-      () =>
-        `#${Math.round(Math.random() * Math.pow(2, 24))
-          .toString(16)
-          .padStart(6, "0")}`
-    )
+    return countries.features.map(() => {
+      const grayValue = Math.round(Math.random() * 155 + 100) // Random value between 100-255
+      const hex = grayValue.toString(16).padStart(2, "0")
+      return `#${hex}${hex}${hex}` // Same value for R,G,B to create grayscale
+    })
   }, [countries.features])
 
   const hexPolygonColor = (feature: object) => {
     const idx = countries.features.indexOf(
       feature as (typeof countries.features)[number]
     )
+    const country = (feature as CountryFeature).properties.ADMIN
+    const hasEvent = events.some((event) => event.country === country)
+
+    if (hasEvent) {
+      // Return a purple color for countries with events
+      return resolvedTheme === "dark" ? "#B38DF0" : "#945AF4"
+    }
+
     return hexPolygonColors[idx]
   }
 
@@ -54,23 +70,10 @@ const TenYearGlobe = ({ events }: { events: EventData[] }) => {
     if (globeRef.current) {
       globeRef.current.controls().autoRotate = true
       globeRef.current.controls().enableZoom = false
-      globeRef.current.controls().enableRotate = false
       globeRef.current.controls().enablePan = false
       globeRef.current.controls().autoRotateSpeed = 2.0
       globeRef.current.pointOfView({ lat: 0, lng: 0, altitude: 1.8 })
 
-      // Create cloud layer
-      const cloudGeometry = new THREE.SphereGeometry(1.02, 32, 32)
-      const cloudMaterial = new THREE.MeshBasicMaterial({
-        color: 0xffffff,
-        transparent: true,
-        opacity: 0.3,
-        side: THREE.DoubleSide,
-      })
-      const cloudMesh = new THREE.Mesh(cloudGeometry, cloudMaterial)
-      cloudMesh.position.set(0, 0, 0)
-      cloudMesh.scale.set(1, 1, 1)
-      globeRef.current.scene().add(cloudMesh)
       const ambientLight = new THREE.AmbientLight(0xffffff, 1)
       globeRef.current.scene().add(ambientLight)
     }
@@ -101,7 +104,7 @@ const TenYearGlobe = ({ events }: { events: EventData[] }) => {
   const MemoizedGlobe = (
     <Globe
       ref={globeRef}
-      globeImageUrl="//unpkg.com/three-globe/example/img/earth-day.jpg"
+      globeImageUrl="//unpkg.com/three-globe/example/img/earth-dark.jpg"
       bumpImageUrl="//unpkg.com/three-globe/example/img/earth-topology.png"
       backgroundColor="rgba(0,0,0,0)"
       atmosphereColor={atmosphereColor}
@@ -185,18 +188,16 @@ const TenYearGlobe = ({ events }: { events: EventData[] }) => {
   return (
     <div
       ref={globeContainerRef}
-      style={{ position: "relative", width: width, height: width }}
+      className="relative"
+      style={{ width: width, height: width }}
     >
       {MemoizedGlobe}
       {hoveredEvent && tooltipPos && (
         <div
+          className="pointer-events-auto fixed z-[1000] -translate-x-1/2 -translate-y-full"
           style={{
-            position: "fixed",
             left: tooltipPos.x,
             top: tooltipPos.y,
-            zIndex: 1000,
-            pointerEvents: "auto",
-            transform: "translate(-50%, -100%)",
           }}
           onMouseEnter={() => setIsTooltipHovered(true)}
           onMouseLeave={() => {
@@ -209,46 +210,22 @@ const TenYearGlobe = ({ events }: { events: EventData[] }) => {
             }, 100)
           }}
         >
-          <div
-            style={{
-              background: "white",
-              borderRadius: 10,
-              boxShadow: "0 2px 12px rgba(0,0,0,0.18)",
-              padding: "16px",
-              minWidth: 180,
-              fontFamily: "inherit",
-              fontSize: 15,
-              color: "#222",
-              lineHeight: 1.4,
-            }}
-          >
-            <div
-              style={{
-                fontWeight: "bold",
-                color: "#627eea",
-                fontSize: "1.15em",
-              }}
-            >
+          <div className="flex min-w-48 flex-col gap-2 rounded-lg bg-background p-4 shadow-md">
+            <p className="text-lg font-bold text-primary">
               {hoveredEvent.city}
-            </div>
-            <div style={{ marginBottom: 4 }}>{hoveredEvent.host}</div>
+            </p>
+            <p>{hoveredEvent.host}</p>
             {hoveredEvent.eventLink && (
-              <a
+              <Link
                 href={hoveredEvent.eventLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                style={{
-                  color: "#627eea",
-                  textDecoration: "underline",
-                  fontSize: 14,
-                }}
+                hideArrow
+                className="no-underline"
               >
                 Go to event
-              </a>
+              </Link>
             )}
-            <div style={{ fontSize: 12, color: "#888", marginTop: 8 }}>
-              {hoveredEvent.lat}, {hoveredEvent.lng}
-            </div>
           </div>
         </div>
       )}

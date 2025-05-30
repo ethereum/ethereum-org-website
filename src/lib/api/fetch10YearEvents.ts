@@ -26,7 +26,7 @@ export async function fetch10YearEvents(): Promise<
   }
 
   try {
-    const url = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/Sheet1!A:M?majorDimension=ROWS&key=${googleApiKey}`
+    const url = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/Sheet1!A:N?majorDimension=ROWS&key=${googleApiKey}`
 
     const response = await fetch(url)
 
@@ -44,11 +44,12 @@ export async function fetch10YearEvents(): Promise<
 
     const data = await response.json()
 
+    const rows = data.values.slice(1).filter((row) => row[12] === "TRUE") || []
+
     const regions =
       Object.fromEntries(
-        data.values
-          ?.slice(1)
-          .map((row: string[]) => row[8] || "")
+        rows
+          ?.map((row: string[]) => row[9] || "")
           .filter(Boolean)
           .sort()
           .map((region) => [
@@ -57,26 +58,24 @@ export async function fetch10YearEvents(): Promise<
           ])
       ) || {}
 
-    const rows = data.values.slice(1).filter((row) => row[11] === "TRUE") || []
-
     // Sort events into their respective regions
     rows.forEach((row: string[]) => {
-      const region = (row[8] || "").toLowerCase()
+      const region = (row[9] || "").toLowerCase()
       if (region && regions[region]) {
         regions[region].events.push({
           host: row[0] || "",
           eventLink: row[1] || "",
           pingedForURL: row[2] || "",
-          eventLocation: row[3] || undefined,
-          address: row[4] || undefined,
-          city: row[5] || undefined,
-          country: row[6] || undefined,
-          region: row[7] || undefined,
-          continent: row[8] || undefined,
-          lat: row[9] || undefined,
-          lng: row[10] || undefined,
-          readyToShow: row[11] || undefined,
-          countryFlag: row[12] || "",
+          eventLocation: row[4] || undefined,
+          address: row[5] || undefined,
+          city: row[6] || undefined,
+          country: row[7] || undefined,
+          region: row[8] || undefined,
+          continent: row[9] || undefined,
+          lat: row[10] || undefined,
+          lng: row[11] || undefined,
+          readyToShow: row[12] || undefined,
+          countryFlag: row[13] || "",
         })
       }
     })
