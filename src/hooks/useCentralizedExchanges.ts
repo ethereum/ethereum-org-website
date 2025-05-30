@@ -1,5 +1,4 @@
 import { useState } from "react"
-import shuffle from "lodash/shuffle"
 import { useLocale } from "next-intl"
 
 // TODO: Remove unused?
@@ -13,6 +12,7 @@ import { useLocale } from "next-intl"
 import type { ImageProps } from "@/components/Image"
 import { SelectOnChange } from "@/components/Select"
 
+import { shuffle } from "@/lib/utils/lodash"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import exchangeData from "@/data/exchangesByCountry"

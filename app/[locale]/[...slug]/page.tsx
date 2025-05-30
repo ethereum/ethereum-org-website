@@ -1,4 +1,3 @@
-import pick from "lodash.pick"
 import { notFound } from "next/navigation"
 import { getMessages, setRequestLocale } from "next-intl/server"
 
@@ -8,6 +7,7 @@ import mdComponents from "@/components/MdComponents"
 import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { dateToString } from "@/lib/utils/date"
 import { getLayoutFromSlug } from "@/lib/utils/layout"
+import { pick } from "@/lib/utils/lodash"
 import { getPostSlugs } from "@/lib/utils/md"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 

@@ -1,10 +1,10 @@
-import pick from "lodash.pick"
 import { getMessages, setRequestLocale } from "next-intl/server"
 
 import { Lang } from "@/lib/types"
 
 import I18nProvider from "@/components/I18nProvider"
 
+import { pick } from "@/lib/utils/lodash"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import { getNewToCryptoWallets } from "@/lib/utils/wallets"

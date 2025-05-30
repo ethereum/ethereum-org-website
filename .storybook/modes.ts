@@ -1,4 +1,4 @@
-import pickBy from "lodash/pickBy"
+import { pickBy } from "@/lib/utils/lodash"
 
 import { baseLocales } from "./next-intl"
 import { breakpointSet } from "./preview"

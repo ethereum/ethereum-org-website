@@ -1,7 +1,6 @@
 "use client"
 
 import { useState } from "react"
-import sortBy from "lodash/sortBy"
 import { FaChevronRight } from "react-icons/fa6"
 
 import Emoji from "@/components/Emoji"
@@ -9,6 +8,7 @@ import InfoBanner from "@/components/InfoBanner"
 import Translation from "@/components/Translation"
 
 import { cn } from "@/lib/utils/cn"
+import { sortBy } from "@/lib/utils/lodash"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import meetups from "@/data/community-meetups.json"

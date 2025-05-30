@@ -1,4 +1,3 @@
-import pick from "lodash.pick"
 import {
   getMessages,
   getTranslations,
@@ -13,6 +12,7 @@ import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { isValidDate } from "@/lib/utils/date"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
+import { pick } from "@/lib/utils/lodash"
 import { getMetadata } from "@/lib/utils/metadata"
 import { polishRSSList } from "@/lib/utils/rss"
 import { getLocaleTimestamp } from "@/lib/utils/time"
