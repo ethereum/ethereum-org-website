@@ -26,6 +26,8 @@ These libraries abstract away much of the complexity of interacting directly wit
 
 Using providers, these libraries allow you to connect to Ethereum and read its data, whether that's over JSON-RPC, INFURA, Etherscan, Alchemy or MetaMask.
 
+> **Warning:** Web3.js will be archived on March 4, 2025. [Read the announcement](https://blog.chainsafe.io/web3-js-sunset/). Consider using alternative libraries like Ethers.js or viem for new projects.
+
 **Ethers example**
 
 ```js
