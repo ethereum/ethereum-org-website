@@ -1,8 +1,7 @@
 import { useRef } from "react"
 import dynamic from "next/dynamic"
 import { useLocale } from "next-intl"
-import { useDocSearchKeyboardEvents } from "@docsearch/react"
-import { DocSearchHit } from "@docsearch/react/dist/esm/types"
+import { type DocSearchHit, useDocSearchKeyboardEvents } from "@docsearch/react"
 import * as Portal from "@radix-ui/react-portal"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
