@@ -53,12 +53,60 @@ const adoptionCards = [
     href: "/stablecoins",
     linkText: "More on stablecoins",
   },
+  {
+    image: Adoption1Image,
+    title: "~75 billion secured on Ethereum",
+    description: (
+      <p className="mb-8">
+        In Q2 2025, Ethereum secures over $75 billion in{" "}
+        <Link href="https://defillama.com/chains">
+          DeFi for mainnet and its layer 2s
+        </Link>
+        .
+      </p>
+    ),
+    href: "/defi",
+    linkText: "More on DeFi",
+  },
+  {
+    image: Adoption2Image,
+    title: "0.01 TWh per year",
+    description: (
+      <p className="mb-8">
+        Following The Merge, Ethereum&apos;s energy consumption dropped
+        dramatically to just{" "}
+        <Link href="https://digiconomist.net/ethereum-energy-consumption">
+          0.01 TWh per year
+        </Link>
+        , down from its peak of 93.95 TWh per year.
+      </p>
+    ),
+    href: "/energy-consumption",
+    linkText: "More on Ethereum energy consumption",
+  },
+  {
+    image: Adoption3Image,
+    title: "Over 250 TPS",
+    description: (
+      <p className="mb-8">
+        Ethereum&apos;s throughput has increased significantly since its
+        inception of around 12 TPS, with the network now capable of handling
+        over{" "}
+        <Link href="https://l2beat.com/scaling/activity">
+          250 transactions per second
+        </Link>{" "}
+        between mainnet and its layer 2s.
+      </p>
+    ),
+    href: "/layer-2",
+    linkText: "More on layer 2s",
+  },
 ]
 
 const adoptionStyles = [
-  "bg-gradient-to-t from-20% to-60% from-accent-c/10 to-accent-c/5 dark:from-accent-c/20 dark:to-accent-c/10 border-accent-c/10",
-  "bg-gradient-to-b from-20% to-60% from-accent-b/10 to-accent-b/5 dark:from-accent-b/20 dark:to-accent-b/10 border-accent-b/10 ml-auto -mt-20",
-  "bg-gradient-to-r from-20% to-60% from-accent-a/10 to-accent-a/5 dark:from-accent-a/20 dark:to-accent-a/10 border-accent-a/10 -mt-20",
+  "bg-background bg-gradient-to-t from-20% to-60% from-accent-c/10 to-accent-c/5 dark:from-accent-c/20 dark:to-accent-c/10 border-accent-c/10",
+  "bg-background bg-gradient-to-b from-20% to-60% from-accent-b/10 to-accent-b/5 dark:from-accent-b/20 dark:to-accent-b/10 border-accent-b/10",
+  "bg-background bg-gradient-to-r from-20% to-60% from-accent-a/10 to-accent-a/5 dark:from-accent-a/20 dark:to-accent-a/10 border-accent-a/10",
 ]
 
 const innovationCards = [

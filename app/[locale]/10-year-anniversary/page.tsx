@@ -45,6 +45,8 @@ const loadData = dataLoader(
   REVALIDATE_TIME * 1000
 )
 
+const zIndexClasses = ["z-50", "z-40", "z-30", "z-20", "z-10", "z-0"]
+
 const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const { locale } = await params
 
@@ -241,7 +243,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
         </div>
 
         <div className="flex w-full flex-col gap-8 px-8 py-8 pt-32 lg:flex-row">
-          <div className="relative flex flex-1 flex-col gap-6">
+          <div className="relative flex max-w-[350px] flex-1 flex-col gap-6">
             <div className="flex flex-col gap-6 lg:sticky lg:top-64 lg:mb-24">
               <h2 className="text-5xl font-black md:text-7xl">adoption</h2>
               <p className="text-xl font-bold">
@@ -261,7 +263,13 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             {adoptionCards.map((card, index) => (
               <div
                 key={card.title}
-                className={cn("w-[70%] rounded-2xl p-8", adoptionStyles[index])}
+                className={cn(
+                  "w-[70%] rounded-2xl p-8",
+                  index % 2 === 0 && "ml-auto",
+                  index !== 0 && "-mt-20",
+                  zIndexClasses[index],
+                  adoptionStyles[index % 3]
+                )}
               >
                 <Image
                   src={card.image}
@@ -279,7 +287,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
         </div>
 
         <div className="flex w-full flex-col gap-8 px-8 py-8 pt-32 lg:flex-row">
-          <div className="flex flex-1 flex-col gap-6">
+          <div className="flex max-w-[350px] flex-1 flex-col gap-6">
             <div className="flex flex-col gap-6 lg:sticky lg:top-64 lg:mb-24">
               <h2 className="text-5xl font-black md:text-7xl">stories</h2>
               <p className="text-xl font-bold">
