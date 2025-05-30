@@ -1,10 +1,11 @@
+import Link from "@/components/ui/Link"
+
 import Adoption1Image from "@/public/images/10-year-anniversary/adoption-1.png"
 import Adoption2Image from "@/public/images/10-year-anniversary/adoption-2.png"
 import Adoption3Image from "@/public/images/10-year-anniversary/adoption-3.png"
 import DefiSummerImage from "@/public/images/10-year-anniversary/defi-summer.png"
 import EthETFImage from "@/public/images/10-year-anniversary/eth-etf.png"
 import EthereumLaunchImage from "@/public/images/10-year-anniversary/ethereum-launch.png"
-import MastercardImage from "@/public/images/10-year-anniversary/mastercard.png"
 import NftImage from "@/public/images/10-year-anniversary/nft-frontier.png"
 import TheMergeImage from "@/public/images/10-year-anniversary/the-merge.png"
 import StableCoinImage from "@/public/images/10-year-anniversary/the-pioneer-stablecoin.png"
@@ -38,12 +39,15 @@ const adoptionCards = [
   },
   {
     image: Adoption3Image,
-    title: "$3.2 trillion stablecoin volume",
+    title: "$122.6 billion in stablecoin market cap",
     description: (
       <p className="mb-8">
-        In Q1 2025, Ethereum and its extensions moved over $3.2 trillion in
-        stablecoins — thats 1.3x more than Visa and 2.6x more than Mastercard in
-        the same period.
+        In Q2 2025, Ethereum and its extensions moved over $122.6 billion in
+        stablecoins —{" "}
+        <Link href="https://defillama.com/stablecoins/chains">
+          comprising ~49.85% of the stablecoin market share
+        </Link>
+        .
       </p>
     ),
     href: "/stablecoins",
@@ -111,15 +115,6 @@ const innovationCards = [
       "A growing trend of tokenizing real-world assets (like real estate, private credit, and treasuries) on Ethereum also gained significant traction, with major financial institutions exploring and launching RWA initiatives.",
     ],
     image: EthETFImage,
-  },
-  {
-    title: "Ethereum Surpasses Mastercard",
-    date: "2022 - 2025",
-    description: [
-      "Ethereum becomes one of the most used financial networks in the world, processing more value than legacy payment systems — powered by stablecoins and decentralized applications.",
-      "It highlights the growing real-world utility of Ethereum as a global settlement layer for both retail and enterprise use cases.",
-    ],
-    image: MastercardImage,
   },
 ]
 
