@@ -48,7 +48,7 @@ const NetworkSubComponent = ({ network }: NetworkSubComponentProps) => {
                         <p>{t("page-layer-2-networks-show-how-long")}</p>
                         <p>
                           {t("page-layer-2-networks-data-from")}{" "}
-                          <InlineLink href="https://growthepie.xyz">
+                          <InlineLink href="https://growthepie.com">
                             growthepie
                           </InlineLink>
                           {t("page-layer-2-networks-period")}
