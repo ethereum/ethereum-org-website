@@ -37,10 +37,4 @@ export default defineConfig({
       use: { ...devices["iPhone 12"] },
     },
   ],
-  webServer: {
-    command: "yarn dev",
-    url: "http://localhost:3000",
-    reuseExistingServer: !process.env.CI,
-    timeout: 3 * 60 * 1000, // 3 minutes
-  },
 })
