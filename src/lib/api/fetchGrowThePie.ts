@@ -14,7 +14,7 @@ const TXCOUNT = "txcount"
 const ACTIVE_ADDRESSES = "aa_last7d"
 
 export const fetchGrowThePie = async (): Promise<GrowThePieData> => {
-  const url = "https://api.growthepie.xyz/v1/fundamentals.json"
+  const url = "https://api.growthepie.com/v1/fundamentals.json"
 
   const response = await fetch(url, { cache: "no-store" })
   if (!response.ok) {
