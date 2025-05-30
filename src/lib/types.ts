@@ -395,7 +395,7 @@ export type FileContributor = {
   login: string
   avatar_url: string
   html_url: string
-  date?: string
+  date: string
 }
 
 type FilePath = string
@@ -980,6 +980,11 @@ export type EventCardProps = {
   className?: string
   location: string
   imageUrl?: string
+}
+
+export type PageWithContributorsProps = {
+  contributors: FileContributor[]
+  lastEditLocaleTimestamp: string
 }
 
 export type BreakpointKey = keyof typeof screens
