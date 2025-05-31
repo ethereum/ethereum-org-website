@@ -390,7 +390,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               )}
             >
               <div className="w-fit rounded-full bg-primary-low-contrast px-4 py-0 text-sm uppercase text-primary">
-                {t("common:nav-use-cases-label")}
+                {t("page-index-use-cases-tag")}
               </div>
               <h2 className="mb-4 me-4 mt-2 text-5xl font-black xl:mb-6 xl:text-7xl">
                 {t("page-index-bento-header")}
