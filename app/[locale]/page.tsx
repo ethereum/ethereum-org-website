@@ -20,8 +20,10 @@ import BentoCard from "@/components/Homepage/BentoCard"
 import BentoCardSwiper from "@/components/Homepage/BentoCardSwiper"
 import CodeExamples from "@/components/Homepage/CodeExamples"
 import RecentPostsSwiper from "@/components/Homepage/RecentPostsSwiper"
+import RecentPostsSwiperFallback from "@/components/Homepage/RecentPostsSwiper/Fallback"
 import { getBentoBoxItems } from "@/components/Homepage/utils"
 import ValuesMarquee from "@/components/Homepage/ValuesMarquee"
+import ValuesMarqueeFallback from "@/components/Homepage/ValuesMarquee/Fallback"
 import I18nProvider from "@/components/I18nProvider"
 import BlockHeap from "@/components/icons/block-heap.svg"
 import BuildAppsIcon from "@/components/icons/build-apps.svg"
@@ -397,7 +399,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               </h2>
             </div>
 
-            {/* Mobile */}
+            {/* Mobile - CLIENT SIDE */}
             <BentoCardSwiper
               bentoItems={bentoItems}
               eventCategory={eventCategory}
@@ -515,7 +517,18 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           </Section>
 
           {/* Values - The Internet Is Changing */}
-          <ValuesMarquee />
+          <Section id="values" className="!sm:my-64 !my-48 scroll-m-48">
+            <SectionContent className="flex flex-col items-center text-center">
+              <SectionTag>{t("page-index-values-tag")}</SectionTag>
+              <SectionHeader>{t("page-index-values-header")}</SectionHeader>
+              <p className="text-lg text-body-medium">
+                {t("page-index-values-description")}
+              </p>
+            </SectionContent>
+            <Suspense fallback={<ValuesMarqueeFallback />}>
+              <ValuesMarquee />
+            </Suspense>
+          </Section>
 
           {/* Builders - Blockchain's biggest builder community */}
           <Section id="builders" variant="responsiveFlex">
@@ -693,14 +706,15 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             </h3>
             <p>{t("page-index-posts-subtitle")}</p>
 
-            {/* CLIENT SIDE */}
-            <RecentPostsSwiper
-              className="mt-4 md:mt-16"
-              locale={locale}
-              rssItems={rssItems}
-              eventCategory={eventCategory}
-            />
-
+            <Suspense fallback={<RecentPostsSwiperFallback />}>
+              {/* CLIENT SIDE */}
+              <RecentPostsSwiper
+                className="mt-4 md:mt-16"
+                locale={locale}
+                rssItems={rssItems}
+                eventCategory={eventCategory}
+              />
+            </Suspense>
             <div className="mt-8 flex flex-col gap-4 rounded-2xl border p-8">
               <p className="text-lg">{t("page-index-posts-action")}</p>
               <div className="flex flex-wrap gap-x-6 gap-y-4">
