@@ -1,12 +1,10 @@
+"use client"
+
 import * as React from "react"
 import { cva, VariantProps } from "class-variance-authority"
+import dynamic from "next/dynamic"
 import { EffectCards, Keyboard, Navigation, Pagination } from "swiper/modules"
-import {
-  Swiper as SwiperReact,
-  type SwiperProps as SwiperReactProps,
-  SwiperRef,
-  SwiperSlide,
-} from "swiper/react"
+import { type SwiperProps as SwiperReactProps, SwiperRef } from "swiper/react"
 
 import { ChevronNext, ChevronPrev } from "@/components/Chevron"
 
@@ -20,6 +18,17 @@ import "swiper/css/pagination"
 import "swiper/css/effect-cards"
 
 import { useTranslation } from "@/hooks/useTranslation"
+
+// Dynamic imports for Swiper components
+const SwiperReact = dynamic(
+  () => import("swiper/react").then((mod) => ({ default: mod.Swiper })),
+  { ssr: false }
+)
+
+const SwiperSlide = dynamic(
+  () => import("swiper/react").then((mod) => ({ default: mod.SwiperSlide })),
+  { ssr: false }
+)
 
 const SwiperContainer = React.forwardRef<
   HTMLDivElement,

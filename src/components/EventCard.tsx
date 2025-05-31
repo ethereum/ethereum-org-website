@@ -9,6 +9,7 @@ import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 
 import { cn } from "@/lib/utils/cn"
 
+import ExternalHomepageImage from "./Homepage/ExternalHomepageImage"
 import { Image } from "./Image"
 
 import { useTranslation } from "@/hooks/useTranslation"
@@ -45,14 +46,9 @@ const EventCard: React.FC<EventCardProps> = ({
       </CardHeader>
       <div className="flex items-center justify-center">
         {imageUrl ? (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img
+          <ExternalHomepageImage
             src={imageUrl}
             alt={title}
-            onError={(e) => {
-              e.currentTarget.onerror = null
-              e.currentTarget.src = EventFallback.src
-            }}
             className="max-h-[224px] w-full object-cover xl:h-[124px]"
           />
         ) : (

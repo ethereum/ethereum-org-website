@@ -1,6 +1,10 @@
+import type { StaticImageData } from "next/image"
+import { getTranslations } from "next-intl/server"
+
+import type { Lang } from "@/lib/types"
+
 import { cn } from "@/lib/utils/cn"
 
-import useTranslation from "@/hooks/useTranslation"
 import ImpactImage from "@/public/images/impact_transparent.png"
 import ManAndDogImage from "@/public/images/man-and-dog-playing.png"
 import ManBabyWomanImage from "@/public/images/man-baby-woman.png"
@@ -17,6 +21,11 @@ type CopyDetails = {
   action: string
   href: string
   eventName: Category
+}
+export type BentoItem = CopyDetails & {
+  imgSrc: StaticImageData
+  imgWidth?: number
+  className: string
 }
 
 const gradientStops = "from-20% to-60%"
@@ -92,13 +101,13 @@ const getPosition = (position: number): string =>
     stylesByPosition.xl[position]
   )
 
-export const useBentoBox = () => {
-  const { t } = useTranslation("page-index")
+export const getBentoBoxItems = async (locale: Lang): Promise<BentoItem[]> => {
+  const t = await getTranslations({ locale, namespace: "page-index" })
 
   const getCopy = (category: Category, href: string): CopyDetails => ({
-    title: t(`page-index:page-index-bento-${category}-title`),
-    children: t(`page-index:page-index-bento-${category}-content`),
-    action: t(`page-index:page-index-bento-${category}-action`),
+    title: t(`page-index-bento-${category}-title`),
+    children: t(`page-index-bento-${category}-content`),
+    action: t(`page-index-bento-${category}-action`),
     href,
     eventName: category,
   })
