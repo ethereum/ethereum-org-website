@@ -14778,10 +14778,10 @@ swiper@*:
   resolved "https://registry.yarnpkg.com/swiper/-/swiper-11.1.9.tgz#55505c7cf4723b678df8220fc06152b793585dbc"
   integrity sha512-rflu8zvfGa3x1v/aeSufk4zRJffhOQowyvtJlp46sUBnOqAuk1Rdv5Ldj0AWWBV595iZ+ZMk7VB35ZRtRUomtA==
 
-swiper@^11.1.10:
-  version "11.1.10"
-  resolved "https://registry.yarnpkg.com/swiper/-/swiper-11.1.10.tgz#4d3df50ff8afc4960e9644ed6e5828d35ab38853"
-  integrity sha512-pAVM6vCb6bumj2B9aSh67l3wP1j5YR8dPQM1YhQKMpnBc33vs+RpyVz6NZYZl/ZopCBSYbbWK5nvESwbmU0QXQ==
+swiper@^11.2.8:
+  version "11.2.8"
+  resolved "https://registry.yarnpkg.com/swiper/-/swiper-11.2.8.tgz#2b5d7da3093454c0a7bf090f1714fb4332142702"
+  integrity sha512-S5FVf6zWynPWooi7pJ7lZhSUe2snTzqLuUzbd5h5PHUOhzgvW0bLKBd2wv0ixn6/5o9vwc/IkQT74CRcLJQzeg==
 
 tailwind-merge@^2.2.0:
   version "2.5.2"
