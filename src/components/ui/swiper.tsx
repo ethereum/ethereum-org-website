@@ -2,9 +2,13 @@
 
 import * as React from "react"
 import { cva, VariantProps } from "class-variance-authority"
-import dynamic from "next/dynamic"
 import { EffectCards, Keyboard, Navigation, Pagination } from "swiper/modules"
-import { type SwiperProps as SwiperReactProps, SwiperRef } from "swiper/react"
+import {
+  Swiper as SwiperComponent,
+  type SwiperProps as SwiperReactProps,
+  type SwiperRef,
+  SwiperSlide as SwiperSlideComponent,
+} from "swiper/react"
 
 import { ChevronNext, ChevronPrev } from "@/components/Chevron"
 
@@ -19,17 +23,6 @@ import "swiper/css/effect-cards"
 
 import { useTranslation } from "@/hooks/useTranslation"
 
-// Dynamic imports for Swiper components
-const SwiperReact = dynamic(
-  () => import("swiper/react").then((mod) => ({ default: mod.Swiper })),
-  { ssr: false }
-)
-
-const SwiperSlide = dynamic(
-  () => import("swiper/react").then((mod) => ({ default: mod.SwiperSlide })),
-  { ssr: false }
-)
-
 const SwiperContainer = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
@@ -37,6 +30,14 @@ const SwiperContainer = React.forwardRef<
   <div ref={ref} className={cn("h-fit", className)} {...props} />
 ))
 SwiperContainer.displayName = "SwiperContainer"
+
+const SwiperSlide = ({
+  className,
+  ...props
+}: React.ComponentProps<typeof SwiperSlideComponent>) => (
+  <SwiperSlideComponent className={cn("", className)} {...props} />
+)
+SwiperSlide.displayName = "SwiperSlide"
 
 const SwiperNavButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ children, className, ...props }, ref) => (
@@ -135,11 +136,13 @@ const variants = cva("!flex gap-y-6", {
 })
 
 export type SwiperProps = SwiperReactProps & VariantProps<typeof variants>
+
 const Swiper = React.forwardRef<SwiperRef, SwiperProps>(
   ({ className, children, navigationPlacement, ...props }, ref) => {
     const { t } = useTranslation("common")
+
     return (
-      <SwiperReact
+      <SwiperComponent
         ref={ref}
         navigation={{
           nextEl: ".ui-swiper-button-next",
@@ -158,12 +161,11 @@ const Swiper = React.forwardRef<SwiperRef, SwiperProps>(
         slidesPerView={1}
         slidesPerGroup={1}
         lazyPreloadPrevNext={0}
-        slideClass="swiper-slide"
         className={cn(variants({ navigationPlacement, className }))}
         {...props}
       >
         {children}
-      </SwiperReact>
+      </SwiperComponent>
     )
   }
 )
