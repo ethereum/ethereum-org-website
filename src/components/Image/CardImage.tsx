@@ -4,9 +4,9 @@ import { ComponentProps } from "react"
 
 import EventFallback from "@/public/images/events/event-placeholder.png"
 
-type RssImageProps = ComponentProps<"img">
+type CardImageProps = ComponentProps<"img">
 
-const ExternalHomepageImage = ({ src, className, ...props }: RssImageProps) => (
+const CardImage = ({ src, className, ...props }: CardImageProps) => (
   // eslint-disable-next-line @next/next/no-img-element
   <img
     src={src}
@@ -23,6 +23,6 @@ const ExternalHomepageImage = ({ src, className, ...props }: RssImageProps) => (
   />
 )
 
-ExternalHomepageImage.displayName = "RssImage"
+CardImage.displayName = "CardImage"
 
-export default ExternalHomepageImage
+export default CardImage

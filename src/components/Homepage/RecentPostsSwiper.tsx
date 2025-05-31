@@ -5,6 +5,7 @@ import type { Lang, RSSItem } from "@/lib/types"
 import { isValidDate } from "@/lib/utils/date"
 import { breakpointAsNumber } from "@/lib/utils/screen"
 
+import ImageClientSide from "../Image/ImageClientSide"
 import {
   Card,
   CardBanner,
@@ -19,8 +20,6 @@ import {
   SwiperNavigation,
   SwiperSlide,
 } from "../ui/swiper"
-
-import ExternalHomepageImage from "./ExternalHomepageImage"
 
 type RecentPostsSwiperProps = {
   rssItems: RSSItem[]
@@ -60,7 +59,7 @@ const RecentPostsSwiper = ({
           >
             <CardBanner>
               {/* CLIENT SIDE */}
-              <ExternalHomepageImage src={imgSrc} />
+              <ImageClientSide src={imgSrc} />
             </CardBanner>
             <CardContent>
               <CardTitle>{title}</CardTitle>

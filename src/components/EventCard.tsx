@@ -9,7 +9,7 @@ import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 
 import { cn } from "@/lib/utils/cn"
 
-import ExternalHomepageImage from "./Homepage/ExternalHomepageImage"
+import ImageClientSide from "./Image/CardImage"
 import { Image } from "./Image"
 
 import { useTranslation } from "@/hooks/useTranslation"
@@ -46,7 +46,7 @@ const EventCard: React.FC<EventCardProps> = ({
       </CardHeader>
       <div className="flex items-center justify-center">
         {imageUrl ? (
-          <ExternalHomepageImage
+          <ImageClientSide
             src={imageUrl}
             alt={title}
             className="max-h-[224px] w-full object-cover xl:h-[124px]"

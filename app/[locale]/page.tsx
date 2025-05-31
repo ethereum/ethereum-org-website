@@ -19,7 +19,6 @@ import HomeHero from "@/components/Hero/HomeHero"
 import BentoCard from "@/components/Homepage/BentoCard"
 import BentoCardSwiper from "@/components/Homepage/BentoCardSwiper"
 import CodeExamples from "@/components/Homepage/CodeExamples"
-import ExternalHomepageImage from "@/components/Homepage/ExternalHomepageImage"
 import RecentPostsSwiper from "@/components/Homepage/RecentPostsSwiper"
 import { getBentoBoxItems } from "@/components/Homepage/utils"
 import ValuesMarquee from "@/components/Homepage/ValuesMarquee"
@@ -35,6 +34,7 @@ import TryAppsIcon from "@/components/icons/phone-homescreen.svg"
 import RoadmapSign from "@/components/icons/roadmap-sign.svg"
 import Whitepaper from "@/components/icons/whitepaper.svg"
 import { Image } from "@/components/Image"
+import CardImage from "@/components/Image/CardImage"
 import MainArticle from "@/components/MainArticle"
 import StatsBoxGrid from "@/components/StatsBoxGrid"
 import { ButtonLink } from "@/components/ui/buttons/Button"
@@ -756,13 +756,18 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                     >
                       <CardBanner>
                         {imageUrl ? (
-                          <ExternalHomepageImage
-                            src={imageUrl}
-                            className="max-w-full object-cover object-center"
-                          />
+                          <Suspense
+                            fallback={<Image src={EventFallback} alt="" />}
+                          >
+                            <CardImage
+                              src={imageUrl}
+                              className="max-w-full object-cover object-center"
+                            />
+                          </Suspense>
                         ) : (
                           <Image src={EventFallback} alt="" />
                         )}
+                        <Image src={EventFallback} alt="" />
                       </CardBanner>
                       <CardContent>
                         <CardTitle>{title}</CardTitle>

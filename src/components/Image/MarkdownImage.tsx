@@ -58,4 +58,6 @@ const MarkdownImage = ({
   )
 }
 
+MarkdownImage.displayName = "ExternalImage"
+
 export default MarkdownImage
