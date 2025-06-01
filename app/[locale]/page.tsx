@@ -1,4 +1,5 @@
 import pick from "lodash.pick"
+import { notFound } from "next/navigation"
 import {
   getMessages,
   getTranslations,
@@ -23,6 +24,8 @@ import {
   BLOG_FEEDS,
   BLOGS_WITHOUT_FEED,
   CALENDAR_DISPLAY_COUNT,
+  DEFAULT_LOCALE,
+  LOCALES_CODES,
   RSS_DISPLAY_COUNT,
 } from "@/lib/constants"
 
@@ -59,6 +62,8 @@ const loadData = dataLoader(
 
 const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const { locale } = await params
+
+  if (!LOCALES_CODES.includes(locale)) return notFound()
 
   setRequestLocale(locale)
 
@@ -128,12 +133,23 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   )
 }
 
+export const generateStaticParams = async () => LOCALES_CODES
+
 export async function generateMetadata({
   params,
 }: {
   params: Promise<{ locale: string }>
 }) {
   const { locale } = await params
+
+  // If invalid locale, return not-found metadata title
+  if (!LOCALES_CODES.includes(locale)) {
+    const t = await getTranslations({
+      locale: DEFAULT_LOCALE,
+      namespace: "common",
+    })
+    return { title: t("we-couldnt-find-that-page") }
+  }
 
   const t = await getTranslations({ locale, namespace: "page-index" })
 

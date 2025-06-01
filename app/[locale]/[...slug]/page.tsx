@@ -1,6 +1,10 @@
 import pick from "lodash.pick"
 import { notFound } from "next/navigation"
-import { getMessages, setRequestLocale } from "next-intl/server"
+import {
+  getMessages,
+  getTranslations,
+  setRequestLocale,
+} from "next-intl/server"
 
 import { SlugPageParams } from "@/lib/types"
 
@@ -10,7 +14,7 @@ import mdComponents from "@/components/MdComponents"
 import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { dateToString } from "@/lib/utils/date"
 import { getLayoutFromSlug } from "@/lib/utils/layout"
-import { getPostSlugs } from "@/lib/utils/md"
+import { checkPathValidity, getPostSlugs } from "@/lib/utils/md"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { LOCALES_CODES } from "@/lib/constants"
@@ -31,14 +35,9 @@ export default async function Page({
 
   // Check if this specific path is in our valid paths
   const validPaths = await generateStaticParams()
-  const isValidPath = validPaths.some(
-    (path) =>
-      path.locale === locale && path.slug.join("/") === slugArray.join("/")
-  )
+  const isValidPath = checkPathValidity(validPaths, await params)
 
-  if (!isValidPath) {
-    notFound()
-  }
+  if (!isValidPath) notFound()
 
   // Enable static rendering
   setRequestLocale(locale)
@@ -109,14 +108,20 @@ export async function generateStaticParams() {
   )
 }
 
-export const dynamicParams = false
-
 export async function generateMetadata({
   params,
 }: {
   params: Promise<SlugPageParams>
 }) {
   const { locale, slug } = await params
+
+  const validPaths = await generateStaticParams()
+  const isValidPath = checkPathValidity(validPaths, await params)
+  // If invalid path, return not-found metadata title
+  if (!isValidPath) {
+    const t = await getTranslations("common")
+    return { title: t("we-couldnt-find-that-page") }
+  }
 
   return await getMdMetadata({
     locale,
