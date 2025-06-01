@@ -59,12 +59,12 @@ Pokud nejste vývojář, může být obtížné zjistit, jak začít pracovat s 
 
 ### Nabídněte pomoc při psaní poznámek během komunitních hovorů {#take-notes}
 
-- Existuje mnoho hovorů open-source komunit a mít osobu dedikovanou na zápis poznámek je velká pomoc. Pokud máte zájem, připojte se k [Discordu Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu)a představte se!
+- Existuje mnoho hovorů open-source komunit a mít osobu dedikovanou na zápis poznámek je velká pomoc. Pokud máte zájem, připojte se k [Discordu Ethereum Cat Herders ](https://discord.com/invite/Nz6rtfJ8Cu)a představte se!
 
 ### Překládejte obsah o Ethereu do svého rodného jazyka {#translate-ethereum}
 
 - ethereum.org má program věnovaný překladům, který překládá webové stránky a další zdroje do mnoha různých jazyků
-- [Tady](/contributing/translation-program)zjistíte, jak se můžete zapojit
+- [Tady ](/contributing/translation-program)zjistíte, jak se můžete zapojit
 
 ### Spustit uzel {#run-a-node}
 
