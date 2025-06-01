@@ -76,7 +76,7 @@ O Etherscan permite que você recompile o bytecode do contrato a partir do paylo
 
 Uma vez verificado, o código-fonte do seu contrato recebe um rótulo "Verificado" e é publicado no Etherscan, para que outros auditem. Ele também é adicionado à seção [Contratos Verificados](https://etherscan.io/contractsVerified/) - um repositório de contratos inteligentes com códigos-fonte verificados.
 
-Etherscan é a ferramenta mais usada para verificação de contratos. No entanto, a verificação de contrato do Etherscan tem uma desvantagem: ele falha ao comparar o **hash de metadados** do bytecode on-chain e o bytecode recompilado. Portanto, as correspondências no Etherscan são correspondências parciais.
+Etherscan é a ferramenta mais usada para verificação de contratos. No entanto, a verificação de contrato do Etherscan tem uma desvantagem: ele falha ao comparar o **hash de metadados** do bytecode on-chain e do bytecode recompilado. Portanto, as correspondências no Etherscan são correspondências parciais.
 
 [Mais sobre a verificação de contratos no Etherscan](https://medium.com/etherscan-blog/verifying-contracts-on-etherscan-f995ab772327).
 
@@ -84,7 +84,7 @@ Etherscan é a ferramenta mais usada para verificação de contratos. No entanto
 
 [Sourcify](https://sourcify.dev/#/verifier) é outra ferramenta para verificação de contratos que é de código aberto e descentralizada. Não é um observador de blocos e apenas verifica contratos em [diferentes redes baseadas em EVM](https://docs.sourcify.dev/docs/chains). Ele atua como uma infraestrutura pública para que outras ferramentas construam sobre ele, e tem como objetivo permitir interações de contrato mais amigáveis a humanos usando o [ABI](/developers/docs/smart-contracts/compiling/#web-applications) e [NatSpec](https://docs.soliditylang.org/en/v0.8.15/natspec-format.html) encontrados no arquivo de metadados.
 
-Ao contrário do Etherscan, o Sourcify suporta correspondências completas com o hash de metadados. Os contratos verificados são servidos em seu [repositório público](https://docs.sourcify.dev/docs/repository/) HTTP e [IPFS](https://docs.ipfs.io/concepts/what-is-ipfs/#what-is-ipfs), que é um [armazenamento descentralizado](https://web3.storage/docs/concepts/content-addressing/) endereçado ao conteúdo. Isso permite buscar o arquivo de metadados de um contrato sobre IPFS, pois o hash de metadados incluído é um hash IPFS.
+Ao contrário do Etherscan, o Sourcify suporta correspondências completas com o hash de metadados. Os contratos verificados são servidos em seu [repositório público](https://docs.sourcify.dev/docs/repository/) HTTP e [IPFS](https://docs.ipfs. io/concepts/what-is-ipfs/#what-is-ipfs), que é um [armazenamento descentralizado](https://web3.storage/docs/concepts/content-addressing/) endereçado ao conteúdo. Isso permite buscar o arquivo de metadados de um contrato sobre IPFS, pois o hash de metadados incluído é um hash IPFS.
 
 Adicionalmente, também é possível recuperar os arquivos de código-fonte por IPFS, pois os hashes IPFS desses arquivos também são encontrados nos metadados. Um contrato pode ser verificado fornecendo o arquivo de metadados e os arquivos da origem por meio de sua API ou [UI](https://sourcify.dev/#/verifier) ou usando os plugins. A ferramenta de monitoramento Sourcify também escuta as criações de contratos em novos blocos e tenta verificar os contratos se os seus metadados e arquivos de origem são publicados no IPFS.
 
@@ -96,7 +96,7 @@ A [plataforma Tenderly](https://tenderly.co/) permite desenvolvedores Web3 criem
 
 É possível verificar um contrato de forma privada ou pública. Se verificado privadamente, o contrato inteligente ficará visível apenas para você (e outros membros do seu projeto). A verificação de um contrato publicamente o torna visível para todos que usam a plataforma Tenderly.
 
-Você pode verificar seus contratos usando o [Painel](https://docs.tenderly.co/monitoring/smart-contract-verification/verifying-a-smart-contract), [Plugin Tenderly da Hardhat](https://docs.tenderly.co/monitoring/smart-contract-verification/verifying-contracts-using-the-tenderly-hardhat-plugin) ou [CLI](https://docs.tenderly.co/monitoring/smart-contract-verification/verifying-contracts-using-cli).
+Você pode verificar seus contratos usando o [Painel](https://docs.tenderly.co/monitoring/smart-contract-verification/verifying-a-smart-contract), [Plugin Tenderly da Hardhat](https://docs.tenderly.co/monitoring/smart-contract-verification/verifying-contracts-using-the-tenderly-hardhat-plugin) ou [CLI](https:/ /docs.tenderly.co/monitoring/smart-contract-verification/verifying-contracts-using-cli).
 
 Ao verificar contratos através do Painel, você precisa importar o arquivo de origem ou o arquivo de metadados gerado pelo compilador Solidity, o endereço/rede e as configurações do compilador.
 

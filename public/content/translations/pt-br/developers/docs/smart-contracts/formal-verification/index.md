@@ -58,7 +58,7 @@ Especificações de alto nível geralmente capturam duas propriedades temporais 
 
 Veja, por exemplo, este requisito de segurança que cobre condições para usar `transfer()` ou `transferFrom()` em contratos de token ERC-20: _ “O saldo de um remetente nunca é inferior à quantidade solicitada de tokens a serem enviados.”_. Essa descrição em linguagem natural de uma invariável de contrato pode ser traduzida em uma especificação formal (matemática), que pode então ser rigorosamente verificada para validade.
 
-Propriedades de vivacidade afirmam que “algo eventualmente bom acontece” e se refere à capacidade do contrato progredir por diferentes estados. Um exemplo de uma propriedade de vivacidade é a “liquidez”, que se refere à capacidade do contrato transferir seus saldos aos usuários por solicitação. Se essa propriedade for violada, os usuários não poderiam retirar os ativos armazenados no contrato, como aconteceu com o [incidente de carteira do Parity](https://www.cnbc.com/2017/11/08/accidental-bug-may-have-frozen-280-worth-of-ether-on-parity-wallet.html).
+Propriedades de vivacidade afirmam que “algo eventualmente bom acontece” e se refere à capacidade do contrato progredir por diferentes estados. Um exemplo de uma propriedade de vivacidade é a “liquidez”, que se refere à capacidade do contrato transferir seus saldos aos usuários por solicitação. Se essa propriedade for violada, os usuários não poderiam retirar os ativos armazenados no contrato, como aconteceu com o [incidente de carteira do Parity](https://www.cnbc.com/2017/11/08/accidental-bug-may- have-frozen-280-worth-of-ether-on-parity-wallet.html).
 
 ### Especificações de baixo nível {#low-level-specifications}
 
@@ -70,7 +70,7 @@ Especificações formais de baixo nível podem ser fornecidas como propriedades 
 
 ### Propriedades do estilo Hoare {#hoare-style-properties}
 
-[Hore Logic](https://en.wikipedia.org/wiki/Hoare_logic) fornece um conjunto de regras formais para raciocinar sobre a correção de programas, incluindo contratos inteligentes. Uma propriedade de estilo Hoare é representada por um triplo Hoare `{P}c{Q}`, onde `c` é um programa e `P` e `Q` são predicados no estado do `c` (ou seja, o programa), formalmente descritos como _precondições_ e _pós-condições_, respectivamente.
+[Hore Logic](https://en.wikipedia.org/wiki/Hoare_logic) fornece um conjunto de regras formais para raciocinar sobre a correção de programas, incluindo contratos inteligentes. Uma propriedade de estilo Hoare é representada por um triplo Hoare \{_P_}_c_\{_Q_}, em que _c_ é um programa e _P_ e _Q_ são predicados no estado do _c_ (ou seja, o programa), formalmente descritos como _precondições_ e _pós-condições_, respectivamente.
 
 Uma precondição é um predicado que descreve as condições necessárias para a execução correta de uma função; os usuários que chamam um contrato devem satisfazer este requisito. Uma pós-condição é um predicado que descreve a condição que uma função estabelece se executada corretamente; os usuários podem esperar que essa condição seja verdadeira após chamar a função. Uma _invariável_ na lógica Hoare é um predicado que é preservado pela execução de uma função (ou seja, não muda).
 
