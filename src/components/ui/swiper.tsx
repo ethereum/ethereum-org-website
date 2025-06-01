@@ -4,10 +4,10 @@ import * as React from "react"
 import { cva, VariantProps } from "class-variance-authority"
 import { EffectCards, Keyboard, Navigation, Pagination } from "swiper/modules"
 import {
-  Swiper as SwiperComponent,
+  Swiper as SwiperReact,
   type SwiperProps as SwiperReactProps,
   type SwiperRef,
-  SwiperSlide as SwiperSlideComponent,
+  SwiperSlide,
 } from "swiper/react"
 
 import { ChevronNext, ChevronPrev } from "@/components/Chevron"
@@ -30,14 +30,6 @@ const SwiperContainer = React.forwardRef<
   <div ref={ref} className={cn("h-fit", className)} {...props} />
 ))
 SwiperContainer.displayName = "SwiperContainer"
-
-const SwiperSlide = ({
-  className,
-  ...props
-}: React.ComponentProps<typeof SwiperSlideComponent>) => (
-  <SwiperSlideComponent className={cn("", className)} {...props} />
-)
-SwiperSlide.displayName = "SwiperSlide"
 
 const SwiperNavButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ children, className, ...props }, ref) => (
@@ -136,13 +128,11 @@ const variants = cva("!flex gap-y-6", {
 })
 
 export type SwiperProps = SwiperReactProps & VariantProps<typeof variants>
-
 const Swiper = React.forwardRef<SwiperRef, SwiperProps>(
   ({ className, children, navigationPlacement, ...props }, ref) => {
     const { t } = useTranslation("common")
-
     return (
-      <SwiperComponent
+      <SwiperReact
         ref={ref}
         navigation={{
           nextEl: ".ui-swiper-button-next",
@@ -165,7 +155,7 @@ const Swiper = React.forwardRef<SwiperRef, SwiperProps>(
         {...props}
       >
         {children}
-      </SwiperComponent>
+      </SwiperReact>
     )
   }
 )
