@@ -13,6 +13,7 @@ import type { EventCardProps } from "@/lib/types"
 import type { Lang } from "@/lib/types"
 import { CodeExample } from "@/lib/interfaces"
 
+import ActivityStats from "@/components/ActivityStats"
 import BannerNotification from "@/components/Banners/BannerNotification"
 import { ChevronNext } from "@/components/Chevron"
 import HomeHero from "@/components/Hero/HomeHero"
@@ -38,7 +39,6 @@ import Whitepaper from "@/components/icons/whitepaper.svg"
 import { Image } from "@/components/Image"
 import CardImage from "@/components/Image/CardImage"
 import MainArticle from "@/components/MainArticle"
-import StatsBoxGrid from "@/components/StatsBoxGrid"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import SvgButtonLink, {
   type SvgButtonLinkProps,
@@ -59,7 +59,6 @@ import {
   SectionHeader,
   SectionTag,
 } from "@/components/ui/section"
-import { SkeletonLines } from "@/components/ui/skeleton"
 import WindowBox from "@/components/WindowBox"
 
 import { cn } from "@/lib/utils/cn"
@@ -429,9 +428,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                 <p className="mt-8 text-xl font-bold">
                   {t("page-index-activity-description")}
                 </p>
-                <Suspense fallback={<SkeletonLines noOfLines={10} />}>
-                  <StatsBoxGrid metricResults={metricResults} />
-                </Suspense>
+                <ActivityStats metricResults={metricResults} locale={locale} />
 
                 <div className="mt-12 flex justify-center">
                   <ButtonLink

@@ -2,13 +2,12 @@
  * TODO: Update metric for new homepage:
  * - [ ] Replace TVL DeFi with "Total value held on Ethereum"
  */
-import { useLocale } from "next-intl"
+
+import { getTranslations } from "next-intl/server"
 
 import type { AllMetricData, Lang, StatsBoxMetric } from "@/lib/types"
 
 import { getLocaleForNumberFormat } from "@/lib/utils/translations"
-
-import { useTranslation } from "@/hooks/useTranslation"
 
 const formatLargeUSD = (value: number, locale: string): string => {
   return new Intl.NumberFormat(locale, {
@@ -38,17 +37,19 @@ const formatLargeNumber = (value: number, locale: string): string => {
   }).format(value)
 }
 
-export const useStatsBoxGrid = ({
-  totalEthStaked,
-  totalValueLocked,
-  txCount,
-  txCostsMedianUsd,
-  ethPrice,
-}: AllMetricData): StatsBoxMetric[] => {
-  const { t } = useTranslation("page-index")
-  const locale = useLocale()
+export const getActivity = async (
+  {
+    totalEthStaked,
+    totalValueLocked,
+    txCount,
+    txCostsMedianUsd,
+    ethPrice,
+  }: AllMetricData,
+  locale: Lang
+): Promise<StatsBoxMetric[]> => {
+  const t = await getTranslations("page-index")
 
-  const localeForNumberFormat = getLocaleForNumberFormat(locale! as Lang)
+  const localeForNumberFormat = getLocaleForNumberFormat(locale)
 
   const hasEthStakerAndPriceData =
     "value" in totalEthStaked && "value" in ethPrice

@@ -1,14 +1,15 @@
-import type { AllMetricData } from "@/lib/types"
+import type { AllMetricData, Lang } from "@/lib/types"
 
 import BigNumber from "../BigNumber"
 
-import { useStatsBoxGrid } from "./useStatsBoxGrid"
+import { getActivity } from "./getActivity"
 
-type StatsBoxGridProps = {
+type ActivityStatsProps = {
   metricResults: AllMetricData
+  locale: Lang
 }
-const StatsBoxGrid = ({ metricResults }: StatsBoxGridProps) => {
-  const metrics = useStatsBoxGrid(metricResults)
+const ActivityStats = async ({ metricResults, locale }: ActivityStatsProps) => {
+  const metrics = await getActivity(metricResults, locale)
 
   const gridBorderClasses = [
     "border-b border-body-light xl:border-e xl:pe-8",
@@ -34,4 +35,4 @@ const StatsBoxGrid = ({ metricResults }: StatsBoxGridProps) => {
   )
 }
 
-export default StatsBoxGrid
+export default ActivityStats
