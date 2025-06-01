@@ -1,4 +1,4 @@
-import { Fragment, Suspense } from "react"
+import { Fragment } from "react"
 import pick from "lodash.pick"
 import {
   getMessages,
@@ -21,10 +21,8 @@ import BentoCard from "@/components/Homepage/BentoCard"
 import BentoCardSwiper from "@/components/Homepage/BentoCardSwiper"
 import CodeExamples from "@/components/Homepage/CodeExamples"
 import RecentPostsSwiper from "@/components/Homepage/RecentPostsSwiper"
-import RecentPostsSwiperFallback from "@/components/Homepage/RecentPostsSwiper/Fallback"
 import { getBentoBoxItems } from "@/components/Homepage/utils"
 import ValuesMarquee from "@/components/Homepage/ValuesMarquee"
-import ValuesMarqueeFallback from "@/components/Homepage/ValuesMarquee/Fallback"
 import I18nProvider from "@/components/I18nProvider"
 import BlockHeap from "@/components/icons/block-heap.svg"
 import BuildAppsIcon from "@/components/icons/build-apps.svg"
@@ -522,9 +520,9 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                 {t("page-index-values-description")}
               </p>
             </SectionContent>
-            <Suspense fallback={<ValuesMarqueeFallback />}>
-              <ValuesMarquee />
-            </Suspense>
+
+            {/* CLIENT SIDE */}
+            <ValuesMarquee />
           </Section>
 
           {/* Builders - Blockchain's biggest builder community */}
@@ -703,15 +701,14 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             </h3>
             <p>{t("page-index-posts-subtitle")}</p>
 
-            <Suspense fallback={<RecentPostsSwiperFallback />}>
-              {/* CLIENT SIDE */}
-              <RecentPostsSwiper
-                className="mt-4 md:mt-16"
-                locale={locale}
-                rssItems={rssItems}
-                eventCategory={eventCategory}
-              />
-            </Suspense>
+            {/* CLIENT SIDE */}
+            <RecentPostsSwiper
+              className="mt-4 md:mt-16"
+              locale={locale}
+              rssItems={rssItems}
+              eventCategory={eventCategory}
+            />
+
             <div className="mt-8 flex flex-col gap-4 rounded-2xl border p-8">
               <p className="text-lg">{t("page-index-posts-action")}</p>
               <div className="flex flex-wrap gap-x-6 gap-y-4">
@@ -767,14 +764,10 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                     >
                       <CardBanner>
                         {imageUrl ? (
-                          <Suspense
-                            fallback={<Image src={EventFallback} alt="" />}
-                          >
-                            <CardImage
-                              src={imageUrl}
-                              className="max-w-full object-cover object-center"
-                            />
-                          </Suspense>
+                          <CardImage
+                            src={imageUrl}
+                            className="max-w-full object-cover object-center"
+                          />
                         ) : (
                           <Image src={EventFallback} alt="" />
                         )}
