@@ -160,7 +160,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                             className={cn("flex flex-col border-b px-4 py-6")}
                           >
                             <h3 className="mb-2 flex items-center gap-2 text-2xl font-bold text-body-medium">
-                              <span className="flex h-6 w-6 items-center justify-center overflow-hidden rounded-full bg-primary-low-contrast">
+                              <span className="flex min-h-6 min-w-6 items-center justify-center overflow-hidden rounded-full bg-primary-low-contrast">
                                 <Emoji
                                   text={countryEvents[0].countryFlag}
                                   className="scale-[1.75]"
