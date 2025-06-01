@@ -4,6 +4,8 @@ import { ButtonLink } from "@/components/ui/buttons/Button"
 import Countdown from "./CountDown"
 
 import TenYearGraphicImage from "@/public/images/10-year-anniversary/10year-logo.png"
+import TenYearDesktopText from "@/public/images/10-year-anniversary/10yeartext.svg"
+import TenYearMobileText from "@/public/images/10-year-anniversary/10yeartext-mobile.svg"
 
 const TenYearHomeBanner = () => {
   return (
@@ -15,7 +17,8 @@ const TenYearHomeBanner = () => {
           alt=""
           className="mx-auto -mb-2 -mt-16 max-w-[500px] object-contain sm:-mt-24 md:-mt-32"
         />
-        <h3 className="mb-4 text-4xl">10 Years of ethereum</h3>
+        <TenYearDesktopText className="mx-auto mb-4 hidden w-full max-w-[800px] object-contain text-body md:block" />
+        <TenYearMobileText className="mx-auto mb-4 block w-full max-w-[400px] object-contain text-body md:hidden" />
         <div className="mb-4 flex flex-col gap-2">
           <p>
             <strong>On July 30, 2015, at 3:44 p.m. UTC,</strong> the first block
