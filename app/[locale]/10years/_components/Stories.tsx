@@ -113,6 +113,11 @@ const Stories = ({ stories }: StoriesProps) => {
                             onClick={() => handleExpand(index)}
                             variant="ghost"
                             className="h-auto min-h-0 p-0 text-start text-sm"
+                            customEventOptions={{
+                              eventAction: "click",
+                              eventName: "10 year anniversary show more",
+                              eventCategory: "10-year-anniversary",
+                            }}
                           >
                             Read more
                           </Button>
@@ -128,6 +133,11 @@ const Stories = ({ stories }: StoriesProps) => {
                           onClick={() => handleFlip(index)}
                           variant="ghost"
                           className="h-auto min-h-0 p-0 text-start text-sm"
+                          customEventOptions={{
+                            eventAction: "click",
+                            eventName: "10 year anniversary show original",
+                            eventCategory: "10-year-anniversary",
+                          }}
                         >
                           Show original
                         </Button>
@@ -182,6 +192,11 @@ const Stories = ({ stories }: StoriesProps) => {
                             onClick={() => handleExpand(index)}
                             variant="ghost"
                             className="h-auto min-h-0 p-0 text-start text-sm"
+                            customEventOptions={{
+                              eventAction: "click",
+                              eventName: "10 year anniversary show more",
+                              eventCategory: "10-year-anniversary",
+                            }}
                           >
                             Read more
                           </Button>
@@ -196,6 +211,11 @@ const Stories = ({ stories }: StoriesProps) => {
                         onClick={() => handleFlip(index)}
                         variant="ghost"
                         className="h-auto min-h-0 p-0 text-start text-sm"
+                        customEventOptions={{
+                          eventAction: "click",
+                          eventName: "10 year anniversary show original",
+                          eventCategory: "10-year-anniversary",
+                        }}
                       >
                         Show English
                       </Button>
@@ -219,6 +239,11 @@ const Stories = ({ stories }: StoriesProps) => {
                 Math.min(n + STORIES_SHOWN, stories.length)
               )
             }
+            customEventOptions={{
+              eventAction: "click",
+              eventName: "10 year anniversary show more stories",
+              eventCategory: "10-year-anniversary",
+            }}
             variant="outline"
           >
             Show more

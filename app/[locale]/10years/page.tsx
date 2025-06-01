@@ -285,7 +285,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                 <Image
                   src={card.image}
                   alt={card.title}
-                  className="mx-auto mb-4"
+                  className="mx-auto mb-4 max-h-[300px] object-contain"
                 />
                 <h3 className="mb-4 text-2xl font-bold">{card.title}</h3>
                 {card.description}

@@ -7,8 +7,11 @@ import DefiSummerImage from "@/public/images/10-year-anniversary/defi-summer.png
 import EthETFImage from "@/public/images/10-year-anniversary/eth-etf.png"
 import EthereumLaunchImage from "@/public/images/10-year-anniversary/ethereum-launch.png"
 import NftImage from "@/public/images/10-year-anniversary/nft-frontier.png"
+import Adoption5Image from "@/public/images/10-year-anniversary/robot-walking.png"
 import TheMergeImage from "@/public/images/10-year-anniversary/the-merge.png"
 import StableCoinImage from "@/public/images/10-year-anniversary/the-pioneer-stablecoin.png"
+import Adoption4Image from "@/public/images/10-year-anniversary/walking-talking-1.png"
+import Adoption6Image from "@/public/images/10-year-anniversary/walking-talking-2.png"
 
 const adoptionCards = [
   {
@@ -54,7 +57,7 @@ const adoptionCards = [
     linkText: "More on stablecoins",
   },
   {
-    image: Adoption1Image,
+    image: Adoption4Image,
     title: "~75 billion secured on Ethereum",
     description: (
       <p className="mb-8">
@@ -69,7 +72,7 @@ const adoptionCards = [
     linkText: "More on DeFi",
   },
   {
-    image: Adoption2Image,
+    image: Adoption5Image,
     title: "0.01 TWh per year",
     description: (
       <p className="mb-8">
@@ -85,7 +88,7 @@ const adoptionCards = [
     linkText: "More on Ethereum energy consumption",
   },
   {
-    image: Adoption3Image,
+    image: Adoption6Image,
     title: "Over 250 TPS",
     description: (
       <p className="mb-8">
