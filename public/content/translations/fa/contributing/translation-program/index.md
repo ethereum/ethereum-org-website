@@ -36,9 +36,9 @@ _به دیسکورد [ethereum.org Discord](/discord/) بپیوندید تا د�
 
 ### پیشرفت ما تاکنون {#our-progress}
 
-- [بیش از **6,000 +** مترجم](/contributing/translation-program/contributors/)
-- **62** زبان در سایت موجود است
-- [ترجمه **3 میلیون** کلمه در سال 2023](/contributing/translation-program/acknowledgements/)
+- [**بیش از 6,900** مترجم](/contributing/translation-program/contributors/)
+- **68** زبان در سایت
+- [**2.89 میلیون** کلمه ترجمه‌شده در سال 2024](/contributing/translation-program/acknowledgements/)
 
 <TranslationChartImage />
 
