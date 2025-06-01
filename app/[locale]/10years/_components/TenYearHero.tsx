@@ -31,7 +31,7 @@ const TenYearHero = () => {
   // loops over chars to morph a text to another
   const morpher = (start: string, end: string): void => {
     // array of chars to randomly morph the text between start and end
-    const chars = "abcdxyz01234567{}%$?!".split("")
+    const chars = "abcdefghijklmnopqrstuvwxyz".split("")
     // duration of the global morph
     const duration = 3
     // speed of the morph for each letter
@@ -57,7 +57,7 @@ const TenYearHero = () => {
       spentTime += present.getTime() - past
 
       // Random letters
-      for (let i = count; i < Math.max(slen, rlen); i++) {
+      for (let i = count; i < Math.min(slen, rlen, 18); i++) {
         const random = Math.floor(Math.random() * (chars.length - 1))
         // Change letter
         textString[i] = chars[random]
@@ -135,7 +135,8 @@ const TenYearHero = () => {
         />
       </div>
       <p className="text-center text-3xl">
-        Celebrating 10 years of <span className="font-bold">{words.text}</span>
+        Celebrating 10 years of{" "}
+        <span className="font-bold text-accent-b">{words.text}</span>
       </p>
     </div>
   )

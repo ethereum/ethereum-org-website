@@ -56,7 +56,7 @@ const Stories = ({ stories }: StoriesProps) => {
           <div
             key={story.name}
             className={cn(
-              "relative w-full rounded-2xl border bg-white p-6 transition-all duration-500",
+              "relative w-full rounded-2xl border bg-background p-6 transition-all duration-500",
               story.storyOriginal && "cursor-pointer"
             )}
           >
@@ -74,7 +74,7 @@ const Stories = ({ stories }: StoriesProps) => {
                     <div className="mb-4 flex flex-row items-center justify-between">
                       <div className="flex flex-row items-center gap-2">
                         <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary-hover">
-                          <p aria-hidden className="font-bold text-white">
+                          <p aria-hidden className="font-bold">
                             {story.name.slice(0, 1)}
                           </p>
                         </div>
@@ -143,7 +143,7 @@ const Stories = ({ stories }: StoriesProps) => {
                     <div className="mb-4 flex flex-row items-center justify-between">
                       <div className="flex flex-row items-center gap-2">
                         <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary-hover">
-                          <p aria-hidden className="font-bold text-white">
+                          <p aria-hidden className="font-bold">
                             {story.name.slice(0, 1)}
                           </p>
                         </div>

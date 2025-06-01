@@ -37,7 +37,7 @@ const TenYearGlobe = ({ events }: { events: EventData[] }) => {
   const atmosphereColor = resolvedTheme === "dark" ? "#B38DF0" : "#945AF4"
 
   const width = useBreakpointValue({
-    base: 300,
+    base: 260,
     sm: 400,
     md: 500,
     lg: 600,

@@ -90,8 +90,7 @@ const adoptionCards = [
     description: (
       <p className="mb-8">
         Ethereum&apos;s throughput has increased significantly since its
-        inception of around 12 TPS, with the network now capable of handling
-        over{" "}
+        inception, with the network now capable of handling over{" "}
         <Link href="https://l2beat.com/scaling/activity">
           250 transactions per second
         </Link>{" "}

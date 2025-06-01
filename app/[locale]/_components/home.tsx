@@ -67,7 +67,7 @@ import { breakpointAsNumber } from "@/lib/utils/screen"
 
 import { GITHUB_REPO_URL } from "@/lib/constants"
 
-import TenYearHomeBanner from "../10-year-anniversary/_components/TenYearHomeBanner"
+import TenYearHomeBanner from "../10years/_components/TenYearHomeBanner"
 
 import { useClipboard } from "@/hooks/useClipboard"
 import EventFallback from "@/public/images/events/event-placeholder.png"

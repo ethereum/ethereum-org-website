@@ -202,8 +202,19 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             </Tabs>
           </div>
         </div>
-        <div className="w-full px-8 py-8">
-          <div className="flex flex-col items-center gap-4 rounded-2xl bg-gradient-step-1 p-8">
+        <div className="flex w-full flex-col-reverse gap-8 px-8 py-8 md:flex-row">
+          <div className="flex flex-1 flex-col gap-4 md:gap-8">
+            <p>
+              Join celebrations worldwide featuring talks, networking, and mroe
+              to celebrate the 10 years of Ethereum.
+            </p>
+            <p>
+              Can&apos;t attend in person? No problem. We&apos;ll livestream and
+              share updates from events around the globe, so everyone can
+              celebrate this milestone together.
+            </p>
+          </div>
+          <div className="flex flex-1 flex-col items-center gap-4 rounded-2xl bg-gradient-step-1 p-8">
             <h2 className="text-2xl font-bold">Host event</h2>
             <p className="text-md">
               If you want to host an event and would like to apply for funding,
@@ -222,7 +233,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           <div className="flex flex-1 flex-col gap-6">
             <h2 className="flex flex-col gap-2 font-black">
               <span className="pl-2.5 text-4xl text-accent-a">10 years of</span>
-              <span className="text-5xl text-body md:text-7xl">innovation</span>
+              <span className="text-5xl text-body md:text-7xl">Innovation</span>
             </h2>
             <p className="text-xl font-bold">
               Ethereum transformed blockchain by introducing smart contracts
@@ -245,7 +256,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
         <div className="flex w-full flex-col gap-8 px-8 py-8 pt-32 lg:flex-row">
           <div className="relative flex max-w-[350px] flex-1 flex-col gap-6">
             <div className="flex flex-col gap-6 lg:sticky lg:top-64 lg:mb-24">
-              <h2 className="text-5xl font-black md:text-7xl">adoption</h2>
+              <h2 className="text-5xl font-black md:text-7xl">Adoption</h2>
               <p className="text-xl font-bold">
                 From a whitepaper to 24M+ transactions a day within ethereum
                 ecosystem
@@ -289,7 +300,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
         <div className="flex w-full flex-col gap-8 px-8 py-8 pt-32 lg:flex-row">
           <div className="flex max-w-[350px] flex-1 flex-col gap-6">
             <div className="flex flex-col gap-6 lg:sticky lg:top-64 lg:mb-24">
-              <h2 className="text-5xl font-black md:text-7xl">stories</h2>
+              <h2 className="text-5xl font-black md:text-7xl">Stories</h2>
               <p className="text-xl font-bold">
                 An overview of how Ethereum is used in daily life
               </p>
@@ -319,7 +330,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               Onchain artifacts, a worldwide game of Ethereum trivia, the
               sky&apos;s the limit! Reach out with your idea below.
             </p>
-            <ButtonLink href="https://ethereum.org/" hideArrow>
+            <ButtonLink href="mailto:10years@ethereum.org" hideArrow>
               Submit your Idea
             </ButtonLink>
           </div>
