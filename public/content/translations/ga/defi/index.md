@@ -260,7 +260,7 @@ Is ardán iontach é Ethereum le haghaidh an tslua-chistithe:
 
 Is bogearraí foinse oscailte é Ethereum agus go dtí seo tá go leor den obair maoinithe ag an bpobal. Mar thoradh air sin tá fás ar shamhail nua spéisiúil tiomsaithe airgid: maoiniú cuadratach. D’fhéadfadh sé seo feabhas a chur ar an mbealach a mhaoinímid gach cineál earraí poiblí sa todhchaí.
 
-Cinntíonn maoiniú cearnógach gurb iad na tionscadail a fhaigheann an maoiniú is mó na cinn leis an éileamh is uathúla. I bhfocail eile, tionscadail a sheasann chun feabhas a chur ar shaol na ndaoine is mó. Seo mar a oibríonn sé:
+Cinntíonn maoiniú cuadratach gurb iad na tionscadail a fhaigheann an maoiniú is mó na cinn leis an éileamh is uathúla. I bhfocail eile, tionscadail a sheasann chun feabhas a chur ar shaol na ndaoine is mó. Seo mar a oibríonn sé:
 
 1. Tá comhthiomsú cistí deonaithe ann.
 2. Cuirtear tús le babhta maoinithe poiblí.
