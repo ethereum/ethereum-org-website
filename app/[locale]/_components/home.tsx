@@ -122,13 +122,9 @@ const HomePage = ({
     <MainArticle className="flex w-full flex-col items-center" dir={dir}>
       <BannerNotification shouldShow={locale === "en"}>
         <p>
-          Let&apos;s celebrate 10 years of Ethereum! How did ethereum change
-          your life? -{" "}
-          <Link
-            href="https://ethereumstory.paperform.co/"
-            className="text-white"
-          >
-            share your story
+          10 years of Ethereum! -{" "}
+          <Link href="/10years/" className="text-white">
+            Join us to celebrate 10 years of Ethereum!
           </Link>
         </p>
       </BannerNotification>

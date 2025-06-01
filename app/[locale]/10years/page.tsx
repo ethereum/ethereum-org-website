@@ -90,7 +90,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           </div>
         </div>
 
-        <div className="w-full px-8 py-8">
+        <div className="md: w-full px-4 px-8 py-8">
           <div className="flex min-h-[500px] flex-col items-center gap-4 rounded-4xl bg-radial-a px-8 pt-8 lg:px-14 lg:pt-14">
             <div className="flex max-w-[770px] flex-col gap-4 text-center">
               <h2 className="text-4xl font-black">Join the party</h2>
@@ -126,7 +126,8 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                     value={key}
                     className="whitespace-nowrap border-0 text-primary"
                   >
-                    {data.label}
+                    {data.label}{" "}
+                    <span className="text-sm">({data.events.length})</span>
                   </TabsTrigger>
                 ))}
               </TabsList>
@@ -185,9 +186,11 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                                   </div>
                                   <LinkOverlay
                                     href={event.eventLink}
-                                    className="text-sm text-body-medium no-underline"
+                                    className="text-sm no-underline"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                   >
-                                    LINK TO EVENT
+                                    Go to event
                                   </LinkOverlay>
                                 </LinkBox>
                               ))}
@@ -277,7 +280,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                 className={cn(
                   "w-[70%] rounded-2xl p-8",
                   index % 2 === 0 && "ml-auto",
-                  index !== 0 && "-mt-20",
+                  index !== 0 && "-mt-10",
                   zIndexClasses[index],
                   adoptionStyles[index % 3]
                 )}
