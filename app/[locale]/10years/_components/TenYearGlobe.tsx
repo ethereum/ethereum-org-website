@@ -45,11 +45,14 @@ const TenYearGlobe = ({ events }: { events: EventData[] }) => {
 
   const hexPolygonColors = useMemo(() => {
     return countries.features.map(() => {
-      const grayValue = Math.round(Math.random() * 155 + 100) // Random value between 100-255
-      const hex = grayValue.toString(16).padStart(2, "0")
-      return `#${hex}${hex}${hex}` // Same value for R,G,B to create grayscale
+      // Generate a random light purple color
+      const basePurple = resolvedTheme === "dark" ? 0xb38df0 : 0x945af4
+      const r = Math.min(255, Math.floor((basePurple >> 16) * 1.3))
+      const g = Math.min(255, Math.floor(((basePurple >> 8) & 0xff) * 1.3))
+      const b = Math.min(255, Math.floor((basePurple & 0xff) * 1.3))
+      return `#${r.toString(16).padStart(2, "0")}${g.toString(16).padStart(2, "0")}${b.toString(16).padStart(2, "0")}`
     })
-  }, [countries.features])
+  }, [countries.features, resolvedTheme])
 
   const hexPolygonColor = (feature: object) => {
     const idx = countries.features.indexOf(
@@ -69,7 +72,6 @@ const TenYearGlobe = ({ events }: { events: EventData[] }) => {
   useEffect(() => {
     if (globeRef.current) {
       globeRef.current.controls().autoRotate = true
-      globeRef.current.controls().enableZoom = false
       globeRef.current.controls().enablePan = false
       globeRef.current.controls().autoRotateSpeed = 2.0
       globeRef.current.pointOfView({ lat: 0, lng: 0, altitude: 1.8 })
@@ -104,7 +106,11 @@ const TenYearGlobe = ({ events }: { events: EventData[] }) => {
   const MemoizedGlobe = (
     <Globe
       ref={globeRef}
-      globeImageUrl="//unpkg.com/three-globe/example/img/earth-dark.jpg"
+      globeImageUrl={
+        resolvedTheme === "dark"
+          ? "//unpkg.com/three-globe/example/img/earth-dark.jpg"
+          : "//unpkg.com/three-globe/example/img/earth-blue-marble.jpg"
+      }
       bumpImageUrl="//unpkg.com/three-globe/example/img/earth-topology.png"
       backgroundColor="rgba(0,0,0,0)"
       atmosphereColor={atmosphereColor}
