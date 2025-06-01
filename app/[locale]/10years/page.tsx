@@ -205,7 +205,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
         <div className="flex w-full flex-col-reverse gap-8 px-8 py-8 md:flex-row">
           <div className="flex flex-1 flex-col gap-4 md:gap-8">
             <p>
-              Join celebrations worldwide featuring talks, networking, and mroe
+              Join celebrations worldwide featuring talks, networking, and more
               to celebrate the 10 years of Ethereum.
             </p>
             <p>
