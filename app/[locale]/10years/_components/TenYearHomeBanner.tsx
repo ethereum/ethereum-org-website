@@ -24,7 +24,7 @@ const TenYearHomeBanner = () => {
           <p>Ten years down, infinity to go! 🚀</p>
         </div>
         <Countdown className="mb-8 mt-4 bg-background" />
-        <ButtonLink href="/10-year-anniversary/">Join the party</ButtonLink>
+        <ButtonLink href="/10years/">Join the party</ButtonLink>
       </div>
     </div>
   )
