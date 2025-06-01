@@ -9,7 +9,7 @@ import { getHashFromBuffer } from "@/lib/utils/crypto"
 import {
   checkIfImageIsTranslated,
   getTranslatedImgPath,
-} from "@/lib/utils/i18n"
+} from "@/lib/utils/intl"
 
 import { DEFAULT_LOCALE, PLACEHOLDER_IMAGE_DIR } from "@/lib/constants"
 
