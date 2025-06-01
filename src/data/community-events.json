@@ -66,10 +66,10 @@
     "title": "Edge Esmeralda",
     "startDate": "2025-05-24",
     "endDate": "2025-06-21",
-    "href": "https://edgeesmeralda.com",
+    "href": "https://www.edgeesmeralda.com/",
     "location": "Healdsburg, CA, USA",
     "description": "Edge Esmeralda 2025",
-    "imageUrl": ""
+    "imageUrl": "https://cdn.prod.website-files.com/65e8d8e39d148666896efd73/6756f792af297ff60a535793_lineart-grassy-hill%202.webp"
   },
   {
     "title": "ETHGlobal Prague",
@@ -93,10 +93,10 @@
     "title": "Offscript",
     "startDate": "2025-06-11",
     "endDate": "2025-06-15",
-    "href": "https://offscript.web3creatives.com/",
+    "href": "https://toktimes.com/events/offscript-2025/",
     "location": "San Miguel de Allende, MX",
     "description": "Offscript | The event for creatives in web3",
-    "imageUrl": ""
+    "imageUrl": "https://toktimes.com/wp-content/uploads/2025/05/Offscript.jpg"
   },
   {
     "title": "ProtocolBerg",
@@ -154,12 +154,12 @@
   },
   {
     "title": "NapulETH",
-    "startDate": "2025-07-16",
+    "startDate": "2025-06-01",
     "endDate": "2025-07-19",
     "href": "https://napuleth.org/",
     "location": "Naples, ITA",
     "description": "NapulETH - Biggest Web3 Event In Southern Italy",
-    "imageUrl": ""
+    "imageUrl": "https://cdn.moongate.id/events/59f82809-1766-4dd4-a641-7bf10bb007df/featured-image-1732163941338.svg"
   },
   {
     "title": "SBC (The Science of Blockchain Conference 2025)",
@@ -167,7 +167,7 @@
     "endDate": "2025-08-06",
     "href": "https://www.sbc-conference.com/2025/",
     "location": "Berkeley, USA",
-    "description": "",
+    "description": "The conference focuses on technical innovations in the blockchain ecosystem, and brings together researchers and practioners working in the space. ",
     "imageUrl": ""
   },
   {
@@ -195,7 +195,7 @@
     "href": "https://event.web3bridge.com ",
     "location": "Lagos, NGA",
     "description": "We are Building a Sustainable web3 community in Africa",
-    "imageUrl": ""
+    "imageUrl": "https://event.web3bridge.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flekki.d4f13308.png&w=1920&q=75"
   },
   {
     "title": "ETHWarsaw",
@@ -204,7 +204,7 @@
     "href": "https://ethwarsaw.dev",
     "location": "Warsaw, POL",
     "description": "EthWarsaw 2025",
-    "imageUrl": ""
+    "imageUrl": "https://cdn.prod.website-files.com/649014d99c5194ad73558cd3/649af7b1f1fdaa7868890166_ThumbnailPicture.png"
   },
   {
     "title": "Pragma New Delhi",
@@ -249,7 +249,7 @@
     "href": "https://ethmilan.xyz",
     "location": "Milan, ITALY",
     "description": "ETHMilan 2025 – Italy&#x27;s Largest ETH & Web3 Conference",
-    "imageUrl": ""
+    "imageUrl": "https://cdn.prod.website-files.com/677e49dfe7df51bec6e5ba71/67b58ffe31d5fe8d4e54880e__DSC0914.jpeg"
   },
   {
     "title": "EthAccra",
@@ -285,7 +285,7 @@
     "href": "https://ethsafari.xyz/",
     "location": "Nairobi, Kenya",
     "description": "ETHSafari 2025 - web3 builders conference East Africa Kenya",
-    "imageUrl": ""
+    "imageUrl": "https://ethsafari.xyz/_next/image?url=%2FHackathon.png&w=640&q=75"
   },
   {
     "title": "ETHVietnam 2025",
@@ -293,7 +293,7 @@
     "endDate": "2025-08-10",
     "href": "https://eth-vietnam.com",
     "location": "HCMC, VNM",
-    "description": "",
+    "description": "Vietnam Web3 Hub for Ethereum and Blockchain enthusiasts, designers and developers.",
     "imageUrl": "http://static1.squarespace.com/static/629856e64f44db3799f8e3f6/t/6761041c2c3aab15bfbb0ec1/1734411300379/Group+2612.png?format=1500w"
   },
   {
@@ -339,7 +339,7 @@
     "href": "https://bostonblockchainweek.com/",
     "location": "Quincy, Massachusetts, USA",
     "description": "Boston Blockchain Week is the preeminent annual event celebrating the global blockchain and Web3 hub that is Greater Boston.",
-    "imageUrl": ""
+    "imageUrl": "https://bostonblockchainweek.com/wp-content/uploads/2025/02/Vector.png"
   },
   {
     "title": "DevConnect",
