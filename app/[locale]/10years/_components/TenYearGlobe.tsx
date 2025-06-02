@@ -194,7 +194,7 @@ const TenYearGlobe = ({ events }: { events: EventData[] }) => {
   return (
     <div
       ref={globeContainerRef}
-      className="relative"
+      className="relative cursor-grab"
       style={{ width: width, height: width }}
     >
       {MemoizedGlobe}

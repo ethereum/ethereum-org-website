@@ -56,9 +56,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 
   // Get i18n messages
   const allMessages = await getMessages({ locale })
-  const requiredNamespaces = getRequiredNamespacesForPage(
-    "/10-year-anniversary"
-  )
+  const requiredNamespaces = getRequiredNamespacesForPage("/10years")
   const messages = pick(allMessages, requiredNamespaces)
 
   return (
@@ -70,9 +68,8 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           <div className="flex flex-1 flex-col gap-5">
             <div>
               <h1 className="text-4xl font-bold">
-                A decade of Transforming the World
+                A decade of transforming the world one block at a time
               </h1>
-              <p className="text-2xl font-bold">One block at a time</p>
             </div>
             <div className="flex flex-1 flex-col gap-4">
               <p className="text-lg">
@@ -90,7 +87,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           </div>
         </div>
 
-        <div className="md: w-full px-4 px-8 py-8">
+        <div className="w-full px-4 py-8 md:px-8">
           <div className="flex min-h-[500px] flex-col items-center gap-4 rounded-4xl bg-radial-a px-8 pt-8 lg:px-14 lg:pt-14">
             <div className="flex max-w-[770px] flex-col gap-4 text-center">
               <h2 className="text-4xl font-black">Join the party</h2>
@@ -174,7 +171,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                                   key={index}
                                   className="flex flex-col justify-between gap-2 rounded-lg p-2 hover:bg-background-highlight md:flex-row"
                                 >
-                                  <div className="flex flex-col gap-2 md:flex-row">
+                                  <div className="flex flex-col items-center gap-2 md:flex-row">
                                     <div>
                                       <span className="text-lg font-bold">
                                         {event.city}
@@ -209,7 +206,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           <div className="flex flex-1 flex-col gap-4 md:gap-8">
             <p>
               Join celebrations worldwide featuring talks, networking, and more
-              to celebrate the 10 years of Ethereum.
+              to celebrate 10 years of Ethereum.
             </p>
             <p>
               Can&apos;t attend in person? No problem. We&apos;ll livestream and
@@ -235,7 +232,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
         <div className="flex w-full flex-col items-center gap-8 px-8 py-8 pt-32 lg:flex-row">
           <div className="flex flex-1 flex-col gap-6">
             <h2 className="flex flex-col gap-2 font-black">
-              <span className="pl-2.5 text-4xl text-accent-a">10 years of</span>
+              <span className="text-4xl text-accent-a">10 years of</span>
               <span className="text-5xl text-body md:text-7xl">Innovation</span>
             </h2>
             <p className="text-xl font-bold">

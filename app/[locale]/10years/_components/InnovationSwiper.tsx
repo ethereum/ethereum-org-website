@@ -23,14 +23,16 @@ export default function InnovationSwiper() {
               <Image
                 src={card.image}
                 alt={card.title}
-                className="mx-auto h-auto max-w-full"
+                className="mx-auto my-4 h-auto max-w-full"
               />
               <div>
-                <h3>{card.title}</h3>
-                <p className="text-body-secondary">{card.date}</p>
+                <h3 className="mb-4">{card.title}</h3>
+                <p className="text-body-secondary mb-4">{card.date}</p>
               </div>
               {card.description.map((description, index) => (
-                <p key={index}>{description}</p>
+                <p key={index} className="mb-4">
+                  {description}
+                </p>
               ))}
             </SwiperSlide>
           ))}
