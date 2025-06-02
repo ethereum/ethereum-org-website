@@ -30,6 +30,9 @@
   "content-resources": "Content Resources",
   "content-standardization": "Content standardization",
   "contributing": "Contributing",
+  "contributor-quiz-banner-title": "Unsure where to start?",
+  "contributor-quiz-banner-description": "Take a quick quiz and find out how you can contribute on ethereum.org.",
+  "contributor-quiz-banner-button": "Take a quiz",
   "contributors": "Contributors",
   "contributors-thanks": "Everyone who has <a href=\"/contributing\" target=\"_blank\">contributed</a> to this page – thank you!",
   "cookie-policy": "Cookie policy",
@@ -429,6 +432,7 @@
   "translation-banner-title-new": "Help translate this page",
   "translation-banner-title-update": "Help update this page",
   "translation-program": "Translation Program",
+  "translator": "Translator",
   "try-using-search": "Try using search to find what you're looking for or",
   "tutorials": "Tutorials",
   "up": "Up",
@@ -451,6 +455,5 @@
   "withdrawals": "Staking withdrawals",
   "wrapped-ether": "Wrapped Ether",
   "yes": "Yes",
-  "zero-knowledge-proofs": "Zero-knowledge proofs",
-  "translator": "Translator"
+  "zero-knowledge-proofs": "Zero-knowledge proofs"
 }
