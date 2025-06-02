@@ -4,6 +4,8 @@ import { forwardRef, useEffect, useRef, useState } from "react"
 import { FaCheck } from "react-icons/fa"
 import { MdClose } from "react-icons/md"
 
+import type { ValuesPairing } from "@/lib/types"
+
 import EthGlyphSolid from "@/components/icons/eth-glyph-solid.svg"
 import Tooltip from "@/components/Tooltip"
 
@@ -12,7 +14,6 @@ import { isMobile } from "@/lib/utils/isMobile"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import { Stack } from "../../ui/flex"
-import { type Pairing, useValuesMarquee } from "../useValuesMarquee"
 
 import ValuesMarqueeFallback from "./Fallback"
 
@@ -21,7 +22,7 @@ import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion"
 import { useRtlFlip } from "@/hooks/useRtlFlip"
 
 type ItemProps = React.HTMLAttributes<HTMLButtonElement> & {
-  pairing: Pairing
+  pairing: ValuesPairing
   separatorClass: string
   container?: HTMLElement | null
   label: string
@@ -146,8 +147,21 @@ const Row = forwardRef<HTMLDivElement, RowProps>(
 )
 Row.displayName = "MarqueeRow"
 
-const ValuesMarquee = () => {
-  const { t, pairings, eventCategory } = useValuesMarquee()
+type ValuesMarqueeProps = {
+  pairings: ValuesPairing[]
+  eventCategory: string
+  categoryLabels: {
+    ethereum: string
+    legacy: string
+  }
+}
+
+const ValuesMarquee = ({
+  pairings,
+  eventCategory,
+  categoryLabels,
+}: ValuesMarqueeProps) => {
+  // const { t } = useValuesMarquee()
   const mounted = useIsClient()
   const containerFirstRef = useRef<HTMLDivElement>(null)
   const containerSecondRef = useRef<HTMLDivElement>(null)
@@ -221,7 +235,7 @@ const ValuesMarquee = () => {
         )}
       >
         <p className="bg-gray-50 px-4 py-1 text-body-medium dark:bg-gray-800 dark:text-gray-200">
-          {t("page-index-values-legacy")}
+          {categoryLabels.legacy}
         </p>
         <div
           className={cn(
@@ -233,7 +247,7 @@ const ValuesMarquee = () => {
           )}
         />
         <p className="bg-blue-50 px-4 py-1 text-accent-a dark:bg-blue-600 dark:text-white">
-          {t("common:ethereum")}
+          {categoryLabels.ethereum}
         </p>
       </div>
     </div>

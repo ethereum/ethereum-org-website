@@ -1,6 +1,6 @@
 "use client"
 
-import type { Lang, RSSItem } from "@/lib/types"
+import type { RSSItem } from "@/lib/types"
 
 import { isValidDate } from "@/lib/utils/date"
 import { breakpointAsNumber } from "@/lib/utils/screen"
@@ -28,7 +28,6 @@ import { useIsClient } from "@/hooks/useIsClient"
 type RecentPostsSwiperProps = {
   rssItems: RSSItem[]
   eventCategory: string
-  locale: Lang
   className?: string
 }
 
@@ -36,7 +35,6 @@ const RecentPostsSwiper = ({
   rssItems,
   eventCategory,
   className,
-  locale,
 }: RecentPostsSwiperProps) => {
   const mounted = useIsClient()
 
@@ -74,15 +72,7 @@ const RecentPostsSwiper = ({
               </CardBanner>
               <CardContent>
                 <CardTitle>{title}</CardTitle>
-                {isValidDate(pubDate) && (
-                  <CardSubTitle>
-                    {new Intl.DateTimeFormat(locale, {
-                      month: "long",
-                      day: "numeric",
-                      year: "numeric",
-                    }).format(new Date(pubDate))}
-                  </CardSubTitle>
-                )}
+                {isValidDate(pubDate) && <CardSubTitle>{pubDate}</CardSubTitle>}
                 <CardHighlight>{source}</CardHighlight>
               </CardContent>
             </Card>

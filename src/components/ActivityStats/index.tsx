@@ -1,16 +1,11 @@
-import type { AllMetricData, Lang } from "@/lib/types"
+import type { StatsBoxMetric } from "@/lib/types"
 
 import BigNumber from "../BigNumber"
 
-import { getActivity } from "./getActivity"
-
 type ActivityStatsProps = {
-  metricResults: AllMetricData
-  locale: Lang
+  metrics: StatsBoxMetric[]
 }
-const ActivityStats = async ({ metricResults, locale }: ActivityStatsProps) => {
-  const metrics = await getActivity(metricResults, locale)
-
+const ActivityStats = async ({ metrics }: ActivityStatsProps) => {
   const gridBorderClasses = [
     "border-b border-body-light xl:border-e xl:pe-8",
     "border-b border-body-light xl:ps-8",

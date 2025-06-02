@@ -1028,3 +1028,13 @@ export interface ITutorial {
   lang: string
   isExternal: boolean
 }
+
+type ValuesItem = {
+  label: string
+  content: string[]
+}
+
+export type ValuesPairing = {
+  legacy: ValuesItem
+  ethereum: ValuesItem
+}
