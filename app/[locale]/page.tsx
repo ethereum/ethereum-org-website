@@ -76,6 +76,7 @@ import {
   BLOGS_WITHOUT_FEED,
   CALENDAR_DISPLAY_COUNT,
   GITHUB_REPO_URL,
+  LOCALES_CODES,
   RSS_DISPLAY_COUNT,
 } from "@/lib/constants"
 
@@ -854,6 +855,8 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     </I18nProvider>
   )
 }
+
+export const generateStaticParams = async () => LOCALES_CODES
 
 export async function generateMetadata({
   params,
