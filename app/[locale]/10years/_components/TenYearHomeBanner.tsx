@@ -17,8 +17,10 @@ const TenYearHomeBanner = () => {
           alt=""
           className="mx-auto -mb-2 -mt-16 max-w-[500px] object-contain sm:-mt-24 md:-mt-32"
         />
-        <TenYearDesktopText className="mx-auto mb-4 hidden w-full max-w-[800px] object-contain text-body md:block" />
-        <TenYearMobileText className="mx-auto mb-4 block w-full max-w-[400px] object-contain text-body md:hidden" />
+        <div className="flex justify-center">
+          <TenYearDesktopText className="mb-4 hidden object-contain text-body md:block" />
+          <TenYearMobileText className="mb-4 block object-contain text-body md:hidden" />
+        </div>
         <div className="mb-4 flex flex-col gap-2">
           <p>
             <strong>On July 30, 2015, at 3:44 p.m. UTC,</strong> the first block

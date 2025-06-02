@@ -21,6 +21,7 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import {
   BASE_TIME_UNIT,
   BLOG_FEEDS,
+  BLOGS_WITHOUT_FEED,
   CALENDAR_DISPLAY_COUNT,
   RSS_DISPLAY_COUNT,
 } from "@/lib/constants"
@@ -110,7 +111,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     name: source,
     href: sourceUrl,
   })) as CommunityBlog[]
-  // blogLinks.push(...BLOGS_WITHOUT_FEED)
+  blogLinks.push(...BLOGS_WITHOUT_FEED)
 
   const props = {
     calendar,

@@ -73,6 +73,7 @@ const TenYearGlobe = ({ events }: { events: EventData[] }) => {
     if (globeRef.current) {
       globeRef.current.controls().autoRotate = true
       globeRef.current.controls().enablePan = false
+      globeRef.current.controls().enableZoom = false
       globeRef.current.controls().autoRotateSpeed = 2.0
       globeRef.current.pointOfView({ lat: 0, lng: 0, altitude: 1.8 })
 
@@ -101,6 +102,27 @@ const TenYearGlobe = ({ events }: { events: EventData[] }) => {
   )
   const [isTooltipHovered, setIsTooltipHovered] = useState(false)
   const [isMarkerHovered, setIsMarkerHovered] = useState(false)
+  const lastScrollY = useRef(0)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY
+      const scrollDiff = Math.abs(currentScrollY - lastScrollY.current)
+
+      // Close tooltip if scrolled more than 20px
+      if (scrollDiff > 20) {
+        setHoveredEvent(null)
+        setTooltipPos(null)
+        setIsTooltipHovered(false)
+        setIsMarkerHovered(false)
+      }
+
+      lastScrollY.current = currentScrollY
+    }
+
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
 
   // Memoize the Globe to prevent rerender on tooltip state changes
   const MemoizedGlobe = (
