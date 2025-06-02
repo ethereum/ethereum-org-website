@@ -231,8 +231,8 @@ export const COMMUNITY_BLOGS: CommunityBlog[] = [
     feed: "https://medium.com/feed/ethereum-cat-herders",
   },
   {
-    href: "http://geodework.com/blog",
-    feed: "http://geodework.com/feed.xml",
+    href: "https://geodework.com/blog",
+    feed: "https://geodework.com/feed.xml",
   },
 ]
 
