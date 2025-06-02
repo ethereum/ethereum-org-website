@@ -22,9 +22,7 @@ export async function fetchTranslationCostsReport(
 ): Promise<void> {
   const dateTo = getPreviousDayISOString()
 
-  // Todo: Remove ts-ignore when this PR gets merged
   // https://github.com/crowdin/crowdin-api-client-js/pull/282
-  // const schema: ReportsModel.TranslationCostSchema = {
   const schema: ReportsModel.TranslationCostsPostEndingSchema = {
     unit: "words",
     currency: "USD",
