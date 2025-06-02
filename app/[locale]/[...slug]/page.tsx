@@ -6,8 +6,6 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import { SlugPageParams } from "@/lib/types"
-
 import I18nProvider from "@/components/I18nProvider"
 import mdComponents from "@/components/MdComponents"
 
@@ -29,7 +27,7 @@ const loadData = dataLoader([["gfissues", fetchGFIs]])
 export default async function Page({
   params,
 }: {
-  params: Promise<SlugPageParams>
+  params: Promise<{ locale: string; slug: string[] }>
 }) {
   const { locale, slug: slugArray } = await params
 
@@ -111,7 +109,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<SlugPageParams>
+  params: Promise<{ locale: string; slug: string[] }>
 }) {
   const { locale, slug } = await params
 
