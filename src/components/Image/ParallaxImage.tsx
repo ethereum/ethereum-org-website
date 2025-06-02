@@ -6,7 +6,7 @@ import { ImageProps as NextImageProps } from "next/image"
 import { Image } from "@/components/Image"
 
 import { useEventListener } from "@/hooks/useEventListener"
-import { useMediaQuery } from "@/hooks/useMediaQuery"
+import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion"
 
 export type ParallaxImageProps = NextImageProps & {
   className?: string
@@ -22,9 +22,7 @@ const ParallaxImage = ({ src, alt, className }: ParallaxImageProps) => {
     setPosition({ x, y })
   })
 
-  const [prefersReducedMotion] = useMediaQuery([
-    "(prefers-reduced-motion: reduce)",
-  ])
+  const { prefersReducedMotion } = usePrefersReducedMotion()
   const transform = {
     transform: `translate(${position.x}px, ${position.y}px)`,
   }
