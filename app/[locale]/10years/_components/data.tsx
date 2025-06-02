@@ -20,8 +20,8 @@ const adoptionCards = [
     description: (
       <p className="mb-8">
         What began as a specialized ecosystem now spans <b>80+ countries</b>{" "}
-        with <b>870,000 validators</b>, <b>13,600 physical nodes</b>, and
-        millions of users across continents.
+        with <b>870,000 validators</b>, <b>13,600 physical nodes</b>, and{" "}
+        <b>millions of users</b> across continents.
       </p>
     ),
     href: "/resources",
@@ -32,9 +32,8 @@ const adoptionCards = [
     title: "10 years, 16 upgrades, 0 downtime",
     description: (
       <p className="mb-8">
-        Ethereum has turned continuous innovation into a decade-long uptime
-        record. While few times Ethereum network became congested, it never went
-        down.
+        Ethereum has maintained perfect uptime while continuously evolving. The
+        blockchain has never gone offline.
       </p>
     ),
     href: "/roadmap",
@@ -45,8 +44,8 @@ const adoptionCards = [
     title: "$122.6 billion in stablecoin market cap",
     description: (
       <p className="mb-8">
-        In Q2 2025, Ethereum and its extensions moved over $122.6 billion in
-        stablecoins —{" "}
+        In Q2 2025, the Ethereum ecosystem moved over $122.6 billion in
+        stablecoins,{" "}
         <Link href="https://defillama.com/stablecoins/chains">
           comprising ~49.85% of the stablecoin market share
         </Link>
@@ -116,8 +115,8 @@ const innovationCards = [
     title: "Ethereum Launch",
     date: "July 30, 2015",
     description: [
-      'The genesis block of Ethereum was mined, marking the official launch of the "Frontier" network. This initial version was a barebones release, allowing developers to start building decentralized applications and experiment.',
-      "The network launches with a vision to build a more open internet — one where users own their data, applications run without intermediaries, and value moves freely.",
+      'Ethereum\'s genesis block went live, launching the "Frontier" network. This barebones release gave developers their first chance to build decentralized applications and experiment with smart contracts.',
+      "Ethereum's mission: an open internet where users control their data, applications run without gatekeepers, and value flows freely between people.",
     ],
     image: EthereumLaunchImage,
   },
@@ -125,8 +124,8 @@ const innovationCards = [
     title: "DAI: The pioneer stablecoin",
     date: "December, 2015",
     description: [
-      "Launch of the first stablecoin. DAI was designed to maintain a soft peg to the U.S. dollar while being backed by various cryptocurrencies deposited in smart-contract vaults.",
-      "Unlike centralized stablecoins, DAI's main advantage is that it is managed by a decentralized autonomous organization (DAO) rather than a private company. ",
+      "The first decentralized stablecoin launched. DAI maintains a soft peg to the U.S. dollar through cryptocurrency collateral locked in smart contracts.",
+      "Unlike centralized stablecoins controlled by companies, DAI is governed by a decentralized autonomous organization (DAO), making it trustless and community-driven.",
     ],
     image: StableCoinImage,
   },
@@ -134,8 +133,8 @@ const innovationCards = [
     title: "CryptoKitties and the NFT Frontier",
     date: "November, 2017",
     description: [
-      "CryptoKitties bring digital ownership to life. This early NFT game showed how Ethereum can enable new forms of expression, collectibility, and culture on the internet",
-      "It captured global attention and demonstrated that Ethereum could scale beyond finance into gaming, art, and digital identity.",
+      "CryptoKitties brought digital ownership to life. This early NFT game showed how blockchain could enable new forms of expression, collectibility, and culture online.",
+      "It proved Ethereum could scale beyond finance into gaming, art, and digital identity, opening entirely new creative possibilities.",
     ],
     image: NftImage,
   },
@@ -143,8 +142,8 @@ const innovationCards = [
     title: "DeFi Summer",
     date: "June, 2020",
     description: [
-      "A period of explosive growth redefines finance. Protocols for lending, trading, and yield generation gain momentum — showcasing the power of open, composable financial infrastructure.",
-      "This period sparked enormous user growth, attracting billions in value and building confidence in Ethereum as the home of decentralized finance. ",
+      "Explosive DeFi growth redefined how the world thinks about finance. Protocols for lending, trading, and yield generation gained massive momentum, showcasing the power of open, composable financial infrastructure.",
+      "This period brought billions in value on-chain and established Ethereum as the home of decentralized finance.",
     ],
     image: DefiSummerImage,
   },
@@ -152,8 +151,8 @@ const innovationCards = [
     title: "The Merge update",
     date: "September 15, 2022",
     description: [
-      "Arguably the most significant upgrade in Ethereum's history. The Merge saw the seamless transition of the Ethereum mainnet from Proof-of-Work (PoW) to the Proof-of-Stake (PoS) consensus mechanism.",
-      "This event drastically reduced Ethereum's energy consumption by ~99.95%, enhanced network security, and laid the groundwork for future scalability improvements. ",
+      "Ethereum's biggest transformation yet. The network seamlessly transitioned from energy-intensive proof-of-work to proof-of-stake. With billions in value on Ethereum, the change was described as like changing an aircraft's engine mid-flight.",
+      "The Merge cut Ethereum's energy consumption by 99.95%, strengthened network security, and set the groundwork for future scaling upgrades.",
     ],
     image: TheMergeImage,
   },
@@ -161,8 +160,8 @@ const innovationCards = [
     title: "Spot ETH ETFs",
     date: "May 23, 2024",
     description: [
-      "The approval and launch of Spot Ethereum ETFs in various jurisdictions provided traditional investors with regulated exposure to ETH, further legitimizing it as an asset class.",
-      "A growing trend of tokenizing real-world assets (like real estate, private credit, and treasuries) on Ethereum also gained significant traction, with major financial institutions exploring and launching RWA initiatives.",
+      "Wall Street embraces Ethereum. Spot ETH ETFs launched, bringing institutional capital and regulatory legitimacy to the world's leading smart contract platform.",
+      "The approval signaled broader acceptance of tokenized real-world assets, with major financial institutions now building on Ethereum to bring everything from real estate to treasury bonds on-chain.",
     ],
     image: EthETFImage,
   },
