@@ -32,7 +32,7 @@ import TenYearHero from "./_components/TenYearHero"
 
 import { fetch10YearEvents } from "@/lib/api/fetch10YearEvents"
 import { fetch10YearStories } from "@/lib/api/fetch10YearStories"
-import TenYearLogo from "@/public/images/10-year-anniversary/10year-logo.png"
+import TenYearLogo from "@/public/images/10-year-anniversary/10-year-logo.png"
 
 // In seconds
 const REVALIDATE_TIME = BASE_TIME_UNIT * 1

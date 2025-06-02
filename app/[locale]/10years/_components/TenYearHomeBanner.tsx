@@ -3,7 +3,7 @@ import { ButtonLink } from "@/components/ui/buttons/Button"
 
 import Countdown from "./CountDown"
 
-import TenYearGraphicImage from "@/public/images/10-year-anniversary/10year-logo.png"
+import TenYearGraphicImage from "@/public/images/10-year-anniversary/10-year-logo.png"
 import TenYearDesktopText from "@/public/images/10-year-anniversary/10yeartext.svg"
 import TenYearMobileText from "@/public/images/10-year-anniversary/10yeartext-mobile.svg"
 
