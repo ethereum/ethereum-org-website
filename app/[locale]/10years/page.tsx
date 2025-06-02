@@ -304,9 +304,8 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               </p>
               <p>
                 From millions of wallets to every corner of the world, people
-                are using Ethereum in ways that inspire. This collection shares
-                real stories of creativity, freedom, and connection—powered by a
-                decentralized network.
+                use Ethereum in ways that inspire. These real stories showcase
+                creativity, freedom, and connection powered by Ethereum.
               </p>
               <ButtonLink href="https://ethereumstory.paperform.co/">
                 Share your story

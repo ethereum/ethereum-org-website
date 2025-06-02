@@ -60,11 +60,10 @@ const adoptionCards = [
     title: "~75 billion secured on Ethereum",
     description: (
       <p className="mb-8">
-        In Q2 2025, Ethereum secures over $75 billion in{" "}
+        As of Q2 2025,{" "}
         <Link href="https://defillama.com/chains">
-          DeFi for mainnet and its layer 2s
+          Ethereum secures over $75 billion in DeFi across its ecosystem.
         </Link>
-        .
       </p>
     ),
     href: "/defi",
@@ -80,7 +79,7 @@ const adoptionCards = [
         <Link href="https://digiconomist.net/ethereum-energy-consumption">
           0.01 TWh per year
         </Link>
-        , down from its peak of 93.95 TWh per year.
+        , down from its peak of 93.95 TWh.
       </p>
     ),
     href: "/energy-consumption",
@@ -91,12 +90,11 @@ const adoptionCards = [
     title: "Over 250 TPS",
     description: (
       <p className="mb-8">
-        Ethereum&apos;s throughput has increased significantly since its
-        inception, with the network now capable of handling over{" "}
+        Ethereum&apos;s throughput has increased dramatically since launch, with
+        Ethereum&apos;s ecosystem now handling over{" "}
         <Link href="https://l2beat.com/scaling/activity">
-          250 transactions per second
-        </Link>{" "}
-        between mainnet and its layer 2s.
+          250 transactions per second.
+        </Link>
       </p>
     ),
     href: "/layer-2",
