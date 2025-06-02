@@ -1028,3 +1028,11 @@ export interface ITutorial {
   lang: string
   isExternal: boolean
 }
+
+export type PageParams = {
+  locale: string
+}
+
+export type SlugPageParams = PageParams & {
+  slug: string[]
+}
