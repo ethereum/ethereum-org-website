@@ -12,8 +12,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Sleep for 30 minutes
-        run: sleep 1800
+      # - name: Sleep for 30 minutes
+      #   run: sleep 1800
+      - name: Sleep for 10 minutes
+        run: sleep 600
 
       - name: Wait for Netlify Deploy
         id: netlify_deploy
