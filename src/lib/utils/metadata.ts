@@ -23,14 +23,35 @@ const imageForSlug = [
  * @param slug - the slug of the page
  * @returns relative path of image
  */
-export const getOgImage = (slug: string[]): string => {
-  let result = DEFAULT_OG_IMAGE
-  for (const item of imageForSlug) {
-    if (slug.includes(item.section)) {
-      result = item.image
-    }
+export const getOgImage = (
+  slug: string[],
+  params?: {
+    title?: string
+    description?: string
+    author?: string
+    timeToRead?: string
+    skill?: string
+    tags?: string[]
   }
-  return result
+): string => {
+  const { title, description, author, timeToRead, skill, tags } = params || {}
+
+  if (slug.includes("tutorials") && slug.length > 2) {
+    const ogImageSrc = new URL("og/tutorial", SITE_URL)
+    title && ogImageSrc.searchParams.set("title", title)
+    description && ogImageSrc.searchParams.set("subtitle", description)
+    author && ogImageSrc.searchParams.set("author", author)
+    timeToRead && ogImageSrc.searchParams.set("timeToRead", timeToRead)
+    skill && ogImageSrc.searchParams.set("skill", skill)
+    tags && ogImageSrc.searchParams.set("tags", tags?.join(", "))
+    return ogImageSrc.toString()
+    console.log({ image: ogImageSrc.toString() })
+  }
+  for (const item of imageForSlug) {
+    if (slug.includes(item.section)) return item.image
+  }
+
+  return DEFAULT_OG_IMAGE
 }
 
 export const getMetadata = async ({
@@ -40,6 +61,8 @@ export const getMetadata = async ({
   description: descriptionProp,
   image,
   author,
+  tags,
+  timeToRead,
 }: {
   locale: string
   slug: string[]
@@ -47,6 +70,8 @@ export const getMetadata = async ({
   description?: string
   image?: string
   author?: string
+  tags?: string[]
+  timeToRead?: string
 }): Promise<Metadata> => {
   const slugString = slug.join("/")
   const t = await getTranslations({ locale, namespace: "common" })
@@ -61,7 +86,8 @@ export const getMetadata = async ({
   const xDefault = getFullUrl(routing.defaultLocale, slugString)
 
   /* Set fallback ogImage based on path */
-  const ogImage = image || getOgImage(slug)
+  const params = { title, description, author, tags, timeToRead }
+  const ogImage = image || getOgImage(slug, params)
 
   return {
     title,

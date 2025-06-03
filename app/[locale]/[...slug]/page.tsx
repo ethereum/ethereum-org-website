@@ -115,9 +115,16 @@ export async function generateMetadata({
   params: Promise<{ locale: string; slug: string[] }>
 }) {
   const { locale, slug } = await params
+  const { timeToRead } = await getPageData({
+    locale,
+    slug: slug.join("/"),
+    baseComponents: {},
+    componentsMapping: {},
+  })
 
   return await getMdMetadata({
     locale,
     slug,
+    timeToRead: timeToRead.text,
   })
 }
