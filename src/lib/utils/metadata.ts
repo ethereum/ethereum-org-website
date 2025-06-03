@@ -7,34 +7,35 @@ import { isLocaleValidISO639_1 } from "./translations"
 import { getFullUrl } from "./url"
 
 import { routing } from "@/i18n/routing"
-/**
- * List of default og images for different sections
- */
-const imageForSlug = [
-  { section: "developers", image: "/images/heroes/developers-hub-hero.jpg" },
-  { section: "roadmap", image: "/images/heroes/roadmap-hub-hero.jpg" },
-  { section: "guides", image: "/images/heroes/guides-hub-hero.jpg" },
-  { section: "community", image: "/images/heroes/community-hero.png" },
-  { section: "staking", image: "/images/upgrades/upgrade_rhino.png" },
-] as const
+
+type MetadataProps = {
+  locale: string
+  slug: string[]
+  title: string
+  description: string
+  author?: string
+  tags?: string[]
+  skill?: string
+  timeToRead?: string
+  image?: string
+}
 
 /**
  * Get the default OG image for a page based on the slug
  * @param slug - the slug of the page
  * @returns relative path of image
  */
-export const getOgImage = (
-  slug: string[],
-  params?: {
-    title?: string
-    description?: string
-    author?: string
-    timeToRead?: string
-    skill?: string
-    tags?: string[]
-  }
-): string => {
-  const { title, description, author, timeToRead, skill, tags } = params || {}
+export const getOgImage = (props: MetadataProps): string => {
+  const { title, description, author, slug, timeToRead, skill, tags } = props
+
+  // List of default og images for different sections
+  const imageForSlug = [
+    { section: "developers", image: "/images/heroes/developers-hub-hero.jpg" },
+    { section: "roadmap", image: "/images/heroes/roadmap-hub-hero.jpg" },
+    { section: "guides", image: "/images/heroes/guides-hub-hero.jpg" },
+    { section: "community", image: "/images/heroes/community-hero.png" },
+    { section: "staking", image: "/images/upgrades/upgrade_rhino.png" },
+  ] as const
 
   if (slug.includes("tutorials") && slug.length > 2) {
     const ogImageSrc = new URL("og/tutorial", SITE_URL)
@@ -54,29 +55,19 @@ export const getOgImage = (
   return DEFAULT_OG_IMAGE
 }
 
-export const getMetadata = async ({
-  locale,
-  slug,
-  title,
-  description: descriptionProp,
-  image,
-  author,
-  tags,
-  timeToRead,
-}: {
-  locale: string
-  slug: string[]
-  title: string
-  description?: string
-  image?: string
-  author?: string
-  tags?: string[]
-  timeToRead?: string
-}): Promise<Metadata> => {
+export const getMetadata = async (props: MetadataProps): Promise<Metadata> => {
+  const {
+    slug,
+    author,
+    locale,
+    image,
+    title,
+    description: descriptionProps,
+  } = props
   const slugString = slug.join("/")
   const t = await getTranslations({ locale, namespace: "common" })
 
-  const description = descriptionProp || t("site-description")
+  const description = descriptionProps || t("site-description")
   const siteTitle = t("site-title")
 
   // Set canonical URL w/ language path to avoid duplicate content
@@ -86,8 +77,7 @@ export const getMetadata = async ({
   const xDefault = getFullUrl(routing.defaultLocale, slugString)
 
   /* Set fallback ogImage based on path */
-  const params = { title, description, author, tags, timeToRead }
-  const ogImage = image || getOgImage(slug, params)
+  const ogImage = image || getOgImage(props)
 
   return {
     title,
