@@ -277,7 +277,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               <div
                 key={card.title}
                 className={cn(
-                  "w-[70%] rounded-2xl p-8",
+                  "w-[70%] rounded-2xl p-8 shadow",
                   index % 2 === 0 && "ml-auto",
                   index !== 0 && "-mt-10",
                   zIndexClasses[index],
