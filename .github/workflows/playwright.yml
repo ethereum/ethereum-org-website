@@ -77,4 +77,5 @@ jobs:
         with:
           playwright: true
           projectToken: fee8e66c9916
-        env: CHROMATIC_ARCHIVE_LOCATION=tests/e2e/__results__
+        env:
+          CHROMATIC_ARCHIVE_LOCATION: ./tests/e2e/__results__
