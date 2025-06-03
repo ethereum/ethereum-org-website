@@ -28,14 +28,17 @@ jobs:
         with:
           node-version: lts/*
 
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+
       - name: Install dependencies
-        run: yarn
+        run: pnpm install
 
       - name: Install Playwright with all browsers
         run: npx playwright install --with-deps
 
       - name: Run E2E Tests on Netlify URL
-        run: yarn test:e2e
+        run: pnpm test:e2e
         env:
           PLAYWRIGHT_TEST_BASE_URL: ${{ steps.netlify_deploy.outputs.url }}
 
