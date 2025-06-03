@@ -33,7 +33,7 @@ const TenYearHero = () => {
   // loops over chars to morph a text to another
   const morpher = (start: string, end: string): void => {
     // array of chars to randomly morph the text between start and end
-    const chars = "abcdefghijklmnopqrstuvwxyz".split("")
+    const chars = "abcdfgijklnopqsvwxyz".split("")
     // duration of the global morph
     const duration = 3
     // speed of the morph for each letter
