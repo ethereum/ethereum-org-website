@@ -44,7 +44,7 @@ const adoptionCards = [
     title: "$123 billion in stablecoin market cap",
     description: (
       <p className="mb-8">
-        As of Q2 2025, Ethereum L1 secures $122.6 billion in stablecoins,{" "}
+        As of Q2 2025, Ethereum L1 secures over $123 billion in stablecoins,{" "}
         <Link href="https://defillama.com/stablecoins/chains">
           capturing over 50% of the global stablecoin market.
         </Link>
