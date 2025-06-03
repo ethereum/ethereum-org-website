@@ -171,7 +171,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                                   key={index}
                                   className="flex flex-col justify-between gap-2 rounded-lg p-2 hover:bg-background-highlight md:flex-row"
                                 >
-                                  <div className="flex flex-col items-center gap-2 md:flex-row">
+                                  <div className="flex flex-col gap-2 md:flex-row md:items-center">
                                     <div>
                                       <span className="text-lg font-bold">
                                         {event.city}
