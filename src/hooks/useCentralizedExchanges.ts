@@ -1,5 +1,5 @@
 import { useState } from "react"
-import shuffle from "lodash/shuffle"
+import { shuffle } from "lodash"
 import { useLocale } from "next-intl"
 
 // TODO: Remove unused?

@@ -1,4 +1,4 @@
-import pick from "lodash.pick"
+import { pick } from "lodash"
 import {
   getMessages,
   getTranslations,
@@ -23,6 +23,7 @@ import {
   BLOG_FEEDS,
   BLOGS_WITHOUT_FEED,
   CALENDAR_DISPLAY_COUNT,
+  LOCALES_CODES,
   RSS_DISPLAY_COUNT,
 } from "@/lib/constants"
 
@@ -127,6 +128,8 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     </I18nProvider>
   )
 }
+
+export const generateStaticParams = async () => LOCALES_CODES
 
 export async function generateMetadata({
   params,

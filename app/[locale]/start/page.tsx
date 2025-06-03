@@ -1,4 +1,4 @@
-import pick from "lodash.pick"
+import { pick } from "lodash"
 import { getMessages, setRequestLocale } from "next-intl/server"
 
 import { Lang } from "@/lib/types"
