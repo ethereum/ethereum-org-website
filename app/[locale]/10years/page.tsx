@@ -64,10 +64,10 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
       <MainArticle className="mx-auto flex w-full flex-col items-center">
         <TenYearHero />
 
-        <div className="mt-16 flex w-full flex-col gap-16 px-8 py-8 md:flex-row">
+        <div className="mt-16 flex w-full flex-col gap-16 px-8 py-4 md:flex-row md:py-8">
           <div className="flex flex-1 flex-col gap-5">
             <div>
-              <h1 className="text-4xl font-bold">
+              <h1 className="text-2xl font-bold">
                 A decade of transforming the world one block at a time
               </h1>
             </div>
@@ -122,7 +122,8 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                     value={key}
                     className="whitespace-nowrap border-0 text-primary"
                   >
-                    {data.label}{" "}
+                    {data.label}
+                    {"\u00A0"}
                     <span className="text-sm">({data.events.length})</span>
                   </TabsTrigger>
                 ))}
@@ -202,7 +203,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           </div>
         </div>
         <div className="flex w-full flex-col-reverse gap-8 px-8 py-8 md:flex-row">
-          <div className="flex flex-1 flex-col gap-4 md:gap-8">
+          <div className="flex flex-1 flex-col gap-4 md:gap-8 md:pt-8">
             <p>
               Join people around the world for talks, networking, and
               celebrations as we mark Ethereum&apos;s tenth birthday.
@@ -214,7 +215,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             </p>
           </div>
           <div className="flex flex-1 flex-col items-center gap-4 rounded-2xl bg-gradient-step-1 p-8">
-            <h2 className="text-2xl font-bold">Host event</h2>
+            <h2 className="text-2xl font-bold">Host an event</h2>
             <p className="text-md">
               Want to host an event? Limited-time grants are available to help
               fund your event.
@@ -255,7 +256,10 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
         <div className="flex w-full flex-col gap-8 px-8 py-8 pt-32 lg:flex-row">
           <div className="relative flex max-w-[350px] flex-1 flex-col gap-6">
             <div className="flex flex-col gap-6 lg:sticky lg:top-64 lg:mb-24">
-              <h2 className="text-5xl font-black md:text-7xl">Adoption</h2>
+              <h2 className="flex flex-col gap-2 font-black">
+                <span className="text-4xl text-accent-a">10 years of</span>
+                <span className="text-5xl text-body md:text-7xl">Adoption</span>
+              </h2>
               <p className="text-xl font-bold">
                 From a whitepaper to 24M+ daily transactions within the Ethereum
                 ecosystem
@@ -298,7 +302,10 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
         <div className="flex w-full flex-col gap-8 px-8 py-8 pt-32 lg:flex-row">
           <div className="flex max-w-[350px] flex-1 flex-col gap-6">
             <div className="flex flex-col gap-6 lg:sticky lg:top-64 lg:mb-24">
-              <h2 className="text-5xl font-black md:text-7xl">Stories</h2>
+              <h2 className="flex flex-col gap-2 font-black">
+                <span className="text-4xl text-accent-a">10 years of</span>
+                <span className="text-5xl text-body md:text-7xl">Stories</span>
+              </h2>
               <p className="text-xl font-bold">
                 An overview of how Ethereum is used in daily life
               </p>
@@ -320,7 +327,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             <Image
               src={TenYearLogo}
               alt="10 year anniversary logo"
-              className="-mb-4 max-h-80 object-contain sm:-mb-16"
+              className="-mb-4 max-h-80 object-contain"
             />
             <h3>Have an idea for how the community can celebrate?</h3>
             <p>
