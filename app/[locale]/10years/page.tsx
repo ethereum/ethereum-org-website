@@ -29,6 +29,7 @@ import InnovationSwiper from "./_components/InnovationSwiper"
 import Stories from "./_components/Stories"
 import TenYearGlobe from "./_components/TenYearGlobe"
 import TenYearHero from "./_components/TenYearHero"
+import { parseStoryDates } from "./_components/utils"
 
 import { fetch10YearEvents } from "@/lib/api/fetch10YearEvents"
 import { fetch10YearStories } from "@/lib/api/fetch10YearStories"
@@ -53,6 +54,8 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   setRequestLocale(locale)
 
   const [fetched10YearEvents, fetched10YearStories] = await loadData()
+
+  const stories = parseStoryDates(fetched10YearStories, locale)
 
   // Get i18n messages
   const allMessages = await getMessages({ locale })
@@ -319,7 +322,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               </ButtonLink>
             </div>
           </div>
-          <Stories stories={fetched10YearStories} />
+          <Stories stories={stories} />
         </div>
 
         <div className="w-full gap-8 px-8 py-8 pt-32">
