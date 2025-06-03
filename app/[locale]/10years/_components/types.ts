@@ -1,3 +1,5 @@
+import { StaticImageData } from "next/image"
+
 export type Story = {
   storyEnglish: string
   storyOriginal: string
@@ -7,4 +9,12 @@ export type Story = {
   country: string
   twitter: string
   region: string
+}
+
+export type AdoptionCard = {
+  image: StaticImageData
+  title: string
+  description: React.ReactNode
+  href: string
+  linkText: string
 }

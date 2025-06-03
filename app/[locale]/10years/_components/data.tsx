@@ -1,5 +1,7 @@
 import Link from "@/components/ui/Link"
 
+import { AdoptionCard } from "./types"
+
 import Adoption1Image from "@/public/images/10-year-anniversary/adoption-1.png"
 import Adoption2Image from "@/public/images/10-year-anniversary/adoption-2.png"
 import Adoption3Image from "@/public/images/10-year-anniversary/adoption-3.png"
@@ -13,7 +15,7 @@ import StableCoinImage from "@/public/images/10-year-anniversary/the-pioneer-sta
 import Adoption4Image from "@/public/images/10-year-anniversary/walking-talking-1.png"
 import Adoption6Image from "@/public/images/10-year-anniversary/walking-talking-2.png"
 
-const adoptionCards = [
+const adoptionCards: AdoptionCard[] = [
   {
     image: Adoption1Image,
     title: "Decade of Decentralization",

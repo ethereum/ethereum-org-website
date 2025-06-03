@@ -274,7 +274,10 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               </p>
             </div>
           </div>
-          <AdoptionSwiper />
+          <AdoptionSwiper
+            adoptionCards={adoptionCards}
+            adoptionStyles={adoptionStyles}
+          />
           <div className="hidden flex-1 flex-col gap-6 md:flex">
             {adoptionCards.map((card, index) => (
               <div

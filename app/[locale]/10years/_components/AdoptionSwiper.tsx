@@ -11,9 +11,16 @@ import {
 
 import { cn } from "@/lib/utils/cn"
 
-import { adoptionCards, adoptionStyles } from "./data"
+import { AdoptionCard } from "./types"
 
-const AdoptionSwiper = () => {
+type AdoptionCardProps = {
+  adoptionCards: AdoptionCard[]
+  adoptionStyles: string[]
+}
+const AdoptionSwiper = ({
+  adoptionCards,
+  adoptionStyles,
+}: AdoptionCardProps) => {
   return (
     <div className="flex flex-1 flex-col gap-6 md:hidden">
       <SwiperContainer className="mx-auto w-full max-w-[550px]">
