@@ -23,12 +23,12 @@ import {
   BLOG_FEEDS,
   BLOGS_WITHOUT_FEED,
   CALENDAR_DISPLAY_COUNT,
-  LOCALES_CODES,
   RSS_DISPLAY_COUNT,
 } from "@/lib/constants"
 
 import HomePage from "./_components/home"
 
+import { routing } from "@/i18n/routing"
 import { fetchCommunityEvents } from "@/lib/api/calendarEvents"
 import { fetchEthPrice } from "@/lib/api/fetchEthPrice"
 import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
@@ -129,7 +129,11 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   )
 }
 
-export const generateStaticParams = async () => LOCALES_CODES
+export async function generateStaticParams() {
+  return routing.locales.map((locale) => ({
+    locale,
+  }))
+}
 
 export async function generateMetadata({
   params,
