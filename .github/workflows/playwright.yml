@@ -5,7 +5,7 @@ on:
   pull_request:
     branches: [master, staging, e2e-tests] # TODO: remove e2e-tests (testing branch)
 jobs:
-  test:
+  playwright:
     runs-on: ubuntu-latest
     env:
       CI: true
@@ -48,3 +48,33 @@ jobs:
           name: playwright-report
           path: tests/e2e/__report__/
           retention-days: 7
+
+  chromatic:
+    name: Run Chromatic
+    needs: playwright
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22.12.0
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Download Playwright test results
+        uses: actions/download-artifact@v4
+        with:
+          name: playwright-report
+          path: tests/e2e/__report__/
+
+      - name: Run Chromatic
+        uses: chromaui/action@latest
+        with:
+          playwright: true
+          projectToken: fee8e66c9916
+        env: CHROMATIC_ARCHIVE_LOCATION=tests/e2e/__results__

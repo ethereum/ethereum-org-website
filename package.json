@@ -16,7 +16,7 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "build-storybook:chromatic": "storybook build --test",
-    "chromatic": "chromatic --project-token fee8e66c9916",
+    "chromatic": "CHROMATIC_ARCHIVE_LOCATION=tests/e2e/__results__ chromatic --project-token fee8e66c9916",
     "crowdin-clean": "rm -rf .crowdin && mkdir .crowdin",
     "crowdin-import": "ts-node src/scripts/crowdin-import.ts",
     "markdown-checker": "ts-node -O '{ \"module\": \"commonjs\" }' src/scripts/markdownChecker.ts",
@@ -100,6 +100,7 @@
     "yaml-loader": "^0.8.0"
   },
   "devDependencies": {
+    "@chromatic-com/playwright": "^0.12.4",
     "@chromatic-com/storybook": "1.5.0",
     "@netlify/plugin-nextjs": "^5.10.0",
     "@playwright/test": "^1.52.0",
@@ -124,8 +125,9 @@
     "@typescript-eslint/eslint-plugin": "^6.19.0",
     "@typescript-eslint/parser": "^6.19.0",
     "autoprefixer": "^10.4.19",
-    "chromatic": "10.9.6",
+    "chromatic": "12.0.0",
     "decompress": "^4.2.1",
+    "dotenv": "^16.5.0",
     "eslint": "^8.45.0",
     "eslint-config-next": "^14.2.2",
     "eslint-config-prettier": "9.1.0",
