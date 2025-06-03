@@ -327,7 +327,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             <Image
               src={TenYearLogo}
               alt="10 year anniversary logo"
-              className="-mb-4 max-h-80 object-contain"
+              className="mb-8 max-h-80 object-contain sm:mb-12"
             />
             <h3>Have an idea for how the community can celebrate?</h3>
             <p>
