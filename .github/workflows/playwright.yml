@@ -80,5 +80,6 @@ jobs:
           projectToken: fee8e66c9916
           playwright: true
           exitZeroOnChanges: true
+          forceRebuild: true
         env:
           CHROMATIC_ARCHIVE_LOCATION: ./tests/e2e/__results__
