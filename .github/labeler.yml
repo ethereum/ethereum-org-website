@@ -12,6 +12,7 @@
 "dependencies 📦":
   - package.json
   - yarn.lock
+  - pnpm-lock.yaml
 
 "config ⚙️":
   - i18n.config.json
