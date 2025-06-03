@@ -5,6 +5,7 @@ import { useTheme } from "next-themes"
 import Globe from "react-globe.gl"
 import { type GlobeMethods } from "react-globe.gl"
 import * as THREE from "three"
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls"
 
 import Link from "@/components/ui/Link"
 
@@ -26,6 +27,14 @@ type EventData = {
 type CountryFeature = {
   properties: {
     ADMIN: string
+  }
+}
+
+// Extend OrbitControls type to include _sphericalDelta
+interface ExtendedOrbitControls extends OrbitControls {
+  _sphericalDelta?: {
+    theta: number
+    phi: number
   }
 }
 
@@ -71,10 +80,11 @@ const TenYearGlobe = ({ events }: { events: EventData[] }) => {
 
   useEffect(() => {
     if (globeRef.current) {
-      globeRef.current.controls().autoRotate = true
-      globeRef.current.controls().enablePan = false
-      globeRef.current.controls().enableZoom = false
-      globeRef.current.controls().autoRotateSpeed = 2.0
+      const controls = globeRef.current.controls() as ExtendedOrbitControls
+      controls.autoRotate = true
+      controls.enablePan = false
+      controls.enableZoom = false
+      controls.autoRotateSpeed = 2.0
       globeRef.current.pointOfView({ lat: 0, lng: 0, altitude: 1.8 })
 
       const ambientLight = new THREE.AmbientLight(0xffffff, 1)
@@ -165,10 +175,10 @@ const TenYearGlobe = ({ events }: { events: EventData[] }) => {
             setTooltipPos(coords)
           }
           // Stop rotation immediately
-          const controls = globeRef.current.controls()
+          const controls = globeRef.current.controls() as ExtendedOrbitControls
           controls.autoRotate = false
           if ("autoRotateSpeed" in controls) controls.autoRotateSpeed = 0
-          if ("_sphericalDelta" in controls && controls._sphericalDelta) {
+          if (controls._sphericalDelta) {
             controls._sphericalDelta.theta = 0
             controls._sphericalDelta.phi = 0
           }
@@ -181,7 +191,8 @@ const TenYearGlobe = ({ events }: { events: EventData[] }) => {
             }
           }, 100)
           if (globeRef.current) {
-            const controls = globeRef.current.controls()
+            const controls =
+              globeRef.current.controls() as ExtendedOrbitControls
             controls.autoRotate = true
             if ("autoRotateSpeed" in controls) controls.autoRotateSpeed = 2.0
           }
@@ -189,10 +200,10 @@ const TenYearGlobe = ({ events }: { events: EventData[] }) => {
       }}
       onPointClick={() => {
         if (globeRef.current) {
-          const controls = globeRef.current.controls()
+          const controls = globeRef.current.controls() as ExtendedOrbitControls
           controls.autoRotate = false
           if ("autoRotateSpeed" in controls) controls.autoRotateSpeed = 0
-          if ("_sphericalDelta" in controls && controls._sphericalDelta) {
+          if (controls._sphericalDelta) {
             controls._sphericalDelta.theta = 0
             controls._sphericalDelta.phi = 0
           }
