@@ -18,7 +18,7 @@ const ACTIVE_ADDRESSES = "aa_last7d"
 export async function GET() {
   try {
     const url = "https://api.growthepie.xyz/v1/fundamentals.json"
-    const response = await fetch(url) // Cache for 1 hour
+    const response = await fetch(url, { next: { revalidate: 3600 * 24 } }) // Cache for 1 day
     if (!response.ok) {
       throw new Error("Failed to fetch growthepie data")
     }
