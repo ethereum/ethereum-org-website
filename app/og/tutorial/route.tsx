@@ -104,7 +104,7 @@ export function GET(request: Request) {
             </svg>
             <div
               style={{
-                fontSize: "24px",
+                fontSize: "32px",
                 color: colors.body,
                 fontWeight: "600",
               }}
@@ -134,7 +134,7 @@ export function GET(request: Request) {
             {subtitle && (
               <p
                 style={{
-                  fontSize: "24px",
+                  fontSize: "28px",
                   color: colors.bodyMedium,
                   margin: 0,
                   lineHeight: "1.3",
@@ -162,7 +162,7 @@ export function GET(request: Request) {
                       color: colors.primaryHighContrast,
                       padding: "6px 12px",
                       borderRadius: "16px",
-                      fontSize: "16px",
+                      fontSize: "18px",
                       border: `1px solid ${colors.primary}`,
                       textTransform: "uppercase",
                       fontWeight: "600",
@@ -175,7 +175,7 @@ export function GET(request: Request) {
                   <span
                     style={{
                       color: colors.bodyMedium,
-                      fontSize: "16px",
+                      fontSize: "18px",
                       padding: "6px 0",
                     }}
                   >
@@ -202,7 +202,7 @@ export function GET(request: Request) {
                     alignItems: "center",
                     gap: "8px",
                     color: colors.bodyMedium,
-                    fontSize: "18px",
+                    fontSize: "20px",
                   }}
                 >
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -230,7 +230,7 @@ export function GET(request: Request) {
                     alignItems: "center",
                     gap: "8px",
                     color: colors.bodyMedium,
-                    fontSize: "18px",
+                    fontSize: "20px",
                   }}
                 >
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -262,7 +262,7 @@ export function GET(request: Request) {
                   border: `1px solid ${colors.success}`,
                   padding: "8px 16px",
                   borderRadius: "20px",
-                  fontSize: "16px",
+                  fontSize: "18px",
                   fontWeight: "600",
                   textTransform: "uppercase",
                 }}
@@ -304,7 +304,6 @@ export function GET(request: Request) {
               width: "300px",
               height: "300px",
               background: "linear-gradient(to bottom, #320b75, #14052e)",
-              // background: "linear-gradient(135deg, #7c3aed 0%, #3b82f6 100%)",
               borderRadius: "20px",
               display: "flex",
               alignItems: "center",
@@ -312,9 +311,6 @@ export function GET(request: Request) {
               boxShadow: "0 20px 40px rgba(0,0,0,0.3)",
               position: "relative",
               zIndex: 1,
-              // position: "absolute",
-              // inset: 0,
-              // background: "linear-gradient(to top, #7c3aed80, transparent)",
             }}
           >
             <svg width="180" height="180" viewBox="0 0 80 80" fill="none">
