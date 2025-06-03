@@ -9,7 +9,7 @@ Validium is a [scaling solution](/developers/docs/scaling/) that enforces integr
 
 ## Prerequisites {#prerequisites}
 
-You should have read and understood our page on [Ethereum scaling](/developers/docs/scaling/) and [layer 2](/layer-2).
+You should have read and understood our page on [Ethereum scaling](/developers/docs/scaling/) and [layer 2](/layer-2/learn/).
 
 ## What is validium? {#what-is-validium}
 
