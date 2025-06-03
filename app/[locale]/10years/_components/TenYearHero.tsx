@@ -8,24 +8,26 @@ import ParallaxImage from "@/components/Image/ParallaxImage"
 import TenYearBackgroundImage from "@/public/images/10-year-anniversary/10-year-background.png"
 import TenYearGraphicImage from "@/public/images/10-year-anniversary/10-year-graphic.png"
 
+const [initialText, ...initialWords] = [
+  "censorship resistance",
+  "100% uptime",
+  "decentralization",
+  "community building",
+  "developer growth",
+  "global collaboration",
+  "cypherpunk values",
+  "hackathons",
+  "censorship resistance",
+  "permissionless finance",
+  "credible neutrality",
+  "the infinite garden",
+  "client diversity",
+]
+
 const TenYearHero = () => {
   const [words, setWords] = useState<{ text: string; words: string[] }>({
-    text: "censorship resistance",
-    words: [
-      "censorship resistance",
-      "100% uptime",
-      "decentralization",
-      "community building",
-      "developer growth",
-      "global collaboration",
-      "cypherpunk values",
-      "hackathons",
-      "censorship resistance",
-      "permissionless finance",
-      "credible neutrality",
-      "the infinite garden",
-      "client diversity",
-    ],
+    text: initialText,
+    words: initialWords,
   })
 
   // loops over chars to morph a text to another
@@ -136,7 +138,17 @@ const TenYearHero = () => {
       </div>
       <p className="text-center text-3xl">
         Celebrating 10 years of{" "}
-        <span className="font-bold text-accent-b">{words.text}</span>
+        <span className="relative max-md:block md:w-fit">
+          <span
+            className="select-none opacity-0 max-md:hidden"
+            data-label="space-holder"
+          >
+            {initialText}
+          </span>
+          <span className="font-bold text-accent-b md:absolute md:start-0 md:text-nowrap">
+            {words.text}
+          </span>
+        </span>
       </p>
     </div>
   )
