@@ -1,11 +1,14 @@
-import { expect, test } from "@playwright/test"
+import { expect, takeSnapshot, test } from "@chromatic-com/playwright"
 
 import { breakpointAsNumber } from "@/lib/utils/screen"
 
 test.describe("Homepage", () => {
-  test("loads successfully", async ({ page }) => {
+  test("loads successfully", async ({ page }, testInfo) => {
     await page.goto("/")
+
     await expect(page).toHaveTitle(/Ethereum.org/)
+
+    await takeSnapshot(page, "Page loaded", testInfo)
   })
 
   test("search functionality", async ({ page }) => {
@@ -37,13 +40,15 @@ test.describe("Homepage", () => {
     await expect(page).toHaveURL(/.*\/developers/)
   })
 
-  test("navigation menu - mobile", async ({ page }) => {
+  test("navigation menu - mobile", async ({ page }, testInfo) => {
     // Only run this test for mobile projects
     const viewport = page.viewportSize()
     const isMobile = viewport && viewport.width <= breakpointAsNumber.md
     test.skip(!isMobile, "This test is for mobile viewports only")
 
     await page.goto("/")
+
+    await takeSnapshot(page, "Mobile page loaded", testInfo)
 
     const nav = page.getByRole("navigation", { name: "Primary" })
     const menuButton = nav.getByRole("button", {
@@ -53,6 +58,8 @@ test.describe("Homepage", () => {
 
     // Open the mobile menu
     await menuButton.click()
+
+    await takeSnapshot(page, "Mobile menu opened", testInfo)
 
     // Check that navigation links are visible in the mobile menu
     const sidebar = page.getByRole("dialog", { name: /ethereum.org/i })

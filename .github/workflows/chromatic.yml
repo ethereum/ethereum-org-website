@@ -2,7 +2,6 @@
 
 # Workflow name
 name: Chromatic Publish and Testing
-
 # Event for the workflow
 on:
   pull_request:
@@ -18,6 +17,10 @@ on:
       - ".storybook/**/*"
       - "tailwind.config.ts"
       - "src/styles/**/*"
+    branches-ignore:
+      - "master"
+      - "staging"
+      - "e2e-tests" # TODO: remove e2e-tests (testing branch)
 
 # List of jobs
 jobs:
@@ -39,7 +42,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 20
-          cache: 'pnpm'
+          cache: "pnpm"
       - name: Install deps
         # 👇 Install dependencies with the same package manager used in the project (replace it as needed), e.g. yarn, npm, pnpm
         run: pnpm install
