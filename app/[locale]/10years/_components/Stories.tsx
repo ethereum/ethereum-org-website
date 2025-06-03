@@ -75,7 +75,7 @@ const Stories = ({ stories }: StoriesProps) => {
                       <div className="flex flex-row items-center gap-2">
                         <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary-hover">
                           <p aria-hidden className="font-bold">
-                            {story.name.slice(0, 1)}
+                            {story.name?.slice(0, 1) || "?"}
                           </p>
                         </div>
                         <div className="">
@@ -154,7 +154,7 @@ const Stories = ({ stories }: StoriesProps) => {
                       <div className="flex flex-row items-center gap-2">
                         <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary-hover">
                           <p aria-hidden className="font-bold">
-                            {story.name.slice(0, 1)}
+                            {story.name?.slice(0, 1) || "?"}
                           </p>
                         </div>
                         <div className="">
