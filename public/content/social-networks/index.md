@@ -69,8 +69,6 @@ Users use the platform's native [ERC-20](/glossary/#erc-20) token $MIND to pay f
 
 [Farcaster](https://farcaster.xyz/) is a "sufficently decentralized" social network similar to X and Reddit that allows users to share and discover "casts". It is built on the Optimism L2 network to keep transactions relatively cheap.
 
-Many users use the [Warpcast](https://warpcast.com/) client to interact with the Farcaster network. Warpcast handles much of the heavy lifting, such as managing the user's wallet and private keys.
-
 ## Use decentralized social networks {#use-decentralized-social-networks}
 
 - **[Status.im](https://status.im/)** - _Status is a secure messaging app that uses an open-source, peer-to-peer protocol, and end-to-end encryption to protect your messages from third parties._
