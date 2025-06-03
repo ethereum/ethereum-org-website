@@ -1,4 +1,4 @@
-name: E2E Tests
+name: E2E tests
 on:
   push:
     branches: [master, staging, e2e-tests] # TODO: remove e2e-tests (testing branch)
@@ -46,11 +46,11 @@ jobs:
         if: always()
         with:
           name: playwright-report
-          path: tests/e2e/__report__/
+          path: ./tests/e2e/__results__
           retention-days: 7
 
   chromatic:
-    name: Run Chromatic
+    name: chromatic
     needs: playwright
     runs-on: ubuntu-latest
     steps:
@@ -70,7 +70,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: playwright-report
-          path: tests/e2e/__report__/
+          path: ./tests/e2e/__results__
 
       - name: Run Chromatic
         uses: chromaui/action@latest
@@ -79,4 +79,4 @@ jobs:
           playwright: true
           exitZeroOnChanges: true
         env:
-          CHROMATIC_ARCHIVE_LOCATION: ./tests/e2e/__results__/chromatic-archives
+          CHROMATIC_ARCHIVE_LOCATION: ./tests/e2e/__results__
