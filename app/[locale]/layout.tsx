@@ -1,5 +1,5 @@
 import { Suspense } from "react"
-import pick from "lodash.pick"
+import { pick } from "lodash"
 import { IBM_Plex_Mono, Inter } from "next/font/google"
 import { notFound } from "next/navigation"
 import { getMessages, setRequestLocale } from "next-intl/server"

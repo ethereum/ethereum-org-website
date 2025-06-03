@@ -70,13 +70,15 @@ import {
   BLOGS_WITHOUT_FEED,
   CALENDAR_DISPLAY_COUNT,
   GITHUB_REPO_URL,
-  LOCALES_CODES,
   RSS_DISPLAY_COUNT,
 } from "@/lib/constants"
+
+import TenYearHomeBanner from "./10years/_components/TenYearHomeBanner"
 
 import SimpleDomainRegistryContent from "!!raw-loader!@/data/SimpleDomainRegistry.sol"
 import SimpleTokenContent from "!!raw-loader!@/data/SimpleToken.sol"
 import SimpleWalletContent from "!!raw-loader!@/data/SimpleWallet.sol"
+import { routing } from "@/i18n/routing"
 import { fetchCommunityEvents } from "@/lib/api/calendarEvents"
 import { fetchEthPrice } from "@/lib/api/fetchEthPrice"
 import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
@@ -396,13 +398,9 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     <MainArticle className="flex w-full flex-col items-center" dir={dir}>
       <BannerNotification shouldShow={locale === "en"}>
         <p>
-          Let&apos;s celebrate 10 years of Ethereum! How did ethereum change
-          your life? -{" "}
-          <Link
-            href="https://ethereumstory.paperform.co/"
-            className="text-white"
-          >
-            share your story
+          10 years of Ethereum! -{" "}
+          <Link href="/10years/" className="text-white">
+            Join us to celebrate 10 years of Ethereum!
           </Link>
         </p>
       </BannerNotification>
@@ -768,6 +766,10 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           </SectionContent>
         </Section>
 
+        <Section id="10-year-anniversary">
+          <TenYearHomeBanner />
+        </Section>
+
         {/* Recent posts */}
         <Section id="recent">
           <h3 className="mb-4 mt-2 text-4xl font-black lg:text-5xl">
@@ -925,7 +927,11 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   )
 }
 
-export const generateStaticParams = async () => LOCALES_CODES
+export async function generateStaticParams() {
+  return routing.locales.map((locale) => ({
+    locale,
+  }))
+}
 
 export async function generateMetadata({
   params,
