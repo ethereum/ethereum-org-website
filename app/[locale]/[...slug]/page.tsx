@@ -114,17 +114,18 @@ export async function generateMetadata({
   params: Promise<SlugPageParams>
 }) {
   const { locale, slug } = await params
+  const t = await getTranslations({ locale, namespace: "common" })
 
-  const validPaths = await generateStaticParams()
-  const isValidPath = checkPathValidity(validPaths, await params)
-  // If invalid path, return not-found metadata title
-  if (!isValidPath) {
-    const t = await getTranslations("common")
-    return { title: t("we-couldnt-find-that-page") }
+  try {
+    return await getMdMetadata({
+      locale,
+      slug,
+    })
+  } catch (error) {
+    // Return basic metadata for invalid paths
+    return {
+      title: t("page-not-found"),
+      description: t("page-not-found-description"),
+    }
   }
-
-  return await getMdMetadata({
-    locale,
-    slug,
-  })
 }
