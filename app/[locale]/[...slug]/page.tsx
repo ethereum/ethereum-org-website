@@ -98,14 +98,24 @@ export default async function Page({
 }
 
 export async function generateStaticParams() {
-  const slugs = await getPostSlugs("/")
+  try {
+    const slugs = await getPostSlugs("/")
 
-  return LOCALES_CODES.flatMap((locale) =>
-    slugs.map((slug) => ({
-      slug: slug.split("/").slice(1),
-      locale,
-    }))
-  )
+    return LOCALES_CODES.flatMap((locale) =>
+      slugs.map((slug) => ({
+        slug: slug.split("/").slice(1),
+        locale,
+      }))
+    )
+  } catch (error) {
+    // If content directory doesn't exist (e.g., in Netlify serverless environment),
+    // return empty array to allow ISR to handle all routes dynamically
+    console.warn(
+      "Content directory not found, enabling full dynamic routing:",
+      error
+    )
+    return []
+  }
 }
 
 export async function generateMetadata({
