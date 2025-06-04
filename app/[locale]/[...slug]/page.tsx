@@ -124,7 +124,6 @@ export async function generateMetadata({
   params: Promise<SlugPageParams>
 }) {
   const { locale, slug } = await params
-  const t = await getTranslations({ locale, namespace: "common" })
 
   try {
     return await getMdMetadata({
@@ -132,6 +131,8 @@ export async function generateMetadata({
       slug,
     })
   } catch (error) {
+    const t = await getTranslations({ locale, namespace: "common" })
+
     // Return basic metadata for invalid paths
     return {
       title: t("page-not-found"),

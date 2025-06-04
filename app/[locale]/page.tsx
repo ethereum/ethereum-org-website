@@ -147,23 +147,26 @@ export async function generateMetadata({
 }) {
   const { locale } = await params
 
-  // If invalid locale, return not-found metadata title
-  if (!LOCALES_CODES.includes(locale)) {
+  try {
+    const t = await getTranslations({ locale, namespace: "page-index" })
+    return await getMetadata({
+      locale,
+      slug: [""],
+      title: t("page-index-meta-title"),
+      description: t("page-index-meta-description"),
+    })
+  } catch (error) {
     const t = await getTranslations({
       locale: DEFAULT_LOCALE,
       namespace: "common",
     })
-    return { title: t("we-couldnt-find-that-page") }
+
+    // Return basic metadata for invalid paths
+    return {
+      title: t("page-not-found"),
+      description: t("page-not-found-description"),
+    }
   }
-
-  const t = await getTranslations({ locale, namespace: "page-index" })
-
-  return await getMetadata({
-    locale,
-    slug: [""],
-    title: t("page-index-meta-title"),
-    description: t("page-index-meta-description"),
-  })
 }
 
 export default Page
