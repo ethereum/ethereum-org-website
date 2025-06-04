@@ -1,4 +1,4 @@
-import pick from "lodash.pick"
+import { pick } from "lodash"
 import { notFound } from "next/navigation"
 import {
   getMessages,
@@ -31,6 +31,7 @@ import {
 
 import HomePage from "./_components/home"
 
+import { routing } from "@/i18n/routing"
 import { fetchCommunityEvents } from "@/lib/api/calendarEvents"
 import { fetchEthPrice } from "@/lib/api/fetchEthPrice"
 import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
@@ -133,7 +134,11 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   )
 }
 
-export const generateStaticParams = async () => LOCALES_CODES
+export async function generateStaticParams() {
+  return routing.locales.map((locale) => ({
+    locale,
+  }))
+}
 
 export async function generateMetadata({
   params,
