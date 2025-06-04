@@ -14,7 +14,10 @@ export default function InnovationSwiper() {
   return (
     <div className="w-[100%]">
       <SwiperContainer className="mx-auto w-full max-w-[550px] xl:max-w-[700px]">
-        <Swiper className="mx-auto w-full max-w-[550px] xl:max-w-[700px]">
+        <Swiper
+          className="mx-auto w-full max-w-[550px] xl:max-w-[700px]"
+          spaceBetween={32}
+        >
           {innovationCards.map((card, index) => (
             <SwiperSlide
               key={index}
@@ -23,7 +26,7 @@ export default function InnovationSwiper() {
               <Image
                 src={card.image}
                 alt={card.title}
-                className="mx-auto my-4 h-auto max-w-full"
+                className="mx-auto my-4 h-auto max-h-48 object-contain"
               />
               <div>
                 <h3 className="mb-4">{card.title}</h3>
