@@ -3,17 +3,15 @@
 import { useEffect, useState } from "react"
 
 type MorpherProps = {
-  text: string
   words: string[]
   charSet?: string
 }
 
 const Morpher = ({
-  text,
   words,
   charSet = "abcdefghijklmnopqrstuvwxyz",
 }: MorpherProps) => {
-  const [state, setState] = useState({ text, words })
+  const [state, setState] = useState({ text: words[0], words })
 
   // loops over chars to morph a text to another
   const morpher = (start: string, end: string): void => {

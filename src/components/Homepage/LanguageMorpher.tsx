@@ -41,8 +41,8 @@ const LanguageMorpher = () => {
       variant="ghost"
     >
       <Morpher
-        text="Ethereum"
         words={[
+          "Ethereum",
           "以太坊",
           "イーサリアム",
           "Etérium",

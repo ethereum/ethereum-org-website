@@ -7,7 +7,7 @@ import Morpher from "@/components/Morpher"
 import TenYearBackgroundImage from "@/public/images/10-year-anniversary/10-year-background.png"
 import TenYearGraphicImage from "@/public/images/10-year-anniversary/10-year-graphic.png"
 
-const [initialText, ...initialWords] = [
+const WORDS = [
   "censorship resistance",
   "100% uptime",
   "decentralization",
@@ -44,14 +44,10 @@ const TenYearHero = () => (
           className="select-none opacity-0 max-md:hidden"
           data-label="space-holder"
         >
-          {initialText}
+          {words[0]}
         </span>
         <span className="text-3xl font-bold text-accent-b md:absolute md:start-0 md:text-nowrap">
-          <Morpher
-            text={initialText}
-            words={initialWords}
-            charSet="abcdfgijklnopqsvwxyz"
-          />
+          <Morpher words={WORDS} charSet="abcdfgijklnopqsvwxyz" />
         </span>
       </span>
     </p>
