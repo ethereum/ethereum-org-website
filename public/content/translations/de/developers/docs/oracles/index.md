@@ -11,7 +11,7 @@ Oracles sind Datenleitungen, die Ethereum mit Offchain-Informationen in der real
 
 Stellen Sie sicher, dass Sie mit [Knotenpunkten](/developers/docs/nodes-and-clients/), [Konsensmechanismen](/developers/docs/consensus-mechanisms/)und [Smart Contract-Anatomie](/developers/docs/smart-contracts/anatomy/)vertraut sind, im speziellen Smart Contract-Events.
 
-## Was ist ein Oracle {#what-is-an-oracle}
+## Was ist ein Oracle {#what-is-a-blockchain-oracle}
 
 Ein Oracle ist eine Brücke zwischen der Blockchain und der realen Welt. Sie fungieren als on-chain APIs, die Sie abfragen können, um Informationen für Ihre Smart Contracts zu bekommen. Dies könnte theoretisch alles sein, von Preisinformationen bis hin zu Wetterberichten. Oracles können auch bidirektional sein, um Daten in die reale Welt zu „senden".
 
