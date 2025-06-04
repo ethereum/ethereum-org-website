@@ -49,7 +49,7 @@ Staking and running the validator software makes a node eligible to be selected 
 | Executes/re-executes transactions                  | Runs the fork choice algorithm                                   | Accrues rewards/penalties    |
 | Verifies incoming state changes                    | Keeps track of the head of the chain                             | Makes attestations           |
 | Manages state and receipts tries                   | Manages the Beacon state (contains consensus and execution info) | Requires 32 ETH to be staked |
-| Creates execution payload                          | Keeps track of accumulated randomness in RANDAO                  | Can be slashed               |
+| Creates execution payload                          | Keeps track of accumulated randomness in RANDAO (an algorithm that provides verifiable randomness for validator selection and other consensus operations) | Can be slashed               |
 | Exposes JSON-RPC API for interacting with Ethereum | Keeps track of justification and finalization                    |                              |
 
 ## Further reading {#further-reading}
