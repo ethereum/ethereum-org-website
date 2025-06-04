@@ -26,7 +26,8 @@ export const LOCALES_CODES = BUILD_LOCALES
   : i18nConfig.map(({ code }) => code)
 
 // Site urls
-export const SITE_URL = "https://ethereum.org"
+export const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL || "https://ethereum.org"
 export const DISCORD_PATH = "/discord/"
 export const GITHUB_REPO_URL =
   "https://github.com/ethereum/ethereum-org-website/"
