@@ -74,7 +74,7 @@ Updating withdrawal credentials is a required step to enable withdrawals\*. This
 </ExpandableCard>
 
 <ExpandableCard title="When can I withdraw?" eventCategory="SaasStaking" eventName="clicked when can I withdraw">
-Staking withdrawals were implemented in the Shanghai/Capella upgrade in April 2023. Stakers need to provide a withdrawal address (if not provided on initial deposit), and reward payments will begin being distributed automatically on a periodic basis every few days.
+Stakers need to provide a withdrawal address (if not provided on initial deposit), and reward payments will begin being distributed automatically on a periodic basis every few days.
 
 Validators can also fully exit as a validator, which will unlock their remaining ETH balance for withdrawal. Accounts that have provided an execution withdrawal address and completed the exiting process will receive their entire balance to the withdrawal address provided during the next validator sweep.
 
