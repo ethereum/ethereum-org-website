@@ -1,5 +1,7 @@
 import Link from "@/components/ui/Link"
 
+import { AdoptionCard } from "./types"
+
 import Adoption1Image from "@/public/images/10-year-anniversary/adoption-1.png"
 import Adoption2Image from "@/public/images/10-year-anniversary/adoption-2.png"
 import Adoption3Image from "@/public/images/10-year-anniversary/adoption-3.png"
@@ -7,21 +9,21 @@ import DefiSummerImage from "@/public/images/10-year-anniversary/defi-summer.png
 import EthETFImage from "@/public/images/10-year-anniversary/eth-etf.png"
 import EthereumLaunchImage from "@/public/images/10-year-anniversary/ethereum-launch.png"
 import NftImage from "@/public/images/10-year-anniversary/nft-frontier.png"
+import TheMergeImage from "@/public/images/10-year-anniversary/robot-and-crowd-cheering.png"
 import Adoption5Image from "@/public/images/10-year-anniversary/robot-walking.png"
-import TheMergeImage from "@/public/images/10-year-anniversary/the-merge.png"
 import StableCoinImage from "@/public/images/10-year-anniversary/the-pioneer-stablecoin.png"
 import Adoption4Image from "@/public/images/10-year-anniversary/walking-talking-1.png"
 import Adoption6Image from "@/public/images/10-year-anniversary/walking-talking-2.png"
 
-const adoptionCards = [
+const adoptionCards: AdoptionCard[] = [
   {
     image: Adoption1Image,
     title: "Decade of Decentralization",
     description: (
       <p className="mb-8">
         What began as a specialized ecosystem now spans <b>80+ countries</b>{" "}
-        with <b>870,000 validators</b>, <b>13,600 physical nodes</b>, and
-        millions of users across continents.
+        with <b>870,000 validators</b>, <b>13,600 physical nodes</b>, and{" "}
+        <b>millions of users</b> across continents.
       </p>
     ),
     href: "/resources",
@@ -32,9 +34,8 @@ const adoptionCards = [
     title: "10 years, 16 upgrades, 0 downtime",
     description: (
       <p className="mb-8">
-        Ethereum has turned continuous innovation into a decade-long uptime
-        record. While few times Ethereum network became congested, it never went
-        down.
+        Ethereum has maintained perfect uptime while continuously evolving. The
+        blockchain has never gone offline.
       </p>
     ),
     href: "/roadmap",
@@ -42,15 +43,13 @@ const adoptionCards = [
   },
   {
     image: Adoption3Image,
-    title: "$122.6 billion in stablecoin market cap",
+    title: "$123 billion in stablecoin market cap",
     description: (
       <p className="mb-8">
-        In Q2 2025, Ethereum and its extensions moved over $122.6 billion in
-        stablecoins —{" "}
+        As of Q2 2025, Ethereum L1 secures over $123 billion in stablecoins,{" "}
         <Link href="https://defillama.com/stablecoins/chains">
-          comprising ~49.85% of the stablecoin market share
+          capturing over 50% of the global stablecoin market.
         </Link>
-        .
       </p>
     ),
     href: "/stablecoins",
@@ -58,14 +57,13 @@ const adoptionCards = [
   },
   {
     image: Adoption4Image,
-    title: "~75 billion secured on Ethereum",
+    title: "$75 billion secured in Ethereum DeFi",
     description: (
       <p className="mb-8">
-        In Q2 2025, Ethereum secures over $75 billion in{" "}
+        As of Q2 2025,{" "}
         <Link href="https://defillama.com/chains">
-          DeFi for mainnet and its layer 2s
+          Ethereum secures over $75 billion in DeFi across its ecosystem.
         </Link>
-        .
       </p>
     ),
     href: "/defi",
@@ -81,7 +79,7 @@ const adoptionCards = [
         <Link href="https://digiconomist.net/ethereum-energy-consumption">
           0.01 TWh per year
         </Link>
-        , down from its peak of 93.95 TWh per year.
+        , down from its peak of 93.95 TWh.
       </p>
     ),
     href: "/energy-consumption",
@@ -92,12 +90,11 @@ const adoptionCards = [
     title: "Over 250 TPS",
     description: (
       <p className="mb-8">
-        Ethereum&apos;s throughput has increased significantly since its
-        inception, with the network now capable of handling over{" "}
+        Ethereum&apos;s throughput has increased dramatically since launch, with
+        Ethereum&apos;s ecosystem now handling over{" "}
         <Link href="https://l2beat.com/scaling/activity">
-          250 transactions per second
-        </Link>{" "}
-        between mainnet and its layer 2s.
+          250 transactions per second.
+        </Link>
       </p>
     ),
     href: "/layer-2",
@@ -105,10 +102,14 @@ const adoptionCards = [
   },
 ]
 
+// duplicate 1 2 3, 1 2 3 to fix mobile slider bug where styles are not applied
 const adoptionStyles = [
-  "bg-background bg-gradient-to-t from-20% to-60% from-accent-c/10 to-accent-c/5 dark:from-accent-c/20 dark:to-accent-c/10 border-accent-c/10",
+  "bg-background bg-gradient-to-b from-20% to-60% from-accent-c/10 to-accent-c/5 dark:from-accent-c/20 dark:to-accent-c/10 border-accent-c/10",
   "bg-background bg-gradient-to-b from-20% to-60% from-accent-b/10 to-accent-b/5 dark:from-accent-b/20 dark:to-accent-b/10 border-accent-b/10",
-  "bg-background bg-gradient-to-r from-20% to-60% from-accent-a/10 to-accent-a/5 dark:from-accent-a/20 dark:to-accent-a/10 border-accent-a/10",
+  "bg-background bg-gradient-to-b from-20% to-60% from-accent-a/10 to-accent-a/5 dark:from-accent-a/20 dark:to-accent-a/10 border-accent-a/10",
+  "bg-background bg-gradient-to-b from-20% to-60% from-accent-c/10 to-accent-c/5 dark:from-accent-c/20 dark:to-accent-c/10 border-accent-c/10",
+  "bg-background bg-gradient-to-b from-20% to-60% from-accent-b/10 to-accent-b/5 dark:from-accent-b/20 dark:to-accent-b/10 border-accent-b/10",
+  "bg-background bg-gradient-to-b from-20% to-60% from-accent-a/10 to-accent-a/5 dark:from-accent-a/20 dark:to-accent-a/10 border-accent-a/10",
 ]
 
 const innovationCards = [
@@ -116,8 +117,8 @@ const innovationCards = [
     title: "Ethereum Launch",
     date: "July 30, 2015",
     description: [
-      'The genesis block of Ethereum was mined, marking the official launch of the "Frontier" network. This initial version was a barebones release, allowing developers to start building decentralized applications and experiment.',
-      "The network launches with a vision to build a more open internet — one where users own their data, applications run without intermediaries, and value moves freely.",
+      'Ethereum\'s genesis block went live, launching the "Frontier" network. This barebones release gave developers their first chance to build decentralized applications and experiment with smart contracts.',
+      "Ethereum's mission: an open internet where users control their data, applications run without gatekeepers, and value flows freely between people.",
     ],
     image: EthereumLaunchImage,
   },
@@ -125,8 +126,8 @@ const innovationCards = [
     title: "DAI: The pioneer stablecoin",
     date: "December, 2015",
     description: [
-      "Launch of the first stablecoin. DAI was designed to maintain a soft peg to the U.S. dollar while being backed by various cryptocurrencies deposited in smart-contract vaults.",
-      "Unlike centralized stablecoins, DAI's main advantage is that it is managed by a decentralized autonomous organization (DAO) rather than a private company. ",
+      "The first decentralized stablecoin launched. DAI maintains a soft peg to the U.S. dollar through cryptocurrency collateral locked in smart contracts.",
+      "Unlike centralized stablecoins controlled by companies, DAI is governed by a decentralized autonomous organization (DAO), making it trustless and community-driven.",
     ],
     image: StableCoinImage,
   },
@@ -134,8 +135,8 @@ const innovationCards = [
     title: "CryptoKitties and the NFT Frontier",
     date: "November, 2017",
     description: [
-      "CryptoKitties bring digital ownership to life. This early NFT game showed how Ethereum can enable new forms of expression, collectibility, and culture on the internet",
-      "It captured global attention and demonstrated that Ethereum could scale beyond finance into gaming, art, and digital identity.",
+      "CryptoKitties brought digital ownership to life. This early NFT game showed how blockchain could enable new forms of expression, collectibility, and culture online.",
+      "It proved Ethereum could scale beyond finance into gaming, art, and digital identity, opening entirely new creative possibilities.",
     ],
     image: NftImage,
   },
@@ -143,8 +144,8 @@ const innovationCards = [
     title: "DeFi Summer",
     date: "June, 2020",
     description: [
-      "A period of explosive growth redefines finance. Protocols for lending, trading, and yield generation gain momentum — showcasing the power of open, composable financial infrastructure.",
-      "This period sparked enormous user growth, attracting billions in value and building confidence in Ethereum as the home of decentralized finance. ",
+      "Explosive DeFi growth redefined how the world thinks about finance. Protocols for lending, trading, and yield generation gained massive momentum, showcasing the power of open, composable financial infrastructure.",
+      "This period brought billions in value on-chain and established Ethereum as the home of decentralized finance.",
     ],
     image: DefiSummerImage,
   },
@@ -152,8 +153,8 @@ const innovationCards = [
     title: "The Merge update",
     date: "September 15, 2022",
     description: [
-      "Arguably the most significant upgrade in Ethereum's history. The Merge saw the seamless transition of the Ethereum mainnet from Proof-of-Work (PoW) to the Proof-of-Stake (PoS) consensus mechanism.",
-      "This event drastically reduced Ethereum's energy consumption by ~99.95%, enhanced network security, and laid the groundwork for future scalability improvements. ",
+      "Ethereum's biggest transformation yet. The network seamlessly transitioned from energy-intensive proof-of-work to proof-of-stake. With billions in value on Ethereum, the change was described as like changing an aircraft's engine mid-flight.",
+      "The Merge cut Ethereum's energy consumption by 99.95%, strengthened network security, and set the groundwork for future scaling upgrades.",
     ],
     image: TheMergeImage,
   },
@@ -161,8 +162,8 @@ const innovationCards = [
     title: "Spot ETH ETFs",
     date: "May 23, 2024",
     description: [
-      "The approval and launch of Spot Ethereum ETFs in various jurisdictions provided traditional investors with regulated exposure to ETH, further legitimizing it as an asset class.",
-      "A growing trend of tokenizing real-world assets (like real estate, private credit, and treasuries) on Ethereum also gained significant traction, with major financial institutions exploring and launching RWA initiatives.",
+      "Wall Street embraces Ethereum. Spot ETH ETFs launched, bringing institutional capital and regulatory legitimacy to the world's leading smart contract platform.",
+      "The approval signaled broader acceptance of tokenized real-world assets, with major financial institutions now building on Ethereum to bring everything from real estate to treasury bonds on-chain.",
     ],
     image: EthETFImage,
   },

@@ -1,4 +1,4 @@
-import merge from "lodash.merge"
+import { merge } from "lodash"
 import { getRequestConfig } from "next-intl/server"
 
 import { Lang } from "@/lib/types"

@@ -1,6 +1,6 @@
 # Locales generation process
 
-Every time `yarn build` or `yarn start` is executed, the following process is
+Every time `pnpm build` or `pnpm start` is executed, the following process is
 going to be triggered as well:
 
 <img src="./locales.png">

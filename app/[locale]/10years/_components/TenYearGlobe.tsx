@@ -1,16 +1,18 @@
 "use client"
 
-import { useEffect, useMemo, useRef, useState } from "react"
+import { useCallback, useEffect, useMemo, useRef, useState } from "react"
 import { useTheme } from "next-themes"
 import Globe from "react-globe.gl"
 import { type GlobeMethods } from "react-globe.gl"
 import * as THREE from "three"
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls"
 
 import Link from "@/components/ui/Link"
 
 import countries from "./countries.json"
 
 import { useBreakpointValue } from "@/hooks/useBreakpointValue"
+import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion"
 import EthLogo from "@/public/images/assets/eth-glyph-colored.png"
 
 // Define a type for event data
@@ -29,10 +31,19 @@ type CountryFeature = {
   }
 }
 
+// Extend OrbitControls type to include _sphericalDelta
+interface ExtendedOrbitControls extends OrbitControls {
+  _sphericalDelta?: {
+    theta: number
+    phi: number
+  }
+}
+
 const TenYearGlobe = ({ events }: { events: EventData[] }) => {
   const globeRef = useRef<GlobeMethods>()
   const globeContainerRef = useRef<HTMLDivElement>(null)
   const { resolvedTheme } = useTheme()
+  const { prefersReducedMotion } = usePrefersReducedMotion()
 
   const atmosphereColor = resolvedTheme === "dark" ? "#B38DF0" : "#945AF4"
 
@@ -52,7 +63,7 @@ const TenYearGlobe = ({ events }: { events: EventData[] }) => {
       const b = Math.min(255, Math.floor((basePurple & 0xff) * 1.3))
       return `#${r.toString(16).padStart(2, "0")}${g.toString(16).padStart(2, "0")}${b.toString(16).padStart(2, "0")}`
     })
-  }, [countries.features, resolvedTheme])
+  }, [resolvedTheme])
 
   const hexPolygonColor = (feature: object) => {
     const idx = countries.features.indexOf(
@@ -69,18 +80,27 @@ const TenYearGlobe = ({ events }: { events: EventData[] }) => {
     return hexPolygonColors[idx]
   }
 
+  // Function to safely set auto-rotate based on motion preferences
+  const setAutoRotate = useCallback(
+    (controls: ExtendedOrbitControls, value: boolean) => {
+      controls.autoRotate = value && !prefersReducedMotion
+    },
+    [prefersReducedMotion]
+  )
+
   useEffect(() => {
     if (globeRef.current) {
-      globeRef.current.controls().autoRotate = true
-      globeRef.current.controls().enablePan = false
-      globeRef.current.controls().enableZoom = false
-      globeRef.current.controls().autoRotateSpeed = 2.0
+      const controls = globeRef.current.controls() as ExtendedOrbitControls
+      setAutoRotate(controls, true)
+      controls.enablePan = false
+      controls.enableZoom = false
+      controls.autoRotateSpeed = 2.0
       globeRef.current.pointOfView({ lat: 0, lng: 0, altitude: 1.8 })
 
       const ambientLight = new THREE.AmbientLight(0xffffff, 1)
       globeRef.current.scene().add(ambientLight)
     }
-  }, [])
+  }, [setAutoRotate])
 
   // Prepare htmlElementsData for EthLogo
   const htmlElementsData = events.map((event) => ({
@@ -165,10 +185,10 @@ const TenYearGlobe = ({ events }: { events: EventData[] }) => {
             setTooltipPos(coords)
           }
           // Stop rotation immediately
-          const controls = globeRef.current.controls()
-          controls.autoRotate = false
+          const controls = globeRef.current.controls() as ExtendedOrbitControls
+          setAutoRotate(controls, false)
           if ("autoRotateSpeed" in controls) controls.autoRotateSpeed = 0
-          if ("_sphericalDelta" in controls && controls._sphericalDelta) {
+          if (controls._sphericalDelta) {
             controls._sphericalDelta.theta = 0
             controls._sphericalDelta.phi = 0
           }
@@ -181,18 +201,19 @@ const TenYearGlobe = ({ events }: { events: EventData[] }) => {
             }
           }, 100)
           if (globeRef.current) {
-            const controls = globeRef.current.controls()
-            controls.autoRotate = true
+            const controls =
+              globeRef.current.controls() as ExtendedOrbitControls
+            setAutoRotate(controls, true)
             if ("autoRotateSpeed" in controls) controls.autoRotateSpeed = 2.0
           }
         }
       }}
       onPointClick={() => {
         if (globeRef.current) {
-          const controls = globeRef.current.controls()
-          controls.autoRotate = false
+          const controls = globeRef.current.controls() as ExtendedOrbitControls
+          setAutoRotate(controls, false)
           if ("autoRotateSpeed" in controls) controls.autoRotateSpeed = 0
-          if ("_sphericalDelta" in controls && controls._sphericalDelta) {
+          if (controls._sphericalDelta) {
             controls._sphericalDelta.theta = 0
             controls._sphericalDelta.phi = 0
           }
@@ -216,7 +237,7 @@ const TenYearGlobe = ({ events }: { events: EventData[] }) => {
   return (
     <div
       ref={globeContainerRef}
-      className="relative cursor-grab"
+      className="relative cursor-grab active:cursor-grabbing"
       style={{ width: width, height: width }}
     >
       {MemoizedGlobe}

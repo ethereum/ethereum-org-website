@@ -23,7 +23,7 @@ export default function InnovationSwiper() {
               <Image
                 src={card.image}
                 alt={card.title}
-                className="mx-auto my-4 h-auto max-w-full"
+                className="mx-auto my-4 h-auto max-h-48 object-contain"
               />
               <div>
                 <h3 className="mb-4">{card.title}</h3>
