@@ -46,8 +46,8 @@ export const getOgImage = (props: MetadataProps): string => {
     skill && ogImageSrc.searchParams.set("skill", skill)
     tags && ogImageSrc.searchParams.set("tags", tags?.join(", "))
     return ogImageSrc.toString()
-    console.log({ image: ogImageSrc.toString() })
   }
+
   for (const item of imageForSlug) {
     if (slug.includes(item.section)) return item.image
   }
