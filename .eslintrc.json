@@ -1,16 +1,23 @@
 {
   "extends": [
     "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
     "next/core-web-vitals",
-    "prettier",
-    "plugin:storybook/recommended"
+    "prettier"
   ],
   "env": {
-    "es6": true
+    "es6": true,
+    "node": true,
+    "browser": true
   },
   "plugins": ["simple-import-sort", "@typescript-eslint", "unused-imports"],
   "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
   "rules": {
     "simple-import-sort/imports": [
       "error",
@@ -48,13 +55,6 @@
     ],
     "simple-import-sort/exports": "error",
     "no-unused-vars": "off",
-    "@typescript-eslint/no-unused-vars": "off",
-    "@typescript-eslint/no-explicit-any": [
-      "error",
-      {
-        "fixToUnknown": true
-      }
-    ],
     "unused-imports/no-unused-vars": [
       "error",
       {
@@ -64,5 +64,36 @@
       }
     ],
     "unused-imports/no-unused-imports-ts": "warn"
-  }
+  },
+  "overrides": [
+    {
+      "files": ["**/*.{ts,tsx}"],
+      "extends": ["plugin:@typescript-eslint/recommended"],
+      "rules": {
+        "@typescript-eslint/no-explicit-any": [
+          "error",
+          {
+            "fixToUnknown": true
+          }
+        ]
+      }
+    },
+    {
+      "files": ["**/*.stories.@(js|jsx|ts|tsx|mdx)"],
+      "extends": ["plugin:storybook/recommended"]
+    }
+  ],
+  "ignorePatterns": [
+    "node_modules/",
+    ".next/",
+    "out/",
+    "dist/",
+    "build/",
+    ".vercel/",
+    ".netlify/",
+    "coverage/",
+    "storybook-static/",
+    "**/*.d.ts",
+    "src/intl/"
+  ]
 }

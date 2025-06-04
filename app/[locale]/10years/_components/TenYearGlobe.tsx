@@ -61,7 +61,7 @@ const TenYearGlobe = ({ events }: { events: EventData[] }) => {
       const b = Math.min(255, Math.floor((basePurple & 0xff) * 1.3))
       return `#${r.toString(16).padStart(2, "0")}${g.toString(16).padStart(2, "0")}${b.toString(16).padStart(2, "0")}`
     })
-  }, [countries.features, resolvedTheme])
+  }, [resolvedTheme])
 
   const hexPolygonColor = (feature: object) => {
     const idx = countries.features.indexOf(
