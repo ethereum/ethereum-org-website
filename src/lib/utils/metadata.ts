@@ -38,7 +38,7 @@ export const getOgImage = (props: MetadataProps): string => {
   ] as const
 
   if (slug.includes("tutorials") && slug.length > 2) {
-    const ogImageSrc = new URL("og/tutorial", SITE_URL)
+    const ogImageSrc = new URL(`${props.locale}/og/tutorial`, SITE_URL)
     title && ogImageSrc.searchParams.set("title", title)
     description && ogImageSrc.searchParams.set("subtitle", description)
     author && ogImageSrc.searchParams.set("author", author)

@@ -41,7 +41,7 @@ export function GET(request: Request) {
     borderLowContrast: "#f3f3f3",
   }
 
-  return new ImageResponse(
+  const imageResponse = new ImageResponse(
     (
       <div
         style={{
@@ -441,4 +441,16 @@ export function GET(request: Request) {
       height: 630,
     }
   )
+
+  // Set cache headers to prevent stale content
+  const response = new Response(imageResponse.body, {
+    headers: {
+      ...imageResponse.headers,
+      "Cache-Control": "no-cache, no-store, must-revalidate",
+      Pragma: "no-cache",
+      Expires: "0",
+    },
+  })
+
+  return response
 }
