@@ -13,10 +13,6 @@ summaryPoints:
   - Validators who fully exit staking will receive their remaining balance
 ---
 
-<UpgradeStatus dateKey="page-staking-withdrawals-when">
-Staking withdrawals were enabled with the Shanghai/Capella upgrade which occurred on April 12, 2023.&nbsp;<a href="#when" customEventOptions={{ eventCategory: "Anchor link", eventAction: "When's it shipping?", eventName: "click" }}>More about Shanghai/Capella</a>
-</UpgradeStatus>
-
 **Staking withdrawals** refer to transfers of ETH from a validator account on Ethereum's consensus layer (the Beacon Chain), to the execution layer where it can be transacted with.
 
 **Reward payments of excess balance** over 32 ETH will automatically and regularly be sent to a withdrawal address linked to each validator, once provided by the user. Users can also **exit staking entirely**, unlocking their full validator balance.
@@ -59,9 +55,9 @@ The process of a validator exiting from staking takes variable amounts of time, 
 
 Once an account is flagged as "withdrawable", and withdrawal credentials have been provided, there is nothing more a user needs to do aside from wait. Accounts are automatically and continuously swept by block proposers for eligible exited funds, and your account balance will be transferred in full (also known as a "full withdrawal") during the next <a href="#validator-sweeping" customEventOptions={{ eventCategory: "Anchor link", eventAction: "Exiting staking entirely (sweep)", eventName: "click" }}>sweep</a>.
 
-## When are staking withdrawals enabled? {#when}
+## When were staking withdrawals enabled? {#when}
 
-Staking withdrawals are live! Withdrawal functionality was enabled as part of the Shanghai/Capella upgrade which occurred on April 12, 2023.
+Withdrawal functionality was enabled as part of the Shanghai/Capella upgrade which occurred on** April 12, 2023**.
 
 The Shanghai/Capella upgrade enabled previously staked ETH to be reclaimed into regular Ethereum accounts. This closed the loop on staking liquidity, and brought Ethereum one step closer on its journey towards building a sustainable, scalable, secure decentralized ecosystem.
 
