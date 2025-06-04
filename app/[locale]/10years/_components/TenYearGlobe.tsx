@@ -48,7 +48,7 @@ const TenYearGlobe = ({ events }: { events: EventData[] }) => {
   const atmosphereColor = resolvedTheme === "dark" ? "#B38DF0" : "#945AF4"
 
   const width = useBreakpointValue({
-    base: 260,
+    base: window?.innerWidth - 64 || 260, // Full width on mobile with padding
     sm: 400,
     md: 500,
     lg: 600,
@@ -237,8 +237,8 @@ const TenYearGlobe = ({ events }: { events: EventData[] }) => {
   return (
     <div
       ref={globeContainerRef}
-      className="relative cursor-grab active:cursor-grabbing"
-      style={{ width: width, height: width }}
+      className="relative w-full max-w-full cursor-grab active:cursor-grabbing"
+      style={{ height: width }}
     >
       {MemoizedGlobe}
       {hoveredEvent && tooltipPos && (
