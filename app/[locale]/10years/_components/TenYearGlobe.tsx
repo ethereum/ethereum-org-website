@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useMemo, useRef, useState } from "react"
+import { useCallback, useEffect, useMemo, useRef, useState } from "react"
 import { useTheme } from "next-themes"
 import Globe from "react-globe.gl"
 import { type GlobeMethods } from "react-globe.gl"
@@ -12,6 +12,7 @@ import Link from "@/components/ui/Link"
 import countries from "./countries.json"
 
 import { useBreakpointValue } from "@/hooks/useBreakpointValue"
+import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion"
 import EthLogo from "@/public/images/assets/eth-glyph-colored.png"
 
 // Define a type for event data
@@ -42,11 +43,12 @@ const TenYearGlobe = ({ events }: { events: EventData[] }) => {
   const globeRef = useRef<GlobeMethods>()
   const globeContainerRef = useRef<HTMLDivElement>(null)
   const { resolvedTheme } = useTheme()
+  const { prefersReducedMotion } = usePrefersReducedMotion()
 
   const atmosphereColor = resolvedTheme === "dark" ? "#B38DF0" : "#945AF4"
 
   const width = useBreakpointValue({
-    base: 260,
+    base: window?.innerWidth - 64 || 260, // Full width on mobile with padding
     sm: 400,
     md: 500,
     lg: 600,
@@ -61,7 +63,7 @@ const TenYearGlobe = ({ events }: { events: EventData[] }) => {
       const b = Math.min(255, Math.floor((basePurple & 0xff) * 1.3))
       return `#${r.toString(16).padStart(2, "0")}${g.toString(16).padStart(2, "0")}${b.toString(16).padStart(2, "0")}`
     })
-  }, [countries.features, resolvedTheme])
+  }, [resolvedTheme])
 
   const hexPolygonColor = (feature: object) => {
     const idx = countries.features.indexOf(
@@ -78,10 +80,18 @@ const TenYearGlobe = ({ events }: { events: EventData[] }) => {
     return hexPolygonColors[idx]
   }
 
+  // Function to safely set auto-rotate based on motion preferences
+  const setAutoRotate = useCallback(
+    (controls: ExtendedOrbitControls, value: boolean) => {
+      controls.autoRotate = value && !prefersReducedMotion
+    },
+    [prefersReducedMotion]
+  )
+
   useEffect(() => {
     if (globeRef.current) {
       const controls = globeRef.current.controls() as ExtendedOrbitControls
-      controls.autoRotate = true
+      setAutoRotate(controls, true)
       controls.enablePan = false
       controls.enableZoom = false
       controls.autoRotateSpeed = 2.0
@@ -90,7 +100,7 @@ const TenYearGlobe = ({ events }: { events: EventData[] }) => {
       const ambientLight = new THREE.AmbientLight(0xffffff, 1)
       globeRef.current.scene().add(ambientLight)
     }
-  }, [])
+  }, [setAutoRotate])
 
   // Prepare htmlElementsData for EthLogo
   const htmlElementsData = events.map((event) => ({
@@ -176,7 +186,7 @@ const TenYearGlobe = ({ events }: { events: EventData[] }) => {
           }
           // Stop rotation immediately
           const controls = globeRef.current.controls() as ExtendedOrbitControls
-          controls.autoRotate = false
+          setAutoRotate(controls, false)
           if ("autoRotateSpeed" in controls) controls.autoRotateSpeed = 0
           if (controls._sphericalDelta) {
             controls._sphericalDelta.theta = 0
@@ -193,7 +203,7 @@ const TenYearGlobe = ({ events }: { events: EventData[] }) => {
           if (globeRef.current) {
             const controls =
               globeRef.current.controls() as ExtendedOrbitControls
-            controls.autoRotate = true
+            setAutoRotate(controls, true)
             if ("autoRotateSpeed" in controls) controls.autoRotateSpeed = 2.0
           }
         }
@@ -201,7 +211,7 @@ const TenYearGlobe = ({ events }: { events: EventData[] }) => {
       onPointClick={() => {
         if (globeRef.current) {
           const controls = globeRef.current.controls() as ExtendedOrbitControls
-          controls.autoRotate = false
+          setAutoRotate(controls, false)
           if ("autoRotateSpeed" in controls) controls.autoRotateSpeed = 0
           if (controls._sphericalDelta) {
             controls._sphericalDelta.theta = 0
@@ -227,8 +237,8 @@ const TenYearGlobe = ({ events }: { events: EventData[] }) => {
   return (
     <div
       ref={globeContainerRef}
-      className="relative cursor-grab"
-      style={{ width: width, height: width }}
+      className="relative w-full max-w-full cursor-grab active:cursor-grabbing"
+      style={{ height: width }}
     >
       {MemoizedGlobe}
       {hoveredEvent && tooltipPos && (
