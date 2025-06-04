@@ -29,6 +29,7 @@ import InnovationSwiper from "./_components/InnovationSwiper"
 import Stories from "./_components/Stories"
 import TenYearGlobe from "./_components/TenYearGlobe"
 import TenYearHero from "./_components/TenYearHero"
+import { parseStoryDates } from "./_components/utils"
 
 import { fetch10YearEvents } from "@/lib/api/fetch10YearEvents"
 import { fetch10YearStories } from "@/lib/api/fetch10YearStories"
@@ -53,6 +54,8 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   setRequestLocale(locale)
 
   const [fetched10YearEvents, fetched10YearStories] = await loadData()
+
+  const stories = parseStoryDates(fetched10YearStories, locale)
 
   // Get i18n messages
   const allMessages = await getMessages({ locale })
@@ -271,13 +274,16 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               </p>
             </div>
           </div>
-          <AdoptionSwiper />
+          <AdoptionSwiper
+            adoptionCards={adoptionCards}
+            adoptionStyles={adoptionStyles}
+          />
           <div className="hidden flex-1 flex-col gap-6 md:flex">
             {adoptionCards.map((card, index) => (
               <div
                 key={card.title}
                 className={cn(
-                  "w-[70%] rounded-2xl p-8",
+                  "w-[70%] rounded-2xl p-8 shadow",
                   index % 2 === 0 && "ml-auto",
                   index !== 0 && "-mt-10",
                   zIndexClasses[index],
@@ -319,7 +325,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               </ButtonLink>
             </div>
           </div>
-          <Stories stories={fetched10YearStories} />
+          <Stories stories={stories} />
         </div>
 
         <div className="w-full gap-8 px-8 py-8 pt-32">
@@ -327,7 +333,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             <Image
               src={TenYearLogo}
               alt="10 year anniversary logo"
-              className="-mb-4 max-h-80 object-contain"
+              className="mb-8 max-h-80 object-contain sm:mb-12"
             />
             <h3>Have an idea for how the community can celebrate?</h3>
             <p>
