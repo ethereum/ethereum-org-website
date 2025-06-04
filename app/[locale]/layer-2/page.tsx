@@ -1,4 +1,4 @@
-import pick from "lodash.pick"
+import { pick } from "lodash"
 import {
   getMessages,
   getTranslations,
@@ -84,7 +84,6 @@ export async function generateStaticParams() {
     locale,
   }))
 }
-
 
 export async function generateMetadata({
   params,

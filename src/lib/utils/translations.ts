@@ -206,6 +206,10 @@ const getRequiredNamespacesForPath = (relativePath: string) => {
     primaryNamespace = "page-translatathon"
   }
 
+  if (path.startsWith("/10years/")) {
+    requiredNamespaces = [...requiredNamespaces, "page-10-year-anniversary"]
+  }
+
   // Glossary tooltips
   if (
     path.startsWith("/dapps/") ||
