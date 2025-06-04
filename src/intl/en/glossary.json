@@ -363,6 +363,8 @@
   "testnet-definition": "Short for \"test network,\" a network used to simulate the behavior of the main Ethereum network.",
   "token-term": "Token",
   "token-definition": "A tradable virtual good defined in smart contracts on the Ethereum blockchain.",
+  "token-factory-term": "Token Factory",
+  "token-factory-definition": "A token factory is a smart contract that facilitates the creation of tokens within a specific standard, such as <a href=\"#erc-20\">ERC-20</a>, <a href=\"#erc-721\">ERC-721</a>, or <a href=\"#erc-1155\">ERC-1155</a>. The Smart Contract acts as a template, allowing users to deploy new tokens with custom parameters like name, symbol, supply, and extra functionality without creating a new smart contract from scratch.",
   "transaction-term": "Transaction",
   "transaction-definition": "Data committed to the Ethereum Blockchain signed by an originating <a href=\"/glossary/#account\">account</a>, targeting a specific <a href=\"/glossary/#address\">address</a>. The transaction contains metadata such as the <a href=\"/glossary/#gas-limit\">gas limit</a> for that transaction. <a href=\"/developers/docs/transactions/\">More on transactions</a>.",
   "transaction-fee-term": "Transaction fee",
