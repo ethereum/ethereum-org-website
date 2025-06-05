@@ -1,5 +1,7 @@
 "use client"
 
+import { useTranslations } from "next-intl"
+
 import { Image } from "@/components/Image"
 import {
   Swiper,
@@ -11,6 +13,8 @@ import {
 import { innovationCards } from "./data"
 
 export default function InnovationSwiper() {
+  const t = useTranslations("page-10-year-anniversary")
+
   return (
     <div className="w-[100%]">
       <SwiperContainer className="mx-auto w-full max-w-[550px] xl:max-w-[700px]">
@@ -25,18 +29,23 @@ export default function InnovationSwiper() {
             >
               <Image
                 src={card.image}
-                alt={card.title}
+                alt={t(`page-10-year-innovation-card-${index + 1}-title`)}
                 className="mx-auto my-4 h-auto max-h-48 object-contain"
               />
               <div>
-                <h3 className="mb-4">{card.title}</h3>
-                <p className="text-body-secondary mb-4">{card.date}</p>
-              </div>
-              {card.description.map((description, index) => (
-                <p key={index} className="mb-4">
-                  {description}
+                <h3 className="mb-4">
+                  {t(`page-10-year-innovation-card-${index + 1}-title`)}
+                </h3>
+                <p className="text-body-secondary mb-4">
+                  {t(`page-10-year-innovation-card-${index + 1}-date`)}
                 </p>
-              ))}
+              </div>
+              <p className="mb-4">
+                {t(`page-10-year-innovation-card-${index + 1}-description-1`)}
+              </p>
+              <p className="mb-4">
+                {t(`page-10-year-innovation-card-${index + 1}-description-2`)}
+              </p>
             </SwiperSlide>
           ))}
           <SwiperNavigation />

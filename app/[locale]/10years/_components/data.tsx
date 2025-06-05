@@ -114,57 +114,21 @@ const adoptionStyles = [
 
 const innovationCards = [
   {
-    title: "Ethereum Launch",
-    date: "July 30, 2015",
-    description: [
-      'Ethereum\'s genesis block went live, launching the "Frontier" network. This barebones release gave developers their first chance to build decentralized applications and experiment with smart contracts.',
-      "Ethereum's mission: an open internet where users control their data, applications run without gatekeepers, and value flows freely between people.",
-    ],
     image: EthereumLaunchImage,
   },
   {
-    title: "DAI: The pioneer stablecoin",
-    date: "December, 2015",
-    description: [
-      "The first decentralized stablecoin launched. DAI maintains a soft peg to the U.S. dollar through cryptocurrency collateral locked in smart contracts.",
-      "Unlike centralized stablecoins controlled by companies, DAI is governed by a decentralized autonomous organization (DAO), making it trustless and community-driven.",
-    ],
     image: StableCoinImage,
   },
   {
-    title: "CryptoKitties and the NFT Frontier",
-    date: "November, 2017",
-    description: [
-      "CryptoKitties brought digital ownership to life. This early NFT game showed how blockchain could enable new forms of expression, collectibility, and culture online.",
-      "It proved Ethereum could scale beyond finance into gaming, art, and digital identity, opening entirely new creative possibilities.",
-    ],
     image: NftImage,
   },
   {
-    title: "DeFi Summer",
-    date: "June, 2020",
-    description: [
-      "Explosive DeFi growth redefined how the world thinks about finance. Protocols for lending, trading, and yield generation gained massive momentum, showcasing the power of open, composable financial infrastructure.",
-      "This period brought billions in value on-chain and established Ethereum as the home of decentralized finance.",
-    ],
     image: DefiSummerImage,
   },
   {
-    title: "The Merge update",
-    date: "September 15, 2022",
-    description: [
-      "Ethereum's biggest transformation yet. The network seamlessly transitioned from energy-intensive proof-of-work to proof-of-stake. With billions in value on Ethereum, the change was described as like changing an aircraft's engine mid-flight.",
-      "The Merge cut Ethereum's energy consumption by 99.95%, strengthened network security, and set the groundwork for future scaling upgrades.",
-    ],
     image: TheMergeImage,
   },
   {
-    title: "Spot ETH ETFs",
-    date: "May 23, 2024",
-    description: [
-      "Wall Street embraces Ethereum. Spot ETH ETFs launched, bringing institutional capital and regulatory legitimacy to the world's leading smart contract platform.",
-      "The approval signaled broader acceptance of tokenized real-world assets, with major financial institutions now building on Ethereum to bring everything from real estate to treasury bonds on-chain.",
-    ],
     image: EthETFImage,
   },
 ]
