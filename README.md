@@ -1990,6 +1990,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/smithrashell"><img src="https://avatars.githubusercontent.com/u/36465023?v=4?s=100" width="100px;" alt="Rashell Smith"/><br /><sub><b>Rashell Smith</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Asmithrashell" title="Bug reports">🐛</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/aolson078"><img src="https://avatars.githubusercontent.com/u/69769089?v=4?s=100" width="100px;" alt="Alex Olson"/><br /><sub><b>Alex Olson</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Aaolson078" title="Bug reports">🐛</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://www.suci.io/"><img src="https://avatars.githubusercontent.com/u/155696196?v=4?s=100" width="100px;" alt="SUCI - Blockchain Hub Team"/><br /><sub><b>SUCI - Blockchain Hub Team</b></sub></a><br /><a href="#maintenance-adminsuci" title="Maintenance">🚧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Nik-EpicWeb3"><img src="https://avatars.githubusercontent.com/u/214466248?v=4?s=100" width="100px;" alt="Nik-EpicWeb3"/><br /><sub><b>Nik-EpicWeb3</b></sub></a><br /><a href="#eventOrganizing-Nik-EpicWeb3" title="Event Organizing">📋</a></td>
     </tr>
   </tbody>
 </table>
