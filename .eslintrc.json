@@ -1,9 +1,5 @@
 {
-  "extends": [
-    "eslint:recommended",
-    "next/core-web-vitals",
-    "prettier"
-  ],
+  "extends": ["eslint:recommended", "next/core-web-vitals", "prettier"],
   "env": {
     "es6": true,
     "node": true,
@@ -41,7 +37,7 @@
           // From the `constants` directory.
           ["^@/lib/constants"],
           // `.storybook` directory and utils files`
-          ["^@/storybook","^@/storybook-utils"],
+          ["^@/storybook", "^@/storybook-utils"],
           // Parent imports. Put `..` last.
           ["^\\.\\.(?!/?$)", "^\\.\\./?$"],
           // Other relative imports. Put same-folder imports and `.` last.
@@ -63,7 +59,7 @@
         "varsIgnorePattern": "^_$"
       }
     ],
-    "unused-imports/no-unused-imports-ts": "warn"
+    "unused-imports/no-unused-imports": "warn"
   },
   "overrides": [
     {
