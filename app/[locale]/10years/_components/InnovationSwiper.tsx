@@ -1,7 +1,5 @@
 "use client"
 
-import { useTranslations } from "next-intl"
-
 import { Image } from "@/components/Image"
 import {
   Swiper,
@@ -12,8 +10,10 @@ import {
 
 import { innovationCards } from "./data"
 
+import { useTranslation } from "@/hooks/useTranslation"
+
 export default function InnovationSwiper() {
-  const t = useTranslations("page-10-year-anniversary")
+  const { t } = useTranslation("page-10-year-anniversary")
 
   return (
     <div className="w-[100%]">

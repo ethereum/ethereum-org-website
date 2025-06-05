@@ -11,6 +11,7 @@ import Emoji from "@/components/Emoji"
 import I18nProvider from "@/components/I18nProvider"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
+import Translation from "@/components/Translation"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
@@ -270,7 +271,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           <div className="hidden flex-1 flex-col gap-6 md:flex">
             {adoptionCards.map((card, index) => (
               <div
-                key={card.title}
+                key={`adoption-card-${index}`}
                 className={cn(
                   "w-[70%] rounded-2xl p-8 shadow",
                   index % 2 === 0 && "ml-auto",
@@ -281,13 +282,20 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               >
                 <Image
                   src={card.image}
-                  alt={card.title}
+                  alt={t(`page-10-year-adoption-card-${index + 1}-title`)}
                   className="mx-auto mb-4 max-h-[300px] object-contain"
                 />
-                <h3 className="mb-4 text-2xl font-bold">{card.title}</h3>
-                {card.description}
+                <h3 className="mb-4 text-2xl font-bold">
+                  {t(`page-10-year-adoption-card-${index + 1}-title`)}
+                </h3>
+                <p className="mb-8">
+                  <Translation
+                    id={`page-10-year-adoption-card-${index + 1}-description`}
+                    ns="page-10-year-anniversary"
+                  />
+                </p>
                 <ButtonLink href={card.href} hideArrow variant="outline">
-                  {card.linkText}
+                  {t(`page-10-year-adoption-card-${index + 1}-link-text`)}
                 </ButtonLink>
               </div>
             ))}
