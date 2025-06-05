@@ -16,7 +16,7 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "build-storybook:chromatic": "storybook build --test",
-    "chromatic": "CHROMATIC_ARCHIVE_LOCATION=tests/e2e/__results__ chromatic --project-token fee8e66c9916",
+    "chromatic": "chromatic --project-token fee8e66c9916",
     "crowdin-clean": "rm -rf .crowdin && mkdir .crowdin",
     "crowdin-import": "ts-node src/scripts/crowdin-import.ts",
     "markdown-checker": "ts-node -O '{ \"module\": \"commonjs\" }' src/scripts/markdownChecker.ts",
