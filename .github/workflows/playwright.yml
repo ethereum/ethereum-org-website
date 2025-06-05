@@ -75,8 +75,9 @@ jobs:
       - name: Run Chromatic
         uses: chromaui/action@latest
         with:
-          projectToken: fee8e66c9916
+          projectToken: ${{ secrets.CHROMATIC_E2E_TOKEN }}
           playwright: true
           exitZeroOnChanges: true
+          storybookBaseDir: .
         env:
           CHROMATIC_ARCHIVE_LOCATION: ./tests/e2e/__results__

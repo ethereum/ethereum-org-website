@@ -2,18 +2,20 @@ import { expect, takeSnapshot, test } from "@chromatic-com/playwright"
 
 import { breakpointAsNumber } from "@/lib/utils/screen"
 
-test.describe("Homepage", () => {
-  test("loads successfully", async ({ page }, testInfo) => {
-    await page.goto("/")
+const PAGE_URL = "/"
 
+test.beforeEach(async ({ page }) => {
+  await page.goto(PAGE_URL)
+})
+
+test.describe("Home Page", () => {
+  test("loads successfully", async ({ page }, testInfo) => {
     await expect(page).toHaveTitle(/Ethereum.org/)
 
-    await takeSnapshot(page, "Page loaded", testInfo)
+    await takeSnapshot(page, "initial-load", testInfo)
   })
 
   test("search functionality", async ({ page }) => {
-    await page.goto("/")
-
     await page.getByRole("button", { name: "Search" }).click()
     await page.getByPlaceholder("Search").fill("smart contract")
 
@@ -25,8 +27,6 @@ test.describe("Homepage", () => {
     const viewport = page.viewportSize()
     const isMobile = viewport && viewport.width <= breakpointAsNumber.md
     test.skip(!!isMobile, "This test is for desktop viewports only")
-
-    await page.goto("/")
 
     const nav = page.getByRole("navigation", { name: "Primary" })
     await expect(nav.getByRole("button", { name: "Learn" })).toBeVisible()
@@ -41,14 +41,10 @@ test.describe("Homepage", () => {
   })
 
   test("navigation menu - mobile", async ({ page }, testInfo) => {
-    // Only run this test for mobile projects
-    const viewport = page.viewportSize()
-    const isMobile = viewport && viewport.width <= breakpointAsNumber.md
-    test.skip(!isMobile, "This test is for mobile viewports only")
+    // Set viewport to mobile size
+    await page.setViewportSize({ width: breakpointAsNumber.sm, height: 800 })
 
-    await page.goto("/")
-
-    await takeSnapshot(page, "Mobile page loaded", testInfo)
+    await takeSnapshot(page, "mobile-initial-load", testInfo)
 
     const nav = page.getByRole("navigation", { name: "Primary" })
     const menuButton = nav.getByRole("button", {
@@ -59,7 +55,7 @@ test.describe("Homepage", () => {
     // Open the mobile menu
     await menuButton.click()
 
-    await takeSnapshot(page, "Mobile menu opened", testInfo)
+    await takeSnapshot(page, "mobile-menu-opened", testInfo)
 
     // Check that navigation links are visible in the mobile menu
     const sidebar = page.getByRole("dialog", { name: /ethereum.org/i })
