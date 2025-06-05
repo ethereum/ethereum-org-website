@@ -1,5 +1,6 @@
 "use client"
 
+import type { StaticImageData } from "next/image"
 import { useTranslations } from "next-intl"
 
 import { Image } from "@/components/Image"
@@ -15,7 +16,7 @@ import {
 import { cn } from "@/lib/utils/cn"
 
 type AdoptionCardProps = {
-  adoptionCards: { image: unknown; href: string }[]
+  adoptionCards: { image: StaticImageData; href: string }[]
   adoptionStyles: string[]
 }
 
