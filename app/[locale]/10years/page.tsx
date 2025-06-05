@@ -62,6 +62,11 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("/10years")
   const messages = pick(allMessages, requiredNamespaces)
 
+  const t = await getTranslations({
+    locale,
+    namespace: "page-10-year-anniversary",
+  })
+
   return (
     <I18nProvider locale={locale} messages={messages}>
       <MainArticle className="mx-auto flex w-full flex-col items-center">
@@ -71,17 +76,12 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           <div className="flex flex-1 flex-col gap-5">
             <div>
               <h1 className="text-2xl font-bold">
-                A decade of transforming the world one block at a time
+                {t("page-10-year-hero-title")}
               </h1>
             </div>
             <div className="flex flex-1 flex-col gap-4">
-              <p className="text-lg">
-                On July 30, 2015, the Ethereum blockchain was born. The moment
-                the genesis block was mined, it enabled new possibilities for
-                the internet, bringing transformative changes to finance,
-                ownership, and programmability.
-              </p>
-              <p className="text-lg">Ten years in, eternity ahead.</p>
+              <p className="text-lg">{t("page-10-year-hero-description")}</p>
+              <p className="text-lg">{t("page-10-year-hero-tagline")}</p>
             </div>
           </div>
           <div className="flex flex-1 flex-row items-center justify-center">
@@ -92,10 +92,11 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
         <div className="w-full px-4 py-8 md:px-8">
           <div className="flex min-h-[500px] flex-col items-center gap-4 rounded-4xl bg-radial-a px-8 pt-8 lg:px-14 lg:pt-14">
             <div className="flex max-w-[770px] flex-col gap-4 text-center">
-              <h2 className="text-4xl font-black">Join the party</h2>
+              <h2 className="text-4xl font-black">
+                {t("page-10-year-join-party-title")}
+              </h2>
               <p className="text-md">
-                Celebrate 10 years of Ethereum with the global community. Find a
-                local event or start your own celebration.
+                {t("page-10-year-join-party-description")}
               </p>
             </div>
             <div>
@@ -190,7 +191,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                   >
-                                    Go to event
+                                    {t("page-10-year-event-link")}
                                   </LinkOverlay>
                                 </LinkBox>
                               ))}
@@ -207,27 +208,21 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
         </div>
         <div className="flex w-full flex-col-reverse gap-8 px-8 py-8 md:flex-row">
           <div className="flex flex-1 flex-col gap-4 md:gap-8 md:pt-8">
-            <p>
-              Join people around the world for talks, networking, and
-              celebrations as we mark Ethereum&apos;s tenth birthday.
-            </p>
-            <p>
-              Can&apos;t make it in person? Watch our livestream and follow
-              updates from events worldwide, so everyone can celebrate this
-              milestone together.
-            </p>
+            <p>{t("page-10-year-events-description-1")}</p>
+            <p>{t("page-10-year-events-description-2")}</p>
           </div>
           <div className="flex flex-1 flex-col items-center gap-4 rounded-2xl bg-gradient-step-1 p-8">
-            <h2 className="text-2xl font-bold">Host an event</h2>
+            <h2 className="text-2xl font-bold">
+              {t("page-10-year-host-event-title")}
+            </h2>
             <p className="text-md">
-              Want to host an event? Limited-time grants are available to help
-              fund your event.
+              {t("page-10-year-host-event-description")}
             </p>
             <ButtonLink
               href="https://blog.ethereum.org/2025/04/24/ten-years"
               hideArrow
             >
-              Apply Now
+              {t("page-10-year-host-event-cta")}
             </ButtonLink>
           </div>
         </div>
@@ -235,23 +230,18 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
         <div className="flex w-full flex-col items-center gap-8 px-8 py-8 pt-32 lg:flex-row">
           <div className="flex flex-1 flex-col gap-6">
             <h2 className="flex flex-col gap-2 font-black">
-              <span className="text-4xl text-accent-a">10 years of</span>
-              <span className="text-5xl text-body md:text-7xl">Innovation</span>
+              <span className="text-4xl text-accent-a">
+                {t("page-10-year-innovation-title")}
+              </span>
+              <span className="text-5xl text-body md:text-7xl">
+                {t("page-10-year-innovation-subtitle")}
+              </span>
             </h2>
             <p className="text-xl font-bold">
-              Ethereum transformed blockchain by introducing smart contracts
+              {t("page-10-year-innovation-description-1")}
             </p>
-            <p>
-              With Ethereum, blockchains changed from a digital ledger, into a
-              programmable platform where code executes automatically when
-              conditions are met.
-            </p>
-            <p>
-              Ethereum&apos;s innovation enabled entirely new industries like{" "}
-              <b>DeFi, NFTs, and DAOs</b>. It expanded blockchain beyond digital
-              currency into a platform that reimagined how we create and
-              exchange value.
-            </p>
+            <p>{t("page-10-year-innovation-description-2")}</p>
+            <p>{t("page-10-year-innovation-description-3")}</p>
           </div>
           <InnovationSwiper />
         </div>
@@ -260,18 +250,17 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           <div className="relative flex max-w-[350px] flex-1 flex-col gap-6">
             <div className="flex flex-col gap-6 lg:sticky lg:top-64 lg:mb-24">
               <h2 className="flex flex-col gap-2 font-black">
-                <span className="text-4xl text-accent-a">10 years of</span>
-                <span className="text-5xl text-body md:text-7xl">Adoption</span>
+                <span className="text-4xl text-accent-a">
+                  {t("page-10-year-adoption-title")}
+                </span>
+                <span className="text-5xl text-body md:text-7xl">
+                  {t("page-10-year-adoption-subtitle")}
+                </span>
               </h2>
               <p className="text-xl font-bold">
-                From a whitepaper to 24M+ daily transactions within the Ethereum
-                ecosystem
+                {t("page-10-year-adoption-description-1")}
               </p>
-              <p>
-                Ethereum has become a global computing platform powering
-                thousands of applications used by millions daily. It spans
-                industries and borders while continuing to expand its use cases.
-              </p>
+              <p>{t("page-10-year-adoption-description-2")}</p>
             </div>
           </div>
           <AdoptionSwiper
@@ -309,19 +298,19 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           <div className="flex max-w-[350px] flex-1 flex-col gap-6">
             <div className="flex flex-col gap-6 lg:sticky lg:top-64 lg:mb-24">
               <h2 className="flex flex-col gap-2 font-black">
-                <span className="text-4xl text-accent-a">10 years of</span>
-                <span className="text-5xl text-body md:text-7xl">Stories</span>
+                <span className="text-4xl text-accent-a">
+                  {t("page-10-year-stories-title")}
+                </span>
+                <span className="text-5xl text-body md:text-7xl">
+                  {t("page-10-year-stories-subtitle")}
+                </span>
               </h2>
               <p className="text-xl font-bold">
-                An overview of how Ethereum is used in daily life
+                {t("page-10-year-stories-description-1")}
               </p>
-              <p>
-                From millions of wallets to every corner of the world, people
-                use Ethereum in ways that inspire. These real stories showcase
-                creativity, freedom, and connection powered by Ethereum.
-              </p>
+              <p>{t("page-10-year-stories-description-2")}</p>
               <ButtonLink href="https://ethereumstory.paperform.co/">
-                Share your story
+                {t("page-10-year-stories-cta")}
               </ButtonLink>
             </div>
           </div>
@@ -335,13 +324,10 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               alt="10 year anniversary logo"
               className="mb-8 max-h-80 object-contain sm:mb-12"
             />
-            <h3>Have an idea for how the community can celebrate?</h3>
-            <p>
-              Onchain artifacts, a worldwide game of Ethereum trivia, the
-              sky&apos;s the limit! Reach out with your idea below.
-            </p>
+            <h3>{t("page-10-year-ideas-title")}</h3>
+            <p>{t("page-10-year-ideas-description")}</p>
             <ButtonLink href="mailto:10years@ethereum.org" hideArrow>
-              Submit your Idea
+              {t("page-10-year-ideas-cta")}
             </ButtonLink>
           </div>
         </div>

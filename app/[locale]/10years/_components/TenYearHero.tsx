@@ -5,29 +5,28 @@ import { useEffect, useState } from "react"
 import { Image } from "@/components/Image"
 import ParallaxImage from "@/components/Image/ParallaxImage"
 
+import { useTranslation } from "@/hooks/useTranslation"
 import TenYearBackgroundImage from "@/public/images/10-year-anniversary/10-year-background.png"
 import TenYearGraphicImage from "@/public/images/10-year-anniversary/10-year-graphic.png"
 
-const [initialText, ...initialWords] = [
-  "censorship resistance",
-  "100% uptime",
-  "decentralization",
-  "community building",
-  "developer growth",
-  "global collaboration",
-  "cypherpunk values",
-  "hackathons",
-  "censorship resistance",
-  "permissionless finance",
-  "credible neutrality",
-  "the infinite garden",
-  "client diversity",
-]
-
 const TenYearHero = () => {
+  const { t } = useTranslation("page-10-year-anniversary")
   const [words, setWords] = useState<{ text: string; words: string[] }>({
-    text: initialText,
-    words: initialWords,
+    text: t("page-10-year-censorship-resistance"),
+    words: [
+      t("page-10-year-censorship-resistance"),
+      t("page-10-year-uptime"),
+      t("page-10-year-decentralization"),
+      t("page-10-year-community-building"),
+      t("page-10-year-developer-growth"),
+      t("page-10-year-global-collaboration"),
+      t("page-10-year-cypherpunk-values"),
+      t("page-10-year-hackathons"),
+      t("page-10-year-permissionless-finance"),
+      t("page-10-year-credible-neutrality"),
+      t("page-10-year-infinite-garden"),
+      t("page-10-year-client-diversity"),
+    ],
   })
 
   // loops over chars to morph a text to another
@@ -137,18 +136,8 @@ const TenYearHero = () => {
         />
       </div>
       <p className="text-center text-3xl">
-        Celebrating 10 years of{" "}
-        <span className="relative max-md:block md:w-fit">
-          <span
-            className="select-none opacity-0 max-md:hidden"
-            data-label="space-holder"
-          >
-            {initialText}
-          </span>
-          <span className="font-bold text-accent-b md:absolute md:start-0 md:text-nowrap">
-            {words.text}
-          </span>
-        </span>
+        {t("page-10-year-celebrating")}{" "}
+        <span className="font-bold text-accent-b">{words.text}</span>
       </p>
     </div>
   )
