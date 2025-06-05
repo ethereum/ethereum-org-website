@@ -44,7 +44,7 @@ const TenYearHero = () => (
           className="select-none opacity-0 max-md:hidden"
           data-label="space-holder"
         >
-          {words[0]}
+          {WORDS[0]}
         </span>
         <span className="text-3xl font-bold text-accent-b md:absolute md:start-0 md:text-nowrap">
           <Morpher words={WORDS} charSet="abcdfgijklnopqsvwxyz" />
