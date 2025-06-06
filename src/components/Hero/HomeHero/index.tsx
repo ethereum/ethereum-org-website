@@ -1,7 +1,7 @@
 import type { ClassNameProp, CommonHeroProps } from "@/lib/types"
 
+import LanguageMorpher from "@/components/Homepage/LanguageMorpher"
 import { Image } from "@/components/Image"
-import Morpher from "@/components/Morpher"
 
 import useTranslation from "@/hooks/useTranslation"
 
@@ -23,7 +23,7 @@ const HomeHero = ({ heroImg, className }: HomeHeroProps) => {
         />
       </div>
       <div className="flex flex-col items-center border-t-[3px] border-primary-low-contrast px-4 py-10 text-center">
-        <Morpher />
+        <LanguageMorpher />
         <div className="flex flex-col items-center gap-y-5 lg:max-w-2xl">
           <h1 className="font-black">{t("page-index:page-index-title")}</h1>
           <p className="max-w-96 text-md text-body-medium lg:text-lg">
