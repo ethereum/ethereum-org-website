@@ -1,4 +1,5 @@
 import { pick } from "lodash"
+import { notFound } from "next/navigation"
 import {
   getMessages,
   getTranslations,
@@ -23,6 +24,8 @@ import {
   BLOG_FEEDS,
   BLOGS_WITHOUT_FEED,
   CALENDAR_DISPLAY_COUNT,
+  DEFAULT_LOCALE,
+  LOCALES_CODES,
   RSS_DISPLAY_COUNT,
 } from "@/lib/constants"
 
@@ -60,6 +63,8 @@ const loadData = dataLoader(
 
 const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const { locale } = await params
+
+  if (!LOCALES_CODES.includes(locale)) return notFound()
 
   setRequestLocale(locale)
 
@@ -142,14 +147,26 @@ export async function generateMetadata({
 }) {
   const { locale } = await params
 
-  const t = await getTranslations({ locale, namespace: "page-index" })
+  try {
+    const t = await getTranslations({ locale, namespace: "page-index" })
+    return await getMetadata({
+      locale,
+      slug: [""],
+      title: t("page-index-meta-title"),
+      description: t("page-index-meta-description"),
+    })
+  } catch (error) {
+    const t = await getTranslations({
+      locale: DEFAULT_LOCALE,
+      namespace: "common",
+    })
 
-  return await getMetadata({
-    locale,
-    slug: [""],
-    title: t("page-index-meta-title"),
-    description: t("page-index-meta-description"),
-  })
+    // Return basic metadata for invalid paths
+    return {
+      title: t("page-not-found"),
+      description: t("page-not-found-description"),
+    }
+  }
 }
 
 export default Page
