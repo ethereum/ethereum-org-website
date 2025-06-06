@@ -106,7 +106,7 @@ export const ghRepoData = async (githubUrl: string) => {
     `https://api.github.com/repos/${repoOwner}/${repoName}`,
     {
       headers: {
-        Authorization: `Bearer ${process.env.NEXT_PUBLIC_GITHUB_TOKEN_READ_ONLY}`,
+        Authorization: `Bearer ${process.env.GITHUB_TOKEN_READ_ONLY}`,
       },
     }
   )
@@ -121,7 +121,7 @@ export const ghRepoData = async (githubUrl: string) => {
     `https://api.github.com/repos/${repoOwner}/${repoName}/languages`,
     {
       headers: {
-        Authorization: `Bearer ${process.env.NEXT_PUBLIC_GITHUB_TOKEN_READ_ONLY}`,
+        Authorization: `Bearer ${process.env.GITHUB_TOKEN_READ_ONLY}`,
       },
     }
   )

@@ -11,7 +11,7 @@ async function fetchWithRateLimit(filepath: string): Promise<Commit[]> {
   url.searchParams.set("path", filepath)
   url.searchParams.set("sha", "master")
 
-  const gitHubToken = process.env.NEXT_PUBLIC_GITHUB_TOKEN_READ_ONLY
+  const gitHubToken = process.env.GITHUB_TOKEN_READ_ONLY
 
   // If no token available, return empty array
   if (!gitHubToken) return []

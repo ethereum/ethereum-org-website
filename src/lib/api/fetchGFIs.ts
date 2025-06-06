@@ -16,7 +16,7 @@ export const fetchGFIs = async () => {
   try {
     const response = await fetch(url, {
       headers: {
-        Authorization: `token ${process.env.NEXT_PUBLIC_GITHUB_TOKEN_READ_ONLY}`,
+        Authorization: `token ${process.env.GITHUB_TOKEN_READ_ONLY}`,
         Accept: "application/vnd.github.v3+json",
       },
     })

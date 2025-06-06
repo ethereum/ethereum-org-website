@@ -11685,7 +11685,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/6020891?v=4",
       "profile": "http://www.edukids.cz",
       "contributions": [
-        "eventOrganizing"
+        "eventOrganizing",
+        "maintenance"
       ]
     },
     {
@@ -12769,6 +12770,15 @@
       "profile": "https://www.suci.io/",
       "contributions": [
         "maintenance"
+      ]
+    },
+    {
+      "login": "Nik-EpicWeb3",
+      "name": "Nik-EpicWeb3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/214466248?v=4",
+      "profile": "https://github.com/Nik-EpicWeb3",
+      "contributions": [
+        "eventOrganizing"
       ]
     }
   ],
