@@ -7,6 +7,8 @@ import { Button, ButtonLink } from "@/components/ui/buttons/Button"
 
 import { cn } from "@/lib/utils/cn"
 
+import { useTranslation } from "@/hooks/useTranslation"
+
 type Story = {
   name: string
   storyEnglish: string
@@ -23,6 +25,7 @@ type StoriesProps = {
 const STORIES_SHOWN = 5
 
 const Stories = ({ stories }: StoriesProps) => {
+  const { t } = useTranslation("page-10-year-anniversary")
   const [flippedCards, setFlippedCards] = useState<Record<number, boolean>>({})
   const [expandedStories, setExpandedStories] = useState<
     Record<number, boolean>
@@ -119,7 +122,7 @@ const Stories = ({ stories }: StoriesProps) => {
                               eventCategory: "10-year-anniversary",
                             }}
                           >
-                            Read more
+                            {t("page-10-year-stories-read-more")}
                           </Button>
                         </div>
                       )}
@@ -127,7 +130,7 @@ const Stories = ({ stories }: StoriesProps) => {
                     {story.storyOriginal && (
                       <div>
                         <p className="text-xs text-body-medium">
-                          English translation
+                          {t("page-10-year-stories-english-translation")}
                         </p>
                         <Button
                           onClick={() => handleFlip(index)}
@@ -139,7 +142,7 @@ const Stories = ({ stories }: StoriesProps) => {
                             eventCategory: "10-year-anniversary",
                           }}
                         >
-                          Show original
+                          {t("page-10-year-stories-show-original")}
                         </Button>
                       </div>
                     )}
@@ -198,14 +201,14 @@ const Stories = ({ stories }: StoriesProps) => {
                               eventCategory: "10-year-anniversary",
                             }}
                           >
-                            Read more
+                            {t("page-10-year-stories-read-more")}
                           </Button>
                         </div>
                       )}
                     </div>
                     <div>
                       <p className="text-xs text-body-medium">
-                        Original language
+                        {t("page-10-year-stories-original-language")}
                       </p>
                       <Button
                         onClick={() => handleFlip(index)}
@@ -217,7 +220,7 @@ const Stories = ({ stories }: StoriesProps) => {
                           eventCategory: "10-year-anniversary",
                         }}
                       >
-                        Show English
+                        {t("page-10-year-stories-show-english")}
                       </Button>
                     </div>
                     <p className="mt-2 text-sm text-body-medium">
@@ -246,7 +249,7 @@ const Stories = ({ stories }: StoriesProps) => {
             }}
             variant="outline"
           >
-            Show more
+            {t("page-10-year-stories-show-more")}
           </Button>
         </div>
       )}

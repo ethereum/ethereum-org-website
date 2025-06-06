@@ -4,11 +4,14 @@ import { useEffect, useState } from "react"
 
 import { cn } from "@/lib/utils/cn"
 
+import { useTranslation } from "@/hooks/useTranslation"
+
 interface CountDownProps {
   className?: string
 }
 
 const CountDown = ({ className }: CountDownProps) => {
+  const { t } = useTranslation("page-10-year-anniversary")
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
@@ -48,7 +51,7 @@ const CountDown = ({ className }: CountDownProps) => {
   if (isExpired) {
     return (
       <div className="text-center text-2xl font-bold">
-        Ethereum is 10 years old! 🚀
+        {t("page-10-year-countdown-expired")}
       </div>
     )
   }
@@ -64,7 +67,9 @@ const CountDown = ({ className }: CountDownProps) => {
         <div className="font-mono text-4xl font-bold text-accent-a">
           {timeLeft.days}
         </div>
-        <div className="font-mono text-xs text-accent-a">days</div>
+        <div className="font-mono text-xs text-accent-a">
+          {t("page-10-year-countdown-days")}
+        </div>
       </div>
       <div
         className={cn(
@@ -75,7 +80,9 @@ const CountDown = ({ className }: CountDownProps) => {
         <div className="font-mono text-4xl font-bold text-accent-a">
           {timeLeft.hours}
         </div>
-        <div className="font-mono text-xs text-accent-a">hours</div>
+        <div className="font-mono text-xs text-accent-a">
+          {t("page-10-year-countdown-hours")}
+        </div>
       </div>
       <div
         className={cn(
@@ -86,7 +93,9 @@ const CountDown = ({ className }: CountDownProps) => {
         <div className="font-mono text-4xl font-bold text-accent-a">
           {timeLeft.minutes}
         </div>
-        <div className="font-mono text-xs text-accent-a">minutes</div>
+        <div className="font-mono text-xs text-accent-a">
+          {t("page-10-year-countdown-minutes")}
+        </div>
       </div>
       <div
         className={cn(
@@ -97,7 +106,9 @@ const CountDown = ({ className }: CountDownProps) => {
         <div className="font-mono text-4xl font-bold text-accent-a">
           {timeLeft.seconds}
         </div>
-        <div className="font-mono text-xs text-accent-a">seconds</div>
+        <div className="font-mono text-xs text-accent-a">
+          {t("page-10-year-countdown-seconds")}
+        </div>
       </div>
     </div>
   )
