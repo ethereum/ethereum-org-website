@@ -61,7 +61,7 @@ export const getPostSlugs = async (dir: string, filterRegex?: RegExp) => {
 export const getTutorialsData = async (
   locale: string
 ): Promise<ITutorial[]> => {
-  const contentRoot = getContentRoot()
+  const contentRoot = join(process.cwd(), ".next/server", CONTENT_DIR)
   const fullPath = join(
     contentRoot,
     locale !== "en" ? `translations/${locale!}` : "",
@@ -69,39 +69,43 @@ export const getTutorialsData = async (
   )
   const tutorialData: ITutorial[] = []
 
-  const stats = await fsp.stat(fullPath)
-  if (!stats.isDirectory()) {
-    console.warn(`Tutorials directory not found for locale: ${locale}`)
-    return tutorialData // Return empty if the directory does not exist
-  }
+  try {
+    const stats = await fsp.stat(fullPath)
+    if (!stats.isDirectory()) {
+      throw new Error(`Tutorials directory not found for locale: ${locale}`)
+    }
 
-  const languageTutorialFiles = await fsp.readdir(fullPath)
+    const languageTutorialFiles = await fsp.readdir(fullPath)
 
-  languageTutorialFiles.forEach(async (dir) => {
-    const filePath = join(
-      contentRoot,
-      locale !== "en" ? `translations/${locale!}` : "",
-      "developers/tutorials",
-      dir,
-      "index.md"
-    )
-    const fileContents = await fsp.readFile(filePath, "utf8")
-    const { data, content } = matter(fileContents)
-    const frontmatter = data as Frontmatter
+    languageTutorialFiles.forEach(async (dir) => {
+      const filePath = join(
+        contentRoot,
+        locale !== "en" ? `translations/${locale!}` : "",
+        "developers/tutorials",
+        dir,
+        "index.md"
+      )
+      const fileContents = await fsp.readFile(filePath, "utf8")
+      const { data, content } = matter(fileContents)
+      const frontmatter = data as Frontmatter
 
-    tutorialData.push({
-      href: join(`/${locale}/developers/tutorials`, dir),
-      title: frontmatter.title,
-      description: frontmatter.description,
-      author: frontmatter.author || "",
-      tags: frontmatter.tags,
-      skill: frontmatter.skill as Skill,
-      timeToRead: Math.round(readingTime(content).minutes),
-      published: dateToString(frontmatter.published),
-      lang: frontmatter.lang,
-      isExternal: false,
+      tutorialData.push({
+        href: join(`/${locale}/developers/tutorials`, dir),
+        title: frontmatter.title,
+        description: frontmatter.description,
+        author: frontmatter.author || "",
+        tags: frontmatter.tags,
+        skill: frontmatter.skill as Skill,
+        timeToRead: Math.round(readingTime(content).minutes),
+        published: dateToString(frontmatter.published),
+        lang: frontmatter.lang,
+        isExternal: false,
+      })
     })
-  })
 
-  return tutorialData
+    return tutorialData
+  } catch (error) {
+    console.error(`Error reading tutorials for locale "${locale}":`, error)
+    return tutorialData // Return empty if there's an error
+  }
 }
