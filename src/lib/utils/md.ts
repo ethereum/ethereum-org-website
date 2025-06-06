@@ -1,4 +1,3 @@
-import fs from "fs"
 import fsp from "fs/promises"
 import { extname, join } from "path"
 
@@ -59,44 +58,50 @@ export const getPostSlugs = async (dir: string, filterRegex?: RegExp) => {
   return files
 }
 
-export const getTutorialsData = (locale: string): ITutorial[] => {
+export const getTutorialsData = async (
+  locale: string
+): Promise<ITutorial[]> => {
   const contentRoot = getContentRoot()
   const fullPath = join(
     contentRoot,
     locale !== "en" ? `translations/${locale!}` : "",
     "developers/tutorials"
   )
-  let tutorialData: ITutorial[] = []
+  const tutorialData: ITutorial[] = []
 
-  if (fs.existsSync(fullPath)) {
-    const languageTutorialFiles = fs.readdirSync(fullPath)
-
-    tutorialData = languageTutorialFiles.map((dir) => {
-      const filePath = join(
-        contentRoot,
-        locale !== "en" ? `translations/${locale!}` : "",
-        "developers/tutorials",
-        dir,
-        "index.md"
-      )
-      const fileContents = fs.readFileSync(filePath, "utf8")
-      const { data, content } = matter(fileContents)
-      const frontmatter = data as Frontmatter
-
-      return {
-        href: join(`/${locale}/developers/tutorials`, dir),
-        title: frontmatter.title,
-        description: frontmatter.description,
-        author: frontmatter.author || "",
-        tags: frontmatter.tags,
-        skill: frontmatter.skill as Skill,
-        timeToRead: Math.round(readingTime(content).minutes),
-        published: dateToString(frontmatter.published),
-        lang: frontmatter.lang,
-        isExternal: false,
-      }
-    })
+  const stats = await fsp.stat(fullPath)
+  if (!stats.isDirectory()) {
+    console.warn(`Tutorials directory not found for locale: ${locale}`)
+    return tutorialData // Return empty if the directory does not exist
   }
+
+  const languageTutorialFiles = await fsp.readdir(fullPath)
+
+  languageTutorialFiles.forEach(async (dir) => {
+    const filePath = join(
+      contentRoot,
+      locale !== "en" ? `translations/${locale!}` : "",
+      "developers/tutorials",
+      dir,
+      "index.md"
+    )
+    const fileContents = await fsp.readFile(filePath, "utf8")
+    const { data, content } = matter(fileContents)
+    const frontmatter = data as Frontmatter
+
+    tutorialData.push({
+      href: join(`/${locale}/developers/tutorials`, dir),
+      title: frontmatter.title,
+      description: frontmatter.description,
+      author: frontmatter.author || "",
+      tags: frontmatter.tags,
+      skill: frontmatter.skill as Skill,
+      timeToRead: Math.round(readingTime(content).minutes),
+      published: dateToString(frontmatter.published),
+      lang: frontmatter.lang,
+      isExternal: false,
+    })
+  })
 
   return tutorialData
 }
