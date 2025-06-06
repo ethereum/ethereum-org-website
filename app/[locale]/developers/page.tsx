@@ -135,11 +135,11 @@ const DevelopersPage = async ({
 
   const quickstarts = [
     {
-      description: "Quickstart a smart contract",
+      description: t("page-developers-quickstart-2-description"),
       command: "npx create-eth@latest",
     },
     {
-      description: "Quickstart a wallet-enabled front end",
+      description: t("page-developers-quickstart-2-description"),
       command: "npm init @rainbow-me/rainbowkit@latest",
     },
   ]
@@ -170,11 +170,8 @@ const DevelopersPage = async ({
               style={{ width: "100vw", objectFit: "cover" }}
             />
             <div className="z-[1] space-y-4 break-words p-6 md:space-y-6 lg:p-12">
-              <h3>Start experimenting</h3>
-              <p>
-                Hands-on challenges such as building NFTs, DEXs in a
-                step-by-step tutorial series.
-              </p>
+              <h3>{t("page-developers-start-experimenting")}</h3>
+              <p>{t("page-developers-speedrunethereum-description")}</p>
               <ButtonLink
                 href="https://speedrunethereum.com/"
                 size="lg"
@@ -186,7 +183,7 @@ const DevelopersPage = async ({
           </div>
 
           <Card className="!space-y-8 break-words border border-accent-c/20 bg-gradient-to-t from-accent-c/15 to-accent-c/5 p-6 md:space-y-6 lg:p-12">
-            <h3>Jump right into the code</h3>
+            <h3>{t("page-developers-jump-right-in-title")}</h3>
             <div className="space-y-6">
               {quickstarts.map(({ description, command }) => (
                 <div key={command} className="space-y-1">
