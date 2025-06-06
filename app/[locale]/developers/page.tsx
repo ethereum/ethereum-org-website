@@ -5,13 +5,15 @@ import { Lang } from "@/lib/types"
 import { ChildOnlyProp } from "@/lib/types"
 
 import CalloutSSR from "@/components/CalloutSSR"
-import Card from "@/components/Card"
+import OldCard from "@/components/Card"
+import { CopyButton } from "@/components/CopyToClipboard"
 import FeedbackCard from "@/components/FeedbackCard"
 import HubHero from "@/components/Hero/HubHero"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import { ButtonLink } from "@/components/ui/buttons/Button"
-import { Flex, Stack, VStack } from "@/components/ui/flex"
+import { Card } from "@/components/ui/card"
+import { Flex, VStack } from "@/components/ui/flex"
 import InlineLink from "@/components/ui/Link"
 
 import { cn } from "@/lib/utils/cn"
@@ -131,6 +133,17 @@ const DevelopersPage = async ({
     },
   ]
 
+  const quickstarts = [
+    {
+      description: "Quickstart a smart contract",
+      command: "npx create-eth@latest",
+    },
+    {
+      description: "Quickstart a wallet-enabled front end",
+      command: "npm init @rainbow-me/rainbowkit@latest",
+    },
+  ]
+
   return (
     <Page>
       <HubHero
@@ -143,9 +156,62 @@ const DevelopersPage = async ({
       />
       <Content>
         <MonoSubtitle>{t("page-developers-get-started")}</MonoSubtitle>
+
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8 xl:mb-12">
+          <div
+            className="relative h-[450px]"
+            data-label="speedrunethereum-banner"
+          >
+            <Image
+              className="pointer-events-none absolute -z-[1] h-full rounded-t-2xl"
+              src={SpeedRunEthereumImage}
+              alt="SpeedRunEthereum banner"
+              sizes="100vw"
+              style={{ width: "100vw", objectFit: "cover" }}
+            />
+            <div className="z-[1] space-y-4 break-words p-6 md:space-y-6 lg:p-12">
+              <h3>Start experimenting</h3>
+              <p>
+                Hands-on challenges such as building NFTs, DEXs in a
+                step-by-step tutorial series.
+              </p>
+              <ButtonLink
+                href="https://speedrunethereum.com/"
+                size="lg"
+                className="mt-4"
+              >
+                {t("page-developers-speedrunethereum-link")}
+              </ButtonLink>
+            </div>
+          </div>
+
+          <Card className="!space-y-8 break-words border border-accent-c/20 bg-gradient-to-t from-accent-c/15 to-accent-c/5 p-6 md:space-y-6 lg:p-12">
+            <h3>Jump right into the code</h3>
+            <div className="space-y-6">
+              {quickstarts.map(({ description, command }) => (
+                <div key={command} className="space-y-1">
+                  <div className="font-bold">{description}</div>
+                  <div className="flex items-center rounded-lg border bg-background px-3 py-1">
+                    <div className="flex-1 font-mono text-sm">{command}</div>
+                    <CopyButton message={command} size="sm" />
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div>
+              <ButtonLink
+                href="https://docs.soliditylang.org/en/latest/"
+                variant="outline"
+                className="bg-background"
+              >
+                Read the Solidity docs
+              </ButtonLink>
+            </div>
+          </Card>
+        </div>
         <div className="-mx-4 mb-12 mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
           {paths.map((path, idx) => (
-            <Card
+            <OldCard
               className={`m-4 p-6 shadow-[0px_1px_3px_rgba(0,0,0,0.1)] transition-transform duration-100 hover:scale-105 hover:rounded hover:bg-background-highlight hover:shadow-[0px_8px_17px_rgba(0,0,0,0.15)] dark:shadow-[0px_1px_3px_rgba(60,60,60,0.1)]`}
               key={idx}
               emoji={path.emoji}
@@ -153,28 +219,8 @@ const DevelopersPage = async ({
               description={path.description}
             >
               <ButtonLink href={path.url}>{path.button}</ButtonLink>
-            </Card>
+            </OldCard>
           ))}
-        </div>
-
-        <div className="relative xl:mb-12" data-label="speedrunethereum-banner">
-          <Image
-            className="h-[450px] xl:h-auto"
-            src={SpeedRunEthereumImage}
-            alt="SpeedRunEthereum banner"
-            sizes="100vw"
-            style={{
-              width: "100vw",
-              objectFit: "cover",
-              objectPosition: "20%",
-            }}
-          />
-          <Stack className="absolute top-0 max-w-lg items-start space-y-3 break-words p-6 md:top-12 md:ms-8 md:space-y-4 lg:p-8 xl:max-w-xl">
-            <h2>{t("page-developers-speedrunethereum-title")}</h2>
-            <ButtonLink href="https://speedrunethereum.com/">
-              {t("page-developers-speedrunethereum-link")}
-            </ButtonLink>
-          </Stack>
         </div>
 
         <TwoColumnContent>
