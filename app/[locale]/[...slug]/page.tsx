@@ -115,9 +115,18 @@ export async function generateMetadata({
   params: Promise<{ locale: string; slug: string[] }>
 }) {
   const { locale, slug } = await params
+  const { timeToRead } = await getPageData({
+    locale,
+    slug: slug.join("/"),
+    // TODO: Address component typing error here (flip `FC` types to prop object types)
+    // @ts-expect-error Incompatible component function signatures
+    baseComponents: mdComponents,
+    componentsMapping,
+  })
 
   return await getMdMetadata({
     locale,
     slug,
+    timeToRead: timeToRead.text,
   })
 }
