@@ -364,7 +364,7 @@ export async function generateMetadata({
 
   return await getMetadata({
     locale,
-    slug: ["10-year-anniversary"],
+    slug: ["10years"],
     title: t("page-10-year-anniversary-meta-title"),
     description: t("page-10-year-anniversary-meta-description"),
   })
