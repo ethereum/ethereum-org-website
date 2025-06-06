@@ -20,6 +20,7 @@ import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import {
+  ATTESTANT_BLOG,
   BASE_TIME_UNIT,
   BLOG_FEEDS,
   BLOGS_WITHOUT_FEED,
@@ -42,7 +43,8 @@ import { fetchTotalValueLocked } from "@/lib/api/fetchTotalValueLocked"
 
 // API calls
 const fetchXmlBlogFeeds = async () => {
-  return await fetchRSS(BLOG_FEEDS)
+  const xmlUrls = BLOG_FEEDS.filter((feed) => ![ATTESTANT_BLOG].includes(feed))
+  return await fetchRSS(xmlUrls)
 }
 
 // In seconds

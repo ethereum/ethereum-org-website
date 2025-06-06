@@ -175,6 +175,7 @@ export const RSS_DISPLAY_COUNT = 6
 
 export const VITALIK_FEED = "https://vitalik.eth.limo/feed.xml"
 export const SOLIDITY_FEED = "https://soliditylang.org/feed.xml"
+export const ATTESTANT_BLOG = "https://www.attestant.io/posts/"
 
 export const COMMUNITY_BLOGS: CommunityBlog[] = [
   {
@@ -197,10 +198,7 @@ export const COMMUNITY_BLOGS: CommunityBlog[] = [
     name: "0xPARC",
     href: "https://0xparc.org/blog",
   },
-  {
-    href: "https://www.attestant.io/posts/",
-    feed: "https://www.attestant.io/posts/",
-  },
+  { href: ATTESTANT_BLOG, feed: ATTESTANT_BLOG },
   { name: "Devcon", href: "https://devcon.org/en/blogs/" },
   {
     href: "https://soliditylang.org/blog/",
