@@ -42,6 +42,11 @@ test.describe("Find Wallet Page", () => {
   })
 
   test("sidebar filters - desktop", async ({ page }) => {
+    // Only run this test for desktop projects
+    const viewport = page.viewportSize()
+    const isMobile = viewport && viewport.width <= breakpointAsNumber.md
+    test.skip(!!isMobile, "This test is for desktop viewports only")
+
     // Device filter accordion should be expanded by default
     const deviceAccordion = page.getByRole("button", { name: /Device/i })
     await expect(deviceAccordion).toHaveAttribute("aria-expanded", "true")
