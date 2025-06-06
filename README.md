@@ -70,13 +70,51 @@ git fetch upstream
 git merge upstream/dev
 ```
 
-2. Install dependencies
+2. Prepare package manager
 
-We recommend using a node manager to use multiple node versions in your system. We use [Volta](https://volta.sh/). In case you don't use a manager or you use `nvm`, you can check the currently supported versions under the `"volta"` section on our `package.json` file.
+We've upgraded to pnpm to speed up development experience and improve dependency management.
+
+We recommend using a [node manager such as nvm](https://github.com/nvm-sh/nvm?tab=readme-ov-file#intro) to use multiple node versions in your system. We have a `.nvmrc` file that declares the canonical Node.js version for this project. If you use `nvm`, you can run `nvm use` to automatically switch to the correct version.
+
+**Use current node version (recommended)**
 
 ```sh
-yarn
+nvm use
 ```
+
+Corepack is a tool that allows you to use package managers like pnpm, yarn, and npm without needing to install them globally. It ensures that the correct version of the package manager is used for your project.
+
+**Enable corepack (recommended):**
+
+```sh
+corepack enable
+```
+
+3. Install dependencies
+
+```sh
+pnpm install
+```
+
+#### Migrating from yarn to pnpm
+
+If you previously used `yarn` to install dependencies, you can safely migrate to `pnpm` by running the following commands:
+
+```sh
+# Remove yarn.lock file
+rm yarn.lock
+
+# Remove node_modules directory
+rm -rf node_modules
+
+# Clean yarn cache (optional)
+yarn cache clean
+
+# Install dependencies with pnpm
+pnpm install
+```
+
+This will cleanly switch the project working directory from yarn to pnpm without leaving any residual yarn configuration.
 
 ### 4. Make awesome changes!
 
@@ -89,7 +127,7 @@ git checkout -b new_branch_name
 2. Start developing!
 
 ```sh
-yarn dev
+pnpm dev
 ```
 
 - Open this directory in your favorite text editor / IDE, and see your changes live by visiting `localhost:3000` from your browser
@@ -1798,7 +1836,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="http://hector.im"><img src="https://avatars.githubusercontent.com/u/12469549?v=4?s=100" width="100px;" alt="Héctor Chong"/><br /><sub><b>Héctor Chong</b></sub></a><br /><a href="#content-Hector-Chong" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/nakmr"><img src="https://avatars.githubusercontent.com/u/145886319?v=4?s=100" width="100px;" alt="nace.kimura"/><br /><sub><b>nace.kimura</b></sub></a><br /><a href="#content-nakmr" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/WuRuiLei2023"><img src="https://avatars.githubusercontent.com/u/149141323?v=4?s=100" width="100px;" alt="WuRuiLei2023"/><br /><sub><b>WuRuiLei2023</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3AWuRuiLei2023" title="Bug reports">🐛</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="http://www.edukids.cz"><img src="https://avatars.githubusercontent.com/u/6020891?v=4?s=100" width="100px;" alt="Radek"/><br /><sub><b>Radek</b></sub></a><br /><a href="#eventOrganizing-radeksvarz" title="Event Organizing">📋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://www.edukids.cz"><img src="https://avatars.githubusercontent.com/u/6020891?v=4?s=100" width="100px;" alt="Radek"/><br /><sub><b>Radek</b></sub></a><br /><a href="#eventOrganizing-radeksvarz" title="Event Organizing">📋</a> <a href="#maintenance-radeksvarz" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/bhargavkakadiya"><img src="https://avatars.githubusercontent.com/u/26486494?v=4?s=100" width="100px;" alt="Bhargav kakadiya"/><br /><sub><b>Bhargav kakadiya</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Abhargavkakadiya" title="Bug reports">🐛</a></td>
     </tr>
     <tr>
@@ -1952,6 +1990,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/smithrashell"><img src="https://avatars.githubusercontent.com/u/36465023?v=4?s=100" width="100px;" alt="Rashell Smith"/><br /><sub><b>Rashell Smith</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Asmithrashell" title="Bug reports">🐛</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/aolson078"><img src="https://avatars.githubusercontent.com/u/69769089?v=4?s=100" width="100px;" alt="Alex Olson"/><br /><sub><b>Alex Olson</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Aaolson078" title="Bug reports">🐛</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://www.suci.io/"><img src="https://avatars.githubusercontent.com/u/155696196?v=4?s=100" width="100px;" alt="SUCI - Blockchain Hub Team"/><br /><sub><b>SUCI - Blockchain Hub Team</b></sub></a><br /><a href="#maintenance-adminsuci" title="Maintenance">🚧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Nik-EpicWeb3"><img src="https://avatars.githubusercontent.com/u/214466248?v=4?s=100" width="100px;" alt="Nik-EpicWeb3"/><br /><sub><b>Nik-EpicWeb3</b></sub></a><br /><a href="#eventOrganizing-Nik-EpicWeb3" title="Event Organizing">📋</a></td>
     </tr>
   </tbody>
 </table>
