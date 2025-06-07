@@ -26,6 +26,8 @@ Mit diesen Programmbibliotheken lässt sich die direkte Interaktion mit einem Et
 
 Sie können sich über einen Provider und diese Bibliotheken mit Ethereum verbinden und die Daten auslesen – über JSON-RPC, INFURA, Etherscan, Alchemy oder MetaMask.
 
+> **Warnung:** Web3.js wird am 4. März 2025 archiviert. [Lesen Sie die Ankündigung](https://blog.chainsafe.io/web3-js-sunset/). Erwägen Sie die Verwendung alternativer Bibliotheken wie Ethers.js oder viem für neue Projekte.
+
 **Ether-Beispiel**
 
 ```js

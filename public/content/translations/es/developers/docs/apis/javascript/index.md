@@ -26,6 +26,8 @@ Estas bibliotecas eliminan en gran parte la complejidad de interactuar directame
 
 Mediante proveedores, estas bibliotecas le permiten conectarse a Ethereum y leer sus datos, ya sea sobre JSON-RPC, INFURA, Etherscan, Alchemy o MetaMask.
 
+> **Advertencia:** Web3.js será archivado el 4 de marzo de 2025. [Lea el anuncio](https://blog.chainsafe.io/web3-js-sunset/). Considere usar bibliotecas alternativas como Ethers.js o viem para nuevos proyectos.
+
 **Ejemplo de Ethers**
 
 ```js
