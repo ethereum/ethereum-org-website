@@ -1,4 +1,4 @@
-import { HTMLAttributes, ReactNode } from "react"
+import { ReactNode } from "react"
 import { getTranslations } from "next-intl/server"
 
 import { Lang } from "@/lib/types"
@@ -11,10 +11,9 @@ import HubHero from "@/components/Hero/HubHero"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import { ButtonLink } from "@/components/ui/buttons/Button"
-import { Flex, Stack, VStack } from "@/components/ui/flex"
+import { Stack, VStack } from "@/components/ui/flex"
 import InlineLink from "@/components/ui/Link"
 
-import { cn } from "@/lib/utils/cn"
 import { getMetadata } from "@/lib/utils/metadata"
 
 import SpeedRunEthereumImage from "@/public/images/dev-tools/speed-run-ethereum-banner.png"
@@ -22,51 +21,11 @@ import DevelopersImage from "@/public/images/developers-eth-blocks.png"
 import DogeImage from "@/public/images/doge-computer.png"
 import HeroImage from "@/public/images/heroes/developers-hub-hero.jpg"
 
-const Page = (props: ChildOnlyProp) => (
-  <VStack className="mx-auto my-0 w-full" {...props} />
-)
-
-const GrayContainer = (props: ChildOnlyProp) => (
-  <div
-    className="mt-8 w-full border-t bg-background-highlight px-0 py-16 shadow-table-item-box"
-    {...props}
-  />
-)
-
-const Content = (props: ChildOnlyProp) => (
-  <MainArticle className="w-full px-8 py-4" {...props} />
-)
-
-const Subtitle = ({
-  className,
-  ...props
-}: HTMLAttributes<HTMLHeadingElement>) => (
-  <p className={cn("leading-xs text-body-medium", className)} {...props} />
-)
-
-const MonoSubtitle = (props: ChildOnlyProp) => (
-  <h2 className="mb-0 mt-12" {...props} />
-)
-
 const H2 = (props: ChildOnlyProp) => <h2 className="mb-8 mt-12" {...props} />
 
 const H3 = (props: ChildOnlyProp) => <h3 className="mb-8 mt-10" {...props} />
 
 const Text = (props: ChildOnlyProp) => <p className="mb-6" {...props} />
-
-const TwoColumnContent = (props: ChildOnlyProp) => (
-  <Flex
-    className="w-full flex-col items-start justify-between lg:flex-row lg:items-center"
-    {...props}
-  />
-)
-
-const ThreeColumnContent = (props: ChildOnlyProp) => (
-  <Flex
-    className="flex-col items-start justify-between px-8 py-0 lg:flex-row"
-    {...props}
-  />
-)
 
 const Column = (props: ChildOnlyProp) => (
   <div className="mb-6 me-8 w-full flex-1 basis-1/3" {...props} />
@@ -98,6 +57,10 @@ const DevelopersPage = async ({
   const t = await getTranslations({
     locale,
     namespace: "page-developers-index",
+  })
+  const tCommon = await getTranslations({
+    locale,
+    namespace: "common",
   })
 
   const paths: DevelopersPath[] = [
@@ -132,18 +95,19 @@ const DevelopersPage = async ({
   ]
 
   return (
-    <Page>
+    <VStack className="mx-auto my-0 w-full">
       <HubHero
         heroImg={HeroImage}
         header={`${t("page-developers-title-1")} ${t(
           "page-developers-title-2"
         )} ${t("page-developers-title-3")}`}
-        title={t("common:developers")}
+        title={tCommon("developers")}
         description={t("page-developers-subtitle")}
       />
-      <Content>
-        <MonoSubtitle>{t("page-developers-get-started")}</MonoSubtitle>
-        <div className="-mx-4 mb-12 mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+      <MainArticle className="w-full space-y-12 px-8 py-4">
+        <h2 className="-mb-4 mt-12">{t("page-developers-get-started")}</h2>
+
+        <div className="-mx-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
           {paths.map((path, idx) => (
             <Card
               className={`m-4 p-6 shadow-[0px_1px_3px_rgba(0,0,0,0.1)] transition-transform duration-100 hover:scale-105 hover:rounded hover:bg-background-highlight hover:shadow-[0px_8px_17px_rgba(0,0,0,0.15)] dark:shadow-[0px_1px_3px_rgba(60,60,60,0.1)]`}
@@ -157,7 +121,7 @@ const DevelopersPage = async ({
           ))}
         </div>
 
-        <div className="relative xl:mb-12" data-label="speedrunethereum-banner">
+        <div className="relative" data-label="speedrunethereum-banner">
           <Image
             className="h-[450px] xl:h-auto"
             src={SpeedRunEthereumImage}
@@ -177,12 +141,12 @@ const DevelopersPage = async ({
           </Stack>
         </div>
 
-        <TwoColumnContent>
+        <div className="flex w-full flex-col items-start justify-between lg:flex-row lg:items-center">
           <IntroColumn>
             <H2>{t("page-developers-about")}</H2>
-            <Subtitle className="mb-6">
+            <p className="mb-6 leading-xs text-body-medium">
               {t("page-developers-about-desc")}
-            </Subtitle>
+            </p>
             <Text>{t("page-developers-about-desc-2")}</Text>
             <Text>
               {t("page-developers-feedback")}{" "}
@@ -204,14 +168,14 @@ const DevelopersPage = async ({
               </ButtonLink>
             </div>
           </CalloutSSR>
-        </TwoColumnContent>
-      </Content>
-      <GrayContainer>
-        <Content>
+        </div>
+      </MainArticle>
+      <div className="mt-8 w-full border-t bg-background-highlight px-0 py-16 shadow-table-item-box">
+        <div className="w-full scroll-mt-24 px-8 py-4">
           <H2>{t("page-developers-explore-documentation")}</H2>
-        </Content>
+        </div>
 
-        <ThreeColumnContent>
+        <div className="flex flex-col items-start justify-between px-8 py-0 lg:flex-row">
           <Column>
             <H3>{t("page-developers-docs-introductions")}</H3>
             <InlineLink href="/developers/docs/intro-to-ethereum/">
@@ -358,10 +322,10 @@ const DevelopersPage = async ({
               {t("page-developers-data-structures-and-encoding-desc")}
             </Text>
           </RightColumn>
-        </ThreeColumnContent>
-      </GrayContainer>
+        </div>
+      </div>
       <FeedbackCard />
-    </Page>
+    </VStack>
   )
 }
 
