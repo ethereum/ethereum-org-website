@@ -154,7 +154,7 @@
   "page-upgrades-shard-desc": "Leathnóidh Danksharding cumas Ethereum chun sonraí a stóráil, agus oibreoidh sé go comhchuí le L2anna chun tréchur a scála agus táillí líonra a laghdú. Cuirfear Danksharding i bhfeidhm i gcéimeanna éagsúla, ag tosú le ProtoDanksharding.",
   "page-upgrades-shard-estimate": "Meastachán: 2023-2024",
   "page-upgrades-shard-lower": "Tuilleadh faoi roinnt",
-  "page-upgrades-shard-title": "Roinnt",
+  "page-upgrades-shard-title": "Sceardadh",
   "page-upgrades-stay-up-to-date": "Fan suas chun dáta",
   "page-upgrades-stay-up-to-date-desc": "Faigh an ceann is déanaí ó na taighdeoirí agus na forbróirí atá ag obair ar uasghrádú Ethereum.",
   "page-upgrades-sustainable-desc": "Bhí Ethereum dian ar fhuinneamh go dtí le déanaí. Tháinig laghdú os cionn 99.9% ar fhuinneamh líonra mar gheall ar an aistriú go cruthúnais-gheallta.",
@@ -203,6 +203,6 @@
   "page-staking-deposit-contract-staking-more-link": "Tuilleadh faoin ngeallchur",
   "docs-nav-proof-of-stake": "Cruthúnas-de-geall",
   "docs-nav-proof-of-work": "Cruthúnas-ar-obair",
-  "page-upgrades-get-involved-ethresearch-1": "Roinnt",
+  "page-upgrades-get-involved-ethresearch-1": "Sceardadh",
   "page-upgrades-get-involved-ethresearch-2": "An Comhoiriúnú"
 }

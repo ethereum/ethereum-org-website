@@ -78,7 +78,7 @@ Tugann an fheidhm seo ar ais an méid `sócmhainní` a d'athródh an cruinneach�
 function maxDeposit(address receiver) public view returns (uint256 maxAssets)
 ```
 
-Tugann an fheidhm seo ar ais uasmhéid na sócmhainní bunúsacha is féidir a chur i dtaisce i nglao amháin [`taisce`](#deposit) glaoch ón `fhaighteoir`.
+Tugann an fheidhm seo ar ais uasmhéid na sócmhainní bunúsacha is féidir a chur i dtaisce i nglao amháin <[`taisce`](#deposit) glaoch ón `fhaighteoir`.
 
 #### previewDeposit {#previewdeposit}
 
@@ -158,7 +158,7 @@ Tugann an fheidhm seo ar ais uasmhéid na scaireanna is féidir a fhuascailt ón
 function previewRedeem(uint256 shares) public view returns (uint256 assets)
 ```
 
-Ligeann an fheidhm seo d'úsáideoirí insamhlú a dhéanamh ar éifeachtaí a bhfuascailte ag an mbloc reatha.
+Ligeann an fheidhm seo d’úsáideoirí insamhlú a dhéanamh ar éifeachtaí a bhfuascailte ag an mbloc reatha.
 
 #### redeem {#redeem}
 
@@ -203,7 +203,7 @@ event Deposit(
 )
 ```
 
-Sa chás gurb é `seoltóir` an t-úsáideoir a mhalartóidh `sócmhainní` le haghaidh `scaireanna`, agus a d'aistrigh na `scaireanna` sin chuig `úinéir`.
+Sa chás gurb é `seoltóir` an t-úsáideoir a mhalartóidh `sócmhainní` le haghaidh `scaireanna`, agus a d’aistrigh na `scaireanna` sin chuig `úinéir`.
 
 #### Imeacht Aistarraingthe
 

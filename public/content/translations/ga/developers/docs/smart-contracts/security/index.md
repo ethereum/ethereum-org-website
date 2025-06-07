@@ -101,7 +101,7 @@ Is cur chuige eile é clár deolchairí fabht a bhunú chun athbhreithnithe cód
 
 Nuair a úsáidtear i gceart iad, tugann deolchairí fabhtanna dreasacht do bhaill an phobail haiceála chun do chód a iniúchadh le haghaidh lochtanna criticiúla. Sampla ón bhfíorshaol is ea an “fabht airgid gan teorainn” a ligfeadh d’ionsaitheoir méid neamhtheoranta éitear a chruthú ar [Soirbhíochas](https://www.optimism.io/), prótacal [Ciseal 2](/layer-2/) a ritheann ar Ethereum. Ar ámharaí an tsaoil, d’aimsigh haiceálaí bán [an locht](https://www.saurik.com/optimism.html) agus chuir sé in iúl don fhoireann é, [agus thuill sé íocaíocht mhór ar a shon](https://cryptoslate.com/critical-bug-in-ethereum-l2-optimism-2m-bounty-paid/).
 
-Straitéis úsáideach is ea íocaíocht amach clár deolchaire fabhtanna a shocrú i gcomhréir le méid na gcistí atá i gceist. Déantar cur síos air mar [deolchaire fabht scálaithe](https://medium.com/immunefi/a-defi-security-standard-the-scaling-bug-bounty-9b83dfdc1ba7) dreasachtaí airgeadais do dhaoine aonair chun leochaileachtaí a nochtadh go freagrach in ionad iad a shaothrú.
+Straitéis úsáideach is ea íocaíocht amach clár deolchaire fabhtanna a shocrú i gcomhréir le méid na gcistí atá i gceist. Déantar cur síos air mar “[deolchaire fabht scálaithe](https://medium.com/immunefi/a-defi-security-standard-the-scaling-bug-bounty-9b83dfdc1ba7) dreasachtaí airgeadais do dhaoine aonair chun leochaileachtaí a nochtadh go freagrach in ionad iad a shaothrú.
 
 ### 5. Lean na cleachtais is fearr le linn forbairt conarthaí cliste {#follow-smart-contract-development-best-practices}
 
@@ -435,7 +435,7 @@ contract Attack {
 
 ##### Conas gannsreabhadh agus róshreabhadh slánuimhir a chosc
 
-Ón leagan 0.8.0, diúltaíonn an tiomsaitheoir Solidity cód a mbíonn gannsreafaí agus rósreafaí slánuimhir mar thoradh air. Mar sin féin, ba cheart do chonarthaí arna dtiomsú le leagan tiomsaitheora níos ísle seiceálacha a dhéanamh ar fheidhmeanna a bhaineann le hoibríochtaí uimhríochta nó úsáid a bhaint as leabharlann (m.sh., [SafeMath](https://docs.openzeppelin.com/contracts/2.x/api/math)) a sheiceálann le haghaidh gannsreabhadh/róshreabhadh.
+Ón leagan 0.8.0, diúltaíonn an tiomsaitheoir Solidity cód a mbíonn gannsreafaí agus rósreafaí slánuimhir mar thoradh air. Mar sin féin, ba cheart do chonarthaí arna dtiomsú le leagan tiomsaitheora níos ísle seiceálacha a dhéanamh ar fheidhmeanna a bhaineann le hoibríochtaí uimhríochta nó úsáid a bhaint as leabharlann (m.sh., <[SafeMath](https://docs.openzeppelin.com/contracts/2.x/api/math)) a sheiceálann le haghaidh gannsreabhadh/róshreabhadh.
 
 #### Ionramháil Oracle {#oracle-manipulation}
 
@@ -501,7 +501,7 @@ Má tá sé ar intinn agat ceist a chur ar oracal ar slabhra maidir le praghsann
 
 - **[OpenZeppelin](https://www.openzeppelin.com/security-audits)** - _ Cuideachta conartha cliste slándála a sholáthraíonn iniúchtaí slándála ar chórais dáilte._
 
-- **[Fíorú Am Reatha](https://runtimeverification.com/)** - _Cuideachta slándála a dhéanann sainchúram de shamhaltú foirmiúil agus fíorú conarthaí cliste._
+- **[Fíorú Am Reatha](https://runtimeverification.com/)** - _ Cuideachta slándála a dhéanann sainchúram de shamhaltú foirmiúil agus fíorú conarthaí cliste._
 
 - **[Hacken](https://hacken.io)** - _ Iniúchóir cibearshlándála Web3 le cur chuige 360-céim maidir le slándáil blocshlabhra. _
 
