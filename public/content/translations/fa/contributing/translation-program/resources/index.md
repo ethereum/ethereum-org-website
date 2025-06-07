@@ -12,8 +12,8 @@ description: منابع مفید برای مترجمان ethereum.org
 
 - [راهنمای سبک ترجمه](/contributing/translation-program/translators-guide/) _– دستورالعمل ها و نکاتی برای مترجمان ethereum.org_
 - [سؤالات متداول ترجمه](/contributing/translation-program/faq/) _– پرسش‌ها و پاسخ‌های متداول درباره برنامه ترجمه ethereum.org_
-- [راهنمای ویرایشگر آنلاین Crowdin](https://support.crowdin.com/online-editor/) _– یک راهنمای عمیق برای استفاده از ویرایشگر آنلاین Crowdin و برخی ویژگی های پیشرفته Crowdin_
-- [سطل های محتوا](/contributing/translation-program/content-buckets/)_ – کدام صفحات در هر سطل محتوای ethereum.org گنجانده شده است_
+- [راهنمای ویرایشگر آنلاین Crowdin](https://support.crowdin.com/online-editor/) _– راهنمای عمیق استفاده از ویرایشگر آنلاین Crowdin و برخی ویژگی‌های پیشرفته Crowdin_
+- [سطل‌های محتوا](/contributing/translation-program/content-buckets/)_ – کدام صفحات در هر سطل محتوای ethereum.org گنجانده شده است_
 
 ## ابزارها {#tools}
 
