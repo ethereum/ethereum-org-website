@@ -57,7 +57,7 @@ export const layer2Data: Rollups = [
     blockExplorerLink: "https://arbiscan.io/",
     bridgeLink: "https://bridge.arbitrum.io/",
     l2BeatLink: "https://l2beat.com/scaling/projects/arbitrum",
-    growthepieLink: "https://www.growthepie.xyz/chains/arbitrum",
+    growthepieLink: "https://www.growthepie.com/chains/arbitrum",
     feeToken: ["ETH"],
   },
   {
@@ -73,7 +73,7 @@ export const layer2Data: Rollups = [
     blockExplorerLink: "https://basescan.org/",
     bridgeLink: "https://bridge.base.org/deposit",
     l2BeatLink: "https://l2beat.com/scaling/projects/base",
-    growthepieLink: "https://www.growthepie.xyz/chains/base",
+    growthepieLink: "https://www.growthepie.com/chains/base",
     feeToken: ["ETH"],
   },
   {
@@ -89,7 +89,7 @@ export const layer2Data: Rollups = [
     blockExplorerLink: "https://optimistic.etherscan.io/",
     bridgeLink: "https://app.optimism.io/",
     l2BeatLink: "https://l2beat.com/scaling/projects/optimism",
-    growthepieLink: "https://www.growthepie.xyz/chains/optimism",
+    growthepieLink: "https://www.growthepie.com/chains/optimism",
     feeToken: ["ETH"],
   },
   {
@@ -105,7 +105,7 @@ export const layer2Data: Rollups = [
     blockExplorerLink: "https://blastscan.io/",
     bridgeLink: "https://blast.io/en/bridge",
     l2BeatLink: "https://l2beat.com/scaling/projects/blast",
-    growthepieLink: "https://www.growthepie.xyz/chains/blast",
+    growthepieLink: "https://www.growthepie.com/chains/blast",
     feeToken: ["ETH"],
   },
   {
@@ -121,7 +121,7 @@ export const layer2Data: Rollups = [
     blockExplorerLink: "https://explorer.zksync.io/",
     bridgeLink: "https://portal.zksync.io/bridge/",
     l2BeatLink: "https://l2beat.com/scaling/projects/zksync-era",
-    growthepieLink: "https://www.growthepie.xyz/chains/zksync-era",
+    growthepieLink: "https://www.growthepie.com/chains/zksync-era",
     feeToken: ["ETH"],
   },
   {
@@ -137,7 +137,7 @@ export const layer2Data: Rollups = [
     blockExplorerLink: "https://lineascan.build/",
     bridgeLink: "https://bridge.linea.build/",
     l2BeatLink: "https://l2beat.com/scaling/projects/linea",
-    growthepieLink: "https://www.growthepie.xyz/chains/linea",
+    growthepieLink: "https://www.growthepie.com/chains/linea",
     feeToken: ["ETH"],
   },
   {
@@ -153,7 +153,7 @@ export const layer2Data: Rollups = [
     blockExplorerLink: "https://scrollscan.com",
     bridgeLink: "https://scroll.io/bridge",
     l2BeatLink: "https://l2beat.com/scaling/projects/scroll",
-    growthepieLink: "https://www.growthepie.xyz/chains/scroll",
+    growthepieLink: "https://www.growthepie.com/chains/scroll",
     feeToken: ["ETH"],
   },
   {
@@ -169,7 +169,7 @@ export const layer2Data: Rollups = [
     blockExplorerLink: "https://starkscan.co/",
     bridgeLink: "https://starkgate.starknet.io/",
     l2BeatLink: "https://l2beat.com/scaling/projects/starknet",
-    growthepieLink: "https://www.growthepie.xyz/chains/starknet",
+    growthepieLink: "https://www.growthepie.com/chains/starknet",
     feeToken: ["ETH", "STRK"],
   },
   {
@@ -185,7 +185,7 @@ export const layer2Data: Rollups = [
     blockExplorerLink: "https://explorer.mode.network/",
     bridgeLink: "https://app.mode.network/",
     l2BeatLink: "https://l2beat.com/scaling/projects/mode",
-    growthepieLink: "https://www.growthepie.xyz/chains/mode",
+    growthepieLink: "https://www.growthepie.com/chains/mode",
     feeToken: ["ETH"],
   },
   {
@@ -201,7 +201,7 @@ export const layer2Data: Rollups = [
     blockExplorerLink: "https://taikoscan.io/",
     bridgeLink: "https://bridge.taiko.xyz/",
     l2BeatLink: "https://l2beat.com/scaling/projects/taiko",
-    growthepieLink: "https://www.growthepie.xyz/chains/taiko",
+    growthepieLink: "https://www.growthepie.com/chains/taiko",
     feeToken: ["ETH"],
   },
 ]

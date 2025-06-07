@@ -50,7 +50,7 @@ const Layer2Networks = ({ layer2Data, locale, mainnetData }) => {
             <ButtonLink href="https://l2beat.com">
               {t("page-layer-2-networks-more-advanced-link-1")}
             </ButtonLink>
-            <ButtonLink href="https://growthepie.xyz">
+            <ButtonLink href="https://growthepie.com">
               {t("page-layer-2-networks-more-advanced-link-2")}
             </ButtonLink>
           </div>

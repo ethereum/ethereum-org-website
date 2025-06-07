@@ -146,7 +146,7 @@ export const useNetworkColumns: ColumnDef<ExtendedRollup>[] = [
                   </p>
                   <p>
                     <Translation id="page-layer-2-networks:page-layer-2-networks-data-from" />{" "}
-                    <InlineLink href="https://growthepie.xyz">
+                    <InlineLink href="https://growthepie.com">
                       growthepie
                     </InlineLink>
                     <Translation id="page-layer-2-networks:page-layer-2-networks-period" />
