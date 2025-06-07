@@ -155,7 +155,7 @@ Amikor ERC-20 tokeneket küldenek olyan okosszerződésbe, amely nem tudja azoka
 3.  Nincs beépített kezelés
     -   Az ERC-20 szabvány nem köti ki a kötelező funkciót a befogadó szerződésnek, ezért számos szerződés képtelen a beérkező tokenek megfelelő kezelésére
 
-Néhány alternatív szabvány létezik ennek a problémának a kezelésére, mint az [ERC-223](/developers/docs/standards/tokens/erc-223)
+Néhány alternatív szabvány létezik ennek a problémának a kezelésére, mint az [ERC-223](/developers/docs/standards/tokens/erc-223), [ERC-1363](/developers/docs/standards/tokens/erc-1363).
 
 ## További olvasnivaló {#further-reading}
 
@@ -168,5 +168,6 @@ Néhány alternatív szabvány létezik ennek a problémának a kezelésére, mi
 ## További helyettesíthető tokenekről szóló szabványok {#fungible-token-standards}
 
 - [ERC-223](/developers/docs/standards/tokens/erc-223)
+- [ERC-1363](/developers/docs/standards/tokens/erc-1363)
 - [ERC-777](/developers/docs/standards/tokens/erc-777)
 - [ERC-4626 - Tokenizált értékmegőrzőre vonatkozó szabvány](/developers/docs/standards/tokens/erc-4626)
