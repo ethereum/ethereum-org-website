@@ -133,7 +133,7 @@ const DevelopersPage = async ({
               sizes="100vw"
               style={{ width: "100vw", objectFit: "cover" }}
             />
-            <div className="z-[1] space-y-4 break-words p-6 md:space-y-6 lg:p-12">
+            <div className="z-[1] space-y-4 break-words px-6 py-10 md:space-y-6 lg:p-12">
               <h3>{t("page-developers-start-experimenting")}</h3>
               <p>{t("page-developers-speedrunethereum-description")}</p>
               <ButtonLink
@@ -146,7 +146,7 @@ const DevelopersPage = async ({
             </div>
           </div>
 
-          <Card className="!space-y-8 break-words border border-accent-c/20 bg-gradient-to-t from-accent-c/15 to-accent-c/5 p-6 md:space-y-6 lg:p-12">
+          <Card className="!space-y-8 break-words border border-accent-c/20 bg-gradient-to-t from-accent-c/15 to-accent-c/5 px-6 py-10 md:space-y-6 lg:p-12">
             <h3>{t("page-developers-jump-right-in-title")}</h3>
             <div className="space-y-6">
               {quickstarts.map(({ description, command }) => (
