@@ -1,4 +1,6 @@
+import { Suspense } from "react"
 import { pick } from "lodash"
+import dynamic from "next/dynamic"
 import {
   getMessages,
   getTranslations,
@@ -14,6 +16,7 @@ import MainArticle from "@/components/MainArticle"
 import Translation from "@/components/Translation"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
+import { Skeleton } from "@/components/ui/skeleton"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 import { cn } from "@/lib/utils/cn"
@@ -28,13 +31,16 @@ import CountDown from "./_components/CountDown"
 import { adoptionCards, adoptionStyles } from "./_components/data"
 import InnovationSwiper from "./_components/InnovationSwiper"
 import Stories from "./_components/Stories"
-import TenYearGlobe from "./_components/TenYearGlobe"
 import TenYearHero from "./_components/TenYearHero"
 import { parseStoryDates } from "./_components/utils"
 
 import { fetch10YearEvents } from "@/lib/api/fetch10YearEvents"
 import { fetch10YearStories } from "@/lib/api/fetch10YearStories"
 import TenYearLogo from "@/public/images/10-year-anniversary/10-year-logo.png"
+
+const TenYearGlobe = dynamic(() => import("./_components/TenYearGlobe"), {
+  ssr: false,
+})
 
 // In seconds
 const REVALIDATE_TIME = BASE_TIME_UNIT * 1
@@ -100,16 +106,22 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                 {t("page-10-year-join-party-description")}
               </p>
             </div>
-            <div>
-              <TenYearGlobe
-                events={Object.values(fetched10YearEvents).flatMap((region) =>
-                  region.events.map((event) => ({
-                    ...event,
-                    lat: Number(event.lat),
-                    lng: Number(event.lng),
-                  }))
-                )}
-              />
+            <div className="h-[max(fit,260px)] sm:h-[400px] md:h-[500px] lg:h-[600px]">
+              <Suspense
+                fallback={
+                  <Skeleton className="mx-auto aspect-square h-full rounded-full bg-primary/20 blur-2xl" />
+                }
+              >
+                <TenYearGlobe
+                  events={Object.values(fetched10YearEvents).flatMap((region) =>
+                    region.events.map((event) => ({
+                      ...event,
+                      lat: Number(event.lat),
+                      lng: Number(event.lng),
+                    }))
+                  )}
+                />
+              </Suspense>
             </div>
           </div>
         </div>
@@ -358,7 +370,7 @@ export async function generateMetadata({
 
   return await getMetadata({
     locale,
-    slug: ["10-year-anniversary"],
+    slug: ["10years"],
     title: t("page-10-year-anniversary-meta-title"),
     description: t("page-10-year-anniversary-meta-description"),
   })
