@@ -4,9 +4,14 @@ description: Μια εξήγηση λειτουργίας της κρυπτόρ�
 lang: el
 ---
 
-<InfoBanner emoji=":wave:">
+<Alert variant="update">
+<AlertEmoji text=":wave:"/>
+<AlertContent>
+<AlertDescription>
 Η απόδειξη εργασίας δεν αποτελεί πλέον μέρος του μηχανισμού συναίνεσης του Ethereum, πράγμα που σημαίνει ότι η κρυπτόρυξη έχει απενεργοποιηθεί. Αντίθετα, το Ethereum εξασφαλίζεται από επαληθευτές που έχουν αποθηκευμένο κεφάλαιο σε ETH. Μπορείτε να ξεκινήσετε την αποθήκευση των ETH σας σήμερα. Μάθετε περισσότερα για τη <a href='/roadmap/merge/'>Συγχώνευση</a>, την <a href='/developers/docs/consensus-mechanisms/pos/'>Απόδειξη Συμμετοχής</a> και την <a href='/staking/'>Αποθήκευση Κεφαλαίου</a>. Αυτή η σελίδα παρέχεται μόνο για ιστορικό ενδιαφέρον.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## Προαπαιτούμενα {#prerequisites}
 

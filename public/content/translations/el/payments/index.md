@@ -58,12 +58,15 @@ summaryPoint3: Πληρωμές που λήφθηκαν μέσα σ' ένα λε
 
 Σε χώρες όπου τα μέσα πληρωμής έχουν αποκοπεί από τον υπόλοιπο κόσμο, οι λύσεις πληρωμών που ενσωματώνουν κρυπτονομίσματα παρείχαν μεγάλη ανακούφιση. Οι πληρωμές συνδρομών για πλατφόρμες όπως το Netflix, το Spotify και εκπαιδευτικά μαθήματα έχουν πλέον διευκολυνθεί μέσω πλατφορμών πληρωμών κρυπτονομισμάτων όπως οι Gnosis Pay και Paypal.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="flex-row items-center justify-between">
   <div>Δημιουργήστε τον λογαριασμό σας Ethereum με μια εφαρμογή πορτοφολιού σήμερα.</div>
   <ButtonLink href="/wallets/find-wallet">
     Ξεκινήστε
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Πληρωμές Μισθών {#salary-payments}
 
@@ -147,9 +150,12 @@ summaryPoint3: Πληρωμές που λήφθηκαν μέσα σ' ένα λε
 
 Από τη διευκόλυνση της ταχείας ανακούφισης καταστροφών έως την ενδυνάμωση των εργαζομένων παγκοσμίως, οι πληρωμές Ethereum γράφουν ένα νέο κεφάλαιο στη μακρά ιστορία του χρήματος. Ενώ παραμένουν προκλήσεις, τα μοναδικά πλεονεκτήματα που προσφέρει αυτή η τεχνολογία την καθιστούν μια ελκυστική επιλογή για ένα ευρύ φάσμα περιπτώσεων χρήσης.
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="flex-row items-center justify-between">
   <div>Ώρα να αποκτήσετε τον δικό σας λογαριασμό Ethereum.</div>
   <ButtonLink href="/wallets/find-wallet">
     Ξεκινήστε
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>

@@ -240,9 +240,13 @@ Your `.env` should now look like this:
 
 Untuk betul-betul menghubungkannya ke kode kita, kita akan mereferensikan variabel-variabel ini dalam berkas hardhat.config.js kita pada langkah ke-13.
 
-<InfoBanner isWarning>
+<Alert variant="warning">
+<AlertContent>
+<AlertDescription>
 Don't commit <code>.env</code>! Please make sure never to share or expose your <code>.env</code> file with anyone, as you are compromising your secrets in doing so. If you are using version control, add your <code>.env</code> to a <a href="https://git-scm.com/docs/gitignore">gitignore</a> file.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## Langkah 12: Instal Ethers.js {#install-ethers}
 

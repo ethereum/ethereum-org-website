@@ -57,9 +57,9 @@ Si alguien conoce las ubicaciones aleatorias utilizadas para el compromiso, le r
 
 </ExpandableCard>
 
-<InfoBanner isWarning mb={8}>
+<Alert variant="warning" className="mb-8">
   Ni Danksharding ni Proto-Danksharding siguen el modelo tradicional de "sharding" que tiene como objetivo dividir la cadena de bloques en varias partes. Las cadenas de fragmentación ya no forman parte de la hoja de ruta. En su lugar, Danksharding utiliza el muestreo distribuido de datos en varias masas para escalar Ethereum. Su implementación es mucho más sencilla. A este modelo a veces se le denomina «fragmentación de datos».
-</InfoBanner>
+</Alert>
 
 ## ¿Qué es Danksharding? {#what-is-danksharding}
 

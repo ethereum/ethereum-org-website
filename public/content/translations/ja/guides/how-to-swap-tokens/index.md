@@ -49,12 +49,15 @@ lang: ja
 一度トランザクションが成功すると、スワップしたトークンはウォレットに自動で受け取ることができます。
 <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>詳細をご希望の場合は、</div>
   <ButtonLink href="/guides/">
     他のガイドを参照する
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## よくある質問
 

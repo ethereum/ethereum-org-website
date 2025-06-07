@@ -49,12 +49,15 @@ Anda bisa melihat perkembangan transaksi di penjelajah rantai blok mana pun. Pro
 Anda akan secara otomatis menerima token yang ditukar di dompet Anda setelah transaksi diproses.
 <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Ingin mempelajari selengkapnya?</div>
   <ButtonLink href="/guides/">
     Lihat panduan lainnya
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Pertanyaan yang sering diajukan
 

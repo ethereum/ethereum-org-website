@@ -40,12 +40,15 @@ Sommige apps vragen je om een geheime "herstelzin" op te slaan (soms een "zaadzi
 **Iedere persoon die de zin kent, heeft ook toegang tot alle fondsen.** Deel hem nooit met iemand. Deze zin moet 12 tot 24 willekeurig gegenereerde woorden bevatten (de volgorde van de woorden is belangrijk).
 
 <div>
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="flex-row justify-between items-center">
   <div><b>Portemonnee geïnstalleerd? </b><br/>Leer hoe je deze moet gebruiken.</div>
   <ButtonLink href="/guides/how-to-use-a-wallet">
     Hoe een wallet gebruiken
   </ButtonLink>
-</InfoBanner>
+ </AlertContent>
+</Alert>
 </div>
 
 Geïnteresseerd in andere gidsen? Bekijk onze: [Stap-voor-stap gidsen](/guides/)

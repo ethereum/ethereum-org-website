@@ -4,9 +4,14 @@ description: 解釋以太坊挖礦的運作方式。
 lang: zh-tw
 ---
 
-<InfoBanner emoji=":wave:">
+<Alert variant="update">
+<AlertEmoji text=":wave:"/>
+<AlertContent>
+<AlertDescription>
 工作量證明不再是以太坊共識機制的基礎，這意味著挖礦已完結。 取而代之的是，以太坊由抵押以太幣的驗證者來保障安全。 你能從現在開始質押以太幣。 閱讀更多關於<a href='/roadmap/merge/'>合併</a>、<a href='/developers/docs/consensus-mechanisms/pos/'>權益證明</a>和<a href='/staking/'>質押</a>的資訊。 此頁面僅為滿足對歷史的興趣。
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## 基本資訊 {#prerequisites}
 

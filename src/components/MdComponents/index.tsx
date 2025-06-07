@@ -17,11 +17,11 @@ import ExpandableCard from "../ExpandableCard"
 import FeaturedText from "../FeaturedText"
 import GlossaryTooltip from "../Glossary/GlossaryTooltip"
 import IdAnchor from "../IdAnchor"
-import InfoBanner from "../InfoBanner"
 import IssuesList from "../IssuesList"
 import LocaleDateTime from "../LocaleDateTime"
 import MainArticle from "../MainArticle"
 import { StandaloneQuizWidget } from "../Quiz/QuizWidget"
+import * as AlertComponents from "../ui/alert"
 import { ButtonLink } from "../ui/buttons/Button"
 import { Divider } from "../ui/divider"
 import { Flex } from "../ui/flex"
@@ -153,6 +153,7 @@ export const ContentContainer = (props: ComponentProps<"article">) => {
 
 // All custom React components
 export const reactComponents = {
+  ...AlertComponents,
   ButtonLink,
   Card,
   ContentContainer,
@@ -164,7 +165,6 @@ export const reactComponents = {
   ExpandableCard,
   FeaturedText,
   GlossaryTooltip,
-  InfoBanner,
   Page,
   QuizWidget: StandaloneQuizWidget,
   IssuesList,

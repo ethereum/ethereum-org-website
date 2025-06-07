@@ -61,9 +61,14 @@ Cé go bhfuil tomhaltas fuinnimh Ethereum an-íseal, tá pobal [**airgeadais ath
 
 Reáchtálann ardáin mhaoinithe earraí poiblí dúchasacha Web3 ar nós [Gitcoin](https://gitcoin.co) babhtaí aeráide chun tógáil atá comhfhiosach don chomhshaol a spreagadh ar chiseal feidhmchlár Ethereum. Trí fhorbairt na dtionscnamh seo (agus cinn eile, m.sh. [DeSci](/desci/)), tá Ethereum ag éirí mar theicneolaíocht atá dearfach ó thaobh an chomhshaoil ​​agus na sochaí de.
 
-<InfoBanner emoji=":evergreen_tree:">
+<Alert variant="update">
+<AlertEmoji text=":evergreen_tree:" />
+<AlertContent>
+<AlertDescription>
   Má cheapann tú gur féidir an leathanach seo a dhéanamh níos cruinne, cuir ceist nó PR le do thoil. Is meastacháin iad na staitisticí ar an leathanach seo bunaithe ar shonraí atá ar fáil go poiblí - ní léiríonn siad ráiteas oifigiúil nó gealltanas ó fhoireann ethereum.org nó ó Fhondúireacht Ethereum.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ## Tuilleadh léitheoireachta {#further-reading}
 

@@ -76,9 +76,12 @@ Los botones de la parte superior le permiten cambiar a la sección de coincidenc
 
 Una vez que complete la traducción (es decir, cuando todos los archivos de un lote de contenido indiquen un 100%), nuestro servicio de traducción profesional revisará (y editará personalmente) el contenido. Cuando la revisión esté lista (cuando el progreso de la revisión sea 100 %), añadiremos la traducción al sitio web.
 
-<InfoBanner shouldCenter emoji=":warning:">
+<Alert variant="update">
+<AlertEmoji text=":warning:"/>
+<AlertContent>
   No utilice la traducción automática para traducir el proyecto. Todas las traducciones serán revisadas antes de ser añadidas al sitio web. Si sus traducciones resultan ser traducciones automáticas, serán rechazadas y los colaboradores que utilicen ltraducción automática posiblemente serán eliminados del proyecto.
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ### Contáctenos {#get-in-touch}
 

@@ -57,9 +57,9 @@ summaryPoints:
 
 </ExpandableCard>
 
-<InfoBanner isWarning mb={8}>
+<Alert variant="warning" className="mb-8">
   Ούτε το Danksharding ούτε το Proto-Danksharding ακολουθούν το παραδοσιακό μοντέλο «τμηματοποίησης» που στοχεύει στον διαχωρισμό της κρυπτοαλυσίδας σε πολλαπλά μέρη. Οι αλυσίδες shard δεν αποτελούν πλέον μέρος του οδικού χάρτη. Αντίθετα, το Danksharding χρησιμοποιεί δειγματοληψία κατανεμημένων δεδομένων σε blobs για την κλιμάκωση του Ethereum. Αυτό είναι πολύ απλούστερο στην εφαρμογή. Αυτό το μοντέλο έχει μερικές φορές αναφερθεί ως «data-sharding».
-</InfoBanner>
+</Alert>
 
 ## Τι είναι το Danksharding; {#what-is-danksharding}
 

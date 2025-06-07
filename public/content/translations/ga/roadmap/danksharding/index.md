@@ -57,9 +57,9 @@ Más eol do dhuine na láithreacha randamacha a úsáideadh don tiomantas, is fu
 
 </ExpandableCard>
 
-<InfoBanner isWarning mb={8}>
+<Alert variant="warning" className="mb-8">
   Ní leanann Danksharding ná Proto-Danksharding an tsamhail thraidisiúnta "sharding" a bhfuil sé mar aidhm aige an blocshlabhra a roinnt ina ilchodanna. Níl slabhraí shard mar chuid den treochlár a thuilleadh. Ina áit sin, úsáideann Danksharding sampláil sonraí dáilte ar fud blobaí chun Ethereum a scálú. Tá sé seo i bhfad níos simplí a chur i bhfeidhm. Tagraítear don tsamhail seo uaireanta mar “scriosadh sonraí”.
-</InfoBanner>
+</Alert>
 
 ## Cad is Danksharding ann? {#what-is-danksharding}
 
