@@ -86,9 +86,9 @@ Erfahren Sie mehr über die [Kombinierbarkeit von Smart Contracts](/developers/d
 
 ## Einschränkungen {#limitations}
 
-Smart Contracts allein können keine Informationen über Ereignisse in der „realen Welt“ erhalten, da sie keine Daten von Quellen außerhalb der Kette abrufen können. Das bedeutet, dass sie nicht auf Ereignisse in der realen Welt reagieren können. Das ist beabsichtigt. Sich auf externe Informationen zu verlassen, könnte den für Sicherheit und Dezentralisierung wichtigen Konsens gefährden.
+Smart Contracts allein können keine Informationen über „echte Welt“-Ereignisse erhalten, da sie keine Daten von Offchain-Quellen abrufen können. Das bedeutet, dass sie nicht auf Ereignisse in der realen Welt reagieren können. Das ist beabsichtigt. Sich auf externe Informationen zu verlassen, könnte den für Sicherheit und Dezentralisierung wichtigen Konsens gefährden.
 
-Für Blockchain-Anwendungen ist es jedoch wichtig, dass sie auch Daten außerhalb der Chain benutzen können. Die Lösung sind [Orakel](/developers/docs/oracles/), d. h. Tools, die Off-Chain-Daten aufnehmen und sie für Smart Contracts verfügbar machen.
+Allerdings ist es wichtig, dass Blockchain-Anwendungen Off-Chain-Daten nutzen können. Die Lösung sind [Orakel](/developers/docs/oracles/), also Werkzeuge, die Off-Chain-Daten aufnehmen und sie für Smart Contracts verfügbar machen.
 
 Eine weitere Einschränkung von Smart Contracts ist die maximale Vertragsgröße. Ein Smart Contract kann maximal 24 KB groß sein, sonst gehen ihm die Ressourcen aus. Das kann mit [The Diamond Pattern](https://eips.ethereum.org/EIPS/eip-2535) behoben werden.
 
