@@ -27,8 +27,6 @@ RWA tokens don’t have any intrinsic value. Rather, they reflect the value of t
 
 ## What are the benefits of RWAs? {#rwas-benifits}
 
-Unlike traditional forecasting, blockchain-based prediction markets are:
-
 <CardGrid className="grid grid-cols-[repeat(auto-fill,_minmax(min(100%,_280px),_1fr))] gap-8">
   <Card title="Fractional Ownership" emoji=":house_buildings:" description="RWAs democratize investment. If you’re locked out of investing in certain asset types because you can’t afford to buy into those markets, you can now do so as a partial owner."/>
   <Card title="Investment diversification" emoji="🛒" description="You can invest in multiple types of asset, allowing you to diversify your portfolio without spending hedge-fund sums of money." />

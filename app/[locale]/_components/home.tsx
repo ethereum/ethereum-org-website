@@ -67,6 +67,8 @@ import { breakpointAsNumber } from "@/lib/utils/screen"
 
 import { GITHUB_REPO_URL } from "@/lib/constants"
 
+import TenYearHomeBanner from "../10years/_components/TenYearHomeBanner"
+
 import { useClipboard } from "@/hooks/useClipboard"
 import EventFallback from "@/public/images/events/event-placeholder.png"
 import BuildersImage from "@/public/images/heroes/developers-hub-hero.jpg"
@@ -120,13 +122,9 @@ const HomePage = ({
     <MainArticle className="flex w-full flex-col items-center" dir={dir}>
       <BannerNotification shouldShow={locale === "en"}>
         <p>
-          Let&apos;s celebrate 10 years of Ethereum! How did ethereum change
-          your life? -{" "}
-          <Link
-            href="https://ethereumstory.paperform.co/"
-            className="text-white"
-          >
-            share your story
+          10 years of Ethereum! -{" "}
+          <Link href="/10years/" className="text-white">
+            Join us to celebrate 10 years of Ethereum!
           </Link>
         </p>
       </BannerNotification>
@@ -610,6 +608,13 @@ const HomePage = ({
           </SectionContent>
         </Section>
 
+        <Section
+          id="10-year-anniversary"
+          className={cn(locale !== "en" && "hidden")} // TODO: Show again when translations ready
+        >
+          <TenYearHomeBanner />
+        </Section>
+
         {/* Recent posts */}
         <Section id="recent">
           <h3 className="mb-4 mt-2 text-4xl font-black lg:text-5xl">
@@ -651,6 +656,8 @@ const HomePage = ({
                           e.currentTarget.onerror = null
                           e.currentTarget.src = EventFallback.src
                         }}
+                        referrerPolicy="no-referrer"
+                        crossOrigin="anonymous"
                       />
                     </CardBanner>
                     <CardContent>
@@ -738,6 +745,8 @@ const HomePage = ({
                           }}
                           className="max-w-full object-cover object-center"
                           loading="lazy"
+                          referrerPolicy="no-referrer"
+                          crossOrigin="anonymous"
                         />
                       ) : (
                         <Image src={EventFallback} alt="" />

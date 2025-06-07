@@ -1,4 +1,5 @@
-import pick from "lodash.pick"
+import { pick } from "lodash"
+import { notFound } from "next/navigation"
 import {
   getMessages,
   getTranslations,
@@ -13,20 +14,25 @@ import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { isValidDate } from "@/lib/utils/date"
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
+import { getMetadata } from "@/lib/utils/metadata"
 import { polishRSSList } from "@/lib/utils/rss"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import {
+  ATTESTANT_BLOG,
   BASE_TIME_UNIT,
   BLOG_FEEDS,
   BLOGS_WITHOUT_FEED,
   CALENDAR_DISPLAY_COUNT,
+  DEFAULT_LOCALE,
+  LOCALES_CODES,
   RSS_DISPLAY_COUNT,
 } from "@/lib/constants"
 
 import HomePage from "./_components/home"
 
+import { routing } from "@/i18n/routing"
 import { fetchCommunityEvents } from "@/lib/api/calendarEvents"
 import { fetchEthPrice } from "@/lib/api/fetchEthPrice"
 import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
@@ -37,7 +43,8 @@ import { fetchTotalValueLocked } from "@/lib/api/fetchTotalValueLocked"
 
 // API calls
 const fetchXmlBlogFeeds = async () => {
-  return await fetchRSS(BLOG_FEEDS)
+  const xmlUrls = BLOG_FEEDS.filter((feed) => ![ATTESTANT_BLOG].includes(feed))
+  return await fetchRSS(xmlUrls)
 }
 
 // In seconds
@@ -58,6 +65,8 @@ const loadData = dataLoader(
 
 const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const { locale } = await params
+
+  if (!LOCALES_CODES.includes(locale)) return notFound()
 
   setRequestLocale(locale)
 
@@ -127,12 +136,38 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   )
 }
 
-export async function generateMetadata() {
-  const t = await getTranslations()
+export async function generateStaticParams() {
+  return routing.locales.map((locale) => ({
+    locale,
+  }))
+}
 
-  return {
-    title: t("page-index.page-index-meta-title"),
-    description: t("page-index.page-index-meta-description"),
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params
+
+  try {
+    const t = await getTranslations({ locale, namespace: "page-index" })
+    return await getMetadata({
+      locale,
+      slug: [""],
+      title: t("page-index-meta-title"),
+      description: t("page-index-meta-description"),
+    })
+  } catch (error) {
+    const t = await getTranslations({
+      locale: DEFAULT_LOCALE,
+      namespace: "common",
+    })
+
+    // Return basic metadata for invalid paths
+    return {
+      title: t("page-not-found"),
+      description: t("page-not-found-description"),
+    }
   }
 }
 
