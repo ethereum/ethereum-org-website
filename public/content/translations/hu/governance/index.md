@@ -22,13 +22,13 @@ Az Ethereum protokollt nem birtokolja vagy kontrollálja senki, ugyanakkor a vá
 
 Az Ethereum irányítása (governance) az a folyamat, amely által a protokoll megváltoztatható. Fontos kiemelni, hogy ez nem kapcsolódik ahhoz, hogy az emberek és az alkalmazások hogyan használják a protokollt, mert az Ethereum egy engedélymentes hálózat. A világon bárki bárhonnan részt vehet a láncon zajló tevékenységekben. Nincsenek olyan szabályok, hogy ki csinálhat vagy nem csinálhat alkalmazást vagy indíthat tranzakciókat. Ugyanakkor van egy folyamat, mellyel változásokat lehet kezdeményezni a protokollban, amelyre a decentralizált alkalmazások épülnek. Mivel sok ember függ az Ethereum stabilitásától, ezért a kulcsváltozások koordinációs küszöbe nagyon magas, beleértve a közösségi és technikai folyamatokét is, hogy az Ethereum módosítása biztonságos és a közösség által széles körben támogatott legyen.
 
-### A láncon belüli és kívüli irányítás összehasonlítása {#on-chain-vs-off-chain}
+### A láncon belüli és kívüli irányítás összehasonlítása {#onchain-vs-offchain}
 
-A blokklánc-technológiával új irányítási képességek jelentek meg, mint amilyen a láncon belüli irányítás is. A láncon belüli irányítás az, amikor a javasolt protokollváltoztatásokat az érdekeltek megszavazzák, általában egy irányítási token birtokában, a szavazás pedig a láncon zajlik. A láncon belüli irányítás néhány esetében a javasolt változások már bele vannak írva a kódba és automatikusan végrehajtásra kerülnek, ha az érdekeltek jóváhagyják azt, aláírva a tranzakciót.
+A blokklánc-technológiával új irányítási képességek jelentek meg, mint amilyen a láncon belüli irányítás is. A láncon belüli irányítás az, amikor a javasolt protokollváltoztatásokat az érdekeltek megszavazzák, általában egy irányítási token birtokában, a szavazás pedig a láncon zajlik. A láncon belüli irányítás néhány esetében a javasolt változások már bele vannak írva a kódba és automatikusan végrehajtásra kerülnek, ha az érdekeltek az aláírásukkal jóváhagyják a tranzakciót.
 
-A másik megközelítés, a láncon kívüli irányítás az, amikor a protokoll változtatásait egy közösségi megvitatás informális folyamata vezérli, amit ha jóváhagynak, akkor teszik bele a kódba.
+A másik megközelítés a láncon kívüli irányítás, amikor a protokoll változtatásait a közösségi megvitatás informális folyamata vezérli, amely csak a jóváhagyást követően kerül bele a kódba.
 
-**Az Ethereum-irányítás láncon kívül történik** az érdekeltek széles körét bevonva.
+**Az Ethereum-irányítás a láncon kívül történik** az érdekeltek széles körét bevonva a folyamatba.
 
 _Miközben a protokollszintű Ethereum-irányítás láncon kívül zajlik, addig számos alkalmazási területe van a láncon belüli irányításnak, mint például a decentralizált autonóm szervezetek (DAO) működése._
 
@@ -180,3 +180,5 @@ Az Ethereumban az irányítás nincs szigorúan definiálva. A közösség kül�
 - [Kik az az Ethereum protokollfejlesztői?](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) – _Hudson Jameson_
 - [Irányítás, 2. rész: A plutokrácia még mindig rossz](https://vitalik.eth.limo/general/2018/03/28/plutocracy.html) – _Vitalik Buterin_
 - [Túl az érmealapú szavazásra épülő irányításon](https://vitalik.eth.limo/general/2021/08/16/voting3.html) – _Vitalik Buterin_
+- [A blokklánc irányítás megértése](https://research.2077.xyz/understanding-blockchain-governance) - _2077 Research_
+- [Az Ethereum irányítása](https://www.galaxy.com/insights/research/ethereum-governance/) - _Christine Kim_
