@@ -109,6 +109,7 @@ La fragmentation est la division de la blockchain Ethereum afin que des sous-ens
 
 ## Vous recherchez des mises à niveau techniques spécifiques ? {#looking-for-specific-technical-upgrades}
 
+- [Pectra](/roadmap/pectra) – La fourche majeure Prague/Electra qui introduit une nouvelle approche de l’abstraction de compte, améliore l'évolutivité et bien plus encore.
 - [Danksharding](/roadmap/danksharding) - Le Danksharding rend les rollups de couche 2 bien plus abordables pour les utilisateurs en ajoutant des « blob » de données aux blocs d'Ethereum.
 - [Retraits de Staking](/staking/withdrawals) - La mise à niveau Shanghai/Capella a activé les retraits de staking sur Ethereum, permettant aux gens de déverrouiller leurs ETH mis en jeu.
 - [Finalité à un seul créneau](/roadmap/single-slot-finality) - Au lieu d'attendre pendant 15 minutes, les blocks pourraient être proposés et finalisés dans le même créneau. Ceci est plus pratique pour les applications et bien plus difficilement attaquable.

@@ -80,7 +80,7 @@ def to_binary(x):
 - l'octet '\\x00' = `[ 0x00 ]`
 - l'octet '\\x0f' = `[ 0x0f ]`
 - les octets '\\x04\\x00' = `[ 0x82, 0x04, 0x00 ]`
-- la [représentation théorique en théorie des ensembles](https://fr.wikipedia.org/wiki/Construction_des_entiers_naturels) de trois, `[ [], [[]], [ [], [[]] ] ] = [ 0xc7, 0xc0, 0xc1, 0xc0, 0xc3, 0xc0, 0xc1, 0xc0 ]`
+- la [représentation théorique en théorie des ensembles](https://fr.wikipedia.org/wiki/Construction_des_entiers_naturels) de trois, `[ [], [[]], [ [], [[]] ] ] = [ 0xc7, 0xc0, 0xc1, 0xc0, 0xc3, 0xc0, 0xc0, 0xc1, 0xc0 ]`
 - la chaîne de caractères "Lorem ipsum dolor sit amet, consectetur adipisicing elit" = `[ 0xb8, 0x38, 'L', 'o', 'r', 'e', 'm', ' ', ... , 'e', 'l', 'i', 't' ]`
 
 ## Décodage RLP {#rlp-decoding}

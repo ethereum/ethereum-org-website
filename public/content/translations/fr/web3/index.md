@@ -6,6 +6,10 @@ lang: fr
 
 # Introduction au Web3 {#introduction}
 
+<div className="mt-4">
+<ListenToPlayer slug="/web3/" />
+</div>
+
 La centralisation a permis à des milliards de personnes d'accéder au World Wide Web et de créer l'infrastructure stable et robuste sur laquelle il repose. Dans le même temps, une poignée d'entités centralisées ont pris le contrôle de larges pans du World Wide Web, décidant de manière unilatérale de ce qui est autorisé ou non.
 
 Le Web3 est la réponse à ce dilemme. Contrairement à un Web dominé par les grandes entreprises technologiques, le Web3 est décentralisé et est construit, exploité et détenu par ses utilisateurs. Le Web3 donne le pouvoir aux individus plutôt qu'aux entreprises. Avant de parler du Web3, il faut comprendre comment nous en sommes arrivés là.

@@ -5,7 +5,7 @@ lang: fr
 sidebarDepth: 2
 ---
 
-**Simple serialize (SSZ)** est la méthode de sérialisation utilisée sur la chaîne phare. Elle remplace la sérialisation RLP utilisée sur la couche d'exécution dans toute la couche de consensus, à l'exception du protocole de découverte des pairs. SSZ est conçu pour être déterministe et pour effectuer un Merkleize efficace. On peut imaginer SSZ comme ayant deux composantes : un système de sérialisation et un système de Merkleization conçu pour fonctionner efficacement avec la structure de données sérialisées.
+**Simple serialize (SSZ)** est la méthode de sérialisation utilisée sur la chaîne phare. Elle remplace la sérialisation RLP utilisée sur la couche d'exécution dans toute la couche de consensus, à l'exception du protocole de découverte des pairs. Pour en savoir plus sur la sérialisation RLP, consultez [Préfixe de longueur récursive (RLP)](/developers/docs/data-structures-and-encoding/rlp/). SSZ est conçu pour être déterministe et pour effectuer un Merkleize efficace. On peut imaginer SSZ comme ayant deux composantes : un système de sérialisation et un système de Merkleization conçu pour fonctionner efficacement avec la structure de données sérialisées.
 
 ## Comment fonctionne SSZ ? {#how-does-ssz-work}
 

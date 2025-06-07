@@ -25,7 +25,6 @@ Nous sommes une communauté accueillante qui vous aidera à grandir et à vous f
 - [Créer/modifier du contenu](/contributing/#how-to-update-content) – Proposez de nouvelles pages ou des modifications de ce qui existe déjà
 - [Ajouter un article pour la communauté](/contributing/content-resources/) – Ajoutez un article utile à une page pertinente
 - [Suggérer une ressource de design](/contributing/design/adding-design-resources/) - Ajoutez, mettez à jour et supprimez des ressources de design utiles
-- [Ajouter un terme au glossaire](/contributing/adding-glossary-terms/) – Aidez-nous à poursuivre le développement du [glossaire](/glossary/) Ethereum
 - [Quiz](/contributing/quizzes/) - Ajoutez, mettez à jour et supprimez des questions de quiz sur une page pertinente
 
 **Idées de fonctionnalités**
@@ -90,7 +89,7 @@ Sur notre dépôt GitHub, nous avons des questions à faible barrière d'entrée
 
 Si votre contribution est intégrée à ethereum.org, vous aurez la possibilité de recevoir un badge spécial sur [Galxe](https://app.galxe.com/quest/ethereumorg). Un Onchain Achievement Token (OAT) est la preuve que vous avez contribué à rendre l'écosystème un peu plus incroyable.
 
-[En savoir plus sur les OAT](https://help.galxe.com/en/articles/7067290-galxe-oats-reward-and-celebrate-achievements)
+[En savoir plus sur les OAT](https://help.galxe.com/en/articles/9645630-create-quest-rewards#h_1c5d63ba03)
 
 ### Comment le récupérer
 1. Rejoignez notre [serveur Discord](https://discord.gg/ethereum-org).

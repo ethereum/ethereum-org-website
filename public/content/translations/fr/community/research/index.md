@@ -358,7 +358,7 @@ Les outils destinés aux développeurs Ethereum s'améliorent rapidement. Il res
 
 ### Oracles {#oracles}
 
-Les oracles importent des données hors chaîne sur la blockchain de manière décentralisée et sans autorisation. L'obtention de ces données sur la chaîne permet aux DApps d'être réactives aux phénomènes du monde réel, tels que les fluctuations de prix des actifs réels, les événements dans les applications hors chaîne, ou même les changements météorologiques.
+Les oracles importent des données hors chaîne sur la blockchain de manière décentralisée et sans autorisation. L'obtention de ces données sur la chaîne permet aux Dapps d'être réactives aux phénomènes du monde réel, tels que les fluctuations de prix des actifs réels, les événements dans les applications hors chaîne, ou même les changements météorologiques.
 
 #### Lectures de référence {#background-reading-18}
 
