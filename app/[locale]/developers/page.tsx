@@ -134,7 +134,7 @@ const DevelopersPage = async ({
               style={{ width: "100vw", objectFit: "cover" }}
             />
             <div className="z-[1] space-y-4 break-words px-6 py-10 md:space-y-6 lg:p-12">
-              <h3>{t("page-developers-start-experimenting")}</h3>
+              <h3>{t("page-developers-start")}</h3>
               <p>{t("page-developers-speedrunethereum-description")}</p>
               <ButtonLink
                 href="https://speedrunethereum.com/"
@@ -165,7 +165,7 @@ const DevelopersPage = async ({
                 variant="outline"
                 className="bg-background"
               >
-                Read the Solidity docs
+                {t("page-developers-solidity-docs")}
               </ButtonLink>
             </div>
           </Card>
