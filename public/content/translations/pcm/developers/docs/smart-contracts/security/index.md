@@ -515,7 +515,7 @@ If yu dey plan query on-chain orakol for asset prices, make yu konsida to dey yu
 
 - **[Cyfrin](https://cyfrin.io)** - _ Web3 sekurity pawahaus, to dey inkubate crypto sekurity thru products and smart kontract auditing savis._
 
-- **[ImmuneBytes](https://www.immunebytes.com//smart-contract-audit/)** - _ Web3 sekurity firm wey dey give sekurity audits for blockchain systems thru one team wey get ekspiriens auditors and best-in-class tools._
+- **[ImmuneBytes](https://immunebytes.com/smart-contract-audit/)** - _ Web3 sekurity firm wey dey give sekurity audits for blockchain systems thru one team wey get ekspiriens auditors and best-in-class tools._
 
 - **[Oxorio](https://oxor.io/)** - _ Smart kontract audits and blockchain sekurity savis wit expatise in EVM, Solidity, ZK, Cross-chain tech for crypto firms and DeFi projects._
 
