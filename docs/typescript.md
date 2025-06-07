@@ -14,7 +14,7 @@ const someVar: string = 'string'
 const someVar = 'string'
 ```
 
-Do declare a type for an unassigned variable when a type can not be inferred.
+Do declare a type for an unassigned variable when a type cannot be inferred.
 
 ```
 const someVar: string
