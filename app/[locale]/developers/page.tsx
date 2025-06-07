@@ -65,6 +65,17 @@ const DevelopersPage = async ({
     namespace: "common",
   })
 
+  const quickstarts = [
+    {
+      description: t("page-developers-quickstart-2-description"),
+      command: "npx create-eth@latest",
+    },
+    {
+      description: t("page-developers-quickstart-2-description"),
+      command: "npm init @rainbow-me/rainbowkit@latest",
+    },
+  ]
+
   const paths: DevelopersPath[] = [
     {
       emoji: ":woman_student:",
@@ -82,7 +93,7 @@ const DevelopersPage = async ({
     },
     {
       emoji: ":woman_scientist:",
-      title: t("page-developers-start"),
+      title: t("page-developers-resources"),
       description: t("page-developers-start-desc"),
       url: "/developers/learning-tools/",
       button: t("page-developers-play-code"),
@@ -93,17 +104,6 @@ const DevelopersPage = async ({
       description: t("page-developers-setup-desc"),
       url: "/developers/local-environment/",
       button: t("page-developers-choose-stack"),
-    },
-  ]
-
-  const quickstarts = [
-    {
-      description: t("page-developers-quickstart-2-description"),
-      command: "npx create-eth@latest",
-    },
-    {
-      description: t("page-developers-quickstart-2-description"),
-      command: "npm init @rainbow-me/rainbowkit@latest",
     },
   ]
 
