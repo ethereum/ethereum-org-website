@@ -77,7 +77,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   return (
     <I18nProvider locale={locale} messages={messages}>
       <MainArticle className="mx-auto flex w-full flex-col items-center">
-        <TenYearHero />
+        <TenYearHero locale={locale} />
 
         <div className="mt-16 flex w-full flex-col gap-16 px-8 py-4 md:flex-row md:py-8">
           <div className="flex flex-1 flex-col gap-5">

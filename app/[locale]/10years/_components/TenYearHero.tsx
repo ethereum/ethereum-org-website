@@ -1,15 +1,17 @@
-"use client"
+import { getTranslations } from "next-intl/server"
 
 import { Image } from "@/components/Image"
 import ParallaxImage from "@/components/Image/ParallaxImage"
 import Morpher from "@/components/Morpher"
 
-import { useTranslation } from "@/hooks/useTranslation"
 import TenYearBackgroundImage from "@/public/images/10-year-anniversary/10-year-background.png"
 import TenYearGraphicImage from "@/public/images/10-year-anniversary/10-year-graphic.png"
 
-const TenYearHero = () => {
-  const { t } = useTranslation("page-10-year-anniversary")
+const TenYearHero = async ({ locale }: { locale: string }) => {
+  const t = await getTranslations({
+    locale,
+    namespace: "page-10-year-anniversary",
+  })
 
   const WORDS = [
     t("page-10-year-censorship-resistance"),
