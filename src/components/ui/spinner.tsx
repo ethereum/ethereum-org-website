@@ -6,7 +6,7 @@ const Spinner = React.forwardRef<
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
   <div ref={ref} className={className} {...props}>
-    <CgSpinner className="animate-spin" />
+    <CgSpinner className="motion-safe:animate-spin motion-reduce:animate-pulse" />
   </div>
 ))
 Spinner.displayName = "Spinner"

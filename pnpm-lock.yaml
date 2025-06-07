@@ -186,7 +186,7 @@ importers:
         specifier: 0.32.6
         version: 0.32.6
       swiper:
-        specifier: ^11.1.10
+        specifier: ^11.2.8
         version: 11.2.8
       tailwind-merge:
         specifier: ^2.3.0

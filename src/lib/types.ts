@@ -1029,6 +1029,16 @@ export interface ITutorial {
   isExternal: boolean
 }
 
+type ValuesItem = {
+  label: string
+  content: string[]
+}
+
+export type ValuesPairing = {
+  legacy: ValuesItem
+  ethereum: ValuesItem
+}
+
 export type PageParams = {
   locale: string
 }
