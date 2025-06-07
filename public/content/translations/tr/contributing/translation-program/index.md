@@ -36,9 +36,9 @@ Ethereum.org Çeviri Programının [misyon ve vizyonu](/contributing/translation
 
 ### Şimdiye kadarki ilerleme durumumuz {#our-progress}
 
-- [**6.000'in üzerinde** çevirmen](/contributing/translation-program/contributors/)
-- **62** sitenin yayında olduğu dil sayısı
-- [**3 milyon** 2023'de çevrilen kelime sayısı](/contributing/translation-program/acknowledgements/)
+- [**6.900'ün üzerinde** çevirmen](/contributing/translation-program/contributors/)
+- **68** dilde yayınlanan site içeriği
+- [2024'te **2,89 milyon** kelime çevirisi](/contributing/translation-program/acknowledgements/)
 
 <TranslationChartImage />
 

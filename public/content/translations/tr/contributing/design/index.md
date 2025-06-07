@@ -6,7 +6,7 @@ lang: tr
 
 # Ethereum.org için tasarım katkısı {#design-contributions}
 
-Tasarım, herhangi bir projenin kritik bir bileşenidir; zamanınızı ve tasarım yeteneklerinizi Ethereum.org'a ayırarak ziyaretçilerimiz için kullanıcı deneyimini iyileştirmeye yardımcı olabilirsiniz. Açık kaynaklı bir projeye katkıda bulunmak, size iş birliğine dayalı bir ortamda konuyla alakalı deneyim kazanma ve becerilerinizi geliştirme fırsatı sunar. Her biri eşsiz perspektif ve bilgilere sahip tasarımcılar, geliştiriciler ve topluluk üyeleri ile çalışma şansına sahip olacaksınız.
+Tasarım, her projenin kritik bir parçasıdır. Siz de zamanınızı ve tasarım yeteneklerinizi ethereum.org'a ayırarak ziyaretçilerimizin kullanıcı deneyimini artırmamıza yardımcı olabilirsiniz. Açık kaynaklı bir projeye katkıda bulunmak, size iş birliğine dayalı bir ortamda konuyla alakalı deneyim kazanma ve becerilerinizi geliştirme fırsatı sunar. Her biri eşsiz perspektif ve bilgilere sahip tasarımcılar, geliştiriciler ve topluluk üyeleri ile çalışma şansına sahip olacaksınız.
 
 Sonuç olarak bu, tasarım becerilerinizi sergileyeceğiniz çeşit çeşit ve etkileyici bir portföy inşa etmenizin harika bir yoludur.
 
@@ -30,7 +30,7 @@ Web sitemiz hakkında geribildirim sağlayın:
 
 ### <Emoji text=":three:" size={1} /> &nbsp;Web sitesindeki tasarımla ilgili sorunları bulun ve bildirin {#report-design-issues}
 
-Ethereum.org, birçok içeriğe ve özelliğe sahip, hızla büyüyen bir web sitesidir. Bazı kullanıcı arayüzleri, kolayca güncelliğini yitirebilir ya da geliştirilebilir. Böyle bir durumla karşılaşırsanız, dikkate almamız için lütfen bize bildirin.
+ethereum.org, birçok özelliğe ve içeriğe sahip, hızla büyüyen bir web sitesidir. Bazı kullanıcı arayüzleri, kolayca güncelliğini yitirebilir ya da geliştirilebilir. Böyle bir durumla karşılaşırsanız, dikkate almamız için lütfen bize bildirin.
 
 1. Web sitesine gidin ve tasarımları dikkatle inceleyin.
 2. Herhangi bir görsel sorun ya da kullanıcı deneyimi sorunu görürseniz, ekran görüntüsü ve notlar alın.
@@ -51,10 +51,10 @@ Tasarım sistemimiz, ethereum.org'u tasarlamayı eğlenceli ve kolay hale getiri
 
 1. GitHub'da [tasarım sistemi panosundan](https://github.com/ethereum/ethereum-org-website/labels/design%20system), üzerinde çalışmak üzere bir konu seçin ya da yeni bir tane oluşturun.
 2. Seçtiğiniz konunun size atanmasını talep edin.
-3. İstediğiniz bileşeni figma'da tasarlamaya başlayın.
+3. Talep edilen bileşeni Figma'da tasarlamaya başlayın.
 4. Değerlendirmeye ya da rehberliğe ihtiyaç duyarsanız GitHub üzerinden tasarım ekibi ile paylaşın.
 5. Tasarım ekibi inceleyecektir.
-6. Tasarım ekibi, değişiklikleri ana dosyada toplayacak ve bu dosyayı topluluk ile paylaşacaktır.
+6. Tasarım ekibi, değişiklikleri ana dosyada toplayacak ve dosyayı toplulukla paylaşacaktır.
 
 ### <Emoji text=":six:" size={1} /> &nbsp;Web sitesinde tasarımla ilgili içerik yazın {#write-design-articles}
 
@@ -64,7 +64,7 @@ Ethereum geliştirici topluluğu güçlü olsa da, tasarım topluluğu biraz dah
 2. GitHub depomuza gidin ve konu başlığı önererek [bir konu açın](https://github.com/ethereum/ethereum-org-website/issues/new) (henüz içeriği yazmayın).
 3. Onaylaması için tasarım ekibini bekleyin.
 4. Onaylandıktan sonra içeriği yazın.
-5. İlgili GH konusunda sunun.
+5. İlgili GitHub sorununa yükleyin.
 
 ### <Emoji text=":seven:" size={1} /> &nbsp;Yeni illüstrasyonlar çizin {#prepare-illustrations}
 
