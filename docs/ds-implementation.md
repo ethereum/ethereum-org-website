@@ -6,7 +6,7 @@ This is part of our [Design System implementation epic](https://github.com/ethe
 
 ## Basics
 
-- Use Chakra tokens for spacing, sizes, and breakpoints. [Chakra theme docs](https://chakra-ui.com/docs/styled-system/theme)
+- Use Chakra tokens for spacing, sizes, and breakpoints. [Chakra theme docs](https://chakra-ui.com/docs/components/theme)
 - For colors use the semantic tokens defined in [this file](https://github.com/ethereum/ethereum-org-website/blob/dev/src/%40chakra-ui/semanticTokens.ts). These tokens will match the color variables used in the DS Figma file
 - Use as many Chakra components and utils as possible
 - Read the [Best Practices doc](https://github.com/ethereum/ethereum-org-website/blob/dev/docs/best-practices.md) for more examples and info
