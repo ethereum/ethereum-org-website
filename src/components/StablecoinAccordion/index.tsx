@@ -1,3 +1,4 @@
+import { useState } from "react"
 import { MdArrowForward } from "react-icons/md"
 
 import { ChildOnlyProp, TranslationKey } from "@/lib/types"
@@ -18,6 +19,7 @@ import {
   RightColumnPanel,
 } from "./AccordionCustomItem"
 import { useStablecoinAccordion } from "./useStablecoinAccordion"
+import { CategoryNameType } from "./utils"
 
 import { useTranslation } from "@/hooks/useTranslation"
 
@@ -61,13 +63,18 @@ const H4 = (props: ChildOnlyProp) => (
 const StablecoinAccordion = () => {
   const { cardListGroups } = useStablecoinAccordion()
   const { t } = useTranslation("page-stablecoins")
+  const [openItem, setOpenItem] = useState<CategoryNameType | null>(null)
 
   // Overrides CardList default image width
   const DEFAULT_IMAGE_WIDTH = 24
 
   return (
     <Accordion type="single" className="w-full rounded" collapsible>
-      <AccordionCustomItem category="dapps">
+      <AccordionCustomItem
+        category="dapps"
+        isOpen={openItem === "dapps"}
+        onOpenChange={(isOpen) => setOpenItem(isOpen ? "dapps" : null)}
+      >
         <LeftColumnPanel>
           <SectionTitle>
             {t("page-stablecoins-accordion-requirements")}
@@ -110,7 +117,11 @@ const StablecoinAccordion = () => {
           />
         </RightColumnPanel>
       </AccordionCustomItem>
-      <AccordionCustomItem category="buy">
+      <AccordionCustomItem
+        category="buy"
+        isOpen={openItem === "buy"}
+        onOpenChange={(isOpen) => setOpenItem(isOpen ? "buy" : null)}
+      >
         <LeftColumnPanel>
           <SectionTitle>
             {t("page-stablecoins-accordion-requirements")}
@@ -139,7 +150,11 @@ const StablecoinAccordion = () => {
           />
         </RightColumnPanel>
       </AccordionCustomItem>
-      <AccordionCustomItem category="earn">
+      <AccordionCustomItem
+        category="earn"
+        isOpen={openItem === "earn"}
+        onOpenChange={(isOpen) => setOpenItem(isOpen ? "earn" : null)}
+      >
         <LeftColumnPanel>
           <SectionTitle>
             {t("page-stablecoins-accordion-requirements")}
@@ -168,7 +183,11 @@ const StablecoinAccordion = () => {
           />
         </RightColumnPanel>
       </AccordionCustomItem>
-      <AccordionCustomItem category="generate">
+      <AccordionCustomItem
+        category="generate"
+        isOpen={openItem === "generate"}
+        onOpenChange={(isOpen) => setOpenItem(isOpen ? "generate" : null)}
+      >
         <LeftColumnPanel>
           <SectionTitle>
             {t("page-stablecoins-accordion-requirements")}
