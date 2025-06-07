@@ -36,9 +36,9 @@ Conozca más detalles sobre la [misión y visión](/contributing/translation-pro
 
 ### Nuestra evolución hasta la fecha {#our-progress}
 
-- [**6000+** traductores](/contributing/translation-program/contributors/)
-- **62** idiomas en vivo en el lugar
-- [**3 millones** de palabras traducidas en 2023](/contributing/translation-program/acknowledgements/)
+- [**más de 6.900** traductores](/contributing/translation-program/contributors/)
+- **68** idiomas localizados en el sitio web
+- [**2,89 millones** de palabras traducidas en 2024](/contributing/translation-program/acknowledgements/)
 
 <TranslationChartImage />
 
