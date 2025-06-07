@@ -54,7 +54,7 @@ Os testes unitários são úteis para verificar se as funções retornam os valo
 
 ##### 1. Entenda a lógica de negócios e o fluxo de trabalho de seus contratos
 
-Antes de escrever testes unitários, é bom saber quais funcionalidades um contrato inteligente oferece e como os usuários acessarão e usarão essas funções. Isso é particularmente útil para executar [testes de caminho feliz](https://en.m.wikipedia.org/wiki/Happy_path) que determinam se as funções em um contrato retornam a saída correta para entradas válidas do usuário. Explicaremos esse conceito usando este exemplo (resumido) de [um contrato de leilão](https://docs.soliditylang.org/en/v0.8.17/solidity-by-example.html?highlight=Auction%20contract#simple-open-auction)
+Antes de escrever testes unitários, é bom saber quais funcionalidades um contrato inteligente oferece e como os usuários acessarão e usarão essas funções. Isso é particularmente útil para executar [testes de caminho feliz](https://en.m.wikipedia.org/wiki/Happy_path) que determinam se as funções em um contrato retornam a saída correta para entradas válidas do usuário. Explicaremos esse conceito usando este exemplo (resumido) de [um contrato de leilão](https://docs.soliditylang.org/en/v0.8.17/solidity-by-example.html?highlight=Auction%20contract#simple- open-auction)
 
 ```
 constructor(
@@ -130,7 +130,7 @@ Muitos frameworks de teste unitário permitem você criar afirmações - simples
 
 ##### 3. Medida de cobertura do código
 
-[Cobertura de código](https://en.m.wikipedia.org/wiki/Code_coverage) é uma métrica de teste que rastreia o número de ramificações, linhas e comandos no seu código executados durante os testes. Testes devem ter boa cobertura de código, caso contrário você pode ter "falsos negativos" que acontecem quando um contrato passa todos os testes, mas vulnerabilidades ainda existem no código. Obtendo alta cobertura de código, entretanto, dá a segurança que todos os comandos/funções em um contrato inteligente foram suficientemente testados por exatidão.
+[Cobertura de código](https://en.m.wikipedia.org/wiki/Code_coverage) é uma métrica de teste que rastreia o número de ramificações, linhas e comandos no seu código executados durante os testes. Os testes devem contar com uma boa cobertura de código para minimizar o risco de vulnerabilidades não testadas. Sem cobertura suficiente, você pode presumir erroneamente que seu contrato é seguro porque todos os testes foram aprovados, embora ainda existam vulnerabilidades em caminhos de código não testados. Obtendo alta cobertura de código, entretanto, dá a segurança que todos os comandos/funções em um contrato inteligente foram suficientemente testados por exatidão.
 
 ##### 4. Use frameworks de teste bem desenvolvidos
 
@@ -150,7 +150,7 @@ Frameworks de teste unitário para contratos inteligentes em Solidity vêm em di
 
 Enquanto o teste unitário depura funções de contrato isoladamente, testes integrados avaliam os componentes de um contrato inteligente como um todo. Teste de integração pode detectar defeitos vindos de chamadas entre contratos ou interações entre diferentes funções no mesmo contrato inteligente. Por exemplo, testes de integração podem ajudar a checar se coisas como [herança](https://docs.soliditylang.org/en/v0.8.12/contracts.html#inheritance) e injeção de dependência funcionam devidamente.
 
-Teste de integração é útil se o seu contrato adota uma arquitetura modular ou interfaces com outros contratos on-chain durante a execução. Uma maneira de executar testes de integração é [fazer um fork da blockchain](/glossary/#fork) a uma altura específica (usando uma ferramenta como [Forge](https://book.getfoundry.sh/forge/fork-testing) ou [Hardhat](https://hardhat.org/hardhat-network/docs/guides/forking-other-networks) e simular interações entre seu contrato e contratos implantados.
+Os testes de integração são úteis se o seu contrato adota uma arquitetura modular ou interfaces com outros contratos on-chain durante a execução. Uma maneira de executar testes de integração é [fazer um fork da blockchain](/glossary/#fork) a uma altura específica (usando uma ferramenta como [Forge](https://book.getfoundry.sh/forge/fork-testing) ou [Hardhat](https://hardhat.org/hardhat-network/docs/guides/forking-other-networks) e simular interações entre seu contrato e contratos implantados.
 
 O blockchain que sofreu fork irá se comportar similarmente à Mainnet e ter contas com estados e saldos associados. Mas ele age somente como um ambiente de área local de desenvolvimento restrita, significando que você não precisará de ETH real para transações, por exemplo, nem suas modificações irão afetar o protocolo Ethereum real.
 
@@ -207,13 +207,13 @@ Enquanto testes automatizados realizados em um ambiente local de desenvolvimento
 
 Testar seu contrato em um blockchain local (também conhecido como uma [rede de desenvolvimento](/developers/docs/development-networks/)) é uma alternativa recomendada em relação a testar na Mainnet. Um blockchain local é uma cópia do blockchain Ethereum rodando localmente no seu computador que simula o comportamento da camada de execução do Ethereum. Como tal, você pode programar transações para interagir com um contrato sem incorrer em custo significante.
 
-Rodar contratos em blockchain local pode ser útil como forma de teste de integração manual. [Contratos inteligentes são altamente combináveis](/developers/docs/smart-contracts/composability/), permitindo você integrar com protocolos existentes - mais você ainda precisará garantir que interações on-chain assim tão complexas produzam os resultados corretos.
+Rodar contratos em blockchain local pode ser útil como forma de teste de integração manual. [Os contratos inteligentes são altamente combináveis](/developers/docs/smart-contracts/composability/), o que permite integrá-los com protocolos existentes — mas você ainda precisará garantir que interações on-chain complexas como essas produzam os resultados corretos.
 
 [Mais sobre redes de desenvolvimento.](/developers/docs/development-networks/)
 
 ### Testando contratos nas redes de teste {#testing-contracts-on-testnets}
 
-Uma rede de teste ou testnet funciona exatamente como o Ethereum Mainnet, exceto que ela usa Ether (ETH) sem valor no mundo real. Implantar seu contrato em uma [testnet](/developers/docs/networks/#ethereum-testnets) significa que qualquer um pode interagir com ele (por exemplo, via o front-end do dapp) sem colocar fundos em risco.
+Uma rede de teste ou testnet funciona exatamente como o Ethereum Mainnet, exceto pelo fato de usar Ether (ETH) sem valor no mundo real. Implantar seu contrato em uma [testnet](/developers/docs/networks/#ethereum-testnets) significa que qualquer um pode interagir com ele (por exemplo, via o front-end do dapp) sem colocar fundos em risco.
 
 Esta forma de teste manual é útil para avaliação do fluxo fim-a-fim da sua aplicação do ponto de vista do usuário. Aqui, testadores beta podem também realizar execuções experimentais e reportar qualquer problema com a lógica de negócios do contrato e funcionalidade geral.
 
@@ -259,7 +259,7 @@ A maior diferença é que programas de recompensa por bug são abertos a uma mai
 
 - **[Framework de teste de unidade do Brownie](https://eth-brownie.readthedocs.io/en/v1.0.0_a/tests.html)** - _Brownie utiliza Pytest, uma estrutura de teste rica em recursos que permite que você escreva pequenos testes com o mínimo de código, escala bem para grandes projetos e é altamente extensível._
 
-- **[Froundry Testes](https://github.com/foundry-rs/foundry/tree/master/forge)** - _Foundry oferece o Forge, um framework de teste no Ethereum rápido e flexível, capaz de executar testes de unidade simples, verificações de otimização de gás e mutações (fuzzing) em contratos._
+- **[Testes Foundry](https://github.com/foundry-rs/foundry/tree/master/crates/forge)** — _Foundry oferece o Forge, uma estrutura de testes no Ethereum rápida e flexível, capaz de executar testes de unidade simples, verificações de otimização de gás e mutações (fuzzing) em contratos._
 
 - **[Hardhat Testes](https://hardhat.org/hardhat-runner/docs/guides/test-contracts)** - _Framework para testar contratos inteligentes com base no ethers.js, Mocha e Chai._
 
