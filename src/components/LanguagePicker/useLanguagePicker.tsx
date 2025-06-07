@@ -59,7 +59,8 @@ export const useLanguagePicker = (handleClose?: () => void) => {
           if (indexA >= 0 && indexB >= 0) return indexA - indexB
           if (indexA >= 0) return -1
           if (indexB >= 0) return 1
-          return b.approvalProgress - a.approvalProgress
+
+          return a.sourceName.localeCompare(b.sourceName)
         }) || []
     )
   }, [locale, t])
