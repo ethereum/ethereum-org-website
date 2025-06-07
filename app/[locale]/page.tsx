@@ -1,4 +1,5 @@
 import { Fragment } from "react"
+import { notFound } from "next/navigation"
 import { getTranslations, setRequestLocale } from "next-intl/server"
 import { FaDiscord, FaGithub } from "react-icons/fa6"
 import { FaXTwitter } from "react-icons/fa6"
@@ -65,11 +66,14 @@ import events from "@/data/community-events.json"
 import CreateWalletContent from "@/data/CreateWallet"
 
 import {
+  ATTESTANT_BLOG,
   BASE_TIME_UNIT,
   BLOG_FEEDS,
   BLOGS_WITHOUT_FEED,
   CALENDAR_DISPLAY_COUNT,
+  DEFAULT_LOCALE,
   GITHUB_REPO_URL,
+  LOCALES_CODES,
   RSS_DISPLAY_COUNT,
 } from "@/lib/constants"
 
@@ -93,7 +97,8 @@ import LearnImage from "@/public/images/heroes/learn-hub-hero.png"
 import CommunityImage from "@/public/images/heroes/quizzes-hub-hero.png"
 import Hero from "@/public/images/home/hero.png"
 const fetchXmlBlogFeeds = async () => {
-  return await fetchRSS(BLOG_FEEDS)
+  const xmlUrls = BLOG_FEEDS.filter((feed) => ![ATTESTANT_BLOG].includes(feed))
+  return await fetchRSS(xmlUrls)
 }
 
 // In seconds
@@ -114,6 +119,9 @@ const loadData = dataLoader(
 
 const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const { locale } = await params
+
+  if (!LOCALES_CODES.includes(locale)) return notFound()
+
   setRequestLocale(locale)
   const t = await getTranslations({ locale, namespace: "page-index" })
   const tCommon = await getTranslations({ locale, namespace: "common" })
@@ -943,14 +951,26 @@ export async function generateMetadata({
 }) {
   const { locale } = await params
 
-  const t = await getTranslations({ locale, namespace: "page-index" })
+  try {
+    const t = await getTranslations({ locale, namespace: "page-index" })
+    return await getMetadata({
+      locale,
+      slug: [""],
+      title: t("page-index-meta-title"),
+      description: t("page-index-meta-description"),
+    })
+  } catch (error) {
+    const t = await getTranslations({
+      locale: DEFAULT_LOCALE,
+      namespace: "common",
+    })
 
-  return await getMetadata({
-    locale,
-    slug: [""],
-    title: t("page-index-meta-title"),
-    description: t("page-index-meta-description"),
-  })
+    // Return basic metadata for invalid paths
+    return {
+      title: t("page-not-found"),
+      description: t("page-not-found-description"),
+    }
+  }
 }
 
 export default Page

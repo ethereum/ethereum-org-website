@@ -1038,3 +1038,11 @@ export type ValuesPairing = {
   legacy: ValuesItem
   ethereum: ValuesItem
 }
+
+export type PageParams = {
+  locale: string
+}
+
+export type SlugPageParams = PageParams & {
+  slug: string[]
+}

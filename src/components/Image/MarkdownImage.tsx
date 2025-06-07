@@ -42,7 +42,7 @@ const MarkdownImage = ({
     // display the wrapper as a `span` to avoid dom nesting warnings as mdx
     // sometimes wraps images in `p` tags
     <span className="flex justify-center">
-      <NextLink href={transformedSrc} target="_blank" rel="noopener">
+      <NextLink href={transformedSrc} target="_blank" rel="noopener noreferrer">
         <Image
           alt={alt}
           width={imageWidth}
