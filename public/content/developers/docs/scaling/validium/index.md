@@ -69,11 +69,11 @@ As an anti-censorship mechanism, the validium protocol allows users to withdraw 
 
 After executing a batch of transactions, the operator submits the associated validity proof to the verifier contract and proposes a new state root to the main contract. If the proof is valid, the main contract updates the validium's state and finalizes the results of transactions in the batch.
 
-Unlike a ZK-rollup, block producers on a validium are not required to publish transaction data for transaction batches (only block headers). This makes validium a purely offchain scaling protocol, as opposed to "hybrid" scaling protocols (i.e., [layer 2](/layer-2/)) that publish state data on the main Ethereum chain as `calldata`.
+Unlike a ZK-rollup, block producers on a validium are not required to publish transaction data for transaction batches (only block headers). This makes validium a purely offchain scaling protocol, as opposed to "hybrid" scaling protocols (i.e., [layer 2](/layer-2/)) that publish state data on the main Ethereum chain using blob data, `calldata`, or a combination of both.
 
 ### Data availability {#data-availability}
 
-As mentioned, validiums utilize an offchain data availability model, where operators store all transaction data off Ethereum Mainnet. Validium's low onchain data footprint improves scalability (throughput isn't limited by Ethereum's data processing capacity) and reduces user fees (the cost of publishing `calldata` is lower).
+As mentioned, validiums utilize an offchain data availability model, where operators store all transaction data off Ethereum Mainnet. Validium's low onchain data footprint improves scalability (throughput isn't limited by Ethereum's data processing capacity) and reduces user fees (the cost of publishing data onchain is lower).
 
 Offchain data availability, however, presents a problem: data necessary for creating or verifying Merkle proofs may be unavailable. This means users may be unable to withdraw funds from the onchain contract if operators should act maliciously.
 
