@@ -31,17 +31,17 @@ const TenYearHero = () => {
       <div className="relative mb-16">
         <Image
           src={TenYearBackgroundImage}
-          alt="10 Year Anniversary"
+          alt="" // decorative element
           className="max-h-[350px] object-cover"
         />
         <ParallaxImage
           src={TenYearGraphicImage}
-          alt="10 Year Anniversary"
+          alt={t("page-10-year-anniversary-meta-title")}
           className="absolute left-0 top-0 max-h-[350px] object-contain transition-transform duration-200 ease-out"
         />
       </div>
       <p className="text-center text-3xl">
-        Celebrating 10 years of{" "}
+        {t("page-10-year-celebrating")}{" "}
         <span className="relative max-md:block md:w-fit">
           <span
             className="select-none opacity-0 max-md:hidden"
