@@ -474,6 +474,8 @@ lang: el
 
 <GlossaryDefinition term="wei" />
 
+<GlossaryDefinition term="wrapped-token" />
+
 <Divider />
 
 ## Ζ {#section-z}
@@ -488,7 +490,7 @@ lang: el
 
 ## Πηγές {#sources}
 
-_Παρέχεται εν μέρει από το [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) (Γίνετε εξπέρ του Ethereum) από τους [Ανδρέα M. Αντωνόπουλο και Gavin Wood](https://ethereumbook.info) υπό την CC-BY-SA_
+_Παρέχεται εν μέρει από το [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) από τους [Ανδρέα M. Αντωνόπουλο και Gavin Wood](https://ethereumbook.info) υπό την CC-BY-SA_
 
 <Divider />
 
