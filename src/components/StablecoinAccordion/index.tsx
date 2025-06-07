@@ -1,3 +1,5 @@
+"use client"
+
 import { MdArrowForward } from "react-icons/md"
 
 import { ChildOnlyProp, TranslationKey } from "@/lib/types"
