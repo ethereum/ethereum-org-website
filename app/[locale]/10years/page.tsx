@@ -1,4 +1,6 @@
+import { Suspense } from "react"
 import { pick } from "lodash"
+import dynamic from "next/dynamic"
 import {
   getMessages,
   getTranslations,
@@ -13,6 +15,7 @@ import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
+import { Skeleton } from "@/components/ui/skeleton"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 import { cn } from "@/lib/utils/cn"
@@ -27,12 +30,16 @@ import CountDown from "./_components/CountDown"
 import { adoptionCards, adoptionStyles } from "./_components/data"
 import InnovationSwiper from "./_components/InnovationSwiper"
 import Stories from "./_components/Stories"
-import TenYearGlobe from "./_components/TenYearGlobe"
 import TenYearHero from "./_components/TenYearHero"
+import { parseStoryDates } from "./_components/utils"
 
 import { fetch10YearEvents } from "@/lib/api/fetch10YearEvents"
 import { fetch10YearStories } from "@/lib/api/fetch10YearStories"
 import TenYearLogo from "@/public/images/10-year-anniversary/10-year-logo.png"
+
+const TenYearGlobe = dynamic(() => import("./_components/TenYearGlobe"), {
+  ssr: false,
+})
 
 // In seconds
 const REVALIDATE_TIME = BASE_TIME_UNIT * 1
@@ -53,6 +60,8 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   setRequestLocale(locale)
 
   const [fetched10YearEvents, fetched10YearStories] = await loadData()
+
+  const stories = parseStoryDates(fetched10YearStories, locale)
 
   // Get i18n messages
   const allMessages = await getMessages({ locale })
@@ -95,16 +104,22 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                 local event or start your own celebration.
               </p>
             </div>
-            <div>
-              <TenYearGlobe
-                events={Object.values(fetched10YearEvents).flatMap((region) =>
-                  region.events.map((event) => ({
-                    ...event,
-                    lat: Number(event.lat),
-                    lng: Number(event.lng),
-                  }))
-                )}
-              />
+            <div className="h-[max(fit,260px)] sm:h-[400px] md:h-[500px] lg:h-[600px]">
+              <Suspense
+                fallback={
+                  <Skeleton className="mx-auto aspect-square h-full rounded-full bg-primary/20 blur-2xl" />
+                }
+              >
+                <TenYearGlobe
+                  events={Object.values(fetched10YearEvents).flatMap((region) =>
+                    region.events.map((event) => ({
+                      ...event,
+                      lat: Number(event.lat),
+                      lng: Number(event.lng),
+                    }))
+                  )}
+                />
+              </Suspense>
             </div>
           </div>
         </div>
@@ -271,13 +286,16 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               </p>
             </div>
           </div>
-          <AdoptionSwiper />
+          <AdoptionSwiper
+            adoptionCards={adoptionCards}
+            adoptionStyles={adoptionStyles}
+          />
           <div className="hidden flex-1 flex-col gap-6 md:flex">
             {adoptionCards.map((card, index) => (
               <div
                 key={card.title}
                 className={cn(
-                  "w-[70%] rounded-2xl p-8",
+                  "w-[70%] rounded-2xl p-8 shadow",
                   index % 2 === 0 && "ml-auto",
                   index !== 0 && "-mt-10",
                   zIndexClasses[index],
@@ -319,7 +337,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               </ButtonLink>
             </div>
           </div>
-          <Stories stories={fetched10YearStories} />
+          <Stories stories={stories} />
         </div>
 
         <div className="w-full gap-8 px-8 py-8 pt-32">
@@ -327,7 +345,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             <Image
               src={TenYearLogo}
               alt="10 year anniversary logo"
-              className="-mb-4 max-h-80 object-contain"
+              className="mb-8 max-h-80 object-contain sm:mb-12"
             />
             <h3>Have an idea for how the community can celebrate?</h3>
             <p>
@@ -358,7 +376,7 @@ export async function generateMetadata({
 
   return await getMetadata({
     locale,
-    slug: ["10-year-anniversary"],
+    slug: ["10years"],
     title: t("page-10-year-anniversary-meta-title"),
     description: t("page-10-year-anniversary-meta-description"),
   })

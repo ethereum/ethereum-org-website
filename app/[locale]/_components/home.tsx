@@ -608,7 +608,10 @@ const HomePage = ({
           </SectionContent>
         </Section>
 
-        <Section id="10-year-anniversary">
+        <Section
+          id="10-year-anniversary"
+          className={cn(locale !== "en" && "hidden")} // TODO: Show again when translations ready
+        >
           <TenYearHomeBanner />
         </Section>
 

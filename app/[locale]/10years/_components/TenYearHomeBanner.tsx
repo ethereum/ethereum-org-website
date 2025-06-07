@@ -15,11 +15,11 @@ const TenYearHomeBanner = () => {
         <ParallaxImage
           src={TenYearGraphicImage}
           alt=""
-          className="mx-auto -mb-2 -mt-16 max-w-[500px] object-contain sm:-mt-24 md:-mt-32"
+          className="mx-auto -mb-2 -mt-16 max-w-[min(100%,500px)] object-contain sm:-mt-24 md:-mt-32"
         />
-        <div className="flex justify-center">
+        <div className="mt-4 flex justify-center">
           <TenYearDesktopText className="mb-4 hidden object-contain text-body md:block" />
-          <TenYearMobileText className="mb-4 block object-contain text-body md:hidden" />
+          <TenYearMobileText className="mb-4 block object-contain text-5xl text-body md:hidden" />
         </div>
         <div className="mb-4 flex flex-col gap-2">
           <p>

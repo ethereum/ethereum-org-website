@@ -790,5 +790,14 @@
     "location": "Istanbul, TR",
     "description": "ETHIstanbul is a conference and hackathon connecting you with global talents, industry professionals, and web3 companies advancing technology.",
     "imageUrl": "https://ethistanbul.io/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fistanbul-background.99d6ad2a.webp&w=3840&q=75"
+  },
+  {
+    "title": "L2con",
+    "startDate": "2025-07-01",
+    "endDate": "2025-07-01",
+    "href": "https://lu.ma/L2conCannes/",
+    "location": "Cannes, FR",
+    "description": "​L2con is the largest EthCC[8] conference focused on the future of the scaling ecosystem, General-Purpose Chains and App-Chains, development of dApps, and what unites us all — achieving mass adoption.",
+    "imageUrl": "https://images.lumacdn.com/event-covers/cu/93aa5fca-1515-4a6a-aed3-9d933d8faf73.gif"
   }
 ]
