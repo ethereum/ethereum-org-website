@@ -67,7 +67,7 @@ const DevelopersPage = async ({
 
   const quickstarts = [
     {
-      description: t("page-developers-quickstart-2-description"),
+      description: t("page-developers-quickstart-1-description"),
       command: "npx create-eth@latest",
     },
     {
