@@ -49,6 +49,7 @@ Multiple trackers offer a real-time overview of nodes in the Ethereum network. N
 - [Ethernodes](https://ethernodes.org/) by Bitfly
 - [Nodewatch](https://www.nodewatch.io/) by Chainsafe, crawling consensus nodes
 - [Monitoreth](https://monitoreth.io/) - by MigaLabs, A distributed network monitoring tool
+- [Weekly Network Health Reports](https://probelab.io) - by ProbeLab, Using the [Nebula crawler](https://github.com/dennis-tra/nebula) and other tools
 
 ## Node types {#node-types}
 
