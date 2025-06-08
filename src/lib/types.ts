@@ -50,6 +50,7 @@ export type AppPropsWithLayout = AppProps & {
 export type Root = {
   children: ReactNode
   lastDeployLocaleTimestamp: string
+  locale: string
 }
 
 export type BasePageProps = Pick<Root, "lastDeployLocaleTimestamp">

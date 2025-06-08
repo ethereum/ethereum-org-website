@@ -67,7 +67,10 @@ export default async function LocaleLayout({
             <Matomo />
           </Suspense>
 
-          <BaseLayout lastDeployLocaleTimestamp={lastDeployLocaleTimestamp}>
+          <BaseLayout
+            locale={locale}
+            lastDeployLocaleTimestamp={lastDeployLocaleTimestamp}
+          >
             {children}
           </BaseLayout>
         </Providers>
