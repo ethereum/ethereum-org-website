@@ -404,7 +404,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 
   return (
     <MainArticle className="flex w-full flex-col items-center" dir={dir}>
-      <BannerNotification shouldShow={locale === "en"}>
+      <BannerNotification shouldShow={locale === DEFAULT_LOCALE}>
         <p>
           10 years of Ethereum! -{" "}
           <Link href="/10years/" className="text-white">
