@@ -47,6 +47,12 @@ test.describe("Find Wallet Page", () => {
     const isMobile = viewport && viewport.width <= breakpointAsNumber.md
     test.skip(!!isMobile, "This test is for desktop viewports only")
 
+    // Get the initial row count
+    const rows = page
+      .locator("table tbody tr")
+      .filter({ has: page.locator("td") })
+    const initialRowCount = await rows.count()
+
     // Device filter accordion should be expanded by default
     const deviceAccordion = page.getByRole("button", { name: /Device/i })
     await expect(deviceAccordion).toHaveAttribute("aria-expanded", "true")
@@ -66,11 +72,11 @@ test.describe("Find Wallet Page", () => {
       .locator("label span.select-none")
       .allTextContents()
 
-    // Check that at least one row is visible
-    const rows = page
-      .locator("table tbody tr")
-      .filter({ has: page.locator("td") })
-    await expect(rows.first()).toBeVisible()
+    // Wait for the row count to change from the initial value
+    await expect(async () => {
+      const newCount = await rows.count()
+      expect(newCount).not.toBe(initialRowCount)
+    }).toPass()
 
     // Check that every visible row contains at least one of the OS options
     const rowCount = await rows.count()
@@ -92,6 +98,12 @@ test.describe("Find Wallet Page", () => {
   test("sidebar filters - mobile", async ({ page }) => {
     // Set viewport to mobile size
     await page.setViewportSize({ width: breakpointAsNumber.sm, height: 800 })
+
+    // Get the initial row count
+    const rows = page
+      .locator("table tbody tr")
+      .filter({ has: page.locator("td") })
+    const initialRowCount = await rows.count()
 
     // Open mobile filters drawer
     const filterButton = page.getByRole("button", { name: /filters/i })
@@ -119,11 +131,11 @@ test.describe("Find Wallet Page", () => {
     const closeButton = page.getByRole("button", { name: /see wallets/i })
     await closeButton.click()
 
-    // Check that at least one row is visible
-    const rows = page
-      .locator("table tbody tr")
-      .filter({ has: page.locator("td") })
-    await expect(rows.first()).toBeVisible()
+    // Wait for the row count to change from the initial value
+    await expect(async () => {
+      const newCount = await rows.count()
+      expect(newCount).not.toBe(initialRowCount)
+    }).toPass()
 
     // Check that every visible row contains at least one of the OS options
     const rowCount = await rows.count()
