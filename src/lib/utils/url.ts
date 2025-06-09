@@ -16,6 +16,8 @@ export const isExternal = (href: string): boolean =>
   href.includes("ipfs") ||
   isDiscordInvite(href)
 
+export const isMailto = (href: string): boolean => href.includes("mailto:")
+
 export const isGlossary = (href: string): boolean =>
   href.includes("glossary") && href.includes("#")
 
