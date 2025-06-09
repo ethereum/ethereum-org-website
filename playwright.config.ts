@@ -1,8 +1,6 @@
 import type { ChromaticConfig } from "@chromatic-com/playwright"
 import { defineConfig, devices } from "@playwright/test"
 
-import "dotenv/config"
-
 export default defineConfig<ChromaticConfig>({
   testDir: "./tests/e2e",
   outputDir: "./tests/e2e/__results__",
