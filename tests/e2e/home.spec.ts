@@ -16,7 +16,8 @@ test.describe("Home Page", () => {
   })
 
   test("search functionality", async ({ page }) => {
-    await page.getByTestId("search-button").click()
+    const nav = page.getByRole("navigation", { name: "Primary" })
+    await nav.getByRole("button", { name: "Search" }).click()
     await page.getByPlaceholder("Search").fill("smart contract")
 
     await expect(page.getByRole("listbox").first()).toBeVisible()

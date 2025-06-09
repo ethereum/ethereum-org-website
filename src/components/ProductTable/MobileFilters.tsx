@@ -67,7 +67,11 @@ const MobileFilters = ({
         }}
       >
         <DrawerTrigger className="px-4" asChild>
-          <Button variant="outline" className="gap-4 border-0 ps-4">
+          <Button
+            variant="outline"
+            className="gap-4 border-0 ps-4"
+            data-testid="mobile-filters-button"
+          >
             <div className="flex flex-col text-left">
               <p>{t("table-filters")}</p>
               <p className="text-body-medium">{` ${activeFiltersCount} ${t("table-active")}`}</p>
@@ -111,7 +115,10 @@ const MobileFilters = ({
                 </Button>
               </div>
               <DrawerClose className="text-center" asChild>
-                <Button className="w-full">{`${mobileFiltersLabel} (${dataCount})`}</Button>
+                <Button
+                  className="w-full"
+                  data-testid="mobile-filters-submit-button"
+                >{`${mobileFiltersLabel} (${dataCount})`}</Button>
               </DrawerClose>
             </div>
           </DrawerFooter>

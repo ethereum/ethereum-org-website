@@ -17,8 +17,12 @@ test.describe("Find Wallet Page", () => {
   })
 
   test("personas filter updates counter and list", async ({ page }) => {
+    const presetFiltersContainer = page.getByTestId("preset-filters-container")
+
     // Click the first persona (e.g., New to crypto)
-    const personaButton = page.getByRole("button", { name: /New to crypto/i })
+    const personaButton = presetFiltersContainer.getByRole("button", {
+      name: /New to crypto/i,
+    })
     await personaButton.click()
     // Extract the counter from the persona button
     const counterText = await personaButton.textContent()
@@ -53,12 +57,16 @@ test.describe("Find Wallet Page", () => {
       .filter({ has: page.locator("td") })
     const initialRowCount = await rows.count()
 
+    const filtersContainer = page.getByTestId("filters-container")
+
     // Device filter accordion should be expanded by default
-    const deviceAccordion = page.getByRole("button", { name: /Device/i })
+    const deviceAccordion = filtersContainer.getByRole("button", {
+      name: /Device/i,
+    })
     await expect(deviceAccordion).toHaveAttribute("aria-expanded", "true")
 
     // Click the Desktop filter (custom selector: button next to 'Desktop' text)
-    const deviceRegion = page
+    const deviceRegion = filtersContainer
       .getByRole("heading", { name: /device/i })
       .locator("..")
     const desktopLabel = deviceRegion.getByText("Desktop")
@@ -106,7 +114,7 @@ test.describe("Find Wallet Page", () => {
     const initialRowCount = await rows.count()
 
     // Open mobile filters drawer
-    const filterButton = page.getByRole("button", { name: /filters/i })
+    const filterButton = page.getByTestId("mobile-filters-button")
     await filterButton.click()
     // Click the Device filter accordion
     const deviceAccordion = page.getByRole("button", { name: /Device/i })
@@ -128,7 +136,7 @@ test.describe("Find Wallet Page", () => {
       .allTextContents()
 
     // Close the filters drawer
-    const closeButton = page.getByRole("button", { name: /see wallets/i })
+    const closeButton = page.getByTestId("mobile-filters-submit-button")
     await closeButton.click()
 
     // Wait for the row count to change from the initial value
