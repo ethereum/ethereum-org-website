@@ -1,5 +1,5 @@
 ---
-title: Enterprise on Ethereum Mainnet
+title: Enterprise use cases on Ethereum Mainnet
 description: Guides, articles, and tools about enterprise applications on the public Ethereum blockchain
 lang: en
 ---
