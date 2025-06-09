@@ -3,8 +3,13 @@ import { getTranslations } from "next-intl/server"
 import type { Lang } from "@/lib/types"
 
 import { HubHero } from "@/components/Hero"
+import BetterUX from "@/components/icons/better-ux.svg"
+import CheaperTransactions from "@/components/icons/cheaper-transactions.svg"
+import ExtraSecurity from "@/components/icons/extra-security.svg"
+import FutureProofing from "@/components/icons/future-proofing.svg"
 import MainArticle from "@/components/MainArticle"
 import { ButtonLink } from "@/components/ui/buttons/Button"
+import { Card } from "@/components/ui/card"
 import { Skeleton } from "@/components/ui/skeleton"
 
 import { getMetadata } from "@/lib/utils/metadata"
@@ -15,6 +20,38 @@ import heroImage from "@/public/images/heroes/enterprise-hero-transparent.png"
 const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: "page-enterprise" })
+
+  const features = [
+    {
+      header: t("page-enterprise-features-1-header"),
+      content: [t("page-enterprise-features-1-content-1")],
+      Icon: ExtraSecurity,
+    },
+    {
+      header: t("page-enterprise-features-2-header"),
+      content: [
+        t("page-enterprise-features-2-content-1"),
+        t("page-enterprise-features-2-content-2"),
+      ],
+      Icon: FutureProofing,
+    },
+    {
+      header: t("page-enterprise-features-3-header"),
+      content: [
+        t("page-enterprise-features-3-content-1"),
+        t("page-enterprise-features-3-content-2"),
+      ],
+      Icon: BetterUX,
+    },
+    {
+      header: t("page-enterprise-features-4-header"),
+      content: [
+        t("page-enterprise-features-4-content-1"),
+        t("page-enterprise-features-4-content-2"),
+      ],
+      Icon: CheaperTransactions,
+    },
+  ]
 
   return (
     <div className="space-y-12 md:space-y-20">
@@ -57,13 +94,24 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           </div>
         </section>
 
-        <section id="highlights" className="">
-          <h2 className="sr-only">{t("page-enterprise-highlights-header")}</h2>
-          <div className="flex flex-nowrap gap-2 md:gap-6">
-            <Skeleton className="h-[440px] w-[clamp(min(300px,100%),25%,500px)] rounded-2xl border bg-background px-6 py-8 shadow-window-box" />
-            <Skeleton className="h-[440px] w-[clamp(min(300px,100%),25%,500px)] rounded-2xl border bg-background px-6 py-8 shadow-window-box" />
-            <Skeleton className="h-[440px] w-[clamp(min(300px,100%),25%,500px)] rounded-2xl border bg-background px-6 py-8 shadow-window-box" />
-            <Skeleton className="h-[440px] w-[clamp(min(300px,100%),25%,500px)] rounded-2xl border bg-background px-6 py-8 shadow-window-box" />
+        <section id="features">
+          <h2 className="sr-only">{t("page-enterprise-features-header")}</h2>
+          {/* // TODO: Add mobile ui/swiper */}
+          <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 md:gap-6 xl:grid-cols-4">
+            {features.map(({ header, content, Icon }) => (
+              <Card
+                key={header}
+                className="space-y-4 rounded-4xl border bg-background px-6 py-8 shadow-window-box"
+              >
+                <Icon className="text-7xl text-primary" />
+                <h3>{header}</h3>
+                {content.map((p, i) => (
+                  <p key={i} className="mb-8 last:mb-0">
+                    {p}
+                  </p>
+                ))}
+              </Card>
+            ))}
           </div>
         </section>
 
