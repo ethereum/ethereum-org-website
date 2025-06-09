@@ -10,24 +10,22 @@ const Nav = async ({ locale }) => {
   const t = await getTranslations({ locale, namespace: "common" })
 
   return (
-    <div className="sticky top-0 z-sticky w-full">
-      <nav
-        className="flex h-19 justify-center border-b border-b-disabled bg-background p-4 xl:px-8"
-        aria-label={t("nav-primary")}
+    <nav
+      className="sticky top-0 z-sticky flex h-19 w-full max-w-screen-2xl items-center justify-between border-b bg-background p-4 md:items-stretch md:justify-normal xl:px-8"
+      aria-label={t("nav-primary")}
+    >
+      <BaseLink
+        href="/"
+        aria-label={t("home")}
+        className="inline-flex items-center no-underline"
       >
-        <div className="flex w-full max-w-screen-2xl items-center justify-between md:items-stretch md:justify-normal">
-          <BaseLink
-            href="/"
-            aria-label={t("home")}
-            className="inline-flex items-center no-underline"
-          >
-            <EthHomeIcon className="h-[35px] w-[22px] opacity-85 hover:opacity-100" />
-          </BaseLink>
+        <EthHomeIcon className="h-[35px] w-[22px] opacity-85 hover:opacity-100" />
+      </BaseLink>
 
-          <ClientSideNav />
-        </div>
-      </nav>
-    </div>
+      <div className="ms-3 flex w-full justify-end md:justify-between xl:ms-8">
+        <ClientSideNav />
+      </div>
+    </nav>
   )
 }
 
