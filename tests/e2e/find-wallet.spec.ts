@@ -9,11 +9,11 @@ test.beforeEach(async ({ page }) => {
 })
 
 test.describe("Find Wallet Page", () => {
-  test("loads successfully", async ({ page }, testInfo) => {
+  test("loads successfully", async ({ page, browserName }, testInfo) => {
     await expect(
       page.getByRole("heading", { name: "Choose your wallet" })
     ).toBeVisible()
-    await takeSnapshot(page, "find-wallet-initial-load", testInfo)
+    await takeSnapshot(page, `find-wallet-${browserName}-initial`, testInfo)
   })
 
   test("personas filter updates counter and list", async ({ page }) => {

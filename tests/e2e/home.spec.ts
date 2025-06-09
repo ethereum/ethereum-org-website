@@ -9,10 +9,10 @@ test.beforeEach(async ({ page }) => {
 })
 
 test.describe("Home Page", () => {
-  test("loads successfully", async ({ page }, testInfo) => {
+  test("loads successfully", async ({ page, browserName }, testInfo) => {
     await expect(page).toHaveTitle(/Ethereum.org/)
 
-    await takeSnapshot(page, "initial-load", testInfo)
+    await takeSnapshot(page, `home-${browserName}-initial`, testInfo)
   })
 
   test("search functionality", async ({ page }) => {
@@ -41,11 +41,11 @@ test.describe("Home Page", () => {
     await expect(page).toHaveURL(/.*\/developers/)
   })
 
-  test("navigation menu - mobile", async ({ page }, testInfo) => {
+  test("navigation menu - mobile", async ({ page, browserName }, testInfo) => {
     // Set viewport to mobile size
     await page.setViewportSize({ width: breakpointAsNumber.sm, height: 800 })
 
-    await takeSnapshot(page, "mobile-initial-load", testInfo)
+    await takeSnapshot(page, `home-${browserName}-initial`, testInfo)
 
     const nav = page.getByRole("navigation", { name: "Primary" })
     const menuButton = nav.getByRole("button", {
@@ -56,7 +56,7 @@ test.describe("Home Page", () => {
     // Open the mobile menu
     await menuButton.click()
 
-    await takeSnapshot(page, "mobile-menu-opened", testInfo)
+    await takeSnapshot(page, `home-${browserName}-menu-open`, testInfo)
 
     // Check that navigation links are visible in the mobile menu
     const sidebar = page.getByRole("dialog", { name: /ethereum.org/i })
