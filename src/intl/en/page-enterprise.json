@@ -1,7 +1,16 @@
 {
-  "page-enterprise-hero-subtitle": "Built for scalability and security at enterprise scale in mind.",
-  "page-enterprise-hero-title": "Ethereum for institutions",
-  "page-enterprise-metadata-description": "World's most trusted blockchain for digital assets—build for scalability and security with enterprise scaling in mind.",
+  "page-enterprise-ecosystem-cta": "See use cases",
+  "page-enterprise-ecosystem-description": "The question is not whether money will become programmable, but how quickly the transition will occur and which platforms will enable it.",
+  "page-enterprise-ecosystem-header": "Embrace the innovation",
   "page-enterprise-hero-breadcrumb": "Enterprise",
-  "page-enterprise-hero-cta": "Get in touch"
+  "page-enterprise-hero-cta": "Get in touch",
+  "page-enterprise-hero-subtitle": "Built for scalability and security with enterprise-scale in mind.",
+  "page-enterprise-hero-title": "Ethereum for institutions",
+  "page-enterprise-highlights-header": "Enterprises and Ethereum: a perfect match",
+  "page-enterprise-metadata-description": "World's most trusted blockchain for digital assets—build for scalability and security with enterprise scaling in mind.",
+  "page-enterprise-metrics-header": "World's most trusted blockchain for digital assets",
+  "page-enterprise-team-description": "We will answer your questions, help identify potential paths forward, provide technical support and connect you with relevant industry leaders.",
+  "page-enterprise-team-header": "Ethereum Enterprise Team",
+  "page-enterprise-why-description": "Ethereum supports enterprise compliance with transparent, auditable infrastructure that aligns with GDPR and KYC while protecting sensitive data in private or consortium environments.",
+  "page-enterprise-why-header": "Why Ethereum"
 }
