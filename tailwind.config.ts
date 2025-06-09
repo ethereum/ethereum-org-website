@@ -230,6 +230,7 @@ const config = {
         "feedback-gradient": "var(--feedback-gradient)",
         "banner-grid-gradient": "var(--banner-grid-gradient)",
         "radial-a": "var(--radial-a)",
+        "radial-b": "var(--radial-b)",
         "linear-bug-bounty-title": "var(--linear-bug-bounty-title)",
         "gradient-staking": "var(--gradient-staking)",
         "card-gradient": "var(--card-gradient)",

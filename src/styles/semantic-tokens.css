@@ -75,6 +75,14 @@
       transparent 100%
     );
 
+    --radial-b: radial-gradient(
+      155% 100% at 50% 0%,
+      rgba(201, 179, 245, 0.16) 0%,
+      rgba(201, 179, 245, 0.48) 33%,
+      rgba(136, 170, 241, 0.16) 66%,
+      rgba(255, 255, 255, 0) 100%
+    );
+
     --linear-bug-bounty-title: linear-gradient(
       to left,
       #f7cbc0 0%,

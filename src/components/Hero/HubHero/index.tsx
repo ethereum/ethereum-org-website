@@ -50,7 +50,10 @@ const HubHero = ({
         )}
       >
         {title ? (
-          <h1 className="text-md font-normal uppercase text-body-medium">
+          <h1
+            data-label="breadcrumb"
+            className="text-md font-normal uppercase text-body-medium"
+          >
             {title}
           </h1>
         ) : null}
