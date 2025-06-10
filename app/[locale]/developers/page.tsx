@@ -69,10 +69,12 @@ const DevelopersPage = async ({
     {
       description: t("page-developers-quickstart-1-description"),
       command: "npx create-eth@latest",
+      eventName: "scaffold",
     },
     {
       description: t("page-developers-quickstart-2-description"),
       command: "npm init @rainbow-me/rainbowkit@latest",
+      eventName: "rainbowkit",
     },
   ]
 
@@ -140,6 +142,11 @@ const DevelopersPage = async ({
                 href="https://speedrunethereum.com/"
                 size="lg"
                 className="mt-4"
+                customEventOptions={{
+                  eventCategory: "top_boxes",
+                  eventAction: "click",
+                  eventName: "speedrun",
+                }}
               >
                 {t("page-developers-speedrunethereum-link")}
               </ButtonLink>
@@ -149,12 +156,20 @@ const DevelopersPage = async ({
           <Card className="!space-y-8 break-words border border-accent-c/20 bg-gradient-to-t from-accent-c/15 to-accent-c/5 px-6 py-10 md:space-y-6 lg:p-12">
             <h3>{t("page-developers-jump-right-in-title")}</h3>
             <div className="space-y-6">
-              {quickstarts.map(({ description, command }) => (
+              {quickstarts.map(({ description, command, eventName }) => (
                 <div key={command} className="space-y-1">
                   <div className="font-bold">{description}</div>
                   <div className="flex items-center rounded-lg border bg-background px-3 py-1">
                     <div className="flex-1 font-mono text-sm">{command}</div>
-                    <CopyButton message={command} size="sm" />
+                    <CopyButton
+                      message={command}
+                      size="sm"
+                      customEventOptions={{
+                        eventCategory: "top_boxes",
+                        eventAction: "click",
+                        eventName,
+                      }}
+                    />
                   </div>
                 </div>
               ))}
@@ -164,6 +179,11 @@ const DevelopersPage = async ({
                 href="https://docs.soliditylang.org/en/latest/"
                 variant="outline"
                 className="bg-background"
+                customEventOptions={{
+                  eventCategory: "top_boxes",
+                  eventAction: "click",
+                  eventName: "solidity",
+                }}
               >
                 {t("page-developers-solidity-docs")}
               </ButtonLink>
