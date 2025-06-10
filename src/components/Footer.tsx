@@ -264,6 +264,10 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
           href: "/governance/",
           text: t("ethereum-governance"),
         },
+        {
+          href: "/trillion-dollar-security/",
+          text: t("trillion-dollar-security"),
+        },
       ],
     },
   ]
