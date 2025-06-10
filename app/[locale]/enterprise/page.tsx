@@ -15,7 +15,7 @@ import { Skeleton } from "@/components/ui/skeleton"
 import { getMetadata } from "@/lib/utils/metadata"
 
 import EthGlyph from "@/public/images/assets/svgs/eth-diamond-rainbow.svg"
-import heroImage from "@/public/images/heroes/enterprise-hero-transparent.png"
+import heroImage from "@/public/images/heroes/enterprise-hero-white.png"
 
 const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const { locale } = await params
