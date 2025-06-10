@@ -6,6 +6,33 @@ import { HubHero } from "@/components/Hero"
 import BetterUX from "@/components/icons/better-ux.svg"
 import CheaperTransactions from "@/components/icons/cheaper-transactions.svg"
 import Checkmark from "@/components/icons/checkmark.svg"
+import Adidas from "@/components/icons/enterprise/adidas.svg"
+import Azure from "@/components/icons/enterprise/azure.svg"
+import BancoSantander from "@/components/icons/enterprise/banco-santander.svg"
+import BASF from "@/components/icons/enterprise/basf.svg"
+import BlackRock from "@/components/icons/enterprise/blackrock.svg"
+import BMW from "@/components/icons/enterprise/bmw.svg"
+import CocaCola from "@/components/icons/enterprise/coca-cola.svg"
+import EuropeanInvestmentBank from "@/components/icons/enterprise/european-investment-bank.svg"
+import EY from "@/components/icons/enterprise/ey.svg"
+import Fox from "@/components/icons/enterprise/fox.svg"
+import JPMorgan from "@/components/icons/enterprise/jpmorgan.svg"
+import Lamborghini from "@/components/icons/enterprise/lamborghini.svg"
+import LouisVuitton from "@/components/icons/enterprise/louis-vuitton.svg"
+import Mastercard from "@/components/icons/enterprise/mastercard.svg"
+import Nike from "@/components/icons/enterprise/nike.svg"
+import Opera from "@/components/icons/enterprise/opera.svg"
+import PayPal from "@/components/icons/enterprise/paypal.svg"
+import Samsung from "@/components/icons/enterprise/samsung.svg"
+import SAP from "@/components/icons/enterprise/sap.svg"
+import Siemens from "@/components/icons/enterprise/siemens.svg"
+import Sony from "@/components/icons/enterprise/sony.svg"
+import Sothebys from "@/components/icons/enterprise/sothebys.svg"
+import TMobile from "@/components/icons/enterprise/tmobile.svg"
+import Verizon from "@/components/icons/enterprise/verizon.svg"
+import Visa from "@/components/icons/enterprise/visa.svg"
+import Walmart from "@/components/icons/enterprise/walmart.svg"
+import WFP from "@/components/icons/enterprise/wfp.svg"
 import ExtraSecurity from "@/components/icons/extra-security.svg"
 import FutureProofing from "@/components/icons/future-proofing.svg"
 import MainArticle from "@/components/MainArticle"
@@ -145,6 +172,37 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
       content: t("page-enterprise-reason-4-content"),
     },
   ]
+
+  const players = [
+    { name: "Adidas", Logo: Adidas },
+    { name: "Azure", Logo: Azure },
+    { name: "Banco Santander", Logo: BancoSantander },
+    { name: "BASF", Logo: BASF },
+    { name: "BlackRock", Logo: BlackRock },
+    { name: "BMW", Logo: BMW },
+    { name: "Coca-Cola", Logo: CocaCola },
+    { name: "European Investment Bank", Logo: EuropeanInvestmentBank },
+    { name: "EY", Logo: EY },
+    { name: "Fox", Logo: Fox },
+    { name: "JP Morgan", Logo: JPMorgan },
+    { name: "Lamborghini", Logo: Lamborghini },
+    { name: "Louis Vuitton", Logo: LouisVuitton },
+    { name: "Mastercard", Logo: Mastercard },
+    { name: "Nike", Logo: Nike },
+    { name: "Opera", Logo: Opera },
+    { name: "PayPal", Logo: PayPal },
+    { name: "Samsung", Logo: Samsung },
+    { name: "SAP", Logo: SAP },
+    { name: "Siemens", Logo: Siemens },
+    { name: "Sony", Logo: Sony },
+    { name: "Sothebys", Logo: Sothebys },
+    { name: "TMobile", Logo: TMobile },
+    { name: "Verizon", Logo: Verizon },
+    { name: "Visa", Logo: Visa },
+    { name: "Walmart", Logo: Walmart },
+    { name: "WFP", Logo: WFP },
+  ]
+  console.log("TODO:", players)
 
   return (
     <div className="space-y-12 md:space-y-20">
