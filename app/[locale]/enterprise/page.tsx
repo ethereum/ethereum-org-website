@@ -5,6 +5,7 @@ import type { Lang } from "@/lib/types"
 import { HubHero } from "@/components/Hero"
 import BetterUX from "@/components/icons/better-ux.svg"
 import CheaperTransactions from "@/components/icons/cheaper-transactions.svg"
+import Checkmark from "@/components/icons/checkmark.svg"
 import ExtraSecurity from "@/components/icons/extra-security.svg"
 import FutureProofing from "@/components/icons/future-proofing.svg"
 import MainArticle from "@/components/MainArticle"
@@ -126,6 +127,25 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     },
   ]
 
+  const reasons = [
+    {
+      header: t("page-enterprise-reason-1-header"),
+      content: t("page-enterprise-reason-1-content"),
+    },
+    {
+      header: t("page-enterprise-reason-2-header"),
+      content: t("page-enterprise-reason-2-content"),
+    },
+    {
+      header: t("page-enterprise-reason-3-header"),
+      content: t("page-enterprise-reason-3-content"),
+    },
+    {
+      header: t("page-enterprise-reason-4-header"),
+      content: t("page-enterprise-reason-4-content"),
+    },
+  ]
+
   return (
     <div className="space-y-12 md:space-y-20">
       <HubHero
@@ -227,10 +247,16 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             {t("page-enterprise-why-description")}
           </p>
           <div className="grid w-full grid-cols-1 gap-6 rounded-4xl border bg-background p-6 md:grid-cols-2 md:gap-8 md:p-8">
-            <Skeleton className="h-40 w-full" />
-            <Skeleton className="h-40 w-full" />
-            <Skeleton className="h-40 w-full" />
-            <Skeleton className="h-40 w-full" />
+            {reasons.map(({ header, content }) => (
+              <div
+                key={header}
+                className="grid h-fit grid-cols-[auto,1fr] gap-x-3"
+              >
+                <Checkmark className="text-2xl text-success" />
+                <h3 className="h-fit text-lg font-bold">{header}</h3>
+                <p className="col-start-2 text-body-medium">{content}</p>
+              </div>
+            ))}
           </div>
         </section>
 
