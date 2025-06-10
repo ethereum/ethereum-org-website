@@ -1039,6 +1039,8 @@ export type ValuesPairing = {
   ethereum: ValuesItem
 }
 
+export type StablecoinType = "FIAT" | "CRYPTO" | "ASSET" | "ALGORITHMIC"
+
 export type PageParams = {
   locale: string
 }
@@ -1046,3 +1048,4 @@ export type PageParams = {
 export type SlugPageParams = PageParams & {
   slug: string[]
 }
+
