@@ -335,7 +335,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             <CasesColumn cases={cases.slice(2, 4)} />
             <CasesColumn cases={cases.slice(4, 6)} />
           </div>
-          <ButtonLink href="/enterprise/use" variant="outline">
+          <ButtonLink href="/enterprise/uses" variant="outline">
             {t("page-enterprise-ecosystem-cta")}
           </ButtonLink>
         </section>
