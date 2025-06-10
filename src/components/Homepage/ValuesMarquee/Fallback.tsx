@@ -5,7 +5,7 @@ import { Spinner } from "@/components/ui/spinner"
 
 const ValuesMarqueeFallback = () => (
   <div className="mt-19 max-2xl:-mx-4 2xl:rounded-2xl">
-    <Skeleton className="relative h-fit bg-blue-100 dark:bg-blue-800">
+    <Skeleton className="relative h-fit bg-blue-50 dark:bg-blue-600">
       <div className="flex h-fit max-w-full items-center gap-10 overflow-x-hidden py-8">
         {Array.from({ length: 10 }).map((_, i) => (
           <Fragment key={i}>
