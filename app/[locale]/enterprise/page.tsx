@@ -267,7 +267,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 
         <section
           id="ecosystem"
-          className="flex w-full flex-col items-center gap-y-12 rounded-t-[4rem] bg-radial-b py-10 md:py-12"
+          className="flex w-full flex-col items-center gap-y-12 rounded-t-[4rem] bg-radial-b px-4 py-10 md:py-12"
         >
           <h2 className="max-w-prose text-center text-4xl font-black md:text-5xl">
             {t("page-enterprise-ecosystem-header")}
@@ -277,9 +277,12 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           </p>
           <div
             data-label="marquee"
-            className="w-full space-y-4 text-body-medium grayscale"
+            className="w-full space-y-4 text-body opacity-40 grayscale"
             style={{
               mask: `linear-gradient(to right, transparent 1rem, white 15%, white 85%, transparent calc(100% - 1rem))`,
+              // TODO: Fix -mx-6 class not working
+              marginInlineStart: "-1.5rem",
+              marginInlineEnd: "-1.5rem",
             }}
           >
             <div className="flex w-full flex-nowrap gap-20 py-4 text-4xl">
@@ -384,7 +387,7 @@ export async function generateMetadata({
     slug: ["enterprise"],
     title: t("page-enterprise-hero-title"),
     description: t("page-enterprise-metadata-description"),
-    image: "/images/heroes/developers-hub-hero.jpg",
+    image: "/images/heroes/enterprise-hero-white.jpg",
   })
 }
 
