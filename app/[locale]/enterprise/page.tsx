@@ -173,17 +173,23 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     },
   ]
 
-  const players = [
+  type EcosystemPlayer = {
+    name: string
+    Logo: React.FC<React.SVGProps<SVGElement>>
+    className?: string
+  }
+
+  const players: EcosystemPlayer[] = [
     { name: "Adidas", Logo: Adidas },
     { name: "Azure", Logo: Azure },
     { name: "Banco Santander", Logo: BancoSantander },
-    { name: "BASF", Logo: BASF },
-    { name: "BlackRock", Logo: BlackRock },
+    { name: "BASF", Logo: BASF, className: "h-8" },
+    { name: "BlackRock", Logo: BlackRock, className: "h-8" },
     { name: "BMW", Logo: BMW },
     { name: "Coca-Cola", Logo: CocaCola },
     { name: "European Investment Bank", Logo: EuropeanInvestmentBank },
     { name: "EY", Logo: EY },
-    { name: "Fox", Logo: Fox },
+    { name: "Fox", Logo: Fox, className: "h-8" },
     { name: "JP Morgan", Logo: JPMorgan },
     { name: "Lamborghini", Logo: Lamborghini },
     { name: "Louis Vuitton", Logo: LouisVuitton },
@@ -191,10 +197,10 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     { name: "Nike", Logo: Nike },
     { name: "Opera", Logo: Opera },
     { name: "PayPal", Logo: PayPal },
-    { name: "Samsung", Logo: Samsung },
+    { name: "Samsung", Logo: Samsung, className: "h-8" },
     { name: "SAP", Logo: SAP },
-    { name: "Siemens", Logo: Siemens },
-    { name: "Sony", Logo: Sony },
+    { name: "Siemens", Logo: Siemens, className: "h-8" },
+    { name: "Sony", Logo: Sony, className: "h-8" },
     { name: "Sothebys", Logo: Sothebys },
     { name: "TMobile", Logo: TMobile },
     { name: "Verizon", Logo: Verizon },
@@ -226,7 +232,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 
       <MainArticle className="space-y-12 px-4 md:space-y-20 md:px-10">
         <section id="metrics" className="flex flex-col gap-6 md:flex-row">
-          <div className="max-w-prose">
+          <div className="max-w-prose space-y-4">
             <h2>{t("page-enterprise-metrics-header")}</h2>
             <p>
               Ethereum is the leading platform for <strong>issuing</strong>,{" "}
@@ -269,51 +275,51 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           id="ecosystem"
           className="flex w-full flex-col items-center gap-y-12 rounded-t-[4rem] bg-radial-b px-4 py-10 md:py-12"
         >
-          <h2 className="max-w-prose text-center text-4xl font-black md:text-5xl">
-            {t("page-enterprise-ecosystem-header")}
-          </h2>
-          <p className="max-w-prose text-center">
-            {t("page-enterprise-ecosystem-description")}
-          </p>
+          <div className="max-w-prose space-y-4">
+            <h2 className="max-w-prose text-center text-4xl font-black md:text-5xl">
+              {t("page-enterprise-ecosystem-header")}
+            </h2>
+            <p className="max-w-prose text-center">
+              {t("page-enterprise-ecosystem-description")}
+            </p>
+          </div>
           <div
             data-label="marquee"
-            className="w-full space-y-4 text-body opacity-40 grayscale"
+            dir="ltr"
+            className="w-full space-y-8 text-body opacity-40 grayscale"
             style={{
               mask: `linear-gradient(to right, transparent 1rem, white 15%, white 85%, transparent calc(100% - 1rem))`,
-              // TODO: Fix -mx-6 class not working
-              marginInlineStart: "-1.5rem",
-              marginInlineEnd: "-1.5rem",
             }}
           >
-            <div className="flex w-full flex-nowrap gap-20 py-4 text-4xl">
-              {players.map(({ name, Logo }) => (
-                <div key={name} aria-label={name} className="flex h-10">
-                  <Logo className="" />
-                </div>
-              ))}
-            </div>
-            <div className="flex w-full flex-nowrap gap-20 py-4 text-4xl">
-              {players.map(({ name, Logo }) => (
-                <div
-                  key={name}
-                  aria-label={name}
-                  className="flex h-10 -translate-x-[50vw]"
-                >
-                  <Logo className="" />
-                </div>
-              ))}
-            </div>
-            <div className="flex w-full flex-nowrap gap-20 py-4 text-4xl">
-              {players.map(({ name, Logo }) => (
-                <div
-                  key={name}
-                  aria-label={name}
-                  className="flex h-10 -translate-x-[100vw]"
-                >
-                  <Logo className="" />
-                </div>
-              ))}
-            </div>
+            {Array.from({ length: 3 }).map((_, row) => (
+              <div
+                data-label="marquee-row"
+                key={row}
+                className="flex max-w-full overflow-hidden"
+              >
+                {Array.from({ length: 2 }).map((_, idx) => (
+                  <div
+                    key={idx}
+                    className="flex min-w-fit animate-scroll-left-120 items-center"
+                  >
+                    {players.map(({ name, Logo, className }) => (
+                      <div
+                        key={name}
+                        aria-label={name}
+                        className={cn(
+                          "flex h-10 w-fit justify-center px-6 md:px-8",
+                          row === 1 && "-translate-x-[90rem]",
+                          row === 2 && "-translate-x-[180rem]",
+                          className
+                        )}
+                      >
+                        <Logo />
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </div>
+            ))}
           </div>
           <div
             data-label="case-studies"
@@ -332,12 +338,14 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           id="why"
           className="flex w-full flex-col items-center gap-y-12 rounded-4xl border border-accent-c/20 bg-gradient-to-b from-accent-c/5 from-[60%] to-accent-c/15 px-4 py-10 md:py-12 dark:from-accent-c/10 dark:to-accent-c/20 [&>*]:max-w-screen-lg"
         >
-          <h2 className="max-w-prose px-6 text-center text-4xl font-black md:px-8 md:text-5xl">
-            {t("page-enterprise-why-header")}
-          </h2>
-          <p className="max-w-prose px-6 text-center md:px-8">
-            {t("page-enterprise-why-description")}
-          </p>
+          <div className="space-y-4">
+            <h2 className="px-6 text-center text-4xl font-black md:px-8 md:text-5xl">
+              {t("page-enterprise-why-header")}
+            </h2>
+            <p className="px-6 text-center md:px-8">
+              {t("page-enterprise-why-description")}
+            </p>
+          </div>
           <div className="grid w-full grid-cols-1 gap-6 rounded-4xl border bg-background p-6 md:grid-cols-2 md:gap-8 md:p-8">
             {reasons.map(({ header, content }) => (
               <div

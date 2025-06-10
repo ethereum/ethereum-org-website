@@ -305,6 +305,8 @@ const config = {
         "accordion-up": "accordion-up 0.2s ease-out",
         "scroll-left": "scroll-left 30s linear infinite",
         "scroll-right": "scroll-right 30s linear infinite",
+        "scroll-left-120": "scroll-left 120s linear infinite",
+        "scroll-right-120": "scroll-right 120s linear infinite",
         "spin-30": "spin 60s linear infinite",
         "counter-spin-30": "spin 60s linear infinite reverse",
         "spin-21": "spin 42s linear infinite",
