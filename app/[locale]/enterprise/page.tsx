@@ -16,10 +16,12 @@ import CocaCola from "@/components/icons/enterprise/coca-cola.svg"
 import EuropeanInvestmentBank from "@/components/icons/enterprise/european-investment-bank.svg"
 import EY from "@/components/icons/enterprise/ey.svg"
 import Fox from "@/components/icons/enterprise/fox.svg"
+import FranklinTempleton from "@/components/icons/enterprise/franklin-templeton.svg"
 import JPMorgan from "@/components/icons/enterprise/jpmorgan.svg"
 import Lamborghini from "@/components/icons/enterprise/lamborghini.svg"
 import LouisVuitton from "@/components/icons/enterprise/louis-vuitton.svg"
 import Mastercard from "@/components/icons/enterprise/mastercard.svg"
+import MediLedger from "@/components/icons/enterprise/mediledger.svg"
 import Nike from "@/components/icons/enterprise/nike.svg"
 import Opera from "@/components/icons/enterprise/opera.svg"
 import PayPal from "@/components/icons/enterprise/paypal.svg"
@@ -28,6 +30,7 @@ import SAP from "@/components/icons/enterprise/sap.svg"
 import Siemens from "@/components/icons/enterprise/siemens.svg"
 import Sony from "@/components/icons/enterprise/sony.svg"
 import Sothebys from "@/components/icons/enterprise/sothebys.svg"
+import Swarm from "@/components/icons/enterprise/swarm.svg"
 import TMobile from "@/components/icons/enterprise/tmobile.svg"
 import Verizon from "@/components/icons/enterprise/verizon.svg"
 import Visa from "@/components/icons/enterprise/visa.svg"
@@ -148,9 +151,9 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
       ),
     },
     {
-      name: "MediLedger",
+      name: "TODO: New Item",
       content:
-        "Enables Pfizer and Genentech to verify drug authenticity and ensure pharma compliance.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     },
   ]
 
@@ -189,11 +192,13 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     { name: "Coca-Cola", Logo: CocaCola },
     { name: "European Investment Bank", Logo: EuropeanInvestmentBank },
     { name: "EY", Logo: EY },
+    { name: "Franklin Templeton Investments", Logo: FranklinTempleton },
     { name: "Fox", Logo: Fox, className: "h-8" },
     { name: "JP Morgan", Logo: JPMorgan },
     { name: "Lamborghini", Logo: Lamborghini },
     { name: "Louis Vuitton", Logo: LouisVuitton },
     { name: "Mastercard", Logo: Mastercard },
+    { name: "MediLedger", Logo: MediLedger },
     { name: "Nike", Logo: Nike },
     { name: "Opera", Logo: Opera },
     { name: "PayPal", Logo: PayPal },
@@ -202,6 +207,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     { name: "Siemens", Logo: Siemens, className: "h-8" },
     { name: "Sony", Logo: Sony, className: "h-8" },
     { name: "Sothebys", Logo: Sothebys },
+    { name: "Swarm", Logo: Swarm },
     { name: "TMobile", Logo: TMobile },
     { name: "Verizon", Logo: Verizon },
     { name: "Visa", Logo: Visa },
