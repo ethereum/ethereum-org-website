@@ -109,13 +109,13 @@ export const useStatsBoxGrid = ({
     },
     {
       apiProvider: "growthepie",
-      apiUrl: "https://www.growthepie.xyz/fundamentals/transaction-costs",
+      apiUrl: "https://www.growthepie.com/fundamentals/transaction-costs",
       label: t("page-index-network-stats-tx-cost-description"),
       state: medianTxCost,
     },
     {
       apiProvider: "growthepie",
-      apiUrl: "https://www.growthepie.xyz/fundamentals/transaction-count",
+      apiUrl: "https://www.growthepie.com/fundamentals/transaction-count",
       label: t("page-index-network-stats-tx-day-description"),
       state: txs,
     },
