@@ -202,7 +202,6 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     { name: "Walmart", Logo: Walmart },
     { name: "WFP", Logo: WFP },
   ]
-  console.log("TODO:", players)
 
   return (
     <div className="space-y-12 md:space-y-20">
@@ -276,10 +275,42 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           <p className="max-w-prose text-center">
             {t("page-enterprise-ecosystem-description")}
           </p>
-          <div data-label="marquee" className="w-full space-y-2">
-            <Skeleton className="h-16 w-full" />
-            <Skeleton className="h-16 w-full" />
-            <Skeleton className="h-16 w-full" />
+          <div
+            data-label="marquee"
+            className="w-full space-y-4 text-body-medium grayscale"
+            style={{
+              mask: `linear-gradient(to right, transparent 1rem, white 15%, white 85%, transparent calc(100% - 1rem))`,
+            }}
+          >
+            <div className="flex w-full flex-nowrap gap-20 py-4 text-4xl">
+              {players.map(({ name, Logo }) => (
+                <div key={name} aria-label={name} className="flex h-10">
+                  <Logo className="" />
+                </div>
+              ))}
+            </div>
+            <div className="flex w-full flex-nowrap gap-20 py-4 text-4xl">
+              {players.map(({ name, Logo }) => (
+                <div
+                  key={name}
+                  aria-label={name}
+                  className="flex h-10 -translate-x-[50vw]"
+                >
+                  <Logo className="" />
+                </div>
+              ))}
+            </div>
+            <div className="flex w-full flex-nowrap gap-20 py-4 text-4xl">
+              {players.map(({ name, Logo }) => (
+                <div
+                  key={name}
+                  aria-label={name}
+                  className="flex h-10 -translate-x-[100vw]"
+                >
+                  <Logo className="" />
+                </div>
+              ))}
+            </div>
           </div>
           <div
             data-label="case-studies"
