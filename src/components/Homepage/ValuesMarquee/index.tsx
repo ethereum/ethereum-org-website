@@ -15,9 +15,6 @@ import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import { Stack } from "../../ui/flex"
 
-import ValuesMarqueeFallback from "./Fallback"
-
-import { useIsClient } from "@/hooks/useIsClient"
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion"
 import { useRtlFlip } from "@/hooks/useRtlFlip"
 
@@ -161,8 +158,6 @@ const ValuesMarquee = ({
   eventCategory,
   categoryLabels,
 }: ValuesMarqueeProps) => {
-  // const { t } = useValuesMarquee()
-  const mounted = useIsClient()
   const containerFirstRef = useRef<HTMLDivElement>(null)
   const containerSecondRef = useRef<HTMLDivElement>(null)
 
@@ -183,8 +178,6 @@ const ValuesMarquee = ({
   }, [])
 
   const { direction, isRtl, twFlipForRtl } = useRtlFlip()
-
-  if (!mounted) return <ValuesMarqueeFallback />
 
   return (
     <div className="relative mt-19 overflow-hidden max-2xl:-mx-4 2xl:rounded-2xl">

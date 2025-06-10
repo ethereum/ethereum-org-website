@@ -1,4 +1,5 @@
 import { Fragment } from "react"
+import dynamic from "next/dynamic"
 import { notFound } from "next/navigation"
 import { getTranslations, setRequestLocale } from "next-intl/server"
 import { FaDiscord, FaGithub } from "react-icons/fa6"
@@ -15,11 +16,9 @@ import BannerNotification from "@/components/Banners/BannerNotification"
 import { ChevronNext } from "@/components/Chevron"
 import HomeHero from "@/components/Hero/HomeHero"
 import BentoCard from "@/components/Homepage/BentoCard"
-import BentoCardSwiper from "@/components/Homepage/BentoCardSwiper"
 import CodeExamples from "@/components/Homepage/CodeExamples"
-import RecentPostsSwiper from "@/components/Homepage/RecentPostsSwiper"
 import { getBentoBoxItems } from "@/components/Homepage/utils"
-import ValuesMarquee from "@/components/Homepage/ValuesMarquee"
+import ValuesMarqueeFallback from "@/components/Homepage/ValuesMarquee/Fallback"
 import BlockHeap from "@/components/icons/block-heap.svg"
 import BuildAppsIcon from "@/components/icons/build-apps.svg"
 import Calendar from "@/components/icons/calendar.svg"
@@ -53,6 +52,7 @@ import {
   SectionHeader,
   SectionTag,
 } from "@/components/ui/section"
+import { Skeleton, SkeletonCardGrid } from "@/components/ui/skeleton"
 import WindowBox from "@/components/WindowBox"
 
 import { cn } from "@/lib/utils/cn"
@@ -96,6 +96,41 @@ import ActivityImage from "@/public/images/heroes/layer-2-hub-hero.jpg"
 import LearnImage from "@/public/images/heroes/learn-hub-hero.png"
 import CommunityImage from "@/public/images/heroes/quizzes-hub-hero.png"
 import Hero from "@/public/images/home/hero.png"
+
+const BentoCardSwiper = dynamic(
+  () => import("@/components/Homepage/BentoCardSwiper"),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex flex-col items-center gap-4">
+        <Skeleton className="mx-auto mt-4 h-[476px] w-[512px] max-w-128 rounded-2xl border-primary/10 bg-background bg-gradient-to-b from-primary/10 from-20% to-primary/5 to-60% p-4 opacity-50 shadow-card-hover lg:hidden dark:from-primary/20 dark:to-primary/10" />
+        <Skeleton className="h-6 w-[12rem] rounded-full" />
+      </div>
+    ),
+  }
+)
+
+const RecentPostsSwiper = dynamic(
+  () => import("@/components/Homepage/RecentPostsSwiper"),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex flex-col items-center gap-4">
+        <SkeletonCardGrid className="mt-4 w-full md:mt-16" />
+        <Skeleton className="h-4 w-20 rounded-full" />
+      </div>
+    ),
+  }
+)
+
+const ValuesMarquee = dynamic(
+  () => import("@/components/Homepage/ValuesMarquee"),
+  {
+    ssr: false,
+    loading: () => <ValuesMarqueeFallback />,
+  }
+)
+
 const fetchXmlBlogFeeds = async () => {
   const xmlUrls = BLOG_FEEDS.filter((feed) => ![ATTESTANT_BLOG].includes(feed))
   return await fetchRSS(xmlUrls)
@@ -472,7 +507,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             </h2>
           </div>
 
-          {/* Mobile - CLIENT SIDE */}
+          {/* Mobile - dynamic / lazy loaded */}
           <BentoCardSwiper
             bentoItems={bentoItems}
             eventCategory={eventCategory}
@@ -597,7 +632,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             </p>
           </SectionContent>
 
-          {/* CLIENT SIDE */}
+          {/* dynamic / lazy loaded */}
           <ValuesMarquee
             pairings={valuesPairings}
             eventCategory={eventCategory}
@@ -788,7 +823,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           </h3>
           <p>{t("page-index-posts-subtitle")}</p>
 
-          {/* CLIENT SIDE */}
+          {/* dynamic / lazy loaded */}
           <RecentPostsSwiper
             className="mt-4 md:mt-16"
             rssItems={rssItems}
