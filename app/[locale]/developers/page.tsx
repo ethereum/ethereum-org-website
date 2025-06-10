@@ -14,6 +14,7 @@ import MainArticle from "@/components/MainArticle"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Card } from "@/components/ui/card"
 import { VStack } from "@/components/ui/flex"
+import Link from "@/components/ui/Link"
 import InlineLink from "@/components/ui/Link"
 
 import { getMetadata } from "@/lib/utils/metadata"
@@ -64,19 +65,6 @@ const DevelopersPage = async ({
     locale,
     namespace: "common",
   })
-
-  const quickstarts = [
-    {
-      description: t("page-developers-quickstart-1-description"),
-      command: "npx create-eth@latest",
-      eventName: "scaffold",
-    },
-    {
-      description: t("page-developers-quickstart-2-description"),
-      command: "npm init @rainbow-me/rainbowkit@latest",
-      eventName: "rainbowkit",
-    },
-  ]
 
   const paths: DevelopersPath[] = [
     {
@@ -156,29 +144,35 @@ const DevelopersPage = async ({
           <Card className="!space-y-8 break-words border border-accent-c/20 bg-gradient-to-t from-accent-c/15 to-accent-c/5 px-6 py-10 md:space-y-6 lg:p-12">
             <h3>{t("page-developers-jump-right-in-title")}</h3>
             <div className="space-y-6">
-              {quickstarts.map(({ description, command, eventName }) => (
-                <div key={command} className="space-y-1">
-                  <div className="font-bold">{description}</div>
-                  <div className="flex items-center rounded-lg border bg-background px-3 py-1">
-                    <div className="flex-1 font-mono text-sm">{command}</div>
-                    <CopyButton
-                      message={command}
-                      size="sm"
-                      customEventOptions={{
-                        eventCategory: "top_boxes",
-                        eventAction: "click",
-                        eventName,
-                      }}
-                    />
-                  </div>
+              <div className="space-y-1">
+                <p className="font-bold">Scaffold-ETH 2</p>
+                <p className="text-sm text-body-medium">
+                  {t("page-developers-quickstart-scaffold-subtext")}{" "}
+                  <Link href="https://docs.scaffoldeth.io/">
+                    {t("page-developers-quickstart-scaffold-docs")}
+                  </Link>
+                </p>
+                <div className="flex items-center rounded-lg border bg-background px-3 py-1">
+                  <span className="flex-1 font-mono text-sm">
+                    npx create-eth@latest
+                  </span>
+                  <CopyButton
+                    message="npx create-eth@latest"
+                    size="sm"
+                    customEventOptions={{
+                      eventCategory: "top_boxes",
+                      eventAction: "click",
+                      eventName: "scaffold",
+                    }}
+                  />
                 </div>
-              ))}
+              </div>
             </div>
+
             <div>
-              <ButtonLink
+              <p className="mb-2 font-bold">Need to learn the language?</p>
+              <Link
                 href="https://docs.soliditylang.org/en/latest/"
-                variant="outline"
-                className="bg-background"
                 customEventOptions={{
                   eventCategory: "top_boxes",
                   eventAction: "click",
@@ -186,7 +180,7 @@ const DevelopersPage = async ({
                 }}
               >
                 {t("page-developers-solidity-docs")}
-              </ButtonLink>
+              </Link>
             </div>
           </Card>
         </div>
