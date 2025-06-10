@@ -9,14 +9,19 @@ template: roadmap
 
 Ethereum est mis à l'échelle à l'aide de [couches 2](/layer-2/#rollups) (également appelées rollups), qui regroupent les transactions et envoient le résultat à Ethereum. Bien que les rollups soient jusqu'à huit fois moins chers que le réseau principal d'Ethereum, il est possible d'optimiser davantage ces derniers, et réduire ainsi les coûts des utilisateurs finaux. Les rollups reposent également sur certains composants centralisés, que les développeurs peuvent supprimer à mesure que les rollups évoluent.
 
-<InfoBanner mb={8} title="Frais de transaction">
+<Alert variant="update" className="mb-8">
+<AlertContent>
+<AlertTitle className="mb-4">
+  Frais de transaction
+</AlertTitle>
   <ul style={{ marginBottom: 0 }}>
     <li>Aujourd'hui, les rollups sont <strong> 5 à 20 fois</strong> moins coûteux que la couche 1 d'Ethereum</li>
     <li>Les rollups ZK réduiront bientôt de <strong> 40 à 100 fois moins </strong>ces coûts</li>
     <li>Les changements à venir apportés à Ethereum fourniront une mise à l'échelle <strong>~100-1000x</strong> supplémentaire</li>
     <li style={{ marginBottom: 0 }}>Les utilisateurs bénéficieront de transactions<strong> à moins de 0,001 USD</strong></li>
   </ul>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Rendre les données moins onéreuses {#making-data-cheaper}
 

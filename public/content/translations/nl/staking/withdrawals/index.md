@@ -43,9 +43,14 @@ Vóór de upgrade van Shanghai/Capella kon je je gestakete ETH niet gebruiken of
 
 Het opgeven van een opnameadres is een vereiste stap voor elk validatoraccount voordat er ETH van het saldo kan worden opgenomen.
 
-<InfoBanner emoji="⚠️" isWarning>
+<Alert variant="warning">
+<AlertEmoji text="⚠️"/>
+<AlertContent>
+<AlertDescription>
   <strong>Aan elk validatoraccount kan slechts één opnameadres worden toegewezen, en wel één keer.</strong> Zodra een adres is gekozen en ingediend bij de consensuslaag, kan dit niet meer ongedaan worden gemaakt of worden gewijzigd. Controleer nogmaals of het opgegeven adres juist is en of het eigendomsrechtelijk is vastgelegd voordat je het indient.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 Er bestaat <strong>geen dreiging voor je geld in de tussentijd</strong> als je dit niet doet, ervan uitgaande dat je geheugensteuntje/zaadzin offline veilig offline is gebleven en op geen enkele manier is gecompromitteerd. Als je geen opnamegegevens invoert, blijft de ETH zoals tevoren geblokkeerd in het validatoraccount totdat er een opnameadres wordt opgegeven.
 
@@ -82,11 +87,16 @@ Bekijk deze uitleg van Finematics over Ethereum staking-opnames:
 
 Wanneer een validator het volgende blok moet voorstellen, moet hij een opnamewachtrij samenstellen van maximaal 16 in aanmerking komende opnames. Dit wordt gedaan door te beginnen met de validatorindex 0 en te bepalen of er een opname in aanmerking komt voor dit account volgens de regels van het protocol. Als dit het geval is, wordt het account toegevoegd aan de wachtrij. De validator die is ingesteld om het volgende blok voor te stellen, gaat verder waar het vorige blok is gestopt en gaat oneindig door.
 
-<InfoBanner emoji="🕛">
+<Alert variant="update">
+<AlertEmoji text="🕛"/>
+<AlertContent>
+<AlertDescription>
 Denk aan een analoge klok. De wijzer op de klok wijst naar het uur, beweegt in één richting, slaat geen uren over en komt uiteindelijk weer terecht bij het begin nadat het laatste nummer is bereikt.<br/><br/>
 Stel je nu voor dat de klok in plaats van 1 tot en met 12 0 tot en met N heeft <em>(het totale aantal validatoraccounts dat ooit is geregistreerd op de consensuslaag, meer dan 500.000 in januari 2023).</em><br/><br/>
 De wijzer op de klok wijst naar de volgende validator die moet worden gecontroleerd op in aanmerking komende opnames. Hij begint bij 0 en gaat door tot het einde, zonder dat er accounts worden overgeslagen. Wanneer de laatste validator bereikt is, begint de cyclus weer opnieuw vanaf het begin.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 #### Een account controleren op opnames {#checking-an-account-for-withdrawals}
 

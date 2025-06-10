@@ -49,12 +49,15 @@ lang: zh
 一旦交易处理完毕，你的钱包将自动收到你兑换到的代币。
 <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>想了解更多信息？</div>
   <ButtonLink href="/guides/">
     查看我们其他的指南
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## 常见问题
 

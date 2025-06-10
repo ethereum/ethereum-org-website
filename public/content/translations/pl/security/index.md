@@ -122,11 +122,14 @@ Zasadniczo pracownicy nigdy nie będą komunikować się z użytkownikiem za po�
 - Nigdy nie zezwalaj nikomu na zdalny dostęp do Twojego komputera
 - Nigdy nie komunikuj się poza określonymi kanałami organizacji
 
-<InfoBanner emoji=":lock:">
-  <div>
+<Alert variant="update">
+<AlertEmoji text=":lock:"/>
+<AlertContent>
+<AlertDescription>
     Uwaga: chociaż oszustwa w stylu wsparcia technicznego często zdarzają się na Discordzie, mogą one również występować w innych aplikacjach komunikacyjnych, w których odbywają się dyskusje na temat kryptowalut, w tym w wiadomościach e-mail.
-  </div>
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ### Oszustwo na token „Eth2” {#eth2-token-scam}
 
@@ -213,11 +216,14 @@ Silne hasło, które zostało ujawnione w wycieku danych nie jest już silnym ha
 
 ### Używaj menedżera haseł {#use-password-manager}
 
-<InfoBanner emoji=":bulb:">
-  <div>
+<Alert variant="update">
+<AlertEmoji text=":bulb:"/>
+<AlertContent>
+<AlertDescription>
     Korzystanie z menedżera haseł umożliwia tworzenie silnych, unikalnych haseł i ich zapamiętywanie! <strong>Zdecydowanie zalecamy</strong> korzystać z jednego z nich, a większość z nich jest bezpłatna!
-  </div>
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 Zapamiętywanie silnych, unikalnych haseł do każdego posiadanego konta nie jest idealnym rozwiązaniem. Menedżer haseł oferuje bezpieczny, zaszyfrowany magazyn dla wszystkich Twoich haseł, do którego można uzyskać dostęp za pomocą jednego silnego hasła głównego. Sugerują również silne hasła podczas rejestracji w nowym serwisie, aby nie trzeba było tworzyć własnych. Wiele menedżerów haseł poinformuje cię również, gdy Twoje dane znajdą się w wycieku danych, umożliwiając zmianę haseł, zanim dojdzie do jakichkolwiek złośliwych ataków.
 
@@ -240,11 +246,14 @@ Czasami możemy zostać poproszeni o uwierzytelnienie swojej tożsamości za pom
 
 Stosowanie **uwierzytelnienia dwuskładnikowego (2FA)** wprowadza dodatkowy *czynnik bezpieczeństwa*  dla Twoich kont online. 2FA gwarantuje, że samo posiadanie hasła nie wystarczy, aby uzyskać dostęp do konta. Najczęściej drugim czynnikiem jest losowy 6-cyfrowy kod, znany jako **jednorazowe hasło czasowe (TOTP)**, do którego można uzyskać dostęp za pośrednictwem aplikacji uwierzytelniającej, takiej jak Google Authenticator lub Authy. Działają one jako „coś, co posiadasz”, ponieważ ziarno, które generuje kod czasowy, jest przechowywane na twoim urządzeniu.
 
-<InfoBanner emoji=":lock:">
-  <div>
+<Alert variant="update">
+<AlertEmoji text=":lock:"/>
+<AlertContent>
+<AlertDescription>
     Uwaga: korzystanie z 2FA opartego na wiadomościach SMS jest podatne na tzw. <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">SIM jacking</a> i nie jest bezpieczne. Dla najlepszej ochrony korzystaj z takich usług, jak <a href="https://mashable.com/article/how-to-set-up-google-authenticator">Google Authenticator</a> lub <a href="https://authy.com/">Authy</a>.
-  </div>
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 #### Klucze bezpieczeństwa {#security-keys}
 

@@ -43,9 +43,14 @@ Lati ifilọlẹ ti adehun ifowonipamo dokowo ni Oṣu kọkanla ọdun 2020, di
 
 Pipese adirẹsi yiyọ kuro jẹ igbesẹ ti o nilo fun eyikeyi akanti olufọwọsi ṣaaju ki o le yẹ lati yọ ETH re kuro lati iinu iyoku owo rẹ.
 
-<InfoBanner emoji="⚠️" isWarning>
+<Alert variant="warning">
+<AlertEmoji text="⚠️"/>
+<AlertContent>
+<AlertDescription>
   <strong>Akanti olufọwọsi kọọkan le ṣe iyasọtọ fun adirẹsi yiyọ kuro kan nikan, ni akoko kan</strong>. Ni kete ti o ba yan adirẹsi kan ti o fi silẹ si ipele ipohunpo, eyi ko le ṣe tunṣe tabi yipada lẹẹkansi. Ṣayẹwo nini ati deede lẹẹmeji ti adirẹsi ti o pese ṣaaju fifiranṣẹ.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 Ko si <strong>ewu fun owo rẹ ni akoko yii</strong> fun kiko lati pese eyi, ka ba gba pe ọrọ iranileti / irugbin rẹ ti wa ni aabo ni nibiti kise ori ayelujara, ati pe ko ti ni ipalara ni eyikeyi ọna. Ikuna lati ṣafikun awọn iwe-ẹri yiyọ kuro yoo fi ETH silẹ ni titipa ninu akanti olufọwọsi bi o ti wa titi ti wa fi pese adirẹsi yiyọ kuro.
 
@@ -82,11 +87,16 @@ Boya olufọwọsi kan ni ẹtọ fun yiyọ kuro tabi rara jẹ ipinnu nipasẹ
 
 Nigbati a ba ṣeto olufọwọsi kan lati gbero bulọọku atẹle, o nilo lati kọ itotelera yiyọ kuro, ti o to awọn yiyọkuro to yẹ 16. Eyi ni a ṣe nipasẹ ibẹrẹ ti o bẹrẹ pẹlu itọka olufọwọsi 0, ipinnu boya yiyọkuro ti o yẹ fun akanti yii ni ibamu si awọn ofin ti ilana naa, ati ṣafikun rẹ si itotelera to ba wa. Ofọwọsi naa to ṣeto lati daba awọn bulooku wọnyi yoo gbe nibi ti eyi to kẹhin ti duro, lilọsiwaju ninu eto titilai.
 
-<InfoBanner emoji="🕛">
+<Alert variant="update">
+<AlertEmoji text="🕛"/>
+<AlertContent>
+<AlertDescription>
 Ronu nipa aago alafọwọyi. Ọwọ ti o wa lori aago tọka si wakati naa, nlọsiwaju ni itọsọna kan, ko fo awọn wakati eyikeyi, ati nikẹhin yoo yika si ibẹrẹ lẹẹkansi lẹhin to de nọmba ti o kẹhin.<br/><br/>
 Bayi dipo 1 si 12, fojuinu wo pe aago naa ni 0 si N <em>(apapọ nọmba awọn akanti olufọwọsi ti o ti forukọsilẹ tẹlẹ lori ipele ipohunpo, ju 500,000 ni Jan 2023).</em><br/><br/> 
 Ọwọ lori aago tọka si olufọwọsi atẹle ti o nilo lati ṣayẹwo fun awọn yiyọ kuro to yẹ. O bẹrẹ ni 0, o si tẹsiwaju ni gbogbo ọna yika laisi fifo eyikeyi awọn akanti. Nigbati ti o de olufọwọsi to kẹhin, iyipo naa tẹsiwaju pada lati ibẹrẹ.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 #### Ṣiṣayẹwo akanti kan fun awọn yiyọ kuro {#checking-an-account-for-withdrawals}
 

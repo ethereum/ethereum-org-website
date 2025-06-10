@@ -52,12 +52,15 @@ Dit proces zou niet langer dan 10 minuten moeten duren.
 Je kunt [chainlist.org](http://chainlist.org) gebruiken om de RPC-gegevens van het netwerk op te vragen. Zodra het netwerk is toegevoegd en de transactie is voltooid, zou je de tokens in je portemonnee moeten zien.
 <br />
 
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="justify-between flex-row items-center">
   <div>Wilt u hier meer over leren?</div>
   <ButtonLink href="/guides/">
     Bekijk onze andere gidsen
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 
 ## Veelgestelde vragen
 

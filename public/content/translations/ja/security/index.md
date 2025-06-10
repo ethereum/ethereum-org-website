@@ -122,11 +122,14 @@ Twitter (Xとも知られています) のリンクプレビュー機能 (アン
 - あなたのコンピュータへのリモートアクセスを許可しない
 - 組織の指定されたチャネル外では連絡しない
 
-<InfoBanner emoji=":lock:">
-  <div>
+<Alert variant="update">
+<AlertEmoji text=":lock:"/>
+<AlertContent>
+<AlertDescription>
     注: サポート詐欺はよくディスコードで起きていますが、暗号通貨に関する議論が行われているチャットアプリケーションや電子メールなどでも起きる可能性があります。
-  </div>
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 ### 「ETH2」トークン詐欺 {#eth2-token-scam}
 
@@ -213,11 +216,14 @@ _注: ステークされたETHを表す、Rocket PoolのrETH、LidoのstETH、Co
 
 ### パスワードマネージャーの使用 {#use-password-manager}
 
-<InfoBanner emoji=":bulb:">
-  <div>
+<Alert variant="update">
+<AlertEmoji text=":bulb:"/>
+<AlertContent>
+<AlertDescription>
     パスワードマネージャーを利用すると、強力で一意のパスワードを作成し、それらを覚えておくことができます! パスワードマネージャーの利用を<strong>強く推奨します</strong>(多くは無料で利用可能)。
-  </div>
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 すべてのアカウントで固有の強力なパスワードを覚えておくことは理想的とはいえません。 パスワードマネージャーは、すべてのパスワードを安全に暗号化して保存し、強力なマスターパスワードを利用してそれらにアクセスすることができます。 また、新しいサービスに登録する際、強力なパスワードを提案するため、自分自身でパスワードを作成する必要がなくなります。 また、情報漏洩が起こった場合は、多くのパスワードマネージャーには通知機能があるため、悪意のある攻撃の前にパスワードを変更することができます。
 
@@ -240,11 +246,14 @@ _注: ステークされたETHを表す、Rocket PoolのrETH、LidoのstETH、Co
 
 **二要素認証(2FA)**を使用することで、追加の*セキュリティ要素*をあなたのオンラインアカウントに提供できます。 2FAにより、パスワードだけではアカウントへアクセスできないことが保証されます。 最も一般的には、二つ目の要素は**時間ベースのワンタイムパスワード (TOTP)**として知られる、ランダム化された6桁のコードを使用します。このコードはGoogle AuthenticatorやAuthyなどの認証アプリからアクセスします。 時間制限のあるコードを生成するシードがあなたのデバイスに保存されているため、この要素は「所有しているもの」です。
 
-<InfoBanner emoji=":lock:">
-  <div>
+<Alert variant="update">
+<AlertEmoji text=":lock:"/>
+<AlertContent>
+<AlertDescription>
     注意: SMSベースの二要素認証は、<a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud"> SIMジャッキング</a> のリスクがあり、安全ではありません。 最高のセキュリティを確保するために、<a href="https://mashable.com/article/how-to-set-up-google-authenticator">Google Authenticator</a> や<a href="https://authy.com/">Authy</a>のようなサービスを使用することをお勧めします。
-  </div>
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 #### セキュリティキー {#security-keys}
 

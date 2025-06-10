@@ -4,9 +4,14 @@ description: 以太坊挖礦演算法的詳細介紹。
 lang: zh-tw
 ---
 
-<InfoBanner emoji=":wave:">
+<Alert variant="update">
+<AlertEmoji text=":wave:"/>
+<AlertContent>
+<AlertDescription>
 工作量證明不再是以太坊共識機制的基礎，這意味著挖礦已完結。 取而代之的是，以太坊由抵押以太幣的驗證者來保障安全。 你能從現在開始質押ETH. 閱讀更多關於<a href='/roadmap/merge/'>合併</a>、<a href='/developers/docs/consensus-mechanisms/pos/'>權益證明</a>和<a href='/staking/'>質押</a>的資訊。 此頁面僅為滿足對歷史的興趣。
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 以太坊挖礦使用過一種稱為 Ethash 的演算法。 這個演算法的基本思路是，礦工嘗試使用蠻力計算找到一個隨機數輸入，使得產生的雜湊值小於一個取決於計算難度的閾值。 此難度等級可以動態調整，從而允許定期產生區塊。
 

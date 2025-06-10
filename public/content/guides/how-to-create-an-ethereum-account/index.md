@@ -40,12 +40,15 @@ Some apps will request you to save a secret "recovery phrase" (sometimes called 
 **Any person who knows the phrase can take control of all funds.** Never share this with anyone. This phrase should contain 12 to 24 randomly generated words (the order of the words matters).
 
 <div>
-<InfoBanner shouldSpaceBetween emoji=":eyes:">
+<Alert variant="update">
+<AlertEmoji text=":eyes:"/>
+<AlertContent className="flex-row justify-between items-center">
   <div><b>Wallet installed?</b><br/>Learn how to use it.</div>
   <ButtonLink href="/guides/how-to-use-a-wallet">
     How to use a wallet
   </ButtonLink>
-</InfoBanner>
+</AlertContent>
+</Alert>
 </div>
 
 Interested in other guides? Check out our: [Step by step guides](/guides/)

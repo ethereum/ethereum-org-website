@@ -43,9 +43,14 @@ Vor dem Shanghai/Capella-Upgrade konnten Sie Ihr gestaktes ETH nicht verwenden o
 
 Die Angabe einer Auszahlungsadresse ist ein erforderlicher Schritt für jedes Validator-Konto, bevor es für die Abhebung von ETH aus seinem Guthaben infrage kommt.
 
-<InfoBanner emoji="⚠️" isWarning>
+<Alert variant="warning">
+<AlertEmoji text="⚠️"/>
+<AlertContent>
+<AlertDescription>
   <strong>Jedem Validatoren-Konto kann nur eine einzige Abhebungsadresse zugewiesen werden, und zwar nur einmal.</strong> Sobald eine Adresse ausgewählt und an die Konsensus-Ebene übermittelt wurde, lässt sich dieser Vorgang nicht mehr rückgängig machen. Überprüfen Sie die Besitzverhältnisse und die Richtigkeit der angegebenen Adresse, bevor Sie sie einreichen.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 In der Zwischenzeit besteht <strong>keine Bedrohung für Ihre Gelder</strong>, wenn Sie dies nicht tun, vorausgesetzt, Ihre Mnemonic-/Seed-Phrase ist offline sicher aufbewahrt und wurde in keiner Weise kompromittiert. Wenn keine Auszahlungsinformationen hinzugefügt werden, bleibt das ETH einfach im Validator-Konto gesperrt, wie es bislang der Fall war, bis eine Auszahlungsadresse angegeben wird.
 
@@ -82,11 +87,16 @@ Sehen Sie sich diese Erklärung für die Abhebungen von Ethereum von Finematics 
 
 Es ist notwendig, dass ein Validator, der den nächsten Block vorschlagen soll, eine Warteschlange mit bis zu 16 zugelassenen Auszahlungen erstellt. Ursprünglich beginnt man mit dem Validator-Index 0 und prüft, ob es gemäß den Protokollregeln eine berechtigte Auszahlung für dieses Konto gibt. Ist dies der Fall, wird sie zur Warteschlange hinzugefügt. Der für den nächsten Block vorgesehene Validator knüpft ununterbrochen dort an, wo der vorherige aufgehört hat, und verfährt dabei in stetiger Reihenfolge.
 
-<InfoBanner emoji="🕛">
+<Alert variant="update">
+<AlertEmoji text="🕛"/>
+<AlertContent>
+<AlertDescription>
 Stellen Sie sich eine analoge Uhr vor. Der Zeiger der Uhr zeigt auf die Stunde, bewegt sich in eine Richtung, lässt keine Stunden aus und kehrt schließlich nach Erreichen der letzten Zahl wieder an den Anfang zurück.<br/><br/>
 Stellen Sie sich nun vor, dass die Uhr statt 1 bis 12 die Zahlen 0 bis N hat <em>(die Gesamtzahl der jemals auf der Konsensus-Ebene registrierten Validatoren-Konten, über 500.000 im Januar 2023).</em><br/><br/>
 Der Zeiger auf der Uhr zeigt auf den nächstenValidator, der auf zulässige Abhebungen geprüft werden muss. Es beginnt bei 0 und schreitet rundherum fort, ohne irgendwelche Konten zu überspringen. Wenn der letzte Validator erreicht ist, beginnt der Zyklus von vorne.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 #### Überprüfung eines Kontos auf Auszahlungen {#checking-an-account-for-withdrawals}
 

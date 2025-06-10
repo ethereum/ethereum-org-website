@@ -4,9 +4,14 @@ description: Un examen detallado de los algoritmos utilizados para la minería d
 lang: es
 ---
 
-<InfoBanner emoji=":wave:">
+<Alert variant="update">
+<AlertEmoji text=":wave:"/>
+<AlertContent>
+<AlertDescription>
 La prueba de trabajo ya no es parte de la base del mecanismo de consenso de Ethereum, esto quiere decir que el minado ha sido apagado. En cambio, Ethereum está asegurado por validadores que participan en ETH. Puede comenzar su participación con ETH hoy. Descubrá más cosas sobre <a href='/roadmap/merge/'>La Fusión</a>, <a href='/developers/docs/consensus-mechanisms/pos/'>la prueba de participación (PoS)</a> y <a href='/staking/'>la participación</a>. Esta página es solo de interés histórico.
-</InfoBanner>
+</AlertDescription>
+</AlertContent>
+</Alert>
 
 La minería de Ethereum utilizo un algoritmo conocido como Ethash. La idea fundamental del algoritmo es que un minero intenta encontrar un contador nonce usando el cálculo computacional en bruto, de esta forma el hash resultante es menor que el umbral determinado por la dificultad calculada. Este nivel de dificultad se puede ajustar de forma dinámica, permitiendo que la producción de bloques ocurra en un intervalo regular.
 
