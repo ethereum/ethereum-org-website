@@ -19,13 +19,12 @@ We are a welcoming community that will help you grow and educate in the Ethereum
 - [Work on an open issue](https://github.com/ethereum/ethereum-org-website/issues) – Work we've identified that needs doing
 
 **Design**
-- [Help design the website](/contributing/design/) Designers of all levels can contribute to improve the website
+- [Help design the website](/contributing/design/) – Designers of all levels can contribute to improve the website
 
 **Content**
 - [Create/edit content](/contributing/#how-to-update-content) – Suggest new pages or make tweaks to what's here already
 - [Add community resources](/contributing/content-resources/) – Add a helpful article or resource to a relevant page
 - [Suggest a design resource](/contributing/design/adding-design-resources/) – Add, update, and delete helpful design resources
-- [Add a glossary term](/contributing/adding-glossary-terms/) – Help us continue to expand the Ethereum [glossary](/glossary/)
 - [Quizzes](/contributing/quizzes/) – Add, update, and delete quiz question banks for a relevant page
 
 **Feature ideas**
@@ -90,11 +89,11 @@ We have low barrier to entry issues on our GitHub repository specifically design
 
 If your contribution gets merged into ethereum.org, you will have a chance to claim a special badge on [Galxe](https://app.galxe.com/quest/ethereumorg). An Onchain Achievement Token (OAT) is a proof that you helped make the ecosystem a little more awesome.
 
-[More on OATs](https://help.galxe.com/en/articles/7067290-galxe-oats-reward-and-celebrate-achievements)
+[More on OATs](https://help.galxe.com/en/articles/9645630-create-quest-rewards#h_1c5d63ba03)
 
 ### How to claim
 1. Join our [Discord server](https://discord.gg/ethereum-org).
-2. Paste a link to your contribution in the `#🥇 | proof-of-contribution` channel
+2. Paste a link to your contribution in the `#🥇 | proof-of-contribution` channel.
 3. Wait for a member of our team to send you a link to your OAT.
 4. Claim your OAT!
 

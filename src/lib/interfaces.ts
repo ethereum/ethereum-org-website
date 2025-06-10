@@ -23,6 +23,7 @@ export interface DeveloperDocsLink {
  */
 export interface SharedFrontmatter {
   title: string
+  metaTitle?: string
   description: string
   lang: Lang
   sidebarDepth?: number

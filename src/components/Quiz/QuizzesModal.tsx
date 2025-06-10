@@ -1,11 +1,13 @@
 import { QuizStatus } from "@/lib/types"
 
-import Modal from "../Modal"
+import Modal, { type ModalProps } from "../ui/dialog-modal"
 import { Center } from "../ui/flex"
+
+import { useBreakpointValue } from "@/hooks/useBreakpointValue"
 
 type QuizzesModalProps = {
   isQuizModalOpen: boolean
-  onQuizModalClose: () => void
+  onQuizModalOpenChange: (open: boolean) => void
   children: React.ReactNode
   quizStatus: QuizStatus
 }
@@ -14,7 +16,7 @@ const QuizzesModal = ({
   children,
   quizStatus,
   isQuizModalOpen,
-  onQuizModalClose,
+  onQuizModalOpenChange,
   ...props
 }: QuizzesModalProps) => {
   // TODO: remove bang in utility class names when Modal is migrated
@@ -25,11 +27,13 @@ const QuizzesModal = ({
     return "!bg-error-light dark:!bg-error-dark"
   }
 
+  const size = useBreakpointValue<ModalProps["size"]>({ base: "xl", md: "md" })!
+
   return (
     <Modal
-      isOpen={isQuizModalOpen}
-      onClose={onQuizModalClose}
-      size={{ base: "full", md: "xl" }}
+      open={isQuizModalOpen}
+      onOpenChange={onQuizModalOpenChange}
+      size={size}
       contentProps={{ className: getStatusColorClass() }}
       {...props}
     >

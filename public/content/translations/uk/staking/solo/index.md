@@ -203,4 +203,4 @@ Staking Launchpad (Стартова платформа стейкінгу) — �
 - [Крок за кроком: як приєднатися до тестової мережі Ethereum 2.0](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) — _Butta_
 - [Поради щодо запобігання скороченням Eth2](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) — _Рауль Джордан, 2020 р. _
 
-<QuizWidget quizKey="solo-staking" />
+<QuizWidget quizKey="staking-solo" />

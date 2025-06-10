@@ -1,5 +1,6 @@
 ---
-title: 去中心化自治组织 (DAO)
+title: 什么是去中心化自治组织 (DAO)？
+metaTitle: 什么是去中心化自治组织 (DAO)？ | 去中心化自治组织
 description: 以太坊上的去中心化自治组织简介
 lang: zh
 template: use-cases
@@ -101,7 +102,7 @@ summaryPoint3: 一个为特定事业投入资金的安全场所。
 
 通常完全[无需许可](/glossary/#permissionless)，具体取决于使用的代币。 这些治理代币大多可以在[去中心化交易所](/glossary/#dex)进行交易，无需许可。 其余代币要通过提供流动性或其他“工作量证明”才能赚取。 无论何种方式，只要持有代币就可以参与投票。
 
-通常用来管理各种去中心化协议和/或代币本身。
+_通常用来管理各种去中心化协议和/或代币本身。_
 
 #### 知名案例 {#token-example}
 
@@ -111,7 +112,7 @@ summaryPoint3: 一个为特定事业投入资金的安全场所。
 
 基于份额的去中心化自治组织在更大程度上需要许可，但仍然相当公开透明。 任何潜在成员都可以提交加入去中心化自治组织的提案，并且通常以代币或工作的形式提供有价值的贡献。 份额代表直接投票权和所有权。 成员可以随时退出组织并带走属于他们的资金份额。
 
-通常用于联系更紧密、以人为中心的组织，例如慈善机构、工人团体和投资俱乐部等。 也可以管理协议和代币。
+_通常用于联系更紧密、以人为中心的组织，例如慈善机构、工人团体和投资俱乐部等。 也可以管理协议和代币。_
 
 #### 知名案例 {#share-example}
 
@@ -121,7 +122,7 @@ summaryPoint3: 一个为特定事业投入资金的安全场所。
 
 信誉代表参加投票的证明，并授予去中心化自治组织中的投票权。 不同于基于代币或份额的成员资格，基于信誉的去中心化自治组织不会将所有权转让给贡献者。 信誉不能够购买、转让或委托；去中心化自治组织成员必须通过参与获得信誉。 链上投票无需许可，潜在成员可以自由提交加入去中心化自治组织的提案，并要求获得信誉和代币，作为他们所做贡献的奖励。
 
-通常用于协议和[去中心化应用程序](/glossary/#dapp)的去中心化开发和管理，但同时非常适合各类组织，例如慈善机构、工人团体、投资俱乐部等。
+_通常用于协议和[去中心化应用程序](/glossary/#dapp)的去中心化开发和管理，但同时非常适合各类组织，例如慈善机构、工人团体、投资俱乐部等。_
 
 #### 知名案例 {#reputation-example}
 
@@ -153,10 +154,14 @@ summaryPoint3: 一个为特定事业投入资金的安全场所。
 - [如何创立由去中心化自治组织提供支持的数字社区](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)
 - [什么是去中心化自治组织？](https://coinmarketcap.com/alexandria/article/what-is-a-dao) – [Coinmarketcap](https://coinmarketcap.com)
 - [什么是全息共识？](https://medium.com/daostack/holographic-consensus-part-1-116a73ba1e1c) - [DAOstack](https://daostack.io/)
-- [去中心化自治组织不是公司：去中心化在自治组织中很重要](https://vitalik.eth.limo/general/2022/09/20/daos.html)，作者 Vitalik
+- [《去中心化自治组织不是公司：去中心化在自治组织中很重要》，作者 Vitalik](https://vitalik.eth.limo/general/2022/09/20/daos.html)
 - [去中心化自治组织、数据可用性委员会、数据可用性等等：不完整术语指南](https://blog.ethereum.org/2014/05/06/daos-dacs-das-and-more-an-incomplete-terminology-guide) - [以太坊博客](https://blog.ethereum.org)
 
 ### 视频 {#videos}
 
 - [什么是加密货币中的去中心化自治组织？](https://youtu.be/KHm0uUPqmVE)
 - [去中心化自治组织能构建一座城市吗？](https://www.ted.com/talks/scott_fitsimones_could_a_dao_build_the_next_great_city) – [TED](https://www.ted.com/)
+
+<Divider />
+
+<QuizWidget quizKey="daos" />

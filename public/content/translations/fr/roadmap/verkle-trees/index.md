@@ -51,9 +51,9 @@ Les arbres de Verkle sont des paires `(clé, valeur)` où les clés sont des él
 
 Les réseaux de test des arbres Verkle sont déjà opérationnels, mais il reste encore d'importantes mises à jour en attente pour les logiciels clients qui sont nécessaires pour prendre en charge les arbres de Verkle. Vous pouvez contribuer à accélérer les progrès en déployant des contrats sur les réseaux de test ou en exécutant des clients de réseau de test.
 
-[Explorer le réseau de test Verkle Gen D'évent 2](https://verkle-gen-devnet-2.ethpandaops.io/)
+[Explorer le réseau de test Verkle Gen Devnet 6](https://verkle-gen-devnet-6.ethpandaops.io/)
 
-[Regardez Guillaume Ballet expliquer le réseau de test Condrieu Verkle](https://www.youtube.com/watch?v=cPLHFBeC0Vg) (notez que le réseau de test Condrieu était une preuve de travail et a maintenant été remplacé par le réseau de test Verkle Gen Devnet 2).
+[Regardez Guillaume Ballet expliquer le réseau de test Condrieu Verkle](https://www.youtube.com/watch?v=cPLHFBeC0Vg) (notez que le réseau de test Condrieu était une preuve de travail et a maintenant été remplacé par le réseau de test Verkle Gen Devnet 6).
 
 ## Complément d'information {#further-reading}
 

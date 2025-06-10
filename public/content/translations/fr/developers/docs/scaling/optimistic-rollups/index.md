@@ -253,12 +253,6 @@ Davantage qu'un apprenant visuel ? Regardez Finematics expliquer les rollups opt
 
 <YouTube id="7pWxCklcNsU" start="263" />
 
-### Utiliser des rollups optimistes {#use-optimistic-rollups}
-
-Plusieurs implémentations de rollups optimistes existent, que vous pouvez intégrer dans vos dApps :
-
-<RollupProductDevDoc rollupType="optimistic" />
-
 ## Autres lectures sur les rollups optimistes
 
 - [Comment fonctionnent les rollups optimistes (Le guide complet)](https://www.alchemy.com/overviews/optimistic-rollups)

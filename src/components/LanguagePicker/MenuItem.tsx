@@ -1,16 +1,17 @@
 import { ComponentPropsWithoutRef } from "react"
-import { useRouter } from "next/router"
-import { useTranslation } from "next-i18next"
+import { useLocale } from "next-intl"
 import { BsCheck } from "react-icons/bs"
 
 import type { LocaleDisplayInfo } from "@/lib/types"
 
 import { cn } from "@/lib/utils/cn"
 
-import { Badge } from "../ui/badge"
 import { CommandItem } from "../ui/command"
+import { Tag } from "../ui/tag"
 
 import ProgressBar from "./ProgressBar"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 type ItemProps = ComponentPropsWithoutRef<typeof CommandItem> & {
   displayInfo: LocaleDisplayInfo
@@ -26,7 +27,7 @@ const MenuItem = ({ displayInfo, ...props }: ItemProps) => {
     isBrowserDefault,
   } = displayInfo
   const { t } = useTranslation("common")
-  const { locale } = useRouter()
+  const locale = useLocale()
   const isCurrent = localeOption === locale
 
   const getProgressInfo = (approvalProgress: number, wordsApproved: number) => {
@@ -64,18 +65,18 @@ const MenuItem = ({ displayInfo, ...props }: ItemProps) => {
               {targetName}
             </p>
             {isBrowserDefault && (
-              <Badge
-                className="h-fit-content rounded border-body-medium p-1 text-2xs font-normal uppercase leading-none text-body-medium"
-                variant="outline"
-              >
+              <Tag variant="outline" size="small">
                 {t("page-languages-browser-default")}
-              </Badge>
+              </Tag>
             )}
           </div>
           <p className="text-xs uppercase text-body">{sourceName}</p>
         </div>
         {isCurrent && (
-          <BsCheck className="text-2xl text-primary-high-contrast" />
+          <BsCheck
+            aria-hidden={true}
+            className="text-2xl text-primary-high-contrast"
+          />
         )}
       </div>
       <p className="max-w-full text-xs lowercase text-body-medium">

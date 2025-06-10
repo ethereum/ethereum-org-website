@@ -1,6 +1,6 @@
 ---
-title: Samostatný vklad do ETH
-description: Přehled toho, jak začít samostatně vkládat ETH
+title: Uzamykejte své ETH z domova
+description: Přehled toho, jak začít uzamykat své ETH z domova
 lang: cs
 template: staking
 emoji: ":money_with_wings:"
@@ -13,31 +13,31 @@ summaryPoints:
   - Odstraňte důvěru a nikdy se nevzdávejte kontroly nad klíči ke svým prostředkům
 ---
 
-## Co je samostatný vklad? {#what-is-solo-staking}
+## Co je uzamčení z domova? {#what-is-solo-staking}
 
-Samostatný vklad je akt [spuštění uzlu Ethereum](/run-a-node/) připojeného k internetu a vložením 32 ETH k aktivaci [validátoru](#faq), což vám dává možnost přímo se podílet na konsenzu sítě.
+Uzamčení z domova je akt [spuštění uzlu Ethereum](/run-a-node/) připojeného k internetu a vložení 32 ETH k aktivaci [validátoru](#faq), což vám dává možnost přímo se podílet na konsenzu sítě.
 
-**Samostatný vklad zvyšuje decentralizaci sítě Ethereum**, díky čemuž je Ethereum odolnější vůči cenzuře a odolnější vůči útokům. Jiné metody vkladů nemusí síti pomoci stejným způsobem. Samostatný vklad je nejlepší možností vkládání pro zajištění Etherea.
+**Uzamčení z domova zvyšuje decentralizaci sítě Ethereum**, díky čemuž je Ethereum odolnější vůči cenzuře a útokům. Jiné metody vkladů nemusí síti pomoci stejným způsobem. Uzamčení z domova je nejlepší možností uzamčení pro zajištění Etherea.
 
 Uzel Ethereum se skládá jak z klienta prováděcí vrstvy (EL), tak z klienta konsensuální vrstvy (CL). Tyto klienty jsou software, který společně s platnou sadou podpisových klíčů ověřuje transakce a bloky, osvědčuje správnému vedoucímu řetězce, shromažďuje atestace a navrhuje bloky.
 
-Samostatní vkladatelé jsou zodpovědní za provoz hardwaru potřebného ke spuštění těchto klientů. Důrazně se doporučuje používat k tomu vyhrazený počítač, který obsluhujete z domova – to je mimořádně prospěšné pro zdraví sítě.
+Uzamykatelé z domova jsou zodpovědní za provoz hardwaru potřebného ke spuštění těchto klientů. Důrazně se doporučuje používat k tomu vyhrazený počítač, který obsluhujete z domova – to je mimořádně prospěšné pro zdraví sítě.
 
-Samostatný vkladatel dostává odměny přímo z protokolu za to, že jejich validátor řádně funguje a je online.
+Uzamykatel z domova dostává odměny přímo z protokolu za to, že jejich validátor řádně funguje a je online.
 
-## Proč vkládat samostatně? {#why-stake-solo}
+## Proč uzamykat z domova? {#why-stake-solo}
 
-Samostatné vklady přináší větší odpovědnost, ale poskytuje vám maximální kontrolu nad vašimi prostředky a nastavením vkladů.
+Uzamčení z domova přináší větší odpovědnost, ale poskytuje vám maximální kontrolu nad vašimi prostředky a nastavením uzamčení.
 
 <CardGrid>
   <Card title="Vydělávejte čerstvé ETH" emoji="💸" description="Earn ETH-denominated rewards directly from the protocol when your validator is online, without any middlemen taking a cut." />
   <Card title="Plná kontrola" emoji="🎛️" description="Keep your own keys. Choose the combination of clients and hardware that allows you to minimize your risk and best contribute to the health and security of the network. Third-party staking services make these decisions for you, and they don't always make the safest choices." />
-  <Card title="Zabezpečení sítě" emoji="🔐" description="Solo staking is the most impactful way to stake. By running a validator on your own hardware at home, you strengthen the robustness, decentralization, and security of the Ethereum protocol." />
+  <Card title="Zabezpečení sítě" emoji="🔐" description="Home staking is the most impactful way to stake. By running a validator on your own hardware at home, you strengthen the robustness, decentralization, and security of the Ethereum protocol." />
 </CardGrid>
 
-## Úvahy před samostatným vkladem {#considerations-before-staking-solo}
+## Úvahy před uzamčením z domova {#considerations-before-staking-solo}
 
-Jakkoli si přejeme, aby byly samostatné vklady přístupné a bez rizika pro každého, není to realita. Než se rozhodnete vložit své ETH samostatně, je třeba mít na paměti několik praktických a vážných úvah.
+I když bychom si přáli, aby bylo uzamčení z domova dostupné a bez rizika pro každého, není to realita. Než se rozhodnete uzamčít své ETH z domova, je třeba mít na paměti několik praktických a vážných úvah.
 
 <InfoGrid>
 <ExpandableCard title="Povinná četba" eventCategory="SoloStaking" eventName="clicked required reading">
@@ -58,7 +58,7 @@ Stejně jako privátní klíče zajišťují vaši adresu Ethereum, budete muset
 <a href="/security/">Zabezpečení Etherea a prevence podvodů</a>
 </ExpandableCard>
 
-<ExpandableCard title="Maintenance" eventCategory="SoloStaking" eventName="clicked maintenance">
+<ExpandableCard title="Údržba" eventCategory="SoloStaking" eventName="clicked maintenance">
 Hardware občas selže, dojde k chybě síťových připojení a klientský software občas potřebuje upgrade. Údržba uzlů je nevyhnutelná a občas bude vyžadovat vaši pozornost. Budete si chtít být jisti, že budete informováni o všech očekávaných upgradech sítě nebo jiných důležitých upgradech klientů.
 </ExpandableCard>
 
@@ -93,7 +93,7 @@ Vkladový spouštěcí panel je open source aplikace, která vám pomůže stát
 
 ## Co je třeba zvážit u nástrojů pro nastavení uzlů a klienta {#node-tool-considerations}
 
-Existuje rostoucí počet nástrojů a služeb, které vám pomohou samostatně vložit vaše ETH, ale každý přichází s jinými riziky a výhodami.
+Existuje rostoucí počet nástrojů a služeb, které vám pomohou uzamčít vaše ETH z domova, ale každý přichází s jinými riziky a výhodami.
 
 Atributové indikátory se používají níže k signalizaci pozoruhodných silných nebo slabých stránek, které mohou mít uvedený vkladový nástroj. Použijte tuto část jako referenci, jak definujeme tyto atributy, když vybíráte nástroje, které vám pomohou s vaší cestou vkladu.
 
@@ -119,7 +119,7 @@ Tyto nástroje lze použít jako alternativu k [Staking Deposit CLI](https://git
 
 Máte návrh na vkladový nástroj, který nám chyběl? Podívejte se na naše [zásady pro záznam produktů](/contributing/adding-staking-products/), abyste zjistili, zda by se hodily, a odešlete je ke kontrole.
 
-## Prozkoumejte průvodce samostatným vkládáním {#staking-guides}
+## Prozkoumejte návody na uzamčení z domova {#staking-guides}
 
 <StakingGuides />
 
@@ -138,7 +138,7 @@ Každý pár klíčů spojený s validátorem vyžaduje k aktivaci přesně 32 E
 
 Nevkládejte více než 32 ETH na jeden validátor. Nezvýší to vaše odměny. Pokud byla pro validátor nastavena adresa pro výběr, přebytečné prostředky nad 32 ETH budou automaticky vybrány na tuto adresu během příští <a href="/staking/withdrawals/#validator-sweeping">kontroly validátoru</a>.
 
-Pokud se vám samostatné vkládání zdá příliš náročné, zvažte použití poskytovatele <a href="/staking/saas/">staking-as-a-service</a>, nebo pokud pracujete s méně než 32 ETH, zkontrolujte <a href="/staking/pools/">vkladové fondy</a>.
+Pokud se vám uzamčení z domova zdá příliš náročné, zvažte použití poskytovatele typu <a href="/staking/saas/">uzamčení-jako-služba</a>, nebo pokud pracujete s méně než 32 ETH, koukněte se na <a href="/staking/pools/">vkladové fondy</a>.
 </ExpandableCard>
 
 <ExpandableCard title="Budu potrestán, když přejdu offline? (ve zkratce: Ne.)">
@@ -146,7 +146,7 @@ Přechod do režimu offline v době, kdy se síť správně dokončuje, NEBUDE m
 
 Všimněte si, že sankce za nečinnost jsou úměrné tomu, kolik validátorů je současně offline. V případech, kdy je velká část sítě offline najednou, budou postihy pro každý z těchto validátorů vyšší, než když je jeden validátor nedostupný.
 
-V extrémních případech, pokud se síť přestane dokončovat v důsledku toho, že více než třetina validátorů je offline, tito uživatelé utrpí takzvaný <em>kvadratický únik nečinnosti</em>, což je exponenciální odliv ETH z účtů offline validátoru. To umožňuje, aby se síť časem samoopravila spotřebováním ETH neaktivních validátorů, dokud nebude zůstatek 16 EHT, přičemž budou automaticky vyřazeny z fondu validátorů. Zbývající online validátoři budou nakonec opět zahrnovat více než 2/3 sítě, čímž uspokojí nadpoloviční většinu potřebnou k opětovnému dokončení řetězce.
+V extrémních případech, pokud se síť přestane dokončovat v důsledku toho, že více než třetina validátorů je offline, tito uživatelé utrpí takzvaný <em>kvadratický únik nečinnosti</em>, což je exponenciální odliv ETH z účtů offline validátoru. To umožňuje, aby se síť časem samoopravila spotřebováním ETH neaktivních validátorů, dokud nebude zůstatek 16 ETH, přičemž budou automaticky vyřazeny z fondu validátorů. Zbývající online validátoři budou nakonec opět zahrnovat více než 2/3 sítě, čímž uspokojí nadpoloviční většinu potřebnou k opětovnému dokončení řetězce.
 </ExpandableCard>
 
 <ExpandableCard title="Jak zajistím, že nebudu potrestán?">
@@ -203,4 +203,4 @@ Chcete-li odemknout a získat zpět celý zůstatek, musíte také dokončit pro
 - [Krok za krokem: Jak se připojit k testovací síti Ethereum 2.0](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) – _ Butta_
 - [Tipy pro prevenci trestu Eth2](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) – _Raul Jordan 2020 _
 
-<QuizWidget quizKey="solo-staking" />
+<QuizWidget quizKey="staking-solo" />

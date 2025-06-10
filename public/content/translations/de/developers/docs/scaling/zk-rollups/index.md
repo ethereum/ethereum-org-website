@@ -34,12 +34,6 @@ Sehen Sie, wie Finematics ZK-Rollups erklärt:
 
 <YouTube id="7pWxCklcNsU" start="406" />
 
-### ZK-Rollups verwenden {#use-zk-rollups}
-
-Es gibt mehrere Implementierungen von ZK-Rollups, die Sie in Ihre dApps integrieren können:
-
-<RollupProductDevDoc rollupType="zk" />
-
 **ZK-Rollups verstehen**
 
 - [Was sind Zero-Knowledge Rollups?](https://coinmarketcap.com/alexandria/glossary/zero-knowledge-rollups)

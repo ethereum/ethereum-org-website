@@ -8,6 +8,31 @@ lang: fr
 
 Des centaines de milliers de passionnés d'Ethereum se rassemblent sur ces forums en ligne pour partager l'actualité, discuter des derniers développements, débattre de questions techniques et imaginer l'avenir.
 
+## Règles de listage {#listing-policy}
+
+Pour maintenir l'intégrité et la valeur des communautés listées, ethereum.org suit une politique stricte pour déterminer l'éligibilité :
+
+### Critère d'éligibilité {#eligibility-criteria}
+
+- **Pertinence** : La communauté doit être directement liée à Ethereum et à son écosystème.
+- **Niveau d'activité** : La communauté doit être active, avec des interactions, publications ou discussions régulières. Les communautés dormantes ou inactives peuvent être supprimées.
+- **Inclusivité** : La communauté doit favoriser un environnement accueillant qui respecte la diversité et encourage la participation de personnes de tous horizons.
+- **Orientation non commerciale** : Les listings sont destinés aux espaces communautaires plutôt qu'aux plateformes commerciales ou promotionnelles.
+
+### Directives relatives au contenu {#content-guidelines}
+
+- **Contenu approprié** : Les communautés doivent disposer de leurs propres lignes directrices de modération, évitant le spam, les discours de haine, le harcèlement ou tout contenu promouvant des activités illégales.
+- **Langue** : Bien que l'anglais soit la langue principale, les communautés dans d'autres langues sont encouragées à soumettre leur candidature tant qu'elles maintiennent une atmosphère inclusive et respectueuse.
+- **Transparence** : Des informations claires sur l'objectif, les règles et les modérateurs de la communauté doivent être disponibles pour les membres.
+
+### Recommandations complémentaires {#other-recommendations}
+
+- **Accessibilité** : Les forums communautaires doivent être accessibles à tous pour lecture sans inscription ou enregistrement.
+- **Invitations sur les serveurs Discord** : Il est recommandé de n'ajouter que des invitations fiables sur les serveurs Discord sur ethereum.org. Idéalement, ces invitations devraient renvoyer à une page communautaire sur le site web (par exemple, [ethglobal.com/discord](https://ethglobal.com/discord)) ou provenir d'une URL officielle (par exemple, [discord.gg/ethstaker](https://discord.gg/ethstaker) ou [discord.com/invite/ethstaker](https://discord.com/invite/ethstaker)).
+
+Si vous pensez qu'une communauté devrait être ajoutée ou supprimée selon ces directives, veuillez [ouvrir un ticket dans notre dépôt GitHub](https://github.com/ethereum/ethereum-org-website/issues).
+
+
 ## Forums {#forums}
 
 <SocialListItem socialIcon="reddit"><Link href="https://www.reddit.com/r/ethereum">r/ethereum</Link> - tout sur Ethereum</SocialListItem>

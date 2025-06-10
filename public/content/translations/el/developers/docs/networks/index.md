@@ -91,7 +91,7 @@ _Σημείωση: [το δοκιμαστικό δίκτυο Goerli έχει κ�
 - [Coinbase Wallet Faucet | Goerli](https://coinbase.com/faucets/ethereum-goerli-faucet)
 - [Goerli faucet στο Chainstack](https://faucet.chainstack.com/goerli-faucet)
 
-Για να εκκινήσετε έναν επικυρωτή στο δοκιμαστικό δίκτυο Goerli, χρησιμοποιήστε την [πλατφόρμα «φτηνού επικυρωτή goerli»](https://goerli.launchpad.ethstaker.cc/en/) του ethstaker.
+Για να εκκινήσετε έναν επικυρωτή στο δίκτυο δοκιμών Holesky, χρησιμοποιήστε την [πλατφόρμα «φτηνού επικυρωτή Holesky»](https://holesky.launchpad.ethstaker.cc/en/) του ethstaker.
 
 ### Δίκτυα δοκιμών Layer 2 {#layer-2-testnets}
 

@@ -6,7 +6,7 @@ lang: hu
 
 # Közreműködés a dizájnban az ethereum.org-on {#design-contributions}
 
-A dizájntervezés minden projekt kritikus eleme, és ha hajlandó az idejét és készségeit az Ethereum.org jobbá tételére szenteli, hozzájárulhat látogatóink felhasználói élményének javításához. A nyílt forráskódú projektben való közreműködés lehetőséget ad arra, hogy releváns tapasztalatot szerezzen és készségeit együttműködő környezetben fejlessze. Együtt dolgozhat más tervezőkkel, fejlesztőkkel és közösségi tagokkal, akik mind saját perspektívával és rálátással rendelkeznek.
+Minden projekt kritikus eleme a dizájn, amennyiben az idejét és a dizájnképességeit az ethereum.org oldalon kamatoztatja, akkor segíti a látogatók felhasználói élményét. A nyílt forráskódú projektben való közreműködés lehetőséget ad arra, hogy releváns tapasztalatot szerezzen és készségeit együttműködő környezetben fejlessze. Együtt dolgozhat más tervezőkkel, fejlesztőkkel és közösségi tagokkal, akik mind saját perspektívával és rálátással rendelkeznek.
 
 Ez egy remek módja annak is, hogy egy sokszínű és hatásos portfóliót hozzon létre, mely bemutatja a dizájnképességeit.
 
@@ -30,7 +30,7 @@ Adjon visszajelzést a honlapról:
 
 ### <Emoji text=":three:" size={1} /> &nbsp;Találjon dizájnnal kapcsolatos problémákat a honlapon és jelezze azokat {#report-design-issues}
 
-Az Ethereum.org egy rendkívül gyorsan növekvő webhely számos funkcióval és megannyi tartalommal. A felhasználói felület bizonyos része már kivezethető lenne vagy fejleszteni kellene. Ha ilyet talál, akkor jelezze, hogy felkerüljön a radarunkra.
+Az ethereum.org egy gyorsan fejlődő honlap, amely számtalan jellemzővel és tartalommal bír. A felhasználói felület bizonyos része már kivezethető lenne vagy fejleszteni kellene. Ha ilyet talál, akkor jelezze, hogy felkerüljön a radarunkra.
 
 1. Tekintse meg a honlapot és figyeljen oda a dizájnra.
 2. Készítsen képernyőképeket és jegyzeteket, ha vizuális vagy UX problémát lát.
@@ -51,10 +51,10 @@ A dizájnrendszerünk révén ethereum.org tervezése szórakoztató és könny�
 
 1. Válasszon egy meglévő issue-t a GitHub-on a [dizájnrendszer tábláról](https://github.com/ethereum/ethereum-org-website/labels/design%20system) vagy hozzon létre újat.
 2. Kérje meg, hogy az adott tételt Önnek adják.
-3. Kezdje el a kívánt alkotóelem tervezését a figmában.
+3. Készítsen dizájnt Figmában a kért komponensről.
 4. Ossza meg azt a dizájncsapattal a GitHub-on, amikor átnézésre vagy útmutatásra van szüksége.
 5. A dizájncsapat átnézi azt.
-6. A dizájncsapat beépíti a változtatásokat a főfájlba, majd közzéteszi a fájlt a közösség számára.
+6. A csapat átvezeti rajta a változásokat és megosztja azt a közösséggel.
 
 ### <Emoji text=":six:" size={1} /> &nbsp;Írjon dizájnnal kapcsolatos tartalmat a honlapra {#write-design-articles}
 
@@ -64,7 +64,7 @@ Az Ethereum fejlesztői közössége kellően erős, de a dizájnközösségnek 
 2. A GitHub könyvtárban [nyisson egy issue-t](https://github.com/ethereum/ethereum-org-website/issues/new), és javasoljon egy témát benne (még ne írja meg a tartalmat).
 3. Várja meg, amíg a dizájncsapat jóváhagyja.
 4. Amint jóváhagyták, írja meg a tartalmat.
-5. Küldje be a kapcsolódó GitHub issue-ban.
+5. Adja be a kapcsolódó GitHub issue-ban.
 
 ### <Emoji text=":seven:" size={1} /> &nbsp;Készítsen új illusztrációkat {#prepare-illustrations}
 

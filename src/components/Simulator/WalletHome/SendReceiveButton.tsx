@@ -1,28 +1,25 @@
-import React from "react"
-import {
-  type As,
-  Box,
-  Grid,
-  Icon,
-  Text,
-  type TextProps,
-} from "@chakra-ui/react"
+import { type ReactNode } from "react"
+import type { IconType } from "react-icons/lib"
 
-import { Button } from "../../Buttons"
+import { Button } from "@/components/ui/buttons/Button"
+
+import { cn } from "@/lib/utils/cn"
+
 import { ClickAnimation } from "../ClickAnimation"
 import { PulseAnimation } from "../PulseAnimation"
 
-type SendReceiveButtonProps = Pick<TextProps, "children"> & {
-  icon: As
+type SendReceiveButtonProps = {
+  icon: IconType
   isHighlighted: boolean
   isDisabled: boolean
   onClick?: () => void
   isAnimated?: boolean
+  children: ReactNode
 }
 
 export const SendReceiveButton = ({
   children,
-  icon,
+  icon: Icon,
   isHighlighted,
   isDisabled,
   onClick,
@@ -30,51 +27,36 @@ export const SendReceiveButton = ({
 }: SendReceiveButtonProps) => (
   <Button
     variant="ghost"
-    display="flex"
-    flexDirection="column"
-    alignItems="center"
+    className="group flex-col items-center gap-4"
     data-group
-    isDisabled={isDisabled}
+    disabled={isDisabled}
     onClick={onClick}
-    gap={4}
   >
-    <Grid
-      bg="primary.base"
-      borderRadius="full"
-      placeItems="center"
-      w={{ base: 10, md: 16 }}
-      aspectRatio={1}
-      _groupHover={{ bg: "primary.hover" }}
-      _groupDisabled={{
-        background: isHighlighted ? "primary.base" : "body.light",
-      }}
-      position="relative"
+    <div
+      className={cn(
+        "relative grid aspect-square w-10 place-items-center rounded-full bg-primary group-hover:bg-primary-hover md:w-16",
+        isHighlighted
+          ? "group-disabled:bg-primary"
+          : "group-disabled:bg-body-light"
+      )}
     >
       {!isDisabled && isAnimated && <PulseAnimation type="circle" />}
-      <Icon
-        as={icon}
-        w={{ base: 4, md: 6 }}
-        h={{ base: 4, md: 6 }}
-        color="background.base"
-      />
-    </Grid>
-    <Box position="relative">
-      <Text
-        fontWeight="bold"
-        color="primary.base"
-        textAlign="center"
-        m={0}
-        _groupHover={{ color: "primary.hover" }}
-        _groupDisabled={{
-          color: isHighlighted ? "primary.base" : "body.medium",
-        }}
-        position="relative"
+      <Icon className="size-4 text-background md:size-6" />
+    </div>
+    <div className="relative">
+      <p
+        className={cn(
+          "relative text-center font-bold text-primary group-hover:text-primary-hover",
+          isHighlighted
+            ? "group-disabled:text-primary"
+            : "group-disabled:text-body-medium"
+        )}
       >
         {children}
-      </Text>
+      </p>
       {!isDisabled && isAnimated && (
         <ClickAnimation below>click!</ClickAnimation>
       )}
-    </Box>
+    </div>
   </Button>
 )

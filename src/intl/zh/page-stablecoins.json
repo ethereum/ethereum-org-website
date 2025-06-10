@@ -131,6 +131,7 @@
   "page-stablecoins-stablecoins-table-type-precious-metals-backed": "贵金属",
   "page-stablecoins-table-error": "无法加载稳定币数据。请刷新页面。",
   "page-stablecoins-title": "稳定币",
+  "page-stablecoins-meta-title": "稳定币说明：它们有什么作用？",
   "page-stablecoins-top-coins": "处于领先地位的稳定币（按市值排序）",
   "page-stablecoins-top-coins-intro": "市值等于",
   "page-stablecoins-top-coins-intro-code": "代币总量乘以每个代币的价值。这个列表是动态变化的，并且其中的项目并非都已获得ethereum.org团队背书。",

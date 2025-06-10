@@ -1,24 +1,18 @@
-import { useTranslation } from "next-i18next"
+"use client"
+
 import { MdArrowForward } from "react-icons/md"
-import {
-  Accordion,
-  Box,
-  Flex,
-  Heading,
-  Icon,
-  LinkBox,
-  LinkOverlay,
-} from "@chakra-ui/react"
 
 import { ChildOnlyProp, TranslationKey } from "@/lib/types"
 
-import { ButtonLink } from "../Buttons"
+import { ButtonLink } from "@/components/ui/buttons/Button"
+import { Flex } from "@/components/ui/flex"
+import InlineLink, { BaseLink } from "@/components/ui/Link"
+import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
+
 import CardList from "../CardList"
 import InfoBanner from "../InfoBanner"
-import InlineLink, { BaseLink } from "../Link"
-import OldHeading from "../OldHeading"
-import Text from "../OldText"
 import Translation from "../Translation"
+import { Accordion } from "../ui/accordion"
 
 import {
   AccordionCustomItem,
@@ -27,20 +21,14 @@ import {
 } from "./AccordionCustomItem"
 import { useStablecoinAccordion } from "./useStablecoinAccordion"
 
+import { useTranslation } from "@/hooks/useTranslation"
+
 const SectionTitle = (props: ChildOnlyProp) => (
-  <OldHeading
-    as="h4"
-    fontSize="1.25rem"
-    fontWeight={700}
-    lineHeight="22px"
-    textAlign="start"
-    mt={0}
-    {...props}
-  />
+  <h4 className="mb-8 mt-0 text-start text-xl font-bold" {...props} />
 )
 
 const StepBoxContainer = (props: ChildOnlyProp) => (
-  <Box mt={4} mb={8} {...props} />
+  <div className="mb-8 mt-4" {...props} />
 )
 
 const StepBox = (
@@ -49,51 +37,27 @@ const StepBox = (
   const { t } = useTranslation("page-stablecoins")
 
   return (
-    <Flex
-      as={LinkBox}
-      alignItems={{ base: "flex-start", md: "normal" }}
-      background="background.base"
-      border="1px"
-      borderColor="border"
-      color="text"
-      flexDirection={{ base: "column", md: "row" }}
-      p={4}
-      sx={{
-        "&:not(:first-of-type)": {
-          mt: "-1px",
-        },
-      }}
-      _hover={{
-        background: "ednBackground",
-        transition: "transform 0.2s",
-        transform: "scale(1.05)",
-      }}
-    >
-      <Flex justifyContent="space-between" alignItems="center" width="100%">
-        <Box>
-          <LinkOverlay
-            as={BaseLink}
-            color="inherit"
-            textDecoration="inherit"
-            href={props.href}
-            fontWeight={700}
-            textAlign="start"
-            _hover={{
-              textDecoration: "inherit",
-            }}
-          >
-            {t(props.titleId)}
+    <LinkBox className="flex flex-col items-start border bg-background p-4 transition-transform duration-200 hover:scale-105 hover:bg-background-highlight not-[:first]:-mt-px md:flex-row md:items-stretch">
+      <Flex className="w-full items-center justify-between">
+        <div>
+          <LinkOverlay asChild>
+            <BaseLink
+              className="text-start font-bold text-inherit no-underline hover:no-underline"
+              href={props.href}
+            >
+              {t(props.titleId)}
+            </BaseLink>
           </LinkOverlay>
-          <Text mb={0}>{t(props.descId)}</Text>
-        </Box>
-        <Icon as={MdArrowForward} ms={4} minW={6} />
+          <p className="mb-0">{t(props.descId)}</p>
+        </div>
+        <MdArrowForward className="ms-4 min-w-6" />
       </Flex>
-    </Flex>
+    </LinkBox>
   )
 }
 
 const H4 = (props: ChildOnlyProp) => (
-  <Heading fontSize="1.25rem" fontWeight={700} mb={4} {...props} />
+  <h4 className="mb-4 text-xl font-bold" {...props} />
 )
 
 const StablecoinAccordion = () => {
@@ -104,7 +68,7 @@ const StablecoinAccordion = () => {
   const DEFAULT_IMAGE_WIDTH = 24
 
   return (
-    <Accordion borderRadius="base" width="full" allowToggle>
+    <Accordion type="single" className="w-full rounded" collapsible>
       <AccordionCustomItem category="dapps">
         <LeftColumnPanel>
           <SectionTitle>
@@ -124,7 +88,9 @@ const StablecoinAccordion = () => {
           </StepBoxContainer>
           <InfoBanner emoji=":light_bulb:">
             <H4>{t("page-stablecoins-accordion-swap-editors-tip")}</H4>
-            <Text>{t("page-stablecoins-accordion-swap-editors-tip-copy")}</Text>
+            <p className="mb-6 leading-6">
+              {t("page-stablecoins-accordion-swap-editors-tip-copy")}
+            </p>
             <ButtonLink href="/wallets/find-wallet/">
               {t("page-stablecoins-accordion-swap-editors-tip-button")}
             </ButtonLink>
@@ -134,12 +100,12 @@ const StablecoinAccordion = () => {
           <SectionTitle>
             {t("page-stablecoins-accordion-swap-dapp-title")}
           </SectionTitle>
-          <Text>
+          <p className="mb-6 leading-6">
             <Translation id="page-stablecoins:page-stablecoins-accordion-swap-dapp-intro" />{" "}
             <InlineLink href="/get-eth/#dex">
               {t("page-stablecoins-accordion-swap-dapp-link")}
             </InlineLink>
-          </Text>
+          </p>
           <CardList
             items={cardListGroups.dapps}
             imageWidth={DEFAULT_IMAGE_WIDTH}
@@ -151,9 +117,9 @@ const StablecoinAccordion = () => {
           <SectionTitle>
             {t("page-stablecoins-accordion-requirements")}
           </SectionTitle>
-          <Text>
+          <p className="mb-6 leading-6">
             {t("page-stablecoins-accordion-buy-requirements-description")}
-          </Text>
+          </p>
           <StepBoxContainer>
             <StepBox
               href="/get-eth/"
@@ -180,9 +146,9 @@ const StablecoinAccordion = () => {
           <SectionTitle>
             {t("page-stablecoins-accordion-requirements")}
           </SectionTitle>
-          <Text>
+          <p className="mb-6 leading-6">
             {t("page-stablecoins-accordion-earn-requirements-description")}
-          </Text>
+          </p>
           <StepBoxContainer>
             <StepBox
               href="/wallets/"
@@ -195,7 +161,9 @@ const StablecoinAccordion = () => {
           <SectionTitle>
             {t("page-stablecoins-accordion-earn-projects-title")}
           </SectionTitle>
-          <Text>{t("page-stablecoins-accordion-earn-projects-copy")}</Text>
+          <p className="mb-6 leading-6">
+            {t("page-stablecoins-accordion-earn-projects-copy")}
+          </p>
           <CardList
             items={cardListGroups.earn}
             imageWidth={DEFAULT_IMAGE_WIDTH}
@@ -207,9 +175,9 @@ const StablecoinAccordion = () => {
           <SectionTitle>
             {t("page-stablecoins-accordion-requirements")}
           </SectionTitle>
-          <Text>
+          <p className="mb-6 leading-6">
             {t("page-stablecoins-accordion-borrow-requirements-description")}
-          </Text>
+          </p>
           <StepBoxContainer>
             <StepBox
               href="/wallets/"
@@ -225,36 +193,38 @@ const StablecoinAccordion = () => {
           <SectionTitle>
             {t("page-stablecoins-accordion-borrow-crypto-collateral")}
           </SectionTitle>
-          <Text>
+          <p className="mb-6 leading-6">
             {t("page-stablecoins-accordion-borrow-crypto-collateral-copy")}{" "}
             <InlineLink href="#how">
               {t("page-stablecoins-accordion-borrow-crypto-collateral-link")}
             </InlineLink>
-          </Text>
-          <Text>
+          </p>
+          <p className="mb-6 leading-6">
             {t("page-stablecoins-accordion-borrow-crypto-collateral-copy-p2")}
-          </Text>
+          </p>
         </LeftColumnPanel>
         <RightColumnPanel>
           <SectionTitle>
             {t("page-stablecoins-accordion-borrow-places-title")}
           </SectionTitle>
-          <Text>{t("page-stablecoins-accordion-borrow-places-intro")}</Text>
-          <Box mb={8}>
+          <p className="mb-6 leading-6">
+            {t("page-stablecoins-accordion-borrow-places-intro")}
+          </p>
+          <div className="mb-8">
             <CardList
               items={cardListGroups.borrow}
               imageWidth={DEFAULT_IMAGE_WIDTH}
             />
-          </Box>
+          </div>
           <SectionTitle>
             {t("page-stablecoins-accordion-borrow-risks-title")}
           </SectionTitle>
-          <Text>
+          <p className="mb-6 leading-6">
             {t("page-stablecoins-accordion-borrow-risks-copy")}{" "}
             <InlineLink href="/eth/">
               {t("page-stablecoins-accordion-borrow-risks-link")}
             </InlineLink>
-          </Text>
+          </p>
         </RightColumnPanel>
       </AccordionCustomItem>
     </Accordion>

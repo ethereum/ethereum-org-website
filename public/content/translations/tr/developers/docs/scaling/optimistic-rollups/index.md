@@ -253,12 +253,6 @@ Görerek öğrenmeyi mi tercih ediyorsunuz? Finematics'in iyimser toplamalar hak
 
 <YouTube id="7pWxCklcNsU" start="263" />
 
-### İyimser toplamaları kullanın {#use-optimistic-rollups}
-
-Merkeziyetsiz uygulamalarınıza entegre edebileceğiniz birden çok İyimser toplama uygulaması mevcuttur:
-
-<RollupProductDevDoc rollupType="optimistic" />
-
 ## İyimser toplamalara dair daha fazlası
 
 - [İyimser toplamalar nasıl çalışır? (Tam klavuz)](https://www.alchemy.com/overviews/optimistic-rollups)

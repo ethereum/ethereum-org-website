@@ -1,9 +1,8 @@
-import * as React from "react"
-import { Center, Flex, Icon, SimpleGrid } from "@chakra-ui/react"
 import type { Meta, StoryObj } from "@storybook/react"
 
-import EthHomeIcon from "./eth-home-icon.svg"
-import FeedbackThumbsUpIcon from "./feedback-thumbs-up-icon.svg"
+import { Center, Flex } from "../ui/flex"
+
+import { FilterBurgerIcon } from "./wallets/FilterBurgerIcon"
 import { HighlightDarkIcon } from "./HighlightDarkIcon"
 import { HighlightIcon } from "./HighlightIcon"
 import {
@@ -79,7 +78,6 @@ import {
   DesktopIcon,
   ENSSupportIcon,
   ERC20SupportIcon,
-  FilterBurgerIcon,
   GasFeeCustomizationIcon,
   HardwareIcon,
   HardwareSupportIcon,
@@ -95,11 +93,11 @@ import {
   SwapIcon,
   WithdrawCryptoIcon,
 } from "./wallets"
+import { EthHomeIcon, FeedbackThumbsUpIcon } from "."
 
 const meta = {
-  component: Icon,
   title: "Atoms / Media & Icons / Icons",
-} satisfies Meta<typeof Icon>
+} satisfies Meta
 
 export default meta
 
@@ -194,25 +192,26 @@ const iconsDefinitions = [
 iconsDefinitions.sort((a, b) =>
   (a?.displayName || "") > (b?.displayName || "") ? 1 : -1
 )
-const items = iconsDefinitions.map((IconDef) => (
-  <Flex
-    key={IconDef.displayName}
-    direction="column"
-    gap={4}
-    p={4}
-    border="1px"
-    borderStyle="solid"
-    borderColor="background.highlight"
-  >
-    <Center>
-      <IconDef className="h-[50px] w-[50px]" w="50px" h="50px" />
-    </Center>
-    <Center>{IconDef.displayName}</Center>
-  </Flex>
-))
+const items = iconsDefinitions.map((IconDef, idx) => {
+  return (
+    <Flex
+      key={idx}
+      className="flex-col gap-4 border border-background-highlight p-4"
+    >
+      <Center>
+        <IconDef className="size-[50px]" />
+      </Center>
+      <Center>{IconDef.displayName}</Center>
+    </Flex>
+  )
+})
 
 export const Icons: StoryObj<typeof meta> = {
   render: () => {
-    return <SimpleGrid columns={[2, 2, 3, 5]}>{items}</SimpleGrid>
+    return (
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+        {items}
+      </div>
+    )
   },
 }

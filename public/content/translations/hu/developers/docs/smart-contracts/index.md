@@ -35,11 +35,11 @@ pragma solidity 0.8.7;
 
 contract VendingMachine {
 
-    // Declare state variables of the contract
+    // A szerződés állapotváltozóinak deklarálása
     address public owner;
     mapping (address => uint) public cupcakeBalances;
 
-    // When 'VendingMachine' contract is deployed:
+    // Amikor a 'VendingMachine' szerződést telepítik:
     // 1. beállítja a telepítő címet a szerződés tulajdonosaként
     // 2. set the deployed smart contract's cupcake balance to 100
     constructor() {
@@ -109,3 +109,4 @@ A több aláírásos szerződések olyan okosszerződésszámlák, amelyeknek t�
 - [Coinbase: Mi az az okosszerződés?](https://www.coinbase.com/learn/crypto-basics/what-is-a-smart-contract)
 - [Chainlink: Mi az az okosszerződés?](https://chain.link/education/smart-contracts)
 - [Video: Egyszerű magyarázat: Okosszerződések](https://youtu.be/ZE2HxTmxfrI)
+- [Cyfrin Updraft: Web3 tanulási és ellenőrzési platform](https://updraft.cyfrin.io)

@@ -8,6 +8,8 @@ lang: it
 
 ethereum.org è una risorsa open-source pubblica per la community di Ethereum a cui tutti possono contribuire. Abbiamo un piccolo team dedicato alla manutenzione e allo sviluppo del sito, cui si aggiungono gli sforzi di migliaia di membri della comunità di tutto il mondo.
 
+**Nessuno ti contatterà mai da ethereum.org. Non rispondere.**
+
 ## Una nota sui nomi {#a-note-on-names}
 
 Non è raro trovare persone che confondono nomi all’interno dell'ecosistema Ethereum, il che può portare a un'interpretazione errata del funzionamento di Ethereum. Di seguito una breve nota esplicativa di chiarimento:

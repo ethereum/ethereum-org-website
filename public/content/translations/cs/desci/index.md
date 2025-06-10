@@ -126,6 +126,7 @@ Uvítáme návrhy na nové projekty, které je třeba uvést na seznam – pro z
 - [DeSci: Budoucnost výzkumu od Samuela Akinosho](https://lucidsamuel.medium.com/desci-the-future-of-research-b76cfc88c8ec)
 - [Financování vědy (Epilolog: DeSci a nové krypto základní prvky) od Nadie](https://nadia.xyz/science-funding)
 - [Decentralizace narušuje vývoj léků](https://medium.com/id-theory/decentralisation-is-disrupting-drug-development-28b5ba5d447f)
+- [Co je DeSci – decentralizovaná věda?](https://usadailytimes.com/2022/09/12/what-is-desci-decentralized-science/)
 
 ### Videa {#videos}
 
@@ -134,3 +135,4 @@ Uvítáme návrhy na nové projekty, které je třeba uvést na seznam – pro z
 - [Vědecké publikování je rozbité. Může ho opravit Web3?](https://www.youtube.com/watch?v=WkvzYgCvWj8)
 - [Juan Benet – DeSci, nezávislé laboratoře & velké škálování Data Science](https://www.youtube.com/watch?v=zkXM9H90g_E)
 - [Sebastian Brunemeier – Jak může DeSci transformovat biomedicínský výzkum & rizikový kapitál](https://www.youtube.com/watch?v=qB4Tc3FcVbM)
+- [Paige Donner - Tooling Open Science with Web3 & The Blockchain](https://www.youtube.com/watch?v=nC-2QWQ-lgw&t=17s)

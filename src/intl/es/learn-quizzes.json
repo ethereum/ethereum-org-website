@@ -110,7 +110,7 @@
   "web3-1-prompt": "Web3 permite a los usuarios poseer activos digitales a través de:",
   "web3-1-a-label": "Tokens",
   "web3-1-a-explanation": "Los tokens proporcionan una forma de representar unidades de valor que son intercambiables entre sí, propiedad de una cuenta de Ethereum. Si bien representan la propiedad, hay más formas de poseer activos digitales en Ethereum.",
-  "web3-1-b-label": "NTF",
+  "web3-1-b-label": "NFT",
   "web3-1-b-explanation": "Los NFT (tokens no fungibles) proporcionan una forma de representar cualquier cosa única como un activo basado en Ethereum. Si bien representan la propiedad, hay más formas de poseer activos digitales en Ethereum.",
   "web3-1-c-label": "ENS",
   "web3-1-c-explanation": "ENS (Ethereum Name Service) es un servicio de nomenclatura descentralizado para la cadena de bloques de Ethereum. Si bien representan la propiedad, hay más formas de poseer activos digitales en Ethereum.",

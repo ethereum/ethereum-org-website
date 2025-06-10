@@ -18,7 +18,7 @@ Pour les apprenants plus visuels, regardez la vidéo de Luka qui présente le pa
 
 Vous devrez vous connecter à votre compte Crowdin ou vous inscrire si vous n'avez pas encore de compte. Tout ce qui est nécessaire pour vous inscrire est un compte de messagerie et un mot de passe.
 
-<ButtonLink to="https://crowdin.com/project/ethereum-org/">
+<ButtonLink href="https://crowdin.com/project/ethereum-org/">
   Rejoindre le projet
 </ButtonLink>
 

@@ -126,6 +126,7 @@ Fedezze fel a projekteket és csatlakozzon a DeSci közösségéhez.
 - [DeSci: a kutatás jövője – Samuel Akinosho](https://lucidsamuel.medium.com/desci-the-future-of-research-b76cfc88c8ec)
 - [A tudomány finanszírozása (Epilógus: a DeSci és az új kriptoalapok) – Nadia](https://nadia.xyz/science-funding)
 - [A decentralizáció megbontja a gyógyszerfejlesztést](https://medium.com/id-theory/decentralisation-is-disrupting-drug-development-28b5ba5d447f)
+- [Mi az a DeSci, azaz a decentralizált tudomány?](https://usadailytimes.com/2022/09/12/what-is-desci-decentralized-science/)
 
 ### Videók {#videos}
 
@@ -134,3 +135,4 @@ Fedezze fel a projekteket és csatlakozzon a DeSci közösségéhez.
 - [A tudományos publikálás szét van szakítva. A web3 meg tudja vajon javítani?](https://www.youtube.com/watch?v=WkvzYgCvWj8)
 - [Juan Benet – DeSci, független laboratóriumok és a nagy adat tudománya](https://www.youtube.com/watch?v=zkXM9H90g_E)
 - [Sebastian Brunemeier – Hogyan tudja a DeSci átalakítani az orvosbiológiai kutatást és a kockázati tőkét](https://www.youtube.com/watch?v=qB4Tc3FcVbM)
+- [Paige Donner - A nyitott tudomány eszközökkel való ellátása a web3 & a blokklánc révén](https://www.youtube.com/watch?v=nC-2QWQ-lgw&t=17s)

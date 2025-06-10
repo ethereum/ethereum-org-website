@@ -8,6 +8,31 @@ lang: el
 
 Εκατοντάδες χιλιάδες λάτρεις του Ethereum συγκεντρώνονται σε αυτές τις διαδικτυακές τοποθεσίες για να μοιραστούν ειδήσεις, να μιλήσουν για τις πρόσφατες εξελίξεις, να συζητήσουν τεχνικά ζητήματα και να ονειρευτούν το μέλλον.
 
+## Πολιτική καταχώρησης {#listing-policy}
+
+Για να διατηρήσει την ακεραιότητα και την αξία των κοινοτήτων που αναφέρονται, το ethereum.org ακολουθεί μια αυστηρή πολιτική για τον προσδιορισμό καταλληλότητας:
+
+### Κριτήρια επιλεξιμότητας {#eligibility-criteria}
+
+- **Συνάφεια**: Η κοινότητα πρέπει να σχετίζεται άμεσα με το Ethereum και το οικοσύστημά του.
+- **Επίπεδο δραστηριότητας**: Η κοινότητα θα πρέπει να είναι ενεργή, με τακτικές αλληλεπιδράσεις, αναρτήσεις ή συζητήσεις. Οι αδρανείς ή ανενεργές κοινότητες μπορούν να αφαιρεθούν.
+- **Συμμετοχικότητα**: Η κοινότητα πρέπει να καλλιεργήσει ένα φιλόξενο περιβάλλον που σέβεται τη διαφορετικότητα και ενθαρρύνει τη συμμετοχή από άτομα κάθε προέλευσης.
+- **Μη εμπορική κατεύθυνση**: Οι καταχωρίσεις προορίζονται για χώρους με γνώμονα την κοινότητα και όχι για εμπορικές ή διαφημιστικές πλατφόρμες.
+
+### Οδηγός περιεχομένου {#content-guidelines}
+
+- **Κατάλληλο περιεχόμενο**: Οι κοινότητες πρέπει να έχουν τις δικές τους οδηγίες εποπτείας, αποφεύγοντας ανεπιθύμητα μηνύματα, ρητορική μίσους, παρενόχληση ή οποιοδήποτε περιεχόμενο που προωθεί παράνομες δραστηριότητες.
+- **Γλώσσα**: Ενώ τα Αγγλικά είναι η κύρια γλώσσα, οι κοινότητες σε άλλες γλώσσες ενθαρρύνονται να υποβάλλουν αίτηση, εφόσον διατηρούν μια ατμόσφαιρα χωρίς αποκλεισμούς και σεβασμό.
+- **Διαφάνεια**: Σαφείς πληροφορίες σχετικά με τον σκοπό, τους κανόνες και τους διαχειριστές της κοινότητας θα πρέπει να είναι διαθέσιμες στα μέλη.
+
+### Άλλες προϋποθέσεις {#other-recommendations}
+
+- **Προσβασιμότητα**: Τα φόρουμ κοινότητας θα πρέπει να είναι προσβάσιμα από όλους για ανάγνωση χωρίς την ανάγκη εγγραφής ή σύνδεσης.
+- **Προσκλήσεις διακομιστή Discord**: Συνιστάται να προστίθενται μόνο αξιόπιστες προσκλήσεις διακομιστή Discord στο ethereum.org. Στην ιδανική περίπτωση, αυτές οι προσκλήσεις θα πρέπει να συνδέονται με μια σελίδα κοινότητας στον ιστότοπο (π.χ., [ethglobal.com/discord](https://ethglobal.com/discord)) ή να προέρχονται από μια επίσημη διεύθυνση URL (π.χ., [discord.gg/ethstaker](https://discord.gg/ethstaker) ή [discord.com/invite/ethstaker](https://discord.com/invite/ethstaker)).
+
+Εάν πιστεύετε ότι μια κοινότητα πρέπει να προστεθεί ή να αφαιρεθεί με βάση αυτές τις οδηγίες, [ανοίξτε ένα ζήτημα στο GitHub](https://github.com/ethereum/ethereum-org-website/issues).
+
+
 ## Φόρουμ {#forums}
 
 <SocialListItem socialIcon="reddit"><Link href="https://www.reddit.com/r/ethereum">r/ethereum</Link> - όλα για το Ethereum,</SocialListItem>
@@ -30,13 +55,14 @@ lang: el
 <SocialListItem socialIcon="webpage"><Link href="https://gitter.im/ethereum/solidity">Solidity Gitter</Link> - συνομιλία για ανάπτυξη με τη solidity (Gitter).</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> - συνομιλία για ανάπτυξη με τη solidity (Matrix)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> *- φόρουμ ερωτήσεων και απαντήσεων*</SocialListItem>
-<SocialListItem socialIcon="webpage"><Link href="https://peeranha.io/">Peeranha</Link> *- αποκεντρωμένο φόρουμ ερωτήσεων και απαντήσεων*</SocialListItem>
+<SocialListItem socialIcon="webpage"><Link href="https://app.peera.ai/">Φόρουμ κοινότητας Peera</Link> *- αποκεντρωμένο φόρουμ ερωτήσεων και απαντήσεων*</SocialListItem>
 
-## YouTube και Twitter {#youtube-and-twitter}
+## YouTube και X (γνωστό ως Twitter) {#youtube-and-twitter}
 
 <SocialListItem socialIcon="youtube"><Link href="https://www.youtube.com/c/EthereumFoundation">Ethereum Foundation</Link> - Μείνετε ενημερωμένοι με ό,τι πιο πρόσφατο από το Ίδρυμα Ethereum.</SocialListItem>
-<SocialListItem socialIcon="twitter"><Link href="https://twitter.com/ethereum">@ethereum</Link> - Επίσημος λογαριασμός του Ιδρύματος Ethereum.</SocialListItem>
-<SocialListItem socialIcon="twitter"><Link href="https://twitter.com/ethdotorg">@ethdotorg</Link> - Η πύλη στο Ethereum που δημιουργήθηκε για την αναπτυσσόμενη παγκόσμια κοινότητα μας.</SocialListItem>
+<SocialListItem socialIcon="twitter"><Link href="https://x.com/ethereum">@ethereum</Link> - Κύριος λογαριασμός Ethereum για την κοινότητα</SocialListItem>
+<SocialListItem socialIcon="twitter"><Link href="https://x.com/ethereumfndn">@ethereumfndn</Link> - Επίσημος λογαριασμός του Ethereum Foundation</SocialListItem>
+<SocialListItem socialIcon="twitter"><Link href="https://x.com/ethdotorg">@ethdotorg</Link> - Η πύλη στο Ethereum που δημιουργήθηκε για την αναπτυσσόμενη παγκόσμια κοινότητα μας.</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://hive.one/c/ethereum?page=1">Λίστα με σημαντικούς λογαριασμούς Ethereum twitter.</Link></SocialListItem>
 
 <Divider />

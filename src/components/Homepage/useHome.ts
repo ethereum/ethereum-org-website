@@ -1,6 +1,5 @@
 import { useState } from "react"
-import { useRouter } from "next/router"
-import { useTranslation } from "next-i18next"
+import { useLocale } from "next-intl"
 import { FaDiscord, FaGithub, FaXTwitter } from "react-icons/fa6"
 
 import type { EventCardProps } from "@/lib/types"
@@ -8,10 +7,10 @@ import type { CodeExample } from "@/lib/interfaces"
 
 import { useBentoBox } from "@/components/Homepage/useBentoBox"
 import BlockHeap from "@/components/icons/block-heap.svg"
+import BuildAppsIcon from "@/components/icons/build-apps.svg"
 import EthGlyphIcon from "@/components/icons/eth-glyph.svg"
 import EthTokenIcon from "@/components/icons/eth-token.svg"
 import PickWalletIcon from "@/components/icons/eth-wallet.svg"
-import ChooseNetworkIcon from "@/components/icons/network-layers.svg"
 import TryAppsIcon from "@/components/icons/phone-homescreen.svg"
 import RoadmapSign from "@/components/icons/roadmap-sign.svg"
 import Whitepaper from "@/components/icons/whitepaper.svg"
@@ -28,10 +27,11 @@ import SimpleDomainRegistryContent from "!!raw-loader!@/data/SimpleDomainRegistr
 import SimpleTokenContent from "!!raw-loader!@/data/SimpleToken.sol"
 import SimpleWalletContent from "!!raw-loader!@/data/SimpleWallet.sol"
 import { useRtlFlip } from "@/hooks/useRtlFlip"
+import useTranslation from "@/hooks/useTranslation"
 
 export const useHome = () => {
   const { t } = useTranslation(["common", "page-index"])
-  const { locale, asPath } = useRouter()
+  const locale = useLocale()
 
   const [isModalOpen, setModalOpen] = useState(false)
   const [activeCode, setActiveCode] = useState(0)
@@ -104,14 +104,6 @@ export const useHome = () => {
       eventName: "get eth",
     },
     {
-      label: t("page-index:page-index-cta-networks-label"),
-      description: t("page-index:page-index-cta-networks-description"),
-      href: "/layer-2/", // TODO: Update with new networks page when ready
-      Svg: ChooseNetworkIcon,
-      className: "text-accent-b hover:text-accent-b-hover",
-      eventName: "L2",
-    },
-    {
       label: t("page-index:page-index-cta-dapps-label"),
       description: t("page-index:page-index-cta-dapps-description"),
       href: "/dapps/",
@@ -121,6 +113,14 @@ export const useHome = () => {
         isRtl && "[&_svg]:-scale-x-100"
       ),
       eventName: "dapps",
+    },
+    {
+      label: t("page-index:page-index-cta-build-apps-label"),
+      description: t("page-index:page-index-cta-build-apps-description"),
+      href: "/developers/",
+      Svg: BuildAppsIcon,
+      className: "text-accent-b hover:text-accent-b-hover",
+      eventName: "build apps",
     },
   ]
 
@@ -212,7 +212,6 @@ export const useHome = () => {
   return {
     t,
     locale,
-    asPath,
     dir: direction,
     isModalOpen,
     setModalOpen,

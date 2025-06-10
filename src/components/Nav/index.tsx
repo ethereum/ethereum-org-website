@@ -1,6 +1,7 @@
+"use client"
+
 import { useRef } from "react"
 import dynamic from "next/dynamic"
-import { useTranslation } from "next-i18next"
 
 import { EthHomeIcon } from "@/components/icons"
 import Search from "@/components/Search"
@@ -14,6 +15,7 @@ import { useNav } from "./useNav"
 
 import { useBreakpointValue } from "@/hooks/useBreakpointValue"
 import { useIsClient } from "@/hooks/useIsClient"
+import { useTranslation } from "@/hooks/useTranslation"
 
 const Menu = dynamic(() => import("./Menu"), {
   ssr: false,

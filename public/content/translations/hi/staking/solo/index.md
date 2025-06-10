@@ -203,4 +203,4 @@ summaryPoints:
 - [चरण दर चरण: इथेरियम 2.0 टेस्टनेट में कैसे शामिल हों](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) - _बुट्टा_
 - [Eth2 कटौती रोकथाम युक्तियाँ](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) - _रोल जॉर्डन 2020_
 
-<QuizWidget quizKey="solo-staking" />
+<QuizWidget quizKey="staking-solo" />

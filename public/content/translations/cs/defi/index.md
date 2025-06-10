@@ -355,3 +355,7 @@ DeFi je open-source hnutí. Všechny protokoly a aplikace DeFi jsou otevřené, 
 
 - [Server DeFi Llama na Discordu](https://discord.defillama.com/)
 - [Server DeFi Pulse na Discordu](https://discord.gg/Gx4TCTk)
+
+<Divider />
+
+<QuizWidget quizKey="defi" />

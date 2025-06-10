@@ -97,7 +97,7 @@
   "page-upgrades-question-6-answer-5": "You can also join the discussion on Ethereum research and development at ethresear.ch.",
   "page-upgrades-question-6-title": "What do I need to do with my dapp?",
   "page-upgrades-question-6-desc": "The Merge was designed to have minimal impact on dapp developers, though there were a couple of small changes worth noting.",
-  "page-upgrades-question-6-answer-1": "Dapp developers familiar with pre-merge Ethereum should be aware of some changes. These changes include block structure and timing, a few opcode changes, sources of on-chain randomness and the concept of epoch finalization.",
+  "page-upgrades-question-6-answer-1": "Dapp developers familiar with pre-merge Ethereum should be aware of some changes. These changes include block structure and timing, a few opcode changes, sources of onchain randomness and the concept of epoch finalization.",
   "page-upgrades-question-6-answer-1-link": "How The Merge Impacted Ethereum's Application Layer",
   "page-upgrades-question-6-answer-2": "Applications were almost entirely unaffected.",
   "page-upgrades-question-7-desc": "Many different teams from all over the community are working on the various Ethereum upgrades.",

@@ -1,6 +1,15 @@
 import type { NetworkUpgradeData } from "@/lib/types"
 
 const NetworkUpgradeSummaryData: NetworkUpgradeData = {
+  pectra: {
+    dateTimeAsString: "2025-05-07T10:05:11.000Z",
+    ethPriceInUSD: 2222,
+    waybackLink:
+      "https://web.archive.org/web/20250414180015/https://ethereum.org/en/",
+    blockNumber: 22431084,
+    epochNumber: 364032,
+    slotNumber: 364032 * 32,
+  },
   dencun: {
     dateTimeAsString: "2024-03-13T13:55:35.000Z",
     ethPriceInUSD: 3984,

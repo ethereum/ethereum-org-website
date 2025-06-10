@@ -6,7 +6,7 @@ lang: sk
 
 # Spoznajte Ethereum {#learn-about-ethereum}
 
-**Vitajte na stránke vzdelávania! Nájdete tu ďalšie informácie o Ethereu.** Táto stránka obsahuje technické **a** netechnické články, príručky a zdroje. Ak o Ethereu neviete ešte takmer nič, [odporúčame vám začať tu](/sk/what-is-ethereum/).
+**Vitajte na stránke vzdelávania! Nájdete tu ďalšie informácie o Ethereu.** Táto stránka obsahuje technické **a** netechnické články, príručky a zdroje. Ak o Ethereu neviete ešte takmer nič, [odporúčame vám začať tu](/what-is-ethereum/).
 
 Niekoľko skvelých článkov a videí na úvod:
 
@@ -50,7 +50,7 @@ Stručný prehľad Etherea a technológie blockchainu.
 
 Smart kontrakt – „inteligentná zmluva“ je v jednoduchosti časť kódu, ktorá beží na blockchaine Etherea. „Zmluvou“ sa nazýva preto, že programovacím kódom, ktorý beží na Ethereu, je možné spravovať rôzne hodnotné veci, ako napríklad ETH, či iné digitálne aktíva.
 
-- Chcete sa naučiť programovať smart kontrakty na Ethereu? [ethereum.org/sk/developers](/sk/developers/)
+- Chcete sa naučiť programovať smart kontrakty na Ethereu? [ethereum.org/sk/developers](/developers/)
 - [What is a Smart Contract?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract) _12. novembra 2018 - Andreas M. Antonopoulos, Gavin Wood_
 
 ## Proof-of-work a ťaženie {#proof-of-work-and-mining}
@@ -63,14 +63,14 @@ V rámci nového Etherea 2.0 sa však bude využívať iný systém s názvom �
 
 Sieť Ethereum pozostáva z mnohých uzlov, z ktorých každý prevádzkuje kompatibilného softvérového klienta. Väčšina uzlov používa jeden z dvoch klientov: [Geth](https://geth.ethereum.org/) (napísaný v jazyku Go) alebo [Parity](https://www.parity.io/ethereum/) (napísaný v jazyku Rust).
 
-- Chcete sa naučiť, ako prevádzkovať vlastný uzol? → [ethereum.org/sk/developers](/sk/developers/#clients--running-your-own-node/)
+- Chcete sa naučiť, ako prevádzkovať vlastný uzol? → [ethereum.org/sk/developers](/developers/#clients--running-your-own-node/)
 - [Komplexný zoznam všetkých klientov Etherea](https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients)
 
 ## Ethereum pre podniky {#enterprise-ethereum}
 
 Ethereum pre podniky označuje súkromné, konzorciové a hybridné implementácie kódovej základne Etherea pre obchodné aplikácie. Spoločnosti na celom svete už používajú Ethereum pre podniky na zefektívnenie finančných trhov, riadenie dodávateľských reťazcov a vytváranie nových obchodných modelov.
 
-Prečítajte si viac o [Ethereu pre podniky](/sk/enterprise/).
+Prečítajte si viac o [Ethereu pre podniky](/enterprise/).
 
 ## Zlepšenie škálovateľnosti Etherea {#improving-ethereums-scalability}
 

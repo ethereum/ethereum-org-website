@@ -49,15 +49,15 @@ Verkle 樹是 `(key,value)` 對，其中鍵是 32 字節位元組要素，由 31
 
 沃克爾樹測試網已經啟動並運行，但用戶端仍需要進行大量更新以支援沃克爾樹。 將合約部署至測試網或是運行測試網用戶端有助加快進度。
 
-[探索 Verkle Gen Devnet 2 測試網](https://verkle-gen-devnet-2.ethpandaops.io/)
+[探索 Verkle Gen Devnet 6 測試網](https://verkle-gen-devnet-6.ethpandaops.io/)
 
-[觀看 Guillaume Ballet 解釋 Condrieu Verkle 測試網](https://www.youtube.com/watch?v=cPLHFBeC0Vg)（請注意，Condrieu 為工作量證明測試網，目前已被 Verkle Gen Devnet 2 測試網取代）。
+[觀看 Guillaume Ballet 解釋 Condrieu Verkle 測試網](https://www.youtube.com/watch?v=cPLHFBeC0Vg)（請注意，Condrieu 為工作量證明測試網，目前已被 Verkle Gen Devnet 6 測試網取代）。
 
 ## 了解更多 {#further-reading}
 
 - [無狀態沃克爾樹](https://verkle.info/)
 - [Dankrad Feist 在 PEEPanEIP 上對沃克爾樹的說明](https://www.youtube.com/watch?v=RGJOQHzg3UQ)
-- [Guillaume Ballet 在 ETHGlobal 上對沃克爾樹的說明](https://www.youtube.com/watch?v=f7bEtX3Z57o)
+- [Guillaume Ballet 在 ETHGlobal 上解釋沃克爾樹](https://www.youtube.com/watch?v=f7bEtX3Z57o)
 - [「沃克爾樹如何讓以太坊變得更加精幹而簡約」Guillaume Ballet 在 Devcon 6 發表的演講](https://www.youtube.com/watch?v=Q7rStTKwuYs)
 - [Piper Merriam 談 ETHDenver 2020 的無狀態用戶端](https://www.youtube.com/watch?v=0yiZJNciIJ4)
 - [Dankrad Feist 在「零知識」播客上談沃克爾樹和無狀態性](https://zeroknowledge.fm/episode-202-stateless-ethereum-verkle-tries-with-dankrad-feist/)

@@ -43,12 +43,6 @@ Sehen Sie, wie Finematics optimistische Rollups erklärt:
 
 <YouTube id="7pWxCklcNsU" start="263" />
 
-### Optimistische Rollups verwenden {#use-optimistic-rollups}
-
-Es gibt mehrere Implementierungen von optimistischen Rollups, die Sie in Ihre dApps integrieren können:
-
-<RollupProductDevDoc rollupType="optimistic" />
-
 **Optimistische Rollups verstehen**
 
 - [Der Leitfaden zu Arbitrum](https://newsletter.banklesshq.com/p/the-essential-guide-to-arbitrum)

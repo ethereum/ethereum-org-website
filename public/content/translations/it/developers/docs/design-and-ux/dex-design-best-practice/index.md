@@ -5,7 +5,7 @@ lang: it
 ---
 
 Dal lancio di Uniswap nel 2018, sono state lanciate centinaia di borse decentralizzate in decine di catene differenti.
-Molte di queste hanno introdotto nuovi elementi o aggiunto il proprio tocco, ma l'interfaccia è rimasta più o meno la stessa.
+Molte di queste hanno introdotto nuovi elementi o aggiunto i propri tocchi, ma l'interfaccia è rimasta per lo più la stessa.
 
 Una delle ragioni è la [Legge di Jakob](https://lawsofux.com/jakobs-law/):
 

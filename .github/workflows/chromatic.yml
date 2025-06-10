@@ -15,7 +15,6 @@ on:
       - "src/components/**/*"
       - "src/pages/**/*"
       - "src/layouts/**/*"
-      - "src/@chakra-ui/**/*"
       - ".storybook/**/*"
       - "tailwind.config.ts"
       - "src/styles/**/*"
@@ -32,9 +31,18 @@ jobs:
         uses: actions/checkout@v2
         with:
           fetch-depth: 0 # 👈 Required to retrieve git history
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          cache: 'pnpm'
       - name: Install deps
         # 👇 Install dependencies with the same package manager used in the project (replace it as needed), e.g. yarn, npm, pnpm
-        run: yarn
+        run: pnpm install
       - name: Publish to Chromatic
         # 👇 Adds Chromatic as a step in the workflow
         uses: chromaui/action@v1

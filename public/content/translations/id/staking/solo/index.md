@@ -204,4 +204,4 @@ Untuk membuka dan menerima seluruh saldo Anda kembali, Anda juga harus menyelesa
 - [Langkah demi Langkah: Cara Bergabung dengan Jaringan Percobaan Ethereum 2.0](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) - _Butta_
 - [Tips Pencegahan Pemotongan Eth2](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) - _Raul Jordan 2020_
 
-<QuizWidget quizKey="solo-staking" />
+<QuizWidget quizKey="staking-solo" />

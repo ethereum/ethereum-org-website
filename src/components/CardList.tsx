@@ -1,24 +1,19 @@
-import Image, { type ImageProps } from "next/image"
+"use client"
+
+import TwImage, { type ImageProps } from "next/image"
 import type { ReactNode } from "react"
-import {
-  Box,
-  type BoxProps,
-  Flex,
-  HStack,
-  LinkBox,
-  LinkOverlay,
-  type StackProps,
-  useColorModeValue,
-} from "@chakra-ui/react"
 
-import { BaseLink } from "@/components/Link"
+import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 
+import { cn } from "@/lib/utils/cn"
 import { MatomoEventOptions, trackCustomEvent } from "@/lib/utils/matomo"
 import * as url from "@/lib/utils/url"
 
+import { BaseLink } from "./ui/Link"
+
 import { useRtlFlip } from "@/hooks/useRtlFlip"
 
-export type CardListItem = {
+export type CardProps = {
   title?: ReactNode
   description?: ReactNode
   caption?: ReactNode
@@ -27,25 +22,9 @@ export type CardListItem = {
   image?: ImageProps["src"]
   imageWidth?: number
   alt?: string
+  className?: string
+  onClick?: () => void
 }
-
-const CardContainer = (props: StackProps) => (
-  <HStack
-    spacing={4}
-    p={4}
-    color="text"
-    border="1px solid"
-    borderColor="border"
-    _hover={{
-      borderRadius: "base",
-      boxShadow: "0 0 1px var(--eth-colors-primary)",
-      background: "tableBackgroundHover",
-    }}
-    {...props}
-  />
-)
-
-type CardProps = CardListItem & Omit<StackProps, "title" | "id">
 
 const Card = ({
   title,
@@ -53,57 +32,57 @@ const Card = ({
   caption,
   link,
   image,
-  imageWidth = 20, // Set 20px as default image width, can be overridden if needed
+  className,
   alt,
+  onClick,
+  imageWidth = 20,
   ...props
 }: CardProps) => {
-  const { flipForRtl } = useRtlFlip()
+  const { twFlipForRtl } = useRtlFlip()
   const isLink = !!link
   const isExternal = url.isExternal(link || "")
 
-  const descriptionColor = useColorModeValue("gray.500", "gray.400")
-
   return (
-    <CardContainer {...props}>
-      {image && <Image src={image} alt={alt ?? ""} width={imageWidth} />}
-      <Flex flex="1 1 75%" direction="column">
+    <div
+      className={cn(
+        "text-text flex flex-row items-center gap-4 border p-4",
+        "transition-all duration-200",
+        "hover:bg-background-highlight",
+        className
+      )}
+      onClick={onClick}
+      {...props}
+    >
+      {image && <TwImage src={image} alt={alt ?? ""} width={imageWidth} />}
+      <div className="flex flex-1 basis-3/4 flex-col">
         {isLink ? (
-          <LinkOverlay
-            as={BaseLink}
-            href={link}
-            isExternal={isExternal}
-            hideArrow
-            color="text"
-            textDecoration="none"
-            _hover={{ textDecoration: "none" }}
-          >
-            {title}
+          <LinkOverlay asChild>
+            <BaseLink href={link} hideArrow className="text-body no-underline">
+              {title}
+            </BaseLink>
           </LinkOverlay>
         ) : (
-          <Box>{title}</Box>
+          <div>{title}</div>
         )}
 
-        <Box fontSize="sm" mb={0} color={descriptionColor}>
-          {description}
-        </Box>
-      </Flex>
+        <div className="mb-0 text-sm text-body-medium">{description}</div>
+      </div>
       {caption && (
-        <Flex flex="1 0 25%" align="center" wrap="wrap" me={4}>
-          <Box fontSize="sm" mb={0} opacity={0.6}>
-            {caption}
-          </Box>
-        </Flex>
+        <div className="me-4 flex flex-[1_0_25%] flex-wrap items-center">
+          <div className="mb-0 text-sm opacity-60">{caption}</div>
+        </div>
       )}
-      {isExternal && <Box transform={flipForRtl}>↗</Box>}
-    </CardContainer>
+      {isExternal && <span className={twFlipForRtl}>↗</span>}
+    </div>
   )
 }
 
-export type CardListProps = BoxProps & {
+export type CardListProps = {
   items: CardProps[]
   imageWidth?: number
   clickHandler?: (idx: string | number) => void
   customEventOptions?: MatomoEventOptions
+  className?: string
 }
 
 const CardList = ({
@@ -111,9 +90,9 @@ const CardList = ({
   imageWidth,
   clickHandler = () => null,
   customEventOptions,
-  ...props
+  className,
 }: CardListProps) => (
-  <Box bg="background.base" w="full" {...props}>
+  <div className={cn("w-full bg-background", className)}>
     {items.map((listItem, idx) => {
       const { link, id } = listItem
       const isLink = !!link
@@ -123,18 +102,19 @@ const CardList = ({
           <Card {...listItem} imageWidth={imageWidth} />
         </LinkBox>
       ) : (
-        <Card
-          key={idx}
-          onClick={() => {
-            customEventOptions && trackCustomEvent(customEventOptions)
-            clickHandler(idx)
-          }}
-          mb={4}
-          {...listItem}
-        />
+        <div key={idx}>
+          <Card
+            onClick={() => {
+              customEventOptions && trackCustomEvent(customEventOptions)
+              clickHandler(idx)
+            }}
+            className="mb-4"
+            {...listItem}
+          />
+        </div>
       )
     })}
-  </Box>
+  </div>
 )
 
 export default CardList

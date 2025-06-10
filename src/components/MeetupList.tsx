@@ -1,5 +1,7 @@
+"use client"
+
 import { useState } from "react"
-import sortBy from "lodash/sortBy"
+import { sortBy } from "lodash"
 import { FaChevronRight } from "react-icons/fa6"
 
 import Emoji from "@/components/Emoji"
@@ -11,9 +13,8 @@ import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import meetups from "@/data/community-meetups.json"
 
-import Input from "../../tailwind/ui/Input"
-
 import { Flex } from "./ui/flex"
+import Input from "./ui/input"
 import InlineLink, { BaseLink } from "./ui/Link"
 
 export interface Meetup {

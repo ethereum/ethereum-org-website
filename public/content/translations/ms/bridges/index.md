@@ -77,7 +77,7 @@ Jambatan mempunyai pelbagai jenis reka bentuk dan kerumitan. Secara umumnya, jam
 
 Secara ringkasnya, kita boleh mengatakan bahawa jambatan yang dipercayai mempunyai andaian kepercayaan, sedangkan jambatan tanpa kepercayaan mempunyai kepercayaan yang minimum dan tidak membuat andaian kepercayaan baru di luar domain asas. Berikut ialah cara istilah-istilah ini boleh diterangkan:
 
-- **Tanpa kepercayaan**: mempunyai keselamatan yang setara dengan domain asas. Seperti yang diterangkan oleh [Arjun Bhuptani dalam artikel ini.](https://medium.com/connext/the-interoperability-trilemma-657c2cf69f17)
+- **Tanpa kepercayaan**: mempunyai keselamatan yang setara dengan domain asas. Seperti yang diterangkan oleh [Arjun Bhuptani dalam artikel ini. ](https://medium.com/connext/the-interoperability-trilemma-657c2cf69f17)
 - **Andaian kepercayaan:**bergerak jauh daripada keselamatan domain asas dengan menambah pengesahan luaran dalam sistem, dengan itu menjadikannya satu kripto ekonomi yang kurang selamat.
 
 Untuk mengembangkan pemahaman yang lebih baik tentang perbezaan utama antara dua pendekatan tersebut, mari kita ambil satu contoh:

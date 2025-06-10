@@ -203,4 +203,4 @@ Upang ma-unlock at maibalik ang iyong buong balanse, dapat mo ring tapusin ang p
 - [Bawat Hakbang: Paano sumali sa Ethereum 2.0 Testnet](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) - _Butta_
 - [Mga Tip para sa Pag-iwas sa Slashing sa Eth2](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) - _Raul Jordan 2020_
 
-<QuizWidget quizKey="solo-staking" />
+<QuizWidget quizKey="staking-solo" />

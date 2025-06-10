@@ -7,7 +7,7 @@ sidebarDepth: 1
 
 # Opi Ethereumista {#learn-about-ethereum}
 
-**Tervetuloa ethereum.org/learn -sivulle - kokoelmaan resursseja, jotka auttavat sinua oppimaan lisää Ethereumista.** Tämä sivu sisältää teknisiä **ja** ei-teknisiä artikkeleja, ohjeita ja resursseja. Jos olet täysin uusi Ethereumiin, [suosittelemme aloittamaan täältä](/fi/beginners/).
+**Tervetuloa ethereum.org/learn -sivulle - kokoelmaan resursseja, jotka auttavat sinua oppimaan lisää Ethereumista.** Tämä sivu sisältää teknisiä **ja** ei-teknisiä artikkeleja, ohjeita ja resursseja. Jos olet täysin uusi Ethereumiin, [suosittelemme aloittamaan täältä](/beginners/).
 
 Tässä on muutamia loistavia aloitusmateriaaleja (englanniksi):
 
@@ -71,7 +71,7 @@ Ethereum-tietoverkko on rakennettu useista solmuista, joissa suoritetaan niille 
 
 Enterprise Ethereum viittaa yksityis-, yhteistyö- ja hybriditoteutuksiin Ethereumin-koodipohjasta liiketoimintasovelluksia varten. Yritykset ympäri maailmaa käyttävät jo nyt Enterprise Ethereumia taloudellisten markkinoiden tehostamiseen, toimitusketjujen hallnitaan ja uusien liiketoimintamallien luomiseen.
 
-Lue lisää aiheesta [Ethereum yrityksille](/fi/enterprise/).
+Lue lisää aiheesta [Ethereum yrityksille](/enterprise/).
 
 ## Ethereumin skaalattavuuden parantaminen {#improving-ethereums-scalability}
 

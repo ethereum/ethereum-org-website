@@ -5,7 +5,7 @@ lang: zh
 ---
 
 可用性启发法包含广泛的“经验法则”，你可以用它来衡量网站的可用性。
-这些启发法是为 Web3 量身定制的，并且应该与 Jakob Nielsen 的[界面设计的 10 条基本原则](https://www.nngroup.com/articles/ten-usability-heuristics/)一起使用。
+这 7 种启发法是为 Web3 量身定制的，并且应该与 Jakob Nielsen 的 [界面设计的 10 条基本原则] (https://www.nngroup.com/articles/ten-usability-heuristics/) 一起使用。
 
 ## Web3 的 7 个可用性启发法 {#seven-usability-heuristics-for-web3}
 

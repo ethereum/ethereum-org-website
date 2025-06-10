@@ -22,11 +22,11 @@ První kryptoměnou byl Bitcoin, který vytvořil Satoshi Nakamoto. Od spuštěn
 
 Ethereum umožňuje vývojářům vytvářet [**decentralizované aplikace (dappky)**](/developers/docs/dapps), které sdílejí společný fond výpočetního výkonu. Tento sdílený fond je omezený, takže Ethereum potřebuje mechanismus, který určí, kdo ho může používat. Jinak by mohla dappka omylem nebo záměrně spotřebovat všechny síťové zdroje, což by znemožnilo přístup ostatním.
 
-Kryptoměna ether podporuje mechanismus stanovení cen pro výpočetní výkon Etherea. Když uživatelé chtějí provést transakci, musí zaplatit ethereum, aby byla jejich transakce na blockchainu uznána. Tyto náklady jsou známé jako [poplatky za palivo](/developers/docs/gas/) a výše poplatku závisí na množství výpočetního výkonu potřebného k provedení transakce a na celosíťové poptávce po výpočetním výkonu v daném okamžiku.
+Kryptoměna ether podporuje mechanismus stanovení cen pro výpočetní výkon Etherea. Když uživatelé chtějí provést transakci, musí zaplatit Ethereum, aby byla jejich transakce na blockchainu uznána. Tyto náklady jsou známé jako [poplatky za palivo](/developers/docs/gas/) a výše poplatku závisí na množství výpočetního výkonu potřebného k provedení transakce a na celosíťové poptávce po výpočetním výkonu v daném okamžiku.
 
 Proto, i když by škodlivá dappka odeslala nekonečnou smyčku, transakci by nakonec došel ether a byla by ukončena, což by umožnilo síti vrátit se do normálu.
 
-[Často](https://www.reuters.com/article/us-crypto-currencies-lending-insight-idUSKBN25M0GP#:~:text=price%20of%20ethereum) [dochází k](https://abcnews.go.com/Business/bitcoin-slumps-week-low-amid-renewed-worries-chinese/story?id=78399845#:~:text=cryptocurrencies%20including%20ethereum) [záměně](https://www.cnn.com/2021/03/14/tech/nft-art-buying/index.html#:~:text=price%20of%20ethereum) Etherea a etheru — když lidé odkazují na „cenu Etherea“, popisují cenu etheru.
+Je [běžné zaměňovat](https://abcnews.go.com/Business/bitcoin-slumps-week-low-amid-renewed-worries-chinese/story?id=78399845) Ethereum a ether – když se lidé zmiňují o „ceně Etherea“, popisují cenu etheru.
 
 ## Ražba etheru {#minting-ether}
 
@@ -40,7 +40,7 @@ Kromě vytváření etheru prostřednictvím odměn za bloky může být ether t
 
 K pálení etheru dochází při každé transakci na Ethereu. Když uživatelé platí za transakce, základní poplatek za palivo, který je stanoven sítí podle poptávky po transakcích, je zničen. Tento proces, ve spojení s proměnlivými velikostmi bloků a maximálním poplatkem za palivo, zjednodušuje odhad poplatků za transakce na Ethereu. Když je poptávka po síti vysoká, [bloky](https://etherscan.io/block/12965263) mohou spálit více etheru, než kolik se vyrazí, což efektivně kompenzuje vydávání nových etherů.
 
-Pálení základního poplatku omezuje schopnost producenta bloku manipulovat s transakcemi. Např. kdyby producenti bloků dostávali základní poplatek, mohli by zahrnout své vlastní transakce zdarma a zvýšit základní poplatek pro všechny ostatní. Alternativně by mohli vrátit základní poplatek některým uživatelům mimo řetězec, což by vedlo k méně transparentnímu a složitějšímu trhu s transakčními poplatky.
+Pálení základního poplatku omezuje schopnost producenta bloku manipulovat s transakcemi. Např. kdyby producenti bloků dostávali základní poplatek, mohli by zahrnout své vlastní transakce zdarma a zvýšit základní poplatek pro všechny ostatní. Alternativně by mohli vrátit základní poplatek některým uživatelům mimo blockchain, což by vedlo k méně transparentnímu a složitějšímu trhu s transakčními poplatky.
 
 ## Denominace etheru {#denominations}
 
@@ -71,8 +71,8 @@ Uživatelé mohou zjistit zůstatek etheru na jakémkoliv [účtu](/developers/d
 
 ## Další informace {#further-reading}
 
-- [Definování Etheru a Etherea](https://www.cmegroup.com/education/courses/introduction-to-ether/defining-ether-and-ethereum.html) – _CME Group_
+- [Definování etheru a Etherea](https://www.cmegroup.com/education/courses/introduction-to-ether/defining-ether-and-ethereum.html) – _CME Group_
 - [Ethereum Whitepaper](/whitepaper/): Původní návrh Etherea. Tento dokument obsahuje popis etheru a motivaci za jeho vytvořením.
-- [Kalkulačka gwei](https://www.alchemy.com/gwei-calculator): Použijte tuto kalkulačku gwei pro snadnou konverzi mezi wei, gwei a ethereum. Stačí zadat jakoukoliv částku ve wei, gwei nebo ETH a automaticky vypočítat konverzi.
+- [Kalkulačka gwei](https://www.alchemy.com/gwei-calculator): Použijte tuto kalkulačku gwei pro snadnou konverzi mezi wei, gwei a ether. Stačí zadat jakoukoliv částku ve wei, gwei nebo ETH a automaticky vypočítat konverzi.
 
 _Víte o komunitním zdroji, který vám pomohl? Upravte tuto stránku a přidejte ho!_

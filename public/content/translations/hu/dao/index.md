@@ -18,7 +18,7 @@ A DAO egy közös tulajdonú szervezet, amely egy közös küldetésért dolgozi
 
 A DAO-k lehetőséget biztosítanak számunkra, hogy hozzánk hasonló elhivatottságú emberekkel dolgozzunk a világ minden tájáról anélkül, hogy egy központi vezetőre bíznánk a pénzügyi és operatív működtetést. Nincs olyan vezérigazgató, aki a kedve szerint költhetné el az alapokat, vagy olyan pénzügyi vezető, aki manipulálhatná a könyvelést. Helyette a kódba épített, blokkláncon alapuló szabályok határozzák meg, hogyan működik a szervezet és kerülnek elköltésre az alapok.
 
-Beépített pénztárakkal rendelkeznek, amelyekhez a csoport jóváhagyása nélkül senkinek sincs jogosultsága hozzáférni. A döntéseket a javaslatok és a szavazás szabályozzák, így biztosítva, hogy a szervezetben mindenki megszólaljon, és minden átláthatóan, [on-láncon](/glossary/#on-chain) történjen.
+Beépített pénztárakkal rendelkeznek, amelyekhez a csoport jóváhagyása nélkül senkinek sincs jogosultsága hozzáférni. A döntéseket a javaslatok és a szavazás szabályozzák, így biztosítva, hogy a szervezetben mindenki megszólaljon, és minden átláthatóan, [láncon belül](/glossary/#on-chain) történjen.
 
 ## Miért van szükségünk DAO-kra? {#why-dao}
 
@@ -44,6 +44,8 @@ Annak érdekében, hogy még érthetőbbé tegyük a DAO-k működését, az al�
 - **Közös tulajdonjog** – vásárolhat fizikai vagy digitális eszközöket, és a tagok szavazhatnak a használatukról.
 - **Kockázati tőke és támogatás** – létrehozhat egy kockázatitőke-alapot, mely befektetési tőkét gyűjt, és szavazással válaszhatók ki a támogatandó vállalkozások. A visszaérkező összegeket pedig később szétoszthatják a DAO tagjai között.
 
+<YouTube id="zTStDvUtQWc" />
+
 ## Hogyan működnek a DAO-k? {#how-daos-work}
 
 A DAO gerincét az [intelligens szerződés](/glossary/#smart-contract) adja, amely meghatározza a szervezet szabályait és birtokolja a csoport pénztárát. Amint a szerződés életbe lép az Ethereumon, csakis szavazás útján lehet módosítani a szabályokat. Ha valaki olyat próbál tenni, ami nem szerepel a szabályokban és a programlogikában, az meghiúsul. Mivel a társaság pénzügyeit is az okosszerződés határozza meg, ezért a csoport jóváhagyása nélkül senki sem költheti el a pénzösszegeket. Tehát a DAO-nak nincs szüksége központi hatóságra. Ehelyett a csoport közösen hoz döntéseket, a kifizetések pedig automatikusan jóváhagyásra kerülnek a szavazás eredményeként.
@@ -54,7 +56,7 @@ Mindez azért lehetséges, mert az okosszerződést nem lehet önkényesen megv�
 
 Az Ethereum tökéletes alapot szolgáltat a DAO-knak számtalan okból kifolyólag:
 
-- Az Ethereum saját konszenzusmechanizmusa kellőképpen kiterjedt és megalapozott ahhoz, hogy a szervezetek megbízzanak a hálózatban.
+- Az Ethereum saját konszenzusa decentralizált és eléggé megalapozott ahhoz, hogy a szervezetek megbízhassanak a hálózatban.
 - Az okosszerződés tartalmát nem lehet módosítani, miután életbe lépett, még a tulajdonosok sem módosíthatják azt. Ennek következtében a DAO a meghatározott szabályok alapján fog működni.
 - Az okosszerződések képesek pénzeszközöket küldeni és fogadni. Enélkül szükség lenne egy megbízható közvetítőre, aki a csoport eszközeit kezelné.
 - Az Ethereum közössége bizonyítottan együttműködő, nem versenyszellemű, így a bevált gyakorlatok és a támogatórendszerek gyorsan kialakulnak.
@@ -119,11 +121,11 @@ _Főleg a szorosabb szerveződésű, emberközpontú szervezetek használják, m
 
 A reputáció a részvételt igazolja és szavazati jogot biztosít a DAO-ban. A token- és részesedésalapú tagsággal ellentétben a reputációalapú DAO nem ad tulajdonjogot a közreműködőknek. A reputációt nem lehet megvenni, átadni vagy delegálni; a DAO tagok a részvételükkel nyerik el azt. A láncon belüli szavazás nem engedélyhez kötött, a leendő tagok szabadon kérvényezhetik a DAO-hoz való csatlakozást, illetve azt, hogy a közreműködésükért cserébe reputációt és tokent kapjanak.
 
-_Jellemzően protokollok és [dapp-ok](/glossary/#dapp) decentralizált fejlesztésére és irányítására használják, de kiválóan alkalmas különféle szervezetek, például jótékonysági szervezetek, munkavállalói kollektívák, befektetési klubok stb._
+_Jellemzően protokollok és [dapp-ok](/glossary/#dapp) decentralizált fejlesztésére és irányítására használják, de kiválóan alkalmas különféle szervezetek, például jótékonysági szervezetek, munkavállalói kollektívák, befektetési klubok stb. számára is_
 
 #### Egy híres példa {#reputation-example}
 
-[DXdao](https://DXdao.eth.link) – A DXdao egy független globális csoportosulás, amely 2019 óta épít és irányít decentralizált protokollokat és alkalmazásokat. A hírnév alapú kormányzást és a [holografikus konszenzust](/glossary/#holographic-consensus) kihasználja az alapok koordinálásához és kezeléséhez, ami azt jelenti, hogy senki sem vásárolhatja meg magát a jövőjének befolyásolásában.
+[DXdao](https://DXdao.eth.limo) – A DXdao egy független globális csoportosulás, amely 2019 óta épít és irányít decentralizált protokollokat és alkalmazásokat. A hírnév alapú kormányzást és a [holografikus konszenzust](/glossary/#holographic-consensus) használja az alapok koordinálásához és kezeléséhez, ami azt jelenti, hogy senki sem vásárolhatja meg a tagságot a szervezet jövőjének vagy irányításának befolyásolása céljából.
 
 ## Csatlakozás DAO-hoz / DAO indítása {#join-start-a-dao}
 
@@ -158,3 +160,7 @@ _Jellemzően protokollok és [dapp-ok](/glossary/#dapp) decentralizált fejleszt
 
 - [Mit jelent a DAO a kripto világában?](https://youtu.be/KHm0uUPqmVE)
 - [Felépíthet egy várost egy DAO?](https://www.ted.com/talks/scott_fitsimones_could_a_dao_build_the_next_great_city) – [TED](https://www.ted.com/)
+
+<Divider />
+
+<QuizWidget quizKey="daos" />

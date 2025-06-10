@@ -1,6 +1,8 @@
-import { useTranslation } from "next-i18next"
+"use client"
+
 import { FaDiscord, FaGithub, FaXTwitter } from "react-icons/fa6"
 import { IoChevronUpSharp } from "react-icons/io5"
+import { SiFarcaster } from "react-icons/si"
 
 import type { FooterLink, FooterLinkSection } from "@/lib/types"
 
@@ -13,6 +15,8 @@ import { Button } from "./ui/buttons/Button"
 import { BaseLink } from "./ui/Link"
 import { List, ListItem } from "./ui/list"
 
+import { useTranslation } from "@/hooks/useTranslation"
+
 const socialLinks = [
   {
     icon: FaGithub,
@@ -20,9 +24,14 @@ const socialLinks = [
     ariaLabel: "GitHub",
   },
   {
+    icon: SiFarcaster,
+    href: "https://warpcast.com/ethdotorg",
+    ariaLabel: "Farcaster",
+  },
+  {
     icon: FaXTwitter,
-    href: "https://twitter.com/ethdotorg",
-    ariaLabel: "Twitter",
+    href: "https://x.com/ethdotorg",
+    ariaLabel: "X",
   },
   {
     icon: FaDiscord,
@@ -177,10 +186,6 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
           href: "/enterprise/",
           text: t("enterprise-mainnet"),
         },
-        {
-          href: "/enterprise/private-ethereum/",
-          text: t("enterprise-private"),
-        },
       ],
     },
     {
@@ -259,6 +264,10 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
           href: "/governance/",
           text: t("ethereum-governance"),
         },
+        {
+          href: "/trillion-dollar-security/",
+          text: t("trillion-dollar-security"),
+        },
       ],
     },
   ]
@@ -302,8 +311,8 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
     "text-body-medium no-underline hover:text-primary hover:after:text-primary"
 
   return (
-    <footer className="px-8 py-4">
-      <div className="flex flex-wrap items-center justify-center gap-8 border-t border-body-light py-4 md:justify-between">
+    <footer className="px-4 py-4">
+      <div className="flex flex-wrap items-center justify-center gap-8 border-t border-body-light px-4 py-4 md:justify-between">
         <p className="text-sm italic text-body-medium">
           <Translation id="website-last-updated" />: {lastDeployLocaleTimestamp}
         </p>
@@ -311,18 +320,16 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
         <Button
           variant="outline"
           isSecondary
-          onClick={() => scrollIntoView("__next")}
+          onClick={() => scrollIntoView("body")}
         >
-          <IoChevronUpSharp /> Go to top
+          <IoChevronUpSharp /> <Translation id="go-to-top" />
         </Button>
       </div>
 
-      <div className="grid auto-cols-auto justify-between gap-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5">
+      <div className="grid auto-cols-auto justify-between gap-4 px-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5">
         {linkSections.map((section: FooterLinkSection, idx) => (
           <div key={idx}>
-            <h3 className="my-5 text-sm font-bold">
-              <Translation id={section.title} />
-            </h3>
+            <h3 className="my-5 text-sm font-bold">{section.title}</h3>
             <List className="m-0 mb-4 list-none text-sm">
               {section.links.map((link, linkIdx) => (
                 <ListItem key={linkIdx} className="mb-4">

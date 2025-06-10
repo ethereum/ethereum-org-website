@@ -19,11 +19,11 @@ Nous sommes une communauté accueillante qui vous aidera à grandir et à vous f
 - [Travailler sur un ticket ouvert](https://github.com/ethereum/ethereum-org-website/issues) – Travail que nous avons identifié comme devant être fait
 
 **Conception**
-- [Aider à concevoir le site web](/contributing/design/)– Des concepteurs de tous les niveaux peuvent contribuer à améliorer le site web
+- [Aidez à concevoir le site web](/contributing/design/) – Les designers de tous niveaux peuvent contribuer à améliorer le site
 
 **Contenu**
 - [Créer/modifier du contenu](/contributing/#how-to-update-content) – Proposez de nouvelles pages ou des modifications de ce qui existe déjà
-- [Ajouter un article pour la communauté](/contributing/content-resources/)– Ajoutez un article utile à une page pertinente
+- [Ajouter un article pour la communauté](/contributing/content-resources/) – Ajoutez un article utile à une page pertinente
 - [Suggérer une ressource de design](/contributing/design/adding-design-resources/) - Ajoutez, mettez à jour et supprimez des ressources de design utiles
 - [Ajouter un terme au glossaire](/contributing/adding-glossary-terms/) – Aidez-nous à poursuivre le développement du [glossaire](/glossary/) Ethereum
 - [Quiz](/contributing/quizzes/) - Ajoutez, mettez à jour et supprimez des questions de quiz sur une page pertinente
@@ -32,7 +32,7 @@ Nous sommes une communauté accueillante qui vous aidera à grandir et à vous f
 - [Demander une fonctionnalité](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) – Faites-nous part de vos idées pour une nouvelle fonctionnalité ou un nouveau design
 
 **Liste de produits**
-- [Ajouter une plateforme d'échange](/contributing/adding-exchanges/)– Ajoutez une plateforme d'échange à notre [outil de recherche d'échange](/get-eth/#country-picker)
+- [Ajouter une plateforme d'échange](/contributing/adding-exchanges/) – Ajoutez une plateforme d'échange à notre [outil de recherche d'échange](/get-eth/#country-picker)
 - [Ajouter un produit/service](/contributing/adding-products/) – Ajoutez une application décentralisée (DApp) ou un portefeuille à une page pertinente
 - [Ajouter des outils de développement](/contributing/adding-developer-tools/) – Ajoutez un outil de développement à une page pertinente
 - [Ajouter une couche 2](/contributing/adding-layer-2s/) – Ajoutez une seconde couche à une page pertinente
@@ -68,7 +68,7 @@ Avant de contribuer, assurez-vous que vous connaissez bien :
 - notre [guide de style](/contributing/style-guide/).
 - notre [code de conduite](/community/code-of-conduct)
 
-<ContributorsQuizBanner mt={16} mb={8} />
+<ContributorsQuizBanner className="mt-16 mb-8" />
 
 ## Comment sont prises les décisions concernant le site {#how-decisions-about-the-site-are-made}
 
@@ -94,7 +94,7 @@ Si votre contribution est intégrée à ethereum.org, vous aurez la possibilité
 
 ### Comment le récupérer
 1. Rejoignez notre [serveur Discord](https://discord.gg/ethereum-org).
-2. Collez un lien vers votre contribution dans le canal `#🥇 | proof-of-contribution`
+2. Collez un lien vers votre contribution dans le canal `#🥇 | proof-of-contribution`.
 3. Attendez qu'un membre de notre équipe vous envoie un lien vers votre OAT.
 4. Réclamez votre OAT !
 

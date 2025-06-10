@@ -355,3 +355,7 @@ DeFi — bu ochiq kodli harakat. DeFi protokollari va ilovalarining barchasi siz
 
 - [DeFi Llama Discord server](https://discord.defillama.com/)
 - [DeFi Pulse Discord server](https://discord.gg/Gx4TCTk)
+
+<Divider />
+
+<QuizWidget quizKey="defi" />

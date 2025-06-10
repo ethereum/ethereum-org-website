@@ -260,7 +260,7 @@ Proje klasörünüzde şunu yazın:
 npm install --save-dev @nomiclabs/hardhat-ethers "ethers@^5.0.0"
 ```
 
-### Adım 13: hardhat.config.js'yi güncelleyin {#step-13-update-hardhat.configjs}
+### Adım 13: hardhat.config.js'yi güncelleyin {#step-13-update-hardhat-configjs}
 
 Şimdiye kadar birkaç bağımlılık ve eklenti ekledik, şimdi projemizin bunların hepsini tanıması için `hardhat.config.js`'yi güncellememiz gerekiyor.
 

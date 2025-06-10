@@ -1,6 +1,5 @@
 import { useRef } from "react"
-import { useRouter } from "next/router"
-import { useTranslation } from "next-i18next"
+import { useLocale } from "next-intl"
 import { BsTranslate } from "react-icons/bs"
 import { MdBrightness2, MdWbSunny } from "react-icons/md"
 
@@ -12,6 +11,7 @@ import { DESKTOP_LANGUAGE_BUTTON_NAME } from "@/lib/constants"
 
 import useColorModeValue from "@/hooks/useColorModeValue"
 import { useEventListener } from "@/hooks/useEventListener"
+import { useTranslation } from "@/hooks/useTranslation"
 
 type DesktopNavMenuProps = {
   toggleColorMode: () => void
@@ -19,7 +19,7 @@ type DesktopNavMenuProps = {
 
 const DesktopNavMenu = ({ toggleColorMode }: DesktopNavMenuProps) => {
   const { t } = useTranslation("common")
-  const { locale } = useRouter()
+  const locale = useLocale()
   const languagePickerRef = useRef<HTMLButtonElement>(null)
 
   const ThemeIcon = useColorModeValue(MdBrightness2, MdWbSunny)

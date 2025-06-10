@@ -48,7 +48,7 @@ _虽然在协议层上，以太坊的治理在链下进行，但许多基于以�
 - **节点运营商**：这些人运行区块和交易广播节点，拒绝遇到的任何无效交易或区块。 [关于节点的更多信息](/developers/docs/nodes-and-clients/)。
 - **以太坊改进提案作者**：这些人提议修改以太坊协议，具体形式为以太坊改进提案。 [关于以太坊改进提案的更多信息](/eips/)。
 - **验证者**：这些人运行的节点能够将新的区块添加到以太坊区块链上。
-- **协议开发者**（又名 “核心开发者”）：这些人负责维护各种以太坊实现（例如执行层的 go-ethereum、Nethermind、Besu、Erigon、Reth，或共识层的 Prysm、Lighthouse、Nimbus、Teku、Lodestar）。 [关于以太坊客户端的更多信息](/developers/docs/nodes-and-clients/)。
+- **协议开发者**（又名 “核心开发者”）：这些人负责维护各种以太坊实现（例如执行层的 go-ethereum、Nethermind、Besu、Erigon、Reth 或共识层的 Prysm、Lighthouse、Nimbus、Teku、Lodestar、Grandine）。 [关于以太坊客户端的更多信息](/developers/docs/nodes-and-clients/)。
 
 _注：任何个人都可以属于多个组（如：协议开发者可以支持以太坊改进提案，运行信标链验证者，并使用去中心化金融应用程序）。 不过为了明确概念，这样最容易区分。_
 

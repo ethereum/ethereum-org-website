@@ -1,5 +1,6 @@
 ---
-title: Organisation autonome décentralisée (DAO)
+title: Qu'est-ce qu'une DAO ?
+metaTitle: Qu'est-ce qu'une DAO ? | Organisation autonome et décentralisée
 description: Un aperçu des DAO sur Ethereum
 lang: fr
 template: use-cases
@@ -160,3 +161,7 @@ _Habituellement utilisée pour le développement décentralisé et la gouvernanc
 
 - [Qu'est-ce qu'une DAO en cryptomonnaie ?](https://youtu.be/KHm0uUPqmVE)
 - [Une DAO peut-elle bâtir une ville ?](https://www.ted.com/talks/scott_fitsimones_could_a_dao_build_the_next_great_city) – [TED](https://www.ted.com/)
+
+<Divider />
+
+<QuizWidget quizKey="daos" />

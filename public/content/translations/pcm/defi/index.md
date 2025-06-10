@@ -355,3 +355,7 @@ DeFi na open-source movement. Di DeFi protokols and aplikashons dey open for yu 
 
 - [DeFi Llama Discord server](https://discord.defillama.com/)
 - [DeFi Pulse Discord server](https://discord.gg/Gx4TCTk)
+
+<Divider />
+
+<QuizWidget quizKey="defi" />

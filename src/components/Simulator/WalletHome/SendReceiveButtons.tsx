@@ -1,6 +1,7 @@
 import React from "react"
 import { PiPaperPlaneRightFill } from "react-icons/pi"
-import { Flex } from "@chakra-ui/react"
+
+import { Flex } from "@/components/ui/flex"
 
 import { QrCodeIcon } from "../icons"
 import type { SimulatorNav } from "../interfaces"
@@ -26,7 +27,7 @@ export const SendReceiveButtons = ({
   const highlightSend = !nav || !disableSend
   const highlightReceive = !nav || !disableReceive
   return (
-    <Flex justify="space-around" w="full" gap={4}>
+    <Flex className="w-full justify-around gap-4">
       <SendReceiveButton
         onClick={nav?.progressStepper}
         isDisabled={disableSend}

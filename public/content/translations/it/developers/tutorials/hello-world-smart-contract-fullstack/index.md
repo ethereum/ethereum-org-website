@@ -260,7 +260,7 @@ Nella cartella del tuo progetto digita:
 npm install --save-dev @nomiclabs/hardhat-ethers "ethers@^5.0.0"
 ```
 
-### Fase 13: aggiorna hardhat.config.js {#step-13-update-hardhat.configjs}
+### Fase 13: aggiorna hardhat.config.js {#step-13-update-hardhat-configjs}
 
 Finora abbiamo aggiunto diverse dipendenze e plugin, ora dobbiamo aggiornare `hardhat.config.js` in modo che il nostro progetto li riconosca tutti.
 
@@ -709,7 +709,7 @@ Congratulazioni! Il codice del tuo contratto intelligente è su Etherscan!
 
 
 
-### Dai un'occhiata al tuo contratto intelligente su Etherescan! {#check-out-your-smart-contract-on-etherscan}
+### Dai un'occhiata al tuo contratto intelligente su Etherscan! {#check-out-your-smart-contract-on-etherscan}
 
 Quando vai al link fornito nel tuo terminale, dovresti essere in grado di vedere il codice e l'ABI del tuo contratto intelligente pubblicati su Etherscan!
 

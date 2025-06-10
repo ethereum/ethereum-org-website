@@ -1,4 +1,4 @@
-import { TwImage } from "@/components/Image"
+import { Image } from "@/components/Image"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Flex } from "@/components/ui/flex"
 import Link from "@/components/ui/Link"
@@ -23,7 +23,7 @@ export const TranslatathonInANutshell = () => {
           </p>
         </Flex>
         <Flex className="w-full justify-center">
-          <TwImage
+          <Image
             src={settlementImage}
             alt=""
             width={327}
@@ -35,7 +35,7 @@ export const TranslatathonInANutshell = () => {
 
       <Flex className="w-full flex-col-reverse items-start gap-8 p-8 md:flex-row">
         <Flex className="w-full justify-center">
-          <TwImage
+          <Image
             src={futureImage}
             alt=""
             width={327}
@@ -68,7 +68,7 @@ export const TranslatathonInANutshell = () => {
           </p>
         </Flex>
         <Flex className="w-full justify-center">
-          <TwImage
+          <Image
             src={dogeImage}
             alt=""
             width={327}

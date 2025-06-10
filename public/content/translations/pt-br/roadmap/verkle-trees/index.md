@@ -33,7 +33,7 @@ No esquema de compromisso polinomial, as testemunhas têm tamanhos gerenciáveis
 
 <ExpandableCard title="Em que nível as Verkle Trees podem reduzir o tamanho da testemunha?" eventCategory="/roadmap/verkle-trees" eventName="clicked exactly how much can Verkle trees reduce witness size?">
 
-O tamanho da testemunha varia de acordo com o respectivo número de folhas. Se a testemunha tiver mil folhas, uma testemunha de uma Merkle Trie terá aproximadamente 3,5 MB (supondo 7 níveis para a trie). Uma testemunha dos mesmos dados em uma Verkle Tree (supondo 4 níveis para a árvore) teria cerca de 150 kB, **aproximadamente 23 vezes menor**. Essa redução no tamanho da testemunha permitirá que as testemunhas de clientes sem estado sejam aceitavelmente pequenas. As testemunhas polinomiais são de 0,128 a 1 kB, dependendo do compromisso polinomial específico usado.
+O tamanho da testemunha varia de acordo com o respectivo número de folhas. Se a testemunha tiver mil folhas, uma testemunha de uma Merkle Trie terá aproximadamente 3,5 MB (supondo 7 níveis para a trie). Uma testemunha dos mesmos dados em uma Verkle Tree (supondo 4 níveis para a árvore) teria cerca de 150 kB, **aproximadamente 23 vezes menor**. Essa redução no tamanho da testemunha permitirá que as testemunhas de clientes sem estado sejam aceitavelmente pequenas. As testemunhas polinomiais são de 0,128 -1 kB, dependendo do compromisso polinomial específico usado.
 
 </ExpandableCard>
 
@@ -49,17 +49,18 @@ As Verkle Trees são pares `(chave, valor)` em que as chaves são elementos de 3
 
 As redes de testes de Verkle Trees já estão em execução, mas ainda há atualizações pendentes consideráveis em clientes que são necessárias para oferecer suporte às Verkle Trees. Você pode ajudar a acelerar o progresso por meio da implantação de contratos nas redes de testes ou da execução de clientes de rede de testes.
 
-[Conheça a rede de testes do Beverly Hills Verkle](https://beverlyhills.ethpandaops.io)
+[Explore a rede de teste Verkle Gen Devnet 6](https://verkle-gen-devnet-6.ethpandaops.io/)
 
-[Assista a Guillaume Ballet explicar a rede de testes Condrieu Verkle](https://www.youtube.com/watch?v=cPLHFBeC0Vg) (observe que a rede de testes Condrieu era uma prova de trabalho e agora foi substituída pela [rede de testes Kaustinen](https://kaustinen.ethdevops.io)).
+[Assista a Guillaume Ballet explicar a rede de teste Condrieu Verkle](https://www.youtube.com/watch?v=cPLHFBeC0Vg) (observe que a rede de teste Condrieu era uma prova de trabalho e agora foi substituída pela rede de teste Verkle Gen Devnet 6).
 
 ## Leitura adicional {#further-reading}
 
+- [Árvores Verkle para falta de estado](https://verkle.info/)
 - [Dankrad Feist explica as Verkle Trees no PEEPanEIP](https://www.youtube.com/watch?v=RGJOQHzg3UQ)
-- [Guillaume Ballet explica as Verkle Trees na ETHGlobal](https://www.youtube.com/watch?v=f7bEtX3Z57o)
+- [Guillaume Ballet explica árvores de Verkle no ETHGlobal](https://www.youtube.com/watch?v=f7bEtX3Z57o)
 - ["Como as Verkle Trees tornam o Ethereum simples e eficiente", por Guillaume Ballet na Devcon 6](https://www.youtube.com/watch?v=Q7rStTKwuYs)
 - [Piper Merriam sobre clientes sem estado da ETHDenver 2020](https://www.youtube.com/watch?v=0yiZJNciIJ4)
-- [Dankrad Fiest explica as Verkle Trees e a condição sem estado no podcast Zero Knowledge](https://zeroknowledge.fm/episode-202-stateless-ethereum-verkle-tries-with-dankrad-feist/)
+- [Dankrad Fiest explica as árvores Verkle e a falta de estado no podcast da Zero Knowledge](https://zeroknowledge.fm/episode-202-stateless-ethereum-verkle-tries-with-dankrad-feist/)
 - [Vitalik Buterin sobre Verkle Trees](https://vitalik.eth.limo/general/2021/06/18/verkle.html)
 - [Dankrad Feist sobre Verkle Trees](https://dankradfeist.de/ethereum/2021/06/18/verkle-trie-for-eth1.html)
 - [Documentação de EIO da Verkle Tree](https://notes.ethereum.org/@vbuterin/verkle_tree_eip#Illustration)

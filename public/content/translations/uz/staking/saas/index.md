@@ -55,7 +55,7 @@ Quyida mavjud SaaS provayderlari keltirilgan. Yuqoridagi ko‘rsatkichlardan ush
 
 Biz o‘tkazib yuborgan xizmat sifatida staking provayderi uchun taklif bormi? [Mahsulotni kataloglash qoidalari](/contributing/adding-staking-products/) bilan tanishib chiqing va ularni ko‘rib chiqish uchun yuboring.
 
-## Frequently asked questions {#faq}
+## Tez-tez beriladigan savollar {#faq}
 
 <ExpandableCard title="Mening kalitlarim kimda boʻladi?" eventCategory="SaasStaking" eventName="clicked who holds my keys">
 Kelishishlar provayderdan provayderga farq qiladi, lekin odatda sizga kerakli imzolash kalitlarini sozlash (32 ETH uchun bitta) va ularni provayderingizga yuklash orqali ular sizning nomingizdan tasdiqlanishiga ruxsat beriladi. Imzolash kalitlarining o‘zi mablag‘larni yechib olish, o‘tkazish yoki sarflash imkonini bermaydi. Biroq, ular konsensusga ovoz berish imkoniyatini beradi, agar bu to‘g‘ri amalga oshirilmasa, oflayn jarimalar yoki qisqartirishga olib kelishi mumkin.

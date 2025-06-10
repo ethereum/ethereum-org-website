@@ -87,7 +87,7 @@ lang: zh
 
 对于与节点或客户端设置、管理或迁移相关的软件产品：
 
-**支持哪些共识层客户端（ 例如 Lighthouse、Teku、Nimbus 和 Prysm）？**
+**支持哪些共识层客户端（ Lighthouse、Teku、Nimbus、Prysm、Grandine）是否受支持？**
 
 - 支持哪些客户端？ 用户可以选择吗？
 - 这用于确定产品的“多客户端”评分。

@@ -46,6 +46,7 @@ Az Ethereum-hálózat csomópontjairól számos trekker biztosít valós idejű 
 - [Csomóponttérkép](https://etherscan.io/nodetracker), készítette: Etherscan
 - [Ethercsomópontok](https://ethernodes.org/), készítette: Bitfly
 - [Nodewatch](https://www.nodewatch.io/), készítette: Chainsafe, konszenzuscsomópontok letapogatása
+- [Monitoreth](https://monitoreth.io/) - a MigaLabs által biztosított megosztott hálózati ellenőrzési eszköz
 
 ## Csomóponttípusok {#node-types}
 
@@ -197,6 +198,7 @@ Többféle konszenzusos kliens (korábbi nevén „Eth2” kliens) is létezik, 
 | [Nimbus](https://nimbus.team/)                                | Nim        | Linux, Windows, macOS | Beacon Chain, Goerli, Sepolia, Ropsten stb.                  |
 | [Prysm](https://docs.prylabs.network/docs/getting-started/)   | Go         | Linux, Windows, macOS | Beacon Chain, Gnosis, Goerli, Pyrmont, Sepolia, Ropsten stb. |
 | [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) | Java       | Linux, Windows, macOS | Beacon Chain, Gnosis, Goerli, Sepolia, Ropsten stb.          |
+| [Grandine](https://docs.grandine.io/) (béta)                  | Rust       | Linux, Windows, macOS | Beacon Chain, Goerli, Sepolia és mások                       |
 
 ### Lighthouse {#lighthouse}
 
@@ -229,6 +231,12 @@ A Teku a Beacon lánc egyik eredeti geneziskliense. A szokásos célok (biztons�
 A Teku nagyon rugalmas alkalmazási opciókat kínál. A Beacon-csomópont és a validátorkliens egyetlen folyamatként együtt is futtatható, ami rendkívül kényelmes az önálló letétbe helyezők számára, illetve a csomópontok a kifinomult letéti műveletek érdekében külön is futtathatók. Emellett a Teku teljesen kompatibilis a [Web3Signer](https://github.com/ConsenSys/web3signer/) rendszerrel az aláírásikulcs-biztonság, valamint a súlyos és kizárással járó büntetés (slashing) elkerülése érdekében.
 
 A Teku Java nyelven íródott és az Apache 2.0 licenc alatt fut. A ConsenSys Protocols csapata fejleszti, amely a Besu és a Web3Signer fejlesztője is. További információk a [Teku-dokumentációban](https://docs.teku.consensys.net/en/latest/) találhatók.
+
+### Grandine {#grandine}
+
+A Grandine egy konszenzuskliens-implementáció, amelyet Rust nyelven írtak, és a GPL-3.0 licenc alatt adták ki. Fenntartója a Grandine központi csapata, továbbá gyors, nagy teljesítményre képes és könnyű. A letétbe helyezők széles skálájához illeszkedik, a kis erőforrásigényű eszközökön, például Raspberry Pi-n futó egyéni letétbe helyezőktől kezdve a több tízezer validálót futtató, nagy intézményi letétesekig.
+
+A dokumentációt a [Grandine Book](https://docs.grandine.io/) tartalmazza
 
 ## Szinkronizálási módok {#sync-modes}
 

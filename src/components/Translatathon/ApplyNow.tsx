@@ -17,12 +17,10 @@ export const ApplyNow = () => {
     return (
       <div className="pt-12">
         <Callout
-          className="flex-1 flex-shrink basis-[416px]"
           image={DolphinImage}
           titleKey="page-translatathon:translatathon-apply-now"
           descriptionKey="page-translatathon:translatathon-apply-now-desc"
-          alignItems="center"
-          textAlign="center"
+          className="flex-1 basis-[416px] items-center text-center"
         >
           <Flex className="m-auto">
             <ButtonLink href={APPLICATION_URL}>Apply now</ButtonLink>
