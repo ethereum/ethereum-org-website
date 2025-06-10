@@ -12,10 +12,36 @@ import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Card } from "@/components/ui/card"
 import { Skeleton } from "@/components/ui/skeleton"
 
+import { cn } from "@/lib/utils/cn"
 import { getMetadata } from "@/lib/utils/metadata"
 
 import EthGlyph from "@/public/images/assets/svgs/eth-diamond-rainbow.svg"
 import heroImage from "@/public/images/heroes/enterprise-hero-white.png"
+
+type Case = {
+  name: string
+  content: string | React.ReactNode
+}
+
+const CasesColumn = ({
+  cases,
+  className,
+}: {
+  cases: Case[]
+  className?: string
+}) => (
+  <div className={cn("flex w-full flex-col gap-4", className)}>
+    {cases.map(({ name, content }) => (
+      <Card
+        key={name}
+        className="space-y-1 rounded-4xl border bg-background p-6 shadow-window-box"
+      >
+        <h3 className="text-xl">{name}</h3>
+        <p className="text-body-medium">{content}</p>
+      </Card>
+    ))}
+  </div>
+)
 
 const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const { locale } = await params
@@ -50,6 +76,53 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
         t("page-enterprise-features-4-content-2"),
       ],
       Icon: CheaperTransactions,
+    },
+  ]
+
+  const cases: Case[] = [
+    {
+      name: "Blackrock",
+      content: (
+        <>
+          Launched <strong>$2,9B+ tokenized</strong> U.S. Treasury fund on
+          Ethereum and its ecosystem, delivering same-day liquidity to
+          institutions.
+        </>
+      ),
+    },
+    {
+      name: "MediLedger",
+      content:
+        "Enables Pfizer and Genentech to verify drug authenticity and ensure pharma compliance.",
+    },
+    {
+      name: "European Investment Bank",
+      content: (
+        <>
+          <strong>Issued a €100M digital bond</strong> on public Ethereum. The
+          project was conducted in cooperation with the Banque de France,
+          Goldman Sachs, Santander and Société Generale.
+        </>
+      ),
+    },
+    {
+      name: "T-Mobile & SK Telecom",
+      content:
+        "Use Ethereum to streamline roaming and device trust—shared ledgers simplify authentication and billing.",
+    },
+    {
+      name: "UN World Food Programme",
+      content: (
+        <>
+          UN <strong>tracks aid for 100,000+ refugees</strong> using a private
+          Ethereum fork, boosting audit capabilities.
+        </>
+      ),
+    },
+    {
+      name: "MediLedger",
+      content:
+        "Enables Pfizer and Genentech to verify drug authenticity and ensure pharma compliance.",
     },
   ]
 
@@ -104,7 +177,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                 className="space-y-4 rounded-4xl border bg-background px-6 py-8 shadow-window-box"
               >
                 <Icon className="text-7xl text-primary" />
-                <h3>{header}</h3>
+                <h3 className="text-xl">{header}</h3>
                 {content.map((p, i) => (
                   <p key={i} className="mb-8 last:mb-0">
                     {p}
@@ -132,20 +205,11 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           </div>
           <div
             data-label="case-studies"
-            className="grid w-full max-w-screen-lg grid-cols-1 gap-4 md:grid-cols-3"
+            className="grid w-full max-w-screen-lg grid-cols-1 gap-4 px-4 md:grid-cols-3 md:px-6"
           >
-            <div className="flex w-full flex-col gap-4">
-              <Skeleton className="h-40 w-full rounded-2xl" />
-              <Skeleton className="h-32 w-full rounded-2xl" />
-            </div>
-            <div className="flex w-full flex-col gap-4">
-              <Skeleton className="h-52 w-full rounded-2xl" />
-              <Skeleton className="h-40 w-full rounded-2xl" />
-            </div>
-            <div className="flex w-full flex-col gap-4">
-              <Skeleton className="h-40 w-full rounded-2xl" />
-              <Skeleton className="h-32 w-full rounded-2xl" />
-            </div>
+            <CasesColumn cases={cases.slice(0, 2)} />
+            <CasesColumn cases={cases.slice(2, 4)} />
+            <CasesColumn cases={cases.slice(4, 6)} />
           </div>
           <ButtonLink href="/enterprise/use" variant="outline">
             {t("page-enterprise-ecosystem-cta")}
