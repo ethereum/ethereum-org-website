@@ -2,16 +2,21 @@
 
 import { useEffect, useState } from "react"
 
-import { cn } from "@/lib/utils/cn"
+import type { TimeLeftLabels } from "@/lib/types"
 
-import { useTranslation } from "@/hooks/useTranslation"
+import { cn } from "@/lib/utils/cn"
 
 interface CountDownProps {
   className?: string
+  timeLeftLabels: TimeLeftLabels
+  expiredLabel: string
 }
 
-const CountDown = ({ className }: CountDownProps) => {
-  const { t } = useTranslation("page-10-year-anniversary")
+const CountDown = ({
+  className,
+  timeLeftLabels,
+  expiredLabel,
+}: CountDownProps) => {
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
@@ -49,11 +54,7 @@ const CountDown = ({ className }: CountDownProps) => {
   }, [])
 
   if (isExpired) {
-    return (
-      <div className="text-center text-2xl font-bold">
-        {t("page-10-year-countdown-expired")}
-      </div>
-    )
+    return <div className="text-center text-2xl font-bold">{expiredLabel}</div>
   }
 
   return (
@@ -68,7 +69,9 @@ const CountDown = ({ className }: CountDownProps) => {
           {timeLeft.days}
         </div>
         <div className="font-mono text-xs text-accent-a">
-          {t("page-10-year-countdown-days")}
+          {timeLeft.days === 1
+            ? timeLeftLabels.days.singular
+            : timeLeftLabels.days.plural}
         </div>
       </div>
       <div
@@ -81,7 +84,9 @@ const CountDown = ({ className }: CountDownProps) => {
           {timeLeft.hours}
         </div>
         <div className="font-mono text-xs text-accent-a">
-          {t("page-10-year-countdown-hours")}
+          {timeLeft.hours === 1
+            ? timeLeftLabels.hours.singular
+            : timeLeftLabels.hours.plural}
         </div>
       </div>
       <div
@@ -94,7 +99,9 @@ const CountDown = ({ className }: CountDownProps) => {
           {timeLeft.minutes}
         </div>
         <div className="font-mono text-xs text-accent-a">
-          {t("page-10-year-countdown-minutes")}
+          {timeLeft.minutes === 1
+            ? timeLeftLabels.minutes.singular
+            : timeLeftLabels.minutes.plural}
         </div>
       </div>
       <div
@@ -107,7 +114,9 @@ const CountDown = ({ className }: CountDownProps) => {
           {timeLeft.seconds}
         </div>
         <div className="font-mono text-xs text-accent-a">
-          {t("page-10-year-countdown-seconds")}
+          {timeLeft.seconds === 1
+            ? timeLeftLabels.seconds.singular
+            : timeLeftLabels.seconds.plural}
         </div>
       </div>
     </div>

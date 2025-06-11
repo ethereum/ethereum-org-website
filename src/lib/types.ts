@@ -1049,3 +1049,9 @@ export type SlugPageParams = PageParams & {
   slug: string[]
 }
 
+export type TimeLeftLabel = { singular: string; plural: string }
+
+export type TimeLeftLabels = Record<
+  "days" | "hours" | "minutes" | "seconds",
+  TimeLeftLabel
+>

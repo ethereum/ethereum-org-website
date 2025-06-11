@@ -32,7 +32,7 @@ import { adoptionCards, adoptionStyles } from "./_components/data"
 import InnovationSwiper from "./_components/InnovationSwiper"
 import Stories from "./_components/Stories"
 import TenYearHero from "./_components/TenYearHero"
-import { parseStoryDates } from "./_components/utils"
+import { getTimeUnitTranslations, parseStoryDates } from "./_components/utils"
 
 import { fetch10YearEvents } from "@/lib/api/fetch10YearEvents"
 import { fetch10YearStories } from "@/lib/api/fetch10YearStories"
@@ -74,6 +74,8 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     namespace: "page-10-year-anniversary",
   })
 
+  const timeLeftLabels = await getTimeUnitTranslations(locale)
+
   return (
     <I18nProvider locale={locale} messages={messages}>
       <MainArticle className="mx-auto flex w-full flex-col items-center">
@@ -92,7 +94,10 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             </div>
           </div>
           <div className="flex flex-1 flex-row items-center justify-center">
-            <CountDown />
+            <CountDown
+              timeLeftLabels={timeLeftLabels}
+              expiredLabel={t("page-10-year-countdown-expired")}
+            />
           </div>
         </div>
 
