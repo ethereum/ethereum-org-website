@@ -19,7 +19,7 @@ test.describe("Home Page", () => {
     const viewport = page.viewportSize()
     const isMobile = viewport && viewport.width <= breakpointAsNumber.md
     if (isMobile) {
-      await page.getByTestId("search-button").first().click()
+      await page.getByTestId("search-button-mobile").first().click()
     } else {
       await page.getByTestId("search-input-button").first().click()
     }
