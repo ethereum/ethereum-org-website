@@ -56,6 +56,14 @@ const Page = async ({
         <div className="flex flex-col px-4 md:px-8">
           <h2>Highlights</h2>
         </div>
+
+        <div className="flex flex-col px-4 md:px-8">
+          <h2>Staff picks</h2>
+        </div>
+
+        <div className="flex flex-col px-4 md:px-8">
+          <h2>All {formattedCategory} dapps</h2>
+        </div>
       </MainArticle>
     </I18nProvider>
   )

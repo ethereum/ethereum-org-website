@@ -1053,10 +1053,11 @@ export type Dapp = {
   url: string
   description: string
   image: StaticImageData
-  category: DappCategory
+  category: DappCategoryEnum
 }
 
 export type DefiDapp = Dapp & {
+  category: DappCategoryEnum.DEFI
   networks: Array<"Ethereum" | "Starknet">
   subCategory:
     | "Lending"
@@ -1066,3 +1067,31 @@ export type DefiDapp = Dapp & {
     | "Prediction"
     | "RWA"
 }
+
+export type CollectibleDapp = Dapp & {
+  category: DappCategoryEnum.COLLECTIBLE
+}
+
+export type SocialDapp = Dapp & {
+  category: DappCategoryEnum.SOCIAL
+}
+
+export type GamingDapp = Dapp & {
+  category: DappCategoryEnum.GAMING
+}
+
+export type DaoDapp = Dapp & {
+  category: DappCategoryEnum.DAO
+}
+
+export type BridgeDapp = Dapp & {
+  category: DappCategoryEnum.BRIDGE
+}
+
+export type DappData =
+  | DefiDapp
+  | CollectibleDapp
+  | SocialDapp
+  | GamingDapp
+  | DaoDapp
+  | BridgeDapp

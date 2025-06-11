@@ -7,12 +7,14 @@ import {
 } from "next-intl/server"
 
 import I18nProvider from "@/components/I18nProvider"
+import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
+import { ButtonLink } from "@/components/ui/buttons/Button"
 
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
-import { VALID_DAPPS } from "@/data/dapps"
+import { DAPPS_DATA, VALID_DAPPS } from "@/data/dapps"
 
 const Page = async ({
   params,
@@ -27,7 +29,10 @@ const Page = async ({
   const requiredNamespaces = getRequiredNamespacesForPage("/dapps")
   const messages = pick(allMessages, requiredNamespaces)
 
-  const dapp = VALID_DAPPS.includes(slug[0])
+  const [firstSegment] = slug
+  const dapp = Object.values(DAPPS_DATA)
+    .flat()
+    .find((dapp) => dapp.name.toLowerCase() === firstSegment.toLowerCase())
 
   if (!dapp) {
     notFound()
@@ -35,8 +40,32 @@ const Page = async ({
 
   return (
     <I18nProvider locale={locale} messages={messages}>
-      <MainArticle>
-        <h1>{slug.length === 1 && slug[0]}</h1>
+      <MainArticle className="flex flex-col gap-10 py-10">
+        <div className="flex flex-col px-4 md:px-8">
+          <Image src={dapp.image} alt={dapp.name} width={100} height={100} />
+          <h1>{dapp.name}</h1>
+          <div>
+            <ButtonLink href={dapp.url} target="_blank">
+              Try out {dapp.name}
+            </ButtonLink>
+          </div>
+        </div>
+
+        <div className="flex flex-col px-4 md:px-8">
+          <p>{dapp.description}</p>
+        </div>
+
+        <div className="flex flex-col px-4 md:px-8">
+          <h2>Screenshots</h2>
+        </div>
+
+        <div className="flex flex-col px-4">
+          <hr />
+        </div>
+
+        <div className="flex flex-col px-4 md:px-8">
+          <h2>Similar dapps</h2>
+        </div>
       </MainArticle>
     </I18nProvider>
   )
