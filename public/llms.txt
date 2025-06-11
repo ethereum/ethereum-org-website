@@ -9,12 +9,11 @@ Ethereum.org contains these primary sections:
 - [About](https://ethereum.org/content/about/index.md): Core information about Ethereum and the website
 - [AI Agents](https://ethereum.org/content/ai-agents/index.md): Resources on AI agents in the Ethereum ecosystem  
 - [Bridges](https://ethereum.org/content/bridges/index.md): Cross-chain bridging documentation and guides
-- [Community](https://ethereum.org/content/community/index.md): Community resources, events, and involvement opportunities
+- [Community](https://ethereum.org/content/community/get-involved/index.md): Community resources, events, and involvement opportunities
 - [Contributing](https://ethereum.org/content/contributing/index.md): Guidelines and resources for contributing to Ethereum.org
 - [DeFi](https://ethereum.org/content/defi/index.md): Decentralized Finance resources and guides
-- [Developers](https://ethereum.org/content/developers/index.md): Comprehensive developer documentation and tutorials
-- [Roadmap](https://ethereum.org/content/roadmap/index.md): Ethereum's technical roadmap and upcoming improvements
-- [Staking](https://ethereum.org/content/staking/index.md): Everything about Ethereum staking
+- [Developers](https://ethereum.org/content/developers/docs/index.md): Comprehensive developer documentation and tutorials
+- [Staking](https://ethereum.org/content/staking/solo/index.md): Everything about Ethereum staking
 
 ## Core Resources
 
@@ -89,7 +88,7 @@ Ethereum.org contains these primary sections:
 
 ### Developers
 
-- [developers > docs > accounts > Accounts](https
+- [developers > docs > accounts > Accounts](https://ethereum.org/content/developers/docs/accounts/index.md)
 - [developers > docs > apis > backend > Backend](https://ethereum.org/content/developers/docs/apis/backend/index.md)
 - [developers > docs > apis > javascript > Javascript](https://ethereum.org/content/developers/docs/apis/javascript/index.md)
 - [developers > docs > apis > json rpc > Json Rpc](https://ethereum.org/content/developers/docs/apis/json-rpc/index.md)
@@ -232,85 +231,6 @@ Ethereum.org contains these primary sections:
 ### Zero knowledge proofs
 
 - [Zero Knowledge Proofs](https://ethereum.org/content/zero-knowledge-proofs/index.md)
-
-## Translations
-
-Ethereum.org is available in multiple languages:
-
-
-### AM
-
-- [Nft](https://ethereum.org/content/translations/am/nft/index.md)
-
-### AR
-
-- [Dao](https://ethereum.org/content/translations/ar/dao/index.md)
-- [Decentralized Identity](https://ethereum.org/content/translations/ar/decentralized-identity/index.md)
-- [Defi](https://ethereum.org/content/translations/ar/defi/index.md)
-- [Desci](https://ethereum.org/content/translations/ar/desci/index.md)
-- [Eips](https://ethereum.org/content/translations/ar/eips/index.md)
-
-### AZ
-
-- [Dao](https://ethereum.org/content/translations/az/dao/index.md)
-- [Decentralized Identity](https://ethereum.org/content/translations/az/decentralized-identity/index.md)
-- [Defi](https://ethereum.org/content/translations/az/defi/index.md)
-- [Desci](https://ethereum.org/content/translations/az/desci/index.md)
-- [Nft](https://ethereum.org/content/translations/az/nft/index.md)
-
-### BE
-
-- [Defi](https://ethereum.org/content/translations/be/defi/index.md)
-- [Nft](https://ethereum.org/content/translations/be/nft/index.md)
-- [Smart Contracts](https://ethereum.org/content/translations/be/smart-contracts/index.md)
-- [Web3](https://ethereum.org/content/translations/be/web3/index.md)
-- [Whitepaper](https://ethereum.org/content/translations/be/whitepaper/index.md)
-
-### BG
-
-- [Eips](https://ethereum.org/content/translations/bg/eips/index.md)
-- [Beacon Chain](https://ethereum.org/content/translations/bg/roadmap/beacon-chain/index.md)
-- [Merge](https://ethereum.org/content/translations/bg/roadmap/merge/index.md)
-
-### BN
-
-- [Dao](https://ethereum.org/content/translations/bn/dao/index.md)
-- [Dapps](https://ethereum.org/content/translations/bn/dapps/index.md)
-- [Decentralized Identity](https://ethereum.org/content/translations/bn/decentralized-identity/index.md)
-- [Defi](https://ethereum.org/content/translations/bn/defi/index.md)
-- [Desci](https://ethereum.org/content/translations/bn/desci/index.md)
-
-### CA
-
-- [Events](https://ethereum.org/content/translations/ca/community/events/index.md)
-- [Get Involved](https://ethereum.org/content/translations/ca/community/get-involved/index.md)
-- [Grants](https://ethereum.org/content/translations/ca/community/grants/index.md)
-- [Language Resources](https://ethereum.org/content/translations/ca/community/language-resources/index.md)
-- [Support](https://ethereum.org/content/translations/ca/community/support/index.md)
-
-### CS
-
-- [About](https://ethereum.org/content/translations/cs/about/index.md)
-- [Account Abstraction](https://ethereum.org/content/translations/cs/account-abstraction/index.md)
-- [Beacon Chain](https://ethereum.org/content/translations/cs/beacon-chain/index.md)
-- [Bridges](https://ethereum.org/content/translations/cs/bridges/index.md)
-- [Code Of Conduct](https://ethereum.org/content/translations/cs/code-of-conduct/index.md)
-
-### DE
-
-- [About](https://ethereum.org/content/translations/de/about/index.md)
-- [Bridges](https://ethereum.org/content/translations/de/bridges/index.md)
-- [Code Of Conduct](https://ethereum.org/content/translations/de/community/code-of-conduct/index.md)
-- [Events](https://ethereum.org/content/translations/de/community/events/index.md)
-- [Get Involved](https://ethereum.org/content/translations/de/community/get-involved/index.md)
-
-### EL
-
-- [About](https://ethereum.org/content/translations/el/about/index.md)
-- [Account Abstraction](https://ethereum.org/content/translations/el/account-abstraction/index.md)
-- [Beacon Chain](https://ethereum.org/content/translations/el/beacon-chain/index.md)
-- [Bridges](https://ethereum.org/content/translations/el/bridges/index.md)
-- [Code Of Conduct](https://ethereum.org/content/translations/el/code-of-conduct/index.md)
 
 ---
 
