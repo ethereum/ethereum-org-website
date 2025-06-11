@@ -1,5 +1,8 @@
 import { SOLIDITY_FEED, VITALIK_FEED } from "../constants"
-import type { RSSItem } from "../types"
+import type { Lang, RSSItem } from "../types"
+
+import { isValidDate } from "./date"
+import { getLocaleTimestamp } from "./time"
 
 export const sortByPubDate = (items: RSSItem[]) =>
   items.sort((a, b) => {
@@ -12,32 +15,37 @@ export const sortByPubDate = (items: RSSItem[]) =>
     return dateB.getTime() - dateA.getTime()
   })
 
-export const postProcess = (rssItems: RSSItem[]) =>
+export const postProcess = (rssItems: RSSItem[], locale: Lang) =>
   rssItems.map((item) => {
+    const pubDate = isValidDate(item.pubDate)
+      ? getLocaleTimestamp(locale, item.pubDate)
+      : ""
+    const formattedItem = { ...item, pubDate }
+
     switch (item.sourceFeedUrl) {
       case VITALIK_FEED:
         return {
-          ...item,
+          ...formattedItem,
           imgSrc: "/images/vitalik-blog-banner.svg",
           link: item.link.replace(".ca", ".eth.limo"),
           sourceUrl: item.sourceUrl.replace(".ca", ".eth.limo"),
         }
       case SOLIDITY_FEED:
         return {
-          ...item,
+          ...formattedItem,
           imgSrc: "/images/solidity-banner.png",
         }
       default:
-        return item
+        return formattedItem
     }
   })
 
-export const polishRSSList = (...items: RSSItem[][]) => {
+export const polishRSSList = (items: RSSItem[][], locale: Lang) => {
   const latestOfEach = items
     .filter(({ length }) => length)
     .map((item) => item[0]) // Take only latest post (first in array) from each
 
   const latestItems = latestOfEach.flat()
-  const readyForSorting = postProcess(latestItems)
+  const readyForSorting = postProcess(latestItems, locale)
   return sortByPubDate(readyForSorting)
 }

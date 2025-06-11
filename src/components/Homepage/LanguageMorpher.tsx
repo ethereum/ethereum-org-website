@@ -3,6 +3,8 @@
 import Morpher from "@/components/Morpher"
 import { Button } from "@/components/ui/buttons/Button"
 
+import { screens } from "@/lib/utils/screen"
+
 import {
   DESKTOP_LANGUAGE_BUTTON_NAME,
   HAMBURGER_BUTTON_ID,
@@ -32,7 +34,7 @@ const LanguageMorpher = () => {
     ).click()
   }
 
-  const [isLarge] = useMediaQuery(["(min-width: 48rem)"]) // TW md breakpoint, 768px
+  const [isLarge] = useMediaQuery([`(min-width: ${screens.md})`])
 
   return (
     <Button

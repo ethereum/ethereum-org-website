@@ -1,15 +1,11 @@
-import type { AllMetricData } from "@/lib/types"
+import type { StatsBoxMetric } from "@/lib/types"
 
 import BigNumber from "../BigNumber"
 
-import { useStatsBoxGrid } from "./useStatsBoxGrid"
-
-type StatsBoxGridProps = {
-  metricResults: AllMetricData
+type ActivityStatsProps = {
+  metrics: StatsBoxMetric[]
 }
-const StatsBoxGrid = ({ metricResults }: StatsBoxGridProps) => {
-  const metrics = useStatsBoxGrid(metricResults)
-
+const ActivityStats = async ({ metrics }: ActivityStatsProps) => {
   const gridBorderClasses = [
     "border-b border-body-light xl:border-e xl:pe-8",
     "border-b border-body-light xl:ps-8",
@@ -34,4 +30,4 @@ const StatsBoxGrid = ({ metricResults }: StatsBoxGridProps) => {
   )
 }
 
-export default StatsBoxGrid
+export default ActivityStats
