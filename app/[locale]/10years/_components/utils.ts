@@ -1,10 +1,10 @@
 import { getTranslations } from "next-intl/server"
 
+import { TimeLeftLabels } from "@/lib/types"
+
 import { formatDate, isValidDate } from "@/lib/utils/date"
 
 import { DEFAULT_LOCALE } from "@/lib/constants"
-
-import { TimeLeftLabels } from "../types"
 
 import type { Story } from "./types"
 
