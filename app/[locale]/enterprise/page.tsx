@@ -1,3 +1,4 @@
+import dynamic from "next/dynamic"
 import { getTranslations } from "next-intl/server"
 
 import type { Lang } from "@/lib/types"
@@ -48,6 +49,15 @@ import type { Case, Feature } from "./types"
 import EthGlyph from "@/public/images/assets/svgs/eth-diamond-rainbow.svg"
 import heroImage from "@/public/images/heroes/enterprise-hero-white.png"
 
+const FeaturesSwiper = dynamic(() => import("./_components/FeaturesSwiper"), {
+  ssr: false,
+  loading: () => (
+    <div className="flex flex-col items-center gap-8">
+      <Skeleton className="h-80 w-full rounded-4xl" />
+      <Skeleton className="h-6 w-40 rounded-4xl" />
+    </div>
+  ),
+})
 const CasesColumn = ({
   cases,
   className,
@@ -268,7 +278,10 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 
         <section id="features">
           <h2 className="sr-only">{t("page-enterprise-features-header")}</h2>
-          {/* // TODO: Add mobile ui/swiper */}
+
+          <div className="flex md:hidden">
+            <FeaturesSwiper features={features} />
+          </div>
           <div className="grid grid-cols-1 gap-2 max-md:hidden sm:grid-cols-2 md:gap-6 xl:grid-cols-4">
             {features.map((feature) => (
               <FeatureCard
@@ -295,7 +308,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           <div
             data-label="marquee"
             dir="ltr"
-            className="w-full space-y-8 text-body opacity-40 grayscale"
+            className="w-full text-body opacity-40 grayscale"
             style={{
               mask: `linear-gradient(to right, transparent 1rem, white 15%, white 85%, transparent calc(100% - 1rem))`,
             }}
@@ -304,7 +317,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               <div
                 data-label="marquee-row"
                 key={row}
-                className="flex max-w-full overflow-hidden"
+                className="flex max-w-full overflow-hidden py-4"
               >
                 {Array.from({ length: 2 }).map((_, idx) => (
                   <div
