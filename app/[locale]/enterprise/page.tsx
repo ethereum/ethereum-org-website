@@ -52,9 +52,9 @@ import heroImage from "@/public/images/heroes/enterprise-hero-white.png"
 const FeaturesSwiper = dynamic(() => import("./_components/FeaturesSwiper"), {
   ssr: false,
   loading: () => (
-    <div className="flex flex-col items-center gap-8">
-      <Skeleton className="h-80 w-full rounded-4xl" />
-      <Skeleton className="h-6 w-40 rounded-4xl" />
+    <div className="flex w-full gap-2">
+      <Skeleton className="ms-4 h-80 w-[85vw] shrink-0 rounded-4xl" />
+      <Skeleton className="h-full w-full rounded-e-none rounded-s-4xl" />
     </div>
   ),
 })
@@ -279,7 +279,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
         <section id="features">
           <h2 className="sr-only">{t("page-enterprise-features-header")}</h2>
 
-          <div className="flex md:hidden">
+          <div className="-mx-4 -my-6 flex py-6 md:hidden">
             <FeaturesSwiper features={features} />
           </div>
           <div className="grid grid-cols-1 gap-2 max-md:hidden sm:grid-cols-2 md:gap-6 xl:grid-cols-4">
@@ -287,7 +287,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               <FeatureCard
                 key={feature.header}
                 {...feature}
-                className="h-full ring"
+                className="h-full"
               />
             ))}
           </div>

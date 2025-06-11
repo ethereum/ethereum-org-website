@@ -1,6 +1,6 @@
 "use client"
 
-import { Swiper, SwiperNavigation, SwiperSlide } from "@/components/ui/swiper"
+import { Swiper, SwiperSlide } from "@/components/ui/swiper"
 
 import type { Feature } from "../types"
 
@@ -12,17 +12,17 @@ const FeaturesSwiper = ({
 }: {
   features: Feature[]
   className?: string
-}) => {
-  return (
-    <Swiper className={className} spaceBetween={8}>
-      {features.map((feature) => (
-        <SwiperSlide key={feature.header}>
-          <FeatureCard {...feature} className="h-full" />
-        </SwiperSlide>
-      ))}
-      <SwiperNavigation />
-    </Swiper>
-  )
-}
+}) => (
+  <Swiper className={className} spaceBetween={8} slidesPerView={1.1}>
+    {features.map((feature) => (
+      <SwiperSlide
+        key={feature.header}
+        className="first:ms-4 [&:last-child_div]:me-8"
+      >
+        <FeatureCard {...feature} className="h-full !shadow-none" />
+      </SwiperSlide>
+    ))}
+  </Swiper>
+)
 
 export default FeaturesSwiper
