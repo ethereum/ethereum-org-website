@@ -1,0 +1,318 @@
+# Ethereum.org Documentation
+
+> Ethereum.org is the official documentation and learning resource for Ethereum. It provides comprehensive guides, tutorials, and reference materials for developers, users, and community members to understand and interact with the Ethereum blockchain.
+
+## Overview
+
+Ethereum.org contains these primary sections:
+
+- [About](https://ethereum.org/content/about/index.md): Core information about Ethereum and the website
+- [AI Agents](https://ethereum.org/content/ai-agents/index.md): Resources on AI agents in the Ethereum ecosystem  
+- [Bridges](https://ethereum.org/content/bridges/index.md): Cross-chain bridging documentation and guides
+- [Community](https://ethereum.org/content/community/index.md): Community resources, events, and involvement opportunities
+- [Contributing](https://ethereum.org/content/contributing/index.md): Guidelines and resources for contributing to Ethereum.org
+- [DeFi](https://ethereum.org/content/defi/index.md): Decentralized Finance resources and guides
+- [Developers](https://ethereum.org/content/developers/index.md): Comprehensive developer documentation and tutorials
+- [Roadmap](https://ethereum.org/content/roadmap/index.md): Ethereum's technical roadmap and upcoming improvements
+- [Staking](https://ethereum.org/content/staking/index.md): Everything about Ethereum staking
+
+## Core Resources
+
+### About Ethereum
+
+### About
+
+- [About](https://ethereum.org/content/about/index.md)
+
+### Ai agents
+
+- [Ai Agents](https://ethereum.org/content/ai-agents/index.md)
+
+### Bridges
+
+- [Bridges](https://ethereum.org/content/bridges/index.md)
+
+### Community
+
+- [community > code of conduct > Code Of Conduct](https://ethereum.org/content/community/code-of-conduct/index.md)
+- [community > events > Events](https://ethereum.org/content/community/events/index.md)
+- [community > events > organizing > Organizing](https://ethereum.org/content/community/events/organizing/index.md)
+- [community > get involved > Get Involved](https://ethereum.org/content/community/get-involved/index.md)
+- [community > grants > Grants](https://ethereum.org/content/community/grants/index.md)
+- [community > language resources > Language Resources](https://ethereum.org/content/community/language-resources/index.md)
+- [community > online > Online](https://ethereum.org/content/community/online/index.md)
+- [community > research > Research](https://ethereum.org/content/community/research/index.md)
+- [community > support > Support](https://ethereum.org/content/community/support/index.md)
+
+### Contributing
+
+- [contributing > adding desci projects > Adding Desci Projects](https://ethereum.org/content/contributing/adding-desci-projects/index.md)
+- [contributing > adding developer tools > Adding Developer Tools](https://ethereum.org/content/contributing/adding-developer-tools/index.md)
+- [contributing > adding exchanges > Adding Exchanges](https://ethereum.org/content/contributing/adding-exchanges/index.md)
+- [contributing > adding glossary terms > Adding Glossary Terms](https://ethereum.org/content/contributing/adding-glossary-terms/index.md)
+- [contributing > adding layer 2s > Adding Layer 2s](https://ethereum.org/content/contributing/adding-layer-2s/index.md)
+- [contributing > adding products > Adding Products](https://ethereum.org/content/contributing/adding-products/index.md)
+- [contributing > adding resources > Adding Resources](https://ethereum.org/content/contributing/adding-resources/index.md)
+- [contributing > adding staking products > Adding Staking Products](https://ethereum.org/content/contributing/adding-staking-products/index.md)
+- [contributing > adding wallets > Adding Wallets](https://ethereum.org/content/contributing/adding-wallets/index.md)
+- [contributing > content resources > Content Resources](https://ethereum.org/content/contributing/content-resources/index.md)
+- [contributing > design principles > Design Principles](https://ethereum.org/content/contributing/design-principles/index.md)
+- [contributing > design > adding design resources > Adding Design Resources](https://ethereum.org/content/contributing/design/adding-design-resources/index.md)
+- [contributing > design > Design](https://ethereum.org/content/contributing/design/index.md)
+- [Contributing](https://ethereum.org/content/contributing/index.md)
+- [contributing > quizzes > Quizzes](https://ethereum.org/content/contributing/quizzes/index.md)
+- [contributing > style guide > content standardization > Content Standardization](https://ethereum.org/content/contributing/style-guide/content-standardization/index.md)
+- [contributing > style guide > Style Guide](https://ethereum.org/content/contributing/style-guide/index.md)
+- [contributing > translation program > content buckets > Content Buckets](https://ethereum.org/content/contributing/translation-program/content-buckets/index.md)
+- [contributing > translation program > faq > Faq](https://ethereum.org/content/contributing/translation-program/faq/index.md)
+- [contributing > translation program > how to translate > How To Translate](https://ethereum.org/content/contributing/translation-program/how-to-translate/index.md)
+
+### Cookie policy
+
+- [Cookie Policy](https://ethereum.org/content/cookie-policy/index.md)
+
+### Dao
+
+- [Dao](https://ethereum.org/content/dao/index.md)
+
+### Decentralized identity
+
+- [Decentralized Identity](https://ethereum.org/content/decentralized-identity/index.md)
+
+### Defi
+
+- [Defi](https://ethereum.org/content/defi/index.md)
+
+### Desci
+
+- [Desci](https://ethereum.org/content/desci/index.md)
+
+### Developers
+
+- [developers > docs > accounts > Accounts](https
+- [developers > docs > apis > backend > Backend](https://ethereum.org/content/developers/docs/apis/backend/index.md)
+- [developers > docs > apis > javascript > Javascript](https://ethereum.org/content/developers/docs/apis/javascript/index.md)
+- [developers > docs > apis > json rpc > Json Rpc](https://ethereum.org/content/developers/docs/apis/json-rpc/index.md)
+- [developers > docs > blocks > Blocks](https://ethereum.org/content/developers/docs/blocks/index.md)
+- [developers > docs > bridges > Bridges](https://ethereum.org/content/developers/docs/bridges/index.md)
+- [developers > docs > consensus mechanisms > Consensus Mechanisms](https://ethereum.org/content/developers/docs/consensus-mechanisms/index.md)
+- [developers > docs > consensus mechanisms > poa > Poa](https://ethereum.org/content/developers/docs/consensus-mechanisms/poa/index.md)
+- [developers > docs > consensus mechanisms > pos > attack and defense > Attack And Defense](https://ethereum.org/content/developers/docs/consensus-mechanisms/pos/attack-and-defense/index.md)
+- [developers > docs > consensus mechanisms > pos > attestations > Attestations](https://ethereum.org/content/developers/docs/consensus-mechanisms/pos/attestations/index.md)
+- [developers > docs > consensus mechanisms > pos > block proposal > Block Proposal](https://ethereum.org/content/developers/docs/consensus-mechanisms/pos/block-proposal/index.md)
+- [developers > docs > consensus mechanisms > pos > faqs > Faqs](https://ethereum.org/content/developers/docs/consensus-mechanisms/pos/faqs/index.md)
+- [developers > docs > consensus mechanisms > pos > gasper > Gasper](https://ethereum.org/content/developers/docs/consensus-mechanisms/pos/gasper/index.md)
+- [developers > docs > consensus mechanisms > pos > Pos](https://ethereum.org/content/developers/docs/consensus-mechanisms/pos/index.md)
+- [developers > docs > consensus mechanisms > pos > keys > Keys](https://ethereum.org/content/developers/docs/consensus-mechanisms/pos/keys/index.md)
+- [developers > docs > consensus mechanisms > pos > pos vs pow > Pos Vs Pow](https://ethereum.org/content/developers/docs/consensus-mechanisms/pos/pos-vs-pow/index.md)
+- [developers > docs > consensus mechanisms > pos > rewards and penalties > Rewards And Penalties](https://ethereum.org/content/developers/docs/consensus-mechanisms/pos/rewards-and-penalties/index.md)
+- [developers > docs > consensus mechanisms > pos > weak subjectivity > Weak Subjectivity](https://ethereum.org/content/developers/docs/consensus-mechanisms/pos/weak-subjectivity/index.md)
+- [developers > docs > consensus mechanisms > pow > Pow](https://ethereum.org/content/developers/docs/consensus-mechanisms/pow/index.md)
+- [developers > docs > consensus mechanisms > pow > mining > Mining](https://ethereum.org/content/developers/docs/consensus-mechanisms/pow/mining/index.md)
+
+### Eips
+
+- [Eips](https://ethereum.org/content/eips/index.md)
+
+### Energy consumption
+
+- [Energy Consumption](https://ethereum.org/content/energy-consumption/index.md)
+
+### Enterprise
+
+- [Enterprise](https://ethereum.org/content/enterprise/index.md)
+
+### Foundation
+
+- [Foundation](https://ethereum.org/content/foundation/index.md)
+
+### Glossary
+
+- [Glossary](https://ethereum.org/content/glossary/index.md)
+
+### Governance
+
+- [Governance](https://ethereum.org/content/governance/index.md)
+
+### Guides
+
+- [guides > how to create an ethereum account > How To Create An Ethereum Account](https://ethereum.org/content/guides/how-to-create-an-ethereum-account/index.md)
+- [guides > how to id scam tokens > How To Id Scam Tokens](https://ethereum.org/content/guides/how-to-id-scam-tokens/index.md)
+- [guides > how to revoke token access > How To Revoke Token Access](https://ethereum.org/content/guides/how-to-revoke-token-access/index.md)
+- [guides > how to swap tokens > How To Swap Tokens](https://ethereum.org/content/guides/how-to-swap-tokens/index.md)
+- [guides > how to use a bridge > How To Use A Bridge](https://ethereum.org/content/guides/how-to-use-a-bridge/index.md)
+- [guides > how to use a wallet > How To Use A Wallet](https://ethereum.org/content/guides/how-to-use-a-wallet/index.md)
+- [Guides](https://ethereum.org/content/guides/index.md)
+
+### History
+
+- [History](https://ethereum.org/content/history/index.md)
+
+### Nft
+
+- [Nft](https://ethereum.org/content/nft/index.md)
+
+### Payments
+
+- [Payments](https://ethereum.org/content/payments/index.md)
+
+### Prediction markets
+
+- [Prediction Markets](https://ethereum.org/content/prediction-markets/index.md)
+
+### Privacy policy
+
+- [Privacy Policy](https://ethereum.org/content/privacy-policy/index.md)
+
+### Real world assets
+
+- [Real World Assets](https://ethereum.org/content/real-world-assets/index.md)
+
+### Refi
+
+- [Refi](https://ethereum.org/content/refi/index.md)
+
+### Roadmap
+
+- [roadmap > account abstraction > Account Abstraction](https://ethereum.org/content/roadmap/account-abstraction/index.md)
+- [roadmap > beacon chain > Beacon Chain](https://ethereum.org/content/roadmap/beacon-chain/index.md)
+- [roadmap > danksharding > Danksharding](https://ethereum.org/content/roadmap/danksharding/index.md)
+- [roadmap > dencun > Dencun](https://ethereum.org/content/roadmap/dencun/index.md)
+- [roadmap > future proofing > Future Proofing](https://ethereum.org/content/roadmap/future-proofing/index.md)
+- [roadmap > merge > Merge](https://ethereum.org/content/roadmap/merge/index.md)
+- [roadmap > merge > issuance > Issuance](https://ethereum.org/content/roadmap/merge/issuance/index.md)
+- [roadmap > pbs > Pbs](https://ethereum.org/content/roadmap/pbs/index.md)
+- [roadmap > pectra > 7702 > 7702](https://ethereum.org/content/roadmap/pectra/7702/index.md)
+- [roadmap > pectra > Pectra](https://ethereum.org/content/roadmap/pectra/index.md)
+- [roadmap > pectra > maxeb > Maxeb](https://ethereum.org/content/roadmap/pectra/maxeb/index.md)
+- [roadmap > scaling > Scaling](https://ethereum.org/content/roadmap/scaling/index.md)
+- [roadmap > secret leader election > Secret Leader Election](https://ethereum.org/content/roadmap/secret-leader-election/index.md)
+- [roadmap > security > Security](https://ethereum.org/content/roadmap/security/index.md)
+- [roadmap > single slot finality > Single Slot Finality](https://ethereum.org/content/roadmap/single-slot-finality/index.md)
+- [roadmap > statelessness > Statelessness](https://ethereum.org/content/roadmap/statelessness/index.md)
+- [roadmap > user experience > User Experience](https://ethereum.org/content/roadmap/user-experience/index.md)
+- [roadmap > verkle trees > Verkle Trees](https://ethereum.org/content/roadmap/verkle-trees/index.md)
+
+### Security
+
+- [Security](https://ethereum.org/content/security/index.md)
+
+### Smart contracts
+
+- [Smart Contracts](https://ethereum.org/content/smart-contracts/index.md)
+
+### Social networks
+
+- [Social Networks](https://ethereum.org/content/social-networks/index.md)
+
+### Staking
+
+- [staking > dvt > Dvt](https://ethereum.org/content/staking/dvt/index.md)
+- [staking > pools > Pools](https://ethereum.org/content/staking/pools/index.md)
+- [staking > saas > Saas](https://ethereum.org/content/staking/saas/index.md)
+- [staking > solo > Solo](https://ethereum.org/content/staking/solo/index.md)
+- [staking > withdrawals > Withdrawals](https://ethereum.org/content/staking/withdrawals/index.md)
+
+### Terms of use
+
+- [Terms Of Use](https://ethereum.org/content/terms-of-use/index.md)
+
+### Web3
+
+- [Web3](https://ethereum.org/content/web3/index.md)
+
+### Whitepaper
+
+- [Whitepaper](https://ethereum.org/content/whitepaper/index.md)
+
+### Wrapped eth
+
+- [Wrapped Eth](https://ethereum.org/content/wrapped-eth/index.md)
+
+### Zero knowledge proofs
+
+- [Zero Knowledge Proofs](https://ethereum.org/content/zero-knowledge-proofs/index.md)
+
+## Translations
+
+Ethereum.org is available in multiple languages:
+
+
+### AM
+
+- [Nft](https://ethereum.org/content/translations/am/nft/index.md)
+
+### AR
+
+- [Dao](https://ethereum.org/content/translations/ar/dao/index.md)
+- [Decentralized Identity](https://ethereum.org/content/translations/ar/decentralized-identity/index.md)
+- [Defi](https://ethereum.org/content/translations/ar/defi/index.md)
+- [Desci](https://ethereum.org/content/translations/ar/desci/index.md)
+- [Eips](https://ethereum.org/content/translations/ar/eips/index.md)
+
+### AZ
+
+- [Dao](https://ethereum.org/content/translations/az/dao/index.md)
+- [Decentralized Identity](https://ethereum.org/content/translations/az/decentralized-identity/index.md)
+- [Defi](https://ethereum.org/content/translations/az/defi/index.md)
+- [Desci](https://ethereum.org/content/translations/az/desci/index.md)
+- [Nft](https://ethereum.org/content/translations/az/nft/index.md)
+
+### BE
+
+- [Defi](https://ethereum.org/content/translations/be/defi/index.md)
+- [Nft](https://ethereum.org/content/translations/be/nft/index.md)
+- [Smart Contracts](https://ethereum.org/content/translations/be/smart-contracts/index.md)
+- [Web3](https://ethereum.org/content/translations/be/web3/index.md)
+- [Whitepaper](https://ethereum.org/content/translations/be/whitepaper/index.md)
+
+### BG
+
+- [Eips](https://ethereum.org/content/translations/bg/eips/index.md)
+- [Beacon Chain](https://ethereum.org/content/translations/bg/roadmap/beacon-chain/index.md)
+- [Merge](https://ethereum.org/content/translations/bg/roadmap/merge/index.md)
+
+### BN
+
+- [Dao](https://ethereum.org/content/translations/bn/dao/index.md)
+- [Dapps](https://ethereum.org/content/translations/bn/dapps/index.md)
+- [Decentralized Identity](https://ethereum.org/content/translations/bn/decentralized-identity/index.md)
+- [Defi](https://ethereum.org/content/translations/bn/defi/index.md)
+- [Desci](https://ethereum.org/content/translations/bn/desci/index.md)
+
+### CA
+
+- [Events](https://ethereum.org/content/translations/ca/community/events/index.md)
+- [Get Involved](https://ethereum.org/content/translations/ca/community/get-involved/index.md)
+- [Grants](https://ethereum.org/content/translations/ca/community/grants/index.md)
+- [Language Resources](https://ethereum.org/content/translations/ca/community/language-resources/index.md)
+- [Support](https://ethereum.org/content/translations/ca/community/support/index.md)
+
+### CS
+
+- [About](https://ethereum.org/content/translations/cs/about/index.md)
+- [Account Abstraction](https://ethereum.org/content/translations/cs/account-abstraction/index.md)
+- [Beacon Chain](https://ethereum.org/content/translations/cs/beacon-chain/index.md)
+- [Bridges](https://ethereum.org/content/translations/cs/bridges/index.md)
+- [Code Of Conduct](https://ethereum.org/content/translations/cs/code-of-conduct/index.md)
+
+### DE
+
+- [About](https://ethereum.org/content/translations/de/about/index.md)
+- [Bridges](https://ethereum.org/content/translations/de/bridges/index.md)
+- [Code Of Conduct](https://ethereum.org/content/translations/de/community/code-of-conduct/index.md)
+- [Events](https://ethereum.org/content/translations/de/community/events/index.md)
+- [Get Involved](https://ethereum.org/content/translations/de/community/get-involved/index.md)
+
+### EL
+
+- [About](https://ethereum.org/content/translations/el/about/index.md)
+- [Account Abstraction](https://ethereum.org/content/translations/el/account-abstraction/index.md)
+- [Beacon Chain](https://ethereum.org/content/translations/el/beacon-chain/index.md)
+- [Bridges](https://ethereum.org/content/translations/el/bridges/index.md)
+- [Code Of Conduct](https://ethereum.org/content/translations/el/code-of-conduct/index.md)
+
+---
+
+This document was rendered at 2025-06-04T21:41:55.821Z.
+For the latest version of this document, see [https://ethereum.org/llms.txt](https://ethereum.org/llms.txt). 
