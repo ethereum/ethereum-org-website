@@ -6,20 +6,14 @@ import type { Feature } from "../types"
 
 import FeatureCard from "./FeatureCard"
 
-const FeaturesSwiper = ({
-  features,
-  className,
-}: {
-  features: Feature[]
-  className?: string
-}) => (
-  <Swiper className={className} spaceBetween={8} slidesPerView={1.1}>
+const FeaturesSwiper = ({ features }: { features: Feature[] }) => (
+  <Swiper spaceBetween={8} slidesPerView={1.1}>
     {features.map((feature) => (
       <SwiperSlide
         key={feature.header}
         className="first:ms-4 [&:last-child_div]:me-8"
       >
-        <FeatureCard {...feature} className="h-full !shadow-none" />
+        <FeatureCard feature={feature} className="h-full !shadow-none" />
       </SwiperSlide>
     ))}
   </Swiper>

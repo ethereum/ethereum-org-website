@@ -1,3 +1,5 @@
+"use client"
+
 import * as React from "react"
 import { cva, VariantProps } from "class-variance-authority"
 import { EffectCards, Keyboard, Navigation, Pagination } from "swiper/modules"

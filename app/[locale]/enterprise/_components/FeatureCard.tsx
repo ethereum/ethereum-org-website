@@ -30,11 +30,12 @@ const IconComponents = {
 type IconComponent = keyof typeof IconComponents
 
 const FeatureCard = ({
-  header,
-  content,
-  iconName,
+  feature: { header, content, iconName },
   className,
-}: Feature & { className?: string }) => {
+}: {
+  feature: Feature
+  className?: string
+}) => {
   const Icon = IconComponents[iconName as IconComponent]
   return (
     <Card

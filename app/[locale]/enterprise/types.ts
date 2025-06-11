@@ -8,3 +8,9 @@ export type Feature = {
   content: string[]
   iconName: string
 }
+
+export type EcosystemPlayer = {
+  name: string
+  Logo: React.FC<React.SVGProps<SVGElement>>
+  className?: string
+}

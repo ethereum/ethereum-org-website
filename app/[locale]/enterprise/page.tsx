@@ -37,46 +37,28 @@ import Walmart from "@/components/icons/enterprise/walmart.svg"
 import WFP from "@/components/icons/enterprise/wfp.svg"
 import MainArticle from "@/components/MainArticle"
 import { ButtonLink } from "@/components/ui/buttons/Button"
-import { Card } from "@/components/ui/card"
 import { Skeleton } from "@/components/ui/skeleton"
 
 import { cn } from "@/lib/utils/cn"
 import { getMetadata } from "@/lib/utils/metadata"
 
+import CasesColumn from "./_components/CasesColumn"
 import FeatureCard from "./_components/FeatureCard"
-import type { Case, Feature } from "./types"
+import SwiperHangerLoading from "./SwiperHangerLoading"
+import type { Case, EcosystemPlayer, Feature } from "./types"
 
 import EthGlyph from "@/public/images/assets/svgs/eth-diamond-rainbow.svg"
 import heroImage from "@/public/images/heroes/enterprise-hero-white.png"
 
 const FeaturesSwiper = dynamic(() => import("./_components/FeaturesSwiper"), {
-  ssr: false,
-  loading: () => (
-    <div className="flex w-full gap-2">
-      <Skeleton className="ms-4 h-80 w-[85vw] shrink-0 rounded-4xl" />
-      <Skeleton className="h-full w-full rounded-e-none rounded-s-4xl" />
-    </div>
-  ),
+  // ssr: false,
+  loading: () => <SwiperHangerLoading />,
 })
-const CasesColumn = ({
-  cases,
-  className,
-}: {
-  cases: Case[]
-  className?: string
-}) => (
-  <div className={cn("flex w-full flex-col gap-4", className)}>
-    {cases.map(({ name, content }) => (
-      <Card
-        key={name}
-        className="space-y-1 rounded-4xl border bg-background p-6 shadow-window-box"
-      >
-        <h3 className="text-xl">{name}</h3>
-        <p className="text-body-medium">{content}</p>
-      </Card>
-    ))}
-  </div>
-)
+
+const CasesSwiper = dynamic(() => import("./_components/CasesSwiper"), {
+  // ssr: false,
+  loading: () => <SwiperHangerLoading />,
+})
 
 const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const { locale } = await params
@@ -180,12 +162,6 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     },
   ]
 
-  type EcosystemPlayer = {
-    name: string
-    Logo: React.FC<React.SVGProps<SVGElement>>
-    className?: string
-  }
-
   const players: EcosystemPlayer[] = [
     { name: "Adidas", Logo: Adidas, className: "scale-105 origin-bottom" },
     { name: "Azure", Logo: Azure, className: "-translate-y-1" },
@@ -282,11 +258,12 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           <div className="-mx-4 -my-6 flex py-6 md:hidden">
             <FeaturesSwiper features={features} />
           </div>
+
           <div className="grid grid-cols-1 gap-2 max-md:hidden sm:grid-cols-2 md:gap-6 xl:grid-cols-4">
             {features.map((feature) => (
               <FeatureCard
                 key={feature.header}
-                {...feature}
+                feature={feature}
                 className="h-full"
               />
             ))}
@@ -343,9 +320,21 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               </div>
             ))}
           </div>
+
+          <div
+            className="w-screen ring ring-offset-[-2px]"
+            style={{
+              mask: `linear-gradient(to right, transparent 1rem, white 2rem, white calc(100% - 2rem), transparent calc(100% - 1rem)`,
+            }}
+          >
+            <div className="-my-6 flex px-4 py-6 md:hidden">
+              <CasesSwiper cases={cases} />
+            </div>
+          </div>
+
           <div
             data-label="case-studies"
-            className="grid w-full max-w-screen-lg grid-cols-1 gap-4 px-4 md:grid-cols-3 md:px-6"
+            className="grid w-full max-w-screen-lg grid-cols-1 gap-4 px-4 max-md:hidden md:grid-cols-3 md:px-6"
           >
             <CasesColumn cases={cases.slice(0, 2)} />
             <CasesColumn cases={cases.slice(2, 4)} />
