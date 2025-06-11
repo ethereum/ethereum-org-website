@@ -1029,6 +1029,18 @@ export interface ITutorial {
   isExternal: boolean
 }
 
+type ValuesItem = {
+  label: string
+  content: string[]
+}
+
+export type ValuesPairing = {
+  legacy: ValuesItem
+  ethereum: ValuesItem
+}
+
+export type StablecoinType = "FIAT" | "CRYPTO" | "ASSET" | "ALGORITHMIC"
+
 export type PageParams = {
   locale: string
 }
@@ -1036,3 +1048,10 @@ export type PageParams = {
 export type SlugPageParams = PageParams & {
   slug: string[]
 }
+
+export type TimeLeftLabel = { singular: string; plural: string }
+
+export type TimeLeftLabels = Record<
+  "days" | "hours" | "minutes" | "seconds",
+  TimeLeftLabel
+>
