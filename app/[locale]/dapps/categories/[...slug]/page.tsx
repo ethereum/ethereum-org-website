@@ -8,11 +8,16 @@ import {
 
 import { DappCategoryEnum } from "@/lib/types"
 
+import { HubHero } from "@/components/Hero"
 import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
 
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
+
+import { dappsCategories } from "@/data/dapps/categories"
+
+import DappsHeroImage from "@/public/images/dapps/dapps-hero.png"
 
 const VALID_CATEGORIES = Object.values(DappCategoryEnum)
 
@@ -32,14 +37,25 @@ const Page = async ({
   const requiredNamespaces = getRequiredNamespacesForPage("/dapps")
   const messages = pick(allMessages, requiredNamespaces)
 
+  const formattedCategory = dappsCategories[slug[0]].name
+
   if (!isValidCategory(slug[0])) {
     notFound()
   }
 
   return (
     <I18nProvider locale={locale} messages={messages}>
-      <MainArticle>
-        <h1>{slug.length === 1 && slug[0]}</h1>
+      <HubHero
+        title="Use"
+        header={`${formattedCategory} dapps`}
+        description={dappsCategories[slug[0]].description}
+        heroImg={DappsHeroImage}
+      />
+
+      <MainArticle className="flex flex-col gap-10 py-10">
+        <div className="flex flex-col px-4 md:px-8">
+          <h2>Highlights</h2>
+        </div>
       </MainArticle>
     </I18nProvider>
   )

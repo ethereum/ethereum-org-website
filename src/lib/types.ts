@@ -1040,6 +1040,14 @@ export enum DappCategoryEnum {
 
 export type DappCategory = `${DappCategoryEnum}`
 
+export type DappCategoryData = {
+  name: string
+  slug: string
+  description: string
+}
+
+export type DappCategories = Record<DappCategoryEnum, DappCategoryData>
+
 export type Dapp = {
   name: string
   url: string
