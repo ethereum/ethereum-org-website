@@ -44,6 +44,7 @@ import { getMetadata } from "@/lib/utils/metadata"
 
 import CasesColumn from "./_components/CasesColumn"
 import FeatureCard from "./_components/FeatureCard"
+import { ENTERPRISE_MAILTO } from "./constants"
 import SwiperHangerLoading from "./SwiperHangerLoading"
 import type { Case, EcosystemPlayer, Feature } from "./types"
 
@@ -221,7 +222,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
         buttons={[
           {
             content: t("page-enterprise-hero-cta"),
-            href: "mailto:enterprise@ethereum.org", // TODO: Confirm
+            href: ENTERPRISE_MAILTO,
             matomo: {
               eventCategory: "enterprise hero buttons",
               eventAction: "click",
@@ -384,8 +385,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           <p className="max-w-prose px-6 text-center md:px-8">
             {t("page-enterprise-team-description")}
           </p>
-          {/* // TODO: Confirm email */}
-          <ButtonLink href="mailto:enterprise@ethereum.org">
+          <ButtonLink href={ENTERPRISE_MAILTO}>
             {t("page-enterprise-hero-cta")}
           </ButtonLink>
         </section>
