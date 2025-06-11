@@ -12,7 +12,7 @@ import MainArticle from "@/components/MainArticle"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
-const VALID_DAPPS = ["uniswap", "aave", "opensea", "compound"]
+import { VALID_DAPPS } from "@/data/dapps"
 
 const Page = async ({
   params,

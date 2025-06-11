@@ -1028,3 +1028,24 @@ export interface ITutorial {
   lang: string
   isExternal: boolean
 }
+
+export type DappCategory = "defi"
+
+export type Dapp = {
+  name: string
+  url: string
+  description: string
+  image: StaticImageData
+  category: DappCategory
+}
+
+export type DefiDapp = Dapp & {
+  networks: Array<"Ethereum" | "Starknet">
+  subCategory:
+    | "Lending"
+    | "Liquid staking"
+    | "DEX"
+    | "Insurance"
+    | "Prediction"
+    | "RWA"
+}
