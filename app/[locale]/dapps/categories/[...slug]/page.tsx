@@ -6,19 +6,18 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
+import { DappCategoryEnum } from "@/lib/types"
+
 import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
 
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
-const VALID_CATEGORIES = [
-  "defi",
-  "collectibles",
-  "social",
-  "rwa",
-  "stablecoins",
-]
+const VALID_CATEGORIES = Object.values(DappCategoryEnum)
+
+const isValidCategory = (category: string): category is DappCategoryEnum =>
+  VALID_CATEGORIES.includes(category as DappCategoryEnum)
 
 const Page = async ({
   params,
@@ -33,9 +32,7 @@ const Page = async ({
   const requiredNamespaces = getRequiredNamespacesForPage("/dapps")
   const messages = pick(allMessages, requiredNamespaces)
 
-  const category = VALID_CATEGORIES.includes(slug[0])
-
-  if (!category) {
+  if (!isValidCategory(slug[0])) {
     notFound()
   }
 
@@ -61,8 +58,7 @@ export async function generateMetadata({
     namespace: "page-dapps",
   })
 
-  const category = VALID_CATEGORIES.includes(firstSegment)
-  if (!category) {
+  if (!isValidCategory(firstSegment)) {
     notFound()
   }
 

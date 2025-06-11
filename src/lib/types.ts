@@ -1029,7 +1029,16 @@ export interface ITutorial {
   isExternal: boolean
 }
 
-export type DappCategory = "defi"
+export enum DappCategoryEnum {
+  DEFI = "defi",
+  COLLECTIBLE = "collectible",
+  SOCIAL = "social",
+  GAMING = "gaming",
+  DAO = "dao",
+  BRIDGE = "bridge",
+}
+
+export type DappCategory = `${DappCategoryEnum}`
 
 export type Dapp = {
   name: string
