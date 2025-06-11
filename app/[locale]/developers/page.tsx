@@ -5,13 +5,16 @@ import { Lang } from "@/lib/types"
 import { ChildOnlyProp } from "@/lib/types"
 
 import CalloutSSR from "@/components/CalloutSSR"
-import Card from "@/components/Card"
+import OldCard from "@/components/Card"
+import { CopyButton } from "@/components/CopyToClipboard"
 import FeedbackCard from "@/components/FeedbackCard"
 import HubHero from "@/components/Hero/HubHero"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import { ButtonLink } from "@/components/ui/buttons/Button"
-import { Stack, VStack } from "@/components/ui/flex"
+import { Card } from "@/components/ui/card"
+import { VStack } from "@/components/ui/flex"
+import Link from "@/components/ui/Link"
 import InlineLink from "@/components/ui/Link"
 
 import { getMetadata } from "@/lib/utils/metadata"
@@ -80,7 +83,7 @@ const DevelopersPage = async ({
     },
     {
       emoji: ":woman_scientist:",
-      title: t("page-developers-start"),
+      title: t("page-developers-resources"),
       description: t("page-developers-start-desc"),
       url: "/developers/learning-tools/",
       button: t("page-developers-play-code"),
@@ -104,12 +107,87 @@ const DevelopersPage = async ({
         title={tCommon("developers")}
         description={t("page-developers-subtitle")}
       />
+
       <MainArticle className="w-full space-y-12 px-8 py-4">
         <h2 className="-mb-4 mt-12">{t("page-developers-get-started")}</h2>
 
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8 xl:mb-12">
+          <div
+            className="relative h-[450px]"
+            data-label="speedrunethereum-banner"
+          >
+            <Image
+              className="pointer-events-none absolute -z-[1] h-full rounded-t-2xl"
+              src={SpeedRunEthereumImage}
+              alt="SpeedRunEthereum banner"
+              sizes="100vw"
+              style={{ width: "100vw", objectFit: "cover" }}
+            />
+            <div className="z-[1] space-y-4 break-words px-6 py-10 md:space-y-6 lg:p-12">
+              <h3>{t("page-developers-start")}</h3>
+              <p>{t("page-developers-speedrunethereum-description")}</p>
+              <ButtonLink
+                href="https://speedrunethereum.com/"
+                size="lg"
+                className="mt-4"
+                customEventOptions={{
+                  eventCategory: "top_boxes",
+                  eventAction: "click",
+                  eventName: "speedrun",
+                }}
+              >
+                {t("page-developers-speedrunethereum-link")}
+              </ButtonLink>
+            </div>
+          </div>
+
+          <Card className="!space-y-8 break-words border border-accent-c/20 bg-gradient-to-t from-accent-c/15 to-accent-c/5 px-6 py-10 md:space-y-6 lg:p-12">
+            <h3>{t("page-developers-jump-right-in-title")}</h3>
+            <div className="space-y-6">
+              <div className="space-y-1">
+                <p className="font-bold">Scaffold-ETH 2</p>
+                <p className="text-sm text-body-medium">
+                  {t("page-developers-quickstart-scaffold-subtext")}{" "}
+                  <Link href="https://docs.scaffoldeth.io/">
+                    {t("page-developers-quickstart-scaffold-docs")}
+                  </Link>
+                </p>
+                <div className="flex items-center rounded-lg border bg-background px-3 py-1">
+                  <span className="flex-1 font-mono text-sm">
+                    npx create-eth@latest
+                  </span>
+                  <CopyButton
+                    message="npx create-eth@latest"
+                    size="sm"
+                    customEventOptions={{
+                      eventCategory: "top_boxes",
+                      eventAction: "click",
+                      eventName: "scaffold",
+                    }}
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <p className="mb-2 font-bold">Need to learn the language?</p>
+              <Link
+                href="https://docs.soliditylang.org/en/latest/"
+                customEventOptions={{
+                  eventCategory: "top_boxes",
+                  eventAction: "click",
+                  eventName: "solidity",
+                }}
+              >
+                {t("page-developers-solidity-docs")}
+              </Link>
+            </div>
+          </Card>
+        </div>
+
         <div className="-mx-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
           {paths.map((path, idx) => (
-            <Card
+            <OldCard
               className={`m-4 p-6 shadow-[0px_1px_3px_rgba(0,0,0,0.1)] transition-transform duration-100 hover:scale-105 hover:rounded hover:bg-background-highlight hover:shadow-[0px_8px_17px_rgba(0,0,0,0.15)] dark:shadow-[0px_1px_3px_rgba(60,60,60,0.1)]`}
               key={idx}
               emoji={path.emoji}
@@ -117,28 +195,8 @@ const DevelopersPage = async ({
               description={path.description}
             >
               <ButtonLink href={path.url}>{path.button}</ButtonLink>
-            </Card>
+            </OldCard>
           ))}
-        </div>
-
-        <div className="relative" data-label="speedrunethereum-banner">
-          <Image
-            className="h-[450px] xl:h-auto"
-            src={SpeedRunEthereumImage}
-            alt="SpeedRunEthereum banner"
-            sizes="100vw"
-            style={{
-              width: "100vw",
-              objectFit: "cover",
-              objectPosition: "20%",
-            }}
-          />
-          <Stack className="absolute top-0 max-w-lg items-start space-y-3 break-words p-6 md:top-12 md:ms-8 md:space-y-4 lg:p-8 xl:max-w-xl">
-            <h2>{t("page-developers-speedrunethereum-title")}</h2>
-            <ButtonLink href="https://speedrunethereum.com/">
-              {t("page-developers-speedrunethereum-link")}
-            </ButtonLink>
-          </Stack>
         </div>
 
         <div className="flex w-full flex-col items-start justify-between lg:flex-row lg:items-center">
@@ -170,6 +228,7 @@ const DevelopersPage = async ({
           </CalloutSSR>
         </div>
       </MainArticle>
+
       <div className="mt-8 w-full border-t bg-background-highlight px-0 py-16 shadow-table-item-box">
         <div className="w-full scroll-mt-24 px-8 py-4">
           <H2>{t("page-developers-explore-documentation")}</H2>
