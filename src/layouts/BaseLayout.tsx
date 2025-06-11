@@ -1,5 +1,6 @@
 // import { join } from "path"
 import dynamic from "next/dynamic"
+import { getTranslations } from "next-intl/server"
 
 import type { Root } from "@/lib/types"
 
@@ -16,12 +17,14 @@ const FeedbackWidget = dynamic(() => import("@/components/FeedbackWidget"), {
   ssr: false,
 })
 
-export const BaseLayout = ({
+export const BaseLayout = async ({
   children,
   // contentIsOutdated,
   // contentNotTranslated,
   lastDeployLocaleTimestamp,
+  locale,
 }: Root) => {
+  const t = await getTranslations({ locale, namespace: "common" })
   // const { locale, asPath } = useRouter()
 
   // const CONTRIBUTING = "/contributing/"
@@ -50,9 +53,9 @@ export const BaseLayout = ({
        * The Skip Link is positioned above the container to ensure it is not affecting the
        * layout on initial load.
        */}
-      <SkipLink />
+      <SkipLink>{t("skip-to-main-content")}</SkipLink>
       <div className="mx-auto max-w-screen-2xl">
-        <Nav />
+        <Nav locale={locale} />
 
         {/* TODO: FIX TRANSLATION BANNER LOGIC FOR https://github.com/ethereum/ethereum-org-website/issues/11305 */}
         {/* <TranslationBanner

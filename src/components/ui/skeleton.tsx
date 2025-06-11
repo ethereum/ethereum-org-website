@@ -26,7 +26,7 @@ const Skeleton = ({
 }: React.HTMLAttributes<HTMLDivElement>) => {
   return (
     <div
-      className={cn("h-4 animate-pulse rounded bg-disabled", className)}
+      className={cn("h-4 animate-pulse-light rounded bg-disabled", className)}
       {...props}
     />
   )

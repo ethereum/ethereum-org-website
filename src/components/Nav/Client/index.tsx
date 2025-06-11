@@ -1,0 +1,129 @@
+"use client"
+
+import { useRef } from "react"
+import dynamic from "next/dynamic"
+import { useLocale } from "next-intl"
+import { BsTranslate } from "react-icons/bs"
+
+import LanguagePicker from "@/components/LanguagePicker"
+import SearchButton from "@/components/Search/SearchButton"
+import SearchInputButton from "@/components/Search/SearchInputButton"
+import { Button } from "@/components/ui/buttons/Button"
+import { Skeleton } from "@/components/ui/skeleton"
+
+import { DESKTOP_LANGUAGE_BUTTON_NAME } from "@/lib/constants"
+
+import { useNavigation } from "../useNavigation"
+import { useThemeToggle } from "../useThemeToggle"
+
+import { useBreakpointValue } from "@/hooks/useBreakpointValue"
+import { useTranslation } from "@/hooks/useTranslation"
+
+const Menu = dynamic(() => import("../Menu"), {
+  ssr: false,
+  loading: () => (
+    <div className="me-8 flex w-full items-center gap-10 px-6 max-md:hidden">
+      {Array.from({ length: 5 }).map((_, i) => (
+        <Skeleton key={i} className="h-6 w-12 py-2 opacity-10" />
+      ))}
+    </div>
+  ),
+})
+
+const MobileNavMenu = dynamic(() => import("../Mobile"), {
+  ssr: false,
+  loading: () => <Skeleton className="my-auto size-6 opacity-10" />,
+})
+
+const SearchProvider = dynamic(() => import("../../Search"), {
+  ssr: false,
+  loading: () => (
+    <>
+      <div className="flex items-center gap-6 px-6 max-md:hidden">
+        <Skeleton
+          data-label="search-xl"
+          className="hidden h-11 w-[170px] xl:flex"
+        />
+        <Skeleton data-label="search" className="size-6 xl:hidden" />
+      </div>
+      <div className="flex items-center gap-4 md:hidden">
+        <Skeleton data-label="search" className="size-6 xl:hidden" />
+        <Skeleton data-label="mobile-menu" className="size-6" />
+      </div>
+    </>
+  ),
+})
+
+const ClientSideNav = () => {
+  const { t } = useTranslation("common")
+  const locale = useLocale()
+
+  const { linkSections } = useNavigation()
+  const { toggleColorMode, ThemeIcon, themeIconAriaLabel } = useThemeToggle()
+
+  const languagePickerRef = useRef<HTMLButtonElement>(null)
+
+  // avoid rendering/adding desktop Menu version to DOM on mobile
+  const desktopScreen = useBreakpointValue({ base: false, md: true })
+
+  return (
+    <>
+      {desktopScreen && (
+        <Menu className="max-md:hidden" sections={linkSections} />
+      )}
+
+      <div className="flex items-center">
+        <SearchProvider>
+          {({ onOpen }) => {
+            return (
+              <>
+                <SearchInputButton className="max-xl:hidden" onClick={onOpen} />
+                <SearchButton className="xl:hidden" onClick={onOpen} />
+
+                {!desktopScreen && (
+                  <MobileNavMenu
+                    toggleColorMode={toggleColorMode}
+                    linkSections={linkSections}
+                    toggleSearch={onOpen}
+                    className="flex md:hidden"
+                  />
+                )}
+              </>
+            )
+          }}
+        </SearchProvider>
+
+        {desktopScreen && (
+          <Button
+            aria-label={themeIconAriaLabel}
+            variant="ghost"
+            isSecondary
+            className="group px-2 max-md:hidden xl:px-3 [&>svg]:transition-transform [&>svg]:duration-500 [&>svg]:hover:rotate-12 [&>svg]:hover:text-primary-hover"
+            onClick={toggleColorMode}
+          >
+            <ThemeIcon className="transform-transform duration-500 group-hover:rotate-12 group-hover:transition-transform group-hover:duration-500" />
+          </Button>
+        )}
+
+        {desktopScreen && (
+          <LanguagePicker>
+            <Button
+              name={DESKTOP_LANGUAGE_BUTTON_NAME}
+              ref={languagePickerRef}
+              variant="ghost"
+              className="gap-0 px-2 text-body transition-transform duration-500 active:bg-primary-low-contrast active:text-primary-hover data-[state='open']:bg-primary-low-contrast data-[state='open']:text-primary-hover max-md:hidden xl:px-3 [&_svg]:transition-transform [&_svg]:duration-500 [&_svg]:hover:rotate-12"
+            >
+              <BsTranslate className="me-2 align-middle text-2xl" />
+              <span className="max-lg:hidden">{t("languages")}&nbsp;</span>
+              {locale!.toUpperCase()}
+            </Button>
+          </LanguagePicker>
+        )}
+      </div>
+    </>
+  )
+}
+
+ClientSideNav.displayName = "ClientSideNav"
+
+export default ClientSideNav
