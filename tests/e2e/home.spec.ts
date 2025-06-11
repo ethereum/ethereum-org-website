@@ -16,8 +16,13 @@ test.describe("Home Page", () => {
   })
 
   test("search functionality", async ({ page }) => {
-    const nav = page.getByRole("navigation", { name: "Primary" })
-    await nav.getByRole("button", { name: "Search" }).click()
+    const viewport = page.viewportSize()
+    const isMobile = viewport && viewport.width <= breakpointAsNumber.md
+    if (isMobile) {
+      await page.getByTestId("search-button").click()
+    } else {
+      await page.getByTestId("search-input-button").click()
+    }
     await page.getByPlaceholder("Search").fill("smart contract")
 
     await expect(page.getByRole("listbox").first()).toBeVisible()
