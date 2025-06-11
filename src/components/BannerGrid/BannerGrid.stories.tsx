@@ -1,13 +1,12 @@
+import { useTranslations } from "next-intl"
 import { MdInfoOutline } from "react-icons/md"
 import { Meta, StoryObj } from "@storybook/react"
 
 import { ChildOnlyProp } from "@/lib/types"
 
-import { TwImage } from "@/components/Image"
-import InlineLink from "@/components/Link"
+import { Image } from "@/components/Image"
 import Tooltip from "@/components/Tooltip"
-
-import { getTranslation } from "@/storybook-utils"
+import InlineLink from "@/components/ui/Link"
 
 import { langViewportModes } from "../../../.storybook/modes"
 import { ContentContainer } from "../MdComponents"
@@ -50,14 +49,18 @@ type Story = StoryObj<typeof meta>
 
 const PAGE_WHAT_IS_ETH = "page-what-is-ethereum"
 
-const tooltipContent = ({ apiUrl, apiProvider, ariaLabel }) => (
-  <div>
-    {getTranslation("data-provided-by", "common")}{" "}
-    <InlineLink href={apiUrl} aria-label={ariaLabel}>
-      {apiProvider}
-    </InlineLink>
-  </div>
-)
+const tooltipContent = ({ apiUrl, apiProvider, ariaLabel }) => {
+  const t = useTranslations("common")
+
+  return (
+    <div>
+      {t("data-provided-by")}{" "}
+      <InlineLink href={apiUrl} aria-label={ariaLabel}>
+        {apiProvider}
+      </InlineLink>
+    </div>
+  )
+}
 
 const StatPrimary = (props: ChildOnlyProp) => (
   <div className="mb-4 text-5xl leading-none" {...props} />
@@ -96,7 +99,7 @@ export const BannerImage: Story = {
     return (
       <BannerComponent>
         <BannerImageComponent>
-          <TwImage src={stats} alt="" width={400} />
+          <Image src={stats} alt="" width={400} />
         </BannerImageComponent>
       </BannerComponent>
     )
@@ -105,16 +108,15 @@ export const BannerImage: Story = {
 
 export const BannerGridCell: Story = {
   render: () => {
+    const t = useTranslations(PAGE_WHAT_IS_ETH)
+
     return (
       <BannerComponent>
         <BannerBodyComponent>
           <BannerGridCellComponent>
             <StatPrimary>4k+</StatPrimary>
             <StatDescription>
-              {getTranslation(
-                "page-what-is-ethereum-ethereum-in-numbers-stat-1-desc",
-                PAGE_WHAT_IS_ETH
-              )}
+              {t("page-what-is-ethereum-ethereum-in-numbers-stat-1-desc")}
               <span className="whitespace-nowrap">
                 &nbsp;
                 <Tooltip
@@ -139,6 +141,8 @@ export const BannerGridCell: Story = {
 
 export const BannerGrid: Story = {
   render: () => {
+    const t = useTranslations(PAGE_WHAT_IS_ETH)
+
     return (
       <BannerComponent>
         <BannerBodyComponent>
@@ -147,10 +151,7 @@ export const BannerGrid: Story = {
               <BannerGridCellComponent key={item}>
                 <StatPrimary>{item}k+</StatPrimary>
                 <StatDescription>
-                  {getTranslation(
-                    "page-what-is-ethereum-ethereum-in-numbers-stat-1-desc",
-                    PAGE_WHAT_IS_ETH
-                  )}
+                  {t("page-what-is-ethereum-ethereum-in-numbers-stat-1-desc")}
                   <span className="whitespace-nowrap">
                     &nbsp;
                     <Tooltip
@@ -172,7 +173,7 @@ export const BannerGrid: Story = {
           </BannerGridComponent>
         </BannerBodyComponent>
         <BannerImageComponent>
-          <TwImage src={stats} alt="" width={400} />
+          <Image src={stats} alt="" width={400} />
         </BannerImageComponent>
       </BannerComponent>
     )
