@@ -3,8 +3,6 @@ import { getTranslations } from "next-intl/server"
 import type { Lang } from "@/lib/types"
 
 import { HubHero } from "@/components/Hero"
-import BetterUX from "@/components/icons/better-ux.svg"
-import CheaperTransactions from "@/components/icons/cheaper-transactions.svg"
 import Checkmark from "@/components/icons/checkmark.svg"
 import Adidas from "@/components/icons/enterprise/adidas.svg"
 import Azure from "@/components/icons/enterprise/azure.svg"
@@ -36,8 +34,6 @@ import Verizon from "@/components/icons/enterprise/verizon.svg"
 import Visa from "@/components/icons/enterprise/visa.svg"
 import Walmart from "@/components/icons/enterprise/walmart.svg"
 import WFP from "@/components/icons/enterprise/wfp.svg"
-import ExtraSecurity from "@/components/icons/extra-security.svg"
-import FutureProofing from "@/components/icons/future-proofing.svg"
 import MainArticle from "@/components/MainArticle"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Card } from "@/components/ui/card"
@@ -46,13 +42,11 @@ import { Skeleton } from "@/components/ui/skeleton"
 import { cn } from "@/lib/utils/cn"
 import { getMetadata } from "@/lib/utils/metadata"
 
+import FeatureCard from "./_components/FeatureCard"
+import type { Case, Feature } from "./types"
+
 import EthGlyph from "@/public/images/assets/svgs/eth-diamond-rainbow.svg"
 import heroImage from "@/public/images/heroes/enterprise-hero-white.png"
-
-type Case = {
-  name: string
-  content: string | React.ReactNode
-}
 
 const CasesColumn = ({
   cases,
@@ -78,11 +72,11 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: "page-enterprise" })
 
-  const features = [
+  const features: Feature[] = [
     {
       header: t("page-enterprise-features-1-header"),
       content: [t("page-enterprise-features-1-content-1")],
-      Icon: ExtraSecurity,
+      iconName: "ExtraSecurity",
     },
     {
       header: t("page-enterprise-features-2-header"),
@@ -90,7 +84,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
         t("page-enterprise-features-2-content-1"),
         t("page-enterprise-features-2-content-2"),
       ],
-      Icon: FutureProofing,
+      iconName: "FutureProofing",
     },
     {
       header: t("page-enterprise-features-3-header"),
@@ -98,7 +92,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
         t("page-enterprise-features-3-content-1"),
         t("page-enterprise-features-3-content-2"),
       ],
-      Icon: BetterUX,
+      iconName: "BetterUX",
     },
     {
       header: t("page-enterprise-features-4-header"),
@@ -106,7 +100,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
         t("page-enterprise-features-4-content-1"),
         t("page-enterprise-features-4-content-2"),
       ],
-      Icon: CheaperTransactions,
+      iconName: "CheaperTransactions",
     },
   ]
 
@@ -259,20 +253,13 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
         <section id="features">
           <h2 className="sr-only">{t("page-enterprise-features-header")}</h2>
           {/* // TODO: Add mobile ui/swiper */}
-          <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 md:gap-6 xl:grid-cols-4">
-            {features.map(({ header, content, Icon }) => (
-              <Card
-                key={header}
-                className="space-y-4 rounded-4xl border bg-background px-6 py-8 shadow-window-box"
-              >
-                <Icon className="text-7xl text-primary" />
-                <h3 className="text-xl">{header}</h3>
-                {content.map((p, i) => (
-                  <p key={i} className="mb-8 last:mb-0">
-                    {p}
-                  </p>
-                ))}
-              </Card>
+          <div className="grid grid-cols-1 gap-2 max-md:hidden sm:grid-cols-2 md:gap-6 xl:grid-cols-4">
+            {features.map((feature) => (
+              <FeatureCard
+                key={feature.header}
+                {...feature}
+                className="h-full ring"
+              />
             ))}
           </div>
         </section>
