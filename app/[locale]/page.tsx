@@ -1,12 +1,7 @@
 import { Fragment } from "react"
-import { pick } from "lodash"
 import dynamic from "next/dynamic"
 import { notFound } from "next/navigation"
-import {
-  getMessages,
-  getTranslations,
-  setRequestLocale,
-} from "next-intl/server"
+import { getTranslations, setRequestLocale } from "next-intl/server"
 import { FaDiscord, FaGithub } from "react-icons/fa6"
 import { FaXTwitter } from "react-icons/fa6"
 
@@ -24,7 +19,6 @@ import BentoCard from "@/components/Homepage/BentoCard"
 import CodeExamples from "@/components/Homepage/CodeExamples"
 import { getBentoBoxItems } from "@/components/Homepage/utils"
 import ValuesMarqueeFallback from "@/components/Homepage/ValuesMarquee/Fallback"
-import I18nProvider from "@/components/I18nProvider"
 import BlockHeap from "@/components/icons/block-heap.svg"
 import BuildAppsIcon from "@/components/icons/build-apps.svg"
 import Calendar from "@/components/icons/calendar.svg"
@@ -167,9 +161,6 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const t = await getTranslations({ locale, namespace: "page-index" })
   const tCommon = await getTranslations({ locale, namespace: "common" })
   const { direction: dir, isRtl } = getDirection(locale)
-
-  const allMessages = await getMessages({ locale })
-  const tenYearMessages = pick(allMessages, "page-10-year-anniversary")
 
   const [
     ethPrice,
@@ -822,9 +813,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           id="10-year-anniversary"
           className={cn(locale !== "en" && "hidden")} // TODO: Show again when translations ready
         >
-          <I18nProvider locale={locale} messages={tenYearMessages}>
-            <TenYearHomeBanner />
-          </I18nProvider>
+          <TenYearHomeBanner locale={locale} />
         </Section>
 
         {/* Recent posts */}
