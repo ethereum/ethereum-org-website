@@ -19,9 +19,9 @@ test.describe("Home Page", () => {
     const viewport = page.viewportSize()
     const isMobile = viewport && viewport.width <= breakpointAsNumber.md
     if (isMobile) {
-      await page.getByTestId("search-button").click()
+      await page.getByTestId("search-button").first().click()
     } else {
-      await page.getByTestId("search-input-button").click()
+      await page.getByTestId("search-input-button").first().click()
     }
     await page.getByPlaceholder("Search").fill("smart contract")
 
