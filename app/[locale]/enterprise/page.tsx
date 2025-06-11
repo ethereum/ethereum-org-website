@@ -198,7 +198,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     { name: "Nike", Logo: Nike, className: "translate-y-1.5" },
     { name: "Opera", Logo: Opera },
     { name: "PayPal", Logo: PayPal },
-    { name: "Samsung", Logo: Samsung, className: "h-8" },
+    { name: "Samsung", Logo: Samsung, className: "h-7" },
     { name: "SAP", Logo: SAP },
     { name: "Siemens", Logo: Siemens, className: "h-7" },
     { name: "Sony", Logo: Sony, className: "h-7" },
@@ -229,7 +229,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             },
           },
         ]}
-        className="[&_[data-label='breadcrumb']]:xl:text-body-light [&_[data-label='hero-content']]:xl:bg-accent-a [&_[data-label='hero-content']]:xl:text-background [&_a]:font-bold [&_a]:xl:bg-background [&_a]:xl:text-accent-a [&_img]:dark:invert"
+        className="[&_[data-label='breadcrumb']]:xl:text-body-light [&_[data-label='hero-content']]:xl:bg-accent-a [&_[data-label='hero-content']]:xl:text-background [&_a:hover]:bg-body [&_a:hover]:!text-background [&_a]:font-bold [&_a]:xl:bg-background [&_a]:xl:text-accent-a [&_img]:dark:invert"
       />
 
       <MainArticle className="space-y-12 px-4 md:space-y-20 md:px-10">
@@ -294,12 +294,12 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               <div
                 data-label="marquee-row"
                 key={row}
-                className="flex max-w-full overflow-hidden py-4"
+                className="flex max-w-full flex-nowrap overflow-hidden py-4"
               >
-                {Array.from({ length: 2 }).map((_, idx) => (
+                {Array.from({ length: 3 }).map((_, idx) => (
                   <div
                     key={idx}
-                    className="flex min-w-fit animate-scroll-left-120 items-center"
+                    className="flex min-w-fit animate-scroll-left-120 flex-nowrap items-center"
                   >
                     {players.map(({ name, Logo, className }) => (
                       <div
@@ -322,7 +322,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           </div>
 
           <div
-            className="w-screen ring ring-offset-[-2px]"
+            className="w-screen"
             style={{
               mask: `linear-gradient(to right, transparent 1rem, white 2rem, white calc(100% - 2rem), transparent calc(100% - 1rem)`,
             }}
