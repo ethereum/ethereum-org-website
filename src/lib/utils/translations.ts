@@ -67,6 +67,7 @@ const getRequiredNamespacesForPath = (relativePath: string) => {
 
   if (path === "/") {
     primaryNamespace = "page-index"
+    requiredNamespaces = [...requiredNamespaces, "page-10-year-anniversary"]
   }
 
   if (path === "/contributing/translation-program/acknowledgements/") {
