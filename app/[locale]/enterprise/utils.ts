@@ -6,13 +6,13 @@ import type {
   StatsBoxMetric,
 } from "@/lib/types"
 
-import { /* formatLargeNumber, */ formatLargeUSD } from "@/lib/utils/numbers"
+import { formatLargeNumber, formatLargeUSD } from "@/lib/utils/numbers"
 import { getLocaleForNumberFormat } from "@/lib/utils/translations"
 
 // Convert numerical value to formatted values
 export const parseActivity = async (
   {
-    // dailyTxCount,
+    txCount,
     stablecoinMarketCap,
     // totalCapitalSecured,
   }: AllEnterpriseActivityData,
@@ -22,13 +22,13 @@ export const parseActivity = async (
 
   const localeForNumberFormat = getLocaleForNumberFormat(locale)
 
-  // const dailyTxCountFormatted =
-  //   "error" in dailyTxCount
-  //     ? { error: dailyTxCount.error }
-  //     : {
-  //         ...dailyTxCount,
-  //         value: formatLargeNumber(dailyTxCount.value, localeForNumberFormat),
-  //       }
+  const txCountFormatted =
+    "error" in txCount
+      ? { error: txCount.error }
+      : {
+          ...txCount,
+          value: formatLargeNumber(txCount.value, localeForNumberFormat),
+        }
 
   const stablecoinMarketCapFormatted =
     "error" in stablecoinMarketCap
@@ -53,13 +53,12 @@ export const parseActivity = async (
   //       }
 
   const metrics: StatsBoxMetric[] = [
-    // {
-    //   // TODO
-    //   label: t("page-enterprise-activity-daily-tx"),
-    //   apiProvider: "TBD",
-    //   apiUrl: "https://www.TBD.com",
-    //   state: dailyTxCountFormatted,
-    // },
+    {
+      label: t("page-enterprise-activity-tx-count"),
+      apiProvider: "growthepie",
+      apiUrl: "https://www.growthepie.xyz/fundamentals/transaction-count",
+      state: txCountFormatted,
+    },
     {
       label: t("page-enterprise-activity-stablecoin-mktcap"),
       apiProvider: "CoinGecko",

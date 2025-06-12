@@ -574,9 +574,7 @@ export type AllHomepageActivityData = Record<
   MetricReturnData
 >
 
-export type EnterpriseActivityMetric =
-  // | "dailyTxCount"
-  "stablecoinMarketCap"
+export type EnterpriseActivityMetric = "txCount" | "stablecoinMarketCap"
 // | "totalCapitalSecured"
 
 export type AllEnterpriseActivityData = Record<

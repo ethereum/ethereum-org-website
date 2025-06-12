@@ -52,6 +52,7 @@ import type { Case, EcosystemPlayer, Feature } from "./types"
 import { parseActivity } from "./utils"
 
 import { fetchEthereumStablecoinsMcap } from "@/lib/api/fetchEthereumStablecoinsMcap"
+import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
 import EthGlyph from "@/public/images/assets/svgs/eth-diamond-rainbow.svg"
 import heroImage from "@/public/images/heroes/enterprise-hero-white.png"
 
@@ -67,7 +68,10 @@ const CasesSwiper = dynamic(() => import("./_components/CasesSwiper"), {
 
 // TODO: Switch back to this for cache and mock-data dev fallback
 // const loadData = dataLoader(
-//   [["ethereumStablecoinsResponse", fetchEthereumStablecoinsMcap]],
+//   [
+//     ["ethereumStablecoinsResponse", fetchEthereumStablecoinsMcap],
+//     ["growThePieData", fetchGrowThePie],
+//   ],
 //   BASE_TIME_UNIT * 1000
 // )
 
@@ -76,13 +80,14 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 
   const t = await getTranslations({ locale, namespace: "page-enterprise" })
 
-  // const [ethereumStablecoinsResponse] = await loadData()
-  const ethereumStablecoinsResponse = await fetchEthereumStablecoinsMcap()
+  // const [{ txCount }, ethereumStablecoinsResponse] = await loadData()
+  const { txCount } = await fetchGrowThePie()
+  const stablecoinMarketCap = await fetchEthereumStablecoinsMcap()
 
   const metrics = await parseActivity(
     {
-      // dailyTxCount,
-      stablecoinMarketCap: ethereumStablecoinsResponse,
+      txCount,
+      stablecoinMarketCap,
       // totalCapitalSecured,
     },
     locale
@@ -161,9 +166,13 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
       ),
     },
     {
-      name: "TODO: New Item",
-      content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      name: "Visa",
+      content: (
+        <>
+          Settled over <strong>$225 million</strong> in stablecoin transactions
+          using USDC across Ethereum and other blockchains.
+        </>
+      ),
     },
   ]
 
@@ -281,6 +290,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             metrics={metrics}
             locale={locale}
             className={cn(
+              metrics.length < 2 && "hidden", // Minimum before displaying
               "w-fit max-w-xl shrink-0 gap-8 sm:max-md:grid-cols-2",
               "[&_[data-label='big-number']]:border-none [&_[data-label='big-number']]:p-0",
               "[&_[data-label='big-number']:nth-of-type(1)_[data-label='value']]:text-accent-a",
@@ -288,12 +298,6 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               "[&_[data-label='big-number']:nth-of-type(3)_[data-label='value']]:text-accent-c"
             )}
           />
-
-          {/* <div className="TODO:METRICS flex max-w-[min(41rem,100%)] gap-6 md:ms-auto">
-            <Skeleton className="h-32 w-64 rounded-2xl" />
-            <Skeleton className="h-32 w-64 rounded-2xl" />
-            <Skeleton className="h-32 w-64 rounded-2xl" />
-          </div> */}
         </section>
 
         <section id="features">
