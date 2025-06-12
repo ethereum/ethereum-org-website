@@ -2,7 +2,7 @@
 
 import { PageWithContributorsProps } from "@/lib/types"
 
-import Callout from "@/components/Callout"
+import CalloutSSR from "@/components/CalloutSSR"
 import Card from "@/components/Card"
 import FileContributors from "@/components/FileContributors"
 import { ContentHero, type ContentHeroProps } from "@/components/Hero"
@@ -289,7 +289,7 @@ const Layer2Learn = ({
 
       <div id="callout-cards" className="px-8 py-9">
         <div className="flex w-full flex-col lg:flex-row">
-          <Callout
+          <CalloutSSR
             image={Callout1Image}
             title={t("page-layer-2-learn-callout-1-title")}
             description={t("page-layer-2-learn-callout-1-description")}
@@ -306,8 +306,8 @@ const Layer2Learn = ({
                 {t("page-layer-2-learn-learn-more")}
               </ButtonLink>
             </div>
-          </Callout>
-          <Callout
+          </CalloutSSR>
+          <CalloutSSR
             image={Callout2Image}
             title={t("page-layer-2-learn-callout-2-title")}
             description={t("page-layer-2-learn-callout-2-description")}
@@ -324,7 +324,7 @@ const Layer2Learn = ({
                 {t("page-layer-2-learn-explore-networks")}
               </ButtonLink>
             </div>
-          </Callout>
+          </CalloutSSR>
         </div>
       </div>
 

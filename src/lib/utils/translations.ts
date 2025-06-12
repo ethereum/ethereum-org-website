@@ -67,6 +67,7 @@ const getRequiredNamespacesForPath = (relativePath: string) => {
 
   if (path === "/") {
     primaryNamespace = "page-index"
+    requiredNamespaces = [...requiredNamespaces, "page-10-year-anniversary"]
   }
 
   if (path === "/contributing/translation-program/acknowledgements/") {
@@ -204,6 +205,10 @@ const getRequiredNamespacesForPath = (relativePath: string) => {
 
   if (path.startsWith("/contributing/translation-program/translatathon/")) {
     primaryNamespace = "page-translatathon"
+  }
+
+  if (path.startsWith("/10years/")) {
+    requiredNamespaces = [...requiredNamespaces, "page-10-year-anniversary"]
   }
 
   // Glossary tooltips
