@@ -54,7 +54,9 @@ import type { Case, EcosystemPlayer, Feature } from "./types"
 import { parseActivity } from "./utils"
 
 import { fetchEthereumStablecoinsMcap } from "@/lib/api/fetchEthereumStablecoinsMcap"
+import { fetchEthPrice } from "@/lib/api/fetchEthPrice"
 import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
+import { fetchTotalEthStaked } from "@/lib/api/fetchTotalEthStaked"
 import EthGlyph from "@/public/images/assets/svgs/eth-diamond-rainbow.svg"
 import heroImage from "@/public/images/heroes/enterprise-hero-white.png"
 
@@ -82,8 +84,10 @@ const CasesSwiper = dynamic(() => import("./_components/CasesSwiper"), {
 // TODO: Switch back to this for cache and mock-data dev fallback
 // const loadData = dataLoader(
 //   [
-//     ["ethereumStablecoinsResponse", fetchEthereumStablecoinsMcap],
 //     ["growThePieData", fetchGrowThePie],
+//     ["ethereumStablecoins", fetchEthereumStablecoinsMcap],
+//     ["ethPrice", fetchEthPrice],
+//     ["totalEthStaked", fetchTotalEthStaked],
 //   ],
 //   BASE_TIME_UNIT * 1000
 // )
@@ -93,14 +97,19 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 
   const t = await getTranslations({ locale, namespace: "page-enterprise" })
 
-  // const [{ txCount }, ethereumStablecoinsResponse] = await loadData()
+  // const [{ txCount }, stablecoinMarketCap, ethPrice, totalEthStaked] =
+  //   await loadData()
   const { txCount } = await fetchGrowThePie()
   const stablecoinMarketCap = await fetchEthereumStablecoinsMcap()
+  const ethPrice = await fetchEthPrice()
+  const totalEthStaked = await fetchTotalEthStaked()
 
   const metrics = await parseActivity(
     {
       txCount,
       stablecoinMarketCap,
+      ethPrice,
+      totalEthStaked,
       // totalCapitalSecured,
     },
     locale

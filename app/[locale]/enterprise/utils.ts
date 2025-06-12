@@ -14,6 +14,8 @@ export const parseActivity = async (
   {
     txCount,
     stablecoinMarketCap,
+    ethPrice,
+    totalEthStaked,
     // totalCapitalSecured,
   }: AllEnterpriseActivityData,
   locale: Lang
@@ -41,6 +43,26 @@ export const parseActivity = async (
           ),
         }
 
+  const hasEthStakerAndPriceData =
+    "value" in totalEthStaked && "value" in ethPrice
+  const totalStakedInUsd = hasEthStakerAndPriceData
+    ? totalEthStaked.value * ethPrice.value
+    : 0
+
+  const totalValueSecuringFormatted = !totalStakedInUsd
+    ? {
+        error:
+          "error" in totalEthStaked
+            ? totalEthStaked.error
+            : "error" in ethPrice
+              ? ethPrice.error
+              : "",
+      }
+    : {
+        ...totalEthStaked,
+        value: formatLargeUSD(totalStakedInUsd, localeForNumberFormat),
+      }
+
   // const totalCapitalSecuredFormatted =
   //   "error" in totalCapitalSecured
   //     ? { error: totalCapitalSecured.error }
@@ -64,6 +86,12 @@ export const parseActivity = async (
       apiProvider: "CoinGecko",
       apiUrl: "https://www.coingecko.com/en/categories/stablecoins",
       state: stablecoinMarketCapFormatted,
+    },
+    {
+      label: t("page-enterprise-activity-value-protecting"),
+      apiProvider: "Dune Analytics",
+      apiUrl: "https://dune.com/hildobby/eth2-staking",
+      state: totalValueSecuringFormatted,
     },
     // {
     //   // TODO

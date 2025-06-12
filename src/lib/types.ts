@@ -574,7 +574,11 @@ export type AllHomepageActivityData = Record<
   MetricReturnData
 >
 
-export type EnterpriseActivityMetric = "txCount" | "stablecoinMarketCap"
+export type EnterpriseActivityMetric =
+  | "txCount"
+  | "stablecoinMarketCap"
+  | "ethPrice" // Use with `totalEthStaked` to convert ETH to USD
+  | "totalEthStaked"
 // | "totalCapitalSecured"
 
 export type AllEnterpriseActivityData = Record<
