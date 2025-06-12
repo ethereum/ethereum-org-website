@@ -171,8 +171,8 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
       Logo: BancoSantander,
       className: "-translate-y-1",
     },
-    { name: "BASF", Logo: BASF, className: "h-7" },
-    { name: "BlackRock", Logo: BlackRock, className: "h-8" },
+    { name: "BASF", Logo: BASF, className: "text-[28px]" },
+    { name: "BlackRock", Logo: BlackRock, className: "text-[32px]" },
     { name: "BMW", Logo: BMW, className: "scale-105 origin-bottom" },
     { name: "Coca-Cola", Logo: CocaCola },
     {
@@ -186,12 +186,12 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
       className: "scale-105 origin-bottom -translate-y-1.5",
     },
     { name: "Franklin Templeton Investments", Logo: FranklinTempleton },
-    { name: "Fox", Logo: Fox, className: "h-8" },
+    { name: "Fox", Logo: Fox, className: "text-[32px]" },
     { name: "JP Morgan", Logo: JPMorgan, className: "translate-y-1" },
     {
       name: "Lamborghini",
       Logo: Lamborghini,
-      className: "h-8 translate-y-0.5",
+      className: "text-[32px] translate-y-0.5",
     },
     { name: "Louis Vuitton", Logo: LouisVuitton },
     { name: "Mastercard", Logo: Mastercard },
@@ -199,14 +199,18 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     { name: "Nike", Logo: Nike, className: "translate-y-1.5" },
     { name: "Opera", Logo: Opera },
     { name: "PayPal", Logo: PayPal },
-    { name: "Samsung", Logo: Samsung, className: "h-7" },
+    { name: "Samsung", Logo: Samsung, className: "text-[28px]" },
     { name: "SAP", Logo: SAP },
-    { name: "Siemens", Logo: Siemens, className: "h-7" },
-    { name: "Sony", Logo: Sony, className: "h-7" },
+    { name: "Siemens", Logo: Siemens, className: "text-[28px]" },
+    { name: "Sony", Logo: Sony, className: "text-[28px]" },
     { name: "Sothebys", Logo: Sothebys, className: "translate-y-0.5" },
     { name: "Swarm", Logo: Swarm, className: "-translate-y-1" },
     { name: "TMobile", Logo: TMobile },
-    { name: "Verizon", Logo: Verizon, className: "h-8 -translate-y-px" },
+    {
+      name: "Verizon",
+      Logo: Verizon,
+      className: "text-[32px] -translate-y-px",
+    },
     { name: "Visa", Logo: Visa },
     { name: "Walmart", Logo: Walmart },
     { name: "WFP", Logo: WFP },
@@ -307,7 +311,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                         key={name}
                         aria-label={name}
                         className={cn(
-                          "flex h-10 w-fit justify-center px-6 md:px-8",
+                          "flex size-fit justify-center px-6 text-[2.5rem] md:px-8",
                           row === 1 && "-translate-x-[90rem]",
                           row === 2 && "-translate-x-[180rem]",
                           className
