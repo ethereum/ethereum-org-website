@@ -11,7 +11,7 @@ import { useBreakpointValue } from "@/hooks/useBreakpointValue"
 const CasesSwiper = ({ cases }: { cases: Case[] }) => {
   const slidesPerView = useBreakpointValue({
     base: 1.2,
-    sm: 2.4,
+    sm: 2.2,
   })
 
   return (

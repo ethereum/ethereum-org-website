@@ -38,6 +38,8 @@ import Walmart from "@/components/icons/enterprise/walmart.svg"
 import WFP from "@/components/icons/enterprise/wfp.svg"
 import MainArticle from "@/components/MainArticle"
 import { ButtonLink } from "@/components/ui/buttons/Button"
+import { Card } from "@/components/ui/card"
+import { Skeleton, SkeletonLines } from "@/components/ui/skeleton"
 
 import { cn } from "@/lib/utils/cn"
 // import { dataLoader } from "@/lib/utils/data/dataLoader"
@@ -47,7 +49,6 @@ import { getMetadata } from "@/lib/utils/metadata"
 import CasesColumn from "./_components/CasesColumn"
 import FeatureCard from "./_components/FeatureCard"
 import { ENTERPRISE_MAILTO } from "./constants"
-import SwiperHangerLoading from "./SwiperHangerLoading"
 import type { Case, EcosystemPlayer, Feature } from "./types"
 import { parseActivity } from "./utils"
 
@@ -57,13 +58,24 @@ import EthGlyph from "@/public/images/assets/svgs/eth-diamond-rainbow.svg"
 import heroImage from "@/public/images/heroes/enterprise-hero-white.png"
 
 const FeaturesSwiper = dynamic(() => import("./_components/FeaturesSwiper"), {
-  // ssr: false,
-  loading: () => <SwiperHangerLoading />,
+  ssr: false,
+  loading: () => (
+    <Card className="ms-4 w-[85vw] rounded-4xl border bg-background px-2 py-6">
+      <Skeleton className="mx-4 mb-6 size-16 rounded-xl" />
+      <Skeleton className="mx-4 -mb-2 h-5 w-[85%]" />
+      <SkeletonLines noOfLines={7} />
+    </Card>
+  ),
 })
 
 const CasesSwiper = dynamic(() => import("./_components/CasesSwiper"), {
-  // ssr: false,
-  loading: () => <SwiperHangerLoading />,
+  ssr: false,
+  loading: () => (
+    <Card className="ms-4 w-[85vw] space-y-1 rounded-4xl border bg-background px-2 py-6">
+      <Skeleton className="mx-4 h-5 w-[85%]" />
+      <SkeletonLines noOfLines={4} />
+    </Card>
+  ),
 })
 
 // TODO: Switch back to this for cache and mock-data dev fallback
@@ -213,7 +225,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
       className: "-translate-y-1.5",
     },
     {
-      name: "EY",
+      name: "Ernst & Young Global Limited",
       Logo: EY,
       className: "scale-105 origin-bottom -translate-y-1.5",
     },
@@ -235,9 +247,9 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     { name: "SAP", Logo: SAP },
     { name: "Siemens", Logo: Siemens, className: "text-[28px]" },
     { name: "Sony", Logo: Sony, className: "text-[28px]" },
-    { name: "Sothebys", Logo: Sothebys, className: "translate-y-0.5" },
+    { name: "Sotheby's", Logo: Sothebys, className: "translate-y-0.5" },
     { name: "Swarm", Logo: Swarm, className: "-translate-y-1" },
-    { name: "TMobile", Logo: TMobile },
+    { name: "T-Mobile", Logo: TMobile },
     {
       name: "Verizon",
       Logo: Verizon,
@@ -245,7 +257,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     },
     { name: "Visa", Logo: Visa },
     { name: "Walmart", Logo: Walmart },
-    { name: "WFP", Logo: WFP },
+    { name: "World Food Programme", Logo: WFP },
   ]
 
   return (
