@@ -563,13 +563,26 @@ export type GrowThePieData = Record<GrowThePieMetricKey, MetricReturnData> & {
   activeAddresses: Record<string, number | undefined>
 }
 
-export type MetricName =
+export type HomepageActivityMetric =
   | "ethPrice" // Use with `totalEthStaked` to convert ETH to USD
   | "totalEthStaked"
   | "totalValueLocked"
   | GrowThePieMetricKey
 
-export type AllMetricData = Record<MetricName, MetricReturnData>
+export type AllHomepageActivityData = Record<
+  HomepageActivityMetric,
+  MetricReturnData
+>
+
+export type EnterpriseActivityMetric =
+  // | "dailyTxCount"
+  "stablecoinMarketCap"
+// | "totalCapitalSecured"
+
+export type AllEnterpriseActivityData = Record<
+  EnterpriseActivityMetric,
+  MetricReturnData
+>
 
 export type StatsBoxMetric = {
   label: string

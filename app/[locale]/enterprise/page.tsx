@@ -3,6 +3,7 @@ import { getTranslations } from "next-intl/server"
 
 import type { Lang } from "@/lib/types"
 
+import ActivityStats from "@/components/ActivityStats"
 import { HubHero } from "@/components/Hero"
 import Checkmark from "@/components/icons/checkmark.svg"
 import Adidas from "@/components/icons/enterprise/adidas.svg"
@@ -37,17 +38,20 @@ import Walmart from "@/components/icons/enterprise/walmart.svg"
 import WFP from "@/components/icons/enterprise/wfp.svg"
 import MainArticle from "@/components/MainArticle"
 import { ButtonLink } from "@/components/ui/buttons/Button"
-import { Skeleton } from "@/components/ui/skeleton"
 
 import { cn } from "@/lib/utils/cn"
+// import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { getMetadata } from "@/lib/utils/metadata"
 
+// import { BASE_TIME_UNIT } from "@/lib/constants"
 import CasesColumn from "./_components/CasesColumn"
 import FeatureCard from "./_components/FeatureCard"
 import { ENTERPRISE_MAILTO } from "./constants"
 import SwiperHangerLoading from "./SwiperHangerLoading"
 import type { Case, EcosystemPlayer, Feature } from "./types"
+import { parseActivity } from "./utils"
 
+import { fetchEthereumStablecoinsMcap } from "@/lib/api/fetchEthereumStablecoinsMcap"
 import EthGlyph from "@/public/images/assets/svgs/eth-diamond-rainbow.svg"
 import heroImage from "@/public/images/heroes/enterprise-hero-white.png"
 
@@ -61,9 +65,28 @@ const CasesSwiper = dynamic(() => import("./_components/CasesSwiper"), {
   loading: () => <SwiperHangerLoading />,
 })
 
+// TODO: Switch back to this for cache and mock-data dev fallback
+// const loadData = dataLoader(
+//   [["ethereumStablecoinsResponse", fetchEthereumStablecoinsMcap]],
+//   BASE_TIME_UNIT * 1000
+// )
+
 const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const { locale } = await params
+
   const t = await getTranslations({ locale, namespace: "page-enterprise" })
+
+  // const [ethereumStablecoinsResponse] = await loadData()
+  const ethereumStablecoinsResponse = await fetchEthereumStablecoinsMcap()
+
+  const metrics = await parseActivity(
+    {
+      // dailyTxCount,
+      stablecoinMarketCap: ethereumStablecoinsResponse,
+      // totalCapitalSecured,
+    },
+    locale
+  )
 
   const features: Feature[] = [
     {
@@ -234,11 +257,14 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             },
           },
         ]}
-        className="[&_[data-label='breadcrumb']]:xl:text-body-light [&_[data-label='hero-content']]:xl:bg-accent-a [&_[data-label='hero-content']]:xl:text-background [&_a:hover]:bg-body [&_a:hover]:!text-background [&_a]:font-bold [&_a]:xl:bg-background [&_a]:xl:text-accent-a [&_img]:dark:invert"
+        className="[&_[data-label='breadcrumb']]:xl:text-body-light [&_[data-label='hero-content']]:xl:bg-accent-a [&_[data-label='hero-content']]:xl:text-background xl:[&_a:hover]:bg-accent-a-hover xl:[&_a:hover]:!text-background [&_a]:font-bold [&_a]:xl:bg-background [&_a]:xl:text-accent-a [&_img]:dark:invert"
       />
 
       <MainArticle className="space-y-12 px-4 md:space-y-20 md:px-10">
-        <section id="metrics" className="flex flex-col gap-6 md:flex-row">
+        <section
+          id="activity"
+          className="flex flex-col justify-between gap-6 md:flex-row"
+        >
           <div className="max-w-prose space-y-4">
             <h2>{t("page-enterprise-metrics-header")}</h2>
             <p>
@@ -250,11 +276,24 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               economy.
             </p>
           </div>
-          <div className="TODO:METRICS flex max-w-[min(41rem,100%)] gap-6 md:ms-auto">
+
+          <ActivityStats
+            metrics={metrics}
+            locale={locale}
+            className={cn(
+              "w-fit max-w-xl shrink-0 gap-8 sm:max-md:grid-cols-2",
+              "[&_[data-label='big-number']]:border-none [&_[data-label='big-number']]:p-0",
+              "[&_[data-label='big-number']:nth-of-type(1)_[data-label='value']]:text-accent-a",
+              "[&_[data-label='big-number']:nth-of-type(2)_[data-label='value']]:text-accent-b",
+              "[&_[data-label='big-number']:nth-of-type(3)_[data-label='value']]:text-accent-c"
+            )}
+          />
+
+          {/* <div className="TODO:METRICS flex max-w-[min(41rem,100%)] gap-6 md:ms-auto">
             <Skeleton className="h-32 w-64 rounded-2xl" />
             <Skeleton className="h-32 w-64 rounded-2xl" />
             <Skeleton className="h-32 w-64 rounded-2xl" />
-          </div>
+          </div> */}
         </section>
 
         <section id="features">

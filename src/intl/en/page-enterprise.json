@@ -1,10 +1,12 @@
 {
   "page-enterprise-": "",
+  "page-enterprise-activity-daily-tx": "Daily transactions",
+  "page-enterprise-activity-stablecoin-mktcap": "Stablecoin market cap",
+  "page-enterprise-activity-total-secured": "Total capital secured",
   "page-enterprise-ecosystem-cta": "See use cases",
   "page-enterprise-ecosystem-description": "The question is not whether money will become programmable, but how quickly the transition will occur and which platforms will enable it.",
   "page-enterprise-ecosystem-header": "Embrace the innovation",
   "page-enterprise-features-1-content-1": "Ethereum is secured by thousands of independent validators worldwide, providing resilient, open-access infrastructure for digital assets and enterprise applications.",
-  "page-enterprise-features-1-content-2": "",
   "page-enterprise-features-1-header": "Proven Security and Decentralization",
   "page-enterprise-features-2-content-1": "Ethereum offers great flexibility and powerful scaling options known as Layer 2s.",
   "page-enterprise-features-2-content-2": "Its Proof-of-Stake consensus also cuts energy use by ~99.5%, meeting ESG goals without sacrificing performance.",
