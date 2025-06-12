@@ -269,9 +269,9 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             content: t("page-enterprise-hero-cta"),
             href: ENTERPRISE_MAILTO,
             matomo: {
-              eventCategory: "enterprise hero buttons",
-              eventAction: "click",
-              eventName: "get in touch",
+              eventCategory: "enterprise",
+              eventAction: "CTA",
+              eventName: "header_cta",
             },
           },
         ]}
@@ -439,7 +439,14 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           <p className="max-w-prose px-6 text-center md:px-8">
             {t("page-enterprise-team-description")}
           </p>
-          <ButtonLink href={ENTERPRISE_MAILTO}>
+          <ButtonLink
+            href={ENTERPRISE_MAILTO}
+            customEventOptions={{
+              eventCategory: "enterprise",
+              eventAction: "CTA",
+              eventName: "bottom_mail",
+            }}
+          >
             {t("page-enterprise-hero-cta")}
           </ButtonLink>
         </section>
