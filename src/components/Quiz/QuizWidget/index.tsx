@@ -200,7 +200,7 @@ export default QuizWidget
 export const StandaloneQuizWidget = (
   props: Pick<QuizWidgetProps, "quizKey">
 ) => {
-  const [_, updateUserStats] = useLocalQuizData()
+  const [, updateUserStats] = useLocalQuizData()
   return (
     <VStack className="my-16 gap-12">
       <h2 id="quiz" className="scroll-mt-24 scroll-smooth text-center">

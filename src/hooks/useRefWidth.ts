@@ -1,6 +1,6 @@
 "use client"
 
-import { type RefObject, useEffect, useState } from "react"
+import { type RefObject, useCallback, useEffect, useState } from "react"
 
 import { useEventListener } from "./useEventListener"
 
@@ -10,12 +10,12 @@ export const useRefWidth = (
 ): number => {
   const [width, setWidth] = useState(0)
 
-  const updateWidth = () => {
+  const updateWidth = useCallback(() => {
     if (ref.current) {
       const rect = ref.current.getBoundingClientRect()
       setWidth(Math.max(0, rect.width - padding))
     }
-  }
+  }, [ref, padding])
 
   // Use the internal useEventListener for window resize
   useEventListener("resize", updateWidth)
@@ -33,7 +33,7 @@ export const useRefWidth = (
     return () => {
       resizeObserver.disconnect()
     }
-  }, [ref, padding])
+  }, [ref, padding, updateWidth])
 
   return width
 }

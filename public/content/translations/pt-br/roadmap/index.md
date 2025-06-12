@@ -109,6 +109,7 @@ A fragmentação divide a blockchain do Ethereum de modo que subconjuntos de [va
 
 ## Procurando por melhorias técnicas específicas? {#looking-for-specific-technical-upgrades}
 
+- [Pectra](/roadmap/pectra) — Hard fork Praga/Eletra, que traz uma nova abordagem para abstração de contas, melhora a escalabilidade e muito mais.
 - [Danksharding](/roadmap/danksharding) - o Danksharding torna os rollups da camada 2 muito mais baratos para os usuários ao adicionar "blobs" de dados aos blocos Ethereum.
 - [Saques de participação](/staking/withdrawals) - a melhoria Shanghai/Capella habilitou saques de participação no Ethereum, permitindo que as pessoas desbloqueassem seus ETHs participados.
 - [Finalidade de um único espaço](/roadmap/single-slot-finality) - em vez de esperar quinze minutos, os blocos poderiam ser propostos e finalizados no mesmo espaço. Isso é mais conveniente para os aplicativos e muito mais difícil de atacar.

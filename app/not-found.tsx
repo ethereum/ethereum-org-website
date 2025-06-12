@@ -1,15 +1,13 @@
-"use client"
-
-import Error from "next/error"
+import NotFoundPage from "@/components/NotFoundPage"
 
 import { DEFAULT_LOCALE } from "@/lib/constants"
 
-export default function GlobalNotFound() {
+import LocaleLayout from "./[locale]/layout"
+
+export default async function GlobalNotFound() {
   return (
-    <html lang={DEFAULT_LOCALE}>
-      <body>
-        <Error statusCode={404} />
-      </body>
-    </html>
+    <LocaleLayout params={{ locale: DEFAULT_LOCALE }}>
+      <NotFoundPage />
+    </LocaleLayout>
   )
 }

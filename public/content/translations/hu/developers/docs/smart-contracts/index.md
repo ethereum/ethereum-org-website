@@ -88,7 +88,7 @@ Tudjon meg többet az [okosszerződések összeilleszthetőségről](/developers
 
 Az okosszerződések önmagukban nem képesek információt lekérni a „külvilági” eseményekről, mivel nem tudnak adatot szerezni a láncon kívüli forrásokból. Tehát nem tudnak válaszolni a világ történéseire. Ez a tervezett logikájuk. A külső információkra való támaszkodás veszélyeztetheti a biztonság és a decentralizáció szempontjából fontos konszenzust.
 
-Ugyanakkor fontos a blokklánchoz tartozó alkalmazásoknak, hogy láncon kívüli adatokat használhassanak. A megoldás az [orákulum](/developers/docs/oracles/), amely egy olyan eszköz, ami láncon kívüli adatokat kap fel és tesz elérhetővé az okosszerződések számára.
+Ugyanakkor fontos a blokklánchoz tartozó alkalmazásoknak, hogy láncon kívüli adatokat használhassanak. A megoldás az [orákulum](/developers/docs/oracles/), amely láncon kívüli adatokat kér le és tesz elérhetővé az okosszerződések számára.
 
 Az okosszerződések másik korlátja a maximális méret. Legfeljebb 24 KB méretű lehet egy okosszerződés, különben nem lesz elegendő gáz a működéséhez. Ezt meg lehet kerülni a [gyémántminta](https://eips.ethereum.org/EIPS/eip-2535) használatával.
 

@@ -13,6 +13,8 @@ hideEditButton: true
 
 Bu, topluluğumuz tarafından sağlanan kapsamlı olmayan bir listedir. Bu listeye eklenecek yaklaşan bir Ethereum etkinliğini biliyor musunuz? [Lütfen ekleyin](https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-events.json)!
 
+<EventsOrganizerBanner className="mt-16" />
+
 ## Ethereum buluşmaları {#meetups}
 
 İşinize yarayan bir etkinlik görmüyor musunuz? Bir buluşmaya katılmayı deneyin. Buluşmalar, Ethereum meraklılarından oluşan gruplar tarafından düzenlenen daha küçük etkinliklerdir. Ethereum ile ilgilenen kişilerin bir araya gelme, Ethereum hakkında konuşma ve son gelişmeler hakkında bilgi edinme şansı olur.

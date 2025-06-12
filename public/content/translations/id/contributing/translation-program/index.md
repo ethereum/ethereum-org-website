@@ -36,9 +36,9 @@ Bacaan lanjutan mengenai Program Penerjemahan ethereum.org [visi dan misi](/cont
 
 ### Kemajuan kami sejauh ini {#our-progress}
 
-- [**6.000+** penerjemah](/contributing/translation-program/contributors/)
-- **62** bahasa ada di situs
-- [**3 juta** kata telah diterjemahkan di 2023](/contributing/translation-program/acknowledgements/)
+- [**6.900+** penerjemah](/contributing/translation-program/contributors/)
+- **68** bahasa ada di situs
+- [**2.89 juta** kata telah diterjemahkan di 2024](/contributing/translation-program/acknowledgements/)
 
 <TranslationChartImage />
 

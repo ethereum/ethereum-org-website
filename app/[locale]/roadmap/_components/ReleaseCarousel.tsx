@@ -38,14 +38,14 @@ const ReleaseCarousel = () => {
     })
 
     // Upcoming: has a releaseDate, but is in the future
-    const upcomingReleases = releasesData.filter((release) => {
+    const hasUpcomingRelease = releasesData.some((release) => {
       if (!("releaseDate" in release) || !release.releaseDate) return false
       const releaseDate = new Date(release.releaseDate)
       return releaseDate > now
     })
 
     // If upcoming releases exist, start index after production releases
-    if (upcomingReleases.length > 0) return productionReleases.length
+    if (hasUpcomingRelease) return productionReleases.length
 
     // If no upcoming releases, start at the last production release
     return productionReleases.length - 1

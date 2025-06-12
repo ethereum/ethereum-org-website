@@ -207,7 +207,7 @@ export const getFilteredWalletsCount = (
 ) => {
   return wallets.filter((wallet) => {
     const activeFilters = Object.entries(filters).filter(
-      ([_, value]) => value === true
+      ([, value]) => value === true
     )
 
     return activeFilters.every(([feature]) => wallet[feature] === true)

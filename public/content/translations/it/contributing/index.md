@@ -25,7 +25,6 @@ Siamo un'accogliente community che ti aiuterà a crescere e a istruirti nell'eco
 - [Crea/modifica i contenuti](/contributing/#how-to-update-content): suggerisci nuove pagine o apporta modifiche a ciò che esiste già
 - [Aggiungi risorse della community](/contributing/content-resources/): aggiungi un articolo o una risorsa utili a una pagina rilevante
 - [Suggerisci una risorsa di progettazione](/contributing/design/adding-design-resources/): aggiungi, aggiorna (ed elimina) le risorse di progettazione utili
-- [Aggiungi un termine del glossario](/contributing/adding-glossary-terms/): aiutaci a continuare a espandere il [glossario](/glossary/) di Ethereum
 - [Quiz](/contributing/quizzes/): aggiungi, aggiorna (ed elimina) le banche di domande dei quiz per un pagina rilevante
 
 **Idee di funzionalità**
@@ -90,7 +89,7 @@ Abbiamo una bassa barriera per l'inserimento di ticket sul nostro repository di 
 
 Se il tuo contributo viene aggiunto a ethereum.org, avrai una possibilità di rivendicare un distintivo speciale su [Galxe](https://app.galxe.com/quest/ethereumorg). Un token di traguardo su catena (OAT) è la dimostrazione che tu abbia contribuito a rendere l'ecosistema un po' più fantastico.
 
-[Maggiori informazioni sui OAT](https://help.galxe.com/en/articles/7067290-galxe-oats-reward-and-celebrate-achievements)
+[Maggiori informazioni sui OAT](https://help.galxe.com/en/articles/9645630-create-quest-rewards#h_1c5d63ba03)
 
 ### Come reclamare
 1. Unisciti al nostro [server Discord](https://discord.gg/ethereum-org).

@@ -6,7 +6,7 @@ lang: id
 
 # Kontribusi desain untuk ethereum.org {#design-contributions}
 
-Desain adalah komponen penting dari setiap proyek, dan dengan mendedikasikan waktu dan keterampilan desain Anda untuk Ethereum.org, Anda dapat membantu meningkatkan pengalaman pengguna bagi pengunjung kami. Berkontribusi pada proyek open-source memberikan kesempatan untuk mendapatkan pengalaman yang relevan dan mengembangkan keterampilan Anda dalam lingkungan yang kolaboratif. Anda akan memiliki kesempatan untuk bekerja dengan desainer, pengembang, dan anggota komunitas lainnya, yang semuanya memiliki perspektif dan wawasan yang unik.
+Desain adalah komponen penting dari proyek apa pun, dan dengan mendedikasikan waktu dan keterampilan desain Anda untuk ethereum.org, Anda dapat membantu meningkatkan pengalaman pengguna untuk pengunjung kami. Berkontribusi pada proyek open-source memberikan kesempatan untuk mendapatkan pengalaman yang relevan dan mengembangkan keterampilan Anda dalam lingkungan yang kolaboratif. Anda akan memiliki kesempatan untuk bekerja dengan desainer, pengembang, dan anggota komunitas lainnya, yang semuanya memiliki perspektif dan wawasan yang unik.
 
 Pada akhirnya, ini adalah cara yang bagus untuk membangun portofolio yang beragam dan mengesankan yang menampilkan keterampilan desain Anda.
 
@@ -30,7 +30,7 @@ Berikan umpan balik di situs web kami dengan:
 
 ### <Emoji text=":three:" size={1} /> &nbsp;Temukan masalah terkait desain di situs web dan laporkan {#report-design-issues}
 
-Ethereum.org adalah situs web yang berkembang pesat dengan banyak fitur dan konten. Beberapa UI dapat dengan mudah menjadi ketinggalan zaman atau dapat ditingkatkan. Jika Anda menemukan kasus seperti itu, harap laporkan agar menjadi perhatian kami.
+ethereum.org adalah situs web yang berkembang pesat dengan banyak fitur dan konten. Beberapa UI dapat dengan mudah menjadi ketinggalan zaman atau dapat ditingkatkan. Jika Anda menemukan kasus seperti itu, harap laporkan agar menjadi perhatian kami.
 
 1. Kunjungi situs web dan perhatikan desainnya.
 2. Ambil tangkapan layar dan catat jika Anda melihat masalah visual atau UX.
@@ -51,10 +51,10 @@ Sistem desain kami membuat mendesain ethereum.org menjadi menyenangkan dan mudah
 
 1. Pilih isu yang akan dikerjakan dari [papan sistem desain](https://github.com/ethereum/ethereum-org-website/labels/design%20system) di GitHub atau buat yang baru.
 2. Minta isu yang dipilih untuk ditugaskan kepada Anda.
-3. Mulailah mendesain komponen yang diminta di figma.
+3. Mulailah mendesain komponen yang diminta di Figma.
 4. Bagikan dengan tim desain di GitHub saat Anda membutuhkan tinjauan atau panduan.
 5. Tim desain akan meninjau.
-6. Tim Desain akan memasukan perubahan ke dalam file utama dan mempublikasikan file ke komunitas.
+6. Tim desain akan memasukkan perubahan dalam file utama dan memublikasikan file tersebut ke komunitas.
 
 ### <Emoji text=":six:" size={1} /> &nbsp;Tulis konten terkait desain di situs web {#write-design-articles}
 
@@ -64,7 +64,7 @@ Komunitas pengembang Ethereum sangat kuat, tetapi komunitas desain sedikit terti
 2. Buka repositori GitHub kami dan [ajukan isu](https://github.com/ethereum/ethereum-org-website/issues/new) saat mengusulkan topik (jangan menulis konten terlebih dahulu).
 3. Tunggu hingga tim desain menyetujuinya.
 4. Setelah disetujui, tulislah kontennya.
-5. Kirimkan di masalah GH yang sesuai.
+5. Kirimkan tulisan Anda di edisi GitHub yang sesuai.
 
 ### <Emoji text=":seven:" size={1} /> &nbsp;Gambar ilustrasi baru {#prepare-illustrations}
 

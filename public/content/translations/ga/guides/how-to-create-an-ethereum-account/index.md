@@ -1,6 +1,6 @@
 ---
 title: Conas cuntas Ethereum a "chruthú"
-description: Treoir céim ar chéim ar chruthú cuntas Ethereum ag baint úsáide as sparán.
+description: Treoir céim ar chéim maidir le cuntas Ethereum a chruthú ag baint úsáide as sparán.
 lang: ga
 ---
 

@@ -99,7 +99,7 @@ Dennoch sollten Sie Audits nicht als Wunderwaffe betrachten. Smart Contract-Audi
 
 Die Einrichtung eines Prämienprogramms für das Aufdecken von Fehlern (Bug Bounty Program) ist ein weiterer Ansatz zur Durchführung externer Codeüberprüfungen. Ein Bug Bounty ist eine finanzielle Belohnung für Personen (in der Regel Whitehat-Hacker), die Schwachstellen in einer Applikation entdecken.
 
-Wenn sie richtig eingesetzt werden, geben Bug Bounties den Mitgliedern der Hacker-Community einen Anreiz, Ihren Code auf kritische Fehler zu untersuchen. Ein reales Beispiel ist der „Infinite Money Bug“, der es einem Angreifer ermöglicht hätte, eine unbegrenzte Menge an Ether auf [Optimism](https://www.optimism.io/), einem [Layer 2](/layer-2/)-Protokoll, das auf Ethereum läuft, zu erzeugen. Glücklicherweise entdeckte ein Whitehat-Hacker [den Fehler](https://www.saurik.com/optimism.html) und meldete ihn dem Team, [und erhielt dafür eine hohe Belohnung](https://cryptoslate.com/critical-bug-in-ethereum-l2-optimism-2m-bounty-paid/).
+Wenn sie richtig eingesetzt werden, geben Bug Bounties den Mitgliedern der Hacker-Community einen Anreiz, Ihren Code auf kritische Fehler zu untersuchen. Ein Beispiel aus der Praxis ist der „unendliches Geld“-Fehler, der einem Angreifer ermöglicht hätte, eine unbegrenzte Menge an Ether auf [Optimism](https://www.optimism.io/) zu erzeugen, einem [Layer-2](/layer-2/)-Protokoll, das auf Ethereum läuft. Glücklicherweise entdeckte ein Whitehat-Hacker [den Fehler](https://www.saurik.com/optimism.html) und meldete ihn dem Team, [und erhielt dafür eine hohe Belohnung](https://cryptoslate.com/critical-bug-in-ethereum-l2-optimism-2m-bounty-paid/).
 
 Eine sinnvolle Strategie besteht darin, die Auszahlung eines Bug-Bounty-Programms im Verhältnis zur Höhe der auf dem Spiel stehenden Mittel festzulegen. Dieser als „[Skalierung zum Aufdecken von Fehlern](https://medium.com/immunefi/a-defi-security-standard-the-scaling-bug-bounty-9b83dfdc1ba7)“ bezeichnete Ansatz bietet finanzielle Anreize für Einzelpersonen, Schwachstellen verantwortungsbewusst offenzulegen, anstatt sie auszunutzen.
 
@@ -115,7 +115,7 @@ Die Verfügbarkeit von Audits und Bug Bounties entbindet Sie nicht von Ihrer Ver
 
 - Verwendung einer [Entwicklungsumgebung](/developers/docs/frameworks/) zum Testen, Kompilieren und Bereitstellen von Smart Contracts
 
-- Führen Sie Ihren Code in grundlegenden Code-Analysewerkzeugen wie [Cyfrin Awderyn](https://github.com/Cyfrin/aderyn), Mythril und Slither aus. Idealerweise sollten Sie dies tun, noch bevor eine Pull-Anfrage eingebunden wird, und die Unterschiede in der Ergebnisausgabe vergleichen
+- Führen Sie Ihren Code durch grundlegende Code-Analyse-Tools wie [Cyfrin Aderyn](https://github.com/Cyfrin/aderyn), Mythril und Slither. Idealerweise sollten Sie dies tun, noch bevor eine Pull-Anfrage eingebunden wird, und die Unterschiede in der Ergebnisausgabe vergleichen
 
 - Stellen Sie sicher, dass Ihr Code ohne Fehler kompiliert wird und der Solidity-Compiler keine Warnungen ausgibt
 
@@ -211,11 +211,11 @@ Sie können sich auch für ein handelsübliches Überwachungsprogramm entscheide
 
 ### 7. Sichere Governance-Systeme (Verwaltungssysteme) entwerfen {#design-secure-governance-systems}
 
-Vielleicht möchten Sie Ihre Anwendung dezentralisieren, indem Sie die Kontrolle über die wichtigsten Smart Contracts an Community-Mitglieder übergeben. In diesem Fall wird das Smart Contract-System ein Governance-Modul enthalten – einen Mechanismus, der es den Community-Mitgliedern ermöglicht, administrative Maßnahmen über ein On-Chain-Governance-System zu genehmigen. So können die Token-Inhaber beispielsweise über einen Vorschlag abstimmen, einen Proxy-Vertrag auf eine neue Implementierung zu aktualisieren.
+Vielleicht möchten Sie Ihre Anwendung dezentralisieren, indem Sie die Kontrolle über die wichtigsten Smart Contracts an Community-Mitglieder übergeben. In diesem Fall wird das Smart-Contract-System ein Governance-Modul enthalten - einen Mechanismus, der es den Mitgliedern der Gemeinschaft ermöglicht, administrative Aktionen über ein On-Chain-Governance-System zu genehmigen. So können die Token-Inhaber beispielsweise über einen Vorschlag abstimmen, einen Proxy-Vertrag auf eine neue Implementierung zu aktualisieren.
 
 Eine dezentrale Verwaltung kann von Vorteil sein, insbesondere weil sie die Interessen von Entwicklern und Endnutzern in Einklang bringt. Dennoch können die Mechanismen zur Steuerung von Smart Contracts bei falscher Umsetzung neue Risiken mit sich bringen. Ein plausibles Szenario ist, dass ein Angreifer durch die Aufnahme eines [Flash-Darlehens](/defi/#flash-loans) enorme Stimmkraft (gemessen an der Anzahl der gehaltenen Token) erlangt und einen böswilligen Vorschlag durchsetzt.
 
-Eine Möglichkeit zur Vermeidung von Problemen im Zusammenhang mit der On-Chain-Governance besteht darin, [eine Zeitsperre zu nutzen](https://blog.openzeppelin.com/protect-your-users-with-smart-contract-timelocks/). Eine Zeitsperre verhindert, dass ein Smart Contract bestimmte Aktionen ausführt, bis eine bestimmte Zeitspanne verstrichen ist. Andere Strategien bestehen darin, jedem Token ein „Stimmgewicht“ zuzuweisen, das sich danach richtet, wie lange er gesperrt war, oder die Stimmkraft einer Adresse in einem historischen Zeitraum (z. B. 2-3 Blöcke in der Vergangenheit) anstelle des aktuellen Blocks zu messen. Beide Methoden verringern die Möglichkeit, schnell Stimmrechte anzuhäufen, um On-Chain-Abstimmungen zu beeinflussen.
+Eine Möglichkeit zur Vermeidung von Problemen im Zusammenhang mit der On-Chain-Governance besteht darin, [eine Zeitsperre zu nutzen](https://blog.openzeppelin.com/protect-your-users-with-smart-contract-timelocks/). Eine Zeitsperre verhindert, dass ein Smart Contract bestimmte Aktionen ausführt, bis eine bestimmte Zeitspanne verstrichen ist. Andere Strategien bestehen darin, jedem Token ein „Stimmgewicht“ zuzuweisen, das sich danach richtet, wie lange er gesperrt war, oder die Stimmkraft einer Adresse in einem historischen Zeitraum (z. B. 2-3 Blöcke in der Vergangenheit) anstelle des aktuellen Blocks zu messen. Beide Methoden reduzieren die Möglichkeit, schnell Stimmrecht anzuhäufen, um On-Chain-Abstimmungen zu beeinflussen.
 
 Weitere Informationen zu [der Gestaltung sicherer Governance-Systeme](https://blog.openzeppelin.com/smart-contract-security-guidelines-4-strategies-for-safer-governance-systems/), [verschiedenen Abstimmungsmechanismen in DAOs](https://hackernoon.com/governance-is-the-holy-grail-for-daos) und [den gängigen DAO-Angriffsvektoren, die DeFi nutzen](https://dacian.me/dao-governance-defi-attacks), finden Sie unter den geteilten Links.
 
@@ -235,7 +235,7 @@ Die EVM erlaubt keine Nebenläufigkeit, was bedeutet, dass zwei Verträge, die a
 
 Die Übertragung des Kontrollflusses an nicht vertrauenswürdige Verträge ist zwar meist harmlos, kann aber Probleme verursachen, wie z. B. Wiederholungsangriffe. Ein Wiederholungsangriff liegt vor, wenn ein böswilliger Vertrag in einen gefährdeten Vertrag eingreift, bevor der ursprüngliche Funktionsaufruf abgeschlossen ist. Diese Art des Angriffs lässt sich am besten anhand eines Beispiels erklären.
 
-Nehmen wir einen einfachen Smart Contract („Opfer“), der es jedem erlaubt, Ether einzuzahlen und abzuheben:
+Betrachten Sie einen einfachen Smart Contract („Opfer"), der es jedem ermöglicht, Ether einzuzahlen und abzuheben:
 
 ```solidity
 // This contract is vulnerable. Do not use in production
@@ -346,7 +346,7 @@ contract MutexPattern {
         require(balances[msg.sender] >= _amount, "No balance to withdraw.");
 
         balances[msg.sender] -= _amount;
-        bool (success, ) = msg.sender.call{value: _amount}("");
+        (bool success, ) = msg.sender.call{value: _amount}("");
         require(success);
 
         return true;
@@ -439,13 +439,13 @@ Ab Version 0.8.0 weist der Solidity-Compiler Code zurück, der zu Integer-Unterl
 
 #### Oracle-Manipulation {#oracle-manipulation}
 
-[Oracles](/developers/docs/oracles/) beziehen Off-Chain-Informationen und senden sie on-chain, damit Smart Contracts diese nutzen können. Mit Orakeln können Sie Smart Contracts entwerfen, die mit Off-Chain-Systemen wie z. B. Kapitalmärkten interagieren, was ihre Anwendung erheblich erweitert.
+[Oracles](/developers/docs/oracles/) beziehen Informationen aus der realen Welt (Off-Chain) und senden sie auf die Blockchain (On-Chain), damit Smart Contracts diese nutzen können. Mit Oracles können Sie Smart Contracts entwickeln, die mit Off-Chain-Systemen wie Kapitalmärkten zusammenarbeiten und dadurch ihre Anwendungsmöglichkeiten stark erweitern.
 
-Wenn das Orakel jedoch beschädigt ist und falsche Informationen on-chain sendet, werden Smart Contracts auf der Grundlage falscher Informationen ausgeführt, was zu Problemen führen kann. Dies ist die Grundlage des „Orakelproblems“, bei dem es darum geht sicherzustellen, dass die Informationen aus einem Blockchain-Orakel korrekt, aktuell und zeitnah sind.
+Aber wenn das Oracle manipuliert wird und falsche Daten auf die Blockchain sendet, werden Smart Contracts basierend auf falschen Eingaben ausgeführt, was Probleme verursachen kann. Dies ist die Grundlage des „Orakelproblems“, bei dem es darum geht sicherzustellen, dass die Informationen aus einem Blockchain-Orakel korrekt, aktuell und zeitnah sind.
 
-Ein damit zusammenhängendes Sicherheitsproblem ist die Verwendung eines On-Chain-Orakels, z. B. einer dezentralen Börse, um den Spotpreis für ein Asset zu ermitteln. Leihplattformen in der [dezentralen Finanzbranche (DeFi)](/defi/) tun dies oft, um den Wert der Beleihungsobjekte eines Nutzers zu ermitteln, anhand derer er bestimmen kann, wie viel er leihen kann.
+Ein ähnliches Sicherheitsproblem ist die Nutzung eines On-Chain-Oracles, wie zum Beispiel einer dezentralen Börse, um den aktuellen Preis eines Assets zu ermitteln. Leihplattformen in der [dezentralen Finanzbranche (DeFi)](/defi/) tun dies oft, um den Wert der Beleihungsobjekte eines Nutzers zu ermitteln, anhand derer er bestimmen kann, wie viel er leihen kann.
 
-Die DEX-Preise sind häufig korrekt, was vor allem darauf zurückzuführen ist, dass Arbitrageure die Gleichheit auf den Märkten wiederherstellen. Sie sind jedoch anfällig für Manipulationen, insbesondere wenn das On-Chain-Orakel die Preise von Assets auf der Grundlage historischer Handelsdaten berechnet (was normalerweise der Fall ist).
+Die DEX-Preise sind häufig korrekt, was vor allem darauf zurückzuführen ist, dass Arbitrageure die Gleichheit auf den Märkten wiederherstellen. Die sind aber anfällig für Manipulationen, besonders wenn das On-Chain-Oracle die Assetpreise anhand von historischen Handelsmustern berechnet (was meistens der Fall ist).
 
 So könnte ein Angreifer beispielsweise den Spotpreis eines Assets künstlich in die Höhe treiben, indem er einen Blitzkredit aufnimmt, kurz bevor er mit Ihrem Kreditvertrag interagiert. Die Abfrage der DEX nach dem Preis des Assets würde einen höheren als den normalen Wert ergeben (da die große „Kaufbestellung“ des Angreifers die Nachfrage nach dem Asset verzerrt), so dass er mehr Geld leihen kann, als er sollte. Solche „Flash-Darlehensangriffe“ wurden genutzt, um das Vertrauen in Preis-Orakel bei DeFi-Anwendungen auszunutzen, was Protokolle Millionen an verlorenen Guthaben gekostet hat.
 
@@ -453,7 +453,7 @@ So könnte ein Angreifer beispielsweise den Spotpreis eines Assets künstlich in
 
 Die Mindestanforderung, um [Oracle-Manipulation zu vermeiden](https://www.cyfrin.io/blog/price-oracle-manipultion-attacks-with-examples), besteht darin, ein dezentrales Oracle-Netzwerk zu verwenden, das Informationen aus mehreren Quellen abfragt, um einzelne Ausfallpunkte zu vermeiden. In den meisten Fällen verfügen dezentrale Orakel über eingebaute kryptoökonomische Anreize, die die Nodes des Orakels dazu bringen, korrekte Informationen zu melden, was sie sicherer macht als zentralisierte Orakel.
 
-Wenn Sie vorhaben, ein On-Chain-Orakel für Asset-Preise abzufragen, sollten Sie ein Orakel verwenden, das einen Mechanismus für zeitgewichtete Durchschnittspreise (TWAP) implementiert. Ein [TWAP-Orakel](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/oracles) fragt den Preis eines Assets zu zwei verschiedenen Zeitpunkten ab (die Sie ändern können) und berechnet den Spotpreis auf der Grundlage des erhaltenen Durchschnitts. Die Wahl längerer Zeiträume schützt Ihr Protokoll vor Preismanipulationen, da große Aufträge, die erst kürzlich ausgeführt wurden, keinen Einfluss auf die Preise der Assets haben können.
+Wenn Sie vorhaben, ein On-Chain-Oracle nach Assetpreisen zu befragen, sollten Sie eines in Erwägung ziehen, das einen zeitgewichteten Durchschnittspreis (TWAP) verwendet. Ein [TWAP-Orakel](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/oracles) fragt den Preis eines Assets zu zwei verschiedenen Zeitpunkten ab (die Sie ändern können) und berechnet den Spotpreis auf der Grundlage des erhaltenen Durchschnitts. Die Wahl längerer Zeiträume schützt Ihr Protokoll vor Preismanipulationen, da große Aufträge, die erst kürzlich ausgeführt wurden, keinen Einfluss auf die Preise der Assets haben können.
 
 ## Ressourcen zur Sicherheit von Smart Contracts für Entwickler {#smart-contract-security-resources-for-developers}
 
@@ -563,7 +563,7 @@ Wenn Sie vorhaben, ein On-Chain-Orakel für Asset-Preise abzufragen, sollten Sie
 
 - **[Smart Contract Security Verification Standard](https://github.com/securing/SCSVS)** - _Vierzehnteilige Checkliste zur Standardisierung der Sicherheit von Smart Contracts für Entwickler, Architekten, Sicherheitsüberprüfer und Anbieter._
 
-- **[Smart-Contract-Sicherheit und -Auditing erlernen](https://updraft.cyfrin.io/courses/security) – _der ultimative Kurs für Smart-Contract-Sicherheit und -Auditing, der für Smart-Contract-Entwickler erstellt wurde, die ihre Best Practices zur Sicherheit verbessern und Sicherheitsforscher werden möchten._
+- **[Smart Contract Security und Auditing lernen](https://updraft.cyfrin.io/courses/security)** - _Ultimativer Kurs zu Smart Contract Security und Auditing, entwickelt für Smart-Contract-Entwickler, die ihre Security-Best-Practices verbessern und Security-Forscher werden möchten._
 
 ### Tutorials zur Sicherheit von Smart Contracts {#tutorials-on-smart-contract-security}
 

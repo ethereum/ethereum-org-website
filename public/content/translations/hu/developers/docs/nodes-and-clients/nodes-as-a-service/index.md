@@ -226,7 +226,7 @@ Az alábbiak a legnépszerűbb Ethereum-csomópontszolgáltatók – ha ismer ol
     - Több mint 500 adminisztratív és szolgáltatói API
     - RESTful-interfész az Ethereum-tranzakciók beküldésére (Apache Kafka támogatott)
     - Kimenő adatfolyamok esemény-végrehajtáshoz (Apache Kafka támogatott)
-    - Kimerítő láncon kívüli adatok és kiegészítő szolgáltatások (pl. kétoldalú titkosított üzentátadás)
+    - Kimerítő láncon kívüli adatok és kiegészítő szolgáltatások (pl. kétoldalú titkosított üzenetátadás)
     - Egyértelmű becsatlakozás a hálózatba irányítással és szerepkör szerinti hozzáféréskontroll
     - Szofisztikált felhasználókezelés az adminisztrátorok és a végfelhasználók felé is
     - Nagy mértékben skálázható, rugalmas, vállalati szintű infrastruktúra

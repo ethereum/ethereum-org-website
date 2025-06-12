@@ -972,7 +972,7 @@ export const useWalletFilters = (): FilterOption[] => {
           filterLabel: "New to crypto",
           description: "",
           inputState: false,
-          input: (_) => {
+          input: () => {
             return <></>
           },
           options: [],

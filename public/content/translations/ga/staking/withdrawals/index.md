@@ -72,7 +72,7 @@ Mar gheall ar uasghrádú Shanghai/Capella bhíothas in ann ETH a bhí i ngeall 
 
 Is é staid chuntas an bhailíochtóra féin a chinneann an bhfuil bailíochtóir áirithe incháilithe le haghaidh aistarraingthe nó nach bhfuil. Níl aon ionchur úsáideora ag teastáil ag aon am ar leith le cinneadh cé acu ar cheart nó nár cheart go dtionscnófaí aistarraingt cuntais – déantar an próiseas iomlán go huathoibríoch trí chiseal comhthola ar lúb leanúnach.
 
-### An bhfuil tú níos mó d’fhoghlaimeoir amhairc? {#visual-learner}
+### An foghlaimeoir amhairc den chuid is mó tú? {#visual-learner}
 
 Breathnaigh ar an míniú seo ar aistarraingtí geallchuir Ethereum ag Finematics:
 

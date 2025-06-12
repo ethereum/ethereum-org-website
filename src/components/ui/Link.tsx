@@ -88,7 +88,7 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
     return (
       <a
         target="_blank"
-        rel="noopener"
+        rel="noopener noreferrer"
         onClick={() =>
           trackCustomEvent(
             customEventOptions ?? {
@@ -119,7 +119,7 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
     return (
       <NextLink
         target="_blank"
-        rel="noopener"
+        rel="noopener noreferrer"
         onClick={() =>
           trackCustomEvent(
             customEventOptions ?? {

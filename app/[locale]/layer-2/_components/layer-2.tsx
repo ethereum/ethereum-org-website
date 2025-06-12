@@ -2,7 +2,7 @@
 
 import type { GrowThePieData, Lang } from "@/lib/types"
 
-import Callout from "@/components/Callout"
+import CalloutSSR from "@/components/CalloutSSR"
 import Card from "@/components/Card"
 import ExpandableCard from "@/components/ExpandableCard"
 import HubHero, { HubHeroProps } from "@/components/Hero/HubHero"
@@ -465,7 +465,7 @@ const Layer2Hub = ({
         id="layer-2-callout-cards"
         className="flex w-full flex-col px-8 py-8 md:flex-row"
       >
-        <Callout
+        <CalloutSSR
           image={ExploreImage}
           title={t("page-layer-2-callout-1-title")}
           description={t("page-layer-2-callout-1-description")}
@@ -482,8 +482,8 @@ const Layer2Hub = ({
               {t("common:nav-networks-explore-networks-label")}
             </ButtonLink>
           </div>
-        </Callout>
-        <Callout
+        </CalloutSSR>
+        <CalloutSSR
           image={WalkingImage}
           title={t("page-layer-2-callout-2-title")}
           description={t("page-layer-2-callout-2-description")}
@@ -501,7 +501,7 @@ const Layer2Hub = ({
               {t("common:learn-more")}
             </ButtonLink>
           </div>
-        </Callout>
+        </CalloutSSR>
       </div>
     </MainArticle>
   )

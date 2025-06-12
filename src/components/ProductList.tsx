@@ -16,6 +16,7 @@ type Content = {
   image?: ImageProps["src"]
   alt: string
   id?: string
+  className?: string
 }
 
 export type ProductListProps = {
@@ -39,13 +40,26 @@ const ProductList = ({ actionLabel, content, category }: ProductListProps) => {
       )}
       <List aria-labelledby={CATEGORY_NAME} className="m-0 mb-4">
         {content.map(
-          ({ title, description, link, image, alt, id, contentItems }, idx) => (
+          (
+            {
+              title,
+              description,
+              link,
+              image,
+              alt,
+              id,
+              contentItems,
+              className,
+            },
+            idx
+          ) => (
             <ListItem
               key={id || idx}
               color="text"
               className={cn(
                 "mb-0 mt-8 flex pb-4",
-                idx !== content.length - 1 && "border-b"
+                idx !== content.length - 1 && "border-b",
+                className
               )}
             >
               <div className="w-20">

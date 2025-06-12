@@ -1,3 +1,7 @@
+import { getTranslations } from "next-intl/server"
+
+import { TimeLeftLabels } from "@/lib/types"
+
 import { formatDate, isValidDate } from "@/lib/utils/date"
 
 import { DEFAULT_LOCALE } from "@/lib/constants"
@@ -29,3 +33,29 @@ export const parseStoryDates = (
     ...story,
     date: parseDate(date, locale),
   }))
+
+export const getTimeUnitTranslations = async (locale: string) => {
+  const t = await getTranslations({
+    locale,
+    namespace: "page-10-year-anniversary",
+  })
+  const timeLeftLabels: TimeLeftLabels = {
+    days: {
+      singular: t("page-10-year-countdown-day"),
+      plural: t("page-10-year-countdown-days"),
+    },
+    hours: {
+      singular: t("page-10-year-countdown-hour"),
+      plural: t("page-10-year-countdown-hours"),
+    },
+    minutes: {
+      singular: t("page-10-year-countdown-minute"),
+      plural: t("page-10-year-countdown-minutes"),
+    },
+    seconds: {
+      singular: t("page-10-year-countdown-second"),
+      plural: t("page-10-year-countdown-seconds"),
+    },
+  }
+  return timeLeftLabels
+}
