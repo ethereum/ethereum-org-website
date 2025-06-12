@@ -78,7 +78,7 @@ Tugann an fheidhm seo ar ais an méid `sócmhainní` a d'athródh an cruinneach�
 function maxDeposit(address receiver) public view returns (uint256 maxAssets)
 ```
 
-Tugann an fheidhm seo ar ais uasmhéid na sócmhainní bunúsacha is féidir a chur i dtaisce i nglao amháin <[`taisce`](#deposit) glaoch ón `fhaighteoir`.
+Tugann an fheidhm seo ar ais uasmhéid na sócmhainní bunúsacha is féidir a chur i dtaisce i nglao amháin [`taisce`](#deposit) glaoch ón `fhaighteoir`.
 
 #### previewDeposit {#previewdeposit}
 

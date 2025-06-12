@@ -70,7 +70,7 @@ Is féidir sonraíochtaí foirmiúla íseal-leibhéil a thabhairt mar airíonna 
 
 ### Airíonna i stíl Hoare {#hoare-style-properties}
 
-Soláthraíonn [Loighic Hoare](https://en.wikipedia.org/wiki/Hoare_logic) sraith rialacha foirmiúla chun réasúnú a dhéanamh maidir le cruinneas clár, lena n-áirítear conarthaí cliste. Tá airí i stíl Hoare léirithe ag triar Hoare {_P_}_c_{_Q_}, áit a bhfuil _c_ ina chlár agus _P_ agus _Q_ ina réamhchoinníollacha agus iarchoinníollacha ar staid an _c_ (i.e., an clár), ar a tugtar go foirmiúil _réamhchoinníollacha_ agus _iarchoinníollacha_, faoi seach.
+Soláthraíonn [Loighic Hoare](https://en.wikipedia.org/wiki/Hoare_logic) sraith rialacha foirmiúla chun réasúnú a dhéanamh maidir le cruinneas clár, lena n-áirítear conarthaí cliste. Tá airí i stíl Hoare léirithe ag triar Hoare `{P}c{Q}`, áit a bhfuil `c` ina chlár agus `P` agus `Q` ina réamhchoinníollacha agus iarchoinníollacha ar staid an `c` (i.e., an clár), ar a tugtar go foirmiúil _réamhchoinníollacha_ agus _iarchoinníollacha_, faoi seach.
 
 Is réamhchoinníoll é preideacáid a chuireann síos ar na coinníollacha a theastaíonn chun feidhm a rith i gceart; ní mór d'úsáideoirí a ghlaonn isteach sa chonradh an ceanglas seo a chomhlíonadh. Is éard is iarchoinníoll ann ná preideacáid a chuireann síos ar an gcoinníoll a bhunaíonn feidhm má dhéantar é a rith i gceart; is féidir le húsáideoirí a bheith ag súil go mbeidh an coinníoll seo fíor tar éis dóibh glaoch isteach sa bhfeidhm. Is preideacáid í _athróg_ i loighic Hoare a chaomhnaítear trí fheidhm a rith (i.e. ní athraíonn sé).
 

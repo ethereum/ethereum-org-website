@@ -8,7 +8,7 @@ Ba é Dagger-Hashimoto an cur i bhfeidhm taighde agus an tsonraíocht bhunaidh l
 
 ## Réamhriachtanais {#prerequisites}
 
-Chun an leathanach seo a thuiscint níos fearr, molaimid duit léamh ar dtús ar [cruthúnas-oibre comhdhearcaidh](/developers/docs/consensus-mechanisms/pow), <[mianadóireacht](/developers/docs/consensus-mechanisms/pow/mining), agus [algartaim mhianadóireachta](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms).
+Chun an leathanach seo a thuiscint níos fearr, molaimid duit léamh ar dtús ar [cruthúnas-oibre comhdhearcaidh](/developers/docs/consensus-mechanisms/pow), [mianadóireacht](/developers/docs/consensus-mechanisms/pow/mining), agus [algartaim mhianadóireachta](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms).
 
 ## Dagger-Hashimoto {#dagger-hashimoto}
 

@@ -435,7 +435,7 @@ contract Attack {
 
 ##### Conas gannsreabhadh agus róshreabhadh slánuimhir a chosc
 
-Ón leagan 0.8.0, diúltaíonn an tiomsaitheoir Solidity cód a mbíonn gannsreafaí agus rósreafaí slánuimhir mar thoradh air. Mar sin féin, ba cheart do chonarthaí arna dtiomsú le leagan tiomsaitheora níos ísle seiceálacha a dhéanamh ar fheidhmeanna a bhaineann le hoibríochtaí uimhríochta nó úsáid a bhaint as leabharlann (m.sh., <[SafeMath](https://docs.openzeppelin.com/contracts/2.x/api/math)) a sheiceálann le haghaidh gannsreabhadh/róshreabhadh.
+Ón leagan 0.8.0, diúltaíonn an tiomsaitheoir Solidity cód a mbíonn gannsreafaí agus rósreafaí slánuimhir mar thoradh air. Mar sin féin, ba cheart do chonarthaí arna dtiomsú le leagan tiomsaitheora níos ísle seiceálacha a dhéanamh ar fheidhmeanna a bhaineann le hoibríochtaí uimhríochta nó úsáid a bhaint as leabharlann (m.sh., [SafeMath](https://docs.openzeppelin.com/contracts/2.x/api/math)) a sheiceálann le haghaidh gannsreabhadh/róshreabhadh.
 
 #### Ionramháil Oracle {#oracle-manipulation}
 
