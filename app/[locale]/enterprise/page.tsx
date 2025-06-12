@@ -261,7 +261,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   ]
 
   return (
-    <div className="space-y-12 md:space-y-20">
+    <div className="mb-12 space-y-12 md:mb-20 md:space-y-20">
       <HubHero
         header={t("page-enterprise-hero-title")}
         description={t("page-enterprise-hero-subtitle")}
@@ -278,7 +278,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             },
           },
         ]}
-        className="[&_[data-label='breadcrumb']]:xl:text-body-light [&_[data-label='hero-content']]:xl:bg-accent-a [&_[data-label='hero-content']]:xl:text-background xl:[&_a:hover]:bg-accent-a-hover xl:[&_a:hover]:!text-background [&_a]:font-bold [&_a]:xl:bg-background [&_a]:xl:text-accent-a [&_img]:dark:invert"
+        className="[&_[data-label='breadcrumb']]:xl:text-body-light [&_[data-label='hero-content']]:xl:bg-accent-a [&_[data-label='hero-content']]:xl:text-background xl:[&_a:hover]:bg-accent-a-hover xl:[&_a:hover]:!text-background [&_a]:font-bold [&_a]:xl:bg-background [&_a]:xl:text-accent-a [&_img]:opacity-75 [&_img]:dark:invert"
       />
 
       <MainArticle className="space-y-12 px-4 md:space-y-20 md:px-10">
@@ -332,7 +332,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 
         <section
           id="ecosystem"
-          className="flex w-full flex-col items-center gap-y-12 rounded-t-[4rem] bg-radial-b px-4 py-10 md:py-12"
+          className="rounded-t-4xp flex w-full flex-col items-center gap-y-12 bg-radial-b px-4 py-10 md:rounded-t-[4rem] md:py-12"
         >
           <div className="max-w-prose space-y-4">
             <h2 className="max-w-prose text-center text-4xl font-black md:text-5xl">
@@ -359,7 +359,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                 {Array.from({ length: 3 }).map((_, idx) => (
                   <div
                     key={idx}
-                    className="flex min-w-fit animate-scroll-left-120 flex-nowrap items-center"
+                    className="flex min-w-fit animate-scroll-left-240 flex-nowrap items-center"
                   >
                     {players.map(({ name, Logo, className }) => (
                       <div
@@ -400,7 +400,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             <CasesColumn cases={cases.slice(2, 4)} />
             <CasesColumn cases={cases.slice(4, 6)} />
           </div>
-          <ButtonLink href="/enterprise/uses" variant="outline">
+          <ButtonLink href="/enterprise/use-cases" variant="outline">
             {t("page-enterprise-ecosystem-cta")}
           </ButtonLink>
         </section>
@@ -465,7 +465,7 @@ export async function generateMetadata({
     slug: ["enterprise"],
     title: t("page-enterprise-hero-title"),
     description: t("page-enterprise-metadata-description"),
-    image: "/images/heroes/enterprise-hero-white.jpg",
+    image: "/images/heroes/enterprise-hero-white.png",
   })
 }
 
