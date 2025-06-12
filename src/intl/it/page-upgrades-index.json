@@ -97,7 +97,7 @@
   "page-upgrades-question-6-answer-5": "È inoltre possibile partecipare alla discussione sulla ricerca e lo sviluppo di Ethereum su ethresearch.ch.",
   "page-upgrades-question-6-title": "Che cosa devo fare con la mia dapp?",
   "page-upgrades-question-6-desc": "La Fusione è stata progettata per avere un impatto minimo sugli sviluppatori di dapp, sebbene vi siano state alcune piccole modifiche che vale la pena notare.",
-  "page-upgrades-question-6-answer-1": "Gli sviluppatori di dapp che hanno familiarità con l'Ethereum precedente alla Fusione dovrebbero essere consapevoli di alcune modifiche. Queste includono la struttura e le tempistiche del blocco, alcune modifiche all'opcode, sorgenti di casualità sulla catena e il concetto di finalizzazione dell'epoca.",
+  "page-upgrades-question-6-answer-1": "Gli sviluppatori di dapp che hanno familiarità con l'Ethereum precedente alla Fusione dovrebbero essere consapevoli di alcune modifiche. Queste includono la struttura e le tempistiche dei blocchi, alcune modifiche all'opcode, sorgenti di casualità sulla catena e il concetto di finalizzazione dell'epoca.",
   "page-upgrades-question-6-answer-1-link": "Come la Fusione ha influito sul livello applicativo di Ethereum",
   "page-upgrades-question-6-answer-2": "Le applicazioni sono rimaste pressoché inalterate.",
   "page-upgrades-question-7-desc": "Molti team da tutta la community stanno lavorando ai vari aggiornamenti di Ethereum.",
