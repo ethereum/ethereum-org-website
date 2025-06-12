@@ -37,6 +37,7 @@ import Visa from "@/components/icons/enterprise/visa.svg"
 import Walmart from "@/components/icons/enterprise/walmart.svg"
 import WFP from "@/components/icons/enterprise/wfp.svg"
 import MainArticle from "@/components/MainArticle"
+import Translation from "@/components/Translation"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Card } from "@/components/ui/card"
 import { Skeleton, SkeletonLines } from "@/components/ui/skeleton"
@@ -141,49 +142,45 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     {
       name: "Blackrock",
       content: (
-        <>
-          Launched <strong>$2,9B+ tokenized</strong> U.S. Treasury fund on
-          Ethereum and its ecosystem, delivering same-day liquidity to
-          institutions.
-        </>
+        <Translation
+          id="page-enterprise-cases-blackrock-content"
+          ns="page-enterprise"
+        />
       ),
     },
     {
       name: "MediLedger",
-      content:
-        "Enables Pfizer and Genentech to verify drug authenticity and ensure pharma compliance.",
+      content: t("page-enterprise-cases-mediledger-content"),
     },
     {
       name: "European Investment Bank",
       content: (
-        <>
-          <strong>Issued a €100M digital bond</strong> on public Ethereum. The
-          project was conducted in cooperation with the Banque de France,
-          Goldman Sachs, Santander and Société Generale.
-        </>
+        <Translation
+          ns="page-enterprise"
+          id="page-enterprise-cases-eib-content"
+        />
       ),
     },
     {
       name: "T-Mobile & SK Telecom",
-      content:
-        "Use Ethereum to streamline roaming and device trust—shared ledgers simplify authentication and billing.",
+      content: t("page-enterprise-cases-tmobile-content"),
     },
     {
       name: "UN World Food Programme",
       content: (
-        <>
-          UN <strong>tracks aid for 100,000+ refugees</strong> using a private
-          Ethereum fork, boosting audit capabilities.
-        </>
+        <Translation
+          id="page-enterprise-cases-unwfp-content"
+          ns="page-enterprise"
+        />
       ),
     },
     {
       name: "Visa",
       content: (
-        <>
-          Settled over <strong>$225 million</strong> in stablecoin transactions
-          using USDC across Ethereum and other blockchains.
-        </>
+        <Translation
+          id="page-enterprise-cases-visa-content"
+          ns="page-enterprise"
+        />
       ),
     },
   ]
@@ -289,12 +286,10 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           <div className="max-w-prose space-y-4">
             <h2>{t("page-enterprise-metrics-header")}</h2>
             <p>
-              Ethereum is the leading platform for <strong>issuing</strong>,{" "}
-              <strong>managing</strong>, and{" "}
-              <strong>settling digital assets</strong>. From tokenized money and
-              financial instruments to real-world assets and emerging markets,
-              Ethereum provides a secure, neutral foundation for the digital
-              economy.
+              <Translation
+                id="page-enterprise-metrics-subtext"
+                ns="page-enterprise"
+              />
             </p>
           </div>
 
