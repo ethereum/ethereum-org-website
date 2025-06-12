@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react"
 import isChromatic from "chromatic"
-import shuffle from "lodash/shuffle"
+import { shuffle } from "lodash"
 
 import type {
   AnswerChoice,

@@ -220,6 +220,7 @@ const config = {
         "tooltip-shadow": "var(--tooltip-shadow)",
         "hub-hero-content": "var(--hub-hero-content)",
         "search-background": "var(--search-background)",
+        "gradient-step-1": "var(--gradient-step-1)",
       },
 
       backgroundImage: {
@@ -234,6 +235,7 @@ const config = {
         "card-gradient": "var(--card-gradient)",
         "card-gradient-secondary": "var(--card-gradient-secondary)",
         "card-gradient-secondary-hover": "var(--card-gradient-secondary-hover)",
+        "ten-year-gradient": "var(--ten-year-gradient)",
       },
       boxShadow: {
         "table-box": "var(--table-box-shadow)",

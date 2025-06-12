@@ -141,6 +141,6 @@ _Megjegyzés_: Minden csoportos funkció, beleértve a hook-ot is, egyéni vált
 ## További olvasnivaló {#further-reading}
 
 - [ERC-1155: Multitoken szabvány](https://eips.ethereum.org/EIPS/eip-1155)
-- [ERC-1155: Openzeppelin-dokumentációk](https://docs.openzeppelin.com/contracts/3.x/erc1155)
+- [ERC-1155: Openzeppelin-dokumentációk](https://docs.openzeppelin.com/contracts/5.x/erc1155)
 - [ERC-1155: GitHub mappa](https://github.com/enjin/erc-1155)
 - [Alchemy NFT API](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api)
