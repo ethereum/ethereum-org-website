@@ -1,4 +1,4 @@
-import pick from "lodash.pick"
+import { pick } from "lodash"
 import {
   getMessages,
   getTranslations,
@@ -45,14 +45,13 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const getRandomL2s = () => {
     let randomL2s = layer2Data.filter(
       (network) =>
-        networkMaturity(l2beatData.data.projects[network.l2beatID]) === "robust"
+        networkMaturity(l2beatData.projects[network.l2beatID]) === "robust"
     )
 
     if (randomL2s.length === 0) {
       randomL2s = layer2Data.filter(
         (network) =>
-          networkMaturity(l2beatData.data.projects[network.l2beatID]) ===
-          "maturing"
+          networkMaturity(l2beatData.projects[network.l2beatID]) === "maturing"
       )
     }
 
@@ -85,8 +84,6 @@ export async function generateStaticParams() {
     locale,
   }))
 }
-
-export const dynamicParams = false
 
 export async function generateMetadata({
   params,
