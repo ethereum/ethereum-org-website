@@ -347,7 +347,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             dir="ltr"
             className="w-full text-body opacity-40 grayscale"
             style={{
-              mask: `linear-gradient(to right, transparent 1rem, white 15%, white 85%, transparent calc(100% - 1rem))`,
+              mask: `linear-gradient(to right, transparent 0, white 10%, white 90%, transparent 100%)`,
             }}
           >
             {Array.from({ length: 3 }).map((_, row) => (
