@@ -2,13 +2,21 @@
 
 import { useEffect, useState } from "react"
 
+import type { TimeLeftLabels } from "@/lib/types"
+
 import { cn } from "@/lib/utils/cn"
 
 interface CountDownProps {
   className?: string
+  timeLeftLabels: TimeLeftLabels
+  expiredLabel: string
 }
 
-const CountDown = ({ className }: CountDownProps) => {
+const CountDown = ({
+  className,
+  timeLeftLabels,
+  expiredLabel,
+}: CountDownProps) => {
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
@@ -46,11 +54,7 @@ const CountDown = ({ className }: CountDownProps) => {
   }, [])
 
   if (isExpired) {
-    return (
-      <div className="text-center text-2xl font-bold">
-        Ethereum is 10 years old! 🚀
-      </div>
-    )
+    return <div className="text-center text-2xl font-bold">{expiredLabel}</div>
   }
 
   return (
@@ -64,7 +68,11 @@ const CountDown = ({ className }: CountDownProps) => {
         <div className="font-mono text-4xl font-bold text-accent-a">
           {timeLeft.days}
         </div>
-        <div className="font-mono text-xs text-accent-a">days</div>
+        <div className="font-mono text-xs text-accent-a">
+          {timeLeft.days === 1
+            ? timeLeftLabels.days.singular
+            : timeLeftLabels.days.plural}
+        </div>
       </div>
       <div
         className={cn(
@@ -75,7 +83,11 @@ const CountDown = ({ className }: CountDownProps) => {
         <div className="font-mono text-4xl font-bold text-accent-a">
           {timeLeft.hours}
         </div>
-        <div className="font-mono text-xs text-accent-a">hours</div>
+        <div className="font-mono text-xs text-accent-a">
+          {timeLeft.hours === 1
+            ? timeLeftLabels.hours.singular
+            : timeLeftLabels.hours.plural}
+        </div>
       </div>
       <div
         className={cn(
@@ -86,7 +98,11 @@ const CountDown = ({ className }: CountDownProps) => {
         <div className="font-mono text-4xl font-bold text-accent-a">
           {timeLeft.minutes}
         </div>
-        <div className="font-mono text-xs text-accent-a">minutes</div>
+        <div className="font-mono text-xs text-accent-a">
+          {timeLeft.minutes === 1
+            ? timeLeftLabels.minutes.singular
+            : timeLeftLabels.minutes.plural}
+        </div>
       </div>
       <div
         className={cn(
@@ -97,7 +113,11 @@ const CountDown = ({ className }: CountDownProps) => {
         <div className="font-mono text-4xl font-bold text-accent-a">
           {timeLeft.seconds}
         </div>
-        <div className="font-mono text-xs text-accent-a">seconds</div>
+        <div className="font-mono text-xs text-accent-a">
+          {timeLeft.seconds === 1
+            ? timeLeftLabels.seconds.singular
+            : timeLeftLabels.seconds.plural}
+        </div>
       </div>
     </div>
   )

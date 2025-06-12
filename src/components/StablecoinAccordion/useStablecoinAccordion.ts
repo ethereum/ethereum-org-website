@@ -5,7 +5,6 @@ import aaveImg from "@/public/images/dapps/aave.png"
 // -- borrow
 import compoundImg from "@/public/images/dapps/compound.png"
 // -- earn
-import gitcoinImg from "@/public/images/dapps/gitcoin.png"
 import matchaImg from "@/public/images/dapps/matcha.png"
 import summerfiImg from "@/public/images/dapps/summerfi.png"
 // Static assets
@@ -66,13 +65,6 @@ export const useStablecoinAccordion = () => {
   ]
 
   const earn: Array<CardProps> = [
-    {
-      title: t("page-stablecoins-accordion-earn-project-bounties"),
-      image: gitcoinImg,
-      link: "https://gitcoin.co/explorer",
-      description: t("page-stablecoins-accordion-earn-project-1-description"),
-      alt: t("gitcoin-logo"),
-    },
     {
       title: t("page-stablecoins-accordion-earn-project-bug-bounties"),
       image: ethImg,

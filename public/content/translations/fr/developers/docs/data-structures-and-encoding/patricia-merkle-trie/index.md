@@ -34,33 +34,33 @@ Il y a une différence entre rechercher quelque chose dans l'"arbre" et la "base
 Les opérations de mise à jour et de suppression pour les arbres radix peuvent être définies comme suit :
 
 ```
-    def update(node,path,value):
-        curnode = db.get(node) if node else [ NULL ] * 17
+    def update(node_hash, path, value):
+        curnode = db.get(node_hash) if node_hash else [ NULL ] * 17
         newnode = curnode.copy()
         if path == '':
             newnode[-1] = value
         else:
-            newindex = update(curnode[path[0]],path[1:],value)
+            newindex = update(curnode[path[0]], path[1:], value)
             newnode[path[0]] = newindex
-        db.put(hash(newnode),newnode)
+        db.put(hash(newnode), newnode)
         return hash(newnode)
 
-    def delete(node,path):
-        if node is NULL:
+    def delete(node_hash, path):
+        if node_hash is NULL:
             return NULL
         else:
-            curnode = db.get(node)
+            curnode = db.get(node_hash)
             newnode = curnode.copy()
             if path == '':
                 newnode[-1] = NULL
             else:
-                newindex = delete(curnode[path[0]],path[1:])
+                newindex = delete(curnode[path[0]], path[1:])
                 newnode[path[0]] = newindex
 
             if all(x is NULL for x in newnode):
                 return NULL
             else:
-                db.put(hash(newnode),newnode)
+                db.put(hash(newnode), newnode)
                 return hash(newnode)
 ```
 
@@ -137,10 +137,10 @@ Exemples :
 Voici le code étendu pour obtenir un nœud dans l'arbre de Merkle Patricia :
 
 ```
-    def get_helper(node,path):
-        if path == []: return node
-        if node = '': return ''
-        curnode = rlp.decode(node if len(node) < 32 else db.get(node))
+    def get_helper(node_hash,path):
+        if path == []: return node_hash
+        if node_hash == '': return ''
+        curnode = rlp.decode(node_hash if len(node_hash) < 32 else db.get(node_hash))
         if len(curnode) == 2:
             (k2, v2) = curnode
             k2 = compact_decode(k2)
@@ -151,13 +151,13 @@ Voici le code étendu pour obtenir un nœud dans l'arbre de Merkle Patricia :
         elif len(curnode) == 17:
             return get_helper(curnode[path[0]],path[1:])
 
-    def get(node,path):
+    def get(node_hash,path):
         path2 = []
         for i in range(len(path)):
             path2.push(int(ord(path[i]) / 16))
             path2.push(ord(path[i]) % 16)
         path2.push(16)
-        return get_helper(node,path2)
+        return get_helper(node_hash,path2)
 ```
 
 ### Exemple d'arbre {#example-trie}
