@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import shuffle from "lodash/shuffle"
+import { shuffle } from "lodash"
 
 import { Image } from "@/components/Image"
 import { Flex } from "@/components/ui/flex"
