@@ -13,7 +13,7 @@ Ethereum can help many kinds of businesses, including large companies:
 - Build new business models and value creation opportunities
 - Competitively future-proof their organization
 
-<ButtonLink href="mailto:enterprise@ethereum.org?subject=Enterprise%20inquiry" customEventOptions={{ eventCategory: "enterprise", eventAction: "CTA", eventName: "usecases" }}>
+<ButtonLink href="mailto:enterprise@ethereum.org?subject=Enterprise%20inquiry" customEventOptions={{ eventCategory: "enterprise_use_cases", eventAction: "CTA", eventName: "header_cta" }}>
 Get in touch
 </ButtonLink>
 
@@ -162,7 +162,7 @@ Some collaborative efforts to make Ethereum enterprise friendly have been made b
 
 <Callout titleKey="enterprise-team" descriptionKey="enterprise-team-description">
   <div>
-    <ButtonLink href="mailto:enterprise@ethereum.org?subject=Enterprise%20inquiry" customEventOptions={{ eventCategory: "enterprise", eventAction: "CTA", eventName: "usecases" }}>
+    <ButtonLink href="mailto:enterprise@ethereum.org?subject=Enterprise%20inquiry" customEventOptions={{ eventCategory: "enterprise_use_cases", eventAction: "CTA", eventName: "bottom_mail" }}>
       Get in touch
     </ButtonLink>
   </div>
