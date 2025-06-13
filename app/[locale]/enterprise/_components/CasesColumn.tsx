@@ -12,8 +12,8 @@ const CasesColumn = ({
   className?: string
 }) => (
   <div className={cn("flex w-full flex-col gap-4", className)}>
-    {cases.map((caseStudy) => (
-      <CaseCard key={caseStudy.name} caseStudy={caseStudy} />
+    {cases.map((caseStudy, index) => (
+      <CaseCard key={index} caseStudy={caseStudy} />
     ))}
   </div>
 )

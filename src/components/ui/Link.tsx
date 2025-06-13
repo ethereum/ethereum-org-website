@@ -107,7 +107,9 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
           <Email className="me-1 inline h-6 w-6 shrink-0 align-middle" />
         )}
         {children}
-        <VisuallyHidden>(opens in a new tab)</VisuallyHidden>
+        <VisuallyHidden>
+          {isMailto ? "opens email client" : "opens in a new tab"}
+        </VisuallyHidden>
         {!hideArrow && !isMailto && (
           <RxExternalLink
             className={cn(

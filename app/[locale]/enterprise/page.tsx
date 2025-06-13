@@ -92,8 +92,8 @@ const CasesSwiper = dynamic(() => import("./_components/CasesSwiper"), {
 //   BASE_TIME_UNIT * 1000
 // )
 
-const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
-  const { locale } = await params
+const Page = async ({ params }: { params: { locale: Lang } }) => {
+  const { locale } = params
 
   const t = await getTranslations({ locale, namespace: "page-enterprise" })
 
