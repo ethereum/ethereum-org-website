@@ -75,6 +75,13 @@
       transparent 100%
     );
 
+    --radial-b: radial-gradient(
+      127.67% 82.36% at 50% -15%,
+      hsla(var(--purple-500), var(--radial-a-opacity-2)) 0%,
+      hsla(var(--blue-500), var(--radial-a-opacity-1)) 66%,
+      transparent 100%
+    );
+
     --linear-bug-bounty-title: linear-gradient(
       to left,
       #f7cbc0 0%,

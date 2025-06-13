@@ -49,7 +49,8 @@ const CalloutSSR = ({
           {title && (
             <h3
               className={cn(
-                "mb-8 mt-10 text-2xl leading-[1.4]",
+                "mb-8 text-2xl leading-[1.4]",
+                emoji && "mt-10",
                 headerClassName
               )}
             >

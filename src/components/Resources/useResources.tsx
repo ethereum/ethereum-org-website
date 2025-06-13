@@ -96,7 +96,11 @@ export const useResources = ({ txCostsMedianUsd }): DashboardSection[] => {
     {
       title: t("page-resources-network-layer2-title"),
       metric: (
-        <BigNumber className="items-center" value={medianTxCost.value}>
+        <BigNumber
+          className="items-center"
+          value={medianTxCost.value}
+          locale={locale}
+        >
           Median transaction cost on Ethereum networks
         </BigNumber>
       ),
