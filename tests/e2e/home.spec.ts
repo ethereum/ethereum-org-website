@@ -8,6 +8,11 @@ import { DEFAULT_LOCALE } from "@/lib/constants"
 import { testData } from "./fixtures/testData"
 import { HomePage } from "./pages/HomePage"
 import { waitForPageReady } from "./utils/testHelpers"
+import {
+  openLanguagePickerDesktop,
+  openLanguagePickerMobile,
+  switchToLanguage,
+} from "./utils"
 
 test.describe("Home Page", () => {
   let homePage: HomePage
@@ -56,36 +61,8 @@ test.describe("Home Page", () => {
   })
 
   test.describe("i18n - language picker", () => {
-    async function openLanguagePickerDesktop(page: Page) {
-      const nav = page.getByRole("navigation", { name: "Primary" })
-      const langButton = nav.getByRole("button", { name: /languages/i })
-      await expect(langButton).toBeVisible()
-      await langButton.click()
-      return page
-    }
-
-    async function openLanguagePickerMobile(page: Page) {
-      const nav = page.getByRole("navigation", { name: "Primary" })
-      const menuButton = nav.getByRole("button", {
-        name: /toggle menu button/i,
-      })
-      await expect(menuButton).toBeVisible()
-      await menuButton.click()
-      const sidebar = page.getByRole("dialog", { name: /ethereum.org/i })
-      await expect(sidebar).toBeVisible()
-      const langButton = sidebar.getByRole("button", { name: /languages/i })
-      await expect(langButton).toBeVisible()
-      await langButton.click()
-      return page
-    }
-
     async function switchToChinese(page: Page) {
-      const searchInput = page.getByPlaceholder(/type to filter/i)
-      await expect(searchInput).toBeVisible()
-      await searchInput.fill("zh")
-      const zhOption = page.getByRole("option", { name: /^简体中文 Chinese/i })
-      await expect(zhOption).toBeVisible()
-      await zhOption.click()
+      await switchToLanguage(page, "zh", /^简体中文 Chinese/i)
       await expect(page).toHaveURL(/\/zh(\/|$)/)
       await expect(
         page.getByRole("heading", { level: 1, name: /以太坊/i })
@@ -115,6 +92,14 @@ test.describe("Home Page", () => {
   })
 
   test.describe("RTL", () => {
+    async function switchToArabic(page: Page) {
+      await switchToLanguage(page, "ar", /^العربية Arabic/i)
+      await expect(page).toHaveURL(/\/ar(\/|$)/)
+      await expect(
+        page.getByRole("heading", { level: 1, name: /إيثريوم/i })
+      ).toBeVisible()
+    }
+
     test("home page RTL visual snapshot", async ({ page }, testInfo) => {
       // Arabic locale is RTL
       await page.goto("/ar")
@@ -127,18 +112,9 @@ test.describe("Home Page", () => {
       // Load LTR page
       await expect(page).toHaveURL(`/${DEFAULT_LOCALE}/`)
 
-      // Switch to RTL (arabic locale is RTL)
-      const nav = page.getByRole("navigation", { name: /primary/i })
-      const langButton = nav.getByRole("button", { name: /languages/i })
-      await expect(langButton).toBeVisible()
-      await langButton.click()
-
-      const searchInput = page.getByPlaceholder(/type to filter/i)
-      await expect(searchInput).toBeVisible()
-      await searchInput.fill("ar")
-      const arOption = page.getByRole("option", { name: /^العربية Arabic/i })
-      await expect(arOption).toBeVisible()
-      await arOption.click()
+      // Switch to RTL
+      await openLanguagePickerDesktop(page)
+      await switchToArabic(page)
 
       // Wait for transition
       await expect(page).toHaveURL(/\/ar(\/|$)/)
