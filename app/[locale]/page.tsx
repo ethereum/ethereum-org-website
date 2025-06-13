@@ -61,6 +61,7 @@ import { isValidDate } from "@/lib/utils/date"
 import { getDirection } from "@/lib/utils/direction"
 import { getMetadata } from "@/lib/utils/metadata"
 import { polishRSSList } from "@/lib/utils/rss"
+import { screens } from "@/lib/utils/screen"
 
 import events from "@/data/community-events.json"
 import CreateWalletContent from "@/data/CreateWallet"
@@ -97,6 +98,9 @@ import LearnImage from "@/public/images/heroes/learn-hub-hero.png"
 import CommunityImage from "@/public/images/heroes/quizzes-hub-hero.png"
 import Hero from "@/public/images/home/hero.png"
 
+const BANNER_SIZES = `(max-width: ${screens.md}) 100vw, (max-width: ${screens.lg}) 24rem, 32rem`
+const BANNER_QUALITY = 50
+
 const BentoCardSwiper = dynamic(
   () => import("@/components/Homepage/BentoCardSwiper"),
   {
@@ -129,6 +133,15 @@ const ValuesMarquee = dynamic(
     ssr: false,
     loading: () => <ValuesMarqueeFallback />,
   }
+)
+
+const EventFallbackImage = () => (
+  <Image
+    src={EventFallback}
+    alt=""
+    sizes="(max-width: 480px) 100vw, 480px"
+    quality={BANNER_QUALITY}
+  />
 )
 
 const fetchXmlBlogFeeds = async () => {
@@ -527,7 +540,12 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
         {/* Activity - The strongest ecosystem */}
         <Section id="activity" variant="responsiveFlex">
           <SectionBanner>
-            <Image src={ActivityImage} alt="" />
+            <Image
+              src={ActivityImage}
+              alt=""
+              sizes={BANNER_SIZES}
+              quality={BANNER_QUALITY}
+            />
           </SectionBanner>
 
           <SectionContent>
@@ -565,7 +583,12 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           className="md:flex-row-reverse"
         >
           <SectionBanner>
-            <Image src={LearnImage} alt="" />
+            <Image
+              src={LearnImage}
+              alt=""
+              sizes={BANNER_SIZES}
+              quality={BANNER_QUALITY}
+            />
           </SectionBanner>
 
           <SectionContent>
@@ -646,7 +669,12 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
         {/* Builders - Blockchain's biggest builder community */}
         <Section id="builders" variant="responsiveFlex">
           <SectionBanner className="relative">
-            <Image src={BuildersImage} alt="" />
+            <Image
+              src={BuildersImage}
+              alt=""
+              sizes={BANNER_SIZES}
+              quality={BANNER_QUALITY}
+            />
           </SectionBanner>
 
           <SectionContent>
@@ -699,7 +727,12 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           className="md:flex-row-reverse"
         >
           <SectionBanner>
-            <Image src={CommunityImage} alt="" />
+            <Image
+              src={CommunityImage}
+              alt=""
+              sizes={BANNER_SIZES}
+              quality={BANNER_QUALITY}
+            />
           </SectionBanner>
 
           <SectionContent>
@@ -890,9 +923,9 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                           className="max-w-full object-cover object-center"
                         />
                       ) : (
-                        <Image src={EventFallback} alt="" />
+                        <EventFallbackImage />
                       )}
-                      <Image src={EventFallback} alt="" />
+                      <EventFallbackImage />
                     </CardBanner>
                     <CardContent>
                       <CardTitle>{title}</CardTitle>
