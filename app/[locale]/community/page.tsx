@@ -17,9 +17,9 @@ import CommunityPage from "./_components/community"
 export default async function Page({
   params,
 }: {
-  params: Promise<{ locale: Lang }>
+  params: { locale: Lang }
 }) {
-  const { locale } = await params
+  const { locale } = params
 
   setRequestLocale(locale)
 
@@ -38,9 +38,9 @@ export default async function Page({
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ locale: string }>
+  params: { locale: Lang }
 }) {
-  const { locale } = await params
+  const { locale } = params
 
   const t = await getTranslations({ locale, namespace: "page-community" })
 
