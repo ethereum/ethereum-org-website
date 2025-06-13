@@ -1,4 +1,3 @@
-import fs from "fs"
 import fsp from "fs/promises"
 import { extname, join } from "path"
 
@@ -71,19 +70,26 @@ export const getPostSlugs = async (dir: string, filterRegex?: RegExp) => {
   }
 }
 
-export const getTutorialsData = (locale: string): ITutorial[] => {
-  const contentRoot = getContentRoot()
+export const getTutorialsData = async (
+  locale: string
+): Promise<ITutorial[]> => {
+  const contentRoot = join(process.cwd(), ".next/server", CONTENT_DIR)
   const fullPath = join(
     contentRoot,
     locale !== "en" ? `translations/${locale!}` : "",
     "developers/tutorials"
   )
-  let tutorialData: ITutorial[] = []
+  const tutorialData: ITutorial[] = []
 
-  if (fs.existsSync(fullPath)) {
-    const languageTutorialFiles = fs.readdirSync(fullPath)
+  try {
+    const stats = await fsp.stat(fullPath)
+    if (!stats.isDirectory()) {
+      throw new Error(`Tutorials directory not found for locale: ${locale}`)
+    }
 
-    tutorialData = languageTutorialFiles.map((dir) => {
+    const languageTutorialFiles = await fsp.readdir(fullPath)
+
+    languageTutorialFiles.forEach(async (dir) => {
       const filePath = join(
         contentRoot,
         locale !== "en" ? `translations/${locale!}` : "",
@@ -91,11 +97,11 @@ export const getTutorialsData = (locale: string): ITutorial[] => {
         dir,
         "index.md"
       )
-      const fileContents = fs.readFileSync(filePath, "utf8")
+      const fileContents = await fsp.readFile(filePath, "utf8")
       const { data, content } = matter(fileContents)
       const frontmatter = data as Frontmatter
 
-      return {
+      tutorialData.push({
         href: join(`/${locale}/developers/tutorials`, dir),
         title: frontmatter.title,
         description: frontmatter.description,
@@ -106,11 +112,14 @@ export const getTutorialsData = (locale: string): ITutorial[] => {
         published: dateToString(frontmatter.published),
         lang: frontmatter.lang,
         isExternal: false,
-      }
+      })
     })
-  }
 
-  return tutorialData
+    return tutorialData
+  } catch (error) {
+    console.error(`Error reading tutorials for locale "${locale}":`, error)
+    return tutorialData // Return empty if there's an error
+  }
 }
 
 export const checkPathValidity = (
