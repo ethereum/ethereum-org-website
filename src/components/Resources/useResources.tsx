@@ -13,9 +13,11 @@ import { getLocaleForNumberFormat } from "@/lib/utils/translations"
 
 import BigNumber from "../BigNumber"
 import RadialChart from "../RadialChart"
+import { BaseLink } from "../ui/Link"
 
 import type { DashboardBox, DashboardSection } from "./types"
 
+import { useEthPrice } from "@/hooks/useEthPrice"
 import { useTranslation } from "@/hooks/useTranslation"
 import IconBeaconchain from "@/public/images/resources/beaconcha-in.png"
 import IconBlobsGuru from "@/public/images/resources/blobsguru.png"
@@ -58,15 +60,23 @@ const formatSmallUSD = (value: number, locale: string): string =>
   new Intl.NumberFormat(locale, {
     style: "currency",
     currency: "USD",
-    notation: "compact",
-    minimumSignificantDigits: 2,
-    maximumSignificantDigits: 2,
   }).format(value)
 
-export const useResources = ({ txCostsMedianUsd }): DashboardSection[] => {
+export const useResources = ({
+  txCostsMedianUsd,
+  totalBlobs,
+  avgBlobFee,
+}): DashboardSection[] => {
   const { t } = useTranslation("page-resources")
   const locale = useLocale()
   const localeForNumberFormat = getLocaleForNumberFormat(locale! as Lang)
+
+  const ethPrice = useEthPrice()
+  const avgBlobFeeUsd = formatSmallUSD(
+    // Converting value from wei to USD
+    avgBlobFee * 1e-18 * ethPrice,
+    localeForNumberFormat
+  )
 
   const medianTxCost =
     "error" in txCostsMedianUsd
@@ -77,6 +87,48 @@ export const useResources = ({ txCostsMedianUsd }): DashboardSection[] => {
         }
 
   const [timeToNextBlock, setTimeToNextBlock] = useState(12)
+
+  const [scalingUpgradeCountdown, setPectraCountdown] = useState<string | null>(
+    "Loading..."
+  )
+
+  useEffect(() => {
+    // Countdown time for Scaling Upgrade to the final date of May 7 2025
+    const scalingUpgradeDate = new Date("2025-05-07T00:00:00Z")
+    const scalingUpgradeDateTime = scalingUpgradeDate.getTime()
+    const SECONDS = 1000
+    const MINUTES = SECONDS * 60
+    const HOURS = MINUTES * 60
+    const DAYS = HOURS * 24
+
+    const countdown = () => {
+      const now = Date.now()
+      const timeLeft = scalingUpgradeDateTime - now
+
+      // If the date has past, set the countdown to null
+      if (timeLeft < 0) return setPectraCountdown(null)
+
+      const daysLeft = Math.floor(timeLeft / DAYS)
+      const hoursLeft = Math.floor((timeLeft % DAYS) / HOURS)
+      const minutesLeft = Math.floor((timeLeft % HOURS) / MINUTES)
+      const secondsLeft = Math.floor((timeLeft % MINUTES) / SECONDS)
+
+      setPectraCountdown(
+        `${daysLeft}days :: ${hoursLeft}h ${minutesLeft}m ${secondsLeft}s`
+      )
+    }
+    countdown()
+
+    let interval: NodeJS.Timeout | undefined
+
+    if (scalingUpgradeCountdown !== null) {
+      // Only run the interval if the date has not passed
+      interval = setInterval(countdown, SECONDS)
+    }
+
+    return () => clearInterval(interval)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   useEffect(() => {
     const genesisTime = new Date("2020-12-01T12:00:23Z").getTime()
@@ -381,7 +433,26 @@ export const useResources = ({ txCostsMedianUsd }): DashboardSection[] => {
   const scalingBoxes: DashboardBox[] = [
     {
       title: t("page-resources-roadmap-title"),
-      // TODO: Add metric
+      metric: (
+        <div className="grid place-items-center py-5">
+          <div className="text-sm">Latest upgrade</div>
+          <BaseLink
+            href="/roadmap/pectra/"
+            className="text-5xl font-bold text-body no-underline hover:text-primary"
+          >
+            Pectra
+          </BaseLink>
+          <div className="text-xl font-bold text-body-medium">
+            {scalingUpgradeCountdown ? (
+              scalingUpgradeCountdown
+            ) : (
+              <div className="rounded-full bg-success px-2 py-1 text-xs font-normal uppercase text-success-light">
+                Live Since April 2025
+              </div>
+            )}
+          </div>
+        </div>
+      ),
       items: [
         {
           title: "Ethereum Roadmap",
@@ -393,7 +464,22 @@ export const useResources = ({ txCostsMedianUsd }): DashboardSection[] => {
     },
     {
       title: t("page-resources-blobs-title"),
-      // TODO: Add metric
+      metric: (
+        <div className="flex [&>*]:grid [&>*]:flex-1 [&>*]:place-items-center">
+          <div>
+            <div className="text-[42px] font-bold leading-2xs">
+              {totalBlobs}
+            </div>
+            <div className="text-sm text-body-medium">Total blobs</div>
+          </div>
+          <div>
+            <div className="text-[42px] font-bold leading-2xs">
+              {avgBlobFeeUsd}
+            </div>
+            <div className="text-sm text-body-medium">Average Blob Fee</div>
+          </div>
+        </div>
+      ),
       items: [
         {
           title: "Blob Scan",

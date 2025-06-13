@@ -17,13 +17,17 @@ import { BASE_TIME_UNIT } from "@/lib/constants"
 
 import ResourcesPage from "./_components/resources"
 
+import { fetchBlobscanStats } from "@/lib/api/fetchBlobscanStats"
 import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
 
 // In seconds
 const REVALIDATE_TIME = BASE_TIME_UNIT * 1
 
 const loadData = dataLoader(
-  [["growThePieData", fetchGrowThePie]],
+  [
+    ["growThePieData", fetchGrowThePie],
+    ["blobscanOverallStats", fetchBlobscanStats],
+  ],
   REVALIDATE_TIME * 1000
 )
 
@@ -38,12 +42,24 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const messages = pick(allMessages, requiredNamespaces)
 
   // Load data
-  const [growThePieData] = await loadData()
+  const [growThePieData, blobscanOverallStats] = await loadData()
+
   const { txCostsMedianUsd } = growThePieData
+
+  const { totalBlobs, avgBlobFee } = blobscanOverallStats
+
+  const formattedTotalBlobs = new Intl.NumberFormat(undefined, {
+    notation: "compact",
+    maximumFractionDigits: 1,
+  }).format(totalBlobs)
 
   return (
     <I18nProvider locale={locale} messages={messages}>
-      <ResourcesPage txCostsMedianUsd={txCostsMedianUsd} />
+      <ResourcesPage
+        txCostsMedianUsd={txCostsMedianUsd}
+        totalBlobs={formattedTotalBlobs}
+        avgBlobFee={avgBlobFee}
+      />
     </I18nProvider>
   )
 }
