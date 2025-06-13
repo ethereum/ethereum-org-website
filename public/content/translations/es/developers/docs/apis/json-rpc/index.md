@@ -1600,7 +1600,7 @@ Devuelve una matriz de todos los registros que coinciden con un objeto de filtro
 - `toBlock`: `QUANTITY|TAG` - (opcional, por defecto: `"latest"`) Número de bloque entero o `"latest"` para el último bloque propuesto, `"safe"` para el último bloque seguro, `"finalized"` para el último bloque finalizado o `"pending"`, `"earliest"` para transacciones que aún no están en un bloque.
 - `address`: `DATA|Array`, 20 Bytes - (opcional) Dirección de contrato o una lista de las direcciones desde donde deben originarse los registros.
 - `topics`: `Array de DATA`, - (opcional) Array de temas de `DATA` de 32 bytes. Los temas dependen del orden. Cada tema puede también ser un array de DATA con opciones "or" (o).
-- `blockhash`: `DATA`, 32 Bytes - (opcional, **future**) Con la adición de EIP-234, `blockHash` será una nueva opción de filtro que restringe los registros retornados al bloque único con el hash de 32 bytes `blockHash`. Usar `blockHash` es equivalente a `fromBlock` = `toBlock` = el número de bloque con hash `blockHash`. Si `blockHash` está presente en los criterios de filtro, no se permiten ni `fromBlock` ni `toBlock`.
+- `blockHash`: `DATA`, 32 Bytes - (opcional, **future**) Con la adición de EIP-234, `blockHash` será una nueva opción de filtro que restringe los registros retornados al bloque único con el hash de 32 bytes `blockHash`. Usar `blockHash` es equivalente a `fromBlock` = `toBlock` = el número de bloque con hash `blockHash`. Si `blockHash` está presente en los criterios de filtro, no se permiten ni `fromBlock` ni `toBlock`.
 
 ```js
 params: [
