@@ -41,7 +41,7 @@ Oprócz badań wybiegających w przyszłość, badane są niektóre fundamentaln
 
 - [Wprowadzenie do proof-of-stake](/developers/docs/consensus-mechanisms/pos/)
 - [Dokument Casper-FPG](https://arxiv.org/abs/1710.09437)
-- [Objaśnienie Casper-FFG](https://arxiv.org/abs/1710.09437)
+- [Objaśnienie Casper-FFG](https://medium.com/unitychain/intro-to-casper-ffg-9ed944d98b2d)
 - [Dokument Gasper](https://arxiv.org/abs/2003.03052)
 
 #### Ostatnie badania {#recent-research}
