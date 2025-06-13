@@ -1,10 +1,10 @@
 ---
-title: Menambahkan lapisan 2
+title: Menambahkan Layer 2
 description: Kebijakan yang kami gunakan saat menambahkan lapisan ke-2 ke ethereum.org
 lang: id
 ---
 
-# Menambahkan layer 2 {#adding-layer-2}
+# Menambahkan Layer 2 {#adding-layer-2}
 
 Kami ingin memastikan bahwa kami telah mencantumkan sumber daya terbaik sehingga pengguna dapat mengarahkan ruang lapisan 2 secara aman dan percaya diri.
 

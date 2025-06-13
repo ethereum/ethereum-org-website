@@ -1,6 +1,6 @@
 ---
 title: Hogyan lehet részt venni?
-description: Hogyan lehet bekapcsolódni az Ethereum közösségébe.
+description: Hogyan kapcsolódhat be az Ethereum közösségébe?
 lang: hu
 ---
 
