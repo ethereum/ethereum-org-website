@@ -43,6 +43,7 @@ const Nav = () => {
             href="/"
             aria-label={t("home")}
             className="inline-flex items-center no-underline"
+            data-testid="nav-logo"
           >
             <EthHomeIcon className="h-[35px] w-[22px] opacity-85 hover:opacity-100" />
           </BaseLink>

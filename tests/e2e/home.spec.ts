@@ -142,4 +142,44 @@ test.describe("Home Page", () => {
       await switchToChinese(page)
     })
   })
+
+  test.describe("RTL", () => {
+    test("home page RTL visual snapshot", async ({ page }, testInfo) => {
+      // Arabic locale is RTL
+      await page.goto("/ar")
+      await takeSnapshot(page, "home-arabic-rtl", testInfo)
+    })
+
+    test("nav flips logo and search button when switching to RTL via language picker", async ({
+      page,
+    }) => {
+      // Load LTR page
+      await expect(page).toHaveURL(`/${DEFAULT_LOCALE}/`)
+
+      // Switch to RTL (arabic locale is RTL)
+      const nav = page.getByRole("navigation", { name: /primary/i })
+      const langButton = nav.getByRole("button", { name: /languages/i })
+      await expect(langButton).toBeVisible()
+      await langButton.click()
+
+      const searchInput = page.getByPlaceholder(/type to filter/i)
+      await expect(searchInput).toBeVisible()
+      await searchInput.fill("ar")
+      const arOption = page.getByRole("option", { name: /^العربية Arabic/i })
+      await expect(arOption).toBeVisible()
+      await arOption.click()
+
+      // Wait for transition
+      await expect(page).toHaveURL(/\/ar(\/|$)/)
+
+      const logo = page.getByTestId("nav-logo")
+      const searchBtn = page.getByTestId("search-input-button")
+      const logoBox = await logo.boundingBox()
+      const searchBox = await searchBtn.boundingBox()
+      expect(logoBox).not.toBeNull()
+      expect(searchBox).not.toBeNull()
+      // In RTL, logo should be on the right of search button (higher x value)
+      expect(logoBox!.x).toBeGreaterThan(searchBox!.x)
+    })
+  })
 })
