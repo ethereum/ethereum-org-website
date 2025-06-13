@@ -1,11 +1,13 @@
 import { getTranslations } from "next-intl/server"
 
+import { Image } from "@/components/Image"
 import ParallaxImage from "@/components/Image/ParallaxImage"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 
 import Countdown from "./CountDown"
 import { getTimeUnitTranslations } from "./utils"
 
+import TenYearBackgroundImage from "@/public/images/10-year-anniversary/10-year-background.png"
 import TenYearGraphicImage from "@/public/images/10-year-anniversary/10-year-logo.png"
 import TenYearDesktopText from "@/public/images/10-year-anniversary/10yeartext.svg"
 import TenYearMobileText from "@/public/images/10-year-anniversary/10yeartext-mobile.svg"
@@ -19,8 +21,16 @@ const TenYearHomeBanner = async ({ locale }: { locale: string }) => {
   const timeLeftLabels = await getTimeUnitTranslations(locale)
 
   return (
-    <div className="relative rounded-2xl bg-[url('/images/10-year-anniversary/10-year-background.png')] bg-cover bg-center text-center">
-      <div className="absolute h-full w-full rounded-2xl bg-ten-year-gradient opacity-80" />
+    <div className="relative rounded-2xl bg-cover bg-center text-center">
+      <div className="absolute inset-0 overflow-hidden rounded-2xl after:absolute after:inset-0 after:bg-ten-year-gradient after:opacity-80 after:content-['']">
+        <Image
+          src={TenYearBackgroundImage}
+          alt=""
+          sizes="(max-width: 1504px) 100vw, 1504px"
+          quality={15}
+          className="size-full"
+        />
+      </div>
       <div className="relative rounded-2xl p-8">
         <ParallaxImage
           src={TenYearGraphicImage}
