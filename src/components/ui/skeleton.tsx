@@ -1,5 +1,7 @@
 import { cn } from "@/lib/utils/cn"
 
+import { Card, CardBanner, CardContent } from "../ui/card"
+
 // Pseudo-random list of skeleton widths for multiple lines
 const widths = [
   "w-1/3",
@@ -56,4 +58,31 @@ const SkeletonLines = ({
   </div>
 )
 
-export { Skeleton, SkeletonLines }
+type SkeletonCardProps = {
+  className?: string
+}
+
+const SkeletonCard = ({ className }: SkeletonCardProps) => (
+  <Card className={cn("cursor-default", className)}>
+    <CardBanner />
+    <CardContent className="space-y-3">
+      <Skeleton className="h-6 w-3/4" />
+      <Skeleton className="h-4 w-1/2" />
+      <Skeleton className="h-4 w-1/3" />
+    </CardContent>
+  </Card>
+)
+
+type SkeletonCardGridProps = {
+  className?: string
+}
+
+const SkeletonCardGrid = ({ className }: SkeletonCardGridProps) => (
+  <div className={`${className} grid gap-8 sm:grid-cols-2 lg:grid-cols-3`}>
+    <SkeletonCard />
+    <SkeletonCard className="hidden sm:block" />
+    <SkeletonCard className="hidden lg:block" />
+  </div>
+)
+
+export { Skeleton, SkeletonCardGrid, SkeletonLines }
