@@ -1,4 +1,3 @@
-import { useTheme } from "next-themes"
 import {
   BsBook,
   BsBuildings,
@@ -20,15 +19,12 @@ import { PiFlask, PiUsersFourLight } from "react-icons/pi"
 
 import EthereumIcon from "@/components/icons/ethereum-icon.svg"
 
-import { trackCustomEvent } from "@/lib/utils/matomo"
-
 import type { NavSections } from "./types"
 
 import useTranslation from "@/hooks/useTranslation"
 
-export const useNav = () => {
+export const useNavigation = () => {
   const { t } = useTranslation("common")
-  const { setTheme, resolvedTheme } = useTheme()
 
   const linkSections: NavSections = {
     learn: {
@@ -490,20 +486,5 @@ export const useNav = () => {
     },
   }
 
-  const toggleColorMode = () => {
-    const targetTheme = resolvedTheme === "dark" ? "light" : "dark"
-
-    setTheme(targetTheme)
-
-    trackCustomEvent({
-      eventCategory: "nav bar",
-      eventAction: "click",
-      eventName: `${targetTheme} mode`,
-    })
-  }
-
-  return {
-    linkSections,
-    toggleColorMode,
-  }
+  return { linkSections }
 }
