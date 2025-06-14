@@ -28,7 +28,10 @@ const Skeleton = ({
 }: React.HTMLAttributes<HTMLDivElement>) => {
   return (
     <div
-      className={cn("h-4 animate-pulse-light rounded bg-disabled", className)}
+      className={cn(
+        "h-4 animate-pulse-light rounded bg-disabled opacity-5 dark:opacity-60",
+        className
+      )}
       {...props}
     />
   )
