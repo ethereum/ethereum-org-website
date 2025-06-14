@@ -40,10 +40,8 @@ const BentoCardSwiper = ({
       {bentoItems.map(({ className, ...item }) => (
         <SwiperSlide key={item.title}>
           <BentoCard
-            imgHeight={220}
             {...item}
             className={cn(className, "bg-background text-body")}
-            imgWidth={undefined} // Intentionally last to override box
             eventCategory={eventCategory}
           />
         </SwiperSlide>

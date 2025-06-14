@@ -4,6 +4,9 @@ import { getTranslations } from "next-intl/server"
 import type { Lang } from "@/lib/types"
 
 import { cn } from "@/lib/utils/cn"
+import { screens } from "@/lib/utils/screen"
+
+import type { ImageProps } from "../Image"
 
 import ImpactImage from "@/public/images/impact_transparent.png"
 import ManAndDogImage from "@/public/images/man-and-dog-playing.png"
@@ -23,8 +26,7 @@ type CopyDetails = {
   eventName: Category
 }
 export type BentoItem = CopyDetails & {
-  imgSrc: StaticImageData
-  imgWidth?: number
+  img: StaticImageData & Pick<ImageProps, "sizes">
   className: string
 }
 
@@ -115,32 +117,70 @@ export const getBentoBoxItems = async (locale: Lang): Promise<BentoItem[]> => {
   return [
     {
       ...getCopy("stablecoins", "/stablecoins/"),
-      imgSrc: ManAndDogImage,
-      className: cn(colorOptions["primary"], getPosition(0)),
+      img: {
+        ...ManAndDogImage,
+        sizes: `(max-width: 419px) 100vw, (max-width: ${screens.lg}) 419px, 459px`,
+      },
+      className: cn(
+        "max-lg:[&_img]:h-[220px] max-lg:[&_img]:w-auto",
+        "lg:[&_img]:min-w-[459px]",
+        colorOptions["primary"],
+        getPosition(0)
+      ),
     },
     {
       ...getCopy("defi", "/defi/"),
-      imgSrc: ImpactImage,
-      imgWidth: 400,
-      className: cn(colorOptions["accent-c"], getPosition(1)),
+      img: {
+        ...ImpactImage,
+        sizes: "(max-width: 244px) 100vw, 400px",
+      },
+      className: cn(
+        colorOptions["accent-c"],
+        getPosition(1),
+        "max-lg:[&_img]:h-[220px] max-lg:[&_img]:w-auto",
+        "lg:[&_img]:max-w-[400px]"
+      ),
     },
     {
       ...getCopy("networks", "/layer-2/"),
-      imgSrc: MergeImage,
-      imgWidth: 320,
-      className: cn(colorOptions["accent-b"], getPosition(2)),
+      img: {
+        ...MergeImage,
+        sizes: `(max-width: 292px) 100vw, (max-width: ${screens.lg}) 292px, 320px`,
+      },
+      className: cn(
+        "max-lg:[&_img]:h-[220px] max-lg:[&_img]:w-auto",
+        "lg:[&_img]:w-[320px]",
+        colorOptions["accent-b"],
+        getPosition(2)
+      ),
     },
     {
       ...getCopy("dapps", "/dapps/"),
-      imgSrc: ManBabyWomanImage,
-      imgWidth: 324,
-      className: cn(colorOptions["accent-a"], getPosition(3)),
+      img: {
+        ...ManBabyWomanImage,
+        sizes: `(max-width: ${screens.lg}) 160px, 324px`,
+      },
+      className: cn(
+        "max-lg:[&_img]:max-h-[220px] max-lg:[&_img]:w-auto",
+        "md:[&_img]:w-40 lg:[&_img]:w-[324px]",
+        colorOptions["accent-a"],
+        getPosition(3)
+      ),
     },
     {
       ...getCopy("assets", "/nft/"),
-      imgSrc: RobotBarImage,
-      imgWidth: 324,
-      className: cn(colorOptions["primary"], getPosition(4)),
+      img: {
+        ...RobotBarImage,
+        width: 192,
+        height: 220,
+        sizes: `(max-width: ${screens.lg}) 100vw, (max-width: ${screens.xl}) 324px, 221px`,
+      },
+      className: cn(
+        "max-lg:[&_img]:max-h-[220px] max-lg:[&_img]:w-auto",
+        "lg:[&_img]:w-[324px] xl:[&_img]:min-w-[221px]",
+        colorOptions["primary"],
+        getPosition(4)
+      ),
     },
   ]
 }
