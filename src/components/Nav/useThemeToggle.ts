@@ -36,13 +36,7 @@ export const useThemeToggle = () => {
   useEventListener("keydown", (e) => {
     if (e.key !== "\\") return
     e.preventDefault()
-    if (e.metaKey || e.ctrlKey) {
-      toggleColorMode()
-    } else {
-      // TODO add this to the language picker
-      // if (languagePickerState.isOpen) return
-      // languagePickerRef.current?.click()
-    }
+    if (e.metaKey || e.ctrlKey) toggleColorMode()
   })
 
   return {
