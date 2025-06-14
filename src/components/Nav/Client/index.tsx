@@ -24,7 +24,7 @@ const Menu = dynamic(() => import("../Menu"), {
   loading: () => (
     <div className="me-8 flex w-full items-center gap-10 px-6 max-md:hidden">
       {Array.from({ length: 5 }).map((_, i) => (
-        <Skeleton key={i} className="h-6 w-12 py-2 opacity-10" />
+        <Skeleton key={i} className="h-6 w-12 py-2" />
       ))}
     </div>
   ),
@@ -32,17 +32,17 @@ const Menu = dynamic(() => import("../Menu"), {
 
 const MobileNavMenu = dynamic(() => import("../Mobile"), {
   ssr: false,
-  loading: () => <Skeleton className="my-auto size-6 opacity-10" />,
+  loading: () => <Skeleton className="my-auto size-6" />,
 })
 
 const SearchProvider = dynamic(() => import("../../Search"), {
   ssr: false,
   loading: () => (
     <>
-      <div className="flex items-center gap-6 px-6 max-md:hidden">
+      <div className="flex items-center gap-6 px-6 max-md:hidden xl:px-3">
         <Skeleton
           data-label="search-xl"
-          className="hidden h-11 w-[170px] xl:flex"
+          className="hidden h-6 w-[169px] xl:flex"
         />
         <Skeleton data-label="search" className="size-6 xl:hidden" />
       </div>
