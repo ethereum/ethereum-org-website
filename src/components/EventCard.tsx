@@ -28,7 +28,7 @@ const EventCard: React.FC<EventCardProps> = ({
   const locale = useLocale()
   const { t } = useTranslation("page-community")
 
-  const formatedDate = new Intl.DateTimeFormat(locale, {
+  const formattedDate = new Intl.DateTimeFormat(locale, {
     day: "2-digit",
     month: "short",
   }).formatRange(
@@ -41,7 +41,7 @@ const EventCard: React.FC<EventCardProps> = ({
       <CardHeader className="flex flex-row items-center justify-center rounded-t-md border-b border-primary bg-[#FCFCFC] p-2 dark:bg-[#272627]">
         <BsCalendar3 className="me-2 h-6 w-6 text-primary" />
         <span className="!mt-0 text-right text-sm text-primary">
-          {formatedDate}
+          {formattedDate}
         </span>
       </CardHeader>
       <div className="flex items-center justify-center">
