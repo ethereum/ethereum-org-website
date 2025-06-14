@@ -98,8 +98,8 @@ import LearnImage from "@/public/images/heroes/learn-hub-hero.png"
 import CommunityImage from "@/public/images/heroes/quizzes-hub-hero.png"
 import Hero from "@/public/images/home/hero.png"
 
-const BANNER_SIZES = `(max-width: ${screens.md}) 100vw, (max-width: ${screens.lg}) 24rem, 32rem`
-const BANNER_QUALITY = 50
+const BANNER_SIZES = `(max-width: ${screens["2xl"]}) 100vw, ${screens["2xl"]}`
+const BANNER_QUALITY = 40
 
 const BentoCardSwiper = dynamic(
   () => import("@/components/Homepage/BentoCardSwiper"),

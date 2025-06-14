@@ -36,7 +36,7 @@ const BentoCard = ({
     )}
   >
     <Center className="max-md:!max-h-[13.75rem] max-md:!w-auto">
-      <Image alt="" {...img} />
+      <Image alt="" {...img} quality={10} />
     </Center>
     <div>
       <CardTitle variant="black" className="mb-2">
