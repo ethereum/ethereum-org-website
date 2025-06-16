@@ -42,6 +42,9 @@ test.describe("Find Wallet Page", () => {
   })
 
   test("sidebar filters - mobile", async () => {
+    const isMobile = await findWalletPage.isMobileViewport()
+    test.skip(!isMobile, "This test is for mobile viewports only")
+
     const { initialCount, osOptions } =
       await findWalletPage.applyMobileDeviceFilter()
     await findWalletPage.waitForFilterResults(initialCount)

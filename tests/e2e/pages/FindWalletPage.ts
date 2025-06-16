@@ -147,11 +147,6 @@ export class FindWalletPage extends BasePage {
     initialCount: number
     osOptions: string[]
   }> {
-    const isMobile = await this.isMobileViewport()
-    if (!isMobile) {
-      await this.page.setViewportSize({ width: 375, height: 800 })
-    }
-
     const initialCount = await this.getVisibleWalletCount()
 
     // Open mobile filters

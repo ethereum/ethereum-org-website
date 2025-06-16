@@ -35,6 +35,9 @@ test.describe("Home Page", () => {
   })
 
   test("navigation menu - mobile", async ({ page }, testInfo) => {
+    const isMobile = await homePage.isMobileViewport()
+    test.skip(!isMobile, "This test is for mobile viewports only")
+
     await homePage.openMobileMenu()
     await takeSnapshot(page, "home-menu-open", testInfo)
 

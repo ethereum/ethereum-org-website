@@ -98,12 +98,6 @@ export class HomePage extends BasePage {
    * Open mobile menu
    */
   async openMobileMenu() {
-    const isMobile = await this.isMobileViewport()
-    if (!isMobile) {
-      // Force mobile viewport for testing
-      await this.page.setViewportSize({ width: 375, height: 800 })
-    }
-
     await expect(this.mobileMenuButton).toBeVisible()
     await this.mobileMenuButton.click()
     await expect(this.mobileSidebar).toBeVisible()
