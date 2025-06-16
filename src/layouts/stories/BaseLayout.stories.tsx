@@ -46,6 +46,5 @@ export const BaseLayout: StoryObj<typeof meta> = {
     // contentIsOutdated: false,
     // contentNotTranslated: false,
     lastDeployLocaleTimestamp: "May 14, 2021",
-    locale: "en",
   },
 }
