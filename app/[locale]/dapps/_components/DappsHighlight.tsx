@@ -26,7 +26,7 @@ const DappsHighlight = () => {
               className="mb-2 rounded-xl"
             />
             <div className="mb-6">{dapp.description}</div>
-            <DappCard dapp={dapp} />
+            <DappCard dapp={dapp} imageSize={16} />
           </div>
         ))}
       </div>
@@ -44,7 +44,7 @@ const DappsHighlight = () => {
                   />
                 </div>
                 <div className="mb-6">{dapp.description}</div>
-                <DappCard dapp={dapp} />
+                <DappCard dapp={dapp} imageSize={16} />
               </SwiperSlide>
             ))}
             <SwiperNavigation />

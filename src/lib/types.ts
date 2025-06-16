@@ -1054,18 +1054,15 @@ export type Dapp = {
   description: string
   image: StaticImageData
   category: DappCategoryEnum
+  networks: Array<"Ethereum" | "Starknet">
+  subCategory: string[]
 }
 
 export type DefiDapp = Dapp & {
   category: DappCategoryEnum.DEFI
-  networks: Array<"Ethereum" | "Starknet">
-  subCategory:
-    | "Lending"
-    | "Liquid staking"
-    | "DEX"
-    | "Insurance"
-    | "Prediction"
-    | "RWA"
+  subCategory: Array<
+    "Lending" | "Liquid staking" | "DEX" | "Insurance" | "Prediction" | "RWA"
+  >
 }
 
 export type CollectibleDapp = Dapp & {
