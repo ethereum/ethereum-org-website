@@ -1,9 +1,9 @@
 name: E2E tests
 on:
   push:
-    branches: [master, staging]
+    branches: [master, staging, e2e-tests] # TODO: remove e2e-tests branch after testing
   pull_request:
-    branches: [master, staging]
+    branches: [master, staging, e2e-tests] # TODO: remove e2e-tests branch after testing
 jobs:
   playwright:
     runs-on: ubuntu-latest
