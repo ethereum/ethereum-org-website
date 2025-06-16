@@ -1,9 +1,9 @@
 name: E2E tests
 on:
   push:
-    branches: [master, staging, e2e-tests] # TODO: remove e2e-tests (testing branch)
+    branches: [master, staging]
   pull_request:
-    branches: [master, staging, e2e-tests] # TODO: remove e2e-tests (testing branch)
+    branches: [master, staging]
 jobs:
   playwright:
     runs-on: ubuntu-latest
@@ -12,15 +12,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Sleep for 30 minutes
-        run: sleep 1800
-
       - name: Wait for Netlify Deploy
         id: netlify_deploy
         uses: probablyup/wait-for-netlify-action@3.2.0
         with:
           site_id: "e8f2e766-888b-4954-8500-1b647d84db99"
-          max_timeout: 1800
+          max_timeout: 3600
         env:
           NETLIFY_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
 
