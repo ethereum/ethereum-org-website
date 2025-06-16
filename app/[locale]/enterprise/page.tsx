@@ -346,6 +346,17 @@ const Page = async ({ params }: { params: { locale: Lang } }) => {
               {t("page-enterprise-ecosystem-description")}
             </p>
           </div>
+
+          {/* A11y list of companies for screen readers */}
+          <div className="sr-only">
+            <h3>{t("page-enterprise-ecosystem-companies")}</h3>
+            <ul>
+              {players.map(({ name }) => (
+                <li key={name}>{name}</li>
+              ))}
+            </ul>
+          </div>
+
           <div
             data-label="marquee"
             dir="ltr"
@@ -368,7 +379,6 @@ const Page = async ({ params }: { params: { locale: Lang } }) => {
                     {players.map(({ name, Logo, className }) => (
                       <div
                         key={name}
-                        aria-label={name}
                         className={cn(
                           "flex size-fit justify-center px-6 text-[2.5rem] md:px-8",
                           row === 1 && "-translate-x-[90rem]",
@@ -376,7 +386,7 @@ const Page = async ({ params }: { params: { locale: Lang } }) => {
                           className
                         )}
                       >
-                        <Logo />
+                        <Logo aria-hidden />
                       </div>
                     ))}
                   </div>

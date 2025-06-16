@@ -65,7 +65,10 @@ const BigNumber = async ({
                   </>
                 }
               >
-                <MdInfoOutline className="mb-0.5 ms-2 inline align-text-bottom" />
+                <MdInfoOutline
+                  className="mb-0.5 ms-2 inline align-text-bottom"
+                  aria-label={t("data-provided-by")}
+                />
               </Tooltip>
             )}
           </div>
