@@ -1,4 +1,4 @@
-import { getTranslations } from "next-intl/server"
+import { getLocale, getTranslations } from "next-intl/server"
 
 import { EthHomeIcon } from "@/components/icons"
 
@@ -6,7 +6,8 @@ import { BaseLink } from "../ui/Link"
 
 import ClientSideNav from "./Client"
 
-const Nav = async ({ locale }) => {
+const Nav = async () => {
+  const locale = await getLocale()
   const t = await getTranslations({ locale, namespace: "common" })
 
   return (
