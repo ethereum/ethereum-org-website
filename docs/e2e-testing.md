@@ -75,7 +75,7 @@ tests/e2e/
 
 #### 1. Use Page Object Model
 
-Create reusable page objects for common interactions:
+Create reusable page objects for common interactions. For more details, see the [Playwright Page Object Model documentation](https://playwright.dev/docs/pom):
 
 ```typescript
 // pages/HomePage.ts
