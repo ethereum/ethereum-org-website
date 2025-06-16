@@ -541,7 +541,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               <p className="mt-8 text-xl font-bold">
                 {t("page-index-activity-description")}
               </p>
-              <ActivityStats metrics={metrics} locale={locale} />
+              <ActivityStats metrics={metrics} />
 
               <div className="mt-12 flex justify-center">
                 <ButtonLink

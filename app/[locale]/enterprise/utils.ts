@@ -1,4 +1,4 @@
-import { getTranslations } from "next-intl/server"
+import { getLocale, getTranslations } from "next-intl/server"
 
 import type {
   AllEnterpriseActivityData,
@@ -10,16 +10,14 @@ import { formatLargeNumber, formatLargeUSD } from "@/lib/utils/numbers"
 import { getLocaleForNumberFormat } from "@/lib/utils/translations"
 
 // Convert numerical value to formatted values
-export const parseActivity = async (
-  {
-    txCount,
-    stablecoinMarketCap,
-    ethPrice,
-    totalEthStaked,
-    // totalCapitalSecured,
-  }: AllEnterpriseActivityData,
-  locale: Lang
-): Promise<StatsBoxMetric[]> => {
+export const parseActivity = async ({
+  txCount,
+  stablecoinMarketCap,
+  ethPrice,
+  totalEthStaked,
+  // totalCapitalSecured,
+}: AllEnterpriseActivityData): Promise<StatsBoxMetric[]> => {
+  const locale = (await getLocale()) as Lang
   const t = await getTranslations("page-enterprise")
 
   const localeForNumberFormat = getLocaleForNumberFormat(locale)

@@ -1,3 +1,5 @@
+import { getLocale } from "next-intl/server"
+
 import type { StatsBoxMetric } from "@/lib/types"
 
 import { cn } from "@/lib/utils/cn"
@@ -6,14 +8,10 @@ import BigNumber from "../BigNumber"
 
 type ActivityStatsProps = {
   metrics: StatsBoxMetric[]
-  locale: string
   className?: string
 }
-const ActivityStats = async ({
-  metrics,
-  locale,
-  className,
-}: ActivityStatsProps) => {
+const ActivityStats = async ({ metrics, className }: ActivityStatsProps) => {
+  const locale = await getLocale()
   const gridBorderClasses = [
     "border-b border-body-light xl:border-e xl:pe-8",
     "border-b border-body-light xl:ps-8",

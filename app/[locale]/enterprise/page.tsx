@@ -104,16 +104,13 @@ const Page = async ({ params }: { params: { locale: Lang } }) => {
   const ethPrice = await fetchEthPrice()
   const totalEthStaked = await fetchTotalEthStaked()
 
-  const metrics = await parseActivity(
-    {
-      txCount,
-      stablecoinMarketCap,
-      ethPrice,
-      totalEthStaked,
-      // totalCapitalSecured,
-    },
-    locale
-  )
+  const metrics = await parseActivity({
+    txCount,
+    stablecoinMarketCap,
+    ethPrice,
+    totalEthStaked,
+    // totalCapitalSecured,
+  })
 
   const features: Feature[] = [
     {
@@ -304,7 +301,6 @@ const Page = async ({ params }: { params: { locale: Lang } }) => {
 
           <ActivityStats
             metrics={metrics}
-            locale={locale}
             className={cn(
               metrics.length < 2 && "hidden", // Minimum before displaying
               "w-fit max-w-xl shrink-0 gap-8 sm:max-md:grid-cols-2",
