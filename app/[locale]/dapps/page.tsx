@@ -12,6 +12,9 @@ import MainArticle from "@/components/MainArticle"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
+import { DAPPS_STAFF_PICK_DATA } from "@/data/dapps"
+
+import DappCard from "./_components/DappCard"
 import DappsHighlight from "./_components/DappsHighlight"
 
 import DappsHeroImage from "@/public/images/dapps/dapps-hero.png"
@@ -40,8 +43,18 @@ const Page = async ({ params }: { params: { locale: string } }) => {
           <DappsHighlight />
         </div>
 
-        <div className="flex flex-col px-4 md:px-8">
+        <div className="flex flex-col gap-4 px-4 md:px-8">
           <h2>Staff picks</h2>
+          <div className="grid grid-cols-1 gap-7 md:grid-cols-2 lg:grid-cols-3">
+            {DAPPS_STAFF_PICK_DATA.map((dapp) => (
+              <DappCard
+                key={dapp.name}
+                dapp={dapp}
+                imageSize={24}
+                showDescription={true}
+              />
+            ))}
+          </div>
         </div>
 
         <div className="flex flex-col px-4 md:px-8">
