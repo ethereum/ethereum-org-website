@@ -129,7 +129,7 @@ contract RecipientContract is IERC223Recipient {
     {
         // It is important to understand that within this function
         // msg.sender is the address of a token that is being received,
-        // msg.value  is always 0 as the token contract does not own or send Ether in most cases,
+        // msg.value  is always 0 as the token contract does not own or send ether in most cases,
         // _from      is the sender of the token transfer,
         // _value     is the amount of tokens that was deposited.
         require(msg.sender == tokenA);
@@ -155,7 +155,7 @@ Si un jeton ERC-20 est envoyé au `RecipientContract`, les jetons seront transf�
 
 ### Que faire si nous voulons exécuter une fonction après que le dépôt de jetons soit complété ? {#function-execution}
 
-Il existe plusieurs façons de procéder. Dans cet exemple, nous suivrons la méthode qui rend les transferts ERC-223 identiques aux transferts d'Ether :
+Il existe plusieurs façons de procéder. Dans cet exemple, nous suivrons la méthode qui rend les transferts ERC-223 identiques aux transferts d'ether :
 
 ```solidity
 contract RecipientContract is IERC223Recipient {
@@ -178,7 +178,7 @@ contract RecipientContract is IERC223Recipient {
 }
 ```
 
-Lorsque le `RecipientContract` recevra un jeton ERC-223, le contrat exécutera une fonction encodée comme paramètre `_data` de la transaction de jeton, de manière identique à la façon dont les transactions Ether codent les appels de fonction en tant que `data` de transaction. Consultez [le champ de données](https://ethereum.org/en/developers/docs/transactions/#the-data-field) pour plus d'informations.
+Lorsque le 'RecipientContract' recevra un token ERC-223, le contrat exécutera une fonction encodée sous forme de paramètre '_data' de la transaction du jeton, de la même manière que les transactions d'ether encodent les appels de fonction en tant que 'data' de transaction. Consultez [le champ de données](https://ethereum.org/en/developers/docs/transactions/#the-data-field) pour plus d'informations.
 
 Dans l'exemple ci-dessus, un jeton ERC-223 doit être transféré à l'adresse du `RecipientContract` avec la fonction `transfer(address,uint256,bytes calldata _data)`. Si le paramètre de données est `0xc2985578` (la signature de la fonction `faut()`), alors la fonction `foo()` sera invoquée après la réception du dépôt de jetons, et l'événement `Foo()` sera déclenché.
 

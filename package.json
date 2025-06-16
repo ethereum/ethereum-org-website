@@ -1,6 +1,6 @@
 {
   "name": "ethereum-org-website",
-  "version": "10.5.0",
+  "version": "10.6.1",
   "license": "MIT",
   "private": true,
   "scripts": {
@@ -68,7 +68,7 @@
     "howler": "^2.2.4",
     "htmr": "^1.0.2",
     "lodash": "^4.17.21",
-    "next": "^14.2.26",
+    "next": "^14.2.30",
     "next-intl": "^3.26.3",
     "next-mdx-remote": "^5.0.0",
     "next-sitemap": "^4.2.3",
@@ -88,7 +88,7 @@
     "recharts": "^2.13.3",
     "remark-gfm": "^4.0.1",
     "sharp": "0.32.6",
-    "swiper": "^11.1.10",
+    "swiper": "^11.2.8",
     "tailwind-merge": "^2.3.0",
     "tailwind-variants": "^0.2.1",
     "tailwindcss-animate": "^1.0.7",
