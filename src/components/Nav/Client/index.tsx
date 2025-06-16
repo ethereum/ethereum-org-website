@@ -5,7 +5,6 @@ import dynamic from "next/dynamic"
 import { useLocale } from "next-intl"
 import { BsTranslate } from "react-icons/bs"
 
-import LanguagePicker from "@/components/LanguagePicker"
 import SearchButton from "@/components/Search/SearchButton"
 import SearchInputButton from "@/components/Search/SearchInputButton"
 import { Button } from "@/components/ui/buttons/Button"
@@ -30,27 +29,39 @@ const Menu = dynamic(() => import("../Menu"), {
   ),
 })
 
+const MobileMenuLoading = () => (
+  <Skeleton data-label="mobile-menu" className="ms-2 size-6" />
+)
+
 const MobileNavMenu = dynamic(() => import("../Mobile"), {
   ssr: false,
-  loading: () => <Skeleton className="my-auto size-6" />,
+  loading: MobileMenuLoading,
 })
 
 const SearchProvider = dynamic(() => import("../../Search"), {
   ssr: false,
   loading: () => (
     <>
-      <div className="flex items-center gap-6 px-6 max-md:hidden xl:px-3">
+      <div className="flex items-center gap-6 px-2 max-md:hidden xl:px-3">
         <Skeleton
           data-label="search-xl"
           className="hidden h-6 w-[169px] xl:flex"
         />
         <Skeleton data-label="search" className="size-6 xl:hidden" />
       </div>
-      <div className="flex items-center gap-4 md:hidden">
-        <Skeleton data-label="search" className="size-6 xl:hidden" />
-        <Skeleton data-label="mobile-menu" className="size-6" />
+      <div className="flex items-center md:hidden">
+        <Skeleton data-label="search" className="mx-2 size-6" />
+        <MobileMenuLoading />
       </div>
     </>
+  ),
+})
+
+const LanguagePicker = dynamic(() => import("../../LanguagePicker"), {
+  ssr: false,
+  loading: () => (
+    // LG skeleton width approximates English "[icon] Languages EN" text width
+    <Skeleton className="h-6 max-md:hidden md:mx-2 md:w-[54px] lg:mx-3 lg:w-[8.875rem]" />
   ),
 })
 
@@ -106,7 +117,7 @@ const ClientSideNav = () => {
         )}
 
         {desktopScreen && (
-          <LanguagePicker>
+          <LanguagePicker className="max-md:hidden">
             <Button
               name={DESKTOP_LANGUAGE_BUTTON_NAME}
               ref={languagePickerRef}
