@@ -1034,7 +1034,6 @@ export enum DappCategoryEnum {
   COLLECTIBLE = "collectible",
   SOCIAL = "social",
   GAMING = "gaming",
-  DAO = "dao",
   BRIDGE = "bridge",
 }
 
@@ -1077,10 +1076,6 @@ export type GamingDapp = Dapp & {
   category: DappCategoryEnum.GAMING
 }
 
-export type DaoDapp = Dapp & {
-  category: DappCategoryEnum.DAO
-}
-
 export type BridgeDapp = Dapp & {
   category: DappCategoryEnum.BRIDGE
 }
@@ -1090,5 +1085,4 @@ export type DappData =
   | CollectibleDapp
   | SocialDapp
   | GamingDapp
-  | DaoDapp
   | BridgeDapp

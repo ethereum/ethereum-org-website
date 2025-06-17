@@ -2,14 +2,16 @@ import { DappCategory, DappCategoryEnum, DappData } from "@/lib/types"
 
 import { TagProps } from "@/components/ui/tag"
 
+import { collectiblesDapps } from "./collectibles"
 import { defiDapps } from "./defi"
+import { gamingDapps } from "./gaming"
+import { socialDapps } from "./social"
 
 export const DAPPS_DATA: Record<DappCategory, DappData[]> = {
   [DappCategoryEnum.DEFI]: defiDapps,
-  [DappCategoryEnum.COLLECTIBLE]: [],
-  [DappCategoryEnum.SOCIAL]: [],
-  [DappCategoryEnum.GAMING]: [],
-  [DappCategoryEnum.DAO]: [],
+  [DappCategoryEnum.COLLECTIBLE]: collectiblesDapps,
+  [DappCategoryEnum.SOCIAL]: socialDapps,
+  [DappCategoryEnum.GAMING]: gamingDapps,
   [DappCategoryEnum.BRIDGE]: [],
 }
 
@@ -42,6 +44,5 @@ export const DAPP_TAG_VARIANTS: Record<DappCategoryEnum, TagProps["status"]> = {
   [DappCategoryEnum.COLLECTIBLE]: "success",
   [DappCategoryEnum.SOCIAL]: "error",
   [DappCategoryEnum.GAMING]: "warning",
-  [DappCategoryEnum.DAO]: "normal",
   [DappCategoryEnum.BRIDGE]: "normal",
 }
