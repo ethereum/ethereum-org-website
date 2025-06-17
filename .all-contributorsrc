@@ -12782,6 +12782,15 @@
       "contributions": [
         "eventOrganizing"
       ]
+    },
+    {
+      "login": "kichong",
+      "name": "kichong",
+      "avatar_url": "https://avatars.githubusercontent.com/u/38249409?v=4",
+      "profile": "https://github.com/kichong",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
