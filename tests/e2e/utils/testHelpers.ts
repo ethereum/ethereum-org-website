@@ -193,26 +193,6 @@ export const waitForElementCountChange = async (
 }
 
 /**
- * Simulate mobile viewport
- */
-export const setMobileViewport = async (page: Page): Promise<void> => {
-  await page.setViewportSize({
-    width: breakpointAsNumber.sm,
-    height: 800,
-  })
-}
-
-/**
- * Simulate desktop viewport
- */
-export const setDesktopViewport = async (page: Page): Promise<void> => {
-  await page.setViewportSize({
-    width: 1200,
-    height: 800,
-  })
-}
-
-/**
  * Assert element is visible with better error message
  */
 export const assertElementVisible = async (

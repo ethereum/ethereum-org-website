@@ -1,8 +1,6 @@
 import { expect, takeSnapshot, test } from "@chromatic-com/playwright"
 import { Page } from "@playwright/test"
 
-import { breakpointAsNumber } from "@/lib/utils/screen"
-
 import { DEFAULT_LOCALE } from "@/lib/constants"
 
 import { testData } from "./fixtures/testData"
@@ -58,7 +56,6 @@ test.describe("Global", () => {
     })
 
     test("switches to Chinese (mobile)", async ({ page }) => {
-      await page.setViewportSize({ width: breakpointAsNumber.sm, height: 800 })
       const isMobile = await homePage.isMobileViewport()
       test.skip(!isMobile, "This test is for mobile viewports only")
 
@@ -73,11 +70,12 @@ test.describe("Global", () => {
 
     test.beforeEach(async ({ page }) => {
       homePage = new HomePage(page)
+      await waitForPageReady(page)
     })
 
     async function switchToArabic(page: Page, homePage: HomePage) {
       await homePage.switchToLanguage("ar", /^العربية Arabic/i)
-      await expect(page).toHaveURL(/\/ar(\/|$)/)
+      await homePage.assertUrlMatches(/\/ar(\/|$)/)
       await expect(
         page.getByRole("heading", { level: 1, name: /إيثريوم/i })
       ).toBeVisible()
@@ -95,12 +93,12 @@ test.describe("Global", () => {
       await homePage.goto()
       await waitForPageReady(page)
 
-      await expect(page).toHaveURL(`/${DEFAULT_LOCALE}/`)
+      await homePage.assertUrlMatches(`/${DEFAULT_LOCALE}/`)
 
       await homePage.openLanguagePickerDesktop()
       await switchToArabic(page, homePage)
 
-      await expect(page).toHaveURL(/\/ar(\/|$)/)
+      await homePage.assertUrlMatches(/\/ar(\/|$)/)
 
       const logo = page.getByTestId("nav-logo")
       const searchBtn = page.getByTestId("search-input-button")
