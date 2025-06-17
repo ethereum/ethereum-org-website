@@ -1,7 +1,7 @@
 import { getImageProps } from "next/image"
 import { getLocale, getTranslations } from "next-intl/server"
 
-import type { ClassNameProp, CommonHeroProps } from "@/lib/types"
+import type { ClassNameProp } from "@/lib/types"
 
 import LanguageMorpher from "@/components/Homepage/LanguageMorpher"
 
@@ -11,9 +11,7 @@ import { breakpointAsNumber } from "@/lib/utils/screen"
 import heroBase from "@/public/images/home/hero.png"
 import hero2xl from "@/public/images/home/hero-2xl.png"
 
-export type HomeHeroProps = Pick<CommonHeroProps, "heroImg"> & ClassNameProp
-
-const HomeHero = async ({ className }: HomeHeroProps) => {
+const HomeHero = async ({ className }: ClassNameProp) => {
   const locale = getLocale()
   const t = await getTranslations({ locale, namespace: "page-index" })
 
