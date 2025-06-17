@@ -1,39 +1,33 @@
-import { DappCategories } from "@/lib/types"
+import { DappCategories, DappCategoryEnum } from "@/lib/types"
 
 export const dappsCategories: DappCategories = {
-  defi: {
+  [DappCategoryEnum.DEFI]: {
     name: "DeFi",
-    slug: "defi",
+    slug: DappCategoryEnum.DEFI,
     description:
       "DeFi is a category of decentralized applications that allow users to lend, borrow, trade, and earn interest on their crypto assets.",
   },
-  collectible: {
+  [DappCategoryEnum.COLLECTIBLE]: {
     name: "Collectibles",
-    slug: "collectible",
+    slug: DappCategoryEnum.COLLECTIBLE,
     description:
       "Collectibles are digital assets that are unique and cannot be replicated.",
   },
-  social: {
+  [DappCategoryEnum.SOCIAL]: {
     name: "Social",
-    slug: "social",
+    slug: DappCategoryEnum.SOCIAL,
     description:
       "Social is a category of decentralized applications that allow users to connect with others and share content.",
   },
-  gaming: {
+  [DappCategoryEnum.GAMING]: {
     name: "Gaming",
-    slug: "gaming",
+    slug: DappCategoryEnum.GAMING,
     description:
       "Gaming is a category of decentralized applications that allow users to play games and earn rewards.",
   },
-  dao: {
-    name: "DAO",
-    slug: "dao",
-    description:
-      "DAO is a category of decentralized applications that allow users to create and manage decentralized autonomous organizations.",
-  },
-  bridge: {
+  [DappCategoryEnum.BRIDGE]: {
     name: "Bridge",
-    slug: "bridge",
+    slug: DappCategoryEnum.BRIDGE,
     description:
       "Bridge is a category of decentralized applications that allow users to bridge their assets between different networks.",
   },

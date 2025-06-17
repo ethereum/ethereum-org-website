@@ -1030,11 +1030,11 @@ export interface ITutorial {
 }
 
 export enum DappCategoryEnum {
-  DEFI = "defi",
-  COLLECTIBLE = "collectible",
-  SOCIAL = "social",
-  GAMING = "gaming",
-  BRIDGE = "bridge",
+  DEFI = "DeFi",
+  COLLECTIBLE = "Collectibles",
+  SOCIAL = "Social",
+  GAMING = "Gaming",
+  BRIDGE = "Bridge",
 }
 
 export type DappCategory = `${DappCategoryEnum}`

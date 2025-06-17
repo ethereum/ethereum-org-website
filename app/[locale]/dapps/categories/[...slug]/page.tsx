@@ -37,7 +37,7 @@ const Page = async ({
   const requiredNamespaces = getRequiredNamespacesForPage("/dapps")
   const messages = pick(allMessages, requiredNamespaces)
 
-  const formattedCategory = dappsCategories[slug[0]].name
+  const category = dappsCategories[slug[0]]
 
   if (!isValidCategory(slug[0])) {
     notFound()
@@ -47,8 +47,8 @@ const Page = async ({
     <I18nProvider locale={locale} messages={messages}>
       <HubHero
         title="Use"
-        header={`${formattedCategory} dapps`}
-        description={dappsCategories[slug[0]].description}
+        header={`${category.name} dapps`}
+        description={category.description}
         heroImg={DappsHeroImage}
       />
 
@@ -62,7 +62,7 @@ const Page = async ({
         </div>
 
         <div className="flex flex-col px-4 md:px-8">
-          <h2>All {formattedCategory} dapps</h2>
+          <h2>All {category.name} dapps</h2>
         </div>
       </MainArticle>
     </I18nProvider>

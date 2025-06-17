@@ -1,5 +1,6 @@
 "use client"
 
+import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 import {
   Swiper,
   SwiperContainer,
@@ -35,11 +36,20 @@ const TopDapps = () => {
       >
         {Object.keys(DAPPS_DATA).map((category) => (
           <SwiperSlide key={category}>
-            <div>
-              <h3>{category}</h3>
-              <div className="flex flex-col gap-4">
+            <div className="flex flex-col rounded-xl border">
+              <LinkBox className="border-b p-4 hover:bg-background-highlight">
+                <LinkOverlay
+                  href={`/dapps/categories/${category}`}
+                  className="text-body no-underline"
+                >
+                  <h3>{category}</h3>
+                </LinkOverlay>
+              </LinkBox>
+              <div className="flex flex-col">
                 {DAPPS_DATA[category].map((dapp) => (
-                  <DappCard key={dapp.name} dapp={dapp} imageSize={24} />
+                  <div key={dapp.name} className="border-b">
+                    <DappCard dapp={dapp} imageSize={16} />
+                  </div>
                 ))}
               </div>
             </div>
