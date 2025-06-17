@@ -1,5 +1,7 @@
 import { expect, request, test } from "@playwright/test"
 
+import { MdPage } from "./pages/MdPage"
+
 const PAGE_URL = "/whitepaper"
 const PDF_LINK_TEXT = /whitepaper.*pdf/i
 const PDF_PATH =
@@ -7,13 +9,11 @@ const PDF_PATH =
 
 test.describe("Whitepaper Page", () => {
   test("whitepaper PDF link has correct href", async ({ page }) => {
-    await page.goto(PAGE_URL)
-
-    const pdfLink = page.getByRole("link", { name: PDF_LINK_TEXT })
-    await expect(pdfLink).toBeVisible()
-
-    const href = await pdfLink.getAttribute("href")
-    expect(href).toContain(PDF_PATH)
+    const whitepaperPage = new MdPage(page, PAGE_URL)
+    await whitepaperPage.goto()
+    await whitepaperPage.waitForPageReady()
+    await whitepaperPage.verifyLinkVisible(PDF_LINK_TEXT)
+    await whitepaperPage.verifyLinkHref(PDF_LINK_TEXT, PDF_PATH)
   })
 
   test("whitepaper PDF is accessible and served as PDF", async ({
