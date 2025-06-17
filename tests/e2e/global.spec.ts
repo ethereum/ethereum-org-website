@@ -20,11 +20,31 @@ test.describe("Global", () => {
 
       await homePage.verifyNoResults()
     })
+
+    test("handles invalid URL with 404", async ({ page }) => {
+      await page.goto(testData.urls.invalid)
+      await expect(
+        page.getByRole("heading", {
+          level: 1,
+          name: new RegExp(testData.content.headings.notFoundEn, "i"),
+        })
+      ).toBeVisible()
+    })
+
+    test("handles invalid URL with 404 internationalized", async ({ page }) => {
+      await page.goto(testData.urls.invalidInternationalized)
+      await expect(
+        page.getByRole("heading", {
+          level: 1,
+          name: new RegExp(testData.content.headings.notFoundEs, "i"),
+        })
+      ).toBeVisible()
+    })
   })
 
   test.describe("Accessibility", () => {
     test("skip link - keyboard navigation", async () => {
-      // TODO: Add skip link tests. Part of #15663
+      // TODO: Add skip link tests.
     })
   })
 

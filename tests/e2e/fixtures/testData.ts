@@ -3,6 +3,11 @@
  */
 
 export const testData = {
+  urls: {
+    invalid: "/invalid-url",
+    invalidInternationalized: "/es/invalid-url",
+  },
+
   search: {
     validQuery: "smart contract",
     invalidQuery: "xyz123nonexistent",
@@ -34,6 +39,8 @@ export const testData = {
     headings: {
       homepage: "Ethereum.org",
       findWallet: "Choose your wallet",
+      notFoundEn: "we couldn't find that page",
+      notFoundEs: "no hemos podido encontrar esa página",
     },
   },
 }
