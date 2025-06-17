@@ -1,4 +1,4 @@
-import { expect, Page } from "@playwright/test"
+import { expect, Locator, Page } from "@playwright/test"
 
 import { breakpointAsNumber } from "@/lib/utils/screen"
 
@@ -6,7 +6,28 @@ import { breakpointAsNumber } from "@/lib/utils/screen"
  * Base page class with common functionality for all pages
  */
 export class BasePage {
-  constructor(protected page: Page) {}
+  // Locators
+  readonly searchButtonMobile: Locator
+  readonly searchInputButton: Locator
+  readonly searchInput: Locator
+  readonly searchModal: Locator
+  readonly searchResults: Locator
+  readonly primaryNav: Locator
+  readonly mobileMenuButton: Locator
+  readonly mobileSidebar: Locator
+
+  constructor(protected page: Page) {
+    this.searchButtonMobile = page.getByTestId("search-button-mobile")
+    this.searchInputButton = page.getByTestId("search-input-button")
+    this.searchInput = page.getByPlaceholder("Search")
+    this.searchModal = page.getByTestId("search-modal")
+    this.searchResults = page.getByRole("listbox")
+    this.primaryNav = page.getByRole("navigation", { name: "Primary" })
+    this.mobileMenuButton = this.primaryNav.getByRole("button", {
+      name: /toggle menu button/i,
+    })
+    this.mobileSidebar = page.getByRole("dialog", { name: /ethereum.org/i })
+  }
 
   /**
    * Check if the current viewport is mobile
@@ -89,27 +110,15 @@ export class BasePage {
    * Open language picker in desktop view
    */
   async openLanguagePickerDesktop(): Promise<void> {
-    const nav = this.page.getByRole("navigation", { name: /primary/i })
-    const langButton = nav.getByRole("button", { name: /languages/i })
-    await expect(langButton).toBeVisible()
-    await langButton.click()
+    await this.primaryNav.getByRole("button", { name: /languages/i }).click()
   }
 
   /**
    * Open language picker in mobile view
    */
   async openLanguagePickerMobile(): Promise<void> {
-    const nav = this.page.getByRole("navigation", { name: /primary/i })
-    const menuButton = nav.getByRole("button", {
-      name: /toggle menu button/i,
-    })
-    await expect(menuButton).toBeVisible()
-    await menuButton.click()
-    const sidebar = this.page.getByRole("dialog", { name: /ethereum.org/i })
-    await expect(sidebar).toBeVisible()
-    const langButton = sidebar.getByRole("button", { name: /languages/i })
-    await expect(langButton).toBeVisible()
-    await langButton.click()
+    await this.mobileMenuButton.click()
+    await this.mobileSidebar.getByRole("button", { name: /languages/i }).click()
   }
 
   /**

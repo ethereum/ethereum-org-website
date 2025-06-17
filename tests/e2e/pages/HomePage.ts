@@ -1,4 +1,4 @@
-import { expect, Locator, Page } from "@playwright/test"
+import { expect, Page } from "@playwright/test"
 
 import { testData } from "../fixtures/testData"
 
@@ -10,28 +10,8 @@ import { BasePage } from "./BasePage"
 export class HomePage extends BasePage {
   private readonly url = "/"
 
-  // Locators
-  private readonly searchButtonMobile: Locator
-  private readonly searchInputButton: Locator
-  private readonly searchInput: Locator
-  private readonly searchModal: Locator
-  private readonly searchResults: Locator
-  private readonly primaryNav: Locator
-  private readonly mobileMenuButton: Locator
-  private readonly mobileSidebar: Locator
-
   constructor(page: Page) {
     super(page)
-    this.searchButtonMobile = page.getByTestId("search-button-mobile")
-    this.searchInputButton = page.getByTestId("search-input-button")
-    this.searchInput = page.getByPlaceholder("Search")
-    this.searchModal = page.getByTestId("search-modal")
-    this.searchResults = page.getByRole("listbox")
-    this.primaryNav = page.getByRole("navigation", { name: "Primary" })
-    this.mobileMenuButton = this.primaryNav.getByRole("button", {
-      name: /toggle menu button/i,
-    })
-    this.mobileSidebar = page.getByRole("dialog", { name: /ethereum.org/i })
   }
 
   /**
