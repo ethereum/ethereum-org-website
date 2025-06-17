@@ -1,7 +1,6 @@
 import { takeSnapshot, test } from "@chromatic-com/playwright"
 
 import { FindWalletPage } from "./pages/FindWalletPage"
-import { waitForPageReady } from "./utils/testHelpers"
 
 test.describe("Find Wallet Page", () => {
   let findWalletPage: FindWalletPage
@@ -9,7 +8,7 @@ test.describe("Find Wallet Page", () => {
   test.beforeEach(async ({ page }) => {
     findWalletPage = new FindWalletPage(page)
     await findWalletPage.goto()
-    await waitForPageReady(page)
+    await findWalletPage.waitForPageReady()
   })
 
   test("loads successfully", async ({ page }, testInfo) => {

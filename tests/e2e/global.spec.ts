@@ -5,7 +5,6 @@ import { DEFAULT_LOCALE } from "@/lib/constants"
 
 import { testData } from "./fixtures/testData"
 import { HomePage } from "./pages/HomePage"
-import { waitForPageReady } from "./utils/testHelpers"
 
 test.describe("Global", () => {
   test.describe("Error Handling", () => {
@@ -35,7 +34,7 @@ test.describe("Global", () => {
     test.beforeEach(async ({ page }) => {
       homePage = new HomePage(page)
       await homePage.goto()
-      await waitForPageReady(page)
+      await homePage.waitForPageReady()
     })
 
     async function switchToChinese(page: Page, homePage: HomePage) {
@@ -70,7 +69,6 @@ test.describe("Global", () => {
 
     test.beforeEach(async ({ page }) => {
       homePage = new HomePage(page)
-      await waitForPageReady(page)
     })
 
     async function switchToArabic(page: Page, homePage: HomePage) {
@@ -83,7 +81,7 @@ test.describe("Global", () => {
 
     test("home page RTL visual snapshot", async ({ page }, testInfo) => {
       await page.goto("/ar")
-      await waitForPageReady(page)
+      await homePage.waitForPageReady()
       await takeSnapshot(page, "home-arabic-rtl", testInfo)
     })
 
@@ -91,7 +89,7 @@ test.describe("Global", () => {
       page,
     }) => {
       await homePage.goto()
-      await waitForPageReady(page)
+      await homePage.waitForPageReady()
 
       await homePage.assertUrlMatches(`/${DEFAULT_LOCALE}/`)
 

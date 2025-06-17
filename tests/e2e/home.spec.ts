@@ -2,7 +2,6 @@ import { takeSnapshot, test } from "@chromatic-com/playwright"
 
 import { testData } from "./fixtures/testData"
 import { HomePage } from "./pages/HomePage"
-import { waitForPageReady } from "./utils/testHelpers"
 
 test.describe("Home Page", () => {
   let homePage: HomePage
@@ -10,7 +9,7 @@ test.describe("Home Page", () => {
   test.beforeEach(async ({ page }) => {
     homePage = new HomePage(page)
     await homePage.goto()
-    await waitForPageReady(page)
+    await homePage.waitForPageReady()
   })
 
   test("loads successfully", async ({ page }, testInfo) => {

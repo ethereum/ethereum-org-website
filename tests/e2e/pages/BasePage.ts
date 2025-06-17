@@ -38,6 +38,13 @@ export class BasePage {
   }
 
   /**
+   * Wait for page to be fully loaded with all network requests completed
+   */
+  async waitForPageReady(timeout = 30000): Promise<void> {
+    await this.page.waitForLoadState("networkidle", { timeout })
+  }
+
+  /**
    * Wait for page to be loaded and ready
    */
   async waitForPageLoad(): Promise<void> {
