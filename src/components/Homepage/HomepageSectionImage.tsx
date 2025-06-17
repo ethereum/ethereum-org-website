@@ -91,15 +91,7 @@ export default function HomepageSectionImage({
         media={`(max-width: ${breakpointAsNumber.md - 1}px)`}
         srcSet={mobile}
       />
-      <img
-        {...rest}
-        alt={alt}
-        style={{
-          width: "100%",
-          height: "auto",
-          objectFit: "cover",
-        }}
-      />
+      <img {...rest} alt={alt} className="h-auto w-full object-cover" />
     </picture>
   )
 }
