@@ -19,6 +19,7 @@ const HomeHero = ({ heroImg, className }: HomeHeroProps) => {
           // TODO: adjust value when the old theme breakpoints are removed (src/theme.ts)
           sizes="(max-width: 1504px) 100vw, 1504px"
           className="h-full w-full object-cover"
+          quality={20}
           priority
         />
       </div>
