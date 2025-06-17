@@ -1,7 +1,7 @@
 import { ABTestConfig } from "@/lib/types/ab-testing"
 
 function getEnvVar(key: string, defaultValue: string = ""): string {
-  return process.env[`NEXT_PUBLIC_${key}`] || defaultValue
+  return process.env[key] || defaultValue
 }
 
 function parseVariantWeights(
