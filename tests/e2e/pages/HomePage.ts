@@ -63,11 +63,13 @@ export class HomePage extends BasePage {
    * Navigate using the Build menu (desktop only)
    */
   async navigateToBuilderHome() {
-    const buildButton = this.primaryNav.getByRole("button", { name: "Build" })
+    const buildButton = this.primaryNav.getByRole("button", {
+      name: testData.navigation.menu[2].name, // Build
+    })
     await buildButton.hover()
 
     const builderHomeLink = this.primaryNav.getByRole("link", {
-      name: "Builder's home",
+      name: testData.navigation.menu[2].subsections[0], // Builder's home
     })
     await builderHomeLink.click()
 

@@ -19,28 +19,16 @@ export const testData = {
   navigation: {
     menu: [
       {
-        name: en["nav-learn-label"],
-        subsections: [
-          en["nav-learn-basics-label"],
-          en["nav-learn-ethereum-stack-label"],
-          en["nav-learn-advanced-label"],
-        ],
+        name: en["learn"],
+        subsections: [en["nav-learn-basics-label"]],
       },
       {
-        name: en["nav-use-label"],
-        subsections: [
-          en["nav-use-find-wallets-label"],
-          en["nav-use-get-eth-label"],
-          en["nav-use-decentralized-applications-label"],
-        ],
+        name: en["use"],
+        subsections: [en["nav-use-find-wallets-label"]],
       },
       {
-        name: en["nav-build-label"],
-        subsections: [
-          en["nav-build-builders-home-label"],
-          en["nav-build-development-documentation-label"],
-          en["nav-build-learn-by-coding-label"],
-        ],
+        name: en["build"],
+        subsections: [en["nav-builders-home-label"]],
       },
     ],
   },
