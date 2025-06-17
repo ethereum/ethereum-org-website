@@ -14,7 +14,7 @@ jobs:
 
       - name: Wait for Netlify Deploy
         id: netlify_deploy
-        uses: pettinarip/wait-for-netlify-action@v1.0.0
+        uses: pettinarip/wait-for-netlify-action@v1.0.2
         with:
           site_id: "e8f2e766-888b-4954-8500-1b647d84db99"
           max_timeout: 3600
