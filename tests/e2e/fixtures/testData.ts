@@ -1,3 +1,6 @@
+import en from "@/intl/en/common.json"
+import es from "@/intl/es/common.json"
+
 /**
  * Test data and fixtures for e2e tests
  */
@@ -15,21 +18,28 @@ export const testData = {
 
   navigation: {
     menu: [
-      { name: "Learn", subsections: ["Basics", "Ethereum Stack", "Advanced"] },
       {
-        name: "Use",
+        name: en["nav-learn-label"],
         subsections: [
-          "Find wallets",
-          "Get ETH",
-          "Decentralized applications (dapps)",
+          en["nav-learn-basics-label"],
+          en["nav-learn-ethereum-stack-label"],
+          en["nav-learn-advanced-label"],
         ],
       },
       {
-        name: "Build",
+        name: en["nav-use-label"],
         subsections: [
-          "Builder's home",
-          "Development documentation",
-          "Learn by coding",
+          en["nav-use-find-wallets-label"],
+          en["nav-use-get-eth-label"],
+          en["nav-use-decentralized-applications-label"],
+        ],
+      },
+      {
+        name: en["nav-build-label"],
+        subsections: [
+          en["nav-build-builders-home-label"],
+          en["nav-build-development-documentation-label"],
+          en["nav-build-learn-by-coding-label"],
         ],
       },
     ],
@@ -37,10 +47,10 @@ export const testData = {
 
   content: {
     headings: {
-      homepage: "Ethereum.org",
-      findWallet: "Choose your wallet",
-      notFoundEn: "we couldn't find that page",
-      notFoundEs: "no hemos podido encontrar esa página",
+      homepage: en["site-title"],
+      findWallet: en["nav-find-wallet-label"],
+      notFoundEn: en["we-couldnt-find-that-page"],
+      notFoundEs: es["we-couldnt-find-that-page"],
     },
   },
 }
