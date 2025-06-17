@@ -1,6 +1,6 @@
 {
   "name": "ethereum-org-website",
-  "version": "10.5.0",
+  "version": "10.6.1",
   "license": "MIT",
   "private": true,
   "scripts": {
@@ -64,7 +64,7 @@
     "howler": "^2.2.4",
     "htmr": "^1.0.2",
     "lodash": "^4.17.21",
-    "next": "^14.2.26",
+    "next": "^14.2.30",
     "next-intl": "^3.26.3",
     "next-mdx-remote": "^5.0.0",
     "next-sitemap": "^4.2.3",
@@ -84,7 +84,7 @@
     "recharts": "^2.13.3",
     "remark-gfm": "^4.0.1",
     "sharp": "0.32.6",
-    "swiper": "^11.1.10",
+    "swiper": "^11.2.8",
     "tailwind-merge": "^2.3.0",
     "tailwind-variants": "^0.2.1",
     "tailwindcss-animate": "^1.0.7",
@@ -116,17 +116,17 @@
     "@types/react": "18.2.57",
     "@types/react-dom": "18.2.19",
     "@types/xml2js": "^0.4.14",
-    "@typescript-eslint/eslint-plugin": "^6.19.0",
-    "@typescript-eslint/parser": "^6.19.0",
+    "@typescript-eslint/eslint-plugin": "^7.18.0",
+    "@typescript-eslint/parser": "^7.18.0",
     "autoprefixer": "^10.4.19",
     "chromatic": "10.9.6",
     "decompress": "^4.2.1",
-    "eslint": "^8.45.0",
+    "eslint": "^8.57.1",
     "eslint-config-next": "^14.2.2",
-    "eslint-config-prettier": "9.1.0",
+    "eslint-config-prettier": "^9",
     "eslint-plugin-simple-import-sort": "^10.0.0",
     "eslint-plugin-storybook": "0.8.0",
-    "eslint-plugin-unused-imports": "^3.0.0",
+    "eslint-plugin-unused-imports": "^3.2.0",
     "husky": "^9.0.11",
     "image-size": "^1.0.2",
     "lint-staged": "^15.2.5",
@@ -150,5 +150,5 @@
     "unist-util-visit": "^5.0.0",
     "xml2js": "^0.6.2"
   },
-  "packageManager": "pnpm@10.11.0+sha512.6540583f41cc5f628eb3d9773ecee802f4f9ef9923cc45b69890fb47991d4b092964694ec3a4f738a420c918a333062c8b925d312f42e4f0c263eb603551f977"
+  "packageManager": "pnpm@10.11.1+sha512.e519b9f7639869dc8d5c3c5dfef73b3f091094b0a006d7317353c72b124e80e1afd429732e28705ad6bfa1ee879c1fce46c128ccebd3192101f43dd67c667912"
 }

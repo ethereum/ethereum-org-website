@@ -82,7 +82,7 @@ Avoir plusieurs implémentations de clients indépendants renforce la résilienc
 
 Si un client rencontre des problèmes ou des vulnérabilités, d'autres clients peuvent continuer à fonctionner normalement, évitant ainsi un unique point de défaillance. De plus, différentes implémentations de clients encouragent l'innovation et la concurrence, stimulant les améliorations et réduisant le risque de monoculture au sein de l'écosystème.
 
-## Complément d'information {#futher-reading}
+## Complément d'information {#further-reading}
 
 - [Le Portal Network (Piper Merriam à Devcon Bogota)](https://www.youtube.com/watch?v=0stc9jnQLXA).
 - [Le discord du Portal Network](https://discord.gg/CFFnmE7Hbs)
