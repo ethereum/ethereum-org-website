@@ -1,8 +1,8 @@
 import { StaticImageData } from "next/image"
 
-import DevelopersHubHeroImage from "@/public/images/heroes/developers-hub-hero.jpg"
+import DevelopersHubHeroImage from "@/public/images/heroes/developers-hub-hero.png"
 import GuidesHubHeroImage from "@/public/images/heroes/guides-hub-hero.jpg"
-import Layer2HubHeroImage from "@/public/images/heroes/layer-2-hub-hero.jpg"
+import Layer2HubHeroImage from "@/public/images/heroes/layer-2-hub-hero.png"
 import QuizzesHubHeroImage from "@/public/images/heroes/quizzes-hub-hero.png"
 import FusakaImage from "@/public/images/roadmap/roadmap-fusaka.png"
 import PectraImage from "@/public/images/roadmap/roadmap-pectra.png"

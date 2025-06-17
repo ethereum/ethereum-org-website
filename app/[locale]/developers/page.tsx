@@ -22,7 +22,7 @@ import { getMetadata } from "@/lib/utils/metadata"
 import SpeedRunEthereumImage from "@/public/images/dev-tools/speed-run-ethereum-banner.png"
 import DevelopersImage from "@/public/images/developers-eth-blocks.png"
 import DogeImage from "@/public/images/doge-computer.png"
-import HeroImage from "@/public/images/heroes/developers-hub-hero.jpg"
+import HeroImage from "@/public/images/heroes/developers-hub-hero.png"
 
 const H2 = (props: ChildOnlyProp) => <h2 className="mb-8 mt-12" {...props} />
 
