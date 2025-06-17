@@ -84,4 +84,46 @@ export class BasePage {
   async assertUrlMatches(pattern: string | RegExp): Promise<void> {
     await expect(this.page).toHaveURL(pattern)
   }
+
+  /**
+   * Open language picker in desktop view
+   */
+  async openLanguagePickerDesktop(): Promise<void> {
+    const nav = this.page.getByRole("navigation", { name: /primary/i })
+    const langButton = nav.getByRole("button", { name: /languages/i })
+    await expect(langButton).toBeVisible()
+    await langButton.click()
+  }
+
+  /**
+   * Open language picker in mobile view
+   */
+  async openLanguagePickerMobile(): Promise<void> {
+    const nav = this.page.getByRole("navigation", { name: /primary/i })
+    const menuButton = nav.getByRole("button", {
+      name: /toggle menu button/i,
+    })
+    await expect(menuButton).toBeVisible()
+    await menuButton.click()
+    const sidebar = this.page.getByRole("dialog", { name: /ethereum.org/i })
+    await expect(sidebar).toBeVisible()
+    const langButton = sidebar.getByRole("button", { name: /languages/i })
+    await expect(langButton).toBeVisible()
+    await langButton.click()
+  }
+
+  /**
+   * Switch to a specific language
+   */
+  async switchToLanguage(
+    langFilter: string,
+    langOptionRegex: RegExp
+  ): Promise<void> {
+    const searchInput = this.page.getByPlaceholder(/type to filter/i)
+    await expect(searchInput).toBeVisible()
+    await searchInput.fill(langFilter)
+    const langOption = this.page.getByRole("option", { name: langOptionRegex })
+    await expect(langOption).toBeVisible()
+    await langOption.click()
+  }
 }
