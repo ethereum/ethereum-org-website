@@ -92,7 +92,6 @@ import { fetchRSS } from "@/lib/api/fetchRSS"
 import { fetchTotalEthStaked } from "@/lib/api/fetchTotalEthStaked"
 import { fetchTotalValueLocked } from "@/lib/api/fetchTotalValueLocked"
 import EventFallback from "@/public/images/events/event-placeholder.png"
-import Hero from "@/public/images/home/hero.png"
 
 const BentoCardSwiper = dynamic(
   () => import("@/components/Homepage/BentoCardSwiper"),
@@ -444,7 +443,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           </Link>
         </p>
       </BannerNotification>
-      <HomeHero heroImg={Hero} className="w-full" />
+      <HomeHero />
       <div className="w-full space-y-32 px-4 md:mx-6 lg:space-y-48">
         <div className="my-20 grid w-full grid-cols-2 gap-x-4 gap-y-8 md:grid-cols-4 md:gap-x-10">
           {subHeroCTAs.map(
