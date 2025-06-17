@@ -1992,6 +1992,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://www.suci.io/"><img src="https://avatars.githubusercontent.com/u/155696196?v=4?s=100" width="100px;" alt="SUCI - Blockchain Hub Team"/><br /><sub><b>SUCI - Blockchain Hub Team</b></sub></a><br /><a href="#maintenance-adminsuci" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Nik-EpicWeb3"><img src="https://avatars.githubusercontent.com/u/214466248?v=4?s=100" width="100px;" alt="Nik-EpicWeb3"/><br /><sub><b>Nik-EpicWeb3</b></sub></a><br /><a href="#eventOrganizing-Nik-EpicWeb3" title="Event Organizing">📋</a></td>
     </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/kichong"><img src="https://avatars.githubusercontent.com/u/38249409?v=4?s=100" width="100px;" alt="kichong"/><br /><sub><b>kichong</b></sub></a><br /><a href="#content-kichong" title="Content">🖋</a></td>
+    </tr>
   </tbody>
 </table>
 
