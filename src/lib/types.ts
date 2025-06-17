@@ -3,6 +3,7 @@ import type { NextPage } from "next"
 import type { AppProps } from "next/app"
 import type { StaticImageData } from "next/image"
 import type { ReactElement, ReactNode } from "react"
+import type { IconType } from "react-icons"
 import type { ColumnDef } from "@tanstack/react-table"
 
 import type {
@@ -1043,6 +1044,7 @@ export type DappCategoryData = {
   name: string
   slug: string
   description: string
+  icon: IconType
 }
 
 export type DappCategories = Record<DappCategoryEnum, DappCategoryData>
