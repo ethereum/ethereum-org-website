@@ -5,7 +5,7 @@
 
 import { getTranslations } from "next-intl/server"
 
-import type { AllMetricData, Lang, StatsBoxMetric } from "@/lib/types"
+import type { AllHomepageActivityData, Lang, StatsBoxMetric } from "@/lib/types"
 
 import { getLocaleForNumberFormat } from "@/lib/utils/translations"
 
@@ -44,7 +44,7 @@ export const getActivity = async (
     txCount,
     txCostsMedianUsd,
     ethPrice,
-  }: AllMetricData,
+  }: AllHomepageActivityData,
   locale: Lang
 ): Promise<StatsBoxMetric[]> => {
   const t = await getTranslations("page-index")
