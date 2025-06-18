@@ -1,5 +1,5 @@
 import React from "react"
-import { PiPaperPlaneRightFill } from "react-icons/pi"
+import { SendHorizontal } from "lucide-react"
 
 import { Flex } from "@/components/ui/flex"
 
@@ -32,7 +32,7 @@ export const SendReceiveButtons = ({
         onClick={nav?.progressStepper}
         isDisabled={disableSend}
         isHighlighted={highlightSend}
-        icon={PiPaperPlaneRightFill}
+        icon={SendHorizontal}
       >
         Send
       </SendReceiveButton>

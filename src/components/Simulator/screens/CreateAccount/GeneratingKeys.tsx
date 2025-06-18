@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import { motion } from "framer-motion"
-import { PiCheckThin } from "react-icons/pi"
+import { Check } from "lucide-react"
 
 import type { PhoneScreenProps } from "@/lib/types"
 
@@ -71,7 +71,7 @@ export const GeneratingKeys = ({
             animate={{ scale: 1 }}
             transition={{ type: "spring", delay: 0.25 }}
           >
-            <PiCheckThin className={cn(SPINNER_SIZE, "-rotate-[10deg]")} />
+            <Check className={cn(SPINNER_SIZE, "-rotate-[10deg]")} />
           </motion.div>
         )}
 

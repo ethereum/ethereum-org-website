@@ -3,21 +3,9 @@ import { motion, type Transition } from "framer-motion"
 
 import { cn } from "@/lib/utils/cn"
 
-import { createIconBase } from "../icons/icon-base"
 import { Flex } from "../ui/flex"
 
 const MotionFlex = motion(Flex)
-
-const DownArrowLong = motion(
-  createIconBase({
-    displayName: "DownArrowLong",
-    viewBox: "0 0 8 24",
-    className: "fill-current",
-    children: (
-      <path d="M3.64645 23.3536C3.84171 23.5488 4.15829 23.5488 4.35355 23.3536L7.53553 20.1716C7.7308 19.9763 7.7308 19.6597 7.53553 19.4645C7.34027 19.2692 7.02369 19.2692 6.82843 19.4645L4 22.2929L1.17157 19.4645C0.976312 19.2692 0.659729 19.2692 0.464467 19.4645C0.269205 19.6597 0.269205 19.9763 0.464467 20.1716L3.64645 23.3536ZM3.5 2.18557e-08L3.5 23L4.5 23L4.5 -2.18557e-08L3.5 2.18557e-08Z" />
-    ),
-  })
-)
 
 type ClickAnimationProps = {
   children: ReactNode
@@ -60,11 +48,17 @@ export const ClickAnimation = ({
         transition={transition}
       >
         <p className="m-0 text-xs lowercase italic">{children}</p>
-        <DownArrowLong
+        <motion.svg
+          data-label="down-arrow"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 8 24"
+          className="fill-current"
           initial={{ scaleY: 1, rotate }}
           animate={{ scaleY: [1, 1.25, 1] }} // Arrow scales up and down
           transition={transition}
-        />
+        >
+          <path d="M3.64645 23.3536C3.84171 23.5488 4.15829 23.5488 4.35355 23.3536L7.53553 20.1716C7.7308 19.9763 7.7308 19.6597 7.53553 19.4645C7.34027 19.2692 7.02369 19.2692 6.82843 19.4645L4 22.2929L1.17157 19.4645C0.976312 19.2692 0.659729 19.2692 0.464467 19.4645C0.269205 19.6597 0.269205 19.9763 0.464467 20.1716L3.64645 23.3536ZM3.5 2.18557e-08L3.5 23L4.5 23L4.5 -2.18557e-08L3.5 2.18557e-08Z" />
+        </motion.svg>
       </MotionFlex>
     </MotionFlex>
   ) : null

@@ -1,4 +1,4 @@
-import { PiMagnifyingGlass } from "react-icons/pi"
+import { Search } from "lucide-react"
 
 import type { SimulatorNavProps } from "@/lib/types"
 
@@ -34,7 +34,7 @@ export const SendFromContacts = ({
             variant="outline"
             className="w-full cursor-auto border-disabled py-4 text-disabled hover:!text-disabled hover:shadow-none"
           >
-            <PiMagnifyingGlass />
+            <Search />
             <span className="me-auto">Address or contacts</span>
             <QrCodeIcon className="text-lg" />
           </Button>

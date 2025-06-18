@@ -1,4 +1,4 @@
-import { CiLink } from "react-icons/ci"
+import { Link } from "lucide-react"
 
 import { BaseLink } from "@/components/ui/Link"
 
@@ -10,7 +10,7 @@ const IdAnchor = ({ id }: { id?: string }) => {
       aria-label={id.replaceAll("-", " ") + " permalink"}
       href={"#" + id}
     >
-      <CiLink className="me-1 text-xl" />
+      <Link className="me-1 text-xl" />
     </BaseLink>
   )
 }

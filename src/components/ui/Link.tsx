@@ -1,8 +1,8 @@
 "use client"
 
 import { AnchorHTMLAttributes, ComponentProps, forwardRef } from "react"
+import { ExternalLink } from "lucide-react"
 import NextLink from "next/link"
-import { RxExternalLink } from "react-icons/rx"
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden"
 
 import { cn } from "@/lib/utils/cn"
@@ -104,7 +104,7 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
         {children}
         <VisuallyHidden>(opens in a new tab)</VisuallyHidden>
         {!hideArrow && (
-          <RxExternalLink
+          <ExternalLink
             className={cn(
               "-me-1 inline h-6 w-6 shrink-0 p-1 align-middle",
               twFlipForRtl

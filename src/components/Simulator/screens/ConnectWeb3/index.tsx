@@ -1,13 +1,11 @@
 import { useEffect, useMemo, useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
-import {
-  RiAuctionLine,
-  RiFileTransferLine,
-  RiPriceTag2Line,
-} from "react-icons/ri"
 
 import type { PhoneScreenProps } from "@/lib/types"
 
+import AuctionLine from "@/components/icons/auction-line.svg"
+import FileTransferLine from "@/components/icons/file-transfer-line.svg"
+import PriceTagLine from "@/components/icons/price-tag-line.svg"
 import { Image } from "@/components/Image"
 import { Button } from "@/components/ui/buttons/Button"
 import { Flex } from "@/components/ui/flex"
@@ -131,15 +129,15 @@ export const ConnectWeb3 = ({ nav, ctaLabel }: PhoneScreenProps) => {
                   <Flex className="flex-col items-start gap-1 text-start text-xs sm:text-sm">
                     <p className="mb-auto ms-2 text-md font-bold">Cool art</p>
                     <Button variant="link" disabled>
-                      <RiAuctionLine className="text-xs" />
+                      <AuctionLine className="text-xs" />
                       Set a price
                     </Button>
                     <Button variant="link" disabled>
-                      <RiPriceTag2Line className="text-xs" />
+                      <PriceTagLine className="text-xs" />
                       Auction item
                     </Button>
                     <Button variant="link" disabled>
-                      <RiFileTransferLine className="text-xs" />
+                      <FileTransferLine className="text-xs" />
                       Transfer item
                     </Button>
                   </Flex>

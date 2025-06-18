@@ -1,4 +1,4 @@
-import { BsArrowCounterclockwise } from "react-icons/bs"
+import { RotateCcw } from "lucide-react"
 
 import { FilterInputState, FilterOption } from "@/lib/types"
 
@@ -85,7 +85,7 @@ const Filters = ({
           className="min-h-0 gap-1 p-0"
           onClick={resetFilters}
         >
-          <BsArrowCounterclockwise size={16} />
+          <RotateCcw className="text-base" />
           {t("table-reset-filters")}
         </Button>
       </div>

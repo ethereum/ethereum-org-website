@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 30 30" fill="currentColor" class="text-3xl/none fill-none">
+<circle cx="15" cy="15" r="15" fill="#fff" />
+<path
+  d="M20.87 15.1868L14.9371 5L9 15.1868L14.9371 18.8115L20.87 15.1868Z"
+  className="fill-primary-action"
+/>
+<path
+  d="M14.9996 25L20.9366 16.3523L14.9996 19.977L9.0625 16.3523L14.9996 25Z"
+  className="fill-primary-action"
+/>
+</svg>
