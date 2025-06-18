@@ -576,10 +576,10 @@ export type AllHomepageActivityData = Record<
 
 export type EnterpriseActivityMetric =
   | "txCount"
+  | "txCostsMedianUsd"
   | "stablecoinMarketCap"
   | "ethPrice" // Use with `totalEthStaked` to convert ETH to USD
   | "totalEthStaked"
-// | "totalCapitalSecured"
 
 export type AllEnterpriseActivityData = Record<
   EnterpriseActivityMetric,
@@ -590,8 +590,8 @@ export type StatsBoxMetric = {
   label: string
   description?: string
   state: StatsBoxState
-  apiUrl: string
-  apiProvider: string
+  apiUrl?: string
+  apiProvider?: string
 }
 
 export type SimulatorNavProps = {

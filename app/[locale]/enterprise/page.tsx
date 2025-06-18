@@ -1,7 +1,7 @@
 import dynamic from "next/dynamic"
 import { getTranslations } from "next-intl/server"
 
-import type { Lang } from "@/lib/types"
+import type { Lang, StatsBoxMetric } from "@/lib/types"
 
 import ActivityStats from "@/components/ActivityStats"
 import { HubHero } from "@/components/Hero"
@@ -99,18 +99,33 @@ const Page = async ({ params }: { params: { locale: Lang } }) => {
 
   // const [{ txCount }, stablecoinMarketCap, ethPrice, totalEthStaked] =
   //   await loadData()
-  const { txCount } = await fetchGrowThePie()
+  const { txCount, txCostsMedianUsd } = await fetchGrowThePie()
   const stablecoinMarketCap = await fetchEthereumStablecoinsMcap()
   const ethPrice = await fetchEthPrice()
   const totalEthStaked = await fetchTotalEthStaked()
 
   const metrics = await parseActivity({
     txCount,
+    txCostsMedianUsd,
     stablecoinMarketCap,
     ethPrice,
     totalEthStaked,
-    // totalCapitalSecured,
   })
+
+  const signals: StatsBoxMetric[] = [
+    {
+      label: "Years",
+      state: { value: "10" }, // TODO: Calculate to future-proof, avoid hard-coding
+    },
+    {
+      label: "Upgrades",
+      state: { value: "15" }, // TODO: Calculate from upgrades list
+    },
+    {
+      label: "Downtime",
+      state: { value: "0" },
+    },
+  ]
 
   const features: Feature[] = [
     {
@@ -287,7 +302,7 @@ const Page = async ({ params }: { params: { locale: Lang } }) => {
       <MainArticle className="space-y-12 px-4 md:space-y-20 md:px-10">
         <section
           id="activity"
-          className="flex flex-col justify-between gap-6 md:flex-row"
+          className="flex flex-col justify-between gap-6 xl:flex-row"
         >
           <div className="max-w-prose space-y-4">
             <h2>{t("page-enterprise-metrics-header")}</h2>
@@ -302,12 +317,12 @@ const Page = async ({ params }: { params: { locale: Lang } }) => {
           <ActivityStats
             metrics={metrics}
             className={cn(
-              metrics.length < 2 && "hidden", // Minimum before displaying
-              "w-fit max-w-xl shrink-0 gap-8 sm:max-md:grid-cols-2",
+              "w-fit max-w-xl shrink-0 grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-[auto,auto,auto,auto] xl:grid-cols-2",
               "[&_[data-label='big-number']]:border-none [&_[data-label='big-number']]:p-0",
               "[&_[data-label='big-number']:nth-of-type(1)_[data-label='value']]:text-accent-a",
               "[&_[data-label='big-number']:nth-of-type(2)_[data-label='value']]:text-accent-b",
-              "[&_[data-label='big-number']:nth-of-type(3)_[data-label='value']]:text-accent-c"
+              "[&_[data-label='big-number']:nth-of-type(3)_[data-label='value']]:text-accent-c",
+              "[&_[data-label='big-number']:nth-of-type(4)_[data-label='value']]:text-primary"
             )}
           />
         </section>
@@ -332,7 +347,7 @@ const Page = async ({ params }: { params: { locale: Lang } }) => {
 
         <section
           id="ecosystem"
-          className="rounded-t-4xp flex w-full flex-col items-center gap-y-12 bg-radial-b px-4 py-10 md:rounded-t-[4rem] md:py-12"
+          className="flex w-full flex-col items-center gap-y-12 rounded-t-4xl bg-radial-b px-4 py-10 md:rounded-t-[4rem] md:py-12"
         >
           <div className="max-w-prose space-y-4">
             <h2 className="max-w-prose text-center text-4xl font-black md:text-5xl">
@@ -427,6 +442,20 @@ const Page = async ({ params }: { params: { locale: Lang } }) => {
               {t("page-enterprise-why-description")}
             </p>
           </div>
+
+          <ActivityStats
+            data-label="signalling-metrics"
+            metrics={signals}
+            className={cn(
+              "max-sm:gap-8 max-sm:px-4",
+              "flex w-fit max-w-xl shrink-0 flex-wrap gap-12 text-center",
+              "[&_[data-label='big-number']]:border-none [&_[data-label='big-number']]:p-0",
+              "[&_[data-label='big-number']:nth-of-type(1)_[data-label='value']]:text-accent-a",
+              "[&_[data-label='big-number']:nth-of-type(2)_[data-label='value']]:text-accent-b",
+              "[&_[data-label='big-number']:nth-of-type(3)_[data-label='value']]:text-accent-c"
+            )}
+          />
+
           <div className="grid w-full grid-cols-1 gap-6 rounded-4xl border bg-background p-6 md:grid-cols-2 md:gap-8 md:p-8">
             {reasons.map(({ header, content }) => (
               <div

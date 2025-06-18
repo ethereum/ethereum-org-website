@@ -6,19 +6,23 @@ import type {
   StatsBoxMetric,
 } from "@/lib/types"
 
-import { formatLargeNumber, formatLargeUSD } from "@/lib/utils/numbers"
+import {
+  formatLargeNumber,
+  formatLargeUSD,
+  formatSmallUSD,
+} from "@/lib/utils/numbers"
 import { getLocaleForNumberFormat } from "@/lib/utils/translations"
 
 // Convert numerical value to formatted values
 export const parseActivity = async ({
   txCount,
+  txCostsMedianUsd,
   stablecoinMarketCap,
   ethPrice,
   totalEthStaked,
-  // totalCapitalSecured,
 }: AllEnterpriseActivityData): Promise<StatsBoxMetric[]> => {
   const locale = (await getLocale()) as Lang
-  const t = await getTranslations("page-enterprise")
+  const t = await getTranslations({ locale, namespace: "page-enterprise" })
 
   const localeForNumberFormat = getLocaleForNumberFormat(locale)
 
@@ -28,6 +32,14 @@ export const parseActivity = async ({
       : {
           ...txCount,
           value: formatLargeNumber(txCount.value, localeForNumberFormat),
+        }
+
+  const medianTxCost =
+    "error" in txCostsMedianUsd
+      ? { error: txCostsMedianUsd.error }
+      : {
+          ...txCostsMedianUsd,
+          value: formatSmallUSD(txCostsMedianUsd.value, localeForNumberFormat),
         }
 
   const stablecoinMarketCapFormatted =
@@ -61,17 +73,6 @@ export const parseActivity = async ({
         value: formatLargeUSD(totalStakedInUsd, localeForNumberFormat),
       }
 
-  // const totalCapitalSecuredFormatted =
-  //   "error" in totalCapitalSecured
-  //     ? { error: totalCapitalSecured.error }
-  //     : {
-  //         ...totalCapitalSecured,
-  //         value: formatLargeUSD(
-  //           totalCapitalSecured.value,
-  //           localeForNumberFormat
-  //         ),
-  //       }
-
   const metrics: StatsBoxMetric[] = [
     {
       label: t("page-enterprise-activity-tx-count"),
@@ -81,8 +82,8 @@ export const parseActivity = async ({
     },
     {
       label: t("page-enterprise-activity-stablecoin-mktcap"),
-      apiProvider: "CoinGecko",
-      apiUrl: "https://www.coingecko.com/en/categories/stablecoins",
+      apiProvider: "DefiLlama",
+      apiUrl: "https://defillama.com/chain/ethereum",
       state: stablecoinMarketCapFormatted,
     },
     {
@@ -91,13 +92,13 @@ export const parseActivity = async ({
       apiUrl: "https://dune.com/hildobby/eth2-staking",
       state: totalValueSecuringFormatted,
     },
-    // {
-    //   // TODO
-    //   label: t("page-enterprise-activity-total-secured"),
-    //   apiProvider: "TBD",
-    //   apiUrl: "https://www.TBD.com",
-    //   state: totalCapitalSecuredFormatted,
-    // },
+
+    {
+      label: t("page-enterprise-activity-media-tx-cost"),
+      apiProvider: "growthepie",
+      apiUrl: "https://www.growthepie.xyz/fundamentals/transaction-costs",
+      state: medianTxCost,
+    },
   ]
 
   return metrics
