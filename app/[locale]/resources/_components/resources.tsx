@@ -1,12 +1,12 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { FaGithub } from "react-icons/fa6"
 
 import type { MetricReturnData } from "@/lib/types"
 
 import BannerNotification from "@/components/Banners/BannerNotification"
 import { HubHero } from "@/components/Hero"
+import Github from "@/components/icons/github.svg"
 import StackIcon from "@/components/icons/stack.svg"
 import MainArticle from "@/components/MainArticle"
 import { ResourceItem, ResourcesContainer } from "@/components/Resources"
@@ -201,7 +201,7 @@ const ResourcesPage = ({ txCostsMedianUsd }: ResourcesPageProps) => {
                     eventName: "Ethereum.org Github Bug Report",
                   }}
                 >
-                  <FaGithub /> {t("page-resources-found-bug")}
+                  <Github /> {t("page-resources-found-bug")}
                 </ButtonLink>
               </div>
             </Stack>

@@ -1,6 +1,6 @@
 import React from "react"
+import { Calendar } from "lucide-react"
 import { useLocale } from "next-intl"
-import { BsCalendar3 } from "react-icons/bs"
 
 import type { EventCardProps } from "@/lib/types"
 
@@ -39,7 +39,7 @@ const EventCard: React.FC<EventCardProps> = ({
   return (
     <Card className={cn("flex h-full flex-col rounded-md border", className)}>
       <CardHeader className="flex flex-row items-center justify-center rounded-t-md border-b border-primary bg-[#FCFCFC] p-2 dark:bg-[#272627]">
-        <BsCalendar3 className="me-2 h-6 w-6 text-primary" />
+        <Calendar className="me-2 size-6 text-2xl text-primary" />
         <span className="!mt-0 text-right text-sm text-primary">
           {formatedDate}
         </span>

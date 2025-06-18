@@ -1,4 +1,4 @@
-import { IoChevronDownSharp, IoChevronUpSharp } from "react-icons/io5"
+import { ChevronDown, ChevronUp } from "lucide-react"
 
 import { Wallet } from "@/lib/types"
 
@@ -169,9 +169,9 @@ const WalletInfo = ({ wallet, isExpanded }: WalletInfoProps) => {
         <div>
           <button className="text-primary">
             {isExpanded ? (
-              <IoChevronUpSharp size={24} />
+              <ChevronUp className="text-2xl" />
             ) : (
-              <IoChevronDownSharp size={24} />
+              <ChevronDown className="text-2xl" />
             )}
           </button>
         </div>

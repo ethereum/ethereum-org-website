@@ -2,7 +2,6 @@
 
 import { HTMLAttributes } from "react"
 import type { ReactNode } from "react"
-import { FaDiscord } from "react-icons/fa"
 
 import type { ChildOnlyProp, PageWithContributorsProps } from "@/lib/types"
 
@@ -10,7 +9,7 @@ import Emoji from "@/components/Emoji"
 import ExpandableCard from "@/components/ExpandableCard"
 import FeedbackCard from "@/components/FeedbackCard"
 import FileContributors from "@/components/FileContributors"
-import type { IconBaseType } from "@/components/icons/icon-base"
+import Discord from "@/components/icons/discord.svg"
 import {
   DecentralizationGlyphIcon,
   DownloadGlyphIcon,
@@ -198,7 +197,7 @@ const Width40 = (props: ChildOnlyProp) => (
 )
 
 type RunANodeCard = {
-  image: IconBaseType
+  image: React.FC<React.SVGProps<SVGElement>>
   title: string
   preview: ReactNode
   body: string[]
@@ -656,7 +655,7 @@ const RunANodePage = ({
             <Text>{t("page-run-a-node-community-description-2")}</Text>
             <ButtonContainer>
               <ButtonLink href="https://discord.com/invite/dappnode">
-                <FaDiscord />
+                <Discord />
                 {t("page-run-a-node-community-link-1")}
               </ButtonLink>
               <ButtonLink

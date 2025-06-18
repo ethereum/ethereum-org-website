@@ -1,6 +1,6 @@
 import { type ReactNode } from "react"
+import { Info } from "lucide-react"
 import { useLocale } from "next-intl"
-import { MdInfoOutline } from "react-icons/md"
 
 import { cn } from "@/lib/utils/cn"
 import { isValidDate } from "@/lib/utils/date"
@@ -63,7 +63,7 @@ const BigNumber = ({
                   </>
                 }
               >
-                <MdInfoOutline className="mb-0.5 ms-2 inline align-text-bottom" />
+                <Info className="mb-0.5 ms-2 inline align-text-bottom" />
               </Tooltip>
             )}
           </div>

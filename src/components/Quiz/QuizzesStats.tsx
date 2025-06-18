@@ -1,13 +1,14 @@
 import { useLocale } from "next-intl"
-import { FaXTwitter } from "react-icons/fa6"
 
 import { CompletedQuizzes, QuizShareStats } from "@/lib/types"
+
+import Twitter from "@/components/icons/twitter.svg"
+import Translation from "@/components/Translation"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import { ethereumBasicsQuizzes, usingEthereumQuizzes } from "../../data/quizzes"
 import { TrophyIcon } from "../icons/quiz"
-import Translation from "../Translation"
 import { Button } from "../ui/buttons/Button"
 import { Center, Flex, HStack, Stack } from "../ui/flex"
 import { ListItem, UnorderedList } from "../ui/list"
@@ -84,7 +85,7 @@ const QuizzesStats = ({
               }
               className="max-lg:w-full"
             >
-              <FaXTwitter />
+              <Twitter />
               {t("share-results")}
             </Button>
           </div>

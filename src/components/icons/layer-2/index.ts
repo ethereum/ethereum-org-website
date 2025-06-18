@@ -1,6 +1,6 @@
-import { DevelopingIcon } from "./DevelopingIcon"
-import { EmergingIcon } from "./EmergingIcon"
-import { MaturingIcon } from "./MaturingIcon"
-import { RobustIcon } from "./RobustIcon"
+import DevelopingIcon from "./developing.svg"
+import EmergingIcon from "./emerging.svg"
+import MaturingIcon from "./maturing.svg"
+import RobustIcon from "./Robust.svg"
 
 export { DevelopingIcon, EmergingIcon, MaturingIcon, RobustIcon }

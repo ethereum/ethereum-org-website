@@ -1,5 +1,5 @@
+import { Info } from "lucide-react"
 import { useLocale } from "next-intl"
-import { MdInfoOutline } from "react-icons/md"
 
 import type { ChildOnlyProp, Lang, StakingStatsData } from "@/lib/types"
 
@@ -31,7 +31,7 @@ const Label = ({ children }: ChildOnlyProp) => (
 // BeaconchainTooltip component
 const BeaconchainTooltip = ({ children }: ChildOnlyProp) => (
   <Tooltip content={children}>
-    <MdInfoOutline className="active:primary focus:primary h-4 w-4 align-middle hover:text-primary" />
+    <Info className="active:primary focus:primary size-[1em] align-middle text-md hover:text-primary" />
   </Tooltip>
 )
 

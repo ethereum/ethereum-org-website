@@ -1,8 +1,8 @@
 import { useRef } from "react"
+import { Moon, Sun } from "lucide-react"
 import { useLocale } from "next-intl"
-import { BsTranslate } from "react-icons/bs"
-import { MdBrightness2, MdWbSunny } from "react-icons/md"
 
+import Translate from "@/components/icons/translate.svg"
 import LanguagePicker from "@/components/LanguagePicker"
 import { Button } from "@/components/ui/buttons/Button"
 import { HStack } from "@/components/ui/flex"
@@ -22,7 +22,7 @@ const DesktopNavMenu = ({ toggleColorMode }: DesktopNavMenuProps) => {
   const locale = useLocale()
   const languagePickerRef = useRef<HTMLButtonElement>(null)
 
-  const ThemeIcon = useColorModeValue(MdBrightness2, MdWbSunny)
+  const ThemeIcon = useColorModeValue(Moon, Sun)
   const themeIconAriaLabel = useColorModeValue(
     // TODO: Add i18n support
     "Switch to Dark Theme",
@@ -66,7 +66,7 @@ const DesktopNavMenu = ({ toggleColorMode }: DesktopNavMenuProps) => {
           variant="ghost"
           className="gap-0 px-2 text-body transition-transform duration-500 active:bg-primary-low-contrast active:text-primary-hover data-[state='open']:bg-primary-low-contrast data-[state='open']:text-primary-hover xl:px-3 [&_svg]:transition-transform [&_svg]:duration-500 [&_svg]:hover:rotate-12"
         >
-          <BsTranslate className="me-2 align-middle text-2xl" />
+          <Translate className="me-2 align-middle text-2xl" />
           <span className="hidden lg:inline-block">
             {t("common:languages")}&nbsp;
           </span>

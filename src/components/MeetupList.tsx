@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { sortBy } from "lodash"
-import { FaChevronRight } from "react-icons/fa6"
+import { ChevronRight } from "lucide-react"
 
 import Emoji from "@/components/Emoji"
 import InfoBanner from "@/components/InfoBanner"
@@ -95,7 +95,7 @@ const MeetupList = () => {
               <p className="mb-0 opacity-60">{meetup.location}</p>
             </Flex>
             <Flex className="items-center">
-              <FaChevronRight className="h-[14px] w-[14px] xl:h-[18px] xl:w-[18px]" />
+              <ChevronRight className="h-[14px] w-[14px] xl:h-[18px] xl:w-[18px]" />
             </Flex>
           </BaseLink>
         ))}
