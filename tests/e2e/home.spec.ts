@@ -25,7 +25,6 @@ test.describe("Home Page", () => {
   })
 
   test("main navigation - desktop", async () => {
-    // Only run this test for desktop projects
     const isMobile = await homePage.isMobileViewport()
     test.skip(isMobile, "This test is for desktop viewports only")
 

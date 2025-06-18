@@ -15,7 +15,7 @@ test.describe("Global", () => {
       // Try invalid search queries
       await homePage.search(testData.search.invalidQuery)
 
-      // Should not crash or show errors, has to show no results
+      // Should not crash or show errors, has to show the no results message
       await page.waitForTimeout(1000) // Allow search to process
 
       await homePage.verifyNoResults()
@@ -65,21 +65,9 @@ test.describe("Global", () => {
       ).toBeVisible()
     }
 
-    test("switches to Chinese (desktop)", async ({ page }) => {
-      const isMobile = await homePage.isMobileViewport()
-      test.skip(isMobile, "This test is for desktop viewports only")
-
+    test("switches to Chinese", async ({ page }) => {
       await expect(page).toHaveURL(`/${DEFAULT_LOCALE}/`)
-      await homePage.openLanguagePickerDesktop()
-      await switchToChinese(page, homePage)
-    })
-
-    test("switches to Chinese (mobile)", async ({ page }) => {
-      const isMobile = await homePage.isMobileViewport()
-      test.skip(!isMobile, "This test is for mobile viewports only")
-
-      await expect(page).toHaveURL(`/${DEFAULT_LOCALE}/`)
-      await homePage.openLanguagePickerMobile()
+      await homePage.openLanguagePicker()
       await switchToChinese(page, homePage)
     })
   })
@@ -113,7 +101,7 @@ test.describe("Global", () => {
 
       await homePage.assertUrlMatches(`/${DEFAULT_LOCALE}/`)
 
-      await homePage.openLanguagePickerDesktop()
+      await homePage.openLanguagePicker()
       await switchToArabic(page, homePage)
 
       await homePage.assertUrlMatches(/\/ar(\/|$)/)

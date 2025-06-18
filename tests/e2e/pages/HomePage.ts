@@ -32,13 +32,8 @@ export class HomePage extends BasePage {
    * Perform a search action
    */
   async search(query: string) {
-    const isMobile = await this.isMobileViewport()
-
-    if (isMobile) {
-      await this.searchButtonMobile.first().click()
-    } else {
-      await this.searchInputButton.first().click()
-    }
+    const searchBtn = await this.getSearchButton()
+    await searchBtn.click()
 
     await this.searchInput.fill(query)
   }

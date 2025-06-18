@@ -129,6 +129,27 @@ export class BasePage {
   }
 
   /**
+   * Open language picker
+   */
+  async openLanguagePicker(): Promise<void> {
+    const isMobile = await this.isMobileViewport()
+    if (isMobile) {
+      await this.openLanguagePickerMobile()
+    } else {
+      await this.openLanguagePickerDesktop()
+    }
+  }
+
+  async getSearchButton(): Promise<Locator> {
+    const isMobile = await this.isMobileViewport()
+    if (isMobile) {
+      return this.searchButtonMobile
+    } else {
+      return this.searchInputButton
+    }
+  }
+
+  /**
    * Switch to a specific language
    */
   async switchToLanguage(
