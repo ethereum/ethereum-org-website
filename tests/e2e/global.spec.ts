@@ -107,7 +107,7 @@ test.describe("Global", () => {
       await homePage.assertUrlMatches(/\/ar(\/|$)/)
 
       const logo = page.getByTestId("nav-logo")
-      const searchBtn = page.getByTestId("search-input-button")
+      const searchBtn = await homePage.getSearchButton()
       const logoBox = await logo.boundingBox()
       const searchBox = await searchBtn.boundingBox()
       expect(logoBox).not.toBeNull()
