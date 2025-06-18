@@ -4,8 +4,6 @@ import { langViewportModes } from "@/storybook/modes"
 
 import HomeHeroComponent from "."
 
-import homeHeroImg from "@/public/images/home/hero.png"
-
 const meta = {
   title: "Organisms / Layouts / Hero",
   component: HomeHeroComponent,
@@ -17,19 +15,10 @@ const meta = {
       },
     },
   },
-  argTypes: {
-    heroImg: {
-      table: {
-        disable: true,
-      },
-    },
-  },
 } satisfies Meta<typeof HomeHeroComponent>
 
 export default meta
 
 export const HomeHero: StoryObj<typeof meta> = {
-  args: {
-    heroImg: homeHeroImg,
-  },
+  render: () => <HomeHeroComponent />,
 }
