@@ -69,7 +69,7 @@ sidebarDepth: 1
 
 ### パリ(マージ) {#paris}
 
-<emoji text=":calendar:" size={1} className="me-2 mb-2" /><code>Sep-15-2022 06:42:42 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} className="me-2 mb-2" />ブロック番号: <a href="https://etherscan.io/block/15537394">15537394</a><br /> <Emoji text=":money_bag:" size={1} className="me-2 mb-2" />ETH 価格: $1,472 USD<br /> <Emoji text=":desktop_computer:" size={1} className="me-2 mb-2" /> <a href="https://web.archive.org/web/20220915075314/https://ethereum.org/">waybackmachine 上の ethereum.org</a>
+<emoji text=":calendar:" size={1} className="me-2 mb-2" /><code>Sep-15-2022 06:42:42 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} className="me-2 mb-2" />ブロック番号: <a href="https://eth.blockscout.com/block/15537394">15537394</a><br /> <Emoji text=":money_bag:" size={1} className="me-2 mb-2" />ETH 価格: $1,472 USD<br /> <Emoji text=":desktop_computer:" size={1} className="me-2 mb-2" /> <a href="https://web.archive.org/web/20220915075314/https://ethereum.org/">waybackmachine 上の ethereum.org</a>
 
 #### 要約 {#paris-summary}
 
@@ -100,7 +100,7 @@ sidebarDepth: 1
 
 ### グレイ・グレイシャー {#gray-glacier}
 
-<emoji text=":calendar:" size={1} className="me-2 mb-2" /><code>Jun-30-2022 10:54:04 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} className="me-2 mb-2" />ブロック番号: <a href="https://etherscan.io/block/15050000">15,050,000</a><br /> <Emoji text=":money_bag:" size={1} className="me-2 mb-2" />ETH 価格: $1,069 USD<br /> <Emoji text=":desktop_computer:" size={1} className="me-2 mb-2" /> <a href="https://web.archive.org/web/20220630094629/https://ethereum.org/en/">waybackmachine 上の ethereum.org</a>
+<emoji text=":calendar:" size={1} className="me-2 mb-2" /><code>Jun-30-2022 10:54:04 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} className="me-2 mb-2" />ブロック番号: <a href="https://eth.blockscout.com/block/15050000">15,050,000</a><br /> <Emoji text=":money_bag:" size={1} className="me-2 mb-2" />ETH 価格: $1,069 USD<br /> <Emoji text=":desktop_computer:" size={1} className="me-2 mb-2" /> <a href="https://web.archive.org/web/20220630094629/https://ethereum.org/en/">waybackmachine 上の ethereum.org</a>
 
 #### 要約 {#gray-glacier-summary}
 
@@ -120,7 +120,7 @@ sidebarDepth: 1
 
 ### アロー・グレイシャー {#arrow-glacier}
 
-<emoji text=":calendar:" size={1} className="me-2 mb-2" /><code>Dec-09-2021 07:55:23 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} className="me-2 mb-2" />ブロック番号: <a href="https://etherscan.io/block/13773000">13,773,000</a><br /> <Emoji text=":money_bag:" size={1} className="me-2 mb-2" />ETH 価格: $4111 USD<br /> <Emoji text=":desktop_computer:" size={1} className="me-2 mb-2" /> <a href="https://web.archive.org/web/20211207064430/https://ethereum.org/en/">waybackmachine 上の ethereum.org</a>
+<emoji text=":calendar:" size={1} className="me-2 mb-2" /><code>Dec-09-2021 07:55:23 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} className="me-2 mb-2" />ブロック番号: <a href="https://eth.blockscout.com/block/13773000">13,773,000</a><br /> <Emoji text=":money_bag:" size={1} className="me-2 mb-2" />ETH 価格: $4111 USD<br /> <Emoji text=":desktop_computer:" size={1} className="me-2 mb-2" /> <a href="https://web.archive.org/web/20211207064430/https://ethereum.org/en/">waybackmachine 上の ethereum.org</a>
 
 #### 要約 {#arrow-glacier-summary}
 
@@ -157,7 +157,7 @@ sidebarDepth: 1
 
 ### ロンドン {#london}
 
-<emoji text=":calendar:" size={1} className="me-2 mb-2" /> <code>Aug-05-2021 12:33:42 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} className="me-2 mb-2" /> ブロック番号: <a href="https://etherscan.io/block/12965000">12,965,000</a><br /> <Emoji text=":money_bag:" size={1} className="me-2 mb-2" /> ETH 価格: $2621 USD<br /> <Emoji text=":desktop_computer:" size={1} className="me-2 mb-2" /> <a href="https://web.archive.org/web/20210805124609/https://ethereum.org/en/">waybackmachine 上の ethereum.org</a>
+<emoji text=":calendar:" size={1} className="me-2 mb-2" /> <code>Aug-05-2021 12:33:42 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} className="me-2 mb-2" /> ブロック番号: <a href="https://eth.blockscout.com/block/12965000">12,965,000</a><br /> <Emoji text=":money_bag:" size={1} className="me-2 mb-2" /> ETH 価格: $2621 USD<br /> <Emoji text=":desktop_computer:" size={1} className="me-2 mb-2" /> <a href="https://web.archive.org/web/20210805124609/https://ethereum.org/en/">waybackmachine 上の ethereum.org</a>
 
 #### 要約 {#london-summary}
 
@@ -181,7 +181,7 @@ sidebarDepth: 1
 
 ### ベルリン {#berlin}
 
-<emoji text=":calendar:" size={1} className="me-2 mb-2" /> <code>Apr-15-2021 10:07:03 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} className="me-2 mb-2" /> ブロック番号: <a href="https://etherscan.io/block/12244000">12,244,000</a><br /> <Emoji text=":money_bag:" size={1} className="me-2 mb-2" /> ETH 価格: $2454 USD<br /> <Emoji text=":desktop_computer:" size={1} className="me-2 mb-2" /> <a href="https://web.archive.org/web/20210415093618/https://ethereum.org/">waybackmachine 上の ethereum.org</a>
+<emoji text=":calendar:" size={1} className="me-2 mb-2" /> <code>Apr-15-2021 10:07:03 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} className="me-2 mb-2" /> ブロック番号: <a href="https://eth.blockscout.com/block/12244000">12,244,000</a><br /> <Emoji text=":money_bag:" size={1} className="me-2 mb-2" /> ETH 価格: $2454 USD<br /> <Emoji text=":desktop_computer:" size={1} className="me-2 mb-2" /> <a href="https://web.archive.org/web/20210415093618/https://ethereum.org/">waybackmachine 上の ethereum.org</a>
 
 #### 要約 {#berlin-summary}
 
@@ -221,7 +221,7 @@ sidebarDepth: 1
 
 ### ステーキングのデポジットコントラクトのデプロイ {#staking-deposit-contract}
 
-<emoji text=":calendar:" size={1} className="me-2 mb-2" /> <code>Oct-14-2020 09:22:52 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} className="me-2 mb-2" /> ブロック番号: <a href="https://etherscan.io/block/11052984">11,052,984</a><br /> <Emoji text=":money_bag:" size={1} className="me-2 mb-2" /> ETH 価格: $379.04 USD<br /> <Emoji text=":desktop_computer:" size={1} className="me-2 mb-2" /> <a href="https://web.archive.org/web/20201104235727/https://ethereum.org/en/">waybackmachine 上の ethereum.org</a>
+<emoji text=":calendar:" size={1} className="me-2 mb-2" /> <code>Oct-14-2020 09:22:52 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} className="me-2 mb-2" /> ブロック番号: <a href="https://eth.blockscout.com/block/11052984">11,052,984</a><br /> <Emoji text=":money_bag:" size={1} className="me-2 mb-2" /> ETH 価格: $379.04 USD<br /> <Emoji text=":desktop_computer:" size={1} className="me-2 mb-2" /> <a href="https://web.archive.org/web/20201104235727/https://ethereum.org/en/">waybackmachine 上の ethereum.org</a>
 
 #### 要約 {#deposit-contract-summary}
 
@@ -237,7 +237,7 @@ sidebarDepth: 1
 
 ### ミュア・グレイシャー {#muir-glacier}
 
-<emoji text=":calendar:" size={1} className="me-2 mb-2" /> <code>Jan-02-2020 08:30:49 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} className="me-2 mb-2" /> ブロック番号: <a href="https://etherscan.io/block/9200000">9,200,000</a><br /> <Emoji text=":money_bag:" size={1} className="me-2 mb-2" /> ETH 価格: $127.18 USD<br /> <Emoji text=":desktop_computer:" size={1} className="me-2 mb-2" /> <a href="https://web.archive.org/web/20200103093618/https://ethereum.org/">waybackmachine 上の ethereum.org</a>
+<emoji text=":calendar:" size={1} className="me-2 mb-2" /> <code>Jan-02-2020 08:30:49 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} className="me-2 mb-2" /> ブロック番号: <a href="https://eth.blockscout.com/block/9200000">9,200,000</a><br /> <Emoji text=":money_bag:" size={1} className="me-2 mb-2" /> ETH 価格: $127.18 USD<br /> <Emoji text=":desktop_computer:" size={1} className="me-2 mb-2" /> <a href="https://web.archive.org/web/20200103093618/https://ethereum.org/">waybackmachine 上の ethereum.org</a>
 
 #### 要約 {#muir-glacier-summary}
 
@@ -258,7 +258,7 @@ sidebarDepth: 1
 
 ### イスタンブール (Istanbul) {#istanbul}
 
-<emoji text=":calendar:" size={1} className="me-2 mb-2" /> <code>Dec-08-2019 12:25:09 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} className="me-2 mb-2" /> ブロック番号: <a href="https://etherscan.io/block/9069000">9,069,000</a><br /> <Emoji text=":money_bag:" size={1} className="me-2 mb-2" /> ETH 価格: $151.06 USD<br /> <Emoji text=":desktop_computer:" size={1} className="me-2 mb-2" /> <a href="https://web.archive.org/web/20191216101254if*/https://ethereum.org/">waybackmachine 上の ethereum.org</a>
+<emoji text=":calendar:" size={1} className="me-2 mb-2" /> <code>Dec-08-2019 12:25:09 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} className="me-2 mb-2" /> ブロック番号: <a href="https://eth.blockscout.com/block/9069000">9,069,000</a><br /> <Emoji text=":money_bag:" size={1} className="me-2 mb-2" /> ETH 価格: $151.06 USD<br /> <Emoji text=":desktop_computer:" size={1} className="me-2 mb-2" /> <a href="https://web.archive.org/web/20191216101254if*/https://ethereum.org/">waybackmachine 上の ethereum.org</a>
 
 #### 要約 {#istanbul-summary}
 
@@ -287,7 +287,7 @@ sidebarDepth: 1
 
 ### コンスタンティノープル {#constantinople}
 
-<emoji text=":calendar:" size={1} className="me-2 mb-2" /> <code>Feb-28-2019 07:52:04 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} className="me-2 mb-2" /> ブロック番号: <a href="https://etherscan.io/block/7280000">7,280,000</a><br /> <Emoji text=":money_bag:" size={1} className="me-2 mb-2" /> ETH 価格: $136.29 USD<br /> <Emoji text=":desktop_computer:" size={1} className="me-2 mb-2" /> <a href="https://web.archive.org/web/20190415163751/https://www.ethereum.org/">waybackmachine 上の ethereum.org</a>
+<emoji text=":calendar:" size={1} className="me-2 mb-2" /> <code>Feb-28-2019 07:52:04 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} className="me-2 mb-2" /> ブロック番号: <a href="https://eth.blockscout.com/block/7280000">7,280,000</a><br /> <Emoji text=":money_bag:" size={1} className="me-2 mb-2" /> ETH 価格: $136.29 USD<br /> <Emoji text=":desktop_computer:" size={1} className="me-2 mb-2" /> <a href="https://web.archive.org/web/20190415163751/https://www.ethereum.org/">waybackmachine 上の ethereum.org</a>
 
 #### 要約 {#constantinople-summary}
 
@@ -314,7 +314,7 @@ sidebarDepth: 1
 
 ### ビザンチウム {#byzantium}
 
-<emoji text=":calendar:" size={1} className="me-2 mb-2" /> <code>Oct-16-2017 05:22:11 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} className="me-2 mb-2" /> ブロック番号: <a href="https://etherscan.io/block/4370000">4,370,000</a><br /> <Emoji text=":money_bag:" size={1} className="me-2 mb-2" /> ETH 価格: $334.23 USD<br /> <Emoji text=":desktop_computer:" size={1} className="me-2 mb-2" /> <a href="https://web.archive.org/web/20171017201143/https://www.ethereum.org/">waybackmachine 上の ethereum.org</a>
+<emoji text=":calendar:" size={1} className="me-2 mb-2" /> <code>Oct-16-2017 05:22:11 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} className="me-2 mb-2" /> ブロック番号: <a href="https://eth.blockscout.com/block/4370000">4,370,000</a><br /> <Emoji text=":money_bag:" size={1} className="me-2 mb-2" /> ETH 価格: $334.23 USD<br /> <Emoji text=":desktop_computer:" size={1} className="me-2 mb-2" /> <a href="https://web.archive.org/web/20171017201143/https://www.ethereum.org/">waybackmachine 上の ethereum.org</a>
 
 #### 要約 {#byzantium-summary}
 
@@ -347,7 +347,7 @@ sidebarDepth: 1
 
 ### スプリニアスドラゴン (Spurious Dragon) {#spurious-dragon}
 
-<emoji text=":calendar:" size={1} className="me-2 mb-2" /> <code>Nov-22-2016 04:15:44 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} className="me-2 mb-2" /> ブロック番号: <a href="https://etherscan.io/block/2675000">2,675,000</a><br /> <Emoji text=":money_bag:" size={1} className="me-2 mb-2" /> ETH 価格: $9.84 USD<br /> <Emoji text=":desktop_computer:" size={1} className="me-2 mb-2" /> <a href="https://web.archive.org/web/20161127154654/https://www.ethereum.org/">waybackmachine 上の ethereum.org</a>
+<emoji text=":calendar:" size={1} className="me-2 mb-2" /> <code>Nov-22-2016 04:15:44 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} className="me-2 mb-2" /> ブロック番号: <a href="https://eth.blockscout.com/block/2675000">2,675,000</a><br /> <Emoji text=":money_bag:" size={1} className="me-2 mb-2" /> ETH 価格: $9.84 USD<br /> <Emoji text=":desktop_computer:" size={1} className="me-2 mb-2" /> <a href="https://web.archive.org/web/20161127154654/https://www.ethereum.org/">waybackmachine 上の ethereum.org</a>
 
 #### 要約 {#spurious-dragon-summary}
 
@@ -372,7 +372,7 @@ sidebarDepth: 1
 
 ### タンジェリンホイッスル {#tangerine-whistle}
 
-<emoji text=":calendar:" size={1} className="me-2 mb-2" /> <code>Oct-18-2016 01:19:31 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} className="me-2 mb-2" /> ブロック番号: <a href="https://etherscan.io/block/2463000">2,463,000</a><br /> <Emoji text=":money_bag:" size={1} className="me-2 mb-2" /> ETH 価格: $12.50 USD<br /> <Emoji text=":desktop_computer:" size={1} className="me-2 mb-2" /> <a href="https://web.archive.org/web/20161030043727/https://www.ethereum.org/">waybackmachine 上の ethereum.org</a>
+<emoji text=":calendar:" size={1} className="me-2 mb-2" /> <code>Oct-18-2016 01:19:31 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} className="me-2 mb-2" /> ブロック番号: <a href="https://eth.blockscout.com/block/2463000">2,463,000</a><br /> <Emoji text=":money_bag:" size={1} className="me-2 mb-2" /> ETH 価格: $12.50 USD<br /> <Emoji text=":desktop_computer:" size={1} className="me-2 mb-2" /> <a href="https://web.archive.org/web/20161030043727/https://www.ethereum.org/">waybackmachine 上の ethereum.org</a>
 
 #### 要約 {#tangerine-whistle-summary}
 
@@ -393,11 +393,11 @@ sidebarDepth: 1
 
 ### DAO フォーク {#dao-fork}
 
-<emoji text=":calendar:" size={1} className="me-2 mb-2" /> <code>Jul-20-2016 01:20:40 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} className="me-2 mb-2" /> ブロック番号: <a href="https://etherscan.io/block/1920000">1,920,000</a><br /> <Emoji text=":money_bag:" size={1} className="me-2 mb-2" /> ETH 価格: $12.54 USD<br /> <Emoji text=":desktop_computer:" size={1} className="me-2 mb-2" /> <a href="https://web.archive.org/web/20160803215306/https://ethereum.org/">waybackmachine 上の ethereum.org</a>
+<emoji text=":calendar:" size={1} className="me-2 mb-2" /> <code>Jul-20-2016 01:20:40 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} className="me-2 mb-2" /> ブロック番号: <a href="https://eth.blockscout.com/block/1920000">1,920,000</a><br /> <Emoji text=":money_bag:" size={1} className="me-2 mb-2" /> ETH 価格: $12.54 USD<br /> <Emoji text=":desktop_computer:" size={1} className="me-2 mb-2" /> <a href="https://web.archive.org/web/20160803215306/https://ethereum.org/">waybackmachine 上の ethereum.org</a>
 
 #### 要約 {#dao-fork-summary}
 
-DAO フォークは、安全でない[自律分散型組織(DAO)](/glossary/#dao)のコントラクトが、1 回のハッキングによって、360 万以上の ETH を流出させた[2016 年の DAO 攻撃](https://www.coindesk.com/markets/2016/06/25/understanding-the-dao-attack/)に対する対策でした。 フォークにより、欠陥のあるコントラクトから[新しいコントラクト](https://etherscan.io/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754)に資金が移されました。その際に使用した関数が withdraw です。 資金を失った人がウォレット内の 100DAO トークンごとに 1ETH を引き出せるようにしました。
+DAO フォークは、安全でない[自律分散型組織(DAO)](/glossary/#dao)のコントラクトが、1 回のハッキングによって、360 万以上の ETH を流出させた[2016 年の DAO 攻撃](https://www.coindesk.com/markets/2016/06/25/understanding-the-dao-attack/)に対する対策でした。 フォークにより、欠陥のあるコントラクトから[新しいコントラクト](https://eth.blockscout.com/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754)に資金が移されました。その際に使用した関数が withdraw です。 資金を失った人がウォレット内の 100DAO トークンごとに 1ETH を引き出せるようにしました。
 
 この行動指針は Ethereum コミュニティの投票で行われました。 ETH 保有者は、 [投票プラットフォーム](http://v1.carbonvote.com/)でトランザクションを通じて投票することができました。 フォークの実行は、投票の 85%以上に支持されました。
 
@@ -409,7 +409,7 @@ DAO 事件はプロトコルの不具合によるものではなかったため�
 
 ### ホームステッド {#homestead}
 
-<emoji text=":calendar:" size={1} className="me-2 mb-2" /> <code>Mar-14-2016 06:49:53 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} className="me-2 mb-2" /> ブロック番号: <a href="https://etherscan.io/block/1150000">1,150,000</a><br /> <Emoji text=":money_bag:" size={1} className="me-2 mb-2" /> ETH 価格: $12.50 USD<br /> <Emoji text=":desktop_computer:" size={1} className="me-2 mb-2" /> <a href="https://web.archive.org/web/20160313203843/https://www.ethereum.org/">waybackmachine 上の ethereum.org</a>
+<emoji text=":calendar:" size={1} className="me-2 mb-2" /> <code>Mar-14-2016 06:49:53 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} className="me-2 mb-2" /> ブロック番号: <a href="https://eth.blockscout.com/block/1150000">1,150,000</a><br /> <Emoji text=":money_bag:" size={1} className="me-2 mb-2" /> ETH 価格: $12.50 USD<br /> <Emoji text=":desktop_computer:" size={1} className="me-2 mb-2" /> <a href="https://web.archive.org/web/20160313203843/https://www.ethereum.org/">waybackmachine 上の ethereum.org</a>
 
 #### 要約 {#homestead-summary}
 
@@ -431,7 +431,7 @@ DAO 事件はプロトコルの不具合によるものではなかったため�
 
 ### フロンティアソーイング {#frontier-thawing}
 
-<emoji text=":calendar:" size={1} className="me-2 mb-2" /> <code>Sep-07-2015 09:33:09 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} className="me-2 mb-2" /> ブロック番号: <a href="https://etherscan.io/block/200000">200,000</a><br /> <Emoji text=":money_bag:" size={1} className="me-2 mb-2" /> ETH 価格: $1.24 USD<br /> <Emoji text=":desktop_computer:" size={1} className="me-2 mb-2" /> <a href="https://web.archive.org/web/20150912193811/https://www.ethereum.org/">waybackmachine 上の ethereum.org</a>
+<emoji text=":calendar:" size={1} className="me-2 mb-2" /> <code>Sep-07-2015 09:33:09 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} className="me-2 mb-2" /> ブロック番号: <a href="https://eth.blockscout.com/block/200000">200,000</a><br /> <Emoji text=":money_bag:" size={1} className="me-2 mb-2" /> ETH 価格: $1.24 USD<br /> <Emoji text=":desktop_computer:" size={1} className="me-2 mb-2" /> <a href="https://web.archive.org/web/20150912193811/https://www.ethereum.org/">waybackmachine 上の ethereum.org</a>
 
 #### 要約 {#frontier-thawing-summary}
 
@@ -444,7 +444,7 @@ DAO 事件はプロトコルの不具合によるものではなかったため�
 
 ### フロンティア {#frontier}
 
-<emoji text=":calendar:" size={1} className="me-2 mb-2" /> <code>Jul-30-2015 03:26:13 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} className="me-2 mb-2" /> ブロック番号: <a href="https://etherscan.io/block/0">0</a><br /> <Emoji text=":money_bag:" size={1} className="me-2 mb-2" /> ETH 価格: N/A<br /> <Emoji text=":desktop_computer:" size={1} className="me-2 mb-2" /> <a href="https://web.archive.org/web/20150802035735/https://www.ethereum.org/">waybackmachine 上の ethereum.org</a>
+<emoji text=":calendar:" size={1} className="me-2 mb-2" /> <code>Jul-30-2015 03:26:13 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} className="me-2 mb-2" /> ブロック番号: <a href="https://eth.blockscout.com/block/0">0</a><br /> <Emoji text=":money_bag:" size={1} className="me-2 mb-2" /> ETH 価格: N/A<br /> <Emoji text=":desktop_computer:" size={1} className="me-2 mb-2" /> <a href="https://web.archive.org/web/20150802035735/https://www.ethereum.org/">waybackmachine 上の ethereum.org</a>
 
 #### 要約 {#frontier-summary}
 

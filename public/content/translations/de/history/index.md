@@ -416,7 +416,7 @@ Die Tangerine-Whistle-Fork war die erste Reaktion auf die Denial-of-Service(DoS)
 
 #### Zusammenfassung {#dao-fork-summary}
 
-Die DAO-Abspaltung war eine Reaktion auf den [DAO-Angriff 2016](https://www.coindesk.com/learn/understanding-the-dao-attack/), bei dem einem unsicheren [DAO](/glossary/#dao)-Vertrag durch einen Hack über 3,6 Millionen ETH entzogen wurden. Die Fork verschiebt das Guthaben aus dem fehlerhaften Vertrag in einen [neuen Vertrag](https://etherscan.io/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754) mit einer einzigen Funktion: Abheben. Jeder, der Geld verloren hat, konnte 1 ETH für jeden 100 DAO-Token in seiner Wallet abheben.
+Die DAO-Abspaltung war eine Reaktion auf den [DAO-Angriff 2016](https://www.coindesk.com/learn/understanding-the-dao-attack/), bei dem einem unsicheren [DAO](/glossary/#dao)-Vertrag durch einen Hack über 3,6 Millionen ETH entzogen wurden. Die Fork verschiebt das Guthaben aus dem fehlerhaften Vertrag in einen [neuen Vertrag](https://eth.blockscout.com/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754) mit einer einzigen Funktion: Abheben. Jeder, der Geld verloren hat, konnte 1 ETH für jeden 100 DAO-Token in seiner Wallet abheben.
 
 Über diese Vorgehensweise wurde seitens der Ethereum-Community abgestimmt. Jeder ETH-Inhaber konnte über eine Transaktion auf [, einer Abstimmungsplattform,](https://web.archive.org/web/20170620030820/http://v1.carbonvote.com/) abstimmen. Die Entscheidung für die Fork erhielt mehr als 85 % der Stimmen.
 

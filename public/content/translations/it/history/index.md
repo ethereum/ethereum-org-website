@@ -529,7 +529,7 @@ La diramazione Tangerine Whistle è stata la prima risposta agli attacchi di den
 
 #### Riepilogo {#dao-fork-summary}
 
-La diramazione OAD è stata pensata come risposta all'[attacco OAD del 2016](https://www.coindesk.com/learn/understanding-the-dao-attack/), durante il quale un contratto [OAD](/glossary/#dao) non protetto è stato privato di oltre 3,6 milioni di ETH in un solo attacco. La diramazione ha spostato i fondi dal contratto difettoso a un [nuovo contratto](https://etherscan.io/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754) con una sola funzione: il prelievo. Chi aveva perso fondi ha potuto prelevare 1 ETH per ogni 100 token OAD nel proprio portafoglio.
+La diramazione OAD è stata pensata come risposta all'[attacco OAD del 2016](https://www.coindesk.com/learn/understanding-the-dao-attack/), durante il quale un contratto [OAD](/glossary/#dao) non protetto è stato privato di oltre 3,6 milioni di ETH in un solo attacco. La diramazione ha spostato i fondi dal contratto difettoso a un [nuovo contratto](https://eth.blockscout.com/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754) con una sola funzione: il prelievo. Chi aveva perso fondi ha potuto prelevare 1 ETH per ogni 100 token OAD nel proprio portafoglio.
 
 Questa iniziativa è stata votata dalla community di Ethereum. Ogni titolare di ETH ha potuto votare tramite una transazione su [una piattaforma di voto](https://web.archive.org/web/20170620030820/http://v1.carbonvote.com/). La decisione di creare la diramazione ha ottenuto oltre l'85% dei voti.
 

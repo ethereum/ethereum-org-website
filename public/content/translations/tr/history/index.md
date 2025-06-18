@@ -417,7 +417,7 @@ Mandalina Düdüğü çatallanması, ağdaki (Eylül/Ekim 2016) hizmet reddi (Do
 
 #### Özet {#dao-fork-summary}
 
-DAO çatallanması, güvenli olmayan bir [DAO](/glossary/#dao) sözleşmesinin bir saldırıda 3,6 milyon ETH'nin boşaltıldığı [2016 DAO saldırısına](https://www.coindesk.com/learn/understanding-the-dao-attack/) yanıt olarak geliştirildi. Çatallanma, hatalı sözleşmedeki fonları tek bir işlevle [yeni sözleşmeye](https://etherscan.io/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754) taşıdı: geri çekme. Para kaybeden herkes, cüzdanlarındaki her 100 DAO jetonu için 1 ETH çekebiliyordu.
+DAO çatallanması, güvenli olmayan bir [DAO](/glossary/#dao) sözleşmesinin bir saldırıda 3,6 milyon ETH'nin boşaltıldığı [2016 DAO saldırısına](https://www.coindesk.com/learn/understanding-the-dao-attack/) yanıt olarak geliştirildi. Çatallanma, hatalı sözleşmedeki fonları tek bir işlevle [yeni sözleşmeye](https://eth.blockscout.com/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754) taşıdı: geri çekme. Para kaybeden herkes, cüzdanlarındaki her 100 DAO jetonu için 1 ETH çekebiliyordu.
 
 Bu eylem planı, Ethereum topluluğu tarafından oylandı. Tüm ETH sahipleri, [bir oylama platformunda](https://web.archive.org/web/20170620030820/http://v1.carbonvote.com/) bir işlem aracılığıyla oy kullanabildi. Çatallanma kararı, oyların %85'inden fazlasına ulaştı.
 

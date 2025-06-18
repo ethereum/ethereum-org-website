@@ -529,7 +529,7 @@ Bellatrix 升级是计划的第二次[信标链](/roadmap/beacon-chain)升级，
 
 #### 摘要 {#dao-fork-summary}
 
-去中心化自治组织分叉是为了回应 [2016 年去中心化自治组织遭受攻击的事件](https://www.coindesk.com/learn/understanding-the-dao-attack/)。当时，一份不安全的[去中心化自治组织](/glossary/#dao)合约导致黑客盗走了超过 360 万个以太币。 此分叉将资金从有问题的合约转移到一个[新合约](https://etherscan.io/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754)，新合约只有一个功能：提款。 任何损失了资金的人都可以在他们的钱包中提取以太币，每 100 个 DAO 代币 1 个以太币。
+去中心化自治组织分叉是为了回应 [2016 年去中心化自治组织遭受攻击的事件](https://www.coindesk.com/learn/understanding-the-dao-attack/)。当时，一份不安全的[去中心化自治组织](/glossary/#dao)合约导致黑客盗走了超过 360 万个以太币。 此分叉将资金从有问题的合约转移到一个[新合约](https://eth.blockscout.com/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754)，新合约只有一个功能：提款。 任何损失了资金的人都可以在他们的钱包中提取以太币，每 100 个 DAO 代币 1 个以太币。
 
 此操作是由以太坊社区投票决定的。 任何以太币持有人都能够通过在[投票平台](https://web.archive.org/web/20170620030820/http://v1.carbonvote.com/)上交易来进行投票。 分叉的决定获得了 85% 以上的投票。
 

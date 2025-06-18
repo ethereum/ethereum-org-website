@@ -308,7 +308,7 @@ Fork-ul Tangerine Whistle a fost primul răspuns la atacurile prin refuzul-servi
 
 #### Rezumat {#dao-fork-summary}
 
-Fork-ul DAO a fost un răspuns la [atacul DAO din 2016](https://www.coindesk.com/markets/2016/06/25/understanding-the-dao-attack/), în care un contract [DAO](/glossary/#dao) nesecurizat a fost golit de peste 3,6 milioane de ETH prin piratare. Fork-ul a mutat fondurile de pe contractul defectuos pe un [contract nou](https://etherscan.io/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754) cu o singură funcție: „withdraw” (retragere). Oricine a pierdut fonduri a putut retrage 1 ETH pentru fiecare 100 de tokenuri DAO din portofel.
+Fork-ul DAO a fost un răspuns la [atacul DAO din 2016](https://www.coindesk.com/markets/2016/06/25/understanding-the-dao-attack/), în care un contract [DAO](/glossary/#dao) nesecurizat a fost golit de peste 3,6 milioane de ETH prin piratare. Fork-ul a mutat fondurile de pe contractul defectuos pe un [contract nou](https://eth.blockscout.com/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754) cu o singură funcție: „withdraw” (retragere). Oricine a pierdut fonduri a putut retrage 1 ETH pentru fiecare 100 de tokenuri DAO din portofel.
 
 Această măsură a fost votată de comunitatea Ethereum. Orice deținător de ETH a putut vota printr-o tranzacție pe [o platformă de vot](http://v1.carbonvote.com/). Decizia de creare a fork-ului a întrunit peste 85% din voturi.
 

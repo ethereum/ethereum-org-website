@@ -416,7 +416,7 @@ La bifurcación Tangerine Whistle fue la primera respuesta a los ataques de dene
 
 #### Resumen {#dao-fork-summary}
 
-La bifurcación DAO surgió como respuesta al [ataque de DAO de 2016](https://www.coindesk.com/learn/understanding-the-dao-attack/) donde un contrato inseguro [DAO](/glossary/#dao) fue drenando más de 3,6 millones de ETH en un hackeo. La bifurcación movió los fondos del contrato defectuoso a un [nuevo contrato](https://etherscan.io/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754) con una única función: la de retirada. Cualquiera que haya perdido fondos podría retirar 1 ETH por cada 100 tókenes DAO en sus carteras.
+La bifurcación DAO surgió como respuesta al [ataque de DAO de 2016](https://www.coindesk.com/learn/understanding-the-dao-attack/) donde un contrato inseguro [DAO](/glossary/#dao) fue drenando más de 3,6 millones de ETH en un hackeo. La bifurcación movió los fondos del contrato defectuoso a un [nuevo contrato](https://eth.blockscout.com/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754) con una única función: la de retirada. Cualquiera que haya perdido fondos podría retirar 1 ETH por cada 100 tókenes DAO en sus carteras.
 
 Esta acción fue votada por la comunidad Ethereum. Cualquier titular de ETH pudo votar a través de una transacción en [una plataforma de votación](https://web.archive.org/web/20170620030820/http://v1.carbonvote.com/). La decisión de realizar un fork obtuvo más del 85 % de los votos.
 
