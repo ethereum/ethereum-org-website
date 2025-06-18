@@ -46,6 +46,12 @@ Current identity management systems put personal information at risk. Zero-knowl
 
 Zero-knowledge proofs are particularly useful in the context of [decentralized identity](/decentralized-identity/). Decentralized identity (also described as ‘self-sovereign identity’) gives the individual the ability to control access to personal identifiers. Proving your citizenship without revealing your tax ID or passport details is a good example of how zero-knowledge technology enables decentralized identity.
 
+### Proof of Humanity {#proof-of-humanity}
+
+One of the most widely used examples of zero-knowledge proofs in action today is the [World ID protocol](https://world.org/blog/world/world-id-faqs), which can be thought of as “a global digital passport for the age of AI.” It allows people to prove they are unique individuals without revealing personal information. This is achieved through a device called the Orb, which scans a person's iris and generates an iris code. The iris code is checked and verified to confirm the person is a biologically unique human being. After verification, an identity commitment generated on the user’s device (and not linked to or derived from the biometric data) is added to a secure list on the blockchain. Then, whenever the user wants to prove they’re a verified human – whether to sign in, vote, or take other actions – they can generate a zero-knowledge proof that confirms their membership in the list. The beauty of using a zero-knowledge proof is that only one statement is revealed: this person is unique. Everything else stays private.
+
+World ID relies on the [Semaphore protocol](https://docs.semaphore.pse.dev/) developed by the [PSE team](https://pse.dev/) at the Ethereum Foundation. Semaphore is designed to be a lightweight yet powerful way to generate and verify zero-knowledge proofs. It lets users prove they're part of a group (in this case, verified humans) without showing which member of the group they are. Semaphore is also highly flexible, allowing groups to be created based on a wide range of criteria such as identity verification, participation in events, or ownership of credentials.
+
 ### Authentication {#authentication}
 
 Using online services requires proving your identity and right to access those platforms. This often requires providing personal information, like names, email addresses, birth dates, and so on. You may also need to memorize long passwords or risk losing access.
