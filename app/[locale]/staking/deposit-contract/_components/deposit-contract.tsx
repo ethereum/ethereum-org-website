@@ -30,7 +30,7 @@ import { DEPOSIT_CONTRACT_ADDRESS } from "@/data/addresses"
 import useTranslation from "@/hooks/useTranslation"
 import { usePathname } from "@/i18n/routing"
 import consensys from "@/public/images/projects/consensys.png"
-import etherscan from "@/public/images/projects/etherscan-logo-circle.png"
+import blockscout from "@/public/images/resources/blockscout.webp"
 import ef from "@/public/images/staking/ef-blog-logo.png"
 
 const FlexBox = (props: ChildOnlyProp) => (
@@ -237,9 +237,9 @@ const DepositContractPage = () => {
       alt: "",
     },
     {
-      title: "Etherscan",
-      link: `https://etherscan.io/address/${DEPOSIT_CONTRACT_ADDRESS}`,
-      image: etherscan,
+      title: "Blockscout",
+      link: `https://eth.blockscout.com/address/${DEPOSIT_CONTRACT_ADDRESS}`,
+      image: blockscout,
       alt: "",
     },
   ]
@@ -391,9 +391,9 @@ const DepositContractPage = () => {
                       )}
                     </CopyToClipboard>
                     <InlineLink
-                      href={`https://etherscan.io/address/${DEPOSIT_CONTRACT_ADDRESS}`}
+                      href={`https://eth.blockscout.com/address/${DEPOSIT_CONTRACT_ADDRESS}`}
                     >
-                      {t("page-staking-deposit-contract-etherscan")}
+                      {t("page-staking-deposit-contract-blockexplorer")}
                     </InlineLink>
                   </ButtonRow>
                 </>
