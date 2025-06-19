@@ -94,7 +94,7 @@ const QuizzesStats = ({
             <Stack className="gap-2">
               <HStack className="gap-4 max-lg:justify-center">
                 <Center className="size-16 rounded-full bg-primary">
-                  <TrophyIcon className="size-[35.62px] fill-background" />
+                  <TrophyIcon className="text-[35.62px] text-background" />
                 </Center>
                 <span className="text-5xl font-bold leading-base">
                   {totalCorrectAnswers}
