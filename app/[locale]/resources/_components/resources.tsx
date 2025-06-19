@@ -26,13 +26,24 @@ import { useTranslation } from "@/hooks/useTranslation"
 import heroImg from "@/public/images/heroes/guides-hub-hero.jpg"
 interface ResourcesPageProps {
   txCostsMedianUsd: MetricReturnData
+  totalBlobs: string
+  avgBlobFee: number
 }
 
 const EVENT_CATEGORY = "dashboard"
 
-const ResourcesPage = ({ txCostsMedianUsd }: ResourcesPageProps) => {
+const ResourcesPage = ({
+  txCostsMedianUsd,
+  totalBlobs,
+  avgBlobFee,
+}: ResourcesPageProps) => {
   const { t } = useTranslation("page-resources")
-  const resourceSections = useResources({ txCostsMedianUsd })
+
+  const resourceSections = useResources({
+    txCostsMedianUsd,
+    totalBlobs,
+    avgBlobFee,
+  })
   const activeSection = useActiveHash(
     resourceSections.map(({ key }) => key),
     "0% 0% -70% 0%"
@@ -114,7 +125,7 @@ const ResourcesPage = ({ txCostsMedianUsd }: ResourcesPageProps) => {
                   {boxes.map(({ title, metric, items, className }) => (
                     <div
                       className={cn(
-                        "overflow-hidden rounded-2xl border shadow-lg",
+                        "grid grid-rows-[min-content] overflow-hidden rounded-2xl border shadow-lg",
                         className
                       )}
                       key={title}
@@ -122,7 +133,7 @@ const ResourcesPage = ({ txCostsMedianUsd }: ResourcesPageProps) => {
                       <div className="border-b bg-[#ffffff] px-6 py-4 font-bold dark:bg-[#171717]">
                         {title}
                       </div>
-                      <div className="h-full bg-background bg-gradient-to-br from-white to-primary/10 px-2 py-6 dark:from-transparent dark:to-primary/10">
+                      <Stack className="gap-2 bg-background bg-gradient-to-br from-white to-primary/10 px-2 py-6 dark:from-transparent dark:to-primary/10">
                         {metric && metric}
                         <ResourcesContainer>
                           {items.map(({ className, ...item }) => (
@@ -133,7 +144,7 @@ const ResourcesPage = ({ txCostsMedianUsd }: ResourcesPageProps) => {
                             />
                           ))}
                         </ResourcesContainer>
-                      </div>
+                      </Stack>
                     </div>
                   ))}
                 </div>
