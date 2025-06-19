@@ -1,5 +1,5 @@
 import { type ReactNode } from "react"
-import { getTranslations } from "next-intl/server"
+import { getLocale, getTranslations } from "next-intl/server"
 import { MdInfoOutline } from "react-icons/md"
 
 import { cn } from "@/lib/utils/cn"
@@ -9,7 +9,6 @@ import Tooltip from "../Tooltip"
 import Link from "../ui/Link"
 
 type BigNumberProps = {
-  locale: string
   children: ReactNode
   value?: ReactNode
   sourceName?: string
@@ -19,7 +18,6 @@ type BigNumberProps = {
 }
 
 const BigNumber = async ({
-  locale,
   children,
   value,
   sourceName,
@@ -27,7 +25,9 @@ const BigNumber = async ({
   lastUpdated,
   className,
 }: BigNumberProps) => {
+  const locale = await getLocale()
   const t = await getTranslations({ locale, namespace: "common" })
+
   const lastUpdatedDisplay =
     lastUpdated && isValidDate(lastUpdated)
       ? new Intl.DateTimeFormat(locale, {
