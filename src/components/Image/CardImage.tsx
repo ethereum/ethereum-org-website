@@ -17,7 +17,6 @@ const CardImage = ({ src, className, ...props }: CardImageProps) => (
       e.currentTarget.src = EventFallback.src
     }}
     referrerPolicy="no-referrer"
-    crossOrigin="anonymous"
     className={className}
     {...props}
   />

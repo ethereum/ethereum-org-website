@@ -1,9 +1,10 @@
 "use client"
-
 import { AnchorHTMLAttributes, ComponentProps, forwardRef } from "react"
 import NextLink from "next/link"
 import { RxExternalLink } from "react-icons/rx"
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden"
+
+import Email from "@/components/icons/email.svg"
 
 import { cn } from "@/lib/utils/cn"
 import { type MatomoEventOptions, trackCustomEvent } from "@/lib/utils/matomo"
@@ -64,6 +65,7 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
   const isDiscordInvite = url.isDiscordInvite(href)
   const isFile = url.isFile(href)
   const isExternal = url.isExternal(href)
+  const isMailto = url.isMailto(href)
   const isInternalFile = isFile && !isExternal
   const isHash = url.isHash(href)
 
@@ -101,9 +103,14 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
         }
         {...commonProps}
       >
+        {!hideArrow && isMailto && (
+          <Email className="me-1 inline h-6 w-6 shrink-0 align-middle" />
+        )}
         {children}
-        <VisuallyHidden>(opens in a new tab)</VisuallyHidden>
-        {!hideArrow && (
+        <VisuallyHidden>
+          {isMailto ? "opens email client" : "opens in a new tab"}
+        </VisuallyHidden>
+        {!hideArrow && !isMailto && (
           <RxExternalLink
             className={cn(
               "-me-1 inline h-6 w-6 shrink-0 p-1 align-middle",
