@@ -1,11 +1,13 @@
+import { getLocale, getTranslations } from "next-intl/server"
+
 import { MAIN_CONTENT_ID } from "@/lib/constants"
 
 import { BaseLink } from "./ui/Link"
 
-import { useTranslation } from "@/hooks/useTranslation"
+export const SkipLink = async () => {
+  const locale = await getLocale()
+  const t = await getTranslations({ locale, namespace: "common" })
 
-export const SkipLink = () => {
-  const { t } = useTranslation()
   return (
     <div className="bg-primary-low-contrast focus-within:p-4">
       <BaseLink
