@@ -1,5 +1,4 @@
-import { useEffect, useState } from "react"
-import { useLocale } from "next-intl"
+import { getLocale, getTranslations } from "next-intl/server"
 
 import { Lang } from "@/lib/types"
 
@@ -9,14 +8,14 @@ import SectionIconEthWallet from "@/components/icons/eth-wallet.svg"
 import SectionIconHeartPulse from "@/components/icons/heart-pulse.svg"
 import SectionIconPrivacy from "@/components/icons/privacy.svg"
 
+import { formatSmallUSD } from "@/lib/utils/numbers"
 import { getLocaleForNumberFormat } from "@/lib/utils/translations"
 
-import BigNumber from "../BigNumber"
-import RadialChart from "../RadialChart"
+import BigNumber from "../../../src/components/BigNumber"
 
+import SlotCountdownChart from "./_components/SlotCountdown"
 import type { DashboardBox, DashboardSection } from "./types"
 
-import { useTranslation } from "@/hooks/useTranslation"
 import IconBeaconchain from "@/public/images/resources/beaconcha-in.png"
 import IconBlobsGuru from "@/public/images/resources/blobsguru.png"
 import IconBlocknative from "@/public/images/resources/blocknative.png"
@@ -54,19 +53,12 @@ import IconUltrasoundMoney from "@/public/images/resources/ultrasound-money.png"
 import IconVisaOnchainAnalytics from "@/public/images/resources/visa-onchain-analytcs.png"
 import IconWalletBeat from "@/public/images/resources/walletbeat.png"
 
-const formatSmallUSD = (value: number, locale: string): string =>
-  new Intl.NumberFormat(locale, {
-    style: "currency",
-    currency: "USD",
-    notation: "compact",
-    minimumSignificantDigits: 2,
-    maximumSignificantDigits: 2,
-  }).format(value)
-
-export const useResources = ({ txCostsMedianUsd }): DashboardSection[] => {
-  const { t } = useTranslation("page-resources")
-  const locale = useLocale()
-  const localeForNumberFormat = getLocaleForNumberFormat(locale! as Lang)
+export const getResources = async ({
+  txCostsMedianUsd,
+}): Promise<DashboardSection[]> => {
+  const locale = await getLocale()
+  const t = await getTranslations({ locale, namespace: "page-resources" })
+  const localeForNumberFormat = getLocaleForNumberFormat(locale as Lang)
 
   const medianTxCost =
     "error" in txCostsMedianUsd
@@ -76,32 +68,12 @@ export const useResources = ({ txCostsMedianUsd }): DashboardSection[] => {
           value: formatSmallUSD(txCostsMedianUsd.value, localeForNumberFormat),
         }
 
-  const [timeToNextBlock, setTimeToNextBlock] = useState(12)
-
-  useEffect(() => {
-    const genesisTime = new Date("2020-12-01T12:00:23Z").getTime()
-    const updateTime = () => {
-      const now = Date.now()
-      const timeElapsed = (now - genesisTime) / 1000
-      const timeToNext = 12 - (timeElapsed % 12)
-      setTimeToNextBlock(Math.floor(timeToNext) || 12)
-    }
-
-    updateTime()
-    const interval = setInterval(updateTime, 1000)
-    return () => clearInterval(interval)
-  }, [])
-
   const networkBoxes: DashboardBox[] = [
     {
       title: t("page-resources-network-layer2-title"),
       metric: (
-        <BigNumber
-          className="items-center"
-          value={medianTxCost.value}
-          locale={locale}
-        >
-          Median transaction cost on Ethereum networks
+        <BigNumber className="items-center" value={medianTxCost.value}>
+          {t("page-resources-network-layer2-chart-label")}
         </BigNumber>
       ),
       items: [
@@ -130,16 +102,10 @@ export const useResources = ({ txCostsMedianUsd }): DashboardSection[] => {
     {
       title: t("page-resources-block-explorers-title"),
       metric: (
-        <RadialChart
-          value={timeToNextBlock}
-          totalValue={12}
-          displayValue={new Intl.NumberFormat(locale, {
-            style: "unit",
-            unit: "second",
-            unitDisplay: "narrow",
-          }).format(timeToNextBlock)}
-          label="Time to next block"
-        />
+        // CLIENT-SIDE
+        <SlotCountdownChart>
+          {t("page-resources-block-explorers-chart-label")}
+        </SlotCountdownChart>
       ),
       items: [
         {
