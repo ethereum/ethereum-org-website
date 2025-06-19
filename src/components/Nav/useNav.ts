@@ -1,4 +1,3 @@
-import { Sliders } from "lucide-react"
 import { useTheme } from "next-themes"
 
 import BookIcon from "@/components/icons/book.svg"
@@ -16,6 +15,7 @@ import MortarboardIcon from "@/components/icons/mortarboard.svg"
 import PinAngleIcon from "@/components/icons/pin-angle.svg"
 import SafeIcon from "@/components/icons/safe.svg"
 import SignpostIcon from "@/components/icons/signpost.svg"
+import SlidersHorizontalCircles from "@/components/icons/sliders-horizontal-circles.svg"
 import UiChecksGridIcon from "@/components/icons/ui-checks-grid.svg"
 import UsersFourLight from "@/components/icons/users-four-light.svg"
 
@@ -75,7 +75,7 @@ export const useNav = () => {
         {
           label: t("nav-advanced-label"),
           description: t("nav-advanced-description"),
-          icon: Sliders,
+          icon: SlidersHorizontalCircles,
           items: [
             {
               label: t("nav-gas-fees-label"),

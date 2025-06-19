@@ -66,7 +66,7 @@ const BigNumber = async ({
                 }
               >
                 <Info
-                  className="mb-0.5 ms-2 inline align-text-bottom"
+                  className="mb-0.5 ms-2 inline size-3.5 align-text-bottom"
                   aria-label={t("data-provided-by")}
                 />
               </Tooltip>
