@@ -1,3 +1,4 @@
+import dynamic from "next/dynamic"
 import { getLocale, getTranslations } from "next-intl/server"
 
 import { Lang } from "@/lib/types"
@@ -7,13 +8,13 @@ import SectionIconEthGlyph from "@/components/icons/eth-glyph.svg"
 import SectionIconEthWallet from "@/components/icons/eth-wallet.svg"
 import SectionIconHeartPulse from "@/components/icons/heart-pulse.svg"
 import SectionIconPrivacy from "@/components/icons/privacy.svg"
+import { Spinner } from "@/components/ui/spinner"
 
 import { formatSmallUSD } from "@/lib/utils/numbers"
 import { getLocaleForNumberFormat } from "@/lib/utils/translations"
 
 import BigNumber from "../../../src/components/BigNumber"
 
-import SlotCountdownChart from "./_components/SlotCountdown"
 import type { DashboardBox, DashboardSection } from "./types"
 
 import IconBeaconchain from "@/public/images/resources/beaconcha-in.png"
@@ -53,6 +54,17 @@ import IconUltrasoundMoney from "@/public/images/resources/ultrasound-money.png"
 import IconVisaOnchainAnalytics from "@/public/images/resources/visa-onchain-analytcs.png"
 import IconWalletBeat from "@/public/images/resources/walletbeat.png"
 
+const SlotCountdownChart = dynamic(
+  () => import("./_components/SlotCountdown"),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="grid h-32 place-items-center">
+        <Spinner />
+      </div>
+    ),
+  }
+)
 export const getResources = async ({
   txCostsMedianUsd,
 }): Promise<DashboardSection[]> => {
