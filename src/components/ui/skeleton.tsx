@@ -30,7 +30,7 @@ const skeletonVariants = cva(
     variants: {
       variant: {
         pulse: "animate-pulse-light",
-        "slow-pulse": "animate-slow-pulse opacity-[0.01]",
+        "slow-pulse": "animate-slow-pulse dark:opacity-0 opacity-0",
       },
     },
     defaultVariants: {
