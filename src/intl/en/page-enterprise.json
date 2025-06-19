@@ -7,7 +7,7 @@
   "page-enterprise-cases-blackrock-content": "Launched <strong>$2.9B+ tokenized</strong> U.S. Treasury fund on Ethereum and its ecosystem, delivering same-day liquidity to institutions.",
   "page-enterprise-cases-eib-content": "<strong>Issued a €100M digital bond</strong> on public Ethereum. The project was conducted in cooperation with the Banque de France, Goldman Sachs, Santander and Société Générale.",
   "page-enterprise-cases-mediledger-content": "Enables Pfizer and Genentech to verify drug authenticity and ensure pharma compliance.",
-  "page-enterprise-cases-tmobile-content": "Uses Ethereum to streamline roaming and device trust—shared ledgers simplify authentication and billing.",
+  "page-enterprise-cases-sony-content": "Launched the Soneium L2 network on Ethereum's OP Stack, scaling real-world IP with <strong>14M+ accounts and $45M+ TVL</strong>.",
   "page-enterprise-cases-unwfp-content": "UN <strong>tracks aid for 100,000+ refugees</strong> using a private Ethereum fork, boosting audit capabilities.",
   "page-enterprise-cases-visa-content": "Settled over <strong>$225 million</strong> in stablecoin transactions using USDC across Ethereum and other blockchains.",
   "page-enterprise-ecosystem-cta": "See use cases",
@@ -41,7 +41,7 @@
   "page-enterprise-reason-4-content": "The only programmable distributed ledger infrastructure that has never gone down, and has thrived through multiple existential threats.",
   "page-enterprise-reason-4-header": "Battle-tested",
   "page-enterprise-team-description": "We will answer your questions, help identify potential paths forward, provide technical support, and connect you with relevant industry leaders.",
-  "page-enterprise-team-header": "Ethereum Enterprise Team",
+  "page-enterprise-team-header": "EF Enterprise Team",
   "page-enterprise-why-description": "Ethereum supports enterprise compliance with transparent, auditable infrastructure that aligns with GDPR and KYC while protecting sensitive data in private or consortium environments.",
   "page-enterprise-why-header": "Why Ethereum"
 }
