@@ -9,7 +9,6 @@ import Checkmark from "@/components/icons/checkmark.svg"
 import Adidas from "@/components/icons/enterprise/adidas.svg"
 import Azure from "@/components/icons/enterprise/azure.svg"
 import BancoSantander from "@/components/icons/enterprise/banco-santander.svg"
-import BASF from "@/components/icons/enterprise/basf.svg"
 import BlackRock from "@/components/icons/enterprise/blackrock.svg"
 import BMW from "@/components/icons/enterprise/bmw.svg"
 import CocaCola from "@/components/icons/enterprise/coca-cola.svg"
@@ -183,8 +182,13 @@ const Page = async ({ params }: { params: { locale: Lang } }) => {
       ),
     },
     {
-      name: "T-Mobile & SK Telecom",
-      content: t("page-enterprise-cases-tmobile-content"),
+      name: "Sony",
+      content: (
+        <Translation
+          ns="page-enterprise"
+          id="page-enterprise-cases-sony-content"
+        />
+      ),
     },
     {
       name: "UN World Food Programme",
@@ -233,7 +237,6 @@ const Page = async ({ params }: { params: { locale: Lang } }) => {
       Logo: BancoSantander,
       className: "-translate-y-1",
     },
-    { name: "BASF", Logo: BASF, className: "text-[28px]" },
     { name: "BlackRock", Logo: BlackRock, className: "text-[32px]" },
     { name: "BMW", Logo: BMW, className: "scale-105 origin-bottom" },
     { name: "Coca-Cola", Logo: CocaCola },

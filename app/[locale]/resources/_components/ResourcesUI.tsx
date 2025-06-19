@@ -3,9 +3,8 @@ import { Tag } from "@/components/ui/tag"
 
 import { cn } from "@/lib/utils/cn"
 
-import { Image } from "../Image"
-
-import { Item } from "./types"
+import { Image } from "../../../../src/components/Image"
+import { Item } from "../types"
 
 export const DashboardBox = ({
   className,
