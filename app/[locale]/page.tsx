@@ -3,13 +3,16 @@ import dynamic from "next/dynamic"
 import { notFound } from "next/navigation"
 import { getTranslations, setRequestLocale } from "next-intl/server"
 
-import type { AllMetricData, CommunityBlog, ValuesPairing } from "@/lib/types"
+import type {
+  AllHomepageActivityData,
+  CommunityBlog,
+  ValuesPairing,
+} from "@/lib/types"
 import type { EventCardProps } from "@/lib/types"
 import type { Lang } from "@/lib/types"
 import { CodeExample } from "@/lib/interfaces"
 
 import ActivityStats from "@/components/ActivityStats"
-import { getActivity } from "@/components/ActivityStats/getActivity"
 import BannerNotification from "@/components/Banners/BannerNotification"
 import { ChevronNext } from "@/components/Chevron"
 import HomeHero from "@/components/Hero/HomeHero"
@@ -79,6 +82,7 @@ import {
 } from "@/lib/constants"
 
 import TenYearHomeBanner from "./10years/_components/TenYearHomeBanner"
+import { getActivity } from "./utils"
 
 import SimpleDomainRegistryContent from "!!raw-loader!@/data/SimpleDomainRegistry.sol"
 import SimpleTokenContent from "!!raw-loader!@/data/SimpleToken.sol"
@@ -411,7 +415,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     )
     .slice(0, 3) as EventCardProps[] // Show 3 events ending soonest
 
-  const metricResults: AllMetricData = {
+  const metricResults: AllHomepageActivityData = {
     ethPrice,
     totalEthStaked,
     totalValueLocked,
@@ -448,7 +452,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           </Link>
         </p>
       </BannerNotification>
-      <HomeHero heroImg={Hero} className="w-full" />
+      <HomeHero heroImg={Hero} className="w-full" locale={locale} />
       <div className="w-full space-y-32 px-4 md:mx-6 lg:space-y-48">
         <div className="my-20 grid w-full grid-cols-2 gap-x-4 gap-y-8 md:grid-cols-4 md:gap-x-10">
           {subHeroCTAs.map(

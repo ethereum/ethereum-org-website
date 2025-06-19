@@ -135,6 +135,7 @@ const DevelopersPage = async ({
                   eventAction: "click",
                   eventName: "speedrun",
                 }}
+                rel="noopener"
               >
                 {t("page-developers-speedrunethereum-link")}
               </ButtonLink>
