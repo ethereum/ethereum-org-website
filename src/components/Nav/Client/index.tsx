@@ -23,14 +23,18 @@ const Menu = dynamic(() => import("../Menu"), {
   loading: () => (
     <div className="me-8 flex w-full items-center gap-10 px-6 max-md:hidden">
       {Array.from({ length: 5 }).map((_, i) => (
-        <Skeleton key={i} className="h-6 w-12 py-2" />
+        <Skeleton variant="slow-pulse" key={i} className="h-6 w-12 py-2" />
       ))}
     </div>
   ),
 })
 
 const MobileMenuLoading = () => (
-  <Skeleton data-label="mobile-menu" className="ms-2 size-6" />
+  <Skeleton
+    variant="slow-pulse"
+    data-label="mobile-menu"
+    className="ms-2 size-6"
+  />
 )
 
 const MobileNavMenu = dynamic(() => import("../Mobile"), {
@@ -44,13 +48,22 @@ const SearchProvider = dynamic(() => import("../../Search"), {
     <>
       <div className="flex items-center gap-6 px-2 max-md:hidden xl:px-3">
         <Skeleton
+          variant="slow-pulse"
           data-label="search-xl"
           className="hidden h-6 w-[169px] xl:flex"
         />
-        <Skeleton data-label="search" className="size-6 xl:hidden" />
+        <Skeleton
+          variant="slow-pulse"
+          data-label="search"
+          className="size-6 xl:hidden"
+        />
       </div>
       <div className="flex items-center md:hidden">
-        <Skeleton data-label="search" className="mx-2 size-6" />
+        <Skeleton
+          variant="slow-pulse"
+          data-label="search"
+          className="mx-2 size-6"
+        />
         <MobileMenuLoading />
       </div>
     </>
@@ -61,7 +74,10 @@ const LanguagePicker = dynamic(() => import("../../LanguagePicker"), {
   ssr: false,
   loading: () => (
     // LG skeleton width approximates English "[icon] Languages EN" text width
-    <Skeleton className="h-6 max-md:hidden md:mx-2 md:w-[54px] lg:mx-3 lg:w-[8.875rem]" />
+    <Skeleton
+      variant="slow-pulse"
+      className="h-6 max-md:hidden md:mx-2 md:w-[54px] lg:mx-3 lg:w-[8.875rem]"
+    />
   ),
 })
 
@@ -80,7 +96,10 @@ const ClientSideNav = () => {
   return (
     <>
       {desktopScreen && (
-        <Menu className="max-md:hidden" sections={linkSections} />
+        <Menu
+          className="animate-fade-in max-md:hidden"
+          sections={linkSections}
+        />
       )}
 
       <div className="flex items-center">
@@ -88,15 +107,21 @@ const ClientSideNav = () => {
           {({ onOpen }) => {
             return (
               <>
-                <SearchInputButton className="max-xl:hidden" onClick={onOpen} />
-                <SearchButton className="xl:hidden" onClick={onOpen} />
+                <SearchInputButton
+                  className="animate-fade-in max-xl:hidden"
+                  onClick={onOpen}
+                />
+                <SearchButton
+                  className="animate-fade-in xl:hidden"
+                  onClick={onOpen}
+                />
 
                 {!desktopScreen && (
                   <MobileNavMenu
                     toggleColorMode={toggleColorMode}
                     linkSections={linkSections}
                     toggleSearch={onOpen}
-                    className="flex md:hidden"
+                    className="flex animate-fade-in md:hidden"
                   />
                 )}
               </>
@@ -109,7 +134,7 @@ const ClientSideNav = () => {
             aria-label={themeIconAriaLabel}
             variant="ghost"
             isSecondary
-            className="group px-2 max-md:hidden xl:px-3 [&>svg]:transition-transform [&>svg]:duration-500 [&>svg]:hover:rotate-12 [&>svg]:hover:text-primary-hover"
+            className="group animate-fade-in px-2 max-md:hidden xl:px-3 [&>svg]:transition-transform [&>svg]:duration-500 [&>svg]:hover:rotate-12 [&>svg]:hover:text-primary-hover"
             onClick={toggleColorMode}
           >
             <ThemeIcon className="transform-transform duration-500 group-hover:rotate-12 group-hover:transition-transform group-hover:duration-500" />
@@ -122,7 +147,7 @@ const ClientSideNav = () => {
               name={DESKTOP_LANGUAGE_BUTTON_NAME}
               ref={languagePickerRef}
               variant="ghost"
-              className="gap-0 px-2 text-body transition-transform duration-500 active:bg-primary-low-contrast active:text-primary-hover data-[state='open']:bg-primary-low-contrast data-[state='open']:text-primary-hover max-md:hidden xl:px-3 [&_svg]:transition-transform [&_svg]:duration-500 [&_svg]:hover:rotate-12"
+              className="animate-fade-in gap-0 px-2 text-body transition-transform duration-500 active:bg-primary-low-contrast active:text-primary-hover data-[state='open']:bg-primary-low-contrast data-[state='open']:text-primary-hover max-md:hidden xl:px-3 [&_svg]:transition-transform [&_svg]:duration-500 [&_svg]:hover:rotate-12"
             >
               <BsTranslate className="me-2 align-middle text-2xl" />
               <span className="max-lg:hidden">{t("languages")}&nbsp;</span>
