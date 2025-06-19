@@ -43,10 +43,11 @@ import { Card } from "@/components/ui/card"
 import { Skeleton, SkeletonLines } from "@/components/ui/skeleton"
 
 import { cn } from "@/lib/utils/cn"
-// import { dataLoader } from "@/lib/utils/data/dataLoader"
+import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { getMetadata } from "@/lib/utils/metadata"
 
-// import { BASE_TIME_UNIT } from "@/lib/constants"
+import { BASE_TIME_UNIT } from "@/lib/constants"
+
 import CasesColumn from "./_components/CasesColumn"
 import FeatureCard from "./_components/FeatureCard"
 import { ENTERPRISE_MAILTO } from "./constants"
@@ -81,28 +82,27 @@ const CasesSwiper = dynamic(() => import("./_components/CasesSwiper"), {
   ),
 })
 
-// TODO: Switch back to this for cache and mock-data dev fallback
-// const loadData = dataLoader(
-//   [
-//     ["growThePieData", fetchGrowThePie],
-//     ["ethereumStablecoins", fetchEthereumStablecoinsMcap],
-//     ["ethPrice", fetchEthPrice],
-//     ["totalEthStaked", fetchTotalEthStaked],
-//   ],
-//   BASE_TIME_UNIT * 1000
-// )
+const loadData = dataLoader(
+  [
+    ["growThePieData", fetchGrowThePie],
+    ["ethereumStablecoins", fetchEthereumStablecoinsMcap],
+    ["ethPrice", fetchEthPrice],
+    ["totalEthStaked", fetchTotalEthStaked],
+  ],
+  BASE_TIME_UNIT * 1000
+)
 
 const Page = async ({ params }: { params: { locale: Lang } }) => {
   const { locale } = params
 
   const t = await getTranslations({ locale, namespace: "page-enterprise" })
 
-  // const [{ txCount }, stablecoinMarketCap, ethPrice, totalEthStaked] =
-  //   await loadData()
-  const { txCount, txCostsMedianUsd } = await fetchGrowThePie()
-  const stablecoinMarketCap = await fetchEthereumStablecoinsMcap()
-  const ethPrice = await fetchEthPrice()
-  const totalEthStaked = await fetchTotalEthStaked()
+  const [
+    { txCount, txCostsMedianUsd },
+    stablecoinMarketCap,
+    ethPrice,
+    totalEthStaked,
+  ] = await loadData()
 
   const metrics = await parseActivity({
     txCount,
