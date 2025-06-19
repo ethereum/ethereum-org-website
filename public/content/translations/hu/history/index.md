@@ -529,7 +529,7 @@ A Tangerine Whistle elágazás volt a első válasz a szolgáltatásmegtagadáso
 
 #### Összegzés {#dao-fork-summary}
 
-A DAO elágazás volt a válasz a [2016-os DAO-támadásra](https://www.coindesk.com/learn/understanding-the-dao-attack/), amikor egy sérülékeny [DAO](/glossary/#dao) szerződésből 3,6 millió ETH-t ürítettek le a támadás során. Az elágazás átmozgatta a pénzt a hibás szerződésből egy [új szerződésbe](https://eth.blockscout.com/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754), amelynek csak kiutalási funkciója volt. Bárki, aki veszteséget szenvedett el, kivehetett 1 ETH-t a tárcájában lévő minden 100 DAO tokenre.
+A DAO elágazás volt a válasz a [2016-os DAO-támadásra](https://www.coindesk.com/learn/understanding-the-dao-attack/), amikor egy sérülékeny [DAO](/glossary/#dao) szerződésből 3,6 millió ETH-t ürítettek le a támadás során. Az elágazás átmozgatta a pénzt a hibás szerződésből egy [új szerződésbe](https://etherscan.io/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754), amelynek csak kiutalási funkciója volt. Bárki, aki veszteséget szenvedett el, kivehetett 1 ETH-t a tárcájában lévő minden 100 DAO tokenre.
 
 Ennek az akciónak a kezelését megszavazták az Ethereum közösségen belül. Bármely ETH tulajdonos szavazhatott egy tranzakción keresztül [egy szavazási platformon](https://web.archive.org/web/20170620030820/http://v1.carbonvote.com/). Az elágazás mellett több mint a szavazók 85%-a voksolt.
 

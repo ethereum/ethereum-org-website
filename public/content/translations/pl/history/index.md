@@ -274,7 +274,7 @@ Fork Tangerine Whistle był pierwszą odpowiedzią na ataki typu „odmowa usłu
 
 #### Podsumowanie {#dao-fork-summary}
 
-Fork DAO był odpowiedzią na [atak DAO 2016](https://www.coindesk.com/understanding-dao-hack-journalists), który doprowadził do złamania niezabezpieczonego kontraktu [DAO](/glossary/#dao) i kradzieży ponad 3,6 mln ETH. Fork przeniósł fundusze z błędnego kontraktu do [nowego kontraktu](https://eth.blockscout.com/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754) z jedną funkcją: wypłać. Każdy, kto stracił środki, mógł wypłacić 1 ETH za każde 100 tokenów DAO w swoim portfelu.
+Fork DAO był odpowiedzią na [atak DAO 2016](https://www.coindesk.com/understanding-dao-hack-journalists), który doprowadził do złamania niezabezpieczonego kontraktu [DAO](/glossary/#dao) i kradzieży ponad 3,6 mln ETH. Fork przeniósł fundusze z błędnego kontraktu do [nowego kontraktu](https://etherscan.io/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754) z jedną funkcją: wypłać. Każdy, kto stracił środki, mógł wypłacić 1 ETH za każde 100 tokenów DAO w swoim portfelu.
 
 Ten kierunek działania został przegłosowany przez społeczność Ethereum. Każdy posiadacz ETH mógł głosować za pośrednictwem transakcji na [platformie do głosowania](http://v1.carbonvote.com/). Decyzja o forku została poparta ponad 85% głosów.
 

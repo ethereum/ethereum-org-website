@@ -581,7 +581,7 @@ Ba é forc Tangerine Whistle an chéad fhreagra ar ionsaithe ar dhiúltú seirbh
 
 #### Achoimre {#dao-fork-summary}
 
-Bhí forc DAO mar fhreagra ar [ionsaí DAO 2016](https://www.coindesk.com/learn/understanding-the-dao-attack/) nuair a [DAO](/glossary/ / Draenáladh conradh #dao) de níos mó ná 3.6 milliún ETH i hac. Bhog an forc na cistí ón gconradh lochtach go [draenáladh conradh neamhchinnte nua](https://eth.blockscout.com/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754) le feidhm amháin: tarraingt siar. D'fhéadfadh duine ar bith a chaill cistí 1 ETH a tharraingt siar in aghaidh gach 100 comhartha DAO ina gcuid sparán.
+Bhí forc DAO mar fhreagra ar [ionsaí DAO 2016](https://www.coindesk.com/learn/understanding-the-dao-attack/) nuair a [DAO](/glossary/ / Draenáladh conradh #dao) de níos mó ná 3.6 milliún ETH i hac. Bhog an forc na cistí ón gconradh lochtach go [draenáladh conradh neamhchinnte nua](https://etherscan.io/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754) le feidhm amháin: tarraingt siar. D'fhéadfadh duine ar bith a chaill cistí 1 ETH a tharraingt siar in aghaidh gach 100 comhartha DAO ina gcuid sparán.
 
 Vótáil pobal Ethereum ar son na gníomhaíochta seo. Bhí aon sealbhóir ETH in ann vótáil trí idirbheart ar [ardán vótála](https://web.archive.org/web/20170620030820/http://v1.carbonvote.com/). Bhain an cinneadh chun forcála os cionn 85% de na vótaí.
 
