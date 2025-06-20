@@ -23,7 +23,7 @@ import LiquidityTokenIcon from "./liquidity-token.svg"
 import MultiClientIcon from "./multi-client.svg"
 import OpenSourceStakingIcon from "./open-source-staking.svg"
 import OriginEtherGlyphIcon from "./origin-ether-glyph.svg"
-import P2pGlyphIcon from "./p2p-glyph.svg"
+import P2PGlyphIcon from "./p2p-glyph.svg"
 import PermissionlessIcon from "./permissionless.svg"
 import RockXGlyphIcon from "./rock-x-glyph.svg"
 import RocketPoolGlyphIcon from "./rocket-pool-glyph.svg"
@@ -71,7 +71,7 @@ export {
   MultiClientIcon,
   OpenSourceStakingIcon,
   OriginEtherGlyphIcon,
-  P2pGlyphIcon,
+  P2PGlyphIcon,
   PermissionlessIcon,
   RocketPoolGlyphIcon,
   RockXGlyphIcon,
