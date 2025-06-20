@@ -3,6 +3,7 @@ import type { NextPage } from "next"
 import type { AppProps } from "next/app"
 import type { StaticImageData } from "next/image"
 import type { ReactElement, ReactNode } from "react"
+import type { IconType } from "react-icons"
 import type { ColumnDef } from "@tanstack/react-table"
 
 import type {
@@ -1043,6 +1044,65 @@ export interface ITutorial {
   lang: string
   isExternal: boolean
 }
+
+export enum DappCategoryEnum {
+  DEFI = "DeFi",
+  COLLECTIBLE = "Collectibles",
+  SOCIAL = "Social",
+  GAMING = "Gaming",
+  BRIDGE = "Bridge",
+}
+
+export type DappCategory = `${DappCategoryEnum}`
+
+export type DappCategoryData = {
+  name: string
+  slug: string
+  description: string
+  icon: IconType
+}
+
+export type DappCategories = Record<DappCategoryEnum, DappCategoryData>
+
+export type Dapp = {
+  name: string
+  url: string
+  description: string
+  image: StaticImageData
+  category: DappCategoryEnum
+  networks: Array<"Ethereum" | "Starknet">
+  subCategory: string[]
+}
+
+export type DefiDapp = Dapp & {
+  category: DappCategoryEnum.DEFI
+  subCategory: Array<
+    "Lending" | "Liquid staking" | "DEX" | "Insurance" | "Prediction" | "RWA"
+  >
+}
+
+export type CollectibleDapp = Dapp & {
+  category: DappCategoryEnum.COLLECTIBLE
+}
+
+export type SocialDapp = Dapp & {
+  category: DappCategoryEnum.SOCIAL
+}
+
+export type GamingDapp = Dapp & {
+  category: DappCategoryEnum.GAMING
+}
+
+export type BridgeDapp = Dapp & {
+  category: DappCategoryEnum.BRIDGE
+}
+
+export type DappData =
+  | DefiDapp
+  | CollectibleDapp
+  | SocialDapp
+  | GamingDapp
+  | BridgeDapp
 
 type ValuesItem = {
   label: string
