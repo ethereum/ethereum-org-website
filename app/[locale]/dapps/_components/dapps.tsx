@@ -75,6 +75,7 @@ import opensea from "@/public/images/dapps/opensea.png"
 import opera from "@/public/images/dapps/opera.png"
 import poap from "@/public/images/dapps/poap.png"
 import polymarket from "@/public/images/dapps/polymarket.png"
+import puffer from "@/public/images/dapps/puffer.png"
 import pwn from "@/public/images/dapps/pwn.png"
 import radicle from "@/public/images/dapps/radicle.png"
 import rarible from "@/public/images/dapps/rarible.png"
@@ -881,6 +882,13 @@ const DappsPage = ({
       link: "https://www.ankr.com/",
       image: ankr,
       alt: t("page-dapps-ankr-logo-alt"),
+    },
+    {
+      title: "Puffer",
+      description: t("page-dapps-dapp-description-puffer"),
+      link: "https://www.puffer.fi",
+      image: puffer,
+      alt: t("page-dapps-puffer-logo-alt"),
     },
   ]
 
