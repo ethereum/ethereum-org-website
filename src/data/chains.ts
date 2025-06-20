@@ -1683,17 +1683,6 @@ const chains = [
     chain: "ETH",
   },
   {
-    name: "Plume (Legacy)",
-    infoURL: "https://plumenetwork.xyz/",
-    chainId: 98865,
-    nativeCurrency: {
-      name: "Plume Ether",
-      symbol: "ETH",
-      decimals: 18,
-    },
-    chain: "PLUME Legacy",
-  },
-  {
     name: "re.al",
     infoURL: "https://re.al",
     chainId: 111188,
