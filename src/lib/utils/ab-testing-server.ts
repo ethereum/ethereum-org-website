@@ -4,7 +4,7 @@ import { ABTestAssignment, ABTestConfig } from "@/lib/types/ab-testing"
 
 import { getABTestConfigs } from "./ab-testing-config"
 
-const AB_TEST_COOKIE_PREFIX = "_pk_abtest_"
+const AB_TEST_COOKIE_PREFIX = "pk_ab_test"
 const COOKIE_MAX_AGE = 60 * 60 * 24 * 30 // 30 days
 
 export async function getOrAssignABTest(

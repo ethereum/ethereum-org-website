@@ -150,13 +150,13 @@ ABTEST_WALLET_LAYOUT_VARIANTS="original:40,list:30,grid:20,carousel:10"
 4. Check browser console for Matomo debug logs
 
 ### Same Variant Always Shows
-1. Clear cookies: `_pk_abtest_[testname]`
+1. Clear cookies: `pk_ab_test[testname]`
 2. Check variant weights are > 0
 3. Verify random assignment logic
 
 ## Architecture Notes
 
-- **Cookies**: Uses `_pk_abtest_[testKey]` following Matomo naming conventions
+- **Cookies**: Uses `pk_ab_test[testKey]` following Matomo naming conventions
 - **Persistence**: 30 days (compliant with existing cookie policy)
 - **SSR**: True server-side rendering with no hydration mismatches
 - **Fallbacks**: Graceful degradation when tests are disabled or fail
