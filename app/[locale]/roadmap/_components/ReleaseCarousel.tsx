@@ -1,7 +1,7 @@
 "use client"
 
 // TODO: Extract intl strings
-// TODO: Fix RTL compatibility; currenly forced to LTR flow
+// TODO: Fix RTL compatibility; currently forced to LTR flow
 import { useCallback, useEffect, useMemo, useState } from "react"
 import { useLocale } from "next-intl"
 
