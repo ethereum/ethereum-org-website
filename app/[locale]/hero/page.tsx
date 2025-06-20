@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Image from "next/image"
 import { useTranslations } from "next-intl"
 
@@ -13,6 +13,17 @@ import heroImage from "@/public/images/home/hero.png"
 export default function HeroQualityDemo() {
   const t = useTranslations("page-index")
   const [selectedQualities, setSelectedQualities] = useState<number[]>([100, 5])
+  const [customHeight, setCustomHeight] = useState(300) // Default height in px
+  const [isMobile, setIsMobile] = useState(false)
+  const [useCustomHeight, setUseCustomHeight] = useState(false) // Toggle for custom height
+
+  // Check if mobile on mount
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768)
+    checkMobile()
+    window.addEventListener("resize", checkMobile)
+    return () => window.removeEventListener("resize", checkMobile)
+  }, [])
 
   const alt = t("page-index-hero-image-alt")
 
@@ -28,9 +39,82 @@ export default function HeroQualityDemo() {
     )
   }
 
+  const handleMouseResize = (
+    e: React.MouseEvent,
+    direction: "top" | "bottom"
+  ) => {
+    if (isMobile) return
+
+    const startY = e.clientY
+    const startHeight = customHeight
+
+    const handleMouseMove = (moveEvent: MouseEvent) => {
+      const deltaY =
+        direction === "top"
+          ? startY - moveEvent.clientY
+          : moveEvent.clientY - startY
+      const newHeight = Math.max(100, Math.min(600, startHeight + deltaY))
+      setCustomHeight(newHeight)
+    }
+
+    const handleMouseUp = () => {
+      document.removeEventListener("mousemove", handleMouseMove)
+      document.removeEventListener("mouseup", handleMouseUp)
+      document.body.style.cursor = "default"
+      document.body.style.userSelect = "auto"
+    }
+
+    document.body.style.cursor = direction === "top" ? "n-resize" : "s-resize"
+    document.body.style.userSelect = "none"
+    document.addEventListener("mousemove", handleMouseMove)
+    document.addEventListener("mouseup", handleMouseUp)
+  }
+
+  const ImageContainer = ({
+    quality,
+    isComparison = false,
+  }: {
+    quality: number
+    isComparison?: boolean
+  }) => (
+    <div className="relative mx-auto w-full max-w-[1536px]">
+      {!isMobile && useCustomHeight && (
+        <>
+          <div
+            className="absolute left-0 right-0 top-0 z-10 h-2 cursor-n-resize hover:bg-primary/20"
+            onMouseDown={(e) => handleMouseResize(e, "top")}
+          />
+          <div
+            className="absolute bottom-0 left-0 right-0 z-10 h-2 cursor-s-resize hover:bg-primary/20"
+            onMouseDown={(e) => handleMouseResize(e, "bottom")}
+          />
+        </>
+      )}
+      <div
+        className={
+          useCustomHeight
+            ? "overflow-hidden"
+            : "h-[240px] overflow-hidden md:h-[380px] lg:h-[480px]"
+        }
+        style={useCustomHeight ? { height: `${customHeight}px` } : undefined}
+      >
+        <Image
+          src={heroImage}
+          alt={`${alt} (Quality: ${quality}%)`}
+          width={1536}
+          height={480}
+          quality={quality}
+          sizes={`(max-width: ${breakpointAsNumber["2xl"]}px) 100vw, ${breakpointAsNumber["2xl"]}px`}
+          className="h-full w-full object-cover"
+          priority={!isComparison && quality >= 80}
+        />
+      </div>
+    </div>
+  )
+
   return (
-    <div className="min-h-screen bg-background">
-      <div className="mb-8 p-8 text-center">
+    <div className="min-h-screen bg-background pb-20">
+      <div className="p-8 text-center">
         <h1 className="mb-4 text-3xl font-bold">
           Hero Image Quality Comparison
         </h1>
@@ -39,6 +123,54 @@ export default function HeroQualityDemo() {
           to 5% in 5% decrements). Check the boxes below to compare selected
           qualities side-by-side.
         </p>
+      </div>
+      <div className="sticky inset-x-auto top-20 z-sticky mx-auto mb-8 flex w-fit flex-col items-center rounded-2xl border bg-background/90 px-3 py-2">
+        {/* Custom Height Toggle */}
+        <div className="mb-4 flex items-center justify-center gap-4">
+          <label
+            htmlFor="custom-height-toggle"
+            className="flex cursor-pointer items-center gap-3"
+          >
+            <span className="block text-sm font-medium">Prod</span>
+            <div className="relative">
+              <input
+                id="custom-height-toggle"
+                type="checkbox"
+                checked={useCustomHeight}
+                onChange={(e) => setUseCustomHeight(e.target.checked)}
+                className="sr-only"
+              />
+              <div
+                className={`h-6 w-11 rounded-full transition-colors ${useCustomHeight ? "bg-primary" : "bg-gray-300"}`}
+              >
+                <div
+                  className={`h-5 w-5 transform rounded-full bg-white shadow-md transition-transform ${useCustomHeight ? "translate-x-5" : "translate-x-0"} ml-0.5 mt-0.5`}
+                ></div>
+              </div>
+            </div>
+            <span className="block text-sm font-medium">Play with height</span>
+          </label>
+        </div>
+
+        {useCustomHeight && (
+          <div className="flex items-center justify-center gap-4 text-center">
+            <span className="text-sm text-body-medium">
+              Height: {customHeight}px
+            </span>
+            {!isMobile && (
+              <span className="text-xs text-body-medium">
+                (Hover top/bottom edges to resize)
+              </span>
+            )}
+          </div>
+        )}
+
+        {!useCustomHeight && (
+          <div className="text-center text-sm text-body-medium">
+            Using responsive breakpoint heights: 240px (mobile) • 380px (tablet)
+            • 480px (desktop)
+          </div>
+        )}
       </div>
 
       {/* Comparison Section */}
@@ -50,23 +182,13 @@ export default function HeroQualityDemo() {
           <div className="space-y-6">
             {selectedQualities.map((quality) => (
               <div key={`comparison-${quality}`} className="w-full">
-                <div className="relative mx-auto w-full max-w-[1536px]">
-                  <div className="absolute start-4 top-4 text-center">
+                <div className="relative">
+                  <div className="absolute start-4 top-4 z-20 text-center">
                     <span className="inline-block rounded bg-primary px-3 py-1 text-sm font-semibold text-primary-high-contrast">
                       Quality: {quality}%
                     </span>
                   </div>
-                  <div className="h-[240px] overflow-hidden md:h-[380px] lg:h-[480px]">
-                    <Image
-                      src={heroImage}
-                      alt={`${alt} (Quality: ${quality}%)`}
-                      width={1536}
-                      height={480}
-                      quality={quality}
-                      sizes={`(max-width: ${breakpointAsNumber["2xl"]}px) 100vw, ${breakpointAsNumber["2xl"]}px`}
-                      className="h-full w-full object-cover"
-                    />
-                  </div>
+                  <ImageContainer quality={quality} isComparison={true} />
                 </div>
               </div>
             ))}
@@ -95,23 +217,36 @@ export default function HeroQualityDemo() {
                 </Heading2>
               </div>
             </div>
-            <div className="mx-auto w-full max-w-[1536px]">
-              <div className="h-[240px] overflow-hidden md:h-[380px] lg:h-[480px]">
-                <Image
-                  src={heroImage}
-                  alt={`${alt} (Quality: ${quality}%)`}
-                  width={1536}
-                  height={480}
-                  quality={quality}
-                  sizes={`(max-width: ${breakpointAsNumber["2xl"]}px) 100vw, ${breakpointAsNumber["2xl"]}px`}
-                  className="h-full w-full object-cover"
-                  priority={quality >= 80} // Only prioritize the highest quality images
-                />
-              </div>
-            </div>
+            <ImageContainer quality={quality} />
           </div>
         ))}
       </div>
+
+      {/* Mobile Height Slider */}
+      {isMobile && useCustomHeight && (
+        <div className="fixed bottom-4 left-4 right-4 z-30 rounded-lg border border-border bg-background p-4 shadow-lg">
+          <div className="flex items-center gap-4">
+            <label
+              htmlFor="height-slider"
+              className="flex-shrink-0 text-sm font-medium"
+            >
+              Height:
+            </label>
+            <input
+              id="height-slider"
+              type="range"
+              min="100"
+              max="600"
+              value={customHeight}
+              onChange={(e) => setCustomHeight(Number(e.target.value))}
+              className="flex-1"
+            />
+            <span className="w-12 flex-shrink-0 text-sm text-body-medium">
+              {customHeight}px
+            </span>
+          </div>
+        </div>
+      )}
 
       <div className="mx-auto mt-12 max-w-4xl px-8">
         <div className="rounded-lg bg-background-highlight p-6">
@@ -132,6 +267,7 @@ export default function HeroQualityDemo() {
               • The optimal quality depends on your performance vs visual
               quality requirements
             </li>
+            <li>• Use the height controls to test different viewport sizes</li>
           </ul>
         </div>
       </div>
