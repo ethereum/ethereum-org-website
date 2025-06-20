@@ -18,4 +18,5 @@ export type ABTestAssignment = {
 }
 
 // Type-safe tuple for at least 2 variants
-export type ABTestVariants = [ReactNode, ReactNode, ...ReactNode[]]
+type Element = ReactNode | JSX.Element | string
+export type ABTestVariants = [Element, Element, ...Element[]]
