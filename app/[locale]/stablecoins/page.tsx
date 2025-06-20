@@ -8,6 +8,7 @@ import { MdHelpOutline } from "react-icons/md"
 
 import { Lang } from "@/lib/types"
 
+import ABTestWrapper from "@/components/ABTestWrapper"
 import CalloutBannerSSR from "@/components/CalloutBannerSSR"
 import DataProductCard from "@/components/DataProductCard"
 import Emoji from "@/components/Emoji"
@@ -590,19 +591,29 @@ async function Page({ params }: { params: Promise<{ locale: Lang }> }) {
             imageWidth={600}
             alt={t("page-stablecoins-stablecoins-dapp-callout-image-alt")}
           >
-            <div className="flex flex-wrap gap-4">
-              <ButtonLink href="/dapps/">
-                {t("page-stablecoins-explore-dapps")}
-              </ButtonLink>
-              <ButtonLink
-                variant="outline"
-                href="/defi/"
-                className="whitespace-normal"
-                isSecondary
-              >
-                {t("page-stablecoins-more-defi-button")}
-              </ButtonLink>
-            </div>
+            <ABTestWrapper
+              testKey="AppTest"
+              variants={[
+                <div key="original" className="flex flex-wrap gap-4">
+                  <ButtonLink href="/dapps/">
+                    {t("page-stablecoins-explore-dapps")}
+                  </ButtonLink>
+                  <ButtonLink
+                    variant="outline"
+                    href="/defi/"
+                    className="whitespace-normal"
+                    isSecondary
+                  >
+                    {t("page-stablecoins-more-defi-button")}
+                  </ButtonLink>
+                </div>,
+                <div key="Variation1" className="flex flex-wrap gap-4">
+                  <ButtonLink href="/dapps/">
+                    {t("page-stablecoins-explore-apps")}
+                  </ButtonLink>
+                </div>,
+              ]}
+            />
           </CalloutBannerSSR>
           <h2>{t("page-stablecoins-save-stablecoins")}</h2>
           <Flex className="mb-8 me-8 w-full flex-col items-start lg:flex-row">
