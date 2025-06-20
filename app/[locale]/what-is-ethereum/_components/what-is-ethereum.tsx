@@ -488,7 +488,7 @@ const WhatIsEthereumPage = ({
                           })}
                         >
                           <span>
-                            <Info className="inline-block align-middle" />
+                            <Info className="mb-0.5 inline-block size-[0.875em] align-middle" />
                           </span>
                         </Tooltip>
                       </NoWrapText>
@@ -511,7 +511,7 @@ const WhatIsEthereumPage = ({
                           })}
                         >
                           <span>
-                            <Info className="inline-block align-middle" />
+                            <Info className="mb-0.5 inline-block size-[0.875em] align-middle" />
                           </span>
                         </Tooltip>
                       </NoWrapText>
@@ -534,7 +534,7 @@ const WhatIsEthereumPage = ({
                           })}
                         >
                           <span>
-                            <Info className="inline-block align-middle" />
+                            <Info className="mb-0.5 inline-block size-[0.875em] align-middle" />
                           </span>
                         </Tooltip>
                       </NoWrapText>
@@ -559,7 +559,7 @@ const WhatIsEthereumPage = ({
                           })}
                         >
                           <span>
-                            <Info className="inline-block align-middle" />
+                            <Info className="mb-0.5 inline-block size-[0.875em] align-middle" />
                           </span>
                         </Tooltip>
                       </NoWrapText>
@@ -585,7 +585,7 @@ const WhatIsEthereumPage = ({
                           })}
                         >
                           <span>
-                            <Info className="inline-block align-middle" />
+                            <Info className="mb-0.5 inline-block size-[0.875em] align-middle" />
                           </span>
                         </Tooltip>
                       </NoWrapText>
@@ -611,7 +611,7 @@ const WhatIsEthereumPage = ({
                           })}
                         >
                           <span>
-                            <Info className="inline-block align-middle" />
+                            <Info className="mb-0.5 inline-block size-[0.875em] align-middle" />
                           </span>
                         </Tooltip>
                       </NoWrapText>
