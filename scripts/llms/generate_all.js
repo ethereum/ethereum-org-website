@@ -9,7 +9,6 @@ const CONFIG = {
   baseUrl: "https://ethereum.org",
   contentDir: "public/content",
   outputDir: "public",
-  tempFile: "all_content_files.txt",
 }
 
 // =============================================================================
@@ -128,10 +127,6 @@ function scanContentFiles() {
   markdownFiles.sort()
 
   log(`Found ${markdownFiles.length} markdown files`, "success")
-
-  // Write to temporary file
-  const outputContent = markdownFiles.join("\n") + "\n"
-  fs.writeFileSync(CONFIG.tempFile, outputContent)
 
   // Show category breakdown
   const categories = {}
@@ -595,7 +590,7 @@ function urlToFilePath(url) {
   }
 
   const relativePath = url.replace(CONFIG.baseUrl + "/", "")
-  const filePath = path.join("ethereum-org-website/public", relativePath)
+  const filePath = path.join("public", relativePath)
 
   return filePath
 }
@@ -792,10 +787,7 @@ function main() {
       log("Static URL validation found issues (but continuing)", "warning")
     }
 
-    // Cleanup temporary file
-    if (fs.existsSync(CONFIG.tempFile)) {
-      fs.unlinkSync(CONFIG.tempFile)
-    }
+    // No cleanup needed since we removed tempFile
 
     // Final summary
     console.log("\n" + "=".repeat(60))

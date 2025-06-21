@@ -379,5 +379,5 @@ Ethereum.org contains these primary sections:
 
 ---
 
-This document was rendered at 2025-06-21T05:33:33.425Z.
+This document was rendered at 2025-06-21T05:44:21.214Z.
 For the latest version of this document, see [https://ethereum.org/llms.txt](https://ethereum.org/llms.txt).
