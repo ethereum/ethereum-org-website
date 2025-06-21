@@ -6155,7 +6155,7 @@ Make certain you back this seed phrase up safely or you will be unable to genera
 
 
 
-Staking withdrawals were implemented in the Shanghai/Capella upgrade in April 2023. Stakers need to provide a withdrawal address (if not provided on initial deposit), and reward payments will begin being distributed automatically on a periodic basis every few days.
+Stakers need to provide a withdrawal address (if not provided on initial deposit), and reward payments will begin being distributed automatically on a periodic basis every few days.
 
 Validators can also fully exit as a validator, which will unlock their remaining ETH balance for withdrawal. Accounts that have provided an execution withdrawal address and completed the exiting process will receive their entire balance to the withdrawal address provided during the next validator sweep.
 
@@ -6373,9 +6373,6 @@ More on staking withdrawals
 
 ## Staking > Withdrawals
 
-Staking withdrawals were enabled with the Shanghai/Capella upgrade which occurred on April 12, 2023.&nbsp;More about Shanghai/Capella
-
-
 **Staking withdrawals** refer to transfers of ETH from a validator account on Ethereum's consensus layer (the Beacon Chain), to the execution layer where it can be transacted with.
 
 **Reward payments of excess balance** over 32 ETH will automatically and regularly be sent to a withdrawal address linked to each validator, once provided by the user. Users can also **exit staking entirely**, unlocking their full validator balance.
@@ -6418,9 +6415,9 @@ The process of a validator exiting from staking takes variable amounts of time, 
 
 Once an account is flagged as "withdrawable", and withdrawal credentials have been provided, there is nothing more a user needs to do aside from wait. Accounts are automatically and continuously swept by block proposers for eligible exited funds, and your account balance will be transferred in full (also known as a "full withdrawal") during the next sweep.
 
-## When are staking withdrawals enabled? 
+## When were staking withdrawals enabled? 
 
-Staking withdrawals are live! Withdrawal functionality was enabled as part of the Shanghai/Capella upgrade which occurred on April 12, 2023.
+Withdrawal functionality was enabled as part of the Shanghai/Capella upgrade which occurred on** April 12, 2023**.
 
 The Shanghai/Capella upgrade enabled previously staked ETH to be reclaimed into regular Ethereum accounts. This closed the loop on staking liquidity, and brought Ethereum one step closer on its journey towards building a sustainable, scalable, secure decentralized ecosystem.
 
@@ -9073,7 +9070,6 @@ Ethereum Foundation - Keep up to date with the latest from the Ethereum Foundati
 @ethereum - Main Ethereum account for the community
 @ethereumfndn - Official account of the Ethereum Foundation
 @ethdotorg - The portal to Ethereum, built for our growing global community
-List of influential Ethereum twitter accounts
 
 
 
@@ -15067,6 +15063,6 @@ ZK-STARK is considered immune to the threat of quantum computing, as it only rel
 
 ---
 
-This llms-full.txt file was generated at 2025-06-04T22:01:28.444Z.
+This llms-full.txt file was generated at 2025-06-21T05:33:33.434Z.
 It contains the complete content from Ethereum.org documentation to provide comprehensive context for AI systems.
 For the latest version, see: https://ethereum.org/llms-full.txt
