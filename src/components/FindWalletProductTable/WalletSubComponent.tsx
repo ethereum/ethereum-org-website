@@ -118,7 +118,7 @@ const WalletSubComponent = ({
                                   </p>
                                 }
                               >
-                                <Info className="ms-1 translate-y-0.5" />
+                                <Info className="ms-1 size-[0.875em] translate-y-0.5" />
                               </Tooltip>
                             </span>
                           </p>

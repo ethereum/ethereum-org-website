@@ -61,7 +61,7 @@ const NetworkSubComponent = ({ network }: NetworkSubComponentProps) => {
                       eventName: "age",
                     }}
                   >
-                    <Info className="translate-y-0.5" />
+                    <Info className="size-[0.875em] translate-y-0.5" />
                   </Tooltip>
                 </p>
                 <p>
@@ -102,7 +102,7 @@ const NetworkSubComponent = ({ network }: NetworkSubComponentProps) => {
                       eventName: "wallet_support",
                     }}
                   >
-                    <Info className="translate-y-0.5" />
+                    <Info className="size-[0.875em] translate-y-0.5" />
                   </Tooltip>
                 </p>
               </div>
@@ -144,7 +144,7 @@ const NetworkSubComponent = ({ network }: NetworkSubComponentProps) => {
                       eventName: "active_addresses",
                     }}
                   >
-                    <Info className="translate-y-0.5" />
+                    <Info className="size-[0.875em] translate-y-0.5" />
                   </Tooltip>
                 </p>
               </div>
@@ -171,7 +171,7 @@ const NetworkSubComponent = ({ network }: NetworkSubComponentProps) => {
                       eventName: "fee_token",
                     }}
                   >
-                    <Info className="translate-y-0.5" />
+                    <Info className="size-[0.875em] translate-y-0.5" />
                   </Tooltip>
                 </p>
               </div>
@@ -200,7 +200,7 @@ const NetworkSubComponent = ({ network }: NetworkSubComponentProps) => {
                   </div>
                 }
               >
-                <Info className="translate-y-0.5" />
+                <Info className="size-[0.875em] translate-y-0.5" />
               </Tooltip>
             </p>
             <div className="w-full">

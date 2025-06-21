@@ -153,7 +153,7 @@ export const useNetworkColumns: ColumnDef<ExtendedRollup>[] = [
                 </div>
               }
             >
-              <Info className="translate-y-0.5" />
+              <Info className="size-[0.875em] translate-y-0.5" />
             </Tooltip>
           </span>
         </p>
@@ -208,7 +208,7 @@ export const useNetworkColumns: ColumnDef<ExtendedRollup>[] = [
                 </div>
               }
             >
-              <Info className="translate-y-0.5" />
+              <Info className="size-[0.875em] translate-y-0.5" />
             </Tooltip>
           </span>
         </p>
@@ -259,7 +259,7 @@ export const useNetworkColumns: ColumnDef<ExtendedRollup>[] = [
                 </div>
               }
             >
-              <Info className="translate-y-0.5" />
+              <Info className="size-[0.875em] translate-y-0.5" />
             </Tooltip>
           </span>
         </p>

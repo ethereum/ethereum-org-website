@@ -122,7 +122,7 @@ const RadialChart = ({
                 </>
               }
             >
-              <Info className="mb-0.5 ms-2 inline align-text-bottom" />
+              <Info className="mb-0.5 ms-2 inline size-[0.875em] align-text-bottom" />
             </Tooltip>
           )}
         </div>

@@ -10,7 +10,7 @@ const IdAnchor = ({ id }: { id?: string }) => {
       aria-label={id.replaceAll("-", " ") + " permalink"}
       href={"#" + id}
     >
-      <Link className="me-1 text-xl" />
+      <Link className="me-1 size-3" />
     </BaseLink>
   )
 }
