@@ -41,44 +41,11 @@ There is also a human cost to having majority clients. It puts excess strain and
 
 ### Current client diversity {#current-client-diversity}
 
-<div className="flex flex-col items-stretch gap-8"> 
-<div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 items-start mt-6 pb-8 md:pb-16">
-  <div className="w-full">
-    <PieChart
-      data={[
-        { name: "Geth", value: 41 },
-        { name: "Nethermind", value: 38 },
-        { name: "Besu", value: 16 },
-        { name: "Erigon", value: 3 },
-        { name: "Reth", value: 2 },
-        { name: "Other", value: 0 },
-      ]}
-      title="Execution Clients"
-    />
-  </div>
-  <div className="w-full">
-    <PieChart
-      data={[
-        { name: "Prysm", value: 36.09 },
-        { name: "Lighthouse", value: 34.06 },
-        { name: "Teku", value: 21.47 },
-        { name: "Nimbus", value: 4.85 },
-        { name: "Grandine", value: 1.97 },
-        { name: "Lodestar", value: 1.57 },
-        { name: "Others", value: 0.0 },
-      ]}
-      title="Consensus Clients"
-    />
-  </div>
-</div>
+<PieChartContainer />
 
-<div className="text-sm italic text-gray-600 mt-4 mb-8">
-  This diagram may be outdated — go to [ethernodes.org](https://ethernodes.org) and [clientdiversity.org](https://clientdiversity.org/) for up-to-date information.
-</div> </div>
+The two pie charts above show snapshots of the current client diversity for the execution and consensus layers (at time of writing in June 2025). Client diversity has improved over the years, and the execution layer has seen a reduction in the domination by [Geth](https://geth.ethereum.org/), with [Nethermind](https://www.nethermind.io/nethermind-client) a close second, [Besu](https://besu.hyperledger.org/) third and [Erigon](https://github.com/ledgerwatch/erigon) fourth, with other clients comprising less than 3 % of the network. The most commonly used client on the consensus layer - [Lighthouse](https://lighthouse.sigmaprime.io/) - is quite close with the second most used.[Prysm](https://prysmaticlabs.com/#projects) and [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) make up ~31% and ~14% respectively, and other clients are rarely used.
 
-The two pie charts above show snapshots of the current client diversity for the execution and consensus layers (at time of writing in April 2025). Client diversity has improved over the years, and the execution layer has seen a reduction in the domination by [Geth](https://geth.ethereum.org/), with [Nethermind](https://www.nethermind.io/nethermind-client) a close second, [Besu](https://besu.hyperledger.org/) third and [Erigon](https://github.com/ledgerwatch/erigon) fourth, with other clients comprising less than 3 % of the network. The most commonly used client on the consensus layer - [Prysm](https://prysmaticlabs.com/#projects) - is quite close with the second most used. [Lighthouse](https://lighthouse.sigmaprime.io/) and [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) make up ~34% and ~21% respectively, and other clients are rarely used.
-
-The execution layer data were obtained from [supermajority.info](https://supermajority.info/) on 18-Apr-2025. Data for consensus clients was obtained from [Michael Sproul](https://github.com/sigp/blockprint). Consensus client data is more difficult to obtain because the consensus layer clients do not always have unambiguous traces that can be used to identify them. The data was generated using a classification algorithm that sometimes confuses some of the minority clients (see [here](https://twitter.com/sproulM_/status/1440512518242197516) for more details). In the diagram above, these ambiguous classifications are treated with an either/or label (e.g. Nimbus/Teku). Nevertheless, it is clear that the majority of the network is running Prysm. Despite only being snapshots, the values in the diagram provide a good general sense of the current state of client diversity.
+The execution layer data were obtained from [supermajority.info](https://supermajority.info/) on 21-Jun-2025. Data for consensus clients was obtained from [Michael Sproul](https://github.com/sigp/blockprint). Consensus client data is more difficult to obtain because the consensus layer clients do not always have unambiguous traces that can be used to identify them. The data was generated using a classification algorithm that sometimes confuses some of the minority clients (see [here](https://twitter.com/sproulM_/status/1440512518242197516) for more details). In the diagram above, these ambiguous classifications are treated with an either/or label (e.g. Nimbus/Teku). Nevertheless, it is clear that the majority of the network is running Prysm. Despite only being snapshots, the values in the diagram provide a good general sense of the current state of client diversity.
 
 Up to date client diversity data for the consensus layer is now available at [clientdiversity.org](https://clientdiversity.org/).
 
