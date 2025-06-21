@@ -22,7 +22,12 @@
     "markdown-checker": "ts-node -O '{ \"module\": \"commonjs\" }' src/scripts/markdownChecker.ts",
     "events-import": "ts-node -O '{ \"module\": \"commonjs\" }' src/scripts/events-import.ts",
     "crowdin-needs-review": "ts-node -O '{ \"module\": \"commonjs\" }' src/scripts/crowdin/reports/generateReviewReport.ts",
-    "prepare": "husky"
+    "prepare": "husky",
+    "llms:generate": "node scripts/llms/generate_all.js",
+    "llms:test": "node scripts/llms/test_llms_validation.js",
+    "llms:test:static": "node scripts/llms/validate_urls_static.js",
+    "llms:validate": "npm run llms:test && npm run llms:test:static",
+    "llms:ci": "npm run llms:generate && npm run llms:validate"
   },
   "dependencies": {
     "@crowdin/crowdin-api-client": "^1.25.0",

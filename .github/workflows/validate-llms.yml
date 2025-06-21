@@ -1,0 +1,203 @@
+name: Validate LLMS Files
+
+on:
+  # Run on pushes to main branches
+  push:
+    branches: [main, master, dev, staging]
+    paths:
+      - 'public/content/**'
+      - 'src/content/**'
+      - '**.md'
+  
+  # Run on PRs that modify content
+  pull_request:
+    branches: [main, master, dev, staging]
+    paths:
+      - 'public/content/**'
+      - 'src/content/**' 
+      - '**.md'
+  
+  # Allow manual triggering
+  workflow_dispatch:
+
+jobs:
+  validate-llms:
+    name: Validate LLMS Files
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: read
+      pull-requests: write # For posting PR comments
+      
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Need full history for content changes detection
+          
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          
+      - name: Install dependencies
+        run: |
+          # Install any required dependencies
+          # For our scripts, we only need Node.js built-ins
+          echo "No additional dependencies needed for LLMS validation"
+          
+      - name: Check if content files changed
+        id: content_changes
+        run: |
+          # Check if any content files were modified
+          if [[ "${{ github.event_name }}" == "push" ]]; then
+            # For push events, compare with previous commit
+            CHANGED_FILES=$(git diff --name-only HEAD~1 HEAD | grep -E "(public/content/|src/content/|\.md$)" || true)
+          else
+            # For PR events, compare with base branch
+            CHANGED_FILES=$(git diff --name-only origin/${{ github.base_ref }} HEAD | grep -E "(public/content/|src/content/|\.md$)" || true)
+          fi
+          
+          if [[ -n "$CHANGED_FILES" ]]; then
+            echo "Content files changed:"
+            echo "$CHANGED_FILES"
+            echo "content_changed=true" >> $GITHUB_OUTPUT
+            echo "changed_files<<EOF" >> $GITHUB_OUTPUT
+            echo "$CHANGED_FILES" >> $GITHUB_OUTPUT
+            echo "EOF" >> $GITHUB_OUTPUT
+          else
+            echo "No content files changed"
+            echo "content_changed=false" >> $GITHUB_OUTPUT
+          fi
+          
+             - name: Generate LLMS files
+         if: steps.content_changes.outputs.content_changed == 'true'
+         run: |
+           echo "🚀 Generating LLMS files..."
+           node scripts/llms/generate_all.js
+          
+             - name: Run LLMS validation tests
+         if: steps.content_changes.outputs.content_changed == 'true'
+         id: validation
+         run: |
+           echo "🧪 Running LLMS validation tests..."
+           
+           # Run the validation test and capture output
+           if node scripts/llms/test_llms_validation.js; then
+             echo "validation_passed=true" >> $GITHUB_OUTPUT
+             echo "✅ All LLMS validation tests passed!"
+           else
+             echo "validation_passed=false" >> $GITHUB_OUTPUT
+             echo "❌ LLMS validation tests failed!"
+             exit 1
+           fi
+          
+             - name: Check file sizes and quality
+         if: steps.content_changes.outputs.content_changed == 'true'
+         run: |
+           # Check if files were generated
+           if [[ -f "public/llms.txt" && -f "public/llms-full.txt" ]]; then
+             echo "📊 LLMS Files Generated Successfully:"
+             
+             LLMS_SIZE=$(du -h public/llms.txt | cut -f1)
+             LLMS_FULL_SIZE=$(du -h public/llms-full.txt | cut -f1)
+             LLMS_LINES=$(wc -l < public/llms.txt)
+             LLMS_URLS=$(grep -c "https://ethereum.org/content" public/llms.txt || echo "0")
+            
+            echo "  📝 llms.txt: $LLMS_SIZE ($LLMS_LINES lines, $LLMS_URLS URLs)"
+            echo "  📚 llms-full.txt: $LLMS_FULL_SIZE"
+            
+            # Validate minimum requirements
+            if [[ $LLMS_URLS -lt 50 ]]; then
+              echo "❌ Error: llms.txt has too few URLs ($LLMS_URLS < 50)"
+              exit 1
+            fi
+            
+            echo "✅ File size and quality checks passed"
+          else
+            echo "❌ Error: LLMS files were not generated"
+            exit 1
+          fi
+          
+             - name: Run static URL validation
+         if: steps.content_changes.outputs.content_changed == 'true'
+         run: |
+           echo "🔍 Running static URL validation..."
+           
+           if node scripts/llms/validate_urls_static.js; then
+             echo "✅ Static URL validation passed!"
+           else
+             echo "❌ Static URL validation failed!"
+             exit 1
+           fi
+          
+      - name: Post PR comment with results
+        if: github.event_name == 'pull_request' && steps.content_changes.outputs.content_changed == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            
+                         // Read file stats
+             const llmsExists = fs.existsSync('public/llms.txt');
+             const llmsFullExists = fs.existsSync('public/llms-full.txt');
+             
+             let comment = '## 🤖 LLMS Files Validation Report\n\n';
+             
+             if (llmsExists && llmsFullExists) {
+               const llmsStats = fs.statSync('public/llms.txt');
+               const llmsFullStats = fs.statSync('public/llms-full.txt');
+              
+              comment += '✅ **All LLMS validation tests passed!**\n\n';
+              comment += '### Generated Files:\n';
+              comment += `- 📝 \`llms.txt\`: ${(llmsStats.size / 1024).toFixed(2)} KB\n`;
+              comment += `- 📚 \`llms-full.txt\`: ${(llmsFullStats.size / 1024 / 1024).toFixed(2)} MB\n\n`;
+              comment += '### Changed Content Files:\n';
+              comment += '```\n${{ steps.content_changes.outputs.changed_files }}\n```\n\n';
+              comment += '### Next Steps:\n';
+              comment += '- ✅ Files are validated and ready for deployment\n';
+              comment += '- 🚀 After merging, files will be automatically deployed\n';
+              comment += '- 📊 Run live server tests if needed: `npm run test:llms:live`\n';
+            } else {
+              comment += '❌ **LLMS validation failed!**\n\n';
+              comment += 'Please check the workflow logs for details.\n';
+            }
+            
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: comment
+            });
+            
+      - name: Upload LLMS files as artifacts
+        if: steps.content_changes.outputs.content_changed == 'true'
+        uses: actions/upload-artifact@v4
+                 with:
+           name: llms-files-${{ github.sha }}
+           path: |
+             public/llms.txt
+             public/llms-full.txt
+           retention-days: 30
+          
+      - name: Summary
+        if: steps.content_changes.outputs.content_changed == 'true'
+        run: |
+          echo "🎉 LLMS Validation Workflow Completed Successfully!"
+          echo ""
+          echo "✅ Content changes detected and processed"
+          echo "✅ LLMS files generated and validated" 
+          echo "✅ Static URL validation passed"
+          echo "✅ Files ready for deployment"
+          echo ""
+          echo "📁 Generated files are available as workflow artifacts"
+          echo "🔗 Files will be accessible at:"
+          echo "   - https://ethereum.org/llms.txt"
+          echo "   - https://ethereum.org/llms-full.txt"
+          
+      - name: No content changes
+        if: steps.content_changes.outputs.content_changed == 'false'
+        run: |
+          echo "ℹ️  No content files were modified in this change."
+          echo "LLMS validation skipped - no content updates needed." 
