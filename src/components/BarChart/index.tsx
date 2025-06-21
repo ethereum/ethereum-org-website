@@ -1,6 +1,6 @@
 "use client"
 
-import { FaArrowTrendUp } from "react-icons/fa6"
+import { TrendingUp } from "lucide-react"
 import {
   Bar,
   BarChart as RechartsBarChart,
@@ -103,7 +103,7 @@ export function BarChart({
             <div className="grid gap-2">
               {footerText && (
                 <div className="flex items-center gap-2 font-medium leading-none">
-                  {footerText} <FaArrowTrendUp className="h-4 w-4" />
+                  {footerText} <TrendingUp className="h-4 w-4 text-base" />
                 </div>
               )}
               {footerSubText && (

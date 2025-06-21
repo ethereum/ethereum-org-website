@@ -9,12 +9,12 @@ import React, {
   useState,
 } from "react"
 import { useLocale } from "next-intl"
-import { FaGithub } from "react-icons/fa"
 
 import { ITutorial, Lang } from "@/lib/types"
 
 import Emoji from "@/components/Emoji"
 import FeedbackCard from "@/components/FeedbackCard"
+import Github from "@/components/icons/github.svg"
 import MainArticle from "@/components/MainArticle"
 import Translation from "@/components/Translation"
 import { getSkillTranslationId } from "@/components/TutorialMetadata"
@@ -190,7 +190,7 @@ const TutorialPage = ({
               variant="outline"
               href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=suggest_tutorial.yaml&title="
             >
-              <FaGithub />
+              <Github />
               <Translation id="page-developers-tutorials:page-tutorial-raise-issue-btn" />
             </ButtonLink>
           </Flex>

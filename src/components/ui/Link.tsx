@@ -1,7 +1,8 @@
 "use client"
+
 import { AnchorHTMLAttributes, ComponentProps, forwardRef } from "react"
+import { ExternalLink } from "lucide-react"
 import NextLink from "next/link"
-import { RxExternalLink } from "react-icons/rx"
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden"
 
 import Email from "@/components/icons/email.svg"
@@ -111,7 +112,7 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
           {isMailto ? "opens email client" : "opens in a new tab"}
         </VisuallyHidden>
         {!hideArrow && !isMailto && (
-          <RxExternalLink
+          <ExternalLink
             className={cn(
               "-me-1 inline h-6 w-6 shrink-0 p-1 align-middle",
               twFlipForRtl

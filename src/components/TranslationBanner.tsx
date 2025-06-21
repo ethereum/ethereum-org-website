@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
+import { X } from "lucide-react"
 import { useLocale } from "next-intl"
-import { MdClose } from "react-icons/md"
 
 import type { Lang } from "@/lib/types"
 
@@ -89,7 +89,7 @@ const TranslationBanner = ({
           className="absolute end-0 top-0 m-2 hover:text-primary"
           onClick={() => setIsOpen(false)}
         >
-          <MdClose className="h-4 w-4" />
+          <X className="h-4 w-4" />
           <span className="sr-only">Close</span>
         </Button>
       </div>

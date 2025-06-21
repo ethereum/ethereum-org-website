@@ -166,15 +166,13 @@ import Emoji from "./Emoji"
 ;<Emoji text=":star:" fontSize="xl" /> // the base fontSize is `md`
 ```
 
-- **Icons**: We use [React Icons](https://react-icons.github.io/react-icons/)
-  with [Chakra UI Icon component](https://www.chakra-ui.com/docs/components/concepts/overview)
+- **Icons**: We use [Lucide](https://lucide.dev/icons/) for icons
 
 ```tsx
-import { Icon } from "@chakra-ui/react"
-import { BsQuestionSquareFill } from "react-icons/bs"
+import { CircleHelp } from "lucide-react"
 
-// wrap your imported icon with the `Icon` component from Chakra UI
-;<Icon as={BsQuestionSquareFill} />
+// Use tailwind classes to style, using fontSize for sizing
+;<CircleHelp className="text-2xl" /> // 24px size
 ```
 
 ## Using custom `Image` component

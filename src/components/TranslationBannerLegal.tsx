@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { MdClose } from "react-icons/md"
+import { X } from "lucide-react"
 
 import { Button } from "@/components/ui/buttons/Button"
 
@@ -81,7 +81,7 @@ const TranslationBannerLegal = ({
           )}
           onClick={() => setIsOpen(false)}
         >
-          <MdClose className="h-4 w-4" />
+          <X className="h-4 w-4" />
         </Button>
       </div>
     </aside>

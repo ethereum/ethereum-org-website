@@ -1,8 +1,8 @@
 import { type Dispatch, type SetStateAction, useMemo } from "react"
-import { FaXTwitter } from "react-icons/fa6"
 
 import type { AnswerChoice, Question, QuizKey, QuizStatus } from "@/lib/types"
 
+import Twitter from "@/components/icons/twitter.svg"
 import Translation from "@/components/Translation"
 import { Button } from "@/components/ui/buttons/Button"
 import { Center } from "@/components/ui/flex"
@@ -144,7 +144,7 @@ export const QuizButtonGroup = ({
           <Center className="w-full gap-4 max-md:flex-col md:gap-2">
             <Button variant="outline" onClick={handleShare}>
               <>
-                <FaXTwitter />
+                <Twitter />
                 <Translation id="learn-quizzes:share-results" />
               </>
             </Button>

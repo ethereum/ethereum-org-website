@@ -1,6 +1,6 @@
 "use client"
 
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa"
+import { ChevronLeft, ChevronRight } from "lucide-react"
 
 import { TranslationKey } from "@/lib/types"
 import type { DeveloperDocsLink } from "@/lib/interfaces"
@@ -68,9 +68,9 @@ const CardLink = ({ docData, isPrev, contentNotTranslated }: CardLinkProps) => {
         )}
       >
         {isPrev ? (
-          <FaChevronLeft className="text-xl group-hover:fill-primary-hover" />
+          <ChevronLeft className="text-xl group-hover:fill-primary-hover" />
         ) : (
-          <FaChevronRight className="text-xl group-hover:fill-primary-hover" />
+          <ChevronRight className="text-xl group-hover:fill-primary-hover" />
         )}
       </div>
       <TextDiv className={cn(isPrev ? "ps-0" : "pe-0 text-end")}>

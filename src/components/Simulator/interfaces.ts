@@ -1,15 +1,14 @@
+import { LucideIcon } from "lucide-react"
 import type { ReactElement } from "react"
 
 import { PhoneScreenProps } from "@/lib/types"
-
-import type { IconBaseType } from "../icons/icon-base"
 
 import type { PathId } from "./types"
 
 export interface SimulatorPathSummary {
   primaryText: string
   secondaryText?: string
-  Icon: IconBaseType
+  Icon: LucideIcon | React.FC<React.SVGProps<SVGElement>>
 }
 
 export interface SimulatorExplanation {
@@ -33,7 +32,7 @@ export interface LabelHref {
 
 export interface SimulatorDetails {
   title: string
-  Icon: IconBaseType
+  Icon: LucideIcon | React.FC<React.SVGProps<SVGElement>>
   Screen: (props: PhoneScreenProps) => JSX.Element
   explanations: Array<SimulatorExplanation>
   ctaLabels: Array<string>

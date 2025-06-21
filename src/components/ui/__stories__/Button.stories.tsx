@@ -1,4 +1,4 @@
-import { MdChevronRight, MdExpandMore } from "react-icons/md"
+import { ChevronDown, ChevronRight } from "lucide-react"
 import type { Meta, StoryObj } from "@storybook/react"
 
 import { Button, type ButtonVariantProps } from "../buttons/Button"
@@ -45,30 +45,30 @@ export const IconVariants: Story = {
       </VStack>
       <VStack>
         <Button {...args}>
-          <MdExpandMore />
+          <ChevronDown />
           {args.children}
         </Button>
         <Button size="sm" {...args}>
-          <MdExpandMore />
+          <ChevronDown />
           {args.children}
         </Button>
       </VStack>
       <VStack>
         <Button {...args}>
           {args.children}
-          <MdChevronRight />
+          <ChevronRight />
         </Button>
         <Button size="sm" {...args}>
           {args.children}
-          <MdChevronRight />
+          <ChevronRight />
         </Button>
       </VStack>
       <VStack>
         <Button aria-label="next" {...args}>
-          <MdChevronRight />
+          <ChevronRight />
         </Button>
         <Button aria-label="next" size="sm" {...args}>
-          <MdChevronRight />
+          <ChevronRight />
         </Button>
       </VStack>
     </HStack>
@@ -92,11 +92,11 @@ export const MultiLineText: Story = {
       <VStack className="max-w-[209px]">
         <Button {...args}>
           {args.children}
-          <MdChevronRight />
+          <ChevronRight />
         </Button>
         <Button size="sm" {...args}>
           {args.children}
-          <MdChevronRight />
+          <ChevronRight />
         </Button>
       </VStack>
     </HStack>

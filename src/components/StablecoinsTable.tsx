@@ -1,7 +1,7 @@
 "use client"
 
 import { Suspense, useState } from "react"
-import { MdOutlineFilterList } from "react-icons/md"
+import { Filter } from "lucide-react"
 
 import type { StablecoinType } from "@/lib/types"
 
@@ -188,7 +188,7 @@ const StablecoinsTable = ({ content, hasError }: StablecoinsTableProps) => {
             ({activeTypeCount})
           </span>
         )}
-        <MdOutlineFilterList size={20} />
+        <Filter className="text-xl" />
       </DropdownMenuTrigger>
       <DropdownMenuContent align="start">
         {typeFilters.map((filter) => (
@@ -240,7 +240,7 @@ const StablecoinsTable = ({ content, hasError }: StablecoinsTableProps) => {
         {activePegCount !== totalPegCount && (
           <span className="text-xs text-body-medium">({activePegCount})</span>
         )}
-        <MdOutlineFilterList size={20} />
+        <Filter className="text-xl" />
       </DropdownMenuTrigger>
       <DropdownMenuContent align="start">
         {pegFilters.map((filter) => (

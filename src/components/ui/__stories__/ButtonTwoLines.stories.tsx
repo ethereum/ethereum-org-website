@@ -1,4 +1,4 @@
-import { BiCircle } from "react-icons/bi"
+import { Circle } from "lucide-react"
 import { Meta, StoryObj } from "@storybook/react"
 
 import { ButtonTwoLines as ButtonTwoLinesComponent } from "../buttons/ButtonTwoLines"
@@ -15,7 +15,7 @@ type Story = StoryObj<typeof meta>
 
 export const ButtonTwoLines: Story = {
   args: {
-    icon: BiCircle,
+    icon: Circle,
     mainText: "Main Text",
     helperText: "Helper Text",
     className: "w-[300px]",

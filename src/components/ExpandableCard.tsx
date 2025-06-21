@@ -7,7 +7,6 @@ import { Flex, HStack, VStack } from "@/components/ui/flex"
 import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
-import type { IconBaseType } from "./icons/icon-base"
 import {
   Accordion,
   AccordionContent,
@@ -21,7 +20,7 @@ export type ExpandableCardProps = {
   children?: ReactNode
   contentPreview?: ReactNode
   title: ReactNode
-  svg?: IconBaseType
+  svg?: React.FC<React.SVGProps<SVGElement>>
   eventAction?: string
   eventCategory?: string
   eventName?: string

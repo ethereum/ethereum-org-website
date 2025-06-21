@@ -1,5 +1,5 @@
 import { createContext, useContext } from "react"
-import { FaChevronDown } from "react-icons/fa"
+import { ChevronDown } from "lucide-react"
 import type {
   ContainerProps,
   ControlProps,
@@ -127,7 +127,7 @@ const DropdownIndicator = <
       className={indicatorIcon()}
       id="react-select-dropdown-indicator"
     >
-      <FaChevronDown />
+      <ChevronDown />
     </div>
   )
 }
