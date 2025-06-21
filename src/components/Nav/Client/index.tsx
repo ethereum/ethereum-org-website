@@ -23,18 +23,14 @@ const Menu = dynamic(() => import("../Menu"), {
   loading: () => (
     <div className="me-8 flex w-full items-center gap-10 px-6 max-md:hidden">
       {Array.from({ length: 5 }).map((_, i) => (
-        <Skeleton variant="slow-pulse" key={i} className="h-6 w-12 py-2" />
+        <Skeleton key={i} className="h-6 w-12 py-2" />
       ))}
     </div>
   ),
 })
 
 const MobileMenuLoading = () => (
-  <Skeleton
-    variant="slow-pulse"
-    data-label="mobile-menu"
-    className="ms-2 size-6"
-  />
+  <Skeleton data-label="mobile-menu" className="ms-2 size-6" />
 )
 
 const MobileNavMenu = dynamic(() => import("../Mobile"), {
@@ -48,22 +44,13 @@ const SearchProvider = dynamic(() => import("../../Search"), {
     <>
       <div className="flex items-center gap-6 px-2 max-md:hidden xl:px-3">
         <Skeleton
-          variant="slow-pulse"
           data-label="search-xl"
           className="hidden h-6 w-[169px] xl:flex"
         />
-        <Skeleton
-          variant="slow-pulse"
-          data-label="search"
-          className="size-6 xl:hidden"
-        />
+        <Skeleton data-label="search" className="size-6 xl:hidden" />
       </div>
       <div className="flex items-center md:hidden">
-        <Skeleton
-          variant="slow-pulse"
-          data-label="search"
-          className="mx-2 size-6"
-        />
+        <Skeleton data-label="search" className="mx-2 size-6" />
         <MobileMenuLoading />
       </div>
     </>
@@ -74,10 +61,7 @@ const LanguagePicker = dynamic(() => import("../../LanguagePicker"), {
   ssr: false,
   loading: () => (
     // LG skeleton width approximates English "[icon] Languages EN" text width
-    <Skeleton
-      variant="slow-pulse"
-      className="h-6 max-md:hidden md:mx-2 md:w-[54px] lg:mx-3 lg:w-[8.875rem]"
-    />
+    <Skeleton className="h-6 max-md:hidden md:mx-2 md:w-[54px] lg:mx-3 lg:w-[8.875rem]" />
   ),
 })
 
@@ -97,7 +81,7 @@ const ClientSideNav = () => {
     <>
       {desktopScreen && (
         <Menu
-          className="animate-fade-in max-md:hidden"
+          className="animate-fade-in- animate-fade-in- max-md:hidden"
           sections={linkSections}
         />
       )}

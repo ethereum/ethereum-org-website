@@ -1,5 +1,3 @@
-import { cva, type VariantProps } from "class-variance-authority"
-
 import { cn } from "@/lib/utils/cn"
 
 import { Card, CardBanner, CardContent } from "../ui/card"
@@ -24,27 +22,17 @@ const widths = [
   "w-1/5",
 ]
 
-const skeletonVariants = cva(
-  "h-4 rounded bg-disabled opacity-5 dark:opacity-60",
-  {
-    variants: {
-      variant: {
-        pulse: "animate-pulse-light",
-        "slow-pulse": "animate-slow-pulse dark:opacity-0 opacity-0",
-      },
-    },
-    defaultVariants: {
-      variant: "pulse",
-    },
-  }
-)
+type SkeletonProps = React.HTMLAttributes<HTMLDivElement>
 
-type SkeletonProps = React.HTMLAttributes<HTMLDivElement> &
-  VariantProps<typeof skeletonVariants>
-
-const Skeleton = ({ className, variant, ...props }: SkeletonProps) => {
+const Skeleton = ({ className, ...props }: SkeletonProps) => {
   return (
-    <div className={cn(skeletonVariants({ variant }), className)} {...props} />
+    <div
+      className={cn(
+        "h-4 animate-pulse-light rounded bg-disabled opacity-5 dark:opacity-60",
+        className
+      )}
+      {...props}
+    />
   )
 }
 
