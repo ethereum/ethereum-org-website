@@ -85,7 +85,7 @@ const Filters = ({
           className="min-h-0 gap-1 p-0"
           onClick={resetFilters}
         >
-          <RotateCcw className="text-base" />
+          <RotateCcw className="size-4 text-base" />
           {t("table-reset-filters")}
         </Button>
       </div>
