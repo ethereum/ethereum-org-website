@@ -102,7 +102,9 @@ export const Success = ({
                   transition={{ type: "spring", delay: 0.25 }}
                   data-testid="success-icon"
                 >
-                  <Check className={cn(ICON_SIZE, "-rotate-[10deg]")} />
+                  <Check
+                    className={cn(ICON_SIZE, "size-[1em] -rotate-[10deg]")}
+                  />
                 </motion.div>
               )}
               <p className="px-4 text-center md:px-8">

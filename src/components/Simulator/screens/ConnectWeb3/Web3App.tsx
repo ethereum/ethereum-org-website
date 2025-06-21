@@ -43,7 +43,7 @@ export const Web3App = ({
               </>
             )}
           </div>
-          <Menu className="[&>path]:stroke-body" />
+          <Menu className="size-[1em] [&>path]:stroke-body" />
         </HStack>
       </NotificationPopover>
       {children}

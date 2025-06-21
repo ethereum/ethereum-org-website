@@ -110,7 +110,7 @@ export const ConnectWeb3 = ({ nav, ctaLabel }: PhoneScreenProps) => {
           <Web3App
             className="bg-background"
             appName="NFT Marketplace"
-            displayUrl="app.example.com"
+            displayUrl={EXAMPLE_APP_URL}
           >
             <div className="px-6 py-2 text-lg md:py-6 [&_button]:no-underline">
               <p className="mb-4 font-bold">Your collection (1)</p>

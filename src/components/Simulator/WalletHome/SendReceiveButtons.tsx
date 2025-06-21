@@ -1,9 +1,7 @@
-import React from "react"
-import { SendHorizontal } from "lucide-react"
+import { QrCode, SendHorizontal } from "lucide-react"
 
 import { Flex } from "@/components/ui/flex"
 
-import { QrCodeIcon } from "../icons"
 import type { SimulatorNav } from "../interfaces"
 
 import { SendReceiveButton } from "./SendReceiveButton"
@@ -40,7 +38,7 @@ export const SendReceiveButtons = ({
         onClick={nav?.progressStepper}
         isDisabled={disableReceive}
         isHighlighted={highlightReceive}
-        icon={QrCodeIcon}
+        icon={QrCode}
         isAnimated
       >
         Receive

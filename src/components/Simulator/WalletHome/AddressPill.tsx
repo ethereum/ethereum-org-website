@@ -17,7 +17,7 @@ export const AddressPill = ({ ...btnProps }: AddressPillProps) => (
       {...btnProps}
     >
       <p>{FAKE_DEMO_ADDRESS}</p>
-      <Copy className="w-4 text-lg leading-none" />
+      <Copy className="size-4 text-lg leading-none" />
     </Flex>
   </NotificationPopover>
 )

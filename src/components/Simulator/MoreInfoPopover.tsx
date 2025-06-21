@@ -30,7 +30,7 @@ export const MoreInfoPopover = ({ isFirstStep, children }: MoreInfoPopover) => {
           data-testid="more-info-popover-trigger"
         >
           More info
-          <Info className="text-2xl" />
+          <Info className="size-5" />
           {isFirstStep && !clicked && <PulseAnimation type="narrow-button" />}
         </MotionButton>
       </PopoverTrigger>

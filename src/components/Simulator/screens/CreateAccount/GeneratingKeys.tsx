@@ -54,7 +54,8 @@ export const GeneratingKeys = ({
   return (
     <div className="grid h-full place-items-center bg-background-highlight">
       <Flex className="flex-col items-center gap-4">
-        {loading ? (
+        {/* eslint-disable-next-line no-constant-condition */}
+        {false && loading ? (
           <motion.div
             key="spinner"
             initial={{ opacity: 0 }}
@@ -71,10 +72,9 @@ export const GeneratingKeys = ({
             animate={{ scale: 1 }}
             transition={{ type: "spring", delay: 0.25 }}
           >
-            <Check className={cn(SPINNER_SIZE, "-rotate-[10deg]")} />
+            <Check className={cn(SPINNER_SIZE, "size-[1em] -rotate-[10deg]")} />
           </motion.div>
         )}
-
         <p className="px-4 text-center md:px-8">
           {loading
             ? "Generating example recovery phrase"

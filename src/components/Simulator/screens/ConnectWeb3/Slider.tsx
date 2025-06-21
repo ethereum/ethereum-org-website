@@ -39,7 +39,7 @@ export const Slider = ({ isConnected, displayUrl, children }: SliderProps) => {
                 animate={{ scale: 1 }}
                 transition={{ type: "spring", delay: 0.25 }}
               >
-                <Check className="-rotate-[10deg] text-[4.5rem]" />
+                <Check className="size-[1em] -rotate-[10deg] text-[4.5rem]" />
               </motion.div>
               <motion.div
                 key="text"
