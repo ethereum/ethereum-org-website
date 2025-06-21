@@ -43,7 +43,7 @@ const RoadmapPage = () => {
   const changesComingItems = [
     {
       title: "Cheaper transactions",
-      icon: <CheaperTransactionsIcon />,
+      icon: <CheaperTransactionsIcon className="h-auto w-12" />,
       description:
         "Rollups are too expensive and rely on centralized components, causing users to place too much trust in their operators. The roadmap includes fixes for both of these problems.",
       button: {
@@ -53,7 +53,7 @@ const RoadmapPage = () => {
     },
     {
       title: "Extra security",
-      icon: <ExtraSecurityIcon />,
+      icon: <ExtraSecurityIcon className="h-auto w-12" />,
       description:
         "Ethereum is already very secure but it can be made even stronger, ready to withstand all kinds of attack far into the future.",
       button: {
@@ -63,7 +63,7 @@ const RoadmapPage = () => {
     },
     {
       title: "Better user experience",
-      icon: <BetterUserExperienceIcon />,
+      icon: <BetterUserExperienceIcon className="h-auto w-12" />,
       description:
         "More support for smart contract wallets and light-weight nodes will make using Ethereum simpler and safer.",
       button: {
@@ -73,7 +73,7 @@ const RoadmapPage = () => {
     },
     {
       title: "Future-proofing",
-      icon: <FutureProofingIcon />,
+      icon: <FutureProofingIcon className="h-auto w-12" />,
       description:
         "Ethereum researchers and developers are solving tomorrow's problems today, readying the network for future generations.",
       button: {
@@ -85,49 +85,49 @@ const RoadmapPage = () => {
 
   const technicalUpgradesItems = [
     {
-      icon: <DankshardingIcon />,
+      icon: <DankshardingIcon className="size-7" />,
       title: "Danksharding",
       description:
         "Danksharding makes L2 rollups much cheaper for users by adding “blobs” of data to Ethereum blocks.",
       href: "/roadmap/danksharding",
     },
     {
-      icon: <SingleSlotFinalityIcon />,
+      icon: <SingleSlotFinalityIcon className="size-7" />,
       title: "Single slot finality",
       description:
         "Instead of waiting for fifteen minutes, blocks could get proposed and finalized in the same slot. This is more convenient for apps and difficult to attack.",
       href: "/roadmap/single-slot-finality",
     },
     {
-      icon: <ProposerBuilderSeparationIcon />,
+      icon: <ProposerBuilderSeparationIcon className="size-7" />,
       title: "Proposer-builder separation",
       description:
         "Splitting the block building and block proposal tasks across separate validators creates a fairer, more censorship resistant and efficient way for Ethereum to come to consensus.",
       href: "/roadmap/pbs",
     },
     {
-      icon: <SecretLeaderElectionIcon />,
+      icon: <SecretLeaderElectionIcon className="size-7" />,
       title: "Secret leader election",
       description:
         "Clever cryptography can be used to ensure that the identity of the current block proposer is not made public, protecting them from certain types of attack.",
       href: "/roadmap/secret-leader-election",
     },
     {
-      icon: <AccountAbstractionIcon />,
+      icon: <AccountAbstractionIcon className="size-7" />,
       title: "Account abstraction",
       description:
         "Account abstraction is a class of upgrades that support smart contract wallets natively on Ethereum, rather than having to use complex middleware.",
       href: "/roadmap/account-abstraction",
     },
     {
-      icon: <VerkleTreesIcon />,
+      icon: <VerkleTreesIcon className="size-7" />,
       title: "Verkle trees",
       description:
         "Verkle trees are a data structure that can be used to enable stateless clients on Ethereum. These clients will require a small amount of storage space but will still be able to verify new blocks.",
       href: "/roadmap/verkle-trees",
     },
     {
-      icon: <StatelessnessIcon />,
+      icon: <StatelessnessIcon className="size-7" />,
       title: "Statelessness",
       description:
         "Stateless clients will be able to verify new blocks without having to store large amounts of data. This will provide all the benefits of running a node with only a tiny fraction of today’s costs.",
