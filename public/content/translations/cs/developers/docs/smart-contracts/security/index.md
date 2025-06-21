@@ -515,7 +515,7 @@ Pokud plánujete dotazovat se blockchainového orákula na ceny aktiv, zvažte p
 
 - **[Cyfrin](https://cyfrin.io)** – _bezpečnostní Web3 společnost, inkubátor krypto bezpečnosti prostřednictvím produktů a služeb auditu smart kontraktů._
 
-- **[ImmuneBytes](https://www.immunebytes.com//smart-contract-audit/)** – _Web3 bezpečnostní firma nabízející bezpečnostní audity pro blockchainové systémy prostřednictvím týmu zkušených auditorů a nejlepších nástrojů ve své třídě._
+- **[ImmuneBytes](https://immunebytes.com/smart-contract-audit/)** – _Web3 bezpečnostní firma nabízející bezpečnostní audity pro blockchainové systémy prostřednictvím týmu zkušených auditorů a nejlepších nástrojů ve své třídě._
 
 - **[Oxorio](https://oxor.io/)** – _audity smart kontraktů a bezpečnostní služby blockchainu s odbornými znalostmi v oblasti EVM, Solidity, ZK, technologií napříč blockchainy pro krypto firmy a projekty DeFi._
 
