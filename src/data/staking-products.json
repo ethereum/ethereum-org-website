@@ -168,7 +168,7 @@
       "platforms": ["Linux"],
       "ui": ["CLI"],
       "socials": {
-        "github": "https://github.com/eth-educators/eth-docker"
+        "github": "https://github.com/ethstaker/eth-docker"
       },
       "matomo": {
         "eventCategory": "StakingProductCard",
