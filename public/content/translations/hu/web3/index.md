@@ -6,6 +6,10 @@ lang: hu
 
 # Bevezetés a Web3 világába {#introduction}
 
+<div className="mt-4">
+<ListenToPlayer slug="/web3/" />
+</div>
+
 A centralizáció segített abban, hogy emberek milliárdjai használják az internetet, és megalapozta annak stabil, robosztus infrastruktúráját. Eközben néhány centralizált entitás tartja a kezében az internet nagy részét, és egyoldalúan eldönti, hogy mit szabad és mit nem.
 
 A Web3 a válasz erre a dilemmára. Ahelyett, hogy a web nagy technológiai cégek monopóliuma lenne, a web3 lényege a decentralizáció, így a felhasználók építik, működtetik és birtokolják. A Web3 az egyének kezébe helyezi a hatalmat a cégek helyett. Mielőtt mélyebben elmerülünk a Web3 világában, nézzük meg, hogyan jutottunk el idáig.

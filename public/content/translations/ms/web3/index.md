@@ -6,6 +6,10 @@ lang: ms
 
 # Pengenalan kepada Web3 {#introduction}
 
+<div className="mt-4">
+<ListenToPlayer slug="/web3/" />
+</div>
+
 Pemusatan telah membantu membawa berbilion orang ke Web Seluruh Dunia dan mencipta infrastruktur yang stabil dan teguh di mana ia hidup. Pada masa yang sama, segelintir entiti berpusat mempunyai kubu kuat di kawasan besar Web Seluruh Dunia, secara unilateral memutuskan perkara yang patut dan tidak patut dibenarkan.
 
 Web3 ialah jawapan kepada dilema ini. Daripada Web yang dimonopoli oleh syarikat teknologi besar, Web3 merangkumi pengagihan dan sedang dibina, dikendalikan dan dimiliki oleh penggunanya. Web3 meletakkan kuasa di tangan individu dan bukannya syarikat. Sebelum kita bercakap tentang Web3, mari kita terokai bagaimana kita sampai di sini.
@@ -78,7 +82,7 @@ Di Web3, data anda hidup dalam blok rantai. Apabila anda memutuskan untuk mening
 
 Web 2.0 memerlukan pencipta kandungan untuk mempercayai platform untuk tidak mengubah peraturan, tetapi rintangan penapisan ialah ciri asli platform Web3.
 
-#### Decentralized autonomous organizations (DAOs) {#daos}
+#### Organisasi bebas terdesentralisasi (DAO) {#daos}
 
 Selain memiliki data anda dalam Web3, anda boleh memiliki platform sebagai kolektif, menggunakan token yang bertindak seperti saham dalam syarikat. DAO membolehkan anda menyelaraskan pemilikan teragih ke atas platform dan membuat keputusan tentang masa depannya.
 
@@ -89,7 +93,7 @@ Walau bagaimanapun, orang mentakrifkan banyak komuniti Web3 sebagai DAO. Komunit
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Ketahui lebih lanjut mengenai DAO</div>
   <ButtonLink href="/dao/">
-    Lebih kepada DAOs
+    Lagi tentang DAO
   </ButtonLink>
 </InfoBanner>
 
@@ -145,7 +149,7 @@ Kami hanya pada permulaan mencipta Web yang lebih baik dengan Web3, tetapi sambi
 
 ## Bacaan lanjut {#further-reading}
 
-Web3 tidak ditakrifkan secara tegar. Pelbagai peserta komuniti mempunyai perspektif yang berbeza mengenainya. Berikut adalah beberapa daripada mereka:
+Web3 tidak ditakrifkan secara tegar. Pelbagai peserta komuniti mempunyai perspektif yang berbeza mengenainya. Berikut adalah antaranya:
 
 - [Apakah Web3? Internet Teragih Masa Depan Dijelaskan](https://www.freecodecamp.org/news/what-is-web3/) – _Nader Dabit_
 - [Memahami Web 3](https://medium.com/l4-media/making-sense-of-web-3-c1a9e74dcae) – _ Josh Stark_

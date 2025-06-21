@@ -220,6 +220,7 @@ const config = {
         "tooltip-shadow": "var(--tooltip-shadow)",
         "hub-hero-content": "var(--hub-hero-content)",
         "search-background": "var(--search-background)",
+        "gradient-step-1": "var(--gradient-step-1)",
       },
 
       backgroundImage: {
@@ -229,8 +230,13 @@ const config = {
         "feedback-gradient": "var(--feedback-gradient)",
         "banner-grid-gradient": "var(--banner-grid-gradient)",
         "radial-a": "var(--radial-a)",
+        "radial-b": "var(--radial-b)",
         "linear-bug-bounty-title": "var(--linear-bug-bounty-title)",
         "gradient-staking": "var(--gradient-staking)",
+        "card-gradient": "var(--card-gradient)",
+        "card-gradient-secondary": "var(--card-gradient-secondary)",
+        "card-gradient-secondary-hover": "var(--card-gradient-secondary-hover)",
+        "ten-year-gradient": "var(--ten-year-gradient)",
       },
       boxShadow: {
         "table-box": "var(--table-box-shadow)",
@@ -299,6 +305,7 @@ const config = {
         "accordion-up": "accordion-up 0.2s ease-out",
         "scroll-left": "scroll-left 30s linear infinite",
         "scroll-right": "scroll-right 30s linear infinite",
+        "scroll-left-240": "scroll-left 240s linear infinite",
         "spin-30": "spin 60s linear infinite",
         "counter-spin-30": "spin 60s linear infinite reverse",
         "spin-21": "spin 42s linear infinite",

@@ -12,13 +12,19 @@ jobs:
       - name: Check out code
         uses: actions/checkout@master
 
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 20
+          cache: 'pnpm'
 
       - name: Install dependencies
-        run: yarn install
+        run: pnpm install
 
       - name: Set up git
         run: |
@@ -37,7 +43,7 @@ jobs:
           git checkout -b "automated-update-${{ env.TIMESTAMP }}" origin/dev
 
       - name: Run script
-        run: yarn events-import
+        run: pnpm events-import
         env:
           GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
 

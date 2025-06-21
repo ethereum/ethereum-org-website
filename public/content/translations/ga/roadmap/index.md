@@ -109,7 +109,7 @@ Is ionann  sciartha agus an blocshlabhra Ethereum a roinnt ionas nach mbeidh fo-
 
 ## Ag lorg uasghráduithe teicniúla ar leith? {#looking-for-specific-technical-upgrades}
 
-- [Pectra](/roadmap/pectra) - Prague/Electra hardfork that brings new approach to account abstraction, improves scalability and more.
+- [Pectra](/roadmap/pectra) - forc crua Prág/Electra a thugann cur chuige nua maidir le hastarraingt cuntas, a fheabhsaíonn inscálaithe agus tuilleadh.
 - [Danksharding](/roadmap/danksharding) - Déanann Danksharding rolluithe ciseal 2 i bhfad níos saoire d'úsáideoirí trí “blobaí” sonraí a chur le bloic Ethereum.
 - [Aistarraingtí geallta](/staking/backals) - Chuir uasghrádú Shanghai/Capella ar chumas aistarraingtí geallta ar Ethereum, rud a chuir ar chumas daoine a ETH geallta a dhíghlasáil.
 - [Críochnaitheacht sliotán aonair](/roadmap/single-slot-finality) - In ionad fanacht cúig nóiméad déag, d'fhéadfaí bloic a mholadh agus a thabhairt chun críche sa sliotán céanna. Tá sé seo níos áisiúla do aipeanna agus i bhfad níos deacra a ionsaí.

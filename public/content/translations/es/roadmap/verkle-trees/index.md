@@ -57,6 +57,8 @@ Las redes de prueba del árbol de Verkle ya están en funcionamiento, pero todav
 
 - [Árboles Verkle para la falta de estado](https://verkle.info/)
 - [Dankrad Feist explica los árboles Verkle en PEEPanEIP](https://www.youtube.com/watch?v=RGJOQHzg3UQ)
+- [Árboles Verkle para el resto de nosotros](https://research.2077.xyz/verkle-trees)
+- [Anatomía de una prueba Verkle](https://ihagopian.com/posts/anatomy-of-a-verkle-proof)
 - [Guillaume Ballet explica los árboles Verkle en ETHGlobal](https://www.youtube.com/watch?v=f7bEtX3Z57o)
 - [«Cómo los árboles de Verkle hacen que Ethereum sean claro y directo» por Guillaume Ballet en Devcon 6](https://www.youtube.com/watch?v=Q7rStTKwuYs)
 - [Piper Merriam sobre clientes sin estado en ETHDenver 2020](https://www.youtube.com/watch?v=0yiZJNciIJ4)

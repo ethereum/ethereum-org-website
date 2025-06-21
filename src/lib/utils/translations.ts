@@ -25,6 +25,10 @@ export const filterRealLocales = (locales: string[] | undefined) => {
   return locales?.filter((locale) => locale !== FAKE_LOCALE) || []
 }
 
+export const isLocaleValidISO639_1 = (locale: string) => {
+  return i18nConfig.find((language) => language.code === locale)?.validISO639_1
+}
+
 // Overwrites the default Persian numbering of the Farsi language to use Hindu-Arabic numerals (0-9)
 // Context: https://github.com/ethereum/ethereum-org-website/pull/5490#pullrequestreview-892596553
 export const getLocaleForNumberFormat = (locale: Lang): Lang =>
@@ -63,6 +67,7 @@ const getRequiredNamespacesForPath = (relativePath: string) => {
 
   if (path === "/") {
     primaryNamespace = "page-index"
+    requiredNamespaces = [...requiredNamespaces, "page-10-year-anniversary"]
   }
 
   if (path === "/contributing/translation-program/acknowledgements/") {
@@ -143,8 +148,11 @@ const getRequiredNamespacesForPath = (relativePath: string) => {
   }
 
   if (path.startsWith("/roadmap/vision/")) {
-    primaryNamespace = "page-roadmap-vision"
-    requiredNamespaces = [...requiredNamespaces, "page-upgrades-index"]
+    requiredNamespaces = [
+      ...requiredNamespaces,
+      "page-upgrades-index",
+      "page-roadmap-vision",
+    ]
   }
 
   if (path.startsWith("/gas/")) {
@@ -187,12 +195,20 @@ const getRequiredNamespacesForPath = (relativePath: string) => {
     requiredNamespaces = [...requiredNamespaces, "table"]
   }
 
+  if (path.startsWith("/roadmap/")) {
+    primaryNamespace = "page-roadmap"
+  }
+
   if (path.startsWith("/start/")) {
     requiredNamespaces = [...requiredNamespaces]
   }
 
   if (path.startsWith("/contributing/translation-program/translatathon/")) {
     primaryNamespace = "page-translatathon"
+  }
+
+  if (path.startsWith("/10years/")) {
+    requiredNamespaces = [...requiredNamespaces, "page-10-year-anniversary"]
   }
 
   // Glossary tooltips

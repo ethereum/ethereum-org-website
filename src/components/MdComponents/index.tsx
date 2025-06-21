@@ -3,7 +3,6 @@ import { type ComponentProps, type HTMLAttributes } from "react";
 import type { ChildOnlyProp } from "@/lib/types";
 
 import Contributors from "@/components/Contributors";
-import MarkdownImage from "@/components/MarkdownImage";
 import TooltipLink from "@/components/TooltipLink";
 import YouTube from "@/components/YouTube";
 
@@ -17,6 +16,7 @@ import ExpandableCard from "../ExpandableCard";
 import FeaturedText from "../FeaturedText";
 import GlossaryTooltip from "../Glossary/GlossaryTooltip";
 import IdAnchor from "../IdAnchor";
+import MarkdownImage from "../Image/MarkdownImage";
 import InfoBanner from "../InfoBanner";
 import IssuesList from "../IssuesList";
 import LocaleDateTime from "../LocaleDateTime";

@@ -186,10 +186,6 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
           href: "/enterprise/",
           text: t("enterprise-mainnet"),
         },
-        {
-          href: "/enterprise/private-ethereum/",
-          text: t("enterprise-private"),
-        },
       ],
     },
     {
@@ -268,6 +264,10 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
           href: "/governance/",
           text: t("ethereum-governance"),
         },
+        {
+          href: "/trillion-dollar-security/",
+          text: t("trillion-dollar-security"),
+        },
       ],
     },
   ]
@@ -320,9 +320,9 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
         <Button
           variant="outline"
           isSecondary
-          onClick={() => scrollIntoView("__next")}
+          onClick={() => scrollIntoView("body")}
         >
-          <IoChevronUpSharp /> Go to top
+          <IoChevronUpSharp /> <Translation id="go-to-top" />
         </Button>
       </div>
 
