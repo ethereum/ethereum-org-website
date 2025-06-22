@@ -1,11 +1,9 @@
 "use client"
 
 import { AnchorHTMLAttributes, ComponentProps, forwardRef } from "react"
-import { ExternalLink } from "lucide-react"
+import { ExternalLink, Mail } from "lucide-react"
 import NextLink from "next/link"
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden"
-
-import Email from "@/components/icons/email.svg"
 
 import { cn } from "@/lib/utils/cn"
 import { type MatomoEventOptions, trackCustomEvent } from "@/lib/utils/matomo"
@@ -104,17 +102,23 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
         }
         {...commonProps}
       >
-        {!hideArrow && isMailto && (
-          <Email className="me-1 inline h-6 w-6 shrink-0 align-middle" />
+        {isMailto ? (
+          <span className="text-nowrap">
+            {!hideArrow && (
+              <Mail className="me-1 inline size-[1em] shrink-0 align-middle" />
+            )}
+            {children}
+          </span>
+        ) : (
+          children
         )}
-        {children}
         <VisuallyHidden>
           {isMailto ? "opens email client" : "opens in a new tab"}
         </VisuallyHidden>
         {!hideArrow && !isMailto && (
           <ExternalLink
             className={cn(
-              "-me-1 inline h-6 w-6 shrink-0 p-1 align-middle",
+              "ms-1 inline size-4 shrink-0 align-middle",
               twFlipForRtl
             )}
           />
