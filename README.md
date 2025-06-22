@@ -1994,6 +1994,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     </tr>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/kichong"><img src="https://avatars.githubusercontent.com/u/38249409?v=4?s=100" width="100px;" alt="kichong"/><br /><sub><b>kichong</b></sub></a><br /><a href="#content-kichong" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/zeevick10"><img src="https://avatars.githubusercontent.com/u/140458077?v=4?s=100" width="100px;" alt="FT"/><br /><sub><b>FT</b></sub></a><br /><a href="#content-zeevick10" title="Content">🖋</a></td>
     </tr>
   </tbody>
 </table>
