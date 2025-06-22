@@ -95,7 +95,7 @@ const MeetupList = () => {
               <p className="mb-0 opacity-60">{meetup.location}</p>
             </Flex>
             <Flex className="items-center">
-              <ChevronRight className="h-[14px] w-[14px] xl:h-[18px] xl:w-[18px]" />
+              <ChevronRight />
             </Flex>
           </BaseLink>
         ))}

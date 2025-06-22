@@ -1,5 +1,5 @@
 import React from "react"
-import { Calendar } from "lucide-react"
+import { CalendarDays } from "lucide-react"
 import { useLocale } from "next-intl"
 
 import type { EventCardProps } from "@/lib/types"
@@ -39,7 +39,7 @@ const EventCard: React.FC<EventCardProps> = ({
   return (
     <Card className={cn("flex h-full flex-col rounded-md border", className)}>
       <CardHeader className="flex flex-row items-center justify-center rounded-t-md border-b border-primary bg-[#FCFCFC] p-2 dark:bg-[#272627]">
-        <Calendar className="me-2 size-6 text-2xl text-primary" />
+        <CalendarDays className="me-2 size-6 text-2xl text-primary" />
         <span className="!mt-0 text-right text-sm text-primary">
           {formatedDate}
         </span>
