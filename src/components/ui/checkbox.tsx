@@ -23,8 +23,8 @@ const Checkbox = React.forwardRef<
     className={cn(commonControlClasses, "rounded-sm", className)}
     {...props}
   >
-    <CheckboxPrimitive.Indicator className="flex items-center justify-center">
-      <Check className="text-sm" />
+    <CheckboxPrimitive.Indicator className="grid place-items-center">
+      <Check className="size-3.5" />
     </CheckboxPrimitive.Indicator>
   </CheckboxPrimitive.Root>
 ))

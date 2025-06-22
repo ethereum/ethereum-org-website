@@ -41,7 +41,11 @@ export const CopyButton = ({ message, ...props }: CopyButtonProps) => {
   const { onCopy, hasCopied } = useClipboard({ timeout: 1500 })
   return (
     <Button variant="ghost" onClick={() => onCopy(message)} {...props}>
-      {hasCopied ? <CheckCircle /> : <Copy />}
+      {hasCopied ? (
+        <CheckCircle className="size-5" />
+      ) : (
+        <Copy className="size-5" />
+      )}
     </Button>
   )
 }
