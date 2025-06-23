@@ -29,29 +29,6 @@ For example, the SP can be a travel agency providing travel services to companie
 
 ![Step by step SAML process](./fig-01-saml.png)
 
-<!-- 
-
-```mermaid
-sequenceDiagram
-  participant Browser
-  participant IdP
-  participant SP
-
-  opt The browser can also go directly to the IdP
-    Browser->>SP: I want to do X
-    note over SP: Who is this?
-    SP->>Browser: What is your organization
-    Browser->>SP: Y org
-    SP->>Browser: Redirect to Y's IdP
-  end
-  Browser->>IdP: Can you log me in to SP?
-  note over Browser, IdP: Authentication (by any mechanism)
-  IdP->>Browser: Redirect to the SP, with this (signed) user profile
-  Browser->>SP: Here are my credentials, from the IdP
-```
-
--->
-
 This is the way the three entities, the browser, SP, and IdP, negotiate for access. The SP does not need to know anything about the user using the browser in advance, just to trust the IdP.
 
 ### Ethereum for SAML people
@@ -60,41 +37,9 @@ Ethereum is a decentralized system.
 
 ![Ethereum logon](./fig-02-eth-logon.png)
 
-<!-- 
-
-```mermaid
-sequenceDiagram
-  participant Browser
-  participant Server
-
-  Browser->>Server: Can I have access to this app?
-  Server->>Browser: Can you sign this message: "I am signing for service X, nonce Y"?
-  note over Browser: Sign with the private key
-  Browser->>Server: Sure, the signature is 0x00...00BAD060A7
-  note over Server: Check signature, get address
-  Server->>Browser: Hello, 0x00000000000000000000000000000000DeaDBeef.
-```
-
--->
-
 Users have a a private key (typically held in a browser extension). From the private key you can derive a public key, and from that a 20-byte address. When users need to log into a system, they are requested to sign a message with a nonce (a single-use value). The server can verify the signature was created by that address.
 
 ![Getting extra data from attestations](./fig-03-eas-data.png)
-
-<!-- 
-
-```mermaid
-sequenceDiagram
-  participant Browser
-  participant Server
-  participant Node as Ethereum Node
-
-  Server->>Node: I want to know the name for 0x00...00DeaDBeef, <br/> What did <trusted address> say about it?
-  Node->>Server: The name for this address is John Doe
-  Server->>Browser: Hello John Doe
-```
-
--->
 
 The signature only verifies the Ethereum address. To get other user attributes, you typically use [attestations](https://attest.org/). An attestation typically has these fields:
 
@@ -142,25 +87,6 @@ The first step is to have a SAML SP and a SAML IdP communicating between themsel
 This is what happens, step by step:
 
 ![Normal SAML logon without Ethereum](./fig-04-saml-no-eth.png)
-
-<!-- 
-
-```mermaid
-sequenceDiagram
-  participant Browser
-  participant IdP
-  participant SP
-
-  Browser->>SP: 1. GET localhost:3000/sp/login
-  SP->>Browser: 2. Send back form: POST this data (with request ID) to<br/>localhost:3001/idp/login
-  Browser->>IdP: 3. POST to localhost:3001/idp/login, including request ID
-  IdP->>Browser: 4. Send back form: POST this request ID and your email to<br/>localhost:3001/idp/loginSubmitted
-  Browser->>IdP: 5. POST request ID and email (from the user) to<br/>localhost:3001/idp/loginSubmitted
-  IdP->>Browser: 6. Send back form: POST this data (with request ID, email, and IdP signature) to<br/>localhost:3000/sp/assertion
-  Browser->>SP: 7. POST this data (with request ID, email, and IdP signature) to<br/>localhost:3000/sp/assertion
-```
-
--->
 
 #### src/config.mts
 
@@ -569,23 +495,6 @@ The changes are in steps 4-5 in the previous diagram.
 
 ![SAML with an Ethereum signature](./fig-05-saml-w-signature.png)
 
-<!-- 
-
-```mermaid
-  Browser->>SP: 1. GET localhost:3000/sp/login
-  SP->>Browser: 2. Send back form: POST this data (with request ID) to<br/>localhost:3001/idp/login
-  Browser->>IdP: 3. POST to localhost:3001/idp/login, including request ID
-  IdP->>Browser: 4. Send back page, requesting a signature for the nonce
-  Note over IdP: 4.2. Store the request data with the nonce as key
-  Note over Browser: 4.5. Ask wallet to ask the user to sign the nonce
-  Browser->>IdP: 5. GET localhost:3001/idp/signature/<nonce>/<address>/<signature>
-  Note over IdP: 5.5. Verify the signature and retrieve request data using the nonce.
-  IdP->>Browser: 6. Send back form: POST this data (with request ID, email, and IdP signature) to<br/>localhost:3000/sp/assertion
-  Browser->>SP: 7. POST this data (with request ID, email, and IdP signature) to<br/>localhost:3000/sp/assertion
-```
-
--->
-
 The only file we changed is `idp.mts`. Here are the changed parts.
 
 ```typescript
@@ -850,31 +759,6 @@ Either way, after you do this browse to [http://localhost:3000](http://localhost
 ### Detailed explanation
 
 ![Getting from Ethereum address to e-mail](./fig-06-saml-sig-n-email.png)
-
-<!-- 
-
-```mermaid
-sequenceDiagram
-  participant Browser
-  participant IdP
-  participant SP
-  participant GraphQL
-
-  Browser->>SP: 1. GET localhost:3000/sp/login
-  SP->>Browser: 2. Send back form: POST this data (with request ID) to<br/>localhost:3001/idp/login
-  Browser->>IdP: 3. POST to localhost:3001/idp/login, including request ID
-  IdP->>Browser: 4. Send back page, requesting a signature for the nonce
-  Note over IdP: 4.2. Store the request data with the nonce as key
-  Note over Browser: 4.5. Ask wallet to ask the user to sign the nonce
-  Browser->>IdP: 5. GET localhost:3001/idp/signature/<nonce>/<address>/<signature>
-  Note over IdP: 5.5. Verify the signature and retrieve request data using the nonce.
-  IdP->>GraphQL: 5.6. Ask for email address attestations
-  GraphQL->>IdP: 5.7. Respond with the attestations, if any
-  IdP->>Browser: 6. Send back form: POST this data (with request ID, email, and IdP signature) to<br/>localhost:3000/sp/assertion
-  Browser->>SP: 7. POST this data (with request ID, email, and IdP signature) to<br/>localhost:3000/sp/assertion
-```  
-
--->
 
 The new steps are the GraphQL communication, steps 5.6 and 5.7.
 
