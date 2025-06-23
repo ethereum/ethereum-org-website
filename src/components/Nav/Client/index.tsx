@@ -81,7 +81,7 @@ const ClientSideNav = () => {
     <>
       {desktopScreen && (
         <Menu
-          className="animate-fade-in- animate-fade-in- max-md:hidden"
+          className="animate-fade-in max-md:hidden"
           sections={linkSections}
         />
       )}
