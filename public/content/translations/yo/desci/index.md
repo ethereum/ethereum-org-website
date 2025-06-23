@@ -68,7 +68,7 @@ Awoṣe idiwon lọwọlọwọ fun imọ-ẹrọ igbeowosile ni pe awọn eniya
 
 Awọn iwadii ti fihan pe awọn panẹli atunyẹwo ifunni lowo ṣe iṣẹ ti ko dara ti yiyan awọn igbero ti o ga julọ bi awọn igbero kanna ti a fun si awọn panẹli oriṣiriṣi ni awọn abajade ti o yatọ pupọ. Bi igbeowosile ti di ohun to sowon diẹ sii, o ti di egbe kekere ti awọn oniwadi agba diẹ pẹlu awọn iṣẹ akanṣe ti ibile olọgbọn diẹ sii. Ipa naa ti ṣẹda ala-ilẹ igbeowo-ifigagbaga-giga, awọn iyanju aiṣedeede ti o nfa ati isọdọtun dina.
 
-Web3 ni agbara lati ṣe idalọwọduro awoṣe igbeowosile fifọ yii nipa ṣiṣe idanwo pẹlu oriṣiriṣi awọn awoṣe iwuri ti o dagbasoke nipasẹ DAO ati Web3 ni gbooro. <0>Igbeowosile awọn ọja ti gbogbo eniyan pada sẹhin </0>, <1> igbeowosile kuadiratiki</1>, <2>DAO isejoba</2> ati <3>tokenized ẹya imoriya</3>jẹ diẹ ninu awọn irinṣẹ Web3 ti o le ṣe iyipada igbeowo imọ-jinlẹ.
+Web3 ni agbara lati ṣe idalọwọduro awoṣe igbeowosile fifọ yii nipa ṣiṣe idanwo pẹlu oriṣiriṣi awọn awoṣe iwuri ti o dagbasoke nipasẹ DAO ati Web3 ni gbooro. \<0>Igbeowosile awọn ọja ti gbogbo eniyan pada sẹhin \</0>, \<1> igbeowosile kuadiratiki\</1>, \<2>DAO isejoba\</2> ati \<3>tokenized ẹya imoriya\</3>jẹ diẹ ninu awọn irinṣẹ Web3 ti o le ṣe iyipada igbeowo imọ-jinlẹ.
 
 ### IP nini ati idagbasoke {#ip-ownership}
 

@@ -1,5 +1,4 @@
 // import { join } from "path"
-import { useContext } from "react"
 import dynamic from "next/dynamic"
 
 import type { Root } from "@/lib/types"
@@ -7,8 +6,6 @@ import type { Root } from "@/lib/types"
 import Footer from "@/components/Footer"
 import Nav from "@/components/Nav"
 import { SkipLink } from "@/components/SkipLink"
-
-import { FeedbackWidgetContext } from "@/contexts/FeedbackWidgetContext"
 
 // import TranslationBanner from "@/components/TranslationBanner"
 // import TranslationBannerLegal from "@/components/TranslationBannerLegal"
@@ -25,7 +22,6 @@ export const BaseLayout = ({
   // contentNotTranslated,
   lastDeployLocaleTimestamp,
 }: Root) => {
-  const { showFeedbackWidget } = useContext(FeedbackWidgetContext)
   // const { locale, asPath } = useRouter()
 
   // const CONTRIBUTING = "/contributing/"
@@ -79,7 +75,7 @@ export const BaseLayout = ({
        * layout on initial load.
        */}
 
-      {showFeedbackWidget && <FeedbackWidget />}
+      <FeedbackWidget />
     </>
   )
 }

@@ -6,7 +6,7 @@ lang: it
 
 I contratti intelligenti sono estremamente flessibili e in grado di gestire grandi quantità di valori e dati, eseguendo allo stesso tempo una logica immutata basata sul codice distribuito sulla blockchain. Questo ha dato vita a un vivace ecosistema di applicazioni senza fiducia e decentralizzate, che offrono molti vantaggi rispetto ai sistemi legacy. I contratti intelligenti rappresentano anche un'opportunità per gli utenti malevoli che provano a speculare sfruttandone le vulnerabilità.
 
-Blochchain pubbliche come Ethereun rendono ancora più complessa la questione della sicurezza dei contratti intelligenti. Una volta distribuito, il codice dei contratti _di solito_ non può essere modificato per correggere falle di sicurezza. In più, le risorse rubate dai contratti intelligenti sono estremamente difficili da tracciare e praticamente irrecuperabili per via della loro immutabilità.
+Blochchain pubbliche come Ethereum rendono ancora più complessa la questione della sicurezza dei contratti intelligenti. Una volta distribuito, il codice dei contratti _di solito_ non può essere modificato per correggere falle di sicurezza. In più, le risorse rubate dai contratti intelligenti sono estremamente difficili da tracciare e praticamente irrecuperabili per via della loro immutabilità.
 
 Anche se i dati possono variare, si stima che l'ammontare totale di valore rubato o perduto a causa di falle di sicurezza nei contratti intelligenti superi facilmente $1 miliardo. In questo sono inclusi incidenti rilievo come la [violazione della DAO](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/) (3,6 milioni di ETH rubati, per un valore superiore a $1 miliardo al prezzo attuale), la [violazione del portafoglio multi-firma di Parity](https://www.coindesk.com/30-million-ether-reported-stolen-parity-wallet-breach) ($30 milioni sottratti dagli hacker), e la questione del [portafoglio Parity congelato](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether) (più di $300 milioni di ETH bloccati per sempre).
 
@@ -563,7 +563,7 @@ Se prevedi di interrogare un oracolo sulla catena per conoscere i prezzi dei ben
 
 - **[Standard di verifica della sicurezza dei contratti intelligenti](https://github.com/securing/SCSVS)**: _lista di controllo in quattordici parti, creata per standardizzare la sicurezza dei contratti intelligenti per sviluppatori, architetti, revisori di sicurezza e fornitori._
 
-- **[Impara sulla sicurezza e il controllo dei contratti intelligenti](https://updraft.cyfrin.io/courses/security)**: _corso definitivo sulla sicurezza e il controllo dei contratti intelligenti, creato per gli sviluppatori di contratti intelligenti che desiderano migliorare le proprie migliori pratiche di sicurezza e diventare ricercatori della sicurezza._
+- **[Impara sulla sicurezza e il controllo dei contratti intelligenti](https://updraft.cyfrin.io/courses/security): _corso definitivo sulla sicurezza e il controllo dei contratti intelligenti, creato per gli sviluppatori di contratti intelligenti che desiderano migliorare le proprie migliori pratiche di sicurezza e diventare ricercatori della sicurezza._
 
 ### Tutorial sulla sicurezza dei contratti intelligenti {#tutorials-on-smart-contract-security}
 

@@ -1,8 +1,8 @@
 export const scrollIntoView = (
-  toId: string,
+  selector: string,
   options: ScrollIntoViewOptions = { behavior: "smooth", block: "start" }
 ): void => {
-  const element = document.getElementById(toId)
+  const element = document.querySelector(selector)
 
   if (!element) return
 

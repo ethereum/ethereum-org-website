@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react"
+import { useCallback, useEffect, useRef, useState } from "react"
 import { IoClose } from "react-icons/io5"
 
 import {
@@ -75,15 +75,18 @@ const PlayerWidget = ({
   const [showSpeedMenu, setShowSpeedMenu] = useState(false)
   const speedMenuRef = useRef<HTMLDivElement>(null)
 
-  const calculateNewTime = (clientX: number) => {
-    if (!scrubBarRef.current) return 0
-    const rect = scrubBarRef.current.getBoundingClientRect()
-    const position = Math.max(
-      0,
-      Math.min(1, (clientX - rect.left) / rect.width)
-    )
-    return duration * position
-  }
+  const calculateNewTime = useCallback(
+    (clientX: number) => {
+      if (!scrubBarRef.current) return 0
+      const rect = scrubBarRef.current.getBoundingClientRect()
+      const position = Math.max(
+        0,
+        Math.min(1, (clientX - rect.left) / rect.width)
+      )
+      return duration * position
+    },
+    [duration]
+  )
 
   const handleMouseDown = (e: React.MouseEvent<HTMLDivElement>) => {
     setIsDragging(true)
@@ -91,11 +94,14 @@ const PlayerWidget = ({
     onSeek(newTime)
   }
 
-  const handleMouseMove = (e: MouseEvent) => {
-    if (!isDragging) return
-    const newTime = calculateNewTime(e.clientX)
-    onSeek(newTime)
-  }
+  const handleMouseMove = useCallback(
+    (e: MouseEvent) => {
+      if (!isDragging) return
+      const newTime = calculateNewTime(e.clientX)
+      onSeek(newTime)
+    },
+    [isDragging, calculateNewTime, onSeek]
+  )
 
   const handleMouseUp = () => {
     setIsDragging(false)
@@ -110,7 +116,7 @@ const PlayerWidget = ({
       document.removeEventListener("mousemove", handleMouseMove)
       document.removeEventListener("mouseup", handleMouseUp)
     }
-  }, [isDragging])
+  }, [handleMouseMove, isDragging])
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {

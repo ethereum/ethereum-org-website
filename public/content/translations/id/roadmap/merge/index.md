@@ -92,7 +92,7 @@ title="Dapp dan pengembang kontrak pintar"
 contentPreview="The Merge was designed to have minimal impact on smart contract and dapp developers."
 id="developers">
 
-Penggabungan disertai dengan perubahan konsensus, yang juga mencakup perubahan yang terkait dengan:<
+Penggabungan disertai dengan perubahan konsensus, yang juga mencakup perubahan yang terkait dengan:
 
 <ul>
   <li>struktur blok</li>

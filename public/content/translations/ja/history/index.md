@@ -30,8 +30,6 @@ sidebarDepth: 1
 
 <Emoji text=":calendar:" size={1} className="me-2 mb-2" />タイムスタンプ: Apr-12-2023 22:27:35 +UTC<br /> <Emoji text=":bricks:" size={1} className="me-2 mb-2" />ブロック番号: TBD<br /> <Emoji text=":money_bag:" size={1} className="me-2 mb-2" />ETH 価格: TBD<br />
 
-<!-- <Emoji text=":desktop_computer:" size={1} className="me-2 mb-2" /> <a href="https://web.archive.org/web/{}/https://ethereum.org/">ethereum.org on waybackmachine</a> -->
-
 #### 要約 {#shanghai-summary}
 
 上海アップグレードにより、実行レイヤーへのステーキングの引き出しが可能になります。 カペラのアップグレードと並行して、ブロックは引き出し操作を受け付けられるようになり、ステーカーはビーコンチェーンから実行レイヤーに ETH を引き出せるようになります。
@@ -53,8 +51,6 @@ sidebarDepth: 1
 ### カペラ(_予定_) {#capella}
 
 <emoji text=":calendar:" size={1} className="me-2 mb-2" />タイムスタンプ: Apr-12-2023 22:27:35 +UTC<br /> <Emoji text=":bricks:" size={1} className="me-2 mb-2" />エポック番号: 194048(スロット 6209536)<br /> <Emoji text=":money_bag:" size={1} className="me-2 mb-2" />ETH 価格: TBD<br />
-
-<!-- <Emoji text=":desktop_computer:" size={1} className="me-2 mb-2" /> <a href="https://web.archive.org/web/{}/https://ethereum.org/en/">ethereum.org on waybackmachine</a> -->
 
 #### 要約 {#capella-summary}
 

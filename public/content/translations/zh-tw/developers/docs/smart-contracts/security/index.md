@@ -563,7 +563,7 @@ contract Attack {
 
 - **[智慧型合約安全性驗證標準](https://github.com/securing/SCSVS)** - _適用於開發者、架構師、安全性審查者和廠商的標準化智慧型合約安全性 14 點檢查清單。_
 
-- **[學習智慧型合約安全與審核](https://updraft.cyfrin.io/courses/security)** - _出色的智慧型合約安全與審核課程，為希望提升安全最佳做法並成為安全研究人員的智慧型合約開發人員而設。_
+- **[學習智慧型合約安全與審核](https://updraft.cyfrin.io/courses/security) - _出色的智慧型合約安全與審核課程，為希望提升安全最佳做法並成為安全研究人員的智慧型合約開發人員而設。_
 
 ### 關於智慧型合約安全性的使用教學 {#tutorials-on-smart-contract-security}
 

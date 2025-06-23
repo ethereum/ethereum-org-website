@@ -126,7 +126,7 @@ Fedezze fel a projekteket és csatlakozzon a DeSci közösségéhez.
 - [DeSci: a kutatás jövője – Samuel Akinosho](https://lucidsamuel.medium.com/desci-the-future-of-research-b76cfc88c8ec)
 - [A tudomány finanszírozása (Epilógus: a DeSci és az új kriptoalapok) – Nadia](https://nadia.xyz/science-funding)
 - [A decentralizáció megbontja a gyógyszerfejlesztést](https://medium.com/id-theory/decentralisation-is-disrupting-drug-development-28b5ba5d447f)
-- [Mi az a DeSci, azaz a decentralizált tudomány?](​https://usadailytimes.com/2022/09/12/what-is-desci-decentralized-science/)
+- [Mi az a DeSci, azaz a decentralizált tudomány?](https://usadailytimes.com/2022/09/12/what-is-desci-decentralized-science/)
 
 ### Videók {#videos}
 

@@ -1,3 +1,5 @@
+"use client"
+
 import React, { ComponentProps, ReactNode, useEffect } from "react"
 import { Portal } from "@radix-ui/react-portal"
 

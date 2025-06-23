@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils/cn"
 
 import Emoji from "../Emoji"
 import { Center, Flex, Stack } from "../ui/flex"
+import InlineLink from "../ui/Link"
 import { LinkBox, LinkOverlay } from "../ui/link-box"
 
 import { useRtlFlip } from "@/hooks/useRtlFlip"
@@ -30,10 +31,12 @@ const DocLink = ({ href, children, isExternal = false }: DocLinkProps) => {
           <Emoji className="me-4 text-md" text=":page_with_curl:" />
         </Center>
         <Stack className="flex-1">
-          <LinkOverlay href={href} className="no-underline">
-            <p className="font-bold text-gray-600 dark:text-gray-200">
-              {children}
-            </p>
+          <LinkOverlay asChild>
+            <InlineLink href={href} hideArrow className="no-underline">
+              <p className="font-bold text-gray-600 dark:text-gray-200">
+                {children}
+              </p>
+            </InlineLink>
           </LinkOverlay>
         </Stack>
 

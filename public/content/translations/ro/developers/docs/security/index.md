@@ -34,7 +34,7 @@ Cel puțin:
 - Solidity nu emite NICIUN avertisment al compilatorului
 - Codul tău este bine documentat
 
-Sunt mult mai multe de spus despre procesul de dezvoltare, dar aceste elemente sunt un loc bun de început. Pentru mai multe elemente și explicații detaliate, consultă [lista de verificare a calității procesului furnizată de DeFiSafety](https://docs.defisafety.com/audit-process-documentation/process-quality-audit-process). [DefiSafety](https://defisafety.com/) este un serviciu public neoficial care publică diverse recenzii despre mari aplicații dapp Ethereun publice. O parte a sistemului de evaluare DeFiSafety include cât de bine aderă proiectul la această listă de verificare a calității procesului. Urmând aceste procese:
+Sunt mult mai multe de spus despre procesul de dezvoltare, dar aceste elemente sunt un loc bun de început. Pentru mai multe elemente și explicații detaliate, consultă [lista de verificare a calității procesului furnizată de DeFiSafety](https://docs.defisafety.com/audit-process-documentation/process-quality-audit-process). [DefiSafety](https://defisafety.com/) este un serviciu public neoficial care publică diverse recenzii despre mari aplicații dapp Ethereum publice. O parte a sistemului de evaluare DeFiSafety include cât de bine aderă proiectul la această listă de verificare a calității procesului. Urmând aceste procese:
 
 - Vei produce un cod mai sigur, prin teste automate, reproductibile
 - Vei permite revizuirea proiectului mai eficient de către auditori

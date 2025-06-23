@@ -618,7 +618,7 @@ Chiunque è autorizzato a trasferire un token, può bruciarlo. Anche se bruciare
 
 A differenza di Solidity, Vyper non ha un ereditarietà. Si tratta di una scelta progettuale deliberata per rendere il codice più chiaro e quindi più facile da proteggere. Quindi, per creare il tuo contratto ERC-721 in Vyper, prendi [questo contratto](https://github.com/vyperlang/vyper/blob/master/examples/tokens/ERC721.vy) e lo modifichi per implementare la logica di business che desideri.
 
-# Conclusione {#conclusion}
+## Conclusione {#conclusion}
 
 Per ripasso presentiamo alcune delle idee più importanti in questo contratto:
 

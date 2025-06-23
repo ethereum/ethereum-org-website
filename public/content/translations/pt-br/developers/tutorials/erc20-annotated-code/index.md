@@ -586,7 +586,7 @@ A função `a.add(b)` é uma adição segura. No caso improvável de `um`+`b`>=`
 
 Essas são as quatro funções que realmente funcionam: `_transfer`, `_mint`, `_burn`, e `_appro`.
 
-#### A função \_transfer {#\_transfer}
+#### A função \_transfer {#_transfer}
 
 ```solidity
     /**
@@ -651,7 +651,7 @@ Essas são as linhas que realmente executam a transferência. Observe que não h
 
 Essa função emite o evento `Transfer`. Os eventos não são acessíveis para contratos inteligentes, mas o código executado fora da blockchain pode ouvir os eventos e reagir a eles. Por exemplo, uma carteira pode monitorar quando o proprietário obtém mais tokens.
 
-#### As funções \_mint e \_burn {#\_mint-and-\_burn}
+#### As funções \_mint e \_burn {#_mint-and-_burn}
 
 Essas duas funções (`_mint` e `_burn`) modificam o fornecimento total de moedas. Elas são internas e não há nenhuma função que as chame nesse contrato, portanto, elas só são úteis se você herdar do contrato e adicionar sua própria lógica para decidir em que condições gerar novos tokens ou usar os tokens já existentes.
 
@@ -705,7 +705,7 @@ Certifique-se de atualizar o `_totalSupply` quando o número total de tokens mud
 
 A função `_burn` é quase idêntica à `_mint`, exceto que ela funciona na direção inversa.
 
-#### A função \_approve {#\_approve}
+#### A função \_approve {#_approve}
 
 Essa é a função que especifica as provisões. Observe que ela permite que um proprietário especifique uma provisão superior ao saldo atual do proprietário. Isso não tem problema, pois o saldo é verificado no momento da transferência, quando ele poderia diferir do saldo no momento da criação da provisão.
 
@@ -783,7 +783,7 @@ Essa função modifica a variável `_decimals` utilizada para dizer às ‘inter
 
 Essa é a função hook a ser chamada durante as transferências. Ela está vazia, mas se precisar dela para fazer algo, basta sobrescrevê-la.
 
-# Conclusão {#conclusion}
+## Conclusão {#conclusion}
 
 Resumindo, aqui estão algumas das ideias mais importantes neste contrato (na minha opinião, pode ser que as suas não sejam as mesmas):
 

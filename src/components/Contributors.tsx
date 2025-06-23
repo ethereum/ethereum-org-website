@@ -1,6 +1,9 @@
-import { useEffect, useState } from "react"
-import shuffle from "lodash/shuffle"
+"use client"
 
+import { useEffect, useState } from "react"
+import { shuffle } from "lodash"
+
+import { Image } from "@/components/Image"
 import { Flex } from "@/components/ui/flex"
 import InlineLink from "@/components/ui/Link"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
@@ -37,7 +40,7 @@ const Contributors = () => {
             className="m-2 max-w-[132px] transform shadow transition-transform duration-100 hover:scale-[1.02] hover:rounded hover:bg-background-highlight focus:scale-[1.02] focus:rounded"
             key={contributor.login}
           >
-            <img
+            <Image
               className="h-[132px] w-[132px]"
               src={contributor.avatar_url}
               alt={contributor.name}

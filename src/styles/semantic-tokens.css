@@ -25,7 +25,7 @@
 
     --border: var(--gray-200);
     --border-high-contrast: var(--gray-400);
-    --border-low-contrast: var(--gray-50);
+    --border-low-contrast: var(--gray-100);
     --border-hover: var(--gray-300);
 
     --primary: var(--purple-600);
@@ -75,6 +75,13 @@
       transparent 100%
     );
 
+    --radial-b: radial-gradient(
+      127.67% 82.36% at 50% -15%,
+      hsla(var(--purple-500), var(--radial-a-opacity-2)) 0%,
+      hsla(var(--blue-500), var(--radial-a-opacity-1)) 66%,
+      transparent 100%
+    );
+
     --linear-bug-bounty-title: linear-gradient(
       to left,
       #f7cbc0 0%,
@@ -84,6 +91,11 @@
       #1c1ce1 61.77%,
       #000000 69.77%
     );
+
+    --card-gradient: linear-gradient(123deg, rgba(255, 255, 255, 0.20) 58.99%, rgba(174, 110, 203, 0.13) 104.04%);
+    --card-gradient-secondary: linear-gradient(95deg, rgba(211, 145, 242, 0.12) 0%, rgba(159, 43, 212, 0.12) 102.78%);
+    --card-gradient-secondary-hover: linear-gradient(95deg, rgba(211, 145, 242, 0.2) 0%, rgba(159, 43, 212, 0.2) 102.78%);
+    --ten-year-gradient: linear-gradient(100deg, #F6C9EA 55.38%, #C7A9F1 110.54%);
 
     /* Shadows */
     --shadow-color-a: hsla(var(--purple-800), 0.02);
@@ -152,7 +164,7 @@
 
     --border: var(--gray-600);
     --border-high-contrast: var(--gray-300);
-    --border-low-contrast: var(--black);
+    --border-low-contrast: var(--gray-900);
     --border-hover: var(--gray-500);
 
     --primary: var(--purple-400);
@@ -197,6 +209,9 @@
       #8476d9 49.78%,
       #8db4ff 69.77%
     );
+
+    --roadmap-card-gradient: linear-gradient(123deg, rgba(34, 34, 34, 0.20) 40.53%, rgba(174, 110, 203, 0.13) 104.05%);
+    --ten-year-gradient: linear-gradient(100deg, #1E151B 55.38%, #000 110.54%);
 
     /* Shadows (dark mode adjustments) */
     --shadow-color: hsla(var(--white), 0.04);

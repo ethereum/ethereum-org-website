@@ -14,7 +14,7 @@ Check out [Intro to Storybook](https://storybook.js.org/tutorials/intro-to-story
 
 ## Spinning up the Storybook server
 
-It's as easy as running `yarn storybook` to boot up a dedicated localhost to see all the components that have stories.
+It's as easy as running `pnpm storybook` to boot up a dedicated localhost to see all the components that have stories.
 
 ## Setting up a component's stories
 
@@ -229,4 +229,4 @@ parameters: {
 }
 ```
 
-> 🚨 NOTE: This will be notated ahead of time by the team which stories should not receive snapshots.
+> 🚨 NOTE: This will be noted ahead of time by the team which stories should not receive snapshots.

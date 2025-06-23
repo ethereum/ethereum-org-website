@@ -18,7 +18,7 @@ lang: el
 
 ## Προαπαιτούμενα {#prerequisites}
 
-Πριν καταπιαστείτε με τα πλαίσια, σας συνιστούμε να διαβάσετε πρώτα την εισαγωγή μας στα [dapp](/developers/docs/dapps/) και στο < [Ethereum stack](/developers/docs/ethereum-stack/).
+Πριν καταπιαστείτε με τα πλαίσια, σας συνιστούμε να διαβάσετε πρώτα την εισαγωγή μας στα [dapp](/developers/docs/dapps/) και στο [Ethereum stack](/developers/docs/ethereum-stack/).
 
 ## Διαθέσιμα πλαίσια ανάπτυξης {#available-frameworks}
 

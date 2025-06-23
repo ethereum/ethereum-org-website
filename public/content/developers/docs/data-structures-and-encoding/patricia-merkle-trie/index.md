@@ -95,12 +95,12 @@ When traversing paths in nibbles, we may end up with an odd number of nibbles to
 
 The flagging of both _odd vs. even remaining partial path length_ and _leaf vs. extension node_ as described above reside in the first nibble of the partial path of any 2-item node. They result in the following:
 
-    hex char    bits    |    node type partial     path length
-    ----------------------------------------------------------
-       0        0000    |       extension              even
-       1        0001    |       extension              odd
-       2        0010    |   terminating (leaf)         even
-       3        0011    |   terminating (leaf)         odd
+   | hex char | bits | node type partial  | path length |
+   | -------- | ---- | ------------------ | ----------- |
+   | 0        | 0000 | extension          | even        |
+   | 1        | 0001 | extension          | odd         |
+   | 2        | 0010 | terminating (leaf) | even        |
+   | 3        | 0011 | terminating (leaf) | odd         |
 
 For even remaining path length (`0` or `2`), another `0` "padding" nibble will always follow.
 
