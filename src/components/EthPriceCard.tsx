@@ -1,3 +1,5 @@
+"use client"
+
 import { useEffect, useState } from "react"
 import { useLocale } from "next-intl"
 import { MdInfoOutline } from "react-icons/md"
