@@ -247,6 +247,4 @@ const TutorialsList = ({ internalTutorials }: TutorialsListProps) => {
   )
 }
 
-TutorialsList.displayName = "TutorialsList"
-
 export default TutorialsList
