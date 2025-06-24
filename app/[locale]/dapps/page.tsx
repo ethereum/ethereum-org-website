@@ -48,7 +48,7 @@ const Page = async ({ params }: { params: { locale: string } }) => {
       </div>
 
       <div className="flex flex-col items-center gap-4 px-4 md:px-8">
-        <CategoriesNav />
+        <CategoriesNav activeCategory="" />
       </div>
 
       <MainArticle className="flex flex-col gap-32 py-10">
@@ -83,7 +83,7 @@ const Page = async ({ params }: { params: { locale: string } }) => {
             {Object.values(dappsCategories).map((category) => (
               <LinkBox
                 key={category.slug}
-                className="flex flex-col rounded-3xl border border-[rgba(159,43,212,0.11)] bg-card-gradient-secondary p-6 hover:bg-card-gradient-secondary-hover hover:shadow-lg"
+                className="hover:bg-roadmap-gradient-secondary-hover flex flex-col rounded-3xl border border-[rgba(159,43,212,0.11)] bg-card-gradient p-6 hover:shadow-lg"
               >
                 <div className="mb-3 flex gap-4">
                   <div className="mt-1">
@@ -96,7 +96,7 @@ const Page = async ({ params }: { params: { locale: string } }) => {
                     >
                       <h3>{category.name}</h3>
                     </LinkOverlay>
-                    <p className="text-body-medium">{category.description}</p>
+                    <p className="text-body">{category.description}</p>
                   </div>
                 </div>
               </LinkBox>
