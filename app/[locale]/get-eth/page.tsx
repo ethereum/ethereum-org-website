@@ -8,7 +8,7 @@ import {
 import type { ReactNode } from "react"
 
 import type { ChildOnlyProp } from "@/lib/types"
-import type { /* CommitHistory,  */ Lang } from "@/lib/types"
+import type { CommitHistory, Lang } from "@/lib/types"
 
 import CalloutBanner from "@/components/CalloutBanner"
 import CardList, {
@@ -17,8 +17,8 @@ import CardList, {
 import Emoji from "@/components/Emoji"
 import EthPriceCard from "@/components/EthPriceCard"
 import FeedbackCard from "@/components/FeedbackCard"
+import FileContributors from "@/components/FileContributors"
 import I18nProvider from "@/components/I18nProvider"
-// import FileContributors from "@/components/FileContributors"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import Translation from "@/components/Translation"
@@ -37,7 +37,7 @@ import InlineLink from "@/components/ui/Link"
 import { Skeleton } from "@/components/ui/skeleton"
 
 import { cn } from "@/lib/utils/cn"
-// import { getAppPageContributorInfo } from "@/lib/utils/contributors"
+import { getAppPageContributorInfo } from "@/lib/utils/contributors"
 import { getLastGitCommitDateByPath } from "@/lib/utils/gh"
 import { getMetadata } from "@/lib/utils/metadata"
 import { screens } from "@/lib/utils/screen"
@@ -140,13 +140,13 @@ export default async function Page({
   const requiredNamespaces = getRequiredNamespacesForPage("/get-eth")
   const messages = pick(allMessages, requiredNamespaces)
 
-  // const commitHistoryCache: CommitHistory = {}
-  // const { contributors, lastEditLocaleTimestamp } =
-  //   await getAppPageContributorInfo(
-  //     "get-eth",
-  //     locale as Lang,
-  //     commitHistoryCache
-  //   )
+  const commitHistoryCache: CommitHistory = {}
+  const { contributors, lastEditLocaleTimestamp } =
+    await getAppPageContributorInfo(
+      "get-eth",
+      locale as Lang,
+      commitHistoryCache
+    )
 
   return (
     <MainArticle>
@@ -403,11 +403,11 @@ export default async function Page({
           </div>
         </CalloutBanner>
 
-        {/* <FileContributors
+        <FileContributors
           className="border-t"
           contributors={contributors}
           lastEditLocaleTimestamp={lastEditLocaleTimestamp}
-        /> */}
+        />
 
         <FeedbackCard />
       </Stack>
