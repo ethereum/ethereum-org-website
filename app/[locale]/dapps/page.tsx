@@ -81,8 +81,8 @@ const Page = async ({ params }: { params: { locale: string } }) => {
                 className="flex flex-col rounded-3xl border border-[rgba(159,43,212,0.11)] bg-card-gradient-secondary p-6 hover:bg-card-gradient-secondary-hover hover:shadow-lg"
               >
                 <div className="mb-3 flex gap-4">
-                  <div>
-                    <category.icon className="text-primary" size={24} />
+                  <div className="mt-1">
+                    <category.icon className="h-8 w-8 text-primary" />
                   </div>
                   <div className="flex flex-col gap-2">
                     <LinkOverlay

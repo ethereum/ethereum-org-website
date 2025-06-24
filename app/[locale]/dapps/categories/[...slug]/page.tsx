@@ -8,7 +8,7 @@ import {
 
 import { DappCategoryEnum } from "@/lib/types"
 
-import { HubHero } from "@/components/Hero"
+import Breadcrumbs from "@/components/Breadcrumbs"
 import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
 
@@ -16,8 +16,6 @@ import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { dappsCategories } from "@/data/dapps/categories"
-
-import DappsHeroImage from "@/public/images/dapps/dapps-hero.png"
 
 const VALID_CATEGORIES = Object.values(DappCategoryEnum)
 
@@ -38,6 +36,7 @@ const Page = async ({
   const messages = pick(allMessages, requiredNamespaces)
 
   const category = dappsCategories[slug[0]]
+  const CategoryIcon = category.icon
 
   if (!isValidCategory(slug[0])) {
     notFound()
@@ -45,20 +44,19 @@ const Page = async ({
 
   return (
     <I18nProvider locale={locale} messages={messages}>
-      <HubHero
-        title="Use"
-        header={`${category.name} dapps`}
-        description={category.description}
-        heroImg={DappsHeroImage}
-      />
-
+      <div className="flex flex-row justify-between gap-4 px-4 py-10 md:px-8">
+        <div className="flex flex-1 flex-col gap-4">
+          <Breadcrumbs slug={"/dapps"} />
+          <h1>{category.name} dapps</h1>
+          <p>{category.description}</p>
+        </div>
+        <div className="flex flex-1 items-center justify-center">
+          <CategoryIcon className="h-36 w-52 text-primary" />
+        </div>
+      </div>
       <MainArticle className="flex flex-col gap-10 py-10">
         <div className="flex flex-col px-4 md:px-8">
           <h2>Highlights</h2>
-        </div>
-
-        <div className="flex flex-col px-4 md:px-8">
-          <h2>Staff picks</h2>
         </div>
 
         <div className="flex flex-col px-4 md:px-8">
