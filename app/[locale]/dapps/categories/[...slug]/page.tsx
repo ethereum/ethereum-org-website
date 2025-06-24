@@ -58,7 +58,7 @@ const Page = async ({
       </div>
 
       <div className="flex flex-col items-center gap-4 px-4 md:px-8">
-        <CategoriesNav />
+        <CategoriesNav activeCategory={slug[0]} />
       </div>
 
       <MainArticle className="flex flex-col gap-10 py-10">
