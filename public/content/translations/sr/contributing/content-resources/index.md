@@ -27,6 +27,6 @@ Edukativni resursi će biti ocenjivani prema sledećim kriterijumima:
 
 Ukoliko želite da dodate resurs za sadržaj na ethereum.org i ukoliko taj izvor ispunjava kriterijume, kreirajte upit na GitHub-u.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=">
+<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=">
   Kreirajte upit
 </ButtonLink>
