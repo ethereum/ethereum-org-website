@@ -8,7 +8,8 @@ import type { Frontmatter, ITutorial, Skill } from "@/lib/types"
 
 import { dateToString } from "@/lib/utils/date"
 
-import { CONTENT_DIR } from "@/lib/constants"
+import { INTERNAL_TUTORIALS_JSON } from "@/lib/constants"
+import { CONTENT_DIR, SITE_URL } from "@/lib/constants"
 
 import { toPosixPath } from "./relativePath"
 
@@ -61,46 +62,62 @@ export const getPostSlugs = async (dir: string, filterRegex?: RegExp) => {
 export const getTutorialsData = async (
   locale: string
 ): Promise<ITutorial[]> => {
-  const contentRoot = getContentRoot()
-  const fullPath = join(
-    contentRoot,
-    locale !== "en" ? `translations/${locale!}` : "",
-    "developers/tutorials"
-  )
   const tutorialData: ITutorial[] = []
 
-  const stats = await fsp.stat(fullPath)
-  if (!stats.isDirectory()) {
-    console.warn(`Tutorials directory not found for locale: ${locale}`)
-    return tutorialData // Return empty if the directory does not exist
-  }
+  const internalTutorialSlugs = await fsp
+    .readFile(INTERNAL_TUTORIALS_JSON, "utf-8")
+    .then((data) => JSON.parse(data) as string[])
 
-  const languageTutorialFiles = await fsp.readdir(fullPath)
+  // Fetch tutorials from public URLs in parallel
+  const tutorialPromises = internalTutorialSlugs.map(async (slug) => {
+    try {
+      const path =
+        locale !== "en"
+          ? `/content/translations/${locale}/developers/tutorials/${slug}/index.md`
+          : `/content/developers/tutorials/${slug}/index.md`
 
-  languageTutorialFiles.forEach(async (dir) => {
-    const filePath = join(
-      contentRoot,
-      locale !== "en" ? `translations/${locale!}` : "",
-      "developers/tutorials",
-      dir,
-      "index.md"
-    )
-    const fileContents = await fsp.readFile(filePath, "utf8")
-    const { data, content } = matter(fileContents)
-    const frontmatter = data as Frontmatter
+      const url = new URL(path, SITE_URL).toString()
 
-    tutorialData.push({
-      href: join(`/${locale}/developers/tutorials`, dir),
-      title: frontmatter.title,
-      description: frontmatter.description,
-      author: frontmatter.author || "",
-      tags: frontmatter.tags,
-      skill: frontmatter.skill as Skill,
-      timeToRead: Math.round(readingTime(content).minutes),
-      published: dateToString(frontmatter.published),
-      lang: frontmatter.lang,
-      isExternal: false,
-    })
+      const response = await fetch(url)
+      if (!response.ok) {
+        console.warn(
+          `Failed to fetch tutorial ${slug} for locale ${locale}: ${response.status}`
+        )
+        return null
+      }
+
+      const fileContents = await response.text()
+      const { data, content } = matter(fileContents)
+      const frontmatter = data as Frontmatter
+
+      return {
+        href: `/${locale}/developers/tutorials/${slug}`,
+        title: frontmatter.title,
+        description: frontmatter.description,
+        author: frontmatter.author || "",
+        tags: frontmatter.tags,
+        skill: frontmatter.skill as Skill,
+        timeToRead: Math.round(readingTime(content).minutes),
+        published: dateToString(frontmatter.published),
+        lang: frontmatter.lang,
+        isExternal: false,
+      }
+    } catch (error) {
+      console.warn(
+        `Error fetching tutorial ${slug} for locale ${locale}:`,
+        error
+      )
+      return null
+    }
+  })
+
+  const results = await Promise.all(tutorialPromises)
+
+  // Filter out null results (failed fetches)
+  results.forEach((tutorial) => {
+    if (tutorial) {
+      tutorialData.push(tutorial)
+    }
   })
 
   return tutorialData
