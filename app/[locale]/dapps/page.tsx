@@ -17,6 +17,7 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import { DAPPS_STAFF_PICK_DATA } from "@/data/dapps"
 import { dappsCategories } from "@/data/dapps/categories"
 
+import CategoriesNav from "./_components/CategoriesNav"
 import DappCard from "./_components/DappCard"
 import DappsHighlight from "./_components/DappsHighlight"
 import TopDapps from "./_components/TopDapps"
@@ -44,6 +45,10 @@ const Page = async ({ params }: { params: { locale: string } }) => {
             Learn about apps
           </ButtonLink>
         </div>
+      </div>
+
+      <div className="flex flex-col items-center gap-4 px-4 md:px-8">
+        <CategoriesNav />
       </div>
 
       <MainArticle className="flex flex-col gap-32 py-10">

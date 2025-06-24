@@ -17,6 +17,8 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { dappsCategories } from "@/data/dapps/categories"
 
+import CategoriesNav from "../../_components/CategoriesNav"
+
 const VALID_CATEGORIES = Object.values(DappCategoryEnum)
 
 const isValidCategory = (category: string): category is DappCategoryEnum =>
@@ -54,6 +56,11 @@ const Page = async ({
           <CategoryIcon className="h-36 w-52 text-primary" />
         </div>
       </div>
+
+      <div className="flex flex-col items-center gap-4 px-4 md:px-8">
+        <CategoriesNav />
+      </div>
+
       <MainArticle className="flex flex-col gap-10 py-10">
         <div className="flex flex-col px-4 md:px-8">
           <h2>Highlights</h2>
