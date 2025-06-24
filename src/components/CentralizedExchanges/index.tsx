@@ -1,3 +1,5 @@
+"use client"
+
 import { useLocale } from "next-intl"
 
 import type { ChildOnlyProp, Lang } from "@/lib/types"
@@ -79,11 +81,7 @@ const CentralizedExchanges = ({
   const lastUpdated = getLocaleTimestamp(locale as Lang, lastDataUpdateDate)
 
   return (
-    <div className="flex flex-col items-center">
-      <h2 className="mb-4">{t("page-get-eth-exchanges-header")}</h2>
-      <p className="mb-8 max-w-screen-md text-center">
-        {t("page-get-eth-exchanges-intro")}
-      </p>
+    <>
       <div className="relative z-50 w-full max-w-screen-sm">
         <Select
           instanceId="eth-exchange-region"
@@ -143,7 +141,7 @@ const CentralizedExchanges = ({
           </p>
         </>
       )}
-    </div>
+    </>
   )
 }
 
