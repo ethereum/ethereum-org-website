@@ -92,6 +92,10 @@ const Page = async ({ params }: { params: { locale: string } }) => {
             ))}
           </div>
         </div>
+
+        <div className="flex flex-col gap-4 px-4 md:px-8">
+          <h2>Community picks</h2>
+        </div>
       </MainArticle>
     </I18nProvider>
   )

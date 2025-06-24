@@ -11,16 +11,23 @@ import { DAPP_TAG_VARIANTS } from "@/data/dapps"
 interface DappCardProps {
   dapp: DappData
   imageSize: number
+  isVertical?: boolean
   showDescription?: boolean
 }
 
 const DappCard = ({
   dapp,
   imageSize,
+  isVertical = false,
   showDescription = false,
 }: DappCardProps) => {
   return (
-    <LinkBox className="flex flex-row gap-3 rounded-xl p-2 hover:bg-background-highlight">
+    <LinkBox
+      className={cn(
+        "group flex flex-row gap-3 rounded-xl p-2 hover:bg-background-highlight",
+        isVertical && "flex-col gap-3"
+      )}
+    >
       <div
         className={cn(
           "flex overflow-hidden rounded-xl border p-2",
@@ -29,7 +36,7 @@ const DappCard = ({
       >
         <Image src={dapp.image} alt={dapp.name} className="rounded-xl" />
       </div>
-      <div className="flex flex-1 flex-col">
+      <div className="flex flex-1 flex-col gap-1.5">
         <Tag
           size="small"
           className="w-fit py-0"
@@ -37,16 +44,21 @@ const DappCard = ({
         >
           {dapp.category}
         </Tag>
-        <LinkOverlay
-          className="text-lg font-bold text-body no-underline hover:text-primary"
-          href={`/dapps/${dapp.name}`}
-        >
+        <p className="text-lg font-bold leading-none text-body no-underline group-hover:text-primary">
           {dapp.name}
-        </LinkOverlay>
-        {showDescription && <div className="">{dapp.description}</div>}
-        <div className="text-sm text-body-medium">
+        </p>
+        {showDescription && (
+          <LinkOverlay
+            href={dapp.url}
+            target="_blank"
+            className="text-body no-underline group-hover:text-body"
+          >
+            {dapp.description}
+          </LinkOverlay>
+        )}
+        <p className="text-sm text-body-medium">
           {dapp.subCategory.map((subCategory) => subCategory).join(" ·  ")}
-        </div>
+        </p>
       </div>
     </LinkBox>
   )

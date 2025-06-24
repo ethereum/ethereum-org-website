@@ -64,6 +64,7 @@
     "howler": "^2.2.4",
     "htmr": "^1.0.2",
     "lodash": "^4.17.21",
+    "lucide-react": "^0.522.0",
     "next": "^14.2.30",
     "next-intl": "^3.26.3",
     "next-mdx-remote": "^5.0.0",
