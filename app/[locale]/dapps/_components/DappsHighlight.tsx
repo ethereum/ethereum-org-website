@@ -41,9 +41,9 @@ const DappsHighlight = () => {
 
       <div className="flex flex-col gap-4 md:hidden">
         <SwiperContainer>
-          <Swiper>
+          <Swiper slidesPerView={1.5} spaceBetween={16}>
             {DAPPS_HIGHLIGHT_DATA.map((dapp, index) => (
-              <SwiperSlide key={index}>
+              <SwiperSlide key={index} className="pr-4">
                 <LinkBox className="group w-full">
                   <LinkOverlay
                     href={dapp.url}
