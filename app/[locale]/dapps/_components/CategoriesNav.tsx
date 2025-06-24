@@ -28,10 +28,10 @@ const CategoriesNav = ({ activeCategory = "" }: { activeCategory: string }) => {
               className="absolute inset-0 z-0 rounded-xl bg-primary-low-contrast"
             />
           )}
-          <span>
+          <span className="relative z-10">
             <Icon className="h-4 w-4" />
           </span>
-          <span className="relative">{name}</span>
+          <span className="relative z-10">{name}</span>
         </ButtonLink>
       ))}
     </nav>
