@@ -13,6 +13,7 @@ interface DappCardProps {
   imageSize: number
   isVertical?: boolean
   showDescription?: boolean
+  hideTag?: boolean
 }
 
 const DappCard = ({
@@ -20,6 +21,7 @@ const DappCard = ({
   imageSize,
   isVertical = false,
   showDescription = false,
+  hideTag = false,
 }: DappCardProps) => {
   return (
     <LinkBox
@@ -37,13 +39,15 @@ const DappCard = ({
         <Image src={dapp.image} alt={dapp.name} className="rounded-xl" />
       </div>
       <div className="flex flex-1 flex-col gap-1.5">
-        <Tag
-          size="small"
-          className="w-fit py-0"
-          status={DAPP_TAG_VARIANTS[dapp.category]}
-        >
-          {dapp.category}
-        </Tag>
+        {!hideTag && (
+          <Tag
+            size="small"
+            className="w-fit py-0"
+            status={DAPP_TAG_VARIANTS[dapp.category]}
+          >
+            {dapp.category}
+          </Tag>
+        )}
         <p className="text-lg font-bold leading-none text-body no-underline group-hover:text-primary">
           {dapp.name}
         </p>

@@ -10,7 +10,7 @@ export const defiDapps: DefiDapp[] = [
       "Aave is a decentralized lending platform that allows users to lend and borrow assets.",
     image: AaveLogo,
     category: DappCategoryEnum.DEFI,
-    subCategory: ["Lending", "RWA"],
+    subCategory: ["Lending"],
     networks: ["Ethereum"],
   },
   {
@@ -20,7 +20,7 @@ export const defiDapps: DefiDapp[] = [
       "Aave is a decentralized lending platform that allows users to lend and borrow assets.",
     image: AaveLogo,
     category: DappCategoryEnum.DEFI,
-    subCategory: ["Lending", "RWA"],
+    subCategory: ["RWA"],
     networks: ["Ethereum"],
   },
   {
@@ -30,7 +30,7 @@ export const defiDapps: DefiDapp[] = [
       "Aave is a decentralized lending platform that allows users to lend and borrow assets.",
     image: AaveLogo,
     category: DappCategoryEnum.DEFI,
-    subCategory: ["Lending", "RWA"],
+    subCategory: ["DEX"],
     networks: ["Ethereum"],
   },
   {
@@ -40,7 +40,7 @@ export const defiDapps: DefiDapp[] = [
       "Aave is a decentralized lending platform that allows users to lend and borrow assets.",
     image: AaveLogo,
     category: DappCategoryEnum.DEFI,
-    subCategory: ["Lending", "RWA"],
+    subCategory: ["Liquid staking"],
     networks: ["Ethereum"],
   },
   {
@@ -50,7 +50,7 @@ export const defiDapps: DefiDapp[] = [
       "Aave is a decentralized lending platform that allows users to lend and borrow assets.",
     image: AaveLogo,
     category: DappCategoryEnum.DEFI,
-    subCategory: ["Lending", "RWA"],
+    subCategory: ["Lending"],
     networks: ["Ethereum"],
   },
 ]

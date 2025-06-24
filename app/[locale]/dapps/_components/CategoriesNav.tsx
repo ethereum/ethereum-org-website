@@ -10,7 +10,7 @@ import { dappsCategories } from "@/data/dapps/categories"
 
 const CategoriesNav = ({ activeCategory = "" }: { activeCategory: string }) => {
   return (
-    <nav className="inline-flex w-fit gap-1 overflow-x-auto bg-background p-2 shadow md:rounded-2xl md:border md:p-0.5 md:shadow-lg">
+    <nav className="inline-flex w-fit gap-1 overflow-x-auto rounded-2xl bg-background p-0.5 shadow md:border md:shadow-lg">
       {Object.values(dappsCategories).map(({ name, icon: Icon }) => (
         <ButtonLink
           key={name}

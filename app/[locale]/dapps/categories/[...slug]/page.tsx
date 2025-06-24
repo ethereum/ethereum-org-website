@@ -15,9 +15,12 @@ import MainArticle from "@/components/MainArticle"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
+import { DAPPS_DATA } from "@/data/dapps"
 import { dappsCategories } from "@/data/dapps/categories"
 
 import CategoriesNav from "../../_components/CategoriesNav"
+import DappsHighlight from "../../_components/DappsHighlight"
+import DappsTable from "../../_components/DappsTable"
 
 const VALID_CATEGORIES = Object.values(DappCategoryEnum)
 
@@ -64,10 +67,11 @@ const Page = async ({
       <MainArticle className="flex flex-col gap-10 py-10">
         <div className="flex flex-col px-4 md:px-8">
           <h2>Highlights</h2>
+          <DappsHighlight />
         </div>
 
         <div className="flex flex-col px-4 md:px-8">
-          <h2>All {category.name} dapps</h2>
+          <DappsTable dapps={DAPPS_DATA[category.name]} />
         </div>
       </MainArticle>
     </I18nProvider>
