@@ -1,4 +1,5 @@
 import { pick } from "lodash"
+import dynamic from "next/dynamic"
 import {
   getMessages,
   getTranslations,
@@ -10,14 +11,36 @@ import { Lang } from "@/lib/types"
 import FeedbackCard from "@/components/FeedbackCard"
 import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
+import { Skeleton, SkeletonCardContent } from "@/components/ui/skeleton"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getTutorialsData } from "@/lib/utils/md"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
-import TutorialSubmitModal from "./_components/modal"
-import TutorialsList from "./_components/tutorials"
+const TutorialsList = dynamic(() => import("./_components/tutorials"), {
+  ssr: false,
+  loading: () => (
+    <div className="mt-8 w-full md:w-2/3">
+      <div className="flex w-full flex-wrap gap-2 px-8 pb-16 pt-12 lg:grid lg:grid-cols-3 lg:gap-4 xl:grid-cols-4 2xl:grid-cols-5">
+        {Array.from({ length: 30 }).map((_, index) => (
+          <Skeleton key={index} className="h-8 rounded-full" />
+        ))}
+      </div>
+      <SkeletonCardContent className="p-8" />
+      <SkeletonCardContent className="p-8" />
+    </div>
+  ),
+})
+
+const TutorialSubmitModal = dynamic(() => import("./_components/modal"), {
+  ssr: false,
+  loading: () => (
+    <div className="w-full max-w-40 rounded border p-3">
+      <Skeleton className="h-5 w-full" />
+    </div>
+  ),
+})
 
 const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const { locale } = await params
