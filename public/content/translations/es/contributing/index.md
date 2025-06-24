@@ -25,7 +25,6 @@ Ethereum.org es un proyecto gestionado de código abierto con más de **12.000**
 - [Cree/edite contenido](/contributing/#how-to-update-content): sugiera crear nuevas páginas o hacer ajustes al contenido actual
 - [Añada recursos para la comunidad](/contributing/content-resources/): agregue un artículo o recurso útil a una página relevante
 - [Sugiera un recurso de diseño](/contributing/design/adding-design-resources/): sume, actualce o elimine recursos de diseño útiles
-- [Agregue un término al glosario](/contributing/adding-glossary-terms/): ayúdenos a expandir el [glosario](/glossary/) de Ethereum
 - [Cuestionarios](/contributing/quizzes/): agregue, edite y elimine bancos de preguntas de cuestionarios para páginas relevantes
 
 **Ideas de funcionalides/características**
@@ -90,7 +89,7 @@ Tenemos temas u opciones con barrera baja de entrada, o pocos requisitos, en nue
 
 Si su contribución se usa en ethereum.org, tendrá la oportunidad de reclamar una insignia especial en [Galxe](https://app.galxe.com/quest/ethereumorg). Un token de logro en cadena (OAT, Onchain Achievement Token) es una prueba de que ayudó a hacer el ecosistema un poco más increíble.
 
-[Más sobre los OAT](https://help.galxe.com/en/articles/7067290-galxe-oats-reward-and-celebrate-achievements)
+[Más sobre los OAT](https://help.galxe.com/en/articles/9645630-create-quest-rewards#h_1c5d63ba03)
 
 ### Cómo reclamarlo
 1. Únase a nuestro [servidor de Discord](https://discord.gg/ethereum-org).

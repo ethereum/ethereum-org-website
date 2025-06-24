@@ -1,4 +1,4 @@
-import pick from "lodash.pick"
+import { pick } from "lodash"
 import {
   getMessages,
   getTranslations,
@@ -59,10 +59,8 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
       return {
         ...network,
         txCosts: growThePieData.dailyTxCosts[network.growthepieID],
-        tvl: l2beatData.data.projects[network.l2beatID].tvs.breakdown.total,
-        networkMaturity: networkMaturity(
-          l2beatData.data.projects[network.l2beatID]
-        ),
+        tvl: l2beatData.projects[network.l2beatID].tvs.breakdown.total,
+        networkMaturity: networkMaturity(l2beatData.projects[network.l2beatID]),
         activeAddresses: growThePieData.activeAddresses[network.growthepieID],
         blockspaceData:
           (growThePieBlockspaceData || {})[network.growthepieID] || null,

@@ -19,7 +19,7 @@ Is eagraíocht faoi chomhúinéireacht é DAO a oibríonn i dtreo misean comhroi
 
 Ligeann DAO dúinn oibriú le daoine den mheon céanna ar fud na cruinne gan muinín a bheith againn as ceannaire carthanach chun na cistí nó na hoibríochtaí a bhainistiú. Níl aon CEO ann ar féidir leis airgead a chaitheamh gan mhachnamh nó níl aon CFO atá in ann na leabhair a chúbláil. Ina áit sin, trí na rialacha atá bunaithe ar bhlocshlabhra a chuirtear isteach sa chód sainítear conas a oibríonn an eagraíocht agus conas a chaitear cistí.
 
-Tá stórais ionsuite acu nach bhfuil an t‑údarás ag éinne rochtain a fháil orthu gan cead a fháil ón ngrúpa. Decisions are governed by proposals and voting to ensure everyone in the organization has a voice, and everything happens transparently [onchain](/glossary/#onchain).
+Tá stórais ionsuite acu nach bhfuil an t‑údarás ag éinne rochtain a fháil orthu gan cead a fháil ón ngrúpa. Tá cinntí á rialú ag moltaí agus vótáil lena chinntiú go mbíonn guth ag gach duine san eagraíocht, agus go dtarlaíonn gach rud go trédhearcach [ar slabhra](/glossary/#onchain).
 
 ## Cén fáth a bhfuil DAO ag teastáil uainn? {#why-dao}
 
@@ -120,7 +120,7 @@ _Úsáidtear é go hiondúil le haghaidh eagraíochtaí atá níos dlúithe, at�
 
 ### Ballraíocht bunaithe ar cháil {#reputation-based-membership}
 
-Trí cháil an duine léirítear cruthúnas na rannpháirtíochta agus bronntar cead vótála sa DAO. Murab ionann agus ballraíocht atá bunaithe ar chomharthaí nó scaireanna, ní aistríonn DAOnna atá bunaithe ar cháil úinéireacht chuig rannpháirtithe. Ní féidir cáil a cheannach, a aistriú nó a tharmligean; ní mór do bhaill an DAO clú a thuilleamh tríd an rannpháirtíocht. Onchain voting is permissionless and prospective members can freely submit proposals to join the DAO and request to receive reputation and tokens as a reward in exchange for their contributions.
+Trí cháil an duine léirítear cruthúnas na rannpháirtíochta agus bronntar cead vótála sa DAO. Murab ionann agus ballraíocht atá bunaithe ar chomharthaí nó scaireanna, ní aistríonn DAOnna atá bunaithe ar cháil úinéireacht chuig rannpháirtithe. Ní féidir cáil a cheannach, a aistriú nó a tharmligean; ní mór do bhaill an DAO clú a thuilleamh tríd an rannpháirtíocht. Ní cheadaítear vótáil ar shlabhra agus is féidir le baill ionchasacha tograí a chur isteach go héasca chun dul isteach san OAC agus iarraidh orthu clú agus comharthaí a fháil mar luach saothair mar mhalairt ar a gcuid ranníocaíochtaí.
 
 _Úsáidtear é go hiondúil le haghaidh forbairt díláraithe agus rialachas prótacail agus [daipeanna](/glossary/#dapp), ach a oireann go maith freisin do shraith éagsúil eagraíochtaí amhail carthanachtaí, grúpaí oibrithe, clubanna infheistíochta, srl._
 
