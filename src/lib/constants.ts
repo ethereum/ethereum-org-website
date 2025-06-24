@@ -44,7 +44,7 @@ export const GITHUB_URL = `https://github.com/`
 export const COINGECKO_API_BASE_URL =
   "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&category="
 export const COINGECKO_API_URL_PARAMS =
-  "&order=market_cap_desc&per_page=100&page=1&sparkline=false"
+  "&order=market_cap_desc&per_page=250&page=1&sparkline=false"
 export const BASE_TIME_UNIT = 3600 // 1 hour
 export const COLOR_MODE_STORAGE_KEY = "theme"
 
@@ -177,6 +177,7 @@ export const RSS_DISPLAY_COUNT = 6
 
 export const VITALIK_FEED = "https://vitalik.eth.limo/feed.xml"
 export const SOLIDITY_FEED = "https://soliditylang.org/feed.xml"
+export const ATTESTANT_BLOG = "https://www.attestant.io/posts/"
 
 export const COMMUNITY_BLOGS: CommunityBlog[] = [
   {
@@ -199,10 +200,7 @@ export const COMMUNITY_BLOGS: CommunityBlog[] = [
     name: "0xPARC",
     href: "https://0xparc.org/blog",
   },
-  {
-    href: "https://www.attestant.io/posts/",
-    feed: "https://www.attestant.io/posts/",
-  },
+  { href: ATTESTANT_BLOG, feed: ATTESTANT_BLOG },
   { name: "Devcon", href: "https://devcon.org/en/blogs/" },
   {
     href: "https://soliditylang.org/blog/",

@@ -82,7 +82,7 @@ Une fois que vous avez terminé la traduction (c'est-à-dire que tous les fichie
 
 ### Nous contacter {#get-in-touch}
 
-Vous avez d'autres questions ? Ou souhaitez-vous collaborer avec notre équipe et d'autres traducteurs ? Envoyez un message dans le canal #translations sur notre [serveur Discord ethereum.org](/discord/)
+Avez-vous d'autres questions ? Ou souhaitez-vous collaborer avec notre équipe et d'autres traducteurs ? Envoyez un message dans le canal #translations sur notre [serveur Discord ethereum.org](/discord/)
 
 Vous pouvez également nous contacter à l'adresse translations@ethereum.org
 
