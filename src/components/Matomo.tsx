@@ -2,7 +2,11 @@
 
 import { useEffect, useState } from "react"
 import { usePathname } from "next/navigation"
-import { init, push } from "@socialgouv/matomo-next"
+import { init /* , push */ } from "@socialgouv/matomo-next"
+
+const push = (args: unknown[]) => {
+  console.log(`[Matomo] push called with args:`, args)
+}
 
 export default function Matomo() {
   const pathname = usePathname()
@@ -17,6 +21,10 @@ export default function Matomo() {
         siteId: process.env.NEXT_PUBLIC_MATOMO_SITE_ID!,
       })
 
+      console.log(
+        "[Matomo] initialized with URL:",
+        process.env.NEXT_PUBLIC_MATOMO_URL
+      )
       setInited(true)
     }
   }, [inited])

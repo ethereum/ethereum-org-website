@@ -23,8 +23,4 @@ export const trackCustomEvent = ({
   // Set custom URL removing any query params or hash fragments
   window && push([`setCustomUrl`, window.location.href.replace(/[?#].*$/, "")])
   push([`trackEvent`, eventCategory, eventAction, eventName, eventValue])
-
-  console.debug(
-    `[Matomo] event tracked, category: ${eventCategory}, action: ${eventAction}, name: ${eventName}, value: ${eventValue}`
-  )
 }
