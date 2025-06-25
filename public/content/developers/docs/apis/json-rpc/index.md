@@ -445,7 +445,7 @@ None
 
 **Returns**
 
-`Boolean` - returns `true` of the client is mining, otherwise `false`.
+`Boolean` - returns `true` if the client is mining, otherwise `false`.
 
 **Example**
 
