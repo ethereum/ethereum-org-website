@@ -28,7 +28,7 @@ ABTEST_MY_TEST_NAME_VARIANTS="original:50,variant_b:50"
 
 ### 2. Add the Test Config
 
-Update `src/lib/utils/ab-testing-config.ts`:
+Update `src/lib/ab-testing/config.ts`:
 
 ```typescript
 export const getABTestConfigs = (): Record<string, ABTestConfig> => {
