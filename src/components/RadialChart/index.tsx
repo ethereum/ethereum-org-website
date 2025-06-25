@@ -73,34 +73,36 @@ const RadialChart = ({
 
   return (
     <div className={cn("flex flex-col items-center", className)}>
-      <div className="relative overflow-hidden">
-        <RadialBarChart
-          width={170}
-          height={90}
-          cx={85}
-          cy={80}
-          innerRadius={70}
-          outerRadius={100}
-          barSize={10}
-          data={data}
-          startAngle={185}
-          endAngle={-5}
-        >
-          <PolarAngleAxis
-            type="number"
-            domain={[0, totalValue || 100]}
-            angleAxisId={0}
-            tick={false}
-          />
-          <RadialBar
-            background={{ fill: "hsla(var(--body-light))", strokeWidth: 1 }}
-            dataKey="value"
-            cornerRadius={16}
-            fill="hsla(var(--accent-a))"
-          />
-        </RadialBarChart>
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 transform text-3xl font-black">
-          {displayValue || value}
+      <div className="overflow-hidden">
+        <div className="relative">
+          <RadialBarChart
+            width={170}
+            height={90}
+            cx={85}
+            cy={80}
+            innerRadius={70}
+            outerRadius={100}
+            barSize={10}
+            data={data}
+            startAngle={185}
+            endAngle={-5}
+          >
+            <PolarAngleAxis
+              type="number"
+              domain={[0, totalValue || 100]}
+              angleAxisId={0}
+              tick={false}
+            />
+            <RadialBar
+              background={{ fill: "hsla(var(--body-light))", strokeWidth: 1 }}
+              dataKey="value"
+              cornerRadius={16}
+              fill="hsla(var(--accent-a))"
+            />
+          </RadialBarChart>
+          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 transform text-3xl font-black">
+            {displayValue || value}
+          </div>
         </div>
       </div>
       <div className="mt-4 text-center">
