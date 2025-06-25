@@ -614,11 +614,11 @@ def burn(_tokenId: uint256):
 
 Toute personne autorisée à transférer un jeton est autorisée à le détruire. Bien que détruire un jeton semble équivalent à le transférer à l'adresse zéro, celle-ci ne reçoit pas réellement le jeton. Cela nous permet de libérer tout l'espace de stockage qui était utilisé pour le jeton, ce qui peut réduire les frais de gaz de la transaction.
 
-# Utiliser ce contrat {#using-contract}
+## Utiliser ce contrat {#using-contract}
 
 Contrairement à Solidity, Vyper n'a pas de système d'héritage. Il s'agit d'un choix de conception délibéré visant à rendre le code plus clair et donc plus facile à sécuriser. Donc pour créer votre propre contrat Vyper ERC-721, vous prenez [ce contrat](https://github.com/vyperlang/vyper/blob/master/examples/tokens/ERC721.vy) puis vous le modifiez en fonction de la stratégie commerciale que vous souhaitez mettre en œuvre.
 
-## Conclusion {#conclusion}
+### Conclusion {#conclusion}
 
 Voici les principaux points à retenir sur ce contrat :
 

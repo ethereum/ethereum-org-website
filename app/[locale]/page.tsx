@@ -451,7 +451,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           </Link>
         </p>
       </BannerNotification>
-      <HomeHero heroImg={Hero} className="w-full" />
+      <HomeHero heroImg={Hero} className="w-full" locale={locale} />
       <div className="w-full space-y-32 px-4 md:mx-6 lg:space-y-48">
         <div className="my-20 grid w-full grid-cols-2 gap-x-4 gap-y-8 md:grid-cols-4 md:gap-x-10">
           {subHeroCTAs.map(
@@ -543,7 +543,18 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               </p>
               <ActivityStats metrics={metrics} />
 
-              <div className="mt-12 flex justify-center">
+              <div className="mt-12 flex flex-wrap gap-6 py-8">
+                <ButtonLink
+                  size="lg"
+                  href="/enterprise/"
+                  customEventOptions={{
+                    eventCategory: eventCategory,
+                    eventAction: "ethereum_activity",
+                    eventName: "enterprise",
+                  }}
+                >
+                  {t("page-index-activity-action-primary")} <ChevronNext />
+                </ButtonLink>
                 <ButtonLink
                   size="lg"
                   href="/resources/"

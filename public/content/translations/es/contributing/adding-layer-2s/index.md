@@ -92,6 +92,6 @@ _No consideramos que otras soluciones de escalabilidad que no utilicen Ethereum 
 
 Si quiere añadir una capa 2 a ethereum.org, cree una incidencia en GitHub.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml">
+<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml">
   Crear una incidencia
 </ButtonLink>

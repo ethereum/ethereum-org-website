@@ -233,14 +233,14 @@
     --shadow-window-box-5-opacity: 0.06;
 
     /* Staking */
-    --staking-gold: #f2bb2f;
-    --staking-gold-fill: #373228;
-    --staking-green: #49de96;
-    --staking-green-fill: #30342b;
-    --staking-blue: #a9d3f2;
-    --staking-blue-fill: #2b352f;
-    --staking-red: #d6bbb9;
-    --staking-red-fill: #313432;
+    --staking-gold: 43, 86%, 57%;
+    --staking-gold-fill: 36, 16%, 19%;
+    --staking-green: 151, 74%, 58%;
+    --staking-green-fill: 90, 10%, 19%;
+    --staking-blue: 204, 76%, 81%;
+    --staking-blue-fill: 150, 10%, 19%;
+    --staking-red: 6, 24%, 78%;
+    --staking-red-fill: 140, 3%, 19%;
 
     --shadow-widget: -2px 2px 12px 1px rgba(255, 255, 255, 0.04), -6px 6px 12px -3px rgba(255, 255, 255, 0.04), -12px 12px 24px -6px rgba(255, 255, 255, 0.04), -20px 20px 40px -12px rgba(255, 255, 255, 0.04);
   }
