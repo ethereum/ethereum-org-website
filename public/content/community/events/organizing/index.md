@@ -188,7 +188,7 @@ When organizing an event, there are several essential legal and logistical consi
 
 - **Sponsorship agreement** – Ensure you have a clear contract for sponsors, including a well-defined cancellation policy.
 - **Code of conduct** – Prepare a Code of Conduct tailored to the specific event type (conference/hackathon, hacker houses etc).
-- **Privacy policy** – Draft a privacy policy for your website to comply with data protection regulations and imae
+- **Privacy policy** – Draft a privacy policy for your website to comply with data protection regulations and image
 - **Local authorities notification** – Even if your event is a closed gathering, it is advisable to report it to the local police station.
 - **Ticketing agreement** – Establish a formal agreement with your ticketing service provider to clarify terms and responsibilities.
 - **Regulatory compliance** – Check in advance if the country where you are hosting the conference has specific regulations or restrictions for the crypto industry
@@ -211,7 +211,7 @@ Template:
 
 - [Ethereum event checklist](https://cryptpad.fr/sheet/#/2/sheet/view/yhGnwo2bKxgA13SnkG9tS76+0+MtO0I6ZUFYEYP0J7w/)
 
-Podcast: How to organise and promote an ETH event from A-Z:
+Podcast: How to organize and promote an ETH event from A-Z:
 
 - [The ETHWarsaw case study, by Out of Ordinary](https://www.youtube.com/watch?v=io2Dx1ouz8o)
 
