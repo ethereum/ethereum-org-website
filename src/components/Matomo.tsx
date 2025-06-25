@@ -2,13 +2,9 @@
 
 import { useEffect, useState } from "react"
 import { usePathname } from "next/navigation"
-import { init /* , push */ } from "@socialgouv/matomo-next"
+import { init, push } from "@socialgouv/matomo-next"
 
 import { IS_PREVIEW_DEPLOY } from "@/lib/utils/env"
-
-const push = (args: unknown[]) => {
-  console.log(`[Matomo] push called with args:`, args)
-}
 
 export default function Matomo() {
   const pathname = usePathname()
