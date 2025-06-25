@@ -160,10 +160,10 @@ const CommunityPage = () => {
     <Page>
       <HubHero {...heroContent} />
       <Divider />
-      <Flex className="-mt-px h-full w-full flex-row-reverse items-center border-b border-b-border-high-contrast bg-[#ccfcff] py-8 ps-0 lg:h-[720px] lg:py-0 lg:ps-8 dark:bg-[#293233]">
+      <Flex className="-mt-px w-full flex-row-reverse items-center border-b border-b-border-high-contrast py-8 ps-0 lg:py-0 lg:ps-8">
         <Content>
-          <Flex className="mb-8 flex-col items-center">
-            <H2>{t("page-community-why-get-involved-title")}</H2>
+          <Flex className="flex-col items-center">
+            <H2 className="lg:text-4xl">{t("page-community-why-get-involved-title")}</H2>
           </Flex>
           <CardContainer>
             {whyGetInvolvedCards.map((card, idx) => (
