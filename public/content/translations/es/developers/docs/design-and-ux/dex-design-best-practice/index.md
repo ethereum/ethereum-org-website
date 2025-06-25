@@ -180,7 +180,7 @@ La ley de proximidad establece que los elementos que están cerca se perciben co
 
 En última instancia, hay ventajas y desventajas para ambas opciones, pero es interesante cómo la tendencia parece ser colocar el token del lado derecho.
 
-# Comportamiento del botón {#button-behavior}
+## Comportamiento del botón {#button-behavior}
 
 No tenga un botón separado para Aprobar. Tampoco tenga un clic separado para Aprobar. El usuario quiere intercambiar, así que solo tiene que decir "intercambiar" en el botón e iniciar la aprobación como primer paso. Un modal puede mostrar el progreso con un paso a paso, o una simple notificación "tx 1 de 2 - aprobación".
 
@@ -188,7 +188,7 @@ No tenga un botón separado para Aprobar. Tampoco tenga un clic separado para Ap
 
 ![Una interfaz de usuario con un botón que dice aprobar](./15.png)
 
-## Botón como ayuda contextual {#button-as-contextual-help}
+### Botón como ayuda contextual {#button-as-contextual-help}
 
 El botón puede tener una doble función como una ¡alerta!
 
@@ -206,7 +206,7 @@ El botón también puede ser **mapeado a la acción** a realizar. Por ejemplo, s
 
 ![Mensaje de error mostrado en el CTA principal](./17.png)
 
-## Construya el suyo con este archivo figma {#build-your-own-with-this-figma-file}
+### Construya el suyo con este archivo figma {#build-your-own-with-this-figma-file}
 
 Gracias a la ardua labor de múltiples protocolos, el diseño de DEX ha mejorado mucho. Sabemos qué información necesita el usuario, cómo debemos mostrarla y cómo hacer que el flujo sea lo más fluido posible.
 Esperamos que este artículo ofrezca una sólida visión general de los principios de la UX.

@@ -3040,7 +3040,12 @@
       "name": "LukaK",
       "avatar_url": "https://avatars.githubusercontent.com/u/37338979?v=4",
       "profile": "https://github.com/lukassim",
-      "contributions": ["content", "ideas"]
+      "contributions": [
+        "content",
+        "ideas",
+        "translation",
+        "bug"
+      ]
     },
     {
       "login": "lukeingalls",
@@ -9662,7 +9667,9 @@
       "name": "Nik-EpicWeb3",
       "avatar_url": "https://avatars.githubusercontent.com/u/214466248?v=4",
       "profile": "https://github.com/Nik-EpicWeb3",
-      "contributions": ["eventOrganizing"]
+      "contributions": [
+        "eventOrganizing"
+      ]
     }
   ],
   "contributorsPerLine": 7,
