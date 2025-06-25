@@ -22,13 +22,15 @@ const widths = [
   "w-1/5",
 ]
 
-const Skeleton = ({
-  className,
-  ...props
-}: React.HTMLAttributes<HTMLDivElement>) => {
+type SkeletonProps = React.HTMLAttributes<HTMLDivElement>
+
+const Skeleton = ({ className, ...props }: SkeletonProps) => {
   return (
     <div
-      className={cn("h-4 animate-pulse rounded bg-disabled/20", className)}
+      className={cn(
+        "h-4 animate-pulse-light rounded bg-disabled opacity-5 dark:opacity-60",
+        className
+      )}
       {...props}
     />
   )
