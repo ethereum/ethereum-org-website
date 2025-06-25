@@ -43,6 +43,7 @@ const Nav = () => {
             href="/"
             aria-label={t("home")}
             className="inline-flex items-center no-underline"
+            data-testid="nav-logo"
           >
             <EthHomeIcon className="h-[35px] w-[22px] opacity-85 hover:opacity-100" />
           </BaseLink>
@@ -63,7 +64,11 @@ const Nav = () => {
                   <div className="flex items-center">
                     {/* Desktop */}
                     <div className="hidden md:flex">
-                      <SearchButton className="xl:hidden" onClick={onOpen} />
+                      <SearchButton
+                        className="xl:hidden"
+                        data-testid="search-button-desktop"
+                        onClick={onOpen}
+                      />
                       <SearchInputButton
                         className="hidden xl:flex"
                         onClick={onOpen}
@@ -73,7 +78,10 @@ const Nav = () => {
 
                     <div className="flex md:hidden">
                       {/* Mobile */}
-                      <SearchButton onClick={onOpen} />
+                      <SearchButton
+                        data-testid="search-button-mobile"
+                        onClick={onOpen}
+                      />
                       <MobileNavMenu
                         toggleColorMode={toggleColorMode}
                         linkSections={linkSections}

@@ -7,7 +7,7 @@ const SearchModal = (props: ModalPropsNoScroll & { className?: string }) => {
   const { className, ...docModalProps } = props
   const windowScrollY = typeof window === "undefined" ? 0 : window.scrollY
   return (
-    <div className={className}>
+    <div className={className} data-testid="search-modal">
       <DocSearchModal initialScrollY={windowScrollY} {...docModalProps} />
     </div>
   )
