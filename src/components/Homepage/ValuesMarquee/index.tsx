@@ -195,7 +195,12 @@ const ValuesMarquee = ({
             eventCategory={eventCategory}
             direction={direction}
           >
-            <Check className="me-1 text-success group-hover/item:text-white" />
+            <Check
+              className="me-1 size-[1em] text-success group-hover/item:text-white"
+              strokeWidth={4.5}
+              strokeLinecap="square"
+              strokeLinejoin="miter"
+            />
             {pairing.ethereum.label}
           </Item>
         ))}
