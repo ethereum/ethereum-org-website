@@ -24,11 +24,12 @@ const TutorialsList = dynamic(() => import("./_components/tutorials"), {
     <div className="mt-8 w-full md:w-2/3">
       <div className="flex w-full flex-wrap gap-2 px-8 pb-16 pt-12 lg:grid lg:grid-cols-3 lg:gap-4 xl:grid-cols-4 2xl:grid-cols-5">
         {Array.from({ length: 30 }).map((_, index) => (
-          <Skeleton key={index} className="h-8 rounded-full" />
+          <Skeleton key={"tag" + index} className="h-8 rounded-full" />
         ))}
       </div>
-      <SkeletonCardContent className="p-8" />
-      <SkeletonCardContent className="p-8" />
+      {Array.from({ length: 5 }).map((_, index) => (
+        <SkeletonCardContent key={"card" + index} className="p-8" />
+      ))}
     </div>
   ),
 })
