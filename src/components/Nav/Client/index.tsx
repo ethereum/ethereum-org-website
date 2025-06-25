@@ -7,7 +7,6 @@ import { BsTranslate } from "react-icons/bs"
 
 import SearchButton from "@/components/Search/SearchButton"
 import SearchInputButton from "@/components/Search/SearchInputButton"
-import { Button } from "@/components/ui/buttons/Button"
 import { Skeleton } from "@/components/ui/skeleton"
 
 import { DESKTOP_LANGUAGE_BUTTON_NAME } from "@/lib/constants"
@@ -17,6 +16,19 @@ import { useThemeToggle } from "../useThemeToggle"
 
 import { useBreakpointValue } from "@/hooks/useBreakpointValue"
 import { useTranslation } from "@/hooks/useTranslation"
+
+const Button = dynamic(
+  () => import("../../ui/buttons/Button").then((mod) => mod.Button),
+  {
+    ssr: false,
+    loading: () => (
+      <Skeleton
+        data-label="mobile-menu"
+        className="mx-3 size-6 px-3 max-md:hidden"
+      />
+    ),
+  }
+)
 
 const Menu = dynamic(() => import("../Menu"), {
   ssr: false,
