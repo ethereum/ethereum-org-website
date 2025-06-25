@@ -1,6 +1,5 @@
 import React, { useState } from "react"
-import reverse from "lodash/reverse"
-import sortBy from "lodash/sortBy"
+import { reverse, sortBy } from "lodash"
 
 import type { CostLeaderboardData } from "@/lib/types"
 

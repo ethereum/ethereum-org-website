@@ -22,7 +22,7 @@ Some popular exchanges are:
 - [Uniswap](https://app.uniswap.org/#/swap)
 - [Sushiswap](https://www.sushi.com/swap)
 - [1Inch](https://app.1inch.io/#/1/unified/swap/ETH/DAI)
-- [Curve](https://curve.fi/#/ethereum/swap)
+- [Curve](https://www.curve.finance/dex/ethereum/swap/)
 
 Interesting? Learn more about what [decentralised finance (DeFi)](/defi/) is and how these new kinds of exchanges work.
 

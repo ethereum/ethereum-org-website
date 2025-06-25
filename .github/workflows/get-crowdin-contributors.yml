@@ -12,16 +12,22 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v3
 
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 20
+          cache: 'pnpm'
 
       - name: Install dependencies
-        run: yarn install
+        run: pnpm install
 
       - name: Install ts-node
-        run: yarn global add ts-node
+        run: pnpm add -g ts-node
 
       - name: Set up git
         run: |

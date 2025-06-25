@@ -1,7 +1,7 @@
 # The ethereum.org website stack
 
 - [Node.js](https://nodejs.org/)
-- [Yarn package manager](https://yarnpkg.com/cli/install)
+- [pnpm](https://pnpm.io/) - Fast, disk space efficient package manager
 - [NextJS](https://nextjs.org/)
   - React framework that provides some goodies out of the box (pages router, SSG, SSR, i18n support, Image component, etc)
   - Configurable in `next.config.js`

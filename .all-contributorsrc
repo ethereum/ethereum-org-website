@@ -4039,7 +4039,9 @@
       "profile": "https://github.com/lukassim",
       "contributions": [
         "content",
-        "ideas"
+        "ideas",
+        "translation",
+        "bug"
       ]
     },
     {
@@ -11685,7 +11687,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/6020891?v=4",
       "profile": "http://www.edukids.cz",
       "contributions": [
-        "eventOrganizing"
+        "eventOrganizing",
+        "maintenance"
       ]
     },
     {
@@ -12730,7 +12733,10 @@
       "name": "João Paulo Hotequil",
       "avatar_url": "https://avatars.githubusercontent.com/u/46814712?v=4",
       "profile": "https://github.com/hotequil",
-      "contributions": ["code", "translation"]
+      "contributions": [
+        "code",
+        "translation"
+      ]
     },
     {
       "login": "microHoffman",
@@ -12748,6 +12754,51 @@
       "profile": "https://github.com/smithrashell",
       "contributions": [
         "bug"
+      ]
+    },
+    {
+      "login": "aolson078",
+      "name": "Alex Olson",
+      "avatar_url": "https://avatars.githubusercontent.com/u/69769089?v=4",
+      "profile": "https://github.com/aolson078",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "adminsuci",
+      "name": "SUCI - Blockchain Hub Team",
+      "avatar_url": "https://avatars.githubusercontent.com/u/155696196?v=4",
+      "profile": "https://www.suci.io/",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "Nik-EpicWeb3",
+      "name": "Nik-EpicWeb3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/214466248?v=4",
+      "profile": "https://github.com/Nik-EpicWeb3",
+      "contributions": [
+        "eventOrganizing"
+      ]
+    },
+    {
+      "login": "kichong",
+      "name": "kichong",
+      "avatar_url": "https://avatars.githubusercontent.com/u/38249409?v=4",
+      "profile": "https://github.com/kichong",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "zeevick10",
+      "name": "FT",
+      "avatar_url": "https://avatars.githubusercontent.com/u/140458077?v=4",
+      "profile": "https://github.com/zeevick10",
+      "contributions": [
+        "content"
       ]
     }
   ],

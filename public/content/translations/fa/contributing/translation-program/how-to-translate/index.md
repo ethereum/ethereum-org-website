@@ -18,7 +18,7 @@ description: راهنمای استفاده از Crowdin جهت ترجمه‌ eth
 
 شما باید به حساب کاربری خود در Crowdin وارد شوید و یا اگر از قبل حسابی ندارید، ثبت‌نام کنید. برای ثبت نام تنها چیزی که لازم است یک حساب ایمیل و رمز عبور است.
 
-<ButtonLink to="https://crowdin.com/project/ethereum-org/">
+<ButtonLink href="https://crowdin.com/project/ethereum-org/">
   به پروژه ما بپیوندید
 </ButtonLink>
 
@@ -82,8 +82,8 @@ description: راهنمای استفاده از Crowdin جهت ترجمه‌ eth
 
 ### در ارتباط باشید {#get-in-touch}
 
-سوالی دارید؟ یا می خواهید با تیم ما و سایر مترجمان همکاری کنید؟ لطفاً در کانال [سرور دیسکورد ethereum.org](/discord/) ما پست کنید
+سؤالی دارید؟ یا می‌خواهید با تیم ما و سایر مترجمان همکاری کنید؟ لطفاً در کانال [سرور دیسکورد ethereum.org](/discord/) ما پست کنید
 
-همچنین می توانید از طریق translations@ethereum.org با ما در تماس باشید
+همچنین می‌توانید از طریق translations@ethereum.org با ما در تماس باشید
 
 از مشارکت شما در برنامه ترجمه ethereum.org سپاسگزاریم!

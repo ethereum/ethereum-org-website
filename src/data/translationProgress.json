@@ -93,7 +93,7 @@
   {
     "languageId": "de",
     "words": {
-      "approved": 198291,
+      "approved": 198769,
       "total": 280914
     }
   },
@@ -114,7 +114,7 @@
   {
     "languageId": "el",
     "words": {
-      "approved": 266720,
+      "approved": 280914,
       "total": 280914
     }
   },
@@ -128,7 +128,7 @@
   {
     "languageId": "es-EM",
     "words": {
-      "approved": 254050,
+      "approved": 255093,
       "total": 280914
     }
   },
@@ -149,7 +149,7 @@
   {
     "languageId": "fa",
     "words": {
-      "approved": 242192,
+      "approved": 242503,
       "total": 280914
     }
   },
@@ -177,14 +177,14 @@
   {
     "languageId": "fr",
     "words": {
-      "approved": 263694,
+      "approved": 272940,
       "total": 280914
     }
   },
   {
     "languageId": "ga-IE",
     "words": {
-      "approved": 175704,
+      "approved": 218126,
       "total": 280976
     }
   },
@@ -240,7 +240,7 @@
   {
     "languageId": "hu",
     "words": {
-      "approved": 257130,
+      "approved": 258157,
       "total": 280914
     }
   },
@@ -254,7 +254,7 @@
   {
     "languageId": "id",
     "words": {
-      "approved": 128250,
+      "approved": 128565,
       "total": 280914
     }
   },
@@ -268,7 +268,7 @@
   {
     "languageId": "it",
     "words": {
-      "approved": 260583,
+      "approved": 260828,
       "total": 280914
     }
   },
@@ -387,7 +387,7 @@
   {
     "languageId": "ms",
     "words": {
-      "approved": 70066,
+      "approved": 73490,
       "total": 280914
     }
   },
@@ -450,7 +450,7 @@
   {
     "languageId": "pl",
     "words": {
-      "approved": 106822,
+      "approved": 107027,
       "total": 280914
     }
   },
@@ -464,7 +464,7 @@
   {
     "languageId": "pt-BR",
     "words": {
-      "approved": 261079,
+      "approved": 262356,
       "total": 280914
     }
   },
@@ -611,7 +611,7 @@
   {
     "languageId": "tr",
     "words": {
-      "approved": 247156,
+      "approved": 247464,
       "total": 280914
     }
   },
@@ -667,7 +667,7 @@
   {
     "languageId": "zh-CN",
     "words": {
-      "approved": 264644,
+      "approved": 266470,
       "total": 280914
     }
   },

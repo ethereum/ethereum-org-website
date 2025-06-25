@@ -1,7 +1,6 @@
 "use client"
 
 import * as React from "react"
-import upperCase from "lodash/upperCase"
 import { tv, type VariantProps } from "tailwind-variants"
 import * as AvatarPrimitive from "@radix-ui/react-avatar"
 
@@ -98,7 +97,7 @@ const AvatarFallback = React.forwardRef<
     <AvatarPrimitive.Fallback
       ref={ref}
       className={cn(
-        "flex h-full w-full items-center justify-center rounded-full",
+        "flex h-full w-full items-center justify-center rounded-full uppercase",
         fallback(),
         className
       )}
@@ -140,12 +139,10 @@ const Avatar = React.forwardRef<
     className: "not-[:hover]:no-underline",
   }
 
-  const fallbackInitials = upperCase(
-    name
-      .split(" ")
-      .map((n) => n[0])
-      .join("")
-  )
+  const fallbackInitials = name
+    .split(" ")
+    .map((n) => n[0])
+    .join("")
 
   if (label) {
     const _direction: "flex-col-reverse" | "flex-row-reverse" =

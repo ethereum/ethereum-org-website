@@ -49,7 +49,7 @@ _Web3 已经发展成为一个由一层网络区块链和二层网络扩展解�
 
 ### 其他区块链上的去中心化应用程序 {#dapps-other-chains}
 
-如果你一直在以太坊主网上使用 Aave 借出泰达币，但在 Polygon 上使用 Aave 借出泰达币的利率更高。
+如果你一直在以太坊主网上使用 Aave 提供 USDT，但在 Polygon 上使用 Aave 提供 USDT 的利率可能更高。
 
 ### 探索区块链生态系统 {#explore-ecosystems}
 
@@ -65,7 +65,7 @@ _Web3 已经发展成为一个由一层网络区块链和二层网络扩展解�
 
 <Divider />
 
-## 桥梁类型 {#types-of-bridge}
+## 桥的类型 {#types-of-bridge}
 
 桥梁具有各种设计和复杂程度。 一般来说，桥梁分为两类：需信任桥梁和去信任桥梁。
 
@@ -131,7 +131,9 @@ _Web3 已经发展成为一个由一层网络区块链和二层网络扩展解�
 <Divider />
 
 ## 延伸阅读 {#further-reading}
+- [EIP-5164：跨链执行](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) - _2022 年 6 月 18 日 - Brendan Asselstine_
+- [二层网络桥梁风险框架](https://gov.l2beat.com/t/l2bridge-risk-framework/31) - _2022 年 7 月 5日 - Bartek Kiepuszewski_
+- [“为什么未来将出现多链，而不会是跨链。”](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) - _2022 年 1 月 8 日 - Vitalik Buterin_
+- [利用共享安全实现安全的跨链互操作性：Lagrange 状态委员会及其扩展](https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - _2024 年 6 月 12 日 - Emmanuel Awosika_
+- [Rollup 互操作性解决方案的现状](https://research.2077.xyz/the-state-of-rollup-interoperability) - _2024 年 6 月 20 日 - Alex Hook_
 
-- [EIP-5164：跨链执行](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658)_2022 年 6 月 18 日 - Brendan Asselstine_
-- [二层网络桥梁风险框架](https://gov.l2beat.com/t/l2bridge-risk-framework/31) _2022 年 7 月 5日 - Bartek Kiepuszewski_
-- [“为什么未来将出现多链，而不会是跨链。”](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) _2022 年 1 月 8 日 - Vitalik Buterin_

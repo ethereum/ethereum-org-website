@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import sortBy from "lodash/sortBy"
+import { sortBy } from "lodash"
 import { FaChevronRight } from "react-icons/fa6"
 
 import Emoji from "@/components/Emoji"
