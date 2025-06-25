@@ -299,6 +299,13 @@ const config = {
           from: { transform: "rotate(0deg)" },
           to: { transform: "rotate(360deg)" },
         },
+        "pulse-light": {
+          "50%": { opacity: "0.2" },
+        },
+        "fade-in": {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -314,6 +321,8 @@ const config = {
         "counter-spin-18": "spin 36s linear infinite reverse",
         "spin-9": "spin 18s linear infinite",
         "counter-spin-9": "spin 18s linear infinite reverse",
+        "pulse-light": "pulse-light 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+        "fade-in": "fade-in 150ms ease-in-out",
       },
       // Add custom border-radius tailwinds extension for "4xl" as "2rem"
       borderRadius: {

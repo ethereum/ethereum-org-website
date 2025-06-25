@@ -42,7 +42,7 @@ Here are some of the enterprise applications that have been built on top of the 
 - [Sila](https://silamoney.com/) - _banking and ACH payments infrastructure-as-a-service, using a stablecoin_
 - [Societe Generale FORGE](https://www.sgforge.com/product/bonds/) - _bond issuance_
 - [Taurus](https://www.taurushq.com/) - _issues tokenized securities_
-- [Visa Tokenized Asset Plaform](https://developer.visa.com/capabilities/visa-tokenized-asset-platform) - _provides the tools and infrastructure for banks to tokenize fiat currencies on blockchain networks_
+- [Visa Tokenized Asset Platform](https://developer.visa.com/capabilities/visa-tokenized-asset-platform) - _provides the tools and infrastructure for banks to tokenize fiat currencies on blockchain networks_
 
 ### Asset tokenization {#tokenization}
 
@@ -96,7 +96,7 @@ Here are some of the enterprise applications that have been built on top of the 
 - [Bhutan National Digital Identity](https://www.bhutanndi.com/) - \_a foundation for Bhutan’s digital economy, facilitating trusted interactions between individuals and organizations
 - [Hyland Credentials](https://www.hylandcredentials.com) - _digital diplomas and other education credentials, licenses, and certificates_
 - [Palau Digital Residency Program](https://rns.id/) - _offers global citizens the ability to have a legal Palau government-issued ID_
-- [QuarkID](https://quarkid.org/) _is a self-soverign identity protocol for managing essential personal documents such as birth and marriage certificates, academic credentials, and proof of income, developed by the government of Buenos Aires for use in Argentia and other South American countries_
+- [QuarkID](https://quarkid.org/) _is a self-soverign identity protocol for managing essential personal documents such as birth and marriage certificates, academic credentials, and proof of income, developed by the government of Buenos Aires for use in Argentina and other South American countries_
 - [Spherity](https://www.spherity.com/) - _offers digital identity management solutions to establish digital trust in ecosystems, focusing on decentralized identities and verifiable credentials_
 - [Zug Digital ID](https://ezug.ch/en/) - _is a blockchain-based identity system in Switzerland, offering residents digital access to government services and supporting functionalities like e-bike borrowing and municipal voting_
 

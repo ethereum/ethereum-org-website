@@ -543,7 +543,18 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               </p>
               <ActivityStats metrics={metrics} />
 
-              <div className="mt-12 flex justify-center">
+              <div className="mt-12 flex flex-wrap gap-6 py-8">
+                <ButtonLink
+                  size="lg"
+                  href="/enterprise/"
+                  customEventOptions={{
+                    eventCategory: eventCategory,
+                    eventAction: "ethereum_activity",
+                    eventName: "enterprise",
+                  }}
+                >
+                  {t("page-index-activity-action-primary")} <ChevronNext />
+                </ButtonLink>
                 <ButtonLink
                   size="lg"
                   href="/resources/"

@@ -4,7 +4,7 @@ export const fetchGrowThePieBlockspace = async () => {
   const blockspaceData = {}
   for (const network of layer2Data) {
     const response = await fetch(
-      `https://api.growthepie.xyz/v1/chains/blockspace/${network.growthepieID}.json`
+      `https://api.growthepie.com/v1/chains/blockspace/${network.growthepieID}.json`
     )
     if (!response.ok) {
       continue
