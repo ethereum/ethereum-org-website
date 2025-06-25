@@ -1,5 +1,7 @@
 import { cookies } from "next/headers"
 
+import { IS_PROD } from "../utils/env"
+
 import { getABTestConfigs } from "./config"
 import { ABTestAssignment, ABTestConfig } from "./types"
 
@@ -57,7 +59,7 @@ export async function getABTestAssignment(
     cookieStore.set(cookieName, JSON.stringify(newAssignment), {
       maxAge,
       httpOnly: false, // Needs to be accessible by client for debugging
-      secure: process.env.NODE_ENV === "production",
+      secure: IS_PROD,
       sameSite: "lax",
       path: "/",
     })

@@ -3,6 +3,8 @@
 import { useEffect, useState, useTransition } from "react"
 import { useRouter } from "next/navigation"
 
+import { IS_PREVIEW_DEPLOY, IS_PROD } from "@/lib/utils/env"
+
 import { clearABTestCookie, forceABTestVariant } from "@/lib/ab-testing/actions"
 import { ABTestAssignment } from "@/lib/ab-testing/types"
 
@@ -64,9 +66,7 @@ export function ABTestDebugPanel({
     window.location.reload()
   }
 
-  if (process.env.NODE_ENV === "production") {
-    return null
-  }
+  if (IS_PROD && !IS_PREVIEW_DEPLOY) return null
 
   return (
     <div

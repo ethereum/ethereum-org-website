@@ -1,5 +1,7 @@
 import { ReactNode } from "react"
 
+import { IS_PREVIEW_DEPLOY, IS_PROD } from "@/lib/utils/env"
+
 import { ABTestDebugPanel } from "./TestDebugPanel"
 import { ABTestTracker } from "./TestTracker"
 
@@ -33,7 +35,7 @@ const ABTestWrapper = async ({
   return (
     <>
       <ABTestTracker assignment={assignment} testKey={testKey} />
-      {process.env.NODE_ENV !== "production" && (
+      {(!IS_PROD || IS_PREVIEW_DEPLOY) && (
         <ABTestDebugPanel
           testKey={testKey}
           currentAssignment={assignment}

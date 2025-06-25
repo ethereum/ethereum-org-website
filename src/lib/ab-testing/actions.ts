@@ -2,6 +2,8 @@
 
 import { cookies } from "next/headers"
 
+import { IS_PROD } from "../utils/env"
+
 import { getABTestConfigs } from "./config"
 import { ABTestAssignment } from "./types"
 
@@ -19,7 +21,7 @@ export async function setABTestCookie(
   cookieStore.set(cookieName, JSON.stringify(assignment), {
     maxAge,
     httpOnly: false, // Needs to be accessible by client for potential debugging
-    secure: process.env.NODE_ENV === "production",
+    secure: IS_PROD,
     sameSite: "lax",
     path: "/",
   })
@@ -53,7 +55,7 @@ export async function forceABTestVariant(testKey: string, variantName: string) {
   cookieStore.set(cookieName, JSON.stringify(assignment), {
     maxAge,
     httpOnly: false,
-    secure: process.env.NODE_ENV === "production",
+    secure: IS_PROD,
     sameSite: "lax",
     path: "/",
   })

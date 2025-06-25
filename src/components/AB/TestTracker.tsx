@@ -3,6 +3,8 @@
 import { useEffect } from "react"
 import { push } from "@socialgouv/matomo-next"
 
+import { IS_PREVIEW_DEPLOY, IS_PROD } from "@/lib/utils/env"
+
 import { ABTestAssignment } from "@/lib/ab-testing/types"
 
 type ABTestTrackerProps = {
@@ -15,9 +17,9 @@ export function ABTestTracker({ assignment, testKey }: ABTestTrackerProps) {
     // Don't set cookies here - let server handle cookie persistence
     // This component only handles Matomo tracking
 
-    if (process.env.NODE_ENV !== "production") {
+    if (!IS_PROD || IS_PREVIEW_DEPLOY) {
       console.debug(
-        `[Matomo] A/B test tracked - Experiment: ${assignment.experimentName}, Variant: ${assignment.variant}`
+        `DEV [Matomo] A/B test logged - Experiment: ${assignment.experimentName}, Variant: ${assignment.variant}`
       )
       return
     }
