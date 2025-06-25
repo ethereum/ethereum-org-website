@@ -73,7 +73,7 @@ const RadialChart = ({
 
   return (
     <div className={cn("flex flex-col items-center", className)}>
-      <div className="relative">
+      <div className="relative z-base">
         <RadialBarChart
           width={170}
           height={90}
