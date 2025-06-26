@@ -1,3 +1,5 @@
+"use client"
+
 import { useEffect, useState } from "react"
 import { Info } from "lucide-react"
 import { useLocale } from "next-intl"

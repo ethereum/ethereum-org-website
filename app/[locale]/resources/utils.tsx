@@ -96,11 +96,11 @@ export const getResources = async ({
           imgSrc: IconL2beat,
         },
         {
-          title: "Growthepie",
+          title: "growthepie",
           description: t(
             "page-resources-network-layer2-growthepie-description"
           ),
-          href: "https://www.growthepie.xyz/",
+          href: "https://www.growthepie.com/",
           imgSrc: IconGrowthepie,
         },
         {

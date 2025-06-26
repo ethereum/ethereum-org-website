@@ -56,6 +56,7 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
   const { twFlipForRtl } = useRtlFlip()
 
   if (!href) {
+    // If troubleshooting this warning, check for multiple h1's in markdown content—these will result in broken id hrefs
     console.warn(`Link component missing href prop, pathname: ${pathname}`)
     return <a {...props} />
   }
@@ -104,9 +105,7 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
       >
         {isMailto ? (
           <span className="text-nowrap">
-            {!hideArrow && (
-              <Mail className="me-1 inline size-[1em] shrink-0" />
-            )}
+            {!hideArrow && <Mail className="me-1 inline size-[1em] shrink-0" />}
             {children}
           </span>
         ) : (

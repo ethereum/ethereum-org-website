@@ -1,5 +1,3 @@
-import { useTheme } from "next-themes"
-
 import BookIcon from "@/components/icons/book.svg"
 import BuildingsIcon from "@/components/icons/buildings.svg"
 import CodeSquareIcon from "@/components/icons/code-square.svg"
@@ -19,15 +17,12 @@ import SlidersHorizontalCircles from "@/components/icons/sliders-horizontal-circ
 import UiChecksGridIcon from "@/components/icons/ui-checks-grid.svg"
 import UsersFourLight from "@/components/icons/users-four-light.svg"
 
-import { trackCustomEvent } from "@/lib/utils/matomo"
-
 import type { NavSections } from "./types"
 
 import useTranslation from "@/hooks/useTranslation"
 
-export const useNav = () => {
+export const useNavigation = () => {
   const { t } = useTranslation("common")
-  const { setTheme, resolvedTheme } = useTheme()
 
   const linkSections: NavSections = {
     learn: {
@@ -489,20 +484,5 @@ export const useNav = () => {
     },
   }
 
-  const toggleColorMode = () => {
-    const targetTheme = resolvedTheme === "dark" ? "light" : "dark"
-
-    setTheme(targetTheme)
-
-    trackCustomEvent({
-      eventCategory: "nav bar",
-      eventAction: "click",
-      eventName: `${targetTheme} mode`,
-    })
-  }
-
-  return {
-    linkSections,
-    toggleColorMode,
-  }
+  return { linkSections }
 }

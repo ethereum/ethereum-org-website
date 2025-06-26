@@ -92,6 +92,6 @@ _Veri kullanılabilirliği veya güvenlik için Ethereum kullanmayan diğer öl�
 
 Ethereum.org'a bir katman 2 eklemek istiyorsanız, GitHub'da bir konu oluşturun.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml">
+<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml">
   Bir konu oluştur
 </ButtonLink>
