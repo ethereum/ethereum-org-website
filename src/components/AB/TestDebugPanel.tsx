@@ -3,6 +3,8 @@
 import { useEffect, useState, useTransition } from "react"
 import { useRouter } from "next/navigation"
 
+import { AB_TEST_COOKIE_PREFIX } from "@/lib/constants"
+
 import { clearABTestCookie, forceABTestVariant } from "@/lib/ab-testing/actions"
 import { ABTestAssignment } from "@/lib/ab-testing/types"
 
@@ -27,10 +29,27 @@ export function ABTestDebugPanel({
     setLocalAssignment(currentAssignment)
   }, [currentAssignment])
 
+  const cookieName = AB_TEST_COOKIE_PREFIX + testKey
+  // Check if cookie exists client-side and set fallback if needed
+  useEffect(() => {
+    if (currentAssignment) {
+      const cookieExists = document.cookie.includes(cookieName)
+
+      if (!cookieExists) {
+        console.log(`[AB Test Debug] Setting fallback cookie for ${testKey}`)
+        document.cookie = `${cookieName}=${JSON.stringify(currentAssignment)}; max-age=${60 * 60 * 24 * 30}; path=/; samesite=lax`
+      }
+    }
+  }, [cookieName, currentAssignment, testKey])
+
   const forceVariant = async (variantName: string) => {
     try {
       const newAssignment = await forceABTestVariant(testKey, variantName)
       setLocalAssignment(newAssignment)
+
+      // Fallback: Set cookie client-side if server action doesn't persist
+      document.cookie = `${cookieName}=${JSON.stringify(newAssignment)}; max-age=${60 * 60 * 24 * 30}; path=/; samesite=lax`
+
       // Use transition for smoother updates without full refresh
       startTransition(() => {
         router.refresh()
@@ -43,6 +62,10 @@ export function ABTestDebugPanel({
   const clearCookie = async () => {
     try {
       await clearABTestCookie(testKey)
+
+      // Fallback: Clear cookie client-side as well
+      document.cookie = `${cookieName}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/`
+
       setLocalAssignment(null)
       // Use transition for smoother updates without full refresh
       startTransition(() => {
@@ -57,7 +80,7 @@ export function ABTestDebugPanel({
     // Clear all AB test cookies and reload page
     document.cookie.split(";").forEach((cookie) => {
       const [name] = cookie.split("=")
-      if (name.trim().startsWith("_pk_abtest")) {
+      if (name.trim().startsWith(AB_TEST_COOKIE_PREFIX)) {
         document.cookie = `${name.trim()}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/`
       }
     })
@@ -103,6 +126,13 @@ export function ABTestDebugPanel({
             {isPending && (
               <span className="ml-2 text-xs text-gray-500">Loading...</span>
             )}
+          </div>
+          <div style={{ fontSize: "10px", color: "#666", marginTop: "4px" }}>
+            <strong>Cookie:</strong>{" "}
+            {typeof window !== "undefined" &&
+            document.cookie.includes(AB_TEST_COOKIE_PREFIX + testKey)
+              ? "✓ Set"
+              : "✗ Missing"}
           </div>
           <div style={{ marginTop: "10px" }}>
             <div>

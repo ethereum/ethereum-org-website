@@ -1,11 +1,10 @@
 import { cookies } from "next/headers"
 
+import { AB_TEST_COOKIE_PREFIX } from "../constants"
 import { IS_PROD } from "../utils/env"
 
 import { getABTestConfigs } from "./config"
 import { ABTestAssignment, ABTestConfig } from "./types"
-
-const AB_TEST_COOKIE_PREFIX = "_pk_abtest"
 
 export async function getABTestAssignment(
   testKey: string
@@ -21,7 +20,7 @@ export async function getABTestAssignment(
   }
 
   const cookieStore = cookies()
-  const cookieName = `${AB_TEST_COOKIE_PREFIX}${testKey}`
+  const cookieName = AB_TEST_COOKIE_PREFIX + testKey
   const existingAssignment = cookieStore.get(cookieName)
 
   if (existingAssignment?.value) {

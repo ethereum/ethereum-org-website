@@ -2,12 +2,11 @@
 
 import { cookies } from "next/headers"
 
+import { AB_TEST_COOKIE_PREFIX } from "../constants"
 import { IS_PROD } from "../utils/env"
 
 import { getABTestConfigs } from "./config"
 import { ABTestAssignment } from "./types"
-
-const AB_TEST_COOKIE_PREFIX = "_pk_abtest"
 
 // Server Action to set AB test assignment cookie
 export async function setABTestCookie(
@@ -15,7 +14,7 @@ export async function setABTestCookie(
   assignment: ABTestAssignment
 ) {
   const cookieStore = await cookies()
-  const cookieName = `${AB_TEST_COOKIE_PREFIX}${testKey}`
+  const cookieName = AB_TEST_COOKIE_PREFIX + testKey
   const maxAge = 60 * 60 * 24 * 30 // 30 days
 
   cookieStore.set(cookieName, JSON.stringify(assignment), {
