@@ -105,7 +105,9 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
       >
         {isMailto ? (
           <span className="text-nowrap">
-            {!hideArrow && <Mail className="me-1 inline size-[1em] shrink-0" />}
+            {!hideArrow && (
+              <Mail className="mb-0.5 me-1 inline-block size-[1em] shrink-0" />
+            )}
             {children}
           </span>
         ) : (
