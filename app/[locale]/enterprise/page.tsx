@@ -469,9 +469,7 @@ const Page = async ({ params }: { params: { locale: Lang } }) => {
                   <Check
                     strokeLinecap="square"
                     strokeLinejoin="miter"
-                    strokeWidth={5}
-                    size={14}
-                    className="-mb-0.5"
+                    className="-mb-0.5 size-3.5 stroke-[5]"
                   />
                 </div>
                 <h3 className="h-fit text-lg font-bold">{header}</h3>

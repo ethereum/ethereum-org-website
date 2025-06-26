@@ -196,8 +196,7 @@ const ValuesMarquee = ({
             direction={direction}
           >
             <Check
-              className="me-1 size-[1em] text-success group-hover/item:text-white"
-              strokeWidth={4.5}
+              className="me-1 size-[1em] stroke-[4.5] text-success group-hover/item:text-white"
               strokeLinecap="square"
               strokeLinejoin="miter"
             />
