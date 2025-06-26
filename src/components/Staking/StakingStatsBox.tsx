@@ -31,7 +31,7 @@ const Label = ({ children }: ChildOnlyProp) => (
 // BeaconchainTooltip component
 const BeaconchainTooltip = ({ children }: ChildOnlyProp) => (
   <Tooltip content={children}>
-    <Info className="active:primary focus:primary size-[1em] align-middle text-md hover:text-primary" />
+    <Info className="active:primary focus:primary size-[1em] text-md hover:text-primary" />
   </Tooltip>
 )
 

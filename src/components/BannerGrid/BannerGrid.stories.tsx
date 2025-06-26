@@ -127,7 +127,7 @@ export const BannerGridCell: Story = {
                   })}
                 >
                   <span>
-                    <Info className="inline-block align-middle" />
+                    <Info className="-mb-0.5 size-[0.875em]" />
                   </span>
                 </Tooltip>
               </span>
@@ -163,7 +163,7 @@ export const BannerGrid: Story = {
                       })}
                     >
                       <span>
-                        <Info className="inline-block align-middle" />
+                        <Info className="-mb-0.5 size-[0.875em]" />
                       </span>
                     </Tooltip>
                   </span>
