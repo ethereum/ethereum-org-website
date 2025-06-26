@@ -150,12 +150,12 @@ const WalletInfo = ({ wallet, isExpanded }: WalletInfoProps) => {
             >
               {deviceLabels.length > 0 && (
                 <div className="flex flex-row gap-2">
-                  <DevicesIcon />
+                  <DevicesIcon className="size-6" />
                   <p className="text-md">{deviceLabels.join(" · ")}</p>
                 </div>
               )}
               <div className="flex flex-row gap-2">
-                <LanguagesIcon />
+                <LanguagesIcon className="size-6" />
                 <p className="text-md">
                   {formatStringList(wallet.supportedLanguages, 5)}{" "}
                   <SupportedLanguagesTooltip
@@ -186,7 +186,7 @@ const WalletInfo = ({ wallet, isExpanded }: WalletInfoProps) => {
           <ButtonLink
             href={wallet.url}
             variant="outline"
-            className="max-sm:w-full"
+            className="p-2 max-sm:w-full"
             size="sm"
             customEventOptions={{
               eventCategory: "WalletExternalLinkList",
