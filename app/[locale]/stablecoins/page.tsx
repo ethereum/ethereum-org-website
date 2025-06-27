@@ -8,6 +8,7 @@ import { MdHelpOutline } from "react-icons/md"
 
 import { Lang } from "@/lib/types"
 
+import ABTestWrapper from "@/components/AB/TestWrapper"
 import CalloutBannerSSR from "@/components/CalloutBannerSSR"
 import DataProductCard from "@/components/DataProductCard"
 import Emoji from "@/components/Emoji"
@@ -21,7 +22,7 @@ import PageHero from "@/components/PageHero"
 import ProductList from "@/components/ProductList"
 import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import StablecoinAccordion from "@/components/StablecoinAccordion"
-import StablecoinsTable from "@/components/StablecoinsTable"
+// import StablecoinsTable from "@/components/StablecoinsTable"
 import Tooltip from "@/components/Tooltip"
 import Translation from "@/components/Translation"
 import { ButtonLink } from "@/components/ui/buttons/Button"
@@ -102,11 +103,11 @@ async function Page({ params }: { params: Promise<{ locale: Lang }> }) {
   const requiredNamespaces = getRequiredNamespacesForPage("/stablecoins")
   const messages = pick(allMessages, requiredNamespaces)
 
-  let marketsHasError = false
+  // let marketsHasError = false // TODO: Implement error handling
   const coinDetails: CoinDetails[] = []
 
   try {
-    marketsHasError = false
+    // marketsHasError = false
 
     const [stablecoinsData] = await loadData()
 
@@ -131,7 +132,7 @@ async function Page({ params }: { params: Promise<{ locale: Lang }> }) {
     coinDetails.push(...ethereumStablecoinData)
   } catch (error) {
     console.error(error)
-    marketsHasError = true
+    // marketsHasError = true // TODO: Handle error state
   }
 
   const heroContent = {
@@ -568,7 +569,7 @@ async function Page({ params }: { params: Promise<{ locale: Lang }> }) {
           </div>
 
           {/* CLIENT SIDE */}
-          <StablecoinsTable content={coinDetails} hasError={marketsHasError} />
+          {/* <StablecoinsTable content={coinDetails} hasError={marketsHasError} /> */}
         </div>
 
         <Section id="explore">
@@ -590,19 +591,29 @@ async function Page({ params }: { params: Promise<{ locale: Lang }> }) {
             imageWidth={600}
             alt={t("page-stablecoins-stablecoins-dapp-callout-image-alt")}
           >
-            <div className="flex flex-wrap gap-4">
-              <ButtonLink href="/dapps/">
-                {t("page-stablecoins-explore-dapps")}
-              </ButtonLink>
-              <ButtonLink
-                variant="outline"
-                href="/defi/"
-                className="whitespace-normal"
-                isSecondary
-              >
-                {t("page-stablecoins-more-defi-button")}
-              </ButtonLink>
-            </div>
+            <ABTestWrapper
+              testKey="AppTest"
+              variants={[
+                <div key="original" className="flex flex-wrap gap-4">
+                  <ButtonLink href="/dapps/">
+                    {t("page-stablecoins-explore-dapps")}
+                  </ButtonLink>
+                  <ButtonLink
+                    variant="outline"
+                    href="/defi/"
+                    className="whitespace-normal"
+                    isSecondary
+                  >
+                    {t("page-stablecoins-more-defi-button")}
+                  </ButtonLink>
+                </div>,
+                <div key="Variation1" className="flex flex-wrap gap-4">
+                  <ButtonLink href="/dapps/">
+                    {t("page-stablecoins-explore-apps")}
+                  </ButtonLink>
+                </div>,
+              ]}
+            />
           </CalloutBannerSSR>
           <h2>{t("page-stablecoins-save-stablecoins")}</h2>
           <Flex className="mb-8 me-8 w-full flex-col items-start lg:flex-row">
