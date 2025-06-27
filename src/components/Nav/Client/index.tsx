@@ -1,10 +1,10 @@
 "use client"
 
 import { useRef } from "react"
+import { Languages } from "lucide-react"
 import dynamic from "next/dynamic"
 import { useLocale } from "next-intl"
 
-import Translate from "@/components/icons/translate.svg"
 import SearchButton from "@/components/Search/SearchButton"
 import SearchInputButton from "@/components/Search/SearchInputButton"
 import { Skeleton } from "@/components/ui/skeleton"
@@ -145,7 +145,7 @@ const ClientSideNav = () => {
               variant="ghost"
               className="animate-fade-in gap-0 px-2 text-body transition-transform duration-500 active:bg-primary-low-contrast active:text-primary-hover data-[state='open']:bg-primary-low-contrast data-[state='open']:text-primary-hover max-md:hidden xl:px-3 [&_svg]:transition-transform [&_svg]:duration-500 [&_svg]:hover:rotate-12"
             >
-              <Translate className="me-2 align-middle text-2xl" />
+              <Languages className="me-2 align-middle text-2xl" />
               <span className="max-lg:hidden">{t("languages")}&nbsp;</span>
               {locale!.toUpperCase()}
             </Button>
