@@ -57,6 +57,7 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
   const { twFlipForRtl } = useRtlFlip()
 
   if (!href) {
+    // If troubleshooting this warning, check for multiple h1's in markdown content—these will result in broken id hrefs
     console.warn(`Link component missing href prop, pathname: ${pathname}`)
     return <a {...props} />
   }

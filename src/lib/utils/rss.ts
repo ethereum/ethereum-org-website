@@ -4,12 +4,13 @@ import type { Lang, RSSItem } from "../types"
 import { isValidDate } from "./date"
 import { getLocaleTimestamp } from "./time"
 
-export const sortByPubDate = (items: RSSItem[]) =>
+// Sort by original pubDate string (not yet localized)
+export const sortByPubDateRaw = (items: (RSSItem & { pubDateRaw: string })[]) =>
   items.sort((a, b) => {
-    const dateA = new Date(a.pubDate)
-    const dateB = new Date(b.pubDate)
+    const dateA = new Date(a.pubDateRaw)
+    const dateB = new Date(b.pubDateRaw)
     if (isNaN(dateA.getTime()) || isNaN(dateB.getTime())) {
-      console.error("Invalid date found:", a.pubDate, b.pubDate)
+      console.error("Invalid date found:", a.pubDateRaw, b.pubDateRaw)
       return 0
     }
     return dateB.getTime() - dateA.getTime()
@@ -20,7 +21,7 @@ export const postProcess = (rssItems: RSSItem[], locale: Lang) =>
     const pubDate = isValidDate(item.pubDate)
       ? getLocaleTimestamp(locale, item.pubDate)
       : ""
-    const formattedItem = { ...item, pubDate }
+    const formattedItem = { ...item, pubDate, pubDateRaw: item.pubDate }
 
     switch (item.sourceFeedUrl) {
       case VITALIK_FEED:
@@ -47,5 +48,5 @@ export const polishRSSList = (items: RSSItem[][], locale: Lang) => {
 
   const latestItems = latestOfEach.flat()
   const readyForSorting = postProcess(latestItems, locale)
-  return sortByPubDate(readyForSorting)
+  return sortByPubDateRaw(readyForSorting)
 }

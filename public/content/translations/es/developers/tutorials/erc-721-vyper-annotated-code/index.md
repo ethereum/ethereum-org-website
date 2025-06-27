@@ -614,11 +614,11 @@ def burn(_tokenId: uint256):
 
 Cualquiera a quien se le permita transferir un token puede quemarlo. Mientras que una quema parece equivalente a transferira la dirección cero, la dirección cero no recibe el token. Esto nos permite liberar todo el almacenamiento que se utilizó para el token, lo que puede reducir el coste del gas de la transacción.
 
-# Utilizar este contrato {#using-contract}
+## Utilizar este contrato {#using-contract}
 
 En contraste con Solidity, Vyper no tiene herencia. Esta es una elección de diseño deliberada para hacer el código más claro y por lo tanto más fácil de asegurar. Así que para crear su propio contrato Vyper ERC-721, utilice [este contrato](https://github.com/vyperlang/vyper/blob/master/examples/tokens/ERC721.vy) y modifíquelo para implementar la lógica de negocio que desee.
 
-## Conclusión {#conclusion}
+### Conclusión {#conclusion}
 
 A modo de recapitulación, he resumido algunas de las ideas más importantes de este contrato:
 

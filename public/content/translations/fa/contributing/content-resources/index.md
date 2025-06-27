@@ -27,6 +27,6 @@ description: معیارهای ما برای لیست کردن منابع محت�
 
 اگر می خواهید یک منبع محتوا به ethereum.org اضافه کنید و معیارها را رعایت می کند، در GitHub یک مسئله ایجاد کنید.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=">
+<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=">
   یک مسئله ایجاد کنید
 </ButtonLink>
