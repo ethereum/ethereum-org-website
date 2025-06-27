@@ -5,13 +5,16 @@ import { getTranslations, setRequestLocale } from "next-intl/server"
 import { FaDiscord, FaGithub } from "react-icons/fa6"
 import { FaXTwitter } from "react-icons/fa6"
 
-import type { AllMetricData, CommunityBlog, ValuesPairing } from "@/lib/types"
+import type {
+  AllHomepageActivityData,
+  CommunityBlog,
+  ValuesPairing,
+} from "@/lib/types"
 import type { EventCardProps } from "@/lib/types"
 import type { Lang } from "@/lib/types"
 import { CodeExample } from "@/lib/interfaces"
 
 import ActivityStats from "@/components/ActivityStats"
-import { getActivity } from "@/components/ActivityStats/getActivity"
 import BannerNotification from "@/components/Banners/BannerNotification"
 import { ChevronNext } from "@/components/Chevron"
 import HomeHero from "@/components/Hero/HomeHero"
@@ -78,6 +81,7 @@ import {
 } from "@/lib/constants"
 
 import TenYearHomeBanner from "./10years/_components/TenYearHomeBanner"
+import { getActivity } from "./utils"
 
 import SimpleDomainRegistryContent from "!!raw-loader!@/data/SimpleDomainRegistry.sol"
 import SimpleTokenContent from "!!raw-loader!@/data/SimpleToken.sol"
@@ -410,7 +414,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     )
     .slice(0, 3) as EventCardProps[] // Show 3 events ending soonest
 
-  const metricResults: AllMetricData = {
+  const metricResults: AllHomepageActivityData = {
     ethPrice,
     totalEthStaked,
     totalValueLocked,
@@ -539,7 +543,18 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               </p>
               <ActivityStats metrics={metrics} />
 
-              <div className="mt-12 flex justify-center">
+              <div className="mt-12 flex flex-wrap gap-6 py-8">
+                <ButtonLink
+                  size="lg"
+                  href="/enterprise/"
+                  customEventOptions={{
+                    eventCategory: eventCategory,
+                    eventAction: "ethereum_activity",
+                    eventName: "enterprise",
+                  }}
+                >
+                  {t("page-index-activity-action-primary")} <ChevronNext />
+                </ButtonLink>
                 <ButtonLink
                   size="lg"
                   href="/resources/"

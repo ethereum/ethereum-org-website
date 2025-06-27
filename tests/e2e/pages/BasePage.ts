@@ -7,7 +7,7 @@ import { breakpointAsNumber } from "@/lib/utils/screen"
  */
 export class BasePage {
   // Locators
-  readonly searchButtonMobile: Locator
+  readonly searchButton: Locator
   readonly searchInputButton: Locator
   readonly searchInput: Locator
   readonly searchModal: Locator
@@ -17,7 +17,7 @@ export class BasePage {
   readonly mobileSidebar: Locator
 
   constructor(protected page: Page) {
-    this.searchButtonMobile = page.getByTestId("search-button-mobile")
+    this.searchButton = page.getByTestId("search-button")
     this.searchInputButton = page.getByTestId("search-input-button")
     this.searchInput = page.getByPlaceholder("Search")
     this.searchModal = page.getByTestId("search-modal")
@@ -143,7 +143,7 @@ export class BasePage {
   async getSearchButton(): Promise<Locator> {
     const isMobile = await this.isMobileViewport()
     if (isMobile) {
-      return this.searchButtonMobile
+      return this.searchButton
     } else {
       return this.searchInputButton
     }

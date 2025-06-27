@@ -89,7 +89,7 @@ export class HomePage {
   async searchFor(query: string) {
     const isMobile = await this.isMobileViewport()
     if (isMobile) {
-      await this.page.getByTestId("search-button-mobile").first().click()
+      await this.page.getByTestId("search-button").first().click()
     } else {
       await this.page.getByTestId("search-input-button").first().click()
     }
