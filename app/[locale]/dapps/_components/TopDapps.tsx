@@ -2,6 +2,8 @@
 
 import { Folder } from "lucide-react"
 
+import { DappCategory, DappData } from "@/lib/types"
+
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 import {
@@ -13,13 +15,15 @@ import {
 
 import { breakpointAsNumber } from "@/lib/utils/screen"
 
-import { DAPPS_DATA } from "@/data/dapps"
-
 import DappCard from "./DappCard"
 
 import { useBreakpointValue } from "@/hooks/useBreakpointValue"
 
-const TopDapps = () => {
+interface TopDappsProps {
+  dappsData: Record<DappCategory, DappData[]>
+}
+
+const TopDapps = ({ dappsData }: TopDappsProps) => {
   const cardStyling = useBreakpointValue({
     base: {
       isVertical: true,
@@ -66,7 +70,7 @@ const TopDapps = () => {
           },
         }}
       >
-        {Object.keys(DAPPS_DATA).map((category) => (
+        {Object.keys(dappsData).map((category) => (
           <SwiperSlide key={category}>
             <div className="flex flex-col rounded-xl border">
               <LinkBox className="border-b p-4 hover:bg-background-highlight">
@@ -98,7 +102,7 @@ const TopDapps = () => {
                 </LinkOverlay>
               </LinkBox>
               <div className="flex flex-col">
-                {DAPPS_DATA[category].map((dapp) => (
+                {dappsData[category].map((dapp) => (
                   <div key={dapp.name} className="border-b">
                     <DappCard
                       dapp={dapp}

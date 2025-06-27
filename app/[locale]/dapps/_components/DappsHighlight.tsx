@@ -1,5 +1,7 @@
 "use client"
 
+import { DappData } from "@/lib/types"
+
 import { Image } from "@/components/Image"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 import {
@@ -9,17 +11,19 @@ import {
   SwiperSlide,
 } from "@/components/ui/swiper"
 
-import { DAPPS_HIGHLIGHT_DATA } from "@/data/dapps/index"
-
 import DappCard from "./DappCard"
 
 import DappHighlightImage from "@/public/images/dapps/dapp-highlight.png"
 
-const DappsHighlight = () => {
+interface DappsHighlightProps {
+  dapps: DappData[]
+}
+
+const DappsHighlight = ({ dapps }: DappsHighlightProps) => {
   return (
     <div className="flex flex-col gap-8">
       <div className="hidden flex-row md:flex">
-        {DAPPS_HIGHLIGHT_DATA.map((dapp, index) => (
+        {dapps.map((dapp, index) => (
           <LinkBox
             key={index}
             className="group rounded-xl p-3 hover:bg-background-highlight"
@@ -28,7 +32,7 @@ const DappsHighlight = () => {
               <Image
                 src={DappHighlightImage}
                 alt=""
-                className="mb-2 rounded-xl"
+                className="mb-2 w-full rounded-xl"
               />
               <div className="mb-6">
                 <p className="text-body">{dapp.description}</p>
@@ -42,7 +46,7 @@ const DappsHighlight = () => {
       <div className="flex flex-col gap-4 md:hidden">
         <SwiperContainer>
           <Swiper slidesPerView={1.5} spaceBetween={16}>
-            {DAPPS_HIGHLIGHT_DATA.map((dapp, index) => (
+            {dapps.map((dapp, index) => (
               <SwiperSlide key={index} className="pr-4">
                 <LinkBox className="group w-full">
                   <LinkOverlay

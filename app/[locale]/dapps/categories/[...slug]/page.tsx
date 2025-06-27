@@ -12,20 +12,30 @@ import Breadcrumbs from "@/components/Breadcrumbs"
 import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
 
+import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
-import { DAPPS_DATA } from "@/data/dapps"
+import { getHighlightedDapps } from "@/data/dapps"
 import { dappsCategories } from "@/data/dapps/categories"
+
+import { BASE_TIME_UNIT } from "@/lib/constants"
 
 import CategoriesNav from "../../_components/CategoriesNav"
 import DappsHighlight from "../../_components/DappsHighlight"
 import DappsTable from "../../_components/DappsTable"
 
+import { fetchDapps } from "@/lib/api/fetchDapps"
+
 const VALID_CATEGORIES = Object.values(DappCategoryEnum)
 
 const isValidCategory = (category: string): category is DappCategoryEnum =>
   VALID_CATEGORIES.includes(category as DappCategoryEnum)
+
+// 24 hours
+const REVALIDATE_TIME = BASE_TIME_UNIT * 24
+
+const loadData = dataLoader([["dappsData", fetchDapps]], REVALIDATE_TIME * 1000)
 
 const Page = async ({
   params,
@@ -34,6 +44,8 @@ const Page = async ({
 }) => {
   const { locale, slug } = await params
   setRequestLocale(locale)
+
+  const [dappsData] = await loadData()
 
   // Get i18n messages
   const allMessages = await getMessages({ locale })
@@ -46,6 +58,9 @@ const Page = async ({
   if (!isValidCategory(slug[0])) {
     notFound()
   }
+
+  // Get highlighted dapps (dapps with highlight=true)
+  const highlightedDapps = getHighlightedDapps(dappsData, 3)
 
   return (
     <I18nProvider locale={locale} messages={messages}>
@@ -64,14 +79,14 @@ const Page = async ({
         <CategoriesNav activeCategory={slug[0]} />
       </div>
 
-      <MainArticle className="flex flex-col gap-10 py-10">
+      <MainArticle className="flex flex-col gap-32 py-10">
         <div className="flex flex-col px-4 md:px-8">
           <h2>Highlights</h2>
-          <DappsHighlight />
+          <DappsHighlight dapps={highlightedDapps} />
         </div>
 
         <div className="flex flex-col px-4 md:px-8">
-          <DappsTable dapps={DAPPS_DATA[category.name]} />
+          <DappsTable dapps={dappsData[category.name]} />
         </div>
       </MainArticle>
     </I18nProvider>

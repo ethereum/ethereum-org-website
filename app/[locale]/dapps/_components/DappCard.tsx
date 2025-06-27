@@ -36,7 +36,16 @@ const DappCard = ({
           `w-${imageSize} h-${imageSize}`
         )}
       >
-        <Image src={dapp.image} alt={dapp.name} className="rounded-xl" />
+        {typeof dapp.image === "string" ? (
+          // Handle SVG string
+          <div
+            className="h-full w-full rounded-xl"
+            dangerouslySetInnerHTML={{ __html: dapp.image }}
+          />
+        ) : (
+          // Handle StaticImageData
+          <Image src={dapp.image} alt={dapp.name} className="rounded-xl" />
+        )}
       </div>
       <div className="flex flex-1 flex-col gap-1.5">
         {!hideTag && (

@@ -38,4 +38,25 @@ export const dappsCategories: DappCategories = {
     description:
       "Bridge is a category of decentralized applications that allow users to bridge their assets between different networks.",
   },
+  [DappCategoryEnum.PRODUCTIVITY]: {
+    name: "Productivity",
+    icon: CategoryIcon,
+    slug: DappCategoryEnum.PRODUCTIVITY,
+    description:
+      "Productivity is a category of decentralized applications that allow users to be productive.",
+  },
+  [DappCategoryEnum.PRIVACY]: {
+    name: "Privacy",
+    icon: CategoryIcon,
+    slug: DappCategoryEnum.PRIVACY,
+    description:
+      "Privacy is a category of decentralized applications that allow users to be private.",
+  },
+  [DappCategoryEnum.GOVERNANCE_DAO]: {
+    name: "Governance/DAO",
+    icon: CategoryIcon,
+    slug: DappCategoryEnum.GOVERNANCE_DAO,
+    description:
+      "Governance/DAO is a category of decentralized applications that allow users to govern and create decentralized autonomous organizations.",
+  },
 }

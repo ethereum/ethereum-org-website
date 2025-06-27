@@ -11,21 +11,38 @@ import MainArticle from "@/components/MainArticle"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 
+import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
-import { DAPPS_STAFF_PICK_DATA } from "@/data/dapps"
+import { getHighlightedDapps, getStaffPickDapps } from "@/data/dapps"
 import { dappsCategories } from "@/data/dapps/categories"
 
-import CategoriesNav from "./_components/CategoriesNav"
+import { BASE_TIME_UNIT } from "@/lib/constants"
+
 import DappCard from "./_components/DappCard"
 import DappsHighlight from "./_components/DappsHighlight"
 import TopDapps from "./_components/TopDapps"
+
+import { fetchDapps } from "@/lib/api/fetchDapps"
+
+// 24 hours
+const REVALIDATE_TIME = BASE_TIME_UNIT * 24
+
+const loadData = dataLoader([["dappsData", fetchDapps]], REVALIDATE_TIME * 1000)
 
 const Page = async ({ params }: { params: { locale: string } }) => {
   const { locale } = await params
 
   setRequestLocale(locale)
+
+  const [dappsData] = await loadData()
+
+  // Get 3 random highlighted dapps
+  const highlightedDapps = getHighlightedDapps(dappsData, 3)
+
+  // Get 6 random staff pick dapps
+  const staffPickDapps = getStaffPickDapps(dappsData, 6)
 
   // Get i18n messages
   const allMessages = await getMessages({ locale })
@@ -47,20 +64,16 @@ const Page = async ({ params }: { params: { locale: string } }) => {
         </div>
       </div>
 
-      <div className="flex flex-col items-center gap-4 px-4 md:px-8">
-        <CategoriesNav activeCategory="" />
-      </div>
-
       <MainArticle className="flex flex-col gap-32 py-10">
         <div className="flex flex-col gap-8 px-4 md:px-8">
           <h2>Highlights</h2>
-          <DappsHighlight />
+          <DappsHighlight dapps={highlightedDapps} />
         </div>
 
         <div className="flex flex-col gap-4 px-4 md:px-8">
           <h2>Staff picks</h2>
           <div className="grid grid-cols-1 gap-7 md:grid-cols-2 lg:grid-cols-3">
-            {DAPPS_STAFF_PICK_DATA.map((dapp) => (
+            {staffPickDapps.map((dapp) => (
               <DappCard
                 key={dapp.name}
                 dapp={dapp}
@@ -73,7 +86,7 @@ const Page = async ({ params }: { params: { locale: string } }) => {
 
         <div className="flex flex-col gap-4 px-4 md:px-8">
           <h2>Top applications</h2>
-          <TopDapps />
+          <TopDapps dappsData={dappsData} />
         </div>
 
         {/* Note: Implemented this instead of swiper from design to allow for SSR */}

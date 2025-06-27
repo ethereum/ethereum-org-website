@@ -941,7 +941,11 @@ export type AtomEntry = {
   title: AtomElement[]
   updated: string[]
   content?: AtomElement[]
-  link?: AtomElement[]
+  link?: Array<{
+    $: {
+      href: string
+    }
+  }>
   summary?: AtomElement[]
 }
 
@@ -1036,6 +1040,9 @@ export enum DappCategoryEnum {
   SOCIAL = "Social",
   GAMING = "Gaming",
   BRIDGE = "Bridge",
+  PRODUCTIVITY = "Productivity",
+  PRIVACY = "Privacy",
+  GOVERNANCE_DAO = "DAO",
 }
 
 export type DappCategory = `${DappCategoryEnum}`
@@ -1055,8 +1062,24 @@ export type Dapp = {
   description: string
   image: StaticImageData
   category: DappCategoryEnum
-  networks: Array<"Ethereum" | "Starknet">
   subCategory: string[]
+  networks: Array<"Ethereum" | "Starknet">
+  screenshots: string[]
+  bannerImage: string
+  platforms: string[]
+  twitter: string
+  github: string
+  discord: string
+  kpiUrl: string
+  sortingWeight: number
+  staffPicks: boolean
+  highlight: boolean
+  languages: Lang[]
+  parentCompany: string
+  parentCompanyURL: string
+  openSource: boolean
+  contractAddress: string
+  dateOfLaunch: string
 }
 
 export type DefiDapp = Dapp & {
@@ -1068,18 +1091,54 @@ export type DefiDapp = Dapp & {
 
 export type CollectibleDapp = Dapp & {
   category: DappCategoryEnum.COLLECTIBLE
+  subCategory: Array<
+    "IP" | "Art" | "Gaming" | "Media" | "Membership" | "Market"
+  >
 }
 
 export type SocialDapp = Dapp & {
   category: DappCategoryEnum.SOCIAL
+  subCategory: Array<
+    "Social network" | "Video" | "Messaging" | "Identity" | "Metaverse"
+  >
 }
 
 export type GamingDapp = Dapp & {
   category: DappCategoryEnum.GAMING
+  subCategory: Array<
+    | "RPG"
+    | "Strategy"
+    | "Card & deck building"
+    | "MMORPG"
+    | "Metaverse"
+    | "Simulation and management"
+    | "Sports and fantasy"
+  >
 }
 
 export type BridgeDapp = Dapp & {
   category: DappCategoryEnum.BRIDGE
+  subCategory: Array<
+    | "Native"
+    | "Validator or oracle"
+    | "Generalized message passing"
+    | "Liquidity network"
+  >
+}
+
+export type ProductivityDapp = Dapp & {
+  category: DappCategoryEnum.PRODUCTIVITY
+  subCategory: Array<"Lending"> // Placeholder - update when you have the actual subcategories
+}
+
+export type PrivacyDapp = Dapp & {
+  category: DappCategoryEnum.PRIVACY
+  subCategory: Array<"Pools" | "Payments" | "RPC">
+}
+
+export type GovernanceDaoDapp = Dapp & {
+  category: DappCategoryEnum.GOVERNANCE_DAO
+  subCategory: Array<"Governance" | "Delegation">
 }
 
 export type DappData =
@@ -1088,6 +1147,9 @@ export type DappData =
   | SocialDapp
   | GamingDapp
   | BridgeDapp
+  | ProductivityDapp
+  | PrivacyDapp
+  | GovernanceDaoDapp
 
 type ValuesItem = {
   label: string

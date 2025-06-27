@@ -2,42 +2,31 @@ import { DappCategory, DappCategoryEnum, DappData } from "@/lib/types"
 
 import { TagProps } from "@/components/ui/tag"
 
-import { collectiblesDapps } from "./collectibles"
-import { defiDapps } from "./defi"
-import { gamingDapps } from "./gaming"
-import { socialDapps } from "./social"
+// Get highlighted dapps (dapps with highlight=true)
+export const getHighlightedDapps = (
+  dappsData: Record<DappCategory, DappData[]>,
+  count?: number
+) => {
+  const highlightedDapps = Object.values(dappsData)
+    .flatMap((categoryDapps) => categoryDapps)
+    .filter((dapp) => dapp.highlight)
+    .sort(() => Math.random() - 0.5)
 
-export const DAPPS_DATA: Record<DappCategory, DappData[]> = {
-  [DappCategoryEnum.DEFI]: defiDapps,
-  [DappCategoryEnum.COLLECTIBLE]: collectiblesDapps,
-  [DappCategoryEnum.SOCIAL]: socialDapps,
-  [DappCategoryEnum.GAMING]: gamingDapps,
-  [DappCategoryEnum.BRIDGE]: [],
+  return count ? highlightedDapps.slice(0, count) : highlightedDapps
 }
 
-export const VALID_DAPPS = Object.values(DAPPS_DATA).flatMap((categoryDapps) =>
-  categoryDapps.map((dapp) => dapp.name)
-)
+// Get staff pick dapps (dapps with staffPicks=true)
+export const getStaffPickDapps = (
+  dappsData: Record<DappCategory, DappData[]>,
+  count?: number
+) => {
+  const staffPickDapps = Object.values(dappsData)
+    .flatMap((categoryDapps) => categoryDapps)
+    .filter((dapp) => dapp.staffPicks)
+    .sort(() => Math.random() - 0.5)
 
-const DAPPS_HIGHLIGHT_NAMES = ["Aave", "Aave", "Aave"]
-
-export const DAPPS_HIGHLIGHT_DATA: DappData[] = DAPPS_HIGHLIGHT_NAMES.map(
-  (name) => {
-    return Object.values(DAPPS_DATA)
-      .flatMap((categoryDapps) => categoryDapps)
-      .find((dapp) => dapp.name === name)!
-  }
-)
-
-const DAPPS_STAFF_PICK_NAMES = ["Aave", "Aave", "Aave", "Aave", "Aave", "Aave"]
-
-export const DAPPS_STAFF_PICK_DATA: DappData[] = DAPPS_STAFF_PICK_NAMES.map(
-  (name) => {
-    return Object.values(DAPPS_DATA)
-      .flatMap((categoryDapps) => categoryDapps)
-      .find((dapp) => dapp.name === name)!
-  }
-)
+  return count ? staffPickDapps.slice(0, count) : staffPickDapps
+}
 
 export const DAPP_TAG_VARIANTS: Record<DappCategoryEnum, TagProps["status"]> = {
   [DappCategoryEnum.DEFI]: "tag",
@@ -45,4 +34,7 @@ export const DAPP_TAG_VARIANTS: Record<DappCategoryEnum, TagProps["status"]> = {
   [DappCategoryEnum.SOCIAL]: "error",
   [DappCategoryEnum.GAMING]: "warning",
   [DappCategoryEnum.BRIDGE]: "normal",
+  [DappCategoryEnum.PRODUCTIVITY]: "normal",
+  [DappCategoryEnum.PRIVACY]: "normal",
+  [DappCategoryEnum.GOVERNANCE_DAO]: "normal",
 }

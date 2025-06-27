@@ -11,10 +11,18 @@ import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 
+import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
-import { DAPPS_DATA, VALID_DAPPS } from "@/data/dapps"
+import { BASE_TIME_UNIT } from "@/lib/constants"
+
+import { fetchDapps } from "@/lib/api/fetchDapps"
+
+// 24 hours
+const REVALIDATE_TIME = BASE_TIME_UNIT * 24
+
+const loadData = dataLoader([["dappsData", fetchDapps]], REVALIDATE_TIME * 1000)
 
 const Page = async ({
   params,
@@ -30,9 +38,10 @@ const Page = async ({
   const messages = pick(allMessages, requiredNamespaces)
 
   const [firstSegment] = slug
-  const dapp = Object.values(DAPPS_DATA)
+  const [dappsData] = await loadData()
+  const dapp = Object.values(dappsData)
     .flat()
-    .find((dapp) => dapp.name.toLowerCase() === firstSegment.toLowerCase())
+    .find((dapp) => dapp.name.toLowerCase() === firstSegment.toLowerCase())!
 
   if (!dapp) {
     notFound()
@@ -84,7 +93,11 @@ export async function generateMetadata({
     namespace: "page-dapps",
   })
 
-  const dapp = VALID_DAPPS.includes(firstSegment)
+  const [dappsData] = await loadData()
+  const dapp = Object.values(dappsData)
+    .flat()
+    .find((dapp) => dapp.name.toLowerCase() === firstSegment.toLowerCase())!
+
   if (!dapp) {
     notFound()
   }
