@@ -22,7 +22,7 @@ const TutorialsList = dynamic(() => import("./_components/tutorials"), {
   ssr: false,
   loading: () => (
     <div className="mt-8 w-full md:w-2/3">
-      <div className="flex w-full flex-wrap gap-2 px-8 pb-16 pt-12 lg:grid lg:grid-cols-3 lg:gap-4 xl:grid-cols-4 2xl:grid-cols-5">
+      <div className="grid w-full grid-cols-3 gap-2 px-8 pb-16 pt-12 sm:grid-cols-4 lg:gap-4 2xl:grid-cols-5">
         {Array.from({ length: 30 }).map((_, index) => (
           <Skeleton key={"tag" + index} className="h-8 rounded-full" />
         ))}
