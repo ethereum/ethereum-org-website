@@ -1,6 +1,9 @@
 "use client"
 
 import { useParams } from "next/navigation"
+import { useLocale } from "next-intl"
+
+import { ButtonLink } from "@/components/ui/buttons/Button"
 
 import { cn } from "@/lib/utils/cn"
 
@@ -12,7 +15,6 @@ import {
   CommandList,
 } from "../ui/command"
 import { Dialog, DialogContent, DialogTrigger } from "../ui/dialog"
-import { BaseLink } from "../ui/Link"
 import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover"
 
 import MenuItem from "./MenuItem"
@@ -187,19 +189,33 @@ const LanguagePickerMenu = ({ languages, onClose, onSelect }) => {
 
 const LanguagePickerFooter = ({ onTranslationProgramClick }) => {
   const { t } = useTranslation("common")
+  const locale = useLocale()
 
   return (
-    <div className="sticky bottom-0 flex justify-center border-t-2 border-primary bg-primary-low-contrast p-3">
-      <p className="text-center text-xs text-body">
-        {t("page-languages-recruit-community")}{" "}
-        {/* TODO migrate once #13411 is merged */}
-        <BaseLink
-          href="/contributing/translation-program"
+    <div className="sticky bottom-0 flex border-t-2 border-primary bg-primary-low-contrast p-0 pb-1 pt-1">
+      <div className="flex w-full max-w-sm items-center justify-between px-4">
+        <div className="flex min-w-0 flex-col items-start">
+          {locale == "en" ? (
+            <p className="overflow-hidden text-ellipsis whitespace-nowrap text-xs font-bold text-body">
+              Translate Ethereum.org
+            </p>
+          ) : (
+            <p className="overflow-hidden text-ellipsis whitespace-nowrap text-xs font-bold text-body">
+              Translate to {t(`language-${locale}`)}
+            </p>
+          )}
+          <p className="text-xs text-body">
+            {t("page-languages-recruit-community")}
+          </p>
+        </div>
+        <ButtonLink
+          className="w-min whitespace-nowrap px-1 py-0 text-xs sm:flex-shrink-0 sm:flex-grow-0"
+          href="/contributing/translation-program/"
           onClick={onTranslationProgramClick}
         >
-          {t("common:learn-more")}
-        </BaseLink>
-      </p>
+          {t("get-involved")}
+        </ButtonLink>
+      </div>
     </div>
   )
 }
