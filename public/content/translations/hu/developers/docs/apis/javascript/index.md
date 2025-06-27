@@ -26,6 +26,8 @@ Ezek a könyvtárak elveszik a komplexitás nagy részét, mely Ethereum csomóp
 
 Szolgáltatók használatakor ezen könyvtárak használatával rácsatlakozhat az Ethereumra és kiolvashatja az adatait, függetlenül attól, hogy JSON-RPC, INFURA, Etherscan, Alchemy vagy MetaMask rendszeren keresztül történik.
 
+> **Figyelmeztetés:** A Web3.js 2025. március 4-én archiválásra kerül. [Olvasd el a bejelentést](https://blog.chainsafe.io/web3-js-sunset/). Fontold meg alternatív könyvtárak, például az Ethers.js vagy a viem használatát új projektekhez.
+
 **Példa az Ethers-re**
 
 ```js
