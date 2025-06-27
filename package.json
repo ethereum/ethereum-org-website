@@ -121,6 +121,7 @@
     "autoprefixer": "^10.4.19",
     "chromatic": "10.9.6",
     "decompress": "^4.2.1",
+    "dotenv": "^16.5.0",
     "eslint": "^8.57.1",
     "eslint-config-next": "^14.2.2",
     "eslint-config-prettier": "^9",
