@@ -1,6 +1,6 @@
 "use client"
 
-import { CheckCircle, Copy } from "lucide-react"
+import { Clipboard, ClipboardCheck } from "lucide-react"
 
 import { cn } from "@/lib/utils/cn"
 
@@ -42,9 +42,9 @@ export const CopyButton = ({ message, ...props }: CopyButtonProps) => {
   return (
     <Button variant="ghost" onClick={() => onCopy(message)} {...props}>
       {hasCopied ? (
-        <CheckCircle className="size-5" />
+        <ClipboardCheck className="size-5" />
       ) : (
-        <Copy className="size-5" />
+        <Clipboard className="size-5" />
       )}
     </Button>
   )
