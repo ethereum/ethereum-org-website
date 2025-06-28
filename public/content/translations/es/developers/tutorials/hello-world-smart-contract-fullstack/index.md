@@ -48,7 +48,7 @@ Haga clic en **Create app**. Su aplicación aparecerá en la siguiente tabla.
 
 Necesita tener una cuenta de Ethereum para enviar y recibir transacciones. Utilizaremos MetaMask, una cartera virtual en el navegador que permite a los usuarios gestionar la dirección de su cuenta de Ethereum.
 
-Puede descargar y crear una cuenta Metamask gratis [aquí](https://metamask.io/download.html). Cuando esté creando una cuenta, o si ya tiene una, asegúrese de cambiar a la “red de prueba Goerli” en la parte superior derecha (para no operar con dinero real).
+Puede descargar y crear una cuenta Metamask gratis [aquí](https://metamask.io/download). Cuando esté creando una cuenta, o si ya tiene una, asegúrese de cambiar a la “red de prueba Goerli” en la parte superior derecha (para no operar con dinero real).
 
 ### Paso 4: Añadir ether de un faucet {#step-4-add-ether-from-a-faucet}
 
@@ -1116,7 +1116,7 @@ Si quiere más información sobre cómo funcionan las transacciones en Ethereum,
 
 #### Descargar MetaMask {#download-metamask}
 
-Puede descargar y crear una cuenta Metamask gratis [aquí](https://metamask.io/download.html). Cuando esté creando una cuenta, o si ya tiene una, asegúrese de cambiar de «Goerli Test Network» en la parte superior \(para que no se trate de dinero real\).
+Puede descargar y crear una cuenta Metamask gratis [aquí](https://metamask.io/download). Cuando esté creando una cuenta, o si ya tiene una, asegúrese de cambiar de «Goerli Test Network» en la parte superior \(para que no se trate de dinero real\).
 
 #### Añada ether a partir de un grifo {#add-ether-from-a-faucet}
 
@@ -1171,7 +1171,7 @@ export const connectWallet = async () => {
         <span>
           <p>
             {" "}
-            🦊 <a target="_blank" href={`https://metamask.io/download.html`}>
+            🦊 <a target="_blank" href={`https://metamask.io/download`}>
               You must install MetaMask, a virtual Ethereum wallet, in your
               browser.
             </a>
@@ -1276,7 +1276,7 @@ export const getCurrentWalletConnected = async () => {
         <span>
           <p>
             {" "}
-            🦊 <a target="_blank" href={`https://metamask.io/download.html`}>
+            🦊 <a target="_blank" href={`https://metamask.io/download`}>
               You must install MetaMask, a virtual Ethereum wallet, in your
               browser.
             </a>
@@ -1346,7 +1346,7 @@ function addWalletListener() {
     setStatus(
       <p>
         {" "}
-        🦊 <a target="_blank" href={`https://metamask.io/download.html`}>
+        🦊 <a target="_blank" href={`https://metamask.io/download`}>
           You must install MetaMask, a virtual Ethereum wallet, in your browser.
         </a>
       </p>
@@ -1358,7 +1358,7 @@ function addWalletListener() {
 
 Llegados a este punto, apuesto a que ni siquiera necesita de nuestra ayuda para entender lo que ocurre. Pero, para ser más exhaustivos, desglosémoslo rápidamente:
 
-- Primero, nuestra función verifica si `window.ethereum` está habilitado \(esto es si MetaMask está instalado\). 
+- Primero, nuestra función verifica si `window.ethereum` está habilitado \(esto es si MetaMask está instalado\).
     - Si no lo está, simplemente establecemos nuestra variable de estado `status` a una cadena JSX que solicite al usuario instalar MetaMask.
   - Si está habilitado, configuramos el oyente `window.ethereum.on("accountsChanged")` en la línea 3, que escucha cambios de estado en la billetera de MetaMask, incluyendo cuando el usuario conecte una cuenta adicional a la dapp, cambie de cuenta o desconecte una cuenta. Si hay por lo menos una cuenta conectada, la variable de estado `walletAddress` es actualizada como la primera cuenta en el arreglo `accounts` devuelto por el oyente. De lo contrario, `walletAddress` se establece como cadena vacía.
 

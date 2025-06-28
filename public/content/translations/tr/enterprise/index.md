@@ -116,7 +116,7 @@ Geleneksel, blokzincir tabanlı olmayan şirketlere hitap eden, herkese açık E
 ### Verilerin noter tasdiki {#notarization-of-data}
 
 - [ANSA](https://www.ansa.it/english/news/science_tecnology/2020/04/06/ansa-using-blockchain-to-help-readers_af820b4f-0947-439b-843e-52e114f53318.html) - _İtalyan haber ajansıdır, sahte haberlerle mücadele eder ve okuyucuların haber makalelerinin kaynağını Ana Ağa kaydederek doğrulamasını sağlar_
-- [Breitling](https://www.coindesk.com/breitling-arianee-all-new-watches-ethereum) - _saatlerin kökenini ve onarım geçmişini Ethereum'a kaydeder_
+- [Breitling](https://www.coindesk.com/business/2020/10/15/breitling-goes-live-with-ethereum-based-system-to-put-all-new-watches-on-the-blockchain) - _saatlerin kökenini ve onarım geçmişini Ethereum'a kaydeder_
 - [BRØK](https://www.xn--brk-1na.no/) - _Norveç Hükümeti tarafından sağlanan, halka açık olmayan şirketlere yönelik bir sermaye tablosu platformudur_
 - [Certifaction](https://certifaction.com/) - _tasarımın parçası olarak gizlilik esasına dayalı, yasal olarak geçerli e-İmzalar_
 - [EthSign](https://ethsign.xyz/) - _imzalı elektronik belgeleri Ethereum blok zincirine kaydeder_

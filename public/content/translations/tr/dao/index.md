@@ -93,7 +93,7 @@ DAO'ların binlerce oylama üyesi olabilirken, fonlar güvenilir ve genellikle "
 
 ### Meşhur bir örnek {#law-example}
 
-[CityDAO](https://citydao.io) – CityDAO, Wyoming'in DAO yasasını kullanarak Yellowstone Milli Parkı yakınında 40 dönümlük arazi satın aldı.
+[CityDAO](https://citizen.citydao.io/) – CityDAO, Wyoming'in DAO yasasını kullanarak Yellowstone Milli Parkı yakınında 40 dönümlük arazi satın aldı.
 
 ## DAO üyeliği {#dao-membership}
 

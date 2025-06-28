@@ -104,7 +104,7 @@ contract MyNFT is ERC721 {
 
 **thirdweb Solidity SDK -** **_Παρέχει τα απαραίτητα εργαλεία για την αποτελεσματική κατασκευή προσαρμοσμένων έξυπνων συμβολαίων._**
 
-- [Τεκμηρίωση](https://portal.thirdweb.com/solidity/)
+- [Τεκμηρίωση](https://portal.thirdweb.com/contracts/build/overview)
 - [GitHub](https://github.com/thirdweb-dev/contracts)
 
 ## Σχετικοί οδηγοί {#related-tutorials}

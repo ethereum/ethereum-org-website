@@ -257,7 +257,7 @@ ii. 使用樂觀卷軸的開發者和專案團隊可以利用以太坊的基礎�
 
 - [樂觀卷軸如何運作（完整指引）](https://www.alchemy.com/overviews/optimistic-rollups)
 - [什麽是區塊鏈卷軸？ （技術介紹）](https://www.ethereum-ecosystem.com/blog/what-is-a-blockchain-rollup-a-technical-introduction)
-- [Arbitrum 之概要指引](https://newsletter.banklesshq.com/p/the-essential-guide-to-arbitrum)
-- [樂觀卷軸究竟如何運作？](https://www.paradigm.xyz/2021/01/how-does-optimisms-rollup-really-work)
+- [Arbitrum 之概要指引](https://www.bankless.com/the-essential-guide-to-arbitrum)
+- [樂觀卷軸究竟如何運作？](https://www.paradigm.xyz/2021/01/how-does-optimism-s-rollup-really-work)
 - [樂觀虛擬機深入探索](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)
 - [什麽是樂觀虛擬機？](https://www.alchemy.com/overviews/optimistic-virtual-machine)

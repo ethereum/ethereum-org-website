@@ -168,7 +168,7 @@ Agar birja B taklifi to‘satdan tushib ketsa va foydalanuvchi dastlabki kreditn
 
 An’anaviy moliya olamida yuqoridagi misolni amalga oshirish uchun sizga juda katta miqdordagi pul kerak bo‘ladi. Ushbu pul topish strategiyalari faqat mavjud boylikka ega bo‘lganlar uchun mavjud. Flesh kreditlar pulga ega bo‘lish pul topish uchun shart bo‘lmagan kelajakka misol bo‘la oladi.
 
-<ButtonLink isSecondary href="https://aave.com/flash-loans/">
+<ButtonLink isSecondary href="https://aave.com/docs/concepts/flash-loans/">
   Flesh kreditlar haqida batafsil
 </ButtonLink>
 

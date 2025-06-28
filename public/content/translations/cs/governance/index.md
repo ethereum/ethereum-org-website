@@ -118,7 +118,7 @@ Obecně se neshody řeší dlouhodobou diskusí na veřejných fórech, aby se p
 
 Forky nastávají, když je potřeba provést zásadní technická vylepšení nebo změny v síti a změnit "pravidla“ protokolu. [Klienty na Ethereu](/developers/docs/nodes-and-clients/) musí aktualizovat svůj software, aby implementovali nová pravidla forku.
 
-Fork The DAO byl reakcí na [útok na DAO v roce 2016](https://www.coindesk.com/understanding-dao-hack-journalists), kdy bylo z nezabezpečeného kontraktu [DAO](/glossary/#dao) odčerpáno více než 3,6 milionu ETH. Tento fork přesunul finanční prostředky z chybného smart kontraktu do nového kontraktu, který umožnil získat zpět své finanční prostředky komukoli, kdo o ně přišel během hacku.
+Fork The DAO byl reakcí na [útok na DAO v roce 2016](https://www.coindesk.com/learn/understanding-the-dao-attack), kdy bylo z nezabezpečeného kontraktu [DAO](/glossary/#dao) odčerpáno více než 3,6 milionu ETH. Tento fork přesunul finanční prostředky z chybného smart kontraktu do nového kontraktu, který umožnil získat zpět své finanční prostředky komukoli, kdo o ně přišel během hacku.
 
 Tento postup byl odhlasován ethereovskou komunitou. Každý držitel ETH mohl hlasovat prostřednictvím transakce na [hlasovací platformě](https://web.archive.org/web/20170620030820/http://v1.carbonvote.com/). Rozhodnutí o forku získalo více než 85 % hlasů.
 

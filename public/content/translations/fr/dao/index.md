@@ -92,7 +92,7 @@ En 1977, le Wyoming a créé la LLC, qui protège les entrepreneurs et limite le
 
 ### Un exemple célèbre {#law-example}
 
-[CityDAO](https://citydao.io) - CityDAO s'est servi de la loi DAO du Wyoming pour acheter 40 acres de terrain près du parc national de Yellowstone.
+[CityDAO](https://citizen.citydao.io/) - CityDAO s'est servi de la loi DAO du Wyoming pour acheter 40 acres de terrain près du parc national de Yellowstone.
 
 ## Adhésion à la DAO {#dao-membership}
 

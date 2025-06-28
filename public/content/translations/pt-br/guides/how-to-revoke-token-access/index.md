@@ -20,7 +20,6 @@ Vários sites permitem que você veja e revogue os contratos inteligentes conect
 
 - [Ethallowance](https://ethallowance.com/) (Ethereum)
 - [Etherscan](https://etherscan.io/tokenapprovalchecker) (Ethereum)
-- [Cointool](https://cointool.app/approve/eth) (múltiplas redes)
 - [Revoke](https://revoke.cash/) (múltiplas redes)
 - [Unrekt](https://app.unrekt.net/) (múltiplas redes)
 - [EverRevoke](https://everrise.com/everrevoke/) (múltiplas redes)

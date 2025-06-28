@@ -47,7 +47,7 @@ lang: zh
 
 ## 延伸阅读 {#further-reading}
 
-- [Graph 网络概览](https://thegraph.com/docs/en/about/network/)
+- [Graph 网络概览](https://thegraph.com/docs/en/about/)
 - [Graph 查询实战](https://thegraph.com/explorer/subgraph/graphprotocol/graph-network-mainnet?version=current)
 - [EtherScan 上的应用程序接口代码示例](https://etherscan.io/apis#contracts)
 - [Beaconcha.in 信标链浏览器](https://beaconcha.in)

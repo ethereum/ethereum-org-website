@@ -278,7 +278,7 @@ Sa mga airdrop scam, may scam project na mag-e-airdrop ng asset (NFT, token) sa 
 ### Seguridad ng Crypto {#reading-crypto-security}
 
 - [Pagprotekta sa Sarili at sa Iyong Pondo](https://support.mycrypto.com/staying-safe/protecting-yourself-and-your-funds) - _MyCrypto_
-- [4 na Paraan Upang Manatiling Ligtas sa Crypto](https://www.coindesk.com/tech/2021/04/20/4-ways-to-stay-safe-in-crypto/) - _CoinDesk_
+- [4 na Paraan Upang Manatiling Ligtas sa Crypto](https://www.coindesk.com/learn/4-ways-to-stay-safe-in-crypto/) - _CoinDesk_
 - [Gabay sa Seguridad para sa Mga Walang Alam at Maging sa Mga May Alam](https://medium.com/mycrypto/mycryptos-security-guide-for-dummies-and-smart-people-too-ab178299c82e) - _MyCrypto_
 - [Seguridad sa Crypto: Mga Password at Authentication](https://www.youtube.com/watch?v=m8jlnZuV1i4) - _Andreas M. Antonopoulos_
 

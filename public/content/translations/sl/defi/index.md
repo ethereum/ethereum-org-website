@@ -158,7 +158,7 @@ Tako se v eni transakciji zgodi sledeče:
 
 Da bi zgoraj opisano transakcijo lahko izvedli v svetu tradicionalnih financ, bi potrebovali ogromno količino denarja. Takšne strategije za ustvarjanje denarja so dostopne le tistim z obstoječim bogastvom. Flash posojila so primer prihodnosti, kjer imeti denar, ni nujno predpogoj za ustvarjanje denarja.
 
-[Več o flash posojilih](https://aave.com/flash-loans/)
+[Več o flash posojilih](https://aave.com/docs/concepts/flash-loans/)
 
 <Divider />
 

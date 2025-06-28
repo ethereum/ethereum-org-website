@@ -50,6 +50,6 @@ Infine, ricordati dei problemi che gli strumenti automatizzati non possono facil
 
 ## Chiedi aiuto {#ask-for-help}
 
-[Orari lavorativi di Ethereum](https://calendly.com/dan-trailofbits/ethereum-office-hours): ogni martedì pomeriggio. Queste sessioni 1 a 1 di un'ora sono un'opportunità per farci domande sulla sicurezza, la risoluzione dei problemi usando i nostri strumenti e la ricezione di feedback dagli esperti sul tuo approccio corrente. Ti aiuteremo ad arrivare in fondo a questa guida.
+[Orari lavorativi di Ethereum](https://calendly.com/dan-trailofbits/office-hours): ogni martedì pomeriggio. Queste sessioni 1 a 1 di un'ora sono un'opportunità per farci domande sulla sicurezza, la risoluzione dei problemi usando i nostri strumenti e la ricezione di feedback dagli esperti sul tuo approccio corrente. Ti aiuteremo ad arrivare in fondo a questa guida.
 
 Unisciti al nostro Slack: [Empire Hacking](https://join.slack.com/t/empirehacking/shared_invite/zt-h97bbrj8-1jwuiU33nnzg67JcvIciUw). Siamo sempre disponibili nei canali #crytic ed #ethereum se hai domande.

@@ -28,7 +28,7 @@ Wiele projektów dostarcza implementacje łańcuchów bocznych, które można zi
 
 - [Skale](https://skale.network/)
 - [Sieć POA](https://www.poa.network/)
-- [Gnosis Chain (formerly xDai)](https://www.xdaichain.com/)
+- [Gnosis Chain (formerly xDai)](https://www.gnosis.io/)
 
 ## Dalsza lektura {#further-reading}
 

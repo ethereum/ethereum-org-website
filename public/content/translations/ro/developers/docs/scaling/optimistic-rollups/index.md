@@ -43,6 +43,6 @@ Urmăriți cum explică Finematics rollup-urile optimistic:
 
 **Optimistic rollups reading**
 
-- [Ghidul esențial pentru Arbitrum](https://newsletter.banklesshq.com/p/the-essential-guide-to-arbitrum)
-- [Cum funcționează cu adevărat Rollup-ul Optimistic?](https://www.paradigm.xyz/2021/01/how-does-optimisms-rollup-really-work)
+- [Ghidul esențial pentru Arbitrum](https://www.bankless.com/the-essential-guide-to-arbitrum)
+- [Cum funcționează cu adevărat Rollup-ul Optimistic?](https://www.paradigm.xyz/2021/01/how-does-optimism-s-rollup-really-work)
 - [OVM Deep Dive](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)

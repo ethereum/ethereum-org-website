@@ -168,7 +168,7 @@ summaryPoint3: 누구나 프로그래밍할 수 있는 오픈 소스 기술을 �
 
 전형적인 금융 세계에서 위의 예시를 가능하게 하려면 엄청난 돈이 필요합니다. 이러한 돈벌이 전략은 기존의 부를 가진 사람들만이 접근할 수 있습니다. 플래시 론은 돈을 버는 것의 전제 조건이 돈을 소유하는 것이 아니라는 미래의 예시입니다.
 
-<ButtonLink isSecondary href="https://aave.com/flash-loans/">
+<ButtonLink isSecondary href="https://aave.com/docs/concepts/flash-loans/">
   플래시 론에 대해 더 보기
 </ButtonLink>
 
