@@ -1,5 +1,5 @@
 import React from "react"
-import { FaInfoCircle } from "react-icons/fa"
+import { Info } from "lucide-react"
 import { Meta, StoryObj } from "@storybook/react"
 
 import { Center } from "@/components/ui/flex"
@@ -49,7 +49,7 @@ export const WithIcon: Story = {
     storageKey: "dismissable-banner-3",
     children: (
       <Center>
-        <FaInfoCircle className="me-2" />
+        <Info className="me-2" />
         This banner includes an icon.
       </Center>
     ),

@@ -1,6 +1,6 @@
 "use client"
 
-import { MdArrowForward } from "react-icons/md"
+import { ArrowRight } from "lucide-react"
 
 import { ChildOnlyProp, TranslationKey } from "@/lib/types"
 
@@ -50,7 +50,7 @@ const StepBox = (
           </LinkOverlay>
           <p className="mb-0">{t(props.descId)}</p>
         </div>
-        <MdArrowForward className="ms-4 min-w-6" />
+        <ArrowRight className="ms-4 min-w-6 text-2xl" />
       </Flex>
     </LinkBox>
   )

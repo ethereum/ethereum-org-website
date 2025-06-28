@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react"
-import type { IconType } from "react-icons/lib"
-import { MdInfoOutline, MdWarning } from "react-icons/md"
+import { AlertTriangle, Info, type LucideIcon } from "lucide-react"
 
 import { Flex } from "@/components/ui/flex"
 
@@ -10,7 +9,7 @@ import Tooltip, { type TooltipProps } from "../Tooltip"
 
 const initialContent = {
   contentValue: NULL_VALUE,
-  tooltipIcon: MdInfoOutline,
+  tooltipIcon: Info,
 }
 
 export type StatProps = {
@@ -23,14 +22,14 @@ export type StatProps = {
 const Stat = ({ tooltipProps, value, label, isError }: StatProps) => {
   const [content, setContent] = useState<{
     contentValue: string | JSX.Element
-    tooltipIcon: IconType
+    tooltipIcon: LucideIcon
   }>(initialContent)
 
   useEffect(() => {
     if (isError) {
       return setContent({
         contentValue: NULL_VALUE,
-        tooltipIcon: MdWarning,
+        tooltipIcon: AlertTriangle,
       })
     }
 

@@ -1,5 +1,5 @@
 import React, { type HTMLAttributes } from "react"
-import { GrMenu } from "react-icons/gr"
+import { Menu } from "lucide-react"
 
 import { HStack } from "@/components/ui/flex"
 
@@ -43,7 +43,7 @@ export const Web3App = ({
               </>
             )}
           </div>
-          <GrMenu className="[&>path]:stroke-body" />
+          <Menu className="size-[1em] [&>path]:stroke-body" />
         </HStack>
       </NotificationPopover>
       {children}

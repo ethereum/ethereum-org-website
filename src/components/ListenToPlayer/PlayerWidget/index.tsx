@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from "react"
-import { IoClose } from "react-icons/io5"
+import { X } from "lucide-react"
 
 import {
   ArrowIcon,
@@ -324,7 +324,7 @@ const PlayerWidget = ({
                 handleCloseWidget()
               }}
             >
-              <IoClose />
+              <X />
             </button>
           </PlayerButton>
         </div>

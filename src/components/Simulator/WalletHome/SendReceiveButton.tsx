@@ -1,5 +1,5 @@
 import { type ReactNode } from "react"
-import type { IconType } from "react-icons/lib"
+import { LucideIcon } from "lucide-react"
 
 import { Button } from "@/components/ui/buttons/Button"
 
@@ -9,7 +9,7 @@ import { ClickAnimation } from "../ClickAnimation"
 import { PulseAnimation } from "../PulseAnimation"
 
 type SendReceiveButtonProps = {
-  icon: IconType
+  icon: LucideIcon | React.FC<React.SVGProps<SVGElement>>
   isHighlighted: boolean
   isDisabled: boolean
   onClick?: () => void

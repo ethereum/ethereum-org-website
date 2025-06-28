@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect } from "react"
 import { useMemo } from "react"
 import isChromatic from "chromatic"
-import { LiaHandPointerSolid } from "react-icons/lia"
+import { Pointer } from "lucide-react"
 
 import { Button } from "@/components/ui/buttons/Button"
 
@@ -81,7 +81,7 @@ export const WordSelectorButtons = ({
             <>
               {word}
               {index === wordsSelected && (
-                <LiaHandPointerSolid className="absolute start-[65%] top-[65%] z-popover fill-body transition-opacity duration-200 group-hover:opacity-0 group-hover:transition-opacity group-hover:duration-200" />
+                <Pointer className="absolute start-[65%] top-[65%] z-popover stroke-body transition-opacity duration-200 group-hover:opacity-0 group-hover:transition-opacity group-hover:duration-200" />
               )}
             </>
           </Button>

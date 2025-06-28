@@ -1,9 +1,8 @@
 "use client"
 
 import { Suspense, useState } from "react"
+import { Check, Copy } from "lucide-react"
 import { useLocale } from "next-intl"
-import { IoMdCopy } from "react-icons/io"
-import { MdCheck } from "react-icons/md"
 
 import type { CodeExample } from "@/lib/interfaces"
 
@@ -96,7 +95,7 @@ const CodeExamples = ({ title, codeExamples }: CodeExamplesProps) => {
                       text={code}
                       className="absolute end-4 top-4"
                     >
-                      {(hasCopied) => (hasCopied ? <MdCheck /> : <IoMdCopy />)}
+                      {(hasCopied) => (hasCopied ? <Check /> : <Copy />)}
                     </CopyToClipboard>
                   </div>
                 </Suspense>

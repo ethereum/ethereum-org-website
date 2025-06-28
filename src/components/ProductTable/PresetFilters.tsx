@@ -1,3 +1,5 @@
+import { Check } from "lucide-react"
+
 import type { TPresetFilters } from "@/lib/types"
 
 import { cn } from "@/lib/utils/cn"
@@ -77,18 +79,7 @@ const PresetFilters = ({
                     )}
                   >
                     {activePresets.includes(idx) && (
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="3"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="h-4 w-4 text-background"
-                      >
-                        <polyline points="20 6 9 17 4 12"></polyline>
-                      </svg>
+                      <Check className="size-4 stroke-[3] text-background" />
                     )}
                   </div>
                   <h3

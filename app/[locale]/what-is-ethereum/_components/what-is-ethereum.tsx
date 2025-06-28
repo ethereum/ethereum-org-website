@@ -1,9 +1,9 @@
 "use client"
 
+import { Info } from "lucide-react"
 import type { ImageProps } from "next/image"
 import { useLocale } from "next-intl"
 import type { HTMLAttributes } from "react"
-import { MdInfoOutline } from "react-icons/md"
 
 import type {
   ChildOnlyProp,
@@ -488,7 +488,7 @@ const WhatIsEthereumPage = ({
                           })}
                         >
                           <span>
-                            <MdInfoOutline className="inline-block align-middle" />
+                            <Info className="-mb-0.5 size-[0.875em]" />
                           </span>
                         </Tooltip>
                       </NoWrapText>
@@ -511,7 +511,7 @@ const WhatIsEthereumPage = ({
                           })}
                         >
                           <span>
-                            <MdInfoOutline className="inline-block align-middle" />
+                            <Info className="-mb-0.5 size-[0.875em]" />
                           </span>
                         </Tooltip>
                       </NoWrapText>
@@ -534,7 +534,7 @@ const WhatIsEthereumPage = ({
                           })}
                         >
                           <span>
-                            <MdInfoOutline className="inline-block align-middle" />
+                            <Info className="-mb-0.5 size-[0.875em]" />
                           </span>
                         </Tooltip>
                       </NoWrapText>
@@ -559,7 +559,7 @@ const WhatIsEthereumPage = ({
                           })}
                         >
                           <span>
-                            <MdInfoOutline className="inline-block align-middle" />
+                            <Info className="-mb-0.5 size-[0.875em]" />
                           </span>
                         </Tooltip>
                       </NoWrapText>
@@ -585,7 +585,7 @@ const WhatIsEthereumPage = ({
                           })}
                         >
                           <span>
-                            <MdInfoOutline className="inline-block align-middle" />
+                            <Info className="-mb-0.5 size-[0.875em]" />
                           </span>
                         </Tooltip>
                       </NoWrapText>
@@ -611,7 +611,7 @@ const WhatIsEthereumPage = ({
                           })}
                         >
                           <span>
-                            <MdInfoOutline className="inline-block align-middle" />
+                            <Info className="-mb-0.5 size-[0.875em]" />
                           </span>
                         </Tooltip>
                       </NoWrapText>

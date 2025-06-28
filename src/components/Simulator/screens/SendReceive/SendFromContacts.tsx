@@ -1,11 +1,11 @@
-import { PiMagnifyingGlass } from "react-icons/pi"
+import { QrCode, Search } from "lucide-react"
 
 import type { SimulatorNavProps } from "@/lib/types"
 
 import { Button } from "@/components/ui/buttons/Button"
 import { Stack } from "@/components/ui/flex"
 
-import { EthTokenIconGrayscale, QrCodeIcon } from "../../icons"
+import { EthTokenIcon } from "../../icons"
 import { NotificationPopover } from "../../NotificationPopover"
 import { CategoryTabs } from "../../WalletHome/CategoryTabs"
 
@@ -34,9 +34,9 @@ export const SendFromContacts = ({
             variant="outline"
             className="w-full cursor-auto border-disabled py-4 text-disabled hover:!text-disabled hover:shadow-none"
           >
-            <PiMagnifyingGlass />
+            <Search />
             <span className="me-auto">Address or contacts</span>
-            <QrCodeIcon className="text-lg" />
+            <QrCode className="text-lg" />
           </Button>
         </NotificationPopover>
       </div>
@@ -54,7 +54,7 @@ export const SendFromContacts = ({
               className="group gap-2 disabled:bg-background disabled:text-body hover:[&_path]:fill-primary-hover"
               onClick={() => handleSelection(name)}
             >
-              <EthTokenIconGrayscale />
+              <EthTokenIcon className="[&_circle]:fill-white [&_path]:fill-primary-action" />
               <span className="flex-1">
                 <span className="block text-start font-bold">{name}</span>
                 <span className="block text-start text-sm text-white group-disabled:text-body-medium">

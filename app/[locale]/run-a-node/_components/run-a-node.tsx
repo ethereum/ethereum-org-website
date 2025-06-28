@@ -2,7 +2,6 @@
 
 import { HTMLAttributes } from "react"
 import type { ReactNode } from "react"
-import { FaDiscord } from "react-icons/fa"
 
 import type { ChildOnlyProp, PageWithContributorsProps } from "@/lib/types"
 
@@ -10,7 +9,7 @@ import Emoji from "@/components/Emoji"
 import ExpandableCard from "@/components/ExpandableCard"
 import FeedbackCard from "@/components/FeedbackCard"
 import FileContributors from "@/components/FileContributors"
-import type { IconBaseType } from "@/components/icons/icon-base"
+import Discord from "@/components/icons/discord.svg"
 import {
   DecentralizationGlyphIcon,
   DownloadGlyphIcon,
@@ -198,7 +197,7 @@ const Width40 = (props: ChildOnlyProp) => (
 )
 
 type RunANodeCard = {
-  image: IconBaseType
+  Svg: React.FC<React.SVGProps<SVGElement>>
   title: string
   preview: ReactNode
   body: string[]
@@ -231,7 +230,7 @@ const RunANodePage = ({
 
   const whyRunANodeCards: RunANodeCard[] = [
     {
-      image: PrivacyGlyphIcon,
+      Svg: PrivacyGlyphIcon,
       title: t("page-run-a-node-privacy-title"),
       preview: t("page-run-a-node-privacy-preview"),
       body: [
@@ -242,7 +241,7 @@ const RunANodePage = ({
       alt: t("page-run-a-node-glyph-alt-privacy"),
     },
     {
-      image: MegaphoneGlyphIcon,
+      Svg: MegaphoneGlyphIcon,
       title: t("page-run-a-node-censorship-resistance-title"),
       preview: t("page-run-a-node-censorship-resistance-preview"),
       body: [
@@ -252,7 +251,7 @@ const RunANodePage = ({
       alt: t("page-run-a-node-glyph-alt-censorship-resistance"),
     },
     {
-      image: EarthGlyphIcon,
+      Svg: EarthGlyphIcon,
       title: t("page-run-a-node-participate-title"),
       preview: (
         <Translation id="page-run-a-node:page-run-a-node-participate-preview" />
@@ -264,7 +263,7 @@ const RunANodePage = ({
       alt: t("page-run-a-node-glyph-alt-earth"),
     },
     {
-      image: DecentralizationGlyphIcon,
+      Svg: DecentralizationGlyphIcon,
       title: t("page-run-a-node-decentralized-title"),
       preview: t("page-run-a-node-decentralized-preview"),
       body: [
@@ -274,7 +273,7 @@ const RunANodePage = ({
       alt: t("page-run-a-node-glyph-alt-decentralization"),
     },
     {
-      image: VoteGlyphIcon,
+      Svg: VoteGlyphIcon,
       title: t("page-run-a-node-voice-your-choice-title"),
       preview: t("page-run-a-node-voice-your-choice-preview"),
       body: [
@@ -284,7 +283,7 @@ const RunANodePage = ({
       alt: t("page-run-a-node-glyph-alt-vote"),
     },
     {
-      image: SovereigntyGlyphIcon,
+      Svg: SovereigntyGlyphIcon,
       title: t("page-run-a-node-sovereignty-title"),
       preview: t("page-run-a-node-sovereignty-preview"),
       body: [
@@ -368,14 +367,16 @@ const RunANodePage = ({
           <Translation id="page-run-a-node:page-run-a-node-why-title" />
         </H2>
         <InfoGrid>
-          {whyRunANodeCards.map(({ image, title, preview, body, alt }) => (
+          {whyRunANodeCards.map(({ Svg, title, preview, body, alt }) => (
             <ExpandableCard
               contentPreview={preview}
               title={title}
               // TODO: make a11y svgs (using <title>)
               // @ts-expect-error alt does not exist as a valid prop
               alt={alt}
-              svg={image}
+              svg={({ className }) => (
+                <Svg className={cn("size-16", className)} />
+              )}
               key={title}
             >
               {body.map((item) => (
@@ -517,9 +518,8 @@ const RunANodePage = ({
         <BuildContainer>
           <SvgTitle>
             <HardwareGlyphIcon
-              // TODO: make a11y svgs (using <title>)
-              // @ts-expect-error alt does not exist as a valid prop
-              alt={t("page-run-a-node-glyph-alt-hardware")}
+              className="size-12"
+              aria-label={t("page-run-a-node-glyph-alt-hardware")}
             />
             <H3>{t("page-run-a-node-build-your-own-hardware-title")}</H3>
           </SvgTitle>
@@ -589,9 +589,8 @@ const RunANodePage = ({
         <BuildContainer>
           <SvgTitle>
             <DownloadGlyphIcon
-              // TODO: make a11y svgs (using <title>)
-              // @ts-expect-error alt does not exist as a valid prop
-              alt={t("page-run-a-node-glyph-alt-software")}
+              aria-label={t("page-run-a-node-glyph-alt-software")}
+              className="size-12"
             />
             <H3>{t("page-run-a-node-build-your-own-software")}</H3>
           </SvgTitle>
@@ -656,7 +655,7 @@ const RunANodePage = ({
             <Text>{t("page-run-a-node-community-description-2")}</Text>
             <ButtonContainer>
               <ButtonLink href="https://discord.com/invite/dappnode">
-                <FaDiscord />
+                <Discord />
                 {t("page-run-a-node-community-link-1")}
               </ButtonLink>
               <ButtonLink

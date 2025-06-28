@@ -179,7 +179,7 @@ pnpm events-import         # Import community events
 - `@radix-ui/*` - Accessible component primitives
 - `tailwind-variants` - Component variant patterns
 - `framer-motion` - Animation library
-- `react-icons` - Icon library
+- `lucide-react` - Icon library
 
 ### Content & Data
 

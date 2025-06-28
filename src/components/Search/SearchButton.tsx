@@ -1,5 +1,5 @@
 import { forwardRef } from "react"
-import { MdSearch } from "react-icons/md"
+import { Search } from "lucide-react"
 
 import { cn } from "@/lib/utils/cn"
 
@@ -23,7 +23,7 @@ const SearchButton = forwardRef<HTMLButtonElement, ButtonProps>(
         isSecondary
         {...props}
       >
-        <MdSearch />
+        <Search />
       </Button>
     )
   }

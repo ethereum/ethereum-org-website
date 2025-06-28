@@ -1,5 +1,5 @@
 import * as React from "react"
-import { MdCircle } from "react-icons/md"
+import { Circle } from "lucide-react"
 import * as RadioGroupPrimitive from "@radix-ui/react-radio-group"
 
 import { cn } from "@/lib/utils/cn"
@@ -35,7 +35,7 @@ const RadioGroupItem = React.forwardRef<
       {...props}
     >
       <RadioGroupPrimitive.Indicator className="flex items-center justify-center">
-        <MdCircle className="size-2" />
+        <Circle className="size-2 text-[0.5rem]" />
       </RadioGroupPrimitive.Indicator>
     </RadioGroupPrimitive.Item>
   )

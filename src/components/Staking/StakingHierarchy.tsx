@@ -1,5 +1,4 @@
 import React, { HTMLAttributes } from "react"
-import { IconBase } from "react-icons"
 
 import { ChildOnlyProp } from "@/lib/types"
 
@@ -81,7 +80,10 @@ const Pill = ({
   </p>
 )
 
-type GlyphProps = { glyphIcon: typeof IconBase; className?: string }
+type GlyphProps = {
+  glyphIcon: React.FC<React.SVGProps<SVGElement>>
+  className?: string
+}
 const Glyph = ({ glyphIcon: GlyphIcon, className }: GlyphProps) => (
   <Center className="area-content md:area-glyph">
     <GlyphIcon

@@ -1,8 +1,8 @@
 "use client"
 
 import { useState } from "react"
-import { FaXTwitter } from "react-icons/fa6"
 
+import Twitter from "@/components/icons/twitter.svg"
 import { Button, ButtonLink } from "@/components/ui/buttons/Button"
 
 import { cn } from "@/lib/utils/cn"
@@ -96,7 +96,7 @@ const Stories = ({ stories }: StoriesProps) => {
                             hideArrow
                             className="text-sm"
                           >
-                            <FaXTwitter className="h-5 w-5 text-body" />
+                            <Twitter className="text-xl text-body" />
                           </ButtonLink>
                         </div>
                       )}
@@ -175,7 +175,7 @@ const Stories = ({ stories }: StoriesProps) => {
                             hideArrow
                             className="text-sm"
                           >
-                            <FaXTwitter className="h-5 w-5 text-body" />
+                            <Twitter className="h-5 w-5 text-body" />
                           </ButtonLink>
                         </div>
                       )}

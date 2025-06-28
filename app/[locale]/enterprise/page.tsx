@@ -1,3 +1,4 @@
+import { Check } from "lucide-react"
 import dynamic from "next/dynamic"
 import { getTranslations } from "next-intl/server"
 
@@ -5,7 +6,6 @@ import type { Lang, StatsBoxMetric } from "@/lib/types"
 
 import ActivityStats from "@/components/ActivityStats"
 import { HubHero } from "@/components/Hero"
-import Checkmark from "@/components/icons/checkmark.svg"
 import Adidas from "@/components/icons/enterprise/adidas.svg"
 import Azure from "@/components/icons/enterprise/azure.svg"
 import BancoSantander from "@/components/icons/enterprise/banco-santander.svg"
@@ -465,7 +465,13 @@ const Page = async ({ params }: { params: { locale: Lang } }) => {
                 key={header}
                 className="grid h-fit grid-cols-[auto,1fr] gap-x-3"
               >
-                <Checkmark className="text-2xl text-success" />
+                <div className="grid size-6 place-items-center rounded-full bg-success/25 text-2xl text-success">
+                  <Check
+                    strokeLinecap="square"
+                    strokeLinejoin="miter"
+                    className="-mb-0.5 size-3.5 stroke-[5]"
+                  />
+                </div>
                 <h3 className="h-fit text-lg font-bold">{header}</h3>
                 <p className="col-start-2 text-body-medium">{content}</p>
               </div>

@@ -1,6 +1,6 @@
 import { type ReactNode, useState } from "react"
 import { motion } from "framer-motion"
-import { MdClose, MdInfoOutline } from "react-icons/md"
+import { Info, X } from "lucide-react"
 
 import { Button } from "../ui/buttons/Button"
 import {
@@ -30,7 +30,7 @@ export const MoreInfoPopover = ({ isFirstStep, children }: MoreInfoPopover) => {
           data-testid="more-info-popover-trigger"
         >
           More info
-          <MdInfoOutline size={24} />
+          <Info className="size-5" />
           {isFirstStep && !clicked && <PulseAnimation type="narrow-button" />}
         </MotionButton>
       </PopoverTrigger>
@@ -39,7 +39,7 @@ export const MoreInfoPopover = ({ isFirstStep, children }: MoreInfoPopover) => {
         data-testid="more-info-popover-content"
       >
         <PopoverClose className="absolute right-2 top-1 ms-auto flex size-6 items-center justify-center text-xl leading-none">
-          <MdClose />
+          <X />
         </PopoverClose>
         <div className="px-3 py-2 last-of-type:[&_p]:mb-2">{children}</div>
       </PopoverContent>

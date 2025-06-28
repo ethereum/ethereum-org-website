@@ -1,10 +1,10 @@
 import { getTranslations } from "next-intl/server"
-import { FaGithub } from "react-icons/fa6"
 
 import { Lang } from "@/lib/types"
 
 import BannerNotification from "@/components/Banners/BannerNotification"
 import { HubHero } from "@/components/Hero"
+import Github from "@/components/icons/github.svg"
 import StackIcon from "@/components/icons/stack.svg"
 import MainArticle from "@/components/MainArticle"
 import Translation from "@/components/Translation"
@@ -187,7 +187,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                     eventName: "Ethereum.org Github Bug Report",
                   }}
                 >
-                  <FaGithub /> {t("page-resources-found-bug")}
+                  <Github /> {t("page-resources-found-bug")}
                 </ButtonLink>
               </div>
             </Stack>

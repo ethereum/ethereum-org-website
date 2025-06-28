@@ -1,6 +1,6 @@
 import React from "react"
 import { motion } from "framer-motion"
-import { MdArrowBack } from "react-icons/md"
+import { ArrowLeft } from "lucide-react"
 
 import type { SimulatorNavProps } from "@/lib/types"
 
@@ -61,7 +61,7 @@ export const Explanation = ({
           variants={backButtonVariants}
           animate={step === 0 ? "hidden" : "visible"}
         >
-          <MdArrowBack size="18px" />
+          <ArrowLeft className="text-lg" />
           Back
         </motion.button>
       </Button>

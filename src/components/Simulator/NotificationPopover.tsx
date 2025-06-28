@@ -1,5 +1,5 @@
-import React, { type ReactNode } from "react"
-import { MdClose } from "react-icons/md"
+import { type ReactNode } from "react"
+import { X } from "lucide-react"
 
 import { Flex } from "../ui/flex"
 import {
@@ -36,7 +36,7 @@ export const NotificationPopover = ({
             {title || ""}
           </header>
           <PopoverClose className="absolute right-2 top-1 ms-auto flex size-6 items-center justify-center text-xl leading-none">
-            <MdClose />
+            <X />
           </PopoverClose>
         </Flex>
         <div>{content}</div>

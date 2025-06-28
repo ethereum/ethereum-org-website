@@ -1,13 +1,12 @@
+import { LucideIcon } from "lucide-react"
 import { StaticImageData } from "next/image"
-
-import type { IconBaseType } from "@/components/icons/icon-base"
 
 export interface TokenBalance {
   name: string
   ticker: string
   amount: number
   usdConversion: number
-  Icon: IconBaseType
+  Icon: LucideIcon | React.FC<React.SVGProps<SVGElement>>
 }
 
 export interface Contact {

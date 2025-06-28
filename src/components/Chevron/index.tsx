@@ -1,4 +1,4 @@
-import { MdChevronLeft, MdChevronRight } from "react-icons/md"
+import { ChevronLeft, ChevronRight } from "lucide-react"
 
 import { cn } from "@/lib/utils/cn"
 
@@ -9,7 +9,7 @@ export const ChevronNext = ({
   ...props
 }: React.HTMLAttributes<SVGElement>) => {
   const { twFlipForRtl } = useRtlFlip()
-  return <MdChevronRight className={cn(className, twFlipForRtl)} {...props} />
+  return <ChevronRight className={cn(className, twFlipForRtl)} {...props} />
 }
 
 export const ChevronPrev = ({
@@ -17,5 +17,5 @@ export const ChevronPrev = ({
   ...props
 }: React.HTMLAttributes<SVGElement>) => {
   const { twFlipForRtl } = useRtlFlip()
-  return <MdChevronLeft className={cn(className, twFlipForRtl)} {...props} />
+  return <ChevronLeft className={cn(className, twFlipForRtl)} {...props} />
 }

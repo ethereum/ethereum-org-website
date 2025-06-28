@@ -21,7 +21,7 @@ export const TokenBalanceItem = ({ item }: TokenBalanceItemProps) => {
   }).format(amount)
   return (
     <Flex className="gap-4">
-      <Icon />
+      <Icon className="text-3xl" />
       <p className="flex-1 font-medium">{name}</p>
       <div className="text-end text-sm font-bold leading-normal [&_p]:m-0">
         <p>{usdValue}</p>

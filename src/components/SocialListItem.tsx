@@ -1,11 +1,10 @@
-import {
-  FaDiscord,
-  FaGlobe,
-  FaRedditAlien,
-  FaStackExchange,
-  FaXTwitter,
-  FaYoutube,
-} from "react-icons/fa6"
+import { Globe } from "lucide-react"
+
+import Discord from "@/components/icons/discord.svg"
+import Reddit from "@/components/icons/reddit.svg"
+import StackExchange from "@/components/icons/stack-exchange.svg"
+import Twitter from "@/components/icons/twitter.svg"
+import Youtube from "@/components/icons/youtube.svg"
 
 import { cn } from "@/lib/utils/cn"
 
@@ -18,12 +17,12 @@ const socialColorClasses = {
 }
 
 const icons = {
-  reddit: FaRedditAlien,
-  twitter: FaXTwitter,
-  youtube: FaYoutube,
-  discord: FaDiscord,
-  stackExchange: FaStackExchange,
-  webpage: FaGlobe,
+  reddit: Reddit,
+  twitter: Twitter,
+  youtube: Youtube,
+  discord: Discord,
+  stackExchange: StackExchange,
+  webpage: Globe,
 }
 
 type SocialListItemProps = React.HTMLAttributes<HTMLDivElement> & {
