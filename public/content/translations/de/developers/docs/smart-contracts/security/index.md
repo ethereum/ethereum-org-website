@@ -515,7 +515,7 @@ Wenn Sie vorhaben, ein On-Chain-Oracle nach Assetpreisen zu befragen, sollten Si
 
 - **[Cyfrin](https://cyfrin.io)** – _Web3-Sicherheits-Kraftwerk, das Krypto-Sicherheit durch Produkte und Smart-Contract-Audit-Dienste fördert._
 
-- **[ImmuneBytes](https://www.immunebytes.com//smart-contract-audit/)** – _Web3-Sicherheitsunternehmen, das Sicherheits-Audits für Blockchain-Systeme durch ein Team erfahrener Prüfer und erstklassige Tools anbietet._
+- **[ImmuneBytes](https://immunebytes.com/smart-contract-audit/)** – _Web3-Sicherheitsunternehmen, das Sicherheits-Audits für Blockchain-Systeme durch ein Team erfahrener Prüfer und erstklassige Tools anbietet._
 
 - **[Oxorio](https://oxor.io/)** – _Smart-Contract-Audits und Blockchain-Sicherheitsdienste mit Expertise in EVM, Solidity, ZK und Cross-Chain-Technologien für Krypto-Unternehmen und DeFi-Projekte._
 
