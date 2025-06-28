@@ -111,7 +111,7 @@ const H3 = ({ children, ...props }: HTMLAttributes<HTMLHeadingElement>) => (
 )
 
 const ImageHeight200 = ({ src, alt }: ImageProps) => (
-  <Image className="h-[200px] w-auto" src={src} alt={alt} />
+  <Image className="h-[200px] w-auto" src={src} alt={alt} sizes="250px" />
 )
 
 export default async function Page({ params }: { params: Promise<Params> }) {
@@ -324,7 +324,12 @@ export default async function Page({ params }: { params: Promise<Params> }) {
                   </UnorderedList>
                 </Stack>
                 <div className="self-end">
-                  <Image className="max-w-[265px]" src={newRings} alt="" />
+                  <Image
+                    className="max-w-[265px]"
+                    src={newRings}
+                    alt=""
+                    sizes="265px"
+                  />
                 </div>
               </Flex>
 
