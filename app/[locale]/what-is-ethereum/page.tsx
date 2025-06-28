@@ -43,8 +43,8 @@ import {
   getRequiredNamespacesForPage,
 } from "@/lib/utils/translations"
 
-import WhatTabs from "./_components/WhatTabs/lazy"
-import WhySwiper from "./_components/WhySwiper/lazy"
+import WhatTabs from "./_components/WhatTabs/server"
+import WhySwiper from "./_components/WhySwiper/server"
 
 import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
 import dogeComputerImg from "@/public/images/doge-computer.png"
