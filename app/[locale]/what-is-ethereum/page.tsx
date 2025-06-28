@@ -140,7 +140,7 @@ const NoWrapText = (props: ChildOnlyProp) => (
 )
 
 const Image400 = ({ src }: Pick<ImageProps, "src">) => (
-  <Image src={src} alt="" width={400} />
+  <Image src={src} alt="" sizes="400px" />
 )
 
 const loadData = dataLoader([["growThePieData", fetchGrowThePie]])
