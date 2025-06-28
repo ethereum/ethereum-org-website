@@ -117,6 +117,7 @@ const ImageHeight200 = ({ src, alt }: ImageProps) => (
 export default async function Page({ params }: { params: Promise<Params> }) {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: "page-learn" })
+  const tCommon = await getTranslations({ locale, namespace: "common" })
 
   const commitHistoryCache: CommitHistory = {}
   const { contributors, lastEditLocaleTimestamp } =
@@ -158,7 +159,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
   }))
 
   const heroContent: HubHeroProps = {
-    title: t("common:learn-hub"),
+    title: tCommon("learn-hub"),
     header: t("hero-header"),
     description: t("hero-subtitle"),
     heroImg: heroImage,
@@ -428,17 +429,17 @@ export default async function Page({ params }: { params: Promise<Params> }) {
                     <UnorderedList className="mb-0">
                       <ListItem>
                         <InlineLink href="/decentralized-identity/">
-                          {t("common:decentralized-identity")}
+                          {tCommon("decentralized-identity")}
                         </InlineLink>
                       </ListItem>
                       <ListItem>
                         <InlineLink href="/social-networks/">
-                          {t("common:decentralized-social-networks")}
+                          {tCommon("decentralized-social-networks")}
                         </InlineLink>
                       </ListItem>
                       <ListItem>
                         <InlineLink href="/desci/">
-                          {t("common:decentralized-science")}
+                          {tCommon("decentralized-science")}
                         </InlineLink>
                       </ListItem>
                       <ListItem>
