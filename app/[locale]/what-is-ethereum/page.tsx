@@ -1,5 +1,4 @@
 import { pick } from "lodash"
-import dynamic from "next/dynamic"
 import {
   getMessages,
   getTranslations,
@@ -9,6 +8,7 @@ import { MdInfoOutline } from "react-icons/md"
 
 import type { ChildOnlyProp, CommitHistory, Lang } from "@/lib/types"
 
+import AdoptionChart from "@/components/AdoptionChart/lazy"
 import {
   Banner,
   BannerBody,
@@ -18,10 +18,12 @@ import {
 } from "@/components/BannerGrid"
 import Callout from "@/components/Callout"
 import Card from "@/components/Card"
+import EnergyConsumptionChart from "@/components/EnergyConsumptionChart/lazy"
 import FeedbackCard from "@/components/FeedbackCard"
 import FileContributors from "@/components/FileContributors"
 import I18nProvider from "@/components/I18nProvider"
 import { Image, ImageProps } from "@/components/Image"
+import ListenToPlayer from "@/components/ListenToPlayer/lazy"
 import MainArticle from "@/components/MainArticle"
 import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import StatErrorMessage from "@/components/StatErrorMessage"
@@ -31,7 +33,6 @@ import { Button } from "@/components/ui/buttons/Button"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Center, Flex, HStack, Stack } from "@/components/ui/flex"
 import InlineLink from "@/components/ui/Link"
-import { Skeleton, SkeletonLines } from "@/components/ui/skeleton"
 
 import { cn } from "@/lib/utils/cn"
 import { getAppPageContributorInfo } from "@/lib/utils/contributors"
@@ -41,6 +42,9 @@ import {
   getLocaleForNumberFormat,
   getRequiredNamespacesForPage,
 } from "@/lib/utils/translations"
+
+import WhatTabs from "./_components/WhatTabs/lazy"
+import WhySwiper from "./_components/WhySwiper/lazy"
 
 import { fetchGrowThePie } from "@/lib/api/fetchGrowThePie"
 import dogeComputerImg from "@/public/images/doge-computer.png"
@@ -52,112 +56,6 @@ import whatAreSmartContracts from "@/public/images/infrastructure_transparent.pn
 import whoRunsEthereum from "@/public/images/run-a-node/ethereum-inside.png"
 import stats from "@/public/images/upgrades/newrings.png"
 import hero from "@/public/images/what-is-ethereum.png"
-
-const AdoptionChart = dynamic(() => import("@/components/AdoptionChart"), {
-  ssr: false,
-  loading: () => (
-    <div className="ms-8 grid w-full max-w-96 flex-[2] grid-cols-3 gap-x-4 gap-y-6">
-      <div className="flex h-fit flex-1 flex-col self-end overflow-hidden rounded-4xl border">
-        <Skeleton className="m-4" />
-      </div>
-      <div className="flex h-fit flex-1 flex-col self-end overflow-hidden rounded-4xl border [&>div]:border-b last:[&>div]:border-none">
-        {Array.from({ length: 3 }).map((_, idx) => (
-          <div key={"col2" + idx} className="border-b p-4 last:border-none">
-            <Skeleton className="" />
-          </div>
-        ))}
-      </div>
-      <div className="flex h-fit flex-1 flex-col self-end overflow-hidden rounded-4xl border">
-        {Array.from({ length: 8 }).map((_, idx) => (
-          <div key={"col2" + idx} className="border-b p-4 last:border-none">
-            <Skeleton className="" />
-          </div>
-        ))}
-      </div>
-      <Skeleton className="mx-6" />
-      <Skeleton className="mx-6" />
-      <Skeleton className="mx-6" />
-    </div>
-  ),
-})
-
-const ListenToPlayer = dynamic(() => import("@/components/ListenToPlayer"), {
-  ssr: false,
-  loading: () => <Skeleton className="h-10.5 w-56" />,
-})
-
-const WhatTabs = dynamic(() => import("./_components/WhySlider"), {
-  ssr: false,
-  loading: () => (
-    <>
-      <div className="mb-4 flex w-2/3 gap-4 border-b py-4">
-        <Skeleton className="flex-1" />
-        <Skeleton className="flex-1" />
-      </div>
-      <div className="h-fit rounded-lg border p-8">
-        <SkeletonLines noOfLines={5} className="pt-0" />
-      </div>
-    </>
-  ),
-})
-
-const WhySwiper = dynamic(() => import("./_components/WhySlider"), {
-  ssr: false,
-  loading: () => (
-    <div className="h-fit space-y-8 rounded border bg-background p-8">
-      <SkeletonLines noOfLines={5} />
-      <SkeletonLines noOfLines={5} />
-      <Skeleton className="mx-auto h-5 w-40 rounded-full" />
-    </div>
-  ),
-})
-
-const EnergyConsumptionChart = dynamic(
-  () => import("@/components/EnergyConsumptionChart"),
-  {
-    ssr: false,
-    loading: () => (
-      <div className="my-16 w-full space-y-4">
-        <div className="grid w-full grid-cols-5 place-items-end sm:grid-cols-6 md:grid-cols-10">
-          <div className="flex flex-col items-center space-y-4">
-            <Skeleton className="h-60 w-9" />
-            <Skeleton className="h-8 w-9" />
-          </div>
-          <div className="flex flex-col items-center space-y-4">
-            <Skeleton className="h-40 w-9" />
-            <Skeleton className="h-8 w-9" />
-          </div>
-          <div className="flex flex-col items-center space-y-4">
-            <Skeleton className="h-20 w-9" />
-            <Skeleton className="h-8 w-9" />
-          </div>{" "}
-          <div className="flex flex-col items-center space-y-4">
-            <Skeleton className="h-10 w-9" />
-            <Skeleton className="h-8 w-9" />
-          </div>
-          <div className="flex flex-col items-center space-y-4 max-sm:hidden">
-            <Skeleton className="h-6 w-9" />
-            <Skeleton className="h-8 w-9" />
-          </div>
-          {Array.from({ length: 4 }).map((_, idx) => (
-            <div
-              key={idx}
-              className="flex flex-col items-center space-y-4 max-md:hidden"
-            >
-              <Skeleton className="h-3 w-9" />
-              <Skeleton className="h-8 w-9" />
-            </div>
-          ))}
-          <div className="flex flex-col items-center space-y-4">
-            <Skeleton className="h-1 w-9" />
-            <Skeleton className="h-8 w-9" />
-          </div>
-        </div>
-        <Skeleton className="mx-auto w-80" />
-      </div>
-    ),
-  }
-)
 
 const Summary = ({
   className,
@@ -377,7 +275,6 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
         <div className="w-full bg-background-highlight">
           <Section>
             <div className="mb-8">
-              {/* CLIENT SIDE */}
               <ListenToPlayer slug={"what-is-ethereum"} />
             </div>
             <Stack className="gap-14">
@@ -429,7 +326,6 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 
                 <TwoColumnContent>
                   <Width60>
-                    {/* CLIENT SIDE */}
                     <WhatTabs />
                   </Width60>
                   <Width40 />
@@ -449,13 +345,11 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                   <p>{t("page-what-is-ethereum-why-would-i-use-ethereum-2")}</p>
 
                   <div className="max-w-full">
-                    {/* CLIENT SIDE */}
                     <WhySwiper />
                   </div>
                 </Stack>
               </Width60>
               <Width40>
-                {/* CLIENT SIDE */}
                 <AdoptionChart />
               </Width40>
             </TwoColumnContent>
@@ -701,7 +595,6 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           <Section>
             <TwoColumnContent className="lg:flex-row-reverse">
               <Width40>
-                {/* CLIENT SIDE */}
                 <EnergyConsumptionChart />
               </Width40>
               <Width60>

@@ -18,7 +18,7 @@ const H3 = (props: ChildOnlyProp) => (
   <h3 className="text-xl font-semibold leading-xs md:text-2xl" {...props} />
 )
 
-const WhySlider = () => {
+const WhySwiper = () => {
   const { t } = useTranslation("page-what-is-ethereum")
 
   const slides = [
@@ -86,4 +86,4 @@ const WhySlider = () => {
   )
 }
 
-export default WhySlider
+export default WhySwiper
