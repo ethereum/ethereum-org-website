@@ -1,6 +1,5 @@
-import { Moon, Search, Sun } from "lucide-react"
+import { Languages, Moon, Search, Sun } from "lucide-react"
 
-import Translate from "@/components/icons/translate.svg"
 import LanguagePicker from "@/components/LanguagePicker"
 
 import { MOBILE_LANGUAGE_BUTTON_NAME } from "@/lib/constants"
@@ -44,7 +43,7 @@ const MenuFooter = ({
       </FooterButton>
 
       <LanguagePicker dialog handleClose={onToggle}>
-        <FooterButton icon={Translate} name={MOBILE_LANGUAGE_BUTTON_NAME}>
+        <FooterButton icon={Languages} name={MOBILE_LANGUAGE_BUTTON_NAME}>
           <FooterItemText>{t("languages")}</FooterItemText>
         </FooterButton>
       </LanguagePicker>

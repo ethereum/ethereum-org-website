@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { Info } from "lucide-react"
+import { ArrowUpRight, Info } from "lucide-react"
 import { useLocale } from "next-intl"
 
 import type { LoadingState } from "@/lib/types"
@@ -37,7 +37,7 @@ const EthPriceCard = ({
   const [state, setState] = useState<LoadingState<EthPriceState>>({
     loading: true,
   })
-  const { isRtl } = useRtlFlip()
+  const { twFlipForRtl } = useRtlFlip()
 
   useEffect(() => {
     const fetchData = async () => {
@@ -140,18 +140,12 @@ const EthPriceCard = ({
             isNegativeChange ? "text-error" : "text-success"
           )}
         >
-          <span
-            className={cn(
-              isNegativeChange
-                ? "after:content-['↘']"
-                : "after:content-['↗']",
-              "after:inline-block",
-              /* Cannot string-interpolate 'after:', using isRtl instead */
-              isRtl ? "after:-scale-x-100" : ""
-            )}
-          >
-            {change}
-          </span>
+          {change}
+          {isNegativeChange ? (
+            <ArrowUpRight className={cn(twFlipForRtl, "inline-block")} />
+          ) : (
+            <ArrowUpRight className={cn(twFlipForRtl, "inline-block")} />
+          )}
         </div>
         <div className="text-sm uppercase leading-xs tracking-wider text-body-medium">
           ({t("last-24-hrs")})

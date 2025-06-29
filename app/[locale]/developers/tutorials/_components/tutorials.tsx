@@ -8,6 +8,7 @@ import React, {
   useMemo,
   useState,
 } from "react"
+import { ExternalLink } from "lucide-react"
 import { useLocale } from "next-intl"
 
 import { ITutorial, Lang } from "@/lib/types"
@@ -267,13 +268,11 @@ const TutorialPage = ({
               href={tutorial.href ?? undefined}
             >
               <Flex className="mb-8 flex-col items-start justify-between gap-y-4 md:-mb-4 md:flex-row">
-                <Text
-                  className={cn(
-                    "relative me-0 text-2xl font-semibold text-body after:ml-2 after:inline-block after:italic after:transition-all after:duration-100 after:ease-in-out after:content-['↗'] md:me-24",
-                    tutorial.isExternal ? "after:inline-block" : "after:hidden"
-                  )}
-                >
+                <Text className="relative me-0 text-2xl font-semibold text-body md:me-24">
                   {tutorial.title}
+                  {tutorial.isExternal && (
+                    <ExternalLink className="mb-[0.25em] ms-[0.25em] inline-block size-[0.875em]" />
+                  )}
                 </Text>
                 <Tag variant="outline">
                   <Translation id={getSkillTranslationId(tutorial.skill!)} />

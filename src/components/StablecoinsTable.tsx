@@ -1,7 +1,7 @@
 "use client"
 
 import { Suspense, useState } from "react"
-import { Filter } from "lucide-react"
+import { ExternalLink, Filter } from "lucide-react"
 
 import type { StablecoinType } from "@/lib/types"
 
@@ -188,7 +188,7 @@ const StablecoinsTable = ({ content, hasError }: StablecoinsTableProps) => {
             ({activeTypeCount})
           </span>
         )}
-        <Filter className="text-xl" />
+        <Filter className="size-[1em]" />
       </DropdownMenuTrigger>
       <DropdownMenuContent align="start">
         {typeFilters.map((filter) => (
@@ -240,7 +240,7 @@ const StablecoinsTable = ({ content, hasError }: StablecoinsTableProps) => {
         {activePegCount !== totalPegCount && (
           <span className="text-xs text-body-medium">({activePegCount})</span>
         )}
-        <Filter className="text-xl" />
+        <Filter className="size-[1em]" />
       </DropdownMenuTrigger>
       <DropdownMenuContent align="start">
         {pegFilters.map((filter) => (
@@ -298,8 +298,10 @@ const StablecoinsTable = ({ content, hasError }: StablecoinsTableProps) => {
                 <TableHead key={idx}>{column}</TableHead>
               ))}
               {content && content[0]?.url && (
-                <TableHead className="text-right font-normal">
-                  <span className={cn("inline-block", twFlipForRtl)}>↗</span>
+                <TableHead className="text-end font-normal">
+                  <ExternalLink
+                    className={cn("inline-block size-[1.125em]", twFlipForRtl)}
+                  />
                 </TableHead>
               )}
             </TableRow>
