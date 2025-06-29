@@ -8,7 +8,7 @@ import { MdInfoOutline } from "react-icons/md"
 
 import type { ChildOnlyProp, CommitHistory, Lang } from "@/lib/types"
 
-import AdoptionChart from "@/components/AdoptionChart/lazy"
+import AdoptionChart from "@/components/AdoptionChart/server"
 import {
   Banner,
   BannerBody,
@@ -18,12 +18,12 @@ import {
 } from "@/components/BannerGrid"
 import Callout from "@/components/Callout"
 import Card from "@/components/Card"
-import EnergyConsumptionChart from "@/components/EnergyConsumptionChart/lazy"
+import EnergyConsumptionChart from "@/components/EnergyConsumptionChart/server"
 import FeedbackCard from "@/components/FeedbackCard"
 import FileContributors from "@/components/FileContributors"
 import I18nProvider from "@/components/I18nProvider"
 import { Image, ImageProps } from "@/components/Image"
-import ListenToPlayer from "@/components/ListenToPlayer/lazy"
+import ListenToPlayer from "@/components/ListenToPlayer/server"
 import MainArticle from "@/components/MainArticle"
 import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import StatErrorMessage from "@/components/StatErrorMessage"
