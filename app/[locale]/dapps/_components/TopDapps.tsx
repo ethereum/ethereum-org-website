@@ -4,7 +4,7 @@ import { Folder } from "lucide-react"
 
 import { DappCategory, DappData } from "@/lib/types"
 
-import { ButtonLink } from "@/components/ui/buttons/Button"
+import { Button } from "@/components/ui/buttons/Button"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 import {
   Swiper,
@@ -18,12 +18,14 @@ import { breakpointAsNumber } from "@/lib/utils/screen"
 import DappCard from "./DappCard"
 
 import { useBreakpointValue } from "@/hooks/useBreakpointValue"
+import { useIsClient } from "@/hooks/useIsClient"
 
 interface TopDappsProps {
   dappsData: Record<DappCategory, DappData[]>
 }
 
 const TopDapps = ({ dappsData }: TopDappsProps) => {
+  const isClient = useIsClient()
   const cardStyling = useBreakpointValue({
     base: {
       isVertical: true,
@@ -50,6 +52,10 @@ const TopDapps = ({ dappsData }: TopDappsProps) => {
       imageSize: 16,
     },
   })
+
+  // Use fallback values during SSR to prevent hydration mismatch
+  const imageSize = isClient ? cardStyling.imageSize : 12
+  const isVertical = isClient ? cardStyling.isVertical : true
 
   return (
     <SwiperContainer>
@@ -88,15 +94,14 @@ const TopDapps = ({ dappsData }: TopDappsProps) => {
                       </p>
                     </div>
                     <div>
-                      <ButtonLink
+                      <Button
                         variant="outline"
                         isSecondary
                         size="sm"
-                        href={`/dapps/categories/${category}`}
                         className="w-fit"
                       >
                         <p className="text-sm">See all</p>
-                      </ButtonLink>
+                      </Button>
                     </div>
                   </div>
                 </LinkOverlay>
@@ -106,8 +111,8 @@ const TopDapps = ({ dappsData }: TopDappsProps) => {
                   <div key={dapp.name} className="border-b">
                     <DappCard
                       dapp={dapp}
-                      imageSize={cardStyling.imageSize}
-                      isVertical={cardStyling.isVertical}
+                      imageSize={imageSize}
+                      isVertical={isVertical}
                     />
                   </div>
                 ))}

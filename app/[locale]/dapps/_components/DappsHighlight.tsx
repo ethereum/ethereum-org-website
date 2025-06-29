@@ -26,7 +26,7 @@ const DappsHighlight = ({ dapps }: DappsHighlightProps) => {
         {dapps.map((dapp, index) => (
           <LinkBox
             key={index}
-            className="group rounded-xl p-3 hover:bg-background-highlight"
+            className="group flex flex-1 rounded-xl p-3 hover:bg-background-highlight"
           >
             <LinkOverlay href={dapp.url} className="no-underline">
               <Image
@@ -37,7 +37,7 @@ const DappsHighlight = ({ dapps }: DappsHighlightProps) => {
               <div className="mb-6">
                 <p className="text-body">{dapp.description}</p>
               </div>
-              <DappCard dapp={dapp} imageSize={16} />
+              <DappCard dapp={dapp} imageSize={16} disableLink />
             </LinkOverlay>
           </LinkBox>
         ))}
@@ -48,7 +48,7 @@ const DappsHighlight = ({ dapps }: DappsHighlightProps) => {
           <Swiper slidesPerView={1.5} spaceBetween={16}>
             {dapps.map((dapp, index) => (
               <SwiperSlide key={index} className="pr-4">
-                <LinkBox className="group w-full">
+                <LinkBox className="group w-full rounded-xl p-2 hover:bg-background-highlight">
                   <LinkOverlay
                     href={dapp.url}
                     target="_blank"
@@ -61,10 +61,10 @@ const DappsHighlight = ({ dapps }: DappsHighlightProps) => {
                         className="mb-2 h-auto max-h-[200px] w-full rounded-xl object-cover"
                       />
                     </div>
-                    <div className="mb-6 text-body">
+                    <div className="mb-4 text-body">
                       <p className="text-body">{dapp.description}</p>
                     </div>
-                    <DappCard dapp={dapp} imageSize={16} />
+                    <DappCard dapp={dapp} imageSize={16} disableLink />
                   </LinkOverlay>
                 </LinkBox>
               </SwiperSlide>

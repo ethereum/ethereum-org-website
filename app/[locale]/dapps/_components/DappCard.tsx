@@ -14,6 +14,7 @@ interface DappCardProps {
   isVertical?: boolean
   showDescription?: boolean
   hideTag?: boolean
+  disableLink?: boolean
 }
 
 const DappCard = ({
@@ -22,12 +23,13 @@ const DappCard = ({
   isVertical = false,
   showDescription = false,
   hideTag = false,
+  disableLink = false,
 }: DappCardProps) => {
-  return (
-    <LinkBox
+  const cardContent = (
+    <div
       className={cn(
-        "group flex flex-row gap-3 rounded-xl p-2 hover:bg-background-highlight",
-        isVertical && "flex-col gap-3"
+        "flex text-body",
+        isVertical ? "flex-col gap-3" : "flex-row gap-3"
       )}
     >
       <div
@@ -57,22 +59,34 @@ const DappCard = ({
             {dapp.category}
           </Tag>
         )}
-        <p className="text-lg font-bold leading-none text-body no-underline group-hover:text-primary">
+        <p className="text-lg font-bold leading-none text-body group-hover:text-primary">
           {dapp.name}
         </p>
         {showDescription && (
-          <LinkOverlay
-            href={dapp.url}
-            target="_blank"
-            className="text-body no-underline group-hover:text-body"
-          >
-            {dapp.description}
-          </LinkOverlay>
+          <p className="text-body group-hover:text-body">{dapp.description}</p>
         )}
         <p className="text-sm text-body-medium">
           {dapp.subCategory.map((subCategory) => subCategory).join(" ·  ")}
         </p>
       </div>
+    </div>
+  )
+
+  if (disableLink) {
+    return cardContent
+  }
+
+  return (
+    <LinkBox
+      className={cn("group rounded-xl p-2 hover:bg-background-highlight")}
+    >
+      <LinkOverlay
+        href={`/dapps/${dapp.name}`}
+        target="_blank"
+        className="no-underline"
+      >
+        {cardContent}
+      </LinkOverlay>
     </LinkBox>
   )
 }
