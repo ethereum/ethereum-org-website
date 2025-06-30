@@ -1,5 +1,5 @@
+import { Info } from "lucide-react"
 import { useTranslations } from "next-intl"
-import { MdInfoOutline } from "react-icons/md"
 import { Meta, StoryObj } from "@storybook/react"
 
 import { ChildOnlyProp } from "@/lib/types"
@@ -127,7 +127,7 @@ export const BannerGridCell: Story = {
                   })}
                 >
                   <span>
-                    <MdInfoOutline className="inline-block align-middle" />
+                    <Info className="-mb-0.5 size-[0.875em]" />
                   </span>
                 </Tooltip>
               </span>
@@ -163,7 +163,7 @@ export const BannerGrid: Story = {
                       })}
                     >
                       <span>
-                        <MdInfoOutline className="inline-block align-middle" />
+                        <Info className="-mb-0.5 size-[0.875em]" />
                       </span>
                     </Tooltip>
                   </span>

@@ -1,10 +1,10 @@
 import { pick } from "lodash"
+import { Info } from "lucide-react"
 import {
   getMessages,
   getTranslations,
   setRequestLocale,
 } from "next-intl/server"
-import { MdInfoOutline } from "react-icons/md"
 
 import type { ChildOnlyProp, CommitHistory, Lang } from "@/lib/types"
 
@@ -378,7 +378,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                           })}
                         >
                           <span>
-                            <MdInfoOutline className="inline-block align-middle" />
+                            <Info className="-mb-0.5 size-[0.875em]" />
                           </span>
                         </Tooltip>
                       </NoWrapText>
@@ -401,7 +401,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                           })}
                         >
                           <span>
-                            <MdInfoOutline className="inline-block align-middle" />
+                            <Info className="-mb-0.5 size-[0.875em]" />
                           </span>
                         </Tooltip>
                       </NoWrapText>
@@ -424,7 +424,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                           })}
                         >
                           <span>
-                            <MdInfoOutline className="inline-block align-middle" />
+                            <Info className="-mb-0.5 size-[0.875em]" />
                           </span>
                         </Tooltip>
                       </NoWrapText>
@@ -449,7 +449,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                           })}
                         >
                           <span>
-                            <MdInfoOutline className="inline-block align-middle" />
+                            <Info className="-mb-0.5 size-[0.875em]" />
                           </span>
                         </Tooltip>
                       </NoWrapText>
@@ -475,7 +475,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                           })}
                         >
                           <span>
-                            <MdInfoOutline className="inline-block align-middle" />
+                            <Info className="-mb-0.5 size-[0.875em]" />
                           </span>
                         </Tooltip>
                       </NoWrapText>
@@ -501,7 +501,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                           })}
                         >
                           <span>
-                            <MdInfoOutline className="inline-block align-middle" />
+                            <Info className="-mb-0.5 size-[0.875em]" />
                           </span>
                         </Tooltip>
                       </NoWrapText>
