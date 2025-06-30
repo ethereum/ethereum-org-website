@@ -289,7 +289,7 @@ const PlayerWidget = ({
         <div className="flex flex-row items-center gap-2">
           <PlayerButton tooltipContent={isPlaying ? "Pause" : "Play"}>
             <button
-              className="cursor-pointer text-primary ring hover:text-primary-hover"
+              className="cursor-pointer text-primary hover:text-primary-hover"
               onClick={handlePlayPause}
               title={isPlaying ? "Pause" : "Play"}
               aria-label={isPlaying ? "Pause" : "Play"}
