@@ -60,7 +60,7 @@ const Page = async ({
   }
 
   // Get highlighted dapps (dapps with highlight=true)
-  const highlightedDapps = getHighlightedDapps(dappsData, 3)
+  const highlightedDapps = getHighlightedDapps(dappsData, 3, category.name)
 
   return (
     <I18nProvider locale={locale} messages={messages}>

@@ -5,10 +5,14 @@ import { TagProps } from "@/components/ui/tag"
 // Get highlighted dapps (dapps with highlight=true)
 export const getHighlightedDapps = (
   dappsData: Record<DappCategory, DappData[]>,
-  count?: number
+  count?: number,
+  category?: DappCategory
 ) => {
-  const highlightedDapps = Object.values(dappsData)
-    .flatMap((categoryDapps) => categoryDapps)
+  const dappsToFilter = category
+    ? dappsData[category]
+    : Object.values(dappsData).flatMap((categoryDapps) => categoryDapps)
+
+  const highlightedDapps = dappsToFilter
     .filter((dapp) => dapp.highlight)
     .sort(() => Math.random() - 0.5)
 
