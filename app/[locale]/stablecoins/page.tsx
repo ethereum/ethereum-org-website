@@ -1,10 +1,10 @@
 import { pick } from "lodash"
+import { HelpCircle } from "lucide-react"
 import {
   getMessages,
   getTranslations,
   setRequestLocale,
 } from "next-intl/server"
-import { MdHelpOutline } from "react-icons/md"
 
 import { Lang } from "@/lib/types"
 
@@ -557,7 +557,7 @@ async function Page({ params }: { params: Promise<{ locale: Lang }> }) {
             <h3 id="stablecoin-markets" className="mb-8 mt-12">
               {t("page-stablecoins-top-coins")}
               <Tooltip content={tooltipContent}>
-                <MdHelpOutline className="ms-2 fill-body" size={16} />
+                <HelpCircle className="ms-2 fill-body text-md" />
               </Tooltip>
             </h3>
 

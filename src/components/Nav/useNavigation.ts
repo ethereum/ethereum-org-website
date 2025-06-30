@@ -1,23 +1,21 @@
-import {
-  BsBook,
-  BsBuildings,
-  BsCodeSquare,
-  BsCompass,
-  BsFlag,
-  BsJournalCode,
-  BsLayers,
-  BsLightbulb,
-  BsMegaphone,
-  BsMortarboard,
-  BsPinAngle,
-  BsSafe,
-  BsSignpost,
-  BsSliders,
-  BsUiChecksGrid,
-} from "react-icons/bs"
-import { PiFlask, PiUsersFourLight } from "react-icons/pi"
-
+import BookIcon from "@/components/icons/book.svg"
+import BuildingsIcon from "@/components/icons/buildings.svg"
+import CodeSquareIcon from "@/components/icons/code-square.svg"
+import CompassIcon from "@/components/icons/compass.svg"
 import EthereumIcon from "@/components/icons/ethereum-icon.svg"
+import FlagIcon from "@/components/icons/flag.svg"
+import Flask from "@/components/icons/flask.svg"
+import JournalCodeIcon from "@/components/icons/journal-code.svg"
+import LayersIcon from "@/components/icons/layers.svg"
+import LightbulbIcon from "@/components/icons/lightbulb.svg"
+import MegaphoneIcon from "@/components/icons/megaphone.svg"
+import MortarboardIcon from "@/components/icons/mortarboard.svg"
+import PinAngleIcon from "@/components/icons/pin-angle.svg"
+import SafeIcon from "@/components/icons/safe.svg"
+import SignpostIcon from "@/components/icons/signpost.svg"
+import SlidersHorizontalCircles from "@/components/icons/sliders-horizontal-circles.svg"
+import UiChecksGridIcon from "@/components/icons/ui-checks-grid.svg"
+import UsersFourLight from "@/components/icons/users-four-light.svg"
 
 import type { NavSections } from "./types"
 
@@ -34,13 +32,13 @@ export const useNavigation = () => {
         {
           label: t("nav-overview-label"),
           description: t("nav-overview-description"),
-          icon: BsCompass,
+          icon: CompassIcon,
           href: "/learn/",
         },
         {
           label: t("nav-basics-label"),
           description: t("nav-basics-description"),
-          icon: BsUiChecksGrid,
+          icon: UiChecksGridIcon,
           items: [
             {
               label: t("what-is-ethereum"),
@@ -72,7 +70,7 @@ export const useNavigation = () => {
         {
           label: t("nav-advanced-label"),
           description: t("nav-advanced-description"),
-          icon: BsSliders,
+          icon: SlidersHorizontalCircles,
           items: [
             {
               label: t("nav-gas-fees-label"),
@@ -104,7 +102,7 @@ export const useNavigation = () => {
         {
           label: t("nav-quizzes-label"),
           description: t("nav-quizzes-description"),
-          icon: BsMortarboard,
+          icon: MortarboardIcon,
           href: "/quizzes/",
         },
       ],
@@ -116,7 +114,7 @@ export const useNavigation = () => {
         {
           label: t("get-started"),
           description: t("nav-get-started-description"),
-          icon: BsPinAngle,
+          icon: PinAngleIcon,
           items: [
             {
               label: t("nav-start-with-crypto-title"),
@@ -169,7 +167,7 @@ export const useNavigation = () => {
         {
           label: t("nav-use-cases-label"),
           description: t("nav-use-cases-description"),
-          icon: BsLightbulb,
+          icon: LightbulbIcon,
           items: [
             {
               label: t("stablecoins"),
@@ -242,7 +240,7 @@ export const useNavigation = () => {
         {
           label: t("nav-stake-label"),
           description: t("nav-stake-description"),
-          icon: BsSafe,
+          icon: SafeIcon,
           items: [
             {
               label: t("nav-staking-home-label"),
@@ -269,7 +267,7 @@ export const useNavigation = () => {
         {
           label: t("nav-ethereum-networks"),
           description: t("nav-ethereum-networks-description"),
-          icon: BsLayers,
+          icon: LayersIcon,
           items: [
             {
               label: t("nav-networks-introduction-label"),
@@ -297,13 +295,13 @@ export const useNavigation = () => {
         {
           label: t("nav-builders-home-label"),
           description: t("nav-builders-home-description"),
-          icon: BsCodeSquare,
+          icon: CodeSquareIcon,
           href: "/developers/",
         },
         {
           label: t("get-started"),
           description: t("nav-start-building-description"),
-          icon: BsFlag,
+          icon: FlagIcon,
           items: [
             {
               label: t("tutorials"),
@@ -330,7 +328,7 @@ export const useNavigation = () => {
         {
           label: t("documentation"),
           description: t("nav-docs-description"),
-          icon: BsJournalCode,
+          icon: JournalCodeIcon,
           items: [
             {
               label: t("nav-overview-label"),
@@ -357,7 +355,7 @@ export const useNavigation = () => {
         {
           label: t("enterprise"),
           description: t("nav-mainnet-description"),
-          icon: BsBuildings,
+          icon: BuildingsIcon,
           href: "/enterprise/",
         },
       ],
@@ -369,13 +367,13 @@ export const useNavigation = () => {
         {
           label: t("community-hub"),
           description: t("nav-participate-overview-description"),
-          icon: PiUsersFourLight,
+          icon: UsersFourLight,
           href: "/community/",
         },
         {
           label: t("nav-events-label"),
           description: t("nav-events-description"),
-          icon: BsMegaphone,
+          icon: MegaphoneIcon,
           items: [
             {
               label: t("ethereum-online"),
@@ -420,13 +418,13 @@ export const useNavigation = () => {
         {
           label: t("ethereum-whitepaper"),
           description: t("nav-whitepaper-description"),
-          icon: BsBook,
+          icon: BookIcon,
           href: "/whitepaper/",
         },
         {
           label: t("nav-roadmap-label"),
           description: t("nav-roadmap-description"),
-          icon: BsSignpost,
+          icon: SignpostIcon,
           items: [
             {
               label: t("nav-overview-label"),
@@ -458,7 +456,7 @@ export const useNavigation = () => {
         {
           label: t("nav-research-label"),
           description: t("nav-research-description"),
-          icon: PiFlask,
+          icon: Flask,
           items: [
             {
               label: t("nav-history-label"),
