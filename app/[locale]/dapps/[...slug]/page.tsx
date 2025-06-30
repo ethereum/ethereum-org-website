@@ -7,10 +7,11 @@ import {
 } from "next-intl/server"
 
 import I18nProvider from "@/components/I18nProvider"
-import { Image } from "@/components/Image"
+// import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 
+import { getDappSlug } from "@/lib/utils/dapps"
 import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
@@ -37,11 +38,11 @@ const Page = async ({
   const requiredNamespaces = getRequiredNamespacesForPage("/dapps")
   const messages = pick(allMessages, requiredNamespaces)
 
-  const [firstSegment] = slug
+  const [dappSlug] = slug
   const [dappsData] = await loadData()
   const dapp = Object.values(dappsData)
     .flat()
-    .find((dapp) => dapp.name.toLowerCase() === firstSegment.toLowerCase())!
+    .find((dapp) => getDappSlug(dapp.name) === dappSlug)!
 
   if (!dapp) {
     notFound()
@@ -51,7 +52,7 @@ const Page = async ({
     <I18nProvider locale={locale} messages={messages}>
       <MainArticle className="flex flex-col gap-10 py-10">
         <div className="flex flex-col px-4 md:px-8">
-          <Image src={dapp.image} alt={dapp.name} width={100} height={100} />
+          {/* <Image src={dapp.image} alt={dapp.name} width={100} height={100} /> */}
           <h1>{dapp.name}</h1>
           <div>
             <ButtonLink href={dapp.url} target="_blank">
@@ -94,9 +95,10 @@ export async function generateMetadata({
   })
 
   const [dappsData] = await loadData()
+
   const dapp = Object.values(dappsData)
     .flat()
-    .find((dapp) => dapp.name.toLowerCase() === firstSegment.toLowerCase())!
+    .find((dapp) => getDappSlug(dapp.name) === firstSegment)!
 
   if (!dapp) {
     notFound()

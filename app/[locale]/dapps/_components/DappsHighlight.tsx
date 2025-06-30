@@ -11,6 +11,8 @@ import {
   SwiperSlide,
 } from "@/components/ui/swiper"
 
+import { getDappSlug } from "@/lib/utils/dapps"
+
 import DappCard from "./DappCard"
 
 import DappHighlightImage from "@/public/images/dapps/dapp-highlight.png"
@@ -28,7 +30,10 @@ const DappsHighlight = ({ dapps }: DappsHighlightProps) => {
             key={index}
             className="group flex flex-1 rounded-xl p-3 hover:bg-background-highlight"
           >
-            <LinkOverlay href={dapp.url} className="w-full no-underline">
+            <LinkOverlay
+              href={`/dapps/${getDappSlug(dapp.name)}`}
+              className="w-full no-underline"
+            >
               <Image
                 src={DappHighlightImage}
                 alt=""
@@ -50,7 +55,7 @@ const DappsHighlight = ({ dapps }: DappsHighlightProps) => {
               <SwiperSlide key={index} className="">
                 <LinkBox className="group w-full rounded-xl p-2 hover:bg-background-highlight">
                   <LinkOverlay
-                    href={dapp.url}
+                    href={`/dapps/${getDappSlug(dapp.name)}`}
                     target="_blank"
                     className="no-underline"
                   >

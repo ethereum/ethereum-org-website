@@ -11,11 +11,11 @@ import MainArticle from "@/components/MainArticle"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 
+import { getHighlightedDapps, getStaffPickDapps } from "@/lib/utils/dapps"
 import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
-import { getHighlightedDapps, getStaffPickDapps } from "@/data/dapps"
 import { dappsCategories } from "@/data/dapps/categories"
 
 import { BASE_TIME_UNIT } from "@/lib/constants"
