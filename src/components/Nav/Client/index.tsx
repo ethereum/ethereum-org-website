@@ -11,13 +11,14 @@ import { Skeleton } from "@/components/ui/skeleton"
 
 import { DESKTOP_LANGUAGE_BUTTON_NAME } from "@/lib/constants"
 
+import { Button } from "../../ui/buttons/Button"
 import { useNavigation } from "../useNavigation"
 import { useThemeToggle } from "../useThemeToggle"
 
 import { useBreakpointValue } from "@/hooks/useBreakpointValue"
 import { useTranslation } from "@/hooks/useTranslation"
 
-const Button = dynamic(
+const LazyButton = dynamic(
   () => import("../../ui/buttons/Button").then((mod) => mod.Button),
   {
     ssr: false,
@@ -127,7 +128,7 @@ const ClientSideNav = () => {
         </SearchProvider>
 
         {desktopScreen && (
-          <Button
+          <LazyButton
             aria-label={themeIconAriaLabel}
             variant="ghost"
             isSecondary
@@ -135,7 +136,7 @@ const ClientSideNav = () => {
             onClick={toggleColorMode}
           >
             <ThemeIcon className="transform-transform duration-500 group-hover:rotate-12 group-hover:transition-transform group-hover:duration-500" />
-          </Button>
+          </LazyButton>
         )}
 
         {desktopScreen && (
@@ -156,7 +157,5 @@ const ClientSideNav = () => {
     </>
   )
 }
-
-ClientSideNav.displayName = "ClientSideNav"
 
 export default ClientSideNav
