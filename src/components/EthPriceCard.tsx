@@ -1,8 +1,8 @@
 "use client"
 
 import { useEffect, useState } from "react"
+import { Info } from "lucide-react"
 import { useLocale } from "next-intl"
-import { MdInfoOutline } from "react-icons/md"
 
 import type { LoadingState } from "@/lib/types"
 
@@ -119,7 +119,7 @@ const EthPriceCard = ({
       <h4 className="m-0 flex items-center text-sm font-medium uppercase leading-xs tracking-wider">
         {t("eth-current-price")}
         <Tooltip content={tooltipContent}>
-          <MdInfoOutline className="ms-2 size-[14px]" />
+          <Info className="ms-2 size-[0.875em] text-sm" />
         </Tooltip>
       </h4>
 

@@ -3,20 +3,33 @@
 import { useRef } from "react"
 import dynamic from "next/dynamic"
 import { useLocale } from "next-intl"
-import { BsTranslate } from "react-icons/bs"
 
+import Translate from "@/components/icons/translate.svg"
 import SearchButton from "@/components/Search/SearchButton"
 import SearchInputButton from "@/components/Search/SearchInputButton"
-import { Button } from "@/components/ui/buttons/Button"
 import { Skeleton } from "@/components/ui/skeleton"
 
 import { DESKTOP_LANGUAGE_BUTTON_NAME } from "@/lib/constants"
 
+import { Button } from "../../ui/buttons/Button"
 import { useNavigation } from "../useNavigation"
 import { useThemeToggle } from "../useThemeToggle"
 
 import { useBreakpointValue } from "@/hooks/useBreakpointValue"
 import { useTranslation } from "@/hooks/useTranslation"
+
+const LazyButton = dynamic(
+  () => import("../../ui/buttons/Button").then((mod) => mod.Button),
+  {
+    ssr: false,
+    loading: () => (
+      <Skeleton
+        data-label="mobile-menu"
+        className="mx-3 size-6 px-3 max-md:hidden"
+      />
+    ),
+  }
+)
 
 const Menu = dynamic(() => import("../Menu"), {
   ssr: false,
@@ -114,7 +127,7 @@ const ClientSideNav = () => {
         </SearchProvider>
 
         {desktopScreen && (
-          <Button
+          <LazyButton
             aria-label={themeIconAriaLabel}
             variant="ghost"
             isSecondary
@@ -122,7 +135,7 @@ const ClientSideNav = () => {
             onClick={toggleColorMode}
           >
             <ThemeIcon className="transform-transform duration-500 group-hover:rotate-12 group-hover:transition-transform group-hover:duration-500" />
-          </Button>
+          </LazyButton>
         )}
 
         {desktopScreen && (
@@ -133,7 +146,7 @@ const ClientSideNav = () => {
               variant="ghost"
               className="animate-fade-in gap-0 px-2 text-body transition-transform duration-500 active:bg-primary-low-contrast active:text-primary-hover data-[state='open']:bg-primary-low-contrast data-[state='open']:text-primary-hover max-md:hidden xl:px-3 [&_svg]:transition-transform [&_svg]:duration-500 [&_svg]:hover:rotate-12"
             >
-              <BsTranslate className="me-2 align-middle text-2xl" />
+              <Translate className="me-2 align-middle text-2xl" />
               <span className="max-lg:hidden">{t("languages")}&nbsp;</span>
               {locale!.toUpperCase()}
             </Button>
@@ -143,7 +156,5 @@ const ClientSideNav = () => {
     </>
   )
 }
-
-ClientSideNav.displayName = "ClientSideNav"
 
 export default ClientSideNav

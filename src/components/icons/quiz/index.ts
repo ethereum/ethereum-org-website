@@ -1,8 +1,8 @@
-import { CorrectIcon } from "./CorrectIcon"
-import { GreenTickIcon } from "./GreenTickIcon"
-import { IncorrectIcon } from "./IncorrectIcon"
-import { StarConfettiIcon } from "./StarConfettiIcon"
-import { TrophyIcon } from "./TrophyIcon"
+import CorrectIcon from "./correct.svg"
+import GreenTickIcon from "./green-tick.svg"
+import IncorrectIcon from "./incorrect.svg"
+import StarConfettiIcon from "./star-confetti.svg"
+import TrophyIcon from "./trophy.svg"
 
 export {
   CorrectIcon,

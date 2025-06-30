@@ -10,6 +10,7 @@ export const CONTENT_PATH = "/content"
 export const TRANSLATIONS_DIR = "public/content/translations"
 export const TRANSLATED_IMAGES_DIR = "/content/translations"
 export const PLACEHOLDER_IMAGE_DIR = "src/data/placeholders"
+export const INTERNAL_TUTORIALS_JSON = "src/data/internalTutorials.json"
 export const INTL_JSON_DIR = "src/intl"
 export const AB_TEST_COOKIE_PREFIX = "_pk_abtest_"
 
@@ -25,7 +26,8 @@ export const LOCALES_CODES = BUILD_LOCALES
   : i18nConfig.map(({ code }) => code)
 
 // Site urls
-export const SITE_URL = "https://ethereum.org"
+export const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL || "https://ethereum.org"
 export const DISCORD_PATH = "/discord/"
 export const GITHUB_REPO_URL =
   "https://github.com/ethereum/ethereum-org-website/"

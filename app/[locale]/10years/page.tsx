@@ -348,7 +348,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             />
             <h3>{t("page-10-year-ideas-title")}</h3>
             <p>{t("page-10-year-ideas-description")}</p>
-            <ButtonLink href="mailto:10years@ethereum.org" hideArrow>
+            <ButtonLink href="mailto:10years@ethereum.org">
               {t("page-10-year-ideas-cta")}
             </ButtonLink>
           </div>
