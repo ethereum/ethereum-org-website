@@ -28,7 +28,7 @@ const DappsHighlight = ({ dapps }: DappsHighlightProps) => {
             key={index}
             className="group flex flex-1 rounded-xl p-3 hover:bg-background-highlight"
           >
-            <LinkOverlay href={dapp.url} className="no-underline">
+            <LinkOverlay href={dapp.url} className="w-full no-underline">
               <Image
                 src={DappHighlightImage}
                 alt=""
