@@ -64,14 +64,14 @@ const Page = async ({
 
   return (
     <I18nProvider locale={locale} messages={messages}>
-      <div className="flex flex-row justify-between gap-4 px-4 py-10 md:px-8">
+      <div className="flex flex-col-reverse justify-between gap-4 px-4 py-10 md:px-8 lg:flex-row">
         <div className="flex flex-1 flex-col gap-4">
           <Breadcrumbs slug={"/dapps"} />
           <h1>{category.name} dapps</h1>
           <p>{category.description}</p>
         </div>
-        <div className="flex flex-1 items-center justify-center">
-          <CategoryIcon className="h-36 w-52 text-primary" />
+        <div className="flex flex-1 items-start justify-start lg:items-center lg:justify-center">
+          <CategoryIcon className="h-20 w-20 text-primary lg:h-36 lg:w-52" />
         </div>
       </div>
 
