@@ -47,7 +47,7 @@ const DappsHighlight = ({ dapps }: DappsHighlightProps) => {
         <SwiperContainer>
           <Swiper slidesPerView={1.5} spaceBetween={16}>
             {dapps.map((dapp, index) => (
-              <SwiperSlide key={index} className="pr-4">
+              <SwiperSlide key={index} className="">
                 <LinkBox className="group w-full rounded-xl p-2 hover:bg-background-highlight">
                   <LinkOverlay
                     href={dapp.url}
