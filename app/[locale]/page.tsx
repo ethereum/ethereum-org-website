@@ -2,8 +2,6 @@ import { Fragment } from "react"
 import dynamic from "next/dynamic"
 import { notFound } from "next/navigation"
 import { getTranslations, setRequestLocale } from "next-intl/server"
-import { FaDiscord, FaGithub } from "react-icons/fa6"
-import { FaXTwitter } from "react-icons/fa6"
 
 import type {
   AllHomepageActivityData,
@@ -26,11 +24,14 @@ import BlockHeap from "@/components/icons/block-heap.svg"
 import BuildAppsIcon from "@/components/icons/build-apps.svg"
 import Calendar from "@/components/icons/calendar.svg"
 import CalendarAdd from "@/components/icons/calendar-add.svg"
+import Discord from "@/components/icons/discord.svg"
 import EthGlyphIcon from "@/components/icons/eth-glyph.svg"
 import EthTokenIcon from "@/components/icons/eth-token.svg"
 import PickWalletIcon from "@/components/icons/eth-wallet.svg"
+import Github from "@/components/icons/github.svg"
 import TryAppsIcon from "@/components/icons/phone-homescreen.svg"
 import RoadmapSign from "@/components/icons/roadmap-sign.svg"
+import Twitter from "@/components/icons/twitter.svg"
 import Whitepaper from "@/components/icons/whitepaper.svg"
 import { Image } from "@/components/Image"
 import CardImage from "@/components/Image/CardImage"
@@ -376,7 +377,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
       eventName: "contribute",
     },
     {
-      Svg: FaGithub,
+      Svg: Github,
       label: "GitHub",
       href: GITHUB_REPO_URL,
       className: "text-accent-a hover:text-accent-a-hover",
@@ -384,7 +385,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
       eventName: "GitHub",
     },
     {
-      Svg: FaDiscord,
+      Svg: Discord,
       label: "Discord",
       href: "/discord/",
       className: "text-primary hover:text-primary-hover",
@@ -392,7 +393,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
       eventName: "Discord",
     },
     {
-      Svg: FaXTwitter,
+      Svg: Twitter,
       label: "X",
       href: "https://x.com/EthDotOrg",
       className: "text-accent-b hover:text-accent-b-hover",
@@ -750,7 +751,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                     eventName: "discord",
                   }}
                 >
-                  <FaDiscord />
+                  <Discord />
                 </ButtonLink>
                 <ButtonLink
                   href={GITHUB_REPO_URL}
@@ -764,7 +765,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                     eventName: "github",
                   }}
                 >
-                  <FaGithub />
+                  <Github />
                 </ButtonLink>
               </div>
             </div>

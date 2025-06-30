@@ -64,14 +64,18 @@ type SkeletonCardProps = {
   className?: string
 }
 
+const SkeletonCardContent = ({ className }: SkeletonCardProps) => (
+  <CardContent className={cn("cursor-default space-y-3", className)}>
+    <Skeleton className="h-6 w-3/4" />
+    <Skeleton className="h-4 w-1/2" />
+    <Skeleton className="h-4 w-1/3" />
+  </CardContent>
+)
+
 const SkeletonCard = ({ className }: SkeletonCardProps) => (
   <Card className={cn("cursor-default", className)}>
     <CardBanner />
-    <CardContent className="space-y-3">
-      <Skeleton className="h-6 w-3/4" />
-      <Skeleton className="h-4 w-1/2" />
-      <Skeleton className="h-4 w-1/3" />
-    </CardContent>
+    <SkeletonCardContent />
   </Card>
 )
 
@@ -87,4 +91,10 @@ const SkeletonCardGrid = ({ className }: SkeletonCardGridProps) => (
   </div>
 )
 
-export { Skeleton, SkeletonCardGrid, SkeletonLines }
+export {
+  Skeleton,
+  SkeletonCard,
+  SkeletonCardContent,
+  SkeletonCardGrid,
+  SkeletonLines,
+}

@@ -2,9 +2,9 @@ import type { Meta, StoryObj } from "@storybook/react"
 
 import { Center, Flex } from "../ui/flex"
 
-import { FilterBurgerIcon } from "./wallets/FilterBurgerIcon"
-import { HighlightDarkIcon } from "./HighlightDarkIcon"
-import { HighlightIcon } from "./HighlightIcon"
+import FilterBurgerIcon from "./wallets/filter-burger.svg"
+import HighlightIcon from "./highlight.svg"
+import HighlightDarkIcon from "./highlight-dark.svg"
 import {
   CorrectIcon,
   GreenTickIcon,
@@ -13,7 +13,6 @@ import {
   TrophyIcon,
 } from "./quiz"
 import {
-  DappnodeIcon,
   DecentralizationEthGlyphIcon,
   DecentralizationGlyphIcon,
   DownloadGlyphIcon,
@@ -33,7 +32,7 @@ import {
   BattleTestedIcon,
   BedrockGlyphIcon,
   BugBountyIcon,
-  CautionProductGlyphIcon,
+  CautionProductGlyph,
   ChainLaboGlyphIcon,
   ConsensysStakingGlyphIcon,
   DefaultOpenSourceGlyphIcon,
@@ -42,7 +41,7 @@ import {
   EthpoolGlyphIcon,
   EverstakeGlyphIcon,
   FigmentGlyphIcon,
-  GreenCheckProductGlyphIcon,
+  GreenCheckProductGlyph,
   KilnGlyphIcon,
   LaunchnodesGlyphIcon,
   LidoGlyphIcon,
@@ -67,9 +66,9 @@ import {
   StakingGlyphTokenWalletIcon,
   StereumGlyphIcon,
   TrustlessIcon,
-  UnknownProductGlyphIcon,
+  UnknownProductGlyph,
   WagyuGlyphIcon,
-  WarningProductGlyphIcon,
+  WarningProductGlyph,
 } from "./staking"
 import {
   BrowserIcon,
@@ -107,7 +106,6 @@ const iconsDefinitions = [
   GreenTickIcon,
   StarConfettiIcon,
   TrophyIcon,
-  DappnodeIcon,
   DecentralizationGlyphIcon,
   DecentralizationEthGlyphIcon,
   DownloadGlyphIcon,
@@ -125,7 +123,7 @@ const iconsDefinitions = [
   BattleTestedIcon,
   BedrockGlyphIcon,
   BugBountyIcon,
-  CautionProductGlyphIcon,
+  CautionProductGlyph,
   ChainLaboGlyphIcon,
   ConsensysStakingGlyphIcon,
   StakingDappnodeGlyphIcon,
@@ -135,7 +133,7 @@ const iconsDefinitions = [
   EthpoolGlyphIcon,
   EverstakeGlyphIcon,
   FigmentGlyphIcon,
-  GreenCheckProductGlyphIcon,
+  GreenCheckProductGlyph,
   P2PGlyphIcon,
   KilnGlyphIcon,
   LaunchnodesGlyphIcon,
@@ -159,9 +157,9 @@ const iconsDefinitions = [
   StereumGlyphIcon,
   SquidGlyphIcon,
   TrustlessIcon,
-  UnknownProductGlyphIcon,
+  UnknownProductGlyph,
   WagyuGlyphIcon,
-  WarningProductGlyphIcon,
+  WarningProductGlyph,
   BrowserIcon,
   BuyCryptoIcon,
   ConnectDappsIcon,
