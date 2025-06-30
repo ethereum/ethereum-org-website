@@ -22,7 +22,7 @@ import PageHero from "@/components/PageHero"
 import ProductList from "@/components/ProductList"
 import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import StablecoinAccordion from "@/components/StablecoinAccordion"
-// import StablecoinsTable from "@/components/StablecoinsTable"
+import StablecoinsTable from "@/components/StablecoinsTable"
 import Tooltip from "@/components/Tooltip"
 import Translation from "@/components/Translation"
 import { ButtonLink } from "@/components/ui/buttons/Button"
@@ -103,11 +103,11 @@ async function Page({ params }: { params: Promise<{ locale: Lang }> }) {
   const requiredNamespaces = getRequiredNamespacesForPage("/stablecoins")
   const messages = pick(allMessages, requiredNamespaces)
 
-  // let marketsHasError = false // TODO: Implement error handling
+  let marketsHasError = false // TODO: Implement error handling
   const coinDetails: CoinDetails[] = []
 
   try {
-    // marketsHasError = false
+    marketsHasError = false
 
     const [stablecoinsData] = await loadData()
 
@@ -132,7 +132,7 @@ async function Page({ params }: { params: Promise<{ locale: Lang }> }) {
     coinDetails.push(...ethereumStablecoinData)
   } catch (error) {
     console.error(error)
-    // marketsHasError = true // TODO: Handle error state
+    marketsHasError = true // TODO: Handle error state
   }
 
   const heroContent = {
@@ -569,7 +569,7 @@ async function Page({ params }: { params: Promise<{ locale: Lang }> }) {
           </div>
 
           {/* CLIENT SIDE */}
-          {/* <StablecoinsTable content={coinDetails} hasError={marketsHasError} /> */}
+          <StablecoinsTable content={coinDetails} hasError={marketsHasError} />
         </div>
 
         <Section id="explore">
