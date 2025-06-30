@@ -105,7 +105,7 @@ Twitter Blue জানুয়ারী 2021-এ [NFT সাপোর্ট ক
 - [Web3 বিকেন্দ্রীভূত, সম্প্রদায়-এর প্রতিশ্রুতি রাখে- চালিত সামাজিক নেটওয়ার্কগুলি](https://venturebeat.com/2022/02/26/web3-holds-the-promise-of-decentralized-community-powered-social-networks/) — _সুমিত ঘোষ_
 - [ব্লকচেন সোশ্যাল মিডিয়া ল্যান্ডস্কেপের একটি ওভারভিউ](https://www.gemini.com/cryptopedia/blockchain-social-media-decentralized-social-media) — _Gemini ক্রিপ্টোপিডিয়া_
 - [ব্লকচেন কীভাবে সামাজিক মিডিয়া গোপনীয়তার সমাধান করতে পারে](https://www.investopedia.com/news/ethereum-blockchain-social-media-privacy-problem-linkedin-indorse/) — _প্রবলেন বাজপাই_
-- [সোশ্যাল মিডিয়া নেটওয়ার্কগুলি ব্লকচেইনে আসছে](https://businesstechguides.co/what-are-decentralized-social-networks) — _ইমানুয়েল আওসিকা_
+- [সোশ্যাল মিডিয়া নেটওয়ার্কগুলি ব্লকচেইনে আসছে](https://eawosika.com/what-are-decentralized-social-networks) — _ইমানুয়েল আওসিকা_
 - [সামাজিক নেটওয়ার্কগুলির জন্য পর্যাপ্ত বিকেন্দ্রীকরণ](https://www.varunsrinivasan.com/2022/01/11/sufficient-decentralization-for-social-networks) — _বরুণ শ্রীনিবাসান _
 
 ### Videos {#videos}

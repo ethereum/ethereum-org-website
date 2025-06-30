@@ -417,7 +417,7 @@ contract Attack {
     function attack() public payable {
         timeLock.deposit{value: msg.value}();
         /*
-        「t = 現在のロック時間」ならば、xを以下のようにして求める必要があります。 
+        「t = 現在のロック時間」ならば、xを以下のようにして求める必要があります。
         x + t = 2**256 = 0
         so x = -t
         2**256 = type(uint).max + 1
@@ -513,7 +513,7 @@ DEXの価格は正確であることが多く、これは市場の均衡を取�
 
 - **[Cyfrin](https://cyfrin.io)** - _Web3セキュリティの有力企業であり、製品やスマート コントラクト監査サービスを通じて暗号セキュリティを推進している。_
 
-- **[ImmuneBytes](https://www.immunebytes.com//smart-contract-audit/)** - _Web3セキュリティファームで、経験豊富な監査人と最高クラスのツールを通じてブロックチェーンシステムのセキュリティ監査を提供している。_
+- **[ImmuneBytes](https://immunebytes.com/smart-contract-audit/)** - _Web3セキュリティファームで、経験豊富な監査人と最高クラスのツールを通じてブロックチェーンシステムのセキュリティ監査を提供している。_
 
 - **[Oxorio](https://oxor.io/)** - _クリプト会社およびDeFiプロジェクト向けのEVM、Solidity、ゼロ知識、クロスチェーン技術を専門としたスマートコントラクト監査およびブロックチェーンセキュリティサービス。_
 
