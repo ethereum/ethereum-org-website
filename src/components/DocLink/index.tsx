@@ -1,4 +1,4 @@
-import { AiOutlineArrowRight } from "react-icons/ai"
+import { ArrowRight } from "lucide-react"
 
 import { cn } from "@/lib/utils/cn"
 
@@ -40,10 +40,10 @@ const DocLink = ({ href, children, isExternal = false }: DocLinkProps) => {
           </LinkOverlay>
         </Stack>
 
-        <AiOutlineArrowRight
+        <ArrowRight
           className={cn(
             "mx-6 h-6 w-6 self-center",
-            "transition-transform duration-100 group-hover:scale-[1.2] group-hover:fill-primary",
+            "transition-transform duration-100 group-hover:scale-[1.2] group-hover:text-primary",
             isExternal ? "-rotate-45" : "rotate-0",
             isRtl && isExternal ? "-rotate-[135deg]" : "",
             isRtl && !isExternal ? "-rotate-[180deg]" : ""

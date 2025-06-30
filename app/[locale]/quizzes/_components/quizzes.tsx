@@ -1,12 +1,12 @@
 "use client"
 
 import { useMemo, useState } from "react"
-import { FaGithub } from "react-icons/fa"
 
 import { QuizKey, QuizStatus } from "@/lib/types"
 
 import FeedbackCard from "@/components/FeedbackCard"
 import { HubHero } from "@/components/Hero"
+import Github from "@/components/icons/github.svg"
 import MainArticle from "@/components/MainArticle"
 import QuizWidget from "@/components/Quiz/QuizWidget"
 import QuizzesList from "@/components/Quiz/QuizzesList"
@@ -99,7 +99,7 @@ const QuizzesPage = () => {
                 onClick={handleGHAdd}
               >
                 <HStack className="gap-0">
-                  <FaGithub className="me-2 size-6 text-body" />
+                  <Github className="me-2 text-2xl text-body" />
                   {t("add-quiz")}
                 </HStack>
               </ButtonLink>
