@@ -8,7 +8,6 @@ test.describe("Find Wallet Page", () => {
   test.beforeEach(async ({ page }) => {
     findWalletPage = new FindWalletPage(page)
     await findWalletPage.goto()
-    await findWalletPage.waitForPageReady()
   })
 
   test("loads successfully", async ({ page }, testInfo) => {

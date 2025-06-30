@@ -9,7 +9,6 @@ test.describe("Home Page", () => {
   test.beforeEach(async ({ page }) => {
     homePage = new HomePage(page)
     await homePage.goto()
-    await homePage.waitForPageReady()
   })
 
   test("loads successfully", async ({ page }, testInfo) => {

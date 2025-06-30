@@ -11,7 +11,6 @@ test.describe("Whitepaper Page", () => {
   test("whitepaper PDF link has correct href", async ({ page }) => {
     const whitepaperPage = new MdPage(page, PAGE_URL)
     await whitepaperPage.goto()
-    await whitepaperPage.waitForPageReady()
     await whitepaperPage.verifyLinkVisible(PDF_LINK_TEXT)
     await whitepaperPage.verifyLinkHref(PDF_LINK_TEXT, PDF_PATH)
   })

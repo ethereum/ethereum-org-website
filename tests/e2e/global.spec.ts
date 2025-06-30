@@ -54,7 +54,6 @@ test.describe("Global", () => {
     test.beforeEach(async ({ page }) => {
       homePage = new HomePage(page)
       await homePage.goto()
-      await homePage.waitForPageReady()
     })
 
     async function switchToChinese(page: Page, homePage: HomePage) {
@@ -97,7 +96,6 @@ test.describe("Global", () => {
       page,
     }) => {
       await homePage.goto()
-      await homePage.waitForPageReady()
 
       await homePage.assertUrlMatches(`/${DEFAULT_LOCALE}/`)
 

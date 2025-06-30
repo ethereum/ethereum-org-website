@@ -45,13 +45,6 @@ export class BasePage {
   }
 
   /**
-   * Wait for page to be loaded and ready
-   */
-  async waitForPageLoad(): Promise<void> {
-    await this.page.waitForLoadState("networkidle")
-  }
-
-  /**
    * Scroll element into view
    */
   async scrollIntoView(selector: string): Promise<void> {
@@ -82,7 +75,7 @@ export class BasePage {
    */
   async navigateTo(url: string): Promise<void> {
     await this.page.goto(url)
-    await this.waitForPageLoad()
+    await this.waitForPageReady()
   }
 
   /**
