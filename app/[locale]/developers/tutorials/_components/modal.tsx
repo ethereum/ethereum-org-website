@@ -1,8 +1,8 @@
 "use client"
 
 import React, { useState } from "react"
-import { FaGithub } from "react-icons/fa"
 
+import Github from "@/components/icons/github.svg"
 import Translation from "@/components/Translation"
 import { Button } from "@/components/ui/buttons/Button"
 import { ButtonLink } from "@/components/ui/buttons/Button"
@@ -46,7 +46,7 @@ const TutorialSubmitModal = ({
               variant="outline"
               href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=suggest_tutorial.yaml&title="
             >
-              <FaGithub />
+              <Github />
               <Translation id="page-developers-tutorials:page-tutorial-raise-issue-btn" />
             </ButtonLink>
           </Flex>

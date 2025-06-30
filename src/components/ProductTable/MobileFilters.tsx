@@ -1,6 +1,5 @@
 import React from "react"
-import { BsArrowCounterclockwise } from "react-icons/bs"
-import { IoClose } from "react-icons/io5" // Add this import
+import { RotateCcw, X } from "lucide-react"
 
 import { FilterOption, TPresetFilters } from "@/lib/types"
 
@@ -83,7 +82,7 @@ const MobileFilters = ({
           <div className="sticky top-0 flex items-center justify-end p-2">
             <DrawerClose asChild>
               <Button variant="ghost">
-                <IoClose className="text-2xl" />
+                <X className="text-2xl" />
               </Button>
             </DrawerClose>
           </div>
@@ -110,7 +109,7 @@ const MobileFilters = ({
                   className="gap-1"
                   onClick={resetFilters}
                 >
-                  <BsArrowCounterclockwise />
+                  <RotateCcw />
                   {t("table-reset-filters")}
                 </Button>
               </div>

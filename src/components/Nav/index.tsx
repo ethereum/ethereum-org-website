@@ -21,7 +21,7 @@ const Nav = async () => {
         className="inline-flex items-center no-underline"
         data-testid="nav-logo"
       >
-        <EthHomeIcon className="h-[35px] w-[22px] opacity-85 hover:opacity-100" />
+        <EthHomeIcon className="text-[35px] opacity-85 hover:opacity-100" />
       </BaseLink>
 
       <div className="ms-3 flex w-full justify-end md:justify-between xl:ms-8">
