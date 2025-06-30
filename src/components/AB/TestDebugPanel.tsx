@@ -3,7 +3,11 @@
 import { useEffect, useState, useTransition } from "react"
 import { useRouter } from "next/navigation"
 
+import { cn } from "@/lib/utils/cn"
+
 import { AB_TEST_COOKIE_PREFIX } from "@/lib/constants"
+
+import { Button } from "../ui/buttons/Button"
 
 import { clearABTestCookie, forceABTestVariant } from "@/lib/ab-testing/actions"
 import { ABTestAssignment } from "@/lib/ab-testing/types"
@@ -88,36 +92,16 @@ export function ABTestDebugPanel({
   }
 
   return (
-    <div
-      style={{
-        position: "fixed",
-        bottom: "20px",
-        right: "20px",
-        zIndex: 9999,
-        backgroundColor: "#f0f0f0",
-        border: "2px solid #ccc",
-        borderRadius: "8px",
-        padding: "10px",
-        fontFamily: "monospace",
-        fontSize: "12px",
-      }}
-    >
-      <button
+    <div className="fixed bottom-5 right-5 z-sticky rounded-lg border-2 bg-background-low p-2.5 font-mono text-xs">
+      <Button
         onClick={() => setIsOpen(!isOpen)}
-        style={{
-          backgroundColor: "#007acc",
-          color: "white",
-          border: "none",
-          padding: "5px 10px",
-          borderRadius: "4px",
-          cursor: "pointer",
-        }}
+        className="w-full cursor-pointer rounded border-none bg-accent-a px-2.5 py-1 font-semibold text-white hover:bg-accent-a-hover"
       >
         🧪 AB Test Debug
-      </button>
+      </Button>
 
       {isOpen && (
-        <div style={{ marginTop: "10px" }}>
+        <div className="mt-2.5">
           <div>
             <strong>Test:</strong> {testKey}
           </div>
@@ -127,79 +111,59 @@ export function ABTestDebugPanel({
               <span className="ml-2 text-xs text-gray-500">Loading...</span>
             )}
           </div>
-          <div style={{ fontSize: "10px", color: "#666", marginTop: "4px" }}>
+          <div className="mt-1 text-2xs">
             <strong>Cookie:</strong>{" "}
             {typeof window !== "undefined" &&
             document.cookie.includes(AB_TEST_COOKIE_PREFIX + testKey)
               ? "✓ Set"
               : "✗ Missing"}
           </div>
-          <div style={{ marginTop: "10px" }}>
+          <div className="mt-2.5">
             <div>
               <strong>Force Variant:</strong>
             </div>
             {availableVariants.map((variant) => (
-              <button
+              <Button
                 key={variant}
+                variant={
+                  localAssignment?.variant === variant ? "solid" : "outline"
+                }
+                isSecondary
                 onClick={() => forceVariant(variant)}
                 disabled={isPending}
-                style={{
-                  display: "block",
-                  margin: "2px 0",
-                  padding: "4px 8px",
-                  backgroundColor:
-                    localAssignment?.variant === variant
-                      ? "#4CAF50"
-                      : "#f9f9f9",
-                  color:
-                    localAssignment?.variant === variant ? "white" : "black",
-                  border: "1px solid #ddd",
-                  borderRadius: "3px",
-                  cursor: isPending ? "not-allowed" : "pointer",
-                  opacity: isPending ? 0.6 : 1,
-                  width: "100%",
-                }}
+                className={cn(
+                  "my-0.5 block w-full rounded border border-gray-300 px-2 py-1 transition-opacity",
+                  localAssignment?.variant === variant &&
+                    "bg-success text-white hover:bg-success-dark",
+                  isPending ? "cursor-not-allowed opacity-60" : "cursor-pointer"
+                )}
               >
                 {variant}
-              </button>
+              </Button>
             ))}
-            <div style={{ marginTop: "10px", display: "flex", gap: "4px" }}>
-              <button
+            <div className="mt-2.5 flex gap-1">
+              <Button
                 onClick={clearCookie}
                 disabled={isPending}
-                style={{
-                  flex: 1,
-                  padding: "4px 8px",
-                  backgroundColor: "#ff4444",
-                  color: "white",
-                  border: "none",
-                  borderRadius: "3px",
-                  cursor: isPending ? "not-allowed" : "pointer",
-                  opacity: isPending ? 0.6 : 1,
-                  fontSize: "11px",
-                }}
+                className={cn(
+                  "flex-1 rounded border-none bg-warning px-2 py-1 text-xs text-black hover:bg-warning-dark",
+                  isPending ? "cursor-not-allowed opacity-60" : "cursor-pointer"
+                )}
                 title="Clear this test's cookie and get new random assignment"
               >
                 🔄 Reset Test
-              </button>
-              <button
+              </Button>
+              <Button
                 onClick={resetAllTests}
                 disabled={isPending}
-                style={{
-                  flex: 1,
-                  padding: "4px 8px",
-                  backgroundColor: "#ff8800",
-                  color: "white",
-                  border: "none",
-                  borderRadius: "3px",
-                  cursor: isPending ? "not-allowed" : "pointer",
-                  opacity: isPending ? 0.6 : 1,
-                  fontSize: "11px",
-                }}
+                className={cn(
+                  "flex-1 rounded border-none bg-error px-2 py-1 text-xs text-white hover:bg-error-dark",
+                  isPending ? "cursor-not-allowed opacity-60" : "cursor-pointer"
+                )}
                 title="Clear all AB test cookies and reload page"
               >
                 🗑️ Reset All
-              </button>
+              </Button>
             </div>
           </div>
         </div>
