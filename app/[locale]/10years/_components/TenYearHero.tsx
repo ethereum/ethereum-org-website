@@ -35,12 +35,14 @@ const TenYearHero = async ({ locale }: { locale: string }) => {
           src={TenYearBackgroundImage}
           alt="" // decorative element
           className="max-h-[350px] object-cover"
+          priority
         />
         {/* CLIENT SIDE, lazy loaded */}
         <ParallaxImage
           src={TenYearGraphicImage}
           alt={t("page-10-year-anniversary-meta-title")}
           className="absolute left-0 top-0 max-h-[350px] object-contain transition-transform duration-200 ease-out"
+          priority
         />
       </div>
       <p className="text-center text-3xl">
