@@ -306,6 +306,16 @@ const config = {
           "0%": { opacity: "0" },
           "100%": { opacity: "1" },
         },
+        "quick-trace": {
+          "0%": {
+            strokeDasharray: "10% 200%",
+            strokeDashoffset: "-50%",
+          },
+          "100%": {
+            strokeDasharray: "10% 200%",
+            strokeDashoffset: "50%",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -323,6 +333,7 @@ const config = {
         "counter-spin-9": "spin 18s linear infinite reverse",
         "pulse-light": "pulse-light 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
         "fade-in": "fade-in 150ms ease-in-out",
+        "quick-trace": "quick-trace 2s ease-in-out infinite",
       },
       // Add custom border-radius tailwinds extension for "4xl" as "2rem"
       borderRadius: {
