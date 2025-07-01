@@ -1,8 +1,8 @@
 import { getTranslations } from "next-intl/server"
 
 import { Image } from "@/components/Image"
-import ParallaxImage from "@/components/Image/ParallaxImage"
-import Morpher from "@/components/Morpher"
+import ParallaxImage from "@/components/Image/ParallaxImage/server"
+import Morpher from "@/components/Morpher/server"
 
 import TenYearBackgroundImage from "@/public/images/10-year-anniversary/10-year-background.png"
 import TenYearGraphicImage from "@/public/images/10-year-anniversary/10-year-graphic.png"
@@ -36,6 +36,7 @@ const TenYearHero = async ({ locale }: { locale: string }) => {
           alt="" // decorative element
           className="max-h-[350px] object-cover"
         />
+        {/* CLIENT SIDE, lazy loaded */}
         <ParallaxImage
           src={TenYearGraphicImage}
           alt={t("page-10-year-anniversary-meta-title")}
@@ -52,6 +53,7 @@ const TenYearHero = async ({ locale }: { locale: string }) => {
             {WORDS[0]}
           </span>
           <span className="text-3xl font-bold text-accent-b md:absolute md:start-0 md:text-nowrap">
+            {/* CLIENT SIDE, lazy loaded */}
             <Morpher words={WORDS} charSet="abcdfgijklnopqsvwxyz" />
           </span>
         </span>
