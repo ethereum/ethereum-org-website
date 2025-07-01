@@ -1,6 +1,6 @@
 "use client"
 
-import Morpher from "@/components/Morpher"
+import Morpher from "@/components/Morpher/client"
 import { Button } from "@/components/ui/buttons/Button"
 
 import { screens } from "@/lib/utils/screen"
