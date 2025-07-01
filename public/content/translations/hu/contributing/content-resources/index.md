@@ -27,6 +27,6 @@ A tanulási forrásokat a következőképpen ítéljük meg:
 
 Ha egy tartalmi forrást szeretne hozzáadni az ethereum.org-hoz, és az megfelel a feltételeknek, hozzon létre egy issue-t a GitHubon.
 
-<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=">
+<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=">
   Issue létrehozása
 </ButtonLink>
