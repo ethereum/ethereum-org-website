@@ -74,7 +74,7 @@ Is céim riachtanach é dintiúir aistarraingthe a nuashonrú chun aistarraingt�
 </ExpandableCard>
 
 <ExpandableCard title="Cathain is féidir liom aistarraingt?" eventCategory="SaasStaking" eventName="clicked when can I withdraw">
-Cuireadh aistarraingtí geallta i bhfeidhm in uasghrádú Shanghai/Capella i mí Aibreáin 2023. Ní mór do gheallsealbhóirí seoladh aistarraingthe a sholáthar (mura gcuirtear ar fáil é ar thaisce tosaigh), agus tosófar ar íocaíochtaí luaíochta a dháileadh go huathoibríoch ar bhonn tréimhsiúil gach cúpla lá.
+Ní mór do gheallsealbhóirí seoladh aistarraingthe a sholáthar (mura gcuirtear ar fáil é ar thaisce tosaigh), agus tosófar ar íocaíochtaí luaíochta a dháileadh go huathoibríoch ar bhonn tréimhsiúil gach cúpla lá.
 
 Is féidir le bailíochtóirí imeachtamach go hiomlán mar bhailíochtóirí freisin, rud a dhíghlasálfaidh a n-iarmhéid ETH atá fágtha le haistarraingt. Gheobhaidh na cuntais a sholáthair seoladh aistarraingthe reatha agus a chríochnaigh an próiseas imeachta a n-iarmhéid iomlán chuig an seoladh aistarraingthe a soláthraíodh le linn an chéad scuabadh bailíochtóra eile.
 

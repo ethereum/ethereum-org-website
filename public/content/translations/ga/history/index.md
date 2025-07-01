@@ -73,15 +73,15 @@ An bhfuil tú ag lorg uasghráduithe prótacail amach anseo? [Faigh amach faoi u
 
 ## 2025 {#2025}
 
-### Prág-Electra ("Pectra", _ar siúl_) {#pectra}
+### Prague-Electra ("Pectra") {#pectra}
 
 <NetworkUpgradeSummary name="pectra" />
 
-Áiríonn uasghrádú Prág-Electra ("Pectra") roinnt feabhsuithe ar an bprótacal Ethereum atá dírithe ar an taithí a fheabhsú do gach úsáideoir, líonraí ciseal 2, páirtithe leasmhara agus oibreoirí nód.
+Áiríodh le huasghrádú Prague-Electra ("Pectra") roinnt feabhsuithe ar phrótacal Ethereum a bhí dírithe ar an taithí a fheabhsú do gach úsáideoir, líonraí ciseal 2, geallsealbhóirí agus oibreoirí nód.
 
-Faigheann Páirtithe leasmhara uasghrádú le cuntais bhailíochtóirí a chumasc, agus rialú feabhsaithe ar chistí geallta ag baint úsáide as an seoladh aistarraingthe forghníomhaithe. Méadaíonn EIP-7251 an t-iarmhéid uasta éifeachtach do bhailitheoir aonair go dtí 2048, ag feabhsú éifeachtúlacht chaipitil do gheallsealbhóirí. Ceadaíonn EIP-7002 do chuntas forghníomhaithe gníomhartha bailíochtóra a spreagadh go slán, lena n-áirítear codanna de na cistí a fhágáil nó a tharraingt siar, feabhas a chur ar an taithí do pháirtithe leasmhara ETH, agus ag an am céanna cuidiú le cuntasacht oibreoirí nód a neartú.
+Fuair ​​​​geallchur uasghrádú le cuntais bailíochtóra cumaiscthe, agus rialú feabhsaithe ar chistí geallta ag baint úsáide as an seoladh aistarraingthe forghníomhaithe. Mhéadaigh EIP-7251 an t-uasmhéid éifeachtach do bhailíochtóir aonair go 2048, rud a fheabhsaigh éifeachtúlacht caipitil do gheallsealbhóirí. Chuir EIP-7002 ar chumas cuntas reatha gníomhartha bailíochtóra a spreagadh go slán, lena n-áirítear imeacht nó codanna de na cistí a tharraingt siar, rud a d'fheabhsaigh an taithí do gheallsealbhóirí ETH, agus ag an am céanna chuidigh sé le cuntasacht a neartú d’oibreoirí nóid.
 
-Díríonn codanna eile den uasghrádú ar an taithí a fheabhsú d’úsáideoirí rialta. Tugann EIP-7702 an cumas do chuntas rialta neamhchonartha cliste ([EOA](/glossary/#eoa)) cód cosúil le conradh cliste a fhorghníomhú. Díghlasálann sé seo feidhmiúlacht nua neamhtheoranta do chuntais thraidisiúnta Ethereum, amhail baisceáil idirbheart, urraíocht gháis, fíordheimhniú malartach, rialuithe caiteachais in-ríomhchláraithe, meicníochtaí aisghabhála cuntais agus go leor eile.
+Dhírigh codanna eile den uasghrádú ar an taithí a fheabhsú d'úsáideoirí rialta. Thug EIP-7702 an cumas do chuntas rialta neamhchonartha cliste ([EOA](/glossary/#eoa)) cód atá cosúil le conradh cliste a rith. Dhíghlasáil sé seo feidhmiúlacht nua gan teorainn do chuntais thraidisiúnta Ethereum, amhail baisceáil idirbheart, urraíocht gáis, fíordheimhniú malartach, rialuithe caiteachais in-ríomhchláraithe, sásraí aisghabhála cuntas agus níos mó.
 
 <ExpandableCard title="EIPanna Pectra" contentPreview="Official improvements included in this upgrade.">
 

@@ -1,6 +1,6 @@
 ---
 title: ERC-777 Caighdeán Chomhartha
-description: null
+description:
 lang: ga
 ---
 

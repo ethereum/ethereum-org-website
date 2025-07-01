@@ -18,7 +18,7 @@ Ar mhaith leat do thuras Ethereum a thosú? Treoraíonn ár dtreoirleabhair phra
 
 1. [Conas rochtain chliste chonarthach ar do chistí cripte a chúlghairm](/guides/how-to-revoke-token-access/) - Má fheiceann tú go tobann idirbheart i do sparán nár thionscain tú, múinfidh an treoir seo duit conas é sin a chosc ó tharlú arís.
 
-2. [Conas dearbháin chamscéime a aithint](/guides/how-to-id-scam-tokens/) - Cad is dearbháin camscéime ann, cén chaoi a bhfuil cuma dhlisteanach orthu féin, agus conas iad a aithint chun tú féin a chosaint agus sceamáil a seachaint.
+2. [Conas comharthaí calaoiseacha a aithint](/guides/how-to-id-scam-tokens/) - Cad iad comharthaí calaoiseacha? Conas a chuireann siad cuma dhlisteanach orthu féin, agus conas a aithníonn tú iad chun tú féin a chosaint agus gan a bheith á sceamáil?
 
 ## Úsáid Ethereum
 

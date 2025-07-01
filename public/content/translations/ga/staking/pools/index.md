@@ -17,7 +17,7 @@ summaryPoints:
 
 Is cur chuige comhoibríoch é linnte cruachta a ligeann do mhórán a bhfuil méideanna níos lú ETH acu an 32 ETH a fháil a theastaíonn chun sraith eochracha bailíochtóra a ghníomhachtú. Ní thacaítear go dúchasach le feidhmiúlacht chomhthiomsaithe laistigh den phrótacal, mar sin tógadh réitigh ar leithligh le freastal ar an riachtanas seo.
 
-Feidhmíonn roinnt linnte le conarthaí cliste, áit ar féidir cistí a thaisceadh le conradh, a bhainistíonn agus a rianaíonn do ghealltanais go hiontaofa, agus a eisíonn comhartha duit a léiríonn an luach seo. Other pools may not involve smart contracts and are instead mediated offchain.
+Feidhmíonn roinnt linnte le conarthaí cliste, áit ar féidir cistí a thaisceadh le conradh, a bhainistíonn agus a rianaíonn do ghealltanais go hiontaofa, agus a eisíonn comhartha duit a léiríonn an luach seo. D’fhéadfadh sé nach mbeadh conarthaí cliste i gceist le linnte eile agus ina ionad sin déantar iad a idirghabháil as slabhra.
 
 ## Cén fáth geall a dhéanamh le linn? {#why-stake-with-a-pool}
 
