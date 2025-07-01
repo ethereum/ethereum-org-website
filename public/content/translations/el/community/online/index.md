@@ -63,7 +63,6 @@ lang: el
 <SocialListItem socialIcon="twitter"><Link href="https://x.com/ethereum">@ethereum</Link> - Κύριος λογαριασμός Ethereum για την κοινότητα</SocialListItem>
 <SocialListItem socialIcon="twitter"><Link href="https://x.com/ethereumfndn">@ethereumfndn</Link> - Επίσημος λογαριασμός του Ethereum Foundation</SocialListItem>
 <SocialListItem socialIcon="twitter"><Link href="https://x.com/ethdotorg">@ethdotorg</Link> - Η πύλη στο Ethereum που δημιουργήθηκε για την αναπτυσσόμενη παγκόσμια κοινότητα μας.</SocialListItem>
-<SocialListItem socialIcon="webpage"><Link href="https://hive.one/c/ethereum?page=1">Λίστα με σημαντικούς λογαριασμούς Ethereum twitter.</Link></SocialListItem>
 
 <Divider />
 
