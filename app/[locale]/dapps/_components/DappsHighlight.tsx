@@ -38,7 +38,6 @@ const DappsHighlight = ({ dapps }: DappsHighlightProps) => {
               <LinkBox className="group w-full rounded-xl p-3 hover:bg-background-highlight">
                 <LinkOverlay
                   href={`/dapps/${getDappSlug(dapp.name)}`}
-                  target="_blank"
                   className="no-underline"
                 >
                   <div className="relative mb-2 aspect-[2/1] w-full">
