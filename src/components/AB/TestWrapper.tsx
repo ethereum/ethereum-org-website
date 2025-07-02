@@ -21,7 +21,7 @@ const ABTestWrapper = async ({
   fallback,
 }: ABTestWrapperProps) => {
   try {
-    // Get deterministic assignment (cookieless, based on user fingerprint)
+    // Get deterministic assignment (cookie-less, based on fingerprint)
     const assignment = await getABTestAssignment(testKey)
 
     if (!assignment) {

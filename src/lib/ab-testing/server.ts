@@ -1,7 +1,3 @@
-import { cookies } from "next/headers"
-
-import { AB_TEST_COOKIE_PREFIX } from "../constants"
-
 import { getABTestConfigs, getABTestConfigsSync } from "./config"
 import { ABTestAssignment, ABTestConfig } from "./types"
 
@@ -15,23 +11,7 @@ export async function getABTestAssignment(
     return null
   }
 
-  const cookieStore = await cookies()
-  const cookieName = AB_TEST_COOKIE_PREFIX + testKey
-  const existingAssignment = cookieStore.get(cookieName)
-
-  if (existingAssignment?.value) {
-    try {
-      const parsed: ABTestAssignment = JSON.parse(existingAssignment.value)
-      // Validate that the variant still exists in current config
-      if (testConfig.variants.some((v) => v.name === parsed.variant)) {
-        return parsed
-      }
-    } catch (error) {
-      // Invalid cookie format, continue to reassign
-    }
-  }
-
-  // If no valid existing assignment, create deterministic assignment
+  // Create deterministic assignment
   // Use IP + User-Agent as fingerprint for consistent assignment (cookie-less)
   const headers = await import("next/headers").then((m) => m.headers())
   const userAgent = headers.get("user-agent") || ""
