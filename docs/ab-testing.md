@@ -55,14 +55,20 @@ export default function MyPage() {
       <ABTestWrapper
         testKey="HomepageHero" // Must match your Matomo experiment name exactly
         variants={[
-          <OriginalComponent key="original" />, // Index 0: Original/existing variant
-          <NewDesignComponent key="newdesign" />, // Index 1: First test variation
+          <OriginalComponent key="current-design" />, // Index 0: Original (matches Matomo order)
+          <NewDesignComponent key="hero-redesign" />, // Index 1: Variation (matches Matomo order)
         ]}
       />
     </div>
   )
 }
 ```
+
+**Important Notes:**
+
+- Variants are matched by **array index**, not by name
+- Array order must match the exact order of variations in your Matomo experiment
+- JSX `key` props serve as array keys, and human-readable labels in the debug panel (parsed from kebab-case to Title Case)
 
 ### 4. Experiment Activation
 
@@ -73,6 +79,7 @@ The experiment will automatically start running when:
 3. **Matomo detects the experiment** and begins tracking
 
 **Manual Control:**
+
 - Use the **Schedule** settings in Matomo to control start/end dates
 - Experiments respect their configured schedule automatically
 - You can pause/resume experiments anytime in the Matomo dashboard
@@ -82,24 +89,28 @@ The experiment will automatically start running when:
 Support for 3+ variants:
 
 ```tsx
-// Matomo experiment with:
-// - Original: 40% (implicit)
-// - ListLayout: 30%
-// - GridLayout: 20%
-// - CarouselLayout: 10%
+// Matomo experiment configured with variations in this exact order:
+// Index 0: Original (implicit) - 40% weight
+// Index 1: List Layout - 30% weight
+// Index 2: Grid Layout - 20% weight
+// Index 3: Carousel Layout - 10% weight
 
 <ABTestWrapper
   testKey="WalletLayout"
   variants={[
-    <OriginalLayout />, // Index 0: Original (40% weight)
-    <ListLayout />, // Index 1: ListLayout (30% weight)
-    <GridLayout />, // Index 2: GridLayout (20% weight)
-    <CarouselLayout />, // Index 3: CarouselLayout (10% weight)
+    <OriginalLayout key="original-layout" />, // Index 0
+    <ListLayout key="list-layout" />, // Index 1
+    <GridLayout key="grid-layout" />, // Index 2
+    <CarouselLayout key="carousel-layout" />, // Index 3
   ]}
 />
 ```
 
-**Important**: Variant array order must match the order of variations in your Matomo experiment.
+**Important**:
+
+- Variant array order must exactly **match the order in your Matomo experiment**
+- Assignment is by index (0, 1, 2, 3...), not by name matching
+- Debug panel shows formatted key names: `"list-layout"` → `"List Layout"`
 
 ## How It Works
 
@@ -169,6 +180,8 @@ IS_PREVIEW_DEPLOY=false
 
 - Keep variants as similar as possible (same props, structure)
 - Always provide a meaningful fallback component
+- Use descriptive kebab-case keys: `key="simplified-checkout"` becomes `"Simplified Checkout"` in debug panel
+- Ensure variant array order matches Matomo experiment order exactly
 - Test all variants in Storybook before deploying
 
 ### Testing Strategy
@@ -230,10 +243,10 @@ The panel helps verify your test is working correctly before production deployme
 ### Core Files
 
 - `app/api/ab-config/route.ts` - Matomo API integration
-- `src/lib/ab-testing/config.ts` - Configuration management and caching
-- `src/lib/ab-testing/server.ts` - Assignment logic and fingerprinting
+- `src/lib/ab-testing/server.ts` - Assignment logic and fingerprinting (index-based)
 - `src/components/AB/TestWrapper.tsx` - Main React component
 - `src/components/AB/TestDebugPanel.tsx` - Development debug interface
+- `src/components/AB/ClientABTestWrapper.tsx` - Client-side rendering with localStorage overrides
 
 ### Data Flow
 

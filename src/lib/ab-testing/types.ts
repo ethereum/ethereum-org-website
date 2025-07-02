@@ -14,6 +14,7 @@ export type ABTestAssignment = {
   experimentId: string
   experimentName: string
   variant: string
+  variantIndex: number
   assignedAt: number
 }
 

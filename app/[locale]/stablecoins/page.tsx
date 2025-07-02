@@ -594,7 +594,7 @@ async function Page({ params }: { params: Promise<{ locale: Lang }> }) {
             <ABTestWrapper
               testKey="AppTest"
               variants={[
-                <div key="original" className="flex flex-wrap gap-4">
+                <div key="two-buttons" className="flex flex-wrap gap-4">
                   <ButtonLink href="/dapps/">
                     {t("page-stablecoins-explore-dapps")}
                   </ButtonLink>
@@ -607,7 +607,7 @@ async function Page({ params }: { params: Promise<{ locale: Lang }> }) {
                     {t("page-stablecoins-more-defi-button")}
                   </ButtonLink>
                 </div>,
-                <div key="Variation1" className="flex flex-wrap gap-4">
+                <div key="single-button" className="flex flex-wrap gap-4">
                   <ButtonLink href="/dapps/">
                     {t("page-stablecoins-explore-apps")}
                   </ButtonLink>

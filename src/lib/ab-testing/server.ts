@@ -33,42 +33,30 @@ export const getABTestAssignment = async (
     headers.get("x-forwarded-for") || headers.get("x-real-ip") || "unknown"
   const fingerprint = `${forwardedFor}-${userAgent}`
 
-  const variant = assignVariantDeterministic(testConfig, fingerprint)
+  const variantIndex = assignVariantIndexDeterministic(testConfig, fingerprint)
+  const variant = testConfig.variants[variantIndex]
 
   return {
     experimentId: testConfig.id,
     experimentName: testConfig.name || testKey,
     variant: variant.name,
+    variantIndex,
     assignedAt: Date.now(),
   }
 }
 
-export const getVariantIndex = (
-  variantName: string,
-  configs: Record<string, ABTestConfig>,
-  testKey: string
-): number => {
-  const testConfig = configs[testKey]
-  if (!testConfig) return 0
-
-  const variantIndex = testConfig.variants.findIndex(
-    (v) => v.name === variantName
-  )
-  return variantIndex >= 0 ? variantIndex : 0
-}
-
 // Deterministic assignment based on user fingerprint (cookie-less)
-const assignVariantDeterministic = (
+const assignVariantIndexDeterministic = (
   config: ABTestConfig,
   fingerprint: string
-) => {
+): number => {
   const totalWeight = config.variants.reduce(
     (sum, variant) => sum + variant.weight,
     0
   )
 
   // Handle case where total weight is 0
-  if (totalWeight === 0) return config.variants[0]
+  if (totalWeight === 0) return 0
 
   // Use a better hash function for more uniform distribution
   // This is a simple implementation of djb2 hash algorithm
@@ -82,12 +70,12 @@ const assignVariantDeterministic = (
   const weighted = normalized * totalWeight
 
   let cumulativeWeight = 0
-  for (const variant of config.variants) {
-    cumulativeWeight += variant.weight
+  for (let i = 0; i < config.variants.length; i++) {
+    cumulativeWeight += config.variants[i].weight
     if (weighted <= cumulativeWeight) {
-      return variant
+      return i
     }
   }
 
-  return config.variants[0]
+  return 0
 }

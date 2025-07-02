@@ -6,11 +6,7 @@ import { ClientABTestWrapper } from "./ClientABTestWrapper"
 import { ABTestDebugPanel } from "./TestDebugPanel"
 import { ABTestTracker } from "./TestTracker"
 
-import {
-  getABTestAssignment,
-  getABTestConfigs,
-  getVariantIndex,
-} from "@/lib/ab-testing/server"
+import { getABTestAssignment } from "@/lib/ab-testing/server"
 import { ABTestVariants } from "@/lib/ab-testing/types"
 
 type ABTestWrapperProps = {
@@ -25,18 +21,28 @@ const ABTestWrapper = async ({
   fallback,
 }: ABTestWrapperProps) => {
   try {
-    // Get deterministic assignment and configs
-    const [assignment, configs] = await Promise.all([
-      getABTestAssignment(testKey),
-      getABTestConfigs(),
-    ])
+    // Get deterministic assignment
+    const assignment = await getABTestAssignment(testKey)
 
     if (!assignment) throw new Error("No AB test assignment found")
 
-    // Find the variant index based on the assignment
-    const variantIndex = getVariantIndex(assignment.variant, configs, testKey)
-    const availableVariants =
-      configs[testKey]?.variants.map((v) => v.name) || []
+    // Use assignment's variant index directly
+    const variantIndex = assignment.variantIndex
+
+    // Extract labels from React element keys or fall back to defaults
+    const availableVariants = variants.map((variant, i) => {
+      if (
+        variant &&
+        typeof variant === "object" &&
+        "key" in variant &&
+        variant.key
+      ) {
+        return String(variant.key)
+          .replace(/-/g, " ")
+          .replace(/\b\w/g, (l) => l.toUpperCase())
+      }
+      return `Variant ${i}`
+    })
 
     return (
       <>

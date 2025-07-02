@@ -201,7 +201,7 @@ The site uses a GDPR-compliant, cookie-less A/B testing system integrated with M
 ### Key Features
 
 - **Matomo API Integration** - Experiments configured in Matomo dashboard
-- **Cookie-less Tracking** - Uses deterministic IP + User-Agent fingerprinting
+- **Cookie-less Variant Persistence** - Uses deterministic IP + User-Agent fingerprinting for variant assignment
 - **Server-side Rendering** - No layout shifts, consistent variants on first load
 - **Real-time Updates** - Change weights instantly via Matomo (no deployments)
 - **Preview Mode** - Debug panel available in development and preview environments
@@ -222,14 +222,18 @@ The site uses a GDPR-compliant, cookie-less A/B testing system integrated with M
    <ABTestWrapper
      testKey="HomepageHero"  // Must match Matomo experiment name exactly
      variants={[
-       <OriginalComponent key="original" />,
-       <NewComponent key="variant" />
+       <OriginalComponent key="current-hero" />,     // Index 0: Original
+       <NewComponent key="redesigned-hero" />        // Index 1: Variation
      ]}
      fallback={<OriginalComponent />}
    />
    ```
 
-**No TypeScript changes required** - the system automatically fetches configuration from Matomo.
+**Important**:
+- Variants matched by **array index**, not names
+- Array order must match Matomo experiment order exactly
+- JSX `key` props become debug panel labels: `"redesigned-hero"` → `"Redesigned Hero"`
+- No TypeScript changes required - system fetches configuration from Matomo
 
 ### Architecture
 
