@@ -4,6 +4,8 @@ type MatomoExperiment = {
   idexperiment: string
   name: string
   status: string
+  start_date?: string
+  end_date?: string
   variations: Array<{
     name: string
     percentage: number
@@ -17,6 +19,30 @@ type ABTestConfig = {
     name: string
     weight: number
   }>
+}
+
+function isExperimentActive(experiment: MatomoExperiment): boolean {
+  const now = new Date()
+
+  // Check start date - if scheduled for future, not active yet
+  if (experiment.start_date) {
+    const startDate = new Date(experiment.start_date)
+    if (now < startDate) {
+      return false // Not started yet
+    }
+  }
+
+  // Check end date - if past end date, not active anymore
+  if (experiment.end_date) {
+    const endDate = new Date(experiment.end_date)
+    if (now > endDate) {
+      return false // Already ended
+    }
+  }
+
+  // If no scheduling constraints, enabled if created or running
+  // If within time window, enabled if running
+  return ["created", "running"].includes(experiment.status)
 }
 
 export async function GET() {
@@ -91,12 +117,8 @@ export async function GET() {
     const config: Record<string, ABTestConfig> = {}
 
     experiments.forEach((exp) => {
-      // Include running experiments (Matomo uses "running" not "active")
-      if (
-        exp.status === "running" &&
-        exp.variations &&
-        exp.variations.length > 0
-      ) {
+      // Include all experiments with variations (let scheduling handle timing)
+      if (exp.variations && exp.variations.length > 0) {
         // Calculate Original variant weight (100% - sum of all variations)
         const variationsTotalWeight = exp.variations.reduce(
           (sum, variation) => {
@@ -119,7 +141,7 @@ export async function GET() {
 
         config[exp.name] = {
           id: exp.idexperiment,
-          enabled: true,
+          enabled: isExperimentActive(exp),
           variants: variants,
         }
       }
