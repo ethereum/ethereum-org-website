@@ -1094,6 +1094,7 @@ export type Dapp = {
   openSource: boolean
   contractAddress: string
   dateOfLaunch: string
+  lastUpdated: string
 }
 
 export type DefiDapp = Dapp & {

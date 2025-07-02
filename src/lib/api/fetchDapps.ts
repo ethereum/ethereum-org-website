@@ -94,6 +94,7 @@ export async function fetchDapps(): Promise<Record<string, DappData[]>> {
             openSource: row[20]?.toLowerCase() === "true",
             contractAddress: row[21] || "",
             dateOfLaunch: row[22] || "",
+            lastUpdated: row[23] || "",
           }
 
           return dappData as unknown as DappData

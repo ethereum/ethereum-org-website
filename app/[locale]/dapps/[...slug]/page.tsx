@@ -79,6 +79,17 @@ const Page = async ({
 
   const nextDapp = findNextDapp()
 
+  const getTimeAgo = (dateString: string) => {
+    const date = new Date(dateString)
+    const now = new Date()
+    const diffInMs = now.getTime() - date.getTime()
+    const diffInDays = Math.floor(diffInMs / (1000 * 60 * 60 * 24))
+
+    if (diffInDays === 0) return "Today"
+    if (diffInDays === 1) return "1 day ago"
+    return `${diffInDays} days ago`
+  }
+
   return (
     <I18nProvider locale={locale} messages={messages}>
       <MainArticle className="flex flex-col gap-10 py-10">
@@ -170,22 +181,41 @@ const Page = async ({
           </div>
         </div>
 
-        <div className="flex flex-col gap-11 bg-background-highlight px-4 py-10 md:px-8">
-          <p>{dapp.description}</p>
-          <div className="flex flex-col gap-4">
-            <h2 className="text-2xl">Gallery</h2>
-            <div className="flex flex-row gap-4">
-              {dapp.screenshots.map((screenshot) => (
-                <Image
-                  key={screenshot}
-                  src={screenshot}
-                  alt={dapp.name}
-                  width={340}
-                  height={700}
-                  className="h-[350px] w-[170px] rounded-lg object-cover"
-                  unoptimized
-                />
-              ))}
+        <div className="flex flex-col justify-between gap-10 bg-background-highlight px-4 py-10 md:flex-row md:px-8">
+          <div className="flex flex-1 flex-col gap-11">
+            <p>{dapp.description}</p>
+            <div className="flex flex-col gap-4">
+              <h3 className="text-2xl">Gallery</h3>
+              <div className="flex flex-row gap-4">
+                {dapp.screenshots.map((screenshot) => (
+                  <Image
+                    key={screenshot}
+                    src={screenshot}
+                    alt={dapp.name}
+                    width={340}
+                    height={700}
+                    className="h-[350px] w-[170px] rounded-lg object-cover"
+                    unoptimized
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
+          <div className="flex h-fit w-44 flex-col gap-4 rounded-2xl border bg-background p-8">
+            <h3 className="text-lg">Info</h3>
+            <div>
+              <p className="text-sm text-body-medium">Founded</p>
+              <p className="text-sm">
+                {new Date(dapp.dateOfLaunch).getFullYear()}
+              </p>
+            </div>
+            <div>
+              <p className="text-sm text-body-medium">Creator</p>
+              <p className="text-sm">{dapp.parentCompany}</p>
+            </div>
+            <div>
+              <p className="text-sm text-body-medium">Last updated</p>
+              <p className="text-sm">{getTimeAgo(dapp.lastUpdated)}</p>
             </div>
           </div>
         </div>
