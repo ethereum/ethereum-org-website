@@ -34,16 +34,18 @@ const ABTestWrapper = async ({
     const selectedVariant = variants[variantIndex] || variants[0]
 
     // Get available variants for debug panel
-    const configs = getABTestConfigs()
+    const configs = await getABTestConfigs()
     const availableVariants =
       configs[testKey]?.variants.map((v) => v.name) || []
 
     return (
       <>
-        {/* Track assignment - existing Matomo opt-out logic will handle filtering */}
-        <ABTestTracker assignment={assignment} testKey={testKey} />
+        {/* Track assignment - only in production, not in preview */}
+        {!IS_PREVIEW_DEPLOY && (
+          <ABTestTracker assignment={assignment} testKey={testKey} />
+        )}
 
-        {/* Debug panel for development */}
+        {/* Preview panel for development and preview deploys */}
         {(!IS_PROD || IS_PREVIEW_DEPLOY) && (
           <ABTestDebugPanel
             testKey={testKey}

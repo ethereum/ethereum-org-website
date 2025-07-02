@@ -2,19 +2,16 @@ import { cookies } from "next/headers"
 
 import { AB_TEST_COOKIE_PREFIX } from "../constants"
 
-import { getABTestConfigs } from "./config"
+import { getABTestConfigs, getABTestConfigsSync } from "./config"
 import { ABTestAssignment, ABTestConfig } from "./types"
 
 export async function getABTestAssignment(
   testKey: string
 ): Promise<ABTestAssignment | null> {
-  const configs = getABTestConfigs()
+  const configs = await getABTestConfigs()
   const testConfig = configs[testKey]
 
   if (!testConfig || !testConfig.enabled) {
-    if (process.env.NODE_ENV === "development") {
-      console.log(`[AB Test] ${testKey} is disabled or not found`)
-    }
     return null
   }
 
@@ -28,22 +25,14 @@ export async function getABTestAssignment(
       // Validate that the variant still exists in current config
       if (testConfig.variants.some((v) => v.name === parsed.variant)) {
         return parsed
-      } else {
-        if (process.env.NODE_ENV === "development") {
-          console.log(
-            `[AB Test] ${testKey}: Variant ${parsed.variant} no longer exists, reassigning`
-          )
-        }
       }
     } catch (error) {
-      if (process.env.NODE_ENV === "development") {
-        console.log(`[AB Test] ${testKey}: Invalid cookie format, reassigning`)
-      }
+      // Invalid cookie format, continue to reassign
     }
   }
 
   // If no valid existing assignment, create deterministic assignment
-  // Use IP + User-Agent as fingerprint for consistent assignment (cookieless)
+  // Use IP + User-Agent as fingerprint for consistent assignment (cookie-less)
   const headers = await import("next/headers").then((m) => m.headers())
   const userAgent = headers.get("user-agent") || ""
   const forwardedFor =
@@ -59,17 +48,11 @@ export async function getABTestAssignment(
     assignedAt: Date.now(),
   }
 
-  if (process.env.NODE_ENV === "development") {
-    console.log(
-      `[AB Test] ${testKey}: New deterministic assignment - ${variant.name} (fingerprint: ${fingerprint.slice(0, 20)}...)`
-    )
-  }
-
   return newAssignment
 }
 
 export function getABTestConfig(testKey: string): ABTestConfig | null {
-  const configs = getABTestConfigs()
+  const configs = getABTestConfigsSync()
   const testConfig = configs[testKey]
 
   if (!testConfig || !testConfig.enabled) {
@@ -80,7 +63,7 @@ export function getABTestConfig(testKey: string): ABTestConfig | null {
 }
 
 export function getVariantIndex(variantName: string, testKey: string): number {
-  const configs = getABTestConfigs()
+  const configs = getABTestConfigsSync()
   const testConfig = configs[testKey]
 
   if (!testConfig) return 0
@@ -91,7 +74,7 @@ export function getVariantIndex(variantName: string, testKey: string): number {
   return variantIndex >= 0 ? variantIndex : 0
 }
 
-// Deterministic assignment based on user fingerprint (cookieless)
+// Deterministic assignment based on user fingerprint (cookie-less)
 function assignVariantDeterministic(config: ABTestConfig, fingerprint: string) {
   const totalWeight = config.variants.reduce(
     (sum, variant) => sum + variant.weight,
