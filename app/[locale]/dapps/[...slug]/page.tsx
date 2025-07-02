@@ -32,6 +32,8 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { BASE_TIME_UNIT } from "@/lib/constants"
 
+import DappCard from "../_components/DappCard"
+
 import { fetchDapps } from "@/lib/api/fetchDapps"
 
 // 24 hours
@@ -78,6 +80,24 @@ const Page = async ({
   }
 
   const nextDapp = findNextDapp()
+
+  // Find related dapps with matching subcategories
+  const getRelatedDapps = () => {
+    const categoryDapps = dappsData[dapp.category] || []
+    const currentSubcategories = dapp.subCategory
+
+    return categoryDapps
+      .filter((d) => {
+        // Exclude the current dapp
+        if (getDappSlug(d.name) === dappSlug) return false
+
+        // Check if this dapp has at least one matching subcategory
+        return d.subCategory.some((sub) => currentSubcategories.includes(sub))
+      })
+      .slice(0, 3) // Limit to 3 dapps
+  }
+
+  const relatedDapps = getRelatedDapps()
 
   const getTimeAgo = (dateString: string) => {
     const date = new Date(dateString)
@@ -220,8 +240,21 @@ const Page = async ({
           </div>
         </div>
 
-        <div className="flex flex-col px-4 md:px-8">
-          <h2>More dapps like this</h2>
+        <div className="flex flex-col px-4 py-10 md:px-8">
+          <div className="flex w-full flex-col items-center gap-8 rounded-2xl bg-gradient-to-t from-blue-500/20 from-10% to-blue-500/5 to-90% p-12 px-4 md:px-8">
+            <h2>More dapps like this</h2>
+            <div className="flex w-full flex-col gap-4 lg:flex-row">
+              {relatedDapps.map((relatedDapp) => (
+                <div key={relatedDapp.name} className="flex-1">
+                  <DappCard
+                    dapp={relatedDapp}
+                    imageSize={24}
+                    showDescription={true}
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </MainArticle>
     </I18nProvider>
