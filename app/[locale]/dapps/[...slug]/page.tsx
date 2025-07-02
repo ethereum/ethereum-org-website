@@ -6,6 +6,9 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
+import { ChainName } from "@/lib/types"
+
+import { ChainImages } from "@/components/ChainImages"
 import { ChevronNext } from "@/components/Chevron"
 import I18nProvider from "@/components/I18nProvider"
 import Discord from "@/components/icons/discord.svg"
@@ -146,6 +149,15 @@ const Page = async ({
                     </Tag>
                   </div>
                   <h1 className="mt-0">{dapp.name}</h1>
+                  <div className="flex flex-row items-center gap-2">
+                    <ChainImages
+                      chains={dapp.networks as ChainName[]}
+                      className="mt-2"
+                    />
+                    <p className="text-sm text-body-medium">
+                      by {dapp.parentCompany}
+                    </p>
+                  </div>
                 </div>
                 <div className="flex flex-row gap-4">
                   <ButtonLink href={dapp.url} target="_blank" hideArrow>
