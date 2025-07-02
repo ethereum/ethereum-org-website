@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server"
 
+import { IS_PREVIEW_DEPLOY } from "@/lib/utils/env"
+
 type MatomoExperiment = {
   idexperiment: string
   name: string
@@ -21,31 +23,37 @@ type ABTestConfig = {
   }>
 }
 
-function isExperimentActive(experiment: MatomoExperiment): boolean {
+const isExperimentActive = (experiment: MatomoExperiment): boolean => {
   const now = new Date()
 
   // Check start date - if scheduled for future, not active yet
   if (experiment.start_date) {
     const startDate = new Date(experiment.start_date)
-    if (now < startDate) {
-      return false // Not started yet
-    }
+    if (now < startDate) return false
   }
 
   // Check end date - if past end date, not active anymore
   if (experiment.end_date) {
     const endDate = new Date(experiment.end_date)
-    if (now > endDate) {
-      return false // Already ended
-    }
+    if (now > endDate) return false
   }
 
   // If no scheduling constraints, enabled if created or running
-  // If within time window, enabled if running
   return ["created", "running"].includes(experiment.status)
 }
 
+const getPreviewConfig = () => ({
+  AppTest: {
+    id: "preview",
+    enabled: true,
+    variants: [{ name: "Original", weight: 100 }],
+  },
+})
+
 export async function GET() {
+  // Preview mode: Show menu with original default
+  if (IS_PREVIEW_DEPLOY) return NextResponse.json(getPreviewConfig())
+
   try {
     const matomoUrl = process.env.NEXT_PUBLIC_MATOMO_URL
     const apiToken = process.env.MATOMO_API_TOKEN
@@ -57,95 +65,65 @@ export async function GET() {
       )
     }
 
-    // Get the site ID from environment
-    const siteId = process.env.NEXT_PUBLIC_MATOMO_SITE_ID || "1"
+    const siteId = process.env.NEXT_PUBLIC_MATOMO_SITE_ID || "4"
 
-    // Try different API methods for A/B testing
-    const apiMethods = [
-      "ExperimentsPlatform.getExperiments",
-      "AbTesting.getExperiments",
-      "Experiments.getExperiments",
-      `AbTesting.getAllExperiments&idSite=${siteId}`,
-    ]
+    // Add cache busting for development
+    const cacheBuster =
+      process.env.NODE_ENV === "development" ? `&cb=${Date.now()}` : ""
+    const matomoApiUrl = `${matomoUrl}/index.php?module=API&method=AbTesting.getAllExperiments&idSite=${siteId}&format=json&token_auth=${apiToken}${cacheBuster}`
 
-    let experiments: MatomoExperiment[] = []
-    let apiError = null
+    const response = await fetch(matomoApiUrl, {
+      next: { revalidate: process.env.NODE_ENV === "development" ? 0 : 3600 },
+      headers: { "User-Agent": "ethereum.org-ab-testing/1.0" },
+    })
 
-    for (const method of apiMethods) {
-      // Add cache busting for development
-      const cacheBuster =
-        process.env.NODE_ENV === "development" ? `&cb=${Date.now()}` : ""
-      const matomoApiUrl = `${matomoUrl}/index.php?module=API&method=${method}&format=json&token_auth=${apiToken}${cacheBuster}`
+    const data = await response.json()
 
-      try {
-        const response = await fetch(matomoApiUrl, {
-          next: {
-            revalidate: process.env.NODE_ENV === "development" ? 0 : 3600,
-          }, // No cache in dev
-          headers: { "User-Agent": "ethereum.org-ab-testing/1.0" },
-        })
-
-        const data = await response.json()
-
-        if (data.result !== "error" && Array.isArray(data)) {
-          experiments = data
-          break
-        } else if (data.result === "error") {
-          apiError = data.message
-        }
-      } catch (error) {
-        // Continue to next method
-      }
-    }
-
-    // If no API method worked, use fallback
-    if (experiments.length === 0) {
-      console.warn(
-        `[AB Config] All API methods failed. Last error: ${apiError}`
+    if (data.result === "error" || !Array.isArray(data)) {
+      console.error(
+        "[AB Config] Matomo API error:",
+        data.message || "Invalid response"
       )
-
-      const fallbackConfig = {}
-
-      return NextResponse.json(fallbackConfig, {
-        headers: {
-          "Cache-Control": "s-max-age=300, stale-while-revalidate=600",
-        },
-      })
+      return NextResponse.json(
+        {},
+        {
+          headers: {
+            "Cache-Control": "s-max-age=300, stale-while-revalidate=600",
+          },
+        }
+      )
     }
+
+    const experiments: MatomoExperiment[] = data
 
     // Transform Matomo experiments to our config format
     const config: Record<string, ABTestConfig> = {}
 
-    experiments.forEach((exp) => {
-      // Include all experiments with variations (let scheduling handle timing)
-      if (exp.variations && exp.variations.length > 0) {
+    experiments
+      .filter((exp) => exp.variations && exp.variations.length > 0)
+      .forEach((exp) => {
         // Calculate Original variant weight (100% - sum of all variations)
         const variationsTotalWeight = exp.variations.reduce(
-          (sum, variation) => {
-            return sum + (variation.percentage || 0)
-          },
+          (sum, variation) => sum + (variation.percentage || 0),
           0
         )
         const originalWeight = 100 - variationsTotalWeight
 
         // Build variants array starting with "Original"
-        const variants = [{ name: "Original", weight: originalWeight }]
-
-        // Add variations from Matomo (use actual percentages)
-        exp.variations.forEach((variation) => {
-          variants.push({
+        const variants = [
+          { name: "Original", weight: originalWeight },
+          ...exp.variations.map((variation) => ({
             name: variation.name,
             weight: variation.percentage || 0,
-          })
-        })
+          })),
+        ]
 
         config[exp.name] = {
           id: exp.idexperiment,
           enabled: isExperimentActive(exp),
-          variants: variants,
+          variants,
         }
-      }
-    })
+      })
 
     return NextResponse.json(config, {
       headers: {

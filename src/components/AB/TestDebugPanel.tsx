@@ -8,18 +8,16 @@ import { Button } from "../ui/buttons/Button"
 
 import { useLocalStorage } from "@/hooks/useLocalStorage"
 import { useOnClickOutside } from "@/hooks/useOnClickOutside"
-import { ABTestAssignment } from "@/lib/ab-testing/types"
 
 type ABTestDebugPanelProps = {
   testKey: string
-  currentAssignment: ABTestAssignment | null
   availableVariants: string[]
 }
 
-export function ABTestDebugPanel({
+export const ABTestDebugPanel = ({
   testKey,
   availableVariants,
-}: ABTestDebugPanelProps) {
+}: ABTestDebugPanelProps) => {
   const [isOpen, setIsOpen] = useState(false)
   const [selectedVariant, setSelectedVariant] = useLocalStorage<number | null>(
     `ab-test-${testKey}`,
@@ -29,9 +27,8 @@ export function ABTestDebugPanel({
 
   useOnClickOutside(panelRef, () => setIsOpen(false))
 
-  const forceVariant = (variantIndex: number) => {
+  const forceVariant = (variantIndex: number) =>
     setSelectedVariant(variantIndex)
-  }
 
   return (
     <div
@@ -48,7 +45,7 @@ export function ABTestDebugPanel({
       {isOpen && (
         <div className="mt-2.5">
           <div>
-            <strong>Test:</strong> {testKey}
+            <strong>Experiment:</strong> {testKey}
           </div>
           <div>
             <strong>Select variant:</strong>

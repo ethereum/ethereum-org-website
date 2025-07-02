@@ -9,14 +9,10 @@ import { ABTestAssignment } from "@/lib/ab-testing/types"
 
 type ABTestTrackerProps = {
   assignment: ABTestAssignment
-  testKey?: string
 }
 
-export function ABTestTracker({ assignment, testKey }: ABTestTrackerProps) {
+export function ABTestTracker({ assignment }: ABTestTrackerProps) {
   useEffect(() => {
-    // Don't set cookies here - let server handle cookie persistence
-    // This component only handles Matomo tracking
-
     if (!IS_PROD || IS_PREVIEW_DEPLOY) {
       console.debug(
         `DEV [Matomo] A/B test logged - Experiment: ${assignment.experimentName}, Variant: ${assignment.variant}`
@@ -39,7 +35,7 @@ export function ABTestTracker({ assignment, testKey }: ABTestTrackerProps) {
         variation: assignment.variant,
       },
     ] as [string, Record<string, string>])
-  }, [assignment, testKey])
+  }, [assignment])
 
   return null // This component doesn't render anything
 }

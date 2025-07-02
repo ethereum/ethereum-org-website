@@ -6,8 +6,11 @@ import { ClientABTestWrapper } from "./ClientABTestWrapper"
 import { ABTestDebugPanel } from "./TestDebugPanel"
 import { ABTestTracker } from "./TestTracker"
 
-import { getABTestConfigs } from "@/lib/ab-testing/config"
-import { getABTestAssignment, getVariantIndex } from "@/lib/ab-testing/server"
+import {
+  getABTestAssignment,
+  getABTestConfigs,
+  getVariantIndex,
+} from "@/lib/ab-testing/server"
 import { ABTestVariants } from "@/lib/ab-testing/types"
 
 type ABTestWrapperProps = {
@@ -22,34 +25,28 @@ const ABTestWrapper = async ({
   fallback,
 }: ABTestWrapperProps) => {
   try {
-    // Get deterministic assignment (cookie-less, based on fingerprint)
-    const assignment = await getABTestAssignment(testKey)
+    // Get deterministic assignment and configs
+    const [assignment, configs] = await Promise.all([
+      getABTestAssignment(testKey),
+      getABTestConfigs(),
+    ])
 
-    if (!assignment) {
-      // If no assignment, render fallback
-      return <>{fallback || variants[0]}</>
-    }
+    if (!assignment) throw new Error("No AB test assignment found")
 
     // Find the variant index based on the assignment
-    const variantIndex = getVariantIndex(assignment.variant, testKey)
-
-    // Get available variants for debug panel
-    const configs = await getABTestConfigs()
+    const variantIndex = getVariantIndex(assignment.variant, configs, testKey)
     const availableVariants =
       configs[testKey]?.variants.map((v) => v.name) || []
 
     return (
       <>
-        {/* Track assignment - only in production, not in preview */}
-        {!IS_PREVIEW_DEPLOY && (
-          <ABTestTracker assignment={assignment} testKey={testKey} />
-        )}
+        {/* Analogous to <Matomo /> at app layout level, pushes "AbTesting::enter" in production */}
+        <ABTestTracker assignment={assignment} />
 
         {/* Preview panel for development and preview deploys */}
         {(!IS_PROD || IS_PREVIEW_DEPLOY) && (
           <ABTestDebugPanel
             testKey={testKey}
-            currentAssignment={assignment}
             availableVariants={availableVariants}
           />
         )}
