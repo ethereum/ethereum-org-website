@@ -78,16 +78,7 @@ export async function GET() {
         `[AB Config] All API methods failed. Last error: ${apiError}`
       )
 
-      const fallbackConfig = {
-        AppTest: {
-          id: "1",
-          enabled: true,
-          variants: [
-            { name: "Original", weight: 50 },
-            { name: "Variation1", weight: 50 },
-          ],
-        },
-      }
+      const fallbackConfig = {}
 
       return NextResponse.json(fallbackConfig, {
         headers: {

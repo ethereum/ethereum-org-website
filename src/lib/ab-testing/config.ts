@@ -33,18 +33,8 @@ async function fetchConfigFromAPI(): Promise<Record<string, ABTestConfig>> {
 }
 
 function getFallbackConfig(): Record<string, ABTestConfig> {
-  // Fallback configuration when API fails
-  return {
-    AppTest: {
-      name: "AppTest",
-      id: "fallback",
-      enabled: true,
-      variants: [
-        { name: "Original", weight: 50 },
-        { name: "Variation1", weight: 50 },
-      ],
-    },
-  }
+  // Fallback configuration when API fails - show original 100% of the time
+  return {}
 }
 
 function getPreviewConfig(): Record<string, ABTestConfig> {
