@@ -1,7 +1,6 @@
 import { cookies } from "next/headers"
 
 import { AB_TEST_COOKIE_PREFIX } from "../constants"
-import { IS_PROD } from "../utils/env"
 
 import { getABTestConfigs } from "./config"
 import { ABTestAssignment, ABTestConfig } from "./types"
@@ -19,7 +18,7 @@ export async function getABTestAssignment(
     return null
   }
 
-  const cookieStore = cookies()
+  const cookieStore = await cookies()
   const cookieName = AB_TEST_COOKIE_PREFIX + testKey
   const existingAssignment = cookieStore.get(cookieName)
 
@@ -43,8 +42,16 @@ export async function getABTestAssignment(
     }
   }
 
-  // If no valid existing assignment, create a new one and set cookie immediately
-  const variant = assignVariant(testConfig)
+  // If no valid existing assignment, create deterministic assignment
+  // Use IP + User-Agent as fingerprint for consistent assignment (cookieless)
+  const headers = await import("next/headers").then((m) => m.headers())
+  const userAgent = headers.get("user-agent") || ""
+  const forwardedFor =
+    headers.get("x-forwarded-for") || headers.get("x-real-ip") || "unknown"
+  const fingerprint = `${forwardedFor}-${userAgent}`
+
+  // Use deterministic assignment to ensure consistency across requests
+  const variant = assignVariantDeterministic(testConfig, fingerprint)
   const newAssignment: ABTestAssignment = {
     experimentId: testConfig.id,
     experimentName: testConfig.name,
@@ -52,28 +59,10 @@ export async function getABTestAssignment(
     assignedAt: Date.now(),
   }
 
-  // Set cookie synchronously to avoid re-render loops
-  const maxAge = 60 * 60 * 24 * 30 // 30 days
-  try {
-    cookieStore.set(cookieName, JSON.stringify(newAssignment), {
-      maxAge,
-      httpOnly: false, // Needs to be accessible by client for debugging
-      secure: IS_PROD,
-      sameSite: "lax",
-      path: "/",
-    })
-  } catch (error) {
-    // Cookie setting might fail during SSR, that's okay
-    if (process.env.NODE_ENV === "development") {
-      console.log(
-        `[AB Test] ${testKey}: Cookie setting failed during SSR`,
-        error
-      )
-    }
-  }
-
   if (process.env.NODE_ENV === "development") {
-    console.log(`[AB Test] ${testKey}: New assignment - ${variant.name}`)
+    console.log(
+      `[AB Test] ${testKey}: New deterministic assignment - ${variant.name} (fingerprint: ${fingerprint.slice(0, 20)}...)`
+    )
   }
 
   return newAssignment
@@ -102,7 +91,8 @@ export function getVariantIndex(variantName: string, testKey: string): number {
   return variantIndex >= 0 ? variantIndex : 0
 }
 
-function assignVariant(config: ABTestConfig) {
+// Deterministic assignment based on user fingerprint (cookieless)
+function assignVariantDeterministic(config: ABTestConfig, fingerprint: string) {
   const totalWeight = config.variants.reduce(
     (sum, variant) => sum + variant.weight,
     0
@@ -113,12 +103,21 @@ function assignVariant(config: ABTestConfig) {
     return config.variants[0]
   }
 
-  const random = Math.random() * totalWeight
-  let cumulativeWeight = 0
+  // Use a better hash function for more uniform distribution
+  // This is a simple implementation of djb2 hash algorithm
+  let hash = 5381
+  for (let i = 0; i < fingerprint.length; i++) {
+    hash = (hash << 5) + hash + fingerprint.charCodeAt(i)
+  }
 
+  // Ensure positive value and create uniform distribution
+  const normalized = Math.abs(hash) / 0x7fffffff // Max 32-bit signed int
+  const weighted = normalized * totalWeight
+
+  let cumulativeWeight = 0
   for (const variant of config.variants) {
     cumulativeWeight += variant.weight
-    if (random <= cumulativeWeight) {
+    if (weighted <= cumulativeWeight) {
       return variant
     }
   }

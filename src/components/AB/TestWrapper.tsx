@@ -20,33 +20,52 @@ const ABTestWrapper = async ({
   variants,
   fallback,
 }: ABTestWrapperProps) => {
-  // Get assignment from cookie or create new one (handled server-side)
-  const assignment = await getABTestAssignment(testKey)
+  try {
+    // Get deterministic assignment (cookieless, based on user fingerprint)
+    const assignment = await getABTestAssignment(testKey)
 
-  if (!assignment) {
-    // If no assignment, render fallback
+    if (!assignment) {
+      // If no assignment, render fallback
+      return <>{fallback || variants[0]}</>
+    }
+
+    // Find the variant index based on the assignment
+    const variantIndex = getVariantIndex(assignment.variant, testKey)
+    const selectedVariant = variants[variantIndex] || variants[0]
+
+    // Get available variants for debug panel
+    const configs = getABTestConfigs()
+    const availableVariants =
+      configs[testKey]?.variants.map((v) => v.name) || []
+
+    return (
+      <>
+        {/* Track assignment - existing Matomo opt-out logic will handle filtering */}
+        <ABTestTracker assignment={assignment} testKey={testKey} />
+
+        {/* Debug panel for development */}
+        {(!IS_PROD || IS_PREVIEW_DEPLOY) && (
+          <ABTestDebugPanel
+            testKey={testKey}
+            currentAssignment={assignment}
+            availableVariants={availableVariants}
+          />
+        )}
+
+        {/* Render selected variant */}
+        {selectedVariant}
+      </>
+    )
+  } catch (error) {
+    // If AB testing fails, render original variant
+    if (process.env.NODE_ENV === "development") {
+      console.warn(
+        `[AB Test] ${testKey}: Error occurred, falling back to original variant`,
+        error
+      )
+    }
     return <>{fallback || variants[0]}</>
   }
-
-  // Find the variant index based on the assignment
-  const variantIndex = getVariantIndex(assignment.variant, testKey)
-  const selectedVariant = variants[variantIndex] || variants[0]
-
-  return (
-    <>
-      <ABTestTracker assignment={assignment} testKey={testKey} />
-      {(!IS_PROD || IS_PREVIEW_DEPLOY) && (
-        <ABTestDebugPanel
-          testKey={testKey}
-          currentAssignment={assignment}
-          availableVariants={
-            getABTestConfigs()[testKey]?.variants.map((v) => v.name) || []
-          }
-        />
-      )}
-      {selectedVariant}
-    </>
-  )
 }
 
 export default ABTestWrapper
