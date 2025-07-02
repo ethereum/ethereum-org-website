@@ -2,6 +2,7 @@ import { ReactNode } from "react"
 
 import { IS_PREVIEW_DEPLOY, IS_PROD } from "@/lib/utils/env"
 
+import { ClientABTestWrapper } from "./ClientABTestWrapper"
 import { ABTestDebugPanel } from "./TestDebugPanel"
 import { ABTestTracker } from "./TestTracker"
 
@@ -31,7 +32,6 @@ const ABTestWrapper = async ({
 
     // Find the variant index based on the assignment
     const variantIndex = getVariantIndex(assignment.variant, testKey)
-    const selectedVariant = variants[variantIndex] || variants[0]
 
     // Get available variants for debug panel
     const configs = await getABTestConfigs()
@@ -54,8 +54,12 @@ const ABTestWrapper = async ({
           />
         )}
 
-        {/* Render selected variant */}
-        {selectedVariant}
+        {/* Render variant with client-side override support */}
+        <ClientABTestWrapper
+          testKey={testKey}
+          variants={variants}
+          serverVariantIndex={variantIndex}
+        />
       </>
     )
   } catch (error) {
