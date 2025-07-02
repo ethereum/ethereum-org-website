@@ -3,9 +3,9 @@ import { ChevronDown, ChevronUp } from "lucide-react"
 import { ChainName, Wallet } from "@/lib/types"
 
 import { ChainImages } from "@/components/ChainImages"
-import { SupportedLanguagesTooltip } from "@/components/FindWalletProductTable/SupportedLanguagesTooltip"
 import { DevicesIcon, LanguagesIcon } from "@/components/icons/wallets"
 import { Image } from "@/components/Image"
+import { SupportedLanguagesTooltip } from "@/components/SupportedLanguagesTooltip"
 import { Tag } from "@/components/ui/tag"
 
 import { formatStringList, getWalletPersonas } from "@/lib/utils/wallets"

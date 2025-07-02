@@ -38,6 +38,20 @@ export const isLang = (lang: string) => {
   return i18nConfig.map((language) => language.code).includes(lang)
 }
 
+/**
+ * Convert language codes to full language names using the i18n config
+ * @param languageCodes Array of language codes (e.g., ['en', 'es', 'fr'])
+ * @returns Array of full language names (e.g., ['English', 'Spanish', 'French'])
+ */
+export const formatLanguageNames = (languageCodes: string[]): string[] => {
+  return languageCodes
+    .map((code) => {
+      const langConfig = i18nConfig.find((lang) => lang.code === code)
+      return langConfig?.name || code
+    })
+    .filter(Boolean)
+}
+
 export const getRequiredNamespacesForPage = (
   path: string,
   layout?: string | undefined

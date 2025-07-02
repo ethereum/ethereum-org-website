@@ -14,8 +14,10 @@ import I18nProvider from "@/components/I18nProvider"
 import Discord from "@/components/icons/discord.svg"
 import Github from "@/components/icons/github.svg"
 import Twitter from "@/components/icons/twitter.svg"
+import { LanguagesIcon } from "@/components/icons/wallets"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
+import { SupportedLanguagesTooltip } from "@/components/SupportedLanguagesTooltip"
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -31,7 +33,11 @@ import { Tag } from "@/components/ui/tag"
 import { DAPP_TAG_VARIANTS, getDappSlug } from "@/lib/utils/dapps"
 import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { getMetadata } from "@/lib/utils/metadata"
-import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
+import {
+  formatLanguageNames,
+  getRequiredNamespacesForPage,
+} from "@/lib/utils/translations"
+import { formatStringList } from "@/lib/utils/wallets"
 
 import { BASE_TIME_UNIT } from "@/lib/constants"
 
@@ -130,15 +136,15 @@ const Page = async ({
               </BreadcrumbItem>
             </BreadcrumbList>
           </Breadcrumb>
-          <div className="flex flex-row items-center justify-between">
-            <div className="flex flex-row gap-10">
+          <div className="flex flex-col items-start justify-between sm:flex-row lg:items-center">
+            <div className="flex flex-col gap-6 lg:flex-row lg:gap-10">
               <div>
                 <Image
                   src={dapp.image}
                   alt={dapp.name}
                   width={124}
                   height={124}
-                  className="rounded-xl object-cover"
+                  className="h-16 w-16 rounded-xl object-cover xl:h-[124px] xl:w-[124px]"
                 />
               </div>
               <div className="flex flex-col gap-4">
@@ -148,56 +154,98 @@ const Page = async ({
                       {dapp.category}
                     </Tag>
                   </div>
-                  <h1 className="mt-0">{dapp.name}</h1>
-                  <div className="flex flex-row items-center gap-2">
-                    <ChainImages
-                      chains={dapp.networks as ChainName[]}
-                      className="mt-2"
-                    />
-                    <p className="text-sm text-body-medium">
-                      by {dapp.parentCompany}
-                    </p>
+                  <h1 className="mt-0 text-xl lg:text-5xl">{dapp.name}</h1>
+                  <div className="flex flex-col items-start gap-2 lg:flex-row lg:items-center">
+                    <div className="flex flex-row items-center gap-2">
+                      <ChainImages
+                        chains={dapp.networks as ChainName[]}
+                        className="mt-2"
+                      />
+                      <p className="text-sm text-body-medium">
+                        by {dapp.parentCompany}
+                      </p>
+                    </div>
+                    <div className="flex flex-row items-center">
+                      <LanguagesIcon className="size-6" />
+                      <p className="text-sm text-body-medium">
+                        {formatStringList(
+                          formatLanguageNames(dapp.languages),
+                          5
+                        )}{" "}
+                        <SupportedLanguagesTooltip
+                          supportedLanguages={formatLanguageNames(
+                            dapp.languages
+                          )}
+                        />
+                      </p>
+                    </div>
                   </div>
                 </div>
-                <div className="flex flex-row gap-4">
+                <div className="flex flex-col gap-4 lg:flex-row">
                   <ButtonLink href={dapp.url} target="_blank" hideArrow>
                     Visit {dapp.name}
                   </ButtonLink>
-                  {dapp.twitter && (
-                    <ButtonLink
-                      href={dapp.twitter}
-                      target="_blank"
-                      variant="outline"
-                      hideArrow
-                    >
-                      <Twitter />
-                    </ButtonLink>
-                  )}
-                  {dapp.discord && (
-                    <ButtonLink
-                      href={dapp.discord}
-                      target="_blank"
-                      variant="outline"
-                      hideArrow
-                    >
-                      <Discord />
-                    </ButtonLink>
-                  )}
-                  {dapp.github && (
-                    <ButtonLink
-                      href={dapp.github}
-                      target="_blank"
-                      variant="outline"
-                      hideArrow
-                    >
-                      <Github />
-                    </ButtonLink>
-                  )}
+                  <div className="flex flex-row gap-4">
+                    <div className="flex flex-row flex-wrap gap-4">
+                      {dapp.twitter && (
+                        <div>
+                          <ButtonLink
+                            href={dapp.twitter}
+                            target="_blank"
+                            variant="outline"
+                            hideArrow
+                          >
+                            <Twitter />
+                          </ButtonLink>
+                        </div>
+                      )}
+                      {dapp.discord && (
+                        <div>
+                          <ButtonLink
+                            href={dapp.discord}
+                            target="_blank"
+                            variant="outline"
+                            hideArrow
+                          >
+                            <Discord />
+                          </ButtonLink>
+                        </div>
+                      )}
+                      {dapp.github && (
+                        <div>
+                          <ButtonLink
+                            href={dapp.github}
+                            target="_blank"
+                            variant="outline"
+                            hideArrow
+                          >
+                            <Github />
+                          </ButtonLink>
+                        </div>
+                      )}
+                    </div>
+                    {nextDapp && (
+                      <LinkBox className="group flex flex-row items-center rounded-lg p-3 hover:bg-background-highlight sm:hidden">
+                        <div className="mr-2 flex flex-col text-right">
+                          <p className="text-sm text-gray-500">See next</p>
+                          <p className="text-primary group-hover:text-primary-hover">
+                            {nextDapp.name}
+                          </p>
+                          <LinkOverlay
+                            href={`/dapps/${getDappSlug(nextDapp.name)}`}
+                          />
+                        </div>
+                        <div className="flex gap-2">
+                          <ChevronNext className="h-8 w-8 text-gray-400 group-hover:text-primary" />
+                        </div>
+                      </LinkBox>
+                    )}
+                  </div>
                 </div>
               </div>
             </div>
             {nextDapp && (
-              <LinkBox className="group flex flex-row items-center rounded-lg p-3 hover:bg-background-highlight">
+              <LinkBox className="group hidden flex-row items-center rounded-lg p-3 hover:bg-background-highlight sm:flex">
                 <div className="mr-2 flex flex-col text-right">
                   <p className="text-sm text-gray-500">See next</p>
                   <p className="text-primary group-hover:text-primary-hover">
