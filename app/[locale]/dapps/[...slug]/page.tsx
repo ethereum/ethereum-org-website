@@ -6,7 +6,6 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import Breadcrumbs from "@/components/Breadcrumbs"
 import { ChevronNext } from "@/components/Chevron"
 import I18nProvider from "@/components/I18nProvider"
 import Discord from "@/components/icons/discord.svg"
@@ -14,6 +13,14 @@ import Github from "@/components/icons/github.svg"
 import Twitter from "@/components/icons/twitter.svg"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 import { Tag } from "@/components/ui/tag"
@@ -76,7 +83,19 @@ const Page = async ({
     <I18nProvider locale={locale} messages={messages}>
       <MainArticle className="flex flex-col gap-10 py-10">
         <div className="flex flex-col gap-10 px-4 md:px-10">
-          <Breadcrumbs slug={`/dapps/`} />
+          <Breadcrumb>
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbLink href="/dapps">ALL APPS</BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator className="me-[0.625rem] ms-[0.625rem] text-gray-400">
+                /
+              </BreadcrumbSeparator>
+              <BreadcrumbItem>
+                <BreadcrumbPage>{dapp.name}</BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
           <div className="flex flex-row items-center justify-between">
             <div className="flex flex-row gap-10">
               <div>

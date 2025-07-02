@@ -78,7 +78,6 @@ const DappCard = ({
     >
       <LinkOverlay
         href={`/dapps/${getDappSlug(dapp.name)}`}
-        target="_blank"
         className="no-underline"
       >
         {cardContent}

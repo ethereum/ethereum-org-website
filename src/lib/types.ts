@@ -1077,7 +1077,7 @@ export type Dapp = {
   image: string
   category: DappCategoryEnum
   subCategory: string[]
-  networks: Array<"Ethereum" | "Starknet">
+  networks: (ChainName | NonEVMChainName)[]
   screenshots: string[]
   bannerImage: string
   platforms: string[]

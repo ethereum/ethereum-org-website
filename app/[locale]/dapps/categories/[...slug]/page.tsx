@@ -8,9 +8,16 @@ import {
 
 import { DappCategoryEnum } from "@/lib/types"
 
-import Breadcrumbs from "@/components/Breadcrumbs"
 import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb"
 
 import { getHighlightedDapps } from "@/lib/utils/dapps"
 import { dataLoader } from "@/lib/utils/data/dataLoader"
@@ -66,8 +73,20 @@ const Page = async ({
     <I18nProvider locale={locale} messages={messages}>
       <div className="flex flex-col-reverse justify-between gap-4 px-4 py-10 md:px-8 lg:flex-row">
         <div className="flex flex-1 flex-col gap-4">
-          <Breadcrumbs slug={"/dapps"} />
-          <h1>{category.name} dapps</h1>
+          <Breadcrumb>
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbLink href="/dapps">ALL APPS</BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator className="me-[0.625rem] ms-[0.625rem] text-gray-400">
+                /
+              </BreadcrumbSeparator>
+              <BreadcrumbItem>
+                <BreadcrumbPage>{category.name.toUpperCase()}</BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
+          <h1>{category.name} apps</h1>
           <p>{category.description}</p>
         </div>
         <div className="flex flex-1 items-start justify-start lg:items-center lg:justify-center">
