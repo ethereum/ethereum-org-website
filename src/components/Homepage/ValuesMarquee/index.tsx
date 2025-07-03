@@ -1,6 +1,6 @@
 "use client"
 
-import { forwardRef, useCallback, useEffect, useRef, useState } from "react"
+import { forwardRef, useCallback, useRef, useState } from "react"
 import { Check, X } from "lucide-react"
 
 import type { ValuesPairing } from "@/lib/types"
@@ -192,20 +192,9 @@ const ValuesMarquee = ({
   const containerFirstRef = useRef<HTMLDivElement>(null)
   const containerSecondRef = useRef<HTMLDivElement>(null)
 
-  const [containerFirst, setContainerFirst] = useState<HTMLDivElement | null>(
-    null
-  )
-  const [containerSecond, setContainerSecond] = useState<HTMLDivElement | null>(
-    null
-  )
-
-  useEffect(() => {
-    if (containerFirstRef.current) {
-      setContainerFirst(containerFirstRef.current)
-    }
-    if (containerSecondRef.current) {
-      setContainerSecond(containerSecondRef.current)
-    }
+  // Optimize container access - use direct refs instead of state
+  const getContainer = useCallback((ref: React.RefObject<HTMLDivElement>) => {
+    return ref.current
   }, [])
 
   const { direction, isRtl, twFlipForRtl } = useRtlFlip()
@@ -220,7 +209,7 @@ const ValuesMarquee = ({
           <Item
             key={pairing.ethereum.label}
             label={pairing.ethereum.label}
-            container={containerFirst}
+            container={getContainer(containerFirstRef)}
             pairing={pairing}
             separatorClass="bg-accent-a"
             className="group/item bg-blue-100 text-blue-600 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-700"
@@ -245,7 +234,7 @@ const ValuesMarquee = ({
           <Item
             key={pairing.legacy.label}
             label={pairing.legacy.label}
-            container={containerSecond}
+            container={getContainer(containerSecondRef)}
             pairing={pairing}
             className="bg-gray-200/20 text-body-medium hover:bg-gray-600 hover:text-white dark:bg-gray-950 dark:text-body"
             separatorClass="bg-gray-200 dark:bg-gray-950"
