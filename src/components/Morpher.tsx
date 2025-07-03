@@ -2,6 +2,8 @@
 
 import { useEffect, useRef, useState } from "react"
 
+import { cn } from "@/lib/utils/cn"
+
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion"
 
 type MorpherProps = {
@@ -15,6 +17,7 @@ const Morpher = ({
 }: MorpherProps) => {
   const [currentText, setCurrentText] = useState(words[0])
   const [isAnimating, setIsAnimating] = useState(false)
+  const [isFading, setIsFading] = useState(false)
   const { prefersReducedMotion } = usePrefersReducedMotion()
 
   const morphTimeoutRef = useRef<NodeJS.Timeout | null>(null)
@@ -114,13 +117,18 @@ const Morpher = ({
   }
 
   useEffect(() => {
-    // If reduced motion is preferred, show static text cycling
+    // If reduced motion is preferred, show static text cycling with fade
     if (prefersReducedMotion) {
       morphIntervalRef.current = setInterval(() => {
-        counterRef.current = (counterRef.current + 1) % wordsRef.current.length
-        const nextWord = wordsRef.current[counterRef.current]
-        setCurrentText(nextWord)
-        currentTextRef.current = nextWord
+        setIsFading(true)
+        setTimeout(() => {
+          counterRef.current =
+            (counterRef.current + 1) % wordsRef.current.length
+          const nextWord = wordsRef.current[counterRef.current]
+          setCurrentText(nextWord)
+          currentTextRef.current = nextWord
+          setIsFading(false)
+        }, 150) // Half of the fade duration
       }, 3000)
     } else {
       // Defer animation start by 2 seconds to improve initial page load
@@ -159,7 +167,16 @@ const Morpher = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [prefersReducedMotion, charSet])
 
-  return currentText
+  return (
+    <span
+      className={cn(
+        "transition-opacity duration-300 ease-in-out",
+        prefersReducedMotion && isFading && "opacity-0"
+      )}
+    >
+      {currentText}
+    </span>
+  )
 }
 
 export default Morpher
