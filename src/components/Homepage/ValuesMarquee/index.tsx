@@ -1,7 +1,8 @@
 "use client"
 
-import { forwardRef, useCallback, useRef, useState } from "react"
+import { forwardRef, useCallback, useRef } from "react"
 import { Check, X } from "lucide-react"
+import { useIntersectionObserver } from "usehooks-ts"
 
 import type { ValuesPairing } from "@/lib/types"
 
@@ -14,7 +15,6 @@ import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import { Stack } from "../../ui/flex"
 
-import { useIntersectionObserver } from "@/hooks/useIntersectionObserver"
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion"
 import { useRtlFlip } from "@/hooks/useRtlFlip"
 
@@ -113,11 +113,8 @@ type RowProps = React.HTMLAttributes<HTMLDivElement> & {
 const Row = forwardRef<HTMLDivElement, RowProps>(
   ({ className, children, toRight }, ref) => {
     const { prefersReducedMotion } = usePrefersReducedMotion()
-    const [isVisible, setIsVisible] = useState(true)
-
-    const { ref: intersectionRef } = useIntersectionObserver({
+    const [intersectionRef, isVisible] = useIntersectionObserver({
       threshold: 0.1,
-      onChange: setIsVisible,
     })
 
     // Combine refs
