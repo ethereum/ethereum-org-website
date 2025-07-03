@@ -556,9 +556,9 @@ async function Page({ params }: { params: Promise<{ locale: Lang }> }) {
             </div>
 
             <h3 id="stablecoin-markets" className="mb-8 mt-12">
-              {t("page-stablecoins-top-coins")}
+              {t("page-stablecoins-top-coins")}&nbsp;
               <Tooltip content={tooltipContent}>
-                <Info className="ms-2 size-4" />
+                <Info className="size-4" />
               </Tooltip>
             </h3>
 

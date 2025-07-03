@@ -117,9 +117,9 @@ const EthPriceCard = ({
       {...props}
     >
       <h4 className="m-0 flex items-center text-sm font-medium uppercase leading-xs tracking-wider">
-        {t("eth-current-price")}
+        {t("eth-current-price")}&nbsp;
         <Tooltip content={tooltipContent}>
-          <Info className="ms-2 size-[0.875em] text-sm" />
+          <Info className="size-[0.875em] text-sm" />
         </Tooltip>
       </h4>
 
