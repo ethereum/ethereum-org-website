@@ -1,12 +1,12 @@
 import { Fragment } from "react"
-import dynamic from "next/dynamic"
+// import dynamic from "next/dynamic"
 import { notFound } from "next/navigation"
 import { getTranslations, setRequestLocale } from "next-intl/server"
 
 import type {
   AllHomepageActivityData,
   CommunityBlog,
-  ValuesPairing,
+  // ValuesPairing,
 } from "@/lib/types"
 import type { EventCardProps } from "@/lib/types"
 import type { Lang } from "@/lib/types"
@@ -19,7 +19,7 @@ import HomeHero from "@/components/Hero/HomeHero"
 import BentoCard from "@/components/Homepage/BentoCard"
 import CodeExamples from "@/components/Homepage/CodeExamples"
 import { getBentoBoxItems } from "@/components/Homepage/utils"
-import ValuesMarqueeFallback from "@/components/Homepage/ValuesMarquee/Fallback"
+// import ValuesMarqueeFallback from "@/components/Homepage/ValuesMarquee/Fallback"
 import BlockHeap from "@/components/icons/block-heap.svg"
 import BuildAppsIcon from "@/components/icons/build-apps.svg"
 import Calendar from "@/components/icons/calendar.svg"
@@ -56,7 +56,7 @@ import {
   SectionHeader,
   SectionTag,
 } from "@/components/ui/section"
-import { Skeleton, SkeletonCardGrid } from "@/components/ui/skeleton"
+// import { Skeleton, SkeletonCardGrid } from "@/components/ui/skeleton"
 import WindowBox from "@/components/WindowBox"
 
 import { cn } from "@/lib/utils/cn"
@@ -78,7 +78,7 @@ import {
   DEFAULT_LOCALE,
   GITHUB_REPO_URL,
   LOCALES_CODES,
-  RSS_DISPLAY_COUNT,
+  // RSS_DISPLAY_COUNT,
 } from "@/lib/constants"
 
 import TenYearHomeBanner from "./10years/_components/TenYearHomeBanner"
@@ -102,39 +102,39 @@ import LearnImage from "@/public/images/heroes/learn-hub-hero.png"
 import CommunityImage from "@/public/images/heroes/quizzes-hub-hero.png"
 import Hero from "@/public/images/home/hero.png"
 
-const BentoCardSwiper = dynamic(
-  () => import("@/components/Homepage/BentoCardSwiper"),
-  {
-    ssr: false,
-    loading: () => (
-      <div className="flex flex-col items-center gap-4">
-        <Skeleton className="mx-auto mt-4 h-[476px] w-[512px] max-w-128 rounded-2xl border-primary/10 bg-background bg-gradient-to-b from-primary/10 from-20% to-primary/5 to-60% p-4 opacity-50 shadow-card-hover lg:hidden dark:from-primary/20 dark:to-primary/10" />
-        <Skeleton className="h-6 w-[12rem] rounded-full" />
-      </div>
-    ),
-  }
-)
+// const BentoCardSwiper = dynamic(
+//   () => import("@/components/Homepage/BentoCardSwiper"),
+//   {
+//     ssr: false,
+//     loading: () => (
+//       <div className="flex flex-col items-center gap-4">
+//         <Skeleton className="mx-auto mt-4 h-[476px] w-[512px] max-w-128 rounded-2xl border-primary/10 bg-background bg-gradient-to-b from-primary/10 from-20% to-primary/5 to-60% p-4 opacity-50 shadow-card-hover lg:hidden dark:from-primary/20 dark:to-primary/10" />
+//         <Skeleton className="h-6 w-[12rem] rounded-full" />
+//       </div>
+//     ),
+//   }
+// )
 
-const RecentPostsSwiper = dynamic(
-  () => import("@/components/Homepage/RecentPostsSwiper"),
-  {
-    ssr: false,
-    loading: () => (
-      <div className="flex flex-col items-center gap-4">
-        <SkeletonCardGrid className="mt-4 w-full md:mt-16" />
-        <Skeleton className="h-4 w-20 rounded-full" />
-      </div>
-    ),
-  }
-)
+// const RecentPostsSwiper = dynamic(
+//   () => import("@/components/Homepage/RecentPostsSwiper"),
+//   {
+//     ssr: false,
+//     loading: () => (
+//       <div className="flex flex-col items-center gap-4">
+//         <SkeletonCardGrid className="mt-4 w-full md:mt-16" />
+//         <Skeleton className="h-4 w-20 rounded-full" />
+//       </div>
+//     ),
+//   }
+// )
 
-const ValuesMarquee = dynamic(
-  () => import("@/components/Homepage/ValuesMarquee"),
-  {
-    ssr: false,
-    loading: () => <ValuesMarqueeFallback />,
-  }
-)
+// const ValuesMarquee = dynamic(
+//   () => import("@/components/Homepage/ValuesMarquee"),
+//   {
+//     ssr: false,
+//     loading: () => <ValuesMarqueeFallback />,
+//   }
+// )
 
 const fetchXmlBlogFeeds = async () => {
   const xmlUrls = BLOG_FEEDS.filter((feed) => ![ATTESTANT_BLOG].includes(feed))
@@ -164,7 +164,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 
   setRequestLocale(locale)
   const t = await getTranslations({ locale, namespace: "page-index" })
-  const tCommon = await getTranslations({ locale, namespace: "common" })
+  // const tCommon = await getTranslations({ locale, namespace: "common" })
   const { direction: dir, isRtl } = getDirection(locale)
 
   const [
@@ -254,87 +254,87 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     },
   ]
 
-  const valuesPairings: ValuesPairing[] = [
-    {
-      legacy: {
-        label: t("page-index-values-ownership-legacy-label"),
-        content: [
-          t("page-index-values-ownership-legacy-content-0"),
-          t("page-index-values-ownership-legacy-content-1"),
-        ],
-      },
-      ethereum: {
-        label: t("page-index-values-ownership-ethereum-label"),
-        content: [t("page-index-values-ownership-ethereum-content-0")],
-      },
-    },
-    {
-      legacy: {
-        label: t("page-index-values-fairness-legacy-label"),
-        content: [t("page-index-values-fairness-legacy-content-0")],
-      },
-      ethereum: {
-        label: t("page-index-values-fairness-ethereum-label"),
-        content: [t("page-index-values-fairness-ethereum-content-0")],
-      },
-    },
-    {
-      legacy: {
-        label: t("page-index-values-privacy-legacy-label"),
-        content: [
-          t("page-index-values-privacy-legacy-content-0"),
-          t("page-index-values-privacy-legacy-content-1"),
-        ],
-      },
-      ethereum: {
-        label: t("page-index-values-privacy-ethereum-label"),
-        content: [t("page-index-values-privacy-ethereum-content-0")],
-      },
-    },
-    {
-      legacy: {
-        label: t("page-index-values-integration-legacy-label"),
-        content: [t("page-index-values-integration-legacy-content-0")],
-      },
-      ethereum: {
-        label: t("page-index-values-integration-ethereum-label"),
-        content: [t("page-index-values-integration-ethereum-content-0")],
-      },
-    },
-    {
-      legacy: {
-        label: t("page-index-values-decentralization-legacy-label"),
-        content: [t("page-index-values-decentralization-legacy-content-0")],
-      },
-      ethereum: {
-        label: t("page-index-values-decentralization-ethereum-label"),
-        content: [t("page-index-values-decentralization-ethereum-content-0")],
-      },
-    },
-    {
-      legacy: {
-        label: t("page-index-values-censorship-legacy-label"),
-        content: [t("page-index-values-censorship-legacy-content-0")],
-      },
-      ethereum: {
-        label: t("page-index-values-censorship-ethereum-label"),
-        content: [
-          t("page-index-values-censorship-ethereum-content-0"),
-          t("page-index-values-censorship-ethereum-content-1"),
-        ],
-      },
-    },
-    {
-      legacy: {
-        label: t("page-index-values-open-legacy-label"),
-        content: [t("page-index-values-open-legacy-content-0")],
-      },
-      ethereum: {
-        label: t("page-index-values-open-ethereum-label"),
-        content: [t("page-index-values-open-ethereum-content-0")],
-      },
-    },
-  ]
+  // const valuesPairings: ValuesPairing[] = [
+  //   {
+  //     legacy: {
+  //       label: t("page-index-values-ownership-legacy-label"),
+  //       content: [
+  //         t("page-index-values-ownership-legacy-content-0"),
+  //         t("page-index-values-ownership-legacy-content-1"),
+  //       ],
+  //     },
+  //     ethereum: {
+  //       label: t("page-index-values-ownership-ethereum-label"),
+  //       content: [t("page-index-values-ownership-ethereum-content-0")],
+  //     },
+  //   },
+  //   {
+  //     legacy: {
+  //       label: t("page-index-values-fairness-legacy-label"),
+  //       content: [t("page-index-values-fairness-legacy-content-0")],
+  //     },
+  //     ethereum: {
+  //       label: t("page-index-values-fairness-ethereum-label"),
+  //       content: [t("page-index-values-fairness-ethereum-content-0")],
+  //     },
+  //   },
+  //   {
+  //     legacy: {
+  //       label: t("page-index-values-privacy-legacy-label"),
+  //       content: [
+  //         t("page-index-values-privacy-legacy-content-0"),
+  //         t("page-index-values-privacy-legacy-content-1"),
+  //       ],
+  //     },
+  //     ethereum: {
+  //       label: t("page-index-values-privacy-ethereum-label"),
+  //       content: [t("page-index-values-privacy-ethereum-content-0")],
+  //     },
+  //   },
+  //   {
+  //     legacy: {
+  //       label: t("page-index-values-integration-legacy-label"),
+  //       content: [t("page-index-values-integration-legacy-content-0")],
+  //     },
+  //     ethereum: {
+  //       label: t("page-index-values-integration-ethereum-label"),
+  //       content: [t("page-index-values-integration-ethereum-content-0")],
+  //     },
+  //   },
+  //   {
+  //     legacy: {
+  //       label: t("page-index-values-decentralization-legacy-label"),
+  //       content: [t("page-index-values-decentralization-legacy-content-0")],
+  //     },
+  //     ethereum: {
+  //       label: t("page-index-values-decentralization-ethereum-label"),
+  //       content: [t("page-index-values-decentralization-ethereum-content-0")],
+  //     },
+  //   },
+  //   {
+  //     legacy: {
+  //       label: t("page-index-values-censorship-legacy-label"),
+  //       content: [t("page-index-values-censorship-legacy-content-0")],
+  //     },
+  //     ethereum: {
+  //       label: t("page-index-values-censorship-ethereum-label"),
+  //       content: [
+  //         t("page-index-values-censorship-ethereum-content-0"),
+  //         t("page-index-values-censorship-ethereum-content-1"),
+  //       ],
+  //     },
+  //   },
+  //   {
+  //     legacy: {
+  //       label: t("page-index-values-open-legacy-label"),
+  //       content: [t("page-index-values-open-legacy-content-0")],
+  //     },
+  //     ethereum: {
+  //       label: t("page-index-values-open-ethereum-label"),
+  //       content: [t("page-index-values-open-ethereum-content-0")],
+  //     },
+  //   },
+  // ]
 
   const codeExamples: CodeExample[] = [
     {
@@ -434,7 +434,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 
   // RSS feed items
   const polishedRssItems = polishRSSList([attestantPosts, ...xmlBlogs], locale)
-  const rssItems = polishedRssItems.slice(0, RSS_DISPLAY_COUNT)
+  // const rssItems = polishedRssItems.slice(0, RSS_DISPLAY_COUNT)
 
   const blogLinks = polishedRssItems.map(({ source, sourceUrl }) => ({
     name: source,
@@ -513,10 +513,10 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           </div>
 
           {/* Mobile - dynamic / lazy loaded */}
-          <BentoCardSwiper
+          {/* <BentoCardSwiper
             bentoItems={bentoItems}
             eventCategory={eventCategory}
-          />
+          /> */}
 
           {/* Desktop */}
           {bentoItems.map(({ className, ...item }) => (
@@ -649,14 +649,14 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           </SectionContent>
 
           {/* dynamic / lazy loaded */}
-          <ValuesMarquee
+          {/* <ValuesMarquee
             pairings={valuesPairings}
             eventCategory={eventCategory}
             categoryLabels={{
               ethereum: tCommon("ethereum"),
               legacy: t("page-index-values-legacy"),
             }}
-          />
+          /> */}
         </Section>
 
         {/* Builders - Blockchain's biggest builder community */}
@@ -840,11 +840,11 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           <p>{t("page-index-posts-subtitle")}</p>
 
           {/* dynamic / lazy loaded */}
-          <RecentPostsSwiper
+          {/* <RecentPostsSwiper
             className="mt-4 md:mt-16"
             rssItems={rssItems}
             eventCategory={eventCategory}
-          />
+          /> */}
 
           <div className="mt-8 flex flex-col gap-4 rounded-2xl border p-8">
             <p className="text-lg">{t("page-index-posts-action")}</p>
