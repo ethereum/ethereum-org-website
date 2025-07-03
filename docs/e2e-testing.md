@@ -15,6 +15,9 @@ pnpm install
 # Install Playwright browsers
 npx playwright install
 
+# Start development server (in a separate terminal)
+pnpm dev
+
 # Run all e2e tests
 pnpm test:e2e
 
