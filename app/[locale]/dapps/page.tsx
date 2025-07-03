@@ -22,6 +22,7 @@ import { BASE_TIME_UNIT } from "@/lib/constants"
 
 import DappCard from "./_components/DappCard"
 import DappsHighlight from "./_components/DappsHighlight"
+import SuggestAnApp from "./_components/SuggestAnApp"
 import TopDapps from "./_components/TopDapps"
 
 import { fetchDapps } from "@/lib/api/fetchDapps"
@@ -119,6 +120,10 @@ const Page = async ({ params }: { params: { locale: string } }) => {
 
         <div className="flex flex-col gap-4 px-4 md:px-8">
           <h2>Community picks</h2>
+        </div>
+
+        <div className="flex flex-col px-4 md:px-8">
+          <SuggestAnApp />
         </div>
       </MainArticle>
     </I18nProvider>

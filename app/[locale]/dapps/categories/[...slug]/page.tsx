@@ -31,6 +31,7 @@ import { BASE_TIME_UNIT } from "@/lib/constants"
 import CategoriesNav from "../../_components/CategoriesNav"
 import DappsHighlight from "../../_components/DappsHighlight"
 import DappsTable from "../../_components/DappsTable"
+import SuggestAnApp from "../../_components/SuggestAnApp"
 
 import { fetchDapps } from "@/lib/api/fetchDapps"
 
@@ -106,6 +107,10 @@ const Page = async ({
 
         <div className="flex flex-col px-4 md:px-8">
           <DappsTable dapps={dappsData[category.name]} />
+        </div>
+
+        <div className="flex flex-col px-4 md:px-8">
+          <SuggestAnApp />
         </div>
       </MainArticle>
     </I18nProvider>
