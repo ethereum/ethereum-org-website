@@ -316,6 +316,22 @@ const config = {
             strokeDashoffset: "50%",
           },
         },
+        "write-on-off": {
+          "0%": {
+            strokeDasharray: "100% 100%",
+            strokeDashoffset: "-100%",
+          },
+          "100%": {
+            strokeDasharray: "100% 100%",
+            strokeDashoffset: "100%",
+          },
+        },
+        "fade-in-pause-out": {
+          "0%": { opacity: "0" },
+          "10%": { opacity: "0.2" },
+          "50%": { opacity: "0.2" },
+          "75%": { opacity: "0" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -334,6 +350,8 @@ const config = {
         "pulse-light": "pulse-light 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
         "fade-in": "fade-in 150ms ease-in-out",
         "quick-trace": "quick-trace 2s ease-in-out infinite",
+        "write-on-off": "write-on-off 2s ease-in-out infinite",
+        "fade-in-pause-out": "fade-in-pause-out 4s linear infinite",
       },
       // Add custom border-radius tailwinds extension for "4xl" as "2rem"
       borderRadius: {
