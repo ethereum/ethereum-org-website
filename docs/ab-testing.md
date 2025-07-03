@@ -165,7 +165,7 @@ NEXT_PUBLIC_MATOMO_SITE_ID=4
 MATOMO_API_TOKEN=your_api_token_here
 
 # Preview mode flag
-IS_PREVIEW_DEPLOY=false
+NEXT_PUBLIC_IS_PREVIEW_DEPLOY=false
 ```
 
 ## Best Practices
