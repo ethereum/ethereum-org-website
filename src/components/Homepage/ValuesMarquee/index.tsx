@@ -187,7 +187,6 @@ const ValuesMarquee = ({
   const containerFirstRef = useRef<HTMLDivElement>(null)
   const containerSecondRef = useRef<HTMLDivElement>(null)
 
-  // Optimize container access - use direct refs instead of state
   const getContainer = useCallback((ref: React.RefObject<HTMLDivElement>) => {
     return ref.current
   }, [])
