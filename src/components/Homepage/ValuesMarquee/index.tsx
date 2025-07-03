@@ -135,17 +135,18 @@ const Row = forwardRef<HTMLDivElement, RowProps>(
       [ref, intersectionRef]
     )
 
-    const fadeEdges = {
-      mask: `linear-gradient(to right, transparent 1rem, white 15%, white 85%, transparent calc(100% - 1rem))`,
-    }
+    // Move mask to CSS for better performance
 
     return (
       // Note: dir="ltr" forced on parent to prevent "translateX" animation bugs
       // Locale "direction" passed to marquee Item for correction
       <div ref={combinedRef} className={cn("group", className)} dir="ltr">
         <div
-          className="flex max-w-full overflow-hidden motion-reduce:overflow-auto"
-          style={prefersReducedMotion ? {} : fadeEdges}
+          className={cn(
+            "flex max-w-full overflow-hidden motion-reduce:overflow-auto",
+            !prefersReducedMotion &&
+              "[mask-image:linear-gradient(to_right,transparent_1rem,white_15%,white_85%,transparent_calc(100%-1rem))]"
+          )}
         >
           {Array(prefersReducedMotion ? 1 : 2)
             .fill(0)
