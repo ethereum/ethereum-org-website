@@ -27,7 +27,7 @@
     "test:e2e": "playwright test",
     "test:e2e:ui": "playwright test --ui",
     "test:e2e:debug": "playwright test --debug",
-    "test:e2e:report": "playwright show-report"
+    "test:e2e:report": "playwright show-report tests/e2e/__report__"
   },
   "dependencies": {
     "@crowdin/crowdin-api-client": "^1.25.0",
