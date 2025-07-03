@@ -25,6 +25,7 @@ const WalletSkeleton = () => (
     ))}
   </>
 )
+
 const Loading = () => (
   <div className="flex flex-col gap-16 px-4 lg:gap-20">
     <div className="flex max-w-full gap-4 overflow-x-scroll lg:grid lg:grid-cols-5">
