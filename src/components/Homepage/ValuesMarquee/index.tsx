@@ -36,69 +36,74 @@ const Item = ({
   label,
   eventCategory,
   direction,
-}: ItemProps) => (
-  <>
-    <Tooltip
-      container={container}
-      onBeforeOpen={() => {
-        trackCustomEvent({
-          eventCategory,
-          eventAction: "internet_changing",
-          eventName: label,
-        })
-      }}
-      content={
-        <Stack>
-          <h3 className="text-md text-body-medium dark:text-gray-300">
-            {label}
-          </h3>
-          <div className="flex flex-col gap-4">
-            <div className="flex gap-2 text-body-medium">
-              <div className="p-1 text-lg">
-                <X />
+}: ItemProps) => {
+  // Debounce tracking events to prevent excessive calls
+  const debouncedTrack = useCallback(() => {
+    trackCustomEvent({
+      eventCategory,
+      eventAction: "internet_changing",
+      eventName: label,
+    })
+  }, [eventCategory, label])
+
+  return (
+    <>
+      <Tooltip
+        container={container}
+        onBeforeOpen={debouncedTrack}
+        content={
+          <Stack>
+            <h3 className="text-md text-body-medium dark:text-gray-300">
+              {label}
+            </h3>
+            <div className="flex flex-col gap-4">
+              <div className="flex gap-2 text-body-medium">
+                <div className="p-1 text-lg">
+                  <X />
+                </div>
+                <div>
+                  {pairing.legacy.content.map((line) => (
+                    <p key={line} className="text-sm">
+                      {line}
+                    </p>
+                  ))}
+                </div>
               </div>
-              <div>
-                {pairing.legacy.content.map((line) => (
-                  <p key={line} className="text-sm">
-                    {line}
-                  </p>
-                ))}
+              <div className="flex gap-2 text-body">
+                <div className="p-1 text-lg">
+                  <EthGlyphSolid />
+                </div>
+                <div className="flex flex-col gap-2">
+                  {pairing.ethereum.content.map((line) => (
+                    <p key={line} className="text-sm">
+                      {line}
+                    </p>
+                  ))}
+                </div>
               </div>
             </div>
-            <div className="flex gap-2 text-body">
-              <div className="p-1 text-lg">
-                <EthGlyphSolid />
-              </div>
-              <div className="flex flex-col gap-2">
-                {pairing.ethereum.content.map((line) => (
-                  <p key={line} className="text-sm">
-                    {line}
-                  </p>
-                ))}
-              </div>
-            </div>
-          </div>
-        </Stack>
-      }
-    >
+          </Stack>
+        }
+      >
+        <div
+          className={cn(
+            "flex flex-nowrap items-center text-nowrap rounded-full px-4 py-1 font-bold uppercase",
+            className
+          )}
+          dir={direction}
+        >
+          {children}
+        </div>
+      </Tooltip>
       <div
         className={cn(
-          "flex flex-nowrap items-center text-nowrap rounded-full px-4 py-1 font-bold uppercase",
-          className
+          "h-1.5 min-w-1.5 rounded-full motion-reduce:last:hidden",
+          separatorClass
         )}
-        dir={direction}
-      >
-        {children}
-      </div>
-    </Tooltip>
-    <div
-      className={cn(
-        "h-1.5 min-w-1.5 rounded-full motion-reduce:last:hidden",
-        separatorClass
-      )}
-    />
-  </>
-)
+      />
+    </>
+  )
+}
 Item.displayName = "MarqueeItem"
 
 type RowProps = React.HTMLAttributes<HTMLDivElement> & {
