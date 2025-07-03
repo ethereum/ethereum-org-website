@@ -2,26 +2,7 @@ import { NextResponse } from "next/server"
 
 import { IS_PREVIEW_DEPLOY } from "@/lib/utils/env"
 
-type MatomoExperiment = {
-  idexperiment: string
-  name: string
-  status: string
-  start_date?: string
-  end_date?: string
-  variations: Array<{
-    name: string
-    percentage: number
-  }>
-}
-
-type ABTestConfig = {
-  id: string
-  enabled: boolean
-  variants: Array<{
-    name: string
-    weight: number
-  }>
-}
+import type { ABTestConfig, MatomoExperiment } from "@/lib/ab-testing/types"
 
 const isExperimentActive = (experiment: MatomoExperiment): boolean => {
   const now = new Date()
@@ -119,6 +100,7 @@ export async function GET() {
         ]
 
         config[exp.name] = {
+          name: exp.name,
           id: exp.idexperiment,
           enabled: isExperimentActive(exp),
           variants,

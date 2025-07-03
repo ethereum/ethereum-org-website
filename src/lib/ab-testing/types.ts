@@ -1,4 +1,16 @@
-import { ReactNode } from "react"
+import type { ReactNode } from "react"
+
+export type MatomoExperiment = {
+  idexperiment: string
+  name: string
+  status: string
+  start_date?: string
+  end_date?: string
+  variations: {
+    name: string
+    percentage: number
+  }[]
+}
 
 export type ABTestConfig = {
   name: string

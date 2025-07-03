@@ -1,4 +1,4 @@
-import { ReactNode } from "react"
+import type { ReactNode } from "react"
 
 import { IS_PREVIEW_DEPLOY, IS_PROD } from "@/lib/utils/env"
 
@@ -7,7 +7,7 @@ import { ABTestDebugPanel } from "./TestDebugPanel"
 import { ABTestTracker } from "./TestTracker"
 
 import { getABTestAssignment } from "@/lib/ab-testing/server"
-import { ABTestVariants } from "@/lib/ab-testing/types"
+import type { ABTestVariants } from "@/lib/ab-testing/types"
 
 type ABTestWrapperProps = {
   testKey: string

@@ -1,10 +1,8 @@
 import { SITE_URL } from "@/lib/constants"
 
-import { ABTestAssignment, ABTestConfig } from "./types"
+import type { ABTestAssignment, ABTestConfig } from "./types"
 
-export const getABTestConfigs = async (): Promise<
-  Record<string, ABTestConfig>
-> => {
+const getABTestConfigs = async (): Promise<Record<string, ABTestConfig>> => {
   try {
     const response = await fetch(`${SITE_URL}/api/ab-config`, {
       next: { revalidate: 3600 },

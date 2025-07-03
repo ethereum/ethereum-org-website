@@ -4,7 +4,7 @@ import { IS_PREVIEW_DEPLOY, IS_PROD } from "@/lib/utils/env"
 
 import { useIsClient } from "@/hooks/useIsClient"
 import { useLocalStorage } from "@/hooks/useLocalStorage"
-import { ABTestVariants } from "@/lib/ab-testing/types"
+import type { ABTestVariants } from "@/lib/ab-testing/types"
 
 type ClientABTestWrapperProps = {
   testKey: string
