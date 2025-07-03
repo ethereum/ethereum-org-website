@@ -3,6 +3,7 @@
 import { forwardRef, useCallback, useRef } from "react"
 import { Check, X } from "lucide-react"
 import { useIntersectionObserver } from "usehooks-ts"
+import { useDebounceCallback } from "usehooks-ts"
 
 import type { ValuesPairing } from "@/lib/types"
 
@@ -37,14 +38,13 @@ const Item = ({
   eventCategory,
   direction,
 }: ItemProps) => {
-  // Debounce tracking events to prevent excessive calls
-  const debouncedTrack = useCallback(() => {
+  const debouncedTrack = useDebounceCallback(() => {
     trackCustomEvent({
       eventCategory,
       eventAction: "internet_changing",
       eventName: label,
     })
-  }, [eventCategory, label])
+  }, 500)
 
   return (
     <>
@@ -131,8 +131,6 @@ const Row = forwardRef<HTMLDivElement, RowProps>(
       },
       [ref, intersectionRef]
     )
-
-    // Move mask to CSS for better performance
 
     return (
       // Note: dir="ltr" forced on parent to prevent "translateX" animation bugs
