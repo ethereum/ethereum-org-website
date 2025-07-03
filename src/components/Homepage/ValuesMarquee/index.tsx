@@ -1,6 +1,6 @@
 "use client"
 
-import { forwardRef, useEffect, useRef, useState } from "react"
+import { forwardRef, useCallback, useEffect, useRef, useState } from "react"
 import { Check, X } from "lucide-react"
 
 import type { ValuesPairing } from "@/lib/types"
@@ -14,6 +14,7 @@ import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import { Stack } from "../../ui/flex"
 
+import { useIntersectionObserver } from "@/hooks/useIntersectionObserver"
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion"
 import { useRtlFlip } from "@/hooks/useRtlFlip"
 
@@ -107,6 +108,27 @@ type RowProps = React.HTMLAttributes<HTMLDivElement> & {
 const Row = forwardRef<HTMLDivElement, RowProps>(
   ({ className, children, toRight }, ref) => {
     const { prefersReducedMotion } = usePrefersReducedMotion()
+    const [isVisible, setIsVisible] = useState(true)
+
+    const { ref: intersectionRef } = useIntersectionObserver({
+      threshold: 0.1,
+      onChange: setIsVisible,
+    })
+
+    // Combine refs
+    const combinedRef = useCallback(
+      (node: HTMLDivElement | null) => {
+        if (ref) {
+          if (typeof ref === "function") {
+            ref(node)
+          } else {
+            ref.current = node
+          }
+        }
+        intersectionRef(node)
+      },
+      [ref, intersectionRef]
+    )
 
     const fadeEdges = {
       mask: `linear-gradient(to right, transparent 1rem, white 15%, white 85%, transparent calc(100% - 1rem))`,
@@ -115,12 +137,12 @@ const Row = forwardRef<HTMLDivElement, RowProps>(
     return (
       // Note: dir="ltr" forced on parent to prevent "translateX" animation bugs
       // Locale "direction" passed to marquee Item for correction
-      <div ref={ref} className={cn("group", className)} dir="ltr">
+      <div ref={combinedRef} className={cn("group", className)} dir="ltr">
         <div
           className="flex max-w-full overflow-hidden motion-reduce:overflow-auto"
           style={prefersReducedMotion ? {} : fadeEdges}
         >
-          {Array(prefersReducedMotion ? 1 : 3)
+          {Array(prefersReducedMotion ? 1 : 2)
             .fill(0)
             .map((_, idx) => (
               <div
@@ -130,7 +152,11 @@ const Row = forwardRef<HTMLDivElement, RowProps>(
                   isMobile()
                     ? "group-has-[button:hover]:animate-pause"
                     : "group-hover:animate-pause",
-                  toRight ? "animate-scroll-right" : "animate-scroll-left"
+                  !isVisible || prefersReducedMotion
+                    ? ""
+                    : toRight
+                      ? "animate-scroll-right"
+                      : "animate-scroll-left"
                 )}
               >
                 {children}
