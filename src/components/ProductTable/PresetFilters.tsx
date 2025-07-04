@@ -51,6 +51,7 @@ const PresetFilters = ({
             ? "grid grid-cols-2 gap-2 pb-5"
             : "grid auto-cols-[200px] grid-flow-col gap-4 overflow-x-auto px-4 lg:auto-cols-fr"
         }`}
+        data-testid="preset-filters-container"
       >
         {presets.map((preset, idx) => {
           const colorIdx = colors.text[idx] ? idx : idx % colors.text.length
