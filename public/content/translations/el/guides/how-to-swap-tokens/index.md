@@ -22,7 +22,7 @@ lang: el
 - [Uniswap](https://app.uniswap.org/#/swap)
 - [Sushiswap](https://www.sushi.com/swap)
 - [1Inch](https://app.1inch.io/#/1/unified/swap/ETH/DAI)
-- [Curve](https://curve.fi/#/ethereum/swap)
+- [Curve](https://www.curve.finance/dex/ethereum/swap/)
 
 Ενδιαφέρεστε; Μάθετε περισσότερα σχετικά με την [αποκεντρωμένη χρηματοδότηση (DeFi)](/defi/) και πώς λειτουργούν αυτά τα νέα είδη ανταλλαγών.
 
