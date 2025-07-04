@@ -12,7 +12,7 @@ Un échange de jetons implique l'échange de deux actifs différents qui existen
 
 **Prérequis :**
 
-- détenir un [portefeuille de cryptomonnaies](/glossary/#wallet), vous pouvez suivre ce tutoriel : [Comment : « Enregistrer » un compte Ethereum](/guides/how-to-create-an-ethereum-account/)
+- avoir un [portefeuille crypto](/glossary/#wallet) ; si ce n’est pas le cas, vous pouvez suivre ce guide pour découvrir [comment créer un compte Ethereum](/guides/how-to-create-an-ethereum-account/)
 - ajouter des fonds à votre portefeuille
 
 ## 1. Connectez votre portefeuille à l'échange décentralisé (DEX) de votre choix
@@ -22,7 +22,7 @@ Parmi les échanges décentralisés les plus connus :
 - [Uniswap](https://app.uniswap.org/#/swap)
 - [Sushiswap](https://www.sushi.com/swap)
 - [1Inch](https://app.1inch.io/#/1/unified/swap/ETH/DAI)
-- [Curve](https://curve.fi/#/ethereum/swap)
+- [Curve](https://www.curve.finance/dex/ethereum/swap/)
 
 Intéressant ? Apprenez-en plus sur ce qu'est la [finance décentralisée (DeFi)](/defi/) et comment ce nouveau type d'échange fonctionne.
 
