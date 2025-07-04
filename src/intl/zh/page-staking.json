@@ -10,7 +10,7 @@
   "comp-withdrawal-comparison-new-link": "访问质押启动板",
   "comp-withdrawal-credentials-placeholder": "验证者索引",
   "comp-withdrawal-credentials-error": "哎呀！请仔细检查验证者索引编号然后重试。",
-  "comp-withdrawal-credentials-upgraded-1": "验证者引索 {{validatorIndex}} 准备好开始接收奖励了！",
+  "comp-withdrawal-credentials-upgraded-1": "验证者引索 {validatorIndex} 准备好开始接收奖励了！",
   "comp-withdrawal-credentials-upgraded-2": "关联执行地址的提款凭证：",
   "comp-withdrawal-credentials-not-upgraded-1": "此验证者需要升级。",
   "comp-withdrawal-credentials-not-upgraded-1-testnet": "此 Holesky 测试网验证者需要升级。",

@@ -109,6 +109,7 @@ buttons:
 
 ## 正在寻求特定技术升级？ {#looking-for-specific-technical-upgrades}
 
+- [Pectra](/roadmap/pectra) - Prague/Electra 硬分叉带来帐户抽象的新途径，提升可扩展性以及更多功能。
 - [Danksharding](/roadmap/danksharding) - Danksharding 通过向以太坊区块添加二进制大对象数据，为用户大大降低二层网络卷叠成本。
 - [质押提款](/staking/withdrawals) - 上海/卡佩拉升级启用了以太坊质押提款，允许用户解锁质押的以太币。
 - [单时隙最终确定性](/roadmap/single-slot-finality) - 让区块可以在同一时隙内提出和最终确定，无需等待 15 分钟。 这提高了应用程序的便利性，大大增加了攻击难度。
