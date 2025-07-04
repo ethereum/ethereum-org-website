@@ -1,10 +1,10 @@
-import { getTranslations } from "next-intl/server"
+import { getLocale, getTranslations } from "next-intl/server"
 
 import { Image } from "@/components/Image"
-import ParallaxImage from "@/components/Image/ParallaxImage"
+import ParallaxImage from "@/components/Image/ParallaxImage/server"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 
-import Countdown from "./CountDown"
+import Countdown from "./CountDown/server"
 import { getTimeUnitTranslations } from "./utils"
 
 import TenYearBackgroundImage from "@/public/images/10-year-anniversary/10-year-background.png"
@@ -12,13 +12,14 @@ import TenYearGraphicImage from "@/public/images/10-year-anniversary/10-year-log
 import TenYearDesktopText from "@/public/images/10-year-anniversary/10yeartext.svg"
 import TenYearMobileText from "@/public/images/10-year-anniversary/10yeartext-mobile.svg"
 
-const TenYearHomeBanner = async ({ locale }: { locale: string }) => {
+const TenYearHomeBanner = async () => {
+  const locale = await getLocale()
   const t = await getTranslations({
     locale,
     namespace: "page-10-year-anniversary",
   })
 
-  const timeLeftLabels = await getTimeUnitTranslations(locale)
+  const timeLeftLabels = await getTimeUnitTranslations()
 
   return (
     <div className="relative rounded-2xl bg-cover bg-center text-center">
@@ -32,6 +33,7 @@ const TenYearHomeBanner = async ({ locale }: { locale: string }) => {
         />
       </div>
       <div className="relative rounded-2xl p-8">
+        {/* CLIENT SIDE, lazy loaded */}
         <ParallaxImage
           src={TenYearGraphicImage}
           alt=""
@@ -48,6 +50,7 @@ const TenYearHomeBanner = async ({ locale }: { locale: string }) => {
           </p>
           <p>{t("page-10-year-banner-tagline")}</p>
         </div>
+        {/* CLIENT SIDE, lazy loaded */}
         <Countdown
           className="mb-8 mt-4 bg-background"
           timeLeftLabels={timeLeftLabels}

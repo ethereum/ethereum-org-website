@@ -5,6 +5,8 @@ import { ImageProps as NextImageProps } from "next/image"
 
 import { Image } from "@/components/Image"
 
+import { cn } from "@/lib/utils/cn"
+
 import { useEventListener } from "@/hooks/useEventListener"
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion"
 
@@ -28,7 +30,14 @@ const ParallaxImage = ({ src, alt, className }: ParallaxImageProps) => {
   }
   const style = prefersReducedMotion ? {} : transform
 
-  return <Image src={src} alt={alt} className={className} style={style} />
+  return (
+    <Image
+      src={src}
+      alt={alt}
+      className={cn("animate-fade-in", className)}
+      style={style}
+    />
+  )
 }
 
 export default ParallaxImage
