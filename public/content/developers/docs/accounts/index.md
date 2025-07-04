@@ -4,7 +4,7 @@ description: An explanation of Ethereum accounts – their data structures and t
 lang: en
 ---
 
-An Ethereum account is an entity with an ether (ETH) balance that can send transactions on Ethereum. Accounts can be user-controlled or deployed as smart contracts.
+An Ethereum account is an entity with an ether (ETH) balance that can send messages on Ethereum. Accounts can be user-controlled or deployed as smart contracts.
 
 ## Prerequisites {#prerequisites}
 
@@ -34,7 +34,7 @@ Both account types have the ability to:
 **Contract**
 
 - Creating a contract has a cost because you're using network storage
-- Can only send transactions in response to receiving a transaction
+- Can only send messages in response to receiving a transaction
 - Transactions from an external account to a contract account can trigger code which can execute many different actions, such as transferring tokens or even creating a new contract
 - Contract accounts don't have private keys. Instead, they are controlled by the logic of the smart contract code
 
