@@ -1,14 +1,15 @@
 import { useCallback, useEffect, useRef, useState } from "react"
-import { X } from "lucide-react"
-
 import {
-  ArrowIcon,
-  AutoplayIcon,
-  CollapseIcon,
-  ExpandIcon,
-  PauseCircleIcon,
-  PlayCircleIcon,
-} from "@/components/icons/listen-to"
+  CirclePause,
+  CirclePlay,
+  Maximize2,
+  Minimize2,
+  SkipBack,
+  SkipForward,
+  X,
+} from "lucide-react"
+
+import AutoplayIcon from "@/components/icons/listen-to/autoplay.svg"
 import Tooltip from "@/components/Tooltip"
 
 import { cn } from "@/lib/utils/cn"
@@ -159,7 +160,7 @@ const PlayerWidget = ({
                 })
               }}
             >
-              <CollapseIcon />
+              <Minimize2 className="stroke-1" />
             </button>
           </Tooltip>
         </div>
@@ -228,17 +229,21 @@ const PlayerWidget = ({
               title="Previous"
               aria-label={"Previous"}
             >
-              <ArrowIcon />
+              <SkipBack className="stroke-[1.5]" />
             </button>
           </PlayerButton>
           <PlayerButton tooltipContent={isPlaying ? "Pause" : "Play"}>
             <button
-              className="cursor-pointer text-[32px] text-primary hover:text-primary-hover"
+              className="text-//[32px] cursor-pointer text-primary hover:text-primary-hover"
               onClick={handlePlayPause}
               title={isPlaying ? "Pause" : "Play"}
               aria-label={isPlaying ? "Pause" : "Play"}
             >
-              {isPlaying ? <PauseCircleIcon /> : <PlayCircleIcon />}
+              {isPlaying ? (
+                <CirclePause className="size-8 stroke-[1.5]" />
+              ) : (
+                <CirclePlay className="size-8 stroke-[1.5]" />
+              )}
             </button>
           </PlayerButton>
           <PlayerButton tooltipContent={"Next"}>
@@ -253,7 +258,7 @@ const PlayerWidget = ({
               title="Next"
               aria-label={"Next"}
             >
-              <ArrowIcon className="rotate-180" />
+              <SkipForward className="stroke-[1.5]" />
             </button>
           </PlayerButton>
           <PlayerButton
@@ -284,12 +289,16 @@ const PlayerWidget = ({
         <div className="flex flex-row items-center gap-2">
           <PlayerButton tooltipContent={isPlaying ? "Pause" : "Play"}>
             <button
-              className="cursor-pointer text-[32px] text-primary hover:text-primary-hover"
+              className="cursor-pointer text-primary hover:text-primary-hover"
               onClick={handlePlayPause}
               title={isPlaying ? "Pause" : "Play"}
               aria-label={isPlaying ? "Pause" : "Play"}
             >
-              {isPlaying ? <PauseCircleIcon /> : <PlayCircleIcon />}
+              {isPlaying ? (
+                <CirclePause className="size-8" />
+              ) : (
+                <CirclePlay className="size-8" />
+              )}
             </button>
           </PlayerButton>
           <div className="text-sm text-body-medium">
@@ -311,7 +320,7 @@ const PlayerWidget = ({
                 })
               }}
             >
-              <ExpandIcon />
+              <Maximize2 className="stroke-1" />
             </button>
           </PlayerButton>
           <PlayerButton tooltipContent={"Close"}>
@@ -324,7 +333,7 @@ const PlayerWidget = ({
                 handleCloseWidget()
               }}
             >
-              <X />
+              <X className="stroke-[1.5]" />
             </button>
           </PlayerButton>
         </div>

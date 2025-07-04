@@ -38,7 +38,7 @@ const NetworkSubComponent = ({ network }: NetworkSubComponentProps) => {
             <div className="flex-1">
               <div>
                 <p className="text-xs font-bold text-body-medium">
-                  {t("page-layer-2-networks-age")}{" "}
+                  {t("page-layer-2-networks-age")}&nbsp;
                   <Tooltip
                     content={
                       <div className="flex flex-col gap-2">
@@ -84,7 +84,7 @@ const NetworkSubComponent = ({ network }: NetworkSubComponentProps) => {
             <div className="flex-1">
               <div>
                 <p className="text-xs font-bold text-body-medium">
-                  {t("page-layer-2-networks-wallet-support")}{" "}
+                  {t("page-layer-2-networks-wallet-support")}&nbsp;
                   <Tooltip
                     content={
                       <div className="flex flex-col gap-2">
@@ -119,7 +119,7 @@ const NetworkSubComponent = ({ network }: NetworkSubComponentProps) => {
             <div className="flex-1">
               <div>
                 <p className="text-xs font-bold text-body-medium">
-                  {t("page-layer-2-networks-active-address")}{" "}
+                  {t("page-layer-2-networks-active-address")}&nbsp;
                   <Tooltip
                     content={
                       <div className="flex flex-col gap-2">
@@ -157,7 +157,7 @@ const NetworkSubComponent = ({ network }: NetworkSubComponentProps) => {
             <div className="flex-1">
               <div>
                 <p className="text-xs font-bold text-body-medium">
-                  {t("page-layer-2-networks-fee-token")}{" "}
+                  {t("page-layer-2-networks-fee-token")}&nbsp;
                   <Tooltip
                     content={
                       <div className="flex flex-col gap-2">
@@ -182,7 +182,7 @@ const NetworkSubComponent = ({ network }: NetworkSubComponentProps) => {
         <div className="flex-1 gap-2">
           <div>
             <p className="text-xs font-bold text-body-medium">
-              {t("page-layer-2-networks-network-usage")}{" "}
+              {t("page-layer-2-networks-network-usage")}&nbsp;
               <Tooltip
                 content={
                   <div className="flex flex-col gap-2">

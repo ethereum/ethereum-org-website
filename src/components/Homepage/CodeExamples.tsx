@@ -1,7 +1,7 @@
 "use client"
 
 import { Suspense, useState } from "react"
-import { Check, Copy } from "lucide-react"
+import { Clipboard, ClipboardCheck } from "lucide-react"
 import { useLocale } from "next-intl"
 
 import type { CodeExample } from "@/lib/interfaces"
@@ -93,9 +93,11 @@ const CodeExamples = ({ title, codeExamples }: CodeExamplesProps) => {
                     </Codeblock>
                     <CopyToClipboard
                       text={code}
-                      className="absolute end-4 top-4"
+                      className="absolute end-2 top-2 rounded p-2 hover:bg-primary/10 hover:text-primary"
                     >
-                      {(hasCopied) => (hasCopied ? <Check /> : <Copy />)}
+                      {(hasCopied) =>
+                        hasCopied ? <ClipboardCheck /> : <Clipboard />
+                      }
                     </CopyToClipboard>
                   </div>
                 </Suspense>

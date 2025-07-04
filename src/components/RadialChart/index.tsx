@@ -107,23 +107,26 @@ const RadialChart = ({
         <div className="text-sm">
           {label}
           {sourceName && sourceUrl && (
-            <Tooltip
-              content={
-                <>
-                  <p>
-                    {t("data-provided-by")}{" "}
-                    <Link href={sourceUrl}>{sourceName}</Link>
-                  </p>
-                  {lastUpdated && (
-                    <p className="mt-2">
-                      {t("last-updated")}: {lastUpdatedDisplay}
+            <>
+              &nbsp;
+              <Tooltip
+                content={
+                  <>
+                    <p>
+                      {t("data-provided-by")}{" "}
+                      <Link href={sourceUrl}>{sourceName}</Link>
                     </p>
-                  )}
-                </>
-              }
-            >
-              <Info className="mb-0.5 ms-2 inline size-[0.875em] align-text-bottom" />
-            </Tooltip>
+                    {lastUpdated && (
+                      <p className="mt-2">
+                        {t("last-updated")}: {lastUpdatedDisplay}
+                      </p>
+                    )}
+                  </>
+                }
+              >
+                <Info className="mb-0.5 inline size-[0.875em] align-text-bottom" />
+              </Tooltip>
+            </>
           )}
         </div>
       </div>

@@ -1,4 +1,4 @@
-import { Copy } from "lucide-react"
+import { Clipboard } from "lucide-react"
 
 import { Flex, type FlexProps } from "@/components/ui/flex"
 
@@ -17,7 +17,7 @@ export const AddressPill = ({ ...btnProps }: AddressPillProps) => (
       {...btnProps}
     >
       <p>{FAKE_DEMO_ADDRESS}</p>
-      <Copy className="size-4 text-lg leading-none" />
+      <Clipboard className="size-4 text-lg leading-none" />
     </Flex>
   </NotificationPopover>
 )

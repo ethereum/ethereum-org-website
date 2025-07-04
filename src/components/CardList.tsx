@@ -1,5 +1,6 @@
 "use client"
 
+import { ExternalLink } from "lucide-react"
 import TwImage, { type ImageProps } from "next/image"
 import type { ReactNode } from "react"
 
@@ -72,7 +73,9 @@ const Card = ({
           <div className="mb-0 text-sm opacity-60">{caption}</div>
         </div>
       )}
-      {isExternal && <span className={twFlipForRtl}>↗</span>}
+      {isExternal && (
+        <ExternalLink className={cn("size-[1em]", twFlipForRtl)} />
+      )}
     </div>
   )
 }
