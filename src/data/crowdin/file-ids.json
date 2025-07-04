@@ -20,6 +20,10 @@
     "path": "/guides/how-to-create-an-ethereum-account/index.md"
   },
   {
+    "id": 12604,
+    "path": "/real-world-assets/index.md"
+  },
+  {
     "id": 2716,
     "path": "/developers/docs/dapps/index.md"
   },
@@ -682,6 +686,18 @@
   {
     "id": 12032,
     "path": "/roadmap/dencun/index.md"
+  },
+  {
+    "id": 12608,
+    "path": "/roadmap/pectra/index.md"
+  },
+  {
+    "id": 12614,
+    "path": "/roadmap/pectra/maxeb/index.md"
+  },
+  {
+    "id": 12618,
+    "path": "/roadmap/pectra/7702/index.md"
   },
   {
     "id": 6398,
