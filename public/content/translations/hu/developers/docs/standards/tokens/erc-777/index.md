@@ -1,6 +1,6 @@
 ---
 title: ERC-777-tokenszabvány
-description: null
+description:
 lang: hu
 ---
 

@@ -92,6 +92,6 @@ _Más skálázási megoldásokat nem tekintünk L2-nek, melyek nem használják 
 
 Ha egy L2-t szeretne hozzáadni az ethereum.org webhelyhez, hozzon létre egy problémát a GitHubon.
 
-<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml">
+<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml">
   Issue létrehozása
 </ButtonLink>

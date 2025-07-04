@@ -180,7 +180,7 @@ A közelség törvénye azt mondja, hogy a közeli dolgok összefüggőbbnek tű
 
 Végülis mindkét megoldásnak vannak előnyei és hátrányai, de a trend szerint a token a jobb oldalra kerül.
 
-## Gombműködés {#button-behavior}
+# Gombműködés {#button-behavior}
 
 Ne legyen külön gomb a jóváhagyásra. Ne is kelljen ehhez külön kattintani. A felhasználó átváltást akar, ezért legyen a gombon átváltás felirat és az első lépés maga a jóváhagyás. Az ablak mutathatja a haladást lépésekkel, vagy egyszerűen egy „2-ből 1 tranzakció jóváhagyása” figyelmeztetéssel.
 
@@ -188,7 +188,7 @@ Ne legyen külön gomb a jóváhagyásra. Ne is kelljen ehhez külön kattintani
 
 ![UI, ahol egy jóváhagyás gomb van](./15.png)
 
-### Gomb mint helyi segítség {#button-as-contextual-help}
+## Gomb mint helyi segítség {#button-as-contextual-help}
 
 A gomb figyelmeztetésként is működhet!
 
@@ -206,7 +206,7 @@ A gombot **hozzá is lehet kapcsolni az elvégzendő cselekvéshez**. Például,
 
 ![Hibaüzenet a fő CTA-n](./17.png)
 
-### Építse meg sajátját ezzel a figma fájllal {#build-your-own-with-this-figma-file}
+## Építse meg sajátját ezzel a figma fájllal {#build-your-own-with-this-figma-file}
 
 Számos protokoll kemény munkájának köszönhető, hogy a DEX dizájnja sokat fejlődött. Tudjuk, hogy a felhasználónak milyen információra van szüksége, hogyan mutassuk azt meg, és hogyan legyen könnyed a használat menete.
 Remélhetőleg ez a cikk segített áttekinteni az UX elveket.
