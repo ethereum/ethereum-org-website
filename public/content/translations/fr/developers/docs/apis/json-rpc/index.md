@@ -1602,7 +1602,7 @@ Retourne un tableau de tous les logs correspondant à un objet filtre donné.
 - `toBlock`: `QUANTITY|TAG` - (optionnel, par défaut : `« latest »`) nombre entier de blocs, ou `« latest »` pour le dernier bloc proposé, `« safe »` pour le dernier bloc sécurisé, `« finalized »` pour le dernier bloc finalisé, ou `« pending »`, `« earliest »` pour les transactions ne faisant pas encore partie d'un bloc.
 - `address`: `DATA|Array`, 20 octets - (facultatif) adresse contractuelle ou une liste d'adresses d'où les logs doivent provenir.
 - `topics`: `Array of DATA`, - (facultatif) tableau de 32 bytes `DATA` topics. Les sujets dépendent de l'ordre. Chaque sujet peut également être un tableau de DATA avec des options "ou".
-- `blockhash`: `DATA`, 32 octets - (facultatif, **futur**) À l'ajout de EIP-234, `blockHash` sera une nouvelle option de filtre qui restreint les logs retournés au bloc unique avec le hachage de 32 octets `blockHash`. Utiliser `blockHash` est équivalent à `fromBlock` = `toBlock` = le numéro de bloc avec le hachage `blockHash`. Si `blockHash` est présent dans les critères de filtre, alors ni `fromBlock` ni `toBlock` ne sont autorisés.
+- `blockHash`: `DATA`, 32 octets - (facultatif, **futur**) À l'ajout de EIP-234, `blockHash` sera une nouvelle option de filtre qui restreint les logs retournés au bloc unique avec le hachage de 32 octets `blockHash`. Utiliser `blockHash` est équivalent à `fromBlock` = `toBlock` = le numéro de bloc avec le hachage `blockHash`. Si `blockHash` est présent dans les critères de filtre, alors ni `fromBlock` ni `toBlock` ne sont autorisés.
 
 ```js
 params: [

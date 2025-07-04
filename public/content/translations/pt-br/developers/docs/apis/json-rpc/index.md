@@ -1602,7 +1602,7 @@ Retorna uma matriz de todos os logs que correspondem a um determinado objeto de 
 - `toBlock`: `QUANTITY|TAG` - (opcional, padrão: `"latest"`) Número de bloco inteiro, ou `"latest"` para o último bloco proposto, `"safe"` para o último bloco seguro, `"finalized"` para o último bloco finalizado, ou `"pending"`, `"earliest"` para transações que ainda não estão em um bloco.
 - `endereço`: `DATA|Array`, 20 Bytes - (opcional) Endereço do contrato ou uma lista de endereços dos quais os logs devem se originar.
 - `topics`: `Array of DATA`, - (opcional) Array de tópicos de `DATA` de 32 Bytes. Os tópicos são dependentes da ordem. Cada tópico também pode ser uma matriz de DADOS com opções "ou".
-- `blockhash`: `DATA`, 32 Bytes — (opcional, **futuro**) Com a adição do EIP-234, `blockHash` será uma nova opção de filtro, que restringe os logs retornados ao bloco único com o hash de 32 bytes `blockHash`. Usar `blockHash` é equivalente a `fromBlock` = `toBlock` = o número do bloco com hash `blockHash`. Se `blockHash` estiver presente nos critérios de filtro, nem `fromBlock`, nem `toBlock` serão permitidos.
+- `blockHash`: `DATA`, 32 Bytes — (opcional, **futuro**) Com a adição do EIP-234, `blockHash` será uma nova opção de filtro, que restringe os logs retornados ao bloco único com o hash de 32 bytes `blockHash`. Usar `blockHash` é equivalente a `fromBlock` = `toBlock` = o número do bloco com hash `blockHash`. Se `blockHash` estiver presente nos critérios de filtro, nem `fromBlock`, nem `toBlock` serão permitidos.
 
 ```js
 params: [
