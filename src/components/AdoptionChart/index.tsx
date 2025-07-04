@@ -1,10 +1,12 @@
+"use client"
+
 import { useTheme } from "next-themes"
 
 import type { ChildOnlyProp } from "@/lib/types"
 
-import { cn } from "@/lib/utils/cn"
+import { Flex } from "@/components/ui/flex"
 
-import { Flex } from "./ui/flex"
+import { cn } from "@/lib/utils/cn"
 
 import useTranslation from "@/hooks/useTranslation"
 
