@@ -6,6 +6,8 @@ import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import AiAgentProductLists from "@/components/Content/ai-agents/AiAgentProductLists"
 import BuildYourOwnAIAgent from "@/components/Content/ai-agents/BuildYourOwnAIAgent"
 import PredictionMarketLists from "@/components/Content/prediction-markets/PredictionMarketLists"
+import {Eigen_Layer,Restaking_List} from "@/components/Content/restaking/Restaking_List"
+import TabbedSection from "@/components/Content/restaking/Restaking_Tab"
 import Emoji from "@/components/Emoji"
 import { ContentHero } from "@/components/Hero"
 import InlineLink from "@/components/ui/Link"
@@ -30,7 +32,13 @@ export const useCasesComponents = {
   CardGrid,
   AiAgentProductLists,
   BuildYourOwnAIAgent,
+
+  Restaking_List,
+  TabbedSection,
+  Eigen_Layer,
+
   PredictionMarketLists,
+
 }
 
 type UseCasesLayoutProps = ChildOnlyProp &
@@ -89,6 +97,15 @@ export const UseCasesLayout = ({
           eventAction: "click",
           eventName: "dao",
         },
+      },
+      {
+        text: t("template-usecase:template-usecase-dropdown-restaking"), 
+        href: "/restaking/",
+        matomo: {
+          eventCategory: "use cases menu",
+          eventAction: "click",
+          eventName: "restaking",
+        }
       },
       {
         text: t("template-usecase:template-usecase-dropdown-payments"),
