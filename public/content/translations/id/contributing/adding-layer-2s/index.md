@@ -92,6 +92,6 @@ _Kami tidak menganggap solusi pengukuran lain yang tidak menggunakan ethereum un
 
 Jika Anda ingin menambahkan lapisan ke-2 ke ethereum.org, buatlah sebuah isu di GitHub.
 
-<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml">
+<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml">
   Buat isu
 </ButtonLink>
