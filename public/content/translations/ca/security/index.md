@@ -276,7 +276,7 @@ Les estafes d'enviament involucren que un projecte d'estafa enviï un actiu (NFT
 ### Criptoseguretat {#reading-crypto-security}
 
 - [Protegint-vos a vosaltres i als vostres fons](https://support.mycrypto.com/staying-safe/protecting-yourself-and-your-funds) - _MyCrypto_
-- [Quatre formes d'anar amb compte en el món de les criptomonedes](https://www.coindesk.com/tech/2021/04/20/4-ways-to-stay-safe-in-crypto/) - _CoinDesk_
+- [Quatre formes d'anar amb compte en el món de les criptomonedes](https://www.coindesk.com/learn/4-ways-to-stay-safe-in-crypto/) - _CoinDesk_
 - [Guia de seguretat per a principiants i també per a gent intel·ligent](https://medium.com/mycrypto/mycryptos-security-guide-for-dummies-and-smart-people-too-ab178299c82e) - _MyCrypto_
 - [Criptoseguretat: contrasenyes i autenticacions](https://www.youtube.com/watch?v=m8jlnZuV1i4) - _Andreas M. Antonopoulos_
 

@@ -42,7 +42,7 @@ Setelah Anda membuat akun Alchemy, Anda dapat membuat kunci API dengan membuat a
 
 Kita memerlukan akun Ethereum untuk mengirim dan menerima transaksi. Untuk tutorial ini, kita akan menggunakan MetaMask, dompet virtual dalam peramban yang digunakan untuk mengelola alamat akun Ethereum Anda. Selengkapnya tentang [transaksi](/developers/docs/transactions/).
 
-Anda dapat mengunduh dan membuat akun MetaMask secara gratis [di sini](https://metamask.io/download.html). Saat Anda membuat akun, atau jika Anda sudah memiliki akun, pastikan untuk beralih ke "Jaringan Pengujian Ropsten" di kanan atas (sehingga kita tidak berurusan dengan uang asli).
+Anda dapat mengunduh dan membuat akun MetaMask secara gratis [di sini](https://metamask.io/download). Saat Anda membuat akun, atau jika Anda sudah memiliki akun, pastikan untuk beralih ke "Jaringan Pengujian Ropsten" di kanan atas (sehingga kita tidak berurusan dengan uang asli).
 
 ![contoh metamask ropsten](./metamask-ropsten-example.png)
 

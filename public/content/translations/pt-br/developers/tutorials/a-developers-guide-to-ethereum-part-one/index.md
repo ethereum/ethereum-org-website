@@ -140,7 +140,7 @@ Um padrão similar é usado ao lidar com transações em <b>ether</b>. No entant
 
 </FeaturedText>
 
-Tente converter alguns valores de e para wei. Note que [existem nomes para muitas das denominações](https://web3py.readthedocs.io/en/stable/examples.html#converting-currency-denominations) entre ether e wei. Um dos mais conhecidos entre eles é o **gwei**, já que é frequentemente como as taxas de transação são representadas.
+Tente converter alguns valores de e para wei. Note que [existem nomes para muitas das denominações](https://web3py.readthedocs.io/en/stable/troubleshooting.html#how-do-i-convert-currency-denominations) entre ether e wei. Um dos mais conhecidos entre eles é o **gwei**, já que é frequentemente como as taxas de transação são representadas.
 
 ```python
 In [2]: Web3.to_wei(1, 'ether')

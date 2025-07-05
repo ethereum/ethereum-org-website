@@ -20,7 +20,6 @@ lang: uk
 
 - [Ethallowance](https://ethallowance.com/) (Ethereum)
 - [Etherscan](https://etherscan.io/tokenapprovalchecker) (Ethereum)
-- [Cointool](https://cointool.app/approve/eth) (різні мережі)
 - [Revoke](https://revoke.cash/) (різні мережі)
 - [Unrekt](https://app.unrekt.net/) (різні мережі)
 - [EverRevoke](https://everrise.com/everrevoke/) (різні мережі)

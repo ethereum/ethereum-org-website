@@ -116,7 +116,7 @@ lang: ja
 ### データの公証化 {#notarization-of-data}
 
 - [ANSA](https://www.ansa.it/english/news/science_tecnology/2020/04/06/ansa-using-blockchain-to-help-readers_af820b4f-0947-439b-843e-52e114f53318.html) - _イタリアの通信社が、フェイクニュースと戦い、ニュースをメインネットに記録することで、読者は出所を確認することが可能_
-- [Breitling](https://www.coindesk.com/breitling-arianee-all-new-watches-ethereum) - _イーサリアム上で時計の出所と修理履歴を記録_
+- [Breitling](https://www.coindesk.com/business/2020/10/15/breitling-goes-live-with-ethereum-based-system-to-put-all-new-watches-on-the-blockchain) - _イーサリアム上で時計の出所と修理履歴を記録_
 - [BRØK](https://www.xn--brk-1na.no/) - _ノルウェー政府が提供する、非上場企業の公開キャップテーブルプラットフォーム_
 - [Certifaction](https://certifaction.com/) - _プライバシーバイデザインによる法的に有効な電子署名_
 - [EthSign](https://ethsign.xyz/) - _イーサリアムブロックチェーン上で署名された電子ドキュメントを記録_

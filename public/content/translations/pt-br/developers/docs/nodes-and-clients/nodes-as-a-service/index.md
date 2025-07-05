@@ -264,7 +264,7 @@ Segue uma lista de alguns dos fornecedores de nós para Ethereum mais populares.
     - Suporte técnico direto
 
 - [**NodeReal MegaNode**](https://nodereal.io/)
-  - [Documentação](https://docs.nodereal.io/nodereal/meganode/introduction)
+  - [Documentação](https://docs.nodereal.io/docs/introduction)
   - Recursos
     - Serviços confiáveis, rápidos e dimensionáveis da API RPC
     - API aprimorada para desenvolvedores Web3

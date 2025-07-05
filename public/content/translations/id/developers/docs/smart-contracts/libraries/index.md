@@ -104,7 +104,7 @@ Terakhir, saat memutuskan apakah akan memasukkan suatu pustaka, pertimbangkan pe
 
 **SDK Solidity thirdweb -** **_Menyediakan alat yang dibutuhkan untuk membuat kontrak pintar khusus dengan efisien_**
 
-- [Dokumentasi](https://portal.thirdweb.com/solidity/)
+- [Dokumentasi](https://portal.thirdweb.com/contracts/build/overview)
 - [GitHub](https://github.com/thirdweb-dev/contracts)
 
 ## Tutorial terkait {#related-tutorials}

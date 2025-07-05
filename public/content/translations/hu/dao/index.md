@@ -91,7 +91,7 @@ Míg a DAO-k több ezer szavazati joggal rendelkező taggal rendelkezhetnek, az 
 
 ### Egy híres példa {#law-example}
 
-[CityDAO](https://citydao.io) – A CityDAO 40 hektár földet vett a Yellowstone Nemzeti Park közelében Wyoming DAO-törvényével élve.
+[CityDAO](https://citizen.citydao.io/) – A CityDAO 40 hektár földet vett a Yellowstone Nemzeti Park közelében Wyoming DAO-törvényével élve.
 
 ## DAO-tagság {#dao-membership}
 

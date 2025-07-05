@@ -116,7 +116,7 @@ Aqui estão alguns dos aplicativos empresariais criados com base na rede princip
 ### Autenticação de dados {#notarization-of-data}
 
 - [ANSA](https://www.ansa.it/english/news/science_tecnology/2020/04/06/ansa-using-blockchain-to-help-readers_af820b4f-0947-439b-843e-52e114f53318.html) - _Agência de notícias italiana combate fake news e permite que os leitores verifiquem a origem das notícias registrando-as na rede principal_
-- [Breitling](https://www.coindesk.com/breitling-arianee-all-new-watches-ethereum) - _Registra a origem e o histórico de reparos de relógios no Ethereum_
+- [Breitling](https://www.coindesk.com/business/2020/10/15/breitling-goes-live-with-ethereum-based-system-to-put-all-new-watches-on-the-blockchain) - _Registra a origem e o histórico de reparos de relógios no Ethereum_
 - [BRØK](https://www.xn--brk-1na.no/) - _Uma plataforma de cap tables para empresas não listadas ao público, oferecida pelo governo Norueguês_
 - [Certifaction](https://certifaction.com/) - _Assinaturas eletrônicas legalmente válidas com funções de privacidade incorporadas ao design_
 - [EthSign](https://ethsign.xyz/) - _Registra documentos eletrônicos assinados na blockchain do Ethereum_

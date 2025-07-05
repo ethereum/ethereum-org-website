@@ -16,11 +16,11 @@ published: 2021-03-31
 Se hai appena iniziato con lo sviluppo blockchain e non sai da dove cominciare, oppure se sei solo interessato a capire come distribuire e interagire con gli smart contract, questa è la guida che fa al caso tuo. Esamineremo la creazione e la distribuzione di un semplice contratto intelligente sulla rete di prova di Goerli, utilizzando un portafoglio virtuale di [MetaMask](https://metamask.io/), [Solidity](https://docs.soliditylang.org/en/v0.8.0/), [Hardhat](https://hardhat.org/) e [Alchemy](https://alchemyapi.io/eth) (non preoccuparti se non capisci cosa significhi, lo spiegheremo).
 
 > **Attenzione**
-> 
+>
 > 🚧 Avviso di obsolescenza
-> 
+>
 > Per l'intera guida, la rete di test Goerli viene utilizzata per creare e distribuire un contratto intelligente. Tuttavia, tieni presente che la Ethereum Foundation ha annunciato che [Goerli sarà presto abbandonata](https://www.alchemy.com/blog/goerli-faucet-deprecation).
-> 
+>
 > Ti consigliamo di utilizzare [Sepolia](https://sepoliafaucet.com/) e il [faucet di Sepolia](https://www.alchemy.com/overviews/sepolia-testnet) per questo tutorial.
 
 Nella [parte 2](https://docs.alchemy.com/docs/interacting-with-a-smart-contract) di questo tutorial, esamineremo come possiamo interagire con il nostro contratto intelligente una volta distribuito e, nella [parte 3](https://docs.alchemy.com/docs/submitting-your-smart-contract-to-etherscan), copriremo come pubblicarlo su Etherscan.
@@ -49,7 +49,7 @@ Una volta creato un conto di Alchemy, puoi generare una chiave API creando un'ap
 
 Per inviare e ricevere le transazioni, necessitiamo di un conto di Ethereum. Per questo tutorial, useremo MetaMask, un portafoglio virtuale nel browser per gestire l'indirizzo del tuo conto di Ethereum. Maggiori informazioni sulle [transazioni](/developers/docs/transactions/).
 
-Puoi scaricare e creare gratuitamente un conto di MetaMask [qui](https://metamask.io/download.html). Quando crei un account, o se ne possiedi già uno, assicurati di passare alla "rete di prova di Goerli" in alto a destra (così da non avere a che fare con denaro reale).
+Puoi scaricare e creare gratuitamente un conto di MetaMask [qui](https://metamask.io/download). Quando crei un account, o se ne possiedi già uno, assicurati di passare alla "rete di prova di Goerli" in alto a destra (così da non avere a che fare con denaro reale).
 
 ![esempio ropsten metamask](./metamask-ropsten-example.png)
 
@@ -66,7 +66,7 @@ Per ricontrollare che ci sia il saldo, facciamo una richiesta [eth_getBalance](h
 ```
 
 > **NOTA:** questo risultato è in wei non in ETH. Wei è usato come taglio più piccolo dell'ether. La conversione da wei a ETH è: 1 eth = 10<sup>18</sup> wei. Quindi se convertiamo 0x2B5E3AF16B1880000 in decimali, otteniamo 5\*10¹⁸, pari a 5 ETH.
-> 
+>
 > Meno male! I nostri soldi finti ci sono tutti <Emoji text=":money_mouth_face:" size={1} />.
 
 ## Fase 6: inizializza il progetto {#step-6}

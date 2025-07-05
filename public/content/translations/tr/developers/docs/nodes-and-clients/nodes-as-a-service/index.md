@@ -264,7 +264,7 @@ Bir düğüm hizmeti kullanarak, ürününüzün altyapı yönünü merkezileşt
     - Doğrudan teknik destek
 
 - [**NodeReal MegaNode**](https://nodereal.io/)
-  - [Belgeler](https://docs.nodereal.io/nodereal/meganode/introduction)
+  - [Belgeler](https://docs.nodereal.io/docs/introduction)
   - Özellikler
     - Güvenilir, hızlı ve ölçeklenebilir RPC API servisleri
     - Web3 geliştiricileri için gelişmiş API

@@ -74,7 +74,7 @@ lang: uk
     <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">
       SMS-повідомлень небезпечно,
     </a>
-     оскільки SIM-карту можуть зламати. Для кращої безпеки використовуйте програми на кшталт{" "}    
+     оскільки SIM-карту можуть зламати. Для кращої безпеки використовуйте програми на кшталт{" "}
     <a href="https://mashable.com/article/how-to-set-up-google-authenticator">
       Google Authenticator
     </a>
@@ -278,7 +278,7 @@ _Примітка. Існують похідні токени / тікери, я
 ### Криптобезпека {#reading-crypto-security}
 
 - [Захистіть себе та свої кошти](https://support.mycrypto.com/staying-safe/protecting-yourself-and-your-funds) — _MyCrypto_
-- [4 способи захистити себе в криптовалюті](https://www.coindesk.com/tech/2021/04/20/4-ways-to-stay-safe-in-crypto/) — _CoinDesk_
+- [4 способи захистити себе в криптовалюті](https://www.coindesk.com/learn/4-ways-to-stay-safe-in-crypto/) — _CoinDesk_
 - [Посібник із безпеки для чайників і просунутих](https://medium.com/mycrypto/mycryptos-security-guide-for-dummies-and-smart-people-too-ab178299c82e) — _MyCrypto_
 - [Криптобезпека: паролі й автентифікація](https://www.youtube.com/watch?v=m8jlnZuV1i4) — _Андреас М. Антонопулос_
 

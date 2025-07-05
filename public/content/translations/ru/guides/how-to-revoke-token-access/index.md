@@ -20,7 +20,6 @@ lang: ru
 
 - [Ethallowance](https://ethallowance.com/) (Ethereum)
 - [Etherscan](https://etherscan.io/tokenapprovalchecker) (Ethereum)
-- [Cointool](https://cointool.app/approve/eth) (различные сети)
 - [Revoke](https://revoke.cash/) (различные сети)
 - [Unrekt](https://app.unrekt.net/) (различные сети)
 - [EverRevoke](https://everrise.com/everrevoke/) (различные сети)

@@ -154,7 +154,7 @@ Několik projektů poskytuje implementace validia a volitia, které můžete int
 **Matter Labs zkPorter** – _zkPorter je škálovací protokol druhé vrstvy, který řeší dostupnost dat hybridním přístupem, který kombinuje myšlenky zkRollupu a shardingu. Může podporovat libovolný počet shardů, každý s vlastní politikou dostupnosti dat._
 
 - [Blog](https://blog.matter-labs.io/zkporter-a-breakthrough-in-l2-scaling-ed5e48842fbf)
-- [Dokumentace](https://docs.zksync.io/zk-stack/concepts/data-availability)
+- [Dokumentace](https://docs.zksync.io/zksync-protocol/rollup/data-availability)
 - [Web](https://zksync.io/)
 
 ## Další informace {#further-reading}

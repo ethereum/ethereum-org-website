@@ -31,7 +31,7 @@ Questi progetti hanno creato le proprie sovvenzioni per progetti volti a svilupp
 - [Lido Ecosystem Grants Organisation (LEGO)](https://lido.fi/lego) – _Ecosistema finanziario di [Lido](https://lido.fi/)_
 - [MetaMask Program](https://metamaskgrants.org/): _DAO di sovvenzioni operata dai dipendenti di [MetaMask](https://metamask.io/)_
 - [SKALE Network Grants Program](https://skale.space/developers#grants): _ecosistema della [rete SKALE](https://skale.space/)_
-- [Programma di sovvenzioni della Swarm Foundation](https://my.ethswarm.org/grants): _Ecosistema di [Swarm Foundation](https://www.ethswarm.org/)_
+- [Programma di sovvenzioni della Swarm Foundation](https://my.ethswarm.org): _Ecosistema di [Swarm Foundation](https://www.ethswarm.org/)_
 - [The Graph](https://thegraph.com/ecosystem/grants/): _Ecosistema di [The Graph](https://thegraph.com/)_
 - [Programma di sovvenzioni di Uniswap](https://www.uniswapfoundation.org/approach): _community di [Uniswap](https://uniswap.org/)_
 

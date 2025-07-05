@@ -47,7 +47,7 @@ A [Blocknative](https://www.blocknative.com/) nyílt hozzáférést biztosít az
 
 ## További olvasnivaló {#further-reading}
 
-- [A gráfhálózat áttekintése](https://thegraph.com/docs/en/about/network/)
+- [A gráfhálózat áttekintése](https://thegraph.com/docs/en/about/)
 - [Gráflekérdezési próbafelület (playground)](https://thegraph.com/explorer/subgraph/graphprotocol/graph-network-mainnet?version=current)
 - [API-kódpéldák az EtherScan oldalon](https://etherscan.io/apis#contracts)
 - [Beaconcha.in – Beaconlánc-felfedező](https://beaconcha.in)

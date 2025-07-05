@@ -59,13 +59,13 @@ A pesar de que [Web3](https://docs.web3js.org/) es todavia la opcion más usada,
 
 Normalmente, conseguirá los datos directamente de su contrato inteligente. ¿Quieres saber la hora de la última operación? Tan solo escriba `MyContract.methods.latestTradeTime().call()` que obtiene los datos de un nodo de Ethereum a su DApp. Pero, ¿qué pasa si se necesitan cientos de puntos de datos diferentes? Eso resultaría en centenares de solicitudes de datos al nodo, con su [RTT](https://wikipedia.org/wiki/Round-trip_delay_time) cada una de ellas, lo que ralentizaría e inutiliaría a su DApp. Una alternativa sería instalar una función de obtención en su contrato que devuelva varios datos a la vez. Aunque no siempre es lo ideal.
 
-O también puede que le interese obtener datos históricos. Quiere saber no sólo la fecha de la última operación, sino también la de todas las operaciones que haya realizado alguna vez. Puede utilizar el paquete de subgrafo de _create-eth-app_, leer la [documentación](https://thegraph.com/docs/define-a-subgraph) y adaptarlo a sus propios contratos. Si busca contratos inteligentes populares, puede que incluso ya exista un subgrafo. Compruebe el [explorador de subgrafo](https://thegraph.com/explorer/).
+O también puede que le interese obtener datos históricos. Quiere saber no sólo la fecha de la última operación, sino también la de todas las operaciones que haya realizado alguna vez. Puede utilizar el paquete de subgrafo de _create-eth-app_, leer la [documentación](https://thegraph.com/docs/en/subgraphs/developing/creating/starting-your-subgraph) y adaptarlo a sus propios contratos. Si busca contratos inteligentes populares, puede que incluso ya exista un subgrafo. Compruebe el [explorador de subgrafo](https://thegraph.com/explorer/).
 
 Una vez tenga un subgrafo, este le permitirá escribir una sencilla consulta en su DApp que recupera todos los datos importantes de la cadena de bloques, incluyendo los datos históricos que necesita, solo con activar esta funcionalidad una vez.
 
 ### Apollo {#apollo}
 
-Gracias a la integración con [Apollo Boost](https://www.apollographql.com/docs/react/get-started/), puedes integrar fácilmente el grafo en tu dapp de React. Especialmente al usar [ganchos de React y Apollo](https://www.apollographql.com/blog/apollo-client-now-with-react-hooks-676d116eeae2), obtener datos es tan sencillo como escribir una única consulta GraphQL en su componente:
+Gracias a la integración con [Apollo Boost](https://www.apollographql.com/docs/react/get-started/), puedes integrar fácilmente el grafo en tu dapp de React. Especialmente al usar [ganchos de React y Apollo](https://www.apollographql.com/blog/apollo-client-now-with-react-hooks), obtener datos es tan sencillo como escribir una única consulta GraphQL en su componente:
 
 ```js
 const { loading, error, data } = useQuery(myGraphQlQuery)

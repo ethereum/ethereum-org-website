@@ -25,13 +25,13 @@ Programu hizi zinasaidia ikolojia ya Ethereum kwa kutoa fedha kwa miradi mingi. 
 Miradi hii imeunda misaada yao kwa miradi inayolenga kukuza na kujaribu teknolojia yao wenyewe.
 
 - [Mpango wa Ruzuku wa Aave](https://aavegrants.org/) - _[Aave](https://aave.com/) hutoa ruzuku za DAO_
-- [Balancer](https://balancergrants.notion.site/Balancer-Community-Grants-23e562c5bc4347cd8304637bff0058e6) - _fedha za ikolojia ya [Balancer](https://balancer.fi/)_
-- [Mpango wa Ruzuku za Compound](https://compoundgrants.org/) - _[Compaound](https://compound.finance/) hugharamia ikolojia_
+- [Mpango wa Ruzuku za Compound](https://compoundgrants.questbook.app/) - _[Compaound](https://compound.finance/) hugharamia ikolojia_
+- [Balancer](https://quark-ceres-740.notion.site/Balancer-Grants-938f1b979810427f8d903a904315da41) - _fedha za ikolojia ya [Balancer](https://balancer.fi/)_
 - [Mpango wa Ruzuku wa Consensys](https://consensys.net/grants/) - _[Consensys](https://consensys.net/) fedha za minyororo ya blocku & ruzuku za Ethereum_
 - [Shirika la Ruzuku ya Ikolojia ya Lido (LEGO)](https://lego.lido.fi/) - _hugharamia ikolojia ya [Lido](https://lido.fi/)_
 - [Programu ya Ruzuku ya mStable](https://docs.mstable.org/advanced/grants-program) - _jamii ya [mStablei](https://mstable.org/)_
 - [Grafu](https://airtable.com/shrdfvnFvVch3IOVm) - _Ikolojia ya [Grafu](https://thegraph.com/)_
-- [Programu ya Ruzuku za Uniswap](https://www.unigrants.org/) - _Jamii ya [Uniswap](https://uniswap.org/)_
+- [Programu ya Ruzuku za Uniswap](https://www.uniswapfoundation.org/) - _Jamii ya [Uniswap](https://uniswap.org/)_
 
 ## Ufadhili wa Kwadratiki {#quadratic-funding}
 

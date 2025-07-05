@@ -154,7 +154,7 @@ De multiples projets fournissent des implémentations de Validium et de volition
 **Matter Labs zkPorter**- _zkPorter est un protocole de mise à l'échelle de couche 2 s'attaquant à la disponibilité des données avec une approche hybride qui combine les idées de rollup ZK et de fragmentation. Il peut prendre en charge un nombre arbitraire de fragments, chacun ayant sa propre politique de disponibilité des données._
 
 - [Blog](https://blog.matter-labs.io/zkporter-a-breakthrough-in-l2-scaling-ed5e48842fbf)
-- [Documentation](https://docs.zksync.io/zk-stack/concepts/data-availability)
+- [Documentation](https://docs.zksync.io/zksync-protocol/rollup/data-availability)
 - [Site Web](https://zksync.io/)
 
 ## Complément d'information {#further-reading}

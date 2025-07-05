@@ -60,7 +60,7 @@ Testovací sítě Verkle tree jsou již v provozu, ale vyžadují značné aktua
 - [Guillaume Ballet vysvětluje Verkle trees na ETHGlobal](https://www.youtube.com/watch?v=f7bEtX3Z57o)
 - [„Jak Verkle trees činí Ethereum štíhlejším a efektivnějším“ od Guillauma Balleta na Devconu 6](https://www.youtube.com/watch?v=Q7rStTKwuYs)
 - [Piper Merriam o bezstavových klientech z ETHDenver 2020](https://www.youtube.com/watch?v=0yiZJNciIJ4)
-- [Dankrad Feist vysvětluje Verkle trees a bezstavovost v podcastu Zero Knowledge](https://zeroknowledge.fm/episode-202-stateless-ethereum-verkle-tries-with-dankrad-feist/)
+- [Dankrad Feist vysvětluje Verkle trees a bezstavovost v podcastu Zero Knowledge](https://zeroknowledge.fm/podcast/202/)
 - [Vitalik Buterin o Verkle trees](https://vitalik.eth.limo/general/2021/06/18/verkle.html)
 - [Dankrad Feist o Verkle trees](https://dankradfeist.de/ethereum/2021/06/18/verkle-trie-for-eth1.html)
 - [Dokumentace k EIP Verkle trees](https://notes.ethereum.org/@vbuterin/verkle_tree_eip#Illustration)

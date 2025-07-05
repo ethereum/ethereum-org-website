@@ -20,7 +20,6 @@ Beberapa laman web membenarkan anda melihat dan membatalkan kontrak pintar yang 
 
 - [Ethallowance](https://ethallowance.com/) (Ethereum)
 - [Etherscan](https://etherscan.io/tokenapprovalchecker) (Ethereum)
-- [Cointool](https://cointool.app/approve/eth) (berbilang rangkaian)
 - [Revoke](https://revoke.cash/) (berbilang rangkaian)
 - [Unrekt](https://app.unrekt.net/) (berbilang rangkaian)
 - [EverRevoke](https://everrise.com/everrevoke/) (berbilang rangkaian)

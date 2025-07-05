@@ -60,7 +60,7 @@ Les deux réseaux de test publics que les développeurs de clients conservent ac
 - [Coinbase Wallet Faucet | Sepolia](https://coinbase.com/faucets/ethereum-sepolia-faucet)
 - [Alchemy Sepolia faucet](https://sepoliafaucet.com/)
 - [Infura Sepolia faucet](https://www.infura.io/faucet)
-- [Robinet Sepolia Chainstack](https://faucet.chainstack.com/sepolia-faucet)
+- [Robinet Sepolia Chainstack](https://faucet.chainstack.com/sepolia-testnet-faucet)
 - [Robinet de l'écosystème Ethereum](https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia)
 
 #### Hoodi {#hoodi}
