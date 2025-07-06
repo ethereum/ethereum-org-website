@@ -1,3 +1,5 @@
+"use client"
+
 import ReactSelect, {
   type ActionMeta,
   type GroupBase,

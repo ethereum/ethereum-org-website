@@ -1,12 +1,11 @@
 import { ReactElement } from "react"
-import type { IconType } from "react-icons"
 
 import { FilterInputState } from "@/lib/types"
 
 import Switch from "@/components/ui/switch"
 
 interface SwitchFilterInputProps {
-  Icon?: IconType
+  Icon?: React.FC<React.SVGProps<SVGElement>>
   label: string
   description?: string | ReactElement
   filterIndex: number

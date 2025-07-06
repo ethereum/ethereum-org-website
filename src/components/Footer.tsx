@@ -1,11 +1,13 @@
 "use client"
 
-import { FaDiscord, FaGithub, FaXTwitter } from "react-icons/fa6"
-import { IoChevronUpSharp } from "react-icons/io5"
-import { SiFarcaster } from "react-icons/si"
+import { ChevronUp } from "lucide-react"
 
 import type { FooterLink, FooterLinkSection } from "@/lib/types"
 
+import Discord from "@/components/icons/discord.svg"
+import Farcaster from "@/components/icons/farcaster.svg"
+import Github from "@/components/icons/github.svg"
+import Twitter from "@/components/icons/twitter.svg"
 import Translation from "@/components/Translation"
 
 import { cn } from "@/lib/utils/cn"
@@ -19,22 +21,22 @@ import { useTranslation } from "@/hooks/useTranslation"
 
 const socialLinks = [
   {
-    icon: FaGithub,
+    icon: Github,
     href: "https://github.com/ethereum/ethereum-org-website",
     ariaLabel: "GitHub",
   },
   {
-    icon: SiFarcaster,
+    icon: Farcaster,
     href: "https://warpcast.com/ethdotorg",
     ariaLabel: "Farcaster",
   },
   {
-    icon: FaXTwitter,
+    icon: Twitter,
     href: "https://x.com/ethdotorg",
     ariaLabel: "X",
   },
   {
-    icon: FaDiscord,
+    icon: Discord,
     href: "https://discord.gg/ethereum-org",
     ariaLabel: "Discord",
   },
@@ -264,6 +266,10 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
           href: "/governance/",
           text: t("ethereum-governance"),
         },
+        {
+          href: "/trillion-dollar-security/",
+          text: t("trillion-dollar-security"),
+        },
       ],
     },
   ]
@@ -318,7 +324,7 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
           isSecondary
           onClick={() => scrollIntoView("body")}
         >
-          <IoChevronUpSharp /> <Translation id="go-to-top" />
+          <ChevronUp /> <Translation id="go-to-top" />
         </Button>
       </div>
 

@@ -28,7 +28,6 @@ import {
 import MeetupList from "@/components/MeetupList"
 import SocialListItem from "@/components/SocialListItem"
 import TableOfContents from "@/components/TableOfContents"
-import { TranslatathonBanner } from "@/components/Translatathon/TranslatathonBanner"
 import Translation from "@/components/Translation"
 import TranslationChartImage from "@/components/TranslationChartImage"
 import { Flex, Stack } from "@/components/ui/flex"
@@ -102,7 +101,6 @@ export const StaticLayout = ({
 
   return (
     <div className="w-full">
-      <TranslatathonBanner />
       <Flex
         className="mx-auto mb-16 w-full justify-between p-8 lg:pt-16"
         dir={contentNotTranslated ? "ltr" : "unset"}

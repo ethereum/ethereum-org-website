@@ -1,9 +1,9 @@
-import { type ComponentProps, type HTMLAttributes } from "react"
+import { type ComponentProps, ComponentType, type HTMLAttributes } from "react"
 
 import type { ChildOnlyProp } from "@/lib/types"
 
 import Contributors from "@/components/Contributors"
-import MarkdownImage from "@/components/MarkdownImage"
+import MarkdownImage from "@/components/Image/MarkdownImage"
 import TooltipLink from "@/components/TooltipLink"
 import YouTube from "@/components/YouTube"
 
@@ -176,9 +176,9 @@ export const reactComponents = {
 /**
  * All base markdown components as default export
  */
-const MdComponents = {
+const mdComponents = {
   ...htmlElements,
   ...reactComponents,
-}
+} as Record<string, ComponentType<unknown>>
 
-export default MdComponents
+export default mdComponents

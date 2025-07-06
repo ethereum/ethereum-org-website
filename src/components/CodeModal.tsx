@@ -1,6 +1,5 @@
 import { Children, type ReactElement } from "react"
-import { IoMdCopy } from "react-icons/io"
-import { MdCheck } from "react-icons/md"
+import { Check, Copy } from "lucide-react"
 
 import { Button } from "./ui/buttons/Button"
 import {
@@ -44,11 +43,11 @@ const CodeModal = ({ children, isOpen, setIsOpen, title }: CodeModalProps) => {
         >
           {hasCopied ? (
             <>
-              <MdCheck /> {t("copied")}
+              <Check /> {t("copied")}
             </>
           ) : (
             <>
-              <IoMdCopy /> {t("copy")}
+              <Copy /> {t("copy")}
             </>
           )}
         </Button>

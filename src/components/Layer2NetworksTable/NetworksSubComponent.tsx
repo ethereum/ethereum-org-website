@@ -1,4 +1,4 @@
-import { MdInfoOutline } from "react-icons/md"
+import { Info } from "lucide-react"
 
 import { ExtendedRollup } from "@/lib/types"
 
@@ -48,7 +48,7 @@ const NetworkSubComponent = ({ network }: NetworkSubComponentProps) => {
                         <p>{t("page-layer-2-networks-show-how-long")}</p>
                         <p>
                           {t("page-layer-2-networks-data-from")}{" "}
-                          <InlineLink href="https://growthepie.xyz">
+                          <InlineLink href="https://growthepie.com">
                             growthepie
                           </InlineLink>
                           {t("page-layer-2-networks-period")}
@@ -61,7 +61,7 @@ const NetworkSubComponent = ({ network }: NetworkSubComponentProps) => {
                       eventName: "age",
                     }}
                   >
-                    <MdInfoOutline className="translate-y-0.5" />
+                    <Info className="size-[0.875em] translate-y-0.5" />
                   </Tooltip>
                 </p>
                 <p>
@@ -102,7 +102,7 @@ const NetworkSubComponent = ({ network }: NetworkSubComponentProps) => {
                       eventName: "wallet_support",
                     }}
                   >
-                    <MdInfoOutline className="translate-y-0.5" />
+                    <Info className="size-[0.875em] translate-y-0.5" />
                   </Tooltip>
                 </p>
               </div>
@@ -131,7 +131,7 @@ const NetworkSubComponent = ({ network }: NetworkSubComponentProps) => {
                         </p>
                         <p>
                           {t("page-layer-2-networks-data-from")}{" "}
-                          <InlineLink href="https://growthepie.xyz">
+                          <InlineLink href="https://growthepie.com">
                             growthepie
                           </InlineLink>
                           {t("page-layer-2-networks-period")}
@@ -144,7 +144,7 @@ const NetworkSubComponent = ({ network }: NetworkSubComponentProps) => {
                       eventName: "active_addresses",
                     }}
                   >
-                    <MdInfoOutline className="translate-y-0.5" />
+                    <Info className="size-[0.875em] translate-y-0.5" />
                   </Tooltip>
                 </p>
               </div>
@@ -171,7 +171,7 @@ const NetworkSubComponent = ({ network }: NetworkSubComponentProps) => {
                       eventName: "fee_token",
                     }}
                   >
-                    <MdInfoOutline className="translate-y-0.5" />
+                    <Info className="size-[0.875em] translate-y-0.5" />
                   </Tooltip>
                 </p>
               </div>
@@ -192,7 +192,7 @@ const NetworkSubComponent = ({ network }: NetworkSubComponentProps) => {
                     <p>{t("page-layer-2-networks-network-usage-overview")}</p>
                     <p>
                       {t("page-layer-2-networks-data-from")}{" "}
-                      <InlineLink href="https://growthepie.xyz">
+                      <InlineLink href="https://growthepie.com">
                         growthepie
                       </InlineLink>
                       {t("page-layer-2-networks-period")}
@@ -200,7 +200,7 @@ const NetworkSubComponent = ({ network }: NetworkSubComponentProps) => {
                   </div>
                 }
               >
-                <MdInfoOutline className="translate-y-0.5" />
+                <Info className="size-[0.875em] translate-y-0.5" />
               </Tooltip>
             </p>
             <div className="w-full">

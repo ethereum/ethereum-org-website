@@ -1,5 +1,5 @@
+import type { LucideIcon } from "lucide-react"
 import type { FC, RefObject, SVGProps } from "react"
-import type { IconType } from "react-icons"
 
 type LinkOnly = { href: string; items?: never }
 type ItemsOnly = { items: NavItem[]; href?: never }
@@ -8,7 +8,7 @@ type LinkXorItems = LinkOnly | ItemsOnly
 export type NavItem = {
   label: string
   description: string
-  icon?: IconType | FC<SVGProps<SVGElement>>
+  icon?: LucideIcon | FC<SVGProps<SVGElement>>
 } & LinkXorItems
 
 export type NavSectionKey =
