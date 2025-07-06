@@ -92,12 +92,12 @@ export const getMetadata = async (props: MetadataProps): Promise<Metadata> => {
     locale,
     image,
     title,
-    description: descriptionProps,
+    description: descriptionProp,
   } = props
   const slugString = slug.join("/")
   const t = await getTranslations({ locale, namespace: "common" })
 
-  const description = descriptionProps || t("site-description")
+  const description = descriptionProp || t("site-description")
   const siteTitle = t("site-title")
 
   // Set canonical URL w/ language path to avoid duplicate content

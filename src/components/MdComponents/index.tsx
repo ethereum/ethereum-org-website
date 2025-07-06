@@ -1,4 +1,4 @@
-import { type ComponentProps, ComponentType, type HTMLAttributes } from "react"
+import { type ComponentProps, type HTMLAttributes } from "react"
 
 import type { ChildOnlyProp } from "@/lib/types"
 
@@ -179,6 +179,6 @@ export const reactComponents = {
 const mdComponents = {
   ...htmlElements,
   ...reactComponents,
-} as Record<string, ComponentType<unknown>>
+}
 
 export default mdComponents

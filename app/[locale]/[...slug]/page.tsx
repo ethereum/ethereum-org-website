@@ -58,6 +58,7 @@ export default async function Page({
     locale,
     slug,
     // TODO: Address component typing error here (flip `FC` types to prop object types)
+    // @ts-expect-error Incompatible component function signatures
     baseComponents: mdComponents,
     componentsMapping,
     scope: {
@@ -123,19 +124,11 @@ export async function generateMetadata({
   params: Promise<SlugPageParams>
 }) {
   const { locale, slug } = await params
-  const { timeToRead } = await getPageData({
-    locale,
-    slug: slug.join("/"),
-    // TODO: Address component typing error here (flip `FC` types to prop object types)
-    baseComponents: mdComponents,
-    componentsMapping,
-  })
 
   try {
     return await getMdMetadata({
       locale,
       slug,
-      timeToRead: timeToRead.text,
     })
   } catch (error) {
     const t = await getTranslations({ locale, namespace: "common" })
