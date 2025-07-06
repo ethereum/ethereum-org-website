@@ -3,13 +3,10 @@ import { ImageResponse } from "next/og"
 
 import { DEFAULT_OG_IMAGE, SITE_URL } from "@/lib/constants"
 
-// http://localhost:3000/api/og/?title=Title&description=Description&author=Paul&slugString=security
-
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url)
   const title = searchParams.get("title")
   const description = searchParams.get("description")
-  const author = searchParams.get("author")
   const slugString = searchParams.get("slug")
   const imageParam = searchParams.get("image")
 
@@ -35,7 +32,13 @@ export async function GET(request: Request) {
   const imageResponse = new ImageResponse(
     (
       <div tw="relative w-full h-full font-sans flex">
-        <div tw="absolute inset-0" />
+        <div
+          tw="absolute inset-0 opacity-20"
+          style={{
+            backgroundImage:
+              "linear-gradient(160deg, transparent, #0F9971, transparent, #6C24DF, #F6109E, transparent)",
+          }}
+        />
         {/* Background image layer */}
         <img
           src={src}
@@ -45,81 +48,83 @@ export async function GET(request: Request) {
             width: "1200px",
             height: "630px",
             objectFit: "cover",
-            maxHeight: "100%",
           }}
         />
 
-        {/* Content overlay with safe zones */}
-        <div tw="absolute inset-0 flex flex-col justify-between p-12">
-          {/* Content box with 50% width, safe zones */}
-          <div tw="w-2/3 bg-black bg-opacity-90 rounded-2xl p-12 text-white flex flex-col gap-6">
-            {/* Logo and breadcrumb */}
-            <div tw="flex items-center">
-              <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                <path
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                  d="M39.7334 27.123L23.9922 48V36.279L39.7334 27.123Z"
-                  fill="#C8B2F5"
-                />
-                <path
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                  d="M8.25292 27.123L23.9941 48V36.279L8.25292 27.123Z"
-                  fill="#EECBC0"
-                />
-                <path
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                  d="M8.24996 24.7035L23.9941 17.7031V33.6616L8.24996 24.7035Z"
-                  fill="#87A9F0"
-                />
-                <path
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                  d="M39.7383 24.7035L23.9941 17.7031V33.6616L39.7383 24.7035Z"
-                  fill="#CAB3F5"
-                />
-                <path
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                  d="M8.25292 24.7032L23.9941 0V17.7029L8.25292 24.7032Z"
-                  fill="#EECBC0"
-                />
-                <path
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                  d="M39.7354 24.7032L23.9941 0V17.7029L39.7354 24.7032Z"
-                  fill="#B8FBF6"
-                />
-              </svg>
-              {slugString && (
+        {/* Content overlay with safe zones -- image only if empty slug */}
+        {slugString && (
+          <div tw="absolute inset-0 flex flex-col justify-between p-12">
+            <div
+              tw="w-2/3 bg-black bg-opacity-90 rounded-2xl p-12 text-white flex flex-col gap-6 max-h-full"
+              style={{
+                boxShadow:
+                  "0px 2px 12px 1px hsla(263, 77%, 31%, 0.1), 0px 16px 12px -3px hsla(263, 77%, 31%, 0.08), 0px 32px 24px -6px hsla(263, 77%, 31%, 0.16), 0px 40px 40px -12px hsla(263, 74%, 41%, 0.06), 0px -64px 120px 80px hsla(263, 100%, 94%, 0.06)",
+              }}
+            >
+              {/* Logo and breadcrumb */}
+              <div tw="flex items-center">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                  <path
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M39.7334 27.123L23.9922 48V36.279L39.7334 27.123Z"
+                    fill="#C8B2F5"
+                  />
+                  <path
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M8.25292 27.123L23.9941 48V36.279L8.25292 27.123Z"
+                    fill="#EECBC0"
+                  />
+                  <path
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M8.24996 24.7035L23.9941 17.7031V33.6616L8.24996 24.7035Z"
+                    fill="#87A9F0"
+                  />
+                  <path
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M39.7383 24.7035L23.9941 17.7031V33.6616L39.7383 24.7035Z"
+                    fill="#CAB3F5"
+                  />
+                  <path
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M8.25292 24.7032L23.9941 0V17.7029L8.25292 24.7032Z"
+                    fill="#EECBC0"
+                  />
+                  <path
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M39.7354 24.7032L23.9941 0V17.7029L39.7354 24.7032Z"
+                    fill="#B8FBF6"
+                  />
+                </svg>
                 <span tw="text-4xl block mx-4">
                   ethereum.org/{slugString.split("/")[0]}
                 </span>
-              )}
-            </div>
+              </div>
 
-            {/* Main content */}
-            <div tw="flex flex-col gap-4">
-              {title && (
-                <h1 tw="text-7xl font-bold leading-tight">
-                  {title.split(" | ")[0]}
-                </h1>
-              )}
+              {/* Main content */}
+              <div tw="flex flex-col gap-4">
+                {title && (
+                  <h1 tw="text-7xl font-bold leading-tight">
+                    {title.split(" | ")[0]}
+                  </h1>
+                )}
 
-              {description && (
-                <p tw="text-3xl text-gray-200 leading-snug">
-                  {description.length > 160
-                    ? description.slice(0, 120).replace(/\s+\S*$/, "") + "..."
-                    : description}
-                </p>
-              )}
-
-              {author && <p tw="text-base text-gray-300">By {author}</p>}
+                {description && (
+                  <p tw="text-3xl text-gray-200 leading-snug">
+                    {description.length > 160
+                      ? description.slice(0, 120).replace(/\s+\S*$/, "") + "..."
+                      : description}
+                  </p>
+                )}
+              </div>
             </div>
           </div>
-        </div>
+        )}
       </div>
     ),
     {
