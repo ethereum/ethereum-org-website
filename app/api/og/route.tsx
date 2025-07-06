@@ -32,7 +32,7 @@ export async function GET(request: Request) {
     boldFontResponse.arrayBuffer(),
   ])
 
-  return new ImageResponse(
+  const imageResponse = new ImageResponse(
     (
       <div tw="relative w-full h-full font-sans flex">
         <div tw="absolute inset-0" />
@@ -45,6 +45,7 @@ export async function GET(request: Request) {
             width: "1200px",
             height: "630px",
             objectFit: "cover",
+            maxHeight: "100%",
           }}
         />
 
@@ -140,4 +141,16 @@ export async function GET(request: Request) {
       ],
     }
   )
+
+  // Set cache headers to prevent stale content
+  const response = new Response(imageResponse.body, {
+    headers: {
+      ...imageResponse.headers,
+      "Cache-Control": "no-cache, no-store, must-revalidate",
+      Pragma: "no-cache",
+      Expires: "0",
+    },
+  })
+
+  return response
 }
