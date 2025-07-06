@@ -4,6 +4,7 @@ import { SITE_URL } from "@/lib/constants"
 
 export function GET(request: Request) {
   const url = new URL(request.url)
+  console.log({ urlSTIRNGINGINGS: url })
 
   // Extract values from URL params (now required)
   const title = url.searchParams.get("title")
