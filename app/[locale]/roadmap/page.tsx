@@ -41,7 +41,7 @@ export async function generateMetadata({
     slug: ["roadmap"],
     title: t("page-roadmap-meta-title"),
     description: t("page-roadmap-meta-description"),
-    image: "/images/roadmap/roadmap-hub-hero.png",
+    image: "/images/heroes/roadmap-hub-hero.jpg",
   })
 }
 
