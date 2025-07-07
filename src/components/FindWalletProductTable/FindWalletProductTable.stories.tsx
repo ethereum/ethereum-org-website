@@ -2,7 +2,7 @@ import { Meta, StoryObj } from "@storybook/react"
 
 import { Lang } from "@/lib/types"
 
-import FindWalletProductTable from "@/components/FindWalletProductTable/client"
+import FindWalletProductTable from "@/components/FindWalletProductTable"
 
 import OneInchWalletImage from "@/public/images/wallets/1inch.png"
 import FoxWalletImage from "@/public/images/wallets/foxwallet.png"
