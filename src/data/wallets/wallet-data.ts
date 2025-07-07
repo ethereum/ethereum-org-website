@@ -2486,7 +2486,7 @@ export const walletsData: WalletData[] = [
     image: BurnerImage,
     twBackgroundColor: "bg-[#ffffff]",
     twGradiantBrandColor: "from-[#ffffff]",
-    url: "https://burner.pro/",
+    url: "https://www.burner.pro/eth",
     active_development_team: true,
     languages_supported: ["en"],
     twitter: "https://x.com/useburner",
