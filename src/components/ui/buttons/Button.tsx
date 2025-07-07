@@ -166,7 +166,10 @@ const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
       >
         <BaseLink
           ref={ref}
-          className={cn("no-underline hover:no-underline", className)}
+          className={cn(
+            "no-underline hover:no-underline [&_[data-label='arrow']]:ms-0",
+            className
+          )}
           activeClassName=""
           {...linkProps}
           onClick={handleClick}

@@ -50,26 +50,29 @@ const BigNumber = async ({
           <div className="text-sm">
             {children}
             {sourceName && sourceUrl && (
-              <Tooltip
-                content={
-                  <>
-                    <p>
-                      {t("data-provided-by")}{" "}
-                      <Link href={sourceUrl}>{sourceName}</Link>
-                    </p>
-                    {lastUpdated && (
-                      <p className="mt-2">
-                        {t("last-updated")}: {lastUpdatedDisplay}
+              <>
+                &nbsp;
+                <Tooltip
+                  content={
+                    <>
+                      <p>
+                        {t("data-provided-by")}{" "}
+                        <Link href={sourceUrl}>{sourceName}</Link>
                       </p>
-                    )}
-                  </>
-                }
-              >
-                <Info
-                  className="mb-0.5 ms-2 inline size-3.5 align-text-bottom"
-                  aria-label={t("data-provided-by")}
-                />
-              </Tooltip>
+                      {lastUpdated && (
+                        <p className="mt-2">
+                          {t("last-updated")}: {lastUpdatedDisplay}
+                        </p>
+                      )}
+                    </>
+                  }
+                >
+                  <Info
+                    className="mb-0.5 inline size-3.5 align-text-bottom"
+                    aria-label={t("data-provided-by")}
+                  />
+                </Tooltip>
+              </>
             )}
           </div>
         </>
