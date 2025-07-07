@@ -107,7 +107,7 @@ const TopDapps = ({ dappsData }: TopDappsProps) => {
                 </LinkOverlay>
               </LinkBox>
               <div className="flex flex-col">
-                {dappsData[category].map((dapp) => (
+                {dappsData[category].slice(0, 5).map((dapp) => (
                   <div key={dapp.name} className="border-b">
                     <DappCard
                       dapp={dapp}

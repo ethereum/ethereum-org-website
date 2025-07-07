@@ -95,11 +95,13 @@ export async function fetchDapps(): Promise<Record<string, DappData[]>> {
             contractAddress: row[21] || "",
             dateOfLaunch: row[22] || "",
             lastUpdated: row[23] || "",
+            ready: row[24]?.toLowerCase(),
           }
 
           return dappData as unknown as DappData
         })
         .filter((dapp: DappData) => dapp.name && dapp.url) // Filter out dapps without name or URL
+        .filter((dapp: DappData) => dapp.ready === "true")
 
       result[sheetName] = dapps
     }

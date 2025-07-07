@@ -1095,6 +1095,7 @@ export type Dapp = {
   contractAddress: string
   dateOfLaunch: string
   lastUpdated: string
+  ready: string
 }
 
 export type DefiDapp = Dapp & {

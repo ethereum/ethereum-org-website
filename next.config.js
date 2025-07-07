@@ -97,6 +97,10 @@ module.exports = (phase, { defaultConfig }) => {
           protocol: "https",
           hostname: "i.imgur.com",
         },
+        {
+          protocol: "https",
+          hostname: "imgur.com",
+        },
       ],
     },
     async headers() {
