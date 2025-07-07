@@ -93,10 +93,29 @@ Ethereum.org is the primary educational hub for Ethereum, offering beginner-frie
 - [Nodes and Clients](https://ethereum.org/content/developers/docs/nodes-and-clients/index.md): Network infrastructure
   - [Running a Node](https://ethereum.org/content/developers/docs/nodes-and-clients/run-a-node/index.md): Setting up infrastructure
   - [Client Diversity](https://ethereum.org/content/developers/docs/nodes-and-clients/client-diversity/index.md): Network resilience
+  - [Nodes as a Service](https://ethereum.org/content/developers/docs/nodes-and-clients/nodes-as-a-service/index.md): Managed node providers
+  - [Node Architecture](https://ethereum.org/content/developers/docs/nodes-and-clients/node-architecture/index.md): System design
+  - [Light Clients](https://ethereum.org/content/developers/docs/nodes-and-clients/light-clients/index.md): Lightweight verification
+  - [Archive Nodes](https://ethereum.org/content/developers/docs/nodes-and-clients/archive-nodes/index.md): Full historical data
+  - [Bootnodes](https://ethereum.org/content/developers/docs/nodes-and-clients/bootnodes/index.md): Network discovery
 - [Networks](https://ethereum.org/content/developers/docs/networks/index.md): Mainnet, testnets, and local networks
 - [Consensus Mechanisms](https://ethereum.org/content/developers/docs/consensus-mechanisms/index.md): Network agreement
   - [Proof of Stake](https://ethereum.org/content/developers/docs/consensus-mechanisms/pos/index.md): Current consensus mechanism
+    - [Gasper](https://ethereum.org/content/developers/docs/consensus-mechanisms/pos/gasper/index.md): Ethereum's consensus protocol
+    - [Weak Subjectivity](https://ethereum.org/content/developers/docs/consensus-mechanisms/pos/weak-subjectivity/index.md): Security assumptions
+    - [Attestations](https://ethereum.org/content/developers/docs/consensus-mechanisms/pos/attestations/index.md): Validator voting mechanism
+    - [Rewards and Penalties](https://ethereum.org/content/developers/docs/consensus-mechanisms/pos/rewards-and-penalties/index.md): Validator incentives
+    - [Attack and Defense](https://ethereum.org/content/developers/docs/consensus-mechanisms/pos/attack-and-defense/index.md): Security considerations
+    - [Keys](https://ethereum.org/content/developers/docs/consensus-mechanisms/pos/keys/index.md): Validator key management
+    - [PoS vs PoW](https://ethereum.org/content/developers/docs/consensus-mechanisms/pos/pos-vs-pow/index.md): Consensus comparison
+    - [Block Proposal](https://ethereum.org/content/developers/docs/consensus-mechanisms/pos/block-proposal/index.md): Block creation process
+    - [PoS FAQs](https://ethereum.org/content/developers/docs/consensus-mechanisms/pos/faqs/index.md): Frequently asked questions
   - [Proof of Work](https://ethereum.org/content/developers/docs/consensus-mechanisms/pow/index.md): Historical consensus mechanism
+    - [Mining](https://ethereum.org/content/developers/docs/consensus-mechanisms/pow/mining/index.md): Block production process
+      - [Mining Algorithms](https://ethereum.org/content/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/index.md): Cryptographic algorithms
+        - [Dagger-Hashimoto](https://ethereum.org/content/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto/index.md): Original algorithm
+        - [Ethash](https://ethereum.org/content/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash/index.md): Production algorithm
+  - [Proof of Authority](https://ethereum.org/content/developers/docs/consensus-mechanisms/poa/index.md): Permissioned consensus
 
 #### Ethereum Stack
 - [Ethereum Stack Overview](https://ethereum.org/content/developers/docs/ethereum-stack/index.md): Technology layers
@@ -107,10 +126,14 @@ Ethereum.org is the primary educational hub for Ethereum, offering beginner-frie
   - [Testing Smart Contracts](https://ethereum.org/content/developers/docs/smart-contracts/testing/index.md): Verification strategies
   - [Compiling Smart Contracts](https://ethereum.org/content/developers/docs/smart-contracts/compiling/index.md): Build process
   - [Deploying Smart Contracts](https://ethereum.org/content/developers/docs/smart-contracts/deploying/index.md): Deployment strategies
+  - [Verifying Smart Contracts](https://ethereum.org/content/developers/docs/smart-contracts/verifying/index.md): Source code verification
+  - [Upgrading Smart Contracts](https://ethereum.org/content/developers/docs/smart-contracts/upgrading/index.md): Contract upgrade patterns
   - [Smart Contract Security](https://ethereum.org/content/developers/docs/smart-contracts/security/index.md): Security best practices
+  - [Formal Verification](https://ethereum.org/content/developers/docs/smart-contracts/formal-verification/index.md): Mathematical proof methods
+  - [Composability](https://ethereum.org/content/developers/docs/smart-contracts/composability/index.md): Contract interaction patterns
 - [Development Networks](https://ethereum.org/content/developers/docs/development-networks/index.md): Local and test environments
 - [Development Frameworks](https://ethereum.org/content/developers/docs/frameworks/index.md): Hardhat, Truffle, and others
-- [Ethereum Client APIs](https://ethereum.org/content/developers/docs/apis/index.md): Interacting with Ethereum
+- [Ethereum Client APIs](https://ethereum.org/developers/docs/apis/): Interacting with Ethereum
   - [JavaScript APIs](https://ethereum.org/content/developers/docs/apis/javascript/index.md): Web3.js and ethers.js
   - [Backend APIs](https://ethereum.org/content/developers/docs/apis/backend/index.md): Server-side integration
   - [JSON-RPC](https://ethereum.org/content/developers/docs/apis/json-rpc/index.md): Protocol specification
@@ -119,15 +142,24 @@ Ethereum.org is the primary educational hub for Ethereum, offering beginner-frie
 - [Storage](https://ethereum.org/content/developers/docs/storage/index.md): Data persistence strategies
 - [IDEs](https://ethereum.org/content/developers/docs/ides/index.md): Development environments
 - [Programming Languages](https://ethereum.org/content/developers/docs/programming-languages/index.md): Language-specific resources
+  - [Dart](https://ethereum.org/content/developers/docs/programming-languages/dart/index.md): Flutter and mobile development
+  - [Delphi](https://ethereum.org/content/developers/docs/programming-languages/delphi/index.md): Object Pascal programming
+  - [.NET](https://ethereum.org/content/developers/docs/programming-languages/dot-net/index.md): Microsoft .NET framework
+  - [Elixir](https://ethereum.org/content/developers/docs/programming-languages/elixir/index.md): Functional programming language
+  - [Go](https://ethereum.org/content/developers/docs/programming-languages/golang/index.md): Google's programming language
+  - [Java](https://ethereum.org/content/developers/docs/programming-languages/java/index.md): Enterprise application development
   - [JavaScript](https://ethereum.org/content/developers/docs/programming-languages/javascript/index.md): Web3 development
   - [Python](https://ethereum.org/content/developers/docs/programming-languages/python/index.md): Backend development
+  - [Ruby](https://ethereum.org/content/developers/docs/programming-languages/ruby/index.md): Web application development
   - [Rust](https://ethereum.org/content/developers/docs/programming-languages/rust/index.md): Systems programming
-  - [Go](https://ethereum.org/content/developers/docs/programming-languages/golang/index.md): Client development
 
 #### Advanced Topics
 - [Bridges](https://ethereum.org/content/developers/docs/bridges/index.md): Cross-chain interoperability
 - [Standards](https://ethereum.org/content/developers/docs/standards/index.md): Ethereum Request for Comments (ERCs)
-  - [Token Standards](https://ethereum.org/content/developers/docs/standards/tokens/index.md): ERC-20, ERC-721, ERC-1155
+  - [Token Standards](https://ethereum.org/content/developers/docs/standards/tokens/index.md): Ethereum token specifications
+    - [ERC-20](https://ethereum.org/content/developers/docs/standards/tokens/erc-20/index.md): Fungible token standard
+    - [ERC-721](https://ethereum.org/content/developers/docs/standards/tokens/erc-721/index.md): Non-fungible token standard
+    - [ERC-1155](https://ethereum.org/content/developers/docs/standards/tokens/erc-1155/index.md): Multi-token standard
 - [MEV](https://ethereum.org/content/developers/docs/mev/index.md): Maximal Extractable Value
 - [Oracles](https://ethereum.org/content/developers/docs/oracles/index.md): External data integration
 - [Scaling](https://ethereum.org/content/developers/docs/scaling/index.md): Layer 2 solutions
@@ -135,12 +167,23 @@ Ethereum.org is the primary educational hub for Ethereum, offering beginner-frie
   - [ZK Rollups](https://ethereum.org/content/developers/docs/scaling/zk-rollups/index.md): Zero-knowledge scaling
   - [State Channels](https://ethereum.org/content/developers/docs/scaling/state-channels/index.md): Off-chain computation
   - [Sidechains](https://ethereum.org/content/developers/docs/scaling/sidechains/index.md): Independent blockchains
+  - [Plasma](https://ethereum.org/content/developers/docs/scaling/plasma/index.md): Child chain scaling solution
+  - [Validium](https://ethereum.org/content/developers/docs/scaling/validium/index.md): Off-chain data availability
 - [Data Availability](https://ethereum.org/content/developers/docs/data-availability/index.md): Data accessibility solutions
+  - [Blockchain Data Storage Strategies](https://ethereum.org/content/developers/docs/data-availability/blockchain-data-storage-strategies/index.md): Storage optimization methods
 - [Networking Layer](https://ethereum.org/content/developers/docs/networking-layer/index.md): P2P networking
+  - [Network Addresses](https://ethereum.org/content/developers/docs/networking-layer/network-addresses/index.md): Node identification
+  - [Portal Network](https://ethereum.org/content/developers/docs/networking-layer/portal-network/index.md): Light client networking
 - [Data Structures and Encoding](https://ethereum.org/content/developers/docs/data-structures-and-encoding/index.md): Low-level data formats
+  - [Patricia Merkle Trie](https://ethereum.org/content/developers/docs/data-structures-and-encoding/patricia-merkle-trie/index.md): Ethereum's data structure
+  - [RLP](https://ethereum.org/content/developers/docs/data-structures-and-encoding/rlp/index.md): Recursive Length Prefix encoding
+  - [SSZ](https://ethereum.org/content/developers/docs/data-structures-and-encoding/ssz/index.md): Simple Serialize format
+  - [Web3 Secret Storage](https://ethereum.org/content/developers/docs/data-structures-and-encoding/web3-secret-storage/index.md): Key storage specification
 
 #### Design Fundamentals
 - [Design and UX](https://ethereum.org/content/developers/docs/design-and-ux/index.md): User experience for Web3
+  - [Heuristics for Web3](https://ethereum.org/content/developers/docs/design-and-ux/heuristics-for-web3/index.md): UX design principles
+  - [DEX Design Best Practices](https://ethereum.org/content/developers/docs/design-and-ux/dex-design-best-practice/index.md): Decentralized exchange UX
 
 ### Enterprise
 - [Enterprise Ethereum](https://ethereum.org/enterprise/): Business adoption and use cases
