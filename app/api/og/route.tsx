@@ -6,7 +6,6 @@ import { DEFAULT_OG_IMAGE, SITE_URL } from "@/lib/constants"
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url)
   const title = searchParams.get("title")
-  const description = searchParams.get("description")
   const slugString = searchParams.get("slug")
   const imageParam = searchParams.get("image")
 
@@ -21,7 +20,6 @@ export async function GET(request: Request) {
   const [regularFontResponse, boldFontResponse] = await Promise.all([
     fetch(new URL("/fonts/Roboto-Regular.ttf", SITE_URL)),
     fetch(new URL("/fonts/Roboto-Bold.ttf", SITE_URL)),
-    fetch(new URL("/fonts/Roboto-Black.ttf", SITE_URL)),
   ])
 
   const [regularFontData, boldFontData] = await Promise.all([
@@ -52,10 +50,10 @@ export async function GET(request: Request) {
         />
 
         {/* Content overlay with safe zones -- image only if empty slug */}
-        {slugString && (
+        {slugString?.length && (
           <div tw="absolute inset-0 flex flex-col justify-between p-12">
             <div
-              tw="w-2/3 bg-black bg-opacity-90 rounded-2xl p-12 text-white flex flex-col gap-6 max-h-full"
+              tw="w-2/3 bg-black bg-opacity-90 rounded-2xl p-12 text-white flex flex-col max-h-full"
               style={{
                 boxShadow:
                   "0px 2px 12px 1px hsla(263, 77%, 31%, 0.1), 0px 16px 12px -3px hsla(263, 77%, 31%, 0.08), 0px 32px 24px -6px hsla(263, 77%, 31%, 0.16), 0px 40px 40px -12px hsla(263, 74%, 41%, 0.06), 0px -64px 120px 80px hsla(263, 100%, 94%, 0.06)",
@@ -101,27 +99,17 @@ export async function GET(request: Request) {
                     fill="#B8FBF6"
                   />
                 </svg>
-                <span tw="text-4xl block mx-4">
+                <p tw="text-4xl mx-4">
                   ethereum.org/{slugString.split("/")[0]}
-                </span>
+                </p>
               </div>
 
-              {/* Main content */}
-              <div tw="flex flex-col gap-4">
-                {title && (
-                  <h1 tw="text-7xl font-bold leading-tight">
-                    {title.split(" | ")[0]}
-                  </h1>
-                )}
-
-                {description && (
-                  <p tw="text-3xl text-gray-200 leading-snug">
-                    {description.length > 160
-                      ? description.slice(0, 120).replace(/\s+\S*$/, "") + "..."
-                      : description}
-                  </p>
-                )}
-              </div>
+              {/* Main title */}
+              {title && (
+                <h1 tw="text-7xl font-bold leading-tight">
+                  {title.split(" | ")[0]}
+                </h1>
+              )}
             </div>
           </div>
         )}
