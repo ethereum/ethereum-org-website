@@ -1,5 +1,5 @@
 import { Children, type ReactElement } from "react"
-import { Check, Copy } from "lucide-react"
+import { Clipboard, ClipboardCheck } from "lucide-react"
 
 import { Button } from "./ui/buttons/Button"
 import {
@@ -43,11 +43,13 @@ const CodeModal = ({ children, isOpen, setIsOpen, title }: CodeModalProps) => {
         >
           {hasCopied ? (
             <>
-              <Check /> {t("copied")}
+              {t("copied")}
+              <ClipboardCheck className="ms-1" />
             </>
           ) : (
             <>
-              <Copy /> {t("copy")}
+              {t("copy")}
+              <Clipboard className="ms-1" />
             </>
           )}
         </Button>

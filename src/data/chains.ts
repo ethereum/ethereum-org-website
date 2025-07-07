@@ -1452,6 +1452,17 @@ const chains = [
     chain: "Liveplex OracleEVM Network",
   },
   {
+    name: "Reddio",
+    infoURL: "https://www.reddio.com",
+    chainId: 50342,
+    nativeCurrency: {
+      name: "Reddio",
+      symbol: "RDO",
+      decimals: 18,
+    },
+    chain: "ETH",
+  },
+  {
     name: "BirdLayer",
     infoURL: "https://www.dodochain.com",
     chainId: 53456,

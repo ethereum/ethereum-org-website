@@ -1,5 +1,5 @@
 import { pick } from "lodash"
-import { HelpCircle } from "lucide-react"
+import { Info } from "lucide-react"
 import {
   getMessages,
   getTranslations,
@@ -95,6 +95,7 @@ const loadData = dataLoader<[CoinGeckoCoinMarketResponse]>(
 async function Page({ params }: { params: Promise<{ locale: Lang }> }) {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: "page-stablecoins" })
+  const tCommon = await getTranslations({ locale, namespace: "common" })
 
   setRequestLocale(locale)
 
@@ -249,7 +250,7 @@ async function Page({ params }: { params: Promise<{ locale: Lang }> }) {
 
   const tooltipContent = (
     <div>
-      {t("common:data-provided-by")}{" "}
+      {tCommon("data-provided-by")}{" "}
       <InlineLink href="https://www.coingecko.com/en/api">
         coingecko.com
       </InlineLink>
@@ -556,9 +557,9 @@ async function Page({ params }: { params: Promise<{ locale: Lang }> }) {
             </div>
 
             <h3 id="stablecoin-markets" className="mb-8 mt-12">
-              {t("page-stablecoins-top-coins")}
+              {t("page-stablecoins-top-coins")}&nbsp;
               <Tooltip content={tooltipContent}>
-                <HelpCircle className="ms-2 fill-body text-md" />
+                <Info className="size-4" />
               </Tooltip>
             </h3>
 
