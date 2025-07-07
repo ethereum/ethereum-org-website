@@ -22,7 +22,7 @@ Ethereum.org is the primary educational hub for Ethereum, offering beginner-frie
 
 ### Educational Resources
 - [Quizzes](https://ethereum.org/quizzes/): Test your Ethereum knowledge
-- [Glossary](https://ethereum.org/content/glossary/index.md): Definitions of key terms
+- [Glossary](https://ethereum.org/glossary/): Definitions of key terms
 
 ## Use
 
