@@ -1,10 +1,10 @@
 import { getLocale, getTranslations } from "next-intl/server"
 
 import { Image } from "@/components/Image"
-import ParallaxImage from "@/components/Image/ParallaxImage/server"
+import ParallaxImage from "@/components/Image/ParallaxImage/lazy"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 
-import Countdown from "./CountDown/server"
+import Countdown from "./CountDown/lazy"
 import { getTimeUnitTranslations } from "./utils"
 
 import TenYearBackgroundImage from "@/public/images/10-year-anniversary/10-year-background.png"

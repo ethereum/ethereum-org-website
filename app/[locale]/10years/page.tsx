@@ -23,13 +23,13 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { BASE_TIME_UNIT } from "@/lib/constants"
 
-import AdoptionSwiper from "./_components/AdoptionSwiper/server"
-import CountDown from "./_components/CountDown/server"
+import AdoptionSwiper from "./_components/AdoptionSwiper/lazy"
+import CountDown from "./_components/CountDown/lazy"
 import { adoptionStyles } from "./_components/data"
-import InnovationSwiper from "./_components/InnovationSwiper/server"
-import TenYearGlobe from "./_components/TenYearGlobe/server"
+import InnovationSwiper from "./_components/InnovationSwiper/lazy"
+import TenYearGlobe from "./_components/TenYearGlobe/lazy"
 import TenYearHero from "./_components/TenYearHero"
-import Stories from "./_components/UserStories/server"
+import Stories from "./_components/UserStories/lazy"
 import {
   getAdoptionCards,
   getInnovationCards,

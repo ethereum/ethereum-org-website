@@ -1,8 +1,8 @@
 import { getTranslations } from "next-intl/server"
 
 import { Image } from "@/components/Image"
-import ParallaxImage from "@/components/Image/ParallaxImage/server"
-import Morpher from "@/components/Morpher/server"
+import ParallaxImage from "@/components/Image/ParallaxImage/lazy"
+import Morpher from "@/components/Morpher/lazy"
 
 import TenYearBackgroundImage from "@/public/images/10-year-anniversary/10-year-background.png"
 import TenYearGraphicImage from "@/public/images/10-year-anniversary/10-year-graphic.png"
