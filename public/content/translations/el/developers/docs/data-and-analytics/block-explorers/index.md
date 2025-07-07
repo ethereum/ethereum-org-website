@@ -238,9 +238,9 @@ sidebarDepth: 3
 
 ## Εξερευνητές Block {#block-explorers}
 
-- [Etherscan](https://etherscan.io/) - ένας εξερευνητής μπλοκ που μπορείτε να χρησιμοποιήσετε για την ανάκτηση δεδομένων για το Ethereum Mainnet και το Goerli Testnet
+- [Etherscan](https://etherscan.io/) - ένας εξερευνητής μπλοκ που μπορείτε να χρησιμοποιήσετε για την ανάκτηση δεδομένων για το Ethereum Mainnet και Testnet
 - [3xpl](https://3xpl.com/ethereum): Ένας ανοιχτού κώδικα εξερευνητής Ethereum χωρίς διαφημίσεις που επιτρέπει τη λήψη των συνόλων δεδομένων του.
-- [Beaconcha.in](https://beaconcha.in/): Ένας ανοιχτού κώδικα εξερευνητής μπλοκ για το κύριο δίκτυο του Ethereum και το δοκιμαστικό δίκτυο Goerli.
+- [Beaconcha.in](https://beaconcha.in/): Ένας ανοιχτού κώδικα εξερευνητής μπλοκ για το κύριο δίκτυο και το δοκιμαστικό του Ethereum.
 - [Blockchair](https://blockchair.com/ethereum): ο πιο ιδιωτικός εξερευνητής Ethereum. Επίσης για ταξινόμηση και φιλτράρισμα δεδομένων του mempool.
 - [Etherchain](https://www.etherchain.org/) - ένας εξερευνητής μπλοκ για το κεντρικό δίκτυο του Ethereum
 - [Ethplorer](https://ethplorer.io/): Ένας εξερευνητής μπλοκ με έμφαση στα tokens για το κύριο δίκτυο του Ethereum και το δοκιμαστικό δίκτυο Kovan.
