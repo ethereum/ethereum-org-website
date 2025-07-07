@@ -22,7 +22,7 @@ Ethereum.org is the primary educational hub for Ethereum, offering beginner-frie
 
 ### Educational Resources
 - [Quizzes](https://ethereum.org/quizzes/): Test your Ethereum knowledge
-- [Glossary](https://ethereum.org/glossary/): Definitions of key terms
+- [Glossary](https://ethereum.org/content/glossary/index.md): Definitions of key terms
 
 ## Use
 
@@ -35,10 +35,10 @@ Ethereum.org is the primary educational hub for Ethereum, offering beginner-frie
 ### Practical Guides
 - [Guides Overview](https://ethereum.org/content/guides/index.md): Complete guide collection
 - [How to Create an Ethereum Account](https://ethereum.org/content/guides/how-to-create-an-ethereum-account/index.md)
-- [How to Use a Wallet](https://ethereum.org/content/guides/how-to-use-a-wallet/index.md)
-- [How to Swap Tokens](https://ethereum.org/content/guides/how-to-swap-tokens/index.md)
-- [How to Use a Bridge](https://ethereum.org/content/guides/how-to-use-a-bridge/index.md)
-- [How to Revoke Token Access](https://ethereum.org/content/guides/how-to-revoke-token-access/index.md)
+- [How to Use a Wallet](https://ethereum.org/content/guides/how-to-use-a-wallet/index.md): Managing your crypto wallet
+- [How to Swap Tokens](https://ethereum.org/content/guides/how-to-swap-tokens/index.md): Exchanging tokens on decentralized exchanges
+- [How to Use a Bridge](https://ethereum.org/content/guides/how-to-use-a-bridge/index.md): Moving assets between blockchains
+- [How to Revoke Token Access](https://ethereum.org/content/guides/how-to-revoke-token-access/index.md): Managing token permissions
 
 ### Use Cases
 - [Stablecoins](https://ethereum.org/stablecoins/): Dollar-pegged cryptocurrencies
@@ -58,9 +58,9 @@ Ethereum.org is the primary educational hub for Ethereum, offering beginner-frie
 
 ### Staking
 - [Staking Overview](https://ethereum.org/staking/): Earning rewards by validating
-- [Solo Staking](https://ethereum.org/content/staking/solo/index.md): Run your own validator
-- [Staking as a Service](https://ethereum.org/content/staking/saas/index.md): Managed staking solutions
-- [Pooled Staking](https://ethereum.org/content/staking/pools/index.md): Stake with others
+- [Solo Staking](https://ethereum.org/content/staking/solo/index.md): Run your own validator for maximum rewards and control
+- [Staking as a Service](https://ethereum.org/content/staking/saas/index.md): Managed staking solutions with professional operators
+- [Pooled Staking](https://ethereum.org/content/staking/pools/index.md): Stake with others to meet 32 ETH requirement
 
 ### Layer 2 Networks
 - [Layer 2 Introduction](https://ethereum.org/layer-2/): Scaling solutions overview
@@ -75,6 +75,7 @@ Ethereum.org is the primary educational hub for Ethereum, offering beginner-frie
 - [Tutorials](https://ethereum.org/developers/tutorials/): Step-by-step guides
 - [Learning Tools](https://ethereum.org/developers/learning-tools/): Interactive education
 - [Local Development](https://ethereum.org/developers/local-environment/): Setup guides
+- [Community Grants](https://ethereum.org/content/community/grants/index.md): Funding opportunities for developers
 
 ### Documentation
 - [Developer Documentation](https://ethereum.org/content/developers/docs/index.md): Complete technical reference
@@ -192,22 +193,23 @@ Ethereum.org is the primary educational hub for Ethereum, offering beginner-frie
 
 ### Community
 - [Community Hub](https://ethereum.org/community/): Get involved with Ethereum
-- [Ethereum Online](https://ethereum.org/content/community/online/index.md): Virtual communities
-- [Ethereum Events](https://ethereum.org/content/community/events/index.md): Meetups and conferences
-- [Community Grants](https://ethereum.org/content/community/grants/index.md): Funding opportunities
+- [Ethereum Online](https://ethereum.org/content/community/online/index.md): Virtual communities and platforms
+- [Ethereum Events](https://ethereum.org/content/community/events/index.md): Meetups and conferences worldwide
+- [Community Grants](https://ethereum.org/content/community/grants/index.md): Funding opportunities for ecosystem projects
 - [Bug Bounty Program](https://ethereum.org/bug-bounty/): Security vulnerability rewards
-- [Code of Conduct](https://ethereum.org/content/community/code-of-conduct/index.md): Community guidelines
+- [Code of Conduct](https://ethereum.org/content/community/code-of-conduct/index.md): Community guidelines and expectations
+- [Open Research](https://ethereum.org/content/community/research/index.md): Academic research and collaboration
 
 ### Contributing
 - [Contributing Guide](https://ethereum.org/content/contributing/index.md): How to contribute to ethereum.org
-- [Translation Program](https://ethereum.org/content/contributing/translation-program/index.md): Localization efforts
-- [Content Resources](https://ethereum.org/content/contributing/content-resources/index.md): Writing guidelines
-- [Design Contributions](https://ethereum.org/content/contributing/design/index.md): Design resources
+- [Translation Program](https://ethereum.org/content/contributing/translation-program/index.md): Localization efforts and language support
+- [Content Resources](https://ethereum.org/content/contributing/content-resources/index.md): Writing guidelines and standards
+- [Design Contributions](https://ethereum.org/content/contributing/design/index.md): Design resources and style guides
 
 ### About
-- [About Ethereum.org](https://ethereum.org/content/about/index.md): Mission and vision
-- [Ethereum Foundation](https://ethereum.org/content/foundation/index.md): Supporting organization
-- [Ethereum Brand Assets](https://ethereum.org/assets/): Official logos and branding
+- [About Ethereum.org](https://ethereum.org/content/about/index.md): Mission, vision, and team
+- [Ethereum Foundation](https://ethereum.org/content/foundation/index.md): Supporting organization and governance
+- [Ethereum Brand Assets](https://ethereum.org/assets/): Official logos and branding guidelines
 
 ### External Resources
 - [Ethereum Foundation Blog](https://blog.ethereum.org/): Official announcements and updates
@@ -217,22 +219,22 @@ Ethereum.org is the primary educational hub for Ethereum, offering beginner-frie
 ## Research
 
 ### Foundational Documents
-- [Ethereum Whitepaper](https://ethereum.org/content/whitepaper/index.md): Original vision document
-- [Ethereum Improvement Proposals (EIPs)](https://ethereum.org/content/eips/index.md): Protocol upgrades
-- [Ethereum History](https://ethereum.org/content/history/index.md): Timeline and milestones
+- [Ethereum Whitepaper](https://ethereum.org/content/whitepaper/index.md): Original vision document by Vitalik Buterin
+- [Ethereum Improvement Proposals (EIPs)](https://ethereum.org/content/eips/index.md): Protocol upgrade specifications
+- [Ethereum History](https://ethereum.org/content/history/index.md): Timeline and key milestones
 
 ### Protocol Development
-- [Ethereum Roadmap](https://ethereum.org/roadmap/): Future development plans
-- [Roadmap Security](https://ethereum.org/roadmap/security/): Security improvements
-- [Roadmap Scaling](https://ethereum.org/roadmap/scaling/): Scalability solutions
-- [Roadmap User Experience](https://ethereum.org/roadmap/user-experience/): UX improvements
-- [Roadmap Future-Proofing](https://ethereum.org/roadmap/future-proofing/): Long-term sustainability
+- [Ethereum Roadmap](https://ethereum.org/roadmap/): Future development plans and priorities
+- [Roadmap Security](https://ethereum.org/content/roadmap/security/index.md): Security improvements and cryptographic advances
+- [Roadmap Scaling](https://ethereum.org/content/roadmap/scaling/index.md): Scalability solutions and layer 2 integration
+- [Roadmap User Experience](https://ethereum.org/content/roadmap/user-experience/index.md): UX improvements and account abstraction
+- [Roadmap Future-Proofing](https://ethereum.org/content/roadmap/future-proofing/index.md): Long-term sustainability and quantum resistance
 
 ### Research Areas
-- [Open Research](https://ethereum.org/community/research/): Academic research
-- [Governance](https://ethereum.org/content/governance/index.md): Protocol governance
-- [Energy Consumption](https://ethereum.org/content/energy-consumption/index.md): Environmental impact
-- [Trillion Dollar Security](https://ethereum.org/trillion-dollar-security/): Ethereum security analysis
+- [Open Research](https://ethereum.org/content/community/research/index.md): Academic research and collaboration opportunities
+- [Governance](https://ethereum.org/content/governance/index.md): Protocol governance and decision-making processes
+- [Energy Consumption](https://ethereum.org/content/energy-consumption/index.md): Environmental impact and sustainability
+- [Trillion Dollar Security](https://ethereum.org/trillion-dollar-security/): Ethereum security analysis and economics
 
 ## Key Resources
 
@@ -258,4 +260,4 @@ Ethereum.org is the primary educational hub for Ethereum, offering beginner-frie
 ### Terms and Policies
 - [Privacy Policy](https://ethereum.org/content/privacy-policy/index.md): Data protection and privacy practices
 - [Terms of Use](https://ethereum.org/content/terms-of-use/index.md): Website usage terms and conditions
-- [Cookie Policy](https://ethereum.org/content/cookie-policy/index.md): Information about cookie usage
+- [Cookie Policy](https://ethereum.org/content/cookie-policy/index.md): Information about cookie usage and tracking
