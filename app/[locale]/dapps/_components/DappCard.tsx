@@ -33,7 +33,7 @@ const DappCard = ({
     >
       <div
         className={cn(
-          "flex overflow-hidden rounded-xl border p-2",
+          "flex overflow-hidden rounded-xl border",
           `w-${imageSize} h-${imageSize}`
         )}
       >
