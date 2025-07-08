@@ -1,6 +1,6 @@
 ---
 title: Restaking
-metaTitle: What is Restaking? | Benefits and Use of Restaking
+metaTitle: What is restaking? | Benefits and use of restaking
 description: Use staked ETH to secure other decentralized services and earn extra rewards.
 lang: en
 template: use-cases
@@ -24,15 +24,16 @@ People all over the world lock away (or “stake”) [ether (ETH)](/eth/) in sma
 Restaking is a way for [stakers](/staking/) to extend this security to other Ethereum services. In return, they earn extra rewards, however they’re putting their staked ETH at more risk.
 
 **Restaking explained in 7 minutes**
+
 <YouTube id="5r0SooSQFJg" />
 
-## What is Restaking? {#what-is-restaking}
+## What is restaking? {#what-is-restaking}
 
 Restaking is when stakers use their ETH to secure other decentralized services known as “Actively Validated Services” (AVSs). In return, restakers get additional rewards from AVSs on top of their regular staking rewards.
 
 In the same way that many ETH stakers run Ethereum validation software, many restakers run specialized AVS software.
 
-## Staking vs Restaking {#staking-vs-restaking}
+## Staking vs restaking {#staking-vs-restaking}
 
 | Staking                        | Restaking                                         |
 | ------------------------------ | ------------------------------------------------- |
