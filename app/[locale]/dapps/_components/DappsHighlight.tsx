@@ -43,7 +43,7 @@ const DappsHighlight = ({ dapps }: DappsHighlightProps) => {
                   <div className="relative mb-2 aspect-[2/1] w-full">
                     <Image
                       src={dapp.bannerImage}
-                      alt=""
+                      alt={`${dapp.name} application banner showing the main interface`}
                       fill
                       className="rounded-xl object-cover"
                     />
