@@ -5,7 +5,7 @@ import { newToCrypto } from "@/data/wallets/new-to-crypto"
 import OneInchWalletImage from "@/public/images/wallets/1inch.png"
 import AlphaWalletImage from "@/public/images/wallets/alpha.png"
 import AmbireImage from "@/public/images/wallets/ambire.png"
-import ArgentImage from "@/public/images/wallets/argent.png"
+import ReadyImage from "@/public/images/wallets/ready.png"
 import AuroxImage from "@/public/images/wallets/aurox.png"
 import BitgetImage from "@/public/images/wallets/bitget.png"
 import BlockWalletImage from "@/public/images/wallets/blockwallet.png"
@@ -151,7 +151,7 @@ export const walletsData: WalletData[] = [
   {
     last_updated: "2025-07-08",
     name: "Ready Wallet",
-    image: ArgentImage,
+    image: ReadyImage,
     twBackgroundColor: "bg-[#FFFFFF]",
     twGradiantBrandColor: "from-[#ffffff]",
     url: "https://www.ready.co/",
