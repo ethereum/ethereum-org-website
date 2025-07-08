@@ -9,7 +9,7 @@ import Breadcrumbs from "@/components/Breadcrumbs"
 import { SimpleHero } from "@/components/Hero"
 import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
-import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
+import SubpageCard from "@/components/SubpageCard"
 
 import { getHighlightedDapps, getStaffPickDapps } from "@/lib/utils/dapps"
 import { dataLoader } from "@/lib/utils/data/dataLoader"
@@ -95,25 +95,13 @@ const Page = async ({ params }: { params: { locale: string } }) => {
           <h2>Application categories</h2>
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
             {Object.values(dappsCategories).map((category) => (
-              <LinkBox
+              <SubpageCard
                 key={category.slug}
-                className="hover:bg-roadmap-gradient-secondary-hover flex flex-col rounded-3xl border border-[rgba(159,43,212,0.11)] bg-card-gradient p-6 hover:shadow-lg"
-              >
-                <div className="mb-3 flex gap-4">
-                  <div className="mt-1">
-                    <category.icon className="h-8 w-8 text-primary" />
-                  </div>
-                  <div className="flex flex-col gap-2">
-                    <LinkOverlay
-                      href={`/dapps/categories/${category.slug}`}
-                      className="text-body no-underline"
-                    >
-                      <h3>{category.name}</h3>
-                    </LinkOverlay>
-                    <p className="text-body">{category.description}</p>
-                  </div>
-                </div>
-              </LinkBox>
+                title={category.name}
+                description={category.description}
+                icon={<category.icon className="h-8 w-8" />}
+                href={`/dapps/categories/${category.slug}`}
+              />
             ))}
           </div>
         </div>
