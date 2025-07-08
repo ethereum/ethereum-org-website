@@ -7,6 +7,11 @@ import type { ChildOnlyProp } from "@/lib/types"
 import { Center } from "@/components/ui/flex"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
+import withRestakingDark from "@/public/images/use-cases/with-restaking-dark.png"
+import withRestakingLight from "@/public/images/use-cases/with-restaking-light.png"
+import withoutRestakingDark from "@/public/images/use-cases/without-restaking-dark.png"
+import withoutRestakingLight from "@/public/images/use-cases/without-restaking-light.png"
+
 const Width60 = (props: ChildOnlyProp) => (
   <div className="w-full flex-[3]" {...props} />
 )
@@ -33,18 +38,14 @@ export default function TabbedSection() {
             <div className="flex justify-center">
               {/* Light Mode Image */}
               <Image
-                src="/images/use-cases/with_restaking-light.png"
+                src={withRestakingLight}
                 alt="Restaking diagram light mode"
-                width={400}
-                height={400}
                 className="block dark:hidden"
               />
               {/* Dark Mode Image */}
               <Image
-                src="/images/use-cases/with_restaking-dark.png"
+                src={withRestakingDark}
                 alt="Restaking diagram dark mode"
-                width={400}
-                height={400}
                 className="hidden dark:block"
               />
             </div>
@@ -54,18 +55,14 @@ export default function TabbedSection() {
             <div className="flex justify-center">
               {/* Light Mode Image */}
               <Image
-                src="/images/use-cases/without_restaking-light.png"
+                src={withoutRestakingLight}
                 alt="Restaking diagram light mode"
-                width={400}
-                height={400}
                 className="block dark:hidden"
               />
               {/* Dark Mode Image */}
               <Image
-                src="/images/use-cases/without_restaking-dark.png"
+                src={withoutRestakingDark}
                 alt="Restaking diagram dark mode"
-                width={400}
-                height={400}
                 className="hidden dark:block"
               />
             </div>
