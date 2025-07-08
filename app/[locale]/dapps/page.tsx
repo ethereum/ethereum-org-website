@@ -6,9 +6,9 @@ import {
 } from "next-intl/server"
 
 import Breadcrumbs from "@/components/Breadcrumbs"
+import { SimpleHero } from "@/components/Hero"
 import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
-import { ButtonLink } from "@/components/ui/buttons/Button"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 
 import { getHighlightedDapps, getStaffPickDapps } from "@/lib/utils/dapps"
@@ -51,19 +51,19 @@ const Page = async ({ params }: { params: { locale: string } }) => {
   const messages = pick(allMessages, requiredNamespaces)
   return (
     <I18nProvider locale={locale} messages={messages}>
-      <div className="flex flex-col gap-4 px-4 py-10 md:px-8">
-        <Breadcrumbs slug={"/dapps"} />
-        <h1>Apps</h1>
-        <p>
-          Discover a list of curated applications that run on ethereum and layer
-          2 networks
-        </p>
-        <div>
-          <ButtonLink variant="outline" isSecondary href="/dapps/learn">
-            Learn about apps
-          </ButtonLink>
-        </div>
-      </div>
+      <SimpleHero
+        breadcrumbs={<Breadcrumbs slug={"/dapps"} />}
+        title="Apps"
+        subtitle="Discover a list of curated applications that run on ethereum and layer 2 networks"
+        buttons={[
+          {
+            href: "/dapps/learn",
+            label: "Learn about apps",
+            variant: "outline",
+            isSecondary: true,
+          },
+        ]}
+      />
 
       <MainArticle className="flex flex-col gap-32 py-10">
         <div className="flex flex-col gap-8 px-4 md:px-8">

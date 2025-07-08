@@ -72,8 +72,8 @@ const Page = async ({
 
   return (
     <I18nProvider locale={locale} messages={messages}>
-      <div className="flex flex-col-reverse justify-between gap-4 px-4 py-10 md:px-8 lg:flex-row">
-        <div className="flex flex-1 flex-col gap-4">
+      <div className="flex flex-col-reverse justify-between gap-8 px-4 pb-4 pt-11 md:px-8 lg:flex-row">
+        <div className="mb-4 flex flex-1 flex-col gap-8">
           <Breadcrumb>
             <BreadcrumbList>
               <BreadcrumbItem>
@@ -87,8 +87,12 @@ const Page = async ({
               </BreadcrumbItem>
             </BreadcrumbList>
           </Breadcrumb>
-          <h1>{category.name} apps</h1>
-          <p>{category.description}</p>
+          <h1 className="text-[2.5rem] leading-[1.4] md:text-5xl">
+            {category.name} apps
+          </h1>
+          <div className="text-xl leading-[1.4] text-body-medium">
+            {category.description}
+          </div>
         </div>
         <div className="flex flex-1 items-start justify-start lg:items-center lg:justify-center">
           <CategoryIcon className="h-20 w-20 text-primary lg:h-36 lg:w-52" />

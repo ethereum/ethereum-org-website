@@ -108,7 +108,7 @@ const TopDapps = ({ dappsData }: TopDappsProps) => {
               </LinkBox>
               <div className="flex flex-col">
                 {dappsData[category].slice(0, 5).map((dapp) => (
-                  <div key={dapp.name} className="border-b">
+                  <div key={dapp.name} className="border-b last:border-b-0">
                     <DappCard
                       dapp={dapp}
                       imageSize={imageSize}
