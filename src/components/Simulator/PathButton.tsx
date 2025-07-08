@@ -17,7 +17,7 @@ export const PathButton = ({ pathSummary, handleClick }: PathButtonProps) => {
       onClick={handleClick}
     >
       <span className="me-2">
-        <Icon />
+        <Icon className="size-8" />
       </span>
       <Flex className="flex-col" asChild>
         <span>

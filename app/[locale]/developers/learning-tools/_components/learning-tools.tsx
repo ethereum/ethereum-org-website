@@ -1,7 +1,7 @@
 "use client"
 
 import { BaseHTMLAttributes } from "react"
-import shuffle from "lodash/shuffle"
+import { shuffle } from "lodash"
 
 import { LearningTool } from "@/lib/types"
 

@@ -614,11 +614,11 @@ def burn(_tokenId: uint256):
 
 Bir token'ı transfer etmesine izin verilen herkesin onu yakmasına izin verilir. Bir yakma işlemi, sıfır adresine aktarıma eş değer görünse de, sıfır adresi aslında token'ı almaz. Bu, token için kullanılan tüm depolama alanını boşaltmamızı sağlar ve bu da işlemin gasz maliyetini azaltabilir.
 
-# Bu Sözleşmeyi Kullanmak {#using-contract}
+## Bu Sözleşmeyi Kullanmak {#using-contract}
 
 Solidity'nin aksine, Vyper'ın kalıtımı yoktur. Bu, kodu daha net hâle getirmek ve dolayısıyla güvenliğini sağlamak için bilinçli bir tasarım seçimidir. Bu nedenle, kendi Vyper ERC-721 sözleşmenizi oluşturmak için [bu sözleşmeyi](https://github.com/vyperlang/vyper/blob/master/examples/tokens/ERC721.vy) alın ve istediğiniz iş mantığını uygulamak için değiştirin.
 
-## Sonuç {#conclusion}
+### Sonuç {#conclusion}
 
 İnceleme için, bu sözleşmedeki en önemli fikirlerden bazıları şunlardır:
 
