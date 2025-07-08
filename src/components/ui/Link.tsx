@@ -106,7 +106,7 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
         {isMailto ? (
           <span className="text-nowrap">
             {!hideArrow && (
-              <Mail className="mb-0.5 me-1 inline-block size-[1em] shrink-0" />
+              <Mail className="!mb-0.5 me-1 inline-block size-[1em] shrink-0" />
             )}
             {children}
           </span>
@@ -118,8 +118,9 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
         </VisuallyHidden>
         {!hideArrow && !isMailto && (
           <ExternalLink
+            data-label="arrow"
             className={cn(
-              "ms-1 inline size-4 shrink-0 align-middle",
+              "!mb-0.5 ms-1 inline-block size-[0.875em] max-h-4 max-w-4 shrink-0",
               twFlipForRtl
             )}
           />

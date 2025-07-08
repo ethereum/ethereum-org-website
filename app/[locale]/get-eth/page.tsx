@@ -100,6 +100,7 @@ export default async function Page({
 }) {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: "page-get-eth" })
+  const tCommon = await getTranslations({ locale, namespace: "common" })
 
   const tokenSwaps: CardListCardProps[] = [
     {
@@ -241,7 +242,7 @@ export default async function Page({
         <Stack className="gap-16">
           <p>
             <em>
-              {t("common:listing-policy-disclaimer")}{" "}
+              {tCommon("listing-policy-disclaimer")}{" "}
               <InlineLink href="https://github.com/ethereum/ethereum-org-website/issues/new/choose">
                 {t("listing-policy-raise-issue-link")}
               </InlineLink>
