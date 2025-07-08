@@ -95,7 +95,7 @@ const Page = async ({
           </div>
         </div>
         <div className="flex flex-1 items-start justify-start lg:items-center lg:justify-center">
-          <CategoryIcon className="h-20 w-20 text-primary lg:h-36 lg:w-52" />
+          <CategoryIcon className="h-20 w-20 text-primary lg:h-40 lg:w-40" />
         </div>
       </div>
 
