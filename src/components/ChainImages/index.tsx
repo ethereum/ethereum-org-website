@@ -27,7 +27,7 @@ export const ChainImages = ({
             <Tooltip content={chainData?.name || ""}>
               <Image
                 src={chainData?.logo || ""}
-                alt=""
+                alt={`${chain} blockchain network`}
                 className="rounded-full"
                 style={{
                   objectFit: "contain",
