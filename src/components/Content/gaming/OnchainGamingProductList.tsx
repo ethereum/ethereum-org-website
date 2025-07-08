@@ -1,3 +1,4 @@
+// TODO: Update for intl
 import ProductListComponent from "@/components/ProductList"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Tag } from "@/components/ui/tag"
