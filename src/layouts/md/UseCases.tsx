@@ -6,8 +6,11 @@ import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import AiAgentProductLists from "@/components/Content/ai-agents/AiAgentProductLists"
 import BuildYourOwnAIAgent from "@/components/Content/ai-agents/BuildYourOwnAIAgent"
 import PredictionMarketLists from "@/components/Content/prediction-markets/PredictionMarketLists"
-import {Eigen_Layer,Restaking_List} from "@/components/Content/restaking/Restaking_List"
-import TabbedSection from "@/components/Content/restaking/Restaking_Tab"
+import {
+  EigenLayer,
+  RestakingList,
+} from "@/components/Content/restaking/RestakingList"
+import TabbedSection from "@/components/Content/restaking/RestakingTab"
 import Emoji from "@/components/Emoji"
 import { ContentHero } from "@/components/Hero"
 import InlineLink from "@/components/ui/Link"
@@ -25,12 +28,11 @@ export const useCasesComponents = {
   AiAgentProductLists,
   BuildYourOwnAIAgent,
 
-  Restaking_List,
+  RestakingList,
   TabbedSection,
-  Eigen_Layer,
+  EigenLayer,
 
   PredictionMarketLists,
-
 }
 
 type UseCasesLayoutProps = ChildOnlyProp &
@@ -91,13 +93,13 @@ export const UseCasesLayout = ({
         },
       },
       {
-        text: t("template-usecase:template-usecase-dropdown-restaking"), 
+        text: t("template-usecase:template-usecase-dropdown-restaking"),
         href: "/restaking/",
         matomo: {
           eventCategory: "use cases menu",
           eventAction: "click",
           eventName: "restaking",
-        }
+        },
       },
       {
         text: t("template-usecase:template-usecase-dropdown-payments"),
