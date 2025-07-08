@@ -57,9 +57,6 @@ const config = {
         tooltip: "1800",
       },
       colors: {
-        customCyan: "#E1FEFA",
-        customYellow: "#FEF3C7",
-        customPurple: "#D1D1FF",
         gray: {
           100: "hsla(var(--gray-100))",
           150: "hsla(var(--gray-150))",
