@@ -2,7 +2,7 @@
 title: Onchain Gaming
 lang: en
 template: use-cases
-image: /images/heroes/ai_agent.png
+image: /images/robot-help-bar.png
 sidebarDepth: 2
 summaryPoint1: Second generation of Play-to-Earn games is emerging
 summaryPoint2: Higher quality games are starting to leverage blockchain
