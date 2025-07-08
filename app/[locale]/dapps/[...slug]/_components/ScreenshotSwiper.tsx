@@ -38,7 +38,7 @@ const ScreenshotSwiper = ({ screenshots, dappName }: ScreenshotSwiperProps) => {
           <SwiperSlide key={screenshot}>
             <Image
               src={screenshot}
-              alt={dappName}
+              alt={`Screenshot ${index + 1} of ${dappName} showing the application interface`}
               width={340}
               height={700}
               className="h-[350px] w-[170px] rounded-lg object-cover"
