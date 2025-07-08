@@ -101,15 +101,6 @@ export const UseCasesLayout = ({
         },
       },
       {
-        text: t("template-usecase:template-usecase-dropdown-restaking"),
-        href: "/restaking/",
-        matomo: {
-          eventCategory: "use cases menu",
-          eventAction: "click",
-          eventName: "restaking",
-        },
-      },
-      {
         text: t("template-usecase:template-usecase-dropdown-payments"),
         href: "/payments/",
         matomo: {
@@ -181,6 +172,15 @@ export const UseCasesLayout = ({
           eventCategory: "use cases menu",
           eventAction: "click",
           eventName: "real-world-assets",
+        },
+      },
+      {
+        text: t("template-usecase:template-usecase-dropdown-restaking"),
+        href: "/restaking/",
+        matomo: {
+          eventCategory: "use cases menu",
+          eventAction: "click",
+          eventName: "restaking",
         },
       },
     ],
