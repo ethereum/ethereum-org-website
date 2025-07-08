@@ -1,6 +1,6 @@
 import { ComponentPropsWithoutRef } from "react"
+import { Check } from "lucide-react"
 import { useLocale } from "next-intl"
-import { BsCheck } from "react-icons/bs"
 
 import type { LocaleDisplayInfo } from "@/lib/types"
 
@@ -73,7 +73,10 @@ const MenuItem = ({ displayInfo, ...props }: ItemProps) => {
           <p className="text-xs uppercase text-body">{sourceName}</p>
         </div>
         {isCurrent && (
-          <BsCheck className="text-2xl text-primary-high-contrast" />
+          <Check
+            aria-hidden={true}
+            className="text-2xl text-primary-high-contrast"
+          />
         )}
       </div>
       <p className="max-w-full text-xs lowercase text-body-medium">

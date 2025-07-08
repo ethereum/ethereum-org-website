@@ -5,7 +5,6 @@ import { Image } from "@/components/Image"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Flex } from "@/components/ui/flex"
 import { List, ListItem } from "@/components/ui/list"
-import { Tag } from "@/components/ui/tag"
 
 import { cn } from "@/lib/utils/cn"
 
@@ -17,8 +16,7 @@ type Content = {
   image?: ImageProps["src"]
   alt: string
   id?: string
-  tag?: string
-  colorVar?: string
+  className?: string
 }
 
 export type ProductListProps = {
@@ -51,8 +49,7 @@ const ProductList = ({ actionLabel, content, category }: ProductListProps) => {
               alt,
               id,
               contentItems,
-              tag,
-              colorVar,
+              className,
             },
             idx
           ) => (
@@ -61,7 +58,8 @@ const ProductList = ({ actionLabel, content, category }: ProductListProps) => {
               color="text"
               className={cn(
                 "mb-0 mt-8 flex pb-4",
-                idx !== content.length - 1 && "border-b"
+                idx !== content.length - 1 && "border-b",
+                className
               )}
             >
               <div className="w-20">
@@ -70,24 +68,14 @@ const ProductList = ({ actionLabel, content, category }: ProductListProps) => {
                     src={image}
                     alt={alt}
                     width={66}
+                    height={66}
                     className="rounded-xl shadow-lg dark:shadow-body-light"
                   />
                 )}
               </div>
               <Flex className="ms-4 w-full flex-col justify-between pb-4 sm:flex-row">
                 <div className="flex flex-1 flex-col gap-2">
-                  <div className="flex items-center gap-2">
-                    <div className="text-xl font-bold">{title}</div>
-                    {tag && (
-                      <Tag
-                        status="tag"
-                        size="small"
-                        className={cn("ms-2", colorVar)}
-                      >
-                        {tag}
-                      </Tag>
-                    )}
-                  </div>
+                  <div className="text-xl font-bold">{title}</div>
                   <div className="mb-0 text-sm opacity-60">{description}</div>
                   {contentItems && (
                     <div className="mb-0 flex flex-col gap-2 text-sm">

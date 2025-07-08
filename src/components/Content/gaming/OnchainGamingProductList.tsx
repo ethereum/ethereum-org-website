@@ -1,25 +1,32 @@
-// eslint-disable-next-line simple-import-sort/imports
 import ProductListComponent from "@/components/ProductList"
 import { ButtonLink } from "@/components/ui/buttons/Button"
+import { Tag } from "@/components/ui/tag"
 
 import axie from "@/public/images/gaming/axie.png"
 import dimensionals from "@/public/images/gaming/Dimensionals.png"
-import gods_unchained from "@/public/images/gaming/gods_unchained.png"
+import godsUnchained from "@/public/images/gaming/gods_unchained.png"
 import guildOfGuardians from "@/public/images/gaming/guildOfGuardians.png"
-import illuviem from "@/public/images/gaming/illuviem.png"
+import illuvium from "@/public/images/gaming/illuvium.png"
 import parallel from "@/public/images/gaming/parallel.png"
 import sandbox from "@/public/images/gaming/sandbox.png"
-import wagmi_defense from "@/public/images/gaming/wagmi_defense.png"
+import wagmiDefense from "@/public/images/gaming/wagmi_defense.png"
 import worldShards from "@/public/images/gaming/worldShards.png"
 
 const OnchainGamingProductList = ({ list }: { list: string }) => {
   const productListSets = {
     game: [
       {
-        title: "WAGMI Defense",
+        title: (
+          <>
+            <div className="text-xl font-bold">WAGMI Defense</div>
+            <Tag status="warning" size="small">
+              Tower defense
+            </Tag>
+          </>
+        ),
         description:
           "WAGMI Defense is a futuristic tower defense game where you protect your base from alien invaders. You can earn NFTs for in-game assets, which you can keep or trade.",
-        image: wagmi_defense,
+        image: wagmiDefense,
         alt: "WAGMI Defense logo",
         contentItems: [
           <ul key="wagmi-features">
@@ -39,14 +46,19 @@ const OnchainGamingProductList = ({ list }: { list: string }) => {
             </ButtonLink>
           </div>,
         ],
-        tag: "TOWER DEFENSE",
-        colorVar: "bg-customYellow text-black border-customYellow",
       },
       {
-        title: "Illuvium",
+        title: (
+          <>
+            <div className="text-xl font-bold">Illuvium</div>
+            <Tag status="error" size="small">
+              RPG
+            </Tag>
+          </>
+        ),
         description:
           "Open world RPG with arena mode. Illuvium is considered one of the first AAA games within the blockchain gaming community, due to its high production values, use of Unreal Engine, and substantial team and funding.",
-        image: illuviem,
+        image: illuvium,
         alt: "Illuvium logo",
         contentItems: [
           <div key="illuvium-button">
@@ -59,14 +71,19 @@ const OnchainGamingProductList = ({ list }: { list: string }) => {
             </ButtonLink>
           </div>,
         ],
-        tag: "RPG",
-        colorVar: "bg-customCyan text-black border-customCyan",
       },
       {
-        title: "Gods Unchained",
+        title: (
+          <>
+            <div className="text-xl font-bold">Gods Unchained</div>
+            <Tag status="success" size="small">
+              Card game
+            </Tag>
+          </>
+        ),
         description:
           "Gods Unchained is a free-to-play, trading card game where players own their cards as NFTs and battle in strategic matches to earn rewards.",
-        image: gods_unchained,
+        image: godsUnchained,
         alt: "Gods Unchained logo",
         contentItems: [
           <div key="gods-unchained-button">
@@ -79,8 +96,6 @@ const OnchainGamingProductList = ({ list }: { list: string }) => {
             </ButtonLink>
           </div>,
         ],
-        tag: "CARD GAME",
-        colorVar: "bg-customPurple text-black border-customPurple",
       },
     ],
     p2e: [
