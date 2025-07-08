@@ -26,7 +26,7 @@ const DappsTable = ({ dapps }: { dapps: DappData[] }) => {
 
   return (
     <div className="flex flex-col gap-7">
-      <div className="flex flex-row justify-between">
+      <div className="flex flex-row justify-between border-b pb-2">
         <div className="flex flex-row items-center gap-2">
           <p className="whitespace-nowrap">Filter by</p>
           <Select value={filterBy} onValueChange={setFilterBy}>
