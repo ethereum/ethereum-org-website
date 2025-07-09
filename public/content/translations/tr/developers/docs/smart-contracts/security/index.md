@@ -514,7 +514,7 @@ Varlık fiyatları için bir zincir üstünde kâhin sorgulaması yapmayı planl
 
 - **[Cyfrin](https://cyfrin.io)** - _Kripto güvenliğini ürünler ve akıllı sözleşme denetim hizmetleri aracılığıyla geliştiren Web3 güvenlik merkezi._
 
-- **[ImmuneBytes](https://www.immunebytes.com//smart-contract-audit/)** - _Deneyimli denetçilerden oluşan bir ekip ve sınıfının en iyisi araçlar ile blokzincir sistemleri için güvenlik denetimleri sunan Web3 güvenlik şirketi._
+- **[ImmuneBytes](https://immunebytes.com/smart-contract-audit/)** - _Deneyimli denetçilerden oluşan bir ekip ve sınıfının en iyisi araçlar ile blokzincir sistemleri için güvenlik denetimleri sunan Web3 güvenlik şirketi._
 
 - **[Oxorio](https://oxor.io/)** - _Kripto şirketleri ve DeFi projeleri için EVM, Solidity, ZK, Zincirler Arası teknolojilerinde uzmanlığa sahip akıllı sözleşme denetimleri ve blokzincir güvenlik hizmetleri._
 

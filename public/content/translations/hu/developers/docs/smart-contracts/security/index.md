@@ -515,7 +515,7 @@ Ha Ön azt tervezi, hogy egy láncon lévő orákulumot kérdez le eszközárak�
 
 - **[Cyfrin](https://cyfrin.io)** – _Web3 biztonsági erőmű, elősegíti kriptobiztonságot termékeken és okosszerződés-ellenőrzési szolgáltatásokon keresztül._
 
-- **[ImmuneBytes](https://www.immunebytes.com//smart-contract-audit/)** – _Web3 biztonsági cég, amely a blokkláncrendszerek biztonsági ellenőrzését kínálja tapasztalt auditorcsapattal és a legjobb eszközökkel._
+- **[ImmuneBytes](https://immunebytes.com/smart-contract-audit/)** – _Web3 biztonsági cég, amely a blokkláncrendszerek biztonsági ellenőrzését kínálja tapasztalt auditorcsapattal és a legjobb eszközökkel._
 
 - **[Oxorio](https://oxor.io/)** - _Okosszerződés-auditok és blokkláncbiztonsági szolgáltatások, szakértelem az EVM, Solidity, ZK, kriptocégek láncok közötti technológiái és DeFi projektek területén._
 

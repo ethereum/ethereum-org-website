@@ -515,7 +515,7 @@ Als u van plan bent om een on-chain oracle te raadplegen voor activaprijzen, geb
 
 - **[Cyfrin](https://cyfrin.io)** - _Web3-beveiligingskrachtpatser die cryptobeveiliging stimuleert via producten en auditservices voor smart contracts._
 
-- **[ImmuneBytes](https://www.immunebytes.com//smart-contract-audit/)** - _Web3-beveiligingsfirma die beveiligingsaudits aanbiedt voor blockchainsystemen via een team van ervaren auditors en eersteklas tools._
+- **[ImmuneBytes](https://immunebytes.com/smart-contract-audit/)** - _Web3-beveiligingsfirma die beveiligingsaudits aanbiedt voor blockchainsystemen via een team van ervaren auditors en eersteklas tools._
 
 - **[Oxorio](https://oxor.io/)** - _Audits van smart contracts en blockchain-beveiligingsservices met expertise in EVM, Solidity, ZK, Cross-chain tech voor cryptofirma's en DeFi-projecten._
 

@@ -23,7 +23,7 @@ Se você é novo no desenvolvimento de blockchain e não sabe por onde começar,
 >
 > Nós recomendamos você usar a [Sepolia](https://www.alchemy.com/overviews/sepolia-testnet) e [faucets Sepolia](https://sepoliafaucet.com/) para este tutorial.
 
-Na [parte 2](https://docs.alchemy.com/docs/interacting-with-a-smart-contract) deste tutorial, veremos como podemos interagir com nosso contrato inteligente, assim que for implantado aqui, e na [parte 3](https://docs.alchemy.com/docs/submitted-your-smart-contract-to-etherscan), abordaremos como publicá-lo no Etherscan.
+Na [parte 2](https://docs.alchemy.com/docs/interacting-with-a-smart-contract) deste tutorial, veremos como podemos interagir com nosso contrato inteligente, assim que for implantado aqui, e na [parte 3](https://docs.alchemy.com/docs/submitting-your-smart-contract-to-etherscan), abordaremos como publicá-lo no Etherscan.
 
 Caso surjam perguntas em qualquer momento, sinta-se à vontade para falar no Discord da [Alchemy](https://discord.gg/gWuC7zB)!
 
