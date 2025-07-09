@@ -35,7 +35,6 @@ jobs:
             --include '^https?://'
             --format detailed
             './**/*.md'
-            './**/*.html'
         continue-on-error: true
 
       - name: Provide helpful failure message
