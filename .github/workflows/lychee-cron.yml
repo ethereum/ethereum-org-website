@@ -1,7 +1,6 @@
 name: Check Links In Public Directory
 
 on:
-  pull_request:
   schedule:
     - cron: "0 0 1 * *" # Monthly run on the 1st day of every month at midnight UTC
   workflow_dispatch:
