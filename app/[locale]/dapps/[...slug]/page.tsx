@@ -265,7 +265,7 @@ const Page = async ({
 
         <div className="flex flex-col justify-between gap-10 bg-background-highlight px-4 py-10 md:flex-row md:px-8">
           <div className="flex flex-1 flex-col gap-11">
-            <p>{dapp.description}</p>
+            <p className="max-w-3xl">{dapp.description}</p>
             <div className="flex h-fit w-full flex-col gap-4 rounded-2xl border bg-background p-8 md:hidden md:w-44">
               <h3 className="text-lg">Info</h3>
               <div>
