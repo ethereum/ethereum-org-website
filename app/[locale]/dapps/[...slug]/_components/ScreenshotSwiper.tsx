@@ -42,7 +42,6 @@ const ScreenshotSwiper = ({ screenshots, dappName }: ScreenshotSwiperProps) => {
               width={340}
               height={700}
               className="h-[350px] w-[170px] rounded-lg object-cover"
-              unoptimized
             />
           </SwiperSlide>
         ))}

@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useMemo, useState } from "react"
 
 import { DappData } from "@/lib/types"
 
@@ -17,12 +17,19 @@ import DappCard from "./DappCard"
 const DappsTable = ({ dapps }: { dapps: DappData[] }) => {
   const [filterBy, setFilterBy] = useState("All")
 
-  const subCategories = [...new Set(dapps.flatMap((dapp) => dapp.subCategory))]
+  const subCategories = useMemo(
+    () => [...new Set(dapps.flatMap((dapp) => dapp.subCategory))],
+    [dapps]
+  )
 
-  const filteredDapps = dapps.filter((dapp) => {
-    if (filterBy === "All") return true
-    return dapp.subCategory.includes(filterBy)
-  })
+  const filteredDapps = useMemo(
+    () =>
+      dapps.filter((dapp) => {
+        if (filterBy === "All") return true
+        return dapp.subCategory.includes(filterBy)
+      }),
+    [dapps, filterBy]
+  )
 
   return (
     <div className="flex flex-col gap-7">
