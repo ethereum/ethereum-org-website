@@ -113,6 +113,7 @@ const TopDapps = ({ dappsData }: TopDappsProps) => {
                       dapp={dapp}
                       imageSize={imageSize}
                       isVertical={isVertical}
+                      hideTag={true}
                     />
                   </div>
                 ))}
