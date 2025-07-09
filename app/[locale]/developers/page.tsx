@@ -1,5 +1,3 @@
-import { type ReactNode } from "react"
-import { type StaticImageData } from "next/image"
 import { getTranslations } from "next-intl/server"
 
 import type { Lang } from "@/lib/types"
@@ -16,14 +14,14 @@ import { Card } from "@/components/ui/card"
 import { VStack } from "@/components/ui/flex"
 import Link from "@/components/ui/Link"
 import InlineLink from "@/components/ui/Link"
-import { Tag } from "@/components/ui/tag"
 
 import { getMetadata } from "@/lib/utils/metadata"
 
-import speedRunEthereumImage from "@/public/images/dev-tools/speed-run-ethereum-banner.png"
-import speedrunNFT from "@/public/images/developers/speedrun-nft.png"
-import speedrunStakingApp from "@/public/images/developers/speedrun-staking-app.png"
-import speedrunTokenVendor from "@/public/images/developers/speedrun-token-vendor.png"
+import BuilderCard from "./_components/BuilderCard"
+import BuilderSwiper from "./_components/BuilderSwiper"
+import SpeedRunCard from "./_components/SpeedRunCard"
+import { getBuilderPaths } from "./utils"
+
 import developersImage from "@/public/images/developers-eth-blocks.png"
 import dogeImage from "@/public/images/doge-computer.png"
 import heroImage from "@/public/images/heroes/developers-hub-hero.jpg"
@@ -47,15 +45,6 @@ const IntroColumn = (props: ChildOnlyProp) => (
   />
 )
 
-type DevelopersPath = {
-  imgSrc: StaticImageData
-  imgAlt: string
-  title: ReactNode
-  description: ReactNode
-  url: string
-  button: ReactNode
-}
-
 const DevelopersPage = async ({
   params,
 }: {
@@ -71,34 +60,12 @@ const DevelopersPage = async ({
     namespace: "common",
   })
 
-  const paths: DevelopersPath[] = [
-    {
-      imgSrc: speedrunNFT,
-      imgAlt: "Speedrun Ethereum NFT banner",
-      title: "Simple NFT Example", // t("page-developers-learn"),
-      description: "Create a public NFT to learn the basics of scaffold-eth.", // t("page-developers-learn-desc"),
-      url: "https://speedrunethereum.com/challenge/simple-nft-example",
-      button: t("page-developers-start-quest"),
-    },
-    {
-      imgSrc: speedrunStakingApp,
-      imgAlt: "Speedrun Ethereum staking app banner",
-      title: "Staking App", // t("page-developers-learn-tutorials"),
-      description: "Write a smart contract where users pool funds together.", // t("page-developers-learn-tutorials-desc"),
-      url: "https://speedrunethereum.com/challenge/decentralized-staking",
-      button: t("page-developers-start-quest"),
-    },
-    {
-      imgSrc: speedrunTokenVendor,
-      imgAlt: "Speedrun Ethereum token vendor project banner",
-      title: "Create a token", // t("page-developers-resources"),
-      description:
-        "Build a digital currency and a smart conract that trades it.", // t("page-developers-start-desc"),
-      url: "https://speedrunethereum.com/challenge/token-vendor",
-      button: t("page-developers-start-quest"),
-    },
-  ]
-
+  const paths = await getBuilderPaths()
+  const speedRunDetails = {
+    title: t("page-developers-start"),
+    description: t("page-developers-speedrunethereum-description"),
+    ctaLabel: t("page-developers-speedrunethereum-link"),
+  }
   return (
     <VStack className="mx-auto my-0 w-full">
       <HubHero
@@ -113,65 +80,18 @@ const DevelopersPage = async ({
       <MainArticle className="w-full space-y-12 px-8 py-4">
         <h2 className="-mb-4 mt-12">{t("page-developers-get-started")}</h2>
 
-        <div className="-mx-4 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+        {/* Desktop */}
+        <div className="-mx-4 grid gap-6 max-md:hidden md:grid-cols-2 lg:grid-cols-4">
           {paths.map((path, idx) => (
-            <Card
-              key={idx}
-              className="flex flex-col gap-8 rounded-4xl border p-6"
-            >
-              <Image
-                src={path.imgSrc}
-                alt={path.imgAlt}
-                className="object-fit mx-auto h-44"
-                sizes="(max-width: 480px) calc(100vw - 6rem), 285px"
-              />
-              <div className="h-full space-y-1">
-                <Tag
-                  status="warning"
-                  size="small"
-                  className="mb-0 rounded-[4px] px-1 py-px font-bold normal-case"
-                >
-                  Challenge #{idx}
-                </Tag>
-                <h3 className="text-lg font-bold">{path.title}</h3>
-                <p className="mb-4 text-sm text-body-medium">
-                  {path.description}
-                </p>
-              </div>
-              <ButtonLink href={path.url} className="sm:w-fit">
-                {path.button}
-              </ButtonLink>
-            </Card>
+            <BuilderCard path={path} key={idx} />
           ))}
 
-          <div
-            className="relative h-[450px]"
-            data-label="speedrunethereum-banner"
-          >
-            <Image
-              className="pointer-events-none absolute -z-[1] h-full w-screen rounded-t-4xl object-cover object-[75%_50%]"
-              src={speedRunEthereumImage}
-              alt="SpeedRunEthereum banner"
-              sizes="(max-width: 768px) 100vw, 50vw"
-            />
-            <div className="z-[1] flex flex-col space-y-4 break-words px-6 py-10 md:space-y-6 lg:p-6">
-              <h3>{t("page-developers-start")}</h3>
-              <p>{t("page-developers-speedrunethereum-description")}</p>
-              <ButtonLink
-                href="https://speedrunethereum.com/"
-                size="lg"
-                className="mt-4 sm:w-fit"
-                customEventOptions={{
-                  eventCategory: "top_boxes",
-                  eventAction: "click",
-                  eventName: "speedrun",
-                }}
-                rel="noopener"
-              >
-                {t("page-developers-speedrunethereum-link")}
-              </ButtonLink>
-            </div>
-          </div>
+          <SpeedRunCard {...speedRunDetails} />
+        </div>
+
+        {/* Mobile */}
+        <div className="-mx-8 ps-4 md:hidden">
+          <BuilderSwiper paths={paths} speedRunDetails={speedRunDetails} />
         </div>
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8 xl:mb-12">
