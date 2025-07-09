@@ -93,7 +93,7 @@ Vuonna 1977 Wyoming keksi LLC:n, joka suojelee yrittäjiä ja rajoittaa heidän 
 
 ### Tunnettu esimerkki {#law-example}
 
-[CityDAO](https://citydao.io) – CityDAO hyödynsi Wyomingin DAO-lakia 40 hehtaarin maa-alueen ostossa lähellä Yellowstonen kansallispuistoa.
+[CityDAO](https://citizen.citydao.io/) – CityDAO hyödynsi Wyomingin DAO-lakia 40 hehtaarin maa-alueen ostossa lähellä Yellowstonen kansallispuistoa.
 
 ## DAO-jäsenyys {#dao-membership}
 

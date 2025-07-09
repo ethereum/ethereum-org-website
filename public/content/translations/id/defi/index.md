@@ -169,7 +169,7 @@ Jika pasokan bursa B menurun secara tiba-tiba dan pengguna tidak dapat membeli d
 
 Agar dapat melakukan contoh di atas dalam dunia keuangan tradisional, Anda akan membutuhkan jumlah yang sangat besar. Strategi penghasil uang ini hanya dapat dijangkau oleh mereka yang memiliki kekayaan. Pinjaman flash adalah sebuah contoh dari masa depan di mana kepemilikan sejumlah uang tidak harus merupakan prasyarat untuk menghasilkan uang.
 
-<ButtonLink isSecondary href="https://aave.com/docs/concepts/flash-loans">
+<ButtonLink isSecondary href="https://aave.com/docs/concepts/flash-loans/">
   Lebih lanjut tentang pinjaman flash
 </ButtonLink>
 

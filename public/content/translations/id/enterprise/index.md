@@ -91,7 +91,7 @@ Contoh solusi L2 yang siap dipakai atau yang akan segera dimasukkan:
 - Plasma (data off chain, bukti penipuan)
   - [OMG Network](https://omg.network/)
   - [Gazelle](https://gzle.io)
-  - [Matic Network](https://matic.network/)
+  - [Matic Network](https://polygon.technology/)
   - [LeapDAO](https://ipfs.leapdao.org/)
 - Kanal state
   - [Connext](https://connext.network/)
@@ -131,7 +131,7 @@ Berikut adalah beberapa aplikasi perusahaan yang telah digunakan pada Jaringan U
 - [BBVA](https://www.ledgerinsights.com/bbva-blockchain-loan-banking-tech-award/) _detail pinjaman terakhir di-hash dan dicatat di Jaringan Utama_
 - [ANSA](https://cointelegraph.com/news/italys-top-news-agency-uses-blockchain-to-fight-fake-coronavirus-news) _agensi berita terbesar di Italia yang melawan berita palsu dan memungkinkan pembaca memverifikasi sumber berita dengan mencatatnya di Jaringan Utama_
 - [Verizon](https://decrypt.co/46745/verizon-news-press-releases-ethereum-full-transparency) _mencatat rilis berita di Ethereum untuk memastikan akuntabilitas dan kepercayaan perusahaan_
-- [Breitling](https://www.coindesk.com/breitling-arianee-all-new-watches-ethereum) _mencatat sumber dan riwayat perbaikan pengawasan di Ethereum_
+- [Breitling](https://www.coindesk.com/business/2020/10/15/breitling-goes-live-with-ethereum-based-system-to-put-all-new-watches-on-the-blockchain) _mencatat sumber dan riwayat perbaikan pengawasan di Ethereum_
 - [EthSign](https://ethsign.xyz/) _mencatat dokumen elektronik yang telah ditandatangani pada blockchain Ethereum_
 
 ### Rantai pasokan {#supply-chain}
@@ -141,7 +141,7 @@ Berikut adalah beberapa aplikasi perusahaan yang telah digunakan pada Jaringan U
 - [ShipChain](https://shipchain.io) _sidechain Ethereum publik dan sistem perusahaan untuk visibilitas dan kepercayaan rantai pasokan, khususnya untuk logistik multimodal_
 - [Follow Our Fibre](https://www.followourfibre.com) _keterlacakan rantai pasokan viscose_
 - [Pengadaan Jaringan EY OpsChain](https://blockchain.ey.com/products/contract-manager) _memungkinkan perusahaan terlibat dalam sebuah alur kerja pengadaan dengan menerbitkan RFQ, kontrak, pemesanan pembelian, dan faktur di keseluruhan jaringan dari rekan bisnis terpercaya Anda_
-- [Treum](https://treum.io/) _menghadirkan transparansi, keterlacakan, dan kemampuan untuk diperdagangan pada rantai pasokan, menggunakan teknologi blockchain_
+- [Treum](https://consensys.io/blog/consensys-acquires-treum) _menghadirkan transparansi, keterlacakan, dan kemampuan untuk diperdagangan pada rantai pasokan, menggunakan teknologi blockchain_
 - [TradeTrust](https://www.tradetrust.io/) _memverifikasi electronic Bills of Lading (eBLs) untuk pengiriman internasional_
 
 ### Kredensial dan sertifikasi {#credentials}

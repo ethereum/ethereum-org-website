@@ -8,7 +8,7 @@ Smart kontrakty jsou velmi flexibilní a schopné ovládat velké množství hod
 
 Veřejné blockchainy, jako je Ethereum, dále komplikují otázku zabezpečení smart kontraktů. Nasazený kód kontraktu _obvykle_ není možné změnit, aby se opravily bezpečnostní chyby, a majetek odcizený ze smart kontraktů je kvůli nezměnitelnosti extrémně obtížné sledovat a prakticky nemožné získat zpět.
 
-I když se údaje liší, odhaduje se, že celková hodnota odcizených nebo ztracených prostředků z důvodu bezpečnostních chyb ve smart kontraktech dnes přesahuje 1 miliardu dolarů. To zahrnuje incidenty s vysokým profilem, jako je [hack DAO](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/) (ukradeno 3,6 milionu ETH, což v dnešní ceně představuje více než 1 miliardu dolarů), [hack multi-sig peněženky Parity](https://www.coindesk.com/30-million-ether-reported-stolen-parity-wallet-breach) (škoda ve výši 30 milionů dolarů kvůli hackerům) a [problém se zmrazením peněženek Parity](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether) (přes 300 milionů dolarů v ETH zůstalo zamčeno navždy).
+I když se údaje liší, odhaduje se, že celková hodnota odcizených nebo ztracených prostředků z důvodu bezpečnostních chyb ve smart kontraktech dnes přesahuje 1 miliardu dolarů. To zahrnuje incidenty s vysokým profilem, jako je [hack DAO](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/) (ukradeno 3,6 milionu ETH, což v dnešní ceně představuje více než 1 miliardu dolarů), [hack multi-sig peněženky Parity](https://www.coindesk.com/markets/2017/07/19/30-million-ether-reported-stolen-due-to-parity-wallet-breach) (škoda ve výši 30 milionů dolarů kvůli hackerům) a [problém se zmrazením peněženek Parity](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether) (přes 300 milionů dolarů v ETH zůstalo zamčeno navždy).
 
 Výše zmíněné problémy ukazují na důležitost zajištění bezpečnosti smart kontraktů a dělají z ní nezbytnost, do které by měli vývojáři investovat úsilí. Zabezpečení smart kontraktů je vážnou záležitostí, kterou by se měl každý vývojář naučit. Tento průvodce pokrývá bezpečnostní aspekty pro vývojáře Etherea a poskytuje zdroje pro zvýšení bezpečnosti smart kontraktů.
 
@@ -304,7 +304,7 @@ Na první pohled není na tomto kontraktu nic špatného, až na to, že kontrak
 - `Victim` finally applies the results of the first transaction (and subsequent ones) to its state, so `Attacker`’s balance is set to 0
 ```
 
-Výsledkem je, že následná vyvolání budou úspěšná a umožní volajícímu vybrat svůj zůstatek vícekrát, protože zůstatek volajícího není nastaven na 0, dokud se nedokončí provedení funkce. Tento druh útoku může být použit k vybrání prostředků smart kontraktu, jako se to stalo při [DAO hacku v roce 2016](https://www.coindesk.com/learn/2016/06/25/understanding-the-dao-attack/). Útoky opětovným vstupem (reentrancy) jsou stále kritickým problémem smart kontraktů, jak ukazují [veřejné seznamy exploitů reentrancy útoků](https://github.com/pcaversaccio/reentrancy-attacks).
+Výsledkem je, že následná vyvolání budou úspěšná a umožní volajícímu vybrat svůj zůstatek vícekrát, protože zůstatek volajícího není nastaven na 0, dokud se nedokončí provedení funkce. Tento druh útoku může být použit k vybrání prostředků smart kontraktu, jako se to stalo při [DAO hacku v roce 2016](https://www.coindesk.com/learn/understanding-the-dao-attack). Útoky opětovným vstupem (reentrancy) jsou stále kritickým problémem smart kontraktů, jak ukazují [veřejné seznamy exploitů reentrancy útoků](https://github.com/pcaversaccio/reentrancy-attacks).
 
 ##### Jak zabránit útokům opětovným vstupem
 
@@ -505,7 +505,7 @@ Pokud plánujete dotazovat se blockchainového orákula na ceny aktiv, zvažte p
 
 - **[Hacken](https://hacken.io)** – _Web3 auditor kybernetické bezpečnosti přinášející 360stupňový přístup k bezpečnosti blockchainu._
 
-- **[Nethermind](https://nethermind.io/smart-contracts-audits)** – _služby auditu Solidity a Cairo, které zajišťují integritu smart kontraktů a bezpečnost uživatelů napříč Ethereem a Starknetem._
+- **[Nethermind](https://www.nethermind.io/smart-contract-audits)** – _služby auditu Solidity a Cairo, které zajišťují integritu smart kontraktů a bezpečnost uživatelů napříč Ethereem a Starknetem._
 
 - **[HashEx](https://hashex.org/)** – _HashEx se zaměřuje na audit blockchainu a smart kontraktů s cílem zajistit bezpečnost kryptoměn a poskytuje služby, jako je vývoj smart kontraktů, penetrační testování a poradenství v oblasti blockchainu._
 

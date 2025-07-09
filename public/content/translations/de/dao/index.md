@@ -91,7 +91,7 @@ Im US-Bundesstaat Wyoming wurde 1977 die LCC eingeführt, die Unternehmer schüt
 
 ### Bekanntes Beispiel {#law-example}
 
-[CityDAO](https://citydao.io) – CityDAO hat durch Wyomings DAO-Gesetz rund 16 Hektar Land in der Nähe des Yellowstone-Nationalparks gekauft.
+[CityDAO](https://citizen.citydao.io/) – CityDAO hat durch Wyomings DAO-Gesetz rund 16 Hektar Land in der Nähe des Yellowstone-Nationalparks gekauft.
 
 ## DAO-Mitgliedschaft {#dao-membership}
 

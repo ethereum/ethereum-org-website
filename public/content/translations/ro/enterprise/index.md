@@ -91,7 +91,7 @@ Câteva exemple de soluții de Nivelul 2 care sunt pregătite pentru producție 
 - Plasma (date în afara lanțului, dovezi de fraudă)
   - [OMG Network](https://omg.network/)
   - [Gazelle](https://gzle.io)
-  - [Matic Network](https://matic.network/)
+  - [Matic Network](https://polygon.technology/)
   - [LeapDAO](https://ipfs.leapdao.org/)
 - Canale de stare
   - [Connext](https://connext.network/)
@@ -131,7 +131,7 @@ Iată câteva dintre aplicațiile pentru întreprinderi care au fost implementat
 - [BBVA](https://www.ledgerinsights.com/bbva-blockchain-loan-banking-tech-award/) _detaliile împrumuturilor finalizate sunt codificate prin funcții hash și înregistrate pe Mainnet_
 - [ANSA](https://cointelegraph.com/news/italys-top-news-agency-uses-blockchain-to-fight-fake-coronavirus-news) _cea mai mare agenție de știri din Italia combate știrile false și le permite cititorilor să verifice originea știrilor înregistrându-le pe Mainnet_
 - [Verizon](https://decrypt.co/46745/verizon-news-press-releases-ethereum-full-transparency) _înregistrează comunicate de presă pe Ethereum pentru a asigura responsabilizarea corporativă și încrederea_
-- [Breitling](https://www.coindesk.com/breitling-arianee-all-new-watches-ethereum) _înregistrează proveniența și istoricul reparațiilor ceasurilor pe Ethereum_
+- [Breitling](https://www.coindesk.com/business/2020/10/15/breitling-goes-live-with-ethereum-based-system-to-put-all-new-watches-on-the-blockchain) _înregistrează proveniența și istoricul reparațiilor ceasurilor pe Ethereum_
 - [EthSign](https://ethsign.xyz/) _records signed electronic documents on the Ethereum blockchain_
 
 ### Lanțul de aprovizionare {#supply-chain}
@@ -141,7 +141,7 @@ Iată câteva dintre aplicațiile pentru întreprinderi care au fost implementat
 - [ShipChain](https://shipchain.io) _lanț paralel public al lui Ethereum și sistem de întreprinderi pentru vizibilitatea și încrederea lanțului de aprovizionare, în special pentru logistica multi-modală_
 - [Follow Our Fibre](https://www.followourfibre.com) _trasabilitatea lanțului de aprovizionare cu viscoză_
 - [EY OpsChain Network Procurement](https://blockchain.ey.com/products/contract-manager) _permite companiilor să se angajeze într-un flux de lucru de achiziții publice prin emiterea de cereri de ofertă, contracte, ordine de cumpărare și facturi în rețeaua partenerilor dvs. de afaceri de încredere_
-- [Treum](https://treum.io/) _aduce transparență, trasabilitate și capacitate de comercializare în lanțurile de aprovizionare utilizând tehnologia blockchain_
+- [Treum](https://consensys.io/blog/consensys-acquires-treum) _aduce transparență, trasabilitate și capacitate de comercializare în lanțurile de aprovizionare utilizând tehnologia blockchain_
 - [TradeTrust](https://www.tradetrust.io/) _verifies electronic Bills of Lading (eBLs) for international shipping_
 
 ### Acreditări și certificări {#credentials}

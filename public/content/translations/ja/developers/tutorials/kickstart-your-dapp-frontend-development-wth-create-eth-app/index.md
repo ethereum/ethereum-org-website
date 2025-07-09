@@ -59,13 +59,13 @@ yarn react-app:start
 
 通常、スマートコントラクトからは直接データを取得することができます。 最後に行った取引の時間を取得したい場合は、 `MyContract.methods.latestTradeTime().call()`を呼び出すだけで、イーサリアムノードからデータを取得し、あなたのDappで使うことができます。 しかし、何百もの異なる種類のデータが必要な場合は事情が異なります。 ノードからのデータ取得が何百回も発生し、その都度[RTT](https://wikipedia.org/wiki/Round-trip_delay_time)が必要となるため、Dappの処理速度が低下し、非効率になってしまいます。 ひとつの回避策としては、一度に複数のデータを返すデータ取得用の関数をスマートコントラクト側で用意する方法があるでしょう。 しかし、これは常に最善の方法とは言えません。
 
-また、過去のデータが必要な場合もあるでしょう。 最後の取引の時間だけではなく、今まで自分が行った全ての取引の時間が知りたいかもしれません。 このような場合は、_create-eth-app_にあるsubgraphパッケージを活用できます。[ドキュメンテーション](https://thegraph.com/docs/define-a-subgraph)を参照して、あなたのニーズに合うように調整してください。 人気が高いスマートコントラクトの場合、すでにsubgraphが含まれているかもしれません。 [subgraph explorer](https://thegraph.com/explorer/)をチェックしてみてください。
+また、過去のデータが必要な場合もあるでしょう。 最後の取引の時間だけではなく、今まで自分が行った全ての取引の時間が知りたいかもしれません。 このような場合は、_create-eth-app_にあるsubgraphパッケージを活用できます。[ドキュメンテーション](https://thegraph.com/docs/en/subgraphs/developing/creating/starting-your-subgraph)を参照して、あなたのニーズに合うように調整してください。 人気が高いスマートコントラクトの場合、すでにsubgraphが含まれているかもしれません。 [subgraph explorer](https://thegraph.com/explorer/)をチェックしてみてください。
 
 subgraphがあれば、Dappにシンプルなクエリをひとつ追加するだけで、過去のデータも含めた全てのブロックチェーンのデータを1回のフェッチ処理で取得することができます。
 
 ### Apollo {#apollo}
 
-[Apollo Boost](https://www.apollographql.com/docs/react/get-started/)との統合により、Reactで作成したDappにThe Graphを簡単に搭載できるようになりました。 特に[React hooksとApollo](https://www.apollographql.com/blog/apollo-client-now-with-react-hooks-676d116eeae2)を使えば、コンポーネントにGraphQLのクエリをひとつ追加するだけで、簡単にデータ取得が可能になります：
+[Apollo Boost](https://www.apollographql.com/docs/react/get-started/)との統合により、Reactで作成したDappにThe Graphを簡単に搭載できるようになりました。 特に[React hooksとApollo](https://www.apollographql.com/blog/apollo-client-now-with-react-hooks)を使えば、コンポーネントにGraphQLのクエリをひとつ追加するだけで、簡単にデータ取得が可能になります：
 
 ```js
 const { loading, error, data } = useQuery(myGraphQlQuery)
