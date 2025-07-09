@@ -1,7 +1,3 @@
-"use client"
-
-import { motion } from "framer-motion"
-
 import { ButtonLink } from "@/components/ui/buttons/Button"
 
 import { cn } from "@/lib/utils/cn"
@@ -24,10 +20,7 @@ const CategoriesNav = ({ activeCategory = "" }: { activeCategory: string }) => {
             )}
           >
             {activeCategory === name && (
-              <motion.div
-                layoutId="active-section-highlight"
-                className="absolute inset-0 z-0 rounded-xl bg-primary-low-contrast"
-              />
+              <div className="absolute inset-0 z-0 rounded-xl bg-primary-low-contrast" />
             )}
             <span className="relative z-10">
               <Icon className="h-4 w-4" />
