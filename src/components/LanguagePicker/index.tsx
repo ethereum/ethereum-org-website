@@ -209,8 +209,9 @@ const LanguagePickerFooter = ({ onTranslationProgramClick }) => {
           </p>
         </div>
         <ButtonLink
-          className="w-min whitespace-nowrap px-1 py-0 text-xs sm:flex-shrink-0 sm:flex-grow-0"
+          className="text-nowrap"
           href="/contributing/translation-program/"
+          size="sm"
           onClick={onTranslationProgramClick}
         >
           {t("get-involved")}
