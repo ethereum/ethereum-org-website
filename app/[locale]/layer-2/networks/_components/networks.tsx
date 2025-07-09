@@ -1,6 +1,6 @@
 "use client"
 
-import Callout from "@/components/Callout"
+import CalloutSSR from "@/components/CalloutSSR"
 import { ContentHero, ContentHeroProps } from "@/components/Hero"
 import Layer2NetworksTable from "@/components/Layer2NetworksTable"
 import MainArticle from "@/components/MainArticle"
@@ -50,7 +50,7 @@ const Layer2Networks = ({ layer2Data, locale, mainnetData }) => {
             <ButtonLink href="https://l2beat.com">
               {t("page-layer-2-networks-more-advanced-link-1")}
             </ButtonLink>
-            <ButtonLink href="https://growthepie.xyz">
+            <ButtonLink href="https://growthepie.com">
               {t("page-layer-2-networks-more-advanced-link-2")}
             </ButtonLink>
           </div>
@@ -63,7 +63,7 @@ const Layer2Networks = ({ layer2Data, locale, mainnetData }) => {
         id="callout-cards"
         className="flex w-full flex-col px-8 py-9 lg:flex-row lg:gap-16"
       >
-        <Callout
+        <CalloutSSR
           image={Callout1Image}
           title={t("page-layer-2-networks-callout-1-title")}
           description={t("page-layer-2-networks-callout-1-description")}
@@ -80,8 +80,8 @@ const Layer2Networks = ({ layer2Data, locale, mainnetData }) => {
               {t("common:learn-more")}
             </ButtonLink>
           </div>
-        </Callout>
-        <Callout
+        </CalloutSSR>
+        <CalloutSSR
           image={Callout2Image}
           title={t("page-layer-2-networks-callout-2-title")}
           description={t("page-layer-2-networks-callout-2-description")}
@@ -98,7 +98,7 @@ const Layer2Networks = ({ layer2Data, locale, mainnetData }) => {
               {t("common:learn-more")}
             </ButtonLink>
           </div>
-        </Callout>
+        </CalloutSSR>
       </div>
     </MainArticle>
   )

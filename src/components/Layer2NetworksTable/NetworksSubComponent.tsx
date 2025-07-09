@@ -1,4 +1,4 @@
-import { MdInfoOutline } from "react-icons/md"
+import { Info } from "lucide-react"
 
 import { ExtendedRollup } from "@/lib/types"
 
@@ -38,7 +38,7 @@ const NetworkSubComponent = ({ network }: NetworkSubComponentProps) => {
             <div className="flex-1">
               <div>
                 <p className="text-xs font-bold text-body-medium">
-                  {t("page-layer-2-networks-age")}{" "}
+                  {t("page-layer-2-networks-age")}&nbsp;
                   <Tooltip
                     content={
                       <div className="flex flex-col gap-2">
@@ -48,7 +48,7 @@ const NetworkSubComponent = ({ network }: NetworkSubComponentProps) => {
                         <p>{t("page-layer-2-networks-show-how-long")}</p>
                         <p>
                           {t("page-layer-2-networks-data-from")}{" "}
-                          <InlineLink href="https://growthepie.xyz">
+                          <InlineLink href="https://growthepie.com">
                             growthepie
                           </InlineLink>
                           {t("page-layer-2-networks-period")}
@@ -61,7 +61,7 @@ const NetworkSubComponent = ({ network }: NetworkSubComponentProps) => {
                       eventName: "age",
                     }}
                   >
-                    <MdInfoOutline className="translate-y-0.5" />
+                    <Info className="size-[0.875em] translate-y-0.5" />
                   </Tooltip>
                 </p>
                 <p>
@@ -84,7 +84,7 @@ const NetworkSubComponent = ({ network }: NetworkSubComponentProps) => {
             <div className="flex-1">
               <div>
                 <p className="text-xs font-bold text-body-medium">
-                  {t("page-layer-2-networks-wallet-support")}{" "}
+                  {t("page-layer-2-networks-wallet-support")}&nbsp;
                   <Tooltip
                     content={
                       <div className="flex flex-col gap-2">
@@ -102,7 +102,7 @@ const NetworkSubComponent = ({ network }: NetworkSubComponentProps) => {
                       eventName: "wallet_support",
                     }}
                   >
-                    <MdInfoOutline className="translate-y-0.5" />
+                    <Info className="size-[0.875em] translate-y-0.5" />
                   </Tooltip>
                 </p>
               </div>
@@ -119,7 +119,7 @@ const NetworkSubComponent = ({ network }: NetworkSubComponentProps) => {
             <div className="flex-1">
               <div>
                 <p className="text-xs font-bold text-body-medium">
-                  {t("page-layer-2-networks-active-address")}{" "}
+                  {t("page-layer-2-networks-active-address")}&nbsp;
                   <Tooltip
                     content={
                       <div className="flex flex-col gap-2">
@@ -131,7 +131,7 @@ const NetworkSubComponent = ({ network }: NetworkSubComponentProps) => {
                         </p>
                         <p>
                           {t("page-layer-2-networks-data-from")}{" "}
-                          <InlineLink href="https://growthepie.xyz">
+                          <InlineLink href="https://growthepie.com">
                             growthepie
                           </InlineLink>
                           {t("page-layer-2-networks-period")}
@@ -144,7 +144,7 @@ const NetworkSubComponent = ({ network }: NetworkSubComponentProps) => {
                       eventName: "active_addresses",
                     }}
                   >
-                    <MdInfoOutline className="translate-y-0.5" />
+                    <Info className="size-[0.875em] translate-y-0.5" />
                   </Tooltip>
                 </p>
               </div>
@@ -157,7 +157,7 @@ const NetworkSubComponent = ({ network }: NetworkSubComponentProps) => {
             <div className="flex-1">
               <div>
                 <p className="text-xs font-bold text-body-medium">
-                  {t("page-layer-2-networks-fee-token")}{" "}
+                  {t("page-layer-2-networks-fee-token")}&nbsp;
                   <Tooltip
                     content={
                       <div className="flex flex-col gap-2">
@@ -171,7 +171,7 @@ const NetworkSubComponent = ({ network }: NetworkSubComponentProps) => {
                       eventName: "fee_token",
                     }}
                   >
-                    <MdInfoOutline className="translate-y-0.5" />
+                    <Info className="size-[0.875em] translate-y-0.5" />
                   </Tooltip>
                 </p>
               </div>
@@ -182,7 +182,7 @@ const NetworkSubComponent = ({ network }: NetworkSubComponentProps) => {
         <div className="flex-1 gap-2">
           <div>
             <p className="text-xs font-bold text-body-medium">
-              {t("page-layer-2-networks-network-usage")}{" "}
+              {t("page-layer-2-networks-network-usage")}&nbsp;
               <Tooltip
                 content={
                   <div className="flex flex-col gap-2">
@@ -192,7 +192,7 @@ const NetworkSubComponent = ({ network }: NetworkSubComponentProps) => {
                     <p>{t("page-layer-2-networks-network-usage-overview")}</p>
                     <p>
                       {t("page-layer-2-networks-data-from")}{" "}
-                      <InlineLink href="https://growthepie.xyz">
+                      <InlineLink href="https://growthepie.com">
                         growthepie
                       </InlineLink>
                       {t("page-layer-2-networks-period")}
@@ -200,7 +200,7 @@ const NetworkSubComponent = ({ network }: NetworkSubComponentProps) => {
                   </div>
                 }
               >
-                <MdInfoOutline className="translate-y-0.5" />
+                <Info className="size-[0.875em] translate-y-0.5" />
               </Tooltip>
             </p>
             <div className="w-full">

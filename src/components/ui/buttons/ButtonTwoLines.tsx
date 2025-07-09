@@ -1,4 +1,4 @@
-import type { IconType } from "react-icons/lib"
+import type { LucideIcon } from "lucide-react"
 
 import { cn } from "@/lib/utils/cn"
 
@@ -12,7 +12,7 @@ import {
 } from "./Button"
 
 type CommonProps = {
-  icon: IconType
+  icon: LucideIcon | React.FC<React.SVGProps<SVGElement>>
   iconAlignment?: "left" | "right" | "start" | "end"
   /**
    * Reduced choices of the button variant.

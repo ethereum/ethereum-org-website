@@ -542,7 +542,7 @@ const DappsPage = ({
     {
       title: "Curve",
       description: t("page-dapps-dapp-description-curve"),
-      link: "https://curve.fi/",
+      link: "https://www.curve.finance/",
       image: curve,
       alt: t("page-dapps-curve-logo-alt"),
     },
@@ -1111,7 +1111,7 @@ const DappsPage = ({
         <H2 id="explore">{t("page-dapps-explore-dapps-title")}</H2>
         <CenterText>{t("page-dapps-explore-dapps-description")}</CenterText>
         <H3>{t("page-dapps-choose-category")}</H3>
-        <div className="mb-8 grid w-full grid-cols-1 justify-center gap-4 px-8 sm:grid-cols-2 lg:w-auto lg:grid-cols-3 2xl:grid-cols-6">
+        <div className="mb-8 grid w-full grid-cols-1 justify-center gap-4 px-8 sm:grid-cols-2 lg:w-auto lg:grid-cols-[repeat(4,auto)]">
           {categoryKeys.map((key, idx) => {
             const categoryType = key as CategoryType
             const category = categories[categoryType]

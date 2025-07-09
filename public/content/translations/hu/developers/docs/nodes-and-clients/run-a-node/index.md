@@ -311,7 +311,7 @@ reth node \
     --authrpc.port 8551
 ```
 
-Tekintse meg a [Reth konfigurálást](https://reth.rs/run/config.html?highlight=data%20directory#configuring-reth), hogy többet megtudjon az alapértelmezett adatkönyvtárakról. [A Reth dokumentációja](https://reth.rs/run/mainnet.html) további opciókat és konfigurációs részleteket tartalmaz.
+Tekintse meg a [Reth konfigurálását](https://reth.rs/run/config.html?highlight=data%20directory#configuring-reth), hogy többet megtudjon az alapértelmezett adatkönyvtárakról. [A Reth dokumentációja](https://reth.rs/run/mainnet.html) további opciókat és konfigurációs részleteket tartalmaz.
 
 #### A konszenzusos kliens elindítása {#starting-the-consensus-client}
 
