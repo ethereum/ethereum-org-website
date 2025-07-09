@@ -1,11 +1,11 @@
-import { ReactNode } from "react"
+import { type ReactNode } from "react"
+import { type StaticImageData } from "next/image"
 import { getTranslations } from "next-intl/server"
 
-import { Lang } from "@/lib/types"
+import type { Lang } from "@/lib/types"
 import { ChildOnlyProp } from "@/lib/types"
 
 import CalloutSSR from "@/components/CalloutSSR"
-import OldCard from "@/components/Card"
 import { CopyButton } from "@/components/CopyToClipboard"
 import FeedbackCard from "@/components/FeedbackCard"
 import HubHero from "@/components/Hero/HubHero"
@@ -16,13 +16,17 @@ import { Card } from "@/components/ui/card"
 import { VStack } from "@/components/ui/flex"
 import Link from "@/components/ui/Link"
 import InlineLink from "@/components/ui/Link"
+import { Tag } from "@/components/ui/tag"
 
 import { getMetadata } from "@/lib/utils/metadata"
 
-import SpeedRunEthereumImage from "@/public/images/dev-tools/speed-run-ethereum-banner.png"
-import DevelopersImage from "@/public/images/developers-eth-blocks.png"
-import DogeImage from "@/public/images/doge-computer.png"
-import HeroImage from "@/public/images/heroes/developers-hub-hero.jpg"
+import speedRunEthereumImage from "@/public/images/dev-tools/speed-run-ethereum-banner.png"
+import speedrunNFT from "@/public/images/developers/speedrun-nft.png"
+import speedrunStakingApp from "@/public/images/developers/speedrun-staking-app.png"
+import speedrunTokenVendor from "@/public/images/developers/speedrun-token-vendor.png"
+import developersImage from "@/public/images/developers-eth-blocks.png"
+import dogeImage from "@/public/images/doge-computer.png"
+import heroImage from "@/public/images/heroes/developers-hub-hero.jpg"
 
 const H2 = (props: ChildOnlyProp) => <h2 className="mb-8 mt-12" {...props} />
 
@@ -44,7 +48,8 @@ const IntroColumn = (props: ChildOnlyProp) => (
 )
 
 type DevelopersPath = {
-  emoji: string
+  imgSrc: StaticImageData
+  imgAlt: string
   title: ReactNode
   description: ReactNode
   url: string
@@ -68,39 +73,36 @@ const DevelopersPage = async ({
 
   const paths: DevelopersPath[] = [
     {
-      emoji: ":woman_student:",
-      title: t("page-developers-learn"),
-      description: t("page-developers-learn-desc"),
-      url: "/developers/docs/",
-      button: t("page-developers-read-docs"),
+      imgSrc: speedrunNFT,
+      imgAlt: "Speedrun Ethereum NFT banner",
+      title: "Simple NFT Example", // t("page-developers-learn"),
+      description: "Create a public NFT to learn the basics of scaffold-eth.", // t("page-developers-learn-desc"),
+      url: "https://speedrunethereum.com/challenge/simple-nft-example",
+      button: t("page-developers-start-quest"),
     },
     {
-      emoji: ":woman_teacher:",
-      title: t("page-developers-learn-tutorials"),
-      description: t("page-developers-learn-tutorials-desc"),
-      url: "/developers/tutorials/",
-      button: t("page-developers-learn-tutorials-cta"),
+      imgSrc: speedrunStakingApp,
+      imgAlt: "Speedrun Ethereum staking app banner",
+      title: "Staking App", // t("page-developers-learn-tutorials"),
+      description: "Write a smart contract where users pool funds together.", // t("page-developers-learn-tutorials-desc"),
+      url: "https://speedrunethereum.com/challenge/decentralized-staking",
+      button: t("page-developers-start-quest"),
     },
     {
-      emoji: ":woman_scientist:",
-      title: t("page-developers-resources"),
-      description: t("page-developers-start-desc"),
-      url: "/developers/learning-tools/",
-      button: t("page-developers-play-code"),
-    },
-    {
-      emoji: ":construction_worker:",
-      title: t("page-developers-set-up"),
-      description: t("page-developers-setup-desc"),
-      url: "/developers/local-environment/",
-      button: t("page-developers-choose-stack"),
+      imgSrc: speedrunTokenVendor,
+      imgAlt: "Speedrun Ethereum token vendor project banner",
+      title: "Create a token", // t("page-developers-resources"),
+      description:
+        "Build a digital currency and a smart conract that trades it.", // t("page-developers-start-desc"),
+      url: "https://speedrunethereum.com/challenge/token-vendor",
+      button: t("page-developers-start-quest"),
     },
   ]
 
   return (
     <VStack className="mx-auto my-0 w-full">
       <HubHero
-        heroImg={HeroImage}
+        heroImg={heroImage}
         header={`${t("page-developers-title-1")} ${t(
           "page-developers-title-2"
         )} ${t("page-developers-title-3")}`}
@@ -111,25 +113,54 @@ const DevelopersPage = async ({
       <MainArticle className="w-full space-y-12 px-8 py-4">
         <h2 className="-mb-4 mt-12">{t("page-developers-get-started")}</h2>
 
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8 xl:mb-12">
+        <div className="-mx-4 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+          {paths.map((path, idx) => (
+            <Card
+              key={idx}
+              className="flex flex-col gap-8 rounded-4xl border p-6"
+            >
+              <Image
+                src={path.imgSrc}
+                alt={path.imgAlt}
+                className="object-fit mx-auto h-44"
+                sizes="(max-width: 480px) calc(100vw - 6rem), 285px"
+              />
+              <div className="h-full space-y-1">
+                <Tag
+                  status="warning"
+                  size="small"
+                  className="mb-0 rounded-[4px] px-1 py-px font-bold normal-case"
+                >
+                  Challenge #{idx}
+                </Tag>
+                <h3 className="text-lg font-bold">{path.title}</h3>
+                <p className="mb-4 text-sm text-body-medium">
+                  {path.description}
+                </p>
+              </div>
+              <ButtonLink href={path.url} className="sm:w-fit">
+                {path.button}
+              </ButtonLink>
+            </Card>
+          ))}
+
           <div
             className="relative h-[450px]"
             data-label="speedrunethereum-banner"
           >
             <Image
-              className="pointer-events-none absolute -z-[1] h-full rounded-t-2xl"
-              src={SpeedRunEthereumImage}
+              className="pointer-events-none absolute -z-[1] h-full w-screen rounded-t-4xl object-cover object-[75%_50%]"
+              src={speedRunEthereumImage}
               alt="SpeedRunEthereum banner"
-              sizes="100vw"
-              style={{ width: "100vw", objectFit: "cover" }}
+              sizes="(max-width: 768px) 100vw, 50vw"
             />
-            <div className="z-[1] space-y-4 break-words px-6 py-10 md:space-y-6 lg:p-12">
+            <div className="z-[1] flex flex-col space-y-4 break-words px-6 py-10 md:space-y-6 lg:p-6">
               <h3>{t("page-developers-start")}</h3>
               <p>{t("page-developers-speedrunethereum-description")}</p>
               <ButtonLink
                 href="https://speedrunethereum.com/"
                 size="lg"
-                className="mt-4"
+                className="mt-4 sm:w-fit"
                 customEventOptions={{
                   eventCategory: "top_boxes",
                   eventAction: "click",
@@ -141,7 +172,9 @@ const DevelopersPage = async ({
               </ButtonLink>
             </div>
           </div>
+        </div>
 
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8 xl:mb-12">
           <Card className="!space-y-8 break-words border border-accent-c/20 bg-gradient-to-t from-accent-c/15 to-accent-c/5 px-6 py-10 md:space-y-6 lg:p-12">
             <h3>{t("page-developers-jump-right-in-title")}</h3>
             <div className="space-y-6">
@@ -186,20 +219,6 @@ const DevelopersPage = async ({
           </Card>
         </div>
 
-        <div className="-mx-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
-          {paths.map((path, idx) => (
-            <OldCard
-              className={`m-4 p-6 shadow-[0px_1px_3px_rgba(0,0,0,0.1)] transition-transform duration-100 hover:scale-105 hover:rounded hover:bg-background-highlight hover:shadow-[0px_8px_17px_rgba(0,0,0,0.15)] dark:shadow-[0px_1px_3px_rgba(60,60,60,0.1)]`}
-              key={idx}
-              emoji={path.emoji}
-              title={path.title}
-              description={path.description}
-            >
-              <ButtonLink href={path.url}>{path.button}</ButtonLink>
-            </OldCard>
-          ))}
-        </div>
-
         <div className="flex w-full flex-col items-start justify-between lg:flex-row lg:items-center">
           <IntroColumn>
             <H2>{t("page-developers-about")}</H2>
@@ -216,7 +235,7 @@ const DevelopersPage = async ({
           </IntroColumn>
           <CalloutSSR
             className="flex-auto md:flex-[1_1_416px]"
-            image={DevelopersImage}
+            image={developersImage}
             title={t("page-developers-improve-ethereum")}
             description={t("page-developers-improve-ethereum-desc")}
             alt={t("alt-eth-blocks")}
@@ -269,7 +288,7 @@ const DevelopersPage = async ({
             <Text>{t("page-developers-language-desc")}</Text>
             <Image
               className="mt-16 hidden max-w-[400px] lg:block"
-              src={DogeImage}
+              src={dogeImage}
               alt={t("page-assets-doge")}
             />
           </Column>
