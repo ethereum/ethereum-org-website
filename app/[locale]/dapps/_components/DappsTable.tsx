@@ -26,7 +26,7 @@ const DappsTable = ({ dapps }: { dapps: DappData[] }) => {
 
   return (
     <div className="flex flex-col gap-7">
-      <div className="flex flex-row justify-between border-b pb-2">
+      <div className="flex flex-row items-center justify-between border-b pb-2">
         <div className="flex flex-row items-center gap-2">
           <p className="whitespace-nowrap">Filter by</p>
           <Select value={filterBy} onValueChange={setFilterBy}>
@@ -54,7 +54,14 @@ const DappsTable = ({ dapps }: { dapps: DappData[] }) => {
         </div>
         <div>
           <p className="text-body-medium">
-            Showing <span className="text-body">({dapps.length})</span>
+            Showing{" "}
+            <span className="text-body">
+              (
+              {filteredDapps.length === dapps.length
+                ? dapps.length
+                : `${filteredDapps.length}/${dapps.length}`}
+              )
+            </span>
           </p>
         </div>
       </div>
