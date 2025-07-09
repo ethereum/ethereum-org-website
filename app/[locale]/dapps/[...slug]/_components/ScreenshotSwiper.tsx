@@ -34,7 +34,7 @@ const ScreenshotSwiper = ({ screenshots, dappName }: ScreenshotSwiperProps) => {
           },
         }}
       >
-        {screenshots.map((screenshot) => (
+        {screenshots.map((screenshot, index) => (
           <SwiperSlide key={screenshot}>
             <Image
               src={screenshot}
