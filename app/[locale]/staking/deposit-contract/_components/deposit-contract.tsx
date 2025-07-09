@@ -1,7 +1,7 @@
 "use client"
-
 import { useEffect, useState } from "react"
 import makeBlockie from "ethereum-blockies-base64"
+import { Clipboard, ClipboardCheck } from "lucide-react"
 
 import type { ChildOnlyProp, TranslationKey } from "@/lib/types"
 
@@ -30,7 +30,7 @@ import { DEPOSIT_CONTRACT_ADDRESS } from "@/data/addresses"
 import useTranslation from "@/hooks/useTranslation"
 import { usePathname } from "@/i18n/routing"
 import consensys from "@/public/images/projects/consensys.png"
-import etherscan from "@/public/images/projects/etherscan-logo-circle.png"
+import blockscout from "@/public/images/resources/blockscout.webp"
 import ef from "@/public/images/staking/ef-blog-logo.png"
 
 const FlexBox = (props: ChildOnlyProp) => (
@@ -140,7 +140,8 @@ const StyledFakeLink = (props: ButtonProps) => (
   />
 )
 
-const CHUNKED_ADDRESS = DEPOSIT_CONTRACT_ADDRESS.match(/.{1,3}/g)?.join(" ")
+const CHUNKED_ADDRESS =
+  DEPOSIT_CONTRACT_ADDRESS.match(/(?:^0x|.{4})/g)?.join(" ")
 
 const blockieSrc = makeBlockie(DEPOSIT_CONTRACT_ADDRESS)
 
@@ -236,9 +237,9 @@ const DepositContractPage = () => {
       alt: "",
     },
     {
-      title: "Etherscan",
-      link: `https://etherscan.io/address/${DEPOSIT_CONTRACT_ADDRESS}`,
-      image: etherscan,
+      title: "Blockscout",
+      link: `https://eth.blockscout.com/address/${DEPOSIT_CONTRACT_ADDRESS}`,
+      image: blockscout,
       alt: "",
     },
   ]
@@ -374,25 +375,22 @@ const DepositContractPage = () => {
                         <CopyButton>
                           {!isCopied ? (
                             <>
-                              <Emoji text=":clipboard:" className="text-md" />
                               {t("page-staking-deposit-contract-copy")}
+                              <Clipboard className="ms-1" />
                             </>
                           ) : (
                             <>
-                              <Emoji
-                                text=":white_check_mark:"
-                                className="text-md"
-                              />
                               {t("page-staking-deposit-contract-copied")}
+                              <ClipboardCheck className="ms-1" />
                             </>
                           )}
                         </CopyButton>
                       )}
                     </CopyToClipboard>
                     <InlineLink
-                      href={`https://etherscan.io/address/${DEPOSIT_CONTRACT_ADDRESS}`}
+                      href={`https://eth.blockscout.com/address/${DEPOSIT_CONTRACT_ADDRESS}`}
                     >
-                      {t("page-staking-deposit-contract-etherscan")}
+                      {t("page-staking-deposit-contract-blockexplorer")}
                     </InlineLink>
                   </ButtonRow>
                 </>

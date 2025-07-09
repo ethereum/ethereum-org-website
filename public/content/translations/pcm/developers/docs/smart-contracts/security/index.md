@@ -8,7 +8,7 @@ Smart kontracts dey very flexibol, and dem kapabol to dey kontrol big-big amount
 
 Blockchains wey dey publik laik Ethereum, dey make di issues to dey sekure smart kontracts more hard. Dem nor fit shanj kontract code wey dem deploy _ushually_ to patch-patch sekurity wey nor strong, as asset wey dem steal from smart kontracts dey very difikut to track and most taims dem nor fit rikova dem bikos kontract nor dey shanj.
 
-Aldoh numbas dey difren, dem don estimate sey di total amount of value wey dem steal abi don lost bikos of sekurity wey get fault don pass $1 billion. Dis inklude events wey dey very high, laik di [DAO hack](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/) (3.6M ETH wey dem steal, worth pass $1B for today prices), [Parity multi-sig wallet hack](https://www.coindesk.com/30-million-ether-reported-stolen-parity-wallet-breach) (wey lose $30M to dem hackers), and di [Parity frozen wallet issue](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether) (ova $300M in ETH wey dey lock foreva).
+Aldoh numbas dey difren, dem don estimate sey di total amount of value wey dem steal abi don lost bikos of sekurity wey get fault don pass $1 billion. Dis inklude events wey dey very high, laik di [DAO hack](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/) (3.6M ETH wey dem steal, worth pass $1B for today prices), [Parity multi-sig wallet hack](https://www.coindesk.com/markets/2017/07/19/30-million-ether-reported-stolen-due-to-parity-wallet-breach) (wey lose $30M to dem hackers), and di [Parity frozen wallet issue](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether) (ova $300M in ETH wey dey lock foreva).
 
 Di issues menshon bifor make am impotant for divelopas to invest effort to dey build sekure, robust, and strong smart kontracts. Smart kontract sekurity na serious biznes, and one wey efri divelopa go do well to learn. Dis guide go kover sekurity konsiderashons for Ethereum divelopas and eksplore risorsis to dey impruf smart kontract sekurity.
 
@@ -304,7 +304,7 @@ Nortin dey wrong here, eksept dat `Attacka` get anoda funshon wey koll`withdraw(
 - `Victim` finally applies the results of the first transaction (and subsequent ones) to its state, so `Attacker`’s balance is set to 0
 ```
 
-Di summary bi sey bikos di kolla balans nor dey set to 0 ontil di funshon don run finish, invokashons wey follow go succeed and go allow di kolla to witdraw dia balana plenti taims. Dem fit yus dis kain attak take drain funds from di smart kontract, laik wetin hapun in di [2016 DAO hack](https://www.coindesk.com/learn/2016/06/25/understanding-the-dao-attack/). Reentrancy attaks still dey kritical issue for smart kontracts today as [di publik listings of reentrancy exploits](https://github.com/pcaversaccio/reentrancy-attacks) dey show.
+Di summary bi sey bikos di kolla balans nor dey set to 0 ontil di funshon don run finish, invokashons wey follow go succeed and go allow di kolla to witdraw dia balana plenti taims. Dem fit yus dis kain attak take drain funds from di smart kontract, laik wetin hapun in di [2016 DAO hack](https://www.coindesk.com/learn/understanding-the-dao-attack). Reentrancy attaks still dey kritical issue for smart kontracts today as [di publik listings of reentrancy exploits](https://github.com/pcaversaccio/reentrancy-attacks) dey show.
 
 ##### Hau yu fit privent reentrancy attaks
 
@@ -505,7 +505,7 @@ If yu dey plan query on-chain orakol for asset prices, make yu konsida to dey yu
 
 - **[Hacken](https://hacken.io)** - _ Web3 cybersekurity auditor wey dey bring di 360-degree approach to blockchain sekurity._
 
-- **[Nethermind](https://nethermind.io/smart-contracts-audits)** - _ Solidity and Cairo auditing savis wey sure sey di intergrity of smart kontracts and di safety of di users akross Ethereum and Starknet._
+- **[Nethermind](https://www.nethermind.io/smart-contract-audits)** - _ Solidity and Cairo auditing savis wey sure sey di intergrity of smart kontracts and di safety of di users akross Ethereum and Starknet._
 
 - **[HashEx](https://hashex.org/)** - _HashEx dey fokus on blockchain and di smart kontract auditing to sure sey di sekurity of cryptocurrencies, dey provide savis laik smart kontract divelopment, penetrashon testing, blockchain konsulting._
 
@@ -515,7 +515,7 @@ If yu dey plan query on-chain orakol for asset prices, make yu konsida to dey yu
 
 - **[Cyfrin](https://cyfrin.io)** - _ Web3 sekurity pawahaus, to dey inkubate crypto sekurity thru products and smart kontract auditing savis._
 
-- **[ImmuneBytes](https://www.immunebytes.com//smart-contract-audit/)** - _ Web3 sekurity firm wey dey give sekurity audits for blockchain systems thru one team wey get ekspiriens auditors and best-in-class tools._
+- **[ImmuneBytes](https://immunebytes.com/smart-contract-audit/)** - _ Web3 sekurity firm wey dey give sekurity audits for blockchain systems thru one team wey get ekspiriens auditors and best-in-class tools._
 
 - **[Oxorio](https://oxor.io/)** - _ Smart kontract audits and blockchain sekurity savis wit expatise in EVM, Solidity, ZK, Cross-chain tech for crypto firms and DeFi projects._
 

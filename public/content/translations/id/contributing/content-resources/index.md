@@ -27,6 +27,6 @@ Sumber pembelajaran akan dinilai berdasarkan kriteria sebagai berikut:
 
 Jika Anda ingin menambahkan sumber konten ke ethereum.org dan itu memenuhi kriteria, buatlah isu di GitHub.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=">
+<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=">
   Buat isu
 </ButtonLink>

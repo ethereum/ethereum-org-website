@@ -93,7 +93,7 @@ W 1977 r. w Wyoming powstały pierwsze spółki z ograniczoną odpowiedzialnośc
 
 ### Znany przykład {#law-example}
 
-[CityDAO](https://citydao.io) – CityDAO użył prawa DAO Wyoming, aby kupić 40 hektarów ziemi w pobliżu Parku Narodowego Yellowstone.
+[CityDAO](https://citizen.citydao.io/) – CityDAO użył prawa DAO Wyoming, aby kupić 40 hektarów ziemi w pobliżu Parku Narodowego Yellowstone.
 
 ## Członkostwo DAO {#dao-membership}
 

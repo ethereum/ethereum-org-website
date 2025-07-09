@@ -12,7 +12,7 @@ Quer iniciar a sua jornada no Ethereum? Os nossos guias práticos oferecem orien
 
 1. [Como "criar" uma conta Ethereum](/guides/how-to-create-an-ethereum-account/) - Qualquer pessoa pode criar uma carteira, gratuitamente. Este guia mostrará por onde começar.
 
-2. [Como usar uma carteira](/guides/how-to-use-a-wallet/) — Uma introdução aos recursos básicos de qualquer carteira e como usá-los.
+2. [Como usar uma carteira](/guides/how-to-use-a-wallet/) – Aprenda como enviar e receber tokens em sua carteira e como conectar a carteira a projetos.
 
 ## Noções básicas de segurança
 

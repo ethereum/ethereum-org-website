@@ -11,7 +11,7 @@ import React, {
 import { useSearchParams } from "next/navigation"
 import { useLocale } from "next-intl"
 
-import type { ChildOnlyProp } from "@/lib/types"
+import type { ChildOnlyProp, PageWithContributorsProps } from "@/lib/types"
 
 import BoxGrid from "@/components/BoxGrid"
 import Callout from "@/components/Callout"
@@ -20,6 +20,7 @@ import Card from "@/components/Card"
 import DocLink from "@/components/DocLink"
 import Emoji from "@/components/Emoji"
 import FeedbackCard from "@/components/FeedbackCard"
+import FileContributors from "@/components/FileContributors"
 import GhostCard from "@/components/GhostCard"
 import { Image } from "@/components/Image"
 import InfoBanner from "@/components/InfoBanner"
@@ -270,7 +271,10 @@ interface Categories {
   [key: string]: Category
 }
 
-const DappsPage = () => {
+const DappsPage = ({
+  contributors,
+  lastEditLocaleTimestamp,
+}: PageWithContributorsProps) => {
   const { t } = useTranslation(["page-dapps", "common"])
   const searchParams = useSearchParams()
   const locale = useLocale()
@@ -538,7 +542,7 @@ const DappsPage = () => {
     {
       title: "Curve",
       description: t("page-dapps-dapp-description-curve"),
-      link: "https://curve.fi/",
+      link: "https://www.curve.finance/",
       image: curve,
       alt: t("page-dapps-curve-logo-alt"),
     },
@@ -1107,7 +1111,7 @@ const DappsPage = () => {
         <H2 id="explore">{t("page-dapps-explore-dapps-title")}</H2>
         <CenterText>{t("page-dapps-explore-dapps-description")}</CenterText>
         <H3>{t("page-dapps-choose-category")}</H3>
-        <div className="mb-8 grid w-full grid-cols-1 justify-center gap-4 px-8 sm:grid-cols-2 lg:w-auto lg:grid-cols-3 2xl:grid-cols-6">
+        <div className="mb-8 grid w-full grid-cols-1 justify-center gap-4 px-8 sm:grid-cols-2 lg:w-auto lg:grid-cols-[repeat(4,auto)]">
           {categoryKeys.map((key, idx) => {
             const categoryType = key as CategoryType
             const category = categories[categoryType]
@@ -1530,6 +1534,11 @@ const DappsPage = () => {
         </Row>
       </Content>
       <Content>
+        <FileContributors
+          className="my-10 border-t"
+          contributors={contributors}
+          lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        />
         <FeedbackCard />
       </Content>
     </Page>

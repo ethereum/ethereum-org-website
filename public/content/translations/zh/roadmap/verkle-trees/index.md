@@ -57,10 +57,12 @@ summaryPoints:
 
 - [沃克尔树实现无状态](https://verkle.info/)
 - [Dankrad Feist 在 PEEPanEIP 上关于沃克尔树的讲解](https://www.youtube.com/watch?v=RGJOQHzg3UQ)
+- [面向大众的沃克尔树](https://research.2077.xyz/verkle-trees)
+- [沃克尔证明的结构解析](https://ihagopian.com/posts/anatomy-of-a-verkle-proof)
 - [Guillaume Ballet 在 ETHGlobal 解释沃克尔树](https://www.youtube.com/watch?v=f7bEtX3Z57o)
 - [Guillaume Ballet 在 Devcon 6 上的演讲“沃克尔树如何让以太坊变得高效精简”](https://www.youtube.com/watch?v=Q7rStTKwuYs)
 - [Piper Merriam 在 2020 年 ETHDenver 大会上关于无状态客户端的讲解](https://www.youtube.com/watch?v=0yiZJNciIJ4)
-- [Dankrad Fiest 在 Zero Knowledge 播客上关于沃克尔树和无状态性的讲解](https://zeroknowledge.fm/episode-202-stateless-ethereum-verkle-tries-with-dankrad-feist/)
+- [Dankrad Fiest 在 Zero Knowledge 播客上关于沃克尔树和无状态性的讲解](https://zeroknowledge.fm/podcast/202/)
 - [Vitalik Buterin 关于沃克尔树的讲解](https://vitalik.eth.limo/general/2021/06/18/verkle.html)
 - [Dankrad Feist 关于沃克尔树的讲解](https://dankradfeist.de/ethereum/2021/06/18/verkle-trie-for-eth1.html)
 - [沃克尔树的以太坊改进提案](https://notes.ethereum.org/@vbuterin/verkle_tree_eip#Illustration)

@@ -16,7 +16,7 @@ lang: uk
 - Дивіться [онлайн-зустрічі розробників](https://www.youtube.com/@EthereumProtocol) або беріть у них участь
 - [Список уподобань для програми підтримки екосистем](https://esp.ethereum.foundation/wishlist/) — галузі інструментарію, документації та інфраструктури, у яких активно шукають заявників на гранти в межах програми підтримки екосистеми Ethereum
 - [Web3Bridge](https://www.web3bridge.com/) — приєднуйтеся до амбітної спільноти web3, яка прагне виявляти, навчати й підтримувати сотні розробників і членів спільнот по всій Африці
-- Приєднуйтеся до [групи Ethereum Cat Herders на платформі Discord](https://discord.io/EthCatHerders)
+- Приєднуйтеся до [групи Ethereum Cat Herders на платформі Discord](https://discord.gg/Nz6rtfJ8Cu)
 
 ## Дослідники й академіки <Emoji text=":mag:" size={1} /> {#researchers-and-academics}
 

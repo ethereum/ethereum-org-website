@@ -1,9 +1,8 @@
 "use client"
 
-import { FaGithub } from "react-icons/fa"
-
 import type { ToCItem } from "@/lib/types"
 
+import Github from "@/components/icons/github.svg"
 import ItemsList from "@/components/TableOfContents/ItemsList"
 import Mobile from "@/components/TableOfContents/TableOfContentsMobile"
 
@@ -68,7 +67,7 @@ const TableOfContents = ({
     >
       {!hideEditButton && editPath && (
         <ButtonLink href={editPath} variant="outline">
-          <FaGithub />
+          <Github />
           {t("edit-page")}
         </ButtonLink>
       )}

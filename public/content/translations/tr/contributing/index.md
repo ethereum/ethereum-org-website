@@ -19,13 +19,12 @@ Ethereum ekosisteminde büyümenize ve eğitim almanıza yardımcı olurken anla
 - [Açık bir konu üzerinde çalışın](https://github.com/ethereum/ethereum-org-website/issues) – Yapılması gerektiğini tespit ettiğimiz işler
 
 **Tasarım**
-- [Web sitesinin tasarlanmasına yardımcı olun](/contributing/design/) Her seviyeden tasarımcı, web sitesini geliştirmek için katkıda bulunabilir
+- [Web sitesinin tasarlanmasına yardımcı olun](/contributing/design/) – Her seviyeden tasarımcı, web sitesini geliştirmek için katkıda bulunabilir
 
 **İçerik**
 - [İçerik oluşturun/düzenleyin](/contributing/#how-to-update-content) – Yeni sayfalar önerin veya zaten burada olanlar üzerinde değişiklikler yapın
 - [Topluluk kaynakları ekleyin](/contributing/content-resources/) – Alakalı bir sayfaya faydalı bir makale veya kaynak ekleyin
 - [Bir tasarım kaynağı önerin](/contributing/design/adding-design-resources/) – Yararlı tasarım kaynaklarını ekleyin, güncelleyin ve silin
-- [Bir sözlük terimi ekleyin](/contributing/adding-glossary-terms/) – Ethereum [sözlüğünü](/glossary/) genişletmeye devam etmemize yardımcı olun
 - [Testler](/contributing/quizzes/) – İlgili bir sayfa için test soru bankaları ekleyin, güncelleyin ve silin
 
 **Özellik fikirleri**
@@ -68,7 +67,7 @@ Katkıda bulunmadan önce şunlara aşina olduğunuzdan emin olun:
 - [stil rehberimiz](/contributing/style-guide/)
 - [davranış kurallarımız](/community/code-of-conduct)
 
-<ContributorsQuizBanner mt={16} mb={8} />
+<ContributorsQuizBanner className="mt-16 mb-8" />
 
 ## Siteyle ilgili kararlar nasıl alınır {#how-decisions-about-the-site-are-made}
 
@@ -90,11 +89,11 @@ GitHub depomuzda, özellikle açık kaynak konusunda acemi olan geliştiriciler 
 
 Katkınızın ethereum.org ile birleştirilmesi halinde [Galxe](https://app.galxe.com/quest/ethereumorg)'de özel bir rozet talep etme şansınız olacak. Bir Zincir Üstünde Başarı Jetonu (OAT), ekosistemin biraz daha mükemmel hale getirilmesine katkıda bulunduğunuzun kanıtıdır.
 
-[OAT'ler hakkında daha fazla bilgi](https://help.galxe.com/en/articles/7067290-galxe-oats-reward-and-celebrate-achievements)
+[OAT'ler hakkında daha fazla bilgi](https://help.galxe.com/en/articles/9645630-create-quest-rewards#h_1c5d63ba03)
 
 ### Nasıl talep edilir?
 1. [Discord sunucumuza](https://discord.gg/ethereum-org) katılın.
-2. Yaptığınız katkının bağlantısını `#🥇 | proof-of-contribution` kanalına yapıştırın
+2. Yaptığınız katkının bağlantısını `#🥇 | proof-of-contribution` kanalına yapıştırın.
 3. Ekip üyelerimizden birinin size OAT bağlantınızı göndermesini bekleyin.
 4. OAT'nizi talep edin!
 

@@ -1,8 +1,8 @@
 "use client"
 
 import { AnchorHTMLAttributes, ComponentProps, forwardRef } from "react"
+import { ExternalLink, Mail } from "lucide-react"
 import NextLink from "next/link"
-import { RxExternalLink } from "react-icons/rx"
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden"
 
 import { cn } from "@/lib/utils/cn"
@@ -56,6 +56,7 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
   const { twFlipForRtl } = useRtlFlip()
 
   if (!href) {
+    // If troubleshooting this warning, check for multiple h1's in markdown content—these will result in broken id hrefs
     console.warn(`Link component missing href prop, pathname: ${pathname}`)
     return <a {...props} />
   }
@@ -64,6 +65,7 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
   const isDiscordInvite = url.isDiscordInvite(href)
   const isFile = url.isFile(href)
   const isExternal = url.isExternal(href)
+  const isMailto = url.isMailto(href)
   const isInternalFile = isFile && !isExternal
   const isHash = url.isHash(href)
 
@@ -88,7 +90,7 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
     return (
       <a
         target="_blank"
-        rel="noopener"
+        rel="noopener noreferrer"
         onClick={() =>
           trackCustomEvent(
             customEventOptions ?? {
@@ -101,12 +103,24 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
         }
         {...commonProps}
       >
-        {children}
-        <VisuallyHidden>(opens in a new tab)</VisuallyHidden>
-        {!hideArrow && (
-          <RxExternalLink
+        {isMailto ? (
+          <span className="text-nowrap">
+            {!hideArrow && (
+              <Mail className="!mb-0.5 me-1 inline-block size-[1em] shrink-0" />
+            )}
+            {children}
+          </span>
+        ) : (
+          children
+        )}
+        <VisuallyHidden>
+          {isMailto ? "opens email client" : "opens in a new tab"}
+        </VisuallyHidden>
+        {!hideArrow && !isMailto && (
+          <ExternalLink
+            data-label="arrow"
             className={cn(
-              "-me-1 inline h-6 w-6 shrink-0 p-1 align-middle",
+              "!mb-0.5 ms-1 inline-block size-[0.875em] max-h-4 max-w-4 shrink-0",
               twFlipForRtl
             )}
           />
@@ -119,7 +133,7 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
     return (
       <NextLink
         target="_blank"
-        rel="noopener"
+        rel="noopener noreferrer"
         onClick={() =>
           trackCustomEvent(
             customEventOptions ?? {

@@ -74,32 +74,30 @@ summaryPoint3: Τα κρυπτονομίσματα και τα NFT δημιου�
 
 ## Κοινωνικά δίκτυα Web2 στο Ethereum {#web2-social-networks-and-ethereum}
 
-Οι εγγενείς πλατφόρμες κοινωνικής δικτύωσης [Web3](/glossary/#web3) δεν είναι οι μόνες που προσπαθούν να ενσωματώσουν την τεχνολογία κρυπτοαλυσίδας στα μέσα κοινωνικής δικτύωσης. Πολλές κεντρικές πλατφόρμες σχεδιάζουν επίσης να ενσωματώσουν το Ethereum στην υποδομή τους:
+Οι εγγενείς πλατφόρμες κοινωνικής δικτύωσης [Web3](/glossary/#web3) δεν είναι οι μόνες που προσπαθούν να ενσωματώσουν την τεχνολογία κρυπτοαλυσίδας στα μέσα κοινωνικής δικτύωσης. Πολλές κεντρικές πλατφόρμες διερευνούν επίσης ή έχουν πειραματιστεί με την ενσωμάτωση του Ethereum στην υποδομή τους:
 
 ### Reddit {#reddit}
 
-Το Reddit έχει προωθήσει τους [πόντους κοινότητας](https://cointelegraph.com/news/reddit-to-reportedly-tokenize-karma-points-and-onboard-500m-new-users), δηλαδή ψηφιακά στοιχεία ERC-20 τα οποία μπορούν να κερδίσουν οι χρήστες δημοσιεύοντας ποιοτικό περιεχόμενο και συνεισφέροντας σε διαδικτυακές κοινότητες (subreddits). Μπορείτε να εξαργυρώσετε αυτά τα κρυπτονομίσματα μέσα σε ένα subreddit για να λάβετε αποκλειστικά προνόμια. Για αυτό το έργο, το Reddit συνεργάζεται με το Arbitrum, ένα δίκτυο [επιπέδου 2](/glossary/#layer-2) που έχει σχεδιαστεί για την κλιμακωτή αναβάθμιση των συναλλαγών στο Ethereum.
-
-Το πρόγραμμα είναι ήδη σε λειτουργία, με το subreddit r/CryptoCurrency [που εκτελεί την έκδοση των σημείων κοινότητας που ονομάζεται "Moons"](https://www.reddit.com/r/CryptoCurrency/wiki/moons_wiki). Σύμφωνα με την επίσημη περιγραφή, το Moons «επιβραβεύει αφίσες, σχολιαστές και συντονιστές για τη συνεισφορά τους στο subreddit». Επειδή αυτά τα κρυπτονομίσματα βρίσκονται στην κρυπτοαλυσίδα (οι χρήστες τα λαμβάνουν σε πορτοφόλια), είναι ανεξάρτητα από το Reddit και δεν μπορούν να αφαιρεθούν.
-
-Εκτός από τη χρήση των πόντων κοινότητας για την πρόσβαση σε ειδικές λειτουργίες, οι χρήστες μπορούν επίσης να τους ανταλλάξουν με υποχρεωτικό χρήμα (fiat) σε ανταλλακτήρια. Επίσης, ο αριθμός των πόντων κοινότητας που κατέχει ένας χρήστης καθορίζει την επιρροή του στη διαδικασία λήψης αποφάσεων εντός της κοινότητας.
+- Το Reddit είχε πειραματιστεί προηγουμένως με **Πόντους Κοινότητας**, οι οποίοι ήταν στοιχεία ERC-20 που οι χρήστες μπορούσαν να κερδίσουν δημοσιεύοντας ποιοτικό περιεχόμενο και συνεισφέροντας σε συγκεκριμένες διαδικτυακές κοινότητες (subreddits). Οι χρήστες μπορούσαν να εξαργυρώσουν αυτά τα tokens μέσα σε ένα subreddit για αποκλειστικά προνόμια ή να τα ανταλλάξουν. Για αυτό το έργο, το Reddit χρησιμοποίησε το Arbitrum Nova, ένα δίκτυο [επιπέδου 2](/glossary/#layer-2) που έχει σχεδιαστεί για την κλιμάκωση των συναλλαγών Ethereum.
+- Το πρόγραμμα ήταν αξιοσημείωτα ενεργό στο subreddit r/CryptoCurrency με το "Moons" του και στο subreddit r/FortNiteBR με το "Bricks" του. Επειδή αυτά τα κρυπτονομίσματα βρίσκονταν στο blockchain, ήταν ανεξάρτητα από το Reddit από τη στιγμή που καταχωρούνταν στο [πορτοφόλι](/glossary/#wallet) ενός χρήστη.
+- Ωστόσο, το **Reddit [τερμάτισε το πρόγραμμα Community Points](https://www.reddit.com/r/CryptoCurrency/comments/17a33ql/reddit_is_officially_deprecating_community_points/) στα τέλη του 2023**, επικαλούμενο προβλήματα επεκτασιμότητας και πόρων. Ενώ τα ψηφιακά στοιχεία εξακολουθούν να υπάρχουν στο blockchain, το Reddit δεν τα υποστηρίζει πλέον ενεργά ούτε τα ενσωματώνει στις λειτουργίες της πλατφόρμας του.
 
 ## Περισσότερες πληροφορίες {#further-reading}
 
 ### Άρθρα {#articles}
 
-- [Αποκέντρωση μέσων κοινωνικής δικτύωσης: ένας οδηγός για τα κοινωνικά δίκτυα web3](https://www.coinbase.com/blog/decentralizing-social-media-a-guide-to-the-web3-social-stack) - _Coinbase Ventures_
+- [Αποκέντρωση των μέσων κοινωνικής δικτύωσης: ένας οδηγός για το web3 social stack](https://www.coinbase.com/blog/decentralizing-social-media-a-guide-to-the-web3-social-stack) - _Coinbase Ventures_
 - [Τα κοινωνικά δίκτυα είναι η επόμενη μεγάλη ευκαιρία αποκέντρωσης](https://www.coindesk.com/tech/2021/01/22/social-networks-are-the-next-big-decentralization-opportunity/) — _Ben Goertzel_
-- [Το Web3 υπόσχεται αποκεντρωμένα κοινωνικά δίκτυα που υποστηρίζονται από την κοινότητα](https://venturebeat.com/2022/02/26/web3-holds-the-promise-of-decentralized-community-powered-social-networks/) — _Sumit Ghosh_
-- [Μια επισκόπηση του χώρου των μέσων κοινωνικής δικτύωσης σε Blockchain](https://www.gemini.com/cryptopedia/blockchain-social-media-decentralized-social-media) — *Cryptopedia Gemini*
-- [Πώς το Blockchain μπορεί να λύσει το απόρρητο των μέσων κοινωνικής δικτύωσης](https://www.investopedia.com/news/ethereum-blockchain-social-media-privacy-problem-linkedin-indorse/) — _Prableen Bajpai_
-- [Επαρκής αποκέντρωση για κοινωνικά δίκτυα](https://www.varunsrinivasan.com/2022/01/11/sufficient-decentralization-for-social-networks) — *Varun Srinivasan*
+- [Το Web3 διατηρεί την υπόσχεση για αποκεντρωμένα, κοινωνικά δίκτυα που υποστηρίζονται από την κοινότητα](https://venturebeat.com/2022/02/26/web3-holds-the-promise-of-decentralized-community-powered-social-networks/) — _Sumit Ghosh_
+- [Μια επισκόπηση του τοπίου των μέσων κοινωνικής δικτύωσης Blockchain](https://www.gemini.com/cryptopedia/blockchain-social-media-decentralized-social-media) — _Gemini Cryptopedia_
+- [Πώς το Blockchain Μπορεί να Λύσει το Απόρρητο των Κοινωνικών Δικτύων](https://www.investopedia.com/news/ethereum-blockchain-social-media-privacy-problem-linkedin-indorse/) — _Prableen Bajpai_
+- [Επαρκής Αποκέντρωση για Κοινωνικά Δίκτυα](https://www.varunsrinivasan.com/2022/01/11/sufficient-decentralization-for-social-networks) — _Varun Srinivasan_
 
 ### Βίντεο {#videos}
 
-- [Επεξήγηση αποκεντρωμένων μέσων κοινωνικής δικτύωσης](https://www.youtube.com/watch?v=UdT2lpcGvcQ) — _Coinmarketcap_
-- [Η DeSo Blockchain θέλει να αποκεντρώσει τα μέσα κοινωνικής δικτύωσης](https://www.youtube.com/watch?v=SG2HUiVp0rE) — _Τεχνολογία Bloomberg_
-- [Το μέλλον των αποκεντρωμένων μέσων κοινωνικής δικτύωσης των Balaji Srinivasan, Vitalik Buterin, Juan Benet](https://www.youtube.com/watch?v=DTxE9KV3YrE) — *ETHGlobal*
+- [Επεξήγηση των Αποκεντρωμένων Κοινωνικών Δικτύων](https://www.youtube.com/watch?v=UdT2lpcGvcQ) — _Coinmarketcap_
+- [Το DeSo Blockchain θέλει να αποκεντρώσει τα μέσα κοινωνικής δικτύωσης](https://www.youtube.com/watch?v=SG2HUiVp0rE) — _Bloomberg Technology_
+- [Το μέλλον των αποκεντρωμένων μέσων κοινωνικής δικτύωσης με τους Balaji Srinivasan, Vitalik Buterin, Juan Benet](https://www.youtube.com/watch?v=DTxE9KV3YrE) — _ETHGlobal_
 
 ### Κοινότητες {#communities}
 

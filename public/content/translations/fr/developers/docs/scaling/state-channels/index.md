@@ -27,7 +27,7 @@ Les canaux pair-à-pair sont particulièrement utiles dans les situations où ce
 
 ## Les canaux de paiement {#payment-channels}
 
-La meilleure façon de décrire un canal de paiement est de dire qu'il s'agit d'un « registre à double sens » tenu collectivement par deux utilisateurs. Le solde initial du registre est la somme des dépôts bloqués dans le contrat sur la chaîne pendant la phase d'ouverture du canal. Les transferts de canaux de paiement peuvent être effectués instantanément et sans l'intervention de la blockchain elle-même, à l'exception d'une création initiale unique sur la chaîne et d'une fermeture éventuelle du canal.
+La meilleure façon de décrire un canal de paiement est de dire qu'il s'agit d'un « registre à double sens » tenu collectivement par deux utilisateurs. Le solde initial du registre est la somme des dépôts bloqués dans le contrat en chaîne pendant la phase d'ouverture du canal. Les transferts de canaux de paiement peuvent être effectués instantanément et sans l'intervention de la blockchain elle-même, à l'exception d'une création initiale unique sur la chaîne et d'une fermeture éventuelle du canal.
 
 Les mises à jour du solde du registre (c'est-à-dire l'état du canal de paiement) nécessitent l'approbation de toutes les parties du canal. Une mise à jour du canal, signée par tous les participants au canal, est considérée comme finalisée, un peu comme une transaction sur Ethereum.
 
@@ -87,7 +87,7 @@ Le scénario décrit ci-dessus représente ce qui se passe dans un cas de figure
 
 - Les participants refusent de cosigner des mises à jour d'état valides
 
-- Les participants essaient de finaliser le canal en proposant une mise à jour de l'ancien état au contrat sur la chaîne
+- Les participants essaient de finaliser le canal en proposant une mise à jour de l'ancien état au contrat en chaîne
 
 - Les participants proposent des transitions d'état invalides pour que les autres les signent
 
@@ -101,7 +101,7 @@ Cependant, une partie peut soumettre une demande sur la chaîne pour mettre fin 
 
 Pour traiter la sortie du canal, l'utilisateur doit soumettre la dernière mise à jour d'état valide de l'application au contrat en chaîne. S'il est validé (c'est-à-dire qu'il porte la signature de toutes les parties), les fonds sont redistribués en sa faveur.
 
-Il y a cependant un retard dans l'exécution des demandes de sortie des utilisateurs uniques. Si la demande de fermeture du canal a été approuvée à l'unanimité, alors la transaction de sortie sur la chaîne est exécutée immédiatement.
+Il y a cependant un retard dans l'exécution des demandes de sortie des utilisateurs uniques. Si la demande de fermeture du canal a été approuvée à l'unanimité, alors la transaction de sortie de la chaîne est exécutée immédiatement.
 
 Le délai a une certaine importance dans les sorties mono-utilisateur en raison de la possibilité d'actions frauduleuses. Par exemple, un participant au canal peut essayer de finaliser le canal sur Ethereum en soumettant une ancienne mise à jour d'état sur la chaîne.
 
@@ -145,7 +145,7 @@ Ce système repose sur l'existence de ce que l'on appelle des « canaux de regis
 
 Les utilisateurs de chaque canal virtuel interagissent via une nouvelle instance de contrat, le canal du registre pouvant prendre en charge plusieurs instances de contrat. L'état du canal du registre contient également plus d'un état de stockage de contrat, ce qui permet l'exécution parallèle d'applications hors chaîne entre différents utilisateurs.
 
-Tout comme les canaux ordinaires, les utilisateurs échangent des mises à jour d'état pour faire progresser la machine d'état. Hormis en cas de litige, il suffit de contacter l'intermédiaire pour ouvrir ou fermer le canal.
+Tout comme les canaux ordinaires, les utilisateurs échangent des mises à jour d'état pour faire progresser la machine d'état. Sauf en cas de litige, il suffit de contacter l'intermédiaire pour ouvrir ou fermer le canal.
 
 ### Canaux de paiement virtuel {#virtual-payment-channels}
 
@@ -155,13 +155,13 @@ Les canaux de paiement virtuels fonctionnent sur le même principe que les canau
 
 ### Paiements {#payments}
 
-Les premiers canaux de la blockchain étaient de simples protocoles qui permettaient à deux participants d'effectuer des transferts rapides et peu coûteux hors chaîne sans avoir à payer des frais de transaction élevés sur le réseau principal. Aujourd'hui, les canaux de paiement sont encore utiles pour les applications conçues pour l'échange et les dépôts d'éther et de jetons.
+Les premiers canaux de la blockchain étaient de simples protocoles qui permettaient à deux participants d'effectuer des transferts rapides et peu coûteux hors chaîne sans avoir à payer de frais de transaction élevés sur le réseau principal. Aujourd'hui, les canaux de paiement sont encore utiles pour les applications conçues pour l'échange et les dépôts d'éther et de jetons.
 
 Les paiements basés sur les canaux présentent les avantages suivants :
 
 1. **Débit** : la quantité de transactions hors chaîne par canal n'a aucun lien avec le débit d'Ethereum, qui résulte de divers facteurs, notamment la taille et la durée des blocs. En exécutant des transactions hors chaîne, les canaux de la blockchain peuvent atteindre un débit plus élevé.
 
-2. **Confidentialité** : dans la mesure où les canaux existent hors chaîne, les détails des interactions entre les participants ne sont pas enregistrés sur la blockchain publique d'Ethereum. Les utilisateurs de canaux ne doivent interagir sur la chaîne que pour financer et fermer des canaux ou régler des litiges. Les canaux sont donc utiles pour les personnes qui recherchent des transactions plus privées.
+2. **Confidentialité** : dans la mesure où les canaux existent hors chaîne, les informations relatives aux interactions entre les participants ne sont pas enregistrées sur la blockchain publique d'Ethereum. Les utilisateurs de canaux ne doivent interagir sur la chaîne que pour financer et fermer des canaux ou régler des litiges. Les canaux sont donc utiles pour les personnes qui recherchent des transactions plus privées.
 
 3. **Latence** : les transactions hors chaîne effectuées entre les participants au canal peuvent être réglées instantanément, si les deux parties coopèrent, ce qui réduit les délais. En revanche, pour envoyer une transaction sur le réseau principal, il faut attendre que les nœuds traitent la transaction, produisent un nouveau bloc avec la transaction et parviennent à un consensus. Il se peut également que les utilisateurs doivent attendre d'autres confirmations de blocs avant de considérer une transaction comme finalisée.
 
@@ -181,7 +181,7 @@ Au-delà du coût d'ouverture et de fermeture du canal, les participants n'encou
 
 Comme les canaux de paiement, les canaux d'état peuvent effectuer des paiements conditionnels en fonction des états finaux de la machine d'état. Les canaux d'état peuvent également prendre en charge une logique de transition d'état arbitraire, ce qui les rend utiles pour exécuter des applications génériques hors chaîne.
 
-Les canaux d'état sont souvent limités à de simples applications à tour de rôle, car cela facilite la gestion des fonds engagés dans le contrat sur la chaîne. En outre, avec un nombre limité de parties mettant à jour l'état de l'application hors chaîne à intervalles réguliers, il est relativement simple de sanctionner un comportement malhonnête.
+Les canaux d'état sont souvent limités à de simples applications basées sur le tour de rôle, car cela facilite la gestion des fonds engagés dans le contrat en chaîne. En outre, avec un nombre limité de parties mettant à jour l'état de l'application hors chaîne à intervalles réguliers, il est relativement simple de sanctionner un comportement malhonnête.
 
 L'efficacité d'une application de canal d'état dépend également de sa conception. Par exemple, un développeur peut déployer une fois le contrat de canal de l'application sur la chaîne et permettre aux autres joueurs de réutiliser l'application sans avoir à passer par la chaîne. Dans ce cas, le canal initial de l'application sert de canal de registre supportant plusieurs canaux virtuels, chacun exécutant une nouvelle instance du contrat intelligent de l'application hors chaîne.
 
@@ -215,9 +215,9 @@ Les utilisateurs d'Ethereum n'ont pas à faire face à ce problème puisque le r
 
 ### Problèmes de liquidité {#liquidity-issues}
 
-Pour établir un canal sur la blockchain, les participants doivent bloquer des fonds dans un contrat intelligent sur la chaîne pour le cycle de vie du canal. Cela réduit la liquidité des utilisateurs du canal et limite également les canaux à ceux qui peuvent se permettre de garder les fonds bloqués sur le réseau principal.
+Pour établir un canal sur la blockchain, les participants doivent bloquer des fonds dans un contrat intelligent sur la chaîne tout au long du cycle de vie du canal. Cela réduit la liquidité des utilisateurs du canal et limite également les canaux à ceux qui peuvent se permettre de garder les fonds bloqués sur le réseau principal.
 
-Toutefois, les canaux des registres - exploités par un fournisseur de services hors chaîne (OSP) - peuvent réduire les problèmes de liquidité pour les utilisateurs. Deux pairs connectés à un canal du registre peuvent créer un canal virtuel, qu'ils peuvent ouvrir et finaliser complètement hors chaîne, quand ils le souhaitent.
+Toutefois, les canaux de registre - exploités par un fournisseur de services hors chaîne (OSP) - peuvent réduire les problèmes de liquidité pour les utilisateurs. Deux pairs connectés à un canal de registre peuvent créer un canal virtuel, qu'ils peuvent ouvrir et finaliser complètement hors chaîne, quand ils le souhaitent.
 
 Les fournisseurs de services hors chaîne pourraient également ouvrir des canaux avec plusieurs pairs, ce qui les rend utiles pour l'acheminement des paiements. Bien entendu, les utilisateurs doivent payer des frais aux OSP pour leurs services, ce que certains pourraient juger indésirable.
 
@@ -225,17 +225,17 @@ Les fournisseurs de services hors chaîne pourraient également ouvrir des canau
 
 Les attaques de griefing sont une caractéristique commune des systèmes basés sur la preuve de fraude. Une attaque de griefing ne profite pas directement à l'attaquant mais cause du grief (c'est-à-dire du tort) à la victime, d'où son nom.
 
-La preuve de fraude est susceptible de faire l'objet d'attaques de type griefing, car la partie honnête doit répondre à chaque litige, même invalide, sous peine de perdre ses fonds. Un participant malveillant peut décider de poster de manière répétée des transitions d'état périmées sur la chaîne, obligeant la partie honnête à répondre avec l'état valide. Le coût de ces transactions sur la chaîne peut rapidement s'accumuler, et les parties honnêtes y perdent au change.
+La preuve de fraude est susceptible de faire l'objet d'attaques de type griefing, car la partie honnête doit répondre à chaque litige, même invalide, sous peine de perdre ses fonds. Un participant malveillant peut décider de poster de manière répétée des transitions d'état périmées sur la chaîne, obligeant la partie honnête à répondre avec l'état valide. Le coût de ces transactions sur la chaîne peut rapidement augmenter, et les parties honnêtes y perdent au change.
 
 ### Ensembles de participants prédéfinis {#predefined-participant-sets}
 
-Par conception, le nombre de participants qui composent un canal d'état reste fixe pendant toute sa durée de vie. En effet, la mise à jour de l'ensemble des participants compliquerait le fonctionnement du canal, notamment pour le financement du canal ou le règlement des litiges. L'ajout ou le retrait de participants nécessiterait également une activité supplémentaire sur la chaîne, ce qui augmente les frais généraux pour les utilisateurs.
+Par conception, le nombre de participants qui composent un canal d'état reste fixe pendant toute sa durée de vie. En effet, la mise à jour de l'ensemble des participants compliquerait le fonctionnement du canal, notamment pour le financement du canal ou le règlement des litiges. L'ajout ou le retrait de participants nécessiterait également une activité supplémentaire sur la chaîne, augmentant ainsi les frais généraux pour les utilisateurs.
 
 Bien que cela rende les canaux d'état plus faciles à appréhender, cette approche limite l'utilité des conceptions de canaux pour les développeurs d'applications. Cela explique en partie pourquoi les canaux d'état ont été abandonnés au profit d'autres solutions de mise à l'échelle, comme les rollups.
 
 ### Traitement parallèle des transactions {#parallel-transaction-processing}
 
-Les participants au canal d'état envoient des mises à jour d'état à tour de rôle, c'est pourquoi ils fonctionnent mieux pour les « applications basées sur le tour de rôle » (par exemple, un jeu d'échecs à deux joueurs). Cela élimine la nécessité de gérer les mises à jour simultanées de l'état et réduit le travail que le contrat en chaîne doit faire pour punir les publications de mise à jour périmées. Cependant, cette conception a pour effet secondaire de rendre les transactions dépendantes les unes des autres, ce qui augmente la latence et diminue l'expérience globale de l'utilisateur.
+Les participants au canal d'état envoient des mises à jour d'état à tour de rôle, c'est pourquoi ils fonctionnent mieux pour les « applications basées sur le tour de rôle » (par exemple, un jeu d'échecs à deux joueurs). Cela permet de ne pas avoir à gérer les mises à jour simultanées de l'état et de réduire le travail que le contrat en chaîne doit effectuer pour sanctionner les publications de mise à jour périmées. Cependant, cette conception a pour effet secondaire de rendre les transactions dépendantes les unes des autres, ce qui augmente la latence et diminue l'expérience globale de l'utilisateur.
 
 Certains canaux d'état résolvent ce problème en utilisant une conception « full-duplex » qui divise l'état hors chaîne en deux états unidirectionnels « simplex », permettant des mises à jour d'état simultanées. Ces conceptions améliorent le débit hors chaîne et réduisent les délais de transaction.
 

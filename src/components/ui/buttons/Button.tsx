@@ -105,7 +105,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     ref
   ) => {
     const handleOnClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-      toId && scrollIntoView(toId)
+      toId && scrollIntoView("#" + toId)
       customEventOptions && trackCustomEvent(customEventOptions)
 
       onClick?.(e)
@@ -166,7 +166,10 @@ const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
       >
         <BaseLink
           ref={ref}
-          className={cn("no-underline hover:no-underline", className)}
+          className={cn(
+            "no-underline hover:no-underline [&_[data-label='arrow']]:ms-0",
+            className
+          )}
           activeClassName=""
           {...linkProps}
           onClick={handleClick}
