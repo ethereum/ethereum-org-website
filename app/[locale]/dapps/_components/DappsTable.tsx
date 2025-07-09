@@ -34,9 +34,18 @@ const DappsTable = ({ dapps }: { dapps: DappData[] }) => {
               <SelectValue />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="All">All</SelectItem>
+              <SelectItem
+                value="All"
+                className="cursor-pointer hover:bg-primary-low-contrast"
+              >
+                All
+              </SelectItem>
               {subCategories.map((subCategory) => (
-                <SelectItem key={subCategory} value={subCategory}>
+                <SelectItem
+                  key={subCategory}
+                  value={subCategory}
+                  className="cursor-pointer hover:bg-primary-low-contrast"
+                >
                   {subCategory}
                 </SelectItem>
               ))}
