@@ -179,13 +179,13 @@ const DevelopersPage = async ({
               >
                 {t("page-developers-stack-exchange")}
               </ButtonLink>
-              <ButtonLink
-                variant="ghost"
-                isSecondary
+              {/* <ButtonLink
+                variant="glow"
                 href="#some-magical-AI-link"
+                className="text-body"
               >
                 {t("page-developers-ask-ai")}
-              </ButtonLink>
+              </ButtonLink> */}
             </div>
           </Card>
 
