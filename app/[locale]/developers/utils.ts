@@ -71,7 +71,7 @@ export const getVideoCourses = async (): Promise<VideoCourse[]> => {
       title: "Solidity smart contract development",
       description:
         "Solidity Programming is your gateway to web3 development in Ethereum compatible ecosystems.",
-      hours: 3,
+      hours: 5,
       imgSrc: cyfrinSolidityBanner,
       imgAlt:
         "Cyfrin Updraft Solidity smart contract development course banner",
@@ -81,7 +81,7 @@ export const getVideoCourses = async (): Promise<VideoCourse[]> => {
       title: "Foundry fundamentals",
       description:
         "Level up your Solidity development skills with Foundry and advanced web3 development concepts and tools.",
-      hours: 3,
+      hours: 10,
       imgSrc: cyfrinFoundryFundamentalsBanner,
       imgAlt: "Cyfrin Updraft Foundry fundamentals course banner",
       href: "https://updraft.cyfrin.io/courses/foundry",
@@ -90,7 +90,7 @@ export const getVideoCourses = async (): Promise<VideoCourse[]> => {
       title: "Advanced foundry",
       description:
         "Master web3 development techniques with Advanced Foundry for Solidity smart contract development.",
-      hours: 3,
+      hours: 13,
       imgSrc: cyfrinFoundryAdvancedBanner,
       imgAlt: "Cyfrin Updraft Advanced foundry course banner",
       href: "https://updraft.cyfrin.io/courses/advanced-foundry",
@@ -99,7 +99,7 @@ export const getVideoCourses = async (): Promise<VideoCourse[]> => {
       title: "Smart contract security", // "Learn smart contract auditing, security, and DeFi",
       description:
         "Start your career as a smart contract security researcher! Learn smart contract auditing and the best practices.",
-      hours: 3,
+      hours: 24,
       imgSrc: cyfrinSecurityBanner,
       imgAlt: "Cyfrin Updraft Blockchain basics course banner",
       href: "https://updraft.cyfrin.io/courses/security",
