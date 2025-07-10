@@ -53,11 +53,11 @@ Another example is Galaxy Fight Club. In this game, [players can use different N
 
 ## Scalability & gas fee improvements {#scalability-and-gas-fee-improvements}
 
-The Ethereum mainnet, while secure, can experience high fees and network congestion during peak times, which can hinder fast-paced gaming. This is being actively addressed through:
+As Ethereum has matured, solutions exist to significantly reduce the cost of onchain gaming and enhance performance, making interactive and fast-paced experiences more viable. These advancements are primarily achieved through:
 
-- Immutable X; Enables gas‑free NFT trading.
-- zkSync and Starknet are actively fostering ecosystems for onchain games due to their high throughput and low costs.
-- [MUD ecosystem](https://mud.dev/) optimizes for onchain game development to provide efficient state management for complex game logic.
+- **Gas-less Transactions:** some platforms and protocols, including those leveraging Immutable X, offer the ability to conduct transactions like trading or minting NFTs without fees for the user, further streamlining the player experience
+- **Scaling Solutions:** Arbitrum, zkSync and Starknet are actively fostering ecosystems for onchain games due to their high throughput and low costs.
+- **[MUD ecosystem](https://mud.dev/)** optimizes for onchain game development to provide efficient state management for complex game logic.
 
 ## Get started with Ethereum gaming {#get-started-with-ethereum-gaming}
 
