@@ -13,7 +13,10 @@ import { Card } from "@/components/ui/card"
 import { VStack } from "@/components/ui/flex"
 import Link from "@/components/ui/Link"
 import InlineLink from "@/components/ui/Link"
+import { Section } from "@/components/ui/section"
+import { SkeletonCardGrid } from "@/components/ui/skeleton"
 
+import { cn } from "@/lib/utils/cn"
 import { getMetadata } from "@/lib/utils/metadata"
 import { screens } from "@/lib/utils/screen"
 
@@ -29,8 +32,6 @@ import stackExchangeScreenshot from "@/public/images/developers/stack-exchange-s
 import tutorialTagsBanner from "@/public/images/developers/tutorial-tags-banner.png"
 import dogeImage from "@/public/images/doge-computer.png"
 import heroImage from "@/public/images/heroes/developers-hub-hero.jpg"
-
-const H2 = (props: ChildOnlyProp) => <h2 className="mb-8 mt-12" {...props} />
 
 const H3 = (props: ChildOnlyProp) => <h3 className="mb-8 mt-10" {...props} />
 
@@ -79,27 +80,38 @@ const DevelopersPage = async ({
       />
 
       <MainArticle className="w-full space-y-12 px-8 py-4">
-        <h2 className="-mb-4 mt-12">{t("page-developers-get-started")}</h2>
+        <Section id="build" className="space-y-4 py-10 md:py-12">
+          <h2>{t("page-developers-get-started")}</h2>
 
-        {/* Desktop */}
-        <div className="-mx-4 grid gap-6 max-md:hidden md:grid-cols-2 lg:grid-cols-4">
-          {paths.map((path, idx) => (
-            <BuilderCard path={path} key={idx} />
-          ))}
+          <p>
+            Everything you need to learn and build your first apps on Ethereum
+          </p>
+          {/* Desktop */}
+          <div className="grid gap-6 max-md:hidden md:grid-cols-2 lg:grid-cols-4">
+            {paths.map((path, idx) => (
+              <BuilderCard path={path} key={idx} />
+            ))}
 
-          <SpeedRunCard {...speedRunDetails} />
-        </div>
+            <SpeedRunCard {...speedRunDetails} />
+          </div>
 
-        {/* Mobile */}
-        <div className="-mx-8 ps-4 md:hidden">
-          <BuilderSwiper paths={paths} speedRunDetails={speedRunDetails} />
-        </div>
+          {/* Mobile */}
+          <div className="-mx-8 ps-4 md:hidden">
+            <BuilderSwiper paths={paths} speedRunDetails={speedRunDetails} />
+          </div>
+        </Section>
 
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8 xl:mb-12">
+        <Section
+          id="resources"
+          className={cn(
+            "grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8",
+            "-mx-8 w-screen max-w-screen-2xl bg-background-highlight px-8 py-10 md:py-20"
+          )}
+        >
           <h2 className="sr-only">Helpful developer resources</h2>
 
           {/* Quickstart your idea */}
-          <Card className="!space-y-8 break-words border px-6 py-8 md:space-y-6 lg:p-8">
+          <Card className="!space-y-8 break-words border bg-background px-6 py-8 md:space-y-6 lg:p-8">
             <Image
               src={scaffoldDebugScreenshot}
               alt="Scaffold-ETH 2 debug screenshot"
@@ -145,7 +157,7 @@ const DevelopersPage = async ({
           </Card>
 
           {/* Get help */}
-          <Card className="!space-y-8 break-words border px-6 py-8 md:space-y-6 lg:p-8">
+          <Card className="!space-y-8 break-words border bg-background px-6 py-8 md:space-y-6 lg:p-8">
             <Image
               src={stackExchangeScreenshot}
               alt="Ethereum Stack Exchange screenshot"
@@ -179,7 +191,7 @@ const DevelopersPage = async ({
           </Card>
 
           {/* Resources */}
-          <Card className="!space-y-8 break-words border px-6 py-8 md:space-y-6 lg:p-8">
+          <Card className="!space-y-8 break-words border bg-background px-6 py-8 md:space-y-6 lg:p-8">
             <Image
               src={resourcesBanner}
               alt="Banner showing four resource app icons"
@@ -206,7 +218,7 @@ const DevelopersPage = async ({
           </Card>
 
           {/* Tutorials */}
-          <Card className="!space-y-8 break-words border px-6 py-8 md:space-y-6 lg:p-8">
+          <Card className="!space-y-8 break-words border bg-background px-6 py-8 md:space-y-6 lg:p-8">
             <Image
               src={tutorialTagsBanner}
               alt="Banner displaying multiple learning topics in a tag cloud"
@@ -231,9 +243,9 @@ const DevelopersPage = async ({
               </ButtonLink>
             </div>
           </Card>
-        </div>
+        </Section>
 
-        <div className="space-y-2">
+        <Section id="courses" className="space-y-4 py-10 md:py-12">
           <h2>Video courses</h2>
           <p>
             Want to kickstart your professional career in blockchain? These
@@ -243,126 +255,182 @@ const DevelopersPage = async ({
           <div className="w-screen max-xl:-ms-8 xl:w-full">
             <VideoCourseSwiper courses={courses} />
           </div>
-        </div>
+        </Section>
+
+        <Section
+          id="docs"
+          className={cn(
+            "shadow-table-item-box",
+            "-mx-8 w-screen max-w-screen-2xl bg-background-highlight px-8 py-10 md:py-20"
+          )}
+        >
+          <div className="w-full scroll-mt-24 px-8 py-4">
+            <h2>{t("page-developers-explore-documentation")}</h2>
+            <p>Understand the core concepts of Ethereum and blockchains</p>
+          </div>
+
+          <div className="flex flex-col items-start justify-between px-8 py-0 lg:flex-row">
+            <Column>
+              <H3>{t("page-developers-docs-introductions")}</H3>
+              <InlineLink href="/developers/docs/intro-to-ethereum/">
+                {t("page-developers-intro-eth-link")}
+              </InlineLink>
+              <Text>{t("page-developers-into-eth-desc")}</Text>
+
+              <InlineLink href="/developers/docs/intro-to-ether/">
+                {t("page-developers-intro-ether-link")}
+              </InlineLink>
+              <Text>{t("page-developers-intro-ether-desc")}</Text>
+
+              <InlineLink href="/developers/docs/dapps/">
+                {t("page-developers-intro-dapps-link")}
+              </InlineLink>
+              <Text>{t("page-developers-intro-dapps-desc")}</Text>
+
+              <InlineLink href="/developers/docs/ethereum-stack/">
+                {t("page-developers-intro-stack")}
+              </InlineLink>
+              <Text>{t("page-developers-intro-stack-desc")}</Text>
+
+              <InlineLink href="/developers/docs/web2-vs-web3/">
+                {t("page-developers-web3-link")}
+              </InlineLink>
+              <Text>{t("page-developers-web3-desc")}</Text>
+
+              <InlineLink href="/developers/docs/programming-languages/">
+                {t("page-developers-languages")}
+              </InlineLink>
+              <Text>{t("page-developers-language-desc")}</Text>
+              <Image
+                className="mt-16 hidden max-w-[400px] lg:block"
+                src={dogeImage}
+                alt={t("page-assets-doge")}
+              />
+            </Column>
+            <Column>
+              <H3>{t("page-developers-fundamentals")}</H3>
+              <InlineLink href="/developers/docs/accounts/">
+                {t("page-developers-accounts-link")}
+              </InlineLink>
+              <Text>{t("page-developers-account-desc")}</Text>
+
+              <InlineLink href="/developers/docs/transactions/">
+                {t("page-developers-transactions-link")}
+              </InlineLink>
+              <Text>{t("page-developers-transactions-desc")}</Text>
+
+              <InlineLink href="/developers/docs/blocks/">
+                {t("page-developers-blocks-link")}
+              </InlineLink>
+              <Text>{t("page-developers-block-desc")}</Text>
+
+              <InlineLink href="/developers/docs/evm/">
+                {t("page-developers-evm-link")}
+              </InlineLink>
+              <Text>{t("page-developers-evm-desc")}</Text>
+
+              <InlineLink href="/developers/docs/gas/">
+                {t("page-developers-gas-link")}
+              </InlineLink>
+              <Text>{t("page-developers-gas-desc")}</Text>
+
+              <InlineLink href="/developers/docs/nodes-and-clients/">
+                {t("page-developers-node-clients-link")}
+              </InlineLink>
+              <Text>{t("page-developers-node-clients-desc")}</Text>
+
+              <InlineLink href="/developers/docs/networks/">
+                {t("page-developers-networks-link")}
+              </InlineLink>
+              <Text>{t("page-developers-networks-desc")}</Text>
+            </Column>
+            <RightColumn>
+              <H3>{t("page-developers-stack")}</H3>
+              <InlineLink href="/developers/docs/smart-contracts/">
+                {t("page-developers-smart-contracts-link")}
+              </InlineLink>
+              <Text>{t("page-developers-smart-contracts-desc")}</Text>
+              <InlineLink href="/developers/docs/frameworks/">
+                {t("page-developers-frameworks-link")}
+              </InlineLink>
+              <Text>{t("page-developers-frameworks-desc")}</Text>
+              <InlineLink href="/developers/docs/apis/javascript/">
+                {t("page-developers-js-libraries-link")}
+              </InlineLink>
+              <Text>{t("page-developers-js-libraries-desc")}</Text>
+              <InlineLink href="/developers/docs/apis/backend/">
+                {t("page-developers-api-link")}
+              </InlineLink>
+              <Text>{t("page-developers-api-desc")}</Text>
+              <InlineLink href="/developers/docs/data-and-analytics/block-explorers/">
+                {t("page-developers-block-explorers-link")}
+              </InlineLink>
+              <Text>{t("page-developers-block-explorers-desc")}</Text>
+              <InlineLink href="/developers/docs/smart-contracts/security/">
+                {t("page-developers-smart-contract-security-link")}
+              </InlineLink>
+              <Text>{t("page-developers-smart-contract-security-desc")}</Text>
+              <InlineLink href="/developers/docs/storage/">
+                {t("page-developers-storage-link")}
+              </InlineLink>
+              <Text>{t("page-developers-storage-desc")}</Text>
+              <InlineLink href="/developers/docs/ides/">
+                {t("page-developers-dev-env-link")}
+              </InlineLink>
+              <Text>{t("page-developers-dev-env-desc")}</Text>
+            </RightColumn>
+          </div>
+        </Section>
+
+        <Section id="hackathons" className="space-y-4 py-10 md:py-12">
+          <h2>Join hackathons (TODO)</h2>
+          <p>
+            Hackathons are great opportunities to network and learn from others
+            as well as start projects and earn prizes
+          </p>
+          <SkeletonCardGrid />
+          <div className="flex justify-center">
+            <ButtonLink href="https://ethglobal.com/">
+              Visit EthGlobal
+            </ButtonLink>
+          </div>
+        </Section>
+
+        <Section id="founders" className="py-10 md:py-12">
+          <div
+            className={cn(
+              "mx-auto max-w-screen-lg",
+              "before:absolute before:-inset-px before:bottom-0 before:z-hide before:rounded-[calc(theme(borderRadius.4xl)+1px)] before:content-['']", // Border/gradient positioning
+              "before:bg-gradient-to-b before:from-primary-hover/[0.24] before:to-primary-hover/[0.08] before:dark:from-primary-hover/40 before:dark:to-primary-hover/20", // Border/gradient coloring
+              "relative inset-0 rounded-4xl bg-background" // Paint background color over card portion
+            )}
+          >
+            <div className="mb-12 flex flex-col items-center gap-y-8 rounded-4xl bg-radial-a px-8 py-12 lg:mb-32 xl:mb-36">
+              <div className="flex flex-col gap-y-4 text-center">
+                <h2>Are you a founder?</h2>
+                <p>
+                  Have a project idea already or working on a prototype? Explore
+                  how to take your project to the next step. Many other
+                  organizations that provide developers with funding.
+                </p>
+              </div>
+              <div className="flex flex-wrap gap-4">
+                <ButtonLink href="mailto:enterprise@ethereum.org?subject=Founder%20inquiry">
+                  Get in touch
+                </ButtonLink>
+                <ButtonLink
+                  href="/community/grants/"
+                  isSecondary
+                  variant="outline"
+                >
+                  See grant options
+                </ButtonLink>
+              </div>
+            </div>
+          </div>
+        </Section>
       </MainArticle>
 
-      <div className="mt-8 w-full border-t bg-background-highlight px-0 py-16 shadow-table-item-box">
-        <div className="w-full scroll-mt-24 px-8 py-4">
-          <H2>{t("page-developers-explore-documentation")}</H2>
-        </div>
-
-        <div className="flex flex-col items-start justify-between px-8 py-0 lg:flex-row">
-          <Column>
-            <H3>{t("page-developers-docs-introductions")}</H3>
-            <InlineLink href="/developers/docs/intro-to-ethereum/">
-              {t("page-developers-intro-eth-link")}
-            </InlineLink>
-            <Text>{t("page-developers-into-eth-desc")}</Text>
-
-            <InlineLink href="/developers/docs/intro-to-ether/">
-              {t("page-developers-intro-ether-link")}
-            </InlineLink>
-            <Text>{t("page-developers-intro-ether-desc")}</Text>
-
-            <InlineLink href="/developers/docs/dapps/">
-              {t("page-developers-intro-dapps-link")}
-            </InlineLink>
-            <Text>{t("page-developers-intro-dapps-desc")}</Text>
-
-            <InlineLink href="/developers/docs/ethereum-stack/">
-              {t("page-developers-intro-stack")}
-            </InlineLink>
-            <Text>{t("page-developers-intro-stack-desc")}</Text>
-
-            <InlineLink href="/developers/docs/web2-vs-web3/">
-              {t("page-developers-web3-link")}
-            </InlineLink>
-            <Text>{t("page-developers-web3-desc")}</Text>
-
-            <InlineLink href="/developers/docs/programming-languages/">
-              {t("page-developers-languages")}
-            </InlineLink>
-            <Text>{t("page-developers-language-desc")}</Text>
-            <Image
-              className="mt-16 hidden max-w-[400px] lg:block"
-              src={dogeImage}
-              alt={t("page-assets-doge")}
-            />
-          </Column>
-          <Column>
-            <H3>{t("page-developers-fundamentals")}</H3>
-            <InlineLink href="/developers/docs/accounts/">
-              {t("page-developers-accounts-link")}
-            </InlineLink>
-            <Text>{t("page-developers-account-desc")}</Text>
-
-            <InlineLink href="/developers/docs/transactions/">
-              {t("page-developers-transactions-link")}
-            </InlineLink>
-            <Text>{t("page-developers-transactions-desc")}</Text>
-
-            <InlineLink href="/developers/docs/blocks/">
-              {t("page-developers-blocks-link")}
-            </InlineLink>
-            <Text>{t("page-developers-block-desc")}</Text>
-
-            <InlineLink href="/developers/docs/evm/">
-              {t("page-developers-evm-link")}
-            </InlineLink>
-            <Text>{t("page-developers-evm-desc")}</Text>
-
-            <InlineLink href="/developers/docs/gas/">
-              {t("page-developers-gas-link")}
-            </InlineLink>
-            <Text>{t("page-developers-gas-desc")}</Text>
-
-            <InlineLink href="/developers/docs/nodes-and-clients/">
-              {t("page-developers-node-clients-link")}
-            </InlineLink>
-            <Text>{t("page-developers-node-clients-desc")}</Text>
-
-            <InlineLink href="/developers/docs/networks/">
-              {t("page-developers-networks-link")}
-            </InlineLink>
-            <Text>{t("page-developers-networks-desc")}</Text>
-          </Column>
-          <RightColumn>
-            <H3>{t("page-developers-stack")}</H3>
-            <InlineLink href="/developers/docs/smart-contracts/">
-              {t("page-developers-smart-contracts-link")}
-            </InlineLink>
-            <Text>{t("page-developers-smart-contracts-desc")}</Text>
-            <InlineLink href="/developers/docs/frameworks/">
-              {t("page-developers-frameworks-link")}
-            </InlineLink>
-            <Text>{t("page-developers-frameworks-desc")}</Text>
-            <InlineLink href="/developers/docs/apis/javascript/">
-              {t("page-developers-js-libraries-link")}
-            </InlineLink>
-            <Text>{t("page-developers-js-libraries-desc")}</Text>
-            <InlineLink href="/developers/docs/apis/backend/">
-              {t("page-developers-api-link")}
-            </InlineLink>
-            <Text>{t("page-developers-api-desc")}</Text>
-            <InlineLink href="/developers/docs/data-and-analytics/block-explorers/">
-              {t("page-developers-block-explorers-link")}
-            </InlineLink>
-            <Text>{t("page-developers-block-explorers-desc")}</Text>
-            <InlineLink href="/developers/docs/smart-contracts/security/">
-              {t("page-developers-smart-contract-security-link")}
-            </InlineLink>
-            <Text>{t("page-developers-smart-contract-security-desc")}</Text>
-            <InlineLink href="/developers/docs/storage/">
-              {t("page-developers-storage-link")}
-            </InlineLink>
-            <Text>{t("page-developers-storage-desc")}</Text>
-            <InlineLink href="/developers/docs/ides/">
-              {t("page-developers-dev-env-link")}
-            </InlineLink>
-            <Text>{t("page-developers-dev-env-desc")}</Text>
-          </RightColumn>
-        </div>
-      </div>
       <FeedbackCard />
     </VStack>
   )
