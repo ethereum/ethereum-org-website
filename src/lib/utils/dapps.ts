@@ -2,21 +2,6 @@ import { DappCategory, DappCategoryEnum, DappData } from "@/lib/types"
 
 import { TagProps } from "@/components/ui/tag"
 
-/**
- * Converts a dapp name to a URL slug
- * @param dappName - The name of the dapp (e.g., "Bridge Aave 1")
- * @returns URL slug (e.g., "bridge-aave-1")
- */
-export const getDappSlug = (dappName: string): string => {
-  return dappName
-    .toLowerCase()
-    .trim()
-    .replace(/[^a-z0-9\s-]/g, "") // Remove special characters except spaces and hyphens
-    .replace(/\s+/g, "-") // Replace spaces with hyphens
-    .replace(/-+/g, "-") // Replace multiple hyphens with single hyphen
-    .replace(/^-|-$/g, "") // Remove leading/trailing hyphens
-}
-
 // Get highlighted dapps (dapps with highlight=true)
 export const getHighlightedDapps = (
   dappsData: Record<DappCategory, DappData[]>,

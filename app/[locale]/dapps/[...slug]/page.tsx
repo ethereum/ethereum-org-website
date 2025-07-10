@@ -30,13 +30,14 @@ import { ButtonLink } from "@/components/ui/buttons/Button"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 import { Tag } from "@/components/ui/tag"
 
-import { DAPP_TAG_VARIANTS, getDappSlug } from "@/lib/utils/dapps"
+import { DAPP_TAG_VARIANTS } from "@/lib/utils/dapps"
 import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { getMetadata } from "@/lib/utils/metadata"
 import {
   formatLanguageNames,
   getRequiredNamespacesForPage,
 } from "@/lib/utils/translations"
+import { createSlug } from "@/lib/utils/url"
 import { formatStringList } from "@/lib/utils/wallets"
 
 import { BASE_TIME_UNIT } from "@/lib/constants"
@@ -69,7 +70,7 @@ const Page = async ({
   const [dappsData] = await loadData()
   const dapp = Object.values(dappsData)
     .flat()
-    .find((dapp) => getDappSlug(dapp.name) === dappSlug)!
+    .find((dapp) => createSlug(dapp.name) === dappSlug)!
 
   if (!dapp) {
     notFound()
@@ -79,7 +80,7 @@ const Page = async ({
   const findNextDapp = () => {
     const categoryDapps = dappsData[dapp.category] || []
     const currentIndex = categoryDapps.findIndex(
-      (d) => getDappSlug(d.name) === dappSlug
+      (d) => createSlug(d.name) === dappSlug
     )
 
     if (currentIndex === -1) return null
@@ -100,7 +101,7 @@ const Page = async ({
     return categoryDapps
       .filter((d) => {
         // Exclude the current dapp
-        if (getDappSlug(d.name) === dappSlug) return false
+        if (createSlug(d.name) === dappSlug) return false
 
         // Check if this dapp has at least one matching subcategory
         return d.subCategory.some((sub) => currentSubcategories.includes(sub))
@@ -234,7 +235,7 @@ const Page = async ({
                             {nextDapp.name}
                           </p>
                           <LinkOverlay
-                            href={`/dapps/${getDappSlug(nextDapp.name)}`}
+                            href={`/dapps/${createSlug(nextDapp.name)}`}
                           />
                         </div>
                         <div className="flex gap-2">
@@ -253,7 +254,7 @@ const Page = async ({
                   <p className="text-primary group-hover:text-primary-hover">
                     {nextDapp.name}
                   </p>
-                  <LinkOverlay href={`/dapps/${getDappSlug(nextDapp.name)}`} />
+                  <LinkOverlay href={`/dapps/${createSlug(nextDapp.name)}`} />
                 </div>
                 <div className="flex gap-2">
                   <ChevronNext className="h-8 w-8 text-gray-400 group-hover:text-primary" />
@@ -348,7 +349,7 @@ export async function generateMetadata({
 
   const dapp = Object.values(dappsData)
     .flat()
-    .find((dapp) => getDappSlug(dapp.name) === firstSegment)!
+    .find((dapp) => createSlug(dapp.name) === firstSegment)!
 
   if (!dapp) {
     notFound()

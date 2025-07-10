@@ -60,15 +60,31 @@ const Page = async ({
   const requiredNamespaces = getRequiredNamespacesForPage("/dapps")
   const messages = pick(allMessages, requiredNamespaces)
 
-  const category = dappsCategories[slug[0]]
+  // Normalize slug to lowercase
+  const normalizedSlug = slug[0].toLowerCase()
+
+  // Find category by matching the slug
+  const categoryEntry = Object.entries(dappsCategories).find(
+    ([, categoryData]) => categoryData.slug === normalizedSlug
+  )
+
+  if (!categoryEntry) {
+    notFound()
+  }
+
+  const [categoryEnum, category] = categoryEntry
   const CategoryIcon = category.icon
 
-  if (!isValidCategory(slug[0])) {
+  if (!isValidCategory(categoryEnum)) {
     notFound()
   }
 
   // Get highlighted dapps (dapps with highlight=true)
-  const highlightedDapps = getHighlightedDapps(dappsData, 3, category.name)
+  const highlightedDapps = getHighlightedDapps(
+    dappsData,
+    3,
+    categoryEnum as DappCategoryEnum
+  )
 
   return (
     <I18nProvider locale={locale} messages={messages}>
@@ -100,7 +116,7 @@ const Page = async ({
       </div>
 
       <div className="flex flex-col gap-4 px-4 md:px-8">
-        <CategoriesNav activeCategory={slug[0]} />
+        <CategoriesNav activeCategory={categoryEnum} />
       </div>
 
       <MainArticle className="flex flex-col gap-32 py-10">
@@ -134,13 +150,26 @@ export async function generateMetadata({
     namespace: "page-dapps",
   })
 
-  if (!isValidCategory(firstSegment)) {
+  // Normalize slug to lowercase
+  const normalizedSlug = firstSegment.toLowerCase()
+
+  // Find category by matching the slug
+  const categoryEntry = Object.entries(dappsCategories).find(
+    ([, categoryData]) => categoryData.slug === normalizedSlug
+  )
+
+  if (!categoryEntry) {
     notFound()
   }
 
-  // Format category name for display (capitalize first letter)
-  const formattedCategory =
-    firstSegment.charAt(0).toUpperCase() + firstSegment.slice(1)
+  const [categoryEnum, category] = categoryEntry
+
+  if (!isValidCategory(categoryEnum)) {
+    notFound()
+  }
+
+  // Format category name for display
+  const formattedCategory = category.name
 
   const title = t("page-dapps-meta-title", { category: formattedCategory })
   const description = t("page-dapps-meta-description", {
@@ -149,7 +178,7 @@ export async function generateMetadata({
 
   return await getMetadata({
     locale,
-    slug: ["dapps", "categories", ...slug],
+    slug: ["dapps", "categories", normalizedSlug],
     title,
     description,
   })

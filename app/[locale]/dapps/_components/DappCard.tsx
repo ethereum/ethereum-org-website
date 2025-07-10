@@ -5,7 +5,8 @@ import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 import { Tag } from "@/components/ui/tag"
 
 import { cn } from "@/lib/utils/cn"
-import { DAPP_TAG_VARIANTS, getDappSlug } from "@/lib/utils/dapps"
+import { DAPP_TAG_VARIANTS } from "@/lib/utils/dapps"
+import { createSlug } from "@/lib/utils/url"
 
 interface DappCardProps {
   dapp: DappData
@@ -77,7 +78,7 @@ const DappCard = ({
       className={cn("group rounded-xl p-2 hover:bg-background-highlight")}
     >
       <LinkOverlay
-        href={`/dapps/${getDappSlug(dapp.name)}`}
+        href={`/dapps/${createSlug(dapp.name)}`}
         className="no-underline"
       >
         {cardContent}
