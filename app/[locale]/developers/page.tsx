@@ -16,12 +16,17 @@ import Link from "@/components/ui/Link"
 import InlineLink from "@/components/ui/Link"
 
 import { getMetadata } from "@/lib/utils/metadata"
+import { screens } from "@/lib/utils/screen"
 
 import BuilderCard from "./_components/BuilderCard"
 import BuilderSwiper from "./_components/BuilderSwiper"
 import SpeedRunCard from "./_components/SpeedRunCard"
 import { getBuilderPaths } from "./utils"
 
+import resourcesBanner from "@/public/images/developers/resources-banner.png"
+import scaffoldDebugScreenshot from "@/public/images/developers/scaffold-debug-screenshot.png"
+import stackExchangeScreenshot from "@/public/images/developers/stack-exchange-screenshot.png"
+import tutorialTagsBanner from "@/public/images/developers/tutorial-tags-banner.png"
 import developersImage from "@/public/images/developers-eth-blocks.png"
 import dogeImage from "@/public/images/doge-computer.png"
 import heroImage from "@/public/images/heroes/developers-hub-hero.jpg"
@@ -95,36 +100,41 @@ const DevelopersPage = async ({
         </div>
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8 xl:mb-12">
-          <Card className="!space-y-8 break-words border border-accent-c/20 bg-gradient-to-t from-accent-c/15 to-accent-c/5 px-6 py-10 md:space-y-6 lg:p-12">
-            <h3>{t("page-developers-jump-right-in-title")}</h3>
-            <div className="space-y-6">
-              <div className="space-y-1">
-                <p className="font-bold">Scaffold-ETH 2</p>
-                <p className="text-sm text-body-medium">
-                  {t("page-developers-quickstart-scaffold-subtext")}{" "}
-                  <Link href="https://docs.scaffoldeth.io/">
-                    {t("page-developers-quickstart-scaffold-docs")}
-                  </Link>
-                </p>
-                <div className="flex items-center rounded-lg border bg-background px-3 py-1">
-                  <span className="flex-1 font-mono text-sm">
-                    npx create-eth@latest
-                  </span>
-                  <CopyButton
-                    message="npx create-eth@latest"
-                    size="sm"
-                    customEventOptions={{
-                      eventCategory: "top_boxes",
-                      eventAction: "click",
-                      eventName: "scaffold",
-                    }}
-                  />
-                </div>
-              </div>
+          <h2 className="sr-only">Helpful developer resources</h2>
+
+          {/* Quickstart your idea */}
+          <Card className="!space-y-8 break-words border px-6 py-8 md:space-y-6 lg:p-8">
+            <Image
+              src={scaffoldDebugScreenshot}
+              alt="Scaffold-ETH 2 debug screenshot"
+              sizes={`(max-width: ${screens.sm}) 100vw, calc(50vw - 14rem)`}
+              className="h-56 object-cover"
+            />
+            <div className="">
+              <h3>{t("page-developers-jump-right-in-title")}</h3>
+              <p className="text-sm text-body-medium">
+                {t("page-developers-quickstart-scaffold-subtext")}{" "}
+                <Link href="https://docs.scaffoldeth.io/">
+                  {t("page-developers-quickstart-scaffold-docs")}
+                </Link>
+              </p>
+            </div>
+            <div className="flex items-center rounded-lg border bg-background px-3 py-1">
+              <span className="flex-1 font-mono text-sm">
+                npx create-eth@latest
+              </span>
+              <CopyButton
+                message="npx create-eth@latest"
+                size="sm"
+                customEventOptions={{
+                  eventCategory: "top_boxes",
+                  eventAction: "click",
+                  eventName: "scaffold",
+                }}
+              />
             </div>
 
             <div>
-              <p className="mb-2 font-bold">Need to learn the language?</p>
               <Link
                 href="https://docs.soliditylang.org/en/latest/"
                 customEventOptions={{
@@ -135,6 +145,94 @@ const DevelopersPage = async ({
               >
                 {t("page-developers-solidity-docs")}
               </Link>
+            </div>
+          </Card>
+
+          {/* Get help */}
+          <Card className="!space-y-8 break-words border px-6 py-8 md:space-y-6 lg:p-8">
+            <Image
+              src={stackExchangeScreenshot}
+              alt="Ethereum Stack Exchange screenshot"
+              sizes={`(max-width: ${screens.sm}) 100vw, calc(50vw - 14rem)`}
+              className="max-h-56 w-full object-cover object-top"
+            />
+            <div className="">
+              <h3>Get help</h3>
+              <p className="text-sm text-body-medium">
+                If you are stuck or need help solving problems, be sure to ask
+                for guidance.
+              </p>
+            </div>
+
+            <div className="flex items-center gap-6">
+              <ButtonLink
+                variant="outline"
+                isSecondary
+                href="https://ethereum.stackexchange.com/"
+              >
+                Stack Exchange
+              </ButtonLink>
+              <ButtonLink
+                variant="ghost"
+                isSecondary
+                href="#some-magical-AI-link"
+              >
+                Ask AI
+              </ButtonLink>
+            </div>
+          </Card>
+
+          {/* Resources */}
+          <Card className="!space-y-8 break-words border px-6 py-8 md:space-y-6 lg:p-8">
+            <Image
+              src={resourcesBanner}
+              alt="Banner showing four resource app icons"
+              sizes={`(max-width: ${screens.sm}) 100vw, calc(50vw - 14rem)`}
+              className="max-h-56 w-full object-contain"
+            />
+            <div className="">
+              <h3>Resources</h3>
+              <p className="text-sm text-body-medium">
+                Want to experiment first, ask questions later? Check sandboxes,
+                bootcamps etc.
+              </p>
+            </div>
+
+            <div className="flex items-center gap-6">
+              <ButtonLink
+                variant="outline"
+                isSecondary
+                href="https://ethereum.stackexchange.com/"
+              >
+                Play with code
+              </ButtonLink>
+            </div>
+          </Card>
+
+          {/* Tutorials */}
+          <Card className="!space-y-8 break-words border px-6 py-8 md:space-y-6 lg:p-8">
+            <Image
+              src={tutorialTagsBanner}
+              alt="Banner displaying multiple learning topics in a tag cloud"
+              sizes={`(max-width: ${screens.sm}) 100vw, calc(50vw - 14rem)`}
+              className="max-h-56 w-full object-contain"
+            />
+            <div className="">
+              <h3>Tutorials</h3>
+              <p className="text-sm text-body-medium">
+                Learn Ethereum development step-by-step from builders who have
+                already done it.
+              </p>
+            </div>
+
+            <div className="flex items-center gap-6">
+              <ButtonLink
+                variant="outline"
+                isSecondary
+                href="https://ethereum.stackexchange.com/"
+              >
+                View tutorials
+              </ButtonLink>
             </div>
           </Card>
         </div>
