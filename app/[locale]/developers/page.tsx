@@ -346,16 +346,6 @@ const DevelopersPage = async ({
               {t("page-developers-networks-link")}
             </InlineLink>
             <Text>{t("page-developers-networks-desc")}</Text>
-
-            <InlineLink href="/developers/docs/consensus-mechanisms/pow/mining/">
-              {t("page-developers-mining-link")}
-            </InlineLink>
-            <Text>{t("page-developers-mining-desc")}</Text>
-
-            <InlineLink href="/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/">
-              {t("page-developers-mining-algorithms-link")}
-            </InlineLink>
-            <Text>{t("page-developers-mining-algorithms-desc")}</Text>
           </Column>
           <RightColumn>
             <H3>{t("page-developers-stack")}</H3>
@@ -391,33 +381,6 @@ const DevelopersPage = async ({
               {t("page-developers-dev-env-link")}
             </InlineLink>
             <Text>{t("page-developers-dev-env-desc")}</Text>
-            <H3>{t("page-developers-advanced")}</H3>
-            <InlineLink href="/developers/docs/standards/tokens/">
-              {t("page-developers-token-standards-link")}
-            </InlineLink>
-            <Text>{t("page-developers-token-standards-desc")}</Text>
-            <InlineLink href="/developers/docs/mev/">
-              {t("page-developers-mev-link")}
-            </InlineLink>
-            <Text>{t("page-developers-mev-desc")}</Text>
-            <InlineLink href="/developers/docs/oracles/">
-              {t("page-developers-oracles-link")}
-            </InlineLink>
-            <Text>{t("page-developers-oracle-desc")}</Text>
-            <InlineLink href="/developers/docs/scaling/">
-              {t("page-developers-scaling-link")}
-            </InlineLink>
-            <Text>{t("page-developers-scaling-desc")}</Text>
-            <InlineLink href="/developers/docs/networking-layer/">
-              {t("page-developers-networking-layer-link")}
-            </InlineLink>
-            <Text>{t("page-developers-networking-layer-desc")}</Text>
-            <InlineLink href="/developers/docs/data-structures-and-encoding/">
-              {t("page-developers-data-structures-and-encoding-link")}
-            </InlineLink>
-            <Text>
-              {t("page-developers-data-structures-and-encoding-desc")}
-            </Text>
           </RightColumn>
         </div>
       </div>
