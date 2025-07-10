@@ -99,7 +99,7 @@ const Page = async ({
         </div>
       </div>
 
-      <div className="flex flex-col items-center gap-4 px-4 md:px-8">
+      <div className="flex flex-col gap-4 px-4 md:px-8">
         <CategoriesNav activeCategory={slug[0]} />
       </div>
 
