@@ -107,9 +107,10 @@ const Page = async ({ params }: { params: { locale: string } }) => {
           </div>
         </div>
 
-        <div className="flex flex-col gap-4 px-4 md:px-8">
+        {/* TODO: Add community picks when we have a way to get them */}
+        {/* <div className="flex flex-col gap-4 px-4 md:px-8">
           <h2>Community picks</h2>
-        </div>
+        </div> */}
 
         <div className="flex flex-col px-4 md:px-8">
           <SuggestAnApp />
