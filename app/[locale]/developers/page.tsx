@@ -210,7 +210,7 @@ const DevelopersPage = async ({
               <ButtonLink
                 variant="outline"
                 isSecondary
-                href="https://ethereum.stackexchange.com/"
+                href="/developers/learning-tools/"
               >
                 Play with code
               </ButtonLink>
@@ -237,7 +237,7 @@ const DevelopersPage = async ({
               <ButtonLink
                 variant="outline"
                 isSecondary
-                href="https://ethereum.stackexchange.com/"
+                href="/developers/tutorials/"
               >
                 View tutorials
               </ButtonLink>
