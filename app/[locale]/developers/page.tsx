@@ -83,9 +83,7 @@ const DevelopersPage = async ({
         <Section id="build" className="space-y-4 py-10 md:py-12">
           <h2>{t("page-developers-get-started")}</h2>
 
-          <p>
-            Everything you need to learn and build your first apps on Ethereum
-          </p>
+          <p>{t("page-developers-build-section-desc")}</p>
           {/* Desktop */}
           <div className="grid gap-6 max-md:hidden md:grid-cols-2 lg:grid-cols-4">
             {paths.map((path, idx) => (
@@ -108,7 +106,9 @@ const DevelopersPage = async ({
             "-mx-8 w-screen max-w-screen-2xl bg-background-highlight px-8 py-10 md:py-20"
           )}
         >
-          <h2 className="sr-only">Helpful developer resources</h2>
+          <h2 className="sr-only">
+            {t("page-developers-resources-section-title")}
+          </h2>
 
           {/* Quickstart your idea */}
           <Card className="!space-y-8 break-words border bg-background px-6 py-8 md:space-y-6 lg:p-8">
@@ -165,10 +165,9 @@ const DevelopersPage = async ({
               className="max-h-56 w-full object-cover object-top"
             />
             <div className="">
-              <h3>Get help</h3>
+              <h3>{t("page-developers-get-help-title")}</h3>
               <p className="text-sm text-body-medium">
-                If you are stuck or need help solving problems, be sure to ask
-                for guidance.
+                {t("page-developers-get-help-desc")}
               </p>
             </div>
 
@@ -178,14 +177,14 @@ const DevelopersPage = async ({
                 isSecondary
                 href="https://ethereum.stackexchange.com/"
               >
-                Stack Exchange
+                {t("page-developers-stack-exchange")}
               </ButtonLink>
               <ButtonLink
                 variant="ghost"
                 isSecondary
                 href="#some-magical-AI-link"
               >
-                Ask AI
+                {t("page-developers-ask-ai")}
               </ButtonLink>
             </div>
           </Card>
@@ -199,10 +198,9 @@ const DevelopersPage = async ({
               className="max-h-56 w-full object-contain"
             />
             <div className="">
-              <h3>Resources</h3>
+              <h3>{t("page-developers-resources-title")}</h3>
               <p className="text-sm text-body-medium">
-                Want to experiment first, ask questions later? Check sandboxes,
-                bootcamps etc.
+                {t("page-developers-resources-desc")}
               </p>
             </div>
 
@@ -212,7 +210,7 @@ const DevelopersPage = async ({
                 isSecondary
                 href="/developers/learning-tools/"
               >
-                Play with code
+                {t("page-developers-play-code")}
               </ButtonLink>
             </div>
           </Card>
@@ -226,10 +224,9 @@ const DevelopersPage = async ({
               className="max-h-56 w-full object-contain"
             />
             <div className="">
-              <h3>Tutorials</h3>
+              <h3>{t("page-developers-tutorials-title")}</h3>
               <p className="text-sm text-body-medium">
-                Learn Ethereum development step-by-step from builders who have
-                already done it.
+                {t("page-developers-tutorials-desc")}
               </p>
             </div>
 
@@ -239,18 +236,15 @@ const DevelopersPage = async ({
                 isSecondary
                 href="/developers/tutorials/"
               >
-                View tutorials
+                {t("page-developers-learn-tutorials-cta")}
               </ButtonLink>
             </div>
           </Card>
         </Section>
 
         <Section id="courses" className="space-y-4 py-10 md:py-12">
-          <h2>Video courses</h2>
-          <p>
-            Want to kickstart your professional career in blockchain? These
-            courses will prepare you to get hired as blockchain developer.
-          </p>
+          <h2>{t("page-developers-video-courses-title")}</h2>
+          <p>{t("page-developers-video-courses-desc")}</p>
 
           <div className="w-screen max-xl:-ms-8 xl:w-full">
             <VideoCourseSwiper courses={courses} />
@@ -266,7 +260,7 @@ const DevelopersPage = async ({
         >
           <div className="w-full scroll-mt-24 px-8 py-4">
             <h2>{t("page-developers-explore-documentation")}</h2>
-            <p>Understand the core concepts of Ethereum and blockchains</p>
+            <p>{t("page-developers-docs-section-desc")}</p>
           </div>
 
           <div className="flex flex-col items-start justify-between px-8 py-0 lg:flex-row">
@@ -383,15 +377,12 @@ const DevelopersPage = async ({
         </Section>
 
         <Section id="hackathons" className="space-y-4 py-10 md:py-12">
-          <h2>Join hackathons (TODO)</h2>
-          <p>
-            Hackathons are great opportunities to network and learn from others
-            as well as start projects and earn prizes
-          </p>
+          <h2>{t("page-developers-hackathons-title")}</h2>
+          <p>{t("page-developers-hackathons-desc")}</p>
           <SkeletonCardGrid />
           <div className="flex justify-center">
             <ButtonLink href="https://ethglobal.com/">
-              Visit EthGlobal
+              {t("page-developers-visit-ethglobal")}
             </ButtonLink>
           </div>
         </Section>
@@ -407,23 +398,19 @@ const DevelopersPage = async ({
           >
             <div className="mb-12 flex flex-col items-center gap-y-8 rounded-4xl bg-radial-a px-8 py-12 lg:mb-32 xl:mb-36">
               <div className="flex flex-col gap-y-4 text-center">
-                <h2>Are you a founder?</h2>
-                <p>
-                  Have a project idea already or working on a prototype? Explore
-                  how to take your project to the next step. Many other
-                  organizations that provide developers with funding.
-                </p>
+                <h2>{t("page-developers-founders-title")}</h2>
+                <p>{t("page-developers-founders-desc")}</p>
               </div>
               <div className="flex flex-wrap gap-4">
                 <ButtonLink href="mailto:enterprise@ethereum.org?subject=Founder%20inquiry">
-                  Get in touch
+                  {t("page-developers-get-in-touch")}
                 </ButtonLink>
                 <ButtonLink
                   href="/community/grants/"
                   isSecondary
                   variant="outline"
                 >
-                  See grant options
+                  {t("page-developers-see-grant-options")}
                 </ButtonLink>
               </div>
             </div>

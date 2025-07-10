@@ -21,90 +21,81 @@ export const getBuilderPaths = async (): Promise<DevelopersPath[]> => {
   return [
     {
       imgSrc: speedrunNFT,
-      imgAlt: "Speedrun Ethereum NFT banner",
-      title: "Simple NFT Example", // t("page-developers-learn"),
-      description: "Create a public NFT to learn the basics of scaffold-eth.", // t("page-developers-learn-desc"),
+      imgAlt: t("page-developers-speedrun-nft-alt"),
+      title: t("page-developers-speedrun-nft-title"),
+      description: t("page-developers-speedrun-nft-desc"),
       href: "https://speedrunethereum.com/challenge/simple-nft-example",
       button: t("page-developers-start-quest"),
-      tag: "Challenge #0",
+      tag: t("page-developers-speedrun-challenge-0"),
     },
     {
       imgSrc: speedrunStakingApp,
-      imgAlt: "Speedrun Ethereum staking app banner",
-      title: "Staking App", // t("page-developers-learn-tutorials"),
-      description: "Write a smart contract where users pool funds together.", // t("page-developers-learn-tutorials-desc"),
+      imgAlt: t("page-developers-speedrun-staking-alt"),
+      title: t("page-developers-speedrun-staking-title"),
+      description: t("page-developers-speedrun-staking-desc"),
       href: "https://speedrunethereum.com/challenge/decentralized-staking",
       button: t("page-developers-start-quest"),
-      tag: "Challenge #1",
+      tag: t("page-developers-speedrun-challenge-1"),
     },
     {
       imgSrc: speedrunTokenVendor,
-      imgAlt: "Speedrun Ethereum token vendor project banner",
-      title: "Create a token", // t("page-developers-resources"),
-      description:
-        "Build a digital currency and a smart conract that trades it.", // t("page-developers-start-desc"),
+      imgAlt: t("page-developers-speedrun-token-alt"),
+      title: t("page-developers-speedrun-token-title"),
+      description: t("page-developers-speedrun-token-desc"),
       href: "https://speedrunethereum.com/challenge/token-vendor",
       button: t("page-developers-start-quest"),
-      tag: "Challenge #2",
+      tag: t("page-developers-speedrun-challenge-2"),
     },
   ]
 }
 
 export const getVideoCourses = async (): Promise<VideoCourse[]> => {
-  // const locale = await getLocale()
-  // const t = await getTranslations({
-  //   locale,
-  //   namespace: "page-developers-index",
-  // })
+  const locale = await getLocale()
+  const t = await getTranslations({
+    locale,
+    namespace: "page-developers-index",
+  })
 
   return [
     {
-      title: "Blockchain basics",
-      description:
-        "Learn how blockchains and smart contracts work, create a wallet, and sign your first transaction.",
+      title: t("page-developers-course-blockchain-basics-title"),
+      description: t("page-developers-course-blockchain-basics-desc"),
       hours: 3,
       imgSrc: cyfrinBasicBanner,
-      imgAlt: "Cyfrin Updraft Blockchain basics course banner",
+      imgAlt: t("page-developers-course-blockchain-basics-alt"),
       href: "https://updraft.cyfrin.io/courses/blockchain-basics",
     },
     {
-      title: "Solidity smart contract development",
-      description:
-        "Solidity Programming is your gateway to web3 development in Ethereum compatible ecosystems.",
+      title: t("page-developers-course-solidity-title"),
+      description: t("page-developers-course-solidity-desc"),
       hours: 5,
       imgSrc: cyfrinSolidityBanner,
-      imgAlt:
-        "Cyfrin Updraft Solidity smart contract development course banner",
+      imgAlt: t("page-developers-course-solidity-alt"),
       href: "https://updraft.cyfrin.io/courses/solidity",
     },
     {
-      title: "Foundry fundamentals",
-      description:
-        "Level up your Solidity development skills with Foundry and advanced web3 development concepts and tools.",
+      title: t("page-developers-course-foundry-fundamentals-title"),
+      description: t("page-developers-course-foundry-fundamentals-desc"),
       hours: 10,
       imgSrc: cyfrinFoundryFundamentalsBanner,
-      imgAlt: "Cyfrin Updraft Foundry fundamentals course banner",
+      imgAlt: t("page-developers-course-foundry-fundamentals-alt"),
       href: "https://updraft.cyfrin.io/courses/foundry",
     },
     {
-      title: "Advanced foundry",
-      description:
-        "Master web3 development techniques with Advanced Foundry for Solidity smart contract development.",
+      title: t("page-developers-course-advanced-foundry-title"),
+      description: t("page-developers-course-advanced-foundry-desc"),
       hours: 13,
       imgSrc: cyfrinFoundryAdvancedBanner,
-      imgAlt: "Cyfrin Updraft Advanced foundry course banner",
+      imgAlt: t("page-developers-course-advanced-foundry-alt"),
       href: "https://updraft.cyfrin.io/courses/advanced-foundry",
     },
     {
-      title: "Smart contract security", // "Learn smart contract auditing, security, and DeFi",
-      description:
-        "Start your career as a smart contract security researcher! Learn smart contract auditing and the best practices.",
+      title: t("page-developers-course-security-title"),
+      description: t("page-developers-course-security-desc"),
       hours: 24,
       imgSrc: cyfrinSecurityBanner,
-      imgAlt: "Cyfrin Updraft Blockchain basics course banner",
+      imgAlt: t("page-developers-course-security-alt"),
       href: "https://updraft.cyfrin.io/courses/security",
     },
   ]
-
-  return []
 }
