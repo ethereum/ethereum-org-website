@@ -59,15 +59,17 @@ export const normalizeSlug = (slug: string) => {
 
 /**
  * Converts a string to a URL-friendly slug
- * @param text - The text to convert (e.g., "Governance/DAO", "Bridge Aave 1")
- * @returns URL slug (e.g., "governance-dao", "bridge-aave-1")
+ * @param text - The text to convert (e.g., "Governance/DAO", "Bridge Aave 1", "Hello world")
+ * @returns URL slug (e.g., "governance-dao", "bridge-aave-1", "hello-world")
  */
-export const createSlug = (text: string): string => {
-  return text
-    .toLowerCase()
-    .trim()
-    .replace(/[^a-z0-9\s-]/g, "") // Remove special characters except spaces and hyphens
-    .replace(/\s+/g, "-") // Replace spaces with hyphens
-    .replace(/-+/g, "-") // Replace multiple hyphens with single hyphen
-    .replace(/^-|-$/g, "") // Remove leading/trailing hyphens
+export const slugify = (text: string): string => {
+  return encodeURIComponent(
+    text
+      .toLowerCase()
+      .trim()
+      .replace(/[^a-z0-9\s-]/g, "") // Remove special characters except spaces and hyphens
+      .replace(/\s+/g, "-") // Replace spaces with hyphens
+      .replace(/-+/g, "-") // Replace multiple hyphens with single hyphen
+      .replace(/^-|-$/g, "") // Remove leading/trailing hyphens
+  )
 }

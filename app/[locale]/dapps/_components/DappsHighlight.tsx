@@ -11,7 +11,7 @@ import {
   SwiperSlide,
 } from "@/components/ui/swiper"
 
-import { createSlug } from "@/lib/utils/url"
+import { slugify } from "@/lib/utils/url"
 
 import DappCard from "./DappCard"
 
@@ -37,7 +37,7 @@ const DappsHighlight = ({ dapps }: DappsHighlightProps) => {
             <SwiperSlide key={index}>
               <LinkBox className="group w-full rounded-xl p-3 hover:bg-background-highlight">
                 <LinkOverlay
-                  href={`/dapps/${createSlug(dapp.name)}`}
+                  href={`/dapps/${slugify(dapp.name)}`}
                   className="no-underline"
                 >
                   <div className="relative mb-2 aspect-[2/1] w-full">
