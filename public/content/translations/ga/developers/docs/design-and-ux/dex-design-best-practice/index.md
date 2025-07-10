@@ -180,7 +180,7 @@ Sonraítear i ndlí na gaireachta go mbreathnaítear ar nithe atá gar dá chéi
 
 I ndeireadh na dála, tá buntáistí agus míbhuntáistí ann don dá rogha, ach tá sé suimiúil gur cosúil go bhfuil an treocht i dtreo comharthaí ar dheis.
 
-# Iompar cnaipe {#button-behavior}
+## Iompar cnaipe {#button-behavior}
 
 Ná bíodh cnaipe ar leith agat le haghaidh Faomhadh. Chomh maith leis sin ná bíodh cliceáil ar leith agat le haghaidh Ceadaigh. Is mian leis an úsáideoir Babhtáil, mar sin abair “babhtáil” ar an gcnaipe agus cuir tús leis an gceadú mar an chéad chéim. Is féidir le modal dul i láthair le céimire, nó le fógra simplí 'tx 1 de 2 - á cheadú'.
 
@@ -188,7 +188,7 @@ Ná bíodh cnaipe ar leith agat le haghaidh Faomhadh. Chomh maith leis sin ná b
 
 ![UI le cnaipe amháin a deir ceadaigh](./15.png)
 
-## Cnaipe mar chabhair chomhthéacsúil {#button-as-contextual-help}
+### Cnaipe mar chabhair chomhthéacsúil {#button-as-contextual-help}
 
 Is féidir leis an gcnaipe dualgas dúbailte a dhéanamh mar fholáireamh!
 
@@ -206,7 +206,7 @@ Is féidir an cnaipe a **mhapáil chuig an ngníomh** freisin nach mór a dhéan
 
 ![Teachtaireacht earráide léirithe laistigh den phríomh CTA](./17.png)
 
-## Tóg do cheann féin leis an gcomhad figma seo {#build-your-own-with-this-figma-file}
+### Tóg do cheann féin leis an gcomhad figma seo {#build-your-own-with-this-figma-file}
 
 A bhuí le hobair chrua na bprótacal iolrach, tá feabhas mór tagtha ar dhearadh DEX. Tá a fhios againn cén fhaisnéis a theastaíonn ón úsáideoir, conas ba cheart dúinn é a thaispeáint, agus conas an sreabhadh a dhéanamh chomh réidh agus is féidir.
 Tá súil agam go dtugann an t-alt seo forbhreathnú láidir ar phrionsabail UX.

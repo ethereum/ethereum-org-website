@@ -13,6 +13,7 @@ import countries from "./countries.json"
 
 import { useBreakpointValue } from "@/hooks/useBreakpointValue"
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion"
+import { useTranslation } from "@/hooks/useTranslation"
 import EthLogo from "@/public/images/assets/eth-glyph-colored.png"
 
 // Define a type for event data
@@ -40,6 +41,7 @@ interface ExtendedOrbitControls extends OrbitControls {
 }
 
 const TenYearGlobe = ({ events }: { events: EventData[] }) => {
+  const { t } = useTranslation("page-10-year-anniversary")
   const globeRef = useRef<GlobeMethods>()
   const globeContainerRef = useRef<HTMLDivElement>(null)
   const { resolvedTheme } = useTheme()
@@ -272,7 +274,7 @@ const TenYearGlobe = ({ events }: { events: EventData[] }) => {
                 hideArrow
                 className="no-underline"
               >
-                Go to event
+                {t("page-10-year-globe-go-to-event")}
               </Link>
             )}
           </div>

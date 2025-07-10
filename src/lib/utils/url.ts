@@ -10,9 +10,11 @@ import {
 export const isDiscordInvite = (href: string): boolean =>
   href.includes(DISCORD_PATH) && !href.includes("http")
 
+export const isMailto = (href: string): boolean => href.includes("mailto:")
+
 export const isExternal = (href: string): boolean =>
   href.includes("http") ||
-  href.includes("mailto:") ||
+  isMailto(href) ||
   href.includes("ipfs") ||
   isDiscordInvite(href)
 

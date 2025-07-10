@@ -1,10 +1,8 @@
 import React from "react"
-import { BsArrowCounterclockwise } from "react-icons/bs"
-import { IoClose } from "react-icons/io5" // Add this import
+import { ListFilter, RotateCcw, X } from "lucide-react"
 
 import { FilterOption, TPresetFilters } from "@/lib/types"
 
-import { FilterBurgerIcon } from "@/components/icons/wallets"
 import Filters from "@/components/ProductTable/Filters"
 import PresetFilters from "@/components/ProductTable/PresetFilters"
 import {
@@ -72,14 +70,16 @@ const MobileFilters = ({
               <p>{t("table-filters")}</p>
               <p className="text-body-medium">{` ${activeFiltersCount} ${t("table-active")}`}</p>
             </div>
-            <FilterBurgerIcon className="h-8 w-8 stroke-primary" />
+            <div className="grid size-8 place-items-center rounded-full border border-primary text-primary">
+              <ListFilter className="-mb-0.5 size-6 stroke-1" />
+            </div>
           </Button>
         </DrawerTrigger>
         <DrawerContent className="flex h-full flex-col p-2">
           <div className="sticky top-0 flex items-center justify-end p-2">
             <DrawerClose asChild>
               <Button variant="ghost">
-                <IoClose className="text-2xl" />
+                <X className="text-2xl" />
               </Button>
             </DrawerClose>
           </div>
@@ -106,7 +106,7 @@ const MobileFilters = ({
                   className="gap-1"
                   onClick={resetFilters}
                 >
-                  <BsArrowCounterclockwise />
+                  <RotateCcw />
                   {t("table-reset-filters")}
                 </Button>
               </div>

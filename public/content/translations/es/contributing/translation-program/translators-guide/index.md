@@ -154,7 +154,7 @@ nonce - _Texto no traducible_
 
 El texto original también contiene etiquetas acortadas, que solo contienen números, lo que significa que su función no es inmediatamente obvia. Puede pasar el cursor sobre estas etiquetas para ver qué función tienen exactamente.
 
-En el ejemplo de abajo, al pasar el cursor por la `<0>` etiqueta se muestra lo que representa `<code>` y contiene un fragmento de código, por lo tanto el contenido dentro de estas etiquetas no debe traducirse.
+En el ejemplo de abajo, puede verlo al pasar el cursor por la `<0>` etiqueta se muestra lo que representa `<code>` y contiene un fragmento de código, por lo tanto el contenido dentro de estas etiquetas no debe traducirse.
 
 ![Ejemplo de tags.png ambiguo](./example-of-ambiguous-tags.png)
 

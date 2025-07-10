@@ -10,6 +10,7 @@ export const CONTENT_PATH = "/content"
 export const TRANSLATIONS_DIR = "public/content/translations"
 export const TRANSLATED_IMAGES_DIR = "/content/translations"
 export const PLACEHOLDER_IMAGE_DIR = "src/data/placeholders"
+export const INTERNAL_TUTORIALS_JSON = "src/data/internalTutorials.json"
 export const INTL_JSON_DIR = "src/intl"
 
 export const NULL_VALUE = "—"
@@ -24,7 +25,8 @@ export const LOCALES_CODES = BUILD_LOCALES
   : i18nConfig.map(({ code }) => code)
 
 // Site urls
-export const SITE_URL = "https://ethereum.org"
+export const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL || "https://ethereum.org"
 export const DISCORD_PATH = "/discord/"
 export const GITHUB_REPO_URL =
   "https://github.com/ethereum/ethereum-org-website/"
@@ -42,7 +44,7 @@ export const GITHUB_URL = `https://github.com/`
 export const COINGECKO_API_BASE_URL =
   "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&category="
 export const COINGECKO_API_URL_PARAMS =
-  "&order=market_cap_desc&per_page=100&page=1&sparkline=false"
+  "&order=market_cap_desc&per_page=250&page=1&sparkline=false"
 export const BASE_TIME_UNIT = 3600 // 1 hour
 export const COLOR_MODE_STORAGE_KEY = "theme"
 

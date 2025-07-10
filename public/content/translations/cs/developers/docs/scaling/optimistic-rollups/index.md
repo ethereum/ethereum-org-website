@@ -257,7 +257,7 @@ Učíte se spíše vizuálně? Podívejte se na video od Finematics, které vysv
 
 - [Jak fungují optimistické rollupy (kompletní průvodce)](https://www.alchemy.com/overviews/optimistic-rollups)
 - [Co je to Blockchain Rollup? Technický úvod](https://www.ethereum-ecosystem.com/blog/what-is-a-blockchain-rollup-a-technical-introduction)
-- [Zásadní průvodce pro Arbitrum](https://newsletter.banklesshq.com/p/the-essential-guide-to-arbitrum)
-- [Jak skutečně funguje rollup od Optimism?](https://www.paradigm.xyz/2021/01/how-does-optimisms-rollup-really-work)
+- [Zásadní průvodce pro Arbitrum](https://www.bankless.com/the-essential-guide-to-arbitrum)
+- [Jak skutečně funguje rollup od Optimism?](https://www.paradigm.xyz/2021/01/how-does-optimism-s-rollup-really-work)
 - [Hloubkový rozbor OVM](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)
 - [Co je to Virtuální stroj Optimistic?](https://www.alchemy.com/overviews/optimistic-virtual-machine)
