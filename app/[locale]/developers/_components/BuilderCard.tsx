@@ -17,7 +17,7 @@ const BuilderCard = ({ path, className }: BuildCardProps) => (
     <Image
       src={path.imgSrc}
       alt={path.imgAlt}
-      className="object-fit mx-auto h-44"
+      className="mx-auto h-44 object-contain"
       sizes="(max-width: 480px) calc(100vw - 6rem), 285px"
     />
     <div className="h-full space-y-1">
@@ -33,7 +33,7 @@ const BuilderCard = ({ path, className }: BuildCardProps) => (
       <h3 className="text-lg font-bold">{path.title}</h3>
       <p className="mb-4 text-sm text-body-medium">{path.description}</p>
     </div>
-    <ButtonLink href={path.url} className="sm:w-fit">
+    <ButtonLink href={path.href} className="sm:w-fit">
       {path.button}
     </ButtonLink>
   </Card>

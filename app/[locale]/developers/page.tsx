@@ -3,7 +3,6 @@ import { getTranslations } from "next-intl/server"
 import type { Lang } from "@/lib/types"
 import { ChildOnlyProp } from "@/lib/types"
 
-import CalloutSSR from "@/components/CalloutSSR"
 import { CopyButton } from "@/components/CopyToClipboard"
 import FeedbackCard from "@/components/FeedbackCard"
 import HubHero from "@/components/Hero/HubHero"
@@ -19,15 +18,15 @@ import { getMetadata } from "@/lib/utils/metadata"
 import { screens } from "@/lib/utils/screen"
 
 import BuilderCard from "./_components/BuilderCard"
-import BuilderSwiper from "./_components/BuilderSwiper"
+import BuilderSwiper from "./_components/BuilderSwiper/lazy"
 import SpeedRunCard from "./_components/SpeedRunCard"
-import { getBuilderPaths } from "./utils"
+import VideoCourseSwiper from "./_components/VideoCourseSwiper/lazy"
+import { getBuilderPaths, getVideoCourses } from "./utils"
 
 import resourcesBanner from "@/public/images/developers/resources-banner.png"
 import scaffoldDebugScreenshot from "@/public/images/developers/scaffold-debug-screenshot.png"
 import stackExchangeScreenshot from "@/public/images/developers/stack-exchange-screenshot.png"
 import tutorialTagsBanner from "@/public/images/developers/tutorial-tags-banner.png"
-import developersImage from "@/public/images/developers-eth-blocks.png"
 import dogeImage from "@/public/images/doge-computer.png"
 import heroImage from "@/public/images/heroes/developers-hub-hero.jpg"
 
@@ -42,12 +41,6 @@ const Column = (props: ChildOnlyProp) => (
 )
 const RightColumn = (props: ChildOnlyProp) => (
   <div className="mb-6 me-0 w-full flex-1 basis-1/3" {...props} />
-)
-const IntroColumn = (props: ChildOnlyProp) => (
-  <div
-    className="mb-6 me-0 mt-0 w-full flex-1 basis-1/3 sm:me-8 lg:mt-32"
-    {...props}
-  />
 )
 
 const DevelopersPage = async ({
@@ -71,6 +64,9 @@ const DevelopersPage = async ({
     description: t("page-developers-speedrunethereum-description"),
     ctaLabel: t("page-developers-speedrunethereum-link"),
   }
+
+  const courses = await getVideoCourses()
+
   return (
     <VStack className="mx-auto my-0 w-full">
       <HubHero
@@ -237,33 +233,16 @@ const DevelopersPage = async ({
           </Card>
         </div>
 
-        <div className="flex w-full flex-col items-start justify-between lg:flex-row lg:items-center">
-          <IntroColumn>
-            <H2>{t("page-developers-about")}</H2>
-            <p className="mb-6 leading-xs text-body-medium">
-              {t("page-developers-about-desc")}
-            </p>
-            <Text>{t("page-developers-about-desc-2")}</Text>
-            <Text>
-              {t("page-developers-feedback")}{" "}
-              <InlineLink href="https://discord.gg/ethereum-org">
-                {t("page-developers-discord")}
-              </InlineLink>
-            </Text>
-          </IntroColumn>
-          <CalloutSSR
-            className="flex-auto md:flex-[1_1_416px]"
-            image={developersImage}
-            title={t("page-developers-improve-ethereum")}
-            description={t("page-developers-improve-ethereum-desc")}
-            alt={t("alt-eth-blocks")}
-          >
-            <div>
-              <ButtonLink href="https://github.com/ethereum/ethereum-org-website">
-                {t("page-developers-contribute")}
-              </ButtonLink>
-            </div>
-          </CalloutSSR>
+        <div className="space-y-2">
+          <h2>Video courses</h2>
+          <p>
+            Want to kickstart your professional career in blockchain? These
+            courses will prepare you to get hired as blockchain developer.
+          </p>
+
+          <div className="w-screen max-xl:-ms-8 xl:w-full">
+            <VideoCourseSwiper courses={courses} />
+          </div>
         </div>
       </MainArticle>
 
