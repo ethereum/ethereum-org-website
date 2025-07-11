@@ -37,6 +37,12 @@ export type Badge = {
   collectors_count: number
 }
 
+export type Stats = {
+  collectorsCount: number
+  uniqueAddressesCount: number
+  collectiblesCount: number
+}
+
 export default async function Page({
   params,
 }: {
