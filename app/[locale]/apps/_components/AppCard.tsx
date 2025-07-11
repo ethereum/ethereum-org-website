@@ -4,12 +4,12 @@ import { Image } from "@/components/Image"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 import { Tag } from "@/components/ui/tag"
 
+import { DAPP_TAG_VARIANTS } from "@/lib/utils/apps"
 import { cn } from "@/lib/utils/cn"
-import { DAPP_TAG_VARIANTS } from "@/lib/utils/dapps"
 import { slugify } from "@/lib/utils/url"
 
-interface DappCardProps {
-  dapp: DappData
+interface AppCardProps {
+  app: DappData
   imageSize: number
   isVertical?: boolean
   showDescription?: boolean
@@ -17,14 +17,14 @@ interface DappCardProps {
   disableLink?: boolean
 }
 
-const DappCard = ({
-  dapp,
+const AppCard = ({
+  app,
   imageSize,
   isVertical = false,
   showDescription = false,
   hideTag = false,
   disableLink = false,
-}: DappCardProps) => {
+}: AppCardProps) => {
   const cardContent = (
     <div
       className={cn(
@@ -39,8 +39,8 @@ const DappCard = ({
         )}
       >
         <Image
-          src={dapp.image}
-          alt={dapp.name}
+          src={app.image}
+          alt={app.name}
           className="h-full w-full rounded-xl object-cover"
           width={imageSize * 16}
           height={imageSize * 16}
@@ -51,19 +51,19 @@ const DappCard = ({
           <Tag
             size="small"
             className="w-fit py-0"
-            status={DAPP_TAG_VARIANTS[dapp.category]}
+            status={DAPP_TAG_VARIANTS[app.category]}
           >
-            {dapp.category}
+            {app.category}
           </Tag>
         )}
         <p className="text-lg font-bold leading-none text-body group-hover:text-primary">
-          {dapp.name}
+          {app.name}
         </p>
         {showDescription && (
-          <p className="text-body group-hover:text-body">{dapp.description}</p>
+          <p className="text-body group-hover:text-body">{app.description}</p>
         )}
         <p className="text-sm text-body-medium">
-          {dapp.subCategory.map((subCategory) => subCategory).join(" ·  ")}
+          {app.subCategory.map((subCategory) => subCategory).join(" ·  ")}
         </p>
       </div>
     </div>
@@ -77,14 +77,11 @@ const DappCard = ({
     <LinkBox
       className={cn("group rounded-xl p-2 hover:bg-background-highlight")}
     >
-      <LinkOverlay
-        href={`/apps/${slugify(dapp.name)}`}
-        className="no-underline"
-      >
+      <LinkOverlay href={`/apps/${slugify(app.name)}`} className="no-underline">
         {cardContent}
       </LinkOverlay>
     </LinkBox>
   )
 }
 
-export default DappCard
+export default AppCard

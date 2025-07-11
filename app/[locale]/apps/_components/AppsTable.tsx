@@ -12,23 +12,23 @@ import {
   SelectValue,
 } from "@/components/ui/select"
 
-import DappCard from "./DappCard"
+import AppCard from "./AppCard"
 
-const DappsTable = ({ dapps }: { dapps: DappData[] }) => {
+const AppsTable = ({ apps }: { apps: DappData[] }) => {
   const [filterBy, setFilterBy] = useState("All")
 
   const subCategories = useMemo(
-    () => [...new Set(dapps.flatMap((dapp) => dapp.subCategory))],
-    [dapps]
+    () => [...new Set(apps.flatMap((app) => app.subCategory))],
+    [apps]
   )
 
-  const filteredDapps = useMemo(
+  const filteredApps = useMemo(
     () =>
-      dapps.filter((dapp) => {
+      apps.filter((app) => {
         if (filterBy === "All") return true
-        return dapp.subCategory.includes(filterBy)
+        return app.subCategory.includes(filterBy)
       }),
-    [dapps, filterBy]
+    [apps, filterBy]
   )
 
   return (
@@ -64,18 +64,18 @@ const DappsTable = ({ dapps }: { dapps: DappData[] }) => {
             Showing{" "}
             <span className="text-body">
               (
-              {filteredDapps.length === dapps.length
-                ? dapps.length
-                : `${filteredDapps.length}/${dapps.length}`}
+              {filteredApps.length === apps.length
+                ? apps.length
+                : `${filteredApps.length}/${apps.length}`}
               )
             </span>
           </p>
         </div>
       </div>
       <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-        {filteredDapps.map((dapp) => (
-          <div key={dapp.name}>
-            <DappCard dapp={dapp} imageSize={14} hideTag />
+        {filteredApps.map((app) => (
+          <div key={app.name}>
+            <AppCard app={app} imageSize={14} hideTag />
           </div>
         ))}
       </div>
@@ -83,4 +83,4 @@ const DappsTable = ({ dapps }: { dapps: DappData[] }) => {
   )
 }
 
-export default DappsTable
+export default AppsTable

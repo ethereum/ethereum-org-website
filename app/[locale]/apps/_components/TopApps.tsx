@@ -16,16 +16,16 @@ import {
 import { breakpointAsNumber } from "@/lib/utils/screen"
 import { slugify } from "@/lib/utils/url"
 
-import DappCard from "./DappCard"
+import AppCard from "./AppCard"
 
 import { useBreakpointValue } from "@/hooks/useBreakpointValue"
 import { useIsClient } from "@/hooks/useIsClient"
 
-interface TopDappsProps {
-  dappsData: Record<DappCategory, DappData[]>
+interface TopAppsProps {
+  appsData: Record<DappCategory, DappData[]>
 }
 
-const TopDapps = ({ dappsData }: TopDappsProps) => {
+const TopApps = ({ appsData }: TopAppsProps) => {
   const isClient = useIsClient()
   const cardStyling = useBreakpointValue({
     base: {
@@ -77,7 +77,7 @@ const TopDapps = ({ dappsData }: TopDappsProps) => {
           },
         }}
       >
-        {Object.keys(dappsData).map((category) => (
+        {Object.keys(appsData).map((category) => (
           <SwiperSlide key={category}>
             <div className="flex flex-col rounded-xl border">
               <LinkBox className="border-b p-4 hover:bg-background-highlight">
@@ -108,10 +108,10 @@ const TopDapps = ({ dappsData }: TopDappsProps) => {
                 </LinkOverlay>
               </LinkBox>
               <div className="flex flex-col">
-                {dappsData[category].slice(0, 5).map((dapp) => (
-                  <div key={dapp.name} className="border-b last:border-b-0">
-                    <DappCard
-                      dapp={dapp}
+                {appsData[category].slice(0, 5).map((app) => (
+                  <div key={app.name} className="border-b last:border-b-0">
+                    <AppCard
+                      app={app}
                       imageSize={imageSize}
                       isVertical={isVertical}
                       hideTag={true}
@@ -128,4 +128,4 @@ const TopDapps = ({ dappsData }: TopDappsProps) => {
   )
 }
 
-export default TopDapps
+export default TopApps

@@ -19,7 +19,7 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb"
 
-import { getHighlightedDapps } from "@/lib/utils/dapps"
+import { getHighlightedDapps } from "@/lib/utils/apps"
 import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
@@ -28,9 +28,9 @@ import { dappsCategories } from "@/data/dapps/categories"
 
 import { BASE_TIME_UNIT } from "@/lib/constants"
 
+import AppsHighlight from "../../_components/AppsHighlight"
+import AppsTable from "../../_components/AppsTable"
 import CategoriesNav from "../../_components/CategoriesNav"
-import DappsHighlight from "../../_components/DappsHighlight"
-import DappsTable from "../../_components/DappsTable"
 import SuggestAnApp from "../../_components/SuggestAnApp"
 
 import { fetchDapps } from "@/lib/api/fetchDapps"
@@ -122,11 +122,11 @@ const Page = async ({
       <MainArticle className="flex flex-col gap-32 py-10">
         <div className="flex flex-col px-4 md:px-8">
           <h2>Highlights</h2>
-          <DappsHighlight dapps={highlightedDapps} />
+          <AppsHighlight apps={highlightedDapps} />
         </div>
 
         <div className="flex flex-col px-4 md:px-8">
-          <DappsTable dapps={dappsData[category.name]} />
+          <AppsTable apps={dappsData[category.name]} />
         </div>
 
         <div className="flex flex-col px-4 md:px-8">

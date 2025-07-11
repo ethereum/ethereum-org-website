@@ -30,7 +30,7 @@ import { ButtonLink } from "@/components/ui/buttons/Button"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 import { Tag } from "@/components/ui/tag"
 
-import { DAPP_TAG_VARIANTS } from "@/lib/utils/dapps"
+import { DAPP_TAG_VARIANTS } from "@/lib/utils/apps"
 import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { getMetadata } from "@/lib/utils/metadata"
 import {
@@ -42,7 +42,7 @@ import { formatStringList } from "@/lib/utils/wallets"
 
 import { BASE_TIME_UNIT } from "@/lib/constants"
 
-import DappCard from "../_components/DappCard"
+import AppCard from "../_components/AppCard"
 
 import ScreenshotSwiper from "./_components/ScreenshotSwiper"
 
@@ -288,7 +288,7 @@ const Page = async ({
               <h3 className="text-2xl">Gallery</h3>
               <ScreenshotSwiper
                 screenshots={dapp.screenshots}
-                dappName={dapp.name}
+                appName={dapp.name}
               />
             </div>
           </div>
@@ -317,8 +317,8 @@ const Page = async ({
             <div className="flex w-full flex-col gap-4 lg:flex-row">
               {relatedDapps.map((relatedDapp) => (
                 <div key={relatedDapp.name} className="flex-1">
-                  <DappCard
-                    dapp={relatedDapp}
+                  <AppCard
+                    app={relatedDapp}
                     imageSize={24}
                     showDescription={true}
                   />
