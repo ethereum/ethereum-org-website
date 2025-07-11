@@ -8,6 +8,7 @@ import {
 
 import { AppCategoryEnum } from "@/lib/types"
 
+import { SimpleHero } from "@/components/Hero"
 import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
 import {
@@ -73,7 +74,6 @@ const Page = async ({
   }
 
   const [categoryEnum, category] = categoryEntry
-  const CategoryIcon = category.icon
 
   if (!isValidCategory(categoryEnum)) {
     notFound()
@@ -88,51 +88,46 @@ const Page = async ({
 
   return (
     <I18nProvider locale={locale} messages={messages}>
-      <div className="flex flex-col-reverse justify-between gap-8 px-4 pb-4 pt-11 md:px-8 lg:flex-row">
-        <div className="mb-4 flex flex-1 flex-col gap-8">
-          <Breadcrumb>
-            <BreadcrumbList>
-              <BreadcrumbItem>
-                <BreadcrumbLink href="/apps">ALL APPS</BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator className="me-[0.625rem] ms-[0.625rem] text-gray-400">
-                /
-              </BreadcrumbSeparator>
-              <BreadcrumbItem>
-                <BreadcrumbPage>{category.name.toUpperCase()}</BreadcrumbPage>
-              </BreadcrumbItem>
-            </BreadcrumbList>
-          </Breadcrumb>
-          <h1 className="text-[2.5rem] leading-[1.4] md:text-5xl">
-            {category.name} apps
-          </h1>
-          <div className="text-xl leading-[1.4] text-body-medium">
-            {category.description}
+      <div className="flex flex-col gap-12">
+        <SimpleHero
+          breadcrumbs={
+            <Breadcrumb>
+              <BreadcrumbList>
+                <BreadcrumbItem>
+                  <BreadcrumbLink href="/apps">ALL APPS</BreadcrumbLink>
+                </BreadcrumbItem>
+                <BreadcrumbSeparator className="me-[0.625rem] ms-[0.625rem] text-gray-400">
+                  /
+                </BreadcrumbSeparator>
+                <BreadcrumbItem>
+                  <BreadcrumbPage>{category.name.toUpperCase()}</BreadcrumbPage>
+                </BreadcrumbItem>
+              </BreadcrumbList>
+            </Breadcrumb>
+          }
+          title={category.name}
+          subtitle={category.description}
+        />
+
+        <div className="flex flex-col gap-4 px-4 md:px-8">
+          <CategoriesNav activeCategory={categoryEnum} />
+        </div>
+
+        <MainArticle className="flex flex-col gap-32 py-10">
+          <div className="flex flex-col px-4 md:px-8">
+            <h2>Highlights</h2>
+            <AppsHighlight apps={highlightedApps} />
           </div>
-        </div>
-        <div className="flex flex-1 items-start justify-start lg:items-center lg:justify-center">
-          <CategoryIcon className="h-20 w-20 text-primary lg:h-40 lg:w-40" />
-        </div>
+
+          <div className="flex flex-col px-4 md:px-8">
+            <AppsTable apps={appsData[category.name]} />
+          </div>
+
+          <div className="flex flex-col px-4 md:px-8">
+            <SuggestAnApp />
+          </div>
+        </MainArticle>
       </div>
-
-      <div className="flex flex-col gap-4 px-4 md:px-8">
-        <CategoriesNav activeCategory={categoryEnum} />
-      </div>
-
-      <MainArticle className="flex flex-col gap-32 py-10">
-        <div className="flex flex-col px-4 md:px-8">
-          <h2>Highlights</h2>
-          <AppsHighlight apps={highlightedApps} />
-        </div>
-
-        <div className="flex flex-col px-4 md:px-8">
-          <AppsTable apps={appsData[category.name]} />
-        </div>
-
-        <div className="flex flex-col px-4 md:px-8">
-          <SuggestAnApp />
-        </div>
-      </MainArticle>
     </I18nProvider>
   )
 }
