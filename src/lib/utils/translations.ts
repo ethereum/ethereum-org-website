@@ -97,7 +97,7 @@ const getRequiredNamespacesForPath = (relativePath: string) => {
   }
 
   if (path.startsWith("/apps/")) {
-    primaryNamespace = "page-dapps"
+    primaryNamespace = "page-apps"
   }
 
   if (path.startsWith("/energy-consumption/")) {

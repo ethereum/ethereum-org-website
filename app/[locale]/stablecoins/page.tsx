@@ -734,7 +734,7 @@ async function Page({ params }: { params: Promise<{ locale: Lang }> }) {
             )}
           >
             <ProductList
-              actionLabel={t("page-dapps-ready-button")}
+              actionLabel={t("page-apps-ready-button")}
               category={t("page-stablecoins-category-dashboard-and-education")}
               content={toolsData}
             />
