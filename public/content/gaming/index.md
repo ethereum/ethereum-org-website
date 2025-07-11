@@ -63,6 +63,6 @@ As Ethereum has matured, solutions exist to significantly reduce the cost of onc
 
 Getting into Ethereum gaming is easier than you might think. With just a few steps, you can start playing and enjoying your progress:
 
-1. **Set up a Crypto Wallet:** You'll need a wallet to manage your digital assets and interact with decentralized applications. [Choose a Wallet](/en/wallets/find-wallet/)
+1. **Set up a Crypto Wallet:** You'll need a wallet to manage your digital assets and interact with decentralized applications. [Choose a Wallet](/wallets/find-wallet/)
 2. **Fund Your Wallet:** Acquire some Ether (ETH) or tokens relevant to the Layer 2 network you plan to use.
 3. **Explore Games:** Discover games on platforms like [Orden](https://orden.gg/),  [ChainPlay](https://chainplay.gg/chain/ethereum/), [Gam3s.GG](https://gam3s.gg/), [DappRadar](https://dappradar.com/rankings/protocol/ethereum/category/games), [OpenSea](https://opensea.io/), and [PlayToEarn.net](https://playtoearn.com/blockchaingames).
