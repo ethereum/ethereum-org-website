@@ -415,7 +415,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
                     <CardImage>
                       <ImageHeight200 src={developersEthBlocks} alt="" />
                     </CardImage>
-                    <ButtonLink href="/dapps/">
+                    <ButtonLink href="/apps/">
                       {t("dapp-card-button")}
                     </ButtonLink>
                   </>

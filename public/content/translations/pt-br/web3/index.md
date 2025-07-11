@@ -143,7 +143,7 @@ Estamos apenas no início da criação de uma Web melhor com a Web3, mas à medi
 
 - [Obtenha uma carteira](/wallets/)
 - [Encontre uma comunidade](/community/)
-- [Explore aplicativos Web3](/dapps/)
+- [Explore aplicativos Web3](/apps/)
 - [Participe de uma DAO](/dao/)
 - [Construir na Web3](/developers/)
 

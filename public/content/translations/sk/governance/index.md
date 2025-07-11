@@ -44,7 +44,7 @@ V [komunite Ethereum](/community/) sú rôzne zainteresované strany, z ktorých
 
 - **Držitelia Etheru**: títo ľudia vlastnia ľubovoľné množstvo ETH. [Viac o ETH](/eth/).
 - **Používatelia aplikácií**: títo ľudia interagujú s aplikáciami na Ethereum blockchaine.
-- **Vývojári aplikácií/nástrojov**: títo ľudia píšu aplikácie, ktoré bežia na blockchaine Ethereum (napr. DeFi, NFT atď.) alebo vytvárajú nástroje na interakciu s Ethereom (napr. peňaženky, testovacie súpravy atď.). [Viac informácií o dapps](/dapps/).
+- **Vývojári aplikácií/nástrojov**: títo ľudia píšu aplikácie, ktoré bežia na blockchaine Ethereum (napr. DeFi, NFT atď.) alebo vytvárajú nástroje na interakciu s Ethereom (napr. peňaženky, testovacie súpravy atď.). [Viac informácií o dapps](/apps/).
 - **Operátori uzlov**: títo ľudia prevádzkujú uzly, ktoré šíria bloky a transakcie a odmietajú akúkoľvek neplatnú transakciu alebo blok, s ktorým sa stretnú. [Viac informácií o uzloch](/developers/docs/nodes-and-clients/).
 - **Autori EIP**: títo ľudia navrhujú zmeny protokolu Ethereum vo forme návrhov na zlepšenie Etherea (EIP). [Viac o EIP](/eips/).
 - **Validátori**: títo ľudia prevádzkujú uzly, ktoré môžu pridávať nové bloky do Ethereum blockchainu.

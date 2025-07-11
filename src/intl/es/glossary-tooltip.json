@@ -32,7 +32,7 @@
   "dao-term": "Organización autónoma descentralizada (o DAO)",
   "dao-definition": "Una DAO es una organización digital dirigida por reglas codificadas en una cadena de bloques, donde las decisiones se toman a partir de los votos de los miembros, no con una autoridad central. <a href=\"/dao/\">Más información sobre las organizaciones autónomas descentralizadas (DAO)</a>.",
   "dapp-term": "DApp",
-  "dapp-definition": "Una dApp es una aplicación descentralizada que se ejecuta en una red de cadena de bloques, ofreciendo servicios sin una autoridad de control central. <a href=\"/dapps/\">Más sobre aplicaciones descentralizadas</a>.",
+  "dapp-definition": "Una dApp es una aplicación descentralizada que se ejecuta en una red de cadena de bloques, ofreciendo servicios sin una autoridad de control central. <a href=\"/apps/\">Más sobre aplicaciones descentralizadas</a>.",
   "data-availability-term": "Disponibilidad de datos",
   "data-availability-definition": "Cualquier nodo puede verificar de forma independiente las transacciones en una cadena de bloques para mantener la transparencia y la confianza en el sistema.",
   "defi-term": "DeFi",

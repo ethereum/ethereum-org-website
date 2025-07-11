@@ -57,7 +57,7 @@ const Page = async ({
 
   // Get i18n messages
   const allMessages = await getMessages({ locale })
-  const requiredNamespaces = getRequiredNamespacesForPage("/dapps")
+  const requiredNamespaces = getRequiredNamespacesForPage("/apps")
   const messages = pick(allMessages, requiredNamespaces)
 
   // Normalize slug to lowercase
@@ -93,7 +93,7 @@ const Page = async ({
           <Breadcrumb>
             <BreadcrumbList>
               <BreadcrumbItem>
-                <BreadcrumbLink href="/dapps">ALL APPS</BreadcrumbLink>
+                <BreadcrumbLink href="/apps">ALL APPS</BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator className="me-[0.625rem] ms-[0.625rem] text-gray-400">
                 /

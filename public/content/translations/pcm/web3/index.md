@@ -139,7 +139,7 @@ Wi just dey start to dey kreate betta Web wit Web3, but as we kontinu to impruf 
 
 - [Make yu get one wallet](/wallets/)
 - [Find one komunity](/community/)
-- [Make yu ekspore Web3 aplikashons](/dapps/)
+- [Make yu ekspore Web3 aplikashons](/apps/)
 - [Make u join DAO](/dao/)
 - [Build on Web3](/developers/)
 

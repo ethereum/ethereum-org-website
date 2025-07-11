@@ -320,7 +320,7 @@ const CommunityPage = () => {
             descriptionKey="page-community:page-community-explore-dapps-description"
           >
             <div>
-              <ButtonLink href="/dapps/">
+              <ButtonLink href="/apps/">
                 {t("page-community-explore-dapps")}
               </ButtonLink>
             </div>

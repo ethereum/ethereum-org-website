@@ -143,7 +143,7 @@ Web3 ile daha iyi bir Web yaratmanın henüz başındayız, ancak bunu destekley
 
 - [Bir cüzdan edinin](/wallets/)
 - [Bir topluluk bulun](/community/)
-- [Web3 uygulamalarını keşfedin](/dapps/)
+- [Web3 uygulamalarını keşfedin](/apps/)
 - [Bir DAO'ya katılın](/dao/)
 - [Web3 üzerinde inşa edin](/developers/)
 

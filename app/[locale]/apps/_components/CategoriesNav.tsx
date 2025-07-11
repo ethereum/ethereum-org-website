@@ -7,7 +7,7 @@ const CategoriesNav = ({ activeCategory = "" }: { activeCategory: string }) => {
     ({ name, icon: Icon, slug }) => ({
       key: name,
       label: name,
-      href: `/dapps/categories/${slug}`,
+      href: `/apps/categories/${slug}`,
       icon: <Icon className="h-4 w-4" />,
     })
   )

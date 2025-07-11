@@ -143,7 +143,7 @@ Esto es solo el comienzo para crear un mejor Internet con Web3, y a medida que s
 
 - [Obtener un monedero](/wallets/)
 - [Encontrar una comunidad](/community/)
-- [Explorar aplicaciones Web3](/dapps/)
+- [Explorar aplicaciones Web3](/apps/)
 - [Unirse a una DAO](/dao/)
 - [Construir sobre Web3](/developers/)
 

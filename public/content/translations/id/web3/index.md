@@ -143,7 +143,7 @@ Kami baru berada pada permulaan untuk menciptakan Web yang lebih baik dengan Web
 
 - [Dapatkan dompet](/wallets/)
 - [Mencari komunitas](/community/)
-- [Menjelajahi aplikasi-aplikasi Web3](/dapps/)
+- [Menjelajahi aplikasi-aplikasi Web3](/apps/)
 - [Bergabung dengan DAO](/dao/)
 - [Bangun di Web3](/developers/)
 

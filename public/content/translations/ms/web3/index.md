@@ -143,7 +143,7 @@ Kami hanya pada permulaan mencipta Web yang lebih baik dengan Web3, tetapi sambi
 
 - [Dapatkan dompet](/wallets/)
 - [Cari komuniti](/community/)
-- [Terokai aplikasi Web3](/dapps/)
+- [Terokai aplikasi Web3](/apps/)
 - [Sertai DAO](/dao/)
 - [Bina pada Web3](/developers/)
 

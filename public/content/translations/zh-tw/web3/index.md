@@ -139,7 +139,7 @@ Web3 是一個年輕且不斷發展的生態系統。 Gavin Wood 在 2014 年創
 
 - [取得錢包](/wallets/)
 - [尋找社群](/community/)
-- [探索 Web3 應用程式](/dapps/)
+- [探索 Web3 應用程式](/apps/)
 - [參與 DAO](/dao/)
 - [在 Web3 上構建](/developers/)
 

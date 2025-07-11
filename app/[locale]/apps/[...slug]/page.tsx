@@ -63,7 +63,7 @@ const Page = async ({
 
   // Get i18n messages
   const allMessages = await getMessages({ locale })
-  const requiredNamespaces = getRequiredNamespacesForPage("/dapps")
+  const requiredNamespaces = getRequiredNamespacesForPage("/apps")
   const messages = pick(allMessages, requiredNamespaces)
 
   const [dappSlug] = slug
@@ -129,7 +129,7 @@ const Page = async ({
           <Breadcrumb>
             <BreadcrumbList>
               <BreadcrumbItem>
-                <BreadcrumbLink href="/dapps">ALL APPS</BreadcrumbLink>
+                <BreadcrumbLink href="/apps">ALL APPS</BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator className="me-[0.625rem] ms-[0.625rem] text-gray-400">
                 /
@@ -235,7 +235,7 @@ const Page = async ({
                             {nextDapp.name}
                           </p>
                           <LinkOverlay
-                            href={`/dapps/${slugify(nextDapp.name)}`}
+                            href={`/apps/${slugify(nextDapp.name)}`}
                           />
                         </div>
                         <div className="flex gap-2">
@@ -254,7 +254,7 @@ const Page = async ({
                   <p className="text-primary group-hover:text-primary-hover">
                     {nextDapp.name}
                   </p>
-                  <LinkOverlay href={`/dapps/${slugify(nextDapp.name)}`} />
+                  <LinkOverlay href={`/apps/${slugify(nextDapp.name)}`} />
                 </div>
                 <div className="flex gap-2">
                   <ChevronNext className="h-8 w-8 text-gray-400 group-hover:text-primary" />

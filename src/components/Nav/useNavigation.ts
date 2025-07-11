@@ -134,7 +134,7 @@ export const useNavigation = () => {
             {
               label: t("decentralized-applications-dapps"),
               description: t("nav-dapps-description"),
-              href: "/dapps/",
+              href: "/apps/",
             },
             {
               label: t("nav-guides-label"),

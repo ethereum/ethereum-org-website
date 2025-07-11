@@ -78,7 +78,7 @@ const DappCard = ({
       className={cn("group rounded-xl p-2 hover:bg-background-highlight")}
     >
       <LinkOverlay
-        href={`/dapps/${slugify(dapp.name)}`}
+        href={`/apps/${slugify(dapp.name)}`}
         className="no-underline"
       >
         {cardContent}

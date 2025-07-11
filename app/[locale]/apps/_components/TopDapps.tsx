@@ -82,7 +82,7 @@ const TopDapps = ({ dappsData }: TopDappsProps) => {
             <div className="flex flex-col rounded-xl border">
               <LinkBox className="border-b p-4 hover:bg-background-highlight">
                 <LinkOverlay
-                  href={`/dapps/categories/${slugify(category)}`}
+                  href={`/apps/categories/${slugify(category)}`}
                   className="text-body no-underline"
                 >
                   <div className="flex flex-row items-center justify-between gap-2">

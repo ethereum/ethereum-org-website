@@ -19,7 +19,7 @@ const DappsHighlight = ({ dapps }: DappsHighlightProps) => {
       className="group w-full rounded-xl p-3 hover:bg-background-highlight"
     >
       <LinkOverlay
-        href={`/dapps/${slugify(dapp.name)}`}
+        href={`/apps/${slugify(dapp.name)}`}
         className="no-underline"
       >
         <div className="relative mb-2 aspect-[2/1] w-full">

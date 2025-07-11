@@ -96,7 +96,7 @@ const getRequiredNamespacesForPath = (relativePath: string) => {
     primaryNamespace = "page-community"
   }
 
-  if (path.startsWith("/dapps/")) {
+  if (path.startsWith("/apps/")) {
     primaryNamespace = "page-dapps"
   }
 
@@ -227,7 +227,7 @@ const getRequiredNamespacesForPath = (relativePath: string) => {
 
   // Glossary tooltips
   if (
-    path.startsWith("/dapps/") ||
+    path.startsWith("/apps/") ||
     path.startsWith("/layer-2/") ||
     path.startsWith("/layer-2/learn/") ||
     path.startsWith("/get-eth/") ||

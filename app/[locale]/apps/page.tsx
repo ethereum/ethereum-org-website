@@ -47,18 +47,18 @@ const Page = async ({ params }: { params: { locale: string } }) => {
 
   // Get i18n messages
   const allMessages = await getMessages({ locale })
-  const requiredNamespaces = getRequiredNamespacesForPage("/dapps")
+  const requiredNamespaces = getRequiredNamespacesForPage("/apps")
   const messages = pick(allMessages, requiredNamespaces)
   return (
     <I18nProvider locale={locale} messages={messages}>
       <SimpleHero
-        breadcrumbs={<Breadcrumbs slug={"/dapps"} />}
+        breadcrumbs={<Breadcrumbs slug={"/apps"} />}
         title="Apps"
         subtitle="Discover a list of curated applications that run on ethereum and layer 2 networks"
         // TODO: Add learn about apps button when we have info page
         // buttons={[
         //   {
-        //     href: "/dapps/learn",
+        //     href: "/apps/learn",
         //     label: "Learn about apps",
         //     variant: "outline",
         //     isSecondary: true,
@@ -101,7 +101,7 @@ const Page = async ({ params }: { params: { locale: string } }) => {
                 title={category.name}
                 description={category.description}
                 icon={<category.icon className="h-8 w-8" />}
-                href={`/dapps/categories/${category.slug}`}
+                href={`/apps/categories/${category.slug}`}
               />
             ))}
           </div>

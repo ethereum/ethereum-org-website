@@ -139,7 +139,7 @@ A si wa ni ibẹrẹ siṣẹda wẹẹbu to dara julọ pẹ̀lú wẹẹbu ket
 
 - [Gba wọ́lẹ́ẹ́tì kan](/wallets/)
 - [Wa awujo lati darapọ mọ](/community/)
-- [Sawari àwọn afilọlẹ wẹ́ẹ̀bù keta](/dapps/)
+- [Sawari àwọn afilọlẹ wẹ́ẹ̀bù keta](/apps/)
 - [Darapọ̀ mọ́ DAO](/dao/)
 - [Kọ si ori Wẹẹbu kẹta](/developers/)
 

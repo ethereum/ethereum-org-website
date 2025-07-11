@@ -201,7 +201,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     {
       label: t("page-index-cta-dapps-label"),
       description: t("page-index-cta-dapps-description"),
-      href: "/dapps/",
+      href: "/apps/",
       Svg: TryAppsIcon,
       className: cn(
         "text-accent-c hover:text-accent-c-hover",
