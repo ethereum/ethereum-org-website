@@ -195,7 +195,7 @@ const DevelopersPage = async ({
               src={resourcesBanner}
               alt="Banner showing four resource app icons"
               sizes={`(max-width: ${screens.sm}) 100vw, calc(50vw - 14rem)`}
-              className="max-h-56 w-full object-contain"
+              className="-my-2 max-h-60 w-full object-contain" // -my-2 accounts for image shadows
             />
             <div className="">
               <h3>{t("page-developers-resources-title")}</h3>
