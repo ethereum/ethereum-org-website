@@ -23,6 +23,7 @@ import { screens } from "@/lib/utils/screen"
 import BuilderCard from "./_components/BuilderCard"
 import BuilderSwiper from "./_components/BuilderSwiper/lazy"
 import SpeedRunCard from "./_components/SpeedRunCard"
+import VideoCourseCard from "./_components/VideoCourseCard"
 import VideoCourseSwiper from "./_components/VideoCourseSwiper/lazy"
 import { getBuilderPaths, getVideoCourses } from "./utils"
 
@@ -118,7 +119,7 @@ const DevelopersPage = async ({
               sizes={`(max-width: ${screens.sm}) 100vw, calc(50vw - 14rem)`}
               className="h-56 object-cover"
             />
-            <div className="">
+            <div>
               <h3>{t("page-developers-jump-right-in-title")}</h3>
               <p className="text-sm text-body-medium">
                 {t("page-developers-quickstart-scaffold-subtext")}{" "}
@@ -164,7 +165,7 @@ const DevelopersPage = async ({
               sizes={`(max-width: ${screens.sm}) 100vw, calc(50vw - 14rem)`}
               className="max-h-56 w-full object-cover object-top"
             />
-            <div className="">
+            <div>
               <h3>{t("page-developers-get-help-title")}</h3>
               <p className="text-sm text-body-medium">
                 {t("page-developers-get-help-desc")}
@@ -197,7 +198,7 @@ const DevelopersPage = async ({
               sizes={`(max-width: ${screens.sm}) 100vw, calc(50vw - 14rem)`}
               className="-my-2 max-h-60 w-full object-contain" // -my-2 accounts for image shadows
             />
-            <div className="">
+            <div>
               <h3>{t("page-developers-resources-title")}</h3>
               <p className="text-sm text-body-medium">
                 {t("page-developers-resources-desc")}
@@ -223,7 +224,7 @@ const DevelopersPage = async ({
               sizes={`(max-width: ${screens.sm}) 100vw, calc(50vw - 14rem)`}
               className="max-h-56 w-full object-contain"
             />
-            <div className="">
+            <div>
               <h3>{t("page-developers-tutorials-title")}</h3>
               <p className="text-sm text-body-medium">
                 {t("page-developers-tutorials-desc")}
@@ -246,7 +247,19 @@ const DevelopersPage = async ({
           <h2>{t("page-developers-video-courses-title")}</h2>
           <p>{t("page-developers-video-courses-desc")}</p>
 
-          <div className="w-screen max-xl:-ms-8 xl:w-full">
+          {/* DESKTOP */}
+          <div className="flex w-screen gap-6 overflow-x-auto max-2xl:-mx-8 max-2xl:pe-8 max-sm:hidden lg:gap-8 2xl:w-full">
+            {courses.map((course, idx) => (
+              <VideoCourseCard
+                key={idx}
+                course={course}
+                className="w-[20%] min-w-[240px] max-w-[271px] max-2xl:first:ms-8"
+              />
+            ))}
+          </div>
+
+          {/* MOBILE */}
+          <div className="w-screen max-xl:-ms-8 sm:hidden xl:w-full">
             <VideoCourseSwiper courses={courses} />
           </div>
         </Section>

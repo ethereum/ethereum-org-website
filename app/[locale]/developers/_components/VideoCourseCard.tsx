@@ -15,7 +15,7 @@ const VideoCourseCard = ({ course, className }: BuildCardProps) => (
   <Link
     href={course.href}
     className={cn(
-      "group flex h-full w-fit flex-col gap-8 rounded-4xl no-underline",
+      "group flex h-full w-fit flex-col gap-4 rounded-4xl no-underline",
       className
     )}
     hideArrow
