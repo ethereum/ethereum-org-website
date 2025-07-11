@@ -2,7 +2,7 @@
 
 import { Folder } from "lucide-react"
 
-import { DappCategory, DappData } from "@/lib/types"
+import { AppCategory, AppData } from "@/lib/types"
 
 import { Button } from "@/components/ui/buttons/Button"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
@@ -22,7 +22,7 @@ import { useBreakpointValue } from "@/hooks/useBreakpointValue"
 import { useIsClient } from "@/hooks/useIsClient"
 
 interface TopAppsProps {
-  appsData: Record<DappCategory, DappData[]>
+  appsData: Record<AppCategory, AppData[]>
 }
 
 const TopApps = ({ appsData }: TopAppsProps) => {

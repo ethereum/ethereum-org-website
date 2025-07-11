@@ -1,9 +1,9 @@
 import TabNav from "@/components/ui/TabNav"
 
-import { dappsCategories } from "@/data/dapps/categories"
+import { appsCategories } from "@/data/apps/categories"
 
 const CategoriesNav = ({ activeCategory = "" }: { activeCategory: string }) => {
-  const items = Object.values(dappsCategories).map(
+  const items = Object.values(appsCategories).map(
     ({ name, icon: Icon, slug }) => ({
       key: name,
       label: name,

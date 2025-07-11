@@ -1,44 +1,44 @@
-import { DappCategory, DappCategoryEnum, DappData } from "@/lib/types"
+import { AppCategory, AppCategoryEnum, AppData } from "@/lib/types"
 
 import { TagProps } from "@/components/ui/tag"
 
-// Get highlighted dapps (dapps with highlight=true)
-export const getHighlightedDapps = (
-  dappsData: Record<DappCategory, DappData[]>,
+// Get highlighted apps (apps with highlight=true)
+export const getHighlightedApps = (
+  appsData: Record<AppCategory, AppData[]>,
   count?: number,
-  category?: DappCategory
+  category?: AppCategory
 ) => {
-  const dappsToFilter = category
-    ? dappsData[category]
-    : Object.values(dappsData).flatMap((categoryDapps) => categoryDapps)
+  const appsToFilter = category
+    ? appsData[category]
+    : Object.values(appsData).flatMap((categoryApps) => categoryApps)
 
-  const highlightedDapps = dappsToFilter
-    .filter((dapp) => dapp.highlight)
+  const highlightedApps = appsToFilter
+    .filter((app) => app.highlight)
     .sort(() => Math.random() - 0.5)
 
-  return count ? highlightedDapps.slice(0, count) : highlightedDapps
+  return count ? highlightedApps.slice(0, count) : highlightedApps
 }
 
-// Get staff pick dapps (dapps with staffPicks=true)
-export const getStaffPickDapps = (
-  dappsData: Record<DappCategory, DappData[]>,
+// Get staff pick apps (apps with staffPicks=true)
+export const getStaffPickApps = (
+  appsData: Record<AppCategory, AppData[]>,
   count?: number
 ) => {
-  const staffPickDapps = Object.values(dappsData)
+  const staffPickApps = Object.values(appsData)
     .flatMap((categoryDapps) => categoryDapps)
-    .filter((dapp) => dapp.staffPicks)
+    .filter((app) => app.staffPicks)
     .sort(() => Math.random() - 0.5)
 
-  return count ? staffPickDapps.slice(0, count) : staffPickDapps
+  return count ? staffPickApps.slice(0, count) : staffPickApps
 }
 
-export const DAPP_TAG_VARIANTS: Record<DappCategoryEnum, TagProps["status"]> = {
-  [DappCategoryEnum.DEFI]: "tag",
-  [DappCategoryEnum.COLLECTIBLE]: "success",
-  [DappCategoryEnum.SOCIAL]: "error",
-  [DappCategoryEnum.GAMING]: "warning",
-  [DappCategoryEnum.BRIDGE]: "normal",
-  [DappCategoryEnum.PRODUCTIVITY]: "normal",
-  [DappCategoryEnum.PRIVACY]: "normal",
-  [DappCategoryEnum.GOVERNANCE_DAO]: "normal",
+export const APP_TAG_VARIANTS: Record<AppCategoryEnum, TagProps["status"]> = {
+  [AppCategoryEnum.DEFI]: "tag",
+  [AppCategoryEnum.COLLECTIBLE]: "success",
+  [AppCategoryEnum.SOCIAL]: "error",
+  [AppCategoryEnum.GAMING]: "warning",
+  [AppCategoryEnum.BRIDGE]: "normal",
+  [AppCategoryEnum.PRODUCTIVITY]: "normal",
+  [AppCategoryEnum.PRIVACY]: "normal",
+  [AppCategoryEnum.GOVERNANCE_DAO]: "normal",
 }

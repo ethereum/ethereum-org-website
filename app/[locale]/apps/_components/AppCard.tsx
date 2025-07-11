@@ -1,15 +1,15 @@
-import { DappData } from "@/lib/types"
+import { AppData } from "@/lib/types"
 
 import { Image } from "@/components/Image"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 import { Tag } from "@/components/ui/tag"
 
-import { DAPP_TAG_VARIANTS } from "@/lib/utils/apps"
+import { APP_TAG_VARIANTS } from "@/lib/utils/apps"
 import { cn } from "@/lib/utils/cn"
 import { slugify } from "@/lib/utils/url"
 
 interface AppCardProps {
-  app: DappData
+  app: AppData
   imageSize: number
   isVertical?: boolean
   showDescription?: boolean
@@ -51,7 +51,7 @@ const AppCard = ({
           <Tag
             size="small"
             className="w-fit py-0"
-            status={DAPP_TAG_VARIANTS[app.category]}
+            status={APP_TAG_VARIANTS[app.category]}
           >
             {app.category}
           </Tag>

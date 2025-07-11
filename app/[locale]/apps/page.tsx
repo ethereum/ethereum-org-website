@@ -11,12 +11,12 @@ import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
 import SubpageCard from "@/components/SubpageCard"
 
-import { getHighlightedDapps, getStaffPickDapps } from "@/lib/utils/apps"
+import { getHighlightedApps, getStaffPickApps } from "@/lib/utils/apps"
 import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
-import { dappsCategories } from "@/data/dapps/categories"
+import { appsCategories } from "@/data/apps/categories"
 
 import { BASE_TIME_UNIT } from "@/lib/constants"
 
@@ -25,25 +25,25 @@ import AppsHighlight from "./_components/AppsHighlight"
 import SuggestAnApp from "./_components/SuggestAnApp"
 import TopApps from "./_components/TopApps"
 
-import { fetchDapps } from "@/lib/api/fetchDapps"
+import { fetchApps } from "@/lib/api/fetchApps"
 
 // 24 hours
 const REVALIDATE_TIME = BASE_TIME_UNIT * 24
 
-const loadData = dataLoader([["dappsData", fetchDapps]], REVALIDATE_TIME * 1000)
+const loadData = dataLoader([["appsData", fetchApps]], REVALIDATE_TIME * 1000)
 
 const Page = async ({ params }: { params: { locale: string } }) => {
   const { locale } = await params
 
   setRequestLocale(locale)
 
-  const [dappsData] = await loadData()
+  const [appsData] = await loadData()
 
-  // Get 3 random highlighted dapps
-  const highlightedDapps = getHighlightedDapps(dappsData, 3)
+  // Get 3 random highlighted apps
+  const highlightedApps = getHighlightedApps(appsData, 3)
 
-  // Get 6 random staff pick dapps
-  const staffPickDapps = getStaffPickDapps(dappsData, 6)
+  // Get 6 random staff pick apps
+  const staffPickApps = getStaffPickApps(appsData, 6)
 
   // Get i18n messages
   const allMessages = await getMessages({ locale })
@@ -69,16 +69,16 @@ const Page = async ({ params }: { params: { locale: string } }) => {
       <MainArticle className="flex flex-col gap-32 py-10">
         <div className="flex flex-col gap-8 px-4 md:px-8">
           <h2>Highlights</h2>
-          <AppsHighlight apps={highlightedDapps} />
+          <AppsHighlight apps={highlightedApps} />
         </div>
 
         <div className="flex flex-col gap-4 px-4 md:px-8">
           <h2>Staff picks</h2>
           <div className="grid grid-cols-1 gap-7 md:grid-cols-2 lg:grid-cols-3">
-            {staffPickDapps.map((dapp) => (
+            {staffPickApps.map((app) => (
               <AppCard
-                key={dapp.name}
-                app={dapp}
+                key={app.name}
+                app={app}
                 imageSize={24}
                 showDescription={true}
               />
@@ -88,14 +88,14 @@ const Page = async ({ params }: { params: { locale: string } }) => {
 
         <div className="flex flex-col gap-4 px-4 md:px-8">
           <h2>Top applications</h2>
-          <TopApps appsData={dappsData} />
+          <TopApps appsData={appsData} />
         </div>
 
         {/* Note: Implemented this instead of swiper from design to allow for SSR */}
         <div className="flex flex-col gap-4 px-4 md:px-8">
           <h2>Application categories</h2>
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {Object.values(dappsCategories).map((category) => (
+            {Object.values(appsCategories).map((category) => (
               <SubpageCard
                 key={category.slug}
                 title={category.name}
@@ -129,14 +129,14 @@ export async function generateMetadata({
 
   const t = await getTranslations({
     locale,
-    namespace: "page-dapps",
+    namespace: "page-apps",
   })
 
   return await getMetadata({
     locale,
-    slug: ["dapps"],
-    title: t("page-dapps-meta-title"),
-    description: t("page-dapps-meta-description"),
+    slug: ["apps"],
+    title: t("page-apps-meta-title"),
+    description: t("page-apps-meta-description"),
   })
 }
 

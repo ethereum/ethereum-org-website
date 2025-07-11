@@ -1,1 +1,0 @@
-export { dappsCategories } from "./categories"

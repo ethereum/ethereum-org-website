@@ -1,4 +1,4 @@
-import { DappCategories, DappCategoryEnum } from "@/lib/types"
+import { AppCategories, AppCategoryEnum } from "@/lib/types"
 
 import BridgeIcon from "@/components/icons/dapps/bridge.svg"
 import CollectiblesIcon from "@/components/icons/dapps/collectibles.svg"
@@ -11,60 +11,60 @@ import SocialIcon from "@/components/icons/dapps/social.svg"
 
 import { slugify } from "@/lib/utils/url"
 
-export const dappsCategories: DappCategories = {
-  [DappCategoryEnum.DEFI]: {
+export const appsCategories: AppCategories = {
+  [AppCategoryEnum.DEFI]: {
     name: "DeFi",
     icon: DeFiIcon,
-    slug: slugify(DappCategoryEnum.DEFI),
+    slug: slugify(AppCategoryEnum.DEFI),
     description:
       "DeFi is a category of decentralized applications that allow users to lend, borrow, trade, and earn interest on their crypto assets.",
   },
-  [DappCategoryEnum.COLLECTIBLE]: {
+  [AppCategoryEnum.COLLECTIBLE]: {
     name: "Collectibles",
     icon: CollectiblesIcon,
-    slug: slugify(DappCategoryEnum.COLLECTIBLE),
+    slug: slugify(AppCategoryEnum.COLLECTIBLE),
     description:
       "Collectibles are digital assets that are unique and cannot be replicated.",
   },
-  [DappCategoryEnum.SOCIAL]: {
+  [AppCategoryEnum.SOCIAL]: {
     name: "Social",
     icon: SocialIcon,
-    slug: slugify(DappCategoryEnum.SOCIAL),
+    slug: slugify(AppCategoryEnum.SOCIAL),
     description:
       "Social is a category of decentralized applications that allow users to connect with others and share content.",
   },
-  [DappCategoryEnum.GAMING]: {
+  [AppCategoryEnum.GAMING]: {
     name: "Gaming",
     icon: GamingIcon,
-    slug: slugify(DappCategoryEnum.GAMING),
+    slug: slugify(AppCategoryEnum.GAMING),
     description:
       "Gaming is a category of decentralized applications that allow users to play games and earn rewards.",
   },
-  [DappCategoryEnum.BRIDGE]: {
+  [AppCategoryEnum.BRIDGE]: {
     name: "Bridge",
     icon: BridgeIcon,
-    slug: slugify(DappCategoryEnum.BRIDGE),
+    slug: slugify(AppCategoryEnum.BRIDGE),
     description:
       "Bridge is a category of decentralized applications that allow users to bridge their assets between different networks.",
   },
-  [DappCategoryEnum.PRODUCTIVITY]: {
+  [AppCategoryEnum.PRODUCTIVITY]: {
     name: "Productivity",
     icon: ProductivityIcon,
-    slug: slugify(DappCategoryEnum.PRODUCTIVITY),
+    slug: slugify(AppCategoryEnum.PRODUCTIVITY),
     description:
       "Productivity is a category of decentralized applications that allow users to be productive.",
   },
-  [DappCategoryEnum.PRIVACY]: {
+  [AppCategoryEnum.PRIVACY]: {
     name: "Privacy",
     icon: PrivacyIcon,
-    slug: slugify(DappCategoryEnum.PRIVACY),
+    slug: slugify(AppCategoryEnum.PRIVACY),
     description:
       "Privacy is a category of decentralized applications that allow users to be private.",
   },
-  [DappCategoryEnum.GOVERNANCE_DAO]: {
+  [AppCategoryEnum.GOVERNANCE_DAO]: {
     name: "DAO",
     icon: GovernanceIcon,
-    slug: slugify(DappCategoryEnum.GOVERNANCE_DAO),
+    slug: slugify(AppCategoryEnum.GOVERNANCE_DAO),
     description:
       "DAO is a category of decentralized applications that allow users to govern and create decentralized autonomous organizations.",
   },

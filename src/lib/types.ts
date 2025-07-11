@@ -1048,7 +1048,7 @@ export interface ITutorial {
   isExternal: boolean
 }
 
-export enum DappCategoryEnum {
+export enum AppCategoryEnum {
   DEFI = "DeFi",
   COLLECTIBLE = "Collectibles",
   SOCIAL = "Social",
@@ -1059,23 +1059,23 @@ export enum DappCategoryEnum {
   GOVERNANCE_DAO = "DAO",
 }
 
-export type DappCategory = `${DappCategoryEnum}`
+export type AppCategory = `${AppCategoryEnum}`
 
-export type DappCategoryData = {
+export type AppCategoryData = {
   name: string
   slug: string
   description: string
   icon: React.ComponentType<{ className?: string }>
 }
 
-export type DappCategories = Record<DappCategoryEnum, DappCategoryData>
+export type AppCategories = Record<AppCategoryEnum, AppCategoryData>
 
-export type Dapp = {
+export type App = {
   name: string
   url: string
   description: string
   image: string
-  category: DappCategoryEnum
+  category: AppCategoryEnum
   subCategory: string[]
   networks: (ChainName | NonEVMChainName)[]
   screenshots: string[]
@@ -1098,29 +1098,29 @@ export type Dapp = {
   ready: string
 }
 
-export type DefiDapp = Dapp & {
-  category: DappCategoryEnum.DEFI
+export type DefiApp = App & {
+  category: AppCategoryEnum.DEFI
   subCategory: Array<
     "Lending" | "Liquid staking" | "DEX" | "Insurance" | "Prediction" | "RWA"
   >
 }
 
-export type CollectibleDapp = Dapp & {
-  category: DappCategoryEnum.COLLECTIBLE
+export type CollectibleApp = App & {
+  category: AppCategoryEnum.COLLECTIBLE
   subCategory: Array<
     "IP" | "Art" | "Gaming" | "Media" | "Membership" | "Market"
   >
 }
 
-export type SocialDapp = Dapp & {
-  category: DappCategoryEnum.SOCIAL
+export type SocialApp = App & {
+  category: AppCategoryEnum.SOCIAL
   subCategory: Array<
     "Social network" | "Video" | "Messaging" | "Identity" | "Metaverse"
   >
 }
 
-export type GamingDapp = Dapp & {
-  category: DappCategoryEnum.GAMING
+export type GamingApp = App & {
+  category: AppCategoryEnum.GAMING
   subCategory: Array<
     | "RPG"
     | "Strategy"
@@ -1132,8 +1132,8 @@ export type GamingDapp = Dapp & {
   >
 }
 
-export type BridgeDapp = Dapp & {
-  category: DappCategoryEnum.BRIDGE
+export type BridgeApp = App & {
+  category: AppCategoryEnum.BRIDGE
   subCategory: Array<
     | "Native"
     | "Validator or oracle"
@@ -1142,30 +1142,30 @@ export type BridgeDapp = Dapp & {
   >
 }
 
-export type ProductivityDapp = Dapp & {
-  category: DappCategoryEnum.PRODUCTIVITY
+export type ProductivityApp = App & {
+  category: AppCategoryEnum.PRODUCTIVITY
   subCategory: Array<"Lending"> // Placeholder - update when you have the actual subcategories
 }
 
-export type PrivacyDapp = Dapp & {
-  category: DappCategoryEnum.PRIVACY
+export type PrivacyApp = App & {
+  category: AppCategoryEnum.PRIVACY
   subCategory: Array<"Pools" | "Payments" | "RPC">
 }
 
-export type GovernanceDaoDapp = Dapp & {
-  category: DappCategoryEnum.GOVERNANCE_DAO
+export type GovernanceDaoApp = App & {
+  category: AppCategoryEnum.GOVERNANCE_DAO
   subCategory: Array<"Governance" | "Delegation">
 }
 
-export type DappData =
-  | DefiDapp
-  | CollectibleDapp
-  | SocialDapp
-  | GamingDapp
-  | BridgeDapp
-  | ProductivityDapp
-  | PrivacyDapp
-  | GovernanceDaoDapp
+export type AppData =
+  | DefiApp
+  | CollectibleApp
+  | SocialApp
+  | GamingApp
+  | BridgeApp
+  | ProductivityApp
+  | PrivacyApp
+  | GovernanceDaoApp
 
 type ValuesItem = {
   label: string

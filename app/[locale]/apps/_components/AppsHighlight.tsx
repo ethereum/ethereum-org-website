@@ -1,4 +1,4 @@
-import { DappData } from "@/lib/types"
+import { AppData } from "@/lib/types"
 
 import { Image } from "@/components/Image"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
@@ -9,7 +9,7 @@ import AppCard from "./AppCard"
 import AppsHighlightSwiper from "./AppsHighlightSwiper"
 
 interface AppsHighlightProps {
-  apps: DappData[]
+  apps: AppData[]
 }
 
 const AppsHighlight = ({ apps }: AppsHighlightProps) => {

@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react"
 
-import { DappData } from "@/lib/types"
+import { AppData } from "@/lib/types"
 
 import {
   Select,
@@ -14,7 +14,7 @@ import {
 
 import AppCard from "./AppCard"
 
-const AppsTable = ({ apps }: { apps: DappData[] }) => {
+const AppsTable = ({ apps }: { apps: AppData[] }) => {
   const [filterBy, setFilterBy] = useState("All")
 
   const subCategories = useMemo(

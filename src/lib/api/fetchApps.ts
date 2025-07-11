@@ -1,6 +1,6 @@
-import { DappCategoryEnum, DappData } from "@/lib/types"
+import { AppCategoryEnum, AppData } from "@/lib/types"
 
-export async function fetchDapps(): Promise<Record<string, DappData[]>> {
+export async function fetchApps(): Promise<Record<string, AppData[]>> {
   const googleApiKey = process.env.GOOGLE_API_KEY
   const sheetId = process.env.GOOGLE_SHEET_ID_DAPPS
 
@@ -36,7 +36,7 @@ export async function fetchDapps(): Promise<Record<string, DappData[]>> {
         (sheet: { properties: { title: string } }) => sheet.properties.title
       ) || []
 
-    const result: Record<string, DappData[]> = {}
+    const result: Record<string, AppData[]> = {}
 
     // Fetch and process data from each sheet
     for (const sheetName of sheetNames) {
@@ -67,10 +67,10 @@ export async function fetchDapps(): Promise<Record<string, DappData[]>> {
         return row.length > 0 && row[0]?.trim() !== ""
       })
 
-      const dapps: DappData[] = dataRows
+      const apps: AppData[] = dataRows
         .map((row: string[]) => {
-          // Map row data to dapp object
-          const dappData = {
+          // Map row data to app object
+          const appData = {
             name: row[0] || "",
             url: row[1] || "",
             description: row[2] || "",
@@ -98,12 +98,12 @@ export async function fetchDapps(): Promise<Record<string, DappData[]>> {
             ready: row[24]?.toLowerCase(),
           }
 
-          return dappData as unknown as DappData
+          return appData as unknown as AppData
         })
-        .filter((dapp: DappData) => dapp.name && dapp.url) // Filter out dapps without name or URL
-        .filter((dapp: DappData) => dapp.ready === "true")
+        .filter((app: AppData) => app.name && app.url) // Filter out apps without name or URL
+        .filter((app: AppData) => app.ready === "true")
 
-      result[sheetName] = dapps
+      result[sheetName] = apps
     }
 
     return result
@@ -113,27 +113,27 @@ export async function fetchDapps(): Promise<Record<string, DappData[]>> {
   }
 }
 
-// Helper function to map sheet names to DappCategoryEnum
-function getCategoryFromSheetName(sheetName: string): DappCategoryEnum {
+// Helper function to map sheet names to AppCategoryEnum
+function getCategoryFromSheetName(sheetName: string): AppCategoryEnum {
   switch (sheetName) {
     case "DeFi":
-      return DappCategoryEnum.DEFI
+      return AppCategoryEnum.DEFI
     case "Collectibles":
-      return DappCategoryEnum.COLLECTIBLE
+      return AppCategoryEnum.COLLECTIBLE
     case "Social":
-      return DappCategoryEnum.SOCIAL
+      return AppCategoryEnum.SOCIAL
     case "Gaming":
-      return DappCategoryEnum.GAMING
+      return AppCategoryEnum.GAMING
     case "Bridge":
-      return DappCategoryEnum.BRIDGE
+      return AppCategoryEnum.BRIDGE
     case "Productivity":
-      return DappCategoryEnum.PRODUCTIVITY
+      return AppCategoryEnum.PRODUCTIVITY
     case "Privacy":
-      return DappCategoryEnum.PRIVACY
+      return AppCategoryEnum.PRIVACY
     case "DAO":
-      return DappCategoryEnum.GOVERNANCE_DAO
+      return AppCategoryEnum.GOVERNANCE_DAO
     default:
-      return DappCategoryEnum.DEFI // Default fallback
+      return AppCategoryEnum.DEFI // Default fallback
   }
 }
 

@@ -6,7 +6,7 @@ import {
   setRequestLocale,
 } from "next-intl/server"
 
-import { DappCategoryEnum } from "@/lib/types"
+import { AppCategoryEnum } from "@/lib/types"
 
 import I18nProvider from "@/components/I18nProvider"
 import MainArticle from "@/components/MainArticle"
@@ -19,12 +19,12 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb"
 
-import { getHighlightedDapps } from "@/lib/utils/apps"
+import { getHighlightedApps } from "@/lib/utils/apps"
 import { dataLoader } from "@/lib/utils/data/dataLoader"
 import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
-import { dappsCategories } from "@/data/dapps/categories"
+import { appsCategories } from "@/data/apps/categories"
 
 import { BASE_TIME_UNIT } from "@/lib/constants"
 
@@ -33,17 +33,17 @@ import AppsTable from "../../_components/AppsTable"
 import CategoriesNav from "../../_components/CategoriesNav"
 import SuggestAnApp from "../../_components/SuggestAnApp"
 
-import { fetchDapps } from "@/lib/api/fetchDapps"
+import { fetchApps } from "@/lib/api/fetchApps"
 
-const VALID_CATEGORIES = Object.values(DappCategoryEnum)
+const VALID_CATEGORIES = Object.values(AppCategoryEnum)
 
-const isValidCategory = (category: string): category is DappCategoryEnum =>
-  VALID_CATEGORIES.includes(category as DappCategoryEnum)
+const isValidCategory = (category: string): category is AppCategoryEnum =>
+  VALID_CATEGORIES.includes(category as AppCategoryEnum)
 
 // 24 hours
 const REVALIDATE_TIME = BASE_TIME_UNIT * 24
 
-const loadData = dataLoader([["dappsData", fetchDapps]], REVALIDATE_TIME * 1000)
+const loadData = dataLoader([["appsData", fetchApps]], REVALIDATE_TIME * 1000)
 
 const Page = async ({
   params,
@@ -53,7 +53,7 @@ const Page = async ({
   const { locale, slug } = await params
   setRequestLocale(locale)
 
-  const [dappsData] = await loadData()
+  const [appsData] = await loadData()
 
   // Get i18n messages
   const allMessages = await getMessages({ locale })
@@ -64,7 +64,7 @@ const Page = async ({
   const normalizedSlug = slug[0].toLowerCase()
 
   // Find category by matching the slug
-  const categoryEntry = Object.entries(dappsCategories).find(
+  const categoryEntry = Object.entries(appsCategories).find(
     ([, categoryData]) => categoryData.slug === normalizedSlug
   )
 
@@ -79,11 +79,11 @@ const Page = async ({
     notFound()
   }
 
-  // Get highlighted dapps (dapps with highlight=true)
-  const highlightedDapps = getHighlightedDapps(
-    dappsData,
+  // Get highlighted apps (apps with highlight=true)
+  const highlightedApps = getHighlightedApps(
+    appsData,
     3,
-    categoryEnum as DappCategoryEnum
+    categoryEnum as AppCategoryEnum
   )
 
   return (
@@ -122,11 +122,11 @@ const Page = async ({
       <MainArticle className="flex flex-col gap-32 py-10">
         <div className="flex flex-col px-4 md:px-8">
           <h2>Highlights</h2>
-          <AppsHighlight apps={highlightedDapps} />
+          <AppsHighlight apps={highlightedApps} />
         </div>
 
         <div className="flex flex-col px-4 md:px-8">
-          <AppsTable apps={dappsData[category.name]} />
+          <AppsTable apps={appsData[category.name]} />
         </div>
 
         <div className="flex flex-col px-4 md:px-8">
@@ -147,14 +147,14 @@ export async function generateMetadata({
 
   const t = await getTranslations({
     locale,
-    namespace: "page-dapps",
+    namespace: "page-apps",
   })
 
   // Normalize slug to lowercase
   const normalizedSlug = firstSegment.toLowerCase()
 
   // Find category by matching the slug
-  const categoryEntry = Object.entries(dappsCategories).find(
+  const categoryEntry = Object.entries(appsCategories).find(
     ([, categoryData]) => categoryData.slug === normalizedSlug
   )
 
@@ -171,14 +171,14 @@ export async function generateMetadata({
   // Format category name for display
   const formattedCategory = category.name
 
-  const title = t("page-dapps-meta-title", { category: formattedCategory })
-  const description = t("page-dapps-meta-description", {
+  const title = t("page-apps-meta-title", { category: formattedCategory })
+  const description = t("page-apps-meta-description", {
     category: formattedCategory,
   })
 
   return await getMetadata({
     locale,
-    slug: ["dapps", "categories", normalizedSlug],
+    slug: ["apps", "categories", normalizedSlug],
     title,
     description,
   })
