@@ -16,11 +16,12 @@ import {
 import { breakpointAsNumber } from "@/lib/utils/screen"
 import { slugify } from "@/lib/utils/url"
 
+import { appsCategories } from "@/data/apps/categories"
+
 import AppCard from "./AppCard"
 
 import { useBreakpointValue } from "@/hooks/useBreakpointValue"
 import { useIsClient } from "@/hooks/useIsClient"
-
 interface TopAppsProps {
   appsData: Record<AppCategory, AppData[]>
 }
@@ -88,7 +89,18 @@ const TopApps = ({ appsData }: TopAppsProps) => {
                   <div className="flex flex-row items-center justify-between gap-2">
                     <div className="flex items-center gap-2">
                       <div className="rounded-lg border p-2">
-                        <Folder className="h-4 w-4" />
+                        {(() => {
+                          // Find the category data by matching the name
+                          const categoryData = Object.values(
+                            appsCategories
+                          ).find((cat) => cat.name === category)
+                          const CategoryIcon = categoryData?.icon
+                          return CategoryIcon ? (
+                            <CategoryIcon className="h-6 w-6" />
+                          ) : (
+                            <Folder className="h-6 w-6" />
+                          )
+                        })()}
                       </div>
                       <p className="text-lg font-bold text-body no-underline group-hover:text-primary">
                         {category}
