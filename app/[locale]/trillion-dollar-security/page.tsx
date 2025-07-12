@@ -12,7 +12,7 @@ import {
   CardDescription,
   CardFooter,
 } from "@/components/ui/card"
-import { BaseLink as Link } from "@/components/ui/Link"
+import InlineLink, { BaseLink as Link } from "@/components/ui/Link"
 
 import { getMetadata } from "@/lib/utils/metadata"
 
@@ -104,7 +104,19 @@ const TdsPage = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                 />
               </div>
 
-              <p>{t("page-trillion-dollar-security-hero-paragraph-5")}</p>
+              <p>
+                {t.rich("page-trillion-dollar-security-hero-paragraph-5", {
+                  a: (chunks) => (
+                    <InlineLink
+                      href={t(
+                        "page-trillion-dollar-security-hero-paragraph-5-link"
+                      )}
+                    >
+                      {chunks}
+                    </InlineLink>
+                  ),
+                })}
+              </p>
               <p>{t("page-trillion-dollar-security-hero-paragraph-6")}</p>
 
               <ol className="list-decimal font-bold text-primary">
