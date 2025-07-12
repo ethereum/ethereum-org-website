@@ -38,7 +38,7 @@ const HamburgerButton = forwardRef<HTMLButtonElement, HamburgerProps>(
       >
         <svg
           viewBox="0 0 24 40"
-          className="relative h-10 w-6 stroke-body stroke-2 hover:stroke-primary-hover hover:text-primary-hover [&>path]:fill-none hover:[&>path]:stroke-primary-hover"
+          className="relative !h-10 !w-6 shrink-0 fill-none stroke-body stroke-2 hover:stroke-primary-hover hover:text-primary-hover hover:[&>path]:stroke-primary-hover"
           strokeLinecap="round"
           strokeLinejoin="round"
         >
