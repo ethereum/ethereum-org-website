@@ -115,7 +115,7 @@ const DevelopersPage = async ({
           </div>
 
           {/* Mobile */}
-          <div className="-mx-8 ps-4 md:hidden">
+          <div className="-mx-8 md:hidden">
             <BuilderSwiper paths={paths} speedRunDetails={speedRunDetails} />
           </div>
         </Section>

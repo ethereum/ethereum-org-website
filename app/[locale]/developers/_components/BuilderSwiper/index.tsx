@@ -24,14 +24,18 @@ const BuilderSwiper = ({ paths, speedRunDetails }: BuilderSwiperProps) => {
   })
 
   return (
-    <Swiper spaceBetween={8} slidesPerView={slidesPerView}>
+    <Swiper
+      spaceBetween={8}
+      slidesPerView={slidesPerView}
+      lazyPreloadPrevNext={1}
+    >
       {paths.map((path, idx) => (
-        <SwiperSlide key={idx} className="first:ms-4 [&:last-child_div]:me-8">
+        <SwiperSlide key={idx} className="first:ms-8">
           <BuilderCard path={path} />
         </SwiperSlide>
       ))}
-      <SwiperSlide className="first:ms-4 [&:last-child_div]:me-8">
-        <SpeedRunCard {...speedRunDetails} />
+      <SwiperSlide>
+        <SpeedRunCard {...speedRunDetails} className="me-16" />
       </SwiperSlide>
     </Swiper>
   )
