@@ -114,10 +114,13 @@ When users perform delegated signatures, the target contract receiving the deleg
 
 Due to the nature of EIP 7702, it is recommended wallets use caution when helping users delegate to a 3rd party contract. Listed below is a collection of known implementations that have been audited:
 
-- address TBD [[alchemyplatform/modular-account](https://github.com/alchemyplatform/modular-account)] / [audits](https://github.com/alchemyplatform/modular-account/tree/develop/audits)
-- address TBD [[AmbireTech/ambire-common](https://github.com/AmbireTech/ambire-common/blob/feature/eip-7702/contracts/AmbireAccount7702.sol)] / [audits](https://github.com/AmbireTech/ambire-common/tree/feature/eip-7702/audits)
-- address TBD [[MetaMask/delegation-framework]](https://github.com/MetaMask/delegation-framework) / [audits](https://github.com/MetaMask/delegation-framework/tree/main/audits)
+- 0x000000009B1D0aF20D8C6d0A44e162d11F9b8f00 [[Uniswap/calibur](https://github.com/Uniswap/calibur)] / [audits](https://github.com/Uniswap/calibur/tree/main/audits)
+- 0x69007702764179f14F51cdce752f4f775d74E139 [[alchemyplatform/modular-account](https://github.com/alchemyplatform/modular-account)] / [audits](https://github.com/alchemyplatform/modular-account/tree/develop/audits)
+- 0x5A7FC11397E9a8AD41BF10bf13F22B0a63f96f6d [[AmbireTech/ambire-common](https://github.com/AmbireTech/ambire-common/blob/feature/eip-7702/contracts/AmbireAccount7702.sol)] / [audits](https://github.com/AmbireTech/ambire-common/tree/feature/eip-7702/audits)
+- 0x63c0c19a282a1b52b07dd5a65b58948a07dae32b [[MetaMask/delegation-framework]](https://github.com/MetaMask/delegation-framework) / [audits](https://github.com/MetaMask/delegation-framework/tree/main/audits)
 - 0x4Cd241E8d1510e30b2076397afc7508Ae59C66c9 [[Ethereum Foundation AA team]](https://github.com/eth-infinitism/account-abstraction/blob/develop/contracts/accounts/Simple7702Account.sol) / [audits](https://github.com/eth-infinitism/account-abstraction/blob/develop/audits/SpearBit%20Account%20Abstraction%20Security%20Review%20-%20Mar%202025.pdf)
+
+
 
 ## Hardware wallet guidelines {#hardware-wallet-guidelines}
 
