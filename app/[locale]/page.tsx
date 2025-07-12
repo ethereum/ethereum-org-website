@@ -8,7 +8,6 @@ import type {
   CommunityBlog,
   ValuesPairing,
 } from "@/lib/types"
-import type { EventCardProps } from "@/lib/types"
 import type { Lang } from "@/lib/types"
 import { CodeExample } from "@/lib/interfaces"
 
@@ -82,7 +81,7 @@ import {
 } from "@/lib/constants"
 
 import TenYearHomeBanner from "./10years/_components/TenYearHomeBanner"
-import { getActivity } from "./utils"
+import { getActivity, getUpcomingEvents } from "./utils"
 
 import SimpleDomainRegistryContent from "!!raw-loader!@/data/SimpleDomainRegistry.sol"
 import SimpleTokenContent from "!!raw-loader!@/data/SimpleToken.sol"
@@ -402,18 +401,8 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     },
   ]
 
-  const upcomingEvents = events
-    .filter((event) => {
-      const isValid = isValidDate(event.endDate)
-      const beginningOfEndDate = new Date(event.endDate).getTime()
-      const endOfEndDate = beginningOfEndDate + 24 * 60 * 60 * 1000
-      const isUpcoming = endOfEndDate >= new Date().getTime()
-      return isValid && isUpcoming
-    })
-    .sort(
-      (a, b) => new Date(a.endDate).getTime() - new Date(b.endDate).getTime()
-    )
-    .slice(0, 3) as EventCardProps[] // Show 3 events ending soonest
+  const allUpcomingEvents = getUpcomingEvents(events, locale)
+  const upcomingEvents = allUpcomingEvents.slice(0, 3)
 
   const metricResults: AllHomepageActivityData = {
     ethPrice,
@@ -906,9 +895,9 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                           className="max-w-full object-cover object-center"
                         />
                       ) : (
-                        <Image src={EventFallback} alt="" />
+                        <Image src={EventFallback} alt="" sizes="276px" />
                       )}
-                      <Image src={EventFallback} alt="" />
+                      <Image src={EventFallback} alt="" sizes="276px" />
                     </CardBanner>
                     <CardContent>
                       <CardTitle>{title}</CardTitle>

@@ -14,7 +14,6 @@ import { VStack } from "@/components/ui/flex"
 import Link from "@/components/ui/Link"
 import InlineLink from "@/components/ui/Link"
 import { Section } from "@/components/ui/section"
-import { SkeletonCardGrid } from "@/components/ui/skeleton"
 
 import { cn } from "@/lib/utils/cn"
 import { getMetadata } from "@/lib/utils/metadata"
@@ -22,10 +21,12 @@ import { screens } from "@/lib/utils/screen"
 
 import BuilderCard from "./_components/BuilderCard"
 import BuilderSwiper from "./_components/BuilderSwiper/lazy"
+import HackathonCard from "./_components/HackathonCard"
+import HackathonSwiper from "./_components/HackathonSwiper/lazy"
 import SpeedRunCard from "./_components/SpeedRunCard"
 import VideoCourseCard from "./_components/VideoCourseCard"
 import VideoCourseSwiper from "./_components/VideoCourseSwiper/lazy"
-import { getBuilderPaths, getVideoCourses } from "./utils"
+import { getBuilderPaths, getHackathons, getVideoCourses } from "./utils"
 
 import resourcesBanner from "@/public/images/developers/resources-banner.png"
 import scaffoldDebugScreenshot from "@/public/images/developers/scaffold-debug-screenshot.png"
@@ -83,6 +84,10 @@ const DevelopersPage = async ({
   }
 
   const courses = await getVideoCourses()
+
+  const hackathons = (await getHackathons()).slice(0, 5)
+
+  const eventCategory = `Developers - ${locale}`
 
   return (
     <VStack className="mx-auto my-0 w-full">
@@ -407,7 +412,26 @@ const DevelopersPage = async ({
         <Section id="hackathons" className="space-y-4 py-10 md:py-12">
           <h2>{t("page-developers-hackathons-title")}</h2>
           <p>{t("page-developers-hackathons-desc")}</p>
-          <SkeletonCardGrid />
+
+          {/* DESKTOP */}
+          <Scroller>
+            {hackathons.map((event, idx) => (
+              <HackathonCard
+                key={idx}
+                event={event}
+                eventCategory={eventCategory}
+                className="flex-1"
+              />
+            ))}
+          </Scroller>
+          {/* MOBILE */}
+          <div className="-mx-8 sm:hidden">
+            <HackathonSwiper
+              events={hackathons}
+              eventCategory={eventCategory}
+            />
+          </div>
+
           <div className="flex justify-center">
             <ButtonLink href="https://ethglobal.com/">
               {t("page-developers-visit-ethglobal")}

@@ -1,5 +1,11 @@
 import { getLocale, getTranslations } from "next-intl/server"
 
+import { CommunityConference } from "@/lib/types"
+
+import events from "@/data/community-events.json"
+
+import { getUpcomingEvents } from "../utils"
+
 import type { DevelopersPath, VideoCourse } from "./types"
 
 import cyfrinBasicBanner from "@/public/images/developers/cyfrin-basic-banner.webp"
@@ -98,4 +104,10 @@ export const getVideoCourses = async (): Promise<VideoCourse[]> => {
       href: "https://updraft.cyfrin.io/courses/security",
     },
   ]
+}
+
+export const getHackathons = async (): Promise<CommunityConference[]> => {
+  const locale = await getLocale()
+  const allUpcomingEvents = getUpcomingEvents(events, locale)
+  return allUpcomingEvents.filter((e) => e.hackathon) as CommunityConference[]
 }

@@ -1,0 +1,55 @@
+import { CommunityConference } from "@/lib/types"
+
+import { Image } from "@/components/Image"
+import CardImage from "@/components/Image/CardImage"
+import {
+  Card,
+  CardBanner,
+  CardContent,
+  CardHighlight,
+  CardSubTitle,
+  CardTitle,
+} from "@/components/ui/card"
+
+import EventFallback from "@/public/images/events/event-placeholder.png"
+
+type HackathonCardProps = {
+  event: CommunityConference
+  className?: string
+  eventCategory: string
+}
+
+const HackathonCard = ({
+  event,
+  className,
+  eventCategory = "Developers",
+}: HackathonCardProps) => {
+  const { title, href, description, imageUrl, formattedDate, location } = event
+  return (
+    <Card
+      href={href}
+      key={title + description}
+      customEventOptions={{
+        eventCategory,
+        eventAction: "hackathons",
+        eventName: title,
+      }}
+      className={className}
+    >
+      <CardBanner className="h-36 w-full sm:w-[270px] 2xl:w-full">
+        {imageUrl ? (
+          <CardImage src={imageUrl} />
+        ) : (
+          <Image src={EventFallback} alt="" sizes="276px" />
+        )}
+      </CardBanner>
+      <CardContent>
+        <CardTitle>{title}</CardTitle>
+        <CardSubTitle>{formattedDate} </CardSubTitle>
+        <CardHighlight>{location}</CardHighlight>
+      </CardContent>
+    </Card>
+  )
+}
+
+export default HackathonCard
