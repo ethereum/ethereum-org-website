@@ -1,24 +1,20 @@
 import { Image } from "@/components/Image"
-import Link from "@/components/ui/Link"
+import { Card } from "@/components/ui/card"
 import { Tag } from "@/components/ui/tag"
 
 import { cn } from "@/lib/utils/cn"
 
 import type { VideoCourse } from "../types"
 
-type BuildCardProps = {
+type VideoCourseCardProps = {
   course: VideoCourse
   className?: string
 }
 
-const VideoCourseCard = ({ course, className }: BuildCardProps) => (
-  <Link
+const VideoCourseCard = ({ course, className }: VideoCourseCardProps) => (
+  <Card
     href={course.href}
-    className={cn(
-      "group flex h-full w-fit flex-col gap-4 rounded-4xl no-underline",
-      className
-    )}
-    hideArrow
+    className={cn("group h-full w-fit rounded-4xl no-underline", className)}
   >
     <div className="h-fit w-full overflow-hidden rounded-2xl">
       <Image
@@ -32,16 +28,17 @@ const VideoCourseCard = ({ course, className }: BuildCardProps) => (
       <Tag
         status="warning"
         size="small"
-        className="mb-0 rounded-[4px] px-1 py-px font-bold normal-case"
+        className="mb-2 mt-4 rounded-[4px] px-1 py-0 font-bold normal-case"
       >
+        {/* // TODO: Extract intl */}
         {Math.round(course.hours)}-hour course
       </Tag>
-      <h3 className="groupfont-bold text-lg text-body group-hover:underline">
+      <h3 className="text-lg font-bold text-body group-hover:underline">
         {course.title}
       </h3>
       <p className="mb-4 text-sm text-body-medium">{course.description}</p>
     </div>
-  </Link>
+  </Card>
 )
 
 export default VideoCourseCard

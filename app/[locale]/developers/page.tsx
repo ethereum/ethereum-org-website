@@ -45,6 +45,21 @@ const RightColumn = (props: ChildOnlyProp) => (
   <div className="mb-6 me-0 w-full flex-1 basis-1/3" {...props} />
 )
 
+const Scroller = ({
+  className,
+  ...props
+}: React.HTMLAttributes<HTMLDivElement>) => {
+  return (
+    <div
+      className={cn(
+        "relative flex w-screen gap-6 overflow-x-auto pb-2 max-2xl:-mx-8 max-2xl:px-8 max-sm:hidden lg:gap-8 2xl:w-full",
+        className
+      )}
+      {...props}
+    />
+  )
+}
+
 const DevelopersPage = async ({
   params,
 }: {
@@ -243,20 +258,20 @@ const DevelopersPage = async ({
           </Card>
         </Section>
 
-        <Section id="courses" className="space-y-4 py-10 md:py-12">
+        <Section id="courses" className="space-y-4 py-6">
           <h2>{t("page-developers-video-courses-title")}</h2>
           <p>{t("page-developers-video-courses-desc")}</p>
 
           {/* DESKTOP */}
-          <div className="flex w-screen gap-6 overflow-x-auto max-2xl:-mx-8 max-2xl:pe-8 max-sm:hidden lg:gap-8 2xl:w-full">
+          <Scroller>
             {courses.map((course, idx) => (
               <VideoCourseCard
                 key={idx}
                 course={course}
-                className="w-[20%] min-w-[240px] max-w-[271px] max-2xl:first:ms-8"
+                className="w-[20%] max-w-[271px] flex-1 max-2xl:min-w-[20rem] xl:w-full"
               />
             ))}
-          </div>
+          </Scroller>
 
           {/* MOBILE */}
           <div className="w-screen max-xl:-ms-8 sm:hidden xl:w-full">
