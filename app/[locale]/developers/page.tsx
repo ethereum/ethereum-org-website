@@ -453,7 +453,7 @@ const DevelopersPage = async ({
                 <h2>{t("page-developers-founders-title")}</h2>
                 <p>{t("page-developers-founders-desc")}</p>
               </div>
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap justify-center gap-4 text-center">
                 <ButtonLink href="mailto:enterprise@ethereum.org?subject=Founder%20inquiry">
                   {t("page-developers-get-in-touch")}
                 </ButtonLink>
