@@ -12792,6 +12792,15 @@
         "maintenance",
         "code"
       ]
+    },
+    {
+      "login": "Antoine-Sparenberg",
+      "name": "Antoine-Sparenberg",
+      "avatar_url": "https://avatars.githubusercontent.com/u/128523213?v=4",
+      "profile": "https://github.com/Antoine-Sparenberg",
+      "contributions": [
+        "maintenance"
+      ]
     }
   ],
   "contributorsPerLine": 7,
