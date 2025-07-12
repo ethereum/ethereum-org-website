@@ -132,7 +132,7 @@ const DevelopersPage = async ({
           </h2>
 
           {/* Quickstart your idea */}
-          <Card className="!space-y-8 break-words border bg-background px-6 py-8 md:space-y-6 lg:p-8">
+          <Card className="!space-y-8 break-words bg-background px-6 py-8 md:space-y-6 lg:p-8">
             <Image
               src={scaffoldDebugScreenshot}
               alt="Scaffold-ETH 2 debug screenshot"
@@ -165,20 +165,20 @@ const DevelopersPage = async ({
 
             <div>
               <Link
-                href="https://docs.soliditylang.org/en/latest/"
+                href="https://docs.scaffoldeth.io/llms-full.txt"
                 customEventOptions={{
                   eventCategory: "top_boxes",
                   eventAction: "click",
-                  eventName: "solidity",
+                  eventName: "scaffold-llms",
                 }}
               >
-                {t("page-developers-solidity-docs")}
+                Scaffold-Eth2-llms-full.txt
               </Link>
             </div>
           </Card>
 
           {/* Get help */}
-          <Card className="!space-y-8 break-words border bg-background px-6 py-8 md:space-y-6 lg:p-8">
+          <Card className="!space-y-8 break-words bg-background px-6 py-8 md:space-y-6 lg:p-8">
             <Image
               src={stackExchangeScreenshot}
               alt="Ethereum Stack Exchange screenshot"
@@ -204,14 +204,14 @@ const DevelopersPage = async ({
                 variant="glow"
                 href="#some-magical-AI-link"
                 className="text-body"
-              >
+                >
                 {t("page-developers-ask-ai")}
-              </ButtonLink> */}
+                </ButtonLink> */}
             </div>
           </Card>
 
           {/* Resources */}
-          <Card className="!space-y-8 break-words border bg-background px-6 py-8 md:space-y-6 lg:p-8">
+          <Card className="!space-y-8 break-words bg-background px-6 py-8 md:space-y-6 lg:p-8">
             <Image
               src={resourcesBanner}
               alt="Banner showing four resource app icons"
@@ -237,7 +237,7 @@ const DevelopersPage = async ({
           </Card>
 
           {/* Tutorials */}
-          <Card className="!space-y-8 break-words border bg-background px-6 py-8 md:space-y-6 lg:p-8">
+          <Card className="!space-y-8 break-words bg-background px-6 py-8 md:space-y-6 lg:p-8">
             <Image
               src={tutorialTagsBanner}
               alt="Banner displaying multiple learning topics in a tag cloud"
