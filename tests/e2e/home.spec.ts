@@ -12,6 +12,8 @@ test.describe("Home Page", () => {
   })
 
   test("loads successfully", async ({ page }, testInfo) => {
+    // ensure page is ready before taking snapshot
+    await homePage.waitForPageReady()
     await homePage.verifyPageLoaded()
     await takeSnapshot(page, "home-initial", testInfo)
   })

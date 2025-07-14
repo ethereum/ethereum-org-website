@@ -11,6 +11,8 @@ test.describe("Find Wallet Page", () => {
   })
 
   test("loads successfully", async ({ page }, testInfo) => {
+    // ensure page is ready before taking snapshot
+    await findWalletPage.waitForPageReady()
     await findWalletPage.verifyPageLoaded()
     await takeSnapshot(page, "find-wallet-initial", testInfo)
   })
