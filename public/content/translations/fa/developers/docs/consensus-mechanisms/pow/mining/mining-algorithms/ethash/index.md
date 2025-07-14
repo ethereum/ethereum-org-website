@@ -44,7 +44,7 @@ ACCESSES = 64                     # number of accesses in hashimoto loop
 
 ### استفاده از 'SHA3' {#sha3}
 
-توسعه اتریوم همزمان با توسعه استاندارد SHA3 انجام شد و فرآیند استانداردسازی تغییری دیرهنگام در پرکردن الگوریتم هش نهایی ایجاد کرد، طوری که هش‌های "sha3_256" و "sha3_512" اتریوم هش‌های استاندارد sha3 نیستند، بلکه نوعی متفاوت هستند که اغلب در زمینه‌های دیگر به عنوان "Keccak-256" و "Keccak-512" شناخته می‌شوند. برای اطلاعات بیشتر، به بحث‌های انجام شده در [اینجا](https://eips.ethereum.org/EIPS/eip-1803)، [اینجا](http://ethereum.stackexchange.com/questions/550/which-cryptographic-hash-function-does-ethereum-use)، یا [اینجا](http://bitcoin.stackexchange.com/questions/42055/what-is-the-approach-to-calculate-an-ethereum-address-from-a-256-bit-private-key/42057#42057) مراجعه کنید.
+توسعه اتریوم همزمان با توسعه استاندارد SHA3 انجام شد و فرآیند استانداردسازی تغییری دیرهنگام در پرکردن الگوریتم هش نهایی ایجاد کرد، طوری که هش‌های "sha3_256" و "sha3_512" اتریوم هش‌های استاندارد sha3 نیستند، بلکه نوعی متفاوت هستند که اغلب در زمینه‌های دیگر به عنوان "Keccak-256" و "Keccak-512" شناخته می‌شوند. برای اطلاعات بیشتر، به بحث‌های انجام شده در [اینجا](https://eips.ethereum.org/EIPS/eip-1803)، [اینجا](http://ethereum.stackexchange.com/questions/550/which-cryptographic-hash-function-does-ethereum-use)، یا [اینجا](https://web.archive.org/web/20200928193508/https://bitcoin.stackexchange.com/questions/42055/what-is-the-approach-to-calculate-an-ethereum-address-from-a-256-bit-private-key/42057) مراجعه کنید.
 
 لطفا این نکته را در نظر داشته باشید که در توضیحات الگوریتم زیر به هش‌های "sha3" اشاره شده است.
 

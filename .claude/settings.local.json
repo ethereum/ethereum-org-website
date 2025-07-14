@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:alphafodl.vercel.app)",
+      "mcp__wayback-machine-server__get_snapshots",
+      "mcp__wayback-machine-server__get_archived_page",
+      "WebFetch(domain:x.com)",
+      "WebFetch(domain:ethereum.github.io)",
+      "WebFetch(domain:machix.com)",
+      "WebFetch(domain:bitcoin.stackexchange.com)",
+      "WebFetch(domain:beaconcha.in)",
+      "WebFetch(domain:infura.io)",
+      "WebFetch(domain:ethernodes.org)",
+      "WebFetch(domain:www.infura.io)",
+      "Bash(mkdir:*)",
+      "Bash(find:*)"
+    ],
+    "deny": []
+  }
+}

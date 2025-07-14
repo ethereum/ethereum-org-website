@@ -44,7 +44,7 @@ ACCESSES = 64                     # number of accesses in hashimoto loop
 
 ### Az SHA3 használata {#sha3}
 
-Az Ethereum fejlesztése egybe esett az SHA3 szabvány kifejlesztésével, és a standard folyamat egy változtatást vitt véghez a végső hashalgoritmussal kapcsolatban, így az Ethereum „sha3_256” és „sha3_512” hashek nem szabványos sha3 hashek, hanem variánsok, melyre gyakran „Keccak-256” és „Keccak-512” néven hivatkoznak más kontextusban. Tekintse meg a kapcsolódó beszélgetéseket, például [itt](https://eips.ethereum.org/EIPS/eip-1803), [itt](http://ethereum.stackexchange.com/questions/550/which-cryptographic-hash-function-does-ethereum-use) vagy [itt](http://bitcoin.stackexchange.com/questions/42055/what-is-the-approach-to-calculate-an-ethereum-address-from-a-256-bit-private-key/42057#42057).
+Az Ethereum fejlesztése egybe esett az SHA3 szabvány kifejlesztésével, és a standard folyamat egy változtatást vitt véghez a végső hashalgoritmussal kapcsolatban, így az Ethereum „sha3_256” és „sha3_512” hashek nem szabványos sha3 hashek, hanem variánsok, melyre gyakran „Keccak-256” és „Keccak-512” néven hivatkoznak más kontextusban. Tekintse meg a kapcsolódó beszélgetéseket, például [itt](https://eips.ethereum.org/EIPS/eip-1803), [itt](http://ethereum.stackexchange.com/questions/550/which-cryptographic-hash-function-does-ethereum-use) vagy [itt](https://web.archive.org/web/20200928193508/https://bitcoin.stackexchange.com/questions/42055/what-is-the-approach-to-calculate-an-ethereum-address-from-a-256-bit-private-key/42057).
 
 Vegye figyelembe, hogy az alábbi leírás SHA3-hashekre hivatkozik az algoritmus tekintetében.
 

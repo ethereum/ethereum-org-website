@@ -44,7 +44,7 @@ ACCESSES = 64                     # number of accesses in hashimoto loop
 
 ### Η χρήση του 'SHA3' {#sha3}
 
-Η ανάπτυξη του Ethereum συνέπεσε με την ανάπτυξη του προτύπου SHA3 και η διαδικασία προτυποποίησης έκανε μια καθυστερημένη αλλαγή στην προσθήκη του τελικού αλγόριθμου κατακερματισμού, έτσι ώστε οι κατακερματισμοί "sha3_256" και "sha3_512" του Ethereum δεν είναι τυπικοί κατακερματισμοί sha3, αλλά μια παραλλαγή που αναφέρεται συχνά ως "Keccak-256" και "Keccak-512" σε άλλα πλαίσια. Δείτε τη συζήτηση, π.χ. [εδώ](https://eips.ethereum.org/EIPS/eip-1803), [εδώ](http://ethereum.stackexchange.com/questions/550/which-cryptographic-hash-function-does-ethereum-use) ή [εδώ](http://bitcoin.stackexchange.com/questions/42055/what-is-the-approach-to-calculate-an-ethereum-address-from-a-256-bit-private-key/42057#42057).
+Η ανάπτυξη του Ethereum συνέπεσε με την ανάπτυξη του προτύπου SHA3 και η διαδικασία προτυποποίησης έκανε μια καθυστερημένη αλλαγή στην προσθήκη του τελικού αλγόριθμου κατακερματισμού, έτσι ώστε οι κατακερματισμοί "sha3_256" και "sha3_512" του Ethereum δεν είναι τυπικοί κατακερματισμοί sha3, αλλά μια παραλλαγή που αναφέρεται συχνά ως "Keccak-256" και "Keccak-512" σε άλλα πλαίσια. Δείτε τη συζήτηση, π.χ. [εδώ](https://eips.ethereum.org/EIPS/eip-1803), [εδώ](http://ethereum.stackexchange.com/questions/550/which-cryptographic-hash-function-does-ethereum-use) ή [εδώ](https://web.archive.org/web/20200928193508/https://bitcoin.stackexchange.com/questions/42055/what-is-the-approach-to-calculate-an-ethereum-address-from-a-256-bit-private-key/42057).
 
 Παρακαλούμε να έχετε αυτό υπόψη καθώς οι κατακερματισμοί "sha3" αναφέρονται στην περιγραφή του αλγόριθμου παρακάτω.
 

@@ -44,7 +44,7 @@ ACCESSES = 64                     # number of accesses in hashimoto loop
 
 ### 「SHA3」の使用 {#sha3}
 
-イーサリアムの開発は、SHA3標準の開発と同時期に起こりました。標準プロセスは、最終決定したハッシュアルゴリズムのパディングが遅れて変更されたため、イーサリアムの「sha3_256」および「sha3_512」ハッシュは、標準のsha3ハッシュではありません。他の文脈の多くでは、変異型として「Keccak-256」および「Keccak-512」と呼ばれています。 [こちら](https://eips.ethereum.org/EIPS/eip-1803)、[こちら](http://ethereum.stackexchange.com/questions/550/which-cryptographic-hash-function-does-ethereum-use)、 または[こちら](http://bitcoin.stackexchange.com/questions/42055/what-is-the-approach-to-calculate-an-ethereum-address-from-a-256-bit-private-key/42057#42057)の議論をご覧ください。
+イーサリアムの開発は、SHA3標準の開発と同時期に起こりました。標準プロセスは、最終決定したハッシュアルゴリズムのパディングが遅れて変更されたため、イーサリアムの「sha3_256」および「sha3_512」ハッシュは、標準のsha3ハッシュではありません。他の文脈の多くでは、変異型として「Keccak-256」および「Keccak-512」と呼ばれています。 [こちら](https://eips.ethereum.org/EIPS/eip-1803)、[こちら](http://ethereum.stackexchange.com/questions/550/which-cryptographic-hash-function-does-ethereum-use)、 または[こちら](https://web.archive.org/web/20200928193508/https://bitcoin.stackexchange.com/questions/42055/what-is-the-approach-to-calculate-an-ethereum-address-from-a-256-bit-private-key/42057)の議論をご覧ください。
 
 以下のアルゴリズムの説明では、「sha3」ハッシュが参照されることを覚えておいてください。
 

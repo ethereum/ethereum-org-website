@@ -44,7 +44,7 @@ ACCESSES = 64                     # number of accesses in hashimoto loop
 
 ### 使用“SHA3” {#sha3}
 
-以太坊的开发恰逢 SHA3 标准的制定， 标准进程对最终确定的哈希算法的填充做了后期改动，使得以太坊的 “sha3_256”和“sha3_512”哈希值不是标准的 sha3 哈希值，而是在其他情况下 常被称为“Keccak-256”和“Keccak-512”的变量。 讨论请见[此处](https://eips.ethereum.org/EIPS/eip-1803)、[此处](http://ethereum.stackexchange.com/questions/550/which-cryptographic-hash-function-does-ethereum-use)或[此处](http://bitcoin.stackexchange.com/questions/42055/what-is-the-approach-to-calculate-an-ethereum-address-from-a-256-bit-private-key/42057#42057)。
+以太坊的开发恰逢 SHA3 标准的制定， 标准进程对最终确定的哈希算法的填充做了后期改动，使得以太坊的 “sha3_256”和“sha3_512”哈希值不是标准的 sha3 哈希值，而是在其他情况下 常被称为“Keccak-256”和“Keccak-512”的变量。 讨论请见[此处](https://eips.ethereum.org/EIPS/eip-1803)、[此处](http://ethereum.stackexchange.com/questions/550/which-cryptographic-hash-function-does-ethereum-use)或[此处](https://web.archive.org/web/20200928193508/https://bitcoin.stackexchange.com/questions/42055/what-is-the-approach-to-calculate-an-ethereum-address-from-a-256-bit-private-key/42057)。
 
 请记住这一点，因为下面的算法描述中提到了“sha3”哈希值。
 

@@ -44,7 +44,7 @@ ACCESSES = 64                     # number of accesses in hashimoto loop
 
 ### El uso de SHA3 {#sha3}
 
-El desarrollo de Ethereum coincidió con el desarrollo del estándar SHA3, y el proceso de estándares hizo un cambio tardío en el relleno del algoritmo hash finalizado, de modo que los hashes de Ethereum sha3_256 y sha3_512 no son hashes SHA3 estándar, sino una variante a la que se hace referencia a menudo referida a menudo como Keccak-256 y Keccak-512 en otros contextos. Vea la discusión, por ejemplo, [aquí](https://eips.ethereum.org/EIPS/eip-1803), [aquí](http://ethereum.stackexchange.com/questions/550/which-cryptographic-hash-function-does-ethereum-use) o [aquí](http://bitcoin.stackexchange.com/questions/42055/what-is-the-approach-to-calculate-an-ethereum-address-from-a-256-bit-private-key/42057#42057).
+El desarrollo de Ethereum coincidió con el desarrollo del estándar SHA3, y el proceso de estándares hizo un cambio tardío en el relleno del algoritmo hash finalizado, de modo que los hashes de Ethereum sha3_256 y sha3_512 no son hashes SHA3 estándar, sino una variante a la que se hace referencia a menudo referida a menudo como Keccak-256 y Keccak-512 en otros contextos. Vea la discusión, por ejemplo, [aquí](https://eips.ethereum.org/EIPS/eip-1803), [aquí](http://ethereum.stackexchange.com/questions/550/which-cryptographic-hash-function-does-ethereum-use) o [aquí](https://web.archive.org/web/20200928193508/https://bitcoin.stackexchange.com/questions/42055/what-is-the-approach-to-calculate-an-ethereum-address-from-a-256-bit-private-key/42057).
 
 Por favor, tenga esto en cuenta, ya que los hashes SHA3 se mencionan en la descripción del algoritmo a continuación.
 

@@ -44,7 +44,7 @@ ACCESSES = 64                     # number of accesses in hashimoto loop
 
 ### 'SHA3' kullanımı {#sha3}
 
-Ethereum'un gelişimi, SHA3 standardının geliştirilmesiyle çakıştı ve standartlar süreci, sonlandırılmış karma algoritmanın dolgusunda geç bir değişiklik yaptı, böylece Ethereum'un "sha3_256" ve "sha3_512" karmaları standart sha3 karmaları değil, diğer bağlamlarda "Keccak-256" ve "Keccak-512" olarak genellikle atıfta bulunulan bir değişkendir. Tartışmaya ör. [buradan](https://eips.ethereum.org/EIPS/eip-1803), [buradan](http://ethereum.stackexchange.com/questions/550/which-cryptographic-hash-function-does-ethereum-use) ve [buradan bakabilirsiniz](http://bitcoin.stackexchange.com/questions/42055/what-is-the-approach-to-calculate-an-ethereum-address-from-a-256-bit-private-key/42057#42057).
+Ethereum'un gelişimi, SHA3 standardının geliştirilmesiyle çakıştı ve standartlar süreci, sonlandırılmış karma algoritmanın dolgusunda geç bir değişiklik yaptı, böylece Ethereum'un "sha3_256" ve "sha3_512" karmaları standart sha3 karmaları değil, diğer bağlamlarda "Keccak-256" ve "Keccak-512" olarak genellikle atıfta bulunulan bir değişkendir. Tartışmaya ör. [buradan](https://eips.ethereum.org/EIPS/eip-1803), [buradan](http://ethereum.stackexchange.com/questions/550/which-cryptographic-hash-function-does-ethereum-use) ve [buradan bakabilirsiniz](https://web.archive.org/web/20200928193508/https://bitcoin.stackexchange.com/questions/42055/what-is-the-approach-to-calculate-an-ethereum-address-from-a-256-bit-private-key/42057).
 
 Lütfen aşağıdaki algoritmanın açıklamasında "sha3" karmalarına atıfta bulunulduğunu unutmayın.
 
