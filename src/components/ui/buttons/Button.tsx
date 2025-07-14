@@ -2,7 +2,6 @@
 
 import * as React from "react"
 import { cva, type VariantProps } from "class-variance-authority"
-import { Sparkles } from "lucide-react"
 import { Slot } from "@radix-ui/react-slot"
 
 import { cn } from "@/lib/utils/cn"
@@ -10,26 +9,6 @@ import { type MatomoEventOptions, trackCustomEvent } from "@/lib/utils/matomo"
 import { scrollIntoView } from "@/lib/utils/scrollIntoView"
 
 import { BaseLink, type LinkProps } from "../Link"
-
-const variants = {
-  variant: {
-    solid: cn(
-      "text-white bg-primary-action border-transparent",
-      "hover:!text-white hover:bg-primary-action-hover", // Hover
-      "active:bg-primary-action-hover", // Active
-      "disabled:bg-disabled disabled:text-background" // Disabled
-    ),
-    outline: "", // Base styling
-    ghost: "border-transparent hover:shadow-none",
-    link: "border-transparent hover:shadow-none underline !min-h-0 !py-0 !px-1 active:text-primary",
-    glow: "group relative rounded-lg border-none p-px text-body [&_[data-label='inner']]:!rounded-[7px]",
-  },
-  size: {
-    lg: "text-lg py-3 px-8 [&>svg]:size-6 [&>svg]:text-2xl rounded-lg focus-visible:rounded-lg",
-    md: "min-h-10.5 px-4 py-2 [&>svg]:size-6 [&>svg]:text-2xl",
-    sm: "text-xs min-h-[31px] py-1.5 px-2 [&>svg]:size-4 [&>svg]:text-md",
-  },
-}
 
 const buttonVariants = cva(
   cn(
@@ -49,7 +28,24 @@ const buttonVariants = cva(
     "[&[data-secondary='true']]:text-body"
   ),
   {
-    variants,
+    variants: {
+      variant: {
+        solid: cn(
+          "text-white bg-primary-action border-transparent",
+          "hover:!text-white hover:bg-primary-action-hover", // Hover
+          "active:bg-primary-action-hover", // Active
+          "disabled:bg-disabled disabled:text-background" // Disabled
+        ),
+        outline: "", // Base styling
+        ghost: "border-transparent hover:shadow-none",
+        link: "border-transparent hover:shadow-none underline !min-h-0 !py-0 !px-1 active:text-primary",
+      },
+      size: {
+        lg: "text-lg py-3 px-8 [&>svg]:text-2xl rounded-lg focus-visible:rounded-lg",
+        md: "min-h-10.5 px-4 py-2 [&>svg]:text-2xl",
+        sm: "text-xs min-h-[31px] py-1.5 px-2 [&>svg]:text-md",
+      },
+    },
     defaultVariants: {
       variant: "solid",
       size: "md",
@@ -113,30 +109,6 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       customEventOptions && trackCustomEvent(customEventOptions)
 
       onClick?.(e)
-    }
-    if (variant === "glow") {
-      const { children, ...buttonProps } = props
-      return (
-        <button
-          className={cn(variants.variant.glow, className)}
-          {...buttonProps}
-        >
-          {/* Glow */}
-          <div className="absolute inset-0 overflow-hidden rounded-[inherit] opacity-50 blur-md transition-transform duration-300 after:absolute after:-inset-[200%] after:bg-rainbow-gradient group-hover:scale-110 group-hover:transition-transform group-hover:duration-300 after:motion-safe:animate-spin-4" />
-          {/* Border */}
-          <div className="absolute inset-0 overflow-hidden rounded-[inherit] after:absolute after:-inset-[200%] after:bg-rainbow-gradient after:motion-safe:animate-spin-4" />
-          <div
-            data-label="inner"
-            className={cn(
-              variants.size[size || "md"],
-              "relative z-[1] inline-flex gap-2 bg-background/90 px-6 pb-2 pt-3 font-semibold shadow-inner ring-[1px] ring-white/25 backdrop-blur-lg"
-            )}
-          >
-            {children}
-            <Sparkles className="rotate//-12 mb-1 transition-transform group-hover:animate-wave group-hover:transition-transform" />
-          </div>
-        </button>
-      )
     }
 
     const Comp = asChild ? Slot : "button"
