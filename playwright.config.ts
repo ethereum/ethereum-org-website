@@ -1,5 +1,10 @@
+import path from "path"
+
+import dotenv from "dotenv"
 import type { ChromaticConfig } from "@chromatic-com/playwright"
 import { defineConfig, devices } from "@playwright/test"
+
+dotenv.config({ path: path.resolve(__dirname, ".env.local") })
 
 export default defineConfig<ChromaticConfig>({
   testDir: "./tests/e2e",
