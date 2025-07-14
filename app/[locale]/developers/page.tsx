@@ -178,7 +178,7 @@ const DevelopersPage = async ({
                   eventName: "scaffold-llms-full",
                 }}
               >
-                Scaffold-Eth2-llms-full.txt
+                Scaffold-ETH 2 <code>llms-full.txt</code>
               </Link>
             </div>
           </Card>
