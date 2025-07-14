@@ -783,7 +783,7 @@ One thing you don't get with Solidity tests is JavaScript code you can cut and p
 
    | Parameter           | Value                                                                                                                                                               |
    | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-   | MNEMONIC            | The mnemonic for an account that has enough ETH to pay for a transaction. [You can get free ETH for the Optimism Goerli network here](https://optimismfaucet.xyz/). |
+   | MNEMONIC            | The mnemonic for an account that has enough ETH to pay for a transaction. [You can get free ETH for the Optimism Goerli network here](https://web.archive.org/web/20220930192115/https://optimismfaucet.xyz/). |
    | OPTIMISM_GOERLI_URL | URL to Optimism Goerli. The public endpoint, `https://goerli.optimism.io`, is rate limited but sufficient to what we need here                                      |
 
 5. Run `index.js`.

@@ -787,7 +787,7 @@ Solidity testleriyle sahip olamayacağınız tek şey, kendi uygulamanıza kesip
 
    | Parametre           | Değer                                                                                                                                                                                                       |
    | ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-   | MNEMONIC-ANIMSATICI | Bir işleme ödeyebilmek için yeterli ETH bulunduran bir hesap için bir anımsatıcı. [You can get free ETH for the Optimism Goerli ağı için bedava ETH'yi buradan alabilirsiniz](https://optimismfaucet.xyz/). |
+   | MNEMONIC-ANIMSATICI | Bir işleme ödeyebilmek için yeterli ETH bulunduran bir hesap için bir anımsatıcı. [You can get free ETH for the Optimism Goerli ağı için bedava ETH'yi buradan alabilirsiniz](https://web.archive.org/web/20220930192115/https://optimismfaucet.xyz/). |
    | OPTIMISM_GOERLI_URL | Optimisim Goerli'ye giden URL. Herkese açık bitiş noktası olan `https://goerli.optimism.io`, oran sınırlıdır fakat ihtiyacımız olan şey için yeterlidir                                                     |
 
 5. `index.js` komutunu çalıştırın.

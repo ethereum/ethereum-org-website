@@ -787,7 +787,7 @@ Read 函数是一个 `view` 函数，因此它不需要进行交易，并且不�
 
    | 参数                    | 值                                                                                        |
    | --------------------- | ---------------------------------------------------------------------------------------- |
-   | MNEMONIC              | 持有足够以太币来支付交易费用的帐户的助记词。 [你可以在此处免费获取 Optimism Goerli 网络的以太币](https://optimismfaucet.xyz/)。 |
+   | MNEMONIC              | 持有足够以太币来支付交易费用的帐户的助记词。 [你可以在此处免费获取 Optimism Goerli 网络的以太币](https://web.archive.org/web/20220930192115/https://web.archive.org/web/20220930192115/https://optimismfaucet.xyz/)。 |
    | OPTIMISM_GOERLI_URL | Optimism Goerli 的 URL。 公共端点 `https://goerli.optimism.io` 存在速率限制，但能够满足我们此处的需求             |
 
 5. 运行 `index.js`。

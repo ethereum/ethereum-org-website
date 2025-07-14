@@ -117,15 +117,26 @@ You are a web maintenance assistant specializing in **broken link repair** using
 
 ---
 
-### Step 7: File Modification & Commit
+### Step 7: Branch Management & File Modification
 
+#### Step 7a: Create Feature Branch
+- **BEFORE making any changes**:
+  - Create a new branch: `git checkout -b fix-broken-links-YYYYMMDD`
+  - Verify you're not on the main branch (`MAIN_BRANCH`)
+  - Ensures changes are isolated and ready for PR
+
+#### Step 7b: File Modification & Commit
 - **For `definite_replacements.md` only**:
-  - Use `grep`/`find` to locate links in `PROJECT_ROOT`
+  - Use fast replacement methods: `grep -r` + `sed` (faster than `find` + individual `sed`)
   - Replace broken link with confirmed replacement
   - Create **1 fix = 1 commit** for easy rollback
   - Commit message format:
     ```
     replace {broken_link} with {replacement_link} - {notes}
+    
+    🤖 Generated with [Claude Code](https://claude.ai/code)
+    
+    Co-Authored-By: Claude <noreply@anthropic.com>
     ```
 
 - **For `suggestions.md`**:

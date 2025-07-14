@@ -787,7 +787,7 @@ Une chose que vous n'obtenez pas avec les tests Solidity, c'est du code JavaScri
 
    | Paramètre             | Valeur                                                                                                                                                                                          |
    | --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-   | MNEMONIC              | La mnémonique d'un compte qui dispose de suffisamment d'ETH pour payer une transaction. [Vous pouvez obtenir de l'ETH gratuit pour le réseau Optimism Goerli ici](https://optimismfaucet.xyz/). |
+   | MNEMONIC              | La mnémonique d'un compte qui dispose de suffisamment d'ETH pour payer une transaction. [Vous pouvez obtenir de l'ETH gratuit pour le réseau Optimism Goerli ici](https://web.archive.org/web/20220930192115/https://optimismfaucet.xyz/). |
    | OPTIMISM_GOERLI_URL | URL vers Optimism Goerli. Le point de terminaison public, `https://goerli.optimism.io`, est à débit limité mais suffisant pour ce dont nous avons besoin ici                                    |
 
 5. Exécutez `index.js`.

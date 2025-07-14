@@ -787,7 +787,7 @@ Una cosa que no se consigue con las pruebas de Solidity es un código JavaScript
 
    | Parámetro             | Valor                                                                                                                                                                        |
    | --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-   | MNEMONIC              | El mnemotécnico de una cuenta que tiene suficiente ETH para pagar una transacción. [Puede obtener ETH gratis para la red Optimism Goerli aquí](https://optimismfaucet.xyz/). |
+   | MNEMONIC              | El mnemotécnico de una cuenta que tiene suficiente ETH para pagar una transacción. [Puede obtener ETH gratis para la red Optimism Goerli aquí](https://web.archive.org/web/20220930192115/https://optimismfaucet.xyz/). |
    | OPTIMISM_GOERLI_URL | La URL a Optimism Goerli. La terminal pública, `https://goerli.optimism.io`, tiene una tasa limitada pero suficiente para lo que necesitamos aquí                            |
 
 5. Ejecute `index.js`.
