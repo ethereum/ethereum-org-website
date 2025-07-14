@@ -50,8 +50,8 @@ export const useLanguagePicker = (handleClose?: () => void) => {
           // Always put the browser's preferred language first
           if (a.localeOption === intlLocalePreference) return -1
           if (b.localeOption === intlLocalePreference) return 1
-          // Otherwise, sort by wordsApproved descending
-          return (b.wordsApproved ?? 0) - (a.wordsApproved ?? 0)
+          // Otherwise, sort alphabetically by source name using localeCompare
+          return a.sourceName.localeCompare(b.sourceName, locale)
         }) || [],
     [intlLocalePreference, locale, locales, t]
   )
