@@ -15,6 +15,11 @@ const VideoCourseCard = ({ course, className }: VideoCourseCardProps) => (
   <Card
     href={course.href}
     className={cn("group h-full w-fit rounded-4xl no-underline", className)}
+    customEventOptions={{
+      eventCategory: "video-courses",
+      eventAction: "click",
+      eventName: course.title,
+    }}
   >
     <div className="h-fit w-full overflow-hidden rounded-2xl">
       <Image

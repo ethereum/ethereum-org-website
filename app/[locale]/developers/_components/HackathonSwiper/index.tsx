@@ -8,14 +8,13 @@ import HackathonCard from "../HackathonCard"
 
 type HackathonSwiperProps = {
   events: CommunityConference[]
-  eventCategory: string
 }
 
-const HackathonSwiper = ({ events, eventCategory }: HackathonSwiperProps) => (
+const HackathonSwiper = ({ events }: HackathonSwiperProps) => (
   <Swiper spaceBetween={16} slidesPerView={1.25}>
     {events.map((event, idx) => (
       <SwiperSlide key={idx} className="max-2xl:first:ms-8 max-2xl:last:pe-16">
-        <HackathonCard event={event} eventCategory={eventCategory} />
+        <HackathonCard event={event} />
       </SwiperSlide>
     ))}
   </Swiper>

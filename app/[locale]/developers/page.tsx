@@ -87,8 +87,6 @@ const DevelopersPage = async ({
 
   const hackathons = (await getHackathons()).slice(0, 5)
 
-  const eventCategory = `Developers - ${locale}`
-
   return (
     <VStack className="mx-auto my-0 w-full">
       <HubHero
@@ -143,7 +141,15 @@ const DevelopersPage = async ({
               <h3>{t("page-developers-jump-right-in-title")}</h3>
               <p className="text-sm text-body-medium">
                 {t("page-developers-quickstart-scaffold-subtext")}{" "}
-                <Link href="https://docs.scaffoldeth.io/">
+                <Link
+                  href="https://docs.scaffoldeth.io/"
+                  customEventOptions={{
+                    eventCategory: "mid_boxes",
+                    eventAction: "click",
+                    eventName: "scaffold-docs",
+                  }}
+                  rel="noopener"
+                >
                   {t("page-developers-quickstart-scaffold-docs")}
                 </Link>
               </p>
@@ -156,9 +162,9 @@ const DevelopersPage = async ({
                 message="npx create-eth@latest"
                 size="sm"
                 customEventOptions={{
-                  eventCategory: "top_boxes",
+                  eventCategory: "mid_boxes",
                   eventAction: "click",
-                  eventName: "scaffold",
+                  eventName: "scaffold-npx-copy",
                 }}
               />
             </div>
@@ -167,9 +173,9 @@ const DevelopersPage = async ({
               <Link
                 href="https://docs.scaffoldeth.io/llms-full.txt"
                 customEventOptions={{
-                  eventCategory: "top_boxes",
+                  eventCategory: "mid_boxes",
                   eventAction: "click",
-                  eventName: "scaffold-llms",
+                  eventName: "scaffold-llms-full",
                 }}
               >
                 Scaffold-Eth2-llms-full.txt
@@ -197,6 +203,11 @@ const DevelopersPage = async ({
                 variant="outline"
                 isSecondary
                 href="https://ethereum.stackexchange.com/"
+                customEventOptions={{
+                  eventCategory: "mid_boxes",
+                  eventAction: "click",
+                  eventName: "stack-exchange",
+                }}
               >
                 {t("page-developers-stack-exchange")}
               </ButtonLink>
@@ -230,6 +241,11 @@ const DevelopersPage = async ({
                 variant="outline"
                 isSecondary
                 href="/developers/learning-tools/"
+                customEventOptions={{
+                  eventCategory: "mid_boxes",
+                  eventAction: "click",
+                  eventName: "play-with-code",
+                }}
               >
                 {t("page-developers-play-code")}
               </ButtonLink>
@@ -256,6 +272,11 @@ const DevelopersPage = async ({
                 variant="outline"
                 isSecondary
                 href="/developers/tutorials/"
+                customEventOptions={{
+                  eventCategory: "mid_boxes",
+                  eventAction: "click",
+                  eventName: "view-tutorials",
+                }}
               >
                 {t("page-developers-learn-tutorials-cta")}
               </ButtonLink>
@@ -416,24 +437,23 @@ const DevelopersPage = async ({
           {/* DESKTOP */}
           <Scroller>
             {hackathons.map((event, idx) => (
-              <HackathonCard
-                key={idx}
-                event={event}
-                eventCategory={eventCategory}
-                className="flex-1"
-              />
+              <HackathonCard key={idx} event={event} className="flex-1" />
             ))}
           </Scroller>
           {/* MOBILE */}
           <div className="-mx-8 sm:hidden">
-            <HackathonSwiper
-              events={hackathons}
-              eventCategory={eventCategory}
-            />
+            <HackathonSwiper events={hackathons} />
           </div>
 
           <div className="flex justify-center">
-            <ButtonLink href="https://ethglobal.com/">
+            <ButtonLink
+              href="https://ethglobal.com/"
+              customEventOptions={{
+                eventCategory: "hackathons",
+                eventAction: "click",
+                eventName: "visit-ethglobal",
+              }}
+            >
               {t("page-developers-visit-ethglobal")}
             </ButtonLink>
           </div>
@@ -454,13 +474,25 @@ const DevelopersPage = async ({
                 <p>{t("page-developers-founders-desc")}</p>
               </div>
               <div className="flex flex-wrap justify-center gap-4 text-center">
-                <ButtonLink href="mailto:enterprise@ethereum.org?subject=Founder%20inquiry">
+                <ButtonLink
+                  href="mailto:founders@ethereum.org?subject=Founder%20inquiry"
+                  customEventOptions={{
+                    eventCategory: "founders",
+                    eventAction: "click",
+                    eventName: "email",
+                  }}
+                >
                   {t("page-developers-get-in-touch")}
                 </ButtonLink>
                 <ButtonLink
                   href="/community/grants/"
                   isSecondary
                   variant="outline"
+                  customEventOptions={{
+                    eventCategory: "founders",
+                    eventAction: "click",
+                    eventName: "grant-options",
+                  }}
                 >
                   {t("page-developers-see-grant-options")}
                 </ButtonLink>

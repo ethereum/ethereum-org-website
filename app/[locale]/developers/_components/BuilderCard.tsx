@@ -33,7 +33,16 @@ const BuilderCard = ({ path, className }: BuildCardProps) => (
       <h3 className="text-lg font-bold">{path.title}</h3>
       <p className="mb-4 text-sm text-body-medium">{path.description}</p>
     </div>
-    <ButtonLink href={path.href} className="sm:w-fit">
+    <ButtonLink
+      href={path.href}
+      className="sm:w-fit"
+      customEventOptions={{
+        eventCategory: "top_boxes",
+        eventAction: "click",
+        eventName: path.tag,
+      }}
+      rel="noopener"
+    >
       {path.button}
     </ButtonLink>
   </Card>

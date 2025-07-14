@@ -16,22 +16,17 @@ import EventFallback from "@/public/images/events/event-placeholder.png"
 type HackathonCardProps = {
   event: CommunityConference
   className?: string
-  eventCategory: string
 }
 
-const HackathonCard = ({
-  event,
-  className,
-  eventCategory = "Developers",
-}: HackathonCardProps) => {
+const HackathonCard = ({ event, className }: HackathonCardProps) => {
   const { title, href, description, imageUrl, formattedDate, location } = event
   return (
     <Card
       href={href}
       key={title + description}
       customEventOptions={{
-        eventCategory,
-        eventAction: "hackathons",
+        eventCategory: "hackathons",
+        eventAction: "click",
         eventName: title,
       }}
       className={className}
