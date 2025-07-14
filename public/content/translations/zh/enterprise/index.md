@@ -48,7 +48,7 @@ lang: zh
 - [Envision Blockchain](https://envisionblockchain.com/) - _提供以企业为中心、专门针对以太坊主网的咨询和开发服务_
 - [EY OpsChain](https://blockchain.ey.com/products/contract-manager) - _通过在你信赖的业务合作伙伴网络中发布报价申请、合同、采购订单和发票，提供采购工作流程_。
 - [Hyperledger Besu](https://www.hyperledger.org/use/besu) - _在 Apache 2.0 许可证下开发并使用 Java 编写的以企业为中心的开源以太坊客户端_
-- [Infura](https://infura.io/) - _对以太坊和星际文件系统网络的可扩展应用程序接口访问_
+- [Infura](https://www.infura.io/) - _对以太坊和星际文件系统网络的可扩展应用程序接口访问_
 - [Kaleido](https://kaleido.io/) - _一个以企业为中心的开发平台，提供简化的区块链和数字资产应用程序_
 - [NodeReal](https://nodereal.io/) - _为 Web3 生态系统提供可扩展的区块链基础设施和应用程序接口服务提供商_
 - [Moralis](http://moralis.io/) - _具有 SOC2 2 类认证的企业级应用程序接口和节点_

@@ -35,7 +35,7 @@ Aceste biblioteci elimină o mare parte din complexitatea interacțiunii directe
 **Infura -** **_API-ul Ethereum ca serviciu._**
 
 - [infura.io](https://infura.io)
-- [Documentație](https://infura.io/docs)
+- [Documentație](https://www.infura.io/docs)
 - [GitHub](https://github.com/INFURA)
 
 \***\*Gateway Cloudflare pentru Ethereum.\*\***

@@ -54,7 +54,7 @@ IPFS este un sistem distribuit de stocare și accesare a fișierelor, site-urilo
 - [IPFS](https://docs.ipfs.io/concepts/what-is-ipfs/)
 - [Pinata](https://www.pinata.cloud/) _(Serviciu IPFS de stocare a datelor pe un nod)_
 - [web3.storage](https://web3.storage/) _(Serviciul IPFS/Filecoin de stocare a datelor pe un nod)_
-- [Infura](https://infura.io/product/ipfs) _(Serviciul IPFS de stocare a datelor pe un nod)_
+- [Infura](https://www.infura.io/product/ipfs) _(Serviciul IPFS de stocare a datelor pe un nod)_
 
 ## Păstrarea datelor {#data-retention}
 

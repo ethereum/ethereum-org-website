@@ -56,7 +56,7 @@ Diverse organizații au depus eforturi comune pentru a creşte uşurinţa de uti
 - [Bloackchain-ul Envision](https://envisionblockchain.com/) _oferă servicii de consultanță și dezvoltare axate pe întreprinderi, specializate pe Mainnet-ul Ethereum_
 - [EY OpsChain](https://blockchain.ey.com/products/contract-manager) _oferă un flux de lucru pentru achiziții prin emiterea de cereri de ofertă, contracte, ordine de cumpărare și facturi în rețeaua partenerilor dvs. de afaceri de încredere_
 - [Hyperledger Besu](https://www.hyperledger.org/use/besu) _un client Ethereum open-source axat pe întreprinderi, dezvoltat sub licența Apache 2.0 și scris în Java_
-- [Infura](https://infura.io/) _acces la API-uri scalabile în rețelele Ethereum și IPFS_
+- [Infura](https://www.infura.io/) _acces la API-uri scalabile în rețelele Ethereum și IPFS_
 - [Provide](https://provide.services/) _infrastructură și API-uri pentru aplicații de întreprinderi pe Web3_
 - [Unibright](https://unibright.io/) _o echipă de specialiști în blockchain, arhitecți, dezvoltatori și consultanți cu peste 20 de ani de experiență în procesele de afaceri și integrare_
 

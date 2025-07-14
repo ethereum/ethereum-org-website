@@ -208,8 +208,8 @@ sidebarDepth: 2
     - 24時間年中無休のダイレクトサポート
     - 50以上のブロックチェーンノードへのアクセス
 
-- [**Infura**](https://infura.io/)
-  - [ドキュメント](https://infura.io/docs)
+- [**Infura**](https://www.infura.io/)
+  - [ドキュメント](https://www.infura.io/docs)
   - 機能
     - 無料ティアオプション
     - 従量課金制

@@ -55,7 +55,7 @@ Różne organizacje podjęły pewne wspólne działania, aby uczynić Ethereum p
 - [Envision Blockchain](https://envisionblockchain.com/) _zapewnia usługi konsultingowe i programistyczne zorientowane na przedsiębiorstwa, specjalizujące się w sieciach głównych Ethereum_
 - [EY OpsChain](https://blockchain.ey.com/products/contract-manager) _zapewnia przepływ pracy poprzez wystawianie zapytań ofertowych, umów, zamówień zakupu i faktury w Twojej sieci zaufanych partnerów biznesowych_
 - [Hyperledger Besu](https://www.hyperledger.org/use/besu) _ukierunkowany na przedsiębiorstwa klient Ethereum typu open source opracowany na licencji Apache 2.0 i napisany w Javie_
-- [Infura](https://infura.io/) _scalable API access to the Ethereum and IPFS networks_
+- [Infura](https://www.infura.io/) _scalable API access to the Ethereum and IPFS networks_
 - [Zapewnij](https://provide.services/) _infrastrukturę i interfejsy API dla aplikacji Enterprise Web3_
 - [Unibright](https://unibright.io/) _zespół specjalistów, architektów, programistów i konsultantów blockchain z ponad 20-letnim doświadczeniem w procesach biznesowych i integracji_
 

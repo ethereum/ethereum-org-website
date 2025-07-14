@@ -57,7 +57,7 @@ IPFS; dosyaları, web sitelerini, uygulamaları ve verileri depolamaya ve bunlar
 - [IPFS](https://docs.ipfs.io/concepts/what-is-ipfs/)
 - [Pinata](https://www.pinata.cloud/) _(IPFS iliştirme hizmeti)_
 - [web3.storage](https://web3.storage/) _(IPFS/Filecoin iliştirme hizmeti)_
-- [Infura](https://infura.io/product/ipfs) _(IPFS iliştirme hizmeti)_
+- [Infura](https://www.infura.io/product/ipfs) _(IPFS iliştirme hizmeti)_
 - [IPFS Tarama](https://ipfs-scan.io) _(IPFS iliştime arayıcı)_
 - [4EVERLAND](https://www.4everland.org/) _ (IPFS iliştirme hizmeti）_
 - [Filebase](https://filebase.com) _(IPFS İliştirme Hizmeti)_

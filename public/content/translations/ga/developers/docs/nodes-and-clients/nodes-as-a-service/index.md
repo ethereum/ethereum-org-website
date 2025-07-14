@@ -208,8 +208,8 @@ Seo liosta de chuid de na soláthraithe nód Ethereum is mó tóir, ná bíodh l
     - Tacaíocht dhíreach 24/7
     - Rochtain ar 50+ nóid blocshlabhra
 
-- [**Infura**](https://infura.io/)
-  - [Doiciméid](https://infura.io/docs)
+- [**Infura**](https://www.infura.io/)
+  - [Doiciméid](https://www.infura.io/docs)
   - Gnéithe
     - Rogha sraith saor in aisce,
     - Scálú mar a théann tú

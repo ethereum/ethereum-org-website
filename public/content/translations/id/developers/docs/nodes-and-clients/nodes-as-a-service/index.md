@@ -106,8 +106,8 @@ Berikut ini adalah daftar beberapa penyedia node Ethereum paling populer, jangan
     - Waktu sinkronisasi yang cepat untuk penerapan khusus
     - Dukungan langsung 24/7
     - Akses ke 50+ simpul rantai blok
-- [**Infura**](https://infura.io/)
-  - [Dokumen](https://infura.io/docs)
+- [**Infura**](https://www.infura.io/)
+  - [Dokumen](https://www.infura.io/docs)
   - Fitur
     - Opsi layanan gratis
     - Skalakan saat Anda jalankan

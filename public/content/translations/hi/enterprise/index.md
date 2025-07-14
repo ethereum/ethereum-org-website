@@ -48,7 +48,7 @@ lang: hi
 - [Envision Blockchain](https://envisionblockchain.com/) - _एथेरियम मेननेट में विशेषज्ञता वाली एंटरप्राइज़ केंद्रित परामर्श और विकास सेवाएं प्रदान करता है_
 - [EY OpsChain](https://blockchain.ey.com/products/contract-manager) - _आपके विश्वसनीय व्यावसायिक भागीदारों के नेटवर्क में RFQ, अनुबंध, खरीद आदेश और चालान जारी करके एक खरीद कार्यप्रवाह प्रदान करता है_
 - [Hyperledger Besu](https://www.hyperledger.org/use/besu) - _Apache 2.0 लाइसेंस के तहत विकसित और Java में लिखा गया एक एंटरप्राइज़ केंद्रित ओपन-सोर्स एथेरियम क्लाइंट_
-- [Infura](https://infura.io/) - _एथेरियम और IPFS नेटवर्क तक स्केलेबल API पहुंच_
+- [Infura](https://www.infura.io/) - _एथेरियम और IPFS नेटवर्क तक स्केलेबल API पहुंच_
 - [Kaleido](https://kaleido.io/) - _एक उद्यम-केंद्रित डेवलपमेंट प्‍लेटफॉर्म जो सरलीकृत ब्लॉकचेन और डिजिटल संपत्ति एप्लिकेशंस पेश करता है_
 - [NodeReal](https://nodereal.io/) - _Web3 पारिस्थितिकी तंत्र के लिए स्केलेबल ब्लॉकचेन बुनियादी ढांचा और API सेवा प्रदाता प्रदान करता है_
 - [Moralis](http://moralis.io/) - _SOC2 प्रकार 2 प्रमाणन के साथ एंटरप्राइज़ ग्रेड API और नोड्स_

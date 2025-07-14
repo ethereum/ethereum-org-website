@@ -208,8 +208,8 @@ sidebarDepth: 2
     - پشتیبانی مستقیم شبانه‌روزی در تمام ایام هفته
     - دسترسی به بیش از 50 گره‌ زنجیره‌ بلوکی
 
-- [**Infura**](https://infura.io/)
-  - [مستندات](https://infura.io/docs)
+- [**Infura**](https://www.infura.io/)
+  - [مستندات](https://www.infura.io/docs)
   - ویژگی‌ها
     - گزینه ردیف رایگان
     - مقیاس‌پذیری دلخواه

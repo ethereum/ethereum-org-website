@@ -54,7 +54,7 @@ IPFS adalah sistem terdistribusi untuk menyimpan dan mengakses berkas, situs web
 - [IPFS](https://docs.ipfs.io/concepts/what-is-ipfs/)
 - [Pinata](https://www.pinata.cloud/) _(layanan penyematan IPFS)_
 - [web3.storage](https://web3.storage/) _(layanan penyematan IPFS/Filecoin)_
-- [Infura](https://infura.io/product/ipfs) _(layanan pinning IPFS)_
+- [Infura](https://www.infura.io/product/ipfs) _(layanan pinning IPFS)_
 
 ## Retensi data {#data-retention}
 

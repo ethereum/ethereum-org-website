@@ -48,7 +48,7 @@ lang: ja
 - [Envision Blockchain](https://envisionblockchain.com/) - _イーサリアムメインネットに特化したエンタープライズ向けコンサルティングおよび開発サービスを提供_
 - [EY OpsChain](https://blockchain.ey.com/products/contract-manager) - _ 信頼できるビジネスパートナーのネットワーク全体で、RFQ、コントラクト、発注書、請求書を発行することにより、調達ワークフローを提供_
 - [Hyperledger Besu](https://www.hyperledger.org/use/besu) - _Javaで書かれたApache 2.0ライセンスに基づくオープンソースのエンタープライズ向けイーサリアムクライアント_
-- [Infura](https://infura.io/) - _イーサリアムおよびIPFSネットワークへのスケーラブルなAPIアクセス_
+- [Infura](https://www.infura.io/) - _イーサリアムおよびIPFSネットワークへのスケーラブルなAPIアクセス_
 - [Kaleido](https://kaleido.io/) - _簡素化されたブロックチェーンとデジタル資産アプリケーションを提供するエンタープライズ向け開発プラットフォーム_
 - [NodeReal](https://nodereal.io/) - _Web3エコシステムにスケーラブルなブロックチェーンインフラストラクチャとAPIサービス プロバイダーを提供_
 - [Moralis](http://moralis.io/) - _SOC2タイプ2認証を取得したエンタープライズグレードのAPIとノード_

@@ -106,8 +106,8 @@ Iată o listă cu unii dintre cei mai cunoscuți furnizori de noduri Ethereum; n
     - Timp de sincronizare rapid pentru implementări dedicate
     - Asistență directă 24/7
     - Acces la 50+ de noduri blockchain
-- [**Infura**](https://infura.io/)
-  - [Documente](https://infura.io/docs)
+- [**Infura**](https://www.infura.io/)
+  - [Documente](https://www.infura.io/docs)
   - Funcţionalităţi
     - Opțiunea nivelului gratuit
     - Scalare pe măsura avansării

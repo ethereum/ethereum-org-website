@@ -48,7 +48,7 @@ Diversas organizações trabalharam juntas para tornar o Ethereum amigável para
 - [Envision Blockchain](https://envisionblockchain.com/) - _oferece serviços de consultoria e desenvolvimento focados em empresas, especializados na rede principal do Ethereum_
 - [EY OpsChain](https://blockchain.ey.com/products/contract-manager) - _fornece um fluxo de trabalho de compras ao emitir RFQs, contratos, ordens de compra e faturas em toda a sua rede de parceiros comerciais confiáveis_
 - [Hyperledger Besu](https://www.hyperledger.org/use/besu) - _cliente Ethereum de código aberto desenvolvido sob a licença Apache 2.0 e escrito em Java_
-- [Infura](https://infura.io/) - _API dimensionável para acesso às redes Ethereum e IPFS_
+- [Infura](https://www.infura.io/) - _API dimensionável para acesso às redes Ethereum e IPFS_
 - [Kaleido](https://kaleido.io/)- _plataforma de desenvolvimento focada em empresas que oferece uma blockchain simplificada e aplicativos de ativos digitais_
 - [NodeReal](https://nodereal.io/) - _fornece infraestrutura blockchain dimensionável e serviços de API para o ecossistema Web3_
 - [Moralis](http://moralis.io/) - _APIs e nós de nível empresarial com certificação SOC2 tipo 2_

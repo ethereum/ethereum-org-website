@@ -57,7 +57,7 @@ lang: zh-tw
 - [星際檔案系統](https://docs.ipfs.io/concepts/what-is-ipfs/)
 - [Pinata](https://www.pinata.cloud/)_（星際檔案系統固定服務）_
 - [web3.storage](https://web3.storage/)_（星際檔案系統/菲樂幣固定服務）_
-- [Infura](https://infura.io/product/ipfs)_（星際檔案系統固定服務）_
+- [Infura](https://www.infura.io/product/ipfs)_（星際檔案系統固定服務）_
 - [IPFS Scan](https://ipfs-scan.io) _（星際檔案系統固定瀏覽器）_
 -
 - [Filebase](https://filebase.com)_（星際檔案系統固定服務）_

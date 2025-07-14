@@ -208,8 +208,8 @@ A continuación se incluye una lista con algunos de los proveedores de nodos de 
     - Soporte directo 24/7
     - Acceso a más de 50 nodos de la cadena de bloques
 
-- [**Infura**](https://infura.io/)
-  - [Documentos](https://infura.io/docs)
+- [**Infura**](https://www.infura.io/)
+  - [Documentos](https://www.infura.io/docs)
   - Características
     - Opción de nivel gratuito
     - Escalabilidad en función del uso

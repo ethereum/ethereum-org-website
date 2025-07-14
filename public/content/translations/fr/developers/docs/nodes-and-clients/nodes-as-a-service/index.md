@@ -208,8 +208,8 @@ Voici une liste des fournisseurs de nœuds Ethereum les plus populaires. N'hési
     - Assistance directe 24h/24 et 7j/7
     - Accès à plus de 50 nœuds de blockchain
 
-- [**Infura**](https://infura.io/)
-  - [Documentation](https://infura.io/docs)
+- [**Infura**](https://www.infura.io/)
+  - [Documentation](https://www.infura.io/docs)
   - Fonctionnalités
     - Option de niveau gratuite
     - Évolutivité progressive

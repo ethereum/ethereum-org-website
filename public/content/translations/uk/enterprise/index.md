@@ -46,7 +46,7 @@ sidebarDepth: 1
 ## Протокол та інфраструктура {#protocol-and-infrastructure}
 
 - [Hyperledger Besu](https://www.hyperledger.org/projects/besu) _— клієнт Ethereum з відкритим вихідним кодом, розроблений за ліцензією Apache 2.0 і написаний на Java_
-- [Infura](https://infura.io/) _— доступ API з масштабуванням до мереж Ethereum та IPFS_
+- [Infura](https://www.infura.io/) _— доступ API з масштабуванням до мереж Ethereum та IPFS_
 - [Kaleido](https://kaleido.io/) _— комплексна платформа для створення та запуску міжхмарних гібридних корпоративних екосистем_
 - [Autonity](https://www.clearmatics.com/about/) _— набір протоколів, що реалізує однорангові протоколи та надає клієнтське програмне забезпечення та інфраструктуру_
 - [Chainstack](https://chainstack.com/) _— багатохмарна та багатопротокольна платформа, що надається як сервіс та забезпечує компаніям можливість розробляти й розгортати децентралізовані мережі й сервіси, а також керувати ними_

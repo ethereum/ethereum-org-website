@@ -208,8 +208,8 @@ sidebarDepth: 2
     - प्रत्यक्ष 24/7 सपोर्ट
     - 50+ ब्लॉकचेन नोड्स तक पहुंच
 
-- [**Infura**](https://infura.io/)
-  - [डॉक्स](https://infura.io/docs)
+- [**Infura**](https://www.infura.io/)
+  - [डॉक्स](https://www.infura.io/docs)
   - विशेषताएँ
     - फ़्री टियर विकल्प
     - चलते-फ़िरते बढ़ाते रहें

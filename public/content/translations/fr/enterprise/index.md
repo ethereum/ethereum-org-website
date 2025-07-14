@@ -48,7 +48,7 @@ Différentes organisations sont à l'origine d'initiatives collaboratives afin d
 - [Envision Blockchain](https://envisionblockchain.com/) - _Fournit des services de conseil et de développement axés sur les entreprises et spécialisés dans le réseau principal Ethereum_
 - [EY OpsChain](https://blockchain.ey.com/products/contract-manager) - _ fournit un workflow d'approvisionnement en émettant des demandes de devis (RFQ), des contrats, des bons de commande et des factures à travers votre réseau de partenaires commerciaux de confiance_
 - [- Hyperledger Besu](https://www.hyperledger.org/use/besu) - _- Client Ethereum en open source axé sur les entreprises, développé sous la licence Apache 2.0 et rédigé en Java_
-- [Infura](https://infura.io/) - _Accès évolutif aux API des réseaux Ethereum et IPFS_
+- [Infura](https://www.infura.io/) - _Accès évolutif aux API des réseaux Ethereum et IPFS_
 - [Kaleido](https://kaleido.io/) - _Plateforme de développement orientée vers les entreprises, qui offre une blockchain simplifiée et des applications dédiées aux actifs numériques_
 - [NodeReal](https://nodereal.io/) - _Fournit une infrastructure blockchain évolutive et des services API pour l'écosystème Web3_
 - [Moralis](http://moralis.io/) - _APIs et nœuds de qualité entreprise avec une certification SOC2 de type 2_

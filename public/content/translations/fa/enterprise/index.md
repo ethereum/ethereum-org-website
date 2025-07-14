@@ -48,7 +48,7 @@ lang: fa
 - [Envision Blockchain](https://envisionblockchain.com/) - _خدمات مشاوره و توسعه متمرکز بر سازمان را با تخصص در شبکه اصلی اتریوم ارائه می دهد_
 - [EY OpsChain](https://blockchain.ey.com/products/contract-manager) - _با صدور RFQ، قراردادها، سفارشات خرید و فاکتورها در سراسر شبکه شرکای تجاری مورد اعتماد شما، گردش کار تدارکات را فراهم می کند._
 - [Hyperledger Besu](https://www.hyperledger.org/use/besu) - _یک مشتری منبع باز اتریوم متمرکز بر سازمان که تحت مجوز Apache 2.0 توسعه یافته و به زبان جاوا نوشته شده است_
-- [Infura](https://infura.io/) - _دسترسی API مقیاس پذیر به شبکه های اتریوم و IPFS_
+- [Infura](https://www.infura.io/) - _دسترسی API مقیاس پذیر به شبکه های اتریوم و IPFS_
 - [Kaleido](https://kaleido.io/) - _یک پلتفرم توسعه متمرکز بر سازمان که برنامه های کاربردی ساده شده بلاک چین و دارایی های دیجیتال را ارائه می دهد_
 - [NodeReal](https://nodereal.io/) - _ارائه دهنده زیرساخت مقیاس‌پذیر بلاک‌چین و خدمات API برای اکوسیستم Web3_
 - [Moralis](http://moralis.io/) - _گره‌ها و APIهای درجه سازمانی با گواهینامه SOC2 نوع 2_

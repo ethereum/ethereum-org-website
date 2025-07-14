@@ -45,7 +45,7 @@ Nasledujúce projekty poskytujú blockchainové služby pre podnikové systémy:
 ## Protokol a infraštruktúra {#protocol-and-infrastructure}
 
 - [Hyperledger Besu](https://www.hyperledger.org/projects/besu) _open-source klient Etherea vyvinutý pod licenciou Apache 2.0 a napísaný v jazyku Java_
-- [Infura](https://infura.io/) _škálovateľný prístup API do sietí Etherea a IPFS_
+- [Infura](https://www.infura.io/) _škálovateľný prístup API do sietí Etherea a IPFS_
 - [Kaleido](https://kaleido.io/) _platforma na vytváranie a prevádzku medzi-cloudových hybridných podnikových ekosystémov_
 - [Autonity](https://www.clearmatics.com/about/) _sada protokolov, ktorá implementuje protokoly p2p a poskytuje klientsky softvér a infraštruktúru_
 - [Chainstack](https://chainstack.com/) _multi-cloudová a multi-protokolová platforma ako služba oprávňujúca podniky rýchlo vytvárať, zavádzať a spravovať decentralizované siete a služby_

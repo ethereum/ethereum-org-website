@@ -57,7 +57,7 @@ IPFSは、ファイル、ウェブサイト、アプリケーション、デー�
 - [IPFS(ピアツーピア分散ファイルシステム)](https://docs.ipfs.io/concepts/what-is-ipfs/)
 - [Pinata](https://www.pinata.cloud/)_(IPFSピンニングサービス)_
 - [web3.storage](https://web3.storage/)_(IPFS/Filecoinピンニングサービス)_
-- [Infura](https://infura.io/product/ipfs)_(IPFSピンニングサービス)_
+- [Infura](https://www.infura.io/product/ipfs)_(IPFSピンニングサービス)_
 - [IPFS Scan](https://ipfs-scan.io) _(IPFSピンニングエクスプローラー)_
 - [4EVERLAND](https://www.4everland.org/)_(IPFSピンニングサービス)_
 - [Filebase](https://filebase.com)_(IPFSピンニングサービス)_

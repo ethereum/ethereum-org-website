@@ -208,8 +208,8 @@ sidebarDepth: 2
     - 全天候直接支持
     - 访问超过 50 个区块链节点
 
-- [**Infura**](https://infura.io/)
-  - [相关文档](https://infura.io/docs)
+- [**Infura**](https://www.infura.io/)
+  - [相关文档](https://www.infura.io/docs)
   - 功能
     - 免费套餐选项
     - 随时扩容

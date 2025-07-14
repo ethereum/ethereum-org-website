@@ -35,7 +35,7 @@ Biblioteki te eliminują znaczną złożoność interakcji bezpośrednio z węz�
 **Infura -** **_API Ethereum jako usługa._**
 
 - [infura.io](https://infura.io)
-- [Dokumentacja](https://infura.io/docs)
+- [Dokumentacja](https://www.infura.io/docs)
 - [GitHub](https://github.com/INFURA)
 
 **Bramka Cloudflare Ethereum.**

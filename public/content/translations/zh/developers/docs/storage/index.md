@@ -57,7 +57,7 @@ lang: zh
 - [星际文件系统](https://docs.ipfs.io/concepts/what-is-ipfs/)
 - [Pinata](https://www.pinata.cloud/)_（星际文件系统固定服务）_
 - [web3.storage](https://web3.storage/)_（星际文件系统/菲乐币固定服务）_
-- [Infura](https://infura.io/product/ipfs)_（星际文件系统固定服务）_
+- [Infura](https://www.infura.io/product/ipfs)_（星际文件系统固定服务）_
 - [IPFS Scan](https://ipfs-scan.io) _（星际文件系统固定浏览器）_
 - [4EVERLAND](https://www.4everland.org/)_（星际文件系统固定服务）_
 - [Filebase](https://filebase.com)_（星际文件系统固定服务）_

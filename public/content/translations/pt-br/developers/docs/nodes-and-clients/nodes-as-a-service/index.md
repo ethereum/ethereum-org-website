@@ -208,8 +208,8 @@ Segue uma lista de alguns dos fornecedores de nós para Ethereum mais populares.
     - Suporte direto 24/7
     - Acesso a mais de 50 nós da blockchain
 
-- [**Infura**](https://infura.io/)
-  - [Documentação](https://infura.io/docs)
+- [**Infura**](https://www.infura.io/)
+  - [Documentação](https://www.infura.io/docs)
   - Recursos
     - Opção de nível gratuito
     - Dimensione conforme suas necessidades

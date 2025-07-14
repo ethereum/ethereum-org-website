@@ -55,8 +55,8 @@ Oto lista najbardziej popularnych dostawców węzłów Ethereum, możesz dodać 
     - Unikalne punkty końcowe API
     - Webhooks
     - Bezpośrednie wsparcie
-- [**Infura**](https://infura.io/)
-  - [Dokumenty](https://infura.io/docs)
+- [**Infura**](https://www.infura.io/)
+  - [Dokumenty](https://www.infura.io/docs)
   - Funkcje
     - Opcja darmowej warstwy
     - Skalowanie w miarę postępów

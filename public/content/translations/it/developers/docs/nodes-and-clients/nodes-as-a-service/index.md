@@ -208,8 +208,8 @@ Ecco una lista di alcuni dei più popolari fornitori di nodi Ethereum. Aggiungin
     - Assistenza diretta 24 ore su 24, 7 giorni su 7
     - Accesso a oltre 50 nodi della blockchain
 
-- [**Infura**](https://infura.io/)
-  - [Documenti](https://infura.io/docs)
+- [**Infura**](https://www.infura.io/)
+  - [Documenti](https://www.infura.io/docs)
   - Caratteristiche
     - Opzione livello gratuito
     - Ridimensionamento secondo le esigenze

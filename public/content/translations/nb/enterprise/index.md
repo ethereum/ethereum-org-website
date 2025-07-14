@@ -45,7 +45,7 @@ Følgende prosjekter tilbyr blokkjedetjenester for bedrftsklassifiserte systemer
 ## Protokoll og infrastruktur {#protocol-and-infrastructure}
 
 - [Hyperledger Besu](https://www.hyperledger.org/projects/besu) _open-source Ethereum-klient utviklet under Apache 2.0 lisensen, og skrevet i Java_
-- [Infura](https://infura.io/) _skalerbar API tilgang til Ethereum og IPFS nettverket_
+- [Infura](https://www.infura.io/) _skalerbar API tilgang til Ethereum og IPFS nettverket_
 - [Kaleido](https://kaleido.io/) _full-stack plattform for bygging og drift på tvers av cloud, hybride bedriftsøkosystemer_
 - [Autonity](https://www.clearmatics.com/about/) _protokoll suite som implementerer p2p protokoller og leverer klientprogramvare og infrastruktur_
 - [Chainstack](https://chainstack.com/) _multi-cloud og multi-protocol Platform som en tjeneste som gir bedrifter muligheten til å raskt bygge, deplosiere, og administrere desentraliserte nettverk og tjenester_

@@ -48,7 +48,7 @@ lang: zh-tw
 - [Envision Blockchain](https://envisionblockchain.com/) - _提供專門針對以太坊主網的企業級諮詢和開發服務_
 - [EY OpsChain](https://blockchain.ey.com/products/contract-manager) - _透過在你值得信賴的業務合作夥伴網路中發出報價請求、合約、採購訂單和發票來提供採購工作流程_
 - [Hyperledger Besu](https://www.hyperledger.org/use/besu) - _一個以企業為中心的開放原始碼以太坊用戶端，在 Apache 2.0 許可下開發並用 Java 編寫_
-- [Infura](https://infura.io/) - _對以太坊和星際檔案系統網路的可擴展應用程式介面存取_
+- [Infura](https://www.infura.io/) - _對以太坊和星際檔案系統網路的可擴展應用程式介面存取_
 - [Kaleido](https://kaleido.io/) - _以企業為中心的開發平台，提供簡化的區塊鏈和數位資產應用程式_
 - [NodeReal](https://nodereal.io/) - _為 Web3 生態系統提供可擴展的區塊鏈基礎結構和應用程式介面服務供應商_
 - [Moralis](http://moralis.io/) - _具備 SOC2 第 2 類認證的企業級應用程式介面與節點_

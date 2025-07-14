@@ -48,7 +48,7 @@ Ethereum может помочь многим видам бизнеса, в то
 - [Envision Blockchain](https://envisionblockchain.com/) _предоставляет услуги консалтинга и разработки для предприятий, специализируясь на основной сети Ethereum _
 - [EY OpsChain](https://blockchain.ey.com/products/contract-manager) _обеспечивает процесс снабжения, направляя запросы цен, контракты, заказы на покупку и счета-фактуры через сеть доверенных бизнес-партнеров_
 - [Hyperledger Besu](https://www.hyperledger.org/use/besu) — _корпоративный клиент Ethereum с открытым исходным кодом, разработанный по лицензии Apache 2.0 и написанный на Java_
-- [Infura](https://infura.io/) — _масштабируемый API-доступ к сетям Ethereum и IPFS_
+- [Infura](https://www.infura.io/) — _масштабируемый API-доступ к сетям Ethereum и IPFS_
 - [Kaleido](https://kaleido.io/) — _платформа разработки, ориентированная на предприятия, которая предлагает упрощенные приложения блокчейна и цифровых активов_
 - [NodeReal](https://nodereal.io/) _масштабируемая инфраструктура блокчейна и поставщик услуг API для экосистемы Web3_
 - [Moralis](http://moralis.io/) — _API и узлы корпоративного уровня с сертификацией SOC2 типа 2_

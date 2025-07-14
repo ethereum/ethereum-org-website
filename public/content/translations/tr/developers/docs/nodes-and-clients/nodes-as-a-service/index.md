@@ -208,8 +208,8 @@ Bir düğüm hizmeti kullanarak, ürününüzün altyapı yönünü merkezileşt
     - Doğrudan 7/24 destek
     - 50'den fazla blok zincir düğümüne erişim
 
-- [**Infura**](https://infura.io/)
-  - [Belgeler](https://infura.io/docs)
+- [**Infura**](https://www.infura.io/)
+  - [Belgeler](https://www.infura.io/docs)
   - Özellikler
     - Ücretsiz katman seçeneği
     - Kullandıkça ölçeklendirin

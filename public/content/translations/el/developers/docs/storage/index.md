@@ -57,7 +57,7 @@ lang: el
 - [IPFS](https://docs.ipfs.io/concepts/what-is-ipfs/)
 - [Pinata](https://www.pinata.cloud/) _(υπηρεσία pinning IPFS)_
 - [web3.storage](https://web3.storage/) _(υπηρεσία pinning IPFS/Filecoin)_
-- [Infura](https://infura.io/product/ipfs) _(υπηρεσία pinning IPFS)_
+- [Infura](https://www.infura.io/product/ipfs) _(υπηρεσία pinning IPFS)_
 - [IPFS Scan](https://ipfs-scan.io) _(IPFS pinning explorer)_
 - [4EVERLAND](https://www.4everland.org/)_（υπηρεσία pinning IPFS）_
 - [Filebase](https://filebase.com) _(Υπηρεσία σήμανσης IPFS)_

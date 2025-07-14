@@ -56,7 +56,7 @@ Verschiedene Organisationen unternahmen gemeinsame Anstrengungen, um Ethereum un
 - [Envision Blockchain](https://envisionblockchain.com/)_ bietet unternehmensorientierte Beratungs- und Entwicklungsdienstleistungen, die auf das Ethereum-Mainnet spezialisiert sind_
 - [EY OpsChain](https://blockchain.ey.com/products/contract-manager) _ bietet einen Beschaffungsworkflow durch die Ausgabe von RFQs, Verträgen, Bestellungen und Rechnungen im Netzwerk von vertrauenswürdigen Geschäftspartnern_
 - [Hyperledger Besu](https://www.hyperledger.org/use/besu) _ ein unternehmensorientierter Open-Source-Ethereum-Client, entwickelt unter der Apache-2.0-Lizenz und in Java geschrieben_
-- [Infura](https://infura.io/) _ skalierbarer API-Zugriff auf die Ethereum- und IPFS-Netzwerke_
+- [Infura](https://www.infura.io/) _ skalierbarer API-Zugriff auf die Ethereum- und IPFS-Netzwerke_
 - [Provide](https://provide.services/) _Infrastruktur und APIs für Enterprise-Web3-Anwendungen_
 - [QuickNode](https://www.quicknode.com/) _bietet zuverlässige und schnelle Nodes mit High-Level-APIs wie NFT API, Token API etc., während hierdurch zugleich eine einheitliche Produktsuite und unternehmensweite Lösungen geliefert werden_
 - [Unibright](https://unibright.io/) _, ein Team von Blockchain-Spezialisten, Architekten, Entwicklern und Beratern mit über 20 Jahren Erfahrung in Geschäftsprozessen und Integration_

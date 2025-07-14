@@ -46,7 +46,7 @@ Các dự án sau đây cung cấp dịch vụ chuỗi khối cho các hệ th�
 ## Giao thức và cơ sở hạ tầng {#protocol-and-infrastructure}
 
 - [Hyperledger Besu](https://www.hyperledger.org/projects/besu) _ứng dụng Ethereum mã nguồn mở được phát triển theo giấy phép Apache 2.0 và được viết bằng Java_
-- [Infura](https://infura.io/) _truy cập API có thể mở rộng vào mạng Ethereum và IPFS_
+- [Infura](https://www.infura.io/) _truy cập API có thể mở rộng vào mạng Ethereum và IPFS_
 - [Kaleido](https://kaleido.io/) _nền tảng đầy đủ để xây dựng và chạy hệ sinh thái đám mây chéo, doanh nghiệp kết hợp_
 - [Autonity](https://www.clearmatics.com/about/) _bộ giao thức thực hiện các giao thức p2p và cung cấp phần mềm và cơ sở hạ tầng của ứng dụng_
 - [Chainstack](https://chainstack.com/) _Nền tảng đa đám mây và đa giao thức như một Dịch vụ trao quyền cho các doanh nghiệp nhanh chóng xây dựng, triển khai và quản lý các mạng và dịch vụ phi tập trung_

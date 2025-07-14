@@ -45,7 +45,7 @@ Följande projekt tillhandahåller blockchain-tjänster för system för storfö
 ## Protokoll och infrastruktur {#protocol-and-infrastructure}
 
 - [Hyperledger Besu](https://www.hyperledger.org/projects/besu) _öppen källkod Ethereum-klient utvecklad under Apache 2.0-licens och skriven i Java_
-- [Infura](https://infura.io/) _skalbar API-åtkomst till Ethereum och IPFS-nätverk_
+- [Infura](https://www.infura.io/) _skalbar API-åtkomst till Ethereum och IPFS-nätverk_
 - [Kaleido](https://kaleido.io/) _full-stackplattform för att bygga och köra över moln och ekosystem för hybridföretag_
 - [Autonity](https://www.clearmatics.com/about/) _protokollsvit som implementerar p2p-protokoll och ger klientprogramvara och infrastruktur_
 - [Chainstack](https://chainstack.com/) _flermolns och flerprotokolls Platform as a service (PaaS) ger företag möjlighet att snabbt bygga, distribuera och hantera decentraliserade nätverk och tjänster_

@@ -48,7 +48,7 @@ Diferentes organizaciones han colaborado para que Ethereum sea fácil de usar pa
 - [Envision Blockchain](https://envisionblockchain.com/)_: Ofrece servicios de consultoría y desarrollo enfocados en la empresa especializados en la red principal de Ethereum_.
 - [EY OpsChain](https://blockchain.ey.com/products/contract-manager)_: Ofrece un flujo de trabajo de adquisiciones mediante la emisión de solicitudes de cotización, contratos, órdenes de compra y facturas a través de su red de socios comerciales de confianza_.
 - [Hyperledger Besu](https://www.hyperledger.org/use/besu)_: Un cliente Ethereum de código abierto enfocado en la empresa, desarrollado bajo la licencia Apache 2.0 y escrito en Java_.
-- [Infura](https://infura.io/)_: Acceso API escalable a las redes Ethereum e IPFS_
+- [Infura](https://www.infura.io/)_: Acceso API escalable a las redes Ethereum e IPFS_
 - [Kaleido](https://kaleido.io/)_: Una plataforma de desarrollo centrada en la empresa que ofrece aplicaciones simplificadas de cadena de bloques y activos digitales_.
 - [NodeReal](https://nodereal.io/)_: Ofrece servicios de infraestructura escalable y API de cadena de bloques para el ecosistema web3_.
 - [Moralis](http://moralis.io/)_: API y nodos de nivel empresarial con certificación SOC2 tipo 2_.

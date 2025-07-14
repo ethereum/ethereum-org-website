@@ -48,7 +48,7 @@ Különféle szervezetek számtalan együttműködésen alapuló erőfeszítést
 - [Envision Blockchain](https://envisionblockchain.com/) - _az Ethereum főhálózatra szakosodott, vállalati fókuszú, tanácsadási és fejlesztési szolgáltatásokat nyújt_
 - [EY OpsChain](https://blockchain.ey.com/products/contract-manager) - _beszerzési munkafolyamatot biztosít, melynek során ajánlatbekéréseket (RFQ), szerződéseket, rendeléseket és számlákat bocsát ki az Ön megbízható üzleti partnereiből álló hálózatán keresztül_
 - [Hyperledger Besu](https://www.hyperledger.org/use/besu) - _egy vállalati fókuszú, nyílt forráskódú Ethereum-kliens Apache 2.0 licensszel fejlesztve és Java nyelven írva_
-- [Infura](https://infura.io/) - _skálázható API-hozzáférés az Ethereumhoz és az IPFS hálózatokhoz_
+- [Infura](https://www.infura.io/) - _skálázható API-hozzáférés az Ethereumhoz és az IPFS hálózatokhoz_
 - [Kaleido](https://kaleido.io/) - _egy vállalati fókuszú fejlesztési platform, amely egyszerűsített blokklánc- és digitáliseszköz-alkalmazásokat kínál_
 - [NodeReal](https://nodereal.io/) - _skálázható blokklánc-infrastruktúrát és API-szolgáltatókat biztosít a web3 ökoszisztémának_
 - [Moralis](http://moralis.io/) - _vállalati szintű API-ok és csomópontok egy SOC2 2-es típusú tanúsítással_

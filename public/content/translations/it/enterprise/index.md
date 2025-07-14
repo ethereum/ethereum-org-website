@@ -48,7 +48,7 @@ Sono stati compiuti degli sforzi collaborativi per rendere Ethereum accessibile 
 - [Envision Blockchain](https://envisionblockchain.com/) _fornisce servizi di sviluppo e consulenza incentrati sulle aziende, specializzati per la Rete Principale di Ethereum_
 - [EY OpsChain](https://blockchain.ey.com/products/contract-manager): _fornisce un flusso di lavoro per gli acquisti emettendo RFQ, contratti, ordini d'acquisto e fatture per la tua rete di partner aziendali attendibili_
 - [Hyperledger Besu](https://www.hyperledger.org/use/besu) _è un client di Ethereum open source incentrato sulle aziende, sviluppato sotto la licenza Apache 2.0 e scritto in Java_
-- [Infura](https://infura.io/) _è un accesso scalabile all'API alle reti di Ethereum e IPFS_
+- [Infura](https://www.infura.io/) _è un accesso scalabile all'API alle reti di Ethereum e IPFS_
 - [Kaleido](https://kaleido.io/) _è una piattaforma di sviluppo incentrata sulle aziende che offre blockchain e applicazioni di risorse digitali semplificate_
 - [NodeReal](https://nodereal.io/) _fornisce l'infrastruttura scalabile della blockchain e servizi API per l'ecosistema Web3_
 - [Moralis](http://moralis.io/): _API per aziende e Nodi con un certificato SOC2 di tipo 2_

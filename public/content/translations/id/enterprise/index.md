@@ -56,7 +56,7 @@ Beberapa usaha kolaboratif untuk membuat Ethereum ramah bagi perusahaan telah di
 - [Envision Blockchain](https://envisionblockchain.com/) _menyediakan layanan konsultasi dan pengembangan yang berfokus pada perusahaan yang dikhususkan di Jaringan Utama Ethereum_
 - [EY OpsChain](https://blockchain.ey.com/products/contract-manager) _menyediakan alur kerja pengadaan dengan menerbitkan RFQ, kontrak, pesanan pembelian, dan faktur di keseluruhan jaringan partner bisnis terpercaya Anda_
 - [Hyperledger Besu](https://www.hyperledger.org/use/besu) _sebuah klien Ethereum sumber terbuka berfokus pada perusahaan yang dikembangkan di bawah lisensi Apache 2.0 dan ditulis dalam bahasa Java_
-- [Infura](https://infura.io/) _akses API yang dapat diukur untuk jaringan Ethereum dan IPFS_
+- [Infura](https://www.infura.io/) _akses API yang dapat diukur untuk jaringan Ethereum dan IPFS_
 - [Provide](https://provide.services/) _infrastruktur dan API untuk aplikasi Web3 Perusahaan_
 - [Unibright](https://unibright.io/) _sekelompok spesialis, arstitek, pengembang, dan konsultan blockchain dengan pengalaman 20+ tahun dalam proses dan integrasi bisnis_
 

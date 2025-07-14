@@ -45,7 +45,7 @@ lang: ar
 ## البروتوكول والبنية التحتية {#protocol-and-infrastructure}
 
 - [Hyperledger Besu](https://www.hyperledger.org/projects/besu) _عميل إيثريوم مفتوح المصدر تم تطويره بموجب ترخيص Apache 2.0 ومكتوب بلغة Java_
-- [Infura](https://infura.io/) _API وصول API القابل للتوسع إلى إيثريوم وشبكات IPFS_
+- [Infura](https://www.infura.io/) _API وصول API القابل للتوسع إلى إيثريوم وشبكات IPFS_
 - [Kaleido](https://kaleido.io/) _منصة كاملة الحزم لبناء وتشغيل الأنظمة الأيكولوجية المؤسسية الهجينة عبر السحابة_
 - [Autonity](https://www.clearmatics.com/about/) _مجموعة بروتوكولات تنفذ بروتوكولات p2p وتوفر برامج وبنية تحتية خاصة بالعميل_
 - [Chainstack](https://chainstack.com/) _منصة متعددة السحب ومتعدد البروتوكولات كخدمة تمكّن الشركات من بناء ونشر وإدارة الشبكات والخدمات اللامركزية بسرعة_

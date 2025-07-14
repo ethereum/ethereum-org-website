@@ -48,7 +48,7 @@ Ethereum'u işletme dostu hâle getirmek için farklı kuruluşlar tarafından b
 - [Envision Blockchain](https://envisionblockchain.com/) - _Ethereum Ana Ağı alanında uzmanlaşmış, kurumsal odaklı danışmanlık ve geliştirme hizmetleri sunar_
 - [EY OpsChain](https://blockchain.ey.com/products/contract-manager) - _Güvenilir iş ortakları ağınız genelinde RFQ'ları, sözleşmeleri, satın alma emirlerini ve faturaları düzenleyerek bir tedarik iş akışı sağlar_
 - [Hyperledger Besu](https://www.hyperledger.org/use/besu) - _Apache 2.0 lisansı altında geliştirilen, Java ile yazılmış kurumsal odaklı açık kaynaklı bir Ethereum istemcisidir_
-- [Infura](https://infura.io/) - _Ethereum ve IPFS ağlarına ölçeklenebilir API erişimi sunar_
+- [Infura](https://www.infura.io/) - _Ethereum ve IPFS ağlarına ölçeklenebilir API erişimi sunar_
 - [Kaleido](https://kaleido.io/) - _basitleştirilmiş blokzincir ve dijital varlık uygulamaları sunan işletme odaklı bir geliştirme platformudur_
 - [NodeReal](https://nodereal.io/) - _Web3 ekosistemi için ölçeklenebilir blokzincir altyapısı ve API hizmetleri sağlayıcısı sunar_
 - [Moralis](http://moralis.io/) - _kurumsal düzeyde API'ler ve SOC2 tip 2 sertifikasına sahip Düğümler_

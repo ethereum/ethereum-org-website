@@ -57,7 +57,7 @@ IPFS est un système distribué pour stocker et accéder aux fichiers, sites Web
 - [IPFS](https://docs.ipfs.io/concepts/what-is-ipfs/)
 - [Pinata](https://www.pinata.cloud/) _(service d'épinglage IPFS)_
 - [web3.storage](https://web3.storage/) _(service d'épinglage IPFS/Filecoin)_
-- [Infura](https://infura.io/product/ipfs) _(service d'épinglage IPFS)_
+- [Infura](https://www.infura.io/product/ipfs) _(service d'épinglage IPFS)_
 - [IPFS Scan](https://ipfs-scan.io) _(explorateur IPFS pinning)_
 - [4EVERLAND](https://www.4everland.org/)_ (service d'épinglage IPFS) _
 - [Filebase](https://filebase.com) _(Service d'épinglage IPFS)_

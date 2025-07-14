@@ -46,7 +46,7 @@ sidebarDepth: 1
 ## 프로토콜 및 인프라 {#protocol-and-infrastructure}
 
 - [하이퍼레저 베수(Hyperledger Besu)](https://www.hyperledger.org/projects/besu) _Apache 2.0 라이선스에 따라 개발되고 Java로 작성된 오픈 소스 이더리움 클라이언트_
-- [인퓨라(Infura)](https://infura.io/) _이더리움 및 IPFS 네트워크에 대한 확장 가능한 API 액세스_
+- [인퓨라(Infura)](https://www.infura.io/) _이더리움 및 IPFS 네트워크에 대한 확장 가능한 API 액세스_
 - [칼레이도(Kaleido)](https://kaleido.io/) _클라우드를 교차하는 하이브리드 엔터프라이즈 생태계를 구축하고 실행하기 위한 전체 스택 플랫폼_
 - [오토니티(Autonity)](https://www.clearmatics.com/about/) _P2P 프로토콜을 구현하고 클라이언트 소프트웨어 및 인프라를 제공하는 프로토콜 모음_
 - [체인스택(Chainstack)](https://chainstack.com/) _기업이 탈중앙화된 네트워크 및 서비스를 신속하게 구축, 배포, 관리할 수 있도록 지원하는 멀티 클라우드 및 멀티 프로토콜 PaaS(Platform as a Service)_

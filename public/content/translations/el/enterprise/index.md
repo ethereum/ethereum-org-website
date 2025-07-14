@@ -56,7 +56,7 @@ lang: el
 - [Envision Blockchain](https://envisionblockchain.com/) - _παρέχει συμβουλευτικές και αναπτυξιακές υπηρεσίες με επίκεντρο τις επιχειρήσεις, με εξειδίκευση στο Ethereum Mainnet_
 - [EY OpsChain](https://blockchain.ey.com/products/contract-manager) - _παρέχει μια ροή εργασίας προμηθειών εκδίδοντας RFQ, συμβόλαια, παραγγελίες αγοράς και τιμολόγια σε όλο το δίκτυο αξιόπιστων επιχειρηματικών συνεργατών σας_
 - [Hyperledger Besu](https://www.hyperledger.org/use/besu) - _ένα πρόγραμμα-πελάτης ανοιχτού κώδικα Ethereum με επίκεντρο τις επιχειρήσεις, που αναπτύχθηκε με την άδεια Apache 2.0 και είναι γραμμένο σε Java_
-- [Infura](https://infura.io/) - _κλιμακωτή πρόσβαση API στα δίκτυα Ethereum και IPFS_
+- [Infura](https://www.infura.io/) - _κλιμακωτή πρόσβαση API στα δίκτυα Ethereum και IPFS_
 - [Kaleido](https://kaleido.io/) - _μια πλατφόρμα ανάπτυξης που εστιάζει σε επιχειρήσεις και προσφέρει απλοποιημένες εφαρμογές blockchain και ψηφιακών περιουσιακών στοιχείων_
 - [Moralis](http://moralis.io/) - _API και κόμβοι εταιρικού επιπέδου με πιστοποίηση SOC2 τύπου 2_
 - [Nightfall](https://github.com/EYBlockchain/nightfall_3) - _μια εφαρμογή για τη μεταφορά εφαρμογών ERC20, ERC721 και ERC1155 σε περιβάλλον Zero Knowledge, χρησιμοποιώντας ένα Optimistic Rollup, από την Ernst & Young_

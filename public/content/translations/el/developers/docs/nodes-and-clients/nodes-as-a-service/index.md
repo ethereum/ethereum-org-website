@@ -208,8 +208,8 @@ sidebarDepth: 2
     - Άμεση υποστήριξη 24/7
     - Πρόσβαση σε 50+ κόμβους blockchain
 
-- [**Infura**](https://infura.io/)
-  - [Έγγραφα](https://infura.io/docs)
+- [**Infura**](https://www.infura.io/)
+  - [Έγγραφα](https://www.infura.io/docs)
   - Χαρακτηριστικά
     - Ελεύθερη επιλογή κατηγορίας
     - Σταδιακή κλιμάκωση

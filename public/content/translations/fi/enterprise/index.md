@@ -46,7 +46,7 @@ Seuraavat projektit tarjoavat lohkoketjupalveluja yritystason järjestelmille:
 ## Protokolla ja Infrastruktuuri {#protocol-and-infrastructure}
 
 - [Hyperledger Besu](https://www.hyperledger.org/projects/besu) _avoimella lähdekoodilla oleva Ethereum-asiakasohjelma, joka on kehitetty Apache 2.0 -lisenssillä ja kirjoitettu Javalla_
-- [Infura](https://infura.io/) _skaalattava API-yhteys Ethereumiin ja IPFS-verkkoihin_
+- [Infura](https://www.infura.io/) _skaalattava API-yhteys Ethereumiin ja IPFS-verkkoihin_
 - [Kaleido](https://kaleido.io/) _full-stack-alusta cross-cloud, hybridi yritysekosysteemien rakentamiseen ja ajamiseen_
 - [Autonity](https://www.clearmatics.com/about/) _protokollakokoelma, joka toteuttaa p2p-protokollat ja tarjoaa asiakasohjelmiston ja infrastruktuurin_
 - [Chainstack](https://chainstack.com/) _multi-cloud ja multi-protocol PaaS-alusta, joka mahdollistaa yrityksille hajautettujen verkkojen ja palvelujen nopean rakentamisen, julkaisun ja hallinnan_

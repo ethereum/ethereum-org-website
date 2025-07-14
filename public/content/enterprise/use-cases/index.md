@@ -133,7 +133,7 @@ Most new blockchain applications are being built on [Layer 2](/layer-2) chains. 
 - [Envision Blockchain](https://envisionblockchain.com/) - _provides enterprise focused consulting and development services specializing in Ethereum Mainnet_
 - [EY OpsChain](https://blockchain.ey.com/products/contract-manager) - _provides a procurement workflow by issuing RFQ’s, contracts, purchase orders, and invoices across your network of trusted business partners_
 - [Hyperledger Besu](https://www.hyperledger.org/use/besu) - _an enterprise focused open-source Ethereum client developed under the Apache 2.0 license and written in Java_
-- [Infura](https://infura.io/) - _scalable API access to the Ethereum and IPFS networks_
+- [Infura](https://www.infura.io/) - _scalable API access to the Ethereum and IPFS networks_
 - [Kaleido](https://kaleido.io/) - _an enterprise-focused development platform that offers simplified blockchain and digital asset applications_
 - [Moralis](http://moralis.io/) - _enterprise grade APIs and Nodes with a SOC2 type 2 certification_
 - [Nightfall](https://github.com/EYBlockchain/nightfall_3) - _an application for transferring ERC20, ERC721 and ERC1155 applications under Zero Knowledge, using an Optimistic Rollup, from Ernst & Young_

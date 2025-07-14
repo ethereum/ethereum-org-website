@@ -35,7 +35,7 @@ Pustaka ini menyederhanakan banyak kerumitan dalam interaksi langsung dengan nod
 **Infura -** **_API Ethereum sebagai layanan._**
 
 - [infura.io](https://infura.io)
-- [Dokumentasi](https://infura.io/docs)
+- [Dokumentasi](https://www.infura.io/docs)
 - [GitHub](https://github.com/INFURA)
 
 **Gateway Ethereum untuk Cloudfare.**

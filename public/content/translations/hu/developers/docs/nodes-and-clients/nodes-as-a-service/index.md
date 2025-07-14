@@ -208,8 +208,8 @@ Az alábbiak a legnépszerűbb Ethereum-csomópontszolgáltatók – ha ismer ol
     - Közvetlen, napi 24 órás támogatás a hét minden napján
     - Hozzáférés több mint 50 blokklánc-csomóponthoz
 
-- [**Infura**](https://infura.io/)
-  - [Dokumentáció](https://infura.io/docs)
+- [**Infura**](https://www.infura.io/)
+  - [Dokumentáció](https://www.infura.io/docs)
   - Jellemzők
     - Ingyenes opció
     - Menet közbeni méretezés

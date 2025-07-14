@@ -46,7 +46,7 @@ Daugiau išsamios informacijos rasite šiuose straipsniuose:
 ## Protokolas ir infrastruktūra {#protocol-and-infrastructure}
 
 - [Hyperledger Besu](https://www.hyperledger.org/projects/besu) _atviro kodo Ethereum klientas, sukurtas pagal Apache 2.0 licenciją ir parašytas Java kalba_
-- [Infura](https://infura.io/) _palaipsnė API prieiga prie Ethereum ir IPFS tinklų_
+- [Infura](https://www.infura.io/) _palaipsnė API prieiga prie Ethereum ir IPFS tinklų_
 - [Kaleido](https://kaleido.io/) _full-stack platforma, skirta kurti ir valdyti tarpdebesines hibridines įmonių ekosistemas_
 - [Autonity](https://www.clearmatics.com/about/) _protokolų rinkinys, vykdantis p2p protokolus ir teikiantis kliento programinę įrangą bei infrastruktūrą_
 - [Chainstack](https://chainstack.com/) _daugiadebesinė ir daugiaprotokolinė platforma kaip paslauga, leidžianti verslui greitai sukurti, įdiegti ir valdyti decentralizuotus tinklus ir paslaugas_

@@ -208,8 +208,8 @@ sidebarDepth: 2
     - 全年無休直接支援
     - 存取超過 50 個區塊鏈節點
 
-- [**Infura**](https://infura.io/)
-  - [文件](https://infura.io/docs)
+- [**Infura**](https://www.infura.io/)
+  - [文件](https://www.infura.io/docs)
   - 特色功能
     - 免費方案選項
     - 隨時擴容
