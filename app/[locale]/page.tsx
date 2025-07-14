@@ -35,6 +35,7 @@ import Twitter from "@/components/icons/twitter.svg"
 import Whitepaper from "@/components/icons/whitepaper.svg"
 import { Image } from "@/components/Image"
 import CardImage from "@/components/Image/CardImage"
+import IntersectionObserverReveal from "@/components/IntersectionObserverReveal"
 import MainArticle from "@/components/MainArticle"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import SvgButtonLink, {
@@ -649,14 +650,16 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           </SectionContent>
 
           {/* dynamic / lazy loaded */}
-          <ValuesMarquee
-            pairings={valuesPairings}
-            eventCategory={eventCategory}
-            categoryLabels={{
-              ethereum: tCommon("ethereum"),
-              legacy: t("page-index-values-legacy"),
-            }}
-          />
+          <IntersectionObserverReveal rootMargin="-50% 0px 0px 0px">
+            <ValuesMarquee
+              pairings={valuesPairings}
+              eventCategory={eventCategory}
+              categoryLabels={{
+                ethereum: tCommon("ethereum"),
+                legacy: t("page-index-values-legacy"),
+              }}
+            />
+          </IntersectionObserverReveal>
         </Section>
 
         {/* Builders - Blockchain's biggest builder community */}
