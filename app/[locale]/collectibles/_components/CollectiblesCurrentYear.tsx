@@ -67,7 +67,7 @@ const CollectiblesCurrentYear: React.FC<CollectiblesCurrentYearProps> = async ({
           {/* First row: Developer & Writing */}
           <div className="mt-4 flex flex-col gap-6 md:flex-row">
             {/* Developer */}
-            <div className="flex w-[50%] flex-col">
+            <div className="flex w-full flex-col md:w-[50%]">
               <div className="flex h-full flex-1 flex-row items-start rounded-xl bg-white dark:bg-transparent">
                 {developerBadge && (
                   <a
@@ -108,7 +108,7 @@ const CollectiblesCurrentYear: React.FC<CollectiblesCurrentYearProps> = async ({
               </div>
               <Link
                 href="https://github.com/ethereum/ethereum-org-website/issues"
-                className="w-full rounded-lg bg-[#F5F6FA] px-4 py-1.5 text-xs font-bold text-[#A259FF] no-underline shadow transition-colors hover:bg-[#E5E7EB] md:text-sm dark:bg-[#23202A] dark:text-[#A259FF] dark:hover:bg-[#2D2536]"
+                className="mt-4 w-full rounded-lg bg-[#F5F6FA] px-4 py-1.5 text-xs font-bold text-[#A259FF] no-underline shadow transition-colors hover:bg-[#E5E7EB] md:mt-0 md:text-sm dark:bg-[#23202A] dark:text-[#A259FF] dark:hover:bg-[#2D2536]"
               >
                 <img
                   src={lightningImg.src}
@@ -119,7 +119,7 @@ const CollectiblesCurrentYear: React.FC<CollectiblesCurrentYearProps> = async ({
               </Link>
             </div>
             {/* Writing */}
-            <div className="flex w-[50%] flex-col">
+            <div className="flex w-full flex-col md:w-[50%]">
               <div className="flex h-full flex-1 flex-row items-start rounded-xl bg-white dark:bg-transparent">
                 {writingBadge && (
                   <a
@@ -152,7 +152,7 @@ const CollectiblesCurrentYear: React.FC<CollectiblesCurrentYearProps> = async ({
               </div>
               <Link
                 href="/contributing/#how-to-update-content"
-                className="w-full rounded-lg bg-[#F5F6FA] px-4 py-1.5 text-xs font-bold text-[#A259FF] no-underline shadow transition-colors hover:bg-[#E5E7EB] md:text-sm dark:bg-[#23202A] dark:text-[#A259FF] dark:hover:bg-[#2D2536]"
+                className="mt-4 w-full rounded-lg bg-[#F5F6FA] px-4 py-1.5 text-xs font-bold text-[#A259FF] no-underline shadow transition-colors hover:bg-[#E5E7EB] md:mt-0 md:text-sm dark:bg-[#23202A] dark:text-[#A259FF] dark:hover:bg-[#2D2536]"
               >
                 <img
                   src={lightningImg.src}
@@ -166,7 +166,7 @@ const CollectiblesCurrentYear: React.FC<CollectiblesCurrentYearProps> = async ({
           {/* Second row: Design & GitPOAP */}
           <div className="mt-4 flex flex-col gap-6 md:flex-row">
             {/* Design */}
-            <div className="flex w-[50%] flex-col">
+            <div className="flex w-full flex-col md:w-[50%]">
               <div className="flex h-full flex-1 flex-row items-start rounded-xl bg-white dark:bg-transparent">
                 {designBadge && (
                   <a
@@ -203,7 +203,7 @@ const CollectiblesCurrentYear: React.FC<CollectiblesCurrentYearProps> = async ({
               </div>
               <Link
                 href="/contributing/design/"
-                className="w-full rounded-lg bg-[#F5F6FA] px-4 py-1.5 text-xs font-bold text-[#A259FF] no-underline shadow transition-colors hover:bg-[#E5E7EB] md:text-sm dark:bg-[#23202A] dark:text-[#A259FF] dark:hover:bg-[#2D2536]"
+                className="mt-4 w-full rounded-lg bg-[#F5F6FA] px-4 py-1.5 text-xs font-bold text-[#A259FF] no-underline shadow transition-colors hover:bg-[#E5E7EB] md:mt-0 md:text-sm dark:bg-[#23202A] dark:text-[#A259FF] dark:hover:bg-[#2D2536]"
               >
                 <img
                   src={lightningImg.src}
@@ -214,7 +214,7 @@ const CollectiblesCurrentYear: React.FC<CollectiblesCurrentYearProps> = async ({
               </Link>
             </div>
             {/* GitPOAP */}
-            <div className="flex w-[50%] flex-col">
+            <div className="flex w-full flex-col md:w-[50%]">
               <div className="flex h-full flex-1 flex-row items-start rounded-xl bg-white dark:bg-transparent">
                 {gitpoapBadge && (
                   <a
@@ -247,7 +247,7 @@ const CollectiblesCurrentYear: React.FC<CollectiblesCurrentYearProps> = async ({
               </div>
               <Link
                 href="https://github.com/ethereum/ethereum-org-website/issues"
-                className="w-full rounded-lg bg-[#F5F6FA] px-4 py-1.5 text-xs font-bold text-[#A259FF] no-underline shadow transition-colors hover:bg-[#E5E7EB] md:text-sm dark:bg-[#23202A] dark:text-[#A259FF] dark:hover:bg-[#2D2536]"
+                className="mt-4 w-full rounded-lg bg-[#F5F6FA] px-4 py-1.5 text-xs font-bold text-[#A259FF] no-underline shadow transition-colors hover:bg-[#E5E7EB] md:mt-0 md:text-sm dark:bg-[#23202A] dark:text-[#A259FF] dark:hover:bg-[#2D2536]"
               >
                 <img
                   src={lightningImg.src}
@@ -273,8 +273,8 @@ const CollectiblesCurrentYear: React.FC<CollectiblesCurrentYearProps> = async ({
           <div className="mb-6 text-left text-sm text-gray-500 dark:text-gray-300">
             {t("page-collectibles-translations-desc")}
           </div>
-          <div className="mt-4 flex flex-col gap-6 md:flex-row">
-            <div className="flex w-[50%] flex-col">
+          <div className="mt-4 flex gap-6 md:flex-row">
+            <div className="flex w-full flex-col md:w-[50%]">
               <div className="flex h-full flex-1 flex-row items-start rounded-xl bg-white dark:bg-transparent">
                 <a
                   href={translationBadge.link}
@@ -317,7 +317,7 @@ const CollectiblesCurrentYear: React.FC<CollectiblesCurrentYearProps> = async ({
               </div>
               <Link
                 href="/contributing/translation-program/"
-                className="w-full rounded-lg bg-[#F5F6FA] px-4 py-1.5 text-xs font-bold text-[#A259FF] no-underline shadow transition-colors hover:bg-[#E5E7EB] md:text-sm dark:bg-[#23202A] dark:text-[#A259FF] dark:hover:bg-[#2D2536]"
+                className="mt-4 w-full rounded-lg bg-[#F5F6FA] px-4 py-1.5 text-xs font-bold text-[#A259FF] no-underline shadow transition-colors hover:bg-[#E5E7EB] md:mt-0 md:text-sm dark:bg-[#23202A] dark:text-[#A259FF] dark:hover:bg-[#2D2536]"
               >
                 <img
                   src={lightningImg.src}
@@ -343,11 +343,11 @@ const CollectiblesCurrentYear: React.FC<CollectiblesCurrentYearProps> = async ({
           {t("page-collectibles-social-desc")}
         </div>
         <div className="mt-4 flex flex-wrap gap-2">
-          {socialBadges.map((badge: unknown) => {
+          {socialBadges.map((badge) => {
             return (
               <div
                 key={badge.id}
-                className="flex h-full w-full min-w-[220px] flex-col items-center rounded-xl bg-white p-4 sm:w-[48%] md:w-[32%] lg:w-[24%] xl:w-[18%] dark:bg-transparent"
+                className="flex w-[48%] w-full flex-col items-center rounded-xl bg-white p-4 md:w-[32%] lg:w-[24%] xl:w-[18%] dark:bg-transparent"
               >
                 <a
                   href={badge.link}

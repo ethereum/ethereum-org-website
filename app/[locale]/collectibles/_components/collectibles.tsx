@@ -66,7 +66,7 @@ const CollectiblesPage: React.FC<CollectiblesPageProps> = async ({
       />
 
       {/* Already a contributor? + Improve ethereum.org + Stats section */}
-      <section className="mb-8 mt-16 flex w-full items-stretch justify-center py-0 dark:bg-black">
+      <section className="mb-8 mt-2 flex w-full items-stretch justify-center py-0 md:mt-8 dark:bg-black">
         <div className="flex w-full flex-col gap-6 px-4 md:flex-row">
           {/* Improve Card */}
           <div className="flex flex-[2] flex-col rounded-2xl border border-[#E5D6FF] bg-[#F6F1FF] px-8 py-12 shadow-lg dark:border-[#3B2C4A] dark:bg-gradient-to-br dark:from-[#2B2233] dark:to-[#4B3269] dark:text-[#F3F3F5]">
@@ -122,9 +122,9 @@ const CollectiblesPage: React.FC<CollectiblesPageProps> = async ({
       </section>
 
       {/* How it works + Already a contributor? section */}
-      <section className="mx-auto mb-8 flex w-full flex-col gap-8 px-4 xl:flex-row xl:items-start xl:justify-center dark:bg-black">
+      <section className="mx-auto mb-8 flex w-full flex-col gap-8 px-4 lg:flex-row lg:items-start lg:justify-center dark:bg-black">
         {/* Already a contributor? card */}
-        <div className="flex w-full max-w-xs flex-col rounded-2xl border border-[#E5D6FF] bg-[#F6F1FF] px-6 py-6 shadow xl:mt-0 xl:self-start dark:border-[#2D2536] dark:bg-gradient-to-br dark:from-[#2B3A4B] dark:to-[#1B2A3A] dark:text-white dark:shadow-[0_0_12px_#4FC3FF]">
+        <div className="mx-auto flex w-full flex-col rounded-2xl border border-[#E5D6FF] bg-[#F6F1FF] px-6 py-6 shadow lg:max-w-xs xl:mt-0 xl:self-start dark:border-[#2D2536] dark:bg-gradient-to-br dark:from-[#2B3A4B] dark:to-[#1B2A3A] dark:text-white dark:shadow-[0_0_12px_#4FC3FF]">
           <Image
             src={alreadyContributorImg}
             alt="Already a contributor?"
@@ -149,7 +149,7 @@ const CollectiblesPage: React.FC<CollectiblesPageProps> = async ({
             <h2 className="mb-12 text-2xl font-bold text-[#3B2C4A] dark:text-white">
               {t("page-collectibles-how-title")}
             </h2>
-            <div className="mb-6 flex flex-col items-center justify-center gap-8 md:flex-row md:gap-12 dark:text-white">
+            <div className="mb-6 flex flex-col items-center justify-center gap-8 sm:flex-row sm:gap-12 dark:text-white">
               {steps.map((step, idx) => {
                 return (
                   <div
