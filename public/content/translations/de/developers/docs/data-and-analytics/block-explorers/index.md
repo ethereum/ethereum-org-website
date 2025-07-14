@@ -15,7 +15,7 @@ Sie sollten das Basiskonzept von Ethereum verstehen, damit Sie die Daten, die Si
 
 - [Etherscan](https://etherscan.io/) -_Auch in Chinesisch, Koreanisch, Russisch und Japanisch verfügbar_
 - [3xpl](https://3xpl.com/ethereum)
-- [Beaconcha.in](https://beaconcha.in/)
+- [Beaconcha.in](https://www.beaconcha.in/)
 - [Blockchair](https://blockchair.com/ethereum) -_Auch in Spanisch, Französisch, Italienisch, Niederländisch, Portugiesisch, Russisch, Chinesisch und Farsi verfügbar_
 - [Blockscout](https://eth.blockscout.com/)
 - [Chainlens](https://www.chainlens.com/)
@@ -242,7 +242,7 @@ Die Daten der obersten Ebene der Konsensebene umfassen Folgendes:
 - [Etherscan Sepolia](https://sepolia.etherscan.io/) - ein Block-Explorer, mit dem Sie Daten für das Sepolia Testnet abrufen können
 - [Etherscan Hoodi](https://hoodi.etherscan.io/) - ein Block-Explorer, mit dem Sie Daten für das Hoodi Testnet abrufen können
 - [3xpl](https://3xpl.com/ethereum) – ein werbefreier Open-Source-Ethereum-Explorer, der den Download seiner Datensätze erlaubt
-- [Beaconcha.in](https://beaconcha.in/) - ein Open-Source-Block-Explorer für Ethereum Mainnet
+- [Beaconcha.in](https://www.beaconcha.in/) - ein Open-Source-Block-Explorer für Ethereum Mainnet
 - [Blockchair](https://blockchair.com/ethereum) – Der privateste Ethereum-Explorer. Auch zum Sortieren und Filtern von (Mempool-) Daten
 - [Etherchain](https://www.etherchain.org/) - Ein Block-Explorer für das Ethereum Mainnet
 - [Ethplorer](https://ethplorer.io/) - ein Block-Explorer mit Fokus auf Token für das Ethereum Mainnet

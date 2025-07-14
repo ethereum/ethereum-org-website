@@ -15,7 +15,7 @@ Először meg kellene értened az Ethereum alapvető fogalmait ahhoz, hogy érte
 
 - [Etherscan](https://etherscan.io/) –_ elérhető kínai, koreai, orosz és japán nyelven is_
 - [3xpl](https://3xpl.com/ethereum)
-- [Beaconcha.in](https://beaconcha.in/)
+- [Beaconcha.in](https://www.beaconcha.in/)
 - [Blockchair](https://blockchair.com/ethereum) –_ Spanyol, francia, olasz, holland, portugál, orosz, kínai és fárszi nyelven is elérhető_
 - [Blockscout](https://eth.blockscout.com/)
 - [Chainlens](https://www.chainlens.com/)
@@ -240,7 +240,7 @@ A konszenzusréteg felső szintű adatai a következők:
 
 - [Etherscan](https://etherscan.io/) – egy blokkfelfedező, amelyben adatokat kérhet le az Ethereum-főhálózatról és a Sepolia tesztelőhálózatról.
 - [3xpl](https://3xpl.com/ethereum) - reklámmentes nyílt forráskódú Ethereum felfedező, melyből le lehet tölteni az adatokat
-- [Beaconcha.in](https://beaconcha.in/) – egy nyílt forráskódú blokkfelfedező az Ethereum főhálózatra és a Sepolia teszthálózatra
+- [Beaconcha.in](https://www.beaconcha.in/) – egy nyílt forráskódú blokkfelfedező az Ethereum főhálózatra és a Sepolia teszthálózatra
 - [Blockchair](https://blockchair.com/ethereum) – a legdiszkrétebb Ethereum-felfedező. Alkalmas (memóriakészlet) adatok szűrésére és válogatására is
 - [Etherchain](https://www.etherchain.org/) – egy Ethereum-főhálózati blokkfelfedező
 - [Ethplorer](https://ethplorer.io/) – egy blokkfelfedező, amely az Ethereum-főhálózaton és a Sepolia tesztelőhálózaton található tokenekre fókuszál

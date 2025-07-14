@@ -13,7 +13,9 @@
       "WebFetch(domain:ethernodes.org)",
       "WebFetch(domain:www.infura.io)",
       "Bash(mkdir:*)",
-      "Bash(find:*)"
+      "Bash(find:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
     ],
     "deny": []
   }

@@ -246,7 +246,7 @@ Datele din nivelul cel mai de sus al stratului de consens includ următoarele:
 
 - [Etherscan](https://etherscan.io/) – un explorator de blocuri pe care îl puteți utiliza pentru Mainnet-ul Ethereum și Testnet-ul Sepolia.
 - [3xpl](https://3xpl.com/ethereum) – un explorator Ethereum open source fără reclame, care vă permite să vă descărcați propriile seturi de date.
-- [Beaconcha.in](https://beaconcha.in/) – un explorator de blocuri open source pentru Mainnet și Testnet-ul Sepolia.
+- [Beaconcha.in](https://www.beaconcha.in/) – un explorator de blocuri open source pentru Mainnet și Testnet-ul Sepolia.
 - [Blockchair](https://blockchair.com/ethereum) - cel mai privat explorator Ethereum. De asemenea, pentru sortarea și filtrarea datelor (mempool).
 - [Etherchain](https://www.etherchain.org/) – un explorator de bloc pentru Mainnet-ul Ethereum.
 - [Ethplorer](https://ethplorer.io/) – un explorator de bloc ce se axează pe tokenuri pentru Mainnet-ul Ethereum și testnet-ul Sepolia.
@@ -261,7 +261,7 @@ Datele din nivelul cel mai de sus al stratului de consens includ următoarele:
 
 ## Exploratorii de blocuri ale Lanțului Beacon (nivelului de consens) {#beacon-chain-block-explorers}
 
-- [https://beaconcha.in/](https://beaconcha.in/)
+- [https://www.beaconcha.in/](https://www.beaconcha.in/)
 - [https://beaconscan.com/](https://beaconscan.com/)
 - [https://ethscan.org/](https://ethscan.org/) (fork al beaconcha.in)
 

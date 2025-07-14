@@ -15,7 +15,7 @@ Es necesario que comprenda los conceptos básicos de Ethereum para poder entende
 
 - [Etherscan](https://etherscan.io/) -_También disponible en chino, coreano, ruso y japonés_
 - [3xpl](https://3xpl.com/ethereum)
-- [Beaconcha.in](https://beaconcha.in/)
+- [Beaconcha.in](https://www.beaconcha.in/)
 - [Blockchair](https://blockchair.com/ethereum) -_También disponible en inglés, francés, italiano, neerlandés, portugués, ruso, chino y farsi_
 - [Blockscout](https://eth.blockscout.com/)
 - [Chainlens](https://www.chainlens.com/)
@@ -239,7 +239,7 @@ Los datos de nivel superior de la capa de consenso incluyen lo siguiente:
 
 - [Etherscan](https://etherscan.io/): Un explorador de bloques que puede usar para buscar datos de la red principal de Ethereum y la red de pruebas Sepolia y Hoodi
 - [3xpl](https://3xpl.com/ethereum): Un explorador de Ethereum de código abierto sin anuncios que permite descargar sus conjuntos de datos
-- [Beaconcha.in](https://beaconcha.in/): Un explorador de bloques de código abierto para la red principal de Ethereum y las redes de pruebas Sepolia y Hoodi
+- [Beaconcha.in](https://www.beaconcha.in/): Un explorador de bloques de código abierto para la red principal de Ethereum y las redes de pruebas Sepolia y Hoodi
 - [Blockchair](https://blockchair.com/ethereum): El explorador de Ethereum más privado. También para clasificación y filtrado de datos (mempool)
 - [Etherchain](https://www.etherchain.org/): Un explorador de bloques para la red principal de Ethereum
 - [Ethplorer](https://ethplorer.io/): Un explorador de bloques con enfoque en tokens para la red principal de Ethereum y la red de pruebas Sepolia

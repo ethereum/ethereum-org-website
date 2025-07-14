@@ -246,7 +246,7 @@ Dane najwyższego poziomu Eth2 obejmują:
 
 - [Etherscan](https://etherscan.io/) – eksplorator bloków, którego możesz użyć do pobrania danych dla głównej sieci Ethereum i sieci testowej Sepolia.
 - [3xpl](https://3xpl.com/ethereum) – eksplorator Ethereum typu open source bez reklam, pozwalający na pobieranie własnych zestawów danych.
-- [Beaconcha.in](https://beaconcha.in/) – eksplorator bloków open source dla sieci głównej Ethereum i sieci testowej Sepolia.
+- [Beaconcha.in](https://www.beaconcha.in/) – eksplorator bloków open source dla sieci głównej Ethereum i sieci testowej Sepolia.
 - [Blockchair](https://blockchair.com/ethereum) – najbardziej prywatny eksplorator Ethereum. Także do sortowania i filtrowania danych (mempool).
 - [Etherchain](https://www.etherchain.org/) – eksplorator bloków dla głównej sieci Ethereum.
 - [Ethplorer](https://ethplorer.io/) – eksplorator bloków z naciskiem na tokeny dla głównej sieci Ethereum i sieci testowej Sepolia.
@@ -263,7 +263,7 @@ Dane najwyższego poziomu Eth2 obejmują:
 
 ## Eksploratory bloków Eth2 {#beacon-chain-block-explorers}
 
-- [https://beaconcha.in/](https://beaconcha.in/)
+- [https://www.beaconcha.in/](https://www.beaconcha.in/)
 - [https://beaconscan.com/](https://beaconscan.com/)
 
 ## Dalsza lektura {#further-reading}

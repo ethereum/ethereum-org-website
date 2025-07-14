@@ -15,7 +15,7 @@ You should understand the basic concepts of Ethereum so you can make sense of th
 
 - [Etherscan](https://etherscan.io/) -_Also available in Chinese, Korean, Russian, and Japanese_
 - [3xpl](https://3xpl.com/ethereum)
-- [Beaconcha.in](https://beaconcha.in/)
+- [Beaconcha.in](https://www.beaconcha.in/)
 - [Blockchair](https://blockchair.com/ethereum) -_Also available in Spanish, French, Italian, Dutch, Portuguese, Russian, Chinese, and Farsi_
 - [Blockscout](https://eth.blockscout.com/)
 - [Chainlens](https://www.chainlens.com/)
@@ -240,7 +240,7 @@ The consensus layer top-level data includes the following:
 
 - [Etherscan](https://etherscan.io/) - a block explorer you can use to fetch data for Ethereum Mainnet and Testnet
 - [3xpl](https://3xpl.com/ethereum) - an ad-free open-source Ethereum explorer which allows downloading its datasets
-- [Beaconcha.in](https://beaconcha.in/) - an open source block explorer for Ethereum Mainnet and Testnet
+- [Beaconcha.in](https://www.beaconcha.in/) - an open source block explorer for Ethereum Mainnet and Testnet
 - [Blockchair](https://blockchair.com/ethereum) - the most private Ethereum explorer. Also for sorting and filtering (mempool) data
 - [Etherchain](https://www.etherchain.org/) - a block explorer for the Ethereum Mainnet
 - [Ethplorer](https://ethplorer.io/) - a block explorer with a focus on tokens for the Ethereum Mainnet and the Kovan testnet

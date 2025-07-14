@@ -15,7 +15,7 @@ sidebarDepth: 3
 
 - [Etherscan](https://etherscan.io/) -_διαθέσιμο στα Κινεζικά, Κορεατικά, Ρωσικά και Ιαπωνικά_
 - [3xpl](https://3xpl.com/ethereum)
-- [Beaconcha.in](https://beaconcha.in/)
+- [Beaconcha.in](https://www.beaconcha.in/)
 - [Blockchair](https://blockchair.com/ethereum) -_διαθέσιμο στα Ισπανικά, Γαλλικά, Ιταλικά, Ολλανδικά, Πορτογαλικά, Ρωσικά, Κινέζικα και Φαρσί_
 - [Blockscout](https://eth.blockscout.com/)
 - [Chainlens](https://www.chainlens.com/)
@@ -240,7 +240,7 @@ sidebarDepth: 3
 
 - [Etherscan](https://etherscan.io/) - ένας εξερευνητής μπλοκ που μπορείτε να χρησιμοποιήσετε για την ανάκτηση δεδομένων για το Ethereum Mainnet και το Goerli Testnet
 - [3xpl](https://3xpl.com/ethereum): Ένας ανοιχτού κώδικα εξερευνητής Ethereum χωρίς διαφημίσεις που επιτρέπει τη λήψη των συνόλων δεδομένων του.
-- [Beaconcha.in](https://beaconcha.in/): Ένας ανοιχτού κώδικα εξερευνητής μπλοκ για το κύριο δίκτυο του Ethereum και το δοκιμαστικό δίκτυο Goerli.
+- [Beaconcha.in](https://www.beaconcha.in/): Ένας ανοιχτού κώδικα εξερευνητής μπλοκ για το κύριο δίκτυο του Ethereum και το δοκιμαστικό δίκτυο Goerli.
 - [Blockchair](https://blockchair.com/ethereum): ο πιο ιδιωτικός εξερευνητής Ethereum. Επίσης για ταξινόμηση και φιλτράρισμα δεδομένων του mempool.
 - [Etherchain](https://www.etherchain.org/) - ένας εξερευνητής μπλοκ για το κεντρικό δίκτυο του Ethereum
 - [Ethplorer](https://ethplorer.io/): Ένας εξερευνητής μπλοκ με έμφαση στα tokens για το κύριο δίκτυο του Ethereum και το δοκιμαστικό δίκτυο Kovan.

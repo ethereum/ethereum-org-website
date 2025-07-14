@@ -15,7 +15,7 @@ Pour que les données fournies par un explorateur de blocs aient du sens, vous d
 
 - [Etherscan](https://etherscan.io/) - _Également disponible en chinois, coréen, russe et japonais_
 - [3xpl](https://3xpl.com/ethereum)
-- [Beaconcha.in](https://beaconcha.in/)
+- [Beaconcha.in](https://www.beaconcha.in/)
 - [Blockchair](https://blockchair.com/ethereum) - _Également disponible en espagnol, français, italien, néerlandais, portugais, russe, chinois et Farsi_
 - [Blockscout](https://eth.blockscout.com/)
 - [Chainlens](https://www.chainlens.com/)
@@ -242,7 +242,7 @@ Les données de couches de consensus de haut niveau comprennent les éléments s
 - [Etherscan Sepolia](https://sepolia.etherscan.io/) - un explorateur de blocs que vous pouvez utiliser pour récupérer des données pour le réseau de test Sepolia
 - [Etherscan Hoodi](https://hoodi.etherscan.io/) - un explorateur de blocs que vous pouvez utiliser pour récupérer des données pour le réseau de test Hoodi
 - [3xpl](https://3xpl.com/ethereum) - un explorateur Ethereum open source sans publicité qui permet de télécharger ses ensembles de données
-- [Beaconcha.in](https://beaconcha.in/) - un explorateur de blocs open source pour le réseau principal Ethereum
+- [Beaconcha.in](https://www.beaconcha.in/) - un explorateur de blocs open source pour le réseau principal Ethereum
 - [Blockchair](https://blockchair.com/ethereum) - l'explorateur Ethereum le plus privé. Également pour le tri et le filtrage des données (mempool)
 - [Etherchain](https://www.etherchain.org/) - un explorateur de blocs pour le réseau principal Ethereum
 - [Ethplorer](https://ethplorer.io/) - un explorateur de blocs axé sur les jetons pour le réseau principal Ethereum et le réseau de test Kovan

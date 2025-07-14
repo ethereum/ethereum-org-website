@@ -256,7 +256,7 @@ Data tingkat atas lapisan konsensus mencakup berikut ini:
 
 ## Penjelajah blok (lapisan konsensus) rantai suar {#beacon-chain-block-explorers}
 
-- [https://beaconcha.in/](https://beaconcha.in/)
+- [https://www.beaconcha.in/](https://www.beaconcha.in/)
 - [https://beaconscan.com/](https://beaconscan.com/)
 - [https://ethscan.org/](https://ethscan.org/) (fork beaconcha.in)
 

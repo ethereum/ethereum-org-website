@@ -15,7 +15,7 @@ sidebarDepth: 3
 
 - [Etherscan](https://etherscan.io/) -_ 还支持中文、韩语、俄语和日语_
 - [3xpl](https://3xpl.com/ethereum)
-- [Beaconcha.in](https://beaconcha.in/)
+- [Beaconcha.in](https://www.beaconcha.in/)
 - [Blockchair](https://blockchair.com/ethereum) -_ 还支持西班牙语、法语、意大利语、荷兰语、葡萄牙语、俄语、中文和波斯语_
 - [Blockscout](https://eth.blockscout.com/)
 - [Chainlens](https://www.chainlens.com/)
@@ -240,7 +240,7 @@ sidebarDepth: 3
 
 - [Etherscan](https://etherscan.io/) - 可以用来获取以太坊主网和 Sepolia 测试网数据的区块浏览器
 - [3xpl](https://3xpl.com/ethereum) - 无广告、开源的以太坊浏览器，允许你下载自己的数据集
-- [Beaconcha.in](https://beaconcha.in/) - 用于以太坊主网和 Sepolia 测试网的开源区块浏览器
+- [Beaconcha.in](https://www.beaconcha.in/) - 用于以太坊主网和 Sepolia 测试网的开源区块浏览器
 - [Blockchair](https://blockchair.com/ethereum) - 最具隐私保护性的以太坊浏览器。 也用于排序和过滤（内存池）数据
 - [Etherchain](https://www.etherchain.org/) - 以太坊主网的区块浏览器
 - [Ethplorer](https://ethplorer.io/) - 专注于以太坊主网和 Kovan 测试网代币的区块浏览器

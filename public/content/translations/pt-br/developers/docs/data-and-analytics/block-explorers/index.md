@@ -15,7 +15,7 @@ Você deve entender os conceitos básicos do Ethereum; para que você possa ente
 
 - [Etherscan](https://etherscan.io/) -_Também disponível em chinês, coreano, russo e japonês_
 - [3xpl](https://3xpl.com/ethereum)
-- [Beaconcha.in](https://beaconcha.in/)
+- [Beaconcha.in](https://www.beaconcha.in/)
 - [Blockchair](https://blockchair.com/ethereum) -_ Também disponível em espanhol, francês, italiano, holandês, português, russo, chinês e persa_
 - [Blockscout](https://eth.blockscout.com/)
 - [Chainlens](https://www.chainlens.com/)
@@ -240,7 +240,7 @@ Os dados de nível superior da camada consensual incluem os seguintes:
 
 - [Etherscan](https://etherscan.io/) - um explorador de bloco que você pode usar para buscar dados da rede principal Ethereum e rede de testes Goerli
 - [3xpl](https://3xpl.com/ethereum) - um explorador Ethereum de código aberto e sem anúncios que permite o download de seus conjuntos de dados
-- [Beaconcha.in](https://beaconcha.in/) - um explorador de bloco de código aberto para Ethereum Mainnet e Goerli Testnet
+- [Beaconcha.in](https://www.beaconcha.in/) - um explorador de bloco de código aberto para Ethereum Mainnet e Goerli Testnet
 - [Blockchair](https://blockchair.com/ethereum) - o explorador Ethereum mais privado. Também para classificação e filtragem de dados (mempool)
 - [Etherchain](https://www.etherchain.org/) - um explorador de blocos para a rede principal Ethereum
 - [Ethplorer](https://ethplorer.io/) - um explorador de blocos com foco nos tokens da rede principal Ethereum e rede de testes Kovan

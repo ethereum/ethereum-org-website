@@ -15,7 +15,7 @@ sidebarDepth: 3
 
 - [Etherscan](https://etherscan.io/) - 可以用來查詢以太坊主網和 Sepolia 測試網上的資料的區塊瀏覽器
 - [3xpl](https://3xpl.com/ethereum) - 無廣告、開源的以太坊區塊瀏覽器，允許下載自己的資料集
-- [Beaconcha.in](https://beaconcha.in/) - 開源的區塊瀏覽器，適用於以太坊主網和 Sepolia 測試網
+- [Beaconcha.in](https://www.beaconcha.in/) - 開源的區塊瀏覽器，適用於以太坊主網和 Sepolia 測試網
 - [Blockchair](https://blockchair.com/ethereum) -_也提供西班牙文、法文、義大利文、荷蘭文、葡萄牙文、俄文、中文及波斯文版_
 - [Blockscout](https://blockscout.com/) - 專注於以下網路：Gnosis、Optimism、ZKsync 等
 - [Chainlens](https://www.chainlens.com/)
@@ -240,7 +240,7 @@ sidebarDepth: 3
 
 - [Etherscan](https://etherscan.io/) - 可用於擷取以太坊主網及 Sepolia 測試網資料的區塊瀏覽器
 - [3xpl](https://3xpl.com/ethereum) - 一個允許下載其資料集的無廣告開源以太坊瀏覽器
-- [Beaconcha.in](https://beaconcha.in/) - 用於以太坊主網及 Sepolia 測試網的開源區塊瀏覽器
+- [Beaconcha.in](https://www.beaconcha.in/) - 用於以太坊主網及 Sepolia 測試網的開源區塊瀏覽器
 - [Blockchair](https://blockchair.com/ethereum) - 最私密的以太坊瀏覽器。 也用於排序和篩選（記憶體池）資料
 - [Etherchain](https://www.etherchain.org/) - 以太坊主網的區塊瀏覽器
 - [Ethplorer](https://ethplorer.io/) - 專為以太坊主網及 Sepolia 測試網代幣打造的區塊瀏覽器

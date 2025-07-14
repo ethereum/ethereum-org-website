@@ -12,7 +12,7 @@ lang: en
 
 ### Who is affected? {#who-is-affected}
 
-Anyone who runs a validator - this is likely someone who knows the index (e.g. [Validator #12345](https://beaconcha.in/validator/12345)) of a validator that they control. If you use a protocol to run a validator (e.g. Lido CSM or Rocket Pool), you will have to check with them to see if and when they support maxEB.
+Anyone who runs a validator - this is likely someone who knows the index (e.g. [Validator #12345](https://www.beaconcha.in/validator/12345)) of a validator that they control. If you use a protocol to run a validator (e.g. Lido CSM or Rocket Pool), you will have to check with them to see if and when they support maxEB.
 
 If you stake using a liquid staking token (e.g. rETH or stETH), no action is required or recommended.
 
@@ -26,7 +26,7 @@ A validator opts into the maxEB change by converting from **Type 1** to **Type 2
 
 ### What's a withdrawal credential? {#whats-a-withdrawal-credential}
 
-When you run a validator, you have a set of withdrawal credentials. These can be found in your deposit data json or you can view them on your validator's beaconcha.in [deposit tab](https://beaconcha.in/validator/12345#deposits).
+When you run a validator, you have a set of withdrawal credentials. These can be found in your deposit data json or you can view them on your validator's beaconcha.in [deposit tab](https://www.beaconcha.in/validator/12345#deposits).
 
 1. **Type 0** withdrawal credentials: If your validator's withdrawal credentials begin with `0x00...`, you deposited before the Shapella hard fork and do not yet have a withdrawal address set.
 

@@ -15,7 +15,7 @@ Bir blok arayıcısının size verdiği verileri anlamlandırabilmeniz için Eth
 
 - [Etherscan](https://etherscan.io/) -_Ayrıca Çince, Korece, Rusça ve Japonca dillerinde de mevcut_
 - [3xpl](https://3xpl.com/ethereum)
-- [Beaconcha.in](https://beaconcha.in/)
+- [Beaconcha.in](https://www.beaconcha.in/)
 - [Blockchair](https://blockchair.com/ethereum) -_Ayrıca İspanyolca, Fransızca, İtalyanca, Danca, Portekizce, Rusça, Çince ve Farsça olarak da mevcut_
 - [Blockscout](https://eth.blockscout.com/)
 - [Chainlens](https://www.chainlens.com/)
@@ -239,7 +239,7 @@ Fikir birliği katmanı üst düzey verileri şunları içerir:
 
 - [Etherscan](https://etherscan.io/) - Ethereum Ana Ağı ve Sepolia Test Ağı'ndan veri çekmek için kullanabileceğiniz bir blok arayıcısı
 - [3xpl](https://3xpl.com/ethereum) - veri kümelerini indirmeye izin veren reklamsız, açık kaynaklı bir Ethereum arayıcısı
-- [Beaconcha.in](https://beaconcha.in/) - Ethereum Ana Ağı ve Sepolia Test Ağı için açık kaynaklı bir blok arayıcısı
+- [Beaconcha.in](https://www.beaconcha.in/) - Ethereum Ana Ağı ve Sepolia Test Ağı için açık kaynaklı bir blok arayıcısı
 - [Blockchair](https://blockchair.com/ethereum) - en özel Ethereum arayıcısı. Ayrıca (bellek havuzu) verileri sıralamak ve filtrelemek için kullanılır
 - [Etherchain](https://www.etherchain.org/) - Ethereum Ana Ağı için bir blok arayıcısı
 - [Ethplorer](https://ethplorer.io/) - Ethereum Ana Ağı ve Sepolia test ağı için token'lar üzerine odaklı bir blok arayıcısı

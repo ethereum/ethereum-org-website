@@ -15,7 +15,7 @@ I block explorer sono il tuo portale sui dati di Ethereum. Puoi usarli per veder
 
 - [Etherscan](https://etherscan.io/): _disponibile anche in cinese, coreano, russo e giapponese_
 - [3xpl](https://3xpl.com/ethereum)
-- [Beaconcha.in](https://beaconcha.in/)
+- [Beaconcha.in](https://www.beaconcha.in/)
 - [Blockchair](https://blockchair.com/ethereum): _disponibile anche in spagnolo, francese, italiano, olandese, portoghese, russo, cinese e farsi_
 - [Blockscout](https://eth.blockscout.com/)
 - [Chainlens](https://www.chainlens.com/)
@@ -240,7 +240,7 @@ I dati di livello superiore del livello di consenso includono quanto segue:
 
 - [Etherscan](https://etherscan.io/) - un esploratore di blocchi che puoi usare per recuperare i dati per la Rete Principale di Ethereum e la rete di prova Sepolia
 - [3xpl](https://3xpl.com/ethereum) - un esploratore di Ethereum open source e privo di inserzioni che consente di scaricare i propri dataset
-- [Beaconcha.in](https://beaconcha.in/) - un esploratore di blocchi open source per la Rete Principale di Ethereum e la rete di prova di Sepolia
+- [Beaconcha.in](https://www.beaconcha.in/) - un esploratore di blocchi open source per la Rete Principale di Ethereum e la rete di prova di Sepolia
 - [Blockchair](https://blockchair.com/ethereum): l'esploratore di Ethereum più privato. Anche per ordinare e filtrare i dati (mempool)
 - [Etherchain](https://www.etherchain.org/) - un esploratore di blocchi per la rete principale di Ethereum
 - [Ethplorer](https://ethplorer.io/) - un esploratore di blocchi incentrato sui token per la Rete Principale di Ethereum e la rete di prova di Sepolia
