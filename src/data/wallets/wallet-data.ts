@@ -149,7 +149,7 @@ export const walletsData: WalletData[] = [
     supported_chains: ["Ethereum Mainnet"],
   },
   {
-    last_updated: "2025-07-08",
+    last_updated: "2025-07-15",
     name: "Ready Wallet",
     image: ReadyImage,
     twBackgroundColor: "bg-[#FFFFFF]",
