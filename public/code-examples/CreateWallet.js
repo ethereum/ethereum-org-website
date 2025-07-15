@@ -1,4 +1,4 @@
-const createWallet = `const ethers = require("ethers")
+const ethers = require("ethers")
 
 // Create a wallet instance from a mnemonic...
 const mnemonic =
@@ -46,6 +46,3 @@ wallet.sendTransaction(tx)
 // https://github.com/ethers-io/ethers.js/blob/master/docs/v5/api/signer/README.md#methods
 // Content is licensed under the Creative Commons License:
 // https://choosealicense.com/licenses/cc-by-4.0/
-`
-
-export default createWallet
