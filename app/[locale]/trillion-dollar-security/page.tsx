@@ -107,11 +107,7 @@ const TdsPage = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               <p>
                 {t.rich("page-trillion-dollar-security-hero-paragraph-5", {
                   a: (chunks) => (
-                    <InlineLink
-                      href={t(
-                        "page-trillion-dollar-security-hero-paragraph-5-link"
-                      )}
-                    >
+                    <InlineLink href="https://blog.ethereum.org/2025/05/14/trillion-dollar-security">
                       {chunks}
                     </InlineLink>
                   ),
