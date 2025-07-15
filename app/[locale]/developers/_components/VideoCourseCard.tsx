@@ -35,8 +35,7 @@ const VideoCourseCard = ({ course, className }: VideoCourseCardProps) => (
         size="small"
         className="mb-2 mt-4 rounded-[4px] px-1 py-0 font-bold normal-case"
       >
-        {/* // TODO: Extract intl */}
-        {Math.round(course.hours)}-hour course
+        {course.hours}
       </Tag>
       <h3 className="text-lg font-bold text-body group-hover:underline">
         {course.title}

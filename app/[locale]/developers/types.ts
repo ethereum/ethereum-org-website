@@ -15,5 +15,5 @@ export type DevelopersPath = CardInfo & {
 }
 
 export type VideoCourse = CardInfo & {
-  hours: number
+  hours: ReactNode
 }

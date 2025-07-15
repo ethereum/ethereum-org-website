@@ -62,11 +62,16 @@ export const getVideoCourses = async (): Promise<VideoCourse[]> => {
     namespace: "page-developers-index",
   })
 
+  const getDuration = (hours: number) =>
+    t.rich("page-developers-course-duration", {
+      span: () => <span>{hours}</span>,
+    })
+
   return [
     {
       title: t("page-developers-course-blockchain-basics-title"),
       description: t("page-developers-course-blockchain-basics-desc"),
-      hours: 3,
+      hours: getDuration(3),
       imgSrc: cyfrinBasicBanner,
       imgAlt: t("page-developers-course-blockchain-basics-alt"),
       href: "https://updraft.cyfrin.io/courses/blockchain-basics",
@@ -74,7 +79,7 @@ export const getVideoCourses = async (): Promise<VideoCourse[]> => {
     {
       title: t("page-developers-course-solidity-title"),
       description: t("page-developers-course-solidity-desc"),
-      hours: 5,
+      hours: getDuration(5),
       imgSrc: cyfrinSolidityBanner,
       imgAlt: t("page-developers-course-solidity-alt"),
       href: "https://updraft.cyfrin.io/courses/solidity",
@@ -82,7 +87,7 @@ export const getVideoCourses = async (): Promise<VideoCourse[]> => {
     {
       title: t("page-developers-course-foundry-fundamentals-title"),
       description: t("page-developers-course-foundry-fundamentals-desc"),
-      hours: 10,
+      hours: getDuration(10),
       imgSrc: cyfrinFoundryFundamentalsBanner,
       imgAlt: t("page-developers-course-foundry-fundamentals-alt"),
       href: "https://updraft.cyfrin.io/courses/foundry",
@@ -90,7 +95,7 @@ export const getVideoCourses = async (): Promise<VideoCourse[]> => {
     {
       title: t("page-developers-course-advanced-foundry-title"),
       description: t("page-developers-course-advanced-foundry-desc"),
-      hours: 13,
+      hours: getDuration(13),
       imgSrc: cyfrinFoundryAdvancedBanner,
       imgAlt: t("page-developers-course-advanced-foundry-alt"),
       href: "https://updraft.cyfrin.io/courses/advanced-foundry",
@@ -98,7 +103,7 @@ export const getVideoCourses = async (): Promise<VideoCourse[]> => {
     {
       title: t("page-developers-course-security-title"),
       description: t("page-developers-course-security-desc"),
-      hours: 24,
+      hours: getDuration(24),
       imgSrc: cyfrinSecurityBanner,
       imgAlt: t("page-developers-course-security-alt"),
       href: "https://updraft.cyfrin.io/courses/security",
