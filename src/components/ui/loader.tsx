@@ -1,5 +1,8 @@
 import * as React from "react"
 
+import { cn } from "@/lib/utils/cn"
+
+// svg embedded directly to ensure child components (ie. `line`) remain reachable by css selectors for animations
 const Loader = React.forwardRef<
   SVGSVGElement,
   React.HTMLAttributes<SVGElement>
@@ -30,4 +33,32 @@ const Loader = React.forwardRef<
 ))
 Loader.displayName = "Loader"
 
-export { Loader }
+const LoadingDot = React.forwardRef<
+  HTMLDivElement,
+  Omit<React.HTMLAttributes<HTMLDivElement>, "children">
+>(({ className, ...props }, ref) => (
+  <div
+    ref={ref}
+    data-label="dot"
+    className={cn(
+      "size-[1em] animate-fade-in-pause-out rounded bg-disabled opacity-0",
+      className
+    )}
+    {...props}
+  />
+))
+LoadingDot.displayName = "LoadingDot"
+
+const LoadingDots = React.forwardRef<
+  HTMLDivElement,
+  Omit<React.HTMLAttributes<HTMLDivElement>, "children">
+>(({ className, ...props }, ref) => (
+  <div ref={ref} className={cn("flex gap-[1em]", className)} {...props}>
+    <LoadingDot />
+    <LoadingDot style={{ animationDelay: "1s" }} />
+    <LoadingDot style={{ animationDelay: "2s" }} />
+  </div>
+))
+LoadingDots.displayName = "LoadingDots"
+
+export { Loader, LoadingDot, LoadingDots }
