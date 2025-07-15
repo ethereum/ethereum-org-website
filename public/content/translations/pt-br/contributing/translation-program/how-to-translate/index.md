@@ -18,7 +18,7 @@ Para as pessoas que aprendem melhor de forma visual, assistam ao vídeo do Luka 
 
 Você precisará fazer login na sua conta do Crowdin ou criar uma conta, caso ainda não tenha. Você só precisa de uma conta de e-mail e senha para se cadastrar.
 
-<ButtonLink to="https://crowdin.com/project/ethereum-org/">
+<ButtonLink href="https://crowdin.com/project/ethereum-org/">
   Junte-se ao projeto
 </ButtonLink>
 

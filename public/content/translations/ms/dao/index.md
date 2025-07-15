@@ -93,7 +93,7 @@ Pada tahun 1977, Wyoming mencipta LLC, yang melindungi usahawan dan mengehadkan 
 
 ### Contoh yang terkenal {#law-example}
 
-[CityDAO](https://citydao.io) – CityDAO menggunakan undang-undang DAO Wyoming untuk membeli 40 ekar tanah berhampiran Taman Negara Yellowstone.
+[CityDAO](https://citizen.citydao.io/) – CityDAO menggunakan undang-undang DAO Wyoming untuk membeli 40 ekar tanah berhampiran Taman Negara Yellowstone.
 
 ## Keahlian DAO {#dao-membership}
 

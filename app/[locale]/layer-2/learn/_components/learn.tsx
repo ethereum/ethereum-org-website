@@ -1,7 +1,10 @@
 "use client"
 
-import Callout from "@/components/Callout"
+import { PageWithContributorsProps } from "@/lib/types"
+
+import CalloutSSR from "@/components/CalloutSSR"
 import Card from "@/components/Card"
+import FileContributors from "@/components/FileContributors"
 import { ContentHero, type ContentHeroProps } from "@/components/Hero"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
@@ -19,7 +22,10 @@ import Callout1Image from "@/public/images/man-and-dog-playing.png"
 import DAOImage from "@/public/images/use-cases/dao-2.png"
 import WhatIsEthereumImage from "@/public/images/what-is-ethereum.png"
 
-const Layer2Learn = () => {
+const Layer2Learn = ({
+  contributors,
+  lastEditLocaleTimestamp,
+}: PageWithContributorsProps) => {
   const { t } = useTranslation("page-layer-2-learn")
   const pathname = usePathname()
 
@@ -274,11 +280,16 @@ const Layer2Learn = () => {
             </p>
           </div>
         </div>
+        <FileContributors
+          className="my-10 border-t"
+          contributors={contributors}
+          lastEditLocaleTimestamp={lastEditLocaleTimestamp}
+        />
       </div>
 
       <div id="callout-cards" className="px-8 py-9">
         <div className="flex w-full flex-col lg:flex-row">
-          <Callout
+          <CalloutSSR
             image={Callout1Image}
             title={t("page-layer-2-learn-callout-1-title")}
             description={t("page-layer-2-learn-callout-1-description")}
@@ -295,8 +306,8 @@ const Layer2Learn = () => {
                 {t("page-layer-2-learn-learn-more")}
               </ButtonLink>
             </div>
-          </Callout>
-          <Callout
+          </CalloutSSR>
+          <CalloutSSR
             image={Callout2Image}
             title={t("page-layer-2-learn-callout-2-title")}
             description={t("page-layer-2-learn-callout-2-description")}
@@ -313,7 +324,7 @@ const Layer2Learn = () => {
                 {t("page-layer-2-learn-explore-networks")}
               </ButtonLink>
             </div>
-          </Callout>
+          </CalloutSSR>
         </div>
       </div>
 
