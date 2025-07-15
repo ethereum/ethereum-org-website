@@ -120,8 +120,6 @@ Due to the nature of EIP 7702, it is recommended wallets use caution when helpin
 - 0x63c0c19a282a1b52b07dd5a65b58948a07dae32b [[MetaMask/delegation-framework]](https://github.com/MetaMask/delegation-framework) / [audits](https://github.com/MetaMask/delegation-framework/tree/main/audits)
 - 0x4Cd241E8d1510e30b2076397afc7508Ae59C66c9 [[Ethereum Foundation AA team]](https://github.com/eth-infinitism/account-abstraction/blob/develop/contracts/accounts/Simple7702Account.sol) / [audits](https://github.com/eth-infinitism/account-abstraction/blob/develop/audits/SpearBit%20Account%20Abstraction%20Security%20Review%20-%20Mar%202025.pdf)
 
-
-
 ## Hardware wallet guidelines {#hardware-wallet-guidelines}
 
 Hardware wallets shouldn't expose arbitrary delegation. The consensus in the  Hardware wallet space is to use a list of trusted delegator contracts. We suggest to allow known implementations listed above and to consider others on a case by case basis. As delegating your EOA to a contract gives control over all the assets, hardware wallets should be cautious with the way they implement 7702.
