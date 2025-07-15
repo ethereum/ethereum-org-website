@@ -169,8 +169,8 @@ export const walletsData: WalletData[] = [
     firefox: true,
     chromium: true,
     hardware: false,
-    open_source: true,
-    repo_url: "https://github.com/argentlabs/argent-x",
+    open_source: false,
+    repo_url: "",
     non_custodial: true,
     security_audit: [
       "https://github.com/argentlabs/argent-contracts/tree/develop/audit",
