@@ -18,7 +18,7 @@ Pour que cette structure à deux clients fonctionne, les clients de consensus do
 
 ## Que fait le client d'exécution ? {#execution-client}
 
-Le client d’exécution est responsable de la validation, du traitement et de la propagation des transactions, ainsi que de la gestion de l’état et du support de la Machine Virtuelle Ethereum ([EVM\](/developers/docs/evm/)). Il n'est **pas** responsable de la construction de blocs, de leur propagation ou de la gestion de la logique de consensus. Ces responsabilités relèvent du client de consensus.
+Le client d’exécution est responsable de la validation, du traitement et de la propagation des transactions, ainsi que de la gestion de l’état et du support de la Machine Virtuelle Ethereum ([EVM](/developers/docs/evm/)). Il n'est **pas** responsable de la construction de blocs, de leur propagation ou de la gestion de la logique de consensus. Ces responsabilités relèvent du client de consensus.
 
 Le client d'exécution crée des charges utiles d'exécution - la liste des transactions, la trie d'état mise à jour, et d'autres données liées à l'exécution. Les clients de consensus incluent la charge utile d'exécution dans chaque bloc. Le client d'exécution est également responsable de réexécuter les transactions dans les nouveaux blocs pour s'assurer qu'elles sont valides. L'exécution des transactions est effectuée sur l'ordinateur intégré du client d'exécution, connu sous le nom de [Machine Virtuelle Ethereum (EVM)](/developers/docs/evm).
 
