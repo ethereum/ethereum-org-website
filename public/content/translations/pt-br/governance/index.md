@@ -44,7 +44,7 @@ Existem vários interessados na [comunidade Ethereum](/community/), cada um dese
 
 - **Detentores de Ether**: essas pessoas têm uma quantidade arbitrária de ETH. [Mais sobre ETH](/eth/).
 - **Usuários da aplicação**: essas pessoas interagem com aplicativos no blockchain Ethereum.
-- **Desenvolvedores de aplicativos/ferramentas**: estas pessoas escrevem aplicativos que são executados no blockchain Ethereum (por exemplo, DeFi, NFTs etc.) ou criam ferramentas para interagir com a Ethereum (por exemplo, carteiras, suíte de testes etc.). [Mais sobre dapps](/dapps/).
+- **Desenvolvedores de aplicativos/ferramentas**: estas pessoas escrevem aplicativos que são executados no blockchain Ethereum (por exemplo, DeFi, NFTs etc.) ou criam ferramentas para interagir com a Ethereum (por exemplo, carteiras, suíte de testes etc.). [Mais sobre dapps](/apps/).
 - **Operadores de nós**: essas pessoas executam nós que propagam blocos e transações, rejeitando qualquer transação ou bloco inválido que eles encontrem. [Mais sobre nós](/developers/docs/nodes-and-clients/).
 - **Autores do EIP**: estas pessoas propõem alterações no protocolo Ethereum, na forma de propostas de aprimoramento do Ethereum (EIPs). [Mais sobre EIPs](/eips/).
 - **Validadores**: essas pessoas executam nós que podem adicionar novos blocos à blockchain Ethereum.

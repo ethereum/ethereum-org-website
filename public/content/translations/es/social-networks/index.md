@@ -23,7 +23,7 @@ Muchas redes sociales descentralizadas existen como alternativa a los servicios 
 
 ### ¿Cómo funcionan las redes sociales descentralizadas? {#decentralized-social-networks-overview}
 
-Las redes sociales descentralizadas son una clase de [aplicaciones descentralizadas (dApps)](/dapps/), aplicaciones que funcionan con [contratos inteligentes](/glossary/#smart-contract) implementados en la cadena de bloques. El código del contrato sirve como el backend para estas aplicaciones y define su lógica de negocio.
+Las redes sociales descentralizadas son una clase de [aplicaciones descentralizadas (dApps)](/apps/), aplicaciones que funcionan con [contratos inteligentes](/glossary/#smart-contract) implementados en la cadena de bloques. El código del contrato sirve como el backend para estas aplicaciones y define su lógica de negocio.
 
 Las plataformas tradicionales de redes sociales se basan en bases de datos para almacenar información del usuario, el código del programa y otras formas de datos. Pero esto crea puntos únicos de falla y supone un riesgo significativo. Por ejemplo, los servidores de Facebook infamemente [se desconectaron durante horas](https://www.npr.org/2021/10/05/1043211171/facebook-instagram-whatsapp-outage-business-impact) en octubre de 2021, dejando a los usuarios sin acceso a la plataforma.
 

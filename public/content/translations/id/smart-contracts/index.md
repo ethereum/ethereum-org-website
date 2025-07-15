@@ -70,7 +70,7 @@ Mereka dapat melakukan komputasi, membuat mata uang, menyimpan data, mencetak [N
 - [Stablecoin](/stablecoins/)
 - [Membuat dan mendistribusikan aset digital unik](/nft/)
 - [Bursa mata uang otomatis dan terbuka](/get-eth/#dex)
-- [Aktivitas game terdesentralisasi](/dapps/?category=gaming#explore)
+- [Aktivitas game terdesentralisasi](/apps/?category=gaming#explore)
 - [Kebijakan asuransi yang melakukan pembayaran secara otomatis](https://etherisc.com/)
 - [Standar yang memungkinkan orang untuk membuat mata uang yang disesuaikan dan dapat saling beroperasi](/developers/docs/standards/tokens/)
 

@@ -670,7 +670,7 @@ const WhatIsEthereumPage = ({
                     <ButtonLink href="/smart-contracts/">
                       {t("page-what-is-ethereum-more-on-smart-contracts")}
                     </ButtonLink>
-                    <ButtonLink href="/dapps/" variant="outline" isSecondary>
+                    <ButtonLink href="/apps/" variant="outline" isSecondary>
                       {t("page-what-is-ethereum-explore-dapps")}
                     </ButtonLink>
                   </ButtonRow>
@@ -832,7 +832,7 @@ const WhatIsEthereumPage = ({
               className="h-full"
             >
               <div>
-                <ButtonLink href="/dapps/">
+                <ButtonLink href="/apps/">
                   {t("page-what-is-ethereum-explore-dapps")}
                 </ButtonLink>
               </div>

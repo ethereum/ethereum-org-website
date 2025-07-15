@@ -44,7 +44,7 @@ May iba't ibang stakeholder sa [komunidad ng Ethereum](/community/), at may pape
 
 - **Mga may-ari ng Ether**: nagmamay-ari ang mga taong ito ng iba't ibang halaga ng ETH. [Iba pang detalye tungkol sa ETH](/eth/).
 - **Mga User ng Application**: nag-i-interact ang mga taong ito sa mga application sa Ethereum blockchain.
-- **Mga Developer ng Application/Tooling**: nagra-write ang mga taong ito ng mga application na pinapatakbo sa Ethereum blockchain (hal., DeFi, NFTs, atbp.) o bumubuo sila ng tooling para mag-interact sa Ethereum (hal., mga wallet, test suite, atbp.). [Iba pang detalye tungkol sa dapps](/dapps/).
+- **Mga Developer ng Application/Tooling**: nagra-write ang mga taong ito ng mga application na pinapatakbo sa Ethereum blockchain (hal., DeFi, NFTs, atbp.) o bumubuo sila ng tooling para mag-interact sa Ethereum (hal., mga wallet, test suite, atbp.). [Iba pang detalye tungkol sa dapps](/apps/).
 - **Mga Node Operator**: nagpapatakbo ang mga taong ito ng mga node na nagpo-propagate ng mga block at transaksyon, at hindi tinatanggap ng mga ito ang anumang hindi valid na transaksyon o block na matutuklasan ng mga ito. [Iba pang detalye tungkol sa mga node](/developers/docs/nodes-and-clients/).
 - **Mga EIP Author**: nagmumungkahi ang mga taong ito ng mga pagbabago sa Ethereum protocol, sa pamamagitan ng mga Ethereum Improvement Proposal (EIPs). [Iba pang detalye tungkol sa EIPs](/eips/).
 - **Mga Validator**: nagpapatakbo ang mga taong ito ng mga node na makakapagdagdag ng mga bagong block sa Ethereum blockchain.

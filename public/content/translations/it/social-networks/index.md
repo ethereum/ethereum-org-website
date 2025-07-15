@@ -23,7 +23,7 @@ Esistono molti social network decentralizzati alternativi ai servizi affermati, 
 
 ### Come funzionano i social network decentralizzati? {#decentralized-social-networks-overview}
 
-I social network decentralizzati sono una classe di [applicazioni decentralizzate (dapp)](/dapps/): applicazioni basate su [contratti intelligenti](/glossary/#smart-contract) distribuiti sulla blockchain. Il codice del contratto serve da backend per tali app, definendone la logica aziendale.
+I social network decentralizzati sono una classe di [applicazioni decentralizzate (dapp)](/apps/): applicazioni basate su [contratti intelligenti](/glossary/#smart-contract) distribuiti sulla blockchain. Il codice del contratto serve da backend per tali app, definendone la logica aziendale.
 
 Le piattaforme social tradizionali si affidano ai database per memorizzare le informazioni degli utenti, il codice del programma e altre forme di dati. Ma ciò genera singoli punti di guasto, introducendo rischi significativi. Ad esempio, è noto che i server di Facebook sono [andati offline per ore](https://www.npr.org/2021/10/05/1043211171/facebook-instagram-whatsapp-outage-business-impact) a ottobre 2021, impedendo l'accesso agli utenti della piattaforma.
 

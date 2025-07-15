@@ -82,7 +82,7 @@ lang: ja
 
 ## 参考文献 {#further-reading}
 
-- [dapps を探す](/dapps)
+- [dapps を探す](/apps)
 - [Web 3.0アプリケーションのアーキテクチャ](https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application) - _Preethi Kasireddy_
 - [分散型アプリケーションに関するガイド(2021年)](https://limechain.tech/blog/what-are-dapps-the-2021-guide/) - _LimeChain_
 - [分散型アプリとは](https://www.gemini.com/cryptopedia/decentralized-applications-defi-Dapps) - _Gemini_

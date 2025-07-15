@@ -29,7 +29,7 @@ Below is a breakdown of the website pages each content bucket contains.
 ## 3) Exploring {#exploring}
 
 - [Non-fungible tokens (NFT)](/nft/)
-- [Dapps](/dapps/)
+- [Dapps](/apps/)
 - [Stablecoins](/stablecoins/)
 - Template usecase
 

@@ -139,7 +139,7 @@ Sme ešte len na začiatku vytvárania lepšieho webu pomocou Web3, ale vďaka n
 
 - [Získať peňaženku](/wallets/)
 - [Nájdite komunitu](/community/)
-- [Preskúmajte Web3 aplikácie](/dapps/)
+- [Preskúmajte Web3 aplikácie](/apps/)
 - [Join a DAO](/dao/)
 - [Budujte na Web3](/developers/)
 

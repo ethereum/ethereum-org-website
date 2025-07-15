@@ -161,7 +161,7 @@ We staan nog maar aan het begin van een beter Web met Web3, maar naarmate we de 
 
 - [Krijg een wallet](/wallets/)
 - [Vind een community](/community/)
-- [Verken Web3-applicaties](/dapps/)
+- [Verken Web3-applicaties](/apps/)
 - [Doe mee aan een DAO](/dao/)
 - [Bouw op Web3](/developers/)
 

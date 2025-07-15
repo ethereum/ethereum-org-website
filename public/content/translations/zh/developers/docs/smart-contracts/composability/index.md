@@ -29,7 +29,7 @@ incomplete: true
 
 ### 缩短开发周期 {#shorter-development-cycle}
 
-减少了开发者在创建[去中心化应用程序](/dapps/#what-are-dapps)时的必要工作。 [正如 Naval Ravikant 所说的那样：](https://twitter.com/naval/status/1444366754650656770)“开放源码意味着每个问题只需要解决一次。”
+减少了开发者在创建[去中心化应用程序](/apps/#what-are-dapps)时的必要工作。 [正如 Naval Ravikant 所说的那样：](https://twitter.com/naval/status/1444366754650656770)“开放源码意味着每个问题只需要解决一次。”
 
 如果有智能合约解决了某个问题，那么其他开发者可以重用这个合约，所以他们无需解决同样的问题。 这种方法让开发者可以使用现有软件库并添加一些额外功能来创建新的去中心化应用程序。
 

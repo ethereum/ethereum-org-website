@@ -60,7 +60,7 @@ Su dirección será la misma en todos los proyectos de Ethereum. No tiene que re
 ![Seleccione de una lista de carteras entre las que conectarse](./connect2.png)
 
 5. Confirme la solicitud en su cartera para establecer la conexión. ** Aceptar este mensaje no requiere gastar ETH **.
-6. ¡Y ya está! Puede empezar a utilizar la aplicación. Puede encontrar algunos proyectos interesantes en nuestra [ página DApps](/dapps/#explore). <br />
+6. ¡Y ya está! Puede empezar a utilizar la aplicación. Puede encontrar algunos proyectos interesantes en nuestra [ página DApps](/apps/#explore). <br />
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>¿Quiere saber más?</div>

@@ -139,7 +139,7 @@ Chúng tôi mới chỉ ở giai đoạn đầu tạo ra một trang Web tốt h
 
 - [Chọn ví tiền](/wallets/)
 - [Tìm một cộng đồng](/community/)
-- [Khám phá các ứng dụng Web3](/dapps/)
+- [Khám phá các ứng dụng Web3](/apps/)
 - [Gia nhập một tổ chức tự trị phi tập trung (DAO)](/dao/)
 - [Xây dựng trên Web3](/developers/)
 

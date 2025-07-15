@@ -12,7 +12,7 @@ O valor máximo extraível foi aplicado pela primeira vez no contexto de [prova 
 
 ## Pré-Requisitos {#prerequisites}
 
-Certifique-se de estar familiarizado com [transações](/developers/docs/transactions/), [blocos](/developers/docs/blocks/), [prova de participação](/developers/docs/consensus-mechanisms/pos) e [gás](/developers/docs/gas/). Conhecer outros detalhes como [dapps](/dapps/) ou [DeFi](/defi/) também seria útil.
+Certifique-se de estar familiarizado com [transações](/developers/docs/transactions/), [blocos](/developers/docs/blocks/), [prova de participação](/developers/docs/consensus-mechanisms/pos) e [gás](/developers/docs/gas/). Conhecer outros detalhes como [dapps](/apps/) ou [DeFi](/defi/) também seria útil.
 
 ## Extração via MEV {#mev-extraction}
 

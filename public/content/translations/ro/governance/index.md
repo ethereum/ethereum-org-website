@@ -44,7 +44,7 @@ _În timp ce, la nivel de protocol, guvernanța în Ethereum este off-chain, în
 
 - **Deținătorii de Ether**: aceste persoane dețin o cantitate arbitrară de ETH. [Mai multe despre ETH](/eth/).
 - **Utilizatorii aplicațiilor**: aceste persoane interacționează cu aplicațiile de pe blockchain-ul Ethereum.
-- **Dezvoltatorii de aplicații/instrumente**: aceste persoane scriu aplicații care sunt rulate pe blockchain-ul Ethereum (de ex., DeFi, NFT-uri etc.) sau construiesc instrumente pentru a interacționa cu Ethereum (de ex., portofele, serii de testări etc.). [Mai multe despre dapp-uri](/dapps/).
+- **Dezvoltatorii de aplicații/instrumente**: aceste persoane scriu aplicații care sunt rulate pe blockchain-ul Ethereum (de ex., DeFi, NFT-uri etc.) sau construiesc instrumente pentru a interacționa cu Ethereum (de ex., portofele, serii de testări etc.). [Mai multe despre dapp-uri](/apps/).
 - **Operatori de noduri**: aceste persoane rulează noduri care propagă blocuri și tranzacții, respingând orice tranzacție sau bloc invalid cu care se întâlnesc. [Mai multe despre noduri](/developers/docs/nodes-and-clients/).
 - **Autorii de EIP-uri**: aceste persoane propun modificări ale protocolului Ethereum, sub forma de Propuneri de îmbunătățire pentru Ethereum (EIP-uri). [Mai multe despre EIP-uri](/eips/).
 - **Miner-ii/Validatorii**: aceste persoane rulează noduri care pot adăuga blocuri noi la blockchain-ul Ethereum.

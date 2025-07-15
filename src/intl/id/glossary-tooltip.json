@@ -31,7 +31,7 @@
   "dao-term": "Organisasi otonom terdesentralisasi (DAO)",
   "dao-definition": "DAO adalah organisasi digital yang dijalankan oleh aturan yang dikodekan di rantai blok, di mana keputusan dibuat melalui pemungutan suara anggota, bukan oleh otoritas pusat. <a href=\"/dao/\">Selengkapnya tentang organisasi otonom terdesentralisasi (DAO)</a>.",
   "dapp-term": "Dapp",
-  "dapp-definition": "dApp adalah aplikasi terdesentralisasi yang berjalan di jaringan rantai blok, yang menawarkan layanan tanpa otoritas pengendali pusat. <a href=\"/dapps/\">Selengkapnya tentang aplikasi terdesentralisasi</a>.",
+  "dapp-definition": "dApp adalah aplikasi terdesentralisasi yang berjalan di jaringan rantai blok, yang menawarkan layanan tanpa otoritas pengendali pusat. <a href=\"/apps/\">Selengkapnya tentang aplikasi terdesentralisasi</a>.",
   "data-availability-term": "Ketersediaan data",
   "data-availability-definition": "Setiap node dapat memverifikasi transaksi secara sendiri pada blockchain untuk menjaga transparansi dan kepercayaan pada sistem.",
   "defi-term": "DeFi",

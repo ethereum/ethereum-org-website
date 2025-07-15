@@ -12,7 +12,7 @@ lang: el
 
 ## Προαπαιτούμενα {#prerequisites}
 
-Βεβαιωθείτε ότι είστε εξοικειωμένοι με τις [συναλλαγές](/developers/docs/transactions/), τα [μπλοκ](/developers/docs/blocks/), την [απόδειξη συμμετοχής](/developers/docs/consensus-mechanisms/pos) και το [gas](/developers/docs/gas/). Η εξοικείωση με τις [dapps](/dapps/) και [DeFi](/defi/) είναι επίσης χρήσιμη.
+Βεβαιωθείτε ότι είστε εξοικειωμένοι με τις [συναλλαγές](/developers/docs/transactions/), τα [μπλοκ](/developers/docs/blocks/), την [απόδειξη συμμετοχής](/developers/docs/consensus-mechanisms/pos) και το [gas](/developers/docs/gas/). Η εξοικείωση με τις [dapps](/apps/) και [DeFi](/defi/) είναι επίσης χρήσιμη.
 
 ## Εξαγωγή MEV {#mev-extraction}
 

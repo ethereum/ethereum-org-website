@@ -23,7 +23,7 @@ Birçok merkeziyetsiz sosyal ağ, Facebook, LinkedIn, Twitter ve Medium gibi yer
 
 ### Merkeziyetsiz sosyal ağlar nasıl çalışır? {#decentralized-social-networks-overview}
 
-Merkeziyetsiz sosyal ağlar, blokzincirde dağıtılan [akıllı sözleşmeler](/glossary/#smart-contract) tarafından desteklenen uygulamalar olan [merkeziyetsiz uygulamaların (dapp'ler)](/dapps/) bir türüdür. Sözleşme kodu, bu uygulamalar için arka uç görevi görür ve iş mantığını tanımlar.
+Merkeziyetsiz sosyal ağlar, blokzincirde dağıtılan [akıllı sözleşmeler](/glossary/#smart-contract) tarafından desteklenen uygulamalar olan [merkeziyetsiz uygulamaların (dapp'ler)](/apps/) bir türüdür. Sözleşme kodu, bu uygulamalar için arka uç görevi görür ve iş mantığını tanımlar.
 
 Geleneksel sosyal medya platformları, kullanıcı bilgilerini, program kodunu ve diğer veri türlerini depolamak için veritabanlarını kullanır. Ancak bu durum, tek hata noktaları yaratır ve önemli riskler doğurur. Örneğin, Facebook sunucuları Ekim 2021'de [saatlerce çevrimdışı kalmış](https://www.npr.org/2021/10/05/1043211171/facebook-instagram-whatsapp-outage-business-impact) ve kullanıcıları platformdan mahrum bırakmıştı.
 

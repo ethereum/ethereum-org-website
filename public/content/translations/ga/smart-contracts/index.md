@@ -74,7 +74,7 @@ Is féidir leo ríomhanna a dhéanamh, airgeadra a chruthú, sonraí a stóráil
 - [Stablecoins](/stablecoins/)
 - [Sócmhainní digiteacha uathúla a chruthú agus a dháileadh](/nft/)
 - [Malartán airgeadra oscailte uathoibríoch](/get-eth/#dex)
-- [Cluichíocht dhíláraithe](/dapps/?category=gaming#explore)
+- [Cluichíocht dhíláraithe](/apps/?category=gaming#explore)
 - [Polasaí árachais a íocann amach go huathoibríoch](https://etherisc.com/)
 - [Caighdeán a ligeann do dhaoine airgeadraí saincheaptha, idir-inoibritheacha a chruthú](/developers/docs/standards/tokens/)
 

@@ -82,7 +82,7 @@ Een smart contract is code die op de Ethereum-blockchain staat en precies zo wer
 
 ## Verder lezen {#further-reading}
 
-- [Verken dapps](/dapps)
+- [Verken dapps](/apps)
 - [De architectuur van een Web 3.0-applicatie](https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application) - _Preethi Kasireddy_
 - [Een gids voor gedecentraliseerde toepassingen in 2021](https://limechain.tech/blog/what-are-dapps-the-2021-guide/) - _LimeChain_
 - [Wat zijn gedecentraliseerde apps?](https://www.gemini.com/cryptopedia/decentralized-applications-defi-dapps) - _Gemini_

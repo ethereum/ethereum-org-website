@@ -23,7 +23,7 @@ Banyak rangkaian sosial teragih wujud sebagai alternatif kepada perkhidmatan med
 
 ### Bagaimanakah rangkaian sosial teragih berfungsi? {#decentralized-social-networks-overview}
 
-Rangkaian sosial teragih ialah kelas [aplikasi teragih (dapp)](/dapps/)—aplikasi yang dikuasakan oleh [kontrak pintar](/glossary/#smart-contract) digunakan pada blok rantai. Kod kontrak berfungsi sebagai bahagian belakang untuk apl ini dan mentakrifkan logik perniagaan mereka.
+Rangkaian sosial teragih ialah kelas [aplikasi teragih (dapp)](/apps/)—aplikasi yang dikuasakan oleh [kontrak pintar](/glossary/#smart-contract) digunakan pada blok rantai. Kod kontrak berfungsi sebagai bahagian belakang untuk apl ini dan mentakrifkan logik perniagaan mereka.
 
 Platform media sosial tradisional bergantung pada pangkalan data untuk menyimpan maklumat pengguna, kod program dan bentuk data lain. Tetapi ini mewujudkan satu titik kegagalan dan memperkenalkan risiko yang ketara. Sebagai contoh, pelayan Facebook telah [di luar talian selama berjam-jam](https://www.npr.org/2021/10/05/1043211171/facebook-instagram-whatsapp-outage-business-impact) pada Oktober 2021, memotong pengguna daripada platform.
 

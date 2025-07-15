@@ -29,7 +29,7 @@ incomplete: true
 
 ### 更短的開發週期 {#shorter-development-cycle}
 
-可組合性減少了開發者在建立[去中心化應用程式 (dapp) ](/dapps/#what-are-dapps)時需要做的工作。 [正如 Naval Ravikant 所說的：](https://twitter.com/naval/status/1444366754650656770)「開放原始碼意指所有問題都只需要解決一遍。」
+可組合性減少了開發者在建立[去中心化應用程式 (dapp) ](/apps/#what-are-dapps)時需要做的工作。 [正如 Naval Ravikant 所說的：](https://twitter.com/naval/status/1444366754650656770)「開放原始碼意指所有問題都只需要解決一遍。」
 
 如果有一個智慧型合約解決了某個問題，其他開發者便可以重複使用它，所以他們便不必再解決同一個問題。 這樣，開發者可以使用現有的軟體程式庫並增加額外的功能，以建立新的去中心化應用程式 (dapp)。
 

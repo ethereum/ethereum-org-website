@@ -88,7 +88,7 @@
   "dag-term": "DAG",
   "dag-definition": "DAG stands for Directed Acyclic Graph. It is a data structure composed of nodes and links between them. Before The Merge, Ethereum used a DAG in its <a href=\"/glossary/#pow\">proof-of-work</a> algorithm, <a href=\"/glossary/#ethash\">Ethash</a>, but is no longer used in <a href=\"/glossary/#pos\">proof-of-stake</a>.",
   "dapp-term": "Dapp",
-  "dapp-definition": "A dApp is a decentralized application that runs on a blockchain network, offering services without a central controlling authority. <a href=\"/dapps/\">More on decentralized applications</a>.<br />At a minimum dapp has a smart contract connected to a web interface. In addition, many dapps include decentralized storage and/or a message protocol and platform.",
+  "dapp-definition": "A dApp is a decentralized application that runs on a blockchain network, offering services without a central controlling authority. <a href=\"/apps/\">More on decentralized applications</a>.<br />At a minimum dapp has a smart contract connected to a web interface. In addition, many dapps include decentralized storage and/or a message protocol and platform.",
   "data-availability-term": "Data availability",
   "data-availability-definition": "Any node can independently verify transactions on a blockchain in order to maintain transparency and trust in the system.",
   "decentralization-term": "Decentralization",

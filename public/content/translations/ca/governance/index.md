@@ -44,7 +44,7 @@ Hi ha diversos tipus de tenidors a la [comunitat Ethereum](/community/) i cadasc
 
 - **Tenidors d'Ether**: gent que posseeix una quantitat arbitrària d'ETH. [Més informació sobre ETH](/eth/).
 - **Usuaris d'aplicacions**: gent que interactua amb les aplicacions a la cadena de blocs d'Ethereum.
-- **Desenvolpadors d'aplicacions/eines**: gent que escriu aplicacions executades a la cadena de blocs d'Ethereum (p. ex. DeFi, NFT, etc.) o fabrica eines per interactuar amb Ethereum (p. ex. carteres, conjunts de proves, etc.). [Més informació sobre dapps](/dapps/).
+- **Desenvolpadors d'aplicacions/eines**: gent que escriu aplicacions executades a la cadena de blocs d'Ethereum (p. ex. DeFi, NFT, etc.) o fabrica eines per interactuar amb Ethereum (p. ex. carteres, conjunts de proves, etc.). [Més informació sobre dapps](/apps/).
 - **Operadors de nodes**: gent que executa nodes que propaguen blocs i transaccions i refusa qualsevol transacció o bloc invàlids amb què es trobin. [Més informació sobre els nodes](/developers/docs/nodes-and-clients/).
 - **Autors d'EIP**: gent que proposa canvis al protocol Ethereum en forma de Propostes de Millora d'Ethereum («Ethereum Improvement Proposals» o EIP en anglès). [Més informació sobre les EIP](/eips/).
 - **Miners/validadors**: gent que executa nodes que poden afegir nous blocs a la cadena de blocs d'Ethereum.

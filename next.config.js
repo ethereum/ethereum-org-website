@@ -93,6 +93,14 @@ module.exports = (phase, { defaultConfig }) => {
           protocol: "https",
           hostname: "coin-images.coingecko.com",
         },
+        {
+          protocol: "https",
+          hostname: "i.imgur.com",
+        },
+        {
+          protocol: "https",
+          hostname: "imgur.com",
+        },
       ],
     },
     async headers() {

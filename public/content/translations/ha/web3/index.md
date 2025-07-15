@@ -139,7 +139,7 @@ Mu kawai muna farkone wajen ƙirƙirar abinda yafi Web da Web3, amma muna ci gab
 
 - [Samu walet](/wallets/)
 - [Sami al'umma](/community/)
-- [Bincika manhajojin Web3](/dapps/)
+- [Bincika manhajojin Web3](/apps/)
 - [Kashiga DAO](/dao/)
 - [Gini akan Web3](/developers/)
 
