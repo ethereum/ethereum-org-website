@@ -68,7 +68,7 @@ Elmi maliyyələşdirmək üçün mövcud standart model, ayrı-ayrı şəxslər
 
 Tədqiqatlar göstərdi ki, qrantların nəzərdən keçirilməsi panelləri yüksək keyfiyyətli təklifləri seçməkdə zəif iş görür, çünki müxtəlif panellərə verilən eyni təkliflər tamamilə fərqli nəticələr verir. Maliyyələşmə getdikcə azaldıqca, o, daha intellektual mühafizəkar layihələri olan daha böyük tədqiqatçılardan ibarət daha kiçik bir hovuzda cəmləşib. Təsir, təhrif stimulları möhkəmləndirən və innovasiyaları boğan hiper-rəqabətli maliyyələşdirmə mənzərəsi yaradıb.
 
-Web3, DAO və Web3 tərəfindən geniş şəkildə hazırlanmış müxtəlif təşviq modelləri ilə sınaqdan keçirərək, bu pozulmuş maliyyələşdirmə modelini pozmaq potensialına malikdir. [Retroaktiv ictimai malların maliyyələşdirilməsi](https://medium.com/ethereum-optimism/retroactive-public-goods-funding-33c9b7d00f0c), [kvadrat maliyyələşdirmə](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531), [DAO idarəetməsi](https://www.antler.co/blog/daos-and-web3-governance) və [tokenləşdirilmiş təşviq strukturları](https://cdixon.org/2017/05/27/crypto-tokens-a-breakthrough-in-open-network-design) bunlardan bəziləridir. Elmin maliyyələşdirilməsində inqilab edə biləcək Web3 alətləri.
+Web3, DAO və Web3 tərəfindən geniş şəkildə hazırlanmış müxtəlif təşviq modelləri ilə sınaqdan keçirərək, bu pozulmuş maliyyələşdirmə modelini pozmaq potensialına malikdir. [Retroaktiv ictimai malların maliyyələşdirilməsi](https://medium.com/ethereum-optimism/retroactive-public-goods-funding-33c9b7d00f0c), [kvadrat maliyyələşdirmə](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531), [DAO idarəetməsi](https://www.antler.co/blog/daos-and-web3-governance-the-promise-implications-and-challenges-ahead) və [tokenləşdirilmiş təşviq strukturları](https://cdixon.org/2017/05/27/crypto-tokens-a-breakthrough-in-open-network-design) bunlardan bəziləridir. Elmin maliyyələşdirilməsində inqilab edə biləcək Web3 alətləri.
 
 ### IP mülkiyyəti və inkişafı {#ip-ownership}
 
@@ -96,7 +96,7 @@ Layihələri araşdırın və DeSci cəmiyyətinə qoşulun.
 - [VitaDAO: uzunömürlülük tədqiqatları üçün sponsorluq edilən tədqiqat müqavilələri vasitəsilə maliyyə əldə edin](https://www.vitadao.com/)
 - [ResearchHub: elmi nəticəni dərc edin və həmkarlarınız ilə söhbət edin](https://www.researchhub.com/)
 - [LabDAO: in-silico-da protein qazanın](https://alphafodl.vercel.app/)
-- [dClimate API: mərkəzləşdirilməmiş icma tərəfindən toplanan iqlim məlumatlarını sorğulayın](https://api.dclimate.net/)
+- [dClimate API: mərkəzləşdirilməmiş icma tərəfindən toplanan iqlim məlumatlarını sorğulayın](https://www.dclimate.net/)
 - [DeSci Fondu: DeSci nəşriyyat aləti qurucusu](https://descifoundation.org/)
 - [DeSci.World: istifadəçilər üçün mərkəzləşdirilməmiş elmlə məşğul olmaq üçün bir mağaza](https://desci.world)
 - [Fleming Protokolu: birgə biotibbi kəşfləri gücləndirən açıq mənbəli məlumat iqtisadiyyatı](https://medium.com/@FlemingProtocol/a-data-economy-for-patient-driven-biomedical-innovation-9d56bf63d3dd)
@@ -120,7 +120,7 @@ Siyahıya salınacaq yeni layihələr üçün təklifləri alqışlayırıq - ba
 - [A16z gələcəyi üçün Jocelynn Pearl tərəfindən mərkəzləşdirilməmiş biotexnologiyaya dair bələdçi](https://future.a16z.com/a-guide-to-decentralized-biotech/)
 - [DeSci üçün keys](https://gitcoin.co/blog/desci-the-case-for-decentralised-science/)
 - [DeSci üçün bələdçi](https://future.com/what-is-decentralized-science-aka-desci/)
-- [Mərkəzləşdirilməmiş elm resursları](https://www.vincentweisser.com/decentralized-science)
+- [Mərkəzləşdirilməmiş elm resursları](https://www.vincentweisser.com/desci)
 - [Molekulun Biopharma IP-NFTs - Texniki Təsvir](https://molecule.to/blog/molecules-biopharma-ip-nfts-a-technical-description)
 - [Jon Starr tərəfindən hazırlanmış Etibar Əsasında Qurulmayan Elmi Sistemlər](https://medium.com/@jringo/building-systems-of-trustless-science-1cd2d072f673)
 - [Biotech DAO-ların yaranması](https://molecule.to/blog/the-emergence-of-biotech-daos)

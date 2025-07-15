@@ -1,5 +1,5 @@
 import { pick } from "lodash"
-import { HelpCircle } from "lucide-react"
+import { Info } from "lucide-react"
 import {
   getMessages,
   getTranslations,
@@ -8,6 +8,7 @@ import {
 
 import { Lang } from "@/lib/types"
 
+import ABTestWrapper from "@/components/AB/TestWrapper"
 import CalloutBannerSSR from "@/components/CalloutBannerSSR"
 import DataProductCard from "@/components/DataProductCard"
 import Emoji from "@/components/Emoji"
@@ -94,6 +95,7 @@ const loadData = dataLoader<[CoinGeckoCoinMarketResponse]>(
 async function Page({ params }: { params: Promise<{ locale: Lang }> }) {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: "page-stablecoins" })
+  const tCommon = await getTranslations({ locale, namespace: "common" })
 
   setRequestLocale(locale)
 
@@ -102,7 +104,7 @@ async function Page({ params }: { params: Promise<{ locale: Lang }> }) {
   const requiredNamespaces = getRequiredNamespacesForPage("/stablecoins")
   const messages = pick(allMessages, requiredNamespaces)
 
-  let marketsHasError = false
+  let marketsHasError = false // TODO: Implement error handling
   const coinDetails: CoinDetails[] = []
 
   try {
@@ -131,7 +133,7 @@ async function Page({ params }: { params: Promise<{ locale: Lang }> }) {
     coinDetails.push(...ethereumStablecoinData)
   } catch (error) {
     console.error(error)
-    marketsHasError = true
+    marketsHasError = true // TODO: Handle error state
   }
 
   const heroContent = {
@@ -248,7 +250,7 @@ async function Page({ params }: { params: Promise<{ locale: Lang }> }) {
 
   const tooltipContent = (
     <div>
-      {t("common:data-provided-by")}{" "}
+      {tCommon("data-provided-by")}{" "}
       <InlineLink href="https://www.coingecko.com/en/api">
         coingecko.com
       </InlineLink>
@@ -555,9 +557,9 @@ async function Page({ params }: { params: Promise<{ locale: Lang }> }) {
             </div>
 
             <h3 id="stablecoin-markets" className="mb-8 mt-12">
-              {t("page-stablecoins-top-coins")}
+              {t("page-stablecoins-top-coins")}&nbsp;
               <Tooltip content={tooltipContent}>
-                <HelpCircle className="ms-2 fill-body text-md" />
+                <Info className="size-4" />
               </Tooltip>
             </h3>
 
@@ -590,19 +592,29 @@ async function Page({ params }: { params: Promise<{ locale: Lang }> }) {
             imageWidth={600}
             alt={t("page-stablecoins-stablecoins-dapp-callout-image-alt")}
           >
-            <div className="flex flex-wrap gap-4">
-              <ButtonLink href="/dapps/">
-                {t("page-stablecoins-explore-dapps")}
-              </ButtonLink>
-              <ButtonLink
-                variant="outline"
-                href="/defi/"
-                className="whitespace-normal"
-                isSecondary
-              >
-                {t("page-stablecoins-more-defi-button")}
-              </ButtonLink>
-            </div>
+            <ABTestWrapper
+              testKey="AppTest"
+              variants={[
+                <div key="two-buttons" className="flex flex-wrap gap-4">
+                  <ButtonLink href="/dapps/">
+                    {t("page-stablecoins-explore-dapps")}
+                  </ButtonLink>
+                  <ButtonLink
+                    variant="outline"
+                    href="/defi/"
+                    className="whitespace-normal"
+                    isSecondary
+                  >
+                    {t("page-stablecoins-more-defi-button")}
+                  </ButtonLink>
+                </div>,
+                <div key="single-button" className="flex flex-wrap gap-4">
+                  <ButtonLink href="/dapps/">
+                    {t("page-stablecoins-explore-apps")}
+                  </ButtonLink>
+                </div>,
+              ]}
+            />
           </CalloutBannerSSR>
           <h2>{t("page-stablecoins-save-stablecoins")}</h2>
           <Flex className="mb-8 me-8 w-full flex-col items-start lg:flex-row">

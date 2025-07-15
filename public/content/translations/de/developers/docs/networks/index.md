@@ -64,6 +64,7 @@ Das Sepolia-Netzwerk verwendet einen berechtigten Validatorsatz. Es ist relativ 
 - [Chainstack Sepolia faucet](https://faucet.chainstack.com/sepolia-faucet)
 - [Ethereum Ecosystem faucet](https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia)
 
+
 #### Hoodi {#hoodi}
 
 Hoodi ist ein Testnet zum Testen von Validierung und Staking. Das Hoodi-Netzwerk ist offen für Benutzer, die einen Testnet-Validator betreiben möchten. Staker, die Protokoll-Upgrades testen möchten, bevor sie auf dem Mainnet deployed werden, sollten daher Hoodi verwenden.

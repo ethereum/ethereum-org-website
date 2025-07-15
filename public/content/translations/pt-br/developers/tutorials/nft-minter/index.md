@@ -203,7 +203,7 @@ Para que os usuários possam interagir com o seu contrato inteligente, eles prec
 
 Para este tutorial, usaremos uma carteira virtual no navegador, a MetaMask, para gerenciar o endereço da sua conta Ethereum. Se você quiser entender mais sobre como as transações no Ethereum funcionam, confira [esta página](/developers/docs/transactions/) na Fundação Ethereum.
 
-Você pode baixar e criar uma conta MetaMask gratuitamente [neste link](https://metamask.io/download.html). Quando estiver criando uma conta, ou se já tiver uma, certifique-se de mudar para a "Ropsten Test Network", no canto superior direito (para não precisar lidar com dinheiro de verdade\).
+Você pode baixar e criar uma conta MetaMask gratuitamente [neste link](https://metamask.io/download). Quando estiver criando uma conta, ou se já tiver uma, certifique-se de mudar para a "Ropsten Test Network", no canto superior direito (para não precisar lidar com dinheiro de verdade\).
 
 ### Etapa: Adicionar Faucet ether {#add-ether-from-faucet}
 
@@ -260,7 +260,7 @@ export const connectWallet = async () => {
         <span>
           <p>
             {" "}
-            🦊 <a target="_blank" href={`https://metamask.io/download.html`}>
+            🦊 <a target="_blank" href={`https://metamask.io/download`}>
               You must install MetaMask, a virtual Ethereum wallet, in your
               browser.
             </a>
@@ -370,7 +370,7 @@ export const getCurrentWalletConnected = async () => {
         <span>
           <p>
             {" "}
-            🦊 <a target="_blank" href={`https://metamask.io/download.html`}>
+            🦊 <a target="_blank" href={`https://metamask.io/download`}>
               You must install MetaMask, a virtual Ethereum wallet, in your
               browser.
             </a>
@@ -434,7 +434,7 @@ function addWalletListener() {
     setStatus(
       <p>
         {" "}
-        🦊 <a target="_blank" href={`https://metamask.io/download.html`}>
+        🦊 <a target="_blank" href={`https://metamask.io/download`}>
           You must install MetaMask, a virtual Ethereum wallet, in your browser.
         </a>
       </p>
@@ -518,7 +518,7 @@ Salve o arquivo e então você estará pronto para começar a escrever a funçã
 
 ### Implementar pinJSONToIPFS {#pin-json-to-ipfs}
 
-Felizmente para nós, a Pinata tem uma API [especificamente para carregar dados JSON para o IPFS](https://pinata.cloud/documentation#PinJSONToIPFS) e um JavaScript conveniente com axios de exemplo que podemos usar, com algumas pequenas modificações.
+Felizmente para nós, a Pinata tem uma API [especificamente para carregar dados JSON para o IPFS](https://docs.pinata.cloud/api-reference/endpoint/ipfs/pin-json-to-ipfs#pin-json) e um JavaScript conveniente com axios de exemplo que podemos usar, com algumas pequenas modificações.
 
 Na sua pasta `utils`, vamos criar outro arquivo chamado `pinata.js` e então importar nossa chave Pinata do arquivo .env assim:
 

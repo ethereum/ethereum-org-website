@@ -60,7 +60,7 @@ Dvě veřejné testovací sítě, které aktuálně udržují vývojáři klient
 - [Coinbase Wallet Faucet | Sepolia](https://coinbase.com/faucets/ethereum-sepolia-faucet)
 - [Alchemy Sepolia faucet](https://sepoliafaucet.com/)
 - [Infura Sepolia faucet](https://www.infura.io/faucet)
-- [Chainstack Sepolia faucet](https://faucet.chainstack.com/sepolia-faucet)
+- [Chainstack Sepolia faucet](https://faucet.chainstack.com/sepolia-testnet-faucet)
 - [Ethereum Ecosystem faucet](https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia)
 
 #### Hoodi {#hoodi}
