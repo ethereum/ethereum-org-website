@@ -1998,6 +1998,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/kks-code"><img src="https://avatars.githubusercontent.com/u/214244795?v=4?s=100" width="100px;" alt="Kendra Karol Sevilla"/><br /><sub><b>Kendra Karol Sevilla</b></sub></a><br /><a href="#maintenance-kks-code" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/otc-png"><img src="https://avatars.githubusercontent.com/u/214395681?v=4?s=100" width="100px;" alt="otc group"/><br /><sub><b>otc group</b></sub></a><br /><a href="#maintenance-otc-png" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Savio-Sou"><img src="https://avatars.githubusercontent.com/u/72797635?v=4?s=100" width="100px;" alt="Savio"/><br /><sub><b>Savio</b></sub></a><br /><a href="#maintenance-Savio-Sou" title="Maintenance">🚧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/vtjl10"><img src="https://avatars.githubusercontent.com/u/139509124?v=4?s=100" width="100px;" alt="fuder.eth"/><br /><sub><b>fuder.eth</b></sub></a><br /><a href="#maintenance-vtjl10" title="Maintenance">🚧</a></td>
     </tr>
   </tbody>
 </table>
