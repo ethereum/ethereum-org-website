@@ -8,6 +8,8 @@ import {
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { BaseLink } from "@/components/ui/Link"
 
+import { cn } from "@/lib/utils/cn"
+
 interface TorchHistoryCardProps {
   name: string
   role: string
@@ -15,21 +17,31 @@ interface TorchHistoryCardProps {
   from: string
   to: string
   twitter?: string
+  className?: string
 }
 
 const TorchHistoryCard: React.FC<TorchHistoryCardProps> = ({
   name,
   role,
-  avatar,
+  //   avatar,
   from,
   to,
   twitter,
+  className,
 }) => (
-  <Card className="flex flex-col rounded-xl bg-white p-6 shadow-lg dark:text-body-inverse">
+  <Card
+    className={cn(
+      "flex flex-col rounded-xl bg-gradient-to-b from-white to-gray-100 px-6 py-12 shadow-lg dark:text-body-inverse",
+      className
+    )}
+  >
     <CardHeader className="flex flex-col gap-4 p-0">
       <div className="flex flex-col items-center">
         <Avatar className="h-32 w-32">
-          <AvatarImage src={avatar} alt={`Avatar for ${name}`} />
+          <AvatarImage
+            src="https://placehold.co/400.png"
+            alt={`Avatar for ${name}`}
+          />
           <AvatarFallback>{name}</AvatarFallback>
         </Avatar>
       </div>

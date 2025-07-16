@@ -103,8 +103,8 @@ const TorchHistorySwiper = () => (
       slidesPerView="auto"
       coverflowEffect={{
         rotate: 0,
-        stretch: -80,
-        depth: 200,
+        stretch: -50,
+        depth: 100,
         modifier: 2.5,
         slideShadows: false,
       }}
@@ -112,8 +112,9 @@ const TorchHistorySwiper = () => (
       className="w-full"
     >
       {mockHolders.map((holder, idx) => (
-        <SwiperSlide key={idx} className="flex !w-72 justify-center">
+        <SwiperSlide key={idx} className="flex !h-[400px] !w-60 justify-center">
           <TorchHistoryCard
+            className="!h-[400px]"
             name={holder.name}
             role={holder.role}
             avatar={holder.avatar}
@@ -123,7 +124,7 @@ const TorchHistorySwiper = () => (
           />
         </SwiperSlide>
       ))}
-      <SwiperNavigation />
+      <SwiperNavigation className="mt-8" />
     </Swiper>
   </SwiperContainer>
 )
