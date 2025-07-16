@@ -295,7 +295,7 @@ def register(name, value):
     self.storage[name] = value
 ```
 
-Kontrak ini sangat sederhana; yang ada hanyalah sebuah database di dalam jaringan Ethereum yang dapat ditambahkan, tetapi tidak dapat dimodifikasi atau dihapus. Siapa pun dapat mendaftarkan nama dengan nilai tertentu, dan pendaftaran tersebut akan melekat selamanya. Kontrak pendaftaran nama yang lebih canggih juga akan memiliki "klausul fungsi" yang memungkinkan kontrak lain untuk menanyakannya, serta mekanisme untuk "pemilik" (yaitu pendaftar pertama) sebuah nama untuk mengubah data atau mengalihkan kepemilikan. Kita bahkan bisa menambahkan fungsionalitas reputasi dan web-of-trust di atasnya.
+Kontraknya sangat sederhana; semuanya itu merupakan basis data di dalam jaringan Ethereum yang dapat di tambahkan, tetapi tidak dapat dimodifikasi atau dihapus. Siapa pun dapat mendaftarkan nama dengan nilai tertentu, dan pendaftaran tersebut akan melekat selamanya. Kontrak pendaftaran nama yang lebih canggih juga akan memiliki "klausul fungsi" yang memungkinkan kontrak lain untuk menanyakannya, serta mekanisme untuk "pemilik" (yaitu pendaftar pertama) sebuah nama untuk mengubah data atau mengalihkan kepemilikan. Kita bahkan bisa menambahkan fungsionalitas reputasi dan web-of-trust di atasnya.
 
 ### Penyimpanan File Terdesentralisasi {#decentralized-file-storage}
 
@@ -355,7 +355,7 @@ Ethereum mengimplementasikan versi sederhana dari GHOST yang hanya turun tujuh l
 
 - Sebuah blok harus menentukan satu induk, dan harus menentukan 0 atau lebih banyak blok paman
 - Satu blok paman yang termasuk dalam blok B harus memiliki properti berikut ini:
-  - Itu harus menjadi anak langsung dari leluhur generasi ke-k dari B, di mana 2 <= k <= 7.
+  - Itu harus berupa keturunan langsung dari leluhur generasi ke-k dari B, di mana `2 <= k <= 7`.
   - Tidak mungkin nenek moyang dari B
   - Paman harus berupa header blok yang valid, tetapi tidak harus berupa blok yang telah diverifikasi sebelumnya atau bahkan blok yang valid
   - Seorang paman harus berbeda dari semua paman yang termasuk dalam blok sebelumnya dan semua paman lain yang termasuk dalam blok yang sama (tidak termasuk ganda)

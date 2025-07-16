@@ -1,5 +1,6 @@
 ---
 title: Non-fungible tokens (NFT)
+metaTitle: What are NFTs? | Benefits and use
 description: An overview of NFTs on Ethereum
 lang: en
 template: use-cases
@@ -75,7 +76,7 @@ This website also has an alternative domain name powered by NFTs, **ethereum.eth
 
 ## How do NFTs work? {#how-nfts-work}
 
-NFTs, like any digital items on the Ethereum blockchain, are created through a special Ethereum based computer program called a "smart contract." These contracts follow certain rules, like the [ERC-721](/glossary/#erc-721) or [ERC-1155](/glossary/#erc-1155) standards, which determine what the contract can do.
+NFTs, like any digital items on the Ethereum blockchain, are created through a special Ethereum based computer program called a "smart contract". These contracts follow certain rules, like the [ERC-721](/glossary/#erc-721) or [ERC-1155](/glossary/#erc-1155) standards, which determine what the contract can do.
 
 The NFT smart contract can do a few key things:
 
@@ -101,6 +102,7 @@ Security issues relating to NFTs are most often related to phishing scams, smart
 
 - [A beginner's guide to NFTs](https://linda.mirror.xyz/df649d61efb92c910464a4e74ae213c4cab150b9cbcc4b7fb6090fc77881a95d) – _Linda Xie, January 2020_
 - [EtherscanNFT tracker](https://etherscan.io/nft-top-contracts)
+- [Blockscout NFT tracker](https://eth.blockscout.com/tokens?type=ERC-721,ERC-1155,ERC-404)
 - [ERC-721 token standard](/developers/docs/standards/tokens/erc-721/)
 - [ERC-1155 token standard](/developers/docs/standards/tokens/erc-1155/)
 - [Popular NFT Apps and Tools](https://www.ethereum-ecosystem.com/blockchains/ethereum/nfts)

@@ -6,7 +6,7 @@ lang: it
 
 Gli Smart Contract Ethereum sono estremamente flessibili, in grado di contenere grandi quantità di token (spesso per importi superiori a 1 miliardo di USD) e di eseguire una logica immutabile basata su codice di Smart Contract distribuito precedentemente. Sebbene questa situazione abbia creato un ecosistema vibrante e creativo di Smart Contract affidabili e interconnessi, è anche l'ecosistema perfetto per attrarre malintenzionati che cercano di trarre profitto sfruttando le vulnerabilità degli Smart Contract e il comportamento imprevisto di Ethereum. Il codice degli Smart Contract _di solito_ non può essere modificato per correggere falle di sicurezza, le risorse rubate dagli Smart Contract sono irrecuperabili e anche estremamente difficili da tracciare. L'importo totale del valore rubato o perso a causa di problemi degli Smart Contract si aggira facilmente attorno al miliardo di dollari. Alcuni dei maggiori errori dovuti a errori di codifica degli Smart Contract includono:
 
-- [Problema 1 relativo a multi-sig Parity: persi 30 milioni di dollari](https://www.coindesk.com/30-million-ether-reported-stolen-parity-wallet-breach)
+- [Problema 1 relativo a multi-sig Parity: persi 30 milioni di dollari](https://www.coindesk.com/markets/2017/07/19/30-million-ether-reported-stolen-due-to-parity-wallet-breach)
 - [Problema 2 relativo a multi-sig Parity: bloccati 300 milioni di dollari](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether)
 - [The DAO hack, 3,6 milioni di ETH! Oltre un miliardo di dollari in base al prezzo attuale dell'ETH](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/)
 
@@ -29,7 +29,7 @@ Requisiti minimi:
 - Tutto il codice memorizzato in un sistema di controllo delle versioni, come git
 - Tutte le modifiche al codice effettuate tramite richieste pull
 - Tutte le richieste pull hanno almeno un revisore. _Se sei l'unico sviluppatore nel progetto, prendi in considerazione la possibilità di trovare un altro sviluppatore che lavori da solo per revisionarvi i progetti a vicenda_
-- Un singolo comando compila, distribuisce ed esegue una serie di test sul codice utilizzando un ambiente di sviluppo per Ethereum (vedi: Truffle)
+- Un singolo comando compila, distribuisce ed esegue una serie di test sul codice utilizzando un ambiente di sviluppo per Ethereum
 - Hai verificato il codice con strumenti di base di analisi del codice come Mythril e Slither, idealmente prima dell'unione di ogni richiesta pull, e confrontato le differenze nell'output
 - Solidity non produce NESSUN avviso in fase di compilazione
 - Il codice è ben documentato

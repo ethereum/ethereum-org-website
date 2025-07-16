@@ -1,5 +1,6 @@
 ---
 title: 非同质化代币 (NFT)
+metaTitle: 什么是非同质化代币？ | 优势和作用
 description: 以太坊上的非同质化代币简介
 lang: zh
 template: use-cases
@@ -75,7 +76,7 @@ summaryPoint3: 由以太坊区块链上的智能合约提供支持
 
 ## 非同质化代币的工作原理是什么？ {#how-nfts-work}
 
-非同质化代币与以太坊区块链上的任何数字物品一样，都是通过一种称为“智能合约”的特殊以太坊计算机程序创建的。 这些合约遵循某些规则，例如 [ERC-721](/glossary/#erc-721) 或 [ERC-1155](/glossary/#erc-1155) 标准，这些规则决定了合约的功能。
+与以太坊区块链上所有数字物品一样，非同质化代币 (NFT) 通过一种基于以太坊的特殊电脑程序创建，这种程序称为“智能合约”。 这些合约遵循某些规则，例如 [ERC-721](/glossary/#erc-721) 或 [ERC-1155](/glossary/#erc-1155) 标准，这些规则决定了合约的功能。
 
 非同质化代币智能合约可以做一些重要事情：
 
@@ -103,6 +104,11 @@ summaryPoint3: 由以太坊区块链上的智能合约提供支持
 - [EtherscanNFT 跟踪器](https://etherscan.io/nft-top-contracts)
 - [ERC-721 代币标准](/developers/docs/standards/tokens/erc-721/)
 - [ERC-1155 代币标准](/developers/docs/standards/tokens/erc-1155/)
+- [热门非同质化代币应用和工具](https://www.ethereum-ecosystem.com/blockchains/ethereum/nfts)
+
+## 其他资源 {#other-resources}
+
+- [NFTScan](https://nftscan.com/)
 
 <Divider />
 

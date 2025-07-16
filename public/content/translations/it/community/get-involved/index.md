@@ -15,15 +15,17 @@ Inizia leggendo la missione e i valori di ethereum.org nel nostro [codice di con
 - Scopri e prova Ethereum su [ethereum.org/developers/](/developers/)
 - Partecipa ad un Hackathon vicino a te!
 - Dai un'occhiata a [progetti relativi alla tua area di competenza o a linguaggi di programmazione di tua scelta](/developers/docs/programming-languages/)
-- Guarda o partecipa alle [chiamate Core Dev](https://www.youtube.com/@EthereumProtocol)
+- Guarda o partecipa alle [chiamate del Livello di Consenso e del Livello d'Esecuzione](https://www.youtube.com/@EthereumProtocol/streams)
 - [Lista del programma di supporto degli ecosistemi](https://esp.ethereum.foundation/wishlist/) - strumenti, documentazione, e infrastrutture dove il programma di supporto per l'ecosistema Ethereum è attivamente alla ricerca di domande di sovvenzione
 - [Web3Bridge](https://www.web3bridge.com/) - unisciti alla community di aspiranti web3 nella loro iniziativa per identificare, formare e supportare centinaia di sviluppatori e membri della community in tutta l'Africa
+- Unisciti al [Discord Eth R&D](https://discord.com/invite/VmG7Uxc)
 - Unisciti al [Discord di Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu)
 
 ## Ricercatori & Accademici <Emoji text=":mag:" size={1} /> {#researchers-and-academics}
 
 Hai conoscenze di matematica, crittografia o economia? Potresti essere interessato ad alcuni dei lavori all'avanguardia svolti all'interno dell'ecosistema di Ethereum:
 
+- Unisciti al [Discord Eth R&D](https://discord.com/invite/VmG7Uxc)
 - Scrivi o revisiona una proposta di miglioramento di Ethereum (EIP)
   - Scrivi una EIP
     1. Manda la tua idea su [Ethereum Magicians](https://ethereum-magicians.org)

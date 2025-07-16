@@ -13,9 +13,9 @@ function useColorModeValue<TLight = unknown, TDark = unknown>(
   light: TLight,
   dark: TDark
 ) {
-  const { theme } = useTheme()
+  const { resolvedTheme } = useTheme()
 
-  return theme === "light" ? light : dark
+  return resolvedTheme === "light" ? light : dark
 }
 
 export default useColorModeValue

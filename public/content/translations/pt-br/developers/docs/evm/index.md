@@ -4,9 +4,7 @@ description: Uma introdução à máquina virtual do Ethereum e como ela se rela
 lang: pt-br
 ---
 
-O contexto físico da Máquina Virtual do Ethereum (EVM, na sigla em inglês) não pode ser descrito da mesma maneira que é descrita uma nuvem no céu ou uma onda no meio do oceano, se não que deve ser _entendido_ como uma entidade singular mantida por milhares de computadores conectados operando um cliente de Ethereum.
-
-O próprio protocolo Ethereum existe apenas com o propósito de manter a operação contínua, ininterrupta e imutável dessa máquina de estado especial. É o ambiente em que todas as contas Ethereum e contratos inteligentes vivem. Para qualquer bloco na cadeia, o Ethereum tem um estado "canônico", e a EVM é a responsável por definir as regras para registrar um novo estado válido de um bloco para o seguinte.
+A Máquina Virtual Ethereum (EVM, em inglês) é um ambiente virtual descentralizado que executa códigos de forma consistente e segura em todos os nós do Ethereum. Os "nós" executam a EVM para executar contratos inteligentes, usando "[gas](/gas/)" para medir o esforço computacional necessário para [operações](/developers/docs/evm/opcodes/), garantindo a alocação eficiente de recursos e a segurança da rede.
 
 ## Pré-requisitos {#prerequisites}
 
@@ -73,6 +71,7 @@ Os [clientes de execução Ethereum](/developers/docs/nodes-and-clients/#executi
 - [Códigos de operação da EVM](https://www.ethervm.io/)
 - [Referência interativa dos códigos de operação da máquina virtual Ethereum](https://www.evm.codes/)
 - [Uma breve introdução à documentação do Solidy](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#index-6)
+- [Dominando Ethereum - A Máquina Virtual Ethereum](https://github.com/ethereumbook/ethereumbook/blob/develop/13evm.asciidoc)
 
 ## Tópicos relacionados {#related-topics}
 

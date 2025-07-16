@@ -55,11 +55,17 @@ Ennek a hálózati dizájnnak az előnyei:
 - csökkenti a központi szolgáltatóktól való függést
 - csökkenti az internet sávszélességi igényt
 - minimális vagy nulla szinkronizálásra van szükség
-- kevés erőforrással bíró eszközök esetében is működőképes (<1GB RAM, <100 MB merevlemez, 1 CPU)
+- A kevés erőforrással bíró eszközök esetében is működőképes (\<1 GB RAM, \<100 MB merevlemez, 1 CPU)
 
 Az alábbi ábra a meglévő kliensek azon funkcióit mutatja be, amelyeket a Portal Network biztosíthat, lehetővé téve a felhasználók számára, hogy ezeket a funkciókat nagyon alacsony erőforrásigényű eszközökön is elérjék.
 
-![portal network táblázat](portal-network-table2.png)
+### A Portal Network hálózatok
+
+| Beacon könnyű kliens | Státuszhálózat             | Tranzakciópletyka     | Előzményadatok hálózata |
+| -------------------- | -------------------------- | --------------------- | ----------------------- |
+| Beacon lánc könnyű   | Számla- és szerződéstároló | Könnyű memóriakészlet | Fejlécek                |
+| Protokolladatok      |                            |                       | Blokktestek             |
+|                      |                            |                       | Visszaigazolások        |
 
 ## Alapértelmezett kliensdiverzitás {#client-diversity-as-default}
 
@@ -70,12 +76,13 @@ A Portal Network kliensei a következők:
 - [Trin](https://github.com/ethereum/trin): Rust nyelven írva
 - [Fluffy](https://nimbus.team/docs/fluffy.html): Nim nyelven írva
 - [Ultralight](https://github.com/ethereumjs/ultralight): Typescript nyelven írva
+- [Shisui](https://github.com/optimism-java/shisui): Go nyelven írva
 
 A több független kliensimplementáció növeli az Ethereum-hálózat rugalmasságát és decentralizációját.
 
 Ha az egyik kliensnél problémák vagy sebezhetőségek merülnek fel, a többi kliens zavartalanul működhet tovább, megelőzve az egyetlen hibapont kialakulását. Emellett az eltérő klienshasználat elősegíti az innovációt és a versenyt, ösztönzi a fejlesztéseket és csökkenti a monokultúra kockázatát az ökoszisztémán belül.
 
-## További olvasnivaló {#futher-reading}
+## További olvasnivaló {#further-reading}
 
 - [A Portal Network (Piper Merriam előadása a Devconon, Bogotában)](https://www.youtube.com/watch?v=0stc9jnQLXA).
 - [A Portal Network Discord csatornája](https://discord.gg/CFFnmE7Hbs)

@@ -12,7 +12,7 @@ Puede encontrar algunas guías y herramientas útiles para los traductores de et
 
 - [Guía de estilo de traducción](/contributing/translation-program/translators-guide/) _: instrucciones y consejos para los traductores de ethereum.org_.
 - [Preguntas frecuentes sobre la traducción](/contributing/translation-program/faq/) _: Preguntas y respuestas frecuentes sobre el Programa de traducción de ethereum.org_
-- [Guía de edición online de Crowdin](https://support.crowdin.com/online-editor/) _: Una guía detallada para utilizar el editor online de Crowdin y algunas de las funciones avanzadas de Crowdin_
+- [Guía de edición en línea de Crowdin](https://support.crowdin.com/online-editor/) _: una guía detallada para utilizar el editor en línea de Crowdin y algunas de las funciones avanzadas de Crowdin_
 - [Bloques de contenido](/contributing/translation-program/content-buckets/) _: qué páginas se incluyen en cada bloque de contenido de ethereum.org_
 
 ## Herramientas {#tools}

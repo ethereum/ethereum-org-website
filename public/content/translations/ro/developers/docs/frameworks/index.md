@@ -22,11 +22,6 @@ Framework-urile sunt prevăzute cu numeroase funcționalități predefinite, cum
 
 ## Framework-uri disponibile {#available-frameworks}
 
-**Truffle - ** **_un mediu de dezvoltare, un framework de testare, de construire de pipeline și alte instrumente._**
-
-- [trufflesuite.com](https://www.trufflesuite.com/)
-- [GitHub](https://github.com/trufflesuite/truffle)
-
 **Hardhat -** **_Ethereum development environment for professionals._**
 
 - [hardhat.org](https://hardhat.org)

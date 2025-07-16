@@ -29,7 +29,7 @@ Hasonlóan, az Ethereum-kliensek más részeit is frissíteni lehet. Például a
 
 ## Jelenlegi helyzet {#current-progress}
 
-Az Ethereum jövőbiztosságának biztosításához szükséges frissítések többsége **még a kutatási fázisban van, és több év múlva is lehet** a megvalósítás. Az olyan fejlesztések, mint a SELF-DESTRUCT eltávolítása, valamint a végrehajtási és konszenzusos kliensben lévő tömörítési séma egységesítése valószínűleg hamarabb megtörténik, mint a kvantumnak ellenálló kriptográfia megvalósítása.
+Az Ethereum jövőbiztosságának biztosításához szükséges frissítések többsége **még a kutatási fázisban van, és több év múlva is lehet** a megvalósítás. Az olyan frissítések, mint a SELFDESTRUCT eltávolítása, valamint a végrehajtási és konszenzusos kliensben lévő tömörítési séma egységesítése valószínűleg hamarabb megtörténik, mint a kvantumnak ellenálló kriptográfia megvalósítása.
 
 **További olvasnivaló**
 

@@ -6,7 +6,7 @@ lang: pl
 
 Inteligentne kontrakty Ethereum są niezwykle elastyczne, zdolne zarówno do utrzymywania dużych ilości tokenów (często powyżej 1 mld USD), jak i do używania niezmiennej logiki opartej na wcześniej wdrożonym kodzie kontraktów inteligentnych. Stworzyło to wprawdzie dynamiczny i kreatywny ekosystem godny zaufania, ale powiązane ze sobą inteligentne kontrakty są również idealnym ekosystemem, który przyciąga atakujących poszukujących zysków poprzez wykorzystanie słabych punktów w inteligentnych kontraktach i nieoczekiwanych zachowań w Ethereum. Kodu inteligentnego kontraktu _zazwyczaj_ nie można zmienić w celu usunięcia luk w zabezpieczeniach; zasoby, które zostały skradzione z inteligentnych kontraktów, są nie do odzyskania, a skradzione aktywa są niezwykle trudne do śledzenia. Całkowita kwota wartości skradzionej lub utraconej z powodu problemów z inteligentnymi kontraktami z dużym prawdopodobieństwem sięga 1 mld USD. Do poważniejszych strat wynikających z błędów w kodowaniu kontraktów inteligentnych należą:
 
-- [Problem kont Parity z wieloma podpisami nr 1 — utracono 30 mln USD](https://www.coindesk.com/30-million-ether-reported-stolen-parity-wallet-breach)
+- [Problem kont Parity z wieloma podpisami nr 1 — utracono 30 mln USD](https://www.coindesk.com/markets/2017/07/19/30-million-ether-reported-stolen-due-to-parity-wallet-breach)
 - [Problem kont Parity z wieloma podpisami nr 2 — zablokowane 300 mln USD](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether)
 - [Zhakowanie The DAO na 3,6 mln ETH! Ponad 1 mld USD w dzisiejszych cenach ETH](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/)
 
@@ -29,7 +29,7 @@ Co najmniej:
 - Wszystkie kody przechowywane w systemie z kontrolą wersji, takim jak git
 - Wszystkie modyfikacje kodu dokonane za pośrednictwem Pull Request
 - Wszystkie Pull Request mają przynajmniej jednego recenzenta. _Jeśli realizujesz projekt jednoosobowo, rozważ znalezienie innego autora pracującego solo i recenzji kodu handlowego!_
-- Pojedyncze polecenie kompiluje, wdraża i uruchamia zestaw testów na Twoim kodzie przy użyciu programistycznego środowiska Ethereum (patrz: Truffle)
+- Pojedyncze polecenie kompiluje, wdraża i uruchamia zestaw testów na Twoim kodzie przy użyciu programistycznego środowiska Ethereum
 - Uruchomiłeś swój kod za pomocą podstawowych narzędzi do analizy kodu, takich jak Mythril i Slither, najlepiej przed scaleniem każdego pull request, porównując różnice w danych wyjściowych
 - Solidity nie emituje ŻADNYCH ostrzeżeń kompilatora
 - Twój kod jest dobrze udokumentowany

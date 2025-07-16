@@ -5,7 +5,7 @@ lang: en
 ---
 
 Usability heuristics are broad “rules of thumb” that you can use to measure the usability of your site.
-These heuristics are specifically tailored for Web3 and should be used alongside Jakob Nielsen's [10 general principles for interaction design](https://www.nngroup.com/articles/ten-usability-heuristics/).
+The 7 heuristics here are specifically tailored for Web3 and should be used alongside Jakob Nielsen's [10 general principles for interaction design](https://www.nngroup.com/articles/ten-usability-heuristics/).
 
 ## Seven usability heuristics for web3 {#seven-usability-heuristics-for-web3}
 
@@ -53,7 +53,7 @@ People care deeply about their data. Safety is often a primary concern for users
 **Example:** 
 Include your audits in the footer, at a prominent size.
 
-![Audits refernced in the website footer](./Image2.png)
+![Audits referenced in the website footer](./Image2.png)
 
 ### 3. The most important info is obvious {#the-most-important-info-is-obvious}
 

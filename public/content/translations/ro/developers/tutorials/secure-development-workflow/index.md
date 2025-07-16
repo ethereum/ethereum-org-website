@@ -26,7 +26,6 @@ Gândiți-vă să includeți funcționalități speciale contractul dvs:
 
 - Pot fi actualizate contractele dvs.? Revizuiți-vă codul posibilității de actualizare contra deficiențelor cu [`slither-check-upgradeability`](https://github.com/crytic/slither/wiki/Upgradeability-Checks) sau [Crytic](https://blog.trailofbits.com/2020/06/12/upgradeable-contracts-made-safer-with-crytic/). Am documentat 17 moduri în care actualizările pot merge prost.
 - Este în intenția contractelor dvs. să se conformeze cu ERC-urile? Verificați-le cu [`slither-check-erc`](https://github.com/crytic/slither/wiki/ERC-Conformance). Acest instrument identifică instantaneu abaterile de la șase specificații comune.
-- Aveți teste de unitate în Truffle? Îmbogățiți-le cu [`slither-prop`](https://github.com/crytic/slither/wiki/Property-generation). Acesta generează automat o suită robustă de proprietăți de securitate pentru funcționalitățile ERC20 pe baza codului dvs. specific.
 - Puteți să integrați tokenuri de la terți? Revizuiți [lista noastră de verificare pentru integrarea cu tokenurile](/developers/tutorials/token-integration-checklist/) înainte de a vă baza pe contracte externe.
 
 Inspectați vizual funcționalitățile de securitate de importață majoră ale codului dvs:
@@ -51,6 +50,6 @@ Documentați proprietățile de securitate de importanță majoră și utilizaț
 
 ## Solicitați ajutor {#ask-for-help}
 
-[Biroul Ethereum este deschis](https://calendly.com/dan-trailofbits/ethereum-office-hours) în fiecare marți după-amiază. Aceste sesiuni individuale de 1 oră reprezintă ocazia să ne puneți orice întrebări despre securitate și depanare cu instrumentele noastre, precum și să primiți feedback de la experți cu privire la abordarea dvs. actuală. Vă vom ajuta să parcurgeți acest ghid.
+[Biroul Ethereum este deschis](https://calendly.com/dan-trailofbits/office-hours) în fiecare marți după-amiază. Aceste sesiuni individuale de 1 oră reprezintă ocazia să ne puneți orice întrebări despre securitate și depanare cu instrumentele noastre, precum și să primiți feedback de la experți cu privire la abordarea dvs. actuală. Vă vom ajuta să parcurgeți acest ghid.
 
 Veniți cu noi pe site-ul Slack: [Empire Hacking](https://join.slack.com/t/empirehacking/shared_invite/zt-h97bbrj8-1jwuiU33nnzg67JcvIciUw). Vă stăm tot timpul la dispoziție pe canalele #crytic și #ethereum dacă aveți întrebări.

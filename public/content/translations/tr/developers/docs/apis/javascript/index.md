@@ -6,9 +6,9 @@ lang: tr
 
 Bir web uygulamasının Ethereum blok zinciri ile etkileşime girebilmesi için (yani blok zinciri verilerini okuması ve/veya ağa işlem gönderebilmesi) bir Ethereum düğümüne bağlanması gerekir.
 
-Bu amaçla, her Ethereum istemcisi [JSON-RPC](/developers/docs/apis/json-rpc/) spesifikasyonunu uygular, böylece uygulamaların güvenebileceği tek tip [metotlar](/developers/docs/apis/json-rpc/#json-rpc-methods) olur.
+Bu amaçla, her Ethereum istemcisi [JSON-RPC](/developers/docs/apis/json-rpc/) özelliklerini uygular, böylece uygulamaların güvenebileceği tek tip [metotlar](/developers/docs/apis/json-rpc/#json-rpc-methods) olur.
 
-Eğer bir Ethereum düğümüne bağlanmak için JavaScript kullanmak istiyorsanız, düz JavaScript'i kullanmak mümkündür ancak ekosistem içinde bunu çok daha kolay hâle getiren birkaç kolaylık kütüphanesi bulunur. Bu kitaplıklarla geliştiriciler, Ethereum ile etkileşime giren JSON RPC isteklerini (başlık altında) başlatmak için sezgisel, tek satırlı yöntemler yazabilir.
+Eğer bir Ethereum düğümüne bağlanmak için JavaScript kullanmak istiyorsanız, düz JavaScript'i kullanmak mümkündür ancak ekosistem içinde bunu çok daha kolay hâle getiren birkaç kolaylık kütüphanesi bulunur. Bu kütüphanelerle geliştiriciler, Ethereum ile etkileşime giren JSON RPC taleplerini (arka planda) başlatmak için sezgisel ve tek satırlı yöntemler yazabilirler.
 
 Lütfen "[Birleşim](/roadmap/merge/) olayından bu yana, bir düğümü çalıştırmak için iki bağlantılı Ethereum yazılımının parçası olan bir yürütüm istemcisi ve bir fikir birliği istemcisi gerektiğini unutmayın. Lütfen düğümünüzün hem bir yürütüm hem de fikir birliği istemcisini içerdiğinden emin olun. Eğer düğümünüz yerel makinanızda değilse (ör. düğümünüz bir AWS örneğinde çalışıyorsa) bu eğitimdeki IP adreslerini buna göre güncelleyin. Daha fazla bilgi için lütfen [bir düğüm çalıştırma](/developers/docs/nodes-and-clients/run-a-node/) sayfamıza bakın.
 
@@ -29,12 +29,12 @@ Bu kütüphaneler, sağlayıcıları kullanarak JSON-RPC, INFURA, Etherscan, Alc
 **Ethers örneği**
 
 ```js
-// A Web3Provider wraps a standard Web3 provider, which is
-// what MetaMask injects as window.ethereum into each page
-const provider = new ethers.providers.Web3Provider(window.ethereum)
+// Bir BrowserProvider, MetaMask'ın her sayfaya window.ethereum
+// olarak enjekte ettiği standart bir Web3 sağlayıcısını sarar
+// sabit sağlayıcı = yeni ethers.BrowserProvider(window.ethereum)
 
-// The MetaMask plugin also allows signing transactions to
-// send ether and pay to change state within the blockchain.
+// MetaMask eklentisi ayrıca işlemlerin imzalanmasına, ether göndermeye ve
+// blokzincirdeki durumu değiştirmek için ödeme yapmaya olanak tanır.
 // Bunun için hesap imzalayana ihtiyacımız var...
 sabit imzalayan = sağlayıcı.getSigner()
 ```
@@ -80,29 +80,29 @@ Bu kitaplıklar size cüzdan oluşturma, anahtarları yönetme ve işlemleri imz
 // Bir anımsatıcıdan bir cüzdan örneği oluşturun...
 mnemonic =
   "announce room limb pattern dry unit scale effort smooth jazz weasel alcohol"
-walletMnemonic = Wallet.fromMnemonic(mnemonic)
+walletMnemonic = Wallet.fromPhrase(mnemonic)
 
-// ...or from a private key
+// ...ya da özel anahtardan
 walletPrivateKey = new Wallet(walletMnemonic.privateKey)
 
 walletMnemonic.address === walletPrivateKey.address
 // true
 
-// The address as a Promise per the Signer API
+// Signer API'si uyarınca bir Promise olarak adres
 walletMnemonic.getAddress()
 // { Promise: '0x71CB05EE1b1F506fF321Da3dac38f25c0c9ce6E1' }
 
-// A Wallet address is also available synchronously
+// Bir cüzdan adresi de senkronize olarak müsaittir
 walletMnemonic.address
 // '0x71CB05EE1b1F506fF321Da3dac38f25c0c9ce6E1'
 
-// The internal cryptographic components
+// Dahili kriptografik bileşenler
 walletMnemonic.privateKey
 // '0x1da6847600b0ee25e9ad9a52abbd786dd2502fa4005dd5af9310b7cc7a3b25db'
 walletMnemonic.publicKey
 // '0x04b9e72dfd423bcf95b3801ac93f4392be5ff22143f9980eb78b3a860c4843bfd04829ae61cdba4b3b1978ac5fc64f5cc2f4350e35a108a9c9a92a81200a60cd64'
 
-// The wallet mnemonic
+// Cüzdan mnemonic'i
 walletMnemonic.mnemonic
 // {
 //   locale: 'en',
@@ -110,12 +110,12 @@ walletMnemonic.mnemonic
 //   phrase: 'announce room limb pattern dry unit scale effort smooth jazz weasel alcohol'
 // }
 
-// Note: A wallet created with a private key does not
-//       have a mnemonic (the derivation prevents it)
+// Not: Özel anahtarla oluşturulan bir cüzdan
+//       mnemonic'e sahip değildir (türetme bunu engeller)
 walletPrivateKey.mnemonic
 // null
 
-// Signing a message
+// Mesaj imzalama
 walletMnemonic.signMessage("Hello World")
 // { Promise: '0x14280e5885a19f60e536de50097e96e3738c7acae4e9e62d67272d794b8127d31c03d9cd59781d4ee31fb4e1b893bd9b020ec67dfa65cfb51e2bdadbb1de26d91c' }
 
@@ -124,21 +124,21 @@ tx = {
   value: utils.parseEther("1.0"),
 }
 
-// Signing a transaction
+// İşlem imzalama
 walletMnemonic.signTransaction(tx)
 // { Promise: '0xf865808080948ba1f109551bd432803012645ac136ddd64dba72880de0b6b3a7640000801ca0918e294306d177ab7bd664f5e141436563854ebe0a3e523b9690b4922bbb52b8a01181612cec9c431c4257a79b8c9f0c980a2c49bb5a0e6ac52949163eeb565dfc' }
 
-// The connect method returns a new instance of the
-// Wallet connected to a provider
+// Bağlanma metodu yeni bir örneği
+// sağlayıcıya bağlı olan cüzdana gönderir
 wallet = walletMnemonic.connect(provider)
 
-// Querying the network
+// Ağı sorgulama
 wallet.getBalance()
 // { Promise: { BigNumber: "42" } }
 wallet.getTransactionCount()
 // { Promise: 0 }
 
-// Sending ether
+// Ether gönderme
 wallet.sendTransaction(tx)
 ```
 

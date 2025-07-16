@@ -10,9 +10,8 @@ incomplete: true
 ## Tutoriale {#tutorials}
 
 - [Flutter și Blockchain – Aplicația dapp „Hello World”](https://www.geeksforgeeks.org/flutter-and-blockchain-hello-world-dapp/) vă conduce prin toate etapele, pentru început:
-  1.  Instalarea [suitei de dezvoltare Truffle](https://www.trufflesuite.com/)
-  2.  Scrierea unui contract inteligent în [Solidity](https://soliditylang.org/)
-  3.  Scrierea unei interfețe cu utilizatorul în Dart
+  1.  Scrierea unui contract inteligent în [Solidity](https://soliditylang.org/)
+  2.  Scrierea unei interfețe cu utilizatorul în Dart
 - [Construirea unei aplicaţii dApp mobile cu Flutter](https://medium.com/dash-community/building-a-mobile-dapp-with-flutter-be945c80315a) este mult mai scurtă, de aceea ar fi mai bine să cunoaşteţi deja elementele de bază.
 - Dacă preferați să învățați vizionând un videoclip, puteți viziona [Construiți-vă prima aplicație Blockchain cu Flutter](https://www.youtube.com/watch?v=3Eeh3pJ6PeA), care durează circa o oră
 - Dacă sunteți nerăbdător, probabil preferați [Construirea unei aplicații blockchain descentralizate cu Flutter și Dart pe Ethereum](https://www.youtube.com/watch?v=jaMFEOCq_1s), care durează doar circa douăzeci de minute

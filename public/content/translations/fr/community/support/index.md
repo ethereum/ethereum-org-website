@@ -10,7 +10,7 @@ lang: fr
 
 Vous recherchez l'assistance officielle Ethereum ? La première chose que vous devez savoir est le fait qu'Ethereum est décentralisé. Cela signifie qu'aucune organisation, entité ou personne n'est propriétaire d'Ethereum et, de ce fait, il n'existe aucune assistance officielle.
 
-Comprendre la nature décentralisée d'Ethereum est essentiel, car quiconque prétendant représenter l'assiatnce officielle d'Ethereum essaie probablement de vous escroquer ! La meilleure protection contre les arnaques consiste à vous informer et à prendre la sécurité au sérieux.
+Comprendre la nature décentralisée d’Ethereum est essentiel car **toute personne prétendant être le support officiel d’Ethereum essaie probablement de vous arnaquer !** La meilleure protection contre les escrocs est de vous informer et de prendre la sécurité au sérieux.
 
 <DocLink href="/security/">
   Sécurité d'Ethereum et prévention des arnaques
@@ -73,7 +73,6 @@ Voici quelques exemples connus :
 - [ethers.js](https://discord.gg/6jyGVDK6Jx)
 - [web3.js](https://discord.gg/GsABYQu4sC)
 - [Hardhat](https://discord.gg/xtrMGhmbfZ)
-- [Truffle](https://discord.gg/8uKcsccEYE)
 - [Alchemy](http://alchemy.com/discord)
 - [Tenderly](https://discord.gg/fBvDJYR)
 
@@ -92,6 +91,7 @@ La plupart des équipes qui créent des clients Ethereum disposent aussi d'espac
 - [Nethermind](https://discord.gg/YJx3pm8z5C)
 - [Besu](https://discord.gg/p8djYngzKN)
 - [Erigon](https://github.com/ledgerwatch/erigon/issues)
+- [Reth](https://github.com/paradigmxyz/reth/discussions)
 
 ### Clients de consensus {#consensus-clients}
 
@@ -100,5 +100,6 @@ La plupart des équipes qui créent des clients Ethereum disposent aussi d'espac
 - [Lighthouse](https://discord.gg/cyAszAh)
 - [Teku](https://discord.gg/7hPv2T6)
 - [Lodestar](https://discord.gg/aMxzVcr)
+- [Grandine](https://discord.gg/H9XCdUSyZd)
 
 Vous pouvez aussi [apprendre comment exécuter un nœud ici](/developers/docs/nodes-and-clients/run-a-node/).

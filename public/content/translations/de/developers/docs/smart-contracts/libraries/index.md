@@ -16,7 +16,7 @@ Normalerweise finden Sie zwei Arten von Erstellungsblöcken in einer Smart Contr
 
 ### Verhaltensweisen {#behaviors}
 
-Wenn Sie einen Smart Contract schreiben, ist es wahrscheinlich das Sie immer wieder dieselben Muster erstellen, zum Beispiel das Zuweisen einer _Admin_-Adresse, um geschützte Vorgänge in einem Vertrag auszuführen, oder das Hinzufügen einer Notfall-_Unterbrechungs_-Schaltfläche, falls ein unvorhergesehenes Problem auftritt.
+Wenn Sie einen Smart Contract schreiben, ist es wahrscheinlich das Sie immer wieder dieselben Muster erstellen, zum Beispiel das Zuweisen einer _Admin-_Adresse, um geschützte Vorgänge in einem Vertrag auszuführen, oder das Hinzufügen einer Notfall-_Unterbrechungs_-Schaltfläche, falls ein unvorhergesehenes Problem auftritt.
 
 Smart-Contract-Bibliotheken bieten in der Regel wiederverwendbare Implementierungen dieser Vorgehensweisen als [Bibliotheken](https://solidity.readthedocs.io/en/v0.7.2/contracts.html#libraries) oder über eine [Vererbung](https://solidity.readthedocs.io/en/v0.7.2/contracts.html#inheritance) an.
 
@@ -79,7 +79,7 @@ Unabhängig von der verwendeten Methode sollten Sie beim Einbinden einer Bibliot
 
 Wenn Sie eine Smart-Contract-Bibliothek für Ihr Projekt nutzen, bietet das gleich mehrere Vorteile. In erster Linie sparen Sie Zeit, denn die Bibliothek stellt fertige Bausteine zur Verfügung stellt, die Sie einfach in Ihr System integrieren können, anstatt sie selbst schreiben zu müssen.
 
-Sicherheit ist ein großes Plus. Auch Open-Source-Smart-Contract-Bibliotheken werden oft intensiv untersucht. Da viele Projekte von der Bibliothek abhängen, besteht ein starker Anreiz vonseiten der Communty, sie ständig zu überprüfen. Fehler finden sich viel häufiger im Anwendungscode als in wiederverwendbaren Vertragsbibliotheken. Einige Bibliotheken werden auch [externen Audits](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/audit) unterzogen, um deren Sicherheit zu erhöhen.
+Sicherheit ist ein großes Plus. Auch Open-Source-Smart-Contract-Bibliotheken werden oft intensiv untersucht. Da viele Projekte von der Bibliothek abhängen, besteht ein starker Anreiz vonseiten der Communty, sie ständig zu überprüfen. Fehler finden sich viel häufiger im Anwendungscode als in wiederverwendbaren Vertragsbibliotheken. Einige Bibliotheken werden auch [externen Audits](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/audits) unterzogen, um deren Sicherheit zu erhöhen.
 
 Die Verwendung von Smart-Contract-Bibliotheken birgt jedoch das Risiko, dass Sie Code in Ihr Projekt integreiren, mit dem Sie nicht vertraut sind. Es ist verlockend, einen Vertrag zu importieren und direkt in Ihr Projekt aufzunehmen, doch ohne ein gutes Verständnis dessen, was dieser Vertrag bewirkt, können Sie aufgrund eines unerwarteten Verhaltens versehentlich ein Problem in Ihrem System einführen. Lesen Sie immer die Dokumentation des Codes, den Sie importieren, und überprüfen Sie dann den Code selbst, bevor Sie ihn in Ihr Projekt aufnehmen.
 
@@ -104,7 +104,7 @@ Schließlich sollten Sie bei der Entscheidung, ob Sie eine Bibliothek integriere
 
 **thirdweb Solidity SDK -** **_Bietet die Tools, die zum effizienten Erstellen von benutzerdefinierten Smart Contracts erforderlich sind_**
 
-- [Dokumentation](https://portal.thirdweb.com/solidity/)
+- [Dokumentation](https://portal.thirdweb.com/contracts/build/overview)
 - [GitHub](https://github.com/thirdweb-dev/contracts)
 
 ## Ähnliche Tutorials {#related-tutorials}

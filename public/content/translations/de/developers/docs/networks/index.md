@@ -16,33 +16,34 @@ Sie sollten die [Grundlagen von Ethereum](/developers/docs/intro-to-ethereum/) v
 
 Öffentliche Netzwerke sind für jedermann auf der Welt mit einer Internetverbindung zugänglich. Jeder kann Transaktionen in einer öffentlichen Blockchain lesen oder erstellen und die ausgeführten Transaktionen validieren. Der Konsens zwischen den Peers entscheidet über die Aufnahme von Transaktionen und den Zustand des Netzwerks.
 
-### Ethereum-Mainnet {#ethereum-mainnet}
+### Ethereum Mainnet {#ethereum-mainnet}
 
 Mainnet ist die primäre öffentliche Ethereum-Produktions-Blockchain, bei der Transaktionen mit tatsächlichem Wert im dezentralisierten Ledger stattfinden.
 
 Wenn Menschen und Börsen ETH-Preise diskutieren, sprechen sie über Mainnet ETH.
 
-### Ethereum-Testnets {#ethereum-testnets}
+### Ethereum Testnetze {#ethereum-testnets}
 
-Zusätzlich zum Mainnet gibt es öffentliche Testnetze. Dabei handelt es sich um Netzwerke, die von Protokollentwicklern oder Smart-Contract-Entwicklern eingesetzt werden, um sowohl Protokoll-Upgrades als auch potenzielle Smart Contracts in einer produktionsähnlichen Umgebung zu testen, bevor sie ins Mainnet gelangen. Stelle dir dies als Analog zur Produktion im Vergleich zu Staging-Servern vor.
+Neben dem Mainnet gibt es öffentliche Testnetze. Diese werden von Protokollentwicklern oder Smart-Contract-Entwicklern verwendet, um sowohl Protokoll-Upgrades als auch potenzielle Smart Contracts in einer produktionsähnlichen Umgebung zu testen, bevor sie auf das Mainnet deployed werden. Stellen Sie sich das als Analogie zu Produktions- und Staging-Servern vor.
 
-Sie sollten jeden Contract-Code, den Sie schreiben, in einem Testnet testen, bevor Sie ihn im Mainnet einsetzen. dApps, die mit bestehenden Smart Contracts integriert werden, haben Kopien der meisten Projekte in Testnets bereitgestellt.
+Sie sollten jeden Contract-Code, den Sie schreiben, auf einem Testnet testen, bevor Sie ihn auf dem Mainnet deployen. Unter den dApps, die mit bestehenden Smart Contracts integriert sind, haben die meisten Projekte Kopien auf Testnetzen deployed.
 
-Die meisten Testnets begannen mit einem berechtigten Proof-of-Authority-Konsensmechanismus. Dies bedeutet, dass eine kleine Anzahl von Nodes ausgewählt wird, um Transaktionen zu validieren und neue Blöcke zu erstellen – und ihre Identität im Prozess zu hinterlegen. Alternativ dazu bieten einige Testnets einen offenen Proof-of-Stake-Konsensmechanismus, bei dem jeder testweise einen Valitador laufen lassen kann, genau wie beim Ethereum-Mainnet.
+Die meisten Testnetze begannen mit einem berechtigten Proof-of-Authority-Konsensmechanismus. Das bedeutet, dass eine kleine Anzahl von Nodes ausgewählt wird, um Transaktionen zu validieren und neue Blöcke zu erstellen – wobei sie ihre Identität in diesem Prozess einsetzen. Alternativ verfügen einige Testnetze über einen offenen Proof-of-Stake-Konsensmechanismus, bei dem jeder das Validieren testen kann, genau wie beim Ethereum Mainnet.
 
-ETH in Testnets soll keinen wirklichen Wert haben. Es wurden jedoch Märkte für bestimmte Arten von Testnet-ETH geschaffen, die knapp oder schwer zu bekommen sind. Da Sie ETH benötigen, um tatsächlich mit Ethereum zu interagieren (sogar auf Testnets), erhalten die meisten Nutzer Testnet-ETH kostenlos von Faucets. Die meisten Faucets sind Webapplikationen, bei denen Sie eine Adresse eingeben können, an die die ETH gesendet werden sollen.
+ETH auf Testnetzen soll keinen realen Wert haben; es wurden jedoch Märkte für bestimmte Arten von Testnet-ETH geschaffen, die knapp oder schwer zu erhalten geworden sind. Da Sie ETH benötigen, um tatsächlich mit Ethereum zu interagieren (selbst auf Testnetzen), erhalten die meisten Menschen Testnet-ETH kostenlos von Faucets. Die meisten Faucets sind Webanwendungen, in die Sie eine Adresse eingeben können, an die Sie ETH senden möchten.
 
 #### Welches Testnet soll ich benutzen?
 
-Die beiden öffentlichen Testnets, die die Client-Entwickler derzeit betreiben, sind Sepolia und Goerli. Sepolia ist ein Netz für Smart Contract- und Anwendungsentwickler zum Testen ihrer Anwendungen. Das Goerli-Netz ermöglicht es Protokollentwicklern, Netzwerk-Upgrades zu testen, bzw. erlaubt es Stakern, laufende Validatoren zu testen.
+Die beiden öffentlichen Testnetze, die Client-Entwickler derzeit warten, sind Sepolia und Hoodi. Sepolia ist ein Netzwerk für Contract- und Anwendungsentwickler, um ihre Anwendungen zu testen. Das Hoodi-Netzwerk ermöglicht es Protokollentwicklern, Netzwerk-Upgrades zu testen, und Stakern, das Validieren zu testen.
 
 #### Sepolia {#sepolia}
 
-**Sepolia ist das empfohlene Standard-Testnet für die Anwendungsentwicklung**. Das Sepolia-Netz verwendet ein berechtigtes Validator-Set. Es ist relativ neu, d. h. der Status und Verlauf sind beide recht klein. Das bedeutet, dass das Netzwerk schnell zu synchronisieren ist und dass der Betrieb eines Knotens weniger Speicherplatz erfordert. Das ist nützlich für Benutzer, die schnell einen Knoten einrichten und direkt mit dem Netzwerk interagieren möchten.
+**Sepolia ist das empfohlene Standard-Testnet für die Anwendungsentwicklung**.
+Das Sepolia-Netzwerk verwendet einen berechtigten Validatorsatz. Es ist relativ neu, was bedeutet, dass sein Zustand und seine Historie beide recht klein sind. Das bedeutet, dass das Netzwerk schnell synchronisiert und dass das Betreiben eines Nodes weniger Speicherplatz erfordert. Dies ist nützlich für Benutzer, die schnell einen Node starten und direkt mit dem Netzwerk interagieren möchten.
 
-- Geschlossener Validatorensatz, kontrolliert von Client und Testteams
-- Neues Testnet, weniger Anwendungen im Einsatz als auf anderen Testnets
-- Schnelle Synchronisierung und minimaler Speicherplatzbedarf für den Betrieb eines Knotens
+- Geschlossener Validatorsatz, kontrolliert von Client- und Testteams
+- Neues Testnet, weniger Anwendungen deployed als bei anderen Testnetzen
+- Schnelle Synchronisation und minimaler Speicherplatzbedarf für den Betrieb eines Nodes
 
 ##### Ressourcen
 
@@ -50,74 +51,70 @@ Die beiden öffentlichen Testnets, die die Client-Entwickler derzeit betreiben, 
 - [GitHub](https://github.com/eth-clients/sepolia)
 - [Otterscan](https://sepolia.otterscan.io/)
 - [Etherscan](https://sepolia.etherscan.io)
+- [Blockscout](https://eth-sepolia.blockscout.com/)
 
 ##### Faucets
 
 - [QuickNode Sepolia Faucet](https://faucet.quicknode.com/drip)
 - [Grabteeth](https://grabteeth.xyz/)
-- [PoW-Faucet](https://sepolia-faucet.pk910.de/)
-- [Faucet für Coinbase-Wallet | Sepolia](https://coinbase.com/faucets/ethereum-sepolia-faucet)
-- [Faucet für Alchemy Sepolia](https://sepoliafaucet.com/)
-- [Faucet für Infura Sepolia](https://www.infura.io/faucet)
-- [Faucet für Chainstack Sepolia](https://faucet.chainstack.com/sepolia-faucet)
+- [PoW faucet](https://sepolia-faucet.pk910.de/)
+- [Coinbase Wallet Faucet | Sepolia](https://coinbase.com/faucets/ethereum-sepolia-faucet)
+- [Alchemy Sepolia faucet](https://sepoliafaucet.com/)
+- [Infura Sepolia faucet](https://www.infura.io/faucet)
+- [Chainstack Sepolia faucet](https://faucet.chainstack.com/sepolia-faucet)
+- [Ethereum Ecosystem faucet](https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia)
 
-#### Goerli _(Langzeit-Support)_ {#goerli}
 
-_Hinweis: [Das Goerli-Testnetz ist veraltet](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17) und wird 2023 durch [Holesovice](https://github.com/eth-clients/holesovice) ersetzt. Sie sollten die Migration Ihrer Anwendungen auf Sepolia in Erwägung ziehen._
+#### Hoodi {#hoodi}
 
-Goerli ist ein Testnet zum Testen, Validieren und Staking. Das Goerli-Netzwerk ist offen für Benutzer, die einen Testnet-Validator betreiben möchten. Staker, die Protokoll-Upgrades testen wollen, bevor sie im Mainnet eingesetzt werden, sollten daher Goerli benutzen.
+Hoodi ist ein Testnet zum Testen von Validierung und Staking. Das Hoodi-Netzwerk ist offen für Benutzer, die einen Testnet-Validator betreiben möchten. Staker, die Protokoll-Upgrades testen möchten, bevor sie auf dem Mainnet deployed werden, sollten daher Hoodi verwenden.
 
-- Offenes Validator-Set, Staker können Netzwerk-Upgrades testen
-- Großer State, nützlich zum Testen komplexer Smart-Contract-Interaktionen
-- Langwierige Synchronisierung und hoher Speicherbedarf für den Betrieb eines Knotens
+- Offener Validatorsatz, Staker können Netzwerk-Upgrades testen
+- Großer Zustand, nützlich für das Testen komplexer Smart-Contract-Interaktionen
+- Längere Synchronisationszeit und mehr Speicherplatz für den Betrieb eines Nodes erforderlich
 
 ##### Ressourcen
 
-- [Website](https://goerli.net/)
-- [GitHub](https://github.com/eth-clients/goerli)
-- [Etherscan](https://goerli.etherscan.io)
+- [Website](https://hoodi.ethpandaops.io/)
+- [GitHub](https://github.com/eth-clients/hoodi)
+- [Explorer](https://explorer.hoodi.ethpandaops.io/)
+- [Checkpoint Sync](https://checkpoint-sync.hoodi.ethpandaops.io/)
 
 ##### Faucets
 
-- [QuickNode Goerli Faucet](https://faucet.quicknode.com/drip)
-- [Grabteeth](https://grabteeth.xyz/)
-- [PoW-Faucet](https://goerli-faucet.pk910.de/)
-- [Paradigm-Faucet](https://faucet.paradigm.xyz/)
-- [Alchemy Goerli Faucet](https://goerlifaucet.com/)
-- [All That Node Goerli Faucet](https://www.allthatnode.com/faucet/ethereum.dsrv)
-- [Coinbase Wallet Faucet | Goerli](https://coinbase.com/faucets/ethereum-goerli-faucet)
-- [Chainstack Goerli-Faucet](https://faucet.chainstack.com/goerli-faucet)
+- [Hoodi Faucet](https://hoodi.ethpandaops.io/)
 
-Um einen Validator im Goerli-Testnet zu starten, verwenden Sie das [Launchpad "cheap goerli validator"](https://goerli.launchpad.ethstaker.cc/en/) von ethstaker.
+Um einen Validator auf dem Hoodi-Testnet zu starten, verwenden Sie [Hoodi launchpad](https://hoodi.launchpad.ethereum.org/en/).
 
-### Layer-2-Testnets {#layer-2-testnets}
+### Layer-2-Testnetze {#layer-2-testnets}
 
-[Layer-2 (L2)](/layer-2/) ist ein Sammelbegriff, der eine bestimmte Gruppe von Ethereum-Skalierungslösungen beschreibt. Ein Layer-2 ist eine separate Blockchain, die Ethereum erweitert und die Sicherheitsgarantien von Ethereum erbt. Layer-2-Testnets sind in der Regel eng mit öffentlichen Ethereum-Testnets gekoppelt.
+[Layer 2 (L2)](/layer-2/) ist ein Sammelbegriff zur Beschreibung einer bestimmten Gruppe von Ethereum-Skalierungslösungen. Ein Layer 2 ist eine separate Blockchain, die Ethereum erweitert und die Sicherheitsgarantien von Ethereum erbt. Layer-2-Testnetze sind normalerweise eng mit öffentlichen Ethereum-Testnetzen verbunden.
 
-#### Arbitrum Goerli {#arbitrum-goerli}
+#### Arbitrum Sepolia {#arbitrum-sepolia}
 
 Ein Testnet für [Arbitrum](https://arbitrum.io/).
 
 ##### Faucets
 
-- [Chainlink-Faucet](https://faucets.chain.link/)
+- [Chainlink faucet](https://faucets.chain.link/arbitrum-sepolia)
+- [Alchemy faucet](https://www.alchemy.com/faucets/arbitrum-sepolia)
 
-#### Optimistic Goerli {#optimistic-goerli}
+#### Optimistic Sepolia {#optimistic-sepolia}
 
 Ein Testnet für [Optimism](https://www.optimism.io/).
 
 ##### Faucets
 
-- [Paradigm-Faucet](https://faucet.paradigm.xyz/)
-- [Coinbase Wallet Faucet | Optimism Goerli](https://coinbase.com/faucets/optimism-goerli-faucet)
+- [Chainlink faucet](https://faucets.chain.link/optimism-sepolia)
+- [Alchemy faucet](https://www.alchemy.com/faucets/optimism-sepolia)
 
-#### Starknet Goerli {#starknet-goerli}
+#### Starknet Sepolia {#starknet-sepolia}
 
-Ein Testnetz für [Starknet](https://www.starknet.io).
+Ein Testnet für [Starknet](https://www.starknet.io).
 
 ##### Faucets
 
-- [Starknet-Faucet](https://faucet.goerli.starknet.io)
+- [Alchemy faucet](https://www.alchemy.com/faucets/starknet-sepolia)
 
 ## Private Netzwerke {#private-networks}
 

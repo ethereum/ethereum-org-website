@@ -2,179 +2,96 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "@docsearch/css";
+@import "@/styles/colors.css";
+@import "@/styles/semantic-tokens.css";
+@import "@/styles/docsearch.css";
+@import "@rainbow-me/rainbowkit/styles.css";
+
 @layer base {
   :root {
     --font-inter: Inter, sans-serif;
     --font-mono: "IBM Plex Mono", Courier, monospace;
 
-    /* Primitive Color Scheme */
-    --gray-100: #f7f7f7;
-    --gray-150: #f2f2f2;
-    --gray-200: #e7e7e7;
-    --gray-300: #c8c8c8;
-    --gray-400: #8c8c8c;
-    --gray-500: #616161;
-    --gray-600: #333333;
-    --gray-700: #222222;
-    --gray-800: #1b1b1b;
-    --gray-900: #141414;
-
-    --blue-50: #f6f6ff;
-    --blue-100: #ebebff;
-    --blue-200: #d6d6ff;
-    --blue-300: #9999ff;
-    --blue-400: #5555ff;
-    --blue-500: #1c1cff;
-    --blue-600: #000066;
-    --blue-700: #0000a3;
-    --blue-800: #000066;
-    --blue-900: #000029;
-
-    --orange-50: #fff3ed;
-    --orange-100: #ffe5d6;
-    --orange-200: #ffcbad;
-    --orange-300: #ffb18f;
-    --orange-400: #ff985c;
-    --orange-500: #ff7324;
-    --orange-550: #df5a0e;
-    --orange-600: #b84300;
-    --orange-700: #7a2d00;
-    --orange-800: #521e00;
-    --orange-900: #2f1000;
-
-    --red-100: #f7c8c8;
-    --red-500: #b80000;
-    /* ! Deprecating 900 */
-    --red-900: #180c0c;
-
-    --green-100: #ddf4e4;
-    /* ! Deprecating 400 */
-    --green-400: #48bb78;
-    --green-500: #0a7146;
-    /* ! Deprecating 900 */
-    --green-900: #0a160e;
-
-    --yellow-200: #fff8df;
-    --yellow-500: #bd8400;
-
-    /* Semantic Colors: Light mode */
-    --primary: var(--blue-500);
-    --primary-high-contrast: var(--blue-800);
-    --primary-low-contrast: var(--blue-100);
-    --primary-hover: var(--blue-400);
-    --primary-visited: var(--blue-700);
-    /* ! Deprecating primary-light */
-    --primary-light: var(--blue-100);
-    /* ! Deprecating primary-dark */
-    --primary-dark: var(--blue-700);
-    /* ! Deprecating primary-pressed */
-    --primary-pressed: var(--blue-400);
-
-    --body: var(--gray-800);
-    --body-medium: var(--gray-500);
-    --body-light: var(--gray-200);
-    /* ! Deprecating body-inverted */
-    --body-inverted: var(--gray-100);
-
-    --background: white;
-    --background-highlight: var(--gray-100);
-
-    --disabled: var(--gray-400);
-
-    /* ! Deprecating neutral */
-    --neutral: white;
-
-    /* Complementary Set */
-    --attention: var(--yellow-500);
-    --attention-light: var(--yellow-200);
-    --attention-outline: var(--attention);
-
-    /* ? Keep "error" or rename to "fail" ? */
-    --error: var(--red-500);
-    --error-light: var(--red-100);
-    --error-outline: var(--error);
-    /* ! Deprecating error-neutral */
-    --error-neutral: var(--red-100);
-
-    --success: var(--green-500);
-    --success-light: var(--green-100);
-    --success-outline: var(--success);
-    /* ! Deprecating success-neutral */
-    --success-neutral: var(--green-100);
-
-    /* Misc sematics: light mode */
+    /* Misc semantics: light mode */
     --tooltip-shadow: rgba(0, 0, 0, 0.24);
     --switch-background: var(--gray-300);
-    --hub-hero-content-bg: rgba(255, 255, 255, 0.8);
-    --bg-main-gradient: linear-gradient(
+    --hub-hero-content: rgba(255, 255, 255, 0.8);
+    --gradient-main: linear-gradient(
       102.7deg,
       rgba(185, 185, 241, 0.2) 0%,
       rgba(84, 132, 234, 0.2) 51.56%,
       rgba(58, 142, 137, 0.2) 100%
     );
-    --table-box-shadow: 0 14px 66px rgba(0, 0, 0, 0.07),
-      0 10px 17px rgba(0, 0, 0, 0.03), 0 4px 7px rgba(0, 0, 0, 0.05);
+    --feedback-gradient: var(--gradient-main);
+    --table-box-shadow:
+      0 14px 66px rgba(0, 0, 0, 0.07), 0 10px 17px rgba(0, 0, 0, 0.03),
+      0 4px 7px rgba(0, 0, 0, 0.05);
     --table-item-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+
+    --gradient-banner: radial-gradient(
+      155% 100% at 50% 0%,
+      rgba(201, 179, 245, 0.16) 0%,
+      rgba(201, 179, 245, 0.48) 33%,
+      rgba(136, 170, 241, 0.16) 66%,
+      rgba(255, 255, 255, 0) 100%
+    );
+
+    --banner-grid-gradient: linear-gradient(
+      90deg,
+      rgba(127, 127, 213, 0.2) 0%,
+      rgba(132, 145, 221, 0.2) 50%,
+      rgba(145, 234, 228, 0.2) 100%
+    );
+    --search-background: var(--background);
+    --gradient-staking: linear-gradient(
+      rgba(237, 194, 84, 0.1) 13.39%,
+      rgba(75, 231, 156, 0.1) 44.21%,
+      rgba(231, 202, 200, 0.1) 82.88%
+    );
+
+    --gradient-step-1: rgba(127, 127, 213, 0.2);
   }
 
-  [data-theme="dark"] {
-    /* Semantic Colors: Dark mode */
-    --primary: var(--orange-500);
-    --primary-high-contrast: var(--orange-100);
-    --primary-low-contrast: var(--orange-800);
-    --primary-hover: var(--orange-400);
-    --primary-visited: var(--orange-550);
-    /* ! Deprecating primary-light */
-    --primary-light: var(--orange-100);
-    /* ! Deprecating primary-dark */
-    --primary-dark: var(--orange-800);
-    /* ! Deprecating primary-pressed */
-    --primary-pressed: var(--orange-800);
-
-    --body: var(--gray-100);
-    --body-medium: var(--gray-400);
-    --body-light: var(--gray-600);
-    /* ! Deprecating body-inverted */
-    --body-inverted: var(--gray-800);
-
-    --background: var(--gray-800);
-    --background-highlight: var(--gray-900);
-
-    --disabled: var(--gray-500);
-
-    /* ! Deprecating neutral */
-    --neutral: var(--gray-900);
-
-    /* Complementary Set */
-    --attention-outline: var(--attention-light);
-
-    --error-light: var(--error-light);
-    /* ! Deprecating error-neutral */
-    --error-netural: var(--red-900);
-
-    --success-outline: var(--success-light);
-    /* ! Deprecating success-neutral */
-    --success-neutral: var(--green-900);
-
-    /* Misc sematics: light mode */
+  .dark {
+    /* Misc semantics: dark mode */
     --tooltip-shadow: rgba(255, 255, 255, 0.24);
     --switch-background: rgba(255, 255, 255, 0.24);
-    --hub-hero-content-bg: rgba(34, 34, 34, 0.8);
-    --bg-main-gradient: linear-gradient(
+    --hub-hero-content: rgba(34, 34, 34, 0.8);
+    --gradient-main: linear-gradient(
       102.7deg,
       rgba(185, 185, 241, 0.2) 0%,
       rgba(84, 132, 234, 0.2) 51.56%,
       rgba(58, 142, 137, 0.2) 100%
     );
-    --table-box-shadow: 0 14px 66px hsla(0, 0%, 96.1%, 0.07),
+    --feedback-gradient: linear-gradient(
+      83.46deg,
+      #2c2c32 7.03%,
+      #44404d 52.42%,
+      #303038 98.77%
+    );
+    --table-box-shadow:
+      0 14px 66px hsla(0, 0%, 96.1%, 0.07),
       0 10px 17px hsla(0, 0%, 96.1%, 0.03), 0 4px 7px hsla(0, 0%, 96.1%, 0.05);
     --table-item-box-shadow: 0 1px 1px hsla(0, 0%, 100%, 0.1);
+    --banner-grid-gradient: linear-gradient(
+      90deg,
+      rgba(172, 182, 229, 0.08) 0%,
+      rgba(134, 253, 232, 0.08) 100%
+    );
+    --search-background: #4c4c4c;
+
+    --gradient-step-1: rgba(127, 127, 213, 0.2);
   }
 }
 
 @layer base {
+  * {
+    @apply scroll-smooth border-border;
+  }
+
   body {
-    @apply bg-background font-body text-sm text-body lg:text-md;
+    @apply bg-background font-body leading-base text-body;
   }
 
   a {
@@ -188,6 +105,16 @@
   h5,
   h6 {
     @apply font-bold;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  section {
+    @apply scroll-mt-20;
   }
 
   h1 {
@@ -226,6 +153,7 @@
   ol {
     margin: 0px 0px 1.45rem 1.45rem;
     padding: 0;
+    list-style-type: initial;
 
     & li {
       padding-inline-start: 0;
@@ -249,5 +177,50 @@
     & > p {
       margin-bottom: calc(1.45rem / 2);
     }
+  }
+}
+
+@layer components {
+  .staking-grid {
+    grid-template-areas:
+      "ether header glyph"
+      "decorator content content";
+  }
+
+  .staking-grid-stacked {
+    grid-template-areas:
+      "ether"
+      "header"
+      "content";
+  }
+
+  .area-ether {
+    grid-area: ether;
+  }
+
+  .area-header {
+    grid-area: header;
+  }
+
+  .area-content {
+    grid-area: content;
+  }
+
+  .area-glyph {
+    grid-area: glyph;
+  }
+
+  .gold {
+    @apply font-bold text-staking-gold;
+  }
+
+  .dev-ring {
+    @apply ring ring-red-500 sm:ring-orange-500 md:ring-yellow-400 lg:ring-green-500 xl:ring-blue-500 2xl:ring-violet-500;
+  }
+}
+
+@layer utilities {
+  .animate-pause {
+    animation-play-state: paused;
   }
 }

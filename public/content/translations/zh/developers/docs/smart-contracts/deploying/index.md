@@ -53,6 +53,13 @@ lang: zh
 
 - [相关文档](https://portal.thirdweb.com/deploy/)
 
+**Crossmint - _企业级 Web3 开发平台，可用于部署智能合约，启用信用卡和跨链支付，使用应用程序接口创建、分发、销售、储存和编辑非同质化代币。_**
+
+- [crossmint.com](https://www.crossmint.com)
+- [相关文档](https://docs.crossmint.com)
+- [Discord](https://discord.com/invite/crossmint)
+- [博客](https://blog.crossmint.com)
+
 ## 相关教程 {#related-tutorials}
 
 - [部署你的第一个智能合约](/developers/tutorials/deploying-your-first-smart-contract/) _ – 介绍如何在以太坊测试网络上部署你的第一个智能合约。_

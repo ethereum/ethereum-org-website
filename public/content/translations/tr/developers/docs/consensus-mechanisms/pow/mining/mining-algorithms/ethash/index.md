@@ -135,7 +135,7 @@ def calc_dataset(full_size, cache):
 
 ## Ana döngü {#main-loop}
 
-Şimdi, belirli bir başlık ve nonce için nihai değerimizi üretmek için tüm veri kümesinden verileri topladığımız ana "hashimoto" benzeri döngüyü belirtiyoruz. Aşağıdaki kodda, `başlık`, kesilmiş bir \_ _ blok başlığı, yani **mixHash** ve **nonce** alanlarını hariç tutan bir başlığının RLP temsilinin SHA3-256 \_karmasını_ temsil eder. `nonce`, büyük endian düzende 64 bitlik işaretsiz bir tamsayının sekiz baytıdır. Yani `nonce[::-1]` bu değerin sekiz baytlık küçük endian temsilidir:
+Şimdi, belirli bir başlık ve nonce için nihai değerimizi üretmek için tüm veri kümesinden verileri topladığımız ana "hashimoto" benzeri döngüyü belirtiyoruz. Aşağıdaki kodda, `başlık`, kesilmiş bir _ _ blok başlığı, yani **mixHash** ve **nonce** alanlarını hariç tutan bir başlığının RLP temsilinin SHA3-256 _karmasını_ temsil eder. `nonce`, büyük endian düzende 64 bitlik işaretsiz bir tamsayının sekiz baytıdır. Yani `nonce[::-1]` bu değerin sekiz baytlık küçük endian temsilidir:
 
 ```python
 def hashimoto(header, nonce, full_size, dataset_lookup):

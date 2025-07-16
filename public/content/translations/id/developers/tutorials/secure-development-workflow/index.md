@@ -26,7 +26,6 @@ Pertimbangkan fitur spesial kontrak Anda:
 
 - Apakah kontrak Anda dapat ditingkatkan? Tinjau kode yang dapat ditingkatkan untuk mencari kelemahannya dengan [`slither-check-upgradeability`](https://github.com/crytic/slither/wiki/Upgradeability-Checks) atau [Crytic](https://blog.trailofbits.com/2020/06/12/upgradeable-contracts-made-safer-with-crytic/). Kami telah mendokumentasikan 17 alur dari peningkatan yang bermasalah.
 - Apakah kontrak Anda mengklaim telah sesuai dengan ERC? Periksa dengan [`slither-check-erc`](https://github.com/crytic/slither/wiki/ERC-Conformance). Peralatan ini dengan segera mengidentifikasi deviasi dari enam spesifikasi umum.
-- Apakah Anda memiliki tes unit di Truffle? Perkuat dengan [`slither-prop`](https://github.com/crytic/slither/wiki/Property-generation). Secara otomatis ini akan menghasilkan serangkaian properti keamanan yang kokoh untuk fitur ERC20 yang didasarkan pada kode spesifik Anda.
 - Apakah Anda berintegrasi dengan token pihak ketiga? Tinjau [daftar periksa integrasi token](/developers/tutorials/token-integration-checklist/) kami sebelum menggunakan kontrak eksternal.
 
 Secara visual periksa fitur keamanan kritikal kode Anda:
@@ -51,6 +50,6 @@ Akhirnya, waspadalah terhadap masalah yang tidak dapat dengan mudah ditemukan ol
 
 ## Minta bantuan {#ask-for-help}
 
-[Jam kerja Ethereum](https://calendly.com/dan-trailofbits/ethereum-office-hours) dimulai setiap Selasa sore. Sesi berdurasi 1 jam dan 1 lawan 1 ini adalah kesempatan untuk mengajukan pertanyaan apa pun kepada kami tentang keamanan, penyelesaian masalah menggunakan peralatan kami, dan mendapatkan umpan balik dari para ahli tentang pendekatan yang Anda pakai saat ini. Kami akan menolong Anda memahami panduan ini.
+[Jam kerja Ethereum](https://calendly.com/dan-trailofbits/office-hours) dimulai setiap Selasa sore. Sesi berdurasi 1 jam dan 1 lawan 1 ini adalah kesempatan untuk mengajukan pertanyaan apa pun kepada kami tentang keamanan, penyelesaian masalah menggunakan peralatan kami, dan mendapatkan umpan balik dari para ahli tentang pendekatan yang Anda pakai saat ini. Kami akan menolong Anda memahami panduan ini.
 
 Bergabunglah dengan Slack kami: [Empire Hacking](https://join.slack.com/t/empirehacking/shared_invite/zt-h97bbrj8-1jwuiU33nnzg67JcvIciUw). Kami selalu dapat dihubungi di kanal #crytic dan #ethereum jika Anda memiliki pertanyaan apa pun.

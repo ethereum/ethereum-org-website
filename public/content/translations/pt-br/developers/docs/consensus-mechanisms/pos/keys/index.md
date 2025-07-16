@@ -10,7 +10,7 @@ As chaves do Ethereum são geradas usando a [criptografia de curva elíptica](ht
 
 No entanto, quando o Ethereum mudou de [prova de trabalho](/developers/docs/consensus-mechanisms/pow) para [prova de participação](/developers/docs/consensus-mechanisms/pos), um novo tipo de chave foi adicionado ao Ethereum. As chaves originais ainda funcionam exatamente como antes — não houve alterações nas chaves baseadas em curva elíptica que protegem as contas. No entanto, os usuários precisavam de um novo tipo de chave para participar da prova de participação colocando ETH em stake e executando validadores. Essa necessidade surgiu dos desafios de escalabilidade associados a muitas mensagens trocadas entre inúmeros validadores que exigiam um método criptográfico que pudesse ser agregado facilmente para reduzir a quantidade de comunicação necessária para a rede chegar a consenso.
 
-Este novo tipo de chave usa o [esquema de assinatura **Boneh-Lyn-Shacham (BLS)**](https://wikipedia.org/wiki/BLS_digital_signature). O BLS permite uma agregação de assinaturas muito eficiente, mas também permite a engenharia reversa de chaves agregadas de validadores individuais e é ideal para gerenciar ações entre validadores.
+Este novo tipo de chave usa o esquema de assinatura [**Boneh-Lynn-Shacham (BLS)**](https://wikipedia.org/wiki/BLS_digital_signature). O BLS permite uma agregação de assinaturas muito eficiente, mas também permite a engenharia reversa de chaves agregadas de validadores individuais e é ideal para gerenciar ações entre validadores.
 
 ## Os dois tipos de chaves de validação {#two-types-of-keys}
 
@@ -56,6 +56,8 @@ Separar as chaves de validação das chaves da conta Ethereum permite que vário
 
 ![esquema da chave de validação](validator-key-schematic.png)
 
+**Nota**: Sair das funções de staking e sacar o saldo de um validador atualmente requer a assinatura de uma [mensagem de saída voluntária (VEM)](https://mirror.xyz/ladislaus.eth/wmoBbUBes2Wp1_6DvP6slPabkyujSU7MZOFOC3QpErs&1) com a chave do validador. No entanto, o [EIP-7002](https://eips.ethereum.org/EIPS/eip-7002) é uma proposta que permitirá que um usuário acione a saída de um validador e saque seu saldo assinando mensagens de saída com a chave de saque no futuro. Isso reduzirá as suposições de confiança ao permitir que os participantes que delegam ETH a [provedores de staking como serviço](https://ethereum.org/en/staking/saas/#what-is-staking-as-a-service) mantenham o controle de seus fundos.
+
 ## Obtendo chaves de uma frase semente {#deriving-keys-from-seed}
 
 Se cada 32 ETH em stake precisavam de um novo conjunto de 2 chaves completamente independentes, o gerenciamento de chaves se tornaria rapidamente complicado, especialmente para usuários que executam vários validadores. Em vez disso, várias chaves de validação podem ser obtidas de um único segredo comum e armazenar esse segredo único permite acesso a várias chaves de validação.
@@ -94,3 +96,5 @@ Cada galho é separado por uma `/`, então `m/2` significa iniciar com a chave m
 
 - [Postagem no blog da Ethereum Foundation por Carl Beekhuizen](https://blog.ethereum.org/2020/05/21/keys/)
 - [Geração de chave EIP-2333 BLS12-381](https://eips.ethereum.org/EIPS/eip-2333)
+- [EIP-7002: Saídas acionadas pela camada de execução](https://research.2077.xyz/eip-7002-unpacking-improvements-to-staking-ux-post-merge)
+- [Gerenciamento de chaves em escala](https://docs.ethstaker.cc/ethstaker-knowledge-base/scaled-node-operators/key-management-at-scale)

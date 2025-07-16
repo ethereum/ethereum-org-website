@@ -281,7 +281,7 @@ C'est pourquoi `x` doit être une identité multiplicative de `ℤ/nℤ`, ce qui
 
 L'ordre de `x` ne peut pas être `2` sauf si `x = P-1`, car cela violerait le principe que `P` soit un nombre premier.
 
-À partir de la proposition ci-dessus, nous pouvons reconnaître que l'itération `(picker * init) % P` aura une longueur de cycle d'au moins `(P-1)/2`. Ceci est dû au fait que nous avons sélectionné `P` pour être un nombre premier sûr approximativement égal à une puissance supérieure de deux, et `init` est dans l'intervalle `[2,2**256+1]`. Étant donné la magnitude de `P`, nous ne devrions jamais nous attendre à un cycle d'exponentiation modulaire.
+À partir de la proposition ci-dessus, nous pouvons reconnaître que l'itération `(picker * init) % P` aura une longueur de cycle d'au moins `(P-1)/2`. Ceci est dû au fait que nous avons sélectionné `P` pour être un nombre premier sûr approximativement égal à une puissance supérieure de deux, et `init` est dans l'intervalle `[2,2**256+1]`. Compte tenu de la magnitude de `P`, nous ne devrions jamais nous attendre à un cycle d'exponentiation modulaire.
 
 Lorsque nous assignons la première cellule dans le DAG (la variable étiquetée `init`), nous calculons `pow(sha3(seed) + 2, 3, P)`. À première vue, cela ne garantit pas que le résultat n'est ni `1` ni `P-1`. Cependant, puisque `P-1` est un nombre premier sûr, nous émettons l'hypothèse supplémentaire suivante, qui est un corollaire de l'observation 1 :
 
@@ -294,7 +294,7 @@ Pour certaines valeurs de `P` et `w`, la fonction `pow(x, w, P)` peut présenter
 Étant donné que `P` est un nombre premier, alors un `w` approprié pour une fonction de hachage d'exponentiation modulaire peut être choisi en utilisant le résultat suivant :
 
 > Observation 3. Laissez `P` être un nombre premier ; `w` et `P-1` sont relativement premiers si et seulement si pour tous les `a` et `b` en `ℤ/Pℤ` :
->
+> 
 > <center>
 >   `aʷ mod P ≡ bʷ mod P` si et seulement si `a mod P ≡ b mod P`
 > </center>

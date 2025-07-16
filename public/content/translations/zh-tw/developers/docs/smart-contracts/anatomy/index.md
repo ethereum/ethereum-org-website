@@ -6,7 +6,7 @@ lang: zh-tw
 
 智慧型合約是在以太坊地址運作的程式。 由可以在接收交易後執行的資料與函數組成。 此為智慧型合約組成的概覽。
 
-## 基本資訊 {#prerequisites}
+## 先決條件 {#prerequisites}
 
 務必先瞭解[智慧型合約](/developers/docs/smart-contracts/)。 此文件假設你已熟悉 JavaScript 或 Python 等程式語言。
 
@@ -14,7 +14,7 @@ lang: zh-tw
 
 任何合約資料都須指定至 `storage` 或 `memory` 這兩個位置。 修改智慧型合約的存儲很麻煩，所以必須謹慎思考要將資料儲存至何處。
 
-### 存儲 {#storage}
+### 儲存 {#storage}
 
 永久資料也稱為存儲，並由狀態變數表示。 這些值會永久儲存於區塊鏈上。 你需要聲明一個類型，以便於合約在編譯時可以追蹤在區塊鏈上需要多少存儲空間。
 
@@ -69,7 +69,7 @@ storedData: int128
 | `block.timestamp` | uint256  | 目前區塊時期的時間戳  |
 | `msg.sender`      | address  | 訊息發送者（目前調用） |
 
-## 函數 {#functions}
+## 函式 {#functions}
 
 用最簡單的術語來說，函數可以取得資訊或者設定資訊來回應傳入的交易。
 
@@ -100,7 +100,7 @@ function update_name(string value) public {
 - 該函數聲明為 `public`，表示任何人都能存取
 - 該函數未聲明為 `view`，因此可以修改合約狀態
 
-### 檢視函數 {#view-functions}
+### 檢視函式 {#view-functions}
 
 這些函數保證不會修改合約資料的狀態。 常見範例為「getter」函數，例如，你可能用此接收使用者的餘額。
 
@@ -129,9 +129,9 @@ def readName() -> string:
 5. 透過調用傳送以太幣。
 6. 調用任何未標記為 `view` 或 `pure` 的函數。
 7. 使用低階調用。
-8. 使用包含特定作業碼的內嵌組譯碼。
+8. 使用包含特定作業碼的行內組譯。
 
-### Constructor 函數 {#constructor-functions}
+### Constructor 函式 {#constructor-functions}
 
 `constructor` 函數只在首次部署時執行一次。 與許多基於類型之程式語言的 `constructor` 函數類似，這些函數常將狀態變數初始化為指定值。
 
@@ -157,7 +157,7 @@ def __init__(_beneficiary: address, _bidding_time: uint256):
     self.auctionEnd = self.auctionStart + _bidding_time
 ```
 
-### 內建函數 {#built-in-functions}
+### 內建函式 {#built-in-functions}
 
 除了自己合約上定義的變數與函數外，還有一些特殊的內建函數。 最明顯的例子：
 
@@ -166,7 +166,7 @@ def __init__(_beneficiary: address, _bidding_time: uint256):
 
 這讓合約可以給其他帳戶傳送以太幣。
 
-## 編寫函數 {#writing-functions}
+## 編寫函式 {#writing-functions}
 
 你的函數需要：
 
@@ -202,7 +202,7 @@ contract ExampleDapp {
 
 ## 事件與記錄 {#events-and-logs}
 
-事件讓你可以透過前端或其他訂閱應用程式與智慧型合約通訊。 執行交易挖礦時，智慧型合約可以釋出事件，並將記錄寫入區塊鏈，讓前端能夠處理。
+事件讓你的智慧型合約能夠與你的前端或其他訂閱應用程式進行通訊。 一旦交易被驗證並新增到區塊中，智慧型合約就可以發出事件和記錄訊息，然後前端就能夠處理和利用這些資訊。
 
 ## 附註範例 {#annotated-examples}
 
@@ -636,7 +636,7 @@ contract CryptoPizza is IERC721, ERC165 {
 }
 ```
 
-## 衍生閱讀 {#further-reading}
+## 了解更多 {#further-reading}
 
 請參閱 Solidity 和 Vyper 文件，獲得智慧型合約更完整的概觀：
 
@@ -648,7 +648,7 @@ contract CryptoPizza is IERC721, ERC165 {
 - [智慧型合約](/developers/docs/smart-contracts/)
 - [以太坊虛擬機](/developers/docs/evm/)
 
-## 相關教程 {#related-tutorials}
+## 相關教學 {#related-tutorials}
 
 - [縮減合約大小應對合約大小限制](/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/) _– 減少智慧型合約大小的實用秘訣。_
 - [用事件記錄智慧型合約資料](/developers/tutorials/logging-events-smart-contracts/) _ – 對智慧型合約事件進行介紹，以及如何使用事件來記錄資料。_

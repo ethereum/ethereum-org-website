@@ -48,7 +48,7 @@ Az Ethereum fejlesztése egybe esett az SHA3 szabvány kifejlesztésével, és a
 
 Vegye figyelembe, hogy az alábbi leírás SHA3-hashekre hivatkozik az algoritmus tekintetében.
 
-## Parameters {#parameters}
+## Paraméterek {#parameters}
 
 Az Ethash-cache és adathalmaz paraméterei a blokkszámtól függenek. A cache és az adathalmaz mérete egyenes arányosságban növekszik; ugyanakkor mindig a legnagyobb prímszámot választjuk a lineárisan növekvő határ alatt, hogy kevesebb kockázata legyen valamilyen szokatlan dolognak, ami ciklikus viselkedéshez vezet.
 
@@ -206,7 +206,7 @@ Vegye figyelembe, hogy a zavartalan bányászat és ellenőrzés érdekében ér
 
 ## További olvasnivaló {#further-reading}
 
-_Van olyan közösségi erőforrása, amely segített Önnek? Szerkessze ezt az oldalt, és adja hozzá!_
+_Ismersz olyan közösségi anyagot, amely segített neked? Módosítsd az oldalt és add hozzá!_
 
 ## Függelék {#appendix}
 

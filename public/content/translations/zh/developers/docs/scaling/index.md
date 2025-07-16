@@ -9,7 +9,7 @@ sidebarDepth: 3
 
 随着以太坊使用人数增加，区块链已经达到了一定的容量限制。 这提高了网络使用成本，从而导致需要“扩容解决方案”。 目前正在研究、测试和执行多种解决方案，这些方案采取不同的办法来实现类似的目标。
 
-扩容的主要目的是提升交易速度（更快确定交易）和交易吞吐量（更高每秒交易量），而不影响去中心化或安全性（详情请见[以太坊愿景](/roadmap/vision/)）。 在第一层以太坊区块链上，高需求导致交易速度减慢和[燃料价格](/developers/docs/gas/)难以持续。 提高网络速度和吞吐量是有意义地大规模采用以太坊的基础。
+可扩展性的主要目标是，在不牺牲去中心化或安全性的情况下提高交易速度（更快的最终确定性）和交易吞吐量（每秒更高的交易数量）（详情请参阅[以太坊愿景](/roadmap/vision/)）。 在第一层以太坊区块链上，高需求导致交易速度减慢和[燃料价格](/developers/docs/gas/)难以持续。 提高网络速度和吞吐量是有意义地大规模采用以太坊的基础。
 
 虽然速度和吞吐量很重要，但实现这些目标的扩容解决方案必须保持去中心化和安全性。 降低节点运营商的进入门槛，对于防止向不安全的中心化计算能力发展至关重要。
 
@@ -106,7 +106,7 @@ _请注意，视频中的解释使用“二层网络”这一术语指代所有�
 - [卷叠不完全指南](https://vitalik.eth.limo/general/2021/01/05/rollup.html)
 - [以太坊赋能的零知识卷叠：强者](https://hackmd.io/@canti/rkUT0BD8K)
 - [“乐观卷叠”对比“零知识卷叠”](https://limechain.tech/blog/optimistic-rollups-vs-zk-rollups/)
-- [零知识区块链的可扩展性](https://ethworks.io/assets/download/zero-knowledge-blockchain-scaling-ethworks.pdf)
+- [零知识区块链的可扩展性](https://www.archblock.com/poland/assets/download/zero-knowledge-blockchain-scaling-ethworks.pdf)
 - [为什么卷叠 + 数据分片是高可扩展性的唯一可持续的解决办法](https://polynya.medium.com/why-rollups-data-shards-are-the-only-sustainable-solution-for-high-scalability-c9aabd6fbb48)
 - [什么类型的三层网络有意义？](https://vitalik.eth.limo/general/2022/09/17/layer_3.html)
 - [数据可用性或：卷叠如何学会停止担忧并爱上以太坊](https://ethereum2077.substack.com/p/data-availability-in-ethereum-rollups)

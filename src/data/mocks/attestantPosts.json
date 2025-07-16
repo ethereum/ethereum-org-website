@@ -1,0 +1,22 @@
+[
+  {
+    "title": "EigenLayer: What do we know so far?",
+    "link": "https://www.attestant.io/posts/eigenlayer-so-far/",
+    "content": "Exploring the underlying mechanics, the economics of the marketplace, as well as insights derived from the testing phase to date.",
+    "source": "Attestant",
+    "sourceUrl": "https://www.attestant.io/posts/",
+    "sourceFeedUrl": "https://www.attestant.io/posts/",
+    "imgSrc": "/images/attestant-logo.svg",
+    "pubDate": "1 May 2024"
+  },
+  {
+    "title": "The Rocket Pool Protocol",
+    "link": "https://www.attestant.io/posts/rocketpool-protocol/",
+    "content": "Analysis of Rocket Pool including a performance simulation and a PnL investigation.",
+    "source": "Attestant",
+    "sourceUrl": "https://www.attestant.io/posts/",
+    "sourceFeedUrl": "https://www.attestant.io/posts/",
+    "imgSrc": "/images/attestant-logo.svg",
+    "pubDate": "1 Mar 2024"
+  }
+]

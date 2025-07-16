@@ -182,7 +182,7 @@ Az, hogy a felhasználók mennyit fizetnek a tranzakciókért a ZK összevont tr
 
 2. **Adatközzététel**: A ZK összevont tranzakciók minden tranzakció státuszadatait `calldata` mezőként teszik közzé az Ethereumban. A `calldata` költségeit jelenleg az [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) szabályozza, amely a `calldata` nem nulla bájtjaira 16, nulla bájtjaira 4 gázköltséget ír elő. A tranzakció költségét az befolyásolja, hogy mennyi `calldata`-t kell a láncban közzétenni.
 
-3. **L2 operátordíjak**: Ezt az összevont tranzakció operátorának fizetik a tranzakciók feldolgozása során felmerülő számítási költségek ellentételezéseként, hasonlóan az Ethereum díjaihoz (validálásért, tanusításért).
+3. **L2 operátordíjak**: Ezt az összevont tranzakció operátorának fizetik a tranzakciók feldolgozása során felmerülő számítási költségek ellentételezéseként, hasonlóan az Ethereum főhálózat [tranzakciós prioritási díjaihoz (borravaló)](/developers/docs/gas/#how-are-gas-fees-calculated).
 
 4. **Bizonyítéklétrehozás és ellenőrzés**: A ZK összevont tranzakció operátorainak érvényességi bizonyítékokat kell előállítaniuk a tranzakciókötegekhez, ami erőforrás-igényes. A zero-knowledge bizonyítékok ellenőrzése a főhálózaton szintén gázba kerül (kb. 500 000 gáz).
 
@@ -222,12 +222,6 @@ Nézze meg a videót, melyben a Finematics elmagyarázza a ZK összevont tranzak
 
 <YouTube id="7pWxCklcNsU" start="406" />
 
-### ZK összevont tranzakciók használata {#use-zk-rollups}
-
-A ZK összevont tranzakcióknak többféle megvalósítása létezik, amelyeket integrálhat a dappjaiba:
-
-<RollupProductDevDoc rollupType="zk" />
-
 ## Kik dolgoznak zkEVM-en? {#zkevm-projects}
 
 Többek között az alábbi projektek dolgoznak zkEVM-en:
@@ -244,12 +238,15 @@ Többek között az alábbi projektek dolgoznak zkEVM-en:
 
 - **[Starknet](https://starkware.co/starknet/)** - _A StarkNet egy EVM-kompatibilis L2 skálázási megoldás, amelyet a StarkWare készített._
 
+- **[Morph](https://www.morphl2.io/)** - _Morph egy olyan hibrid összevont tranzakció skálázási megoldás, mely zk-bizonyítékot használ, hogy kezelje az L2-höz kapcsolódó státuszmegkérdőjelezés problémáját._
+
 ## További olvasnivaló a ZK összevont tranzakciókról {#further-reading-on-zk-rollups}
 
 - [Mik azok a zero-knowledge összevont tranzakciók?](https://coinmarketcap.com/alexandria/glossary/zero-knowledge-rollups)
 - [Mik azok a zero-knowledge összevont tranzakciók?](https://alchemy.com/blog/zero-knowledge-rollups)
 - [A STARK-ok és a SNARK-ok összehasonlítása](https://consensys.net/blog/blockchain-explained/zero-knowledge-proofs-starks-vs-snarks/)
 - [Mi az a zkEVM?](https://www.alchemy.com/overviews/zkevm)
+- [ZK-EVM típusok: Ethereum-egyenértékű, EVM-egyenértékű, 1. típus, 4. típus és egyéb rejtélyes kifejezések](https://taiko.mirror.xyz/j6KgY8zbGTlTnHRFGW6ZLVPuT0IV0_KmgowgStpA0K4)
 - [Bevezetés a zkEVM-be](https://hackmd.io/@yezhang/S1_KMMbGt)
 - [Awesome-zkEVM dokumentációk](https://github.com/LuozhuZhang/awesome-zkevm)
 - [A ZK-SNARK-ok működése](https://vitalik.eth.limo/general/2017/02/01/zk_snarks.html)

@@ -5,13 +5,17 @@ lang: tr
 sidebarDepth: 2
 ---
 
-Merkle Patricia Dijital Ağacı, tüm `(key, value)` bağlamalarını depolamak için kullanılabilen, kriptografik olarak kimliği doğrulanmış bir veri yapısı sağlar.
+Ethereum'un durumu (tüm hesapların, bakiyelerin ve akıllı sözleşmelerin toplamı), bilgisayar biliminde genel olarak Merkle Ağacı olarak bilinen veri yapısının özel bir versiyonuna kodlanır. Bu yapı, kriptografideki birçok uygulama için kullanışlıdır. Çünkü ağaca dolanmış tüm bireysel veri parçaları arasında doğrulanabilir bir ilişki oluşturur ve bu da, veriler hakkında bir şeyler kanıtlamak için kullanılabilecek tek bir **kök** değeriyle sonuçlanır.
 
-Merkle Patricia Dijital Ağacı tamamen belirleyicidir, yani aynı `(key, value)` bağlamalarına sahip olan dijital ağaçların son bayta kadar tamamen aynı olacağı garanti edilir. Bu, aynı kök karmasına sahip oldukları anlamına gelir ve ekleme, arama ve silme işlemleri için `O(log(n))` verimliliğini sağlar. Ayrıca, kırmızı-siyah ağaçlar gibi daha karmaşık karşılaştırma tabanlı alternatiflere göre anlaşılması ve kodlanması daha kolaydır.
+Ethereum'un veri yapısı PATRICIA'nın (Alfasayısal Kodlanmış Bilgileri Almak için Pratik Algoritma) bazı özelliklerini ödünç aldığı ve Ethereum durumunu oluşturan öğelerin verimli şekilde veri alımı (re**trie**val) için tasarlandığından "değiştirilmiş Merkle-Patricia Trie"dir.
+
+Merkle-Patricia trie, kesin ve kriptografik olarak doğrulanabilirdir: Bir durum kökü üretmenin tek yolu, onu durumun her bir parçasından hesaplamaktır ve aynı olan iki durum, kök karması ve ona yol açan karmalar karşılaştırılarak kolayca kanıtlanabilir (_bir Merkle ispatı_). Tam tersinden bakacak olursak, aynı kök karmasına sahip iki farklı durum oluşturmak mümkün değildir ve farklı değerlere sahip durumları değiştirme girişimi farklı bir durum kök karmasına yol açar. Teorik olarak bu yapı, eklemeler, aramalar ve silmeler için `O(log(n))` verimliliğinin "kutsal kasesini" sağlar.
+
+Ethereum, yakın gelecekte olası protokol geliştirmeleri açısından birçok fırsat yaratacak olan [Verkle Ağacı](https://ethereum.org/en/roadmap/verkle-trees) yapısına geçmeyi düşünüyor.
 
 ## Ön koşullar {#prerequisites}
 
-Bu sayfayı daha iyi anlamak için [karmalar](https://en.wikipedia.org/wiki/Hash_function), [Merkle ağaçları](https://en.wikipedia.org/wiki/Merkle_tree), [tries](https://en.wikipedia.org/wiki/Trie) ve [serileştirme](https://en.wikipedia.org/wiki/Serialization) hakkında temel düzeyde bilgi sahibi olmak faydalı olabilir.
+Bu sayfayı daha iyi anlamak için [karmalar](https://en.wikipedia.org/wiki/Hash_function), [Merkle ağaçları](https://en.wikipedia.org/wiki/Merkle_tree), [tries](https://en.wikipedia.org/wiki/Trie) ve [serileştirme](https://en.wikipedia.org/wiki/Serialization) hakkında temel düzeyde bilgi sahibi olmak faydalı olabilir. Bu makale, temel bir [dijital ağacın](https://en.wikipedia.org/wiki/Radix_tree) tanımıyla başlıyor, ardından Ethereum'un daha optimize edilmiş veri yapısı için gerekli değişiklikleri aşamalı olarak tanıtıyor.
 
 ## Temel taban dijital ağaçları {#basic-radix-tries}
 
@@ -31,13 +35,11 @@ Taban dijital ağaçları için güncelleme ve silme işlemleri aşağıdaki gib
 
 ```
     def update(node,path,value):
+        curnode = db.get(node) if node else [ NULL ] * 17
+        newnode = curnode.copy()
         if path == '':
-            curnode = db.get(node) if node else [ NULL ] * 17
-            newnode = curnode.copy()
             newnode[-1] = value
         else:
-            curnode = db.get(node) if node else [ NULL ] * 17
-            newnode = curnode.copy()
             newindex = update(curnode[path[0]],path[1:],value)
             newnode[path[0]] = newindex
         db.put(hash(newnode),newnode)
@@ -160,7 +162,7 @@ Merkle Patricia dijital ağacında bir düğüm almak için genişletilmiş kod:
 
 ### Örnek Dijital Ağaç {#example-trie}
 
-Dört yol/değer çifti içeren bir dijital ağaç istediğimizi varsayalım: `('do', 'verb')`, `('dog', 'puppy')`, `('doge', 'coins')`, `('horse', 'stallion')`.
+Şu dört yol/değer çiftini içeren bir trie istediğimizi varsayalım: `('do', 'verb')`, `('dog', 'puppy')`, `('doge', 'coins')`, `('horse', 'stallion')`.
 
 İlk olarak, hem yolları hem de değerleri `bytes`' dönüştürürüz. Aşağıda, daha kolay anlaşılması için _yollar_ için gerçek bayt gösterimleri `<>` ile gösterilirken _değerler_ hala `''` dizeler olarak gösterilir(bunlar da aslında `byte` olacaktır):
 
@@ -181,7 +183,7 @@ Dört yol/değer çifti içeren bir dijital ağaç istediğimizi varsayalım: `(
     hashD:    [ <17>, [ <>, <>, <>, <>, <>, <>, [ <35>, 'coins' ], <>, <>, <>, <>, <>, <>, <>, <>, <>, 'puppy' ] ]
 ```
 
-Bir düğüme başka bir düğüm içinde başvurulduğunda, dahil edilenler `H(rlp.encode(node))` olur, burada `H(x) = keccak256(x) if len(x) > = 32 else x` ve `rlp.encode`, [RLP](/developers/docs/data-structures-and-encoding/rlp) kodlama işlevidir.
+Bir düğüme başka bir düğüm içinde başvurulduğunda, dahil edilenler `H(rlp.encode(node))`, where `H(x) = keccak256(x) if len(x) >= 32 else x` and `rlp.encode` is the [RLP](/developers/docs/data-structures-and-encoding/rlp) kodlama işlevidir.
 
 Bir dijital ağacı güncellerken _eğer_ yeni oluşturulan düğümün uzunluğu >= 32 ise, `(keccak 256 (x), x)` anahtar/değer çiftini kalıcı bir arama tablosunda saklamanız gerektiğini unutmayın. Bununla birlikte düğüm bundan daha kısaysa, f (x) = x işlevi tersine çevrilebilir olduğundan hiçbir şeyin depolanmasına gerek yoktur.
 
@@ -250,7 +252,7 @@ Bununla ilgili daha fazla bilgiyi [EIP 2718](https://eips.ethereum.org/EIPS/eip-
 
 ### Makbuz Dijital Ağaçları {#receipts-trie}
 
-Her bloğun kendi makbuz dijital ağacı vardır. Burada `path`: `rlp(transactionIndex)`'dir. `transactionIndex`, çıkarıldığı blok içerisindeki indeksidir. Makbuz dijital ağacı hiçbir zaman güncellenmez. İşlemler dijital ağacına benzer şekilde güncel ve eski makbuzlar mevcuttur. Makbuzlar dijital ağacı içerisinde belirli bir makbuzu sorgulamak için bloktaki işlemin indeksi, makbuz yükü ve işlem türü gereklidir. Döndürülen makbuz, `TransactionType` ve `ReceiptPayload`'un birleşimi olarak tanımlanan `Receipt` türünde ya da `rlp([status, cumulativeGasUsed, logsBloom, logs])` olarak tanımlanan `LegacyReceipt` türünde olabilir.
+Her bloğun kendi makbuz dijital ağacı vardır. Burada `path`: `rlp(transactionIndex)`'dir. `transactionIndex`, dahil edildiği blok içerisindeki indeksidir. Makbuz dijital ağacı hiçbir zaman güncellenmez. İşlemler dijital ağacına benzer şekilde güncel ve eski makbuzlar mevcuttur. Makbuzlar dijital ağacı içerisinde belirli bir makbuzu sorgulamak için bloktaki işlemin indeksi, makbuz yükü ve işlem türü gereklidir. Döndürülen makbuz, `TransactionType` ve `ReceiptPayload`'un birleşimi olarak tanımlanan `Receipt` türünde ya da `rlp([status, cumulativeGasUsed, logsBloom, logs])` olarak tanımlanan `LegacyReceipt` türünde olabilir.
 
 Bununla ilgili daha fazla bilgiyi [EIP 2718](https://eips.ethereum.org/EIPS/eip-2718) belgelerinde bulabilirsiniz.
 

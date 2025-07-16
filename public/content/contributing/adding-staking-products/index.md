@@ -87,7 +87,7 @@ For any custom software or smart contracts involved:
 
 For software products related to node or client setup, management or migration:
 
-**Which consensus layer clients (i.e. Lighthouse, Teku, Nimbus, Prysm) are supported?**
+**Which consensus layer clients (i.e. Lighthouse, Teku, Nimbus, Prysm, Grandine) are supported?**
 
 - Which clients are supported? Can the user choose?
 - This is used to determine the products "multi-client" score.

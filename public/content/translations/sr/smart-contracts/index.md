@@ -6,11 +6,15 @@ lang: sr
 
 # Introduction to smart contracts {#introduction-to-smart-contracts}
 
-Pametni ugovori su osnovni gradivni elementi aplikativni nivo Ethereuma. To su računarski programi smešteni na lancu blokova koji slede logiku "ako je ovo onda je to" (if this then that), i garantovano će se izvršiti prema pravilima definisanim u svom kodu, koja se ne mogu promeniti nakon što su kreirani.
+Pametni ugovori su osnovni gradivni elementi aplikativni nivo Ethereuma. To su računarski programi smešteni na [lancu blokova](/glossary/#blockchain) koji slede logiku „ako je ovo onda je to“ (if this then that), i garantovano će se izvršiti prema pravilima definisanim u svom kodu, koja se ne mogu promeniti nakon što su kreirani.
 
 Termin "pametni ugovor" je skovao Nik Sabo. 1994. je napisao [uvod u koncept](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart.contracts.html) a 1996. [istraživanje šta sve može pametni ugovor](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart_contracts_2.html).
 
-Sabo je zamislio digitalno tržište gde automatski, kriptografski-sigurni procesi omogućavaju transakcije i biznis funcije bez potrebe za posrednikom. Pametni ugovori na Ethereumu su ovu viziju pretvorili u realnost.
+Sabo je zamislio digitalno tržište gde automatski, [kriptografski-sigurni](/glossary/#cryptography) procesi omogućavaju transakcije i biznis funkcije bez potrebe za posrednikom od poverenja. Pametni ugovori na Ethereumu su ovu viziju pretvorili u realnost.
+
+Gledajte kako Finematics objašnjava pametne ugovore:
+
+<YouTube id="pWGLtjG-F5c" />
 
 ## Poverenje u konvencionalne ugovore {#trust-and-contracts}
 
@@ -60,7 +64,7 @@ Konačno, kao i tradicionalni ugovori, možete proveriti šta se nalazi u pametn
 
 Pametni ugovori mogu da urade sve što i kompjuterski programi.
 
-Mogu da izvršavaju računanja, naprave valutu, skladište podatke, rudare NFT-ijeve, komuniciraju ili generišu grafike. Evo nekih popularnih primera iz stvarnog sveta:
+Mogu da izvršavaju računanja, kreiraju valutu, skladište podatke, kreiraju [NFT-ove](/glossary/#nft), komuniciraju ili čak generišu grafike. Evo nekih popularnih primera iz stvarnog sveta:
 
 - [Stablecoins](/stablecoins/)
 - [kreiranje i distribuiranje jedinstvenih digitalnih sredstava](/nft/)
@@ -68,12 +72,6 @@ Mogu da izvršavaju računanja, naprave valutu, skladište podatke, rudare NFT-i
 - [Decentralizovano igranje](/dapps/?category=gaming#explore)
 - [polisa osiguranja koja se automatski izvršava](https://etherisc.com/)
 - [standard koji omogućava da ljudi kreiraju prilagođene, interoperabilne valute](/developers/docs/standards/tokens/)
-
-## Više ste navikli na vizuelno učenje? {#visual-learner}
-
-Gledajte kako Finematics objašnjava pametne ugovore:
-
-<YouTube id="pWGLtjG-F5c" />
 
 ## Dodatna literatura {#further-reading}
 

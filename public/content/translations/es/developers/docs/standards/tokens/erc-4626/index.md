@@ -27,7 +27,7 @@ Para comprender mejor esta página, recomendamos leer primero sobre [estándares
 #### asset {#asset}
 
 ```solidity
-function asset() public view returns (address)
+función asset() retornos de vista pública (dirección assetTokenAddress)
 ```
 
 Esta función devuelve la dirección del token subyacente utilizado en la bóveda para contabilidad, depósito y retiro.
@@ -59,7 +59,7 @@ Esta función devuelve la cantidad de `assets` que serían intercambiados por la
 #### maxDeposit {#maxdeposit}
 
 ```solidity
-function maxDeposit(address receiver) public view returns (uint256)
+función maxDeposit(receptor de dirección) retornos de vista pública (uint256 maxAssets)
 ```
 
 Esta función devuelve la cantidad máxima de activos subyacentes que pueden depositarse en una sola llamada de depósito ([`deposit`](#deposit)) por parte del `receiver` (receptor).
@@ -67,7 +67,7 @@ Esta función devuelve la cantidad máxima de activos subyacentes que pueden dep
 #### previewDeposit {#previewdeposit}
 
 ```solidity
-function previewDeposit(uint256 assets) public view returns (uint256)
+vista previa de la función Depósito (activos uint256) rendimientos de vista pública (acciones uint256)
 ```
 
 Esta función permite a los usuarios simular los efectos de su depósito en el bloque actual.
@@ -83,7 +83,7 @@ Esta función deposita `assets` de los tokens subyacentes en la bóveda y otorga
 #### maxMint {#maxmint}
 
 ```solidity
-function maxMint(address receiver) public view returns (uint256)
+función maxMint (receptor de dirección) devoluciones de vista pública (uint256 maxShares)
 ```
 
 Esta función devuelve la cantidad máxima de acciones que pueden mintearse en una sola llamada de [`mint`](#mint) (minteo) por parte del receptor (`receiver`).
@@ -91,7 +91,7 @@ Esta función devuelve la cantidad máxima de acciones que pueden mintearse en u
 #### previewMint {#previewmint}
 
 ```solidity
-function previewMint(uint256 shares) public view returns (uint256)
+vista previa de la funciónMint(uint256 acciones) rendimientos de la vista pública (activos uint256)
 ```
 
 Esta función permite a los usuarios simular los efectos de su minteo en el bloque actual.
@@ -107,7 +107,7 @@ Esta función mintea exactamente `shares` acciones de la bóveda al `receiver` d
 #### maxWithdraw {#maxwithdraw}
 
 ```solidity
-function maxWithdraw(address owner) public view returns (uint256)
+función maxWithdraw (propietario de la dirección) devuelve la vista pública (uint256 maxAssets)
 ```
 
 Esta función devuelve la cantidad máxima de activos subyacentes que se pueden retirar del saldo del propietario (`owner`) con una única llamada a [`withdraw`](#withdraw) (retiro).
@@ -115,7 +115,7 @@ Esta función devuelve la cantidad máxima de activos subyacentes que se pueden 
 #### previewWithdraw {#previewwithdraw}
 
 ```solidity
-function previewWithdraw(uint256 assets) public view returns (uint256)
+vista previa de la funciónWithdraw(uint256 activos) rendimientos de vista pública (uint256 acciones)
 ```
 
 Esta función permite a los usuarios simular los efectos de su retiro en el bloque actual.
@@ -131,7 +131,7 @@ Esta función quema `shares` del `owner` y envía exactamente `assets` token de 
 #### maxRedeem {#maxredeem}
 
 ```solidity
-function maxRedeem(address owner) public view returns (uint256)
+función maxRedeem (propietario de la dirección) retornos de vista pública (uint256 maxShares)
 ```
 
 Esta funcion retorna la cantidad máxima de acciones que pueden ser reclamadas del saldo del `owner` a traves de una llamada a [`redeem`](#redeem) (canjeo o reclamo).
@@ -139,7 +139,7 @@ Esta funcion retorna la cantidad máxima de acciones que pueden ser reclamadas d
 #### previewRedeem {#previewredeem}
 
 ```solidity
-function previewRedeem(uint256 shares) public view returns (uint256)
+vista previa de la funciónRedeem (uint256 acciones) rendimientos de vista pública (activos uint256)
 ```
 
 Esta función permite a los usuarios simular el efecto de su canjeo en el bloque actual.
@@ -168,6 +168,10 @@ function balanceOf(address owner) public view returns (uint256)
 
 Devuelve la cantidad total de acciones de la bóveda que el `owner` tiene actualmente.
 
+### Mapa de la interfaz {#mapOfTheInterface}
+
+![Mapa de la interfaz ERC-4626](./map-of-erc-4626.png)
+
 ### Eventos {#events}
 
 #### Evento de depósito
@@ -195,7 +199,7 @@ event Withdraw(
     address indexed receiver,
     address indexed owner,
     uint256 assets,
-    uint256 share
+    uint256 shares
 )
 ```
 

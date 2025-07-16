@@ -1,4 +1,9 @@
-import { CompletedQuizzes, type Lang, QuizShareStats } from "@/lib/types"
+import type {
+  CompletedQuizzes,
+  Lang,
+  QuizShareStats,
+  QuizzesSection,
+} from "@/lib/types"
 
 import { getLocaleForNumberFormat } from "@/lib/utils/translations"
 
@@ -87,3 +92,9 @@ export const getFormattedStats = (language, average) => {
     ),
   }
 }
+
+export const addNextQuiz = (quizzes: QuizzesSection[]) =>
+  quizzes.map((quiz, idx) => ({
+    ...quiz,
+    next: quizzes[idx + 1]?.id,
+  }))

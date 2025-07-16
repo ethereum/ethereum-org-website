@@ -1,5 +1,6 @@
-import { Center } from "@chakra-ui/react"
 import { Meta, StoryObj } from "@storybook/react"
+
+import { Center } from "@/components/ui/flex"
 
 import GlossaryTooltipComponent from "."
 
@@ -12,7 +13,7 @@ const meta = {
   },
   decorators: [
     (Story) => (
-      <Center boxSize="md">
+      <Center className="size-128">
         <Story />
       </Center>
     ),
@@ -28,6 +29,6 @@ export const Basic: Story = {}
 // for chromatic story snapshot showing the rendered popover
 export const OnOpen: Story = {
   args: {
-    isOpen: true,
+    open: true,
   },
 }

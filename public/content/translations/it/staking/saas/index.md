@@ -39,7 +39,7 @@ Gli indicatori d'attributo sono usati di seguito per segnalare notevoli punti di
 
 ## Esplora i fornitori del servizio di staking {#saas-providers}
 
-Di seguito alcuni fornitori di SaaS disponibili. Usa i suddetti indicatori per orientarti tra questi servizi
+Seguono alcuni dei fornitori di SaaS disponibili. Usa i suddetti indicatori per orientarti tra questi servizi
 
 <ProductDisclaimer />
 

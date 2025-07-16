@@ -29,7 +29,7 @@ Similmente, esistono aggiornamenti apportabili ad altre parti dei client odierni
 
 ## Stato attuale {#current-progress}
 
-Gran parte degli aggiornamenti necessari per rendere Ethereum a prova di futuro sono **ancora in fase di ricerca e potrebbero richiedere ancora svariati anni** per essere implementati. Gli aggiornamenti come la rimozione di SELF-DESTRUCT e l'armonizzazione dello schema di compressione utilizzato nei client d'esecuzione e del consenso potrebbero arrivare prima della crittografia resistente ai computer quantistici.
+Gran parte degli aggiornamenti necessari per rendere Ethereum a prova di futuro sono **ancora in fase di ricerca e potrebbero richiedere ancora svariati anni** per essere implementati. Aggiornamenti come la rimozione di SELFDESTRUCT e l'armonizzazione dello schema di compressione utilizzato nei client di esecuzione e di consenso potrebbero arrivare prima della crittografia a resistenza quantistica.
 
 **Letture consigliate**
 

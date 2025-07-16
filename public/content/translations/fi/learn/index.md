@@ -7,7 +7,7 @@ sidebarDepth: 1
 
 # Opi Ethereumista {#learn-about-ethereum}
 
-**Tervetuloa ethereum.org/learn -sivulle - kokoelmaan resursseja, jotka auttavat sinua oppimaan lisää Ethereumista.** Tämä sivu sisältää teknisiä **ja** ei-teknisiä artikkeleja, ohjeita ja resursseja. Jos olet täysin uusi Ethereumiin, [suosittelemme aloittamaan täältä](/fi/beginners/).
+**Tervetuloa ethereum.org/learn -sivulle - kokoelmaan resursseja, jotka auttavat sinua oppimaan lisää Ethereumista.** Tämä sivu sisältää teknisiä **ja** ei-teknisiä artikkeleja, ohjeita ja resursseja. Jos olet täysin uusi Ethereumiin, [suosittelemme aloittamaan täältä](/beginners/).
 
 Tässä on muutamia loistavia aloitusmateriaaleja (englanniksi):
 
@@ -71,7 +71,7 @@ Ethereum-tietoverkko on rakennettu useista solmuista, joissa suoritetaan niille 
 
 Enterprise Ethereum viittaa yksityis-, yhteistyö- ja hybriditoteutuksiin Ethereumin-koodipohjasta liiketoimintasovelluksia varten. Yritykset ympäri maailmaa käyttävät jo nyt Enterprise Ethereumia taloudellisten markkinoiden tehostamiseen, toimitusketjujen hallnitaan ja uusien liiketoimintamallien luomiseen.
 
-Lue lisää aiheesta [Ethereum yrityksille](/fi/enterprise/).
+Lue lisää aiheesta [Ethereum yrityksille](/enterprise/).
 
 ## Ethereumin skaalattavuuden parantaminen {#improving-ethereums-scalability}
 
@@ -104,7 +104,7 @@ Taso 2 viittaa teknologioihin, jotka on rakennettu Ethereumin pääprotokollan p
 
 ETH 2.0 (tunnetaan myös nimellä Serenity) viittaa seuraavaan merkittävään päivitykseen Ethereumin ydinprotokollassa. Se yhdistää useita parannuksia Ethereumin ydinprotokollaan eli Taso 1:een.
 
-- [8 Teams Are Sprinting to Build the Next Generation of Ethereum](https://www.coindesk.com/next-gen-buidlers-the-8-teams-working-on-ethereum-2-0) _Dec 9, 2018 - Christine Kim_
+- [8 Teams Are Sprinting to Build the Next Generation of Ethereum](https://www.coindesk.com/markets/2018/12/09/8-teams-are-sprinting-to-build-the-next-generation-of-ethereum) _Dec 9, 2018 - Christine Kim_
 - [ETH 2.0 - The Road to Scaling Ethereum - Vitalik Buterin](https://youtu.be/kCVpDrlVesA) _(Video) November, 2018 - YouTube_
 - [9 Things You Didn't Know About Ethereum 2.0](https://our.status.im/9-things-you-didnt-know-about-ethereum-2-0/) _July 18, 2019 - Bruno Škvorc_
 

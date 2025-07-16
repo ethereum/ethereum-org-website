@@ -16,7 +16,7 @@ Esto podría crear oportunidades para que un atacante se beneficie. Por ejemplo,
 
 Hay varias soluciones para este problema. Una de ellas es la [tecnología de validador distribuida](https://github.com/ethereum/distributed-validator-specs) que tiene como objetivo difundir las múltiples tareas relacionadas con la ejecución de un validador entre varias máquinas, con redundancia, para que sea mucho más difícil que un atacante impida que se proponga un bloque en un espacio determinado. De cualquier forma, la solución más robusta es la **Elección de Líder Singular Secreto (o SSLE, por sus siglas en inglés)**.
 
-## Elección de líder singular secreto {#secret-leader-election}
+## Single secret leader election {#secret-leader-election}
 
 En SSLE, la criptografía inteligente se usa para asegurar que solo el validador seleccionado sepa que ha sido seleccionado. Esto funciona al hacer que cada validador envíe un compromiso a un secreto que todos comparten. Los compromisos se mezclan y reconfiguran para que nadie pueda asociar los compromisos a los validadores, aunque cada validador sabe qué compromiso le pertenece. Después, se elige un compromiso aleatoriamente. Si un validador detecta que se ha elegido su compromiso, saben que es su turno de proponer un bloque.
 

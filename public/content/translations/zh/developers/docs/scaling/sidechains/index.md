@@ -17,7 +17,7 @@ sidebarDepth: 3
 
 使侧链独一无二（即不同于以太坊）的特点之一是使用了共识算法。 侧链不依赖以太坊达成共识，并可以选择适合其需求的替代共识协议。 侧链上使用的共识算法的一些示例包括：
 
-- [权威证明](https://wikipedia.org/wiki/Proof_of_authority)
+- [权威证明](/developers/docs/consensus-mechanisms/poa/)
 - [委托权益证明](https://en.bitcoin.it/wiki/Delegated_proof_of_stake)
 - [拜占庭容错算法](https://decrypt.co/resources/byzantine-fault-tolerance-what-is-it-explained)。
 

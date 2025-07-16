@@ -131,6 +131,7 @@
   "page-stablecoins-stablecoins-table-type-precious-metals-backed": "貴金屬",
   "page-stablecoins-table-error": "無法載入穩定幣，請嘗試更新頁面。",
   "page-stablecoins-title": "穩定幣",
+  "page-stablecoins-meta-title": "穩定幣詳解：它們有什麽用？",
   "page-stablecoins-top-coins": "依據市值之穩定幣排名",
   "page-stablecoins-top-coins-intro": "市值為",
   "page-stablecoins-top-coins-intro-code": "存在的代幣總額乘上每枚代幣的價值。此列表是動態的，列於此的專案未必由 ethereum.org 團隊背書。",
@@ -163,5 +164,6 @@
   "makerdao-logo": "MakerDao 標誌",
   "matcha-logo": "Matcha 標誌",
   "summerfi-logo": "Summer.fi 標誌",
-  "uniswap-logo": "Uniswap 標誌"
+  "uniswap-logo": "Uniswap 標誌",
+  "page-stablecoins-go-to": "前往"
 }

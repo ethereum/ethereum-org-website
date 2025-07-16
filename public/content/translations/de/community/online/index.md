@@ -25,9 +25,9 @@ Hunderttausende von Ethereum-Enthusiasten treffen sich in diesen Online-Foren, u
 <SocialListItem socialIcon="discord"><Link href="https://ethglobal.com/discord">Ethereum-Hacker</Link> - Von ETHGlobal geführter Discord Chat: Eine Online-Gemeinschaft für Ethereum-Hacker auf der ganzen Welt</SocialListItem>
 <SocialListItem socialIcon="discord"><Link href="https://discord.gg/5W5tVb3">CryptoDevs</Link> - Auf Ethereum Entwicklung fokussierte Discord-Community</SocialListItem>
 <SocialListItem socialIcon="discord"><Link href="https://discord.gg/ethstaker">EthStaker Discord</Link> – Beratung, Bildung, Unterstützung und Ressourcen für bestehende und potenzielle Staker auf Community-Ebene </SocialListItem>
-<SocialListItem socialIcon="discord"><Link href="/discord/">Ethereum.org Website-Team</Link> - Kommen Sie vorbei and schreiben Sie mit dem Team und anderen aus der Gemeinschaft über Ethereum.org Web-Entwicklung und Design</SocialListItem>
+<SocialListItem socialIcon="discord"><Link href="https://discord.gg/ethereum-org">Ethereum.org Website-Team</Link> - Kommen Sie vorbei and schreiben Sie mit dem Team und anderen aus der Gemeinschaft über Ethereum.org Web-Entwicklung und Design</SocialListItem>
 <SocialListItem socialIcon="discord"><Link href="https://discord.matos.club/">Matos Discord</Link> - Web3-Creator-Community, wo sich Entwickler, industrielle Führer, und Ethereum Enthusiasten aufhalten. Wir sind begeistert von Web3-Entwicklung, Design und Kultur. Kommen Sie mit uns bauen.</SocialListItem>
-<SocialListItem socialIcon="webpage"><Link href="https://gitter.im/ethereum/solidity/">Solidity-Gitter</Link> - Unterhaltungen über Solidity-Entwicklung (Gitter)</SocialListItem>
+<SocialListItem socialIcon="webpage"><Link href="https://gitter.im/ethereum/solidity">Solidity-Gitter</Link> - Unterhaltungen über Solidity-Entwicklung (Gitter)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity-Matrix</Link> - Unterhaltungen über Solidity-Entwicklung (Matrix)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> *– Forum für Fragen und Antworten*</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link href="https://peeranha.io/">Peeranha</Link> *– dezentrales Forum für Fragen und Antworten*</SocialListItem>
@@ -41,7 +41,7 @@ Hunderttausende von Ethereum-Enthusiasten treffen sich in diesen Online-Foren, u
 
 <Divider />
 
-<Callout emoji=":classical_building:" titleKey="page-community-daos-callout-title" descriptionKey="page-community-daos-callout-description">
+<Callout emoji=":classical_building:" titleKey="page-community:page-community-daos-callout-title" descriptionKey="page-community:page-community-daos-callout-description">
   <div>
     <ButtonLink href="/community/get-involved/#decentralized-autonomous-organizations-daos">
       Erfahren Sie mehr über DAO's

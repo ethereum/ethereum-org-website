@@ -1,5 +1,5 @@
 ---
-title: Introduction aux ponts blockchain
+title: Introduction aux ponts de blockchain
 description: Les ponts permettent aux utilisateurs de déplacer leurs fonds à travers différentes blockchains
 lang: fr
 ---
@@ -24,7 +24,7 @@ Mais, que feriez-vous si vous vouliez faire le même échange pour utiliser une 
 
 Toutes les blockchains ont leurs limites. Pour qu'Ethereum puisse évoluer et répondre à la demande, il a fallu procéder à des [rollups](/glossary/#rollups). Alternativement, des L1 comme Solana ou Avalanche sont conçues différemment pour permettre un débit plus élevé mais au prix de la décentralisation.
 
-Toutes les blockchains se développent néanmoins dans des environnements isolés et ont cependant des règles et des mécanismes de [consensus](/glossary/#consensus) différents. Cela signifie qu'elles ne peuvent pas communiquer de manière native et que les jetons ne peuvent pas circuler librement entre les blockchains.
+Cependant, toutes les blockchains se développent dans des environnements isolés et possèdent des règles et des mécanismes de [consensus](/glossary/#consensus) différents. Cela signifie qu'elles ne peuvent pas communiquer de manière native et que les jetons ne peuvent pas circuler librement entre les blockchains.
 
 Les ponts existent pour connecter les blockchains, permettant le transfert d'informations et de jetons entre elles.
 
@@ -65,7 +65,7 @@ Disons que vous voulez posséder des bitcoins (BTC) natifs, mais que vous n'avez
 
 <Divider />
 
-## Type de pont {#types-of-bridge}
+## Types de ponts {#types-of-bridge}
 
 Les ponts présentent de nombreux types de conceptions et de subtilités. En général, les ponts se divisent en deux catégories : les ponts sans risque et les ponts risqués.
 
@@ -92,6 +92,15 @@ Un point de contrôle manuel est similaire à un modèle de confiance puisque qu
 L'enregistrement automatique s'apparente à un modèle risqué car il supprime le rôle de l'opérateur et utilise la technologie pour ses opérations. Les utilisateurs gardent toujours le contrôle de leurs données et ne doivent pas confier leurs informations privées à un tiers.
 
 De nombreuses solutions de transition adoptent des modèles entre ces deux extrêmes, avec des degrés de confiance variables.
+
+<Divider />
+
+## Utiliser des ponts {#use-bridge}
+
+L'utilisation des ponts vous permet de déplacer vos fonds entre différentes blockchains. Voici quelques ressources pour vous aider à trouver et utiliser des ponts :
+
+- **[Liste des ponts L2BEAT](https://l2beat.com/bridges/summary)&[Analyse des risques L2BEAT des ponts](https://l2beat.com/bridges/risk)** : Une liste complète de divers ponts, incluant des détails sur leur part de marché, le type de pont et les chaînes de destination. L2BEAT propose également une analyse des risques des ponts, aidant les utilisateurs à prendre des décisions éclairées lors de la sélection d'un pont.
+- **[Liste des ponts de DefiLlama](https://defillama.com/bridges/Ethereum)** : Un résumé des volumes des ponts sur les réseaux Ethereum.
 
 <Divider />
 
@@ -122,7 +131,9 @@ Les ponts sont essentiels pour l'accueil des utilisateurs sur les L2 d'Ethereum,
 <Divider />
 
 ## En savoir plus {#further-reading}
+- [EIP-5164: Exécution Cross-Chain](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) - _18 juin 2022 - Brendan Asselstine_
+- [L2Bridge Risk Framework](https://gov.l2beat.com/t/l2bridge-risk-framework/31) - _5 juillet 2022 - Bartek Kiepuszewski_
+- [Pourquoi l'avenir sera multi-chaînes, mais ne sera pas cross-chaînes."](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) - _8 janvier 2022 - Vitalik Buterin_
+- [Exploiter la sécurité partagée pour une interopérabilité cross-chain sécurisée : Comités d'état Lagrange et au-delà](https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - _12 juin 2024 - Emmanuel Awosika_
+- [L'état des solutions d'interopérabilité des rollups](https://research.2077.xyz/the-state-of-rollup-interoperability) - _20 juin 2024 - Alex Hook_
 
-- [EIP-5164 : Exécution en chaines croisées](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) _18 juin 2022 - Brendan Asselstine_
-- [L2Bridge Risk Framework](https://gov.l2beat.com/t/l2bridge-risk-framework/31) _5 juillet 2022 - Bartek Kiepuszewski_
-- ["Pourquoi le futur sera multi-chaîne, mais ne sera pas celui des chaînes croisées.](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) _8 janvier 2022 - Vitalik Buterin_

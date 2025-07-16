@@ -28,16 +28,6 @@ Anda _dapat_ [menjalankan node](/developers/docs/nodes-and-clients/#running-your
 
 **Catatan**: Sebagian besar [kerangka kerja pengembangan](/developers/docs/frameworks/) menyertakan jaringan pengembangan bawaan. Kami menyarankan memulai dengan kerangka kerja untuk [menyiapkan lingkungan pengembangan lokal Anda](/developers/local-environment/).
 
-### Ganache {#ganache}
-
-Dengan cepat menjalankan blockchain Ethereum pribadi yang bisa Anda gunakan untuk menjalankan pengujian, mengeksekusi perintah, dan memeriksa state, sambil mengontrol bagaimana rantai bekerja.
-
-Ganache menyediakan aplikasi desktop (UI Ganache), serta peralatan baris perintah (`ganache-cli`). Ini adalah bagian dari rangkaian peralatan Truffle.
-
-- [Situs web](https://www.trufflesuite.com/ganache)
-- [GitHub](https://github.com/trufflesuite/ganache)
-- [Dokumentasi](https://www.trufflesuite.com/docs/ganache/overview)
-
 ### Jaringa Hardhat {#hardhat-network}
 
 Jaringan Ethereum lokal yang didesain untuk pengembangan. Jaringan ini memungkinkan Anda menggunakan kontrak, menjalankan pengujian, dan melakukan debug kode Anda

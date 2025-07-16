@@ -1,17 +1,16 @@
-import React, { useEffect, useState } from "react"
+import React, { type HTMLAttributes, useEffect, useState } from "react"
 import { motion } from "framer-motion"
-import { BsTriangle } from "react-icons/bs"
-import { IoEllipsisHorizontalSharp } from "react-icons/io5"
-import { PiMagnifyingGlass } from "react-icons/pi"
-import { TbWorldWww } from "react-icons/tb"
-import { Box, Flex, type FlexProps, Icon, Text } from "@chakra-ui/react"
+import { MoreHorizontal, Search, Triangle } from "lucide-react"
+
+import { Flex, HStack } from "@/components/ui/flex"
 
 import { BASE_ANIMATION_DELAY_SEC } from "../../constants"
+import { BrowserGlobe } from "../../icons"
 import { NotificationPopover } from "../../NotificationPopover"
 
 import { EXAMPLE_APP_URL } from "./constants"
 
-type BrowserProps = FlexProps
+type BrowserProps = HTMLAttributes<HTMLDivElement>
 
 export const Browser = ({ ...props }: BrowserProps) => {
   const [typing, setTyping] = useState(false)
@@ -35,67 +34,45 @@ export const Browser = ({ ...props }: BrowserProps) => {
   }
 
   return (
-    <Flex direction="column" h="full" bg="body.light" {...props}>
-      <Box bg="background.highlight" w="full" px={3} pt={9} pb={3}>
+    <Flex className="h-full flex-col bg-body-light" {...props}>
+      <div className="w-full bg-background-highlight px-3 pb-3 pt-9">
         <NotificationPopover
           title="Example walkthrough"
           content="Try logging into a real app with your wallet when finished here"
         >
-          <Flex
-            bg="background.base"
-            borderRadius="base"
-            px={3}
-            py={2}
-            align="center"
-            color="disabled"
-            cursor="default"
-          >
-            <Box
-              borderInlineEnd="1px"
-              borderColor="background.highlight"
-              flex={1}
-            >
+          <HStack className="cursor-default gap-0 rounded bg-background px-3 py-2 text-disabled">
+            <div className="flex-1 border-e border-background-highlight">
               {typing ? (
-                <Text
-                  as={motion.p}
+                <motion.p
+                  className="text-body-medium"
                   variants={sentence}
                   initial="hidden"
                   animate="visible"
-                  color="body.medium"
                 >
                   {EXAMPLE_APP_URL.split("").map((char, index) => (
                     <motion.span key={char + "-" + index} variants={letter}>
                       {char}
                     </motion.span>
                   ))}
-                </Text>
+                </motion.p>
               ) : (
-                <Text>Search or enter website</Text>
+                <p>Search or enter website</p>
               )}
-            </Box>
-            <Icon as={TbWorldWww} ms={3} />
-          </Flex>
+            </div>
+            <BrowserGlobe className="ms-3 size-4" />
+          </HStack>
         </NotificationPopover>
-      </Box>
+      </div>
 
-      <Flex flex={1} justify="center" pt={{ base: 20, md: 24 }}>
-        <Icon as={TbWorldWww} fontSize="8xl" strokeWidth="1" color="disabled" />
+      <Flex className="flex-1 justify-center pt-20 md:pt-24">
+        <BrowserGlobe className="size-24 stroke-1 text-disabled" />
       </Flex>
 
-      <Flex
-        bg="background.highlight"
-        w="full"
-        px={3}
-        pb={9}
-        pt={4}
-        justify="space-around"
-        fontSize="xl"
-        color="disabled"
-      >
-        <Icon as={BsTriangle} transform="rotate(-90deg)" />
-        <Icon as={BsTriangle} transform="rotate(90deg)" />
-        <Icon as={PiMagnifyingGlass} />
-        <Icon as={IoEllipsisHorizontalSharp} />
+      <Flex className="w-full justify-around bg-background-highlight px-3 pb-9 pt-4 text-xl text-disabled">
+        <Triangle className="-rotate-90" />
+        <Triangle className="rotate-90" />
+        <Search />
+        <MoreHorizontal />
       </Flex>
     </Flex>
   )

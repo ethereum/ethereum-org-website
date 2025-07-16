@@ -90,7 +90,7 @@ Ethereum es algo mucho más grande: incluye una comunidad, una tecnología que l
 
 Para hacer que nuestro trabajo sea más accesible y fomentar una mayor colaboración comunitaria, el equipo central de ethereum.org publica una descripción general de nuestros objetivos de hoja de ruta trimestral.
 
-[Échele un vistazo a nuestra hoja de ruta de productos del primer trimestre de 2024](https://github.com/ethereum/ethereum-org-website/issues/12005)
+[Vea nuestra hoja de ruta de productos del tercer trimestre de 2024](https://github.com/ethereum/ethereum-org-website/issues/13399)
 
 **¿Qué le parece? ** Siempre apreciamos los comentarios sobre nuestra hoja de ruta. Si hay algo en lo que cree que deberíamos trabajar, ¡por favor, díganoslo! Damos la bienvenida a ideas y relaciones públicas de cualquier persona de la comunidad.
 
@@ -113,6 +113,10 @@ Tenemos una [guía de estilo](/contributing/style-guide/) para unificar ciertos 
 Asegúrese de leer [nuestros principios](/contributing/design-principles/) y [nuestra guía de estilo](/contributing/style-guide/) si quiere [contribuir con el sitio](/contributing/).
 
 Agradecemos los comentarios sobre nuestros principios de diseño, el sistema de diseño y la guía de estilo. Recuerde: ethereum.org existe por y para la comunidad.
+
+## Licencia {#license}
+
+El sitio web ethereum.org es de código abierto y está construido bajo una [Licencia MIT](https://github.com/ethereum/ethereum-org-website/blob/dev/LICENSE), a menos que se especifique lo contrario. Consulte más información sobre los [términos de uso](/terms-of-use/) de ethereum.org.
 
 ## Ofertas de trabajo disponibles {#open-jobs}
 

@@ -26,7 +26,7 @@ La cryptomonnaie ether prend en charge un mécanisme de tarification de la puiss
 
 Par conséquent, même si une dapp malveillante a soumis une boucle infinie, la transaction finirait par être à court d'ether et donc par se terminer, permettant au réseau de revenir à la normale.
 
-Il est [courant](https://www.reuters.com/article/us-crypto-currencies-lending-insight-idUSKBN25M0GP#:~:text=price%20of%20ethereum) [de](https://abcnews.go.com/Business/bitcoin-slumps-week-low-amid-renewed-worries-chinese/story?id=78399845#:~:text=cryptocurrencies%20including%20ethereum) [confondre](https://www.cnn.com/2021/03/14/tech/nft-art-buying/index.html#:~:text=price%20of%20ethereum) Ethereum et ether — lorsque les gens font référence au « prix de l'Ethereum », ils décrivent le prix de l'ether.
+Il est [courant de confondre](https://abcnews.go.com/Business/bitcoin-slumps-week-low-amid-renewed-worries-chinese/story?id=78399845) Ethereum et ether — lorsque les gens font référence au « prix de l'Ethereum », ils décrivent le prix de l'ether.
 
 ## Frapper de l'ether {#minting-ether}
 

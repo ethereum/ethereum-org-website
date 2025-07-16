@@ -26,7 +26,7 @@ Different techniques are used for modeling smart contracts for formal verificati
 
 High-level models focus on the relationship between smart contracts and external agents, such as externally owned accounts (EOAs), contract accounts, and the blockchain environment. Such models are useful for defining properties that specify how a contract should behave in response to certain user interactions.
 
-Conversely, other formal models focus on the low-level behavior of a smart contract. While high-level models can help with reasoning about a contract's functionality, they may fail capture details about the internal workings of the implementation. Low-level models apply a white-box view to program analysis and rely on lower-level representations of smart contract applications, such as program traces and [control flow graphs](https://en.wikipedia.org/wiki/Control-flow_graph), to reason about properties relevant to a contract's execution.
+Conversely, other formal models focus on the low-level behavior of a smart contract. While high-level models can help with reasoning about a contract's functionality, they may fail to capture details about the internal workings of the implementation. Low-level models apply a white-box view to program analysis and rely on lower-level representations of smart contract applications, such as program traces and [control flow graphs](https://en.wikipedia.org/wiki/Control-flow_graph), to reason about properties relevant to a contract's execution.
 
 Low-level models are considered ideal since they represent the actual execution of a smart contract in Ethereum's execution environment (i.e., the [EVM](/developers/docs/evm/)). Low-level modeling techniques are especially useful in establishing critical safety properties in smart contracts and detecting potential vulnerabilities.
 
@@ -70,7 +70,7 @@ Low-level formal specifications can be given as either Hoare-style properties or
 
 ### Hoare-style properties {#hoare-style-properties}
 
-[Hoare Logic](https://en.wikipedia.org/wiki/Hoare_logic) provides a set of formal rules for reasoning about the correctness of programs, including smart contracts. A Hoare-style property is represented by a Hoare triple {_P_}_c_{_Q_}, where _c_ is a program and _P_ and _Q_ are predicates on the state of the _c_ (i.e., the program), formally described as _preconditions_ and _postconditions_, respectively.
+[Hoare Logic](https://en.wikipedia.org/wiki/Hoare_logic) provides a set of formal rules for reasoning about the correctness of programs, including smart contracts. A Hoare-style property is represented by a Hoare triple `{P}c{Q}`, where `c` is a program and `P` and `Q` are predicates on the state of the `c` (i.e., the program), formally described as _preconditions_ and _postconditions_, respectively.
 
 A precondition is a predicate describing the conditions required for the correct execution of a function; users calling into the contract must satisfy this requirement. A postcondition is a predicate describing the condition that a function establishes if correctly executed; users can expect this condition to be true after calling into the function. An _invariant_ in Hoare logic is a predicate that is preserved by execution of a function (i.e., it doesn't change).
 
@@ -78,7 +78,7 @@ Hoare-style specifications can guarantee either _partial correctness_ or _total 
 
 Obtaining proof of total correctness is difficult since some executions may delay before terminating, or never terminate at all. That said, the question of whether execution terminates is arguably a moot point since Ethereum's gas mechanism prevents infinite program loops (execution terminates either successfully or ends due to 'out-of-gas' error).
 
-Smart contract specifications created using Hoare logic will have preconditions, postconditions, and invariants defined for the execution of functions and loops in a contract. Preconditions often include the possibility of erroneous inputs to a function, with postconditions describing the expected response to such inputs (e.g., throwing a specific exception). In this manner Hoare-style properties are effective for assuring correctness of contract implementtions.
+Smart contract specifications created using Hoare logic will have preconditions, postconditions, and invariants defined for the execution of functions and loops in a contract. Preconditions often include the possibility of erroneous inputs to a function, with postconditions describing the expected response to such inputs (e.g., throwing a specific exception). In this manner Hoare-style properties are effective for assuring correctness of contract implementations.
 
 Many formal verification frameworks use Hoare-style specifications for proving semantic correctness of functions. It is also possible to add Hoare-style properties (as assertions) directly to contract code by using the `require` and `assert` statements in Solidity.
 

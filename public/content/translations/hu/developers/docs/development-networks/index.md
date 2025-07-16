@@ -28,16 +28,6 @@ _Akár _ [saját csomópontot is futtathat](/developers/docs/nodes-and-clients/#
 
 **Megjegyzés**: A legtöbb [fejlesztői keretrendszer](/developers/docs/frameworks/) egy beépített fejlesztői hálózatot tartalmaz. Ajánljuk, hogy egy keretrendszer segítségével [állítsa be a helyi fejlesztési környezetét](/developers/local-environment/).
 
-### Ganache {#ganache}
-
-Indítson be gyorsan egy személyes Ethereum blokkláncot, melyet tesztek futtatására, parancsok végrehajtására és az állapot megtekintésére használhat, mialatt a lánc működését irányítja.
-
-A Ganache-nak van asztali alkalmazása (Ganache UI) és parancssori alkalmazása is (`ganache-cli`). A Truffle eszközsorozat része.
-
-- [Honlap](https://www.trufflesuite.com/ganache)
-- [GitHub](https://github.com/trufflesuite/ganache)
-- [Dokumentáció](https://www.trufflesuite.com/docs/ganache/overview)
-
 ### Hardhat Network {#hardhat-network}
 
 Egy helyi Ethereum hálózat fejlesztésre tervezve. Szerződéseket telepíthet, teszteket futtathat, hibakeresést és javítást végezhet a kódján.
@@ -51,16 +41,17 @@ A Hardhat Network a beépített Hardhat-tel jön, ami egy Ethereum fejlesztői k
 
 Néhány konszenzusos kliens rendelkezik olyan beépített eszközökkel, amellyel fel lehet állítani helyi Beacon láncokat a teszteléshez. Elérhető instrukciók a Lighthouse, Nimbus és Lodestar kliensekhez:
 
-- [Helyi teszthálózat a Lodestarhoz](https://chainsafe.github.io/lodestar/usage/local/)
+- [Helyi teszthálózat a Lodestarhoz](https://chainsafe.github.io/lodestar/contribution/advanced-topics/setting-up-a-testnet#post-merge-local-testnet/)
 - [Helyi teszthálózat a Lighthouse-hoz](https://lighthouse-book.sigmaprime.io/setup.html#local-testnets)
 - [Helyi teszthálózat a Nimbushoz](https://github.com/status-im/nimbus-eth1/blob/master/fluffy/docs/local_testnet.md)
 
 ### Nyilvános Ethereum-tesztláncok {#public-beacon-testchains}
 
-Az Ethereum két karbantartott, nyilvános tesztimplementációval is rendelkezik: Goerli és Sepolia. A Goerli a javasolt teszthálózat, mely hosszú távú támogatással bír, és mindenkinek ingyenesen használható validálásra. A Sepolia egy újabb, kisebb lánc, melyet szintén fenn akarnak tartani a jövőben, és amelynek része egy engedélyhez kötött validátorszett (nem működhet bárki validátorként). A Ropsten lánc 2022. 4. negyedévében, a Rinkeby lánc pedig 2023. 2./3. negyedévében kerül lezárásra.
+Az Ethereum két karbantartott, nyilvános tesztimplementációval is rendelkezik: Sepolia és Hoodi. A Sepolia az alkalmazásfejlesztéshez ajánlott standard teszthálózat, zárt validátorszettel a gyors szinkronizáláshoz. A Hoodi egy validálásra és letétbe helyezésre szolgáló teszthálózat, amely nyílt validátorszettet használ, és potenciálisan bárki számára lehetővé teszi a validálást.
 
-- [Goerli letétbe helyezési indítópult](https://goerli.launchpad.ethereum.org/)
-- [Ropsten, Rinkeby és Kiln kivezetési bejelentés](https://blog.ethereum.org/2022/06/21/testnet-deprecation)
+- [Hoodi letétbe helyezési indítópult](https://hoodi.launchpad.ethereum.org/en/)
+- [Sepolia honlap](https://sepolia.dev/)
+- [Hoodi honlap](https://hoodi.ethpandaops.io/)
 
 ### Kurtosis Ethereum csomag {#kurtosis}
 

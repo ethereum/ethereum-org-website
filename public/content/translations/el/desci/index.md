@@ -82,7 +82,7 @@ summaryPoint3: Δημιουργία πάνω στο ανοιχτό επιστη�
 
 Τα επιστημονικά δεδομένα μπορούν να γίνουν πολύ πιο προσιτά χρησιμοποιώντας τα μοτίβα Web3 και την κατανεμημένη αποθήκευση επιτρέποντας στην έρευνα να επιβιώσει από κατακλυσμικά γεγονότα.
 
-Το σημείο εκκίνησης πρέπει να είναι ένα σύστημα προσβάσιμο από οποιαδήποτε αποκεντρωμένη οντότητα που διαθέτει τα κατάλληλα επαληθεύσιμα διαπιστευτήρια. Αυτό επιτρέπει την ασφαλή αναπαραγωγή ευαίσθητων δεδομένων από αξιόπιστα μέρη, επιτρέποντας την αντίσταση στον πλεονασμό και τη λογοκρισία, την αναπαραγωγή των αποτελεσμάτων, ακόμη και τη δυνατότητα πολλά μέρη να συνεργάζονται και να προσθέτουν νέα δεδομένα στο σύνολο. Εμπιστευτικές υπολογιστικές μέθοδοι όπως [«compute-to-data»](https://7wdata.be/predictive-analytics/compute-to-data-using-blockchain-to-decentralize-data-science-and-ai-with-the-ocean-protocol) το παρέχει εναλλακτικούς μηχανισμούς πρόσβασης στην αναπαραγωγή μη επεξεργασμένων δεδομένων, δημιουργώντας αξιόπιστα ερευνητικά περιβάλλοντα για τα πιο ευαίσθητα δεδομένα. Τα αξιόπιστα ερευνητικά περιβάλλοντα έχουν [αναφερθεί από το NHS](https://medium.com/weavechain/whats-in-store-for-the-future-of-healthcare-data-b6398745fbbb) ως μια μελλοντική λύση για το απόρρητο και τη συνεργασία δεδομένων, δημιουργώντας ένα οικοσύστημα όπου οι ερευνητές μπορούν να εργάζονται με ασφάλεια με δεδομένα επιτόπου, χρησιμοποιώντας τυποποιημένα περιβάλλοντα κοινής χρήσης κώδικα και πρακτικών.
+Το σημείο εκκίνησης πρέπει να είναι ένα σύστημα προσβάσιμο από οποιαδήποτε αποκεντρωμένη οντότητα που διαθέτει τα κατάλληλα επαληθεύσιμα διαπιστευτήρια. Αυτό επιτρέπει την ασφαλή αναπαραγωγή ευαίσθητων δεδομένων από αξιόπιστα μέρη, επιτρέποντας την αντίσταση στον πλεονασμό και τη λογοκρισία, την αναπαραγωγή των αποτελεσμάτων, ακόμη και τη δυνατότητα πολλά μέρη να συνεργάζονται και να προσθέτουν νέα δεδομένα στο σύνολο. Εμπιστευτικές υπολογιστικές μέθοδοι όπως [«compute-to-data»](https://7wdata.be/predictive-analytics/compute-to-data-using-blockchain-to-decentralize-data-science-and-ai-with-the-ocean-protocol) παρέχει εναλλακτικούς μηχανισμούς πρόσβασης στην αναπαραγωγή μη επεξεργασμένων δεδομένων, δημιουργώντας αξιόπιστα ερευνητικά περιβάλλοντα για τα πιο ευαίσθητα δεδομένα. Τα αξιόπιστα ερευνητικά περιβάλλοντα έχουν [αναφερθεί από το NHS](https://medium.com/weavechain/whats-in-store-for-the-future-of-healthcare-data-b6398745fbbb) ως μια μελλοντική λύση για το απόρρητο και τη συνεργασία δεδομένων, δημιουργώντας ένα οικοσύστημα όπου οι ερευνητές μπορούν να εργάζονται με ασφάλεια με δεδομένα επιτόπου, χρησιμοποιώντας τυποποιημένα περιβάλλοντα κοινής χρήσης κώδικα και πρακτικών.
 
 Οι ευέλικτες λύσεις δεδομένων Web3 υποστηρίζουν τα παραπάνω σενάρια και παρέχουν τη βάση για μια πραγματικά ανοιχτή επιστήμη, όπου οι ερευνητές μπορούν να δημιουργούν δημόσια αγαθά χωρίς άδειες πρόσβασης ή χρεώσεις. Οι λύσεις δημόσιων δεδομένων Web3 όπως το IPFS, το Arweave και το Filecoin έχουν βελτιστοποιηθεί για αποκέντρωση. Το dClimate, για παράδειγμα, παρέχει καθολική πρόσβαση σε δεδομένα για το κλίμα και τον καιρό, μεταξύ άλλων από μετεωρολογικούς σταθμούς και προγνωστικά κλιματικά μοντέλα.
 
@@ -96,7 +96,7 @@ summaryPoint3: Δημιουργία πάνω στο ανοιχτό επιστη�
 - [VitaDAO: Λάβετε χρηματοδότηση μέσω συμφωνιών έρευνας με χορηγία για έρευνα μακροζωίας.](https://www.vitadao.com/)
 - [ResearchHub: Δημοσιεύστε μια επιστημονική έρευνα και συμμετάσχετε σε μια συζήτηση.](https://www.researchhub.com/)
 - [LabDAO: fold a protein in-silico](https://alphafodl.vercel.app/)
-- [dClimate API: Αναζήτηση δεδομένων για το κλίμα που συλλέγονται από μια αποκεντρωμένη κοινότητα.](https://api.dclimate.net/)
+- [dClimate API: Αναζήτηση δεδομένων για το κλίμα που συλλέγονται από μια αποκεντρωμένη κοινότητα.](https://www.dclimate.net/)
 - [DeSci Foundation: DeSci δημιουργία εργαλείου δημοσίευσης.](https://descifoundation.org/)
 - [DeSci.World: Σύντομη αγορά για να δουν οι χρήστες και να ασχοληθούν με την αποκεντρωμένη επιστήμη.](https://desci.world)
 - [OceanDAO: DAO χρηματοδότησης για την επιστήμη που σχετίζεται με δεδομένα.](https://oceanprotocol.com/)
@@ -104,10 +104,11 @@ summaryPoint3: Δημιουργία πάνω στο ανοιχτό επιστη�
 - [Bio.xyz: Λάβετε χρηματοδότηση για το έργο βιοτεχνολογίας DAO ή desci.](https://www.bio.xyz/)
 - [Πρωτόκολλο Fleming: Οικονομικά δεδομένα ανοιχτού κώδικα υποστηρίζοντας τη συλλογική βιοϊατρική έρευνα.](http://flemingprotocol.io/)
 - [Active Inference Institute](https://www.activeinference.org/)
-- [CureDAO: Πλατφόρμα ανάλυσης υγείας που ανήκει στην κοινότητα.](https://docs.curedao.org/)
 - [IdeaMarkets: Ενεργοποίηση της αποκεντρωμένης επιστημονικής αξιοπιστίας.](https://ideamarket.io/)
 - [Εργαστήρια DeSci](https://www.desci.com/)
 - [ValleyDAO: μια ανοιχτή, παγκόσμια κοινότητα που προσφέρει χρηματοδότηση και μεταφραστική υποστήριξη για την έρευνα συνθετικής βιολογίας](https://www.valleydao.bio)
+- [Cerebrum DAO: προμήθεια και καλλιέργεια λύσεων για την προώθηση της υγείας του εγκεφάλου και την πρόληψη του νευροεκφυλισμού](https://www.cerebrumdao.com/)
+- [CryoDAO: χρηματοδότηση έρευνας moonshot στον τομέα της κρυοσυντήρησης](https://www.cryodao.org)
 
 Χαιρετίζουμε τις προτάσεις νέων έργων για τη λίστα. Δείτε την [πολιτική καταχώρισης](/contributing/adding-desci-projects/) για να ξεκινήσετε!
 
@@ -117,7 +118,7 @@ summaryPoint3: Δημιουργία πάνω στο ανοιχτό επιστη�
 - [Ένας οδηγός για την αποκεντρωμένη βιοτεχνολογία από την Jocelynn Pearl για το μέλλον του a16z](https://future.a16z.com/a-guide-to-decentralized-biotech/)
 - [Η περίπτωση για την DeSci](https://gitcoin.co/blog/desci-the-case-for-decentralised-science/)
 - [Οδηγός για DeSci](https://future.com/what-is-decentralized-science-aka-desci/)
-- [Πηγές αποκεντρωμένης επιστήμης](https://www.vincentweisser.com/decentralized-science)
+- [Πηγές αποκεντρωμένης επιστήμης](https://www.vincentweisser.com/desci)
 - [Molecule’s Biopharma IP-NFTs - Τεχνική περιγραφή](https://www.molecule.xyz/blog/molecules-biopharma-ip-nfts-a-technical-description)
 - [Δημιουργώντας έμπιστα συστήματα επιστήμης του Jon Starr](https://medium.com/@jringo/building-systems-of-trustless-science-1cd2d072f673)
 - [Paul Kohlhaas - DeSci: Το μέλλον της αποκεντρωμένης επιστήμης (podcast)](https://anchor.fm/andrew-steinwold/episodes/Paul-Kohlhaas---DeSci-The-Future-of-Decentralized-Science---Zima-Red-ep-117-e1h683a)
@@ -125,6 +126,7 @@ summaryPoint3: Δημιουργία πάνω στο ανοιχτό επιστη�
 - [DeSci: Το μέλλον της έρευνας από τον Samuel Akinosho.](https://lucidsamuel.medium.com/desci-the-future-of-research-b76cfc88c8ec)
 - [Χρηματοδότηση επιστήμης (Επίλογος: Η DeSci και οι νέες μεθόδοι κρύπτο) από την Nadia.](https://nadia.xyz/science-funding)
 - [Η αποκέντρωση διακόπτει την ανάπτυξη των ναρκωτικών.](https://medium.com/id-theory/decentralisation-is-disrupting-drug-development-28b5ba5d447f)
+- [Τι είναι το DeSci - Αποκεντρωμένη επιστήμη;](https://usadailytimes.com/2022/09/12/what-is-desci-decentralized-science/)
 
 ### Βίντεο {#videos}
 
@@ -133,3 +135,4 @@ summaryPoint3: Δημιουργία πάνω στο ανοιχτό επιστη�
 - [Η επιστημονική δημοσίευση είναι προβληματική. Μπορεί το Web3 να το διορθώσει;](https://www.youtube.com/watch?v=WkvzYgCvWj8)
 - [Juan Benet - DeSci, Ανεξάρτητα εργαστήρια & η Επιστήμη των δεδομένων μεγάλης κλίμακας.](https://www.youtube.com/watch?v=zkXM9H90g_E)
 - [Sebastian Brunemeier - Πώς η DeSci μπορεί να τροποποιήσει τη Βιοϊατρική έρευνα & τα Επιχειρηματικά κεφάλαια.](https://www.youtube.com/watch?v=qB4Tc3FcVbM)
+- [Paige Donner - Εργαλεία Open Science με Web3 & Το Blockchain](https://www.youtube.com/watch?v=nC-2QWQ-lgw&t=17s)

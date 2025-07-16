@@ -6,6 +6,7 @@ template: staking
 emoji: ":money_with_wings:"
 image: /images/staking/leslie-solo.png
 alt: 컴퓨터 칩 위의 코뿔쏘 레슬리
+sidebarDepth: 2
 summaryPoints:
   - 검증자가 온라인에서 올바르게 작동하도록 유지하여 프로토콜에서 직접 최대 보상을 받으세요.
   - 가정용 컴퓨터를 실행하고 이더리움 네트워크의 보안과 탈중앙화에 기여해 보세요.
@@ -16,6 +17,8 @@ summaryPoints:
 
 솔로 스테이킹은 인터넷에 연결된 [이더리움 노드를 실행](/run-a-node/)하고 32 ETH를 예치하여 [검증자](#faq)를 활성화하며, 네트워크 합의에 직접 참여할 수 있게 하는 기능입니다.
 
+**솔로 스테이킹은 이더리움 네트워크의 탈중앙성을 높여** 이더리움의 검열 저항성을 높이고 네트워크 공격을 더욱 어렵게 만듭니다. 다른 스테이킹 수단은 네트워크에 동일한 도움을 주지 않을 수 있습니다. 솔로 스테이킹은 이더리움 보안에 기여하는 최상의 스테이킹 옵션입니다.
+
 이더리움 노드는 실행 계층(EL) 클라이언트와 합의 계층(CL) 클라이언트로 이루어져 있습니다. 해당하는 클라이언트는 유효한 서명 키와 함께 작동하는 소프트웨어이며, 블록과 거래를 확인하고, 올바른 체인의 헤드를 증명, 증명을 관리하거나 블록을 제안합니다.
 
 솔로 스테이커는 이러한 클라이언트를 실행하기 위해 필요한 하드웨어를 운영하는 역할을 맞습니다. 이 작업을 위해 집에서 작동하는 전용 컴퓨터를 사용할 것을 강력하게 추천합니다. 네트워크 상태에 큰 도움이 되기 때문입니다.
@@ -24,18 +27,12 @@ summaryPoints:
 
 ## 솔로 스테이킹이 왜 필요한가요? {#why-stake-solo}
 
-솔로 스테이킹에는 더 많은 책임이 따르지만, 자금 및 스테이킹 설정에 대한 가장 많은 관리 권한을 제공합니다.
+솔로 스테이킹에는 더 많은 책임이 따르지만 자금 및 스테이킹 설정과 관련하여 최대한의 관리 권한을 누릴 수 있습니다.
 
 <CardGrid>
-  <Card title="새로운 ETH 얻기" emoji="💸">
-    검증자가 온라인일 때 중간의 제3자에게 수수료를 떼어 주지 않고 프로토콜에서 직접 ETH 보상을 받을 수 있습니다.
-  </Card>
-  <Card title="완벽한 제어" emoji="🎛️">
-    자신의 키를 직접 지키십시오. 리스크를 최소화하고 네트워크의 상태와 보안에 가장 크게 기여하는 클라이언트와 하드웨어 조합을 선택할 수 있습니다. 제3자 스테이킹 서비스는 귀하를 대신하여 이러한 결정을 내리지만, 가장 안전한 결정이 아닐 수도 있습니다.
-  </Card>
-  <Card title="네트워크 보안성" emoji="🔐">
-    솔로 스테이킹은 가장 효과적인 스테이킹 방법입니다. 집에서 직접 검증자를 실행함으로써, 이더리움 프토토콜의 견고함, 탈중앙화 및 보안을 강화할 수 있습니다.
-  </Card>
+  <Card title="새로운 ETH 얻기" emoji="💸" description="Earn ETH-denominated rewards directly from the protocol when your validator is online, without any middlemen taking a cut." />
+  <Card title="완벽한 제어" emoji="🎛️" description="Keep your own keys. Choose the combination of clients and hardware that allows you to minimize your risk and best contribute to the health and security of the network. Third-party staking services make these decisions for you, and they don't always make the safest choices." />
+  <Card title="네트워크 보안성" emoji="🔐" description="Solo staking is the most impactful way to stake. By running a validator on your own hardware at home, you strengthen the robustness, decentralization, and security of the Ethereum protocol." />
 </CardGrid>
 
 ## 솔로 스테이킹 전에 고려할 사항 {#considerations-before-staking-solo}
@@ -43,32 +40,37 @@ summaryPoints:
 솔로 스테이킹에 모두 접근할 수 있고 위험 부담이 없기를 바라지만, 현실은 이와 다릅니다. ETH를 솔로 스테이킹하기 전에 염두에 두어야 할 실용적이고 중요한 고려 사항이 있습니다.
 
 <InfoGrid>
-  <ExpandableCard title="중요한 읽을거리" eventCategory="SoloStaking" eventName="clicked required reading">
-    자신의 노드를 직접 운영할 때 선택한 소프트웨어를 사용하는 방법에 대해 알아봐야 합니다. 여기에는 관련 문서를 읽거나 해당하는 개발 팀의 통신 채널에 주목하는 것도 포함됩니다.
-    실행하는 소프트웨어와 지분 증명 작동의 원리를 잘 이해할수록 스테이커로서의 위험 부담이 낮아지며 노드 운영자로서 도중에 발생할 수 있는 문제를 더 쉽게 해결할 수 있습니다.
-  </ExpandableCard>
-  <ExpandableCard title="컴퓨터와 익숙하게" eventCategory="SoloStaking" eventName="clicked comfortable with computers">
-    새로운 도구를 통해 작업이 더 쉬워지더라도 노드를 설치하려면 컴퓨터를 사용하는 작업에 어느 정도 친숙해야 합니다. 명령줄 인터페이스를 이해하는 것이 도움은 되지만 더 이상 반드시 필요한 것은 아닙니다.
-    또한 매우 기초적인 하드웨어 설치 및 최소 권장 사양에 대해 어느 정도 이해하고 있어야 합니다.
-  </ExpandableCard>
-  <ExpandableCard title="안전한 키 관리" eventCategory="SoloStaking" eventName="clicked secure key management">
-    개인 키가 이더리움 주소를 보호하는 방법처럼 검증자를 위한 특별한 키를 생성해야 합니다. 시드 문구 또는 개인 키를 안전하게 보호하는 방법을 반드시 이해해야 합니다.
-    <p style={{marginTop: "1rem"}}><a href="/security">이더리움 보안 및 사기 방지</a></p>
-  </ExpandableCard>
-  <ExpandableCard title="인출 불가 (현재 시점에서)" eventCategory="SoloStaking" eventName="clicked no withdrawing">
-    스테이킹된 ETH를 출금하거나 검증자 잔고에서 보상은 아직 지원되지 않습니다. 인출은 향후 예정된 상하이 업데이트 이후에 지원될 예정입니다. ETH가 최소 1년에서 최대 2년까지 동결된다는 점을 예상하십시오. 상하이 업그레이드 후에는 스테이크 중 일부 또는 모두를 원하는 대로 출금할 수 있습니다.
-  </ExpandableCard>
-  <ExpandableCard title="유지 보수" eventCategory="SoloStaking" eventName="clicked maintenance">
-    가끔 하드웨어에 문제가 발생하고, 네트워크 연결에 오류가 생길 때 클라이언트 소프트웨어는 주기적으로 업그레이드해야 합니다. 노드를 유지 관리하는 작업은 꼭 필요하며 가끔 주의를 기울여야 합니다. 예상되는 네트워크 업그레이드 또는 기타 중요한 클라이언트 업그레이드에 대해 알고 있는 것이 좋습니다.
-  </ExpandableCard>
-  <ExpandableCard title="지속 가능한 가동 시간" eventCategory="SoloStaking" eventName="clicked reliable uptime">
-    보상은 검증자가 온라인 상태일 때 적절하게 증명 작업에 소요한 시간에 비례합니다. 가동 중지 시간이 발생하면 동일한 시간에 오프라인인 다른 검증자의 수에 비례하여 불이익을 받지만 <a href="#faq">슬래싱을 당하지는 않습니다</a>. 적시에 받지 못한 증명이 있는 경우 보상이 줄어들기 때문에 대역폭 또한 중요합니다. 요구 사항은 달라질 수 있지만 최소 10Mb/s 내외의 대역폭이 권장됩니다.
-  </ExpandableCard>
-  <ExpandableCard title="슬래싱 리스크" eventCategory="SoloStaking" eventName="clicked slashing risk">
-    오프라인 상태가 되어 받는 비활동 상태에 대한 불이익과는 달리, <em>슬래싱</em>은 악의적 행동에 대한 훨씬 심각한 불이익입니다. 한 번에 하나의 시스템에만 로드된 키를 사용하여 소수의 클라이언트를 실행하면 슬래시 처리될 위험성이 최소화됩니다. 이를 통해 알 수 있듯이 모든 스테이커는 슬래싱의 위험성을 주의해야 합니다.
+<ExpandableCard title="중요한 읽을거리" eventCategory="SoloStaking" eventName="clicked required reading">
+자신의 노드를 직접 운영할 때 선택한 소프트웨어를 사용하는 방법에 대해 알아봐야 합니다. 여기에는 관련 문서를 읽거나 해당하는 개발 팀의 통신 채널에 주목하는 것도 포함됩니다.
 
-    <p><a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/">슬래싱 및 검증자의 주기 자세히 알아보기</a></p>
-  </ExpandableCard>
+실행하는 소프트웨어와 지분 증명 작동의 원리를 잘 이해할수록 스테이커로서의 위험 부담이 낮아지며 노드 운영자로서 도중에 발생할 수 있는 문제를 더 쉽게 해결할 수 있습니다.
+</ExpandableCard>
+
+<ExpandableCard title="컴퓨터와 익숙하게" eventCategory="SoloStaking" eventName="clicked comfortable with computers">
+새로운 도구를 통해 작업이 더 쉬워지더라도 노드를 설치하려면 컴퓨터를 사용하는 작업에 어느 정도 친숙해야 합니다. 명령줄 인터페이스를 이해하는 것이 도움은 되지만 더 이상 반드시 필요한 것은 아닙니다.
+
+또한 매우 기초적인 하드웨어 설치 및 최소 권장 사양에 대해 어느 정도 이해하고 있어야 합니다.
+</ExpandableCard>
+
+<ExpandableCard title="안전한 키 관리" eventCategory="SoloStaking" eventName="clicked secure key management">
+개인 키가 이더리움 주소를 보호하는 방법처럼 검증자를 위한 특별한 키를 생성해야 합니다. 시드 문구 또는 개인 키를 안전하게 보호하는 방법을 반드시 숙지해야 합니다.{' '}
+
+<a href="/security/">이더리움 보안 및 스캠 예방</a>
+</ExpandableCard>
+
+<ExpandableCard title="유지 보수" eventCategory="SoloStaking" eventName="clicked maintenance">
+가끔 하드웨어에 문제가 발생하고, 네트워크 연결에 오류가 생길 때 클라이언트 소프트웨어는 주기적으로 업그레이드해야 합니다. 노드를 유지 관리하는 작업은 꼭 필요하며 가끔 주의를 기울여야 합니다. 예상되는 네트워크 업그레이드 또는 기타 중요한 클라이언트 업그레이드에 대해 알고 있는 것이 좋습니다.
+</ExpandableCard>
+
+<ExpandableCard title="지속 가능한 가동 시간" eventCategory="SoloStaking" eventName="clicked reliable uptime">
+보상은 검증자가 온라인 상태일 때 적절하게 증명 작업에 소요한 시간에 비례합니다. 가동 중지 시간이 발생하면 동일한 시간에 오프라인인 다른 검증자의 수에 비례하여 불이익을 받지만 <a href="#faq">슬래싱을 당하지는 않습니다</a>. 적시에 받지 못한 증명이 있는 경우 보상이 줄어들기 때문에 대역폭 또한 중요합니다. 요구 사항은 달라질 수 있지만 최소 10Mb/s 내외의 대역폭이 권장됩니다.
+</ExpandableCard>
+
+<ExpandableCard title="슬래싱 리스크" eventCategory="SoloStaking" eventName="clicked slashing risk">
+오프라인 상태가 되어 받는 비활동 상태에 대한 불이익과는 달리, <em>슬래싱</em>은 악의적 행동에 대한 훨씬 심각한 불이익입니다. 한 번에 하나의 시스템에만 로드된 키를 사용하여 소수의 클라이언트를 실행하면 슬래시 처리될 위험성이 최소화됩니다. 이를 통해 알 수 있듯이 모든 스테이커는 슬래싱의 위험성을 주의해야 합니다.
+
+<a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> 슬래싱 및 검증자의 주기 자세히 알아보기</a>
+</ExpandableCard>
 </InfoGrid>
 
 <StakingComparison page="solo" />
@@ -77,9 +79,11 @@ summaryPoints:
 
 <StakingHowSoloWorks />
 
-필요한 경우 검증자 역할을 그만두고 오프라인으로 전환할 수 있으며, 더 이상 보상받지 않을 수 있습니다. 이러한 자금의 *인출*은 향후 상하이 업데이트가 실행될 때까지 불가함을 참고하세요.
+활동을 유지하는 동안 ETH 보상이 지급됩니다. 보상은 주기적으로 출금 주소로 지급됩니다.
 
-상하이 업데이트 이후, 사용자는 보상 및 스테이킹된 자금을 인출할 수 있게 됩니다.
+필요한 경우 검증자 역할을 그만두고 오프라인으로 전환할 수 있으며, 더 이상 보상받지 않을 수 있습니다. 이후 잔여 잔액은 설정 시 지정한 출금 주소로 출금됩니다.
+
+[스테이킹 출금에 대한 자세한 내용](/staking/withdrawals/)
 
 ## 스테이킹 런치패드 시작하기 {#get-started-on-the-staking-launchpad}
 
@@ -99,40 +103,40 @@ ETH 솔로 스테이킹을 지원하는 도구와 서비스는 점점 많아지�
 
 설정에 도움이 되는 다양한 옵션이 있습니다. 상단의 지표를 사용하여 아래 도구에 대한 안내를 받으세요.
 
-<InfoBanner emoji="⚠️" isWarning>
-참고로, <a href="/developers/docs/nodes-and-clients/client-diversity/">소수 클라이언트</a>는 네트워크의 보안을 강화하고 위험성을 최소화할 수 있으므로 매우 중요합니다. 소수 클라이언트를 설정하기 위한 도구를 <em style={{ textTransform: "uppercase" }}>"멀티 클라이언트"</em>라고 부릅니다.
-</InfoBanner>
+<ProductDisclaimer />
 
 ### 노드 도구
 
 <StakingProductsCardGrid category="nodeTools" />
 
+참고로, [소수 클라이언트](/developers/docs/nodes-and-clients/client-diversity/)는 네트워크의 보안을 강화하고 위험성을 최소화할 수 있으므로 매우 중요합니다. 소수 클라이언트를 설정하기 위한 도구를 <em style={{ textTransform: "uppercase" }}>"멀티 클라이언트"</em>라고 부릅니다.
+
 ### 키 생성기
 
-이러한 도구는 키를 생성하는 데 있어 [Staking Deposit CLI](https://github.com/ethereum/staking-deposit-cli/)의 대안으로 사용될 수 있습니다.
+이러한 도구는 키를 생성하는 데 있어 [스테이킹 입금 CLI](https://github.com/ethereum/staking-deposit-cli/)의 대안으로 사용될 수 있습니다.
 
 <StakingProductsCardGrid category="keyGen" />
 
-저희가 놓친 다른 스테이킹 도구를 제안하고 싶으신가요? 이더리움 [제품 나열 정책](/contributing/adding-staking-products/)을 확인하고 정책에 맞는 제품인 경우 검토를 위해 제출해 주세요.
+저희가 놓친 다른 스테이킹 도구가 있습니까? 이더리움 [제품 나열 정책](/contributing/adding-staking-products/)을 확인하고 정책에 맞는 제품인 경우 검토를 위해 제출해 주세요.
 
 ## 솔로 스테이킹 가이드 살펴보기 {#staking-guides}
 
 <StakingGuides />
 
-## FAQ {#faq}
+## 자주 묻는 질문 {#faq}
 
 다음은 참고하면 좋을 스테이킹에 대한 가장 일반적인 질문입니다.
 
 <ExpandableCard title="검증자란 무엇인가요?">
 
-검증자는 이더리움 상에 존재하고 이더리움 합의 프로토콜에 참여하는 가상의 주체입니다. 검증자는 잔고, 공개 키 및 기타 속성으로 나타납니다. 검증자 클라이언트는 검증자의 개인 키를 보유하고 사용하여 검증자 역할을 대신하는 소프트웨어입니다. 하나의 검증자 클라이언트는 여러 개의 키 페어를 보유하며 여러 검증자를 제어할 수 있습니다.
+<em>검증자</em>는 이더리움상에 존재하고 이더리움 프로토콜의 합의에 참여하는 가상 주체입니다. 검증자는 잔고, 공개 키 및 기타 속성으로 나타납니다. <em>검증자 클라이언트</em>는 검증자를 대신하여 개인 키를 소유하고 사용하는 소프트웨어입니다. 하나의 검증자 클라이언트는 여러 개의 키 페어를 보유하며 여러 검증자를 제어할 수 있습니다.
 
 </ExpandableCard>
 
 <ExpandableCard title="32 ETH 이상을 예치할 수 있습니까?">
 검증자와 연계된 각각의 키 쌍이 활성화되려면 정확히 32 ETH가 필요합니다. 검증자마다 32 ETH의 <a href="https://www.attestant.io/posts/understanding-validator-effective-balance/">유효 잔고</a> 제한이 있기 때문에 한 개의 키 세트에 ETH를 더 예치해도 보상이 증가하지는 않습니다. 이는 스테이킹은 32 ETH 단위로 이루어지며 각각 고유한 키와 잔고가 있음을 의미합니다.
 
-하나의 검증자에 32 ETH보다 더 많은 금액을 예치하지 마세요. 이러한 작업이 보상을 증가하지는 않으며 계획된 상하이 업데이트 시기까지 동결됩니다.
+하나의 검증자에 32 ETH보다 더 많은 금액을 예치하지 마세요. 그렇다고 보상이 증가하지는 않습니다. 검증자용 출금 주소가 설정된 경우 32 ETH를 초과한 자산은 자동으로 다음 <a href="/staking/withdrawals/#validator-sweeping">검증자 정리</a> 중에 이 주소로 자동 출금됩니다.
 
 솔로 스테이킹이 너무 부담스럽다면 <a href="/staking/saas/">스테이킹 서비스</a> 제공 업체의 이용을 고려해 보세요. 또는 32 ETH보다 적은 금액을 스테이킹하려면 <a href="/staking/pools/">스테이킹 풀</a>을 확인해 보세요.
 </ExpandableCard>
@@ -154,8 +158,10 @@ ETH 솔로 스테이킹을 지원하는 도구와 서비스는 점점 많아지�
 
 <em>소수 클라이언트에서 유사한 버그가 발생할지라도 최종 확정되지 않으므로</em> 서라운드 투표 및 <em>슬래싱은 발생하지 않으며</em>, 그저 비활동 패널티로만 그치게 됩니다.
 
-<p><a href="https://hackernoon.com/ethereums-client-diversity-problem">소수 클라이언트 실행의 중요성에 대해 자세히 알아보기</a></p>
-<p><a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50">슬래싱 방지에 대해 자세히 알아보기</a></p>
+<ul>
+  <li><a href="https://hackernoon.com/ethereums-client-diversity-problem">소수 클라이언트 실행의 중요성에 대해 자세히 알아보기</a></li>
+  <li><a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50">슬래싱 예방에 대해 자세히 알아보기</a></li>
+</ul>
 </ExpandableCard>
 
 <ExpandableCard title="어떤 클라이언트가 최고입니까?">
@@ -174,11 +180,27 @@ ETH 솔로 스테이킹을 지원하는 도구와 서비스는 점점 많아지�
 오프라인 패널티의 정도는 동시에 오프라인 상태에 있는 클라이언트 수에 비례합니다. 따라서 VPS를 사용하면 오프라인 패널티에 대한 리스크를 현저히 증가시키며, 고장이 대규모인 경우에 2차적 누출이나 슬래싱을 당할 리스크 또한 키웁니다. 귀하의 리스크와 네트워크의 리스크를 최소화하기 위해 사용자는 자신의 하드웨어를 확보하고 운영할 것을 강력히 권장합니다.
 </ExpandableCard>
 
+<ExpandableCard title="보상의 잠금을 해제하고 ETH를 돌려받는 방법은 무엇인가요?">
+
+비콘 체인에서 출금하려면 출금 자격 증명의 설정이 필요합니다.
+
+신규 스테이커는 키를 생성하고 예치할 때 이를 설정합니다. 출금 자격 증명을 아직 설정하지 않은 기존 스테이커는 키를 업그레이드하여 이 기능을 지원할 수 있습니다.
+
+출금 자격 증명이 설정되면 주기적으로 보상(초기 32 ETH에 대해 누적된 ETH)이 출금 주소로 자동 지급됩니다.
+
+전체 잔액을 잠금 해제하고 수령하려면 검증자 탈퇴 프로세스도 완료해야 합니다.
+
+<ButtonLink href="/staking/withdrawals/">스테이킹 출금에 대한 자세한 내용</ButtonLink>
+</ExpandableCard>
+
 ## 더 읽을거리 {#further-reading}
 
-- [이더리움의 클라이언트 다양성 문제](https://hackernoon.com/ethereums-client-diversity-problem) - *@emmanuelawosika 2022*
+- [이더리움 스테이킹 디렉터리](https://www.staking.directory/) - _Eridian and Spacesider_
+- [이더리움의 클라이언트 다양성 문제](https://hackernoon.com/ethereums-client-diversity-problem) - _@emmanuelawosika 2022_
 - [클라이언트 다양성 개선](https://www.attestant.io/posts/helping-client-diversity/) - _Jim McDonald 2022_
 - [이더리움 합의 계층에서의 클라이언트 다양성](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA) - _jmcook.eth 2022_
 - [사용법: 이더리움 검증자용 하드웨어 구매하기](https://www.youtube.com/watch?v=C2wwu1IlhDc) - _EthStaker 2022_
 - [단계별: 이더리움 2.0 테스트넷에 참여하는 방법](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) - _Butta_
 - [Eth2 슬래싱 방지 팁](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) - _Raul Jordan 2020_
+
+<QuizWidget quizKey="staking-solo" />

@@ -41,12 +41,6 @@ lang: ja
 - [サンプルコード](https://github.com/Azure-Samples/blockchain/blob/master/blockchain-workbench/application-and-smart-contract-samples/readme.md)
 - [GitHub](https://github.com/microsoft/vscode)
 
-**Atom -** **_21世紀に向けた、ハッキング可能なテキストエディタ_**
-
-- [Atom](https://atom.io/)
-- [GitHub](https://github.com/atom)
-- [イーサリアムパッケージ](https://atom.io/packages/search?utf8=%E2%9C%93&q=keyword%3Aethereum&commit=Search)
-
 **JetBrains IDE (IntelliJ IDEAなど) -** **_ソフトウェアデベロッパーやチームに不可欠なツール_**
 
 - [JetBrains](https://www.jetbrains.com/)

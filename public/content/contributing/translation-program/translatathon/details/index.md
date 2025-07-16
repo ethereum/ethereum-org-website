@@ -45,9 +45,86 @@ To learn more about the conventions and best practices for translating ethereum.
 
 ### Prizes
 
-The total prize pool for the Translatathon is 30,000$.
+<TranslatathonPrizes />
 
-A detailed breakdown of prizes will be announced at the end of the application period.
+**How points work**
+
+Every Translatathon participant will earn points towards their final score by translating content in the ethereum.org Crowdin project and other eligible projects (the full list of eligible projects is available in the next section).
+
+The scoring is simple: **1 translated word = 1 point**
+
+Please note that in order to receive your final points allocation, your suggested translations will need to pass the evaluation process, where professional reviewers will check each participant's translations to ensure they meet the minimum quality threshold and no machine or AI translations were used in the process.
+
+**Bonus points**
+
+This year, Translatathon participants also have several options to earn bonus points.
+
+Bonus points breakdown:
+- ETHglossary contributors: 100-1,000 bonus points
+- Ethereum.org contributors: 1,000 bonus points
+- Previous Translatathon participants: 1,000 bonus points
+
+1) ETHglossary translators
+[ETHglossary](https://ethglossaryproject.vercel.app/) is an open-source glossary of key Ethereum terms, and an initiative to create and maintain a glossary of Ethereum terms and their translations in 60+ languages that anyone can use and contribute to.
+Translatathon participants can suggest translations for these terms and vote or discuss existing translations to earn bonus points in the Translatathon.
+Each 10 translated terms will earn you 100 bonus points, with a bonus for completing all 70 terms currently available in the glossary app. The bonus points will be automatically added to your final score once the Translatathon ends and the final scores are calculated.
+
+Participants can earn a maximum of 1,000 bonus points by translating all of the terms in their native language, but translating multiple languages will not result in any additional points!
+
+ETHglossary points breakdown:
+- 10 translated terms = 100 bonus points
+- 20 translated terms = 200 bonus points
+- 30 translated terms = 300 bonus points
+- 40 translated terms = 400 bonus points
+- 50 translated terms = 500 bonus points
+- 60 translated terms = 600 bonus points
+- 70 translated terms = 1,000 bonus points
+
+2) Ethereum.org contributors
+To reward our existing contributors, each past ethereum.org contributor is eligible for 1,000 bonus points.
+Contributors are individuals that have received any ethereum.org contributor POAP, OAT or GitPOAP in the past.
+You can check out the full list of eligible contributor POAPs, OATs and GitPOAPs [here](https://efdn.notion.site/Ethereum-org-contributor-credentials-1c23938dfd7f44d0bda3992c58897d63)
+
+3) Previous Translatathon participants
+Previous Translatathon participants will also receive 1,000 bonus points.
+Anyone who participated in the 2023 edition of the ethereum.org Translatathon and scored at least 100 points, will automatically receive their bonus points once the Translatathon ends and the final scores are calculated.
+
+**In order to claim their bonus points, participants must score at least 100 points in the 2024 Translatathon!**
+
+### Ecosystem content
+
+Since the ethereum.org Translation program is active throughout the year, the translation progress in some target languages on the website is significantly higher than others.
+
+In order to ensure that all Translatathon participants have an equal opportunity to translate as much content as they can and compete for the top prizes, the source content that is part of the Translatathon is not only limited to ethereum.org website content.
+
+Participants translating any of the eligible projects will earn an equal amounts of points, 1 translated word in any project = 1 point.
+
+Here is a list of all the eligible projects that are part of the 2024 Translatathon:
+
+Ethereum.org
+- https://crowdin.com/project/ethereum-org
+
+Ethereum.org developer tutorials
+- https://crowdin.com/project/33388446abbe9d7aa21e42e49bba7f97
+
+Remix
+- https://crowdin.com/project/remix-translation
+- https://crowdin.com/project/remix-ui
+- https://crowdin.com/project/remix-learneth
+- https://crowdin.com/project/361d7e8c3b07220fa22e9d5a901b0021
+
+Privacy + Scaling explorations
+- https://crowdin.com/project/privacy-scaling-explorations
+
+Speed Run Ethereum
+- https://crowdin.com/project/speed-run-ethereum
+
+EthStaker
+- https://crowdin.com/project/ethstaker-website
+- https://crowdin.com/project/ethstaker-knowledge-base
+
+Solidity Language Docs
+- https://crowdin.com/project/solidity-language-docs
 
 ### Evaluation process
 
@@ -71,11 +148,14 @@ All translations will also be subject to a thorough review before being added to
   </ul>
 </ExpandableCard>
 
+<ExpandableCard title="Can I compete as part of a team?">
+    <p>No. This year, the Translatathon will only have one main individual track and there will be no team competition.</p>
+    <p>You can still team up with your friends and translate together, however everyone will be competing in the Translatathon as an individual and only the number of your individual translated words will count towards your final score.</p>
+</ExpandableCard>
+
 <ExpandableCard title="Which languages can I translate into?">
-    You can translate into any language! It is recommended to only translate into your native language to ensure sufficient quality, but in short, all language available in Crowdin are in scope for the Translatathon.
-
-    If you want to translate into a language that isn't available in Crowdin, reach out to us and we will add any language per request.
-
+    <p>You can translate into any language! It is recommended to only translate into your native language to ensure sufficient quality, but in short, all languages available in Crowdin are in scope for the Translatathon.</p>
+    <p>If you want to translate into a language that isn't available in Crowdin, reach out to us and we will add any language per request.</p>
 </ExpandableCard>
 
 <ApplyNow />

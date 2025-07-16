@@ -196,7 +196,7 @@ eventName="read more">
 
 Gli operatori del validatore dovrebbero visitare la pagina dei <a href="https://launchpad.ethereum.org/withdrawals/">Prelievi del Launchpad di Staking</a>, dove troveranno ulteriori dettagli su come preparare il proprio validatore ai prelievi, le tempistiche degli eventi e ulteriori dettagli sul funzionamento dei prelievi.
 
-Per testare la tua configurazione su una rete di prova, visita prima il <a href="https://goerli.launchpad.ethereum.org">Launchpad di Staking della Rete di Prova di Goerli</a> per iniziare.
+Per testare la tua configurazione su una rete di prova, visita il <a href="https://holesky.launchpad.ethereum.org">Launchpad di Staking della rete di prova di Holesky</a> per iniziare.
 
 </ExpandableCard>
 

@@ -41,12 +41,6 @@ Die meisten etablierten IDEs haben Plugins entwickelt, um die Ethereum-Entwicklu
 - [Code-Beispiele](https://github.com/Azure-Samples/blockchain/blob/master/blockchain-workbench/application-and-smart-contract-samples/readme.md)
 - [GitHub](https://github.com/microsoft/vscode)
 
-**Atom –** **_Ein anpassbarer Texteditor für das 21. Jahrhundert_**
-
-- [Atom](https://atom.io/)
-- [GitHub](https://github.com/atom)
-- [Ethereum-Pakete](https://atom.io/packages/search?utf8=%E2%9C%93&q=keyword%3Aethereum&commit=Search)
-
 **JetBrains IDEs (IntelliJ IDEA, usw.) ** **_Unverzichtbare Werkzeuge für Softwareentwickler und -teams_**
 
 - [JetBrains](https://www.jetbrains.com/)

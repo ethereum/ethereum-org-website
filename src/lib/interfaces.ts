@@ -1,6 +1,7 @@
 import type { StaticImageData } from "next/image"
 
 import type {
+  CommonHeroProps,
   FileContributor,
   Frontmatter,
   Lang,
@@ -22,6 +23,7 @@ export interface DeveloperDocsLink {
  */
 export interface SharedFrontmatter {
   title: string
+  metaTitle?: string
   description: string
   lang: Lang
   sidebarDepth?: number
@@ -61,12 +63,7 @@ export interface UpgradeFrontmatter
     ImageInfo {}
 
 export interface RoadmapFrontmatter extends SharedFrontmatter, ImageInfo {
-  buttons: {
-    label: string
-    toId?: string
-    href?: string
-    variant?: string
-  }[]
+  buttons: CommonHeroProps["buttons"]
 }
 
 export interface UseCasesFrontmatter
@@ -165,10 +162,10 @@ export interface IGetInvolvedCard {
 }
 
 /**
- * TitleCardList
+ * Codeblock
  */
 
-export interface ITitleCardItem {
+export interface CodeExample {
   title: string
   description: string
   caption?: string
@@ -176,13 +173,7 @@ export interface ITitleCardItem {
   image?: string
   alt?: string
   id?: number
-}
-
-/**
- * Codeblock
- */
-
-export interface CodeExample extends ITitleCardItem {
   codeLanguage: string
-  code: string
+  codeUrl: string
+  eventName: string
 }

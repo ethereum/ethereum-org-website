@@ -1,5 +1,6 @@
-import React, { type Dispatch, type SetStateAction } from "react"
-import { Flex } from "@chakra-ui/react"
+import { type Dispatch, type SetStateAction } from "react"
+
+import { Flex } from "@/components/ui/flex"
 
 import { defaultTokenBalances } from "../constants"
 import type { SimulatorNav } from "../interfaces"
@@ -35,34 +36,12 @@ export const WalletHome = ({
     0
   )
   return (
-    <Flex
-      direction="column"
-      alignItems="center"
-      bg="background.base"
-      position="absolute"
-      inset={0}
-    >
-      <Flex
-        direction="column"
-        flex={1}
-        pt={8}
-        pb={4}
-        px={6}
-        justify="space-between"
-        w="full"
-      >
+    <Flex className="absolute inset-0 flex-col items-center bg-background">
+      <Flex className="w-full flex-1 flex-col justify-between px-6 pb-4 pt-8">
         <WalletBalance usdAmount={totalAmounts} />
         <SendReceiveButtons nav={nav} isEnabled={isEnabled} />
       </Flex>
-      <Flex
-        direction="column"
-        flex={1}
-        p={6}
-        gap={6}
-        justify="space-between"
-        w="full"
-        bg="background.highlight"
-      >
+      <Flex className="w-full flex-1 flex-col justify-between gap-6 bg-background-highlight p-6">
         <CategoryTabs
           categories={["Crypto", "NFTs"]}
           activeIndex={activeTabIndex}

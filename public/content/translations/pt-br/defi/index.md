@@ -55,7 +55,7 @@ Uma das melhores maneiras de avaliar o potencial das DeFi é compreender os prob
 
 O Bitcoin, de muitas maneiras, foi a primeira aplicação DeFi. O Bitcoin permite que você realmente tenha e controle valores e os envie para qualquer lugar ao redor do mundo. Isso é feito oferecendo uma maneira para que um grande número de pessoas, que não confiam umas nas outras, concordem com um livro de contas sem a necessidade de um intermediário confiável. O Bitcoin é aberto a qualquer um e ninguém tem autoridade para alterar suas regras. As regras do Bitcoin, como sua escassez e acessibilidade, estão incorporadas na tecnologia. Não funciona como nas finanças tradicionais, em que os governos podem imprimir moeda que desvaloriza as suas economias e as empresas podem fechar os mercados.
 
-Ethereum baseia-se nisso. Como o Bitcoin, as regras não mudam por você, e todos têm acesso. Mas ele também torna esse dinheiro digital programável, usando [contratos inteligentes](/glossary#smart-contract). Então você pode fazer mais do que guardar e enviar valores.
+Ethereum baseia-se nisso. Como o Bitcoin, as regras não mudam por você, e todos têm acesso. Mas ele também torna esse dinheiro digital programável, usando [contratos inteligentes](/glossary/#smart-contract), para que você possa fazer mais do que guardar e enviar valores.
 
 <YouTube id="qFBYB4W2tqU" />
 
@@ -90,7 +90,7 @@ Há uma alternativa descentralizada para a maioria dos serviços financeiros. Ma
 
 ### Envie dinheiro ao redor do mundo rapidamente {#send-money}
 
-Como um blockchain, o Ethereum foi concebido para o envio de transações de forma segura e de modo global. Assim como o Bitcoin, o Ethereum torna o envio de dinheiro ao redor do mundo tão fácil quanto enviar um e-mail. Basta digitar o nome do seu beneficiário [nome ENS](/nft/#nft-domains) (como bob.eth) ou o endereço de conta da respectiva carteira e seu pagamento será enviado em minutos (normalmente). Para enviar ou receber pagamentos, você precisará de uma [carteira](/wallets/).
+Como um blockchain, o Ethereum foi concebido para o envio de transações de forma segura e de modo global. Assim como o Bitcoin, o Ethereum torna o envio de dinheiro ao redor do mundo tão fácil quanto enviar um e-mail. Basta digitar o [nome ENS](/glossary/#ens) do seu beneficiário, por exemplo, bob.eth, ou o endereço de conta da respectiva carteira e seu pagamento será enviado em minutos, normalmente. Para enviar ou receber pagamentos, você precisará de uma [carteira](/wallets/).
 
 <ButtonLink href="/dapps/?category=finance#explore">
   Ver dapps de pagamento
@@ -100,7 +100,7 @@ Como um blockchain, o Ethereum foi concebido para o envio de transações de for
 
 Você também pode transferir dinheiro através da Ethereum. Isso permite que você pague imediatamente o salário de alguém, dando a essa pessoa acesso ao valor devido sempre que preciso. Ou alugue algo de forma imediata, como um guarda-volume ou uma moto elétrica.
 
-E se você não quiser enviar ou pagar via [ETH](/eth/) devido à variação no valor, existem moedas alternativas na Ethereum: stablecoins.
+E se você não quiser enviar ou transferir [ETH](/glossary/#ether) devido à flutuação de valor que pode sofrer, existem outras moedas alternativas no Ethereum: as [stablecoins](/glossary/#stablecoin).
 
 <Divider />
 
@@ -133,7 +133,7 @@ Há diversas vantagens em usar um financiador descentralizado...
 
 Hoje, pegar dinheiro emprestado ou emprestar gira em torno dos indivíduos envolvidos. Os bancos precisam saber se você terá condições de pagar um empréstimo antes de concedê-lo.
 
-Os empréstimos descentralizados funcionam sem que as partes tenham que se identificar. Em vez disso, o mutuário deve oferecer uma garantia colateral que o credor receberá automaticamente se o empréstimo não for pago. Alguns credores aceitam NFTs como garantia. Os NFTs são escrituras de ativos únicos, como uma pintura. [Mais sobre NFTs](/nft/)
+Os empréstimos descentralizados funcionam sem que as partes tenham que se identificar. Em vez disso, o mutuário deve oferecer uma garantia colateral que o credor receberá automaticamente se o empréstimo não for pago. Alguns credores até aceitam [NFTs](/glossary/#nft) como garantia. Os NFTs são escrituras de ativos únicos, como uma pintura. [Mais sobre NFTs](/nft/)
 
 Isso permite que você tome empréstimo de dinheiro sem checagem de crédito ou fornecimento de dados pessoais.
 
@@ -168,7 +168,9 @@ Se o estoque da exchange B cair de repente e o usuário não conseguir comprar o
 
 Para ser capaz de fazer o exemplo acima no mundo financeiro tradicional, você precisaria de uma quantidade enorme de dinheiro. Estas estratégias de fazer dinheiro só são acessíveis aos que já possuem economias. Os empréstimos rápidos são um exemplo do futuro em que possuir dinheiro não é necessariamente uma condição prévia para se fazer dinheiro.
 
-[Mais sobre empréstimos rápidos](https://aave.com/flash-loans/)
+<ButtonLink isSecondary href="https://aave.com/docs/concepts/flash-loans/">
+  Mais sobre empréstimos rápidos
+</ButtonLink>
 
 <Divider />
 
@@ -180,7 +182,7 @@ Você pode ganhar juros sobre suas criptomoedas emprestando-as e vendo seus fund
 
 - Você empresta 100 Dai, uma [stablecoin](/stablecoins/), a um produto como Aave.
 - Você recebe 100 Aave Dai (aDai) que é um token que representa seus Dai emprestados.
-- Seu aDai aumentará com base nas taxas de juros e você poderá ver o saldo crescendo na sua carteira. Dependendo da APR (taxa percentual anual), seu saldo em carteira irá mostrar algo como 100.1234 após alguns dias ou até mesmo horas!
+- Seu aDai aumentará com base nas taxas de juros e você poderá ver o saldo crescendo na sua carteira. Dependendo da [APR](/glossary/#apr), o saldo da sua carteira será algo como 100.1234 depois de alguns dias ou até horas!
 - Você pode retirar uma quantidade de Dai regular, igual ao seu saldo em aDai, a qualquer momento.
 
 <ButtonLink href="/dapps/?category=finance#explore">
@@ -233,7 +235,7 @@ Quando você usa uma exchange centralizada, tem que depositar seus ativos antes 
 
 Existem produtos de gestão de fundos na Ethereum que tentarão aumentar a sua carteira com base em uma estratégia à sua escolha. Isto é automático, aberto a todos, e não precisa de um gerente humano pegando uma fatia de seus lucros.
 
-Um bom exemplo é o [fundo DeFi Pulse Index (DPI)](https://defipulse.com/blog/defi-pulse-index/). Esse é um fundo com balanceamento automático, de forma a garantir que o seu portfólio sempre inclua [os principais tokens de DeFi por capitalização de mercado](https://www.coingecko.com/en/defi). Nunca é necessário gerenciar nenhum dos detalhes e é possível sacar do fundo sempre que quiser.
+Um bom exemplo é o [fundo DeFi Pulse Index (DPI)](https://defipulse.com/blog/defi-pulse-index/). Esse é um fundo com balanceamento automático, de forma a garantir que o seu portfólio sempre inclua os principais tokens de DeFi por capitalização de mercado. Nunca é necessário gerenciar nenhum dos detalhes e é possível sacar do fundo sempre que quiser.
 
 <ButtonLink href="/dapps/?category=finance#explore">
   Ver dapps de investimento
@@ -266,7 +268,9 @@ O financiamento quadrático assegura que os projetos que recebem mais recursos s
 
 Isso significa que o Projeto A com suas 100 doações de 1 dólar poderia acabar com mais financiamento que o Projeto B com uma única doação de 10.000 dólares (sujeito ao tamanho do pool correspondente).
 
-[Mais sobre financiamento quadrático](https://wtfisqf.com)
+<ButtonLink href="https://wtfisqf.com">
+  Mais sobre financiamento quadrático
+</ButtonLink>
 
 <Divider />
 
@@ -320,6 +324,8 @@ Pense no DeFi como camadas:
 3. Os protocolos, [contratos inteligentes](/glossary/#smart-contract) que oferecem a funcionalidade, por exemplo, um serviço que permite o empréstimo descentralizado de ativos.
 4. [As aplicações](/dapps/): os produtos que usamos para gerenciar e acessar os protocolos.
 
+Nota: grande parte do DeFi usa o [padrão ERC-20](/glossary/#erc-20). Aplicações em DeFi usam um encapsulamento para ETH chamado Wrapped Ether (WETH). [Saiba mais sobre o Wrapped Ether](/wrapped-eth).
+
 ## Criar Defi {#build-defi}
 
 DeFi é um movimento de código aberto. Os protocolos e aplicações DeFi são todos abertos, para você inspecionar, fazer updates e inovar. Por causa dessa pilha em camadas (todos compartilham o mesmo blockchain e ativos base), os protocolos podem ser combinados para proporcionar oportunidades únicas.
@@ -328,13 +334,12 @@ DeFi é um movimento de código aberto. Os protocolos e aplicações DeFi são t
   Mais sobre como criar Dapps
 </ButtonLink>
 
-## Leitura adicional {#futher-reading}
+## Leitura adicional {#further-reading}
 
 ### Dados DeFi {#defi-data}
 
 - [DeFi Prime](https://defiprime.com/)
 - [DeFi Llama](https://defillama.com/)
-- [DeFi Rate](https://defirate.com/)
 
 ### Artigos sobre DeFi {#defi-articles}
 
@@ -348,5 +353,9 @@ DeFi é um movimento de código aberto. Os protocolos e aplicações DeFi são t
 
 ### Comunidades {#communities}
 
-- [Servidor DeFi Llama no Discord](https://discord.gg/buPFYXzDDd)
+- [Servidor DeFi Llama no Discord](https://discord.defillama.com/)
 - [Servidor DeFi Pulse no Discord](https://discord.gg/Gx4TCTk)
+
+<Divider />
+
+<QuizWidget quizKey="defi" />

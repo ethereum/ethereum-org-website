@@ -1,5 +1,5 @@
 ---
-title: Sıfır-Bilgi Toplamaları
+title: Sıfır-bilgi toplamaları
 description: Ethereum topluluğu tarafından kullanılan bir ölçeklendirme çözümü olan sıfır-bilgi toplamaları'na giriş.
 lang: tr
 ---
@@ -12,7 +12,7 @@ Bu sayfayı anlamak için [Ethereum ölçeklendirme](/developers/docs/scaling/) 
 
 ## Sıfır-Bilgi Toplamaları nedir? {#what-are-zk-rollups}
 
-**Sıfır-bilgi toplamaları (SB-toplamaları)** zincir dışında gerçekleştirilen, bir grubun içine sarmalamanmış (veya 'toplanmış') işlemlerdir. Zincir dışı hesaplamalar, blokzincire gönderilmesi gereken veri miktarını azaltır. SB-toplamaları tüm işlemleri ayrı ayrı göndermek yerine bütün işlemleri temsil eden bir özet yığını gönderir. Ayrıca değişikliklerin gerçekliğini kanıtlayan [doğruluk kanıtları](/glossary/#validity-proof) da üretirler. Doğruluk kanıtı, Ethereum'un durumunda önerilen değişikliklerin tüm gruplanmış işlemlerin yürütülmesinin nihai sonucu olduğunu kriptografik kesinlikle gösterir.
+**Sıfır-bilgi toplamaları (SB-toplamaları)** zincir dışında gerçekleştirilen, bir grubun içine sarmalamanmış (veya 'toplanmış') işlemlerdir. Zincir dışı hesaplamalar, blokzincire gönderilmesi gereken veri miktarını azaltır. SB-toplamaları tüm işlemleri ayrı ayrı göndermek yerine bütün işlemleri temsil eden bir özet yığını gönderir. Ayrıca değişikliklerin gerçekliğini kanıtlayan [doğruluk kanıtları](/glossary/#validity-proof) da üretirler.
 
 ZK-toplamasının durumu, Ethereum ağına dağıtılmış bir akıllı sözleşme ile sürdürülür. Bu durumu güncellemek için ZK-toplama düğümleri doğrulama amaçlı bir doğruluk kanıtı sunmak zorundadır. Bahsedildiği üzere doğruluk kanıtı, toplama tarafından önerilen durum değişikliğinin gerçekten verilen toplu işlemin yürütülmesinin sonucu olduğuna dair kriptografik bir güvencedir. Bu, bütün işlem verilerini zincire ekleyen [iyimser toplamaların](/developers/docs/scaling/optimistic-rollups/) aksine, ZK-toplamalarında işlemlerin Ethereum üzerinde sonlandırılması için doğruluk kanıtlarının yeterli olduğu anlamına gelir.
 
@@ -117,7 +117,7 @@ Operatör, işlemleri kabul etmeden önce her zamanki kontrolleri gerçekleştir
 
 ZK-toplaması düğümü yeterli işleme sahip olduğunda, bunları bir grup haline getirir ve kanıtlama devresinin kısa ve öz bir ZK kanıtı oluşturması için girdileri derler. Bunlar dahildir:
 
-- Grup içindeki tüm işlemleri içeren bir Merkle ağacı.
+- Grup içindeki tüm işlemleri içeren bir Merkle ağacı kökü.
 - İşlemlerin grubun içinde bulunduğunu kanıtlamak için kullanılan Merkle kanıtları.
 - İşlemlerdeki her gönderici-alıcı çifti için bu hesapların toplamanın durum ağacının bir parçası olduğunu kanıtlayan Merkle kanıtları.
 - Her işlem için durum güncellemeleri uygulandıktan sonra durum kökünü güncelleyerek elde edilen ara durum köklerini kümesi (yani, gönderici hesapları azaltılırken alıcı hesapları artırılır).
@@ -180,9 +180,9 @@ Kullanıcıların ZK-toplamalarında işlemler için ödedikleri ücret, Ethereu
 
 1. **Durum yazma:** Ethereum'un durumuna yazmanın (örneğin, Ethereum blokzincirinde işlem göndermek) sabit bir maliyeti vardır. ZK-toplamaları, işlemleri gruplayarak ve sabit maliyetleri birden fazla kullanıcıya yayarak bu maliyeti azaltır.
 
-2. **Veri yayımı: **ZK-toplamaları, her işlem için durum verilerini Ethereum'a `calldata` olarak yayımlar. `calldata` maliyetleri şu anda [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) tarafından yönetilmektedir ve bu da 16 gaz maliyetini öngörmektedir. sırasıyla sıfır olmayan baytlar için ve 4 gaz için sıfır baytlar için `calldata`. Her işlemde ödenen maliyet, işlemi zincir üstünde yayımlamak için ne kadar `calldata` gerektiğine göre değişir.
+2. **Veri yayımı: **ZK-toplamaları, her işlem için durum verilerini Ethereum'a `calldata` olarak yayımlar. `calldata` maliyetleri şu anda [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) tarafından belirlenmektedir ve maliyet, sırasıyla sıfır olmayan baytlar için 16 gaz ve sıfır baytlar için 4 gaz `calldata` olarak belirlenmiştir. Her işlemde ödenen maliyet, işlemi zincir üstünde yayımlamak için ne kadar `calldata` gerektiğine göre değişir.
 
-3. **L2 operatör ücretleri**: Bu, Ethereum'daki madenci ücretleri gibi işlem gerçekleştirirken ortaya çıkan bilgi işlem maliyetleri karşılığında toplama operatörüne ödenen miktarı ifade eder.
+3. **L2 operatör ücretleri**: Bu, Ethereum Ana Ağındaki [işlem "öncelik ücretleri (bahşişler)"](/developers/docs/gas/#how-are-gas-fees-calculated) gibi işlem gerçekleştirirken ortaya çıkan hesaplama maliyetleri karşılığında toplama operatörüne ödenen miktarı ifade eder.
 
 4. **Kanıt üretimi ve doğrulaması:** ZK-toplama operatörleri, işlem grupları için doğruluk kanıtları üretmek zorundadır ve bu, yüksek kaynak gerektiren bir işlemdir. Ana Ağ'daki sıfır bilgili ispatları doğrulamanın da gaz maliyeti (~ 500.000 gaz) vardır.
 
@@ -222,25 +222,23 @@ Finematics'in ZK-toplaması hakkındaki açıklamasını izleyin:
 
 <YouTube id="7pWxCklcNsU" start="406" />
 
-### ZK toplamalarını kullanın {#use-zk-rollups}
-
-Merkeziyetsiz uygulamalarınıza entegre edebileceğiniz birden çok ZK toplamaları uygulaması mevcuttur:
-
-<RollupProductDevDoc rollupType="zk" />
-
 ## zkEVM üzerinde kimler çalışıyor? {#zkevm-projects}
 
 Şunlar zkEVM'ler üzerinde çalışan projeler arasındadır:
 
-- **[Uygulamalı ZKP](https://github.com/privacy-scaling-explorations/zkevm-specs)** - _Uygulamalı ZKP, EVM uyumlu bir ZK-toplaması ve Ethereum blokları için doğruluk kanıtları oluşturma mekanizması geliştirmek amacıyla Ethereum Foundation tarafından fonlanan bir projedir._
+- **[zkEVM](https://github.com/privacy-scaling-explorations/zkevm-specs)** - _zkEVM, EVM uyumlu bir ZK toplaması ve Ethereum blokları için doğruluk kanıtları oluşturma mekanizması geliştirmek amacıyla Ethereum Foundation tarafından fonlanan bir projedir._
 
 - **[Polygon zkEVM](https://polygon.technology/solutions/polygon-zkevm)** - _Ethereum ana ağında, sıfır bilgili ispat doğrulamaları içeren akıllış sözleşmeler dahil olmak üzere Ethereum işlemlerini şeffaf bir şekilde yürüten sıfır bilgili bir Ethereum Sanal Makinası (zkEVM) üzerinde çalışan, merkezi olmayan bir ZK Toplamasıdır._
 
 - **[Scroll](https://scroll.io/blog/zkEVM)** - _Scroll, Ethereum için yerel bir zkEVM Katman 2 Çözümü üretmek üzerine çalışan, teknoloji odaklı bir şirkettir._
 
-- **[Taiko](https://taiko.xyz)** - _Taiko; merkeziyetsiz, Ethereum eşdeğeri bir ZK-toplamasıdır (bir [Tip 1 ZK-EVM](https://vitalik.eth.limo/general/2022/08/04/zkevm.html))._
+- **[Taiko](https://taiko.xyz)** - _Taiko; merkeziyetsiz, Ethereum eşdeğeri bir ZK toplamasıdır (bir [Tip 1 ZK-EVM](https://vitalik.eth.limo/general/2022/08/04/zkevm.html))._
 
-- **[ZKsync](https://docs.zksync.io/)** - _ZKsync 2.0, Matter Labs tarafından geliştirilen ve kendi zkEVM'si desteklenen EVM uyumlu bir ZK Toplamasıdır._
+- **[ZKsync](https://docs.zksync.io/)** - _ZKsync Era, Matter Labs tarafından geliştirilen ve kendi zkEVM'si ile desteklenen EVM uyumlu bir ZK Toplamasıdır._
+
+- **[Starknet](https://starkware.co/starknet/)** _Starknet, StarkWare tarafından geliştirilen, EVM uyumlu bir katman 2 ölçeklendirme çözümüdür._
+
+- **[Morph](https://www.morphl2.io/)** - _Morph, sıfır bilgi kanıtlarından faydalanarak Katman 2 durum itirazı sorununu çözmeye yönelik bir hibrit toplama ölçeklendirme çözümüdür._
 
 ## ZK-toplamaları üzerine daha fazla kaynak {#further-reading-on-zk-rollups}
 
@@ -248,6 +246,7 @@ Merkeziyetsiz uygulamalarınıza entegre edebileceğiniz birden çok ZK toplamal
 - [Sıfır-Bilgi Toplamaları nedir?](https://alchemy.com/blog/zero-knowledge-rollups)
 - [STARK'lar ve SNARK'lar](https://consensys.net/blog/blockchain-explained/zero-knowledge-proofs-starks-vs-snarks/)
 - [zkEVM nedir?](https://www.alchemy.com/overviews/zkevm)
+- [ZK-EVM türleri: Ethereum eşdeğeri, EVM eşdeğeri, Tip 1, Tip 4 ve diğer şifreli sözcükler](https://taiko.mirror.xyz/j6KgY8zbGTlTnHRFGW6ZLVPuT0IV0_KmgowgStpA0K4)
 - [zkEVM'ye giriş](https://hackmd.io/@yezhang/S1_KMMbGt)
 - [Müthiş zkEVM kaynakları](https://github.com/LuozhuZhang/awesome-zkevm)
 - [Yakın planda ZK-SNARK'lar](https://vitalik.eth.limo/general/2017/02/01/zk_snarks.html)

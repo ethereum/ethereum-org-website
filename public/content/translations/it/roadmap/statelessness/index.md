@@ -14,9 +14,9 @@ Dischi rigidi più economici sono utilizzabili per memorizzare i dati più vecch
 
 ## Ridurre l'archiviazione per i nodi {#reducing-storage-for-nodes}
 
-Esistono vari metodi per ridurre la quantità di dati che ogni nodo deve memorizzare, ognuno richiedente l'aggiornamento del protocollo principale di Ethereum, in misure diverse:
+Esistono diversi modi per ridurre la quantità di dati che ciascun nodo deve archiviare, ciascuno dei quali richiede che il protocollo principale di Ethereum venga aggiornato in misura diversa:
 
-- **Scadenza dello storico**: consente ai nodi di scartare i dati di stato precedenti a X blocchi, senza modificare la gestione dei dati di stato del client di Ethereum
+- **Scadenza dello storico**: consente ai nodi di scartare i dati di stato più vecchi di X blocchi, senza tuttavia modificare la gestione dei dati di stato da parte del client di Ethereum.
 - **Scadenza di stato**: consente ai dati di staato non utilizzati di frequente di divenire inattivi. I dati inattivi sono ignorabili dai client, finché non sono "resuscitati".
 - **Assenza di stato debole**: solo i produttori di blocchi necessitano dell'accesso ai dati di stato completi, altri nodi possono verificare i blocchi senza un database di stato locale.
 - **Assenza di stato forte**: nessun nodo necessita dell'accesso ai dati di stato completi.

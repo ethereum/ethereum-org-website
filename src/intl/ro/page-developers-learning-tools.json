@@ -6,14 +6,10 @@
   "page-learning-tools-browse-docs": "Parcurgeți documentația",
   "page-learning-tools-capture-the-ether-description": "Prinde Ether-ul este un joc în care piratați contractele inteligente Ethereum pentru a învăța despre securitate.",
   "page-learning-tools-capture-the-ether-logo-alt": "Sigla pentru Prinde Ether-ul",
-  "page-learning-tools-chainshot-description": "Cursuri intensive la distanță pentru dezvoltători, susținute de instructori, și alte cursuri.",
-  "page-learning-tools-chainshot-logo-alt": "Sigla ChainShot",
   "page-learning-tools-coding": "Învațați scriind cod",
   "page-learning-tools-coding-subtitle": "Aceste instrumente vă vor ajuta să experimentați în Ethereum, dacă preferați o modalitate de învățare mai interactivă.",
   "page-learning-tools-consensys-academy-description": "Curs intensiv online pentru dezvoltatori în Ethereum.",
   "page-learning-tools-consensys-academy-logo-alt": "Sigla ConsenSys Academy",
-  "page-learning-tools-buildspace-description": "Învațați despre cripto construind proiecte interesante.",
-  "page-learning-tools-buildspace-logo-alt": "Sigla _buildspace",
   "page-learning-tools-cryptozombies-description": "Învățați Solidity construindu-vă propriul joc de zombie.",
   "page-learning-tools-cryptozombies-logo-alt": "Sigla CryptoZombies",
   "page-learning-tools-documentation": "Învățați cu documentația",
@@ -40,7 +36,5 @@
   "page-learning-tools-vyperfun-logo-alt": "Sigla Vyper.fun",
   "page-learning-tools-nftschool-description": "Aflați ce se întâmplă cu jetoanele nefungibile sau NFT-urile din perspectiva tehnică.",
   "page-learning-tools-nftschool-logo-alt": "Sigla NFT School",
-  "page-learning-tools-pointer-description": "Dobândiți abilități de dezvoltator web3 prin tutoriale distractive și interactive. Câștigați recompense cripto pe parcurs",
-  "page-learning-tools-pointer-logo-alt": "Sigla indicator",
   "alt-eth-blocks": "Ilustrația blocurilor formând simbolul ETH"
 }

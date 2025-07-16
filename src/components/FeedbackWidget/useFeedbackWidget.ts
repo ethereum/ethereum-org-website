@@ -1,13 +1,13 @@
 import { useEffect, useMemo, useRef, useState } from "react"
-import { useRouter } from "next/router"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
-import useDisclosure from "@/hooks/useDisclosure"
+import { useDisclosure } from "@/hooks/useDisclosure"
 import { useSurvey } from "@/hooks/useSurvey"
+import { usePathname } from "@/i18n/routing"
 
 export const useFeedbackWidget = () => {
-  const { asPath } = useRouter()
+  const pathname = usePathname()
 
   const [isExpanded, setIsExpanded] = useState(false)
   const [feedbackSubmitted, setFeedbackSubmitted] = useState(false)
@@ -25,7 +25,7 @@ export const useFeedbackWidget = () => {
     const expandTimeout = setTimeout(() => setIsExpanded(true), 30_000)
 
     return () => clearTimeout(expandTimeout)
-  }, [asPath, onClose])
+  }, [pathname, onClose])
 
   const surveyUrl = useSurvey(feedbackSubmitted)
 
@@ -33,12 +33,12 @@ export const useFeedbackWidget = () => {
     const pathsWithBottomNav = ["/staking", "/dao", "/defi", "/nft"]
     let shouldOffset = false
     pathsWithBottomNav.forEach((path) => {
-      if (asPath.includes(path)) {
+      if ((pathname || "").includes(path)) {
         shouldOffset = true
       }
     })
     return shouldOffset
-  }, [asPath])
+  }, [pathname])
 
   const handleClose = (): void => {
     onClose()

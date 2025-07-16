@@ -37,15 +37,8 @@ La plupart des IDE ont permis de construire des plugins pour améliorer l'expér
 **Visual Studio Code -** **_IDE professionnel multiplateforme avec le support officiel d'Ethereum._**
 
 - [Visual Studio Code](https://code.visualstudio.com/)
-- [Plan de travail blockchain Azure](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/microsoft-azure-blockchain.azure-blockchain-workbench?tab=Overview)
 - [Exemples de code](https://github.com/Azure-Samples/blockchain/blob/master/blockchain-workbench/application-and-smart-contract-samples/readme.md)
 - [GitHub](https://github.com/microsoft/vscode)
-
-**Atom -** **_Éditeur de texte hackable pour le XXIe siècle_**
-
-- [Atom](https://atom.io/)
-- [GitHub](https://github.com/atom)
-- [Packages Ethereum](https://atom.io/packages/search?utf8=%E2%9C%93&q=keyword%3Aethereum&commit=Search)
 
 **IDE JetBrains (IntelliJ IDEA, etc.) -** **_Outils essentiels pour les développeurs de logiciels et les équipes_**
 

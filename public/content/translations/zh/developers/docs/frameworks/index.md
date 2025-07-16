@@ -45,6 +45,12 @@ lang: zh
 - [相关文档](https://docs.web3j.io)
 - [GitHub](https://github.com/web3j/web3j)
 
+**Ethers-kt - ****_ 面向基于以太坊虚拟机区块链的高性能异步 Kotlin/Java/Android 库。_**
+
+- [GitHub](https://github.com/Kr1ptal/ethers-kt)
+- [示例](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
+- [Discord](https://discord.gg/rx35NzQGSb)
+
 **Create Eth App -** **_ 使用一个命令创建以太坊支持的应用程序。 提供众多 UI 框架和去中心化金融模板供选择。_**
 
 - [GitHub](https://github.com/paulrberg/create-eth-app)
@@ -68,7 +74,7 @@ lang: zh
 
 - [alchemy.com](https://www.alchemy.com/)
 - [GitHub](https://github.com/alchemyplatform)
-- [Discord](https://discord.com/invite/A39JVCM)
+- [Discord](https://discord.com/invite/alchemyplatform)
 
 **NodeReal -** **_以太坊开发平台。_**
 
@@ -87,17 +93,17 @@ lang: zh
 - [GitHub](https://github.com/chainstack)
 - [Discord](https://discord.gg/BSb5zfp9AT)
 
+**Crossmint -** **_企业级 Web3 开发平台，允许你在各大链以太坊虚拟机链（及其他链）上构建非同质化代币应用程序。_**
+
+- [网站](https://www.crossmint.com)
+- [相关文档](https://docs.crossmint.com)
+- [Discord](https://discord.com/invite/crossmint)
+
 **Brownie -** **_ 基于 Python 的开发环境和测试框架。_**
 
 - [相关文档](https://eth-brownie.readthedocs.io/en/latest/)
 - [GitHub](https://github.com/eth-brownie/brownie)
 - **Brownie 当前未维护**
-
-**Truffle -** **_开发环境、测试框架、构建管道及其他工具。_**
-
-- [trufflesuite.com](https://www.trufflesuite.com/)
-- [GitHub](https://github.com/trufflesuite/truffle)
-- **Truffle 开发已结束** - [了解更多](https://twitter.com/trufflesuite/status/1704946902393860589?t=NlIWeLTbBSAaJmS5uUAhSA&s=19)
 
 **OpenZeppelin SDK -** **_终极智能合约工具包：一套帮助你开发、编译、升级、部署智能合约并与之交互的工具。_**
 
@@ -105,6 +111,34 @@ lang: zh
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-sdk)
 - [社区论坛](https://forum.openzeppelin.com/c/support/17)
 - **OpenZeppelin SDK 开发已结束**
+
+**Catapulta -** **_多链智能合约部署工具，在区块浏览器中自动执行验证，追踪已部署的智能合约并分享部署报告，使 Foundry 和 Hardhat 项目即插即用。_**
+
+- [网站](https://catapulta.sh/)
+- [相关文档](https://catapulta.sh/docs)
+- [Github](https://github.com/catapulta-sh)
+
+**Covalent - ****_适用于 200 多条链的丰富区块链应用程序接口。_**
+
+- [covalenthq.com](https://www.covalenthq.com/)
+- [相关文档](https://www.covalenthq.com/docs/api/)
+- [GitHub](https://github.com/covalenthq)
+- [Discord](https://www.covalenthq.com/discord/)
+
+**Wake -** **_用于合约测试、模糊测试、部署、漏洞扫描和代码导航的一体化 Python 框架。_**
+
+- [主页](https://getwake.io/)
+- [相关文档](https://ackeeblockchain.com/wake/docs/latest/)
+- [GitHub](https://github.com/Ackee-Blockchain/wake)
+- [VS Code 扩展程序](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity)
+
+**Veramo -** **_开源、模块化且不受限的框架，使去中心化应用程序开发者能够轻松在其应用程序内构建去中心化身份和可验证凭证。_**
+
+- [主页](https://veramo.io/)
+- [相关文档](https://veramo.io/docs/basics/introduction)
+- [GitHub](https://github.com/uport-project/veramo)
+- [Discord](https://discord.com/invite/FRRBdjemHV)
+- [NPM 软件包](https://www.npmjs.com/package/@veramo/core)
 
 ## 延伸阅读 {#further-reading}
 

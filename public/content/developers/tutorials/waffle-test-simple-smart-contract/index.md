@@ -21,7 +21,7 @@ published: 2021-02-26
 - You have used some package managers like yarn or npm
 - You possess very basic knowledge of smart contracts and Solidity
 
-# Getting started {#getting-started}
+## Getting started {#getting-started}
 
 The tutorial demonstrates test setup and run using yarn, but there is no problem if you prefer npm - I will provide proper references to the official Waffle [documentation](https://ethereum-waffle.readthedocs.io/en/latest/index.html).
 
@@ -100,7 +100,7 @@ Testing with Waffle requires using Chai matchers and Mocha, so you need to [add]
 
 If you want to [execute](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#running-tests) your tests, just run `yarn test` .
 
-# Testing {#testing}
+## Testing {#testing}
 
 Now create the `test` directory and create the new file `test\EtherSplitter.test.ts`.
 Copy the snippet below and paste it to our test file.
@@ -194,7 +194,7 @@ it("Reverts when Vei amount uneven", async () => {
 
 The test, if passed, will assure us that the transaction was reverted indeed. However, there must be also an exact match between the messages that we passed in `require` statement and the message we expect in `revertedWith`. If we go back to the code of EtherSplitter contract, in the `require` statement for the wei amount, we provide the message: 'Uneven wei amount not allowed'. This matches the message we expect in our test. If they were not equal, the test would fail.
 
-# Congratulations! {#congratulations}
+## Congratulations! {#congratulations}
 
 You've made your first big step towards testing smart contracts with Waffle! You might be interested in other Waffle tutorials:
 

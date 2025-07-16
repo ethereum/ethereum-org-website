@@ -22,7 +22,6 @@ Aveţi nevoie de o scurtă introducere? Accesaţi [ethereum.org/learn](/learn/) 
 
 ## Articole pentru începători {#beginner-articles}
 
-- [Alegerea unui client Ethereum](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
 - [Clientul Rust Ethereum](https://openethereum.github.io/) \* **Țineţi cont că OpenEthereum [nu mai este întreținut](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd).** Folosiţi-l cu precauție și este de preferat să treceţi la implementarea unui alt client.
 - [Trimiterea tranzacțiilor în Ethereum cu clientul Rust](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/sending-ethereum-transactions-with-rust/)
 - [Introducere despre contractele inteligente cu clientul Parity pentru Ethereum](https://wiki.parity.io/Smart-Contracts)
@@ -47,8 +46,9 @@ Aveţi nevoie de o scurtă introducere? Accesaţi [ethereum.org/learn](/learn/) 
 - [Solaris](https://github.com/paritytech/sol-rs)
 - [SputnikVM](https://github.com/sorpaas/rust-evm) - _Implementare Rust a mașinii virtuale Ethereum_
 - [Wavelet](https://wavelet.perlin.net/docs/smart-contracts) - _Contract inteligent Wavelet în Rust_
-- [Foundry](https://github.com/gakonst/foundry)- _Toolkit for Ethereum application development_
-- [Ethers_rs](https://github.com/gakonst/ethers-rs)- _Ethereum library and wallet implementation_
+- [Foundry](https://github.com/foundry-rs/foundry) - _Set de instrumente pentru dezvoltarea aplicațiilor Ethereum_
+- [Alloy](https://alloy.rs) - _Biblioteci de înaltă performanță, bine testate și documentate pentru interacțiunea cu Ethereum și alte lanțuri bazate pe EVM._
+- [Ethers_rs](https://github.com/gakonst/ethers-rs) - _Biblioteca Ethereum și implementarea portofelului_
 - [evm_rs](https://github.com/rust-blockchain/evm)- _Ethereum virtual machine implementation in rust_
 - [SewUp](https://github.com/second-state/SewUp) - _A library to help you build your Ethereum webassembly contract with Rust and just like develop in a common backend_
 

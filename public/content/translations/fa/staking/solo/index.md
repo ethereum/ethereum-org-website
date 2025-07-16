@@ -195,8 +195,12 @@ Staking Launchpad یک برنامه منبع‌باز است که به شما ک
 
 ## بیشتر بخوانید {#further-reading}
 
-- [مشکل تنوع کلاینت اتریوم](https://hackernoon.com/ethereums-client-diversity-problem) - _@emmanuelawosika 2022_
+- [فهرست سهامگذاری اتریوم](https://www.staking.directory/) - _Eridian و Spacesider_
+- [مشکل تنوع کلاینت اتریوم](https://hackernoon.com/ethereums-client-diversity-problem)‏ - _@emmanuelawosika 2022_
 - [کمک به تنوع کلاینت‌ها](https://www.attestant.io/posts/helping-client-diversity/) - _جیم مک‌دونالد 2022_
-- [ تنوع کلاینت در لایه‌ی اجماع اتریوم](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA) - _jmcook.eth 2022_
-- [گام‌به‌گام: نحوه‌ی پیوستن به شبکه‌ی آزمایشی اتریوم 2.0](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) - _بوتا_
+- [ تنوع کلاینت در لایه‌ی اجماع اتریوم](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA) - _jmcook.eth‏ 2022_
+-  نحوه‌ی خرید سخت‌افزار اعتبارسنج اتریوم - _EthStaker‏ 2022_
+  - [گام‌به‌گام: نحوه‌ی پیوستن به شبکه‌ی آزمایشی اتریوم 2.0](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) - _بوتا_
 - [نکات پیشگیری از برخورد شدید Eth2](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) - _راول جردن 2020_
+
+<QuizWidget quizKey="staking-solo" />

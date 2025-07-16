@@ -23,7 +23,7 @@ Pour un nœud Ethereum, la multiaddr contient l'identifiant du nœud (un hachage
 
 ## Enode {#enode}
 
-Un enode est un moyen d'identifier un nœud Ethereum en utilisant un format d'adresse URL. L'identifiant hexadécimal de nœud est encodé dans la partie nom d'utilisateur de l'URL, séparée de l'hôte à l'ide du signe @. Le nom d'hôte ne peut être donné qu'en tant qu'adresse IP, les noms DNS ne sont pas autorisés. Le port dans la section nom d'hôte est le port d'écoute TCP. Si les ports TCP et UDP (découverte) diffèrent, le port UDP est spécifié comme paramètre de requête "discport"
+Un enode est un moyen d'identifier un nœud Ethereum en utilisant un format d'adresse URL. L'identifiant hexadécimal de nœud est encodé dans la partie nom d'utilisateur de l'URL, séparée de l'hôte à l'ide du signe @. Le nom d'hôte ne peut être donné qu'en tant qu'adresse IP, les noms DNS ne sont pas autorisés. Le port dans la section nom d'hôte est le port d'écoute TCP. Si les ports TCP et UDP (découverte) diffèrent, le port UDP est spécifié comme paramètre de requête "discport".
 
 Dans l'exemple suivant, l'URL du nœud décrit un nœud avec une adresse IP `10.3.58.`, port TCP `30303` et port de découverte UDP `30301`.
 
@@ -35,4 +35,6 @@ Les registres de Nœuds Ethereum (ENRs en anglais) sont un format standardisé p
 
 ## Complément d'information {#further-reading}
 
-[EIP-778 : Registres de Nœuds Ethereum (ENR)](https://eips.ethereum.org/EIPS/eip-778) [Adresses réseau sur Ethereum](https://dean.eigenmann.me/blog/2020/01/21/network-addresses-in-ethereum/) [LibP2P : Multiaddr-Enode-ENR ?!](https://consensys.net/diligence/blog/2020/09/libp2p-multiaddr-enode-enr/)
+- [EIP-778 : enregistrements de nœuds Ethereum (ENR)](https://eips.ethereum.org/EIPS/eip-778)
+- [Adresses réseau dans Ethereum](https://dean.eigenmann.me/blog/2020/01/21/network-addresses-in-ethereum/)
+- [LibP2P : Multiaddr-Enode-ENE ?!](https://consensys.net/diligence/blog/2020/09/libp2p-multiaddr-enode-enr/)

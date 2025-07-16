@@ -1,5 +1,6 @@
 ---
-title: Decentralized autonomous organizations (DAOs)
+title: What is a DAO?
+metaTitle: What is a DAO? | Decentralized Autonomous Organization
 description: An overview of DAOs on Ethereum
 lang: en
 template: use-cases
@@ -18,7 +19,7 @@ A DAO is a collectively-owned organization working towards a shared mission.
 
 DAOs allow us to work with like-minded folks around the globe without trusting a benevolent leader to manage the funds or operations. There is no CEO who can spend funds on a whim or CFO who can manipulate the books. Instead, blockchain-based rules baked into the code define how the organization works and how funds are spent.
 
-They have built-in treasuries that no one has the authority to access without the approval of the group. Decisions are governed by proposals and voting to ensure everyone in the organization has a voice, and everything happens transparently [on-chain](/glossary/#on-chain).
+They have built-in treasuries that no one has the authority to access without the approval of the group. Decisions are governed by proposals and voting to ensure everyone in the organization has a voice, and everything happens transparently [onchain](/glossary/#onchain).
 
 ## Why do we need DAOs? {#why-dao}
 
@@ -91,7 +92,7 @@ In 1977, Wyoming invented the LLC, which protects entrepreneurs and limits their
 
 ### A famous example {#law-example}
 
-[CityDAO](https://citydao.io) – CityDAO used Wyoming's DAO law to buy 40 acres of land near Yellowstone National Park.
+[CityDAO](https://citizen.citydao.io/) – CityDAO used Wyoming's DAO law to buy 40 acres of land near Yellowstone National Park.
 
 ## DAO membership {#dao-membership}
 
@@ -119,13 +120,13 @@ _Typically used for more closer-knit, human-centric organizations like charities
 
 ### Reputation-based membership {#reputation-based-membership}
 
-Reputation represents proof of participation and grants voting power in the DAO. Unlike token or share-based membership, reputation-based DAOs don't transfer ownership to contributors. Reputation cannot be bought, transferred or delegated; DAO members must earn reputation through participation. On-chain voting is permissionless and prospective members can freely submit proposals to join the DAO and request to receive reputation and tokens as a reward in exchange for their contributions.
+Reputation represents proof of participation and grants voting power in the DAO. Unlike token or share-based membership, reputation-based DAOs don't transfer ownership to contributors. Reputation cannot be bought, transferred or delegated; DAO members must earn reputation through participation. Onchain voting is permissionless and prospective members can freely submit proposals to join the DAO and request to receive reputation and tokens as a reward in exchange for their contributions.
 
 _Typically used for decentralized development and governance of protocols and [dapps](/glossary/#dapp), but also well suited to a diverse set of organizations like charities, worker collectives, investment clubs, etc._
 
 #### A famous example {#reputation-example}
 
-[DXdao](https://DXdao.eth.limo) – DXdao was a global sovereign collective building and governing decentralized protocols and applications since 2019. It leveraged reputation-based governance and [holographic consensus](/glossary/#holographic-consensus) to coordinate and manage funds, meaning no one could buy their way into influencing its future or governance. 
+[DXdao](https://DXdao.eth.limo) – DXdao was a global sovereign collective building and governing decentralized protocols and applications since 2019. It leveraged reputation-based governance and [holographic consensus](/glossary/#holographic-consensus) to coordinate and manage funds, meaning no one could buy their way into influencing its future or governance.
 
 ## Join / start a DAO {#join-start-a-dao}
 
