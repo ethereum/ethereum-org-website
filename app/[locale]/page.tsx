@@ -814,7 +814,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           id="10-year-anniversary"
           className={cn(locale !== "en" && "hidden")} // TODO: Show again when translations ready
         >
-          <TenYearHomeBanner locale={locale} />
+          <TenYearHomeBanner />
         </Section>
 
         {/* Recent posts */}
