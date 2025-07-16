@@ -12856,6 +12856,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "Tri-stone",
+      "name": "Tri-stone",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17921243?v=4",
+      "profile": "https://github.com/Tri-stone",
+      "contributions": [
+        "maintenance"
+      ]
     }
   ],
   "contributorsPerLine": 7,
