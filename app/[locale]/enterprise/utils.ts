@@ -77,7 +77,7 @@ export const parseActivity = async ({
     {
       label: t("page-enterprise-activity-tx-count"),
       apiProvider: "growthepie",
-      apiUrl: "https://www.growthepie.xyz/fundamentals/transaction-count",
+      apiUrl: "https://www.growthepie.com/fundamentals/transaction-count",
       state: txCountFormatted,
     },
     {
@@ -96,7 +96,7 @@ export const parseActivity = async ({
     {
       label: t("page-enterprise-activity-media-tx-cost"),
       apiProvider: "growthepie",
-      apiUrl: "https://www.growthepie.xyz/fundamentals/transaction-costs",
+      apiUrl: "https://www.growthepie.com/fundamentals/transaction-costs",
       state: medianTxCost,
     },
   ]

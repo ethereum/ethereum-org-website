@@ -237,6 +237,7 @@ const config = {
         "card-gradient-secondary": "var(--card-gradient-secondary)",
         "card-gradient-secondary-hover": "var(--card-gradient-secondary-hover)",
         "ten-year-gradient": "var(--ten-year-gradient)",
+        "rainbow-gradient": "var(--rainbow-gradient)",
       },
       boxShadow: {
         "table-box": "var(--table-box-shadow)",
@@ -299,6 +300,19 @@ const config = {
           from: { transform: "rotate(0deg)" },
           to: { transform: "rotate(360deg)" },
         },
+        "pulse-light": {
+          "50%": { opacity: "0.2" },
+        },
+        "fade-in": {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
+        "rotate-back-and-forth": {
+          "0%": { transform: "rotate(0deg)" },
+          "25%": { transform: "rotate(5deg)" },
+          "75%": { transform: "rotate(-5deg)" },
+          "100%": { transform: "rotate(0deg)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -313,7 +327,11 @@ const config = {
         "spin-18": "spin 36s linear infinite",
         "counter-spin-18": "spin 36s linear infinite reverse",
         "spin-9": "spin 18s linear infinite",
+        "spin-4": "spin 4s linear infinite",
         "counter-spin-9": "spin 18s linear infinite reverse",
+        "pulse-light": "pulse-light 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+        "fade-in": "fade-in 150ms ease-in-out",
+        wave: "rotate-back-and-forth 1s linear infinite",
       },
       // Add custom border-radius tailwinds extension for "4xl" as "2rem"
       borderRadius: {

@@ -59,13 +59,13 @@ Mentre [Web3](https://docs.web3js.org/) è ancora molto usato, nell'ultimo anno 
 
 Solitamente recupereresti i dati direttamente dal tuo smart contract. Vuoi leggere l'ora dell'ultima operazione? Basta chiamare `MyContract.methods.latestTradeTime().call()`, che recupera i dati da un nodo di Ethereum nella tua dapp. E se ci fossero centinaia di punti di dati diversi? Ciò risulterebbe in centinaia di recuperi di dati al nodo, richiedendo ogni volta un [RTT](https://wikipedia.org/wiki/Round-trip_delay_time) e rendendo la tua dapp lenta e inefficace. Una scappatoia potrebbe essere una funzione di chiamata del recuperatore nel tuo contratto, in modo da restituire più dati in una volta. Questa soluzione però non è sempre ideale.
 
-E poi potresti essere interessato anche ai dati storici. Vuoi sapere non solo l'orario dell'ultima operazione, ma gli orari per tutte le operazioni che tu stesso hai mai eseguito? Usa il pacchetto subgraph _create-eth-app_, leggi la [documentazione](https://thegraph.com/docs/define-a-subgraph) e adattalo ai tuoi contratti. Se stai cercando degli smart contract popolari, potrebbe anche esistere già un subgraph. Dai un'occhiata al [subgraph explorer](https://thegraph.com/explorer/).
+E poi potresti essere interessato anche ai dati storici. Vuoi sapere non solo l'orario dell'ultima operazione, ma gli orari per tutte le operazioni che tu stesso hai mai eseguito? Usa il pacchetto subgraph _create-eth-app_, leggi la [documentazione](https://thegraph.com/docs/en/subgraphs/developing/creating/starting-your-subgraph) e adattalo ai tuoi contratti. Se stai cercando degli smart contract popolari, potrebbe anche esistere già un subgraph. Dai un'occhiata al [subgraph explorer](https://thegraph.com/explorer/).
 
 Una volta che hai un grafico secondario, ti consente di scrivere una semplice richiesta nella tua dapp che recuperi tutti i dati importanti della blockchain, inclusi quelli storici che necessiti, tramite un solo recupero necessario.
 
 ### Apollo {#apollo}
 
-Grazie all'integrazione di [Apollo Boost](https://www.apollographql.com/docs/react/get-started/), puoi integrare facilmente il grafico nella tua dapp di React. Specialmente quando si utilizzano gli [hook di React e Apollo](https://www.apollographql.com/blog/apollo-client-now-with-react-hooks-676d116eeae2), recuperare i dati è tanto facile quanto scrivere una singola query di GraphQL nel tuo componente:
+Grazie all'integrazione di [Apollo Boost](https://www.apollographql.com/docs/react/get-started/), puoi integrare facilmente il grafico nella tua dapp di React. Specialmente quando si utilizzano gli [hook di React e Apollo](https://www.apollographql.com/blog/apollo-client-now-with-react-hooks), recuperare i dati è tanto facile quanto scrivere una singola query di GraphQL nel tuo componente:
 
 ```js
 const { loading, error, data } = useQuery(myGraphQlQuery)

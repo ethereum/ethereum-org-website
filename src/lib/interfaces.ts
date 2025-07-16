@@ -174,6 +174,6 @@ export interface CodeExample {
   alt?: string
   id?: number
   codeLanguage: string
-  code: string
+  codeUrl: string
   eventName: string
 }

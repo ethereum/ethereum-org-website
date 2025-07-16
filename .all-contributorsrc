@@ -10181,7 +10181,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/84749041?v=4",
       "profile": "http://uniyj.eth",
       "contributions": [
-        "content"
+        "content",
+        "maintenance"
       ]
     },
     {
@@ -12660,7 +12661,7 @@
       "login": "mseidlx",
       "name": "Matthias Seidl",
       "avatar_url": "https://avatars.githubusercontent.com/u/32496674?v=4",
-      "profile": "https://growthepie.xyz",
+      "profile": "https://growthepie.com",
       "contributions": [
         "code"
       ]
@@ -12784,19 +12785,74 @@
       ]
     },
     {
-      "login": "kichong",
-      "name": "kichong",
-      "avatar_url": "https://avatars.githubusercontent.com/u/38249409?v=4",
-      "profile": "https://github.com/kichong",
+      "login": "brossetti1",
+      "name": "Brian Rossetti",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5998100?v=4",
+      "profile": "https://github.com/brossetti1",
       "contributions": [
-        "content"
+        "maintenance",
+        "code"
       ]
     },
     {
-      "login": "zeevick10",
-      "name": "FT",
-      "avatar_url": "https://avatars.githubusercontent.com/u/140458077?v=4",
-      "profile": "https://github.com/zeevick10",
+      "login": "Antoine-Sparenberg",
+      "name": "Antoine-Sparenberg",
+      "avatar_url": "https://avatars.githubusercontent.com/u/128523213?v=4",
+      "profile": "https://github.com/Antoine-Sparenberg",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "kks-code",
+      "name": "Kendra Karol Sevilla",
+      "avatar_url": "https://avatars.githubusercontent.com/u/214244795?v=4",
+      "profile": "https://github.com/kks-code",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "otc-png",
+      "name": "otc group",
+      "avatar_url": "https://avatars.githubusercontent.com/u/214395681?v=4",
+      "profile": "https://github.com/otc-png",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "Savio-Sou",
+      "name": "Savio",
+      "avatar_url": "https://avatars.githubusercontent.com/u/72797635?v=4",
+      "profile": "https://github.com/Savio-Sou",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "vtjl10",
+      "name": "fuder.eth",
+      "avatar_url": "https://avatars.githubusercontent.com/u/139509124?v=4",
+      "profile": "https://github.com/vtjl10",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "CXYZTW",
+      "name": "@karelxfi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/54091831?v=4",
+      "profile": "https://github.com/CXYZTW",
+      "contributions": [
+        "tool"
+      ]
+    },
+    {
+      "login": "gorbatiukcom",
+      "name": "Oleg Gorbatiuk",
+      "avatar_url": "https://avatars.githubusercontent.com/u/35546483?v=4",
+      "profile": "https://www.linkedin.com/in/gorbatiuk/",
       "contributions": [
         "content"
       ]
