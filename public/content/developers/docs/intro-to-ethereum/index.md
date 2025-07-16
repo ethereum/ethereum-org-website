@@ -108,9 +108,14 @@ A reusable snippet of code (a program) which a developer publishes into EVM stat
 
 - [Ethereum Whitepaper](/whitepaper/)
 - [How does Ethereum work, anyway?](https://medium.com/@preethikasireddy/how-does-ethereum-work-anyway-22d1df506369) - _Preethi Kasireddy_ (**NB** this resource is still valuable but be aware that it predates [The Merge](/roadmap/merge) and therefore still refers to Ethereum's proof-of-work mechanism - Ethereum is actually now secured using [proof-of-stake](/developers/docs/consensus-mechanisms/pos))
-- [Ethereum Basics](https://youtube.com/playlist?list=PLqgutSGloqiJyyoL0zvLVFPS-GMD2wKa5&si=kZTf5I7PKGTXDsOZ) - If you are a visual learner, this video series offers a thorough exploration of foundational topics:
+
+### More of a visual learner? {#visual-learner}
+
+This video series offers a thorough exploration of foundational topics:
 
 <YouTube id="j78ZcIIpi0Q"/>
+
+[Ethereum Basics Playlist](https://youtube.com/playlist?list=PLqgutSGloqiJyyoL0zvLVFPS-GMD2wKa5&si=kZTf5I7PKGTXDsOZ)
 
 _Know of a community resource that helped you? Edit this page and add it!_
 

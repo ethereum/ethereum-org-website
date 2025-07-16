@@ -691,6 +691,9 @@ export default async function Page({ params }: { params: Promise<Params> }) {
                     </InlineLink>{" "}
                     <i>{t("bankless-description")}</i>
                   </ListItem>
+                </UnorderedList>
+                <H3>{t("about-ethereum-video-series")}</H3>
+                <UnorderedList>
                   <ListItem>
                     <InlineLink href="https://www.youtube.com/playlist?list=PLqgutSGloqiJyyoL0zvLVFPS-GMD2wKa5">
                       {t("ethereum-basics-title")}
