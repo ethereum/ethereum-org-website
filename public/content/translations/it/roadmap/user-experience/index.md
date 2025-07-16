@@ -15,7 +15,7 @@ I conti di Ethereum sono protetti da una coppia di chiavi, utilizzate per identi
 
 La soluzione è utilizzare portafogli di [contratti intelligenti](/glossary/#smart-contract) per interagire con Ethereum. I portafogli di contratti intelligenti creano modi per proteggere i conti se le chiavi sono perdute o rubate, opportunità per un migliore rilevamento e difesa dalle truffe e consentono ai portafogli di ottenere nuove funzionalità. Sebbene i portafogli di contratti intelligenti esistano oggi, sono imbarazzanti da creare perché il protocollo di Ethereum necessita di supportarli meglio. Questo supporto aggiuntivo è noto come astrazione del conto.
 
-<ButtonLink variant="outline-color" to="/roadmap/account-abstraction/">Di più sull'astrazione del conto</ButtonLink>
+<ButtonLink variant="outline-color" href="/roadmap/account-abstraction/">Di più sull'astrazione del conto</ButtonLink>
 
 ## Nodi per tutti
 
@@ -23,7 +23,7 @@ Gli utenti che eseguono [nodi](/glossary/#node) non devono fidarsi di terze part
 
 Esistono diversi aggiornamenti che semplificheranno l'esecuzione dei nodi, riducendo di molto il consumo di risorse. Il metodo di archiviazione dei dati sarà modificato per utilizzare una struttura molto più efficiente a livello di spazio, nota come **Albero di Verkle**. Inoltre, con l'[assenza di stato](/roadmap/statelessness) o la [scadenza dei dati](/roadmap/statelessness/#data-expiry), i nodi di Ethereum non dovranno memorizzare una copia degli interi dati di stato di Ethereum, riducendo drasticamente i requisiti di spazio su disco. I [nodi leggeri](/developers/docs/nodes-and-clients/light-clients/) offriranno molti benefici dell'operare un nodo completo, ma potranno facilmente operare su smartphone o in semplici app per browser.
 
-<ButtonLink variant="outline-color" to="/roadmap/verkle-trees/">Leggi di più sugli alberi di Verkle</ButtonLink>
+<ButtonLink variant="outline-color" href="/roadmap/verkle-trees/">Leggi di più sugli alberi di Verkle</ButtonLink>
 
 Con questi aggiornamenti, le barriere all'esecuzione di un nodo sono ridotte effettivamente a zero. Gli utenti beneficeranno di un accesso sicuro e privo di permessi a Ethereum, senza dover sacrificare notevole spazio su disco o CPU sul proprio computer o il proprio dispositivo mobile e non dovranno affidarsi a terze parti per l'accesso a dati o alla rete, utilizzando le app.
 

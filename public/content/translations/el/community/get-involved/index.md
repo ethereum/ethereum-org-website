@@ -15,15 +15,17 @@ lang: el
 - Μάθετε σχετικά και δοκιμάστε το Ethereum στο [ethereum.org/developers/](/developers/).
 - Παρακολουθήστε ένα [ETHGlobal](http://ethglobal.co/) hackathon κοντά σας!
 - Δείτε τα [έργα που σχετίζονται με τον τομέα που γνωρίζετε καλύτερα ή τη γλώσσα προγραμματισμού της επιλογής σας](/developers/docs/programming-languages/).
-- Παρακολουθήστε ή συμμετάσχετε σε μια συνάντηση [Core Dev](https://www.youtube.com/@EthereumProtocol).
+- Παρακολουθήστε ή συμμετάσχετε σε μια συνάντηση με θέμα [Επίπεδο Συναίνεσης και Εκτέλεσης](https://www.youtube.com/@EthereumProtocol/streams)
 - [Λίστα επιθυμιών του Προγράμματος Υποστήριξης Οικοσυστήματος](https://esp.ethereum.foundation/wishlist/) - περιοχές εργαλείων, τεκμηρίωσης και υποδομής όπου το Πρόγραμμα Υποστήριξης Οικοσυστημάτων Ethereum αναζητά ενεργά αιτήσεις χορήγησης.
 - [Web3Bridge](https://www.web3bridge.com/) - ένταξη στη φιλοδοξία της κοινότητας web3 και την πρωτοβουλία τους να εντοπίσουν, να εκπαιδεύσουν και να υποστηρίξουν εκατοντάδες προγραμματιστές και μέλη της κοινότητας σε όλη την Αφρική.
+- Εγγραφείτε στο [Eth R&D Discord](https://discord.com/invite/VmG7Uxc)
 - Εγγραφείτε στο [Ethereum Cat Herders Discord](https://discord.com/invite/Nz6rtfJ8Cu)
 
 ## Ερευνητές & Ακαδημαϊκοί <Emoji text=":mag:" size={1} /> {#researchers-and-academics}
 
 Έχετε εμπειρία στα μαθηματικά, την κρυπτογραφία ή τα οικονομικά; Ίσως, ενδιαφέρεστε για κάποιες από τις εργασίες αιχμής που γίνονται στο οικοσύστημα του Ethereum:
 
+- Εγγραφείτε στο [Eth R&D Discord](https://discord.com/invite/VmG7Uxc)
 - Συντάξτε ή ελέγξτε μια πρόταση βελτίωσης του Ethereum
   - Συντάξτε μία EIP
     1. Υποβάλλετε την ιδέα σας στο [Ethereum Magicians](https://ethereum-magicians.org)
@@ -38,6 +40,7 @@ lang: el
 - [Ethresear.ch](https://ethresear.ch) - Το κύριο φόρουμ έρευνας του Ethereum και το πιο σημαντικό φόρουμ των κρυπτοοικονομικών στον κόσμο
 - [EF Research AMA](https://old.reddit.com/r/ethereum/comments/vrx9xe/ama_we_are_ef_research_pt_8_07_july_2022) - Ένας συνεχείς κατάλογος Q&A με ερευνητές. Με την έναρξη κάθε επόμενου κύκλου, ο καθένας μπορεί να δημοσιεύσει ερωτήσεις.
 - [Λίστα επιθυμιών του Προγράμματος Υποστήριξης Οικοσυστήματος](https://esp.ethereum.foundation/wishlist/) - τομείς έρευνας όπου το Πρόγραμμα Υποστήριξης Οικοσυστημάτων Ethereum αναζητά ενεργά αιτήσεις χορήγησης
+- [AllWalletDevs](https://allwallet.dev) - ένα φόρουμ για προγραμματιστές, σχεδιαστές και ενδιαφερόμενους χρήστες του Ethereum όπου συναντώνται τακτικά και συζητούν για πορτοφόλια
 
 [Εξερευνήστε πιο ενεργούς τομείς έρευνας](/community/research/).
 

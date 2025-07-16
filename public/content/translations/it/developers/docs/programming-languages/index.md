@@ -15,6 +15,7 @@ Seleziona il linguaggio di programmazione che preferisci per trovare progetti, r
 - [Ethereum per sviluppatori Dart](/developers/docs/programming-languages/dart/)
 - [Ethereum per sviluppatori Delphi](/developers/docs/programming-languages/delphi/)
 - [Ethereum per sviluppatori .NET](/developers/docs/programming-languages/dot-net/)
+- [Ethereum per gli sviluppatori Elixir](/developers/docs/programming-languages/elixir/)
 - [Ethereum per sviluppatori Go](/developers/docs/programming-languages/golang/)
 - [Ethereum per sviluppatori Java](/developers/docs/programming-languages/java/)
 - [Ethereum per sviluppatori JavaScript](/developers/docs/programming-languages/javascript/)

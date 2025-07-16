@@ -20,7 +20,6 @@ May ilang website na pinapayagan kang tingnan at bawiin ang mga smart contract n
 
 - [Ethallowance](https://ethallowance.com/) (Ethereum)
 - [Etherscan](https://etherscan.io/tokenapprovalchecker) (Ethereum)
-- [Cointool](https://cointool.app/approve/eth) (maraming network)
 - [Revoke](https://revoke.cash/) (maraming network)
 - [Unrekt](https://app.unrekt.net/) (maraming network)
 - [EverRevoke](https://everrise.com/everrevoke/) (maraming network)
@@ -49,7 +48,7 @@ Ipinapayo naming i-refresh mo ang tool para sa pagbawi pagkalipas ng ilang minut
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Gusto mong magbasa pa?</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     Tingnan ang iba pa naming gabay
   </ButtonLink>
 </InfoBanner>

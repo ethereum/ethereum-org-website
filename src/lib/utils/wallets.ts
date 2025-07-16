@@ -3,6 +3,7 @@ import { shuffle, union } from "lodash"
 import { getLanguageCodeName } from "@/lib/utils/intl"
 import { capitalize } from "@/lib/utils/string"
 
+import { newToCrypto } from "@/data/wallets/new-to-crypto"
 import walletsData from "@/data/wallets/wallet-data"
 
 import {
@@ -12,17 +13,25 @@ import {
   NEW_TO_CRYPTO_FEATURES,
   NFTS_FEATURES,
 } from "../constants"
-import type { WalletData, WalletFilter } from "../types"
+import type { Lang, WalletData, WalletFilter } from "../types"
 
 export const getSupportedLocaleWallets = (locale: string) =>
   shuffle(
-    walletsData.filter((wallet) => wallet.languages_supported.includes(locale))
+    walletsData.filter((wallet) =>
+      wallet.languages_supported.includes(locale as Lang)
+    )
   )
 
 export const getNonSupportedLocaleWallets = (locale: string) =>
   shuffle(
-    walletsData.filter((wallet) => !wallet.languages_supported.includes(locale))
+    walletsData.filter(
+      (wallet) => !wallet.languages_supported.includes(locale as Lang)
+    )
   )
+
+export const getNewToCryptoWallets = () => {
+  return walletsData.filter((wallet) => newToCrypto.includes(wallet.name))
+}
 
 // Get a list of a wallet supported Personas (new to crypto, nfts, long term, finance, developer)
 export const getWalletPersonas = (wallet: WalletData) => {
@@ -94,16 +103,11 @@ export const formatStringList = (strings: string[], sliceSize?: number) => {
   return sliceSize ? strings.slice(0, sliceSize).join(", ") : strings.join(", ")
 }
 
-// Get border custom color for Persona filter
-export const getPersonaBorderColor = (selectedPersona: number, idx: number) => {
-  return selectedPersona === idx ? "primary.base" : "transparent"
-}
-
 // Get total count of wallets that support a language
 const getLanguageTotalCount = (languageCode: string) => {
   return walletsData.reduce(
     (total, currentWallet) =>
-      currentWallet.languages_supported.includes(languageCode)
+      currentWallet.languages_supported.includes(languageCode as Lang)
         ? (total = total + 1)
         : total,
     0
@@ -183,4 +187,29 @@ export const walletsListingCount = (filters: WalletFilter) => {
     (acc, filter) => (filter ? acc + 1 : acc),
     0
   )
+}
+
+export const getLanguageCountWalletsData = (locale: string) => {
+  const languageCountWalletsData = getAllWalletsLanguages(locale).map(
+    (language) => ({
+      langCode: language.langCode,
+      count: getLanguageTotalCount(language.langCode),
+      name: getLanguageCodeName(language.langCode, locale),
+    })
+  )
+  languageCountWalletsData.sort((a, b) => a.name.localeCompare(b.name))
+  return languageCountWalletsData
+}
+
+export const getFilteredWalletsCount = (
+  wallets: WalletData[],
+  filters: WalletFilter
+) => {
+  return wallets.filter((wallet) => {
+    const activeFilters = Object.entries(filters).filter(
+      ([, value]) => value === true
+    )
+
+    return activeFilters.every(([feature]) => wallet[feature] === true)
+  }).length
 }

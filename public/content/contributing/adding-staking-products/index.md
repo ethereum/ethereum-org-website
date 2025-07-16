@@ -87,7 +87,7 @@ For any custom software or smart contracts involved:
 
 For software products related to node or client setup, management or migration:
 
-**Which consensus layer clients (i.e. Lighthouse, Teku, Nimbus, Prysm) are supported?**
+**Which consensus layer clients (i.e. Lighthouse, Teku, Nimbus, Prysm, Grandine) are supported?**
 
 - Which clients are supported? Can the user choose?
 - This is used to determine the products "multi-client" score.
@@ -171,6 +171,6 @@ The code logic and weights for these criteria are currently contained in [this J
 
 If you want to add a staking product or service to ethereum.org, create an issue on GitHub.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_staking_product.yaml">
+<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_staking_product.yaml">
   Create an issue
 </ButtonLink>

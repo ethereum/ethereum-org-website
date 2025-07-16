@@ -1,32 +1,55 @@
-import { useMemo } from "react"
-import { FaTwitter } from "react-icons/fa"
-import { Center, Icon } from "@chakra-ui/react"
+import { type Dispatch, type SetStateAction, useMemo } from "react"
 
-import { Button } from "@/components/Buttons"
+import type { AnswerChoice, Question, QuizKey, QuizStatus } from "@/lib/types"
+
+import Twitter from "@/components/icons/twitter.svg"
 import Translation from "@/components/Translation"
+import { Button } from "@/components/ui/buttons/Button"
+import { Center } from "@/components/ui/flex"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
-import { useQuizWidgetContext } from "./context"
+import type { AnswerStatus } from "./useQuizWidget"
 
-export const QuizButtonGroup = () => {
-  const {
-    showResults,
-    initialize: handleReset,
-    currentQuestionAnswerChoice,
-    title,
-    questions,
-    currentQuestionIndex,
-    quizPageProps,
-    answerStatus,
-    numberOfCorrectAnswers,
-    userQuizProgress,
-    quizScore,
-    setCurrentQuestionAnswerChoice,
-    setUserQuizProgress,
-    setShowAnswer,
-  } = useQuizWidgetContext()
+type QuizButtonGroupProps = {
+  showResults: boolean
+  handleReset: () => void
+  currentQuestionAnswerChoice: AnswerChoice | null
+  title: string
+  questions: Question[]
+  currentQuestionIndex: number
+  quizPageProps:
+    | {
+        currentHandler: (nextKey: QuizKey) => void
+        statusHandler: (status: QuizStatus) => void
+        nextQuiz: QuizKey | undefined
+      }
+    | false
+  answerStatus: AnswerStatus
+  numberOfCorrectAnswers: number
+  userQuizProgress: AnswerChoice[]
+  quizScore: number
+  setCurrentQuestionAnswerChoice: (answer: AnswerChoice | null) => void
+  setUserQuizProgress: Dispatch<SetStateAction<AnswerChoice[]>>
+  setShowAnswer: (prev: boolean) => void
+}
 
+export const QuizButtonGroup = ({
+  showResults,
+  handleReset,
+  currentQuestionAnswerChoice,
+  title,
+  questions,
+  currentQuestionIndex,
+  quizPageProps,
+  answerStatus,
+  numberOfCorrectAnswers,
+  userQuizProgress,
+  quizScore,
+  setCurrentQuestionAnswerChoice,
+  setUserQuizProgress,
+  setShowAnswer,
+}: QuizButtonGroupProps) => {
   const finishedQuiz = useMemo(
     () => userQuizProgress.length === questions.length! - 1,
     [questions.length, userQuizProgress.length]
@@ -118,17 +141,12 @@ export const QuizButtonGroup = () => {
 
       return (
         <>
-          <Center
-            flexDirection={{ base: "column", sm: "row" }}
-            gap={{ base: 4, md: 2 }}
-            w="100%"
-          >
-            <Button
-              variant="outline-color"
-              leftIcon={<Icon as={FaTwitter} />}
-              onClick={handleShare}
-            >
-              <Translation id="learn-quizzes:share-results" />
+          <Center className="w-full gap-4 max-md:flex-col md:gap-2">
+            <Button variant="outline" onClick={handleShare}>
+              <>
+                <Twitter />
+                <Translation id="learn-quizzes:share-results" />
+              </>
             </Button>
 
             {/* Show `Next Quiz` button if quiz is opened from hub page */}
@@ -147,8 +165,7 @@ export const QuizButtonGroup = () => {
             <Button
               onClick={handleReset}
               variant="ghost"
-              fontWeight="bold"
-              textDecoration="underline"
+              className="font-bold underline"
             >
               <Translation id="learn-quizzes:try-again" />
             </Button>
@@ -186,7 +203,7 @@ export const QuizButtonGroup = () => {
     return (
       <Button
         onClick={handleSubmitAnswer}
-        isDisabled={!currentQuestionAnswerChoice}
+        disabled={!currentQuestionAnswerChoice}
         data-testid="check-answer-button"
       >
         <Translation id="learn-quizzes:submit-answer" />
@@ -195,15 +212,7 @@ export const QuizButtonGroup = () => {
   }
 
   return (
-    <Center
-      gap={{ base: 4, md: 6 }}
-      w={{ base: "full", sm: "auto" }}
-      flexDirection={{ base: "column", sm: "row" }}
-      flexWrap="wrap"
-      sx={{
-        button: { width: { base: "100%", sm: "fit-content" } },
-      }}
-    >
+    <Center className="flex-wrap gap-4 max-sm:w-full max-sm:flex-col md:gap-6 max-sm:[&>button]:w-full">
       <MainButtons />
     </Center>
   )

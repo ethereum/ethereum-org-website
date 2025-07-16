@@ -22,7 +22,7 @@ ethereum.org翻訳プログラムはオープンで、誰でも貢献できま�
 
 _[ethereum.orgのDiscord](/discord/)に参加すると、翻訳でのコラボレーション、質問、フィードバックやアイデアの共有、または翻訳グループへの参加ができます。_
 
-<ButtonLink to="https://crowdin.com/project/ethereum-org/">
+<ButtonLink href="https://crowdin.com/project/ethereum-org/">
   翻訳を始める
 </ButtonLink>
 
@@ -36,7 +36,7 @@ ethereum.org翻訳プログラムの詳細については、[ミッションと�
 
 ### これまでの進捗 {#our-progress}
 
-- [**5,600人以上**の翻訳者](/contributing/translation-program/contributors/)
+- [**6,000人以上**の翻訳者](/contributing/translation-program/contributors/)
 - **62**言語に対応
 - [**300万**語翻訳(2023年時点)](/contributing/translation-program/acknowledgements/)
 
@@ -50,9 +50,9 @@ ethereum.orgは、何千人ものコミュニティメンバーによって翻�
 
 翻訳プログラムに貢献し、5000語以上の翻訳が承認された場合、ethereum.org翻訳者証明書受け取ることができます。 [証明書の詳細](/contributing/translation-program/acknowledgements/#certificate)
 
-#### 出席証明プロトコル(POAP) {#poaps}
+#### OAT {#oats}
 
-翻訳にご協力いただいた全員に、ethereum.org翻訳プログラムへの貢献を証する、出席証明プロトコル(POAP)を発行します。 [出席証明プロトコル(POAP)の詳細](/contributing/translation-program/acknowledgements/#poap)
+翻訳プログラムのコントリビュータは、2024年の翻訳単語数に基づいて様々なOAT(オンチェーン功績トークン)を受け取る資格があります。 OATは、ethereum.org翻訳プログラムへ貢献したことを証明するNFTです。 [OATの詳細](/contributing/translation-program/acknowledgements/#oats)
 
 #### 翻訳者の表彰 {#translator-acknowledgements}
 

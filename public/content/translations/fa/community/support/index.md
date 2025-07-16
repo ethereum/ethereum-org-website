@@ -12,11 +12,11 @@ lang: fa
 
 درک ماهیت غیرمتمرکز اتریوم بسیار مهم است زیرا هرکسی که ادعا می‌کند پشتیبان رسمی اتریوم است، احتمالاً سعی دارد از شما کلاهبرداری کند! بهترین محافظت در برابر کلاهبرداران، آموزش خود و جدی گرفتن امنیت است.
 
-<DocLink to="/security/">
+<DocLink href="/security/">
   امنیت اتریوم و جلوگیری از کلاهبرداری
 </DocLink>
 
-<DocLink to="/learn/">
+<DocLink href="/learn/">
   اصول اتریوم را بیاموزید
 </DocLink>
 
@@ -57,7 +57,6 @@ _این یک فهرست جامع نیست. برای پیدا کردن پشتیب
 - [ethers.js](https://discord.gg/6jyGVDK6Jx)
 - [web3.js](https://discord.gg/GsABYQu4sC)
 - [Hardhat](https://discord.gg/xtrMGhmbfZ)
-- [Truffle](https://discord.gg/8uKcsccEYE)
 - [Alchemy](http://alchemy.com/discord)
 - [Tenderly](https://discord.gg/fBvDJYR)
 

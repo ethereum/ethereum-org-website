@@ -2,7 +2,7 @@
 
 ## Overview
 
-StorybookJS is a UI tool for isolating UI components to visually test their styles and states.
+StorybookJS is a UI tool for isolating UI components to visually test its styles and states.
 
 This is great for checking the various iterations of a component in a sandbox versus scouring all the pages in a large scale project it is used to verify that the component is rendering properly.
 
@@ -14,7 +14,7 @@ Check out [Intro to Storybook](https://storybook.js.org/tutorials/intro-to-story
 
 ## Spinning up the Storybook server
 
-It's as easy as running `yarn storybook` to boot up a dedicated localhost to see all the components that have stories.
+It's as easy as running `pnpm storybook` to boot up a dedicated localhost to see all the components that have stories.
 
 ## Setting up a component's stories
 
@@ -22,7 +22,7 @@ It's as easy as running `yarn storybook` to boot up a dedicated localhost to see
 
 A Storybook "story" is an instance of a component in a certain state or with certain parameters applied to show an alternative version of the component.
 
-There may be some exceptions, but generally each component should have only on story file.
+There may be some exceptions, but generally each component should have only one story file.
 
 The stories file will reside with each component. So the base folder structure in `src` will look like this:
 
@@ -40,7 +40,7 @@ The initial structure of each story file will look something like this (in types
 ```tsx
 import ComponentA from "."
 
-const meta {
+const meta = {
   title: "ComponentA",
   component: ComponentA
 } satisfies Meta<typeof ComponentA>
@@ -71,7 +71,7 @@ import Button from "."
 
 type ButtonType = typeof Button
 
-const meta {
+const meta = {
   title: "Atoms / Form / Button",
   component: Button
 } satisfies Meta<ButtonType>
@@ -134,7 +134,7 @@ export const Button: StoryObj<typeof meta> = {
 }
 ```
 
-As you go and make adjustments to the component itself or it's variant styles, Storybook will hot reload and those changes will appear in the stories that emphasize them.
+As you go and make adjustments to the component itself or its variant styles, Storybook will hot reload and those changes will appear in the stories that emphasize them.
 
 ## Storybook Dashboard
 
@@ -229,4 +229,4 @@ parameters: {
 }
 ```
 
-> 🚨 NOTE: This will be notated ahead of time by the team which stories should not receive snapshots.
+> 🚨 NOTE: This will be noted ahead of time by the team which stories should not receive snapshots.

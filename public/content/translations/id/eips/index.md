@@ -54,9 +54,17 @@ Proses standardisasi lengkap yang disertai dengan bagan dideskripsikan dalam [EI
 
 Jika Anda tertarik untuk membaca lebih lanjut tentang EIP, lihat [situs web EIP](https://eips.ethereum.org/) dan [EIP-1](https://eips.ethereum.org/EIPS/eip-1). Berikut adalah beberapa tautan yang berguna:
 
-- [Daftar setiap EIP](https://eips.ethereum.org/all)
+- [Daftar setiap Proposal Peningkatan Ethereum](https://eips.ethereum.org/all)
 - [Penjelasan tentang semua jenis EIP](https://eips.ethereum.org/EIPS/eip-1#eip-types)
 - [Penjelasan tentang semua status EIP](https://eips.ethereum.org/EIPS/eip-1#eip-process)
+
+### Proyek pendidikan komunitas {#community-projects}
+
+- [PEEPanEIP](https://www.youtube.com/playlist?list=PL4cwHXAawZxqu0PKKyMzG_3BJV_xZTi1F) — *PEEPanEIP adalah seri video edukasi yang membahas Ethereum Improvement Proposal (EIPs) dan fitur-fitur utama dari pembaruan yang akan datang.*
+- [EIP Untuk Kutu Buku](https://ethereum2077.substack.com/t/eip-research) — *EIP Untuk Kutu Buku memberikan gambaran umum gaya ELI5 yang komprehensif dari berbagai Proposal Peningkatan Ethereum (EIP), termasuk EIP inti dan EIP lapisan aplikasi/infrastruktur (ERC), untuk mengedukasi pembaca dan membentuk konsensus di sekitar perubahan yang diusulkan pada protokol Ethereum.*
+- [EIPs.wtf](https://www.eips.wtf/) — *EIPs.wtf memberikan informasi tambahan untuk Proposal Peningkatan Ethereum (EIP), termasuk statusnya, detail implementasi, permintaan penarikan terkait, dan umpan balik komunitas.*
+- [EIP.Fun](https://eipfun.substack.com/) — *EIP.Fun memberikan berita terbaru tentang Proposal Peningkatan Ethereum (EIP), pembaruan tentang pertemuan EIP, dan banyak lagi.*
+- [EIPs Insight](https://eipsinsight.com/) — *EIPs Insight adalah representasi dari keadaan proses Proposal peningkatan Ethereum (EIP) & statistik sesuai dengan informasi yang dikumpulkan dari berbagai sumber.*
 
 ## Partisipasi {#participate}
 

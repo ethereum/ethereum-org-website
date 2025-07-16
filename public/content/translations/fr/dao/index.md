@@ -1,5 +1,6 @@
 ---
-title: Organisation autonome décentralisée (DAO)
+title: Qu'est-ce qu'une DAO ?
+metaTitle: Qu'est-ce qu'une DAO ? | Organisation autonome et décentralisée
 description: Un aperçu des DAO sur Ethereum
 lang: fr
 template: use-cases
@@ -18,7 +19,7 @@ Une DAO est une organisation collectivement détenue et qui travaille à une mis
 
 Les DAO nous permettent de travailler avec des personnes partageant le même état d'esprit et dans le monde entier, sans pour autant faire confiance à un dirigeant bienveillant pour gérer les fonds ou les opérations. Il n'y a pas de Directeur Général qui puisse dépenser des fonds sur un caprice ou un Chef de la direction financière capable de manipuler les registres. Au lieu de cela, les règles basées sur la blockchain ont été intégrées dans le code et définissent comment fonctionne l'organisation et comment les fonds sont dépensés.
 
-Elles possèdent une trésorerie intégrée à laquelle personne ne peut accéder sans l'accord du groupe. Les décisions sont régies par des propositions et des votes pour s'assurer que tout le monde au sein de l'organisation a une voix et que tout se passe de manière transparente [sur la chaîne](/glossary/#on-chain).
+Elles possèdent une trésorerie intégrée à laquelle personne ne peut accéder sans l'accord du groupe. Les décisions sont régies par des propositions et des votes pour s'assurer que tout le monde au sein de l'organisation puisse s'exprimer et que tout se passe de manière transparente [onchain](/glossary/#onchain).
 
 ## Pourquoi avons-nous besoin des DAO ? {#why-dao}
 
@@ -91,7 +92,7 @@ En 1977, le Wyoming a créé la LLC, qui protège les entrepreneurs et limite le
 
 ### Un exemple célèbre {#law-example}
 
-[CityDAO](https://citydao.io) - CityDAO s'est servi de la loi DAO du Wyoming pour acheter 40 acres de terrain près du parc national de Yellowstone.
+[CityDAO](https://citizen.citydao.io/) - CityDAO s'est servi de la loi DAO du Wyoming pour acheter 40 acres de terrain près du parc national de Yellowstone.
 
 ## Adhésion à la DAO {#dao-membership}
 
@@ -99,9 +100,9 @@ Il existe différents modèles pour adhérer à une DAO. L'adhésion peut déter
 
 ### Adhésion basée sur des jetons {#token-based-membership}
 
-Habituellement cela se fait totalement [sans permission](/glossary/#permissionless), seulement en fonction du jeton utilisé. La plupart de ces jetons de gouvernance peuvent être échangés sans permission sur un [échange décentralisé](/glossary/#dex). D’autres doivent être gagnés en fournissant des liquidités ou une autre « preuve de travail ». Quoi qu’il en soit, il suffit de détenir le jeton pour avoir accès au vote.
+Habituellement cela se fait totalement [sans permission](/glossary/#permissionless), seulement en fonction du jeton utilisé. La plupart de ces jetons de gouvernance peuvent être échangés sans permission sur un [échange décentralisé](/glossary/#dex). D’autres doivent être gagnés en fournissant des liquidités ou une autre « preuve de travail ». Quoi qu’il en soit, il suffit de détenir le jeton pour avoir accès au vote.
 
-*Généralement, cela est utilisé pour régir des protocoles décentralisés et/ou des jetons eux-mêmes.*
+_Généralement, cela est utilisé pour régir des protocoles décentralisés et/ou des jetons eux-mêmes._
 
 #### Un exemple célèbre {#token-example}
 
@@ -111,7 +112,7 @@ Habituellement cela se fait totalement [sans permission](/glossary/#permissionle
 
 Les DAO basées sur le partage sont davantage soumises à l'autorisation, mais demeurent assez ouvertes. Tous les membres potentiels peuvent soumettre une proposition pour rejoindre la DAO, offrant habituellement une contribution d'une certaine valeur sous la forme de jetons ou de travail. Les actions représentent le droit de vote direct et la propriété. Les membres peuvent sortir à tout moment avec leur part proportionnelle de la trésorerie.
 
-*Habituellement utilisé pour des organisations plus proches et axées sur l'aspect humain telles que les organismes de bienfaisance, les collectifs de travailleurs et les clubs d’investissement. Cela peut également concerner la gouvernance des protocoles et des jetons.*
+_Habituellement utilisé pour des organisations plus proches et axées sur l'aspect humain telles que les organismes de bienfaisance, les collectifs de travailleurs et les clubs d’investissement. Cela peut également concerner la gouvernance des protocoles et des jetons._
 
 #### Un exemple célèbre {#share-example}
 
@@ -121,7 +122,7 @@ Les DAO basées sur le partage sont davantage soumises à l'autorisation, mais d
 
 Ici, la réputation représente une preuve de participation et accorde le droit de vote dans la DAO. Contrairement à une adhésion basée sur des jetons ou sur les actions, les DAO basées sur la réputation ne transfèrent pas la propriété aux contributeurs. En effet, la réputation ne peut pas être achetée, transférée ou déléguée  ; les membres de la DAO doivent mériter leur réputation par la participation. Le vote sur la chaîne est sans permission, les membres potentiels peuvent librement soumettre des propositions pour rejoindre la DAO et demander à obtenir une réputation et des jetons en guise de récompense en échange de leurs contributions.
 
-*Habituellement utilisée pour le développement décentralisé et la gouvernance de protocoles et de [DApps](/glossary/#dapp), cette méthode est également adaptée à divers autres types d'organisations, comme les organismes caritatifs, les collectifs de travailleurs, les clubs d'investissement, etc.*
+_Habituellement utilisée pour le développement décentralisé et la gouvernance de protocoles et de [DApps](/glossary/#dapp), cette méthode est également adaptée à divers autres types d'organisations, comme les organismes caritatifs, les collectifs de travailleurs, les clubs d'investissement, etc._
 
 #### Un exemple célèbre {#reputation-example}
 
@@ -158,6 +159,9 @@ Ici, la réputation représente une preuve de participation et accorde le droit 
 
 ### Vidéos {#videos}
 
-- [Qu'est-ce qu'une DAO en cryptomonnaie ?](https://youtu.be/KHm0uUPqmVE)
+- [Qu'est-ce qu'une DAO en cryptomonnaie ?](https://youtu.be/KHm0uUPqmVE)
 - [Une DAO peut-elle bâtir une ville ?](https://www.ted.com/talks/scott_fitsimones_could_a_dao_build_the_next_great_city) – [TED](https://www.ted.com/)
 
+<Divider />
+
+<QuizWidget quizKey="daos" />

@@ -50,7 +50,7 @@ A espinha dorsal de uma DAO é o seu contrato inteligente, que define as regras 
 
 Isto é possível porque os contratos inteligentes são à prova de adulteração quando entram em funcionamento na Ethereum. Não se pode simplesmente editar o código (as regras das DAO) sem que as pessoas se apercebam, porque tudo é público.
 
-<DocLink to="/smart-contracts/">
+<DocLink href="/smart-contracts/">
   Mais sobre contratos inteligentes
 </DocLink>
 
@@ -93,7 +93,7 @@ Em 1977, o estado Americano de Wyoming inventou a LLC, que protege os empresári
 
 ### Um exemplo famoso {#law-example}
 
-[CityDAO](https://citydao.io) - A CityDAO utilizou a lei DAO do Wyoming para comprar 40 acres de terreno perto do Parque Nacional de Yellowstone.
+[CityDAO](https://citizen.citydao.io/) - A CityDAO utilizou a lei DAO do Wyoming para comprar 40 acres de terreno perto do Parque Nacional de Yellowstone.
 
 ## Adesão à DAO {#dao-membership}
 

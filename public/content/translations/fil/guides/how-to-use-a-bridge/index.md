@@ -54,7 +54,7 @@ Maaari kang gumamit ng [chainlist.org](http://chainlist.org) upang makita ang de
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Gusto mong magbasa pa?</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     Tingnan ang iba pa naming gabay
   </ButtonLink>
 </InfoBanner>

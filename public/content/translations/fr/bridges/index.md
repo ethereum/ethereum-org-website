@@ -1,37 +1,37 @@
 ---
-title: Introduction aux ponts blockchain
+title: Introduction aux ponts de blockchain
 description: Les ponts permettent aux utilisateurs de déplacer leurs fonds à travers différentes blockchains
 lang: fr
 ---
 
 # Ponts de connexion blockchain {#prerequisites}
 
-_Le Web3 a évolué en un écosystème de solutions blockchain L1 et de mise à l'échelle L2, chacune ayant des avantages et des inconvénients. À mesure qu'augmente le nombre de protocoles blockchain, [la demande de déplacement d'actifs entre les chaînes](https://dune.xyz/eliasimos/Bridge-Away-(from-Ethereum)) augmente aussi. Pour répondre à cette demande, nous avons besoin de ponts._
+_Le Web3 a évolué en un écosystème de solutions blockchain L1 et de mise à l'échelle L2, chacune ayant des avantages et des inconvénients. À mesure qu'augmente le nombre de protocoles blockchain, la demande de déplacement d'actifs entre les chaînes augmente aussi. Pour répondre à cette demande, nous avons besoin de ponts._
 
 <Divider />
 
 ## Que sont les ponts ? {#what-are-bridges}
 
-Les ponts blockchain fonctionnent comme les ponts que nous connaissons dans le monde physique. De même qu'un pont physique relie deux lieux physiques, un pont blockchain relie deux écosystèmes blockchain. Les ponts facilitent la communication entre les blockchains par le transfert d'informations et d'actifs.
+Les ponts blockchain fonctionnent comme les ponts que nous connaissons dans le monde physique. De même qu'un pont physique relie deux lieux physiques, un pont blockchain relie deux écosystèmes blockchain. **Les ponts facilitent la communication entre les blockchains par le transfert d'informations et d'actifs**.
 
 Prenons un exemple :
 
 Vous êtes originaire des États-Unis et vous prévoyez un voyage en Europe. Vous avez des dollars américains, mais vous avez besoin d'euros à dépenser. Pour échanger vos dollars américains contre des euros, vous pouvez utiliser un échangeur de devises moyennant de faibles frais.
 
-Mais, que feriez-vous si vous vouliez faire le même échange pour utiliser une blockchain différente ? Disons que vous voulez échanger des ETH du réseau principal Ethereum contre des ETH d'[Arbitrum](https://arbitrum.io/). À l'instar de l'échange de devises que nous avons effectué pour les euros, nous avons besoin d'un mécanisme pour transférer nos ETH d'Ethereum vers Arbitrum. Les ponts permettent de telles transactions. Dans ce cas, [Arbitrum a un pont natif](https://bridge.arbitrum.io/) qui peut transférer des ETH du Mainnet vers Arbitrum.
+Mais, que feriez-vous si vous vouliez faire le même échange pour utiliser une [blockchain](/glossary/#blockchain) différente ? Disons que vous voulez échanger des [ETH](/glossary/#ether) du réseau principal Ethereum contre des ETH d'[Arbitrum](https://arbitrum.io/). À l'instar de l'échange de devises que nous avons effectué pour les euros, nous avons besoin d'un mécanisme pour transférer nos ETH d'Ethereum vers Arbitrum. Les ponts permettent de telles transactions. Dans ce cas, [Arbitrum a un pont natif](https://bridge.arbitrum.io/) qui peut transférer des ETH du Mainnet vers Arbitrum.
 
 ## Pourquoi avons-nous besoin de ponts ? {#why-do-we-need-bridges}
 
-Toutes les blockchains ont leurs limites. Pour qu'Ethereum puisse évoluer et répondre à la demande, il a fallu procéder à des rollups. Alternativement, des L1 comme Solana ou Avalanche sont conçues différemment pour permettre un débit plus élevé mais au prix de la décentralisation.
+Toutes les blockchains ont leurs limites. Pour qu'Ethereum puisse évoluer et répondre à la demande, il a fallu procéder à des [rollups](/glossary/#rollups). Alternativement, des L1 comme Solana ou Avalanche sont conçues différemment pour permettre un débit plus élevé mais au prix de la décentralisation.
 
-Toutes les blockchains se développent dans des environnements isolés et ont cependant des règles et des mécanismes de consensus différents. Cela signifie qu'elles ne peuvent pas communiquer de manière native et que les jetons ne peuvent pas circuler librement entre les blockchains.
+Cependant, toutes les blockchains se développent dans des environnements isolés et possèdent des règles et des mécanismes de [consensus](/glossary/#consensus) différents. Cela signifie qu'elles ne peuvent pas communiquer de manière native et que les jetons ne peuvent pas circuler librement entre les blockchains.
 
 Les ponts existent pour connecter les blockchains, permettant le transfert d'informations et de jetons entre elles.
 
-Les ponts permettent :
+**Les ponts permettent** :
 
 - le transfert inter-chaînes d'actifs et d'informations.
-- aux dapps d'accéder aux points forts de diverses blockchains, ce qui renforce leurs capacités (les protocoles disposant désormais d'un plus grand espace de conception pour l'innovation).
+- aux [dapps](/glossary/#dapp) d'accéder aux forces de différentes blockchains, renforçant leurs capacités (les protocoles disposant désormais de plus d'espace de conception pour l'innovation).
 - aux utilisateurs d'accéder à de nouvelles plateformes et de tirer parti des avantages de différentes chaînes.
 - aux développeurs de différents écosystèmes de blockchain de collaborer et de créer de nouvelles plateformes pour les utilisateurs.
 
@@ -53,11 +53,11 @@ Si vous utilisez Aave sur le réseau principal Ethereum pour prêter des USDT ma
 
 ### Explorer les écosystèmes blockchain {#explore-ecosystems}
 
-Si vous avez des ETH sur le réseau principal Ethereum et que vous voulez explorer un L1 alternatif pour essayer leurs dapps natives. Vous pouvez utiliser un pont pour transférer vos ETH du réseau principal Ethereum vers le L1.
+Si vous avez des ETH sur le réseau principal Ethereum et que vous voulez explorer un L1 alternatif pour essayer leurs dapps natives. Vous pouvez utilisez un pont pour transférer vos ETH du réseau principal Ethereum vers le L1.
 
 ### Posséder des actifs crypto natifs {#own-native}
 
-Disons que vous voulez posséder des bitcoins (BTC) natifs, mais que vous n'avez des fonds que sur le réseau principal Ethereum. Pour vous exposer aux BTC sur Ethereum, vous pouvez acheter des Wrapped Bitcoin (WBTC). Cependant, le WBTC est un jeton ERC-20 natif du réseau Ethereum, ce qui signifie qu'il s'agit d'une version Ethereum de Bitcoin et non de l'actif original sur la blockchain Bitcoin. Pour posséder des BTC natifs, vous devez basculer vos actifs d'Ethereum à Bitcoin en utilisant un pont. Cela permettra de relier votre WBTC et de le convertir en BTC natif. Vous pouvez également posséder des BTC et vouloir les utiliser dans les protocoles Ethereum DeFi. Pour cela, il faudrait faire le pont dans l'autre sens, de BTC à WBTC, qui peut ensuite être utilisé comme actif sur Ethereum.
+Disons que vous voulez posséder des bitcoins (BTC) natifs, mais que vous n'avez des fonds que sur le réseau principal Ethereum. Pour vous exposer aux BTC sur Ethereum, vous pouvez acheter des Wrapped Bitcoin (WBTC). Cependant, le WBTC est un jeton [ERC-20](/glossary/#erc-20) natif du réseau Ethereum, ce qui signifie qu'il s'agit d'une version Ethereum de Bitcoin et non de l'actif original sur la blockchain Bitcoin. Pour posséder des BTC natifs, vous devez basculer vos actifs d'Ethereum à Bitcoin en utilisant un pont. Cela permettra de relier votre WBTC et de le convertir en BTC natif. Alternativement, vous pouvez également posséder des BTC et vouloir les utiliser dans les protocoles [DeFi](/glossary/#defi) d'Ethereum. Pour cela, il faudrait faire le pont dans l'autre sens, de BTC à WBTC, qui peut ensuite être utilisé comme actif sur Ethereum.
 
 <InfoBanner shouldCenter emoji=":bulb:">
   Vous pouvez également faire tout ce qui précède en utilisant un <a href="/get-eth/">échange centralisé</a>. Cependant, à moins que vos fonds ne soient déjà mêlés à un échange, cela impliquerait plusieurs étapes et il serait probablement préférable d'utiliser un pont.
@@ -65,15 +65,15 @@ Disons que vous voulez posséder des bitcoins (BTC) natifs, mais que vous n'avez
 
 <Divider />
 
-## Type de pont {#types-of-bridge}
+## Types de ponts {#types-of-bridge}
 
 Les ponts présentent de nombreux types de conceptions et de subtilités. En général, les ponts se divisent en deux catégories : les ponts sans risque et les ponts risqués.
 
-| Ponts sans risque                                                                                                                                                                             | Ponts risqués                                                                                                        |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| Le fonctionnement des ponts sans risque repose sur une entité ou un système central pour leur fonctionnement.                                                                                 | Le fonctionnement des ponts risqués repose sur des contrats intelligents et des algorithmes.                         |
-| Ces ponts sont associés à des hypothèses de confiance en ce qui concerne la garde des fonds et la sécurité du pont. Les utilisateurs se fient surtout à la réputation de l'opérateur du pont. | Ils sont risqués, c'est-à-dire que la sécurité du pont est la même que celle de la blockchain sous-jacente.          |
-| Les utilisateurs doivent renoncer au contrôle de leurs crypto-actifs.                                                                                                                         | Grâce aux contrats intelligents, les ponts risqués permettent aux utilisateurs de garder le contrôle de leurs fonds. |
+| Ponts sans risque                                                                                                                                                                             | Ponts risqués                                                                                                                                     |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Le fonctionnement des ponts sans risque repose sur une entité ou un système central pour leur fonctionnement.                                                                                 | Le fonctionnement des ponts risqués repose sur des contrats intelligents et des algorithmes.                                                      |
+| Ces ponts sont associés à des hypothèses de confiance en ce qui concerne la garde des fonds et la sécurité du pont. Les utilisateurs se fient surtout à la réputation de l'opérateur du pont. | Ils sont risqués, c'est-à-dire que la sécurité du pont est la même que celle de la blockchain sous-jacente.                                       |
+| Les utilisateurs doivent renoncer au contrôle de leurs crypto-actifs.                                                                                                                         | Grâce aux [contrats intelligents](/glossary/#smart-contract), les ponts risqués permettent aux utilisateurs de garder le contrôle de leurs fonds. |
 
 Pour résumer, nous pouvons dire que les ponts sans risque reposent sur des hypothèses de confiance, tandis que les ponts risqués minimisent la confiance et ne font pas de nouvelles hypothèses de confiance au-delà de celles des domaines sous-jacents. Voici comment ces termes peuvent être décrits :
 
@@ -87,11 +87,20 @@ Imaginez que vous soyez à un point de contrôle de sécurité dans un aéroport
 1. Les points de contrôle manuels - gérés par des fonctionnaires qui vérifient manuellement tous les détails de votre billet et votre identité avant de vous remettre la carte d'embarquement.
 2. L'enregistrement automatique - il s'effectue à l'aide d'une machine où vous indiquez les détails de votre vol et recevez la carte d'embarquement si tout est en ordre.
 
-Les points de contrôle manuels sont similaires à un modèle sans risque car ils dépendent d'un tiers, à savoir les fonctionnaires, pour leurs opérations. En tant qu'utilisateur, vous faites confiance aux fonctionnaires pour prendre les bonnes décisions et utiliser correctement vos informations privées.
+Un point de contrôle manuel est similaire à un modèle de confiance puisque qu'il dépend d'une tierce partie, par exemple les fonctionnaires, pour leurs opérations. En tant qu'utilisateur, vous faites confiance aux fonctionnaires pour prendre les bonnes décisions et utiliser correctement vos informations privées.
 
 L'enregistrement automatique s'apparente à un modèle risqué car il supprime le rôle de l'opérateur et utilise la technologie pour ses opérations. Les utilisateurs gardent toujours le contrôle de leurs données et ne doivent pas confier leurs informations privées à un tiers.
 
 De nombreuses solutions de transition adoptent des modèles entre ces deux extrêmes, avec des degrés de confiance variables.
+
+<Divider />
+
+## Utiliser des ponts {#use-bridge}
+
+L'utilisation des ponts vous permet de déplacer vos fonds entre différentes blockchains. Voici quelques ressources pour vous aider à trouver et utiliser des ponts :
+
+- **[Liste des ponts L2BEAT](https://l2beat.com/bridges/summary)&[Analyse des risques L2BEAT des ponts](https://l2beat.com/bridges/risk)** : Une liste complète de divers ponts, incluant des détails sur leur part de marché, le type de pont et les chaînes de destination. L2BEAT propose également une analyse des risques des ponts, aidant les utilisateurs à prendre des décisions éclairées lors de la sélection d'un pont.
+- **[Liste des ponts de DefiLlama](https://defillama.com/bridges/Ethereum)** : Un résumé des volumes des ponts sur les réseaux Ethereum.
 
 <Divider />
 
@@ -122,13 +131,9 @@ Les ponts sont essentiels pour l'accueil des utilisateurs sur les L2 d'Ethereum,
 <Divider />
 
 ## En savoir plus {#further-reading}
+- [EIP-5164: Exécution Cross-Chain](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) - _18 juin 2022 - Brendan Asselstine_
+- [L2Bridge Risk Framework](https://gov.l2beat.com/t/l2bridge-risk-framework/31) - _5 juillet 2022 - Bartek Kiepuszewski_
+- [Pourquoi l'avenir sera multi-chaînes, mais ne sera pas cross-chaînes."](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) - _8 janvier 2022 - Vitalik Buterin_
+- [Exploiter la sécurité partagée pour une interopérabilité cross-chain sécurisée : Comités d'état Lagrange et au-delà](https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) - _12 juin 2024 - Emmanuel Awosika_
+- [L'état des solutions d'interopérabilité des rollups](https://research.2077.xyz/the-state-of-rollup-interoperability) - _20 juin 2024 - Alex Hook_
 
-- [EIP-5164 : Exécution en chaines croisées](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) _18 juin 2022 - Brendan Asselstine_
-- [L2Bridge Risk Framework](https://gov.l2beat.com/t/l2bridge-risk-framework/31) _5 juillet 2022 - Bartek Kiepuszewski_
-- ["Pourquoi le futur sera multi-chaîne, mais ne sera pas celui des chaînes croisées.](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) _8 janvier 2022 - Vitalik Buterin_
-- [Que sont les ponts de la blockchain et comment les classer ?](https://blog.li.finance/what-are-blockchain-bridges-and-how-can-we-classify-them-560dc6ec05fa) _18 février 2021 - Arjun Chand_
-- [Qu'est-ce que les ponts à chaînes croisées ?](https://www.alchemy.com/overviews/cross-chain-bridges) _10 mai 2022 - Alchimie_
-- [Ponts Blockchain : Construire des réseaux de crypto-réseaux](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) _8 septembre 2021 - Dmitriy Berenzon_
-- [Ponts dans l'espace crypto](https://medium.com/chainsafe-systems/bridges-in-crypto-space-12e158f5fd1e) _23 août 2021 - Ben Adar Hyman_
-- [Le Trilemme d'interopérabilité](https://medium.com/connext/the-interoperability-trilemma-657c2cf69f17) _1er octobre 2021 Arjun Bhuptani_
-- [Sécurisez le pont : La communication inter-chaînes bien faite](https://medium.com/dragonfly-research/secure-the-bridge-cross-chain-communication-done-right-part-i-993f76ffed5d) _23 août 2021 - Celia Wan_

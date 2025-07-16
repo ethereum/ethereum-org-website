@@ -27,7 +27,7 @@ Per comprendere meglio questa pagina, consigliamo innanzitutto di leggere [stand
 #### asset {#asset}
 
 ```solidity
-function asset() public view returns (address)
+function asset() public view returns (address assetTokenAddress)
 ```
 
 Questa funzione restituisce l'indirizzo del token sottostante, utilizzato per la cassaforte per la contabilità, i depositi e i prelievi.
@@ -59,7 +59,7 @@ Questa funzione restituisce la quantità di `assets` che sarebbe scambiata dalla
 #### maxDeposit {#maxdeposit}
 
 ```solidity
-function maxDeposit(address receiver) public view returns (uint256)
+function maxDeposit(address receiver) public view returns (uint256 maxAssets)
 ```
 
 Questa funzione restituisce la quantità massima di risorse sottostanti depositabili in una singola chiamata a [`deposit`](#deposit) dal `receiver`.
@@ -67,7 +67,7 @@ Questa funzione restituisce la quantità massima di risorse sottostanti deposita
 #### previewDeposit {#previewdeposit}
 
 ```solidity
-function previewDeposit(uint256 assets) public view returns (uint256)
+function previewDeposit(uint256 assets) public view returns (uint256 shares)
 ```
 
 Questa funzione consente agli utenti di simulare gli effetti del loro deposito al blocco corrente.
@@ -83,7 +83,7 @@ Questa funzione deposita `assets` di token sottostanti nella cassaforte e conced
 #### maxMint {#maxmint}
 
 ```solidity
-function maxMint(address receiver) public view returns (uint256)
+function maxMint(address receiver) public view returns (uint256 maxShares)
 ```
 
 Questa funzione restituisce la quantità massima di quote coniabili in una sola chiamata a [`mint`](#mint) dal `receiver`.
@@ -91,7 +91,7 @@ Questa funzione restituisce la quantità massima di quote coniabili in una sola 
 #### previewMint {#previewmint}
 
 ```solidity
-function previewMint(uint256 shares) public view returns (uint256)
+function previewMint(uint256 shares) public view returns (uint256 assets)
 ```
 
 Questa funzione consente agli utenti di simulare gli effetti del loro conio al blocco corrente.
@@ -107,7 +107,7 @@ Questa funzione conia esattamente quote della cassaforte `shares` al `receiver`,
 #### maxWithdraw {#maxwithdraw}
 
 ```solidity
-function maxWithdraw(address owner) public view returns (uint256)
+function maxWithdraw(address owner) public view returns (uint256 maxAssets)
 ```
 
 Questa funzione restituisce la quantità massima di risorse sottostanti prelevabili dal saldo dell'`owner` con una singola chiamata a [`withdraw`](#withdraw).
@@ -115,7 +115,7 @@ Questa funzione restituisce la quantità massima di risorse sottostanti prelevab
 #### previewWithdraw {#previewwithdraw}
 
 ```solidity
-function previewWithdraw(uint256 assets) public view returns (uint256)
+function previewWithdraw(uint256 assets) public view returns (uint256 shares)
 ```
 
 Questa funzione consente agli utenti di simulare gli effetti del loro prelievo al blocco corrente.
@@ -131,7 +131,7 @@ Questa funzione brucia `shares` da `owner` e invia esattamente token `assets` da
 #### maxRedeem {#maxredeem}
 
 ```solidity
-function maxRedeem(address owner) public view returns (uint256)
+function maxRedeem(address owner) public view returns (uint256 maxShares)
 ```
 
 Questa funzione restituisce la quantità massima di quote che possono essere riscattate dal saldo dell'`owner` tramite una chiamata a [`redeem`](#redeem).
@@ -139,7 +139,7 @@ Questa funzione restituisce la quantità massima di quote che possono essere ris
 #### previewRedeem {#previewredeem}
 
 ```solidity
-function previewRedeem(uint256 shares) public view returns (uint256)
+function previewRedeem(uint256 shares) public view returns (uint256 assets)
 ```
 
 Questa funzione consente agli utenti di simulare gli effetti del loro riscatto al blocco corrente.
@@ -168,6 +168,10 @@ function balanceOf(address owner) public view returns (uint256)
 
 Restituisce la quantità totale di quote della cassaforte che l'`owner` possiede attualmente.
 
+### Mappa dell'interfaccia {#mapOfTheInterface}
+
+![Mappa dell'interfaccia di ERC-4626](./map-of-erc-4626.png)
+
 ### Eventi {#events}
 
 #### Evento di Deposito
@@ -195,7 +199,7 @@ event Withdraw(
     address indexed receiver,
     address indexed owner,
     uint256 assets,
-    uint256 share
+    uint256 shares
 )
 ```
 

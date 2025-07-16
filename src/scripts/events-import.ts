@@ -8,13 +8,21 @@ import localEvents from "../data/community-events.json"
 import { EthereumEventsImport } from "./events/ethereum-events-import"
 
 import "dotenv/config"
-
 ;(async () => {
   const communityEvents = localEvents as CommunityConference[]
 
   console.log("Community Events Import..")
-  const ethereumEvents = await EthereumEventsImport()
+  const year = new Date().getFullYear()
+  const ethereumEvents = await EthereumEventsImport(year)
   // Can add multiple event sources here in the future
+
+  // Try to fetch next year too, if page available
+  try {
+    const eventsNextYear = await EthereumEventsImport(year + 1)
+    ethereumEvents.push(...eventsNextYear)
+  } catch (error: unknown) {
+    console.error((error as Error).message)
+  }
 
   ethereumEvents.forEach((imported) => {
     const id = communityEvents.findIndex((local) =>
@@ -40,15 +48,21 @@ function tryMatchEvent(
   imported: CommunityConference,
   local: CommunityConference
 ) {
-  if (imported.title.toLocaleLowerCase() === local.title.toLocaleLowerCase())
+  if (
+    imported.title.toLocaleLowerCase() === local.title.toLocaleLowerCase() &&
+    local.startDate === imported.startDate &&
+    local.endDate === imported.endDate
+  )
     return true
 
   if (
-    URL.canParse(imported.to) &&
-    URL.canParse(local.to) &&
-    new URL(imported.to).hostname.replace("www.", "") ===
-      new URL(local.to).hostname.replace("www.", "") &&
-    new URL(imported.to).pathname === new URL(local.to).pathname
+    URL.canParse(imported.href) &&
+    URL.canParse(local.href) &&
+    new URL(imported.href).hostname.replace("www.", "") ===
+      new URL(local.href).hostname.replace("www.", "") &&
+    new URL(imported.href).pathname === new URL(local.href).pathname &&
+    local.startDate === imported.startDate &&
+    local.endDate === imported.endDate
   ) {
     return true
   }

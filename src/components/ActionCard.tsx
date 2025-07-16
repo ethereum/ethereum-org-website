@@ -1,35 +1,20 @@
 import { StaticImageData } from "next/image"
-import type { ReactNode } from "react"
-import {
-  Box,
-  type BoxProps,
-  Flex,
-  Heading,
-  LinkBox,
-  type LinkBoxProps,
-  LinkOverlay,
-  useColorModeValue,
-} from "@chakra-ui/react"
+import type { BaseHTMLAttributes, ElementType, ReactNode } from "react"
 
 import { Image } from "@/components/Image"
-import { BaseLink } from "@/components/Link"
-import Text from "@/components/OldText"
+import InlineLink from "@/components/ui/Link"
+import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 
-const linkBoxFocusStyles: BoxProps = {
-  borderRadius: "base",
-  boxShadow: "0px 8px 17px rgba(0, 0, 0, 0.15)",
-  bg: "tableBackgroundHover",
-  transition: "transform 0.1s",
-  transform: "scale(1.02)",
-}
+import { cn } from "@/lib/utils/cn"
 
-const linkFocusStyles: BoxProps = {
-  textDecoration: "none",
-}
-
-export type ActionCardProps = Omit<LinkBoxProps, "title"> & {
+import { Flex } from "./ui/flex"
+export type ActionCardProps = Omit<
+  BaseHTMLAttributes<HTMLDivElement>,
+  "title"
+> & {
+  as?: ElementType
   children?: ReactNode
-  to: string
+  href: string
   alt?: string
   image: StaticImageData
   imageWidth?: number
@@ -41,7 +26,7 @@ export type ActionCardProps = Omit<LinkBoxProps, "title"> & {
 }
 
 const ActionCard = ({
-  to,
+  href,
   alt,
   image,
   imageWidth = 220,
@@ -53,64 +38,43 @@ const ActionCard = ({
   isBottom = true,
   ...props
 }: ActionCardProps) => {
-  const descriptionColor = useColorModeValue("blackAlpha.700", "whiteAlpha.800")
-
   return (
     <LinkBox
-      boxShadow="
-	  0px 14px 66px rgba(0, 0, 0, 0.07),
-    0px 10px 17px rgba(0, 0, 0, 0.03), 0px 4px 7px rgba(0, 0, 0, 0.05)"
-      color="text"
-      flex="1 1 372px"
-      _hover={linkBoxFocusStyles}
-      _focus={linkBoxFocusStyles}
-      className={className}
-      m={4}
+      className={cn(
+        "flex flex-col shadow-table hover:scale-[1.02] hover:rounded hover:bg-background-highlight hover:shadow-table-box-hover hover:duration-100 focus:scale-[1.02] focus:rounded focus:shadow-table-box-hover focus:duration-100 md:flex-row",
+        className
+      )}
       {...props}
     >
       <Flex
-        h="260px"
-        bg="cardGradient"
-        direction="row"
-        justify={isRight ? "flex-end" : "center"}
-        align={isBottom ? "flex-end" : "center"}
-        className="action-card-image-wrapper"
-        boxShadow="inset 0px -1px 0px rgba(0, 0, 0, 0.1)"
+        className={cn(
+          "flex h-[260px] flex-row bg-gradient-to-r from-accent-a/10 to-accent-c/10",
+          isBottom ? "items-end" : "items-center",
+          isRight ? "justify-end" : "justify-center"
+        )}
       >
         <Image
           src={image}
-          width={imageWidth}
-          maxH="full"
           alt={alt || ""}
-          style={{ objectFit: "cover" }}
+          width={imageWidth}
+          className="max-h-full self-center object-cover p-4"
         />
       </Flex>
-      <Box p={6} className="action-card-content">
-        <Heading
-          as="h3"
-          fontSize="2xl"
-          mt={2}
-          mb={4}
-          fontWeight={600}
-          lineHeight={1.4}
-        >
-          <LinkOverlay
-            as={BaseLink}
-            color="text"
-            hideArrow
-            textDecoration="none"
-            to={to}
-            _hover={linkFocusStyles}
-            _focus={linkFocusStyles}
-          >
-            {title}
+      <div className="flex flex-col justify-center p-6">
+        <h3 className="mb-4 mt-2 text-2xl font-semibold leading-snug">
+          <LinkOverlay asChild>
+            <InlineLink
+              href={href}
+              hideArrow
+              className="text-body no-underline"
+            >
+              {title}
+            </InlineLink>
           </LinkOverlay>
-        </Heading>
-        <Text mb={0} color={descriptionColor}>
-          {description}
-        </Text>
-        {children && <Box mt={8}>{children}</Box>}
-      </Box>
+        </h3>
+        <p className={"mb-0 text-body/65"}>{description}</p>
+        {children && <div className="mt-8">{children}</div>}
+      </div>
     </LinkBox>
   )
 }

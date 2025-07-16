@@ -5,7 +5,7 @@ lang: it
 sidebarDepth: 3
 ---
 
-I block explorer sono il tuo portale sui dati di Ethereum. Puoi usarli per visualizzare i dati in tempo reale sui blocchi, le transazioni, i miner, i conti e altra attività sulla catena.
+I block explorer sono il tuo portale sui dati di Ethereum. Puoi usarli per vedere in tempo reale dati su blocchi, transazioni, validatori, conti e altre attività on-chain.
 
 ## Prerequisiti {#prerequisites}
 
@@ -14,17 +14,24 @@ I block explorer sono il tuo portale sui dati di Ethereum. Puoi usarli per visua
 ## Servizi {#services}
 
 - [Etherscan](https://etherscan.io/): _disponibile anche in cinese, coreano, russo e giapponese_
+- [3xpl](https://3xpl.com/ethereum)
 - [Beaconcha.in](https://beaconcha.in/)
 - [Blockchair](https://blockchair.com/ethereum): _disponibile anche in spagnolo, francese, italiano, olandese, portoghese, russo, cinese e farsi_
 - [Blockscout](https://eth.blockscout.com/)
 - [Chainlens](https://www.chainlens.com/)
 - [DexGuru Block Explorer](https://ethereum.dex.guru/)
 - [Etherchain](https://www.etherchain.org/)
+- [Ethernow](https://www.ethernow.xyz/)
 - [Ethplorer](https://ethplorer.io/): _disponibile anche in cinese, spagnolo, francese, turco, russo, coreano e vietnamita_
 - [EthVM](https://www.ethvm.com/)
 - [OKLink](https://www.oklink.com/eth)
-- [Otterscan](https://otterscan.io/)
 - [Rantom](https://rantom.app/)
+- [Ethseer](https://ethseer.io)
+
+## Strumenti open source {#open-source-tools}
+
+- [Otterscan](https://otterscan.io/)
+- [lazy-etherscan](https://github.com/woxjro/lazy-etherscan)
 
 ## Dati {#data}
 
@@ -48,7 +55,7 @@ Ogni 12 secondi vengono aggiunti nuovi blocchi a Ethereum (a meno che un proposi
 - Limite di gas: I limiti totali di gas impostati dalle transazioni nel blocco
 - Commissione di base per il gas: Il moltiplicatore minimo necessario perché una transazione sia inclusa in un blocco
 - Commissioni bruciate - La quantità di ETH bruciati nel blocco
-- Dati aggiuntivi - Ogni dato aggiuntivo che il miner ha incluso nel blocco
+- Dati aggiuntivi - Eventuali dati aggiuntivi che il costruttore ha incluso nel blocco
 
 **Dati avanzati**
 
@@ -76,12 +83,12 @@ Gli esploratori di blocchi sono diventati un punto di riferimento comune per tra
 - Hash di transazione - Un hash generato all'invio della transazione
 - Stato - Un'indicazione del fatto che la transazione sia in sospeso, fallita o riuscita
 - Blocco - Il blocco in cui è stata inclusa la transazione
-- Marca oraria - L'ora in cui il miner ha minato la transazione
+- Timestamp - Il momento in cui una transazione è stata inclusa in un blocco proposto da un validatore
 - Mittente: L'indirizzo del conto che ha inviato la transazione
 - A - L'indirizzo del destinatario o del contratto intelligente con cui interagisce la transazione
 - Token trasferiti - Un elenco dei token trasferiti nell'ambito della transazione
 - Valore - Il valore totale degli ETH trasferiti
-- Commissione di transazione: L'importo pagato al miner per elaborare la transazione (calcolato dal prezzo del gas\*gas usato)
+- Commissione sulla transazione - L'importo pagato al validatore per elaborare la transazione (calcolato come prezzo del gas\*gas utilizzato).
 
 **Dati avanzati**
 
@@ -231,12 +238,15 @@ I dati di livello superiore del livello di consenso includono quanto segue:
 
 ## Block explorer {#block-explorers}
 
-- [Etherscan](https://etherscan.io/) - un esploratore di blocchi che puoi usare per recuperare i dati per la Rete Principale di Ethereum e le reti di prova di Ropsten, Kovan, Rinkeby e Goerli
-- [Beaconcha.in](https://beaconcha.in/) - un esploratore di blocchi open source per la Rete Principale di Ethereum e la rete di prova di Goerli
+- [Etherscan](https://etherscan.io/) - un esploratore di blocchi che puoi usare per recuperare i dati per la Rete Principale di Ethereum e la rete di prova Sepolia
+- [3xpl](https://3xpl.com/ethereum) - un esploratore di Ethereum open source e privo di inserzioni che consente di scaricare i propri dataset
+- [Beaconcha.in](https://beaconcha.in/) - un esploratore di blocchi open source per la Rete Principale di Ethereum e la rete di prova di Sepolia
 - [Blockchair](https://blockchair.com/ethereum): l'esploratore di Ethereum più privato. Anche per ordinare e filtrare i dati (mempool)
 - [Etherchain](https://www.etherchain.org/) - un esploratore di blocchi per la rete principale di Ethereum
-- [Ethplorer](https://ethplorer.io/) - un esploratore di blocchi incentrato sui token per la Rete Principale di Ethereum e la rete di prova di Kovan
+- [Ethplorer](https://ethplorer.io/) - un esploratore di blocchi incentrato sui token per la Rete Principale di Ethereum e la rete di prova di Sepolia
 - [Rantom](https://rantom.app/): Un visualizzatore di transazioni NFT e DeFi open source e intuitivo per gli utenti, per una visione dettagliata
+- [Ethernow](https://www.ethernow.xyz/): un esploratore in tempo reale delle transazioni che ti consente di visualizzare il livello pre-catena della Rete Principale di Ethereum
+- [Otterscan](https://otterscan.io/) - un esploratore di blocchi open source alternativo per Ethereum
 
 ## Approfondimenti {#further-reading}
 

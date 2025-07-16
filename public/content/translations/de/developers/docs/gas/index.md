@@ -117,23 +117,7 @@ Die [Skalierbarkeits-Upgrades](/roadmap/) für Ethereum waren letztendlich dazu 
 
 Die Skalierung auf Layer 2 ist eine der wichtigsten Initiativen, um die Gaskosten, das Nutzererlebnis und die Skalierbarkeit deutlich zu verbessern. [Mehr zur Skalierung mit Layer 2](/developers/docs/scaling/#layer-2-scaling)
 
-## Was war das London-Upgrade/EIP-1559? {#what-was-the-london-upgrade-eip-1559}
-
-Vor dem London-Upgrade hatte Ethereum Blöcke mit fester Größe. In Zeiten hoher Netzwerknachfrage arbeiteten diese Blöcke mit voller Kapazität. Infolgedessen mussten die Nutzer oft warten, bis die Nachfrage zurückging, um in einen Block aufgenommen zu werden. Das führte zu einer schlechten Nutzererfahrung. Mit dem London-Upgrade wurden Blöcke variabler Größe in Ethereum eingeführt.
-
-Die Berechnungsart für Transaktionsgebühren im Ethereum-Netzwerk änderte sich mit dem [London-Upgrade](/history/#london) vom August 2021. Vor dem London-Upgrade wurden die Gebühren ohne Trennung von `Basis-` und `Prioritätsgebühren` wie folgt berechnet:
-
-Angenommen, Alice müsste Bob 1 ETH zahlen. Bei der Transaktion liegt das Gaslimit bei 21.000 Einheiten und der Gaspreis bei 200 gwei.
-
-Die Gesamtgebühr würde sich wie folgt berechnen: `Gas units (limit) * Gas price per unit` d. h. `21,000 * 200 = 4,200,000 gwei` oder 0,0042 ETH
-
-Durch die Implementierung von [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) im Rahmen des London-Upgrades wurde der Mechanismus der Transaktionsgebühren komplexer, aber die Gasgebühren wurden einfacher vorauszusagen und das führte zu einem effizienteren Markt für Transaktionsgebühren. Die Nutzer können Transaktionen mit einer `maxFeePerGas` einreichen, die dem Betrag entspricht, den sie bereit sind, für die Ausführung der Transaktion zu zahlen. Dabei wissen sie, dass sie nicht mehr als den Marktpreis für Gas (`baseFeePerGas`) zahlen werden und alles, was darüber hinausgeht, abzüglich ihres Trinkgelds, zurückerstattet bekommen.
-
-In diesem Video werden EIP-1559 und die Vorteile, die es bringt, erläutert:
-
-<YouTube id="MGemhK9t44Q" />
-
-## Gasgebühren überwachen {#moitoring-gas-fees}
+## Gasgebühren überwachen {#monitoring-gas-fees}
 
 Wenn Sie die Gaspreise überwachen möchten, damit Sie Ihre ETH günstiger verschicken können, stehen Ihnen unterschiedliche Tools zur Verfügung, wie zum Beispiel:
 
@@ -152,4 +136,4 @@ Wenn Sie die Gaspreise überwachen möchten, damit Sie Ihre ETH günstiger versc
 - [Proof-of-Stake und Proof-of-Work im Vergleich](https://blockgeeks.com/guides/proof-of-work-vs-proof-of-stake/)
 - [Strategien für Programmierer zur Optimierung des Gasverbrauchs](https://www.alchemy.com/overviews/solidity-gas-optimization)
 - [Spezifikationen zu EIP-1559](https://eips.ethereum.org/EIPS/eip-1559).
-- [Ressourcen von Tim Beiko zu EIP-1559](https://hackmd.io/@timbeiko/1559-resources).
+- [Tim Beikos EIP-1559-Ressourcen](https://hackmd.io/@timbeiko/1559-resources).

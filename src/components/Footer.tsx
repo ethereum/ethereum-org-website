@@ -1,40 +1,43 @@
-import { useTranslation } from "next-i18next"
-import { FaDiscord, FaGithub, FaTwitter } from "react-icons/fa"
-import { IoChevronUpSharp } from "react-icons/io5"
-import {
-  Box,
-  Flex,
-  Heading,
-  Icon,
-  List,
-  ListItem,
-  SimpleGrid,
-  Text,
-} from "@chakra-ui/react"
+"use client"
+
+import { ChevronUp } from "lucide-react"
 
 import type { FooterLink, FooterLinkSection } from "@/lib/types"
 
-import { BaseLink } from "@/components/Link"
+import Discord from "@/components/icons/discord.svg"
+import Farcaster from "@/components/icons/farcaster.svg"
+import Github from "@/components/icons/github.svg"
+import Twitter from "@/components/icons/twitter.svg"
 import Translation from "@/components/Translation"
 
+import { cn } from "@/lib/utils/cn"
 import { scrollIntoView } from "@/lib/utils/scrollIntoView"
 
-import { Button } from "./Buttons"
+import { Button } from "./ui/buttons/Button"
+import { BaseLink } from "./ui/Link"
+import { List, ListItem } from "./ui/list"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 const socialLinks = [
   {
-    icon: FaGithub,
-    to: "https://github.com/ethereum/ethereum-org-website",
+    icon: Github,
+    href: "https://github.com/ethereum/ethereum-org-website",
     ariaLabel: "GitHub",
   },
   {
-    icon: FaTwitter,
-    to: "https://twitter.com/ethdotorg",
-    ariaLabel: "Twitter",
+    icon: Farcaster,
+    href: "https://warpcast.com/ethdotorg",
+    ariaLabel: "Farcaster",
   },
   {
-    icon: FaDiscord,
-    to: "https://discord.gg/ethereum-org",
+    icon: Twitter,
+    href: "https://x.com/ethdotorg",
+    ariaLabel: "X",
+  },
+  {
+    icon: Discord,
+    href: "https://discord.gg/ethereum-org",
     ariaLabel: "Discord",
   },
 ]
@@ -51,47 +54,47 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
       title: t("learn"),
       links: [
         {
-          to: "/learn/",
+          href: "/learn/",
           text: t("learn-hub"),
         },
         {
-          to: "/what-is-ethereum/",
+          href: "/what-is-ethereum/",
           text: t("what-is-ethereum"),
         },
         {
-          to: "/eth/",
+          href: "/eth/",
           text: t("what-is-ether"),
         },
         {
-          to: "/wallets/",
+          href: "/wallets/",
           text: t("ethereum-wallets"),
         },
         {
-          to: "/web3/",
+          href: "/web3/",
           text: t("web3"),
         },
         {
-          to: "/smart-contracts/",
+          href: "/smart-contracts/",
           text: t("smart-contracts"),
         },
         {
-          to: "/gas/",
+          href: "/gas/",
           text: "Gas fees",
         },
         {
-          to: "/run-a-node/",
+          href: "/run-a-node/",
           text: t("run-a-node"),
         },
         {
-          to: "/security/",
+          href: "/security/",
           text: t("ethereum-security"),
         },
         {
-          to: "/quizzes/",
+          href: "/quizzes/",
           text: t("quizzes-title"),
         },
         {
-          to: "/glossary/",
+          href: "/glossary/",
           text: t("ethereum-glossary"),
         },
       ],
@@ -100,47 +103,47 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
       title: t("use"),
       links: [
         {
-          to: "/guides/",
+          href: "/guides/",
           text: t("guides"),
         },
         {
-          to: "/wallets/find-wallet/",
+          href: "/wallets/find-wallet/",
           text: t("nav-find-wallet-label"),
         },
         {
-          to: "/get-eth/",
+          href: "/get-eth/",
           text: t("get-eth"),
         },
         {
-          to: "/dapps/",
+          href: "/dapps/",
           text: t("decentralized-applications-dapps"),
         },
         {
-          to: "/stablecoins/",
+          href: "/stablecoins/",
           text: t("stablecoins"),
         },
         {
-          to: "/nft/",
+          href: "/nft/",
           text: t("nft-page"),
         },
         {
-          to: "/defi/",
+          href: "/defi/",
           text: t("defi-page"),
         },
         {
-          to: "/dao/",
+          href: "/dao/",
           text: t("dao-page"),
         },
         {
-          to: "/decentralized-identity/",
+          href: "/decentralized-identity/",
           text: t("decentralized-identity"),
         },
         {
-          to: "/staking/",
+          href: "/staking/",
           text: t("stake-eth"),
         },
         {
-          to: "/layer-2/",
+          href: "/layer-2/",
           text: t("layer-2"),
         },
       ],
@@ -149,45 +152,41 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
       title: t("build"),
       links: [
         {
-          to: "/developers/",
+          href: "/developers/",
           text: t("nav-builders-home-label"),
           isPartiallyActive: false,
         },
         {
-          to: "/developers/tutorials/",
+          href: "/developers/tutorials/",
           text: t("tutorials"),
         },
         {
-          to: "/developers/docs/",
+          href: "/developers/docs/",
           text: t("documentation"),
         },
         {
-          to: "/developers/learning-tools/",
+          href: "/developers/learning-tools/",
           text: t("learn-by-coding"),
         },
         {
-          to: "/developers/local-environment/",
+          href: "/developers/local-environment/",
           text: t("set-up-local-env"),
         },
         {
-          to: "/community/grants/",
+          href: "/community/grants/",
           text: t("grants"),
         },
         {
-          to: "/developers/docs/intro-to-ethereum/",
+          href: "/developers/docs/intro-to-ethereum/",
           text: t("nav-docs-foundation-label"),
         },
         {
-          to: "/developers/docs/design-and-ux/",
+          href: "/developers/docs/design-and-ux/",
           text: t("nav-docs-design-label"),
         },
         {
-          to: "/enterprise/",
+          href: "/enterprise/",
           text: t("enterprise-mainnet"),
-        },
-        {
-          to: "/enterprise/private-ethereum/",
-          text: t("enterprise-private"),
         },
       ],
     },
@@ -195,43 +194,43 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
       title: t("participate"),
       links: [
         {
-          to: "/community/",
+          href: "/community/",
           text: t("community-hub"),
         },
         {
-          to: "/community/online/",
+          href: "/community/online/",
           text: t("ethereum-online"),
         },
         {
-          to: "/community/events/",
+          href: "/community/events/",
           text: t("ethereum-events"),
         },
         {
-          to: "/contributing/",
+          href: "/contributing/",
           text: t("nav-contribute-label"),
         },
         {
-          to: "/contributing/translation-program/",
+          href: "/contributing/translation-program/",
           text: t("translation-program"),
         },
         {
-          to: "/bug-bounty/",
+          href: "/bug-bounty/",
           text: t("ethereum-bug-bounty"),
         },
         {
-          to: "/foundation/",
+          href: "/foundation/",
           text: t("ethereum-foundation"),
         },
         {
-          to: "https://blog.ethereum.org/",
+          href: "https://blog.ethereum.org/",
           text: t("ef-blog"),
         },
         {
-          to: "https://esp.ethereum.foundation",
+          href: "https://esp.ethereum.foundation",
           text: t("esp"),
         },
         {
-          to: "https://devcon.org/",
+          href: "https://devcon.org/",
           text: t("devcon"),
         },
       ],
@@ -240,32 +239,36 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
       title: t("research"),
       links: [
         {
-          to: "/whitepaper/",
+          href: "/whitepaper/",
           text: t("ethereum-whitepaper"),
         },
         {
-          to: "/roadmap/",
+          href: "/roadmap/",
           text: t("ethereum-roadmap"),
         },
         {
-          to: "/roadmap/security/",
+          href: "/roadmap/security/",
           text: t("nav-roadmap-security-label"),
         },
         {
-          to: "/history/",
+          href: "/history/",
           text: t("nav-history-label"),
         },
         {
-          to: "/community/research/",
+          href: "/community/research/",
           text: t("nav-open-research-label"),
         },
         {
-          to: "/eips/",
+          href: "/eips/",
           text: t("eips"),
         },
         {
-          to: "/governance/",
+          href: "/governance/",
           text: t("ethereum-governance"),
+        },
+        {
+          href: "/trillion-dollar-security/",
+          text: t("trillion-dollar-security"),
         },
       ],
     },
@@ -273,165 +276,107 @@ const Footer = ({ lastDeployLocaleTimestamp }: FooterProps) => {
 
   const dipperLinks: FooterLink[] = [
     {
-      to: "/about/",
+      href: "/about/",
       text: t("about-us"),
     },
     {
-      to: "/assets/",
+      href: "/assets/",
       text: t("ethereum-brand-assets"),
     },
     {
-      to: "/community/code-of-conduct/",
+      href: "/community/code-of-conduct/",
       text: t("nav-code-of-conduct"),
     },
     {
-      to: "/about/#open-jobs",
+      href: "/about/#open-jobs",
       text: t("jobs"),
     },
     {
-      to: "/privacy-policy/",
+      href: "/privacy-policy/",
       text: t("privacy-policy"),
     },
     {
-      to: "/terms-of-use/",
+      href: "/terms-of-use/",
       text: t("terms-of-use"),
     },
     {
-      to: "/cookie-policy/",
+      href: "/cookie-policy/",
       text: t("cookie-policy"),
     },
     {
-      to: "mailto:press@ethereum.org",
+      href: "mailto:press@ethereum.org",
       text: t("contact"),
     },
   ]
 
-  const hoverStyles = {
-    textDecor: "none",
-    color: "primary.base",
-    _after: {
-      color: "primary.base",
-    },
-    "& svg": {
-      fill: "primary.base",
-    },
-  }
-
-  const linkProps = {
-    isPartiallyActive: false,
-    textDecor: "none",
-    color: "body.medium",
-    fontWeight: "normal",
-    _hover: hoverStyles,
-    sx: {
-      "& svg": {
-        fill: "body.medium",
-      },
-    },
-  }
+  const footerLinkClassName =
+    "text-body-medium no-underline hover:text-primary hover:after:text-primary"
 
   return (
-    <Box as="footer" py="4" px="8">
-      <Flex
-        justify={{ base: "center", md: "space-between" }}
-        alignItems="center"
-        flexWrap="wrap"
-        gap={8}
-        pt={4}
-        pb={4}
-        borderTop={"1px solid"}
-        borderColor={"body.light"}
-      >
-        <Text fontSize={"sm"} fontStyle={"italic"} color={"body.medium"}>
+    <footer className="px-4 py-4">
+      <div className="flex flex-wrap items-center justify-center gap-8 border-t border-body-light px-4 py-4 md:justify-between">
+        <p className="text-sm italic text-body-medium">
           <Translation id="website-last-updated" />: {lastDeployLocaleTimestamp}
-        </Text>
+        </p>
 
         <Button
-          leftIcon={<IoChevronUpSharp />}
           variant="outline"
           isSecondary
-          onClick={() => scrollIntoView("__next")}
+          onClick={() => scrollIntoView("body")}
         >
-          Go to top
+          <ChevronUp /> <Translation id="go-to-top" />
         </Button>
-      </Flex>
+      </div>
 
-      <SimpleGrid
-        gap={4}
-        justifyContent="space-between"
-        templateColumns={{
-          base: "auto",
-          sm: "repeat(2, auto)",
-          md: "repeat(3, auto)",
-          xl: "repeat(6, auto)",
-        }}
-      >
+      <div className="grid auto-cols-auto justify-between gap-4 px-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5">
         {linkSections.map((section: FooterLinkSection, idx) => (
-          <Box key={idx}>
-            <Heading as="h3" fontSize="sm" lineHeight="base" my="1.14em">
-              <Translation id={section.title} />
-            </Heading>
-            <List fontSize="sm" lineHeight="base" fontWeight="normal" m="0">
+          <div key={idx}>
+            <h3 className="my-5 text-sm font-bold">{section.title}</h3>
+            <List className="m-0 mb-4 list-none text-sm">
               {section.links.map((link, linkIdx) => (
-                <ListItem key={linkIdx} mb={4}>
-                  <BaseLink href={link.to} {...linkProps}>
+                <ListItem key={linkIdx} className="mb-4">
+                  <BaseLink
+                    href={link.href}
+                    className={footerLinkClassName}
+                    isPartiallyActive={false}
+                  >
                     {link.text}
                   </BaseLink>
                 </ListItem>
               ))}
             </List>
-          </Box>
+          </div>
         ))}
-      </SimpleGrid>
-      <Flex
-        p={6}
-        flexDir="column"
-        alignItems="center"
-        justifyContent="center"
-        fontSize="sm"
-        bg="background.highlight"
-      >
-        <Box display="flex" gap={4}>
-          {socialLinks.map(({ to, ariaLabel, icon }) => (
+      </div>
+      <div className="flex flex-col items-center justify-center bg-background-highlight p-6 text-sm">
+        <div className="flex gap-4">
+          {socialLinks.map(({ href, ariaLabel, icon: Icon }) => (
             <BaseLink
-              key={to}
-              href={to}
+              key={href}
+              href={href}
               hideArrow
-              color="body.base"
               aria-label={ariaLabel}
-              _focus={{ color: "primary.base" }}
+              className="text-body hover:text-primary"
             >
-              <Icon
-                as={icon}
-                _hover={{
-                  transition:
-                    "color 0.2s ease-in-out, transform 0.2s ease-in-out",
-                }}
-                fontSize="4xl"
-              />
+              <Icon className="h-9 w-9 hover:transform hover:transition-colors" />
             </BaseLink>
           ))}
-        </Box>
-        <List
-          display="flex"
-          flexDir={{ base: "column", sm: "row" }}
-          flexWrap="wrap"
-          justifyContent={{ base: "center", sm: "space-between", md: "center" }}
-          fontWeight="normal"
-          fontSize="sm"
-          p={5}
-          m={0}
-        >
-          {dipperLinks.map(({ to, text }) => (
-            <ListItem key={text} textAlign="center" px="2">
-              <BaseLink href={to} w={["100%", null]} {...linkProps}>
+        </div>
+        <List className="m-0 flex list-none flex-col flex-wrap justify-center p-5 text-sm font-normal sm:flex-row sm:justify-between md:justify-center">
+          {dipperLinks.map(({ href, text }) => (
+            <ListItem key={text} className="px-2 text-center">
+              <BaseLink
+                href={href}
+                className={cn("w-full sm:w-auto", footerLinkClassName)}
+                isPartiallyActive={false}
+              >
                 {text}
               </BaseLink>
             </ListItem>
           ))}
         </List>
-      </Flex>
-    </Box>
+      </div>
+    </footer>
   )
 }
 

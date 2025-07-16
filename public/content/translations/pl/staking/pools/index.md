@@ -68,7 +68,7 @@ Już teraz! Aktualizacja sieci Shanghai/Capella miała miejsce w kwietniu 2023 r
 
 Alternatywnie, pule wykorzystujące token stakingowy ERC-20 pozwalają użytkownikom handlować tym tokenem na otwartym rynku, umożliwiając sprzedaż pozycji stakingowej, skutecznie „wypłacając” bez faktycznego usuwania ETH z kontraktu stakingowego.
 
-<ButtonLink to="/staking/withdrawals/">Więcej o wypłatach ze stakingu</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">Więcej o wypłatach ze stakingu</ButtonLink>
 </ExpandableCard>
 
 <ExpandableCard title="Czy różni się to od stakowania z moją giełdą?">

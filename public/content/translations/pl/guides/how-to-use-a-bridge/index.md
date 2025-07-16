@@ -1,10 +1,10 @@
 ---
-title: Jak zmostkować tokeny do warstwy 2
+title: Jak przenieść tokeny do warstwy 2 przy użyciu mostu
 description: Przewodnik wyjaśniający, jak przenieść tokeny z Ethereum do warstwy 2 za pomocą mostu.
 lang: pl
 ---
 
-# Jak zmostkować tokeny do warstwy 2
+# Jak przenieść tokeny do warstwy 2 przy użyciu mostu
 
 Jeśli ruch na Ethereum jest duży, może stać się drogi. Jednym z rozwiązań jest stworzenie nowych „warstw”: tj. różnych sieci, które działają w podobny sposób jak samo Ethereum. Te tak zwane warstwy 2 pomagają zmniejszyć przeciążenie i koszty na Ethereum, przetwarzając znacznie więcej transakcji po niższych opłatach i przechowując ich wyniki w Ethereum tylko co jakiś czas. W związku z tym te warstwy 2 umożliwiają nam dokonywanie transakcji ze zwiększoną szybkością i obniżonymi kosztami. Wiele popularnych krypto projektów przenosi się do warstwy 2 ze względu na te korzyści. Najprostszym sposobem na przeniesienie tokenów z Ethereum do warstwy 2 jest użycie mostu.
 
@@ -54,7 +54,7 @@ Możesz użyć [chainlist.org](http://chainlist.org), aby znaleźć szczegóły 
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Chcesz dowiedzieć się więcej?</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     Zobacz nasze inne przewodniki
   </ButtonLink>
 </InfoBanner>

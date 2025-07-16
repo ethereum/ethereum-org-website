@@ -12,80 +12,15 @@ Sind Sie auf der Suche nach dem offiziellen Ethereum-Support? Es ist wichtig, zu
 
 Es ist wichtig, die dezentrale Gestaltung von Ethereum zu verstehen, denn jeder, der behauptet, offizieller Support für Ethereum zu sein, versucht wahrscheinlich, Sie zu betrügen. Der beste Schutz vor Betrug ist, sich zu informieren und Sicherheit ernst zu nehmen.
 
-<DocLink to="/security/">
+<DocLink href="/security/">
   Ethereum – Sicherheits- und Betrugsvorbeugung
 </DocLink>
 
-<DocLink to="/learn/">
+<DocLink href="/learn/">
   Mehr erfahren über die Grundlagen von Ethereum
 </DocLink>
 
 Trotz des Mangels an offizieller Unterstützung sind viele Gruppen, Communitys und Projekte im gesamten Ethereum-Ökosystem gern bereit, zu helfen, und Sie können auf dieser Seite viele nützliche Informationen und Ressourcen finden. Haben Sie noch Fragen? Treten Sie dem [ethereum.org Discord](/discord/) bei und wir versuchen, Ihnen weiterzuhelfen.
-
-## Wallet-Support {#wallet-support}
-
-Haben Sie Probleme mit Ihrer Wallet? Die meisten Wallets haben spezielle Supportteams, die Ihnen helfen können:
-
-- [MetaMask](https://metamask.zendesk.com/hc/)
-- [Argent](https://support.argent.xyz/hc/)
-- [MyEtherWallet](https://help.myetherwallet.com/)
-
-_Das ist keine vollständige Liste. Brauchen Sie Hilfe bei der Suche nach Unterstützung für eine bestimmte Wallet? Treten Sie dem [ethereum.org-Discord](https://discord.gg/rZz26QWfCg) bei, dann versuchen wir, Ihnen zu helfen._
-
-Suchen Sie eine Ethereum-Wallet? [Sehen Sie sich unsere vollständige Liste der Ethereum-Wallets an](/wallets/find-wallet/).
-
-## dApps erstellen {#building-support}
-
-Erstellen kann durchaus schwer sein. Hier finden Sie einige Breiche mit Schwerpunkt auf Entwicklung mit erfahrenen Ethereum-Entwicklern, die Ihnen gerne helfen.
-
-- [Alchemy University](https://university.alchemy.com/#starter_code)
-- [CryptoDevs-Discord](https://discord.com/invite/5W5tVb3)
-- [Ethereum StackExchange](https://ethereum.stackexchange.com/)
-- [StackOverflow](https://stackoverflow.com/questions/tagged/web3)
-- [Web3 University](https://www.web3.university/)
-- [LearnWeb3](https://discord.com/invite/learnweb3)
-
-In unserem Bereich mit [Ethereum-Entwicklerressourcen](/developers/) finden Sie auch Dokumentationen und Entwicklungsleitfäden.
-
-### Tools {#dapp-tooling}
-
-Bezieht sich Ihre Frage auf ein bestimmtes Tool, Projekt oder eine Bibliothek? Die meisten Projekte haben Chat-Server oder Foren, die Unterstützung bieten.
-
-Hier sind einige beliebte Beispiele:
-
-- [Solidity](https://gitter.im/ethereum/solidity/)
-- [ethers.js](https://discord.gg/6jyGVDK6Jx)
-- [web3.js](https://discord.gg/GsABYQu4sC)
-- [Hardhat](https://discord.gg/xtrMGhmbfZ)
-- [Truffle](https://discord.gg/8uKcsccEYE)
-- [Alchemy](http://alchemy.com/discord)
-- [Tenderly](https://discord.gg/fBvDJYR)
-
-## Einen Knoten betreiben {#node-support}
-
-Wenn Sie einen Knoten oder Validator betreiben, finden Sie hier einige Communitys, die Ihnen den Einstieg erleichtern.
-
-- [EthStaker-Discord](https://discord.gg/ethstaker)
-- [EthStaker-Reddit](https://www.reddit.com/r/ethstaker)
-
-Die meisten Teams, die Ethereum-Clients entwickeln, haben auch eigene, öffentlich zugängliche Bereiche, in denen Sie Unterstützung erhalten und Fragen stellen können.
-
-### Ausführende Clients {#execution-clients}
-
-- [Geth](https://discord.gg/FqDzupGyYf)
-- [Nethermind](https://discord.gg/YJx3pm8z5C)
-- [Besu](https://discord.gg/p8djYngzKN)
-- [Erigon](https://github.com/ledgerwatch/erigon/issues)
-
-### Konsens-Clients {#consensus-clients}
-
-- [Prysm](https://discord.gg/prysmaticlabs)
-- [Nimbus](https://discord.gg/nSmEH3qgFv)
-- [Lighthouse](https://discord.gg/cyAszAh)
-- [Teku](https://discord.gg/7hPv2T6)
-- [Lodestar](https://discord.gg/aMxzVcr)
-
-Sie können hier auch [lernen, wie ein Knoten betrieben wird](/developers/docs/nodes-and-clients/run-a-node/).
 
 ## Häufig gestellte Fragen {#faq}
 
@@ -109,8 +44,61 @@ Transaktionen auf Ethereum können manchmal stecken bleiben, wenn Sie eine niedr
 
 ### Wie kann ich Ethereum minen? {#mining-ethereum}
 
-Ethereum-Mining ist nicht mehr möglich. Das Mining wurde abgeschaltet, als Ethereum von Proof-of-Work zu Proof-of-Stake wechselte. Anstatt Miner hat Ethereum jetzt Validatoren. Validatoren setzen ETH ein und erhalten für das Staking des Netzwerkes eine Belohnung.
+Ethereum-Mining ist nicht mehr möglich. Das Mining wurde abgeschaltet, als Ethereum von [Proof-of-Work](/glossary/#pow) auf [Proof-of-Stake](/glossary/#pos) umstieg. Anstatt Miner hat Ethereum jetzt Validatoren. Jeder kann ETH [staken](/glossary/#staking) und Staking-Belohnungen für das Ausführen einer Validator-Software zur Sicherung des Netzwerks erhalten.
 
-### Wie werde ich Staker/Validator? {#become-validator}
+### Wie werde ich Staker bzw. wie betreibe ich einen Validator? {#how-to-stake}
 
 Um ein Validator zu werden, müssen Sie 32 ETH in den Einlagenvertrag von Ethereum einzahlen und einen Validator-Knoten aufbauen. Weitere Informationen dazu finden Sie auf den [Staking-Seiten](/staking) und [dem Staking-Launchpad](https://launchpad.ethereum.org/).
+
+## dApps erstellen {#building-support}
+
+Erstellen kann durchaus schwer sein. Hier finden Sie einige Breiche mit Schwerpunkt auf Entwicklung mit erfahrenen Ethereum-Entwicklern, die Ihnen gerne helfen.
+
+- [Alchemy University](https://university.alchemy.com/#starter_code)
+- [CryptoDevs-Discord](https://discord.com/invite/5W5tVb3)
+- [Ethereum StackExchange](https://ethereum.stackexchange.com/)
+- [StackOverflow](https://stackoverflow.com/questions/tagged/web3)
+- [Web3 University](https://www.web3.university/)
+- [LearnWeb3](https://discord.com/invite/learnweb3)
+
+In unserem Bereich mit [Ethereum-Entwicklerressourcen](/developers/) finden Sie auch Dokumentationen und Entwicklungsleitfäden.
+
+### Tools {#dapp-tooling}
+
+Bezieht sich Ihre Frage auf ein bestimmtes Tool, Projekt oder eine Bibliothek? Die meisten Projekte haben Chat-Server oder Foren, die Unterstützung bieten.
+
+Hier sind einige beliebte Beispiele:
+
+- [Solidity](https://gitter.im/ethereum/solidity)
+- [ethers.js](https://discord.gg/6jyGVDK6Jx)
+- [web3.js](https://discord.gg/GsABYQu4sC)
+- [Hardhat](https://discord.gg/xtrMGhmbfZ)
+- [Alchemy](http://alchemy.com/discord)
+- [Tenderly](https://discord.gg/fBvDJYR)
+
+## Einen Knoten betreiben {#node-support}
+
+Wenn Sie einen Knoten oder Validator betreiben, finden Sie hier einige Communitys, die Ihnen den Einstieg erleichtern.
+
+- [EthStaker-Discord](https://discord.gg/ethstaker)
+- [EthStaker-Reddit](https://www.reddit.com/r/ethstaker)
+
+Die meisten Teams, die Ethereum-Clients entwickeln, haben auch eigene, öffentlich zugängliche Bereiche, in denen Sie Unterstützung erhalten und Fragen stellen können.
+
+### Ausführende Clients {#execution-clients}
+
+- [Geth](https://discord.gg/FqDzupGyYf)
+- [Nethermind](https://discord.gg/YJx3pm8z5C)
+- [Besu](https://discord.gg/p8djYngzKN)
+- [Erigon](https://github.com/ledgerwatch/erigon/issues)
+- [Reth](https://github.com/paradigmxyz/reth/discussions)
+
+### Konsens-Clients {#consensus-clients}
+
+- [Prysm](https://discord.gg/prysmaticlabs)
+- [Nimbus](https://discord.gg/nSmEH3qgFv)
+- [Lighthouse](https://discord.gg/cyAszAh)
+- [Teku](https://discord.gg/7hPv2T6)
+- [Lodestar](https://discord.gg/aMxzVcr)
+
+Sie können hier auch [lernen, wie ein Knoten betrieben wird](/developers/docs/nodes-and-clients/run-a-node/).

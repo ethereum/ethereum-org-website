@@ -74,7 +74,7 @@ Podlaga za DAO je pametna pogodba. Ta pogodba določa pravila organizacije in hr
 
 To je mogoče, saj so pametne pogodbe odporne proti posegom, ko so enkrat aktivne na Ethereumu. Ne morete kar urejati kode (DAO pravil) brez, da bi kdo opazil, saj je vse javno dostopno.
 
-<DocLink to="/smart-contracts/">
+<DocLink href="/smart-contracts/">
   Več o pametnih pogodbah
 </DocLink>
 

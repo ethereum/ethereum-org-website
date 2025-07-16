@@ -1,142 +1,226 @@
-/* css imported from https://fonts.googleapis.com/css2?family=Inter:wght@400;700 */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-/* cyrillic-ext */
-@font-face {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(/fonts/inter/cyrillic-ext.woff2) format("woff2");
-  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
-    U+FE2E-FE2F;
+@import "@docsearch/css";
+@import "@/styles/colors.css";
+@import "@/styles/semantic-tokens.css";
+@import "@/styles/docsearch.css";
+@import "@rainbow-me/rainbowkit/styles.css";
+
+@layer base {
+  :root {
+    --font-inter: Inter, sans-serif;
+    --font-mono: "IBM Plex Mono", Courier, monospace;
+
+    /* Misc semantics: light mode */
+    --tooltip-shadow: rgba(0, 0, 0, 0.24);
+    --switch-background: var(--gray-300);
+    --hub-hero-content: rgba(255, 255, 255, 0.8);
+    --gradient-main: linear-gradient(
+      102.7deg,
+      rgba(185, 185, 241, 0.2) 0%,
+      rgba(84, 132, 234, 0.2) 51.56%,
+      rgba(58, 142, 137, 0.2) 100%
+    );
+    --feedback-gradient: var(--gradient-main);
+    --table-box-shadow:
+      0 14px 66px rgba(0, 0, 0, 0.07), 0 10px 17px rgba(0, 0, 0, 0.03),
+      0 4px 7px rgba(0, 0, 0, 0.05);
+    --table-item-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+
+    --gradient-banner: radial-gradient(
+      155% 100% at 50% 0%,
+      rgba(201, 179, 245, 0.16) 0%,
+      rgba(201, 179, 245, 0.48) 33%,
+      rgba(136, 170, 241, 0.16) 66%,
+      rgba(255, 255, 255, 0) 100%
+    );
+
+    --banner-grid-gradient: linear-gradient(
+      90deg,
+      rgba(127, 127, 213, 0.2) 0%,
+      rgba(132, 145, 221, 0.2) 50%,
+      rgba(145, 234, 228, 0.2) 100%
+    );
+    --search-background: var(--background);
+    --gradient-staking: linear-gradient(
+      rgba(237, 194, 84, 0.1) 13.39%,
+      rgba(75, 231, 156, 0.1) 44.21%,
+      rgba(231, 202, 200, 0.1) 82.88%
+    );
+
+    --gradient-step-1: rgba(127, 127, 213, 0.2);
+  }
+
+  .dark {
+    /* Misc semantics: dark mode */
+    --tooltip-shadow: rgba(255, 255, 255, 0.24);
+    --switch-background: rgba(255, 255, 255, 0.24);
+    --hub-hero-content: rgba(34, 34, 34, 0.8);
+    --gradient-main: linear-gradient(
+      102.7deg,
+      rgba(185, 185, 241, 0.2) 0%,
+      rgba(84, 132, 234, 0.2) 51.56%,
+      rgba(58, 142, 137, 0.2) 100%
+    );
+    --feedback-gradient: linear-gradient(
+      83.46deg,
+      #2c2c32 7.03%,
+      #44404d 52.42%,
+      #303038 98.77%
+    );
+    --table-box-shadow:
+      0 14px 66px hsla(0, 0%, 96.1%, 0.07),
+      0 10px 17px hsla(0, 0%, 96.1%, 0.03), 0 4px 7px hsla(0, 0%, 96.1%, 0.05);
+    --table-item-box-shadow: 0 1px 1px hsla(0, 0%, 100%, 0.1);
+    --banner-grid-gradient: linear-gradient(
+      90deg,
+      rgba(172, 182, 229, 0.08) 0%,
+      rgba(134, 253, 232, 0.08) 100%
+    );
+    --search-background: #4c4c4c;
+
+    --gradient-step-1: rgba(127, 127, 213, 0.2);
+  }
 }
-/* cyrillic */
-@font-face {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(/fonts/inter/cyrillic.woff2) format("woff2");
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+
+@layer base {
+  * {
+    @apply scroll-smooth border-border;
+  }
+
+  body {
+    @apply bg-background font-body leading-base text-body;
+  }
+
+  a {
+    @apply text-primary underline underline-offset-3 hover:text-primary-hover focus-visible:rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-hover;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  section {
+    @apply scroll-mt-20;
+  }
+
+  h1 {
+    @apply text-4xl lg:text-5xl;
+  }
+
+  h2 {
+    @apply text-3xl lg:text-4xl;
+  }
+
+  h3 {
+    @apply text-2xl lg:text-3xl;
+  }
+
+  h4 {
+    @apply text-xl lg:text-2xl;
+  }
+
+  h5 {
+    @apply text-md lg:text-xl;
+  }
+
+  h6 {
+    @apply text-sm lg:text-md;
+  }
+
+  pre,
+  code,
+  kbd,
+  samp {
+    @apply font-monospace text-base leading-base;
+  }
+
+  /* TODO: remove these global styles when the list component migration is complete */
+  ul,
+  ol {
+    margin: 0px 0px 1.45rem 1.45rem;
+    padding: 0;
+    list-style-type: initial;
+
+    & li {
+      padding-inline-start: 0;
+    }
+  }
+
+  li {
+    margin-bottom: calc(1.45rem / 2);
+
+    & > ol,
+    & > ul {
+      margin-inline-start: 1.45rem;
+      margin-block: calc(1.45rem / 2);
+      margin-top: calc(1.45rem / 2);
+    }
+
+    & * {
+      @apply last:mb-0;
+    }
+
+    & > p {
+      margin-bottom: calc(1.45rem / 2);
+    }
+  }
 }
-/* greek-ext */
-@font-face {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(/fonts/inter/greek-ext.woff2) format("woff2");
-  unicode-range: U+1F00-1FFF;
+
+@layer components {
+  .staking-grid {
+    grid-template-areas:
+      "ether header glyph"
+      "decorator content content";
+  }
+
+  .staking-grid-stacked {
+    grid-template-areas:
+      "ether"
+      "header"
+      "content";
+  }
+
+  .area-ether {
+    grid-area: ether;
+  }
+
+  .area-header {
+    grid-area: header;
+  }
+
+  .area-content {
+    grid-area: content;
+  }
+
+  .area-glyph {
+    grid-area: glyph;
+  }
+
+  .gold {
+    @apply font-bold text-staking-gold;
+  }
+
+  .dev-ring {
+    @apply ring ring-red-500 sm:ring-orange-500 md:ring-yellow-400 lg:ring-green-500 xl:ring-blue-500 2xl:ring-violet-500;
+  }
 }
-/* greek */
-@font-face {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(/fonts/inter/greek.woff2) format("woff2");
-  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1,
-    U+03A3-03FF;
-}
-/* vietnamese */
-@font-face {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(/fonts/inter/vietnamese.woff2) format("woff2");
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
-    U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329,
-    U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(/fonts/inter/latin-ext.woff2) format("woff2");
-  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF,
-    U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(/fonts/inter/latin.woff2) format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
-    U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* cyrillic-ext */
-@font-face {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(/fonts/inter/cyrillic-ext.woff2) format("woff2");
-  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
-    U+FE2E-FE2F;
-}
-/* cyrillic */
-@font-face {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(/fonts/inter/cyrillic.woff2) format("woff2");
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-/* greek-ext */
-@font-face {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(/fonts/inter/greek-ext.woff2) format("woff2");
-  unicode-range: U+1F00-1FFF;
-}
-/* greek */
-@font-face {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(/fonts/inter/greek.woff2) format("woff2");
-  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1,
-    U+03A3-03FF;
-}
-/* vietnamese */
-@font-face {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(/fonts/inter/vietnamese.woff2) format("woff2");
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
-    U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329,
-    U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(/fonts/inter/latin-ext.woff2) format("woff2");
-  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF,
-    U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(/fonts/inter/latin.woff2) format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
-    U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+
+@layer utilities {
+  .animate-pause {
+    animation-play-state: paused;
+  }
 }

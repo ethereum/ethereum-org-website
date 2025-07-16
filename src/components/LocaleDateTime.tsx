@@ -1,4 +1,4 @@
-import { useRouter } from "next/router"
+import { useLocale } from "next-intl"
 
 type LocaleDateTimeProps = {
   utcDateTime: string
@@ -26,7 +26,7 @@ const LocaleDateTime = ({
       "LocaleDateTime hideDate and hideTime props cannot both be true"
     )
 
-  const { locale } = useRouter()
+  const locale = useLocale()
   const date = new Date(utcDateTime)
   const defaultDateOptions: Intl.DateTimeFormatOptions = {
     month: "long",

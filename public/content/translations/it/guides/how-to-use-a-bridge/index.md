@@ -10,7 +10,7 @@ Se c'è molto traffico su Ethereum, può diventare costoso. Una soluzione è cre
 
 **Prerequisiti:**
 
-- avere un portafoglio di criptovalute, puoi seguire questo tutorial: [Come "registrare" un conto di Ethereum](/guides/how-to-register-an-ethereum-account/)
+- possedere un portafoglio di criptovalute; a tale scopo puoi seguire questo tutorial: [Come creare un conto di Ethereum](/guides/how-to-create-an-ethereum-account/)
 - aggiungere fondi al tuo portafoglio
 
 ## 1. Determina quale rete di livello 2 desideri utilizzare
@@ -54,7 +54,7 @@ Puoi utilizzare [chainlist.org](http://chainlist.org) per trovare i dettagli RPC
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Vuoi scoprire di più?</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     Visualizza le altre guide
   </ButtonLink>
 </InfoBanner>

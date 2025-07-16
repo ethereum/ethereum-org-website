@@ -68,7 +68,7 @@ Ngay bây giờ! Nâng cấp mạng lưới Shanghai/Capella diễn ra vào thá
 
 Ngoài ra, các nhóm đặt cọc sử dụng token đặt cọc ERC-20 cho phép người dùng giao dịch token này trên thị trường mở, giúp bạn bán vị thế đặt cọc, qua đó "rút" một cách hiệu quả mà không cần thực sự rút ETH khỏi hợp đồng đặt cọc.
 
-<ButtonLink to="/staking/withdrawals/">Thông tin thêm về rút tiền đặt cọc</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">Thông tin thêm về rút tiền đặt cọc</ButtonLink>
 </ExpandableCard>
 
 <ExpandableCard title="Điều này có khác với việc đặt cọc với sàn giao dịch của tôi không?">

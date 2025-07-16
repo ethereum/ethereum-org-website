@@ -52,6 +52,12 @@ These libraries abstract away much of the complexity of interacting directly wit
 
 - [cloudflare-eth.com](https://www.cloudflare.com/application-services/products/web3/)
 
+**Etherscan - Block Explorer and Transaction APIs**
+- [Documentation](https://docs.etherscan.io/)
+
+**Blockscout - Open Source Block Explorer**
+- [Documentation](https://docs.blockscout.com/)
+
 **GetBlock-** **_Blockchain-as-a-service for Web3 development_**
 
 - [GetBlock.io](https://getblock.io/)

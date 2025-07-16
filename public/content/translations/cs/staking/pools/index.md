@@ -4,7 +4,7 @@ description: Přehled, jak začít se zapojením do sdruženého vkládání ETH
 lang: cs
 template: staking
 emoji: ":money_with_wings:"
-image: /images/staking/leslie-pool.png
+image: /images/use-cases/defi.png
 alt: Nosorožec Leslie plave v bazénu.
 sidebarDepth: 2
 summaryPoints:
@@ -17,7 +17,7 @@ summaryPoints:
 
 Vkladový fond je přístup založený na spolupráci, který umožňuje mnoha lidem s menším množsvím ETH získat 32 ETH potřebných k aktivaci sady validátorových klíčů. Funkce stakingových fondů není v rámci protokolu nativně podporována, takže řešením byla vytvořena tato samostatná funkce, aby potřebu řešila.
 
-Některé fondy fungují pomocí chytrých smluv, kde lze vložit prostředky do smlouvy, která důvěryhodně spravuje a sleduje váš vklad a vydává vám token, který představuje tuto hodnotu. Jiné fondy nemusí zahrnovat chytré smlouvy a jsou místo toho zprostředkovány mimo řetězec.
+Některé fondy fungují pomocí chytrých kontraktů, kde lze vložit prostředky do kontraktu, který důvěryhodně spravuje a sleduje váš vklad a vydává vám token, který představuje tuto hodnotu. Jiné fondy nemusí zahrnovat chytré kontrakty a jsou místo toho zprostředkovány mimo blockchain.
 
 ## Proč vkládat s fondem? {#why-stake-with-a-pool}
 
@@ -35,7 +35,7 @@ Kromě výhod, které jsme nastínili v našem [úvodu do vkládání](/staking/
 
 Sdružené nebo delegované vklady nejsou nativně podporovány protokolem Ethereum, ale vzhledem k poptávce po uživatelích, aby vkládali méně než 32 ETH, byl vytvořen rostoucí počet řešení, která tuto poptávku uspokojí.
 
-Každý fond a nástroje nebo smart kontrakty, které používají, byly vytvořeny různými týmy a všechny mají jiné výhody a rizika. Fondy umožňují uživatelům směnit ETH za token představující vložený ETH. Tento token je užitečný, protože umožňuje uživatelům směnit jakékoli množství ETH za ekvivalentní částku tokenu nesoucího výnos, který generuje výnos z vložených odměn aplikovaných na podkladové vložené ETH (a naopak) na decentralizovaných burzách, i když skutečný ETH zůstává vložen v konsensuální vrstvě. To znamená, že směny tam a zpět z vloženého ETH nesoucího výnos a „raw ETH“ jsou rychlé, snadné a jsou dostupné i v jiných objemech než jen v násobcích 32 ETH.
+Každý fond a nástroje nebo chytré kontrakty, které používají, byly vytvořeny různými týmy a všechny mají jiné výhody a rizika. Fondy umožňují uživatelům směnit ETH za token představující vložený ETH. Tento token je užitečný, protože umožňuje uživatelům směnit jakékoli množství ETH za ekvivalentní částku tokenu nesoucího výnos, který generuje výnos z vložených odměn aplikovaných na podkladové vložené ETH (a naopak) na decentralizovaných burzách, i když skutečný ETH zůstává vložen v konsensuální vrstvě. To znamená, že směny tam a zpět z vloženého ETH nesoucího výnos a „raw ETH“ jsou rychlé, snadné a jsou dostupné i v jiných objemech než jen v násobcích 32 ETH.
 
 Tyto vložené ETH tokeny však mají tendenci vykazovat kartelové chování, kdy velké množství vložených ETH skončí pod kontrolou několika centralizovaných organizací, místo toho aby bylo rozděleno mezi mnoho nezávislých jednotlivců. To vytváří podmínky pro cenzuru nebo extrakci hodnot. Zlatým standardem pro vkládání by vždy měli být jednotlivci provozující validátory na vlastním hardwaru, kdykoli je to možné.
 
@@ -53,11 +53,11 @@ K dispozici jsou různé možnosti, které vám pomohou s nastavením. Pomocí v
 
 <StakingProductsCardGrid category="pools" />
 
-Vezměte prosím na vědomí, že je důležité vybrat si službu, která bere [rozmanitost klientů](/developers/docs/nodes-and-clients/client-diversity/) vážně, protože zlepšuje zabezpečení sítě a omezuje vaše riziko. Služby, které prokazatelně omezují většinové klientské používání, jsou označeny <em style={{ textTransform: "uppercase" }}>„rozmanitost realizačního klienta“</em> a <em style={{ textTransform: "uppercase" }}>„rozmanitost klientů konsensu“.</em>
+Vezměte prosím na vědomí, že je důležité vybrat si službu, která bere [rozmanitost klientů](/developers/docs/nodes-and-clients/client-diversity/) vážně, protože zlepšuje zabezpečení sítě a omezuje vaše riziko. Služby, které prokazatelně omezují většinové klientské používání, jsou označeny <em style={{ textTransform: "uppercase" }}>„rozmanitost exekučního klienta“</em> a <em style={{ textTransform: "uppercase" }}>„rozmanitost konsenzus klienta“.</em>
 
 Máte návrh na vkladový nástroj, který nám chyběl? Podívejte se na naše [zásady pro záznam produktů](/contributing/adding-staking-products/), abyste zjistili, zda by se hodily, a odešlete je ke kontrole.
 
-## Často kladené otázky {#faq}
+## Často kladené dotazy {#faq}
 
 <ExpandableCard title="Jak získám odměny?">
 Tokeny ERC-20 jsou obvykle vydávány vkladatelům a představují hodnotu jejich vložených ETH společně s odměnami. Mějte na paměti, že různé fondy rozdělují odměny za vklady svým uživatelům mírně odlišnými metodami, ale toto je společné téma.
@@ -68,7 +68,7 @@ Právě teď! K upgradu sítě Shanghai/Capella došlo v dubnu 2023 a zavedlo v�
 
 Případně fondy, které využívají token ERC-20 pro vkládání, umožňují uživatelům obchodovat s tímto tokenem na otevřeném trhu, což vám umožní prodat svou pozici pro vkládání a efektivně se „stáhnout“, aniž byste skutečně odstranili ETH ze smlouvy o vkládání.
 
-<ButtonLink to="/staking/withdrawals/">Více o výběru vkladů</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">Více o výběru vkladů</ButtonLink>
 </ExpandableCard>
 
 <ExpandableCard title="Liší se to od vkladů s mojí výměnou?">

@@ -1,7 +1,8 @@
 import * as React from "react"
-import { Box, Stack } from "@chakra-ui/react"
 import { Meta, StoryObj } from "@storybook/react"
 import { expect, fireEvent, waitFor, within } from "@storybook/test"
+
+import { Stack } from "../ui/flex"
 
 import FeedbackWidget from "./"
 
@@ -13,8 +14,8 @@ const meta = {
   component: FeedbackWidget,
   decorators: [
     (Story) => (
-      <Stack minH="100vh" position="relative">
-        <Box flex="1" />
+      <Stack className="relative min-h-[100vh] gap-0">
+        <div className="flex-1" />
         <Story />
       </Stack>
     ),
@@ -25,12 +26,9 @@ export default meta
 
 type Story = StoryObj<typeof meta>
 
-export const WidgetButton: Story = {
-  render: () => <FeedbackWidget />,
-}
+export const WidgetButton: Story = {}
 
 export const WidgetModal: Story = {
-  render: () => <FeedbackWidget />,
   play: async ({ canvasElement }) => {
     // Add delay for snapshot capture of the modal
     const canvas = within(canvasElement)

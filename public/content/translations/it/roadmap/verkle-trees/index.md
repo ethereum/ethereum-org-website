@@ -33,7 +33,7 @@ Sotto lo schema di impegno polinomiale, i testimoni hanno dimensioni gestibili, 
 
 <ExpandableCard title="Esattamente di quanto gli alberi di Verkle possono ridurre le dimensioni del testimone?" eventCategory="/roadmap/verkle-trees" eventName="clicked exactly how much can Verkle trees reduce witness size?">
 
-Le dimensioni dei testimoni variano a seconda del numero di foglie che include. Supponendo che il testimone copra 1000 foglie, un testimone per un albero di Merkle occuperebbe all'incirca 3,5 MB (ipotizzando 7 livelli all'albero). Un testimone per gli stessi dati in un albero di Verkle (ipotizzando 4 livelli all'albero) occuperebbe circa 150 kB; **circa 23 volte più piccolo**. Questa riduzione delle dimensioni del testimone consentirà ai testimoni del client di essere accettabilmente piccoli. I testimoni polinomiali variano da 0,128 a 1 kB a seconda di quale specifico impegno polinomiale è utilizzato.
+Le dimensioni dei testimoni variano a seconda del numero di foglie che include. Supponendo che il testimone copra 1000 foglie, un testimone per un albero di Merkle occuperebbe all'incirca 3,5 MB (ipotizzando 7 livelli all'albero). Un testimone per gli stessi dati in un albero di Verkle (ipotizzando 4 livelli all'albero) occuperebbe circa 150 kB; **circa 23 volte più piccolo**. Questa riduzione delle dimensioni del testimone consentirà ai testimoni del client di essere accettabilmente piccoli. I testimoni polinomiali variano da 0,128 a 1 kB a seconda dello specifico impegno polinomiale utilizzato.
 
 </ExpandableCard>
 
@@ -49,17 +49,18 @@ Gli alberi di Verkle sono coppie `(key,value)` in cui le chiavi sono elementi da
 
 Le reti di prova dell'albero di Verkle sono già in esecuzione, ma servono ancora aggiornamenti sostanziali e straordinari, necessari a supportarli. Puoi aiutare ad accelerare il progresso distribuendo contratti alle reti di prova od operando dei client delle reti di prova.
 
-[Esplora la rete di prova di Verkle di Beverly Hills](https://beverlyhills.ethpandaops.io)
+[Esplora la rete di prova di Verkle Gen Devnet 6](https://verkle-gen-devnet-6.ethpandaops.io/)
 
-[Guarda Guillaume Ballet spiegare la rete di prova di Verkle di Condrieu](https://www.youtube.com/watch?v=cPLHFBeC0Vg) (nota che la rete di prova di Condrieu era in proof-of-work e, ora, è stata sospesa dalla [rete di prova di Kaustinen](https://kaustinen.ethdevops.io)).
+[Guarda Guillaume Ballet spiegare la rete di prova di Verkle Condrieu](https://www.youtube.com/watch?v=cPLHFBeC0Vg) (nota che la rete di prova Condrieu era in proof-of-work e ora è stata sostituita dalla rete di prova di Verkle Gen Devnet 6).
 
 ## Letture consigliate {#further-reading}
 
+- [Alberi di Verkle per l'assenza di stato](https://verkle.info/)
 - [Dankrad Feist spiega gli alberi di Verkle su PEEPanEIP](https://www.youtube.com/watch?v=RGJOQHzg3UQ)
 - [Guillaume Ballet spiega gli alberi di Verkle all'ETHGlobal](https://www.youtube.com/watch?v=f7bEtX3Z57o)
 - ["Come gli alberi di Verkle rendono Ethereum snello e succinto" di Guillaume Ballet al Devcon 6](https://www.youtube.com/watch?v=Q7rStTKwuYs)
 - [Piper Merriam sui client privi di stato dall'ETHDenver 2020](https://www.youtube.com/watch?v=0yiZJNciIJ4)
-- [Dankrad Fiest spiega gli alberi di Verkle e l'assenza di stato al podcast "Zero Knowledge"](https://zeroknowledge.fm/episode-202-stateless-ethereum-verkle-tries-with-dankrad-feist/)
+- [Dankrad Fiest spiega gli alberi di Verkle e l'assenza di stato nel podcast "Zero Knowledge"](https://zeroknowledge.fm/podcast/202/)
 - [Vitalik Buterin sugli alberi di Verkle](https://vitalik.eth.limo/general/2021/06/18/verkle.html)
 - [Dankrad Feist sugli alberi di Verkle](https://dankradfeist.de/ethereum/2021/06/18/verkle-trie-for-eth1.html)
 - [Documentazione sull'EIP degli alberi di Verkle](https://notes.ethereum.org/@vbuterin/verkle_tree_eip#Illustration)

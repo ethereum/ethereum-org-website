@@ -18,7 +18,7 @@ description: ethereum.orgの翻訳でCrowdinを使う手順
 
 お持ちのCrowdinアカウントでログインします。無い場合はサインアップする必要があります。 サインアップに必要なのは、Eメールとパスワードだけです。
 
-<ButtonLink to="https://crowdin.com/project/ethereum-org/">
+<ButtonLink href="https://crowdin.com/project/ethereum-org/">
   プロジェクトに参加
 </ButtonLink>
 

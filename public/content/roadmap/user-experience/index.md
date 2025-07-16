@@ -15,7 +15,7 @@ Ethereum accounts are protected by a pair of keys used to identify accounts (pub
 
 The solution to this is using [smart contract](/glossary/#smart-contract) wallets to interact with Ethereum. Smart contract wallets create ways to protect accounts if the keys are lost or stolen, opportunities for better fraud detection and defense, and allow wallets to get new functionality. Although smart contract wallets exist today, they are awkward to build because the Ethereum protocol needs to support them better. This additional support is known as account abstraction.
 
-<ButtonLink variant="outline-color" to="/roadmap/account-abstraction/">More on account abstraction</ButtonLink>
+<ButtonLink variant="outline-color" href="/roadmap/account-abstraction/">More on account abstraction</ButtonLink>
 
 ## Nodes for everyone
 
@@ -23,7 +23,7 @@ Users running [nodes](/glossary/#node) do not have to trust third parties to pro
 
 There are several upgrades that will make running nodes far easier and far less resource intensive. The way data is stored will be changed to use a more space-efficient structure known as a **Verkle Tree**. Also, with [statelessness](/roadmap/statelessness) or [data expiry](/roadmap/statelessness/#data-expiry), Ethereum nodes will not need to store a copy of the entire Ethereum state data, drastically reducing hard disk space requirements. [Light nodes](/developers/docs/nodes-and-clients/light-clients/) will offer many benefits of running a full node but can run easily on mobile phones or inside simple browser apps.
 
-<ButtonLink variant="outline-color" to="/roadmap/verkle-trees/">Read about Verkle trees</ButtonLink>
+<ButtonLink variant="outline-color" href="/roadmap/verkle-trees/">Read about Verkle trees</ButtonLink>
 
 With these upgrades, the barriers to running a node are reduced to effectively zero. Users will benefit from secure, permissionless access to Ethereum without having to sacrifice noticeable disk space or CPU on their computer or mobile phone, and will not have to rely on third parties for data or network access when they use apps.
 

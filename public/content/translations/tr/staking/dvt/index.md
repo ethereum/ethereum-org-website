@@ -16,7 +16,7 @@ Bunu **bir doğrulayıcıyı güvence altına almak için kullanılan kişisel a
 
 ### Güvenlik {#security}
 
-Doğrulayıcılar iki tane genel-özel anahtar çifti oluşturur: Mutabakata katılmak için doğrulayıcı anahtarlar ve fonlara erişim için para çekme anahtarları. Doğrulayıcılar soğuk depoda para çekme anahtarlarını güvende tutabilirken, doğrulayıcı özel anahtarları 7/24 çevrimiçi olmalıdır. Eğer bir doğrulayıcı özel anahtarın güvenliği ihlal edildiyse bu, saldırgan doğrulayıcıyı kontrol edebilir ve potansiyel olarak tahribe veya paydaşların ETH kaybına yol açar. DVT bu riski azaltmaya yardımcı olabilir. İşte bu şekilde:
+Doğrulayıcılar iki tane açık-özel anahtar çifti oluşturur: Mutabakata katılmak için doğrulayıcı anahtarlar ve fonlara erişim için para çekme anahtarları. Doğrulayıcılar soğuk depoda para çekme anahtarlarını güvende tutabilirken, doğrulayıcı özel anahtarları 7/24 çevrimiçi olmalıdır. Eğer bir doğrulayıcı özel anahtarın güvenliği ihlal edildiyse bu, saldırgan doğrulayıcıyı kontrol edebilir ve potansiyel olarak tahribe veya paydaşların ETH kaybına yol açar. DVT bu riski azaltmaya yardımcı olabilir. İşte bu şekilde:
 
 Doğrulayıcılar özel anahtarı soğuk depoda tutarken, paydaşlar DVT kullanarak, hisselemeye katılabilir. Bu, orijinal, tam doğrulayıcı anahtarının şifrelenmesi ve daha sonra anahtar paylarına bölünmesiyle elde edilir. Anahtar paylaşımları çevrimiçi haldedir ve birden falza düğüme dağıtılır, bu doğrulayıcının dağıtılmış işlemini mümkün kılar. Bu mümkündür çünkü Ethereum doğrulayıcıları eklenebilir olan BLS imzaları kullanır, yani tam anahtar, bileşen parçalarını toplayarak yeniden yapılandırılabilir. Bu, paydaşa tam, oriijinal "yönetici" doğrulayıcı anahtarını güvenli bir şekilde çevrimdışı tutma olanağını sağlar.
 
@@ -86,6 +86,6 @@ Tek operatöre güveni minimize etmenin diğer bir faydası ise hisseleme havuzl
 
 ## Daha Fazla Bilgi {#further-reading}
 
-- [Ethereum dağıtılmış doğrulayıcı gereksinimleri (yüksek seviye)](https://github.com/ethereum/distributed-validator-specs)
-- [Ethereum dağıtılmış doğrulayıcı teknik gereksinimleri](https://github.com/ethereum/distributed-validator-specs/tree/dev/src/dvspec)
+- [Ethereum dağıtılmış doğrulayıcı özellikleri (yüksek seviye)](https://github.com/ethereum/distributed-validator-specs)
+- [Ethereum dağıtılmış doğrulayıcı teknik özellikleri](https://github.com/ethereum/distributed-validator-specs/tree/dev/src/dvspec)
 - [Shamir gizli paylaşım demo uygulaması](https://iancoleman.io/shamir/)

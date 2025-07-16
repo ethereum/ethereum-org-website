@@ -87,7 +87,7 @@ Para qualquer sistema personalizado ou contrato inteligente envolvido:
 
 Para produtos de software relacionados à configuração de nó ou cliente, gerenciamento ou migração:
 
-**Quais clientes da camada de consenso (como Lighthouse, Teku, Nimbus, Prysm) são suportados?**
+**Quais clientes da camada de consenso (como Lighthouse, Teku, Nimbus, Prysm, Grandine) são suportados?**
 
 - Quais clientes são suportados? O usuário pode escolher?
 - Isso é usado para determinar a pontuação dos produtos "multicliente".
@@ -171,6 +171,6 @@ Atualmente, a lógica e os valores do código para esses critérios estão conti
 
 Se você quiser adicionar uma participação (stake) de produto ou serviço ao ethereum.org, crie um tíquete no Github.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_staking_product.yaml">
+<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_staking_product.yaml">
   Crie um ticket
 </ButtonLink>

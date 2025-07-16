@@ -196,7 +196,7 @@ eventName="read more">
 
 バリデータのオペレータは、「<a href="https://launchpad.ethereum.org/withdrawals/">Staking Launchpad Withdrawals</a>」のページにアクセスすることをお勧めします。このページでは、引き出しのためにバリデータが準備することについて詳細、イベントのタイミング、引き出しの機能に関する詳細が記載されています。
 
-最初にテストネットでのセットアップを試すには、<a href="https://holesky.launchpad.ethereum.org">Holesky Testnet Staking Launchpad</a>を見て始めましょう。
+最初にテストネットでのセットアップを試すには、 <a href="https://holesky.launchpad.ethereum.org">Holesky Testnet Staking Launchpad</a>を見て始めましょう。
 
 </ExpandableCard>
 

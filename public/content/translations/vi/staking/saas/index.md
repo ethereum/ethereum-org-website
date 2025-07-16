@@ -78,7 +78,7 @@ Tính năng rút tiền đặt cọc đã được triển khai trong bản nân
 
 Nút xác thực cũng có thể hoàn toàn rời khỏi vai trò nút xác thực, dẫn đến số dư ETH còn lại được mở khóa để rút. Tài khoản đã cung cấp địa chỉ rút tiền trên lớp thực thi và hoàn thành quy trình thoát sẽ nhận được toàn bộ số dư vào địa chỉ rút đã cung cấp trong lần quét nút xác thực tiếp theo.
 
-<ButtonLink to="/staking/withdrawals/">Thông tin thêm về rút tiền đặt cọc</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">Thông tin thêm về rút tiền đặt cọc</ButtonLink>
 </ExpandableCard>
 
 <ExpandableCard title="Điều gì xảy ra nếu tôi bị cắt giảm nút xác thực?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">

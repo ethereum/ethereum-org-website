@@ -5,7 +5,7 @@
       "imageName": "RocketPool",
       "hue": 379,
       "launchDate": "2021-11-08",
-      "url": "https://rocketpool.net/node-operators",
+      "url": "https://docs.rocketpool.net/guides/node/responsibilities",
       "audits": [
         {
           "name": "Sigma Prime - May 2021",
@@ -173,7 +173,7 @@
       "platforms": ["Linux"],
       "ui": ["CLI"],
       "socials": {
-        "github": "https://github.com/eth-educators/eth-docker"
+        "github": "https://github.com/ethstaker/eth-docker"
       },
       "matomo": {
         "eventCategory": "StakingProductCard",
@@ -984,6 +984,7 @@
       "socials": {
         "discord": "https://discord.com/invite/2BSdr2g",
         "twitter": "https://twitter.com/stakewise_io",
+        "telegram": "https://t.me/stakewise_io",
         "github": "https://github.com/stakewise"
       },
       "matomo": {
@@ -1125,6 +1126,54 @@
       }
     },
     {
+      "name": "Origin Ether",
+      "imageName": "OriginEther",
+      "hue": 211,
+      "launchDate": "2023-05-16",
+      "url": "https://originprotocol.eth.limo/",
+      "audits": [
+        {
+          "name": "OpenZeppelin - Origin SSV Native Staking - June 2024",
+          "url": "https://github.com/OriginProtocol/security/blob/master/audits/OpenZeppelin%20-%20Origin%20SSV%20Native%20Staking%20-%20June%202024.pdf"
+        },
+        {
+          "name": "Audit List",
+          "url": "https://docs.originprotocol.com/security-and-risk/audits"
+        }
+      ],
+      "minEth": 0,
+      "feePercentage": 20,
+      "tokens": [
+        {
+          "name": "Origin Ether",
+          "symbol": "OETH",
+          "address": "0x856c4efb76c1d1ae02e20ceb03a2a6a08b0b8dc3"
+        }
+      ],
+      "isFoss": true,
+      "hasBugBounty": true,
+      "isTrustless": true,
+      "hasPermissionlessNodes": false,
+      "pctMajorityExecutionClient": 50,
+      "pctMajorityConsensusClient": 50,
+      "platforms": ["Browser"],
+      "ui": ["GUI"],
+      "socials": {
+        "telegram": "https://t.me/originprotocol",
+        "reddit": "https://www.reddit.com/r/originprotocol/",
+        "twitter": "https://twitter.com/OriginProtocol",
+        "discord": "https://discord.com/invite/ogn",
+        "github": "https://github.com/originprotocol",
+        "youtube": "https://www.youtube.com/c/originprotocol",
+        "linkedin": "https://www.linkedin.com/company/originprotocol/"
+      },
+      "matomo": {
+        "eventCategory": "StakingProductCard",
+        "eventAction": "Clicked",
+        "eventName": "Clicked Origin Ether go to link"
+      }
+    },
+    {
       "name": "Everstake",
       "imageName": "Everstake",
       "hue": 43,
@@ -1148,7 +1197,7 @@
       "isTrustless": true,
       "hasPermissionlessNodes": false,
       "pctMajorityExecutionClient": 50,
-      "pctMajorityConsensusClient": 100,
+      "pctMajorityConsensusClient": 50,
       "platforms": ["Browser", "Wallet"],
       "ui": ["GUI"],
       "socials": {

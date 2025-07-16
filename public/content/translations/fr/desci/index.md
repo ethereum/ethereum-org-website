@@ -8,7 +8,7 @@ sidebarDepth: 2
 image: /images/future_transparent.png
 alt: ""
 summaryPoint1: Une alternative globale et ouverte au système scientifique actuel.
-summaryPoint2: Technologie qui permet aux scientifiques de recueillir des fonds, de mener des expériences, de partager des données, de diffuser des idées et plus encore.
+summaryPoint2: Technologie qui permet aux scientifiques de recueillir des fonds, de mener des expériences, de partager des données, de diffuser des informations et plus encore.
 summaryPoint3: S'appuie sur le mouvement science en libre accès.
 ---
 
@@ -76,7 +76,7 @@ La propriété intellectuelle (PI) pose problème dans la science traditionnelle
 
 De la même manière que les NFT peuvent transmettre les recettes de futures transactions au créateur initial, vous pouvez établir des chaînes d'attribution de valeur transparentes pour récompenser les chercheurs, les organes directeurs (les DAO par exemple), ou même les personnes dont les données sont collectées.
 
-Les [NFT liés à la PI](https://medium.com/molecule-blog/ip-nfts-for-researchers-a-new-biomedical-funding-paradigm-91312d8d92e6) peuvent également servir de clé d'accès à un référentiel de données décentralisé relatif aux expériences de recherche en cours, et puiser dans les NFT et le financement de la [DeFi](/glossary/#defi) (de la fractionalisation aux groupes de prêt et à l'estimation de la valeur). Ils permettent également aux entités nativement en chaîne, telles que les DAO comme [VitaDAO](https://www.vitadao.com/), de mener des recherches directement en chaîne. Les [jetons «soulbound»](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) non transférables peuvent également jouer un rôle important en matière de DeSci en permettant aux individus d'apporter la preuve de leur expérience et leurs identifiants liés à leur adresse Ethereum.
+Les [NFT liés à la PI](https://medium.com/molecule-blog/ip-nfts-for-researchers-a-new-biomedical-funding-paradigm-91312d8d92e6) peuvent également servir de clé d'accès à un référentiel de données décentralisé relatif aux expériences de recherche en cours, et puiser dans les NFT et le financement de la [DeFi](/glossary/#defi) (de la fractionalisation aux groupes de prêt et à l'estimation de la valeur). Ils permettent également aux entités nativement en chaîne, telles que les DAO comme [VitaDAO](https://www.vitadao.com/), de mener des recherches directement en chaîne. Les [jetons « soulbound »](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) non transférables peuvent également jouer un rôle important en matière de DeSci en permettant aux individus d'apporter la preuve de leur expérience et leurs identifiants liés à leur adresse Ethereum.
 
 ### Stockage de données, accès et architecture {#data-storage}
 
@@ -96,7 +96,7 @@ Explorer les projets et rejoindre la communauté DeSci.
 - [VitaDAO : recevoir des fonds par le biais d'accords de recherche sponsorisés en vue de recherches sur la longévité](https://www.vitadao.com/)
 - [Research Hub : publier un résultat scientifique et participer à une conversation avec des pairs](https://www.researchhub.com/)
 - [LabDAO : plier une protéine in-silico](https://alphafodl.vercel.app/)
-- [dClimate API : envoyer des requêtes concernant les données climatiques recueillies par une communauté décentralisée](https://api.dclimate.net/)
+- [dClimate API : envoyer des requêtes concernant les données climatiques recueillies par une communauté décentralisée](https://www.dclimate.net/)
 - [DeSci Foundation : fabricant d'outils de publication DeSci](https://descifoundation.org/)
 - [DeSci.World : guichet unique grâce auquel les utilisateurs peuvent avoir une visibilité, échanger avec la science décentralisée](https://desci.world)
 - [OceanDAO : source de financement régi par une DAO pour les études scientifiques liées aux données](https://oceanprotocol.com/)
@@ -104,9 +104,11 @@ Explorer les projets et rejoindre la communauté DeSci.
 - [Bio.xyz : financer votre projet DAO ou desci biotech](https://www.bio.xyz/)
 - [Protocole Fleming : économie des données open-source qui alimente la recherche biomédicale collaborative](http://flemingprotocol.io/)
 - [Institut d'inférence active](https://www.activeinference.org/)
-- [CureDAO : plateforme de santé de précision détenue par une communauté](https://docs.curedao.org/)
 - [IdeaMarkets : pour une crédibilité scientifique décentralisée renforcée](https://ideamarket.io/)
 - [DeSci Labs](https://www.desci.com/)
+- [ValleyDAO : une communauté ouverte et mondiale offrant un financement et un support translationnel à la recherche en biologie synthétique](https://www.valleydao.bio)
+- [Cerebrum DAO : recherche et développement de solutions pour améliorer la santé cérébrale et prévenir la neurodégénérescence](https://www.cerebrumdao.com/)
+- [CryoDAO : financement de recherches audacieuses dans le domaine de la cryopréservation](https://www.cryodao.org)
 
 Nous accueillons volontiers les suggestions de nouveaux projets à répertorier - veuillez consulter notre [politique d'inscription](/contributing/adding-desci-projects/) pour commencer !
 
@@ -116,7 +118,7 @@ Nous accueillons volontiers les suggestions de nouveaux projets à répertorier 
 - [Un guide sur la biotech décentralisée par Jocelynn Pearl pour a16z future](https://future.a16z.com/a-guide-to-decentralized-biotech/)
 - [Arguments en faveur de la DeSci](https://gitcoin.co/blog/desci-the-case-for-decentralised-science/)
 - [Guide relatif à la DeSci](https://future.com/what-is-decentralized-science-aka-desci/)
-- [Ressources relatives à la science décentralisée](https://www.vincentweisser.com/decentralized-science)
+- [Ressources relatives à la science décentralisée](https://www.vincentweisser.com/desci)
 - [Les IP-NFT de Molecule dans le domaine biopharmaceutique - Description technique](https://www.molecule.xyz/blog/molecules-biopharma-ip-nfts-a-technical-description)
 - [Construire des systèmes scientifiques sans tiers de confiance par Jon Starr](https://medium.com/@jringo/building-systems-of-trustless-science-1cd2d072f673)
 - [Paul Kohlhaas - DeSci : L'avenir de la science décentralisée (podcast)](https://anchor.fm/andrew-steinwold/episodes/Paul-Kohlhaas---DeSci-The-Future-of-Decentralized-Science---Zima-Red-ep-117-e1h683a)
@@ -124,6 +126,7 @@ Nous accueillons volontiers les suggestions de nouveaux projets à répertorier 
 - [DeSci : l'avenir de la recherche par Samuel Akinosho](https://lucidsamuel.medium.com/desci-the-future-of-research-b76cfc88c8ec)
 - [Financement de la science (Épilogue : la DeSci et les nouvelles primitives dans les cryptomonnaies) par Nadia](https://nadia.xyz/science-funding)
 - [La décentralisation perturbe développement des médicaments](https://medium.com/id-theory/decentralisation-is-disrupting-drug-development-28b5ba5d447f)
+- [Qu'est-ce que la DeSci – Science Décentralisée ?](​https://usadailytimes.com/2022/09/12/what-is-desci-decentralized-science/)
 
 ### Vidéos {#videos}
 
@@ -132,3 +135,4 @@ Nous accueillons volontiers les suggestions de nouveaux projets à répertorier 
 - [La publication scientifique est en panne. Est-ce que le Web3 peut améliorer ?](https://www.youtube.com/watch?v=WkvzYgCvWj8)
 - [Juan Benet - DeSci, laboratoires indépendants, & dcience des données à grande échelle](https://www.youtube.com/watch?v=zkXM9H90g_E)
 - [Sebastian Brunemeier - Comment la DeSci peut transformer la recherche biomédicale & le capital risque](https://www.youtube.com/watch?v=qB4Tc3FcVbM)
+- [Paige Donner - Outils pour la science ouverte avec le Web3 & La Blockchain](https://www.youtube.com/watch?v=nC-2QWQ-lgw&t=17s)

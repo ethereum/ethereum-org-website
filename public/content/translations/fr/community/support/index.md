@@ -10,29 +10,45 @@ lang: fr
 
 Vous recherchez l'assistance officielle Ethereum ? La première chose que vous devez savoir est le fait qu'Ethereum est décentralisé. Cela signifie qu'aucune organisation, entité ou personne n'est propriétaire d'Ethereum et, de ce fait, il n'existe aucune assistance officielle.
 
-Comprendre la nature décentralisée d'Ethereum est essentiel, car quiconque prétendant représenter l'assiatnce officielle d'Ethereum essaie probablement de vous escroquer ! La meilleure protection contre les arnaques consiste à vous informer et à prendre la sécurité au sérieux.
+Comprendre la nature décentralisée d’Ethereum est essentiel car **toute personne prétendant être le support officiel d’Ethereum essaie probablement de vous arnaquer !** La meilleure protection contre les escrocs est de vous informer et de prendre la sécurité au sérieux.
 
-<DocLink to="/security/">
+<DocLink href="/security/">
   Sécurité d'Ethereum et prévention des arnaques
 </DocLink>
 
-<DocLink to="/learn/">
+<DocLink href="/learn/">
   Apprendre les fondamentaux d'Ethereum
 </DocLink>
 
 Malgré le manque d'assistance officielle, de nombreux groupes, communautés et projets à travers l'écosystème Ethereum sont heureux de vous aider. Vous pouvez trouver beaucoup d'informations et de ressources utiles sur cette page. Vous avez d'autres questions ? Rejoignez le [Discord ethereum.org](/discord/) et nous essaierons de vous aider.
 
-## Assistance concernant votre portefeuille {#wallet-support}
+## Questions fréquemment posées {#faq}
 
-Vous rencontrez un problème avec votre portefeuille ? La plupart des portefeuilles ont des équipes d'assistance dédiées qui peuvent vous aider :
+### J'ai transféré mes ETH vers le mauvais portefeuille {#wrong-wallet}
 
-- [MetaMask](https://metamask.zendesk.com/hc/)
-- [Argent](https://support.argent.xyz/hc/)
-- [MyEtherWallet](https://help.myetherwallet.com/)
+Les transactions effectuées sur Ethereum sont irréversibles. Malheureusement, si vous avez envoyé des ETH au mauvais portefeuille, il n'y a aucun moyen de récupérer ces fonds. Aucune organisation centrale, entité ou personne n'est propriétaire d'Ethereum, ce qui signifie que personne ne peut annuler les transactions. Pour cette raison, il est primordial de vérifier deux fois vos transactions avant de les effectuer.
 
-_Cette liste est non-exhaustive. Vous avez besoin d'aide pour trouver l'assistance pour un portefeuille spécifique ? Rejoignez le [Discord ethereum.org](https://discord.gg/ethereum-org) et nous tenterons de vous aider._
+### Comment puis-je réclamer mon cadeau Ethereum ? {#giveaway-scam}
 
-Vous êtes à la recherche d'un portefeuille Ethereum ? [Explorez notre liste complète de portefeuilles Ethereum](/wallets/find-wallet/).
+Les concours Ethereum sont des arnaques conçues pour récupérer vos ETH. Ne vous laissez pas tenter par des offres qui semblent trop belles pour être vraies — si vous envoyez des ETH vers une adresse de « concours », vous ne recevrez pas de cadeau, et vous ne pourrez pas récupérer vos fonds.
+
+[En savoir plus sur la prévention des arnaques](/security/#common-scams)
+
+### Ma transaction est bloquée {#stuck-transaction}
+
+Les transactions sur Ethereum peuvent parfois se bloquer si vous avez soumis des frais de transactions inférieurs à ceux requis en raison de la demande du réseau. De nombreux portefeuilles offrent la possibilité de renvoyer la même transaction avec des frais de transaction plus élevés, afin de permettre à celle-ci d'être traitée. Vous pouvez aussi annuler une transaction en cours en envoyant une transaction vers votre propre adresse en utilisant le même nonce que la transaction en cours.
+
+[Comment accélérer ou annuler une transaction en cours via MetaMask](https://metamask.zendesk.com/hc/en-us/articles/360015489251-How-to-speed-up-or-cancel-a-pending-transaction)
+
+[Comment annuler des transactions Ethereum en cours](https://info.etherscan.com/how-to-cancel-ethereum-pending-transactions/)
+
+### Comment miner de l'Ethereum ? {#mining-ethereum}
+
+Le minage d'Ethereum n'est plus possible. La possibilité de miner a disparu lors du passage d'Ethereum de la [preuve de travail](/glossary/#pow) à la [preuve d'enjeu](/glossary/#pos). Désormais, en place des mineurs, Ethereum dispose de validateurs. Tout le monde peut [mettre en jeu](/glossary/#staking) de l'ETH et recevoir des récompenses de mise en jeu en exécutant un programme de validation pour sécuriser le réseau.
+
+### Comment devenir un validateur / faire fonctionner un validateur ? {#how-to-stake}
+
+Pour devenir un validateur, vous devez miser 32 ETH dans le contrat de dépôt Ethereum et mettre en place un nœud de validateur. Davantage d'informations sont disponibles sur nos [pages de staking](/staking) et sur [la plateforme de lancement de staking](https://launchpad.ethereum.org/).
 
 ## Créer des applications décentralisées {#building-support}
 
@@ -57,7 +73,6 @@ Voici quelques exemples connus :
 - [ethers.js](https://discord.gg/6jyGVDK6Jx)
 - [web3.js](https://discord.gg/GsABYQu4sC)
 - [Hardhat](https://discord.gg/xtrMGhmbfZ)
-- [Truffle](https://discord.gg/8uKcsccEYE)
 - [Alchemy](http://alchemy.com/discord)
 - [Tenderly](https://discord.gg/fBvDJYR)
 
@@ -76,6 +91,7 @@ La plupart des équipes qui créent des clients Ethereum disposent aussi d'espac
 - [Nethermind](https://discord.gg/YJx3pm8z5C)
 - [Besu](https://discord.gg/p8djYngzKN)
 - [Erigon](https://github.com/ledgerwatch/erigon/issues)
+- [Reth](https://github.com/paradigmxyz/reth/discussions)
 
 ### Clients de consensus {#consensus-clients}
 
@@ -84,33 +100,6 @@ La plupart des équipes qui créent des clients Ethereum disposent aussi d'espac
 - [Lighthouse](https://discord.gg/cyAszAh)
 - [Teku](https://discord.gg/7hPv2T6)
 - [Lodestar](https://discord.gg/aMxzVcr)
+- [Grandine](https://discord.gg/H9XCdUSyZd)
 
 Vous pouvez aussi [apprendre comment exécuter un nœud ici](/developers/docs/nodes-and-clients/run-a-node/).
-
-## Questions fréquemment posées {#faq}
-
-### J'ai transféré mes ETH vers le mauvais portefeuille {#wrong-wallet}
-
-Les transactions effectuées sur Ethereum sont irréversibles. Malheureusement, si vous avez envoyé des ETH au mauvais portefeuille, il n'y a aucun moyen de récupérer ces fonds. Aucune organisation centrale, entité ou personne n'est propriétaire d'Ethereum, ce qui signifie que personne ne peut annuler les transactions. Pour cette raison, il est primordial de vérifier deux fois vos transactions avant de les effectuer.
-
-### Comment puis-je réclamer mon cadeau Ethereum ? {#giveaway-scam}
-
-Les concours Ethereum sont des arnaques conçues pour récupérer vos ETH. Ne vous laissez pas tenter par des offres qui semblent trop belles pour être vraies — si vous envoyez des ETH vers une adresse de « concours », vous ne recevrez pas de cadeau, et vous ne pourrez pas récupérer vos fonds.
-
-[En savoir plus sur la prévention des arnaques](/security/#common-scams)
-
-### Ma transaction est bloquée {#stuck-transaction}
-
-Les transactions sur Ethereum peuvent parfois se bloquer si vous avez soumis des frais de transactions inférieurs à ceux requis en raison de la demande du réseau. De nombreux portefeuilles offrent la possibilité de renvoyer la même transaction avec des frais de transaction plus élevés, afin de permettre à celle-ci d'être traitée. Vous pouvez aussi annuler une transaction en cours en envoyant une transaction vers votre propre adresse en utilisant le même nonce que la transaction en cours.
-
-[Comment accélérer ou annuler une transaction en cours via MetaMask](https://metamask.zendesk.com/hc/en-us/articles/360015489251-How-to-speed-up-or-cancel-a-pending-transaction)
-
-[Comment annuler des transactions Ethereum en cours](https://info.etherscan.com/how-to-cancel-ethereum-pending-transactions/)
-
-### Comment miner de l'Ethereum ? {#mining-ethereum}
-
-Le minage d'Ethereum n'est plus possible. Le minage a disparu lors du passage d'Ethereum de la preuve de travail à la preuve d'enjeu. Désormais, en place des mineurs, Ethereum dispose de validateurs. Les validateurs misent de l'ETH et reçoivent des récompenses pour la sécurisation du réseau.
-
-### Comment devenir un staker/validateur ? {#become-validator}
-
-Pour devenir un validateur, vous devez miser 32 ETH dans le contrat de dépôt Ethereum et mettre en place un nœud de validateur. Davantage d'informations sont disponibles sur nos [pages de staking](/staking) et sur [la plateforme de lancement de staking](https://launchpad.ethereum.org/).

@@ -50,7 +50,7 @@ Suština svakog DAO-a je njegov pametni ugovor, kojim se definišu pravila organ
 
 To je moguće zato što su pametni ugovori, kada se objave na mreži Ethereum, zaštićeni od neovlašćenog rukovanja. Ne možete jednostavno urditi kod (pravila DAO-a), a da ljudi to ne primete zato što je sve javno.
 
-<DocLink to="/smart-contracts/">
+<DocLink href="/smart-contracts/">
   Više o pametnim ugovorima
 </DocLink>
 
@@ -93,7 +93,7 @@ Godine 1977. američka savezna država Vajoming stvorila je LLC (limited liabili
 
 ### Poznat primer {#law-example}
 
-[DAOGrad](https://citydao.io)Kompanija CityDAO je iskoristila zakon o DAO savezne države Vajoming da kupi 40 ari zemljišta u blizini Nacionalnog parka Jeloustoun.
+[DAOGrad](https://citizen.citydao.io/)Kompanija CityDAO je iskoristila zakon o DAO savezne države Vajoming da kupi 40 ari zemljišta u blizini Nacionalnog parka Jeloustoun.
 
 ## Članstvo u DAO-u {#dao-membership}
 

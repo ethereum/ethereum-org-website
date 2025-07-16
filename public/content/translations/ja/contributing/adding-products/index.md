@@ -82,7 +82,7 @@ lang: ja
 
 イーサリアムの流動的な性質により、チームと製品が現れては消え、イノベーションは毎日起こっています。そのため、下記のようなコンテンツの定期的なチェックを実施しています。
 
-- 掲載されている分散型アプリ(Dapp)すべてが、引き続き基準を満たしているかどうかの確認
+- 掲載されている分散型アプリ(Dapp)のすべてが、引き続き基準を満たしているかどうかの確認
 - 現在掲載されている製品よりも、多くの基準を満たす製品の提案がないかの確認
 
 上記の確認にご協力ください。 [イシューを作成するか](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=)[website@ethereum.org](mailto:website@ethereum.org)へメールでお知らせください。
@@ -95,6 +95,6 @@ _コミュニティーが好みの製品や最高の製品を推奨できるよ�
 
 本基準を満たした分散型アプリ(Dapp)のethereum.orgへの掲載をご希望の場合は、GitHubでイシューを作成してください。
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_dapp.yaml">
+<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_dapp.yaml">
   問題の作成
 </ButtonLink>

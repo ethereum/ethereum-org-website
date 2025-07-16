@@ -8,7 +8,7 @@ lang: zh-tw
 
 ## 輕量用戶端是什麼？ {#what-is-a-light-client}
 
-輕節點是運行輕量用戶端軟體的節點。 輕節點不保留區塊鏈資料的本地副本，也不獨立驗證所有變更，而是向一些提供者索取必要資料。 提供者可能是直接或透過一些中心化遠端程序呼叫伺服器連結到全節點。 接著，輕節點驗證資料，使資料能和鏈頭保持同步。 輕節點只處理區塊頭，只有偶爾才會下載實際區塊內容。 節點的輕量程度取決於它們運行的輕量用戶端和全用戶端軟體。 舉例來說，最輕量的設定是運行一個輕量執行用戶端和一個輕量共識用戶端。 許多節點也有可能會選擇運行輕量共識用戶端和全執行用戶端，反之亦然。
+輕節點是運行輕量用戶端軟體的節點。 輕節點不保留區塊鏈資料的本地副本，也不獨立驗證所有變更，而是向一些提供者索取必要資料。 提供者可能是直接或透過一些中心化遠端程序呼叫伺服器連結到全節點。 接著，輕節點驗證資料，使資料能和鏈頭保持同步。 輕節點只處理區塊頭，只有偶爾才會下載實際區塊內容。 節點的輕量程度可能會有所不同，具體取決於它們執行的輕量和全用戶端軟體的組合。 舉例來說，最輕量的設定是運行一個輕量執行用戶端和一個輕量共識用戶端。 許多節點也有可能會選擇運行輕量共識用戶端和全執行用戶端，反之亦然。
 
 ## 輕量用戶端是如何運作的？ {#how-do-light-clients-work}
 
@@ -44,7 +44,7 @@ lang: zh-tw
 
 - [Lodestar](https://github.com/ChainSafe/lodestar/tree/unstable/packages/light-client)：由 TypeScript 編寫的輕量用戶端
 - [Helios](https://github.com/a16z/helios)：由 Rust 編寫的執行和共識組合輕量用戶端
-- [Geth](https://github.com/ethereum/go-ethereum/tree/master/light)：由 Go 編寫，執行用戶端的輕量模式（開發中）
+- [Geth](https://github.com/ethereum/go-ethereum/tree/master/beacon/light)：用 Go 語言編寫的執行用戶端輕量模式（開發中）
 - [Nimbus](https://nimbus.guide/el-light-client.html)：由 Nim 編寫的共識輕量用戶端
 
 據我們所知，上述這些服務都尚未準備好在生產環境中使用。

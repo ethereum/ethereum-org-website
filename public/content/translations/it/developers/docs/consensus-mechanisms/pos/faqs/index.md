@@ -74,7 +74,7 @@ I validatori devono mettere in staking ETH così che abbiano qualcosa da perdere
 
 ## Come sono selezionati i validatori? {#how-are-validators-selected}
 
-Un singolo validatore è scelto pseudo-casualmente per proporre un blocco in ogni slot utilizzando un algoritmo detto RANDAO, che combina un hash dal propositore del blocco con un seed aggiornato a ogni blocco. Questo valore è utilizzato per selezionare un validatore specifico dall'insieme totale di validatori. La selezione del validatore è fissata a quattro epoche in anticipo.
+Un singolo validatore è scelto pseudo-casualmente per proporre un blocco in ogni slot utilizzando un algoritmo detto RANDAO, che combina un hash dal propositore del blocco con un seed aggiornato a ogni blocco. Questo valore è utilizzato per selezionare un validatore specifico dall'insieme totale di validatori. La selezione del validatore è fissata con due epoche di anticipo.
 
 [Maggiori informazioni sulla selezione dei validatori](/developers/docs/consensus-mechanisms/pos/block-proposal)
 

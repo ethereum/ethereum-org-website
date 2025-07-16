@@ -117,23 +117,7 @@ As [atualizações de escalabilidade](/roadmap/) do Ethereum deverão em última
 
 A escalabilidade da camada 2 é uma iniciativa primária para melhorar significativamente os custos do gás, a experiência do usuário e a escalabilidade. [Mais sobre a escalabilidade de camada 2](/developers/docs/scaling/#layer-2-scaling).
 
-## O que foi a atualização London / EIP-1559? {#what-was-the-london-upgrade-eip-1559}
-
-Antes da atualização London, o Ethereum tinha blocos de tamanho fixo. Em momentos de alta demanda de rede, esses blocos operaram em capacidade máxima. Como resultado, os usuários muitas vezes tiveram que esperar a redução da demanda para serem incluídos em um bloco, o que levou a uma má experiência do usuário. A atualização London introduziu blocos de tamanho variável ao Ethereum.
-
-A forma como as taxas de transação na rede Ethereum são calculadas foram alteradas com a [atualização de Londres](/history/#london) de agosto de 2021. Antes da atualização London, as taxas eram calculadas sem separar as taxas `base` e `priority`, como segue:
-
-Digamos que Alice tenha que pagar a Roberto 1 ETH. Na transação, o limite de gás é de 21.000 unidades e o preço do gás é de 200 gwei.
-
-A taxa total teria sido: `Unidades de gás (limite) * Preço do gás por unidade` ou seja, `21.000 * 200 = 4.200.000 gwei` ou 0,0042 ETH
-
-A implementação da [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) na atualização London tornou o mecanismo de taxa de transação mais complexo, mas tornou as taxas de gás mais previsíveis, resultando em um mercado de taxas de transação mais eficiente. Os usuários podem enviar transações com um `maxFeePerGas` correspondente ao quanto estão dispostos a pagar para a transação ser executada, sabendo que não pagarão mais do que o preço de mercado do gás (`baseFeePerGas`), e não receberão nenhum extra, exceto a gorjeta, de reembolso.
-
-Este vídeo explica o EIP-1559 e os benefícios que ele traz:
-
-<YouTube id="MGemhK9t44Q" />
-
-## Monitoramento de taxas de gás {#moitoring-gas-fees}
+## Monitoramento de taxas de gás {#monitoring-gas-fees}
 
 Se você deseja monitorar os preços do gás, para poder enviar seu ETH por menos, pode usar muitas ferramentas diferentes, como:
 
@@ -152,4 +136,4 @@ Se você deseja monitorar os preços do gás, para poder enviar seu ETH por meno
 - [Prova de participação em comparação à Prova de trabalho](https://blockgeeks.com/guides/proof-of-work-vs-proof-of-stake/)
 - [Estratégias de otimização de gás para desenvolvedores](https://www.alchemy.com/overviews/solidity-gas-optimization)
 - [Documentos EIP-1559](https://eips.ethereum.org/EIPS/eip-1559).
-- [Recursos da EIP-1559 pelo Tim Beiko](https://hackmd.io/@timbeiko/1559-resources).
+- [Recursos EIP-1559 de Tim Beiko](https://hackmd.io/@timbeiko/1559-resources).

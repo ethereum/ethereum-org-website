@@ -18,7 +18,7 @@ Für visuell Lernende: Luka führt Sie durch die Einrichtung von Crowdin. Altern
 
 Sie müssen sich bei Ihrem Crowdin-Konto anmelden oder sich registrieren, wenn Sie noch kein Konto haben. Für die Anmeldung benötigen Sie lediglich ein E-Mail-Konto und ein Passwort.
 
-<ButtonLink to="https://crowdin.com/project/ethereum-org/">
+<ButtonLink href="https://crowdin.com/project/ethereum-org/">
   Am Projekt teilnehmen
 </ButtonLink>
 

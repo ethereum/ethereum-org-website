@@ -90,13 +90,13 @@ Rețineţi că trebuie să conectezi discul la un port USB 3.0 (albastru)
 
 ### 1. Descărcați imaginile nivelurilor de execuție și de consens {#1-download-execution-or-consensus-images}
 
-<ButtonLink to="https://ethraspbian.com/downloads/ubuntu-20.04-preinstalled-server-arm64+raspi-eth1.img.zip">
+<ButtonLink href="https://ethraspbian.com/downloads/ubuntu-20.04-preinstalled-server-arm64+raspi-eth1.img.zip">
   Descărcați imaginea nivelului de execuție
 </ButtonLink>
 
 sha256 7fa9370d13857dd6abc8fde637c7a9a7a66b307d5c28b0d29a09c73c55c
 
-<ButtonLink to="https://ethraspbian.com/downloads/ubuntu-20.04-preinstalled-server-arm64+raspi-eth2.img.zip">
+<ButtonLink href="https://ethraspbian.com/downloads/ubuntu-20.04-preinstalled-server-arm64+raspi-eth2.img.zip">
   Descărcați imaginea stratului de consens
 </ButtonLink>
 

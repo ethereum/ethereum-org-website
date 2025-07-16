@@ -50,7 +50,7 @@ Di tori of any DAO na hin contract wey sharp. na him go tell us the matter wey g
 
 This one possible becasue of say our smart contract no fit shake once they don dey live on Ethereum. Yu nor fit edit di kode (DAO matter) make anybody nor sabi bikos na evrythin wi go dey si.
 
-<DocLink to="/smart-contracts/">
+<DocLink href="/smart-contracts/">
   More on smart kontracts
 </DocLink>
 
@@ -93,7 +93,7 @@ In 1977, Wyoming na hin invent the LLC wey dey protect entrepreneurs and e dey l
 
 ### Popula eksampol {#law-example}
 
-[CityDAO](https://citydao.io) – dem use Wyoming's DAO law take buy 40 acres of land near Yellowstone National Park.
+[CityDAO](https://citizen.citydao.io/) – dem use Wyoming's DAO law take buy 40 acres of land near Yellowstone National Park.
 
 ## DAO membership {#dao-membership}
 

@@ -63,7 +63,7 @@ Web3 允許透過[非同質化代幣 (NFT) ](/glossary/#nft)實現直接所有�
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>深入了解非同質化代幣</div>
-  <ButtonLink to="/nft/">
+  <ButtonLink href="/nft/">
     更多非同質化代幣相關資訊
   </ButtonLink>
 </InfoBanner>
@@ -78,7 +78,7 @@ OnlyFans 是一個由使用者產生的成人內容網站，內容創作者超�
 
 Web 2.0 要求內容製作者相信平台不會更改規則，但抗審查是 Web3 平台的原生特性。
 
-#### 去中心化自治組織(DAOs) {#daos}
+#### 去中心化自治組織 (DAO) {#daos}
 
 除了在 Web3 中擁有個人資料外，你還能利用類似公司股票的代幣，來擁有該平台，將平台作為一個集合體。 去中心化自治組織讓你能協調平台的去中心化所有權，並對其未來做出相關決策。
 
@@ -88,7 +88,7 @@ Web 2.0 要求內容製作者相信平台不會更改規則，但抗審查是 We
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>了解更多關於去中心化自治組織</div>
-  <ButtonLink to="/dao/">
+  <ButtonLink href="/dao/">
     更多關於DAOs
   </ButtonLink>
 </InfoBanner>
@@ -103,7 +103,7 @@ Web3 透過以太坊地址及[以太坊名稱服務 (ENS) ](/glossary/#ens)個�
 
 Web2 的付款基礎設施仰賴於銀行和付款處理器，不包含那些沒有銀行帳戶的人，或碰巧住在非正確國家境內的人。 Web3 使用[以太幣](/glossary/#ether)等代幣直接在瀏覽器中匯款，不需要受信任的第三方。
 
-<ButtonLink to="/eth/">
+<ButtonLink href="/eth/">
   更多詳情關於以太(以太幣)
 </ButtonLink>
 
@@ -147,11 +147,11 @@ Web3 是一個年輕且不斷發展的生態系統。 Gavin Wood 在 2014 年創
 
 Web3 並未嚴格定義。 不同社群參與者對它有不同的看法。 請見：
 
-- [什麼是 Web3？ 明日去中心化網際網路的相關解說](https://www.freecodecamp.org/news/what-is-web3/) – _Nader Dabit_
+- [什麼是 Web3？ 明日去中心化網際網路的相關解說](https://www.freecodecamp.org/news/what-is-web3) – _Nader Dabit_
 - [搞懂 Web 3](https://medium.com/l4-media/making-sense-of-web-3-c1a9e74dcae) – _Josh Stark_
 - [為什麼 Web 3 很重要](https://future.a16z.com/why-web3-matters/) — _Chris Dixon_
 - [為什麼去中心化很重要](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) - _Chris Dixon_
 - [Web 3 的景況](https://a16z.com/wp-content/uploads/2021/10/The-web3-Readlng-List.pdf) – _a16z_
-- [Web 3 的辯論](https://www.notboring.co/p/the-web3-debate?s=r) – _Packy McCormick_
+- [Web 3 的辯論](https://www.notboring.co/p/the-web3-debate) – _Packy McCormick_
 
 <QuizWidget quizKey="web3" />

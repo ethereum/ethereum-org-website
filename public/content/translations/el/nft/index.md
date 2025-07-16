@@ -1,5 +1,6 @@
 ---
 title: Μη Εναλλάξιμα Κρυπτοπαραστατικά (NFT)
+metaTitle: Τι είναι τα NFT; | Πλεονεκτήματα και χρήση
 description: Μια επισκόπηση των NFT στο Ethereum
 lang: el
 template: use-cases
@@ -56,7 +57,7 @@ summaryPoint3: Υποστηρίζονται από έξυπνα συμβόλαι
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:" mt="8">
   <div>Εξερευνήστε, αγοράστε ή δημιουργήστε το δικό σας NFT τέχνη/συλλεκτικά...</div>
-  <ButtonLink to="/dapps/?category=collectibles#explore">
+  <ButtonLink href="/dapps/?category=collectibles#explore">
     Εξερευνήστε NFT τέχνης
   </ButtonLink>
 </InfoBanner>
@@ -93,7 +94,7 @@ summaryPoint3: Υποστηρίζονται από έξυπνα συμβόλαι
 
 Τα ζητήματα ασφαλείας που σχετίζονται με τα NFT συχνά σχετίζονται με απάτες, με τρωτά σημεία των έξυπνων συμβολαίων ή σφάλματα χρήστη (όπως ακούσια έκθεση των ιδιωτικών κλειδιών), καθιστώντας την καλή ασφάλεια του πορτοφολιού κρίσιμη για τους ιδιοκτήτες NFT.
 
-<ButtonLink to="/security/">
+<ButtonLink href="/security/">
   Περισσότερα για την ασφάλεια
 </ButtonLink>
 
@@ -103,6 +104,11 @@ summaryPoint3: Υποστηρίζονται από έξυπνα συμβόλαι
 - [Ανιχνευτής EtherscanNFT](https://etherscan.io/nft-top-contracts)
 - [Πρότυπο κρυπτονομισμάτων ERC-721](/developers/docs/standards/tokens/erc-721/)
 - [Πρότυπο κρυπτονομισμάτων ERC-1155](/developers/docs/standards/tokens/erc-1155/)
+- [Δημοφιλή εφαρμογές NFT και εργαλεία](https://www.ethereum-ecosystem.com/blockchains/ethereum/nfts)
+
+## Άλλες πηγές {#other-resources}
+
+- [NFTScan](https://nftscan.com/)
 
 <Divider />
 

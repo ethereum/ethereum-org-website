@@ -22,7 +22,6 @@ incomplete: true
 
 ## 初心者向けの記事 {#beginner-articles}
 
-- [イーサリアムクライアントの選択](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
 - [Rustイーサリアムクライアント](https://openethereum.github.io/) \* **OpenEthereumは[すでに廃止されており](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd)、現在は維持されていません。** ご利用には注意が必要です。できれば、他のクライアント実装に切り替えてください。
 - [Rustを使用してイーサリアムにトランザクションを送信する](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/sending-ethereum-transactions-with-rust/)
 - [Kovan向けRust Wasmでのコントラクトの記述方法についての段階的なチュートリアル](https://github.com/paritytech/pwasm-tutorial)
@@ -46,11 +45,13 @@ incomplete: true
 - [Solaris](https://github.com/paritytech/sol-rs) - _ネイティブParityクライアントEVMを使用したSolidityスマートコントラクトのユニットテストハーネス_
 - [SputnikVM](https://github.com/rust-blockchain/evm) - _Rustのイーサリアム仮想マシンの実装_
 - [Wavelet](https://wavelet.perlin.net/docs/smart-contracts) - _Rustで書かれたWaveletスマートコントラクト_
-- [Foundry](https://github.com/gakonst/foundry)- _イーサリアムアプリケーション開発のためのツールキット_
-- [Ethers_rs](https://github.com/gakonst/ethers-rs)- _イーサリアムライブラリとウォレットの実装_
+- [Foundry](https://github.com/foundry-rs/foundry) - _イーサリアムアプリケーション開発のためのツールキット_
+- [Alloy](https://alloy.rs) - _イーサリアムおよび他のEVMベースのチェーンとやり取りするための、高性能で、十分にテストされ、文書化されたライブラリ_
+- [Ethers_rs](https://github.com/gakonst/ethers-rs) - _イーサリアムのライブラリとウォレットの実装_
 - [SewUp](https://github.com/second-state/SewUp) - _Rustを使用したイーサリアムWebAssemblyコントラクトの構築と、一般的なバックエンドと同様の開発をサポートするライブラリ_
 - [Substreams](https://github.com/streamingfast/substreams) - _並列化ブロックチェーンデータインデックス技術_
-- [Reth](https://github.com/paradigmxyz/reth)Reth(Rust Ethereumの略称)は、新しいイーサリアムのフルノード実装
+- [Reth](https://github.com/paradigmxyz/reth) - (Rust Ethereumの略) イーサリアムの新しいフルノード実装
+- [Awesome Ethereum Rust](https://github.com/Vid201/awesome-ethereum-rust) - _Rustで書かれたイーサリアム・エコシステム・プロジェクトの厳選コレクション_
 
 もっとリソースをお探しですか？ [ethereum.org/developers](/developers/)をご確認ください。
 

@@ -46,7 +46,7 @@ Alchemy 非常自豪能够推动非同质化代币领域的一些巨头，包括
 
 我们需要一个以太坊帐户来发送和接收交易。 在本教程中，我们将使用 MetaMask——浏览器中的虚拟钱包，用来管理你的以太坊帐户地址。 如果你想了解更多关于以太坊交易的运作方式，请查看以太坊基金会的[这个页面](/developers/docs/transactions/)。
 
-你可以[在这里](https://metamask.io/download.html)免费下载并创建一个 MetaMask 帐户。 在你创建帐户时，或者如果你已有一个帐户，请确保切换到右上角的“Sepolia Test Network”（这样我们就不会使用实际货币进行交易）。
+你可以[在这里](https://metamask.io/download)免费下载并创建一个 MetaMask 帐户。 在你创建帐户时，或者如果你已有一个帐户，请确保切换到右上角的“Sepolia Test Network”（这样我们就不会使用实际货币进行交易）。
 
 ![将 Sepolia 设置为你的网络](./metamask-goerli.png)
 
@@ -76,7 +76,7 @@ Alchemy 非常自豪能够推动非同质化代币领域的一些巨头，包括
     npm init
 
 其实如何回答安装问题并不重要，以下提供一个回答的样例供参考：
-
+```json
     package name: (my-nft)
     version: (1.0.0)
     description: My first NFT!
@@ -87,7 +87,7 @@ Alchemy 非常自豪能够推动非同质化代币领域的一些巨头，包括
     author:
     license: (ISC)
     About to write to /Users/thesuperb1/Desktop/my-nft/package.json:
-    
+
     {
       "name": "my-nft",
       "version": "1.0.0",
@@ -99,7 +99,7 @@ Alchemy 非常自豪能够推动非同质化代币领域的一些巨头，包括
       "author": "",
       "license": "ISC"
     }
-
+```
 批准 package.json，我们就可以开始了！
 
 ## 步骤 7：安装[安全帽 (Hardhat)](https://hardhat.org/getting-started/#overview) {#install-hardhat}
@@ -259,6 +259,7 @@ Ethers.js 是一个软件库，通过以更加方便用户的方法打包[标准
 
 按如下所示更新你的 hardhat.config.js 代码：
 
+```js
     /**
     * @type import('hardhat/config').HardhatUserConfig
     */
@@ -276,6 +277,7 @@ Ethers.js 是一个软件库，通过以更加方便用户的方法打包[标准
           }
        },
     }
+```
 
 ## 步骤 14：编写合约 {#compile-contract}
 

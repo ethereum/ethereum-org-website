@@ -6,13 +6,13 @@ lang: it
 
 # Come scambiare token
 
-Sei stanco di cercare una borsa che elenchi tutti i tuoi token preferiti? Puoi scambiare gran parte dei token utilizzando le borse decentralizzate.
+Sei stanco di cercare una borsa che elenchi tutti i tuoi token preferiti? Puoi scambiare la maggior parte dei token utilizzando le [borse decentralizzate](/glossary/#dex).
 
-Uno scambio di token comporta lo scambio di due risorse differenti esistenti sulla rete di Ethereum, ad esempio ETH per DAI (un token ERC-20). Il processo è molto veloce ed economico. Dovrai avere un portafoglio di criptovalute per scambiare token.
+Uno scambio di token comporta lo scambio di due risorse differenti che esistono sulla rete di Ethereum, ad esempio ETH per DAI (un token [ERC-20](/glossary/#erc-20)). Il processo è molto veloce ed economico. Dovrai avere un portafoglio di criptovalute per scambiare token.
 
 **Prerequisiti:**
 
-- avere un portafoglio di criptovalute, puoi seguire questo tutorial: [Come "registrare" un conto di Ethereum](/guides/how-to-register-an-ethereum-account/)
+- possedere un [portafoglio di criptovalute](/glossary/#wallet), puoi seguire questo tutorial: [Come "registrare" un conto di Ethereum](/guides/how-to-create-an-ethereum-account/)
 - aggiungere fondi al tuo portafoglio
 
 ## 1. Connetti il tuo portafoglio alla borsa decentralizzata (DEX) di tua scelta
@@ -24,7 +24,7 @@ Alcune borse popolari sono:
 - [1Inch](https://app.1inch.io/#/1/unified/swap/ETH/DAI)
 - [Curve](https://curve.fi/#/ethereum/swap)
 
-Se desideri scoprire di più su cosa sia la DeFi e sul funzionamento di questi nuovi tipi di borse, consigliamo la [Libreria Kernel](https://library.kernel.community/Topic+-+DeFi/Topic+-+DeFi).
+Interessante? Scopri di più su cos'è la [finanza decentralizzata (DeFi)](/defi/) e su come funzionano questi tipi di scambi.
 
 ## 2. Seleziona la coppia di token che desideri scambiare
 
@@ -51,7 +51,7 @@ Riceverai automaticamente i token scambiati nel tuo portafoglio, una volta elabo
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Vuoi scoprire di più?</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     Visualizza le altre guide
   </ButtonLink>
 </InfoBanner>

@@ -20,7 +20,7 @@ Un "nodo" è qualsiasi istanza del software del client di Ethereum connessa ad a
 - Il client di esecuzione (noto anche come il Motore di Esecuzione, client EL o, precedentemente, client di Eth1) attende le nuove transazioni trasmesse nella rete, le esegue nell'EVM e detiene l'ultimo stato e database di tutti i dati correnti di Ethereum.
 - Il client di consenso (noto anche come il Nodo Beacon, client CL o, precedentemente, client di Eth2) implementa l'algoritmo di consenso di proof-of-stake, che consente alla rete di raggiungere l'accordo secondo i dati validati dal client di esecuzione. C'è inoltre un terzo pezzo di software, chiamato "validatore" che può essere aggiunto al client di consenso, permettendo al nodo di partecipare alla messa in sicurezza della rete.
 
-I client lavorano assieme per tenere traccia della testa della blockchain Ethereum e permettere agli utenti di interagire con la rete Ethereum. Il design modulare con molteplici pezzi di software che lavorano assieme è chiamato [complessità incapsulata](https://vitalik.eth.limo/general/2022/02/28/complexity.html). Questo approccio ha semplificato l'esecuzione de [La Fusione](/roadmap/merge) senza problemi, permette di mantenere e sviluppare più facilmente il software client, e consente il riutilizzo di client individuali ad esempio nell'[ecosistema di livello 2](/layer-2/).
+I client lavorano assieme per tenere traccia della testa della blockchain Ethereum e permettere agli utenti di interagire con la rete Ethereum. Il design modulare con molte parti di software che cooperano è detto [complessità incapsulata](https://vitalik.eth.limo/general/2022/02/28/complexity.html). Questo approccio ha semplificato l'esecuzione de [La Fusione](/roadmap/merge) senza problemi, permette di mantenere e sviluppare più facilmente il software client, e consente il riutilizzo di client individuali ad esempio nell'[ecosistema di livello 2](/layer-2/).
 
 ![Client di esecuzione e consenso accoppiati](./eth1eth2client.png) Diagramma semplificato di un client di esecuzione e uno di consenso accoppiati.
 
@@ -45,8 +45,8 @@ Diversi tracker offrono una panoramica in tempo reale dei nodi nella rete Ethere
 
 - [Mappa dei nodi](https://etherscan.io/nodetracker) di Etherscan
 - [Ethernodes](https://ethernodes.org/) di Bitfly
-- [Crawler dei Nodi di Ethereum](https://crawler.ethereum.org/)
 - [Nodewatch](https://www.nodewatch.io/) di Chainsafe, crawling dei nodi di consenso
+- [Monitoreth](https://monitoreth.io/), di MigaLabs, uno strumento di monitoraggio della rete distribuito
 
 ## Tipologie di nodo {#node-types}
 
@@ -130,13 +130,14 @@ La community di Ethereum mantiene numerosi client di esecuzione open source (pre
 
 Questa tabella riepiloga i diversi client. Tutti superano i [test dei client](https://github.com/ethereum/tests) e sono mantenuti attivamente per rimanere al passo con gli aggiornamenti di rete.
 
-| Client                                          | Linguaggio | Sistemi operativi     | Reti                                     | Strategie di sincronizzazione          | Cancellazione dello stato |
-| ----------------------------------------------- | ---------- | --------------------- | ---------------------------------------- | -------------------------------------- | ------------------------- |
-| [Geth](https://geth.ethereum.org/)              | Vai        | Linux, Windows, macOS | Rete Principale, Sepolia, Goerli         | Snap, Completa                         | Archiviata, Tagliata      |
-| [Nethermind](http://nethermind.io/)             | C#, .NET   | Linux, Windows, macOS | Rete Principale, Sepolia, Goerli e altre | Snap (senza servire), Rapida, Completa | Archiviata, Tagliata      |
-| [Besu](https://besu.hyperledger.org/en/stable/) | Java       | Linux, Windows, macOS | Rete Principale, Sepolia, Goerli e altre | Snap, Veloce, Completo                 | Archiviata, Tagliata      |
-| [Erigon](https://github.com/ledgerwatch/erigon) | Go         | Linux, Windows, macOS | Rete Principale, Sepolia, Goerli e altre | Completa                               | Archiviata, Tagliata      |
-| [Reth](https://github.com/paradigmxyz/reth)     | Rust       | Linux, Windows, macOS | Rete Principale, Sepolia, Goerli e altre | Completa                               | Archiviata, Tagliata      |
+| Client                                                                   | Linguaggio | Sistemi operativi     | Reti                              | Strategie di sincronizzazione                                       | Cancellazione dello stato |
+| ------------------------------------------------------------------------ | ---------- | --------------------- | --------------------------------- | ------------------------------------------------------------------- | ------------------------- |
+| [Geth](https://geth.ethereum.org/)                                       | Vai        | Linux, Windows, macOS | Rete Principale, Sepolia, Holesky | [Snap](#snap-sync), [Completa](#full-sync)                          | Archiviata, Tagliata      |
+| [Nethermind](https://www.nethermind.io/)                                 | C#, .NET   | Linux, Windows, macOS | Rete Principale, Sepolia, Holesky | [Snap](#snap-sync) (senza servizio), Veloce, [Completa](#full-sync) | Archiviata, Tagliata      |
+| [Besu](https://besu.hyperledger.org/en/stable/)                          | Java       | Linux, Windows, macOS | Rete Principale, Sepolia, Holesky | [Snap](#snap-sync), [Veloce](#fast-sync), [Completa](#full-sync)    | Archiviata, Tagliata      |
+| [Erigon](https://github.com/ledgerwatch/erigon)                          | Go         | Linux, Windows, macOS | Rete Principale, Sepolia, Holesky | [Completa](#full-sync)                                              | Archiviata, Tagliata      |
+| [Reth](https://reth.rs/)                                                 | Rust       | Linux, Windows, macOS | Rete Principale, Sepolia, Holesky | [Completa](#full-sync)                                              | Archiviata, Tagliata      |
+| [EthereumJS](https://github.com/ethereumjs/ethereumjs-monorepo) _(beta)_ | TypeScript | Linux, Windows, macOS | Sepolia, Holesky                  | [Completa](#full-sync)                                              | Tagliata                  |
 
 Per ulteriori informazioni sulle reti supportate, consulta [reti Ethereum](/developers/docs/networks/).
 
@@ -164,9 +165,27 @@ Nethermind è un'implementazione di Ethereum creata con lo stack tecnologico C #
 
 - una macchina virtuale ottimizzata
 - accesso allo stato
-- networking e funzionalità avanzate come dashboard Prometheus/Graphana, supporto per la registrazione aziendale seq, tracciamento RPC JSON e plug-in di analisi.
+- networking e funzionalità avanzate come pannelli di controllo Prometheus/Graphana, supporto per la registrazione aziendale seq, tracciamento RPC-JSON e plug-in di analisi.
 
 Inoltre, Nethermind vanta una [documentazione dettagliata](https://docs.nethermind.io), un efficace supporto per gli sviluppatori, una community online e un supporto disponibile 24 ore al giorno, 7 giorni su 7 per gli utenti premium.
+
+### Reth {#reth}
+
+Reth (abbreviazione di Rust Ethereum) è un'implementazione a nodo completo su Ethereum incentrata sull'essere facile da utilizzare, altamente modulare, veloce ed efficiente. Originariamente Reth era stata costruita e portata avanti da Paradigm, ed è concessa in licenza sotto licenze Apache e MIT.
+
+Reth è pronta per la produzione e adatta per l'utilizzo in ambienti di importanza critica come staking o servizi con tempi di attività elevati. Funziona bene nei casi d'uso in cui sono richieste prestazioni elevate con ampi margini come RPC, MEV, indicizzazione, simulazioni e attività P2P.
+
+Scopri di più consultando il [Reth Book](https://reth.rs/) o la [repository Reth in GitHub](https://github.com/paradigmxyz/reth?tab=readme-ov-file#reth).
+
+### In fase di sviluppo {#execution-in-development}
+
+Questi client sono ancora nelle prime fasi di sviluppo e non sono ancora consigliate per l'utilizzo in produzione.
+
+#### EthereumJS {#ethereumjs}
+
+Il client di esecuzione di EthereumJS è scritto in TypeScript e composto da svariati pacchetti, inclusi i primitivi essenziali di Ethereum rappresentati dalle classi Blocco, Transazione e Albero di Merkle-Patricia, e i componenti essenziali dei client, inclusa un'implementazione della Macchina Virtuale di Ethereum (EVM), una classe della blockchain e lo stack di rete di DevP2P.
+
+Scopri di più leggendo la sua [documentazione](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master)
 
 ## Client di consenso {#consensus-clients}
 
@@ -179,6 +198,7 @@ Esistono diversi client di consenso (precedentemente noti come client di "Eth2")
 | [Nimbus](https://nimbus.team/)                                | Nim        | Linux, Windows, macOS | Beacon Chain, Goerli, Sepolia, Ropsten e altre                  |
 | [Prysm](https://docs.prylabs.network/docs/getting-started/)   | Go         | Linux, Windows, macOS | Beacon Chain, Gnosis, Goerli, Pyrmont, Sepolia, Ropsten e altre |
 | [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) | Java       | Linux, Windows, macOS | Beacon Chain, Gnosis, Goerli, Sepolia, Ropsten e altre          |
+| [Grandine](https://docs.grandine.io/) (beta)                  | Rust       | Linux, Windows, macOS | Beacon Chain, Goerli, Sepolia e altre                           |
 
 ### Lighthouse {#lighthouse}
 
@@ -212,6 +232,12 @@ Teku offre opzioni di sviluppo molto flessibili. Il nodo beacon e il client del 
 
 Teku è scritto in Java ed è sotto licenza Apache 2.0. È sviluppato dal team Protocols di ConsenSys, responsabile anche di Besu e Web3Signer. Scopri di più nella [documentazione di Teku](https://docs.teku.consensys.net/en/latest/).
 
+### Grandine {#grandine}
+
+Grandine è un'implementazione del client di consenso scritta in Rust sotto la licenza GPL-3.0. Mantenuta dal Team principale di Grandine, è veloce, leggera e ad alte prestazioni. È adatta a un'ampia gamma di staker, da quelli in solo su dispositivi a bassa potenza, come il Raspberry Pi, ai grandi staker istituzionali che eseguono decine di migliaia di validatori.
+
+La documentazione è consultabile sul [Manuale di Grandine](https://docs.grandine.io/)
+
 ## Modalità di sincronizzazione {#sync-modes}
 
 Per seguire e verificare i dati correnti nella rete, il client di Ethereum deve essere sincronizzato con l'ultimo stato della rete. Ciò avviene scaricando i dati dai pari, verificandone crittograficamente l'integrità e creando un database locale della blockchain.
@@ -220,21 +246,32 @@ Le modalità di sincronizzazione rappresentano diversi approcci a questo process
 
 ### Modalità di sincronizzazione del livello di esecuzione {#execution-layer-sync-modes}
 
-#### Sincronizzazione completa dell'archivio {#full-sync}
+Il livello di esecuzione potrebbe essere eseguito in modi diversi per adeguarsi a casi d'uso differenti, dalla ri-esecuzione dello stato globale della blockchain alla sola sincronizzazione con la testa della catena da un punto di controllo affidabile.
 
-La sincronizzazione completa scarica tutti i blocchi (incluse intestazioni, transazioni e ricevute) e genera lo stato della blockchain in modo incrementale eseguendo ogni blocco dalla genesi.
+#### Sincronizzazione completa {#full-sync}
+
+Una sincronizzazione completa scarica tutti i blocchi (incluse le intestazioni e i corpi dei blocchi) e rigenera lo stato della blockchain in modo incrementale eseguendo ogni blocco dalla genesi.
 
 - Riduce al minimo la fiducia e offre la massima sicurezza verificando ogni transazione.
 - Al crescere del numero di transazioni, possono volerci giorni o persino settimane per elaborare tutte le transazioni.
 
-#### Sincronizzazione snap completa {#snap-sync}
+I [nodi Archivio](#archive-node) eseguono una sincronizzazione completa per costruire (e conservare) uno storico completo delle modifiche apportate allo stato da ogni transazione in ogni blocco.
 
-La sincronizzazione snap verifica la blockchain blocco per blocco, come una sincronizzazione completa dell'archivio; ma invece di cominciare dal blocco genesi, inizia da un più recente punto di controllo "fidato" che si sa faccia parte della vera blockchain. Il nodo salva punti di controllo periodici mentre elimina dati più vecchi di un certo periodo. Queste istantanee sono utilizzate per rigenerare gli stati dei dati quando necessario, invece che doverli memorizzare tutti per sempre.
+#### Sincronizzazione veloce {#fast-sync}
 
-- È la strategia di sincronizzazione più veloce, attualmente quella predefinita nella rete principale di Ethereum
-- Risparmia molto spazio su disco e larghezza di banda di rete senza sacrificare la sicurezza
+Come in una sincronizzazione completa, una sincronizzazione veloce scarica tutti i blocchi (intestazioni, transazioni e ricevute incluse). Tuttavia, invece di rielaborare le transazioni storiche, una sincronizzazione veloce si affida alle ricevute fino al raggiungimento di una testa recente, quando passa all'importazione ed elaborazione dei blocchi per fornire un nodo completo.
 
-[Maggiori informazioni sulla sincronizzazione snap](https://github.com/ethereum/devp2p/blob/master/caps/snap.md)
+- Strategia di sincronizzazione veloce.
+- Riduce la domanda di elaborazione, in favore dell'utilizzo della larghezza di banda.
+
+#### Sincronizzazione snap {#snap-sync}
+
+Anche le sincronizzazioni snap verificano la catena blocco per blocco. Tuttavia, invece di iniziare dal blocco di genesi, una sincronizzazione snap si avvia da un punto di controllo 'affidabile' più recente che è noto faccia parte della vera blockchain. Il nodo salva punti di controllo periodici mentre elimina dati più vecchi di un certo periodo. Queste istantanee sono utilizzate per rigenerare i dati di stato necessari, piuttosto che per memorizzarli per sempre.
+
+- È la strategia di sincronizzazione più veloce, attualmente quella predefinita nella Rete Principale di Ethereum.
+- Risparmia molto spazio su disco e larghezza di banda di rete senza sacrificare la sicurezza.
+
+[Maggiori informazioni sulla sincronizzazione snap](https://github.com/ethereum/devp2p/blob/master/caps/snap.md).
 
 #### Sincronizzazione leggera {#light-sync}
 
@@ -257,15 +294,13 @@ La sincronizzazione ottimistica è una strategia di sincronizzazione successiva 
 
 #### Sincronizzazione del punto di controllo {#checkpoint-sync}
 
-La sincronizzazione del punto di controllo, anche nota come sincronizzazione a soggettività debole, crea un'esperienza utente superiore per la sincronizzazione del Nodo Beacon. Si basa sulle ipotesi di [soggettività debole](/developers/docs/consensus-mechanisms/pos/weak-subjectivity/) che consentono di sincronizzare la Beacon Chain da un punto di controllo a soggettività debole recente invece che dalla genesi. La sincronizzazione del punto di controllo rende significativamente più breve il tempo di sincronizzazione iniziale, con ipotesi di fiducia simili a quelli della sincronizzazione dalla [genesi](/glossary/#genesis-block).
+Una sincronizzazione dal punto di controllo, anche nota come sincronizzazione a soggettività debole, crea un'esperienza utente superiore per la sincronizzazione di un Nodo Beacon. Si basa sulle ipotesi di [soggettività debole](/developers/docs/consensus-mechanisms/pos/weak-subjectivity/), che consentono la sincronizzazione della Beacon Chain da un punto di controllo a soggettività debole recente invece che dalla genesi. Le sincronizzazioni dai punti di controllo rendono significativamente più veloce la sincronizzazione iniziale, con ipotesi di fiducia simili alla sincronizzazione dalla [genesi](/glossary/#genesis-block).
 
-In pratica, ciò significa che il tuo nodo si connette a un servizio remoto per scaricare gli stati finalizzati di recente e continua a verificare i dati da quel punto. Le terze parti che forniscono i dati sono affidabili e dovrebbero essere selezionate attentamente.
+In pratica, ciò significa che il tuo nodo si connette a un servizio remoto per scaricare gli stati finalizzati di recente e continua a verificare i dati da quel punto. La terza parte che fornisce i dati è affidabile e dovrebbe essere selezionata attentamente.
 
 Maggiori informazioni sulla [sincronizzazione del punto di controllo](https://notes.ethereum.org/@djrtwo/ws-sync-in-practice)
 
 ## Letture consigliate {#further-reading}
-
-Su internet si trovano molte informazioni sui client Ethereum. Ecco alcune risorse che potrebbero essere utili.
 
 - [Ethereum 101 - Parte 2 - Comprendere i nodi](https://kauri.io/ethereum-101-part-2-understanding-nodes/48d5098292fd4f11b251d1b1814f0bba/a) _– Wil Barnes, 13 febbraio 2019_
 - [Eseguire i nodi completi di Ethereum: una guida per i poco motivati](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux, 7 novembre 2019_

@@ -35,6 +35,6 @@ E para que o ethereum.org possa confiar na legitimidade e segurança dos serviç
 
 Se você deseja adicionar uma agência de câmbio no ethereum.org, crie um tíquete no GitHub.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=content+%3Afountain_pen%3A&template=suggest_exchange.yaml">
+<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=content+%3Afountain_pen%3A&template=suggest_exchange.yaml">
   Criar tíquete
 </ButtonLink>

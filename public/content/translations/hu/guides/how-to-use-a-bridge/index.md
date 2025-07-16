@@ -54,7 +54,7 @@ A [chainlist.org](http://chainlist.org) segít az adott hálózat RPC-adatait me
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Szeretne többet megtudni?</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     Tekintse meg a további útmutatóinkat
   </ButtonLink>
 </InfoBanner>

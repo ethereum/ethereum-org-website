@@ -4,9 +4,9 @@ description: Oracles provide Ethereum smart contracts with access to real-world 
 lang: en
 ---
 
-Oracles are applications that produce data feeds that make off-chain data sources available to the blockchain for smart contracts. This is necessary because Ethereum-based smart contracts cannot, by default, access information stored outside the blockchain network.
+Oracles are applications that produce data feeds that make offchain data sources available to the blockchain for smart contracts. This is necessary because Ethereum-based smart contracts cannot, by default, access information stored outside the blockchain network.
 
-Giving smart contracts the ability to execute using off-chain data extends the utility and value of decentralized applications. For instance, on-chain prediction markets rely on oracles to provide information about outcomes that they use to validate user predictions. Suppose Alice bets 20 ETH on who will become the next U.S. President. In that case, the prediction-market dapp needs an oracle to confirm election results and determine if Alice is eligible for a payout.
+Giving smart contracts the ability to execute using offchain data extends the utility and value of decentralized applications. For instance, onchain prediction markets rely on oracles to provide information about outcomes that they use to validate user predictions. Suppose Alice bets 20 ETH on who will become the next U.S. President. In that case, the prediction-market dapp needs an oracle to confirm election results and determine if Alice is eligible for a payout.
 
 ## Prerequisites {#prerequisites}
 
@@ -14,11 +14,11 @@ This page assumes the reader is familiar with Ethereum fundamentals, including [
 
 ## What is a blockchain oracle? {#what-is-a-blockchain-oracle}
 
-Oracles are applications that source, verify, and transmit external information (i.e. information stored off-chain) to smart contracts running on the blockchain. Besides “pulling” off-chain data and broadcasting it on Ethereum, oracles can also “push” information from the blockchain to external systems, e.g., unlocking a smart lock once the user sends a fee via an Ethereum transaction.
+Oracles are applications that source, verify, and transmit external information (i.e. information stored offchain) to smart contracts running on the blockchain. Besides “pulling” offchain data and broadcasting it on Ethereum, oracles can also “push” information from the blockchain to external systems, e.g., unlocking a smart lock once the user sends a fee via an Ethereum transaction.
 
-Without an oracle, a smart contract would be limited entirely to on-chain data.
+Without an oracle, a smart contract would be limited entirely to onchain data.
 
-Oracles differ based on the source of data (one or multiple sources), trust models (centralized or decentralized), and system architecture (immediate-read, publish-subscribe, and request-response). We can also distinguish between oracles based on whether they retrieve external data for use by on-chain contracts (input oracles), send information from the blockchain to the off-chain applications (output oracles), or perform computational tasks off-chain (computational oracles).
+Oracles differ based on the source of data (one or multiple sources), trust models (centralized or decentralized), and system architecture (immediate-read, publish-subscribe, and request-response). We can also distinguish between oracles based on whether they retrieve external data for use by onchain contracts (input oracles), send information from the blockchain to the offchain applications (output oracles), or perform computational tasks offchain (computational oracles).
 
 ## Why do smart contracts need oracles? {#why-do-smart-contracts-need-oracles}
 
@@ -36,11 +36,11 @@ If blockchains received information from external sources (i.e. from the real wo
 
 For a public blockchain like Ethereum, with thousands of nodes around the world processing transactions, determinism is critical. With no central authority serving as a source of truth, nodes need mechanisms for arriving at the same state after applying the same transactions. A case whereby node A executes a smart contract’s code and gets "3" as a result, while node B gets "7" after running the same transaction would cause consensus to break down and eliminate Ethereum’s value as a decentralized computing platform.
 
-This scenario also highlights the problem with designing blockchains to pull information from external sources. Oracles, however, solve this problem by taking information from off-chain sources and storing it on the blockchain for smart contracts to consume. Since information stored on-chain is unalterable and publicly available, Ethereum nodes can safely use the oracle imported off-chain data to compute state changes without breaking consensus.
+This scenario also highlights the problem with designing blockchains to pull information from external sources. Oracles, however, solve this problem by taking information from offchain sources and storing it on the blockchain for smart contracts to consume. Since information stored onchain is unalterable and publicly available, Ethereum nodes can safely use the oracle imported offchain data to compute state changes without breaking consensus.
 
-To do this, an oracle is typically made up of a smart contract running on-chain and some off-chain components. The on-chain contract receives requests for data from other smart contracts, which it passes to the off-chain component (called an oracle node). This oracle node can query data sources—using application programming interfaces (APIs), for example—and send transactions to store the requested data in the smart contract's storage.
+To do this, an oracle is typically made up of a smart contract running onchain and some offchain components. The onchain contract receives requests for data from other smart contracts, which it passes to the offchain component (called an oracle node). This oracle node can query data sources—using application programming interfaces (APIs), for example—and send transactions to store the requested data in the smart contract's storage.
 
-Essentially, a blockchain oracle bridges the information gap between the blockchain and the external environment, creating “hybrid smart contracts”. A hybrid smart contract is one that functions based on a combination of on-chain contract code and off-chain infrastructure. Decentralized prediction markets are an excellent example of hybrid smart contracts. Other examples might include crop insurance smart contracts that pay out when a set of oracles determine that certain weather phenomena have taken place.
+Essentially, a blockchain oracle bridges the information gap between the blockchain and the external environment, creating “hybrid smart contracts”. A hybrid smart contract is one that functions based on a combination of onchain contract code and offchain infrastructure. Decentralized prediction markets are an excellent example of hybrid smart contracts. Other examples might include crop insurance smart contracts that pay out when a set of oracles determine that certain weather phenomena have taken place.
 
 ## What is the oracle problem? {#the-oracle-problem}
 
@@ -54,11 +54,11 @@ The so-called “oracle problem” demonstrates the issues that come with using 
 
 Different oracles offer different solutions to the oracle problem, which we explore later. Oracles are typically evaluated on how well they can handle the following challenges:
 
-1. **Correctness**: An oracle should not cause smart contracts to trigger state changes based on invalid off-chain data. An oracle must guarantee _authenticity_ and _integrity_ of data. Authenticity means the data was gotten from the correct source, while integrity means the data remained intact (i.e. wasn’t altered) before being sent on-chain.
+1. **Correctness**: An oracle should not cause smart contracts to trigger state changes based on invalid offchain data. An oracle must guarantee _authenticity_ and _integrity_ of data. Authenticity means the data was gotten from the correct source, while integrity means the data remained intact (i.e. wasn’t altered) before being sent onchain.
 
 2. **Availability**: An oracle should not delay or prevent smart contracts from executing actions and triggering state changes. This means that data from an oracle must be _available on request_ without interruption.
 
-3. **Incentive compatibility**: An oracle should incentivize off-chain data providers to submit correct information to smart contracts. Incentive compatibility involves _attributability_ and _accountability_. Attributability allows for linking a piece of external information to its provider, while accountability bonds data providers to the information they give, so they can be rewarded or penalized based on the quality of information provided.
+3. **Incentive compatibility**: An oracle should incentivize offchain data providers to submit correct information to smart contracts. Incentive compatibility involves _attributability_ and _accountability_. Attributability allows for linking a piece of external information to its provider, while accountability bonds data providers to the information they give, so they can be rewarded or penalized based on the quality of information provided.
 
 ## How does a blockchain oracle service work? {#how-does-a-blockchain-oracle-service-work}
 
@@ -66,7 +66,7 @@ Different oracles offer different solutions to the oracle problem, which we expl
 
 Users are entities (i.e., smart contracts) that need information external to the blockchain to complete specific actions. The basic workflow of an oracle service starts with the user sending a data request to the oracle contract. Data requests will usually answer some or all of the following questions:
 
-1. What sources can off-chain nodes consult for the requested information?
+1. What sources can offchain nodes consult for the requested information?
 
 2. How do reporters process information from data sources and extract useful data points?
 
@@ -78,11 +78,11 @@ Users are entities (i.e., smart contracts) that need information external to the
 
 ### Oracle contract {#oracle-contract}
 
-The oracle contract is the on-chain component for the oracle service. It listens for data requests from other contracts, relays data queries to oracle nodes, and broadcasts returned data to client contracts. This contract may also perform some computation on the returned data points to produce an aggregate value to send to the requesting contract.
+The oracle contract is the onchain component for the oracle service. It listens for data requests from other contracts, relays data queries to oracle nodes, and broadcasts returned data to client contracts. This contract may also perform some computation on the returned data points to produce an aggregate value to send to the requesting contract.
 
-The oracle contract exposes some functions which client contracts call when making a data request. Upon receiving a new query, the smart contract will emit a [log event](/developers/docs/smart-contracts/anatomy/#events-and-logs) with details of the data request. This notifies off-chain nodes subscribed to the log (usually using something like the JSON-RPC `eth_subscribe` command), who proceed to retrieve data defined in the log event.
+The oracle contract exposes some functions which client contracts call when making a data request. Upon receiving a new query, the smart contract will emit a [log event](/developers/docs/smart-contracts/anatomy/#events-and-logs) with details of the data request. This notifies offchain nodes subscribed to the log (usually using something like the JSON-RPC `eth_subscribe` command), who proceed to retrieve data defined in the log event.
 
-Below is an [example oracle contract](https://medium.com/@pedrodc/implementing-a-blockchain-oracle-on-ethereum-cedc7e26b49e) by Pedro Costa. This is a simple oracle service that can query off-chain APIs upon request by other smart contracts and store the requested information on the blockchain:
+Below is an [example oracle contract](https://medium.com/@pedrodc/implementing-a-blockchain-oracle-on-ethereum-cedc7e26b49e) by Pedro Costa. This is a simple oracle service that can query offchain APIs upon request by other smart contracts and store the requested information on the blockchain:
 
 ```solidity
 pragma solidity >=0.4.21 <0.6.0;
@@ -198,11 +198,11 @@ contract Oracle {
 
 ### Oracle nodes {#oracle-nodes}
 
-The oracle node is the off-chain component of the oracle service. It extracts information from external sources, such as APIs hosted on third-party servers, and puts it on-chain for consumption by smart contracts. Oracle nodes listen for events from the on-chain oracle contract and proceed to complete the task described in the log.
+The oracle node is the offchain component of the oracle service. It extracts information from external sources, such as APIs hosted on third-party servers, and puts it onchain for consumption by smart contracts. Oracle nodes listen for events from the onchain oracle contract and proceed to complete the task described in the log.
 
-A common task for oracle nodes is sending a [HTTP GET](https://www.w3schools.com/tags/ref_httpmethods.asp) request to an API service, parsing the response to extract relevant data, formatting into a blockchain-readable output, and sending it on-chain by including it in a transaction to the oracle contract. The oracle node may also be required to attest to the validity and integrity of submitted information using “authenticity proofs”, which we explore later.
+A common task for oracle nodes is sending a [HTTP GET](https://www.w3schools.com/tags/ref_httpmethods.asp) request to an API service, parsing the response to extract relevant data, formatting into a blockchain-readable output, and sending it onchain by including it in a transaction to the oracle contract. The oracle node may also be required to attest to the validity and integrity of submitted information using “authenticity proofs”, which we explore later.
 
-Computational oracles also rely on off-chain nodes to perform computational tasks that would be impractical to execute on-chain, given gas costs and block size limits. For example, the oracle node may be tasked with generating a verifiably random figure (e.g., for blockchain-based games).
+Computational oracles also rely on offchain nodes to perform computational tasks that would be impractical to execute onchain, given gas costs and block size limits. For example, the oracle node may be tasked with generating a verifiably random figure (e.g., for blockchain-based games).
 
 ## Oracle design patterns {#oracle-design-patterns}
 
@@ -216,15 +216,15 @@ This type of oracle exposes a “data feed” which other contracts can regularl
 
 A request-response setup allows the client contract to request arbitrary data other than that provided by a publish-subscribe oracle. Request-response oracles are ideal when the dataset is too large to be stored in a smart contract’s storage, and/or users will only need a small part of the data at any point in time.
 
-Although more complex than publish-subscribe models, request-response oracles are basically what we described in the previous section. The oracle will have an on-chain component that receives a data request and passes it to an off-chain node for processing.
+Although more complex than publish-subscribe models, request-response oracles are basically what we described in the previous section. The oracle will have an onchain component that receives a data request and passes it to an offchain node for processing.
 
-Users initiating data queries must cover the cost of retrieving information from the off-chain source. The client contract must also provide funds to cover gas costs incurred by the oracle contract in returning the response via the callback function specified in the request.
+Users initiating data queries must cover the cost of retrieving information from the offchain source. The client contract must also provide funds to cover gas costs incurred by the oracle contract in returning the response via the callback function specified in the request.
 
 ## Centralized vs. decentralized oracles {#types-of-oracles}
 
 ### Centralized oracles {#centralized-oracles}
 
-A centralized oracle is controlled by a single entity responsible for aggregating off-chain information and updating the oracle contract's data as requested. Centralized oracles are efficient since they rely on a single source of truth. They may function better in cases where proprietary datasets are published directly by the owner with a widely accepted signature. However, they bring downsides as well:
+A centralized oracle is controlled by a single entity responsible for aggregating offchain information and updating the oracle contract's data as requested. Centralized oracles are efficient since they rely on a single source of truth. They may function better in cases where proprietary datasets are published directly by the owner with a widely accepted signature. However, they bring downsides as well:
 
 #### Low correctness guarantees {#low-correctness-guarantees}
 
@@ -232,7 +232,7 @@ With centralized oracles, there's no way to confirm if the information provided 
 
 #### Poor availability {#poor-availability}
 
-Centralized oracles aren't guaranteed to always make off-chain data available to other smart contracts. If the provider decides to turn off the service or a hacker hijacks the oracle's off-chain component, your smart contract is at risk of a denial of service (DoS) attack.
+Centralized oracles aren't guaranteed to always make offchain data available to other smart contracts. If the provider decides to turn off the service or a hacker hijacks the oracle's offchain component, your smart contract is at risk of a denial of service (DoS) attack.
 
 #### Poor incentive compatibility {#poor-incentive-compatibility}
 
@@ -240,7 +240,7 @@ Centralized oracles often have poorly designed or non-existent incentives for th
 
 ### Decentralized oracles {#decentralized-oracles}
 
-Decentralized oracles are designed to overcome the limitations of centralized oracles by eliminating single points of failure. A decentralized oracle service comprises multiple participants in a peer-to-peer network that form consensus on off-chain data before sending it to a smart contract.
+Decentralized oracles are designed to overcome the limitations of centralized oracles by eliminating single points of failure. A decentralized oracle service comprises multiple participants in a peer-to-peer network that form consensus on offchain data before sending it to a smart contract.
 
 A decentralized oracle should (ideally) be permissionless, trustless, and free from administration by a central party; in reality, decentralization among oracles is on a spectrum. There are semi-decentralized oracle networks where anyone can participate, but with an “owner” that approves and removes nodes based on historical performance. Fully decentralized oracle networks also exist: these usually run as standalone blockchains and have defined consensus mechanisms for coordinating nodes and punishing misbehavior.
 
@@ -248,7 +248,7 @@ Using decentralized oracles comes with the following benefits:
 
 ### High correctness guarantees {#high-correctness-guarantees}
 
-Decentralized oracles attempt to achieve correctness of data using different approaches. This includes using proofs attesting to the authenticity and integrity of the returned information and requiring multiple entities to collectively agree on the validity of off-chain data.
+Decentralized oracles attempt to achieve correctness of data using different approaches. This includes using proofs attesting to the authenticity and integrity of the returned information and requiring multiple entities to collectively agree on the validity of offchain data.
 
 #### Authenticity proofs {#authenticity-proofs}
 
@@ -264,9 +264,9 @@ Certain classes of decentralized oracles require oracle node operators to provid
 
 #### Consensus-based validation of information {#consensus-based-validation-of-information}
 
-Centralized oracles rely on a single source of truth when providing data to smart contracts, which introduces the possibility of publishing inaccurate information. Decentralized oracles solve this problem by relying on multiple oracle nodes to query off-chain information. By comparing data from multiple sources, decentralized oracles reduce the risk of passing invalid information to on-chain contracts.
+Centralized oracles rely on a single source of truth when providing data to smart contracts, which introduces the possibility of publishing inaccurate information. Decentralized oracles solve this problem by relying on multiple oracle nodes to query offchain information. By comparing data from multiple sources, decentralized oracles reduce the risk of passing invalid information to onchain contracts.
 
-Decentralized oracles, however, must deal with discrepancies in information retrieved from multiple off-chain sources. To minimize differences in information and ensure the data passed to the oracle contract reflects the collective opinion of oracle nodes, decentralized oracles use the following mechanisms:
+Decentralized oracles, however, must deal with discrepancies in information retrieved from multiple offchain sources. To minimize differences in information and ensure the data passed to the oracle contract reflects the collective opinion of oracle nodes, decentralized oracles use the following mechanisms:
 
 ##### Voting/staking on accuracy of data
 
@@ -282,19 +282,19 @@ Staking/voting also protects decentralized oracles from [Sybil attacks](/glossar
 
 An early idea for this was [SchellingCoin](https://blog.ethereum.org/2014/03/28/schellingcoin-a-minimal-trust-universal-data-feed/), a proposed data feed where participants submit responses to "scalar" questions (questions whose answers are described by magnitude, e.g., "what is the price of ETH?"), along with a deposit. Users who provide values between the 25th and 75th [percentile](https://en.wikipedia.org/wiki/Percentile) are rewarded, while those whose values deviate largely from the median value are penalized.
 
-While SchellingCoin doesn’t exist today, a number of decentralized oracles—notably [Maker Protocol’s Oracles](https://docs.makerdao.com/smart-contract-modules/oracle-module)—use the schelling-point mechanism to improve accuracy of oracle data. Each Maker Oracle consists of an off-chain P2P network of nodes ("relayers" and "feeds") who submit market prices for collateral assets and an on-chain “Medianizer” contract that calculates the median of all provided values. Once the specified delay period is over, this median value becomes the new reference price for the associated asset.
+While SchellingCoin doesn’t exist today, a number of decentralized oracles—notably [Maker Protocol’s Oracles](https://docs.makerdao.com/smart-contract-modules/oracle-module)—use the schelling-point mechanism to improve accuracy of oracle data. Each Maker Oracle consists of an offchain P2P network of nodes ("relayers" and "feeds") who submit market prices for collateral assets and an onchain “Medianizer” contract that calculates the median of all provided values. Once the specified delay period is over, this median value becomes the new reference price for the associated asset.
 
-Other examples of oracles that use Schelling point mechanisms include [Chainlink Off-Chain Reporting](https://docs.chain.link/docs/off-chain-reporting/) and [Witnet](https://witnet.io/). In both systems, responses from oracle nodes in the peer-to-peer network are aggregated into a single aggregate value, such as a mean or median. Nodes are rewarded or punished according to the extent to which their responses align with or deviate from the aggregate value.
+Other examples of oracles that use Schelling point mechanisms include [Chainlink Offchain Reporting](https://docs.chain.link/architecture-overview/off-chain-reporting) and [Witnet](https://witnet.io/). In both systems, responses from oracle nodes in the peer-to-peer network are aggregated into a single aggregate value, such as a mean or median. Nodes are rewarded or punished according to the extent to which their responses align with or deviate from the aggregate value.
 
-Schelling point mechanisms are attractive because they minimize on-chain footprint (only one transaction needs to be sent) while guaranteeing decentralization. The latter is possible because nodes must sign off on the list of submitted responses before it is fed into the algorithm that produces the mean/median value.
+Schelling point mechanisms are attractive because they minimize onchain footprint (only one transaction needs to be sent) while guaranteeing decentralization. The latter is possible because nodes must sign off on the list of submitted responses before it is fed into the algorithm that produces the mean/median value.
 
 ### Availability {#availability}
 
-Decentralized oracle services ensure high availability of off-chain data to smart contracts. This is achieved by decentralizing both the source of off-chain information and nodes responsible for transferring the information on-chain.
+Decentralized oracle services ensure high availability of offchain data to smart contracts. This is achieved by decentralizing both the source of offchain information and nodes responsible for transferring the information onchain.
 
 This ensures fault-tolerance since the oracle contract can rely on multiple nodes (who also rely on multiple data sources) to execute queries from other contracts. Decentralization at the source _and_ node-operator level is crucial—a network of oracle nodes serving information retrieved from the same source will run into the same problem as a centralized oracle.
 
-It is also possible for stake-based oracles can slash node operators who fail to respond quickly to data requests. This significantly incentivizes oracle nodes to invest in fault-tolerant infrastructure and provide data in timely fashion.
+It is also possible for stake-based oracles to slash node operators who fail to respond quickly to data requests. This significantly incentivizes oracle nodes to invest in fault-tolerant infrastructure and provide data in timely fashion.
 
 ### Good incentive compatibility {#good-incentive-compatibility}
 
@@ -358,15 +358,15 @@ contract PriceConsumerV3 {
 
 Certain blockchain applications, such as blockchain-based games or lottery schemes, require a high level of unpredictability and randomness to work effectively. However, the deterministic execution of blockchains eliminates randomness.
 
-The usual approach is to use pseudorandom cryptographic functions, such as `blockhash`, but these can be [manipulated by miners](https://ethereum.stackexchange.com/questions/3140/risk-of-using-blockhash-other-miners-preventing-attack#:~:text=So%20while%20the%20miners%20can,to%20one%20of%20the%20players.) solving the proof-of-work algorithm. Also, Ethereum’s [switch to proof-of-stake](/roadmap/merge/) means developers can no longer rely on `blockhash` for on-chain randomness (the Beacon Chain’s [RANDAO mechanism](https://eth2book.info/altair/part2/building_blocks/randomness) provides an alternative source of randomness, though).
+The original approach was to use pseudorandom cryptographic functions, such as `blockhash`, but these could be [manipulated by miners](https://ethereum.stackexchange.com/questions/3140/risk-of-using-blockhash-other-miners-preventing-attack#:~:text=So%20while%20the%20miners%20can,to%20one%20of%20the%20players.) solving the proof-of-work algorithm. Also, Ethereum’s [switch to proof-of-stake](/roadmap/merge/) means developers can no longer rely on `blockhash` for onchain randomness. The Beacon Chain’s [RANDAO mechanism](https://eth2book.info/altair/part2/building_blocks/randomness) provides an alternative source of randomness instead.
 
-It is possible to generate the random value off-chain and send it on-chain, but doing so imposes high trust requirements on users. They must believe the value was truly generated via unpredictable mechanisms and wasn’t altered in transit.
+It is possible to generate the random value offchain and send it onchain, but doing so imposes high trust requirements on users. They must believe the value was truly generated via unpredictable mechanisms and wasn’t altered in transit.
 
-Oracles designed for off-chain computation solve this problem by securely generating random outcomes off-chain that they broadcast on-chain along with cryptographic proofs attesting to the unpredictability of the process. An example is [Chainlink VRF](https://docs.chain.link/docs/chainlink-vrf/) (Verifiable Random Function), which is a provably fair and tamper-proof random number generator (RNG) useful for building reliable smart contracts for applications that rely on unpredictable outcomes. Another example is [API3 QRNG](https://docs.api3.org/explore/qrng/) that serves Quantum random number generation (QRNG) is a public method of Web3 RNG based on quantum phenomena, served with the courtesy of the Australian National University (ANU).
+Oracles designed for offchain computation solve this problem by securely generating random outcomes offchain that they broadcast onchain along with cryptographic proofs attesting to the unpredictability of the process. An example is [Chainlink VRF](https://docs.chain.link/docs/chainlink-vrf/) (Verifiable Random Function), which is a provably fair and tamper-proof random number generator (RNG) useful for building reliable smart contracts for applications that rely on unpredictable outcomes. Another example is [API3 QRNG](https://docs.api3.org/explore/qrng/) that serves Quantum random number generation (QRNG) is a public method of Web3 RNG based on quantum phenomena, served with the courtesy of the Australian National University (ANU).
 
 ### Getting outcomes for events {#getting-outcomes-for-events}
 
-With oracles, creating smart contracts that respond to real-world events is easy. Oracle services make this possible by allowing contracts to connect to external APIs through off-chain components and consume information from those data sources. For example, the prediction dapp mentioned earlier may request an oracle to return election results from a trusted off-chain source (e.g., the Associated Press).
+With oracles, creating smart contracts that respond to real-world events is easy. Oracle services make this possible by allowing contracts to connect to external APIs through offchain components and consume information from those data sources. For example, the prediction dapp mentioned earlier may request an oracle to return election results from a trusted offchain source (e.g., the Associated Press).
 
 Using oracles to retrieve data based on real-world outcomes enables other novel use cases; for example, a decentralized insurance product needs accurate information about weather, disasters, etc. to work effectively.
 
@@ -378,7 +378,7 @@ But there are also _private functions_ within a contract that are inaccessible t
 
 Developers will need to trigger such functions at intervals to keep the application running smoothly. However, this might lead to more hours lost on mundane tasks for developers, which is why automating execution of smart contracts is attractive.
 
-Some decentralized oracle networks offer automation services, which allow off-chain oracle nodes to trigger smart contract functions according to parameters defined by the user. Typically, this requires “registering” the target contract with the oracle service, providing funds to pay the oracle operator, and specifying the conditions or times to trigger the contract.
+Some decentralized oracle networks offer automation services, which allow offchain oracle nodes to trigger smart contract functions according to parameters defined by the user. Typically, this requires “registering” the target contract with the oracle service, providing funds to pay the oracle operator, and specifying the conditions or times to trigger the contract.
 
 Chainlink’s [Keeper Network](https://chain.link/keepers) provides options for smart contracts to outsource regular maintenance tasks in a trust minimized and decentralized manner. Read the official [Keeper's documentation](https://docs.chain.link/docs/chainlink-keepers/introduction/) for information on making your contract Keeper-compatible and using the Upkeep service.
 
@@ -387,6 +387,10 @@ Chainlink’s [Keeper Network](https://chain.link/keepers) provides options for 
 There are multiple oracle applications you can integrate into your Ethereum dapp:
 
 **[Chainlink](https://chain.link/)** - _Chainlink decentralized oracle networks provide tamper-proof inputs, outputs, and computations to support advanced smart contracts on any blockchain._
+
+**[RedStone Oracles](https://redstone.finance/)** - _RedStone is a decentralized modular oracle that provides gas-optimized data feeds. It specializes in offering price feeds for emerging assets, such as liquid staking tokens (LSTs), liquid restaking tokens (LRTs), and Bitcoin staking derivatives._
+
+**[Chronicle](https://chroniclelabs.org/)** - _Chronicle overcomes the current limitations of transferring data onchain by developing truly scalable, cost-efficient, decentralized, and verifiable oracles._
 
 **[Witnet](https://witnet.io/)** - _Witnet is a permissionless, decentralized, and censorship-resistant oracle helping smart contracts to react to real world events with strong crypto-economic guarantees._
 
@@ -398,11 +402,11 @@ There are multiple oracle applications you can integrate into your Ethereum dapp
 
 **[Paralink](https://paralink.network/)** - _Paralink provides an open source and decentralized oracle platform for smart contracts running on Ethereum and other popular blockchains._
 
-**[Pyth Network](https://pyth.network/)** - _The Pyth network is a first-party financial oracle network designed to publish continuous real-world data on-chain in a tamper-resistant, decentralized, and self-sustainable environment._
+**[Pyth Network](https://pyth.network/)** - _The Pyth network is a first-party financial oracle network designed to publish continuous real-world data onchain in a tamper-resistant, decentralized, and self-sustainable environment._
 
 **[API3 DAO](https://www.api3.org/)** - _API3 DAO is delivering first-party oracle solutions that deliver greater source transparency, security and scalability in a decentralized solution for smart contracts_
 
-**[Supra](https://supra.com/)** - A vertically integrated toolkit of cross-chain solutions that interlink all blockchains, public (L1s and L2s) or private (enterprises), providing decentralized oracle price feeds that can be used for on-chain and off-chain use-cases. 
+**[Supra](https://supra.com/)** - A vertically integrated toolkit of cross-chain solutions that interlink all blockchains, public (L1s and L2s) or private (enterprises), providing decentralized oracle price feeds that can be used for onchain and offchain use-cases. 
 
 ## Further reading {#further-reading}
 
@@ -424,6 +428,7 @@ There are multiple oracle applications you can integrate into your Ethereum dapp
 **Tutorials**
 
 - [How to Fetch the Current Price of Ethereum in Solidity](https://blog.chain.link/fetch-current-crypto-price-data-solidity/) — _Chainlink_
+- [Consuming Oracle Data](https://docs.chroniclelabs.org/Developers/tutorials/Remix) — _Chronicle_ 
 
 **Example projects**
 

@@ -16,6 +16,22 @@ Az ERC-4626 a hozamtartó értékmegőrzőkben csökkenti az integrációs erőf
 
 Az ERC-4626 token teljes körű leírását az [EIP-4626](https://eips.ethereum.org/EIPS/eip-4626) tartalmazza.
 
+**Aszinkron értékmegőrző-bővítés (ERC-7540)**
+
+Az ERC-4626 az atomi befizetésekre és visszaváltásokra van optimalizálva egy bizonyos határértékig. Ha a limitet elérte, nem lehet új befizetéseket vagy visszaváltásokat benyújtani. Ez a korlátozás nem működik jól olyan okosszerződés-rendszerek esetében, amelyeknél az aszinkron műveletek vagy késleltetések előfeltételei az értékmegőrzővel való kapcsolódásnak (pl. valós világbeli eszközprotokollok, alulbiztosított hitelezési protokollok, láncközi hitelezési protokollok, likvid tétes tokenek vagy biztosítási biztonsági modulok).
+
+Az ERC-7540 kiterjeszti az ERC-4626 értékmegőrzők hasznosságát aszinkron felhasználási esetekre. A meglévő értékmegőrző-interfészt (`deposit`/`withdraw`/`mint`/`redeem`) használják az aszinkron kérésekre.
+
+Az ERC-7540 bővítésének teljes körű leírását az [ERC-7540](https://eips.ethereum.org/EIPS/eip-7540) tartalmazza.
+
+**Több eszközös értékmegőrző-bővítés (ERC-7575)**
+
+Az ERC-4626 által nem támogatott egyik felhasználási eset a több eszközzel vagy belépési ponttal rendelkező értékmegőrzők, például a likviditásszolgáltató (LP) tokenek. Ezek általában nehézkesek vagy nem megfelelők, mivel az ERC-4626 követelménye, hogy maga is ERC-20 legyen.
+
+Az ERC-7575 támogatja a több eszközzel rendelkező értékmegőrzőket az ERC-20 token implementációjának az ERC-4626 implementációból történő kiszervezésével.
+
+Az ERC-7575 bővítésének teljes körű leírását az [ERC-7575](https://eips.ethereum.org/EIPS/eip-7575) tartalmazza.
+
 ## Előfeltételek {#prerequisites}
 
 Az oldal könnyebben megértéséhez javasoljuk, hogy tekintse át a [Tokenszabványok](/developers/docs/standards/tokens/) és az [ERC-20](/developers/docs/standards/tokens/erc-20/) című cikkeket.
@@ -27,7 +43,7 @@ Az oldal könnyebben megértéséhez javasoljuk, hogy tekintse át a [Tokenszabv
 #### asset {#asset}
 
 ```solidity
-function asset() public view returns (address)
+function asset() public view returns (address assetTokenAddress)
 ```
 
 Ez a függvény visszaadja az értékmegőrzőben a könyveléshez, befizetéshez és kivonáshoz használt token címét.
@@ -59,7 +75,7 @@ Ez a függvény visszaadja az eszközök (`assets`) mennyiségét, amelyet az é
 #### maxDeposit {#maxdeposit}
 
 ```solidity
-function maxDeposit(address receiver) public view returns (uint256)
+function maxDeposit(address receiver) public view returns (uint256 maxAssets)
 ```
 
 Ez a függvény a `receiver` által egyetlen [`deposit`](#deposit) hívással letétbe helyezhető fedezeti eszközök maximális összegét adja vissza.
@@ -67,12 +83,12 @@ Ez a függvény a `receiver` által egyetlen [`deposit`](#deposit) hívással le
 #### previewDeposit {#previewdeposit}
 
 ```solidity
-function previewDeposit(uint256 assets) public view returns (uint256)
+function previewDeposit(uint256 assets) public view returns (uint256 shares)
 ```
 
 Ez a függvény lehetővé teszi a felhasználók számára, hogy szimulálják a betétük hatásait az aktuális blokkban.
 
-#### deposit {#deposit}
+#### letét {#deposit}
 
 ```solidity
 function deposit(uint256 assets, address receiver) public returns (uint256 shares)
@@ -83,7 +99,7 @@ Ez a függvény a mögöttes tokenek eszközeit (`assets`) helyezi el az érték
 #### maxMint {#maxmint}
 
 ```solidity
-function maxMint(address receiver) public view returns (uint256)
+function maxMint(address receiver) public view returns (uint256 maxShares)
 ```
 
 Ez a függvény visszaadja a `receiver` által egyetlen [`mint`](#mint) hívással kiadható részvények maximális mennyiségét.
@@ -91,12 +107,12 @@ Ez a függvény visszaadja a `receiver` által egyetlen [`mint`](#mint) híváss
 #### previewMint {#previewmint}
 
 ```solidity
-function previewMint(uint256 shares) public view returns (uint256)
+function previewMint(uint256 shares) public view returns (uint256 assets)
 ```
 
 Ez a függvény lehetővé teszi a felhasználók számára, hogy szimulálják a mintelés hatásait az aktuális blokkban.
 
-#### mint {#mint}
+#### mint (kibocsátás) {#mint}
 
 ```solidity
 function mint(uint256 shares, address receiver) public returns (uint256 assets)
@@ -107,7 +123,7 @@ Ez a függvény pontosan `shares` értékmegőrzői részvényeket ad ki a fogad
 #### maxWithdraw {#maxwithdraw}
 
 ```solidity
-function maxWithdraw(address owner) public view returns (uint256)
+function maxWithdraw(address owner) public view returns (uint256 maxAssets)
 ```
 
 Ez a függvény az `owner` egyenlegéből egyetlen [`withdraw`](#withdraw) hívással kivehető fedezeti eszközök maximális összegét adja vissza.
@@ -115,7 +131,7 @@ Ez a függvény az `owner` egyenlegéből egyetlen [`withdraw`](#withdraw) hív�
 #### previewWithdraw {#previewwithdraw}
 
 ```solidity
-function previewWithdraw(uint256 assets) public view returns (uint256)
+function previewWithdraw(uint256 assets) public view returns (uint256 shares)
 ```
 
 Ez a függvény lehetővé teszi a felhasználók számára, hogy szimulálják a kivonásuk hatásait az aktuális blokkban.
@@ -131,7 +147,7 @@ Ez a függvény részvény (`shares`) elégetését végzi a tulajdonostól (`ow
 #### maxRedeem {#maxredeem}
 
 ```solidity
-function maxRedeem(address owner) public view returns (uint256)
+function maxRedeem(address owner) public view returns (uint256 maxShares)
 ```
 
 Ez a függvény visszaadja az `owner` egyenlegéből [`redeem`](#redeem) hívással visszaváltható részvények maximális mennyiségét.
@@ -139,7 +155,7 @@ Ez a függvény visszaadja az `owner` egyenlegéből [`redeem`](#redeem) hívás
 #### previewRedeem {#previewredeem}
 
 ```solidity
-function previewRedeem(uint256 shares) public view returns (uint256)
+function previewRedeem(uint256 shares) public view returns (uint256 assets)
 ```
 
 Ez a függvény lehetővé teszi a felhasználók számára, hogy szimulálják a beváltásuk hatásait az aktuális blokkban.
@@ -168,11 +184,15 @@ function balanceOf(address owner) public view returns (uint256)
 
 Visszaadja az `owner` által jelenleg birtokolt értékmegőrző-részvények teljes mennyiségét.
 
+### Az interfész térképe {#mapOfTheInterface}
+
+![Az ERC-4626 interfész térképe](./map-of-erc-4626.png)
+
 ### Események {#events}
 
 #### Letétbe helyezési esemény
 
-Akkor **KELL** kiadni, amikor tokeneket helyeznek el az értékmegőrzőben a [`mint`](#mint) és a [`deposit`](#deposit) metódusokon keresztül
+Akkor **KELL** kiadni, amikor tokeneket helyeznek el az értékmegőrzőben a [`mint`](#mint) és a [`deposit`](#deposit) metódusokon keresztül.
 
 ```solidity
 event Deposit(

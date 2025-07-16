@@ -18,7 +18,7 @@ Pour les apprenants plus visuels, regardez la vidéo de Luka qui présente le pa
 
 Vous devrez vous connecter à votre compte Crowdin ou vous inscrire si vous n'avez pas encore de compte. Tout ce qui est nécessaire pour vous inscrire est un compte de messagerie et un mot de passe.
 
-<ButtonLink to="https://crowdin.com/project/ethereum-org/">
+<ButtonLink href="https://crowdin.com/project/ethereum-org/">
   Rejoindre le projet
 </ButtonLink>
 
@@ -82,7 +82,7 @@ Une fois que vous avez terminé la traduction (c'est-à-dire que tous les fichie
 
 ### Nous contacter {#get-in-touch}
 
-Vous avez d'autres questions ? Ou souhaitez-vous collaborer avec notre équipe et d'autres traducteurs ? Envoyez un message dans le canal #translations sur notre [serveur Discord ethereum.org](/discord/)
+Avez-vous d'autres questions ? Ou souhaitez-vous collaborer avec notre équipe et d'autres traducteurs ? Envoyez un message dans le canal #translations sur notre [serveur Discord ethereum.org](/discord/)
 
 Vous pouvez également nous contacter à l'adresse translations@ethereum.org
 

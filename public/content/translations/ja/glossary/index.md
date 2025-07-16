@@ -21,7 +21,7 @@ sidebarDepth: 2
 
 [アドレス](#address)、残高、 [ノンス](#nonce)、任意のストレージとコードを含むオブジェクト。 アカウントには、[コントラクトアカウント](#contract-account)と[外部所有口座(EOA)](#eoa)の 2 種類がある。
 
-<DocLink to="/developers/docs/accounts">
+<DocLink href="/developers/docs/accounts">
   イーサリアムアカウント
 </DocLink>
 
@@ -33,7 +33,7 @@ sidebarDepth: 2
 
 イーサリアムのエコシステムにおいて、 ブロックチェーンの外から、そしてコントラクト間の相互作用で[アカウント](#contract-account)とやり取りを行う標準的な方法。
 
-<DocLink to="/developers/docs/smart-contracts/compiling/#web-applications">
+<DocLink href="/developers/docs/smart-contracts/compiling/#web-applications">
   ABI
 </DocLink>
 
@@ -49,7 +49,7 @@ sidebarDepth: 2
 
 [Solidity](#solidity)では、`assert(false)`は無効なオペコード`0xfe`にコンパイルされ、残りの[ガス](#gas)を使い切って全ての変更が巻き戻される。 `assert()`ステートメントでエラーが発生したときは、大きな間違いがあって、予期せぬことが起こっているため、コードを修正する必要がある。 `assert()`を使って、絶対に発生してはいけない条件を避けることが必要。
 
-<DocLink to="/developers/docs/smart-contracts/security/">
+<DocLink href="/developers/docs/smart-contracts/security/">
   スマートコントラクトのセキュリティ
 </DocLink>
 
@@ -57,7 +57,7 @@ sidebarDepth: 2
 
 あることが真実であるというエンティティによる主張。 イーサリアムのコンテキストでは、コンセンサスバリデータは、チェーンのあるべき状態について主張しなければならない。 指定された時間に、各バリデータは、このバリデータのチェーンの状態の見解を正式に宣言するさまざまなアテステーションを発行する責任がある。アテステーションには、最後に確定されたチェックポイントとチェーンの現在のヘッドが含まれている。
 
-<DocLink to="/developers/docs/consensus-mechanisms/pos/attestations/">
+<DocLink href="/developers/docs/consensus-mechanisms/pos/attestations/">
   認証根拠
 </DocLink>
 
@@ -69,7 +69,7 @@ sidebarDepth: 2
 
 すべての[ブロック](#block)には「ベースフィー」と呼ばれるリザーブ価格がある。 ユーザーが次のブロックにトランザクションを含めるために支払わなければならない最低限の[ガス](#gas)代のこと。
 
-<DocLink to="/developers/docs/gas/">
+<DocLink href="/developers/docs/gas/">
   ガスと手数料
 </DocLink>
 
@@ -77,7 +77,7 @@ sidebarDepth: 2
 
 ビーコンチェーンは、イーサリアムに[プルーフ・オブ・ステーク(PoS)](#pos)と[バリデータ](#validator)を導入したブロックチェーン。 2020 年 12 月から、2 つのチェーンが 2022 年 9 月にマージされ今日のイーサリアムを形成するまで、プルーフ・オブ・ワーク(PoW)のイーサリアムメインネットと並行して実行された。
 
-<DocLink to="/upgrades/beacon-chain/">
+<DocLink href="/upgrades/beacon-chain/">
   ビーコンチェーン
 </DocLink>
 
@@ -89,7 +89,7 @@ sidebarDepth: 2
 
 ブロックは、トランザクションの順序リストとコンセンサス関連情報を含む、バンドルされた情報の単位。 プルーフ・オブ・ステーク(PoS)のバリデータによって提案され、その時点ですべてのピアツーピアネットワーク全体で共有される。ここでは、他のすべてのノードによって容易に独立検証できる。 コンセンサスルールは、ブロックのどのコンテンツが有効かを決定し、無効なブロックはネットワークによって無視される。 これらのブロックとその中のトランザクションの順序付けにより、ネットワークの現在の状態を表す先端を持つ決定論的な一連のイベントが作成される。
 
-<DocLink to="/developers/docs/blocks/">
+<DocLink href="/developers/docs/blocks/">
   ブロック
 </DocLink>
 
@@ -134,7 +134,7 @@ sidebarDepth: 2
 
 [ブロック](#block)の連鎖。どのブロックも、前のブロックのハッシュを参照することによって[始まりのブロック](#genesis-block)まで繋がっている。 ブロックチェーンの整合性は、プルーフ・オブ・ステーク(PoS)に基づく合意メカニズムによって暗号資産エコシステム内で確保されている。
 
-<DocLink to="/developers/docs/intro-to-ethereum#what-is-a-blockchain">
+<DocLink href="/developers/docs/intro-to-ethereum#what-is-a-blockchain">
   ブロックチェーンとは
 </DocLink>
 
@@ -166,7 +166,7 @@ sidebarDepth: 2
 
 高レベルのプログラミング言語([Solidity](#solidity)など)で書かれたコードを低レベルの言語(EVM の[バイトコード](#bytecode)など)に変換すること。
 
-<DocLink to="/developers/docs/smart-contracts/compiling/">
+<DocLink href="/developers/docs/smart-contracts/compiling/">
   スマートコントラクトのコンパイル
 </DocLink>
 
@@ -228,7 +228,7 @@ DAG は、Directed Acyclic Graph(有向非巡回グラフ)の略であり、 ノ
 
 分散型アプリケーション。 最小の構成は、[スマートコントラクト](#smart-contract)とウェブユーザーインターフェイス。 広義では、オープンな分散型の P2P インフラストラクチャサービス上に構築されている Web アプリケーション。 さらに、多くの Dapp には、分散型ストレージや、メッセージプロトコル、プラットフォームが含まれる。
 
-<DocLink to="/developers/docs/dapps/">
+<DocLink href="/developers/docs/dapps/">
   Dapp入門
 </DocLink>
 
@@ -244,7 +244,7 @@ DAG は、Directed Acyclic Graph(有向非巡回グラフ)の略であり、 ノ
 
 階層的な管理をせずに運営されている会社やその他の組織のこと。 2016 年 4 月 30 日に立ち上げられた「The DAO」という名のコントラクトを指す場合もある。「The DAO」は 2016 年 6 月にハッキングされ、最終的にブロック 1,192,000 で[ハードフォーク](#hard-fork)(コードネーム: DAO)を実行させることとなり、ハッキングされた DAO コントラクトを巻き戻すことにした。これをきっかけに、イーサリアムとイーサリアムクラシックは競合する 2 つのシステムとして分裂。
 
-<DocLink to="/dao/">
+<DocLink href="/dao/">
   分散型自律組織(DAO)
 </DocLink>
 
@@ -252,7 +252,7 @@ DAG は、Directed Acyclic Graph(有向非巡回グラフ)の略であり、 ノ
 
 ネットワーク上のピアとトークンを取引できる[dapp](#dapp)の一種。 使用するには、([トランザクションフィー](#transaction-fee)を支払うため)[イーサリアム](#ether)が必要となるが、中央集権型取引所のような地理的制限はなく、誰でも使用可能。
 
-<DocLink to="/get-eth/#dex">
+<DocLink href="/get-eth/#dex">
   分散型取引所
 </DocLink>
 
@@ -268,7 +268,7 @@ DAG は、Directed Acyclic Graph(有向非巡回グラフ)の略であり、 ノ
 
 「非中央集権型金融」の略で、ブロックチェーン上の金融サービス[Dapps](#dapp)のより広義なカテゴリー。仲介業者を介さないため、インターネット環境があれば誰でも利用可能。
 
-<DocLink to="/defi/">
+<DocLink href="/defi/">
   分散型金融(DeFi)
 </DocLink>
 
@@ -316,7 +316,7 @@ DAG は、Directed Acyclic Graph(有向非巡回グラフ)の略であり、 ノ
 
 32[スロット](#slot)の期間で、各スロットは 12 秒、合計 6.4 分。 バリデータ[委員会](#committee)はセキュリティ上の理由からエポックごとにシャッフルされる。 各エポックには、チェーンを[確定](#finality)する機会があり、 各バリデータには、各エポックの開始時に新しい役割が割り当てられる。
 
-<DocLink to="/developers/docs/consensus-mechanisms/pos/#how-does-validation-work">
+<DocLink href="/developers/docs/consensus-mechanisms/pos/#how-does-validation-work">
   プルーフ・オブ・ステーク
 </DocLink>
 
@@ -328,7 +328,7 @@ DAG は、Directed Acyclic Graph(有向非巡回グラフ)の略であり、 ノ
 
 「Eth1」は、既存のプルーフ・オブ・ワーク(PoW)ブロックチェーンであるメインネットのイーサリアムを指す用語。 この用語は廃止予定となっており、「実行レイヤー」という用語を使用する。 この名前の変更についての詳細は、[こちら](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/)を参照のこと。
 
-<DocLink to="/upgrades/">
+<DocLink href="/upgrades/">
   イーサリアムのアップグレードの詳細
 </DocLink>
 
@@ -336,7 +336,7 @@ DAG は、Directed Acyclic Graph(有向非巡回グラフ)の略であり、 ノ
 
 「Eth2」は、イーサリアムのプルーフ・オブ・ステーク(PoS)への移行を含む一連のイーサリアムプロトコルのアップグレードのこと。 この用語は廃止予定となっており、「コンセンサスレイヤー」という用語を使います。 [この名前の変更](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/) についてもっと詳しく。
 
-<DocLink to="/upgrades/">
+<DocLink href="/upgrades/">
   イーサリアムのアップグレードの詳細
 </DocLink>
 
@@ -344,7 +344,7 @@ DAG は、Directed Acyclic Graph(有向非巡回グラフ)の略であり、 ノ
 
 イーサリアムコミュニティに情報を提供するための設計文書。提案された新機能やプロセス、環境について説明している([ERC](#erc)を参照のこと)。
 
-<DocLink to="/eips/">
+<DocLink href="/eips/">
   EIP紹介
 </DocLink>
 
@@ -370,7 +370,7 @@ ENS レジストリは、単一の中央[コントラクト](#smart-contract)で
 
 一定の[EIP](#eip)に付与されるラベルで、イーサリアムの使用に関する特定の基準を定めたもの。
 
-<DocLink to="/eips/">
+<DocLink href="/eips/">
   EIP紹介
 </DocLink>
 
@@ -384,7 +384,7 @@ ENS レジストリは、単一の中央[コントラクト](#smart-contract)で
 
 イーサリアムエコシステムによって使用されるネイティブ暗号通貨で、トランザクションの実行には[ガス](#gas)代がかかる。 ETH またはその記号をギリシャ文字の大文字で「Ξ」と表すこともできる。
 
-<DocLink to="/eth/">
+<DocLink href="/eth/">
   デジタル未来のための通貨
 </DocLink>
 
@@ -392,7 +392,7 @@ ENS レジストリは、単一の中央[コントラクト](#smart-contract)で
 
 [EVM](#evm)ロギング機能を利用できる。 [Dapp](#dapp)はイベントをリッスンし、ユーザーインタフェイス内の JavaScript で記述されたコールバックをトリガするために利用可能。
 
-<DocLink to="/developers/docs/smart-contracts/anatomy/#events-and-logs">
+<DocLink href="/developers/docs/smart-contracts/anatomy/#events-and-logs">
   イベントとログ(Events and Logs)
 </DocLink>
 
@@ -400,7 +400,7 @@ ENS レジストリは、単一の中央[コントラクト](#smart-contract)で
 
 [バイトコード](#bytecode)を実行するスタックベースの仮想マシン。 イーサリアムでは、一連のバイトコード命令と環境データの小さなタプルを与えられた場合に、システムの状態をどのように変化するかを実行モデルが指定する。 これは、仮想状態マシンの正則モデルによって指定されている。
 
-<DocLink to="/developers/docs/evm/">
+<DocLink href="/developers/docs/evm/">
   イーサリアム仮想マシン (EVM)
 </DocLink>
 
@@ -420,7 +420,7 @@ EVM の[バイトコード](#bytecode)をヒューマンリーダブル形式に
 
 [スマートコントラクト](#smart-contract)を介して実行されるサービスで、テストネットで使用できる無料のテスト用イーサの形で資金を分配する。
 
-<DocLink to="/developers/docs/networks/#testnet-faucets">
+<DocLink href="/developers/docs/networks/#testnet-faucets">
   テストネットのフォーセット
 </DocLink>
 
@@ -428,7 +428,7 @@ EVM の[バイトコード](#bytecode)をヒューマンリーダブル形式に
 
 ファイナリティとは、ある時点以前の一連のトランザクションが変更または撤回できないことを保証するもの。
 
-<DocLink to="/developers/docs/consensus-mechanisms/pos/#finality">
+<DocLink href="/developers/docs/consensus-mechanisms/pos/#finality">
   Proof-of-Stakeにおけるファイナリティ
 </DocLink>
 
@@ -448,7 +448,7 @@ EVM の[バイトコード](#bytecode)をヒューマンリーダブル形式に
 
 特定の[レイヤー 2](#layer-2)ソリューションに対するセキュリティモデルで、スピードを上げるために複数のトランザクションを 1 つのバッチに[ロールアップ](#rollups)して、1 つのトランザクションとしてイーサリアムに送信。 これらのトランザクションは有効とみなされるが、不正が疑われる場合にはチャレンジを受けることもある。 不正証明は、不正が疑われるときトランザクションを実行し、不正が行われたかどうかを検証する。 この方法は、セキュリティを保持しながら、可能なトランザクションの量を増やすことができる。 [ロールアップ](#rollups)の方法の中には、[有効性証明](#validity-proof)を利用しているものもある。
 
-<DocLink to="/developers/docs/scaling/optimistic-rollups/">
+<DocLink href="/developers/docs/scaling/optimistic-rollups/">
   楽観的ロールアップ
 </DocLink>
 
@@ -464,7 +464,7 @@ EVM の[バイトコード](#bytecode)をヒューマンリーダブル形式に
 
 イーサリアムでスマートコントラクトを実行するための仮想燃料。 [EVM](#evm)は、ガスの消費量を測定し、コンピューティングリソースの消費を制限する会計メカニズムを使用している。([チューリング完了](#turing-complete)参照)
 
-<DocLink to="/developers/docs/gas/">
+<DocLink href="/developers/docs/gas/">
   ガスと手数料
 </DocLink>
 
@@ -540,7 +540,7 @@ Gigawei の略称で、通常[ガス](#gas)の価格に使われる[イーサ](#
 
 一般的にはコードエディタ、コンパイラ、ランタイム、デバッガを統合したユーザーインターフェイス。
 
-<DocLink to="/developers/docs/ides/">
+<DocLink href="/developers/docs/ides/">
   統合開発環境
 </DocLink>
 
@@ -548,7 +548,7 @@ Gigawei の略称で、通常[ガス](#gas)の価格に使われる[イーサ](#
 
 [コントラクト](#smart-contract)(または[ライブラリ](#library))のコードは一度デプロイすると変更が不可能となる。 標準的なソフトウェア開発の手法では、起こりうるバグの修正や新機能を追加が可能であることを前提としているため、スマートコントラクトの開発における代表的な課題となっている。
 
-<DocLink to="/developers/docs/smart-contracts/deploying/">
+<DocLink href="/developers/docs/smart-contracts/deploying/">
   スマートコントラクトのデプロイ
 </DocLink>
 
@@ -568,7 +568,7 @@ Gigawei の略称で、通常[ガス](#gas)の価格に使われる[イーサ](#
 
 「パスワード伸長アルゴリズム」としても知られる。[キーストア](#keystore-file)形式で使われており、パスフレーズによる暗号化において、パスフレーズを繰り返しハッシュ化することで総当たり攻撃や辞書攻撃、レインボー攻撃から保護することができる。
 
-<DocLink to="/developers/docs/smart-contracts/security/">
+<DocLink href="/developers/docs/smart-contracts/security/">
   スマートコントラクトのセキュリティ
 </DocLink>
 
@@ -588,7 +588,7 @@ Gigawei の略称で、通常[ガス](#gas)の価格に使われる[イーサ](#
 
 イーサリアムのプロトコル上で、レイヤーによる改善に焦点を当てた開発分野。 [トランザクション](#transaction)の速度、[トランザクションフィー](#transaction-fee)の低減、トランザクションのプライバシーに関して改善を図るもの。
 
-<DocLink to="/layer-2/">
+<DocLink href="/layer-2/">
   レイヤー2
 </DocLink>
 
@@ -600,7 +600,7 @@ Gigawei の略称で、通常[ガス](#gas)の価格に使われる[イーサ](#
 
 payable 関数、フォールバック関数、データストレージを持たない特殊な[コントラクト](#smart-contract)。 つまり、ETH を受け取ったり、保持したり、データを保存することはできない。 ライブラリは以前にデプロイされたコードとして機能し、他のコントラクトから読み取り専用の計算を呼び出すことができる。
 
-<DocLink to="/developers/docs/smart-contracts/libraries/">
+<DocLink href="/developers/docs/smart-contracts/libraries/">
   スマートコントラクトライブラリ
 </DocLink>
 
@@ -620,7 +620,7 @@ payable 関数、フォールバック関数、データストレージを持た
 
 「メインネットワーク」の略で、メインの公開イーサリアム [ブロックチェーン](#blockchain)を指す。 本物の ETH であり、実質的な価値を持ち、そして実際に起きている結果。 [レイヤー 2](#layer-2)スケーリングソリューションについて議論するときには、レイヤー 1 とも呼ばれる ([テストネット](#testnet)も参照のこと)。
 
-<DocLink to="/developers/docs/networks/">
+<DocLink href="/developers/docs/networks/">
   イーサリアムネットワーク
 </DocLink>
 
@@ -652,7 +652,7 @@ payable 関数、フォールバック関数、データストレージを持た
 
 新しいブロックに対して有効な[プルーフ・オブ・ワーク(PoW)](#pow)を見つけるために繰り返しパスハッシュを計算するネットワーク[ノード](#node)の一種([Ethash](#ethash)を参照)。 マイナーはもはやイーサリアムの一部ではなく、[プルーフ・オブ・ステーク(PoS)](#pos)への移行に伴い、バリデータに置き換えられた。
 
-<DocLink to="/developers/docs/consensus-mechanisms/pow/mining/">
+<DocLink href="/developers/docs/consensus-mechanisms/pow/mining/">
   マイニング
 </DocLink>
 
@@ -668,7 +668,7 @@ payable 関数、フォールバック関数、データストレージを持た
 
 イーサリアムネットワークのこと。トランザクションやブロックをすべてのイーサリアムノード(ネットワーク参加者)に伝播していくピアツーピアネットワーク。
 
-<DocLink to="/developers/docs/networks/">
+<DocLink href="/developers/docs/networks/">
   ネットワーク
 </DocLink>
 
@@ -680,10 +680,10 @@ payable 関数、フォールバック関数、データストレージを持た
 
 「deed」としても知られる ERC-721 で導入されたトークンの標準。 NFT は追跡可能かつ取引可能だが、それぞれのトークンは一意で区別があり、ETH や[ERC-20 トークン](#token-standard)のように相互に取引することはできない。 NFT はデジタル資産や物理的な資産の所有権を表すことができる。
 
-<DocLink to="/nft/">
+<DocLink href="/nft/">
   非代替性トークン(NFT)
 </DocLink>
-<DocLink to="/developers/docs/standards/tokens/erc-721/">
+<DocLink href="/developers/docs/standards/tokens/erc-721/">
   ERC-721 非代替性トークン (NFT) 規格
 </DocLink>
 
@@ -691,7 +691,7 @@ payable 関数、フォールバック関数、データストレージを持た
 
 ネットワークに参加するソフトウェアクライアントのこと。
 
-<DocLink to="/developers/docs/nodes-and-clients/">
+<DocLink href="/developers/docs/nodes-and-clients/">
   ノードとクライアント
 </DocLink>
 
@@ -711,7 +711,7 @@ payable 関数、フォールバック関数、データストレージを持た
 
 [レイヤー 2](#layer-2)によってトランザクションのスループットを上げ、[メインネット](#mainnet)(レイヤー 1)によってセキュリティを提供する、[不正証明](#fraud-proof)を用いたトランザクションの[ロールアップ](#rollups)。 [プラズマ](#plasma)という類似のレイヤー 2 ソリューションとは異なり、オプティミスティック・ロールアップではより複雑なトランザクションのタイプ、つまり[EVM](#evm)で実行できるすべてを処理できる。 [ゼロ知識ロールアップ](#zk-rollups)とは異なり、不正証明を用いるためレイテンシの問題がない。
 
-<DocLink to="/developers/docs/scaling/optimistic-rollups/">
+<DocLink href="/developers/docs/scaling/optimistic-rollups/">
   楽観的ロールアップ
 </DocLink>
 
@@ -719,7 +719,7 @@ payable 関数、フォールバック関数、データストレージを持た
 
 オラクルとは、[ブロックチェーン](#blockchain)と現実世界を繋ぐブリッジであり、 情報を参照して[スマートコントラクト](#smart-contract)で利用できるオンチェーン[API](#api)として機能する。
 
-<DocLink to="/developers/docs/oracles/">
+<DocLink href="/developers/docs/oracles/">
   神託
 </DocLink>
 
@@ -743,7 +743,7 @@ payable 関数、フォールバック関数、データストレージを持た
 
 [オプティミスティック・ロールアップ](#optimistic-rollups)と同様、[不正証明](#fraud-proof)を用いたオフチェーンのスケーリングソリューション。 プラズマは基本的なトークンの転送やスワップなどの単純なトランザクションに限って利用可能。
 
-<DocLink to="/developers/docs/scaling/plasma">
+<DocLink href="/developers/docs/scaling/plasma">
   プラズマ
 </DocLink>
 
@@ -759,7 +759,7 @@ payable 関数、フォールバック関数、データストレージを持た
 
 暗号通貨のブロックチェーンプロトコルによって、分散型[コンセンサス](#consensus)を達成する方法。 トランザクションの検証に参加するため、PoS は一定量の暗号通貨(ネットワーク内のステーク)の所有権を証明するようユーザーに要求する。
 
-<DocLink to="/developers/docs/consensus-mechanisms/pos/">
+<DocLink href="/developers/docs/consensus-mechanisms/pos/">
   プルーフ・オブ・ステーク(PoS)
 </DocLink>
 
@@ -767,7 +767,7 @@ payable 関数、フォールバック関数、データストレージを持た
 
 発見するために大量の計算を要するデータ(証明)の一部。
 
-<DocLink to="/developers/docs/consensus-mechanisms/pow/">
+<DocLink href="/developers/docs/consensus-mechanisms/pow/">
   プルーフ・オブ・ワーク
 </DocLink>
 
@@ -787,7 +787,7 @@ payable 関数、フォールバック関数、データストレージを持た
 
 被害者のコントラクト関数を呼び出す攻撃者のコントラクトで構成される、被害者のコントラクトの実行中に再帰的に攻撃者のコントラクトを呼び出すような攻撃。 たとえば、被害者のコントラクトの一部をスキップして残高を更新したり、引き出す金額をカウントしたりすることで、資金が盗難される可能性がある。
 
-<DocLink to="/developers/docs/smart-contracts/security/#re-entrancy">
+<DocLink href="/developers/docs/smart-contracts/security/#re-entrancy">
   再帰可能(Re-entrancy)
 </DocLink>
 
@@ -803,7 +803,7 @@ payable 関数、フォールバック関数、データストレージを持た
 
 [レイヤー 2](#layer-2)のスケーリングソリューションの一種で、複数のトランザクションをバッチ処理し、[イーサリアムのメインチェーン](#mainnet)に 1 つのトランザクションとして送信する。 これにより、[ガス](#gas)代を低減し、[トランザクション](#transaction)のスループットを高めることができる。 ロールアップには、スケーラビリティを得るためのセキュリティを保障する方法の違いによってオプティミスティック・ロールアップとゼロ知識ロールアップの 2 つが存在する。
 
-<DocLink to="/developers/docs/scaling/#rollups">
+<DocLink href="/developers/docs/scaling/#rollups">
   ロールアップ
 </DocLink>
 
@@ -823,7 +823,7 @@ payable 関数、フォールバック関数、データストレージを持た
 
 以前は「Ethereum 2.0」または「Eth2」として知られていた、スケーリングと持続可能性のためのアップグレードを開始したイーサリアムの開発段階。
 
-<DocLink to="/upgrades/">
+<DocLink href="/upgrades/">
   イーサリアムのアップグレード
 </DocLink>
 
@@ -835,7 +835,7 @@ payable 関数、フォールバック関数、データストレージを持た
 
 シェアードチェーンは、ブロックチェーン全体の個別のセクションであり、サブセットにバリデータが割り当てられる。 シェアードチェーンにより、イーサリアムのトランザクションスループットが高まり、[オプティミスティック・ロールアップ](#optimistic-rollups)や[ゼロ知識ロールアップ](#zk-rollups)などのレイヤー 2 ソリューションのデータ可用性が向上する。
 
-<DocLink to="/upgrades/shard-chains">
+<DocLink href="/upgrades/shard-chains">
   シャードチェーン
 </DocLink>
 
@@ -843,7 +843,7 @@ payable 関数、フォールバック関数、データストレージを持た
 
 スケーリングソリューションの 1 つ。独自(かつ通常は高速)の[コンセンサスルール](#consensus-rules)に従って別のチェーンを使用したもの。 サイドチェーンを[メインネット](#mainnet)に接続するためにはブリッジが必要となる。 [ロールアップ](#rollups)もサイドチェーンを利用するが、こちらは[メインネット](#mainnet)と連携して動作する。
 
-<DocLink to="/developers/docs/scaling/sidechains/">
+<DocLink href="/developers/docs/scaling/sidechains/">
   サイドチェーン
 </DocLink>
 
@@ -863,7 +863,7 @@ payable 関数、フォールバック関数、データストレージを持た
 
 [プルーフ・オブ・ステーク(PoS)](#pos)システムにおいて、[バリデータ](#validator)が新しいブロックを提案できる一定時間(12 秒)。 スロットが空の場合もある。 32 スロットで 1[エポック](#epoch)となる。
 
-<DocLink to="/developers/docs/consensus-mechanisms/pos/#how-does-validation-work">
+<DocLink href="/developers/docs/consensus-mechanisms/pos/#how-does-validation-work">
   プルーフ・オブ・ステーク(PoS)
 </DocLink>
 
@@ -871,7 +871,7 @@ payable 関数、フォールバック関数、データストレージを持た
 
 イーサリアムのコンピューティングインフラストラクチャ上で実行するプログラム。
 
-<DocLink to="/developers/docs/smart-contracts/">
+<DocLink href="/developers/docs/smart-contracts/">
   スマートコントラクトの紹介
 </DocLink>
 
@@ -879,7 +879,7 @@ payable 関数、フォールバック関数、データストレージを持た
 
 「succinct non-interactive argument of knowledge」の略で、[ゼロ知識証明](#zk-proof)の一種。
 
-<DocLink to="/developers/docs/scaling/zk-rollups/">
+<DocLink href="/developers/docs/scaling/zk-rollups/">
   ゼロ知識糾合
 </DocLink>
 
@@ -891,7 +891,7 @@ payable 関数、フォールバック関数、データストレージを持た
 
 JavaScript、C++、Java に似た構文を持つ手続き型(命令型)のプログラミング言語。 イーサリアムの[スマートコントラクト](#smart-contract)用の言語で、最も広範囲にわたって頻繁に使用されている。 開発者はギャビン・ウッド博士。
 
-<DocLink to="/developers/docs/smart-contracts/languages/#solidity">
+<DocLink href="/developers/docs/smart-contracts/languages/#solidity">
   Solidity
 </DocLink>
 
@@ -907,7 +907,7 @@ JavaScript、C++、Java に似た構文を持つ手続き型(命令型)のプロ
 
 他の資産の価値にペッグされた価値を持つ[ERC-20 トークン](#token-standard)。 ドルのような法定通貨や、金のような貴金属、ビットコインのような他の暗号通貨に担保されたステーブルコインがある。
 
-<DocLink to="/eth/#tokens">
+<DocLink href="/eth/#tokens">
   ETHはイーサリアムの唯一の暗号ではありません
 </DocLink>
 
@@ -915,7 +915,7 @@ JavaScript、C++、Java に似た構文を持つ手続き型(命令型)のプロ
 
 バリデータとなり[ネットワーク](#network)を担保するために一定量の[ETH](#ether)(ステーク)を預け入れること。 バリデータは、[トランザクション](#transaction)を検証し、[PoS](#pos)コンセンサスモデルの下で[ブロック](#block)を提案する。 ステーキングによって、ネットワークの利益を最優先に考えて行動する経済的インセンティブが得られる。 [バリデータ](#validator)の職務を遂行すると報酬が得られるが、職務を怠ると大量の ETH を失うことになる。
 
-<DocLink to="/staking/">
+<DocLink href="/staking/">
   ETHをステーキングし、イーサリアムのバリデータになる
 </DocLink>
 
@@ -923,7 +923,7 @@ JavaScript、C++、Java に似た構文を持つ手続き型(命令型)のプロ
 
 複数のイーサリアムステーカーの ETH を合計し、バリデータキーのセットを有効にするために必要な 32ETH に到達するために使用される。 ノードオペレーターは、これらのキーを使用しコンセンサスに参加する。 [ブロック報酬](#block-reward)は、貢献しているステーカー間で分配される。 ステーキングプールや委任ステーキングは、イーサリアムプロトコルネイティブではないが、コミュニティによって多数のソリューションが作成されている。
 
-<DocLink to="/staking/pools/">
+<DocLink href="/staking/pools/">
   ステーキングプール
 </DocLink>
 
@@ -931,7 +931,7 @@ JavaScript、C++、Java に似た構文を持つ手続き型(命令型)のプロ
 
 「scalable transparent argument of knowledge」の略で、[ゼロ知識証明](#zk-proof)の一種。
 
-<DocLink to="/developers/docs/scaling/zk-rollups/">
+<DocLink href="/developers/docs/scaling/zk-rollups/">
   ゼロ知識糾合
 </DocLink>
 
@@ -943,7 +943,7 @@ JavaScript、C++、Java に似た構文を持つ手続き型(命令型)のプロ
 
 参加者間でチャンネルが設定され、自由かつ安価に取引できる[レイヤー 2](#layer-2)のソリューション。 チャンネルを設定、閉じるための[トランザクション](#transaction)だけが[メインネット](#mainnet)に送信される。 非常に高いトランザクションスループットを実現するものの、事前に参加者の数を把握し、資金をロックアップすることに依存する。
 
-<DocLink to="/developers/docs/scaling/state-channels/#state-channels">
+<DocLink href="/developers/docs/scaling/state-channels/#state-channels">
   ステートチャンネル
 </DocLink>
 
@@ -979,7 +979,7 @@ JavaScript、C++、Java に似た構文を持つ手続き型(命令型)のプロ
 
 テストネットワークの略で、イーサリアムのメインネットワーク([メインネット](#mainnet)参照)の動作をシミュレートするためのネットワーク。
 
-<DocLink to="/developers/docs/networks/#ethereum-testnets">
+<DocLink href="/developers/docs/networks/#ethereum-testnets">
   テストネット
 </DocLink>
 
@@ -991,7 +991,7 @@ JavaScript、C++、Java に似た構文を持つ手続き型(命令型)のプロ
 
 ERC-20 提案によって導入された、これは代替性トークンのための標準化された[スマートコントラクト](#smart-contract)構造を提供。 [NFT](#nft)とは異なり、同一コントラクトからのトークンであれば、追跡、取引、交換が可能。
 
-<DocLink to="/developers/docs/standards/tokens/erc-20/">
+<DocLink href="/developers/docs/standards/tokens/erc-20/">
   ERC-20トークン規格
 </DocLink>
 
@@ -999,7 +999,7 @@ ERC-20 提案によって導入された、これは代替性トークンのた�
 
 特定の[アドレス](#address)を対象に、発信元[アカウント](#account)によって署名されたイーサリアムブロックチェーンにコミットされたデータ。 トランザクションには、そのトランザクションの[ガスリミット](#gas-limit)などのメタデータが含まれている。
 
-<DocLink to="/developers/docs/transactions/">
+<DocLink href="/developers/docs/transactions/">
   処理
 </DocLink>
 
@@ -1027,10 +1027,10 @@ ERC-20 提案によって導入された、これは代替性トークンのた�
 
 [プルーフ・オブ・ステーク(PoS)](#pos)システムにおいて、データの保存、トランザクションの処理、ブロックチェーンへの新しいブロックの追加を行う[ノード](#node)。 バリデータを有効にするためには、32ETH を[ステーク](#staking)できる必要がある。
 
-<DocLink to="/developers/docs/consensus-mechanisms/pos">
+<DocLink href="/developers/docs/consensus-mechanisms/pos">
   プルーフ・オブ・ステーク
 </DocLink>
-<DocLink to="/staking/">
+<DocLink href="/staking/">
   イーサリアムのステーキング
 </DocLink>
 
@@ -1048,7 +1048,7 @@ ERC-20 提案によって導入された、これは代替性トークンのた�
 
 特定の[レイヤー 2](#layer-2)におけるセキュリティモデルで、速度を上げるために複数のトランザクションを 1 つのバッチに[ロールアップ](/#rollups)し、イーサリアムに 1 つのトランザクションとして送信する。 トランザクションの計算はオフチェーンで行われ、その有効性の証明とともにメインチェーンに公開される。 この方法は、セキュリティを維持しつつ処理可能なトランザクションの量を増加させる。 [ロールアップ](#rollups)の中には、[不正証明](#fraud-proof)を利用するものもある。
 
-<DocLink to="/developers/docs/scaling/zk-rollups/">
+<DocLink href="/developers/docs/scaling/zk-rollups/">
   ゼロ知識糾合
 </DocLink>
 
@@ -1056,7 +1056,7 @@ ERC-20 提案によって導入された、これは代替性トークンのた�
 
 トランザクションのスループットを向上させるために[有効性証明](#validity-proof)を使用するオフチェーンソリューション。 [ゼロ知識ロールアップ](#zk-rollup)とは異なり、Validium はデータをレイヤー 1 の[メインネット](#mainnet)に保存しない。
 
-<DocLink to="/developers/docs/scaling/validium/">
+<DocLink href="/developers/docs/scaling/validium/">
   バリディアム
 </DocLink>
 
@@ -1064,7 +1064,7 @@ ERC-20 提案によって導入された、これは代替性トークンのた�
 
 Python に似た構文を持つ高水準プログラミング言語。 純粋関数型言語に近づくことを目標としている。 ヴィタリック・ブテリンによって開発された。
 
-<DocLink to="/developers/docs/smart-contracts/languages/#vyper">
+<DocLink href="/developers/docs/smart-contracts/languages/#vyper">
   Vyper
 </DocLink>
 
@@ -1076,7 +1076,7 @@ Python に似た構文を持つ高水準プログラミング言語。 純粋関
 
 [秘密鍵](#private-key)を保持するソフトウェア。 イーサリアムの[アカウント](#account)へのアクセスおよび操作、または[スマートコントラクト](#smart-contract)とやり取りするために使用する。 鍵をウォレットに保管する必要はなく、セキュリティを向上させるためにオフラインストレージ(たとえば、メモリーカードや紙)から取得することもできる。 ウォレットという名前ではあるが、実際にコインやトークンを保持することはない。
 
-<DocLink to="/wallets/">
+<DocLink href="/wallets/">
   イーサリアムウォレット
 </DocLink>
 
@@ -1084,7 +1084,7 @@ Python に似た構文を持つ高水準プログラミング言語。 純粋関
 
 Web の 3 番目のバージョン。 ギャビン・ウッド博士によって最初に提案されたもので、中央集権的に所有・管理されるアプリケーションから、分散型プロトコルで構築されたアプリケーションに移行するという Web アプリケーションの新しいビジョンと焦点を示している。 ([dapp](#dapp)を参照)
 
-<DocLink to="/developers/docs/web2-vs-web3/">
+<DocLink href="/developers/docs/web2-vs-web3/">
   Web2とWeb3の比較
 </DocLink>
 
@@ -1104,7 +1104,7 @@ Web の 3 番目のバージョン。 ギャビン・ウッド博士によって
 
 ゼロ知識証明とは、ある命題が真であることを、追加の情報を伝えることなく証明することができる暗号方式である。
 
-<DocLink to="/developers/docs/scaling/zk-rollups/">
+<DocLink href="/developers/docs/scaling/zk-rollups/">
   ゼロ知識糾合
 </DocLink>
 
@@ -1112,7 +1112,7 @@ Web の 3 番目のバージョン。 ギャビン・ウッド博士によって
 
 [レイヤー 2](#rollups)によってトランザクションのスループットを高め、[メインネット](#validity-proof)(レイヤー 1) によってセキュリティを提供する、[有効性証明](#layer-2)を用いたトランザクションの[ロールアップ](#mainnet)。 [オプティミスティック・ロールアップ](#optimistic-rollups)のように複雑なトランザクションを扱うことはできないが、トランザクションは送信された段階で有効であることが確定し、遅延が発生することはない。
 
-<DocLink to="/developers/docs/scaling/zk-rollups/">
+<DocLink href="/developers/docs/scaling/zk-rollups/">
   ゼロ知識ロールアップ
 </DocLink>
 

@@ -1,9 +1,9 @@
-import { RiInformationLine } from "react-icons/ri"
-import { Box, Center } from "@chakra-ui/react"
+import { Info } from "lucide-react"
 import { Meta, StoryObj } from "@storybook/react"
 
-import InlineLink from "../Link"
 import Translation from "../Translation"
+import { Center } from "../ui/flex"
+import InlineLink from "../ui/Link"
 
 // TODO: remove `index` when we delete the old tooltip
 import TooltipComponent from "./index"
@@ -11,7 +11,7 @@ import TooltipComponent from "./index"
 const TooltipContent = () => (
   <div>
     <Translation id="data-provided-by" />{" "}
-    <InlineLink to="https://defillama.com/">defillama</InlineLink>
+    <InlineLink href="https://defillama.com/">defillama</InlineLink>
   </div>
 )
 
@@ -21,9 +21,9 @@ const meta = {
   args: {
     content: <TooltipContent />,
     children: (
-      <Box as="span" data-testid="tooltip-icon">
-        <RiInformationLine />
-      </Box>
+      <span data-testid="tooltip-icon">
+        <Info />
+      </span>
     ),
   },
   argTypes: {
@@ -45,7 +45,7 @@ const meta = {
   },
   decorators: [
     (Story) => (
-      <Center boxSize="md">
+      <Center className="size-128">
         <Story />
       </Center>
     ),
@@ -61,6 +61,6 @@ export const Basic: Story = {}
 // for chromatic story snapshot showing the rendered popover
 export const OnOpen: Story = {
   args: {
-    isOpen: true,
+    open: true,
   },
 }

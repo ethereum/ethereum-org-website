@@ -82,7 +82,7 @@ Ti invitiamo anche a consultare i nostri [termini di utilizzo](/terms-of-use/). 
 
 In linea con la natura fluida di Ethereum, team e prodotti vanno e vengono e l'innovazione avviene quotidianamente, quindi effettueremo controlli di routine dei nostri contenuti per:
 
-- assicurarci che tutte le dapp elencate continuino a soddisfare i nostri criteri
+- garantire che tutte le dApp elencate soddisfino ancora i nostri criteri
 - verificare che non ci siano prodotti suggeriti che soddisfano più criteri rispetto a quelli attualmente elencati
 
 A tale riguardo, puoi aiutarci controllando e facendoci sapere. [Crea un ticket](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) o invia un'e-mail a [website@ethereum.org](mailto:website@ethereum.org)
@@ -95,6 +95,6 @@ _Stiamo anche studiando altre opzioni da votare, in modo tale che la comunità p
 
 Se desideri aggiungere una dapp a ethereum.org che soddisfa i criteri, crea un ticket su GitHub.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_dapp.yaml">
+<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_dapp.yaml">
   Crea un ticket
 </ButtonLink>

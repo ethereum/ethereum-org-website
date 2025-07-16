@@ -1,27 +1,31 @@
-import { type ReactNode, useState } from "react"
-import { useTranslation } from "next-i18next"
+"use client"
+
+import React, { type ReactNode, useState } from "react"
+
+import { Flex, HStack, VStack } from "@/components/ui/flex"
+
+import { cn } from "@/lib/utils/cn"
+import { trackCustomEvent } from "@/lib/utils/matomo"
+
 import {
   Accordion,
-  AccordionButton,
+  AccordionContent,
   AccordionItem,
-  AccordionPanel,
-  Box,
-  Heading,
-  type Icon as ChakraIcon,
-} from "@chakra-ui/react"
+  AccordionTrigger,
+} from "./ui/accordion"
 
-import Text from "@/components/OldText"
-
-import { trackCustomEvent } from "@/lib/utils/matomo"
+import { useTranslation } from "@/hooks/useTranslation"
 
 export type ExpandableCardProps = {
   children?: ReactNode
   contentPreview?: ReactNode
   title: ReactNode
-  svg?: typeof ChakraIcon
+  svg?: React.FC<React.SVGProps<SVGElement>>
   eventAction?: string
   eventCategory?: string
   eventName?: string
+  visible?: boolean
+  className?: string
 }
 
 const ExpandableCard = ({
@@ -32,8 +36,10 @@ const ExpandableCard = ({
   eventAction = "Clicked",
   eventCategory = "",
   eventName = "",
+  visible = false,
+  className,
 }: ExpandableCardProps) => {
-  const [isVisible, setIsVisible] = useState(false)
+  const [isVisible, setIsVisible] = useState(visible)
   const { t } = useTranslation("common")
   const matomo = {
     eventAction,
@@ -54,96 +60,43 @@ const ExpandableCard = ({
   }
 
   return (
-    <Accordion
-      border="1px"
-      borderColor="border"
-      borderRadius="sm"
-      display="flex"
-      flex-direction="column"
-      marginBottom="4"
-      cursor="pointer"
-      _hover={{
-        backgroundColor: "ednBackground",
-      }}
-      index={isVisible ? [0] : []}
-    >
-      <AccordionItem borderTopWidth="0" flex="1">
-        <Heading as="h3" m={0}>
-          <AccordionButton
-            width="100%"
-            px="6"
-            py="6"
-            flex="1"
-            onClick={onClick}
-            _hover={{
-              backgroundColor: "ednBackground",
-            }}
-            _expanded={{
-              backgroundColor: "transparent",
-            }}
-          >
-            <Box
-              display="flex"
-              width="100%"
-              alignItems="center"
-              flexDir={{ base: "column", sm: "row" }}
-              textAlign="start"
-            >
-              <Box marginBottom={{ base: 2, sm: 0 }} me={{ base: 0, sm: 4 }}>
-                <Box
-                  display="flex"
-                  alignItems="center"
-                  sx={{
-                    svg: { me: "1.5rem" },
-                  }}
-                  my="4"
-                >
-                  {!!Svg && <Svg />}
-                  <Text fontSize="xl" fontWeight="semibold" flex="1" m="0">
-                    {title}
-                  </Text>
-                </Box>
-                <Text
-                  fontSize="sm"
-                  color="text200"
-                  marginBottom="0"
-                  width="fit-content"
-                >
-                  {contentPreview}
-                </Text>
-              </Box>
-              <Text
-                fontSize="md"
-                color="primary.base"
-                ms={{ base: undefined, sm: "auto" }}
-                mt="auto"
-                mb="auto"
-              >
-                {t(isVisible ? "less" : "more")}
-              </Text>
-            </Box>
-          </AccordionButton>
-        </Heading>
-        <AccordionPanel
-          p="0"
-          mt="0"
-          paddingX="6"
-          paddingBottom="6"
-          paddingTop="0"
-          onClick={onClick}
+    <>
+      <Accordion
+        type="single"
+        collapsible
+        className={cn("mb-4", className)}
+        defaultValue={visible ? "item-1" : undefined}
+      >
+        <AccordionItem
+          value="item-1"
+          className="rounded-sm border hover:bg-background-highlight"
         >
-          <Box
-            fontSize="md"
-            color="text"
-            paddingTop="6"
-            borderTop="1px solid"
-            borderColor="border"
+          <AccordionTrigger
+            hideIcon
+            onClick={onClick}
+            className="w-full p-6 transition-colors hover:bg-background-highlight hover:text-black md:p-6 dark:hover:text-white [&[data-state=open]]:bg-transparent [&[data-state=open]]:text-black dark:[&[data-state=open]]:text-white"
           >
-            {children}
-          </Box>
-        </AccordionPanel>
-      </AccordionItem>
-    </Accordion>
+            <Flex className="w-full flex-col items-center text-left sm:flex-row">
+              <VStack className="items-center md:items-start">
+                <HStack className="mb-2 mt-4">
+                  {Svg && <Svg className="mr-6" />}
+                  <h3 className="text-xl font-semibold">{title}</h3>
+                </HStack>
+                <p className="w-fit text-sm text-body-medium">
+                  {contentPreview}
+                </p>
+              </VStack>
+              <span className="my-auto text-md text-primary sm:ml-auto">
+                {t(isVisible ? "less" : "more")}
+              </span>
+            </Flex>
+          </AccordionTrigger>
+          <AccordionContent className="p-6 pt-0 md:p-6 md:pt-0">
+            <div className="border-t pt-6 text-md text-body">{children}</div>
+          </AccordionContent>
+        </AccordionItem>
+      </Accordion>
+    </>
   )
 }
 

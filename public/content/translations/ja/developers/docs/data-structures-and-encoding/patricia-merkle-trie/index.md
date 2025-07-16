@@ -35,13 +35,11 @@ sidebarDepth: 2
 
 ```
     def update(node,path,value):
+        curnode = db.get(node) if node else [ NULL ] * 17
+        newnode = curnode.copy()
         if path == '':
-            curnode = db.get(node) if node else [ NULL ] * 17
-            newnode = curnode.copy()
             newnode[-1] = value
         else:
-            curnode = db.get(node) if node else [ NULL ] * 17
-            newnode = curnode.copy()
             newindex = update(curnode[path[0]],path[1:],value)
             newnode[path[0]] = newindex
         db.put(hash(newnode),newnode)
@@ -164,7 +162,7 @@ sidebarDepth: 2
 
 ### ツリーの例 {#example-trie}
 
-次の4つのパスバリューのペアを含むツリーが必要だとします。 `('do', 'verb')`、`('dog', 'puppy')`、`('doge', 'coins')`、`('horse', 'stallion')`
+次の4つのパス／バリューのペアを含むツリーが必要だとします。 `('do', 'verb')`、`('dog', 'puppy')`、`('doge', 'coins')`、`('horse', 'stallion')`。
 
 まず、パスと値(バリュー)の両方を`bytes`に変換します。 以下では、_paths_を実際のバイト表現 `<>`によって表示しています。しかし、 _values_は、分かりやすいように文字列として`''`で表示しています(実際は`bytes`) 。
 
@@ -254,7 +252,7 @@ else:
 
 ### レシートツリー {#receipts-trie}
 
-すべてのブロックは、それぞれのレシートツリーを持っています。 ここでの`path`は、`rlp(transactionIndex)`です。 `transactionIndex`は、マイニングされたブロックのインデックスです。 レシートツリーは更新されることはありません。 トランザクションと同様に、現在のレシートとレガシーのレシートがあります。 レシートツリーで特定のレシートをクエリーするには、ブロックのトランザクションのインデックス、レシートのペイロード、トランザクションタイプが必要となります。 返されるレシートは、`TransactionType`と`ReceiptPayload`の集まったものとして定義される`Receipt`タイプまたは、`rlp([status, cumulativeGasUsed, logsBloom, logs])`として定義される`LegacyReceipt`タイプとなります。
+すべてのブロックは、それぞれのレシートツリーを持っています。 ここでの`path`は、`rlp(transactionIndex)`です。 `transactionIndex`は、そのトランザクションが含まれたブロック内でのインデックスです。 レシートツリーは更新されることはありません。 トランザクションと同様に、現在のレシートとレガシーのレシートがあります。 レシートツリーで特定のレシートをクエリーするには、ブロックのトランザクションのインデックス、レシートのペイロード、トランザクションタイプが必要となります。 返されるレシートは、`TransactionType`と`ReceiptPayload`の集まったものとして定義される`Receipt`タイプまたは、`rlp([status, cumulativeGasUsed, logsBloom, logs])`として定義される`LegacyReceipt`タイプとなります。
 
 詳細については、[EIP 2718](https://eips.ethereum.org/EIPS/eip-2718)のドキュメントを参照してください。
 

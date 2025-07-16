@@ -127,7 +127,7 @@ May mungkahi para sa staking tool na hindi namin nabanggit? Tingnan ang aming [p
 
 Ilan ito sa mga pinakakaraniwang tanong tungkol sa staking na mahalagang malaman.
 
-<ExpandableCard title="Ano ang validator?">
+<ExpandableCard title="Ano ang Validator?">
 
 Ang <em>validator</em> ay isang virtual entity sa Ethereum at nakikilahok sa consensus ng Ethereum protocol. Ang mga validator ay kinakatawan ng isang balanse, pampublikong key, at iba pang property. Ang <em>validator client</em> ang software na kumikilos para sa validator sa pamamagitan ng pangangasiwa at paggamit sa pribadong key nito. Maaaring mangasiwa ang isang validator client ng maraming pares ng key, na nagkokontrol ng maraming validator.
 
@@ -190,14 +190,17 @@ Kapag naitakda na ang mga kredensyal sa pag-withdraw, ang mga reward payment (na
 
 Upang ma-unlock at maibalik ang iyong buong balanse, dapat mo ring tapusin ang proseso ng pag-aalis ng iyong validator.
 
-<ButtonLink to="/staking/withdrawals/">Iba pang detalye tungkol sa mga pag-withdraw sa staking</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">Iba pang detalye tungkol sa mga pag-withdraw sa staking</ButtonLink>
 </ExpandableCard>
 
 ## Karagdagang pagbabasa {#further-reading}
 
+- [The Ethereum Staking Directory](https://www.staking.directory/) - _Eridian at Spacesider_
 - [Ang Problema ng Ethereum sa Client Diversity](https://hackernoon.com/ethereums-client-diversity-problem) - _@emmanuelawosika 2022_
 - [Pagtulong sa Client Diversity](https://www.attestant.io/posts/helping-client-diversity/) - _Jim McDonald 2022_
 - [Client diversity sa consensus layer ng Ethereum](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA) - _jmcook.eth 2022_
 - [Paano Dapat Gawin: Bumili ng Hardware para sa Ethereum Validator](https://www.youtube.com/watch?v=C2wwu1IlhDc) - _EthStaker 2022_
 - [Step by Step: Paano sumali sa Ethereum 2.0 Testnet](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) - _Butta_
 - [Mga Tip para sa Pag-iwas sa Slashing sa Eth2](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) - _Raul Jordan 2020_
+
+<QuizWidget quizKey="staking-solo" />

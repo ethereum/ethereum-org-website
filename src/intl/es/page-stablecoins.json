@@ -131,6 +131,7 @@
   "page-stablecoins-stablecoins-table-type-precious-metals-backed": "Metales preciosos",
   "page-stablecoins-table-error": "No se pudieron cargar las monedas estables. Intente actualizar la página.",
   "page-stablecoins-title": "Monedas estables",
+  "page-stablecoins-meta-title": "Monedas estables explicadas: ¿para qué sirven?",
   "page-stablecoins-top-coins": "Mejores monedas estables por capitalización de mercado",
   "page-stablecoins-top-coins-intro": "La capitalización del mercado es",
   "page-stablecoins-top-coins-intro-code": "el número total de tókenes que existen multiplicado por el valor de cada token. La lista es dinámica y los proyectos enumerados aquí no están necesariamente respaldados por el equipo de ethereum.org.",
@@ -159,9 +160,9 @@
   "example-projects": "Proyectos de ejemplo",
   "gemini-logo": "Logo de Gemini",
   "gitcoin-logo": "Logo de Gitcoin",
-  "loopring-logo": "Logo de Loopring",
   "makerdao-logo": "Logo de MakerDao",
   "matcha-logo": "Logo de Matcha",
   "summerfi-logo": "Logo de Summer.fi",
-  "uniswap-logo": "Logo de Uniswap"
+  "uniswap-logo": "Logo de Uniswap",
+  "page-stablecoins-go-to": "Ir a"
 }

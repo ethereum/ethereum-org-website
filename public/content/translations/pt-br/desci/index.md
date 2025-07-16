@@ -14,11 +14,11 @@ summaryPoint3: Constrói o movimento de ciência aberta.
 
 ## O que é ciência descentralizada (DeSci)? {#what-is-desci}
 
-A ciência descentralizada (DeSci) é um movimento que visa construir a infraestrutura pública para financiar, criar, revisar, creditar, armazenar e disseminar conhecimento científico de forma justa e equitativa usando a pilha Web3.
+Ciência descentralizada (DeSci) é um movimento cujo objetivo é construir infraestrutura pública para financiar, criar, revisar, atribuir autoria, armazenar e disseminar conhecimento científico de forma justa e equitária usando a pilha [Web3](/glossary/#web3).
 
 A DeSci visa criar um ecossistema em que os cientistas sejam incentivados a partilhar abertamente a sua pesquisa e a receber crédito pelo seu trabalho, enquanto permite a qualquer pessoa acessar e contribuir para a pesquisa com facilidade. A DeSci parte da ideia de que o conhecimento científico deve ser acessível a todos e de que o processo de pesquisa científica deve ser transparente. A DeSci está criando um modelo de pesquisa científica mais descentralizado e distribuído, tornando-o mais resistente à censura e ao controle das autoridades centrais. A DeSci espera criar um ambiente no qual possam florescer novas ideias não convencionais por meio da descentralização do acesso ao financiamento, ferramentas científicas e canais de comunicação.
 
-A ciência descentralizada permite o acesso a fontes de financiamento mais diversificadas (de [DAOs](/dao/), [doações quadráticas](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531) a financiamento coletivo, entre outros), dados de acesso e métodos mais acessíveis, assim como incentiva a reprodutibilidade.
+A ciência descentralizada possibilita mais diversas fontes de financiamento (de [DAOs](/glossary/#dao), [doações quadráticas](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531) a financiamento colaborativo, entre outros), mais acessibilidade de dados e métodos, além de fornecer incentivos para reprodutibilidade.
 
 ### Juan Benet — O Movimento DeSci
 
@@ -28,30 +28,30 @@ A ciência descentralizada permite o acesso a fontes de financiamento mais diver
 
 Uma lista incompleta dos principais problemas encontrados pela ciência e como a ciência descentralizada pode ajudar a resolver esses problemas
 
-| **Ciência descentralizada**                                                                                                              | **Ciência tradicional**                                                                                                                |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| A distribuição dos fundos é determinada pelo público por meio de mecanismos como doações quadráticas ou DAOs.                            | Grupos pequenos, fechados e centralizados controlam a distribuição de fundos.                                                          |
-| Você colabora com pares de todo o mundo em equipes dinâmicas.                                                                            | As organizações financiadoras e instituições domésticas limitam suas colaborações.                                                     |
-| As decisões de financiamento são tomadas online e de forma transparente. São explorados novos mecanismos de financiamento.               | As decisões de financiamento levam muito tempo e sua transparência é limitada. Existem poucos mecanismos de financiamento.             |
-| O compartilhamento de serviços de laboratório são mais fáceis e transparentes com os primitivos Web3.                                    | O compartilhamento de recursos de laboratório é frequentemente lento e pouco transparente.                                             |
-| É possível desenvolver novos modelos para publicação que usam primitivos Web3 para garantir confiança, transparência e acesso universal. | Você publica por meio de caminhos estabelecidos, frequentemente reconhecidos como ineficientes, tendenciosos e exploradores.           |
-| Você pode ganhar tokens e reputação pelo trabalho de revisão por pares.                                                                  | Sua tarefa de revisão por pares não é paga, o que beneficia editores com fins lucrativos.                                              |
-| Você possui a propriedade intelectual (IP) que gera e distribui de acordo com termos transparentes.                                      | A sua instituição doméstica é dona do IP que você gera. O acesso ao IP não é transparente.                                             |
-| Compartilhar toda a pesquisa, incluindo dados de tentativas mal-sucedidas, por meio de todas as etapas na cadeia.                        | Viés de publicação significa que os pesquisadores são mais propensos a compartilhar experimentos que tiveram resultados bem sucedidos. |
+| **Ciência descentralizada**                                                                                                                | **Ciência tradicional**                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| A distribuição de fundos é **determinada pelo público** usando mecanismos como as doações quadráticas ou DAOs.                             | **Grupos centralizados** pequenos e fechados controlam a distribuição de fundos.                                               |
+| Você colabora com pares ao **redor do mundo** em equipes dinâmicas.                                                                        | Organizações de financiamento e instituições domésticas **limitam** suas colaborações.                                         |
+| Decisões de financiamento são feitos online e **de maneira transparente**. São explorados novos mecanismos de financiamento.               | As decisões de financiamento levam muito tempo e são**pouco transparentes**. Existem poucos mecanismos de financiamento.       |
+| Compartilhar os serviços laboratoriais ficou mais fácil e mais transparente usando tecnologia [Web3](/glossary/#web3).                     | O compartilhamento de recursos laboratoriais é frequentemente **lento e difuso**.                                              |
+| **Novos modelos para publicação** podem ser desenvolvidos por Web3 primitivos para certificar confiança, transparência e acesso universal. | A publicação é feita de formas frequentemente consideradas **ineficientes, tendenciosas e abusivas**.                          |
+| Você pode **ganhar tokens e consolidar sua reputação ao avaliar o trabalho de outros**.                                                    | O**trabalho de avaliação por pares não é remunerado**, o que beneficia os editores com fins lucrativos.                        |
+| **Você é dono da propriedade intelectual (PI)** que gera e a distribui conforme termos transparentes.                                      | **Sua instituição doméstica é dona da propriedade intelectual (IP)** que você gera. O acesso ao IP não é transparente.         |
+| **Compartilhar toda a pesquisa**, incluindo os dados de pesquisas que não deram certo, ao ter todas as etapas em cadeia.                   | **Bias de publicação** significa que pesquisadores são mais propensos a compartilhar experimentos que tiveram bons resultados. |
 
 ## Ethereum e DeSci {#ethereum-and-desci}
 
-Um sistema de ciência descentralizada exigirá segurança sólida, custos monetários e de transações mínimos, e um rico ecossistema para o desenvolvimento de aplicativos. O Ethereum fornece tudo o que é necessário para construir uma pilha científica descentralizada.
+Um sistema de ciência descentralizada exigirá segurança sólida, custos monetários e de transações mínimos, e um rico ecossistema para o desenvolvimento de aplicativos. Ethereum proporciona tudo o que é preciso para construir uma tecnologia científica descentralizada.
 
 ## Casos de uso da DeSci {#use-cases}
 
-A DeSci está desenvolvendo um conjunto de ferramentas científicas para integrar a academia Web2 no mundo digital. Veja abaixo uma amostra de casos de uso que a Web3 pode oferecer à comunidade científica.
+A DeSci está criando um conjunto de ferramentas científicas para levar o meio acadêmico tradicional ao mundo digital. Veja abaixo uma amostra de casos de uso que a Web3 pode oferecer à comunidade científica.
 
 ### Publicação {#publishing}
 
-A publicação científica é notoriamente problemática por ser gerida por editoras que dependem do trabalho gratuito de cientistas, revisores e editores para produzir os artigos, mas, em seguida, cobram taxas de publicação exorbitantes. O público, que geralmente pagou indiretamente pelo trabalho e os custos de publicação por meio de impostos, muitas vezes, não conseguem acessar esse mesmo trabalho sem pagar novamente ao editor. As taxas totais para a publicação de artigos científicos individuais frequentemente somam dezenas de milhares de dólares, minando todo o conceito de conhecimento científico como um [bem público](https://www.econlib.org/library/Enc/PublicGoods.html), enquanto gera enormes lucros para um pequeno grupo de editoras.
+A publicação científica é notoriamente problemática por ser gerida por editoras que dependem do trabalho gratuito de cientistas, revisores e editores para produzir os artigos, mas, em seguida, cobram taxas de publicação exorbitantes. O público, que geralmente pagou indiretamente pelo trabalho e os custos de publicação por meio de impostos, muitas vezes, não conseguem acessar esse mesmo trabalho sem pagar novamente ao editor. As taxas totais para a publicação de artigos científicos individuais frequentemente somam dezenas de milhares de dólares, minando todo o conceito de conhecimento científico como um [bem público](/glossary/#public-goods), enquanto gera enormes lucros para um pequeno grupo de editoras.
 
-Plataformas de acesso aberto e gratuito existem na forma de servidores de pré-impressão, [como o ArXiv](https://arxiv.org/). No entanto, essas plataformas carecem de controle de qualidade, [mecanismos anti-sybil](https://csrc.nist.gov/glossary/term/sybil_attack) e geralmente não rastreiam métricas de nível de artigo, ou seja, geralmente são usadas apenas para divulgar o trabalho antes do envio a uma editora tradicional. O SciHub também disponibiliza os artigos publicados gratuitamente, mas não de forma legal, e apenas após os editores já terem pago e protegido o trabalho a uma rigorosa legislação de direitos autorais. Isso deixa uma lacuna grave nos artigos científicos e dados acessíveis com um mecanismo de legitimidade e um modelo de incentivos. As ferramentas para a construção desse sistema existem na Web3.
+Plataformas de acesso aberto e gratuito existem na forma de servidores de pré-impressão, [como o ArXiv](https://arxiv.org/). No entanto, essas plataformas carecem de controle de qualidade, [mecanismos anti-sybil](/glossary/#anti-sybil) e geralmente não rastreiam métricas de nível de artigo, ou seja, são geralmente usadas apenas para divulgar o trabalho antes do envio a uma editora tradicional. O SciHub também disponibiliza os artigos publicados gratuitamente, mas não de forma legal, e apenas após os editores já terem pago e protegido o trabalho a uma rigorosa legislação de direitos autorais. Isso deixa uma lacuna grave nos artigos científicos e dados acessíveis com um mecanismo de legitimidade e um modelo de incentivos. As ferramentas para a construção desse sistema existem na Web3.
 
 ### Reprodutibilidade e replicabilidade {#reproducibility-and-replicability}
 
@@ -60,11 +60,11 @@ Reprodutibilidade e replicabilidade são os fundamentos da descoberta científic
 - Resultados reprodutíveis podem ser alcançados várias vezes seguidas pela mesma equipe usando a mesma metodologia.
 - Resultados replicáveis podem ser alcançados por um grupo diferente usando a mesma configuração experimental.
 
-As novas ferramentas nativas da Web3 podem garantir que a reprodutibilidade e a replicabilidade sejam a base da descoberta. Dessa forma, é possível tecer ciência de qualidade no tecido tecnológico do mundo acadêmico. A Web3 oferece a capacidade de criar atestações para cada componente de análise: os dados brutos, o motor computacional e o resultado do aplicativo. A beleza dos sistemas de consenso é que quando uma rede confiável é criada para manter esses componentes, cada participante da rede pode ser responsável por reproduzir o cálculo e validar cada resultado.
+As novas ferramentas nativas da Web3 podem garantir que a reprodutibilidade e a replicabilidade sejam a base da descoberta. Dessa forma, é possível tecer ciência de qualidade no tecido tecnológico do mundo acadêmico. Web3 oferece a capacidade de criar [atestações](/glossary/#attestation) para cada componente de análise: os dados brutos, o mecanismo computacional e o resultado do aplicativo. A beleza dos sistemas de consenso é que quando uma rede confiável é criada para manter esses componentes, cada participante da rede pode ser responsável por reproduzir o cálculo e validar cada resultado.
 
 ### Financiamento {#funding}
 
-O modelo padrão atual para o financiamento da ciência é que indivíduos ou grupos de cientistas façam solicitações por escrito a uma agência de financiamento. Um pequeno painel de indivíduos de confiança avaliam as inscrições e, em seguida, entrevistam os candidatos antes de conceder fundos a uma pequena porção de candidatos. Além de criar gargalos que às vezes levam a anos de espera entre a candidatura e o recebimento de uma bolsa, esse modelo é conhecido por ser altamente vulnerável a preconceitos, interesses próprios e políticas do painel de revisão.
+O modelo padrão atual para o financiamento da ciência é que indivíduos ou grupos de cientistas façam solicitações por escrito a uma agência de financiamento. Um pequeno painel de indivíduos de confiança avaliam as inscrições e, em seguida, entrevistam os candidatos antes de conceder fundos a uma pequena porção de candidatos. Além de criar gargalos que levam, às vezes, a **anos de espera** entre a solicitação e o recebimento de um subsídio, acredita-se que esse modelo seja altamente **vulnerável aos biases, aos interesses próprios e às políticas** do painel de avaliação.
 
 Estudos mostraram que os painéis de revisão de bolsas fazem um trabalho ruim na seleção de propostas de alta qualidade, pois as mesmas propostas apresentadas a diferentes painéis têm resultados totalmente diferentes. Como o financiamento se tornou mais escasso, ele se concentrou em um grupo menor de pesquisadores mais experientes com projetos mais intelectualmente conservadores. O efeito criou um cenário de financiamento hipercompetitivo, entrincheirando incentivos perversos e asfixiando a inovação.
 
@@ -72,11 +72,11 @@ A Web3 tem o potencial de interromper este modelo de financiamento quebrado, exp
 
 ### Propriedade e desenvolvimento de IP {#ip-ownership}
 
-A propriedade intelectual (IP) é um grande problema na ciência tradicional: de ficar presa em universidades ou não utilizada em biotecnologia, a ser notoriamente difícil de avaliar. No entanto, a propriedade de ativos digitais (como dados ou artigos científicos) é algo que a Web3 faz excepcionalmente bem usando [tokens não fungíveis (NFTs)](/nft/).
+A propriedade intelectual (IP) é um grande problema na ciência tradicional: de ficar presa em universidades ou não utilizada em biotecnologia, a ser notoriamente difícil de avaliar. No entanto, a propriedade de ativos digitais (como dados ou artigos científicos) é algo que a Web3 faz excepcionalmente bem usando [tokens não fungíveis (NFTs)](/glossary/#nft).
 
 Da mesma forma que os NFTs podem repassar receitas para transações futuras de volta ao criador original, você pode estabelecer cadeias de atribuição de valor transparentes para recompensar pesquisadores, órgãos governamentais (como DAOs) ou até mesmo as pessoas de cujos dados são coletados.
 
-[IP-NFTs](https://medium.com/molecule-blog/ip-nfts-for-researchers-a-new-biomedical-funding-paradigm-91312d8d92e6) também podem funcionar como uma chave para um repositório descentralizado de dados, de experimentos de pesquisa que estão sendo realizados para conectar o NFT ao financiamento [DeFi](/defi/) (de fracionamento a fundos de empréstimos e avaliação de valor). Ele também permite que entidades nativamente em cadeia, como DAOs do tipo [VitaDAO](https://www.vitadao.com/), conduzam pesquisas diretamente em cadeia. O advento de [tokens "soulbound" intransferíveis](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) também pode desempenhar um papel importante no DeSci, permitindo que indivíduos provem sua experiência e credenciais vinculadas ao seu endereço Ethereum.
+[IP-NFTs](https://medium.com/molecule-blog/ip-nfts-for-researchers-a-new-biomedical-funding-paradigm-91312d8d92e6) também podem funcionar como elemento de acesso a um repositório descentralizado de dados referentes a experimentos de pesquisa sendo realizados e se integrar ao NFT e ao financiamento de [DeFi](/glossary/#defi) (de fracionamento aos pools de empréstimo e avaliação de valor). Ele também permite que entidades nativamente em cadeia, como DAOs do tipo [VitaDAO](https://www.vitadao.com/), conduzam pesquisas diretamente em cadeia. Os [tokens "soulbound" intransferíveis](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) também podem desempenhar um papel importante na DeSci, permitindo que indivíduos provem sua experiência e credenciais vinculadas ao seu endereço Ethereum.
 
 ### Armazenamento de dados, acesso e arquitetura {#data-storage}
 
@@ -92,25 +92,23 @@ Explore projetos e junte-se à comunidade DeSci.
 
 - [DeSci.Global: eventos globais e calendário de encontros](https://desci.global)
 - [Cadeia de blocos para o Science Telegram](https://t.me/BlockchainForScience)
-- [Molecule: financie e obtenha financiamento para seus projetos de pesquisa](https://discover.molecule.to/)
+- [Molecule: financie e obtenha financiamento para seus projetos de pesquisa](https://www.molecule.xyz/)
 - [Virotada: receba financiamento por meio de acordos de pesquisa patrocinados para pesquisas sobre longevidade](https://www.vitadao.com/)
 - [ResearchHub: publique um resultado científico e converse com colegas](https://www.researchhub.com/)
 - [LabDAO: dobre uma proteína in-silico](https://alphafodl.vercel.app/)
-- [dClimate API: consulte dados climáticos coletados por uma comunidade descentralizada](https://api.dclimate.net/)
+- [dClimate API: consulte dados climáticos coletados por uma comunidade descentralizada](https://www.dclimate.net/)
 - [DeSci Foundation: construtor de ferramentas de publicação DeSci](https://descifoundation.org/)
 - [DeSci.World: balcão único para os usuários visualizarem e interagirem com a ciência descentralizada](https://desci.world)
-- [Fleming Protocol: economia de dados de código aberto que alimenta a descoberta biomédica colaborativa](https://medium.com/@FlemingProtocol/a-data-economy-for-patient-driven-biomedical-innovation-9d56bf63d3dd)
-- [OceanDAO: financiamento governado pela DAO para ciência relacionada a dados](https://oceanprotocol.com/dao)
+- [OceanDAO: financiamento governado pela DAO para ciência relacionada a dados](https://oceanprotocol.com/)
 - [Opscientia: fluxos de trabalho de ciência descentralizados abertos](https://opsci.io/research/)
-- [LabDAO: dobre uma proteína in-silico](https://alphafodl.vercel.app/)
-- [Bio.xyz: obtenha financiamento para sua DAO de biotecnologia ou projeto desci](https://www.molecule.to/)
-- [ResearchHub: publique um resultado científico e converse com colegas](https://www.researchhub.com/)
-- [Virotada: receba financiamento por meio de acordos de pesquisa patrocinados para pesquisas sobre longevidade](https://www.vitadao.com/)
-- [Fleming Protocol: economia de dados de código aberto que alimenta a descoberta biomédica colaborativa](https://medium.com/@FlemingProtocol/a-data-economy-for-patient-driven-biomedical-innovation-9d56bf63d3dd)
-- [Active Inference Lab](https://www.activeinference.org/)
-- [CureDAO: plataforma de saúde de precisão de propriedade da comunidade](https://docs.curedao.org/)
+- [Bio.xyz: obtenha financiamento para sua DAO de biotecnologia ou projeto desci](https://www.bio.xyz/)
+- [Fleming Protocol: economia de dados de código aberto que alimenta a descoberta biomédica colaborativa](http://flemingprotocol.io/)
+- [Active Inference Institute](https://www.activeinference.org/)
 - [IdeaMarkets: para uma credibilidade científica descentralizada](https://ideamarket.io/)
 - [DeSci Labs](https://www.desci.com/)
+- [ValleyDAO: uma comunidade aberta e global que oferece financiamento e suporte translacional para pesquisas em biologia sintética](https://www.valleydao.bio)
+- [Cerebrum DAO: buscando e promovendo soluções para melhorar a saúde cerebral e prevenir a neurodegeneração](https://www.cerebrumdao.com/)
+- [CryoDAO: financiando pesquisas inovadoras na área de criopreservação](https://www.cryodao.org)
 
 Agradecemos o envio de sugestões para novos projetos a serem listados — veja nossa [política de listagem](/contributing/adding-desci-projects/) para começar!
 
@@ -120,15 +118,15 @@ Agradecemos o envio de sugestões para novos projetos a serem listados — veja 
 - [Um guia sobre biotecnologia descentralizada por Jocelynn Pearl para o futuro a16z](https://future.a16z.com/a-guide-to-decentralized-biotech/)
 - [O caso da DeSci](https://gitcoin.co/blog/desci-the-case-for-decentralised-science/)
 - [Guia para a DeSci](https://future.com/what-is-decentralized-science-aka-desci/)
-- [Recursos científicos descentralizados](https://www.vincentweisser.com/decentralized-science)
-- [IP-NFTs Bio-Farmacêuticas da Molecule — Uma descrição técnica](https://molecule.to/blog/molecules-biopharma-ip-nfts-a-technical-description)
+- [Recursos científicos descentralizados](https://www.vincentweisser.com/desci)
+- [IP-NFTs Bio-Farmacêuticas da Molecule — Uma descrição técnica](https://www.molecule.xyz/blog/molecules-biopharma-ip-nfts-a-technical-description)
 - [Construindo sistemas de ciência sem confiança, de Jon Arrastar](https://medium.com/@jringo/building-systems-of-trustless-science-1cd2d072f673)
-- [O surgimento de DAOs biotecnológicas](https://molecule.to/blog/the-emergence-of-biotech-daos)
 - [Paul Kohlhaas — DeSci: O Futuro da ciência descentralizada (podcast)](https://anchor.fm/andrew-steinwold/episodes/Paul-Kohlhaas---DeSci-The-Future-of-Decentralized-Science---Zima-Red-ep-117-e1h683a)
 - [Uma ontologia de inferência ativa para a ciência descentralizada: da criação de sentido situada aos comuns epistêmicos](https://zenodo.org/record/6320575)
 - [DeSci: O futuro da pesquisa por Samuel Azinhoso](https://lucidsamuel.medium.com/desci-the-future-of-research-b76cfc88c8ec)
 - [Financiamento de ciência (Epílogo: DeSci e novas criptoprimitivas) por Nadia](https://nadia.xyz/science-funding)
 - [A descentralização está perturbando o desenvolvimento de medicamentos](https://medium.com/id-theory/decentralisation-is-disrupting-drug-development-28b5ba5d447f)
+- [O que é DeSci – Ciência Descentralizada?](​https://usadailytimes.com/2022/09/12/what-is-desci-decentralized-science/)
 
 ### Vídeos {#videos}
 
@@ -137,3 +135,4 @@ Agradecemos o envio de sugestões para novos projetos a serem listados — veja 
 - [A publicação científica está em pane. A Web3 pode resolver isso?](https://www.youtube.com/watch?v=WkvzYgCvWj8)
 - [Juan Benet - DeSci, Laboratórios Independentes, & Ciência de Dados em Grande Escala](https://www.youtube.com/watch?v=zkXM9H90g_E)
 - [Sebastian Brunemeier — Como a DeSci pode transformar a Pesquisa Biomédica e o Capital de Risco](https://www.youtube.com/watch?v=qB4Tc3FcVbM)
+- [Paige Donner – Ferramentas para Ciência Aberta com Web3 & Blockchain](https://www.youtube.com/watch?v=nC-2QWQ-lgw&t=17s)

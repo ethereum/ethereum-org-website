@@ -23,7 +23,7 @@ Transactions require a fee and must be included in a validated block. To make th
 
 A submitted transaction includes the following information:
 
-- `from` – the address of the sender, that will be signing the transaction. This will be an externally-owned account as contract accounts cannot send transactions.
+- `from` – the address of the sender, that will be signing the transaction. This will be an externally-owned account as contract accounts cannot send transactions
 - `to` – the receiving address (if an externally-owned account, the transaction will transfer value. If a contract account, the transaction will execute the contract code)
 - `signature` – the identifier of the sender. This is generated when the sender's private key signs the transaction and confirms the sender has authorized this transaction
 - `nonce` - a sequentially incrementing counter which indicates the transaction number from the account
@@ -170,9 +170,9 @@ Any gas not used in a transaction is refunded to the user account.
 
 Gas is required for any transaction that involves a smart contract.
 
-Smart contracts can also contain functions known as [`view`](https://docs.soliditylang.org/en/latest/contracts.html#view-functions) or [`pure`](https://docs.soliditylang.org/en/latest/contracts.html#pure-functions) functions, which do not alter the state of the contract. As such, calling these functions from an EOA will not require any gas. The underlying RPC call for this scenario is [`eth_call`](/developers/docs/apis/json-rpc#eth_call)
+Smart contracts can also contain functions known as [`view`](https://docs.soliditylang.org/en/latest/contracts.html#view-functions) or [`pure`](https://docs.soliditylang.org/en/latest/contracts.html#pure-functions) functions, which do not alter the state of the contract. As such, calling these functions from an EOA will not require any gas. The underlying RPC call for this scenario is [`eth_call`](/developers/docs/apis/json-rpc#eth_call).
 
-Unlike when accessed using `eth_call`, these `view` or `pure` functions are also commonly called internally (ie. from the contract itself or from another contract) which does cost gas.
+Unlike when accessed using `eth_call`, these `view` or `pure` functions are also commonly called internally (i.e. from the contract itself or from another contract) which does cost gas.
 
 ## Transaction lifecycle {#transaction-lifecycle}
 
@@ -209,7 +209,7 @@ Where the fields are defined as:
 - `TransactionType` - a number between 0 and 0x7f, for a total of 128 possible transaction types.
 - `TransactionPayload` - an arbitrary byte array defined by the transaction type.
 
-Based on the `TransactionType` value, a transaction can be classified as
+Based on the `TransactionType` value, a transaction can be classified as:
 
 1. **Type 0 (Legacy) Transactions:** The original transaction format used since Ethereum's launch. They do not include features from [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) such as dynamic gas fee calculations or access lists for smart contracts. Legacy transactions lack a specific prefix indicating their type in their serialized form, starting with the byte `0xf8` when using [Recursive Length Prefix (RLP)](/developers/docs/data-structures-and-encoding/rlp) encoding. The TransactionType value for these transactions is `0x0`.
 

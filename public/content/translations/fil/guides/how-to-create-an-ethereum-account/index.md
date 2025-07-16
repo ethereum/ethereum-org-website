@@ -14,7 +14,7 @@ Hindi tulad ng pagbubukas ng bagong account sa isang kumpanya, ang paggawa ng Et
 
 Ang wallet ay isang app na tumutulong sa iyong pamahalaan ang iyong Ethereum account. Ginagamit nito ang iyong mga key para magpadala at tumanggap ng mga transaksyon at mag-sign in sa mga app. Maraming iba't ibang wallet na mapagpipilian—mobile, desktop, o kahit mga browser extension.
 
-<ButtonLink to="/wallets/find-wallet/">
+<ButtonLink href="/wallets/find-wallet/">
   Maghanap ng wallet
 </ButtonLink>
 
@@ -42,7 +42,7 @@ Kapag na-save mo na ang iyong seed phrase, makikita mo ang iyong balanse sa dash
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Gusto mong magbasa pa?</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     Tingnan ang iba pa naming gabay
   </ButtonLink>
 </InfoBanner>

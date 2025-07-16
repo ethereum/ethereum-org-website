@@ -1,5 +1,6 @@
 ---
 title: Come utilizzare un portafoglio
+metaTitle: Come utilizzare i portafogli di Ethereum | Passo dopo passo
 description: Una guida che spiega come inviare, ricevere token e connettersi a progetti web3.
 lang: it
 ---
@@ -64,7 +65,7 @@ Il tuo indirizzo sarà lo stesso in tutti i progetti di Ethereum. Non devi regis
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Vuoi scoprire di più?</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     Visualizza le altre guide
   </ButtonLink>
 </InfoBanner>

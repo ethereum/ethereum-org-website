@@ -22,7 +22,6 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 
 ## Beginner articles {#beginner-articles}
 
-- [Choosing an Ethereum Client](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
 - [The Rust Ethereum Client](https://openethereum.github.io/) \* **Note that OpenEthereum [has been deprecated](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) and is no longer being maintained.** Use it with caution and preferably switch to another client implementation.
 - [Sending Transaction to Ethereum Using Rust](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/sending-ethereum-transactions-with-rust/)
 - [A step-by-step tutorial on how to write contracts in rust Wasm for Kovan](https://github.com/paritytech/pwasm-tutorial)
@@ -46,11 +45,12 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 - [Solaris](https://github.com/paritytech/sol-rs) - _Solidity Smart Contracts unit test harness using the native Parity Client EVM._
 - [SputnikVM](https://github.com/rust-blockchain/evm) - _Rust Ethereum Virtual Machine Implementation_
 - [Wavelet](https://wavelet.perlin.net/docs/smart-contracts) - _Wavelet smart contract in Rust_
-- [Foundry](https://github.com/gakonst/foundry)- _Toolkit for Ethereum application development_
-- [Ethers_rs](https://github.com/gakonst/ethers-rs)- _Ethereum library and wallet implementation_
+- [Foundry](https://github.com/foundry-rs/foundry) - _Toolkit for Ethereum application development_
+- [Alloy](https://alloy.rs) - _High-performance, well-tested & documented libraries for interacting with Ethereum and other EVM-based chains._
+- [Ethers_rs](https://github.com/gakonst/ethers-rs) - _Ethereum library and wallet implementation_
 - [SewUp](https://github.com/second-state/SewUp) - _A library to help you build your Ethereum webassembly contract with Rust and just like develop in a common backend_
 - [Substreams](https://github.com/streamingfast/substreams) - _Parallelized blockchain data indexing technology_
-- [Reth](https://github.com/paradigmxyz/reth) Reth (short for Rust Ethereum, pronunciation) is a new Ethereum full-node implementation
+- [Reth](https://github.com/paradigmxyz/reth) Reth (short for Rust Ethereum) is a new Ethereum full-node implementation
 - [Awesome Ethereum Rust](https://github.com/Vid201/awesome-ethereum-rust) - _A curated collection of projects in the Ethereum ecosystem written in Rust_
 
 Looking for more resources? Check out [ethereum.org/developers.](/developers/)

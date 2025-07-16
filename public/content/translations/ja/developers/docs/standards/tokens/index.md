@@ -19,10 +19,11 @@ incomplete: true
 以下では、イーサリアムにおける最も一般的なトークン規格を説明します:
 
 - [ERC-20](/developers/docs/standards/tokens/erc-20/) - 投票用やステーキング用のトークンあるいは仮想通貨など、代替性を持つ（相互に代替可能な）トークンを対象とする標準的なインターフェイスです。
-- [ERC-721](/developers/docs/standards/tokens/erc-721/) - アートや楽曲に対する所有証明など、非代替性トークン (NFT) を対象とする標準的なインタフェースです。
-- [ERC-777](/developers/docs/standards/tokens/erc-777/) - 通常のトークンに対して、トランザクションのプライバシー向上のためにミキサーコントラクトあるいは秘密鍵を紛失したユーザーを救済できる緊急復旧などの機能を追加できる規格です。
-- [ERC-1155](/developers/docs/standards/tokens/erc-1155/) - より効率的な取引や、トランザクションのバンドル化によるコスト軽減を実現できる規格です。 ユーティリティトークン（$BNBや$BATなど）および非代替性トークン（CryptoPunksなど）の両方に使用できます。
-- [ERC-4626](/developers/docs/standards/tokens/erc-4626/) - 利回りボールト（保管庫）における技術的なパラメータを最適化、統一することを目指して設計された、トークン化ボールト用の規格です。
+
+### NFT規格 {#nft-standards}
+
+- [ERC-721](/developers/docs/standards/tokens/erc-721/) - アートや楽曲のための証書など、非代替性トークン (NFT) を対象とする標準的なインタフェースです。
+- [ERC-1155](/developers/docs/standards/tokens/erc-1155/) - より効率的な取引や、トランザクションのバンドル化によるコスト軽減を実現できる規格です。 ユーティリティトークン（$BNBや$BATなど）および非代替性トークン（CryptoPunksなど）の両方の作成に使用できます。
 
 [ERC](https://eips.ethereum.org/erc)提案の全リスト
 
@@ -30,7 +31,7 @@ incomplete: true
 
 _役に立ったコミュニティリソースがあれば、 ぜひこのページに追加してください。_
 
-## 関連チュートリアル {#related-tutorials}
+## 関連トピック {#related-tutorials}
 
 - [トークンの統合作業に関するチェックリスト](/developers/tutorials/token-integration-checklist/) _– トークンのやりとりを統合する際に検討すべき事項が列挙されています。_
 - [ERC20トークンを利用するスマートコントラクトを理解する](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _- イーサリアムのテストネットワーク上ではじめてスマートコントラクトをデプロイする初心者向けの入門ガイドです。_

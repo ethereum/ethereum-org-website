@@ -56,7 +56,7 @@ Być może jesteś artystą, który chce udostępniać swoje prace za pomocą NF
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:" mt="8">
   <div>Odkrywaj, kupuj lub twórz swoje własne dzieła sztuki/kolekcje NFT...</div>
-  <ButtonLink to="/dapps/?category=collectibles#explore">
+  <ButtonLink href="/dapps/?category=collectibles#explore">
     Odkryj sztukę NFT
   </ButtonLink>
 </InfoBanner>
@@ -93,7 +93,7 @@ Bezpieczeństwo Ethereum wynika z algorytmu [proof-of-stake](/glossary/#pos). Sy
 
 Kwestie bezpieczeństwa związane z NFT są najczęściej związane z oszustwami typu phishing, lukami w inteligentnych kontraktach lub błędami użytkownika (takimi jak nieumyślne ujawnienie kluczy prywatnych), co sprawia, że dbanie o bezpieczeństwo portfela ma kluczowe znaczenie dla właścicieli NFT.
 
-<ButtonLink to="/security/">
+<ButtonLink href="/security/">
   Więcej o bezpieczeństwie
 </ButtonLink>
 
@@ -103,6 +103,11 @@ Kwestie bezpieczeństwa związane z NFT są najczęściej związane z oszustwami
 - [Moduł śledzący EtherscanNFT](https://etherscan.io/nft-top-contracts)
 - [Standard tokenów ERC-721](/developers/docs/standards/tokens/erc-721/)
 - [Standard tokenów ERC-1155](/developers/docs/standards/tokens/erc-1155/)
+- [Popularne aplikacje i narzędzia NFT](https://www.ethereum-ecosystem.com/blockchains/ethereum/nfts)
+
+## Inne zasoby {#other-resources}
+
+- [NFTScan](https://nftscan.com/)
 
 <Divider />
 

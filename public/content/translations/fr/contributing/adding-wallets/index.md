@@ -10,10 +10,9 @@ Nous souhaitons nous assurer de présenter une gamme diversifiée de portefeuill
 
 Toute personne est libre de suggérer l'ajout d'un portefeuille sur ethereum.org. Si un portefeuille manque, n'hésitez pas à nous le suggérer !
 
-Chacun est libre de proposer un nouveau portefeuille. Les portefeuilles sont actuellement listés sur :
+Les portefeuilles sont actuellement listés sur :
 
 - [ethereum.org/wallets/find-wallet/](/wallets/find-wallet/)
-- [ethereum.org/wallets/](/wallets/)
 
 Les portefeuilles évoluent rapidement sur Ethereum. Nous avons tenté de créer un cadre équitable pour pouvoir s'afficher sur ethereum.org, mais les critères de sélection dans la liste changeront et évolueront au fil du temps.
 
@@ -26,6 +25,12 @@ Les portefeuilles évoluent rapidement sur Ethereum. Nous avons tenté de créer
 - **Développé par une équipe toujours active** : cela permet d'assurer la qualité et de garantir qu'un utilisateur obtiendra de l'aide pour ses demandes.
 - **Informations d'ajout honnêtes et exactes** : nous exigeons que les ajouts suggérés par les projets soient accompagnés d'informations honnêtes et exactes. Les produits dont les informations d'ajout sont falsifiées (par exemple, déclarer que votre produit est « open source » alors qu'il ne l'est pas) seront supprimés.
 - **Point de contact** - Un point de contact pour le portefeuille nous aidera grandement à obtenir des informations précises lorsque des changements sont apportés. Cela permettra de continuer à mettre à jour ethereum.org raisonnablement lors de la collecte d'informations futures.
+- **Transactions EIP-1559 (type 2)** - votre portefeuille doit prendre en charge les transactions EIP-1559 (type 2) pour les transactions sur le réseau principal Ethereum
+- **Bonne expérience utilisateur** - Bien que l'expérience utilisateur (UX) soit subjective, si plusieurs membres de l'équipe principale testent le produit et le trouvent compliqué à utiliser, nous nous réservons le droit de rejeter le portefeuille et fournirons à la place des suggestions utiles pour l'améliorer. L'objectif est de protéger notre base d'utilisateurs qui est principalement composée de débutants.
+
+### Retraits de produits {#product-removals}
+
+- **Informations mises à jour** - Les fournisseurs de portefeuilles sont responsables de la nouvelle soumission des informations de leur portefeuille tous les 6 mois pour garantir la validité et la pertinence des informations fournies (même s'il n'y a aucun changement à leur produit). Si l'équipe produit ne le fait pas, ethereum.org peut retirer le projet de la page.
 
 ### Autres critères : c'est toujours un plus de les avoir {#the-nice-to-haves}
 
@@ -45,7 +50,6 @@ Les portefeuilles évoluent rapidement sur Ethereum. Nous avons tenté de créer
 - **Personnalisation des frais de gaz** - votre portefeuille permet aux utilisateurs de personnaliser les frais de gaz pour leurs transactions (frais de base, frais prioritaires, frais maximum).
 - **Support ENS** - votre portefeuille permet aux utilisateurs d'envoyer des transactions à des noms ENS.
 - **Support ERC-20** - votre portefeuille permet aux utilisateurs d'importer des contrats de jetons ERC-20 ou d'afficher automatiquement les jetons ERC-20.
-- **Transactions EIP-1559 (type 2)** - votre portefeuille prend en charge les transactions EIP-1559 (type 2).
 - **Acheter de la crypto** - votre portefeuille permet aux utilisateurs d'acheter directement de la crypto.
 - **Vente en fiat** - votre portefeuille permet aux utilisateurs de vendre et de retirer en fiat directement sur une carte ou un compte bancaire.
 - **Multisig** - votre portefeuille prend en charge des signatures multiples lors de la signature d'une transaction.
@@ -57,7 +61,7 @@ Les portefeuilles évoluent rapidement sur Ethereum. Nous avons tenté de créer
 
 Si vous souhaitez ajouter un portefeuille sur ethereum.org, créez un ticket sur GitHub.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml">
+<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml">
   Créez un ticket
 </ButtonLink>
 
@@ -65,10 +69,11 @@ Si vous souhaitez ajouter un portefeuille sur ethereum.org, créez un ticket sur
 
 Ethereum étant flexible par nature, les équipes et les produits vont et viennent et l'innovation est quotidienne. Nous procéderons donc à des vérifications de routine de notre contenu pour :
 
-- nous assurer que tous les portefeuilles et DApps répertoriés répondent toujours à nos critères ;
+- s'assurer que tous les portefeuilles et dapps listés répondent toujours à nos critères
 - vérifier qu'aucun produit suggéré ne répond à plus de nos critères que ceux actuellement répertoriés
 
 Ethereum.org est maintenu par la communauté open source & nous comptons sur la communauté pour nous aider à tenir le site à jour. Si vous remarquez que des informations sur les portefeuilles listés doivent être mises à jour, veuillez [ouvrir un ticket](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml) ou une [pull request](https://github.com/ethereum/ethereum-org-website/pulls) !
+
 
 ## Conditions d'utilisation {#terms-of-use}
 

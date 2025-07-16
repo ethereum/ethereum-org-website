@@ -153,11 +153,18 @@ Aliceのアカウントに **+1.0 ETH**振り込み
 
 バリデータは **+0.000210 ETH** のチップを獲得
 
-スマートコントラクトとの対話にもガスが必要です。
 
 ![未使用ガスの返金図](./gas-tx.png) _ [イーサリアムEVM](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)からの図解_
 
 トランザクションで使用されなかったガス代は、ユーザーアカウントに返金されます。
+
+### スマートコントラクトの操作 {#smart-contract-interactions}
+
+スマートコントラクトが関わるトランザクションにはガスが必要です。
+
+スマートコントラクトには、コントラクトの状態を変更しない[`view`](https://docs.soliditylang.org/en/latest/contracts.html#view-functions)や[`pure`](https://docs.soliditylang.org/en/latest/contracts.html#pure-functions)と呼ばれる関数が含まれる場合もあります。 そのため、EOAからこれらの関数を呼び出す際にはガスは不要です。 このシナリオに対応するRPCコールは[`eth_call`](/developers/docs/apis/json-rpc#eth_call)です。
+
+ただし、`eth_call`を使用してアクセスする場合とは異なり、`view`や`pure`関数が内部的に (つまり、コントラクト自身や他のコントラクトから) 呼び出されることも多く、この場合にはガスがかかります。
 
 ## トランザクションのライフサイクル {#transaction-lifecycle}
 
@@ -191,11 +198,21 @@ Aliceのアカウントに **+1.0 ETH**振り込み
 - `TransactionType`は、0～0x7fの数字で、合計128種類のトランザクションタイプが可能
 - `TransactionPayload` - トランザクション型式で定義された任意のバイト配列
 
+`TransactionType`の値に基づいて、トランザクションは次のように分類されます。
+
+1. **Type 0 (レガシー) トランザクション：** イーサリアムのローンチ以来使用されている元のトランザクション形式です。 これらには、[EIP-1559](https://eips.ethereum.org/EIPS/eip-1559)の動的ガス料金計算やスマートコントラクトのアクセスリストなどの機能は含まれていません。 レガシートランザクションには、[Recursive Length Prefix (RLP)](/developers/docs/data-structures-and-encoding/rlp)エンコーディングを使用した場合にバイト`0xf8`から始まる、シリアル化された形式で種類を示す特定のプレフィックスがありません。 これらのトランザクションのTransactionType値は`0x0`です。
+
+2. **Type 1 トランザクション：** イーサリアムの[ベルリンアップグレード](/history/#berlin)の一環として[EIP-2930](https://eips.ethereum.org/EIPS/eip-2930)で導入されたトランザクションです。これらのトランザクションには`accessList`パラメータが含まれています。 このリストは、トランザクションがアクセスする予定のアドレスとストレージキーを指定し、スマートコントラクトを含む複雑なトランザクションにおける[ガス](/developers/docs/gas/)コストを削減する可能性があります。 EIP-1559の料金市場の変更はType 1トランザクションには含まれていません。 Type 1トランザクションには`yParity`パラメータも含まれており、これは`0x0`または`0x1`のどちらかであり、secp256k1署名のy値のパリティを示します。 これらはバイト`0x01`で始まることで識別され、そのTransactionType値は`0x1`です。
+
+3. **Type 2 トランザクション：** 一般的にEIP-1559トランザクションと呼ばれるこれらのトランザクションは、イーサリアムの[ロンドンアップグレード](/history/#london)における[EIP-1559](https://eips.ethereum.org/EIPS/eip-1559)により導入されました。 これらはイーサリアムネットワークで標準のトランザクションタイプとなっています。 これらのトランザクションは、トランザクションフィーをベースフィーとプライオリティフィーに分けることで予測可能性を向上させる新しい料金市場メカニズムを導入しています。 バイト`0x02`で始まり、`maxPriorityFeePerGas`や`maxFeePerGas`などのフィールドを含んでいます。 Type 2トランザクションは、その柔軟性と効率性から現在のデフォルトであり、特にネットワークが混雑している期間中に、ユーザーがトランザクションフィーをより予測可能に管理できる点で好まれています。 これらのトランザクションのTransactionType値は`0x2`です。
+
+
+
 ## 参考文献 {#further-reading}
 
 - [EIP-2718: 型付トランザクションエンベロープ(Typed Transaction Envelope)](https://eips.ethereum.org/EIPS/eip-2718)
 
-_役に立ったコミュニティリソースがあれば、 ぜひこのページに追加してください。_
+_イーサリアムを学ぶために利用したコミュニティリソースはありますか？ もしあればページを編集して追加してください！_
 
 ## 関連トピック {#related-topics}
 

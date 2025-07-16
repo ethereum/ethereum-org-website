@@ -1,0 +1,70 @@
+{
+  "/content/developers/docs/design-and-ux/dex-design-best-practice/1.png": {
+    "hash": "1475dedd",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAYAAAB24g05AAAACXBIWXMAAAsTAAALEwEAmpwYAAABFUlEQVR4nKWSwUoCQRzG59CtB+gJukZdIoIEr53Ca53rHl16gJ4ivPsMilsgtTFl4NZajYSiqKsbu7qKzY7Z1+yw7WlXjT74+P8Zhh/ffAzBP0XiDsWnAJ9w5WCfiqmc/vKAm+IttLyGB53iqnCN7GUOBjUw+5otBgSXmFnDK2OovjDQ+0dopTuYZYZBdwCv76lEcwGt2hvq7xWM3C5Gww4m4ybcTg9O21GQRMB3OA8y5yAr21jfOZE+BllL4/DoIuxGJD/hF7CxdwZCtqTTIKv7cqawuXsaJVjYQb/ZktHbEdLnQzSMKuy6DYtZqodEQKAKfQbVy/iwHLi2B/OJQdco+Jgrzy0xkPBFZPUHwj1OsYC/6Adwjo/9joHD3wAAAABJRU5ErkJggg=="
+  },
+  "/content/developers/docs/design-and-ux/dex-design-best-practice/2.png": {
+    "hash": "cf379a0c",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAMCAYAAABr5z2BAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAmElEQVR4nMWRsQrDIBCGr6/m4AsIDnk838DRQbrYOSkZHB0dHKQkFMSGvyRTIaWU2tIffm44+O7+O0Kj6CeAWuvmd3rf22C5LSjXgukywXuPGOM2aa2rc85IKcE5hxDCHjDnGeNxxHAaQAcCEUEIAWMMrLVQSqHrOnDOobXeA8I5oDf9S4CUEoyx54BaaluE5iM+6j9v/FR3bkfUCJN9GeMAAAAASUVORK5CYII="
+  },
+  "/content/developers/docs/design-and-ux/dex-design-best-practice/3.png": {
+    "hash": "2eb48ffc",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAMCAYAAABr5z2BAAAACXBIWXMAAAsTAAALEwEAmpwYAAABCElEQVR4nLVRu6qDUBA8v+An+BNWNpbWYuEHWFzsrKyEwOksAjaxswhy6zQ3SIo0gUDqlHZ2FgmGECQpJuzCOXlc0iRkYXBX2DkzswIflvgaQdd16PueQb2ah2Hgvmka7jXB5XzBrtsxTscToiiCZVnIskwjTVP+H8cxg4g0AS2tF2ssZ0tsN1s4jgMhBC8ogiAIYBgGTNPkmRQJ9TrhvvI8Z1RVhaIoGGVZoq5r/oZheCNQJKRCWUiSBJ7nQUqpQRZIOi0T2AItrv5WmP/OMRlNIH8kpuMpfN9nC67ragtkiyzYts0qdAYqvMP+wCDSVwpUmJTHQ4jP1batPt39GdX874zv1scEVwWOkmjMy69JAAAAAElFTkSuQmCC"
+  },
+  "/content/developers/docs/design-and-ux/dex-design-best-practice/4.png": {
+    "hash": "82b99435",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAYAAAB24g05AAAACXBIWXMAAAsTAAALEwEAmpwYAAABCElEQVR4nK2RvWoCQRSFp8hbiFWKQNp04hukSZ93MJUgeQJLQbtgZZsusIJgoaArBCwUVxCXjYKKYbP+La7jaI57JwpqXFbQA4c7MwzfPdzLcKHYVQHr1Rp8zsEXHEKII6/8AWbXhFE1UM6XoSgKKhUV2WwOiVQaLa0Fq2fJP9ToJMC2bOkvvYuG1kStrqFYVPHxnkdN1aB/6hLimWCnYb+DUkGBOTRgj3to10v46Q8kXHDhDZiObBkvEk2CsSDY7RPYneubB7zGM/LP8mgW/wDOzMFL7M0FhMACj2D3z+45LN8owfh74g2g7n8Rf+m2rZCVwDRAgvjOgFY2d/iBz1qjnyjh/gpJG1XbkuJDH0C4AAAAAElFTkSuQmCC"
+  },
+  "/content/developers/docs/design-and-ux/dex-design-best-practice/5.png": {
+    "hash": "fb1e6d8a",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAYAAAB24g05AAAACXBIWXMAAAsTAAALEwEAmpwYAAABCUlEQVR4nLVRTUsCURR9mxb+lsA/EP2BCNr4iwL/QrhrUcsmxIUIgS2UxDE/GVSeBjMbRYMatHGcudc5zXthi2BKCc/jwH333nM4vCfwT4iDGEQcYROfkEIQEZhZdXc3qFQryF3lUK/V8dww8VA0IOXo2zzRQA2Xr0uYjyaMm3s0n1rotwfodbuwbef3BErMIYN8wktHQnasODrp/sf7AuP2EO7ExUzOMB/PNVfuCkKJ1GA6mMJu2HBaDkqFKq5vi2haDqzRBHfxPW+UtbkSbRl4wVcCf+Hr6N6bp5eOLy4hxClE6hzi6CyuT5DOZHVS5s3fj6iWgoCwViTWNYW0+y/sg0SD6AeT8AmhSpuvtAK9HgAAAABJRU5ErkJggg=="
+  },
+  "/content/developers/docs/design-and-ux/dex-design-best-practice/6.png": {
+    "hash": "613499fe",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAMCAYAAABr5z2BAAAACXBIWXMAAAsTAAALEwEAmpwYAAABO0lEQVR4nK2RvUrDUABG7yZugovg6kP4AC6i4tQXcHOQWkUEdx9AcBMRxE5qVVTcHIJVaLSWEtsYYxpCS0FobLGmYpMeY6pV0OigHxzuHxzu/a7gjxH/IvA871uazeYbbrAOFdi2jSzLpFKpgEwmg67rWJYVYJoFSsXizwJJkkgmk2SzWRRFQVVVNE3DMAxfmiaXz4cLKhWbg8Mjdvf2kU5OudEN8nkNVdP92yhsrO5wdpymYTeol+vUCjWcO+dD4DxWuVXPMdQLylaO+n0xwKmVeKgWuUpLmNcKXtPv5tnDfXKDsSOQZJPBiTWGJuOMxhKMxbYZn0kwHN1iJLrJQGSZxRWJduGtr09Yil8iuqYRPbOI7hiibx7Rv9Ce984hxBQish4ugJZ/4HZ4/77Pe6+ElviXdAStXwjLC3VBwu6Jsi/jAAAAAElFTkSuQmCC"
+  },
+  "/content/developers/docs/design-and-ux/dex-design-best-practice/7.png": {
+    "hash": "e4b4a4d7",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAMCAYAAABr5z2BAAAACXBIWXMAAAsTAAALEwEAmpwYAAABhklEQVR4nI2SXU8TQRSGJ9x5YUL8W/J7hAs1+heIV154ASGoCSofmpjITQMkDVDL2G7Ltrtbd9mm3bjTFmjpdrt9mK6KJWkbT/LknJPMeWfemRFMRKvYolPtMOwP+d8Qk42SClVQXDqXxHE8lSRJ5gi0FGW7TL1Rx/f9OzxvzAV1Xbfb7dkC7k+XbDaLZVkplUpVDzrsZ4psbh1wXi4Rhmq2QBAEGIahh7x0Z/dPNk0LKX8gCybNYI7A2OM4/voM1VXKvxjdrZkq0GwGHB4ekc+fUbVsHKeGrak5NpZpYGpLSs05Qd132d1+z9fPHzk3vvMr8Gg0PEJfYp18wLYqdK+nCCTJKG1OCy6raxlebx7wZuuYt18k7/YkGztnrH3K8Wo9Q67oMjmTCvSj3x9naWUfIZYRD18gFp4hHr1ELGrEU8SD5zo/4fHyNyZn7lnwGyGn0iabK3GcryBLHran8IMuRfMiRanr2XcQRX2imx69XkdzxSDqMowjRskgrePoRr/C4J7ALQtxwxY3Ksy3AAAAAElFTkSuQmCC"
+  },
+  "/content/developers/docs/design-and-ux/dex-design-best-practice/8.png": {
+    "hash": "5a9b1851",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAMCAYAAABr5z2BAAAACXBIWXMAAAsTAAALEwEAmpwYAAABaklEQVR4nI2SMUvDQBiGbxOcHMX/Iq4i4h8QdRHURXAX/AHWRXQWf0CXxs3i4KLdtWKLpcYYE9vkmppe0l7S17svWCKS4hdevrvA+9z7XcKQq6bRRPumje5TF6Ir8J9i+U3ruoVGpUEyb01IITFWj5SSlKYpqRAQfAVwPh3EoxhRHEEIQYrVOk2l6jHCMCwGcM7hed5kn6Zj6o/PnyhXauh2bAUZTgfYtv0nruP6qNcbaJkf8INBMUBH/Jl3rMza6Hb8SXx9uhBRMUDPZ1kWgiCg07UpUqaEoCMC6zspBLiuC8MwUK1WaRRd+haGoYOHuzKaL6+IpgE47+HNeley0Av6ZNaxRyoJ5x5MM0s35Q4iDEIfPe6SRMgpvq5I9NUIAjJJfv0LBBjKhDYbhxUwtg42s6P6Ntj8PtjCAdjsLtjcnnq3ia2jK+Q9BJBJ9r1PLmtgSyWw1TOwFaW182y9fJr1xWOULu6R93wDZOfBRshepPwAAAAASUVORK5CYII="
+  },
+  "/content/developers/docs/design-and-ux/dex-design-best-practice/9.png": {
+    "hash": "5289331a",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAMCAYAAABr5z2BAAAACXBIWXMAAAsTAAALEwEAmpwYAAABX0lEQVR4nJWST0vDMBjGcxA8efCmH8ejoFdBEO/iYf5B3EHEr7NDwcNAnQ5FRG8eBIdjgnRD1rk167omW5ekj026zQ43wZSHt02ePnn7SwlSQ3ABJRT+M0j6wS7YqN5U4b17kH1pAnUdaVr4REDYC9H3++i1e+Auh2/7YzGHwfvoGM/MgG7Qheu6iFIXYnEe4vOLolKugXWD2QGMMQQpg1KRqa9vTVjnT2g4NYThANFw/leAEGJclZJoUd9Id6GUMhp5pgZwzuE4jukkMcfw4t2i+F6KASilZm1mgEvbKBbvcP/wiLrTSMBKhU7TxvNtDi+litnkjw4YOKMI/LqpUnLTfiJNX8QMppyCHELJXZSwsmthfd/CasbCRjaPrdMrbJ5cYvusgLWjPKzr8gRgEzAY/iDaSMgOyOIhyPweyHIWZOkYZC4DsnBg1rQn/c7EJ2hYUUx/JE1cg0zmf5Qe33lry/+eS4bWAAAAAElFTkSuQmCC"
+  },
+  "/content/developers/docs/design-and-ux/dex-design-best-practice/10.png": {
+    "hash": "f14666fe",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAOCAYAAAAmL5yKAAAACXBIWXMAAAsTAAALEwEAmpwYAAABeUlEQVR4nI1S20rDQBCNb/6Z/o4iguBf+AGCL4LQV6EUxQfBolgoohKaYC/pNekm2d1sGpP0uJnS0tqLDhx2Zpg5c9kxsCSyI6EGCtNsSviPGMuGdW3BvrHpHVaHCBshIc+nhD8JIj9COAohXEHgfQ7pSSTJRBNkiOOYsJUgCAOM2XitypjFsL9cTRRrJNsJfN+HO3J1tXyBQkzbQ/muhmazDSnVdgKlFDjnVKVIDkQEGSmqrBSHkAmk2jFCkZimKSVPiUDCDyWgG5ktMt89AmMM1WoVpmnqVuXCn8Y+BtYLXI/RQncS1Ot11Go1eJ5HvuLzsoSja7+i1XZozJ07YCxAEISkJ8k3IdOtcz2O43RXOttAEGHQa4J5PaS/WhWcwTLfIARfJ5jf2Ic1wmXpFaXKJ8pPDu6fu4SK1m8f27i4esB7o0+x88skgkmSkXFwUoZhHMHYO9PvKYz98xkK3Sh8xzjUMcs5q5coJmj1ODoDsRGtXkgxy/IDGYlL9dPyjPAAAAAASUVORK5CYII="
+  },
+  "/content/developers/docs/design-and-ux/dex-design-best-practice/11.png": {
+    "hash": "912d52c5",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAOCAYAAAAmL5yKAAAACXBIWXMAAAsTAAALEwEAmpwYAAABZ0lEQVR4nKWRzUrDQBDH9wG8CIoi+Fgexc+CT9HX6UH0ICJe6sHqpVJpLSIUS3PQ2Jp2k26z2WST9u/uppb4kRZxwkBm5z+/mZ0lyFgcxcb/YiQbNEoNNI+b6FQ66D/3DUxyiXE8XgyYjCeIg9gU2nUbvcceaJuamDkjRFJCTj13AuYzVCtVdLvdFDr9Pi1JkvkAz/NgWRYCHiCWMaJQGsz9wwvKV3dw3QGEEHMmYAyU0lmntJsGWLi5rYO6FL6C5wI453AcZzYmV2IhQjXRCHTg4O3dxZAFBvorQBdqiOcNTex6PvruEN81esLcHdRqNeMapIXZ60i1lwVLZCiXr3B2foFWq63ECbiQoK9PuL4soW3Z5lq5gFAECPwefGarV+CZjOocUUgxUNAws4EpQHfSViiegpAtkLV9kOUdkM2j1Fd2QdYPTE5rsjVfAIfFkxSwugeytA2yUUgL9b8+Uzmt+QH4j30Akng7WjHQik4AAAAASUVORK5CYII="
+  },
+  "/content/developers/docs/design-and-ux/dex-design-best-practice/12.png": {
+    "hash": "d0ffcd2b",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAMCAYAAABr5z2BAAAACXBIWXMAAAsTAAALEwEAmpwYAAABWUlEQVR4nKVPPUsDQRTcSrASS3+AjeCvsVREtFS0sBRrO/9AbEQxEfxoNBY2waDECzn0iOSyd7l8rGdiDCbZxJx63I2bTXMiJ0EfDG/m7b5hHsE/iwQFSzBUb6twXh3wCkfTbEo+lIHv+bDiFoxTA+yKoXBWQC6Wk7xdag+XwHl30Ol20eu9SXQF7/AOeItLzjkX8164ATUq2No+QTqtIKfnoes68jQvQSmFqqqyhxrY9hOSyRtkVA3ZrIFSsQjLskQvwTRNKMLYtu1wgw/XhS+653lS1xstCQRmrvgTavBSY1Aud5HJqCiXyzJuQSTQNA2x2CGi0ejvJzTqj7hLXYjIVHKbFfFcZTDpA1LXCSgCNaF/GHy6g3izG+cgZAlkfA1kdAVkYn2AkWWQsVX5NrcZR3BHGrieL0XkWAOZ2cHUwj4m5/cwvXgg0ef9Wf8tcnSP4M63E/5SX6V8uhXGNI+zAAAAAElFTkSuQmCC"
+  },
+  "/content/developers/docs/design-and-ux/dex-design-best-practice/13.png": {
+    "hash": "176b1233",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAYAAAB24g05AAAACXBIWXMAAAsTAAALEwEAmpwYAAABBUlEQVR4nJVQu04CQRQdCv/BxoYPMDQk+AGW/IKdDbGiIVJZ8AfGjvAlaEe2IUioSFgDyBogy2PDhpmdvbDHmUEDMQuLJzm5kzlzzz13GM7AdrM1jAM7x+AUYg3ckYthZwAhBDjnaNXfYTdt+HMfJOm4gRZ1VKvRxttrQ91EICL07QF63Q8IX0ByedxAi3pK33YwdedwZwtDb7XCxJlgOV5i7a2TV/BmQ0zHvV0qEui0LHw5n8l/QLQx9bFSA7vK4yJ3D5a5A0vdoPhUNVr48ybW4FcslJ7BWFo1ZsEub9X5Gg/ll2SDfRKBKAoUpWJoKlGYvMJhEi4kgiA0VZP+TD5p8B98A109mRPQezxyAAAAAElFTkSuQmCC"
+  },
+  "/content/developers/docs/design-and-ux/dex-design-best-practice/14.png": {
+    "hash": "5e87180c",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAYAAAB24g05AAAACXBIWXMAAAsTAAALEwEAmpwYAAAA3UlEQVR4nLWRyw7BQBSG+1Y8glewFu9g4Q0kNhJdSCQqNt1gacHWwv2yYCIqaVUjqErQGtNfMyFBXCP+5MtZnJnvzEXAjxH+KmCMXeF+LjAMA4QQaJoGRZmg2yewrPXngsViCdXbrOszjMcqGp0hVuYXgo21gqGNYJlzDx32Zgp7v30vuNyz2lQQjRchlwYolAnEbAWN/oz3jgcGl7qPBY5z5DUUkSAIfo/AGR+CYZH3dqYNuqXPTsB47bRrSCVjyGVE5GUJUjqBXqt+s+blG3yTh4Lr/6eUcu4nX3ICnLqfCS4orKsAAAAASUVORK5CYII="
+  },
+  "/content/developers/docs/design-and-ux/dex-design-best-practice/15.png": {
+    "hash": "f564393b",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAYAAAB24g05AAAACXBIWXMAAAsTAAALEwEAmpwYAAABCElEQVR4nGP4TyFgoKkBv3//huM/f/4Sb8D169f/Hzx48P/Fixf/nzx1+v/W7Xv/v3jxnHgD7t27//8CUPPVq1f/nzhx9v+6jTv/P37ylHgD3rx+8f/29Qv/X794DMQP/395/+j/t6+fCRsA8+esBev/S+l7/08qmvA/o7jvv51X8v9FK3aB5X58+/X/96/fYIxhwM+fEMG4opn/GRi0gNjmPwOHO5DW/R+RPeX/h+cf/t84eOP/06tP/7+49eL/X6CFOGLh7/9//34C8W8oG0I/vvT4/9n1Z/9f23ft/60jt/7/+v4LuwEgr/z+/QeMv//4Bcb/gOLfP30Hu+LHlx9gzTgDkRQAAPW8l/np7MsUAAAAAElFTkSuQmCC"
+  },
+  "/content/developers/docs/design-and-ux/dex-design-best-practice/16.png": {
+    "hash": "c2c663f9",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAYAAAB24g05AAAACXBIWXMAAAsTAAALEwEAmpwYAAABcklEQVR4nKWRS0vDQBSFx78h4r9RcStYXzsX2oWICoIoijt140YQRBeKqy5EBBERLFpaKg1KK21Sa6lKakra5lFrkqZJe0xGo0JdiM5wuXc+5h7mziH45yJeYWomdFWH8WLQ7IVlWL8TqJaqUAUVFbEC6Umi2T27Ig1n27b9LRqtArmHHJhrBlyaQ/w2geBlGLIsIX2XBsMwYNkkIpEYQqEoFEVuFRCEApLJlHORQ4yJ4/gkSBnP85SnWNbhCUSvbhwBpVVAVUooi4+QpQKkIg9NzcPQNUjlAuVFMQ9Fyjv8GbWa/iXgzRM4vMCAfxWTi1uYWdpET98Ejk6j2AucwTe+gunlHfhn19E/uoBIjKM9bi8xzfdfHpvfByFdIJ3DIB1DTt2NubUDDE5tf/ARkHYfSFsvNnbPaY9lNb5G8Kz0nLDrNmVNu4litgghJUDMiNSVH210n6PrJrRX4zM3HW7odWRCGRr34SzKvEx5i8Bf1xtMen3EkspF7wAAAABJRU5ErkJggg=="
+  },
+  "/content/developers/docs/design-and-ux/dex-design-best-practice/17.png": {
+    "hash": "961bf722",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAYAAAB24g05AAAACXBIWXMAAAsTAAALEwEAmpwYAAAA1ElEQVR4nK2QywqCQBSG5wks3PkG9nq1tU3SpmWPUtE6JGnRBQMXQjjFkIZ2kSJmY/HnHGgXaNSBj/k5w/k4Mww/FvvUlDeJ6+mKe3YnVFa9yoIojBAsA3CfE9EmwlGk1QXe2sNgNIAzdTAcjdHt9cF5WF0ghIC3WmExX8J1Z5g400Kwqy6I47gY4EjSFMlhj8Cf43zJygV5ntNpWRYYY9B1HfWaRrnZbNGd+tRSgW3bNGQYBkyzAU3T0Gl3kGwTovQJ39RHgdrkjZSSUPn5eBJ/3eAF5gCSLjtBUCEAAAAASUVORK5CYII="
+  }
+}

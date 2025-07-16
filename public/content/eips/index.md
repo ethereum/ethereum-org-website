@@ -54,9 +54,17 @@ Full standardization process alongside with chart is described in [EIP-1](https:
 
 If you’re interested to read more about EIPs, check out the [EIPs website](https://eips.ethereum.org/) and [EIP-1](https://eips.ethereum.org/EIPS/eip-1). Here are some useful links:
 
-- [A list of every EIP](https://eips.ethereum.org/all)
+- [A list of every Ethereum Improvement Proposal](https://eips.ethereum.org/all)
 - [A description of all EIP types](https://eips.ethereum.org/EIPS/eip-1#eip-types)
 - [A description of all EIP statuses](https://eips.ethereum.org/EIPS/eip-1#eip-process)
+
+### Community education projects {#community-projects}
+
+- [PEEPanEIP](https://www.youtube.com/playlist?list=PL4cwHXAawZxqu0PKKyMzG_3BJV_xZTi1F) — *PEEPanEIP is an educational video series that discusses Ethereum Improvement Proposal (EIPs) and key features of upcoming upgrades.*
+- [EIPs For Nerds](https://ethereum2077.substack.com/t/eip-research) — *EIPs For Nerds provides comprehensive, ELI5-style overviews of various Ethereum Improvement Proposals (EIPs), including core EIPs and application/infrastructure-layer EIPs (ERCs), to educate readers and shape consensus around proposed changes to the Ethereum protocol.* 
+- [EIPs.wtf](https://www.eips.wtf/) — *EIPs.wtf provides extra information for Ethereum Improvement Proposals (EIPs), including their status, implementation details, related pull requests, and community feedback.* 
+- [EIP.Fun](https://eipfun.substack.com/) — *EIP.Fun provides the latest news on Ethereum Improvement Proposals (EIPs), updates on EIP meetings, and more.*
+- [EIPs Insight](https://eipsinsight.com/) — *EIPs Insight is a representation of state of Ethereum Improvement Proposals (EIPs) process & statistics as per information collected from different resources.*
 
 ## Participate {#participate}
 

@@ -1,10 +1,10 @@
 ---
-title: 單獨質押你的以太幣
-description: 如何開始單獨質押你的以太幣概覽
+title: 單獨質押以太幣
+description: 如何開始單獨質押以太幣的概覽
 lang: zh-tw
 template: staking
 emoji: ":money_with_wings:"
-image: /images/staking/leslie-solo.png
+image: /images/staking/leslie-withdrawal.png
 alt: 萊斯利犀牛在她自己的電腦晶片上。
 sidebarDepth: 2
 summaryPoints:
@@ -13,31 +13,31 @@ summaryPoints:
   - 消除信任依賴，永遠不需放棄對資金金鑰的控制權
 ---
 
-## 什麼是單獨質押？ {#what-is-solo-staking}
+## 單獨質押是什麼？ {#what-is-solo-staking}
 
-單獨質押指執行一個連線至網際網路的[以太坊節點](/run-a-node/)並存入 32 個以太幣，以啟用一個[驗證者](#faq)，使你能夠直接參與網路共識。
+單獨質押指的是[運行連接到網際網路的以太坊節點](/run-a-node/)並存入 32 個以太幣以啟用[驗證者](#faq)的行動，這使你可以直接參與網路共識。
 
-**單獨質押提高了以太坊網路的去中心化**，使以太坊更加無懼審查並能更可靠地抵禦攻擊。 其他質押方法可能無法以同樣的方式協助網路。 單獨質押是保護以太坊的最佳質押方案。
+**單獨質押提高了以太坊網路的去中心化程度**，使以太坊在抵抗審查及攻擊上更加穩健。 其他質押方法可能無法以同樣的方式協助網路。 單獨質押是保護以太坊的最佳質押方案。
 
 以太坊節點由執行層 (EL) 用戶端和共識層 (CL) 用戶端組成。 這類用戶端是一套共同運作的軟體加上一組有效的簽名金鑰，可驗證交易和區塊、證明正確的區塊鏈頭、匯總證明並提交區塊。
 
-單獨質押者負責操作執行這類用戶端所需的硬體。 強烈建議你使用專用機器在家操作，這對網路健康非常有益。
+單獨質押者需要負責運作執行這些用戶端所需的硬體。 強烈建議你使用專用機器在家操作，這對網路健康非常有益。
 
-單獨質押者保持驗證者的正常上線運作，即可直接從協定獲得酬勞。
+單獨質押者直接獲得來自協議的獎勵，負責讓驗證者持續上線且正常運作。
 
-## 為什麼需要單獨質押？ {#why-stake-solo}
+## 爲什麽選擇單獨質押？ {#why-stake-solo}
 
-單獨質押需要承擔更多責任，但可以實現對資金和質押設置的最大控制。
+單獨質押需要承擔更多責任，但能助你最大程度上控制你的資金和質押設定。
 
 <CardGrid>
   <Card title="賺取以太幣" emoji="💸" description="Earn ETH-denominated rewards directly from the protocol when your validator is online, without any middlemen taking a cut." />
   <Card title="完全控制" emoji="🎛️" description="Keep your own keys. Choose the combination of clients and hardware that allows you to minimize your risk and best contribute to the health and security of the network. Third-party staking services make these decisions for you, and they don't always make the safest choices." />
-  <Card title="網路安全" emoji="🔐" description="Solo staking is the most impactful way to stake. By running a validator on your own hardware at home, you strengthen the robustness, decentralization, and security of the Ethereum protocol." />
+  <Card title="網路安全" emoji="🔐" description="Home staking is the most impactful way to stake. By running a validator on your own hardware at home, you strengthen the robustness, decentralization, and security of the Ethereum protocol." />
 </CardGrid>
 
-## 單獨質押前的注意事項 {#considerations-before-staking-solo}
+## 單獨質押前的考量事項 {#considerations-before-staking-solo}
 
-儘管我們希望每個人都可以在沒有風險的情況下進行單獨質押，但這並不現實。 在選擇單獨質押以太幣之前，你必須留意一些實際而嚴肅的考量因素。
+雖然我們希望每個人都能輕鬆無風險地進行單獨質押，但現實並非如此。 在選擇單獨質押以太幣之前，你需要謹慎考慮一些重要的實際因素。
 
 <InfoGrid>
 <ExpandableCard title="必讀事項" eventCategory="SoloStaking" eventName="clicked required reading">
@@ -93,7 +93,7 @@ summaryPoints:
 
 ## 使用節點和用戶端設定工具時需要考量的事項 {#node-tool-considerations}
 
-有越來越多的工具和服務可以幫助你單獨質押以太幣，其風險和收益各有不同。
+現在有愈來愈多工具和服務助你單獨質押以太幣，但每種方式都有不同的風險和優點。
 
 以下屬性指標可以用來衡量所列質押工具可能具備的顯著優勢或劣勢。 在選擇工具，展開質押之旅之際，請將本節作為參考，了解我們如何定義這些屬性。
 
@@ -119,7 +119,7 @@ summaryPoints:
 
 關於我們遺漏的質押工具，你有要推薦的嗎？ 請參閱我們的[產品刊登政策](/contributing/adding-staking-products/)，如果合適，請提交以供審核。
 
-## 探索單獨質押指南 {#staking-guides}
+## 閱讀單獨質押指南 {#staking-guides}
 
 <StakingGuides />
 
@@ -138,7 +138,7 @@ summaryPoints:
 
 請勿為一個驗證者存入超過 32 個以太幣。 這並不會增加你的酬勞。 如果為驗證者設置了提現地址，超過 32 個以太幣的多餘資金將在下一次<a href="/staking/withdrawals/#validator-sweeping">驗證者掃描</a>時自動提款到該地址。
 
-如果單獨質押對你來說要求太高，可以考慮使用<a href="/staking/saas/">質押即服務</a>供應商，或者如果你的資金少於 32 個以太幣，可以參考<a href="/staking/pools/">質押池</a>。
+如果單獨質押對你來說要求太高，可以考慮使用<a href="/staking/saas/">質押即服務</a>提供者，或者如果你持有的以太幣少於 32 個，可以了解下<a href="/staking/pools/">質押池</a>。
 </ExpandableCard>
 
 <ExpandableCard title="如果離線，會被罰沒嗎？ （簡單的說：不會）">
@@ -190,7 +190,7 @@ summaryPoints:
 
 要解鎖並拿回全部餘額，你還必須完成退出驗證者的過程。
 
-<ButtonLink to="/staking/withdrawals/">更多關於提取質押代幣的資訊</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">更多關於提取質押代幣的資訊</ButtonLink>
 </ExpandableCard>
 
 ## 延伸閱讀 {#further-reading}
@@ -203,4 +203,4 @@ summaryPoints:
 - [按部就班：如何加入以太坊 2.0 測試網](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) - _Butta_
 - [以太坊 2 罰沒預防技巧](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) - _Raul Jordan 2020 年_
 
-<QuizWidget quizKey="solo-staking" />
+<QuizWidget quizKey="staking-solo" />

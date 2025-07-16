@@ -92,7 +92,7 @@ title="Dapp- és okosszerződés-fejlesztők"
 contentPreview="The Merge was designed to have minimal impact on smart contract and dapp developers."
 id="developers">
 
-A Beolvadás megváltoztatta a konszenzust, amely a következőkre is hatott:<
+A Beolvadás megváltoztatta a konszenzust, amely a következőkre is hatott:
 
 <ul>
   <li>blokkstruktúra</li>
@@ -202,7 +202,7 @@ A beolvadás a Beacon lánc hivatalos átvételét jelenti az eredeti fő háló
 
 Ehelyett a blokkokra azok a validáló csomópontok tesznek javaslatot, amelyek ETH-t helyeztek letétbe a konszenzusban való részvétel jogáért. Ezek a frissítések készítik elő a terepet a jövőbeni méretezhetőségi frissítésekhez, többek között a szilánkoláshoz.
 
-<ButtonLink to="/roadmap/beacon-chain/">
+<ButtonLink href="/roadmap/beacon-chain/">
   A Beacon lánc
 </ButtonLink>
 
@@ -218,7 +218,7 @@ Az eredeti terv szerint a beolvadás előtt dolgozták volna ki a láncszilánko
 
 A szilánkolással kapcsolatos tervek gyorsan fejlődnek, ám a 2. rétegű technológiák felemelkedése és sikere kapcsán – amelyet a tranzakció-végrehajtás méretezése terén elértek – a szilánkolásra vonatkozó elképzelések most már arra irányulnak, hogy megtalálják a legoptimálisabb módot a rollupszerződések tömörített lehívási adatainak tárolásával járó teher elosztására, és így lehetővé tegyék a hálózati kapacitás exponenciális növekedését. Ehhez azonban előbb át kell térni a proof-of-stake mechanizmusra.
 
-<ButtonLink to="/roadmap/danksharding/">
+<ButtonLink href="/roadmap/danksharding/">
   Szilánkolás (sharding)
 </ButtonLink>
 

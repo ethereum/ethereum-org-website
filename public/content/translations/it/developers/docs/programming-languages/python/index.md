@@ -5,7 +5,7 @@ lang: it
 incomplete: true
 ---
 
-<FeaturedText>Impara a sviluppare per Ethereum usando progetti e strumenti basati su Python</FeaturedText>
+<FeaturedText>Impara a sviluppare per Ehereum, utilizzando progetti e strumenti basati su Python</FeaturedText>
 
 Usa Ethereum per creare applicazioni decentralizzate (dette "dapp") che sfruttano i vantaggi delle criptovalute e della tecnologia blockchain. Queste dapp sono attendibili perché, una volta "caricate" su Ethereum, vengono eseguite sempre come sono state programmate. Possono controllare risorse digitali per creare nuove tipologie di applicazioni finanziarie. Possono essere decentralizzate, il che significa che nessuna singola entità o persona le controlla e sono quasi impossibile da censurare.
 
@@ -51,21 +51,22 @@ Hai prima bisogno di nozioni di base? Dai un'occhiata a [ethereum.org/learn](/le
 - [Web3.py](https://github.com/ethereum/web3.py) - _Libreria Python per interagire con Ethereum_
 - [Vyper](https://github.com/ethereum/vyper/) - _Linguaggio dei Contratti Intelligenti di Python per l'EVM_
 - [Ape](https://github.com/ApeWorX/ape) - _Lo strumento di sviluppo di contratti intelligenti per utilizzatori di Python, Scienziati dei Dati e Professionisti della Sicurezza_
-- [Brownie](https://github.com/eth-brownie/brownie) - _Framework di Python per distribuire, testare e interagire con i contratti intelligenti di Ethereum_
 - [py-evm](https://github.com/ethereum/py-evm) - _Implementazione della macchina virtuale Ethereum_
 - [eth-tester](https://github.com/ethereum/eth-tester) - _Strumenti per testare le applicazioni basate su Ethereum_
 - [eth-utils](https://github.com/ethereum/eth-utils/) - _Funzioni di utilità per lavorare con le basi di codice legate a Ethereum_
 - [py-solc-x](https://pypi.org/project/py-solc-x/) - _Wrapper Python per il compilatore Solidity solc con supporto per 0.5.x_
-- [py-wasm](https://github.com/ethereum/py-wasm) - _Implementazione Python dell'interprete di web assembly_
-- [pydevp2p](https://github.com/ethereum/pydevp2p) - _implementazione dello stack di Ethereum P2P_
 - [pymaker](https://github.com/makerdao/pymaker) - _API Python per i contratti Maker_
 - [siwe](https://github.com/spruceid/siwe-py) - _Accesso con Ethereum (siwe) per Python_
 - [DeFi di Web3 per le integrazioni di Ethereum](https://github.com/tradingstrategy-ai/web3-ethereum-defi) - _Un pacchetto di Python con integrazioni pronte per l'ERC-20, Uniswap e altri progetti popolari_
+- [Wake](https://getwake.io) - _Assetto completo di Python per testare i contratti, fuzzing, distribuzione, scansione delle vulnerabilità e navigazione del codice (server del linguaggio: [Tools for Solidity](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity))_
 
 ### Archiviato / Non più mantenuto: {#archived--no-longer-maintained}
 
 - [Trinity](https://github.com/ethereum/trinity) - _Il client Python di Ethereum_
 - [Mamba](https://github.com/arjunaskykok/mamba) - _Framework per scrivere, compilare e distribuire contratti intelligenti scritti nel linguaggio Vyper_
+- [Brownie](https://github.com/eth-brownie/brownie) - _Framework di Python per distribuire, testare e interagire con i contratti intelligenti di Ethereum_
+- [pydevp2p](https://github.com/ethereum/pydevp2p) - _implementazione dello stack di Ethereum P2P_
+- [py-wasm](https://github.com/ethereum/py-wasm) - _Implementazione Python dell'interprete di web assembly_
 
 Cerchi altre risorse? Dai un'occhiata a [ethereum.org/developers](/developers/).
 
@@ -86,4 +87,4 @@ I seguenti progetti basati su Ethereum usano strumenti menzionati su questa pagi
 
 ## Altri elenchi aggregati {#other-aggregated-lists}
 
-La wiki di Vyper contiene un [incredibile elenco di risorse per Vyper](https://github.com/ethereum/vyper/wiki/Vyper-tools-and-resources)
+La wiki di Vyper contiene un [incredibile elenco di risorse per Vyper](https://github.com/vyperlang/vyper/wiki/Vyper-tools-and-resources)

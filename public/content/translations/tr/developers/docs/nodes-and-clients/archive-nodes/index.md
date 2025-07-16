@@ -56,13 +56,13 @@ Kendi arşiv düğümünüzü başlatmadan önce, istemciler arasındaki farklar
 
 ## Tavsiye edilen uygulamalar
 
-[Bir düğümü çalıştırmak için genel tavsiye edilenler](/developers/docs/nodes-and-clients/run-a-node/) dışında, bir arşiv düğümü donanım ve bakım açısından zahmetli olabilir. Erigon'un [ana özellikleri](https://github.com/ledgerwatch/erigon#key-features) düşünüldüğünde en pratik bakış açısı [Erigon](/developers/docs/nodes-and-clients/#erigon) istemci ugulamasının kullanılmasıdır.
+[Bir düğümü çalıştırmaya yönelik genel tavsiyeler](/developers/docs/nodes-and-clients/run-a-node/) dışında, bir arşiv düğümü donanım ve bakım açısından daha fazla şey gerektirebilir. Erigon'un [ana özellikleri](https://github.com/ledgerwatch/erigon#key-features) düşünüldüğünde en pratik bakış açısı [Erigon](/developers/docs/nodes-and-clients/#erigon) istemci ugulamasının kullanılmasıdır.
 
 ### Donanım
 
 Belirli bir mod için donanım gereksinimlerini müşteri dökümanlarında doğruladığınızdan her zaman emin olun. Arşiv düğümleri için en büyük gereklilik disk alanıdır. İstemciye bağlı olarak 3 TB ile 12 TB arasında değişir. Daha büyük miktardaki veriler için HDD daha iyi bir çözüm olarak düşünülse bile, senkronize etmek ve zincirin başını sürekli güncellemek SSD sürücülerini gerektirir. [SATA](https://www.cleverfiles.com/help/sata-hard-drive.html) sürücüleri yeterlidi fakat güvenilir kalitede, en az [TLC'de](https://blog.synology.com/tlc-vs-qlc-ssds-what-are-the-differences) olmalıdırlar. Diskler yeterli yuvaya sahip bir masaüstü bilgisayara veya sunucuya yerleştirilebilir. Bunun gibi özel cihazlar, yüksek çalışma süresi gerektiren düğümleri çalıştırmak için idealdir. Bir dizüstü bilgisayarda çalıştırmak tamamıyla mümkün, ancak taşıması ek bir maliyete tabi olacaktır.
 
-Tüm veri bir hacme sığmalıdır, bu yüzden diskler bağlı olmalıdır, örneğin [RAID0](https://en.wikipedia.org/wiki/Standard_RAID_levels#RAID_0) veya [LVM](https://web.mit.edu/rhel-doc/5/RHEL-5-manual/Deployment_Guide-en-US/ch-lvm.html) ile. Verilerin herhangi bir düşük seviyeli hata olmadan doğru bir şekilde diske yazılmasını sağlayan "Yazma sırasında kopyalama" özelliğini desteklediği için [ZFS](https://en.wikipedia.org/wiki/ZFS) kullanmayı da düşünmek faydalı olabilir.
+Tüm veri bir hacme sığmalıdır, bu yüzden diskler bağlı olmalıdır, örneğin [RAID0](https://en.wikipedia.org/wiki/Standard_RAID_levels#RAID_0) veya LVM ile. Verilerin herhangi bir düşük seviyeli hata olmadan doğru bir şekilde diske yazılmasını sağlayan "Yazma sırasında kopyalama" özelliğini desteklediği için [ZFS](https://en.wikipedia.org/wiki/ZFS) kullanmayı da düşünmek faydalı olabilir.
 
 Kazara gerçekleşebilecek veritabanı bozulmalarını daha kararlı ve güvenli bir şekilde önlemek için, özellikle profesyonel kurulumlarda sisteminiz destekliyorsa [ECC memory](https://en.wikipedia.org/wiki/ECC_memory) kullanmayı düşünebilirsiniz. RAM boyutunun genellikle bir tam düğümle aynı olması tavsiye edilir, ancak daha fazla RAM senkronizasyonu hızlandırmaya yardımcı olabilir.
 

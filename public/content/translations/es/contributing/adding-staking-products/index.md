@@ -87,7 +87,7 @@ Para cualquier software personalizado o contratos inteligentes involucrados:
 
 Para productos de software relacionados con la configuración de nodo o cliente, administración o migración:
 
-**¿Qué clientes de la capa de consenso (por ejemplo, Lighthouse, Teku, Nimbus, Prysm) se permiten? **
+**¿Qué clientes de la capa de consenso (por ejemplo, ¿Se admiten Lighthouse, Teku, Nimbus, Prysm, Grandine)?**
 
 - ¿Qué clientes se admiten? ¿Puede elegir el usuario?
 - Esto se utiliza para determinar la puntuación «multicliente» de los productos.
@@ -171,6 +171,6 @@ La lógica del código y los pesos para estos criterios están actualmente conte
 
 Si quiere añadir un producto o servicio de participación a ethereum.org, cree una incidencia en GitHub.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_staking_product.yaml">
+<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_staking_product.yaml">
   Crear una incidencia
 </ButtonLink>

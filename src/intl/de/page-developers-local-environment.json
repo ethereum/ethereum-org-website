@@ -28,10 +28,6 @@
   "page-local-environment-setup-subtitle": "Wenn Sie bereit sind, mit der Entwicklung zu beginnen, ist es Zeit, Ihren Stack auszuwählen.",
   "page-local-environment-setup-subtitle-2": "Hier sind die Werkzeuge und Frameworks, die Sie zum Aufbau Deiner Ethereum-Anwendung verwenden können.",
   "page-local-environment-setup-title": "Richten Sie Ihre lokale Entwicklungsumgebung ein",
-  "page-local-environment-solidity-template-desc": "Eine GitHub-Vorlage eines vorkompilierten Setups für Ihre Solidity-Smart-Contracts. Enthält ein lokales Hardhat-Netzwerk, Waffle für Tests, Ether für Wallet-Implementierungen und mehr.",
-  "page-local-environment-solidity-template-logo-alt": "Solidity-Vorlagen-Logo",
-  "page-local-environment-truffle-desc": "Die Truffle Suite bringt Entwickler so bequem wie möglich von der Idee zur dApp.",
-  "page-local-environment-truffle-logo-alt": "Truffel-Logo",
-  "page-local-environment-waffle-desc": "Die fortschrittlichste Test-Bibliothek für Smart-Contracts. Verwenden Sie sie alleine oder mit Scaffold-eth oder Hardhat.",
-  "page-local-environment-waffle-logo-alt": "Waffle-Logo"
+  "page-local-environment-solidity-template-desc": "Eine GitHub-Vorlage für eine vorgefertigte Einrichtung für Ihre Solidity-Smart-Contracts. Enthält ein lokales Hardhat-Netzwerk, Ethers für die Wallet-Implementierung und mehr.",
+  "page-local-environment-solidity-template-logo-alt": "Solidity-Vorlagen-Logo"
 }

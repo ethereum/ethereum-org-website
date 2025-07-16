@@ -110,7 +110,7 @@ function auctionEnd() external {
 
 Se trata de un simple contrato de subasta diseñado para recibir ofertas durante el periodo de oferta. Si la `highestBid` (oferta más alta) aumenta, la oferta más alta anterior recibe su dinero; una vez finalizado el período de oferta, el `beneficiary` (beneficiario) llama al contrato para obtener su dinero.
 
-Pruebas unitarias para un contrato como este cubrirían diferentes funciones que un usuario podría invocar al interactuar con el contrato. Un ejemplo sería hacer una prueba unitaria que compruebe si un usuario puede hacer una oferta mientras la subasta está en curso (es decir, las llamadas a `bid()` son exitosas) o una que compruebe si un usuario puede hacer una oferta más alta que la actual `highestBid`.
+Pruebas unitarias para un contrato como este cubrirían diferentes funciones que un usuario podría invocar al interactuar con el contrato. Un ejemplo sería una prueba unitaria que compruebe si un usuario puede hacer una oferta mientras la subasta está en curso (las llamadas a `bid()` tienen éxito) o una que compruebe si un usuario puede hacer una oferta más alta que la `highestBid` (oferta más alta) actual.
 
 Entender el flujo de trabajo operacional de un contrato también ayuda a escribir pruebas unitarias que comprueben si la ejecución cumple los requisitos. Por ejemplo, el contrato de subasta especifica que los usuarios no puedan realizar ofertas cuando la subasta haya finalizado (es decir, cuando `auctionEndTime` sea inferior a `block.timestamp`). Así, un desarrollador podría ejecutar una prueba unitaria que compruebe si las llamadas a la función `bid()` tienen éxito o fallan cuando la subasta ha terminado (a saber, cuando `auctionEndTime` > `block.timestamp`).
 
@@ -144,6 +144,7 @@ Los marcos de pruebas unitarias para contratos inteligentes de Solidity están d
 - **[Ejecutar pruebas unitarias con Remix](https://remix-ide.readthedocs.io/en/latest/unittesting.html#write-tests)**
 - **[Ejecutar pruebas unitarias con Ape](https://docs.apeworx.io/ape/stable/userguides/testing.html)**
 - **[Ejecutar pruebas unitarias con Hardhat](https://hardhat.org/hardhat-runner/docs/guides/test-contracts)**
+- **[Ejecución de pruebas unitarias con Wake](https://ackeeblockchain.com/wake/docs/latest/testing-framework/overview/)**
 
 ### Pruebas de integración {#integration-testing-for-smart-contracts}
 
@@ -188,9 +189,11 @@ Ejecutar pruebas basadas en propiedades típicamente comienza con la definición
 Una vez configurada correctamente, la herramienta de prueba basada en propiedades ejecutará las funciones del contrato inteligente con entradas generadas al azar. Si hay alguna violación de afirmación, obtendrá un informe con datos de entrada concretos que violan la propiedad en evaluación. Vea algunas de las siguientes guías para comenzar a ejecutar pruebas basadas en propiedades con diferentes herramientas:
 
 - **[Análisis estático de contratos inteligentes con Slither](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither#slither)**
+- **[Análisis estático de contratos inteligentes con Wake](https://ackeeblockchain.com/wake/docs/latest/static-analysis/using-detectors/)**
 - **[Pruebas basadas en propiedades con Brownie](https://eth-brownie.readthedocs.io/en/stable/tests-hypothesis-property.html)**
 - **[Contratos de fuzzing con Foundry](https://book.getfoundry.sh/forge/fuzz-testing)**
 - **[Contratos de fuzzing con Echidna](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna#echidna-tutorial)**
+- **[Contratos de fuzzing con Wake](https://ackeeblockchain.com/wake/docs/latest/testing-framework/fuzzing/)**
 - **[Ejecución simbólica de contratos inteligentes con Manticore](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore#manticore-tutorial)**
 - **[Ejecución simbólica de contratos inteligentes con Mythril](https://mythril-classic.readthedocs.io/en/master/tutorial.html)**
 
@@ -262,6 +265,8 @@ La diferencia principal es que los programas de recompensas por errores están a
 
 - **[ApeWorx:](https://docs.apeworx.io/ape/stable/userguides/testing.html)** _Marco de desarrollo y pruebas basado en Python para contratos inteligentes dirigidos a la Máquina virtual de Ethereum._
 
+- **[Wake:](https://ackeeblockchain.com/wake/docs/latest/testing-framework/overview/)** _Marco basado en Python para pruebas unitarias y fuzzing con sólidas capacidades de depuración y soporte de pruebas entre cadenas, utilizando pytest y Anvil para una mejor experiencia de usuario y rendimiento. _
+
 ### Herramientas de pruebas basadas en propiedades {#property-based-testing-tools}
 
 #### Herramientas de análisis estático {#static-analysis-tools}
@@ -271,6 +276,8 @@ La diferencia principal es que los programas de recompensas por errores están a
 - **[Ethlint:](https://ethlint.readthedocs.io/en/latest/)** _Linter para hacer cumplir las mejores prácticas de estilo y seguridad para el lenguaje de programación de contratos inteligentes Solidity._
 
 - **[Cyfrin Aderyn](https://cyfrin.io/tools/aderyn)**: _Analizador estático basado en Rust, diseñado especificamente para la seguridad y el desarrollo de contratos inteligentes Web3._
+
+- **[Wake](https://ackeeblockchain.com/wake/docs/latest/static-analysis/using-detectors/)**_: Marco de análisis estático basado en Python con detectores de vulnerabilidades y calidad de código, impresoras para extraer información útil del código y soporte para escribir submódulos personalizados._
 
 #### Herramientas de análisis dinámico {#dynamic-analysis-tools}
 
@@ -289,7 +296,7 @@ La diferencia principal es que los programas de recompensas por errores están a
 - [Visión general y comparación de productos de pruebas](/developers/tutorials/guide-to-smart-contract-security-tools/) \_
 - [Cómo utilizar Echidna para probar contratos inteligentes](/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/)
 - [Cómo utilizar Manticore para encontrar errores en contratos inteligentes](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
-- [¿Cómo usar Slither para encontrar errores inteligentes](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
+- [Cómo usar Slither para encontrar errores en contratos inteligentes](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
 - [Cómo simular contratos de Solidity para pruebas](/developers/tutorials/how-to-mock-solidity-contracts-for-testing/)
 - [Cómo ejecutar pruebas unitarias en Solidity usando Foundry](https://www.rareskills.io/post/foundry-testing-solidity)
 

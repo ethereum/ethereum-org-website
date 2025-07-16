@@ -1,5 +1,6 @@
 ---
 title: Tókenes no fungibles (NFT)
+metaTitle: '¿Qué son los NFT? | Beneficios y uso'
 description: Una visión general de los NFT en Ethereum
 lang: es
 template: use-cases
@@ -56,7 +57,7 @@ Tal vez sea usted un artista que quiere compartir su arte a través de los NFT, 
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:" mt="8">
   <div>Explore, compre o cree sus propios NFT de arte/coleccionables...</div>
-  <ButtonLink to="/dapps/?category=collectibles#explore">
+  <ButtonLink href="/dapps/?category=collectibles#explore">
     Explore arte en NFT
   </ButtonLink>
 </InfoBanner>
@@ -75,7 +76,7 @@ El nombre de dominio alternativo de esta página web también funciona a través
 
 ## ¿Cómo funcionan los NFT? {#how-nfts-work}
 
-Los NFT, como cualquiera de los objetos digitales en la cadena de bloques de Ethereum, se crean a través de un programa informático especial basado en Ethereum llamado «contrato inteligente». Estos contratos siguen ciertas reglas, como los estándares[ERC-721](/glossary/#erc-721) o [ERC-1155](/glossary/#erc-1155), que determinan qué puede hacer un contrato.
+Los NFT, como cualquier objeto digital en la cadena de bloques de Ethereum, se crean a través de un programa especial de computación llamado "contrato inteligente". Estos contratos siguen ciertas reglas, como los estándares[ERC-721](/glossary/#erc-721) o [ERC-1155](/glossary/#erc-1155), que determinan qué puede hacer un contrato.
 
 Los contratos inteligentes de NFT pueden hacer algunas cosas importantes:
 
@@ -93,7 +94,7 @@ La seguridad de Ethereum viene de la [prueba de participación](/glossary/#pos).
 
 Las cuestiones de seguridad relativas a los NFT están casi siempre relacionadas con estafas de phishing, puntos flacos en los contratos inteligentes o errores de usuario (como exponer sus claves privadas sin darse cuenta), haciendo que la adopción de óptimas medidas de seguridad y la gestión de la cartera sean dos criterios fundamentales para los propietarios de NFT.
 
-<ButtonLink to="/security/">
+<ButtonLink href="/security/">
   Más sobre seguridad
 </ButtonLink>
 
@@ -103,6 +104,11 @@ Las cuestiones de seguridad relativas a los NFT están casi siempre relacionadas
 - [Rastreador EtherscanNFT](https://etherscan.io/nft-top-contracts)
 - [Estándar de token ERC-721](/developers/docs/standards/tokens/erc-721/)
 - [Estándar de token ERC-1155](/developers/docs/standards/tokens/erc-1155/)
+- [Aplicaciones y herramientas NFT populares](https://www.ethereum-ecosystem.com/blockchains/ethereum/nfts)
+
+## Otros recursos {#other-resources}
+
+- [NFTScan](https://nftscan.com/)
 
 <Divider />
 

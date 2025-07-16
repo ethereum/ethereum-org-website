@@ -39,7 +39,7 @@ Los indicadores de atributos se utilizan para señalar las fortalezas o debilida
 
 ## Explorar proveedores de servicios de participación {#saas-providers}
 
-A continuación encontrará algunos proveedores SaaS disponibles. Utilice los indicadores de arriba para guiarse a través de estos servicios
+A continuación se muestran algunos proveedores de SaaS disponibles. Utilice los indicadores de arriba para guiarse a través de estos servicios
 
 <ProductDisclaimer />
 
@@ -78,7 +78,7 @@ En abril de 2023, se habilitó la retirada de participaciones en la actualizaci�
 
 Los validadores también pueden salir como validadores, lo que desbloqueará su saldo restante en ETH para retirarlo. Las cuentas que hayan proporcionado una dirección de retirada de ejecución y hayan completado el proceso de salida recibirán su saldo completo a la dirección de retirada proporcionada durante el próximo barrido del validador.
 
-<ButtonLink to="/staking/withdrawals/">Más sobre los retiros de Staking</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">Más sobre los retiros de Staking</ButtonLink>
 </ExpandableCard>
 
 <ExpandableCard title="¿Qué sucede si recibo una penalización?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">

@@ -10,10 +10,9 @@ Vogliamo assicurarci di mostrare una varietà di portafogli che coprano il panor
 
 Tutti sono liberi di suggerire l'aggiunta di un portafoglio a ethereum.org. Se ci siamo dimenticati un portafoglio, ti preghiamo di suggerirlo!
 
-Chiunque può suggerire un nuovo portafoglio. I portafogli sono attualmente elencati in:
+I portafogli sono attualmente elencati in:
 
 - [ethereum.org/wallets/find-wallet/](/wallets/find-wallet/)
-- [ethereum.org/wallets/](/wallets/)
 
 I portafogli sono in rapido cambiamento su Ethereum. Abbiamo provato a creare un meccanismo equo per la disamina su ethereum.org, ma i criteri elencati cambieranno ed evolveranno col tempo.
 
@@ -26,6 +25,12 @@ I portafogli sono in rapido cambiamento su Ethereum. Abbiamo provato a creare un
 - **Gestito da un team attivo**: ciò aiuta ad assicurare la qualità e che un utente riceverà supporto per le proprie richieste.
 - **Elenco d'informazioni oneste e accurate** - Ci si aspetta che ogni elenco suggerito dai progetti sia fornito con informazioni oneste e accurate. I prodotti che falsificano le informazioni in elenco, ad esempio dichiarando che il proprio prodotto è "open source" quando non lo è, saranno rimossi.
 - **Punto di contatto**: un punto di contatto per il portafoglio ci aiuterà molto a ottenere informazioni accurate quando sono apportate delle modifiche. Questo continuerà ad aggiornare ethereum in modo gestibile, raccogliendo le informazioni future.
+- **Transazioni EIP-1559 (tipo 2)**: il tuo portafoglio deve supportare le transazioni EIP-1559 (tipo 2) per le transazioni sulla Rete Principale di Ethereum.
+- **Buona esperienza dell'utente**: mentre l'UX è soggettiva, se svariati membri del team principale testano il prodotto e lo trovano difficile da utilizzare, ci riserviamo il diritto di rifiutare il portafoglio fornendo piuttosto utili suggerimenti per migliorarlo. Questo ha lo scopo di proteggere la nostra base di utenti, composta prevalentemente da principianti.
+
+### Rimozione di prodotti {#product-removals}
+
+- **Informazioni aggiornate**: i fornitori di portafogli sono responsabili di inoltrare le informazioni aggiornate sul proprio portafoglio ogni 6 mesi per assicurare la validità e la rilevanza delle informazioni fornite (anche se non sono state apportate modifiche al loro prodotto). Se il team del prodotto non lo fa, ethereum.org potrebbe rimuovere il progetto dalla pagina.
 
 ### Altri criteri: gli aspetti preferibili {#the-nice-to-haves}
 
@@ -45,7 +50,6 @@ I portafogli sono in rapido cambiamento su Ethereum. Abbiamo provato a creare un
 - **Personalizzazione delle commissioni sul gas**: il tuo portafoglio consente agli utenti di personalizzare le commissioni sul gas delle proprie transazioni (commissione di base, commissione di priorità, commissione massima).
 - **Supporto ENS**: il tuo portafoglio consente agli utenti di inviare le transazioni ai nomi ENS.
 - **Supporto ERC-20**: il tuo portafoglio consente agli utenti di importare i contratti del token ERC-20 o interroga automaticamente e mostra i token ERC-20.
-- **Transazioni dell'EIP-1559 (tipo 2)**: il tuo portafoglio supporta le transazioni dell'EIP-1559 (tipo 2).
 - **Acquistare criptovalute**: il tuo portafoglio supporta l'acquisto diretto e l'adesione alle criptovalute da parte degli utenti.
 - **Vendita per valuta legale**: il tuo portafoglio supporta la vendita e prelievo degli utenti in valuta legale direttamente su carta o conto bancario.
 - **Multifirma**: il tuo portafoglio supporta più firme per firmare una transazione.
@@ -57,7 +61,7 @@ I portafogli sono in rapido cambiamento su Ethereum. Abbiamo provato a creare un
 
 Se desideri aggiungere un portafoglio a ethereum.org, crea un ticket su GitHub.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml">
+<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml">
   Crea un ticket
 </ButtonLink>
 
@@ -65,10 +69,11 @@ Se desideri aggiungere un portafoglio a ethereum.org, crea un ticket su GitHub.
 
 In linea con la natura fluida di Ethereum, team e prodotti vanno e vengono e l'innovazione avviene quotidianamente, quindi effettueremo controlli di routine dei nostri contenuti per:
 
-- garantire che tutti i portafogli e le dapp elencati soddisfino ancora i nostri criteri
+- garantire che tutti i portafogli e le dApp elencati soddisfino ancora i nostri criteri
 - verificare che non ci siano prodotti suggeriti che soddisfano più criteri rispetto a quelli attualmente elencati
 
-Ethereum.org è mantenuto dalla comunità open source e ci affidiamo a essa per mantenere aggiornato questo elenco. Se noti che delle informazioni sui portafogli elencati devono essere aggiornate, sei pregato di [aprire un ticket](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml) o una [richiesta di pull](https://github.com/ethereum/ethereum-org-website/pulls)!
+ethereum.org è mantenuto dalla sua community open source e si affida ad essa per tenere aggiornato questo elenco. Se noti che delle informazioni sui portafogli elencati devono essere aggiornate, sei pregato di [aprire un ticket](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml) o una [richiesta di pull](https://github.com/ethereum/ethereum-org-website/pulls)!
+
 
 ## Condizioni d'uso {#terms-of-use}
 

@@ -18,7 +18,7 @@ Normalmente, gli standard vengono introdotti come [proposte di miglioramento di 
 - [Introduzione alla Governance di Ethereum](/governance/)
 - [Ethereum Governance Overview](https://web.archive.org/web/20201107234050/https://blog.bmannconsulting.com/ethereum-governance/) _March 31, 2019 - Boris Mann_
 - [Ethereum Protocol Development Governance and Network Upgrade Coordination](https://hudsonjameson.com/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) _March 23, 2020 - Hudson Jameson_
-- [Playlist of all Ethereum Core Dev Meetings](https://www.youtube.com/@EthereumProtocol) _(YouTube Playlist)_
+- [Playlist di tutti gli incontri di Core Dev di Ethereum](https://www.youtube.com/@EthereumProtocol) _(Playlist di YouTube)_
 
 ## Tipi di standard {#types-of-standards}
 
@@ -40,6 +40,7 @@ Informazioni più dettagliate su questi diversi tipi e categorie sono disponibil
 ### Standard per i token {#token-standards}
 
 - [ERC-20](/developers/docs/standards/tokens/erc-20/) - Un'interfaccia standard per token fungibili (intercambiabili), come i token di voto, i token di staking o le valute virtuali.
+  - [ERC-223](/developers/docs/standards/tokens/erc-223/) - Uno standard di token fungibili che fa comportare i token in modo identico all'ether e supporta la gestione dei trasferimenti di token dal lato dei destinatari.
   - [ERC-1363](https://eips.ethereum.org/EIPS/eip-1363) - Definisce un'interfaccia token per i token ERC-20 che supporta l'esecuzione del codice del destinatario dopo il codice transfer o transferFrom o spender dopo l'approvazione.
 - [ERC-721](/developers/docs/standards/tokens/erc-721/) - Un'interfaccia standard per token non fungibili, come un atto relativo a opere d'arte o canzoni.
   - [ERC-2309](https://eips.ethereum.org/EIPS/eip-2309) - Un evento standardizzato emesso quando si creano/trasferiscono uno o molti token non fungibili utilizzando identificatori di token consecutivi.

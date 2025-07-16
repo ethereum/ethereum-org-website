@@ -194,7 +194,7 @@ Fuziunea reprezintă adoptarea formală a Lanțului Beacon ca noul strat de cons
 
 În schimb, blocurile sunt propuse prin validarea nodurilor care dețin ETH mizat în schimbul dreptului de a participa la consens. Aceste modernizări au deschis drumul pentru viitoarele modernizări de scalabilitate, inclusiv pentru fragmentare.
 
-<ButtonLink to="/roadmap/beacon-chain/">
+<ButtonLink href="/roadmap/beacon-chain/">
   Lanțul Beacon
 </ButtonLink>
 
@@ -210,7 +210,7 @@ Inițial, se prevedea ca fragmentarea să fie implementată înainte ca Fuziunea
 
 Planurile pentru fragmentare evoluează rapid, dar, având în vedere apariția și succesul tehnologiilor de nivelul 2 pentru scalarea executării tranzacției, planurile pentru fragmentare au fost reorientate către găsirea modalității optime de distribuire a problemei de stocare a datelor de apel comprimate din contractele rollup, permițând creșterea exponențială a capacității rețelei. Acest lucru nu ar fi posibil fără a se trece mai întâi la dovada mizei.
 
-<ButtonLink to="/roadmap/danksharding/">
+<ButtonLink href="/roadmap/danksharding/">
   Fragmentarea
 </ButtonLink>
 

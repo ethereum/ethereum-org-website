@@ -12,11 +12,11 @@ Apakah Anda sedang mencari dukungan resmi Ethereum? Hal pertama yang harus Anda 
 
 Memahami sifat terdesentralisasi Ethereum sangat penting karena siapa pun yang mengklaim sebagai pemberi dukungan resmi Ethereum mungkin sedang mencoba menipu Anda! Perlindungan terbaik terhadap para penipu adalah mengedukasi diri Anda sendiri dan memperhatikan aspek keamanan dengan serius.
 
-<DocLink to="/security/">
+<DocLink href="/security/">
   Keamanan dan pencegahan penipuan Ethereum
 </DocLink>
 
-<DocLink to="/learn/">
+<DocLink href="/learn/">
   Pelajari tentang fundamental Ethereum
 </DocLink>
 
@@ -55,7 +55,6 @@ Berikut adalah beberapa contoh populer:
 - [ethers.js](https://discord.gg/6jyGVDK6Jx)
 - [web3.js](https://discord.gg/GsABYQu4sC)
 - [Hardhat](https://discord.gg/xtrMGhmbfZ)
-- [Truffle](https://discord.gg/8uKcsccEYE)
 - [Alchemy](http://alchemy.com/discord)
 
 ## Menjalankan node {#node-support}

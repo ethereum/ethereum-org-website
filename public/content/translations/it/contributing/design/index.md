@@ -6,7 +6,7 @@ lang: it
 
 # Contributi di progettazione a ethereum.org {#design-contributions}
 
-La progettazione è un componente fondamentale di qualsiasi progetto e, dedicando il tuo tempo e le tue abilità di progettazione a Ethereum.org, puoi aiutare a migliorare l'esperienza dei nostri visitatori. Contribuire a un progetto open source fornisce l'opportunità di acquisire un'esperienza rilevante e sviluppare le tue competenze in un ambiente collaborativo. Avrai la possibilità di collaborare con altri progettisti, sviluppatori e membri della comunità, che avranno le proprie prospettive e informazioni originali.
+La progettazione è un componente fondamentale di qualsiasi progetto, e dedicando il tuo tempo e le tue abilità di progettazione a ethereum.org puoi contribuire a migliorare l'esperienza dei nostri visitatori. Contribuire a un progetto open source fornisce l'opportunità di acquisire un'esperienza rilevante e sviluppare le tue competenze in un ambiente collaborativo. Avrai la possibilità di collaborare con altri progettisti, sviluppatori e membri della comunità, che avranno le proprie prospettive e informazioni originali.
 
 Infine, questo è un ottimo modo per creare un portafoglio diversificato e suggestivo, che dimostri le tue abilità di progettazione.
 
@@ -16,7 +16,7 @@ Infine, questo è un ottimo modo per creare un portafoglio diversificato e sugge
 
 Talvolta, necessitiamo di aiuto nel testare le nostre idee abbozzate. Questo è un ottimo modo per contribuire senza alcuna conoscenza tecnica.
 
-1. Il team di progettazione condividerà un design di prova su [Discord](https://discord.com/invite/CetY6Y4) e su [GitHub](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8).
+1. Il team di progettazione condividerà un design di prova su [Discord](https://discord.com/invite/ethereum-org) e su [GitHub](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8).
 2. Sarai guidato attraverso i design per fornire feedback tramite la funzionalità dei commenti.
 3. Il risultato sarà condiviso nel ticket di GitHub e quindi sarà chiuso dal team.
 
@@ -30,7 +30,7 @@ Fornisci feedback tramite il nostro sito web:
 
 ### <Emoji text=":three:" size={1} /> &nbsp;Trovare problemi di progettazione sul sito web e segnalarli {#report-design-issues}
 
-Ethereum.org è un sito web in rapida crescita, con molte funzionalità e contenuti. Parte dell'UI può facilmente divenire obsoleta o migliorabile. Se riscontri un caso simile, ti preghiamo di segnalarlo, così che ottenga la nostra attenzione.
+ethereum.org è un sito web in rapida crescita, ricco di funzionalità e contenuti. Parte dell'UI può facilmente divenire obsoleta o migliorabile. Se riscontri un caso simile, ti preghiamo di segnalarlo, così che ottenga la nostra attenzione.
 
 1. Visita il sito web e presta attenzione al suo design.
 2. Scatta degli screenshot e annota se vedi qualsiasi problema visivo o dell'UX.
@@ -51,10 +51,10 @@ Il nostro sistema di progettazione rende la progettazione di ethereum.org divert
 
 1. Seleziona un ticket su cui lavorare dalla [bacheca del sistema di progettazione](https://github.com/ethereum/ethereum-org-website/labels/design%20system) su GitHub o creane uno nuovo.
 2. Richiedi che il ticket selezionato ti sia assegnato.
-3. Inizia a progettare il componente richiesto in figma.
+3. Inizia a progettare il componente richiesto su Figma.
 4. Condividilo con il team di progettazione su GitHub quando ti serve una revisione o una guida.
 5. Il team di progettazione lo revisionerà.
-6. Il team di progettazione incorporerà le modifiche nel file principale e pubblicherà il file per la comunità.
+6. Il team di progettazione incorporerà le modifiche al file principale e lo pubblicherà nella community.
 
 ### <Emoji text=":six:" size={1} /> &nbsp;Scrivere contenuti correlati alla progettazione sul sito web {#write-design-articles}
 
@@ -64,7 +64,7 @@ La comunità di sviluppatori di Ethereum è forte, mentre quella di progettazion
 2. Vai alla nostra repository di GitHub e [apri un ticket](https://github.com/ethereum/ethereum-org-website/issues/new), proponendo un argomento (senza scriverne ancora i contenuti).
 3. Attendi che il team di progettazione lo approvi.
 4. Una volta approvato, scrivi i contenuti.
-5. Inviali nel ticket di GH corrispondente.
+5. Invialo nel ticket di GitHub corrispondente.
 
 ### <Emoji text=":seven:" size={1} /> &nbsp;Disegnare nuove illustrazioni {#prepare-illustrations}
 

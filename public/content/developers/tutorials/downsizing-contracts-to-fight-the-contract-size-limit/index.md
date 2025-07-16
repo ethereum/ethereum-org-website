@@ -3,7 +3,7 @@ title: "Downsizing contracts to fight the contract size limit"
 description: What can you do to prevent your smart contracts from getting too large?
 author: Markus Waas
 lang: en
-tags: ["solidity", "smart contracts", "storage", "truffle"]
+tags: ["solidity", "smart contracts", "storage"]
 skill: intermediate
 published: 2020-06-26
 source: soliditydeveloper.com
@@ -19,16 +19,6 @@ On [November 22, 2016](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spuri
 This limit was introduced to prevent denial-of-service (DOS) attacks. Any call to a contract is relatively cheap gas-wise. However, the impact of a contract call for Ethereum nodes increases disproportionately depending on the called contract code's size (reading the code from disk, pre-processing the code, adding data to the Merkle proof). Whenever you have such a situation where the attacker requires few resources to cause a lot of work for others, you get the potential for DOS attacks.
 
 Originally this was less of a problem because one natural contract size limit is the block gas limit. Obviously, a contract must be deployed within a transaction that holds all of the contract's bytecode. If you include only that one transaction into a block, you can use up all that gas, but it's not infinite. Since the [London Upgrade](/history/#london), the block gas limit has been able to vary between 15M and 30M units depending on network demand.
-
-## Taking on the fight {#taking-on-the-fight}
-
-Unfortunately, there is no easy way of getting the bytecode size of your contracts. A great tool to help you that is the [truffle-contract-size](https://github.com/IoBuilders/truffle-contract-size) plugin if you're using Truffle.
-
-1. `npm install truffle-contract-size`
-2. Add the plugin to the _truffle-config.js_: `plugins: ["truffle-contract-size"]`
-3. Run `truffle run contract-size`
-
-This will help you figure out how your changes are affecting the total contract sizes.
 
 In the following we will look at some methods ordered by their potential impact. Think about it in the terms of weight-loss. The best strategy for someone to hit their target weight (in our case 24kb) is to focus on the big impact methods first. In most cases just fixing your diet will get you there, but sometimes you need a little bit more. Then you might add some exercise (medium impact) or even supplements (small impact).
 

@@ -27,7 +27,7 @@ Bu sayfayı daha iyi anlamak için önce [token standartları](/developers/docs/
 #### asset {#asset}
 
 ```solidity
-function asset() public view returns (address)
+function asset() public view returns (address assetTokenAddress)
 ```
 
 Bu fonksiyon; muhasebe, yatırma ve çekme kasası için kullanılan temel jetonun adresini döndürür.
@@ -59,7 +59,7 @@ Bu fonksiyon, sağlanan `shares` miktarı için olan kasa tarafından takas edil
 #### maxDeposit {#maxdeposit}
 
 ```solidity
-function maxDeposit(address receiver) public view returns (uint256)
+function maxDeposit(address receiver) public view returns (uint256 maxAssets)
 ```
 
 Bu fonksiyon, `receiver` tarafından yapılan tek bir [`deposit`](#deposit) çağrısında yatırılabilecek temel varlıkların maksimum miktarını döndürür.
@@ -67,7 +67,7 @@ Bu fonksiyon, `receiver` tarafından yapılan tek bir [`deposit`](#deposit) ça�
 #### previewDeposit {#previewdeposit}
 
 ```solidity
-function previewDeposit(uint256 assets) public view returns (uint256)
+function previewDeposit(uint256 assets) public view returns (uint256 shares)
 ```
 
 Bu fonksiyon, kullanıcıların güncel bloktaki yatırma etkilerini simüle etmelerini sağlar.
@@ -83,7 +83,7 @@ Bu fonksiyon, temel jetonların `assets`'ini kasaya yatırır ve `shares` mülki
 #### maxMint {#maxmint}
 
 ```solidity
-function maxMint(address receiver) public view returns (uint256)
+function maxMint(address receiver) public view returns (uint256 maxShares)
 ```
 
 Bu fonksiyon, `receiver` tarafından yapılan tek bir [`mint`](#mint) çağrısında basılabilecek payların maksimum miktarını döndürür.
@@ -91,7 +91,7 @@ Bu fonksiyon, `receiver` tarafından yapılan tek bir [`mint`](#mint) çağrıs�
 #### previewMint {#previewmint}
 
 ```solidity
-function previewMint(uint256 shares) public view returns (uint256)
+function previewMint(uint256 shares) public view returns (uint256 assets)
 ```
 
 Bu fonksiyon, kullanıcıların güncel bloktaki basma etkilerini simüle etmelerini sağlar.
@@ -107,7 +107,7 @@ Bu fonksiyon, temel jetonların `assets`'ini yatırarak `receiver`'a tam olarak 
 #### maxWithdraw {#maxwithdraw}
 
 ```solidity
-function maxWithdraw(address owner) public view returns (uint256)
+function maxWithdraw(address owner) public view returns (uint256 maxAssets)
 ```
 
 Bu fonksiyon, `owner` bakiyesinden tek bir [`withdraw`](#withdraw) çağrısıyla çekilebilecek maksimum temel varlık miktarını döndürür.
@@ -115,7 +115,7 @@ Bu fonksiyon, `owner` bakiyesinden tek bir [`withdraw`](#withdraw) çağrısıyl
 #### previewWithdraw {#previewwithdraw}
 
 ```solidity
-function previewWithdraw(uint256 assets) public view returns (uint256)
+function previewWithdraw(uint256 assets) public view returns (uint256 shares)
 ```
 
 Bu fonksiyon, kullanıcıların güncel bloktaki çekme etkilerini simüle etmelerini sağlar.
@@ -131,7 +131,7 @@ Bu fonksiyon, `owner`'dan `shares` yakar ve kasadan `receiver`'a tam olarak `ass
 #### maxRedeem {#maxredeem}
 
 ```solidity
-function maxRedeem(address owner) public view returns (uint256)
+function maxRedeem(address owner) public view returns (uint256 maxShares)
 ```
 
 Bu fonksiyon, [`redeem`](#redeem) çağrısı ile `owner` bakiyesinden geri alınabilecek maksimum pay miktarını döndürür.
@@ -139,7 +139,7 @@ Bu fonksiyon, [`redeem`](#redeem) çağrısı ile `owner` bakiyesinden geri alı
 #### previewRedeem {#previewredeem}
 
 ```solidity
-function previewRedeem(uint256 shares) public view returns (uint256)
+function previewRedeem(uint256 shares) public view returns (uint256 assets)
 ```
 
 Bu fonksiyon, kullanıcıların güncel bloktaki geri alma etkilerini simüle etmelerini sağlar.
@@ -168,6 +168,10 @@ function balanceOf(address owner) public view returns (uint256)
 
 `owner`'ın güncel olarak sahip olduğu toplam kasa payı miktarını döndürür.
 
+### Arayüzün haritası {#mapOfTheInterface}
+
+![ERC-4626 arayüzünün haritası](./map-of-erc-4626.png)
+
 ### Etkinlikler {#events}
 
 #### Yatırma Olayları
@@ -195,7 +199,7 @@ event Withdraw(
     address indexed receiver,
     address indexed owner,
     uint256 assets,
-    uint256 share
+    uint256 shares
 )
 ```
 

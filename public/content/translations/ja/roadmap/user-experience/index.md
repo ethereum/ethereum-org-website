@@ -15,7 +15,7 @@ template: roadmap
 
 これに対する解決策は、[スマートコントラクト](/glossary/#smart-contract)ウォレットを使用してイーサリアムとやり取りすることです。 スマートコントラクトウォレットは、鍵の紛失や盗難に備えたアカウント保護、より優れた不正行為の検出や防御、新しい機能の追加など、さまざまなメリットをもたらします。 スマートコントラクトウォレットはすでに存在していますが、まだ使いにくいため、イーサリアムプロトコルがそれらをより便利に使えるようにサポートする必要があります。 この追加サポートは、アカウント抽象化と呼ばれています。
 
-<ButtonLink variant="outline-color" to="/roadmap/account-abstraction/">アカウント抽象化の詳細</ButtonLink>
+<ButtonLink variant="outline-color" href="/roadmap/account-abstraction/">アカウント抽象化の詳細</ButtonLink>
 
 ## 誰でも使えるノード
 
@@ -23,7 +23,7 @@ template: roadmap
 
 ノードの実行をより簡単にし、リソースの消費を大幅に削減するアップグレードを予定しています。 データの格納方法は、 スペース効率の高い**バークルツリー**と呼ばれるス構造に変更する予定です。 また、[ステートレス](/roadmap/statelessness)や[データ有効期限](/roadmap/statelessness/#data-expiry)の導入により、イーサリアム ノードはイーサリアム状態データ全体のコピーを保存する必要がなくなり、ハードディスク容量を大幅に削減できます。 [ライトノード](/developers/docs/nodes-and-clients/light-clients/)は、フルノードを実行することで得られる多くのメリットを提供しますが、携帯電話や単純なブラウザアプリ内でも簡単に実行できるようになります。
 
-<ButtonLink variant="outline-color" to="/roadmap/verkle-trees/">バークルツリーについての詳細</ButtonLink>
+<ButtonLink variant="outline-color" href="/roadmap/verkle-trees/">バークルツリーについての詳細</ButtonLink>
 
 これらのアップグレードにより、ノードの実行に対する障壁が事実上無くなります。 ユーザーは、コンピューターや携帯電話のディスク容量やCPUを気にせずに、イーサリアムに安全かつパーミッションレスにアクセスできるようになります。また、アプリを使用するときに、データやネットワークへのアクセスでサードパーティに依存する必要がなくなります。
 

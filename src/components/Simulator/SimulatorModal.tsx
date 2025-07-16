@@ -1,35 +1,9 @@
 import React from "react"
-import {
-  type ModalContentProps,
-  type ModalProps,
-  UseDisclosureReturn,
-} from "@chakra-ui/react"
 
-import Modal from "../Modal"
+import Modal, { type ModalProps } from "../ui/dialog-modal"
 
-type SimulatorModalProps = ModalContentProps &
-  Pick<ModalProps, "size"> & {
-    isOpen: UseDisclosureReturn["isOpen"]
-    onClose: UseDisclosureReturn["onClose"]
-    children?: React.ReactNode
-  }
+type SimulatorModalProps = Omit<ModalProps, "size">
 
-export const SimulatorModal = ({
-  isOpen,
-  onClose,
-  children,
-  ...restProps
-}: SimulatorModalProps) => {
-  return (
-    <Modal
-      isOpen={isOpen}
-      onClose={onClose}
-      isCentered
-      size="full"
-      scrollBehavior="outside"
-      contentProps={restProps}
-    >
-      {children}
-    </Modal>
-  )
+export const SimulatorModal = (props: SimulatorModalProps) => {
+  return <Modal size="xl" {...props} isSimulator />
 }

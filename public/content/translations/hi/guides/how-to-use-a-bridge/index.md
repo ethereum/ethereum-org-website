@@ -10,7 +10,7 @@ lang: hi
 
 **पूर्वावश्यकता:**
 
-- अगर आपके पास क्रिप्टो वॉलेट है, तो आप इस ट्यूटोरियल का अनुसरण कर सकते हैं: [कैसे करें: इथेरियम खाता "रजिस्टर" करें](/guides/how-to-register-an-ethereum-account/)
+- आपके पास क्रिप्टो वॉलेट होने पर, आप इस ट्यूटोरियल का अनुसरण कर सकते हैं: [कैसे: एथेरियम खाते में "रजिस्टर" करें](/guides/how-to-create-an-ethereum-account/)
 - अपने वॉलेट में धनराशि जोड़ें
 
 ## 1. निर्धारित करें कि आप किस लेयर 2 नेटवर्क का इस्तेमाल करना चाहते हैं
@@ -54,7 +54,7 @@ lang: hi
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>और अधिक सीखना चाहते है?</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     हमारी अन्य गाइडें देखें
   </ButtonLink>
 </InfoBanner>

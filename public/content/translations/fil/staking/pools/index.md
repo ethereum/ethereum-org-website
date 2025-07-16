@@ -26,7 +26,7 @@ Bukod sa mga benepisyo na aming inilahad sa aming [panimula sa staking](/staking
 <CardGrid>
   <Card title="Madaling makapasok" emoji="🐟" description="Not a whale? No problem. Most staking pools let you stake virtually any amount of ETH by joining forces with other stakers, unlike staking solo which requires 32 ETH." />
   <Card title="Mag-stake ngayon" emoji=":stopwatch:" description="Staking with a pool is as easy as a token swap. No need to worry about hardware setup and node maintenance. Pools allow you to deposit your ETH which enables node operators to run validators. Rewards are then distributed to contributors minus a fee for node operations." />
-  <Card title="pag-stake ng mga token" emoji=":droplet:" description="Many staking pools provide a token that represents a claim on your staked ETH and the rewards it generates. This allows you to make use of your staked ETH, e.g. as collateral in DeFi applications." />
+  <Card title="Mga Staking token" emoji=":droplet:" description="Many staking pools provide a token that represents a claim on your staked ETH and the rewards it generates. This allows you to make use of your staked ETH, e.g. as collateral in DeFi applications." />
 </CardGrid>
 
 <StakingComparison page="pools" />
@@ -53,14 +53,14 @@ May iba't ibang opsyon na available upang tulungan ka sa iyong setup. Gamitin an
 
 <StakingProductsCardGrid category="pools" />
 
-Tandaan ang kahalagahan ng pagpili ng serbisyo na seryoso sa [client diversity](/developers/docs/nodes-and-clients/client-diversity/), dahil pinapaigting nito ang seguridad ng network, at nililimitahan nito ang iyong panganib. Matutukoy ang mga serbisyo na may patunay ng paglilimita ng pangunahing paggamit ng client sa pamamagitan ng <em style={{ textTransform: "uppercase" }}>"execution client diversity"</em> at <em style={{ textTransform: "uppercase" }}>"consensus client diversity."</em>
+Tandaan ang kahalagahan ng pagpili ng serbisyo na seryoso sa [client diversity](/developers/docs/nodes-and-clients/client-diversity/), dahil pinapaigting nito ang seguridad ng network, at nililimitahan nito ang iyong panganib. Matutukoy ang mga serbisyo na may patunay ng paglilimita ng pangunahing paggamit ng kliyente sa pamamagitan ng <em style={{ textTransform: "uppercase" }}>"execution client diversity"</em> at <em style={{ textTransform: "uppercase" }}>"consensus client diversity."</em>
 
 May mungkahi para sa staking tool na hindi namin nabanggit? Tingnan ang aming [patakaran sa product listing](/contributing/adding-staking-products/) para malaman kung ito ay angkop, at isumite ito para masuri.
 
 ## Mga karaniwang itanong {#faq}
 
 <ExpandableCard title="Paano ako makakakuha ng mga reward?">
-Karaniwang ibinibigay ang mga ERC-20 staking token sa mga staker na kumakatawan sa halaga ng kanilang staked ETH at mga reward. Tandaan na medyo magkakaiba ang paraan ng iba't ibang pool ng pamamahagi ng mga reward para sa staking sa kanilang mga user, pero pangkaraniwan ito.
+Karaniwan, ang mga ERC-20 staking token ay iniisyu sa mga staker at kumakatawan sa halaga ng kanilang na-stake na ETH kasama ang mga gantimpala. Tandaan na medyo magkakaiba ang paraan ng iba't ibang pool ng pamamahagi ng mga reward para sa staking sa kanilang mga user, pero pangkaraniwan ito.
 </ExpandableCard>
 
 <ExpandableCard title="Kailan ko puwedeng i-withdraw ang aking mga staked token?">
@@ -68,7 +68,7 @@ Ngayon na! Ang Shanghai/Capella network upgrade ay nangyari noong Abril 2023, at
 
 Binibigyang-daan naman ng mga pool na gumagamit ng ERC-20 staking token ang mga user na i-trade ang token na ito sa open market. Kung gayon, maibebenta mo ang iyong staking position at makakapag-"withdraw" ka nang hindi inaalis ang EH sa staking contract.
 
-<ButtonLink to="/staking/withdrawals/">Iba pang detalye tungkol sa mga pag-withdraw sa staking</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">Iba pang detalye tungkol sa mga pag-withdraw sa staking</ButtonLink>
 </ExpandableCard>
 
 <ExpandableCard title="Iba ba ito sa pag-stake sa aking exchange?">
@@ -81,5 +81,6 @@ May ilang opsyon sa pooling na mas decentralized kumpara sa iba pagdating sa mga
 
 ## Karagdagang pagbabasa {#further-reading}
 
+- [The Ethereum Staking Directory](https://www.staking.directory/) - _Eridian at Spacesider_
 - [Pag-stake gamit ang Rocket Pool - Pangkalahatang-ideya ng Staking](https://docs.rocketpool.net/guides/staking/overview.html) - _Mga dokumento ng RocketPool_
 - [Pag-stake ng Ethereum gamit ang Lido](https://help.lido.fi/en/collections/2947324-staking-ethereum-with-lido) - _Mga pantulong na dokumento ng Lido_

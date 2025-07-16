@@ -4,7 +4,7 @@ description: Gli standard di base che ci impegniamo a rispettare negli spazi di 
 lang: it
 ---
 
-# Codice di condotta {#conduct-intro}
+# Codice di condotta {#code-of-conduct}
 
 ## Missione {#mission}
 

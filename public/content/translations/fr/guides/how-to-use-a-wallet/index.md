@@ -1,5 +1,6 @@
 ---
 title: Comment utiliser un portefeuille
+metaTitle: Comment utiliser un portefeuille Ethereum | Étape par étape
 description: Un guide expliquant comment envoyer, recevoir des jetons et se connecter à des projets web3.
 lang: fr
 ---
@@ -64,7 +65,7 @@ Votre adresse sera la même pour tous les projets Ethereum. Vous n'avez pas beso
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Vous voulez en savoir plus ?</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     Consultez nos autres guides
   </ButtonLink>
 </InfoBanner>

@@ -68,7 +68,7 @@ summaryPoints:
 
 或者，使用 ERC-20 質押代幣的質押池允許使用者在公開市場上交易該代幣，讓你可以出售質押位置，這相當於允許你「提款」，但無需實際從質押合約中移除以太幣。
 
-<ButtonLink to="/staking/withdrawals/">更多質押提款相關資訊</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">更多質押提款相關資訊</ButtonLink>
 </ExpandableCard>
 
 <ExpandableCard title="這與我在交易所進行質押有什麼不同？">

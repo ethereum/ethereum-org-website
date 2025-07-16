@@ -4,11 +4,11 @@ description: Aprenda sobre A Fusão — quando a Rede principal do Ethereum adot
 lang: pt-br
 template: upgrade
 image: /images/upgrades/merge.png
-alt: 
-summaryPoint1: A Rede principal do Ethereum usa prova de participação, mas nem sempre foi esse o caso.
+alt:
+summaryPoint1: A rede principal do Ethereum usa prova de participação, mas esse nem sempre foi o caso.
 summaryPoint2: A melhoria do mecanismo original de prova de trabalho para prova de participação foi chamada de The Merge, ou seja, A Fusão.
-summaryPoint3: A Fusão se refere à fusão original da Rede Principal do Ethereum, com uma cadeia de blocos de prova de participação separada chamada Beacon Chain, agora existente como uma cadeia.
-summaryPoint4: A Fusão reduziu o consumo de energia do Ethereum em ~99,95%.
+summaryPoint3: A Fusão se refere à fusão original da Rede principal do Ethereum com uma blockchain de prova de participação separada chamada Beacon Chain, agora existente como uma cadeia.
+summaryPoint4: A Fusão reduziu o consumo de energia do Ethereum em cerca de 99,95%.
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
@@ -92,7 +92,7 @@ title="Dapp e desenvolvedores de contratos inteligentes"
 contentPreview="The Merge was designed to have minimal impact on smart contract and dapp developers."
 id="developers">
 
-A Fusão veio com alterações no consenso, que também inclui alterações relacionadas a:<
+A Fusão veio com alterações no consenso, que também inclui alterações relacionadas a:
 
 <ul>
   <li>estrutura de bloco</li>
@@ -108,7 +108,7 @@ Para obter mais informações, leia esta publicação de Tim Beiko sobre <a href
 
 ## A Fusão e o consumo de energia {#merge-and-energy}
 
-A Fusão marcou o fim da prova de trabalho para o Ethereum e iniciou a era do Ethereum mais sustentável e ecológico. O consumo de energia do Ethereum reduziu cerca de 99,95%, tornando o Ethereum uma blockchain verde. Descubra mais sobre [Consumo de energia na rede Ethereum](/energy-consumption/).
+A Fusão marcou o fim da prova de trabalho para o Ethereum e deu início à era de um Ethereum mais sustentável e ecológico. O consumo de energia do Ethereum reduziu cerca de 99,95%, tornando o Ethereum uma blockchain verde. Descubra mais sobre [Consumo de energia na rede Ethereum](/energy-consumption/).
 
 ## A Fusão e a escalabilidade {#merge-and-scaling}
 
@@ -202,7 +202,7 @@ A Fusão representa a adoção formal do Beacon Chain como a nova camada de cons
 
 Em vez disso, os blocos são propostos validando nós que colocaram o ETH em troca do direito de participar do consenso. Essas atualizações preparam o cenário para futuras atualizações de escalabilidade, incluindo fragmentação.
 
-<ButtonLink to="/roadmap/beacon-chain/">
+<ButtonLink href="/roadmap/beacon-chain/">
   A Beacon Chain
 </ButtonLink>
 
@@ -218,7 +218,7 @@ Originalmente, o plano era trabalhar na fragmentação antes da Fusão para aten
 
 Os planos para fragmentação estão evoluindo rapidamente, mas dado o surgimento e o sucesso das tecnologias de camada 2 para escalar a execução de transação, os planos de fragmentação mudaram para encontrar a maneira mais otimizada de distribuir a carga de armazenamento dos dados de chamadas compactadas em contratos rollup, permitindo um crescimento exponencial da capacidade da rede. Isso não seria possível sem uma primeira transição para a prova de participação.
 
-<ButtonLink to="/roadmap/danksharding/">
+<ButtonLink href="/roadmap/danksharding/">
   Fragmentação
 </ButtonLink>
 

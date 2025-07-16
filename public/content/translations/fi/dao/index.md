@@ -50,7 +50,7 @@ DAOn selkäranka on sen älykäs sopimus, joka määrittelee organisaation sää
 
 Tämä on mahdollista koska älysopimukset ovat suojattuja, eikä niitä voi "peukaloida" sen jälkeen, kun ne julkaistaan Ethereumissa. Koodin huomaamaton muokkaaminen on poissuljettu (DAOn säännöt). Kaikki on julkista ja avointa.
 
-<DocLink to="/smart-contracts/">
+<DocLink href="/smart-contracts/">
   Lisätietoa älysopimuksista
 </DocLink>
 
@@ -93,7 +93,7 @@ Vuonna 1977 Wyoming keksi LLC:n, joka suojelee yrittäjiä ja rajoittaa heidän 
 
 ### Tunnettu esimerkki {#law-example}
 
-[CityDAO](https://citydao.io) – CityDAO hyödynsi Wyomingin DAO-lakia 40 hehtaarin maa-alueen ostossa lähellä Yellowstonen kansallispuistoa.
+[CityDAO](https://citizen.citydao.io/) – CityDAO hyödynsi Wyomingin DAO-lakia 40 hehtaarin maa-alueen ostossa lähellä Yellowstonen kansallispuistoa.
 
 ## DAO-jäsenyys {#dao-membership}
 

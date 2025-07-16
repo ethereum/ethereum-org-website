@@ -1,33 +1,30 @@
+"use client"
+
 import { useEffect, useState } from "react"
-import { useRouter } from "next/router"
-import { useTranslation } from "next-i18next"
-import { Box } from "@chakra-ui/react"
+import { groupBy } from "lodash"
+import { useLocale } from "next-intl"
 
 import type { CommunityConference, Lang } from "@/lib/types"
 
-import { Button } from "@/components/Buttons"
 import EventCard from "@/components/EventCard"
 import InfoBanner from "@/components/InfoBanner"
-import InlineLink from "@/components/Link"
+import { Button } from "@/components/ui/buttons/Button"
+import Link from "@/components/ui/Link"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 
 import communityEvents from "@/data/community-events.json"
 
-type OrderedUpcomingEvent = CommunityConference & {
-  date: string
-  formattedDetails: string
-}
+import { useTranslation } from "@/hooks/useTranslation"
 
 const UpcomingEventsList = () => {
-  const { locale } = useRouter()
+  const locale = useLocale()
   const { t } = useTranslation("page-community")
-  const eventsPerLoad = 10
-  const [orderedUpcomingEvents, setOrderedUpcomingEvents] = useState<
-    OrderedUpcomingEvent[]
-  >([])
-  const [maxRange, setMaxRange] = useState<number>(eventsPerLoad)
+  const monthsPerLoad = 2
+
+  const [monthGroupedEvents, setMonthGroupedEvents] = useState({})
+  const [maxRange, setMaxRange] = useState<number>(monthsPerLoad)
 
   // Create Date object from each YYYY-MM-DD JSON date string
   const dateParse = (dateString: string): Date => {
@@ -73,13 +70,24 @@ const UpcomingEventsList = () => {
         formattedDetails: details,
       }
     })
+    const groupedEvents = groupBy(formattedEvents, ({ startDate }) => {
+      const start = new Date(startDate.replace(/-/g, "/"))
+      const formatYearMonth = new Intl.DateTimeFormat(locale, {
+        month: "short",
+        year: "numeric",
+      }).format(start)
+      return `${formatYearMonth}`
+    })
 
-    setOrderedUpcomingEvents(formattedEvents)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+    setMonthGroupedEvents(groupedEvents)
+  }, [locale])
 
   const loadMoreEvents = () => {
-    setMaxRange((counter) => counter + eventsPerLoad)
+    setMaxRange((counter) => {
+      if (counter + monthsPerLoad > Object.keys(monthGroupedEvents)?.length)
+        return Object.keys(monthGroupedEvents)?.length
+      return counter + monthsPerLoad
+    })
     trackCustomEvent({
       eventCategory: "more events button",
       eventAction: "click",
@@ -87,70 +95,66 @@ const UpcomingEventsList = () => {
     })
   }
 
-  if (orderedUpcomingEvents.length === 0) {
+  if (Object.keys(monthGroupedEvents)?.length === 0) {
     return (
       <InfoBanner emoji=":information_source:">
         {t("page-community-upcoming-events-no-events")}{" "}
-        <InlineLink href="https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-events.json">
+        <Link href="https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-events.json">
           {t("page-community-please-add-to-page")}
-        </InlineLink>
+        </Link>
       </InfoBanner>
     )
   }
 
   return (
-    <>
-      <Box
-        width="100%"
-        margin="30px auto"
-        position="relative"
-        padding="0 10px"
-        transition="all 0.4s ease"
-        _before={{
-          content: '""',
-          position: "absolute",
-          width: "3px",
-          height: "full",
-          background: "primary.base",
-          top: 0,
-          insetInlineStart: "50%",
-        }}
-        _after={{
-          content: '""',
-          display: "table",
-          width: "100%",
-          clear: "both",
-        }}
-      >
-        {orderedUpcomingEvents
-          ?.slice(0, maxRange)
-          .map(({ title, to, formattedDetails, date, location }, idx) => {
-            return (
-              <EventCard
-                key={idx}
-                title={title}
-                to={to}
-                date={date}
-                description={formattedDetails}
-                location={location}
-                isEven={(idx + 1) % 2 === 0}
-              />
-            )
-          })}
-      </Box>
-      <Box
-        display="flex"
-        justifyContent="center"
-        maxWidth="620px"
-        marginTop="5"
-      >
-        {maxRange <= orderedUpcomingEvents.length && (
+    <div>
+      {Object.keys(monthGroupedEvents)
+        ?.slice(0, maxRange)
+        ?.map((month) => {
+          const events = monthGroupedEvents[month]
+          return (
+            <div key={`events_in_${month}`}>
+              <h3 className="py-8">{month}</h3>
+              <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+                {events.map(
+                  (
+                    {
+                      title,
+                      to,
+                      href,
+                      formattedDetails,
+                      location,
+                      imageUrl,
+                      startDate,
+                      endDate,
+                    },
+                    idx
+                  ) => (
+                    <EventCard
+                      key={idx}
+                      title={title}
+                      href={to || href}
+                      description={formattedDetails}
+                      location={location}
+                      imageUrl={imageUrl}
+                      startDate={startDate}
+                      endDate={endDate}
+                    />
+                  )
+                )}
+              </div>
+            </div>
+          )
+        })}
+
+      {Object.keys(monthGroupedEvents)?.length !== maxRange && (
+        <div className="flex justify-center py-8">
           <Button onClick={loadMoreEvents}>
             {t("page-community-upcoming-events-load-more")}
           </Button>
-        )}
-      </Box>
-    </>
+        </div>
+      )}
+    </div>
   )
 }
 

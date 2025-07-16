@@ -34,13 +34,13 @@ template: roadmap
 
 この2番目のステップは、[「ダンクシャーディング」](/roadmap/danksharding/)と呼ばれます。 完全に実装されるまでには、**数年かかると予想されています**。 ダンクシャーディングは、[ブロック構築とブロック提案を分離する](/roadmap/pbs)などの他の開発に依存しています。また、データが利用可能であることを効率的に確認するために、[データ可用性サンプリング(DAS)](/developers/docs/data-availability)と呼ばれる、数キロバイトのデータをランダムにサンプリングする新しいネットワーク設計も採用しています。
 
-<ButtonLink variant="outline-color" to="/roadmap/danksharding/">ダンクシャーディングの詳細</ButtonLink>
+<ButtonLink variant="outline-color" href="/roadmap/danksharding/">ダンクシャーディングの詳細</ButtonLink>
 
 ## 分散型ロールアップ {#decentralizing-rollups}
 
 [ロールアップ](/layer-2)は、イーサリアムのスケーラビリティ問題を解決する技術として、すでに実用化されています。 [ロールアッププロジェクトの豊富なエコシステム](https://l2beat.com/scaling/tvl)は、さまざまなセキュリティ保証を備えており、ユーザーは迅速かつ安価にトランザクションを実行できます。 しかし、ロールアップは、集中型のシーケンサー(トランザクションをイーサリアムに送信する前にすべてのトランザクション処理と集約を行うコンピューター)に依存しています。 シーケンサーは、オペレーターが制裁を受けたり、賄賂を受け取ったり、その他の方法で妨害される可能性があるため、検閲に対して脆弱です。 同時に、[ロールアップでは受信データを検証する方法が異なります](https://l2beat.com)。 最善の方法としては、「証明者」が[不正証明](/glossary/#fraud-proof)または有効性証明を提出することですが、すべてのロールアップに備わっているわけではありません。 さらに、有効性証明および不正証明を使用するロールアップであっても、既知の証明者の小さなプールを使用するものがあります。 そのため、イーサリアムをスケーリングするための次の重要なステップは、シーケンサーと証明者を実行する責任をより多くの人々に分散することです。
 
-<ButtonLink variant="outline-color" to="/developers/docs/scaling/">ロールアップの詳細</ButtonLink>
+<ButtonLink variant="outline-color" href="/developers/docs/scaling/">ロールアップの詳細</ButtonLink>
 
 ## 現在の進行状況 {#current-progress}
 

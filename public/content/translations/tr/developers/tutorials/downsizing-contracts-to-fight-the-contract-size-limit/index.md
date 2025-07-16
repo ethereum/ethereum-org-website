@@ -7,7 +7,6 @@ tags:
   - "solidity"
   - "akıllı kontratlar"
   - "depolama"
-  - "truffle"
 skill: intermediate
 published: 2020-06-26
 source: soliditydeveloper.com
@@ -23,16 +22,6 @@ sourceUrl: https://soliditydeveloper.com/max-contract-size
 Bu sınır, hizmet reddi (DOS) saldırılarını önlemek için getirildi. Bir sözleşmeye yapılan herhangi bir çağrı, gaz açısından nispeten ucuzdur. Bununla birlikte, Ethereum düğümleri için bir sözleşme çağrısının etkisi, çağrılan sözleşme kodunun boyutuna bağlı olarak orantısız bir şekilde artar (kodu diskten okumak, kodu önceden işlemek, Merkle kanıtına veri eklemek). Saldırganın başkaları için çok iş yapmak için az kaynağa ihtiyaç duyduğu böyle bir durumunuz olduğunda, DOS saldırıları potansiyeli elde edersiniz.
 
 Bir doğal sözleşme boyutu limiti, blok gaz limiti olduğu için başlangıçta bu çok da büyük bir problem değildi. Açıkça görülüyor ki bir sözleşmenin, sözleşmenin tüm bit kodunu tutan bir işlem içinde dağıtılması gerekir. Bir bloğa yalnızca bir işlemi dahil ederseniz bu gazın tamamını kullanabilirsiniz, ancak bu sonsuz değildir. [Londra Yükseltmesi](/history/#london)'nden bu yana blok gaz limiti, ağ talebine bağlı olarak 15 milyon ile 30 milyon birim arasında değişti.
-
-## Mücadeleye girişmek {#taking-on-the-fight}
-
-Ne yazık ki, sözleşmelerinizin bayt kodu boyutunu almanın kolay bir yolu yok. Truffle kullanıyorsanız [truffle-contract-size](https://github.com/IoBuilders/truffle-contract-size) eklentisi size yardımcı olacak iyi bir araçtır.
-
-1. `npm install truffle-contract-size`
-2. Eklentiyi _truffle-config.js_ öğesine ekleyin: `plugins: ["truffle-contract-size"]`
-3. `truffle run contract-size` komutunu çalıştırın
-
-Bu, değişikliklerinizin toplam sözleşme boyutlarını nasıl etkilediğini anlamanıza yardımcı olacaktır.
 
 Aşağıda, potansiyel etkilerine göre sıralanan bazı yöntemlere bakacağız. Bunu, kilo verme gibi düşünün. Birinin hedef kilosuna (bizim durumumuzda 24 kb) ulaşması için en iyi strateji, önce büyük etkiye sahip yöntemlere odaklanmaktır. Çoğu zaman sadece diyeti düzeltmek amaca ulaştırır ancak bazen biraz daha fazlası gerekir. Sonra biraz egzersiz (orta etki) veya hatta takviye besinler (küçük etki) ekleyebilirsiniz.
 

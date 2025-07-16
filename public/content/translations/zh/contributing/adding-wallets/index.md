@@ -10,10 +10,9 @@ lang: zh
 
 任何人都可以提出向 ethereum.org 添加钱包的建议。 如果有遗漏，请提出建议！
 
-欢迎每个人提议新钱包。 目前所有钱包都在以下页面上架：
+目前所有钱包都在以下页面上架：
 
 - [ethereum.org/wallets/find-wallet/](/wallets/find-wallet/)
-- [ethereum.org/wallets/](/wallets/)
 
 以太坊中的钱包日新月异。 我们已尝试在 ethereum.org 上创建一个公平的考量框架，但纳入标准会随时间推移而变化和发展。
 
@@ -26,6 +25,12 @@ lang: zh
 - **由一个活跃的团队运作** - 这有助于确保质量，并确保用户的询问能够得到反馈。
 - **诚实准确的上架信息** - 任何所建议的来自项目的上架产品都应包含诚实准确的信息。 伪造上架信息的产品，例如声明你的产品是“开源”的但实际并非如此，产品将被移除。
 - **联系人** - 实施变更时，钱包的联系人将极大地帮助我们获取准确信息。 这样将在今后收集信息时确保 ethereum.org 的更新可管理。
+- **EIP-1559（类型 2）交易** - 你的钱包必须支持 EIP-1559（类型 2）交易才能在主网以太坊上进行交易。
+- **良好的用户体验** - 虽然用户体验是主观的，但如果多名核心团队成员测试产品后发现产品难以使用，我们保留拒绝钱包的权利，并将提供有用的改进建议。 这样做是为了保护我们主要由初学者组成的用户群。
+
+### 产品移除 {#product-removals}
+
+- **更新信息** - 钱包提供商有责任每 6 个月重新提交一次钱包信息，以确保所提供信息的有效性和相关性（即使其产品没有变化）。 如果产品团队未能这样做，ethereum.org 可能会从页面上移除该项目。
 
 ### 其他标准：最好具备 {#the-nice-to-haves}
 
@@ -45,7 +50,6 @@ lang: zh
 - **自定义燃料费用** - 你的钱包允许用户自定义自己的交易燃料费用（基础费、优先费、最高费用）。
 - **支持以太坊域名服务** - 你的钱包允许用户向以太坊域名服务名称发送交易。
 - **支持 ERC-20** - 你的钱包允许用户导入 ERC-20 代币合约，或自动查询和显示 ERC-20 代币。
-- **EIP-1559（2 类）交易** - 你的钱包支持 EIP-1559（2 类）交易。
 - **购买加密货币** - 你的钱包支持用户直接购买和上手加密货币。
 - **出售法币** - 你的钱包支持用户将法币直接出售并提现到银行卡或银行帐户。
 - **多重签名** - 你的钱包支持通过多重签名来签署交易。
@@ -57,7 +61,7 @@ lang: zh
 
 如果你想向 ethereum.org 添加钱包，请在 GitHub 上创建一个问题。
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml">
+<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml">
   创建一个提议
 </ButtonLink>
 
@@ -68,7 +72,8 @@ lang: zh
 - 确保所有钱包和上架的去中心化应用程序仍然符合我们的标准
 - 验证建议的产品没有比当前上架的产品符合我们的更多标准
 
-Ethereum.org 由开源社区维护，我们依靠该社区帮助保持更新。 如果你发现有任何关于上架钱包的信息需要更新，请[创建一个问题](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml)或[拉取请求](https://github.com/ethereum/ethereum-org-website/pulls)！
+ethereum.org 由开源社区维护，我们依靠社区来帮助持续更新它。 如果你发现有任何关于上架钱包的信息需要更新，请[创建一个问题](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml)或[拉取请求](https://github.com/ethereum/ethereum-org-website/pulls)！
+
 
 ## 使用条款 {#terms-of-use}
 

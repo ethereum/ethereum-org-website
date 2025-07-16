@@ -1,21 +1,23 @@
+"use client"
+
 import { type ReactNode, useState } from "react"
-import { useRouter } from "next/router"
-import { useTranslation } from "next-i18next"
-import { Flex, type FlexProps, Heading } from "@chakra-ui/react"
+import { useLocale } from "next-intl"
 
 import type { Lang } from "@/lib/types"
 
-import { Button } from "@/components/Buttons"
 import { FeedbackThumbsUpIcon } from "@/components/icons"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { isLangRightToLeft } from "@/lib/utils/translations"
 
+import { Button } from "./ui/buttons/Button"
 import Translation from "./Translation"
 
 import { useSurvey } from "@/hooks/useSurvey"
+import { useTranslation } from "@/hooks/useTranslation"
+import { usePathname } from "@/i18n/routing"
 
-type FeedbackCardProps = FlexProps & {
+type FeedbackCardProps = {
   prompt?: string
   isArticle?: boolean
 }
@@ -24,10 +26,11 @@ const FeedbackCard = ({ prompt, isArticle, ...props }: FeedbackCardProps) => {
   const { t } = useTranslation("common")
   const [feedbackSubmitted, setFeedbackSubmitted] = useState(false)
   const surveyUrl = useSurvey(feedbackSubmitted)
-  const { locale, asPath } = useRouter()
+  const locale = useLocale()
+  const pathname = usePathname()
   const dir = isLangRightToLeft(locale! as Lang) ? "rtl" : "ltr"
 
-  const isTutorial = asPath?.includes("tutorials")
+  const isTutorial = pathname?.includes("tutorials")
 
   const getTitle = (feedbackSubmitted: boolean): ReactNode => {
     if (!feedbackSubmitted) {
@@ -60,55 +63,39 @@ const FeedbackCard = ({ prompt, isArticle, ...props }: FeedbackCardProps) => {
   }
 
   return (
-    <Flex
-      border="1px"
-      borderColor="border"
-      bg="feedbackGradient"
-      borderRadius="base"
-      p="6"
-      direction="column"
-      mb="4"
-      mt="8"
-      w="full"
+    <div
+      className="mb-4 mt-8 flex w-full flex-col rounded border border-body-light bg-feedback-gradient p-6"
       {...props}
       dir={dir}
     >
-      <Flex direction="column" gap="4">
-        <Heading as="h3" m="0" mb="2" fontSize="1.375rem" fontWeight="bold">
-          {getTitle(feedbackSubmitted)}
-        </Heading>
+      <div className="flex flex-col gap-4">
+        <h4 className="mb-2">{getTitle(feedbackSubmitted)}</h4>
         {feedbackSubmitted && (
           <p>
             {t("feedback-widget-thank-you-subtitle")}{" "}
             <Translation id="feedback-widget-thank-you-subtitle-ext" />
           </p>
         )}
-        <Flex gap="4">
+        <div className="flex gap-4">
           {!feedbackSubmitted ? (
             <>
-              <Button
-                variant="outline-color"
-                leftIcon={<FeedbackThumbsUpIcon />}
-                onClick={() => handleSubmit(true)}
-              >
+              <Button variant="outline" onClick={() => handleSubmit(true)}>
+                <FeedbackThumbsUpIcon className="text-2xl" />
                 {t("yes")}
               </Button>
-              <Button
-                variant="outline-color"
-                leftIcon={<FeedbackThumbsUpIcon transform="scaleY(-1)" />}
-                onClick={() => handleSubmit(false)}
-              >
+              <Button variant="outline" onClick={() => handleSubmit(false)}>
+                <FeedbackThumbsUpIcon className="-scale-y-100 text-2xl" />
                 {t("no")}
               </Button>
             </>
           ) : (
-            <Button variant="outline-color" onClick={handleSurveyOpen}>
+            <Button variant="outline" onClick={handleSurveyOpen}>
               {t("feedback-widget-thank-you-cta")}
             </Button>
           )}
-        </Flex>
-      </Flex>
-    </Flex>
+        </div>
+      </div>
+    </div>
   )
 }
 

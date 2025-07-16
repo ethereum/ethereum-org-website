@@ -45,6 +45,12 @@ lang: ja
 - [ドキュメント](https://docs.web3j.io)
 - [GitHub](https://github.com/web3j/web3j)
 
+**ethers-kt -** **_EVMベースのブロックチェーン用の非同期、ハイパフォーマンスのKotlin/Java/Androidライブラリ_**
+
+- [GitHub](https://github.com/Kr1ptal/ethers-kt)
+- [実例：](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
+- [Discord](https://discord.gg/rx35NzQGSb)
+
 **Create Eth App -** **_単一のコマンドで、イーサリアムで稼動するアプリケーションを作成可能。 豊富な選択肢を提供するUIフレームワークとDeFiテンプレートが付属。_**
 
 - [GitHub](https://github.com/paulrberg/create-eth-app)
@@ -52,7 +58,7 @@ lang: ja
 
 **Scaffold-Eth -** **_Scaffold-Eth - Ethers.js + Hardhat + React components and hooks for web3: スマートコントラクトを利用した分散型アプリケーションの構築を始めるために必要なすべてを網羅。_**
 
-- [GitHub](https://github.com/austintgriffith/scaffold-eth)
+- [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 
 **Tenderly -** **_ブロックチェーンデベロッパーがスマートコントラクトを構築、テスト、デバッグ、監視、操作し、dApp UXを改善できるWeb3開発プラットフォーム。_**
 
@@ -87,17 +93,17 @@ lang: ja
 - [GitHub](https://github.com/chainstack)
 - [Discord](https://discord.gg/BSb5zfp9AT)
 
+**Crossmint -** **_エンタープライズグレードのweb3開発プラットで、すべての主要なEVMチェーン(および他のチェーン)でNFTアプリケーションをビルドすることができます。_**
+
+- [ウェブサイト](https://www.crossmint.com)
+- [ドキュメント](https://docs.crossmint.com)
+- [Discord](https://discord.com/invite/crossmint)
+
 **Brownie -** **_Pythonベースの開発環境とテストフレームワーク。_**
 
 - [ドキュメント](https://eth-brownie.readthedocs.io/en/latest/)
 - [GitHub](https://github.com/eth-brownie/brownie)
 - **Brownieのメンテナンス終了**
-
-**Truffle -** **_開発環境、テストフレームワーク、ビルドパイプライン、その他のツール。_**
-
-- [trufflesuite.com](https://www.trufflesuite.com/)
-- [GitHub](https://github.com/trufflesuite/truffle)
-- **Truffle開発の終了** - [詳細について](https://twitter.com/trufflesuite/status/1704946902393860589?t=NlIWeLTbBSAaJmS5uUAhSA&s=19)
 
 **OpenZeppelin SDK -** **_究極のスマートコントラクトツールキット。スマートコントラクトの開発、コンパイル、アップグレード、デプロイ、インタラクションを支援するツール群。_**
 
@@ -111,6 +117,20 @@ lang: ja
 - [ウェブサイト](https://catapulta.sh/)
 - [ドキュメント](https://catapulta.sh/docs)
 - [GitHub](https://github.com/catapulta-sh)
+
+**Covalent -** **_200以上のチェーンで使えるリッチなブロックチェーンAPI_**
+
+- [covalenthq.com](https://www.covalenthq.com/)
+- [ドキュメント](https://www.covalenthq.com/docs/api/)
+- [GitHub](https://github.com/covalenthq)
+- [Discord](https://www.covalenthq.com/discord/)
+
+**Wake -** **_コントラクトのテスト、ファジング、デプロイ、脆弱性スキャン、コードナビゲーションが可能なオールインワンPythonフレームワーク。_**
+
+- [ホームページ](https://getwake.io/)
+- [ドキュメント](https://ackeeblockchain.com/wake/docs/latest/)
+- [GitHub](https://github.com/Ackee-Blockchain/wake)
+- [VS Codeエクステンション](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity)
 
 ## 参考文献 {#further-reading}
 

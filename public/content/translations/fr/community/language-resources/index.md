@@ -16,9 +16,9 @@ Vous connaissez une ressource éducative dans votre langue ? [Ouvrez un ticket](
 
 ## Ressources d'Ethereum.org {#ethereum-org}
 
-Ethereum.org est traduit d'emblée dans plus de 40 langues, que vous pouvez trouver sur notre page des langues.
+Ethereum.org est traduit de manière native dans plus de 40 langues que vous pouvez trouver en utilisant notre menu de sélection de langues, situé en haut de chaque page.
 
-![Language selector menu](./language-selector-menu.png)
+![Menu de sélection de la langue](./language-selector-menu.png)
 
 Si vous êtes bilingue et que vous souhaitez nous aider à toucher davantage de personnes, vous pouvez aussi contribuer au [Programme de traduction d'Ethereum.org](/contributing/translation-program/#translation-program) afin de nous aider à traduire le site.
 
@@ -32,6 +32,7 @@ Si vous êtes bilingue et que vous souhaitez nous aider à toucher davantage de 
 - [Cointelegraph](http://cointelegraph.com.br/category/analysis) - version brésilienne de Cointelegraph, un des principaux médias sur les cryptomonnaies
 - [Livecoins](http://www.livecoins.com.br/ethereum) - actualités et outils de cryptomonnaies
 - [Seudinheiro](http://www.seudinheiro.com/criptomoedas/) - actualités et informations sur les cryptomonnaies
+- [Modular Crypto](https://modularcrypto.xyz/) - Actualité des cryptomonnaies et articles éducatifs
 
 **Formation**
 
@@ -90,6 +91,24 @@ Si vous êtes bilingue et que vous souhaitez nous aider à toucher davantage de 
 - [Microsoft Learn (Ethereum networks)](https://docs.microsoft.com/de-de/learn/modules/blockchain-ethereum-networks/) - se connecter et déployer des réseaux Ethereum
 - [Microsoft Learn (blockchains)](https://docs.microsoft.com/de-de/learn/paths/ethereum-blockchain-development/) - introduction au développement de la blockchain
 
+### Hébreu {#he}
+
+- [Udi Wertheimer - Ce que les utilisateurs Bitcoin peuvent apprendre d'Ethereum](https://www.cryptojungle.co.il/udi-wertheimer-what-bitcoiners-can-learn-from-ethereum/)
+- [Omer Greismen (OpenZeppelin) - Comment nous avons évité le piratage d'un contrat intelligent d'une valeur de 15 milliards de dollars](https://www.cryptojungle.co.il/omer-greisman-openzeppelin/)
+- [Timide Datika (INX) - Tokenisation et le futur de la sécurité, incluant la sécurité Ethereum](https://www.cryptojungle.co.il/shy-datika-tokenization/)
+- [Roy Confino (Limonade) - Assurance @ Ethereum](https://www.cryptojungle.co.il/roy-confino-insurance/)
+- [Idan Ofrat (Fireblocks) - Adoption Institutionnel](https://www.cryptojungle.co.il/idan-ofrat-fireblocks/)
+- [Gal Weizman (MetaMask) - Qu'est-ce que MetaMask](https://www.cryptojungle.co.il/gal-weizman-metamask/)
+- [Dror Aviely (Consensys) - Le centre d'Ethereum](https://www.cryptojungle.co.il/dror-aviely-ethereum-center/)
+- [Nir Rozin - Être un Cryptopunk](https://www.cryptojungle.co.il/nir-rozin-cryptopunk/)
+- [Adan Kedem - Jeux video & Metaverse](https://www.cryptojungle.co.il/adan-kedem-web3-gaming/)
+- [Uri Kolodny (Starkware) - Ethereum et les couches de la blockchain](https://www.cryptojungle.co.il/uri-kolodny-starkware/)
+- [Udi Wertheimer - Ethereum 2.0 face à la concurrence](https://www.cryptojungle.co.il/udi-on-eth2/)
+- [Ben Samocha (moi-même) - Ethereum 2.0 - une opportunité ?](https://www.cryptojungle.co.il/etherurm2-week-summary/)
+- [Alon Muroch (Bloxstaking) - Qu'est-ce qu'Ethereum 2.0 ?](https://www.cryptojungle.co.il/alon-moroch-eth2/)
+- [Eilon Aviv (Collider Ventures) - Les risques potentiels d'Ethereum 2.0](https://www.cryptojungle.co.il/eilon-aviv-eth2-0/)
+- [Eilon Aviv (Collider Ventures) - Pouquoi avons-nous besoin d'Ethereum 2.0](https://www.cryptojungle.co.il/eilon-aviv-ethereum-2-0/)
+
 ### Italien {#it}
 
 - [Ethereum Italia](https://www.ethereum-italia.it/) - formations, événements et actualités Ethereum, axés sur les contrats intelligents et la technologie blockchain
@@ -98,9 +117,19 @@ Si vous êtes bilingue et que vous souhaitez nous aider à toucher davantage de 
 - [Microsoft Learn (Smart contracts)](https://docs.microsoft.com/it-it/learn/modules/blockchain-solidity-ethereum-smart-contracts/) - écrire des contrats intelligents Ethereum avec Solidity
 - [Microsoft Learn (dApps)](https://docs.microsoft.com/it-it/learn/modules/blockchain-create-ui-decentralized-apps/) - créer une interface utilisateur avec des applications décentralisées
 
+### Japonais {#ja}
+
+- [Association japonaise d'échange d'actifs virtuels et de cryptomonnaies (JVCEA)](https://jvcea.or.jp/)
+- [Association des entreprises de cryptoactifs du Japon (JCBA)](https://cryptocurrency-association.org/)
+- [Get started with blockchain development - Learn | Microsoft Docs](https://docs.microsoft.com/ja-jp/learn/paths/ethereum-blockchain-development/) - Ce parcours vous initie à la blockchain et au développement sur la plateforme Ethereum
+- [Mastering Ethereum](https://www.oreilly.co.jp/books/9784873118963/) - Livre « Mastering Ethereum » en japonais
+- [Hands-On Smart Contract Development with Solidity and Ethereum](https://www.oreilly.co.jp/books/9784873119342/) - Livre « Hands-On Smart Contract Development with Solidity and Ethereum » en japonais
+
 ### Russe {#ru}
 
 - [Cyber Academy](https://cyberacademy.dev) - espace éducatif pour les constructeurs web3
+- [Forklog](https://forklog.com) - nouveautés et articles à but pédagogique sur la cryptomonnaie en général, les technologies existantes et les futurs mises à jour des différentes blockchains
+- [BeInCrypto](https://ru.beincrypto.com) - nouveautés, analyse des prix des cryptomonnaies et articles non-technique avec explications simples sur tout ce qui concerne la crypto
 
 ### Espagnol {#es}
 
@@ -122,11 +151,3 @@ Si vous êtes bilingue et que vous souhaitez nous aider à toucher davantage de 
 - [Tino Group](https://wiki.tino.org/ethereum-la-gi/) - aperçu d'Ethereum, des dApps, portefeuilles et FAQ
 - [Tap Chi Bitcoin](https://tapchibitcoin.io/tap-chi/tin-tuc-ethereum-eth) - plateforme Web comportant des rubriques consacrées à l'actualité et aux ressources éducatives sur Ethereum
 - [Coin68](https://coin68.com/ethereum-tieu-diem/) - portail sur les cryptomonnaies comportant des ressources éducatives et l'actualité relative à Ethereum
-
-### Japonais {#ja}
-
-- [Association japonaise d'échange d'actifs virtuels et de cryptomonnaies (JVCEA)](https://jvcea.or.jp/)
-- [Association des entreprises de cryptoactifs du Japon (JCBA)](https://cryptocurrency-association.org/)
-- [Get started with blockchain development - Learn | Microsoft Docs](https://docs.microsoft.com/ja-jp/learn/paths/ethereum-blockchain-development/) - Ce parcours vous initie à la blockchain et au développement sur la plateforme Ethereum
-- [Mastering Ethereum](https://www.oreilly.co.jp/books/9784873118963/) - Livre « Mastering Ethereum » en japonais
-- [Hands-On Smart Contract Development with Solidity and Ethereum](https://www.oreilly.co.jp/books/9784873119342/) - Livre « Hands-On Smart Contract Development with Solidity and Ethereum » en japonais

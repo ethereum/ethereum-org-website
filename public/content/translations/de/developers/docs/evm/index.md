@@ -4,9 +4,7 @@ description: Eine Einführung in die virtuelle Maschine von Ethereum und wie sie
 lang: de
 ---
 
-Die physische Überschreibung der EVM kann nicht auf dieselbe Weise beschrieben werden, wie eine Wolke oder Ozeanwelle. Sie _existiert_ vielmehr als eine zusammenhängende Einheit, die von tausenden verbundenen Computern, die einen Ethereum-Client laufen lassen, aufrechterhalten wird.
-
-Das Ethereum-Protokoll selbst dient ausschließlich dem Zweck, den kontinuierlichen, ununterbrochenen und unveränderlichen Betrieb dieser speziellen Zustandsmaschine aufrechtzuerhalten. Es ist die Umgebung, in der alle Ethereum-Konten und Smart Contracts leben. Bei jedem Block in der Kette hat Ethereum genau einen "kanonischen" Zustand und die EVM definiert die Regeln für die Berechnung eines neuen gültigen Zustands von Block zu Block.
+Die Ethereum Virtual Machine (EVM) ist eine dezentrale virtuelle Umgebung, die Code konsistent und sicher auf allen Ethereum-Knoten ausführt. Knoten führen die EVM aus, um Smart Contracts auszuführen, wobei sie "[Gas](/gas/)" verwenden, um den für [Operationen](/developers/docs/evm/opcodes/) erforderlichen Rechenaufwand zu messen, wodurch eine effiziente Ressourcenzuweisung und Netzwerksicherheit gewährleistet werden.
 
 ## Voraussetzungen {#prerequisites}
 
@@ -63,7 +61,7 @@ Während der siebenjährigen Geschichte von Ethereum hat die EVM mehrere Revisio
 - [Py-EVM](https://github.com/ethereum/py-evm) - _Python_
 - [evmone](https://github.com/ethereum/evmone) - _C++_
 - [ethereumjs-vm](https://github.com/ethereumjs/ethereumjs-vm) - _JavaScript_
-- [revm](https://github.com/bluealloy/revm) - _Rust_
+- [revm](https://github.com/bluealloy/revm) – _Rust_
 
 ## Weiterführende Informationen {#further-reading}
 
@@ -73,6 +71,7 @@ Während der siebenjährigen Geschichte von Ethereum hat die EVM mehrere Revisio
 - [Opcodes der virtuellen Maschine von Ethereum](https://www.ethervm.io/)
 - [Betriebscodes für die Referenzdokumente für die virtuelle Ethereum-Maschine](https://www.evm.codes/)
 - [Eine kurze Einführung in die Dokumentation von Solidity](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#index-6)
+- [Ethereum meistern – Die Ethereum Virtual Machine](https://github.com/ethereumbook/ethereumbook/blob/develop/13evm.asciidoc)
 
 ## Verwandte Themen {#related-topics}
 

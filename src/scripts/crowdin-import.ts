@@ -26,7 +26,7 @@ const argv = require("minimist")(process.argv.slice(2))
  ******************************/
 
 /**
- * 1. Run `yarn crowdin-clean` to initialize fresh ./.crowdin folder. This can also be used to erase contents when finished.
+ * 1. Run `pnpm crowdin-clean` to initialize fresh ./.crowdin folder. This can also be used to erase contents when finished.
  *
  * 2a. Export/import CSV of languages ready for review:
  *   1. Open "Website translation board" document in ethereum.org Notion (internal only)
@@ -45,7 +45,7 @@ const argv = require("minimist")(process.argv.slice(2))
  *      ie. `es: [1, 10],` would import the "Homepage" and "Learn" buckets for Spanish
  *   2. Save file without committing*
  *
- * Optionally: To view summary of buckets from CSV, run `yarn crowdin-import --buckets` or `yarn crowdin-import -b`
+ * Optionally: To view summary of buckets from CSV, run `pnpm crowdin-import --buckets` or `pnpm crowdin-import -b`
  *   Any items in USER_OVERRIDE will override the CSV import
  *
  * 3. Export translated content from Crowdin and import into ./.crowdin folder:
@@ -54,7 +54,7 @@ const argv = require("minimist")(process.argv.slice(2))
  *      ie. ./.crowdin/{lang-codes}
  *
  * 4. Execute script:
- *   1. Execute script by running `yarn crowdin-import`
+ *   1. Execute script by running `pnpm crowdin-import`
  *   2. If successful, copy `BUILD_LOCALES={langs}` output and paste in
  *      your `.env`, then build site to test results.
  *
@@ -65,7 +65,6 @@ type BucketsList = { [key: string]: Array<number> }
 const USER_OVERRIDE: BucketsList = {
   // FORMAT: lang_code: [bucket_number, bucket_number, ...],
   // EXAMPLE: es: [1, 10, 12, 14],
-  hu: [3, 6, 7, 10, 11, 12, 13, 16, 21],
 }
 
 /******************************
@@ -351,9 +350,8 @@ importSelection.forEach(
     // Initialize working directory and check for existence
     const _path: string = join(crowdinRoot, crowdinLangCode)
     if (!existsSync(_path)) {
-      trackers.langs[
-        repoLangCode
-      ].error = `Path doesn't exist for lang ${crowdinLangCode}`
+      trackers.langs[repoLangCode].error =
+        `Path doesn't exist for lang ${crowdinLangCode}`
       return
     }
     const langLs: Array<string> = readdirSync(_path)
@@ -409,7 +407,7 @@ const langsSummary: string = summary.reduce(
 log("Empty buckets:", trackers.emptyBuckets)
 if (summary.length) {
   console.table(summary)
-  console.log("Langs to test:", `\nBUILD_LOCALES=en${langsSummary}`)
+  console.log("Langs to test:", `\nNEXT_PUBLIC_BUILD_LOCALES=en${langsSummary}`)
   console.log("🎉 Crowdin import complete.")
 } else {
   console.warn("Nothing imported, see instruction at top of crowdin-imports.ts")

@@ -4,7 +4,7 @@ description: Uno sguardo dettagliato all'algoritmo di Dagger-Hashimoto.
 lang: it
 ---
 
-Dagger-Hashimoto era l'implementazione e specifica di ricerca originale per l'algoritmo di mining di Ethereum. Dagger-Hashimoto è stato sostituito da [Ethash](#ethash). Il Mining è stata disattivato completamente con[ il Merge](/roadmap/merge/) il 15 settembre 2022. Da allora, Ethereum è stato assicurato utilizzando un meccanismo [proof-of-of-stake](/developers/docs/consensus-mechanisms/pos). Questa pagina è di interesse storico - le informazioni qui non sono più rilevanti per post-Merge Ethereum.
+Dagger-Hashimoto era l'implementazione e specifica di ricerca originale per l'algoritmo di mining di Ethereum. Dagger-Hashimoto è stato sostituito da [Ethash](#ethash). Il mining è stato disattivato completamente con [La Fusione](/roadmap/merge/), il 15 settembre 2022. Da allora, Ethereum è stato assicurato utilizzando un meccanismo [proof-of-of-stake](/developers/docs/consensus-mechanisms/pos). Questa pagina è di interesse storico - le informazioni qui non sono più rilevanti per post-Merge Ethereum.
 
 ## Prerequisiti {#prerequisites}
 
@@ -281,7 +281,7 @@ Quindi, `x`, deve essere un'identità moltiplicativa di `ℤ/nℤ`, che è univo
 
 L'ordine di `x` non può essere `2` a meno che `x = P-1`, poiché ciò violerebbe il fatto che `P` sia un numero primo.
 
-Dalla suddetta proposizione possiamo capire che iterando `(picker * init) % P`, avrà una lunghezza del ciclo di almeno `(P-1)/2`. Questo perché abbiamo selezionato `P` come un numero primo sicuro, approssimativamente pari a una potenza superiore di due e che `init` è nell'intervallo `[2,2**256+1]`. Data la magnitudine di `P`, non dovremmo mai aspettarci un ciclo dall'esponenziazione modulare.
+Dalla suddetta proposizione possiamo capire che iterando `(picker * init) % P`, avrà una lunghezza del ciclo di almeno `(P-1)/2`. Questo perché abbiamo selezionato `P` come un numero primo sicuro, approssimativamente pari a una potenza superiore di due e che `init` è nell'intervallo `[2,2**256+1]`. Data la portata di `P`, non dovremmo mai aspettarci un ciclo dall'elevamento a potenza modulare.
 
 Quando assegniamo la prima cella nel DAG (la variabile etichettata come `init`), calcoliamo `pow(sha3(seed) + 2, 3, P)`. A prima vista, questo non garantisce che il risultato sia `1` né `P-1`. Tuttavia, poiché `P-1` è un numero primo sicuro, abbiamo la seguente garanzia aggiuntiva, che è un corollario dell'Osservazione 1:
 

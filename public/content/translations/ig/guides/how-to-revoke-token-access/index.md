@@ -20,7 +20,6 @@ Naanị ihe nchebe bụ ịghara iji ọrụ ọhụrụ a nwalebeghị, kwadoo 
 
 - [Ethallowance](https://ethallowance.com/) (Ethereum)
 - [Etherscan](https://etherscan.io/tokenapprovalchecker) (Ethereum)
-- [Cointool](https://cointool.app/approve/eth) (ọtụtụ netwọk)
 - [Kagbuo](https://revoke.cash/) (ọtụtụ netwọk)
 - [Unrekt](https://app.unrekt.net/) (ọtụtụ netwọk)
 - [Kagbuo mgbe ọbụla](https://everrise.com/everrevoke/) (ọtụtụ netwọk)
@@ -49,7 +48,7 @@ Anyị na-adụ ọdụ ka i megharịa akụrụngwa i ji eme nkagbu mgbe nkeji
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Chọrọ ịmụtakwu?</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     Hụ ntuziaka anyị ndị ọzọ
   </ButtonLink>
 </InfoBanner>

@@ -87,7 +87,7 @@ Per qualsiasi software personalizzato o contratto intelligente coinvolto:
 
 Per i prodotti del software correlati alla configurazione, alla gestione o alla migrazione del nodo o del client:
 
-**Quali client del livello del consenso (ovvero Lighthouse, Teku, Nimbus, Prysm) sono supportati?**
+**Quali client del livello del consenso (ovvero Lighthouse, Teku, Nimbus, Prysm, Grandine) sono supportati?**
 
 - Quali client sono supportati? L'utente può scegliere?
 - Questo serve a determinare il punteggio "multi-client" dei prodotti.
@@ -171,6 +171,6 @@ La logica del codice e le ponderazioni per questi criteri sono attualmente conte
 
 Se desideri aggiungere un prodotto o servizio di staking su ethereum.org, crea un ticket su GitHub.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_staking_product.yaml">
+<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_staking_product.yaml">
   Crea un ticket
 </ButtonLink>
