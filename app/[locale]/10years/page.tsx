@@ -300,6 +300,44 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           </div>
 
           <TorchHistorySwiper />
+
+          <div className="flex gap-12 px-16 pb-24 pt-12 text-body-inverse dark:text-body">
+            <div className="flex flex-1 flex-col gap-8">
+              <p>
+                To commemorate this historic milestone, we&apos;re introducing
+                the <strong>Ethereum Torch NFT</strong> a NFT that embodies the
+                spirit of decentralization and community that has defined
+                Ethereum&apos;s first decade.
+              </p>
+
+              <p>
+                Like a ceremonial flame that travels from community to
+                community, the Ethereum Torch will journey across the global
+                Ethereum ecosystem. This special NFT will be passed from wallet
+                to wallet among carefully selected community members,
+                developers, and builders who have shaped Ethereum&apos;s story
+                over the past 10 years.
+              </p>
+            </div>
+            <div className="flex flex-1 flex-col gap-8">
+              <div>
+                <h3 className="text-lg font-bold">One-of-a-kind:</h3>
+                <p>
+                  Only one Ethereum Torch NFT exists, making each holder a
+                  temporary guardian of Ethereum&apos;s legacy
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-lg font-bold">Time-limited custody:</h3>
+                <p>
+                  Each holder keeps the torch for 24hours before passing it to
+                  the next guardian. On July 30 this NFT wil be burned to
+                  celebrate the anniversary.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="flex w-full flex-col items-center gap-8 px-8 py-8 lg:flex-row">
