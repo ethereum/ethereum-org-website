@@ -149,7 +149,7 @@ export const walletsData: WalletData[] = [
     supported_chains: ["Ethereum Mainnet"],
   },
   {
-    last_updated: "2025-07-08",
+    last_updated: "2025-07-15",
     name: "Ready Wallet",
     image: ReadyImage,
     twBackgroundColor: "bg-[#FFFFFF]",
@@ -169,8 +169,8 @@ export const walletsData: WalletData[] = [
     firefox: true,
     chromium: true,
     hardware: false,
-    open_source: true,
-    repo_url: "https://github.com/argentlabs/argent-x",
+    open_source: false,
+    repo_url: "",
     non_custodial: true,
     security_audit: [
       "https://github.com/argentlabs/argent-contracts/tree/develop/audit",
