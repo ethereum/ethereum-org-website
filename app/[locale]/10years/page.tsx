@@ -278,7 +278,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           holderLookup={torchHolderLookup}
         /> */}
 
-        <div className="my-32 flex w-full flex-col rounded-3xl bg-[#18193A]">
+        <div className="my-32 flex w-full flex-col rounded-3xl bg-gradient-to-b from-[#171B37] via-[#171B37] via-60% to-[#9C63F8]">
           <div className="relative p-8">
             <div className="mt-24 flex items-center justify-center">
               {/* <video
