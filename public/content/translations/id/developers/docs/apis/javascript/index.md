@@ -24,8 +24,6 @@ Pustaka ini menyederhanakan banyak kerumitan dalam interaksi langsung dengan nod
 
 Menggunakan penyedia, pustaka ini memungkinkan Anda terhubung ke Ethereum dan membaca datanya, baik itu melalui JSON-RPC, INFURA, Etherscan, Alchemy, atau MetaMask.
 
-> **Peringatan:** Web3.js akan diarsipkan pada 4 Maret 2025. [Baca pengumuman](https://blog.chainsafe.io/web3-js-sunset/). Pertimbangkan untuk menggunakan pustaka alternatif seperti Ethers.js atau viem untuk proyek baru.
-
 **Contoh Ether**
 
 ```js

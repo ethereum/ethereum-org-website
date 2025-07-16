@@ -26,8 +26,6 @@ lang: zh
 
 使用提供程序，这些库允许你连接到以太坊并读取它的数据，不管是通过 JSON-RPC、INFURA、Etherscan、Alchemy 还是 Metamask。
 
-> **警告：** Web3.js 将于 2025 年 3 月 4 日被归档。[阅读公告](https://blog.chainsafe.io/web3-js-sunset/)。建议在新项目中使用其他替代库，如 Ethers.js 或 viem。
-
 **Ethers 示例**
 
 ```js
@@ -240,8 +238,6 @@ ethers.utils.formatEther(balance)
 ## 可用的库 {#available-libraries}
 
 **Web3.js -** **_以太坊 JavaScript API。_**
-
-> **警告：** Web3.js 将于 2025 年 3 月 4 日被归档。[阅读公告](https://blog.chainsafe.io/web3-js-sunset/)。建议在新项目中使用其他替代库，如 Ethers.js 或 viem。
 
 - [相关文档](https://docs.web3js.org/)
 - [GitHub](https://github.com/ethereum/web3.js/)

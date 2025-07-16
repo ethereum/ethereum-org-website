@@ -26,8 +26,6 @@ lang: zh-tw
 
 使用提供者，這些程式庫讓你能夠連結到以太坊並讀取其資料，無論是透過 JSON-RPC、INFURA、Etherscan、Alchemy 還是 MetaMask。
 
-> **警告：** Web3.js 將於 2025 年 3 月 4 日被歸檔。[閱讀公告](https://blog.chainsafe.io/web3-js-sunset/)。建議在新項目中使用其他替代庫，如 Ethers.js 或 viem。
-
 **Ethers 範例**
 
 ```js

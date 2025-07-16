@@ -26,8 +26,6 @@ Queste librerie eliminano buona parte della complessità legata al dover interag
 
 Utilizzando i provider, queste librerie consentono di connettersi a Ethereum e leggerne i dati, tramite JSON-RPC, INFURA, Etherscan, Alchemy o MetaMask.
 
-> **Peringatan:** Web3.js akan diarsipkan pada 4 Maret 2025. [Baca pengumuman](https://blog.chainsafe.io/web3-js-sunset/). Pertimbangkan untuk menggunakan pustaka alternatif seperti Ethers.js atau viem untuk proyek baru.
-
 **Esempio da Ethers**
 
 ```js
