@@ -81,6 +81,15 @@ You can access the [Enscribe App](https://app.enscribe.xyz) to start naming and 
 - **Monitor expiries closely** if you want to prevent accidental changes in ownership
 - **Verify contract source** so users can trust that the named contract behaves as expected
 
+## Risks
+
+Naming smart contracts provides significant benefits for users of Ethereum, however owners of ENS domains must be vigilant with respect to their management. Notable risks include: 
+
+- **Expiry**: Just like DNS names, ENS names registrations are of finite duration. Hence it is vital that owners monitor their domains expiry dates and renew them well in advance of their expiry. Both the ENS App and Enscribe provide visual indicators for domain owners when expiry is coming up.
+- **Change in ownership**: ENS records are represented as NFTs on Ethereum, where the owner of a specific `.eth` domain has the associated NFT in their posession. Hence should a different account take ownership of this NFT, the new owner can modify any ENS records as they see fit. 
+
+  To mitigate against such risks, the owner account for the `.eth` 2nd level domains (2LD) should be secured via a multi-sig wallet with subdomains being created to manage contract naming. That way in the event of any accidental or malicious changes in ownership at the subdomain level, they can be overriden by the 2LD owner.
+
 ## Future of Contract Naming {#future}
 
 Contract naming is becoming a best practice for dapp development, similar to how domain names replaced IP addresses on the web. As more infrastructure such as wallets, explorers and dashboards integrate ENS resolution for contracts, named contracts will improve safety and reduce errors across the ecosystem.
