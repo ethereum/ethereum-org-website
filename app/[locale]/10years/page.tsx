@@ -23,12 +23,16 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { BASE_TIME_UNIT } from "@/lib/constants"
 
+import Curved10YearsText from "./_components/10y.svg"
 import AdoptionSwiper from "./_components/AdoptionSwiper/lazy"
 import CountDown from "./_components/CountDown/lazy"
+import CurrentTorchHolderCard from "./_components/CurrentTorchHolderCard"
 import { adoptionStyles } from "./_components/data"
 import InnovationSwiper from "./_components/InnovationSwiper/lazy"
 import TenYearGlobe from "./_components/TenYearGlobe/lazy"
 import TenYearHero from "./_components/TenYearHero"
+// import TorchHistory from "./_components/TorchHistory"
+import TorchHistorySwiper from "./_components/TorchHistorySwiper"
 import Stories from "./_components/UserStories/lazy"
 import {
   getAdoptionCards,
@@ -39,7 +43,9 @@ import {
 
 import { fetch10YearEvents } from "@/lib/api/fetch10YearEvents"
 import { fetch10YearStories } from "@/lib/api/fetch10YearStories"
+import { fetchTorchHolders } from "@/lib/api/fetchTorchHolders"
 import TenYearLogo from "@/public/images/10-year-anniversary/10-year-logo.png"
+import TorchImage from "@/public/images/10-year-anniversary/torch.png"
 
 // In seconds
 const REVALIDATE_TIME = BASE_TIME_UNIT * 1
@@ -48,6 +54,7 @@ const loadData = dataLoader(
   [
     ["fetched10YearEvents", fetch10YearEvents],
     ["fetched10YearStories", fetch10YearStories],
+    ["fetchedTorchHolders", fetchTorchHolders],
   ],
   REVALIDATE_TIME * 1000
 )
@@ -59,7 +66,8 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 
   setRequestLocale(locale)
 
-  const [fetched10YearEvents, fetched10YearStories] = await loadData()
+  const [fetched10YearEvents, fetched10YearStories, torchHolders] =
+    await loadData()
 
   const stories = parseStoryDates(fetched10YearStories, locale)
 
@@ -77,27 +85,43 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const innovationCards = await getInnovationCards()
   const adoptionCards = await getAdoptionCards()
 
+  const torchHolderLookup: Record<string, (typeof torchHolders)[0]> =
+    torchHolders.reduce(
+      (acc, holder) => {
+        acc[holder.address.toLowerCase()] = holder
+        return acc
+      },
+      {} as Record<string, (typeof torchHolders)[0]>
+    )
+
   return (
     <MainArticle className="mx-auto flex w-full flex-col items-center">
       <TenYearHero locale={locale} />
 
-      <div className="mt-16 flex w-full flex-col gap-16 px-8 py-4 md:flex-row md:py-8">
+      <div className="w-full px-8 py-12">
+        <CountDown
+          timeLeftLabels={timeLeftLabels}
+          expiredLabel={t("page-10-year-countdown-expired")}
+        />
+      </div>
+
+      <div className="mt-16 flex w-full max-w-screen-xl flex-col gap-32 px-8 py-4 md:flex-row md:py-8">
         <div className="flex flex-1 flex-col gap-5">
           <div>
             <h1 className="text-2xl font-bold">
               {t("page-10-year-hero-title")}
             </h1>
           </div>
+
           <div className="flex flex-1 flex-col gap-4">
             <p className="text-lg">{t("page-10-year-hero-description")}</p>
             <p className="text-lg">{t("page-10-year-hero-tagline")}</p>
           </div>
         </div>
-        <div className="flex flex-1 flex-row items-center justify-center">
-          {/* CLIENT SIDE, lazy loaded */}
-          <CountDown
-            timeLeftLabels={timeLeftLabels}
-            expiredLabel={t("page-10-year-countdown-expired")}
+        <div className="flex flex-row items-center justify-center">
+          <CurrentTorchHolderCard
+            className="w-[420px]"
+            holderLookup={torchHolderLookup}
           />
         </div>
       </div>
@@ -233,6 +257,77 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           <ButtonLink href="https://10yearsofethereum.paperform.co" hideArrow>
             {t("page-10-year-host-event-cta")}
           </ButtonLink>
+        </div>
+      </div>
+
+      {/* <TorchHistory
+          title={t("page-10-year-torch-history-title")}
+          noHistoryLabel={t("page-10-year-torch-no-history")}
+          fromLabel={t("page-10-year-torch-from")}
+          toLabel={t("page-10-year-torch-to")}
+          transactionLabel={t("page-10-year-torch-view-tx")}
+          holderLookup={torchHolderLookup}
+        /> */}
+
+      <div className="my-32 flex w-full flex-col rounded-3xl bg-gradient-to-b from-[#171B37] via-[#171B37] via-60% to-[#9C63F8]">
+        <div className="relative p-8">
+          <div className="mt-24 flex items-center justify-center">
+            {/* <video
+              src="/videos/torch.mp4"
+              autoPlay
+              loop
+              muted
+            /> */}
+
+            <Image src={TorchImage} alt="Torch" width={380} height={380} />
+          </div>
+          {/* Curved text */}
+          <Curved10YearsText
+            viewBox="0 0 356 186"
+            width={600}
+            height={400}
+            className="absolute left-1/2 top-0 -translate-x-1/2"
+          />
+        </div>
+
+        <TorchHistorySwiper />
+
+        <div className="flex gap-12 px-16 pb-24 pt-12 text-body-inverse dark:text-body">
+          <div className="flex flex-1 flex-col gap-8">
+            <p>
+              To commemorate this historic milestone, we&apos;re introducing the{" "}
+              <strong>Ethereum Torch NFT</strong> a NFT that embodies the spirit
+              of decentralization and community that has defined Ethereum&apos;s
+              first decade.
+            </p>
+
+            <p>
+              Like a ceremonial flame that travels from community to community,
+              the Ethereum Torch will journey across the global Ethereum
+              ecosystem. This special NFT will be passed from wallet to wallet
+              among carefully selected community members, developers, and
+              builders who have shaped Ethereum&apos;s story over the past 10
+              years.
+            </p>
+          </div>
+          <div className="flex flex-1 flex-col gap-8">
+            <div>
+              <h3 className="text-lg font-bold">One-of-a-kind:</h3>
+              <p>
+                Only one Ethereum Torch NFT exists, making each holder a
+                temporary guardian of Ethereum&apos;s legacy
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-bold">Time-limited custody:</h3>
+              <p>
+                Each holder keeps the torch for 24hours before passing it to the
+                next guardian. On July 30 this NFT wil be burned to celebrate
+                the anniversary.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
 

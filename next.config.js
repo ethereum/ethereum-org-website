@@ -93,6 +93,10 @@ module.exports = (phase, { defaultConfig }) => {
           protocol: "https",
           hostname: "coin-images.coingecko.com",
         },
+        {
+          protocol: "https",
+          hostname: "placehold.co",
+        },
       ],
     },
     async headers() {
