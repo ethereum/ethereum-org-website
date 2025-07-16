@@ -278,8 +278,8 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           holderLookup={torchHolderLookup}
         /> */}
 
-        <div className="flex w-full flex-col gap-4 rounded-3xl bg-[#18193A] px-8 py-8">
-          <div className="relative">
+        <div className="my-32 flex w-full flex-col rounded-3xl bg-[#18193A]">
+          <div className="relative p-8">
             <div className="mt-24 flex items-center justify-center">
               {/* <video
               src="/videos/torch.mp4"
@@ -295,14 +295,14 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               viewBox="0 0 356 186"
               width={600}
               height={400}
-              className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-8"
+              className="absolute left-1/2 top-0 -translate-x-1/2"
             />
           </div>
 
           <TorchHistorySwiper />
         </div>
 
-        <div className="flex w-full flex-col items-center gap-8 px-8 py-8 pt-32 lg:flex-row">
+        <div className="flex w-full flex-col items-center gap-8 px-8 py-8 lg:flex-row">
           <div className="flex flex-1 flex-col gap-6">
             <h2 className="flex flex-col gap-2 font-black">
               <span className="text-4xl text-accent-a">
