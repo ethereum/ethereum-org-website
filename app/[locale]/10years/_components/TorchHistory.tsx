@@ -5,12 +5,12 @@ import { getPublicClient } from "@wagmi/core"
 import { Image } from "@/components/Image"
 
 import { config } from "./CurrentTorchHolderCard"
-import Torch from "./Torch.json"
 
+// import Torch from "./Torch.json"
 import type { TorchHolder } from "@/lib/api/fetchTorchHolders"
 
 // TODO: Replace with actual deployed contract address
-const TORCH_CONTRACT_ADDRESS = Torch.address as Address
+// const TORCH_CONTRACT_ADDRESS = Torch.address as Address
 
 interface TransferEvent {
   from: Address
@@ -35,12 +35,12 @@ const mockLogs = [
     args: {
       from: "0x0000000000000000000000000000000000000000",
       to: "0x0e972f52C49e353Dc88C9f7F8e200c1cFE0d27b7",
-      tokenId: 1n,
+      tokenId: BigInt(1),
     },
     address: "0xbcb60ff26412d7a27dde9b61f0655a207eae80ed",
     blockHash:
       "0x204c90926c265abbe78d321cbfa2e97a2185aa3804a46cab3960fe15652a90de",
-    blockNumber: 8605647n,
+    blockNumber: BigInt(8605647),
     data: "0x",
     logIndex: 121,
     removed: false,
@@ -59,12 +59,12 @@ const mockLogs = [
     args: {
       from: "0x0e972f52C49e353Dc88C9f7F8e200c1cFE0d27b7",
       to: "0x7bc34Ec96a2da5FbC3c0cA0530d989821241516D",
-      tokenId: 1n,
+      tokenId: BigInt(1),
     },
     address: "0xbcb60ff26412d7a27dde9b61f0655a207eae80ed",
     blockHash:
       "0xfc9c50c6a7180a425e92d1774a88ee58dacb92a2a4554a013ec72ef14acfbe98",
-    blockNumber: 8610141n,
+    blockNumber: BigInt(8610141),
     data: "0x",
     logIndex: 30,
     removed: false,
@@ -80,6 +80,7 @@ const mockLogs = [
   },
 ]
 
+// TODO: DELETE THIS COMPONENT AFTER FINAL IMPLEMENTATION
 const TorchHistory = async ({
   title,
   noHistoryLabel,
