@@ -32,10 +32,13 @@ import { adoptionCards, adoptionStyles } from "./_components/data"
 import InnovationSwiper from "./_components/InnovationSwiper"
 import Stories from "./_components/Stories"
 import TenYearHero from "./_components/TenYearHero"
+import TorchHistory from "./_components/TorchHistory"
+import TorchNFT from "./_components/TorchNFT"
 import { getTimeUnitTranslations, parseStoryDates } from "./_components/utils"
 
 import { fetch10YearEvents } from "@/lib/api/fetch10YearEvents"
 import { fetch10YearStories } from "@/lib/api/fetch10YearStories"
+import { fetchTorchHolders } from "@/lib/api/fetchTorchHolders"
 import TenYearLogo from "@/public/images/10-year-anniversary/10-year-logo.png"
 
 const TenYearGlobe = dynamic(() => import("./_components/TenYearGlobe"), {
@@ -49,9 +52,12 @@ const loadData = dataLoader(
   [
     ["fetched10YearEvents", fetch10YearEvents],
     ["fetched10YearStories", fetch10YearStories],
+    ["fetchedTorchHolders", fetchTorchHolders],
   ],
   REVALIDATE_TIME * 1000
 )
+
+export const revalidate = 60 * 60 // 1 hour
 
 const zIndexClasses = ["z-50", "z-40", "z-30", "z-20", "z-10", "z-0"]
 
@@ -60,7 +66,8 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 
   setRequestLocale(locale)
 
-  const [fetched10YearEvents, fetched10YearStories] = await loadData()
+  const [fetched10YearEvents, fetched10YearStories, torchHolders] =
+    await loadData()
 
   const stories = parseStoryDates(fetched10YearStories, locale)
 
@@ -75,6 +82,15 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   })
 
   const timeLeftLabels = await getTimeUnitTranslations(locale)
+
+  const torchHolderLookup: Record<string, (typeof torchHolders)[0]> =
+    torchHolders.reduce(
+      (acc, holder) => {
+        acc[holder.address.toLowerCase()] = holder
+        return acc
+      },
+      {} as Record<string, (typeof torchHolders)[0]>
+    )
 
   return (
     <I18nProvider locale={locale} messages={messages}>
@@ -100,6 +116,23 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             />
           </div>
         </div>
+
+        <TorchNFT
+          title={t("page-10-year-torch-title")}
+          description={t("page-10-year-torch-description")}
+          currentHolderLabel={t("page-10-year-torch-current-holder")}
+          noHolderLabel={t("page-10-year-torch-no-holder")}
+          holderLookup={torchHolderLookup}
+        />
+
+        <TorchHistory
+          title={t("page-10-year-torch-history-title")}
+          noHistoryLabel={t("page-10-year-torch-no-history")}
+          fromLabel={t("page-10-year-torch-from")}
+          toLabel={t("page-10-year-torch-to")}
+          transactionLabel={t("page-10-year-torch-view-tx")}
+          holderLookup={torchHolderLookup}
+        />
 
         <div className="w-full px-4 py-8 md:px-8">
           <div className="flex min-h-[500px] flex-col items-center gap-4 rounded-4xl bg-radial-a px-8 pt-8 lg:px-14 lg:pt-14">
