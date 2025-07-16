@@ -1,6 +1,6 @@
 import { Suspense } from "react"
 import { pick } from "lodash"
-import dynamic from "next/dynamic"
+// import dynamic from "next/dynamic"
 import {
   getMessages,
   getTranslations,
@@ -33,7 +33,8 @@ import { adoptionCards, adoptionStyles } from "./_components/data"
 import InnovationSwiper from "./_components/InnovationSwiper"
 import Stories from "./_components/Stories"
 import TenYearHero from "./_components/TenYearHero"
-import TorchHistory from "./_components/TorchHistory"
+// import TorchHistory from "./_components/TorchHistory"
+import TorchHistorySwiper from "./_components/TorchHistorySwiper"
 import { getTimeUnitTranslations, parseStoryDates } from "./_components/utils"
 
 import { fetch10YearEvents } from "@/lib/api/fetch10YearEvents"
@@ -41,9 +42,9 @@ import { fetch10YearStories } from "@/lib/api/fetch10YearStories"
 import { fetchTorchHolders } from "@/lib/api/fetchTorchHolders"
 import TenYearLogo from "@/public/images/10-year-anniversary/10-year-logo.png"
 
-const TenYearGlobe = dynamic(() => import("./_components/TenYearGlobe"), {
-  ssr: false,
-})
+// const TenYearGlobe = dynamic(() => import("./_components/TenYearGlobe"), {
+//   ssr: false,
+// })
 
 // In seconds
 const REVALIDATE_TIME = BASE_TIME_UNIT * 1
@@ -141,7 +142,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                   <Skeleton className="mx-auto aspect-square h-full rounded-full bg-primary/20 blur-2xl" />
                 }
               >
-                <TenYearGlobe
+                {/* <TenYearGlobe
                   events={Object.values(fetched10YearEvents).flatMap((region) =>
                     region.events.map((event) => ({
                       ...event,
@@ -149,7 +150,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                       lng: Number(event.lng),
                     }))
                   )}
-                />
+                /> */}
               </Suspense>
             </div>
           </div>
@@ -266,14 +267,16 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           </div>
         </div>
 
-        <TorchHistory
+        {/* <TorchHistory
           title={t("page-10-year-torch-history-title")}
           noHistoryLabel={t("page-10-year-torch-no-history")}
           fromLabel={t("page-10-year-torch-from")}
           toLabel={t("page-10-year-torch-to")}
           transactionLabel={t("page-10-year-torch-view-tx")}
           holderLookup={torchHolderLookup}
-        />
+        /> */}
+
+        <TorchHistorySwiper />
 
         <div className="flex w-full flex-col items-center gap-8 px-8 py-8 pt-32 lg:flex-row">
           <div className="flex flex-1 flex-col gap-6">

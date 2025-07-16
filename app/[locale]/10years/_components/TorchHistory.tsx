@@ -4,8 +4,8 @@ import { getPublicClient } from "@wagmi/core"
 
 import { Image } from "@/components/Image"
 
-import Torch from "./Torch.json"
 import { config } from "./CurrentTorchHolderCard"
+import Torch from "./Torch.json"
 
 import type { TorchHolder } from "@/lib/api/fetchTorchHolders"
 
