@@ -17,9 +17,10 @@ const FaqTrigger = React.forwardRef<
   <AccordionTrigger
     ref={ref}
     className={cn(
-      "w-full px-4 py-3 md:px-8 md:py-6",
+      "w-full p-4 md:px-8 md:py-6",
       "border-t border-body-light",
       "text-start font-medium",
+      "[&_[data-label='icon-container']]:ms-8 [&_[data-label='icon-container']]:rounded-full [&_[data-label='icon-container']]:border [&_[data-label='icon-container']]:border-current [&_[data-label='icon-container']]:p-2 hover:[&_[data-label='icon-container']]:shadow-[4px_4px_0_hsla(var(--primary-low-contrast),1)] [&_svg]:text-lg",
       className
     )}
     {...props}
@@ -40,7 +41,7 @@ const Faq = ({
       collapsible
       className={cn(
         "rounded border border-body-light first:border-t-0",
-        "max-w-4xl overflow-hidden bg-background",
+        "w-full overflow-hidden bg-background",
         props?.className
       )}
       {...props}
@@ -56,7 +57,7 @@ const FaqItem = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <AccordionItem
     ref={ref}
-    className={cn("hover:bg-background-highlight", className)}
+    className={cn("w-full hover:bg-background-highlight", className)}
     {...props}
   />
 ))
