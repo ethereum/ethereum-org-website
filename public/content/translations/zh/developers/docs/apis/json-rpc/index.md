@@ -1602,7 +1602,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getFilterLogs","params":["0x
 - `toBlock`: `QUANTITY|TAG` - (可选，默认值：`"latest"`）整型区块编号，或者`"latest"`表示最近提议的区块，`"safe"`表示最新的安全区块，`"finalized"`表示最近最终化的区块，或者`"pending"`、`"earliest"`表示尚未在区块中的交易。
 - `address`: `DATA|Array`，20 字节 -（可选）日志起源的合约地址或地址列表。
 - `topics`: `Array of DATA` -（可选）32 字节 `DATA` 主题数组。 主题是顺序相关的。 每个主题也可以是带有“或”选项的 DATA 数组。
-- `blockHash`: `DATA`，32 字节 -（可选，**future**），添加 EIP-234 后，`blockHash` 将是一个新的过滤器选项，它会将返回的日志限制为具有 32 字节哈希 `blockHash` 的单一区块。 使用 `blockHash` 相当于 `fromBlock` = `toBlock` = 具有哈希 `blockHash` 的区块编号。 如果 `blockHash` 出现在筛选条件中，则 `fromBlock` 和 `toBlock` 都不允许。
+- `blockhash`: `DATA`，32 字节 -（可选，**future**），添加 EIP-234 后，`blockHash` 将是一个新的过滤器选项，它会将返回的日志限制为具有 32 字节哈希 `blockHash` 的单一区块。 使用 `blockHash` 相当于 `fromBlock` = `toBlock` = 具有哈希 `blockHash` 的区块编号。 如果 `blockHash` 出现在筛选条件中，则 `fromBlock` 和 `toBlock` 都不允许。
 
 ```js
 params: [

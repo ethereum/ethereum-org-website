@@ -1600,7 +1600,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getFilterLogs","params":["0x
 - `toBlock`: `QUANTITY|TAG` - (オプション、デフォルトは`"latest"`) 整数のブロック番号、または最後に提案されたブロックを表す`"latest"`、最新の安全なブロックを表す`"safe"`、最新のファイナライズされたブロックを表す`"finalized"`、またはブロックにまだ含まれていないトランザクションを表す`"pending"`、`"earliest"`を指定できます。
 - `address`: `DATA|Array`、20バイト - (オプション)ログの生成元となるコントラクトアドレス、またはアドレスのリスト
 - `topics`: `Array of DATA`、- (オプション)32バイトの`DATA`トピックの配列。 トピックは順序に依存します。 各トピックは「or」オプションのDATA配列にすることも可能
-- `blockHash`: `DATA`、32バイト - (オプション、**実装予定**) EIP-234が追加されたことにより、`blockHash`が新たなフィルターオプションになります。これは、返されるログを32バイトのハッシュ`blockHash`を持つ単一のブロックに制限します。 `blockHash`を使用することは、`fromBlock`と`toBlock`に`blockHash`のハッシュのブロック番号を指定することと同等です。 `blockHash`がフィルター条件にある場合、`fromBlock`と`toBlock`は使用できません。
+- `blockhash`: `DATA`、32バイト - (オプション、**実装予定**) EIP-234が追加されたことにより、`blockHash`が新たなフィルターオプションになります。これは、返されるログを32バイトのハッシュ`blockHash`を持つ単一のブロックに制限します。 `blockHash`を使用することは、`fromBlock`と`toBlock`に`blockHash`のハッシュのブロック番号を指定することと同等です。 `blockHash`がフィルター条件にある場合、`fromBlock`と`toBlock`は使用できません。
 
 ```js
 params: [

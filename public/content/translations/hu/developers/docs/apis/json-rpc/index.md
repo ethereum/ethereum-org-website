@@ -1602,7 +1602,7 @@ Visszaadja az adott szűrőobjektumnak megfelelő összes naplótömböt.
 - `toBlock`: `QUANTITY|TAG` – (opcionális, alapértelmezett: `„latest”`) blokkszám egész számként, vagy `„latest”` az utolsó előterjesztett blokkra,`„safe”` az utolsó biztosított blokkra, `„finalized”` az utolsó véglegesített blokkra, vagy `„pending”`, `„earliest”` a még blokkba nem került tranzakciókra.
 - `address`: `DATA|Array`, 20 bájt – (opcionális) A szerződéscím vagy címek listája, amelyekről a naplók származnak.
 - `topics`: `Array of DATA`, – (opcionális) a `DATA` témák (topics) 32 bájtos tömbje. A témák sorrendfüggők. Minden téma egy DATA tömb lehet „vagy” opciókkal.
-- `blockHash`: `DATA`, 32 bájt – (opcionális, **jövő**) Az EIP-234 bevezetésével a `blockHash` egy új szűrőopció lesz, amely egyetlen blokkra redukálja a visszakapott naplókat egy 32-bájtos hashsel rendelkező `blockHash` segítségével. A `blockHash` használata azonos a `fromBlock` = `toBlock` = blokkszám hashsel (`blockHash`). Ha a `blockHash` benne van a szűrőkritériumban, akkor nem engedélyezett se a `fromBlock`, se a `toBlock`.
+- `blockhash`: `DATA`, 32 bájt – (opcionális, **jövő**) Az EIP-234 bevezetésével a `blockHash` egy új szűrőopció lesz, amely egyetlen blokkra redukálja a visszakapott naplókat egy 32-bájtos hashsel rendelkező `blockHash` segítségével. A `blockHash` használata azonos a `fromBlock` = `toBlock` = blokkszám hashsel (`blockHash`). Ha a `blockHash` benne van a szűrőkritériumban, akkor nem engedélyezett se a `fromBlock`, se a `toBlock`.
 
 ```js
 params: [

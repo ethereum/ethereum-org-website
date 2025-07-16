@@ -1600,7 +1600,7 @@ Gibt ein Array aller Protokolle zurück, die einem angegebenen Filterobjekt ents
 - `toBlock`: `QUANTITY|TAG` – (optional, standardmäßig: `"latest"`) ganzzahlige Blocknummer oder `"latest"` für den letzten vorgeschlagenen Block, `"safe"` für den letzten sicheren Block, `"finalized"` für den letzten abgeschlossenen Block oder `"pending"`, `"earliest"` für Transaktionen, die noch nicht in einem Block sind.
 - `Adresse`: `DATA|Array`, 20 Bytes - (Optional) Vertragsadresse oder eine Liste von Adressen, von denen Protokolle stammen sollen.
 - `topics`: `Array of DATA`, - (Optional) Array von 32 Bytes `DATA`-Themen. Themen sind auftragsabhängig. Jedes Thema kann auch ein Array von DATEN mit „oder“-Optionen sein.
-- `blockHash`: `DATA`, 32 Bytes - (optional, **future**) Mit dem Hinzufügen von EIP-234 wird `blockHash` eine neue Filteroption sein, die die zurückgegebenen Protokolle auf den einzelnen Block mit dem 32-Byte-Hash `blockHash` beschränkt. Die Verwendung von `blockHash` entspricht `fromBlock` = `toBlock` = die Blocknummer mit Hash `blockHash`. Wenn `blockHash` in den Filterkriterien vorhanden ist, sind weder `fromBlock` noch `toBlock` zulässig.
+- `blockhash`: `DATA`, 32 Bytes - (optional, **future**) Mit dem Hinzufügen von EIP-234 wird `blockHash` eine neue Filteroption sein, die die zurückgegebenen Protokolle auf den einzelnen Block mit dem 32-Byte-Hash `blockHash` beschränkt. Die Verwendung von `blockHash` entspricht `fromBlock` = `toBlock` = die Blocknummer mit Hash `blockHash`. Wenn `blockHash` in den Filterkriterien vorhanden ist, sind weder `fromBlock` noch `toBlock` zulässig.
 
 ```js
 params: [

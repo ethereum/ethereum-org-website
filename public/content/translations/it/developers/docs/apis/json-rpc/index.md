@@ -1602,7 +1602,7 @@ Restituisce un array di tutti i registri che corrispondono a un dato oggetto fil
 - `toBlock`: `QUANTITY|TAG` - (facoltativo, predefinito: `"latest"`) Numero intero del blocco, o `"latest"` per l'ultimo blocco proposto, `"safe"` per l'ultimo blocco sicuro, `"finalized"` per l'ultimo blocco finalizzato o `"pending"`, `"earliest"` per le transazioni non ancora presenti in un blocco.
 - `address`: `DATA|Array`, 20 byte - (facoltativo) L'indirizzo del contratto oppure un elenco di indirizzi da cui dovrebbero avere origine i registri.
 - `topics`: `Array of DATA`, - (facoltativo) Array di argomenti `DATA` a 32 byte. Gli argomenti dipendono dall'ordine. Ogni argomento può anche essere una matrice di DATA con opzioni "OR".
-- `blockHash`: `DATI`, 32 byte - (facoltativo , **future**) Con l'aggiunta di EIP-234, `blockHash` sarà una nuova opzione di filtro che limita i registri restituiti al singolo blocco con l'hash `blockHash` da 32 byte. L'utilizzo di `blockHash` equivale a `fromBlock` = `toBlock` = il numero di blocco con hash `blockHash`. Se `blockHash` è presente nei criteri di filtraggio, non sono permessi né `fromBlock` né `toBlock`.
+- `blockhash`: `DATI`, 32 byte - (facoltativo , **future**) Con l'aggiunta di EIP-234, `blockHash` sarà una nuova opzione di filtro che limita i registri restituiti al singolo blocco con l'hash `blockHash` da 32 byte. L'utilizzo di `blockHash` equivale a `fromBlock` = `toBlock` = il numero di blocco con hash `blockHash`. Se `blockHash` è presente nei criteri di filtraggio, non sono permessi né `fromBlock` né `toBlock`.
 
 ```js
 params: [

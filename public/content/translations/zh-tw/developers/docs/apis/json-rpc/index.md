@@ -1602,7 +1602,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getFilterLogs","params":["0x
 - `toBlock`: `QUANTITY|TAG` -（可選，預設：`"latest"`）整數區塊編號，或 `"latest"` 表示最近提議的區塊，`"safe"` 表示最新的安全區塊，`"finalized"` 表示最新的最終確定區塊，或 `"pending"`，`"earliest"` 表示尚未在區塊中的交易。
 - `address`: `DATA|Array`，20 位元組 - （可選）合約地址或日誌起源的地址清單。
 - `topics`: `Array of DATA`，（可選）32 位元組陣列 `DATA` 主題。 主題與順序相關。 每個主題也可以為帶有「或」選項的 DATA 陣列。
-- `blockHash`: `DATA`，32 位元組 - （可選，**future**），新增 EIP-234 後，`blockHash` 將是一個新的篩選條件選項，會將傳回的日誌限制為具有 32 位元組雜湊值 `blockHash` 的單一區塊。 使用 `blockHash` 等於 `fromBlock` = `toBlock` = 具有雜湊值 `blockHash` 的區塊編號。 如果 `blockHash` 出現在篩選條件中，則 `fromBlock` 和 `toBlock` 都不允許使用。
+- `blockhash`: `DATA`，32 位元組 - （可選，**future**），新增 EIP-234 後，`blockHash` 將是一個新的篩選條件選項，會將傳回的日誌限制為具有 32 位元組雜湊值 `blockHash` 的單一區塊。 使用 `blockHash` 等於 `fromBlock` = `toBlock` = 具有雜湊值 `blockHash` 的區塊編號。 如果 `blockHash` 出現在篩選條件中，則 `fromBlock` 和 `toBlock` 都不允許使用。
 
 ```js
 params: [
