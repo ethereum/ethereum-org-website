@@ -2003,6 +2003,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     </tr>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://www.linkedin.com/in/gorbatiuk/"><img src="https://avatars.githubusercontent.com/u/35546483?v=4?s=100" width="100px;" alt="Oleg Gorbatiuk"/><br /><sub><b>Oleg Gorbatiuk</b></sub></a><br /><a href="#content-gorbatiukcom" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Tri-stone"><img src="https://avatars.githubusercontent.com/u/17921243?v=4?s=100" width="100px;" alt="Tri-stone"/><br /><sub><b>Tri-stone</b></sub></a><br /><a href="#maintenance-Tri-stone" title="Maintenance">🚧</a></td>
     </tr>
   </tbody>
 </table>
