@@ -2001,6 +2001,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/vtjl10"><img src="https://avatars.githubusercontent.com/u/139509124?v=4?s=100" width="100px;" alt="fuder.eth"/><br /><sub><b>fuder.eth</b></sub></a><br /><a href="#maintenance-vtjl10" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/CXYZTW"><img src="https://avatars.githubusercontent.com/u/54091831?v=4?s=100" width="100px;" alt="@karelxfi"/><br /><sub><b>@karelxfi</b></sub></a><br /><a href="#tool-CXYZTW" title="Tools">🔧</a></td>
     </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://www.linkedin.com/in/gorbatiuk/"><img src="https://avatars.githubusercontent.com/u/35546483?v=4?s=100" width="100px;" alt="Oleg Gorbatiuk"/><br /><sub><b>Oleg Gorbatiuk</b></sub></a><br /><a href="#content-gorbatiukcom" title="Content">🖋</a></td>
+    </tr>
   </tbody>
 </table>
 
