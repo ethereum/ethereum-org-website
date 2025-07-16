@@ -104,7 +104,7 @@ Son olarak, bir kütüphaneyi dahil edip etmeyeceğinize karar verirken, onun ge
 
 **thirdweb Solidity SDK -** **_Özel akıllı sözleşmeleri verimli bir şekilde oluşturmak için gereken araçları sağlar_**
 
-- [Dokümanlar](https://portal.thirdweb.com/solidity/)
+- [Dokümanlar](https://portal.thirdweb.com/contracts/build/overview)
 - [GitHub](https://github.com/thirdweb-dev/contracts)
 
 ## İlgili eğitimler {#related-tutorials}

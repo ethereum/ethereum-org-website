@@ -140,7 +140,7 @@ Uno schema simile è usato per gestire le transazioni in <b>ether</b>. Tuttavia,
 
 </FeaturedText>
 
-Prova a convertire dei valori da e verso wei. Nota che [esistono nomi per molte delle denominazioni](https://web3py.readthedocs.io/en/stable/examples.html#converting-currency-denominations) tra ether e wei. Una delle più note è **gwei**, spesso utilizzata per rappresentare le commissioni di transazione.
+Prova a convertire dei valori da e verso wei. Nota che [esistono nomi per molte delle denominazioni](https://web3py.readthedocs.io/en/stable/troubleshooting.html#how-do-i-convert-currency-denominations) tra ether e wei. Una delle più note è **gwei**, spesso utilizzata per rappresentare le commissioni di transazione.
 
 ```python
 In [2]: Web3.to_wei(1, 'ether')

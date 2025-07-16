@@ -91,7 +91,7 @@ Acum să analizăm o soluție mai bună.
 
 <img src="https://cdn0.scrvt.com/b095ee27d37b3d7b6b150adba9ac6ec8/42226f4816a77656/bc5c8b270798/graphql-querygif.gif" width="100%" />
 
-Cele două imagini surprind destul de bine esența GraphQL. Cu ajutorul interogării din dreapta putem defini exact ce date vrem și astfel obținem totul printr-o singură cerere, exact ce avem nevoie și nimic mai mult. Un server GraphQL se ocupă de preluarea tuturor datelor necesare, utilizarea fiind deci incredibil de ușoară de către consumatorul din frontend. [Se explică frumos prin aceasta](https://www.apollographql.com/blog/graphql-explained-5844742f195e/) cum anume gestionează serverul o interogare, dacă sunteți interesat.
+Cele două imagini surprind destul de bine esența GraphQL. Cu ajutorul interogării din dreapta putem defini exact ce date vrem și astfel obținem totul printr-o singură cerere, exact ce avem nevoie și nimic mai mult. Un server GraphQL se ocupă de preluarea tuturor datelor necesare, utilizarea fiind deci incredibil de ușoară de către consumatorul din frontend. [Se explică frumos prin aceasta](https://www.apollographql.com/blog/graphql-explained) cum anume gestionează serverul o interogare, dacă sunteți interesat.
 
 Cunoscând acum aceste lucruri, să ne avântăm în sfârșit în spațiul blockchain și în „The Graph”.
 
@@ -124,7 +124,7 @@ Aici puteți defini mai multe contracte și manipulatoare. O configurare tipică
 
 Din comoditate, ați dori probabil să utilizați un instrument șablon, cum ar fi „mustache”. Then you create a `subgraph.template.yaml` and insert the addresses based on the latest deployments. Pentru a vedea un exemplu de configurare mai avansată, puteți consulta, de exemplu, [depozitarul subgraph-ului Aave](https://github.com/aave/aave-protocol/tree/master/thegraph).
 
-Iar aici puteți vedea documentația completă: https://thegraph.com/docs/define-a-subgraph#the-subgraph-manifest.
+Iar aici puteți vedea documentația completă: https://thegraph.com/docs/en/subgraphs/developing/creating/subgraph-manifest.
 
 ```yaml
 specVersion: 0.0.1
@@ -167,7 +167,7 @@ Schema este definiția datelor GraphQL. Aceasta vă va permite să definiți ce 
 - BigInt
 - BigDecimal
 
-De asemenea, puteți utiliza entitățile ca „tip” pentru a defini relațiile. În exemplul nostru definim o relație între 1-și-mai-mulți a unui jucător la pariuri. Semnul „!” ne spune că valoarea nu poate fi goală. Puteți vedea aici documentația completă: https://thegraph.com/docs/define-a-subgraph#the-graphql-schema.
+De asemenea, puteți utiliza entitățile ca „tip” pentru a defini relațiile. În exemplul nostru definim o relație între 1-și-mai-mulți a unui jucător la pariuri. Semnul „!” ne spune că valoarea nu poate fi goală. Puteți vedea aici documentația completă: https://thegraph.com/docs/en/subgraphs/developing/creating/ql-schema.
 
 ```graphql
 type Bet @entity {
@@ -196,7 +196,7 @@ Apoi vom crea o nouă entitate Bet. The id for this will be `event.transaction.h
 
 Lastly we can update the Player entity with all the data. Matricele nu pot fi împinse direct, dar trebuie actualizate așa cum se arată aici. Folosim id-ul pentru a face referire la pariu. And `.save()` is required at the end to store an entity.
 
-Puteți vedea aici documentația completă: https://thegraph.com/docs/define-a-subgraph#writing-mappings. Puteți și adăuga rezultatele jurnalizării în fișierul de mapare; pentru aceasta, uitați-vă [aici](https://thegraph.com/docs/assemblyscript-api#api-reference).
+Puteți vedea aici documentația completă: https://thegraph.com/docs/en/subgraphs/developing/creating/assemblyscript-mappings/#writing-mappings. Puteți și adăuga rezultatele jurnalizării în fișierul de mapare; pentru aceasta, uitați-vă [aici](https://thegraph.com/docs/en/subgraphs/developing/creating/graph-ts/api/#api-reference).
 
 ```typescript
 import { Bet, Player } from "../generated/schema"

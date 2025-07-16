@@ -8,7 +8,7 @@ Smart Contracts sind äußerst flexibel und in der Lage, große Mengen an Werten
 
 Öffentliche Blockchains wie Ethereum erschweren das Problem der Sicherung von Smart Contracts zusätzlich. Der Code des veröffentlichten Vertrags _kann in der Regel _ nicht geändert werden, um Sicherheitslücken zu schließen, während die aus Smart Contracts gestohlenen Vermögenswerte aufgrund der Unveränderlichkeit extrem schwer nachzuverfolgen und meist nicht wiederherzustellen sind.
 
-Obwohl die Zahlen variieren, wird geschätzt, dass der Gesamtbetrag des gestohlenen oder verlorenen Werts aufgrund von Sicherheitsmängeln in Smart Contracts weit über 1 Milliarde US-Dollar beträgt. Dies beinhaltet hochkarätige Vorfälle, wie den [DAO-Hack](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/) (3,6 Mio. ETH gestohlen, nach heutigen Preisen über 1 Milliarde US-Dollar wert), den [Parity Multi-Sig Wallet-Hack](https://www.coindesk.com/30-million-ether-reported-stolen-parity-wallet-breach) (30 Mio. US-Dollar von Hackern verloren) und das [Problem mit den eingefrorenen Parity-Wallets](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether) (über 300 Mio. US-Dollar in ETH gesperrt).
+Obwohl die Zahlen variieren, wird geschätzt, dass der Gesamtbetrag des gestohlenen oder verlorenen Werts aufgrund von Sicherheitsmängeln in Smart Contracts weit über 1 Milliarde US-Dollar beträgt. Dies beinhaltet hochkarätige Vorfälle, wie den [DAO-Hack](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/) (3,6 Mio. ETH gestohlen, nach heutigen Preisen über 1 Milliarde US-Dollar wert), den [Parity Multi-Sig Wallet-Hack](https://www.coindesk.com/markets/2017/07/19/30-million-ether-reported-stolen-due-to-parity-wallet-breach) (30 Mio. US-Dollar von Hackern verloren) und das [Problem mit den eingefrorenen Parity-Wallets](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether) (über 300 Mio. US-Dollar in ETH gesperrt).
 
 Die oben genannten Probleme machen es für Entwickler zwingend erforderlich, in die Entwicklung sicherer, robuster und widerstandsfähiger Smart Contracts zu investieren. Die Sicherheit von Smart Contracts ist eine ernste Angelegenheit, die jeder Entwickler lernen sollte. In diesem Ratgeber werden Sicherheitsüberlegungen für Ethereum-Entwickler behandelt und Ressourcen zur Verbesserung der Smart Contract-Sicherheit vorgestellt.
 
@@ -304,7 +304,7 @@ Hier ist nichts verkehrt, außer dass `Attacker` eine weitere Funktion hat, die 
 - `Victim` finally applies the results of the first transaction (and subsequent ones) to its state, so `Attacker`’s balance is set to 0
 ```
 
-Da das Guthaben des Aufrufers nicht auf 0 gesetzt wird, bevor die Funktion ausgeführt wurde, können nachfolgende Aufrufe erfolgreich sein und dem Aufrufer ermöglichen, sein Guthaben mehrmals abzuheben. Diese Art von Angriff kann genutzt werden, um einem Smart Contract das Kapital zu entziehen, wie es beim [2016 DAO-Hack](https://www.coindesk.com/learn/2016/06/25/understanding-the-dao-attack/) geschehen ist. Wiederholungsangriffe sind auch heute noch ein kritisches Thema für Smart Contracts, wie [öffentliche Auflistungen von Reentrancy-Exploits](https://github.com/pcaversaccio/reentrancy-attacks) zeigen.
+Da das Guthaben des Aufrufers nicht auf 0 gesetzt wird, bevor die Funktion ausgeführt wurde, können nachfolgende Aufrufe erfolgreich sein und dem Aufrufer ermöglichen, sein Guthaben mehrmals abzuheben. Diese Art von Angriff kann genutzt werden, um einem Smart Contract das Kapital zu entziehen, wie es beim [2016 DAO-Hack](https://www.coindesk.com/learn/understanding-the-dao-attack) geschehen ist. Wiederholungsangriffe sind auch heute noch ein kritisches Thema für Smart Contracts, wie [öffentliche Auflistungen von Reentrancy-Exploits](https://github.com/pcaversaccio/reentrancy-attacks) zeigen.
 
 ##### So verhindert man Wiederholungsangriffe
 
@@ -505,7 +505,7 @@ Wenn Sie vorhaben, ein On-Chain-Oracle nach Assetpreisen zu befragen, sollten Si
 
 - **[Hacken](https://hacken.io)** - _Web3 Cybersicherheitsauditor mit 360-Grad-Ansatz für die Sicherheit der Blockchain._
 
-- **[](https://nethermind.io/smart-contracts-audits)** - _Solidity und Cairo Audit-Dienste sorgen für Datenintegrität der Smart Contracts und Sicherheit der Nutzer im Ethereum- und Starknet-Ökosystem._
+- **[](https://www.nethermind.io/smart-contract-audits)** - _Solidity und Cairo Audit-Dienste sorgen für Datenintegrität der Smart Contracts und Sicherheit der Nutzer im Ethereum- und Starknet-Ökosystem._
 
 - **[HashEx](https://hashex.org/)** - _HashEx konzentriert sich auf die Prüfung von Blockchain und Smart Contracts, um die Sicherheit von Kryptowährungen zu gewährleisten, und bietet Dienstleistungen wie die Entwicklung von Smart Contracts, Penetrationstests und Blockchain-Beratung._
 
@@ -515,7 +515,7 @@ Wenn Sie vorhaben, ein On-Chain-Oracle nach Assetpreisen zu befragen, sollten Si
 
 - **[Cyfrin](https://cyfrin.io)** – _Web3-Sicherheits-Kraftwerk, das Krypto-Sicherheit durch Produkte und Smart-Contract-Audit-Dienste fördert._
 
-- **[ImmuneBytes](https://www.immunebytes.com//smart-contract-audit/)** – _Web3-Sicherheitsunternehmen, das Sicherheits-Audits für Blockchain-Systeme durch ein Team erfahrener Prüfer und erstklassige Tools anbietet._
+- **[ImmuneBytes](https://immunebytes.com/smart-contract-audit/)** – _Web3-Sicherheitsunternehmen, das Sicherheits-Audits für Blockchain-Systeme durch ein Team erfahrener Prüfer und erstklassige Tools anbietet._
 
 - **[Oxorio](https://oxor.io/)** – _Smart-Contract-Audits und Blockchain-Sicherheitsdienste mit Expertise in EVM, Solidity, ZK und Cross-Chain-Technologien für Krypto-Unternehmen und DeFi-Projekte._
 

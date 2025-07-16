@@ -162,7 +162,7 @@ Vale anche la pena notare che la diversità dei client è un [problema sul livel
 ##### Client di consenso
 
 - [Lighthouse](https://github.com/sigp/lighthouse/releases/latest)
-- [Lodestar](https://chainsafe.github.io/lodestar/install/source/) (Non fornisce un binario precompilato, solo un'immagine Docker o da compilare da sorgente)
+- [Lodestar](https://chainsafe.github.io/lodestar/run/getting-started/installation#build-from-source/) (Non fornisce un binario precompilato, solo un'immagine Docker o da compilare da sorgente)
 - [Nimbus](https://github.com/status-im/nimbus-eth2/releases/latest)
 - [Prysm](https://github.com/prysmaticlabs/prysm/releases/latest)
 - [Teku](https://github.com/ConsenSys/teku/releases)
@@ -256,7 +256,7 @@ Besu presenta inoltre un'opzione del launcher che porrà una serie di domande e 
 besu --Xlauncher
 ```
 
-La [documentazione di Besu](https://besu.hyperledger.org/en/latest/HowTo/Get-Started/Starting-node/) contiene le opzioni aggiuntive e i dettagli di configurazione.
+La [documentazione di Besu](https://besu.hyperledger.org/public-networks/get-started/start-node/) contiene le opzioni aggiuntive e i dettagli di configurazione.
 
 ##### Eseguire Erigon
 
@@ -288,7 +288,7 @@ Controlla la [documentazione per tutte le opzioni di configurazione](https://get
 
 ##### Eseguire Nethermind
 
-Nethermind offre varie [opzioni d'installazione](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/getting-started). Il pacchetto presenta vari binari, incluso un Launcher con una configurazione guidata, che ti aiuterà a creare la configurazione in modo interattivo. In alternativa trovi Runner, che è l'eseguibile stesso, e puoi eseguirlo coi flag di configurazione. JSON-RPC è abilitato di default.
+Nethermind offre varie [opzioni d'installazione](https://docs.nethermind.io/get-started/installing-nethermind). Il pacchetto presenta vari binari, incluso un Launcher con una configurazione guidata, che ti aiuterà a creare la configurazione in modo interattivo. In alternativa trovi Runner, che è l'eseguibile stesso, e puoi eseguirlo coi flag di configurazione. JSON-RPC è abilitato di default.
 
 ```sh
 Nethermind.Runner --config mainnet \
@@ -296,7 +296,7 @@ Nethermind.Runner --config mainnet \
     --JsonRpc.JwtSecretFile=/path/to/jwtsecret
 ```
 
-La documentazione di Nethermind offre una [guida completa](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/running-nethermind-post-merge) all'esecuzione di Nethermind con il client di consenso.
+La documentazione di Nethermind offre una [guida completa](https://docs.nethermind.io/first-steps-with-nethermind/running-nethermind-post-merge) all'esecuzione di Nethermind con il client di consenso.
 
 Il client di esecuzione avvierà le sue funzioni principali, gli endpoint scelti e inizierà a cercare i pari. Dopo aver scoperto correttamente i pari, il client avvia la sincronizzazione. Il client di esecuzione attenderà una connessione dal client di consenso. I dati correnti della blockchain saranno disponibili una volta che il client è sincronizzato correttamente allo stato corrente.
 

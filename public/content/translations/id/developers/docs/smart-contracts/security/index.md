@@ -8,7 +8,7 @@ Kontrak pintar sangat fleksibel dan mampu mengontrol nilai dan data dalam jumlah
 
 Rantai Blok publik, seperti Ethereum, makin memperumit masalah pengamanan kontrak pintar. Kode kontrak yang disebarkan _biasanya_ tidak dapat diubah untuk menambal kekurangan pada keamanannya, sementara aset yang dicuri dari kontrak pintar sulit sekali untuk dilacak dan kebanyakan tidak dapat dipulihkan karena sifat permanennya.
 
-Meskipun ada perbedaan angka, diperkirakan bahwa nilai total yang dicuri atau hilang akibat cacat keamanan di kontrak pintar dapat mencapai lebih dari $1 miliar. Hal ini termasuk insiden yang menjadi perhatian publik, seperti [peretasan DAO](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/) (3,6 juta ETH dicuri, yang saat ini bernilai lebih dari $1 miliar dolar), [Peretasan dompet parity multi-sig](https://www.coindesk.com/30-million-ether-reported-stolen-parity-wallet-breach) ($30 juta hilang karena peretas), dan [Masalah dompet beku parity](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether) (lebih dari $300 juta nilai ETH terkunci selamanya).
+Meskipun ada perbedaan angka, diperkirakan bahwa nilai total yang dicuri atau hilang akibat cacat keamanan di kontrak pintar dapat mencapai lebih dari $1 miliar. Hal ini termasuk insiden yang menjadi perhatian publik, seperti [peretasan DAO](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/) (3,6 juta ETH dicuri, yang saat ini bernilai lebih dari $1 miliar dolar), [Peretasan dompet parity multi-sig](https://www.coindesk.com/markets/2017/07/19/30-million-ether-reported-stolen-due-to-parity-wallet-breach) ($30 juta hilang karena peretas), dan [Masalah dompet beku parity](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether) (lebih dari $300 juta nilai ETH terkunci selamanya).
 
 Berbagai masalah yang disebutkan di atas mengharuskan pengembang untuk meningkatkan upaya dalam membuat kontrak pintar yang aman, kuat, dan tangguh. Keamanan kontrak pintar adalah masalah yang serius, dan harus dipelajari dengan baik oleh setiap pengembang. Panduan ini akan membahas pertimbangan keamanan bagi pengembang Ethereum dan menyelidiki sumber daya untuk peningkatan keamanan kontrak pintar.
 
@@ -301,7 +301,7 @@ Tidak ada yang salah di sini, kecuali bahwa `Attacker` memiliki fungsi lain yang
 - `Victim` finally applies the results of the first transaction (and subsequent ones) to its state, so `Attacker`’s balance is set to 0
 ```
 
-Ringkasnya adalah karena saldo pemanggil tidak ditetapkan ke 0 hingga selesainya eksekusi fungsi, pemanggilan berikutnya akan berhasil dan memungkinkan pemanggil menarik saldonya beberapa kali. Jenis serangan seperti ini dapat digunakan untuk menguras dana dari kontrak pintar, seperti yang terjadi dalam serangan [peretasan DAO 2016](https://www.coindesk.com/learn/2016/06/25/understanding-the-dao-attack/). Serangan reentrancy (masuk kembali) masih menjadi masalah kritis bagi kontrak pintar saat ini, seperti yang ditunjukkan oleh [daftar publik eksploit reentrancy](https://github.com/pcaversaccio/reentrancy-attacks).
+Ringkasnya adalah karena saldo pemanggil tidak ditetapkan ke 0 hingga selesainya eksekusi fungsi, pemanggilan berikutnya akan berhasil dan memungkinkan pemanggil menarik saldonya beberapa kali. Jenis serangan seperti ini dapat digunakan untuk menguras dana dari kontrak pintar, seperti yang terjadi dalam serangan [peretasan DAO 2016](https://www.coindesk.com/learn/understanding-the-dao-attack). Serangan reentrancy (masuk kembali) masih menjadi masalah kritis bagi kontrak pintar saat ini, seperti yang ditunjukkan oleh [daftar publik eksploit reentrancy](https://github.com/pcaversaccio/reentrancy-attacks).
 
 ##### Cara mencegah serangan reentrancy (masuk kembali)
 
@@ -500,7 +500,7 @@ Jika Anda berencana untuk meminta harga aset dari oracle di dalam rantai, pertim
 
 - **[Hacken](https://hacken.io)** - _Auditor keamanan Web3 yang menghadirkan pendekatan 360 derajat untuk keamanan rantai blok._
 
-- **[Nethermind](https://nethermind.io/smart-contracts-audits)** - _Layanan pengauditan Solidity dan Cairo, memastikan integritas kontrak pintar dan keamanan pengguna di seluruh Ethereum dan Starknet._
+- **[Nethermind](https://www.nethermind.io/smart-contract-audits)** - _Layanan pengauditan Solidity dan Cairo, memastikan integritas kontrak pintar dan keamanan pengguna di seluruh Ethereum dan Starknet._
 
 - **[HashEx](https://hashex.org/)** - _HashEx berfokus pada pengauditan rantai blok dan kontrak pintar untuk memastikan keamanan mata uang kripto, menyediakan layanan seperti pengembangan kontrak pintar, pengujian penetrasi, konsultasi rantai blok._
 
