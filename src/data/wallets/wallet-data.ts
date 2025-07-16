@@ -541,7 +541,7 @@ export const walletsData: WalletData[] = [
     ],
   },
   {
-    last_updated: "2024-10-30",
+    last_updated: "2025-07-16",
     name: "Ambire",
     image: AmbireImage,
     twBackgroundColor: "bg-[#aa6aff]",
