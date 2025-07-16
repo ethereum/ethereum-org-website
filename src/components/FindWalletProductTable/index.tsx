@@ -1,4 +1,6 @@
-import { useEffect, useMemo, useState } from "react"
+"use client"
+
+import { useMemo, useState } from "react"
 
 import {
   ChainName,
@@ -22,15 +24,11 @@ import WalletSubComponent from "./WalletSubComponent"
 import { useTranslation } from "@/hooks/useTranslation"
 
 const FindWalletProductTable = ({ wallets }: { wallets: Wallet[] }) => {
+  console.log({ wallets })
   const { t } = useTranslation("page-wallets-find-wallet")
   const walletPersonas = useWalletPersonaPresets()
   const walletFilterOptions = useWalletFilters()
   const [filters, setFilters] = useState<FilterOption[]>(walletFilterOptions)
-  const [isClient, setIsClient] = useState(false)
-
-  useEffect(() => {
-    setIsClient(true)
-  }, [])
 
   const activeFilterKeys = useMemo(() => {
     const keys: string[] = []
@@ -99,10 +97,6 @@ const FindWalletProductTable = ({ wallets }: { wallets: Wallet[] }) => {
       eventAction: "Reset button",
       eventName: "reset_click",
     })
-  }
-
-  if (!isClient) {
-    return null
   }
 
   if (!Array.isArray(wallets)) {
