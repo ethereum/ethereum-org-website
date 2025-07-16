@@ -2,6 +2,7 @@ import { AppData } from "@/lib/types"
 
 import { Image } from "@/components/Image"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
+import TruncatedText from "@/components/ui/TruncatedText"
 
 import { slugify } from "@/lib/utils/url"
 
@@ -27,8 +28,8 @@ const AppsHighlight = ({ apps }: AppsHighlightProps) => {
             className="rounded-xl object-cover"
           />
         </div>
-        <div className="mb-4 text-body">
-          <p className="text-body">{app.description}</p>
+        <div className="mb-4">
+          <TruncatedText text={app.description} maxLines={2} />
         </div>
         <AppCard app={app} imageSize={16} disableLink />
       </LinkOverlay>
