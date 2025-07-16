@@ -52,7 +52,7 @@ const EventCard: React.FC<EventCardProps> = ({
             className="max-h-[224px] w-full object-cover xl:h-[124px]"
           />
         ) : (
-          <Image src={EventFallback} alt="" />
+          <Image src={EventFallback} alt="" sizes="276px" />
         )}
       </div>
       <CardContent className="flex-grow p-4">
