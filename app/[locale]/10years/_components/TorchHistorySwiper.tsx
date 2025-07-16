@@ -95,43 +95,37 @@ const mockHolders = [
 ]
 
 const TorchHistorySwiper = () => (
-  <div className="flex w-full flex-col items-center py-12">
-    <h2 className="mb-8 text-center text-3xl font-bold">
-      The 10 years ethereum torch
-    </h2>
-    {/* Torch image and curved text can be added here if needed */}
-    <SwiperContainer className="w-full">
-      <Swiper
-        effect="coverflow"
-        grabCursor
-        centeredSlides
-        slidesPerView="auto"
-        coverflowEffect={{
-          rotate: 0,
-          stretch: -50,
-          depth: 200,
-          modifier: 2.5,
-          slideShadows: false,
-        }}
-        modules={[EffectCoverflow, Navigation]}
-        className="w-full"
-      >
-        {mockHolders.map((holder, idx) => (
-          <SwiperSlide key={idx} className="flex !w-72 justify-center">
-            <TorchHistoryCard
-              name={holder.name}
-              role={holder.role}
-              avatar={holder.avatar}
-              from={holder.from}
-              to={holder.to}
-              twitter={holder.twitter}
-            />
-          </SwiperSlide>
-        ))}
-        <SwiperNavigation />
-      </Swiper>
-    </SwiperContainer>
-  </div>
+  <SwiperContainer className="w-full">
+    <Swiper
+      effect="coverflow"
+      grabCursor
+      centeredSlides
+      slidesPerView="auto"
+      coverflowEffect={{
+        rotate: 0,
+        stretch: -80,
+        depth: 200,
+        modifier: 2.5,
+        slideShadows: false,
+      }}
+      modules={[EffectCoverflow, Navigation]}
+      className="w-full"
+    >
+      {mockHolders.map((holder, idx) => (
+        <SwiperSlide key={idx} className="flex !w-72 justify-center">
+          <TorchHistoryCard
+            name={holder.name}
+            role={holder.role}
+            avatar={holder.avatar}
+            from={holder.from}
+            to={holder.to}
+            twitter={holder.twitter}
+          />
+        </SwiperSlide>
+      ))}
+      <SwiperNavigation />
+    </Swiper>
+  </SwiperContainer>
 )
 
 export default TorchHistorySwiper

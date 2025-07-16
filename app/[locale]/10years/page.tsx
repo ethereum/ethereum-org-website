@@ -26,6 +26,7 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { BASE_TIME_UNIT } from "@/lib/constants"
 
+import Curved10YearsText from "./_components/10y.svg"
 import AdoptionSwiper from "./_components/AdoptionSwiper"
 import CountDown from "./_components/CountDown"
 import CurrentTorchHolderCard from "./_components/CurrentTorchHolderCard"
@@ -41,6 +42,7 @@ import { fetch10YearEvents } from "@/lib/api/fetch10YearEvents"
 import { fetch10YearStories } from "@/lib/api/fetch10YearStories"
 import { fetchTorchHolders } from "@/lib/api/fetchTorchHolders"
 import TenYearLogo from "@/public/images/10-year-anniversary/10-year-logo.png"
+import TorchImage from "@/public/images/10-year-anniversary/torch.png"
 
 // const TenYearGlobe = dynamic(() => import("./_components/TenYearGlobe"), {
 //   ssr: false,
@@ -276,7 +278,29 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           holderLookup={torchHolderLookup}
         /> */}
 
-        <TorchHistorySwiper />
+        <div className="flex w-full flex-col gap-4 rounded-3xl bg-[#18193A] px-8 py-8">
+          <div className="relative">
+            <div className="mt-24 flex items-center justify-center">
+              {/* <video
+              src="/videos/torch.mp4"
+              autoPlay
+              loop
+              muted
+            /> */}
+
+              <Image src={TorchImage} alt="Torch" width={380} height={380} />
+            </div>
+            {/* Curved text */}
+            <Curved10YearsText
+              viewBox="0 0 356 186"
+              width={600}
+              height={400}
+              className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-8"
+            />
+          </div>
+
+          <TorchHistorySwiper />
+        </div>
 
         <div className="flex w-full flex-col items-center gap-8 px-8 py-8 pt-32 lg:flex-row">
           <div className="flex flex-1 flex-col gap-6">

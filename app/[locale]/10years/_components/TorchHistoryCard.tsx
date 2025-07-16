@@ -25,7 +25,7 @@ const TorchHistoryCard: React.FC<TorchHistoryCardProps> = ({
   to,
   twitter,
 }) => (
-  <Card className="flex flex-col rounded-3xl bg-white p-6 shadow-lg dark:text-body-inverse">
+  <Card className="flex flex-col rounded-xl bg-white p-6 shadow-lg dark:text-body-inverse">
     <CardHeader className="flex flex-col gap-4 p-0">
       <div className="flex flex-col items-center">
         <Avatar className="h-32 w-32">
