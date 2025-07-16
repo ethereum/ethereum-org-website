@@ -10,13 +10,7 @@ const meta = {
   },
   decorators: [
     (Story) => (
-      <div
-        className="flex h-screen w-screen items-center justify-center"
-        style={{
-          background:
-            "radial-gradient(46.28% 66.31% at 66.95% 58.35%, #e6e6f7 0%, #e7edfa 50%, #e9fbfa 100%)",
-        }}
-      >
+      <div className="flex h-screen w-screen items-center justify-center bg-gradient-to-r from-accent-a/10 to-accent-c/10">
         <Story />
       </div>
     ),
