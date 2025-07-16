@@ -51,7 +51,7 @@ Ethereum-Konten haben vier Bereiche:
 
 ## Externe Konten und Schlüsselpaare {#externally-owned-accounts-and-key-pairs}
 
-Ein Konto besteht aus einem kryptographischen Schlüsselpaar: öffentlich und privat. Sie tragen zum Nachweis bei, dass eine Transaktion tatsächlich vom Absender unterzeichnet wurde, und verhindern Fälschungen. Deinen privaten Schlüssel verwendest du, um Transaktionen zu unterzeichnen; so gewährt er dir die Obhut über das mit deinem Konto verbundene Guthaben. Man besitzt nie wirklich Kryptowährung, sondern private Schlüssel – das Geld ist immer auf Ethereums Hauptbuch (ledger).
+Ein Account besteht aus einem Paar kryptographischer Schlüssel: öffentlich und privat. Sie tragen zum Nachweis bei, dass eine Transaktion tatsächlich vom Absender unterzeichnet wurde, und verhindern Fälschungen. Deinen privaten Schlüssel verwendest du, um Transaktionen zu unterzeichnen; so gewährt er dir die Obhut über das mit deinem Konto verbundene Guthaben. Man besitzt nie wirklich Kryptowährung, sondern private Schlüssel – das Geld ist immer auf Ethereums Hauptbuch (ledger).
 
 Dies hindert böswillige Akteure daran, gefälschte Transaktionen zu übertragen, da du immer den Absender einer Transaktion überprüfen kannst.
 
@@ -59,7 +59,7 @@ Wenn Alice Ether von ihrem Konto an das Konto von Bob senden möchte, muss sie e
 
 ## Kontoerstellung {#account-creation}
 
-Wenn du ein Konto erstellst, werden die meisten "libraries" dir einen zufälligen, privaten Schlüssel generieren.
+Wenn Sie einen Account erstellen möchten, generieren die meisten Bibliotheken einen zufälligen privaten Schlüssel für Sie.
 
 Ein privater Schlüssel besteht aus 64 hexadezimalen Zeichen und kann mit einem Passwort verschlüsselt werden.
 
@@ -68,6 +68,12 @@ Beispiel:
 `fffffffffffffffffffffffffffffffebaaedce6af48a03bbfd25e8cd036415f`
 
 Der öffentliche Schlüssel wird mithilfe des [Elliptic Curve Digital Signature Algorithm](https://wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm) aus dem privaten Schlüssel generiert. Du erhältst eine öffentliche Adresse für dein Konto, indem du die letzten 20 Bytes des Keccak-256-Hashes des öffentlichen Schlüssels nimmst und `0x` an den Anfang setzt.
+
+Das bedeutet, dass ein Konto in externem Besitz (EOA) eine 42-stellige Adresse hat (ein 20-Byte-Segment, das aus 40 hexadezimalen Zeichen und dem Präfix `0x` besteht).
+
+Beispiel:
+
+`0x5e97870f263700f46aa00d967821199b9bc5a120`
 
 Das folgende Beispiel zeigt, wie Sie mit dem Signatur-Tool [Clef](https://geth.ethereum.org/docs/tools/clef/introduction) ein neues Konto erstellen. Clef ist ein Kontenverwaltungs- und Signierungs-Tool, das zusammen mit dem Ethereum-Client [Geth](https://geth.ethereum.org) erhältlich ist. Der Befehl `clef newaccount` erstellt ein neues Schlüsselpaar und speichert es in einem verschlüsselten Schlüsselspeicher.
 
@@ -86,9 +92,9 @@ Generated account 0x5e97870f263700f46aa00d967821199b9bc5a120
 
 [Dokumentation für Geth](https://geth.ethereum.org/docs)
 
-Es ist möglich, neue öffentliche Schlüssel von deinem privaten Schlüssel abzuleiten, aber nicht, einen privaten Schlüssel von öffentlichen Schlüsseln abzuleiten. Dies bedeutet, dass es unerlässlich ist, einen privaten Schlüssel sicher und, wie der Name schon sagt, **PRIVAT** aufzubewahren.
+Es ist möglich, neue öffentliche Schlüssel von deinem privaten Schlüssel abzuleiten, aber nicht, einen privaten Schlüssel von öffentlichen Schlüsseln abzuleiten. Es ist unabdingbar, Ihren privaten Schlüssel sicher aufzubewahren und – wie der Name schon sagt – **PRIVAT** zu halten.
 
-Du benötigst einen privaten Schlüssel, um Nachrichten und Transaktionen zu signieren, die eine Signatur nach außen anzeigen. Andere können dann die Unterschrift verwenden, um deinen öffentlichen Schlüssel abzuleiten und den Autor der Nachricht zu verifizieren. In deiner App kannst du eine Javascript-Bibliothek verwenden, um Transaktionen ins Netzwerk zu senden.
+Du benötigst einen privaten Schlüssel, um Nachrichten und Transaktionen zu signieren, die eine Signatur nach außen anzeigen. Andere können dann die Unterschrift verwenden, um deinen öffentlichen Schlüssel abzuleiten und den Autor der Nachricht zu verifizieren. In Ihrer Anwendung können Sie eine JavaScript-Bibliothek nutzen, um Transaktionen zum Netzwerk zu senden.
 
 ## Vertragskonten {#contract-accounts}
 
@@ -108,7 +114,7 @@ Es gibt einen weiteren Schlüsseltyp in Ethereum, der mit dem Wechsel von Proof-
 
 ## Ein Hinweis zu Wallets {#a-note-on-wallets}
 
-Ein Konto ist kein Wallet. Ein Konto ist das Schlüsselpaar für ein Ethereum-Konto, das dem Benutzer gehört. Eine Wallet ist eine Schnittstelle oder Anwendung, über die Sie mit Ihrem Ethereum-Konto interagieren können.
+Ein Konto ist kein Wallet. Eine Wallet ist eine Schnittstelle oder Anwendung, die Sie mit Ihrem Ethereum-Konto interagieren lässt, sei es ein Konto in externem Besitz oder ein Vertragskonto.
 
 ## Eine visuelle Demo {#a-visual-demo}
 

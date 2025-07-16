@@ -1,3 +1,5 @@
+"use client"
+
 import React from "react"
 import {
   BarElement,
@@ -9,10 +11,8 @@ import {
   LinearScale,
 } from "chart.js"
 import ChartDataLabels from "chartjs-plugin-datalabels"
-import { useRouter } from "next/router"
-import { useTranslation } from "next-i18next"
+import { useLocale } from "next-intl"
 import { Bar } from "react-chartjs-2"
-import { useBreakpointValue } from "@chakra-ui/react"
 
 import type { Lang } from "@/lib/types"
 
@@ -21,8 +21,10 @@ import { Center } from "@/components/ui/flex"
 import { wrapLabel } from "@/lib/utils/charts"
 import { isLangRightToLeft } from "@/lib/utils/translations"
 
+import { useBreakpointValue } from "@/hooks/useBreakpointValue"
 import useColorModeValue from "@/hooks/useColorModeValue"
 import { useIsClient } from "@/hooks/useIsClient"
+import { useTranslation } from "@/hooks/useTranslation"
 
 // ChartDataLabels required to display y-labels on top of bars
 ChartJS.register(
@@ -35,7 +37,7 @@ ChartJS.register(
 
 const EnergyConsumptionChart = () => {
   const { t } = useTranslation("page-what-is-ethereum")
-  const { locale } = useRouter()
+  const locale = useLocale()
   const isClient = useIsClient()
   const isRtl = isLangRightToLeft(locale as Lang)
 

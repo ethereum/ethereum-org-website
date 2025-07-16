@@ -62,13 +62,13 @@ A DVT jelentős hatást gyakorol a kiterjedtebb letétszolgáltató iparágban:
 
 A DVT lehetővé teszi a nem felügyelt letétbe helyezést is, mivel a validátorkulcsot távoli csomópontok között is el lehet osztani, miközben a teljes kulcsot offline tárolják. Tehát az otthoni letéteseknek nem feltétlenül kell, hogy hardverre költsenek, mivel a kulcsrészek elosztása megerősítheti őket a lehetséges támadások ellen.
 
-### Staking as a service (SaaS) {#saas}
+### Letétbe helyezés mint szolgáltatás (SaaS) {#saas}
 
 Az operátorok (mint letéti alapok és intézményi letétesek), akik sok validátort kezelnek, a DVT révén csökkenthetik kockázatukat. Az infrastruktúra elosztásával a működésükhöz redundanciát (extra kapacitást) tudnak adni és diverzifikálják a hardvertípusok használatát is.
 
 A DVT megosztja a kulcskezelés felelősségét számod csomóponton keresztül, így az üzemeltetési költség is megosztható. A DVT csökkenti a letétszolgáltatók üzemeltetési kockázatát és biztosítási költségeit.
 
-### Staking pools {#staking-pools}
+### Letéti alapok {#staking-pools}
 
 A standard validátorbeállítás következtében a letéti alapok és a likvid letétbe helyezők kénytelenek egy operátorral működő validátorban változó szinten megbízni, mivel a nyereségek és a veszteségek az egész alapot érintik. Emellett bízniuk kell az operátorokban, hogy biztonságban tartják az aláírási kulcsokat, mert korábban nem volt erre másik megoldás.
 

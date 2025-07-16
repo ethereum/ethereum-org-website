@@ -17,7 +17,7 @@ Las cadenas laterales son cadenas de bloques independientes, con diferentes hist
 
 Una de las cualidades que hacen que las cadenas laterales sean únicas (es decir, diferentes de Ethereum) es el algoritmo de consenso utilizado. Las cadenas laterales no utilizan Ethereum para el consenso y pueden elegir protocolos de consenso alternativos que se adapten a sus necesidades. Algunos ejemplos de algoritmos de consenso utilizados en las cadenas laterales incluyen:
 
-- [Prueba de autoridad](https://wikipedia.org/wiki/Proof_of_authority)
+- [Prueba de autoridad](/developers/docs/consensus-mechanisms/poa/)
 - [Prueba de participación delegada](https://en.bitcoin.it/wiki/Delegated_proof_of_stake)
 - [Toleración de fallas bizantinas](https://decrypt.co/resources/byzantine-fault-tolerance-what-is-it-explained)
 
@@ -51,7 +51,7 @@ Si bien los puentes permiten a los usuarios mover sus fondos entre Ethereum y la
 
 | Ventajas                                                                                                                                             | Desventajas                                                                                                                                  |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| La tecnología detrás de las cadenas laterales está bien establecida y se beneficia de investigación exhaustiva y mejoras en diseño.                  | Las cadenas laterales sacrifican cierto nivel de descentralización y confianza a cambio de escalabilidad.                                    |
+| La tecnología detrás de las cadenas laterales está bien establecida y se beneficia de investigación exhaustiva y mejoras en diseño.                  | Las cadenas laterales sacrifican algunas medidas de descentralización y no necesidad de confianza por la escalabilidad.                      |
 | Las cadenas laterales admiten la computación general y ofrecen compatibilidad con la EVM (pueden correr dapps que son nativas a Ethereum).           | Una cadena lareral utiliza mecanismos de conseso independientes y no se beneficia de las garantías de seguridad de Ethereum.                 |
 | Las cadenas laterales utilizan diferentes modelos de consenso para procesar transacciones de forma eficiente y reducir los costos de las comisiones. | Reuqieren un mayor nivel de supuestos para su confianza (por ejemplo, un quórum de validadores maliciosos unidos podrían cometer un fraude). |
 | Las cadenas laterales compatibles con la EVM permiten a las dapp expandir su ecosistema.                                                             |                                                                                                                                              |

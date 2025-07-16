@@ -13,29 +13,8 @@ Ethereum può aiutare molti tipi di aziende, incluse le grandi società:
 - Instaurare nuovi modelli di business e offrire opportunità per la creazione di valore
 - Creare organizzazioni a prova di futuro
 
-Le applicazioni blockchain aziendali possono essere create sulla [rete principale](/glossary/#mainnet) pubblica Ethereum senza permessi o su blockchain private basate sulla tecnologia Ethereum. Consulta maggiori informazioni sulle [catene Ethereum aziendali private](/enterprise/private-ethereum/).
+Nei primi anni, molte applicazioni aziendali sulle blockchain erano costruite su blockchain compatibili con Ethereum con autorizzazione privata o catene di consorzio. Oggi, grazie ai progressi tecnologici che hanno permesso maggiore volume, costi di transazione inferiori e privacy, la maggior parte delle applicazioni aziendali che utilizza la tecnologia Ethereum è costruita sulla Rete Principale di Ethereum o su catene del [Livello 2](/layer-2).
 
-## Ethereum pubblica e privata {#private-vs-public}
-
-Esiste una sola rete principale Ethereum pubblica. Le applicazioni create sulla rete principale sono in grado di interagire, esattamente come le applicazioni create sulla rete Internet possono connettersi tra di loro, sfruttando tutto il potenziale della blockchain decentralizzata.
-
-Molte aziende e consorzi hanno sviluppato blockchain private e con permessi basate sulla tecnologia di Ethereum, per applicazioni specifiche.
-
-### Differenze fondamentali {#key-differences}
-
-- Sicurezza/immutabilità della blockchain - La resistenza della blockchain a manomissioni è determinata dall'algoritmo di consenso. La rete principale Ethereum è resa sicura dall'interazione tra migliaia di nodi indipendenti eseguiti da individui e miner in tutto il mondo. Le catene private solitamente hanno un numero ridotto di nodi, controllati da una o da poche organizzazioni; questi nodi possono essere controllati in modo rigido, ma basta che pochi vengano compromessi perché la catena venga riscritta o vengano commesse transazioni fraudolente.
-- Prestazioni - Siccome le catene aziendali Ethereum possono usare nodi ad alte prestazioni, con requisiti hardware speciali e algoritmi di consenso diversi come la Proof of Authority, possono raggiungere volumi maggiori per le transazioni sul livello base (livello 1). Sulla Rete Principale di Ethereum, un volume elevato può essere ottenuto utilizzando le [soluzioni di ridimensionamento di Livello 2](/layer-2).
-- Costo - Il costo per eseguire una catena privata si riflette principalmente nel lavoro di configurazione e gestione della catena e dei server che la eseguono. Sebbene non vi siano costi per connettersi alla Rete Principale di Ethereum, esiste un costo del gas per ogni transazione che dev'essere pagata in Ether. I trasmettitori di meta-transazioni possono eliminare la necessità per gli utenti finali, e persino per le imprese, di gestire e utilizzare direttamente gli ether nelle proprie transazioni. Alcune [analisi](https://theblockchaintest.com/uploads/resources/EY%20-%20Total%20cost%20of%20ownership%20for%20blockchain%20solutions%20-%202019%20-%20Apr.pdf) hanno dimostrato che il costo totale per operare un'applicazione potrebbe essere inferiore sulla Rete Principale, rispetto all'esecuzione di una catena privata.
-- Gestione dei permessi per i nodi - Solo i nodi autorizzati possono unirsi a catene private. Chiunque può configurare un nodo sulla rete principale Ethereum.
-- Privacy - L'accesso ai dati scritti sulle catene private può essere controllato limitando l'accesso alla rete e, su base più granulare, tramite controllo degli accessi e transazioni private. Tutti i dati scritti sul livello 1 della rete principale sono visibili a chiunque, quindi le informazioni sensibili devono essere conservate e trasmesse esternamente alla catena oppure criptate. I Stanno emergendo dei modelli di progettazione aventi questo scopo (es. Baseline, Nightfall), nonché delle soluzioni di Livello 2 che mantengono i dati isolati e separati dal Livello 1.
-
-### Perché sviluppare sulla rete principale Ethereum {#why-build-on-ethereum-mainnet}
-
-Un beneficio chiave delle blockchain pubbliche per le aziende è la resistenza al monopolio. L'utilizzo della Rete Principale come un giudice neutrale per coordinare le transazioni aziendali ti permette di evitare di doverti fidare di un'altra azienda, su cui i tuoi concorrenti potrebbero ottenere il controllo o l'influenza, mettendoti in svantaggio. Su una piattaforma aperta, priva di permessi e decentralizzata a cui tutti possono unirsi, utilizzare e contribuire, non esiste alcuna autorità centrale che potrebbe utilizzare il propriio poteere come un vantaggio su di te.
-
-Le aziende sperimentano la tecnologia blockchain dal 2016 circa, quando furono lanciati i progetti Hyperledger, Quorum e Corda. Inizialmente, si puntava largameente sulle blockchain aziendali private e con permessi, ma a partire dal 2019 si è verificato un cambio di marcia sul concetto di blockchain pubbliche piuttosto che private, per le applicazioni aziendali. Paul Brody di EY ha [parlato](https://www.youtube.com/watch?v=-ycu5vGDdZw&feature=youtu.be&t=3668) dei benefici della costruzione su blockchain pubbliche (piuttosto che private), che (a seconda dell'applicazione) potrebbe includere una maggiore sicurezza/immutabilità, trasparenza, minore costo totale di proprietà e l'abilità di interoperare con tutte le altre applicazioni, anch'esse presenti sulla Rete Principale (effetti della rete). Condividere un quadro comune di riferimento tra le aziende evita di dover creare inutilmente numerosi silos isolati che non possono comunicare e condividere o sincronizzare informazioni tra di loro.
-
-Un altro sviluppo che sta spostando l'attenzione verso le blockchain pubbliche è il [Livello 2](/layer-2). Con livello 2 si intende una categoria di tecnologie per la scalabilità che permettono volumi elevati sulle catene pubbliche. Ma le soluzioni di livello 2 possono anche [permettere di vincere alcune sfide che hanno portato gli sviluppatori aziendali a scegliere in passato le catene private](https://entethalliance.org/how-ethereum-layer-2-scaling-solutions-address-barriers-to-enterprises-building-on-mainnet/).
 
 ## Risorse {#enterprise-resources}
 
@@ -43,6 +22,7 @@ Un altro sviluppo che sta spostando l'attenzione verso le blockchain pubbliche �
 
 Risorse non tecniche per comprendere come le aziende possono beneficiare da Ethereum
 
+- [Perchè le blockchain sono utili per le aziende?](https://entethalliance.org/why-are-blockchains-useful-for-business/) - _Tratta il valore delle blockchain attraverso la lente della prevedibilità_
 - [Rapporto di Preparazione Aziendale 2023 dell'Enterprise Ethereum Alliance](https://entethalliance.org/eea-ethereum-business-readiness-report-2023/): _sonda il potenziale e le capacità dell'Ethereum pubblica e del più ampio ecosistema di Ethereum per le aziende_
 - [_Ethereum per Aziende_ di Paul Brody](https://www.uapress.com/product/ethereum-for-business/) _è una guida in inglese semplificato ai casi d'uso che generano ricavi dalla gestione delle risorse ai pagamenti alle filiere_
 
@@ -83,13 +63,10 @@ Sono stati compiuti degli sforzi collaborativi per rendere Ethereum accessibile 
 - [Baseline Project](https://www.baseline-protocol.org/): _Il Protocollo di Baseline è una serie di strumenti e librerie che aiutano le aziende a coordinare processi aziendali e flussi di lavoro complessi e multiparte nel rispetto della privacy, mantenendo i dati nei rispettivi sistemi di registrazione. Lo standard consente a due o più macchine di stato di ottenere e mantenere la coerenza dei dati e la continuità del flusso di lavoro, utilizzando una rete come un quadro di riferimento comune._
 - [Chainlens](https://www.chainlens.com/): _Piattaforma analitica e di dati sulla blockchain SaaS e locale da Web3 Labs_
 - [Ernst & Young's 'Nightfall'](https://github.com/EYBlockchain/nightfall_3): _un'applcazione per trasferire applcazoni ERC20, ERC721 ed ERC1155 sotto Conoscenza Zero, utilizzando un Rollup Ottimistico_
-- [Truffle Suite](https://trufflesuite.com) _è una suite di sviluppo della blockchain (Truffle, Ganache, Drizzle)_
 
 ### Soluzioni di scalabilità {#scalability-solutions}
 
-Il [livello 2](/layer-2) è una serie di tecnologie o sistemi basati su Ethereum (Livello 1), che ne ereditano le proprietà di sicurezza e forniscono una maggiore capacità (volume) delle transazioni, commissioni sulle transazioni (costi operativi) ridotte e più veloci conferme delle transazioni, rispetto al Livello 1. Le soluzioni di scalabilità di Livello 2 sono protette dal Livello 1, ma consentono alle applicazioni della blockchain di gestire molti più utenti, azioni o dati, di quanto il Livello 1 potrebbe accomodare. Molte di esse sfruttano i recenti avanzamenti in crittografia e prove a conoscenza zero (ZK), per massimizzare prestazioni e sicurezza.
-
-Costruire le tue applicazioni su una soluzione di scalabilità di Livello 2 può aiutare ad [affrontare molte delle preoccupazioni che hanno precedentemente indotto alcune società a sviluppare su blockchain private](https://entethalliance.org/how-ethereum-layer-2-scaling-solutions-address-barriers-to-enterprises-building-on-mainnet/), pur mantenendo i benefici di sviluppo sulla Rete Principale.
+La maggior parte delle nuove applicazioni sulla blockchain è costruita su catene del [Livello 2](/layer-2). Il Livello 2 è una serie di tecnologie o sistemi basati su Ethereum (Livello 1), che ne ereditano le proprietà di sicurezza e forniscono una maggiore capacità (volume) delle transazioni, commissioni sulle transazioni (costi operativi) inferiori e conferme delle transazioni più veloci rispetto al Livello 1. Le soluzioni di scalabilità di Livello 2 sono protette dal Livello 1, ma consentono alle applicazioni della blockchain di gestire molti più utenti, azioni o dati, di quanto il Livello 1 potrebbe accomodare. Molte di esse sfruttano i recenti progressi nella crittografia e prove di conoscenza zero (ZK) per massimizzare prestazioni e sicurezza, e alcune offrono un ulteriore livello di privacy.
 
 ## Applicazioni aziendali sulla Rete Principale di Ethereum {#enterprise-live-on-mainnet}
 
@@ -139,7 +116,7 @@ Ecco alcune delle applicazioni aziendali sviluppate sulla Rete Principale pubbli
 ### Notarizzazione dei dati {#notarization-of-data}
 
 - [ANSA](https://www.ansa.it/english/news/science_tecnology/2020/04/06/ansa-using-blockchain-to-help-readers_af820b4f-0947-439b-843e-52e114f53318.html): _agenzia giornalistica italiana che combatte le notizie false e consente ai lettori di verificare l'origine delle notizie registrandole sulla Rete Principale_
-- [Breitling](https://www.coindesk.com/breitling-arianee-all-new-watches-ethereum): _registra l'origine e lo storico di riparazioni di orologi su Ethereum_
+- [Breitling](https://www.coindesk.com/business/2020/10/15/breitling-goes-live-with-ethereum-based-system-to-put-all-new-watches-on-the-blockchain): _registra l'origine e lo storico di riparazioni di orologi su Ethereum_
 - [BRØK](https://www.xn--brk-1na.no/): _una piattaforma di tabelle di capitalizzazione per le aziende non quotate al pubblico, fornita dal governo norvegese_
 - [Certifaction](https://certifaction.com/): _firme elettroniche legalmente valide con privacy-by-design_
 - [EthSign](https://ethsign.xyz/): _registra i documenti elettronici firmati sulla blockchain di Ethereum_

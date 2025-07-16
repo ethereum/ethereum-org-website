@@ -203,7 +203,7 @@ contract ExampleDapp {
 
 ## イベントとログ {#events-and-logs}
 
-イベント(event)を使用すると、フロントエンドやその他のサブスクライブアプリケーションからスマートコントラクトと通信できます。 トランザクションがマイニングされると、スマートコントラクトはイベントを発行し、フロントエンドが処理できるログをブロックチェーンに書き込みます。
+イベントは、スマートコントラクトがフロントエンドや他のサブスクライブしているアプリケーションと通信することを可能にします。 トランザクションが検証されてブロックに追加されると、スマートコントラクトはイベントを発行し、情報をログに記録できます。これをフロントエンドが処理して活用します。
 
 ## 注釈付きの例 {#annotated-examples}
 
@@ -626,10 +626,10 @@ contract CryptoPizza is IERC721, ERC165 {
         uint256 size;
         // Currently there is no better way to check if there is a contract in an address
         // than to check the size of the code at that address.
-        // See https://ethereum.stackexchange.com/a/14016/36603
-        // for more details about how this works.
-        // TODO Check this again before the Serenity release, because all addresses will be
-        // contracts then.
+        // どのように動くかの詳細は、
+        // https://ethereum.stackexchange.com/a/14016/36603 を確認する。
+        // TODO すべてのアドレスが縮小されるので、
+        // セレニティリリースの前に、ここをもう一度確認する。
         // solium-disable-next-line security/no-inline-assembly
         assembly {
             size := extcodesize(account)

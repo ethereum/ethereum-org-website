@@ -34,7 +34,7 @@ lang: ja
 
 #### 推奨テストネット
 
-現在クライアントデベロッパーによってメンテナンスされているパブリックのテストネットは、SepoliaとGoerliの2つです。 Sepoliaは、コントラクトやアプリケーションのデベロッパーのためのネットワークで、アプリケーションのテストに使用されます。 Goerliは、プロトコルのデベロッパーがネットワークのアップグレードをテストしたり、ステーカーがバリデータの実行をテストしたりするために使用されるネットワークです。
+現在クライアントデベロッパーによってメンテナンスされているパブリックのテストネットは、SepoliaとHoodiの2つです。 Sepoliaは、コントラクトやアプリケーションのデベロッパーのためのネットワークで、アプリケーションのテストに使用されます。 Hoodiは、プロトコルのデベロッパーがネットワークのアップグレードをテストしたり、ステーカーがバリデータの実行をテストしたりするために使用されるネットワークです。
 
 #### Sepolia(セポリア) {#sepolia}
 
@@ -60,13 +60,14 @@ lang: ja
 - [Coinbase Wallet Faucet | Sepolia](https://coinbase.com/faucets/ethereum-sepolia-faucet)
 - [Alchemy Sepolia faucet](https://sepoliafaucet.com/)
 - [Infura Sepolia faucet](https://www.infura.io/faucet)
-- [Chainstack Sepolia faucet](https://faucet.chainstack.com/sepolia-faucet)
+- [Chainstack Sepolia faucet](https://faucet.chainstack.com/sepolia-testnet-faucet)
+- [Ethereum Ecosystem faucet](https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia)
 
-#### Goerli(ゴエリ) _(長期サポート)_ {#goerli}
+#### Hoodi {#hoodi}
 
-_注: [Goerliテストネットは廃止予定となっており](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17)、2023年に[Holesovice](https://github.com/eth-clients/holesovice)に置き換わります。 アプリケーションのSepoliaへの移行をご検討ください。_
+_注: [Goerliテストネットは廃止されており](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17)、Hoodiに置き換えられました。 アプリケーションのSepoliaへの移行をご検討ください。_
 
-Goerliは、バリデーションやステーキングのテストを行うためのテストネットです。 Goerliネットワークは、テストネットバリデータを実行したいユーザーのために公開されています。 メインネットにデプロイする前にプロトコルのアップグレードをテストしたいステーカーは、Goerliを使用する必要があります。
+Hoodiは、バリデーションやステーキングのテストを行うためのテストネットです。 Hoodiネットワークは、テストネットバリデータを実行したいユーザーのために公開されています。 メインネットにデプロイする前にプロトコルのアップグレードをテストしたいステーカーは、Hoodiを使用する必要があります。
 
 - オープンなバリデータセット。ステーカーはネットワークのアップグレードをテスト可能。
 - 大きなステート。複雑なスマートコントラクトのインタラクションのテストに有効。
@@ -74,52 +75,46 @@ Goerliは、バリデーションやステーキングのテストを行うた�
 
 ##### リソース
 
-- [ウェブサイト](https://goerli.net/)
-- [GitHub](https://github.com/eth-clients/goerli)
-- [Etherscan](https://goerli.etherscan.io)
-- [Blockscout](https://eth-goerli.blockscout.com/)
+- [ウェブサイト](https://hoodi.ethpandaops.io/)
+- [GitHub](https://github.com/eth-clients/hoodi)
+- [Explorer](https://explorer.hoodi.ethpandaops.io/)
+- [Checkpoint Sync](https://checkpoint-sync.hoodi.ethpandaops.io/)
 
 ##### フォーセット
 
-- [QuickNode Goerli Faucet](https://faucet.quicknode.com/drip)
-- [Grabteeth](https://grabteeth.xyz/)
-- [PoW faucet](https://goerli-faucet.pk910.de/)
-- [Paradigm faucet](https://faucet.paradigm.xyz/)
-- [Alchemy Goerli Faucet](https://goerlifaucet.com/)
-- [All That Node Goerli Faucet](https://www.allthatnode.com/faucet/ethereum.dsrv)
-- [Coinbase Wallet Faucet | Goerli](https://coinbase.com/faucets/ethereum-goerli-faucet)
-- [Chainstack Goerli faucet](https://faucet.chainstack.com/goerli-faucet)
+- [Hoodiフォーセット](https://hoodi.ethpandaops.io/)
 
-Goerliテストネットでバリデータを起動するには、ethstakerの["cheap goerli validator" launchpad](https://goerli.launchpad.ethstaker.cc/en/)を使用してください。
+Hoodiテストネットでバリデータを起動するには、[Hoodi launchpad](https://hoodi.launchpad.ethereum.org/en/)を使用してください。
 
 ### レイヤー2テストネット {#layer-2-testnets}
 
 [レイヤー2(L2)](/layer-2/)は、イーサリアムのスケーリングソリューションの総称であり、 レイヤー2はイーサリアムを拡張し、またイーサリアムのセキュリティ保証を継承する独立したブロックチェーンです。 レイヤー2のテストネットは、通常、パブリックイーサリアムのテストネットと対になっています。
 
-#### Arbitrum Goerli {#arbitrum-goerli}
+#### Arbitrum Sepolia {#arbitrum-sepolia}
 
 [Arbitrum](https://arbitrum.io/)のテストネット。
 
 ##### フォーセット
 
-- [Chainlinkフォーセット](https://faucets.chain.link/)
+- [Chainlinkフォーセット](https://faucets.chain.link/arbitrum-sepolia)
+- [Alchemyフォーセット](https://www.alchemy.com/faucets/arbitrum-sepolia)
 
-#### Optimistic Goerli {#optimistic-goerli}
+#### Optimistic Sepolia {#optimistic-sepolia}
 
 [Optimism](https://www.optimism.io/)のテストネット。
 
 ##### フォーセット
 
-- [Paradigm faucet](https://faucet.paradigm.xyz/)
-- [Coinbase Wallet Faucet | Optimism Goerli](https://coinbase.com/faucets/optimism-goerli-faucet)
+- [Chainlinkフォーセット](https://faucets.chain.link/optimism-sepolia)
+- [Alchemyフォーセット](https://www.alchemy.com/faucets/optimism-sepolia)
 
-#### Starknet Goerli {#starknet-goerli}
+#### Starknet Sepolia {#starknet-sepolia}
 
 [Starknet](https://www.starknet.io)のテストネット
 
 ##### フォーセット
 
-- [Starknetフォーセット](https://faucet.goerli.starknet.io)
+- [Alchemyフォーセット](https://www.alchemy.com/faucets/starknet-sepolia)
 
 ## プライベートネットワーク {#private-networks}
 

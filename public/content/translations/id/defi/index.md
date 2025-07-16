@@ -1,5 +1,6 @@
 ---
 title: Keuangan terdesentralisasi (DeFi)
+metaTitle: Apa yang dimaksud dengan DeFi? | Manfaat dan Kegunaan Keuangan Terdesentralisasi
 description: Gambaran umum tentang DeFi di Ethereum
 lang: id
 template: use-cases
@@ -55,7 +56,7 @@ Salah satu cara terbaik untuk melihat potensi DeFi adalah dengan memahami permas
 
 Bitcoin dalam banyak hal adalah aplikasi DeFi yang pertama. Bitcoin memungkinkan Anda benar-benar memiliki dan mengontrol nilai dan mengirimkannya ke mana saja di seluruh dunia. Ini dilakukan dengan menyediakan cara bagi sejumlah besar orang, yang tidak saling percaya, untuk menyepakati isi buku besar akun tanpa memerlukan perantara terpercaya. Bitcoin terbuka untuk siapa saja dan tidak ada yang memiliki wewenang untuk mengubah aturannya. Aturan Bitcoin, seperti kelangkaan dan keterbukaannya, ditulis ke dalam teknologi. Ini berbeda dengan keuangan tradisional di mana pemerintah dapat mencetak uang yang mengurangi nilai tabungan Anda dan perusahaan dapat menutup pasar.
 
-Ethereum dibangun di atas ini. Seperti Bitcoin, aturannya tidak dapat berubah terhadap Anda dan siapa pun yang memiliki akses. Namun itu juga membuat uang digital ini dapat diprogram, menggunakan [kontrak pintar](/glossary#smart-contract), sehingga Anda dapat lebih dari sekadar menyimpan dan mengirim nilai.
+Ethereum dibangun di atas ini. Seperti Bitcoin, aturannya tidak dapat berubah terhadap Anda dan siapa pun yang memiliki akses. Namun itu juga membuat uang digital ini dapat diprogram, menggunakan [kontrak pintar](/glossary/#smart-contract), sehingga Anda dapat lebih dari sekadar menyimpan dan mengirim nilai.
 
 <YouTube id="qFBYB4W2tqU" />
 
@@ -90,7 +91,7 @@ Ada sebuah alternatif terdesentralisasi untuk kebanyakan layanan keuangan. Tetap
 
 ### Kirim uang ke seluruh dunia dengan cepat {#send-money}
 
-Sebagai sebuah blockchain, Ethereum dirancang untuk mengirim transaksi dalam cara yang aman dan global. Seperti Bitcoin, Ethereum membuat pengiriman uang ke seluruh dunia semudah mengirimkan email. Cukup masukkan [nama ENS](/nft/#nft-domains) penerima Anda (seperti bob.eth) atau alamat akun mereka dari dompet Anda dan pembayaran Anda akan berpindah langsung ke mereka dalam hitungan menit (biasanya). Untuk mengirim atau menerima pembayaran, Anda akan memerlukan sebuah [dompet](/wallets/).
+Sebagai sebuah blockchain, Ethereum dirancang untuk mengirim transaksi dalam cara yang aman dan global. Seperti Bitcoin, Ethereum membuat pengiriman uang ke seluruh dunia semudah mengirimkan email. Cukup masukkan [nama ENS](/glossary/#ens) penerima Anda (seperti bob.eth) atau alamat akun mereka dari dompet Anda dan pembayaran Anda akan berpindah langsung ke mereka dalam hitungan menit (biasanya). Untuk mengirim atau menerima pembayaran, Anda akan memerlukan sebuah [dompet](/wallets/).
 
 <ButtonLink href="/dapps/?category=finance#explore">
   Lihat dapp pembayaran
@@ -100,7 +101,7 @@ Sebagai sebuah blockchain, Ethereum dirancang untuk mengirim transaksi dalam car
 
 Anda juga dapat menyalurkan uang melalui Ethereum. Ini memungkinkan Anda membayar gaji seseorang gaji dalam hitungan detik, yang memberi mereka akses ke uangnya kapan pun mereka membutuhkannya. Atau sewakan sesuatu dalam hitungan detik, seperti sebuah loker penyimpanan atau skuter listrik.
 
-Dan jika Anda tidak ingin mengirim atau menyalurkan [ETH](/eth/) karena perubahan jumlah nilainya, ada mata uang alternatif di Ethereum: stablecoin.
+Dan jika Anda tidak ingin mengirim atau menyalurkan [ETH](/glossary/#ether) karena perubahan nilainya yang tinggi, ada mata uang alternatif di Ethereum: [stablecoin](/glossary/#stablecoin).
 
 <Divider />
 
@@ -133,7 +134,7 @@ Ada banyak keuntungan menggunakan pemberi pinjaman terdesentralisasi...
 
 Saat ini, memberi pinjaman dan meminjam uang semuanya berpusat pada para individu yang terlibat. Bank perlu tahu apakah kemungkinan besar Anda akan membayar kembali pinjaman sebelum pemberian pinjaman dilakukan.
 
-Pemberian pinjaman terdesentralisasi berlangsung tanpa mengharuskan kedua pihak menunjukkan identitas mereka. Sebaliknya, peminjam harus memasang jaminan yang akan diterima pemberi pinjaman secara otomatis jika pinjaman mereka tidak dilunasi. Beberapa pemberi pinjaman bahkan menerima NFT sebagai jaminan. NFT merupakan akta dari aset unit, seperti sebuah lukisan. [Selengkapnya tentang NFT](/nft/)
+Pemberian pinjaman terdesentralisasi berlangsung tanpa mengharuskan kedua pihak menunjukkan identitas mereka. Sebaliknya, peminjam harus memasang jaminan yang akan diterima pemberi pinjaman secara otomatis jika pinjaman mereka tidak dilunasi. Beberapa pemberi pinjaman bahkan menerima [NFT](/glossary/#nft) sebagai jaminan. NFT merupakan akta dari aset unit, seperti sebuah lukisan. [Selengkapnya tentang NFT](/nft/)
 
 Ini memungkinkan Anda meminjam uang tanpa pemeriksaan kredit atau menyediakan informasi pribadi.
 
@@ -168,7 +169,9 @@ Jika pasokan bursa B menurun secara tiba-tiba dan pengguna tidak dapat membeli d
 
 Agar dapat melakukan contoh di atas dalam dunia keuangan tradisional, Anda akan membutuhkan jumlah yang sangat besar. Strategi penghasil uang ini hanya dapat dijangkau oleh mereka yang memiliki kekayaan. Pinjaman flash adalah sebuah contoh dari masa depan di mana kepemilikan sejumlah uang tidak harus merupakan prasyarat untuk menghasilkan uang.
 
-[Lebih lanjut tentang pinjaman flash](https://aave.com/flash-loans/)
+<ButtonLink isSecondary href="https://aave.com/docs/concepts/flash-loans/">
+  Lebih lanjut tentang pinjaman flash
+</ButtonLink>
 
 <Divider />
 
@@ -180,7 +183,7 @@ Anda dapat menghasilkan bunga pada kripto Anda dengan meminjamkannya dan melihat
 
 - Anda meminjamkan 100 Dai, [stablecoin](/stablecoins/), ke produk seperti Aave.
 - Anda menerima 100 Aave Dai (aDai) yang merupakan sebuah token yang mewakili Dai Anda yang dipinjamkan.
-- aDai Anda akan bertambah sesuai dengan tingkat bunga dan Anda dapat melihat saldo bertambah di dompet. Tergantung pada APR, saldo dompet Anda akan membaca sesuatu seperti 100,1234 setelah beberapa hari atau bahkan beberapa jam!
+- aDai Anda akan bertambah sesuai dengan tingkat bunga dan Anda dapat melihat saldo bertambah di dompet. Tergantung pada [APR](/glossary/#apr), saldo dompet Anda akan membaca sesuatu seperti 100,1234 setelah beberapa hari atau bahkan beberapa jam!
 - Anda dapat menarik sejumlah Dai reguler yang setara dengan salso aDai Anda kapan saja.
 
 <ButtonLink href="/dapps/?category=finance#explore">
@@ -233,7 +236,7 @@ Ketika Anda menggunakan bursa terpusat, Anda harus mendepositokan aset Anda sebe
 
 Ada produk manajemen dana di Ethereum yang akan mencoba mengembangkan portofolio Anda berdasarkan strategi pilihan Anda. Ini bersifat otomatis, terbuka untuk semua orang, dan tidak memerlukan manajer manusia yang mengambil imbalan dari keuntungan Anda.
 
-Sebuah contoh yang baik untuk ini adalah [dana DeFi Pulse Index (DPI)](https://defipulse.com/blog/defi-pulse-index/). Ini adalah dana yang menyeimbangkan kembali secara otomatis untuk memastikan portofolio Anda selalu menyertakan [token DeFi teratas berdasarkan kapitalisasi pasar](https://www.coingecko.com/en/defi). Anda tidak perlu mengelola detail apa pun dan Anda dapat menarik dananya kapan pun Anda menginginkannya.
+Sebuah contoh yang baik untuk ini adalah [dana DeFi Pulse Index (DPI)](https://defipulse.com/blog/defi-pulse-index/). Ini adalah dana yang menyeimbangkan kembali secara otomatis untuk memastikan portofolio Anda selalu menyertakan token DeFi teratas berdasarkan kapitalisasi pasar. Anda tidak perlu mengelola detail apa pun dan Anda dapat menarik dananya kapan pun Anda menginginkannya.
 
 <ButtonLink href="/dapps/?category=finance#explore">
   Lihat dapp investasi
@@ -266,7 +269,9 @@ Pendanaan kuadrat memastikan bahwa proyek yang menerima pendanaan terbanyak adal
 
 Ini berarti Proyek A dengan 100 sumbangannya senilai 1 dolar dapat menerima lebih banyak pendanaan daripada Proyek B dengan donasi tunggal senilai 10.000 dolar (bergantung pada ukuran pool yang sesuai).
 
-[Selengkapnya tentang pendanaan kuadrat](https://wtfisqf.com)
+<ButtonLink href="https://wtfisqf.com">
+  Selengkapnya tentang pendanaan kuadrat
+</ButtonLink>
 
 <Divider />
 
@@ -320,6 +325,8 @@ Anda dapat membayangkan tentang DeFi dalam lapisan:
 3. Protokol – [kontrak pintar](/glossary/#smart-contract) yang menyediakan fungsionalitas, misalnya, layanan yang memungkinkan pemberian pinjaman aset yang terdesentralisasi.
 4. [Aplikasi](/dapps/) – produk yang kita gunakan untuk mengelola dan mengakses protokol.
 
+Catatan: sebagian besar DeFi menggunakan [standar ERC-20](/glossary/#erc-20). Aplikasi di DeFi menggunakan pembungkus ETH yang disebut Wrapped ether (WETH). [Pelajari lebih lanjut tentang wrapped ether](/wrapped-eth).
+
 ## Bangun DeFi {#build-defi}
 
 DeFi adalah gerakan sumber terbuka. Anda bisa memeriksa, melakukan fork, dan berinovasi pada semua protokol dan aplikasi DeFi. Karena tumpukan berlapis ini (semuanya berbagi blockchain dan aset dasar yang sama), protokol dapat digabungkan dan dicocokkan untuk membuka peluang kombo yang unik.
@@ -328,13 +335,12 @@ DeFi adalah gerakan sumber terbuka. Anda bisa memeriksa, melakukan fork, dan ber
   Lebih lanjut tentang membangun dapp
 </ButtonLink>
 
-## Bacaan lebih lanjut {#futher-reading}
+## Bacaan lebih lanjut {#further-reading}
 
 ### Data DeFi {#defi-data}
 
 - [DeFi Prime](https://defiprime.com/)
 - [DeFi Llama](https://defillama.com/)
-- [DeFi Rate](https://defirate.com/)
 
 ### Artikel DeFi {#defi-articles}
 
@@ -348,5 +354,9 @@ DeFi adalah gerakan sumber terbuka. Anda bisa memeriksa, melakukan fork, dan ber
 
 ### Komunitas {#communities}
 
-- [Server Discord DeFi Llama](https://discord.gg/buPFYXzDDd)
+- [Server Discord DeFi Llama](https://discord.defillama.com/)
 - [Server Discord DeFi Pulse](https://discord.gg/Gx4TCTk)
+
+<Divider />
+
+<QuizWidget quizKey="defi" />

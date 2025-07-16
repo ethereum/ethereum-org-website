@@ -1,28 +1,21 @@
+"use client"
+
 import { useState } from "react"
-import sortBy from "lodash/sortBy"
-import { FaChevronRight } from "react-icons/fa6"
-import {
-  Box,
-  Flex,
-  Icon,
-  LinkBox,
-  LinkOverlay,
-  List,
-  ListItem,
-  useToken,
-  VisuallyHidden,
-} from "@chakra-ui/react"
+import { sortBy } from "lodash"
+import { ChevronRight } from "lucide-react"
 
 import Emoji from "@/components/Emoji"
 import InfoBanner from "@/components/InfoBanner"
-import Input from "@/components/Input"
-import InlineLink, { BaseLink } from "@/components/Link"
-import Text from "@/components/OldText"
 import Translation from "@/components/Translation"
 
+import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import meetups from "@/data/community-meetups.json"
+
+import { Flex } from "./ui/flex"
+import Input from "./ui/input"
+import InlineLink, { BaseLink } from "./ui/Link"
 
 export interface Meetup {
   title: string
@@ -59,89 +52,55 @@ const MeetupList = () => {
     })
   }
 
-  const primaryBaseColor = useToken("colors", "primary.base")
-
   return (
-    <Box>
+    <div>
       <Input
-        mb={6}
+        className="mb-6 w-full"
         onChange={handleSearch}
         placeholder={"Search by meetup title or location"}
         aria-describedby="input-instruction"
       />
       {/* hidden for attachment to input only */}
-      <VisuallyHidden hidden id="input-instruction">
+      <span id="input-instruction" className="sr-only">
         results update as you type
-      </VisuallyHidden>
-
-      <List
-        m={0}
-        border={"2px solid"}
-        borderColor={"offBackground"}
+      </span>
+      <ul
+        className="m-0 border-2 border-body-light"
         aria-label="Event meetup results"
       >
         {filteredMeetups.map((meetup, idx) => (
-          <LinkBox
-            as={ListItem}
+          <BaseLink
+            href={meetup.link}
+            hideArrow
+            className={cn(
+              "group mb-[0.25px] flex w-full justify-between p-4 text-current no-underline",
+              "hover:bg-background-highlight hover:text-current hover:no-underline hover:shadow-[0_0_1px] hover:shadow-primary",
+              "border-b-2 border-body-light"
+            )}
             key={idx}
-            display="flex"
-            justifyContent="space-between"
-            mb={0.25}
-            p={4}
-            w="100%"
-            _hover={{
-              textDecoration: "none",
-              borderRadius: "base",
-              boxShadow: `0 0 1px ${primaryBaseColor}`,
-              bg: "tableBackgroundHover",
-            }}
-            borderBottom={"2px solid"}
-            borderColor={"offBackground"}
           >
-            <Flex flex="1 1 75%" me={4}>
-              <Box me={4} opacity="0.4">
-                {idx + 1}
-              </Box>
-              <Box>
-                <LinkOverlay
-                  as={BaseLink}
-                  href={meetup.link}
-                  textDecor="none"
-                  color="text"
-                  hideArrow
-                  isExternal
-                >
+            <Flex className="me-4 flex-[1_1_75%]">
+              <div className="me-4 opacity-40">{idx + 1}</div>
+              <div>
+                <p className="no-underline group-hover:text-primary-hover group-hover:underline">
                   {meetup.title}
-                </LinkOverlay>
-              </Box>
+                </p>
+              </div>
             </Flex>
-            <Flex
-              textAlign="end"
-              alignContent="flex-start"
-              flex="1 1 25%"
-              me={4}
-              flexWrap="wrap"
-            >
+            <Flex className="me-4 flex-[1_1_25%] flex-wrap content-start items-center text-end">
               <Emoji
                 text={meetup.emoji}
                 className="me-2 text-md leading-none"
               />
-              <Text mb={0} opacity={"0.6"}>
-                {meetup.location}
-              </Text>
+              <p className="mb-0 opacity-60">{meetup.location}</p>
             </Flex>
-            <Flex alignItems={"center"}>
-              <Icon
-                as={FaChevronRight}
-                width={{ base: "14px", xl: "18px" }}
-                height={{ base: "14px", xl: "18px" }}
-                color={"text"}
-              />
+            <Flex className="items-center">
+              <ChevronRight />
             </Flex>
-          </LinkBox>
+          </BaseLink>
         ))}
-      </List>
-      <Box aria-live="assertive" aria-atomic>
+      </ul>
+      <div aria-live="assertive" aria-atomic>
         {!filteredMeetups.length && (
           <InfoBanner emoji=":information_source:">
             <Translation id="page-community:page-community-meetuplist-no-meetups" />{" "}
@@ -150,8 +109,8 @@ const MeetupList = () => {
             </InlineLink>
           </InfoBanner>
         )}
-      </Box>
-    </Box>
+      </div>
+    </div>
   )
 }
 

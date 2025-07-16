@@ -16,6 +16,22 @@ ERC-4626 是优化和统一收益资金库技术参数的标准。 它为表示�
 
 [EIP-4626](https://eips.ethereum.org/EIPS/eip-4626) 中对 ERC-4626 代币进行了全面的描述。
 
+**异步资金库扩展 (ERC-7540)**
+
+ERC-4626 针对原子存款和赎回上限进行了优化。 如果达到上限，则无法提交新的存款或赎回。 该上限不适用于任何以异步操作或延迟作为与资金库交互的先决条件的智能合约（例如现实世界资产协议、非足额抵押贷款协议、跨链贷款协议、流动性质押代币或保险安全模块）。
+
+ERC-7540 拓展了 ERC-4626 资金库在异步用例中的实用性。 充分利用现有的资金库接口 (`deposit`/`withdraw`/`mint`/`redeem`) 来声明异步请求。
+
+[ERC-7540](https://eips.ethereum.org/EIPS/eip-7540) 中完整描述了 ERC-7540 扩展。
+
+**多资产资金库扩展 (ERC-7575)**
+
+ERC-4626 不支持的一个缺失用例是具有多种资产或入口点的资金库，例如流动性提供商 (LP) 代币。 由于 ERC-4626 要求其本身是 ERC-20，这些用例通常难以操作或不兼容。
+
+ERC-7575 通过从 ERC-4626 实现外部化 ERC-20 代币实现，增加了对多资产资金库的支持。
+
+[ERC-7575](https://eips.ethereum.org/EIPS/eip-7575) 中完整描述了 ERC-7575 扩展。
+
 ## 前提条件 {#prerequisites}
 
 为了更好地理解这个页面，我们建议你首先阅读[代币标准](/developers/docs/standards/tokens/)和 [ERC-20](/developers/docs/standards/tokens/erc-20/)。
@@ -27,7 +43,7 @@ ERC-4626 是优化和统一收益资金库技术参数的标准。 它为表示�
 #### asset {#asset}
 
 ```solidity
-function asset() public view returns (address)
+function asset() public view returns (address assetTokenAddress)
 ```
 
 此函数返回用于资金库记帐、存款和取款的标的代币的地址。
@@ -59,7 +75,7 @@ function convertToAssets(uint256 shares) public view returns (uint256 assets)
 #### maxDeposit {#maxdeposit}
 
 ```solidity
-function maxDeposit(address receiver) public view returns (uint256)
+function maxDeposit(address receiver) public view returns (uint256 maxAssets)
 ```
 
 此函数返回 `receiver` 的一次 [`deposit`](#deposit) 调用中可以存入的最大标的资产数量。
@@ -67,7 +83,7 @@ function maxDeposit(address receiver) public view returns (uint256)
 #### previewDeposit {#previewdeposit}
 
 ```solidity
-function previewDeposit(uint256 assets) public view returns (uint256)
+function previewDeposit(uint256 assets) public view returns (uint256 shares)
 ```
 
 此函数允许用户模拟他们在当前区块的存款效果。
@@ -83,7 +99,7 @@ function deposit(uint256 assets, address receiver) public returns (uint256 share
 #### maxMint {#maxmint}
 
 ```solidity
-function maxMint(address receiver) public view returns (uint256)
+function maxMint(address receiver) public view returns (uint256 maxShares)
 ```
 
 此函数返回 `receiver` 在单次 [`mint`](#mint) 调用中可以铸造的最大份额。
@@ -91,7 +107,7 @@ function maxMint(address receiver) public view returns (uint256)
 #### previewMint {#previewmint}
 
 ```solidity
-function previewMint(uint256 shares) public view returns (uint256)
+function maxMint(address receiver) public view returns (uint256 maxShares)
 ```
 
 此函数允许用户在当前区块模拟他们的铸币效果。
@@ -107,7 +123,7 @@ function mint(uint256 shares, address receiver) public returns (uint256 assets)
 #### maxWithdraw {#maxwithdraw}
 
 ```solidity
-function maxWithdraw(address owner) public view returns (uint256)
+function maxWithdraw(address owner) public view returns (uint256 maxAssets)
 ```
 
 此函数返回可以通过单次 [`withdraw`](#withdraw) 调用从 `owner` 余额中提取的最大标的资产数量。
@@ -115,7 +131,7 @@ function maxWithdraw(address owner) public view returns (uint256)
 #### previewWithdraw {#previewwithdraw}
 
 ```solidity
-function previewWithdraw(uint256 assets) public view returns (uint256)
+function previewWithdraw(uint256 assets) public view returns (uint256 shares)
 ```
 
 此函数允许用户模拟他们在当前区块取款的效果。
@@ -131,7 +147,7 @@ function withdraw(uint256 assets, address receiver, address owner) public return
 #### maxRedeem {#maxredeem}
 
 ```solidity
-function maxRedeem(address owner) public view returns (uint256)
+function maxRedeem(address owner) public view returns (uint256 maxShares)
 ```
 
 此函数返回可以通过 [`redeem`](#redeem) 调用从 `owner` 余额中赎回的最大份额。
@@ -139,7 +155,7 @@ function maxRedeem(address owner) public view returns (uint256)
 #### previewRedeem {#previewredeem}
 
 ```solidity
-function previewRedeem(uint256 shares) public view returns (uint256)
+function previewRedeem(uint256 shares) public view returns (uint256 assets)
 ```
 
 此函数允许用户在当前区块模拟他们的赎回效果。
@@ -168,11 +184,15 @@ function balanceOf(address owner) public view returns (uint256)
 
 返回 `owner` 当前拥有的资金库份额总量。
 
+### 接口图 {#mapOfTheInterface}
+
+![ERC-4626 接口图](./map-of-erc-4626.png)
+
 ### 事件 {#events}
 
 #### Deposit 事件
 
-**必须**在通过 [`mint`](#mint) 和 [`deposit`](#deposit) 方法将代币存入资金库之前发出
+**必须**在通过 [`mint`](#mint) 和 [`deposit`](#deposit) 方法将代币存入资金库之前发出。
 
 ```solidity
 event Deposit(
@@ -195,7 +215,7 @@ event Withdraw(
     address indexed receiver,
     address indexed owner,
     uint256 assets,
-    uint256 share
+    uint256 shares
 )
 ```
 
@@ -204,4 +224,4 @@ event Withdraw(
 ## 延伸阅读 {#further-reading}
 
 - [EIP-4626：代币化资金库标准](https://eips.ethereum.org/EIPS/eip-4626)
-- [ERC-4626: GitHub Repo](https://github.com/Rari-Capital/solmate/blob/main/src/mixins/ERC4626.sol)
+- [ERC-4626: GitHub Repo](https://github.com/transmissions11/solmate/blob/main/src/tokens/ERC4626.sol)

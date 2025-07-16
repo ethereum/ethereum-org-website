@@ -12,8 +12,6 @@ O diagrama abaixo mostra a relação entre os dois clientes Ethereum. Os dois cl
 
 ![](node-architecture-text-background.png)
 
-_Esta imagem foi emprestada do geth.ethereum.org e usa o logotipo Geth para representar os clientes de execução — há outras opções para o cliente de execução, incluindo Erigon, Nethermind e Besu_
-
 Para que essa estrutura de dois clientes funcione, os clientes de consenso devem ser capazes de passar pacotes de transações para o cliente de execução. Executar transações localmente é como o cliente valida que as transações não violam nenhuma regra do Ethereum e que a atualização proposta para o estado do Ethereum está correta. Da mesma forma, quando o nó é selecionado para ser um produtor de bloco, o cliente de consenso deve ser capaz de solicitar pacotes de transações ao Geth para incluir no novo bloco e executá-los para atualizar o estado global. Essa comunicação entre clientes é tratada por uma conexão RPC local usando a [API engine](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md).
 
 ## O que o cliente de execução faz? {#execution-client}

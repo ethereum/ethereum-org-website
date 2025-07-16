@@ -26,7 +26,7 @@ An internal API is also used for inter-client communication within a node - that
 
 ## Execution client spec {#spec}
 
-[Read the full JSON-RPC API spec on GitHub](https://github.com/ethereum/execution-apis). This API is documented on the [Execution API webpage](https://ethereum.github.io/execution-apis/api-documentation/) and includes an Inspector to try out all the available methods.
+[Read the full JSON-RPC API spec on GitHub](https://github.com/ethereum/execution-apis). This API is documented on the [Execution API webpage](https://ethereum.github.io/execution-apis/) and includes an Inspector to try out all the available methods.
 
 ## Conventions {#conventions}
 
@@ -208,8 +208,8 @@ None
 The full list of current network IDs is available at [chainlist.org](https://chainlist.org). Some common ones are:
 
 - `1`: Ethereum Mainnet
-- `5`: Goerli testnet
 - `11155111`: Sepolia testnet
+- `560048` : Hoodi Testnet
 
 **Example**
 
@@ -387,6 +387,8 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_syncing","params":[],"id":1}
 
 Returns the client coinbase address.
 
+> **Note:** This method has been deprecated as of **v1.14.0** and is no longer supported. Attempting to use this method will result in a "Method not supported" error.
+
 **Parameters**
 
 None
@@ -443,7 +445,7 @@ None
 
 **Returns**
 
-`Boolean` - returns `true` of the client is mining, otherwise `false`.
+`Boolean` - returns `true` if the client is mining, otherwise `false`.
 
 **Example**
 
@@ -990,7 +992,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sendRawTransaction","params"
 
 ### eth_call {#eth_call}
 
-Executes a new message call immediately without creating a transaction on the block chain. Often used for executing read-only smart contract functions, for example the `balanceOf` for an ERC-20 contract.
+Executes a new message call immediately without creating a transaction on the blockchain. Often used for executing read-only smart contract functions, for example the `balanceOf` for an ERC-20 contract.
 
 **Parameters**
 
@@ -1671,10 +1673,10 @@ geth --http --dev console 2>>geth.log
 
 This will start the HTTP RPC interface on `http://localhost:8545`.
 
-We can verify that the interface is running by retrieving the Coinbase address and balance using [curl](https://curl.se). Please note that data in these examples will differ on your local node. If you want to try these commands, replace the request params in the second curl request with the result returned from the first.
+We can verify that the interface is running by retrieving the coinbase address (by obtaining the first address from the array of accounts) and balance using [curl](https://curl.se). Please note that data in these examples will differ on your local node. If you want to try these commands, replace the request params in the second curl request with the result returned from the first.
 
 ```bash
-curl --data '{"jsonrpc":"2.0","method":"eth_coinbase", "id":1}' -H "Content-Type: application/json" localhost:8545
+curl --data '{"jsonrpc":"2.0","method":"eth_accounts","params":[]", "id":1}' -H "Content-Type: application/json" localhost:8545
 {"id":1,"jsonrpc":"2.0","result":["0x9b1d35635cc34752ca54713bb99d38614f63c955"]}
 
 curl --data '{"jsonrpc":"2.0","method":"eth_getBalance", "params": ["0x9b1d35635cc34752ca54713bb99d38614f63c955", "latest"], "id":2}' -H "Content-Type: application/json" localhost:8545

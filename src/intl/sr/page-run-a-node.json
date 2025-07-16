@@ -127,7 +127,7 @@
   "page-run-a-node-what-3-text": "Pokretanje Ethereum čvora može zvučati komplikovano na početku, ali zapravo se svodi na kontinuirano pokretanje klijentskog softvera na računaru koji je povezan s internetom. Dok je van mreže, vaš čvor će biti neaktivan dok se ponovo ne poveže i ažurira sa najnovijim promenama.",
   "page-run-a-node-who-title": "<i>Ko</i>bi trebalo da pokreće čvor?",
   "page-run-a-node-who-preview": "Svako! Čvorovi nisu samo validatori dokaza o zalogu.<i>Bilo ko</i>može da pokrene čvor — nije vam čak potreban ni ETH token.",
-  "page-run-a-node-who-copy-1": "Nije potrebno da zalažate (stake) ETH da biste pokrenuli čvor. Zapravo, svaki drugi čvor na Etheremu je onaj koji drži validatore odgovornim.",
+  "page-run-a-node-who-copy-1": "Nije potrebno da zalažate (stake) ETH da biste pokrenuli čvor. Zapravo, svaki drugi čvor na Ethereumu je onaj koji drži validatore odgovornim.",
   "page-run-a-node-who-copy-2": "Možda nećete dobiti finansijske nagrade koje zarađuju validatori, ali postoji mnogo drugih koristi za svakog korisnika Ethereuma koji razmatra pokretanje čvora, uključujući privatnost, sigurnost, smanjenje zavisnosti od servera trećih strana, otpornost na cenzuru i poboljšanje zdravlja i decentralizacije mreže.",
   "page-run-a-node-who-copy-3": "Ukoliko imate svoj čvor, to znači da ne morate da verujete informacijama o stanju mreže koje pružaju treće strane.",
   "page-run-a-node-who-copy-bold": "Ne verujte. Proverite.",

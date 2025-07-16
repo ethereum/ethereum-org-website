@@ -12,13 +12,13 @@ Do you want to start your Ethereum journey? Our practical guides lead you step-b
 
 1. [How to "create" an Ethereum account](/guides/how-to-create-an-ethereum-account/) - Anyone can create a wallet for free. This guide will show you where to begin.
 
-2. [How to use a wallet](/guides/how-to-use-a-wallet/) - An introduction to the basic features of any wallet and how to use them.
+2. [How to use a wallet](/guides/how-to-use-a-wallet/) - Learn how to send and receive tokens in your wallet and how to connect wallet to projects.
 
 ## Security basics
 
 1. [How to revoke smart contract access to your crypto funds](/guides/how-to-revoke-token-access/) - If you suddenly see a transaction in your wallet that you did not initiate, this guide will teach you how to prevent that from happening again.
 
-2. [How to identify scam tokens](/guides/how-to-id-scam-tokens/) - What are scam tokens, how do they make themselves look legitimate, and how to identify them to protect yourself and avoid being scammed.
+2. [How to identify scam tokens](/guides/how-to-id-scam-tokens/) - What are scam tokens? How do they make themselves look legitimate, and how do you identify them to protect yourself and avoid being scammed?
 
 ## Using Ethereum
 

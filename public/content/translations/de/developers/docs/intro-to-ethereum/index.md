@@ -36,7 +36,7 @@ Kryptographische Mechanismen stellen sicher, dass Transaktionen, die einmal als 
 
 **Ether (ETH)** ist die native Kryptowährung von Ethereum. Der Zweck von ETH ist es, einen Markt für Berechnungen zu ermöglichen. Ein solcher Markt bietet einen wirtschaftlichen Anreiz für die Teilnehmenden, Transaktionsanfragen zu verifizieren und auszuführen und dem Netzwerk Rechenressourcen zur Verfügung zu stellen.
 
-Jeder Teilnehmer, der eine Transaktionsanforderung sendet, muss dem Netzwerk auch einen gewissen Betrag an ETH als Prämie anbieten. Das Netzwerk vergibt diese Prämie an denjenigen, der die Transaktion verifiziert, ausführt, in die Blockchain einträgt und an das Netzwerk weiterleitet.
+Jeder Teilnehmer, der eine Transaktionsanforderung sendet, muss dem Netzwerk auch einen gewissen Betrag an ETH als Prämie anbieten. Das Netzwerk verbrennt einen Teil des Kopfgelds und gewährt den Rest der Person, die letztendlich die Transaktion verifiziert, ausführt, für die Blockchain bereitstellt und auf das Netzwerk überträgt.
 
 Die Höhe der gezahlten ETH entspricht den für die Berechnung benötigten Ressourcen. Diese Prämien verhindern auch, dass böswillige Teilnehmer das Netzwerk absichtlich verstopfen, indem sie die Ausführung unendlicher Berechnungen oder anderer ressourcenintensiver Skripte anfordern, da diese Teilnehmer für die Berechnungsressourcen bezahlen müssen.
 
@@ -107,7 +107,7 @@ Ein wiederverwendbarer Codeschnipsel (ein Programm), den ein Entwickler in den E
 ## Weiterführende Informationen {#further-reading}
 
 - [Ethereum-Whitepaper](/whitepaper/)
-- [Wie funktioniert Ethereum überhaupt?](https://www.preethikasireddy.com/post/how-does-ethereum-work-anyway) – _Preethi Kasireddy_ (**Hinweis:** Diese Ressource ist immer noch wertvoll, doch Sie sollten sich bewusst sein, dass sie aus der Zeit vor [der Zusammenführung](/roadmap/merge) stammt und sich daher noch auf den Proof-of-Work-Mechanismus von Ethereum bezieht – Ethereum ist jetzt durch [Proof-of-Stake](/developers/docs/consensus-mechanisms/pos) gesichert)
+- [Wie funktioniert Ethereum überhaupt?](https://medium.com/@preethikasireddy/how-does-ethereum-work-anyway-22d1df506369) – _Preethi Kasireddy_ (**Hinweis:** Diese Ressource ist immer noch wertvoll, doch Sie sollten sich bewusst sein, dass sie aus der Zeit vor [der Zusammenführung](/roadmap/merge) stammt und sich daher noch auf den Proof-of-Work-Mechanismus von Ethereum bezieht – Ethereum ist jetzt durch [Proof-of-Stake](/developers/docs/consensus-mechanisms/pos) gesichert)
 
 _Kennen Sie eine Community-Ressource, die Ihnen geholfen hat? Bearbeiten Sie diese Seite und fügen Sie sie hinzu._
 

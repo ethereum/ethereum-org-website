@@ -1,7 +1,6 @@
-import { useRouter } from "next/router"
-import { useTranslation } from "next-i18next"
+"use client"
 
-import { BaseLink } from "@/components/Link"
+import { useParams } from "next/navigation"
 
 import { cn } from "@/lib/utils/cn"
 
@@ -13,6 +12,7 @@ import {
   CommandList,
 } from "../ui/command"
 import { Dialog, DialogContent, DialogTrigger } from "../ui/dialog"
+import { BaseLink } from "../ui/Link"
 import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover"
 
 import MenuItem from "./MenuItem"
@@ -21,6 +21,8 @@ import NoResultsCallout from "./NoResultsCallout"
 import { useLanguagePicker } from "./useLanguagePicker"
 
 import { useEventListener } from "@/hooks/useEventListener"
+import { useTranslation } from "@/hooks/useTranslation"
+import { usePathname, useRouter } from "@/i18n/routing"
 
 type LanguagePickerProps = {
   children: React.ReactNode
@@ -35,7 +37,9 @@ const LanguagePicker = ({
   className,
   dialog,
 }: LanguagePickerProps) => {
-  const { asPath, push } = useRouter()
+  const pathname = usePathname()
+  const { push } = useRouter()
+  const params = useParams()
   const { disclosure, languages } = useLanguagePicker(handleClose)
   const { isOpen, setValue, onClose, onOpen } = disclosure
 
@@ -52,9 +56,15 @@ const LanguagePicker = ({
   // onClick handlers
   const handleMobileCloseBarClick = () => onClose()
   const handleMenuItemSelect = (currentValue: string) => {
-    push(asPath, asPath, {
-      locale: currentValue,
-    })
+    push(
+      // @ts-expect-error -- TypeScript will validate that only known `params`
+      // are used in combination with a given `pathname`. Since the two will
+      // always match for the current route, we can skip runtime checks.
+      { pathname, params },
+      {
+        locale: currentValue,
+      }
+    )
     onClose({
       eventAction: "Locale chosen",
       eventName: currentValue,
@@ -125,7 +135,7 @@ const LanguagePickerMenu = ({ languages, onClose, onSelect }) => {
 
   return (
     <Command
-      className="gap-2 p-4"
+      className="max-h-[calc(100vh-12rem)] gap-2 p-4"
       filter={(value: string, search: string) => {
         const item = languages.find((name) => name.localeOption === value)
 
@@ -157,7 +167,7 @@ const LanguagePickerMenu = ({ languages, onClose, onSelect }) => {
         kbdShortcut="\"
       />
 
-      <CommandList className="max-h-[75vh]">
+      <CommandList className="max-h-full">
         <CommandEmpty className="py-0 text-left text-base">
           <NoResultsCallout onClose={onClose} />
         </CommandEmpty>

@@ -6,7 +6,7 @@ lang: de
 
 # So erkennen Sie betrügerische Token {#identify-scam-tokens}
 
-Eine der häufigsten Verwendungen von Ethereum ist die Schaffung eines handelbaren Tokens durch eine Gruppe, gewissermaßen ihre eigene Währung. Diese Token folgen in der Regel dem Standard, [ERC-20](/developers/docs/standards/tokens/erc-20/). Jedoch gibt es überall, wo es legitime wertschöpfende Anwendungsmöglichkeiten gibt, auch Kriminelle, die diese Werte stehlen möchten.
+Eine der häufigsten Anwendungen von Ethereum ist die Schaffung eines handelbaren Tokens durch eine Gruppe, der gewissermaßen ihre eigene Währung darstellt. Diese Token folgen in der Regel dem Standard, [ERC-20](/developers/docs/standards/tokens/erc-20/). Jedoch gibt es überall, wo es legitime wertschöpfende Anwendungsmöglichkeiten gibt, auch Kriminelle, die diese Werte stehlen möchten.
 
 Die beiden folgenden Täuschungsversuche sind dabei gängig:
 

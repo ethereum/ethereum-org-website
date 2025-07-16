@@ -1,20 +1,27 @@
-// Libraries
-import React, { useEffect, useState } from "react"
-import { Center, CloseButton } from "@chakra-ui/react"
+"use client"
 
-// Components
+import { useEffect, useState } from "react"
+import { X } from "lucide-react"
+
+import { Button } from "@/components/ui/buttons/Button"
+import { Center } from "@/components/ui/flex"
+
+import { cn } from "@/lib/utils/cn"
+
 import BannerNotification from "../BannerNotification"
 
-// Interface
-export type DismissableBannerProps = {
-  children: JSX.Element
+import { useTranslation } from "@/hooks/useTranslation"
+
+type DismissableBannerProps = React.HTMLAttributes<HTMLDivElement> & {
   storageKey: string
 }
 
 const DismissableBanner = ({
   children,
   storageKey,
+  className,
 }: DismissableBannerProps) => {
+  const { t } = useTranslation("common")
   const [show, setShow] = useState<boolean>(false)
 
   useEffect(() => {
@@ -28,13 +35,16 @@ const DismissableBanner = ({
   }
 
   return (
-    <BannerNotification shouldShow={show} gap="8">
-      <Center marginInlineStart="auto">{children}</Center>
-      <CloseButton
-        marginInlineStart="auto"
+    <BannerNotification shouldShow={show} className={cn("gap-8", className)}>
+      <Center className="ms-auto">{children}</Center>
+      <Button
+        className="ms-auto hover:shadow-none"
         onClick={onClose}
-        aria-label="Close Banner"
-      />
+        aria-label={t("close")}
+        size="sm"
+      >
+        <X />
+      </Button>
     </BannerNotification>
   )
 }

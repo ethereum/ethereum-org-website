@@ -1,10 +1,7 @@
-import * as React from "react"
-import { Box } from "@chakra-ui/react"
-import { Meta, StoryObj } from "@storybook/react"
+import { useTranslations } from "next-intl"
+import type { Meta, StoryObj } from "@storybook/react/*"
 
-import { getTranslation } from "@/storybook-utils"
-
-import { langViewportModes } from "../../../../.storybook/modes"
+import { langViewportModes } from "@/storybook/modes"
 
 import HubHeroComponent, { type HubHeroProps } from "./"
 
@@ -23,9 +20,9 @@ const meta = {
   },
   decorators: [
     (Story) => (
-      <Box maxW="container.2xl" mx="auto">
+      <div className="mx-auto max-w-screen-2xl">
         <Story />
-      </Box>
+      </div>
     ),
   ],
 } satisfies Meta<typeof HubHeroComponent>
@@ -34,9 +31,11 @@ export default meta
 
 export const HubHero: StoryObj = {
   render: () => {
+    const t = useTranslations()
+
     const buttons: HubHeroProps["buttons"] = [
       {
-        content: getTranslation("hero-button-lets-get-started", "page-learn"),
+        content: t("page-learn.hero-button-lets-get-started"),
         toId: "what-is-crypto-ethereum",
         matomo: {
           eventCategory: "learn hub hero buttons",
@@ -56,9 +55,9 @@ export const HubHero: StoryObj = {
 
     return (
       <HubHeroComponent
-        title={getTranslation("learn-hub", "common")}
-        header={getTranslation("hero-header", "page-learn")}
-        description={getTranslation("hero-subtitle", "page-learn")}
+        title={t("common.learn-hub")}
+        header={t("page-learn.hero-header")}
+        description={t("page-learn.hero-subtitle")}
         heroImg={learnHubHeroImg}
         buttons={buttons}
       />

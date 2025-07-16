@@ -13,7 +13,7 @@ Aplikacje blockchain pomagają przedsiębiorstwom w następujących obszarach:
 - Budowanie nowych modeli biznesowych i możliwości tworzenia wartości
 - Przyszłościowa konkurencyjność ich organizacji
 
-Aplikacje korporacyjnego blockchainu można budować na publicznej [sieci głównej](/glossary/#mainnet) Ethereum lub na prywatnych blockchainach opartych na technologii Ethereum. Znajdź więcej informacji o [prywatnych sieciach Enterprise Ethereum](/enterprise/private-ethereum/).
+Aplikacje korporacyjnego blockchainu można budować na publicznej [sieci głównej](/glossary/#mainnet) Ethereum lub na prywatnych blockchainach opartych na technologii Ethereum.
 
 ## Ethereum publiczne vs prywatne {#private-vs-public}
 
@@ -66,7 +66,6 @@ Różne organizacje podjęły pewne wspólne działania, aby uczynić Ethereum p
 - [Ernst & „Nightfall” firmy Young](https://github.com/EYBlockchain/nightfall) _zestaw narzędzi do prywatnych transakcji_
 - [EthSigner](https://github.com/ConsenSys/ethsigner) _aplikacja do podpisywania transakcji do użytku z dostawcą web3_
 - [Tenderly](https://tenderly.co/) _platforma danych zapewniająca analizy w czasie rzeczywistym, alerty i monitorowanie z obsługą sieci prywatnych._
-- [Truffle Suite](https://trufflesuite.com) _blockchain development suite (Truffle, Ganache, Drizzle)_
 
 ### Rozwiązania skalowalne {#scalability-solutions}
 
@@ -91,7 +90,7 @@ Przykłady rozwiązań L2, które są gotowe do produkcji lub wkrótce będą:
 - Plazma (dane poza łańcuchem, dowody oszustwa)
   - [Sieć OMG](https://omg.network/)
   - [Gazelle](https://gzle.io)
-  - [Sieć Matic](https://matic.network/)
+  - [Sieć Matic](https://polygon.technology/)
   - [LeapDAO](https://ipfs.leapdao.org/)
 - Kanały uzyskiwania informacji
   - [Połącz](https://connext.network/)
@@ -115,8 +114,8 @@ Oto niektóre aplikacje dla przedsiębiorstw, które zostały wdrożone w public
 
 ### Finanse {#finance}
 
-- [Santander Bank](https://www.coindesk.com/santander-settles-both-sides-of-a-20-million-bond-trade-on-ethereum) _emisja i rozrachunek obligacji_
-- [Societe Generale](https://www.societegenerale.com/en/newsroom-first-financial-transaction-settled-with-a-digital-currency) _emisja obligacji_
+- [Santander Bank](https://www.coindesk.com/markets/2019/09/12/santander-settles-both-sides-of-a-20-million-bond-trade-on-ethereum) _emisja i rozrachunek obligacji_
+- [Societe Generale](https://www.societegenerale.com/en/news/newsroom/societe-generale-performs-first-financial-transaction-settled-central-bank-digital) _emisja obligacji_
 - [Cadence](https://www.forbes.com/sites/benjaminpirus/2019/10/09/fatburger-and-others-feed-30-million-into-ethereum-for-new-bond-offering/#513870be115b) _oferta obligacji i tokenizacja dla marek FAT_
 - [Sila](https://silamoney.com/) _infrastruktura bankowa i płatności ACH jako usługa_
 - [Tinlake](https://tinlake.centrifuge.io/) _finansowanie należności za pomocą stokenizowanych aktywów rzeczywistych, takich jak faktury, hipoteki lub tantiemy strumieniowe_
@@ -128,7 +127,7 @@ Oto niektóre aplikacje dla przedsiębiorstw, które zostały wdrożone w public
 - [BBVA](https://www.ledgerinsights.com/bbva-blockchain-loan-banking-tech-award/) _szczegóły sfinalizowanych pożyczek są zhaszowane i zarejestrowane w sieci głównej_
 - [ANSA](https://cointelegraph.com/news/italys-top-news-agency-uses-blockchain-to-fight-fake-coronavirus-news) _największa włoska agencja informacyjna walcząca z fałszywymi wiadomościami i umożliwiająca odbiorcom weryfikację pochodzenia wiadomości poprzez rejestrowanie ich w sieci głównej_
 - [Verizon](https://decrypt.co/46745/verizon-news-press-releases-ethereum-full-transparency) _rejestruje informacje prasowe dotyczące Ethereum, aby zapewnić odpowiedzialność i zaufanie korporacyjne_
-- [Breitling](https://www.coindesk.com/breitling-arianee-all-new-watches-ethereum) _rejestruje pochodzenie i historie napraw zegarków w Ethereum_
+- [Breitling](https://www.coindesk.com/business/2020/10/15/breitling-goes-live-with-ethereum-based-system-to-put-all-new-watches-on-the-blockchain) _rejestruje pochodzenie i historie napraw zegarków w Ethereum_
 
 ### Łańcuch dostaw {#supply-chain}
 
@@ -137,7 +136,7 @@ Oto niektóre aplikacje dla przedsiębiorstw, które zostały wdrożone w public
 - [ShipChain](https://shipchain.io) _publiczny łańcuch boczny Ethereum i system korporacyjny zapewniający widoczność i zaufanie łańcucha dostaw, zwłaszcza w przypadku logistyki multimodalnej_
 - [Follow Our Fibre](https://www.followourfibre.com) _monitorowanie łańcucha dostaw wiskozy_
 - [EY OpsChain Network Procurement](https://blockchain.ey.com/products/contract-manager) _umożliwia firmom angażowanie się w proces zamówień poprzez wystawianie zapytań ofertowych, umowy, zamówienia i faktury w Twojej sieci zaufanych partnerów biznesowych_
-- [Treum](https://treum.io/) _zapewnia przejrzystość, identyfikowalność i możliwość handlu w łańcuchach dostaw, wykorzystując technologię blockchain_
+- [Treum](https://consensys.io/blog/consensys-acquires-treum) _zapewnia przejrzystość, identyfikowalność i możliwość handlu w łańcuchach dostaw, wykorzystując technologię blockchain_
 
 ### Poświadczenia i certyfikaty {#credentials}
 

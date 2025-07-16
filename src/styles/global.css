@@ -5,44 +5,18 @@
 @import "@docsearch/css";
 @import "@/styles/colors.css";
 @import "@/styles/semantic-tokens.css";
-@import "@/styles/fonts.css";
 @import "@/styles/docsearch.css";
+@import "@rainbow-me/rainbowkit/styles.css";
 
 @layer base {
   :root {
     --font-inter: Inter, sans-serif;
     --font-mono: "IBM Plex Mono", Courier, monospace;
 
-    /* Semantic Colors: Light mode */
-    /* ! Deprecating primary-light */
-    --primary-light: var(--blue-100);
-    /* ! Deprecating primary-dark */
-    --primary-dark: var(--blue-700);
-
-    --neutral: var(--white);
-
-    /* Complementary Set */
-    --attention: var(--yellow-500);
-    --attention-light: var(--yellow-200);
-    --attention-outline: var(--attention);
-
-    /* ? Keep "error" or rename to "fail" ? */
-    --error: var(--red-500);
-    --error-light: var(--red-100);
-    --error-outline: var(--error);
-    /* ! Deprecating error-neutral */
-    --error-neutral: var(--red-100);
-
-    --success: var(--green-500);
-    --success-light: var(--green-100);
-    --success-outline: var(--success);
-    /* ! Deprecating success-neutral */
-    --success-neutral: var(--green-100);
-
-    /* Misc sematics: light mode */
+    /* Misc semantics: light mode */
     --tooltip-shadow: rgba(0, 0, 0, 0.24);
     --switch-background: var(--gray-300);
-    --hub-hero-content-bg: rgba(255, 255, 255, 0.8);
+    --hub-hero-content: rgba(255, 255, 255, 0.8);
     --gradient-main: linear-gradient(
       102.7deg,
       rgba(185, 185, 241, 0.2) 0%,
@@ -50,8 +24,9 @@
       rgba(58, 142, 137, 0.2) 100%
     );
     --feedback-gradient: var(--gradient-main);
-    --table-box-shadow: 0 14px 66px rgba(0, 0, 0, 0.07),
-      0 10px 17px rgba(0, 0, 0, 0.03), 0 4px 7px rgba(0, 0, 0, 0.05);
+    --table-box-shadow:
+      0 14px 66px rgba(0, 0, 0, 0.07), 0 10px 17px rgba(0, 0, 0, 0.03),
+      0 4px 7px rgba(0, 0, 0, 0.05);
     --table-item-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 
     --gradient-banner: radial-gradient(
@@ -69,35 +44,20 @@
       rgba(145, 234, 228, 0.2) 100%
     );
     --search-background: var(--background);
+    --gradient-staking: linear-gradient(
+      rgba(237, 194, 84, 0.1) 13.39%,
+      rgba(75, 231, 156, 0.1) 44.21%,
+      rgba(231, 202, 200, 0.1) 82.88%
+    );
+
+    --gradient-step-1: rgba(127, 127, 213, 0.2);
   }
 
   .dark {
-    /* Semantic Colors: Dark mode */
-    /* ! Deprecating primary-light */
-    --primary-light: hsla(var(--orange-100));
-    /* ! Deprecating primary-dark */
-    --primary-dark: hsla(var(--orange-800));
-
-    /* ! Deprecating neutral */
-    --neutral: var(--gray-900);
-
-    /* Complementary Set */
-    --attention-outline: var(--attention-light);
-
-    --error: var(--red-500);
-    --error-light: var(--red-100);
-    --error-outline: var(--error);
-    /* ! Deprecating error-neutral */
-    --error-netural: var(--red-900);
-
-    --success-outline: var(--success-light);
-    /* ! Deprecating success-neutral */
-    --success-neutral: var(--green-900);
-
-    /* Misc sematics: dark mode */
+    /* Misc semantics: dark mode */
     --tooltip-shadow: rgba(255, 255, 255, 0.24);
     --switch-background: rgba(255, 255, 255, 0.24);
-    --hub-hero-content-bg: rgba(34, 34, 34, 0.8);
+    --hub-hero-content: rgba(34, 34, 34, 0.8);
     --gradient-main: linear-gradient(
       102.7deg,
       rgba(185, 185, 241, 0.2) 0%,
@@ -110,7 +70,8 @@
       #44404d 52.42%,
       #303038 98.77%
     );
-    --table-box-shadow: 0 14px 66px hsla(0, 0%, 96.1%, 0.07),
+    --table-box-shadow:
+      0 14px 66px hsla(0, 0%, 96.1%, 0.07),
       0 10px 17px hsla(0, 0%, 96.1%, 0.03), 0 4px 7px hsla(0, 0%, 96.1%, 0.05);
     --table-item-box-shadow: 0 1px 1px hsla(0, 0%, 100%, 0.1);
     --banner-grid-gradient: linear-gradient(
@@ -119,12 +80,18 @@
       rgba(134, 253, 232, 0.08) 100%
     );
     --search-background: #4c4c4c;
+
+    --gradient-step-1: rgba(127, 127, 213, 0.2);
   }
 }
 
 @layer base {
+  * {
+    @apply scroll-smooth border-border;
+  }
+
   body {
-    @apply !bg-background font-body text-sm !text-body lg:text-md;
+    @apply bg-background font-body leading-base text-body;
   }
 
   a {
@@ -138,6 +105,16 @@
   h5,
   h6 {
     @apply font-bold;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  section {
+    @apply scroll-mt-20;
   }
 
   h1 {
@@ -204,68 +181,46 @@
 }
 
 @layer components {
-  .swiper-horizontal > .swiper-pagination-bullets,
-  .swiper-pagination-bullets.swiper-pagination-horizontal {
-    @apply bg-background-highlight;
+  .staking-grid {
+    grid-template-areas:
+      "ether header glyph"
+      "decorator content content";
   }
 
-  .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
-    @apply !relative;
+  .staking-grid-stacked {
+    grid-template-areas:
+      "ether"
+      "header"
+      "content";
   }
 
-  .swiper-pagination {
-    @apply relative mx-auto mt-8 flex h-[26px] max-w-48 items-center justify-center rounded-full bg-background-highlight;
+  .area-ether {
+    grid-area: ether;
   }
 
-  .css-posts-swiper .swiper-pagination {
-    @apply max-w-52 sm:max-w-40 lg:max-w-36;
+  .area-header {
+    grid-area: header;
   }
 
-  .swiper-pagination .swiper-pagination-bullet {
-    @apply bg-primary-high-contrast;
+  .area-content {
+    grid-area: content;
   }
 
-  .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal
-    .swiper-pagination-bullet-active {
-    @apply bg-primary-hover;
+  .area-glyph {
+    grid-area: glyph;
   }
 
-  .swiper-button-prev,
-  .swiper-button-next {
-    @apply !h-6 !w-fit fill-primary px-2;
+  .gold {
+    @apply font-bold text-staking-gold;
   }
-}
 
-.swiper-button-prev,
-.swiper-button-next {
-  top: calc(100% - 11px) !important;
-  --nav-inset: calc(50% - 6.5rem);
-}
-
-@media (min-width: theme("screens.sm")) {
-  .swiper-button-prev,
-  .swiper-button-next {
-    --nav-inset: calc(50% - 5rem);
+  .dev-ring {
+    @apply ring ring-red-500 sm:ring-orange-500 md:ring-yellow-400 lg:ring-green-500 xl:ring-blue-500 2xl:ring-violet-500;
   }
 }
 
-@media (min-width: theme("screens.lg")) {
-  .swiper-button-prev,
-  .swiper-button-next {
-    --nav-inset: calc(50% - 4.5rem);
+@layer utilities {
+  .animate-pause {
+    animation-play-state: paused;
   }
-}
-
-.swiper-button-next {
-  inset-inline-end: var(--nav-inset) !important;
-  inset-inline-start: auto !important;
-}
-
-.swiper-button-prev {
-  inset-inline-end: auto !important;
-  inset-inline-start: var(--nav-inset) !important;
-}
-
-.swiper-slide-shadow {
-  background: transparent !important;
 }

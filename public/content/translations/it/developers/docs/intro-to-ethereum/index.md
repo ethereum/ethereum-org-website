@@ -36,7 +36,7 @@ I meccanismi crittografici assicurano che una volta verificate come valide e agg
 
 **Ether (ETH)** è la criptovaluta nativa di Ethereum. Lo scopo di ETH è consentire un mercato per il calcolo. Un mercato di questo tipo fornisce un incentivo economico affinché i partecipanti verifichino ed eseguano le richieste di transazione e forniscano risorse di calcolo alla rete.
 
-Ogni partecipante che trasmette una richiesta di transazione deve anche offrire un certo importo di ETH alla rete a titolo di ricompensa. La rete elargirà tale ricompensa a chiunque svolga il lavoro effettivo verificando la transazione, eseguendola, inviandola alla blockchain e trasmettendola alla rete.
+Ogni partecipante che trasmette una richiesta di transazione deve anche offrire un certo importo di ETH alla rete a titolo di ricompensa. La rete brucerà parte della ricompensa, elargendo il resto a chiunque alla fine svolgerà il lavoro di verifica, esecuzione, invio alla blockchain e trasmissione della transazione alla rete.
 
 L'importo di ETH pagato corrisponde alle risorse necessarie a eseguire il calcolo. Queste ricompense impediscono ai partecipanti malevoli di intasare intenzionalmente la rete, richiedendo l'esecuzione di calcoli infiniti o di altri script ad alta intensità di risorse, poiché tali partecipanti devono pagare per le risorse di calcolo.
 
@@ -107,7 +107,7 @@ Uno snippet di codice riutilizzabile (programma) che uno sviluppatore pubblica n
 ## Letture consigliate {#further-reading}
 
 - [Ethereum Whitepaper](/whitepaper/)
-- [How does Ethereum work, anyway?](https://www.preethikasireddy.com/post/how-does-ethereum-work-anyway) - _Preethi Kasireddy_ (**NB** questa risorsa è ancora preziosa ma tieni presente che è antecedente a [La Fusione](/roadmap/merge) e quindi si riferisce ancora al meccanismo proof-of-work di Ethereum: attualmente Ethereum è protetta da un meccanismo [proof-of-stake](/developers/docs/consensus-mechanisms/pos))
+- [How does Ethereum work, anyway?](https://medium.com/@preethikasireddy/how-does-ethereum-work-anyway-22d1df506369) - _Preethi Kasireddy_ (**NB**: questa risorsa è ancora preziosa, ma sappiate che è precedente a [La Fusione](/roadmap/merge) e pertanto si riferisce ancora al meccanismo di proof-of-work di Ethereum; di fatto Ethereum è ormai protetta utilizzando il [proof-of-stake](/developers/docs/consensus-mechanisms/pos))
 
 _Conosci una risorsa della community che ti è stata utile? Modifica questa pagina e aggiungila!_
 

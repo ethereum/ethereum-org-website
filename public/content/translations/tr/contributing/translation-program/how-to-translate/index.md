@@ -70,7 +70,7 @@ Burada yorumları, çeviri belleği girdilerini ve sözlük girdilerini bulabili
 
 Üstteki düğmeleri kullanarak mevcut çevirileri arayabileceğiniz Çeviri Belleğine veya anahtar terimlerin açıklamalarını ve standart çevirilerini içeren Sözlüğe de geçiş yapabilirsiniz.
 
-Dahasını mı öğrenmek istiyorsunuz? [Crowdin çevrimiçi düzenleyiciyi kullanımıyla ilgili dokümanlara](https://support.crowdin.com/online-editor/) göz atmaktan çekinmeyin
+Daha fazlasını mı öğrenmek istiyorsunuz? [Crowdin çevrimiçi düzenleyiciyi kullanımıyla ilgili dokümanlara](https://support.crowdin.com/online-editor/) göz atmaktan çekinmeyin
 
 ### Gözden geçirme süreci {#review-process}
 
@@ -84,6 +84,6 @@ Dahasını mı öğrenmek istiyorsunuz? [Crowdin çevrimiçi düzenleyiciyi kull
 
 Sormak istediğiniz bir şey mi var? Ekibimizle ve diğer çevirmenlerle iş birliği yapmak mı istiyorsunuz? Lütfen [ethereum.org Discord sunucumuzun](/discord/) #translations kanalına yazın
 
-Ayrıca bize translations@ethereum.org adresinden de ulaşabilirsiniz
+Bize translations@ethereum.org adresinden de ulaşabilirsiniz
 
 Ethereum.org Çeviri Programına katıldığınız için teşekkür ederiz!

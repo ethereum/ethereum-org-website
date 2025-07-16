@@ -152,7 +152,7 @@ Identitățile utilizatorului și ale contractului sunt reprezentate în Ethereu
 ownerToNFTokenCount: HashMap[address, uint256]
 ```
 
-Această variabilă conține numărul de jetoane pentru fiecare proprietar. Deoarece nu există nicio corespondență între proprietari și tokenuri, singura modalitate de a identifica tokenurile pe care le deține un anumit proprietar este să ne uităm în urmă în istoricul evenimentelor din blockchain ca să găsim evenimentele `Transfer` corespunzătoare. Această variabilă ne permite să știm când avem toate NTF-urile, fără să mai fie nevoie să ne mai întoarcem în timp pentru a căuta.
+Această variabilă conține numărul de jetoane pentru fiecare proprietar. Deoarece nu există nicio corespondență între proprietari și tokenuri, singura modalitate de a identifica tokenurile pe care le deține un anumit proprietar este să ne uităm în urmă în istoricul evenimentelor din blockchain ca să găsim evenimentele `Transfer` corespunzătoare. Această variabilă ne permite să știm când avem toate NFT-urile, fără să mai fie nevoie să ne mai întoarcem în timp pentru a căuta.
 
 De reținut este că acest algoritm funcționează numai pentru interfețele cu utilizatorul și serverele externe. Codul care rulează pe blockchain-ul propriu-zis nu poate citi evenimentele din trecut.
 
@@ -614,11 +614,11 @@ def burn(_tokenId: uint256):
 
 Oricine este autorizat să transfere un token este autorizat să îl și ardă. În timp ce arderea pare echivalentul unui transfer la adresa zero, această adresă nu primește de fapt tokenul. Aceasta ne permite să eliberăm tot spațiul de stocare folosit pentru token, ceea ce poate reduce costul de gaz al tranzacției.
 
-# Utilizarea acestui contract {#using-contract}
+## Utilizarea acestui contract {#using-contract}
 
 Spre deosebire de Solidity, Vyper nu are funcția de moștenire. Aceasta este o opțiune deliberată de concepție, pentru a conferi claritate codului, facilitându-i prin aceasta securizarea. Deci, pentru a vă crea propriul contract Vyper ERC-721, porniți de la [acest contract](https://github.com/vyperlang/vyper/blob/master/examples/tokens/ERC721.vy) și modificați-l pentru a implementa logica operațională pe care o doriți.
 
-# Concluzie {#conclusion}
+### Concluzie {#conclusion}
 
 În recapitulare, iată câteva din cele mai importante idei din acest contract:
 

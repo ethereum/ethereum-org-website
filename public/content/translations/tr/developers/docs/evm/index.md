@@ -4,13 +4,11 @@ description: Ethereum Sanal Makinesine (EVM) ve EVM'nin durum, işlem ve akıll�
 lang: tr
 ---
 
-EVM'nin fiziksel varlığı, bir buluta veya bir okyanus dalgasına benzetilerek açıklanamaz ama EVM, bir Ethereum istemcisi çalıştıran binlerce bağlı bilgisayar tarafından sürdürülen tek bir varlık olarak _var olmaktadır_.
-
-Ethereum protokolünün kendisi, yalnızca bu özel durum makinesinin sürekli devam eden, kesintisiz ve değiştirilemez işlemlerini sürdürmek amacıyla vardır. Ethereum protokolü tüm Ethereum hesaplarının ve akıllı sözleşmelerinin bulunması için olan ortamdır. Ethereum, zincirdeki tüm bloklarda sadece tek bir "kurallı" duruma sahiptir ve EVM, bloktan bloka yeni geçerli durum hesaplama kurallarını belirler.
+Ethereum Sanal Makinesi (EVM), tüm ethereum düğümlerinde kodu sürekli ve güvenli bir şekilde çalıştıran merkeziyetsiz bir sanal ortamdır. Düğümler, [işlemler](/developers/docs/evm/opcodes/) için gereken bilişim eforunu ölçmek amacıyla "[gaz](/gas/)" kullanarak akıllı sözleşmeleri yürütmek için EVM'yi çalıştırır, böylece kaynaklar verimli şekilde paylaştırılır ve ağ güvenliği sağlanır.
 
 ## Ön koşullar {#prerequisites}
 
-[Bayt](https://wikipedia.org/wiki/Byte), [bellek](https://wikipedia.org/wiki/Computer_memory) ve [yığın](<https://wikipedia.org/wiki/Stack_(abstract_data_type)>) gibi bilgisayar bilimlerindeki yaygın terminolojiyi temel seviyede kavramak, EVM'yi anlamak için zorunludur. Ayrıca [karmafonksiyonları](https://wikipedia.org/wiki/Cryptographic_hash_function) ve [Merkleağaçları](https://wikipedia.org/wiki/Merkle_tree) gibi kriptografi/blok zincir konseptlerini bilmek faydalı olur.
+[Bayt](https://wikipedia.org/wiki/Byte), [bellek](https://wikipedia.org/wiki/Computer_memory) ve [yığın](https://wikipedia.org/wiki/Stack_(abstract_data_type)) gibi bilgisayar bilimlerindeki yaygın terminolojiyi temel seviyede kavramak, EVM'yi anlamak için zorunludur. Ayrıca [karmafonksiyonları](https://wikipedia.org/wiki/Cryptographic_hash_function) ve [Merkleağaçları](https://wikipedia.org/wiki/Merkle_tree) gibi kriptografi/blok zincir konseptlerini bilmek faydalı olur.
 
 ## Defterden durum makinesine {#from-ledger-to-state-machine}
 
@@ -63,7 +61,7 @@ Tüm [Ethereum yürütme istemcileri](/developers/docs/nodes-and-clients/#execut
 - [Py-EVM](https://github.com/ethereum/py-evm) - _Python_
 - [evmone](https://github.com/ethereum/evmone) - _C++_
 - [ethereumjs-vm](https://github.com/ethereumjs/ethereumjs-vm) - _JavaScript_
-- [revm](https://github.com/bluealloy/revm) - _Rust_
+- [revm](https://github.com/bluealloy/revm)-_Rust_
 
 ## Daha Fazla Bilgi {#further-reading}
 
@@ -73,6 +71,7 @@ Tüm [Ethereum yürütme istemcileri](/developers/docs/nodes-and-clients/#execut
 - [Ethereum Sanal Makinesi İşlem Kodları](https://www.ethervm.io/)
 - [Ethereum Sanal Makinesi İşlem Kodları İnteraktif Referansı](https://www.evm.codes/)
 - [Solidity'nin belgelerine kısa bir giriş](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#index-6)
+- [Ethereum'da Uzmanlaşmak - Ethereum Sanal Makinası](https://github.com/ethereumbook/ethereumbook/blob/develop/13evm.asciidoc)
 
 ## İlgili konular {#related-topics}
 

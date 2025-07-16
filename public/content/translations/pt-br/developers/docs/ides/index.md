@@ -37,15 +37,8 @@ A maioria dos IDEs estabelecidos possuem plugins integrados para melhorar a expe
 **Visual Studio Code -** **_IDE profissional multiplataforma com suporte oficial da Ethereum._**
 
 - [Visual Studio Code](https://code.visualstudio.com/)
-- [Bancada de trabalho para Azure Blockchain](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/microsoft-azure-blockchain.azure-blockchain-workbench?tab=Overview)
 - [Amostras de código](https://github.com/Azure-Samples/blockchain/blob/master/blockchain-workbench/application-and-smart-contract-samples/readme.md)
 - [GitHub](https://github.com/microsoft/vscode)
-
-**Atom -** **_Um editor de texto de código aberto para o século XXI_**
-
-- [Atom](https://atom.io/)
-- [GitHub](https://github.com/atom)
-- [Pacotes Ethereum](https://atom.io/packages/search?utf8=%E2%9C%93&q=keyword%3Aethereum&commit=Search)
 
 **IDEs de JetBrains (IntelliJ IDEA etc.) -** **_Ferramentas essenciais para desenvolvedores de software e equipes_**
 
@@ -65,5 +58,7 @@ A maioria dos IDEs estabelecidos possuem plugins integrados para melhorar a expe
 - [Prettier Solidity](https://github.com/prettier-solidity/prettier-plugin-solidity) - Formatador de código que faz uso do Prettier
 
 ## Leitura adicional {#further-reading}
+
+- [Ethereum IDEs](https://www.alchemy.com/list-of/web3-ides-on-ethereum) _- Lista de IDEs para o Ethereum da Alchemy_
 
 _Conhece algum recurso da comunidade que o ajudou? Edite essa página e adicione!_

@@ -1,28 +1,21 @@
 import type { Config } from "tailwindcss"
 import plugin from "tailwindcss/plugin"
 
+import { screens } from "./src/lib/utils/screen"
+
 const config = {
-  // TODO: Move to "class" strategy after removing Chakra
-  darkMode: ["selector", '[data-theme="dark"]'],
-  content: [
-    "./src/**/*.{ts,tsx}",
-    // TODO: remove after migration
-    "./tailwind/**/*.tsx",
-  ],
+  darkMode: ["selector"],
+  content: ["./src/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}"],
   prefix: "",
   theme: {
     extend: {
-      screens: {
-        sm: "480px",
-        md: "768px",
-        lg: "992px",
-        xl: "1280px",
-        "2xl": "1536px",
-      },
+      screens,
       fontFamily: {
         heading: "var(--font-inter)",
         body: "var(--font-inter)",
         monospace: "var(--font-mono)",
+        mono: "var(--font-mono)",
+        sans: "var(--font-inter)",
       },
       fontSize: {
         "7xl": ["4rem", "1.1"], // [7xl, 6xs]
@@ -103,19 +96,68 @@ const config = {
           900: "hsla(var(--blue-900))",
         },
 
+        pink: {
+          50: "hsla(var(--pink-50))",
+          100: "hsla(var(--pink-100))",
+          200: "hsla(var(--pink-200))",
+          300: "hsla(var(--pink-300))",
+          400: "hsla(var(--pink-400))",
+          500: "hsla(var(--pink-500))",
+          600: "hsla(var(--pink-600))",
+          700: "hsla(var(--pink-700))",
+          800: "hsla(var(--pink-800))",
+          900: "hsla(var(--pink-900))",
+        },
+
+        teal: {
+          50: "hsla(var(--teal-50))",
+          100: "hsla(var(--teal-100))",
+          200: "hsla(var(--teal-200))",
+          300: "hsla(var(--teal-300))",
+          400: "hsla(var(--teal-400))",
+          500: "hsla(var(--teal-500))",
+          600: "hsla(var(--teal-600))",
+          700: "hsla(var(--teal-700))",
+          800: "hsla(var(--teal-800))",
+          900: "hsla(var(--teal-900))",
+        },
+
         orange: {
-          50: "hsla(var(--orange-50))",
           100: "hsla(var(--orange-100))",
-          200: "hsla(var(--orange-200))",
-          300: "hsla(var(--orange-300))",
-          400: "hsla(var(--orange-400))",
-          500: "hsla(var(--orange-500))",
-          550: "hsla(var(--orange-550))",
-          600: "hsla(var(--orange-600))",
-          700: "hsla(var(--orange-700))",
           800: "hsla(var(--orange-800))",
           900: "hsla(var(--orange-900))",
         },
+
+        body: {
+          DEFAULT: "hsla(var(--body))",
+          medium: "hsla(var(--body-medium))",
+          light: "hsla(var(--body-light))",
+          inverse: "hsla(var(--body-inverse))",
+          menu: {
+            DEFAULT: "hsla(var(--body-menu))",
+            low: "hsla(var(--body-menu-low))",
+            medium: "hsla(var(--body-menu-medium))",
+            high: "hsla(var(--body-menu-high))",
+          },
+        },
+
+        disabled: "hsla(var(--disabled))",
+
+        background: {
+          DEFAULT: "hsla(var(--background))",
+          highlight: "hsla(var(--background-highlight))",
+          low: "hsla(var(--background-low))",
+          medium: "hsla(var(--background-medium))",
+          high: "hsla(var(--background-high))",
+        },
+
+        border: {
+          DEFAULT: "hsla(var(--border))",
+          "high-contrast": "hsla(var(--border-high-contrast))",
+          "low-contrast": "hsla(var(--border-low-contrast))",
+          hover: "hsla(var(--border-hover))",
+        },
+
         primary: {
           DEFAULT: "hsla(var(--primary))",
           "high-contrast": "hsla(var(--primary-high-contrast))",
@@ -124,9 +166,8 @@ const config = {
           visited: "hsla(var(--primary-visited))",
           action: "hsla(var(--primary-action))",
           "action-hover": "hsla(var(--primary-action-hover))",
-          light: "hsla(var(--primary-light))" /* TODO: Migrate/deprecate */,
-          dark: "hsla(var(--primary-dark))" /* TODO: Migrate/deprecate */,
         },
+
         accent: {
           a: {
             DEFAULT: "hsla(var(--accent-a))",
@@ -141,41 +182,47 @@ const config = {
             hover: "hsla(var(--accent-c-hover))",
           },
         },
-        body: {
-          DEFAULT: "hsla(var(--body))",
-          medium: "hsla(var(--body-medium))",
-          light: "hsla(var(--body-light))",
-        },
-        background: {
-          DEFAULT: "hsla(var(--background))",
-          highlight: "hsla(var(--background-highlight))",
-        },
-        /** @deprecated */
-        neutral: "hsla(var(--neutral))", // TODO: Migrate
-        /** @deprecated */
-        "switch-background": "hsla(var(--switch-background))", // TODO: Migrate
-        disabled: "hsla(var(--disabled))",
-        "tooltip-shadow": "var(--tooltip-shadow)",
-        "hub-hero-content-bg": "var(--hub-hero-content-bg)",
-        "search-background": "var(--search-background)",
-        attention: {
-          DEFAULT: "hsla(var(--attention))",
-          light: "hsla(var(--attention-light))",
-          outline: "hsla(var(--attention-outline))",
-        },
-        error: {
-          DEFAULT: "hsla(var(--error))",
-          light: "hsla(var(--error-light))",
-          outline: "hsla(var(--error-outline))",
-          neutral: "hsla(var(--error-neutral))",
-        },
+
         success: {
           DEFAULT: "hsla(var(--success))",
           light: "hsla(var(--success-light))",
-          outline: "hsla(var(--success-outline))",
-          neutral: "hsla(var(--success-neutral))",
+          dark: "hsla(var(--success-dark))",
+          border: "hsla(var(--success-border))",
         },
+
+        error: {
+          DEFAULT: "hsla(var(--error))",
+          light: "hsla(var(--error-light))",
+          dark: "hsla(var(--error-dark))",
+          border: "hsla(var(--error-border))",
+        },
+
+        warning: {
+          DEFAULT: "hsla(var(--warning))",
+          light: "hsla(var(--warning-light))",
+          dark: "hsla(var(--warning-dark))",
+          border: "hsla(var(--warning-border))",
+        },
+
+        staking: {
+          gold: "hsla(var(--staking-gold))",
+          "gold-fill": "hsla(var(--staking-gold-fill))",
+          green: "hsla(var(--staking-green))",
+          "green-fill": "hsla(var(--staking-green-fill))",
+          blue: "hsla(var(--staking-blue))",
+          "blue-fill": "hsla(var(--staking-blue-fill))",
+          red: "hsla(var(--staking-red))",
+          "red-fill": "hsla(var(--staking-red-fill))",
+        },
+
+        /** @deprecated */
+        "switch-background": "hsla(var(--switch-background))", // TODO: Migrate
+        "tooltip-shadow": "var(--tooltip-shadow)",
+        "hub-hero-content": "var(--hub-hero-content)",
+        "search-background": "var(--search-background)",
+        "gradient-step-1": "var(--gradient-step-1)",
       },
+
       backgroundImage: {
         "gradient-main": "var(--gradient-main)",
         "gradient-banner": "var(--gradient-banner)",
@@ -183,6 +230,14 @@ const config = {
         "feedback-gradient": "var(--feedback-gradient)",
         "banner-grid-gradient": "var(--banner-grid-gradient)",
         "radial-a": "var(--radial-a)",
+        "radial-b": "var(--radial-b)",
+        "linear-bug-bounty-title": "var(--linear-bug-bounty-title)",
+        "gradient-staking": "var(--gradient-staking)",
+        "card-gradient": "var(--card-gradient)",
+        "card-gradient-secondary": "var(--card-gradient-secondary)",
+        "card-gradient-secondary-hover": "var(--card-gradient-secondary-hover)",
+        "ten-year-gradient": "var(--ten-year-gradient)",
+        "rainbow-gradient": "var(--rainbow-gradient)",
       },
       boxShadow: {
         "table-box": "var(--table-box-shadow)",
@@ -200,9 +255,6 @@ const config = {
         "menu-accordion": `
           0px 2px 2px 0px rgba(0, 0, 0, 0.12) inset,
           0px -3px 2px 0px rgba(0, 0, 0, 0.14) inset`,
-        // TODO: From current theme. Deprecate for 'button-hover'
-        primary: "4px 4px 0px 0px hsla(var(--primary))",
-        "button-hover": "4px 4px 0 0 hsla(var(--primary-low-contrast))",
         tooltip: "0 0 16px var(--tooltip-shadow)",
         "svg-button-link": `
           var(--shadow-svg-button-link-1), var(--shadow-svg-button-link-2),
@@ -217,6 +269,7 @@ const config = {
           var(--shadow-window-box-1), var(--shadow-window-box-2),
           var(--shadow-window-box-3), var(--shadow-window-box-4),
           var(--shadow-window-box-5)`,
+        widget: "var(--shadow-widget)",
       },
       spacing: {
         7.5: "1.875rem",
@@ -234,10 +287,51 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+
+        "scroll-left": {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
+        "scroll-right": {
+          "0%": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(0%)" },
+        },
+        spin: {
+          from: { transform: "rotate(0deg)" },
+          to: { transform: "rotate(360deg)" },
+        },
+        "pulse-light": {
+          "50%": { opacity: "0.2" },
+        },
+        "fade-in": {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
+        "rotate-back-and-forth": {
+          "0%": { transform: "rotate(0deg)" },
+          "25%": { transform: "rotate(5deg)" },
+          "75%": { transform: "rotate(-5deg)" },
+          "100%": { transform: "rotate(0deg)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "scroll-left": "scroll-left 30s linear infinite",
+        "scroll-right": "scroll-right 30s linear infinite",
+        "scroll-left-240": "scroll-left 240s linear infinite",
+        "spin-30": "spin 60s linear infinite",
+        "counter-spin-30": "spin 60s linear infinite reverse",
+        "spin-21": "spin 42s linear infinite",
+        "counter-spin-21": "spin 42s linear infinite reverse",
+        "spin-18": "spin 36s linear infinite",
+        "counter-spin-18": "spin 36s linear infinite reverse",
+        "spin-9": "spin 18s linear infinite",
+        "spin-4": "spin 4s linear infinite",
+        "counter-spin-9": "spin 18s linear infinite reverse",
+        "pulse-light": "pulse-light 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+        "fade-in": "fade-in 150ms ease-in-out",
+        wave: "rotate-back-and-forth 1s linear infinite",
       },
       // Add custom border-radius tailwinds extension for "4xl" as "2rem"
       borderRadius: {

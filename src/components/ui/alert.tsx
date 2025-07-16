@@ -1,6 +1,6 @@
 import * as React from "react"
 import { cva, type VariantProps } from "class-variance-authority"
-import { MdClose } from "react-icons/md"
+import { X } from "lucide-react"
 
 import { cn } from "@/lib/utils/cn"
 
@@ -17,7 +17,7 @@ const alertVariants = cva(
         success:
           "border-success bg-success-light [&_h6]:text-success [&_svg]:text-success text-gray-800",
         warning:
-          "border-attention-outline bg-attention-light [&_h6]:text-attention [&_svg]:text-attention text-gray-800",
+          "border-warning bg-warning-light [&_h6]:text-warning [&_svg]:text-warning text-gray-800",
         update:
           "bg-primary-low-contrast border-primary-high-contrast [&_h6]:text-primary-high-contrast [&_svg]:text-primary-high-contrast",
       },
@@ -67,7 +67,7 @@ const AlertDescription = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <div
     ref={ref}
-    className={cn("text-sm [&_p]:leading-relaxed", className)}
+    className={cn("[&_p]:leading-relaxed", className)}
     {...props}
   />
 ))
@@ -83,7 +83,7 @@ const AlertCloseButton = React.forwardRef<
     className={cn("-me-4 rounded-full text-body", className)}
     {...props}
   >
-    <MdClose className="h-6 w-6" />
+    <X className="h-6 w-6" />
     <span className="sr-only">Close</span>
   </Button>
 ))

@@ -22,7 +22,6 @@ Aveţi nevoie de o scurtă introducere? Accesaţi [ethereum.org/learn](/learn/) 
 
 ## Articole pentru începători {#beginner-articles}
 
-- [Alegerea unui client Ethereum](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
 - [Clientul Rust Ethereum](https://openethereum.github.io/) \* **Țineţi cont că OpenEthereum [nu mai este întreținut](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd).** Folosiţi-l cu precauție și este de preferat să treceţi la implementarea unui alt client.
 - [Trimiterea tranzacțiilor în Ethereum cu clientul Rust](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/sending-ethereum-transactions-with-rust/)
 - [Introducere despre contractele inteligente cu clientul Parity pentru Ethereum](https://wiki.parity.io/Smart-Contracts)

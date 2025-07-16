@@ -1,12 +1,13 @@
 import { forwardRef } from "react"
 import { motion } from "framer-motion"
-import { useTranslation } from "next-i18next"
 
 import { cn } from "@/lib/utils/cn"
 
 import { HAMBURGER_BUTTON_ID } from "@/lib/constants"
 
 import { Button, type ButtonProps } from "../../ui/buttons/Button"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 const hamburgerSvg =
   "M 2 13 l 10 0 l 0 0 l 10 0 M 4 19 l 8 0 M 12 19 l 8 0 M 2 25 l 10 0 l 0 0 l 10 0"
@@ -30,14 +31,16 @@ const HamburgerButton = forwardRef<HTMLButtonElement, HamburgerProps>(
       <Button
         ref={ref}
         id={HAMBURGER_BUTTON_ID}
-        aria-label={t("aria-toggle-search-button")}
+        aria-label={t("aria-toggle-menu-button")}
         className={cn("px-2 py-0 text-body", className)}
         variant="ghost"
         {...props}
       >
         <svg
           viewBox="0 0 24 40"
-          className="relative h-10 w-6 stroke-body stroke-2 hover:stroke-primary hover:text-primary [&>path]:fill-none hover:[&>path]:stroke-primary"
+          className="relative h-10 w-6 stroke-body stroke-2 hover:stroke-primary-hover hover:text-primary-hover [&>path]:fill-none hover:[&>path]:stroke-primary-hover"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         >
           <motion.path
             variants={hamburgerVariants}

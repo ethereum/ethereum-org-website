@@ -1,3 +1,5 @@
+"use client"
+
 import * as React from "react"
 import { cva, type VariantProps } from "class-variance-authority"
 import { Slot } from "@radix-ui/react-slot"
@@ -9,20 +11,37 @@ import { scrollIntoView } from "@/lib/utils/scrollIntoView"
 import { BaseLink, type LinkProps } from "../Link"
 
 const buttonVariants = cva(
-  "inline-flex gap-2 items-center justify-center rounded border border-solid border-current text-primary transition focus-visible:outline focus-visible:outline-4 focus-visible:outline-primary-hover focus-visible:-outline-offset-1 disabled:text-disabled disabled:pointer-events-none hover:text-primary-hover [&[data-secondary='true']]:text-body [&>svg]:flex-shrink-0",
+  cn(
+    // Sizing and positioning classes:
+    "inline-flex gap-2 items-center justify-center rounded border border-solid transition [&>svg]:flex-shrink-0",
+    // Base default styling is "outline" pattern, primary color for text, border matches, no bg
+    "text-primary border-current",
+    // Hover: Default hover adds box-shadow, text (border) to --primary-hover
+    "hover:!text-primary-hover hover:shadow-[4px_4px_theme('colors.primary.low-contrast')]",
+    // Focus: Add 4px outline to all buttons, --primary-hover
+    "focus-visible:outline focus-visible:outline-primary-hover focus-visible:outline-4 focus-visible:-outline-offset-1",
+    // Active: text (border) to --primary-hover instead of primary, hide shadow
+    "active:text-primary-hover active:shadow-none",
+    // Disabled: Pointer events none, text (border) to --disabled
+    "disabled:pointer-events-none disabled:text-disabled",
+    // isSecondary: Switch text (border) to --body instead of --primary
+    "[&[data-secondary='true']]:text-body"
+  ),
   {
     variants: {
       variant: {
-        solid:
-          "text-white bg-primary-action border-transparent disabled:bg-disabled disabled:text-background hover:text-white hover:bg-primary-action-hover hover:shadow-button-hover active:shadow-none",
-        outline: "hover:shadow-button-hover active:shadow-none text-body",
-        "outline-color":
-          "hover:shadow-button-hover active:shadow-none border-primary",
-        ghost: "border-transparent",
-        link: "border-transparent font-bold underline py-0 px-1 active:text-primary",
+        solid: cn(
+          "text-white bg-primary-action border-transparent",
+          "hover:!text-white hover:bg-primary-action-hover", // Hover
+          "active:bg-primary-action-hover", // Active
+          "disabled:bg-disabled disabled:text-background" // Disabled
+        ),
+        outline: "", // Base styling
+        ghost: "border-transparent hover:shadow-none",
+        link: "border-transparent hover:shadow-none underline !min-h-0 !py-0 !px-1 active:text-primary",
       },
       size: {
-        lg: "text-lg py-3 px-8 [&>svg]:text-2xl rounded-lg",
+        lg: "text-lg py-3 px-8 [&>svg]:text-2xl rounded-lg focus-visible:rounded-lg",
         md: "min-h-10.5 px-4 py-2 [&>svg]:text-2xl",
         sm: "text-xs min-h-[31px] py-1.5 px-2 [&>svg]:text-md",
       },
@@ -86,7 +105,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     ref
   ) => {
     const handleOnClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-      toId && scrollIntoView(toId)
+      toId && scrollIntoView("#" + toId)
       customEventOptions && trackCustomEvent(customEventOptions)
 
       onClick?.(e)
@@ -109,8 +128,9 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 )
 Button.displayName = "Button"
 
-type ButtonLinkProps = Omit<LinkProps, "onClick"> &
+type ButtonLinkProps = Omit<LinkProps, "href"> &
   Pick<ButtonProps, "size" | "variant" | "isSecondary"> & {
+    href: string
     buttonProps?: Omit<ButtonProps, "size" | "variant">
     customEventOptions?: MatomoEventOptions
   }
@@ -122,6 +142,7 @@ const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
       variant,
       isSecondary,
       buttonProps,
+      onClick,
       customEventOptions,
       children,
       className,
@@ -129,8 +150,11 @@ const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
     },
     ref
   ) => {
-    const handleClick = () => {
+    const handleClick: React.MouseEventHandler<HTMLAnchorElement> = (
+      ...args
+    ) => {
       customEventOptions && trackCustomEvent(customEventOptions)
+      onClick?.(...args)
     }
     return (
       <Button
@@ -142,7 +166,10 @@ const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
       >
         <BaseLink
           ref={ref}
-          className={cn("no-underline hover:no-underline", className)}
+          className={cn(
+            "no-underline hover:no-underline [&_[data-label='arrow']]:ms-0",
+            className
+          )}
           activeClassName=""
           {...linkProps}
           onClick={handleClick}

@@ -39,7 +39,7 @@ Los indicadores de atributos se utilizan para señalar las fortalezas o debilida
 
 ## Explorar proveedores de servicios de participación {#saas-providers}
 
-A continuación encontrará algunos proveedores SaaS disponibles. Utilice los indicadores de arriba para guiarse a través de estos servicios
+A continuación se muestran algunos proveedores de SaaS disponibles. Utilice los indicadores de arriba para guiarse a través de estos servicios
 
 <ProductDisclaimer />
 

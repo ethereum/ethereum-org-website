@@ -116,4 +116,4 @@ Planejamos adicionar suporte para adições de conteúdos que não estejam em in
 
 ## Entre em contato conosco {#contact}
 
-Agradecemos por ter lido todas estas informações. Esperamos que elas tenham incentivado você a participar de nosso programa. Junte-se ao nosso [canal de tradução do Discord](https://discord.gg/XVepFu7sqR) para fazer perguntas e colaborar com outros tradutores, ou entre em contato conosco em translations@ethereum.org!
+Agradecemos por ter lido todas estas informações. Esperamos que elas tenham incentivado você a participar de nosso programa. Junte-se ao nosso [canal de tradução do Discord](https://discord.gg/ethereum-org) para fazer perguntas e colaborar com outros tradutores, ou envie um e-mail para translations@ethereum.org!

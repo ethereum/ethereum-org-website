@@ -91,7 +91,7 @@ GameContract.events.BetPlaced({
 
 <img src="https://cdn0.scrvt.com/b095ee27d37b3d7b6b150adba9ac6ec8/42226f4816a77656/bc5c8b270798/graphql-querygif.gif" width="100%" />
 
-这两张图片基本上抓住了 GraphQL 的精髓。 通过右边的查询，我们可以精确地定义我们想要的数据，这样我们就可以在一个请求中得到所有的东西，而不仅仅是我们需要的东西。 GraphQL 服务器处理所有所需数据的获取，因此前端用户端使用起来非常简单。 如果您感兴趣，[这是一个很好的解释](https://www.apollographql.com/blog/graphql-explained-5844742f195e/)，说明服务器是如何处理查询的。
+这两张图片基本上抓住了 GraphQL 的精髓。 通过右边的查询，我们可以精确地定义我们想要的数据，这样我们就可以在一个请求中得到所有的东西，而不仅仅是我们需要的东西。 GraphQL 服务器处理所有所需数据的获取，因此前端用户端使用起来非常简单。 如果您感兴趣，[这是一个很好的解释](https://www.apollographql.com/blog/graphql-explained)，说明服务器是如何处理查询的。
 
 现在有了这些知识，让我们最终进入区块链空间和 The Graph。
 
@@ -120,11 +120,11 @@ GameContract.events.BetPlaced({
 - 其他要侦听的东西，如函数调用或区块
 - 被调用的映射函数（参见下面的 `mapping.ts`）
 
-您可以在此处定义多个智能合约和处理程序。 典型的设置在 Truffle/Hardhat 项目中会有一个子图文件夹，它有自己的存储库。 然后您可以轻松引用 ABI。
+您可以在此处定义多个智能合约和处理程序。 典型的设置在 Hardhat 项目中会有一个子图文件夹，它有自己的存储库。 然后您可以轻松引用 ABI。
 
 为方便起见，您可能还想使用像 mustache 这样的模板工具。 然后创建一个 `subgraph.template.yaml` 并根据最新部署插入地址。 有关更高级的示例设置，请参阅这个 [Aave subgraph repo](https://github.com/aave/aave-protocol/tree/master/thegraph) 示例。
 
-完整的文档可以在这里看到：https://thegraph.com/docs/define-a-subgraph#the-subgraph-manifest。
+完整的文档可以在这里看到：https://thegraph.com/docs/en/subgraphs/developing/creating/subgraph-manifest。
 
 ```yaml
 specVersion: 0.0.1
@@ -167,7 +167,7 @@ dataSources:
 - 大整数
 - 大十进制数
 
-您还可以使用实体作为类型来定义关系。 在我们的示例中，我们定义了从玩家到投注的一对多关系。 感叹号(!) 表示值不能为空。 完整的文档可以在这里看到：https://thegraph.com/docs/define-a-subgraph#the-graphql-schema。
+您还可以使用实体作为类型来定义关系。 在我们的示例中，我们定义了从玩家到投注的一对多关系。 感叹号(!) 表示值不能为空。 完整的文档可以在这里看到：https://thegraph.com/docs/en/subgraphs/developing/creating/ql-schema。
 
 ```graphql
 type Bet @entity {
@@ -196,7 +196,7 @@ The Graph 中的映射文件定义了将传入事件转换为实体的函数。 
 
 最后，我们可以使用所有数据更新 Player 实体。 数组不能直接推送，需要按如下所示进行更新。 我们使用 id 来引用投注。 最后需要 `.save()` 来存储实体。
 
-完整的文档可以在这里看到：https://thegraph.com/docs/define-a-subgraph#writing-mappings。 您还可以将日志输出添加到映射文件，请参阅[此处](https://thegraph.com/docs/assemblyscript-api#api-reference)。
+完整的文档可以在这里看到：https://thegraph.com/docs/en/subgraphs/developing/creating/assemblyscript-mappings/#writing-mappings。 您还可以将日志输出添加到映射文件，请参阅[此处](https://thegraph.com/docs/en/subgraphs/developing/creating/graph-ts/api/#api-reference)。
 
 ```typescript
 import { Bet, Player } from "../generated/schema"

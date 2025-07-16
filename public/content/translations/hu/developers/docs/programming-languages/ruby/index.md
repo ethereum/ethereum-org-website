@@ -7,18 +7,18 @@ incomplete: false
 
 <FeaturedText>Tanuljon meg Ethereumra fejleszteni Ruby-alapú projektek és eszközök használatával.</FeaturedText>
 
-Használjon Ethereumot decentralizált alkalmazások (dappok) fejlesztésére, melyek kihasználják a kriptovaluta és a blokklánc technológia nyújtotta előnyöket. Ezek a dappok nem igényelnek bizalmat a felhasználó oldaláról, ami azt jelenti, hogyha egyszer telepítették az Ethereumba, akkor mindig úgy fognak futni, ahogy programozták őket. Digitális vagyontárgyakat irányíthatnak, lehetőséget teremtve ezzel az újfajta pénzügyi alkalmazások számra. Decentralizáltak lehetnek, mely azt jelenti, hogy semmilyen entitás vagy személy nem irányítja őket és közel lehetetlen őket cenzúrázni.
+Használj Ethereumot decentralizált alkalmazások (avagy "dappok") fejlesztésére, melyek kihasználják a kriptovaluta és a blokklánc technológia nyújtotta előnyöket. Ezek a dappok nem igényelnek bizalmat a felhasználó oldaláról, ami azt jelenti, hogyha egyszer telepítették az Ethereumba, akkor mindig úgy fognak futni, ahogy programozták őket. Digitális vagyontárgyakat irányíthatnak, lehetőséget teremtve ezzel az újfajta pénzügyi alkalmazások számra. Decentralizáltak lehetnek, mely azt jelenti, hogy semmilyen entitás vagy személy nem irányítja őket és közel lehetetlen őket cenzúrázni.
 
 ## Kezdő lépések az okosszerződésekkel és a Solidity nyelvvel {#getting-started-with-smart-contracts-and-solidity}
 
 **Tegye meg az első lépést a Ruby Ethereumra való integrálásához**
 
-Szüksége van egy kezdőknek szóló bevezetőre? Tekintse meg az [ethereum.org/learn](/learn/) vagy az [ethereum.org/developers](/developers/) oldalt.
+Szükséged van egy méginkább kezdőknek szóló alapozóra? Tekintsd meg az [ethereum.org/learn](/learn/) oldalt vagy az [ethereum.org/developers](/developers/) oldalt.
 
 - [Blokklánc ismertetése](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
-- [Okosszerződések értelmezése](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
-- [Írja meg az első okosszerződését](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
-- [Tanulja meg a Solidity fordítását és telepítését](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
+- [Okos Szerződések értelmezése](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
+- [Írd meg az első Okosszerződésed](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
+- [Tanuld meg a Solidity fordítását és telepítését](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
 ## Cikkek kezdőknek {#beginner-articles}
 
@@ -54,7 +54,7 @@ Szüksége van egy kezdőknek szóló bevezetőre? Tekintse meg az [ethereum.org
 - [ethereum.rb](https://github.com/EthWorks/ethereum.rb) – _Ruby Ethereum-kliens, amely JSON-RPC interfészt használ a tranzakciók küldésére, a szerződések létrehozására és az azokkal való interakcióra, valamint hasznos eszközkészlet az Ethereum-csomópontokkal való együttműködéshez_
 - [omniauth-ethereum.rb](https://github.com/q9f/omniauth-ethereum.rb) – _Az Ethereum-szolgáltatóstratégia bevezetése az OmniAuth-ra_
 
-Több anyagra lenne szüksége? Tekintse meg [Fejlesztőink](/developers/) oldalait.
+Még több anyagot keresel? Tekintse meg [Fejlesztőink](/developers/) oldalait.
 
 ## Ruby közösségi hozzájárulók {#ruby-community-contributors}
 

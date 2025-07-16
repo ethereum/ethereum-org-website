@@ -4,21 +4,21 @@ description: 关于如何组织以太坊节点的介绍。
 lang: zh
 ---
 
-以太坊节点由[执行客户端](/developers/docs/nodes-and-clients/#execution-clients)和[共识客户端](/developers/docs/nodes-and-clients/#consensus-clients)这两种客户端构成。
+以太坊节点由[执行客户端](/developers/docs/nodes-and-clients/#execution-clients)和[共识客户端](/developers/docs/nodes-and-clients/#consensus-clients)这两种客户端构成。 对于要提议新区块的节点，还必须运行[验证者客户端](#validators)。
 
-当以太坊使用[工作量证明](/developers/docs/consensus-mechanisms/pow/)时，执行客户端足以运行以太坊全节点。 然而，在实施[权益证明](/developers/docs/consensus-mechanisms/pow/)以后，执行客户端需要与另一种名为[“共识客户端”](/developers/docs/nodes-and-clients/#consensus-clients)的软件搭配使用。
+当以太坊使用[工作量证明](/developers/docs/consensus-mechanisms/pow/)时，执行客户端足以运行以太坊全节点。 然而，在实施[权益证明](/developers/docs/consensus-mechanisms/pow/)以后，执行客户端必须与另一种名为[共识客户端](/developers/docs/nodes-and-clients/#consensus-clients)的软件搭配使用。
 
 以下图表显示了两种以太坊客户端之间的关系。 这两种客户端与其各自的点对点（对等）网络连接。 分离对等网络是有必要的，因为执行客户端通过它们的对等网络广播交易，确保它们能够管理自己的本地交易池，同时共识客户端通过它们的对等网络广播区块，保证共识和链增长。
 
 ![](node-architecture-text-background.png)
 
-_这张图借用自 geth.ethereum.org，因此它使用 Geth 徽标来表示执行客户端，其他执行客户端选项还包括 Erigon、Nethermind 和 Besu_
+_执行客户端的选择有很多，包括 Erigon、Nethermind 和 Besu_。
 
-要使这种双客户端结构发挥作用，共识客户端必须能够将大量交易传递给执行客户端。 在本地执行交易是客户端验证交易未违反任何以太坊规则的方式，并确保提议的以太坊状态更新是正确的。 同样，当节点被选为区块生产者时，共识客户端必须能够从 Geth 请求各种交易，以便将它们添加到新的区块，并通过执行它们来更新全局状态。 本地远程过程调用连接使用[引擎应用程序接口](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md)处理这种跨客户端通信。
+要使这种双客户端结构发挥作用，共识客户端必须将大量交易传递给执行客户端。 执行客户端本地执行这些交易，以验证这些交易没有违反任何以太坊规则、提议的以太坊状态更新是正确的。 当节点被选为区块生产者时，它的共识客户端实例从执行客户端请求各种交易，以便将它们添加到新的区块，并通过执行它们来更新全局状态。 共识客户端通过本地 RPC 连接，使用[引擎应用程序接口](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md)驱动执行客户端。
 
 ## 执行客户端的作用是什么？ {#execution-client}
 
-执行客户端负责交易处理、交易广播、状态管理和支持以太坊虚拟机（[以太坊虚拟机](/developers/docs/evm/)）。 然而，它**不**负责区块构建、区块广播或处理共识逻辑。 这些都是共识客户端的责任。
+执行客户端负责交易验证、交易处理、交易广播、状态管理和支持以太坊虚拟机（[EVM](/developers/docs/evm/)）。 它**不**负责区块构建、区块广播或处理共识逻辑。 这些都是共识客户端的责任。
 
 执行客户端会创建执行有效负载——交易列表、更新状态树和其他与执行相关的数据。 共识客户端在每个区块中添加执行有效负载。 执行客户端还要在新的区块中重新执行交易，以确保其有效性。 执行交易在执行客户端的嵌入式计算机中完成，这些计算机被称为[以太坊虚拟机 (EVM)](/developers/docs/evm)。
 
@@ -37,7 +37,7 @@ _这张图借用自 geth.ethereum.org，因此它使用 Geth 徽标来表示执�
 
 ## 验证者 {#validators}
 
-节点运营商可以在存款合约中存入 32 个以太币来为其共识客户端添加一个验证者。 验证者客户端与共识客户端捆绑在一起，并且可随时添加到节点中。 验证者会处理认证和区块提议。 它们使节点能够累积奖励或因为惩罚而丢失以太币。 运行验证者软件还使节点有资格被选中来提议一个新区块。
+质押并运行验证者软件使节点有资格被选中来提议一个新区块。 节点运营商可以在存款合约中存入 32 个以太币来为其共识客户端添加一个验证者。 验证者客户端与共识客户端捆绑在一起，并且可随时添加到节点中。 验证者会处理认证和区块提议。 它也使节点能够累积奖励或因为惩罚而丢失以太币。
 
 [关于质押的更多信息](/staking/)。
 

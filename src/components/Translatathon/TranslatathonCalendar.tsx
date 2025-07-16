@@ -1,12 +1,15 @@
-import { useRouter } from "next/router"
-import { FaDiscord } from "react-icons/fa"
-import { Flex, Heading, Icon, Text } from "@chakra-ui/react"
+"use client"
+
+import { useLocale } from "next-intl"
 
 import type { Lang } from "@/lib/types"
 
-import { ButtonLink } from "@/components/Buttons"
-import InlineLink from "@/components/Link"
+import Discord from "@/components/icons/discord.svg"
+import { ButtonLink } from "@/components/ui/buttons/Button"
+import { Flex } from "@/components/ui/flex"
+import InlineLink from "@/components/ui/Link"
 
+import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 
@@ -52,49 +55,33 @@ const events = [
 ]
 
 export const TranslatathonCalendar = () => {
-  const { locale } = useRouter()
+  const locale = useLocale()
 
   return (
-    <Flex w="full" flexDirection={{ base: "column", lg: "row" }} py={16}>
+    <Flex className="w-full flex-col py-16 lg:flex-row">
       <Flex
-        w={{ base: "100%", lg: "50%" }}
-        bg="layer2Gradient"
-        px={8}
-        py={16}
-        textAlign="center"
-        flexDir="column"
-        gap={6}
+        className={cn(
+          "w-full flex-col gap-6 px-8 py-16 text-center lg:w-1/2",
+          "bg-gradient-to-r from-accent-a/10 to-accent-c/10 dark:from-accent-a/20 dark:to-accent-c-hover/20"
+        )}
       >
-        <Heading as="h3" fontSize="2xl">
-          Translatathon calls
-        </Heading>
-        <Text>
+        <h3 className="text-2xl font-bold">Translatathon calls</h3>
+        <p>
           Join us on the ethereum.org Discord for a series of onboarding calls
           and workshops where we’ll cover everything you need to know about the
           Translatathon, walk through using Crowdin and answer any questions you
           might have.
-        </Text>
-        <ButtonLink
-          href="/discord/"
-          gap={2}
-          onClick={() => matomoEvent("discord")}
-        >
-          <Icon as={FaDiscord} fontSize={25} />
+        </p>
+        <ButtonLink href="/discord/" onClick={() => matomoEvent("discord")}>
+          <Discord className="text-2xl" />
           Join Discord
         </ButtonLink>
       </Flex>
-      <Flex
-        w={{ base: "100%", lg: "50%" }}
-        bg="background.highlight"
-        p={8}
-        flexDir="column"
-      >
-        <Text fontSize="lg" fontWeight="bold" mb={2}>
-          Translatathon calls
-        </Text>
+      <Flex className="w-full flex-col bg-background-highlight p-8 lg:w-1/2">
+        <p className="mb-2 text-lg font-bold">Translatathon calls</p>
         {events.map((event, index) => (
-          <Flex gap={6} mb={4} key={index}>
-            <Text>{getLocaleTimestamp(locale! as Lang, event.date)}</Text>
+          <Flex className="mb-4 gap-6" key={index}>
+            <p>{getLocaleTimestamp(locale! as Lang, event.date)}</p>
             <InlineLink href={event.calendarLink}>{event.title}</InlineLink>
           </Flex>
         ))}

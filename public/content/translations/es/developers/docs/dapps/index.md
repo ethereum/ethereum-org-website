@@ -74,6 +74,12 @@ Un contrato inteligente es un código que reside en la blockchain de Ethereum y 
 - [Documentación](https://portal.thirdweb.com/)
 - [GitHub](https://github.com/thirdweb-dev/)
 
+**Crossmint_: Plataforma de desarrollo web3 de nivel empresarial para implementar contratos inteligentes, habilitar pagos con tarjeta de crédito y entre cadenas, y utilizar API para crear, distribuir, vender, almacenar y editar NFT._**
+
+- [crossmint.com](https://www.crossmint.com)
+- [Documentación](https://docs.crossmint.com)
+- [Discord](https://discord.com/invite/crossmint)
+
 ## Más información {#further-reading}
 
 - [Explorar DApps](/dapps)

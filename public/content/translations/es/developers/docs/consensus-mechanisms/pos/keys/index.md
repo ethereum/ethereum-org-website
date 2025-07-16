@@ -10,7 +10,7 @@ Las claves de Ethereum se generan utilizando [criptografía de curva elíptica](
 
 No obstante, cuando Ethereum cambió de [prueba de trabajo](/developers/docs/consensus-mechanisms/pow) a [prueba de participación](/developers/docs/consensus-mechanisms/pos), se añadió un nuevo tipo de clave a Ethereum. Las claves originales siguen funcionando exactamente igual que antes: no hubo cambios en las claves basadas en curvas elípticas que protegen las cuentas. No obstante, los usuarios necesitaban un nuevo tipo de clave para participar en la prueba de participación colocando ETH y ejecutando validadores. Esta necesidad surgió de los desafíos de escalabilidad asociados con muchos mensajes que pasaban entre un gran número de validadores que requerían un método criptográfico que se pudiera agregar fácilmente para reducir la cantidad de comunicación necesaria para que la red llegara a un consenso.
 
-Este nuevo tipo de clave utiliza el esquema de firma [**Boneh-Lyn-Shacham (BLS)**](https://wikipedia.org/wiki/BLS_digital_signature). BLS permite una agregación muy eficiente de firmas, pero también permite la ingeniería inversa de claves de validadores individuales añadidas y es perfecto para administrar acciones entre validadores.
+Este nuevo tipo de clave utiliza el esquema de firma [**Boneh-Lynn-Shacham (BLS)**](https://wikipedia.org/wiki/BLS_digital_signature). BLS permite una agregación muy eficiente de firmas, pero también permite la ingeniería inversa de claves de validadores individuales añadidas y es perfecto para administrar acciones entre validadores.
 
 ## Los dos tipos de claves de validación {#two-types-of-keys}
 
@@ -23,7 +23,7 @@ La clave de firma del validador consta de dos elementos:
 - Clave **privada** de validador
 - Clave **pública** de validador
 
-El propósito de la clave privada del validador es firmar operaciones en cadena, como propuestas de bloque y certificaciones. Debido a esto, estas claves deben estar en una cartera en línea.
+El propósito de la clave privada de validador es firmar operaciones en cadena, como propuestas de bloque y certificados. Debido a esto, estas claves deben estar en una cartera en línea.
 
 Esta flexibilidad tiene la ventaja de mover las claves de firma del validador muy rápidamente de un dispositivo a otro, sin embargo, si se han perdido o se han robado, un ladrón puede ser capaz de **actuar maliciosamente** de varias maneras:
 
@@ -55,6 +55,8 @@ Perder esta llave antes de actualizar las credenciales de retiro al tipo `0x01` 
 La separación de las claves del validador de las claves de la cuenta de Ethereum permite que un solo usuario ejecute varios validadores.
 
 ![esquema de la clave del validador](validator-key-schematic.png)
+
+**Nota**: Salir de las funciones de participación y retirar el balance del validador actualmente requiere firmar un [mensaje de salida voluntaria (VEM)](https://mirror.xyz/ladislaus.eth/wmoBbUBes2Wp1_6DvP6slPabkyujSU7MZOFOC3QpErs&1) con la clave de validador. Sin embargo, [EIP-7002](https://eips.ethereum.org/EIPS/eip-7002) es una propuesta que permitirá a un usuario activar la salida de un validador y retirar su balance firmando mensajes de salida con la clave de retirada en el futuro. Esto reducirá las suposiciones de confianza al permitir que los participantes que delegan ETH a [proveedores de participación como servicio](https://ethereum.org/en/staking/saas/#what-is-staking-as-a-service) mantengan el control de sus fondos.
 
 ## Derivar claves de una frase semilla {#deriving-keys-from-seed}
 
@@ -90,7 +92,9 @@ Cada rama está separada por un `/`, por lo que `m/2` significa comenzar con la 
 
 ![lógica de la clave del validador](multiple-keys.png)
 
-## Más información {#further-reading}
+## Más lecturas {#further-reading}
 
 - [Publicación en el blog de Ethereum Foundation por Carl Beekhuizen](https://blog.ethereum.org/2020/05/21/keys/)
 - [Generación de claves EIP-2333 BLS12-381](https://eips.ethereum.org/EIPS/eip-2333)
+- [EIP-7002: Salidas activables por la capa de ejecución](https://research.2077.xyz/eip-7002-unpacking-improvements-to-staking-ux-post-merge)
+- [Gestión de claves a gran escala](https://docs.ethstaker.cc/ethstaker-knowledge-base/scaled-node-operators/key-management-at-scale)

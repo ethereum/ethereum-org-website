@@ -1,31 +1,25 @@
-import { useTranslation } from "next-i18next"
-import { FaGithub } from "react-icons/fa"
-import {
-  Box,
-  BoxProps,
-  calc,
-  Flex,
-  Icon,
-  List,
-  useToken,
-} from "@chakra-ui/react"
+"use client"
 
 import type { ToCItem } from "@/lib/types"
 
-import { ButtonLink } from "@/components/Buttons"
+import Github from "@/components/icons/github.svg"
 import ItemsList from "@/components/TableOfContents/ItemsList"
 import Mobile from "@/components/TableOfContents/TableOfContentsMobile"
 
-import { outerListProps } from "@/lib/utils/toc"
+import { cn } from "@/lib/utils/cn"
+
+import { ButtonLink } from "../ui/buttons/Button"
 
 import { useActiveHash } from "@/hooks/useActiveHash"
+import { useTranslation } from "@/hooks/useTranslation"
 
-export type TableOfContentsProps = BoxProps & {
+export type TableOfContentsProps = {
   items: Array<ToCItem>
   maxDepth?: number
   editPath?: string
   hideEditButton?: boolean
   isMobile?: boolean
+  className?: string
 }
 
 const TableOfContents = ({
@@ -34,11 +28,10 @@ const TableOfContents = ({
   editPath,
   hideEditButton = false,
   isMobile = false,
+  className,
   ...rest
 }: TableOfContentsProps) => {
   const { t } = useTranslation("common")
-  // TODO: Replace with direct token implementation after UI migration is completed
-  const lgBp = useToken("breakpoints", "lg")
 
   const titleIds: Array<string> = []
 
@@ -65,43 +58,29 @@ const TableOfContents = ({
   }
 
   return (
-    <Flex
-      direction="column"
-      align="start"
-      gap={4}
-      hideBelow={lgBp}
-      as="aside"
-      position="sticky"
-      top="19" // Account for navbar
-      p={4}
-      pe={0}
-      maxW="25%"
-      minW={48}
-      height={calc.subtract("100vh", "80px")}
-      overflowY="auto"
+    <aside
+      className={cn(
+        "sticky top-19 hidden h-[calc(100vh-80px)] min-w-48 max-w-[25%] flex-col items-start gap-4 overflow-y-auto p-4 pe-0 lg:flex",
+        className
+      )}
       {...rest}
     >
       {!hideEditButton && editPath && (
-        <ButtonLink
-          leftIcon={<Icon as={FaGithub} />}
-          href={editPath}
-          variant="outline"
-        >
+        <ButtonLink href={editPath} variant="outline">
+          <Github />
           {t("edit-page")}
         </ButtonLink>
       )}
-      <Box textTransform="uppercase" color="body.medium">
-        {t("on-this-page")}
-      </Box>
-      <List m={0} spacing="2" {...outerListProps}>
+      <div className="uppercase text-body-medium">{t("on-this-page")}</div>
+      <ul className="m-0 mb-2 mt-2 list-none gap-2 border-s border-s-body-medium ps-4 pt-0 text-sm">
         <ItemsList
           items={items}
           depth={0}
           maxDepth={maxDepth ? maxDepth : 1}
           activeHash={activeHash}
         />
-      </List>
-    </Flex>
+      </ul>
+    </aside>
   )
 }
 

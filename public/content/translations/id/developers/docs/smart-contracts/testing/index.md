@@ -34,13 +34,11 @@ incomplete: true
 
 ## Tutorial terkait {#related-tutorials}
 
-- [Pengaturan Integrasi Berkelanjutan Solidity dan Truffle](/developers/tutorials/solidity-and-truffle-continuous-integration-setup/) _– Cara menyiapkan Travis atau Circle CI untuk pengujian Truffle bersama dengan plugin yang berguna._
 - [Gambaran umum produk pengujian](/developers/tutorials/guide-to-smart-contract-security-tools/) _– Gambaran umum dan perbandingan dari produk pengujian berbeda._
 - [Cara menggunakan Echidna untuk menguji kontrak pintar](/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/)
 - [Cara menggunakan Manticore untuk menemukan bug kontrak pintar](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
 - [Cara menggunakan Slither untuk menemukan bug kontrak pintar](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
 - [Cara meniru kontrak Solidity untuk pengujian](/developers/tutorials/how-to-mock-solidity-contracts-for-testing/)
-- [Cara berpindah dari Uji Truffle ke Lingkungan Uji OpenZeppelin](https://docs.openzeppelin.com/test-environment/0.1/migrating-from-truffle)
 - [Cara menguji kontrak setelah digunakan di jaringan](https://fulldecent.blogspot.com/2019/04/testing-deployed-ethereum-contracts.html)
 
 ## Bacaan lebih lanjut {#further-reading}

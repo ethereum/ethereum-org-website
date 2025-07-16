@@ -587,7 +587,7 @@ B:
 
 Bunlar asıl işi yapan dört fonksiyondur: `_transfer`, `_mint`, `_burn` ve `_approve`.
 
-#### \_transfer fonksiyonu {#\_transfer}
+#### \_transfer fonksiyonu {#_transfer}
 
 ```solidity
     /**
@@ -652,7 +652,7 @@ Bunlar aslında aktarımı yapan hatlardır. Aralarında **hiçbir şey** olmad�
 
 Son olarak, bir `Transfer` olayı yayın. Olaylara akıllı sözleşmelerle erişilemez, ancak blok zincirinin dışında çalışan kod, olayları dinleyebilir ve bunlara tepki verebilir. Örneğin bir cüzdan, sahibinin ne zaman daha fazla token aldığını takip edebilir.
 
-#### \_mint ve \_burn fonksiyonları {#\_mint-and-\_burn}
+#### \_mint ve \_burn fonksiyonları {#_mint-and-_burn}
 
 Bu iki fonksiyon (`_mint` and `_burn`) toplam token arzını düzenler. Bunlar dahilidir ve bu sözleşmede onları çağıran bir fonksiyon yoktur, bu nedenle yalnızca sözleşmeden devralırsanız ve hangi koşullar altında yeni token'lar basacağınıza veya mevcut token'ları yakacağınıza karar vermek için kendi mantığınızı eklerseniz kullanışlıdırlar.
 
@@ -706,7 +706,7 @@ Toplam token sayısı değiştiğinde `_totalSupply`'ı güncellediğinizden emi
 
 `_burn` fonksiyonu, diğer yöne gitmesi dışında `_mint` ile hemen hemen aynıdır.
 
-#### \_approve fonksiyonu {#\_approve}
+#### \_approve fonksiyonu {#_approve}
 
 Bu aslında ödenekleri belirten fonksiyondur. Sahibin, kendi mevcut bakiyesinden daha yüksek bir ödenek belirlemesine izin verdiğini unutmayın. Bakiye, ödenek oluşturulduğundaki bakiyeden farklı olabileceği transfer sırasında kontrol edildiği için bu sorun yaratmaz.
 
@@ -784,7 +784,7 @@ Bu fonksiyon, kullanıcı arabirimlerine miktarın nasıl yorumlanacağını sö
 
 Bu, aktarımlar sırasında çağrılacak kanca fonksiyonudur. Bu örnekte kanca fonksiyonu boş ancak ihtiyaç duyarsanız fonksiyon içeriğini doldurabilirsiniz.
 
-# Sonuç {#conclusion}
+## Sonuç {#conclusion}
 
 İnceleme için, bu sözleşmedeki en önemli fikirlerden bazıları şunlardır (bence sizinki muhtemelen değişebilir):
 

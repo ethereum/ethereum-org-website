@@ -65,7 +65,6 @@ Au lieu de créer un système personnalisé d'authentification ou de s'appuyer s
 
 ## Tutoriels connexes {#related-tutorials}
 
-- [Contract Composability: The Building Blocks of Ethereum Smart Contract Development](https://www.decentlabs.io/blog/contract-composability-the-building-blocks-of-ethereum-smart-contract-development)
 - [Kickstart your Dapp frontend development with create-eth-app](/developers/tutorials/kickstart-your-dapp-frontend-development-with-create-eth-app/) _- Comment utiliser create-eth-app pour créer facilement des applications originales avec les contrats intelligents populaires._
 
 ## Complément d'information {#further-reading}

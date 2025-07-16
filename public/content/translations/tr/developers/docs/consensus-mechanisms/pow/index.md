@@ -106,3 +106,4 @@ Yüksek düzeyde, hisse ispatı ile iş ispatı birbiriyle aynı nihai hedefe sa
 
 - [Madencilik](/developers/docs/consensus-mechanisms/pow/mining/)
 - [Hisse ispatı](/developers/docs/consensus-mechanisms/pos/)
+- [Yetki kanıtı](/developers/docs/consensus-mechanisms/poa/)

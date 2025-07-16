@@ -74,6 +74,12 @@ Ein Smart Contract ist ein Code, der auf der Ethereum-Blockchain existiert und g
 - [Dokumentation](https://portal.thirdweb.com/)
 - [GitHub](https://github.com/thirdweb-dev/)
 
+**Crossmint _– Eine Web3-Entwicklungsplattform auf Unternehmensniveau, die das Bereitstellen von Smart Contracts sowie Kreditkarten- und Cross-Chain-Zahlungen ermöglicht und APIs zu Erstellung, Verteilung, Verkauf, Speicherung und Bearbeitung von NFTs nutzt._**
+
+- [crossmint.com](https://www.crossmint.com)
+- [Dokumentation](https://docs.crossmint.com)
+- [Discord](https://discord.com/invite/crossmint)
+
 ## Weiterführende Informationen {#further-reading}
 
 - [Entdecken Sie dApps](/dapps)

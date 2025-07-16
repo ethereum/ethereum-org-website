@@ -35,4 +35,6 @@ Az Ethereum Node Records (ENR) a hálózati címek szabványosított formátuma 
 
 ## További olvasnivaló {#further-reading}
 
-[EIP-778: Ethereum Node Records (ENR)](https://eips.ethereum.org/EIPS/eip-778) [Hálózati címek az Ethereumban](https://dean.eigenmann.me/blog/2020/01/21/network-addresses-in-ethereum/) [LibP2P: Multiaddr-Enode-ENR?!](https://consensys.net/diligence/blog/2020/09/libp2p-multiaddr-enode-enr/)
+- [EIP-778: Ethereum-csomópontfeljegyzések (ENR)](https://eips.ethereum.org/EIPS/eip-778)
+- [Hálózati címek az Ethereumban](https://dean.eigenmann.me/blog/2020/01/21/network-addresses-in-ethereum/)
+- [LibP2P: Multiaddr-Enode-ENR?!](https://consensys.net/diligence/blog/2020/09/libp2p-multiaddr-enode-enr/)

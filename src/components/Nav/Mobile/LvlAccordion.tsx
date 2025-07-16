@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { useRouter } from "next/router"
+import { useLocale } from "next-intl"
 import * as AccordionPrimitive from "@radix-ui/react-accordion"
 
 import { cn } from "@/lib/utils/cn"
@@ -18,7 +18,7 @@ import {
   AccordionTrigger,
 } from "./MenuAccordion"
 
-import { useNavMenuColorsTw } from "@/hooks/useNavMenuColorsTw"
+import { usePathname } from "@/i18n/routing"
 
 type LvlAccordionProps = {
   lvl: Level
@@ -27,21 +27,35 @@ type LvlAccordionProps = {
   onToggle: () => void
 }
 
+const subtextColorPerLevel = {
+  1: "text-menu-1-subtext",
+  2: "text-menu-2-subtext",
+  3: "text-menu-3-subtext",
+  4: "text-menu-4-subtext",
+}
+
+const backgroundColorPerLevel = {
+  1: "bg-background",
+  2: "bg-background-low",
+  3: "bg-background-medium",
+  4: "bg-background-high",
+}
+
 const LvlAccordion = ({
   lvl,
   items,
   activeSection,
   onToggle,
 }: LvlAccordionProps) => {
-  const { asPath, locale } = useRouter()
-  const menuColors = useNavMenuColorsTw()
+  const pathname = usePathname()
+  const locale = useLocale()
   const [value, setValue] = useState("")
 
   return (
     <Accordion type="single" collapsible value={value} onValueChange={setValue}>
       {items.map(({ label, description, ...action }) => {
         const isLink = "href" in action
-        const isActivePage = isLink && cleanPath(asPath) === action.href
+        const isActivePage = isLink && cleanPath(pathname) === action.href
         const isExpanded = value === label
 
         const nestedAccordionSpacingMap = {
@@ -84,7 +98,9 @@ const LvlAccordion = ({
                       <p
                         className={cn(
                           "text-md font-bold",
-                          isActivePage ? menuColors.active : menuColors.body
+                          isActivePage
+                            ? "text-primary-high-contrast"
+                            : "text-body"
                         )}
                       >
                         {label}
@@ -93,8 +109,8 @@ const LvlAccordion = ({
                         className={cn(
                           "text-sm font-normal",
                           isActivePage
-                            ? menuColors.active
-                            : menuColors.lvl[lvl].subtext
+                            ? "text-primary-high-contrast"
+                            : subtextColorPerLevel[lvl]
                         )}
                       >
                         {description}
@@ -114,7 +130,7 @@ const LvlAccordion = ({
           >
             <AccordionTrigger
               heading={`h${lvl + 1}` as "h2" | "h3" | "h4" | "h5"}
-              className={cn(menuColors.body, nestedAccordionSpacingMap[lvl])}
+              className={cn("text-body", nestedAccordionSpacingMap[lvl])}
               onClick={() => {
                 trackCustomEvent({
                   eventCategory: "Mobile navigation menu",
@@ -127,18 +143,13 @@ const LvlAccordion = ({
             >
               <ExpandIcon isOpen={isExpanded} />
               <div>
-                <p
-                  className={cn(
-                    "flex-1 text-md font-bold leading-tight",
-                    menuColors.body
-                  )}
-                >
+                <p className="flex-1 text-md font-bold leading-tight text-body">
                   {label}
                 </p>
                 <p
                   className={cn(
                     "text-sm font-normal leading-tight",
-                    menuColors.lvl[lvl].subtext
+                    subtextColorPerLevel[lvl]
                   )}
                 >
                   {description}
@@ -147,7 +158,7 @@ const LvlAccordion = ({
             </AccordionTrigger>
 
             <AccordionContent
-              className={cn("mt-0 p-0", menuColors.lvl[lvl + 1].background)}
+              className={cn("mt-0 p-0", backgroundColorPerLevel[lvl])}
             >
               <LvlAccordion
                 lvl={(lvl + 1) as Level}

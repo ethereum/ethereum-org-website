@@ -5,7 +5,7 @@ lang: fr
 incomplete: true
 ---
 
-<FeaturedText>Apprendre à développer pour Ethereum avec des projets et des outils basés sur Python</FeaturedText>
+<FeaturedText>Apprendre à développer sur Ethereum avec des projets et des outils basés sur Python</FeaturedText>
 
 Utilisez Ethereum pour créer des applications décentralisées (ou « dApps ») qui tirent parti de la technologie de la blockchain et des cryptomonnaies. Ces DApps sont dignes de confiance, ce qui signifie que dès qu'elles sont déployées sur Ethereum, elles fonctionnent toujours comme prévu. Elles peuvent contrôler les actifs numériques afin de créer de nouveaux types d'applications financières. Elles peuvent être décentralisées, ce qui signifie qu'aucune personne ni entité ne les contrôle et qu'il est pratiquement impossible de les censurer.
 
@@ -51,21 +51,22 @@ Besoin d’une approche plus élémentaire ? Consultez [ethereum.org/learn](/le
 - [Web3.py](https://github.com/ethereum/web3.py) - _Bibliothèque Python pour interagir avec Ethereum_
 - [Vyper](https://github.com/ethereum/vyper/) - _Langage des contrats intelligents en Python pour l'EVM_
 - [Ape](https://github.com/ApeWorX/ape) - _L'outil de développement de contrats intelligents pour les pythonistes, les data scientists et les professionnels de la sécurité_
-- [Brownie](https://github.com/eth-brownie/brownie) - _Infrastructure Python pour déployer et tester les contrats intelligents Ethereum, et interagir avec ces derniers_
 - [py-evm](https://github.com/ethereum/py-evm) - _Implémentation de la machine virtuelle Ethereum_
 - [eth-tester](https://github.com/ethereum/eth-tester) - _Outils pour tester des applications basées sur Ethereum_
 - [eth-utils](https://github.com/ethereum/eth-utils/) - _Fonctions utilitaires pour travailler avec les bases de code liées à Ethereum_
 - [py-solc-x](https://pypi.org/project/py-solc-x/) - _Wrapper Python autour du compilateur solc Solidity avec support 0.5.x_
-- [py-wasm](https://github.com/ethereum/py-wasm) - _Implémentation en Python de l'interpréteur d'assembleur Web_
-- [pydevp2p](https://github.com/ethereum/pydevp2p) - _Implémentation de la pile P2P Ethereum_
 - [pymaker](https://github.com/makerdao/pymaker) - _API Python pour les contrats Maker_
 - [siwe](https://github.com/spruceid/siwe-py) - _Connectez-vous avec Ethereum (siwe) pour Python_
 - [Intégration Web3 DeFi pour Ethereum](https://github.com/tradingstrategy-ai/web3-ethereum-defi) - _Un paquet Python avec des intégrations prêtes à l'emploi pour ERC-20, Uniswap et d'autres projets populaires_
+- [Wake](https://getwake.io) - _Cadre Python tout-en-un pour les tests de contrats, le fuzzing, le déploiement, les analyses de vulnérabilités et la navigation dans le code (serveur de langage - [Outils pour Solidity](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity))_
 
 ### Archivé / Non entretenu : {#archived--no-longer-maintained}
 
 - [Trinity](https://github.com/ethereum/trinity) - _Client Ethereum sous Python_
 - [Mamba](https://github.com/arjunaskykok/mamba) - _Infrastructure permettant de rédiger, de compiler et de déployer des contrats intelligents en langage Vyper_
+- [Brownie](https://github.com/eth-brownie/brownie) - _Infrastructure Python pour déployer et tester les contrats intelligents Ethereum, et interagir avec ces derniers_
+- [pydevp2p](https://github.com/ethereum/pydevp2p) - _Implémentation de la pile P2P Ethereum_
+- [py-wasm](https://github.com/ethereum/py-wasm) - _Implémentation en Python de l'interpréteur d'assembleur Web_
 
 Vous cherchez davantage de ressources ? Consultez [ethereum.org/developers.](/developers/).
 
@@ -82,8 +83,8 @@ Les projets Ethereum suivants utilisent les outils mentionnés sur cette page. L
 ## Discussion de la Communauté Python {#python-community-contributors}
 
 - [Discord de la Communauté Python Ethereum](https://discord.gg/9zk7snTfWe) pour la discussion sur Web3.py et autre framework Python
-- [Vyper Discord](https://discord.gg/SdvKC79cJk) pour les discussions concernant la programmation avec Vyper des contrats intelligents
+- [Vyper Discord](https://discord.gg/SdvKC79cJk) pour les discussions sur la programmation des contrats intelligents avec Vyper
 
 ## Autres ressources {#other-aggregated-lists}
 
-Le wiki de Vyper a une [incroyable liste de ressources pour Vyper](https://github.com/ethereum/vyper/wiki/Vyper-tools-and-resources)
+Le wiki de Vyper a une [incroyable liste de ressources pour Vyper](https://github.com/vyperlang/vyper/wiki/Vyper-tools-and-resources)

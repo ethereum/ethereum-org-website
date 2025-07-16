@@ -28,6 +28,8 @@
 
 /nfts/ /en/nft/ 301!
 
+/payments/ /en/payments/ 301!
+
 /daos/ /en/dao/ 301!
 
 /layer2/ /en/layer-2/ 301!
@@ -173,3 +175,13 @@
 /*/guides/how-to-register-an-ethereum-account /:splat/guides/how-to-create-an-ethereum-account/ 301!
 
 /*/deprecated-software /:splat/dapps/ 301!
+
+/*/enterprise/private-ethereum/ /:splat/enterprise/ 301!
+
+/dashboards /en/resources 301!
+
+/*/dashboards /:splat/resources 301!
+
+/tds /trillion-dollar-security 301!
+
+/*/tds /:splat/trillion-dollar-security 301!

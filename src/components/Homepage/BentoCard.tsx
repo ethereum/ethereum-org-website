@@ -1,7 +1,7 @@
 import { HTMLAttributes } from "react"
 import { type StaticImageData } from "next/image"
 
-import { TwImage } from "@/components/Image"
+import { Image } from "@/components/Image"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 
 import { cn } from "@/lib/utils/cn"
@@ -17,6 +17,8 @@ export type BentoCardProps = HTMLAttributes<HTMLDivElement> & {
   imgWidth?: number
   imgHeight?: number
   title: string
+  eventName: string
+  eventCategory: string
 }
 
 const BentoCard = ({
@@ -28,6 +30,8 @@ const BentoCard = ({
   imgWidth,
   imgHeight,
   title,
+  eventName,
+  eventCategory,
 }: BentoCardProps) => (
   <Card
     className={cn(
@@ -36,14 +40,23 @@ const BentoCard = ({
     )}
   >
     <Center>
-      <TwImage src={imgSrc} alt="" width={imgWidth} height={imgHeight} />
+      <Image src={imgSrc} alt="" width={imgWidth} height={imgHeight} />
     </Center>
     <div>
       <CardTitle variant="black" className="mb-2">
         {title}
       </CardTitle>
       <p className="mb-8 text-md">{children}</p>
-      <ButtonLink href={href} variant="outline">
+      <ButtonLink
+        href={href}
+        variant="outline"
+        isSecondary
+        customEventOptions={{
+          eventCategory,
+          eventAction: "use cases",
+          eventName,
+        }}
+      >
         {action} <ChevronNext />
       </ButtonLink>
     </div>

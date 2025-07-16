@@ -16,10 +16,10 @@ Si este es su primer intento de desarrollo de Ethereum, le recomendamos que empi
 
 <DeveloperDocsLinks headerId="foundational-topics" />
 
-### Pila de Ethereum {#ethereum-stack}
+### Bloque de Ethereum {#ethereum-stack}
 
 <DeveloperDocsLinks headerId="ethereum-stack" />
 
-### Recursos avanzados {#advanced}
+### Avanzado {#advanced}
 
 <DeveloperDocsLinks headerId="advanced" />

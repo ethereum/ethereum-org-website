@@ -105,13 +105,13 @@ summaryPoints:
 
 <ProductDisclaimer />
 
-### नोड उपकरण
+### नोड टूल्स
 
 <StakingProductsCardGrid category="nodeTools" />
 
-कृपया [अल्पसंख्यक क्लाइंट](/developers/docs/nodes-and-clients/client-diversity/) चुनने के महत्व पर ध्यान दें क्योंकि यह नेटवर्क की सुरक्षा में सुधार करता है, और आपके जोखिम को सीमित करता है। उपकरण जो आपको अल्पसंख्यक क्लाइंट सेटअप करने की अनुमति देते हैं, उन्हें <em style={{ textTransform: "uppercase" }}>"बहु-क्लाइंट"</em> के रूप में निरूपित किया जाता है।
+कृपया [अल्पसंख्यक क्लाइंट](/developers/docs/nodes-and-clients/client-diversity/) चुनने के महत्व पर ध्यान दें क्योंकि यह नेटवर्क की सुरक्षा में सुधार करता है, और आपके जोखिम को सीमित करता है। टूल्स जो आपको अल्पसंख्यक क्लाइंट सेटअप करने की अनुमति देते हैं, उन्हें <em style={{ textTransform: "uppercase" }}>"मल्टी-क्लाइंट"</em> के रूप में निरूपित किया जाता है।
 
-### कुंजी जनरेटर
+### प्रमुख जनरेटर
 
 कुंजी उत्पन्न करने में मदद करने के लिए इन उपकरणों का उपयोग [स्टेकिंग डिपॉजिट CLI](https://github.com/ethereum/staking-deposit-cli/) के विकल्प के रूप में किया जा सकता है।
 
@@ -195,9 +195,12 @@ summaryPoints:
 
 ## अग्रिम पठन {#further-reading}
 
+- [एथेरियम स्टेकिंग डायरेक्टरी](https://www.staking.directory/) - _एरिडियन और स्पेससाइडर_
 - [इथेरियम की क्लाइंट विविधता समस्या](https://hackernoon.com/ethereums-client-diversity-problem) - _@emmanuelawosika 2022_
 - [क्लाइंट विविधता की मदद करना](https://www.attestant.io/posts/helping-client-diversity/) - _जिम मैकडॉनल्ड 2022_
 - [क्लाइंट विविधता इथेरियम की आम सहमति परत पर](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA) - _jmcook.eth 2022_
 - [कैसे: इथेरियम सत्यापनकर्ता हार्डवेयर के लिए खरीदारी करें](https://www.youtube.com/watch?v=C2wwu1IlhDc) - _EthStaker 2022_
 - [चरण दर चरण: इथेरियम 2.0 टेस्टनेट में कैसे शामिल हों](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) - _बुट्टा_
 - [Eth2 कटौती रोकथाम युक्तियाँ](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) - _रोल जॉर्डन 2020_
+
+<QuizWidget quizKey="staking-solo" />

@@ -22,10 +22,12 @@ Tam teşekküllü bir dapp inşa etmek teknolojinin farklı parçalarını gerek
 
 ## Mevcut çerçeveler {#available-frameworks}
 
-**Truffle -** **_Bir geliştirme ortamı, test çerçevesi, yapı hattı ve diğer araçlar._**
+**Foundry** - **_Foundry, Ethereum uygulamaları geliştirmeye yönelik son derece hızlı, taşınabilir ve modüler bir araç setidir_**
 
-- [trufflesuite.com](https://www.trufflesuite.com/)
-- [GitHub](https://github.com/trufflesuite/truffle)
+- [Foundry'yi yükleyin](https://book.getfoundry.sh/)
+- [Foundry kitabı](https://book.getfoundry.sh/)
+- [Telegram'da Foundry topluluğu sohbet grubu](https://t.me/foundry_support)
+- [Awesome Foundry](https://github.com/crisgarner/awesome-foundry)
 
 **Hardhat -** **_Profesyoneller için Ethereum geliştirme platformu._**
 
@@ -37,29 +39,24 @@ Tam teşekküllü bir dapp inşa etmek teknolojinin farklı parçalarını gerek
 - [Belgeler](https://docs.apeworx.io/ape/stable/)
 - [GitHub](https://github.com/ApeWorX/ape)
 
-**Brownie -** **_Python tabanlı geliştirme ortamı ve test çerçevesi._**
-
-- [Belgeler](https://eth-brownie.readthedocs.io/en/latest/)
-- [GitHub](https://github.com/eth-brownie/brownie)
-
-**Web3j -** **_JVM üzerinde blok zincir uygulamaları geliştirmek için bir platform._**
+**Web3j -** **_JVM üzerinde blokzincir uygulamaları geliştirmeye yönelik bir platformdur._**
 
 - [Ana Sayfa](https://www.web3labs.com/web3j-sdk)
 - [Dokümanlar](https://docs.web3j.io)
 - [GitHub](https://github.com/web3j/web3j)
 
-**OpenZeppelin SDK -** **_Akıllı Sözleşmeler İçin Temel Araç Kiti: Akıllı sözleşmeler geliştirmenize, derlemenize, yükseltmenize, dağıtmanıza ve bunlarla etkileşime geçmenize yardımcı olacak bir dizi araç._**
+**ethers-kt -** **_EVM tabanlı blokzincirler için eşzamansız, yüksek performanslı Kotlin/Java/Android kütüphanesi._**
 
-- [OpenZeppelin SDK](https://openzeppelin.com/sdk/)
-- [GitHub](https://github.com/OpenZeppelin/openzeppelin-sdk)
-- [Topluluk Forumu](https://forum.openzeppelin.com/c/support/17)
+- [GitHub](https://github.com/Kr1ptal/ethers-kt)
+- [Örnekler](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
+- [Discord](https://discord.gg/rx35NzQGSb)
 
-**Create Eth App -** **_Tek bir komutla Ethereum destekli uygulamalar oluşturun. Seçebileceğiniz geniş bir kullanıcı arayüzü çerçevesi ve DeFi şablonu yelpazesiyle gelir._**
+**Create Eth App -** **_Tek bir komutla Ethereum destekli uygulamalar oluşturun. Seçebileceğiniz geniş bir kullanıcı arayüzü çerçevesi ve DeFi şablonu yelpazesi bulunur._**
 
 - [GitHub](https://github.com/paulrberg/create-eth-app)
 - [Şablonlar](https://github.com/PaulRBerg/create-eth-app/tree/develop/templates)
 
-**Scaffold-Eth -** **_Web3 için Ethers.js + Hardhat + React bileşenleri ve kancaları: akıllı sözleşmeler tarafından güçlendirilen merkeziyetsiz uygulamalar inşa etmeye başlamanız için ihtiyaç duyduğunuz her şey._**
+**Scaffold-Eth -** **_Web3 için Ethers.js + Hardhat + React bileşenleri ve kancaları: akıllı sözleşmeler tarafından desteklenen merkeziyetsiz uygulamalar inşa etmeye başlamanız için ihtiyaç duyduğunuz her şey._**
 
 - [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 
@@ -68,7 +65,7 @@ Tam teşekküllü bir dapp inşa etmek teknolojinin farklı parçalarını gerek
 - [Web sitesi](https://tenderly.co/)
 - [Dokümanlar](https://docs.tenderly.co/ethereum-development-practices)
 
-**The Graph -** **_Blok zincir verisini verimli şekilde sorgulamak için The Graph_**
+**The Graph -** **_Blokzincir verilerini verimli şekilde sorgulamaya yarayan The Graph_**
 
 - [Web sitesi](https://thegraph.com/)
 - [Öğretici](/developers/tutorials/the-graph-fixing-web3-data-querying/)
@@ -77,13 +74,7 @@ Tam teşekküllü bir dapp inşa etmek teknolojinin farklı parçalarını gerek
 
 - [alchemy.com](https://www.alchemy.com/)
 - [GitHub](https://github.com/alchemyplatform)
-- [Discord](https://discord.com/invite/A39JVCM)
-
-**Foundry -** **_Rust ile yazılmış Ethereum uygulama geliştirme için son derece hızlı, taşınabilir ve modüler bir araç takımı._**
-
-- [Dokümanlar](https://book.getfoundry.sh/)
-- [GitHub](https://github.com/gakonst/foundry/)
-- [Foundry için araçlar](https://github.com/crisgarner/awesome-foundry)
+- [Discord](https://discord.com/invite/alchemyplatform)
 
 **NodeReal -** **_Ethereum Geliştirme Platformu._**
 
@@ -101,6 +92,45 @@ Tam teşekküllü bir dapp inşa etmek teknolojinin farklı parçalarını gerek
 - [chainstack.com](https://www.chainstack.com/)
 - [GitHub](https://github.com/chainstack)
 - [Discord](https://discord.gg/BSb5zfp9AT)
+
+**Crossmint -** **_Tüm büyük EVM zincirleri (ve diğerleri) üzerinde NFT uygulamaları oluşturmanıza olanak tanıyan, kurumsal düzeyde Web3 geliştirme platformudur._**
+
+- [Web sitesi](https://www.crossmint.com)
+- [Dokümanlar](https://docs.crossmint.com)
+- [Discord](https://discord.com/invite/crossmint)
+
+**Brownie -** **_Python tabanlı geliştirme ortamı ve test çerçevesidir._**
+
+- [Dokümanlar](https://eth-brownie.readthedocs.io/en/latest/)
+- [GitHub](https://github.com/eth-brownie/brownie)
+- **Brownie şu anda yönetilmemektedir**
+
+**OpenZeppelin SDK -** **_Akıllı Sözleşmeler İçin Temel Araç Kiti: Akıllı sözleşmeler geliştirmenize, derlemenize, yükseltmenize, dağıtmanıza ve bunlarla etkileşime geçmenize yardımcı olacak bir dizi araç._**
+
+- [OpenZeppelin SDK](https://openzeppelin.com/sdk/)
+- [GitHub](https://github.com/OpenZeppelin/openzeppelin-sdk)
+- [Topluluk Forumu](https://forum.openzeppelin.com/c/support/17)
+- **OpenZeppelin SDK'nin geliştirme aşaması sona erdi**
+
+**Catapulta -** **_Çok zincirli akıllı sözleşme dağıtım aracı, blok arayıcılarda doğrulamaları otomatikleştirin, dağıtılan akıllı sözleşmeleri takip edin ve dağıtım raporlarını paylaşın, Foundry ve Hardhat projeleri için tak ve çalıştır özelliği._**
+
+- [Web sitesi](https://catapulta.sh/)
+- [Dokümanlar](https://catapulta.sh/docs)
+- [Github](https://github.com/catapulta-sh)
+
+**Covalent -** **_200+ Zincir için Zenginleştirilmiş Blokzincir API'leri._**
+
+- [covalenthq.com](https://www.covalenthq.com/)
+- [Dokümanlar](https://www.covalenthq.com/docs/api/)
+- [GitHub](https://github.com/covalenthq)
+- [Discord](https://www.covalenthq.com/discord/)
+
+**Wake -** **_Sözleşme testleri, bulanıklaştırma, dağıtım, güvenlik açığı taraması ve kodda gezinme için hepsi bir arada Python çerçevesi._**
+
+- [Ana Sayfa](https://getwake.io/)
+- [Dokümanlar](https://ackeeblockchain.com/wake/docs/latest/)
+- [GitHub](https://github.com/Ackee-Blockchain/wake)
+- [VS Code Uzantısı](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity)
 
 ## daha fazla okuma {#further-reading}
 

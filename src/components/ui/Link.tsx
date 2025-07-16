@@ -1,7 +1,8 @@
-import { AnchorHTMLAttributes, forwardRef } from "react"
-import NextLink, { type LinkProps as NextLinkProps } from "next/link"
-import { useRouter } from "next/router"
-import { RxExternalLink } from "react-icons/rx"
+"use client"
+
+import { AnchorHTMLAttributes, ComponentProps, forwardRef } from "react"
+import { ExternalLink, Mail } from "lucide-react"
+import NextLink from "next/link"
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden"
 
 import { cn } from "@/lib/utils/cn"
@@ -12,6 +13,8 @@ import * as url from "@/lib/utils/url"
 import { DISCORD_PATH, SITE_URL } from "@/lib/constants"
 
 import { useRtlFlip } from "@/hooks/useRtlFlip"
+import { Link as I18nLink } from "@/i18n/routing"
+import { usePathname } from "@/i18n/routing"
 
 type BaseProps = {
   hideArrow?: boolean
@@ -22,7 +25,7 @@ type BaseProps = {
 
 export type LinkProps = BaseProps &
   AnchorHTMLAttributes<HTMLAnchorElement> &
-  Omit<NextLinkProps, "href">
+  Omit<ComponentProps<typeof I18nLink>, "href">
 
 /**
  * Link wrapper which handles:
@@ -49,25 +52,27 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
   }: LinkProps,
   ref
 ) {
-  const { asPath } = useRouter()
-  const { flipForRtl } = useRtlFlip()
+  const pathname = usePathname()
+  const { twFlipForRtl } = useRtlFlip()
 
   if (!href) {
-    console.warn("Link component is missing href prop")
+    // If troubleshooting this warning, check for multiple h1's in markdown content—these will result in broken id hrefs
+    console.warn(`Link component missing href prop, pathname: ${pathname}`)
     return <a {...props} />
   }
 
-  const isActive = url.isHrefActive(href, asPath, isPartiallyActive)
+  const isActive = url.isHrefActive(href, pathname || "", isPartiallyActive)
   const isDiscordInvite = url.isDiscordInvite(href)
-  const isPdf = url.isPdf(href)
+  const isFile = url.isFile(href)
   const isExternal = url.isExternal(href)
-  const isInternalPdf = isPdf && !isExternal
+  const isMailto = url.isMailto(href)
+  const isInternalFile = isFile && !isExternal
   const isHash = url.isHash(href)
 
-  // Get proper download link for internally hosted PDF's & static files (ex: whitepaper)
+  // Get proper download link for internally hosted files (ex: whitepaper.pdf)
   // Opens in separate window.
-  if (isInternalPdf) {
-    href = getRelativePath(asPath, href)
+  if (isInternalFile && !href.startsWith("/")) {
+    href = "/" + getRelativePath(pathname, href)
   }
 
   if (isDiscordInvite) {
@@ -85,7 +90,7 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
     return (
       <a
         target="_blank"
-        rel="noopener"
+        rel="noopener noreferrer"
         onClick={() =>
           trackCustomEvent(
             customEventOptions ?? {
@@ -98,28 +103,37 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
         }
         {...commonProps}
       >
-        {children}
-        <VisuallyHidden>(opens in a new tab)</VisuallyHidden>
-        {!hideArrow && (
-          <RxExternalLink
-            className={cn("-me-1 inline h-6 w-6 p-1 align-middle", {
-              transform: flipForRtl,
-            })}
+        {isMailto ? (
+          <span className="text-nowrap">
+            {!hideArrow && (
+              <Mail className="!mb-0.5 me-1 inline-block size-[1em] shrink-0" />
+            )}
+            {children}
+          </span>
+        ) : (
+          children
+        )}
+        <VisuallyHidden>
+          {isMailto ? "opens email client" : "opens in a new tab"}
+        </VisuallyHidden>
+        {!hideArrow && !isMailto && (
+          <ExternalLink
+            data-label="arrow"
+            className={cn(
+              "!mb-0.5 ms-1 inline-block size-[0.875em] max-h-4 max-w-4 shrink-0",
+              twFlipForRtl
+            )}
           />
         )}
       </a>
     )
   }
 
-  if (isInternalPdf) {
+  if (isInternalFile) {
     return (
       <NextLink
         target="_blank"
-        rel="noopener"
-        // disable locale prefixing for internal PDFs
-        // TODO: add i18n support using a rehype plugin (similar as we do for
-        // images)
-        locale={false}
+        rel="noopener noreferrer"
         onClick={() =>
           trackCustomEvent(
             customEventOptions ?? {
@@ -159,7 +173,7 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
   }
 
   return (
-    <NextLink
+    <I18nLink
       onClick={() =>
         trackCustomEvent(
           customEventOptions ?? {
@@ -173,7 +187,7 @@ export const BaseLink = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
       {...commonProps}
     >
       {children}
-    </NextLink>
+    </I18nLink>
   )
 })
 BaseLink.displayName = "BaseLink"
