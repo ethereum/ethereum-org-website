@@ -12660,7 +12660,7 @@
       "login": "mseidlx",
       "name": "Matthias Seidl",
       "avatar_url": "https://avatars.githubusercontent.com/u/32496674?v=4",
-      "profile": "https://growthepie.xyz",
+      "profile": "https://growthepie.com",
       "contributions": [
         "code"
       ]
@@ -12781,6 +12781,52 @@
       "profile": "https://github.com/Nik-EpicWeb3",
       "contributions": [
         "eventOrganizing"
+      ]
+    },
+    {
+      "login": "brossetti1",
+      "name": "Brian Rossetti",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5998100?v=4",
+      "profile": "https://github.com/brossetti1",
+      "contributions": [
+        "maintenance",
+        "code"
+      ]
+    },
+    {
+      "login": "Antoine-Sparenberg",
+      "name": "Antoine-Sparenberg",
+      "avatar_url": "https://avatars.githubusercontent.com/u/128523213?v=4",
+      "profile": "https://github.com/Antoine-Sparenberg",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "kks-code",
+      "name": "Kendra Karol Sevilla",
+      "avatar_url": "https://avatars.githubusercontent.com/u/214244795?v=4",
+      "profile": "https://github.com/kks-code",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "otc-png",
+      "name": "otc group",
+      "avatar_url": "https://avatars.githubusercontent.com/u/214395681?v=4",
+      "profile": "https://github.com/otc-png",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "Savio-Sou",
+      "name": "Savio",
+      "avatar_url": "https://avatars.githubusercontent.com/u/72797635?v=4",
+      "profile": "https://github.com/Savio-Sou",
+      "contributions": [
+        "maintenance"
       ]
     }
   ],

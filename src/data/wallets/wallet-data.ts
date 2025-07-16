@@ -5,7 +5,6 @@ import { newToCrypto } from "@/data/wallets/new-to-crypto"
 import OneInchWalletImage from "@/public/images/wallets/1inch.png"
 import AlphaWalletImage from "@/public/images/wallets/alpha.png"
 import AmbireImage from "@/public/images/wallets/ambire.png"
-import ArgentImage from "@/public/images/wallets/argent.png"
 import AuroxImage from "@/public/images/wallets/aurox.png"
 import BitgetImage from "@/public/images/wallets/bitget.png"
 import BlockWalletImage from "@/public/images/wallets/blockwallet.png"
@@ -36,6 +35,7 @@ import PhantomImage from "@/public/images/wallets/phantom.png"
 import PillarImage from "@/public/images/wallets/pillar.png"
 import RabbyWalletImage from "@/public/images/wallets/rabbywallet.png"
 import RainbowImage from "@/public/images/wallets/rainbow.png"
+import ReadyImage from "@/public/images/wallets/ready.png"
 import SafeImage from "@/public/images/wallets/safe.png"
 import ShapeShiftImage from "@/public/images/wallets/shapeshift.png"
 import TahoImage from "@/public/images/wallets/taho.png"
@@ -149,15 +149,15 @@ export const walletsData: WalletData[] = [
     supported_chains: ["Ethereum Mainnet"],
   },
   {
-    last_updated: "2024-03-07",
-    name: "Argent",
-    image: ArgentImage,
+    last_updated: "2025-07-15",
+    name: "Ready Wallet",
+    image: ReadyImage,
     twBackgroundColor: "bg-[#FFFFFF]",
     twGradiantBrandColor: "from-[#ffffff]",
-    url: "https://www.argent.xyz/",
+    url: "https://www.ready.co/",
     active_development_team: true,
     languages_supported: ["en"],
-    twitter: "https://twitter.com/argenthq",
+    twitter: "https://x.com/ready_co",
     discord: "https://discord.com/invite/GWSyrHg",
     reddit: "",
     telegram: "",
@@ -169,12 +169,12 @@ export const walletsData: WalletData[] = [
     firefox: true,
     chromium: true,
     hardware: false,
-    open_source: true,
-    repo_url: "https://github.com/argentlabs/argent-x",
+    open_source: false,
+    repo_url: "",
     non_custodial: true,
     security_audit: [
       "https://github.com/argentlabs/argent-contracts/tree/develop/audit",
-      "https://www.argent.xyz/argent-bug-bounty/",
+      "https://www.ready.co/ready-bug-bounty",
     ],
     scam_protection: true,
     hardware_support: true,
@@ -191,8 +191,8 @@ export const walletsData: WalletData[] = [
     withdraw_crypto: false,
     multisig: true,
     social_recovery: true,
-    onboard_documentation: "https://www.argent.xyz/learn/",
-    documentation: "",
+    onboard_documentation: "https://www.ready.co/learn",
+    documentation: "https://docs.ready.co/",
     supported_chains: ["Starknet"],
   },
   {
@@ -308,7 +308,7 @@ export const walletsData: WalletData[] = [
     ],
   },
   {
-    last_updated: "2025-02-01",
+    last_updated: "2025-03-17",
     name: "MetaMask",
     image: MetaMaskImage,
     twBackgroundColor: "bg-[#FFFFFF]",
@@ -362,8 +362,8 @@ export const walletsData: WalletData[] = [
       "zh-tw",
     ],
     twitter: "https://x.com/metamask",
-    discord: "",
-    reddit: "",
+    discord: "https://discord.gg/consensys",
+    reddit: "https://www.reddit.com/r/Metamask",
     telegram: "",
     ios: true,
     android: true,

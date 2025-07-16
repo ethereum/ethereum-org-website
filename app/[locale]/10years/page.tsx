@@ -236,10 +236,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             <p className="text-md">
               {t("page-10-year-host-event-description")}
             </p>
-            <ButtonLink
-              href="https://blog.ethereum.org/2025/04/24/ten-years"
-              hideArrow
-            >
+            <ButtonLink href="https://10yearsofethereum.paperform.co" hideArrow>
               {t("page-10-year-host-event-cta")}
             </ButtonLink>
           </div>
@@ -351,7 +348,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             />
             <h3>{t("page-10-year-ideas-title")}</h3>
             <p>{t("page-10-year-ideas-description")}</p>
-            <ButtonLink href="mailto:10years@ethereum.org" hideArrow>
+            <ButtonLink href="mailto:10years@ethereum.org">
               {t("page-10-year-ideas-cta")}
             </ButtonLink>
           </div>

@@ -1,93 +1,33 @@
-"use client"
-
-import { useRef } from "react"
-import dynamic from "next/dynamic"
+import { getLocale, getTranslations } from "next-intl/server"
 
 import { EthHomeIcon } from "@/components/icons"
-import Search from "@/components/Search"
 
-import SearchButton from "../Search/SearchButton"
-import SearchInputButton from "../Search/SearchInputButton"
 import { BaseLink } from "../ui/Link"
 
-import DesktopNavMenu from "./Desktop"
-import { useNav } from "./useNav"
+import ClientSideNav from "./Client"
 
-import { useBreakpointValue } from "@/hooks/useBreakpointValue"
-import { useIsClient } from "@/hooks/useIsClient"
-import { useTranslation } from "@/hooks/useTranslation"
-
-const Menu = dynamic(() => import("./Menu"), {
-  ssr: false,
-  loading: () => <div />,
-})
-const MobileNavMenu = dynamic(() => import("./Mobile"), { ssr: false })
-
-// TODO display page title on mobile
-const Nav = () => {
-  const { toggleColorMode, linkSections } = useNav()
-  const { t } = useTranslation("common")
-  const navWrapperRef = useRef(null)
-  const isClient = useIsClient()
-  const desktopScreen = useBreakpointValue({ base: false, md: true })
+const Nav = async () => {
+  const locale = await getLocale()
+  const t = await getTranslations({ locale, namespace: "common" })
 
   return (
-    <div className="sticky top-0 z-sticky w-full">
-      <nav
-        ref={navWrapperRef}
-        className="flex h-19 justify-center border-b border-b-disabled bg-background p-4 xl:px-8"
-        aria-label={t("nav-primary")}
+    <nav
+      className="sticky top-0 z-sticky flex h-19 w-full max-w-screen-2xl items-center justify-between border-b bg-background p-4 md:items-stretch md:justify-normal xl:px-8"
+      aria-label={t("nav-primary")}
+    >
+      <BaseLink
+        href="/"
+        aria-label={t("home")}
+        className="inline-flex items-center no-underline"
+        data-testid="nav-logo"
       >
-        <div className="flex w-full max-w-screen-2xl items-center justify-between md:items-stretch md:justify-normal">
-          <BaseLink
-            href="/"
-            aria-label={t("home")}
-            className="inline-flex items-center no-underline"
-          >
-            <EthHomeIcon className="h-[35px] w-[22px] opacity-85 hover:opacity-100" />
-          </BaseLink>
-          {/* Desktop */}
-          <div className="ms-3 flex w-full justify-end md:justify-between xl:ms-8">
-            {/* avoid rendering desktop Menu version on mobile */}
-            {isClient && desktopScreen ? (
-              <Menu className="hidden md:block" sections={linkSections} />
-            ) : (
-              <div />
-            )}
+        <EthHomeIcon className="text-[35px] opacity-85 hover:opacity-100" />
+      </BaseLink>
 
-            <Search>
-              {({ onOpen }) => {
-                if (!isClient) return null
-
-                return (
-                  <div className="flex items-center">
-                    {/* Desktop */}
-                    <div className="hidden md:flex">
-                      <SearchButton className="xl:hidden" onClick={onOpen} />
-                      <SearchInputButton
-                        className="hidden xl:flex"
-                        onClick={onOpen}
-                      />
-                      <DesktopNavMenu toggleColorMode={toggleColorMode} />
-                    </div>
-
-                    <div className="flex md:hidden">
-                      {/* Mobile */}
-                      <SearchButton onClick={onOpen} />
-                      <MobileNavMenu
-                        toggleColorMode={toggleColorMode}
-                        linkSections={linkSections}
-                        toggleSearch={onOpen}
-                      />
-                    </div>
-                  </div>
-                )
-              }}
-            </Search>
-          </div>
-        </div>
-      </nav>
-    </div>
+      <div className="ms-3 flex w-full justify-end md:justify-between xl:ms-8">
+        <ClientSideNav />
+      </div>
+    </nav>
   )
 }
 

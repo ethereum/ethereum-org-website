@@ -168,7 +168,7 @@ Nếu nguồn cung của sàn giao dịch B sụt giảm bất ngờ và ngườ
 
 Để có thể thực hiện ví dụ trên trong thế giới tài chính truyền thống, bạn sẽ cần một lượng tiền khổng lồ. Những chiến lược kiếm tiền kiểu này chỉ những người sở hữu sẵn tài sản mới có thể tiếp cận được. Các khoản vay nóng là ví dụ về một tương lai nơi mà việc có tiền không nhất thiết phải là một điều kiện tiên quyết cho việc kiếm tiền.
 
-<ButtonLink isSecondary href="https://aave.com/flash-loans/">
+<ButtonLink isSecondary href="https://aave.com/docs/concepts/flash-loans/">
   Đọc thêm về các khoản vay nóng
 </ButtonLink>
 

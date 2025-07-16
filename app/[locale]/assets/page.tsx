@@ -48,6 +48,6 @@ export async function generateMetadata({
     locale,
     slug: ["assets"],
     title: t("page-assets-meta-title"),
-    description: t("page-assets-meta-description"),
+    description: t("page-assets-meta-desc"),
   })
 }

@@ -2,16 +2,17 @@ import { Fragment } from "react"
 import dynamic from "next/dynamic"
 import { notFound } from "next/navigation"
 import { getTranslations, setRequestLocale } from "next-intl/server"
-import { FaDiscord, FaGithub } from "react-icons/fa6"
-import { FaXTwitter } from "react-icons/fa6"
 
-import type { AllMetricData, CommunityBlog, ValuesPairing } from "@/lib/types"
+import type {
+  AllHomepageActivityData,
+  CommunityBlog,
+  ValuesPairing,
+} from "@/lib/types"
 import type { EventCardProps } from "@/lib/types"
 import type { Lang } from "@/lib/types"
 import { CodeExample } from "@/lib/interfaces"
 
 import ActivityStats from "@/components/ActivityStats"
-import { getActivity } from "@/components/ActivityStats/getActivity"
 import BannerNotification from "@/components/Banners/BannerNotification"
 import { ChevronNext } from "@/components/Chevron"
 import HomeHero from "@/components/Hero/HomeHero"
@@ -23,11 +24,14 @@ import BlockHeap from "@/components/icons/block-heap.svg"
 import BuildAppsIcon from "@/components/icons/build-apps.svg"
 import Calendar from "@/components/icons/calendar.svg"
 import CalendarAdd from "@/components/icons/calendar-add.svg"
+import Discord from "@/components/icons/discord.svg"
 import EthGlyphIcon from "@/components/icons/eth-glyph.svg"
 import EthTokenIcon from "@/components/icons/eth-token.svg"
 import PickWalletIcon from "@/components/icons/eth-wallet.svg"
+import Github from "@/components/icons/github.svg"
 import TryAppsIcon from "@/components/icons/phone-homescreen.svg"
 import RoadmapSign from "@/components/icons/roadmap-sign.svg"
+import Twitter from "@/components/icons/twitter.svg"
 import Whitepaper from "@/components/icons/whitepaper.svg"
 import { Image } from "@/components/Image"
 import CardImage from "@/components/Image/CardImage"
@@ -63,7 +67,6 @@ import { getMetadata } from "@/lib/utils/metadata"
 import { polishRSSList } from "@/lib/utils/rss"
 
 import events from "@/data/community-events.json"
-import CreateWalletContent from "@/data/CreateWallet"
 
 import {
   ATTESTANT_BLOG,
@@ -78,10 +81,8 @@ import {
 } from "@/lib/constants"
 
 import TenYearHomeBanner from "./10years/_components/TenYearHomeBanner"
+import { getActivity } from "./utils"
 
-import SimpleDomainRegistryContent from "!!raw-loader!@/data/SimpleDomainRegistry.sol"
-import SimpleTokenContent from "!!raw-loader!@/data/SimpleToken.sol"
-import SimpleWalletContent from "!!raw-loader!@/data/SimpleWallet.sol"
 import { routing } from "@/i18n/routing"
 import { fetchCommunityEvents } from "@/lib/api/calendarEvents"
 import { fetchEthPrice } from "@/lib/api/fetchEthPrice"
@@ -336,28 +337,28 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
       title: t("page-index-developers-code-example-title-0"),
       description: t("page-index-developers-code-example-description-0"),
       codeLanguage: "language-solidity",
-      code: SimpleWalletContent,
+      codeUrl: "/code-examples/SimpleWallet.sol",
       eventName: "bank",
     },
     {
       title: t("page-index-developers-code-example-title-1"),
       description: t("page-index-developers-code-example-description-1"),
       codeLanguage: "language-solidity",
-      code: SimpleTokenContent,
+      codeUrl: "/code-examples/SimpleToken.sol",
       eventName: "token",
     },
     {
       title: t("page-index-developers-code-example-title-2"),
       description: t("page-index-developers-code-example-description-2"),
       codeLanguage: "language-javascript",
-      code: CreateWalletContent,
+      codeUrl: "/code-examples/CreateWallet.js",
       eventName: "wallet",
     },
     {
       title: t("page-index-developers-code-example-title-3"),
       description: t("page-index-developers-code-example-description-3"),
       codeLanguage: "language-solidity",
-      code: SimpleDomainRegistryContent,
+      codeUrl: "/code-examples/SimpleDomainRegistry.sol",
       eventName: "dns",
     },
   ]
@@ -372,7 +373,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
       eventName: "contribute",
     },
     {
-      Svg: FaGithub,
+      Svg: Github,
       label: "GitHub",
       href: GITHUB_REPO_URL,
       className: "text-accent-a hover:text-accent-a-hover",
@@ -380,7 +381,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
       eventName: "GitHub",
     },
     {
-      Svg: FaDiscord,
+      Svg: Discord,
       label: "Discord",
       href: "/discord/",
       className: "text-primary hover:text-primary-hover",
@@ -388,7 +389,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
       eventName: "Discord",
     },
     {
-      Svg: FaXTwitter,
+      Svg: Twitter,
       label: "X",
       href: "https://x.com/EthDotOrg",
       className: "text-accent-b hover:text-accent-b-hover",
@@ -410,7 +411,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     )
     .slice(0, 3) as EventCardProps[] // Show 3 events ending soonest
 
-  const metricResults: AllMetricData = {
+  const metricResults: AllHomepageActivityData = {
     ethPrice,
     totalEthStaked,
     totalValueLocked,
@@ -447,7 +448,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           </Link>
         </p>
       </BannerNotification>
-      <HomeHero heroImg={Hero} className="w-full" />
+      <HomeHero heroImg={Hero} className="w-full" locale={locale} />
       <div className="w-full space-y-32 px-4 md:mx-6 lg:space-y-48">
         <div className="my-20 grid w-full grid-cols-2 gap-x-4 gap-y-8 md:grid-cols-4 md:gap-x-10">
           {subHeroCTAs.map(
@@ -539,7 +540,18 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
               </p>
               <ActivityStats metrics={metrics} />
 
-              <div className="mt-12 flex justify-center">
+              <div className="mt-12 flex flex-wrap gap-6 py-8">
+                <ButtonLink
+                  size="lg"
+                  href="/enterprise/"
+                  customEventOptions={{
+                    eventCategory: eventCategory,
+                    eventAction: "ethereum_activity",
+                    eventName: "enterprise",
+                  }}
+                >
+                  {t("page-index-activity-action-primary")} <ChevronNext />
+                </ButtonLink>
                 <ButtonLink
                   size="lg"
                   href="/resources/"
@@ -735,7 +747,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                     eventName: "discord",
                   }}
                 >
-                  <FaDiscord />
+                  <Discord />
                 </ButtonLink>
                 <ButtonLink
                   href={GITHUB_REPO_URL}
@@ -749,7 +761,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                     eventName: "github",
                   }}
                 >
-                  <FaGithub />
+                  <Github />
                 </ButtonLink>
               </div>
             </div>
