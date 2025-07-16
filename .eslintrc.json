@@ -90,6 +90,7 @@
     "coverage/",
     "storybook-static/",
     "**/*.d.ts",
-    "src/intl/"
+    "src/intl/",
+    "public/code-examples/"
   ]
 }

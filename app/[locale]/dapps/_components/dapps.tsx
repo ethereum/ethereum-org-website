@@ -851,7 +851,7 @@ const DappsPage = ({
     {
       title: "1inch",
       description: t("page-dapps-dapp-description-1inch"),
-      link: "https://1inch.exchange/",
+      link: "https://1inch.io/",
       image: oneinch,
       alt: t("page-dapps-1inch-logo-alt"),
     },

@@ -637,18 +637,6 @@
     "publishDate": "04/24/2024"
   },
   {
-    "url": "https://speedrunethereum.com/challenge/state-channels",
-    "title": "State Channel Application",
-    "description": "Create an app to lock collateral onchain, transact offchain, then finalize onchain.",
-    "author": "Austin Griffith",
-    "authorGithub": "https://github.com/austintgriffith",
-    "tags": ["solidity", "smart contracts", "react", "nextjs", "wagmi", "javascript", "typescript", "frontend", "openzeppelin"],
-    "skillLevel": "intermediate",
-    "timeToRead": "60",
-    "lang": "en",
-    "publishDate": "04/24/2024"
-  },
-  {
     "url": "https://github.com/scaffold-eth/se-2-challenges/tree/challenge-6-multisig",
     "title": "Multisig wallet",
     "description": "Deploy a multi-signature wallet where enough signatures are required to execute a transaction",

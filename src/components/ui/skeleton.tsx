@@ -4,7 +4,7 @@ import { Card, CardBanner, CardContent } from "../ui/card"
 
 // Pseudo-random list of skeleton widths for multiple lines
 const widths = [
-  "w-1/3",
+  "w-2/3",
   "w-1/5",
   "w-4",
   "w-1/4",
