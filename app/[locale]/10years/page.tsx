@@ -28,12 +28,12 @@ import { BASE_TIME_UNIT } from "@/lib/constants"
 
 import AdoptionSwiper from "./_components/AdoptionSwiper"
 import CountDown from "./_components/CountDown"
+import CurrentTorchHolderCard from "./_components/CurrentTorchHolderCard"
 import { adoptionCards, adoptionStyles } from "./_components/data"
 import InnovationSwiper from "./_components/InnovationSwiper"
 import Stories from "./_components/Stories"
 import TenYearHero from "./_components/TenYearHero"
 import TorchHistory from "./_components/TorchHistory"
-import TorchNFT from "./_components/TorchNFT"
 import { getTimeUnitTranslations, parseStoryDates } from "./_components/utils"
 
 import { fetch10YearEvents } from "@/lib/api/fetch10YearEvents"
@@ -97,42 +97,33 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
       <MainArticle className="mx-auto flex w-full flex-col items-center">
         <TenYearHero locale={locale} />
 
-        <div className="mt-16 flex w-full flex-col gap-16 px-8 py-4 md:flex-row md:py-8">
+        <div className="w-full px-8 py-12">
+          <CountDown
+            timeLeftLabels={timeLeftLabels}
+            expiredLabel={t("page-10-year-countdown-expired")}
+          />
+        </div>
+
+        <div className="mt-16 flex w-full max-w-screen-xl flex-col gap-32 px-8 py-4 md:flex-row md:py-8">
           <div className="flex flex-1 flex-col gap-5">
             <div>
               <h1 className="text-2xl font-bold">
                 {t("page-10-year-hero-title")}
               </h1>
             </div>
+
             <div className="flex flex-1 flex-col gap-4">
               <p className="text-lg">{t("page-10-year-hero-description")}</p>
               <p className="text-lg">{t("page-10-year-hero-tagline")}</p>
             </div>
           </div>
-          <div className="flex flex-1 flex-row items-center justify-center">
-            <CountDown
-              timeLeftLabels={timeLeftLabels}
-              expiredLabel={t("page-10-year-countdown-expired")}
+          <div className="flex flex-row items-center justify-center">
+            <CurrentTorchHolderCard
+              className="w-[420px]"
+              holderLookup={torchHolderLookup}
             />
           </div>
         </div>
-
-        <TorchNFT
-          title={t("page-10-year-torch-title")}
-          description={t("page-10-year-torch-description")}
-          currentHolderLabel={t("page-10-year-torch-current-holder")}
-          noHolderLabel={t("page-10-year-torch-no-holder")}
-          holderLookup={torchHolderLookup}
-        />
-
-        <TorchHistory
-          title={t("page-10-year-torch-history-title")}
-          noHistoryLabel={t("page-10-year-torch-no-history")}
-          fromLabel={t("page-10-year-torch-from")}
-          toLabel={t("page-10-year-torch-to")}
-          transactionLabel={t("page-10-year-torch-view-tx")}
-          holderLookup={torchHolderLookup}
-        />
 
         <div className="w-full px-4 py-8 md:px-8">
           <div className="flex min-h-[500px] flex-col items-center gap-4 rounded-4xl bg-radial-a px-8 pt-8 lg:px-14 lg:pt-14">
@@ -274,6 +265,15 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
             </ButtonLink>
           </div>
         </div>
+
+        <TorchHistory
+          title={t("page-10-year-torch-history-title")}
+          noHistoryLabel={t("page-10-year-torch-no-history")}
+          fromLabel={t("page-10-year-torch-from")}
+          toLabel={t("page-10-year-torch-to")}
+          transactionLabel={t("page-10-year-torch-view-tx")}
+          holderLookup={torchHolderLookup}
+        />
 
         <div className="flex w-full flex-col items-center gap-8 px-8 py-8 pt-32 lg:flex-row">
           <div className="flex flex-1 flex-col gap-6">
