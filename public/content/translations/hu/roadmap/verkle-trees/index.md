@@ -60,7 +60,7 @@ A Verkle-fa teszthálózatai már működnek, de jelentős mértékű kliensfris
 - [Guillaume Ballet magyarázata a Verkle-fákról az ETHGlobal rendezvényen](https://www.youtube.com/watch?v=f7bEtX3Z57o)
 - [„Hogyan segítenek a Verkle-fák abban, hogy az Ethereum áttekinthető és egyszerű legyen?” – Guillaume Ballet előadása a Devcon 6 rendezvényen](https://www.youtube.com/watch?v=Q7rStTKwuYs)
 - [Piper Merriam előadása a státusztalan kliensekről az ETHDenver 2020-as rendezvényén](https://www.youtube.com/watch?v=0yiZJNciIJ4)
-- [Dankrad Fiest Verkle-fákról és státuszmentességről szóló podcastja a Zero Knowledge csatornán](https://zeroknowledge.fm/episode-202-stateless-ethereum-verkle-tries-with-dankrad-feist/)
+- [Dankrad Fiest Verkle-fákról és státuszmentességről szóló podcastja a Zero Knowledge csatornán](https://zeroknowledge.fm/podcast/202/)
 - [Vitalik Buterin magyarázata a Verkle-fákról](https://vitalik.eth.limo/general/2021/06/18/verkle.html)
 - [Dankrad Feist magyarázata a Verkle-fákról](https://dankradfeist.de/ethereum/2021/06/18/verkle-trie-for-eth1.html)
 - [A Verkle-fák EIP-dokumentációja](https://notes.ethereum.org/@vbuterin/verkle_tree_eip#Illustration)

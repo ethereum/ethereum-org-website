@@ -257,7 +257,7 @@ Az [adat sharding](/roadmap/danksharding/) bevezetése az Ethereumban várhatóa
 
 - [Hogyan működnek az optimista összevont tranzakciók (teljes útmutató)](https://www.alchemy.com/overviews/optimistic-rollups)
 - [Mi az a blokklánc összevont tranzakció? Technikai bevezetés](https://www.ethereum-ecosystem.com/blog/what-is-a-blockchain-rollup-a-technical-introduction)
-- [Az alapvető útmutató az Arbitrumhoz](https://newsletter.banklesshq.com/p/the-essential-guide-to-arbitrum)
-- [Hogyan működik valójában az optimista összevont tranzakció?](https://www.paradigm.xyz/2021/01/how-does-optimisms-rollup-really-work)
+- [Az alapvető útmutató az Arbitrumhoz](https://www.bankless.com/the-essential-guide-to-arbitrum)
+- [Hogyan működik valójában az optimista összevont tranzakció?](https://www.paradigm.xyz/2021/01/how-does-optimism-s-rollup-really-work)
 - [Az OVM részletes bemutatása](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)
 - [Mi az az optimista virtuális gép?](https://www.alchemy.com/overviews/optimistic-virtual-machine)

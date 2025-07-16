@@ -1,5 +1,4 @@
-import React from "react"
-import { MdExpandMore } from "react-icons/md"
+import { ChevronDown } from "lucide-react"
 
 import type { ToCItem } from "@/lib/types"
 
@@ -35,7 +34,7 @@ const Mobile = ({ items, maxDepth }: TableOfContentsMobileProps) => {
           className="flex w-full justify-between lg:hidden"
         >
           <span className="flex-1 text-center">{t("on-this-page")}</span>
-          <MdExpandMore />
+          <ChevronDown />
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent

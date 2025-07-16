@@ -92,7 +92,7 @@ Pada tahun 1977, negara bagian Wyoming menemukan LLC, bentuk usaha yang melindun
 
 ### Contoh yang terkenal {#law-example}
 
-[CityDAO](https://citydao.io) – CityDAO menggunakan hukum DAO Wyoming untuk membeli tanah seluas 40 acre di dekat Taman Nasional Yellowstone.
+[CityDAO](https://citizen.citydao.io/) – CityDAO menggunakan hukum DAO Wyoming untuk membeli tanah seluas 40 acre di dekat Taman Nasional Yellowstone.
 
 ## Keanggotaan DAO {#dao-membership}
 

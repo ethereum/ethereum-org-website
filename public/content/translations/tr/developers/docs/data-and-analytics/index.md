@@ -47,7 +47,7 @@ Başlarken, Ethereum blokzinciri verilerini yerel bir Docker ortamında dakikala
 
 ## Daha Fazla Okuma {#further-reading}
 
-- [Graph Ağına Genel Bakış](https://thegraph.com/docs/en/about/network/)
+- [Graph Ağına Genel Bakış](https://thegraph.com/docs/en/about/)
 - [Graph Query Playground](https://thegraph.com/explorer/subgraph/graphprotocol/graph-network-mainnet?version=current)
 - [EtherScan'deki API kodu örnekleri](https://etherscan.io/apis#contracts)
 - [Beaconcha.in İçaret Zincir'i keşif aracı](https://beaconcha.in)

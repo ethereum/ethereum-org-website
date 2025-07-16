@@ -179,7 +179,7 @@ pnpm events-import         # Import community events
 - `@radix-ui/*` - Accessible component primitives
 - `tailwind-variants` - Component variant patterns
 - `framer-motion` - Animation library
-- `react-icons` - Icon library
+- `lucide-react` - Icon library
 
 ### Content & Data
 
@@ -191,6 +191,62 @@ pnpm events-import         # Import community events
 - `viem` - Ethereum library
 - `wagmi` - React hooks for Ethereum
 - `@rainbow-me/rainbowkit` - Wallet connection
+
+## A/B Testing
+
+### Overview
+
+The site uses a GDPR-compliant, cookie-less A/B testing system integrated with Matomo. Tests are configured entirely through the Matomo dashboard with no code changes required.
+
+### Key Features
+
+- **Matomo API Integration** - Experiments configured in Matomo dashboard
+- **Cookie-less Variant Persistence** - Uses deterministic IP + User-Agent fingerprinting for variant assignment
+- **Server-side Rendering** - No layout shifts, consistent variants on first load
+- **Real-time Updates** - Change weights instantly via Matomo (no deployments)
+- **Preview Mode** - Debug panel available in development and preview environments
+- **Automatic Fallbacks** - Graceful degradation when API fails (shows original variant)
+
+### Adding a New A/B Test
+
+1. **Create experiment in Matomo dashboard**:
+   - Go to Experiments → Manage Experiments
+   - Create new experiment with desired name (e.g., "HomepageHero")
+   - Add variations with weights (original is implicit)
+   - Set status to "running"
+
+2. **Implement in component**:
+   ```tsx
+   import ABTestWrapper from "@/components/AB/TestWrapper"
+   
+   <ABTestWrapper
+     testKey="HomepageHero"  // Must match Matomo experiment name exactly
+     variants={[
+       <OriginalComponent key="current-hero" />,     // Index 0: Original
+       <NewComponent key="redesigned-hero" />        // Index 1: Variation
+     ]}
+     fallback={<OriginalComponent />}
+   />
+   ```
+
+**Important**:
+- Variants matched by **array index**, not names
+- Array order must match Matomo experiment order exactly
+- JSX `key` props become debug panel labels: `"redesigned-hero"` → `"Redesigned Hero"`
+- No TypeScript changes required - system fetches configuration from Matomo
+
+### Architecture
+
+- **`/api/ab-config`** - Fetches experiment data from Matomo API
+- **`src/lib/ab-testing/`** - Core logic for assignment and tracking
+- **`src/components/AB/`** - React components for testing and debugging
+
+### Environment Variables
+
+Required for Matomo integration:
+- `NEXT_PUBLIC_MATOMO_URL` - Matomo instance URL
+- `NEXT_PUBLIC_MATOMO_SITE_ID` - Site ID in Matomo
+- `MATOMO_API_TOKEN` - API token with experiments access
 
 ## Deployment
 

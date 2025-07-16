@@ -106,7 +106,7 @@ _請注意，此影片中的解釋使用「二層網路」指代所有鏈外擴�
 - [卷軸之不完整指南](https://vitalik.eth.limo/general/2021/01/05/rollup.html)
 - [以太坊驅動的零知識證明卷軸：業界佼佼者](https://hackmd.io/@canti/rkUT0BD8K)
 - [樂觀卷軸與零知識證明卷軸](https://limechain.tech/blog/optimistic-rollups-vs-zk-rollups/)
-- [零知識區塊鏈可擴展性](https://ethworks.io/assets/download/zero-knowledge-blockchain-scaling-ethworks.pdf)
+- [零知識區塊鏈可擴展性](https://www.archblock.com/poland/assets/download/zero-knowledge-blockchain-scaling-ethworks.pdf)
 - [爲什麽說卷軸 + 資料分片是提高可擴展性的唯一可持續解決方案](https://polynya.medium.com/why-rollups-data-shards-are-the-only-sustainable-solution-for-high-scalability-c9aabd6fbb48)
 - [什麽類型的三層網路才有意義？](https://vitalik.eth.limo/general/2022/09/17/layer_3.html)
 - [資料可用性或：卷軸如何學會停止擔憂並熱愛以太坊](https://ethereum2077.substack.com/p/data-availability-in-ethereum-rollups)
