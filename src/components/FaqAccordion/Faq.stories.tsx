@@ -1,15 +1,10 @@
 import { Meta, StoryObj } from "@storybook/react"
 
-import {
-  FaqAccordion,
-  FaqAccordionContent,
-  FaqAccordionItem,
-  FaqAccordionTrigger,
-} from "."
+import { Faq as FaqComponent, FaqContent, FaqItem, FaqTrigger } from "."
 
 const meta = {
-  title: "FaqAccordion",
-  component: FaqAccordion,
+  title: "Molecules / Display Content / Faq",
+  component: FaqComponent,
   decorators: [
     (Story) => (
       <div className="">
@@ -17,21 +12,21 @@ const meta = {
       </div>
     ),
   ],
-} satisfies Meta<typeof FaqAccordion>
+} satisfies Meta<typeof FaqComponent>
 
 export default meta
 
-export const FaqAccordionStory: StoryObj = {
+export const Faq: StoryObj = {
   render: () => (
-    <FaqAccordion type="single" collapsible>
-      <FaqAccordionItem value="item-1">
-        <FaqAccordionTrigger>
+    <FaqComponent type="single" collapsible>
+      <FaqItem value="item-1">
+        <FaqTrigger>
           <h2 className="text-start text-base md:text-xl">
             Why is there no &apos;official&apos; Ethereum L2?
           </h2>
-        </FaqAccordionTrigger>
+        </FaqTrigger>
 
-        <FaqAccordionContent>
+        <FaqContent>
           Just as there is no &apos;official&apos; Ethereum client, there is no
           &apos;official&apos; Ethereum layer 2. Ethereum is permissionless -
           technically anyone can create a layer 2! Multiple teams will implement
@@ -40,15 +35,15 @@ export const FaqAccordionStory: StoryObj = {
           use cases. Much like we have multiple Ethereum clients developed by
           multiple teams in order to have diversity in the network, this too
           will be how layer 2s develop in the future.
-        </FaqAccordionContent>
-      </FaqAccordionItem>
-      <FaqAccordionItem value="item-2">
-        <FaqAccordionTrigger>
+        </FaqContent>
+      </FaqItem>
+      <FaqItem value="item-2">
+        <FaqTrigger>
           <h2 className="text-start text-base md:text-xl">
             Why is there no &apos;official&apos; Ethereum L2?
           </h2>
-        </FaqAccordionTrigger>
-        <FaqAccordionContent>
+        </FaqTrigger>
+        <FaqContent>
           Just as there is no &apos;official&apos; Ethereum client, there is no
           &apos;official&apos; Ethereum layer 2. Ethereum is permissionless -
           technically anyone can create a layer 2! Multiple teams will implement
@@ -57,8 +52,8 @@ export const FaqAccordionStory: StoryObj = {
           use cases. Much like we have multiple Ethereum clients developed by
           multiple teams in order to have diversity in the network, this too
           will be how layer 2s develop in the future.
-        </FaqAccordionContent>
-      </FaqAccordionItem>
-    </FaqAccordion>
+        </FaqContent>
+      </FaqItem>
+    </FaqComponent>
   ),
 }
