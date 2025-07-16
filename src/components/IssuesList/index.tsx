@@ -1,64 +1,59 @@
 import Emoji from "react-emoji-render"
-import {
-  Avatar,
-  Flex,
-  HStack,
-  SimpleGrid,
-  SimpleGridProps,
-  Stack,
-  Text,
-} from "@chakra-ui/react"
 
 import type { GHIssue } from "@/lib/types"
 
-import InlineLink from "../Link"
-import Tag from "../Tag"
+import { cn } from "@/lib/utils/cn"
 
-type IssuesListProps = SimpleGridProps & {
+import { Avatar } from "../ui/avatar"
+import { Flex, HStack, Stack } from "../ui/flex"
+import InlineLink from "../ui/Link"
+import { Tag } from "../ui/tag"
+
+type IssuesListProps = {
   issues: GHIssue[]
+  className?: string
 }
 
-const IssuesList = ({ issues, ...props }: IssuesListProps) => {
+const IssuesList = ({ issues, className }: IssuesListProps) => {
   return (
-    <SimpleGrid columns={[1, null, 2]} spacing={4} {...props}>
+    <div
+      className={cn("my-7 grid gap-4 sm:grid-cols-1 lg:grid-cols-2", className)}
+    >
       {issues.map((issue) => (
         <Stack
+          className="gap-4 rounded-md border border-border p-4"
           key={issue.title}
-          p={4}
-          spacing={4}
-          border="1px solid"
-          borderColor="body.light"
-          borderRadius="md"
         >
-          <Stack spacing={2}>
-            <HStack spacing={2}>
+          <Stack className="gap-2">
+            <HStack className="gap-2">
               <Avatar
                 name={issue.user.login}
                 src={issue.user.avatar_url}
-                w="32px"
-                h="32px"
+                size="sm"
+                href={`https://github.com/${issue.user.login}`}
               />
-              <Text size="sm">by {issue.user.login}</Text>
+              <p className="text-sm">by {issue.user.login}</p>
             </HStack>
 
-            <InlineLink href={issue.html_url} textDecor="none">
+            <InlineLink
+              href={issue.html_url}
+              className="no-underline hover:underline"
+            >
               {issue.title}
             </InlineLink>
           </Stack>
-          <Flex flexWrap="wrap" gap="1">
+          <Flex className="flex-wrap gap-1">
             {issue.labels.map((label) => {
               return (
-                <Tag
-                  key={label.id}
-                  label={<Emoji text={label.name} />}
-                  variant="outline"
-                />
+                <Tag key={label.id} variant="outline">
+                  <Emoji text={label.name} />
+                </Tag>
               )
             })}
           </Flex>
         </Stack>
       ))}
-    </SimpleGrid>
+    </div>
   )
 }
 

@@ -92,7 +92,7 @@ title="去中心化应用程序和智能合约开发者"
 contentPreview="The Merge was designed to have minimal impact on smart contract and dapp developers."
 id="developers">
 
-合并导致共识层发生变化，其中还包括以下方面的变化：<
+合并导致共识层发生变化，其中还包括以下方面的变化：
 
 <ul>
   <li>区块结构</li>
@@ -108,7 +108,7 @@ id="developers">
 
 ## 合并和能源消耗 {#merge-and-energy}
 
-合并标志着以太坊工作量证明的终结，从此以太坊将进入一个可持续性更强、更加环保的时代。 以太坊的能耗预计会下降 99.95%，这使得以太坊成为一个绿色环保的区块链。 了解有关[以太坊能源消耗](/energy-consumption/)的更多信息。
+合并标志着以太坊工作量证明的终结，从此以太坊进入一个可持续性更强、更加环保的时代。 以太坊的能耗预计会下降 99.95%，这使得以太坊成为一个绿色环保的区块链。 了解有关[以太坊能源消耗](/energy-consumption/)的更多信息。
 
 ## 合并与扩容 {#merge-and-scaling}
 
@@ -202,7 +202,7 @@ contentPreview="False. Validator exits are rate limited for security reasons.">
 
 相反，区块由验证节点提出，验证节点质押以太币以获得参与共识的权利。 这些升级为未来的可扩展性升级（包括分片）奠定了基础。
 
-<ButtonLink to="/roadmap/beacon-chain/">
+<ButtonLink href="/roadmap/beacon-chain/">
   信标链
 </ButtonLink>
 
@@ -218,7 +218,7 @@ contentPreview="False. Validator exits are rate limited for security reasons.">
 
 分片计划正在迅速发展，但随着扩展交易执行的二层网络技术的兴起和成功，分片计划已变为寻找最佳的负载分配方式，来存储来自卷叠合约中的压缩调用数据，这使得网络容量呈指数级增长。 如果不先过渡到权益证明，这是不可能的。
 
-<ButtonLink to="/roadmap/danksharding/">
+<ButtonLink href="/roadmap/danksharding/">
   分片
 </ButtonLink>
 

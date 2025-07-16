@@ -82,8 +82,8 @@ Por favor, consulte también nuestras [condiciones de uso](/terms-of-use/). La i
 
 Al igual que la naturaleza fluida de Ethereum, los equipos y productos vienen y van y la innovación sucede diariamente, así realizaremos comprobaciones de rutina de nuestro contenido para:
 
-- asegurarnos de que todas las DApps incluidas aún cumplan con nuestros criterios,
-- cercionarnos de que no hay productos sugeridos que cumplan con más de nuestros criterios que los actualmente incluidos,
+- garantizar que todas los dapps enumeradas sigan cumpliendo nuestros criterios
+- cercionarnos de que no haya productos sugeridos que cumplan con más de nuestros criterios que los actualmente incluidos
 
 Puede ayudar con esta tarea comprobando e informándonos de las conclusiones. [Crear un problema](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) o enviar un correo electrónico a [website@ethereum.org](mailto:website@ethereum.org)
 
@@ -95,6 +95,6 @@ _También estamos investigando las opciones para votar y que la comunidad pueda 
 
 Si quieres añadir un dapp a ethereum.org y cumple con los criterios, crea un problema en GitHub.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_dapp.yaml">
+<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_dapp.yaml">
   Crear una incidencia
 </ButtonLink>

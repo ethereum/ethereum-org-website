@@ -20,7 +20,6 @@ async function fetchWithRateLimit(filepath: string): Promise<Commit[]> {
    * eslint does not like while(true)
    **/
   while (true) {
-    console.log("looping")
     const response = await fetch(url.href, {
       headers: { Authorization: `token ${gitHubToken}` },
     })
@@ -47,7 +46,7 @@ async function fetchWithRateLimit(filepath: string): Promise<Commit[]> {
 }
 
 // Fetch commit history and save it to a JSON file
-export const fetchAndCacheGitContributors = async (
+export const fetchAndCacheGitHubContributors = async (
   filepath: string,
   cache: CommitHistory
 ) => {

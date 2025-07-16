@@ -75,9 +75,9 @@ sidebarDepth: 2
 
 [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/)
 
-[Lodestar](https://github.com/ChainSafe/lodestar)
+[ロードスター](https://github.com/ChainSafe/lodestar)
 
-[Prysm](https://docs.prylabs.network/docs/getting-started)
+[プリズム](https://docs.prylabs.network/docs/getting-started)
 
 ノードオペレーターを大多数を占めるクライアントからの移行を奨励し、移行プロセスを加速できるよう、技術系のユーザーはマイノリティクライアント向けのチュートリアルやドキュメントの作成にご協力ください。 マイノリティコンセンサスクライアントへの移行に関するガイドは、 [clientdiversity.org](https://clientdiversity.org/)から入手できます。
 
@@ -90,7 +90,7 @@ sidebarDepth: 2
 - [Rated.network](https://www.rated.network/)
 - [clientdiversity.org](https://clientdiversity.org/) **実行レイヤー:**
 
-- [execution-diversity.info](https://execution-diversity.info/)
+- [supermajority.info](https://supermajority.info//)
 - [Ethernodes](https://ethernodes.org/)
 
 ## 参考文献 {#further-reading}

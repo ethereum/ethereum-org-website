@@ -10,13 +10,13 @@ lang: en
 
 Are you looking for the official Ethereum support? The first thing you should know is that Ethereum is decentralized. This means no central organization, entity, or person owns Ethereum, and because of this, no official support channels exist.
 
-Understanding the decentralized nature of Ethereum is vital because anyone claiming to be official support for Ethereum is probably trying to scam you! The best protection against scammers is educating yourself and taking security seriously.
+Understanding the decentralized nature of Ethereum is vital because **anyone claiming to be official support for Ethereum is probably trying to scam you!** The best protection against scammers is educating yourself and taking security seriously.
 
-<DocLink to="/security/">
+<DocLink href="/security/">
   Ethereum security and scam prevention
 </DocLink>
 
-<DocLink to="/learn/">
+<DocLink href="/learn/">
   Learn Ethereum fundamentals
 </DocLink>
 
@@ -73,7 +73,6 @@ Here are some popular examples:
 - [ethers.js](https://discord.gg/6jyGVDK6Jx)
 - [web3.js](https://discord.gg/GsABYQu4sC)
 - [Hardhat](https://discord.gg/xtrMGhmbfZ)
-- [Truffle](https://discord.gg/8uKcsccEYE)
 - [Alchemy](http://alchemy.com/discord)
 - [Tenderly](https://discord.gg/fBvDJYR)
 
@@ -92,6 +91,7 @@ Most of the teams building Ethereum clients also have dedicated, public-facing, 
 - [Nethermind](https://discord.gg/YJx3pm8z5C)
 - [Besu](https://discord.gg/p8djYngzKN)
 - [Erigon](https://github.com/ledgerwatch/erigon/issues)
+- [Reth](https://github.com/paradigmxyz/reth/discussions)
 
 ### Consensus clients {#consensus-clients}
 
@@ -100,5 +100,6 @@ Most of the teams building Ethereum clients also have dedicated, public-facing, 
 - [Lighthouse](https://discord.gg/cyAszAh)
 - [Teku](https://discord.gg/7hPv2T6)
 - [Lodestar](https://discord.gg/aMxzVcr)
+- [Grandine](https://discord.gg/H9XCdUSyZd)
 
 You can also [learn how to run a node here](/developers/docs/nodes-and-clients/run-a-node/).

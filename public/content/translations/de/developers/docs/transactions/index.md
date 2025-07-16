@@ -8,7 +8,7 @@ Transaktionen sind kryptographisch signierte Anweisungen von Konten. Ein Konto w
 
 ## Voraussetzungen {#prerequisites}
 
-Um dir zu helfen, diese Seite besser zu verstehen, empfehlen wir dir, zuerst [ Konten](/developers/docs/accounts/), [Transaktionen](/en/developers/docs/transactions/) und unsere [Einführung in Ethereum](/developers/docs/intro-to-ethereum/) zu lesen.
+Um dir zu helfen, diese Seite besser zu verstehen, empfehlen wir dir, zuerst [ Konten](/developers/docs/accounts/), [Transaktionen](/developers/docs/transactions/) und unsere [Einführung in Ethereum](/developers/docs/intro-to-ethereum/) zu lesen.
 
 ## Was ist eine Transaktion? {#whats-a-transaction}
 
@@ -23,7 +23,7 @@ Transaktionen sind gebührenpflichtig und müssen in einem validierten Block ent
 Eine abgeschlossene Transaktion enthält folgende Informationen:
 
 - `von` – der Adresse des Senders, der die Transaktion unterzeichnet. Es handelt sich dabei um ein externes Konto, da Vertragskonten keine Transaktionen senden können.
-- `recipient` – die Empfangsadresse (im Fall eines externen Kontos wird die Transaktion den Wert übertragen. Bei einem Smart-Contract-Konto führt die Transaktion den Vertragscode aus.)
+- `to` – die Empfängeradresse (wenn es sich um ein Konto in externem Besitz handelt, wird durch die Transaktion ein Wert übertragen. Bei einem Smart-Contract-Konto führt die Transaktion den Vertragscode aus.)
 - `signature` – die Kennung des Absenders. Das wird generiert, wenn der private Schlüssel des Absenders die Transaktion signiert und bestätigt, dass der Absender diese Transaktion autorisiert hat.
 - `nonce` – ein fortlaufend inkrementierender Zähler, der die Transaktionsnummer eines Kontos angibt
 - `Wert` – gewünschte Menge an Ether (ETH), die vom Absender an den Empfänger zu überweisen sind (in WEI, ein Ether gleicht 1e + 18wei)
@@ -153,11 +153,18 @@ Die Grundgebühr wird **-0,00399 ETH** verbrannt
 
 Validatoren behalten das "Trinkgeld" **+0,000210 ETH**
 
-Gas ist auch für alle Smart Contracts erforderlich.
 
 ![Diagramm zeigt, wie ungenutztes Gas zurückerstattet wird](./gas-tx.png) _Diagramm angepasst von [Ethereum EVM illustriert](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 Jedes Gas, das nicht in einer Transaktion verwendet wird, wird auf das Benutzerkonto zurückerstattet.
+
+### Smart Contract-Interaktionen {#smart-contract-interactions}
+
+Gas wird für jede Transaktion benötigt, die Smart Contracts betrifft.
+
+Smart Contracts können auch Funktionen enthalten, die als [`view`](https://docs.soliditylang.org/en/latest/contracts.html#view-functions) oder [`pure`](https://docs.soliditylang.org/en/latest/contracts.html#pure-functions) bezeichnet werden; sie verändern nicht den Zustand des Vertrags. Daher ist es nicht erforderlich, Gas zu zahlen, wenn diese Funktionen von einem externen Konto (EOA) aufgerufen werden. Der zugrunde liegende RPC-Aufruf in diesem Szenario ist [`eth_call`](/developers/docs/apis/json-rpc#eth_call)
+
+Im Gegensatz zum Zugriff über `eth_call` werden diese `view`- oder `pure`-Funktionen auch häufig intern aufgerufen (also vom Vertrag selbst oder von einem anderen Vertrag), was jedoch Gas kostet.
 
 ## Transaktions-Lebenszyklus {#transaction-lifecycle}
 
@@ -190,6 +197,16 @@ Die Felder sind wie folgt definiert:
 
 - `TransactionType` – eine Zahl zwischen 0 und 0x7f, für insgesamt 128 mögliche Transaktionsarten.
 - `TransactionPayload` – ein beliebiges Byte-Array, das durch den Transaktionstyp definiert wird.
+
+Basierend auf dem `TransactionType`-Wert kann eine Transaktion wie folgt klassifiziert werden:
+
+1. **Typ-0-Transaktionen (veraltet):** Das ursprüngliche Transaktionsformat, das seit dem Start von Ethereum verwendet wird. Diese Transaktionen enthalten keine Funktionen aus [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) wie dynamische Gasgebührenkalkulationen oder Zugriffslisten für Smart Contracts. Veraltete Transaktionen haben in ihrer serialisierten Form keinen spezifischen Präfix, der ihren Typ angibt; sie beginnen mit dem Byte `0xf8`, wenn die [Recursive Length Prefix(RLP)](/developers/docs/data-structures-and-encoding/rlp)-Kodierung verwendet wird. Der TransactionType-Wert für diese Transaktionen ist `0x0`.
+
+2. **Typ-1-Transaktionen:** Diese Transaktionen wurden in [EIP-2930](https://eips.ethereum.org/EIPS/eip-2930) als Teil des [Berlin-Upgrades](/history/#berlin) von Ethereum eingeführt und enthalten einen `accessList`-Parameter. Diese Liste gibt Adressen und Speicherschlüssel an, auf die bei der Transaktion zugegriffen werden soll, was potenziell die [Gas](/developers/docs/gas/)-Kosten für komplexe Transaktionen mit Smart Contracts reduzieren kann. Änderungen des EIP-1559-Gebührenmarkts sind in Typ-1-Transaktionen nicht enthalten. Typ-1-Transaktionen enthalten auch einen `yParity`-Parameter, der entweder `0x0` oder `0x1` sein kann und die Parität des y-Werts der secp256k1-Signatur angibt. Sie werden durch das Anfangs-Byte `0x01` identifiziert und ihr TransactionType-Wert ist `0x1`.
+
+3. **Typ-2-Transaktionen**, allgemein als EIP-1559-Transaktionen bezeichnet, sind Transaktionen, die in [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), dem [London-Upgrade](/history/#london) von Ethereum, eingeführt wurden. Diese haben sich zur Standardform für Transaktionen auf dem Ethereum-Netzwerk entwickelt. Diese Transaktionen führen einen neuen Gebührenmarktmechanismus ein, der durch die Trennung der Transaktionsgebühr in eine Basisgebühr und eine Prioritätsgebühr die Vorhersehbarkeit verbessert. Sie beginnen mit dem Byte `0x02` und enthalten Felder wie `maxPriorityFeePerGas` und `maxFeePerGas`. Typ-2-Transaktionen sind aufgrund ihrer Flexibilität und Effizienz nun der Standard und werden besonders in Zeiten hoher Netzwerkbelastung bevorzugt – aufgrund ihrer Fähigkeit, den Benutzern eine besser vorhersehbare Verwaltung der Transaktionsgebühren zu ermöglichen. Der TransactionType-Wert für diese Transaktionen ist `0x2`.
+
+
 
 ## Weiterführende Informationen {#further-reading}
 

@@ -12,13 +12,12 @@ I token possono rappresentare praticamente tutto in Ethereum:
 
 - punti di reputazione in piattaforme online
 - abilità di un personaggio di un videogioco
-- biglietti della lotteria
 - strumenti finanziari come una partecipazione in una società
 - una valuta legale come il dollaro statunitense
 - un'oncia d'oro
 - e molto altro...
 
-Una caratteristica così potente di Ethereum deve essere gestita da uno standard robusto. Questo è esattamente il ruolo di ERC-20! Questo standard permette agli sviluppatori di creare applicazioni token interoperabili con altri prodotti e servizi.
+Una caratteristica così potente di Ethereum deve essere gestita da uno standard robusto. Questo è esattamente il ruolo di ERC-20! Questo standard permette agli sviluppatori di creare applicazioni token interoperabili con altri prodotti e servizi. Lo standard ERC-20 è anche utilizzato per fornire funzionalità aggiuntive a [ether](/glossary/#ether).
 
 **Cos'è ERC-20?**
 
@@ -141,9 +140,33 @@ print("Total Supply:", totalSupply)
 print("Addr Balance:", addr_balance)
 ```
 
+## Problemi noti {#erc20-issues}
+
+### Problema di ricezione del token ERC-20 {#reception-issue}
+
+Quando i token ERC-20 sono inviati a un contratto intelligente non progettato per gestirli, questi potrebbero essere perduti permanentemente. Questo si verifica perché il contratto ricevente non dispone della funzionalità per riconoscere o rispondere ai token in entrata e perché nello standard ERC-20 non è presente alcun meccanismo per avvertire il contratto ricevente dei token in entrata. Le forme principali assunte da questo problema sono:
+
+1.  Meccanismo di trasferimento del token
+  - I token ERC-20 sono trasferiti utilizzando le funzioni transfer e transferFrom
+    -   Quando un utente invia i token a un indirizzo del contratto utilizzando queste funzioni, i token sono trasferiti indipendentemente dal fatto che il contratto ricevente sia progettato per gestirli
+2.  Mancanza di notifica
+    -   Il contratto ricevente non riceve una notifica o callback quando gli vengono inviati i token
+    -   Se il contratto ricevente manca di un meccanismo per gestire i token (ad es. una funzione di ripiego o una funzione dedicata per gestirne la ricezione), i token restano di fatto bloccati nell'indirizzo del contratto
+3.  Nessuna gestione integrata
+    -   Lo standard ERC-20 non include una funzione obbligatoria che i contratti riceventi devono implementare, il che comporta situazioni in cui molti contratti non riescono a gestire adeguatamente i token in entrata
+
+Alcuni standard alternativi hanno risolto questo problema, come l'[ERC-223](/developers/docs/standards/tokens/erc-223)
+
 ## Letture consigliate {#further-reading}
 
 - [EIP-20: Standard dei token ERC-20](https://eips.ethereum.org/EIPS/eip-20)
 - [OpenZeppelin - Token](https://docs.openzeppelin.com/contracts/3.x/tokens#ERC20)
 - [OpenZeppelin - Implementazione ERC-20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)
 - [Alchemy - Guida ai token ERC20 di Solidity](https://www.alchemy.com/overviews/erc20-solidity)
+
+
+## Altri standard di token fungibili {#fungible-token-standards}
+
+- [ERC-223](/developers/docs/standards/tokens/erc-223)
+- [ERC-777](/developers/docs/standards/tokens/erc-777)
+- [ERC-4626 - Casseforti tokenizzate](/developers/docs/standards/tokens/erc-4626)

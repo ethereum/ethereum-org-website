@@ -91,7 +91,7 @@ Parliamo prima di GraphQL, originariamente progettato e implementato da Facebook
 
 <img src="https://cdn0.scrvt.com/b095ee27d37b3d7b6b150adba9ac6ec8/42226f4816a77656/bc5c8b270798/graphql-querygif.gif" width="100%" />
 
-Le due immagini catturano quasi perfettamente l'essenza di GraphQL. Con la query sulla destra possiamo definire esattamente i dati che vogliamo, così otteniamo tutto in un'unica richiesta e niente di più di quanto necessario. Un server GraphQL gestisce il recupero di tutti i dati necessari, quindi è incredibilmente facile da usare dal lato frontend client. [Questa è una spiegazione efficace](https://www.apollographql.com/blog/graphql-explained-5844742f195e/) e accurata di come il server gestisce una query.
+Le due immagini catturano quasi perfettamente l'essenza di GraphQL. Con la query sulla destra possiamo definire esattamente i dati che vogliamo, così otteniamo tutto in un'unica richiesta e niente di più di quanto necessario. Un server GraphQL gestisce il recupero di tutti i dati necessari, quindi è incredibilmente facile da usare dal lato frontend client. [Questa è una spiegazione efficace](https://www.apollographql.com/blog/graphql-explained) e accurata di come il server gestisce una query.
 
 Con queste informazioni, passiamo finalmente allo spazio della blockchain e a The Graph.
 
@@ -120,7 +120,7 @@ Il manifest è il nostro file di configurazione e definisce:
 - altri elementi da attendere, come chiamate a funzioni o blocchi
 - le funzioni di mapping chiamate (vedi `mapping.ts` sotto)
 
-Qui puoi definire più contratti e gestori. Una configurazione tipica avrebbe una cartella subgraph nel progetto Truffle/Hardhat con un proprio repository. A questo punto puoi facilmente fare riferimento all'ABI.
+Qui puoi definire più contratti e gestori. Una configurazione tipica avrebbe una cartella subgraph nel progetto Hardhat con un proprio repository. A questo punto puoi facilmente fare riferimento all'ABI.
 
 Per motivi di comodità potresti anche usare uno strumento di modelli come mustache. Poi crei un ` subgraph.template.yaml` e inserisci gli indirizzi in base alle distribuzioni più recenti. Per una configurazione più avanzata, vedi ad esempio il [repo del subgraph Aave](https://github.com/aave/aave-protocol/tree/master/thegraph).
 
@@ -196,7 +196,7 @@ Poi creiamo una nuova entità Bet. L'id sarà `event.transaction.hash.toHex() + 
 
 Infine possiamo aggiornare l'entità Player con tutti i dati. Non è possibile eseguire direttamente il push degli array, bensì devono essere aggiornati come indicato qui. Usiamo l'id per fare riferimento alla scommessa. E occorre aggiungere `.save()` alla fine per memorizzare un'entità.
 
-La documentazione completa può essere consultata qui: https://thegraph.com/docs/en/developing/creating-a-subgraph/#writing-mappings. Puoi anche aggiungere l'output di registrazione al file di mapping, vedi [qui](https://thegraph.com/docs/assemblyscript-api#api-reference).
+La documentazione completa può essere consultata qui: https://thegraph.com/docs/en/developing/creating-a-subgraph/#writing-mappings. Puoi anche aggiungere l'output di registrazione al file di mapping, vedi [qui](https://thegraph.com/docs/en/subgraphs/developing/creating/graph-ts/api/#api-reference).
 
 ```typescript
 import { Bet, Player } from "../generated/schema"

@@ -53,6 +53,13 @@ Les étapes spécifiques dépendent du cadre de développement en question. Par 
 
 - [Documentation](https://portal.thirdweb.com/deploy/)
 
+**Crossmint - _Plateforme de développement Web3 de niveau entreprise pour déployer des contrats intelligents, permettre les paiements par carte de crédit et inter-chaînes et utiliser des API pour créer, distribuer, vendre, stocker et modifier des NFT._**
+
+- [crossmint.com](https://www.crossmint.com)
+- [Documentation](https://docs.crossmint.com)
+- [Discord](https://discord.com/invite/crossmint)
+- [Blog](https://blog.crossmint.com)
+
 ## Tutoriels connexes {#related-tutorials}
 
 - [Déployer votre premier contrat intelligent](/developers/tutorials/deploying-your-first-smart-contract/) _– Introduction au déploiement de votre premier contrat intelligent sur un réseau de test Ethereum_

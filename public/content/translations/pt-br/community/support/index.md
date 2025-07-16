@@ -12,11 +12,11 @@ Você está procurando pelo suporte oficial do Ethereum? A primeira coisa que vo
 
 Compreender a natureza descentralizada do Ethereum é vital porque qualquer pessoa que afirme ser um suporte oficial para o Ethereum está provavelmente tentando enganar você! A melhor proteção contra os golpistas é educar-se e levar a segurança a sério.
 
-<DocLink to="/security/">
+<DocLink href="/security/">
   Segurança e prevenção de fraude do Ethereum
 </DocLink>
 
-<DocLink to="/learn/">
+<DocLink href="/learn/">
   Aprenda os conceitos básicos do Ethereum
 </DocLink>
 
@@ -57,7 +57,6 @@ Aqui estão alguns exemplos populares:
 - [ethers.js](https://discord.gg/6jyGVDK6Jx)
 - [web3.js](https://discord.gg/GsABYQu4sC)
 - [Hardhat](https://discord.gg/xtrMGhmbfZ)
-- [Truffle](https://discord.gg/8uKcsccEYE)
 - [Alchemy](http://alchemy.com/discord)
 - [Tenderly](https://discord.gg/fBvDJYR)
 

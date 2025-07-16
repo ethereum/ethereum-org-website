@@ -1,12 +1,12 @@
 ---
 title: Rollup ottimistici
-description: "Un'introduzione ai rollup ottimistici: una soluzione di ridimensionamento usata dalla community di Ethereum."
+description: 'Un''introduzione ai rollup ottimistici: una soluzione di ridimensionamento usata dalla community di Ethereum.'
 lang: it
 ---
 
 I rollup ottimistici sono protocolli di livello 2 (L2) progettati per estendere il volume del livello di base di Ethereum. Riducono il calcolo sulla catena principale di Ethereum elaborando le transazioni al di fuori della catena, offrendo miglioramenti significativi in termini di velocità di elaborazione. A differenza di altre soluzioni di ridimensionamento, come le [sidechain](/developers/docs/scaling/sidechains/), i rollup ottimistici derivano la propria sicurezza dalla Rete principale, pubblicando i risultati delle transazioni sulla catena o sulle [catene Plasma](/developers/docs/scaling/plasma/), che verificano le transazioni anche su Ethereum con le prove di frode, ma memorizzano i dati delle transazioni altrove.
 
-Siccome il calcolo è la parte lenta e costosa di Ethereum, i rollup ottimistici possono offrire miglioramenti alla scalabilità pari a 10-100x. I rollup ottimistici scrivono inoltre le transazioni a Ethereum come `calldata`, riducendo i costi del gas per gli utenti.
+Siccome il calcolo è la parte lenta e costosa di Ethereum, i rollup ottimistici possono offrire miglioramenti alla scalabilità pari a 10-100x. Inoltre, i rollup ottimistici scrivono le transazioni su Ethereum come `calldata` o in [blob](/roadmap/danksharding/), riducendo i costi del gas per gli utenti.
 
 ## Prerequisiti {#prerequisites}
 
@@ -14,7 +14,7 @@ Dovresti aver letto e compreso le nostre pagine sul [ridimensionamento di Ethere
 
 ## Cos'è un rollup ottimistico? {#what-is-an-optimistic-rollup}
 
-Un rollup ottimistico è un approccio al ridimensionamento di Ethereum che comporta lo spostamento del calcolo e dell'archiviazione di stato al di fuori della catena. I rollup ottimistici eseguono le transazioni al di fuori di Ethereum, ma pubblicano i dati delle transazioni nella Rete principale come `calldata`.
+Un rollup ottimistico è un approccio al ridimensionamento di Ethereum che comporta lo spostamento del calcolo e dell'archiviazione di stato al di fuori della catena. I rollup ottimistici eseguono le transazioni all'esterno di Ethereum, ma ne pubblicano i dati sulla Rete Principale come `calldata` o in [blob](/roadmap/danksharding/).
 
 Gli operatori del rollup ottimistico raggruppano svariate transazioni off-chain in grandi batch prima di inviarle a Ethereum. Questo approccio consente di distribuire i costi fissi su più transazioni in ogni batch, riducendo le commissioni per gli utenti finali. I rollup ottimistici usano inoltre tecniche di compressione per ridurre la quantità di dati pubblicati su Ethereum.
 
@@ -44,9 +44,9 @@ I rollup ottimistici si affidano al protocollo principale di Ethereum per quanto
 
 ### Disponibilità dei dati {#data-availability}
 
-Come accennato, i rollup ottimistici pubblicano i dati della transazione in Ethereum come `calldata`. Poiché l'esecuzione della catena di rollup si basa sulle transazioni inviate, chiunque può usare queste informazioni, ancorate al livello di base di Ethereum, per eseguire lo stato del rollup e verificare la correttezza delle transizioni di stato.
+Come accennato, i rollup ottimistici pubblicano i dati delle transazioni su Ethereum come `calldata` o in [blob](/roadmap/danksharding/). Poiché l'esecuzione della catena di rollup si basa sulle transazioni inviate, chiunque può usare queste informazioni, ancorate al livello di base di Ethereum, per eseguire lo stato del rollup e verificare la correttezza delle transizioni di stato.
 
-[La disponibilità dei dati](/developers/docs/data-availability/) è critica perché senza accesso ai dati di stato, gli autori della contestazione non possono costruire prove di frode per contestare operazioni di rollup non valide. Con Ethereum che fornisce la disponibilità dei dati, il rischio che gli operatori di rollup la passino liscia con atti malevoli (ad es. inviare blocchi non validi) è ridotto.
+[La disponibilità dei dati](/developers/docs/data-availability/) è critica perché, senza accesso ai dati di stato, gli autori della contestazione non possono produrre prove di frode per contestare operazioni di rollup non valide. Con Ethereum che fornisce la disponibilità dei dati, il rischio che gli operatori di rollup la passino liscia con atti malevoli (ad es. inviare blocchi non validi) è ridotto.
 
 ### Resistenza alla censura {#censorship-resistance}
 
@@ -86,15 +86,19 @@ Il sequenziatore si distingue da un normale operatore di rollup perché ha un co
 
 #### Inviare i blocchi di rollup a Ethereum {#submitting-blocks-to-ethereum}
 
-Come accennato, l'operatore di un rollup ottimistico raggruppa le transazioni off-chain in un batch e le invia a Ethereum per la notarizzazione. Questo processo comporta la compressione dei dati correlati alle transazioni e la loro pubblicazione su Ethereum come `calladata`.
+Come accennato, l'operatore di un rollup ottimistico raggruppa le transazioni off-chain in un batch e le invia a Ethereum per la notarizzazione. Questo procedimento comporta la compressione dei dati correlati alle transazioni e la loro pubblicazione su Ethereum come `calldata` o in blob.
 
-`calldata` è un'area non modificabile e non persistente in un contratto intelligente, che si comporta prevalentemente come una [memoria](/developers/docs/smart-contracts/anatomy/#memory). Mentre `calldata` persiste sulla catena come parte dei [registri storici](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html?highlight=memory#logs) della blockchain, non è memorizzato come una parte dello statko di Ethereum. Poiché `calldata` non tocca nessuna parte dello stato di Ethereum, è più economica per memorizzare i dati sulla catena.
+`calldata` è un'area non modificabile e non persistente in un contratto intelligente, che si comporta prevalentemente come una [memoria](/developers/docs/smart-contracts/anatomy/#memory). Mentre `calldata` persiste sulla catena come parte dei [registri storici](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html?highlight=memory#logs) della blockchain, non è memorizzato come una parte dello statko di Ethereum. Poiché i `calldata` non toccano alcuna parte dello stato di Ethereum, sono più economici dello stato per memorizzare i dati sulla catena.
 
 La parola chiave `calldata` è anche usata in Solidity per passare gli argomenti alla funzione di un contratto intelligente al momento dell'esecuzione. `calldata` identifica la funzione chiamata durante una transazione e trattiene gli input della funzione nella forma di una sequenza arbitraria di byte.
 
 Nel contesto dei rollup ottimistici, `calldata` è usata per inviare dati di transazione compressi al contratto on-chain. L'operatore del rollup aggiunge un nuovo batch chiamando la funzione necessaria nel contratto di rollup e passando i dati compressi come argomenti della funzione. Usare `calldata` riduce le commissioni degli utenti poiché gran parte dei costi in cui incorrono i rollup provengono dalla memorizzazione dei dati sulla catena.
 
 Ecco [un esempio](https://etherscan.io/tx/0x9102bfce17c58b5fc1c974c24b6bb7a924fb5fbd7c4cd2f675911c27422a5591) dell'invio di un batch del rollup per mostrare come funziona questo concetto. Il sequenziatore ha invocato il metodo `appendSequencerBatch()` e ha passato i dati della transazione compressi come input usando `calldata`.
+
+Alcuni rollup ora utilizzano i blob per pubblicare pacchetti di transazioni su Ethereum.
+
+I blob non sono modificabili, né persistenti (proprio come `calldata`), ma sono rimossi dallo storico dopo circa 18 giorni. Per ulteriori informazioni sui blob, consulta [Danksharding](/roadmap/danksharding).
 
 ### Impegni di stato {#state-commitments}
 
@@ -194,9 +198,9 @@ Infine, dovremmo notare che le chiamate di messaggio dal L2 al L1 tra i contratt
 
 I rollup ottimistici usano uno schema di commissioni sul gas, molto simile a Ethereum, per denotare quanto gli utenti pagano per la transazione. Le commissioni addebitate sui rollup ottimistici dipendono dai seguenti componenti:
 
-1. **Scrittura di stato**: i rollup ottimistici pubblicano i dati delle transazioni e le intestazioni dei blocchi (consistenti in: hash dell'intestazione del blocco precedente, radice di stato, radice del batch) su Ethereum come `calldata`. Il costo minimo di una transazione su Ethereum è di 21.000 gas. I rollup ottimistici possono ridurre il costo di scrittura della transazione al L1, raggruppando più transazioni in un singolo blocco (che ammortizza i 21.000 gas sulle numerose transazioni dell'utente).
+1. **Scrittura di stato**: i rollup ottimistici pubblicano i dati delle transazioni e le intestazioni dei blocchi (consistenti in: hash dell'intestazione del blocco precedente, radice di stato, radice del batch) su Ethereum come `blob`, o "oggetto binario di grandi dimensioni". [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844) ha introdotto una soluzione economica per includere i dati on-chain. Un `blob` è un nuovo campo di transazione che consente ai rollup di pubblicare dati compressi sulle transizioni tra stati sul L1 di Ethereum. A differenza dei `calldata`, che rimangono permanentemente on-chain, i blob sono di breve durata e possono essere eliminati dai client dopo [4096 epoche](https://github.com/ethereum/consensus-specs/blob/81f3ea8322aff6b9fb15132d050f8f98b16bdba4/configs/mainnet.yaml#L147) (circa 18 giorni). Utilizzando i blob per pubblicare batch di transazioni compresse, i rollup ottimistici possono ridurre significativamente il costo di scrittura delle transazioni nel L1.
 
-2. **`calldata`**: oltre la commissione di base della transazione, il costo di ogni scrittura di stato dipende dalla dimensione di `calldata` pubblicata al L1. I costi di `calldata` sono correntemente disciplinati dall'[EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), che stipula un costo di 16 gas per i byte diversi da zero e 4 gas ber i byte pari a zero di `calldata`, rispettivamente. Per ridurre le commissioni dell'utente, gli operatori dei rollup comprimono le transazioni per ridurre il numero di byte di `calldata` pubblicati su Ethereum.
+2. **Gas del blob utilizzato**: le transazioni che trasportano blob utilizzano un meccanismo di commissione dinamica simile a quello introdotto da [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559). La commissione sul gas per le transazioni di tipo 3 tiene conto della commissione di base per i blob, che è determinata dalla rete in base alla domanda di spazio blob e all'utilizzo dello spazio blob della transazione inviata.
 
 3. **Commissioni dell'operatore del L2**: questo è l'importo pagato al nodo del rollup come compenso per i costi di calcolo sostenuti nell'elaborazione delle transazioni, proprio come le commissioni sul carburante su Ethereum. I nodi del rollup addebitano commissioni di transazione inferiori, poiché gli L2 hanno capacità di elaborazione maggiori e non affrontano congestioni di rete che forzano i validatori su Ethereum a dare priorità alle transazioni con commissioni maggiori.
 
@@ -208,7 +212,7 @@ Come spiegato, i rollup ottimistici pubblicano i dati delle transazioni compress
 
 La catena principale di Ethereum pone limiti su quanti dati possono esser contenuti dai blocchi, denominati in unità di gas (la [dimensione media del blocco](/developers/docs/blocks/#block-size) è di 15 milioni di gas). Mentre ciò limita quanto gas è utilizzabile da ogni transazione, significa anche che possiamo aumentare le transazioni elaborate per blocco, riducendo i dati relativi alla transazione e migliorando direttamente la scalabilità.
 
-I rollup ottimistici usano diverse tecniche per ottenere la compressione dei dati di transazione e migliorare i tassi TPS. Ad esempio, questo [articolo](https://vitalik.eth.limo/general/2021/01/05/rollup.html) confronta i dati generati da una transazione utente di base (invio di ether) alla Rete principale, rispetto a quanti dati sono generati dalla stessa transazione su un rollup:
+I rollup ottimistici usano diverse tecniche per ottenere la compressione dei dati di transazione e migliorare i tassi TPS. Ad esempio, questo [articolo](https://vitalik.eth.limo/general/2021/01/05/rollup.html) confronta i dati generati da una transazione di base dell'utente (invio di ether) sulla Rete Principale con i dati generati dalla stessa transazione su un rollup:
 
 | Parametro  | Ethereum (L1)         | Rollup (L2)  |
 | ---------- | --------------------- | ------------ |
@@ -249,16 +253,11 @@ Preferisci un approccio visivo all'apprendimento? Guarda Finematics spiegare i r
 
 <YouTube id="7pWxCklcNsU" start="263" />
 
-### Utilizzo dei rollup ottimistici {#use-optimistic-rollups}
-
-Esistono molteplici implementazioni dei rollup ottimistici, che puoi integrare nelle tue dapp:
-
-<RollupProductDevDoc rollupType="optimistic" />
-
 ## Ulteriori letture sui rollup ottimistici
 
 - [Come funzionano gli Optimistic Rollup (La guida completa)](https://www.alchemy.com/overviews/optimistic-rollups)
-- [Guida essenziale ad Arbitrum](https://newsletter.banklesshq.com/p/the-essential-guide-to-arbitrum)
-- [Come funziona davvero il rollup di Optimism?](https://www.paradigm.xyz/2021/01/how-does-optimisms-rollup-really-work)
+- [Cos'è un rollup della blockchain? Un'introduzione tecnica](https://www.ethereum-ecosystem.com/blog/what-is-a-blockchain-rollup-a-technical-introduction)
+- [Guida essenziale ad Arbitrum](https://www.bankless.com/the-essential-guide-to-arbitrum)
+- [Come funziona davvero il rollup di Optimism?](https://www.paradigm.xyz/2021/01/how-does-optimism-s-rollup-really-work)
 - [Approfondimento su OVM](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)
 - [What is the Optimistic Virtual Machine?](https://www.alchemy.com/overviews/optimistic-virtual-machine)

@@ -20,7 +20,6 @@ lang: fa
 
 - [Ethallowance](https://ethallowance.com/) (اتریوم)
 - [Etherscan](https://etherscan.io/tokenapprovalchecker) (اتریوم)
-- [Cointool](https://cointool.app/approve/eth) (شبکه های گوناگون)
 - [Revoke](https://revoke.cash/) (شبکه های گوناگون)
 - [Unrekt](https://app.unrekt.net/) (شبکه های گوناگون)
 - [EverRevoke](https://everrise.com/everrevoke/) (شبکه های گوناگون)
@@ -49,7 +48,7 @@ lang: fa
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>می‌خواهید بیشتر بدانید؟</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     راهنماهای دیگر ما را ببینید
   </ButtonLink>
 </InfoBanner>

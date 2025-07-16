@@ -14,7 +14,7 @@ Ao contrário de abrir uma nova conta com uma empresa, a criação de uma conta 
 
 Uma carteira é como uma conta bancária online da Ethereum. Existem dezenas de carteiras diferentes para escolher: carteira para celular, carteira desktop ou ainda como extensão do navegador. Nossa lista de carteiras confiáveis é um bom lugar para começar.
 
-<ButtonLink to="/wallets/find-wallet/">
+<ButtonLink href="/wallets/find-wallet/">
   Encontre uma carteira
 </ButtonLink>
 
@@ -40,7 +40,7 @@ Depois de salvar sua frase de recuperação, você verá o painel da sua carteir
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Quer saber mais?</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     Veja nossos outros guias
   </ButtonLink>
 </InfoBanner>

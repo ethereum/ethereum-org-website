@@ -54,7 +54,7 @@ Você pode usar [chainlist.org](http://chainlist.org) para encontrar os detalhes
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Quer saber mais?</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     Veja nossos outros guias
   </ButtonLink>
 </InfoBanner>

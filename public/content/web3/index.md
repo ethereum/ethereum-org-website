@@ -6,6 +6,10 @@ lang: en
 
 # Introduction to Web3 {#introduction}
 
+<div className="mt-4">
+<ListenToPlayer slug="/web3/" />
+</div>
+
 Centralization has helped onboard billions of people to the World Wide Web and created the stable, robust infrastructure on which it lives. At the same time, a handful of centralized entities have a stronghold on large swathes of the World Wide Web, unilaterally deciding what should and should not be allowed.
 
 Web3 is the answer to this dilemma. Instead of a Web monopolized by large technology companies, Web3 embraces decentralization and is being built, operated, and owned by its users. Web3 puts power in the hands of individuals rather than corporations.
@@ -64,7 +68,7 @@ Web3 allows for direct ownership through [non-fungible tokens (NFTs)](/glossary/
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Learn more about NFTs</div>
-  <ButtonLink to="/nft/">
+  <ButtonLink href="/nft/">
     More on NFTs
   </ButtonLink>
 </InfoBanner>
@@ -89,7 +93,7 @@ However, people define many Web3 communities as DAOs. These communities all have
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Learn more about DAOs</div>
-  <ButtonLink to="/dao/">
+  <ButtonLink href="/dao/">
     More on DAOs
   </ButtonLink>
 </InfoBanner>
@@ -105,7 +109,7 @@ Web3 solves these problems by allowing you to control your digital identity with
 Web2's payment infrastructure relies on banks and payment processors, excluding people without bank accounts or those who happen to live within the borders of the wrong country.
 Web3 uses tokens like [ETH](/glossary/#ether) to send money directly in the browser and requires no trusted third party.
 
-<ButtonLink to="/eth/">
+<ButtonLink href="/eth/">
   More on ETH
 </ButtonLink>
 
@@ -149,11 +153,11 @@ We are only at the beginning of creating a better Web with Web3, but as we conti
 
 Web3 isn’t rigidly defined. Various community participants have different perspectives on it. Here are a few of them:
 
-- [What is Web3? The Decentralized Internet of the Future Explained](https://www.freecodecamp.org/news/what-is-web3/) – _Nader Dabit_
+- [What is Web3? The Decentralized Internet of the Future Explained](https://www.freecodecamp.org/news/what-is-web3) – _Nader Dabit_
 - [Making Sense of Web 3](https://medium.com/l4-media/making-sense-of-web-3-c1a9e74dcae) – _Josh Stark_
 - [Why Web3 Matters](https://future.a16z.com/why-web3-matters/) — _Chris Dixon_
 - [Why Decentralization Matters](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) - _Chris Dixon_
 - [The Web3 Landscape](https://a16z.com/wp-content/uploads/2021/10/The-web3-Readlng-List.pdf) – _a16z_
-- [The Web3 Debate](https://www.notboring.co/p/the-web3-debate?s=r) – _Packy McCormick_
+- [The Web3 Debate](https://www.notboring.co/p/the-web3-debate) – _Packy McCormick_
 
 <QuizWidget quizKey="web3" />

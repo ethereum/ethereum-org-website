@@ -1,15 +1,18 @@
+"use client"
+
 import { useState } from "react"
-import { useTranslation } from "next-i18next"
-import { FaTools } from "react-icons/fa"
-import { Box, Flex } from "@chakra-ui/react"
 
-import { ButtonLink } from "@/components/Buttons"
-import Text from "@/components/OldText"
+import Tools from "@/components/icons/tools.svg"
 import Translation from "@/components/Translation"
+import { ButtonLink } from "@/components/ui/buttons/Button"
+import { Flex } from "@/components/ui/flex"
 
+import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import Select, { type SelectOnChange } from "../Select"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 type StakingDataOption = { label: string; value: string }
 
@@ -31,7 +34,7 @@ const StakingLaunchpadWidget = () => {
 
   const data = {
     testnet: {
-      label: "Holesky testnet",
+      label: `Holesky ${t("testnet")}`,
       url: "https://holesky.launchpad.ethereum.org",
     },
     mainnet: {
@@ -47,15 +50,15 @@ const StakingLaunchpadWidget = () => {
 
   return (
     <Flex
-      bg="layer2Gradient"
-      borderRadius="base"
-      flexDir="column"
-      p={{ base: 6, md: 8 }}
+      className={cn(
+        "flex-col rounded p-6 md:p-8",
+        "bg-gradient-to-r from-accent-a/10 to-accent-c/10 dark:from-accent-a/20 dark:to-accent-c-hover/20"
+      )}
     >
-      <Text as="span" color="text200">
+      <span className="leading-6 text-body-medium">
         <Translation id="page-staking:page-staking-launchpad-widget-span" />
-      </Text>
-      <Box my={4} maxW={{ md: "50%" }}>
+      </span>
+      <div className="my-4 md:max-w-[50%]">
         <Select
           instanceId="staking-launchpad-select"
           options={selectOptions}
@@ -63,36 +66,33 @@ const StakingLaunchpadWidget = () => {
           defaultValue={selectOptions[0]}
           variant="outline"
         />
-      </Box>
-      <Text>
+      </div>
+      <p className="mb-6 leading-6">
         <Translation id="page-staking:page-staking-launchpad-widget-p1" />
-      </Text>
-      <Text>
+      </p>
+      <p className="mb-6 leading-6">
         <Translation id="page-staking:page-staking-launchpad-widget-p2" />
-      </Text>
-      <Box mb={4}>
-        <ButtonLink
-          to={data[selection].url}
-          width={{ base: "full", md: "auto" }}
-        >
+      </p>
+      <div className="mb-4">
+        <ButtonLink href={data[selection].url} className="w-full md:w-auto">
           {selection === "mainnet"
             ? t("page-staking:page-staking-launchpad-widget-mainnet-start")
             : t("page-staking:page-staking-launchpad-widget-testnet-start")}
         </ButtonLink>
-      </Box>
-      <Text>
+      </div>
+      <p className="mb-6 leading-6">
         <Translation id="page-staking:page-staking-launchpad-widget-p3" />
-      </Text>
-      <Box>
+      </p>
+      <div>
         <ButtonLink
-          to="#node-and-client-tools"
+          href="#node-and-client-tools"
           variant="outline"
-          width={{ base: "full", md: "auto" }}
-          leftIcon={<FaTools />}
+          className="w-full md:w-auto"
         >
+          <Tools />{" "}
           <Translation id="page-staking:page-staking-launchpad-widget-link" />
         </ButtonLink>
-      </Box>
+      </div>
     </Flex>
   )
 }

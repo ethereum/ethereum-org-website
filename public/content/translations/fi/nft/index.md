@@ -58,7 +58,6 @@ NFT-järjestelmä on suhteellisen uusi. Teoriassa, mikä tahansa uniikki asia, j
 - [Kiinteistömurto-osakkeet](https://realt.co/)
 - [Tutkintotodistukset](https://www.degreecert.com/)
 - [Musiikin rojaltit NFTin kautta](https://opulous.org/)
-- [Siirry ansaintaan](https://yeticoineth.com/about.html)
 - [Digitaalinen identiteetti](https://photochromic.io/)
 
 ### ethereum.org sovelluksia {#ethereum-org-examples}
@@ -169,7 +168,7 @@ Kun sisältöä myydään, ansainta ohjautuu suoraan luojalle. Jos uusi sisäll�
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Tutki, osta tai luo omia NFT-toteutuksia</div>
-  <ButtonLink to="/dapps/?category=collectibles">
+  <ButtonLink href="/dapps/?category=collectibles">
     Tutustu NFT-taiteeseen
   </ButtonLink>
 </InfoBanner>
@@ -202,7 +201,7 @@ Decentraland, virtuaalinen reality-peli, jossa NFTt edustavat tontteja tai kiint
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Tutustu Ethereum-peleihin, joita NFTt boostaavat...</div>
-  <ButtonLink to="/dapps/?category=gaming">
+  <ButtonLink href="/dapps/?category=gaming">
     Tutki NFT-pelejä
   </ButtonLink>
 </InfoBanner>
@@ -335,7 +334,7 @@ Ethereumin turvallisuus syntyy hajautetusta sijoittamisesta siihen. Järjestelm�
 
 Turvallisuushaasteet, jotka liittyvät NFTeihin, ovat monesti kalasteluyrityksiä, älysopimuksen haavoittuvuuksia tai käyttäjien virheitä (kuten yksityisavaimen paljastaminen). Lompakkojen suojaus on keskeistä NFTen omistajille.
 
-<ButtonLink to="/security/">
+<ButtonLink href="/security/">
   Lisää tietoturvasta ja suojauksesta
 </ButtonLink>
 

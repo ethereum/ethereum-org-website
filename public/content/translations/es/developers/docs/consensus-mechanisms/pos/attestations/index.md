@@ -1,5 +1,5 @@
 ---
-title: Atestaciones
+title: Certificaciones
 description: Una descripción de las certificaciones sobre la prueba de participación de Ethereum.
 lang: es
 ---
@@ -32,9 +32,9 @@ Por último, el validador firma la certificación y la transmite a la red.
 
 Hay una sobrecarga sustancial asociada con el paso de estos datos por la red para cada validador. Por lo tanto, las certificaciones de validadores individuales se añaden dentro de las subredes antes de transmitirse más ampliamente. Esto incluye el añadido de firmas para que una certificación que se transmita incluya los `datos` de consenso y una sola firma formada por la combinación de las firmas de todos los validadores que están de acuerdo con esos `datos`. Esto se puede comprobar utilizando `aggregation_bits`, ya que proporciona el índice de cada validador en su comité (cuyo ID se proporciona en los `datos`) que se puede utilizar para consultar firmas individuales.
 
-En cada época se selecciona un validador en cada subred para ser el `agregador`. El agregador recopila todas las certificaciones de los que oye hablar a través de la red de intercambio de información que tienen `datos` equivalentes a los suyos. El remitente de cada certificación coincidente se registra en los `aggregation_bits`. A continuación, el agregador transmite el agregado de certificación a la red más amplia.
+En cada época, se seleccionan 16 validadores en cada subred para que sean los `agregadores`. Los agregadores recopilan todos los certificados o atestaciones de los que escuchan a través de la red de gossip que tienen `datos` equivalentes a los suyos. El remitente de cada certificación coincidente se registra en los `aggregation_bits`. A continuación, los agregadores transmiten el agregado de atestaciones a la red más amplia.
 
-Cuando se selecciona un validador para ser un proponente de bloques, agrupan las certificaciones agregadas de las subredes hasta la última ranura en el nuevo bloque.
+Cuando se selecciona un validador para ser un proponente de bloques, este agrupa las certificaciones agregadas de las subredes hasta la última ranura en el nuevo bloque.
 
 ### Ciclo de vida de inclusión de la certificación {#attestation-inclusion-lifecycle}
 
@@ -84,9 +84,9 @@ Hay 16 agregadores por época en total. Además, los validadores aleatorios se s
 
 Tenga en cuenta que en algunos casos un agregador afortunado también puede convertirse en el proponente de bloques. Si la certificación no se incluyó porque el proponente del bloque ha desaparecido, el siguiente proponente del bloque elegiría la certificación añadida y la incluiría en el siguiente bloque. Sin embargo, el **retraso de la inclusión** aumentará un valor.
 
-## Más información {#further-reading}
+## Más lecturas {#further-reading}
 
 - [Certificaciones en la especificación de consenso anotada de Vitalik](https://github.com/ethereum/annotated-spec/blob/master/phase0/beacon-chain.md#attestationdata)
 - [Certificaciones en eth2book.info](https://eth2book.info/capella/part3/containers/dependencies/#attestationdata)
 
-_¿Conoce algún recurso de la comunidad que le haya servido de ayuda? Edite esta página y añádalo._
+_¿Conoces algún recurso en la comunidad que te haya servido de ayuda? Edita esta página y añádelo._

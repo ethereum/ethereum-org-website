@@ -8,7 +8,7 @@ Eseguire un nodo completo è il metodo più privato, decentralizzato, senza fidu
 
 ## Cos'è un client leggero {#what-is-a-light-client}
 
-Un nodo leggero è un nodo che esegue il software di un client leggero. Invece di mantenere copie locali dei dati della blockchain e verificare in modo indipendente tutte le modifiche, richiedono i dati necessari a qualche fornitore. Il fornitore potrebbe essere una connessione diretta a un nodo completo o tramite qualche server RPC centralizzato. I dati sono quindi verificati dal nodo leggero, consentendogli di tenere il passo con la testa della catena. Il nodo leggero elabora soltanto le intestazioni del blocco, scaricando solo occasionalmente i contenuti effettivi del blocco. I nodi possono variare nella propria leggerezza, a seconda delle combinazioni di software del client leggero o completo che eseguono. Ad esempio, la configurazione più leggera sarebbe eseguire un client di esecuzione leggero e un client di consenso leggero. È inoltre probabile che molti nodi sceglieranno di eseguire client di consenso leggeri con client di esecuzione completi, o viceversa.
+Un nodo leggero è un nodo che esegue il software di un client leggero. Invece di mantenere copie locali dei dati della blockchain e verificare in modo indipendente tutte le modifiche, richiedono i dati necessari a qualche fornitore. Il fornitore potrebbe essere una connessione diretta a un nodo completo o tramite qualche server RPC centralizzato. I dati sono quindi verificati dal nodo leggero, consentendogli di tenere il passo con la testa della catena. Il nodo leggero elabora soltanto le intestazioni del blocco, scaricando solo occasionalmente i contenuti effettivi del blocco. I nodi possono variare nella propria leggerezza, a seconda delle combinazioni di software del client leggero e completo che eseguono. Ad esempio, la configurazione più leggera sarebbe eseguire un client di esecuzione leggero e un client di consenso leggero. È inoltre probabile che molti nodi sceglieranno di eseguire client di consenso leggeri con client di esecuzione completi, o viceversa.
 
 ## Come funzionano i client leggeri? {#how-do-light-clients-work}
 
@@ -44,7 +44,7 @@ Esistono vari client leggeri in via di sviluppo, tra cui client leggeri di esecu
 
 - [Lodestar](https://github.com/ChainSafe/lodestar/tree/unstable/packages/light-client): client leggero di consenso in TypeScript
 - [Helios](https://github.com/a16z/helios): client leggero combinato di esecuzione e consenso in Rust
-- [Geth](https://github.com/ethereum/go-ethereum/tree/master/light): modalità leggera per il client di esecuzione (in via di sviluppo) in Go
+- [Geth](https://github.com/ethereum/go-ethereum/tree/master/beacon/light): modalità leggera per il client di esecuzione (in via di sviluppo) in Go
 - [Nimbus](https://nimbus.guide/el-light-client.html): client leggero di consenso in Nim
 
 Per quanto ne sappiamo, nessuno è ancora considerato pronto alla produzione.

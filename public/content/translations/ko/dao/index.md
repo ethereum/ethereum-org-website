@@ -50,7 +50,7 @@ DAO의 중추는 조직의 규칙을 정의하고 그룹의 자금을 보유하�
 
 이것은 스마트 계약이 이더리움에서 실행되면 변조가 불가능하기 때문에 가능합니다. 모든 것은 공개되어 있기 때문에 다른 사람들이 눈치채지 못하게 코드(DAO 규칙)를 편집할 수 없습니다.
 
-<DocLink to="/smart-contracts/">
+<DocLink href="/smart-contracts/">
   스마트 계약에 대한 자세한 정보
 </DocLink>
 
@@ -93,7 +93,7 @@ DAO에는 수천 명의 의결권을 가진 회원이 있을 수 있지만, 자�
 
 ### 유명한 예시 {#law-example}
 
-[CityDAO](https://citydao.io) - CityDAO는 와이오밍의 DAO 법을 사용하여 옐로스톤 국립공원 근처의 40에이커의 땅을 구입했습니다.
+[CityDAO](https://citizen.citydao.io/) - CityDAO는 와이오밍의 DAO 법을 사용하여 옐로스톤 국립공원 근처의 40에이커의 땅을 구입했습니다.
 
 ## DAO 멤버십 {#dao-membership}
 

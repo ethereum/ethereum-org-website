@@ -68,7 +68,7 @@ Most azonnal! A Shanghai/Capella-hálózatfrissítés 2023. áprilisban végbeme
 
 Alternatívaként a letéti alapok ERC-20 letéti tokeneket használnak, hogy a felhasználó kereskedni tudjon azokkal a nyitott piacon. Ezzel eladhatja a letéti helyzetét, visszavonva a letétet anélkül, hogy a letéti szerződésben lévő ETH bárhova is átkerülne.
 
-<ButtonLink to="/staking/withdrawals/">Bővebben a letétbe helyezés visszavonásáról</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">Bővebben a letétbe helyezés visszavonásáról</ButtonLink>
 </ExpandableCard>
 
 <ExpandableCard title="Miben különbözik ez a tőzsdén való letétbe helyezéstől?">

@@ -60,7 +60,7 @@ If Alice wants to send ether from her own account to Bob’s account, Alice need
 
 ## Account creation {#account-creation}
 
-When you want to create an account most libraries will generate you a random private key.
+When you want to create an account, most libraries will generate you a random private key.
 
 A private key is made up of 64 hex characters and can be encrypted with a password.
 
@@ -69,6 +69,12 @@ Example:
 `fffffffffffffffffffffffffffffffebaaedce6af48a03bbfd25e8cd036415f`
 
 The public key is generated from the private key using the [Elliptic Curve Digital Signature Algorithm](https://wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm). You get a public address for your account by taking the last 20 bytes of the Keccak-256 hash of the public key and adding `0x` to the beginning.
+
+This means an Externally owned account (EOA) has a 42-character address (20-byte segment which is 40 hexadecimal characters plus the `0x` prefix).
+
+Example:
+
+`0x5e97870f263700f46aa00d967821199b9bc5a120`
 
 The following example shows how to use a signing tool called [Clef](https://geth.ethereum.org/docs/tools/clef/introduction) to generate a new account. Clef is an account management and signing tool that comes bundled with the Ethereum client, [Geth](https://geth.ethereum.org). The `clef newaccount` command creates a new key pair and saves them in an encrypted keystore.
 
@@ -89,7 +95,7 @@ Generated account 0x5e97870f263700f46aa00d967821199b9bc5a120
 
 It is possible to derive new public keys from your private key, but you cannot derive a private key from public keys. It is vital to keep your private keys safe and, as the name suggests, **PRIVATE**.
 
-You need a private key to sign messages and transactions which output a signature. Others can then take the signature to derive your public key, proving the author of the message. In your application, you can use a javascript library to send transactions to the network.
+You need a private key to sign messages and transactions which output a signature. Others can then take the signature to derive your public key, proving the author of the message. In your application, you can use a JavaScript library to send transactions to the network.
 
 ## Contract accounts {#contract-accounts}
 

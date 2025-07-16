@@ -1,5 +1,6 @@
 ---
 title: Jetons non fongibles (NFT)
+metaTitle: Que sont les NFT ? | Avantages et utilisation
 description: Un aperçu des NFT sur Ethereum
 lang: fr
 template: use-cases
@@ -56,7 +57,7 @@ Vous êtes peut-être un artiste qui souhaite partager ses œuvres à l'aide de 
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:" mt="8">
   <div>Explorez, achetez ou créez vos propres collections NFT...</div>
-  <ButtonLink to="/dapps/?category=collectibles#explore">
+  <ButtonLink href="/dapps/?category=collectibles#explore">
     Explorez les cartes NFT
   </ButtonLink>
 </InfoBanner>
@@ -75,7 +76,7 @@ Ce site web dispose également d'un nom de domaine alternatif NFT, **ethereum.et
 
 ## Comment fonctionnent les NFT ? {#how-nfts-work}
 
-Les NFT, comme tous les objets numériques de la blockchain Ethereum, sont créés par un programme informatique spécial basé sur Ethereum appelé "contrat intelligent". Ces contrats suivent certaines règles, comme les normes [ERC-721](/glossary/#erc-721) ou [ERC-1155](/glossary/#erc-1155), qui déterminent ce que le contrat peut faire.
+Les NFT, comme tous les objets numériques de la blockchain Ethereum, sont créés par un programme informatique spécial basé sur Ethereum appelé « contrat intelligent ». Ces contrats suivent certaines règles, comme les normes [ERC-721](/glossary/#erc-721) ou [ERC-1155](/glossary/#erc-1155), qui déterminent ce que le contrat peut faire.
 
 Le contrat intelligent NFT peut accomplir quelques tâches essentielles :
 
@@ -93,7 +94,7 @@ La sécurité d'Ethereum émane de la [preuve d'enjeu](/glossary/#pos). Le syst�
 
 Les questions de sécurité concernant les NFT sont le plus souvent liées aux escroqueries par hameçonnage, aux vulnérabilités des contrats intelligents ou aux erreurs utilisateur (comme exposer par inadvertance des clés privées), rendant la sécurité du portefeuille critique pour les propriétaires de NFT.
 
-<ButtonLink to="/security/">
+<ButtonLink href="/security/">
   En savoir plus sur la sécurité
 </ButtonLink>
 
@@ -103,6 +104,11 @@ Les questions de sécurité concernant les NFT sont le plus souvent liées aux e
 - [Traqueur de NFTs de Etherscan](https://etherscan.io/nft-top-contracts)
 - [Norme de jeton ERC-721](/developers/docs/standards/tokens/erc-721/)
 - [Norme de jeton ERC-1155](/developers/docs/standards/tokens/erc-1155/)
+- [Applications et outils NFT populaires](https://www.ethereum-ecosystem.com/blockchains/ethereum/nfts)
+
+## Autres ressources {#other-resources}
+
+- [NFTScan](https://nftscan.com/)
 
 <Divider />
 

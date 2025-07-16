@@ -23,7 +23,6 @@ Consider special features of your contract:
 
 - Are your contracts upgradeable? Review your upgradeability code for flaws with [`slither-check-upgradeability`](https://github.com/crytic/slither/wiki/Upgradeability-Checks) or [Crytic](https://blog.trailofbits.com/2020/06/12/upgradeable-contracts-made-safer-with-crytic/). We've documented 17 ways upgrades can go sideways.
 - Do your contracts purport to conform to ERCs? Check them with [`slither-check-erc`](https://github.com/crytic/slither/wiki/ERC-Conformance). This tool instantly identifies deviations from six common specs.
-- Do you have unit tests in Truffle? Enrich them with [`slither-prop`](https://github.com/crytic/slither/wiki/Property-generation). It automatically generates a robust suite of security properties for features of ERC20 based on your specific code.
 - Do you integrate with 3rd party tokens? Review our [token integration checklist](/developers/tutorials/token-integration-checklist/) before relying on external contracts.
 
 Visually inspect critical security features of your code:
@@ -48,6 +47,6 @@ Finally, be mindful of issues that automated tools cannot easily find:
 
 ## Ask for help {#ask-for-help}
 
-[Ethereum office hours](https://calendly.com/dan-trailofbits/ethereum-office-hours) run every Tuesday afternoon. These 1-hour, 1-on-1 sessions are an opportunity to ask us any questions you have about security, troubleshoot using our tools, and get feedback from experts about your current approach. We will help you work through this guide.
+[Ethereum office hours](https://calendly.com/dan-trailofbits/office-hours) run every Tuesday afternoon. These 1-hour, 1-on-1 sessions are an opportunity to ask us any questions you have about security, troubleshoot using our tools, and get feedback from experts about your current approach. We will help you work through this guide.
 
 Join our Slack: [Empire Hacking](https://join.slack.com/t/empirehacking/shared_invite/zt-h97bbrj8-1jwuiU33nnzg67JcvIciUw). We're always available in the #crytic and #ethereum channels if you have any questions.

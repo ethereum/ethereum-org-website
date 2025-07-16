@@ -1,16 +1,20 @@
-import { useTranslation } from "next-i18next"
-import { Flex, type FlexProps } from "@chakra-ui/react"
+"use client"
 
-import { ButtonLink } from "@/components/Buttons"
+import React from "react"
+
 import CalloutBanner from "@/components/CalloutBanner"
+import { ButtonLink } from "@/components/ui/buttons/Button"
+import { Flex } from "@/components/ui/flex"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
+import { useTranslation } from "@/hooks/useTranslation"
 import image from "@/public/images/enterprise-eth.png"
 
-export type StakingCommunityCalloutProps = FlexProps & {
-  id?: string
-}
+export type StakingCommunityCalloutProps =
+  React.HTMLAttributes<HTMLDivElement> & {
+    id?: string
+  }
 
 const StakingCommunityCallout = (props: StakingCommunityCalloutProps) => {
   const { t } = useTranslation("page-staking")
@@ -24,8 +28,9 @@ const StakingCommunityCallout = (props: StakingCommunityCalloutProps) => {
       descriptionKey={"page-staking-join-community-desc"}
       imageWidth={350}
     >
-      <Flex gap={4} direction={{ base: "column", md: "row" }}>
+      <Flex className="flex-col gap-4 md:flex-row">
         <ButtonLink
+          className="w-full md:w-auto"
           onClick={() => {
             trackCustomEvent({
               eventCategory: `StakingCommunityCallout`,
@@ -33,12 +38,12 @@ const StakingCommunityCallout = (props: StakingCommunityCalloutProps) => {
               eventName: "clicked discord",
             })
           }}
-          to="https://discord.gg/ethstaker"
-          w={{ base: "full", md: "auto" }}
+          href="https://discord.gg/ethstaker"
         >
           Discord
         </ButtonLink>
         <ButtonLink
+          className="w-full md:w-auto"
           onClick={() => {
             trackCustomEvent({
               eventCategory: `StakingCommunityCallout`,
@@ -46,12 +51,12 @@ const StakingCommunityCallout = (props: StakingCommunityCalloutProps) => {
               eventName: "clicked reddit",
             })
           }}
-          to="https://reddit.com/r/ethstaker"
-          w={{ base: "full", md: "auto" }}
+          href="https://reddit.com/r/ethstaker"
         >
           Reddit
         </ButtonLink>
         <ButtonLink
+          className="w-full md:w-auto"
           onClick={() => {
             trackCustomEvent({
               eventCategory: `StakingCommunityCallout`,
@@ -59,8 +64,7 @@ const StakingCommunityCallout = (props: StakingCommunityCalloutProps) => {
               eventName: "clicked website",
             })
           }}
-          to="https://ethstaker.cc"
-          w={{ base: "full", md: "auto" }}
+          href="https://ethstaker.cc"
         >
           {t("common:rollup-component-website")}
         </ButtonLink>

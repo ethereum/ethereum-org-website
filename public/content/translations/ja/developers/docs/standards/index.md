@@ -39,9 +39,10 @@ EIPは、以下の3種類に分類されます:
 
 ### トークン規格 {#token-standards}
 
-- [ERC-20](/developers/docs/standards/tokens/erc-20/) - 投票用やステーキング用のトークンあるいは仮想通貨など、代替性を持つ（相互に代替可能な）トークンを対象とする標準的なインターフェイスです。
+- [ERC-20](/developers/docs/standards/tokens/erc-20/) - 投票トークン、ステーキングトークン、通貨トークンなど、代替性トークン (FT) のための標準インタフェースです。
+  - [ERC-223](/developers/docs/standards/tokens/erc-223/) - トークンをEtherと同じように動作させ、受信者側でのトークン送金処理をサポートする代替性トークン規格です。
   - [ERC-1363](https://eips.ethereum.org/EIPS/eip-1363) - transferまたはtransferFromを受信した後の受信者側におけるコードの実行や、承認後におけるspenderコードをサポートする、ERC-20トークンのトークンインターフェイスを定義します。
-- [ERC-721](/developers/docs/standards/tokens/erc-721/) - アートや楽曲に対する所有証明など、非代替性トークン (NFT) を対象とする標準的なインタフェースです。
+- [ERC-721](/developers/docs/standards/tokens/erc-721/) - アートや楽曲のための証書など、非代替性トークン (NFT) を対象とする標準的なインタフェースです。
   - [ERC-2309](https://eips.ethereum.org/EIPS/eip-2309) - ひとつのNFTあるいは連続するトークン識別子を用いた複数のNFTを作成／転送する際に発行される標準イベント。
   - [ERC-4400](https://eips.ethereum.org/EIPS/eip-4400) - EIP-721コンシューマーロール向けのインターフェース拡張機能。
   - [ERC-4907](https://eips.ethereum.org/EIPS/eip-4907) - ERC-721トークンに対して、制限付き許可を伴う時間限定ロールを追加します。
@@ -53,6 +54,6 @@ EIPは、以下の3種類に分類されます:
 
 ## 参考文献 {#further-reading}
 
-- [イーサリアム改善提案(EIP)](/eips/)
+- [イーサリアム改善提案 (EIP)](/eips/)
 
-_役に立ったコミュニティリソースがあれば、 ぜひこのページに追加してください。_
+_役に立つコミュニティリソースをご存知の場合は、 ページを編集して追加してください。_

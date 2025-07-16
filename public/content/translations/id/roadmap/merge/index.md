@@ -92,7 +92,7 @@ title="Dapp dan pengembang kontrak pintar"
 contentPreview="The Merge was designed to have minimal impact on smart contract and dapp developers."
 id="developers">
 
-Penggabungan disertai dengan perubahan konsensus, yang juga mencakup perubahan yang terkait dengan:<
+Penggabungan disertai dengan perubahan konsensus, yang juga mencakup perubahan yang terkait dengan:
 
 <ul>
   <li>struktur blok</li>
@@ -108,7 +108,7 @@ Untuk informasi lebih lanjut, lihat tulisan blog ini oleh Tim Beiko tentang <a h
 
 ## Penggabungan dan konsumsi energi {#merge-and-energy}
 
-Penggabungan ini menandai berakhirnya bukti kerja untuk Ethereum dan memulai era Ethereum yang lebih berkelanjutan dan ramah lingkungan. Konsumsi energi Ethereum turun sekitar 99,95%, menjadikan Ethereum sebagai rantai blok hijau. Pelajari lebih lanjut tentang [konsumsi energi Ethereum](/energy-consumption/).
+Penggabungan ini menandai berakhirnya bukti kerja untuk Ethereum dan memulai era Ethereum yang berkelanjutan dan ramah lingkungan. Konsumsi energi Ethereum turun sekitar 99,95%, menjadikan Ethereum sebagai rantai blok hijau. Pelajari lebih lanjut tentang [konsumsi energi Ethereum](/energy-consumption/).
 
 ## Penggabungan dan penskalaan {#merge-and-scaling}
 
@@ -202,7 +202,7 @@ Pengabungan mewakili adopsi resmi Rantai Suar sebagai lapisan konsensus baru unt
 
 Blok diusulkan dengan memvalidasi simpul yang telah mempertaruhkan ETH dengan imbalan hak untuk berpartisipasi dalam konsensus. Peningkatan ini menyiapkan panggung untuk peningkatan skalabilitas di masa depan, termasuk pecahan.
 
-<ButtonLink to="/roadmap/beacon-chain/">
+<ButtonLink href="/roadmap/beacon-chain/">
   Rantai Suar
 </ButtonLink>
 
@@ -218,7 +218,7 @@ Awalnya, rencananya adalah mengerjakan pecahan sebelum Penggabungan untuk mengat
 
 Rencana untuk pecahan berkembang dengan cepat, tetapi dengan munculnya dan keberhasilan teknologi lapisan ke-2 untuk meningkatkan eksekusi transaksi, rencana pecahan telah bergeser untuk menemukan cara yang paling optimal untuk mendistribusikan beban penyimpanan data panggilan terkompresi dari kontrak rollup, yang memungkinkan pertumbuhan kapasitas jaringan secara eksponensial. Hal ini tidak akan mungkin terjadi tanpa terlebih dahulu beralih ke bukti taruhan.
 
-<ButtonLink to="/roadmap/danksharding/">
+<ButtonLink href="/roadmap/danksharding/">
   Pecahan
 </ButtonLink>
 

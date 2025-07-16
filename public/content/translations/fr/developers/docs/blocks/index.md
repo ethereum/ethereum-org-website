@@ -55,7 +55,7 @@ Le corps `body` du bloc contient plusieurs champs propres :
 | `eth1_data`          | informations sur le contrat de dépôt                                 |
 | `graffiti`           | données arbitraires utilisées pour étiqueter les blocs               |
 | `proposer_slashings` | liste des validateurs à délester                                     |
-| `attester_slashings` | liste des validateurs à délester                                     |
+| `attester_slashings` | liste des validateurs à sanctionner                                  |
 | `attestations`       | liste des attestations en faveur du bloc actuel                      |
 | `dépôts`             | liste des nouveaux dépôts au contrat de dépôt                        |
 | `voluntary_exits`    | liste des validateurs quittant le réseau                             |
@@ -127,7 +127,7 @@ La liste `withdrawals` contient les objets `withdrawal` structurée de la façon
 | Champ            | Description                        |
 |:---------------- |:---------------------------------- |
 | `address`        | adresse du compte qui s'est retiré |
-| `amount`         | montant du retrait                 |
+| `montant`        | montant du retrait                 |
 | `Index`          | valeur d'index du retrait          |
 | `validatorIndex` | valeur d'index du validateur       |
 
@@ -139,7 +139,7 @@ Cette implémentation diffère des systèmes fondés sur la preuve de travail (P
 
 ## Taille des blocs {#block-size}
 
-Une dernière remarque importante : les blocs eux-mêmes sont limités par la taille. Chaque bloc vise une taille cible de 15 millions de gaz, mais leur taille s'adapte aux exigences du réseau, jusqu'à la limite de 30 millions de gaz (deux fois la taille cible de bloc). La quantité totale de gaz dépensée par toutes les transactions dans le bloc doit être inférieure à la limite de gaz du bloc. Ce point est important car il garantit que les blocs ne peuvent pas être arbitrairement grands. Si les blocs pouvaient être arbitrairement grands, les nœuds complets moins performants cesseraient progressivement de suivre le réseau à cause des exigences d'espace et de vitesse. Plus le bloc est grand, plus il faut de puissance de calcul pour traiter la transaction à temps pour le prochain créneau. Il s'agit d'un facteur de centralisation, auquel nous nous opposons en plafonnant la taille des blocs.
+Une dernière remarque importante : les blocs eux-mêmes sont limités par la taille. Chaque bloc vise une taille cible de 15 millions de gaz, mais leur taille s'adapte aux exigences du réseau, jusqu'à la limite de 30 millions de gaz (deux fois la taille cible de bloc). La limite de gaz d'un bloc peut être ajustée à la hausse ou à la baisse par un facteur de 1/1024 par rapport à la limite de gaz du bloc précédent. Ainsi, les validateurs peuvent modifier la limite de gaz des blocs par consensus. La quantité totale de gaz dépensée par toutes les transactions dans le bloc doit être inférieure à la limite de gaz du bloc. Ce point est important car il garantit que les blocs ne peuvent pas être arbitrairement grands. Si les blocs pouvaient être arbitrairement grands, les nœuds complets moins performants cesseraient progressivement de suivre le réseau à cause des exigences d'espace et de vitesse. Plus le bloc est grand, plus il faut de puissance de calcul pour traiter la transaction à temps pour le prochain créneau. Il s'agit d'un facteur de centralisation, auquel nous nous opposons en plafonnant la taille des blocs.
 
 ## Complément d'information {#further-reading}
 

@@ -26,7 +26,6 @@ Tenga en cuenta las características especiales de su contrato:
 
 - ¿Sus contratos pueden mejorarse? Revise su código de mejora para errores con [`slither-check-upgradeability`](https://github.com/crytic/slither/wiki/Upgradeability-Checks) o [Crytic](https://blog.trailofbits.com/2020/06/12/upgradeable-contracts-made-safer-with-crytic/). Hemos documentado 17 formas en que las actualizaciones pueden fallar.
 - ¿Sus contratos pretenden ajustarse a los ERC? Compruébalos con [`slither-check-erc`](https://github.com/crytic/slither/wiki/ERC-Conformance). Esta herramienta identifica instantáneamente las desviaciones de seis especificaciones comunes.
-- ¿Tienes pruebas unitarias en Truffle? Compleméntelos con [`slither-prop`](https://github.com/crytic/slither/wiki/Property-generation). Genera automáticamente un robusto conjunto de propiedades de seguridad para las funciones de ERC20 basadas en su código específico.
 - ¿Se integra con tókenes de terceros? Revise nuestra [lista de verificación de integración de tókenes](/developers/tutorials/token-integration-checklist/) antes de depender de contratos externos.
 
 Inspeccione visualmente las características de seguridad críticas de su código:
@@ -51,6 +50,6 @@ Por último, tenga en cuenta los problemas que las herramientas automatizadas no
 
 ## Pedir ayuda {#ask-for-help}
 
-[El horario de oficina de Ethereum](https://calendly.com/dan-trailofbits/ethereum-office-hours) funciona cada martes por la tarde. Estas sesiones individuales de una hora de duración son una oportunidad para hacernos cualquier pregunta que tenga sobre la seguridad, solucionar problemas usando nuestras herramientas y obtener comentarios de expertos sobre su enfoque actual. Le ayudaremos a trabajar con esta guía.
+[El horario de oficina de Ethereum](https://calendly.com/dan-trailofbits/office-hours) funciona cada martes por la tarde. Estas sesiones individuales de una hora de duración son una oportunidad para hacernos cualquier pregunta que tenga sobre la seguridad, solucionar problemas usando nuestras herramientas y obtener comentarios de expertos sobre su enfoque actual. Le ayudaremos a trabajar con esta guía.
 
 Únase a nuestro Slack: [Pirateando el imperio](https://join.slack.com/t/empirehacking/shared_invite/zt-h97bbrj8-1jwuiU33nnzg67JcvIciUw). Siempre estamos disponibles en los canales #crytic y #ethereum si tiene alguna duda.

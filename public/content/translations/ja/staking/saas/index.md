@@ -78,7 +78,7 @@ BLS引き出し鍵は、ステーキング報酬とステーキングを終了�
 
 バリデータは、バリデータとしての役割りを完全に終了することもできます。終了すると、ETH残高がアンロックされ、引き出しできるようになります。 実行引き出しアドレスを提供し、バリデータの終了プロセスを完了したアカウントは、次のバリデータスイープ中に、提供した引き出しアドレスにすべての残高を受け取ることができます。
 
-<ButtonLink to="/staking/withdrawals/">ステーキング引き出しの詳細</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">ステーキング引き出しの詳細</ButtonLink>
 </ExpandableCard>
 
 <ExpandableCard title="スラッシングされた場合" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">

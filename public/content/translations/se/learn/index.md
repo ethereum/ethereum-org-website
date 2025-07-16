@@ -6,7 +6,7 @@ lang: se
 
 # Lär dig mer om Ethereum {#learn-about-ethereum}
 
-**Välkommen till ethereum.org/se/learn, en uppsättning resurser som hjälper dig att lära dig mer om Ethereum.** Den här sidan innehåller tekniska **och** icke-tekniska artiklar, guider och resurser. Om du är helt ny inom Ethereum [rekommenderar vi att du börjar här](/se/what-is-ethereum/).
+**Välkommen till ethereum.org/se/learn, en uppsättning resurser som hjälper dig att lära dig mer om Ethereum.** Den här sidan innehåller tekniska **och** icke-tekniska artiklar, guider och resurser. Om du är helt ny inom Ethereum [rekommenderar vi att du börjar här](/what-is-ethereum/).
 
 Här är några bra startpunkter:
 
@@ -50,7 +50,7 @@ Förklaringar på hög nivå av Ethereum och blockchain-teknik generellt.
 
 Ett "smart kontrakt" är helt enkelt en bit kod som körs på Ethereum. Det kallas ett "kontrakt" eftersom kod som körs på Ethereum kan kontrollera värdefulla saker som ETH eller andra digitala tillgångar.
 
-- Vill du lära dig hur du programmerar på Ethereum med smarta kontrakt? [ethereum.org/se/developers](/se/developers/)
+- Vill du lära dig hur du programmerar på Ethereum med smarta kontrakt? [ethereum.org/se/developers](/developers/)
 - [What is a Smart Contract?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract) _12 nov., 2018 - Andreas M. Antonopoulos, Gavin Wood_
 
 ## Proof-of-work (bevis på arbete) och mining (utvinning) {#proof-of-work-and-mining}
@@ -63,14 +63,14 @@ I ETH 2.0 kommer Ethereum att flytta till ett annat system som kallas proof-of-s
 
 Ethereum-nätverket består av många noder, som alla kör kompatibel klientprogramvara. Det finns två klienter som används av en majoritet av noder: [Geth](https://geth.ethereum.org/) (skrivet i Go) och [Parity](https://www.parity.io/ethereum/) (skriven i Rust).
 
-- Vill du lära dig att köra en egen nod? → [ethereum.org/se/developers](/se/developers/#clients--running-your-own-node/)
+- Vill du lära dig att köra en egen nod? → [ethereum.org/se/developers](/developers/#clients--running-your-own-node/)
 - [En omfattande lista med alla Ethereum-klienter](https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients)
 
 ## Enterprise Ethereum {#enterprise-ethereum}
 
 Enterprise Ethereum hänvisar till privata, konsortium och hybridimplementeringar av Ethereum codebase för affärsappar. Företag över hela världen använder redan Enterprise Ethereum för att effektivisera finansmarknaderna, hantera leveranskedjor och skapa nya affärsmodeller.
 
-Läs mer om [Enterprise Ethereum](/se/enterprise/).
+Läs mer om [Enterprise Ethereum](/enterprise/).
 
 ## Förbättra Ethereums skalbarhet {#improving-ethereums-scalability}
 
@@ -103,7 +103,7 @@ Många ansträngningar har gjorts för att göra Ethereum mer "skalbar" genom at
 
 ETH 2.0 (även känd som "Serenity") hänvisar till nästa stora uppgradering av Ethereum-kärnprotokollet. Den kombinerar flera förbättringar av Ethereums kärnprotokoll, eller "Skikt 1".
 
-- [8 Teams Are Sprinting to Build the Next Generation of Ethereum](https://www.coindesk.com/next-gen-buidlers-the-8-teams-working-on-ethereum-2-0) _9 dec., 2018 - Christine Kim_
+- [8 Teams Are Sprinting to Build the Next Generation of Ethereum](https://www.coindesk.com/markets/2018/12/09/8-teams-are-sprinting-to-build-the-next-generation-of-ethereum) _9 dec., 2018 - Christine Kim_
 - [ETH 2.0 - The Road to Scaling Ethereum - Vitalik Buterin](https://youtu.be/kCVpDrlVesA) _(Video) November, 2018 - YouTube_
 - [9 Things You Didn't Know About Ethereum 2.0](https://our.status.im/9-things-you-didnt-know-about-ethereum-2-0/) _18 juli, 2019 - Bruno Škvorc_
 

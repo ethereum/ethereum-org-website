@@ -6,13 +6,13 @@ lang: pl
 
 # Jak zamienić tokeny
 
-Jesteś zmęczony szukaniem giełdy, która zawiera wszystkie twoje ulubione tokeny? Większość tokenów można wymieniać za pomocą zdecentralizowanych giełd.
+Jesteś zmęczony szukaniem giełdy, która zawiera wszystkie twoje ulubione tokeny? Większość tokenów możesz wymieniać przy pomocy [zdecentralizowanych giełd](/glossary/#dex).
 
-Wymiana tokenów obejmuje wymianę dwóch różnych aktywów istniejących w sieci Ethereum, na przykład zamianę ETH na DAI (token ERC-20). Proces jest bardzo szybki i tani. Do wymiany tokenów potrzebny będzie portfel kryptowalutowy.
+Wymiana tokenów obejmuje wymianę dwóch różnych aktywów istniejących w sieci Ethereum, na przykład zamianę ETH na DAI (token [ERC-20](/glossary/#erc-20)). Proces jest bardzo szybki i tani. Do wymiany tokenów potrzebny będzie portfel kryptowalutowy.
 
 **Wymaganie wstępne:**
 
-- posiadanie portfela kryptowalutowego, możesz postępować zgodnie z tym samouczkiem: [Jak „zarejestrować” konto Ethereum](/guides/how-to-create-an-ethereum-account/)
+- posiadanie [portfela kryptowalutowego](/glossary/#wallet), możesz postępować zgodnie z samouczkiem: [Jak zarejestrować konto Ethereum](/guides/how-to-create-an-ethereum-account/)
 - dodanie środków do portfela
 
 ## 1. Podłącz swój portfel do wybranej przez siebie zdecentralizowanej giełdy (DEX)
@@ -24,7 +24,7 @@ Niektóre popularne giełdy to:
 - [1Inch](https://app.1inch.io/#/1/unified/swap/ETH/DAI)
 - [Curve](https://curve.fi/#/ethereum/swap)
 
-Jeśli chcesz dowiedzieć się więcej o tym, czym jest DeFi i jak działają te nowe rodzaje giełd, możemy polecić [Bibliotekę Kernel](https://library.kernel.community/Topic+-+DeFi/Topic+-+DeFi).
+Brzmi interesująco? Dowiedz się więcej o tym, czym są [zdecentralizowane finanse (DeFi)](/defi/) i o tym, jak działają te nowe rodzaje giełd.
 
 ## 2. Wybierz parę tokenów, które chcesz wymienić
 
@@ -51,7 +51,7 @@ Po przetworzeniu transakcji automatycznie otrzymasz wymienione tokeny do swojego
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Chcesz dowiedzieć się więcej?</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     Zobacz nasze inne przewodniki
   </ButtonLink>
 </InfoBanner>

@@ -1,5 +1,6 @@
 ---
 title: 燃料和費用
+metaTitle: "以太坊燃料和費用：技術概覽"
 description:
 lang: zh-tw
 ---
@@ -117,27 +118,12 @@ lang: zh-tw
 
 二層網路擴容為一項主要倡議，可大幅減低燃料費用並加強用戶體驗及可擴容性。 [更多二層網路擴容相關資訊](/developers/docs/scaling/#layer-2-scaling)。
 
-## 什麼是倫敦升級/EIP-1559？ {#what-was-the-london-upgrade-eip-1559}
-
-倫敦升級前，以太坊的區塊為固定大小。 當網路需求高時，這些區塊會被塞滿。 因此，使用者常需要等網路需求降低時，交易才會被添加進區塊，這導致了糟糕的使用者體驗。 倫敦升級將可變大小的區塊引入以太坊。
-
-以太坊網路中的交易費計算方式在 2021 年 8 月的[倫敦升級](/history/#london)後發生變化。 在倫敦升級前，燃料費不是分成 `base` 和 `priority` 費計算的，範例如下：
-
-假設 Alice 需要支付給 Bob 1 以太幣。 在交易中，燃料限制是 21,000 單位，燃料費價格為 200 gwei。
-
-總費用將為：`Gas units (limit) *燃料price per unit`，即 `21,000 * 200 = 4,200,000 gwei` 或 0.0042 以太幣。
-
-倫敦升級的 [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) 實作使交易費機制更加複雜，但也讓燃料費更加可預測，最終形成了更高效的交易費市場。 使用者可以透過 `maxFeePerGas` 提交交易，表示他們願意支付多少費用以讓其交易被執行，使用者知道他們不會支付超過燃料市價 (`baseFeePerGas`) 的燃料費，並且會得到任何多餘費用（扣除小費）的退款。
-
-此影片解釋 EIP-1599 及其帶來的好處：
-
-<YouTube id="MGemhK9t44Q" />
-
-## 監控燃料費 {#moitoring-gas-fees}
+## 監控燃料費 {#monitoring-gas-fees}
 
 若你想要監控燃料價格，以便能以更低的費用發送以太幣，你可以使用許多不同的工具，例如：
 
 - [Etherscan](https://etherscan.io/gastracker) _交易燃料費價格估算器_
+- [以太幣燃料追蹤器](https://www.ethgastracker.com/)_監控並追蹤以太坊和二層網路的燃料價格，以降低交易費用並節省資金_
 - [Blocknative ETH Gas Estimator](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) _燃料估算 Chrome 延伸模組，支援 0 類原始交易及 2 類 EIP-1559 交易。_
 - [Cryptoneur燃料Fees Calculator](https://www.cryptoneur.xyz/gas-fees-calculator) _在主網、Arbitrum、Polygon 上使用當地貨幣計算不同交易類型的燃料費。_
 

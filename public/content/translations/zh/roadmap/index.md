@@ -7,10 +7,12 @@ image: /images/heroes/roadmap-hub-hero.jpg
 alt: "以太坊路线图"
 summaryPoints:
 buttons:
-  - label: 进一步升级
+  - 
+    content: 进一步升级
     toId: 即将发生什么变化
-  - label: 以往升级
-    to: /history/
+  - 
+    content: 以往升级
+    href: /history/
     variant: 简要
 ---
 
@@ -24,28 +26,28 @@ buttons:
 
 <CardGrid>
   <RoadmapActionCard
-    to="/roadmap/scaling"
+    href="/roadmap/scaling"
     title="交易费用更低"
     image="scaling"
     description="Rollups are too expensive and rely on centralized components, causing users to place too much trust in their operators. The roadmap includes fixes for both of these problems."
     buttonText="More on reducing fees"
   />
   <RoadmapActionCard
-    to="/roadmap/security"
+    href="/roadmap/security"
     title="更安全"
     image="security"
     description="Ethereum is already very secure but it can be made even stronger, ready to withstand all kinds of attack far into the future."
     buttonText="More on security"
   />
   <RoadmapActionCard
-    to="/roadmap/user-experience"
+    href="/roadmap/user-experience"
     title="改善用户体验"
     image="userExperience"
     description="More support for smart contract wallets and light-weight nodes will make using Ethereum simpler and safer."
     buttonText="More on user experience"
   />
   <RoadmapActionCard
-    to="/roadmap/future-proofing"
+    href="/roadmap/future-proofing"
     title="面向未来"
     image="futureProofing"
     description="Ethereum researchers and developers are solving tomorrow's problems today, readying the network for future generations."
@@ -59,7 +61,7 @@ buttons:
 
 <RoadmapImageContent title="路线图是如何制定的？">
 
-因为协议的技术性很强，所以路线图主要是研究人员和开发者多年来工作的结果，但任何有意向的人都可以参与进来。 想法往往在 [ethresear.ch](https://ethresear.ch/)、[以太坊魔术师](https://www.figma.com/exit?url=https%3A%2F%2Fethereum-magicians.org%2F) 等论坛或以太币研发 Discord 服务器的讨论中萌发。 它们可能是对发现的新漏洞的响应、来自位于应用程序层的组织（如去中心化应用程序和交易所）的建议或对于最终用户面临的问题（例如成本或交易速度）的建议。 这些想法一旦成熟，就可以作为 [以太坊改进建议](https://eips.ethereum.org/) 提出。 整个过程都是公开进行的，社区的任何人可以随时发表意见。
+因为协议的技术性很强，所以路线图主要是研究人员和开发者多年来工作的结果，但任何有意向的人都可以参与进来。 想法通常都始于论坛上的讨论，比如[ethresear.ch] (https://ethresear.ch/)、[以太坊魔术师] (https://ethereum-magicians.org/) 或者以太坊研发 discord 服务器。 它们可能是对新发现的漏洞的响应、来自从事于应用程序层的组织（例如[去中心化应用程序] (/glossary/#dapp) 和交易所）的建议或终端用户面临的已知问题（例如费用或交易速度）。 这些想法一旦成熟，就可以作为 [以太坊改进建议](https://eips.ethereum.org/) 提出。 整个过程都是公开进行的，社区的任何人可以随时发表意见。
 
 [更多关于以太坊治理的信息](/governance/)
 
@@ -68,45 +70,46 @@ buttons:
 <InfoBanner mb={8}>
   <h4 style={{ marginTop: 0 }}>ETH2 是什么？</h4>
 
-  <p>在以太坊过渡到权益证明之前，“以太坊 2”一词通常用于描述以太坊的未来，但它<strong>已被淘汰，被更加准确的术语取代。</strong>该术语最初用来区分过渡到权益证明之前和之后的以太坊网络，有时也用来指不同的以太坊客户端（执行客户端有时被称为以太坊 1 客户端，共识客户端有时称为以太坊2 客户端）。</p>
+  <p>在以太坊过渡到<a href="/glossary/#pos">权益证明</a>之前，“Eth2”（以太坊 2）一词通常用于描述以太坊的未来，但它已<strong>被逐步淘汰，取而代之的是更准确的术语</strong>。该术语最初被用于区分过渡到权益证明之前和之后的以太坊网络，有时也用于指代不同的以太坊客户端（<a href="/glossary/#execution-client">执行客户端</a>有时称为以太坊 1 客户端，而<a href="/glossary/#consensus-client">共识客户端</a>有时称为以太坊 2 客户端）。</p>
 
 </InfoBanner>
 
 ## 以太坊路线图是否会随着时间的推移而改变？ {#will-ethereums-roadmap-change-over-time}
 
-是的，几乎肯定会。 路线图是目前的以太坊升级计划，涵盖近期计划和未来计划。 我们预计路线图会随着新的信息和技术的出现而改变。
+**是的，几乎肯定会**。 路线图是目前的以太坊升级计划，涵盖近期计划和未来计划。 我们预计路线图会随着新的信息和技术的出现而改变。
 
-我们将以太坊路线图视为改进以太坊的一整套计划；这是研究人员和开发人员对以太坊最佳发展道路的最佳假设。
+将以太坊路线图视为改进以太坊的一整套计划；这是研究人员和开发人员针对以太坊最优发展道路做出的最佳假设。
 
 ## 路线图将何时完成？ {#when-will-the-roadmap-be-finished}
 
-以太坊将在今后 6 个月内实施一些升级（例如质押提款） - 其他升级的优先性较低，可能在今后 5-10 年内不会实施（例如量子计算抗性）。 我们很难预测每次升级的确切完成时间，因为许多路线图项目是以不同速度并行进行和开发的。 随着时间的推移，升级的紧迫性也可能由于外部因素而发生变化（例如，量子计算机的性能和可用性突飞猛进可能会使抗量子计算加密技术的紧迫性提高）。
+一些升级的优先级较低，因此在接下来的 5-10 年内可能不会实施（例如量子抗性）。 由于许多路线图项目是以不同速度并行开发的，我们**很难准确预测每次升级的时间**。 随着时间的推移，升级的紧迫性也可能由于外部因素而发生变化（例如，量子计算机的性能和可用性突飞猛进可能会使抗量子计算加密技术的紧迫性提高）。
 
 思考以太坊发展的一种方法是类比生物进化。 虽然随着网络的性能、可扩展性和安全性越来越强，需要对协议进行的更改越来越少，但一个能够适应新挑战和保持健康的网络仍然比抗拒变化的网络更有可能成功。
 
 ## 升级时我要做什么吗？ {#do-i-have-to-do-anything-when-there-is-an-upgrade}
 
-升级往往不会对最终用户产生影响，除非提供更好的用户体验、更安全的协议以及更多与以太坊互动的<i>选项</i>。 最终用户既不需要积极参与升级，也不需要采取任何行动来保护资产。 节点运营商需要更新其客户端以准备升级。 某些升级可能导致应用程序开发者作出更改。 例如，历史数据到期升级可能需要应用开发者从新的来源获取历史数据。
+升级往往不会对最终用户产生影响，除非提供更好的用户体验、更安全的协议以及更多与以太坊互动的<i>选项</i>。 **普通用户既不需要积极参与升级，也不需要采取任何行动**来保护他们的资产。 [节点](/glossary/#node)运营者需要更新他们的客户端来为升级做准备。 某些升级可能导致应用程序开发者作出更改。 例如，历史数据到期升级可能需要应用开发者从新的来源获取历史数据。
 
 ## Verge、Splurge 等升级是什么？ {#what-about-the-verge-splurge-etc}
 
-[Vitalik Buterin 提出了以太坊线路图](https://twitter.com/VitalikButerin/status/1588669782471368704)的愿景，根据对以太坊架构的影响，该路线图分为几个类别。 其中包括：
+[Vitalik Buterin 提出了以太坊线路图](https://twitter.com/VitalikButerin/status/1741190491578810445)的愿景，根据对以太坊架构的影响，该路线图分为几个类别。 其中包括：
 
-- 合并：涉及从工作量证明过渡到权益证明的升级
-- Surge：涉及通过卷叠和数据分片进行扩展的升级
-- Scourge：涉及抗审查性、去中心化和最大可提取价值的协议风险的升级
-- Verge：涉及更轻松地验证区块的升级
-- Purge：涉及降低运营节点的计算成本和简化协议的升级
-- Splurge：不属于上述类别的其他升级
+- **Merge**：涉及从[工作量证明](/glossary/#pow)过渡到[权益证明](/glossary/#pos)的升级
+- **Surge**：涉及通过[卷叠](/glossary/#rollups)和数据分片进行扩展的升级
+- **Scourge**：涉及与抗审查、去中心化和[最大可提取价值](/glossary/#mev)的协议风险相关的升级
+- **Verge**：涉及更轻松地验证[区块](/glossary/#block)的升级
+- **Purge**：涉及降低运行节点的计算成本和简化协议的升级
+- **Splurge**：不属于上述类别的其他升级。
 
 我们决定不使用这些术语，因为我们希望使用更简单、更以用户为中心的模型。 虽然我们使用是以用户为中心的语言，但我们的愿景仍与 Vitalik 提出的愿景相同。
 
 ## 什么是分片？ {#what-about-sharding}
 
-分片是指将以太坊区块链分割开来，让一部分验证者只负责全部数据的一小部分。 这最初是用于扩展以太坊的一种方式。 然而，二层网络卷叠的发展速度远远快于预期，已经实现了大量扩容，并且在 Proto-Danksharding 实施后还将实现更多扩容。 这意味着不再需要"分片链"，因此已将其从路线图中删除。
+分片是指将以太坊区块链分割开来，让一部分[验证者](/glossary/#validator)只负责所有数据的一小部分。 这最初是用于扩展以太坊的一种方式。 然而，[二层网络](/glossary/#layer-2)卷叠的发展速度远远快于预期，已经实现了大量扩容，并且在 Proto-Danksharding 实施后还将提供更多扩容。 这意味着不再需要"分片链"，因此已将其从路线图中删除。
 
 ## 正在寻求特定技术升级？ {#looking-for-specific-technical-upgrades}
 
+- [Pectra](/roadmap/pectra) - Prague/Electra 硬分叉带来帐户抽象的新途径，提升可扩展性以及更多功能。
 - [Danksharding](/roadmap/danksharding) - Danksharding 通过向以太坊区块添加二进制大对象数据，为用户大大降低二层网络卷叠成本。
 - [质押提款](/staking/withdrawals) - 上海/卡佩拉升级启用了以太坊质押提款，允许用户解锁质押的以太币。
 - [单时隙最终确定性](/roadmap/single-slot-finality) - 让区块可以在同一时隙内提出和最终确定，无需等待 15 分钟。 这提高了应用程序的便利性，大大增加了攻击难度。

@@ -87,7 +87,7 @@ Pour tout logiciel personnalisé ou contrat intelligent impliqué :
 
 Pour les produits logiciels liés à la configuration de nœuds ou de clients, la gestion ou la migration :
 
-**Quels clients de la couche de consensus (c'est-à-dire  Lighthouse, Teku, Nimbus, Prysm) sont pris en charge ?**
+**Quels clients de la couche de consensus (c'est-à-dire  Lighthouse, Teku, Nimbus, Prysm, Grandine) sont pris en charge ?**
 
 - Quels sont les clients pris en charge ? L'utilisateur peut-il choisir ?
 - Ceci est utilisé pour déterminer le score « multi-client » des produits.
@@ -171,6 +171,6 @@ La logique de code et les pondérations de ces critères sont actuellement conte
 
 Si vous souhaitez ajouter un produit ou un service de mise en jeu sur ethereum.org, il vous suffit de créer un ticket sur GitHub.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_staking_product.yaml">
+<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_staking_product.yaml">
   Créez un ticket
 </ButtonLink>

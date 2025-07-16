@@ -41,7 +41,7 @@ Các dự án sau đây cung cấp dịch vụ chuỗi khối cho các hệ th�
 - [Blockapps](https://blockapps.net/) _triển khai giao thức Enterprise Ethereum, công cụ và API tạo thành nền tảng STRATO_
 - [Clearmatics](https://www.clearmatics.com/about) _giao thức và kiến ​​trúc nền tảng ngang hàng, công ty R&D chuỗi khối_
 - [PegaSys Plus](https://pegasys.tech/enterprise/) _cung cấp các tính năng và chức năng tương tự như HF Besu, cộng với các lợi ích tập trung vào doanh nghiệp bổ sung_
-- [Quorum](https://www.goquorum.com/) _nền tảng chuỗi khối mã nguồn mở kết hợp sự đổi mới của cộng đồng Ethereum công cộng với các cải tiến để hỗ trợ nhu cầu doanh nghiệp_
+- [Quorum](https://docs.goquorum.consensys.io/) _nền tảng chuỗi khối mã nguồn mở kết hợp sự đổi mới của cộng đồng Ethereum công cộng với các cải tiến để hỗ trợ nhu cầu doanh nghiệp_
 
 ## Giao thức và cơ sở hạ tầng {#protocol-and-infrastructure}
 
@@ -64,7 +64,7 @@ Mạng Ethereum công cộng và riêng tư có thể cần các tính năng c�
 
 - [Ernst & Young's ‘Nightfall'](https://github.com/EYBlockchain/nightfall) _Chi tiết [tại đây](https://bravenewcoin.com/insights/ernst-and-young-rolls-out-'nightfall-to-enable-private-transactions-on)_
 - [Pegasys' Orion](https://docs.pantheon.pegasys.tech/en/stable/Concepts/Privacy/Privacy-Overview/) _Chi tiết [tại đây](https://pegasys.tech/privacy-in-pantheon-how-it-works-and-why-your-enterprise-should-care/)_
-- [Quorum's Tessera](https://docs.goquorum.com/en/latest/Privacy/Tessera/Tessera/) _Chi tiết [tại đây](https://github.com/jpmorganchase/tessera/wiki/How-Tessera-works)_
+- [Quorum's Tessera](https://docs.goquorum.consensys.io/concepts/privacy#private-transaction-manager/) _Chi tiết [tại đây](https://github.com/jpmorganchase/tessera/wiki/How-Tessera-works)_
 
 ### Bảo mật {#security}
 
@@ -74,8 +74,7 @@ Mạng Ethereum công cộng và riêng tư có thể cần các tính năng c�
 ### Bộ công cụ {#tooling}
 
 - [Alethio -](https://explorer.aleth.io/) _Nền tảng phân tích dữ liệu Ethereum_
-- [Treum](https://treum.io/) _mang lại tính minh bạch, truy xuất nguồn gốc và tính truyền thống cho chuỗi cung ứng, sử dụng công nghệ chuỗi khối_
-- [Truffle Suite](https://trufflesuite.com) _bộ phát triển chuỗi khối (Truffle, Ganache, Drizzle)_
+- [Treum](https://consensys.io/blog/consensys-acquires-treum) _mang lại tính minh bạch, truy xuất nguồn gốc và tính truyền thống cho chuỗi cung ứng, sử dụng công nghệ chuỗi khối_
 
 ## Cộng đồng nhà phát triển doanh nghiệp {#enterprise-developer-community}
 

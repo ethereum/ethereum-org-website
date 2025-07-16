@@ -14,11 +14,11 @@ summaryPoint3: Açık bilim hareketine dayanır.
 
 ## Merkeziyetsiz bilim (DeSci) nedir? {#what-is-desci}
 
-Merkeziyetsiz bilim (DeSci), Web3 kullanarak bilimsel bilginin adil ve eşit şekilde finanse edilmesi, oluşturulması, gözden geçirilmesi, kredilendirilmesi, depolanması ve yayılması için kamusal altyapı oluşturma hedefi olan bir harekettir.
+Merkeziyetsiz bilim (DeSci), [Web3](/glossary/#web3) yığını kullanılarak bilimsel bilginin adil ve eşit şekilde finanse edilmesi, oluşturulması, gözden geçirilmesi, depolanması, yayılması ve bilgiyi üretene atıfta bulunulmasına yönelik kamusal altyapıyı oluşturmayı hedefleyen bir harekettir.
 
 DeSci, bilimsel araştırmalarını açıkça paylaşmaya teşvik edilen bilim insanlarının çalışmalarını kredi almalarına olanak tanıyan ve araştırmaya kolayca erişim sağlayan herkesin katkıda bulunabileceği bir ekosistem oluşturmayı hedefleyen bir harekettir. DeSci, bilimsel bilginin herkes tarafından erişilebilir olması gerektiği ve bilimsel araştırma sürecinin şeffaf olması gerektiği fikrinden yola çıkarak çalışır. Merkeziyetsiz bilim, daha merkeziyetsiz ve dağıtılmış bir bilimsel araştırma modeli yaratmayı amaçlamakta olup, bu sayede sansür ve merkezi otoritelerin kontrolüne daha dirençli hale gelmektedir. Merkeziyetsiz bilim, fonlamanın, bilimsel araçların ve iletişim kanallarının merkeziyetsizleştirilmesiyle yeni ve alışılmadık fikirlerin gelişebileceği bir ortam yaratmayı ummaktadır.
 
-Merkeziyetsiz bilim, daha çeşitli fon kaynaklarına ( [DAO'lardan](/dao/), [karesel bağışlara](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531) kitlesel fonlamalara ve daha fazlasına), daha erişilebilir veri ve yöntemlere olanak tanıyarak ve yeniden üretilebilirlik için teşvikler sağlayarak bu alanda katkıda bulunur.
+Merkeziyetsiz bilim, ([DAO'lardan](/glossary/#dao) [ikinci dereceden bağışlara](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531), kitlesel fonlamalara ve daha fazlasına) daha çeşitli fon kaynaklarına, daha erişilebilir veri ve yöntemlere olanak tanır ve yeniden üretilebilirliği teşvik eder.
 
 ### Juan Benet - DeSci Hareketi
 
@@ -28,30 +28,30 @@ Merkeziyetsiz bilim, daha çeşitli fon kaynaklarına ( [DAO'lardan](/dao/), [ka
 
 Bilimdeki temel sorunlara dair eksik olan bir liste ve merkeziyetsiz bilimin bu sorunları ele alarak nasıl yardımcı olabileceği
 
-| **Merkeziyetsiz bilim**                                                                                                     | **Geleneksel bilim**                                                                                                            |
-| --------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| Fonların dağıtımı, ikinci dereceden bağışlar veya DAO'lar gibi mekanizmalar kullanılarak halk tarafından belirlenir.        | Küçük, kapalı, merkezi gruplar fonların dağıtımını kontrol eder.                                                                |
-| Dinamik ekiplerde dünyanın her yerinden meslektaşlarla iş birliği yaparsınız.                                               | Finansman kuruluşları ve yerel kurumlar, iş birliklerinizi sınırlar.                                                            |
-| Finansman kararları çevrimiçi ve şeffaf bir şekilde alınır. Yeni finansman mekanizmaları araştırılmaktadır.                 | Finansman kararları, uzun bir geri dönüş süresi ve sınırlı şeffaflık ile alınır. Birkaç finansman mekanizması mevcuttur.        |
-| Laboratuvar hizmetlerini paylaşmak, Web3 primitifleri kullanılarak daha kolay ve daha şeffaf hale getirilir.                | Laboratuvar kaynaklarının paylaşımı genellikle yavaş ve şeffaf değildir.                                                        |
-| Güven, şeffaflık ve evrensel erişim için Web3 ilkelerini kullanan yeni yayınlama modelleri geliştirilebilir.                | Sıklıkla verimsiz, ön yargılı ve sömürücü olarak kabul edilen yerleşik yollarla yayın yapıyorsunuz.                             |
-| Emsal değerlendirme çalışması için token ve itibar kazanabilirsiniz.                                                        | Emsal değerlendirme çalışmanız ücretsiz olup, kâr amacı güden yayıncılara fayda sağlar.                                         |
-| Oluşturduğunuz fikri mülkiyetin (IP) sahibi sizsiniz ve şeffaf şartlara göre dağıtıyorsunuz.                                | Kendi kurumunuz, oluşturduğunuz IP'nin sahibidir. IP'ye erişim şeffaf değildir.                                                 |
-| Tüm adımları zincirleme yaparak, başarısız çabalardan elde edilen veriler de dahil olmak üzere tüm araştırmalar paylaşılır. | Yayın yanlılığı, araştırmacıların başarılı sonuçları olan deneyleri paylaşma olasılıklarının daha yüksek olduğu anlamına gelir. |
+| **Merkeziyetsiz bilim**                                                                                                                            | **Geleneksel bilim**                                                                                                                           |
+| -------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| Fonların nasıl dağıtılacağı, ikinci dereceden bağışlar veya DAO'lar gibi mekanizmalar kullanılarak **topluluk tarafından belirlenir**.             | Küçük, kapalı **merkezi gruplar** fonların dağıtımını kontrol eder.                                                                            |
+| Dinamik ekiplerde **dünyanın her yerinden** insanlarla iş birliği yaparsınız.                                                                      | Finansman kuruluşları ve yerel kurumlar, iş birliklerinizi **sınırlar**.                                                                       |
+| Finansman ile ilgili kararlar, çevrimiçi ve** şeffaf** bir şekilde alınır. Yeni finansman mekanizmaları araştırılmaktadır.                         | Finansman ile ilgili kararlar, uzun bir geri dönüş süresi ve **sınırlı düzeyde şeffaflık** ile alınır. Birkaç finansman mekanizması mevcuttur. |
+| [Web3](/glossary/#web3) teknolojisi kullanılarak laboratuvar hizmetlerini paylaşmak daha kolay ve şeffaf hale gelmiştir.                           | Laboratuvar kaynaklarının paylaşımı genellikle **yavaştır ve şeffaf değildir**.                                                                |
+| Güven, şeffaflık ve evrensel erişim için Web3 ilkelerini kullanan **yeni yayınlama modelleri** geliştirilebilir.                                   | Sık sık **verimsiz, önyargılı ve sömürücü** olarak bilinen yerleşik yollarla yayın yaparsınız.                                                 |
+| **Yaptığınız eş değerlendirmesi çalışmaları karşılığında jeton ve itibar** kazanabilirsiniz.                                                       | **Eş değerlendirmesi çalışmalarınız karşılığında ödeme yapılmaz** ve bunlar, kâr amacı güden yayıncılara fayda sağlar.                         |
+| Oluşturduğunuz **fikri mülkiyetin (IP)** sahibi sizsiniz ve bu mülkiyeti şeffaf koşullarda dağıtırsınız.                                           | Oluşturduğunuz **fikri mülkiyetin (IP) sahibi, kendi kurumunuzdur**. IP'ye erişim şeffaf değildir.                                             |
+| Başarısız çalışmalardan elde edilen veriler de dahil olmak üzere, tüm adımların zincir üstünde olması yoluyla **tüm araştırmaların paylaşılması**. | **Yayın yanlılığı**, araştırmacıların başarılı sonuçlar almış olan deneyleri paylaşmaya daha meyilli oldukları anlamına gelir.                 |
 
 ## Ethereum ve Merkeziyetsiz Bilim {#ethereum-and-desci}
 
-Merkeziyetsiz bir bilim sistemi, güçlü güvenlik, düşük maliyet, düşük işlem ücretleri ve uygulama geliştirme için zengin bir ekosistem gerektirir. Ethereum, merkeziyetsiz bilim birikimi oluşturmak için gereken her şeyi sunar.
+Merkeziyetsiz bir bilim sistemi, güçlü güvenlik, düşük maliyet, düşük işlem ücretleri ve uygulama geliştirme için zengin bir ekosistem gerektirir. Ethereum, merkeziyetsiz bilim teknolojisinin oluşturulabilmesi için gereken her şeyi sağlar.
 
 ## Merkeziyetsiz Bilim kullanım senaryoları {#use-cases}
 
-Merkeziyetsiz Bilim, Web2 akademisini dijital dünyaya taşımak için bilimsel araç setini inşa ediyor. Aşağıda, Web3'ün bilimsel topluluğa sunabileceği kullanım durumlarından bazı örnekler bulunmaktadır.
+DeSci, geleneksel akademiyi dijital dünyaya taşımak için gereken bilimsel araç setini geliştiriyor. Aşağıda, Web3'ün bilimsel topluluğa sunabileceği kullanım durumlarından bazı örnekler bulunmaktadır.
 
 ### Yayımlama {#publishing}
 
-Bilim yayıncılığı, yayın evlerinin yönettiği ve bilim insanları, hakemler ve editörlerin ücretsiz emeğine dayanan, ardından fahiş yayıncılık ücretleri talep eden bir yapıya sahip olmasıyla ünlüdür. Eser ve yayın masraflarını genellikle dolaylı olarak vergilendirme yoluyla ödeyen halk, yayıncıya tekrar ödeme yapmadan aynı esere çoğu kez erişememektedir. Bireysel bilim makalelerini yayınlamak için toplam ücretler genellikle beş rakamlıdır ($USD), bu da küçük bir yayıncı grubu için muazzam kârlar sağlarken, bir [kamu malı](https://www.econlib.org/library/Enc/PublicGoods.html) olarak tüm bilimsel bilgi kavramını baltalamaktadır.
+Bilim yayıncılığı, yayın evlerinin yönettiği ve bilim insanları, hakemler ve editörlerin ücretsiz emeğine dayanan, ardından fahiş yayıncılık ücretleri talep eden bir yapıya sahip olmasıyla ünlüdür. Eser ve yayın masraflarını genellikle dolaylı olarak vergilendirme yoluyla ödeyen halk, yayıncıya tekrar ödeme yapmadan aynı esere çoğu kez erişememektedir. Bir bilimsel makaleyi tek başına yayınlamak için gereken toplam ücret genellikle beş hanelidir ($USD); bu durum, bir [kamu malı](/glossary/#public-goods) olarak tüm bilimsel bilgi kavramını baltalarken küçük bir yayıncı grubu için muazzam kârlar sağlamaktadır.
 
-[ArXiv](https://arxiv.org/) gibi baskı öncesi sunucular şeklinde ücretsiz ve açık erişimli platformlar mevcuttur. Bununla birlikte, bu platformlarda kalite kontrol, [anti-sybil mekanizmaları](https://csrc.nist.gov/glossary/term/sybil_attack) yoktur ve genellikle makale seviyesindeki metrikleri izlemezler, yani genellikle geleneksel bir yayıncıya sunulmadan önce yalnızca çalışmaları duyurmak için kullanılırlar. SciHub ayrıca yayınlanmış makaleleri, (yasal olarak değil) ancak yayıncılar ödemelerini aldıktan ve çalışmayı sıkı telif hakkı mevzuatına sardıktan sonra erişime ücretsiz hale getirir. Bu durum, yerleşik bir meşruiyet mekanizması ve teşvik modeli ile erişilebilir bilim makaleleri ve verileri için kritik bir boşluk bırakmaktadır. Böyle bir sistem oluşturmak için gerekli araçlar Web3'te mevcuttur.
+[ArXiv](https://arxiv.org/) gibi baskı öncesi sunucular şeklinde ücretsiz ve açık erişimli platformlar mevcuttur. Bununla birlikte, bu platformlarda kalite kontrol, [sybil önleyici mekanizmaları](/glossary/#anti-sybil) yoktur ve bu platformlar genellikle makale seviyesindeki metrikleri izlemez, yani genellikle geleneksel bir yayıncıya sunulmadan önce yalnızca çalışmaları duyurmak için kullanılır. SciHub ayrıca yayınlanmış makaleleri, (yasal olarak değil) ancak yayıncılar ödemelerini aldıktan ve çalışmayı sıkı telif hakkı mevzuatına sardıktan sonra erişime ücretsiz hale getirir. Bu durum, yerleşik bir meşruiyet mekanizması ve teşvik modeli ile erişilebilir bilim makaleleri ve verileri için kritik bir boşluk bırakmaktadır. Böyle bir sistem oluşturmak için gerekli araçlar Web3'te mevcuttur.
 
 ### Tekrarlanabilirlik ve çoğaltılabilirlik {#reproducibility-and-replicability}
 
@@ -60,23 +60,23 @@ Tekrarlanabilirlik ve çoğaltılabilirlik, kaliteli bilimsel keşfin temellerid
 - Tekrarlanabilir sonuçlar, aynı ekip tarafından aynı metodoloji kullanılarak arka arkaya birden fazla kez elde edilebilir.
 - Aynı deneysel düzeneği kullanan farklı bir grup tarafından tekrarlanabilir sonuçlar elde edilebilir.
 
-Web3'e has yeni araçlar, tekrarlanabilirlik ve çoğaltılabilirliğin keşfin temeli olduğunu garanti edebilir. Kaliteli bilimi, akademinin teknolojik kumaşına işleyebiliriz. Web3, her bir çözümleme bileşeni (ham veri, hesaplama motoru ve uygulama sonucu) için ayrı ayrı tasdikname sunar. Bu bileşenlerin sürdürülebilirliğini sağlamak için güvenilir bir ağ oluşturulduğunda; her ağ katılımcısı, hesaplamayı tekrar tekrar yapıp her bir sonucu onaylayarak sorumluluk alabilir. Mutabakat sistemlerinin güzelliği buradadır.
+Web3'e has yeni araçlar, tekrarlanabilirlik ve çoğaltılabilirliğin keşfin temeli olduğunu garanti edebilir. Kaliteli bilimi, akademinin teknolojik kumaşına işleyebiliriz. Web3; işlenmemiş veriler, hesaplama motoru ve uygulama sonucu gibi her bir analiz bileşeni için [tasdikler](/glossary/#attestation) oluşturma olanağı sunar. Bu bileşenlerin sürdürülebilirliğini sağlamak için güvenilir bir ağ oluşturulduğunda; her ağ katılımcısı, hesaplamayı tekrar tekrar yapıp her bir sonucu onaylayarak sorumluluk alabilir. Mutabakat sistemlerinin güzelliği buradadır.
 
 ### Fonlama {#funding}
 
-An itibarıyla bilime kaynak sağlamak için izlenen yol, bireylerin veya bir grup bilim insanının kaynak sağlayan kuruluşa yazılı başvuruda bulunmasıdır. Başvuranların küçük bir bölümüne kaynak sağlamadan önce, güvenilir kişilerden oluşan bir heyet başvuruları puanlar ve sonrasında adaylar mülakata girer. Bir hibeye başvurmak ile hibeyi almak arasında bazen yıllarca bekleme süresine yol açan darboğazlar yaratmasının yanı sıra, bu modelin ön yargılara, kişisel çıkarlara ve inceleme heyetinin politikalarına karşı oldukça savunmasız olduğu bilinmektedir.
+An itibarıyla bilime kaynak sağlamak için izlenen yol, bireylerin veya bir grup bilim insanının kaynak sağlayan kuruluşa yazılı başvuruda bulunmasıdır. Başvuranların küçük bir bölümüne kaynak sağlamadan önce, güvenilir kişilerden oluşan bir heyet başvuruları puanlar ve sonrasında adaylar mülakata girer. Bu modelin, hibeye başvurma ve alma arasında bazen **yıllarca beklemeye** yol açan darboğazlar yaratmasının yanı sıra, değerlendirme panelinin **önyargılarına, kişisel çıkarlarına ve politikalarına** karşı son derece savunmasız olduğu bilinmektedir.
 
 Çalışmalar, farklı panellere verilen aynı tekliflerin çok farklı sonuçları olduğundan, hibe inceleme panellerinin yüksek kaliteli teklifleri seçmekte yetersiz kaldığını göstermiştir. Finansman nadir hale geldikçe, entelektüel açıdan daha muhafazakar projelere sahip daha kıdemli araştırmacılardan oluşan daha küçük bir havuzda yoğunlaştı. Etki, hiper rekabetçi bir finansman ortamı yaratarak, sapkın teşvikleri sağlamlaştırdı ve yeniliği boğdu.
 
-Web3, DAO'lar ve geniş çapta Web3 tarafından geliştirilen farklı teşvik modellerini deneyerek bu bozuk finansman modelini dağıtma potansiyeline sahiptir. Bilimin fonlanmasında köklü değişim yapabilecek Web3 araçlarından bazıları [geriye dönük kamu malları fonlaması](https://medium.com/ethereum-optimism/retroactive-public-goods-funding-33c9b7d00f0c), [kuadratik fonlama](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531), [DAO yönetişimi](https://www.antler.co/blog/daos-and-web3-governance-the-promise-implications-and-challenges-ahead) ve [tokenlaştırılmış teşvik yapılarıdır](https://cdixon.org/2017/05/27/crypto-tokens-a-breakthrough-in-open-network-design).
+Web3, DAO'lar ve geniş çapta Web3 tarafından geliştirilen farklı teşvik modellerini deneyerek bu bozuk finansman modelini dağıtma potansiyeline sahiptir. Bilimin finansmanında köklü değişim yapabilecek Web3 araçlarına örnek olarak [geriye dönük kamu malları fonlaması](https://medium.com/ethereum-optimism/retroactive-public-goods-funding-33c9b7d00f0c), [ikinci dereceden finansman](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531), [DAO yönetişimi](https://www.antler.co/blog/daos-and-web3-governance-the-promise-implications-and-challenges-ahead) ve [jetonlaştırılmış teşvik yapıları](https://cdixon.org/2017/05/27/crypto-tokens-a-breakthrough-in-open-network-design) verilebilir.
 
 ### Fikri mülkiyet sahipliği ve geliştirme {#ip-ownership}
 
-Fikri mülkiyet (IP), geleneksel bilimde büyük bir sorundur: üniversitelerde sıkışıp kalmaktan veya biyoteknolojilerde kullanılmamaktan, değer biçilmesinin çok zor olmasına kadar. Bununla birlikte, dijital varlıkların (bilimsel veriler veya makaleler gibi) mülkiyeti, Web3'ün [değiştirilemez token'lar (NFT'ler)](/nft/) kullanarak son derece iyi yaptığı bir şeydir.
+Fikri mülkiyet (IP), geleneksel bilimde büyük bir sorundur: üniversitelerde sıkışıp kalmaktan veya biyoteknolojilerde kullanılmamaktan, değer biçilmesinin çok zor olmasına kadar. Bununla birlikte dijital varlıkların (bilimsel veriler veya makaleler gibi) mülkiyeti, Web3'ün [eşsiz jetonlar (NFT'ler)](/glossary/#nft) kullanarak son derece iyi yaptığı bir şeydir.
 
 NFT'ler gelecekteki işlem gelirlerini orijinal yaratıcıya aktarabilir. Aynı şekilde şeffaf değer eşleştirme zincirleri ile araştırmacılar, yönetim organları (DAOlar gibi), ve hatta veri toplayan özneler bile ödüllendirilebilir.
 
-Yürütülen araştırma deneylerinin merkeziyetsiz veri depoları için, [IP-NFT'ler](https://medium.com/molecule-blog/ip-nfts-for-researchers-a-new-biomedical-funding-paradigm-91312d8d92e6) bir kilit işlevi görebilir. Ayrıca NFT ve [DeFi](/defi/) finansallaştırılmasına (bölümlere ayırmaktan toplama havuzlarına ve değer biçmeye) bağlanabilir. Bu durum zincir üstündeki varlıkların, örneğin DAO'ların, doğrudan zincir üstünde araştırma yapmasına olanak sağlar. Örnek olarak [VitaDAO](https://www.vitadao.com/) verilebilir. Başkalarına transfer edilemeyen ["soulbound" (ruha bağlı) token'ların](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) ortaya çıkışı DeSci için önemli bir rol oynar çünkü bu token'lar, kişilerin Ethereum adreslerine bağlı deneyim ve referanslarını kanıtlayabilmesini sağlar.
+[IP-NFT'ler](https://medium.com/molecule-blog/ip-nfts-for-researchers-a-new-biomedical-funding-paradigm-91312d8d92e6), araştırma deneylerinin alınan ve NFT'ye aktarılan verilerin merkeziyetsiz olarak saklanması ve [DeFi](/glossary/#defi) finansallaştırılması (bölümlere ayırmadan, borç verme havuzlarında ve değerlemelere kadar) açısından anahtar bir görev görebilir. Bu durum zincir üstündeki varlıkların, örneğin DAO'ların, doğrudan zincir üstünde araştırma yapmasına olanak sağlar. Örnek olarak [VitaDAO](https://www.vitadao.com/) verilebilir. Başkalarına transfer edilemeyen ["soulbound" jetonların](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) ortaya çıkması da bireylerin deneyimlerini ve Ethereum adreslerine bağlı kimlik bilgilerini kanıtlamalarına olanak sağlayarak DeSci'de önemli bir rol oynayabilir.
 
 ### Veri depolama, erişim ve mimari {#data-storage}
 
@@ -92,25 +92,23 @@ DeSci topluluğuna katılın ve gelişmelerden haberdar olun!
 
 - [DeSci.Global: küresel etkinlikler ve buluşma takvimi](https://desci.global)
 - [Bilim İçin Blok Zincir Telegram Adresi](https://t.me/BlockchainForScience)
-- [Molecule: Araştırma projeleriniz için fon sağlayın ve fon alın](https://discover.molecule.to/)
+- [Molecule: Araştırma projeleriniz için fon sağlayın ve fon alın](https://www.molecule.xyz/)
 - [VitaDAO: Uzun ömürlü araştırmalar için sponsorlu araştırma anlaşmalı yoluyla fon alın](https://www.vitadao.com/)
 - [ResearchHub: Bilimsel bir sonuç yayınlayın ve taraflarla iletişime geçin](https://www.researchhub.com/)
 - [LabDAO: in-silico proteinini katlayın](https://alphafodl.vercel.app/)
-- [dClimate API: Merkeziyetsiz bir topluluk tarafından toplanmış iklim verilerini sorgulayın](https://api.dclimate.net/)
+- [dClimate API: Merkeziyetsiz bir topluluk tarafından toplanmış iklim verilerini sorgulayın](https://www.dclimate.net/)
 - [DeSci Vakfı: DeSci yayınlama aracı oluşturucu](https://descifoundation.org/)
 - [DeSci.Dünyası: Kullanıcıların merkeziyetsiz bilimi görüntülemesi ve etkileşim kurması için tek adres](https://desci.world)
-- [Fleming Protokolü: Ortak çalışmaya dayalı biyomedikal buluşları destekleyen açık kaynak veri ekonomisi](https://medium.com/@FlemingProtocol/a-data-economy-for-patient-driven-biomedical-innovation-9d56bf63d3dd)
-- [OceanDAO: Veri ile ilgili bilimler için DAO tarafından yönetilen fonlama](https://oceanprotocol.com/dao)
+- [OceanDAO: Veri ile ilgili bilimler için DAO tarafından yönetilen fonlama](https://oceanprotocol.com/)
 - [Opscientia: Açık merkeziyetsiz bilim iş akışları](https://opsci.io/research/)
-- [LabDAO: in-silico proteinini katlayın](https://alphafodl.vercel.app/)
-- [Bio.xyz: Biyoteknoloji DAO'nuz veya desci projeniz için fon toplayın](https://www.molecule.to/)
-- [ResearchHub: Bilimsel bir sonuç yayınlayın ve taraflarla iletişime geçin](https://www.researchhub.com/)
-- [VitaDAO: Uzun ömürlü araştırmalar için sponsorlu araştırma anlaşmalı yoluyla fon alın](https://www.vitadao.com/)
-- [Fleming Protokolü: Ortak çalışmaya dayalı biyomedikal buluşları destekleyen açık kaynak veri ekonomisi](https://medium.com/@FlemingProtocol/a-data-economy-for-patient-driven-biomedical-innovation-9d56bf63d3dd)
-- [Etkin Sonuç Çıkarma Lab](https://www.activeinference.org/)
-- [CureDAO: Topluluğa Ait Hassas Sağlık Platformu](https://docs.curedao.org/)
+- [Bio.xyz: Biyoteknoloji DAO'nuz veya desci projeniz için fon toplayın](https://www.bio.xyz/)
+- [Fleming Protokolü: Ortak çalışmaya dayalı biyomedikal buluşları destekleyen açık kaynak veri ekonomisi](http://flemingprotocol.io/)
+- [Active Inference Institute](https://www.activeinference.org/)
 - [IdealMarkets: Merkeziyetsiz bilimsel güvenilirliği sağlar](https://ideamarket.io/)
 - [DeSci Laboratuvarları](https://www.desci.com/)
+- [ValleyDAO: sentetik biyoloji araştırmaları için finansman ve çeviri desteği sunan açık, global bir topluluk](https://www.valleydao.bio)
+- [Cerebrum DAO: beyin sağlığını geliştirmeye ve nörodejenerasyonu önlemeye yönelik çözümler için kaynak temin eder ve destek sağlar](https://www.cerebrumdao.com/)
+- [CryoDAO: kriyoprezervasyon alanındaki umut vaat eden araştırmaların finansmanı](https://www.cryodao.org)
 
 Listelenecek yeni proje önerilerine açığız - başlamak için lütfen [listeleme politikamızı](/contributing/adding-desci-projects/) gözden geçirin!
 
@@ -120,10 +118,9 @@ Listelenecek yeni proje önerilerine açığız - başlamak için lütfen [liste
 - [Jocelynn Pearl tarafından a16z geleceği için merkeziyetsiz biyoteknoloji rehberi](https://future.a16z.com/a-guide-to-decentralized-biotech/)
 - [DeSci için durum](https://gitcoin.co/blog/desci-the-case-for-decentralised-science/)
 - [DeSci Rehberi](https://future.com/what-is-decentralized-science-aka-desci/)
-- [Merkeziyetsiz bilim kaynakları](https://www.vincentweisser.com/decentralized-science)
-- [Molekülün Biyofarması IP-NFT'ler - Teknik Bir Açıklama](https://molecule.to/blog/molecules-biopharma-ip-nfts-a-technical-description)
+- [Merkeziyetsiz bilim kaynakları](https://www.vincentweisser.com/desci)
+- [Molekülün Biyofarması IP-NFT'ler - Teknik Bir Açıklama](https://www.molecule.xyz/blog/molecules-biopharma-ip-nfts-a-technical-description)
 - [Bilim İçin Güvensiz Sistemler Geliştirmek, Jon Starr](https://medium.com/@jringo/building-systems-of-trustless-science-1cd2d072f673)
-- [Biyoteknoloji DAO'larının Ortaya Çıkışı](https://molecule.to/blog/the-emergence-of-biotech-daos)
 - [Paul Kohlhass - DeSci: Merkeziyetsiz Bilimin Geleceği (podcast)](https://anchor.fm/andrew-steinwold/episodes/Paul-Kohlhaas---DeSci-The-Future-of-Decentralized-Science---Zima-Red-ep-117-e1h683a)
 - [Merkeziyetsiz Bilim İçin Bir Çıkarım Ontolojisi: Yerleşik Anlamlandırmadan Epistemik Müştereklere](https://zenodo.org/record/6320575)
 - [DeSci: Araştırmanın Geleceği, Samuel Akinosho tarafından yazıldı](https://lucidsamuel.medium.com/desci-the-future-of-research-b76cfc88c8ec)

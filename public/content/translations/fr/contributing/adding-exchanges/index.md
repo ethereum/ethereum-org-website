@@ -35,6 +35,6 @@ Cela permet également à ethereum.org d'avoir confiance en la légitimité et l
 
 Si vous souhaitez ajouter un échange sur ethereum.org, créez un ticket sur GitHub.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=content+%3Afountain_pen%3A&template=suggest_exchange.yaml">
+<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=content+%3Afountain_pen%3A&template=suggest_exchange.yaml">
   Créez un ticket
 </ButtonLink>

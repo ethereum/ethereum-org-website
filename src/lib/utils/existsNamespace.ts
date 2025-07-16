@@ -9,10 +9,7 @@ import { INTL_JSON_DIR } from "@/lib/constants"
  * @param namespace Namespace for the page
  * @returns false if the namespace .json file exists, true otherwise
  */
-export const existsNamespace = (
-  locale: string,
-  namespace: string,
-): boolean => {
+export const existsNamespace = (locale: string, namespace: string): boolean => {
   const nsJsonPathForLocale = join(INTL_JSON_DIR, locale, namespace + ".json")
   return existsSync(nsJsonPathForLocale)
 }

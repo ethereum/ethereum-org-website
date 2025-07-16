@@ -8,7 +8,7 @@ Der Betrieb eines vollständigen Knotens ist die vertrauenswürdigste, dezentral
 
 ## Was ist ein leichter Client {#what-is-a-light-client}
 
-Ein leichter Knoten ist ein Knoten, der auf der Software eines leichten Clients betrieben werden kann. Statt lokale Kopien der gesamten Daten der Blockchain zu speichern und unabhängig alle Änderungen mitzuverfolgen, fragen sie die notwendigen Daten von irgendeinem Anbieter ab. Der Anbieter könnte eine direkte Verbindung zu einem vollständigen Knoten oder irgendein zentraler RPC-Server sein. Die Daten werden dann vom leichten Knoten verifiziert. Dadurch kann er mit der Spitze der Blockchain mithalten. Der leichte Knoten verarbeitet nur Block-Header und lädt gelegentlich die echten Inhalte des Blocks herunter. Je nach Kombination von leichter und vollständiger Client-Software können Knoten in ihrer Leichtigkeit variieren. Zum Beispiel würde die leichteste Konfiguration darin bestehen, einen leichten Ausführungs-, sowie Konsensclient zu betreiben. Es ist auch wahrscheinlich, dass viele Knoten sich entscheiden, einen leichten Konsensclient mit einem vollen Ausführungsclient oder andersherum zu betreiben.
+Ein leichter Knoten ist ein Knoten, der auf der Software eines leichten Clients betrieben werden kann. Statt lokale Kopien der gesamten Daten der Blockchain zu speichern und unabhängig alle Änderungen mitzuverfolgen, fragen sie die notwendigen Daten von irgendeinem Anbieter ab. Der Anbieter könnte eine direkte Verbindung zu einem vollständigen Knoten oder irgendein zentraler RPC-Server sein. Die Daten werden dann vom leichten Knoten verifiziert. Dadurch kann er mit der Spitze der Blockchain mithalten. Der leichte Knoten verarbeitet nur Block-Header und lädt gelegentlich die echten Inhalte des Blocks herunter. Die Leichtigkeit der Nodes kann variieren, abhängig von den Kombinationen der Light- und vollständigen Client-Software, die sie ausführen. Zum Beispiel würde die leichteste Konfiguration darin bestehen, einen leichten Ausführungs-, sowie Konsensclient zu betreiben. Es ist auch wahrscheinlich, dass viele Knoten sich entscheiden, einen leichten Konsensclient mit einem vollen Ausführungsclient oder andersherum zu betreiben.
 
 ## Wie funktionieren leichte Clients? {#how-do-light-clients-work}
 
@@ -44,7 +44,7 @@ Es befinden sich mehrere leichte Clients in der Entwicklung, darunter Ausführun
 
 - [Lodestar](https://github.com/ChainSafe/lodestar/tree/unstable/packages/light-client): leichter Konsensclient in TypeScript
 - [Helios](https://github.com/a16z/helios): kombinierter leichter Ausführungs- und Konsensclient in Rust
-- [Geth](https://github.com/ethereum/go-ethereum/tree/master/light): Light-Modus für Ausführungsclient (in Entwicklung) in Go
+- [Geth](https://github.com/ethereum/go-ethereum/tree/master/beacon/light): Light-Modus für Ausführungs-Client (in Entwicklung) in Go
 - [Nimbus](https://nimbus.guide/el-light-client.html): Leichter Konsensclient in Nim
 
 Unseres Wissens nach ist noch keiner dieser Clients produktionsreif.

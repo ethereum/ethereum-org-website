@@ -20,7 +20,7 @@ Blok inşacılar ile blok önericilerin ayrılması blok inşacıların işlemi 
 
 <ExpandableCard title="PBS, hangi çeşit sansürü çözer?" eventCategory="/roadmap/pbs" eventName="clicked what kinds of censorship does PBS solve?">
 
-Güçlü organizasyonlar doğrulaycılara belirli adrese gelen veya o adrese giden işlemleri sansürlemeleri için baskı yapabilirler. Doğrulayıcılar bu baskıya işlem havuzlarındaki kara listeye alınmış adresleri tespit ederek ve bunları önerdikleri bloklardan kovarak uyum sağlamaya çalışıyorlar. PBS'den sonra bu mümkün olmayacak çünkü blok önericileri bloklarının içinde hangi işlemleri yayınlayacaklarını bilmeyecekler. Belli bireyler ya da uygulamalar için kendi bölgelerinde ne zaman yasa yapıldı gibi şeyleri dikkate alarak sansür kurallarına uymaları önemli olabilir. Bu durumlarda, rıza durumu uygulama seviyesinde olur ve bu arada da protokol izinsiz ve sansürsüz kalır.
+Güçlü organizasyonlar doğrulaycılara belirli adrese gelen veya o adrese giden işlemleri sansürlemeleri için baskı yapabilirler. Doğrulayıcılar, işlem havuzlarındaki kara listeye alınmış adresleri tespit ederek ve bunları önerdikleri bloklardan çıkararak bu baskıya uyum sağlar. PBS'den sonra bu mümkün olmayacak çünkü blok önericileri bloklarının içinde hangi işlemleri yayınlayacaklarını bilmeyecekler. Belli bireyler ya da uygulamalar için kendi bölgelerinde ne zaman yasa yapıldı gibi şeyleri dikkate alarak sansür kurallarına uymaları önemli olabilir. Bu durumlarda, rıza durumu uygulama seviyesinde olur ve bu arada da protokol izinsiz ve sansürsüz kalır.
 
 </ExpandableCard>
 

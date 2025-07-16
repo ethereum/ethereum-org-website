@@ -32,7 +32,7 @@ Finalmente, o validador assina a atestação e o transmite para a rede.
 
 Há uma sobrecarga substancial associada ao envio desses dados em torno da rede para cada validador. Portanto, as atestações de validadores individuais são agregados dentro das sub-redes antes de serem transmitidas de forma mais ampla. Isso inclui agregar assinaturas juntas para que uma atestação que é transmitida inclua `data` de consenso e uma única assinatura formada por combinar as assinaturas de todos os validadores que concordam com `data`. Isso pode ser verificado usando `aggregation_bits` porque fornece o índice de cada validador em seu comitê (cuja ID é fornecida em `data`) que podem ser usados para consultar assinaturas individuais.
 
-Em cada época um validador em cada sub-rede é selecionado para ser o `aggregator`. O agregador coleta todas as atestações que ouve pela rede gossip que tem `data` equivalente aos seus. O remetente de cada atestação correspondente é registrado nos `agregation_bits`. O agregador então transmite a atestação agregada à rede mais ampla.
+Em cada período, 16 validadores em cada sub-rede são selecionados para serem os `agregadores`. Os agregadores coletam todas as atestações que ouvem na rede gossip que têm `dados` equivalentes aos deles. O remetente de cada atestação correspondente é registrado nos `agregation_bits`. Os agregadores então transmitem a agregação de atestação para a rede mais ampla.
 
 Quando um validador é selecionado para ser um proponente de blocos, eles empacotam as atestações das sub-redes até o último slot do novo bloco.
 
@@ -50,9 +50,15 @@ O ciclo de vida da atestação está delineado no esquema abaixo:
 
 ## Recompensas {#rewards}
 
-Validadores são recompensados por enviar os atestações. A recompensa de certificado depende de duas variáveis, a `recompenda base` e o `atraso de inclusão`. O melhor argumento para o atraso na inclusão é ser igual a 1.
+Validadores são recompensados por enviar os atestações. A recompensa da atestação depende dos sinalizadores de participação (fonte, destino e cabeçalho), da recompensa básica e da taxa de participação.
 
-`recompensa de atestação = 7/8 x recompensa base x (1/atraso de inclusão)`
+Cada um dos sinalizadores de participação pode ser verdadeiro ou falso, dependendo da atestação enviada e do atraso de inclusão dela.
+
+O melhor cenário ocorre quando todos os três sinalizadores são verdadeiros, caso em que um validador ganharia (por sinalizador correto):
+
+`recompensa += recompensa base * peso do sinalizador * taxa de atestação do sinalizador / 64`
+
+A taxa de atestação do sinalizador é medida usando a soma dos saldos efetivos de todos os validadores de atestação do sinalizador em questão em comparação com o saldo real do ativo total.
 
 ### Recompensa base {#base-reward}
 
@@ -81,6 +87,6 @@ Observe que, em alguns casos, um agregador de sorte também pode se tornar o pro
 ## Leitura adicional {#further-reading}
 
 - [Atestações na especificação anotada de consenso de Vitalik](https://github.com/ethereum/annotated-spec/blob/master/phase0/beacon-chain.md#attestationdata)
-- [Atestações em eth2book.info](https://eth2book.info/altair/part3/containers/dependencies#attestationdata)
+- [Atestações em eth2book.info](https://eth2book.info/capella/part3/containers/dependencies/#attestationdata)
 
 _Conhece um recurso da comunidade que ajudou você? Edite essa página e adicione!_

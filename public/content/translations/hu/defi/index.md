@@ -168,7 +168,7 @@ Ha a B tőzsdén lévő kínálat hirtelen lezuhan, és a felhasználó nem tudo
 
 Ha a hagyományos pénzügyi világban szeretne ugyanilyen ügyletet végrehajtani, akkor hatalmas pénzösszegre van szüksége. Ezek a pénzkereső stratégiák csak azoknak elérhetők, akik már most is vagyonosak. A villámkölcsön egy olyan jövőt fest elénk, melyben a pénzcsinálásnak nem előfeltétele az, hogy az ember vagyonos legyen.
 
-<ButtonLink isSecondary href="https://aave.com/flash-loans/">
+<ButtonLink isSecondary href="https://aave.com/docs/concepts/flash-loans/">
   Bővebben a villámkölcsönökről
 </ButtonLink>
 
@@ -334,7 +334,7 @@ A DeFi egy nyílt forráskódú kezdeményezés. A kapcsolódó protokollok és 
   Bővebben a dappok építéséről
 </ButtonLink>
 
-## További olvasnivaló {#futher-reading}
+## További olvasnivaló {#further-reading}
 
 ### DeFi adatok {#defi-data}
 
@@ -355,3 +355,7 @@ A DeFi egy nyílt forráskódú kezdeményezés. A kapcsolódó protokollok és 
 
 - [DeFi Llama Discord-szerver](https://discord.defillama.com/)
 - [DeFi Pulse Discord-szerver](https://discord.gg/Gx4TCTk)
+
+<Divider />
+
+<QuizWidget quizKey="defi" />

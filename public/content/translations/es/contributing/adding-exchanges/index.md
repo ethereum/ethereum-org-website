@@ -35,6 +35,6 @@ Y para que ethereum.org pueda estar más seguro de que el intercambio es un serv
 
 Si desea añadir un interambio a ethereum.org, cree una incidencia en GitHub.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=content+%3Afountain_pen%3A&template=suggest_exchange.yaml">
+<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=content+%3Afountain_pen%3A&template=suggest_exchange.yaml">
   Crear una incidencia
 </ButtonLink>

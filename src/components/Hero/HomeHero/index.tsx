@@ -1,51 +1,40 @@
-import { useTranslation } from "next-i18next"
-import { Box, Heading, Stack, Text, VStack } from "@chakra-ui/react"
+import { getTranslations } from "next-intl/server"
 
-import type { CommonHeroProps } from "@/lib/types"
+import type { ClassNameProp, CommonHeroProps, Lang } from "@/lib/types"
 
-import { ButtonLink } from "@/components/Buttons"
+import LanguageMorpher from "@/components/Homepage/LanguageMorpher"
 import { Image } from "@/components/Image"
-import Morpher from "@/components/Morpher"
 
-export type HomeHeroProps = Pick<CommonHeroProps, "heroImg">
+export type HomeHeroProps = Pick<CommonHeroProps, "heroImg"> &
+  ClassNameProp & {
+    locale: Lang
+  }
 
-const HomeHero = ({ heroImg }: HomeHeroProps) => {
-  const { t } = useTranslation("page-index")
+const HomeHero = async ({ heroImg, className, locale }: HomeHeroProps) => {
+  const t = await getTranslations({ locale, namespace: "page-index" })
+
   return (
-    <Box>
-      <Box h={{ base: "300px", sm: "350px", md: "380px", lg: "440px" }}>
+    <div className={className}>
+      <div className="h-[240px] md:h-[380px] lg:h-[480px]">
         <Image
           src={heroImg}
-          alt={t("page-index:page-index-hero-image-alt")}
+          alt={t("page-index-hero-image-alt")}
           // TODO: adjust value when the old theme breakpoints are removed (src/theme.ts)
           sizes="(max-width: 1504px) 100vw, 1504px"
-          w="full"
-          h="full"
+          className="h-full w-full object-cover"
           priority
-          style={{ objectFit: "cover" }}
         />
-      </Box>
-      <VStack>
-        <Stack
-          spacing={{ base: "4", lg: "7" }}
-          textAlign="center"
-          mx="4"
-          py="8"
-          maxW="2xl"
-        >
-          <Morpher />
-          <VStack spacing="6" maxW={{ lg: "2xl" }}>
-            <Heading as="h1" size="2xl">
-              {t("page-index:page-index-title")}
-            </Heading>
-            <Text size="lg">{t("page-index:page-index-description")}</Text>
-            <ButtonLink href="/learn/">
-              {t("page-index:page-index-title-button")}
-            </ButtonLink>
-          </VStack>
-        </Stack>
-      </VStack>
-    </Box>
+      </div>
+      <div className="flex flex-col items-center border-t-[3px] border-primary-low-contrast px-4 py-10 text-center">
+        <LanguageMorpher />
+        <div className="flex flex-col items-center gap-y-5 lg:max-w-2xl">
+          <h1 className="font-black">{t("page-index-title")}</h1>
+          <p className="max-w-96 text-md text-body-medium lg:text-lg">
+            {t("page-index-description")}
+          </p>
+        </div>
+      </div>
+    </div>
   )
 }
 

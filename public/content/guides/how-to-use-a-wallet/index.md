@@ -1,5 +1,6 @@
 ---
 title: How to use a wallet
+metaTitle: How to use Ethereum Wallets | Step by Step
 description: A guide explaining how to send, receive tokens and connect to web3 projects.
 lang: en
 ---
@@ -65,7 +66,7 @@ Your address will be the same in all Ethereum projects. You do not need to regis
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Want to learn more?</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     See our other guides
   </ButtonLink>
 </InfoBanner>

@@ -4,7 +4,7 @@ description: Spiegazione dei protocolli di consenso nei sistemi distribuiti e ru
 lang: it
 ---
 
-Il termine 'meccanismo di consenso' è usato spesso in modo colloquiale per far riferimento ai protocolli 'Proof of Stake', 'Proof of Work' o 'proof-of-authority'. Tuttavia, questi sono solo componenti del meccanismo di consenso che proteggono dagli attacchi di Sybil. I meccanismi di consenso sono l'insieme completo di idee, protocolli e incentivi che consentono a una serie distribuita di nodi di acconsentire sullo stato di una blockchain.
+Il termine 'meccanismo di consenso' è usato spesso in modo colloquiale per far riferimento ai protocolli 'Proof of Stake', 'Proof of Work' o 'proof-of-authority'. Tuttavia, questi sono semplicemente dei componenti nel meccanismo di consenso che proteggono dagli [attacchi Sybil](/glossary/#sybil-attack). I meccanismi di consenso sono l'insieme completo di idee, protocolli e incentivi che consentono a una serie distribuita di nodi di acconsentire sullo stato di una blockchain.
 
 ## Prerequisiti {#prerequisites}
 
@@ -68,7 +68,7 @@ Scopri altri contenuti sui diversi tipi di meccanismi di consenso usati su Ether
 
 Il Proof of Work e il Proof of Stake non sono di per sé protocolli di consenso, ma sono spesso considerati tali per semplicità. Sono in realtà meccanismi di resistenza di Sybil e selettori dell'autore del blocco, ovvero un metodo per decidere chi è l'autore dell'ultimo blocco. Un altro importante componente è l'algoritmo di selezione della catena (anche noto come di scelta della diramazione), che consente ai nodi di selezionare un unico blocco corretto all'inizio della catena, negli scenari in cui esistono più blocchi nella stessa posizione.
 
-La **resistenza di Sybil** misura l'efficacia di un protocollo contro un [attacco di Sybil](https://it.wikipedia.org/wiki/Attacco_di_Sybil). Gli attacchi di Sybil si verificano quando un utente o un gruppo si fa passare per un gran numero di utenti. La resistenza a questo tipo di attacco è essenziale per una blockchain decentralizzata e consente ai miner e ai validatori di essere ricompensati equamente in base alle risorse messe in uso. Proof-of-work e Proof of Stake proteggono da questo rischio, facendo consumare agli utenti molta energia o costringendoli a mettere in campo molte garanzie. Queste protezioni sono un deterrente economico contro gli attacchi di Sybil.
+La **resistenza a Sybil** misura l'efficacia di un protocollo contro un attacco di Sybil. La resistenza a questo tipo di attacco è essenziale per una blockchain decentralizzata e consente ai miner e ai validatori di essere ricompensati equamente in base alle risorse messe in uso. Proof-of-work e Proof of Stake proteggono da questo rischio, facendo consumare agli utenti molta energia o costringendoli a mettere in campo molte garanzie. Queste protezioni sono un deterrente economico contro gli attacchi di Sybil.
 
 Per decidere quale catena sia quella "corretta" si usa una **regola di selezione della catena**. Bitcoin usa la regola della "catena più lunga", nel senso che la blockchain più lunga è quella che il resto dei nodi accetta come valida e con cui lavora. Per le catene di Proof of Work, la catena più lunga è determinata dalla difficoltà cumulativa e totale del Proof of Work della catena. Anche Ethereum usava la regola della catena più lunga; tuttavia, ora che Ethereum opera sul Proof of Stake, ha adottato un algoritmo di scelta della diramazione che misura il 'peso' della catena. Il peso è la somma cumulata dei voti dei validatori, ponderata dai saldi di ether in staking dei validatori.
 
@@ -89,3 +89,4 @@ _Conosci una risorsa della community che ti è stata utile? Modifica questa pagi
 - [Proof of Work](/developers/docs/consensus-mechanisms/pow/)
 - [Mining](/developers/docs/consensus-mechanisms/pow/mining/)
 - [Proof of Stake](/developers/docs/consensus-mechanisms/pos/)
+- [Proof of Authority](/developers/docs/consensus-mechanisms/poa/)

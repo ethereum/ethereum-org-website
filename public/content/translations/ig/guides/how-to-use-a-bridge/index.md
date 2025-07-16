@@ -54,7 +54,7 @@ Usoro a e kwesịghị iwe ihe karịrị nkeji 10.
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Chọrọ ịmụtakwu?</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     Hụ ntuziaka anyị ndị ọzọ
   </ButtonLink>
 </InfoBanner>

@@ -12,11 +12,11 @@ lang: ja
 
 「イーサリアムの公式サポート」を称する人物は、詐欺であるおそれがあります。このため、イーサリアムの分散型の性質をご理解ください。 詐欺師から身を守るには、自分自身で学び、セキュリティを真剣に受け止めることが何よりも大切です。
 
-<DocLink to="/security/">
+<DocLink href="/security/">
   イーサリアムのセキュリティと詐欺対策
 </DocLink>
 
-<DocLink to="/learn/">
+<DocLink href="/learn/">
   イーサリアムの基礎知識を学ぶ
 </DocLink>
 
@@ -73,7 +73,6 @@ lang: ja
 - [ethers.js](https://discord.gg/6jyGVDK6Jx)
 - [web3.js](https://discord.gg/GsABYQu4sC)
 - [Hardhat](https://discord.gg/xtrMGhmbfZ)
-- [Truffle](https://discord.gg/8uKcsccEYE)
 - [Alchemy](http://alchemy.com/discord)
 - [Tenderly](https://discord.gg/fBvDJYR)
 
@@ -92,6 +91,7 @@ lang: ja
 - [Nethermind](https://discord.gg/YJx3pm8z5C)
 - [Besu](https://discord.gg/p8djYngzKN)
 - [Erigon](https://github.com/ledgerwatch/erigon/issues)
+- [Reth](https://github.com/paradigmxyz/reth/discussions)
 
 ### コンセンサスクライアント {#consensus-clients}
 

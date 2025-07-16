@@ -30,7 +30,7 @@ Per gli sviluppatori, i ponti consentono quanto segue:
 
 ## Come funzionano i ponti? {#how-do-bridges-work}
 
-Sebbene esistano molti [tipi di progetti di ponti](https://blog.li.fi/what-are-blockchain-bridges-and-how-can-we-classify-them-560dc6ec05fa), spiccano tre modi per facilitare il trasferimento di risorse tra catene:
+Sebbene esistano molti [tipi di progetti di ponti](https://li.fi/knowledge-hub/blockchain-bridges-and-classification/), spiccano tre modi per facilitare il trasferimento di risorse tra catene:
 
 - **Blocca e conia –** Blocca le risorse sulla catena di origine e conia le risorse nella catena di destinazione.
 - **Brucia e Conia –** Brucia le risorse sulla catena di origine e conia le risorse nella catena di destinazione.
@@ -42,7 +42,7 @@ I ponti possono essere solitamente classificati in uno dei seguenti:
 
 - **Ponti nativi –** Questi ponti sono in genere costruiti per avviare la liquidità su una particolare blockchain, facilitando agli utenti il trasferimento dei fondi verso l'ecosistema. Ad esempio, il [Arbitrum Bridge](https://bridge.arbitrum.io/) è progettato per rendere comodo per gli utenti il collegamento da Ethereum Mainnet a Arbitrum. Altri ponti di questo tipo includono Polygon PoS Bridge, [Optimism Gateway](https://app.optimism.io/bridge), ecc.
 - **Ponti basati su validatori od oracoli –** Questi ponti si affidano ad un insieme esterno di validatori oppure a degli oracoli per validare trasferimenti tra catene. Esempi: Multichain e Across.
-- ** Ponti generalizzati di passaggio di messaggi –** Questi ponti possono trasferire risorse, insieme a messaggi e dati arbitrari attraverso le catene. Esempi: Nomad e LayerZero.
+- ** Ponti generalizzati di passaggio di messaggi –** Questi ponti possono trasferire risorse, insieme a messaggi e dati arbitrari attraverso le catene. Esempi: Axelar, LayerZero e Nomad.
 - **Reti di liquidità –** Questi ponti si concentrano principalmente sul trasferimento di risorse da una catena all'altra tramite scambi atomici. Generalmente non supportano il passaggio di messaggi tra catene. Esempi: Connext e Hop.
 
 ## Compromessi da considerare {#trade-offs}
@@ -103,7 +103,7 @@ Se una dapp prosegue lungo il percorso di integrazione di un ponte o di un aggre
 
 ### Distribuire una dapp su diverse catene {#deploying-a-dapp-on-multiple-chains}
 
-Per distribuire una dapp su più catene, gli sviluppatori possono utilizzare piattaforme di sviluppo come [Alchemy](https://www.alchemy.com/), [Hardhat](https://hardhat.org/), [Truffle](https://trufflesuite.com/), [Moralis](https://moralis.io/), ecc. In genere, queste piattaforme sono dotate di plugin componibili che possono consentire alle dapp di essere distribuite su diverse catene. Per esempio, gli sviluppatori possono utilizzare un proxy di distribuzione deterministico offerto dal [plugin hardhat-deploy](https://github.com/wighawag/hardhat-deploy).
+Per distribuire una dApp su più catene, gli sviluppatori possono utilizzare piattaforme di sviluppo come [Alchemy](https://www.alchemy.com/), [Hardhat](https://hardhat.org/), [Moralis](https://moralis.io/), ecc. In genere, queste piattaforme sono dotate di plugin componibili che possono consentire alle dapp di essere distribuite su diverse catene. Per esempio, gli sviluppatori possono utilizzare un proxy di distribuzione deterministico offerto dal [plugin hardhat-deploy](https://github.com/wighawag/hardhat-deploy).
 
 #### Esempi:
 

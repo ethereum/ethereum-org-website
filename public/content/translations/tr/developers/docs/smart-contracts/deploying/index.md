@@ -20,16 +20,14 @@ Son olarak, sözleşmenizi dağıtmadan önce onu derlemeniz gerekir, bu yüzden
 
 ### İhtiyacınız olanlar {#what-youll-need}
 
-- sözleşmenizin bytecode'u - bu, [derleme](/developers/docs/smart-contracts/compiling/) aracılığıyla oluşturulur
+- Sözleşmenizin bit kodu - bu, [derleme](/developers/docs/smart-contracts/compiling/) aracılığıyla oluşturulur
 - Gaz için ETH - gaz limitinizi diğer işlemler gibi ayarlayacağınız için sözleşme dağıtımının basit bir ETH aktarımından çok daha fazla gaz gerektirdiğini unutmayın
 - bir dağıtım komut dosyası veya eklentisi
 - kendinizinkini çalıştırarak, herkese açık bir düğüme bağlanarak veya [düğüm hizmeti](/developers/docs/nodes-and-clients/nodes-as-a-service/) kullanan API anahtarı aracılığıyla bir [Ethereum düğümüne](/developers/docs/nodes-and-clients/) erişim
 
 ### Bir akıllı sözleşme dağıtmanın aşamaları {#steps-to-deploy}
 
-Belirli aşamalar kullandığınız araçlara göre değişecektir. Örnek olarak, [sözleşmelerinizin dağıtımı hakkında Hardhat belgeleri](https://hardhat.org/guides/deploying.html) veya [Ağlar ve uygulama dağıtımı üzerine Truffle belgelerine](https://www.trufflesuite.com/docs/truffle/advanced/networks-and-app-deployment) göz atın. Bu ikisi de dağıtım aşamalarını idare etmek için bir komut dosyası yazımını gerektiren ve akıllı sözleşme geliştirme için en popüler araçlardır.
-
-Dağıtıldığında, sözleşmeniz diğer [hesaplar](/developers/docs/accounts/) gibi bir Ethereum adresine sahip olacaktır.
+İlgili spesifik adımlar, söz konusu geliştirme çerçevesine bağımlı olacaktır. Örneğin [Hardhat'in sözleşme dağıtımıyla ilgili dokümanlarını](https://hardhat.org/guides/deploying.html) ya da [Foundry'nin akıllı sözleşme onaylama ve dağıtma dokümanlarını](https://book.getfoundry.sh/forge/deploying) inceleyebilirsiniz. Dağıtma işlemi gerçekleştiğinde, sözleşmeniz aynı diğer [hesaplar](/developers/docs/accounts/) gibi bir Ethereum adresine sahip olacak ve [kaynak kodu doğrulama araçlarıyla](/developers/docs/smart-contracts/verifying/#source-code-verification-tools) doğrulanabilecektir.
 
 ## İlgili araçlar {#related-tools}
 
@@ -51,15 +49,16 @@ Dağıtıldığında, sözleşmeniz diğer [hesaplar](/developers/docs/accounts/
 - [GitHub](https://github.com/nomiclabs/hardhat)
 - [Discord](https://discord.com/invite/TETZs2KK4k)
 
-**Truffle -** **_Bir geliştirme ortamı, test çerçevesi, yapı hattı ve diğer araçlar._**
-
-- [trufflesuite.com](https://www.trufflesuite.com/)
-- [Ağlar ve uygulama geliştirme üzerine belgeler](https://www.trufflesuite.com/docs/truffle/advanced/networks-and-app-deployment)
-- [GitHub](https://github.com/trufflesuite/truffle)
-
 **thirdweb - _Tek bir komut kullanarak herhangi bir sözleşmeyi Ethereum Sanal Makinesi uyumlu herhangi bir zincire kolayca dağıtın_**
 
 - [Dokümanlar](https://portal.thirdweb.com/deploy/)
+
+**Crossmint - _Akıllı sözleşmeleri dağıtmak, kredi kartı ödemelerini ve zincirler arası ödemeleri mümkün kılmak ve API'leri kullanarak NFT oluşturmak, dağıtmak, satmak, depolamak ve düzenlemek amaçlı kurumsal bir Web3 geliştirme platformudur._**
+
+- [crossmint.com](https://www.crossmint.com)
+- [Dokümanlar](https://docs.crossmint.com)
+- [Discord](https://discord.com/invite/crossmint)
+- [Blog](https://blog.crossmint.com)
 
 ## İlgili öğreticiler {#related-tutorials}
 

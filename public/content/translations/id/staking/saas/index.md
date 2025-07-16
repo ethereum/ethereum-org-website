@@ -39,7 +39,7 @@ Indikator atribut digunakan di bawah ini untuk menandakan kekuatan atau kelemaha
 
 ## Eksplorasi penyedia layanan penaruhan {#saas-providers}
 
-Berikut adalah beberapa penyedia layanan SaaS yang tersedia. Gunakan indikator-indikator di atas untuk membantu memandu Anda melalui layanan-layanan ini
+Berikut adalah beberapa penyedia SaaS yang tersedia. Gunakan indikator-indikator di atas untuk membantu memandu Anda melalui layanan-layanan ini
 
 <ProductDisclaimer />
 
@@ -78,7 +78,7 @@ Penarikan penaruhan diimplementasikan dalam peningkatan Shanghai/Capella pada Ap
 
 Para validator juga dapat sepenuhnya keluar sebagai validator, yang akan membuka kunci saldo ETH mereka yang tersisa untuk penarikan. Akun yang telah menyediakan alamat penarikan eksekusi dan menyelesaikan proses keluar akan menerima seluruh saldo mereka ke alamat penarikan yang disediakan selama sweep validator berikutnya.
 
-<ButtonLink to="/staking/withdrawals/">Lebih lanjut tentang penarikan penaruhan</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">Lebih lanjut tentang penarikan penaruhan</ButtonLink>
 </ExpandableCard>
 
 <ExpandableCard title="Apa yang terjadi jika saya terkena pengurangan hadiah pemotongan?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">

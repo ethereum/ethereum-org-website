@@ -78,7 +78,7 @@ summaryPoints:
 
 Валидаторы также могут полностью выйти из роли валидатора, что разблокирует остаток ЕТН для вывода. Учетные записи, указавшие адрес вывода средств и завершившие процесс выхода, получат весь остаток на адрес вывода, указанный во время следующего перебора валидаторов.
 
-<ButtonLink to="/staking/withdrawals/">More on staking withdrawals</ButtonLink>
+<ButtonLink href="/staking/withdrawals/">More on staking withdrawals</ButtonLink>
 </ExpandableCard>
 
 <ExpandableCard title="Что произойдет, если я подпаду под сокращение?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">

@@ -58,7 +58,7 @@ lang: zh
 
 ## 当前进展 {#current-progress}
 
-单时隙确定性正处于研究阶段。 预计它不会在几年内推出，可能会在 [Verkle 树](/roadmap/verkle-trees/)和 [Danksharding](/roadmap/danksharding/) 等其他重大升级之后推出。
+单时隙确定性正处于研究阶段。 预计它不会在几年内推出，可能会在[沃克尔树](/roadmap/verkle-trees/)和 [Danksharding](/roadmap/danksharding/) 等其他重大升级之后推出。
 
 ## 延伸阅读 {#further-reading}
 

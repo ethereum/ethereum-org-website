@@ -113,12 +113,6 @@ Before diving into frameworks, we recommend you first read through our introduct
 - [GitHub](https://github.com/eth-brownie/brownie)
 - **Brownie is currently unmaintained**
 
-**Truffle -** **_A development environment, testing framework, build pipeline, and other tools._**
-
-- [trufflesuite.com](https://www.trufflesuite.com/)
-- [GitHub](https://github.com/trufflesuite/truffle)
-- **Truffle development has ended** - [read more](https://twitter.com/trufflesuite/status/1704946902393860589?t=NlIWeLTbBSAaJmS5uUAhSA&s=19)
-
 **OpenZeppelin SDK -** **_The Ultimate Smart Contract Toolkit: A suite of tools to help you develop, compile, upgrade, deploy and interact with smart contracts._**
 
 - [OpenZeppelin SDK](https://openzeppelin.com/sdk/)
@@ -145,6 +139,14 @@ Before diving into frameworks, we recommend you first read through our introduct
 - [Documentation](https://ackeeblockchain.com/wake/docs/latest/)
 - [GitHub](https://github.com/Ackee-Blockchain/wake)
 - [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity)
+
+**Veramo -** **_Open source, modular and agnostic framework that makes it easy for decentralized application developers to build decentralized identities and verifiable credentials into their applications._**
+
+- [Homepage](https://veramo.io/)
+- [Documentation](https://veramo.io/docs/basics/introduction)
+- [GitHub](https://github.com/uport-project/veramo)
+- [Discord](https://discord.com/invite/FRRBdjemHV)
+- [NPM Package](https://www.npmjs.com/package/@veramo/core)
 
 ## Further reading {#further-reading}
 

@@ -41,7 +41,7 @@ sidebarDepth: 1
 - [블록앱스(BlockApps)](https://blockapps.net/) _STRATO 플랫폼을 구성하는 엔터프라이즈 이더리움 프로토콜, 툴링 및 API의 구현체_
 - [클리어매틱스(Clearmatics)](https://www.clearmatics.com/about) _프로토콜 및 P2P 플랫폼 아키텍처, 블록체인 R&D 기업_
 - [페가시스 플러스(PegaSys Plus)](https://pegasys.tech/enterprise/) _HF Besu와 동일한 기능은 물론 추가적인 엔터프라이즈 중심 서비스 제공_
-- [쿼럼(Quorum)](https://www.goquorum.com/) _공개 이더리움 커뮤니티를 통해 이루어진 혁신과 기업의 요구사항을 지원하면서 이루어진 개선 사항을 결합하는 오픈 소스 블록체인 플랫폼_
+- [쿼럼(Quorum)](https://docs.goquorum.consensys.io/) _공개 이더리움 커뮤니티를 통해 이루어진 혁신과 기업의 요구사항을 지원하면서 이루어진 개선 사항을 결합하는 오픈 소스 블록체인 플랫폼_
 
 ## 프로토콜 및 인프라 {#protocol-and-infrastructure}
 
@@ -64,7 +64,7 @@ sidebarDepth: 1
 
 - [Ernst & Young의 'Nightfall'](https://github.com/EYBlockchain/nightfall) *[여기](https://bravenewcoin.com/insights/ernst-and-young-rolls-out-'nightfall-to-enable-private-transactions-on)*에서 자세한 정보 확인
 - [Pegasys의 Orion](https://docs.pantheon.pegasys.tech/en/stable/Concepts/Privacy/Privacy-Overview/) *[여기](https://pegasys.tech/privacy-in-pantheon-how-it-works-and-why-your-enterprise-should-care/)*에서 자세한 정보 확인
-- [Quorum의 Tessera](https://docs.goquorum.com/en/latest/Privacy/Tessera/Tessera/) *[여기](https://github.com/jpmorganchase/tessera/wiki/How-Tessera-works)*에서 자세한 정보 확인
+- [Quorum의 Tessera](https://docs.goquorum.consensys.io/concepts/privacy#private-transaction-manager/) *[여기](https://github.com/jpmorganchase/tessera/wiki/How-Tessera-works)*에서 자세한 정보 확인
 
 ### 보안 {#security}
 
@@ -74,8 +74,7 @@ sidebarDepth: 1
 ### 툴링 {#tooling}
 
 - [Alethio](https://explorer.aleth.io/) _이더리움 데이터 분석 플랫폼_
-- [Treum](https://treum.io/) _블록체인 기술을 사용하여 공급망에 투명성, 추적성, 거래성 제공_
-- [Truffle Suite](https://trufflesuite.com) _블록체인 개발 제품군(Truffle, Ganache, Drizzle)_
+- [Treum](https://consensys.io/blog/consensys-acquires-treum) _블록체인 기술을 사용하여 공급망에 투명성, 추적성, 거래성 제공_
 
 ## 엔터프라이즈 개발자 커뮤니티 {#enterprise-developer-community}
 

@@ -14,7 +14,7 @@ _Če si nihče ne lasti Ethereuma, kako so potem sprejete odločitve o prihodnji
 
 Upravljanje je sistem, ki omogoča sprejemanje odločitev. V tipični organizacijski strukturi ima lahko zadnjo besedo pri sprejemanju odločitev izvršna ekipa ali upravni odbor. Ali pa morda delničarji glasujejo o predlogih za uveljavitev sprememb. V političnem sistemu izvoljeni uradniki lahko uveljavijo zakonodajo, ki poskuša predstavljati interese njihovih volivcev.
 
-## Decentralizirano upravljanje {#decentalized-governance}
+## Decentralizirano upravljanje {#decentralized-governance}
 
 Nobena oseba si ne lasti ali kontrolira Ethereum protokola, vendar odločitve o implementaciji sprememb morajo biti kljub temu sprejete, da bi lahko zagotovili dolgoživost in blaginjo omrežja. To pomanjkanje lastništva pomeni, da je tradicionalno organizacijsko upravljanje nezdružljiva rešitev.
 
@@ -32,7 +32,7 @@ Nasprotni pristop, upravljanje izven verige je proces, pri katerem se kakršneko
 
 _Čeprav je na nivoju protokola upravljanje Ethereuma izven verige, se v veliko primerih razvitih na Ethereumu, kot so DAOs, uporablja upravljanje na verigi._
 
-<ButtonLink to="/dao/">Več o DAOs</ButtonLink>
+<ButtonLink href="/dao/">Več o DAOs</ButtonLink>
 
 <Divider />
 
@@ -56,7 +56,7 @@ _Opomba: katerikoli posameznik je lahko del različnih skupin (na primer, razvij
 
 Pomemben proces, ki se uporablja pri upravljanju Ethereuma je predlaganje **Ethereum predlogov za izboljšave (EIPs)**. EIPs so standard za opredeljevanje potencialnih lastnosti ali procesov Ethereuma. Kdorkoli znotraj Ethereum skupnosti lahko ustvari EIP. Na primer, noben od avtorjev EIP-721 - EIP-ja, ki je standardiziral NFT-je, ni neposredno delal na razvoju Ethereum protokola.
 
-<ButtonLink to="/eips/">Več o EIPs</ButtonLink>
+<ButtonLink href="/eips/">Več o EIPs</ButtonLink>
 
 <Divider />
 
@@ -86,7 +86,7 @@ Ta tok, čeprav zelo poenostavljen, daje pregled nad pomembnimi fazami za aktiva
 
 ### Razumevanje predhodnega dela {#prior-work}
 
-EIP predlagatelji se morajo seznaniti z predhodnim delom in predlogi, preden ustvarijo EIP, ki bo lahko resno upoštevan za uvedbo na glavnem Ethereum omrežju. Na ta način upamo, da EIP prinese nekaj novega, kar še ni bilo predhodno zavrnjeno. Tri glavna mesta za raziskovanje tega so [EIP zbornik](https://github.com/ethereum/eips), [Ethereum čarovniki](https://www.ethereum-magicians.org/) in [ ethresear.ch](https://www.ethresear.ch/).
+EIP predlagatelji se morajo seznaniti z predhodnim delom in predlogi, preden ustvarijo EIP, ki bo lahko resno upoštevan za uvedbo na glavnem Ethereum omrežju. Na ta način upamo, da EIP prinese nekaj novega, kar še ni bilo predhodno zavrnjeno. Tri glavna mesta za raziskovanje tega so [EIP zbornik](https://github.com/ethereum/eips), [Ethereum čarovniki](https://ethereum-magicians.org/) in [ethresear.ch](https://ethresear.ch/).
 
 ### Delovne skupine {#working-groups}
 
@@ -114,7 +114,7 @@ Na splošno se nestrinjanje rešuje z dolgo razpravo na javnih forumih, da bi la
 
 Razcepi se zgodijo, ko pride do pomembnejših nadgradenj ali sprememb omrežja in sprememb pravil protokola. [Ethereum stranke](/developers/docs/nodes-and-clients/) morajo nadgraditi svojo programsko opremo, da implementirajo nova pravila razcepa.
 
-DAO razcep se je zgodil kot odziv na [2016 DAO napad](https://www.coindesk.com/understanding-dao-hack-journalists), pri katerem je bilo z napadom iz nezavarovane [DAO](/glossary/#dao) pogodbe izpraznjenih več kot 3,6 milijona ETH. Razcep je prestavil sredstva iz pogodbe z napako v novo pogodbo, kar je vsem, ki so sredstva v napadu izgubili, omogočilo vračilo.
+DAO razcep se je zgodil kot odziv na [2016 DAO napad](https://www.coindesk.com/learn/understanding-the-dao-attack), pri katerem je bilo z napadom iz nezavarovane [DAO](/glossary/#dao) pogodbe izpraznjenih več kot 3,6 milijona ETH. Razcep je prestavil sredstva iz pogodbe z napako v novo pogodbo, kar je vsem, ki so sredstva v napadu izgubili, omogočilo vračilo.
 
 O tem načinu odziva je glasovala Ethereum skupnost. Katerikoli lastnik ETH je lahko glasoval prek transakcije na [glasovalni platformi](http://v1.carbonvote.com/). Odločitev za razcep je prejela več kot 85 % glasov.
 
@@ -150,7 +150,7 @@ Medtem ko je bil razvoj specifikacij in implementacij vedno povsem odprtokoden, 
 
 Ko se bo Oddajniška veriga združila z Ethereumovo izvršilno plastjo, se bo upravljavski proces za predlaganje sprememb poenotil. Proces za implementacijo združitve je [že na poti](https://eips.ethereum.org/EIPS/eip-3675).
 
-<ButtonLink to="/roadmap/merge/">Več o združitvi</ButtonLink>
+<ButtonLink href="/roadmap/merge/">Več o združitvi</ButtonLink>
 
 <Divider />
 

@@ -91,7 +91,7 @@ Commençons par parler de GraphQL, initialement conçu et implémenté par Faceb
 
 <img src="https://cdn0.scrvt.com/b095ee27d37b3d7b6b150adba9ac6ec8/42226f4816a77656/bc5c8b270798/graphql-querygif.gif" width="100%" />
 
-Ces deux images illustrent bien l'essence de GraphQL. Avec la requête de droite, nous pouvons définir exactement les données que nous voulons. Ainsi, nous récupérons tout en une seule requête et rien de plus que ce dont nous avons exactement besoin. Un serveur GraphQL gère la récupération de toutes les données requises, il est ainsi incroyablement facile à utiliser côté consommateur. [Voici une bonne explication](https://www.apollographql.com/blog/graphql-explained-5844742f195e/) de la façon dont le serveur gère exactement une requête si vous êtes intéressé.
+Ces deux images illustrent bien l'essence de GraphQL. Avec la requête de droite, nous pouvons définir exactement les données que nous voulons. Ainsi, nous récupérons tout en une seule requête et rien de plus que ce dont nous avons exactement besoin. Un serveur GraphQL gère la récupération de toutes les données requises, il est ainsi incroyablement facile à utiliser côté consommateur. [Voici une bonne explication](https://www.apollographql.com/blog/graphql-explained) de la façon dont le serveur gère exactement une requête si vous êtes intéressé.
 
 Maintenant, avec cette connaissance, parlons enfin de blockchain et de The Graph.
 
@@ -120,7 +120,7 @@ Le manifeste est notre fichier de configuration et définit :
 - d'autres éléments à prendre en compte comme des appels de fonction ou des blocs
 - les fonctions de mapping étant appelées (voir `mapping.ts` ci-dessous)
 
-Ici, vous pouvez définir plusieurs contrats et handlers. Une configuration typique a un dossier de sous-graphes à l'intérieur du projet Truffle/Hardhat avec son propre dépôt. Ensuite, vous pouvez facilement référencer l'ABI.
+Ici, vous pouvez définir plusieurs contrats et handlers. Une configuration typique a un dossier de sous-graphes à l'intérieur du projet Hardhat avec son propre dépôt. Ensuite, vous pouvez facilement référencer l'ABI.
 
 Pour des raisons de commodité, vous pouvez également utiliser un outil de template comme Mustache. Ensuite, vous allez créer un template `subgraph.template.yaml` et y insérez les adresses basées sur les derniers déploiements. Pour un exemple plus avancé, vous pouvez consulter le [répertoire de subgraphs Aave](https://github.com/aave/aave-protocol/tree/master/thegraph).
 
@@ -196,7 +196,7 @@ Puis nous créons une nouvelle entité Bet. L'ID pour cela sera `event.transacti
 
 Enfin, nous pouvons mettre à jour l'entité du Player avec toutes les données. Les tableaux ne peuvent pas être poussés directement, mais doivent être mis à jour comme indiqué ici. Nous utilisons l'ID pour référencer le pari. Et `.save()` est requis à la fin pour stocker une entité.
 
-La documentation complète est disponible ici : https://thegraph.com/docs/en/developing/creating-a-subgraph/#writing-mappings. Vous pouvez également ajouter une sortie de journalisation au fichier de mapping, voir [ici](https://thegraph.com/docs/assemblyscript-api#api-reference).
+La documentation complète est disponible ici : https://thegraph.com/docs/en/developing/creating-a-subgraph/#writing-mappings. Vous pouvez également ajouter une sortie de journalisation au fichier de mapping, voir [ici](https://thegraph.com/docs/en/subgraphs/developing/creating/graph-ts/api/#api-reference).
 
 ```typescript
 import { Bet, Player } from "../generated/schema"

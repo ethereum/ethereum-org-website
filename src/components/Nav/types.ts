@@ -1,6 +1,5 @@
-import type { RefObject } from "react"
-import type { IconType } from "react-icons"
-import type { IconProps } from "@chakra-ui/react"
+import type { LucideIcon } from "lucide-react"
+import type { FC, RefObject, SVGProps } from "react"
 
 type LinkOnly = { href: string; items?: never }
 type ItemsOnly = { items: NavItem[]; href?: never }
@@ -9,7 +8,7 @@ type LinkXorItems = LinkOnly | ItemsOnly
 export type NavItem = {
   label: string
   description: string
-  icon?: IconType | ((props: IconProps) => JSX.Element)
+  icon?: LucideIcon | FC<SVGProps<SVGElement>>
 } & LinkXorItems
 
 export type NavSectionKey =

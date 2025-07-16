@@ -20,144 +20,26 @@ lang: ja
 
 ## 利用可能なライブラリ {#available-libraries}
 
+### インフラストラクチャとノードサービス {#infrastructure-and-node-services}
+
 **Alchemy -** **_イーサリアム開発プラットフォーム_**
 
 - [alchemy.com](https://www.alchemy.com/)
-- [ドキュメント](https://docs.alchemyapi.io/)
+- [ドキュメント](https://docs.alchemy.com/)
 - [GitHub](https://github.com/alchemyplatform)
 - [Discord](https://discord.com/invite/alchemyplatform)
 
-**BlockCypher -** **_イーサリアム Web API_**
+**All That Node -** **_ノード・アズ・ア・サービス_**
 
-- [blockcypher.com](https://www.blockcypher.com/)
-- [ドキュメント](https://www.blockcypher.com/dev/ethereum/)
+- [All That Node.com](https://www.allthatnode.com/)
+- [ドキュメント](https://docs.allthatnode.com)
+- [Discord](https://discord.gg/GmcdVEUbJM)
 
 **Blast by Bware Labs -** **_イーサリアムメインネットとテストネットのための分散型API_**
 
 - [blastapi.io](https://blastapi.io/)
 - [ドキュメント](https://docs.blastapi.io)
 - [Discord](https://discord.gg/bwarelabs)
-
-**Infura -** **_アズ・ア・サービス型のイーサリアムAPI_**
-
-- [infura.io](https://infura.io)
-- [ドキュメント](https://infura.io/docs)
-- [GitHub](https://github.com/INFURA)
-
-**Cloudflareのイーサリアムゲートウェイ**
-
-- [cloudflare-eth.com](https://cloudflare-eth.com)
-
-**Coinbase Cloud Node -** **_ブロックチェーンインフラストラクチャAPI_**
-
-- [Coinbase Cloud Node](https://www.coinbase.com/cloud/products/node)
-- [ドキュメント](https://docs.cloud.coinbase.com/node/reference/welcome-to-node)
-
-**Figment社が提供するDataHub -** **_イーサリアムプロトコル(メインネットとテストネット)を使用したWeb3 APIサービス_**
-
-- [DataHub](https://www.figment.io/datahub)
-- [ドキュメント](https://docs.figment.io/introduction/what-is-datahub)
-
-**NFTPort -** **_イーサリアムデータとミントAPI_**
-
-- [nftport.xyz](https://www.nftport.xyz/)
-- [ドキュメント](https://docs.nftport.xyz/)
-- [GitHub](https://github.com/nftport/)
-- [Discord](https://discord.com/invite/K8nNrEgqhE)
-
-**Nodesmith -** **_イーサリアムメインネットとテストネットへのJSON-RPC APIアクセス_**
-
-- [nodesmith.io](https://nodesmith.io/network/ethereum/)
-- [ドキュメント](https://nodesmith.io/docs/#/ethereum/apiRef)
-
-**Ethercluster -** **_ETHとETCの両方をサポートする独自のイーサリアムAPIサービスの実行_**
-
-- [ethercluster.com](https://www.ethercluster.com/)
-
-**Chainstack -** **_柔軟性の高い、専用のアズ・ア・サービス型イーサリアムノード_**
-
-- [chainstack.com](https://chainstack.com)
-- [ドキュメント](https://docs.chainstack.com)
-- [イーサリアムAPIリファレンス](https://docs.chainstack.com/api/ethereum/ethereum-api-reference)
-
-**QuickNode -** **_アズ・ア・サービス型のブロックチェーンインフラストラクチャ_**
-
-- [quicknode.com](https://quicknode.com)
-- [ドキュメント](https://www.quicknode.com/docs)
-- [Discord](https://discord.gg/quicknode)
-
-**Python Tooling -** **_Pythonでイーサリアムとやり取りするための各種ライブラリ_**
-
-- [py.ethereum.org](http://python.ethereum.org/)
-- [web3.py GitHub](https://github.com/ethereum/web3.py)
-- [web3.pyチャット](https://gitter.im/ethereum/web3.py)
-
-**web3j -** **_イーサリアム用のJava/Android/Kotlin/Scalaの統合ライブラリ_**
-
-- [GitHub](https://github.com/web3j/web3j)
-- [ドキュメント](https://docs.web3j.io/)
-- [Gitter](https://gitter.im/web3j/web3j)
-
-**Rivet -** **_オープンソースソフトウェアを搭載した、アズ・ア・サービス型のイーサリアムとイーサリアムクラシックのAPI_**
-
-- [rivet.cloud](https://rivet.cloud)
-- [ドキュメント](https://rivet.cloud/docs/)
-- [GitHub](https://github.com/openrelayxyz/ethercattle-deployment)
-
-**Nethereum -** **_オープンソースのブロックチェーン用.NET統合ライブラリ_**
-
-- [GitHub](https://github.com/Nethereum/Nethereum)
-- [ドキュメント](http://docs.nethereum.com/en/latest/)
-- [Discord](https://discord.com/invite/jQPrR58FxX)
-
-**Tatum -** **_究極のブロックチェーン開発プラットフォーム_**
-
-- [Tatum](https://tatum.io/)
-- [GitHub](https://github.com/tatumio/)
-- [ドキュメント](https://docs.tatum.io/)
-- [Discord](https://discord.gg/EDmW3kjTC9)
-
-**Watchdata -** **_イーサリアムブロックチェーンへのシンプルで信頼性の高いAPIアクセス_**
-
-- [Watchdata](https://watchdata.io/)
-- [ドキュメント](https://docs.watchdata.io/)
-- [Discord](https://discord.com/invite/TZRJbZ6bdn)
-
-**Zmok -** **_JSON-RPC/WebSocket APIとしてのスピード重視のイーサリアムノード_**
-
-- [zmok.io](https://zmok.io/)
-- [GitHub](https://github.com/zmok-io)
-- [ドキュメント](https://docs.zmok.io/)
-- [Discord](https://discord.gg/fAHeh3ka6s)
-
-**NOWNodes - _フルノードとブロックエクスプローラー_**
-
-- [NOWNodes.io](https://nownodes.io/)
-- [ドキュメント](https://documenter.getpostman.com/view/13630829/TVmFkLwy#intro)
-
-**Node RPC - _費用効果の高いEVM JSON RPCプロバイダ_**
-
-- [noderpc.xyz](https://www.noderpc.xyz/)
-- [ドキュメント](https://docs.noderpc.xyz/)
-
-**Moralis -** **_エンタープライズグレードのEVM APIプロバイダ_**
-
-- [moralis.io](http://moralis.io)
-- [ドキュメント](https://docs.moralis.io/)
-- [GitHub](https://github.com/MoralisWeb3)
-- [Discord](https://moralis.io/joindiscord/)
-- [フォーラム](https://forum.moralis.io/)
-
-**Chainbase -** **_イーサリアム向けのオールインワンWeb3データインフラストラクチャ_**
-
-- [chainbase.com](https://chainbase.com/)
-- [ドキュメント](https://docs.chainbase.com/)
-- [Discord](https://discord.gg/Wx6qpqz4AF)
-
-**GetBlock-** **_Web3開発用のBlockchain-as-a-service_**
-
-- [GetBlock.io](https://getblock.io/)
-- [ドキュメント](https://getblock.io/docs/)
 
 **BlockPi -** **_より効率的かつ高速なRPCサービスを提供_**
 
@@ -166,11 +48,149 @@ lang: ja
 - [GitHub](https://github.com/BlockPILabs)
 - [Discord](https://discord.com/invite/xTvGVrGVZv)
 
+**Cloudflareのイーサリアムゲートウェイ**
+
+- [cloudflare-eth.com](https://www.cloudflare.com/application-services/products/web3/)
+
+**Etherscan - ブロックエクスプローラーおよびトランザクションAPI**
+- [ドキュメント](https://docs.etherscan.io/)
+
+**GetBlock-** **_Web3開発用のBlockchain-as-a-service_**
+
+- [GetBlock.io](https://getblock.io/)
+- [ドキュメント](https://getblock.io/docs/)
+
+**Infura -** **_アズ・ア・サービス型のイーサリアムAPI_**
+
+- [infura.io](https://infura.io)
+- [ドキュメント](https://docs.infura.io/api)
+- [GitHub](https://github.com/INFURA)
+
+**Node RPC - _コスト効率の高いEVM JSON-RPCプロバイダー_**
+
+- [noderpc.xyz](https://www.noderpc.xyz/)
+- [ドキュメント](https://docs.noderpc.xyz/node-rpc)
+
+**NOWNodes - _フルノードとブロックエクスプローラー_**
+
+- [NOWNodes.io](https://nownodes.io/)
+- [ドキュメント](https://documenter.getpostman.com/view/13630829/TVmFkLwy#intro)
+
+**QuickNode -** **_アズ・ア・サービス型のブロックチェーンインフラストラクチャ_**
+
+- [quicknode.com](https://quicknode.com)
+- [ドキュメント](https://www.quicknode.com/docs/welcome)
+- [Discord](https://discord.gg/quicknode)
+
+**Rivet -** **_オープンソースソフトウェアを搭載した、アズ・ア・サービス型のイーサリアムとイーサリアムクラシックのAPI_**
+
+- [rivet.cloud](https://rivet.cloud)
+- [ドキュメント](https://rivet.cloud/docs/)
+- [GitHub](https://github.com/openrelayxyz/ethercattle-deployment)
+
+**Zmok -** **_JSON-RPC/WebSocket APIとしてのスピード重視のイーサリアムノード_**
+
+- [zmok.io](https://zmok.io/)
+- [GitHub](https://github.com/zmok-io)
+- [ドキュメント](https://docs.zmok.io/)
+- [Discord](https://discord.gg/fAHeh3ka6s)
+
+### 開発ツール {#development-tools}
+
+**ethers-kt -** **_EVMベースのブロックチェーン用の非同期、ハイパフォーマンスのKotlin/Java/Androidライブラリ_**
+
+- [GitHub](https://github.com/Kr1ptal/ethers-kt)
+- [実例：](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
+- [Discord](https://discord.gg/rx35NzQGSb)
+
+**Nethereum -** **_オープンソースのブロックチェーン用.NET統合ライブラリ_**
+
+- [GitHub](https://github.com/Nethereum/Nethereum)
+- [ドキュメント](http://docs.nethereum.com/en/latest/)
+- [Discord](https://discord.com/invite/jQPrR58FxX)
+
+**Python Tooling -** **_Pythonでイーサリアムとやり取りするための各種ライブラリ_**
+
+- [py.ethereum.org](https://python.ethereum.org/)
+- [web3.py GitHub](https://github.com/ethereum/web3.py)
+- [web3.pyチャット](https://gitter.im/ethereum/web3.py)
+
+**Tatum -** **_究極のブロックチェーン開発プラットフォーム_**
+
+- [Tatum](https://tatum.io/)
+- [GitHub](https://github.com/tatumio/)
+- [ドキュメント](https://docs.tatum.io/)
+- [Discord](https://discord.gg/EDmW3kjTC9)
+
+**web3j -** **_イーサリアム用のJava/Android/Kotlin/Scalaの統合ライブラリ_**
+
+- [GitHub](https://github.com/web3j/web3j)
+- [ドキュメント](https://docs.web3j.io/)
+- [Gitter](https://gitter.im/web3j/web3j)
+
+### ブロックチェーンサービス {#blockchain-services}
+
+**BlockCypher -** **_イーサリアム Web API_**
+
+- [blockcypher.com](https://www.blockcypher.com/)
+- [ドキュメント](https://www.blockcypher.com/dev/ethereum/)
+
+**Chainbase -** **_イーサリアム向けのオールインワンWeb3データインフラストラクチャ_**
+
+- [chainbase.com](https://chainbase.com/)
+- [ドキュメント](https://docs.chainbase.com/)
+- [Discord](https://discord.gg/Wx6qpqz4AF)
+
+**Chainstack -** **_柔軟性の高い、専用のアズ・ア・サービス型イーサリアムノード_**
+
+- [chainstack.com](https://chainstack.com)
+- [ドキュメンテーション](https://docs.chainbase.com/docs)
+- [イーサリアムAPIリファレンス](https://docs.chainstack.com/reference/ethereum-getting-started)
+
+**Coinbase Cloud Node -** **_ブロックチェーンインフラストラクチャAPI_**
+
+- [Coinbase Cloud Node](https://www.coinbase.com/cloud)
+- [ドキュメンテーション](https://docs.cloud.coinbase.com/)
+
+**Figment社が提供するDataHub -** **_イーサリアムプロトコル(メインネットとテストネット)を使用したWeb3 APIサービス_**
+
+- [DataHub](https://www.figment.io/)
+- [ドキュメント](https://docs.figment.io/)
+
+**Moralis -** **_エンタープライズグレードのEVM APIプロバイダ_**
+
+- [moralis.io](https://moralis.io)
+- [ドキュメント](https://docs.moralis.io/)
+- [GitHub](https://github.com/MoralisWeb3)
+- [Discord](https://moralis.io/joindiscord/)
+- [フォーラム](https://forum.moralis.io/)
+
+**NFTPort -** **_イーサリアムデータとミントAPI_**
+
+- [nftport.xyz](https://www.nftport.xyz/)
+- [ドキュメント](https://docs.nftport.xyz/)
+- [GitHub](https://github.com/nftport/)
+- [Discord](https://discord.com/invite/K8nNrEgqhE)
+
 **Tokenview -** **_ジェネラルなマルチクリプトブロックチェーンAPIプラットフォーム_**
 
 - [services.tokenview.io](https://services.tokenview.io/)
 - [ドキュメント](https://services.tokenview.io/docs?type=api)
 - [GitHub](https://github.com/Tokenview)
+
+**Watchdata -** **_イーサリアムブロックチェーンへのシンプルで信頼性の高いAPIアクセス_**
+
+- [Watchdata](https://watchdata.io/)
+- [ドキュメント](https://docs.watchdata.io/)
+- [Discord](https://discord.com/invite/TZRJbZ6bdn)
+
+**Covalent -** **_200以上のチェーンで使えるリッチなブロックチェーンAPI_**
+
+- [covalenthq.com](https://www.covalenthq.com/)
+- [ドキュメント](https://www.covalenthq.com/docs/api/)
+- [GitHub](https://github.com/covalenthq)
+- [Discord](https://www.covalenthq.com/discord/)
+
 
 ## 参考文献 {#further-reading}
 

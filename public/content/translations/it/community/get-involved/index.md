@@ -13,17 +13,19 @@ Inizia leggendo la missione e i valori di ethereum.org nel nostro [codice di con
 ## Sviluppatori <Emoji text=":computer:" size={1} />‍ {#developers}
 
 - Scopri e prova Ethereum su [ethereum.org/developers/](/developers/)
-- Partecipa ad un [ETHGlobal](http://ethglobal.co/) Hackathon vicino a te!
+- Partecipa ad un Hackathon vicino a te!
 - Dai un'occhiata a [progetti relativi alla tua area di competenza o a linguaggi di programmazione di tua scelta](/developers/docs/programming-languages/)
-- Segui o partecipa alle [riunioni dei Core Dev](https://www.youtube.com/@EthereumProtocol)
+- Guarda o partecipa alle [chiamate del Livello di Consenso e del Livello d'Esecuzione](https://www.youtube.com/@EthereumProtocol/streams)
 - [Lista del programma di supporto degli ecosistemi](https://esp.ethereum.foundation/wishlist/) - strumenti, documentazione, e infrastrutture dove il programma di supporto per l'ecosistema Ethereum è attivamente alla ricerca di domande di sovvenzione
 - [Web3Bridge](https://www.web3bridge.com/) - unisciti alla community di aspiranti web3 nella loro iniziativa per identificare, formare e supportare centinaia di sviluppatori e membri della community in tutta l'Africa
-- Unisciti al [Discord Ethereum Cat Herders](https://discord.io/EthCatHerders)
+- Unisciti al [Discord Eth R&D](https://discord.com/invite/VmG7Uxc)
+- Unisciti al [Discord di Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu)
 
 ## Ricercatori & Accademici <Emoji text=":mag:" size={1} /> {#researchers-and-academics}
 
 Hai conoscenze di matematica, crittografia o economia? Potresti essere interessato ad alcuni dei lavori all'avanguardia svolti all'interno dell'ecosistema di Ethereum:
 
+- Unisciti al [Discord Eth R&D](https://discord.com/invite/VmG7Uxc)
 - Scrivi o revisiona una proposta di miglioramento di Ethereum (EIP)
   - Scrivi una EIP
     1. Manda la tua idea su [Ethereum Magicians](https://ethereum-magicians.org)
@@ -32,12 +34,13 @@ Hai conoscenze di matematica, crittografia o economia? Potresti essere interessa
   - Scopri come diventare un [editor di EIP](https://eips.ethereum.org/EIPS/eip-5069)
     - Puoi effettuare la revisione delle EIP dei colleghi proprio ora! Vedi [le PR aperte con l'etichetta `e-review`](https://github.com/ethereum/EIPs/pulls?q=is%3Apr+is%3Aopen+label%3Ae-review). Fornisci un feedback tecnico al collegamento `discussion-to`.
   - Partecipa alla [Governance EIP](https://github.com/ethereum-cat-herders/EIPIP)
-    - Unisciti al [Discord Ethereum Cat Herders](https://discord.io/EthCatHerders)
+    - Unisciti al [Discord di Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu)
   - [Maggiori informazioni sulle EIP](/eips/)
 - [Challenges.ethereum.org](https://challenges.ethereum.org/) - una serie di premi di ricerca di alto valore dove puoi guadagnare fino a >$100.000 USD
 - [Ethresearch.ch](https://ethresear.ch) - il forum principale di Ethereum per la ricerca, e il forum più influente al mondo per la criptoeconomia
 - [EF Research AMA](https://old.reddit.com/r/ethereum/comments/vrx9xe/ama_we_are_ef_research_pt_8_07_july_2022) - una serie continuativa di domande e risposte con i ricercatori. Ogni volta che si apre una parte successiva, chiunque può pubblicare domande.
 - [Lista dei desideri del Programma di supporto dell'ecosistema](https://esp.ethereum.foundation/wishlist/) - aree di ricerca in cui il Programma di supporto dell'ecosistema Ethereum sta cercando attivamente domande di sovvenzione
+- [AllWalletDevs](https://allwallet.dev): un forum per sviluppatori, progettisti e utenti interessati a Ethereum, per riunirsi regolarmente e discutere dei portafogli
 
 [Esplora altre aree di ricerca attive](/community/research/).
 
@@ -89,7 +92,7 @@ L'ecosistema Ethereum ha come missione di finanziare beni pubblici e progetti di
 
 ## Product Manager <Emoji text=":fountain_pen:" size={1} /> {#product-managers}
 
-- L'ecosistema Ethereum ha bisogno del tuo talento! Molte aziende sono alla ricerca di product manager. Se vuoi cominciare a contribuire ad un progetto open source, contatta [Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) o [RaidGuild](https://www.raidguild.org/)
+- L'ecosistema Ethereum ha bisogno del tuo talento! Molte aziende sono alla ricerca di product manager. Se desideri iniziare a contribuire a un progetto open source, contatta gli [Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) o [RaidGuild](https://www.raidguild.org/)
 
 ## Marketing <Emoji text=":megaphone:" size={1} /> {#marketing}
 
@@ -102,12 +105,11 @@ L'ecosistema Ethereum ha come missione di finanziare beni pubblici e progetti di
 - [Lavori di ethereum.org](/about/#open-jobs)
 - [Lavori della Ethereum Foundation (Lever)](https://jobs.lever.co/ethereumfoundation)
 - [Lavori della Ethereum Foundation (BambooHR)](https://ethereum.bamboohr.com/jobs/)
+- [JobStash](https://jobstash.xyz)
 - [Lavori di Criptovalute](https://cryptocurrencyjobs.co/ethereum/)
-- [Crypto.jobs](https://crypto.jobs/)
 - [Carriere presso ConsenSys](https://consensys.net/careers/)
 - [Elenco di lavori Cripto](https://cryptojobslist.com/ethereum-jobs)
 - [Annunci di lavoro Bankless](https://pallet.xyz/list/bankless/jobs)
-- [Lavori useWeb3](https://www.useweb3.xyz/jobs)
 - [Lavori Web3](https://web3.career)
 - [Web3 Army](https://web3army.xyz/)
 - [Crypto Valley Jobs](https://cryptovalley.jobs/)
@@ -118,13 +120,12 @@ L'ecosistema Ethereum ha come missione di finanziare beni pubblici e progetti di
 
 Le "DAO" sono organizzazioni autonome decentralizzate. Questi gruppi sfruttano la tecnologia di Ethereum per facilitare organizzazione e collaborazione. Ad esempio, per il controllo delle adesioni, il voto su proposte o la gestione delle risorse comuni. Benché siano ancora sperimentali, le DAO offrono l'opportunità di trovare gruppi con cui ti identifichi, trovare collaboratori e aumentare il tuo impatto sulla community di Ethereum. [Maggiori informazioni sulle DAO](/dao/)
 
-- [DAOSquare](https://www.daosquare.io) [@DAOSquare](https://twitter.com/DAOSquare) - _Promuovi il concetto di DAO in campo non tecnico e aiuta le persone a creare valore tramite una DAO._
+- [DAOSquare](https://daosquare.io/) [@DAOSquare](https://twitter.com/DAOSquare) - _Promuovi il concetto di DAO in campo non tecnico e aiuta le persone a creare valore tramite una DAO._
 - [Developer DAO](https://www.developerdao.com/) [@developer_dao](https://twitter.com/developer_dao) - _Community di creatori che credono nella proprietà collettiva di internet_
 - [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) - _Collettivo di sviluppo su base freelance di Web3 operante come una DAO_
 - [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) - _Governance comunitaria di DAOhaus_
 - [LexDAO](https://lexdao.org) [@lex_DAO](https://twitter.com/lex_DAO) - _Ingegneria legale_
 - [Machi X](https://machix.com) [@MachiXOfficial](https://twitter.com/MachiXOfficial) - _Community artistica_
-- [MetaCartel](https://metacartel.org) [@Meta_Cartel](https://twitter.com/Meta_Cartel) - _Incubatore di DAO_
 - [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://twitter.com/VENTURE_DAO) - _Venture per progetti di cripto pro-seed_
 - [MetaGame](https://metagame.wtf) [@MetaFam](https://twitter.com/MetaFam) - _Meccaniche di Gioco MMORPG per la Vita Reale_
 - [MetaFactory](https://metafactory.ai) [@TheMetaFactory](https://twitter.com/TheMetaFactory) - _Marchi di Abbigliamento Digifisico_

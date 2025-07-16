@@ -4,10 +4,10 @@ description: Saiba mais sobre a Beacon Chain — a melhoria que introduziu a pro
 lang: pt-br
 template: upgrade
 image: /images/upgrades/core.png
-alt: 
+alt:
 summaryPoint1: A Beacon Chain introduziu a prova de participação no ecossistema Ethereum.
-summaryPoint2: Ela foi integrada à cadeia de prova de trabalho da Ethereum original em setembro de 2022.
-summaryPoint3: A Beacon Chain introduziu a lógica de consenso e o protocolo de propagação de boatos de bloco que agora protege a Ethereum.
+summaryPoint2: Ela foi integrada à cadeia de prova de trabalho do Ethereum original em setembro de 2022.
+summaryPoint3: A Beacon Chain introduziu a lógica de consenso e o protocolo de propagação de blocos que agora protege o Ethereum.
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
@@ -20,7 +20,7 @@ Beacon Chain é o nome do blockchain de prova de participação original que foi
 
 ## O que a Beacon Chain faz? {#what-does-the-beacon-chain-do}
 
-Beacon Chain é o nome dado a um registro de contas que orientava e coordenava a rede de [stakers](/staking/) do Ethereum antes que começassem a validar blocos reais do Ethereum. Entretanto, não processa transações nem interações de contratos inteligentes, pois isso é feito na camada de execução. A Beacon Chain é responsável por atividades como processamento de blocos e atestações, executação do algoritmo de escolha de bifurcação e gerenciamento de recompensas e penalidades. Leia mais em nossa [página de arquitetura de nós](/developers/docs/nodes-and-clients/node-architecture/#node-comparison).
+Beacon Chain é o nome dado a um registro de contas que orientava e coordenava a rede de [stakers](/participantes/) do Ethereum antes que começassem a validar blocos reais do Ethereum. Entretanto, não processa transações nem interações de contratos inteligentes, pois isso é feito na camada de execução. A Beacon Chain é responsável por atividades como processamento de blocos e atestações, executação do algoritmo de escolha de bifurcação e gerenciamento de recompensas e penalidades. Leia mais em nossa [página de arquitetura de nós](/developers/docs/nodes-and-clients/node-architecture/#node-comparison).
 
 ## O impacto da Beacon Chain {#beacon-chain-features}
 
@@ -56,7 +56,7 @@ As melhorias do Ethereum estão, de certa forma, relacionadas. Vamos recapitular
 
 No começo, a Beacon Chain existia separadamente da rede principal do Ethereum, mas ocorreu uma fusão em 2022.
 
-<ButtonLink to="/roadmap/merge/">
+<ButtonLink href="/roadmap/merge/">
   A integração
 </ButtonLink>
 
@@ -64,7 +64,7 @@ No começo, a Beacon Chain existia separadamente da rede principal do Ethereum, 
 
 As cadeias de fragmentação apenas podem ser introduzidas no ecossistema Ethereum por meio do estabelecimento de um mecanismo de consenso de prova de participação. A Beacon Chain introduziu a participação, que se "fundiu" com a rede principal, abrindo caminho para a fragmentação, de forma a ajudar a dimensionar ainda mais o Ethereum.
 
-<ButtonLink to="/roadmap/danksharding/">
+<ButtonLink href="/roadmap/danksharding/">
   Cadeias de fragmentos
 </ButtonLink>
 

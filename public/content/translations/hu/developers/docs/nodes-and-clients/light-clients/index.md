@@ -44,7 +44,7 @@ Számos könnyű klienst fejlesztenek, beleértve a végrehajtási, konszenzusos
 
 - [Lodestar](https://github.com/ChainSafe/lodestar/tree/unstable/packages/light-client): konszenzusos könnyű kliens TypeScript-ben
 - [Helios](https://github.com/a16z/helios): kombinált végrehajtási és konszenzusos könnyű kliens Rust-ban
-- [Geth](https://github.com/ethereum/go-ethereum/tree/master/light): a végrehajtási kliens könnyű módozata (fejlesztés alatt áll) Go-ban
+- [Geth](https://github.com/ethereum/go-ethereum/tree/master/beacon/light): a végrehajtási kliens könnyű módozata (fejlesztés alatt áll) Go-ban
 - [Nimbus](https://nimbus.guide/el-light-client.html): konszenzusos könnyű kliens Nim-ben
 
 Tudomásunk szerint ezek még nem állnak készen az éles használatra.

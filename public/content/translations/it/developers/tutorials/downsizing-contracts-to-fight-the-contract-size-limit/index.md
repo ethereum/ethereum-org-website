@@ -7,7 +7,6 @@ tags:
   - "solidity"
   - "contratti intelligenti"
   - "archiviazione"
-  - "truffle"
 skill: intermediate
 published: 2020-06-26
 source: soliditydeveloper.com
@@ -23,16 +22,6 @@ Il [22 Novembre 2016](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurio
 Questo limite è stato introdotto per prevenire gli attacchi DOS (denial-of-service). Qualsiasi chiamata a un contratto è relativamente economica in termini di gas. Tuttavia, l'impatto della chiamata di un contratto per i nodi di Ethereum aumenta sproporzionatamente in base alla dimensione del codice del contratto chiamato (lettura del codice dal disco, pre-elaborazione del codice, aggiunta di dati alla prova di Merkle). Ogni volta che ti trovi in una situazione in cui il malintenzionato richiede poche risorse per causare molto lavoro per altri, esiste il potenziale di attacchi DOS.
 
 In origine, questo era un problema minore, dato che il limite naturale di dimensioni del contratto è il limite di gas del blocco. Ovviamente, un contratto dev'esser distribuito entro una transazione che detenga tutto il codice del byte del contratto. Se includi solo quella transazione in un blocco, puoi usare anche tutto il gas, ma non è infinito. Dall'[Aggiornamento di Londra](/history/#london), il limite di gas del blocco è stato capace di variare tra le 15M e le 30M unità, a seconda della domanda di rete.
-
-## Affrontare la lotta {#taking-on-the-fight}
-
-Sfortunatamente, non esiste un modo facile per ottenere la dimensione del bytecode dei tuoi contratti. Un ottimo strumento per aiutarti è il plugin [truffle-contract-size](https://github.com/IoBuilders/truffle-contract-size), se utilizzi Truffle.
-
-1. `npm install truffle-contract-size`
-2. Aggiungi il plugin al the _truffle-config.js_: `plugins: ["truffle-contract-size"]`
-3. Esegui `truffle run contract-size`
-
-Questo ti aiuterà a capire come le tue modifiche influiscono sulle dimensioni totali del contratto.
 
 Di seguito, passeremo in rassegna alcuni metodi, ordinati in base al loro impatto potenziale. Pensiamo ad esempio alla perdita di peso: la strategia migliore per raggiungere il proprio peso target (nel nostro caso 24kb) consiste nel concentrarsi prima sui metodi a maggiore impatto. In gran parte dei casi è sufficiente adattare la propria dieta, mentre in altri serve qualcosa di più. Si può aggiungere un po' di esercizio fisico (impatto medio) o persino degli integratori (impatto ridotto).
 

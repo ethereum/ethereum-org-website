@@ -4,7 +4,7 @@ description: Explication des protocoles de consensus dans les systèmes distribu
 lang: fr
 ---
 
-Le terme « mécanisme de consensus » est souvent utilisé familièrement pour désigner les protocoles de preuve d'enjeu, de preuve de travail ou de preuve d'autorité. Cependant, il ne s'agit que de composantes des mécanismes de consensus qui protègent contre les attaques Sybil. Les mécanismes de consensus désignent la pile complète des idées, protocoles et incitations qui permettent à un ensemble de nœuds distribués de se mettre d'accord sur l'état d'une blockchain.
+Le terme « mécanisme de consensus » est souvent utilisé familièrement pour désigner les protocoles de preuve d'enjeu, de preuve de travail ou de preuve d'autorité. Néanmoins, ceux-ci ne sont que des composantes du mécanisme de consensus qui protègent de façon préventive contre les [attaques de type 'Sybil](/glossary/#sybil-attack). Les mécanismes de consensus désignent la pile complète des idées, protocoles et incitations qui permettent à un ensemble de nœuds distribués de se mettre d'accord sur l'état d'une blockchain.
 
 ## Prérequis {#prerequisites}
 
@@ -68,7 +68,7 @@ En savoir plus sur les différents types de mécanismes de consensus utilisés s
 
 La preuve de travail et la preuve d’enjeu ne sont pas des protocoles de consensus, mais on les appelle souvent ainsi par souci de simplicité. Ce sont en fait des mécanismes de résistance à l'attaque Sybil et des sélecteurs d'auteurs de bloc ; ils permettent de décider qui est l'auteur du dernier bloc. Un autre composant important est l'algorithme de sélection de chaînes (alias choix de fourche) qui permet aux nœuds de choisir un unique bloc correct en tête de chaîne dans des scénarios où plusieurs blocs se trouveraient dans la même position.
 
-La **Résistance à l'attaque Sybil** mesure comment un protocole s'oppose contre une [attaque Sybil](https://wikipedia.org/wiki/Sybil_attack). On parle d'attaque Sybil quand un utilisateur ou un groupe se fait passer pour un grand nombre d'utilisateurs. La résistance à ce type d'attaque est essentielle pour une blockchain décentralisée et permet aux mineurs et validateurs d'être récompensés de manière égale en fonction des ressources mises à disposition. La preuve de travail et la preuve de mise en jeu protègent de ce risque en obligeant les utilisateurs à dépenser beaucoup d'énergie ou à mettre beaucoup de collatérales. Ces protections sont un moyen de dissuasion économique contre les attaques Sybil.
+La **Résistance à l'attaque Sybil** mesure l'efficacité d'un protocole face à une attaque Sybil. La résistance à ce type d'attaque est essentielle pour une blockchain décentralisée et permet aux mineurs et validateurs d'être récompensés de manière égale en fonction des ressources mises à disposition. La preuve de travail et la preuve de mise en jeu protègent de ce risque en obligeant les utilisateurs à dépenser beaucoup d'énergie ou à mettre beaucoup de collatérales. Ces protections sont un moyen de dissuasion économique contre les attaques Sybil.
 
 **Une règle de sélection de la chaîne** est utilisée pour décider quelle chaîne est la chaîne « correcte ». Bitcoin utilise actuellement la règle de la « plus longue chaîne », ce qui signifie que quelle que soit la chaîne de blocs la plus longue, elle sera celle que les autres nœuds acceptent comme valide et avec laquelle ils travailleront. Pour les chaînes de preuve de travail, la chaîne la plus longue est déterminée par la difficulté cumulative totale de preuve de travail. Ethereum avait également l'habitude d'utiliser la règle de la chaîne la plus longue ; cependant, maintenant qu'Ethereum fonctionne avec la preuve d'enjeu, il a adopté un algorithme de choix de fourche mis à jour qui mesure le « poids » de la chaîne. Le poids est la somme cumulée des votes de validateur, pondérée par les soldes en Ether misés par les validateurs.
 
@@ -89,3 +89,4 @@ _Une ressource communautaire vous a aidé ? Modifiez cette page et ajoutez-la !_
 - [Preuve de travail](/developers/docs/consensus-mechanisms/pow/)
 - [Minage](/developers/docs/consensus-mechanisms/pow/mining/)
 - [Preuve d'enjeu](/developers/docs/consensus-mechanisms/pos/)
+- [Preuve d'autorité](/developers/docs/consensus-mechanisms/poa/)

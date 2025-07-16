@@ -6,13 +6,13 @@ lang: tr
 
 # Token'lar nasıl takar edilir?
 
-Favori token'larınızın hepsini listeleyen bir borsa aramaktan sıkıldınız mı? Merkeziyetsiz borsalar kullanarak token'ların çoğunu takas edebilirsiniz.
+Favori token'larınızın hepsini listeleyen bir borsa aramaktan sıkıldınız mı? [Merkeziyetsiz borsaları](/glossary/#dex) kullanarak çoğu jetonu takas edebilirsiniz.
 
-Token takası Ethereum ağı üzerindeki iki farklı varlığın değişimini kapsar; örneğin, DAI (bir ERC-20 token'ı) için ETH takası. Bu süreç gayet hızlı ve ucuzdur. Token takas etmek için bir kripto cüzdanına ihtiyaç duyacaksınız.
+Jeton takası, Ethereum ağında olan iki farklı varlığın takas edilmesini ifade eder, örneğin ETH ile DAI'yi ([ERC-20](/glossary/#erc-20) jetonu) takas etmek gibi. Bu süreç gayet hızlı ve ucuzdur. Token takas etmek için bir kripto cüzdanına ihtiyaç duyacaksınız.
 
 **Ön koşullar:**
 
-- Kripto cüzdanına sahip olma, bu öğreticiyi takip edebilirsiniz: [Nasıl yapılır: Bir Ethereum hesabını "kaydetme"](/guides/how-to-register-an-ethereum-account/)
+- bir [kripto cüzdana](/glossary/#wallet) sahip olmak, bu öğreticiyi takip edebilirsiniz: [Nasıl yapılır: Bir Ethereum hesabını "kaydetme"](/guides/how-to-create-an-ethereum-account/)
 - cüzdanınıza fon ekleme
 
 ## 1. Cüzdanınızı seçtiğiniz merkeziyetsiz borsaya (DEX) bağlayın
@@ -24,7 +24,7 @@ Bazı popüler borsalar şunlardır:
 - [1Inch](https://app.1inch.io/#/1/unified/swap/ETH/DAI)
 - [Curve](https://curve.fi/#/ethereum/swap)
 
-DeFi'ın ne olduğu ve bu tarz borsaların nasıl çalıştığıyla ilgili dahasını öğrenmek isterseniz, [Kernel Library](https://library.kernel.community/Topic+-+DeFi/Topic+-+DeFi) önerimizdir.
+İlginizi çekti mi? [Merkeziyetsiz finansın (DeFi)](/defi/) ne olduğu ve bu yeni borsaların nasıl çalıştığı hakkında daha fazla bilgi edinin.
 
 ## 2. Takas etmek istediğiniz token çiftini seçin
 
@@ -51,7 +51,7 @@ Herhangi bir blok zincir tarayıcısında işlemin ilerlemesini görebilirsiniz.
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Daha fazlasını mı öğrenmek istiyorsunuz?</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     Diğer rehberlerimizi inceleyin
   </ButtonLink>
 </InfoBanner>

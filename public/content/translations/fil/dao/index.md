@@ -50,7 +50,7 @@ Ang pundasyon ng isang DAO ay ang smart contract nito, na nagtatakda ng mga panu
 
 Posible ito dahil hindi mababago ang mga smart contract kapag live na ang mga ito sa Ethereum. Hindi mo mae-edit nang basta-basta ang code (ang mga panuntunan ng DAO) nang hindi napapansin ng mga tao dahil ang lahat ay pampubliko.
 
-<DocLink to="/smart-contracts/">
+<DocLink href="/smart-contracts/">
   Higit pa sa mga matalinong kontrata
 </DocLink>
 
@@ -93,7 +93,7 @@ Noong 1977, nilikha sa Wyoming ang LLC, na nagpoprotekta sa mga negosyante at na
 
 ### Isang kilalang halimbawa {#law-example}
 
-[CityDAO](https://citydao.io) – Ginamit ng CityDAO ang batas sa DAO ng Wyoming para bumili ng 40 acres ng lupa malapit sa Yellowstone National Park.
+[CityDAO](https://citizen.citydao.io/) – Ginamit ng CityDAO ang batas sa DAO ng Wyoming para bumili ng 40 acres ng lupa malapit sa Yellowstone National Park.
 
 ## Membership sa DAO {#dao-membership}
 

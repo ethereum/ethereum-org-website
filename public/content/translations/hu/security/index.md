@@ -6,7 +6,9 @@ lang: hu
 
 # Ethereum-biztonság és átverés elleni védelem {#introduction}
 
-A kriptovaluták iránt nő az érdeklődés, ezért elengedhetetlen megtanulni a bevált gyakorlatokat. A kripto izgalmas dolog, de közben komoly kockázatokat is rejt. Ha Ön megfelelően tájékozódik, akkor elháríthatja ezeket a kockázatokat.
+A kriptopénzek iránti növekvő érdeklődés egyre nagyobb kockázatot jelent a csalók és a hackerek részéről. Ez a cikk néhány bevált gyakorlatot mutat be e kockázatok mérséklésére.
+
+**Ne feledje: Az ethereum.org sosem lép Önnel kapcsolatba. Ne válaszoljon azokra az e-mailekre, amelyek azt állítják, hogy az Ethereum hivatalos támogatói csapatától érkeznek.**
 
 <Divider />
 
@@ -14,32 +16,32 @@ A kriptovaluták iránt nő az érdeklődés, ezért elengedhetetlen megtanulni 
 
 ### Növelje tudását {#level-up-your-knowledge}
 
-A legtipikusabb ok, amiért a kripto világában az emberek csalók áldozatai lesznek, az az ismeret és a működés megértésének hiánya. Például ha valaki nem érti, hogy az Ethereum-hálózat decentralizált és nincs senkinek sem a birtokában, akkor könnyedén elhiheti egy ügyfélszolgálati munkatársat megszemélyesítő csalónak, hogy visszaszerzi az elvesztett ETH a [privát kulcsaiért](/glossary/#private-key) cserébe. Az Ethereum működésének megértése megéri a befektetést.
+A kriptográfia működésével kapcsolatos félreértések költséges hibákhoz vezethetnek. Ha például valaki ügyfélszolgálati ügynöknek adja ki magát, aki a privát kulcsokért cserébe vissza tudja adni az elveszett ETH-t, akkor kihasználja azokat az embereket, akik nem értik, hogy az Ethereum egy decentralizált hálózat, amelyből hiányzik ez a fajta funkció. Az Ethereum működésének megértése megéri a befektetést.
 
-<DocLink to="/what-is-ethereum/">
+<DocLink href="/what-is-ethereum/">
   Mi az Ethereum?
 </DocLink>
 
-<DocLink to="/eth/">
+<DocLink href="/eth/">
   Mi az ether?
 </DocLink>
 <Divider />
 
 ## Tárcabiztonság {#wallet-security}
 
-### Ne adja ki senkinek a visszaállításhoz szükséges kulcsot {#protect-recovery-phrase}
+### Sose ossza meg privát kulcsait {#protect-private-keys}
 
-**Soha, semmilyen okból se ossza meg a visszaállításhoz szükséges kulcsát!**
+**Soha, semmilyen okból se ossza meg a privát kulcsait!**
 
-A tárca visszaállítási kulcsa vagy mondata jelszóként működik az Ethereum-tárcához. Ez az egyetlen dolog, aminek a hiányában valaki nem viszi el az összes eszközt a tárcájából, ha ismeri annak a címét!
+A tárca privát kulcsa az Ethereum-tárca jelszava. Ez az egyetlen dolog, aminek a hiányában valaki nem viszi el az összes eszközt a tárcájából, ha ismeri annak a címét!
 
-<DocLink to="/wallets/">
+<DocLink href="/wallets/">
   Mi az az Ethereum tárca?
 </DocLink>
 
-#### Ne készítsen képet a visszaállításhoz szükséges mondatáról {#screenshot-recovery-phrase}
+#### Sose készítsen képernyőképet a kulcsmondatról/privát kulcsokról {#screenshot-private-keys}
 
-A képernyőkép készítésével azt kockáztatja, hogy az szinkronizálódik a felhőbe és elérhetővé válik a támadók számára. A visszaállításhoz szükséges kulcs vagy mondat megszerzése a felhőből egy tipikus támadási forma.
+A képernyőkép készítésével azt kockáztatja, hogy az szinkronizálódik a felhőbe és így elérhetővé válik a támadók számára. A privát kulcsok megszerzése a felhőből egy tipikus támadási forma.
 
 ### Használjon hardveres tárcát {#use-hardware-wallet}
 
@@ -54,9 +56,9 @@ A privát kulcsok offline tartása komoly szinten csökkenti a támadás kockáz
 
 ### Ellenőrizze kétszer a tranzakciókat küldés előtt {#double-check-transactions}
 
-A rossz tárcába küldött kripto egy tipikus hiba. **Az Ethereumon küldött tranzakció visszafordíthatatlan.** Hacsak nem ismeri a cím tulajdonosát és nem tudja meggyőzni arról, hogy visszaküldje, nincs igazán esélye visszaszerezni azt.
+A rossz tárcába küldött kripto egy tipikus hiba. **Az Ethereumon küldött tranzakció visszafordíthatatlan.** Hacsak nem ismeri a cím tulajdonosát és nem tudja meggyőzni arról, hogy visszaküldje, különben nem tudja visszaszerezni azt.
 
-Mindig győződjön meg arról, hogy cím pontosan egyezik a kívánt címmel, mielőtt elküldi a tranzakciót. Az [okosszerződésekkel](/glossary/#smart-contract) való interakciónál is mindig olvassa el a tranzakcióüzenetet, mielőtt aláírja azt.
+Mindig győződjön meg arról, hogy cím pontosan egyezik a kívánt címmel, mielőtt elküldi a tranzakciót. Az okosszerződésekkel való interakciónál is mindig olvassa el a tranzakcióüzenetet, mielőtt aláírja azt.
 
 ### Állítson be költségkeretet az okosszerződéshez {#spend-limits}
 
@@ -70,7 +72,7 @@ Számos Ethereum-tárca kínál védelmet keretek beállításával, hogy ne leh
 
 ## Gyakori csalások {#common-scams}
 
-A csalók folyamatosan keresik a lehetőséget, hogy elvegyék az Ön eszközeit. Nem lehet őket teljesen megállítani, de elérhetjük, hogy kevésbé hassanak ránk, ha ismerjük a trükkjeiket. Ezeknek a csalásoknak számos variációja van, de általánosságban egy mintát követnek. Emlékezzen rá:
+Nem lehet őket teljesen megállítani, de elérhetjük, hogy kevésbé hassanak ránk, ha ismerjük a legjellemzőbb fogásaikat. Ezeknek a csalásoknak számos variációja van, de általánosságban egy mintát követnek. Emlékezzen rá:
 
 - mindig legyen szkeptikus
 - senki sem ad Önnek ETH-t ingyen vagy olcsón
@@ -90,7 +92,7 @@ Mindig ellenőrizze, hogy a megfelelő oldalon van-e, különösen egy hivatkoz�
 
 Az egyik legtipikusabb csalás a kriptovalutákkal az ajándékozás. Számos formában előfordulhat, de a lényege az, hogy ha Ön ETH-t küld a megadott tárcacímre, akkor duplán kapja vissza az ETH-t. *Emiatt 2-t 1-ért csalásnak is nevezik.*
 
-Ez az ajánlat csak limitált időre szól, hogy ne gondolja túl a döntéshozást és a sürgetés érzését keltse.
+Ez az ajánlat csak limitált időre szól, hogy a sürgetés érzését keltse.
 
 ### Közösségimédia-csalások {#social-media-hacks}
 
@@ -130,7 +132,7 @@ Az interakciók többsége Discordon történik. A támogatást színlelő csal�
 
 ### „ETH2” hamis token {#eth2-token-scam}
 
-[Az egyesítés (The Merge)](/roadmap/merge/) közeledtével a csalók kihasználták a zavart az „ETH2” kifejezés körül és próbálták rávenni a felhasználókat, hogy váltsák át az ETH-t „ETH2”-re. Nem létezik ETH2, és a Merge sem vezetett be semmilyen tokent. A Merge előtt és után pontosan ugyanaz az ETH létezik. **Az ETH-szel kapcsolatban semmit se kellett tenni a felhasználóknak, amikor a rendszer [proof-of-work](/glossary/#pow) helyett [proof-of-stake](/glossary/#pos) mechanizmusra állt át**.
+[Az egyesítés (The Merge)](/roadmap/merge/) közeledtével a csalók kihasználták a zavart az „ETH2” kifejezés körül és próbálták rávenni a felhasználókat, hogy váltsák át az ETH-t „ETH2”-re. Nem létezik ETH2, és a Merge sem vezetett be semmilyen tokent. A Merge előtt és után pontosan ugyanaz az ETH létezik. **Az ETH-val kapcsolatban semmit se kellett tenni a felhasználóknak, amikor a rendszer proof-of-work helyett proof-of-stake mechanizmusra állt át**.
 
 A csalók ügyfélszolgálatosként jelennek meg, hogy rávegyék Önt, adja át az ETH-t és „ETH2”-t kap helyette. Nincs [hivatalos Ethereum-ügyfélszolgálat](/community/support/), és nincs új token. Sose ossza meg a tárcához kapcsolódó kulcsmondatot senkivel.
 
@@ -152,7 +154,7 @@ Ha egy ismeretlen küldőtől kap üzenetet, akkor:
 
 ### Kriptobrókeres csalás {#broker-scams}
 
-A kriptobrókeres csalók szakembereknek adják ki magukat, akik elkérik az Ön pénzét, hogy befektessék az Ön nevében. Ennek részeként nem reális nyereséget kínálnak. Miután megkapták az összeget, lehetséges, hogy még többet kérnek valamilyen különleges lehetőségre, vagy akár el is tűnnek azonnal.
+A kriptobrókeres csalók szakembereknek adják ki magukat, akik elkérik az Ön pénzét, hogy befektessék az Ön nevében. Miután megkapták az összeget, lehetséges, hogy még többet kérnek valamilyen különleges lehetőségre, vagy akár el is tűnnek azonnal.
 
 Ezek a csalók hamis profilokat használnak a YouTube-on, ahol látszólag semleges beszélgetéseket folytatnak. Ezek a beszélgetések nagyon jó értékeléssel rendelkeznek, de ezt mind programok (bot) szavazzák meg nekik, hogy így hitelesebbnek tűnjenek.
 
@@ -162,7 +164,7 @@ Ezek a csalók hamis profilokat használnak a YouTube-on, ahol látszólag semle
 
 ### Kriptobányászati csalások {#mining-pool-scams}
 
-2022. szeptembere óta nincs az Ethereumon bányászás. A csalások mégis tovább folytatódnak. A kriptobányászási csalásoknál arra próbálják rávenni az embereket, hogy csatlakozzanak az Ethereum-bányászathoz, ami nagy jövedelmeket hoz. A csaló kapcsolatban marad Önnel egész végig. Valójában meggyőzi Önt arról, hogy ha csatlakozik a bányászászhoz, akkor az ETH egyenlege még több ETH-t hoz létre. Az Ön kriptovalutája tényleg mutathat kis mértékű növekedést. De ez csak azért van, hogy még többet fektessen be. Végül az összes pénzeszközét egy ismeretlen címre küldik, és a csaló eltűnik, vagy akár kapcsolatban is maradhat áldozatával.
+2022. szeptembere óta nincs az Ethereumon bányászás. A csalások mégis tovább folytatódnak. A kriptobányászási csalásoknál arra próbálják rávenni az embereket, hogy csatlakozzanak az Ethereum-bányászathoz, ami nagy jövedelmeket hoz. A csaló kapcsolatban marad Önnel egész végig. Valójában meggyőzi Önt arról, hogy ha csatlakozik a bányászáshoz, akkor az ETH egyenlege még több ETH-t hoz létre. Ezután látni fogja, hogy a kriptovalutája kis hozamot termel. De ez csak azért van, hogy még többet fektessen be. Végül az összes pénzeszközét egy ismeretlen címre küldik, és a csaló eltűnik, vagy akár kapcsolatban is maradhat áldozatával.
 
 Tartózkodjon azoktól, akik a közösségi médiában be akarják Önt vonni a bányászatba. Ha elveszíti a kriptóját, az többé nem kerül vissza.
 
@@ -176,7 +178,7 @@ Ne feledje:
 
 ### Tokenkiosztási (airdrop) csalások {#airdrop-scams}
 
-A tokenkiosztási (airdrop) csalások során egy hamis projekt eszközt ([NFT](/glossary/#nft), token) dob az Ön tárcájába és egy hamis weboldalra küldi, hogy kérvényezze azokat. Így be kell jelentkeznie az Ethereum-tárcájába és jóváhagynia a tranzakciót. Ez a tranzakció veszélybe sodorja a számláját, mivel a nyilvános és privát kulcsait átadja a csalónak. Az is lehet, hogy egy olyan tranzakciót ír alá, ami a csalónak küldi az Ön pénzeszközeit.
+A tokenkiosztási (airdrop) csalások során egy hamis projekt eszközt (NFT, token) dob az Ön tárcájába és egy hamis weboldalra küldi, hogy kérvényezze azokat. Így be kell jelentkeznie az Ethereum-tárcájába és jóváhagynia a tranzakciót. Ez a tranzakció veszélybe sodorja a számláját, mivel a nyilvános és privát kulcsait átadja a csalónak. Az is lehet, hogy egy olyan tranzakciót ír alá, ami a csalónak küldi az Ön pénzeszközeit.
 
 [Bővebben a tokenkiosztási (airdrop) csalásokról](https://www.youtube.com/watch?v=LLL_nQp1lGk)
 
@@ -186,9 +188,9 @@ A tokenkiosztási (airdrop) csalások során egy hamis projekt eszközt ([NFT](/
 
 ### Használjon erős jelszavakat {#use-strong-passwords}
 
-[A számlatámadások 80%-a a gyenge vagy ellopott jelszavakból ered](https://cloudnine.com/ediscoverydaily/electronic-discovery/80-percent-hacking-related-breaches-related-password-issues-cybersecurity-trends/). Egy hosszú, betűkből, számokból és szimbólumokból álló sorozat a legjobb ahhoz, hogy a számlája biztonságban legyen.
+[A számlatámadások 80%-a a gyenge vagy ellopott jelszavakból ered](https://cloudnine.com/ediscoverydaily/electronic-discovery/80-percent-hacking-related-breaches-related-password-issues-cybersecurity-trends/). Egy hosszú, betűkből, számokból és szimbólumokból álló sorozat segíthet abban, hogy a számlája biztonságban legyen.
 
-A legtipikusabb hiba az, ha két-három hétköznapi, kapcsolódó szót használnak. Az ehhez hasonló jelszavak nem biztonságosak, mert hajlamosak egy egyszerű hackelési technikára, amelyet szótári támadásként ismerünk.
+Gyakori hiba, hogy néhány gyakori, összefüggő szó kombinációját használjuk. Az ehhez hasonló jelszavak nem biztonságosak, mert hajlamosak egy hackelési technikára, amelyet szótáralapú támadásnak hívnak.
 
 ```md
 Gyenge jelszó például: AranyosBolyhosCicák!
@@ -196,20 +198,20 @@ Gyenge jelszó például: AranyosBolyhosCicák!
 Erős jelszó például: ymv\*azu.EAC8eyp8umf
 ```
 
-A másik általános hiba az, amikor a [közösségi médiából visszafejthető](https://wikipedia.org/wiki/Social_engineering_(security)) jelszót találnak ki. Beleértve az édesanyja leánykori nevét, a gyerekek vagy háziállatok neveit, születési időpontokat használva nem lesz a jelszó biztonságos, és lehetőséget ad a támadásra.
+A másik általános hiba az, amikor a [közösségi média alapján kitalálható](https://wikipedia.org/wiki/Social_engineering_(security)) jelszót találnak ki. Az édesanyja leánykori neve, a gyerekek vagy háziállatok nevei, a születési időpontok használata növeli a támadás kockázatát.
 
 #### A jó jelszóhoz: {#good-password-practices}
 
 - Olyan hosszú jelszót válasszon, amit jelszógenerátor készít vagy megenged az adott rendszer
 - Használjon nagybetűt, kisbetűt, számokat és jeleket
 - Ne használjon személyes adatokat, mint családi nevek
-- Ne használjon hétköznapi szavakat, melyeket a szótár is tartalmaz
+- Kerülje a gyakori, általános szavakat
 
 [Bővebben az erős jelszó létrehozásáról](https://terranovasecurity.com/how-to-create-a-strong-password-in-7-easy-steps/)
 
 ### Használjon egyedi jelszót mindenre {#use-unique-passwords}
 
-Az erős jelszó sem véd meg akkor, ha kiszivárog egy adatvédelmi incidens során. A [Have I Been Pwned](https://haveibeenpwned.com) weblap megmutatja, hogy a számláját érintette-e bármilyen adatvédelmi incidens. Ha igen, akkor **azonnal cserélje le a jelszavait**. Az egyedi jelszavak használata csökkenti annak kockázatát, hogy a támadó mindenhez hozzáfér, amikor egy jelszót feltör.
+Egy erős jelszó, amely egy adatvédelmi incidens során nyilvánossá vált, már nem számít erős jelszónak. A [Have I Been Pwned](https://haveibeenpwned.com) weblap megmutatja, hogy a számláját érintette-e bármilyen nyilvános adatvédelmi incidens. Ha igen, akkor **azonnal cserélje le a jelszavait**. Az egyedi jelszavak használata csökkenti annak kockázatát, hogy a támadó mindenhez hozzáfér, ha egy jelszót feltör.
 
 ### Használjon jelszókezelőt {#use-password-manager}
 
@@ -232,31 +234,23 @@ Az erős, egyedi jelszavakat nem túl ideális megjegyezni az összes számláho
 
 ### Használjon kéttényezős azonosítást {#two-factor-authentication}
 
-Különböző egyedi bizonyítékok bemutatásával igazolhatja, hogy Ön valóban az, akinek mondja magát. Ezek a **tényezők**, melyekből a három legfontosabb:
+Előfordulhat, hogy arra kérik Önt, hogy egyedi igazolásokkal hitelesítse személyazonosságát. Ezeket nevezzük **tényezőknek**. A három fő tényező a következő:
 
 - Valami, amit tud (mint egy jelszó vagy biztonsági kérdés)
 - Valami, ami Öntől származik (mint egy ujjlenyomat vagy írisz-/arcszkenner)
 - Valami, ami az Ön birtokában van (biztonsági kulcs vagy azonosítási alkalmazás a telefonján)
 
-A **kéttényezős azonosítás (2FA)** egy plusz *biztonsági tényezőt* ad az online számlákhoz, így a jelszó (amit Ön tud) önmagában nem elég annak eléréséhez. Általában a második tényező egy véletlenszerű hatjegyű kód, ami egy **időzített egyszeri jelszó (TOTP)**, amit egy azonosítási alkalmazással ér el, mint a Google Authenticator vagy Authy. Ez az a tényező, ami az Ön birtokában van, mert a kódot adó mag az Ön eszközén található.
+A **kétfaktoros hitelesítés (2FA)** használata további *biztonsági tényezőt* biztosít online számlái számára. A 2FA biztosítja, hogy a számlához való hozzáféréshez nem elegendő pusztán a jelszó megléte. Általában a második tényező egy véletlenszerű hatjegyű kód, ami egy **időzített egyszeri jelszó (TOTP)**, amit egy azonosítási alkalmazással ér el, mint a Google Authenticator vagy Authy. Ez az a tényező, ami az Ön birtokában van, mert a kódot adó mag az Ön eszközén található.
 
 <InfoBanner emoji=":lock:">
   <div>
-    Megjegyzés: az SMS-alapú 2FA azonosítás ki van téve a 
-    <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">
-      SIM jacking
-    </a>
-    támadásnak, ezért nem biztonságos. A legmagasabb fokú biztonság érdekében használjon olyan szolgáltatást, mint a {" "}
-    <a href="https://mashable.com/article/how-to-set-up-google-authenticator">
-      Google Authenticator
-    </a>
-     vagy az <a href="https://authy.com/">Authy</a>.
+    Megjegyzés: az SMS-alapú 2FA azonosítás ki van téve a <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">SIM jacking</a> támadásnak, ezért nem biztonságos. A legmagasabb fokú biztonság érdekében használjon olyan szolgáltatást, mint a <a href="https://mashable.com/article/how-to-set-up-google-authenticator">Google Authenticator </a>vagy az <a href="https://authy.com/">Authy</a>.
   </div>
 </InfoBanner>
 
 #### Biztonsági kulcsok {#security-keys}
 
-Akik a 2FA következő szintjére akarnak lépni, azoknak a biztonsági kulcs használata ajánlott. A biztonsági kulcsok fizikai, hardveralapú hitelesítési eszközök, melyek az azonosítási alkalmazásokhoz hasonlóan működnek. A biztonsági kulcs használata a legbiztonságosabb mód a 2FA eléréséhez. A kulcsok nagyrésze a FIDO egyetemes második tényező (U2F) szabványt használja. [Ismerje meg a FIDO U2F-t](https://www.yubico.com/authentication-standards/fido-u2f/).
+A biztonsági kulcs a 2FA egy fejlettebb és biztonságosabb típusa. A biztonsági kulcsok fizikai, hardveralapú hitelesítési eszközök, melyek az azonosítási alkalmazásokként működnek. A biztonsági kulcs használata a legbiztonságosabb mód a 2FA eléréséhez. A kulcsok nagyrésze a FIDO egyetemes második tényező (U2F) szabványt használja. [Ismerje meg a FIDO U2F-t](https://www.yubico.com/authentication-standards/fido-u2f/).
 
 Tudjon meg többet a 2FA-ról:
 
@@ -264,7 +258,7 @@ Tudjon meg többet a 2FA-ról:
 
 ### Böngészőbővítmények eltávolítása {#uninstall-browser-extensions}
 
-A böngészőbővítmények (mint a Chrome-bővítmények vagy Firefox kiegészítő modulok) hasznos funkciókkal egészítik ki a böngészőket és jobb felhasználói élményt nyújtanak, de ugyanakkor kockázattal is járnak. A legtöbb ilyen bővítmény kéri, hogy beolvashassa és megváltoztathassa az adatokat, így bármit meg tudnak tenni az eszközön. A Chrome bővítményei automatikusan frissülnek, ezért a korábban ártalmatlan kód később talán rosszindulatú részeket is tartalmazhat. A legtöbb böngészőbővítmény nem próbál meg adatot lopni, de attól még képes rá.
+A böngészőbővítmények (mint a Chrome-bővítmények vagy Firefox kiegészítő modulok) hasznos funkciókkal egészítik ki a böngészőket, de kockázattal is járnak. A legtöbb ilyen bővítmény kéri, hogy beolvashassa és megváltoztathassa az adatokat, így bármit meg tudnak tenni az eszközön. A Chrome bővítményei automatikusan frissülnek, ezért a korábban ártalmatlan kód később talán rosszindulatú részeket is tartalmazhat. A legtöbb böngészőbővítmény nem próbál meg adatot lopni, de attól még képes rá.
 
 #### Maradjon biztonságban: {#browser-extension-safety}
 

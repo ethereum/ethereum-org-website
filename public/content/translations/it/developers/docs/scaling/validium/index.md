@@ -153,7 +153,8 @@ Diversi progetti forniscono implementazioni di validium e volizioni che puoi int
 
 **Matter Labs zkPorter**- _zkPorter è un protocollo di ridimensionamento del Livello 2 che affronta la disponibilità dei dati con un approccio ibrido che combina le idee dei rollup Zk e dello sharding. Può supportare arbitrariamente molti shard, ognuno con la propria politica di disponibilità dei dati._
 
-- [Documentazione](https://docs.zksync.io/zk-stack/concepts/data-availability)
+- [Blog](https://blog.matter-labs.io/zkporter-a-breakthrough-in-l2-scaling-ed5e48842fbf)
+- [Documentazione](https://docs.zksync.io/zksync-protocol/rollup/data-availability)
 - [Sito web](https://zksync.io/)
 
 ## Letture consigliate {#further-reading}

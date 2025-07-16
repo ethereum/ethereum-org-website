@@ -1,6 +1,6 @@
 ---
 title: Muungano
-description: Jifunze kuhusu muunganiko - ambapo mtandao mkuu wa Etheream utakapoungana na Mnyororo Kioleza ulioratibu mfumo wa uthibitisho-wa-hisa.
+description: Jifunze kuhusu muunganiko - ambapo mtandao mkuu wa Ethereum utakapoungana na Mnyororo Kioleza ulioratibu mfumo wa uthibitisho-wa-hisa.
 lang: sw
 template: upgrade
 image: /images/upgrades/merge.png
@@ -43,7 +43,7 @@ Visasisho vyote vya Eth2 vinahusiana kwa kiasi fulani. Kwahio tukumbushie jinsi 
 
 Pale tu muungano utakapotokea, wamililiki wa hisa watapewa mamlaka ya kuthibitisha Mtandao Mkuu wa Ethereum. [Uchimbaji](/developers/docs/consensus-mechanisms/pow/mining/)hautahitajika tena kwa hivyo wachimbaji watawekeza mapato yao kwa kusimama katika mfumo mpya wa uthibitisho-wa-hisa.
 
-<ButtonLink to="/roadmap/beacon-chain/">
+<ButtonLink href="/roadmap/beacon-chain/">
   Beacon chain
 </ButtonLink>
 
@@ -59,7 +59,7 @@ Hapo awali, mpango huo ulikuwa ukifanya kazi kwenye minyororo iliyokatwa kabla y
 
 Hii itakuwa tathmini inayoendelea kutoka kwa jamii juu ya hitaji la raundi nyingi za vipande vya minyororo ili kuruhusu uendelevu usio na mwisho.
 
-<ButtonLink to="/roadmap/danksharding/">
+<ButtonLink href="/roadmap/danksharding/">
   Vipande vya minyororo
 </ButtonLink>
 

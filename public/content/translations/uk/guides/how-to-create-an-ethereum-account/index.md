@@ -14,7 +14,7 @@ lang: uk
 
 Гаманець — це програма, яка допомагає керувати вашим обліковим записом Ethereum. Вона використовує ваші ключі для надсилання та отримання транзакцій та входу в програми. Існують десятки різних гаманців на вибір: мобільні, для робочих столів і навіть розширення для браузерів.
 
-<ButtonLink to="/wallets/find-wallet/">
+<ButtonLink href="/wallets/find-wallet/">
   Знайти гаманець
 </ButtonLink>
 
@@ -42,7 +42,7 @@ lang: uk
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Потрібно більше інформації?</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     Перегляньте наші інші посібники
   </ButtonLink>
 </InfoBanner>

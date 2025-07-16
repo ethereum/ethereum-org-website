@@ -110,11 +110,11 @@ Les extensions del navegador com les extensions de Chrome o els complements de F
 
 Una de les majors causes perquè la gent sigui estafada en criptomonedes és generalment per una manca de comprensió. Per exemple, si no enteneu que la xarxa d'Ethereum és descentralitzada i que no pertany a ningú, llavors és fàcil caure en les urpes d'algú que pretén ser un agent de servei al client que us promet retornar-vos les vostres pèrdues en ETH a canvi de les vostres claus privades. Educar-vos sobre el funcionament d'Ethereum és una inversió que paga la pena.
 
-<DocLink to="/what-is-ethereum/">
+<DocLink href="/what-is-ethereum/">
   Què és Ethereum?
 </DocLink>
 
-<DocLink to="/eth/">
+<DocLink href="/eth/">
   Què és l'ether?
 </DocLink>
 <Divider />
@@ -127,7 +127,7 @@ Una de les majors causes perquè la gent sigui estafada en criptomonedes és gen
 
 La clau privada de la vostra cartera actua com a contrasenya per a la vostra cartera Ethereum. És l'únic que pot evitar que algú que coneix la vostra adreça de cartera buidi tots els actius del vostre compte!
 
-<DocLink to="/wallets/">
+<DocLink href="/wallets/">
   Què és una cartera d'Ethereum?
 </DocLink>
 
@@ -276,7 +276,7 @@ Les estafes d'enviament involucren que un projecte d'estafa enviï un actiu (NFT
 ### Criptoseguretat {#reading-crypto-security}
 
 - [Protegint-vos a vosaltres i als vostres fons](https://support.mycrypto.com/staying-safe/protecting-yourself-and-your-funds) - _MyCrypto_
-- [Quatre formes d'anar amb compte en el món de les criptomonedes](https://www.coindesk.com/tech/2021/04/20/4-ways-to-stay-safe-in-crypto/) - _CoinDesk_
+- [Quatre formes d'anar amb compte en el món de les criptomonedes](https://www.coindesk.com/learn/4-ways-to-stay-safe-in-crypto/) - _CoinDesk_
 - [Guia de seguretat per a principiants i també per a gent intel·ligent](https://medium.com/mycrypto/mycryptos-security-guide-for-dummies-and-smart-people-too-ab178299c82e) - _MyCrypto_
 - [Criptoseguretat: contrasenyes i autenticacions](https://www.youtube.com/watch?v=m8jlnZuV1i4) - _Andreas M. Antonopoulos_
 

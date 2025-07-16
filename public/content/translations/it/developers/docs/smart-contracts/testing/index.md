@@ -110,7 +110,7 @@ function auctionEnd() external {
 
 Questo è un semplice contratto d'asta, progettato per ricevere offerte durante il periodo d'offerta. Se `highestBid` aumenta, l'offerente maggiore precedente riceve il denaro; una volta terminato il periodo di offerta, il `beneficiary` chiama il contratto per ricevere il denaro.
 
-I test unitari per un contratto simile coprirebbero diverse funzioni che un utente potrebbe chiamare quando interagisce con esso. Un esempio sarebbe un test unitario che controlla se un utente può presentare un'offerta durante l'asta (cioè, le chiamate a `bid()` hanno esito positivo) o uno che controlli se un utente può presentare un'offerta maggiore dell'attuale `highestBid`.
+I test unitari per un contratto simile coprirebbero diverse funzioni che un utente potrebbe chiamare quando interagisce con esso. Un esempio sarebbe un test unitario che controlli se un utente può presentare un'offerta durante l'asta (cioè, le chiamate a `bid()` hanno esito positivo) o uno che controlli se un utente può presentare un'offerta maggiore dell'attuale `highestBid`.
 
 Comprendere il flusso di lavoro operativo di un contratto aiuta anche a scrivere test unitari che verificano se l'esecuzione soddisfa i requisiti. Ad esempio, il contratto d'asta specifica che gli utenti non possono presentare offerte al termine dell'asta (cioè, quando `auctionEndTime` è inferiore a `block.timestamp`). Dunque, uno sviluppatore potrebbe eseguire un test unitario che verifichi se le chiamate alla funzione `bid()` hanno esito positivo o negativo al termine dell'asta (cioè, quando `auctionEndTime` > `block.timestamp`).
 
@@ -130,7 +130,7 @@ Molti quadri di test unitari ti consentono di creare asserzioni – semplici dic
 
 ##### 3. Misurare la copertura del codice
 
-La [copertura del codice](https://en.m.wikipedia.org/wiki/Code_coverage) è un parametro di prova che traccia il numero di rami, righe e dichiarazioni nel tuo codice eseguiti durante i test. I test dovrebbero avere una buona copertura del codice, altrimenti potresti ottenere dei "falsi negativi", che si verificano quando un contratto supera tutti i test ma continuano a esistere vulnerabilità nel codice. Registrare un'elevata copertura del codice, tuttavia, garantisce che tutte le dichiarazioni/funzioni di un contratto intelligente siano state testate sufficientemente per verificarne la correttezza.
+La [copertura del codice](https://en.m.wikipedia.org/wiki/Code_coverage) è un parametro di prova che traccia il numero di rami, righe e dichiarazioni nel tuo codice eseguiti durante i test. I test dovrebbero avere una buona code coverage per ridurre al minimo il rischio di vulnerabilità non testate. Senza una code coverage sufficiente potresti dare erroneamente per scontato che il tuo contratto sia sicuro; pur superando tutti i test, infatti, potrebbero comunque esistere vulnerabilità in percorsi di codice non testati. Registrare un'elevata copertura del codice, tuttavia, garantisce che tutte le dichiarazioni/funzioni di un contratto intelligente siano state testate sufficientemente per verificarne la correttezza.
 
 ##### 4. Utilizzare quadri di test ben sviluppati
 
@@ -144,6 +144,7 @@ I quadri di test unitari per i contratti intelligenti in Solidity esistono in di
 - **[Eseguire test unitari con Remix](https://remix-ide.readthedocs.io/en/latest/unittesting.html#write-tests)**
 - **[Eseguire test unitari con Ape](https://docs.apeworx.io/ape/stable/userguides/testing.html)**
 - **[Eseguire test unitari con Hardhat](https://hardhat.org/hardhat-runner/docs/guides/test-contracts)**
+- **[Eseguire test unitari con Wake](https://ackeeblockchain.com/wake/docs/latest/testing-framework/overview/)**
 
 ### Test d'integrazione {#integration-testing-for-smart-contracts}
 
@@ -188,9 +189,11 @@ L'esecuzione di test basati sulle proprietà inizia solitamente con la definizio
 Una volta configurato adeguatamente, lo strumento di test delle proprietà eseguirà le funzioni dei tuoi contratti intelligenti con input generati casualmente. Se si verifica una violazione delle asserzioni, dovresti ottenere un report con i dati di input concreti che violano la proprietà valutata. Vedi alcune delle seguenti linee guida per iniziare a eseguire test basati sulle proprietà con diversi strumenti:
 
 - **[Analisi statica dei contratti intelligenti con Slither](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither#slither)**
+- **[Analisi statica dei contratti intelligenti con Wake](https://ackeeblockchain.com/wake/docs/latest/static-analysis/using-detectors/)**
 - **[Test basati sulle proprietà con Brownie](https://eth-brownie.readthedocs.io/en/stable/tests-hypothesis-property.html)**
-- **[Contratti di fuzzing con Foundry](https://book.getfoundry.sh/forge/fuzz-testing)**
-- **[Contratti di fuzzing con Echidna](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna#echidna-tutorial)**
+- **[Fuzzing dei contratti con Foundry](https://book.getfoundry.sh/forge/fuzz-testing)**
+- **[Fuzzing dei contratti con Echidna](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna#echidna-tutorial)**
+- **[Fuzzing dei contratti con Wake](https://ackeeblockchain.com/wake/docs/latest/testing-framework/fuzzing/)**
 - **[Esecuzione simbolica dei contratti intelligenti con Manticore](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore#manticore-tutorial)**
 - **[Esecuzione simbolica dei contratti intelligenti con Mythril](https://mythril-classic.readthedocs.io/en/master/tutorial.html)**
 
@@ -210,7 +213,7 @@ Eseguire i contratti su una blockchain locale potrebbe essere utile come forma d
 
 ### Testare i contratti sulle reti di prova {#testing-contracts-on-testnets}
 
-Una rete di prova funziona esattamente come la Rete principale di Ethereum, tranne nel fatto che utilizza ether (ETH) privi di valore reale. Distribuire il proprio contratto su una [rete di prova](/developers/docs/networks/#ethereum-testnets) significa che chiunque può interagirvi (es. tramite il frontend della dapp) senza mettere a rischio dei fondi.
+Una rete di prova funziona esattamente come la Rete Principale di Ethereum, tranne per il fatto che utilizza degli ether (ETH) privi di valore reale. Distribuire il proprio contratto su una [rete di prova](/developers/docs/networks/#ethereum-testnets) significa che chiunque può interagirvi (es. tramite il frontend della dapp) senza mettere a rischio dei fondi.
 
 Questa forma di test manuale è utile per valutare il flusso end-to-end della tua applicazione dal punto di vista di un utente. Inoltre, qui i beta tester possono eseguire prove e segnalare qualsiasi problema con la logica aziendale del contratto e le sue funzionalità complessive.
 
@@ -262,6 +265,8 @@ La differenza principale è che i programmi di bug bounty sono aperti alla più 
 
 - **[ApeWorx](https://docs.apeworx.io/ape/stable/userguides/testing.html)** - _Quadro di sviluppo e test basato su Python per i contratti intelligenti, rivolto alla Macchina Virtuale Intelligente._
 
+- **[Wake](https://ackeeblockchain.com/wake/docs/latest/testing-framework/overview/)** - _Assetto basato su Python per i test unitari e il fuzzing, con forti capacità di debug e supporto ai test tra catene, che utilizza pytest e Anvil per un'esperienza dell'utente e prestazioni migliori._
+
 ### Strumenti di test basati sulle proprietà {#property-based-testing-tools}
 
 #### Strumenti di analisi statica {#static-analysis-tools}
@@ -271,6 +276,8 @@ La differenza principale è che i programmi di bug bounty sono aperti alla più 
 - **[Ethlint](https://ethlint.readthedocs.io/en/latest/)** - _Linter per l'applicazione delle migliori pratiche di stile e sicurezza per il linguaggio di programmazione dei contratti intelligenti Solidity_
 
 - **[Cyfrin Aderyn](https://cyfrin.io/tools/aderyn)**: _Analizzatore statico basato su Rust, progettato specificamente per la sicurezza e lo sviluppo di contratti intelligenti in Web3._
+
+- **[Wake](https://ackeeblockchain.com/wake/docs/latest/static-analysis/using-detectors/)** - _Assetto di analisi statica basato su Python con rilevatori delle vulnerabilità e della qualità del codice, stampanti per estrarre informazioni utili dal codice e supporto alla scrittura di moduli secondari personalizzati._
 
 #### Strumenti di analisi dinamica {#dynamic-analysis-tools}
 
@@ -289,7 +296,7 @@ La differenza principale è che i programmi di bug bounty sono aperti alla più 
 - [Panoramica e confronto dei diversi prodotti di test](/developers/tutorials/guide-to-smart-contract-security-tools/) \_
 - [Come usare Echidna per testare gli smart contract](/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/)
 - [Come utilizzare Manticore per trovare bug nei contratti intelligenti](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
-- [Come usare Slither per trovare i bug dello Smart Contract](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
+- [Come usare Slither per trovare bug nei contratti intelligenti](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
 - [Come simulare contratti in Solidity per i test](/developers/tutorials/how-to-mock-solidity-contracts-for-testing/)
 - [Come eseguire i test unitari in Solidity, utilizzando Foundry](https://www.rareskills.io/post/foundry-testing-solidity)
 

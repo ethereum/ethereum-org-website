@@ -50,7 +50,7 @@ DAO-nun əsası təşkilatın qaydalarını müəyyən edən və qrupun xəzinə
 
 Bu mümkündür, çünki ağıllı müqavilələr Ethereum-da yayımlandıqdan sonra saxtakarlığa davamlıdır. İnsanların fərqinə varmadan sadəcə qanunu (DAO qaydalarını) redaktə edə bilməzsiniz, çünki hər şey açıqdır.
 
-<DocLink to="/smart-contracts/">
+<DocLink href="/smart-contracts/">
   Ağıllı müqavilələr haqqında daha çox
 </DocLink>
 
@@ -93,7 +93,7 @@ DAO-ların minlərlə səsvermə üzvü ola bilsə də, fondlar etibar edilən v
 
 ### Tanınmış bir nümunə {#law-example}
 
-[CityDAO](https://citydao.io)- CityDAO, Yellowstone Milli Parkının yaxınlığında 40 hektar torpaq almaq üçün Vyoming'in DAO qanunundan istifadə etdi.
+[CityDAO](https://citizen.citydao.io/)- CityDAO, Yellowstone Milli Parkının yaxınlığında 40 hektar torpaq almaq üçün Vyoming'in DAO qanunundan istifadə etdi.
 
 ## DAO üzvlüyü {#dao-membership}
 

@@ -20,7 +20,6 @@ lang: zh-tw
 
 - [Ethallowance](https://ethallowance.com/)（以太坊）
 - [Etherscan](https://etherscan.io/tokenapprovalchecker)（以太坊）
-- [Cointool](https://cointool.app/approve/eth)（多種網路）
 - [Revoke](https://revoke.cash/)（多種網路）
 - [Unrekt](https://app.unrekt.net/)（多種網路）
 - [EverRevoke](https://everrise.com/everrevoke/)（多種網路）
@@ -48,8 +47,8 @@ lang: zh-tw
  <br />
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
-  <div>想要學習更多功能嗎？</div>
-  <ButtonLink to="/guides/">
+  <div>想瞭解更多嗎？</div>
+  <ButtonLink href="/guides/">
     查看我們的其他指南
   </ButtonLink>
 </InfoBanner>

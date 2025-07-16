@@ -19,9 +19,107 @@ Queste modifiche alle regole potrebbero creare una divisione temporanea nella re
 
 </ExpandableCard>
 
+<ExpandableCard title="Perché alcuni aggiornamenti hanno più nomi?" contentPreview="Upgrades names follow a pattern">
+
+Il software sottostante a Ethereum si compone di due parti uguali, note come il [livello di esecuzione](/glossary/#execution-layer) e il [livello di consenso](/glossary/#consensus-layer).
+
+**Nomenclatura degli aggiornamenti del livello di esecuzione**
+
+Dal 2021, gli aggiornamenti del **livello di esecuzione** prendono il nome delle città in cui si sono svolti i [sedi dei precedenti Devcon](https://devcon.org/en/past-events/) in ordine cronologico:
+
+| Nome dell'aggiornamento | Anno del Devcon | Numero del Devcon | Data di aggiornamento |
+| ------------ | ----------- | ------------- | ------------ |
+| Berlino      | 2015        | 0             | 15 Apr. 2021 |
+| Londra       | 2016        | I             | 5 Ago. 2021  |
+| Shanghai     | 2017        | II            | 12 Apr. 2023 |
+| **Cancun**   | 2018        | III           | 13 Mar. 2024 |
+| _Praga_     | 2019        | IV            | TBD          |
+| _Osaka_      | 2020        | V             | TBD          |
+| _Bogotà_     | 2022        | VI            | TBD          |
+| _Bangkok_    | 2024        | VII           | TBD          |
+
+**Nomenclatura degli aggiornamenti del livello di consenso**
+
+Dal lancio della [Beacon Chain](/glossary/#beacon-chain), gli aggiornamenti al **livello di consenso** prendono il nome degli astri celesti in ordine alfabetico:
+
+| Nome dell'aggiornamento                                                | Data dell'aggiornamento |
+| ----------------------------------------------------------- | ------------ |
+| Genesi della Beacon Chain                                        | 1 Dic. 2020  |
+| [Altair](https://en.wikipedia.org/wiki/Altair)              | 27 Ott. 2021 |
+| [Bellatrix](https://en.wikipedia.org/wiki/Bellatrix)        | 6 Set. 2022  |
+| [Capella](https://en.wikipedia.org/wiki/Capella)            | 12 Apr. 2023 |
+| [**Deneb**](https://en.wikipedia.org/wiki/Deneb)            | 13 Mar. 2024 |
+| [_Electra_](<https:>) | TBD          |
+
+**Nomenclatura combinata**
+
+Gli aggiornamenti dei livelli di esecuzione e di consenso erano inizialmente distribuiti in momenti differenti, ma successivamente a [La Fusione](/roadmap/merge/), nel 2022, sono stati distribuiti simultaneamente. Pertanto, sono emersi dei termini colloquiali per semplificare i riferimenti a questi aggiornamenti che utilizzano un singolo termine congiunto. Ciò è iniziato con l'aggiornamento _Shanghai-Capella_, comunemente noto come "**Shapella**", ed è continuato con l'aggiornamento _Cancun-Deneb_, noto come "**Dencun**".
+
+| Aggiornamento del livello di esecuzione | Aggiornamento del livello di consenso | Abbreviazione |
+| ----------------- | ----------------- | ---------- |
+| Shanghai          | Capella           | "Shapella" |
+| Cancun            | Deneb             | "Dencun"   |
+
+</ExpandableCard>
+
 Salta direttamente alle informazioni su alcuni degli ultimi aggiornamenti particolarmente importanti: [La Beacon Chain](/roadmap/beacon-chain/); [La Fusione](/roadmap/merge/) ed [EIP-1559](#london)
 
 Stai cercando i prossimi aggiornamenti di protocollo? [Scopri di più sui prossimi aggiornamenti, nella roadmap di Ethereum](/roadmap/).
+
+<Divider />
+
+## 2024 {#2024}
+
+### Cancun-Deneb ("Dencun") {#dencun}
+
+<NetworkUpgradeSummary name="dencun" />
+
+#### Riepilogo di Cancun {#cancun-summary}
+
+L'aggiornamento di Cancun contiene una serie di miglioramenti all'_esecuzione_ di Ethereum, mirati a migliorarne la scalabilità, in tandem con gli aggiornamenti al consenso di Deneb.
+
+Notevolmente, include l'EIP-4844, nota come **Proto-Danksharding**, che riduce significativamente il costo di archiviazione dei dati per i rollup di livello 2. Ciò è possibile tramite l'introduzione dei "blob" di dati, che consentono ai rollup di pubblicare i dati sulla Rete Principale per un breve periodo di tempo. Questo risulta in commissioni di transazione significativamente inferiori per gli utenti dei rollup di livello 2.
+
+<ExpandableCard title="EIP di Cancun" contentPreview="Official improvements included in this upgrade.">
+
+<ul>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-1153">EIP-1153</a>: <em>Codici operativi di archiviazione transienti</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-4788">EIP-4788</a>: <em>Radice del blocco della beacon nell'EVM</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-4844">EIP-4844</a>: <em>Transazioni a blob di frammenti (Proto-Danksharding)</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-5656">EIP-5656</a>: <em><code>MCOPY</code> - Istruzione di copia della memoria</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-6780">EIP-6780</a>: <em><code>SELFDESTRUCT</code> soltanto nella stessa transazione</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7516">EIP-7516</a>: <em>Codice operativo <code>BLOBBASEFEE</code></em></li>
+</ul>
+
+</ExpandableCard>
+
+- [Rollup del Livello 2](/layer-2/)
+- [Proto-Danksharding](/roadmap/scaling/#proto-danksharding)
+- [Danksharding](/roadmap/danksharding/)
+- [Leggi le specifiche dell'aggiornamento di Cancun](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/cancun.md)
+
+#### Riepilogo di Deneb {#deneb-summary}
+
+L'aggiornamento di Deneb contiene una serie di miglioramenti al _consenso_ di Ethereum, mirati a migliorarne la scalabilità. Questo aggiornamento è in tandem con gli aggiornamenti del livello di esecuzione Cancun per consentire il Proto-Danksharding (EIP-4844), insieme ad altri miglioramenti alla Beacon Chain.
+
+I "messaggi di uscita volontaria" firmati e pregenerati non scadono più, dando maggiore controllo agli utenti che mettono i propri fondi in staking con un operatore del nodo di terze parti. Con questo messaggio di uscita firmato, gli staker possono delegare l'operazione del nodo mantenendo l'ablità di uscire in sicurezza e prelevare i propri fondi in qualsiasi momento, senza dover chiedere il permesso a nessuno.
+
+EIP-7514 comporta un rafforzamento dell'emissione di ETH, limitando il tasso di "churn", per cui i validatori possono unirsi alla rete fino a otto (8) per epoca. Poiché l'emissione di ETH è proporzionale agli ETH totali in staking, limitare il numero di validatori che aderiscono limita il _tasso di aumento_ degli ETH emessi di recente, riducendo inoltre i requisiti hardware per gli operatori del nodo, favorendo la decentralizzazione.
+
+<ExpandableCard title="EIP di Deneb" contentPreview="Official improvements included in this upgrade">
+
+<ul>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-4788">EIP-4788</a>: <em>Radice del blocco della beacon nell'EVM</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-4844">EIP-4844</a>: <em>Transazioni a blob di frammenti</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7044">EIP-7044</a>: <em>Uscite volontarie firmate perpetuamente valide</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7045">EIP-7045</a>: <em>Aumento degli slot massimi di inclusione dell'attestazione</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7514">EIP-7514</a>: <em>Aggiunta del limite massimo di churn per epoca</em></li>
+</ul>
+
+</ExpandableCard>
+
+- [Leggi le specifiche dell'aggiornamento di Deneb](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/)
+- [Domande frequenti su Cancun-Deneb ("Dencun")](/roadmap/dencun/)
 
 <Divider />
 
@@ -150,7 +248,7 @@ L'aggiornamento Altair è stato il primo aggiornamento pianificato per la [Beaco
 
 - [Leggi le specifiche dell'aggiornamento di Altair](https://github.com/ethereum/consensus-specs/tree/dev/specs/altair)
 
-#### <emoji text=":tada:" size={1} me="0.5rem" />Curiosità! {#altair-fun-fact}
+#### <emoji text=":tada:" size={1} classname="me-2" />Curiosità! {#altair-fun-fact}
 
 Altair è stato il primo importante aggiornamento di rete che ha avuto un tempo di rollout esatto. Tutti gli aggiornamenti precedenti erano basati su un numero di blocco dichiarato su una catena proof-of-work, dove i tempi del blocco variavano. La Beacon Chain non richiede la risoluzione del proof-of-work e funziona invece su un sistema di epoche basato sul tempo che consiste in 32 "slot" di dodici secondi in cui i validatori possono proporre dei blocchi. Questo è il motivo per cui sapevamo esattamente quando avremmo raggiunto l'epoca 74.240 e Altair sarebbe diventato operativo!
 
@@ -165,6 +263,20 @@ Altair è stato il primo importante aggiornamento di rete che ha avuto un tempo 
 #### Riepilogo {#london-summary}
 
 L'aggiornamento London ha introdotto l'[EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), che ha riformato il mercato delle commissioni sulle transazioni, oltre a modificare come sono gestiti i rimborsi di carburante e la pianificazione di [Ice Age](/glossary/#ice-age).
+
+#### Cos'è l'Aggiornamento di Londra / EIP-1559? {#eip-1559}
+
+Prima dell'Aggiornamento di Londra, Ethereum disponeva di blocchi di dimensioni fisse. Nei momenti di elevata domanda di rete, questi blocchi operavano a piena capacità. Di conseguenza, gli utenti devono spesso attendere che la domanda si riduca per essere inclusi in un blocco, il che ha portato a una scadente esperienza degli utenti. L'Aggiornamento di Londra ha introdotto blocchi di dimensioni variabili a Ethereum.
+
+Le modalità di calcolo delle commissioni sulle transazioni sulla rete di Ethereum sono state modificate dall'[Aggiornamento di Londra](/history/#london) di Agosto 2021. Prima dell'aggiornamento di Londra, le commissioni erano calcolate senza separare le commissioni di `base` e `priority`, come segue:
+
+Diciamo che Alice debba pagare 1 ETH a Bob. Nella transazione, il limite di gas è di 21.000 unità, e il prezzo del gas è di 200 gwei.
+
+La commissione totale sarebbe stata: `Unità di gas (limite) * Prezzo unitario del gas`, cioè `21.000 * 200 = 4.200.000 gwei` o 0,0042 ETH
+
+L'implementazione dell'[EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) nell'Aggiornamento di Londra ha reso più complesso il meccanismo delle commissioni sulle transazioni, rendendo più prevedibili le commissioni sul gas, e risultando in un mercato delle commissioni sulle transazioni più efficace. Gli utenti possono inviare le transazioni con una `maxFeePerGas` corrispondente a quanto desiderano pagare perché la loro transazione sia eseguita, sapendo che non pagheranno più del prezzo di mercato per il gas (`baseFeePerGas`), ed essere rimborsati di qualsiasi extra, mancia esclusa.
+
+Questo video spiega l'EIP-1559 e i benefici che comporta: [EIP-1559 Explained](https://www.youtube.com/watch?v=MGemhK9t44Q)
 
 - [Sei uno sviluppatore di dapp? Assicurati di aggiornare le tue librerie e i tuoi strumenti.](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/london-ecosystem-readiness.md)
 - [Leggi l'annuncio della Ethereum Foundation](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement/)
@@ -220,7 +332,7 @@ La [Beacon Chain](/roadmap/beacon-chain/) necessita di 16384 depositi da 32 ETH 
 
 [Leggi l'annuncio della Ethereum Foundation](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
 
-<DocLink to="/roadmap/beacon-chain/">
+<DocLink href="/roadmap/beacon-chain/">
   La beacon chain
 </DocLink>
 
@@ -236,7 +348,7 @@ Il contratto di deposito in staking ha introdotto lo [staking](/glossary/#stakin
 
 [Leggi l'annuncio della Ethereum Foundation](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 
-<DocLink to="/staking/">
+<DocLink href="/staking/">
   Staking
 </DocLink>
 
@@ -316,7 +428,7 @@ La diramazione Constantinople:
 <ul>
   <li><a href="https://eips.ethereum.org/EIPS/eip-145">EIP-145</a> – <em>ottimizza i costi di certe azioni su catena.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1014">EIP-1014</a> – <em>consente di interagire con gli indirizzi che devono ancora essere creati.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-1052">EIP-1052</a> – <em>ottimizza i costi di certe azioni su catena.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-1052">EIP-1052</a>: <em>Introduce l'istruzione <code>EXTCODEHASH</code> per recuperare l'hash del codice di un altro contratto.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1234">EIP-1234</a> – <em>assicura che la blockchain non si congeli prima del proof-of-stake e riduce la ricompensa per blocco da 3 a 2 ETH.</em></li>
 </ul>
 
@@ -506,6 +618,6 @@ Lo Yellow Paper, redatto dal dott. Gavin Wood, è una definizione tecnica del pr
 
 Il documento introduttivo, pubblicato nel 2013 da Vitalik Buterin, fondatore di Ethereum, prima del lancio del progetto nel 2015.
 
-<DocLink to="/whitepaper/">
+<DocLink href="/whitepaper/">
   Whitepaper
 </DocLink>

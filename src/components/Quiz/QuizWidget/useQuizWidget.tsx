@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react"
-import shuffle from "lodash/shuffle"
-import { useTranslation } from "next-i18next"
+import isChromatic from "chromatic"
+import { shuffle } from "lodash"
 
 import type {
   AnswerChoice,
@@ -19,6 +19,8 @@ import { PASSING_QUIZ_SCORE } from "@/lib/constants"
 import { getNextQuiz } from "../utils"
 
 import { QuizWidgetProps } from "."
+
+import useTranslation from "@/hooks/useTranslation"
 
 export type AnswerStatus = "correct" | "incorrect" | null
 
@@ -51,7 +53,9 @@ export const useQuizWidget = ({
       const rawQuestion: RawQuestion = questionBank[id]
       return { id, ...rawQuestion }
     })
-    const shuffledQuestions = shuffle(questions)
+
+    // ! Do not shuffle questions in Chromatic to keep the modal story snapshot stable
+    const shuffledQuestions = isChromatic() ? questions : shuffle(questions)
     const quiz: Quiz = {
       title: t(rawQuiz.title),
       questions: shuffledQuestions,
@@ -60,7 +64,8 @@ export const useQuizWidget = ({
     setQuizData(quiz)
   }
 
-  useEffect(initialize, [quizKey, t])
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  useEffect(initialize, [quizKey])
 
   const currentQuestionIndex = userQuizProgress.length
   const showResults = currentQuestionIndex === quizData?.questions.length

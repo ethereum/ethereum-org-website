@@ -16,9 +16,9 @@ lang: zh-tw
 
 ## Ethereum.org 資源 {#ethereum-org}
 
-Ethereum.org 已翻譯為 40 多種語言，你可以在我們的語言頁面上找到這些語言。
+Ethereum.org 已翻譯為 40 多種語言，你可以透過我們的語言選擇器選單（位於每個頁面的頂部）找到這些語言。
 
-![Language selector menu](./language-selector-menu.png)
+![語言選擇器選單](./language-selector-menu.png)
 
 如果你會使用兩種語言，而且想幫助我們宣傳，讓更多人知道，你也可以參與 [ethereum.org 翻譯計劃](/contributing/translation-program/#translation-program)，幫助我們翻譯該網站。
 
@@ -32,6 +32,7 @@ Ethereum.org 已翻譯為 40 多種語言，你可以在我們的語言頁面上
 - [Cointegraph](http://cointelegraph.com.br/category/analysis) - 巴西版 Cointelegraph，一個重要的加密貨幣新聞媒體機構
 - [Livecoins](http://www.livecoins.com.br/ethereum) - 提供有關加密貨幣的新聞和工具
 - [Seudinheiro](http://www.seudinheiro.com/criptomoedas/) - 提供有關加密貨幣的新聞和報告
+- [Modular Crypto](https://modularcrypto.xyz/) - 提供有關加密貨幣的新聞和教育文章
 
 **教育**
 
@@ -90,6 +91,24 @@ Ethereum.org 已翻譯為 40 多種語言，你可以在我們的語言頁面上
 - [Microsoft Learn（以太坊網路）](https://docs.microsoft.com/de-de/learn/modules/blockchain-ethereum-networks/)- 連接並部署以太坊網路
 - [Microsoft Learn（區塊鏈）](https://docs.microsoft.com/de-de/learn/paths/ethereum-blockchain-development/)- 進入區塊鏈開發
 
+### 希伯來文 {#he}
+
+- [Udi Wertheimer - 比特幣愛好者可以從以太坊學到什麼](https://www.cryptojungle.co.il/udi-wertheimer-what-bitcoiners-can-learn-from-ethereum/)
+- [Omer Greismen (OpenZeppelin) - 我們如何防止 150 億美元的智慧型合約遭到駭客攻擊](https://www.cryptojungle.co.il/omer-greisman-openzeppelin/)
+- [Shy Datika (INX) - 代幣化和證券的未來，內容包括「以太坊是一種證券嗎」](https://www.cryptojungle.co.il/shy-datika-tokenization/)
+- [Roy Confino (Lemonade) - 以太坊保險](https://www.cryptojungle.co.il/roy-confino-insurance/)
+- [Idan Ofrat (Fireblocks) - 機構採用](https://www.cryptojungle.co.il/idan-ofrat-fireblocks/)
+- [Gal Weizman (MetaMask) - 什麼是 MetaMask](https://www.cryptojungle.co.il/gal-weizman-metamask/)
+- [Dror Aviely (Consensys) - 以太坊的中心](https://www.cryptojungle.co.il/dror-aviely-ethereum-center/)
+- [Nir Rozin - 成為加密龐克](https://www.cryptojungle.co.il/nir-rozin-cryptopunk/)
+- [Adan Kedem - 遊戲與元宇宙](https://www.cryptojungle.co.il/adan-kedem-web3-gaming/)
+- [Uri Kolodny (Starkware) - 以太坊與區塊鏈分層](https://www.cryptojungle.co.il/uri-kolodny-starkware/)
+- [Udi Wertheimer - 以太坊 2.0 與競爭對手](https://www.cryptojungle.co.il/udi-on-eth2/)
+- [Ben Samocha（本從） - 以太坊 2.0 是機會嗎？](https://www.cryptojungle.co.il/etherurm2-week-summary/)
+- [Alon Muroch (Bloxstake) - 什麼是以太坊 2.0？](https://www.cryptojungle.co.il/alon-moroch-eth2/)
+- [Eilon Aviv (Collider Ventures) - 以太坊 2.0 可能會出現哪些問題](https://www.cryptojungle.co.il/eilon-aviv-eth2-0/)
+- [Eilon Aviv (Collider Ventures) - 為什麼我們需要以太坊 2.0](https://www.cryptojungle.co.il/eilon-aviv-ethereum-2-0/)
+
 ### 義大利語 {#it}
 
 - [Ethereum Italia](https://www.ethereum-italia.it/) - 提供以太坊教育資源、活動和新聞，專注於智慧型合約和區塊鏈技術
@@ -98,9 +117,19 @@ Ethereum.org 已翻譯為 40 多種語言，你可以在我們的語言頁面上
 - [Microsoft Learning（智慧型合約）](https://docs.microsoft.com/it-it/learn/modules/blockchain-solidity-ethereum-smart-contracts/)- 學習用 Solidity 撰寫智慧型合約
 - [Microsoft Learn（去中心化應用程式）](https://docs.microsoft.com/it-it/learn/modules/blockchain-create-ui-decentralized-apps/)- 使用去中心化應用程式建立使用者介面
 
+### 日語 {#ja}
+
+- [日本網路和虛擬貨幣資產交易組織](https://jvcea.or.jp/)
+- [日本虛擬資產商業組織](https://cryptocurrency-association.org/)
+- [區塊鏈開發入門 - 學習 | 微軟文件](https://docs.microsoft.com/ja-jp/learn/paths/ethereum-blockchain-development/) - 該學習路徑將向你介紹以太坊平台上的區塊鏈和發展
+- [精通以太坊](https://www.oreilly.co.jp/books/9784873118963/) - 日語版《精通以太坊》
+- [手把手教你使用 Solidity 和以太坊制訂智慧型合約](https://www.oreilly.co.jp/books/9784873119342/) - 日語版《手把手教你使用 Solidity 和以太坊制訂智慧型合約》
+
 ### 俄語 {#ru}
 
 - [Cyber Academy](https://cyberacademy.dev) -Web3 建造者的教育空間
+- [Forklog](https://forklog.com) - 有關一般加密貨幣、不同區塊鏈的現有技術和未來升級的新聞和教育文章
+- [BeInCrypto](https://ru.beincrypto.com) - 新聞、加密貨幣價格分析以及非技術文章，通俗易懂地講解有關加密貨幣的所有內容
 
 ### 西班牙語 {#es}
 
@@ -122,11 +151,3 @@ Ethereum.org 已翻譯為 40 多種語言，你可以在我們的語言頁面上
 - [Tino Group](https://wiki.tino.org/ethereum-la-gi/) - 以太坊、去中心化應用程式、錢包和常見問題的概述
 - [Tap Chi Bitcoin](https://tapchibitcoin.io/tap-chi/tin-tuc-ethereum-eth) - 以太坊新聞和教育子頁面的網頁平台
 - [Coin68](https://coin68.com/ethereum-tieu-diem/) - 提供以太坊新聞和教育內容的加密貨幣入口網站
-
-### 日語 {#ja}
-
-- [日本網路和虛擬貨幣資產交易組織](https://jvcea.or.jp/)
-- [日本虛擬資產商業組織](https://cryptocurrency-association.org/)
-- [區塊鏈開發入門 - 學習 | 微軟文件](https://docs.microsoft.com/ja-jp/learn/paths/ethereum-blockchain-development/) - 該學習路徑將向你介紹以太坊平台上的區塊鏈和發展
-- [精通以太坊](https://www.oreilly.co.jp/books/9784873118963/) - 日語版《精通以太坊》
-- [手把手教你使用 Solidity 和以太坊制訂智慧型合約](https://www.oreilly.co.jp/books/9784873119342/) - 日語版《手把手教你使用 Solidity 和以太坊制訂智慧型合約》

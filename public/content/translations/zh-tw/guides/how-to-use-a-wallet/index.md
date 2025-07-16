@@ -1,5 +1,6 @@
 ---
 title: 如何使用錢包
+metaTitle: 如何使用以太坊錢包 | 逐步教學
 description: 關於如何發送、接收代幣和連接到 web3 專案的指南。
 lang: zh-tw
 ---
@@ -64,7 +65,7 @@ lang: zh-tw
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>想要學習更多功能嗎？</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     查看我們的其他指南
   </ButtonLink>
 </InfoBanner>

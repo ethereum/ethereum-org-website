@@ -2,7 +2,6 @@
 title: 以太坊管理體系
 description: 以太坊決策方式的簡介。
 lang: zh-tw
-postMergeBannerTranslation: page-upgrades-post-merge-banner-governance-ood
 ---
 
 # 以太坊管理體系的簡介 {#introduction}
@@ -33,7 +32,7 @@ _如果沒人擁有以太坊，如何針對以太坊過去和未來的變動，�
 
 _雖然以太坊管理體系在協定層級為鏈下，但許多建立在以太坊上的使用案例，例如去中心化自治組織，都使用鏈上管理體系。_
 
-<ButtonLink to="/dao/">
+<ButtonLink href="/dao/">
   更多去中心化自治組織相關資訊
 </ButtonLink>
 
@@ -49,7 +48,7 @@ _雖然以太坊管理體系在協定層級為鏈下，但許多建立在以太�
 - **節點運營商**：其執行能廣播區塊及交易的節點，拒絕發現的任何無效的交易或區塊。 [更多節點相關資訊](/developers/docs/nodes-and-clients/)。
 - **以太坊改進提案作者**：其提出以太坊改進提案，提議變更以太坊協定。 [更多以太坊改進提案相關資訊](/eips/)。
 - **驗證者**：其執行能為以太坊區塊鏈新增區塊的節點。
-- **協定開發者**（俗稱 「核心開發者」)：其維護多種不同的以太坊實作 ，例如執行層的 go-ethereum、Nethermind、Besu、Erigon，或共識層的 Prysm、Lighthouse、Nimbus、Teku、Lodestar。 [更多以太坊用戶端相關資訊](/developers/docs/nodes-and-clients/)。
+- **協定開發者**（俗稱 「核心開發者」）：這些人負責維護各種以太坊實作（如執行層的 go-ethereum、Nethermind、Besu、Erigon、Reth；共識層的 Prysm、Lighthouse、Nimbus、Teku、Lodestar、Grandine）。 [更多以太坊用戶端相關資訊](/developers/docs/nodes-and-clients/)。
 
 _注意：任何人都能參與多個組別，例如，協定開發者可以支援以太坊改進提案、執行信標鏈驗證者，並使用去中心化金融應用程式。 但為了清楚交代概念，區分這些相關方是最簡易的作法。_
 
@@ -59,7 +58,7 @@ _注意：任何人都能參與多個組別，例如，協定開發者可以支�
 
 以太坊管理體系採用一個重要的流程，就是**以太坊改進提案 (EIP)**。 以太坊改進提案是規定以太坊潛在的新功能或流程的標準。 以太坊社群中的每一個人都能建立以太坊改進提案。 如果你有興趣編寫 以太坊改進提案或參與同儕審查和/或管理體系，請參閱：
 
-<ButtonLink to="/eips/">
+<ButtonLink href="/eips/">
   更多以太坊改進提案相關資訊
 </ButtonLink>
 
@@ -119,9 +118,9 @@ _注意：任何人都能參與多個組別，例如，協定開發者可以支�
 
 分叉係指網路必須進行重大的技術升級或變更，且這些升級或變更改變協定的「規則」之時。 [以太坊用戶端](/developers/docs/nodes-and-clients/)必須升級自己的軟體，以實作新分叉規則。
 
-實行去中心化自治組織分叉是因為 [2016 DAO 攻擊](https://www.coindesk.com/understanding-dao-hack-journalists)，[去中心化自治組織](/glossary/#dao)合約不夠安全，被駭客榨取超過 360 萬以太幣。 使用分叉後，資金從這份有缺陷的合約轉移到新的合約，當時因駭客攻擊而損失資金的人，後來都拿回了資金。
+實行去中心化自治組織分叉是因為 [2016 DAO 攻擊](https://www.coindesk.com/learn/understanding-the-dao-attack)，[去中心化自治組織](/glossary/#dao)合約不夠安全，被駭客榨取超過 360 萬以太幣。 使用分叉後，資金從這份有缺陷的合約轉移到新的合約，當時因駭客攻擊而損失資金的人，後來都拿回了資金。
 
-這個做法是以太坊社群投票的結果。 任何ETH持有者都能投票藉由交易於一[投票平台](https://web.archive.org/web/20170620030820/http://v1.carbonvote.com/). 許多人支持分叉的決定，投票率超過 85%。
+這個做法是以太坊社群投票的結果。 所有以太幣持有者都能透過[投票平台](https://web.archive.org/web/20170620030820/http://v1.carbonvote.com/)上的交易進行投票。 許多人支持分叉的決定，投票率超過 85%。
 
 要注意的是，雖然協定當時利用分叉轉危為安，但投票在決定分叉時所佔的重要性，仍存在爭議，原因如下：
 
@@ -155,7 +154,7 @@ _注意：任何人都能參與多個組別，例如，協定開發者可以支�
 
 2022 年 9 月 15 日，信標鏈與以太坊執行層完成合併，這項合併當時是[巴黎網路升級](/history/#paris)的一部分。 提案 [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) 從「最後召集」變成「最終確定」，轉變成權益證明機制。
 
-<ButtonLink to="/roadmap/merge/">
+<ButtonLink href="/roadmap/merge/">
   合併案的相關細節
 </ButtonLink>
 

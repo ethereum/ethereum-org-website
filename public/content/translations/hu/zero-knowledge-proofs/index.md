@@ -32,11 +32,11 @@ A korábbi példánál maradva a nemzetiséget egyedül a zero-knowledge bizony�
 
 A bankkártyafizetések sokszor láthatók több fél számára is, beleértve a fizetési szolgáltatót, a bankokat és más érdekelteket (pl. kormányzati hatóságok). Míg a pénzügyi felügyeletnek vannak előnyei az illegális tevékenységek feltárásában, közben aláássa a hétköznapi emberek magánéletét.
 
-A kriptovalutákat arra szánták, hogy a felhasználók privát, egymás közötti (peer-to-peer) tranzakciókat hajthassanak végre. Ugyanakkor a legtöbb kriptovalutás tranzakció nyíltan látható a nyilvános blokkláncokon. A felhasználók személyazonosságai gyakran közvetettek és vagy direkt kapcsolódnak valós azonosságukhoz (pl. a Twitter vagy GitHub profil tartalmazza az ETH címüket), vagy összekapcsolhatók alapvető láncon belüli és kívüli adatok elemzésével.
+A kriptovalutákat arra szánták, hogy a felhasználók privát, egymás közötti (peer-to-peer) tranzakciókat hajthassanak végre. Ugyanakkor a legtöbb kriptovalutás tranzakció nyíltan látható a nyilvános blokkláncokon. A felhasználók személyazonosságai gyakran közvetettek és vagy direkt kapcsolódnak valós azonosságukhoz (pl. a Twitter- vagy GitHub-profil tartalmazza az ETH-címüket), vagy összekapcsolhatók alapvető láncon belüli és kívüli adatok elemzésével.
 
 Vannak bizonyos privát tokenek, hogy teljesen anonim tranzakciókat lehessen végrehajtani. A privát jelleget védő blokkláncok, mint a Zcash és Monero, elfedik a tranzakciók adatait, mint a küldő/fogadó címe, az eszköz típusa, a mennyiség, az időpont.
 
-A nulla tudástechnológiát a protokollba beépítve az adatvédelemre fókuszáló [blokklánc](/glossary/#blockchain) hálózatok lehetővé teszik a [csomópontok](/glossary/#node) számára a tranzakciók érvényesítését anélkül, hogy hozzá kellene férniük a tranzakciós adatokhoz.
+A nullatudás-technológiát a protokollba beépítve az adatvédelemre fókuszáló [blokklánc](/glossary/#blockchain) -hálózatok lehetővé teszik a [csomópontok](/glossary/#node) számára a tranzakciók érvényesítését anélkül, hogy hozzá kellene férniük a tranzakciós adatokhoz. [EIP-7503](https://eips.ethereum.org/EIPS/eip-7503) egy példa a javasolt tervezetre, amely lehetővé teszi a natív privát értékátutalásokat az Ethereum-blokkláncon. Az ilyen javaslatokat azonban nehéz megvalósítani a biztonságot, szabályozásokat és felhasználói élményt érintő aggályok miatt.
 
 **A nulla tudásalapú igazolásokat a nyilvános blokkláncokon folyó tranzakciók anonimizálására is alkalmazzák**. Erre a Tornado Cash a példa, ami egy decentralizált, nem felügyelt szolgáltatás, ami privát tranzakciókat tesz lehetővé az Ethereumon. Ez a megoldás zero-knowledge bizonyítékokat használ, hogy elfedje a tranzakció adatait és pénzügyi titoktartást garantál. Sajnos, mivel ezek tetszőlegesen választható adatvédő eszközök, ezért rögtön illegális tevékenységet sejtetnek. Ennek megoldására a privát jellegű adatok védelme végül alapvetővé kell váljon a nyilvános blokkláncokon.
 
@@ -58,9 +58,9 @@ Az igazolható kalkuláció egy másik alkalmazása a ZK technológiának, hogy 
 
 Az ellenőrizhető számítások **kritikusak a blokkláncok feldolgozási sebességének javításához** a biztonság csökkentése nélkül. Ennek megértéséhez ismerni kell az Ethereum skálázási megoldásai közötti eltéréseket.
 
-[A láncon belüli skálázási megoldások](/developers/docs/scaling/#on-chain-scaling), mint amilyen a párhuzamos futtatás (sharding), nagy mértékű módosítást igényelnek a blokklánc alaprétegén. Ez a megközelítés ugyanakkor nagyon komplex, az bevezetés hibái pedig alááshatják az Ethereum biztonsági modelljét.
+[A láncon belüli skálázási megoldások](/developers/docs/scaling/#onchain-scaling), mint amilyen a sharding, nagy mértékű módosítást igényelnek a blokklánc alaprétegén. Ez a megközelítés ugyanakkor nagyon komplex, az bevezetés hibái pedig alááshatják az Ethereum biztonsági modelljét.
 
-[A láncon kívüli skálázási megoldásokhoz](/developers/docs/scaling/#off-chain-scaling) nem kell az Ethereum protokollt újratervezni. Ehelyett egy kiszervezett kalkulációs modellre támaszkodnak, hogy fejlesszék a tranzakcióátvitelt az Ethereum alaprétegen.
+[A láncon kívüli skálázási megoldásokhoz](/developers/docs/scaling/#offchain-scaling) nem kell az Ethereum-protokollt újratervezni. Ehelyett egy kiszervezett kalkulációs modellre támaszkodnak, hogy fejlesszék a tranzakcióátvitelt az Ethereum alaprétegen.
 
 Ez a gyakorlatban a következőképpen működik:
 
@@ -72,9 +72,9 @@ Az Ethereumnak tehát nem kell feldolgozni semmit, csak az eredményeket kell be
 
 A láncnak szüksége van arra, hogy validálni tudja a láncon kívüli tranzakciókat anélkül, hogy újra feldolgozná azokat, különben a külső feldolgozás értéke elveszik.
 
-Itt jön a képbe az igazolható kalkuláció. Amikor egy csomópont feldolgoz egy tranzakciót az Ethereumon kívül, akkor egy zero-knowledge bizonyítékot ad, hogy bizonyítsa a láncon kívüli végrehajtás helyességét. Ez a bizonyíték ([érvényességi bizonyíték](/glossary/#validity-proof)) garantálja, hogy a tranzakció érvényes, így az Ethereum hozzáadhatja a lánc státuszához – anélkül, hogy bárki kifogásolhatná azt.
+Itt jön a képbe az igazolható kalkuláció. Amikor egy csomópont feldolgoz egy tranzakciót az Ethereumon kívül, akkor egy zero-knowledge, azaz nullatudású bizonyítékot ad, hogy bizonyítsa a láncon kívüli végrehajtás helyességét. Ez a bizonyíték ([érvényességi bizonyíték](/glossary/#validity-proof)) garantálja, hogy a tranzakció érvényes, így az Ethereum hozzáadhatja a lánc státuszához – anélkül, hogy bárki kifogásolhatná azt.
 
-[A zero-knowledge rollupok](/developers/docs/scaling/zk-rollups) és [a validiumok](/developers/docs/scaling/validium/) két olyan láncon kívüli, skálázási megoldás, amely érvényességi bizonyítékot ad, hogy a skálázás biztonságos legyen. Ezek a protokollok ezernyi tranzakciót dolgoznak fel láncon kívül és bizonyítékot adnak az Ethereumnak ellenőrzési célból. Amint a bizonyíték ellenőrzésre kerül, az eredményeket azonnal be lehet tenni a láncba, így az Ethereum több tranzakciót tud kezelni anélkül, hogy az alapréteg számítási kapacitását növelni kellene.
+[A zero-knowledge rollup](/developers/docs/scaling/zk-rollups) és [a validium](/developers/docs/scaling/validium/) két olyan láncon kívüli, skálázási megoldás, amely érvényességi bizonyítékot ad, hogy a skálázás biztonságos legyen. Ezek a protokollok ezernyi tranzakciót dolgoznak fel láncon kívül és bizonyítékot adnak az Ethereumnak ellenőrzési célból. Amint a bizonyíték ellenőrzésre kerül, az eredményeket azonnal be lehet tenni a láncba, így az Ethereum több tranzakciót tud kezelni anélkül, hogy az alapréteg számítási kapacitását növelni kellene.
 
 ### A vesztegetés és összejátszás lehetőségének csökkentése a láncon belüli szavazásnál {#secure-blockchain-voting}
 
@@ -88,7 +88,7 @@ Például a [kvadratikus finanszírozási mechanizmus](https://www.radicalxchang
 
 A láncon belüli szavazás kiteszi a kvadratikus finanszírozást az összejátszás kockázatának: a blokklánctranzakciók nyilvánosak, így a vesztegetők meg tudják nézni, hogy a megvesztegetett hogyan szavazott. Így a kvadratikus finanszírozás nem lesz hatékony módja a forráselosztásnak a közösség aggregált preferenciái alapján.
 
-Szerencsére újabb megoldások, mint amilyen a MACI (Minimum összejátszás-ellenes infrastruktúra/Minimum Anti-Collusion Infrastructure), zero-knowledge bizonyítékokat használ, hogy a láncon belüli szavazás ellenálló legyen a vesztegetéssel és összejátszással szemben. A MACI okosszerződésekből és szkriptekből áll, és lehetővé teszi egy központi adminisztrátor (a koordinátor) számára, hogy aggregálja a szavazatokat és kiszámolja az eredményeket, _anélkül_, hogy felfedné az egyéni szavazatok tartalmát. Még így is bizonyítani lehet, hogy a szavazatokat megfelelően számolták össze, illetve egy adott illető részt vette-e a szavazáson.
+Szerencsére az újabb megoldások, mint amilyen a MACI (Minimum összejátszás-ellenes infrastruktúra/Minimum Anti-Collusion Infrastructure), zero-knowledge bizonyítékokat használ, hogy a láncon belüli szavazás (pl. kvadratikus finanszírozási mechanizmus) ellenálló legyen a vesztegetéssel és összejátszással szemben. A MACI okosszerződésekből és szkriptekből áll, és lehetővé teszi egy központi adminisztrátor (a koordinátor) számára, hogy aggregálja a szavazatokat és kiszámolja az eredményeket, _anélkül_, hogy felfedné az egyéni szavazatok tartalmát. Még így is bizonyítani lehet, hogy a szavazatokat megfelelően számolták össze, illetve egy adott illető részt vette-e a szavazáson.
 
 #### Hogyan működik a MACI a zero-knowledge bizonyítékokkal? {#how-maci-works-with-zk-proofs}
 
@@ -198,9 +198,9 @@ A felhasználók azonban nem tudják ellenőrizni a résztvevők jóhiszeműség
 
 ### A kvantumszámítógép fenyegetései {#quantum-computing-threats}
 
-A ZK-SNARK elliptikus görbe kriptográfiát ([ECDSA](/glossary/#ecdsa)) használ a titkosításhoz. Ez az algoritmus most biztonságos, de a kvantumszámítógépek meg tudják majd törni ezt a biztonsági modellt a jövőben.
+A ZK-SNARK elliptikus görbe kriptográfiát használ a titkosításhoz. Míg az elliptikus görbe diszkrét logaritmus problémája egyelőre megfejthetetlennek tekinthető, a kvantumszámítógépek fejlődése a jövőben megtörheti ezt a biztonsági modellt.
 
-A ZK-STARK immunis a kvantumszámítógépek fenyegetésére, mert ütközésálló hash-függvényeket használ a titkosításra. Ezt az algoritmust nehezebb feltörni a kvantumszámítógépnek, nem úgy, mint a nyilvános-privát kulcs párosát, melyet az elliptikusgörbe-alapú kriptográfia használ.
+A ZK-STARK immunis a kvantumszámítógépek fenyegetésére, mert csak ütközésálló hash-függvényeket használ a biztonsága érdekében. Ezt az algoritmust nehezebb feltörni a kvantumszámítógépnek, nem úgy, mint a nyilvános-privát kulcs párosát, melyet az elliptikusgörbe-alapú kriptográfia használ.
 
 ## További olvasnivaló {#further-reading}
 
@@ -210,3 +210,5 @@ A ZK-STARK immunis a kvantumszámítógépek fenyegetésére, mert ütközésál
 - [zk-SNARK-ok — Egy valós zero-knowledge példa és mélyebb elemzése](https://medium.com/coinmonks/zk-snarks-a-realistic-zero-knowledge-example-and-deep-dive-c5e6eaa7131c) — _Adam Luciano_
 - [ZK-STARK-ok — Igazolható bizalom létrehozása, még a kvantumszámítógépekkel szemben is](https://medium.com/coinmonks/zk-starks-create-verifiable-trust-even-against-quantum-computers-dd9c6a2bb13d) — _Adam Luciano_
 - [Egy hozzávetőleges áttekintés, hogyan lehetségesek a zk-SNARK-ok](https://vitalik.eth.limo/general/2021/01/26/snarks.html) — _Vitalik Buterin_
+- [A Zero-knowledge bizonyítékok (ZKP) megváltoztatják a szuverén identitás területét](https://frankiefab.hashnode.dev/why-zero-knowledge-proofs-zkps-is-a-game-changer-for-self-sovereign-identity) — _Franklin Ohaegbulam_
+- [EIP-7503 magyarázata: Privát átutalások lehetővé tétele az Ethereumon ZK bizonyíték révén](https://research.2077.xyz/eip-7503-zero-knowledge-wormholes-for-private-ethereum-transactions#introduction) — _Emmanuel Awosika_

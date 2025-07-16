@@ -27,7 +27,7 @@ ERC-4626トークンの詳細については、[EIP-4626](https://eips.ethereum.
 #### asset {#asset}
 
 ```solidity
-function asset() public view returns (address)
+function asset() public view returns (address assetTokenAddress)
 ```
 
 この関数は、会計処理、入金、および引出のために当該ボールトが使用される原資トークンのアドレスを返します。
@@ -59,7 +59,7 @@ function convertToAssets(uint256 shares) public view returns (uint256 assets)
 #### maxDeposit {#maxdeposit}
 
 ```solidity
-function maxDeposit(address receiver) public view returns (uint256)
+function maxDeposit(address receiver) public view returns (uint256 maxAssets)
 ```
 
 この関数は、`receiver`が1回の[`deposit`](#deposit)呼び出しで入金できる原資産の上限を返します。
@@ -67,12 +67,12 @@ function maxDeposit(address receiver) public view returns (uint256)
 #### previewDeposit {#previewdeposit}
 
 ```solidity
-function previewDeposit(uint256 assets) public view returns (uint256)
+function previewDeposit(uint256 assets) public view returns (uint256 shares)
 ```
 
 この関数は、入金が現在のブロックに対してどのような影響をもたらすかをシミュレーションします。
 
-#### deposit {#deposit}
+#### 入金 {#deposit}
 
 ```solidity
 function deposit(uint256 assets, address receiver) public returns (uint256 shares)
@@ -83,20 +83,20 @@ function deposit(uint256 assets, address receiver) public returns (uint256 share
 #### maxMint {#maxmint}
 
 ```solidity
-function maxMint(address receiver) public view returns (uint256)
+function maxMint(address receiver) public view returns (uint256 maxShares)
 ```
 
-この関数は、`receiver` による1回の [`mint`](#mint) の呼び出しにより、ミント可能なシェア数の上限を返します。
+この関数は、`receiver`による1回の[`mint`](#mint)の呼び出しにより、ミント可能なシェア数の上限を返します。
 
 #### previewMint {#previewmint}
 
 ```solidity
-function previewMint(uint256 shares) public view returns (uint256)
+function previewMint(uint256 shares) public view returns (uint256 assets)
 ```
 
 この関数は、現在のブロックにおける当該ミントの影響をシミュレーションします。
 
-#### mint {#mint}
+#### mint(ミント) {#mint}
 
 ```solidity
 function mint(uint256 shares, address receiver) public returns (uint256 assets)
@@ -107,7 +107,7 @@ function mint(uint256 shares, address receiver) public returns (uint256 assets)
 #### maxWithdraw {#maxwithdraw}
 
 ```solidity
-function maxWithdraw(address owner) public view returns (uint256)
+function maxWithdraw(address owner) public view returns (uint256 maxAssets)
 ```
 
 この関数は、1回の[`withdraw`](#withdraw)呼び出しにより、`owner`残高から引き出し可能な原資産アセットの上限を返します。
@@ -115,12 +115,12 @@ function maxWithdraw(address owner) public view returns (uint256)
 #### previewWithdraw {#previewwithdraw}
 
 ```solidity
-function previewWithdraw(uint256 assets) public view returns (uint256)
+function previewWithdraw(uint256 assets) public view returns (uint256 shares)
 ```
 
 この関数は、当該引き出しが現在のブロックに与える影響をシミュレーションします。
 
-#### withdraw {#withdraw}
+#### 引き出し {#withdraw}
 
 ```solidity
 function withdraw(uint256 assets, address receiver, address owner) public returns (uint256 shares)
@@ -131,7 +131,7 @@ function withdraw(uint256 assets, address receiver, address owner) public return
 #### maxRedeem {#maxredeem}
 
 ```solidity
-function maxRedeem(address owner) public view returns (uint256)
+function maxRedeem(address owner) public view returns (uint256 maxShares)
 ```
 
 この関数は、[`redeem`](#redeem)の呼び出しにより、`owner`の残高から受け取ることができるシェアの上限を返します。
@@ -139,7 +139,7 @@ function maxRedeem(address owner) public view returns (uint256)
 #### previewRedeem {#previewredeem}
 
 ```solidity
-function previewRedeem(uint256 shares) public view returns (uint256)
+function previewRedeem(uint256 shares) public view returns (uint256 assets)
 ```
 
 この関数は、シェアの受け取りが現在のブロックに与える影響をシミュレーションします。
@@ -168,6 +168,10 @@ function balanceOf(address owner) public view returns (uint256)
 
 `owner`が現在ボールトで所有しているシェアの総数を返します。
 
+### インターフェースのマップ {#mapOfTheInterface}
+
+![ERC-4626インターフェースのマップ](./map-of-erc-4626.png)
+
 ### イベント {#events}
 
 #### 入金イベント
@@ -187,7 +191,7 @@ event Deposit(
 
 #### 出金イベント
 
-`redeem` あるいは [`withdraw`](#withdraw)メソッドにより、預金者がボールトからシェアを引き出す際に、**必ず**発行しなければなりません。
+[`redeem`](#redeem) あるいは [`withdraw`](#withdraw)メソッドにより、預金者がボールトからシェアを引き出す際に、**必ず**発行しなければなりません。
 
 ```solidity
 event Withdraw(

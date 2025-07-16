@@ -7,7 +7,6 @@ tags:
   - "solidity"
   - "智能合约"
   - "存储"
-  - "truffle"
 skill: intermediate
 published: 2020-06-26
 source: soliditydeveloper.com
@@ -23,16 +22,6 @@ sourceUrl: https://soliditydeveloper.com/max-contract-size
 引入这一限制是为了防止拒绝服务 (DOS) 攻击。 任何对合约的调用从矿工费上来说都是相对便宜的。 然而，根据被调用合约代码的大小（从磁盘读取代码、预处理代码、将数据添加到 Merkle 证明），合约调用对以太坊节点的影响会不成比例地增加。 每当您出现这样的情况，攻击者只需要很少的资源就能给别人造成大量的工作，您就有可能遭受 DOS 攻击。
 
 最初，这不是什么大问题，因为一个自然合约大小限制是区块燃料限制。 显然，合约必须和其所有字节码一起部署在交易内。 如果只将单个交易添加到区块中，可能会用完所有燃料，而燃料并非无限。 [伦敦升级](/history/#london)后，区块燃料限制已能够根据网络需求在 15M 和 30M 单位之间变动。
-
-## 开始战斗吧！ {#taking-on-the-fight}
-
-不幸的是，没有简单的方法来获得合约的字节码大小。 如果您使用 Truffle，有一个很好的工具可以帮助您：那就是 [truffle-contract-size](https://github.com/IoBuilders/truffle-contract-size) 插件。
-
-1. `npm install truffle-contract-size`
-2. 将插件添加到 _truffle-config.js_：`plugins: ["truffle-contract-size"]`
-3. 运行 `truffle run contract-size`
-
-这将帮助您了解您的更改对合约总大小有何影响。
 
 在下文中，我们将根据其潜在的影响顺序来研究一些方法。 从减肥的角度来谈一谈。 对于一个人来说，要达到他们的目标体重（在我们的例子中是 24 kb），最好的策略是首先关注影响较大的方法。 在大多数情况下，只要调整您的饮食就能达到目标，但有时您需要做得更多一些。 然后您可以增加一些锻炼（中等影响）或甚至补充剂（小影响）。
 

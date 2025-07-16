@@ -26,7 +26,7 @@ lang: zh-tw
 
 因此，即使惡意去中心化應用程式提交一個無窮迴圈，交易將最終會用盡以太幣並終止，讓網路能回復正常。
 
-人們[經常將以太坊與以太幣](https://www.reuters.com/article/us-crypto-currencies-lending-insight-idUSKBN25M0GP#:~:text=price%20of%20ethereum)[](https://abcnews.go.com/Business/bitcoin-slumps-week-low-amid-renewed-worries-chinese/story?id=78399845#:~:text=cryptocurrencies%20including%20ethereum)[混為一談](https://www.cnn.com/2021/03/14/tech/nft-art-buying/index.html#:~:text=price%20of%20ethereum) — 當提到「以太坊價格」時，他們指的是以太幣的市價。
+人們[經常將以太坊與以太幣混為一談](https://abcnews.go.com/Business/bitcoin-slumps-week-low-amid-renewed-worries-chinese/story?id=78399845) — 當提到「以太坊的價格」時，他們指的是以太幣的市價。
 
 ## 鑄造以太幣 {#minting-ether}
 

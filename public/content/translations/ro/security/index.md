@@ -70,7 +70,7 @@ Utilizarea **Autentificării cu doi factori (2FA)**  oferă un *factor de sec
 
 <InfoBanner emoji=":lock:">
   <div>
-    Observaţie: Utilizarea 2FA bazată pe SMS este vulnerabilă la 
+    Observaţie: Utilizarea 2FA bazată pe SMS este vulnerabilă la
     <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">
      piratarea SIM (SIM jacking)
     </a>
@@ -110,11 +110,11 @@ Extensiile de browser, cum ar fi extensiile Chrome sau programele de completare 
 
 Unul dintre motivele principale pentru care oamenii sunt înșelați cu cripto este în general lipsa de înțelegere. De exemplu, dacă nu înțelegeți că rețeaua Ethereum este descentralizată și că nu este deținută de nimeni, atunci este ușor să cădeți pradă cuiva care pretinde a fi un agent de servicii pentru clienți care promite să vă returneze ETH-ul pierdut în schimbul cheilor dvs. private. Informați-vă espre modul cum funcționează Ethereum, merită să vă investiţi.
 
-<DocLink to="/what-is-ethereum/">
+<DocLink href="/what-is-ethereum/">
   Ce este Ethereum?
 </DocLink>
 
-<DocLink to="/eth/">
+<DocLink href="/eth/">
   Ce este ether-ul?
 </DocLink>
 <Divider />
@@ -127,7 +127,7 @@ Unul dintre motivele principale pentru care oamenii sunt înșelați cu cripto e
 
 Cheia privată a portofelului dvs. acționează ca parolă pentru portofelul Ethereum. Acesta este singurul lucru care oprește pe cineva care știe adresa portofelului dvs. să vă golească toate activele din cont!
 
-<DocLink to="/wallets/">
+<DocLink href="/wallets/">
   Ce este un portofel Ethereum?
 </DocLink>
 
@@ -274,7 +274,7 @@ Escrocherile Airdrop implică un proiect de escrocherie care lansează un activ 
 ### Securitatea cripto {#reading-crypto-security}
 
 - [Protejarea dvs. și a fondurilor dvs.](https://support.mycrypto.com/staying-safe/protecting-yourself-and-your-funds) - _MyCrypto_
-- [4 moduri de a rămâne în siguranță în cripto](https://www.coindesk.com/tech/2021/04/20/4-ways-to-stay-safe-in-crypto/) - _CoinDesk_
+- [4 moduri de a rămâne în siguranță în cripto](https://www.coindesk.com/learn/4-ways-to-stay-safe-in-crypto/) - _CoinDesk_
 - [Ghidul de securitate pentru începători și pentru oamenii inteligenți](https://medium.com/mycrypto/mycryptos-security-guide-for-dummies-and-smart-people-too-ab178299c82e) - _MyCrypto_
 - [Securitate cripto: Parole și autentificare](https://www.youtube.com/watch?v=m8jlnZuV1i4) - _Andreas M. Antonopoulos_
 

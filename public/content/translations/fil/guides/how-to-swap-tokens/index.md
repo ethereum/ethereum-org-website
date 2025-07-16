@@ -51,7 +51,7 @@ Awtomatiko mong matatanggap ang mga na-swap na token sa wallet mo kapag naiprose
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Gusto mong magbasa pa?</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     Tingnan ang iba pa naming gabay
   </ButtonLink>
 </InfoBanner>

@@ -36,7 +36,7 @@ lang: zh
 
 **以太币 (ETH)** 是以太坊上的原生加密货币。 以太币的目的是允许计算市场化。 这种市场为参与者提供了一种经济激励，以验证并执行交易请求，为网络提供计算资源。
 
-任何广播交易请求的参与者还必须向网络提供一定数量的以太币作为奖金。 网络将把这种奖金奖励给最终验证交易、执行交易、将其提交到区块链并广播到网络的任何人。
+任何广播交易请求的参与者还必须向网络提供一定数量的以太币作为奖金。 网络将燃烧部分奖金，并将剩余部分奖励给最终验证、执行交易，将其提交到区块链并广播到网络的任何人。
 
 支付的以太币数量对应于进行计算所需的资源。 这类奖励也可以阻止恶意参与者通过请求执行无穷计算或其他资源密集型脚本来故意堵塞网络，因为这些参与者必须为计算资源付费。
 
@@ -107,7 +107,7 @@ lang: zh
 ## 延伸阅读 {#further-reading}
 
 - [以太坊白皮书](/whitepaper/)
-- [那么，以太坊是如何工作的？](https://www.preethikasireddy.com/post/how-does-ethereum-work-anyway) - _Preethi Kasireddy_（**注意**此资源仍然有价值，但请注意它早于[合并](/roadmap/merge)，因此仍然引用以太坊的工作量证明机制 - 实际上现在使用[权益证明](/developers/docs/consensus-mechanisms/pos)来保护以太坊的安全）
+- [那么，以太坊究竟是如何工作的？](https://medium.com/@preethikasireddy/how-does-ethereum-work-anyway-22d1df506369) - _Preethi Kasireddy_（**注意**此资源仍然有价值，但请注意它早于[合并](/roadmap/merge)，因此仍然引用以太坊的工作量证明机制 - 实际上以太坊现在使用的是[权益证明](/developers/docs/consensus-mechanisms/pos)来保障安全）
 
 _还有哪些社区资源对你有所帮助？ 请编辑本页面并添加！_
 

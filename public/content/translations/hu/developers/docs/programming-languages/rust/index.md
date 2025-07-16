@@ -22,7 +22,6 @@ Szükséged van egy méginkább kezdőknek szóló alapozóra? Tekintse meg az [
 
 ## Cikkek kezdőknek {#beginner-articles}
 
-- [Ethereum kliens kiválasztása](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
 - [A Rust Ethereum-kliens](https://openethereum.github.io/) \* **Felhívjuk figyelmét, hogy az OpenEthereum [támogatása megszűnt](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd), karbantartása nem biztosított.** Használja körültekintően, és inkább térjen át másik kliensimplementációra.
 - [Tranzakció küldése Ethereumra Rust használatával](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/sending-ethereum-transactions-with-rust/)
 - [Részletes útmutató arról, hogyan lehet szerződéseket írni Rust Wasm nyelven Kovanra](https://github.com/paritytech/pwasm-tutorial)
@@ -46,11 +45,13 @@ Szükséged van egy méginkább kezdőknek szóló alapozóra? Tekintse meg az [
 - [Solaris](https://github.com/paritytech/sol-rs) – _Solidity okosszerződések egységtesztelésének irányítása a natív Parity kliens EVM használatával._
 - [SputnikVM](https://github.com/rust-blockchain/evm) – _Rust Ethereum virtuálisgép-implementáció_
 - [Wavelet](https://wavelet.perlin.net/docs/smart-contracts) – _Wavelet okosszerződés Rust-ban_
-- [Foundry](https://github.com/gakonst/foundry) – _Eszközkészlet az Ethereum alkalmazások fejlesztéséhez_
+- [Foundry](https://github.com/foundry-rs/foundry) – _Eszközkészlet az Ethereum-alkalmazások fejlesztéséhez_
+- [Alloy](https://alloy.rs) - _Magas teljesítményű, alaposan tesztelt és dokumentált könyvtárak az Ethereummal és más EVM-alapú lánccal való interakcióhoz._
 - [Ethers_rs](https://github.com/gakonst/ethers-rs) – _Ethereum könyvtár- és tárcaimplementáció_
 - [SewUp](https://github.com/second-state/SewUp) – _Egy könyvtár, amely segít az Ethereum webassembly szerződés Rust-ban való megépítésében, mintha egy általános backend lenne_
 - [Substreams](https://github.com/streamingfast/substreams) – _Párhuzamos blokkláncadat-indexálási technológia_
-- [Reth](https://github.com/paradigmxyz/reth) A Rust Ethereum rövidítése, ami egy új teljescsomópont-implementáció az Ethereumon
+- [Reth](https://github.com/paradigmxyz/reth) A Reth (Rust Ethereum rövidítése) egy új teljescsomópont-implementáció az Ethereumon
+- [Awesome Ethereum Rust](https://github.com/Vid201/awesome-ethereum-rust) – _Az Ethereum ökoszisztéma Rust nyelven írt projektjeinek gyűjteménye_
 
 Még több anyagot keresel? Tekintse meg az [ethereum.org/developers](/developers/) oldalt.
 

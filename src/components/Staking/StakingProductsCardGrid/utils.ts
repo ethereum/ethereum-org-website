@@ -16,8 +16,8 @@ const scoreBattleTested = (product: Product): 2 | 1 | 0 => {
   return product.battleTested === FlagType.VALID
     ? 2
     : product.battleTested === FlagType.CAUTION
-    ? 1
-    : 0
+      ? 1
+      : 0
 }
 
 const scoreTrustless = (product: Product): 1 | 0 => {

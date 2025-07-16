@@ -28,16 +28,6 @@ _Potresti_ [eseguire un nodo](/developers/docs/nodes-and-clients/#running-your-o
 
 **Nota**: la maggior parte dei [framework di sviluppo](/developers/docs/frameworks/) include una rete di sviluppo incorporata. Raccomandiamo di iniziare con un framework per [impostare l'ambiente di sviluppo locale](/developers/local-environment/).
 
-### Ganache {#ganache}
-
-Imposta rapidamente una blockchain Ethereum personale che permette di eseguire test, comandi e ispezionare lo stato durante il controllo del funzionamento della catena.
-
-Ganache offre sia un'applicazione desktop (Ganache UI) che uno strumento da riga di comando (`ganache-cli`). Fa parte della suite di strumenti Truffle.
-
-- [Sito Web](https://www.trufflesuite.com/ganache)
-- [GitHub](https://github.com/trufflesuite/ganache)
-- [Documentazione](https://www.trufflesuite.com/docs/ganache/overview)
-
 ### Rete Hardhat {#hardhat-network}
 
 Rete Ethereum locale progettata per lo sviluppo. Permette di distribuire contratti, eseguire test e il debug del codice.
@@ -51,24 +41,25 @@ La rete Hardhat è incorporata in Hardhat, un ambiente di sviluppo Ethereum prof
 
 Alcuni client del consenso sono dotati di strumenti integrati per avviare Beacon Chain locali per scopi di test. Sono disponibili le istruzioni per Lighthouse, Nimbus e Lodestar:
 
-- [Testnet locale usando Lodestar](https://chainsafe.github.io/lodestar/usage/local/)
+- [Testnet locale usando Lodestar](https://chainsafe.github.io/lodestar/contribution/advanced-topics/setting-up-a-testnet#post-merge-local-testnet/)
 - [Testnet locale usando Lighthouse](https://lighthouse-book.sigmaprime.io/setup.html#local-testnets)
 - [Testnet locale usando Nimbus](https://github.com/status-im/nimbus-eth1/blob/master/fluffy/docs/local_testnet.md)
 
 ### Catene di prova pubbliche di Ethereum {#public-beacon-testchains}
 
-Esistono anche due implementazioni di prova pubbliche e mantenute di Ethereum: Goerli e Sepolia. La rete di prova consigliata con supporto a lungo termine è Goerli, su cui tutti sono liberi di validare. Anche Sepolia, una catena più nuova e ridotta, dovrebbe essere mantenuta nel futuro prossimo, con una serie di validatori con permessi (a significare che non vi è accesso generale ai nuovi validatori su questa rete di prova). La catena Ropsten dovrebbe diventare obsoleta nel 4° trimestre 2022 e la catena Rinkeby dovrebbe diventare obsoleta tra il 2° e il 3° trimestre del 2023.
+Esistono anche due implementazioni di prova pubbliche e mantenute di Ethereum: Sepolia e Hoodi. Sepolia è la rete di prova standard consigliata per lo sviluppo di applicazioni, con un insieme di validatori chiuso per una sincronizzazione rapida. Hoodi è una rete di prova per la validazione e lo staking, che utilizza un insieme di validatori aperto e permette potenzialmente a chiunque di validare.
 
-- [Launchpad di staking di Goerli](https://goerli.launchpad.ethereum.org/)
-- [Annuncio di Deprecazione di Ropsten, Rinkeby e Kiln](https://blog.ethereum.org/2022/06/21/testnet-deprecation)
+- [Launchpad di staking di Hoodi](https://hoodi.launchpad.ethereum.org/en/)
+- [Sito Web di Sepolia](https://sepolia.dev/)
+- [Sito Web di Hoodi](https://hoodi.ethpandaops.io/)
 
 ### Pacchetto Ethereum di Kurtosis {#kurtosis}
 
 Kurtosis è un sistema di produzione per ambienti di prova multi-contenitore che consente agli sviluppatori di avviare localmente istanze riproducibili di reti blockchain.
 
-Il pacchetto Ethereum di Kurtosis istanzia localmente una rete di prova di Ethereum containerizzata e parametrizzabile, con il supporto di diversi client del Livello di esecuzione (EL) e del Livello di consenso (CL) e un numero n di nodi. Kurtosis gestisce elegantemente tutte le mappature delle porte locali e le connessioni ai servizi per facilitare la prototipazione e il testing di dApp e contratti intelligenti.
+Il pacchetto Kurtosis di Ethereum è utilizzabile per istanziare rapidamente una rete di prova di Ethereum parametrizzabile, altamente scalabile e privata, su Docker o Kubernetes. Il pacchetto supporta tutti i clienti principali dei Livelli d'Esecuzione (EL) e del Consenso (CL). Kurtosis gestisce comodamente tutte le mappature delle porte locali e le connessioni del servizio per una rete rappresentativa da utilizzare nei flussi di lavoro di convalida e test, relativamente all'infrastruttura principale di Ethereum.
 
-- [Pacchetto rete Ethereum](https://github.com/kurtosis-tech/eth-network-package)
+- [Pacchetto rete Ethereum](https://github.com/kurtosis-tech/ethereum-package)
 - [Sito Web](https://www.kurtosis.com/)
 - [GitHub](https://github.com/kurtosis-tech/kurtosis)
 - [Documentazione](https://docs.kurtosis.com/)

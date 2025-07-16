@@ -44,11 +44,18 @@
   "page-community-try-ethereum": "試著自己登上以太坊",
   "page-community-upcoming-events-no-events": "我們不知道有任何即將開展的活動。你是否知曉其中一個？",
   "page-community-upcoming-events-load-more": "載入更多",
+  "page-community-upcoming-events-view-event": "檢視活動",
   "page-community-why-get-involved-title": "為何加入我們？",
   "page-community-why-get-involved-card-1-title": "尋找你的部落",
   "page-community-why-get-involved-card-1-description": "每個人都可以加入社群。尋找並聯系與你有相同想法的人，一起討論、衡量和推崇以太坊。",
   "page-community-why-get-involved-card-2-title": "賺取收入",
   "page-community-why-get-involved-card-2-description": "所有人都有帳單要付。以太坊可幫助你找到一份有意義的工作，而且能夠從中悠餘地自力更生。",
   "page-community-why-get-involved-card-3-title": "做出改變吧",
-  "page-community-why-get-involved-card-3-description": "參與以太坊的平台會讓你成為一名科技領域的積極利益相關方，對數百萬人造成正向影響。"
+  "page-community-why-get-involved-card-3-description": "參與以太坊的平台會讓你成為一名科技領域的積極利益相關方，對數百萬人造成正向影響。",
+  "page-index-internet-image-alt": "插圖：未來電腦的設定，藉由以太坊水晶運作。",
+  "page-index-get-started-image-alt": "插圖：一個人正在使用電腦。",
+  "page-index-get-started-wallet-image-alt": "插圖：身體為保險箱之機器人，象徵以太坊錢包。",
+  "page-index-get-started-eth-image-alt": "插圖：人群對以太幣 (ETH) 字形讚歎不已。",
+  "page-index-get-started-dapps-image-alt": "插圖：狗狗正在使用電腦。",
+  "page-index-get-started-devs-image-alt": "插圖：用手將樂高積木組成以太坊標誌。"
 }

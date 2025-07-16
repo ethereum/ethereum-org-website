@@ -1,15 +1,19 @@
+"use client"
+
 import { useEffect, useState } from "react"
-import { useRouter } from "next/router"
-import { useTranslation } from "next-i18next"
-import { Flex, Stack, Text } from "@chakra-ui/react"
+import { useLocale } from "next-intl"
 
 import type { Lang } from "@/lib/types"
+
+import { Flex, Stack } from "@/components/ui/flex"
 
 import { getLocaleForNumberFormat } from "@/lib/utils/translations"
 
 import NetworkUpgradeSummaryData from "../../data/NetworkUpgradeSummaryData"
 import Emoji from "../Emoji"
-import InlineLink from "../Link"
+import InlineLink from "../ui/Link"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 type NetworkUpgradeSummaryProps = {
   name: string
@@ -17,7 +21,7 @@ type NetworkUpgradeSummaryProps = {
 
 const NetworkUpgradeSummary = ({ name }: NetworkUpgradeSummaryProps) => {
   const [formattedUTC, setFormattedUTC] = useState("")
-  const { locale } = useRouter()
+  const locale = useLocale()
   const localeForStatsBoxNumbers = getLocaleForNumberFormat(locale as Lang)
   const { t } = useTranslation("page-history")
 
@@ -48,8 +52,8 @@ const NetworkUpgradeSummary = ({ name }: NetworkUpgradeSummaryProps) => {
 
   const blockTypeTranslation = (translationKey, explorerUrl, number) => {
     return (
-      <Flex whiteSpace="pre-wrap">
-        <Emoji fontSize="sm" me={2} text=":bricks:" />
+      <Flex className="whitespace-pre-wrap">
+        <Emoji className="me-2 text-sm" text=":bricks:" />
         {t(translationKey)}:{" "}
         <InlineLink href={`${explorerUrl}${number}`}>
           {new Intl.NumberFormat(localeForStatsBoxNumbers).format(number)}
@@ -62,8 +66,8 @@ const NetworkUpgradeSummary = ({ name }: NetworkUpgradeSummaryProps) => {
     <Stack>
       {dateTimeAsString && (
         <Flex>
-          <Emoji fontSize="sm" me={2} text=":calendar:" />
-          <Text fontFamily="monospace">{formattedUTC}</Text>
+          <Emoji className="me-2 text-sm" text=":calendar:" />
+          <p className="font-monospace">{formattedUTC}</p>
         </Flex>
       )}
       {blockNumber &&
@@ -86,7 +90,7 @@ const NetworkUpgradeSummary = ({ name }: NetworkUpgradeSummaryProps) => {
         )}
       {ethPriceInUSD && (
         <Flex>
-          <Emoji fontSize="sm" me={2} text=":money_bag:" />
+          <Emoji className="me-2 text-sm" text=":money_bag:" />
           {t("page-history:page-history-eth-price")}:{" "}
           {new Intl.NumberFormat(localeForStatsBoxNumbers, {
             style: "currency",
@@ -96,7 +100,7 @@ const NetworkUpgradeSummary = ({ name }: NetworkUpgradeSummaryProps) => {
       )}
       {waybackLink && (
         <Flex>
-          <Emoji fontSize="sm" me={2} text=":desktop_computer:" />
+          <Emoji className="me-2 text-sm" text=":desktop_computer:" />
           <InlineLink href={waybackLink}>
             {t("page-history:page-history-ethereum-org-wayback")}
           </InlineLink>

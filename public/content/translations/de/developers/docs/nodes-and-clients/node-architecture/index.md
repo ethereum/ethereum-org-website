@@ -12,8 +12,6 @@ Das folgende Diagramm zeigt die Verbindung zwischen zwei Ethereum-Clients. Die b
 
 ![](node-architecture-text-background.png)
 
-_Dieses Bild wurde von geth.ethereum.org geliehen und verwendet das Geth-Logo, um die Ausführungsclients zu repräsentieren. Es gibt andere Optionen für den Ausführungsclient, z. B. Erigon, Nethermind und Besu_
-
 Damit diese Zwei-Client-Struktur funktioniert, müssen Konsensclients in der Lage sein Transaktionsbündel an den Ausführungsclient weiterzuleiten. Dadurch das die Transaktionen lokal ausgeführt werden, kann der Client validieren, dass die Transaktionen keine der Ethereum-Richtlinien verletzen und dass die vorgeschlagene Aktualisierung des Ethereum-Zustands korrekt ist. Wenn der Knoten als Blockerzeuger ausgewählt wird, muss der Konsensclient ebenfalls in der Lage sein, ein Bündel von Transaktionen von Geth anzufragen, damit diese Teil des neuen Blocks werden können. Er muss sie ausführen können, um den globalen Zustand zu aktualisieren. Diese Kommunikation zwischen den Clients wird durch eine lokale RPC-Verbindung unter Verwendung der [Engine API](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md) verarbeitet.
 
 ## Was macht der Ausführungsclient? {#execution-client}
@@ -39,7 +37,7 @@ Der Konsensclient nimmt nicht an Attestierungen oder dem Vorschlagen von Blöcke
 
 Knotenbetreiber können Validatoren zu ihren Konsensclients hinzufügen, indem sie 32 ETH in den Einzahlungsvertrag einzahlen. Der Validatorclient kommt gebündelt mit dem Konsensclient und kann zu jeder Zeit einem Knoten hinzugefügt werden. Der Validator bearbeitet Attestierungen und Blockvorschläge. Sie ermöglichen einem Knoten, Prämien zu sammeln oder ETH über Strafen oder Slashing zu verlieren. Durch das Betreiben der Validatorensoftware kann ein Knoten ausgewählt werden, um einen neuen Block vorzuschlagen.
 
-[Mehr über Staking](/staking/).
+[Mehr über Staking](/abstecken/).
 
 ## Vergleich der Knotenkomponenten {#node-comparison}
 

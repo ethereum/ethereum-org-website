@@ -10,10 +10,9 @@ Kullanıcıların kendilerinden emin bir tarzda Ethereum'da yön bulabilmeleri i
 
 Herkes, ethererum.org'a bir cüzdan önermekte özgürdür. Gözden kaçırdığımız bir cüzdan varsa lütfen bildirin!
 
-Herkes yeni bir cüzdan önermekte özgürdür. Cüzdanlar şu anda aşağıdakilerde listeleniyor:
+Cüzdanlar şu anda aşağıdakilerde listeleniyor:
 
 - [ethereum.org/wallets/find-wallet/](/wallets/find-wallet/)
-- [ethereum.org/wallets/](/wallets/)
 
 Ethereum'da cüzdanlar çok hızlı bir biçimde değişiyor. Ethereum.org'da değerlendirilmek üzere adil bir çerçeve oluşturmaya çalıştık, ancak listeleme kriterleri zamanla değişecek ve gelişecektir.
 
@@ -26,6 +25,12 @@ Ethereum'da cüzdanlar çok hızlı bir biçimde değişiyor. Ethereum.org'da de
 - **Aktif bir ekibin üzerinde çalışmış olması** - bu, kalitenin sağlanmasına ve bir kullanıcının sorguları için destek almasına yardımcı olur.
 - **Dürüst ve doğru listeleme bilgileri**: Projelerden önerilen tüm listelemelerin dürüst ve doğru bilgilerle gelmesi beklenir. Ürününüzü, örneğin "açık kaynaklı" değilken öyleymiş gibi duyurarak listeleme bilgilerini tahrif eden ürünler kaldırılacaktır.
 - **İletişim noktası** - Cüzdan için bir iletişim noktası, değişiklikler yapıldığında doğru bilgiyi elde etmemize büyük ölçüde yardımcı olacaktır. Bu, geleceğe ait bilgileri toplarken ethereum.org'u güncelleme sürecini yönetilebilir halde tutacaktır.
+- **EIP-1559 (tip 2) işlemleri** - Ethereum ana ağındaki işlemler için cüzdanınız EIP-1559 (tip 2) işlemleri desteklemek zorundadır.
+- **İyi kullanıcı deneyimi** - UX öznel bir kavram olsa da, çekirdek ekip üyelerinizden birkaçının ürünü test edip kullanımında zorluk çekmesi halinde cüzdanı reddetme hakkımızı saklı tutarız ve bunun yerine iyileştirmeye yönelik faydalı önerilerde bulunuruz. Bu, çoğunluğu yeni başlayanlardan oluşan kullanıcı tabanımızı korumak için yapılır.
+
+### Ürün kaldırma {#product-removals}
+
+- **Güncellenmiş bilgi** - Cüzdan sağlayıcıları, sağladıkları bilgilerin geçerli ve güncel olmasını sağlamak için her 6 ayda bir cüzdan bilgilerini yeniden göndermekle yükümlüdür (ürünlerinde herhangi bir değişiklik olmasa bile). Eğer ürün ekibi bunu yapmazsa, ethereum.org projeyi sayfasından kaldırabilir.
 
 ### Diğer kriterler: olursa iyi olan şeyler {#the-nice-to-haves}
 
@@ -45,7 +50,6 @@ Ethereum'da cüzdanlar çok hızlı bir biçimde değişiyor. Ethereum.org'da de
 - **Gaz ücretlerini özelleştirme** - cüzdanınız, kullanıcılara işlem gaz ücretlerini (ana ücret, öncelik ücreti, azami ücret) düzenleme imkanı tanır.
 - **ENS desteği** - cüzdanınız, kullanıcıların ENS isimlerine işlem göndermelerine olanak sağlar.
 - **ERC-20 desteği** - cüzdanınız, kullanıcılara ERC-20 jeton sözleşmelerini içe aktarma veya otomatik sorgulama imkanı sunar ve ERC-20 jetonlarını görüntüler.
-- **EIP-1559 (tip 2) işlemleri** - cüzdanınız, EIP-1559 (tip 2) işlemlerini destekler.
 - **Kripto satın alımı** - cüzdanınız, kullanıcıların doğrudan kripto satın alımını ve kriptoya alışmalarını destekler.
 - **İtibari para için satış** - cüzdanınız, kullanıcıların itibari para için satmalarını ve doğrudan bir karta veya banka hesabına çekim yapmalarını destekler.
 - **Çoklu imza** - cüzdanınız, bir işlemi imzalamak için çoklu imzayı destekler.
@@ -57,7 +61,7 @@ Ethereum'da cüzdanlar çok hızlı bir biçimde değişiyor. Ethereum.org'da de
 
 Ethereum.org'a bir cüzdan eklemek istiyorsanız GitHub'da bir konu oluşturun.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml">
+<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml">
   Bir konu oluştur
 </ButtonLink>
 
@@ -65,11 +69,12 @@ Ethereum.org'a bir cüzdan eklemek istiyorsanız GitHub'da bir konu oluşturun.
 
 Ethereum'un akıcı yapısında olduğu gibi, ekipler ve ürünler gelir ve gider; yenilikler her gün gerçekleşir, bu nedenle şu amaçlarla içeriğimizin rutin kontrollerini gerçekleştireceğiz:
 
-- listelenen tüm cüzdan ve merkeziyetsiz uygulamaların kriterlerimizi hâlâ karşıladığından emin olmak
+- listelenen tüm cüzdan ve merkeziyetsiz uygulamaların hala kriterlerimizi karşıladığından emin olmak
 - şu anda listelenenlerden daha fazla sayıda kriterimizi karşılayan önerilmiş ürünler olmadığını doğrulamak
 
-Ethereum, açık kaynak topluluğu tarafından yönetilir ve onu güncel tutmaları için topluluğa güveniriz. Listelenmiş cüzdanlar ile ilgili herhangi bir bilginin güncelleştirilmesi gerektiğini fark ettiyseniz lütfen [bir konu açın](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml) veya [çekme isteği oluşturun](https://github.com/ethereum/ethereum-org-website/pulls)!
+ethereum.org açık kaynak topluluğu tarafından yönetilmektedir ve güncel tutulması konusunda topluluğa güveniriz. Listelenmiş cüzdanlar ile ilgili herhangi bir bilginin güncelleştirilmesi gerektiğini fark ettiyseniz lütfen [bir konu açın](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml) veya [çekme isteği oluşturun](https://github.com/ethereum/ethereum-org-website/pulls)!
 
-## Kullanım Koşulları {#terms-of-use}
+
+## Kullanım koşulları {#terms-of-use}
 
 Ayrıca lütfen [kullanım koşullarımıza](/terms-of-use/) başvurun. Ethereum.org'daki bilgiler, yalnızca genel bilgi amaçlı verilmektedir.

@@ -28,16 +28,6 @@ _Mógłbyś_ [uruchomić węzeł](/developers/docs/nodes-and-clients/#running-yo
 
 **Uwaga**: większość [frameworków programistycznych](/developers/docs/frameworks/) zawiera wbudowaną sieć programistyczną. Zalecamy zaczynać od frameworka, aby [skonfigurować lokalne środowisko programistyczne](/developers/local-environment/).
 
-### Ganache {#ganache}
-
-Szybko odpal osobisty blockchain Ethereum, który możesz wykorzystać do uruchamiania testów, wykonywania poleceń i sprawdzania stanu, kontrolując jednocześnie sposób działania łańcucha.
-
-Ganache dostarcza zarówno aplikację stacjonarną (Ganache UI), jak i narzędzie wiersza poleceń (`ganache-cli`). Jest to część zestawu narzędzi Truffle.
-
-- [Strona internetowa](https://www.trufflesuite.com/ganache)
-- [GitHub](https://github.com/trufflesuite/ganache)
-- [Dokumentacja](https://www.trufflesuite.com/docs/ganache/overview)
-
 ### Sieć Hardhat {#hardhat-network}
 
 Lokalna sieć Ethereum zaprojektowana pod kątem [rac programistycznych. Pozwala na wdrożenie kontraktów, wykonanie testów i debugowanie kodu
@@ -46,6 +36,14 @@ Sieć Hardhat jest wbudowana w Hardhat, środowisko programistyczne Ethereum dla
 
 - [Strona internetowa](https://hardhat.org/)
 - [GitHub](https://github.com/nomiclabs/hardhat)
+
+### Publiczne łańcuchy testowe Ethereum {#public-beacon-testchains}
+
+Istnieją również dwie publiczne implementacje testowe Ethereum: Sepolia i Hoodi. Sepolia to zalecana standardowa sieć testowa do tworzenia aplikacji, z zamkniętym zestawem walidatorów zapewniającym szybką synchronizację. Hoodi to sieć testowa do walidacji i stakingu, która wykorzystuje otwarty zestaw walidatorów i potencjalnie umożliwia walidację każdemu.
+
+- [Launchpad stakingu Hoodi](https://hoodi.launchpad.ethereum.org/en/)
+- [Strona internetowa Sepolia](https://sepolia.dev/)
+- [Strona internetowa Hoodi](https://hoodi.ethpandaops.io/)
 
 ## Dalsza lektura {#further-reading}
 

@@ -1,4 +1,4 @@
-import { SimpleGrid } from "@chakra-ui/react"
+"use client"
 
 import { StakingProductCard } from "./StakingProductCard"
 import { StakingProductsCategoryKeys } from "./types"
@@ -14,16 +14,15 @@ const StakingProductsCardGrid = ({
   const { rankedProducts } = useStakingProductsCardGrid({ category })
 
   return (
-    <SimpleGrid
-      templateColumns="repeat(auto-fill, minmax(min(100%, 280px), 1fr))"
-      gap={8}
-      my={12}
-      mx={0}
+    <div
+      className={
+        "mx-0 my-12 grid grid-cols-[repeat(auto-fill,minmax(280px,1fr))] gap-6"
+      }
     >
       {rankedProducts.map((product) => (
         <StakingProductCard key={product.name} product={product} />
       ))}
-    </SimpleGrid>
+    </div>
   )
 }
 

@@ -34,13 +34,11 @@ incomplete: true
 
 ## Powiązane samouczki {#related-tutorials}
 
-- [Solidity and Truffle Continuous Integration Setup](/developers/tutorials/solidity-and-truffle-continuous-integration-setup/) _– jak skonfigurować Travis lub Circle CI do testowania Truffle wraz z przydatnymi wtyczkami_
 - [Narzędzia testowe](/developers/tutorials/guide-to-smart-contract-security-tools/) _– przegląd i porównanie różnych narzędzi testowych_
 - [Echidna – narzędzie do testowania inteligentnych kontraktów](/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/)
 - [Manticore – narzędzie do znajdowania błędów w inteligentnych kontraktach](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
 - [Slither – narzędzie do znajdowania błędów w inteligentnych kontraktach](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
 - [Jak tworzyć kontrakty Solidity pod kątem testowania](/developers/tutorials/how-to-mock-solidity-contracts-for-testing/)
-- [Jak migrować z Truffle Tests do środowiska testowego OpenZeppelin](https://docs.openzeppelin.com/test-environment/0.1/migrating-from-truffle)
 
 ## Dalsza lektura {#further-reading}
 

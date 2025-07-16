@@ -78,7 +78,7 @@ Ang seguridad ng Ethereum ay mula sa proof-of-stake. Ang system na ito ay idinis
 
 Pinakamadalas na nauugnay sa mga phishing scam, vulnerability ng smart contract o error ng user (gaya ng hindi sinasadyang pagsisiwalat ng mga pribadong key) ang mga isyu sa seguridad kaugnay ng mga NFT, kung kaya, kritikal para sa mga may-ari ng NFT ang mainam na seguridad para sa wallet.
 
-<ButtonLink to="/security/">
+<ButtonLink href="/security/">
   Iba pang detalye tungkol sa seguridad
 </ButtonLink>
 

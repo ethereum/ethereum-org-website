@@ -10,9 +10,7 @@ lang: tr
 
 ## Kaynak kodu doğrulaması nedir? {#what-is-source-code-verification}
 
-Geliştiriciler, bir akıllı sözleşmeyi [Ethereum Sanal Makinesi'ne (ESM)](/developers/docs/evm/)dağıtmadan önce, sözleşmenin Solidity'de veya başka bir yüksek seviye programlama dilinde yazılan talimatları
-
-olan kaynak kodunu bit koduna [derler.](/developers/docs/smart-contracts/compiling/) Ethereum Sanal Makinesi yüksek seviye talimatları yorumlayamayacağı için kaynak kodunu bit koduna (yani düşük seviye, makine talimatları) derlemek, sözleşme mantığını Ethereum Sanal Makinesi'nde yürütmek için şarttır.
+Geliştiriciler, bir akıllı sözleşmeyi [Ethereum Sanal Makinesi'ne (EVM)](/developers/docs/evm/) dağıtmadan önce, [sözleşmenin Solidity'de](/developers/docs/smart-contracts/languages/) veya başka bir yüksek seviye programlama dilinde yazılan talimatları olan kaynak kodunu bit koduna [derler](/developers/docs/smart-contracts/compiling/). Ethereum Sanal Makinesi yüksek seviye talimatları yorumlayamayacağı için kaynak kodunu bit koduna (yani düşük seviye, makine talimatları) derlemek, sözleşme mantığını Ethereum Sanal Makinesi'nde yürütmek için şarttır.
 
 Kaynak kodu doğrulaması, sözleşme oluşturma sırasında farklılıkları ortaya çıkarmak için kullanmak üzere sözleşmenin kaynak kodu ile derlenmiş bit kodunu karşılaştırmaktır. Akıllı sözleşmeleri doğrulamak, reklamı yapılan sözleşme kodu blokzincirde çalışmakta olandan farklı olabileceği için önemlidir.
 
@@ -22,7 +20,7 @@ Akıllı sözleşme doğrulaması, bir sözleşmenin yazıldığı yüksek seviy
 
 Kaynak kodunun, yorumlar ve değişken adları gibi derlenmiş bit kodunu etkilemeyen bazı bölümleri vardır. Bu, farklı değişken adları ve farklı yorumları olan iki kaynak kodunun aynı sözleşmeyi doğrulayabileceği anlamına gelir. Bu sayede, kötü niyetli bir kişi kaynak kodunun içine aldatıcı yorumlar ekleyip ya da yanlış yönlendiren değişken adları verip sözleşmenin orijinal kaynak kodundan farklı bir kaynak koduyla doğrulanmasını sağlayabilir.
 
-Bit koduna, kaynak koduyla tamamen aynı olması ve derleme bilgileri için bir _parmak izi_ görevi görmesi için _kriptografik garanti_ olarak hizmet edecek ekstra veriler iliştirerek bunu önlemek mümkündür. Gerekli bilgiler, [Solidity'nin sözleşme meta verileri](https://docs.soliditylang.org/en/v0.8.15/metadata.html) içinde bulunabilir ve bu dosyanın karması sözleşmenin bit koduna iliştirilmiştir. Bunu, [metadata playground](https://playground.sourcify.dev) üzerinde iş başında görebilirsiniz.
+Bit koduna, kaynak koduyla tamamen aynı olmak ve derleme bilgileri için bir _parmak izi_ görevi görmek üzere _kriptografik garanti_ olarak hizmet edecek ekstra veriler iliştirerek bunu önlemek mümkündür. Gerekli bilgiler, [Solidity'nin sözleşme meta verileri](https://docs.soliditylang.org/en/v0.8.15/metadata.html) içinde bulunabilir ve bu dosyanın karması sözleşmenin bit koduna iliştirilmiştir. Bunu, [metadata playground](https://playground.sourcify.dev) üzerinde iş başında görebilirsiniz.
 
 Meta veri dosyası, sözleşmenin derlemesiyle ilgili kaynak kodları ve bu kodların karmalarını da içeren bilgiler barındırır. Yani bir derleme ayarı ya da kaynak dosyalarında bir bayt bile değişse, meta veri dosyası da değişecektir. Sonuç olarak, bit koduna iliştirilmiş olan meta veri dosyasının karması da değişir. Bir sözleşmenin bit kodu + iliştirilmiş meta veri karması verilen kaynak kodu ve derleme ayarlarıyla eşleşiyorsa, bunun orijinal derlemede kullanılan kaynak koduyla tamamen aynı olduğundan ve tek bir baytın bile farklı olmadığından emin olabiliriz.
 
@@ -36,7 +34,7 @@ Güven gerektirmezlik, tartışmasız olarak akıllı sözleşmelerin ve [merkez
 
 Bir sözleşmenin güven gerektirmez olması için sözleşme kodunun bağımsız doğrulamaya açık olması gerekir. Her akıllı sözleşmenin derlenmiş bit kodu blokzincirde herkese açık bir şekilde mevcut olsa da, hem geliştiriciler hem de kullanıcılar için alt düzey dilin anlaşılması zordur.
 
-Projeler, sözleşmelerinin kaynak kodunu yayımlayarak güven varsayımlarını azaltır. Ancak bu başka bir soruna yol açar: Yayımlanmış kaynak kodu ile sözleşme bit kodunun eşleşip eşleşmediğini doğrulamak çok zordur. Bu senaryoda, güven gerektirmezliğin değeri kaybolur. Çünkü kullanıcıların, geliştiricilerin blokzincirde dağıtmadan önce sözleşmenin iş mantığını değiştirmeyeceklerine (bit kodunu değiştirerek) güvenmeleri gerekir.
+Projeler, sözleşmelerinin kaynak kodunu yayımlayarak güven varsayımlarını azaltır. Fakat bu başka bir probleme yol açar: Yayımlanan kaynak kodunun, sözleşme bit kodu ile aynı olduğunu doğrulamak zordur. Bu senaryoda, güven gerektirmezliğin değeri kaybolur. Çünkü kullanıcıların, geliştiricilerin blokzincirde dağıtmadan önce sözleşmenin iş mantığını değiştirmeyeceklerine (bit kodunu değiştirerek) güvenmeleri gerekir.
 
 Kaynak kodu doğrulama araçları, bir akıllı sözleşmenin kaynak kodunun derleme koduyla eşleştiğine dair güvenceler sağlar. Sonuç, kullanıcıların üçüncü taraflara körü körüne güvenmediği ve bunun yerine bir sözleşmeye para yatırmadan önce kodu doğruladıkları güven gerektirmez bir ekosistemdir.
 

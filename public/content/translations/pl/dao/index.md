@@ -50,7 +50,7 @@ Podstawą DAO jest inteligentny kontrakt, który określa zasady organizacji i k
 
 Jest to możliwe, ponieważ inteligentne kontrakty są zabezpieczone przed ingerencją osób niepowołanych po ich wdrożeniu na Ethereum. Nie możesz po prostu edytować kodu (zasad DAO) niepostrzeżenie, ponieważ wszystko jest publiczne.
 
-<DocLink to="/smart-contracts/">
+<DocLink href="/smart-contracts/">
   Więcej na temat inteligentnych kontraktów
 </DocLink>
 
@@ -93,7 +93,7 @@ W 1977 r. w Wyoming powstały pierwsze spółki z ograniczoną odpowiedzialnośc
 
 ### Znany przykład {#law-example}
 
-[CityDAO](https://citydao.io) – CityDAO użył prawa DAO Wyoming, aby kupić 40 hektarów ziemi w pobliżu Parku Narodowego Yellowstone.
+[CityDAO](https://citizen.citydao.io/) – CityDAO użył prawa DAO Wyoming, aby kupić 40 hektarów ziemi w pobliżu Parku Narodowego Yellowstone.
 
 ## Członkostwo DAO {#dao-membership}
 

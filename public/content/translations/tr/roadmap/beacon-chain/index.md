@@ -4,10 +4,10 @@ description: Hisse ispatını Ethereum'a tanıtan yükseltme olan İşaret Zinci
 lang: tr
 template: upgrade
 image: /images/upgrades/core.png
-alt: 
-summaryPoint1: İşaret Zincirinin Ethereum ekosistemine hisse ispatı olarak eklenmesi.
-summaryPoint2: Original Ethereum Hisse İspatı zinciri ile eylül 2022de birleştirilmiştir.
-summaryPoint3: İşaret Zinciri ve mutabakat mantığını ve şimdilerde Ethereumu güvende tutan blok dedikodusu protokolünü tanıttı.
+alt:
+summaryPoint1: İşaret Zinciri, hisse ispatını Ethereum ekosisteminde uygulamaya koydu.
+summaryPoint2: Eylül 2022'de orijinal Ethereum iş ispatı zinciriyle birleştirildi.
+summaryPoint3: İşaret Zinciri, Ethereum'u güvence altına alan mutabakat mantığını ve blok dedikodusu protokolünü tanıttı.
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
@@ -28,7 +28,7 @@ summaryPoint3: İşaret Zinciri ve mutabakat mantığını ve şimdilerde Ethere
 
 İşaret Zinciri, Ethereum'a [Hisse İspatını](/developers/docs/consensus-mechanisms/pos/) tanıttı. Bu, Ethereum'u güvende tutar ve süreç doğrulayıcılarına daha fazla ETH kazandırır. Pratikte hisseleme, doğrulayıcı yazılımını aktive etmek için ETH'nin hisselenmesini içerir. Bir paydaş olarak, zincirde yeni bloklar oluşturan ve doğrulayan yazılımı çalıştırırsınız.
 
-Hisseleme [ madenciliğin](/developers/docs/consensus-mechanisms/pow/mining/) eskiden yaptığına benzer bir amaca hizmet eder, ancak birçok yönden farklıdır. Madencilik güçlü donanım, enerji harcaması gibi büyük ön harcamalar gerektiriyordu ve ölçeklendirilmiş ekonomilere sebep oluyor ve merkeziyetçiliği teşvik ediyordu. Madencilik ayrıca varlıkları teminat olarak kitlemeye gerek duymuyordu ve protokolün uğranan saldırıdan sonra gerekli kişilere gerekli ceza vermesini de sınırlandırıyordu.
+Hisseleme, [ madenciliğin](/developers/docs/consensus-mechanisms/pow/mining/) eskiden hizmet ettiğine benzer bir amaca hizmet eder, ancak birçok yönden farklıdır. Madencilik güçlü donanım, enerji harcaması gibi büyük ön harcamalar gerektiriyordu ve ölçeklendirilmiş ekonomilere sebep oluyor ve merkeziyetçiliği teşvik ediyordu. Madencilik ayrıca varlıkları teminat olarak kitlemeye gerek duymuyordu ve protokolün uğranan saldırıdan sonra gerekli kişilere gerekli ceza vermesini de sınırlandırıyordu.
 
 Hisse ispatına geçiş Ethereum'u, iş ispatına kıyasla, çok daha güvenli ve merkeziyetsiz hale getirdi. Ağa katılan insan sayısı arttıkça, mevcut ağ bir o kadar merkeziyetsiz ve saldırılara karşı daha da güvende olur.
 
@@ -56,7 +56,7 @@ Ethereum yükseltmelerinin tamamı bir şekilde ilişkilidir. İşaret Zincirini
 
 İlk başta İşaret Zinciri, Ethereum Ana Ağı'ndan ayrıydı, ancak 2022'de birleştirildi.
 
-<ButtonLink to="/roadmap/merge/">
+<ButtonLink href="/roadmap/merge/">
   Birleştirme
 </ButtonLink>
 
@@ -64,7 +64,7 @@ Ethereum yükseltmelerinin tamamı bir şekilde ilişkilidir. İşaret Zincirini
 
 Parçalama, Ethereum ekosistemine yalnızca bir Hisse İspatı mutabakat mekanizması ile güvenli bir şekilde girebilir. İşare Zinciri Ana Ağ ile "bireleşerek" Ethereum'un daha da ölçeklenmesine yardımcı olmak için parçalamanın önünü açan hisselemeyi tanıttı.
 
-<ButtonLink to="/roadmap/danksharding/">
+<ButtonLink href="/roadmap/danksharding/">
   Parça zincirleri
 </ButtonLink>
 

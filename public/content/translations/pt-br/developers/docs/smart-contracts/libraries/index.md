@@ -79,7 +79,7 @@ Independente do método que você usa, ao incluir uma biblioteca, sempre fique d
 
 Usar uma biblioteca de contratos inteligente para o seu projeto traz vários benefícios. Em primeiro lugar e acima de tudo, economiza seu tempo fornecendo blocos de construção prontos para usar que você pode incluir no seu sistema, ao invés de ter que programar você mesmo.
 
-A segurança é também um importante ganho. Bibliotecas de contratos inteligentes de código aberto também são frequentemente cuidadosamente controladas. Dado que muitos projectos dependem deles, existe um forte incentivo por parte da comunidade para os manter sob constante revisão. É muito mais comum encontrar erros no código do aplicativo do que em bibliotecas de contratos reutilizáveis. Algumas bibliotecas também são submetidas a [auditorias externas](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/audit) para segurança adicional.
+A segurança é também um importante ganho. Bibliotecas de contratos inteligentes de código aberto também são frequentemente cuidadosamente controladas. Dado que muitos projectos dependem deles, existe um forte incentivo por parte da comunidade para os manter sob constante revisão. É muito mais comum encontrar erros no código do aplicativo do que em bibliotecas de contratos reutilizáveis. Algumas bibliotecas também são submetidas a [auditorias externas](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/audits) para segurança adicional.
 
 No entanto, o uso de bibliotecas de contratos inteligentes acarreta o risco de incluir código com que você não está familiarizado no seu projeto. É tentador importar um contrato e incluí-lo diretamente no seu projeto, mas sem um bom entendimento do que esse contrato faz, você pode estar inadvertidamente a introduzir um problema no seu sistema devido a um comportamento inesperado. Certifique-se de ler a documentação do código que você está importando, e, em seguida, revise o próprio código antes de torná-lo parte do seu projeto!
 
@@ -104,7 +104,7 @@ Por último, ao decidir se deve incluir uma biblioteca, considere a sua utiliza�
 
 **thirdweb Solidity SDK -** **_Fornece as ferramentas necessárias para criar contratos inteligentes e personalizados com eficiência_**
 
-- [Documentação](https://portal.thirdweb.com/solidity/)
+- [Documentação](https://portal.thirdweb.com/contracts/build/overview)
 - [GitHub](https://github.com/thirdweb-dev/contracts)
 
 ## Tutoriais relacionados {#related-tutorials}

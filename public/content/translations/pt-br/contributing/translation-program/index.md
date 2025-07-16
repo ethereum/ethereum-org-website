@@ -22,7 +22,7 @@ O Programa de Tradução do ethereum.org está aberto e qualquer um pode contrib
 
 _Junte-se ao [ethereum.org Discord](/discord/) para colaborar com traduções, fazer perguntas, compartilhar comentários e ideias ou juntar-se a um grupo de tradução._
 
-<ButtonLink to="https://crowdin.com/project/ethereum-org/">
+<ButtonLink href="https://crowdin.com/project/ethereum-org/">
   Comece a traduzir
 </ButtonLink>
 
@@ -36,9 +36,9 @@ Leia mais sobre a [missão e visão](/contributing/translation-program/mission-a
 
 ### Nosso progresso até agora {#our-progress}
 
-- [**5.100 +** tradutores](/contributing/translation-program/contributors/)
-- **54** idiomas presentes no site
-- [**3 milhões** de palavras traduzidas em 2022](/contributing/translation-program/acknowledgements/)
+- [**Mais de 6.000**tradutores](/contributing/translation-program/contributors/)
+- **62** idiomas presentes no site
+- [**3 milhões** de palavras traduzidas em 2023](/contributing/translation-program/acknowledgements/)
 
 <TranslationChartImage />
 
@@ -50,9 +50,9 @@ O Ethereum.org é traduzido por milhares de membros da comunidade e eles são a 
 
 Se você contribuiu para o Programa de Tradução e teve, pelo menos, 5.000 palavras traduzidas aprovadas, você pode receber um certificado de tradutor do ethereum.org. [Saiba mais sobre os certificados](/contributing/translation-program/acknowledgements/#certificate)
 
-#### POAPs {#poaps}
+#### OATs (tokens de conquista on-chain) {#oats}
 
-Todos os nossos tradutores têm direito a um POAP (Protocolo de Prova de Presença) — um NFT que comprova sua contribuição para o Programa de Tradução do ethereum.org. [Saiba mais sobre os POAPs](/contributing/translation-program/acknowledgements/#poap)
+Os contribuidores do Programa de Tradução são elegíveis para diferentes OATs (tokens de conquista on-chain) com base no número de palavras traduzidas em 2024. OATs são NFTs que comprovam sua contribuição ao Programa de Tradução do ethereum.org. [Mais sobre OATs](/contributing/translation-program/acknowledgements/#oats)
 
 #### Agradecimentos aos tradutores {#translator-acknowledgements}
 
@@ -73,11 +73,11 @@ Se você está contribuindo para o Programa de Tradução ou pensando em se envo
 - [Guia do editor online do Crowdin](https://support.crowdin.com/online-editor/) _ — um guia detalhado sobre como usar o editor online do Crowdin e algumas funcionalidades avançadas do Crowdin_
 - [Pacotes de conteúdo](/contributing/translation-program/content-buckets/) _ — quais páginas estão incluídas em cada pacote de conteúdo do ethereum.org_
 
-Para outras ferramentas úteis de tradução, comunidades de tradutores e postagens no blog do Programa de Tradução, visite a [Página de recursos](/contributing/translation-program/resources/).
+Para outras ferramentas úteis de tradução, comunidades de tradutores e postagens no blog do Programa de Tradução, visite a [Página de recursos](/contribuindo/tradução-programa/recursos/).
 
 ## Envolva-se {#get-in-touch}
 
-Você tem alguma dúvida? Ou quer colaborar com nossa equipe e outros tradutores? Publique no canal #translations do nosso [servidor Discord do ethereum.org](https://discord.gg/6WX7E97)
+Você tem alguma dúvida? Ou quer colaborar com nossa equipe e outros tradutores? Publique no canal #translations do nosso [servidor Discord no ethereum.org](https://discord.gg/ethereum-org)
 
 Você também pode entrar em contato conosco por meio do e-mail translations@ethereum.org
 

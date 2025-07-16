@@ -6,7 +6,7 @@ This documentation outlines our current processes for how we prioritize items in
 
 ### General review process
 
-We use a first-in, first-out system for reviewing pull requests. The longer a pull request has been open, the higher the priority it is for our team to review. In some cases—for example, fixing a high-priority issue or merging low-hanging fruit for a deploy—we will stray from this process and use our best judgement to get higher-impact changes deployed more quickly.
+We use a first-in, first-out system for reviewing pull requests. The longer a pull request has been open, the higher the priority it is for our team to review. In some cases—for example, fixing a high-priority issue or merging low-hanging fruit for a deploy—we will stray from this process and use our best judgment to get higher-impact changes deployed more quickly.
 
 We aim to have every new PR reviewed with change requests, merged, or closed within 30 days of opening. As outlined in the following sections, different types of pull requests do have different levels of priority, and this may influence how promptly a pull request is acted on.
 
@@ -42,12 +42,14 @@ Typographical and grammatical errors are medium-priority as small errors of this
 
 ### Adding products
 
-Adding new products is currently a low-to-medium priority (depending on the type of product). These pull requests often take a long time to review as we must extensively research products to ensure we not sending our users to any dubious or unsafe products.
+Adding new products is currently a low-to-medium priority (depending on the type of product). These pull requests often take a long time to review as we must extensively research products to ensure we are not sending our users to any dubious or unsafe products.
 
 **Timeline:** PRs should be closed or merged within 30 days of opening.
 
 ### Adding tutorials
 
 Adding new tutorials to [ethereum.org](http://ethereum.org) is currently low-priority. We are currently in the middle of an epic to revamp our tutorials. As part of this, we’ll be reviewing our existing tutorials, purging outdated or low-quality tutorials, and refining our listing criteria for future tutorials to meet our increased standards. Please always create an issue to discuss the usefulness of your proposed tutorial before opening a PR.
+
+New tutorials should be placed in `public/content/developers/tutorials/your-tutorial-name/index.md`, with `your-tutorial-name` added to `src/data/internalTutorials.json` for inclusion.
 
 **Timeline:** PRs should be closed or merged within 30 days of opening.

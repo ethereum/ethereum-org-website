@@ -22,7 +22,6 @@ incomplete: true
 
 ## 初学者文章 {#beginner-articles}
 
-- [选择以太坊客户端](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
 - [Rust 以太坊客户端](https://openethereum.github.io/) \* **注意 OpenEthereum [已被废弃](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd)并已停止维护。** 请谨慎使用，最好切换至其他客户端实现。
 - [使用 Rust 向以太坊发送交易](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/sending-ethereum-transactions-with-rust/)
 - [如何用 Rust Wasm 为 Kovan 编写合约的分步教程](https://github.com/paritytech/pwasm-tutorial)
@@ -42,15 +41,17 @@ incomplete: true
 - [pwasm-ethereum](https://github.com/paritytech/pwasm-ethereum) - _与类似以太坊的网络交互的外部帐户集合_
 - [Lighthouse](https://github.com/sigp/lighthouse) - _以太坊快速共识层客户端_
 - [ Ethereum WebAssembly](https://ewasm.readthedocs.io/en/mkdocs/) - _使用 WebAssembly 的确定性子集对以太坊智能合约执行层建议的重新设计_
-- [oasis_std](https://docs.rs/oasis-std/latest/oasis_std/index.html) - _OASIS API 参考_
+- [oasis_std](https://docs.rs/oasis-std/latest/oasis_std/index.html) - _OASIS 应用程序接口参考_
 - [Solaris](https://github.com/paritytech/sol-rs) - _使用本机 Parity 客户端以太坊虚拟机的 Solidity 智能合约单元测试工具。_
 - [SputnikVM](https://github.com/rust-blockchain/evm) - _以太坊虚拟机的 Rust 实现_
 - [Wavelet](https://wavelet.perlin.net/docs/smart-contracts) - _Rust 语言的 Wavelet 智能合约_
-- [Foundry](https://github.com/gakonst/foundry) - _以太坊应用程序开发工具包_
-- [Ethers_rs](https://github.com/gakonst/ethers-rs)- _以太坊库和钱包的实现_
+- [Foundry](https://github.com/foundry-rs/foundry) - _以太坊应用程序开发工具包_
+- [Alloy](https://alloy.rs) - _高性能、严格测试且文档完备的程序库，用于与以太坊和其他基于以太坊虚拟机的链交互。_
+- [Ethers_rs](https://github.com/gakonst/ethers-rs) - _以太坊库和钱包的实现_
 - [SewUp](https://github.com/second-state/SewUp) - _一个帮助用户用 Rust 语言构建以太坊 Webassembly 合约的库，正如在公共后端中开发一样_
 - [Substreams](https://github.com/streamingfast/substreams) - _并行化区块链数据索引技术_
-- [Reth](https://github.com/paradigmxyz/reth) - Reth 即 Rust Ethereum 简称的发音，是新的以太坊全节点实现
+- [Reth](https://github.com/paradigmxyz/reth) - Reth 即 Rust 以太坊的简称，是新的以太坊全节点实现
+- [Awesome Ethereum Rust](https://github.com/Vid201/awesome-ethereum-rust) - _ 以太坊生态系统中用 Rust 编写的项目精选集合_
 
 想要获取更多的资源？ 请查看 [ethereum.org/developers](/developers/)。
 

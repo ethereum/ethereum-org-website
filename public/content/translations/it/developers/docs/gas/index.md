@@ -1,5 +1,6 @@
 ---
 title: Gas e commissioni
+metaTitle: "Gas e commissioni Ethereum: panoramica tecnica"
 description:
 lang: it
 ---
@@ -117,27 +118,12 @@ Gli [aggiornamenti di scalabilità](/roadmap/) di Ethereum dovrebbero infine ris
 
 Il ridimensionamento del Livello 2 è un'iniziativa fondamentale per migliorare notevolmente i costi del gas, l'esperienza utente e il ridimensionamento. [Maggiori informazioni sul ridimensionamento del Livello 2](/developers/docs/scaling/#layer-2-scaling).
 
-## Cosa è l'Aggiornamento di Londra / EIP-1559? {#what-was-the-london-upgrade-eip-1559}
-
-Prima dell'Aggiornamento di Londra, Ethereum aveva blocchi di dimensioni fisse. Nei momenti di elevata domanda di rete, questi blocchi operavano a piena capacità. Quindi, spesso gli utenti dovevano attendere che la domanda calasse per poter essere inclusi in un blocco, il che si traduceva in un'esperienza non soddisfacente per l'utente. L'Aggiornamento di Londra ha introdotto blocchi di dimensioni variabili in Ethereum.
-
-Le modalità di calcolo delle commissioni sulla transazione sulla rete Ethereum sono state modificate con [l'aggiornamento di Londra](/history/#london) dell'agosto 2021. Prima dell'aggiornamento Londra, le commissioni venivano calcolate senza separare le commissioni `base` e `priority`, come segue:
-
-Mettiamo che Alice debba pagare 1 ETH a Bob. Nella transazione, il limite di gas è di 21.000 unità e il prezzo del gas è di 200 gwei.
-
-La commissione totale sarebbe stata: `Gas units (limit) * Gas price per unit`, ossia `21,000 * 200 = 4,200,000 gwei` ovvero 0,0042 ETH
-
-L'implementazione di [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) nell'Aggiornamento Londra ha reso più complesso il meccanismo delle commissioni sulla transazione, ma ha reso le commissioni sul gas più prevedibili, dando luogo a un mercato delle commissioni di transazione più efficiente. Gli utenti possono inviare transazioni con una `maxFeePerGas` corrispondente a quanto sono disposti a pagare affinché la transazione sia eseguita, sapendo che non pagheranno di più del prezzo di mercato del gas (`baseFeePerGas`) e otterranno il rimborso di qualsiasi extra, tranne la mancia.
-
-Questo video spiega l'EIP-1559 e i vantaggi che comporta:
-
-<YouTube id="MGemhK9t44Q" />
-
-## Monitoraggio delle commissioni del gas {#moitoring-gas-fees}
+## Monitoraggio delle commissioni del gas {#monitoring-gas-fees}
 
 Se desideri monitorare i prezzi del gas, così da poter inviare i tuoi ETH a un costo inferiore, puoi usare molti strumenti differenti, come:
 
 - [Etherscan](https://etherscan.io/gastracker): _Strumento di stima del prezzo del gas delle transazioni_
+- [ETH Gas Tracker](https://www.ethgastracker.com/): _Monitora e traccia i prezzi di Ethereum e del L2 per ridurre le commissioni sulle transazioni e risparmiare denaro_
 - [Blocknative ETH Gas Estimator](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm): _Estensione di stima del gas di Chrome che supporta sia transazioni ereditarie di Tipo 0 che transazioni EIP-1559 di Tipo 2._
 - [Cryptoneur Gas Fees Calculator](https://www.cryptoneur.xyz/gas-fees-calculator) _Calcola le commissioni del gas nella tua valuta locale per diversi tipi di transazione sulla rete principale, su Arbitrum e su Polygon._
 
@@ -152,4 +138,4 @@ Se desideri monitorare i prezzi del gas, così da poter inviare i tuoi ETH a un 
 - [Proof of Stake contro Proof of Work](https://blockgeeks.com/guides/proof-of-work-vs-proof-of-stake/)
 - [Strategie di ottimizzazione del carburante per sviluppatori](https://www.alchemy.com/overviews/solidity-gas-optimization)
 - [Documenti di EIP-1559](https://eips.ethereum.org/EIPS/eip-1559).
-- [Risorse per EIP-1559 di Tim Beiko](https://hackmd.io/@timbeiko/1559-resources).
+- [Risorse dell'EIP-1559 di Tim Beiko](https://hackmd.io/@timbeiko/1559-resources).

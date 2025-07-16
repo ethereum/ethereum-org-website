@@ -92,7 +92,7 @@ title="Sviluppatori di dapp e contratti intelligenti"
 contentPreview="The Merge was designed to have minimal impact on smart contract and dapp developers."
 id="developers">
 
-La Fusione è stata accompagnata da modifiche al consenso, incluse anche modifiche relative a:<
+La Fusione è stata accompagnata da modifiche al consenso, incluse anche modifiche relative a:
 
 <ul>
   <li>struttura del blocco</li>
@@ -108,7 +108,7 @@ Per ulteriori informazioni, consulta questo post del blog di Tim Beiko su <a hre
 
 ## La Fusione e il consumo energetico {#merge-and-energy}
 
-Questa fase ha segnato la fine del Proof of Work per Ethereum e l'inizio di una rete Ethereum più sostenibile ed ecologica. Il consumo energetico di Ethereum si è ridotto di una stima del 99,95%, rendendo Ethereum una blockchain ecosostenibile. Scopri di più sul [consumo energetico di Ethereum](/energy-consumption/).
+La Fusione ha segnato la fine del proof-of-work per Ethereum e ha dato inizio all’era di una rete Ethereum più sostenibile ed ecologica. Il consumo energetico di Ethereum si è ridotto di una stima del 99,95%, rendendo Ethereum una blockchain ecosostenibile. Scopri di più sul [consumo energetico di Ethereum](/energy-consumption/).
 
 ## La Fusione e il ridimensionamento {#merge-and-scaling}
 
@@ -202,7 +202,7 @@ La Fusione rappresenta l'adozione formale della Beacon Chain come nuovo livello 
 
 I blocchi sono invece proposti dai nodi di convalida, che ottengono ETH in staking in cambio del diritto di partecipare al consenso. Questi aggiornamenti stabiliscono le basi per gli aggiornamenti di scalabilità futuri, incluso lo sharding.
 
-<ButtonLink to="/roadmap/beacon-chain/">
+<ButtonLink href="/roadmap/beacon-chain/">
   La beacon chain
 </ButtonLink>
 
@@ -218,7 +218,7 @@ Originariamente, il piano prevedeva di lavorare allo sharding prima della Fusion
 
 I piani per lo sharding si stanno evolvendo rapidamente, ma data la nascita e il successo delle tecnologie di livello 2 per scalare l'esecuzione delle transazioni, i piani per lo sharding hanno spostato l'attenzione sul trovare il modo ottimale per distribuire il carico per memorizzare i dati di chiamata compressi dai contratti di rollup, consentendo la crescita esponenziale della capacità di rete. Questo sarebbe impossibile senza prima passare al Proof of stake.
 
-<ButtonLink to="/roadmap/danksharding/">
+<ButtonLink href="/roadmap/danksharding/">
   Sharding
 </ButtonLink>
 

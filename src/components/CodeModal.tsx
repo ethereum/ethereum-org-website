@@ -1,72 +1,60 @@
-import type { ReactNode } from "react"
+import { Children, type ReactElement } from "react"
+import { Clipboard, ClipboardCheck } from "lucide-react"
+
+import { Button } from "./ui/buttons/Button"
 import {
-  Modal,
-  ModalBody,
-  ModalCloseButton,
-  ModalContent,
-  ModalHeader,
-  ModalOverlay,
-  useColorModeValue,
-} from "@chakra-ui/react"
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from "./ui/dialog-modal"
+
+import { useClipboard } from "@/hooks/useClipboard"
+import { useTranslation } from "@/hooks/useTranslation"
 
 type CodeModalProps = {
   title: string
-  children: ReactNode
+  children?: ReactElement
   isOpen: boolean
   setIsOpen: (isOpen: boolean) => void
 }
 
 const CodeModal = ({ children, isOpen, setIsOpen, title }: CodeModalProps) => {
-  const bgColor = useColorModeValue("rgb(247, 247, 247)", "rgb(25, 25, 25)")
-  const borderColor = useColorModeValue("rgb(51, 51, 51)", "rgb(242, 242, 242)")
+  const { t } = useTranslation()
+  const codeSnippet = (Children.toArray(children)[0] as ReactElement).props
+    .children
+
+  const { onCopy, hasCopied } = useClipboard()
 
   return (
-    <Modal
-      isOpen={isOpen}
-      scrollBehavior="inside"
-      onClose={() => setIsOpen(false)}
-    >
-      <ModalOverlay />
-      <ModalContent
-        maxW="100vw"
-        marginTop="auto"
-        marginBottom="0"
-        maxHeight="50%"
-        borderRadius="0"
-        p={{ base: "0", md: "0" }}
-        gap="0"
-      >
-        <ModalHeader
-          bg={bgColor}
-          borderColor={borderColor}
-          borderTop="1px solid"
-          borderBottom="1px solid"
-          textTransform="uppercase"
-          fontWeight="normal"
-          fontSize="md"
-          fontFamily="monospace"
-          px="6"
-          py="4"
-          me="0"
+    <Dialog open={isOpen} onOpenChange={setIsOpen}>
+      <DialogContent className="absolute inset-0 mb-0 mt-auto max-h-[50%] max-w-[100vw]">
+        <DialogHeader>
+          <DialogTitle>{title}</DialogTitle>
+        </DialogHeader>
+        <DialogDescription asChild>
+          <div className="overflow-y-auto">{children}</div>
+        </DialogDescription>
+        <Button
+          variant="outline"
+          onClick={() => onCopy(codeSnippet)}
+          className="absolute right-19 top-24" // Force right, code always LTR
         >
-          {title}
-        </ModalHeader>
-        <ModalCloseButton
-          position="absolute"
-          padding="0"
-          width="24px"
-          height="24px"
-          borderRadius="0"
-          color="rgb(178, 178, 178)"
-          fontSize="sm"
-          margin="0"
-          top="4"
-          insetInlineEnd="4"
-          bottom="4"
-        />
-        <ModalBody p="0">{children}</ModalBody>
-      </ModalContent>
-    </Modal>
+          {hasCopied ? (
+            <>
+              {t("copied")}
+              <ClipboardCheck className="ms-1" />
+            </>
+          ) : (
+            <>
+              {t("copy")}
+              <Clipboard className="ms-1" />
+            </>
+          )}
+        </Button>
+      </DialogContent>
+    </Dialog>
   )
 }
 

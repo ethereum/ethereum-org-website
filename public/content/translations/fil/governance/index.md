@@ -32,7 +32,7 @@ Sa kabaligtaran, ang off-chain governance ay kung saan nangyayari ang anumang pa
 
 _Kahit off-chain ang pamamahala ng Ethereum sa antas ng protocol, maraming use case na ginawa sa Ethereum, tulad ng DAOs, ang gumagamit ng on-chain na pamamahala._
 
-<ButtonLink to="/dao/">
+<ButtonLink href="/dao/">
   Iba pang detalye tungkol sa DAOs
 </ButtonLink>
 
@@ -58,7 +58,7 @@ _Tandaan: maaaring hindi lang sa isa sa mga grupong ito napapabilang ang sinuman
 
 Isang mahalagang proseso na ginagamit sa pamamahala ng Ethereum ang pagmumungkahi ng **mga Ethereum Improvement Proposal (EIPs)**. Ang EIPs ay mga pamantayan na nagtatakda ng mga potensyal na bagong feature o proseso para sa Ethereum. Makakagawa ng EIP ang kahit sino sa komunidad ng Ethereum. Kung interesado kang magsulat ng EIP o lumahok sa peer-review at/o pamamahala, tingnan ang:
 
-<ButtonLink to="/eips/">
+<ButtonLink href="/eips/">
   Iba pang detalye tungkol sa EIPs
 </ButtonLink>
 
@@ -118,7 +118,7 @@ Karaniwang inaayos ang mga hindi pagkakaunawaan sa mahabang usapan sa mga pampub
 
 Nangyayari ang mga fork kapag may mga pangunahing teknikal na pag-upgrade o pagbabago at babaguhin nito ang "mga panuntunan" ng protocol. Dapat i-update ng [mga Ethereum client](/developers/docs/nodes-and-clients/) ang kanilang software upang ipatupad ang mga panuntunan para sa fork.
 
-Ang DAO fork ay ginawa bilang tugon sa [DAO attack noong 2016](https://www.coindesk.com/understanding-dao-hack-journalists) kung saan nakuha sa isang hindi secure na [DAO](/glossary/#dao) contract ang mahigit 3.6 milyong ETH sa isang hack. Inilipat ng fork ang mga pondo mula sa palyadong contract sa bagong contract, kaya mare-recover ito ng kahit sinong nawalan ng pondo dahil sa pag-hack.
+Ang DAO fork ay ginawa bilang tugon sa [DAO attack noong 2016](https://www.coindesk.com/learn/understanding-the-dao-attack) kung saan nakuha sa isang hindi secure na [DAO](/glossary/#dao) contract ang mahigit 3.6 milyong ETH sa isang hack. Inilipat ng fork ang mga pondo mula sa palyadong contract sa bagong contract, kaya mare-recover ito ng kahit sinong nawalan ng pondo dahil sa pag-hack.
 
 Pinagbotohan ng komunidad ng Ethereum ang pagkilos na ito. Makakaboto ang sinumang nagmamay-ari ng ETH sa pamamagitan ng isang transaksyon sa [isang voting platform](http://v1.carbonvote.com/). Ang desisyong mag-fork ay umabot ng mahigit 85% ng mga boto.
 
@@ -154,7 +154,7 @@ Bagama't palaging ganap na open source ang specification at mga pagpapatupad ng 
 
 Noong mag-merge ang Beacon Chain at Ethereum execution layer noong ika-15 ng Setyembre, 2022, natapos ang The Merge bilang bahagi ng [Paris network upgrade](/history/#paris). Ang proposal na [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675)ay ginawang 'Final' mula sa 'Last Call', kaya nailipat ito sa patunay ng stake.
 
-<ButtonLink to="/roadmap/merge/">
+<ButtonLink href="/roadmap/merge/">
   Iba pang detalye tungkol sa The Merge
 </ButtonLink>
 

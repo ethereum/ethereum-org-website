@@ -1,42 +1,56 @@
 import { useCallback } from "react"
-import { Center, ChakraProps, Container } from "@chakra-ui/react"
+
+import type { AnswerChoice, Question } from "@/lib/types"
+
+import { Center } from "@/components/ui/flex"
+
+import { cn } from "@/lib/utils/cn"
 
 import { PROGRESS_BAR_GAP } from "@/lib/constants"
 
-import { useQuizWidgetContext } from "./context"
+import type { AnswerStatus } from "./useQuizWidget"
 
-export const QuizProgressBar = () => {
-  const { questions, answerStatus, currentQuestionIndex, userQuizProgress } =
-    useQuizWidgetContext()
+type QuizProgressBarProps = {
+  questions: Question[]
+  answerStatus: AnswerStatus
+  currentQuestionIndex: number
+  userQuizProgress: AnswerChoice[]
+}
 
+export const QuizProgressBar = ({
+  questions,
+  answerStatus,
+  currentQuestionIndex,
+  userQuizProgress,
+}: QuizProgressBarProps) => {
   const progressBarBackground = useCallback(
-    (index: number): ChakraProps["bg"] => {
+    (index: number) => {
       if (
         (answerStatus &&
           index === currentQuestionIndex &&
           answerStatus === "correct") ||
         userQuizProgress[index]?.isCorrect
       ) {
-        return "success.base"
+        return "bg-success"
       }
 
       if (
         (answerStatus === "incorrect" && index === currentQuestionIndex) ||
         (userQuizProgress[index] && !userQuizProgress[index].isCorrect)
       ) {
-        return "error.base"
+        return "bg-error"
       }
 
       if (index === currentQuestionIndex) {
-        return "gray.400"
+        return "bg-body-medium"
       }
 
-      return "gray.500"
+      return "bg-disabled"
     },
     [answerStatus, currentQuestionIndex, userQuizProgress]
   )
   return (
-    <Center gap={PROGRESS_BAR_GAP} w="full">
+    <Center className="w-full" style={{ gap: PROGRESS_BAR_GAP }}>
       {questions.map(({ id }, idx, arr) => {
         /* Calculate width percent based on number of questions */
         const width = `calc(${Math.floor(
@@ -44,14 +58,10 @@ export const QuizProgressBar = () => {
         )}% - ${PROGRESS_BAR_GAP})`
 
         return (
-          <Container
+          <div
             key={id}
-            bg={progressBarBackground(idx)}
-            h="4px"
-            w={width}
-            maxW={`min(${width}, 2rem)`}
-            marginInline={0}
-            p={0}
+            className={cn(progressBarBackground(idx), "mx-0 h-[4px] p-0")}
+            style={{ width, maxWidth: `min(${width}, 2rem)` }}
           />
         )
       })}

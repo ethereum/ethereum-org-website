@@ -87,7 +87,7 @@ lang: zh
 
 对于与节点或客户端设置、管理或迁移相关的软件产品：
 
-**支持哪些共识层客户端（ 例如 Lighthouse、Teku、Nimbus 和 Prysm）？**
+**支持哪些共识层客户端（ Lighthouse、Teku、Nimbus、Prysm、Grandine）是否受支持？**
 
 - 支持哪些客户端？ 用户可以选择吗？
 - 这用于确定产品的“多客户端”评分。
@@ -171,6 +171,6 @@ lang: zh
 
 如果你想将质押产品或服务添加到 ethereum.org，请在 GitHub 上创建一个问题。
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_staking_product.yaml">
+<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_staking_product.yaml">
   创建一个提议
 </ButtonLink>

@@ -1,79 +1,31 @@
 import React, { useState } from "react"
-import reverse from "lodash/reverse"
-import sortBy from "lodash/sortBy"
-import { useTranslation } from "next-i18next"
-import {
-  Box,
-  Button as ChakraButton,
-  Flex,
-  Img,
-  useColorModeValue,
-  useRadio,
-  useRadioGroup,
-} from "@chakra-ui/react"
+import { reverse, sortBy } from "lodash"
 
 import type { CostLeaderboardData } from "@/lib/types"
 
+import { Button } from "@/components/ui/buttons/Button"
+import { Flex } from "@/components/ui/flex"
+
+import { cn } from "@/lib/utils/cn"
+
 import Emoji from "./Emoji"
-import Text from "./OldText"
+import { Image } from "./Image"
 
-const Button = (props) => {
-  return (
-    <ChakraButton
-      display="flex"
-      borderRadius="2rem"
-      borderWidth="1px"
-      borderStyle="solid"
-      borderColor="text"
-      color="text"
-      alignItems="center"
-      py={4}
-      px={6}
-      m={2}
-      h="full"
-      cursor="pointer"
-      bg="transparent"
-      w={{ base: "full", lg: "initial" }}
-      justifyContent="center"
-      mx={{ base: "0", lg: "2" }}
-      _hover={{
-        color: "primary.base",
-        borderColor: "primary.base",
-      }}
-      _focus={{}}
-      _active={{}}
-      {...props}
-    />
-  )
-}
+import { useTranslation } from "@/hooks/useTranslation"
 
-const RadioCard = (props) => {
-  const shadow = useColorModeValue("tableBox.light", "tableBox.dark")
-  const { getInputProps, getCheckboxProps } = useRadio(props)
-
-  const input = getInputProps()
-  const checkbox = getCheckboxProps()
-
+const RadioCard = ({ value, children, checked, onChange }) => {
   return (
     <Button
-      as="label"
-      {...checkbox}
-      _checked={{
-        borderColor: "primary.base",
-        color: "primary.base",
-        boxShadow: shadow,
-      }}
+      variant="ghost"
+      onClick={() => onChange(value)}
+      className={cn(
+        "m-2 mx-0 flex h-full w-full items-center justify-center rounded-full px-6 py-4 lg:mx-2 lg:w-auto",
+        checked && "border-primary text-primary shadow-md"
+      )}
     >
-      <input {...input} />
-      <Text
-        as="span"
-        fontSize={{ base: "md", md: "lg" }}
-        lineHeight="100%"
-        textAlign="center"
-        fontWeight={{ base: "semibold", md: "normal" }}
-      >
-        {props.children}
-      </Text>
+      <span className="text-center text-md font-semibold leading-none md:text-lg md:font-normal">
+        {children}
+      </span>
     </Button>
   )
 }
@@ -92,12 +44,6 @@ const TranslationLeaderboard = ({
   quarterData,
   allTimeData,
 }: TranslationLeaderboardProps) => {
-  const tableBoxShadow = useColorModeValue("tableBox.light", "tableBox.dark")
-  const tableItemBoxShadow = useColorModeValue(
-    "tableItemBox.light",
-    "tableItemBox.dark"
-  )
-
   const leaderboardData = {
     monthData: sortAndFilterData(monthData),
     quarterData: sortAndFilterData(quarterData),
@@ -115,75 +61,52 @@ const TranslationLeaderboard = ({
     updateFilterAmount(50)
   }
 
-  const { getRadioProps } = useRadioGroup({
-    name: "period selection",
-    defaultValue: "monthData",
-    onChange: updateDateRangeType,
-  })
-
   const { t } = useTranslation(
     "page-contributing-translation-program-acknowledgements"
   )
 
   return (
-    <Box>
-      <Flex
-        justifyContent="center"
-        py={0}
-        px={8}
-        mb={8}
-        flexDirection={{ base: "column", lg: "inherit" }}
-        w="full"
-      >
-        <RadioCard key="monthData" {...getRadioProps({ value: "monthData" })}>
+    <div>
+      <Flex className="mb-8 w-full flex-col justify-center px-8 py-0 lg:flex-row">
+        <RadioCard
+          value="monthData"
+          checked={dateRangeType === "monthData"}
+          onChange={updateDateRangeType}
+        >
           {t(
             "page-contributing-translation-program-acknowledgements-translation-leaderboard-month-view"
           )}
         </RadioCard>
         <RadioCard
-          key="quarterData"
-          {...getRadioProps({ value: "quarterData" })}
+          value="quarterData"
+          checked={dateRangeType === "quarterData"}
+          onChange={updateDateRangeType}
         >
           {t(
             "page-contributing-translation-program-acknowledgements-translation-leaderboard-quarter-view"
           )}
         </RadioCard>
         <RadioCard
-          key="allTimeData"
-          {...getRadioProps({ value: "allTimeData" })}
+          value="allTimeData"
+          checked={dateRangeType === "allTimeData"}
+          onChange={updateDateRangeType}
         >
           {t(
             "page-contributing-translation-program-acknowledgements-translation-leaderboard-all-time-view"
           )}
         </RadioCard>
       </Flex>
-      <Box bg="background.base" boxShadow={tableBoxShadow} w="full" mb={8}>
-        <Flex
-          bg="grayBackground"
-          textDecoration="none"
-          justifyContent="space-between"
-          alignItems="center"
-          color="text"
-          mb="1px"
-          p={4}
-          w="full"
-        >
+      <div className="mb-8 w-full bg-background-highlight shadow-md">
+        <Flex className="bg-muted text-foreground mb-[1px] w-full items-center justify-between p-4">
           <Flex>
-            <Box w={10} opacity="0.4">
-              #
-            </Box>
-            <Flex
-              flexDirection="row"
-              alignItems="center"
-              me={8}
-              overflowWrap="anywhere"
-            >
+            <div className="w-10 opacity-40">#</div>
+            <Flex className="me-8 flex-row items-center break-words">
               {t(
                 "page-contributing-translation-program-acknowledgements-translator"
               )}
             </Flex>
           </Flex>
-          <Flex minW="20%" flexDirection="row" alignItems="start">
+          <Flex className="min-w-[20%] flex-row items-start">
             {t(
               "page-contributing-translation-program-acknowledgements-total-words"
             )}
@@ -204,92 +127,61 @@ const TranslationLeaderboard = ({
             }
             return (
               <Flex
-                textDecoration="none"
-                justifyContent="space-between"
-                alignItems="center"
-                color="text"
-                boxShadow={tableItemBoxShadow}
-                mb="1px"
-                py={2}
-                px={4}
-                w="full"
-                _hover={{
-                  borderRadius: "base",
-                  boxShadow: "tableItemBoxHover",
-                  bg: "tableBackgroundHover",
-                }}
                 key={idx}
+                className="text-foreground hover:rounded-base hover:bg-accent/50 mb-[1px] w-full items-center justify-between px-4 py-2 shadow-sm hover:shadow-md"
               >
                 <Flex>
-                  {emoji ? (
-                    <Box w={10}>
-                      <Emoji me={4} fontSize="2rem" text={emoji} />
-                    </Box>
-                  ) : (
-                    <Box w={10} opacity="0.4">
-                      {idx + 1}
-                    </Box>
-                  )}
-                  <Flex
-                    flexDirection="row"
-                    alignItems="center"
-                    me={8}
-                    overflowWrap="anywhere"
-                  >
-                    <Img
-                      me={4}
-                      h={{ base: "30px", sm: 10 }}
-                      w={{ base: "30px", sm: 10 }}
-                      borderRadius="50%"
-                      display={{ base: "none", s: "block" }}
-                      src={avatarUrl}
-                    />
-                    <Box maxW={{ base: "100px", sm: "none" }}>
+                  <div className="flex w-10 items-center">
+                    {emoji ? (
+                      <Emoji className="me-4 text-[2rem]" text={emoji} />
+                    ) : (
+                      <span className="opacity-40">{idx + 1}</span>
+                    )}
+                  </div>
+                  <Flex className="me-8 flex-row items-center break-words">
+                    <div className="relative me-4 hidden h-[30px] w-[30px] sm:block sm:h-10 sm:w-10">
+                      <Image
+                        fill
+                        className="rounded-full object-cover"
+                        src={avatarUrl}
+                        alt={username}
+                      />
+                    </div>
+                    <div className="max-w-[100px] sm:max-w-none">
                       {username}
-                      <Text m={0} display="block" fontSize="sm" opacity="0.6">
+                      <span className="block text-sm opacity-60">
                         {langs[0]}
-                      </Text>
-                    </Box>
+                      </span>
+                    </div>
                   </Flex>
                 </Flex>
-                <Flex minW="20%" flexDirection="row" alignItems="start">
+                <Flex className="min-w-[20%] flex-row items-start">
                   <Emoji
-                    display={{ base: "none", sm: "block" }}
-                    me={2}
-                    fontSize="2xl"
-                    text={":writing:"}
+                    text=":writing:"
+                    className="me-2 hidden text-2xl sm:block"
                   />
                   {totalCosts}
                 </Flex>
               </Flex>
             )
           })}
-      </Box>
-      <Flex
-        justifyContent="center"
-        py={0}
-        px={8}
-        mb={8}
-        flexDirection={{ base: "column", lg: "inherit" }}
-        w="full"
-      >
-        <Button onClick={filterAmount === 10 ? showMore : showLess}>
-          <Text
-            as="span"
-            fontSize={{ base: "md", md: "lg" }}
-            lineHeight="100%"
-            textAlign="center"
-            fontWeight={{ base: "semibold", md: "normal" }}
-          >
+      </div>
+      <Flex className="mb-8 w-full flex-col justify-center px-8 py-0 lg:flex-row">
+        <Button
+          variant="ghost"
+          onClick={filterAmount === 10 ? showMore : showLess}
+          className="m-2 mx-0 flex h-full w-full items-center justify-center rounded-full px-6 py-4 lg:mx-2 lg:w-auto"
+        >
+          <span className="text-center text-md font-semibold leading-none md:text-lg md:font-normal">
             {t(
               filterAmount === 10
                 ? "page-contributing-translation-program-acknowledgements-translation-leaderboard-show-more"
                 : "page-contributing-translation-program-acknowledgements-translation-leaderboard-show-less"
             )}
-          </Text>
+          </span>
         </Button>
       </Flex>
-    </Box>
+    </div>
   )
 }
 

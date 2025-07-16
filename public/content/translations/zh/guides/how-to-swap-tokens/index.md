@@ -6,13 +6,13 @@ lang: zh
 
 # 如何兑换代币
 
-是否厌倦了寻找一个上架了所有你喜欢的代币的交易所？ 在去中心化交易所，你就可以兑换大多数的代币。
+是否厌倦了寻找一个上架了所有你喜欢的代币的交易所？ 在[去中心化交易所](/glossary/#dex)，你可以兑换大多数代币。
 
-代币兑换是指在以太坊网络上交换两种不同的资产，例如用以太币去兑换 DAI 稳定币（一种 ERC-20 代币）。 兑换过程非常快，也很便宜。 要进行代币兑换，你需要有一个加密货币钱包。
+代币兑换是指交换以太坊网络上存在的两种不同资产，例如用以太币兑换 DAI 币（一种 [ERC-20](/glossary/#erc-20) 代币）。 兑换过程非常快，也很便宜。 要进行代币兑换，你需要有一个加密货币钱包。
 
 **前期准备：**
 
-- 要有加密钱包，请参照这个教程：[如何“注册”以太坊帐户](/guides/how-to-create-an-ethereum-account/)
+- 要拥有[加密钱包](/glossary/#wallet)，请参照这个教程：[如何“注册”以太坊帐户](/guides/how-to-create-an-ethereum-account/)
 - 把资金添加到你的钱包
 
 ## 1. 把你的钱包连接到你选定的去中心化交易所 (DEX)
@@ -24,7 +24,7 @@ lang: zh
 - [1Inch](https://app.1inch.io/#/1/unified/swap/ETH/DAI)
 - [Curve](https://curve.fi/#/ethereum/swap)
 
-如果想详细了解什么是去中心化金融以及这些新型交易所如何运作，我们建议你访问 [Kernel Library](https://library.kernel.community/Topic+-+DeFi/Topic+-+DeFi)。
+有趣吗？ 详细了解什么是[去中心化金融 (DeFi)](/defi/)，以及这些新型交易所的运作方式。
 
 ## 2. 选择你想兑换的代币交易对
 
@@ -51,7 +51,7 @@ lang: zh
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>想了解更多信息？</div>
-  <ButtonLink to="/guides/">
+  <ButtonLink href="/guides/">
     查看我们其他的指南
   </ButtonLink>
 </InfoBanner>

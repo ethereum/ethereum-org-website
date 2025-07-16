@@ -124,9 +124,8 @@ export const processLanguage = (
   // Initialize working directory and check for existence
   const path: string = join(DOT_CROWDIN, crowdinLangCode)
   if (!existsSync(path)) {
-    trackers.langs[
-      repoLangCode
-    ].error = `Path doesn't exist for lang ${crowdinLangCode}`
+    trackers.langs[repoLangCode].error =
+      `Path doesn't exist for lang ${crowdinLangCode}`
     return
   }
   const langLs: string[] = readdirSync(path)

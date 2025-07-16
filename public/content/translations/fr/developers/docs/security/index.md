@@ -6,7 +6,7 @@ lang: fr
 
 Les contrats intelligents Ethereum sont extrêmement flexibles, capables à la fois de détenir de grandes quantités de jetons (souvent plus de 1 milliard de $) et d'exécuter une logique immuable sur du code intelligent précédemment déployé. Alors que cela a créé un écosystème dynamique et créatif de contrats intelligents interconnectés et trustless, c'est aussi l'écosystème parfait pour attirer les attaquants qui cherchent à en tirer profit en exploitant des vulnérabilités dans les contrats intelligents et des comportements inattendus dans Ethereum. Le code d'un contrat intelligent ne peut _habituellement_ pas être modifié pour corriger les défauts de sécurité, les actifs volés à partir de contrats intelligents sont irrécupérables et extrêmement difficiles à tracer. Le montant total volé ou perdu en raison de problèmes sur les contrats intelligents atteint facilement le milliard de dollars. Voici quelques-uns des problèmes les plus importants dus à des erreurs de codage de contrat intelligent :
 
-- [Problème n°1 de multisig Parity - 30 millions de dollars perdus](https://www.coindesk.com/30-million-ether-reported-stolen-parity-wallet-breach)
+- [Problème n°1 de multisig Parity - 30 millions de dollars perdus](https://www.coindesk.com/markets/2017/07/19/30-million-ether-reported-stolen-due-to-parity-wallet-breach)
 - [Problème n°2 de multisig Parity - 300 millions de dollars perdus](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether)
 - [Hack TheDAO, 3,6 millions d'ETH ! Prés de 1 milliard de dollars en prix actuel de l'ETH](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/)
 
@@ -29,7 +29,7 @@ Il faut au minimum que :
 - tout le code soit stocké dans un système de contrôle de version comme git ;
 - toutes les modifications de code soient effectuées via des PR (Pull Requests) ;
 - toutes les PR aient au moins un réviseur ; _Si vous travaillez sur un projet en solo, envisagez de trouver un autre auteur solo pour négocier des révisions de code !_
-- une seule commande compile, déploie et exécute une suite de tests sur votre code en utilisant un environnement de développement Ethereum (Voir : Truffle) ;
+- une seule commande compile, déploie et exécute une suite de tests sur votre code en utilisant un environnement de développement Ethereum;
 - vous ayez exécuté votre code via des outils d'analyse basiques comme Mythril et Slither, idéalement avant que chaque PR soit fusionnée, en comparant les différences de sortie ;
 - Solidity n'émette aucune alerte à la compilation ;
 - votre code soit bien documenté.

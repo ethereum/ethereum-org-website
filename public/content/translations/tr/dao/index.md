@@ -50,7 +50,7 @@ Bir DAO'nun bel kemiği, organizasyonun kurallarını tanımlayan ve grubun hazi
 
 Bu, akıllı sözleşmelerin Ethereum'da yayınlandıktan sonra kurcalanamaz olmaları sayesinde mümkündür. İnsanlar fark etmeden kodu (yani DAO'ların kurallarını) değiştiremezsiniz çünkü her şey halka açıktır.
 
-<DocLink to="/smart-contracts/">
+<DocLink href="/smart-contracts/">
   Akıllı kontratlar hakkında daha fazla bilgi
 </DocLink>
 
@@ -93,7 +93,7 @@ DAO'ların binlerce oylama üyesi olabilirken, fonlar güvenilir ve genellikle "
 
 ### Meşhur bir örnek {#law-example}
 
-[CityDAO](https://citydao.io) – CityDAO, Wyoming'in DAO yasasını kullanarak Yellowstone Milli Parkı yakınında 40 dönümlük arazi satın aldı.
+[CityDAO](https://citizen.citydao.io/) – CityDAO, Wyoming'in DAO yasasını kullanarak Yellowstone Milli Parkı yakınında 40 dönümlük arazi satın aldı.
 
 ## DAO üyeliği {#dao-membership}
 

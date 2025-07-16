@@ -28,16 +28,6 @@ Ați _putea_ [executa un nod](/developers/docs/nodes-and-clients/#running-your-o
 
 **Observaţie**: Majoritatea [framework-urilor de dezvoltare](/developers/docs/frameworks/) includ o rețea de dezvoltare integrată. Vă recomandăm să începeţi cu un framework pentru a vă [configura mediul de dezvoltare local](/developers/local-environment/).
 
-### Ganache {#ganache}
-
-Lansează rapid un blockchain personal Ethereum pe care îl puteţi folosi pentru a rula teste, a executa comenzi și a inspecta starea în timp ce controlaţi modul în care funcționează lanțul.
-
-Ganache oferă atât o aplicație desktop (Ganache UI), cât și un instrument de linie de comandă (`ganache-cli`). Face parte din suita de unelte Truffle.
-
-- [Site web](https://www.trufflesuite.com/ganache)
-- [GitHub](https://github.com/trufflesuite/ganache)
-- [Documentație](https://www.trufflesuite.com/docs/ganache/overview)
-
 ### Rețeaua Hardhat {#hardhat-network}
 
 O rețea locală Ethereum concepută pentru dezvoltare. Vă permite să vă implementaţi contractele, să vă execuți testele și să eliminaţi bug-urile din cod.
@@ -46,6 +36,14 @@ Rețeaua Hardhat este dotată cu Hardhat integrat, un mediu de dezvoltare în Et
 
 - [Site web](https://hardhat.org/)
 - [GitHub](https://github.com/nomiclabs/hardhat)
+
+### Lanțuri de testare publice Ethereum {#public-beacon-testchains}
+
+Există, de asemenea, două implementări publice de testare ale Ethereum: Sepolia și Hoodi. Sepolia este rețeaua de testare standard recomandată pentru dezvoltarea aplicațiilor, cu un set închis de validatori pentru sincronizare rapidă. Hoodi este o rețea de testare pentru validare și staking, care utilizează un set deschis de validatori și permite potențial oricui să valideze.
+
+- [Launchpad-ul de staking Hoodi](https://hoodi.launchpad.ethereum.org/en/)
+- [Site-ul web Sepolia](https://sepolia.dev/)
+- [Site-ul web Hoodi](https://hoodi.ethpandaops.io/)
 
 ## Referințe suplimentare {#further-reading}
 

@@ -42,7 +42,7 @@ Once you’ve created an Alchemy account, you can generate an API key by creatin
 
 We need an Ethereum account to send and receive transactions. For this tutorial, we’ll use MetaMask, a virtual wallet in the browser used to manage your Ethereum account address. If you want to understand more about how transactions on Ethereum work, check out [this page](/developers/docs/transactions/) from the Ethereum foundation.
 
-You can download and create a MetaMask account for free [here](https://metamask.io/download.html). When you are creating an account, or if you already have an account, make sure to switch over to the “Sepolia Test Network” in the upper right (so that we’re not dealing with real money).
+You can download and create a MetaMask account for free [here](https://metamask.io/download). When you are creating an account, or if you already have an account, make sure to switch over to the “Sepolia Test Network” in the upper right (so that we’re not dealing with real money).
 
 ![Set Sepolia as your network](./metamask-goerli.png)
 
@@ -73,6 +73,7 @@ Now that we’re inside our project folder, we’ll use npm init to initialize t
 
 It doesn’t really matter how you answer the installation questions; here is how we did it for reference:
 
+```json
     package name: (my-nft)
     version: (1.0.0)
     description: My first NFT!
@@ -95,6 +96,7 @@ It doesn’t really matter how you answer the installation questions; here is ho
       "author": "",
       "license": "ISC"
     }
+```
 
 Approve the package.json, and we’re good to go!
 
@@ -255,6 +257,7 @@ We’ve added several dependencies and plugins so far, now we need to update har
 
 Update your hardhat.config.js to look like this:
 
+```js
     /**
     * @type import('hardhat/config').HardhatUserConfig
     */
@@ -272,6 +275,7 @@ Update your hardhat.config.js to look like this:
           }
        },
     }
+```
 
 ## Step 14: Compile our contract {#compile-contract}
 
@@ -331,7 +335,7 @@ If we go to the [Sepolia etherscan](https://sepolia.etherscan.io/) and search fo
 
 ![View your transaction address on Etherscan](./etherscan-sepoila-contract-creation.png)
 
-The From address should match your MetaMask account address and the To address will say “Contract Creation.” If we click into the transaction, we’ll see our contract address in the To field:
+The From address should match your MetaMask account address and the To address will say “Contract Creation”. If we click into the transaction, we’ll see our contract address in the To field:
 
 ![View your contract address on Etherscan](./etherscan-sepolia-tx-details.png)
 

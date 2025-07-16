@@ -23,7 +23,7 @@ ERC-1155トークンの詳細な説明については、[EIP-1155](https://eips.
 - [バッチ転送](#batch_transfers)：1回の呼び出しで複数のアセットを転送します。
 - [バッチ残高](#batch_balance)：1回の呼び出しで、複数の資産の残高を取得します。
 - [バッチ承認](#batch_approval)：ひとつのアドレスに対するすべてのトークンを承認します。
-- [フック](#recieve_hook)：トークンのフックを受け取ります。
+- [フック](#receive_hook)：トークンのフックを受け取ります。
 - [NFTに対応](#nft_support)：供給トークンの数が1の場合、NFTとして扱います。
 - [安全な転送ルール](#safe_transfer_rule)：セキュアな転送のためのルールセットです。
 
@@ -143,4 +143,4 @@ _注記_：フックを含むすべてのバッチ関数は、バッチ処理で
 - [ERC-1155：マルチトークン規格](https://eips.ethereum.org/EIPS/eip-1155)
 - [ERC-1155：Openzeppelinのドキュメンテーション](https://docs.openzeppelin.com/contracts/3.x/erc1155)
 - [ERC-1155：Githubリポジトリ](https://github.com/enjin/erc-1155)
-- [AlchemyのNFT API](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api)
+- [Alchemy NFT API](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api)

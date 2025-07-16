@@ -1,17 +1,10 @@
-import { Box } from "@chakra-ui/react"
-
 import type { ChildOnlyProp } from "@/lib/types"
 
 function FeaturedText({ children }: ChildOnlyProp) {
   return (
-    <Box
-      ps={4}
-      ms={-4}
-      borderInlineStart="1px dotted"
-      borderColor="primary.base"
-    >
+    <div className="-ms-4 border border-dashed border-primary ps-4">
       {children}
-    </Box>
+    </div>
   )
 }
 
