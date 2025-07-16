@@ -191,40 +191,37 @@ const Page = async ({
                   <div className="flex flex-row gap-4">
                     <div className="flex flex-row flex-wrap gap-4">
                       {app.twitter && (
-                        <div>
-                          <ButtonLink
-                            href={app.twitter}
-                            target="_blank"
-                            variant="outline"
-                            hideArrow
-                          >
-                            <Twitter />
-                          </ButtonLink>
-                        </div>
+                        <ButtonLink
+                          href={app.twitter}
+                          target="_blank"
+                          variant="outline"
+                          isSecondary
+                          hideArrow
+                        >
+                          <Twitter />
+                        </ButtonLink>
                       )}
                       {app.discord && (
-                        <div>
-                          <ButtonLink
-                            href={app.discord}
-                            target="_blank"
-                            variant="outline"
-                            hideArrow
-                          >
-                            <Discord />
-                          </ButtonLink>
-                        </div>
+                        <ButtonLink
+                          href={app.discord}
+                          target="_blank"
+                          variant="outline"
+                          isSecondary
+                          hideArrow
+                        >
+                          <Discord />
+                        </ButtonLink>
                       )}
                       {app.github && (
-                        <div>
-                          <ButtonLink
-                            href={app.github}
-                            target="_blank"
-                            variant="outline"
-                            hideArrow
-                          >
-                            <Github />
-                          </ButtonLink>
-                        </div>
+                        <ButtonLink
+                          href={app.github}
+                          target="_blank"
+                          variant="outline"
+                          isSecondary
+                          hideArrow
+                        >
+                          <Github />
+                        </ButtonLink>
                       )}
                     </div>
                     {nextApp && (
@@ -321,6 +318,7 @@ const Page = async ({
                     app={relatedApp}
                     imageSize={24}
                     showDescription={true}
+                    hoverClassName="hover:bg-background-highlight/50"
                   />
                 </div>
               ))}

@@ -15,6 +15,7 @@ interface AppCardProps {
   showDescription?: boolean
   hideTag?: boolean
   disableLink?: boolean
+  hoverClassName?: string
 }
 
 const AppCard = ({
@@ -24,6 +25,7 @@ const AppCard = ({
   showDescription = false,
   hideTag = false,
   disableLink = false,
+  hoverClassName,
 }: AppCardProps) => {
   const cardContent = (
     <div
@@ -75,7 +77,10 @@ const AppCard = ({
 
   return (
     <LinkBox
-      className={cn("group rounded-xl p-2 hover:bg-background-highlight")}
+      className={cn(
+        "group rounded-xl p-2",
+        hoverClassName || "hover:bg-background-highlight"
+      )}
     >
       <LinkOverlay href={`/apps/${slugify(app.name)}`} className="no-underline">
         {cardContent}
