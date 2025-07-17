@@ -4,7 +4,7 @@ import {
   AvatarFallback,
   AvatarImage,
 } from "@/components/ui/avatar"
-import { Button } from "@/components/ui/buttons/Button"
+import { ButtonLink } from "@/components/ui/buttons/Button"
 import {
   Card,
   CardContent,
@@ -86,7 +86,9 @@ const CurrentTorchHolderCard = ({
         )}
       </CardContent>
       <CardFooter className="justify-center pt-4">
-        <Button variant="outline">See all torchbearers</Button>
+        <ButtonLink href="#torch-history" variant="outline">
+          See all torchbearers
+        </ButtonLink>
       </CardFooter>
     </Card>
   )

@@ -271,16 +271,10 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
         </div>
       </div>
 
-      {/* <TorchHistory
-          title={t("page-10-year-torch-history-title")}
-          noHistoryLabel={t("page-10-year-torch-no-history")}
-          fromLabel={t("page-10-year-torch-from")}
-          toLabel={t("page-10-year-torch-to")}
-          transactionLabel={t("page-10-year-torch-view-tx")}
-          holderLookup={torchHolderLookup}
-        /> */}
-
-      <div className="my-32 flex w-full flex-col rounded-3xl bg-gradient-to-b from-[#171B37] via-[#171B37] via-60% to-[#9C63F8]">
+      <div
+        id="torch-history"
+        className="my-32 flex w-full scroll-mt-32 flex-col rounded-3xl bg-gradient-to-b from-[#171B37] via-[#171B37] via-60% to-[#9C63F8]"
+      >
         <div className="relative p-8">
           <div className="mt-24 flex items-center justify-center">
             {/* <video
