@@ -1,6 +1,6 @@
 {
   "name": "ethereum-org-website",
-  "version": "10.7.0",
+  "version": "10.8.0",
   "license": "MIT",
   "private": true,
   "scripts": {
@@ -23,7 +23,11 @@
     "events-import": "ts-node -O '{ \"module\": \"commonjs\" }' src/scripts/events-import.ts",
     "crowdin-needs-review": "ts-node -O '{ \"module\": \"commonjs\" }' src/scripts/crowdin/reports/generateReviewReport.ts",
     "update-tutorials": "ts-node -O '{ \"module\": \"commonjs\" }' src/scripts/update-tutorials-list.ts",
-    "prepare": "husky"
+    "prepare": "husky",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "test:e2e:debug": "playwright test --debug",
+    "test:e2e:report": "playwright show-report tests/e2e/__report__"
   },
   "dependencies": {
     "@crowdin/crowdin-api-client": "^1.25.0",
@@ -97,8 +101,10 @@
     "yaml-loader": "^0.8.0"
   },
   "devDependencies": {
+    "@chromatic-com/playwright": "^0.12.4",
     "@chromatic-com/storybook": "1.5.0",
     "@netlify/plugin-nextjs": "^5.10.0",
+    "@playwright/test": "^1.52.0",
     "@storybook/addon-essentials": "8.6.14",
     "@storybook/addon-interactions": "8.6.14",
     "@storybook/addon-links": "8.6.14",
@@ -120,7 +126,7 @@
     "@typescript-eslint/eslint-plugin": "^7.18.0",
     "@typescript-eslint/parser": "^7.18.0",
     "autoprefixer": "^10.4.19",
-    "chromatic": "10.9.6",
+    "chromatic": "12.0.0",
     "decompress": "^4.2.1",
     "dotenv": "^16.5.0",
     "eslint": "^8.57.1",
@@ -152,5 +158,5 @@
     "unist-util-visit": "^5.0.0",
     "xml2js": "^0.6.2"
   },
-  "packageManager": "pnpm@10.12.3+sha512.467df2c586056165580ad6dfb54ceaad94c5a30f80893ebdec5a44c5aa73c205ae4a5bb9d5ed6bb84ea7c249ece786642bbb49d06a307df218d03da41c317417"
+  "packageManager": "pnpm@10.12.4"
 }

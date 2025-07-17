@@ -1,8 +1,15 @@
 "use client"
 
 import { useParams } from "next/navigation"
+import { useLocale } from "next-intl"
+
+import type { LocaleDisplayInfo } from "@/lib/types"
+
+import { ButtonLink } from "@/components/ui/buttons/Button"
 
 import { cn } from "@/lib/utils/cn"
+
+import { DEFAULT_LOCALE } from "@/lib/constants"
 
 import {
   Command,
@@ -12,7 +19,6 @@ import {
   CommandList,
 } from "../ui/command"
 import { Dialog, DialogContent, DialogTrigger } from "../ui/dialog"
-import { BaseLink } from "../ui/Link"
 import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover"
 
 import MenuItem from "./MenuItem"
@@ -40,7 +46,8 @@ const LanguagePicker = ({
   const pathname = usePathname()
   const { push } = useRouter()
   const params = useParams()
-  const { disclosure, languages } = useLanguagePicker(handleClose)
+  const { disclosure, languages, intlLanguagePreference } =
+    useLanguagePicker(handleClose)
   const { isOpen, setValue, onClose, onOpen } = disclosure
 
   /**
@@ -96,6 +103,7 @@ const LanguagePicker = ({
           />
 
           <LanguagePickerFooter
+            intlLanguagePreference={intlLanguagePreference}
             onTranslationProgramClick={handleBaseLinkClose}
           />
         </DialogContent>
@@ -124,7 +132,10 @@ const LanguagePicker = ({
           }
         />
 
-        <LanguagePickerFooter onTranslationProgramClick={handleBaseLinkClose} />
+        <LanguagePickerFooter
+          intlLanguagePreference={intlLanguagePreference}
+          onTranslationProgramClick={handleBaseLinkClose}
+        />
       </PopoverContent>
     </Popover>
   )
@@ -185,21 +196,45 @@ const LanguagePickerMenu = ({ languages, onClose, onSelect }) => {
   )
 }
 
-const LanguagePickerFooter = ({ onTranslationProgramClick }) => {
+const LanguagePickerFooter = ({
+  intlLanguagePreference,
+  onTranslationProgramClick,
+}: {
+  intlLanguagePreference?: LocaleDisplayInfo
+  onTranslationProgramClick: () => void
+}) => {
   const { t } = useTranslation("common")
-
+  const locale = useLocale()
+  console.log({ intlLanguagePreference })
   return (
-    <div className="sticky bottom-0 flex justify-center border-t-2 border-primary bg-primary-low-contrast p-3">
-      <p className="text-center text-xs text-body">
-        {t("page-languages-recruit-community")}{" "}
-        {/* TODO migrate once #13411 is merged */}
-        <BaseLink
-          href="/contributing/translation-program"
+    <div className="sticky bottom-0 flex border-t-2 border-primary bg-primary-low-contrast p-0 pb-1 pt-1">
+      <div className="flex w-full max-w-sm items-center justify-between px-4">
+        <div className="flex min-w-0 flex-col items-start">
+          {locale === DEFAULT_LOCALE ? (
+            <p className="overflow-hidden text-ellipsis whitespace-nowrap text-xs font-bold text-body">
+              {intlLanguagePreference
+                ? `${t("page-languages-translate-cta-title")} ${t(`language-${intlLanguagePreference.localeOption}`)}`
+                : "Translate ethereum.org"}
+            </p>
+          ) : (
+            <p className="overflow-hidden text-ellipsis whitespace-nowrap text-xs font-bold text-body">
+              {t("page-languages-translate-cta-title")}{" "}
+              {t(`language-${locale}`)}
+            </p>
+          )}
+          <p className="text-xs text-body">
+            {t("page-languages-recruit-community")}
+          </p>
+        </div>
+        <ButtonLink
+          className="text-nowrap"
+          href="/contributing/translation-program/"
+          size="sm"
           onClick={onTranslationProgramClick}
         >
-          {t("common:learn-more")}
-        </BaseLink>
-      </p>
+          {t("get-involved")}
+        </ButtonLink>
+      </div>
     </div>
   )
 }
