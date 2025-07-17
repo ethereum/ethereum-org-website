@@ -310,23 +310,28 @@ const Page = async ({
           </div>
         </div>
 
-        <div className="flex flex-col px-4 py-10 md:px-8">
-          <div className="flex w-full flex-col items-center gap-8 rounded-2xl bg-gradient-to-t from-blue-500/20 from-10% to-blue-500/5 to-90% p-12 px-4 md:px-8">
-            <h2>More apps like this</h2>
-            <div className="flex w-full flex-col gap-4 lg:flex-row">
-              {relatedApps.map((relatedApp) => (
-                <div key={relatedApp.name} className="flex-1">
-                  <AppCard
-                    app={relatedApp}
-                    imageSize={24}
-                    showDescription={true}
-                    hoverClassName="hover:bg-background-highlight/50"
-                  />
-                </div>
-              ))}
+        {relatedApps.length > 0 && (
+          <div className="flex flex-col px-4 py-10 md:px-8">
+            <div className="flex w-full flex-col items-center gap-8 rounded-2xl bg-gradient-to-t from-blue-500/20 from-10% to-blue-500/5 to-90% p-12 px-4 md:px-8">
+              <h2>More apps like this</h2>
+              <div className="flex w-full flex-col gap-4 lg:flex-row">
+                {relatedApps.map((relatedApp) => (
+                  <div
+                    key={relatedApp.name}
+                    className="flex-1 lg:w-1/3 lg:flex-none"
+                  >
+                    <AppCard
+                      app={relatedApp}
+                      imageSize={24}
+                      showDescription={true}
+                      hoverClassName="hover:bg-background-highlight/50"
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
-        </div>
+        )}
       </MainArticle>
     </I18nProvider>
   )

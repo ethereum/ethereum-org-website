@@ -3,6 +3,7 @@ import { AppData } from "@/lib/types"
 import { Image } from "@/components/Image"
 import { LinkBox, LinkOverlay } from "@/components/ui/link-box"
 import { Tag } from "@/components/ui/tag"
+import TruncatedText from "@/components/ui/TruncatedText"
 
 import { APP_TAG_VARIANTS } from "@/lib/utils/apps"
 import { cn } from "@/lib/utils/cn"
@@ -62,7 +63,11 @@ const AppCard = ({
           {app.name}
         </p>
         {showDescription && (
-          <p className="text-body group-hover:text-body">{app.description}</p>
+          <TruncatedText
+            text={app.description}
+            maxLines={2}
+            className="text-body group-hover:text-body"
+          />
         )}
         <p className="text-sm text-body-medium">
           {app.subCategory.map((subCategory) => subCategory).join(" ·  ")}
