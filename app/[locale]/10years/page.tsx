@@ -31,7 +31,6 @@ import { adoptionStyles } from "./_components/data"
 import InnovationSwiper from "./_components/InnovationSwiper/lazy"
 import TenYearGlobe from "./_components/TenYearGlobe/lazy"
 import TenYearHero from "./_components/TenYearHero"
-// import TorchHistory from "./_components/TorchHistory"
 import TorchHistorySwiper from "./_components/TorchHistorySwiper"
 import Stories from "./_components/UserStories/lazy"
 import {
@@ -44,6 +43,11 @@ import {
 import { fetch10YearEvents } from "@/lib/api/fetch10YearEvents"
 import { fetch10YearStories } from "@/lib/api/fetch10YearStories"
 import { fetchTorchHolders } from "@/lib/api/fetchTorchHolders"
+import {
+  getCurrentHolderAddress,
+  getHolders,
+  getTransferEvents,
+} from "@/lib/torch"
 import TenYearLogo from "@/public/images/10-year-anniversary/10-year-logo.png"
 import TorchImage from "@/public/images/10-year-anniversary/torch.png"
 
@@ -66,7 +70,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 
   setRequestLocale(locale)
 
-  const [fetched10YearEvents, fetched10YearStories, torchHolders] =
+  const [fetched10YearEvents, fetched10YearStories, allTorchHolders] =
     await loadData()
 
   const stories = parseStoryDates(fetched10YearStories, locale)
@@ -85,14 +89,20 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const innovationCards = await getInnovationCards()
   const adoptionCards = await getAdoptionCards()
 
-  const torchHolderLookup: Record<string, (typeof torchHolders)[0]> =
-    torchHolders.reduce(
+  const torchHolderMap: Record<string, (typeof allTorchHolders)[0]> =
+    allTorchHolders.reduce(
       (acc, holder) => {
         acc[holder.address.toLowerCase()] = holder
         return acc
       },
-      {} as Record<string, (typeof torchHolders)[0]>
+      {} as Record<string, (typeof allTorchHolders)[0]>
     )
+
+  const currentHolderAddress = await getCurrentHolderAddress()
+  const currentHolder = torchHolderMap[currentHolderAddress.toLowerCase()]
+
+  const transferEvents = await getTransferEvents()
+  const torchHoldersEvents = await getHolders(torchHolderMap, transferEvents)
 
   return (
     <MainArticle className="mx-auto flex w-full flex-col items-center">
@@ -122,7 +132,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
         <div className="flex flex-row items-center justify-center">
           <CurrentTorchHolderCard
             className="w-[420px]"
-            holderLookup={torchHolderLookup}
+            currentHolder={currentHolder}
           />
         </div>
       </div>
@@ -291,7 +301,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           />
         </div>
 
-        <TorchHistorySwiper />
+        <TorchHistorySwiper holders={torchHoldersEvents} />
 
         <div className="flex gap-12 px-16 pb-24 pt-12 text-body-inverse dark:text-body">
           <div className="flex flex-1 flex-col gap-8">

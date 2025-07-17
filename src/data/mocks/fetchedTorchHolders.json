@@ -3,14 +3,12 @@
     "address": "0x7bc34Ec96a2da5FbC3c0cA0530d989821241516D",
     "name": "Test 1",
     "twitter": "VitalikButerin",
-    "description": "Some description about demo",
-    "imageUrl": "https://placehold.co/400.png"
+    "role": "Some description about demo"
   },
   {
     "address": "0x0e972f52C49e353Dc88C9f7F8e200c1cFE0d27b7",
     "name": "Test 2",
     "twitter": "elonmusk",
-    "description": "Some description about demo",
-    "imageUrl": "https://placehold.co/400.png"
+    "role": "Some description about demo"
   }
 ]

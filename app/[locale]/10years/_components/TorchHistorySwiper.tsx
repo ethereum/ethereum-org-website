@@ -11,96 +11,20 @@ import {
 
 import TorchHistoryCard from "./TorchHistoryCard"
 
-const mockHolders = [
-  {
-    name: "Danny Ryan",
-    role: "Ethereum researcher & co-founder Ethererelize",
-    avatar: "/images/heroes/hero-danny-ryan.png",
-    from: "July 03, 10:00pm",
-    to: "July 4th, 10:00pm",
-    twitter: "setty_rychan",
-  },
-  {
-    name: "Vitalik Buterin",
-    role: "Co-founder of Ethereum",
-    avatar: "/images/heroes/hero-vitalik-buterin.png",
-    from: "July 04, 10:00pm",
-    to: "July 5th, 10:00pm",
-    twitter: "vitalikbuterin",
-  },
-  {
-    name: "Aya Miyaguchi",
-    role: "Executive Director, Ethereum Foundation",
-    avatar: "/images/heroes/hero-aya-miyaguchi.png",
-    from: "July 05, 10:00pm",
-    to: "July 6th, 10:00pm",
-    twitter: "AyaMiyagotchi",
-  },
-  {
-    name: "Hudson Jameson",
-    role: "Ethereum core dev & community",
-    avatar: "/images/heroes/hero-hudson-jameson.png",
-    from: "July 06, 10:00pm",
-    to: "July 7th, 10:00pm",
-    twitter: "hudsonjameson",
-  },
-  {
-    name: "Lefteris Karapetsas",
-    role: "Founder, Rotki",
-    avatar: "/images/heroes/hero-lefteris-karapetsas.png",
-    from: "July 07, 10:00pm",
-    to: "July 8th, 10:00pm",
-    twitter: "LefterisJP",
-  },
-  {
-    name: "Danny Ryan",
-    role: "Ethereum researcher & co-founder Ethererelize",
-    avatar: "/images/heroes/hero-danny-ryan.png",
-    from: "July 03, 10:00pm",
-    to: "July 4th, 10:00pm",
-    twitter: "setty_rychan",
-  },
-  {
-    name: "Vitalik Buterin",
-    role: "Co-founder of Ethereum",
-    avatar: "/images/heroes/hero-vitalik-buterin.png",
-    from: "July 04, 10:00pm",
-    to: "July 5th, 10:00pm",
-    twitter: "vitalikbuterin",
-  },
-  {
-    name: "Aya Miyaguchi",
-    role: "Executive Director, Ethereum Foundation",
-    avatar: "/images/heroes/hero-aya-miyaguchi.png",
-    from: "July 05, 10:00pm",
-    to: "July 6th, 10:00pm",
-    twitter: "AyaMiyagotchi",
-  },
-  {
-    name: "Hudson Jameson",
-    role: "Ethereum core dev & community",
-    avatar: "/images/heroes/hero-hudson-jameson.png",
-    from: "July 06, 10:00pm",
-    to: "July 7th, 10:00pm",
-    twitter: "hudsonjameson",
-  },
-  {
-    name: "Lefteris Karapetsas",
-    role: "Founder, Rotki",
-    avatar: "/images/heroes/hero-lefteris-karapetsas.png",
-    from: "July 07, 10:00pm",
-    to: "July 8th, 10:00pm",
-    twitter: "LefterisJP",
-  },
-]
+import { getBlockieImage, HolderEvent } from "@/lib/torch"
 
-const TorchHistorySwiper = () => (
+type TorchHistorySwiperProps = {
+  holders: HolderEvent[]
+}
+
+const TorchHistorySwiper = ({ holders }: TorchHistorySwiperProps) => (
   <SwiperContainer className="w-full">
     <Swiper
       effect="coverflow"
       grabCursor
       centeredSlides
       slidesPerView="auto"
+      initialSlide={holders.length - 1}
       coverflowEffect={{
         rotate: 0,
         stretch: -50,
@@ -111,16 +35,16 @@ const TorchHistorySwiper = () => (
       modules={[EffectCoverflow, Navigation]}
       className="w-full"
     >
-      {mockHolders.map((holder, idx) => (
+      {holders.map((holder, idx) => (
         <SwiperSlide key={idx} className="flex !h-[400px] !w-60 justify-center">
           <TorchHistoryCard
             className="!h-[400px]"
             name={holder.name}
             role={holder.role}
-            avatar={holder.avatar}
-            from={holder.from}
-            to={holder.to}
-            twitter={holder.twitter}
+            avatar={getBlockieImage(holder.address)}
+            from={holder.event.timestamp}
+            to={holder.event.timestamp}
+            transactionHash={holder.event.transactionHash}
           />
         </SwiperSlide>
       ))}

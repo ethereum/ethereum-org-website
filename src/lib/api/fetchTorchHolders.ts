@@ -1,10 +1,4 @@
-export interface TorchHolder {
-  address: string
-  name: string
-  twitter: string
-  description: string
-  imageUrl: string
-}
+import type { TorchHolder } from "@/lib/torch"
 
 export async function fetchTorchHolders(): Promise<TorchHolder[]> {
   const googleApiKey = process.env.GOOGLE_API_KEY

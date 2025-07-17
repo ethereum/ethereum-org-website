@@ -10,23 +10,25 @@ import { BaseLink } from "@/components/ui/Link"
 
 import { cn } from "@/lib/utils/cn"
 
+import { formatDate, getEtherscanUrl } from "@/lib/torch"
+
 interface TorchHistoryCardProps {
   name: string
   role: string
   avatar: string
-  from: string
-  to: string
-  twitter?: string
+  from: number
+  to: number
+  transactionHash: string
   className?: string
 }
 
 const TorchHistoryCard: React.FC<TorchHistoryCardProps> = ({
   name,
   role,
-  //   avatar,
+  avatar,
   from,
   to,
-  twitter,
+  transactionHash,
   className,
 }) => (
   <Card
@@ -38,10 +40,7 @@ const TorchHistoryCard: React.FC<TorchHistoryCardProps> = ({
     <CardHeader className="flex flex-col gap-4 p-0">
       <div className="flex flex-col items-center">
         <Avatar className="h-32 w-32">
-          <AvatarImage
-            src="https://placehold.co/400.png"
-            alt={`Avatar for ${name}`}
-          />
+          <AvatarImage src={avatar} alt={`Avatar for ${name}`} />
           <AvatarFallback>{name}</AvatarFallback>
         </Avatar>
       </div>
@@ -51,9 +50,9 @@ const TorchHistoryCard: React.FC<TorchHistoryCardProps> = ({
     <CardContent className="flex flex-col gap-1 p-0">
       <div>{role}</div>
       <div className="text-xs text-body-medium">
-        From {from} to {to}
+        From {formatDate(from)} to {formatDate(to)}
       </div>
-      <BaseLink href={`https://twitter.com/${twitter}`} className="text-xs">
+      <BaseLink href={getEtherscanUrl(transactionHash)} className="text-xs">
         View on Etherscan
       </BaseLink>
     </CardContent>
