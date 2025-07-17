@@ -1,13 +1,13 @@
 import React from "react"
 import { motion } from "framer-motion"
-import { MdArrowBack } from "react-icons/md"
+import { ArrowLeft } from "lucide-react"
 
 import type { SimulatorNavProps } from "@/lib/types"
 
 import { cn } from "@/lib/utils/cn"
 
 import { Button, ButtonLink } from "../ui/buttons/Button"
-import { Flex } from "../ui/flex"
+import { Flex, Stack } from "../ui/flex"
 
 import type {
   LabelHref,
@@ -61,7 +61,7 @@ export const Explanation = ({
           variants={backButtonVariants}
           animate={step === 0 ? "hidden" : "visible"}
         >
-          <MdArrowBack size="18px" />
+          <ArrowLeft className="text-lg" />
           Back
         </motion.button>
       </Button>
@@ -86,7 +86,9 @@ export const Explanation = ({
           )}
         </div>
       </Flex>
-      {description && <div className="max-md:hidden">{description}</div>}
+      {description && (
+        <Stack className="gap-4 max-md:hidden">{description}</Stack>
+      )}
       {/* Last step navigation buttons */}
       {isLastStep && (
         <Flex className="z-[-1] mx-auto mt-4 w-full max-w-[300px] flex-col gap-4 md:mx-0">

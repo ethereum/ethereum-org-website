@@ -83,7 +83,7 @@ contract Coin {
 }
 ```
 
-Dis eksampol suppose give yu one sense of wetin Solidity kontract syntax bi laik. For more detailed diskripshon of di funshons and variabols, [see di docs]((https://docs.soliditylang.org/en/latest/contracts.html)).
+Dis eksampol suppose give yu one sense of wetin Solidity kontract syntax bi laik. For more detailed diskripshon of di funshons and variabols, [see di docs](https://docs.soliditylang.org/en/latest/contracts.html).
 
 ## Vyper {#vyper}
 

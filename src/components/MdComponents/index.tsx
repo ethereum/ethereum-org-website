@@ -1,10 +1,9 @@
-import { type HTMLAttributes } from "react"
-import { Badge, Box, type BoxProps } from "@chakra-ui/react"
+import { type ComponentProps, type HTMLAttributes } from "react"
 
 import type { ChildOnlyProp } from "@/lib/types"
 
 import Contributors from "@/components/Contributors"
-import MarkdownImage from "@/components/MarkdownImage"
+import MarkdownImage from "@/components/Image/MarkdownImage"
 import TooltipLink from "@/components/TooltipLink"
 import YouTube from "@/components/YouTube"
 
@@ -27,7 +26,8 @@ import { ButtonLink } from "../ui/buttons/Button"
 import { Divider } from "../ui/divider"
 import { Flex } from "../ui/flex"
 import { ListItem, OrderedList, UnorderedList } from "../ui/list"
-import { mdxTableComponents } from "../ui/Table"
+import { mdxTableComponents } from "../ui/mdx-table-components"
+import { Tag } from "../ui/tag"
 
 export const commonHeadingAttributes = (className: string, id?: string) => ({
   id,
@@ -110,7 +110,6 @@ export const HR = () => (
 // All base html element components
 export const htmlElements = {
   a: TooltipLink,
-  div: Box,
   h1: Heading1,
   h2: Heading2,
   h3: Heading3,
@@ -146,7 +145,7 @@ export const Title = (props: ChildOnlyProp) => (
   <Heading1 className="mt-4" {...props} />
 )
 
-export const ContentContainer = (props: Pick<BoxProps, "id" | "children">) => {
+export const ContentContainer = (props: ComponentProps<"article">) => {
   return (
     <MainArticle className="relative flex-[1_1_992px] px-8 pb-8" {...props} />
   )
@@ -154,7 +153,6 @@ export const ContentContainer = (props: Pick<BoxProps, "id" | "children">) => {
 
 // All custom React components
 export const reactComponents = {
-  Badge,
   ButtonLink,
   Card,
   ContentContainer,
@@ -170,6 +168,7 @@ export const reactComponents = {
   Page,
   QuizWidget: StandaloneQuizWidget,
   IssuesList,
+  Tag,
   Title,
   YouTube,
 }

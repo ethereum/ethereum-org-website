@@ -162,7 +162,7 @@ Fontos tisztában lenni azzal is, hogy a kliensdiverzitás [problémát jelent a
 ##### Konszenzusos kliensek
 
 - [Lighthouse](https://github.com/sigp/lighthouse/releases/latest)
-- [Lodestar](https://chainsafe.github.io/lodestar/install/source/) (nem ad előre megépített binárist, csak egy Docker-képet vagy fel kell építeni a forrásból)
+- [Lodestar](https://chainsafe.github.io/lodestar/run/getting-started/installation#build-from-source/) (nem ad előre megépített binárist, csak egy Docker-képet vagy fel kell építeni a forrásból)
 - [Nimbus](https://github.com/status-im/nimbus-eth2/releases/latest)
 - [Prysm](https://github.com/prysmaticlabs/prysm/releases/latest)
 - [Teku](https://github.com/ConsenSys/teku/releases)
@@ -256,7 +256,7 @@ A Besu egy telepítő opcióval bír, mely egy sor kérdést tesz fel, majd lege
 besu --Xlauncher
 ```
 
-A [Besu dokumentációja](https://besu.hyperledger.org/en/latest/HowTo/Get-Started/Starting-node/) további opciókat és konfigurációs részleteket tartalmaz.
+A [Besu dokumentációja](https://besu.hyperledger.org/public-networks/get-started/start-node/) további opciókat és konfigurációs részleteket tartalmaz.
 
 ##### Az Erigon futtatása
 
@@ -288,7 +288,7 @@ Tekintse meg a [dokumentációt az összes konfigurálási opcióhoz](https://ge
 
 ##### A Nethermind futtatása
 
-A Nethermind különféle [telepítési opciókat](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/getting-started) kínál. A csomag számos binárist tartalmaz, beleértve egy Telepítőt, ami egy vezetett felállítást tesz lehetővé, így a konfigurációt interaktív módon lehet létrehozni. Másik megoldásként használhatja a Runner-t is, ami a végrehajtási program maga, és konfigurációs jelölőkkel futtathatja. A JSON-RPC alapból engedélyezve van.
+A Nethermind különféle [telepítési opciókat](https://docs.nethermind.io/get-started/installing-nethermind) kínál. A csomag számos binárist tartalmaz, beleértve egy Telepítőt, ami egy vezetett felállítást tesz lehetővé, így a konfigurációt interaktív módon lehet létrehozni. Másik megoldásként használhatja a Runner-t is, ami a végrehajtási program maga, és konfigurációs jelölőkkel futtathatja. A JSON-RPC alapból engedélyezve van.
 
 ```sh
 Nethermind.Runner --config mainnet \
@@ -296,7 +296,7 @@ Nethermind.Runner --config mainnet \
     --JsonRpc.JwtSecretFile=/path/to/jwtsecret
 ```
 
-A Nethermind dokumentációk egy [teljeskörű útmutatót](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/running-nethermind-post-merge) adnak arról, hogyan lehet a Nethermind-ot konszenzusos klienssel működtetni.
+A Nethermind dokumentációk egy [teljeskörű útmutatót](https://docs.nethermind.io/first-steps-with-nethermind/running-nethermind-post-merge) adnak arról, hogyan lehet a Nethermind-ot konszenzusos klienssel működtetni.
 
 A végrehajtási kliens elindítja a fő funkcióit, a kiválasztott végpontokat, és társakat keres. Miután sikeresen felfedezte a társait, elkezd szinkronizálni. A végrehajtási kliens kapcsolódásra vár a konszenzusos klienstől. A jelenlegi blokkláncadatok elérhetők lesznek, amint a kliens sikeresen szinkronizál a jelen státuszhoz.
 
@@ -311,7 +311,7 @@ reth node \
     --authrpc.port 8551
 ```
 
-Tekintse meg a [Reth konfigurálást](https://reth.rs/run/config.html?highlight=data%20directory#configuring-reth), hogy többet megtudjon az alapértelmezett adatkönyvtárakról. [A Reth dokumentációja](https://reth.rs/run/mainnet.html) további opciókat és konfigurációs részleteket tartalmaz.
+Tekintse meg a [Reth konfigurálását](https://reth.rs/run/config.html?highlight=data%20directory#configuring-reth), hogy többet megtudjon az alapértelmezett adatkönyvtárakról. [A Reth dokumentációja](https://reth.rs/run/mainnet.html) további opciókat és konfigurációs részleteket tartalmaz.
 
 #### A konszenzusos kliens elindítása {#starting-the-consensus-client}
 

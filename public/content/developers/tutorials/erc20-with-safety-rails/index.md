@@ -146,7 +146,7 @@ Freezing and thawing contracts requires several changes:
       mapping(address => bool) public frozenAccounts;
   ```
 
-- [Events](https://www.tutorialspoint.com/solidity/solidity_events.htm) to inform anybody interested when an account is frozen or thawed. Technically speaking events are not required for these actions, but it helps off chain code to be able to listen to these events and know what is happening. It's considered good manners for a smart contract to emit them when something that miught be relevant to somebody else happens.
+- [Events](https://www.tutorialspoint.com/solidity/solidity_events.htm) to inform anybody interested when an account is frozen or thawed. Technically speaking events are not required for these actions, but it helps offchain code to be able to listen to these events and know what is happening. It's considered good manners for a smart contract to emit them when something that might be relevant to somebody else happens.
 
   The events are indexed so will be possible to search for all the times an account has been frozen or thawed.
 

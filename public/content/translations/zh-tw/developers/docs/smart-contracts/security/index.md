@@ -8,7 +8,7 @@ lang: zh-tw
 
 公共區塊鏈，例如以太坊，使智慧型合約的安全議題更加複雜。 已部署的合約程式碼_通常_無法變更，以修補安全缺陷；而要追蹤從智慧型合約竊取的資產也十分困難，且因為物件的不可變性，大多無法挽回。
 
-雖然數字有差異，但因智慧型合約安全缺陷而遭竊取或損失的總額，估計超過 10 億美元。 備受關注的事件如 [DAO 駭客攻擊](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/)（駭客竊取 360 萬以太幣，現價超過 10 億美元）；[Parity 多重簽章錢包駭客攻擊](https://www.coindesk.com/30-million-ether-reported-stolen-parity-wallet-breach)（駭客竊取 3 千萬美元）；以及 [Parity 凍結錢包問題](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether)（超過 3 億美元的以太幣遭到永久凍結）。
+雖然數字有差異，但因智慧型合約安全缺陷而遭竊取或損失的總額，估計超過 10 億美元。 備受關注的事件如 [DAO 駭客攻擊](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/)（駭客竊取 360 萬以太幣，現價超過 10 億美元）；[Parity 多重簽章錢包駭客攻擊](https://www.coindesk.com/markets/2017/07/19/30-million-ether-reported-stolen-due-to-parity-wallet-breach)（駭客竊取 3 千萬美元）；以及 [Parity 凍結錢包問題](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether)（超過 3 億美元的以太幣遭到永久凍結）。
 
 前面提到的問題，促使開發者將努力打造安全、健全且有韌性的智慧型合約視為當務之急。 我們必須嚴肅看待智慧型合約的安全性，每個開發者都需要好好加以瞭解。 此指南將涵蓋以太坊開發者應有的資安考量，並探索提升智慧型合約安全性的資源。
 
@@ -115,7 +115,7 @@ contract VendingMachine {
 
 - 使用[開發環境](/developers/docs/frameworks/)來測試、編譯、部署智慧型合約
 
-- 透過基本的程式碼分析工具，例如 [Cyfrin Aaderyn](https://github.com/Cyfrin/aderyn)、Mythril 和 Slither，來執行程式碼。 理想情况下，這應該在合併提取請求及檢查輸出結果異同前完成
+- 透過基本的程式碼分析工具，例如 [Cyfrin Aderyn](https://github.com/Cyfrin/aderyn)、Mythril 和 Slither，來執行程式碼。 理想情况下，這應該在合併提取請求及檢查輸出結果異同前完成
 
 - 確認程式碼編譯沒有錯誤，且 Solidity 編譯器不會傳出警告
 
@@ -304,7 +304,7 @@ contract Victim {
 - `Victim` finally applies the results of the first transaction (and subsequent ones) to its state, so `Attacker`’s balance is set to 0
 ```
 
-總起來說，因為調用者的餘額並非 0，直到函數執行結束前，後續的調用都能成功執行，並允許調用者多次提領餘額。 這類攻擊可以被用於將智慧型合約內的所有資金提領一空，如同 [2016 年的 DAO 駭客攻擊](https://www.coindesk.com/learn/2016/06/25/understanding-the-dao-attack/)。 就像[重入入侵公開清單](https://github.com/pcaversaccio/reentrancy-attacks)所示，如今重入攻擊仍是智慧型合約面臨的嚴重問題。
+總起來說，因為調用者的餘額並非 0，直到函數執行結束前，後續的調用都能成功執行，並允許調用者多次提領餘額。 這類攻擊可以被用於將智慧型合約內的所有資金提領一空，如同 [2016 年的 DAO 駭客攻擊](https://www.coindesk.com/learn/understanding-the-dao-attack)。 就像[重入入侵公開清單](https://github.com/pcaversaccio/reentrancy-attacks)所示，如今重入攻擊仍是智慧型合約面臨的嚴重問題。
 
 ##### 如何預防重入攻擊
 
@@ -505,7 +505,7 @@ contract Attack {
 
 - **[Hacken](https://hacken.io)** - _為區塊鏈安全採用 360 度全方位方法的 Web3 網路安全審核者。_
 
-- **[Nethermind](https://nethermind.io/smart-contracts-audits)** - _Solidity 和 Cairo 稽核服務，確保智慧型合約完整性、以及以太坊及 Starknet 使用者的安全。_
+- **[Nethermind](https://www.nethermind.io/smart-contract-audits)** - _Solidity 和 Cairo 稽核服務，確保智慧型合約完整性、以及以太坊及 Starknet 使用者的安全。_
 
 - **[HashEx](https://hashex.org/)** - _HashEx 專注於區塊鏈和智慧型合約審核，以確保加密貨幣的安全性，提供智慧型合約開發、滲透測試、區塊鏈諮詢等服務。_
 
@@ -515,7 +515,7 @@ contract Attack {
 
 - **[Cyfrin](https://cyfrin.io)** - _Web3 安全巨頭，透過產品和智慧型合約審核服務來發展加密安全。_
 
-- **[ImmuneBytes](https://www.immunebytes.com//smart-contract-audit/)** - _Web3 安全公司，透過經驗豐富的審核者團隊和一流工具，為區塊鏈系統提供安全審核。_
+- **[ImmuneBytes](https://immunebytes.com/smart-contract-audit/)** - _Web3 安全公司，透過經驗豐富的審核者團隊和一流工具，為區塊鏈系統提供安全審核。_
 
 - **[Oxorio](https://oxor.io/)** - _智慧型合約審核和區塊鏈安全服務，在以太坊虛擬機、Solidity、零知識、加密公司和去中心化金融專案的跨鏈技術方面擁有深厚的專業知識。_
 
@@ -563,7 +563,7 @@ contract Attack {
 
 - **[智慧型合約安全性驗證標準](https://github.com/securing/SCSVS)** - _適用於開發者、架構師、安全性審查者和廠商的標準化智慧型合約安全性 14 點檢查清單。_
 
-- **[學習智慧型合約安全與審核](https://updraft.cyfrin.io/courses/security)** - _出色的智慧型合約安全與審核課程，為希望提升安全最佳做法並成為安全研究人員的智慧型合約開發人員而設。_
+- **[學習智慧型合約安全與審核](https://updraft.cyfrin.io/courses/security) - _出色的智慧型合約安全與審核課程，為希望提升安全最佳做法並成為安全研究人員的智慧型合約開發人員而設。_
 
 ### 關於智慧型合約安全性的使用教學 {#tutorials-on-smart-contract-security}
 

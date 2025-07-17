@@ -8,7 +8,7 @@ Az okosszerződések rendkívüli módon rugalmasak és képesek nagy mennyiség
 
 A nyilvános blokkláncok, mint az Ethereum, tovább bonyolítják az okosszerződések biztosításának problémáját. A telepített szerződéskód _általában_ nem módosítható, hogy ezzel a biztonsági kockázatokat elkerüljék, eközben az okosszerződésekből ellopott eszközöket rendkívül nehéz lekövetni és a legtöbb esetben visszaszerezhetetlenek a megváltoztathatatlanság miatt.
 
-Bár a számok változnak, de úgy becsülik, hogy a biztonsági hibák miatt az okosszerződésből ellopott vagy onnan elvesztett értékek teljes összege könnyen meghaladhatja az 1 milliárd dollárt is. Ez magába foglal olyan nagy horderejű incidenseket is, mint amilyen a [DAO-hackelés volt](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/) (3,6 millió ETH-t loptak, ami meghaladja az 1 milliárd dollárt mai áron), [Parity több aláírásos tárca hackelését](https://www.coindesk.com/30-million-ether-reported-stolen-parity-wallet-breach) (30 millió USD-t veszett el), és a [Parity befagyasztott tárcaproblémát](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether) (300 millió USD-nyi ETH örökre elérhetetlenné vált).
+Bár a számok változnak, de úgy becsülik, hogy a biztonsági hibák miatt az okosszerződésből ellopott vagy onnan elvesztett értékek teljes összege könnyen meghaladhatja az 1 milliárd dollárt is. Ez magába foglal olyan nagy horderejű incidenseket is, mint amilyen a [DAO-hackelés volt](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/) (3,6 millió ETH-t loptak, ami meghaladja az 1 milliárd dollárt mai áron), [Parity több aláírásos tárca hackelését](https://www.coindesk.com/markets/2017/07/19/30-million-ether-reported-stolen-due-to-parity-wallet-breach) (30 millió USD-t veszett el), és a [Parity befagyasztott tárcaproblémát](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether) (300 millió USD-nyi ETH örökre elérhetetlenné vált).
 
 Ezek az esetek kötelezővé teszik a fejlesztők számára, hogy folyamatosan azon dolgozzanak, hogy az okosszerződések biztonságosak, robusztusak és ellenállók legyenek. Az okosszerződésbiztonság komoly téma, melyet minden fejlesztőnek a maga érdekében meg kell ismerni. Ez az útmutató lefedi azokat a biztonsági megfontolásokat, amelyek az Ethereum-fejlesztőknek fontosak, és forrásokat tár fel az okosszerződésbiztonság továbbfejlesztésére.
 
@@ -99,7 +99,7 @@ Mindazonáltal fontos megjegyezni, hogy az audit nem old meg minden problémát.
 
 Egy másik megoldás lehet a hibavadászat-program felállítása, amellyel külsődleges kódvizsgálatot lehet végezni. A hibavadászat pénzügyi jutalommal jár olyan egyéneknek (általában fehérkalapos hackereknek), akik sebezhető pontokat fedeznek fel az alkalmazásban.
 
-Ez a jutalom a hibavadászatért, ha megfelelően használják, kellő motivációt jelenthet a hackerközösség bizonyos tagjai számára, hogy átnézzék az Ön kódját is kritikus hibákat keresve. Valós példa lehet a „végtelen mennyiségű pénz hiba”, ami egy támadónak lehetővé teszi, hogy határtalan mennyiségű ethert hozzon létre az [Optimism-mal](https://www.optimism.io/), egy [második blokkláncréteg (L2)](/layer-2/) protokollal az Ethereumon. Szerencsére egy fehérkalapos hacker [felfedezte a hibát](https://www.saurik.com/optimism.html) és értesítette a csapatot, [amelyet jelentős pénzösszeggel jutalmaztak](https://cryptoslate.com/critical-bug-in-ethereum-l2-optimism-2m-bounty-paid/).
+Ez a jutalom a hibavadászatért, ha megfelelően használják, kellő motivációt jelenthet a hackerközösség bizonyos tagjai számára, hogy átnézzék az Ön kódját is kritikus hibákat keresve. Valós példa lehet a „végtelen mennyiségű pénz hiba”, ami a támadóknak lehetővé teszi, hogy határtalan mennyiségű ethert hozzanak létre az [Optimism](https://www.optimism.io/), vagyis egy [második blokkláncréteges (L2)](/layer-2/) protokollal az Ethereumon. Szerencsére egy fehérkalapos hacker [felfedezte a hibát](https://www.saurik.com/optimism.html) és értesítette a csapatot, [amelyet jelentős pénzösszeggel jutalmaztak](https://cryptoslate.com/critical-bug-in-ethereum-l2-optimism-2m-bounty-paid/).
 
 Hasznos stratégia lehet, ha a kifizetés összegét arányosan kezelik a hiba által veszélybe kerülő pénzeszközök értékével. Ezt „[skálázódó hibavadászatnak](https://medium.com/immunefi/a-defi-security-standard-the-scaling-bug-bounty-9b83dfdc1ba7)” is nevezhetjük, ami pénzügyi motivációt ad az egyéneknek, hogy inkább feltárják a gyenge pontokat és ne kihasználják azokat.
 
@@ -115,7 +115,7 @@ Az auditok és hibavadászatok nem csökkentik az Ön felelősségét, hogy jó 
 
 - Használjon [fejlesztői környezetet](/developers/docs/frameworks/) az okosszerződések tesztelésére, átfordítására és telepítésére
 
-- Futtassa le a kódját olyan alapvető kódelemző eszközökön, mint a [Cyfrin Aaderyn](https://github.com/Cyfrin/aderyn), Mythril és Slither. Ideális esetben ezt minden egyes pullrequest-beolvasztás előtt meg kell tenni, majd összehasonlítani az eredmények különbségeit
+- Futtassa le a kódját olyan alapvető kódelemző eszközökön, mint a [Cyfrin Aderyn](https://github.com/Cyfrin/aderyn), Mythril és Slither. Ideális esetben ezt minden egyes pullrequest-beolvasztás előtt meg kell tenni, majd összehasonlítani az eredmények különbségeit
 
 - Biztosítsa, hogy a kód hibák nélkül kerül átfordításra, és a Solidity átfordító nem ad figyelmeztetéseket
 
@@ -205,17 +205,17 @@ A vészleállítási lehetőség egy hatásos hézagpótlás ahhoz, hogy a fejle
 
 Az [események](https://docs.soliditylang.org/en/v0.8.15/contracts.html#events) lehetővé teszik az okosszerződéshez érkező hívások trekkelését és az állapotváltozók változásának felügyeletét. Bevált gyakorlatnak számít, ha az okosszerződés mindig kiad eseményt, amikor valaki egy biztonságkritikus tevékenységet végez (például kiveszi a pénzeszközöket).
 
-Az események naplózása és felügyelete láncon kívül betekintést enged a szerződés működésébe, valamint az ártalmas tetteket hamarabb fel lehet fedezni általuk. Így a csapat gyorsabban tud reagálni a hackelésre, és azonnal cselekedni tud, hogy a felhasználókat ez ne érintse negatívan, például leállíthatják a függvényeket vagy frissítést indíthatnak el.
+Az események láncon kívüli naplózása és felügyelete betekintést enged a szerződés működésébe, valamint az ártalmas műveleteket hamarabb fel lehet ismerni általuk. Így a csapat gyorsabban tud reagálni a hackelésre, és azonnal cselekedni tud, hogy a felhasználókat ez ne érintse negatívan, például leállíthatják a függvényeket vagy frissítést indíthatnak el.
 
 Választhat egy előre összeállított felügyeleti eszközt, amely automatikusan figyelmeztetéseket küld, amikor valaki interakcióba lép az Ön szerződéseivel. Ezek az eszközök segítenek személyre szabott figyelmeztetéseket is létrehozni különféle paraméterek alapján, mint amilyen a tranzakciómennyiség, a függvénymeghívások gyakorisága vagy az érintett függvények. Például beállíthat egy figyelmeztetést, ha a kivett pénzmennyiség egy tranzakcióban egy bizonyos határ felett van.
 
 ### 7. Tervezzen biztonságos irányítási rendszert {#design-secure-governance-systems}
 
-Talán szeretné, hogy az alkalmazása decentralizált legyen, így a központi okosszerződések kontrollját a közösségi tagoknak adná. Ebben az esetben az okosszerződés rendszere felölel egy irányítási modult is – egy olyan mechanizmust, amellyel a közösségi tagok jóváhagyhatnak adminisztratív változásokat egy láncon belüli irányítási rendszer segítségével. Például azt a javaslatot, hogy a proxyszerződést egy új verzióra frissítsék, megszavaztathatja a tokennel rendelkező felhasználókkal.
+Talán szeretné, hogy az alkalmazása decentralizált legyen, így a központi okosszerződések kontrollját a közösségi tagoknak adná. Ebben az esetben az okosszerződéses rendszer felölel egy irányítási modult is – egy olyan mechanizmust, amellyel a közösségi tagok jóváhagyhatnak adminisztratív változásokat egy láncon belüli irányítási rendszer segítségével. Például azt a javaslatot, hogy a proxyszerződést egy új verzióra frissítsék, megszavaztathatja a tokennel rendelkező felhasználókkal.
 
 A decentralizált irányítás előnyös lehet, főleg mivel összeegyezteti a fejlesztők és a felhasználók érdekeit. Mindazonáltal az okosszerződés irányításimechanizmusa új kockázatokat is jelenthet, ha nem megfelelően vezetik be. Kézenfekvő probléma, ha egy támadó nagyon magas szavazatierőt szerez (amit az általa birtokolt tokenek száma ad) azáltal, hogy [villámhitelt](/defi/#flash-loans) vesz fel, majd egy ártó változásra tesz javaslatot.
 
-A láncon működő irányítási modell problémáit meg lehet oldani az [időzár használatával](https://blog.openzeppelin.com/protect-your-users-with-smart-contract-timelocks/) is. Az időzár megakadályozza, hogy az okosszerződés végrehajtson bizonyos műveleteket addig, amíg nem telt el egy adott idő. Más stratégia lehet a tokenekhez rendelt „szavazati súly” az alapján, hogy azt mennyi időre kötötték le, vagy egy adott cím szavazati erejét hosszabb periódusra is nézhetik (például 2–3 korábbi blokkra) a jelenlegi blokk helyett. Ezek csökkentik a lehetőségét annak, hogy valaki gyorsan jelentős szavazati erőre tegyen szert, hogy a láncon zajló szavazást eltérítse.
+A láncon működő irányítási modell problémáit [időzár használatával](https://blog.openzeppelin.com/protect-your-users-with-smart-contract-timelocks/) is meg lehet oldani. Az időzár megakadályozza, hogy az okosszerződés végrehajtson bizonyos műveleteket addig, amíg nem telt el egy adott idő. Más stratégia lehet a tokenekhez rendelt „szavazati súly” az alapján, hogy azt mennyi időre kötötték le, vagy egy adott cím szavazati erejét hosszabb periódusra is nézhetik (például 2–3 korábbi blokkra) a jelenlegi blokk helyett. Ezek csökkentik a lehetőségét annak, hogy valaki gyorsan jelentős szavazati erőre tegyen szert, hogy a láncon zajló szavazást eltérítse.
 
 Többet megtudhat a [biztonságos kormányzási rendszerek tervezéséről](https://blog.openzeppelin.com/smart-contract-security-guidelines-4-strategies-for-safer-governance-systems/), a [különböző szavazási mechanizmusokról a DAO-kban](https://hackernoon.com/governance-is-the-holy-grail-for-daos) és [a DeFi-t kihasználó gyakori DAO támadási vektorokról](https://dacian.me/dao-governance-defi-attacks) a megosztott linkeken.
 
@@ -304,7 +304,7 @@ Ebben még nincs semmi rossz, viszont a `attacker` (támadó) szerződésben van
 - `Victim` finally applies the results of the first transaction (and subsequent ones) to its state, so `Attacker`’s balance is set to 0
 ```
 
-Összességében, mivel a meghívó egyenlege nem lesz 0 mindaddig, amíg a függvényvégrehajtás nem zárul le, a rákövetkező meghívások sikeresek lesznek, és megengedik a meghívónak, hogy kivegye az egyenlegét többször is. Ez a támadás alkalmas arra, hogy egy okosszerződés pénzeszközeit kifolyassák, ahogy az a [2016-os DAO hackelésnél](https://www.coindesk.com/learn/2016/06/25/understanding-the-dao-attack/) megtörtént. Az újrabelépéses támadás még mindig kritikus probléma az okosszerződéseknél, ahogy azt az [újrabelépéses támadások nyilvános listája](https://github.com/pcaversaccio/reentrancy-attacks) mutatja.
+Összességében, mivel a meghívó egyenlege nem lesz 0 mindaddig, amíg a függvényvégrehajtás nem zárul le, a rákövetkező meghívások sikeresek lesznek, és megengedik a meghívónak, hogy kivegye az egyenlegét többször is. Ez a támadás alkalmas arra, hogy egy okosszerződés pénzeszközeit kifolyassák, ahogy az a [2016-os DAO hackelésnél](https://www.coindesk.com/learn/understanding-the-dao-attack) megtörtént. Az újrabelépéses támadás még mindig kritikus probléma az okosszerződéseknél, ahogy azt az [újrabelépéses támadások nyilvános listája](https://github.com/pcaversaccio/reentrancy-attacks) mutatja.
 
 ##### Hogyan lehet megakadályozni egy újrabelépéses támadást
 
@@ -346,7 +346,7 @@ contract MutexPattern {
         require(balances[msg.sender] >= _amount, "No balance to withdraw.");
 
         balances[msg.sender] -= _amount;
-        bool (success, ) = msg.sender.call{value: _amount}("");
+        (bool success, ) = msg.sender.call{value: _amount}("");
         require(success);
 
         return true;
@@ -439,7 +439,7 @@ A 0.8.0 verzió szerint a Solidity átfordító elutasítja azokat a kódokat, a
 
 #### Orákulum manipulációja {#oracle-manipulation}
 
-Az [orákulumok](/developers/docs/oracles/) láncon kívüli információkat gyűjtenek és beküldik azokat a láncra, hogy az okosszerződések használhassák. Az orákulumok révén Ön olyan okosszerződéseket tervezhet, amelyek együtt tudnak működni láncon kívüli rendszerekkel, mint a tőkepiacok, ezzel nagy mértékben kiterjesztve az alkalmazási körüket.
+Az [orákulumok](/developers/docs/oracles/) láncon kívüli információkat gyűjtenek és beküldik azokat a láncra, hogy az okosszerződések használhassák azokat. Az orákulumok révén Ön olyan okosszerződéseket tervezhet, amelyek együtt tudnak működni láncon kívüli rendszerekkel, mint a tőkepiacok, ezzel nagy mértékben kiterjesztve az alkalmazási körüket.
 
 Ha viszont az orákulum korrupttá válik és nem helyes információkat küld a láncra, az okosszerződések hibás bejövő adatok alapján fognak működni, ez pedig problémákat okoz. Ez az „orákulumprobléma” alapja, amely miatt biztosítani kell, hogy a blokklánc-orákulum által adott információ pontos, friss és időben elérhető legyen.
 
@@ -505,7 +505,7 @@ Ha Ön azt tervezi, hogy egy láncon lévő orákulumot kérdez le eszközárak�
 
 - **[Hacken](https://hacken.io)** – _Web3 kiberbiztonsági auditor, amely 360 fokos megközelítést alkalmaz a blokkláncbiztonságban._
 
-- **[Nethermind](https://nethermind.io/smart-contracts-audits)** – _Solidity és Cairo auditszolgáltatások, amelyekkel az okosszerződések integritása, valamint a felhasználók biztonsága is biztosíthat az Ethereumon és a Starkneten._
+- **[Nethermind](https://www.nethermind.io/smart-contract-audits)** – _Solidity és Cairo auditszolgáltatások, amelyekkel az okosszerződések integritása, valamint a felhasználók biztonsága is biztosíthat az Ethereumon és a Starkneten._
 
 - **[HashEx](https://hashex.org/)** – _A HashEx a blokkláncok és okosszerződések auditálásra szakosodott a kriptovaluták biztonságának biztosítása céljából, illetve olyan szolgáltatásokat nyújt, mint az okosszerződés-fejlesztés, sérülékenység-vizsgálat, blokklánctanácsadás._
 
@@ -515,7 +515,7 @@ Ha Ön azt tervezi, hogy egy láncon lévő orákulumot kérdez le eszközárak�
 
 - **[Cyfrin](https://cyfrin.io)** – _Web3 biztonsági erőmű, elősegíti kriptobiztonságot termékeken és okosszerződés-ellenőrzési szolgáltatásokon keresztül._
 
-- **[ImmuneBytes](https://www.immunebytes.com//smart-contract-audit/)** – _Web3 biztonsági cég, amely a blokkláncrendszerek biztonsági ellenőrzését kínálja tapasztalt auditorcsapattal és a legjobb eszközökkel._
+- **[ImmuneBytes](https://immunebytes.com/smart-contract-audit/)** – _Web3 biztonsági cég, amely a blokkláncrendszerek biztonsági ellenőrzését kínálja tapasztalt auditorcsapattal és a legjobb eszközökkel._
 
 - **[Oxorio](https://oxor.io/)** - _Okosszerződés-auditok és blokkláncbiztonsági szolgáltatások, szakértelem az EVM, Solidity, ZK, kriptocégek láncok közötti technológiái és DeFi projektek területén._
 
@@ -563,7 +563,7 @@ Ha Ön azt tervezi, hogy egy láncon lévő orákulumot kérdez le eszközárak�
 
 - **[Smart Contract Security Verification Standard](https://github.com/securing/SCSVS)** – _Egy tizennégy részes ellenőrző lista fejlesztők, architektúrával foglalkozók, biztonság-ellenőrzők és beszállítók számára az okosszerződések biztonságának szabványosításához._
 
-- **[Az okosszerződések biztonságának és auditálásának elsajátítása](https://updraft.cyfrin.io/courses/security)** – _Az okosszerződések biztonságát és auditálását oktató tanfolyamot olyan fejlesztőknek hozták létre, akik a legjobb biztonsági gyakorlatok mentén szeretnének fejleszteni és biztonsági kutatókká válni._
+- **[Az okosszerződések biztonságának és auditálásának elsajátítása](https://updraft.cyfrin.io/courses/security)** – _Az okosszerződések biztonságát és auditálását oktató tanfolyamot olyan fejlesztőknek hozták létre, akik a legjobb biztonsági gyakorlatok szerint szeretnének fejleszteni és biztonsági kutatókká válni._
 
 ### Útmutatók az okosszerződés-biztonságról {#tutorials-on-smart-contract-security}
 

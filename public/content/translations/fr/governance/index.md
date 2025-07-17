@@ -20,17 +20,17 @@ Aucune personne ne possède ou ne contrôle le protocole d'Ethereum, mais des d�
 
 ## Gouvernance d'Ethereum {#ethereum-governance}
 
-La gouvernance d'Ethereum est le processus par lequel des changements de protocole sont apportés. Il est important de souligner que ce processus n'est pas lié à la façon dont les gens et les applications utilisent le protocole - Ethereum est sans permission. N'importe qui depuis n'importe où dans le monde peut participer aux activités sur la blockchain. Il n'y a aucune règle définie pour qui peut ou ne peut pas construire une application ou envoyer une transaction. Cependant, il existe un processus permettant de proposer des modifications au protocole principal, que les applications décentralisées utilisent. Dans la mesure où un très grand nombre de personnes dépendent de la stabilité d'Ethereum, tout changement fondamental apporté à Ethereum, qu'il soit technique ou social, doit être validé par le plus grand nombre afin de s'assurer qu'il soit sûr et largement soutenu par la communauté.
+La gouvernance d'Ethereum est le processus par lequel des changements de protocole sont apportés. Il est important de souligner que ce processus n'est pas lié à la façon dont les gens et les applications utilisent le protocole - Ethereum est sans permission. Toute personne, où qu'elle se trouve dans le monde, peut participer aux activités sur la chaîne. Il n'y a aucune règle définie pour qui peut ou ne peut pas construire une application ou envoyer une transaction. Cependant, il existe un processus permettant de proposer des modifications au protocole principal, que les applications décentralisées utilisent. Dans la mesure où un très grand nombre de personnes dépendent de la stabilité d'Ethereum, tout changement fondamental apporté à Ethereum, qu'il soit technique ou social, doit être validé par le plus grand nombre afin de s'assurer qu'il soit sûr et largement soutenu par la communauté.
 
-### Gouvernance sur la blockchain vs hors chaîne {#on-chain-vs-off-chain}
+### Gouvernance sur la chaîne vs hors chaîne {#onchain-vs-offchain}
 
-La technologie de la blockchain permet de nouvelles capacités de gouvernance, connues sous le nom de gouvernance sur la blockchain. La gouvernance est dite sur sur la blockchain lorsque les modifications proposées au protocole sont décidées par vote des parties prenantes, généralement par les détenteurs d'un jeton de gouvernance, et le vote se produit sur la blockchain. Avec certaines formes de gouvernance on-chain, les modifications de protocole proposées sont déjà écrites dans le code et implémentées automatiquement si les parties prenantes approuvent les changements en signant une transaction.
+La technologie de la blockchain permet de nouvelles capacités de gouvernance, connues sous le nom de gouvernance sur la chaîne. On parle de gouvernance sur la chaîne de blocs lorsque les changements de protocole proposés sont décidés par un vote des parties prenantes, généralement par les détenteurs d'un jeton de gouvernance, et que le vote a lieu sur la blockchain. Avec certaines formes de gouvernance on-chain, les modifications de protocole proposées sont déjà écrites dans le code et implémentées automatiquement si les parties prenantes approuvent les changements en signant une transaction.
 
 L'approche opposée, la gouvernance hors chaîne, est celle où toute décision de changement de protocole se fait par le biais d'un processus informel de discussion sociale, qui, s'il est approuvé, sera mis en œuvre dans le code.
 
-**La gouvernance d'Ethereum a lieu hors chaîne** avec une grande variété d'acteurs impliqués dans le processus.
+**La gouvernance d'Ethereum a lieu hors chaîne** et implique une grande variété de parties prenantes dans le processus.
 
-_Bien qu'au niveau du protocole, la gouvernance d'Ethereum est hors chaîne, de nombreux cas d'utilisation basés sur Ethereum, tels que les DAO, utilisent la gouvernance sur la blockchain._
+_Bien qu'au niveau du protocole, la gouvernance d'Ethereum se situe hors chaîne, de nombreux cas d'utilisation basés sur Ethereum, tels que les DAO, utilisent la gouvernance sur la chaîne._
 
 <ButtonLink href="/dao/">
   En savoir plus sur les DAO
@@ -118,7 +118,7 @@ Généralement, les désaccords sont traités avec des discussions de longue dur
 
 Les fourches sont lorsque des mises à niveau techniques majeures ou des modifications doivent être apportées au réseau et modifier les « règles » du protocole. [Les clients Ethereum](/developers/docs/nodes-and-clients/) doivent mettre à jour leur logiciel pour implémenter les nouvelles règles de la fourche.
 
-La fourche DAO est la réponse à l'attaque [DAO de 2016](https://www.coindesk.com/understanding-dao-hack-journalists) où un contrat non sécurisé d'une [DAO](/glossary/#dao) a été vidé de plus de 3,6 millions d'ETH lors d'un piratage. La fourche a transféré les fonds du contrat défectueux à un nouveau contrat permettant à quiconque a perdu des fonds dans le piratage de les récupérer.
+La fourche DAO est la réponse à l'attaque [DAO de 2016](https://www.coindesk.com/learn/understanding-the-dao-attack) où un contrat non sécurisé d'une [DAO](/glossary/#dao) a été vidé de plus de 3,6 millions d'ETH lors d'un piratage. La fourche a transféré les fonds du contrat défectueux à un nouveau contrat permettant à quiconque a perdu des fonds dans le piratage de les récupérer.
 
 Ce plan d'action a été voté par la communauté Ethereum. Tout détenteur d'ETH a pu voter via une transaction sur [une plateforme de vote](https://web.archive.org/web/20170620030820/http://v1.carbonvote.com/). Plus de 85 % des votes étaient favorables à la fourche.
 
@@ -180,3 +180,5 @@ La gouvernance d'Ethereum n'est pas rigoureusement définie. Divers participants
 - [Qu'est-ce qu'un développeur de base Ethereum ?](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) - _Hudson Jameson_
 - [Gouvernance, partie 2 : La ploutocratie est toujours mauvaise](https://vitalik.eth.limo/general/2018/03/28/plutocracy.html) - _Vitalik Buterin_
 - [Aller au-delà de la gouvernance du vote par jeton](https://vitalik.eth.limo/general/2021/08/16/voting3.html) - _Vitalik Buterin_
+- [Comprendre la gouvernance de la blockchain](https://research.2077.xyz/understanding-blockchain-governance) - _2077 Research_
+- [Le gouvernement d'Ethereum](https://www.galaxy.com/insights/research/ethereum-governance/) - _Christine Kim_

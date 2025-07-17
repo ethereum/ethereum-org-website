@@ -1,6 +1,4 @@
-import React from "react"
-import { useTranslation } from "next-i18next"
-import { MdExpandMore } from "react-icons/md"
+import { ChevronDown } from "lucide-react"
 
 import type { ToCItem } from "@/lib/types"
 
@@ -12,6 +10,8 @@ import {
 } from "../ui/dropdown-menu"
 
 import ItemsListMobile from "./ItemsListMobile"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 export type TableOfContentsMobileProps = {
   items?: Array<ToCItem>
@@ -34,7 +34,7 @@ const Mobile = ({ items, maxDepth }: TableOfContentsMobileProps) => {
           className="flex w-full justify-between lg:hidden"
         >
           <span className="flex-1 text-center">{t("on-this-page")}</span>
-          <MdExpandMore />
+          <ChevronDown />
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent

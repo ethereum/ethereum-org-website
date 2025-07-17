@@ -49,18 +49,20 @@ Los árboles de Verkle son `(llave, valor)` pares donde las llaves son elementos
 
 Las redes de prueba del árbol de Verkle ya están en funcionamiento, pero todavía se requieren sustanciales actualizaciones pendientes para los clientes en apoyo de los árboles de Verkle. Puede ayudar a acelerar el progreso implementando contratos en las redes de prueba o ejecutando clientes de la red de prueba.
 
-[Explore la red de prueba Verkle Gen Devnet 2](https://verkle-gen-devnet-2.ethpandaops.io/)
+[Explore la red de prueba Verkle Gen Devnet 6](https://verkle-gen-devnet-6.ethpandaops.io/)
 
-[Vea a Guillaume Ballet explicar la red de prueba Condrieu Verkle](https://www.youtube.com/watch?v=cPLHFBeC0Vg) (tenga en cuenta que la red de prueba Condrieu era de prueba de trabajo y ahora se ha sustituido por la red de prueba Verkle Gen Devnet 2).
+[Vea a Guillaume Ballet explicar la red de prueba Condrieu Verkle](https://www.youtube.com/watch?v=cPLHFBeC0Vg) (tenga en cuenta que la red de prueba Condrieu era de prueba de trabajo y ahora se ha sustituido por la red de prueba Verkle Gen Devnet 6).
 
 ## Más información {#further-reading}
 
 - [Árboles Verkle para la falta de estado](https://verkle.info/)
 - [Dankrad Feist explica los árboles Verkle en PEEPanEIP](https://www.youtube.com/watch?v=RGJOQHzg3UQ)
-- [Guillaume Ballet explica los árboles de Verkle en ETHGlobal](https://www.youtube.com/watch?v=f7bEtX3Z57o)
+- [Árboles Verkle para el resto de nosotros](https://research.2077.xyz/verkle-trees)
+- [Anatomía de una prueba Verkle](https://ihagopian.com/posts/anatomy-of-a-verkle-proof)
+- [Guillaume Ballet explica los árboles Verkle en ETHGlobal](https://www.youtube.com/watch?v=f7bEtX3Z57o)
 - [«Cómo los árboles de Verkle hacen que Ethereum sean claro y directo» por Guillaume Ballet en Devcon 6](https://www.youtube.com/watch?v=Q7rStTKwuYs)
 - [Piper Merriam sobre clientes sin estado en ETHDenver 2020](https://www.youtube.com/watch?v=0yiZJNciIJ4)
-- [Dankrad Fiest explica los árboles de Verkle y la falta de estado en el podcast Zero Knowledge](https://zeroknowledge.fm/episode-202-stateless-ethereum-verkle-tries-with-dankrad-feist/)
+- [Dankrad Fiest explica los árboles de Verkle y la falta de estado en el podcast Zero Knowledge](https://zeroknowledge.fm/podcast/202/)
 - [Vitalik Buterin comenta los árboles de Verkle](https://vitalik.eth.limo/general/2021/06/18/verkle.html)
 - [Dankrad Feist habla de los árboles de Verkle](https://dankradfeist.de/ethereum/2021/06/18/verkle-trie-for-eth1.html)
 - [Documentación EIP de los árboles de Verkle](https://notes.ethereum.org/@vbuterin/verkle_tree_eip#Illustration)

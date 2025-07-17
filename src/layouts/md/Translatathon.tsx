@@ -4,7 +4,7 @@ import type { MdPageContent, SharedFrontmatter } from "@/lib/interfaces"
 import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import Card from "@/components/Card"
 import { ContentHero, ContentHeroProps } from "@/components/Hero"
-import { TwImage as Image } from "@/components/Image"
+import { Image } from "@/components/Image"
 import { ApplyNow } from "@/components/Translatathon/ApplyNow"
 import { APPLICATION_URL } from "@/components/Translatathon/constants"
 import { DatesAndTimeline } from "@/components/Translatathon/DatesAndTimeline"
@@ -100,7 +100,10 @@ export const translatathonComponents = {
 }
 
 type TranslatathonLayoutProps = ChildOnlyProp &
-  Pick<MdPageContent, "slug" | "tocItems"> & {
+  Pick<
+    MdPageContent,
+    "slug" | "tocItems" | "contributors" | "lastEditLocaleTimestamp"
+  > & {
     frontmatter: SharedFrontmatter
   }
 
@@ -109,6 +112,8 @@ export const TranslatathonLayout = ({
   frontmatter,
   slug,
   tocItems,
+  contributors,
+  lastEditLocaleTimestamp,
 }: TranslatathonLayoutProps) => {
   const dropdownLinks: ButtonDropdownList = {
     text: "Translatathon menu",
@@ -181,6 +186,8 @@ export const TranslatathonLayout = ({
       dir="ltr"
       tocItems={tocItems}
       dropdownLinks={dropdownLinks}
+      contributors={contributors}
+      lastEditLocaleTimestamp={lastEditLocaleTimestamp}
       heroSection={<ContentHero {...heroProps} />}
     >
       {children}

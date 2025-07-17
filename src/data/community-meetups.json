@@ -468,16 +468,28 @@
     "link": "https://lu.ma/user/usr-zgxbPuCTyKGBQq6"
   },
   {
-    "title": "BeerFi Prague - Web3 on-chain dev Meetup",
+    "title": "BeerFi Prague - Web3 Builders Meetup",
     "emoji": ":czech_republic:",
     "location": "Prague",
-    "link": "https://www.meetup.com/web3-on-chain-dev-meetup-group/"
+    "link": "https://www.meetup.com/beerfi/"
   },
   {
     "title": "NapulETH Meetup",
     "emoji": ":italy:",
     "location": "Naples",
     "link": "https://www.eventbrite.it/e/863744451907/"
+  },
+  {
+    "title": "Ethereum Venezuela",
+    "emoji": ":venezuela:",
+    "location": "Venezuela",
+    "link": "https://www.meetup.com/ethereumvenezuela/"
+  },
+  {
+    "title": "Ethereum Aragua",
+    "emoji": ":venezuela:",
+    "location": "Aragua",
+    "link": "https://www.aragua.org"
   },
   {
     "title": "Ethereum Minnesota",
@@ -550,5 +562,17 @@
     "emoji": ":romania:",
     "location": "Cluj-Napoca",
     "link": "https://www.meetup.com/ethcluj"
-  }    
+  },
+  {
+    "title": "ERC55",
+    "emoji": ":brazil:",
+    "location": "São Paulo",
+    "link": "https://lu.ma/user/erc55"
+  },      
+  {
+    "title": "ETHBelgium ",
+    "emoji": ":belgium:",
+    "location": "Belgium",
+    "link": "https://lu.ma/ethbelgium"
+  }   
 ]

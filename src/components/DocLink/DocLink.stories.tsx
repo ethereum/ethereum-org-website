@@ -1,13 +1,12 @@
-import * as React from "react"
-import { VStack } from "@chakra-ui/react"
 import { Meta, StoryObj } from "@storybook/react"
+
+import { VStack } from "../ui/flex"
 
 import DocLink from "."
 
 const meta = {
   title: "Molecules / Navigation / DocLink",
   component: DocLink,
-  tags: ["autodocs"],
 } satisfies Meta<typeof DocLink>
 
 export default meta
@@ -19,11 +18,6 @@ export const Default: Story = {
     href: "/history/",
     children: "History of Ethereum",
   },
-  render: (args) => (
-    <VStack spacing={4} align="stretch">
-      <DocLink {...args} />
-    </VStack>
-  ),
 }
 
 export const ExternalLink: Story = {
@@ -32,11 +26,6 @@ export const ExternalLink: Story = {
     children: "Ethereum Website",
     isExternal: true,
   },
-  render: (args) => (
-    <VStack spacing={4} align="stretch">
-      <DocLink {...args} />
-    </VStack>
-  ),
 }
 
 export const MultipleLinks: Story = {
@@ -44,7 +33,7 @@ export const MultipleLinks: Story = {
     href: "#",
   },
   render: () => (
-    <VStack spacing={4} align="stretch">
+    <VStack className="items-stretch gap-4">
       <DocLink href="/history/">History of Ethereum</DocLink>
       <DocLink href="https://ethereum.org" isExternal>
         Ethereum Website

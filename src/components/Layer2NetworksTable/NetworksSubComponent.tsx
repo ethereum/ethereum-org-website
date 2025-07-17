@@ -1,9 +1,14 @@
-import { MdInfoOutline } from "react-icons/md"
+import { Info } from "lucide-react"
 
-import { ButtonLink } from "@/components/Buttons"
+import { ExtendedRollup } from "@/lib/types"
+
 import NetworkUsageChart from "@/components/Layer2NetworksTable/NetworkUsageChart"
-import InlineLink from "@/components/Link"
 import Tooltip from "@/components/Tooltip"
+
+import { ButtonLink } from "../ui/buttons/Button"
+import InlineLink from "../ui/Link"
+
+import useTranslation from "@/hooks/useTranslation"
 
 const formatNumber = (num: number): string => {
   if (num >= 1e9) {
@@ -18,7 +23,13 @@ const formatNumber = (num: number): string => {
   return num.toString()
 }
 
-const NetworkSubComponent = ({ network }) => {
+type NetworkSubComponentProps = {
+  network: ExtendedRollup
+}
+
+const NetworkSubComponent = ({ network }: NetworkSubComponentProps) => {
+  const { t } = useTranslation("page-layer-2-networks")
+
   return (
     <div className="flex w-full flex-col gap-4 px-6 pb-4">
       <div className="flex flex-col gap-8 md:flex-row">
@@ -27,18 +38,20 @@ const NetworkSubComponent = ({ network }) => {
             <div className="flex-1">
               <div>
                 <p className="text-xs font-bold text-body-medium">
-                  Age{" "}
+                  {t("page-layer-2-networks-age")}&nbsp;
                   <Tooltip
                     content={
                       <div className="flex flex-col gap-2">
-                        <p className="text-lg font-bold">Age</p>
-                        <p>Shows how long the networks has been operational.</p>
+                        <p className="text-lg font-bold">
+                          {t("page-layer-2-networks-age")}
+                        </p>
+                        <p>{t("page-layer-2-networks-show-how-long")}</p>
                         <p>
-                          Data from{" "}
-                          <InlineLink href="https://growthepie.xyz">
+                          {t("page-layer-2-networks-data-from")}{" "}
+                          <InlineLink href="https://growthepie.com">
                             growthepie
                           </InlineLink>
-                          .
+                          {t("page-layer-2-networks-period")}
                         </p>
                       </div>
                     }
@@ -48,11 +61,12 @@ const NetworkSubComponent = ({ network }) => {
                       eventName: "age",
                     }}
                   >
-                    <MdInfoOutline className="translate-y-0.5" />
+                    <Info className="size-[0.875em] translate-y-0.5" />
                   </Tooltip>
                 </p>
                 <p>
                   {(() => {
+                    if (!network.launchDate) return "-"
                     const launch = new Date(network.launchDate)
                     const today = new Date()
                     const yearDiff = today.getFullYear() - launch.getFullYear()
@@ -70,14 +84,15 @@ const NetworkSubComponent = ({ network }) => {
             <div className="flex-1">
               <div>
                 <p className="text-xs font-bold text-body-medium">
-                  Wallet support{" "}
+                  {t("page-layer-2-networks-wallet-support")}&nbsp;
                   <Tooltip
                     content={
                       <div className="flex flex-col gap-2">
-                        <p className="text-lg font-bold">Wallet support</p>
+                        <p className="text-lg font-bold">
+                          {t("page-layer-2-networks-wallet-support")}
+                        </p>
                         <p>
-                          Indicates how many wallet apps support using the
-                          network.
+                          {t("page-layer-2-networks-how-many-wallet-support")}
                         </p>
                       </div>
                     }
@@ -87,7 +102,7 @@ const NetworkSubComponent = ({ network }) => {
                       eventName: "wallet_support",
                     }}
                   >
-                    <MdInfoOutline className="translate-y-0.5" />
+                    <Info className="size-[0.875em] translate-y-0.5" />
                   </Tooltip>
                 </p>
               </div>
@@ -104,23 +119,22 @@ const NetworkSubComponent = ({ network }) => {
             <div className="flex-1">
               <div>
                 <p className="text-xs font-bold text-body-medium">
-                  Active addresses{" "}
+                  {t("page-layer-2-networks-active-address")}&nbsp;
                   <Tooltip
                     content={
                       <div className="flex flex-col gap-2">
                         <p className="text-lg font-bold">
-                          Active addresses (weekly)
+                          {t("page-layer-2-networks-active-address-weekly")}
                         </p>
                         <p>
-                          Number of active addresses on the network in the past
-                          7 days.
+                          {t("page-layer-2-networks-active-address-number")}
                         </p>
                         <p>
-                          Data from{" "}
-                          <InlineLink href="https://growthepie.xyz">
+                          {t("page-layer-2-networks-data-from")}{" "}
+                          <InlineLink href="https://growthepie.com">
                             growthepie
                           </InlineLink>
-                          .
+                          {t("page-layer-2-networks-period")}
                         </p>
                       </div>
                     }
@@ -130,24 +144,25 @@ const NetworkSubComponent = ({ network }) => {
                       eventName: "active_addresses",
                     }}
                   >
-                    <MdInfoOutline className="translate-y-0.5" />
+                    <Info className="size-[0.875em] translate-y-0.5" />
                   </Tooltip>
                 </p>
               </div>
-              <p>{formatNumber(network.activeAddresses)}</p>
+              <p>
+                {network.activeAddresses
+                  ? formatNumber(network.activeAddresses)
+                  : "-"}
+              </p>
             </div>
             <div className="flex-1">
               <div>
                 <p className="text-xs font-bold text-body-medium">
-                  Fee token{" "}
+                  {t("page-layer-2-networks-fee-token")}&nbsp;
                   <Tooltip
                     content={
                       <div className="flex flex-col gap-2">
                         <p className="text-lg font-bold">Fee token</p>
-                        <p>
-                          The token that is used to pay for transactions and
-                          using the network.
-                        </p>
+                        <p>{t("page-layer-2-networks-token-used-to-pay")}</p>
                       </div>
                     }
                     customMatomoEvent={{
@@ -156,7 +171,7 @@ const NetworkSubComponent = ({ network }) => {
                       eventName: "fee_token",
                     }}
                   >
-                    <MdInfoOutline className="translate-y-0.5" />
+                    <Info className="size-[0.875em] translate-y-0.5" />
                   </Tooltip>
                 </p>
               </div>
@@ -167,26 +182,25 @@ const NetworkSubComponent = ({ network }) => {
         <div className="flex-1 gap-2">
           <div>
             <p className="text-xs font-bold text-body-medium">
-              Network usage{" "}
+              {t("page-layer-2-networks-network-usage")}&nbsp;
               <Tooltip
                 content={
                   <div className="flex flex-col gap-2">
-                    <p className="text-lg font-bold">Network usage</p>
-                    <p>
-                      An overview of network usage. Measures transaction count
-                      in respective areas within the last 30 days.
+                    <p className="text-lg font-bold">
+                      {t("page-layer-2-networks-network-usage")}
                     </p>
+                    <p>{t("page-layer-2-networks-network-usage-overview")}</p>
                     <p>
-                      Data from{" "}
-                      <InlineLink href="https://growthepie.xyz">
+                      {t("page-layer-2-networks-data-from")}{" "}
+                      <InlineLink href="https://growthepie.com">
                         growthepie
                       </InlineLink>
-                      .
+                      {t("page-layer-2-networks-period")}
                     </p>
                   </div>
                 }
               >
-                <MdInfoOutline className="translate-y-0.5" />
+                <Info className="size-[0.875em] translate-y-0.5" />
               </Tooltip>
             </p>
             <div className="w-full">
@@ -195,7 +209,7 @@ const NetworkSubComponent = ({ network }) => {
               )}
               {network.blockspaceData === null && (
                 <div className="flex h-20 w-full items-center justify-center">
-                  <p>No data available</p>
+                  <p>{t("page-layer-2-networks-no-data-available")}</p>
                 </div>
               )}
             </div>
@@ -204,7 +218,9 @@ const NetworkSubComponent = ({ network }) => {
       </div>
       <div className="flex flex-col gap-6 p-4">
         <div className="flex flex-col gap-1">
-          <p className="text-xs text-body-medium">Links</p>
+          <p className="text-xs text-body-medium">
+            {t("page-layer-2-networks-links")}
+          </p>
           <div className="flex flex-col gap-4">
             <div>
               <InlineLink
@@ -215,7 +231,7 @@ const NetworkSubComponent = ({ network }) => {
                   eventName: network.name,
                 }}
               >
-                Official website
+                {t("page-layer-2-networks-official-website")}
               </InlineLink>
             </div>
             <div className="flex flex-col gap-0.5">
@@ -228,26 +244,28 @@ const NetworkSubComponent = ({ network }) => {
                     eventName: network.name,
                   }}
                 >
-                  Risk analysis
+                  {t("page-layer-2-networks-risk-analysis")}
                 </InlineLink>
               </div>
-              <p className="text-xs text-body-medium">Assessment by L2BEAT</p>
+              <p className="text-xs text-body-medium">
+                {t("page-layer-2-networks-assessment-by-l2beat")}
+              </p>
             </div>
             <div className="flex flex-col gap-0.5">
               <div>
                 <InlineLink
-                  href={network.growThePieLink}
+                  href={network.growthepieLink}
                   customEventOptions={{
                     eventCategory: "l2_networks",
                     eventAction: "analytics_profiles",
                     eventName: network.name,
                   }}
                 >
-                  Detailed analytics
+                  {t("page-layer-2-networks-detailed-analytics")}
                 </InlineLink>
               </div>
               <p className="text-xs text-body-medium">
-                Assessment by growthepie
+                {t("page-layer-2-networks-assessment-by-growthepie")}
               </p>
             </div>
           </div>
@@ -263,7 +281,7 @@ const NetworkSubComponent = ({ network }) => {
                 eventName: network.name,
               }}
             >
-              Bridge to {network.name}
+              {t("page-layer-2-networks-bridge-to")} {network.name}
             </ButtonLink>
             <ButtonLink
               href={network.applicationsLink}
@@ -274,7 +292,7 @@ const NetworkSubComponent = ({ network }) => {
                 eventName: network.name,
               }}
             >
-              View apps
+              {t("page-layer-2-networks-view-apps")}
             </ButtonLink>
           </div>
         </div>

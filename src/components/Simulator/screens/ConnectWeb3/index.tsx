@@ -1,15 +1,14 @@
-import React, { useEffect, useMemo, useState } from "react"
+import { useEffect, useMemo, useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
-import {
-  RiAuctionLine,
-  RiFileTransferLine,
-  RiPriceTag2Line,
-} from "react-icons/ri"
-import { Box, Button, Flex, Icon, Text } from "@chakra-ui/react"
 
 import type { PhoneScreenProps } from "@/lib/types"
 
+import AuctionLine from "@/components/icons/auction-line.svg"
+import FileTransferLine from "@/components/icons/file-transfer-line.svg"
+import PriceTagLine from "@/components/icons/price-tag-line.svg"
 import { Image } from "@/components/Image"
+import { Button } from "@/components/ui/buttons/Button"
+import { Flex } from "@/components/ui/flex"
 
 import { useEthPrice } from "../../../../hooks/useEthPrice"
 import {
@@ -80,36 +79,17 @@ export const ConnectWeb3 = ({ nav, ctaLabel }: PhoneScreenProps) => {
       {[0].includes(step) && <Browser />}
       {[1, 2, 3].includes(step) && (
         <Web3App displayUrl={EXAMPLE_APP_URL}>
-          <Flex
-            px={6}
-            py={{ base: 8, md: 16 }}
-            gap={{ base: 8, md: 16 }}
-            bg="background.highlight"
-            h="full"
-            direction="column"
-            textAlign="center"
-          >
-            <Text
-              as={motion.p}
-              fontSize={{ base: "xl", md: "2xl" }}
-              m={0}
+          <Flex className="bg-background.highlight h-full flex-col gap-8 px-6 py-8 text-center md:gap-16 md:py-16">
+            <motion.p
+              className="text-xl leading-[1.4] duration-700 md:text-2xl"
               {...fadeInProps}
-              transitionDuration="0.75s"
-              lineHeight={1.4}
             >
               Welcome to Web3
-              <Text as="span" display="block" mt={2} fontWeight="bold">
-                NFT Marketplace
-              </Text>
-            </Text>
-            <Text
-              as={motion.p}
-              {...fadeInProps}
-              transitionDuration="0.75s"
-              transitionDelay="0.5s"
-            >
+              <span className="mt-2 block font-bold">NFT Marketplace</span>
+            </motion.p>
+            <motion.p className="delay-500 duration-700" {...fadeInProps}>
               Connect your wallet to view your collection
-            </Text>
+            </motion.p>
           </Flex>
         </Web3App>
       )}
@@ -128,20 +108,13 @@ export const ConnectWeb3 = ({ nav, ctaLabel }: PhoneScreenProps) => {
           style={{ height: "100%" }}
         >
           <Web3App
-            bg="background.base"
+            className="bg-background"
             appName="NFT Marketplace"
-            displayUrl="app.example.com"
+            displayUrl={EXAMPLE_APP_URL}
           >
-            <Box
-              px={6}
-              py={{ base: 2, md: 6 }}
-              fontSize="lg"
-              sx={{ button: { textDecoration: "none" } }}
-            >
-              <Text fontWeight="bold" mb={4}>
-                Your collection (1)
-              </Text>
-              <Flex gap={2} mb={6}>
+            <div className="px-6 py-2 text-lg md:py-6 [&_button]:no-underline">
+              <p className="mb-4 font-bold">Your collection (1)</p>
+              <Flex className="mb-6 gap-2">
                 <Image
                   src={NFTs[0].image}
                   width={120}
@@ -153,35 +126,18 @@ export const ConnectWeb3 = ({ nav, ctaLabel }: PhoneScreenProps) => {
                   content="These are some things you could do as the owner of your NFTs"
                   side="top"
                 >
-                  <Flex
-                    direction="column"
-                    fontSize={{ base: "xs", sm: "sm" }}
-                    textAlign="start"
-                    alignItems="start"
-                    gap={1}
-                  >
-                    <Text fontWeight="bold" fontSize="md" mb="auto" ms={2}>
-                      Cool art
-                    </Text>
-                    <Button
-                      variant="link"
-                      isDisabled
-                      leftIcon={<Icon as={RiAuctionLine} fontSize="xs" />}
-                    >
+                  <Flex className="flex-col items-start gap-1 text-start text-xs sm:text-sm">
+                    <p className="mb-auto ms-2 text-md font-bold">Cool art</p>
+                    <Button variant="link" disabled>
+                      <AuctionLine className="text-xs" />
                       Set a price
                     </Button>
-                    <Button
-                      variant="link"
-                      isDisabled
-                      leftIcon={<Icon as={RiPriceTag2Line} fontSize="xs" />}
-                    >
+                    <Button variant="link" disabled>
+                      <PriceTagLine className="text-xs" />
                       Auction item
                     </Button>
-                    <Button
-                      variant="link"
-                      isDisabled
-                      leftIcon={<Icon as={RiFileTransferLine} fontSize="xs" />}
-                    >
+                    <Button variant="link" disabled>
+                      <FileTransferLine className="text-xs" />
                       Transfer item
                     </Button>
                   </Flex>
@@ -192,16 +148,16 @@ export const ConnectWeb3 = ({ nav, ctaLabel }: PhoneScreenProps) => {
                 content="Try out a real Ethereum application when finished here"
                 side="top"
               >
-                <Box fontSize={{ base: "sm", md: "md" }}>
-                  <Button variant="link" isDisabled display="block">
+                <div className="text-sm md:text-md">
+                  <Button className="block" variant="link" disabled>
                     Browse other artwork
                   </Button>
-                  <Button variant="link" isDisabled>
+                  <Button variant="link" disabled>
                     Mint new NFT
                   </Button>
-                </Box>
+                </div>
               </NotificationPopover>
-            </Box>
+            </div>
           </Web3App>
         </motion.div>
       )}

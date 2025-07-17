@@ -1,9 +1,12 @@
+"use client"
+
 import * as React from "react"
-import upperCase from "lodash/upperCase"
 import { tv, type VariantProps } from "tailwind-variants"
 import * as AvatarPrimitive from "@radix-ui/react-avatar"
 
 import { cn } from "@/lib/utils/cn"
+
+import { Image } from "../Image"
 
 import { Center } from "./flex"
 import { BaseLink, type LinkProps } from "./Link"
@@ -12,8 +15,8 @@ import { LinkBox, LinkOverlay } from "./link-box"
 const avatarStyles = tv({
   slots: {
     container:
-      "relative shrink-0 flex overflow-hidden rounded-full focus:outline-4 focus:-outline-offset-1 focus:rounded-full active:shadow-none [&_img]:hover:opacity-70 border border-transparent active:border-primary-hover justify-center items-center",
-    fallback: "bg-body text-body-inverse",
+      "relative shrink-0 overflow-hidden rounded-full focus:outline-4 focus:-outline-offset-1 focus:rounded-full active:shadow-none [&_img]:hover:opacity-70 border border-transparent active:border-primary-hover ",
+    fallback: "bg-body text-body-inverse flex justify-center items-center",
   },
   variants: {
     size: {
@@ -96,7 +99,7 @@ const AvatarFallback = React.forwardRef<
     <AvatarPrimitive.Fallback
       ref={ref}
       className={cn(
-        "flex h-full w-full items-center justify-center rounded-full",
+        "flex h-full w-full items-center justify-center rounded-full uppercase",
         fallback(),
         className
       )}
@@ -126,7 +129,7 @@ const Avatar = React.forwardRef<
     href,
     src,
     name,
-    size,
+    size = "md",
     label,
     className,
     direction = "row",
@@ -138,12 +141,10 @@ const Avatar = React.forwardRef<
     className: "not-[:hover]:no-underline",
   }
 
-  const fallbackInitials = upperCase(
-    name
-      .split(" ")
-      .map((n) => n[0])
-      .join("")
-  )
+  const fallbackInitials = name
+    .split(" ")
+    .map((n) => n[0])
+    .join("")
 
   if (label) {
     const _direction: "flex-col-reverse" | "flex-row-reverse" =
@@ -151,25 +152,33 @@ const Avatar = React.forwardRef<
 
     const _ref = ref as React.ForwardedRef<HTMLDivElement>
     return (
-      <LinkBox
-        // !! Inconsistent strategy, using `as` prop instead of `asChild` bool
-        as={Center}
-        ref={_ref}
-        className={cn(_direction, "gap-x-1 gap-y-0")}
-      >
-        <LinkOverlay
-          asChild
-          className={cn(
-            "peer z-overlay inline-flex items-center gap-1 p-1",
-            size !== "md" ? "text-xs" : "text-sm"
-          )}
-        >
-          <BaseLink {...commonLinkProps}>{label}</BaseLink>
-        </LinkOverlay>
-        <AvatarBase size={size}>
-          <AvatarImage src={src} />
-          <AvatarFallback>{fallbackInitials}</AvatarFallback>
-        </AvatarBase>
+      <LinkBox ref={_ref} className={cn(_direction, "gap-x-1 gap-y-0")} asChild>
+        <Center>
+          <LinkOverlay
+            asChild
+            className={cn(
+              "peer z-overlay inline-flex items-center gap-1 p-1",
+              size !== "md" ? "text-xs" : "text-sm"
+            )}
+          >
+            <BaseLink {...commonLinkProps}>{label}</BaseLink>
+          </LinkOverlay>
+          <AvatarBase size={size}>
+            {src ? (
+              <Image
+                className="object-fill"
+                width={64}
+                height={64}
+                sizes="4rem"
+                src={src}
+                alt={name}
+              />
+            ) : (
+              <AvatarImage />
+            )}
+            <AvatarFallback>{fallbackInitials}</AvatarFallback>
+          </AvatarBase>
+        </Center>
       </LinkBox>
     )
   }
@@ -177,7 +186,18 @@ const Avatar = React.forwardRef<
   return (
     <AvatarBase ref={ref} size={size} className={className} asChild>
       <BaseLink title={dataTest} {...commonLinkProps}>
-        <AvatarImage src={src} />
+        {src ? (
+          <Image
+            className="object-fill"
+            width={64}
+            height={64}
+            sizes="4rem"
+            src={src}
+            alt={name}
+          />
+        ) : (
+          <AvatarImage />
+        )}
         <AvatarFallback>{fallbackInitials}</AvatarFallback>
       </BaseLink>
     </AvatarBase>
