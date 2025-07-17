@@ -1,10 +1,6 @@
 import { pick } from "lodash"
 import { notFound } from "next/navigation"
-import {
-  getMessages,
-  getTranslations,
-  setRequestLocale,
-} from "next-intl/server"
+import { getMessages, setRequestLocale } from "next-intl/server"
 
 import { ChainName } from "@/lib/types"
 
@@ -345,11 +341,6 @@ export async function generateMetadata({
   const { locale, slug } = await params
   const [firstSegment] = slug
 
-  const t = await getTranslations({
-    locale,
-    namespace: "page-apps",
-  })
-
   const [appsData] = await loadData()
 
   const app = Object.values(appsData)
@@ -360,12 +351,8 @@ export async function generateMetadata({
     notFound()
   }
 
-  // Format app name for display (capitalize first letter)
-  const formattedApp =
-    firstSegment.charAt(0).toUpperCase() + firstSegment.slice(1)
-
-  const title = t("page-apps-meta-title", { app: formattedApp })
-  const description = t("page-apps-meta-description", { app: formattedApp })
+  const title = `Ethereum Apps - ${app.name}`
+  const description = app.description
 
   return await getMetadata({
     locale,
