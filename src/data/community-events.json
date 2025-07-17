@@ -177,6 +177,15 @@
     "hackathon": true
   },
   {
+    "title": "TUM Blockchain Conference",
+    "startDate": "2025-09-11",
+    "endDate": "2025-09-12",
+    "href": "https://conference.tum-blockchain.com",
+    "location": "Munich, Germany",
+    "description": "Europe's top Blockchain Conference in Munich is back! Discover how Web3 is moving beyond promise to real world impact with top experts.",
+    "imageUrl": "https://conference.tum-blockchain.com/banners/c25-banner.svg"
+  },
+  {
     "title": "ETHSofia",
     "startDate": "2025-09-23",
     "endDate": "2025-09-25",
