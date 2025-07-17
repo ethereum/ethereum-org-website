@@ -150,7 +150,7 @@ export const walletsData: WalletData[] = [
   },
   {
     last_updated: "2025-07-15",
-    name: "Ready Wallet",
+    name: "Ready (formerly Argent)",
     image: ReadyImage,
     twBackgroundColor: "bg-[#FFFFFF]",
     twGradiantBrandColor: "from-[#ffffff]",
