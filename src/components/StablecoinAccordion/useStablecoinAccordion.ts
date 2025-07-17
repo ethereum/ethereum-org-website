@@ -62,7 +62,7 @@ export const useStablecoinAccordion = () => {
 
   const earn: Array<CardProps> = [
     {
-      title: t("page-stablecoins-accordion-earn-project-bounties"),
+      title: "buidlbox",
       image: buidlboxImg,
       link: "https://app.buidlbox.io/",
       description: t("page-stablecoins-accordion-earn-project-1-description"),
