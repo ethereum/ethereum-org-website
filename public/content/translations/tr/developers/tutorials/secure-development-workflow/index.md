@@ -26,7 +26,6 @@ Sözleşmenizin özel özelliklerini göz önünde bulundurun:
 
 - Sözleşmeleriniz yükseltilebilir mi? Açıkları bulunan yükseltilebilirlik kodunuzu [`slither-check-upgradeability`](https://github.com/crytic/slither/wiki/Upgradeability-Checks) veya [Crytic](https://blog.trailofbits.com/2020/06/12/upgradeable-contracts-made-safer-with-crytic/) ile gözden geçirin. Yükseltmenin sıkıntı çıkarabileceği 17 yolu belgeledik.
 - Sözleşmeleriniz ERC'lere uygun olduğunu iddia ediyor mu? Onları [`slither-check-erc`](https://github.com/crytic/slither/wiki/ERC-Conformance) ile kontrol edin. Bu araç, altı ortak özellikten sapmaları anında tanımlar.
-- Truffle'da birim testleriniz var mı? Onları [`slither-prop`](https://github.com/crytic/slither/wiki/Property-generation) ile zenginleştirin. Özel kodunuza dayalı olarak ERC20'nin özellikleri için otomatik olarak sağlam bir güvenlik özellikleri paketi oluşturur.
 - 3. taraf token'ları ile entegre oluyor musunuz? Harici sözleşmelere bağlı kalmadan önce [token entegrasyon kontrol listemizi](/developers/tutorials/token-integration-checklist/) gözden geçirin.
 
 Kodunuzun kritik güvenlik özelliklerini görsel olarak inceleyin:
@@ -51,6 +50,6 @@ Son olarak, otomatik araçların kolayca bulamayacağı sorunlara dikkat edin:
 
 ## Yardım isteyin {#ask-for-help}
 
-[Ethereum office hours](https://calendly.com/dan-trailofbits/ethereum-office-hours), (çalışma asatleri) her salı öğleden sonra gerçekleştirilir. Bu 1 saatlik 1'e 1 oturumlar, güvenlikle ilgili tüm sorularınızı bize sorma, araçlarımızı kullanarak sorun giderme ve mevcut yaklaşımınız hakkında uzmanlardan geri bildirim alma fırsatıdır. Bu rehberi tamamlamanıza yardımcı olacağız.
+[Ethereum office hours](https://calendly.com/dan-trailofbits/office-hours), (çalışma asatleri) her salı öğleden sonra gerçekleştirilir. Bu 1 saatlik 1'e 1 oturumlar, güvenlikle ilgili tüm sorularınızı bize sorma, araçlarımızı kullanarak sorun giderme ve mevcut yaklaşımınız hakkında uzmanlardan geri bildirim alma fırsatıdır. Bu rehberi tamamlamanıza yardımcı olacağız.
 
 Slack'imize katılın: [Empire Hacking](https://join.slack.com/t/empirehacking/shared_invite/zt-h97bbrj8-1jwuiU33nnzg67JcvIciUw). Herhangi bir sorunuz olursa #crytic ve #ethereum kanallarında her zaman yanınızdayız.

@@ -7,7 +7,7 @@ sidebarDepth: 2
 
 歸檔節點是一個以太坊用戶端的實例，經設定用來建立所有歷史狀態的存檔。 它是某些用例的有用工具，但可能比運行一個全節點更加複雜。
 
-## 基本資訊 {#prerequisites}
+## 先決條件 {#prerequisites}
 
 你應該瞭解[以太坊節點](/developers/docs/nodes-and-clients/)的概念，[其架構](/developers/docs/nodes-and-clients/node-architecture/)、[同步策略](/developers/docs/nodes-and-clients/#sync-modes)、[運行](/developers/docs/nodes-and-clients/run-a-node/)和[使用它們](/developers/docs/apis/json-rpc/)的實踐方法。
 
@@ -62,7 +62,7 @@ sidebarDepth: 2
 
 永遠在用戶端文檔中確認滿足了特定模式的硬體要求。 對歸檔節點來說，最大的需求是磁碟空間。 取決於用戶端的不同，可能從 3TB 到 12TB 都有。 雖然硬碟被認為可能是儲存大量資料的更好辦法，但同步資料和不斷地更新鏈頭需要固態硬碟。 [SATA](https://www.cleverfiles.com/help/sata-hard-drive.html) 硬碟足夠好，但它要有可靠的品質，至少要 [TLC](https://blog.synology.com/tlc-vs-qlc-ssds-what-are-the-differences)。 磁碟可以安裝在有足夠插槽的桌機或伺服器中。 這些專用設備適合需要長時間正常運行的節點。 在筆電上運行也是完全可行的，但便攜性將帶來額外的成本。
 
-所有的資料都需要放入一個磁碟區中，所以磁碟必須合併，如 [RAID0](https://en.wikipedia.org/wiki/Standard_RAID_levels#RAID_0) 或 [LVM](https://web.mit.edu/rhel-doc/5/RHEL-5-manual/Deployment_Guide-en-US/ch-lvm.html)。 或許 [ZFS](https://en.wikipedia.org/wiki/ZFS) 也是值得考慮的選擇，因為它支援「寫入時複製」，確保了資料正確寫入磁碟而沒有任何低階錯誤。
+所有的資料都需要放入一個磁碟區中，所以磁碟必須合併，如 [RAID0](https://en.wikipedia.org/wiki/Standard_RAID_levels#RAID_0) 或 LVM。 或許 [ZFS](https://en.wikipedia.org/wiki/ZFS) 也是值得考慮的選擇，因為它支援「寫入時複製」，確保了資料正確寫入磁碟而沒有任何低階錯誤。
 
 關於更多避免資料庫損毀的穩定安全方法，特別是專業設定中，如果你的系統支援，可以考慮 [ECC 記憶體](https://en.wikipedia.org/wiki/ECC_memory)。 RAM 的大小一般建議和全節點一樣，但更多的 RAM 可以加速同步速度。
 

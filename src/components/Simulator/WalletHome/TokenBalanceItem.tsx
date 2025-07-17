@@ -1,17 +1,13 @@
-import React from "react"
-import { Box, Flex, type FlexProps, Text } from "@chakra-ui/react"
+import { Flex } from "@/components/ui/flex"
 
 import { getMaxFractionDigitsUsd } from "../utils"
 
 import { TokenBalance } from "./interfaces"
 
-type TokenBalanceItemProps = FlexProps & {
+type TokenBalanceItemProps = {
   item: TokenBalance
 }
-export const TokenBalanceItem = ({
-  item,
-  ...flexProps
-}: TokenBalanceItemProps) => {
+export const TokenBalanceItem = ({ item }: TokenBalanceItemProps) => {
   const { name, ticker, amount, usdConversion, Icon } = item
   const usdAmount = amount * usdConversion
   const usdValue = Intl.NumberFormat("en-US", {
@@ -24,23 +20,15 @@ export const TokenBalanceItem = ({
     maximumFractionDigits: 5,
   }).format(amount)
   return (
-    <Flex gap={4} {...flexProps}>
-      <Icon />
-      <Text flex={1} fontWeight="medium">
-        {name}
-      </Text>
-      <Box
-        textAlign="end"
-        fontSize="sm"
-        lineHeight={1.5}
-        fontWeight="bold"
-        sx={{ p: { m: 0 } }}
-      >
-        <Text>{usdValue}</Text>
-        <Text color="body.medium">
+    <Flex className="gap-4">
+      <Icon className="text-3xl" />
+      <p className="flex-1 font-medium">{name}</p>
+      <div className="text-end text-sm font-bold leading-normal [&_p]:m-0">
+        <p>{usdValue}</p>
+        <p className="text-body-medium">
           {tokenAmount} {ticker}
-        </Text>
-      </Box>
+        </p>
+      </div>
     </Flex>
   )
 }

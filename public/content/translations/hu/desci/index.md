@@ -96,7 +96,7 @@ Fedezze fel a projekteket és csatlakozzon a DeSci közösségéhez.
 - [VitaDAO: hosszútávú kutatások finanszírozása a szponzorált kutatási megállapodások alapján](https://www.vitadao.com/)
 - [ResearchHub: tudományos eredmények publikálása és azok megvitatása munkatársaival](https://www.researchhub.com/)
 - [LabDAO: fehérjék számítógépes szimulációja](https://alphafodl.vercel.app/)
-- [dClimate API: keresés a decentralizált közösség által gyűjtött klímaadatokban](https://api.dclimate.net/)
+- [dClimate API: keresés a decentralizált közösség által gyűjtött klímaadatokban](https://www.dclimate.net/)
 - [DeSci Foundation: DeSci publikációs eszközfejlesztés](https://descifoundation.org/)
 - [DeSci.World: itt minden megtudható a decentralizált tudományról](https://desci.world)
 - [OceanDAO: az adattal kapcsolatos tudományok DAO által irányított finanszírozása](https://oceanprotocol.com/)
@@ -104,9 +104,11 @@ Fedezze fel a projekteket és csatlakozzon a DeSci közösségéhez.
 - [Bio.xyz: finanszírozás szerzése a biotechnológiai DAO-jához vagy decentralizált tudományos projektjéhez](https://www.bio.xyz/)
 - [Fleming Protocol: nyílt forráskódú adatgazdaság, amely fűti a kollaboratív orvosbiológiai felfedezéseket](http://flemingprotocol.io/)
 - [Active Inference Institute](https://www.activeinference.org/)
-- [CureDAO: közösség által irányított, precíziós egészségi platform](https://docs.curedao.org/)
 - [IdeaMarkets: decentralizált tudomány hitelességének támogatása](https://ideamarket.io/)
 - [DeSci Labs](https://www.desci.com/)
+- [ValleyDAO: egy nyitott, globális közösség, mely pénzügyi forrásokat és fordítási támogatást kínál a szintetikus biológiai kutatáshoz](https://www.valleydao.bio)
+- [Cerebrum DAO: pénzügyi támogatást és gondoskodást kínál olyan megoldásoknak, melyek fejlesztik az agyi egészséget és megakadályozzák az idegsorvadást](https://www.cerebrumdao.com/)
+- [CryoDAO: támogatást adnak a mélyhűtés területén működő innovatív kutatásoknak](https://www.cryodao.org)
 
 Örömmel vesszük, ha bárki új projektet javasol – kérjük, tekintsék meg a [listázási szabályzatot](/contributing/adding-desci-projects/)!
 
@@ -116,7 +118,7 @@ Fedezze fel a projekteket és csatlakozzon a DeSci közösségéhez.
 - [Útmutató a decentralizált biotechnológiához – Jocelynn Pearl (a16z future)](https://future.a16z.com/a-guide-to-decentralized-biotech/)
 - [A DeSci ügye](https://gitcoin.co/blog/desci-the-case-for-decentralised-science/)
 - [Útmutató a DeSci-hez](https://future.com/what-is-decentralized-science-aka-desci/)
-- [A decentralizált tudomány forrásai](https://www.vincentweisser.com/decentralized-science)
+- [A decentralizált tudomány forrásai](https://www.vincentweisser.com/desci)
 - [Molecule Biopharma IP-NFT-k – technikai leírás](https://www.molecule.xyz/blog/molecules-biopharma-ip-nfts-a-technical-description)
 - [Bizalom nélküli rendszer építése a tudomány számára – Jon Starr](https://medium.com/@jringo/building-systems-of-trustless-science-1cd2d072f673)
 - [Paul Kohlhaas – DeSci: a decentralizált tudomány jövője (podcast)](https://anchor.fm/andrew-steinwold/episodes/Paul-Kohlhaas---DeSci-The-Future-of-Decentralized-Science---Zima-Red-ep-117-e1h683a)
@@ -124,6 +126,7 @@ Fedezze fel a projekteket és csatlakozzon a DeSci közösségéhez.
 - [DeSci: a kutatás jövője – Samuel Akinosho](https://lucidsamuel.medium.com/desci-the-future-of-research-b76cfc88c8ec)
 - [A tudomány finanszírozása (Epilógus: a DeSci és az új kriptoalapok) – Nadia](https://nadia.xyz/science-funding)
 - [A decentralizáció megbontja a gyógyszerfejlesztést](https://medium.com/id-theory/decentralisation-is-disrupting-drug-development-28b5ba5d447f)
+- [Mi az a DeSci, azaz a decentralizált tudomány?](https://usadailytimes.com/2022/09/12/what-is-desci-decentralized-science/)
 
 ### Videók {#videos}
 
@@ -132,3 +135,4 @@ Fedezze fel a projekteket és csatlakozzon a DeSci közösségéhez.
 - [A tudományos publikálás szét van szakítva. A web3 meg tudja vajon javítani?](https://www.youtube.com/watch?v=WkvzYgCvWj8)
 - [Juan Benet – DeSci, független laboratóriumok és a nagy adat tudománya](https://www.youtube.com/watch?v=zkXM9H90g_E)
 - [Sebastian Brunemeier – Hogyan tudja a DeSci átalakítani az orvosbiológiai kutatást és a kockázati tőkét](https://www.youtube.com/watch?v=qB4Tc3FcVbM)
+- [Paige Donner - A nyitott tudomány eszközökkel való ellátása a web3 & a blokklánc révén](https://www.youtube.com/watch?v=nC-2QWQ-lgw&t=17s)

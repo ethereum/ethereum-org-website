@@ -29,7 +29,7 @@ De même, il y a des mises à jour qui peuvent être faites à d'autres parties 
 
 ## Progrès actuels {#current-progress}
 
-La plupart des mises à jour requises pour la pérennité d'Ethereum sont **toujours en phase de recherche et peuvent prendre plusieurs années** avant d'être mises en œuvre. Les mises à jour telles que la suppression de SELF-DESTRUCT et l'harmonisation du système de compression utilisé dans l'exécution et les clients de consensus sont susceptibles d'advenir plus tôt que la cryptographie résistante quantique.
+La plupart des mises à jour requises pour la pérennité d'Ethereum sont **toujours en phase de recherche et peuvent prendre plusieurs années** avant d'être mises en œuvre. Les mises à niveau telles que la suppression de SELFDESTRUCT et l'harmonisation du système de compression utilisé dans l'exécution et les clients de consensus sont susceptibles d'advenir plus tôt que la cryptographie résistante au quantique.
 
 **Complément d'information**
 

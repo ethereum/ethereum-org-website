@@ -226,7 +226,7 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - 500+ administrative and service APIs
     - RESTful interface for Ethereum transaction submission (Apache Kafka backed)
     - Outbound streams for event delivery (Apache Kafka backed)
-    - Deep collection of "off-chain" and ancillary services (e.g. bilateral encrypted messaging transport)
+    - Deep collection of "offchain" and ancillary services (e.g. bilateral encrypted messaging transport)
     - Straightforward network onboarding with governance and role-based access control
     - Sophisticated user management for both administrators and end users
     - Highly scalable, resilient, enterprise-grade infrastructure
@@ -264,7 +264,7 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Direct, technical support
 
 - [**NodeReal MegaNode**](https://nodereal.io/)
-  - [Docs](https://docs.nodereal.io/nodereal/meganode/introduction)
+  - [Docs](https://docs.nodereal.io/docs/introduction)
   - Features
     - Reliable, fast and scalable RPC API services
     - Enhanced API for web3 developers

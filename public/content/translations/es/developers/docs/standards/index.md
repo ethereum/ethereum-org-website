@@ -40,6 +40,7 @@ Puede encontrar información más detallada sobre estos diferentes tipos y categ
 ### Estándares de tokens {#token-standards}
 
 - [ERC-20](/developers/docs/standards/tokens/erc-20/): Una interfaz para tokens fungibles (intercambiables), como tokens de votación, tokens de staking o monedas virtuales.
+  - [ERC-223](/developers/docs/standards/tokens/erc-223/): Estándar de tokens fungibles que hace que los tokens se comporten idénticos a ether y admite el manejo de transferencias de tokens en el lado del destinatario.
   - [ERC-1363](https://eips.ethereum.org/EIPS/eip-1363): Define una interfaz de token para los tokens ERC que soporta la ejecución del código del destinatario después de la transferencia o transferFrom, o código spender después de la aprobación.
 - [ERC-721](/developers/docs/standards/tokens/erc-721/): Una interfaz para tokens no fungibles (NFT), como un deed de una obra de arte o una canción.
   - [ERC-2309](https://eips.ethereum.org/EIPS/eip-2309): Un evento estandarizado emitido al crear/transferir uno, o muchos tokens no fungibles usando identificadores consecutivos de token.

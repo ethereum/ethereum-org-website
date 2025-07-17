@@ -82,7 +82,7 @@ Veuillez également vous reporter à nos [conditions d'utilisation](/terms-of-us
 
 Ethereum étant flexible par nature, les équipes et les produits vont et viennent et l'innovation est quotidienne. Nous procéderons donc à des vérifications de routine de notre contenu pour :
 
-- nous assurer que toutes les DApps répertoriées répondent toujours à nos critères
+- s'assurer que toutes les DApps répertoriées répondent toujours à nos critères 
 - vérifier qu'aucun produit suggéré ne répond à plus de nos critères que ceux actuellement répertoriés
 
 Vous pouvez nous aider en vérifiant par vous-même et en nous le faisant savoir. [Créez un ticket](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.md&title=) ou envoyez un email à l'adresse [website@ethereum.org](mailto:website@ethereum.org)

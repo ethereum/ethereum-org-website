@@ -17,7 +17,7 @@ As sidechains são blockchains independentes, com diferentes histórias, roteiro
 
 Uma das qualidades que tornam as sidechains únicas (ou seja, diferentes do Ethereum) é o algoritmo de consenso usado. As sidechains não contam com o Ethereum para consenso e podem escolher protocolos de consenso alternativos que atendam às suas necessidades. Alguns exemplos de algoritmos de consenso usados nas sidechains incluem:
 
-- [Prova de autoridade](https://wikipedia.org/wiki/Proof_of_authority)
+- [Prova de autoridade](/developers/docs/consensus-mechanisms/poa/)
 - [Prova de participação delegada](https://en.bitcoin.it/wiki/Delegated_proof_of_stake)
 - [Tolerância a falhas bizantinas](https://decrypt.co/resources/byzantine-fault-tolerance-what-is-it-explained).
 

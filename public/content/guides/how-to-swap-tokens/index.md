@@ -12,7 +12,7 @@ A token swap involves the exchange of two different assets that exist on the Eth
 
 **Prerequisite:**
 
-- have a [crypto wallet](/glossary/#wallet), you can follow this tutorial: [How to: "Register" an Ethereum account](/guides/how-to-create-an-ethereum-account/)
+- have a [crypto wallet](/glossary/#wallet); if you don't, you can follow this guide on [how to create an Ethereum account](/guides/how-to-create-an-ethereum-account/)
 - add funds to your wallet
 
 ## 1. Connect your wallet to the decentralized exchange (DEX) of your choice
@@ -22,7 +22,7 @@ Some popular exchanges are:
 - [Uniswap](https://app.uniswap.org/#/swap)
 - [Sushiswap](https://www.sushi.com/swap)
 - [1Inch](https://app.1inch.io/#/1/unified/swap/ETH/DAI)
-- [Curve](https://curve.fi/#/ethereum/swap)
+- [Curve](https://www.curve.finance/dex/ethereum/swap/)
 
 Interesting? Learn more about what [decentralised finance (DeFi)](/defi/) is and how these new kinds of exchanges work.
 

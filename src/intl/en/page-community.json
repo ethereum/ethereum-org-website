@@ -44,11 +44,18 @@
   "page-community-try-ethereum": "Try Ethereum for yourself",
   "page-community-upcoming-events-no-events": "We're not aware of any upcoming events. Know of one?",
   "page-community-upcoming-events-load-more": "Load more",
+  "page-community-upcoming-events-view-event": "View event",
   "page-community-why-get-involved-title": "Why get involved?",
   "page-community-why-get-involved-card-1-title": "Find your tribe",
   "page-community-why-get-involved-card-1-description": "There is a tribe for everyone. Find and connect with like minded individuals to discuss, ponder, and celebrate Ethereum together.",
   "page-community-why-get-involved-card-2-title": "Earn a living",
   "page-community-why-get-involved-card-2-description": "Everyone has bills to pay. Ethereum allows you to find meaningful work, and get paid well to do it.",
   "page-community-why-get-involved-card-3-title": "Make a difference",
-  "page-community-why-get-involved-card-3-description": "Getting involved with Ethereum allows you to be an active stakeholder in a technology that is having a positive impact on millions of people."
+  "page-community-why-get-involved-card-3-description": "Getting involved with Ethereum allows you to be an active stakeholder in a technology that is having a positive impact on millions of people.",
+  "page-index-internet-image-alt": "Illustration of a futuristic computer set up, powered by Ethereum crystals.",
+  "page-index-get-started-image-alt": "Illustration of a person working on a computer.",
+  "page-index-get-started-wallet-image-alt": "Illustration of a robot with a vault for a body, representing an Ethereum wallet.",
+  "page-index-get-started-eth-image-alt": "Illustration of a group of people marvelling at an ether (ETH) glyph in awe.",
+  "page-index-get-started-dapps-image-alt": "Illustration of a doge using a computer.",
+  "page-index-get-started-devs-image-alt": "An illustration of a hand creating an ETH logo made of lego bricks."
 }

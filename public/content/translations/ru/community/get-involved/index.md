@@ -15,15 +15,17 @@ lang: ru
 - Узнайте подробнее об Ethereum на [ethereum.org/developers/](/developers/) и попробуйте использовать
 - Посетите ближайший к вам хакатон [ETHGlobal](http://ethglobal.co/)!
 - Ознакомьтесь с [проектами в вашей компетенции или на языке программирования по вашему выбору](/developers/docs/programming-languages/)
-- [Онлайн-встречи Core Dev](https://www.youtube.com/@EthereumProtocol): смотрите или поучаствуйте сами
+- Смотрите [звонки, посвященные уровням консенсуса и исполнения](https://www.youtube.com/@EthereumProtocol/streams), или участвуйте в них
 - [Список предпочтений для программы поддержки экосистемы](https://esp.ethereum.foundation/wishlist/) — сферы инструментария, документации и инфраструктуры, в которых активно ищут заявителей на гранты в рамках программы поддержки экосистемы Ethereum
 - [Web3Bridge](https://www.web3bridge.com/) — присоединяйтесь к амбициозному сообществу web3 в их инициативе по выявлению, обучению и поддержке сотен разработчиков и членов сообщества по всей Африке
-- Присоединяйтесь к [Discord-каналу Ethereum Cat Herders](https://discord.io/EthCatHerders)
+- Присоединяйтесь к [Discord-каналу Eth R&D](https://discord.com/invite/VmG7Uxc)
+- Присоединяйтесь к [Discord-каналу Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu)
 
 ## Исследователи и академики <Emoji text=":mag:" size={1} />‍ {#researchers-and-academics}
 
 У вас есть опыт работы в области математики, криптографии или экономики? Возможно, вам будет интересно узнать о некоторых передовых разработках в рамках экосистемы Ethereum:
 
+- Присоединяйтесь к [Discord-каналу Eth R&D](https://discord.com/invite/VmG7Uxc)
 - Составьте или рассмотрите предложение по улучшению Ethereum (EIP)
   - Составьте EIP
     1. Представьте свою идею на [Ethereum Magicians](https://ethereum-magicians.org)
@@ -32,12 +34,13 @@ lang: ru
   - Узнайте, как стать [редактором EIP](https://eips.ethereum.org/EIPS/eip-5069)
     - Теперь вы можете рассматривать EIP других участников! Просматривайте [открытые запросы на включение изменений с тегом `e-review`](https://github.com/ethereum/EIPs/pulls?q=is%3Apr+is%3Aopen+label%3Ae-review). Давайте обратную связь относительно технических аспектов по ссылке `discussion-to`.
   - Участвуйте в [администрировании EIP](https://github.com/ethereum-cat-herders/EIPIP)
-    - Присоединяйтесь к [Discord-каналу Ethereum Cat Herders](https://discord.io/EthCatHerders)
+    - Присоединяйтесь к [Discord-каналу Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu)
   - [Подробнее об EIP](/eips/)
 - [Challenges.ethereum.org](https://challenges.ethereum.org/) — ряд крупных исследовательских премий, с которыми вы можете заработать более 100 000 долл. США
 - [Ethresear.ch](https://ethresear.ch) — основной форум Ethereum по исследованиям и наиболее влиятельный в мире форум по криптоэкономике
 - [EF Research AMA](https://old.reddit.com/r/ethereum/comments/vrx9xe/ama_we_are_ef_research_pt_8_07_july_2022) — текущая серия вопросов и ответов с участием исследователей. По мере открытия каждой следующей части любой человек может размещать вопросы.
 - [Список предпочтений для программы поддержки экосистемы](https://esp.ethereum.foundation/wishlist/) — области исследований, в которых активно ищут заявителей на гранты в рамках программы поддержки экосистемы Ethereum
+- [AllWalletDevs](https://allwallet.dev) — форум для разработчиков, дизайнеров и заинтересованных пользователей Ethereum, где они регулярно собираются и обсуждают кошельки
 
 [Посмотрите больше активных областей исследований](/community/research/).
 
@@ -89,7 +92,7 @@ lang: ru
 
 ## Менеджеры по продукту <Emoji text=":fountain_pen:" size={1} /> {#product-managers}
 
-- Экосистема Ethereum ищет таланты! Многие компании готовы нанимать менеджеров по продукту. Если вы хотите принять участие в проекте с открытым исходным кодом, свяжитесь с [группой Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) или [RaidGuild](https://www.raidguild.org/)
+- Экосистема Ethereum ищет таланты! Многие компании готовы нанимать менеджеров по продукту. Если вы хотите принять участие в проекте с открытым исходным кодом, свяжитесь с [Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) или [RaidGuild](https://www.raidguild.org/)
 
 ## Маркетинг <Emoji text=":megaphone:" size={1} />‍ {#marketing}
 
@@ -102,12 +105,11 @@ lang: ru
 - [Вакансии в ethereum.org](/about/#open-jobs)
 - [Вакансии в Ethereum Foundation (Lever)](https://jobs.lever.co/ethereumfoundation)
 - [Вакансии в Ethereum Foundation (BambooHR)](https://ethereum.bamboohr.com/jobs/)
+- [JobStash](https://jobstash.xyz)
 - [Вакансии в сфере криптовалют](https://cryptocurrencyjobs.co/ethereum/)
-- [Crypto.jobs](https://crypto.jobs/)
 - [Вакансии в ConsenSys](https://consensys.net/careers/)
 - [Список вакансий в сфере криптовалют](https://cryptojobslist.com/ethereum-jobs)
 - [Объявления о вакансиях на Bankless](https://pallet.xyz/list/bankless/jobs)
-- [Вакансии на useWeb3](https://www.useweb3.xyz/jobs)
 - [Вакансии на Web3](https://web3.career)
 - [Web3 Army](https://web3army.xyz/)
 - [Вакансии на Crypto Valley](https://cryptovalley.jobs/)
@@ -118,13 +120,12 @@ lang: ru
 
 DAO — децентрализованные автономные организации. Эти группы используют технологию Ethereum для облегчения организации и сотрудничества. Например, для управления составом участников, голосования по предложениям или управления объединенными активами. Хотя использование децентрализованных автономных организаций (DAO) все еще носит экспериментальный характер, они предлагают вам возможность найти группы, с которыми вы себя идентифицируете, найти людей, с которыми вы будете сотрудничать, а также увеличить свое влияние на сообщество Ethereum. [Подробнее о децентрализованных автономных организациях (DAO)](/dao/)
 
-- [DAOSquare](https://www.daosquare.io) [@DAOSquare](https://twitter.com/DAOSquare) — _продвижение концепции децентрализованной автономной организации (DAO) в нетехнических отраслях и помощь в создании стоимости через DAO_
+- [DAOSquare](https://daosquare.io/) [@DAOSquare](https://twitter.com/DAOSquare) — _продвижение концепции децентрализованной автономной организации (DAO) в нетехнических отраслях и помощь в создании стоимости через DAO_
 - [Developer DAO](https://www.developerdao.com/) [@developer_dao](https://twitter.com/developer_dao) — _сообщество разработчиков, которые верят в коллективное владение Интернетом_
 - [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) — _коллектив разработчиков-фрилансеров Web3, работающий как децентрализованная автономная организация (DAO)_
 - [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) — _управление сообщества DAOhaus_
 - [LexDAO](https://lexdao.org) [@lex_DAO](https://twitter.com/lex_DAO) — _инжиниринг в сфере юридических вопросов_
 - [Machi X](https://machix.com) [@MachiXOfficial](https://twitter.com/MachiXOfficial) — _арт-сообщество_
-- [MetaCartel](https://metacartel.org) [@Meta_Cartel](https://twitter.com/Meta_Cartel) — _инкубатор децентрализованных автономных организаций (DAO)_
 - [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://twitter.com/VENTURE_DAO) — _венчурный капитал для предварительного этапа криптовалютных проектов_
 - [MetaGame](https://metagame.wtf) [@MetaFam](https://twitter.com/MetaFam) — _механика игр MMORPG для реальной жизни_
 - [MetaFactory](https://metafactory.ai) [@TheMetaFactory](https://twitter.com/TheMetaFactory) — _бренды цифро-физических вещей_

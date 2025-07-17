@@ -28,16 +28,6 @@ lang: ja
 
 **注**: ほとんどの[開発フレームワーク](/developers/docs/frameworks/)には、組み込みの開発用ネットワークが含まれています。 フレームワークの[ローカル開発環境のセットアップ](/developers/local-environment/)から始めることをお勧めします。
 
-### Ganache {#ganache}
-
-テストの実行、コマンドの実行、状態の調査に使用できる専用のイーサリアムブロックチェーンを迅速に起動し、チェーンの動作を制御します。
-
-Ganacheは、デスクトップアプリケーション(Ganache UI)とコマンドラインツール(`ganache-cli`)の両方を提供しています。 Truffle Suiteというツールスイートに組み込まれています。
-
-- [ウェブサイト](https://www.trufflesuite.com/ganache)
-- [GitHub](https://github.com/trufflesuite/ganache)
-- [ドキュメント](https://www.trufflesuite.com/docs/ganache/overview)
-
 ### Hardhat Network {#hardhat-network}
 
 開発用に設計されたローカルイーサリアムネットワークです。 コントラクトのデプロイ、テストの実行、コードのデバッグを可能にします。
@@ -51,16 +41,17 @@ Hardhat Networkには、プロフェッショナルのためのイーサリア�
 
 一部のコンセンサスクライアントには、テスト用にローカルビーコンチェーンをスピンアップするためのツールが組み込まれています。 Lighthouse、Nimbus、Lodestarでの手順は、以下で確認できます。
 
-- [Lodestarを使用したローカルテストネット](https://chainsafe.github.io/lodestar/usage/local/)
+- [Lodestarを使用したローカルテストネット](https://chainsafe.github.io/lodestar/contribution/advanced-topics/setting-up-a-testnet#post-merge-local-testnet/)
 - [Lighthouseを使用したローカルテストネット](https://lighthouse-book.sigmaprime.io/setup.html#local-testnets)
 - [Nimbusを使用したローカルテストネット](https://github.com/status-im/nimbus-eth1/blob/master/fluffy/docs/local_testnet.md)
 
 ### 公開イーサリアムテストチェーン {#public-beacon-testchains}
 
-また、イーサリアムにはGoerliとSepoliaという、2つの維持されている公開テスト環境の実装もあります。 長期的なサポートが受けられる推奨テストネットはGoerliです。Goerliは、誰でも自由に検証できます。 Sepoliaは、より新しい小規模なチェーンであり、当面は維持されると予測されています。許可されたバリデータのみがアクセスできます(つまり、このテストネットには、新規のバリデータは通常アクセスできません)。 Ropstenチェーンは、2022年の第4期に廃止される予定です。Rinkebyチェーンは、2023年の第2期または第3期に廃止される予定です。
+また、イーサリアムにはSepoliaとHoodiという、2つの維持されている公開テスト環境の実装もあります。 Sepoliaは、アプリケーション開発のための推奨される標準テストネットで、高速な同期のための閉じたバリデータセットを持っています。 Hoodiは、検証とステーキングのためのテストネットで、オープンなバリデータセットを使用し、誰でも検証できる可能性があります。
 
-- [Goerliステーキングランチパッド](https://goerli.launchpad.ethereum.org/)
-- [Ropsten、Rinkeby、Kilnの廃止のお知らせ](https://blog.ethereum.org/2022/06/21/testnet-deprecation)
+- [Hoodiステーキングランチパッド](https://hoodi.launchpad.ethereum.org/en/)
+- [Sepoliaウェブサイト](https://sepolia.dev/)
+- [Hoodiウェブサイト](https://hoodi.ethpandaops.io/)
 
 ### Kurtosisイーサリアムパッケージ {#kurtosis}
 

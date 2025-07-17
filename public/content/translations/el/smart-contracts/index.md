@@ -1,10 +1,15 @@
 ---
 title: Έξυπνα συμβόλαια
+metaTitle: "Έξυπνα συμβόλαια: Τι είναι και ποια τα οφέλη"
 description: Μια μη τεχνική εισαγωγή στα έξυπνα συμβόλαια
 lang: el
 ---
 
 # Εισαγωγή στα έξυπνα συμβόλαια {#introduction-to-smart-contracts}
+
+<div className="mt-4">
+<ListenToPlayer slug="/smart-contracts/" />
+</div>
 
 Τα έξυπνα συμβόλαια αποτελούν τα θεμελιώδη δομικά στοιχεία του επιπέδου εφαρμογών του Ethereum. Είναι προγράμματα υπολογιστών αποθηκευμένα στην [κρυπτοαλυσίδα](/glossary/#blockchain) τα οποία ακολουθούν τη λογική «αν συμβεί αυτό, τότε αυτό» και έχουν εγγυημένη εκτέλεση σύμφωνα με τους κανόνες που ορίζονται από τον κώδικά της, ο οποίος δεν μπορεί να αλλάξει από τη στιγμή που θα δημιουργηθεί.
 
@@ -76,7 +81,6 @@ lang: el
 ## Περισσότερες πληροφορίες {#further-reading}
 
 - [Πώς θα αλλάξουν τον κόσμο τα έξυπνα συμβόλαια](https://www.youtube.com/watch?v=pA6CGuXEKtQ)
-- [Έξυπνα Συμβόλαια: Η τεχνολογία blockchain που θα αντικαταστήσει τους δικηγόρους](https://blockgeeks.com/guides/smart-contracts/)
 - [Έξυπνες συμβόλαια για προγραμματιστές](/developers/docs/smart-contracts/)
 - [Μάθετε να συντάσσετε έξυπνα συμβόλαια](/developers/learning-tools/)
 - [Mastering Ethereum - Τι είναι ένα έξυπνο συμβόλαιο;](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)

@@ -4,6 +4,7 @@
 /node_modules
 /.pnp
 .pnp.js
+.pnpm-store/
 
 # testing
 /coverage
@@ -23,6 +24,9 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+.pnpm-debug.log
+
+pnpm-lock.yaml.bak
 
 # local env files
 .env*.local
@@ -59,4 +63,5 @@ src/data/crowdin/bucketsAwaitingReviewReport.csv
 
 # Storybook
 build-storybook.log
+build-archive.log
 storybook-static

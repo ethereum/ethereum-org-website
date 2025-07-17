@@ -42,7 +42,7 @@ Actualizarea Arrow Glacier a amânat [bomba de dificultate](/glossary/#difficult
 
 </ExpandableCard>
 
-#### <Emoji text=":police_car_light:" size={1} me="0.5rem" />Operatorii de noduri {#arrow-glacier-node-operators}
+#### <Emoji text=":police_car_light:" size={1} className="me-2" />Operatorii de noduri {#arrow-glacier-node-operators}
 
 Aveţi grijă să vă actualizați software-ul client la versiunea cea mai recentă înainte de 5 decembrie 2021, pentru a justifica timpii de bloc variabili. Aceasta va evita sincronizarea clientului dvs. cu un lanț pre-fork, care va avea ca rezultat imposibilitatea de a trimite fonduri sau de a verifica în mod corect tranzacțiile.
 
@@ -58,7 +58,7 @@ Actualizarea Altair a fost prima actualizare programată pentru [Lanțul Beacon]
 
 - [Citiţi specificaţiile actualizărilor Altair](https://github.com/ethereum/consensus-specs/tree/dev/specs/altair)
 
-#### <Emoji text=":tada:" size={1} me="0.5rem" />Un fapt amuzant! {#altair-fun-fact}
+#### <Emoji text=":tada:" size={1} className="me-2" />Un fapt amuzant! {#altair-fun-fact}
 
 Altair a fost prima actualizare majoră a rețelei care a avut o dată exactă de lansare. Toate actualizările anterioare s-au bazat pe un număr de bloc declarat pe lanțul dovezii-muncii (PoW), unde timpii de bloc variază. Lanțul Beacon nu necesită rezolvarea de calcule ca dovadă-a-muncii (PoW), ci funcționează pe un sistem de epoci bazate pe timp, sistem care constă din 32 de „sloturi” de timp de 12 secunde în care validatorii pot propune blocuri. Acesta este motivul pentru care am știut exact când vom atinge epoca 74.240 și Altair va deveni funcțional!
 
@@ -308,7 +308,7 @@ Fork-ul Tangerine Whistle a fost primul răspuns la atacurile prin refuzul-servi
 
 #### Rezumat {#dao-fork-summary}
 
-Fork-ul DAO a fost un răspuns la [atacul DAO din 2016](https://www.coindesk.com/markets/2016/06/25/understanding-the-dao-attack/), în care un contract [DAO](/glossary/#dao) nesecurizat a fost golit de peste 3,6 milioane de ETH prin piratare. Fork-ul a mutat fondurile de pe contractul defectuos pe un [contract nou](https://etherscan.io/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754) cu o singură funcție: „withdraw” (retragere). Oricine a pierdut fonduri a putut retrage 1 ETH pentru fiecare 100 de tokenuri DAO din portofel.
+Fork-ul DAO a fost un răspuns la [atacul DAO din 2016](https://www.coindesk.com/learn/understanding-the-dao-attack/), în care un contract [DAO](/glossary/#dao) nesecurizat a fost golit de peste 3,6 milioane de ETH prin piratare. Fork-ul a mutat fondurile de pe contractul defectuos pe un [contract nou](https://etherscan.io/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754) cu o singură funcție: „withdraw” (retragere). Oricine a pierdut fonduri a putut retrage 1 ETH pentru fiecare 100 de tokenuri DAO din portofel.
 
 Această măsură a fost votată de comunitatea Ethereum. Orice deținător de ETH a putut vota printr-o tranzacție pe [o platformă de vot](http://v1.carbonvote.com/). Decizia de creare a fork-ului a întrunit peste 85% din voturi.
 

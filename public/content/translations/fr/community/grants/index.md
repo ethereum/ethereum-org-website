@@ -31,9 +31,9 @@ Ces projets ont crée leurs propres subventions pour encourager d'autres projets
 - [Organisme de subvention Lido Ecosystem Grants Organisation (LEGO)](https://lido.fi/lego) – _Écosystème financier [Lido](https://lido.fi/)_
 - [Programme MetaMask](https://metamaskgrants.org/) - _[MetaMask](https://metamask.io/) DAO de subventions gérées par les employés_
 - [Programme de subventions SKALE Network](https://skale.space/developers#grants) - _Écosystème [SKALE Network](https://skale.space/)_
-- [Programme de subvention de la fondation Swarm](https://my.ethswarm.org/grants) - _Écosystème de la [fondation Swarm](https://www.ethswarm.org/)_
+- [Programme de subvention de la fondation Swarm](https://my.ethswarm.org) - _Écosystème de la [fondation Swarm](https://www.ethswarm.org/)_
 - [TheGraph](https://thegraph.com/ecosystem/grants/) – _Écosystème [TheGraph](https://thegraph.com/)_
-- [Programme de subventions Uniswap](https://www.uniswapfoundation.org/grants) – _Communauté [Uniswap](https://uniswap.org/)_
+- [Programme de subventions Uniswap](https://www.uniswapfoundation.org/approach) – _Communauté [Uniswap](https://uniswap.org/)_
 
 ## Financement quadratique {#quadratic-funding}
 

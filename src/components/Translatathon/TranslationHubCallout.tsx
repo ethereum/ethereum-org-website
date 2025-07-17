@@ -1,35 +1,29 @@
-import { Flex } from "@chakra-ui/react"
-
-import { ButtonLink } from "@/components/Buttons"
 import { Image } from "@/components/Image"
+import { Center, Flex } from "@/components/ui/flex"
+
+import { ButtonLink } from "../ui/buttons/Button"
 
 import WalkingImage from "@/public/images/translatathon/walking.png"
 
 export const TranslationHubCallout = ({ children }) => {
   return (
-    <Flex
-      w="full"
-      align="stretch"
-      bg="background.highlight"
-      direction={{ base: "column", lg: "row" }}
-      p={8}
-    >
-      <Flex w="full" direction="column">
+    <Flex className="w-full flex-col items-stretch gap-8 bg-background-highlight p-8 lg:flex-row">
+      <Flex className="w-full flex-col">
         {children}
         <Flex>
-          <ButtonLink href="/contributing/translation-program/translatathon/local-communities">
+          <ButtonLink href="/contributing/translation-program/translatathon/translatathon-hubs">
             Find out more on hubs
           </ButtonLink>
         </Flex>
       </Flex>
-      <Flex w="full">
+      <Center className="w-full">
         <Image
           src={WalkingImage}
           alt=""
-          maxW={265}
           style={{ objectFit: "contain" }}
+          className="max-w-[265px]"
         />
-      </Flex>
+      </Center>
     </Flex>
   )
 }

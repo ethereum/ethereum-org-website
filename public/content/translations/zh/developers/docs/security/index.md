@@ -6,7 +6,7 @@ lang: zh
 
 以太坊智能合约是极为灵活的。它能够存储超过非常大量的虚拟货币（超过十亿美元），并且根据先前部署的智能合同运行不可修改的代码。 虽然这创造了一个充满活力和创造性的生态系统，但其中包含的无信任、相互关联的智能合约，也吸引了攻击者利用智能合约中的漏洞和以太坊中的未知错误来赚取利润。 智能合约代码*通常*无法修改来修复安全漏洞，因此从智能合约中被盗窃的资产是无法收回的，且被盗资产极难追踪。 由于智能合约问题而被盗或丢失的价值总额已经达到了 10 亿美元。 一些因为智能合约代码编写错误导致较大经济损失的例子：
 
-- [钱包问题 #1 - 3000 万美金损失](https://www.coindesk.com/30-million-ether-reported-stolen-parity-wallet-breach)
+- [钱包问题 #1 - 3000 万美金损失](https://www.coindesk.com/markets/2017/07/19/30-million-ether-reported-stolen-due-to-parity-wallet-breach)
 - [钱包问题 #2 - 3 亿美金锁定](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether)
 - [TheDAO 被黑，360 万 ETH 被盗！ 目前价值超过 10 亿美元](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/)
 
@@ -29,7 +29,7 @@ lang: zh
 - 所有代码应该被存在于一个版本控制系统当中，例如 git
 - 所有的代码修改都应该通过拉取请求来进行
 - 所有的拉取请求都应该有至少一个审核员。 _如果这是一个个人项目，请考虑寻找另一位个人作者和一个交易代码审核员。_
-- 使用开发以太坊环境（请参阅：Truffle），只需一个命令就可以编译、部署和运行一套针对你的代码的测试
+- 使用开发以太坊环境，只需一个命令就可以编译、部署和运行一套针对你的代码的测试
 - 已经通过 Mythril 和 Sliter 等基本代码分析工具运行了代码，最好是在合并每个拉取请求之前，比较输出中的差异。
 - Solidity 代码编辑器不会发出任何警告
 - 你的代码有据可查

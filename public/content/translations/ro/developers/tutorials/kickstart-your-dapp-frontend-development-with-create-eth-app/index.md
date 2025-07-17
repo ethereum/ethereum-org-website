@@ -59,13 +59,13 @@ Chiar dacă [Web3](https://docs.web3js.org/) este încă utilizat cel mai des, s
 
 În mod normal, ați prelua date direct din contractul dvs. inteligent. Doriți să citiți ora ultimei tranzacții? Trebuie doar să apelați `MyContract.methods.latestTradeTime().call()`, care preia datele dintr-un nod Ethereum precum Infura în aplicația dvs. Dapp. Dar dacă aveți nevoie de sute de puncte de date diferite? Acest lucru ar duce la preluarea a sute de date către nod, de fiecare dată fiind nevoie de un [RTT](https://wikipedia.org/wiki/Round-trip_delay_time), ceea ce face ca aplicaţia dvs. Dapp să fie înceată și ineficientă. O soluţie ar putea fi o apelare a unei funcții fetcher în cadrul contractului care răspunde prin mai multe date simultan. Totuși, nu este întotdeauna ideal să acţionăm astfel.
 
-În plus, v-ar putea interesa şi nişte date istorice. Vreţi să știți nu numai data ultimei tranzacții, ci și datele pentru toate tranzacțiile pe care le-ați făcut vreodată. Utilizați pachetul subgraph din _create-eth-app_, citiți [documentația](https://thegraph.com/docs/define-a-subgraph) și adaptați-l la propriile contracte. Dacă sunteți în căutarea unor contracte inteligente cunoscute, este posibil să existe deja un subgraf. Accesați [exploratorul de subgrafuri](https://thegraph.com/explorer/).
+În plus, v-ar putea interesa şi nişte date istorice. Vreţi să știți nu numai data ultimei tranzacții, ci și datele pentru toate tranzacțiile pe care le-ați făcut vreodată. Utilizați pachetul subgraph din _create-eth-app_, citiți [documentația](https://thegraph.com/docs/en/subgraphs/developing/creating/starting-your-subgraph) și adaptați-l la propriile contracte. Dacă sunteți în căutarea unor contracte inteligente cunoscute, este posibil să existe deja un subgraf. Accesați [exploratorul de subgrafuri](https://thegraph.com/explorer/).
 
 Odată ce aveți un subgraf, acesta vă permite să scrieți o simplă interogare în aplicația dvs. Dapp, care preia toate datele importante din blockchain, inclusiv cele istorice de care aveți nevoie, fiind necesară doar o preluare.
 
 ### Apollo {#apollo}
 
-Datorită integrării [Apollo Boost](https://www.apollographql.com/docs/react/get-started/), puteți integra cu ușurință graful în aplicația dvs. Dapp React. Mai ales când folosiți [React hooks și Apollo](https://www.apollographql.com/blog/apollo-client-now-with-react-hooks-676d116eeae2), preluarea datelor este la fel de simplă ca scrierea unei singure interogări GraphQL în componenta dvs.:
+Datorită integrării [Apollo Boost](https://www.apollographql.com/docs/react/get-started/), puteți integra cu ușurință graful în aplicația dvs. Dapp React. Mai ales când folosiți [React hooks și Apollo](https://www.apollographql.com/blog/apollo-client-now-with-react-hooks), preluarea datelor este la fel de simplă ca scrierea unei singure interogări GraphQL în componenta dvs.:
 
 ```js
 const { loading, error, data } = useQuery(myGraphQlQuery)

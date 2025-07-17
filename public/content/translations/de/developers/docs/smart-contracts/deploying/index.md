@@ -20,16 +20,14 @@ Zu guter letzt muss ein Vertrag vor der Bereitstellung kompiliert werden. Lesen 
 
 ### Folgendes ist erforderlich {#what-youll-need}
 
-- Der Vertragsbytecode – dieser wird durch [Kompilierung](/developers/docs/smart-contracts/compiling/) generiert
+- Ihr Contract-Bytecode – dieser wird durch [Kompilierung](/developers/docs/smart-contracts/compiling/) generiert.
 - Ether for gas – Sie setzen Ihre Ressourcengrenze wie bei anderen Transaktionen fest. Beachten Sie dabei jedoch, dass das Integrieren von Smart Contracts viel mehr Ressourcen erfordert als eine einfache ETH-Transaktion.
 - Ein Bereitstellungsskript oder Plug-in
 - Zugriff auf einen [Ethereum-Knoten](/developers/docs/nodes-and-clients/), entweder durch Betreiben Ihres eigenen Knotens, durch Verbindung zu einem öffentlichen Knoten oder über einen API-Schlüssel mit einem [Node-Service](/developers/docs/nodes-and-clients/nodes-as-a-service/)
 
 ### Schritte zur Bereitstellung eines Smart Contracts {#steps-to-deploy}
 
-Die einzelnen Schritte hängen von den verwendeten Tools ab. Ein Beispiel dafür finden Sie in der [Hardhat-Dokumentation über die Bereitstellung Ihrer Verträge](https://hardhat.org/guides/deploying.html) oder in der [Truffle-Dokumentation über Netzwerke und die Bereitstellung von Anwendungen](https://www.trufflesuite.com/docs/truffle/advanced/networks-and-app-deployment). Das sind zwei der beliebtesten Tools für die Bereitstellung von Smart Contracts, bei denen ein Skript geschrieben werden muss, um die Bereitstellungsschritte durchzuführen.
-
-Sobald Ihr Smart Contract integriert ist, hat er eine Ethereum-Adresse, wie andere [-Konten](/developers/docs/accounts/).
+Die spezifischen Schritte hängen vom jeweiligen Entwicklungsframework ab. Zum Beispiel können Sie sich [die Dokumentation von Hardhat zur Bereitstellung Ihrer Contracts](https://hardhat.org/guides/deploying.html) oder [die Dokumentation von Foundry zur Bereitstellung und Verifizierung eines Smart Contract](https://book.getfoundry.sh/forge/deploying) ansehen. Nach Bereitstellung hat Ihr Vertrag wie andere [Konten](/developers/docs/accounts/) eine Ethereum-Adresse und kann mit [Werkzeugen zur Verifizierung des Quellcodes](/developers/docs/smart-contracts/verifying/#source-code-verification-tools) verifiziert werden.
 
 ## Verwandte Werkzeuge {#related-tools}
 
@@ -51,15 +49,16 @@ Sobald Ihr Smart Contract integriert ist, hat er eine Ethereum-Adresse, wie ande
 - [GitHub](https://github.com/nomiclabs/hardhat)
 - [Discord](https://discord.com/invite/TETZs2KK4k)
 
-**Truffle –** **_Entwicklungsumgebung, Test-Framework, Build-Pipeline und weitere Tools_**
-
-- [trufflesuite.com](https://www.trufflesuite.com/)
-- [Dokumente über Netzwerke und Anwendungsbereitstellung](https://www.trufflesuite.com/docs/truffle/advanced/networks-and-app-deployment)
-- [GitHub](https://github.com/trufflesuite/truffle)
-
 **thirdweb - _Einfache Bereitstellung eines beliebigen Vertrags für eine EVM-kompatible Blockchain mit einem einzigen Befehl_**
 
 - [Dokumentation](https://portal.thirdweb.com/deploy/)
+
+**Crossmint – _Web3-Entwicklungsplattform auf Unternehmensniveau, um Smart Contracts bereitzustellen, Zahlungen per Kreditkarte und über verschiedene Ketten hinweg zu ermöglichen sowie APIs zu nutzen, um NFTs zu erstellen, zu verteilen, zu verkaufen, zu speichern und zu bearbeiten._**
+
+- [crossmint.com](https://www.crossmint.com)
+- [Dokumentation](https://docs.crossmint.com)
+- [Discord](https://discord.com/invite/crossmint)
+- [Blog](https://blog.crossmint.com)
 
 ## Verwandte Tutorials {#related-tutorials}
 

@@ -53,8 +53,8 @@ Sözleşmeler her zaman ilk bayttan yürütülür. Bu kodun ilk kısmıdır:
 |      4 | MSTORE        | Boş                          |
 |      5 | PUSH1 0x04    | 0x04                         |
 |      7 | CALLDATASIZE  | CALLDATASIZE 0x04            |
-|      8 | LT            | CALLDATASIZE<4               |
-|      9 | PUSH2 0x005e  | 0x5E CALLDATASIZE<4          |
+|      8 | LT            | CALLDATASIZE\<4               |
+|      9 | PUSH2 0x005e  | 0x5E CALLDATASIZE\<4          |
 |      C | JUMPI         | Boş                          |
 
 Bu kod iki şey yapar:
@@ -119,8 +119,8 @@ Bu kodu sıçrama hedefinde takip etmeye devam edeceğiz.
 | -----: | ------------ | --------------------------------------------------------------------------- |
 |    1AC | DUP3         | Value\* 2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE         |
 |    1AD | GT           | Value\*>2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE         |
-|    1AE | ISZERO       | Value\*<=2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE        |
-|    1AF | PUSH2 0x01df | 0x01DF Value\*<=2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE |
+|    1AE | ISZERO       | Value\*\<=2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE        |
+|    1AF | PUSH2 0x01df | 0x01DF Value\*\<=2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE |
 |    1B2 | JUMPI        |                                                                             |
 
 Eğer `Value*`, 2^256-CALLVALUE-1'den küçük ya da ona eşitse sıçrarız. Bu, taşmayı engelleme mantığına benzer. Ve gerçekten de, 0x01DE ofsetinde birkaç anlamsız işlemden sonra (örneğin belleğe yazma silinmek üzere) normal davranış olan taşma algılanırsa sözleşmenin geri döndüğünü görüyoruz.
@@ -431,7 +431,7 @@ Sıçramadan sonra ne olduğunu [çoktan anladık](#the-da-code). Yani `merkleRo
 |    194 | DUP3         | 0x04 0x20 0x00 0x04 CALLDATASIZE 0x0153 0xDA                 |
 |    195 | DUP5         | CALLDATASIZE 0x04 0x20 0x00 0x04 CALLDATASIZE 0x0153 0xDA    |
 |    196 | SUB          | CALLDATASIZE-4 0x20 0x00 0x04 CALLDATASIZE 0x0153 0xDA       |
-|    197 | SLT          | CALLDATASIZE-4<32 0x00 0x04 CALLDATASIZE 0x0153 0xDA         |
+|    197 | SLT          | CALLDATASIZE-4\<32 0x00 0x04 CALLDATASIZE 0x0153 0xDA         |
 |    198 | ISZERO       | CALLDATASIZE-4>=32 0x00 0x04 CALLDATASIZE 0x0153 0xDA        |
 |    199 | PUSH2 0x01a0 | 0x01A0 CALLDATASIZE-4>=32 0x00 0x04 CALLDATASIZE 0x0153 0xDA |
 |    19C | JUMPI        | 0x00 0x04 CALLDATASIZE 0x0153 0xDA                           |
@@ -471,8 +471,8 @@ Eğer hiçbir çağrı verisi almazsa bu işlem gelen hiçbir veri olmadan geri 
 |    172 | DUP2         | 0x04 calldataload(4) 0x04 calldataload(4) 0xDA                               |
 |    173 | SLOAD        | Storage[4] calldataload(4) 0x04 calldataload(4) 0xDA                         |
 |    174 | DUP2         | calldataload(4) Storage[4] calldataload(4) 0x04 calldataload(4) 0xDA         |
-|    175 | LT           | calldataload(4)<Storage[4] calldataload(4) 0x04 calldataload(4) 0xDA         |
-|    176 | PUSH2 0x017e | 0x017EC calldataload(4)<Storage[4] calldataload(4) 0x04 calldataload(4) 0xDA |
+|    175 | LT           | calldataload(4)\<Storage[4] calldataload(4) 0x04 calldataload(4) 0xDA         |
+|    176 | PUSH2 0x017e | 0x017EC calldataload(4)\<Storage[4] calldataload(4) 0x04 calldataload(4) 0xDA |
 |    179 | JUMPI        | calldataload(4) 0x04 calldataload(4) 0xDA                                    |
 
 Eğer ilk kelime Storage[4]'ten az değilse, fonksiyon başarısız olur. Herhangi bir gelen veri olmadan geri döndürülür:
@@ -565,7 +565,7 @@ Desteklediği yöntemler:
 
 | Metod                                                                                                           | Yöntem imzası                | Atlamak için ofset |
 | --------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| [scaleAmountByPercentage(uint256,uint256)](https://www.4byte.directory/x/?bytes4_signature=0x8ffb5c97)          | 0x8ffb5c97                   | 0x0135             |
+| [scaleAmountByPercentage(uint256,uint256)](https://www.4byte.directory/signatures/?bytes4_signature=0x8ffb5c97)          | 0x8ffb5c97                   | 0x0135             |
 | [isClaimed(uint256,address)](https://www.4byte.directory/signatures/?bytes4_signature=0xd2ef0795)               | 0xd2ef0795                   | 0x0151             |
 | [claim(uint256,address,uint256,bytes32[])](https://www.4byte.directory/signatures/?bytes4_signature=0x2e7ba6ef) | 0x2e7ba6ef                   | 0x00F4             |
 | [incrementWindow()](https://www.4byte.directory/signatures/?bytes4_signature=0x338b1d31)                        | 0x338b1d31                   | 0x0110             |

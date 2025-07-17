@@ -1,8 +1,8 @@
 ---
 title: Aksi Ethereum
 description: Cara terlibat di dalam komunitas Ethereum.
-hideEditButton: true
 lang: id
+hideEditButton: true
 ---
 
 # Aksi mendatang {#events}
@@ -11,7 +11,9 @@ lang: id
 
 <UpcomingEventsList/>
 
-Ini adalah daftar tidak lengkap yang dipelihara oleh komunitas kami. Tahu aksi Ethereum mendatang untuk ditambahkan ke daftar ini? [Silahkan tambahkan](https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-events.json)!
+Ini adalah daftar tidak lengkap yang dipelihara oleh komunitas kami. Tahu aksi Ethereum mendatang untuk ditambahkan ke daftar ini? [Silakan tambahkan](https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-events.json)!
+
+<EventsOrganizerBanner className="mt-16" />
 
 ## Pertemuan Ethereum {#meetups}
 
@@ -21,4 +23,4 @@ Tidak melihat aksi yang cocok untuk Anda? Cobalah menghadiri sebuah pertemuan. P
 
 Anda tertarik dengan memulai pertemuan Anda sendiri? Lihat [Jaringan BUIDL](https://consensys.net/developers/buidlnetwork/), suatu inisiatif oleh ConsenSys untuk membantu mendukung pertemuan Ethereum.
 
-Ini adalah daftar tidak lengkap yang dibuat oleh komunitas kami. Anda dapat [menemukan lebih banyak pertemuan Ethereum di sini](https://www.meetup.com/topics/ethereum/). Tahu suatu grup pertemuan aktif untuk ditambahkan ke daftar ini? [Silahkan tambahkan](https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-meetups.json)!
+Ini adalah daftar tidak lengkap yang dibuat oleh komunitas kami. Anda dapat [menemukan lebih banyak pertemuan Ethereum di sini](https://www.meetup.com/topics/ethereum/). Ada grup pertemuan aktif yang ingin Anda tambahkan ke daftar ini? [Silahkan tambahkan](https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-meetups.json)!

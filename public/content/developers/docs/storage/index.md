@@ -38,14 +38,14 @@ Platforms with blockchain-based persistence:
 
 **Contract-based** persistence has the intuition that data cannot be replicated by every node and stored forever, and instead must be upkept with contract agreements. These are agreements made with multiple nodes that have promised to hold a piece of data for a period of time. They must be refunded or renewed whenever they run out to keep the data persisted.
 
-In most cases, instead of storing all data on-chain, the hash of where the data is located on a chain gets stored. This way, the entire chain doesn't need to scale to keep all of the data.
+In most cases, instead of storing all data onchain, the hash of where the data is located on a chain gets stored. This way, the entire chain doesn't need to scale to keep all of the data.
 
 Platforms with contract-based persistence:
 
 - [Filecoin](https://docs.filecoin.io/about-filecoin/what-is-filecoin/)
-- [Skynet](https://siasky.net/)
+- [Skynet](https://sia.tech/)
 - [Storj](https://storj.io/)
-- [0Chain](https://0chain.net/)
+- [Züs](https://zus.network/)
 - [Crust Network](https://crust.network)
 - [Swarm](https://www.ethswarm.org/)
 - [4EVERLAND](https://www.4everland.org/)
@@ -75,7 +75,7 @@ One of the most popular ways to make sure data is retained, is to use some type 
 
 Types of dStorage with a challenge mechanism:
 
-- 0Chain
+- Züs
 - Skynet
 - Arweave
 - Filecoin
@@ -88,7 +88,6 @@ There aren't great tools to measure the level of decentralization of platforms, 
 
 Decentralized tools without KYC:
 
-- 0Chain (implementing a non-KYC edition)
 - Skynet
 - Arweave
 - Filecoin
@@ -110,7 +109,7 @@ Proof-of-stake based:
 
 - Ethereum
 - Filecoin
-- 0Chain
+- Züs
 - Crust Network
 
 ## Related tools {#related-tools}
@@ -127,11 +126,11 @@ Proof-of-stake based:
 - [Documentation](https://docs.storj.io/)
 - [GitHub](https://github.com/storj/storj)
 
-**Skynet - _Skynet is a decentralized PoW chain dedicated to a decentralized web._**
+**Sia - _Harnesseses cryptography to create a trustless cloud storage marketplace, allowing buyers and sellers to transact directly._**
 
-- [Skynet.net](https://siasky.net/)
-- [Documentation](https://siasky.net/docs/)
-- [GitHub](https://github.com/SkynetLabs/)
+- [Skynet.net](https://sia.tech/)
+- [Documentation](https://docs.sia.tech/)
+- [GitHub](https://github.com/SiaFoundation/)
 
 **Filecoin - _Filecoin was created from the same team behind IPFS. It is an incentive layer on top of the IPFS ideals._**
 
@@ -145,10 +144,10 @@ Proof-of-stake based:
 - [Documentation](https://docs.arweave.org/info/)
 - [Arweave](https://github.com/ArweaveTeam/arweave/)
 
-**0chain - _0Chain is a proof-of-stake dStorage platform with sharding and blobbers._**
+**Züs - _Züs is a proof-of-stake dStorage platform with sharding and blobbers._**
 
-- [0Chain.net](https://0chain.net/)
-- [Documentation](https://docs.0chain.net/0chain/)
+- [zus.network](https://zus.network/)
+- [Documentation](https://0chaindocs.gitbook.io/zus-docs)
 - [GitHub](https://github.com/0chain/)
 
 **Crust Network - _Crust is a dStorage platform on top of the IPFS._**

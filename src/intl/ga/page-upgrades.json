@@ -1,0 +1,23 @@
+{
+  "page-upgrades-merge-infographic-el": "Stát Ethereum: idirbhearta, aipeanna, conarthaí, iarmhéideanna",
+  "page-upgrades-merge-infographic-alt-text": "Grafaic eolais ag léiriú conas a chumasc an Slabhra Beacon isteach i gciseal forghníomhaithe Ethereum le linn an aistrithe ó chruthúnas-oibre go cruthúnas-gheallta.",
+  "page-upgrades-beacon-date": "Seolta!",
+  "page-upgrades-merge-date": "Meán Fómhair 2022",
+  "page-upgrades-shards-date": "~2023",
+  "page-upgrades-pbs": "Níl sé ar tí tarlú - bí ag súil le 2024/25",
+  "page-upgrades-post-merge-banner-tutorial-ood": "Tá an rang teagaisc seo as dáta tar éis an chumaisc agus seans nach n-oibreoidh sé. Ardaigh PR le do thoil más mian leat cur leis.",
+  "page-upgrades-upgrades-guide": "Treoir maidir le huasghráduithe Ethereum",
+  "page-upgrades-upgrades-docking": "An Comhoiriúnú",
+  "page-upgrades-shard-title": "Sceardadh",
+  "page-upgrades-upgrades-beacon-chain": "An Slabhra Beacon",
+  "consensus-beaconscan-title": "beaconscan",
+  "consensus-beaconscan-in-title": "beaconcha.in",
+  "consensus-beaconcha-in-desc": "Taiscéalaí Slabhra Beacon foinse oscailte",
+  "consensus-beaconscan-desc": "Taiscéalaí Slabhra Beacon - Etherscan don tsraith chomhthoil",
+  "consensus-become-staker": "Bí i do gealltóir",
+  "consensus-become-staker-desc": "Tá Gealltóireacht beo! Más mian leat do ETH a ghealladh chun an líonra a dhaingniú, déan cinnte go bhfuil tú ar an eolas faoi na rioscaí.",
+  "consensus-explore": "Déan iniúchadh ar na sonraí",
+  "consensus-run-beacon-chain": "Rith cliant comhdhearcadh",
+  "consensus-run-beacon-chain-desc": "Ní mór do Ethereum an oiread cliant a rith agus is féidir. Cabhair leis an leas poiblí Ethereum seo!",
+  "read-more": "Léigh níos mó"
+}

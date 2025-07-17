@@ -51,7 +51,7 @@ I conti di Ethereum hanno quattro campi:
 
 ## I conti posseduti esternamente e le coppie di chiavi {#externally-owned-accounts-and-key-pairs}
 
-Un conto si compone di una coppia crittografica di chiavi: pubblica e privata. Aiutano a provare che una transazione è stata realmente firmata dal mittente e prevenire le falsificazioni. La tua chiave privata è ciò che usi per firmare le transazioni, quindi ti concede la custodia dei fondi associati al tuo conto. Non possiedi mai realmente le criptovalute, possiedi le chiavi private; i fondi sono sempre nel registro mastro di Ethereum.
+Un conto si compone di una coppia di chiavi crittografiche: pubblica e privata. Aiutano a provare che una transazione è stata realmente firmata dal mittente e prevenire le falsificazioni. La tua chiave privata è ciò che usi per firmare le transazioni, quindi ti concede la custodia dei fondi associati al tuo conto. Non possiedi mai realmente le criptovalute, possiedi le chiavi private; i fondi sono sempre nel registro mastro di Ethereum.
 
 Questo impedisce ai malintenzionati di trasmettere false transazioni perché puoi sempre verificare il mittente di una transazione.
 
@@ -59,7 +59,7 @@ Se Alice desidera inviare ether dal proprio conto a quello di Bob, deve creare u
 
 ## Creazione del conto {#account-creation}
 
-Quando vuoi creare un conto, gran parte delle librerie genererà una chiave privata casuale.
+Quando vuoi creare un conto, la maggior parte delle librerie genererà una chiave privata casuale.
 
 Una chiave privata si compone di 64 caratteri hex ed è codificabile con una password.
 
@@ -68,6 +68,12 @@ Esempio:
 `fffffffffffffffffffffffffffffffebaaedce6af48a03bbfd25e8cd036415f`
 
 La chiave pubblica è generata dalla chiave privata usando [Elliptic Curve Digital Signature Algorithm](https://wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm). Puoi ottenere un indirizzo pubblico per il tuo conto prendendo gli ultimi 20 byte dell'hash Keccak-256 della chiave pubblica e aggiungendo `0x` all'inizio.
+
+Questo significa che un Conto posseduto esternamente (EOA) ha un indirizzo di 42 caratteri (con un segmento di 20 byte che significa 40 caratteri esadecimali più il prefisso `0x`).
+
+Esempio:
+
+`0x5e97870f263700f46aa00d967821199b9bc5a120`
 
 Il seguente esempio mostra come usare uno strumento di firma chiamato [Clef](https://geth.ethereum.org/docs/tools/clef/introduction) per generare un nuovo account. Clef è uno strumento di gestione degli account e di firma che è stato messo in bundle con il client Ethereum, [Geth](https://geth.ethereum.org). Il comando `chiave del nuovo account` crea una nuova coppia di chiavi, e le salva in uno store crittografato.
 
@@ -86,9 +92,9 @@ Account generato 0x5e97870f263700f46aa00d967821199b9bc5a120
 
 [Documentazione di Geth](https://geth.ethereum.org/docs)
 
-È possibile derivare nuove chiavi pubbliche dalla tua chiave privata ma non puoi derivare una chiave privata dalle chiavi pubbliche. Questo significa che è vitale mantenere al sicuro una chiave privata, come suggerito dal nome, **PRIVATA**.
+È possibile derivare nuove chiavi pubbliche dalla tua chiave privata ma non puoi derivare una chiave privata dalle chiavi pubbliche. È essenziale mantenere le proprie chiavi private al sicuro e, come suggerito dal nome, **PRIVATE**.
 
-Necessiti di una chiave privata per firmare i messaggi e le transazioni che producono una firma. Gli altri possono quindi prendere la firma per derivare la tua chiave pubblica, provando l'autore del messaggio. Nella tua applicazione, puoi usare una libreria javascript per inviare le transazioni alla rete.
+Necessiti di una chiave privata per firmare i messaggi e le transazioni che producono una firma. Gli altri possono quindi prendere la firma per derivare la tua chiave pubblica, provando l'autore del messaggio. Nella tua applicazione puoi utilizzare una libreria Javascript per inviare transazioni alla rete.
 
 ## Conti del contratto {#contract-accounts}
 
@@ -108,7 +114,7 @@ Esiste inoltre un altro tipo di chiave su Ethereum, introdotto quando Ethereum �
 
 ## Una nota sui portafogli {#a-note-on-wallets}
 
-Un conto non è un portafoglio. Un conto è la coppia di chiavi per un conto di Ethereum di proprietà dell'utente. Un portafoglio è un'interfaccia o un'applicazione che ti consente di interagire col tuo conto di Ethereum.
+Un conto non è un portafoglio. Un portafoglio è un'interfaccia o un'applicazione che ti consente di interagire con il tuo conto di Ethereum, sia esso posseduto esternamente o di un contratto.
 
 ## Dimostrazione visiva {#a-visual-demo}
 

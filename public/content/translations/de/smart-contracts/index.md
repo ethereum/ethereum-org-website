@@ -6,11 +6,15 @@ lang: de
 
 # Einführung in Smart Contracts {#introduction-to-smart-contracts}
 
-Smart Contracts sind die grundlegenden Bausteine der Anwendungsebene von Ethereum. Dabei handelt es sich um auf der Blockchain gespeicherte Computerprogramme, die einer "wenn dies, dann das"-Logik folgen und garantiert nach den in ihrem Code definierten Regeln ausgeführt werden und nach ihrer Erstellung nicht mehr verändert werden können.
+Smart Contracts sind die grundlegenden Bausteine der Anwendungsebene von Ethereum. Sie sind Computerprogramme, die auf der [Blockchain](/glossary/#blockchain) gespeichert sind und der „Wenn dies, dann das“-Logik folgen. Sie werden garantiert nach den Regeln ausgeführt, die durch ihren Code definiert sind, die nach der Erstellung nicht mehr geändert werden können.
 
 Nick Szabo hat den Begriff „Smart Contract" geprägt. Im Jahr 1994 schrieb er eine [Einführung in das Konzept](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart.contracts.html) und 1996 eine [Untersuchung der Möglichkeiten von Smart Contracts](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart_contracts_2.html).
 
-Szabo stellte sich einen digitalen Marktplatz vor, auf dem automatische, kryptografisch gesicherte Prozesse Transaktionen und Geschäftsfunktionen ohne vertrauenswürdige Zwischenpersonen ermöglichen. Smart Contracts auf Ethereum realisieren eben diese Vision.
+Szabo stellte sich einen digitalen Marktplatz vor, auf dem automatische, [kryptografisch sichere](/glossary/#cryptography) Prozesse Transaktionen und Geschäftsfunktionen ermöglichen, ohne dass vertrauenswürdige Vermittlungsinstanzen benötigt werden. Smart Contracts auf Ethereum realisieren eben diese Vision.
+
+Dann sehen Sie sich an, wie Finematics Smart Contracts erklären:
+
+<YouTube id="pWGLtjG-F5c" />
 
 ## Vertrauen in herkömmliche Verträge {#trust-and-contracts}
 
@@ -60,7 +64,7 @@ Letztlich können Sie wie bei herkömmlichen Verträgen prüfen, was in einem Sm
 
 Smart Contracts können im Grunde alles, was auch Computerprogramme ausführen können.
 
-Sie können Berechnungen durchführen, Währungen erzeugen, Daten speichern, NFTs prägen, Mitteilungen senden und sogar Grafiken erstellen. Hier sind einige gängige reale Anwendungen:
+Sie können Berechnungen durchführen, Währungen erstellen, Daten speichern, [NFTs](/glossary/#nft) prägen, Kommunikationen senden und sogar Grafiken generieren. Hier sind einige gängige reale Anwendungen:
 
 - [Stablecoins](/stablecoins/)
 - [Einzigartige digitale Vermögenswerte erstellen und verteilen](/nft/)
@@ -68,12 +72,6 @@ Sie können Berechnungen durchführen, Währungen erzeugen, Daten speichern, NFT
 - [Dezentralisiertes Gaming](/dapps/?category=gaming#explore)
 - [Eine Versicherungspolice mit automatisierter Auszahlung](https://etherisc.com/)
 - [Ein Standard, der es Menschen ermöglicht, individuelle, interoperable Währungen zu schaffen](/developers/docs/standards/tokens/)
-
-## Eher der visuelle Lernende? {#visual-learner}
-
-Dann sehen Sie sich an, wie Finematics Smart Contracts erklären:
-
-<YouTube id="pWGLtjG-F5c" />
 
 ## Weiterführende Informationen {#further-reading}
 

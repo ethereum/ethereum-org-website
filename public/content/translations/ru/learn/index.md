@@ -5,7 +5,7 @@ lang: ru
 
 # Узнайте больше о Ethereum {#learn-about-ethereum}
 
-**Добро пожаловать на [ethereum.org/ru/learn](/ru/learn/), подборку ресурсов, которая поможет вам узнать больше о Ethereum.** На этой странице вы найдете технические **и** нетехнические статьи, руководства и другие ресурсы. Если вы совсем не знакомы с Ethereum, [предлагаем начать здесь](/ru/what-is-ethereum/).
+**Добро пожаловать на [ethereum.org/ru/learn](/learn/), подборку ресурсов, которая поможет вам узнать больше о Ethereum.** На этой странице вы найдете технические **и** нетехнические статьи, руководства и другие ресурсы. Если вы совсем не знакомы с Ethereum, [предлагаем начать здесь](/what-is-ethereum/).
 
 Отличные статьи для начала:
 
@@ -46,7 +46,7 @@ lang: ru
 
 Умный контракт – это просто код, который работает в Ethereum. Он называется контрактом, потому что этот код может контролировать ценные вещи, такие как деньги (ETH) или другие цифровые активы.
 
-- Хотите научиться разрабатывать на Ethereum с помощью умных контрактов? [ethereum.org/ru/developers](/ru/developers/)
+- Хотите научиться разрабатывать на Ethereum с помощью умных контрактов? [ethereum.org/ru/developers](/developers/)
 
 ## Доказательство работы и майнинг {#proof-of-work-and-mining}
 
@@ -58,7 +58,7 @@ lang: ru
 
 Сеть Ethereum состоит из многих узлов, каждый из которых работает на совместимом клиентском программном обеспечении. Наиболее популярны два клиента: [Geth](https://geth.ethereum.org/) (написан на Go) и [Parity](https://www.parity.io/ethereum/) (написан на Rust).
 
-- Хотите узнать, как запустить узел самостоятельно? → [ethereum.org/ru/developers](/ru/developers/#clients--running-your-own-node/)
+- Хотите узнать, как запустить узел самостоятельно? → [ethereum.org/ru/developers](/developers/#clients--running-your-own-node/)
 - [Полный перечень всех клиентов Ethereum](https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients)
 
 ## Улучшение масштабируемости Ethereum {#improving-ethereums-scalability}
@@ -91,7 +91,7 @@ lang: ru
 
 ETH 2.0 (также известный как Serenity) относится к следующему крупному обновлению базового протокола Ethereum. Он объединяет некоторые улучшения базового протокола Ethereum (уровень 1).
 
-- [8 Teams Are Sprinting to Build the Next Generation of Ethereum](https://www.coindesk.com/next-gen-buidlers-the-8-teams-working-on-ethereum-2-0) _Dec 9, 2018 - Christine Kim_
+- [8 Teams Are Sprinting to Build the Next Generation of Ethereum](https://www.coindesk.com/markets/2018/12/09/8-teams-are-sprinting-to-build-the-next-generation-of-ethereum) _Dec 9, 2018 - Christine Kim_
 - [ETH 2.0 - The Road to Scaling Ethereum - Vitalik Buterin](https://youtu.be/kCVpDrlVesA) _(Video) November, 2018 - YouTube_
 
 ## ETH 1.x {#execution-layer-upgrades}

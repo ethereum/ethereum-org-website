@@ -10,7 +10,7 @@ lang: zh-tw
 
 **先決條件：**
 
-- 如果擁有一個加密錢包，你可以關注以下使用教學：[如何：「註冊」以太坊帳戶](/guides/how-to-create-an-ethereum-account/)
+- 擁有一個加密貨幣錢包，你可以跟隨以下使用教學：[如何建立以太坊帳戶](/guides/how-to-create-an-ethereum-account/)
 - 在你的錢包中添加資金
 
 ## 1.  決定你要使用哪一個二層網路

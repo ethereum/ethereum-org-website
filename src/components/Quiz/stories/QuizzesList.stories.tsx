@@ -5,10 +5,9 @@ import type { CompletedQuizzes } from "@/lib/types"
 
 import { ethereumBasicsQuizzes } from "@/data/quizzes"
 
-import { getTranslation } from "@/storybook-utils"
-
-import { langViewportModes } from "../../../../.storybook/modes"
 import QuizzesListComponent from "../QuizzesList"
+
+import useTranslation from "@/hooks/useTranslation"
 
 /**
  * This story also renders the `QuizItem` component.
@@ -19,18 +18,6 @@ import QuizzesListComponent from "../QuizzesList"
 const meta = {
   title: "Molecules / Display Content / Quiz / QuizzesList",
   component: QuizzesListComponent,
-  parameters: {
-    chromatic: {
-      modes: {
-        ...langViewportModes,
-      },
-    },
-  },
-} satisfies Meta<typeof QuizzesListComponent>
-
-export default meta
-
-export const QuizzesList: StoryObj<typeof meta> = {
   args: {
     content: ethereumBasicsQuizzes,
     headingId: "basics",
@@ -43,12 +30,43 @@ export const QuizzesList: StoryObj<typeof meta> = {
     quizHandler: fn(),
     modalHandler: fn(),
   },
+} satisfies Meta<typeof QuizzesListComponent>
 
-  render: ({ headingId, descriptionId, ...args }) => (
-    <QuizzesListComponent
-      {...args}
-      headingId={getTranslation(headingId, "learn-quizzes")}
-      descriptionId={getTranslation(descriptionId, "learn-quizzes")}
-    />
-  ),
+export default meta
+
+export const Default: StoryObj<typeof meta> = {
+  render: (args) => {
+    const { t } = useTranslation("learn-quizzes")
+    return (
+      <QuizzesListComponent
+        {...args}
+        headingId={t(args.headingId)}
+        descriptionId={t(args.descriptionId)}
+      />
+    )
+  },
+}
+
+export const OneCompletedQuiz: StoryObj<typeof meta> = {
+  args: {
+    ...meta.args,
+    userStats: {
+      average: [100],
+      score: 4,
+      completed: {
+        ...meta.args.userStats.completed,
+        "what-is-ethereum": [true, 5],
+      },
+    },
+  },
+  render: (args) => {
+    const { t } = useTranslation("learn-quizzes")
+    return (
+      <QuizzesListComponent
+        {...args}
+        headingId={t(args.headingId)}
+        descriptionId={t(args.descriptionId)}
+      />
+    )
+  },
 }

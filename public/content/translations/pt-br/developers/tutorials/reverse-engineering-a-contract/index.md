@@ -53,8 +53,8 @@ Os contratos são sempre executados a partir do primeiro byte. Essa é a parte i
 |            4 | MSTORE             | Vazio                       |
 |            5 | PUSH1 0x04         | 0x04                        |
 |            7 | CALLDATASIZE       | CALLDATASIZE 0x04           |
-|            8 | LT                 | CALLDATASIZE<4              |
-|            9 | PUSH2 0x005e       | 0x5E CALLDATASIZE<4         |
+|            8 | LT                 | CALLDATASIZE\<4              |
+|            9 | PUSH2 0x005e       | 0x5E CALLDATASIZE\<4         |
 |            C | JUMPI              | Vazio                       |
 
 Esse código faz duas coisas:
@@ -119,8 +119,8 @@ O `NOT` é bit a bit, portanto, ele inverte o valor de cada bit no valor da cham
 | ------------:| ------------------ | ------------------------------------------------------------------------------- |
 |          1AC | DUP3               | Value\* 2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE         |
 |          1AD | GT                 | Value\*>2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE         |
-|          1AE | ISZERO             | Value\*<=2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE        |
-|          1AF | PUSH2 0x01df       | 0x01DF Value\*<=2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE |
+|          1AE | ISZERO             | Value\*\<=2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE        |
+|          1AF | PUSH2 0x01df       | 0x01DF Value\*\<=2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE |
 |          1B2 | JUMPI              |                                                                                 |
 
 Nós pulamos se `Value*` (o valor) for menor que 2^256-CALLVALUE-1 ou igual a ele. Isso parece lógico para evitar vazamento (overflow). E, de fato, vemos que depois de algumas operações sem sentido (escrever na memória que está prestes a ser excluída, por exemplo) no deslocamento 0x01DE, o contrato é revertido se o vazamento for detectado, o que é um comportamento normal.
@@ -431,7 +431,7 @@ O código nos deslocamentos 0x138-0x143 é idêntico ao que vimos em 0x103-0x10E
 |          194 | DUP3               | 0x04 0x20 0x00 0x04 CALLDATASIZE 0x0153 0xDA                 |
 |          195 | DUP5               | CALLDATASIZE 0x04 0x20 0x00 0x04 CALLDATASIZE 0x0153 0xDA    |
 |          196 | SUB                | CALLDATASIZE-4 0x20 0x00 0x04 CALLDATASIZE 0x0153 0xDA       |
-|          197 | SLT                | CALLDATASIZE-4<32 0x00 0x04 CALLDATASIZE 0x0153 0xDA         |
+|          197 | SLT                | CALLDATASIZE-4\<32 0x00 0x04 CALLDATASIZE 0x0153 0xDA         |
 |          198 | ISZERO             | CALLDATASIZE-4>=32 0x00 0x04 CALLDATASIZE 0x0153 0xDA        |
 |          199 | PUSH2 0x01a0       | 0x01A0 CALLDATASIZE-4>=32 0x00 0x04 CALLDATASIZE 0x0153 0xDA |
 |          19C | JUMPI              | 0x00 0x04 CALLDATASIZE 0x0153 0xDA                           |
@@ -471,8 +471,8 @@ Vamos ver o que acontece se a função _obtiver_ os dados de chamada necessário
 |          172 | DUP2               | 0x04 calldataload(4) 0x04 calldataload(4) 0xDA                               |
 |          173 | SLOAD              | Storage[4] calldataload(4) 0x04 calldataload(4) 0xDA                         |
 |          174 | DUP2               | calldataload(4) Storage[4] calldataload(4) 0x04 calldataload(4) 0xDA         |
-|          175 | LT                 | calldataload(4)<Storage[4] calldataload(4) 0x04 calldataload(4) 0xDA         |
-|          176 | PUSH2 0x017e       | 0x017EC calldataload(4)<Storage[4] calldataload(4) 0x04 calldataload(4) 0xDA |
+|          175 | LT                 | calldataload(4)\<Storage[4] calldataload(4) 0x04 calldataload(4) 0xDA         |
+|          176 | PUSH2 0x017e       | 0x017EC calldataload(4)\<Storage[4] calldataload(4) 0x04 calldataload(4) 0xDA |
 |          179 | JUMPI              | calldataload(4) 0x04 calldataload(4) 0xDA                                    |
 
 Se a primeira palavra não for menor que Armazenamento[4], a função falhará. Ele reverte sem nenhum valor retornado:
@@ -565,7 +565,7 @@ E os métodos que ele suporta são:
 
 | Método                                                                                                          | Assinatura do método         | Deslocamento por salto |
 | --------------------------------------------------------------------------------------------------------------- | ---------------------------- | ---------------------- |
-| [scaleAmountByPercentage(uint256,uint256)](https://www.4byte.directory/x/?bytes4_signature=0x8ffb5c97)          | 0x8ffb5c97                   | 0x0135                 |
+| [scaleAmountByPercentage(uint256,uint256)](https://www.4byte.directory/signatures/?bytes4_signature=0x8ffb5c97)          | 0x8ffb5c97                   | 0x0135                 |
 | [isClaimed(uint256,address)](https://www.4byte.directory/signatures/?bytes4_signature=0xd2ef0795)               | 0xd2ef0795                   | 0x0151                 |
 | [claim(uint256,address,uint256,bytes32[])](https://www.4byte.directory/signatures/?bytes4_signature=0x2e7ba6ef) | 0x2e7ba6ef                   | 0x00F4                 |
 | [incrementWindow()](https://www.4byte.directory/signatures/?bytes4_signature=0x338b1d31)                        | 0x338b1d31                   | 0x0110                 |

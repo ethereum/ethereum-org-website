@@ -4,7 +4,7 @@ description: Die grundlegenden Standards, die wir für alle Bereiche von ethereu
 lang: de
 ---
 
-# Verhaltenskodex {#conduct-intro}
+# Verhaltenskodex {#code-of-conduct}
 
 ## Mission {#mission}
 

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
-import type { IconType } from "react-icons/lib"
-import { MdInfoOutline, MdWarning } from "react-icons/md"
-import { chakra, Flex, HStack, Icon, Text } from "@chakra-ui/react"
+import { AlertTriangle, Info, type LucideIcon } from "lucide-react"
+
+import { Flex } from "@/components/ui/flex"
 
 import { NULL_VALUE } from "@/lib/constants"
 
@@ -9,7 +9,7 @@ import Tooltip, { type TooltipProps } from "../Tooltip"
 
 const initialContent = {
   contentValue: NULL_VALUE,
-  tooltipIcon: MdInfoOutline,
+  tooltipIcon: Info,
 }
 
 export type StatProps = {
@@ -22,14 +22,14 @@ export type StatProps = {
 const Stat = ({ tooltipProps, value, label, isError }: StatProps) => {
   const [content, setContent] = useState<{
     contentValue: string | JSX.Element
-    tooltipIcon: IconType
+    tooltipIcon: LucideIcon
   }>(initialContent)
 
   useEffect(() => {
     if (isError) {
       return setContent({
         contentValue: NULL_VALUE,
-        tooltipIcon: MdWarning,
+        tooltipIcon: AlertTriangle,
       })
     }
 
@@ -39,20 +39,18 @@ const Stat = ({ tooltipProps, value, label, isError }: StatProps) => {
   }, [isError, value])
 
   return (
-    <Flex flexDirection="column-reverse">
-      <HStack lineHeight="initial" spacing="0.5" color="body.medium">
-        <Text as="span">{label}</Text>
+    <Flex className="flex-col-reverse">
+      <div className="flex items-center space-x-2 leading-none text-body-medium">
+        <span>{label}</span>
         {!!tooltipProps && (
           <Tooltip {...tooltipProps}>
-            <chakra.button display="flex" color="inherit">
-              <Icon as={content.tooltipIcon} />
-            </chakra.button>
+            <button className="flex text-inherit">
+              <content.tooltipIcon className="h-4 w-4" />
+            </button>
           </Tooltip>
         )}
-      </HStack>
-      <Text as="span" size="5xl" fontWeight="bold">
-        {content.contentValue}
-      </Text>
+      </div>
+      <span className="text-5xl font-bold">{content.contentValue}</span>
     </Flex>
   )
 }

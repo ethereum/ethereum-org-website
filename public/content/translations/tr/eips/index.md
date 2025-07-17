@@ -54,9 +54,17 @@ Tabloyla birlikte tam standardizasyon süreci [EIP-1](https://eips.ethereum.org/
 
 EIP'ler ile alakalı daha fazlasını okumayayla ilgiliyseniz [EIP'ler web sitesini](https://eips.ethereum.org/) ve [EIP-1](https://eips.ethereum.org/EIPS/eip-1)'i ziyaret edin. İşte bazı yararlı bağlantılar:
 
-- [Her bir EIP'nin listesi](https://eips.ethereum.org/all)
+- [Tüm Ethereum İyileştirme Önerilerinin Listesi](https://eips.ethereum.org/all)
 - [Tüm EIP türlerinin açıklaması](https://eips.ethereum.org/EIPS/eip-1#eip-types)
 - [Tüm EIP durumlarının açıklaması](https://eips.ethereum.org/EIPS/eip-1#eip-process)
+
+### Topluluk eğitim projeleri {#community-projects}
+
+- [PEEPanEIP](https://www.youtube.com/playlist?list=PL4cwHXAawZxqu0PKKyMzG_3BJV_xZTi1F) — *PEEPanEIP Ethereum İyileştirme Önerileri (EIP'ler) ve gelecek yükseltmelerdeki anahtar özelliklerin ele alındığı, eğitici bir video serisidir.*
+- [Meraklılar için EIP'ler](https://ethereum2077.substack.com/t/eip-research) — *Meraklılar için EIP'ler, okuyucuları eğitmek ve Ethereum protokolünde önerilen değişiklikler etrafında mutabakat oluşturmak için temel EIP'ler ve uygulama/altyapı katmanı EIP'leri (ERC'ler) de dahil olmak üzere çeşitli Ethereum İyileştirme Önerilerine (EIP'ler) kapsamlı, ELI5 tarzı genel bakışlar sunar.*
+- [EIPs.wtf](https://www.eips.wtf/) — *EIPs.wtf, Ethereum İyileştirme Önerilerine (EIP'ler) dair durumlarını, uygulanma detaylarını, ilgili çekme isteklerini ve topluluk geribildirimlerini içeren ekstra bilgiler sunar.*
+- [EIP.Fun](https://eipfun.substack.com/) — *EIP.Fun, Ethereum İyileştirme Önerilerine (EIP'ler) dair son haberleri, EIP toplantılarına dair güncellemeleri ve daha fazlasını okuyuculara sunar.*
+- [EIP'lere İlişkin Ayrıntılı Bilgiler](https://eipsinsight.com/) — *EIP'lere İlişkin Ayrıntılı Bilgiler, Ethereum İyileştirme Önerilerinin (EIP'ler) süreçlerinin son durumlarını ve ilgili istatistikleri, farklı kaynaklardan toplayarak okuyuculara sunar.*
 
 ## Katılın {#participate}
 

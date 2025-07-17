@@ -3,9 +3,9 @@ import { Meta, StoryObj } from "@storybook/react"
 
 import { cn } from "@/lib/utils/cn"
 
-import LinkComponent from "../../Link"
 import Translation from "../../Translation"
 import { Center, Flex, Stack, VStack } from "../flex"
+import LinkComponent from "../Link"
 
 const meta = {
   title: "Atoms / Typography / Text",

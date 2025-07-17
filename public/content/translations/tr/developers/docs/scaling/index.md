@@ -9,7 +9,7 @@ sidebarDepth: 3
 
 Ethereum kullanan kişi sayısı arttıkça blok zinciri belirli kapasite sınırlamalarına ulaştı. Bu durum, ağı kullanma maliyetini artırarak "ölçeklendirme çözümlerine" yönelik bir ihtiyaç doğurdu. Benzer hedeflere ulaşmak için farklı yaklaşımlar benimseyen, araştırılan, test edilen ve uygulanan çok sayıda çözüm vardır.
 
-Ölçeklenebilirliğin ana hedefi, merkeziyetsizlikten veya güvenlikten ödün vermeden işlem hızını (daha hızlı kesinlik) ve işlem verimini (saniye başına yüksek işlem) artırmaktır ([Ethereum'un vizyonu](/roadmap/vision/) hakkında daha fazla bilgi). Katman 1 Ethereum blok zincirinde yüksek talep, daha yavaş işlemlere ve elverişsiz [gaz fiyatlarına](/developers/docs/gas/) yol açar. Ethereum'un anlamlı ve toplu olarak benimsenmesi için ağ kapasitesini hız ve verim açısından artırmak çok önemlidir.
+Ölçeklenebilirliğin ana hedefi, merkeziyetsizlikten veya güvenlikten ödün vermeden işlem hızını (daha hızlı kesinlik) ve işlem verimini (saniye başına daha fazla sayıda işlem) artırmaktır ([Ethereum'un vizyonu](/roadmap/vision/) hakkında daha fazla bilgi). Katman 1 Ethereum blok zincirinde yüksek talep, daha yavaş işlemlere ve elverişsiz [gaz fiyatlarına](/developers/docs/gas/) yol açar. Ethereum'un anlamlı ve toplu olarak benimsenmesi için ağ kapasitesini hız ve verim açısından artırmak çok önemlidir.
 
 Hız ve verim önemli olsa da, bu hedefleri mümkün kılan ölçeklendirme çözümlerinin merkeziyetsiz ve güvenli kalması çok önemlidir. Düğüm operatörleri için giriş engelini düşük tutmak, merkezi ve güvenli olmayan bilgi işlem gücüne doğru ilerlemeyi önlemede kritik önem arz eder.
 
@@ -106,8 +106,9 @@ _Videodaki açıklamanın "Katman 2" terimini tüm zincir dışı ölçeklendirm
 - [Toplamalar için Tamamlanmamış Bir Kılavuz](https://vitalik.eth.limo/general/2021/01/05/rollup.html)
 - [Ethereum destekli ZK-Toplamaları: Dünya Liderleri](https://hackmd.io/@canti/rkUT0BD8K)
 - [İyimser Toplamalar ile ZK Toplamalarının Karşılaştırması](https://limechain.tech/blog/optimistic-rollups-vs-zk-rollups/)
-- [Sıfır Bilgi Blok Zinciri Ölçeklendirilebilirliği](https://ethworks.io/assets/download/zero-knowledge-blockchain-scaling-ethworks.pdf)
+- [Sıfır Bilgi Blok Zinciri Ölçeklendirilebilirliği](https://www.archblock.com/poland/assets/download/zero-knowledge-blockchain-scaling-ethworks.pdf)
 - [Toplamalar + veri parçalarının, yüksek ölçeklenebilirlik için tek sürdürülebilir çözüm olma nedeni](https://polynya.medium.com/why-rollups-data-shards-are-the-only-sustainable-solution-for-high-scalability-c9aabd6fbb48)
 - [Hangi tür Katman 3'ler kulağa mantıklı geliyor?](https://vitalik.eth.limo/general/2022/09/17/layer_3.html)
+- [Veri Kullanılabilirliği veya: Toplamalar Endişelenmeyi Bırakıp Ethereum'u Sevmeyi Nasıl Öğrendi?](https://ethereum2077.substack.com/p/data-availability-in-ethereum-rollups)
 
 _Size yardımcı olan bir topluluk kaynağı biliyor musunuz? Bu sayfayı düzenleyin ve ekleyin!_

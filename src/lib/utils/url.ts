@@ -1,4 +1,4 @@
-import { join } from "path"
+import { extname, join } from "path"
 
 import {
   DEFAULT_LOCALE,
@@ -10,9 +10,11 @@ import {
 export const isDiscordInvite = (href: string): boolean =>
   href.includes(DISCORD_PATH) && !href.includes("http")
 
+export const isMailto = (href: string): boolean => href.includes("mailto:")
+
 export const isExternal = (href: string): boolean =>
   href.includes("http") ||
-  href.includes("mailto:") ||
+  isMailto(href) ||
   href.includes("ipfs") ||
   isDiscordInvite(href)
 
@@ -21,6 +23,8 @@ export const isGlossary = (href: string): boolean =>
 
 export const isPdf = (href: string): boolean => href.endsWith(".pdf")
 
+export const isFile = (href: string): boolean => extname(href).length > 0
+
 export const sanitizeHitUrl = (url: string): string =>
   url
     .replace(/^https?:\/\/[^/]+(?=\/)/, "")
@@ -28,16 +32,17 @@ export const sanitizeHitUrl = (url: string): string =>
     .replace("#content", "")
     .replace("#top", "")
 
+// remove any query params or hashes from the path
+export const cleanPath = (path: string): string => path.replace(/[$#].+$/, "")
+
 export const isHrefActive = (
   href: string,
   pathname: string,
   isPartiallyActive?: boolean
-) => (isPartiallyActive ? pathname.startsWith(href) : pathname === href)
+) =>
+  isPartiallyActive ? pathname.startsWith(href) : cleanPath(pathname) === href
 
 export const isHash = (href: string): boolean => href.startsWith("#")
-
-// remove any query params or hashes from the path
-export const cleanPath = (path: string): string => path.replace(/[$#].+$/, "")
 
 export const addSlashes = (href: string): string => {
   if (isExternal(href)) return href
@@ -46,3 +51,8 @@ export const addSlashes = (href: string): string => {
 
 export const getFullUrl = (locale: string | undefined, path: string) =>
   addSlashes(new URL(join(locale || DEFAULT_LOCALE, path), SITE_URL).href)
+
+// Remove trailing slash from slug and add leading slash
+export const normalizeSlug = (slug: string) => {
+  return `/${slug.replace(/^\/+|\/+$/g, "")}`
+}

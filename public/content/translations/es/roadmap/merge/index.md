@@ -4,11 +4,11 @@ description: Conozca más sobre La Fusión y sobre cuándo la red principal de E
 lang: es
 template: upgrade
 image: /images/upgrades/merge.png
-alt: 
-summaryPoint1: La red principal de Ethereum usa prueba de participación, pero esto no fue siempre el caso.
-summaryPoint2: La actualización del mecanismo original de prueba de trabajo a prueba de participación se denominó «La fusión».
-summaryPoint3: La Fusión se refiere a la fusión original de la red principal de Ethereum con una cadena de bloques de prueba de participación independiente llamada la cadena de bloques, que ahora existe como una cadena.
-summaryPoint4: La Fusión reduce el consumo de energía de Ethereum en un ~99.95%.
+alt:
+summaryPoint1: La Red Principal de Ethereum usa prueba de participación, pero este no fue siempre el caso.
+summaryPoint2: La actualización del mecanismo original de prueba de trabajo a prueba de participación se denominó "La Fusión".
+summaryPoint3: La Fusión se refiere a la fusión de la red principal original de Ethereum con una cadena de bloques de prueba de participación independiente llamada Cadena de Baliza, que ahora existe como una sola cadena.
+summaryPoint4: La Fusión redujo el consumo de energía de Ethereum en un ~99,95%.
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
@@ -92,7 +92,7 @@ title="Desarrolladores de DApps y contratos inteligentes"
 contentPreview="The Merge was designed to have minimal impact on smart contract and dapp developers."
 id="developers">
 
-La Fusión vino con cambios en el consenso, que también incluye cambios relacionados con:<
+La Fusión vino con cambios en el consenso, que también incluye cambios relacionados con:
 
 <ul>
   <li>estructura de bloque</li>
@@ -108,7 +108,7 @@ Para obtener más información, eche un vistazo a esta publicación en el blog d
 
 ## La Fusión y el consumo de energía {#merge-and-energy}
 
-La Fusión pone fin a la prueba de trabajo de Ethereum, dando paso al inicio de una era con un Ethereum más sostenible y ecológico. El consumo de energía de Ethereum se redujo en un 99,95% aproximadamente, haciendo de Ethereum una cadena de bloques ecológica. Más información sobre [el consumo de energía de Ethereum](/energy-consumption/).
+La Fusión marcó el final de la prueba de trabajo para Ethereum y dio inicio a la era de un Ethereum más sostenible y ecológico. El consumo de energía de Ethereum se redujo en un 99,95% aproximadamente, haciendo de Ethereum una cadena de bloques ecológica. Más información sobre [el consumo de energía de Ethereum](/energy-consumption/).
 
 ## La Fusión y la fragmentación {#merge-and-scaling}
 

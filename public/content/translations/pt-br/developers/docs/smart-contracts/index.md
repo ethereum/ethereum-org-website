@@ -87,7 +87,7 @@ Saiba mais sobre a [composição do contrato inteligente](/developers/docs/smart
 
 Os contratos inteligentes sozinhos não podem obter informações sobre eventos do "mundo real", porque não podem recuperar dados de fontes off-chain. Isso significa que eles não podem responder a eventos no mundo real. Isto é, por concepção. A sua concepção é a de que as informações externas podem pôr em causa o consenso, que é importante para a segurança e a descentralização.
 
-No entanto, é importante que aplicações blockchain possam usar dados off-chain. A solução são os [oráculos](/developers/docs/oracles/), que são instrumentos que ingerem dados off-chain e os disponibilizam para contratos inteligentes.
+No entanto, é importante que aplicações blockchain possam usar dados off-chain. A solução são os [oráculos](/developers/docs/oracles/), instrumentos que ingerem dados off-chain e os disponibilizam para contratos inteligentes.
 
 Outra limitação de contratos inteligentes é o tamanho máximo do contrato. Um contrato inteligente pode ser um máximo de 24KB ou ficará sem gás. Isso pode ser contornado usando [O Padrão de Diamante](https://eips.ethereum.org/EIPS/eip-2535).
 
@@ -108,3 +108,4 @@ Os contratos multisig (com múltiplas assinaturas) são contas de contrato intel
 - [Coinbase: O que é um contrato inteligente?](https://www.coinbase.com/learn/crypto-basics/what-is-a-smart-contract)
 - [Chainlink: O que é um contrato inteligente?](https://chain.link/education/smart-contracts)
 - [Vídeo: Simplesmente Explicado - Contratos Inteligentes](https://youtu.be/ZE2HxTmxfrI)
+- [Cyfrin Updraft: Plataforma de aprendizado e auditoria Web3](https://updraft.cyfrin.io)

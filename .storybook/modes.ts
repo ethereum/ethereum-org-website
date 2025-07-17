@@ -1,4 +1,6 @@
-import { baseLocales } from "./i18next"
+import { pickBy } from "lodash"
+
+import { baseLocales } from "./next-intl"
 import { breakpointSet } from "./preview"
 
 export const viewportModes = breakpointSet.reduce<{
@@ -12,7 +14,9 @@ export const viewportModes = breakpointSet.reduce<{
   }
 }, {})
 
-export const langModes = Object.keys(baseLocales).reduce<{
+const localesToTest = ["en", "fa"]
+const locales = pickBy(baseLocales, (_, key) => localesToTest.includes(key))
+export const langModes = Object.keys(locales).reduce<{
   [locale: string]: { locale: string }
 }>((arr, curr) => {
   return {

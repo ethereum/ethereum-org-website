@@ -53,6 +53,13 @@ lang: ja
 
 - [ドキュメント](https://portal.thirdweb.com/deploy/)
 
+**Crossmint - _エンタープライズグレードのweb3開発プラットフォームで、スマートコントラクトのデプロイ、クレジットカードの有効化、クロスチェーン支払いが可能です。また、NFTの作成、配布、売却、保存、編集では、APIが使用可能です。_**
+
+- [crossmint.com](https://www.crossmint.com)
+- [ドキュメント](https://docs.crossmint.com)
+- [Discord](https://discord.com/invite/crossmint)
+- [ブログ](https://blog.crossmint.com)
+
 ## 関連チュートリアル {#related-tutorials}
 
 - [最初のスマートコントラクトのデプロイ](/developers/tutorials/deploying-your-first-smart-contract/) _- イーサリアムテストネットワークに最初のスマートコントラクトをデプロイする方法の紹介_

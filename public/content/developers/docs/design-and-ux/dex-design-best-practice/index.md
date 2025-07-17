@@ -5,7 +5,7 @@ lang: en
 ---
 
 Since the launch of Uniswap in 2018, there have been hundreds of decentralized exchanges launched across dozens of different chains.
-Many of these have introduced new elements or added their own twist, but the interface has remained generally the same.
+Many of these introduced new elements or added their own twist, but the interface has remained generally the same.
 
 One reason for this is [Jakob’s Law](https://lawsofux.com/jakobs-law/):
 
@@ -177,7 +177,7 @@ The law of proximity states that items that are close together are perceived as 
 
 Ultimately, there are pluses and minuses for both options, but it is interesting how the trend appears to be towards token on the right.
 
-# Button behavior {#button-behavior}
+## Button behavior {#button-behavior}
 
 Don’t have a separate button for Approve. Also don’t have a separate click for Approve. The user wants to Swap, so just say “swap” on the button and initiate the approval as the first step. A modal can show progress with a stepper, or a simple “tx 1 of 2 - approving” notification.
 
@@ -185,7 +185,7 @@ Don’t have a separate button for Approve. Also don’t have a separate click f
 
 ![A UI with one button that says approve](./15.png)
 
-## Button as contextual help {#button-as-contextual-help}
+### Button as contextual help {#button-as-contextual-help}
 
 The button can do double duty as an alert!
 

@@ -1,19 +1,5 @@
-import { useMemo } from "react"
-import { useTranslation } from "next-i18next"
-import {
-  Box,
-  chakra,
-  ChakraProps,
-  Circle,
-  HStack,
-  Stack,
-  Text,
-  useRadio,
-  useRadioGroup,
-  UseRadioProps,
-  useToken,
-  VisuallyHidden,
-} from "@chakra-ui/react"
+import { useMemo, useState } from "react"
+import * as RadioGroup from "@radix-ui/react-radio-group"
 
 import type {
   AnswerChoice,
@@ -22,7 +8,13 @@ import type {
   TranslationKey,
 } from "@/lib/types"
 
+import { Center, HStack, Stack } from "@/components/ui/flex"
+
+import { cn } from "@/lib/utils/cn"
+
 import type { AnswerStatus } from "./useQuizWidget"
+
+import useTranslation from "@/hooks/useTranslation"
 
 type QuizRadioGroupProps = {
   questions: Question[]
@@ -39,20 +31,15 @@ export const QuizRadioGroup = ({
 }: QuizRadioGroupProps) => {
   const { t } = useTranslation("learn-quizzes")
 
+  const [selectedAnswer, setSelectedAnswer] =
+    useState<RadioGroup.RadioGroupProps["value"]>("")
+
   const handleSelection = (answerId: AnswerKey) => {
+    setSelectedAnswer(answerId)
     const isCorrect =
       answerId === questions[currentQuestionIndex].correctAnswerId
     setCurrentQuestionAnswerChoice({ answerId, isCorrect })
   }
-
-  const {
-    getRadioProps,
-    getRootProps,
-    value: selectedAnswer,
-  } = useRadioGroup({
-    name: `quiz-question-${currentQuestionIndex}`,
-    onChange: handleSelection,
-  })
 
   const {
     answers,
@@ -74,58 +61,50 @@ export const QuizRadioGroup = ({
   )
 
   return (
-    <Box as="fieldset" w="full" {...getRootProps()}>
-      <Text
-        as="legend"
-        textAlign="center"
-        fontWeight="700"
-        size="2xl"
-        w="full"
-        mb="6"
-      >
-        <VisuallyHidden>
+    <fieldset className="w-full">
+      <legend className="mb-6 w-full text-center text-2xl font-bold">
+        <span className="sr-only">
           {t("question-number", { number: currentQuestionIndex + 1 })}
-        </VisuallyHidden>
+        </span>
         {t(prompt)}
-      </Text>
-
-      <Box
-        px={{ base: "0", md: "12", lg: "16" }}
+      </legend>
+      <RadioGroup.Root
+        className="md:px-12 lg:px-16"
         data-testid="question-group"
         id={questionId}
+        value={selectedAnswer}
+        onValueChange={handleSelection}
       >
-        <Stack spacing="4">
+        <Stack className="gap-4">
           {answers.map(({ id, label }, idx) => {
             const display =
-              !answerStatus || id === selectedAnswer ? "inline-flex" : "none"
-
+              !answerStatus || id === selectedAnswer ? "inline-flex" : "hidden"
             return (
-              <Box key={id} display={display}>
+              <div key={id} className={display}>
                 <CustomRadio
                   label={t(label)}
                   isAnswerVisible={!!answerStatus}
                   isSelectedCorrect={isSelectedCorrect}
                   index={idx}
-                  {...getRadioProps({ value: id })}
+                  value={id}
                 />
-              </Box>
+              </div>
             )
           })}
         </Stack>
-
         {!!answerStatus && (
-          <Stack spacing="2" mt="6">
-            <Text fontWeight="bold">{t("explanation")}</Text>
+          <Stack className="mt-6 gap-2">
+            <p className="font-bold">{t("explanation")}</p>
 
-            <Text m={0}>{t(explanation)}</Text>
+            <p className="m-0">{t(explanation)}</p>
           </Stack>
         )}
-      </Box>
-    </Box>
+      </RadioGroup.Root>
+    </fieldset>
   )
 }
 
-type CustomRadioProps = UseRadioProps & {
+type CustomRadioProps = RadioGroup.RadioGroupItemProps & {
   index: number
   isAnswerVisible: boolean
   isSelectedCorrect: boolean
@@ -133,81 +112,46 @@ type CustomRadioProps = UseRadioProps & {
 }
 
 const CustomRadio = ({
-  isAnswerVisible,
   index,
+  isAnswerVisible,
   isSelectedCorrect,
   label,
-  ...radioProps
+  ...itemProps
 }: CustomRadioProps) => {
-  const INPUT_ID = `quiz-question-answer-${index}`
-  const { state, getInputProps, getRadioProps, getLabelProps } = useRadio({
-    ...radioProps,
-    id: INPUT_ID,
-  })
-
-  const buttonBg = useMemo<string>(() => {
-    if (!state.isChecked) return "background.highlight"
-    if (!isAnswerVisible) return "primary.base"
-    if (!isSelectedCorrect) return "error.base"
-    return "success.base"
-  }, [state.isChecked, isAnswerVisible, isSelectedCorrect])
-
-  const primaryBaseColor = useToken("colors", "primary.base")
-
-  const getAnswerColor = (): ChakraProps["bg"] =>
-    isSelectedCorrect ? "success.base" : "error.base"
-
-  const controlFocusProps: ChakraProps = {
-    bg: isAnswerVisible ? "white" : "primary.pressed",
-    color: isAnswerVisible ? getAnswerColor() : undefined,
-  }
-
-  const radioInputProps = getInputProps({ id: INPUT_ID })
-
   return (
-    <>
-      <chakra.label
-        // `htmlFor` for proper accessibility with label and input
-        {...getLabelProps({ htmlFor: INPUT_ID })}
-        cursor="pointer"
-        w="full"
-      >
-        <HStack
-          data-testid="quiz-question-answer"
-          id={radioInputProps.value}
-          {...getRadioProps()}
-          // Override: `aria-hidden` is marked true in `getRadioProps`
-          aria-hidden="false"
-          spacing="2"
-          w="full"
-          p="2"
-          color="text"
-          bg={buttonBg}
-          borderRadius="base"
-          _hover={{
-            outline: isAnswerVisible ? "none" : `1px solid ${primaryBaseColor}`,
-          }}
-          _checked={{
-            bg: !isAnswerVisible ? "primary.base" : getAnswerColor(),
-            color: "white",
-          }}
-          data-group
+    <HStack
+      id={itemProps.value}
+      data-testid="quiz-question-answer"
+      data-group
+      data-answer-visible={isAnswerVisible || undefined}
+      data-selected-correct={isSelectedCorrect || undefined}
+      className={cn(
+        "w-full cursor-pointer gap-2 rounded bg-background-highlight p-2 text-start text-body data-[answer-visible]:cursor-default",
+        "hover:outline hover:outline-1 hover:outline-primary hover:data-[answer-visible]:outline-none",
+        "data-[state='checked']:data-[answer-visible]:bg-error",
+        "data-[state='checked']:data-[answer-visible]:data-[selected-correct]:bg-success",
+        "data-[state='checked']:text-white",
+        "data-[state='checked']:not-[data-answer-visible]:bg-primary"
+      )}
+      asChild
+    >
+      <RadioGroup.Item {...itemProps}>
+        <Center
+          className={cn(
+            "size-6 flex-shrink-0 flex-grow-0 rounded-full bg-disabled text-white",
+            "[:is([data-state='checked'],:hover)_>_&]:text-white",
+            "[:is([data-state='checked'],:hover)_>_&]:bg-primary-action",
+            "[:is([data-state='checked'],:hover)[data-answer-visible]_>_&]:bg-white",
+            "[:is([data-state='checked'],:hover)[data-answer-visible]_>_&]:text-error",
+            "[:is([data-state='checked'],:hover)[data-answer-visible][data-selected-correct]_>_&]:text-success"
+          )}
         >
-          <Circle
-            size="6"
-            bg="disabled"
-            color="white"
-            _groupHover={controlFocusProps}
-            _groupChecked={controlFocusProps}
-          >
-            <Text fontWeight="700" fontSize="lg" lineHeight="none">
-              {String.fromCharCode(97 + index).toUpperCase()}
-            </Text>
-          </Circle>
-          <span>{label}</span>
-        </HStack>
-      </chakra.label>
-      <input {...radioInputProps} />
-    </>
+          <p className="text-lg font-bold leading-none">
+            {String.fromCharCode(97 + index).toUpperCase()}
+          </p>
+        </Center>
+        <span className="w-full">{label}</span>
+      </RadioGroup.Item>
+    </HStack>
   )
 }

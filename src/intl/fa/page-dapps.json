@@ -41,6 +41,7 @@
   "page-dapps-choose-category": "انتخاب دسته",
   "page-dapps-category-social": "رسانه‌های اجتماعی",
   "page-dapps-category-content": "محتوا",
+  "page-dapps-category-community": "جامعه",
   "page-dapps-category-messaging": "پیام‌رسانی",
   "page-dapps-category-identity": "هویت",
   "page-dapps-collectibles-benefits-1-description": "زمانی که یک اثر هنری روی اتریوم به صورت توکن در بیاید، وضعیت مالکیت اثر به صورت همگانی قابل مشاهده خواهد بود. شما می‌توانید سیر گردش اثر هنری از زمان خلق تا رسیدن به مالک کنونی را ردگیری کنید. این موضوع جلوی جعل را می‌گیرد.",
@@ -95,6 +96,7 @@
   "page-dapps-dapp-description-loopring": "پلتفرم تجاری همتابه‌همتا که برای تسریع در امور ساخته شده است.",
   "page-dapps-dapp-description-marble-cards": "بر اساس آدرس‌های اینترتی، کارت‌های دیجیتالی منحصر‌به‌فردی را ایجاد کرده و به معامله بگذارید.",
   "page-dapps-dapp-description-matcha": "برای کمک به شما در یافتن بهترین قیمت‌ها، مبادلات بسیاری را جستجو می‌کند.",
+  "page-dapps-dapp-description-meeds": "جامعه Web3 با پاداش‌ عادلانه و شفاف به مشارکت‌های مهم، پایگاهیست برای عصر فعالیت‌های غیرمتمرکز.",
   "page-dapps-dapp-description-mirror": "پلتفرم قدرتمند انتشار موازی، که بر روی وب 3 برای وب 3 ساخته شده است و مرزهای نگارش آنلاین را جابجا می‌کند",
   "page-dapps-dapp-description-multichain": "مسیریاب نهایی برای وب 3. این زیرساخت برای تعاملات تصادفی بین زنجیره‌ای توسعه یافته است.",
   "page-dapps-dapp-description-nifty-gateway": "آثار هنرمندان، ورزشکاران، برندها و سازندگان را از روی زنجیره خریداری کنید.",
@@ -113,6 +115,7 @@
   "page-dapps-dapp-description-rotki": "پیگیری پورتفولیو با منبع آزاد، تجزیه و تحلیل، حسابداری و ابزار اظهار مالیاتی که به حریم خصوصی شما احترام می‌گذارد.",
   "page-dapps-dapp-description-krystal": "یک پلتفرم جامع برای دسترسی به تمام خدمات دیفای محبوبتان.",
   "page-dapps-dapp-description-rarible": "به ایجاد، خرید و فروش کالاهای توکن‌شده بپردازید.",
+  "page-dapps-dapp-description-request-finance": "مجموعه‌ای از ابزارهای مالی برای فاکتورهای رمزارزی، فیش حقوقی و هزینه‌ها.",
   "page-dapps-dapp-description-rubic": "تجمیع کننده فناوری Cross-Chain برای کاربران و برنامه‌های غیرمتمرکز (dApp).",
   "page-dapps-dapp-description-sablier": "جریان‌سازی پول در آن واحد.",
   "page-dapps-dapp-description-spatial": "آواتار و دنیای سه‌بعدی دلخواه خود را بسازید",
@@ -217,6 +220,7 @@
   "page-dapps-marble-cards-logo-alt": "لوگوی marble.cards",
   "page-dapps-async-logo-alt": "لوگوی Async",
   "page-dapps-matcha-logo-alt": "لوگوی Matcha",
+  "page-dapps-meeds-logo-alt": "لوگوی Meeds",
   "page-dapps-metaverse-benefits-title": "متاورس",
   "page-dapps-metaverse-benefits-description": "چه چیزی در مورد اتریوم وجود دارد که به متاورس امکان رشد می‌دهد؟",
   "page-dapps-metaverse-benefits-1-title": "توکن‌های معاوضه‌ناپذیر",
@@ -241,6 +245,7 @@
   "page-dapps-ready-button": "برو",
   "page-dapps-ready-description": "یک دپ را انتخاب کرده و امتحان کنید",
   "page-dapps-ready-title": "آماده‌اید؟",
+  "page-dapps-request-finance-logo-alt": "لوگوی Request Finance",
   "page-dapps-rubic-logo-alt": "لوگوی Rubic",
   "page-dapps-sablier-logo-alt": "لوگوی Sablier",
   "page-dapps-set-up-a-wallet-button": "کیف پول را پیدا کنید",
@@ -281,5 +286,7 @@
   "page-dapps-dapp-description-dodo": "DODO یک ارائه‌دهنده نقدینگی زنجیره‌ای است که از الگوریتم بازارساز فعال (PMM) استفاده می‌کند",
   "page-dapps-dodo-image-alt": "لوگوی DODO",
   "page-dapps-dapp-description-artblocks": "Art Blocks به جان بخشیدن به آثار قانع‌کننده از هنر مولد معاصر اختصاص دارد",
-  "page-dapps-artblocks-image-alt": "لوگوی Art Blocks"
+  "page-dapps-artblocks-image-alt": "لوگوی Art Blocks",
+  "page-dapps-explore-title": "می‌خواهید اپلیکیشن‌های بیشتری را مرور کنید؟",
+  "page-dapps-explore": "صدها اپلیکیشن غیرمتمرکز (dapps) را بررسی کنید"
 }

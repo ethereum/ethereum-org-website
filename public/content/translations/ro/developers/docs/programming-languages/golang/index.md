@@ -23,7 +23,6 @@ Aveţi nevoie de o scurtă introducere? Accesaţi [ethereum.org/learn](/learn/) 
 
 ## Articole și cărți pentru începători {#beginner-articles-and-books}
 
-- [Alegerea unui client Ethereum](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
 - [Primii pași cu Geth](https://medium.com/@tzhenghao/getting-started-with-geth-c1a30b8d6458)
 - [Utilizați Golang pentru a vă conecta la Ethereum](https://www.youtube.com/watch?v=-7uChuO_VzM)
 - [Implementarea contractelor smart Ethereum cu Golang](https://www.youtube.com/watch?v=pytGqQmDslE)

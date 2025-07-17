@@ -10,7 +10,7 @@ O Guia de Estilo de Tradução do ethereum.org contém algumas das diretrizes, i
 
 Este documento serve como um guia geral e não é específico para nenhum idioma.
 
-Se você tiver alguma dúvida, sugestão ou feedback, entre em contato conosco em translations@ethereum.org, envie uma mensagem para @ethdotorg no Crowdin, ou [inscreva-se no nosso Discord](https://discord.gg/ethereum-org), onde você poderá nos enviar mensagens no canal #translations ou entrar em contato com qualquer um dos membros da equipe.
+Se você tiver alguma dúvida, sugestão ou feedback, envie um e-mail para translations@ethereum.org, uma mensagem para @ethdotorg no Crowdin ou [inscreva-se no Discord](https://discord.gg/ethereum-org), para nos mandar mensagens no canal #translations ou entrar em contato com qualquer um dos membros da equipe.
 
 ## Como usar o Crowdin {#using-crowdin}
 
@@ -18,7 +18,7 @@ Você pode encontrar instruções básicas sobre como participar do projeto no C
 
 Se você quiser saber mais sobre o Crowdin e usar alguns dos seus recursos avançados, a [Base de conhecimento do Crowdin](https://support.crowdin.com/online-editor/) contém vários de guias detalhados e resumos de todas as funcionalidades do Crowdin.
 
-## Captando a essência da mensagem {#capturing-the-essence}
+## Entendendo a essência da mensagem {#capturing-the-essence}
 
 Ao traduzir o conteúdo do ethereum.org, evite traduções literais.
 
@@ -116,7 +116,7 @@ A melhor maneira de lidar com links é copiá-los diretamente da fonte, clicando
 
 ![Exemplo de link.png](./example-of-link.png)
 
-Links também aparecem no texto fonte na forma de tags (ou seja, <0> </0>). Se você passar o mouse por cima da tag, o editor exibirá seu conteúdo completo. Às vezes, essas tags representarão links.
+Links também aparecem no texto fonte na forma de tags (ou seja, \<0> \</0>). Se você passar o mouse por cima da tag, o editor exibirá seu conteúdo completo. Às vezes, essas tags representarão links.
 
 É muito importante copiar os links da origem e não mudar a sua ordem.
 
@@ -154,7 +154,7 @@ nonce — _Texto não traduzível_
 
 O texto original também contém tags abreviadas, que contêm apenas números, o que significa que sua função não é imediatamente óbvia. Você pode passar o mouse sobre essas tags para ver exatamente para qual função elas servem.
 
-No exemplo abaixo, ao passar o mouse sobre a <0> tag mostra que ela representa `<code>` e contém um trecho de código. Portanto, o conteúdo dentro dessas tags não deve ser traduzido.
+No exemplo abaixo, ao passar o mouse sobre a \<0> tag mostra que ela representa `<code>` e contém um trecho de código. Portanto, o conteúdo dentro dessas tags não deve ser traduzido.
 
 ![Exemplo de tags.png ambíguas](./example-of-ambiguous-tags.png)
 

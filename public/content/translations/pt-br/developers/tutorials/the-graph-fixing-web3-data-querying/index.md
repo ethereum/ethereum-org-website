@@ -91,7 +91,7 @@ Primeiro, vamos falar sobre GraphQL, originalmente projetado e implementado pelo
 
 <img src="https://cdn0.scrvt.com/b095ee27d37b3d7b6b150adba9ac6ec8/42226f4816a77656/bc5c8b270798/graphql-querygif.gif" width="100%" />
 
-As duas imagens capturam praticamente a essência do GraphQL. Com a consulta à direita, podemos definir exactamente quais os dados que queremos, assim aí temos tudo ao alcance e nada mais do que aquilo de que precisamos. Um servidor GraphQL lida com a busca de todos os dados necessários, então é incrivelmente fácil para o lado frontend do consumidor. [Esta é uma bela explicação](https://www.apollographql.com/blog/graphql-explained-5844742f195e/) de como exatamente o servidor lida com uma consulta se estiver interessado.
+As duas imagens capturam praticamente a essência do GraphQL. Com a consulta à direita, podemos definir exactamente quais os dados que queremos, assim aí temos tudo ao alcance e nada mais do que aquilo de que precisamos. Um servidor GraphQL lida com a busca de todos os dados necessários, então é incrivelmente fácil para o lado frontend do consumidor. [Esta é uma bela explicação](https://www.apollographql.com/blog/graphql-explained) de como exatamente o servidor lida com uma consulta se estiver interessado.
 
 Agora com esse conhecimento, vamos finalmente adentrar o espaço da blockchain e The Graph.
 
@@ -120,7 +120,7 @@ O manifesto é nosso arquivo de configuração e define:
 - outras coisas para ouvir como chamadas de função ou blocos
 - as fnções de mapping sendo chamadas (conferir `mapping.ts` below)
 
-Aqui você pode definir vários contratos e manipuladores. Uma configuração típica teria uma pasta de subgráfico dentro do projeto Truffle/Hardhat com seu próprio repositório. Então você pode facilmente se referir ao ABI.
+Aqui você pode definir vários contratos e manipuladores. Uma configuração típica teria uma pasta de subgráfico dentro do projeto Hardhat com seu próprio repositório. Então você pode facilmente se referir ao ABI.
 
 Por conveniência você também pode querer usar uma ferramenta modelo tipo um bigode. Em seguida, você cria um `subgraph.template.yaml` e insere os endereços com base nas mais recentes implantações. Para uma configuração de exemplo mais avançada, veja, por exemplo, o [repositório de subgráfico Aave](https://github.com/aave/aave-protocol/tree/master/thegraph).
 
@@ -196,7 +196,7 @@ Em seguida, criamos uma nova entidade Bet. O ID para isso sempre `event.transact
 
 Finalmente, nós podemos atualizar a entidade "Player" com todos os dados. Arrays não podem ser empurrados diretamente, mas precisam ser atualizados como mostrado aqui. Usamos o id para fazer referência à aposta. E `.save()` é necessário no final para armazenar uma entidade.
 
-A documentação completa pode ser vista aqui: https://thegraph.com/docs/en/developing/creating-a-subgraph/#writing-mappings. Você também pode adicionar a saída do log ao arquivo de mapeamento, consultando [aqui](https://thegraph.com/docs/assemblyscript-api#api-reference).
+A documentação completa pode ser vista aqui: https://thegraph.com/docs/en/developing/creating-a-subgraph/#writing-mappings. Você também pode adicionar a saída do log ao arquivo de mapeamento, consultando [aqui](https://thegraph.com/docs/en/subgraphs/developing/creating/graph-ts/api/#api-reference).
 
 ```typescript
 import { Bet, Player } from "../generated/schema"

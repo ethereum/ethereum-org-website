@@ -1,16 +1,21 @@
 ---
 title: Kontrak pintar
+metaTitle: "Kontrak pintar: Kegunaan dan manfaatnya"
 description: Pengantar non-teknis untuk kontrak pintar
 lang: id
 ---
 
 # Pengantar kontrak pintar {#introduction-to-smart-contracts}
 
-Kontrak pintar adalah blok bangunan dasar dari lapisan aplikasi Ethereum. Mereka adalah program komputer yang disimpan di rantai blok yang mengikuti logika "jika ini maka itu", dan dijamin akan dieksekusi sesuai dengan aturan yang ditentukan oleh kode-kodenya, yang tidak dapat diubah setelah dibuat.
+Kontrak pintar adalah blok bangunan dasar dari lapisan aplikasi Ethereum. Mereka adalah program komputer yang disimpan di [rantai blok](/glossary/#blockchain) dan mengikuti logika "jika ini maka itu", serta dijamin akan dijalankan sesuai dengan aturan yang ditetapkan oleh kodenya, yang mana tidak dapat diubah setelah dibuat.
 
 Nick Szabo menciptakan istilah "kontrak pintar". Pada tahun 1994, ia menulis [pengantar konsep tersebut](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart.contracts.html), dan pada tahun 1996 ia menulis [eksplorasi tentang apa yang bisa dilakukan oleh kontrak pintar](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart_contracts_2.html).
 
-Szabo membayangkan pasar digital di mana proses otomatis yang aman secara kriptografis memungkinkan transaksi dan fungsi bisnis terjadi tanpa perantara yang dapat dipercaya. Kontrak pintar Ethereum membuat mimpi ini menjadi nyata.
+Szabo membayangkan sebuah pasar digital di mana proses otomatis yang [terjamin secara kriptografis](/glossary/#cryptography) memungkinkan transaksi dan fungsi bisnis terjadi tanpa perantara yang tepercaya. Kontrak pintar Ethereum membuat mimpi ini menjadi nyata.
+
+Tonton Finematics menjelaskan kontrak pintar:
+
+<YouTube id="pWGLtjG-F5c" />
 
 ## Kepercayaan dalam kontrak konvensional {#trust-and-contracts}
 
@@ -60,7 +65,7 @@ Akhirnya, seperti kontrak tradisional, Anda dapat memeriksa isi kontrak pintar s
 
 Kontrak pintar dapat melakukan pada dasarnya segala hal yang dapat dilakukan oleh program komputer.
 
-Mereka dapat melakukan komputasi, membuat mata uang, menyimpan data, mencetak NFT, mengirim komunikasi dan bahkan membuat grafik. Berikut adalah beberapa contoh penggunaan populer dan nyata:
+Mereka dapat melakukan komputasi, membuat mata uang, menyimpan data, mencetak [NFT](/glossary/#nft), mengirim komunikasi, dan bahkan menghasilkan grafik. Berikut adalah beberapa contoh penggunaan populer dan nyata:
 
 - [Stablecoin](/stablecoins/)
 - [Membuat dan mendistribusikan aset digital unik](/nft/)
@@ -69,16 +74,9 @@ Mereka dapat melakukan komputasi, membuat mata uang, menyimpan data, mencetak NF
 - [Kebijakan asuransi yang melakukan pembayaran secara otomatis](https://etherisc.com/)
 - [Standar yang memungkinkan orang untuk membuat mata uang yang disesuaikan dan dapat saling beroperasi](/developers/docs/standards/tokens/)
 
-## Selengkapnya tentang pelajar visual? {#visual-learner}
-
-Tonton Finematics menjelaskan kontrak pintar:
-
-<YouTube id="pWGLtjG-F5c" />
-
 ## Bacaan lebih lanjut {#further-reading}
 
 - [Bagaimana Kontrak Pintar Akan Mengubah Dunia](https://www.youtube.com/watch?v=pA6CGuXEKtQ)
-- [Kontrak Pintar: Teknologi Rantai Blok Yang Akan Menggantikan Pengacara](https://blockgeeks.com/guides/smart-contracts/)
 - [Kontrak pintar untuk pengembang](/developers/docs/smart-contracts/)
 - [Belajar cara menulis kontrak pintar](/developers/learning-tools/)
 - [Penguasaan Ethereum - Apa itu Kontrak Pintar?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)

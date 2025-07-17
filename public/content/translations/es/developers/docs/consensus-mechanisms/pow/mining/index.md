@@ -70,9 +70,9 @@ Observe a Austin mientras le guía por el proceso de minado y la cadena de bloqu
 
 ## El algoritmo de minería {#mining-algorithm}
 
-Ethereum Mainnet sólo ha usado un algoritmo de minería- ['Ethash'](/developers/docs/consensus-mechanisms/pow/mining-algorithms/ethash/). Ethhash fue el sucesor de un algoritmo de R&D original conocido como ['Dagger-Hashimoto'](/developers/docs/consensus-mechanisms/pow/mining-algorithms/dagger-hashimoto/).
+La Red principal de Ethereum solo ha utilizado un algoritmo de minado: ["Ethash"](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash/). Ethash fue el sucesor de un algoritmo original de Investigación y Desarrollo conocido como ["Dagger-Hashimoto"](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto/).
 
-[Más información sobre los algoritmos de minería](/developers/docs/consensus-mechanisms/pow/mining-algorithms/).
+[Más sobre algoritmos de minado](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/).
 
 ## Temas relacionados {#related-topics}
 

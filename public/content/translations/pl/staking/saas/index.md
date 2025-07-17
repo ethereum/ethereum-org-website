@@ -39,7 +39,7 @@ Wskaźniki atrybutów są użyte poniżej, aby zasygnalizować godne uwagi mocne
 
 ## Poznaj dostawców usług stakingowych {#saas-providers}
 
-Poniżej znajduje się paru dostępnych dostawców SaaS. Skorzystaj z powyższych wskaźników, które oprowadzą cię z tymi usługami
+Poniżej znajduje się kilku dostępnych dostawców SaaS. Skorzystaj z powyższych wskaźników, które oprowadzą cię z tymi usługami
 
 <ProductDisclaimer />
 

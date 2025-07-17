@@ -18,9 +18,22 @@
     "paths": {
       "@/*": ["./src/*"],
       "@/public/*": ["./public/*"],
-      "@/storybook-utils": ["./.storybook/utils.ts"]
-    }
+      "@/storybook-utils": ["./.storybook/utils.ts"],
+      "@/storybook/*": ["./.storybook/*"]
+    },
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
-  "include": ["./src/**/*", "next-env.d.ts", "**/*.ts", "**/*.tsx", ".storybook/**/*", "tailwind/ui"],
+  "include": [
+    "./src/**/*",
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".storybook/**/*",
+    ".next/types/**/*.ts"
+  ],
   "exclude": ["node_modules", "./public", "./src/intl"]
 }

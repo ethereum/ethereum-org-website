@@ -1,5 +1,9 @@
-import { useTranslation } from "next-i18next"
-import { MdClose } from "react-icons/md"
+"use client"
+
+import { useContext } from "react"
+import { X } from "lucide-react"
+
+import { Button } from "@/components/ui/buttons/Button"
 
 import {
   Popover,
@@ -11,9 +15,11 @@ import {
 import FixedDot from "./FixedDot"
 import { useFeedbackWidget } from "./useFeedbackWidget"
 
-import { Button } from "@/../tailwind/ui/buttons/Button"
+import { FeedbackWidgetContext } from "@/contexts/FeedbackWidgetContext"
+import { useTranslation } from "@/hooks/useTranslation"
 
 const FeedbackWidget = () => {
+  const { showFeedbackWidget } = useContext(FeedbackWidgetContext)
   const { t } = useTranslation("common")
   const {
     offsetBottom,
@@ -26,6 +32,9 @@ const FeedbackWidget = () => {
     isExpanded,
     isOpen,
   } = useFeedbackWidget()
+
+  if (!showFeedbackWidget) return null
+
   return (
     <>
       <Popover
@@ -40,7 +49,10 @@ const FeedbackWidget = () => {
           />
         </PopoverTrigger>
 
-        <PopoverContent className="mx-2 w-80 max-w-[calc(100vw_-_1rem)] rounded bg-background p-4 sm:p-8">
+        <PopoverContent
+          className="mx-2 w-80 max-w-[calc(100vw_-_1rem)] rounded bg-background p-4 sm:p-8"
+          data-testid="feedback-widget-modal"
+        >
           <div className="flex items-start gap-2">
             <header className="me-0 flex-1 p-0 text-xl font-bold">
               {feedbackSubmitted
@@ -54,7 +66,7 @@ const FeedbackWidget = () => {
                 size="sm"
                 ref={cancelRef}
               >
-                <MdClose className="h-fit w-5" />
+                <X className="h-fit w-5" />
               </Button>
             </PopoverClose>
           </div>

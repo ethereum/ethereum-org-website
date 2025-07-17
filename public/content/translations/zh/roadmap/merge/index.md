@@ -92,7 +92,7 @@ title="去中心化应用程序和智能合约开发者"
 contentPreview="The Merge was designed to have minimal impact on smart contract and dapp developers."
 id="developers">
 
-合并导致共识层发生变化，其中还包括以下方面的变化：<
+合并导致共识层发生变化，其中还包括以下方面的变化：
 
 <ul>
   <li>区块结构</li>
@@ -108,7 +108,7 @@ id="developers">
 
 ## 合并和能源消耗 {#merge-and-energy}
 
-合并标志着以太坊工作量证明的终结，从此以太坊将进入一个可持续性更强、更加环保的时代。 以太坊的能耗预计会下降 99.95%，这使得以太坊成为一个绿色环保的区块链。 了解有关[以太坊能源消耗](/energy-consumption/)的更多信息。
+合并标志着以太坊工作量证明的终结，从此以太坊进入一个可持续性更强、更加环保的时代。 以太坊的能耗预计会下降 99.95%，这使得以太坊成为一个绿色环保的区块链。 了解有关[以太坊能源消耗](/energy-consumption/)的更多信息。
 
 ## 合并与扩容 {#merge-and-scaling}
 

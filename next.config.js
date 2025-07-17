@@ -1,7 +1,13 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const { PHASE_DEVELOPMENT_SERVER } = require("next/constants")
 
-const { i18n } = require("./next-i18next.config")
+const withBundleAnalyzer = require("@next/bundle-analyzer")({
+  enabled: process.env.ANALYZE === "true",
+})
+
+const createNextIntlPlugin = require("next-intl/plugin")
+
+const withNextIntl = createNextIntlPlugin()
 
 const LIMIT_CPUS = Number(process.env.LIMIT_CPUS ?? 2)
 
@@ -27,17 +33,80 @@ module.exports = (phase, { defaultConfig }) => {
         test: /\.ya?ml$/,
         use: "yaml-loader",
       })
+
+      // SVG loader
+      // Grab the existing rule that handles SVG imports
+      const fileLoaderRule = config.module.rules.find((rule) =>
+        rule.test?.test?.(".svg")
+      )
+
+      config.module.rules.push(
+        // Reapply the existing rule, but only for svg imports ending in ?url
+        {
+          ...fileLoaderRule,
+          test: /\.svg$/i,
+          resourceQuery: /url/, // *.svg?url
+        },
+        // Convert all other *.svg imports to React components
+        {
+          test: /\.svg$/i,
+          issuer: fileLoaderRule.issuer,
+          resourceQuery: { not: [...fileLoaderRule.resourceQuery.not, /url/] }, // exclude if *.svg?url
+          use: ["@svgr/webpack"],
+        },
+        {
+          test: /\.md$/,
+          use: ["raw-loader"],
+        }
+      )
+
+      // Modify the file loader rule to ignore *.svg, since we have it handled now.
+      fileLoaderRule.exclude = /\.svg$/i
+
       config.module.rules.push({
-        test: /\.svg$/,
-        use: "@svgr/webpack",
+        test: /\.(mp3)$/,
+        type: "asset/resource",
+        generator: {
+          filename: "static/media/[name][ext]",
+        },
       })
+
+      // WalletConnect related packages are not needed for the bundle
+      // https://docs.reown.com/appkit/next/core/installation#extra-configuration
+      config.externals.push("pino-pretty", "lokijs", "encoding")
 
       return config
     },
-    i18n,
     trailingSlash: true,
     images: {
       deviceSizes: [640, 750, 828, 1080, 1200, 1504, 1920],
+      remotePatterns: [
+        {
+          protocol: "https",
+          hostname: "crowdin-static.downloads.crowdin.com",
+        },
+        {
+          protocol: "https",
+          hostname: "avatars.githubusercontent.com",
+        },
+        {
+          protocol: "https",
+          hostname: "coin-images.coingecko.com",
+        },
+      ],
+    },
+    async headers() {
+      return [
+        {
+          source: "/(.*)", // Apply to all routes
+          headers: [
+            {
+              key: "X-Frame-Options",
+              value: "DENY",
+            },
+          ],
+        },
+      ]
     },
   }
 
@@ -58,14 +127,24 @@ module.exports = (phase, { defaultConfig }) => {
             "node_modules/@swc/core-linux-x64-gnu",
             "node_modules/@swc/core-linux-x64-musl",
             "node_modules/@esbuild/linux-x64",
-            "public/**/*.png",
-            "public/**/*.gif",
             "src/data",
+            "public/**/*.jpg",
+            "public/**/*.png",
+            "public/**/*.webp",
+            "public/**/*.svg",
+            "public/**/*.gif",
+            "public/**/*.json",
+            "public/**/*.txt",
+            "public/**/*.xml",
+            "public/**/*.pdf",
+            "public/fonts",
+            "public/images",
+            "public/content",
           ],
         },
       },
     }
   }
 
-  return nextConfig
+  return withBundleAnalyzer(withNextIntl(nextConfig))
 }

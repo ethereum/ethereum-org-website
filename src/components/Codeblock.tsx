@@ -1,39 +1,38 @@
+"use client"
 import React, { useState } from "react"
-import { useTranslation } from "next-i18next"
+import { Clipboard, ClipboardCheck } from "lucide-react"
 import Highlight, {
   defaultProps,
   Language,
   PrismTheme,
 } from "prism-react-renderer"
 import Prism from "prism-react-renderer/prism"
-import { Box, BoxProps, Flex, useColorModeValue } from "@chakra-ui/react"
 
 // https://github.com/FormidableLabs/prism-react-renderer/tree/master#custom-language-support
 import CopyToClipboard from "@/components/CopyToClipboard"
-import Emoji from "@/components/Emoji"
+import { Flex } from "@/components/ui/flex"
+
+import { cn } from "@/lib/utils/cn"
 
 import { LINES_BEFORE_COLLAPSABLE } from "@/lib/constants"
+
+import useColorModeValue from "@/hooks/useColorModeValue"
+import { useTranslation } from "@/hooks/useTranslation"
 ;(typeof global !== "undefined" ? global : window).Prism = Prism
 require("prismjs/components/prism-solidity")
 
-const TopBarItem = (props: BoxProps) => {
-  const bgColor = useColorModeValue("#f7f7f7", "#363641")
-
+const TopBarItem = ({
+  className,
+  ...props
+}: React.HTMLAttributes<HTMLDivElement>) => {
   return (
-    <Box
-      border="1px"
-      borderRadius="base"
-      borderColor="searchBorder"
-      bg={bgColor}
-      ms={2}
-      py={1}
-      px={2}
-      _hover={{
-        cursor: "pointer",
-        color: "text100",
-        transform: "scale(1.04)",
-        boxShadow: "1px 1px 8px 1px rgba(0, 0, 0, 0.5)",
-      }}
+    <div
+      className={cn(
+        "ms-2 rounded border px-2 py-1 shadow-[1px_1px_8px_1px_rgba(var(--black),_0.5)] transition-transform duration-100",
+        "hover:scale-105 hover:cursor-pointer hover:bg-gray-200 hover:shadow-md hover:transition-transform hover:duration-100",
+        "bg-background-highlight hover:bg-background",
+        className
+      )}
       {...props}
     />
   )
@@ -41,10 +40,6 @@ const TopBarItem = (props: BoxProps) => {
 
 const codeTheme = {
   light: {
-    plain: {
-      backgroundColor: "#fafafa",
-      color: "#333333",
-    },
     styles: [
       {
         style: { color: "#6c6783" },
@@ -113,10 +108,6 @@ const codeTheme = {
   },
   dark: {
     // Pulled from `defaultProps.theme` for potential customization
-    plain: {
-      backgroundColor: "#2a2734",
-      color: "#9a86fd",
-    },
     styles: [
       {
         style: { color: "#6c6783" },
@@ -204,11 +195,10 @@ const getValidChildrenForCodeblock = (child) => {
   }
 }
 
-export type CodeblockProps = {
+export type CodeblockProps = React.HTMLAttributes<HTMLDivElement> & {
   allowCollapse?: boolean
   codeLanguage: string
   fromHomepage?: boolean
-  children: React.ReactNode
 }
 
 const Codeblock = ({
@@ -216,6 +206,7 @@ const Codeblock = ({
   allowCollapse = true,
   codeLanguage,
   fromHomepage = false,
+  className,
 }: CodeblockProps) => {
   const { t } = useTranslation("common")
   const selectedTheme = useColorModeValue(codeTheme.light, codeTheme.dark)
@@ -229,14 +220,14 @@ const Codeblock = ({
 
   const [isCollapsed, setIsCollapsed] = useState(allowCollapse)
 
-  let className: string
+  let langClass: string
   if (React.isValidElement(children)) {
-    className = children?.props?.className
+    langClass = children?.props?.className
   } else {
-    className = codeLanguage || ""
+    langClass = codeLanguage || ""
   }
 
-  const matches = className?.match(/language-(.*)/)
+  const matches = langClass?.match(/language-(.*)/)
   const language = matches?.[1] || ""
 
   const shouldShowCopyWidget = ["js", "json", "python", "solidity"].includes(
@@ -251,18 +242,14 @@ const Codeblock = ({
   return (
     /* Overwrites codeblocks inheriting RTL styling in Right-To-Left script languages (e.g. Arabic) */
     /* Context: https://github.com/ethereum/ethereum-org-website/issues/6202 */
-    <Box position="relative" dir="ltr">
-      <Box
-        borderRadius="base"
-        border={fromHomepage ? "none" : "1px solid"}
-        borderColor="border"
-        maxH={
-          isCollapsed
+    <div className={cn("relative", className)} dir="ltr">
+      <div
+        className="overflow-scroll rounded bg-background-highlight text-primary"
+        style={{
+          maxHeight: isCollapsed
             ? `calc((1.2rem * ${LINES_BEFORE_COLLAPSABLE}) + 4.185rem)`
-            : "none"
-        }
-        overflow="scroll"
-        mb={fromHomepage ? 0 : 4}
+            : "none",
+        }}
       >
         <Highlight
           {...defaultProps}
@@ -271,53 +258,38 @@ const Codeblock = ({
           theme={selectedTheme as PrismTheme}
         >
           {({ className, style, tokens, getLineProps, getTokenProps }) => (
-            <Box
-              as="pre"
+            <pre
+              className={cn(
+                "m-0 w-fit min-w-full overflow-visible py-6 ps-4",
+                hasTopBar && "pt-[2.75rem]",
+                className
+              )}
               style={style}
-              className={className}
-              pt={hasTopBar ? "2.75rem" : 6}
-              pb={6}
-              ps={4}
-              m={0}
-              overflow="visible"
-              minW="full"
-              w="fit-content"
             >
               {tokens.map((line, i) => {
                 return i === tokens.length - 1 &&
                   line[0].content === "" ? null : (
-                  <Box
+                  <div
                     key={i}
-                    display="table-row"
+                    style={{ display: "table-row" }}
                     {...getLineProps({ line, key: i })}
                   >
                     {shouldShowLineNumbers && (
-                      <Box
-                        as="span"
-                        display="table-cell"
-                        textAlign="end"
-                        pe={8}
-                        userSelect="none"
-                        opacity={0.4}
-                      >
+                      <span className="table-cell select-none pe-8 text-end opacity-40">
                         {i + 1}
-                      </Box>
+                      </span>
                     )}
-                    <Box as="span" display="table-cell">
+                    <span className="table-cell">
                       {line.map((token, key) => (
                         <span key={key} {...getTokenProps({ token, key })} />
                       ))}
-                    </Box>
-                  </Box>
+                    </span>
+                  </div>
                 )
               })}
               {!fromHomepage && (
                 <Flex
-                  className={className}
-                  justify="flex-end"
-                  position="absolute"
-                  top={3}
-                  insetInlineEnd={4}
+                  className={cn("absolute end-4 top-3 justify-end", className)}
                 >
                   {allowCollapse &&
                     totalLines - 1 > LINES_BEFORE_COLLAPSABLE && (
@@ -331,13 +303,13 @@ const Codeblock = ({
                         <TopBarItem>
                           {!isCopied ? (
                             <>
-                              <Emoji text=":clipboard:" fontSize="md" />{" "}
                               {t("copy")}
+                              <Clipboard className="mb-1 ms-1 inline-block size-[1em]" />
                             </>
                           ) : (
                             <>
-                              <Emoji text=":white_check_mark:" fontSize="md" />{" "}
                               {t("copied")}
+                              <ClipboardCheck className="mb-1 ms-1 inline-block size-[1em]" />
                             </>
                           )}
                         </TopBarItem>
@@ -346,11 +318,11 @@ const Codeblock = ({
                   )}
                 </Flex>
               )}
-            </Box>
+            </pre>
           )}
         </Highlight>
-      </Box>
-    </Box>
+      </div>
+    </div>
   )
 }
 

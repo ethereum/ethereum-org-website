@@ -4,10 +4,11 @@ description: Erfahren Sie mehr über die Zusammenführung, als Mainnet Ethereum 
 lang: de
 template: upgrade
 image: /images/upgrades/merge.png
-summaryPoint1: Ethereum Mainnet verwendet Proof-of-Stake, aber das war nicht immer der Fall.
-summaryPoint2: Der Wechsel vom ursprünglichen Proof-of-Work Mechanismus zu Proof-of-Stake wurde Zusammenführung genannt.
-summaryPoint3: Die Zusammenführung bezieht sich auf das ursprüngliche Ethereum Mainnet, welches mit einer separaten Proof-of-Stake-Blockchain namens Beacon Chain vereinigt wurde, und somit nun beide als eine Blockchain existieren.
-summaryPoint4: Die Zusammenführung reduzierte Ethereums Energieverbrauch um ca. 99,95 %.
+alt:
+summaryPoint1: Im Ethereum Mainnet wird Proof-of-Stake verwendet, aber dies war nicht immer der Fall.
+summaryPoint2: Der Wechsel vom ursprünglichen Proof-of-Work-Mechanismus zu Proof-of-Stake wurde The Merge genannt.
+summaryPoint3: The Merge bezieht sich darauf, dass das ursprüngliche Ethereum Mainnet mit einer separaten Proof-of-Stake-Blockchain namens Beacon Chain zusammengeführt wurde und somit nun beide als eine Blockchain existieren.
+summaryPoint4: Nach The Merge reduzierte sich Ethereums Energieverbrauch um ~99,95 %.
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
@@ -91,7 +92,7 @@ title="dApp und Smart Contract Entwickler"
 contentPreview="The Merge was designed to have minimal impact on smart contract and dapp developers."
 id="developers">
 
-The Merge trat ein, indem es Änderungen an der Konsens-Methode mit sich brachte, darunter Änderungen an:<
+The Merge trat ein, indem es Änderungen an der Konsens-Methode mit sich brachte, darunter Änderungen an:
 
 <ul>
   <li>Block-Struktur</li>
@@ -107,7 +108,7 @@ Weitere Informationen findest Du in diesem Blogartikel von Tim Heiko zum <a href
 
 ## Die Zusammenführung und der Energieverbrauch {#merge-and-energy}
 
-Die Zusammenführung markierte das Ende von Proof-of-Work für Ethereum und den Start der Ära eines nachhaltigeren und umweltfreundlicheren Ethereums. Ethereums Energieverbrauch reduzierte sich um geschätzte 99,95%, was Ethereum zu einer grünen Blockchain macht. Erfahren Sie mehr über [Ethereums Energieverbrauch](/energy-consumption/).
+The Merge markierte das Ende von Proof-of-Work für Ethereum und läutete die Ära eines nachhaltigeren und umweltfreundlicheren Ethereums ein. Ethereums Energieverbrauch reduzierte sich um geschätzte 99,95%, was Ethereum zu einer grünen Blockchain macht. Erfahren Sie mehr über [Ethereums Energieverbrauch](/energy-consumption/).
 
 ## Die Zusammenführung und Skalierbarkeit {#merge-and-scaling}
 

@@ -6,6 +6,10 @@ lang: it
 
 # Introduzione a Web3 {#introduction}
 
+<div className="mt-4">
+<ListenToPlayer slug="/web3/" />
+</div>
+
 La centralizzazione ha aiutato a integrare miliardi di persone nel World Wide Web e ha creato l'infrastruttura stabile e robusta su cui esso risiede. Allo stesso tempo, molte entità centralizzate esercitano una forte presa su grandi aree del World Wide Web, decidendo unilateralmente cosa dovrebbe e non dovrebbe esser consentito.
 
 Web3 è la risposta a questo dilemma. Invece di un Web monopolizzato dalle grandi aziende tecnologiche, il Web3 adotta la decentralizzazione ed è in costruzione, operato e posseduto dai suoi utenti. Web3 mette il potere nelle mani degli individui piuttosto che delle grandi aziende. Prima di parlare di Web3, vediamo come siamo arrivati qui.
@@ -147,11 +151,11 @@ Siamo solo all'inizio della creazione di un Web migliore con Web3, ma mentre con
 
 Il Web3 non ha una definizione rigida. Vari partecipanti della community hanno prospettive differenti al riguardo. Eccone alcune:
 
-- [What is Web3? L'Internet Decentralizzato del Futuro Spiegato](https://www.freecodecamp.org/news/what-is-web3/) – _Nader Dabit_
+- [What is Web3? L'Internet Decentralizzato del Futuro Spiegato](https://www.freecodecamp.org/news/what-is-web3) – _Nader Dabit_
 - [Dare Senso al Web 3](https://medium.com/l4-media/making-sense-of-web-3-c1a9e74dcae) – _Josh Stark_
 - [Perché Web3 È Importante](https://future.a16z.com/why-web3-matters/) — _Chris Dixon_
 - [Perché la Decentralizzazione È Importante](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) - _Chris Dixon_
 - [Il Panorama di Web3](https://a16z.com/wp-content/uploads/2021/10/The-web3-Readlng-List.pdf) – _a16z_
-- [Il Dibattito su Web3](https://www.notboring.co/p/the-web3-debate?s=r) – _Packy McCormick_
+- [Il Dibattito su Web3](https://www.notboring.co/p/the-web3-debate) – _Packy McCormick_
 
 <QuizWidget quizKey="web3" />

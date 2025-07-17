@@ -73,7 +73,7 @@ L'identità decentralizzata può aiutare a creare delle community online prive d
 
 ### 4. Protezione Anti-Sybil {#sybil-protection}
 
-Gli attacchi Sybil si riferiscono a individui che ingannano un sistema nel pensare che siano più persone, per incrementare la propria influenza. Le candidature per la concessione di sovvenzioni che utilizzano il [voto quadratico](/glossary/#quadratic-voting) sono vulnerabili a questi attacchi Sybil perché il valore di una sovvenzione aumenta all'aumentare dei voti ricevuti, incentivando gli utenti a dividere i propri contributi tra più identità. Le identità decentralizzate aiutano a prevenirli, incrementando l'onere su ogni partecipante, per dimostrare che siano realmente umani, sebbene spesso senza dover rilevare informazioni private specifiche.
+Le applicazioni di concessione di sovvenzioni che utilizzano il [voto quadratico](/glossary/#quadratic-voting) sono vulnerabili agli [attacchi Sybil](/glossary/#sybil-attack) poiché il valore di una sovvenzione viene incrementato all'aumentare delle persone che votano, incentivando gli utenti a dividere i propri contributi tra più identità. Le identità decentralizzate aiutano a prevenirli, incrementando l'onere su ogni partecipante, per dimostrare che siano realmente umani, sebbene spesso senza dover rilevare informazioni private specifiche.
 
 ## Cosa sono le attestazioni? {#what-are-attestations}
 
@@ -163,7 +163,7 @@ Esistono molti progetti ambiziosi che utilizzano Ethereum come base per le soluz
 - **[Prova di Umanità](https://www.proofofhumanity.id)**: _La Prova di Umanità (o PoH), è un sistema di verifica dell'identità sociale, basato su Ethereum._
 - **[BrightID](https://www.brightid.org/)**: _Una rete decentralizzata e open source di identità sociale, ideata per riformare la verifica dell'identità tramite la creazione e analisi di un grafico sociale._
 - **[walt.id](https://walt.id)**: _Infrastruttura open source di identità decentralizzata e portafoglio che consente a sviluppatori e organizzazioni di sfruttare l'identità auto-sovrana e gli NFT/SBT._
-- **[Masca](https://masca.io/)**: _Portafoglio open source a identità decentralizzata implementato come MetaMask Snap che consente a utenti e sviluppatori di sfruttare DID e VC._
+- **[Veramo](https://veramo.io/)**: _Un framework di JavaScript che facilita per tutti l'utilizzo di dati verificabili crittograficamente nelle proprie applicazioni._
 
 ## Lettura consigliate {#further-reading}
 
