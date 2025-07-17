@@ -10,9 +10,9 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import CollectiblesPage from "./_components/collectibles"
 
 // API endpoints
-export const BASE_URL = "https://ethereum-org-collectibles.vercel.app"
-const BADGES_API = `${BASE_URL}/api/badges`
-const STATS_API = `${BASE_URL}/api/stats`
+const COLLECTIBLES_BASE_URL = "https://ethereum-org-collectibles.vercel.app"
+const BADGES_API = `${COLLECTIBLES_BASE_URL}/api/badges`
+const STATS_API = `${COLLECTIBLES_BASE_URL}/api/stats`
 
 // Data fetching
 async function fetchBadges() {

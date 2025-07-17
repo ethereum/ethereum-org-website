@@ -11,7 +11,6 @@ import MainArticle from "@/components/MainArticle"
 import { Flex } from "@/components/ui/flex"
 
 import { Badge } from "../page"
-import { BASE_URL } from "../page"
 
 import { CollectiblesPageProps } from "./collectibles"
 import CollectiblesContributor from "./CollectiblesContributor"
@@ -25,7 +24,8 @@ export type BadgeWithOwned = Badge & {
   owned: boolean
 }
 
-const ADDRESS_STATS_API = `${BASE_URL}/api/stats/`
+const COLLECTIBLES_BASE_URL = "https://ethereum-org-collectibles.vercel.app"
+const ADDRESS_STATS_API = `${COLLECTIBLES_BASE_URL}/api/stats/`
 
 const Page = ({ children }: ChildOnlyProp) => {
   return (
