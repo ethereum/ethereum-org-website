@@ -1,10 +1,15 @@
 import { pick } from "lodash"
-import { getMessages, setRequestLocale } from "next-intl/server"
+import {
+  getMessages,
+  getTranslations,
+  setRequestLocale,
+} from "next-intl/server"
 
 import { Lang } from "@/lib/types"
 
 import I18nProvider from "@/components/I18nProvider"
 
+import { getMetadata } from "@/lib/utils/metadata"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import CollectiblesPage from "./_components/collectibles"
@@ -67,4 +72,25 @@ export default async function Page({
       <CollectiblesPage badges={badges} stats={stats} locale={locale} />
     </I18nProvider>
   )
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params
+
+  const t = await getTranslations({
+    locale,
+    namespace: "page-collectibles",
+  })
+
+  return await getMetadata({
+    locale,
+    slug: ["collectibles"],
+    title: t("page-collectibles-meta-title"),
+    description: t("page-collectibles-meta-description"),
+    image: "/images/heroes/community-hero.png",
+  })
 }
