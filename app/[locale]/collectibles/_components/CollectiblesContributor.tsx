@@ -1,5 +1,6 @@
 import React from "react"
 import { useTranslations } from "next-intl"
+import { useIsMounted } from "usehooks-ts"
 import { useAccount } from "wagmi"
 
 import { Image } from "@/components/Image"
@@ -14,7 +15,8 @@ const CollectiblesContributor: React.FC<{ badges: BadgeWithOwned[] }> = ({
 }) => {
   const t = useTranslations("page-collectibles")
 
-  const { address } = useAccount()
+  const isMounted = useIsMounted()
+  const { isConnected } = useAccount()
 
   const currentYear = new Date().getFullYear().toString()
   const currentYearBadges = badges.filter(
@@ -38,7 +40,7 @@ const CollectiblesContributor: React.FC<{ badges: BadgeWithOwned[] }> = ({
 
       <CollectiblesConnectButton />
 
-      {address && (
+      {isMounted() && isConnected && (
         <div className="mt-4 w-full">
           <div className="mb-1 flex justify-between text-xs font-medium">
             <span className="font-semibold">

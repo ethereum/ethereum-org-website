@@ -1,6 +1,7 @@
 "use client"
 
 import React, { useEffect, useState } from "react"
+import { useIsMounted } from "usehooks-ts"
 import { useAccount } from "wagmi"
 
 import { ChildOnlyProp } from "@/lib/types"
@@ -64,7 +65,8 @@ const CollectiblesContent: React.FC<CollectiblesPageProps> = ({
   const [addressBadges, setAddressBadges] = useState<Badge[]>([])
   const [badgesWithOwned, setBadgesWithOwned] = useState<BadgeWithOwned[]>([])
 
-  const { address } = useAccount()
+  const isMounted = useIsMounted()
+  const { address, isConnected } = useAccount()
 
   useEffect(() => {
     const updateBadgesWithOwned = async () => {
@@ -199,7 +201,7 @@ const CollectiblesContent: React.FC<CollectiblesPageProps> = ({
           />
 
           <CollectiblesPreviousYears
-            badges={address ? addressBadges : badges}
+            badges={isMounted() && isConnected ? addressBadges : badges}
           />
         </div>
       </section>
