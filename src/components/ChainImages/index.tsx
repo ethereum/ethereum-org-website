@@ -16,11 +16,17 @@ export const ChainImages = ({
   size = 24,
   className = "",
 }: ChainImagesProps) => {
+  const networkData = [ethereumNetworkData, ...layer2Data]
+
+  const filteredChains = chains.filter((chain) =>
+    networkData.some((network) => network.chainName === chain)
+  )
+
   return (
     <div className={`flex flex-row ${className}`}>
-      {chains.map((chain) => {
-        const chainData = [ethereumNetworkData, ...layer2Data].find(
-          (l2) => l2.chainName === chain
+      {filteredChains.map((chain) => {
+        const chainData = networkData.find(
+          (network) => network.chainName === chain
         )
         return (
           <div key={chain} className="-ml-1.5 overflow-hidden rounded-full">

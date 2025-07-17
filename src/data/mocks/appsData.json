@@ -573,7 +573,7 @@
     },
     {
       "name": "Farcaster",
-      "url": "https://warpcast.com/",
+      "url": "https://farcaster.xyz/",
       "description": "Farcaster is a sufficiently decentralized social network built on Ethereum. It is a public social network similar to X and Reddit. Users can create profiles, post \"casts\" and follow others. They own their accounts and relationships with other users and are free to move between different apps.",
       "image": "https://i.imgur.com/Xv6wvV9.png",
       "category": "Social",
@@ -582,7 +582,7 @@
       "screenshots": [],
       "bannerImage": "https://i.imgur.com/Dpb0JFt.png",
       "platforms": [ "Browser", "iOS", "Android" ],
-      "twitter": "https://x.com/warpcast",
+      "twitter": "https://x.com/farcaster_xyz",
       "github": "https://github.com/farcasterxyz",
       "discord": "",
       "kpiUrl": "",
