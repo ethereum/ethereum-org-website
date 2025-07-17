@@ -22,6 +22,10 @@ const AppsTable = ({ apps }: { apps: AppData[] }) => {
     [apps]
   )
 
+  const getSubCategoryCount = (subCategory: string) => {
+    return apps.filter((app) => app.subCategory.includes(subCategory)).length
+  }
+
   const filteredApps = useMemo(
     () =>
       apps.filter((app) => {
@@ -53,7 +57,7 @@ const AppsTable = ({ apps }: { apps: AppData[] }) => {
                   value={subCategory}
                   className="cursor-pointer hover:bg-primary-low-contrast"
                 >
-                  {subCategory}
+                  {subCategory} ({getSubCategoryCount(subCategory)})
                 </SelectItem>
               ))}
             </SelectContent>
