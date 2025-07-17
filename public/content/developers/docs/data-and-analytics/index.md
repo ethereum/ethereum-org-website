@@ -36,6 +36,12 @@ Using [GraphQL](https://graphql.org/), developers can query any of the curated o
 
 [Dune Analytics](https://dune.com/) pre-processes blockchain data into relational database (DuneSQL) tables, allows users to query blockchain data using SQL and build dashboards based on query results. Onchain data are organized into 4 raw tables: `blocks`, `transactions`, (event) `logs` and (call) `traces`. Popular contracts and protocols have been decoded, and each has its own set of event and call tables. Those event and call tables are processed further and organized into abstraction tables by the type of protocols, for example, dex, lending, stablecoins, etc.
 
+## SQD {#sqd}
+
+[SQD](https://sqd.dev/) is a decentralized hyper-scalable data platform optimized for providing efficient, permissionless access to large volumes of data. It currently serves historical on-chain data, including event logs, transaction receipts, traces, and per-transaction state diffs. SQD offers a powerful toolkit for creating custom data extraction and processing pipelines, achieving an indexing speed of up to 150k blocks per second.
+
+To get started, visit the [documentation](https://docs.sqd.dev/) or see [EVM examples](https://github.com/subsquid-labs/squid-evm-examples) of what you can build with SQD.
+
 ## SubQuery Network {#subquery-network}
 
 [SubQuery](https://subquery.network/) is a leading data indexer that gives developers fast, reliable, decentralized, and customized APIs for their web3 projects. SubQuery empower developers from over 165+ ecosystems (including Ethereum) with rich indexed data to build an intuitive and immersive experiences for their users. The SubQuery Network powers your unstoppable apps with a resilient and decentralized infrastructure network. Use SubQuery's blockchain developer toolkit to build the web3 applications of the future, without spending time building a custom backend for data processing activities.
@@ -55,4 +61,6 @@ EVM Query Language (EQL) is an SQL-like language designed to query EVM (Ethereum
 - [API code examples on EtherScan](https://etherscan.io/apis#contracts)
 - [Beaconcha.in Beacon Chain explorer](https://beaconcha.in)
 - [Dune Basics](https://docs.dune.com/#dune-basics)
+- [SubQuery Ethereum Quick Start Guide](https://academy.subquery.network/indexer/quickstart/quickstart_chains/ethereum-gravatar.html)
+- [SQD Network Overview](https://docs.sqd.dev/)
 - [EVM Query Language](https://eql.sh/blog/alpha-release-notes)

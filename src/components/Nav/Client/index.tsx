@@ -110,6 +110,7 @@ const ClientSideNav = () => {
                 />
                 <SearchButton
                   className="animate-fade-in xl:hidden"
+                  data-testid="search-button"
                   onClick={onOpen}
                 />
 

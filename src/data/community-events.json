@@ -15,7 +15,8 @@
     "href": "https://ethglobal.com/events/pragma-newyork2025",
     "location": "New York, NYC, USA",
     "description": "Bringing developers onchain to build the future of the internet.",
-    "imageUrl": "https://ethglobal.com/og.png"
+    "imageUrl": "https://ethglobal.com/og.png",
+    "hackathon": true
   },
   {
     "title": "SBC (The Science of Blockchain Conference 2025)",
@@ -33,7 +34,8 @@
     "href": "https://ethglobal.com/events/newyork2025",
     "location": "New York, NYC, USA",
     "description": "Bringing developers onchain to build the future of the internet.",
-    "imageUrl": "https://ethglobal.com/og.png"
+    "imageUrl": "https://ethglobal.com/og.png",
+    "hackathon": true
   },
   {
     "title": "ProdFest Jos",
@@ -87,7 +89,8 @@
     "href": "https://ethglobal.com/events/pragma-newdelhi",
     "location": "New Delhi, IND",
     "description": "Bringing developers onchain to build the future of the internet.",
-    "imageUrl": "https://ethglobal.com/og.png"
+    "imageUrl": "https://ethglobal.com/og.png",
+    "hackathon": true
   },
   {
     "title": "ETHGlobal New Delhi",
@@ -96,7 +99,8 @@
     "href": "https://ethglobal.com/events/newdelhi",
     "location": "New Delhi, IND",
     "description": "Bringing developers onchain to build the future of the internet.",
-    "imageUrl": "https://ethglobal.com/og.png"
+    "imageUrl": "https://ethglobal.com/og.png",
+    "hackathon": true
   },
   {
     "title": "EthAccra",
@@ -123,7 +127,8 @@
     "href": "https://ethsafari.xyz/",
     "location": "Nairobi, Kenya",
     "description": "ETHSafari 2025 - web3 builders conference East Africa Kenya",
-    "imageUrl": "https://ethsafari.xyz/_next/image?url=%2FHackathon.png&w=640&q=75"
+    "imageUrl": "https://ethsafari.xyz/_next/image?url=%2FHackathon.png&w=640&q=75",
+    "hackathon": true
   },
   {
     "title": "ETH Boston",
@@ -168,7 +173,8 @@
     "href": "https://ethistanbul.io/",
     "location": "Istanbul, TR",
     "description": "ETHIstanbul is a conference and hackathon connecting you with global talents, industry professionals, and web3 companies advancing technology.",
-    "imageUrl": "https://ethistanbul.io/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fistanbul-background.99d6ad2a.webp&w=3840&q=75"
+    "imageUrl": "https://ethistanbul.io/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fistanbul-background.99d6ad2a.webp&w=3840&q=75",
+    "hackathon": true
   },
   {
     "title": "ETHSofia",
@@ -212,8 +218,26 @@
     "endDate": "2025-11-16",
     "href": "https://invisible.garden",
     "location": "Buenos Aires, Argentina",
-    "description": "Pop-up dev city #1 - Ethereum | Zero Knowledge | Artificial Inteligence | Cybersecurity",
+    "description": "Pop-up dev city #1 - Ethereum | Zero Knowledge | Artificial Intelligence | Cybersecurity",
     "imageUrl": "https://cdn.prod.website-files.com/6695a56b501ba1fda80ae466/67851f884a16785150e18e2c_Group%20116.svg"
+  },
+  {
+    "title": "ETHRome Hackathon",
+    "startDate": "2025-10-17",
+    "endDate": "2025-10-19",
+    "href": "https://ethrome.org",
+    "location": "Rome, ITA",
+    "description": "The hackathon for builders by builders",
+    "imageUrl": "https://www.ethrome.org/opengraph-image.png"
+  },
+  {
+    "title": "Urbe Village",
+    "startDate": "2025-10-05",
+    "endDate": "2025-10-19",
+    "href": "https://urbe.build/urbe-village",
+    "location": "Rome, ITA",
+    "description": "The Web3 Popup Village by builders for builders",
+    "imageUrl": "https://framerusercontent.com/images/b1WtEoffV6kSBqG9o3cJEUvjkY.png"
   },
   {
     "title": "ETH Latam",

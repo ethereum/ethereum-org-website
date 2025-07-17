@@ -1,6 +1,6 @@
 "use client"
 
-import { Suspense, useState } from "react"
+import { useCallback, useEffect, useState } from "react"
 import { Clipboard, ClipboardCheck } from "lucide-react"
 import { useLocale } from "next-intl"
 
@@ -29,17 +29,64 @@ type CodeExamplesProps = {
   eventCategory: string
 }
 
+const AccordionCodeBlock = ({
+  code,
+  codeLanguage,
+}: {
+  code: string
+  codeLanguage: string
+}) => (
+  <>
+    <Codeblock
+      codeLanguage={codeLanguage}
+      allowCollapse={false}
+      className="[&>div]:-m-//2 [&>div]:rounded-none [&_*]:!text-xs [&_pre]:p-4"
+      fromHomepage
+    >
+      {code}
+    </Codeblock>
+    <CopyToClipboard
+      text={code ?? ""}
+      className="absolute end-2 top-2 rounded p-2 hover:bg-primary/10 hover:text-primary"
+    >
+      {(hasCopied) => (hasCopied ? <ClipboardCheck /> : <Clipboard />)}
+    </CopyToClipboard>
+  </>
+)
+
 const CodeExamples = ({ title, codeExamples }: CodeExamplesProps) => {
   const locale = useLocale()
 
   const [isModalOpen, setModalOpen] = useState(false)
   const [activeCode, setActiveCode] = useState(0)
+  const [fetchedCodes, setFetchedCodes] = useState<{ [key: number]: string }>(
+    {}
+  )
 
   const eventCategory = `Homepage - ${locale}`
 
-  const toggleCodeExample = (id: number): void => {
-    setActiveCode(id)
-    setModalOpen(true)
+  const getCode = useCallback(
+    (idx: number) => {
+      const example = codeExamples[idx]
+      if (!fetchedCodes[idx]) {
+        fetch(example.codeUrl)
+          .then((res) => res.text())
+          .then((text) => setFetchedCodes((prev) => ({ ...prev, [idx]: text })))
+      }
+    },
+    [codeExamples, fetchedCodes]
+  )
+
+  // For modal: fetch code when opened if needed
+  useEffect(() => {
+    if (isModalOpen) {
+      getCode(activeCode)
+    }
+  }, [isModalOpen, activeCode, getCode])
+
+  // For accordion: fetch code when expanded if needed
+  const handleAccordionOpen = (idx: number) => {
+    getCode(idx)
   }
 
   return (
@@ -54,7 +101,8 @@ const CodeExamples = ({ title, codeExamples }: CodeExamplesProps) => {
               isModalOpen && idx === activeCode && "bg-background-highlight"
             )}
             onClick={() => {
-              toggleCodeExample(idx)
+              setActiveCode(idx)
+              setModalOpen(true)
               trackCustomEvent({
                 eventCategory,
                 eventAction: "Code Examples",
@@ -68,9 +116,12 @@ const CodeExamples = ({ title, codeExamples }: CodeExamplesProps) => {
         ))}
         {/* Mobile */}
         <Accordion type="single" collapsible className="md:hidden">
-          {codeExamples.map(({ title, description, code, codeLanguage }) => (
+          {codeExamples.map(({ title, description, codeLanguage }, idx) => (
             <AccordionItem key={title} value={title} className="relative">
-              <AccordionTrigger className="flex border-t px-6 py-4 hover:bg-background-highlight">
+              <AccordionTrigger
+                className="flex border-t px-6 py-4 hover:bg-background-highlight"
+                onClick={() => handleAccordionOpen(idx)}
+              >
                 <div className="flex flex-col items-start gap-y-0.5">
                   <p className="text-start text-md font-bold text-body">
                     {title}
@@ -81,26 +132,16 @@ const CodeExamples = ({ title, codeExamples }: CodeExamplesProps) => {
                 </div>
               </AccordionTrigger>
               <AccordionContent className="relative border-t" dir="ltr">
-                <Suspense fallback={<SkeletonLines noOfLines={16} />}>
-                  <div className="-m-2 max-h-[50vh] overflow-auto">
-                    <Codeblock
+                <div className="-m-2 max-h-[50vh] overflow-auto">
+                  {!fetchedCodes[idx] ? (
+                    <SkeletonLines noOfLines={16} />
+                  ) : (
+                    <AccordionCodeBlock
+                      code={fetchedCodes[idx]}
                       codeLanguage={codeLanguage}
-                      allowCollapse={false}
-                      className="[&>div]:-m-//2 [&>div]:rounded-none [&_*]:!text-xs [&_pre]:p-4"
-                      fromHomepage
-                    >
-                      {code}
-                    </Codeblock>
-                    <CopyToClipboard
-                      text={code}
-                      className="absolute end-2 top-2 rounded p-2 hover:bg-primary/10 hover:text-primary"
-                    >
-                      {(hasCopied) =>
-                        hasCopied ? <ClipboardCheck /> : <Clipboard />
-                      }
-                    </CopyToClipboard>
-                  </div>
-                </Suspense>
+                    />
+                  )}
+                </div>
               </AccordionContent>
             </AccordionItem>
           ))}
@@ -112,16 +153,18 @@ const CodeExamples = ({ title, codeExamples }: CodeExamplesProps) => {
           setIsOpen={setModalOpen}
           title={codeExamples[activeCode].title}
         >
-          <Suspense fallback={<SkeletonLines noOfLines={16} dir="ltr" />}>
+          {!fetchedCodes[activeCode] ? (
+            <SkeletonLines noOfLines={16} />
+          ) : (
             <Codeblock
               codeLanguage={codeExamples[activeCode].codeLanguage}
               allowCollapse={false}
               className="[&_pre]:p-6"
               fromHomepage
             >
-              {codeExamples[activeCode].code}
+              {fetchedCodes[activeCode]}
             </Codeblock>
-          </Suspense>
+          )}
         </CodeModal>
       )}
     </div>

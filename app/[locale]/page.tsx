@@ -8,7 +8,6 @@ import type {
   CommunityBlog,
   ValuesPairing,
 } from "@/lib/types"
-import type { EventCardProps } from "@/lib/types"
 import type { Lang } from "@/lib/types"
 import { CodeExample } from "@/lib/interfaces"
 
@@ -67,7 +66,6 @@ import { getMetadata } from "@/lib/utils/metadata"
 import { polishRSSList } from "@/lib/utils/rss"
 
 import events from "@/data/community-events.json"
-import CreateWalletContent from "@/data/CreateWallet"
 
 import {
   ATTESTANT_BLOG,
@@ -82,11 +80,8 @@ import {
 } from "@/lib/constants"
 
 import TenYearHomeBanner from "./10years/_components/TenYearHomeBanner"
-import { getActivity } from "./utils"
+import { getActivity, getUpcomingEvents } from "./utils"
 
-import SimpleDomainRegistryContent from "!!raw-loader!@/data/SimpleDomainRegistry.sol"
-import SimpleTokenContent from "!!raw-loader!@/data/SimpleToken.sol"
-import SimpleWalletContent from "!!raw-loader!@/data/SimpleWallet.sol"
 import { routing } from "@/i18n/routing"
 import { fetchCommunityEvents } from "@/lib/api/calendarEvents"
 import { fetchEthPrice } from "@/lib/api/fetchEthPrice"
@@ -341,28 +336,28 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
       title: t("page-index-developers-code-example-title-0"),
       description: t("page-index-developers-code-example-description-0"),
       codeLanguage: "language-solidity",
-      code: SimpleWalletContent,
+      codeUrl: "/code-examples/SimpleWallet.sol",
       eventName: "bank",
     },
     {
       title: t("page-index-developers-code-example-title-1"),
       description: t("page-index-developers-code-example-description-1"),
       codeLanguage: "language-solidity",
-      code: SimpleTokenContent,
+      codeUrl: "/code-examples/SimpleToken.sol",
       eventName: "token",
     },
     {
       title: t("page-index-developers-code-example-title-2"),
       description: t("page-index-developers-code-example-description-2"),
       codeLanguage: "language-javascript",
-      code: CreateWalletContent,
+      codeUrl: "/code-examples/CreateWallet.js",
       eventName: "wallet",
     },
     {
       title: t("page-index-developers-code-example-title-3"),
       description: t("page-index-developers-code-example-description-3"),
       codeLanguage: "language-solidity",
-      code: SimpleDomainRegistryContent,
+      codeUrl: "/code-examples/SimpleDomainRegistry.sol",
       eventName: "dns",
     },
   ]
@@ -402,18 +397,8 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     },
   ]
 
-  const upcomingEvents = events
-    .filter((event) => {
-      const isValid = isValidDate(event.endDate)
-      const beginningOfEndDate = new Date(event.endDate).getTime()
-      const endOfEndDate = beginningOfEndDate + 24 * 60 * 60 * 1000
-      const isUpcoming = endOfEndDate >= new Date().getTime()
-      return isValid && isUpcoming
-    })
-    .sort(
-      (a, b) => new Date(a.endDate).getTime() - new Date(b.endDate).getTime()
-    )
-    .slice(0, 3) as EventCardProps[] // Show 3 events ending soonest
+  const allUpcomingEvents = getUpcomingEvents(events, locale)
+  const upcomingEvents = allUpcomingEvents.slice(0, 3)
 
   const metricResults: AllHomepageActivityData = {
     ethPrice,
@@ -829,7 +814,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           id="10-year-anniversary"
           className={cn(locale !== "en" && "hidden")} // TODO: Show again when translations ready
         >
-          <TenYearHomeBanner locale={locale} />
+          <TenYearHomeBanner />
         </Section>
 
         {/* Recent posts */}
@@ -906,9 +891,9 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                           className="max-w-full object-cover object-center"
                         />
                       ) : (
-                        <Image src={EventFallback} alt="" />
+                        <Image src={EventFallback} alt="" sizes="276px" />
                       )}
-                      <Image src={EventFallback} alt="" />
+                      <Image src={EventFallback} alt="" sizes="276px" />
                     </CardBanner>
                     <CardContent>
                       <CardTitle>{title}</CardTitle>

@@ -115,11 +115,16 @@ async function Page({ params }: { params: Promise<{ locale: Lang }> }) {
     const ethereumStablecoinData = stablecoins
       .map(({ id, ...rest }) => {
         const coinMarketData = stablecoinsData.find((coin) => coin.id === id)
-        if (!coinMarketData)
-          throw new Error("CoinGecko stablecoin data not found:" + id)
+        if (!coinMarketData) {
+          console.warn("CoinGecko stablecoin data not found:", id)
+          return null
+        }
         return { ...coinMarketData, ...rest }
       })
-      .filter((coin) => coin.market_cap >= MIN_MARKET_CAP_USD)
+      .filter(
+        (coin): coin is Exclude<typeof coin, null> =>
+          coin !== null && coin.market_cap >= MIN_MARKET_CAP_USD
+      )
       .sort((a, b) => b.market_cap - a.market_cap)
       .map(({ market_cap, ...rest }) => ({
         ...rest,

@@ -90,7 +90,7 @@ Ethereum.org 是一個開源專案，擁有超過 **12000 名**貢獻者，幫�
 
 如果你的貢獻合併到 ethereum.org，你將有機會在 [Galxe](https://app.galxe.com/quest/ethereumorg) 上領取特殊徽章。 鏈上成就代幣 (OAT) 證明你曾經協助生態系統變得更加出色。
 
-[有關鏈上成就代幣的更多資訊](https://help.galxe.com/en/articles/7067290-galxe-oats-reward-and-celebrate-achievements)
+[有關鏈上成就代幣的更多資訊](https://help.galxe.com/en/articles/9645630-create-quest-rewards#h_1c5d63ba03)
 
 ### 如何領取
 1. 加入我們的 [Discord 伺服器](https://discord.gg/ethereum-org)。
