@@ -2006,6 +2006,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/deca12x"><img src="https://avatars.githubusercontent.com/u/74135582?v=4?s=100" width="100px;" alt="deca"/><br /><sub><b>deca</b></sub></a><br /><a href="#eventOrganizing-deca12x" title="Event Organizing">📋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Anish-Gupta1"><img src="https://avatars.githubusercontent.com/u/180473292?v=4?s=100" width="100px;" alt="Anish Gupta "/><br /><sub><b>Anish Gupta </b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Anish-Gupta1" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://rohitt.in"><img src="https://avatars.githubusercontent.com/u/81370462?v=4?s=100" width="100px;" alt="Rohit Gupta"/><br /><sub><b>Rohit Gupta</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=rohitt-gupta" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/rvmz"><img src="https://avatars.githubusercontent.com/u/92804957?v=4?s=100" width="100px;" alt="Roman Mazurenko"/><br /><sub><b>Roman Mazurenko</b></sub></a><br /><a href="#maintenance-rvmz" title="Maintenance">🚧</a></td>
     </tr>
   </tbody>
 </table>
