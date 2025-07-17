@@ -31,7 +31,6 @@ import { adoptionStyles } from "./_components/data"
 import InnovationSwiper from "./_components/InnovationSwiper/lazy"
 import TenYearGlobe from "./_components/TenYearGlobe/lazy"
 import TenYearHero from "./_components/TenYearHero"
-// import TorchHistory from "./_components/TorchHistory"
 import TorchHistorySwiper from "./_components/TorchHistorySwiper"
 import Stories from "./_components/UserStories/lazy"
 import {
@@ -44,8 +43,10 @@ import {
 import { fetch10YearEvents } from "@/lib/api/fetch10YearEvents"
 import { fetch10YearStories } from "@/lib/api/fetch10YearStories"
 import { fetchTorchHolders } from "@/lib/api/fetchTorchHolders"
+import { getCurrentHolderAddress, getHolders } from "@/lib/torch"
 import TenYearLogo from "@/public/images/10-year-anniversary/10-year-logo.png"
-import TorchImage from "@/public/images/10-year-anniversary/torch.png"
+
+export const dynamic = "force-static"
 
 // In seconds
 const REVALIDATE_TIME = BASE_TIME_UNIT * 1
@@ -66,7 +67,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 
   setRequestLocale(locale)
 
-  const [fetched10YearEvents, fetched10YearStories, torchHolders] =
+  const [fetched10YearEvents, fetched10YearStories, allTorchHolders] =
     await loadData()
 
   const stories = parseStoryDates(fetched10YearStories, locale)
@@ -85,14 +86,19 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const innovationCards = await getInnovationCards()
   const adoptionCards = await getAdoptionCards()
 
-  const torchHolderLookup: Record<string, (typeof torchHolders)[0]> =
-    torchHolders.reduce(
+  // Torch NFT data fetching logic
+  const torchHolderMap: Record<string, (typeof allTorchHolders)[0]> =
+    allTorchHolders.reduce(
       (acc, holder) => {
         acc[holder.address.toLowerCase()] = holder
         return acc
       },
-      {} as Record<string, (typeof torchHolders)[0]>
+      {} as Record<string, (typeof allTorchHolders)[0]>
     )
+
+  const currentHolderAddress = await getCurrentHolderAddress()
+  const currentHolder = torchHolderMap[currentHolderAddress.toLowerCase()]
+  const torchHolders = await getHolders(torchHolderMap)
 
   return (
     <MainArticle className="mx-auto flex w-full flex-col items-center">
@@ -121,7 +127,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
         <div className="flex flex-row items-center justify-center">
           <CurrentTorchHolderCard
             className="w-[420px]"
-            holderLookup={torchHolderLookup}
+            currentHolder={currentHolder}
           />
         </div>
       </div>
@@ -260,39 +266,39 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
         </div>
       </div>
 
-      {/* <TorchHistory
-          title={t("page-10-year-torch-history-title")}
-          noHistoryLabel={t("page-10-year-torch-no-history")}
-          fromLabel={t("page-10-year-torch-from")}
-          toLabel={t("page-10-year-torch-to")}
-          transactionLabel={t("page-10-year-torch-view-tx")}
-          holderLookup={torchHolderLookup}
-        /> */}
-
-      <div className="my-32 flex w-full flex-col rounded-3xl bg-gradient-to-b from-[#171B37] via-[#171B37] via-60% to-[#9C63F8]">
-        <div className="relative p-8">
-          <div className="mt-24 flex items-center justify-center">
-            {/* <video
-              src="/videos/torch.mp4"
-              autoPlay
-              loop
-              muted
-            /> */}
-
-            <Image src={TorchImage} alt="Torch" width={380} height={380} />
+      <div
+        id="torch-history"
+        className="my-32 flex w-full scroll-mt-32 flex-col bg-gradient-to-b from-[#171B37] via-[#171B37] via-60% to-[#9C63F8] md:rounded-3xl"
+      >
+        <div className="p-8">
+          <div className="relative">
+            <div className="flex items-center justify-center pt-12 sm:pt-24">
+              <video
+                className="h-[380px] w-[380px] object-cover"
+                src="/videos/torch.mp4"
+                aria-label="Torch video"
+                autoPlay
+                loop
+                muted
+                poster="/images/10-year-anniversary/torch-cover.webp"
+              />
+            </div>
+            {/* Curved text */}
+            <Curved10YearsText
+              viewBox="0 0 356 186"
+              className="absolute left-1/2 top-0 h-min w-full max-w-[600px] -translate-x-1/2"
+              width="100%"
+              height="auto"
+            />
           </div>
-          {/* Curved text */}
-          <Curved10YearsText
-            viewBox="0 0 356 186"
-            width={600}
-            height={400}
-            className="absolute left-1/2 top-0 -translate-x-1/2"
-          />
         </div>
 
-        <TorchHistorySwiper />
+        <TorchHistorySwiper
+          holders={torchHolders}
+          currentHolderAddress={currentHolderAddress}
+        />
 
-        <div className="flex gap-12 px-16 pb-24 pt-12 text-body-inverse dark:text-body">
+        <div className="flex flex-col gap-12 px-16 pb-24 pt-12 text-body-inverse md:flex-row dark:text-body">
           <div className="flex flex-1 flex-col gap-8">
             <p>
               To commemorate this historic milestone, we&apos;re introducing the{" "}

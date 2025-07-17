@@ -7,57 +7,75 @@ import {
 } from "@/components/ui/avatar"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { BaseLink } from "@/components/ui/Link"
+import { Tag } from "@/components/ui/tag"
 
 import { cn } from "@/lib/utils/cn"
+
+import { formatDate, getEtherscanUrl } from "@/lib/torch"
 
 interface TorchHistoryCardProps {
   name: string
   role: string
   avatar: string
-  from: string
-  to: string
-  twitter?: string
+  from: number
+  to: number
+  transactionHash: string
   className?: string
+  isCurrentHolder?: boolean
 }
 
 const TorchHistoryCard: React.FC<TorchHistoryCardProps> = ({
   name,
   role,
-  //   avatar,
+  avatar,
   from,
   to,
-  twitter,
+  transactionHash,
   className,
-}) => (
-  <Card
-    className={cn(
-      "flex flex-col rounded-xl bg-gradient-to-b from-white to-gray-100 px-6 py-12 shadow-lg dark:text-body-inverse",
-      className
-    )}
-  >
-    <CardHeader className="flex flex-col gap-4 p-0">
-      <div className="flex flex-col items-center">
-        <Avatar className="h-32 w-32">
-          <AvatarImage
-            src="https://placehold.co/400.png"
-            alt={`Avatar for ${name}`}
-          />
-          <AvatarFallback>{name}</AvatarFallback>
-        </Avatar>
-      </div>
+  isCurrentHolder,
+}) => {
+  return (
+    <Card
+      className={cn(
+        "flex flex-col rounded-xl border border-gray-100/50 bg-gradient-to-b from-white to-gray-100 px-6 py-12 shadow-lg dark:text-body-inverse",
+        isCurrentHolder && "bg-gradient-to-b from-[#B38DF0] to-[#DED4ED]",
+        className
+      )}
+    >
+      <CardHeader className="flex flex-col p-0">
+        <div className="mb-4 flex flex-col items-center">
+          <Avatar className="h-32 w-32 border-2 border-gray-100/50 !shadow-none">
+            <AvatarImage src={avatar} alt={`Avatar for ${name}`} />
+            <AvatarFallback>{name}</AvatarFallback>
+          </Avatar>
+        </div>
 
-      <CardTitle className="text-lg">{name}</CardTitle>
-    </CardHeader>
-    <CardContent className="flex flex-col gap-1 p-0">
-      <div>{role}</div>
-      <div className="text-xs text-body-medium">
-        From {from} to {to}
-      </div>
-      <BaseLink href={`https://twitter.com/${twitter}`} className="text-xs">
-        View on Etherscan
-      </BaseLink>
-    </CardContent>
-  </Card>
-)
+        {isCurrentHolder && (
+          <div>
+            <Tag
+              size="small"
+              variant="solid"
+              status="tag"
+              className="text-2xs font-bold"
+            >
+              Current torchbearer
+            </Tag>
+          </div>
+        )}
+
+        <CardTitle className="text-lg">{name}</CardTitle>
+      </CardHeader>
+      <CardContent className="flex flex-col gap-1 p-0">
+        <div>{role}</div>
+        <div className="text-xs text-body-medium">
+          From {formatDate(from)} to {formatDate(to)}
+        </div>
+        <BaseLink href={getEtherscanUrl(transactionHash)} className="text-xs">
+          View on Etherscan
+        </BaseLink>
+      </CardContent>
+    </Card>
+  )
+}
 
 export default TorchHistoryCard
