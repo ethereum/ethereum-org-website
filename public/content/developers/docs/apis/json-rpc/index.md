@@ -26,7 +26,7 @@ An internal API is also used for inter-client communication within a node - that
 
 ## Execution client spec {#spec}
 
-[Read the full JSON-RPC API spec on GitHub](https://github.com/ethereum/execution-apis). This API is documented on the [Execution API webpage](https://ethereum.github.io/execution-apis/api-documentation/) and includes an Inspector to try out all the available methods.
+[Read the full JSON-RPC API spec on GitHub](https://github.com/ethereum/execution-apis). This API is documented on the [Execution API webpage](https://ethereum.github.io/execution-apis/) and includes an Inspector to try out all the available methods.
 
 ## Conventions {#conventions}
 
@@ -58,9 +58,9 @@ Here are some examples:
 - WRONG: 0xf0f0f (must be even number of digits)
 - WRONG: 004200 (must be prefixed 0x)
 
-### The default block parameter {#default-block}
+### The block parameter {#block-parameter}
 
-The following methods have an extra default block parameter:
+The following methods have a block parameter:
 
 - [eth_getBalance](#eth_getbalance)
 - [eth_getCode](#eth_getcode)
@@ -68,9 +68,9 @@ The following methods have an extra default block parameter:
 - [eth_getStorageAt](#eth_getstorageat)
 - [eth_call](#eth_call)
 
-When requests are made that act on the state of Ethereum, the last default block parameter determines the height of the block.
+When requests are made that query the state of Ethereum, the provided block parameter determines the height of the block.
 
-The following options are possible for the defaultBlock parameter:
+The following options are possible for the block parameter:
 
 - `HEX String` - an integer block number
 - `String "earliest"` for the earliest/genesis block
@@ -567,7 +567,7 @@ Returns the balance of the account of given address.
 **Parameters**
 
 1. `DATA`, 20 Bytes - address to check for balance.
-2. `QUANTITY|TAG` - integer block number, or the string `"latest"`, `"earliest"`, `"pending"`, `"safe"`, or `"finalized"`, see the [default block parameter](/developers/docs/apis/json-rpc/#default-block)
+2. `QUANTITY|TAG` - integer block number, or the string `"latest"`, `"earliest"`, `"pending"`, `"safe"`, or `"finalized"`, see the [block parameter](/developers/docs/apis/json-rpc/#block-parameter)
 
 ```js
 params: ["0x407d73d8a49eeb85d32cf465507dd71d507100c1", "latest"]
@@ -598,7 +598,7 @@ Returns the value from a storage position at a given address.
 
 1. `DATA`, 20 Bytes - address of the storage.
 2. `QUANTITY` - integer of the position in the storage.
-3. `QUANTITY|TAG` - integer block number, or the string `"latest"`, `"earliest"`, `"pending"`, `"safe"`, `"finalized"`, see the [default block parameter](/developers/docs/apis/json-rpc/#default-block)
+3. `QUANTITY|TAG` - integer block number, or the string `"latest"`, `"earliest"`, `"pending"`, `"safe"`, `"finalized"`, see the [block parameter](/developers/docs/apis/json-rpc/#block-parameter)
 
 **Returns**
 
@@ -665,7 +665,7 @@ Returns the number of transactions _sent_ from an address.
 **Parameters**
 
 1. `DATA`, 20 Bytes - address.
-2. `QUANTITY|TAG` - integer block number, or the string `"latest"`, `"earliest"`, `"pending"`, `"safe"` or `"finalized"`, see the [default block parameter](/developers/docs/apis/json-rpc/#default-block)
+2. `QUANTITY|TAG` - integer block number, or the string `"latest"`, `"earliest"`, `"pending"`, `"safe"` or `"finalized"`, see the [block parameter](/developers/docs/apis/json-rpc/#block-parameter)
 
 ```js
 params: [
@@ -726,7 +726,7 @@ Returns the number of transactions in a block matching the given block number.
 
 **Parameters**
 
-1. `QUANTITY|TAG` - integer of a block number, or the string `"earliest"`, `"latest"`, `"pending"`, `"safe"` or `"finalized"`, as in the [default block parameter](/developers/docs/apis/json-rpc/#default-block).
+1. `QUANTITY|TAG` - integer of a block number, or the string `"earliest"`, `"latest"`, `"pending"`, `"safe"` or `"finalized"`, as in the [block parameter](/developers/docs/apis/json-rpc/#block-parameter).
 
 ```js
 params: [
@@ -786,7 +786,7 @@ Returns the number of uncles in a block from a block matching the given block nu
 
 **Parameters**
 
-1. `QUANTITY|TAG` - integer of a block number, or the string `"latest"`, `"earliest"`, `"pending"`, `"safe"` or `"finalized"`, see the [default block parameter](/developers/docs/apis/json-rpc/#default-block)
+1. `QUANTITY|TAG` - integer of a block number, or the string `"latest"`, `"earliest"`, `"pending"`, `"safe"` or `"finalized"`, see the [block parameter](/developers/docs/apis/json-rpc/#block-parameter)
 
 ```js
 params: [
@@ -818,7 +818,7 @@ Returns code at a given address.
 **Parameters**
 
 1. `DATA`, 20 Bytes - address
-2. `QUANTITY|TAG` - integer block number, or the string `"latest"`, `"earliest"`, `"pending"`, `"safe"` or `"finalized"`, see the [default block parameter](/developers/docs/apis/json-rpc/#default-block)
+2. `QUANTITY|TAG` - integer block number, or the string `"latest"`, `"earliest"`, `"pending"`, `"safe"` or `"finalized"`, see the [block parameter](/developers/docs/apis/json-rpc/#block-parameter)
 
 ```js
 params: [
@@ -1005,7 +1005,7 @@ Executes a new message call immediately without creating a transaction on the bl
 - `value`: `QUANTITY` - (optional) Integer of the value sent with this transaction
 - `input`: `DATA` - (optional) Hash of the method signature and encoded parameters. For details see [Ethereum Contract ABI in the Solidity documentation](https://docs.soliditylang.org/en/latest/abi-spec.html).
 
-2. `QUANTITY|TAG` - integer block number, or the string `"latest"`, `"earliest"`, `"pending"`, `"safe"` or `"finalized"`, see the [default block parameter](/developers/docs/apis/json-rpc/#default-block)
+2. `QUANTITY|TAG` - integer block number, or the string `"latest"`, `"earliest"`, `"pending"`, `"safe"` or `"finalized"`, see the [block parameter](/developers/docs/apis/json-rpc/#block-parameter)
 
 **Returns**
 
@@ -1132,7 +1132,7 @@ Returns information about a block by block number.
 
 **Parameters**
 
-1. `QUANTITY|TAG` - integer of a block number, or the string `"earliest"`, `"latest"`, `"pending"`, `"safe"` or `"finalized"`, as in the [default block parameter](/developers/docs/apis/json-rpc/#default-block).
+1. `QUANTITY|TAG` - integer of a block number, or the string `"earliest"`, `"latest"`, `"pending"`, `"safe"` or `"finalized"`, as in the [block parameter](/developers/docs/apis/json-rpc/#block-parameter).
 2. `Boolean` - If `true` it returns the full transaction objects, if `false` only the hashes of the transactions.
 
 ```js
@@ -1247,7 +1247,7 @@ Returns information about a transaction by block number and transaction index po
 
 **Parameters**
 
-1. `QUANTITY|TAG` - a block number, or the string `"earliest"`, `"latest"`, `"pending"`, `"safe"` or `"finalized"`, as in the [default block parameter](/developers/docs/apis/json-rpc/#default-block).
+1. `QUANTITY|TAG` - a block number, or the string `"earliest"`, `"latest"`, `"pending"`, `"safe"` or `"finalized"`, as in the [block parameter](/developers/docs/apis/json-rpc/#block-parameter).
 2. `QUANTITY` - the transaction index position.
 
 ```js
@@ -1373,7 +1373,7 @@ Returns information about a uncle of a block by number and uncle index position.
 
 **Parameters**
 
-1. `QUANTITY|TAG` - a block number, or the string `"earliest"`, `"latest"`, `"pending"`, `"safe"`, `"finalized"`, as in the [default block parameter](/developers/docs/apis/json-rpc/#default-block).
+1. `QUANTITY|TAG` - a block number, or the string `"earliest"`, `"latest"`, `"pending"`, `"safe"`, `"finalized"`, as in the [block parameter](/developers/docs/apis/json-rpc/#block-parameter).
 2. `QUANTITY` - the uncle's index position.
 
 ```js
@@ -1623,7 +1623,7 @@ Returns an array of all logs matching a given filter object.
 - `toBlock`: `QUANTITY|TAG` - (optional, default: `"latest"`) Integer block number, or `"latest"` for the last proposed block, `"safe"` for the latest safe block, `"finalized"` for the latest finalized block, or `"pending"`, `"earliest"` for transactions not yet in a block.
 - `address`: `DATA|Array`, 20 Bytes - (optional) Contract address or a list of addresses from which logs should originate.
 - `topics`: `Array of DATA`, - (optional) Array of 32 Bytes `DATA` topics. Topics are order-dependent. Each topic can also be an array of DATA with "or" options.
-- `blockhash`: `DATA`, 32 Bytes - (optional, **future**) With the addition of EIP-234, `blockHash` will be a new filter option which restricts the logs returned to the single block with the 32-byte hash `blockHash`. Using `blockHash` is equivalent to `fromBlock` = `toBlock` = the block number with hash `blockHash`. If `blockHash` is present in the filter criteria, then neither `fromBlock` nor `toBlock` are allowed.
+- `blockHash`: `DATA`, 32 Bytes - (optional, **future**) With the addition of EIP-234, `blockHash` will be a new filter option which restricts the logs returned to the single block with the 32-byte hash `blockHash`. Using `blockHash` is equivalent to `fromBlock` = `toBlock` = the block number with hash `blockHash`. If `blockHash` is present in the filter criteria, then neither `fromBlock` nor `toBlock` are allowed.
 
 ```js
 params: [

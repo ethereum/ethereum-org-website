@@ -97,6 +97,16 @@
     --card-gradient-secondary-hover: linear-gradient(95deg, rgba(211, 145, 242, 0.2) 0%, rgba(159, 43, 212, 0.2) 102.78%);
     --ten-year-gradient: linear-gradient(100deg, #F6C9EA 55.38%, #C7A9F1 110.54%);
 
+    /* Rainbow gradients */
+    --rainbow-gradient: conic-gradient(
+      from 0deg,
+      hsla(var(--primary)),
+      hsla(var(--accent-b)),
+      hsla(var(--accent-a)),
+      hsla(var(--accent-c)),
+      hsla(var(--primary))
+    );
+
     /* Shadows */
     --shadow-color-a: hsla(var(--purple-800), 0.02);
     --shadow-color-b: hsla(var(--red-800), 0.04);
