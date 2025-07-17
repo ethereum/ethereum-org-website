@@ -10,5 +10,11 @@
     "name": "Test 2",
     "twitter": "elonmusk",
     "role": "Some description about demo"
+  },
+  {
+    "address": "0x8D3e2E0e562634244E5D229C3B97A38efbEc65Ab",
+    "name": "eth.org safe",
+    "twitter": "ethereumorg",
+    "role": "Official Ethereum.org multisig wallet"
   }
 ]
