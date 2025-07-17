@@ -18,11 +18,15 @@ import { cn } from "@/lib/utils/cn"
 
 import Curved10YearsText from "./10y.svg"
 
-import { formatAddress, getBlockieImage, type TorchHolder } from "@/lib/torch"
+import {
+  formatAddress,
+  getBlockieImage,
+  type TorchHolderMetadata,
+} from "@/lib/torch"
 import TorchImage from "@/public/images/10-year-anniversary/torch.png"
 
 interface CurrentTorchHolderCardProps {
-  currentHolder: TorchHolder
+  currentHolder: TorchHolderMetadata
   className?: string
 }
 
@@ -55,7 +59,7 @@ const CurrentTorchHolderCard = ({
       <CardContent className="p-6">
         {currentHolder ? (
           <div className="flex items-start gap-4">
-            <Avatar className="h-19 w-19">
+            <Avatar className="h-19 w-19 !shadow-none">
               <AvatarImage
                 src={getBlockieImage(currentHolder.address)}
                 alt={`Avatar for ${currentHolder.name || currentHolder.address}`}

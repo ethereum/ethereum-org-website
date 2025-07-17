@@ -17,7 +17,15 @@ export const config = createConfig({
   },
 })
 
-export type TorchHolder = {
+type TransferEvent = {
+  from: Address
+  to: Address
+  blockNumber: bigint
+  transactionHash: string
+  timestamp: number
+}
+
+export type TorchHolderMetadata = {
   address: Address
   name: string
   role: string
@@ -25,12 +33,12 @@ export type TorchHolder = {
   twitterPost?: string
 }
 
-type TransferEvent = {
-  from: Address
-  to: Address
-  blockNumber: bigint
-  transactionHash: string
-  timestamp: number
+export type TorchHolder = TorchHolderMetadata & {
+  ens?: string
+}
+
+export type TorchHolderEvent = TorchHolder & {
+  event: TransferEvent
 }
 
 const mockLogs = [
@@ -107,6 +115,7 @@ export const getTransferEvents = async () => {
   //     toBlock: "latest",
   //   })
 
+  // TODO: Remove mock logs
   const logs = mockLogs
 
   // Process logs and get timestamps
@@ -135,19 +144,31 @@ export const getTransferEvents = async () => {
   return transferEvents
 }
 
-export type HolderEvent = TorchHolder & {
-  event: TransferEvent
+const getHolderEvents = async (
+  torchHolderMap: Record<string, TorchHolderMetadata>,
+  transferEvents: TransferEvent[]
+) => {
+  return transferEvents.map<TorchHolderEvent>((event) => {
+    const holderMetadata = torchHolderMap[event.to.toLowerCase()]
+    return {
+      ...holderMetadata,
+      event,
+    }
+  })
 }
 
 export const getHolders = async (
-  torchHolderMap: Record<string, TorchHolder>,
-  transferEvents: TransferEvent[]
+  torchHolderMap: Record<string, TorchHolderMetadata>
 ) => {
-  return transferEvents.map<HolderEvent>((event) => {
-    const holder = torchHolderMap[event.to.toLowerCase()]
+  const transferEvents = await getTransferEvents()
+  const torchHoldersEvents = await getHolderEvents(
+    torchHolderMap,
+    transferEvents
+  )
+
+  return torchHoldersEvents.map((event) => {
     return {
-      ...holder,
-      event,
+      ...event,
     }
   })
 }

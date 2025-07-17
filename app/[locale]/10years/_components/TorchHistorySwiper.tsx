@@ -2,6 +2,7 @@
 
 import { EffectCoverflow, Navigation } from "swiper/modules"
 import { SwiperSlide } from "swiper/react"
+import { Address } from "viem"
 
 import {
   Swiper,
@@ -11,46 +12,60 @@ import {
 
 import TorchHistoryCard from "./TorchHistoryCard"
 
-import { getBlockieImage, HolderEvent } from "@/lib/torch"
+import { getBlockieImage, type TorchHolderEvent } from "@/lib/torch"
 
 type TorchHistorySwiperProps = {
-  holders: HolderEvent[]
+  holders: TorchHolderEvent[]
+  currentHolderAddress: Address
 }
 
-const TorchHistorySwiper = ({ holders }: TorchHistorySwiperProps) => (
-  <SwiperContainer className="w-full">
-    <Swiper
-      effect="coverflow"
-      grabCursor
-      centeredSlides
-      slidesPerView="auto"
-      initialSlide={holders.length - 1}
-      coverflowEffect={{
-        rotate: 0,
-        stretch: -50,
-        depth: 100,
-        modifier: 2.5,
-        slideShadows: false,
-      }}
-      modules={[EffectCoverflow, Navigation]}
-      className="w-full"
-    >
-      {holders.map((holder, idx) => (
-        <SwiperSlide key={idx} className="flex !h-[400px] !w-60 justify-center">
-          <TorchHistoryCard
-            className="!h-[400px]"
-            name={holder.name}
-            role={holder.role}
-            avatar={getBlockieImage(holder.address)}
-            from={holder.event.timestamp}
-            to={holder.event.timestamp}
-            transactionHash={holder.event.transactionHash}
-          />
-        </SwiperSlide>
-      ))}
-      <SwiperNavigation className="mt-8" />
-    </Swiper>
-  </SwiperContainer>
-)
+const TorchHistorySwiper = ({
+  holders,
+  currentHolderAddress,
+}: TorchHistorySwiperProps) => {
+  const currentHolderIndex = holders.findIndex(
+    (holder) => holder.address === currentHolderAddress
+  )
+
+  return (
+    <SwiperContainer className="w-full">
+      <Swiper
+        effect="coverflow"
+        grabCursor
+        centeredSlides
+        slidesPerView="auto"
+        initialSlide={currentHolderIndex || holders.length - 1}
+        coverflowEffect={{
+          rotate: 0,
+          stretch: -50,
+          depth: 100,
+          modifier: 2.5,
+          slideShadows: false,
+        }}
+        modules={[EffectCoverflow, Navigation]}
+        className="w-full"
+      >
+        {holders.map((holder, idx) => (
+          <SwiperSlide
+            key={idx}
+            className="flex !min-h-[400px] !w-60 justify-center"
+          >
+            <TorchHistoryCard
+              className="!min-h-[400px]"
+              name={holder.name}
+              role={holder.role}
+              avatar={getBlockieImage(holder.address)}
+              from={holder.event.timestamp}
+              to={holder.event.timestamp}
+              transactionHash={holder.event.transactionHash}
+              isCurrentHolder={holder.address === currentHolderAddress}
+            />
+          </SwiperSlide>
+        ))}
+        <SwiperNavigation className="mt-8" />
+      </Swiper>
+    </SwiperContainer>
+  )
+}
 
 export default TorchHistorySwiper

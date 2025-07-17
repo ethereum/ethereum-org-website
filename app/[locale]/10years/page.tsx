@@ -43,11 +43,7 @@ import {
 import { fetch10YearEvents } from "@/lib/api/fetch10YearEvents"
 import { fetch10YearStories } from "@/lib/api/fetch10YearStories"
 import { fetchTorchHolders } from "@/lib/api/fetchTorchHolders"
-import {
-  getCurrentHolderAddress,
-  getHolders,
-  getTransferEvents,
-} from "@/lib/torch"
+import { getCurrentHolderAddress, getHolders } from "@/lib/torch"
 import TenYearLogo from "@/public/images/10-year-anniversary/10-year-logo.png"
 import TorchImage from "@/public/images/10-year-anniversary/torch.png"
 
@@ -89,6 +85,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const innovationCards = await getInnovationCards()
   const adoptionCards = await getAdoptionCards()
 
+  // Torch NFT data fetching logic
   const torchHolderMap: Record<string, (typeof allTorchHolders)[0]> =
     allTorchHolders.reduce(
       (acc, holder) => {
@@ -100,9 +97,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 
   const currentHolderAddress = await getCurrentHolderAddress()
   const currentHolder = torchHolderMap[currentHolderAddress.toLowerCase()]
-
-  const transferEvents = await getTransferEvents()
-  const torchHoldersEvents = await getHolders(torchHolderMap, transferEvents)
+  const torchHolders = await getHolders(torchHolderMap)
 
   return (
     <MainArticle className="mx-auto flex w-full flex-col items-center">
@@ -295,7 +290,10 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           />
         </div>
 
-        <TorchHistorySwiper holders={torchHoldersEvents} />
+        <TorchHistorySwiper
+          holders={torchHolders}
+          currentHolderAddress={currentHolderAddress}
+        />
 
         <div className="flex gap-12 px-16 pb-24 pt-12 text-body-inverse dark:text-body">
           <div className="flex flex-1 flex-col gap-8">
