@@ -10,7 +10,7 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import CollectiblesPage from "./_components/collectibles"
 
 // API endpoints
-const BASE_URL = "https://ethereum-org-collectibles.vercel.app"
+export const BASE_URL = "https://ethereum-org-collectibles.vercel.app"
 const BADGES_API = `${BASE_URL}/api/badges`
 const STATS_API = `${BASE_URL}/api/stats`
 
@@ -52,7 +52,7 @@ export default async function Page({
   setRequestLocale(locale)
 
   // Fetch data
-  const [badges, stats]: [Badge[], unknown] = await Promise.all([
+  const [badges, stats]: [Badge[], Stats] = await Promise.all([
     fetchBadges(),
     fetchStats(),
   ])

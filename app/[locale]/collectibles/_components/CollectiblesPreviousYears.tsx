@@ -1,21 +1,24 @@
 import React from "react"
-import { getTranslations } from "next-intl/server"
+import { useTranslations } from "next-intl"
+
+import { Image } from "@/components/Image"
 
 import { Badge } from "../page"
 
 interface CollectiblesPreviousYearsProps {
   badges: Badge[]
-  locale: string
-  currentYear: string
 }
 
-const CollectiblesPreviousYears: React.FC<
-  CollectiblesPreviousYearsProps
-> = async ({ badges, locale, currentYear }) => {
-  const t = await getTranslations({ locale, namespace: "page-collectibles" })
+const CollectiblesPreviousYears: React.FC<CollectiblesPreviousYearsProps> = ({
+  badges,
+}) => {
+  const t = useTranslations("page-collectibles")
+  const currentYear = new Date().getFullYear().toString()
+  const previousYears = badges.filter((badge) => badge.year !== currentYear)
+
   // Group badges by year
-  const grouped = badges.reduce(
-    (acc: Record<string, unknown[]>, badge: unknown) => {
+  const grouped = previousYears.reduce(
+    (acc: Record<string, Badge[]>, badge: Badge) => {
       const year = badge.year
       if (!acc[year]) acc[year] = []
       acc[year].push(badge)
@@ -32,13 +35,12 @@ const CollectiblesPreviousYears: React.FC<
       <div className="mb-8 text-left text-xl font-bold text-[#3B2C4A] dark:text-white">
         {t("page-collectibles-previous-years")}
       </div>
-      {years
-        .filter((year) => year !== currentYear)
-        .map((year) => {
+      {years.length > 0 ? (
+        years.map((year) => {
           const badgeCount = grouped[year].length
           // Sum collectorsCount for all badges in this year
           const collectorsCount = grouped[year].reduce(
-            (sum, badge) => sum + (badge.collectors_count || 0),
+            (sum: number, badge: Badge) => sum + (badge.collectors_count || 0),
             0
           )
           return (
@@ -72,7 +74,9 @@ const CollectiblesPreviousYears: React.FC<
                       rel="noopener noreferrer"
                       className="mb-2"
                     >
-                      <img
+                      <Image
+                        width={80}
+                        height={80}
                         src={badge.image}
                         alt={badge.name}
                         className="h-16 w-16 md:h-20 md:w-20"
@@ -86,7 +90,12 @@ const CollectiblesPreviousYears: React.FC<
               </div>
             </div>
           )
-        })}
+        })
+      ) : (
+        <div className="text-center text-lg font-bold text-[#3B2C4A] dark:text-white">
+          {t("page-collectibles-previous-years-no-badges")}
+        </div>
+      )}
     </section>
   )
 }

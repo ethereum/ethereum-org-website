@@ -47,5 +47,8 @@
     "page-collectibles-social-desc": "Únete a cualquiera de nuestras llamadas de Discord para probar el sitio web antes de los lanzamientos o mantente al día con las noticias de ethereum.org en nuestras llamadas comunitarias mensuales.",
     "page-collectibles-previous-years": "Años anteriores",
     "page-collectibles-previous-years-badge-count": "{count, plural, =0 {ninguna insignia} =1 {1 insignia} other {# insignias}}",
-    "page-collectibles-previous-years-collectors-count": "{count, plural, =0 {ningún coleccionista} =1 {1 coleccionista} other {# coleccionistas}}"
+    "page-collectibles-previous-years-collectors-count": "{count, plural, =0 {ningún coleccionista} =1 {1 coleccionista} other {# coleccionistas}}",
+    "page-collectibles-previous-years-no-badges": "No se han obtenido insignias",
+    "page-collectibles-contributor-progress-this-year": "Progreso este año",
+    "page-collectibles-contributor-progress-total": "Total: {count, plural, =0 {ninguna insignia} =1 {1 insignia} other {# insignias}}"
 }

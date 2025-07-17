@@ -47,5 +47,8 @@
     "page-collectibles-social-desc": "Join any of our Discord calls to bug test the website before releases or keep up with the ethereum.org news on our monthly community calls.",
     "page-collectibles-previous-years": "Previous years",
     "page-collectibles-previous-years-badge-count": "{count, plural, =0 {no badges} =1 {1 badge} other {# badges}}",
-    "page-collectibles-previous-years-collectors-count": "{count, plural, =0 {no collectors} =1 {1 collector} other {# collectors}}"
+    "page-collectibles-previous-years-collectors-count": "{count, plural, =0 {no collectors} =1 {1 collector} other {# collectors}}",
+    "page-collectibles-previous-years-no-badges": "No badges minted",
+    "page-collectibles-contributor-progress-this-year": "Progress this year",
+    "page-collectibles-contributor-progress-total": "All time: {count, plural, =0 {no badges} =1 {1 badge} other {# badges}}"
 }
