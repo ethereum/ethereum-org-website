@@ -93,7 +93,9 @@ const CollectiblesCurrentYear: React.FC<CollectiblesCurrentYearProps> = ({
                     rel="noopener noreferrer"
                     className="mr-4"
                   >
-                    <img
+                    <Image
+                      width={130}
+                      height={130}
                       src={developerBadge.image}
                       alt="Developer"
                       className={`w-32 md:w-40 ${address && !developerBadge.owned ? "grayscale filter" : ""}`}
@@ -136,7 +138,9 @@ const CollectiblesCurrentYear: React.FC<CollectiblesCurrentYearProps> = ({
                   href="https://github.com/ethereum/ethereum-org-website/issues"
                   className="mt-4 w-full rounded-lg bg-[#F5F6FA] px-4 py-1.5 text-xs font-bold text-[#A259FF] no-underline shadow transition-colors hover:bg-[#E5E7EB] md:mt-0 md:text-sm dark:bg-[#23202A] dark:text-[#A259FF] dark:hover:bg-[#2D2536]"
                 >
-                  <img
+                  <Image
+                    width={33}
+                    height={32}
                     src={lightningImg.src}
                     alt="Lightning"
                     className="mr-2 inline h-4 w-auto align-middle"
@@ -155,7 +159,9 @@ const CollectiblesCurrentYear: React.FC<CollectiblesCurrentYearProps> = ({
                     rel="noopener noreferrer"
                     className="mr-4"
                   >
-                    <img
+                    <Image
+                      width={130}
+                      height={130}
                       src={writingBadge.image}
                       alt="Writing"
                       className={`w-32 md:w-40 ${address && !writingBadge.owned ? "grayscale filter" : ""}`}
@@ -182,7 +188,9 @@ const CollectiblesCurrentYear: React.FC<CollectiblesCurrentYearProps> = ({
                   href="/contributing/#how-to-update-content"
                   className="mt-4 w-full rounded-lg bg-[#F5F6FA] px-4 py-1.5 text-xs font-bold text-[#A259FF] no-underline shadow transition-colors hover:bg-[#E5E7EB] md:mt-0 md:text-sm dark:bg-[#23202A] dark:text-[#A259FF] dark:hover:bg-[#2D2536]"
                 >
-                  <img
+                  <Image
+                    width={33}
+                    height={32}
                     src={lightningImg.src}
                     alt="Lightning"
                     className="mr-2 inline h-4 w-auto align-middle"
@@ -204,7 +212,9 @@ const CollectiblesCurrentYear: React.FC<CollectiblesCurrentYearProps> = ({
                     rel="noopener noreferrer"
                     className="mr-4"
                   >
-                    <img
+                    <Image
+                      width={130}
+                      height={130}
                       src={designBadge.image}
                       alt="Design"
                       className={`w-32 md:w-40 ${address && !designBadge.owned && !userTestingBadge.owned ? "grayscale filter" : ""}`}
@@ -239,7 +249,9 @@ const CollectiblesCurrentYear: React.FC<CollectiblesCurrentYearProps> = ({
                   href="/contributing/design/"
                   className="mt-4 w-full rounded-lg bg-[#F5F6FA] px-4 py-1.5 text-xs font-bold text-[#A259FF] no-underline shadow transition-colors hover:bg-[#E5E7EB] md:mt-0 md:text-sm dark:bg-[#23202A] dark:text-[#A259FF] dark:hover:bg-[#2D2536]"
                 >
-                  <img
+                  <Image
+                    width={33}
+                    height={32}
                     src={lightningImg.src}
                     alt="Lightning"
                     className="mr-2 inline h-4 w-auto align-middle"
@@ -258,7 +270,9 @@ const CollectiblesCurrentYear: React.FC<CollectiblesCurrentYearProps> = ({
                     rel="noopener noreferrer"
                     className="mr-4"
                   >
-                    <img
+                    <Image
+                      width={130}
+                      height={130}
                       src={gitpoapBadge.image}
                       alt="GitPOAP"
                       className={`w-32 md:w-40 ${address && !gitpoapBadge.owned ? "grayscale filter" : ""}`}
@@ -285,7 +299,9 @@ const CollectiblesCurrentYear: React.FC<CollectiblesCurrentYearProps> = ({
                   href="https://github.com/ethereum/ethereum-org-website/issues"
                   className="mt-4 w-full rounded-lg bg-[#F5F6FA] px-4 py-1.5 text-xs font-bold text-[#A259FF] no-underline shadow transition-colors hover:bg-[#E5E7EB] md:mt-0 md:text-sm dark:bg-[#23202A] dark:text-[#A259FF] dark:hover:bg-[#2D2536]"
                 >
-                  <img
+                  <Image
+                    width={33}
+                    height={32}
                     src={lightningImg.src}
                     alt="Lightning"
                     className="mr-2 inline h-4 w-auto align-middle"
@@ -319,7 +335,9 @@ const CollectiblesCurrentYear: React.FC<CollectiblesCurrentYearProps> = ({
                   rel="noopener noreferrer"
                   className="mr-4"
                 >
-                  <img
+                  <Image
+                    width={130}
+                    height={130}
                     src={translationBadge.image}
                     alt="Translations"
                     className={`w-32 md:w-40 ${address && !translationBadge.owned ? "grayscale filter" : ""}`}
@@ -370,7 +388,9 @@ const CollectiblesCurrentYear: React.FC<CollectiblesCurrentYearProps> = ({
                 href="/contributing/translation-program/"
                 className="mt-4 w-full rounded-lg bg-[#F5F6FA] px-4 py-1.5 text-xs font-bold text-[#A259FF] no-underline shadow transition-colors hover:bg-[#E5E7EB] md:mt-0 md:text-sm dark:bg-[#23202A] dark:text-[#A259FF] dark:hover:bg-[#2D2536]"
               >
-                <img
+                <Image
+                  width={130}
+                  height={130}
                   src={lightningImg.src}
                   alt="Lightning"
                   className="mr-2 inline h-4 w-auto align-middle"
