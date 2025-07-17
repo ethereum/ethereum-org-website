@@ -281,13 +281,15 @@ const Page = async ({
                 <p className="text-sm">{getTimeAgo(app.lastUpdated)}</p>
               </div>
             </div>
-            <div className="flex flex-col gap-4">
-              <h3 className="text-2xl">Gallery</h3>
-              <ScreenshotSwiper
-                screenshots={app.screenshots}
-                appName={app.name}
-              />
-            </div>
+            {app.screenshots.length > 0 && (
+              <div className="flex flex-col gap-4">
+                <h3 className="text-2xl">Gallery</h3>
+                <ScreenshotSwiper
+                  screenshots={app.screenshots}
+                  appName={app.name}
+                />
+              </div>
+            )}
           </div>
           <div className="hidden h-fit w-full flex-col gap-4 rounded-2xl border bg-background p-8 md:flex md:w-44">
             <h3 className="text-lg">Info</h3>

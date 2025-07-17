@@ -36,10 +36,15 @@ export async function fetchApps(): Promise<Record<string, AppData[]>> {
         (sheet: { properties: { title: string } }) => sheet.properties.title
       ) || []
 
+    // Filter out sheets that are not valid AppCategoryEnum values
+    const validSheetNames = sheetNames.filter((name: string) =>
+      Object.values(AppCategoryEnum).includes(name as AppCategoryEnum)
+    )
+
     const result: Record<string, AppData[]> = {}
 
     // Fetch and process data from each sheet
-    for (const sheetName of sheetNames) {
+    for (const sheetName of validSheetNames) {
       const dataUrl = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${sheetName}!A:Z?majorDimension=ROWS&key=${googleApiKey}`
       const dataResponse = await fetch(dataUrl)
 
@@ -77,7 +82,7 @@ export async function fetchApps(): Promise<Record<string, AppData[]>> {
             image: row[3] || "", // Use the SVG data directly from the Logo Image column
             category: getCategoryFromSheetName(sheetName),
             subCategory: parseCommaSeparated(row[5] || ""),
-            networks: parseNetworks(row[6] || ""),
+            networks: parseCommaSeparated(row[6] || ""),
             screenshots: parseCommaSeparated(row[7] || ""),
             bannerImage: row[8] || "",
             platforms: parseCommaSeparated(row[9] || ""),
@@ -144,18 +149,4 @@ function parseCommaSeparated(value: string): string[] {
     .split(",")
     .map((item) => item.trim())
     .filter(Boolean)
-}
-
-// Helper function to parse networks
-function parseNetworks(value: string): Array<"Ethereum" | "Starknet"> {
-  if (!value || value.trim() === "") return ["Ethereum"] // Default to Ethereum
-  const networks = value.split(",").map((n) => n.trim().toLowerCase())
-  const supportedNetworks: Array<"Ethereum" | "Starknet"> = []
-
-  if (networks.some((n) => n.includes("ethereum")))
-    supportedNetworks.push("Ethereum")
-  if (networks.some((n) => n.includes("starknet")))
-    supportedNetworks.push("Starknet")
-
-  return supportedNetworks.length > 0 ? supportedNetworks : ["Ethereum"]
 }
