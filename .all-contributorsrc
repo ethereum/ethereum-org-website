@@ -12883,6 +12883,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "rvmz",
+      "name": "Roman Mazurenko",
+      "avatar_url": "https://avatars.githubusercontent.com/u/92804957?v=4",
+      "profile": "https://github.com/rvmz",
+      "contributions": [
+        "maintenance"
+      ]
     }
   ],
   "contributorsPerLine": 7,
