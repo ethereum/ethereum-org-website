@@ -38,10 +38,10 @@ const CurrentTorchHolderCard = ({
     <Card
       className={cn("w-full overflow-hidden rounded-3xl shadow-xl", className)}
     >
-      <CardHeader className="p-0">
-        <CardTitle className="relative flex flex-col items-center justify-center bg-[#18193A] p-0 pb-6">
+      <CardHeader className="bg-[#18193A]">
+        <div className="relative">
           {/* Torch/flame video */}
-          <div className="mt-24 flex items-center justify-center">
+          <div className="flex items-center justify-center pt-12 sm:pt-24">
             {/* <video
               src="/videos/torch.mp4"
               autoPlay
@@ -51,9 +51,17 @@ const CurrentTorchHolderCard = ({
 
             <Image src={TorchImage} alt="Torch" width={170} height={170} />
           </div>
-          {/* Curved text */}
-          <Curved10YearsText className="absolute left-1/2 top-6 -translate-x-1/2" />
-        </CardTitle>
+
+          <CardTitle className="p-0">
+            {/* Curved text */}
+            <Curved10YearsText
+              viewBox="0 0 356 186"
+              className="absolute left-1/2 top-0 h-min w-full max-w-[600px] -translate-x-1/2"
+              width="100%"
+              height="auto"
+            />
+          </CardTitle>
+        </div>
       </CardHeader>
       {/* Bottom section: torchbearer info */}
       <CardContent className="p-6">

@@ -268,26 +268,28 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 
       <div
         id="torch-history"
-        className="my-32 flex w-full scroll-mt-32 flex-col rounded-3xl bg-gradient-to-b from-[#171B37] via-[#171B37] via-60% to-[#9C63F8]"
+        className="my-32 flex w-full scroll-mt-32 flex-col bg-gradient-to-b from-[#171B37] via-[#171B37] via-60% to-[#9C63F8] md:rounded-3xl"
       >
-        <div className="relative p-8">
-          <div className="mt-24 flex items-center justify-center">
-            {/* <video
+        <div className="p-8">
+          <div className="relative">
+            <div className="flex items-center justify-center pt-12 sm:pt-24">
+              {/* <video
               src="/videos/torch.mp4"
               autoPlay
               loop
               muted
             /> */}
 
-            <Image src={TorchImage} alt="Torch" width={380} height={380} />
+              <Image src={TorchImage} alt="Torch" width={380} height={380} />
+            </div>
+            {/* Curved text */}
+            <Curved10YearsText
+              viewBox="0 0 356 186"
+              className="absolute left-1/2 top-0 h-min w-full max-w-[600px] -translate-x-1/2"
+              width="100%"
+              height="auto"
+            />
           </div>
-          {/* Curved text */}
-          <Curved10YearsText
-            viewBox="0 0 356 186"
-            width={600}
-            height={400}
-            className="absolute left-1/2 top-0 -translate-x-1/2"
-          />
         </div>
 
         <TorchHistorySwiper
@@ -295,7 +297,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           currentHolderAddress={currentHolderAddress}
         />
 
-        <div className="flex gap-12 px-16 pb-24 pt-12 text-body-inverse dark:text-body">
+        <div className="flex flex-col gap-12 px-16 pb-24 pt-12 text-body-inverse md:flex-row dark:text-body">
           <div className="flex flex-1 flex-col gap-8">
             <p>
               To commemorate this historic milestone, we&apos;re introducing the{" "}
