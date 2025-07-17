@@ -12,6 +12,7 @@ import { ButtonLink } from "../ui/buttons/Button"
 
 import { useActiveHash } from "@/hooks/useActiveHash"
 import { useTranslation } from "@/hooks/useTranslation"
+import { usePathname } from "@/i18n/routing"
 
 export type TableOfContentsProps = {
   items: Array<ToCItem>
@@ -31,6 +32,7 @@ const TableOfContents = ({
   className,
   ...rest
 }: TableOfContentsProps) => {
+  const pathname = usePathname()
   const { t } = useTranslation("common")
 
   const titleIds: Array<string> = []
@@ -66,7 +68,15 @@ const TableOfContents = ({
       {...rest}
     >
       {!hideEditButton && editPath && (
-        <ButtonLink href={editPath} variant="outline">
+        <ButtonLink
+          href={editPath}
+          variant="outline"
+          customEventOptions={{
+            eventCategory: "edit_page",
+            eventAction: "gh_edit_click",
+            eventName: `${pathname}`,
+          }}
+        >
           <Github />
           {t("edit-page")}
         </ButtonLink>
