@@ -45,7 +45,6 @@ import { fetch10YearStories } from "@/lib/api/fetch10YearStories"
 import { fetchTorchHolders } from "@/lib/api/fetchTorchHolders"
 import { getCurrentHolderAddress, getHolders } from "@/lib/torch"
 import TenYearLogo from "@/public/images/10-year-anniversary/10-year-logo.png"
-import TorchImage from "@/public/images/10-year-anniversary/torch.png"
 
 // In seconds
 const REVALIDATE_TIME = BASE_TIME_UNIT * 1
@@ -273,14 +272,15 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
         <div className="p-8">
           <div className="relative">
             <div className="flex items-center justify-center pt-12 sm:pt-24">
-              {/* <video
-              src="/videos/torch.mp4"
-              autoPlay
-              loop
-              muted
-            /> */}
-
-              <Image src={TorchImage} alt="Torch" width={380} height={380} />
+              <video
+                className="h-[380px] w-[380px] object-cover"
+                src="/videos/torch.mp4"
+                aria-label="Torch video"
+                autoPlay
+                loop
+                muted
+                poster="/images/10-year-anniversary/torch-cover.webp"
+              />
             </div>
             {/* Curved text */}
             <Curved10YearsText

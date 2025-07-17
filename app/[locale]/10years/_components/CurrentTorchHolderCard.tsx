@@ -1,4 +1,3 @@
-import { Image } from "@/components/Image"
 import {
   AvatarBase as Avatar,
   AvatarFallback,
@@ -23,7 +22,6 @@ import {
   getBlockieImage,
   type TorchHolderMetadata,
 } from "@/lib/torch"
-import TorchImage from "@/public/images/10-year-anniversary/torch.png"
 
 interface CurrentTorchHolderCardProps {
   currentHolder: TorchHolderMetadata
@@ -41,15 +39,16 @@ const CurrentTorchHolderCard = ({
       <CardHeader className="bg-[#18193A]">
         <div className="relative">
           {/* Torch/flame video */}
-          <div className="flex items-center justify-center pt-12 sm:pt-24">
-            {/* <video
+          <div className="flex items-center justify-center pt-12">
+            <video
+              className="h-[170px] w-[170px] object-cover"
               src="/videos/torch.mp4"
+              aria-label="Torch video"
               autoPlay
               loop
               muted
-            /> */}
-
-            <Image src={TorchImage} alt="Torch" width={170} height={170} />
+              poster="/images/10-year-anniversary/torch-cover.png"
+            />
           </div>
 
           <CardTitle className="p-0">
