@@ -41,7 +41,8 @@ const TorchHistoryCard: React.FC<TorchHistoryCardProps> = ({
       className={cn(
         "flex flex-col rounded-xl border border-gray-100/50 bg-gradient-to-b from-white to-gray-100 px-6 py-12 shadow-lg dark:text-body-inverse",
         isCurrentHolder && "bg-gradient-to-b from-[#B38DF0] to-[#DED4ED]",
-        isPlaceholder && "bg-gradient-to-b from-gray-100 to-gray-200",
+        isPlaceholder &&
+          "bg-gradient-to-b from-gray-100 to-gray-200 opacity-50",
         className
       )}
     >
