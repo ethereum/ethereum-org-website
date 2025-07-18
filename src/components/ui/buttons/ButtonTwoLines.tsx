@@ -1,4 +1,4 @@
-import type { IconType } from "react-icons/lib"
+import type { LucideIcon } from "lucide-react"
 
 import { cn } from "@/lib/utils/cn"
 
@@ -12,7 +12,7 @@ import {
 } from "./Button"
 
 type CommonProps = {
-  icon: IconType
+  icon: LucideIcon | React.FC<React.SVGProps<SVGElement>>
   iconAlignment?: "left" | "right" | "start" | "end"
   /**
    * Reduced choices of the button variant.
@@ -36,76 +36,107 @@ type CommonProps = {
 
 type OmittedTypes = "variant" | "size" | "children"
 
-type ButtonTypeProps = CommonProps &
-  Omit<ButtonProps, OmittedTypes> & {
-    componentType: "button"
-  }
+type ButtonTwoLinesProps = Omit<ButtonProps, OmittedTypes> & CommonProps
 
-type ButtonLinkTypeProps = CommonProps &
-  Omit<ButtonLinkProps, OmittedTypes> & {
-    componentType: "link"
-  }
-
-type ButtonTwoLinesProps = ButtonTypeProps | ButtonLinkTypeProps
-
-const ButtonTwoLines = ({
-  iconAlignment = "start",
+/**
+ * Button that renders two styled lines of text
+ */
+export const ButtonTwoLines = ({
   className,
+  iconAlignment = "start",
   size = "md",
+  variant,
   ...props
 }: ButtonTwoLinesProps) => {
   const isIconLeft = ["left", "start"].includes(iconAlignment)
 
-  const commonClassStyles = cn(
-    isIconLeft ? "text-start justify-start" : "text-end justify-end",
-    size === "md" ? "py-4" : "py-2",
-    className
+  const [childProps, ownProps] = createSplitProps<ButtonTwoLinesProps>()(
+    { ...props, isIconLeft, size, variant },
+    [
+      "reverseTextOrder",
+      "mainText",
+      "helperText",
+      "variant",
+      "icon",
+      "isIconLeft",
+      "isSecondary",
+      "size",
+    ]
   )
 
-  if (props.componentType === "link") {
-    const { buttonProps, ...rest } = props
-    return (
-      <ButtonLink
-        className={commonClassStyles}
-        // size={size}
-        buttonProps={buttonProps}
-        {...rest}
-      >
-        <ChildContent
-          {...rest}
-          size={size}
-          isSecondary={buttonProps?.isSecondary}
-          isIconLeft={isIconLeft}
-        />
-      </ButtonLink>
-    )
-  }
   return (
-    <Button className={commonClassStyles} size={size} {...props}>
-      <ChildContent {...props} size={size} isIconLeft={isIconLeft} />
+    <Button
+      className={cn(
+        isIconLeft ? "justify-start text-start" : "justify-end text-end",
+        size === "md" ? "py-4" : "py-2",
+        className
+      )}
+      variant={variant}
+      {...ownProps}
+    >
+      <ChildContent {...childProps} />
     </Button>
   )
 }
 
-export default ButtonTwoLines
+type ButtonLinkTwoLinesProps = Omit<ButtonLinkProps, OmittedTypes> & CommonProps
 
-const ChildContent = (
-  props: Omit<ButtonTwoLinesProps, "iconAlignment" | "buttonProps"> & {
-    isIconLeft: boolean
-    isSecondary?: boolean
-  }
-) => {
-  const {
-    reverseTextOrder = false,
-    size,
-    mainText,
-    helperText,
-    icon: Icon,
-    isIconLeft,
-    isSecondary,
-    variant,
-  } = props
+/**
+ * ButtonLink that renders two styled lines of text
+ */
+export const ButtonLinkTwoLines = ({
+  className,
+  iconAlignment = "start",
+  size = "md",
+  variant,
+  ...props
+}: ButtonLinkTwoLinesProps) => {
+  const isIconLeft = ["left", "start"].includes(iconAlignment)
 
+  const [childProps, ownProps] = createSplitProps<ButtonLinkTwoLinesProps>()(
+    { ...props, isIconLeft, size, variant },
+    [
+      "reverseTextOrder",
+      "mainText",
+      "helperText",
+      "variant",
+      "icon",
+      "isIconLeft",
+      "isSecondary",
+      "size",
+    ]
+  )
+
+  return (
+    <ButtonLink
+      className={cn(
+        isIconLeft ? "justify-start text-start" : "justify-end text-end",
+        size === "md" ? "py-4" : "py-2",
+        className
+      )}
+      variant={variant}
+      {...ownProps}
+    >
+      <ChildContent {...childProps} />
+    </ButtonLink>
+  )
+}
+
+type ChildContentProps = Omit<CommonProps, "iconAlignment"> & {
+  isIconLeft: boolean
+  isSecondary?: boolean
+}
+
+const ChildContent = ({
+  helperText,
+  icon: Icon,
+  mainText,
+  reverseTextOrder = false,
+  size,
+  variant,
+  isIconLeft,
+  isSecondary,
+}: ChildContentProps) => {
   const ButtonIcon = () => (
     <Icon
       // TODO: Text size here should not be marked important after migration
@@ -140,4 +171,37 @@ const ChildContent = (
       {!isIconLeft && <ButtonIcon />}
     </>
   )
+}
+
+/**
+ * Split props ripped from Ark UI and simplified:
+ * https://github.com/chakra-ui/ark/blob/main/packages/react/src/utils/create-split-props.ts
+ */
+type EnsureKeys<ExpectedKeys extends (keyof ChildContentProps)[]> =
+  keyof ChildContentProps extends ExpectedKeys[number]
+    ? unknown
+    : `Missing required keys: ${Exclude<keyof ChildContentProps, ExpectedKeys[number]> & string}`
+
+function createSplitProps<ParentProps>() {
+  return <
+    Keys extends (keyof ChildContentProps)[],
+    Props = Required<ParentProps>,
+  >(
+    props: Props,
+    keys: Keys & EnsureKeys<Keys>
+  ) =>
+    (keys as string[]).reduce<
+      [ChildContentProps, Omit<Props, Extract<(typeof keys)[number], string>>]
+    >(
+      (previousValue, currentValue) => {
+        const [target, source] = previousValue
+        const key = currentValue
+        if (source[key] !== undefined) {
+          target[key] = source[key]
+        }
+        delete source[key]
+        return [target, source]
+      },
+      [{} as ChildContentProps, { ...props }]
+    )
 }

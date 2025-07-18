@@ -46,7 +46,7 @@ Assim que criar uma conta na Alchemy, você pode gerar uma chave de API criando 
 
 Precisamos de uma conta Ethereum para enviar e receber transações. Para este tutorial, usaremos uma carteira virtual no navegador, a MetaMask, para gerenciar o endereço da sua conta Ethereum. Se você quiser entender mais sobre como as transações no Ethereum funcionam, confira [esta página](/developers/docs/transactions/) na Fundação Ethereum.
 
-Você pode baixar e criar uma conta MetaMask gratuitamente [neste link](https://metamask.io/download.html). Quando você estiver criando uma conta, ou se você já tiver uma, certifique-se de mudar para a “Sepolia Test Network” no canto superior direito (para que não lidemos com dinheiro real).
+Você pode baixar e criar uma conta MetaMask gratuitamente [neste link](https://metamask.io/download). Quando você estiver criando uma conta, ou se você já tiver uma, certifique-se de mudar para a “Sepolia Test Network” no canto superior direito (para que não lidemos com dinheiro real).
 
 ![Defina Sepolia como sua rede](./metamask-goerli.png)
 
@@ -76,7 +76,7 @@ Agora que estamos dentro da pasta do nosso projeto, vamos usar npm init para ini
     npm init
 
 Não importa realmente como você responde às questões de instalação; aqui está o que utilizamos de referência:
-
+```json
     package name: (my-nft)
     version: (1.0.0)
     description: My first NFT!
@@ -87,7 +87,7 @@ Não importa realmente como você responde às questões de instalação; aqui e
     author:
     license: (ISC)
     About to write to /Users/thesuperb1/Desktop/my-nft/package.json:
-    
+
     {
       "name": "my-nft",
       "version": "1.0.0",
@@ -99,7 +99,7 @@ Não importa realmente como você responde às questões de instalação; aqui e
       "author": "",
       "license": "ISC"
     }
-
+```
 Aprove o package.json e estamos prontos para começar!
 
 ## Etapa 7: Instalar o [Hardhat](https://hardhat.org/getting-started/#overview) {#install-hardhat}
@@ -259,6 +259,7 @@ Até aqui, já adicionamos diversas dependências e plugins. Agora precisamos at
 
 Atualize seu hardhat.config.js para ficar assim:
 
+```js
     /**
     * @type import('hardhat/config').HardhatUserConfig
     */
@@ -276,6 +277,7 @@ Atualize seu hardhat.config.js para ficar assim:
           }
        },
     }
+```
 
 ## Etapa 14: Compilar nosso contrato {#compile-contract}
 

@@ -109,3 +109,4 @@ Los contratos Multisig (o multifirma) son cuentas de contratos inteligentes que 
 - [Coinbase: ¿qué es un contrato inteligente?](https://www.coinbase.com/learn/crypto-basics/what-is-a-smart-contract)
 - [Chainlink: ¿qué es un contrato inteligente?](https://chain.link/education/smart-contracts)
 - [Video: Fácil explicación de los contratos inteligentes](https://youtu.be/ZE2HxTmxfrI)
+- [Cyfrin Updraft: Plataforma de aprendizaje y auditoría Web3](https://updraft.cyfrin.io)

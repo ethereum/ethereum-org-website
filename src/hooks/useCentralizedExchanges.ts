@@ -1,7 +1,6 @@
 import { useState } from "react"
-import shuffle from "lodash/shuffle"
-import { useRouter } from "next/router"
-import { useTranslation } from "next-i18next"
+import { shuffle } from "lodash"
+import { useLocale } from "next-intl"
 
 // TODO: Remove unused?
 // import argent from "@/public/images/wallets/argent.png"
@@ -18,6 +17,7 @@ import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import exchangeData from "@/data/exchangesByCountry"
 
+import { useTranslation } from "@/hooks/useTranslation"
 import binance from "@/public/images/exchanges/binance.png"
 import bitbuy from "@/public/images/exchanges/bitbuy.png"
 import bitfinex from "@/public/images/exchanges/bitfinex.png"
@@ -303,7 +303,7 @@ const exchanges: ExchangeDetails = {
 }
 
 export const useCentralizedExchanges = () => {
-  const { locale } = useRouter()
+  const locale = useLocale()
   const { t } = useTranslation("page-get-eth")
   const [selectedCountry, setSelectedCountry] =
     useState<ExchangeByCountryOption | null>()

@@ -111,7 +111,7 @@ lang: el
 #### Πρόσφατη έρευνα {#recent-research-2}
 
 - [Arbitrum's δίκαιη εντολή για ακολουθίες](https://eprint.iacr.org/2021/1465)
-- [ethresear.ch επίπεδο 2](https://ethresear.ch/c/layer-2/32)
+- [Ethresear.ch Επίπεδο 2](https://ethresear.ch/c/layer-2/32)
 - [Οδικός χάρτης Rollup-centric](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698)
 - [L2Beat](https://l2beat.com/)
 
@@ -189,7 +189,7 @@ lang: el
 
 - [Εισαγωγή στα πορτοφόλια](/wallets/)
 - [Εισαγωγή στην ασφάλεια πορτοφολιού](/security/)
-- [Ασφάλεια ethresear.ch](https://ethresear.ch/tag/security)
+- [Ασφάλεια Ethresear.ch](https://ethresear.ch/tag/security)
 - [EIP-2938 Αφαιρετικότητα λογαριασμού](https://eips.ethereum.org/EIPS/eip-2938)
 - [EIP-4337 Αφαιρετικότητα λογαριασμού](https://eips.ethereum.org/EIPS/eip-4337)
 
@@ -358,7 +358,7 @@ lang: el
 
 ### Oracles {#oracles}
 
-Η Oracles εισάγει δεδομένα εκτός αλυσίδας στο blockchain με τρόπο χωρίς την ανάγκη άδειας και αποκεντρωμένο. Η λήψη αυτών των δεδομένων εντός της αλυσίδας επιτρέπει στις dapp να αντιδρούν σε καταστάσεις του πραγματικού κόσμου, όπως τις διακυμάνσεις τιμών σε οικονομικά στοιχεία του πραγματικού κόσμου, συμβάντα σε εφαρμογές εκτός αλυσίδας ή ακόμα και αλλαγές στον καιρό.
+Η Oracles εισάγει δεδομένα εκτός αλυσίδας στην κρυπτοαλυσίδα χωρίς την ανάγκη άδειας και αποκεντρωμένα. Η λήψη αυτών των δεδομένων στην αλυσίδα επιτρέπει στις εφαρμογές να αντιδρούν σε φαινόμενα του πραγματικού κόσμου, όπως οι διακυμάνσεις των τιμών σε στοιχεία του πραγματικού κόσμου, τα συμβάντα σε εφαρμογές εκτός αλυσίδας ή ακόμα και οι αλλαγές του καιρού.
 
 #### Απαιτούμενες γνώσεις {#background-reading-18}
 
@@ -377,11 +377,11 @@ lang: el
 
 - [Αναφορά εκμετάλλευσης Wormhole](https://blog.chainalysis.com/reports/wormhole-hack-february-2022/)
 - [Κατάλογος μεταθανάτιων παραβιάσεων με συμβόλαιο Ethereum](https://forum.openzeppelin.com/t/list-of-ethereum-smart-contracts-post-mortems/1191)
-- [Ειδήσεις Rekt](https://twitter.com/RektHQ?s=20\&t=3otjYQdM9Bqk8k3n1a1Adg)
+- [Ειδήσεις Rekt](https://twitter.com/RektHQ?s=20&t=3otjYQdM9Bqk8k3n1a1Adg)
 
 #### Πρόσφατη έρευνα {#recent-research-19}
 
-- [Εφαρμογές ethresear.ch](https://ethresear.ch/c/applications/18)
+- [Εφαρμογές Ethresear.ch](https://ethresear.ch/c/applications/18)
 
 ### Κατηγορία τεχνολογία {#technology-stack}
 

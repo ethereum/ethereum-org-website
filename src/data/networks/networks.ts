@@ -11,6 +11,7 @@ import ModeLogo from "@/public/images/layer-2/mode.png"
 import OptimismLogo from "@/public/images/layer-2/optimism.png"
 import ScrollLogo from "@/public/images/layer-2/scroll.png"
 import StarknetLogo from "@/public/images/layer-2/starknet.png"
+import TaikoLogo from "@/public/images/layer-2/taiko.png"
 import ZkSyncEraLogo from "@/public/images/layer-2/zksyncEra.jpg"
 
 export interface Rollup {
@@ -27,7 +28,7 @@ export interface Rollup {
   blockExplorerLink: string
   bridgeLink: string
   l2BeatLink: string
-  growThePieLink: string
+  growthepieLink: string
   feeToken: string[]
 }
 
@@ -50,14 +51,13 @@ export const layer2Data: Rollups = [
     chainName: "Arbitrum One",
     logo: ArbitrumLogo,
     networkType: "optimistic",
-    description:
-      "Arbitrum One is a general-purpose Optimistic Rollup built by Offchain Labs and governed by the Arbitrum DAO.",
+    description: "page-layer-2-arbitrum-description",
     website: "https://arbitrum.io/rollup",
     applicationsLink: "https://portal.arbitrum.io/projects",
     blockExplorerLink: "https://arbiscan.io/",
     bridgeLink: "https://bridge.arbitrum.io/",
     l2BeatLink: "https://l2beat.com/scaling/projects/arbitrum",
-    growThePieLink: "https://www.growthepie.xyz/chains/arbitrum",
+    growthepieLink: "https://www.growthepie.com/chains/arbitrum",
     feeToken: ["ETH"],
   },
   {
@@ -67,14 +67,13 @@ export const layer2Data: Rollups = [
     chainName: "Base",
     logo: BaseLogo,
     networkType: "optimistic",
-    description:
-      "Base is an Optimistic Rollup built with the OP Stack. It offers a low-cost and builder-friendly way for anyone, anywhere, to build onchain.",
+    description: "page-layer-2-base-description",
     website: "https://base.org/",
     applicationsLink: "https://base.org/ecosystem",
     blockExplorerLink: "https://basescan.org/",
     bridgeLink: "https://bridge.base.org/deposit",
     l2BeatLink: "https://l2beat.com/scaling/projects/base",
-    growThePieLink: "https://www.growthepie.xyz/chains/base",
+    growthepieLink: "https://www.growthepie.com/chains/base",
     feeToken: ["ETH"],
   },
   {
@@ -84,14 +83,13 @@ export const layer2Data: Rollups = [
     chainName: "OP Mainnet",
     logo: OptimismLogo,
     networkType: "optimistic",
-    description:
-      "OP Mainnet is an EVM-equivalent Optimistic Rollup. It aims to be fast, simple, and secure.",
+    description: "page-layer-2-optimism-description",
     website: "https://optimism.io/",
     applicationsLink: "https://optimism.io/apps",
     blockExplorerLink: "https://optimistic.etherscan.io/",
     bridgeLink: "https://app.optimism.io/",
     l2BeatLink: "https://l2beat.com/scaling/projects/optimism",
-    growThePieLink: "https://www.growthepie.xyz/chains/optimism",
+    growthepieLink: "https://www.growthepie.com/chains/optimism",
     feeToken: ["ETH"],
   },
   {
@@ -101,14 +99,13 @@ export const layer2Data: Rollups = [
     chainName: "Blast",
     logo: BlastImage,
     networkType: "optimistic",
-    description:
-      "Blast is an EVM-compatible Optimistic Rollup supporting native yield.",
+    description: "page-layer-2-blast-description",
     website: "https://blast.io/en",
     applicationsLink: "https://www.ethereum-ecosystem.com/apps?filters=blast",
     blockExplorerLink: "https://blastscan.io/",
     bridgeLink: "https://blast.io/en/bridge",
     l2BeatLink: "https://l2beat.com/scaling/projects/blast",
-    growThePieLink: "https://www.growthepie.xyz/chains/blast",
+    growthepieLink: "https://www.growthepie.com/chains/blast",
     feeToken: ["ETH"],
   },
   {
@@ -118,14 +115,13 @@ export const layer2Data: Rollups = [
     chainName: "zkSync Mainnet",
     logo: ZkSyncEraLogo,
     networkType: "zk",
-    description:
-      "ZKsync Era is a general-purpose ZK Rollup with full EVM compatibility.",
+    description: "page-layer-2-zksync2-description",
     website: "https://zksync.io/",
     applicationsLink: "https://zksync.io/ecosystem",
     blockExplorerLink: "https://explorer.zksync.io/",
     bridgeLink: "https://portal.zksync.io/bridge/",
     l2BeatLink: "https://l2beat.com/scaling/projects/zksync-era",
-    growThePieLink: "https://www.growthepie.xyz/chains/zksync-era",
+    growthepieLink: "https://www.growthepie.com/chains/zksync-era",
     feeToken: ["ETH"],
   },
   {
@@ -135,14 +131,13 @@ export const layer2Data: Rollups = [
     chainName: "Linea",
     logo: LineaLogo,
     networkType: "zk",
-    description:
-      "Linea is a ZK Rollup powered by Consensys zkEVM, designed to scale the Ethereum network.",
+    description: "page-layer-2-linea-description",
     website: "https://linea.build/",
     applicationsLink: "https://linea.build/apps",
     blockExplorerLink: "https://lineascan.build/",
     bridgeLink: "https://bridge.linea.build/",
     l2BeatLink: "https://l2beat.com/scaling/projects/linea",
-    growThePieLink: "https://www.growthepie.xyz/chains/linea",
+    growthepieLink: "https://www.growthepie.com/chains/linea",
     feeToken: ["ETH"],
   },
   {
@@ -152,14 +147,13 @@ export const layer2Data: Rollups = [
     chainName: "Scroll",
     logo: ScrollLogo,
     networkType: "zk",
-    description:
-      "Scroll is ZK Rollup that extends Ethereum’s capabilities through ZK tech and EVM compatibility.",
+    description: "page-layer-2-scroll-description",
     website: "https://scroll.io/",
     applicationsLink: "https://scroll.io/ecosystem",
     blockExplorerLink: "https://scrollscan.com",
     bridgeLink: "https://scroll.io/bridge",
     l2BeatLink: "https://l2beat.com/scaling/projects/scroll",
-    growThePieLink: "https://www.growthepie.xyz/chains/scroll",
+    growthepieLink: "https://www.growthepie.com/chains/scroll",
     feeToken: ["ETH"],
   },
   {
@@ -169,14 +163,13 @@ export const layer2Data: Rollups = [
     chainName: "Starknet",
     logo: StarknetLogo,
     networkType: "zk",
-    description:
-      "Starknet is a general purpose ZK Rollup based on STARKs and the Cairo VM.",
+    description: "page-layer-2-starknet-description",
     website: "https://starknet.io",
     applicationsLink: "https://www.starknet-ecosystem.com/",
     blockExplorerLink: "https://starkscan.co/",
     bridgeLink: "https://starkgate.starknet.io/",
     l2BeatLink: "https://l2beat.com/scaling/projects/starknet",
-    growThePieLink: "https://www.growthepie.xyz/chains/starknet",
+    growthepieLink: "https://www.growthepie.com/chains/starknet",
     feeToken: ["ETH", "STRK"],
   },
   {
@@ -186,14 +179,29 @@ export const layer2Data: Rollups = [
     chainName: "Mode",
     logo: ModeLogo,
     networkType: "optimistic",
-    description:
-      "Mode is an OP stack Optimistic Rollup building the AIFi economy.",
+    description: "page-layer-2-mode-description",
     website: "https://mode.network/",
     applicationsLink: "https://mode.network/ecosystem",
     blockExplorerLink: "https://explorer.mode.network/",
     bridgeLink: "https://app.mode.network/",
     l2BeatLink: "https://l2beat.com/scaling/projects/mode",
-    growThePieLink: "https://www.growthepie.xyz/chains/mode",
+    growthepieLink: "https://www.growthepie.com/chains/mode",
+    feeToken: ["ETH"],
+  },
+  {
+    l2beatID: "taiko",
+    growthepieID: "taiko",
+    name: "Taiko",
+    chainName: "Taiko Alethia",
+    logo: TaikoLogo,
+    networkType: "optimistic",
+    description: "page-layer-2-taiko-description",
+    website: "https://taiko.xyz",
+    applicationsLink: "https://taiko.xyz/ecosystem",
+    blockExplorerLink: "https://taikoscan.io/",
+    bridgeLink: "https://bridge.taiko.xyz/",
+    l2BeatLink: "https://l2beat.com/scaling/projects/taiko",
+    growthepieLink: "https://www.growthepie.com/chains/taiko",
     feeToken: ["ETH"],
   },
 ]

@@ -8,6 +8,8 @@ lang: hu
 
 A kriptopénzek iránti növekvő érdeklődés egyre nagyobb kockázatot jelent a csalók és a hackerek részéről. Ez a cikk néhány bevált gyakorlatot mutat be e kockázatok mérséklésére.
 
+**Ne feledje: Az ethereum.org sosem lép Önnel kapcsolatba. Ne válaszoljon azokra az e-mailekre, amelyek azt állítják, hogy az Ethereum hivatalos támogatói csapatától érkeznek.**
+
 <Divider />
 
 ## Kriptobiztonság 101 {#crypto-security}

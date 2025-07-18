@@ -1,5 +1,6 @@
 ---
-title: 去中心化自治組織 (DAO)
+title: 什麽是去中心化自治組織 (DAO)？
+metaTitle: 什麽是去中心化自治組織 (DAO)？ | 去中心化自治組織
 description: 以太坊上的去中心化自治組織概要
 lang: zh-tw
 template: use-cases
@@ -91,7 +92,7 @@ summaryPoint3: 一個將資產投入特定事業的安全場所。
 
 ### 知名案例 {#law-example}
 
-[CityDAO](https://citydao.io) – CityDAO 透過懷俄明州去中心化自治組織的相關法律購買了黃石國家公園附近 40 英畝的地。
+[CityDAO](https://citizen.citydao.io/) – CityDAO 透過懷俄明州去中心化自治組織的相關法律購買了黃石國家公園附近 40 英畝的地。
 
 ## 去中心化自治組織成員 {#dao-membership}
 
@@ -125,7 +126,7 @@ _通常用於協定和[去中心化應用程式](/glossary/#dapp)的去中心化
 
 #### 知名案例 {#reputation-example}
 
-[DXdao](https://DXdao.eth.limo) – DXdao 是一個全球主權聯合組織，自 2019 年以來一直致力於建構與治理去中心化協定和應用程式。 它利用信譽型治理和[全局共識](/glossary/#holographic-consensus)來協調和管理資金，這意味著沒有人可以透過金錢來影響其未來或治理決策。
+[DXdao](https://DXdao.eth.limo) – DXdao 是一個全球主權聯合組織，自 2019 年以來一直致力於建構與治理去中心化協定和應用程式。 它利用信譽型治理和[全息共識](/glossary/#holographic-consensus)來協調和管理資金，這意味著沒有人可以透過金錢來影響其未來或治理決策。
 
 ## 參與/建立去中心化自治組織 {#join-start-a-dao}
 
@@ -141,7 +142,7 @@ _通常用於協定和[去中心化應用程式](/glossary/#dapp)的去中心化
 - [使用 Tally 建立一個治理者型去中心化自治組織](https://www.tally.xyz/add-a-dao)
 - [建立由 Aragon 支援的去中心化自治組織](https://aragon.org/product)
 - [建立 colony](https://colony.io/)
-- [使用 DAOstack 全局共識建立去中心化自治組織](https://alchemy.daostack.io/daos/create)
+- [使用 DAOstack 全息共識建立去中心化自治組織](https://alchemy.daostack.io/daos/create)
 
 ## 延伸閱讀 {#further-reading}
 
@@ -152,7 +153,7 @@ _通常用於協定和[去中心化應用程式](/glossary/#dapp)的去中心化
 - [何謂去中心化自治組織？它有何用途？](https://daohaus.substack.com/p/-what-is-a-dao-and-what-is-it-for)– [DAOhaus](https://daohaus.club/)
 - [如何創立由去中心化自治組織支援的數位社群](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)
 - [什麼是去中心化自治組織？](https://coinmarketcap.com/alexandria/article/what-is-a-dao)– [Coinmarketcap](https://coinmarketcap.com)
-- [什麼是全局共識？](https://medium.com/daostack/holographic-consensus-part-1-116a73ba1e1c)- [DAOstack](https://daostack.io/)
+- [什麼是全息共識？](https://medium.com/daostack/holographic-consensus-part-1-116a73ba1e1c)- [DAOstack](https://daostack.io/)
 - [Vitalik，《去中心化自治組織並非法人團體：去中心化在自治組織裡的重要之處》](https://vitalik.eth.limo/general/2022/09/20/daos.html)
 - [去中心化自治組織、去中心化自治公司、去中心化應用程式等：不完整術語指引](https://blog.ethereum.org/2014/05/06/daos-dacs-das-and-more-an-incomplete-terminology-guide) - [以太坊部落格](https://blog.ethereum.org)
 
@@ -160,3 +161,7 @@ _通常用於協定和[去中心化應用程式](/glossary/#dapp)的去中心化
 
 - [什麼是加密貨幣世界的去中心化自治組織？](https://youtu.be/KHm0uUPqmVE)
 - [一個去中心化自治組織是否能建立一座城市？](https://www.ted.com/talks/scott_fitsimones_could_a_dao_build_the_next_great_city)– [TED](https://www.ted.com/)
+
+<Divider />
+
+<QuizWidget quizKey="daos" />

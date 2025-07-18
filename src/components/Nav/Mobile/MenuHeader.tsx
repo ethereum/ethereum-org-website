@@ -1,6 +1,6 @@
-import { useTranslation } from "next-i18next"
-
 import { SheetClose, SheetTitle } from "@/components/ui/sheet"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 const MenuHeader = () => {
   const { t } = useTranslation("common")

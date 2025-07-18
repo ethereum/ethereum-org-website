@@ -20,7 +20,11 @@ lang: it
 
 <GlossaryDefinition term="abi" />
 
+<GlossaryDefinition term="anti-sybil" />
+
 <GlossaryDefinition term="api" />
+
+<GlossaryDefinition term="apr" />
 
 <GlossaryDefinition term="asic" />
 
@@ -60,6 +64,8 @@ lang: it
 
 <GlossaryDefinition term="bootnode" />
 
+<GlossaryDefinition term="bridge" />
+
 <GlossaryDefinition term="bytecode" />
 
 <GlossaryDefinition term="byzantium-fork" />
@@ -91,6 +97,8 @@ lang: it
 <GlossaryDefinition term="contract-account" />
 
 <GlossaryDefinition term="contract-creation-transaction" />
+
+<GlossaryDefinition term="cryptography" />
 
 <GlossaryDefinition term="cryptoeconomics" />
 
@@ -158,6 +166,12 @@ lang: it
 
 <GlossaryDefinition term="erc" />
 
+<GlossaryDefinition term="erc-20" />
+
+<GlossaryDefinition term="erc-721" />
+
+<GlossaryDefinition term="erc-1155" />
+
 <GlossaryDefinition term="ethash" />
 
 <GlossaryDefinition term="ether" />
@@ -214,6 +228,8 @@ lang: it
 
 <GlossaryDefinition term="hash-rate" />
 
+<GlossaryDefinition term="holographic-consensus" />
+
 <GlossaryDefinition term="homestead" />
 
 <Divider />
@@ -226,7 +242,7 @@ lang: it
 
 <GlossaryDefinition term="immutable-deployed-code-problem" />
 
-<GlossaryDefinition term="internal-transactions" />
+<GlossaryDefinition term="internal-transaction" />
 
 <GlossaryDefinition term="issuance" />
 
@@ -236,6 +252,8 @@ lang: it
 
 <GlossaryDefinition term="kdf" />
 
+<GlossaryDefinition term="key" />
+
 <GlossaryDefinition term="keystore" />
 
 <GlossaryDefinition term="keccak-256" />
@@ -244,11 +262,17 @@ lang: it
 
 ## L {#section-l}
 
+<GlossaryDefinition term="layer-1" />
+
 <GlossaryDefinition term="layer-2" />
 
 <GlossaryDefinition term="library" />
 
 <GlossaryDefinition term="light-client" />
+
+<GlossaryDefinition term="liquidity" />
+
+<GlossaryDefinition term="liquidity-tokens" />
 
 <GlossaryDefinition term="lmd-ghost" />
 
@@ -258,17 +282,25 @@ lang: it
 
 <GlossaryDefinition term="mainnet" />
 
+<GlossaryDefinition term="max-fee-per-gas" />
+
 <GlossaryDefinition term="merkle-patricia-tree" />
+
+<GlossaryDefinition term="merkle-root" />
 
 <GlossaryDefinition term="message" />
 
 <GlossaryDefinition term="message-call" />
+
+<GlossaryDefinition term="mev" />
 
 <GlossaryDefinition term="mining" />
 
 <GlossaryDefinition term="miner" />
 
 <GlossaryDefinition term="mint" />
+
+<GlossaryDefinition term="multisig" />
 
 <Divider />
 
@@ -288,7 +320,11 @@ lang: it
 
 ## O {#section-o}
 
+<GlossaryDefinition term="off-chain" />
+
 <GlossaryDefinition term="ommer" />
+
+<GlossaryDefinition term="on-chain" />
 
 <GlossaryDefinition term="optimistic-rollup" />
 
@@ -302,15 +338,23 @@ lang: it
 
 <GlossaryDefinition term="peer-to-peer-network" />
 
+<GlossaryDefinition term="permissionless" />
+
 <GlossaryDefinition term="plasma" />
 
 <GlossaryDefinition term="private-key" />
 
 <GlossaryDefinition term="private-chain" />
 
+<GlossaryDefinition term="poap" />
+
 <GlossaryDefinition term="pos" />
 
 <GlossaryDefinition term="pow" />
+
+<GlossaryDefinition term="proto-danksharding" />
+
+<GlossaryDefinition term="public-goods" />
 
 <GlossaryDefinition term="public-key" />
 
@@ -335,6 +379,10 @@ lang: it
 ## S {#section-s}
 
 <GlossaryDefinition term="sha" />
+
+<GlossaryDefinition term="recovery-phrase" />
+
+<GlossaryDefinition term="sequencer" />
 
 <GlossaryDefinition term="serialization" />
 
@@ -374,6 +422,8 @@ lang: it
 
 <GlossaryDefinition term="supermajority" />
 
+<GlossaryDefinition term="sybil-attack" />
+
 <GlossaryDefinition term="syncing" />
 
 <GlossaryDefinition term="sync-committee" />
@@ -393,6 +443,8 @@ lang: it
 <GlossaryDefinition term="transaction" />
 
 <GlossaryDefinition term="transaction-fee" />
+
+<GlossaryDefinition term="trust-assumptions" />
 
 <GlossaryDefinition term="trustlessness" />
 
@@ -436,12 +488,12 @@ lang: it
 
 ## Fonti {#sources}
 
-_Fornito in parte da [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) di [Andreas M. Antonopoulos, Gavin Wood](https://ethereumbook.info) con CC-BY-SA_
+_Fornito in parte da [Padroneggiare Ethereum](https://github.com/ethereumbook/ethereumbook) di [Andreas M. Antonopoulos, Gavin Wood](https://ethereumbook.info), sotto CC-BY-SA_
 
 <Divider />
 
 ## Contribuisci a questa pagina {#contribute-to-this-page}
 
-Manca qualcosa? Hai trovato qualcosa di sbagliato? Aiutaci a migliorare contribuendo a questo glossario su GitHub!
+Ci siamo dimenticati qualcosa? Hai trovato errori? Aiutaci a migliorare contribuendo a questo glossario su GitHub!
 
-[Scopri di più su come contribuire](/contributing/adding-glossary-terms)
+[Maggiori informazioni su come contribuire](/contributing/adding-glossary-terms)

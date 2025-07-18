@@ -15,6 +15,7 @@ Sélectionnez le langage de programmation qui vous intéresse pour trouver des p
 - [Ethereum pour les développeurs Dart](/developers/docs/programming-languages/dart/)
 - [Ethereum pour les développeurs Delphi](/developers/docs/programming-languages/delphi/)
 - [Ethereum pour les développeurs .NET](/developers/docs/programming-languages/dot-net/)
+- [Ethereum pour les développeurs Elixir](/developers/docs/programming-languages/elixir/)
 - [Ethereum pour les développeurs Go](/developers/docs/programming-languages/golang/)
 - [Ethereum pour les développeurs Java](/developers/docs/programming-languages/java/)
 - [Ethereum pour les développeurs JavaScript](/developers/docs/programming-languages/javascript/)

@@ -6,7 +6,7 @@ lang: ro
 
 Contractele inteligente Ethereum sunt extrem de flexibile, capabile atât să dețină cantități mari de tokenuri (de multe ori mai mari de 1 miliard USD), cât și să ruleze o logică imuabilă pe baza codului de contract inteligent desfășurat anterior. Deși acest lucru a creat un ecosistem vibrant și creativ de contracte inteligente fără încredere, interconectate, este de asemenea, ecosistemul perfect pentru a atrage atacatorii care doresc să profite prin exploatarea vulnerabilității din contractele inteligente și a comportamentului neașteptat în Ethereum. Codul de contract inteligent, _de obicei_ nu poate fi schimbat ca să fie reparate defectele de securitate, activele care au fost furate din contracte inteligente sunt irecuperabile, iar activele furate sunt extrem de dificil de urmărit. Suma totală a valorii furate sau pierdute din cauza problemelor de contract inteligent este cu ușurință de 1 miliard de dolari. Unele dintre cele mai mari pierderi din cauza erorilor de codare a contractelor inteligente includ:
 
-- [Problema nr. 1 cu Parity Multi-Sign - 30 mil. de dolari pierduți](https://www.coindesk.com/30-million-ether-reported-stolen-parity-wallet-breach)
+- [Problema nr. 1 cu Parity Multi-Sign - 30 mil. de dolari pierduți](https://www.coindesk.com/markets/2017/07/19/30-million-ether-reported-stolen-due-to-parity-wallet-breach)
 - [Problema nr. 2 cu Parity Multi-Sign - 300 mil. de dolari blocați](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether)
 - [Piratare DAO, 3.6 mil. de dolari ETH! Peste 1 mld. de dolari în prețurile ETH de astăzi](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/)
 
@@ -34,7 +34,7 @@ Cel puțin:
 - Solidity nu emite NICIUN avertisment al compilatorului
 - Codul tău este bine documentat
 
-Sunt mult mai multe de spus despre procesul de dezvoltare, dar aceste elemente sunt un loc bun de început. Pentru mai multe elemente și explicații detaliate, consultă [lista de verificare a calității procesului furnizată de DeFiSafety](https://docs.defisafety.com/audit-process-documentation/process-quality-audit-process). [DefiSafety](https://defisafety.com/) este un serviciu public neoficial care publică diverse recenzii despre mari aplicații dapp Ethereun publice. O parte a sistemului de evaluare DeFiSafety include cât de bine aderă proiectul la această listă de verificare a calității procesului. Urmând aceste procese:
+Sunt mult mai multe de spus despre procesul de dezvoltare, dar aceste elemente sunt un loc bun de început. Pentru mai multe elemente și explicații detaliate, consultă [lista de verificare a calității procesului furnizată de DeFiSafety](https://docs.defisafety.com/audit-process-documentation/process-quality-audit-process). [DefiSafety](https://defisafety.com/) este un serviciu public neoficial care publică diverse recenzii despre mari aplicații dapp Ethereum publice. O parte a sistemului de evaluare DeFiSafety include cât de bine aderă proiectul la această listă de verificare a calității procesului. Urmând aceste procese:
 
 - Vei produce un cod mai sigur, prin teste automate, reproductibile
 - Vei permite revizuirea proiectului mai eficient de către auditori

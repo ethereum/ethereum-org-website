@@ -88,7 +88,6 @@ Il n'existe pas de bons outils pour mesurer le niveau de décentralisation des p
 
 Outils décentralisés sans KYC :
 
-- Züs (implémentant une édition non KYC)
 - Skynet
 - Arweave
 - Filecoin

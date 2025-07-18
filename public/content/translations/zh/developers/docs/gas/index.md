@@ -1,5 +1,6 @@
 ---
 title: 燃料和费用
+metaTitle: "以太坊燃料和费用：技术概览"
 description:
 lang: zh
 ---
@@ -122,6 +123,7 @@ Gas 对以太坊网络至关重要。 正是这种燃料使它能够运行，正
 如果想要监控燃料价格，用较少的费用发送以太币，你可以使用多种不同的工具，例如：
 
 - [Etherscan 区块浏览器](https://etherscan.io/gastracker)_交易燃料价格估算器。_
+- [ETH Gas Tracker](https://www.ethgastracker.com/) _监控与追踪以太坊和二层网络燃料价格，降低交易费用并节省开支_
 - [Blocknative ETH Gas Estimator](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) _支持类型 0 传统交易和类型 2 EIP-1559 交易的燃料估算 Chrome 插件。_
 - [Cryptoneur Gas Fees Calculator](https://www.cryptoneur.xyz/gas-fees-calculator) _按照你的当地货币计算主网、Arbitrum 和 Polygon 上进行的各类交易的燃料费。_
 

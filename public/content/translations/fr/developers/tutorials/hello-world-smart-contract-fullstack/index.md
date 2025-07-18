@@ -48,7 +48,7 @@ Cliquer sur **Create app**. Votre application apparaîtra dans le tableau ci-des
 
 Vous avez besoin d'un compte Ethereum pour envoyer et recevoir des transactions. Nous utiliserons MetaMask, un portefeuille virtuel intégré au navigateur permettant aux utilisateurs de gérer l'adresse de leur compte Ethereum.
 
-Vous pouvez télécharger et créer un compte MetaMask gratuitement [ici](https://metamask.io/download.html). Lorsque vous créez un compte, ou si vous en avez déjà un, assurez-vous de basculer sur « Réseau de test Goerli » en haut à droite (afin de ne pas utiliser d'argent réel).
+Vous pouvez télécharger et créer un compte MetaMask gratuitement [ici](https://metamask.io/download). Lorsque vous créez un compte, ou si vous en avez déjà un, assurez-vous de basculer sur « Réseau de test Goerli » en haut à droite (afin de ne pas utiliser d'argent réel).
 
 ### Étape 4 : Ajouter des ethers depuis un faucet {#step-4-add-ether-from-a-faucet}
 
@@ -317,7 +317,7 @@ npm install --save-dev @nomiclabs/hardhat-ethers "ethers@^5.0.0"
 
 
 
-### Étape 13 : Mettre à jour hardhat.config.js {#step-13-update-hardhat.configjs}
+### Étape 13 : Mettre à jour hardhat.config.js {#step-13-update-hardhat-configjs}
 
 A ce stade, nous avons ajouté plusieurs dépendances et plugins. Nous devons maintenant mettre à jour `hardhat.config.js` pour que notre projet les reconnaisse.
 
@@ -1363,7 +1363,7 @@ Si vous voulez en savoir plus sur le fonctionnement des transactions sur Ethereu
 
 #### Téléchargez MetaMask {#download-metamask}
 
-Vous pouvez télécharger et créer un compte MetaMask gratuitement [ici](https://metamask.io/download.html). Lorsque vous créez un compte, ou si vous en avez déjà un, assurez-vous de basculer vers le « Goerli Test Network » en haut à droite \(afin que nous ne traitions pas avec de l'argent réel\).
+Vous pouvez télécharger et créer un compte MetaMask gratuitement [ici](https://metamask.io/download). Lorsque vous créez un compte, ou si vous en avez déjà un, assurez-vous de basculer vers le « Goerli Test Network » en haut à droite \(afin que nous ne traitions pas avec de l'argent réel\).
 
 
 
@@ -1431,7 +1431,7 @@ export const connectWallet = async () => {
         <span>
           <p>
             {" "}
-            🦊 <a target="_blank" href={`https://metamask.io/download.html`}>
+            🦊 <a target="_blank" href={`https://metamask.io/download`}>
               You must install MetaMask, a virtual Ethereum wallet, in your
               browser.
             </a>
@@ -1537,7 +1537,7 @@ export const getCurrentWalletConnected = async () => {
         <span>
           <p>
             {" "}
-            🦊 <a target="_blank" href={`https://metamask.io/download.html`}>
+            🦊 <a target="_blank" href={`https://metamask.io/download`}>
               You must install MetaMask, a virtual Ethereum wallet, in your
               browser.
             </a>
@@ -1607,7 +1607,7 @@ function addWalletListener() {
     setStatus(
       <p>
         {" "}
-        🦊 <a target="_blank" href={`https://metamask.io/download.html`}>
+        🦊 <a target="_blank" href={`https://metamask.io/download`}>
           You must install MetaMask, a virtual Ethereum wallet, in your browser.
         </a>
       </p>
@@ -1619,7 +1619,7 @@ function addWalletListener() {
 
 Je parie que vous n'avez même pas besoin de notre aide pour comprendre ce qui se passe ici à ce stade, mais pour des raisons de rigueur, décomposons rapidement :
 
-- Premièrement, notre fonction vérifie si `window.ethereum` est activé \(ex. : MetaMask est installé\). 
+- Premièrement, notre fonction vérifie si `window.ethereum` est activé \(ex. : MetaMask est installé\).
     - Si ce n'est pas le cas, nous fixons simplement notre variable d'état `status` à une chaîne de caractères JSX qui invite l'utilisateur à installer MetaMask.
   - S'il est activé, nous configurons le listener `window.ethereum.on("accountsChanged")` à la ligne 3 qui écoute les changements d'état dans le portefeuille MetaMask, qui les incluent lorsque l'utilisateur connecte un compte additionnel à la dApp, change de compte ou déconnecte un compte. S'il existe au moins un compte connecté, la variable d'état `walletAddress` est mise à jour comme premier compte dans le tableau des comptes `accounts` retourné par l'écouteur. Sinon, `walletAdresse` est défini comme une chaîne de caractères vide.
 

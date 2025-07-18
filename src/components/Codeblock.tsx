@@ -1,5 +1,6 @@
+"use client"
 import React, { useState } from "react"
-import { useTranslation } from "next-i18next"
+import { Clipboard, ClipboardCheck } from "lucide-react"
 import Highlight, {
   defaultProps,
   Language,
@@ -9,7 +10,6 @@ import Prism from "prism-react-renderer/prism"
 
 // https://github.com/FormidableLabs/prism-react-renderer/tree/master#custom-language-support
 import CopyToClipboard from "@/components/CopyToClipboard"
-import Emoji from "@/components/Emoji"
 import { Flex } from "@/components/ui/flex"
 
 import { cn } from "@/lib/utils/cn"
@@ -17,6 +17,7 @@ import { cn } from "@/lib/utils/cn"
 import { LINES_BEFORE_COLLAPSABLE } from "@/lib/constants"
 
 import useColorModeValue from "@/hooks/useColorModeValue"
+import { useTranslation } from "@/hooks/useTranslation"
 ;(typeof global !== "undefined" ? global : window).Prism = Prism
 require("prismjs/components/prism-solidity")
 
@@ -39,10 +40,6 @@ const TopBarItem = ({
 
 const codeTheme = {
   light: {
-    plain: {
-      backgroundColor: "#f7f7f7", // background-highlight (gray-50)
-      color: "#6C24DF", // primary (purple-600)
-    },
     styles: [
       {
         style: { color: "#6c6783" },
@@ -111,10 +108,6 @@ const codeTheme = {
   },
   dark: {
     // Pulled from `defaultProps.theme` for potential customization
-    plain: {
-      backgroundColor: "#121212", // background-highlight (gray-900)
-      color: "#B38DF0", // primary (purple-400)
-    },
     styles: [
       {
         style: { color: "#6c6783" },
@@ -251,7 +244,7 @@ const Codeblock = ({
     /* Context: https://github.com/ethereum/ethereum-org-website/issues/6202 */
     <div className={cn("relative", className)} dir="ltr">
       <div
-        className="overflow-scroll rounded"
+        className="overflow-scroll rounded bg-background-highlight text-primary"
         style={{
           maxHeight: isCollapsed
             ? `calc((1.2rem * ${LINES_BEFORE_COLLAPSABLE}) + 4.185rem)`
@@ -310,16 +303,13 @@ const Codeblock = ({
                         <TopBarItem>
                           {!isCopied ? (
                             <>
-                              <Emoji text=":clipboard:" className="text-md" />{" "}
                               {t("copy")}
+                              <Clipboard className="mb-1 ms-1 inline-block size-[1em]" />
                             </>
                           ) : (
                             <>
-                              <Emoji
-                                text=":white_check_mark:"
-                                className="text-md"
-                              />{" "}
                               {t("copied")}
+                              <ClipboardCheck className="mb-1 ms-1 inline-block size-[1em]" />
                             </>
                           )}
                         </TopBarItem>

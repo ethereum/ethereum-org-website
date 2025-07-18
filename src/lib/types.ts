@@ -2,7 +2,6 @@ import type { Options } from "mdast-util-toc"
 import type { NextPage } from "next"
 import type { AppProps } from "next/app"
 import type { StaticImageData } from "next/image"
-import type { SSRConfig } from "next-i18next"
 import type { ReactElement, ReactNode } from "react"
 import type { ColumnDef } from "@tanstack/react-table"
 
@@ -28,7 +27,7 @@ import allQuestionData from "@/data/quizzes/questionBank"
 import { screens } from "./utils/screen"
 import { WALLETS_FILTERS_DEFAULT } from "./constants"
 
-import { layoutMapping } from "@/pages/[...slug]"
+import { layoutMapping } from "@/layouts"
 
 // Credit: https://stackoverflow.com/a/52331580
 export type Unpacked<T> = T extends (infer U)[] ? U : T
@@ -50,13 +49,14 @@ export type AppPropsWithLayout = AppProps & {
 
 export type Root = {
   children: ReactNode
-  contentIsOutdated: boolean
-  contentNotTranslated: boolean
   lastDeployLocaleTimestamp: string
 }
 
-export type BasePageProps = SSRConfig &
-  Pick<Root, "contentNotTranslated" | "lastDeployLocaleTimestamp">
+export type BasePageProps = Pick<Root, "lastDeployLocaleTimestamp">
+
+export type Params = {
+  locale: string
+}
 
 export type Frontmatter = RoadmapFrontmatter &
   UpgradeFrontmatter &
@@ -67,7 +67,7 @@ export type Frontmatter = RoadmapFrontmatter &
   TutorialFrontmatter
 
 export type LayoutMappingType = typeof layoutMapping
-export type Layout = keyof LayoutMappingType
+export type Layout = keyof LayoutMappingType | "docs" | "tutorial"
 
 export type Lang =
   | "en"
@@ -395,7 +395,7 @@ export type FileContributor = {
   login: string
   avatar_url: string
   html_url: string
-  date?: string
+  date: string
 }
 
 type FilePath = string
@@ -559,24 +559,39 @@ export type StatsBoxState = ValueOrError<string>
 export type GrowThePieMetricKey = "txCount" | "txCostsMedianUsd"
 
 export type GrowThePieData = Record<GrowThePieMetricKey, MetricReturnData> & {
-  dailyTxCosts: Record<string, number>
-  activeAddresses: Record<string, number>
+  dailyTxCosts: Record<string, number | undefined>
+  activeAddresses: Record<string, number | undefined>
 }
 
-export type MetricName =
+export type HomepageActivityMetric =
   | "ethPrice" // Use with `totalEthStaked` to convert ETH to USD
   | "totalEthStaked"
   | "totalValueLocked"
   | GrowThePieMetricKey
 
-export type AllMetricData = Record<MetricName, MetricReturnData>
+export type AllHomepageActivityData = Record<
+  HomepageActivityMetric,
+  MetricReturnData
+>
+
+export type EnterpriseActivityMetric =
+  | "txCount"
+  | "txCostsMedianUsd"
+  | "stablecoinMarketCap"
+  | "ethPrice" // Use with `totalEthStaked` to convert ETH to USD
+  | "totalEthStaked"
+
+export type AllEnterpriseActivityData = Record<
+  EnterpriseActivityMetric,
+  MetricReturnData
+>
 
 export type StatsBoxMetric = {
   label: string
   description?: string
   state: StatsBoxState
-  apiUrl: string
-  apiProvider: string
+  apiUrl?: string
+  apiProvider?: string
 }
 
 export type SimulatorNavProps = {
@@ -594,6 +609,8 @@ export type CommunityConference = {
   startDate: string
   endDate: string
   imageUrl: string
+  hackathon?: boolean
+  formattedDate?: string
 }
 
 // Chains
@@ -642,9 +659,19 @@ export type NonEVMChainName = "Starknet"
 
 export type ExtendedRollup = Rollup & {
   networkMaturity: MaturityLevel
-  txCosts: number
+  txCosts: number | undefined
   tvl: number
   walletsSupported: string[]
+  activeAddresses: number | undefined
+  launchDate: string | null
+  walletsSupportedCount: number
+  blockspaceData: {
+    nft: number
+    defi: number
+    social: number
+    token_transfers: number
+    unlabeled: number
+  } | null
 }
 
 // Wallets
@@ -809,6 +836,11 @@ export type WalletSupportedLanguageContextType = {
   setSupportedLanguage: (language: string) => void
 }
 
+export type FeedbackWidgetContextType = {
+  showFeedbackWidget: boolean
+  setShowFeedbackWidget: (showFeedbackWidget: boolean) => void
+}
+
 // Historical upgrades
 type NetworkUpgradeDetails = {
   blockNumber?: number
@@ -967,6 +999,11 @@ export type EventCardProps = {
   imageUrl?: string
 }
 
+export type PageWithContributorsProps = {
+  contributors: FileContributor[]
+  lastEditLocaleTimestamp: string
+}
+
 export type BreakpointKey = keyof typeof screens
 
 export type MaturityLevel =
@@ -975,3 +1012,63 @@ export type MaturityLevel =
   | "maturing"
   | "developing"
   | "emerging"
+
+// Tutorials
+export enum Skill {
+  BEGINNER = "beginner",
+  INTERMEDIATE = "intermediate",
+  ADVANCED = "advanced",
+}
+
+export interface IExternalTutorial {
+  url: string
+  title: string
+  description: string
+  author: string
+  authorGithub: string
+  tags: Array<string>
+  skillLevel: string
+  timeToRead?: string
+  lang: string
+  publishDate: string
+}
+
+export interface ITutorial {
+  href: string
+  title: string
+  description: string
+  author: string
+  tags?: Array<string>
+  skill?: Skill
+  timeToRead?: number | null
+  published?: string | null
+  lang: string
+  isExternal: boolean
+}
+
+type ValuesItem = {
+  label: string
+  content: string[]
+}
+
+export type ValuesPairing = {
+  legacy: ValuesItem
+  ethereum: ValuesItem
+}
+
+export type StablecoinType = "FIAT" | "CRYPTO" | "ASSET" | "ALGORITHMIC"
+
+export type PageParams = {
+  locale: string
+}
+
+export type SlugPageParams = PageParams & {
+  slug: string[]
+}
+
+export type TimeLeftLabel = { singular: string; plural: string }
+
+export type TimeLeftLabels = Record<
+  "days" | "hours" | "minutes" | "seconds",
+  TimeLeftLabel
+>

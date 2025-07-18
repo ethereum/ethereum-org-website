@@ -55,7 +55,7 @@ Os benefícios deste desenho de rede são:
 - reduzir a dependência em fornecedores centralizados
 - reduzir o uso de banda de internet
 - minimizar ou zerar a sincronia
-- Acessível a dispositivos com recursos limitados (<1 GB de RAM, <100 MB de espaço em disco, 1 CPU)
+- Acessível a dispositivos com recursos limitados (\<1 GB de RAM, \<100 MB de espaço em disco, 1 CPU)
 
 O diagrama abaixo mostra as funções dos clientes existentes que podem ser entregues pela Rede Portal, habilitando ao usuários acessar estas funções em dispositivos com muito poucos recursos.
 

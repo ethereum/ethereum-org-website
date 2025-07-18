@@ -123,7 +123,7 @@ Biz o‘tkazib yuborgan staking vositasi uchun taklif bormi? [Mahsulotni katalog
 
 <StakingGuides />
 
-## Frequently asked questions {#faq}
+## Tez-tez beriladigan savollar {#faq}
 
 Bular garovga qo‘yishning eng keng tarqalgan savollaridan bir nechtasi bo‘lib, ular haqida bilishga arziydi.
 

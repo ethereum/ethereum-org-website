@@ -5,7 +5,7 @@ lang: en
 sidebarDepth: 3
 ---
 
-Block explorers are your portal to Ethereum's data. You can use them to see real-time data on blocks, transactions, validators, accounts, and other on-chain activity.
+Block explorers are your portal to Ethereum's data. You can use them to see real-time data on blocks, transactions, validators, accounts, and other onchain activity.
 
 ## Prerequisites {#prerequisites}
 
@@ -95,7 +95,7 @@ Block explorers have become a common place for people to track the progress of t
 - Gas limit - The maximum numbers of gas units this transaction can consume
 - Gas used - The actual amount of gas units the transaction consumed
 - Gas price - The price set per gas unit
-- Nonce - The transaction number for the `from` address (bear in mind this starts at 0 so a nonce of `100` would actually be the 101st transaction submitted by this account
+- Nonce - The transaction number for the `from` address (bear in mind this starts at 0 so a nonce of `100` would actually be the 101st transaction submitted by this account)
 - Input data - Any extra information required by the transaction
 
 ### Accounts {#accounts}
@@ -238,9 +238,9 @@ The consensus layer top-level data includes the following:
 
 ## Block explorers {#block-explorers}
 
-- [Etherscan](https://etherscan.io/) - a block explorer you can use to fetch data for Ethereum Mainnet and Goerli Testnet
+- [Etherscan](https://etherscan.io/) - a block explorer you can use to fetch data for Ethereum Mainnet and Testnet
 - [3xpl](https://3xpl.com/ethereum) - an ad-free open-source Ethereum explorer which allows downloading its datasets
-- [Beaconcha.in](https://beaconcha.in/) - an open source block explorer for Ethereum Mainnet and Goerli Testnet
+- [Beaconcha.in](https://beaconcha.in/) - an open source block explorer for Ethereum Mainnet and Testnet
 - [Blockchair](https://blockchair.com/ethereum) - the most private Ethereum explorer. Also for sorting and filtering (mempool) data
 - [Etherchain](https://www.etherchain.org/) - a block explorer for the Ethereum Mainnet
 - [Ethplorer](https://ethplorer.io/) - a block explorer with a focus on tokens for the Ethereum Mainnet and the Kovan testnet

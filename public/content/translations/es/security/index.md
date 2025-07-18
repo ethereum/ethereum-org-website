@@ -8,6 +8,8 @@ lang: es
 
 El creciente interés en criptomonedas trae consigo un aumento de riesgo a causa de estafadores y hackers. Este artículo establece algunas de las mejores prácticas para mitigar estos riesgos.
 
+**Recuerde: Ningún miembro de ethereum.org se pondrá en contacto con usted. No conteste a mensajes que dicen provenir del soporte de Ethereum.**
+
 <Divider />
 
 ## Seguridad de criptomonedas 101 {#crypto-security}

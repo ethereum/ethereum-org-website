@@ -87,7 +87,7 @@ lang: zh-tw
 
 對於有關節點或用戶端設定、管理或移植的軟體產品：
 
-**支援哪些共識層用戶端（例如 Lighthouse、Teku、Nimbus 和 Prysm）？**
+**支援哪些共識層用戶端（例如 Lighthouse、Teku、Nimbus、Prysm、Grandine）？**
 
 - 支援哪些用戶端？ 使用者可以自己選擇嗎？
 - 這用來確定產品的「多樣用戶端」評分。

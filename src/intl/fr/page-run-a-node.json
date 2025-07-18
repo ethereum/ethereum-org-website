@@ -111,6 +111,7 @@
   "page-run-a-node-sovereignty-1": "Un portefeuille Ethereum vous permet de prendre et de garder le contrôle de vos actifs numériques en conservant les clés privées de vos adresses. Toutefois, ces clés ne vous indiquent pas l'état actuel de la blockchain, comme le solde de votre portefeuille.",
   "page-run-a-node-sovereignty-2": "Par défaut, les portefeuilles Ethereum interagissent généralement avec un nœud de tierce partie, telle qu'Infura ou Alchemy, lorsque vous consultez vos soldes. Exécuter votre propre nœud vous permet d'avoir votre propre copie de la blockchain Ethereum.",
   "page-run-a-node-title": "Exécuter un nœud",
+  "page-run-a-node-meta-title": "Comment faire tourner un nœud Ethereum",
   "page-run-a-node-voice-your-choice-title": "Exprimez votre voix",
   "page-run-a-node-voice-your-choice-preview": "Ne cédez pas le contrôle en cas de fourche.",
   "page-run-a-node-voice-your-choice-1": "En cas de fourche de la chaîne (deux chaînes émergeant avec deux ensembles de règles différents), exécuter votre propre nœud vous permet de choisir l'ensemble de règles vous soutenez. C'est à vous de mettre à niveau votre nœud vers les nouvelles règles et de soutenir les changements proposés, ou non.",
