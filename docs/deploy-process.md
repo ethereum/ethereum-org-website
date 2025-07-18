@@ -6,7 +6,7 @@ Ethereum.org follows a [Gitflow](https://www.atlassian.com/git/tutorials/compari
 
 The current process for deployment involves a 2-day QA cycle to test a release candidate. A release candidate is created on Tuesday, will have 2 days of testing, and then released to production on Thursday assuming no blocking bugs are found.
 
-The typical workflow will be as follows:
+The typical workflow is as follows:
 
 1. A branch is created off of the `dev` branch, and pull requests for the branch are created into `dev`
 2. Pull requests are reviewed, and merged into `dev`
