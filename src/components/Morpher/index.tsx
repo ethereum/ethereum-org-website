@@ -19,7 +19,7 @@ const Morpher = ({
 
   const morphTimeoutRef = useRef<NodeJS.Timeout | null>(null)
   const morphIntervalRef = useRef<NodeJS.Timeout | null>(null)
-  const counterRef = useRef(0)
+  const counterRef = useRef(1)
   const wordsRef = useRef(words)
   const currentTextRef = useRef(currentText)
   const isAnimatingRef = useRef(false)
@@ -117,10 +117,10 @@ const Morpher = ({
     // If reduced motion is preferred, show static text cycling
     if (prefersReducedMotion) {
       morphIntervalRef.current = setInterval(() => {
-        counterRef.current = (counterRef.current + 1) % wordsRef.current.length
         const nextWord = wordsRef.current[counterRef.current]
         setCurrentText(nextWord)
         currentTextRef.current = nextWord
+        counterRef.current = (counterRef.current + 1) % wordsRef.current.length
       }, 3000)
     } else {
       // Defer animation start by 2 seconds to improve initial page load

@@ -134,11 +134,11 @@ const RoadmapPage = () => {
             from its current form into a fully scaled, maximally resilient
             platform.
           </p>
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4">
+          <div className="grid grid-cols-1 items-stretch gap-6 md:grid-cols-2 xl:grid-cols-4">
             {changesComingItems.map((item) => (
               <div
                 key={item.title}
-                className="bg-roadmap-card-gradient flex h-full flex-col gap-4 rounded-3xl border p-6"
+                className="bg-roadmap-card-gradient flex flex-col gap-4 rounded-3xl border p-6"
               >
                 <div className="flex flex-row items-center justify-between gap-4">
                   <h3 className="m-0">{item.title}</h3>

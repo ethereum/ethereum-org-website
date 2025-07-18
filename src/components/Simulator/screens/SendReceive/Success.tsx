@@ -103,7 +103,10 @@ export const Success = ({
                   data-testid="success-icon"
                 >
                   <Check
-                    className={cn(ICON_SIZE, "size-[1em] -rotate-[10deg]")}
+                    className={cn(
+                      ICON_SIZE,
+                      "size-[1em] -rotate-[10deg] stroke-1"
+                    )}
                   />
                 </motion.div>
               )}
