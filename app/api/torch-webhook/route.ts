@@ -12,9 +12,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ message: "Invalid webhook ID" }, { status: 401 })
   }
 
-  // revalidate the 10 years page
-  revalidatePath("/10years")
-  console.log("Revalidated 10 years page")
+  revalidatePath("/en/10years/")
 
   return NextResponse.json({ message: "OK" })
 }

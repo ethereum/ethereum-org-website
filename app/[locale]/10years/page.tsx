@@ -45,14 +45,13 @@ import { fetch10YearStories } from "@/lib/api/fetch10YearStories"
 import { fetchTorchHolders } from "@/lib/api/fetchTorchHolders"
 import {
   getCurrentHolderAddress,
-  getHolders,
+  getHolderEvents,
+  getTransferEvents,
   isAddressFiltered,
   isTorchBurned,
   TorchHolder,
 } from "@/lib/torch"
 import TenYearLogo from "@/public/images/10-year-anniversary/10-year-logo.png"
-
-export const dynamic = "force-static"
 
 // In seconds
 const REVALIDATE_TIME = BASE_TIME_UNIT * 1
@@ -115,7 +114,16 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   } catch (error) {
     console.error("Error fetching torch data:", error)
   }
-  const torchHolders = await getHolders(torchHolderMap)
+  const transferEvents = await getTransferEvents()
+  const torchHoldersEvents = await getHolderEvents(
+    torchHolderMap,
+    transferEvents
+  )
+
+  // Filter out events where the address is in the filtered list
+  const torchHolders = torchHoldersEvents.filter(
+    (holder) => !isAddressFiltered(holder.address)
+  )
 
   return (
     <MainArticle className="mx-auto flex w-full flex-col items-center">

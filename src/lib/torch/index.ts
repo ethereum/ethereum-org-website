@@ -1,4 +1,5 @@
 import blockies from "ethereum-blockies-base64"
+import { unstable_cache as cache } from "next/cache"
 import type { Address } from "viem"
 import { getPublicClient } from "@wagmi/core"
 
@@ -25,7 +26,7 @@ export const isAddressFiltered = (address: string): boolean => {
 type TransferEvent = {
   from: Address
   to: Address
-  blockNumber: bigint
+  blockNumber: number
   transactionHash: string
   timestamp: number
 }
@@ -46,59 +47,63 @@ export type TorchHolderEvent = TorchHolder & {
   event: TransferEvent
 }
 
-export const getTransferEvents = async () => {
-  const publicClient = getPublicClient(config)
+export const getTransferEvents = cache(
+  async () => {
+    const publicClient = getPublicClient(config)
 
-  // Get the current block number to ensure consistent results
-  const currentBlock = await publicClient.getBlockNumber()
+    // Get the current block number to ensure consistent results
+    const currentBlock = await publicClient.getBlockNumber()
 
-  // Get Transfer events from the contract
-  // ERC721 Transfer event signature: Transfer(address indexed from, address indexed to, uint256 indexed tokenId)
-  const logs = await publicClient.getLogs({
-    address: TORCH_CONTRACT_ADDRESS,
-    event: {
-      type: "event",
-      name: "Transfer",
-      inputs: [
-        { name: "from", type: "address", indexed: true },
-        { name: "to", type: "address", indexed: true },
-        { name: "tokenId", type: "uint256", indexed: true },
-      ],
-    },
-    args: {
-      tokenId: BigInt(1), // Torch NFT token ID is always 1
-    },
-    fromBlock: BigInt(TORCH_BLOCK_NUMBER) || "earliest",
-    toBlock: currentBlock,
-  })
+    // Get Transfer events from the contract
+    // ERC721 Transfer event signature: Transfer(address indexed from, address indexed to, uint256 indexed tokenId)
+    const logs = await publicClient.getLogs({
+      address: TORCH_CONTRACT_ADDRESS,
+      event: {
+        type: "event",
+        name: "Transfer",
+        inputs: [
+          { name: "from", type: "address", indexed: true },
+          { name: "to", type: "address", indexed: true },
+          { name: "tokenId", type: "uint256", indexed: true },
+        ],
+      },
+      args: {
+        tokenId: BigInt(1), // Torch NFT token ID is always 1
+      },
+      fromBlock: BigInt(TORCH_BLOCK_NUMBER) || "earliest",
+      toBlock: currentBlock,
+    })
 
-  // Process logs and get timestamps
-  const transferEvents: TransferEvent[] = []
+    // Process logs and get timestamps
+    const transferEvents: TransferEvent[] = []
 
-  for (const log of logs) {
-    if (log.args?.from && log.args?.to) {
-      // Get block details to get timestamp
-      const block = await publicClient.getBlock({
-        blockNumber: log.blockNumber,
-      })
+    for (const log of logs) {
+      if (log.args?.from && log.args?.to) {
+        // Get block details to get timestamp
+        const block = await publicClient.getBlock({
+          blockNumber: log.blockNumber,
+        })
 
-      transferEvents.push({
-        from: log.args.from as Address,
-        to: log.args.to as Address,
-        blockNumber: log.blockNumber,
-        transactionHash: log.transactionHash,
-        timestamp: Number(block.timestamp),
-      })
+        transferEvents.push({
+          from: log.args.from as Address,
+          to: log.args.to as Address,
+          blockNumber: Number(log.blockNumber),
+          transactionHash: log.transactionHash,
+          timestamp: Number(block.timestamp),
+        })
+      }
     }
-  }
 
-  // Sort by block number (oldest first)
-  transferEvents.sort((a, b) => Number(a.blockNumber - b.blockNumber))
+    // Sort by block number (oldest first)
+    transferEvents.sort((a, b) => a.blockNumber - b.blockNumber)
 
-  return transferEvents
-}
+    return transferEvents
+  },
+  ["torch-transfer-events"],
+  { revalidate: 86400 }
+)
 
-const getHolderEvents = async (
+export const getHolderEvents = async (
   torchHolderMap: Record<string, TorchHolderMetadata>,
   transferEvents: TransferEvent[]
 ) => {
@@ -135,47 +140,38 @@ const getHolderEvents = async (
   })
 }
 
-export const getHolders = async (
-  torchHolderMap: Record<string, TorchHolderMetadata>
-) => {
-  const transferEvents = await getTransferEvents()
-  const torchHoldersEvents = await getHolderEvents(
-    torchHolderMap,
-    transferEvents
-  )
+export const getCurrentHolderAddress = cache(
+  async () => {
+    const publicClient = getPublicClient(config)
 
-  // Filter out events where the address is in the filtered list
-  const filteredHoldersEvents = torchHoldersEvents.filter(
-    (holder) => !isAddressFiltered(holder.address)
-  )
+    // If not burned, get the current holder
+    const currentHolderAddress = (await publicClient.readContract({
+      address: TORCH_CONTRACT_ADDRESS,
+      abi: TORCH_ABI,
+      functionName: "currentHolder",
+    })) as Address
 
-  return filteredHoldersEvents
-}
+    return currentHolderAddress
+  },
+  ["torch-current-holder"],
+  { revalidate: 86400 }
+)
 
-export const getCurrentHolderAddress = async () => {
-  const publicClient = getPublicClient(config)
+export const isTorchBurned = cache(
+  async () => {
+    const publicClient = getPublicClient(config)
 
-  // If not burned, get the current holder
-  const currentHolderAddress = (await publicClient.readContract({
-    address: TORCH_CONTRACT_ADDRESS,
-    abi: TORCH_ABI,
-    functionName: "currentHolder",
-  })) as Address
+    const isBurned = (await publicClient.readContract({
+      address: TORCH_CONTRACT_ADDRESS,
+      abi: TORCH_ABI,
+      functionName: "isBurned",
+    })) as boolean
 
-  return currentHolderAddress
-}
-
-export const isTorchBurned = async () => {
-  const publicClient = getPublicClient(config)
-
-  const isBurned = (await publicClient.readContract({
-    address: TORCH_CONTRACT_ADDRESS,
-    abi: TORCH_ABI,
-    functionName: "isBurned",
-  })) as boolean
-
-  return isBurned
-}
+    return isBurned
+  },
+  ["torch-burned-status"],
+  { revalidate: 86400 }
+)
 
 export const getBlockieImage = (address: Address) => {
   return blockies(address)
