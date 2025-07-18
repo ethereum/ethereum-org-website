@@ -1,5 +1,6 @@
 {
-  "address": "0x75ea850738cDA8ed1F141f1822bCbf785Ac4cC89",
+  "address": "0x887fee6B0793FF23721458EB04d073633B25eAB9",
+  "blockNumber": 8789337,
   "abi": [
     {
       "inputs": [
@@ -12,11 +13,6 @@
           "internalType": "string",
           "name": "baseURI",
           "type": "string"
-        },
-        {
-          "internalType": "address[]",
-          "name": "initialWhitelist",
-          "type": "address[]"
         }
       ],
       "stateMutability": "nonpayable",
@@ -153,32 +149,6 @@
         {
           "indexed": true,
           "internalType": "address",
-          "name": "account",
-          "type": "address"
-        }
-      ],
-      "name": "AddressRemovedFromWhitelist",
-      "type": "event"
-    },
-    {
-      "anonymous": false,
-      "inputs": [
-        {
-          "indexed": true,
-          "internalType": "address",
-          "name": "account",
-          "type": "address"
-        }
-      ],
-      "name": "AddressWhitelisted",
-      "type": "event"
-    },
-    {
-      "anonymous": false,
-      "inputs": [
-        {
-          "indexed": true,
-          "internalType": "address",
           "name": "owner",
           "type": "address"
         },
@@ -248,19 +218,6 @@
         {
           "indexed": true,
           "internalType": "address",
-          "name": "burner",
-          "type": "address"
-        }
-      ],
-      "name": "TorchBurned",
-      "type": "event"
-    },
-    {
-      "anonymous": false,
-      "inputs": [
-        {
-          "indexed": true,
-          "internalType": "address",
           "name": "from",
           "type": "address"
         },
@@ -279,19 +236,6 @@
       ],
       "name": "Transfer",
       "type": "event"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "account",
-          "type": "address"
-        }
-      ],
-      "name": "addToWhitelist",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
     },
     {
       "inputs": [
@@ -328,19 +272,6 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "address[]",
-          "name": "addresses",
-          "type": "address[]"
-        }
-      ],
-      "name": "batchWhitelist",
-      "outputs": [],
-      "stateMutability": "nonpayable",
       "type": "function"
     },
     {
@@ -462,19 +393,6 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "account",
-          "type": "address"
-        }
-      ],
-      "name": "removeFromWhitelist",
-      "outputs": [],
-      "stateMutability": "nonpayable",
       "type": "function"
     },
     {
@@ -651,25 +569,6 @@
       "name": "transferOwnership",
       "outputs": [],
       "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "",
-          "type": "address"
-        }
-      ],
-      "name": "whitelisted",
-      "outputs": [
-        {
-          "internalType": "bool",
-          "name": "",
-          "type": "bool"
-        }
-      ],
-      "stateMutability": "view",
       "type": "function"
     }
   ]
