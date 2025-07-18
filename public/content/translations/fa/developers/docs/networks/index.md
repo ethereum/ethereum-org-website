@@ -60,7 +60,7 @@ lang: fa
 - [فاست کیف پول Coinbase‏ | Sepolia](https://coinbase.com/faucets/ethereum-sepolia-faucet)
 - [فاست Alchemy Sepolia](https://sepoliafaucet.com/)
 - [فاست Infura Sepolia](https://www.infura.io/faucet)
-- [فاست Chainstack Sepolia](https://faucet.chainstack.com/sepolia-faucet)
+- [فاست Chainstack Sepolia](https://faucet.chainstack.com/sepolia-testnet-faucet)
 - [فاست اتریوم اکوسیستم](https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia)
 
 #### Hoodi_(پشتیبانی طولانی مدت)_ {#hoodi}

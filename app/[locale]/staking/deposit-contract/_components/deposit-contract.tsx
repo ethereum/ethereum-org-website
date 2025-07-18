@@ -1,7 +1,7 @@
 "use client"
-
 import { useEffect, useState } from "react"
 import makeBlockie from "ethereum-blockies-base64"
+import { Clipboard, ClipboardCheck } from "lucide-react"
 
 import type { ChildOnlyProp, TranslationKey } from "@/lib/types"
 
@@ -375,16 +375,13 @@ const DepositContractPage = () => {
                         <CopyButton>
                           {!isCopied ? (
                             <>
-                              <Emoji text=":clipboard:" className="text-md" />
                               {t("page-staking-deposit-contract-copy")}
+                              <Clipboard className="ms-1" />
                             </>
                           ) : (
                             <>
-                              <Emoji
-                                text=":white_check_mark:"
-                                className="text-md"
-                              />
                               {t("page-staking-deposit-contract-copied")}
+                              <ClipboardCheck className="ms-1" />
                             </>
                           )}
                         </CopyButton>

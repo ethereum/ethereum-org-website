@@ -1,9 +1,9 @@
 "use client"
 
 import { useState } from "react"
-import { FaLink, FaXTwitter } from "react-icons/fa6"
-import { MdCheck } from "react-icons/md"
+import { Check, Link } from "lucide-react"
 
+import Twitter from "@/components/icons/twitter.svg"
 import { Button } from "@/components/ui/buttons/Button"
 import {
   Dialog,
@@ -50,12 +50,12 @@ const ShareModal = () => {
           >
             {hasCopied ? (
               <>
-                <MdCheck />
+                <Check />
                 <p className="text-sm">Copied!</p>
               </>
             ) : (
               <>
-                <FaLink />
+                <Link />
                 <p className="text-sm">Share</p>
               </>
             )}
@@ -65,7 +65,7 @@ const ShareModal = () => {
             className="flex flex-col hover:bg-background-highlight"
             onClick={() => shareOnTwitter()}
           >
-            <FaXTwitter />
+            <Twitter />
             <p className="text-sm">Twitter</p>
           </Button>
         </div>
