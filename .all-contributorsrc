@@ -12901,6 +12901,15 @@
       "contributions": [
         "maintenance"
       ]
+    },
+    {
+      "login": "imbarty",
+      "name": "barty",
+      "avatar_url": "https://avatars.githubusercontent.com/u/191963641?v=4",
+      "profile": "https://github.com/imbarty",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
