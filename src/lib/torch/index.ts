@@ -155,13 +155,6 @@ export const getHolders = async (
 export const getCurrentHolderAddress = async () => {
   const publicClient = getPublicClient(config)
 
-  // First check if the torch is burned
-  const isBurned = await isTorchBurned()
-
-  if (isBurned) {
-    return "0x0000000000000000000000000000000000000000" as Address
-  }
-
   // If not burned, get the current holder
   const currentHolderAddress = (await publicClient.readContract({
     address: TORCH_CONTRACT_ADDRESS,
@@ -186,6 +179,41 @@ export const isTorchBurned = async () => {
 
 export const getBlockieImage = (address: Address) => {
   return blockies(address)
+}
+
+export const getAvatarImage = (holder: TorchHolderMetadata | null) => {
+  if (!holder) {
+    return ""
+  }
+
+  // If there's a Twitter handle, use Twitter profile image
+  if (holder.twitter && holder.twitter.trim() !== "") {
+    const twitterHandle = extractTwitterHandle(holder.twitter)
+    if (twitterHandle) {
+      return `https://unavatar.io/twitter/${twitterHandle}`
+    }
+  }
+
+  // Otherwise, fall back to blockie
+  return getBlockieImage(holder.address)
+}
+
+const extractTwitterHandle = (twitterUrl: string): string | null => {
+  // Handle various Twitter URL formats
+  const patterns = [
+    /twitter\.com\/([^/?]+)/, // twitter.com/username
+    /x\.com\/([^/?]+)/, // x.com/username
+    /^@?([a-zA-Z0-9_]{1,15})$/, // @username or username
+  ]
+
+  for (const pattern of patterns) {
+    const match = twitterUrl.match(pattern)
+    if (match) {
+      return match[1]
+    }
+  }
+
+  return null
 }
 
 export const formatAddress = (address: Address) => {

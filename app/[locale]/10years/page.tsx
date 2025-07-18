@@ -43,7 +43,12 @@ import {
 import { fetch10YearEvents } from "@/lib/api/fetch10YearEvents"
 import { fetch10YearStories } from "@/lib/api/fetch10YearStories"
 import { fetchTorchHolders } from "@/lib/api/fetchTorchHolders"
-import { getCurrentHolderAddress, getHolders } from "@/lib/torch"
+import {
+  getCurrentHolderAddress,
+  getHolders,
+  isAddressFiltered,
+  isTorchBurned,
+} from "@/lib/torch"
 import TenYearLogo from "@/public/images/10-year-anniversary/10-year-logo.png"
 
 export const dynamic = "force-static"
@@ -96,11 +101,13 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
       {} as Record<string, (typeof allTorchHolders)[0]>
     )
 
+  const isBurned = await isTorchBurned()
   const currentHolderAddress = await getCurrentHolderAddress()
-  const isBurned =
-    currentHolderAddress === "0x0000000000000000000000000000000000000000"
+  const isFiltered = isAddressFiltered(currentHolderAddress)
 
-  const currentHolder = torchHolderMap[currentHolderAddress.toLowerCase()]
+  const currentHolder = isFiltered
+    ? null
+    : torchHolderMap[currentHolderAddress.toLowerCase()]
   const torchHolders = await getHolders(torchHolderMap)
 
   return (

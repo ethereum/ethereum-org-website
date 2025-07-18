@@ -20,7 +20,7 @@ import Curved10YearsText from "./10y.svg"
 import {
   formatAddress,
   getAddressEtherscanUrl,
-  getBlockieImage,
+  getAvatarImage,
   type TorchHolderMetadata,
 } from "@/lib/torch"
 
@@ -71,7 +71,7 @@ const CurrentTorchHolderCard = ({
           <div className="flex items-start gap-4">
             <Avatar className="h-19 w-19 !shadow-none">
               <AvatarImage
-                src={getBlockieImage(currentHolder.address)}
+                src={getAvatarImage(currentHolder)}
                 alt={`Avatar for ${currentHolder.name || currentHolder.address}`}
               />
               <AvatarFallback>
@@ -97,20 +97,18 @@ const CurrentTorchHolderCard = ({
           </div>
         ) : isBurned ? (
           <div className="flex flex-col items-center gap-4 text-center">
-            <div className="text-2xl font-bold text-red-500">
+            <div className="text-xl font-bold text-red-500">
               🔥 Torch Burned 🔥
             </div>
-            <div className="text-lg">
+            <div>
               The Ethereum Torch has been burned to celebrate the 10-year
               anniversary!
             </div>
           </div>
         ) : (
           <div className="flex flex-col items-center gap-4 text-center">
-            <div className="text-2xl font-bold text-gray-500">
-              🤐 Unknown Bearer
-            </div>
-            <div className="text-lg">
+            <div className="text-xl font-bold">🤐 Unknown Bearer</div>
+            <div>
               The current torch bearer&apos;s identity is not publicly
               available.
             </div>

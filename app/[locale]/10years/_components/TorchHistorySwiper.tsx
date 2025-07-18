@@ -12,7 +12,7 @@ import {
 
 import TorchHistoryCard from "./TorchHistoryCard"
 
-import { getBlockieImage, type TorchHolderEvent } from "@/lib/torch"
+import { getAvatarImage, type TorchHolderEvent } from "@/lib/torch"
 
 type TorchHistorySwiperProps = {
   holders: TorchHolderEvent[]
@@ -87,7 +87,7 @@ const TorchHistorySwiper = ({
               avatar={
                 card.isPlaceholder
                   ? "/images/10-year-anniversary/torch-cover.webp"
-                  : getBlockieImage(card.address)
+                  : getAvatarImage(card)
               }
               from={card.event.timestamp}
               to={card.event.timestamp}
