@@ -290,15 +290,22 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
       >
         <div className="p-8">
           <div className="relative">
-            <div className="flex items-center justify-center pt-12 sm:pt-24">
+            <div className="relative flex items-center justify-center pt-12 sm:pt-24">
               <video
-                className="h-[380px] w-[380px] object-cover"
+                className="h-[380px] w-[380px]"
                 src="/videos/torch.mp4"
                 aria-label="Torch video"
                 autoPlay
                 loop
                 muted
-                poster="/images/10-year-anniversary/torch-cover.webp"
+                poster="/images/10-year-anniversary/torch-cover.png"
+              />
+              <Image
+                src="/images/10-year-anniversary/torch-overlay.png"
+                alt="Torch overlay"
+                className="absolute top-0 h-[380px] w-[380px] translate-y-12 sm:translate-y-24"
+                width={380}
+                height={380}
               />
             </div>
             {/* Curved text */}

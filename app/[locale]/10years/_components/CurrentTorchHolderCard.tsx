@@ -50,7 +50,7 @@ const CurrentTorchHolderCard = ({
               autoPlay
               loop
               muted
-              poster="/images/10-year-anniversary/torch-cover.webp"
+              poster="/images/10-year-anniversary/torch-cover.png"
             />
           </div>
 
