@@ -205,6 +205,10 @@ export const formatDate = (timestamp: number) => {
   return `${month} ${day}, ${time}`
 }
 
-export const getEtherscanUrl = (txHash: string) => {
+export const getTxEtherscanUrl = (txHash: string) => {
   return `https://etherscan.io/tx/${txHash}`
+}
+
+export const getAddressEtherscanUrl = (address: string) => {
+  return `https://etherscan.io/address/${address}`
 }

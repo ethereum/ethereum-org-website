@@ -11,7 +11,7 @@ import { Tag } from "@/components/ui/tag"
 
 import { cn } from "@/lib/utils/cn"
 
-import { formatDate, getEtherscanUrl } from "@/lib/torch"
+import { formatDate, getTxEtherscanUrl } from "@/lib/torch"
 
 interface TorchHistoryCardProps {
   name: string
@@ -76,7 +76,7 @@ const TorchHistoryCard: React.FC<TorchHistoryCardProps> = ({
               From {formatDate(from)} to {formatDate(to)}
             </div>
             <BaseLink
-              href={getEtherscanUrl(transactionHash)}
+              href={getTxEtherscanUrl(transactionHash)}
               className="text-xs"
             >
               View on Etherscan

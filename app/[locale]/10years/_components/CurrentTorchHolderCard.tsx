@@ -19,6 +19,7 @@ import Curved10YearsText from "./10y.svg"
 
 import {
   formatAddress,
+  getAddressEtherscanUrl,
   getBlockieImage,
   type TorchHolderMetadata,
 } from "@/lib/torch"
@@ -88,7 +89,7 @@ const CurrentTorchHolderCard = ({
               {/* Verify onchain link */}
               <BaseLink
                 className="mt-2 text-xs"
-                href={`https://sepolia.etherscan.io/address/${currentHolder.address}`}
+                href={getAddressEtherscanUrl(currentHolder.address)}
               >
                 View on Etherscan
               </BaseLink>
