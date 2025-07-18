@@ -97,7 +97,11 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     )
 
   const currentHolderAddress = await getCurrentHolderAddress()
-  const currentHolder = torchHolderMap[currentHolderAddress.toLowerCase()]
+  const isBurned =
+    currentHolderAddress === "0x0000000000000000000000000000000000000000"
+  const currentHolder = isBurned
+    ? null
+    : torchHolderMap[currentHolderAddress.toLowerCase()]
   const torchHolders = await getHolders(torchHolderMap)
 
   return (

@@ -1,19 +1,21 @@
 import blockies from "ethereum-blockies-base64"
 import type { Address } from "viem"
-import { sepolia } from "viem/chains"
+import { hardhat } from "viem/chains"
 import { createConfig, getPublicClient, http } from "@wagmi/core"
 
 import Torch from "@/data/Torch.json"
 
 const TORCH_CONTRACT_ADDRESS = Torch.address as Address
 const TORCH_ABI = Torch.abi
+const TORCH_BLOCK_NUMBER = Torch.blockNumber
 
 export const config = createConfig({
-  chains: [sepolia],
+  chains: [hardhat],
   transports: {
-    [sepolia.id]: http(
-      `https://eth-sepolia.g.alchemy.com/v2/${process.env.ALCHEMY_API_KEY}`
-    ),
+    // [sepolia.id]: http(
+    //   `https://eth-sepolia.g.alchemy.com/v2/${process.env.ALCHEMY_API_KEY}`
+    // ),
+    [hardhat.id]: http("http://127.0.0.1:8545"),
   },
 })
 
@@ -41,82 +43,31 @@ export type TorchHolderEvent = TorchHolder & {
   event: TransferEvent
 }
 
-const mockLogs = [
-  {
-    eventName: "Transfer",
-    args: {
-      from: "0x0000000000000000000000000000000000000000",
-      to: "0x0e972f52C49e353Dc88C9f7F8e200c1cFE0d27b7",
-      tokenId: BigInt(1),
-    },
-    address: "0xbcb60ff26412d7a27dde9b61f0655a207eae80ed",
-    blockHash:
-      "0x204c90926c265abbe78d321cbfa2e97a2185aa3804a46cab3960fe15652a90de",
-    blockNumber: BigInt(8605647),
-    data: "0x",
-    logIndex: 121,
-    removed: false,
-    topics: [
-      "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef",
-      "0x0000000000000000000000000000000000000000000000000000000000000000",
-      "0x0000000000000000000000000e972f52c49e353dc88c9f7f8e200c1cfe0d27b7",
-      "0x0000000000000000000000000000000000000000000000000000000000000001",
-    ],
-    transactionHash:
-      "0xb549dc9540ec1c1146a5b9b7c6f9d62a207db8d1ebeb049687a74c53239fe323",
-    transactionIndex: 87,
-  },
-  {
-    eventName: "Transfer",
-    args: {
-      from: "0x0e972f52C49e353Dc88C9f7F8e200c1cFE0d27b7",
-      to: "0x7bc34Ec96a2da5FbC3c0cA0530d989821241516D",
-      tokenId: BigInt(1),
-    },
-    address: "0xbcb60ff26412d7a27dde9b61f0655a207eae80ed",
-    blockHash:
-      "0xfc9c50c6a7180a425e92d1774a88ee58dacb92a2a4554a013ec72ef14acfbe98",
-    blockNumber: BigInt(8610141),
-    data: "0x",
-    logIndex: 30,
-    removed: false,
-    topics: [
-      "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef",
-      "0x0000000000000000000000000e972f52c49e353dc88c9f7f8e200c1cfe0d27b7",
-      "0x0000000000000000000000007bc34ec96a2da5fbc3c0ca0530d989821241516d",
-      "0x0000000000000000000000000000000000000000000000000000000000000001",
-    ],
-    transactionHash:
-      "0xac1ff7552b6844dfcd46424d7ed6a5bd32316cccd88bc280721f0ece96501219",
-    transactionIndex: 19,
-  },
-]
-
 export const getTransferEvents = async () => {
   const publicClient = getPublicClient(config)
 
+  // Get the current block number to ensure consistent results
+  const currentBlock = await publicClient.getBlockNumber()
+
   // Get Transfer events from the contract
   // ERC721 Transfer event signature: Transfer(address indexed from, address indexed to, uint256 indexed tokenId)
-  //   const logs = await publicClient.getLogs({
-  //     address: TORCH_CONTRACT_ADDRESS,
-  //     event: {
-  //       type: "event",
-  //       name: "Transfer",
-  //       inputs: [
-  //         { name: "from", type: "address", indexed: true },
-  //         { name: "to", type: "address", indexed: true },
-  //         { name: "tokenId", type: "uint256", indexed: true },
-  //       ],
-  //     },
-  //     args: {
-  //       tokenId: BigInt(1), // Torch NFT token ID is always 1
-  //     },
-  //     fromBlock: "earliest",
-  //     toBlock: "latest",
-  //   })
-
-  // TODO: Remove mock logs
-  const logs = mockLogs
+  const logs = await publicClient.getLogs({
+    address: TORCH_CONTRACT_ADDRESS,
+    event: {
+      type: "event",
+      name: "Transfer",
+      inputs: [
+        { name: "from", type: "address", indexed: true },
+        { name: "to", type: "address", indexed: true },
+        { name: "tokenId", type: "uint256", indexed: true },
+      ],
+    },
+    args: {
+      tokenId: BigInt(1), // Torch NFT token ID is always 1
+    },
+    fromBlock: BigInt(TORCH_BLOCK_NUMBER) || "earliest",
+    toBlock: currentBlock,
+  })
 
   // Process logs and get timestamps
   const transferEvents: TransferEvent[] = []
@@ -150,8 +101,32 @@ const getHolderEvents = async (
 ) => {
   return transferEvents.map<TorchHolderEvent>((event) => {
     const holderMetadata = torchHolderMap[event.to.toLowerCase()]
+
+    // If the torch was transferred to the zero address (burned), create a special holder entry
+    if (event.to === "0x0000000000000000000000000000000000000000") {
+      return {
+        address: event.to,
+        name: "Burned",
+        role: "Torch has been burned",
+        twitter: "",
+        event,
+      }
+    }
+
+    // If we have metadata for this holder, use it
+    if (holderMetadata) {
+      return {
+        ...holderMetadata,
+        event,
+      }
+    }
+
+    // If no metadata found, create a fallback entry
     return {
-      ...holderMetadata,
+      address: event.to,
+      name: `Unknown Holder (${formatAddress(event.to)})`,
+      role: "Previous torch holder",
+      twitter: "",
       event,
     }
   })
@@ -166,16 +141,20 @@ export const getHolders = async (
     transferEvents
   )
 
-  return torchHoldersEvents.map((event) => {
-    return {
-      ...event,
-    }
-  })
+  return torchHoldersEvents
 }
 
 export const getCurrentHolderAddress = async () => {
   const publicClient = getPublicClient(config)
 
+  // First check if the torch is burned
+  const isBurned = await isTorchBurned()
+
+  if (isBurned) {
+    return "0x0000000000000000000000000000000000000000" as Address
+  }
+
+  // If not burned, get the current holder
   const currentHolderAddress = (await publicClient.readContract({
     address: TORCH_CONTRACT_ADDRESS,
     abi: TORCH_ABI,
@@ -183,6 +162,18 @@ export const getCurrentHolderAddress = async () => {
   })) as Address
 
   return currentHolderAddress
+}
+
+export const isTorchBurned = async () => {
+  const publicClient = getPublicClient(config)
+
+  const isBurned = (await publicClient.readContract({
+    address: TORCH_CONTRACT_ADDRESS,
+    abi: TORCH_ABI,
+    functionName: "isBurned",
+  })) as boolean
+
+  return isBurned
 }
 
 export const getBlockieImage = (address: Address) => {

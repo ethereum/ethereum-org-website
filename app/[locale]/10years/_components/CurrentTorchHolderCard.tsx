@@ -24,7 +24,7 @@ import {
 } from "@/lib/torch"
 
 interface CurrentTorchHolderCardProps {
-  currentHolder: TorchHolderMetadata
+  currentHolder: TorchHolderMetadata | null
   className?: string
 }
 
@@ -93,7 +93,15 @@ const CurrentTorchHolderCard = ({
             </div>
           </div>
         ) : (
-          <div className="text-lg">No current holder</div>
+          <div className="flex flex-col items-center gap-4 text-center">
+            <div className="text-2xl font-bold text-red-500">
+              🔥 Torch Burned 🔥
+            </div>
+            <div className="text-lg">
+              The Ethereum Torch has been burned to celebrate the 10-year
+              anniversary!
+            </div>
+          </div>
         )}
       </CardContent>
       <CardFooter className="justify-center pt-4">
