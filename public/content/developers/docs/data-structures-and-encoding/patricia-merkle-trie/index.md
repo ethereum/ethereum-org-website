@@ -33,11 +33,11 @@ There is a difference between looking something up in the 'trie' and the underly
 
 The update and delete operations for radix tries can be defined as follows:
 
-```
-    def update(node_hash, path, value):
-        curnode = db.get(node_hash) if node_hash else [ NULL ] * 17
+```python
+    def update(node, path, value):
+        curnode = db.get(node) if node else [NULL] * 17
         newnode = curnode.copy()
-        if path == '':
+        if path == "":
             newnode[-1] = value
         else:
             newindex = update(curnode[path[0]], path[1:], value)
@@ -45,13 +45,13 @@ The update and delete operations for radix tries can be defined as follows:
         db.put(hash(newnode), newnode)
         return hash(newnode)
 
-    def delete(node_hash, path):
-        if node_hash is NULL:
+    def delete(node, path):
+        if node is NULL:
             return NULL
         else:
             curnode = db.get(node_hash)
             newnode = curnode.copy()
-            if path == '':
+            if path == "":
                 newnode[-1] = NULL
             else:
                 newindex = delete(curnode[path[0]], path[1:])
@@ -104,60 +104,63 @@ The flagging of both _odd vs. even remaining partial path length_ and _leaf vs. 
 
 For even remaining path length (`0` or `2`), another `0` "padding" nibble will always follow.
 
-```
+```python
     def compact_encode(hexarray):
         term = 1 if hexarray[-1] == 16 else 0
-        if term: hexarray = hexarray[:-1]
+        if term:
+            hexarray = hexarray[:-1]
         oddlen = len(hexarray) % 2
         flags = 2 * term + oddlen
         if oddlen:
             hexarray = [flags] + hexarray
         else:
             hexarray = [flags] + [0] + hexarray
-        // hexarray now has an even length whose first nibble is the flags.
-        o = ''
-        for i in range(0,len(hexarray),2):
-            o += chr(16 * hexarray[i] + hexarray[i+1])
+        # hexarray now has an even length whose first nibble is the flags.
+        o = ""
+        for i in range(0, len(hexarray), 2):
+            o += chr(16 * hexarray[i] + hexarray[i + 1])
         return o
 ```
 
 Examples:
 
-```
-    > [ 1, 2, 3, 4, 5, ...]
+```python
+    > [1, 2, 3, 4, 5, ...]
     '11 23 45'
-    > [ 0, 1, 2, 3, 4, 5, ...]
+    > [0, 1, 2, 3, 4, 5, ...]
     '00 01 23 45'
-    > [ 0, f, 1, c, b, 8, 10]
+    > [0, f, 1, c, b, 8, 10]
     '20 0f 1c b8'
-    > [ f, 1, c, b, 8, 10]
+    > [f, 1, c, b, 8, 10]
     '3f 1c b8'
 ```
 
 Here is the extended code for getting a node in the Merkle Patricia trie:
 
-```
-    def get_helper(node_hash,path):
-        if path == []: return node_hash
-        if node_hash == '': return ''
-        curnode = rlp.decode(node_hash if len(node_hash) < 32 else db.get(node_hash))
+```python
+    def get_helper(node, path):
+        if path == []:
+            return node
+        if node == "":
+            return ""
+        curnode = rlp.decode(node if len(node) < 32 else db.get(node))
         if len(curnode) == 2:
             (k2, v2) = curnode
             k2 = compact_decode(k2)
-            if k2 == path[:len(k2)]:
-                return get(v2, path[len(k2):])
+            if k2 == path[: len(k2)]:
+                return get(v2, path[len(k2) :])
             else:
-                return ''
+                return ""
         elif len(curnode) == 17:
-            return get_helper(curnode[path[0]],path[1:])
+            return get_helper(curnode[path[0]], path[1:])
 
-    def get(node_hash,path):
+    def get(node, path):
         path2 = []
         for i in range(len(path)):
             path2.push(int(ord(path[i]) / 16))
             path2.push(ord(path[i]) % 16)
         path2.push(16)
-        return get_helper(node_hash,path2)
+        return get_helper(node, path2)
 ```
 
 ### Example Trie {#example-trie}
@@ -205,7 +208,7 @@ There is one global state trie, and it is updated every time a client processes 
 
 Storage trie is where _all_ contract data lives. There is a separate storage trie for each account. To retrieve values at specific storage positions at a given address the storage address, integer position of the stored data in the storage, and the block ID are required. These can then be passed as arguments to the `eth_getStorageAt` defined in the JSON-RPC API, e.g. to retrieve the data in storage slot 0 for address `0x295a70b2de5e3953354a6a8344e616ed314d7251`:
 
-```
+```bash
 curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": ["0x295a70b2de5e3953354a6a8344e616ed314d7251", "0x0", "latest"], "id": 1}' localhost:8545
 
 {"jsonrpc":"2.0","id":1,"result":"0x00000000000000000000000000000000000000000000000000000000000004d2"}
@@ -214,7 +217,7 @@ curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": [
 
 Retrieving other elements in storage is slightly more involved because the position in the storage trie must first be calculated. The position is calculated as the `keccak256` hash of the address and the storage position, both left-padded with zeros to a length of 32 bytes. For example, the position for the data in storage slot 1 for address `0x391694e7e0b0cce554cb130d723a9d27458f9298` is:
 
-```
+```python
 keccak256(decodeHex("000000000000000000000000391694e7e0b0cce554cb130d723a9d27458f9298" + "0000000000000000000000000000000000000000000000000000000000000001"))
 ```
 
@@ -229,7 +232,7 @@ undefined
 
 The `path` is therefore `keccak256(<6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9>)`. This can now be used to retrieve the data from the storage trie as before:
 
-```
+```bash
 curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": ["0x295a70b2de5e3953354a6a8344e616ed314d7251", "0x6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9", "latest"], "id": 1}' localhost:8545
 
 {"jsonrpc":"2.0","id":1,"result":"0x000000000000000000000000000000000000000000000000000000000000162e"}
@@ -241,7 +244,7 @@ Note: The `storageRoot` for an Ethereum account is empty by default if it's not 
 
 There is a separate transactions trie for every block, again storing `(key, value)` pairs. A path here is: `rlp(transactionIndex)` which represents the key that corresponds to a value determined by:
 
-```
+```python
 if legacyTx:
   value = rlp(tx)
 else:
