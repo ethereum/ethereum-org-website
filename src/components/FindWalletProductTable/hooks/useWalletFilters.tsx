@@ -4,6 +4,7 @@ import { FilterOption } from "@/lib/types"
 
 import FindWalletLanguageSelectInput from "@/components/FindWalletProductTable/FindWalletLanguageSelectInput"
 import Layer2SelectInput from "@/components/FindWalletProductTable/Layer2SelectInput"
+import PrivacyIcon from "@/components/icons/privacy.svg"
 import {
   BrowserIcon,
   BuyCryptoIcon,
@@ -866,6 +867,33 @@ export const useWalletFilters = (): FilterOption[] => {
                     eventCategory: "WalletFilterSidebar",
                     eventAction: `${t("page-find-wallet-social-recovery")}`,
                     eventName: `social_recovery ${newInputState}`,
+                  })
+                  updateFilterState(filterIndex, itemIndex, newInputState)
+                }}
+              />
+            )
+          },
+          options: [],
+        },
+        {
+          filterKey: "privacy",
+          filterLabel: t("page-find-wallet-privacy"),
+          description: t("page-find-wallet-privacy-desc"),
+          inputState: false,
+          input: (filterIndex, itemIndex, inputState, updateFilterState) => {
+            return (
+              <SwitchFilterInput
+                Icon={PrivacyIcon}
+                label={t("page-find-wallet-privacy")}
+                description={t("page-find-wallet-privacy-desc")}
+                filterIndex={filterIndex}
+                itemIndex={itemIndex}
+                inputState={inputState}
+                updateFilterState={(filterIndex, itemIndex, newInputState) => {
+                  trackCustomEvent({
+                    eventCategory: "WalletFilterSidebar",
+                    eventAction: `${t("page-find-wallet-privacy")}`,
+                    eventName: `privacy ${newInputState}`,
                   })
                   updateFilterState(filterIndex, itemIndex, newInputState)
                 }}

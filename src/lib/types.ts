@@ -721,6 +721,7 @@ export type WalletData = {
   documentation: string
   mpc?: boolean
   new_to_crypto?: boolean
+  privacy?: boolean
 }
 
 export type Wallet = WalletData & {
