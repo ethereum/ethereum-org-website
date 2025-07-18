@@ -12910,6 +12910,16 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "futreall",
+      "name": "futreall",
+      "avatar_url": "https://avatars.githubusercontent.com/u/86553580?v=4",
+      "profile": "https://github.com/futreall",
+      "contributions": [
+        "translation",
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
