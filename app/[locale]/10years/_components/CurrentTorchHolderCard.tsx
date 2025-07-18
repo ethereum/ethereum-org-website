@@ -37,7 +37,10 @@ const CurrentTorchHolderCard = ({
 }: CurrentTorchHolderCardProps) => {
   return (
     <Card
-      className={cn("w-full overflow-hidden rounded-3xl shadow-xl", className)}
+      className={cn(
+        "w-full overflow-hidden rounded-3xl bg-background-highlight shadow-xl",
+        className
+      )}
     >
       <CardHeader className="bg-[#161A36]">
         <div className="relative">

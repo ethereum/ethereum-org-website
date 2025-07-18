@@ -72,12 +72,12 @@ const TorchHistoryCard: React.FC<TorchHistoryCardProps> = ({
         <div>{role}</div>
         {!isPlaceholder && (
           <>
-            <div className="text-xs text-body-medium">
+            <div className="text-xs text-gray-500">
               From {formatDate(from)} to {formatDate(to)}
             </div>
             <BaseLink
               href={getTxEtherscanUrl(transactionHash)}
-              className="text-xs"
+              className="text-xs text-purple-600 hover:text-purple-500"
             >
               View on Etherscan
             </BaseLink>
