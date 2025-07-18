@@ -46,6 +46,7 @@ sidebarDepth: 2
 - [节点地图](https://etherscan.io/nodetracker)由 Etherscan 区块浏览器提供
 - [以太坊节点](https://ethernodes.org/)由 Bitfly 提供
 - [Nodewatch](https://www.nodewatch.io/) 由 Chainsafe 提供，爬取共识节点
+- [Monitoreth](https://monitoreth.io/) — 由 MigaLabs 开发的分布式网络监测工具
 
 ## 节点类型 {#node-types}
 
@@ -190,13 +191,14 @@ EthereumJS 执行客户端 (EthereumJS) 是用 TypeScript 编写的，由许多�
 
 有多种共识客户端（以前称为“以太坊 2 客户端”）支持[共识升级](/roadmap/beacon-chain/)。 它们负责所有共识相关的逻辑，包括分叉选择算法、处理认证与管理[权益证明](/developers/docs/consensus-mechanisms/pos)奖励及惩罚。
 
-| 客户端                                                           | 语言         | 操作系统：               | 网络                                          |
-| ------------------------------------------------------------- | ---------- | ------------------- | ------------------------------------------- |
-| [Lighthouse](https://lighthouse.sigmaprime.io/)               | Rust       | Linux、Windows、macOS | 信标链、Goerli、Pyrmont、Sepolia、Ropsten 等        |
-| [Lodestar](https://lodestar.chainsafe.io/)                    | TypeScript | Linux、Windows、macOS | 信标链、Goerli、Sepolia、Ropsten 等                |
-| [Nimbus](https://nimbus.team/)                                | Nim        | Linux、Windows、macOS | 信标链、Goerli、Sepolia、Ropsten 等                |
-| [Prysm](https://docs.prylabs.network/docs/getting-started/)   | Go         | Linux、Windows、macOS | 信标链、Gnosis、Goerli、Pyrmont、Sepolia、Ropsten 等 |
-| [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) | Java       | Linux、Windows、macOS | 信标链、Gnosis、Goerli、Sepolia、Ropsten 等         |
+| 客户端                                                           | 语言         | 操作系统：               | 网络                                   |
+| ------------------------------------------------------------- | ---------- | ------------------- | ------------------------------------ |
+| [Lighthouse](https://lighthouse.sigmaprime.io/)               | Rust       | Linux、Windows、macOS | 信标链、Holesky、Pyrmont、Sepolia 等        |
+| [Lodestar](https://lodestar.chainsafe.io/)                    | TypeScript | Linux、Windows、macOS | 信标链、Holesky、Sepolia 等                |
+| [Nimbus](https://nimbus.team/)                                | Nim        | Linux、Windows、macOS | 信标链、Holesky、Sepolia 等                |
+| [Prysm](https://docs.prylabs.network/docs/getting-started/)   | Go         | Linux、Windows、macOS | 信标链、Gnosis、Holesky、Pyrmont、Sepolia 等 |
+| [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) | Java       | Linux、Windows、macOS | 信标链、Gnosis、Holesky、Sepolia 等         |
+| [Grandine](https://docs.grandine.io/)                         | Rust语言     | Linux、Windows、macOS | 信标链、Holesky、Sepolia 等                |
 
 ### Lighthouse {#lighthouse}
 
@@ -229,6 +231,12 @@ Teku 是最早的信标链创世客户端之一。 除了常规目标（安全�
 Teku 提供了非常灵活的部署选项。 信标节点和验证者客户端可以作为单个进程一起运行，这对于单独质押人来说非常方便；或者在处理复杂的质押操作时，节点也可以各自运行。 此外，Teku 实现了与 [Web3Signer](https://github.com/ConsenSys/web3signer/) 的完全互操作性，用于为密钥安全性签名并提供罚没防范措施。
 
 Teku 用 Java 语言编写，并依照 Apache 2.0 获得许可。 它由 ConsenSys 的 Protocols 团队开发，该团队还要对 Besu 和 Web3Signer 负责。 在 [Teku 相关文档](https://docs.teku.consensys.net/en/latest/)中了解更多信息。
+
+### Grandine {#grandine}
+
+Grandine 是一种依据 GPL-3.0 许可的共识客户端实现，使用 Rust 语言编写。 它由 Grandine 核心团队维护，快速、高效且轻量。 它适合各种类型的质押者，从运行低资源设备（如树莓派设备）的单独质押者，到运行数万个验证者的机构质押者。
+
+你可以在 [Grandine 手册](https://docs.grandine.io/)中找到相关文档
 
 ## 同步模式 {#sync-modes}
 

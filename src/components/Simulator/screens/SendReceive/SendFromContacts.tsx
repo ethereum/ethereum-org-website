@@ -1,12 +1,11 @@
-import { PiMagnifyingGlass } from "react-icons/pi"
+import { QrCode, Search } from "lucide-react"
 
 import type { SimulatorNavProps } from "@/lib/types"
 
-import EthTokenIconGrayscale from "@/components/Simulator/icons/eth-token-icon-grayscale.svg"
-import QrCodeIcon from "@/components/Simulator/icons/qr-code-icon.svg"
 import { Button } from "@/components/ui/buttons/Button"
 import { Stack } from "@/components/ui/flex"
 
+import { EthTokenIcon } from "../../icons"
 import { NotificationPopover } from "../../NotificationPopover"
 import { CategoryTabs } from "../../WalletHome/CategoryTabs"
 
@@ -35,9 +34,9 @@ export const SendFromContacts = ({
             variant="outline"
             className="w-full cursor-auto border-disabled py-4 text-disabled hover:!text-disabled hover:shadow-none"
           >
-            <PiMagnifyingGlass />
+            <Search />
             <span className="me-auto">Address or contacts</span>
-            <QrCodeIcon className="text-lg text-disabled" />
+            <QrCode className="text-lg" />
           </Button>
         </NotificationPopover>
       </div>
@@ -45,7 +44,7 @@ export const SendFromContacts = ({
         <CategoryTabs
           categories={["My contacts", "Recent"]}
           activeIndex={1}
-          mb={4}
+          className="mb-4"
         />
         <Stack className="gap-4">
           {CONTACTS.map(({ name, lastAction }, i) => (
@@ -55,7 +54,7 @@ export const SendFromContacts = ({
               className="group gap-2 disabled:bg-background disabled:text-body hover:[&_path]:fill-primary-hover"
               onClick={() => handleSelection(name)}
             >
-              <EthTokenIconGrayscale className="text-[30px]" />
+              <EthTokenIcon className="[&_circle]:fill-white [&_path]:fill-primary-action" />
               <span className="flex-1">
                 <span className="block text-start font-bold">{name}</span>
                 <span className="block text-start text-sm text-white group-disabled:text-body-medium">

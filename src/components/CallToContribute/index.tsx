@@ -1,65 +1,34 @@
-import React, { ReactNode } from "react"
-import { FaGithub } from "react-icons/fa"
-import { Flex, FlexProps, Icon } from "@chakra-ui/react"
-
 import { ChildOnlyProp } from "@/lib/types"
 
-import { ButtonLink } from "@/components/Buttons"
-import InlineLink from "@/components/Link"
-import OldHeading from "@/components/OldHeading"
-import Text from "@/components/OldText"
+import Github from "@/components/icons/github.svg"
 import Translation from "@/components/Translation"
+
+import { ButtonLink } from "../ui/buttons/Button"
+import { Flex } from "../ui/flex"
+import InlineLink from "../ui/Link"
 
 export type CallToContributeProps = {
   editPath: string
 }
 
-const ContentColumn = (props: {
-  children: ReactNode
-  hideBelow?: FlexProps["hideBelow"]
-}) => (
+const ContentColumn = (props: ChildOnlyProp) => (
   <Flex
-    direction="column"
-    flexGrow={1}
-    flexShrink={1}
-    flexBasis="50%"
-    p={4}
-    color="text"
-    textAlign={{ base: "center", lg: "start" }}
+    className="flex-1 basis-1/2 flex-col p-4 text-body lg:text-start"
     {...props}
   />
 )
 
 const DescriptionParagraph = ({ children }: ChildOnlyProp) => (
-  <Text lineHeight="140%" color="text" fontFamily="monospace">
-    {children}
-  </Text>
+  <p className="mb-6 font-monospace leading-xs text-body">{children}</p>
 )
 
 const CallToContribute = ({ editPath }: CallToContributeProps) => {
   return (
-    <Flex
-      as="aside"
-      bg="ednBackground"
-      align="center"
-      mt={8}
-      border="1px"
-      borderColor="primary.base"
-      borderRadius="base"
-      boxShadow="inset 0 -2px 0 0 var(--eth-colors-primary400)"
-    >
+    <aside className="mt-8 items-center rounded-md border border-b-4 border-primary bg-background-highlight">
       <ContentColumn>
-        <OldHeading
-          as="h2"
-          fontFamily="monospace"
-          textTransform="uppercase"
-          p={1}
-          fontSize="2rem"
-          lineHeight={1.4}
-          mt={0}
-        >
+        <h2 className="mb-8 mt-0 p-1 font-monospace uppercase leading-xs">
           <Translation id="page-developers-docs:page-calltocontribute-title" />
-        </OldHeading>
+        </h2>
         <DescriptionParagraph>
           <Translation id="page-developers-docs:page-calltocontribute-desc-1" />
         </DescriptionParagraph>
@@ -78,22 +47,12 @@ const CallToContribute = ({ editPath }: CallToContributeProps) => {
             <Translation id="page-developers-docs:page-calltocontribute-link-2" />
           </InlineLink>{" "}
         </DescriptionParagraph>
-        <ButtonLink
-          href={editPath}
-          leftIcon={
-            <Icon
-              fill="background.base"
-              w={6}
-              h={6}
-              as={FaGithub}
-              name="github"
-            />
-          }
-        >
+        <ButtonLink href={editPath}>
+          <Github className="text-2xl" />
           <Translation id="page-developers-docs:page-calltocontribute-span" />
         </ButtonLink>
       </ContentColumn>
-    </Flex>
+    </aside>
   )
 }
 

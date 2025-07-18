@@ -1,7 +1,7 @@
-import pickBy from "lodash/pickBy"
+import { pickBy } from "lodash"
 import type { Meta, StoryObj } from "@storybook/react/*"
 
-import { viewportModes } from "../../../.storybook/modes"
+import { viewportModes } from "@/storybook/modes"
 
 import MdComponentSet from "."
 

@@ -168,7 +168,7 @@ If ekshanj B supply don drop sudenly and di user nor fit buy enuf to kova di ori
 
 Tu bi abol to do di above eksampol for di tradishonal finans world, yu go nid plenti amount of monie. Dis strategis wey dey make monie only dey assessibol to doz wit wealth wey dey exist. Flash loans na eksampol of one fushure wia to get monie nor dey necessary make dey make monie.
 
-<ButtonLink isSecondary href="https://aave.com/flash-loans/">
+<ButtonLink isSecondary href="https://aave.com/docs/concepts/flash-loans/">
   More wey dey on flash loans
 </ButtonLink>
 
@@ -355,3 +355,7 @@ DeFi na open-source movement. Di DeFi protokols and aplikashons dey open for yu 
 
 - [DeFi Llama Discord server](https://discord.defillama.com/)
 - [DeFi Pulse Discord server](https://discord.gg/Gx4TCTk)
+
+<Divider />
+
+<QuizWidget quizKey="defi" />

@@ -16,6 +16,22 @@ ERC-4626 in yield-bearing vaults will lower the integration effort and unlock ac
 
 The ERC-4626 token is described fully in [EIP-4626](https://eips.ethereum.org/EIPS/eip-4626).
 
+**Asynchronous vault extension (ERC-7540)**
+
+ERC-4626 is optimized for atomic deposits and redemptions up to a limit. If the limit is reached, no new deposits or redemptions can be submitted. This limitation does not work well for any smart contract system with asynchronous actions or delays as a prerequisite for interfacing with the Vault (e.g. real-world asset protocols, undercollateralized lending protocols, cross-chain lending protocols, liquid staking tokens, or insurance safety modules).
+
+ERC-7540 expands the utility of ERC-4626 Vaults for asynchronous use cases. The existing Vault interface (`deposit`/`withdraw`/`mint`/`redeem`) is fully utilized to claim asynchronous Requests.
+
+The ERC-7540 extension is described fully in [ERC-7540](https://eips.ethereum.org/EIPS/eip-7540).
+
+**Multi-asset vault extension (ERC-7575)**
+
+One missing use case that is not supported by ERC-4626 is Vaults which have multiple assets or entry points such as liquidity provider (LP) Tokens. These are generally unwieldy or non-compliant due to the requirement of ERC-4626 to itself be an ERC-20.
+
+ERC-7575 adds support for Vaults with multiple assets by externalizing the ERC-20 token implementation from the ERC-4626 implementation.
+
+The ERC-7575 extension is described fully in [ERC-7575](https://eips.ethereum.org/EIPS/eip-7575).
+
 ## Prerequisites {#prerequisites}
 
 To better understand this page, we recommend you first read about [token standards](/developers/docs/standards/tokens/) and [ERC-20](/developers/docs/standards/tokens/erc-20/).
@@ -176,7 +192,7 @@ Returns the total amount of vault shares the `owner` currently has.
 
 #### Deposit Event
 
-**MUST** be emitted when tokens are deposited into the vault via the [`mint`](#mint) and [`deposit`](#deposit) methods
+**MUST** be emitted when tokens are deposited into the vault via the [`mint`](#mint) and [`deposit`](#deposit) methods.
 
 ```solidity
 event Deposit(

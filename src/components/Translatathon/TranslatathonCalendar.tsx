@@ -1,8 +1,10 @@
-import { useRouter } from "next/router"
-import { FaDiscord } from "react-icons/fa"
+"use client"
+
+import { useLocale } from "next-intl"
 
 import type { Lang } from "@/lib/types"
 
+import Discord from "@/components/icons/discord.svg"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Flex } from "@/components/ui/flex"
 import InlineLink from "@/components/ui/Link"
@@ -53,7 +55,7 @@ const events = [
 ]
 
 export const TranslatathonCalendar = () => {
-  const { locale } = useRouter()
+  const locale = useLocale()
 
   return (
     <Flex className="w-full flex-col py-16 lg:flex-row">
@@ -71,7 +73,7 @@ export const TranslatathonCalendar = () => {
           might have.
         </p>
         <ButtonLink href="/discord/" onClick={() => matomoEvent("discord")}>
-          <FaDiscord className="text-2xl" />
+          <Discord className="text-2xl" />
           Join Discord
         </ButtonLink>
       </Flex>

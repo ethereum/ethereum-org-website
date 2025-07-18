@@ -48,7 +48,7 @@ Existem vários interessados na [comunidade Ethereum](/community/), cada um dese
 - **Operadores de nós**: essas pessoas executam nós que propagam blocos e transações, rejeitando qualquer transação ou bloco inválido que eles encontrem. [Mais sobre nós](/developers/docs/nodes-and-clients/).
 - **Autores do EIP**: estas pessoas propõem alterações no protocolo Ethereum, na forma de propostas de aprimoramento do Ethereum (EIPs). [Mais sobre EIPs](/eips/).
 - **Validadores**: essas pessoas executam nós que podem adicionar novos blocos à blockchain Ethereum.
-- **Desenvolvedores de protocolo** (conhecido como "Desenvolvedores principais": essas pessoas mantêm as várias implementações do Ethereum (por exemplo, go-ethereum, Nethermind, Besu, Erigon, Reth na camada de execução; ou Prysm, Lighthouse, Nimbus, Teku, Lodestar, na camada de consenso). [Mais sobre clientes Ethereum](/developers/docs/nodes-and-clients/).
+- **Desenvolvedores de protocolo** (conhecido como "Desenvolvedores principais"): essas pessoas mantêm as várias implementações do Ethereum (por exemplo, go-ethereum, Nethermind, Besu, Erigon, Reth na camada de execução, ou Prysm, Lighthouse, Nimbus, Teku, Lodestar, na camada de consenso). [Mais sobre clientes Ethereum](/developers/docs/nodes-and-clients/).
 
 _Nota: qualquer indivíduo pode fazer parte de vários desses grupos (por exemplo, um desenvolvedor de protocolo pode ganhar um EIP e executar uma Beacon Chain validadora e usar aplicativos DeFi). Mas, para clareza conceitual, é mais fácil distinguir entre eles._
 
@@ -118,7 +118,7 @@ De um modo geral, os desacordos são tratados com discussões de longo prazo em 
 
 Forks são quando é necessário fazer grandes melhorias técnicas ou alterações na rede e modificar as "regras" do protocolo. [Os clientes da Ethereum](/developers/docs/nodes-and-clients/) devem atualizar seu software para implementar as novas regras do fork.
 
-O fork da DAO foi em resposta ao [ataque da DAO de 2016](https://www.coindesk.com/understanding-dao-hack-journalists) no qual um contrato inseguro de [DAO](/glossary/#dao) foi drenado em mais de 3 milhões de ETH em um hack. O fork transferiu os fundos do contrato falho para um novo contrato, permitindo que qualquer um que perdeu fundos no hack os recuperasse.
+O fork da DAO foi em resposta ao [ataque da DAO de 2016](https://www.coindesk.com/learn/understanding-the-dao-attack) no qual um contrato inseguro de [DAO](/glossary/#dao) foi drenado em mais de 3 milhões de ETH em um hack. O fork transferiu os fundos do contrato falho para um novo contrato, permitindo que qualquer um que perdeu fundos no hack os recuperasse.
 
 Este curso de ação foi votado pela comunidade Ethereum. Qualquer titular de ETH pôde votar por meio de uma transação em [uma plataforma de votação](https://web.archive.org/web/20170620030820/http://v1.carbonvote.com/). A decisão de criar fork ultrapassou 85% dos votos.
 

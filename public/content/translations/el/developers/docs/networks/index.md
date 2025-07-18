@@ -34,15 +34,11 @@ lang: el
 
 #### Ποιo δοκιμαστικό δίκτυο να χρησιμοποιήσω;
 
-Τα δύο δημόσια δοκιμαστικά δίκτυα που διατηρούν επί του παρόντος οι προγραμματιστές είναι το Sepolia και το Goerli. Το Sepolia είναι ένα δίκτυο ώστε οι προγραμματιστές συμβολαίων και εφαρμογών να δοκιμάζουν τις εφαρμογές τους. Το δίκτυο Goerli επιτρέπει στους προγραμματιστές πρωτοκόλλων να δοκιμάζουν τις αναβαθμίσεις του δικτύου και επιτρέπει στους συμμετέχοντες να δοκιμάζουν τους επικυρωτές.
+Τα δύο δημόσια δοκιμαστικά δίκτυα που διατηρούν επί του παρόντος οι προγραμματιστές είναι το Sepolia και το Hoodi. Το Sepolia είναι ένα δίκτυο ώστε οι προγραμματιστές συμβολαίων και εφαρμογών να δοκιμάζουν τις εφαρμογές τους. Το δίκτυο Hoodi επιτρέπει στους προγραμματιστές πρωτοκόλλων να δοκιμάζουν τις αναβαθμίσεις του δικτύου και επιτρέπει στους συμμετέχοντες να δοκιμάζουν τους επικυρωτές.
 
 #### Sepolia {#sepolia}
 
-**Το Sepolia είναι το προτεινόμενο προεπιλεγμένο δοκιμαστικό δίκτυο για την ανάπτυξη εφαρμογών**. Το δίκτυο Sepolia χρησιμοποιεί ένα σύνολο επικυρωτών με άδεια. Είναι αρκετά νέο, που σημαίνει ότι η κατάσταση και η ιστορία του είναι και τα δύο αρκετά μικρά. Αυτό σημαίνει ότι το δίκτυο συγχρονίζεται γρήγορα και ότι η εκτέλεση ενός κόμβου σε αυτό απαιτεί λιγότερο χώρο αποθήκευσης. Αυτό είναι χρήσιμο για χρήστες που θέλουν να εκτελέσουν γρήγορα έναν κόμβο και να αλληλεπιδράσουν απευθείας με το δίκτυο.
-
-- Κλειστό σύνολο επικυρωτών, ελεγχόμενο από πελάτη & ομάδες δοκιμών
-- Νέο δοκιμαστικό δίκτυο, με λιγότερες αναπτυσσόμενες εφαρμογές από άλλα δοκιμαστικά δίκτυα
-- Με γρήγορο συγχρονισμό και εκτέλεση κόμβου που απαιτεί ελάχιστο χώρο στο δίσκο
+**Το Sepolia είναι το προτεινόμενο προεπιλεγμένο δοκιμαστικό δίκτυο για την ανάπτυξη εφαρμογών**. Το δίκτυο Sepolia χρησιμοποιεί ένα σύνολο επικυρωτών με δικαιώματα που ελέγχεται από ομάδες πελατών και δοκιμών.
 
 ##### Πηγές
 
@@ -54,73 +50,110 @@ lang: el
 
 ##### Faucets
 
-- [Sepolia faucet στο QuickNode](https://faucet.quicknode.com/drip)
+- [Πηγή QuickNode Sepolia](https://faucet.quicknode.com/ethereum/sepolia)
 - [Grabteeth](https://grabteeth.xyz/)
-- [PoW faucet](https://sepolia-faucet.pk910.de/)
-- [Coinbase Wallet faucet | Sepolia](https://coinbase.com/faucets/ethereum-sepolia-faucet)
-- [Sepolia faucet στο Alchemy](https://sepoliafaucet.com/)
-- [Sepolia faucet στο Infura](https://www.infura.io/faucet)
-- [Sepolia faucet στο Chainstack](https://faucet.chainstack.com/sepolia-faucet)
-- [Faucet στο οικοσύστημα Ethereum](https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia)
+- [Πηγή PoW](https://sepolia-faucet.pk910.de/)
+- [Πηγή Alchemy Sepolia](https://www.alchemy.com/faucets/ethereum-sepolia)
+- [Πηγή Infura Sepolia](https://www.infura.io/faucet)
+- [Πηγή Chainstack Sepolia](https://faucet.chainstack.com/sepolia-testnet-faucet)
+- [Πηγή Ethereum Ecosystem](https://www.ethereum-ecosystem.com/faucets/ethereum-sepolia)
+- [Πηγή Google Cloud Web3 Sepolia](https://cloud.google.com/application/web3/faucet/ethereum/sepolia)
 
-#### Goerli _(μακροπρόθεσμη υποστήριξη)_ {#goerli}
+#### Hoodi {#hoodi}
 
-_Σημείωση: [το δοκιμαστικό δίκτυο Goerli έχει καταργηθεί](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17) και θα αντικατασταθεί από το [Holesovice](https://github.com/eth-clients/holesovice) το 2023. Παρακαλώ λάβετε υπόψη τη μετεγκατάσταση των εφαρμογών σας στο Sepolia._
+Το Hoodi είναι ένα δοκιμαστικό δίκτυο για δοκιμές επικύρωσης και αποθήκευσης. Το δίκτυο Hoodi είναι ανοιχτό για χρήστες που θέλουν να εκτελέσουν ένα πρόγραμμα επικύρωσης δοκιμαστικού δικτύου. Επομένως, οι συμμετέχοντες που επιθυμούν να δοκιμάσουν αναβαθμίσεις πρωτοκόλλου πριν από την ανάπτυξή τους στο βασικό δίκτυο θα πρέπει να χρησιμοποιούν το Hoodi.
 
-Το Goerli είναι ένα δοκιμαστικό δίκτυο για δοκιμές επικύρωσης και αποθήκευσης. Το δίκτυο Goerli είναι ανοιχτό για χρήστες που θέλουν να εκτελέσουν ένα πρόγραμμα επικύρωσης δοκιμαστικού δικτύου. Επομένως, οι συμμετέχοντες που επιθυμούν να δοκιμάσουν αναβαθμίσεις πρωτοκόλλου πριν από την ανάπτυξή τους στο βασικό δίκτυο θα πρέπει να χρησιμοποιούν το Goerli.
-
-- Ανοιχτό σετ επικυρωτή, οι συμμετέχοντες μπορούν να δοκιμάσουν αναβαθμίσεις δικτύου
-- Μεγάλη κατάσταση, χρήσιμη για τη δοκιμή σύνθετων αλληλεπιδράσεων έξυπνων συμβολαίων
-- Μεγαλύτερη διάρκεια συγχρονισμού και περισσότερη αποθήκευση για τη λειτουργία ενός κόμβου
+- Ελεύθερο σύνολο επικυρωτή, οι χρήστες με δεσμευμένο κεφάλαιο μπορούν να δοκιμάσουν αναβαθμίσεις δικτύου
+- Μεγάλη κατάσταση, χρήσιμη για τον έλεγχο σύνθετων αλληλεπιδράσεων έξυπνων συμβολαίων
+- Περισσότερος χρόνος συγχρονισμού και απαιτείται περισσότερος χώρος αποθήκευσης για την εκτέλεση ενός κόμβου
 
 ##### Πηγές
 
-- [Ιστότοπος](https://goerli.net/)
-- [GitHub](https://github.com/eth-clients/goerli)
-- [Etherscan](https://goerli.etherscan.io)
-- [Blockscout](https://eth-goerli.blockscout.com/)
+- [Ιστότοπος](https://hoodi.ethpandaops.io/)
+- [GitHub](https://github.com/eth-clients/hoodi)
+- [Εξερευνητής](https://explorer.hoodi.ethpandaops.io/)
+- [Συγχρονισμός σημείου αναφοράς](https://checkpoint-sync.hoodi.ethpandaops.io/)
+- [Otterscan](https://hoodi.otterscan.io/)
+- [Etherscan](https://hoodi.etherscan.io/)
+- [Blockscout](https://hoodi.cloud.blockscout.com/)
 
 ##### Faucets
 
-- [Goerli faucet στο QuickNode](https://faucet.quicknode.com/drip)
-- [Grabteeth](https://grabteeth.xyz/)
-- [PoW faucet](https://goerli-faucet.pk910.de/)
-- [Paradigm faucet](https://faucet.paradigm.xyz/)
-- [Alchemy Goerli faucet](https://goerlifaucet.com/)
-- [Goerli faucet στο All That Node](https://www.allthatnode.com/faucet/ethereum.dsrv)
-- [Coinbase Wallet Faucet | Goerli](https://coinbase.com/faucets/ethereum-goerli-faucet)
-- [Goerli faucet στο Chainstack](https://faucet.chainstack.com/goerli-faucet)
+- [Hoodi Faucet](https://hoodi.ethpandaops.io/)
+- [Πηγή PoW](https://hoodi-faucet.pk910.de/)
 
-Για να εκκινήσετε έναν επικυρωτή στο δοκιμαστικό δίκτυο Goerli, χρησιμοποιήστε την [πλατφόρμα «φτηνού επικυρωτή goerli»](https://goerli.launchpad.ethstaker.cc/en/) του ethstaker.
+#### Holesky {#holesky}
+
+Το δίκτυο δοκιμών Holesky θα [καταργηθεί τον Σεπτέμβριο του 2025](https://blog.ethereum.org/en/2025/03/18/hoodi-holesky). Οι πάροχοι δέσμευσης κεφαλαίου και οι πάροχοι υποδομών θα πρέπει να χρησιμοποιούν το Hoodi για δοκιμές επικύρωσης.
+
+##### Πηγές
+
+- [Ιστότοπος](https://holesky.ethpandaops.io/)
+- [GitHub](https://github.com/eth-clients/holesky)
+- [Otterscan](https://holesky.otterscan.io/)
+- [Etherscan](https://holesky.etherscan.io/)
+- [Blockscout](https://eth-holesky.blockscout.com/)
+
+##### Faucets
+
+- [Πηγή QuickNode Holesky](https://faucet.quicknode.com/ethereum/holesky)
+- [Πηγή PoW](https://holesky-faucet.pk910.de/)
+- [Πηγή Alchemy Holesky](https://www.alchemy.com/faucets/ethereum-holesky)
+- [Πηγή Chainstack Holesky](https://faucet.chainstack.com/holesky-testnet-faucet)
+- [Πηγή Ethereum Ecosystem](https://www.ethereum-ecosystem.com/faucets/ethereum-holesky)
+- [Πηγή Google Cloud Web3 Holesky](https://cloud.google.com/application/web3/faucet/ethereum/holesky)
+
+Για να ξεκινήσετε έναν επικυρωτή στο Hoodi testnet, χρησιμοποιήστε το [Hoodi launchpad](https://hoodi.launchpad.ethereum.org/en/).
 
 ### Δίκτυα δοκιμών Layer 2 {#layer-2-testnets}
 
 Το [επίπεδο 2 (L2)](/layer-2/) είναι ένας συλλογικός όρος που περιγράφει ένα συγκεκριμένο σύνολο λύσεων κλιμάκωσης Ethereum. Το επίπεδο 2 είναι μια ξεχωριστή αλυσίδα συστοιχιών που επεκτείνει το Ethereum και κληρονομεί τις εγγυήσεις ασφαλείας του Ethereum. Τα δοκιμαστικά δίκτυα επιπέδου 2 είναι συνήθως στενά συνδεδεμένα με δημόσια δοκιμαστικά δίκτυα Ethereum.
 
-#### Arbitrum Goerli {#arbitrum-goerli}
+#### Arbitrum Sepolia {#arbitrum-sepolia}
 
 Ένα δίκτυο δοκιμών για το [Arbitrum](https://arbitrum.io/).
 
+##### Πηγές
+
+- [Etherscan](https://sepolia.arbiscan.io/)
+- [Blockscout](https://sepolia-explorer.arbitrum.io/)
+
 ##### Faucets
 
-- [Πάροχος Chainlink](https://faucets.chain.link/)
+- [Πηγή Chainlink](https://faucets.chain.link/arbitrum-sepolia)
+- [Alchemy faucet](https://www.alchemy.com/faucets/arbitrum-sepolia)
+- [Πηγή QuickNode Arbitrum Sepolia](https://faucet.quicknode.com/arbitrum/sepolia)
+- [Πηγή Alchemy Arbitrum Sepolia](https://www.alchemy.com/faucets/arbitrum-sepolia)
+- [Πηγή Chainlink Arbitrum Sepolia](https://faucets.chain.link/arbitrum-sepolia)
 
-#### Optimistic Goerli {#optimistic-goerli}
+#### Optimistic Sepolia {#optimistic-sepolia}
 
 Ένα δίκτυο δοκιμών για το [Optimism](https://www.optimism.io/).
 
+##### Πηγές
+
+- [Etherscan](https://sepolia-optimistic.etherscan.io/)
+- [Blockscout](https://optimism-sepolia.blockscout.com/)
+
 ##### Faucets
 
-- [Paradigm faucet](https://faucet.paradigm.xyz/)
-- [Coinbase Wallet Faucet | Optimism Goerli](https://coinbase.com/faucets/optimism-goerli-faucet)
+- [Πηγή Chainlink](https://faucets.chain.link/optimism-sepolia)
+- [Alchemy faucet](https://www.alchemy.com/faucets/optimism-sepolia)
+- [Πηγές δικτύων δοκιμών](https://docs.optimism.io/builders/tools/build/faucets)
 
-#### Starknet Goerli {#starknet-goerli}
+#### Starknet Sepolia {#starknet-sepolia}
 
 Ένα δοκιμαστικό δίκτυο για το [Starknet](https://www.starknet.io).
 
+##### Πηγές
+
+- [Starkscan](https://sepolia.starkscan.co/)
+
 ##### Faucets
 
-- [Starknet faucet](https://faucet.goerli.starknet.io)
+- [Alchemy faucet](https://www.alchemy.com/faucets/starknet-sepolia)
+- [Starknet faucet](https://starknet-faucet.vercel.app/)
+- [Πηγή Blast Starknet Sepolia](https://blastapi.io/faucets/starknet-sepolia-eth)
 
 ## Ιδιωτικά δίκτυα {#private-networks}
 
@@ -140,10 +173,10 @@ _Σημείωση: [το δοκιμαστικό δίκτυο Goerli έχει κ�
 
 ## Σχετικά εργαλεία {#related-tools}
 
-- Κατάλογος [Chainlist](https://chainlist.org/) _δικτύων EVM που συνδέουν πορτοφόλια και παρόχους στην κατάλληλη ταυτότητα αλυσίδας και ταυτότητα δικτύου_
-- [Αλυσίδες που βασίζονται σε EVM](https://github.com/ethereum-lists/chains) _Αποθετήριο GitHub μεταδεδομένων αλυσίδας που ενεργοποιεί το Chainlist_
+- [Chainlist](https://chainlist.org/) _λίστα δικτύων EVM για τη σύνδεση πορτοφολιών και παρόχων με το κατάλληλο Chain ID και Network ID_
+- [Αλυσίδες που βασίζονται σε EVM](https://github.com/ethereum-lists/chains) _Αποθετήριο μεταδεδομένων αλυσίδας GitHub που υποστηρίζει το Chainlist_
 
 ## Περισσότερες πληροφορίες {#further-reading}
 
-- [Πρόταση: Προβλέψιμος κύκλος ζωής του δοκιμαστικού δικτύου Ethereum](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17)
-- [Η εξέλιξη των δοκιμαστικών δικτύων Ethereum](https://etherworld.co/2022/08/19/the-evolution-of-ethereum-testnet/)
+- [Πρόταση: Προβλέψιμος κύκλος ζωής Ethereum Testnet](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17)
+- [Η Εξέλιξη των Δοκιμαστικών Δικτύων Ethereum](https://etherworld.co/2022/08/19/the-evolution-of-ethereum-testnet/)

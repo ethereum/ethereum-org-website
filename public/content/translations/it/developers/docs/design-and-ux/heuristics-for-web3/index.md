@@ -5,7 +5,7 @@ lang: it
 ---
 
 Le euristiche di usabilità sono “regole pratiche” generali che puoi utilizzare per misurare l'usabilità del tuo sito.
-Queste euristiche sono specificatamente su misura per il Web3 e dovrebbero essere utilizzate assieme ai [10 principi generali per la progettazione dell'interazione](https://www.nngroup.com/articles/ten-usability-heuristics/) di Jakob Nielsen.
+Le 7 euristiche sono specificamente su misura per il Web3 e dovrebbero essere utilizzate insieme ai [10 principi generali per la progettazione dell'interazione](https://www.nngroup.com/articles/ten-usability-heuristics/) di Jakob Nielsen.
 
 ## Sette euristiche di usabilità per il web3 {#seven-usability-heuristics-for-web3}
 

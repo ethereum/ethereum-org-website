@@ -41,16 +41,17 @@ Hardhat Network, profesyoneller için bir Ethereum geliştirme ortamı olan Hard
 
 Bazı fikir birliği istemcileri, test amacıyla yerel işaret zincirleri oluşturmak için yerleşik araçlara sahiptir. Lighthouse, Nimbus ve Lodestar için talimatlar mevcuttur:
 
-- [Lodestar kullanan yerel test ağı](https://chainsafe.github.io/lodestar/usage/local/)
+- [Lodestar kullanan yerel test ağı](https://chainsafe.github.io/lodestar/contribution/advanced-topics/setting-up-a-testnet#post-merge-local-testnet/)
 - [Lighthouse kullanan yerel test ağı](https://lighthouse-book.sigmaprime.io/setup.html#local-testnets)
 - [Nimbus kullanan yerel test ağı](https://github.com/status-im/nimbus-eth1/blob/master/fluffy/docs/local_testnet.md)
 
 ### Herkese açık Ethereum Test zincileri {#public-beacon-testchains}
 
-Ayrıca Ethereum'un halka açık iki test uygulaması da bulunmaktadır: Goerli ve Sepolia. Uzun vadeli desteğe sahip ve önerilen test ağı Goerli'dir ve herkes bu ağda doğrulama yapmakta serbesttir. Sepolia, izinli bir doğrulayıcı kümesiyle (yani bu test ağında yeni doğrulayıcılara genel bir erişim yoktur) daha yeni, daha küçük bir zincirdir ve öngörülebilir gelecekte de desteğin sürdürülmesi beklenmektedir. Ropsten zinciri 2022 yılının 4.çeyreğinde, Rinkeby zinciri ise 2023 yılının 2 veya 3.çeyreğinde kullanımdan kaldırılması beklenmektedir.
+Ayrıca Ethereum'un halka açık iki test uygulaması da bulunmaktadır: Sepolia ve Hoodi. Sepolia, hızlı senkronizasyon için kapalı bir doğrulayıcı kümesiyle uygulama geliştirme için önerilen standart test ağıdır. Hoodi, açık bir doğrulayıcı kümesi kullanan ve potansiyel olarak herkesin doğrulama yapmasına izin veren, doğrulama ve hisseleme için bir test ağıdır.
 
-- [Goerli Hisseleme Başlama Noktası](https://goerli.launchpad.ethereum.org/)
-- [Ropsten, Rinkeby ve Kiln Kaldırma Duyurusu](https://blog.ethereum.org/2022/06/21/testnet-deprecation)
+- [Hoodi Hisseleme Başlama Noktası](https://hoodi.launchpad.ethereum.org/en/)
+- [Sepolia Web sitesi](https://sepolia.dev/)
+- [Hoodi Web sitesi](https://hoodi.ethpandaops.io/)
 
 ### Kurtosis Ethereum Paketi {#kurtosis}
 

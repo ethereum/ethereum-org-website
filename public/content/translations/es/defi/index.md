@@ -1,5 +1,6 @@
 ---
 title: Finanzas descentralizadas (DeFi)
+metaTitle: '¿Qué son las DeFi? | Beneficios y usos de las Finanzas Descentralizadas'
 description: Una visión de las finanzas descentralizadas en Ethereum
 lang: es
 template: use-cases
@@ -168,7 +169,7 @@ Si la oferta de B cayera repentinamente y el usuario no pudiera comprar la canti
 
 Para hacer lo que describimos en el ejemplo de arriba pero en el mundo real necesitaría mucho dinero. Estas estrategias para hacer dinero solo son accesibles para aquellos que ya tienen dinero. Los préstamos flash son un ejemplo de un futuro en el que tener dinero no es necesariamente un requisito previo para ganar dinero.
 
-<ButtonLink isSecondary href="https://aave.com/flash-loans/">
+<ButtonLink isSecondary href="https://aave.com/docs/concepts/flash-loans/">
   Más información sobre los préstamos flash
 </ButtonLink>
 
@@ -355,3 +356,7 @@ DeFi es un proyecto de código abierto. Puede inspeccionar, copiar e innovar tod
 
 - [Servidor Discord de DeFi Llama](https://discord.defillama.com/)
 - [Servidor Discord de DeFi Pulse](https://discord.gg/Gx4TCTk)
+
+<Divider />
+
+<QuizWidget quizKey="defi" />

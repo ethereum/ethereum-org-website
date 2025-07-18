@@ -19,13 +19,12 @@ Ethereum.org es un proyecto gestionado de código abierto con más de **12.000**
 - [Trabaje en un problema/tema abierto](https://github.com/ethereum/ethereum-org-website/issues): trabajo que hemos identificado como necesario
 
 **Diseño**
-- [Ayude a diseñar el sitio](/contributing/design/): diseñadores de todos los niveles pueden contribuir a mejorar el sitio web
+- [Ayude a diseñar el sitio web](/contributing/design/): Diseñadores de todos loos niveles pueden contribuir a mejorar el sitio web
 
 **Contenido**
 - [Cree/edite contenido](/contributing/#how-to-update-content): sugiera crear nuevas páginas o hacer ajustes al contenido actual
 - [Añada recursos para la comunidad](/contributing/content-resources/): agregue un artículo o recurso útil a una página relevante
 - [Sugiera un recurso de diseño](/contributing/design/adding-design-resources/): sume, actualce o elimine recursos de diseño útiles
-- [Agregue un término al glosario](/contributing/adding-glossary-terms/): ayúdenos a expandir el [glosario](/glossary/) de Ethereum
 - [Cuestionarios](/contributing/quizzes/): agregue, edite y elimine bancos de preguntas de cuestionarios para páginas relevantes
 
 **Ideas de funcionalides/características**
@@ -68,7 +67,7 @@ Antes de empezar a colaborar, asegúrese de estar familiarizado con:
 - nuestra [guía de estilo](/contributing/style-guide/)
 - nuestro [código de conducta](/community/code-of-conduct)
 
-<ContributorsQuizBanner mt={16} mb={8} />
+<ContributorsQuizBanner className="mt-16 mb-8" />
 
 ## Cómo se toman las decisiones sobre el sitio {#how-decisions-about-the-site-are-made}
 
@@ -90,11 +89,11 @@ Tenemos temas u opciones con barrera baja de entrada, o pocos requisitos, en nue
 
 Si su contribución se usa en ethereum.org, tendrá la oportunidad de reclamar una insignia especial en [Galxe](https://app.galxe.com/quest/ethereumorg). Un token de logro en cadena (OAT, Onchain Achievement Token) es una prueba de que ayudó a hacer el ecosistema un poco más increíble.
 
-[Más sobre los OAT](https://help.galxe.com/en/articles/7067290-galxe-oats-reward-and-celebrate-achievements)
+[Más sobre los OAT](https://help.galxe.com/en/articles/9645630-create-quest-rewards#h_1c5d63ba03)
 
 ### Cómo reclamarlo
 1. Únase a nuestro [servidor de Discord](https://discord.gg/ethereum-org).
-2. Pegue un enlace a su cotribución en el canal `#🥇 | proof-of-contribution`.
+2. Pegue un enlace a au contribución en el canal `#🥇 | proof-of-contribution`.
 3. Espere a que un miembro de nuestro equipo le envíe un enlace a su OAT.
 4. ¡Reclame su OAT!
 

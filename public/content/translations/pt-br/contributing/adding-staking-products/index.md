@@ -87,7 +87,7 @@ Para qualquer sistema personalizado ou contrato inteligente envolvido:
 
 Para produtos de software relacionados à configuração de nó ou cliente, gerenciamento ou migração:
 
-**Quais clientes da camada de consenso (como Lighthouse, Teku, Nimbus, Prysm) são suportados?**
+**Quais clientes da camada de consenso (como Lighthouse, Teku, Nimbus, Prysm, Grandine) são suportados?**
 
 - Quais clientes são suportados? O usuário pode escolher?
 - Isso é usado para determinar a pontuação dos produtos "multicliente".

@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { useRouter } from "next/router"
+import { useLocale } from "next-intl"
 import * as AccordionPrimitive from "@radix-ui/react-accordion"
 
 import { cn } from "@/lib/utils/cn"
@@ -17,6 +17,8 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "./MenuAccordion"
+
+import { usePathname } from "@/i18n/routing"
 
 type LvlAccordionProps = {
   lvl: Level
@@ -45,14 +47,15 @@ const LvlAccordion = ({
   activeSection,
   onToggle,
 }: LvlAccordionProps) => {
-  const { asPath, locale } = useRouter()
+  const pathname = usePathname()
+  const locale = useLocale()
   const [value, setValue] = useState("")
 
   return (
     <Accordion type="single" collapsible value={value} onValueChange={setValue}>
       {items.map(({ label, description, ...action }) => {
         const isLink = "href" in action
-        const isActivePage = isLink && cleanPath(asPath) === action.href
+        const isActivePage = isLink && cleanPath(pathname) === action.href
         const isExpanded = value === label
 
         const nestedAccordionSpacingMap = {
@@ -96,7 +99,7 @@ const LvlAccordion = ({
                         className={cn(
                           "text-md font-bold",
                           isActivePage
-                            ? "text-primary-low-contrast"
+                            ? "text-primary-high-contrast"
                             : "text-body"
                         )}
                       >

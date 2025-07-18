@@ -168,7 +168,7 @@ Als het aanbod van exchange B plotseling afnam en de gebruiker niet genoeg kon k
 
 Om het bovenstaande voorbeeld in de traditionele financiële wereld te kunnen doen, zou u een enorme hoeveelheid geld nodig hebben. Deze strategieën voor het verdienen van geld zijn alleen toegankelijk voor mensen met bestaande rijkdom. Flash-leningen zijn een voorbeeld van een toekomst waarin het hebben van geld niet noodzakelijkerwijs een voorwaarde is voor het verdienen van geld.
 
-<ButtonLink isSecondary href="https://aave.com/flash-loans/">
+<ButtonLink isSecondary href="https://aave.com/docs/concepts/flash-loans/">
   Meer over flash-leningen
 </ButtonLink>
 
@@ -355,3 +355,7 @@ DeFi is een open-source beweging. De DeFi-protocollen en -applicaties staan alle
 
 - [DeFi Llama Discord server](https://discord.defillama.com/)
 - [DeFi Pulse Discord server](https://discord.gg/Gx4TCTk)
+
+<Divider />
+
+<QuizWidget quizKey="defi" />

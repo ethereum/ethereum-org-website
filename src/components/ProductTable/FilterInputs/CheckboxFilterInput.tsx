@@ -1,6 +1,6 @@
 import { FilterInputState } from "@/lib/types"
 
-import Checkbox from "@/../tailwind/ui/Checkbox"
+import Checkbox from "@/components/ui/checkbox"
 
 interface CheckboxFilterInputProps {
   label: string

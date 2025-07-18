@@ -1,21 +1,23 @@
-import { useRouter } from "next/router"
-import { useTranslation } from "next-i18next"
-import { FaDiscord, FaGlobe, FaXTwitter } from "react-icons/fa6"
-import { MdInfoOutline } from "react-icons/md"
+import { Globe, Info } from "lucide-react"
+import { useLocale } from "next-intl"
 
 import { FilterOption, Lang, WalletData } from "@/lib/types"
 
 import { useWalletFilters } from "@/components/FindWalletProductTable/hooks/useWalletFilters"
+import Discord from "@/components/icons/discord.svg"
 import {
-  GreenCheckProductGlyphIcon,
-  WarningProductGlyphIcon,
+  GreenCheckProductGlyph,
+  WarningProductGlyph,
 } from "@/components/icons/staking"
+import Twitter from "@/components/icons/twitter.svg"
 import Tooltip from "@/components/Tooltip"
 import InlineLink from "@/components/ui/Link"
 
 import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { getLocaleFormattedDate } from "@/lib/utils/time"
+
+import { useTranslation } from "@/hooks/useTranslation"
 
 const SocialLink = (props) => (
   <InlineLink
@@ -35,7 +37,7 @@ const WalletSubComponent = ({
   filters,
   listIdx,
 }: WalletSubComponentProps) => {
-  const { locale } = useRouter()
+  const locale = useLocale()
 
   const { t } = useTranslation("page-wallets-find-wallet")
   const walletFiltersOptions: FilterOption[] = useWalletFilters()
@@ -100,9 +102,9 @@ const WalletSubComponent = ({
                         <li key={idx} className="mb-2 flex flex-row gap-2">
                           <span className="translate-y-0.5">
                             {wallet[item.filterKey] ? (
-                              <GreenCheckProductGlyphIcon className="size-4" />
+                              <GreenCheckProductGlyph className="size-4" />
                             ) : (
-                              <WarningProductGlyphIcon className="size-4" />
+                              <WarningProductGlyph className="size-4" />
                             )}
                           </span>
                           <p className={cn("leading-1", featureColor)}>
@@ -116,7 +118,7 @@ const WalletSubComponent = ({
                                   </p>
                                 }
                               >
-                                <MdInfoOutline className="ms-1 translate-y-0.5" />
+                                <Info className="ms-1 size-[0.875em] translate-y-0.5" />
                               </Tooltip>
                             </span>
                           </p>
@@ -143,7 +145,7 @@ const WalletSubComponent = ({
                 eventValue: JSON.stringify(filters),
               }}
             >
-              <FaGlobe className="text-2xl text-primary" />
+              <Globe className="text-2xl text-primary" />
             </SocialLink>
             {wallet.discord && (
               <SocialLink
@@ -156,7 +158,7 @@ const WalletSubComponent = ({
                   eventValue: JSON.stringify(filters),
                 }}
               >
-                <FaDiscord className="text-2xl text-[#7289da]" />
+                <Discord className="text-2xl text-[#7289da]" />
               </SocialLink>
             )}
             {wallet.twitter && (
@@ -170,7 +172,7 @@ const WalletSubComponent = ({
                   eventValue: JSON.stringify(filters),
                 }}
               >
-                <FaXTwitter className="text-2xl text-[#1da1f2]" />
+                <Twitter className="text-2xl text-[#1da1f2]" />
               </SocialLink>
             )}
           </div>

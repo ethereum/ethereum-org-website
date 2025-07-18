@@ -19,13 +19,12 @@ Ez egy befogadó közösség, mely segít fejlődni és megismerni az Ethereum �
 - [Dolgozzon egy meglévő problémán](https://github.com/ethereum/ethereum-org-website/issues) – Olyan feladatot találhat, melyet szükségesnek látunk megoldani
 
 **Dizájn**
-- [Segítsen a honlap dizájnjában](/contributing/design/) Bármilyen szinten is ért hozzá, be tud segíteni a honlap dizájnjába
+- [Segítsen a honlap dizájnjában](/contributing/design/) – Bármilyen szinten is ért hozzá, be tud segíteni a honlap dizájnjába
 
 **Tartalom**
 - [Hozzon létre vagy szerkessze a tartalmat](/contributing/#how-to-update-content) – Javasoljon új oldalakat vagy fejlessze a meglévőket
 - [Javasoljon közösségi forrásokat](/contributing/content-resources/) – Adjon hasznos cikket vagy forrást egy adott oldalhoz
 - [Javasoljon dizájnforrást](/contributing/design/adding-design-resources/) – Adjon hozzá, frissítsen és töröljön a dizájnforrások közül
-- [Javasoljon kifejezést a szószedethet](/contributing/adding-glossary-terms/) – Segítsen kiterjeszteni az Ethereum [szószedetet](/glossary/)
 - [Kvízek](/contributing/quizzes/) – Adjon hozzá, frissítse és töröljön a kvízkérdésekből, melyek egy adott oldalhoz tartoznak
 
 **Új jellemzőkre vonatkozó ötletek**
@@ -68,7 +67,7 @@ Mielőtt nekilát, ismerkedjen meg:
 - a [stílusútmutatóval](/contributing/style-guide/)
 - a [viselkedési szabályzattal](/community/code-of-conduct)
 
-<ContributorsQuizBanner mt={16} mb={8} />
+<ContributorsQuizBanner className="mt-16 mb-8" />
 
 ## Hogyan történik a döntéshozás a honlapról {#how-decisions-about-the-site-are-made}
 
@@ -90,11 +89,11 @@ A GitHub könyvtárban megtalálja azokat a könnyen érthető feladatokat, mely
 
 Ha a munkáját beolvasztják az ethereum.org-ba, akkor kérhet egy különleges oklevelet a [Galxe-n](https://app.galxe.com/quest/ethereumorg) keresztül. A láncon belüli eredménytoken (OAT) egy tanúsítvány, hogy jobbá tette az ökoszisztémát.
 
-[Bővebben az OAT-okról](https://help.galxe.com/en/articles/7067290-galxe-oats-reward-and-celebrate-achievements)
+[Bővebben az OAT-okról](https://help.galxe.com/en/articles/9645630-create-quest-rewards#h_1c5d63ba03)
 
 ### Hogyan kell kérni
 1. Csatlakozzon a [Discord szerverhez](https://discord.gg/ethereum-org).
-2. Másolja be a közreműködését a ` #🥇 | proof-of-contribution` csatornába
+2. Másolja be a közreműködését a ` #🥇 | proof-of-contribution` csatornába.
 3. Ezután csapatunk elküldi az OAT-hoz tartozó linket.
 4. Szerezze meg az OAT-ot!
 

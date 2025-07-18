@@ -70,7 +70,7 @@ Les spécifications formelles de bas niveau peuvent être données sous forme de
 
 ### Propriétés de style Hoare {#hoare-style-properties}
 
-[La logique Hoare](https://en.wikipedia.org/wiki/Hoare_logic) fournit un ensemble de règles formelles pour raisonner sur la correction des programmes, y compris les contrats intelligents. Une propriété de style Hoare est représentée par un triple Hoare {_P_}_c_{_Q_}, où _c_ est un programme et _P_ et _Q_ sont des prédicats sur l'état de _c_ (c'est-à-dire le programme), formellement décrits comme des _prérequis_ et des _conditions ulérieures_, respectivement.
+[La logique Hoare](https://en.wikipedia.org/wiki/Hoare_logic) fournit un ensemble de règles formelles pour raisonner sur la correction des programmes, y compris les contrats intelligents. Une propriété de style Hoare est représentée par un triple Hoare `{P}c{Q}`, où `c` est un programme et `P` et `Q` sont des prédicats sur l'état de `c` (c'est-à-dire le programme), formellement décrits comme des _prérequis_ et des _conditions ulérieures_, respectivement.
 
 Un prérequis est un prédicat décrivant les conditions requises pour l'exécution correcte d'une fonction ; les utilisateurs qui font appel au contrat doivent satisfaire à cette exigence. Une condition ultérieure est un prédicat décrivant la condition qu'une fonction établit si elle est correctement exécutée ; les utilisateurs peuvent s'attendre à ce que cette condition soit vraie après avoir appelé la fonction. Un _invariant_ en logique Hoare est un prédicat qui est préservé par l'exécution d'une fonction (c'est-à-dire qu'il ne change pas).
 

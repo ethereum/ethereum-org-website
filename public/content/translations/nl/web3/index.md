@@ -42,7 +42,7 @@ Het uitgangspunt van 'Web 3.0' werd bedacht door Ethereums medeoprichter Gavin W
 
 Web3 is een veelomvattende term geworden voor de visie van een nieuw, beter internet. In de kern maakt Web3 gebruik van blockchains, cryptovaluta's en NFT's om de macht terug te geven aan de gebruikers in de vorm van eigendom.
 
-Een bericht uit 2020 op Twitter zei het het beste: Web1 was alleen-lezen, Web2 is lezen-schrijven, Web3 wordt lezen-schrijven-bezitten. 
+Een bericht uit 2020 op Twitter zei het het beste: Web1 was alleen-lezen, Web2 is lezen-schrijven, Web3 wordt lezen-schrijven-bezitten.
 
 #### Kernideeën van Web3 {#core-ideas}
 
@@ -171,11 +171,11 @@ We staan nog maar aan het begin van een beter Web met Web3, maar naarmate we de 
 
 Web3 is niet strikt gedefinieerd. Verschillende community-deelnemers hebben er verschillende perspectieven op. Hier zijn er een paar:
 
-- [Wat is Web3? The Decentralized Internet of the Future Explained](https://www.freecodecamp.org/news/what-is-web3/) – _Nader Dabit_
+- [Wat is Web3? The Decentralized Internet of the Future Explained](https://www.freecodecamp.org/news/what-is-web3) – _Nader Dabit_
 - [Making Sense of Web 3](https://medium.com/l4-media/making-sense-of-web-3-c1a9e74dcae) – _Josh Stark_
 - [Why Web3 Matters](https://future.a16z.com/why-web3-matters/) — _Chris Dixon_
 - [Why Decentralization Matters](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) - _Chris Dixon_
 - [The Web3 Landscape](https://a16z.com/wp-content/uploads/2021/10/The-web3-Readlng-List.pdf) – _a16z_
-- [The Web3 Debate](https://www.notboring.co/p/the-web3-debate?s=r) – _Packy McCormick_
+- [The Web3 Debate](https://www.notboring.co/p/the-web3-debate) – _Packy McCormick_
 
 <QuizWidget quizKey="web3" />

@@ -16,6 +16,22 @@ ERC-4626 是优化和统一收益资金库技术参数的标准。 它为表示�
 
 [EIP-4626](https://eips.ethereum.org/EIPS/eip-4626) 中对 ERC-4626 代币进行了全面的描述。
 
+**异步资金库扩展 (ERC-7540)**
+
+ERC-4626 针对原子存款和赎回上限进行了优化。 如果达到上限，则无法提交新的存款或赎回。 该上限不适用于任何以异步操作或延迟作为与资金库交互的先决条件的智能合约（例如现实世界资产协议、非足额抵押贷款协议、跨链贷款协议、流动性质押代币或保险安全模块）。
+
+ERC-7540 拓展了 ERC-4626 资金库在异步用例中的实用性。 充分利用现有的资金库接口 (`deposit`/`withdraw`/`mint`/`redeem`) 来声明异步请求。
+
+[ERC-7540](https://eips.ethereum.org/EIPS/eip-7540) 中完整描述了 ERC-7540 扩展。
+
+**多资产资金库扩展 (ERC-7575)**
+
+ERC-4626 不支持的一个缺失用例是具有多种资产或入口点的资金库，例如流动性提供商 (LP) 代币。 由于 ERC-4626 要求其本身是 ERC-20，这些用例通常难以操作或不兼容。
+
+ERC-7575 通过从 ERC-4626 实现外部化 ERC-20 代币实现，增加了对多资产资金库的支持。
+
+[ERC-7575](https://eips.ethereum.org/EIPS/eip-7575) 中完整描述了 ERC-7575 扩展。
+
 ## 前提条件 {#prerequisites}
 
 为了更好地理解这个页面，我们建议你首先阅读[代币标准](/developers/docs/standards/tokens/)和 [ERC-20](/developers/docs/standards/tokens/erc-20/)。
@@ -176,7 +192,7 @@ function balanceOf(address owner) public view returns (uint256)
 
 #### Deposit 事件
 
-**必须**在通过 [`mint`](#mint) 和 [`deposit`](#deposit) 方法将代币存入资金库之前发出
+**必须**在通过 [`mint`](#mint) 和 [`deposit`](#deposit) 方法将代币存入资金库之前发出。
 
 ```solidity
 event Deposit(

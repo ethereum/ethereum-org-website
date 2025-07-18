@@ -116,7 +116,7 @@ Am besten ist es, Links direkt aus der Quelle zu kopieren, entweder durch Anklic
 
 ![Beispiel für einen Link.png](./example-of-link.png)
 
-Links erscheinen im Quelltext auch in Form von Tags (z. B. <0> </0>). Wenn Sie mit dem Mauszeiger über das Tag fahren, zeigt der Editor den vollständigen Inhalt an. Manchmal stellen diese Tags auch Links dar.
+Links erscheinen im Quelltext auch in Form von Tags (z. B. \<0> \</0>). Wenn Sie mit dem Mauszeiger über das Tag fahren, zeigt der Editor den vollständigen Inhalt an. Manchmal stellen diese Tags auch Links dar.
 
 Es ist sehr wichtig, die Links aus der Quelle zu kopieren und die Reihenfolge nicht zu verändern.
 
@@ -154,7 +154,7 @@ Nonce – _Nicht übersetzbarer Text_
 
 Der Quelltext enthält auch verkürzte Tags, die nur Zahlen enthalten. Ihre Funktion ist dadurch nicht direkt ersichtlich. Sie können mit dem Mauszeiger über diese Tags fahren, um genau zu sehen, welche Funktion sie haben.
 
-Im folgenden Beispiel können Sie sehen, dass der Mauszeiger über dem <0> Tag zeigt, dass er `<code>` darstellt und einen Code-Ausschnitt enthält. Daher sollte der Inhalt innerhalb dieser Tags nicht übersetzt werden.
+Im folgenden Beispiel können Sie sehen, dass der Mauszeiger über dem \<0> Tag zeigt, dass er `<code>` darstellt und einen Code-Ausschnitt enthält. Daher sollte der Inhalt innerhalb dieser Tags nicht übersetzt werden.
 
 ![Beispiel für mehrdeutige Tags.png](./example-of-ambiguous-tags.png)
 

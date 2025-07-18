@@ -1,4 +1,8 @@
-import type { QuestionBank, QuestionBankConfig } from "@/lib/types"
+import type {
+  ChoiceLetter,
+  QuestionBank,
+  QuestionBankConfig,
+} from "@/lib/types"
 
 /**
  * This file is used to generate the question bank for the quizzes.
@@ -30,13 +34,32 @@ import type { QuestionBank, QuestionBankConfig } from "@/lib/types"
  * - "what-is-ethereum-1-c-explanation"
  * - "what-is-ethereum-1-d-label"
  * - "what-is-ethereum-1-d-explanation"
+ *
+ * To re-use answer explanations from other choices within the same question,
+ * append an optional explanationOverrides array to the question object.
+ * This take the format of an array of 1-indexed answer choices to re-use, with
+ * the position in the array representing which question to override. First
+ * position is "a".
+ *
+ * Example - Re-use the first answer explanation for all choices:
+ * "what-is-ethereum": [
+ * { totalAnswers: 4, correctAnswer: 2, explanationOverrides: [1, 1, 1, 1] }
+ * ]
+ *
+ * With that alteration, requires the following strings in learn-quizzes.json:
+ * - "what-is-ethereum-1-prompt"
+ * - "what-is-ethereum-1-a-label"
+ * - "what-is-ethereum-1-a-explanation"
+ * - "what-is-ethereum-1-b-label"
+ * - "what-is-ethereum-1-c-label"
+ * - "what-is-ethereum-1-d-label"
  */
 const questionBankConfig: QuestionBankConfig = {
   "what-is-ethereum": [
     { totalAnswers: 4, correctAnswer: 2 },
     { totalAnswers: 4, correctAnswer: 1 },
     { totalAnswers: 4, correctAnswer: 4 },
-    { totalAnswers: 4, correctAnswer: 1 },
+    { totalAnswers: 4, correctAnswer: 1, explanationOverrides: [1, 1, 1, 1] },
     { totalAnswers: 4, correctAnswer: 4 },
   ],
   "what-is-ether": [
@@ -84,6 +107,13 @@ const questionBankConfig: QuestionBankConfig = {
     { totalAnswers: 2, correctAnswer: 2 },
     { totalAnswers: 4, correctAnswer: 2 },
   ],
+  gas: [
+    { totalAnswers: 4, correctAnswer: 4 },
+    { totalAnswers: 4, correctAnswer: 4 },
+    { totalAnswers: 4, correctAnswer: 1 },
+    { totalAnswers: 4, correctAnswer: 2 },
+    { totalAnswers: 4, correctAnswer: 2 },
+  ],
   daos: [
     { totalAnswers: 4, correctAnswer: 4 },
     { totalAnswers: 4, correctAnswer: 4 },
@@ -109,11 +139,11 @@ const questionBankConfig: QuestionBankConfig = {
   ],
   "run-a-node": [
     { totalAnswers: 4, correctAnswer: 1 },
-    { totalAnswers: 4, correctAnswer: 1 },
+    { totalAnswers: 4, correctAnswer: 1, explanationOverrides: [1, 1, 1, 1] },
     { totalAnswers: 4, correctAnswer: 4 },
     { totalAnswers: 4, correctAnswer: 3 },
     { totalAnswers: 4, correctAnswer: 1 },
-    { totalAnswers: 2, correctAnswer: 2 },
+    { totalAnswers: 2, correctAnswer: 2, explanationOverrides: [1, 1] },
   ],
   stablecoins: [
     { totalAnswers: 4, correctAnswer: 1 },
@@ -137,19 +167,26 @@ const charFromIdx = (idx: number) => String.fromCharCode(97 + idx)
 const questionBank = Object.entries(questionBankConfig).reduce(
   (acc, [topicKey, value]) => {
     for (const [idx, question] of value.entries()) {
-      const { totalAnswers, correctAnswer } = question
+      const { totalAnswers, correctAnswer, explanationOverrides } = question
       const questionKey = `${topicKey}-${idx + 1}`
       const questionObject = {
         prompt: `${questionKey}-prompt`,
         answers: Array(totalAnswers)
           .fill(0)
           .map((_, i) => {
-            const choice = charFromIdx(i) as "a" | "b" | "c" | "d"
+            const choice = charFromIdx(i) as ChoiceLetter
+            const exIdx =
+              explanationOverrides && explanationOverrides[i]
+                ? explanationOverrides[i] - 1
+                : i
+            const exLetter = charFromIdx(exIdx) as ChoiceLetter
+
             const id = `${questionKey}-${choice}`
+            const exId = `${questionKey}-${exLetter}`
             return {
               id,
               label: `${id}-label`,
-              explanation: `${id}-explanation`,
+              explanation: `${exId}-explanation`,
             }
           }),
         correctAnswerId: `${questionKey}-${charFromIdx(correctAnswer - 1)}`,

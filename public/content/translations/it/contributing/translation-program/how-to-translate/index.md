@@ -18,7 +18,7 @@ Se preferisci un approccio più visivo, consulta la guida di Luka per l'impostaz
 
 Dovrai accedere al tuo profilo di Crowdin o registrarti se non ne hai già uno. Per iscriversi bastano un account di posta elettronica e una password.
 
-<ButtonLink to="https://crowdin.com/project/ethereum-org/">
+<ButtonLink href="https://crowdin.com/project/ethereum-org/">
   Unisciti al progetto
 </ButtonLink>
 
@@ -82,7 +82,7 @@ Una volta completata la traduzione (cioè, tutti i file per una categoria di con
 
 ### Contattaci {#get-in-touch}
 
-Hai domande? O desideri collaborare con il nostro team e altri traduttori? Ti invitiamo a pubblicare nel canale #translations del nostro [server Discord ethereum.org](/discord/)
+Hai delle domande? O desideri collaborare con il nostro team e altri traduttori? Ti invitiamo a pubblicare nel canale #translations del nostro [server Discord ethereum.org](/discord/)
 
 Puoi anche contattarci all'indirizzo translations@ethereum.org
 

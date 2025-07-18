@@ -1,16 +1,16 @@
-import { ReportsModel } from "@crowdin/crowdin-api-client"
-
 import { NavSectionKey } from "@/components/Nav/types"
 
 import i18nConfig from "../../i18n.config.json"
 
 import type { CommunityBlog } from "./types"
 
-export const OLD_CONTENT_DIR = "src/content"
+export const OLD_CONTENT_DIR = "src/content" // For old git commit history -- do not remove
 export const CONTENT_DIR = "public/content"
+export const CONTENT_PATH = "/content"
 export const TRANSLATIONS_DIR = "public/content/translations"
 export const TRANSLATED_IMAGES_DIR = "/content/translations"
 export const PLACEHOLDER_IMAGE_DIR = "src/data/placeholders"
+export const INTERNAL_TUTORIALS_JSON = "src/data/internalTutorials.json"
 export const INTL_JSON_DIR = "src/intl"
 
 export const NULL_VALUE = "—"
@@ -19,16 +19,17 @@ export const NULL_VALUE = "—"
 export const DEFAULT_LOCALE = "en"
 export const FAKE_LOCALE = "default"
 // Sorted list of supported locales codes, defined in `i18n.config.json`
-const BUILD_LOCALES = process.env.BUILD_LOCALES
+const BUILD_LOCALES = process.env.NEXT_PUBLIC_BUILD_LOCALES
 export const LOCALES_CODES = BUILD_LOCALES
   ? BUILD_LOCALES.split(",")
   : i18nConfig.map(({ code }) => code)
 
 // Site urls
-export const SITE_URL = "https://ethereum.org"
+export const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL || "https://ethereum.org"
 export const DISCORD_PATH = "/discord/"
 export const GITHUB_REPO_URL =
-  "https://github.com/ethereum/ethereum-org-website"
+  "https://github.com/ethereum/ethereum-org-website/"
 export const EDIT_CONTENT_URL = `https://github.com/ethereum/ethereum-org-website/tree/dev/`
 export const MAIN_CONTENT_ID = "main-content"
 export const WEBSITE_EMAIL = "website@ethereum.org"
@@ -43,7 +44,7 @@ export const GITHUB_URL = `https://github.com/`
 export const COINGECKO_API_BASE_URL =
   "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&category="
 export const COINGECKO_API_URL_PARAMS =
-  "&order=market_cap_desc&per_page=100&page=1&sparkline=false"
+  "&order=market_cap_desc&per_page=250&page=1&sparkline=false"
 export const BASE_TIME_UNIT = 3600 // 1 hour
 export const COLOR_MODE_STORAGE_KEY = "theme"
 
@@ -61,16 +62,6 @@ export const CROWDIN_PROJECT_URL = "https://crowdin.com/project/ethereum-org"
 export const CROWDIN_PROJECT_ID = 363359
 export const CROWDIN_API_MAX_LIMIT = 500
 export const FIRST_CROWDIN_CONTRIBUTION_DATE = "2019-07-01T00:00:00+00:00"
-export const REGULAR_RATES: ReportsModel.RegularRate[] = [
-  {
-    mode: "tm_match",
-    value: 1.01,
-  },
-  {
-    mode: "no_match",
-    value: 1.01,
-  },
-]
 
 export const languagePathRootRegExp = /^.+\/content\/translations\/[a-z-]*\//
 
@@ -186,7 +177,7 @@ export const RSS_DISPLAY_COUNT = 6
 
 export const VITALIK_FEED = "https://vitalik.eth.limo/feed.xml"
 export const SOLIDITY_FEED = "https://soliditylang.org/feed.xml"
-export const _0X_PARC_FEED = "https://rss.app/feeds/cWXGYts0ZM8C3F6t.xml"
+export const ATTESTANT_BLOG = "https://www.attestant.io/posts/"
 
 export const COMMUNITY_BLOGS: CommunityBlog[] = [
   {
@@ -199,20 +190,17 @@ export const COMMUNITY_BLOGS: CommunityBlog[] = [
   },
   {
     href: "https://ethpandaops.io/posts/",
-    feed: "https://ethpandaops.io/posts/index.xml",
+    feed: "https://ethpandaops.io/posts/rss.xml",
   },
   {
     href: "https://ethstaker.cc/blog",
     feed: "https://raw.githubusercontent.com/eth-educators/github-actions/refs/heads/main/_data/blog_data.xml",
   },
   {
+    name: "0xPARC",
     href: "https://0xparc.org/blog",
-    feed: _0X_PARC_FEED,
   },
-  {
-    href: "https://www.attestant.io/posts/",
-    feed: "https://www.attestant.io/posts/",
-  },
+  { href: ATTESTANT_BLOG, feed: ATTESTANT_BLOG },
   { name: "Devcon", href: "https://devcon.org/en/blogs/" },
   {
     href: "https://soliditylang.org/blog/",
@@ -225,6 +213,14 @@ export const COMMUNITY_BLOGS: CommunityBlog[] = [
   {
     href: "https://stark.mirror.xyz/",
     feed: "https://stark.mirror.xyz/feed/atom",
+  },
+  {
+    href: "https://medium.com/ethereum-cat-herders/newsletter",
+    feed: "https://medium.com/feed/ethereum-cat-herders",
+  },
+  {
+    href: "https://geodework.com/blog",
+    feed: "https://geodework.com/feed.xml",
   },
 ]
 

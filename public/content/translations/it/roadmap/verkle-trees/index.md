@@ -49,9 +49,9 @@ Gli alberi di Verkle sono coppie `(key,value)` in cui le chiavi sono elementi da
 
 Le reti di prova dell'albero di Verkle sono già in esecuzione, ma servono ancora aggiornamenti sostanziali e straordinari, necessari a supportarli. Puoi aiutare ad accelerare il progresso distribuendo contratti alle reti di prova od operando dei client delle reti di prova.
 
-[Esplora la rete di prova di Verkle Gen Devnet 2](https://verkle-gen-devnet-2.ethpandaops.io/)
+[Esplora la rete di prova di Verkle Gen Devnet 6](https://verkle-gen-devnet-6.ethpandaops.io/)
 
-[Guarda Guillaume Ballet spiegare la rete di prova di Verkle Condrieu](https://www.youtube.com/watch?v=cPLHFBeC0Vg) (nota che la rete di prova Condrieu era in proof-of-work e ora è stata sostituita dalla rete di prova di Verkle Gen Devnet 2).
+[Guarda Guillaume Ballet spiegare la rete di prova di Verkle Condrieu](https://www.youtube.com/watch?v=cPLHFBeC0Vg) (nota che la rete di prova Condrieu era in proof-of-work e ora è stata sostituita dalla rete di prova di Verkle Gen Devnet 6).
 
 ## Letture consigliate {#further-reading}
 
@@ -60,7 +60,7 @@ Le reti di prova dell'albero di Verkle sono già in esecuzione, ma servono ancor
 - [Guillaume Ballet spiega gli alberi di Verkle all'ETHGlobal](https://www.youtube.com/watch?v=f7bEtX3Z57o)
 - ["Come gli alberi di Verkle rendono Ethereum snello e succinto" di Guillaume Ballet al Devcon 6](https://www.youtube.com/watch?v=Q7rStTKwuYs)
 - [Piper Merriam sui client privi di stato dall'ETHDenver 2020](https://www.youtube.com/watch?v=0yiZJNciIJ4)
-- [Dankrad Fiest spiega gli alberi di Verkle e l'assenza di stato nel podcast "Zero Knowledge"](https://zeroknowledge.fm/episode-202-stateless-ethereum-verkle-tries-with-dankrad-feist/)
+- [Dankrad Fiest spiega gli alberi di Verkle e l'assenza di stato nel podcast "Zero Knowledge"](https://zeroknowledge.fm/podcast/202/)
 - [Vitalik Buterin sugli alberi di Verkle](https://vitalik.eth.limo/general/2021/06/18/verkle.html)
 - [Dankrad Feist sugli alberi di Verkle](https://dankradfeist.de/ethereum/2021/06/18/verkle-trie-for-eth1.html)
 - [Documentazione sull'EIP degli alberi di Verkle](https://notes.ethereum.org/@vbuterin/verkle_tree_eip#Illustration)

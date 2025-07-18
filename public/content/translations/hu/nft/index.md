@@ -75,7 +75,7 @@ Ez a weboldal egy alternatív, NFT-k által működtetett domainnévvel is rende
 
 ## Hogyan működnek az NFT-k? {#how-nfts-work}
 
-Az NFT-k, ahogy az Ethereum blokklánc többi digitális eszköze, egy speciális, Ethereum-alapú számítógépes program révén keletkeznek, amelyet okosszerződésnek neveznek. Ezek a szerződések bizonyos szabályokat követnek, például az [ERC-721](/glossary/#erc-721) vagy az [ERC-1155](/glossary/#erc-1155) szabványt, amelyek meghatározzák, hogy a szerződés mire képes.
+Az NFT-k, ahogy az Ethereum-blokklánc többi digitális eszköze, egy speciális, Ethereum-alapú számítógépes program révén keletkeznek, amelyet okosszerződésnek neveznek. Ezek a szerződések bizonyos szabályokat követnek, például az [ERC-721](/glossary/#erc-721) vagy az [ERC-1155](/glossary/#erc-1155) szabványt, amelyek meghatározzák, hogy a szerződés mire képes.
 
 Az NFT-okosszerződésekkel számos fontos dolog végrehajtható:
 

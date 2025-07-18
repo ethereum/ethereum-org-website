@@ -34,7 +34,7 @@ lang: zh
 
 ## Dune Analytics {#dune-analytics}
 
-[Dune Analytics](https://dune.com/) 对区块链数据进行预处理，并存入关系型数据库（DuneSQL）表中，以便用户可以使用结构化查询语言 (SQL) 查询区块链数据并基于查询结果构建仪表板。 链上数据被组织为 4 个原始表：`blocks`、`transactions`、（事件）`logs` 和（调用）`traces`。 常见的合约和协议都已解码，并且每个都有自己的事件集和调用表。 这些事件和调用表被进一步处理并按协议类型组织成抽象表，例如去中心化交易所、借贷、稳定币等。
+[Dune Analytics](https://dune.com/) 对区块链数据进行预处理，并存入关系型数据库 (DuneSQL) 表中，以便用户能够使用结构化查询语言 (SQL) 查询区块链数据并基于查询结果构建仪表板。 链上数据被组织为 4 个原始表：`blocks`、`transactions`、（事件）`logs` 和（调用）`traces`。 常见的合约和协议都已解码，并且每个都有自己的事件集和调用表。 这些事件和调用表被进一步处理并按协议类型组织成抽象表，例如去中心化交易所、借贷、稳定币等。
 
 ## SubQuery 网络 {#subquery-network}
 
@@ -47,7 +47,7 @@ lang: zh
 
 ## 延伸阅读 {#further-reading}
 
-- [Graph 网络概览](https://thegraph.com/docs/en/about/network/)
+- [Graph 网络概览](https://thegraph.com/docs/en/about/)
 - [Graph 查询实战](https://thegraph.com/explorer/subgraph/graphprotocol/graph-network-mainnet?version=current)
 - [EtherScan 上的应用程序接口代码示例](https://etherscan.io/apis#contracts)
 - [Beaconcha.in 信标链浏览器](https://beaconcha.in)
