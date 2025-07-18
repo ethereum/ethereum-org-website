@@ -326,7 +326,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           currentHolderAddress={currentHolder?.address || null}
         />
 
-        <div className="flex flex-col gap-12 px-16 pb-24 pt-12 text-body-inverse md:flex-row dark:text-body">
+        <div className="flex flex-col gap-12 px-8 pb-24 pt-12 text-body-inverse sm:px-16 md:flex-row dark:text-body">
           <div className="flex flex-1 flex-col gap-8">
             <p>
               To commemorate this historic milestone, we&apos;re introducing the{" "}
@@ -365,7 +365,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
         </div>
       </div>
 
-      <div className="flex w-full flex-col items-center gap-8 px-8 py-8 pt-32 lg:flex-row">
+      <div className="flex w-full flex-col items-center gap-8 px-8 py-8 lg:flex-row">
         <div className="flex flex-1 flex-col gap-6">
           <h2 className="flex flex-col gap-2 font-black">
             <span className="text-4xl text-accent-a">
