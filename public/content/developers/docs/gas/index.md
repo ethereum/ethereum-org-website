@@ -58,14 +58,14 @@ The base fee is calculated by a formula that compares the size of the previous b
 
 | Block Number | Included Gas | Fee Increase | Current Base Fee |
 | ------------ | -----------: | -----------: | ---------------: |
-| 1            |          15M |           0% |         100 gwei |
-| 2            |          30M |           0% |         100 gwei |
-| 3            |          30M |        12.5% |       112.5 gwei |
-| 4            |          30M |        12.5% |       126.6 gwei |
-| 5            |          30M |        12.5% |       142.4 gwei |
-| 6            |          30M |        12.5% |       160.2 gwei |
-| 7            |          30M |        12.5% |       180.2 gwei |
-| 8            |          30M |        12.5% |       202.7 gwei |
+| 1            |          18M |           0% |         100 gwei |
+| 2            |          36M |           0% |         100 gwei |
+| 3            |          36M |        12.5% |       112.5 gwei |
+| 4            |          36M |        12.5% |       126.6 gwei |
+| 5            |          36M |        12.5% |       142.4 gwei |
+| 6            |          36M |        12.5% |       160.2 gwei |
+| 7            |          36M |        12.5% |       180.2 gwei |
+| 8            |          36M |        12.5% |       202.7 gwei |
 
 Following the table above - to create a transaction on block number 9, a wallet will let the user know with certainty that the **maximum base fee** to be added to the next block is `current base fee * 112.5%` or `202.7 gwei * 112.5% = 228.1 gwei`.
 
@@ -73,11 +73,11 @@ It's also important to note it is unlikely we will see extended spikes of full b
 
 | Block Number | Included Gas | Fee Increase | Current Base Fee |
 | ------------ | -----------: | -----------: | ---------------: |
-| 30           |          30M |        12.5% |      2705.6 gwei |
+| 30           |          36M |        12.5% |      2705.6 gwei |
 | ...          |          ... |        12.5% |              ... |
-| 50           |          30M |        12.5% |     28531.3 gwei |
+| 50           |          36M |        12.5% |     28531.3 gwei |
 | ...          |          ... |        12.5% |              ... |
-| 100          |          30M |        12.5% |  10302608.6 gwei |
+| 100          |          36M |        12.5% |  10302608.6 gwei |
 
 ### Priority fee (tips) {#priority-fee}
 
@@ -89,7 +89,7 @@ To execute a transaction on the network, users can specify a maximum limit they 
 
 ### Block size {#block-size}
 
-Each block has a target size of 15 million gas, but the size of blocks will increase or decrease in accordance with network demand, up until the block limit of 30 million gas (2x the target block size). The protocol achieves an equilibrium block size of 15 million on average through the process of _tâtonnement_. This means if the block size is greater than the target block size, the protocol will increase the base fee for the following block. Similarly, the protocol will decrease the base fee if the block size is less than the target block size. The amount by which the base fee is adjusted is proportional to how far the current block size is from the target. [More on blocks](/developers/docs/blocks/).
+Each block has a target size of 18 million gas, but the size of blocks will increase or decrease in accordance with network demand, up until the block limit of 36 million gas (2x the target block size). The protocol achieves an equilibrium block size of 18 million on average through the process of _tâtonnement_. This means if the block size is greater than the target block size, the protocol will increase the base fee for the following block. Similarly, the protocol will decrease the base fee if the block size is less than the target block size. The amount by which the base fee is adjusted is proportional to how far the current block size is from the target. [More on blocks](/developers/docs/blocks/).
 
 ### Calculating gas fees in practice {#calculating-fees-in-practice}
 
