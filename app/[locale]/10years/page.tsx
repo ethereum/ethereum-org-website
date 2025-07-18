@@ -31,7 +31,7 @@ import { adoptionStyles } from "./_components/data"
 import InnovationSwiper from "./_components/InnovationSwiper/lazy"
 import TenYearGlobe from "./_components/TenYearGlobe/lazy"
 import TenYearHero from "./_components/TenYearHero"
-import TorchHistorySwiper from "./_components/TorchHistorySwiper"
+import TorchHistorySwiper from "./_components/TorchHistorySwiper/lazy"
 import Stories from "./_components/UserStories/lazy"
 import {
   getAdoptionCards,

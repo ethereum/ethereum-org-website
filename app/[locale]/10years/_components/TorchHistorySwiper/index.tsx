@@ -10,7 +10,7 @@ import {
   SwiperNavigation,
 } from "@/components/ui/swiper"
 
-import TorchHistoryCard from "./TorchHistoryCard"
+import TorchHistoryCard from "../TorchHistoryCard"
 
 import { getAvatarImage, type TorchHolderEvent } from "@/lib/torch"
 
