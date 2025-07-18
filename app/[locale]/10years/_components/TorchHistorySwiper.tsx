@@ -16,7 +16,7 @@ import { getAvatarImage, type TorchHolderEvent } from "@/lib/torch"
 
 type TorchHistorySwiperProps = {
   holders: TorchHolderEvent[]
-  currentHolderAddress: Address
+  currentHolderAddress: Address | null
 }
 
 const TorchHistorySwiper = ({

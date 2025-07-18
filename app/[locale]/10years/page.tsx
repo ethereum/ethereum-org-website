@@ -48,6 +48,7 @@ import {
   getHolders,
   isAddressFiltered,
   isTorchBurned,
+  TorchHolder,
 } from "@/lib/torch"
 import TenYearLogo from "@/public/images/10-year-anniversary/10-year-logo.png"
 
@@ -101,13 +102,19 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
       {} as Record<string, (typeof allTorchHolders)[0]>
     )
 
-  const isBurned = await isTorchBurned()
-  const currentHolderAddress = await getCurrentHolderAddress()
-  const isFiltered = isAddressFiltered(currentHolderAddress)
+  let isBurned = false
+  let currentHolder: TorchHolder | null = null
+  try {
+    isBurned = await isTorchBurned()
+    const currentHolderAddress = await getCurrentHolderAddress()
+    const isFiltered = isAddressFiltered(currentHolderAddress)
 
-  const currentHolder = isFiltered
-    ? null
-    : torchHolderMap[currentHolderAddress.toLowerCase()]
+    currentHolder = isFiltered
+      ? null
+      : torchHolderMap[currentHolderAddress.toLowerCase()]
+  } catch (error) {
+    console.error("Error fetching torch data:", error)
+  }
   const torchHolders = await getHolders(torchHolderMap)
 
   return (
@@ -306,7 +313,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 
         <TorchHistorySwiper
           holders={torchHolders}
-          currentHolderAddress={currentHolderAddress}
+          currentHolderAddress={currentHolder?.address || null}
         />
 
         <div className="flex flex-col gap-12 px-16 pb-24 pt-12 text-body-inverse md:flex-row dark:text-body">
