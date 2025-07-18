@@ -299,6 +299,9 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
                 loop
                 muted
                 poster="/images/10-year-anniversary/torch-cover.png"
+                controlsList="nodownload"
+                disablePictureInPicture
+                playsInline
               />
               <Image
                 src="/images/10-year-anniversary/torch-overlay.png"
