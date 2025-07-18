@@ -39,7 +39,7 @@ Ciallaíonn cruthúnas ar gheall an méid seo a leanas:
 
 Tá go leor faisnéise laistigh de bhloc. Ag an leibhéal is airde tá na réimsí seo a leanas i mbloc:
 
-| Réimse           | Cur síos                                                  |
+| Réimse           | Tuairisc                                                  |
 |:---------------- |:--------------------------------------------------------- |
 | `slot`           | an sliotán lena mbaineann an bloc                         |
 | `proposer_index` | ID an bhailíochtóra a mhol an bloc                        |
@@ -49,7 +49,7 @@ Tá go leor faisnéise laistigh de bhloc. Ag an leibhéal is airde tá na réims
 
 Tá roinnt réimsí dá chuid féin sa bhloc `corp`:
 
-| Réimse               | Cur síos                                                                |
+| Réimse               | Tuairisc                                                                |
 |:-------------------- |:----------------------------------------------------------------------- |
 | `randao_reveal`      | luach a úsáidtear chun an chéad mholtóir bloc eile a roghnú             |
 | `eth1_data`          | faisnéis faoin gconradh taisce                                          |
@@ -64,7 +64,7 @@ Tá roinnt réimsí dá chuid féin sa bhloc `corp`:
 
 Sa réimse `fianuithe` tá liosta de na fianuithe go léir sa bhloc. Tá a gcineál sonraí féin ag fianuithe ina bhfuil roinnt píosaí sonraí. Tá gach fianú:
 
-| Réimse             | Cur síos                                                |
+| Réimse             | Tuairisc                                                |
 |:------------------ |:------------------------------------------------------- |
 | `aggregation_bits` | liosta de na bailíochtóirí a ghlac páirt san fhianú seo |
 | `data`             | coimeádán le foréimsí iolracha                          |
@@ -72,7 +72,7 @@ Sa réimse `fianuithe` tá liosta de na fianuithe go léir sa bhloc. Tá a gcine
 
 Tá an méid seo a leanas sa réimse `sonraí` sa `fhianú`:
 
-| Réimse              | Cur síos                                            |
+| Réimse              | Tuairisc                                            |
 |:------------------- |:--------------------------------------------------- |
 | `slot`              | an sliotán lena mbaineann an fianú                  |
 | `index`             | innéacsanna le haghaidh bailíochtóirí fianaithe     |
@@ -84,7 +84,7 @@ Nuair a ritear na hidirbhearta sa `execution_payload`, nuashonraítear an staid 
 
 Tá na réimsí seo a leanas sa `execution_payload_header`:
 
-| Réimse              | Cur síos                                                                          |
+| Réimse              | Tuairisc                                                                          |
 |:------------------- |:--------------------------------------------------------------------------------- |
 | `parent_hash`       | hais an mháthairbhloic                                                            |
 | `fee_recipient`     | seoladh cuntais chun táillí idirbhirt a íoc leis                                  |
@@ -104,7 +104,7 @@ Tá na réimsí seo a leanas sa `execution_payload_header`:
 
 Tá na nithe seo a leanas sa `execution_payload` féin (tabhair faoi deara go bhfuil sé seo comhionann leis an gceanntásc ach amháin go n-áirítear ann liosta iarbhír na n-idirbhearta agus faisnéis aistarraingthe in ionad hais fréimhe na n-idirbhearta):
 
-| Réimse             | Cur síos                                                                          |
+| Réimse             | Tuairisc                                                                          |
 |:------------------ |:--------------------------------------------------------------------------------- |
 | `parent_hash`      | hais an mháthairbhloic                                                            |
 | `fee_recipient`    | seoladh cuntais chun táillí idirbhirt a íoc leis                                  |
@@ -124,7 +124,7 @@ Tá na nithe seo a leanas sa `execution_payload` féin (tabhair faoi deara go bh
 
 Sa liosta `aistarraingtí` tá réada `aistarraingt` struchtúrtha mar a leanas:
 
-| Réimse           | Cur síos                             |
+| Réimse           | Tuairisc                             |
 |:---------------- |:------------------------------------ |
 | `seoladh`        | seoladh cuntais a rinne aistarraingt |
 | `amount`         | méid aistarraingthe                  |

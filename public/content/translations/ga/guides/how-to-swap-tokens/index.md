@@ -12,7 +12,7 @@ Is éard atá i gceist le babhtáil dearbháin ná malartú dhá shócmhainn dhi
 
 **Réamhriachtanas:**
 
-- bíodh [sparán cripte](/glossary/#wallet) agat, is féidir leat an rang seo a leanúint: [Conas chuig: "Cláraigh" cuntas Ethereum](/treoracha/conas-chruthú-an-ethereum-account/)
+- an bhfuil [sparán cripte](/glossary/#wallet) agat; mura bhfuil, is féidir leat an treoir seo a leanúint ar [conas cuntas Ethereum a chruthú](/guides/how-to-create-an-ethereum-account/)
 - cuir airgead le do sparán
 
 ## 1. Ceangail do sparán leis an malartán díláraithe (DEX) de do rogha féin
@@ -22,7 +22,7 @@ Seo a leanas roinnt malartuithe coitianta:
 - [Uniswap](https://app.uniswap.org/#/swap)
 - [Sushiswap](https://www.sushi.com/swap)
 - [1Inch](https://app.1inch.io/#/1/unified/swap/ETH/DAI)
-- [Curve](https://curve.fi/#/ethereum/swap)
+- [Curve](https://www.curve.finance/dex/ethereum/swap/)
 
 Suimiúil? Foghlaim tuilleadh faoi cad is [airgeadas díláraithe (DeFi)](/defi/) ann agus conas a oibríonn na malartuithe nua seo.
 
