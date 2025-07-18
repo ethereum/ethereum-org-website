@@ -193,13 +193,16 @@ export const formatAddress = (address: Address) => {
 }
 
 export const formatDate = (timestamp: number) => {
-  return new Date(timestamp * 1000).toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "short",
-    day: "numeric",
-    hour: "2-digit",
+  const date = new Date(timestamp * 1000)
+  const month = date.toLocaleDateString("en-US", { month: "long" })
+  const day = date.getDate().toString().padStart(2, "0")
+  const time = date.toLocaleTimeString("en-US", {
+    hour: "numeric",
     minute: "2-digit",
+    hour12: true,
   })
+
+  return `${month} ${day}, ${time}`
 }
 
 export const getEtherscanUrl = (txHash: string) => {
