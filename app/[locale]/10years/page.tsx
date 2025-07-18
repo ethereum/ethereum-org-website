@@ -286,7 +286,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
 
       <div
         id="torch-history"
-        className="my-32 flex w-full scroll-mt-32 flex-col bg-gradient-to-b from-[#171B37] via-[#171B37] via-60% to-[#9C63F8] md:rounded-3xl"
+        className="my-32 flex w-full scroll-mt-32 flex-col bg-gradient-to-b from-[#161A36] via-[#161A36] via-60% to-[#9C63F8] md:rounded-3xl"
       >
         <div className="p-8">
           <div className="relative">

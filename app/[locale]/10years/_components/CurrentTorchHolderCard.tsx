@@ -39,7 +39,7 @@ const CurrentTorchHolderCard = ({
     <Card
       className={cn("w-full overflow-hidden rounded-3xl shadow-xl", className)}
     >
-      <CardHeader className="bg-[#18193A]">
+      <CardHeader className="bg-[#161A36]">
         <div className="relative">
           {/* Torch/flame video */}
           <div className="flex items-center justify-center pt-12">
@@ -50,7 +50,7 @@ const CurrentTorchHolderCard = ({
               autoPlay
               loop
               muted
-              poster="/images/10-year-anniversary/torch-cover.png"
+              poster="/images/10-year-anniversary/torch-cover.webp"
             />
           </div>
 
