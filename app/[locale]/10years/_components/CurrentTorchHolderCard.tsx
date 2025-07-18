@@ -25,13 +25,13 @@ import {
 
 interface CurrentTorchHolderCardProps {
   currentHolder: TorchHolderMetadata | null
-  isFiltered?: boolean
+  isBurned?: boolean
   className?: string
 }
 
 const CurrentTorchHolderCard = ({
   currentHolder,
-  isFiltered = false,
+  isBurned = false,
   className,
 }: CurrentTorchHolderCardProps) => {
   return (
@@ -94,17 +94,7 @@ const CurrentTorchHolderCard = ({
               </BaseLink>
             </div>
           </div>
-        ) : isFiltered ? (
-          <div className="flex flex-col items-center gap-4 text-center">
-            <div className="text-2xl font-bold text-gray-500">
-              🤐 Unknown Holder
-            </div>
-            <div className="text-lg">
-              The current torch holder&apos;s identity is not publicly
-              available.
-            </div>
-          </div>
-        ) : (
+        ) : isBurned ? (
           <div className="flex flex-col items-center gap-4 text-center">
             <div className="text-2xl font-bold text-red-500">
               🔥 Torch Burned 🔥
@@ -112,6 +102,16 @@ const CurrentTorchHolderCard = ({
             <div className="text-lg">
               The Ethereum Torch has been burned to celebrate the 10-year
               anniversary!
+            </div>
+          </div>
+        ) : (
+          <div className="flex flex-col items-center gap-4 text-center">
+            <div className="text-2xl font-bold text-gray-500">
+              🤐 Unknown Bearer
+            </div>
+            <div className="text-lg">
+              The current torch bearer&apos;s identity is not publicly
+              available.
             </div>
           </div>
         )}

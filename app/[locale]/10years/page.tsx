@@ -43,11 +43,7 @@ import {
 import { fetch10YearEvents } from "@/lib/api/fetch10YearEvents"
 import { fetch10YearStories } from "@/lib/api/fetch10YearStories"
 import { fetchTorchHolders } from "@/lib/api/fetchTorchHolders"
-import {
-  getCurrentHolderAddress,
-  getHolders,
-  isAddressFiltered,
-} from "@/lib/torch"
+import { getCurrentHolderAddress, getHolders } from "@/lib/torch"
 import TenYearLogo from "@/public/images/10-year-anniversary/10-year-logo.png"
 
 export const dynamic = "force-static"
@@ -104,14 +100,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const isBurned =
     currentHolderAddress === "0x0000000000000000000000000000000000000000"
 
-  // Check if current holder should be filtered
-  const isCurrentHolderFiltered =
-    !isBurned && isAddressFiltered(currentHolderAddress)
-
-  const currentHolder =
-    isBurned || isCurrentHolderFiltered
-      ? null
-      : torchHolderMap[currentHolderAddress.toLowerCase()]
+  const currentHolder = torchHolderMap[currentHolderAddress.toLowerCase()]
   const torchHolders = await getHolders(torchHolderMap)
 
   return (
@@ -142,7 +131,7 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
           <CurrentTorchHolderCard
             className="w-[420px]"
             currentHolder={currentHolder}
-            isFiltered={isCurrentHolderFiltered}
+            isBurned={isBurned}
           />
         </div>
       </div>

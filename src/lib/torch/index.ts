@@ -1,6 +1,6 @@
 import blockies from "ethereum-blockies-base64"
 import type { Address } from "viem"
-import { hardhat } from "viem/chains"
+import { sepolia } from "viem/chains"
 import { createConfig, getPublicClient, http } from "@wagmi/core"
 
 import Torch from "@/data/Torch.json"
@@ -22,12 +22,12 @@ export const isAddressFiltered = (address: string): boolean => {
 }
 
 export const config = createConfig({
-  chains: [hardhat],
+  chains: [sepolia],
   transports: {
-    // [sepolia.id]: http(
-    //   `https://eth-sepolia.g.alchemy.com/v2/${process.env.ALCHEMY_API_KEY}`
-    // ),
-    [hardhat.id]: http("http://127.0.0.1:8545"),
+    [sepolia.id]: http(
+      `https://eth-sepolia.g.alchemy.com/v2/${process.env.ALCHEMY_API_KEY}`
+    ),
+    // [hardhat.id]: http("http://127.0.0.1:8545"),
   },
 })
 
@@ -125,17 +125,6 @@ const getHolderEvents = async (
       }
     }
 
-    // If the address is filtered, show as unknown holder
-    if (isAddressFiltered(event.to)) {
-      return {
-        address: event.to,
-        name: `Unknown Holder (${formatAddress(event.to)})`,
-        role: "Previous torch holder",
-        twitter: "",
-        event,
-      }
-    }
-
     // If we have metadata for this holder, use it
     if (holderMetadata) {
       return {
@@ -147,8 +136,8 @@ const getHolderEvents = async (
     // If no metadata found, create a fallback entry
     return {
       address: event.to,
-      name: `Unknown Holder (${formatAddress(event.to)})`,
-      role: "Previous torch holder",
+      name: `Unknown Bearer (${formatAddress(event.to)})`,
+      role: "",
       twitter: "",
       event,
     }
