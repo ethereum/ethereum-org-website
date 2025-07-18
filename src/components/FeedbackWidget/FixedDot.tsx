@@ -34,7 +34,7 @@ const FixedDot = forwardRef<HTMLButtonElement, FixedDotProps>(
         {...props}
       >
         <FeedbackGlyphIcon
-          className={cn("text-white", !isExpanded && "-mx-1")}
+          className={cn("!h-8 !w-[26px] text-white", !isExpanded && "-mx-1")}
         />
         <div
           className={cn(
