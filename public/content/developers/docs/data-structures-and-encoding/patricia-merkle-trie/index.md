@@ -5,17 +5,17 @@ lang: en
 sidebarDepth: 2
 ---
 
-The state of Ethereum (the totality of all accounts, balances, and smart contracts), is encoded into a special version of the data structure known generally in computer science as a Merkle Tree. This structure is useful for many applications in cryptography because it creates a verifiable relationship between all the individual pieces of data entangled in the tree, resulting in a single **root** value that can be used to prove things about the data. 
+The state of Ethereum (the totality of all accounts, balances, and smart contracts), is encoded into a special version of the data structure known generally in computer science as a Merkle Tree. This structure is useful for many applications in cryptography because it creates a verifiable relationship between all the individual pieces of data entangled in the tree, resulting in a single **root** value that can be used to prove things about the data.
 
-Ethereum's data structure is a 'modified Merkle-Patricia Trie', named so because it borrows some features of PATRICIA (the Practical Algorithm To Retrieve Information Coded in Alphanumeric), and because it is designed for efficient data re**trie**val of items that comprise the Ethereum state. 
+Ethereum's data structure is a 'modified Merkle-Patricia Trie', named so because it borrows some features of PATRICIA (the Practical Algorithm To Retrieve Information Coded in Alphanumeric), and because it is designed for efficient data re**trie**val of items that comprise the Ethereum state.
 
-A Merkle-Patricia trie is deterministic and cryptographically verifiable: The only way to generate a state root is by computing it from each individual piece of the state, and two states that are identical can be easily proven so by comparing the root hash and the hashes that led to it (_a Merkle proof_). Conversely, there is no way to create two different states with the same root hash, and any attempt to modify state with different values will result in a different state root hash. Theoretically, this structure provides the 'holy grail' of `O(log(n))` efficiency for inserts, lookups and deletes. 
+A Merkle-Patricia trie is deterministic and cryptographically verifiable: The only way to generate a state root is by computing it from each individual piece of the state, and two states that are identical can be easily proven so by comparing the root hash and the hashes that led to it (_a Merkle proof_). Conversely, there is no way to create two different states with the same root hash, and any attempt to modify state with different values will result in a different state root hash. Theoretically, this structure provides the 'holy grail' of `O(log(n))` efficiency for inserts, lookups and deletes.
 
-In the near future, Ethereum plans to migrate to a [Verkle Tree](https://ethereum.org/en/roadmap/verkle-trees) structure, which will open up many new possibilities for future protocol improvements. 
+In the near future, Ethereum plans to migrate to a [Verkle Tree](https://ethereum.org/en/roadmap/verkle-trees) structure, which will open up many new possibilities for future protocol improvements.
 
 ## Prerequisites {#prerequisites}
 
-To better understand this page, it would be helpful to have basic knowledge of [hashes](https://en.wikipedia.org/wiki/Hash_function), [Merkle trees](https://en.wikipedia.org/wiki/Merkle_tree), [tries](https://en.wikipedia.org/wiki/Trie) and [serialization](https://en.wikipedia.org/wiki/Serialization). This article begins with a description of a basic [radix tree](https://en.wikipedia.org/wiki/Radix_tree), then gradually introduces the modifications necessary for Ethereum's more optimized data structure. 
+To better understand this page, it would be helpful to have basic knowledge of [hashes](https://en.wikipedia.org/wiki/Hash_function), [Merkle trees](https://en.wikipedia.org/wiki/Merkle_tree), [tries](https://en.wikipedia.org/wiki/Trie) and [serialization](https://en.wikipedia.org/wiki/Serialization). This article begins with a description of a basic [radix tree](https://en.wikipedia.org/wiki/Radix_tree), then gradually introduces the modifications necessary for Ethereum's more optimized data structure.
 
 ## Basic radix tries {#basic-radix-tries}
 
@@ -34,8 +34,8 @@ There is a difference between looking something up in the 'trie' and the underly
 The update and delete operations for radix tries can be defined as follows:
 
 ```python
-    def update(node, path, value):
-        curnode = db.get(node) if node else [NULL] * 17
+    def update(node_hash, path, value):
+        curnode = db.get(node_hash) if node_hash else [NULL] * 17
         newnode = curnode.copy()
         if path == "":
             newnode[-1] = value
@@ -45,8 +45,8 @@ The update and delete operations for radix tries can be defined as follows:
         db.put(hash(newnode), newnode)
         return hash(newnode)
 
-    def delete(node, path):
-        if node is NULL:
+    def delete(node_hash, path):
+        if node_hash is NULL:
             return NULL
         else:
             curnode = db.get(node_hash)
@@ -95,12 +95,12 @@ When traversing paths in nibbles, we may end up with an odd number of nibbles to
 
 The flagging of both _odd vs. even remaining partial path length_ and _leaf vs. extension node_ as described above reside in the first nibble of the partial path of any 2-item node. They result in the following:
 
-   | hex char | bits | node type partial  | path length |
-   | -------- | ---- | ------------------ | ----------- |
-   | 0        | 0000 | extension          | even        |
-   | 1        | 0001 | extension          | odd         |
-   | 2        | 0010 | terminating (leaf) | even        |
-   | 3        | 0011 | terminating (leaf) | odd         |
+| hex char | bits | node type partial  | path length |
+| -------- | ---- | ------------------ | ----------- |
+| 0        | 0000 | extension          | even        |
+| 1        | 0001 | extension          | odd         |
+| 2        | 0010 | terminating (leaf) | even        |
+| 3        | 0011 | terminating (leaf) | odd         |
 
 For even remaining path length (`0` or `2`), another `0` "padding" nibble will always follow.
 
@@ -138,12 +138,12 @@ Examples:
 Here is the extended code for getting a node in the Merkle Patricia trie:
 
 ```python
-    def get_helper(node, path):
+    def get_helper(node_hash, path):
         if path == []:
-            return node
-        if node == "":
+            return node_hash
+        if node_hash == "":
             return ""
-        curnode = rlp.decode(node if len(node) < 32 else db.get(node))
+        curnode = rlp.decode(node_hash if len(node_hash) < 32 else db.get(node_hash))
         if len(curnode) == 2:
             (k2, v2) = curnode
             k2 = compact_decode(k2)
@@ -154,13 +154,13 @@ Here is the extended code for getting a node in the Merkle Patricia trie:
         elif len(curnode) == 17:
             return get_helper(curnode[path[0]], path[1:])
 
-    def get(node, path):
+    def get(node_hash, path):
         path2 = []
         for i in range(len(path)):
             path2.push(int(ord(path[i]) / 16))
             path2.push(ord(path[i]) % 16)
         path2.push(16)
-        return get_helper(node, path2)
+        return get_helper(node_hash, path2)
 ```
 
 ### Example Trie {#example-trie}
