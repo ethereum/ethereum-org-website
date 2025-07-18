@@ -12892,6 +12892,15 @@
       "contributions": [
         "maintenance"
       ]
+    },
+    {
+      "login": "standstaff",
+      "name": "ZhengXingRu",
+      "avatar_url": "https://avatars.githubusercontent.com/u/163401255?v=4",
+      "profile": "https://github.com/standstaff",
+      "contributions": [
+        "maintenance"
+      ]
     }
   ],
   "contributorsPerLine": 7,
