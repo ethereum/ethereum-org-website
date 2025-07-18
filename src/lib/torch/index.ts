@@ -1,9 +1,10 @@
 import blockies from "ethereum-blockies-base64"
 import type { Address } from "viem"
-import { sepolia } from "viem/chains"
-import { createConfig, getPublicClient, http } from "@wagmi/core"
+import { getPublicClient } from "@wagmi/core"
 
 import Torch from "@/data/Torch.json"
+
+import { config } from "./config"
 
 const TORCH_CONTRACT_ADDRESS = Torch.address as Address
 const TORCH_ABI = Torch.abi
@@ -20,16 +21,6 @@ const FILTERED_ADDRESSES: string[] = [
 export const isAddressFiltered = (address: string): boolean => {
   return FILTERED_ADDRESSES.includes(address.toLowerCase())
 }
-
-export const config = createConfig({
-  chains: [sepolia],
-  transports: {
-    [sepolia.id]: http(
-      `https://eth-sepolia.g.alchemy.com/v2/${process.env.ALCHEMY_API_KEY}`
-    ),
-    // [hardhat.id]: http("http://127.0.0.1:8545"),
-  },
-})
 
 type TransferEvent = {
   from: Address
