@@ -93,6 +93,14 @@ module.exports = (phase, { defaultConfig }) => {
           protocol: "https",
           hostname: "coin-images.coingecko.com",
         },
+        {
+          protocol: "https",
+          hostname: "cdn.galxe.com",
+        },
+        {
+          protocol: "https",
+          hostname: "assets.poap.xyz",
+        },
       ],
     },
     async headers() {
