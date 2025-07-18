@@ -22,6 +22,7 @@ interface TorchHistoryCardProps {
   transactionHash: string
   className?: string
   isCurrentHolder?: boolean
+  isPlaceholder?: boolean
 }
 
 const TorchHistoryCard: React.FC<TorchHistoryCardProps> = ({
@@ -33,12 +34,14 @@ const TorchHistoryCard: React.FC<TorchHistoryCardProps> = ({
   transactionHash,
   className,
   isCurrentHolder,
+  isPlaceholder = false,
 }) => {
   return (
     <Card
       className={cn(
         "flex flex-col rounded-xl border border-gray-100/50 bg-gradient-to-b from-white to-gray-100 px-6 py-12 shadow-lg dark:text-body-inverse",
         isCurrentHolder && "bg-gradient-to-b from-[#B38DF0] to-[#DED4ED]",
+        isPlaceholder && "bg-gradient-to-b from-gray-100 to-gray-200",
         className
       )}
     >
@@ -67,12 +70,19 @@ const TorchHistoryCard: React.FC<TorchHistoryCardProps> = ({
       </CardHeader>
       <CardContent className="flex flex-col gap-1 p-0">
         <div>{role}</div>
-        <div className="text-xs text-body-medium">
-          From {formatDate(from)} to {formatDate(to)}
-        </div>
-        <BaseLink href={getEtherscanUrl(transactionHash)} className="text-xs">
-          View on Etherscan
-        </BaseLink>
+        {!isPlaceholder && (
+          <>
+            <div className="text-xs text-body-medium">
+              From {formatDate(from)} to {formatDate(to)}
+            </div>
+            <BaseLink
+              href={getEtherscanUrl(transactionHash)}
+              className="text-xs"
+            >
+              View on Etherscan
+            </BaseLink>
+          </>
+        )}
       </CardContent>
     </Card>
   )

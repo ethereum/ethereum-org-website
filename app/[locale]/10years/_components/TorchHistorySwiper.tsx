@@ -27,6 +27,34 @@ const TorchHistorySwiper = ({
     (holder) => holder.address === currentHolderAddress
   )
 
+  // Create an array of 10 items, filling with placeholders for future holders
+  const totalCards = 10
+  const allCards = Array.from({ length: totalCards }, (_, index) => {
+    if (index < holders.length) {
+      // Use actual holder data
+      return {
+        ...holders[index],
+        isPlaceholder: false,
+      }
+    } else {
+      // Create placeholder for future holder
+      return {
+        address: `placeholder-${index}` as Address,
+        name: `Future Bearer ${index + 1}`,
+        role: "Coming soon...",
+        twitter: "",
+        event: {
+          from: "0x0000000000000000000000000000000000000000" as Address,
+          to: `placeholder-${index}` as Address,
+          blockNumber: BigInt(0),
+          transactionHash: "",
+          timestamp: 0,
+        },
+        isPlaceholder: true,
+      }
+    }
+  })
+
   return (
     <SwiperContainer className="w-full">
       <Swiper
@@ -34,7 +62,9 @@ const TorchHistorySwiper = ({
         grabCursor
         centeredSlides
         slidesPerView="auto"
-        initialSlide={currentHolderIndex || holders.length - 1}
+        initialSlide={
+          currentHolderIndex >= 0 ? currentHolderIndex : holders.length - 1
+        }
         coverflowEffect={{
           rotate: 0,
           stretch: -50,
@@ -45,20 +75,27 @@ const TorchHistorySwiper = ({
         modules={[EffectCoverflow, Navigation]}
         className="w-full"
       >
-        {holders.map((holder, idx) => (
+        {allCards.map((card, idx) => (
           <SwiperSlide
             key={idx}
             className="flex !min-h-[400px] !w-60 justify-center"
           >
             <TorchHistoryCard
               className="!min-h-[400px]"
-              name={holder.name}
-              role={holder.role}
-              avatar={getBlockieImage(holder.address)}
-              from={holder.event.timestamp}
-              to={holder.event.timestamp}
-              transactionHash={holder.event.transactionHash}
-              isCurrentHolder={holder.address === currentHolderAddress}
+              name={card.name}
+              role={card.role}
+              avatar={
+                card.isPlaceholder
+                  ? "/images/10-year-anniversary/torch-cover.webp"
+                  : getBlockieImage(card.address)
+              }
+              from={card.event.timestamp}
+              to={card.event.timestamp}
+              transactionHash={card.event.transactionHash}
+              isCurrentHolder={
+                !card.isPlaceholder && card.address === currentHolderAddress
+              }
+              isPlaceholder={card.isPlaceholder}
             />
           </SwiperSlide>
         ))}
