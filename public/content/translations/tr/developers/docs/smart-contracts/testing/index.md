@@ -259,7 +259,7 @@ En önemli fark, hata ödül programlarının daha geniş bir geliştirici/hacke
 
 - **[Brownie birim test çerçevesi](https://eth-brownie.readthedocs.io/en/v1.0.0_a/tests.html)** - _Brownie, minimum kodla küçük testler yazmanıza olanak tanıyan, büyük projeler için iyi ölçeklenen ve oldukça genişletilebilir, zengin özelliklere sahip bir test çerçevesi olan Pytest'i kullanır._
 
-- **[Foundry Testleri](https://github.com/foundry-rs/foundry/tree/master/crates/forge)** - _Foundry, basit birim testleri, gaz optimizasyon kontrolleri ve sözleşme bulanıklaştırma gerçekleştirebilen hızlı ve esnek bir Ethereum test çerçevesi olan Forge'u barındırır._
+- **[Foundry Testleri](https://github.com/foundry-rs/foundry/tree/master/forge)** - _Foundry, basit birim testleri, gaz optimizasyon kontrolleri ve sözleşme bulanıklaştırma gerçekleştirebilen hızlı ve esnek bir Ethereum test çerçevesi olan Forge'u barındırır._
 
 - **[Hardhat Testleri](https://hardhat.org/hardhat-runner/docs/guides/test-contracts)** - _Ethers.js, Mocha ve Chai tabanlı akıllı sözleşme test çerçevesi._
 

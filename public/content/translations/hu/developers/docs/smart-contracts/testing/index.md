@@ -259,7 +259,7 @@ A fő különbség az, hogy a hibavadász-programok nyitottak a szélesebb fejle
 
 - **[Brownie unit testing framework](https://eth-brownie.readthedocs.io/en/v1.0.0_a/tests.html)** – _A Brownie a Pytest-et használja, amely egy funkciógazdag tesztelési keretrendszert, és amely lehetővé teszi kis tesztek írását minimális kóddal, jól skálázható nagyobb projektekhez és nagymértékben bővíthető._
 
-- **[Foundry Tests](https://github.com/foundry-rs/foundry/tree/master/crates/forge)** – _A Foundry a Forge megoldást kínálja, amely egy gyors és rugalmas Ethereum tesztelési keretrendszert, és amely képes egyszerű egységtesztek, gázoptimalizálási ellenőrzések és szerződés fuzzing végrehajtására._
+- **[Foundry Tests](https://github.com/foundry-rs/foundry/tree/master/forge)** – _A Foundry a Forge megoldást kínálja, amely egy gyors és rugalmas Ethereum tesztelési keretrendszert, és amely képes egyszerű egységtesztek, gázoptimalizálási ellenőrzések és szerződés fuzzing végrehajtására._
 
 - **[Hardhat Tests](https://hardhat.org/hardhat-runner/docs/guides/test-contracts)** – _Keretrendszer az ethers.js, Mocha és Chai alapú okosszerződések tesztelésére._
 

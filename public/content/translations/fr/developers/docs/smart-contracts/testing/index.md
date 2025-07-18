@@ -259,7 +259,7 @@ La principale différence est que les programmes de primes aux bogues sont ouver
 
 - **Cadre de test unitaire Brownie** - _Brownie utilise Pytest, un cadre de test riche en fonctionnalités qui vous permet d'écrire de petits tests avec un code minimal, qui s'adapte bien aux grands projets et qui est hautement extensible._
 
-- **[Tests Foundy](https://github.com/foundry-rs/foundry/tree/master/crates/forge)** - _Foundry propose Forge, un cadre de test Ethereum rapide et flexible capable d'exécuter des tests unitaires simples, des contrôles d'optimisation du gaz et du fuzzing de contrats._
+- **[Tests Foundy](https://github.com/foundry-rs/foundry/tree/master/forge)** - _Foundry propose Forge, un cadre de test Ethereum rapide et flexible capable d'exécuter des tests unitaires simples, des contrôles d'optimisation du gaz et du fuzzing de contrats._
 
 - **[Hardhat Tests](https://hardhat.org/hardhat-runner/docs/guides/test-contracts)** - _Framework pour tester des contrats intelligents basés sur ethers.js, Mocha et Chai._
 

@@ -259,7 +259,7 @@ function auctionEnd() external {
 
 - **[Brownie 单元测试框架](https://eth-brownie.readthedocs.io/en/v1.0.0_a/tests.html)** - _Brownie 采用了 Pytest，这是一个功能丰富的测试框架，让你只需使用最少的代码即可编写小型测试，并能有效地扩展以用于大型项目，而且具有很强的可扩展性。_
 
-- **[Foundry 测试](https://github.com/foundry-rs/foundry/tree/master/crates/forge)** - _Foundry 提供了 Forge，这是一个快速灵活的以太坊测试框架，能够执行简单的单元测试、燃料优化检查和合约模糊测试。_
+- **[Foundry 测试](https://github.com/foundry-rs/foundry/tree/master/forge)** - _Foundry 提供了 Forge，这是一个快速灵活的以太坊测试框架，能够执行简单的单元测试、燃料优化检查和合约模糊测试。_
 
 - **[Hardhat 测试](https://hardhat.org/hardhat-runner/docs/guides/test-contracts)** - _基于 ethers.js、Mocha 和 Chai 的智能合约测试框架。_
 

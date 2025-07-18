@@ -259,7 +259,7 @@ La differenza principale è che i programmi di bug bounty sono aperti alla più 
 
 - **[Quadro di test unitari di Brownie](https://eth-brownie.readthedocs.io/en/v1.0.0_a/tests.html)** - _Brownie utilizza Pytest, un quadro di test ricco di funzionalità che ti consente di scrivere piccoli test con codice minimale, si ridimensiona bene per i grandi progetti ed è altamente estendibile._
 
-- **[Test di Foundry](https://github.com/foundry-rs/foundry/tree/master/crates/forge)** - _Foundry offre Forge, un quadro di test di Ethereum veloci e flessibili, in grado di eseguire semplici test unitari, controlli d'ottimizzazione del carburante e fuzzing del contratto._
+- **[Test di Foundry](https://github.com/foundry-rs/foundry/tree/master/forge)** - _Foundry offre Forge, un quadro di test di Ethereum veloci e flessibili, in grado di eseguire semplici test unitari, controlli d'ottimizzazione del carburante e fuzzing del contratto._
 
 - **[Test di Hardhat](https://hardhat.org/hardhat-runner/docs/guides/test-contracts)** - _Quadro per testare i contratti intelligenti basato su ethers.js, Mocha e Chai._
 

@@ -259,7 +259,7 @@ function auctionEnd() external {
 
 - **[Πλαίσιο δοκιμής μονάδας Brownie](https://eth-brownie.readthedocs.io/en/v1.0.0_a/tests.html)** - _Το Brownie χρησιμοποιεί το Pytest, ένα πλούσιο σε χαρακτηριστικά πλαίσιο δοκιμών που σας επιτρέπει να γράφετε μικρές δοκιμές με ελάχιστο κώδικα, κλιμακώνεται καλά σε μεγάλα έργα και είναι ιδιαίτερα επεκτάσιμο._
 
-- **[Δοκιμές Foundry](https://github.com/foundry-rs/foundry/tree/master/crates/forge)** - _Το Foundry προσφέρει το Forge, ένα γρήγορο και ευέλικτο πλαίσιο δοκιμών Ethereum ικανό να εκτελεί απλές δοκιμές μονάδας, ελέγχους βελτιστοποίησης gas και fuzzing συμβολαίων._
+- **[Δοκιμές Foundry](https://github.com/foundry-rs/foundry/tree/master/forge)** - _Το Foundry προσφέρει το Forge, ένα γρήγορο και ευέλικτο πλαίσιο δοκιμών Ethereum ικανό να εκτελεί απλές δοκιμές μονάδας, ελέγχους βελτιστοποίησης gas και fuzzing συμβολαίων._
 
 - **[Δοκιμές Hardhat](https://hardhat.org/hardhat-runner/docs/guides/test-contracts)** - _Πλαίσιο για δοκιμή έξυπνων συμβολαίων βασισμένο σε ethers.js, Mocha και Chai._
 

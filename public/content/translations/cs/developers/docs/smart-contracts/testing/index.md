@@ -259,7 +259,7 @@ Hlavní rozdíl spočívá v tom, že programy odměn za vyřešení chyb jsou o
 
 - **[Brownie unit testing framework](https://eth-brownie.readthedocs.io/en/v1.0.0_a/tests.html)** – _Brownie využívá Pytest, funkčně bohatý testovací framework, který umožňuje psát malé testy s minimem kódu, dobře se škáluje pro velké projekty a je vysoce rozšiřitelný._
 
-- **[Foundry Tests](https://github.com/foundry-rs/foundry/tree/master/crates/forge)** – _Foundry nabízí Forge, rychlý a flexibilní framework pro testování na Ethereu, který dokáže provádět jednoduché jednotkové testy, kontroly optimalizace paliva a fuzzing kontraktů._
+- **[Foundry Tests](https://github.com/foundry-rs/foundry/tree/master/forge)** – _Foundry nabízí Forge, rychlý a flexibilní framework pro testování na Ethereu, který dokáže provádět jednoduché jednotkové testy, kontroly optimalizace paliva a fuzzing kontraktů._
 
 - **[Hardhat Tests](https://hardhat.org/hardhat-runner/docs/guides/test-contracts)** – _Framework pro testování chytrých kontraktů založený na ethers.js, Mocha a Chai._
 

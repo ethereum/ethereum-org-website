@@ -259,7 +259,7 @@ A maior diferença é que programas de recompensa por bug são abertos a uma mai
 
 - **[Framework de teste de unidade do Brownie](https://eth-brownie.readthedocs.io/en/v1.0.0_a/tests.html)** - _Brownie utiliza Pytest, uma estrutura de teste rica em recursos que permite que você escreva pequenos testes com o mínimo de código, escala bem para grandes projetos e é altamente extensível._
 
-- **[Froundry Testes](https://github.com/foundry-rs/foundry/tree/master/crates/forge)** - _Foundry oferece o Forge, um framework de teste no Ethereum rápido e flexível, capaz de executar testes de unidade simples, verificações de otimização de gás e mutações (fuzzing) em contratos._
+- **[Froundry Testes](https://github.com/foundry-rs/foundry/tree/master/forge)** - _Foundry oferece o Forge, um framework de teste no Ethereum rápido e flexível, capaz de executar testes de unidade simples, verificações de otimização de gás e mutações (fuzzing) em contratos._
 
 - **[Hardhat Testes](https://hardhat.org/hardhat-runner/docs/guides/test-contracts)** - _Framework para testar contratos inteligentes com base no ethers.js, Mocha e Chai._
 

@@ -259,7 +259,7 @@ Solidityスマートコントラクト用の単体テストフレームワーク
 
 - **[Brownieユニットテストフレームワーク](https://eth-brownie.readthedocs.io/en/v1.0.0_a/tests.html)** - _最小限のコードで小さなテストを作成可能。また、大規模なプロジェクトにも対応するスケーラビリティも持ち合わせており、機能豊富なテストフレームワークであるPytestを利用しています。_
 
-- **[Foundryテスト](https://github.com/foundry-rs/foundry/tree/master/crates/forge)** - _Foundry社は、シンプルな単体テスト、ガス最適化チェック、コントラクトファジングを実行でき、高速で柔軟なイーサリアムテストフレームワークであるForgeを提供しています。_
+- **[Foundryテスト](https://github.com/foundry-rs/foundry/tree/master/forge)** - _Foundry社は、シンプルな単体テスト、ガス最適化チェック、コントラクトファジングを実行でき、高速で柔軟なイーサリアムテストフレームワークであるForgeを提供しています。_
 
 - **[Hardhatテスト](https://hardhat.org/hardhat-runner/docs/guides/test-contracts)** - _ethers.js、Mocha、Chaiをベースとしたスマートコントラクトテストにおけるフレームワーク_。
 
