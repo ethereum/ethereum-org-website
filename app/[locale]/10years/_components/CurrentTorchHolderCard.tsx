@@ -25,11 +25,13 @@ import {
 
 interface CurrentTorchHolderCardProps {
   currentHolder: TorchHolderMetadata | null
+  isFiltered?: boolean
   className?: string
 }
 
 const CurrentTorchHolderCard = ({
   currentHolder,
+  isFiltered = false,
   className,
 }: CurrentTorchHolderCardProps) => {
   return (
@@ -90,6 +92,16 @@ const CurrentTorchHolderCard = ({
               >
                 View on Etherscan
               </BaseLink>
+            </div>
+          </div>
+        ) : isFiltered ? (
+          <div className="flex flex-col items-center gap-4 text-center">
+            <div className="text-2xl font-bold text-gray-500">
+              🤐 Unknown Holder
+            </div>
+            <div className="text-lg">
+              The current torch holder&apos;s identity is not publicly
+              available.
             </div>
           </div>
         ) : (

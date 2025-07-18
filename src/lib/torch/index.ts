@@ -9,6 +9,18 @@ const TORCH_CONTRACT_ADDRESS = Torch.address as Address
 const TORCH_ABI = Torch.abi
 const TORCH_BLOCK_NUMBER = Torch.blockNumber
 
+// Addresses to filter from the UI (show as "Unknown Holder")
+const FILTERED_ADDRESSES: string[] = [
+  // Add addresses here that should be hidden from the UI
+  // These addresses will show as "Unknown Holder" instead of their real metadata
+  // Example: "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266".toLowerCase(),
+]
+
+// Helper function to check if an address should be filtered
+export const isAddressFiltered = (address: string): boolean => {
+  return FILTERED_ADDRESSES.includes(address.toLowerCase())
+}
+
 export const config = createConfig({
   chains: [hardhat],
   transports: {
@@ -113,6 +125,17 @@ const getHolderEvents = async (
       }
     }
 
+    // If the address is filtered, show as unknown holder
+    if (isAddressFiltered(event.to)) {
+      return {
+        address: event.to,
+        name: `Unknown Holder (${formatAddress(event.to)})`,
+        role: "Previous torch holder",
+        twitter: "",
+        event,
+      }
+    }
+
     // If we have metadata for this holder, use it
     if (holderMetadata) {
       return {
@@ -141,7 +164,12 @@ export const getHolders = async (
     transferEvents
   )
 
-  return torchHoldersEvents
+  // Filter out events where the address is in the filtered list
+  const filteredHoldersEvents = torchHoldersEvents.filter(
+    (holder) => !isAddressFiltered(holder.address)
+  )
+
+  return filteredHoldersEvents
 }
 
 export const getCurrentHolderAddress = async () => {
