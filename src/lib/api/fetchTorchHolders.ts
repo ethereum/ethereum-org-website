@@ -41,8 +41,7 @@ export async function fetchTorchHolders(): Promise<TorchHolder[]> {
         address: row[0],
         name: row[1] || "",
         twitter: row[2] || "",
-        description: row[3] || "",
-        imageUrl: row[4] || "",
+        role: row[3] || "",
       }))
 
     return holders
