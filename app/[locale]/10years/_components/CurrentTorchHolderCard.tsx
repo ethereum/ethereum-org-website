@@ -46,15 +46,21 @@ const CurrentTorchHolderCard = ({
         <div className="relative">
           {/* Torch/flame video */}
           <div className="flex items-center justify-center pt-12">
-            <video
-              className="h-[170px] w-[170px] object-cover"
-              src="/videos/torch.mp4"
-              aria-label="Torch video"
-              autoPlay
-              loop
-              muted
-              poster="/images/10-year-anniversary/torch-cover.png"
-            />
+            <div className="relative max-h-[170px] max-w-[170px]">
+              <video
+                className="pointer-events-none select-none"
+                src="/videos/torch.mp4"
+                aria-label="Torch video"
+                autoPlay
+                loop
+                muted
+                poster="/images/10-year-anniversary/torch-cover.png"
+                controlsList="nodownload"
+                disablePictureInPicture
+                playsInline
+              />
+              <div className="pointer-events-none absolute top-0 h-full w-full select-none bg-[url('/images/10-year-anniversary/torch-overlay.png')] bg-contain bg-center bg-no-repeat" />
+            </div>
           </div>
 
           <CardTitle className="p-0">

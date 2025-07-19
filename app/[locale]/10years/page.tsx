@@ -298,26 +298,22 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
       >
         <div className="p-8">
           <div className="relative">
-            <div className="relative flex items-center justify-center pt-12 sm:pt-24">
-              <video
-                className="h-[380px] w-[380px]"
-                src="/videos/torch.mp4"
-                aria-label="Torch video"
-                autoPlay
-                loop
-                muted
-                poster="/images/10-year-anniversary/torch-cover.png"
-                controlsList="nodownload"
-                disablePictureInPicture
-                playsInline
-              />
-              <Image
-                src="/images/10-year-anniversary/torch-overlay.png"
-                alt="Torch overlay"
-                className="absolute top-0 h-[380px] w-[380px] translate-y-12 sm:translate-y-24"
-                width={380}
-                height={380}
-              />
+            <div className="flex items-center justify-center pt-12 sm:pt-24">
+              <div className="relative max-h-[380px] max-w-[380px]">
+                <video
+                  className="pointer-events-none select-none"
+                  src="/videos/torch.mp4"
+                  aria-label="Torch video"
+                  autoPlay
+                  loop
+                  muted
+                  poster="/images/10-year-anniversary/torch-cover.png"
+                  controlsList="nodownload"
+                  disablePictureInPicture
+                  playsInline
+                />
+                <div className="pointer-events-none absolute top-0 h-full w-full select-none bg-[url('/images/10-year-anniversary/torch-overlay.png')] bg-contain bg-center bg-no-repeat" />
+              </div>
             </div>
             {/* Curved text */}
             <Curved10YearsText
