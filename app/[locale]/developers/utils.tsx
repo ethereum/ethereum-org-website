@@ -95,7 +95,7 @@ export const getVideoCourses = async (): Promise<VideoCourse[]> => {
     {
       title: t("page-developers-course-advanced-foundry-title"),
       description: t("page-developers-course-advanced-foundry-desc"),
-      hours: getDuration(13),
+      hours: getDuration(24),
       imgSrc: cyfrinFoundryAdvancedBanner,
       imgAlt: t("page-developers-course-advanced-foundry-alt"),
       href: "https://updraft.cyfrin.io/courses/advanced-foundry",
