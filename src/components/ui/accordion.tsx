@@ -33,7 +33,9 @@ const AccordionTrigger = React.forwardRef<
       <>
         {children}
         {!hideIcon && (
-          <ChevronNext className="size-[1em] shrink-0 text-2xl transition-transform duration-200" />
+          <div data-label="icon-container">
+            <ChevronNext className="size-[1em] shrink-0 text-2xl transition-transform duration-200" />
+          </div>
         )}
       </>
     </AccordionPrimitive.Trigger>
