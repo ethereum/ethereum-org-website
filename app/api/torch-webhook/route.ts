@@ -8,7 +8,7 @@ export async function POST(req: NextRequest) {
 
   const webhookId = body.webhookId
 
-  if (webhookId !== Number(process.env.TORCH_WEBHOOK_ID)) {
+  if (webhookId !== process.env.TORCH_WEBHOOK_ID) {
     return NextResponse.json({ message: "Invalid webhook ID" }, { status: 401 })
   }
 
