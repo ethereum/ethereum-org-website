@@ -16,6 +16,7 @@ const FILTERED_ADDRESSES: string[] = [
   // Add addresses here that should be hidden from the UI
   // These addresses will show as "Unknown Holder" instead of their real metadata
   // Example: "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266".toLowerCase(),
+  "0x8D3e2E0e562634244E5D229C3B97A38efbEc65Ab".toLowerCase(), // eth.org safe address
 ]
 
 // Helper function to check if an address should be filtered
