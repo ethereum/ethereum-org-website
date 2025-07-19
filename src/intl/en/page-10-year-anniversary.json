@@ -103,5 +103,14 @@
   "page-10-year-adoption-card-5-link-text": "More on Ethereum energy consumption",
   "page-10-year-adoption-card-6-title": "Over 250 TPS",
   "page-10-year-adoption-card-6-description": "Ethereum's throughput has increased dramatically since launch, with Ethereum's ecosystem now handling over <a href=\"https://l2beat.com/scaling/activity\">250 transactions per second.</a>",
-  "page-10-year-adoption-card-6-link-text": "More on layer 2s"
+  "page-10-year-adoption-card-6-link-text": "More on layer 2s",
+  "page-10-year-torch-title": "The Ethereum Torch",
+  "page-10-year-torch-description": "A unique NFT celebrating Ethereum's 10th anniversary. The Torch passes between community members, representing the spirit of collaboration and decentralization that defines Ethereum.",
+  "page-10-year-torch-current-holder": "Current Torch Holder",
+  "page-10-year-torch-no-holder": "No current holder",
+  "page-10-year-torch-history-title": "Torch Holder History",
+  "page-10-year-torch-no-history": "No transfer history available",
+  "page-10-year-torch-from": "From",
+  "page-10-year-torch-to": "To",
+  "page-10-year-torch-view-tx": "View Transaction"
 }
