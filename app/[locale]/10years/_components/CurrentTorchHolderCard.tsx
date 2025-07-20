@@ -19,13 +19,13 @@ import Curved10YearsText from "./10y.svg"
 
 import {
   formatAddress,
-  getAddressEtherscanUrl,
   getAvatarImage,
-  type TorchHolderMetadata,
+  getTxEtherscanUrl,
+  type TorchHolderEvent,
 } from "@/lib/torch"
 
 interface CurrentTorchHolderCardProps {
-  currentHolder: TorchHolderMetadata | null
+  currentHolder: TorchHolderEvent | null
   isBurned?: boolean
   className?: string
 }
@@ -98,7 +98,7 @@ const CurrentTorchHolderCard = ({
               {/* Verify onchain link */}
               <BaseLink
                 className="mt-2 text-xs"
-                href={getAddressEtherscanUrl(currentHolder.address)}
+                href={getTxEtherscanUrl(currentHolder.event.transactionHash)}
               >
                 View on Etherscan
               </BaseLink>
