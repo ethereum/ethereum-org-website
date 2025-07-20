@@ -19,6 +19,22 @@ type TorchHistorySwiperProps = {
   currentHolderAddress: Address | null
 }
 
+const getOrdinalSuffix = (num: number): string => {
+  const lastDigit = num % 10;
+  const lastTwoDigits = num % 100;
+  
+  if (lastTwoDigits >= 11 && lastTwoDigits <= 13) {
+    return `${num}th`;
+  }
+  
+  switch (lastDigit) {
+    case 1: return `${num}st`;
+    case 2: return `${num}nd`;
+    case 3: return `${num}rd`;
+    default: return `${num}th`;
+  }
+};
+
 const TorchHistorySwiper = ({
   holders,
   currentHolderAddress,
@@ -40,8 +56,8 @@ const TorchHistorySwiper = ({
       // Create placeholder for future holder
       return {
         address: `placeholder-${index}` as Address,
-        name: `Future Bearer ${index + 1}`,
-        role: "Coming soon...",
+        name: `Torchbearer ${index + 1}`,
+        role: `Coming ${getOrdinalSuffix(20 + index)}!`,
         twitter: "",
         event: {
           from: "0x0000000000000000000000000000000000000000" as Address,
