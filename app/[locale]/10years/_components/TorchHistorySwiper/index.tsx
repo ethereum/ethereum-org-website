@@ -89,6 +89,7 @@ const TorchHistorySwiper = ({
                   ? "/images/10-year-anniversary/torch-cover.webp"
                   : getAvatarImage(card)
               }
+              twitter={card.twitter}
               from={card.event.timestamp}
               to={card.event.timestamp}
               transactionHash={card.event.transactionHash}

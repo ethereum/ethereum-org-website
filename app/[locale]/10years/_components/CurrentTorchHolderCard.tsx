@@ -1,8 +1,4 @@
-import {
-  AvatarBase as Avatar,
-  AvatarFallback,
-  AvatarImage,
-} from "@/components/ui/avatar"
+import { Avatar } from "@/components/ui/avatar"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import {
   Card,
@@ -18,6 +14,7 @@ import { cn } from "@/lib/utils/cn"
 import Curved10YearsText from "./10y.svg"
 
 import {
+  extractTwitterHandle,
   formatAddress,
   getAvatarImage,
   getTxEtherscanUrl,
@@ -78,15 +75,12 @@ const CurrentTorchHolderCard = ({
       <CardContent className="p-6">
         {currentHolder ? (
           <div className="flex items-start gap-4">
-            <Avatar className="h-19 w-19 !shadow-none">
-              <AvatarImage
-                src={getAvatarImage(currentHolder)}
-                alt={`Avatar for ${currentHolder.name || currentHolder.address}`}
-              />
-              <AvatarFallback>
-                {currentHolder.name || formatAddress(currentHolder.address)}
-              </AvatarFallback>
-            </Avatar>
+            <Avatar
+              className="h-19 w-19 !shadow-none"
+              src={getAvatarImage(currentHolder)}
+              href={`https://x.com/${extractTwitterHandle(currentHolder.twitter)}`}
+              name={currentHolder.name || formatAddress(currentHolder.address)}
+            />
 
             <div className="flex flex-col">
               {/* Name */}

@@ -148,7 +148,7 @@ export const getAvatarImage = (holder: TorchHolderMetadata | null) => {
   return getBlockieImage(holder.address)
 }
 
-const extractTwitterHandle = (twitterUrl: string): string | null => {
+export const extractTwitterHandle = (twitterUrl: string): string | null => {
   // Handle various Twitter URL formats
   const patterns = [
     /twitter\.com\/([^/?]+)/, // twitter.com/username
