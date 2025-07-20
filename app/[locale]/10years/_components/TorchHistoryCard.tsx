@@ -74,7 +74,10 @@ const TorchHistoryCard: React.FC<TorchHistoryCardProps> = ({
         {!isPlaceholder && (
           <>
             <div className="text-xs text-gray-500">
-              From {formatDate(from)} to {formatDate(to)}
+              {isCurrentHolder 
+                ? `From ${formatDate(from)}`
+                : `From ${formatDate(from)} to ${formatDate(to)}`
+              }
             </div>
             <BaseLink
               href={getTxEtherscanUrl(transactionHash)}
