@@ -6,10 +6,10 @@ import { getPublicClient } from "@wagmi/core"
 import Torch from "@/data/Torch.json"
 
 import { config } from "./config"
+import { fetchTorchTransfersFromEtherscan } from "./etherscan"
 
 const TORCH_CONTRACT_ADDRESS = Torch.address as Address
 const TORCH_ABI = Torch.abi
-const TORCH_BLOCK_NUMBER = Torch.blockNumber
 
 // Addresses to filter from the UI (show as "Unknown Holder")
 const FILTERED_ADDRESSES: string[] = [
@@ -50,54 +50,7 @@ export type TorchHolderEvent = TorchHolder & {
 
 export const getTransferEvents = cache(
   async () => {
-    const publicClient = getPublicClient(config)
-
-    // Get the current block number to ensure consistent results
-    const currentBlock = await publicClient.getBlockNumber()
-
-    // Get Transfer events from the contract
-    // ERC721 Transfer event signature: Transfer(address indexed from, address indexed to, uint256 indexed tokenId)
-    const logs = await publicClient.getLogs({
-      address: TORCH_CONTRACT_ADDRESS,
-      event: {
-        type: "event",
-        name: "Transfer",
-        inputs: [
-          { name: "from", type: "address", indexed: true },
-          { name: "to", type: "address", indexed: true },
-          { name: "tokenId", type: "uint256", indexed: true },
-        ],
-      },
-      args: {
-        tokenId: BigInt(1), // Torch NFT token ID is always 1
-      },
-      fromBlock: BigInt(TORCH_BLOCK_NUMBER) || "earliest",
-      toBlock: currentBlock,
-    })
-
-    // Process logs and get timestamps
-    const transferEvents: TransferEvent[] = []
-
-    for (const log of logs) {
-      if (log.args?.from && log.args?.to) {
-        // Get block details to get timestamp
-        const block = await publicClient.getBlock({
-          blockNumber: log.blockNumber,
-        })
-
-        transferEvents.push({
-          from: log.args.from as Address,
-          to: log.args.to as Address,
-          blockNumber: Number(log.blockNumber),
-          transactionHash: log.transactionHash,
-          timestamp: Number(block.timestamp),
-        })
-      }
-    }
-
-    // Sort by block number (oldest first)
-    transferEvents.sort((a, b) => a.blockNumber - b.blockNumber)
-
+    const transferEvents = await fetchTorchTransfersFromEtherscan()
     return transferEvents
   },
   ["torch-transfer-events"],
@@ -195,7 +148,7 @@ export const getAvatarImage = (holder: TorchHolderMetadata | null) => {
   return getBlockieImage(holder.address)
 }
 
-const extractTwitterHandle = (twitterUrl: string): string | null => {
+export const extractTwitterHandle = (twitterUrl: string): string | null => {
   // Handle various Twitter URL formats
   const patterns = [
     /twitter\.com\/([^/?]+)/, // twitter.com/username

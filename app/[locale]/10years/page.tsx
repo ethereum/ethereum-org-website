@@ -49,7 +49,7 @@ import {
   getTransferEvents,
   isAddressFiltered,
   isTorchBurned,
-  TorchHolder,
+  TorchHolderEvent,
 } from "@/lib/torch"
 import TenYearLogo from "@/public/images/10-year-anniversary/10-year-logo.png"
 
@@ -101,24 +101,26 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
       {} as Record<string, (typeof allTorchHolders)[0]>
     )
 
-  let isBurned = false
-  let currentHolder: TorchHolder | null = null
-  try {
-    isBurned = await isTorchBurned()
-    const currentHolderAddress = await getCurrentHolderAddress()
-    const isFiltered = isAddressFiltered(currentHolderAddress)
-
-    currentHolder = isFiltered
-      ? null
-      : torchHolderMap[currentHolderAddress.toLowerCase()]
-  } catch (error) {
-    console.error("Error fetching torch data:", error)
-  }
   const transferEvents = await getTransferEvents()
   const torchHoldersEvents = await getHolderEvents(
     torchHolderMap,
     transferEvents
   )
+
+  let isBurned = false
+  let currentHolder: TorchHolderEvent | null = null
+  try {
+    isBurned = await isTorchBurned()
+    const currentHolderAddress = await getCurrentHolderAddress()
+    const isFiltered = isAddressFiltered(currentHolderAddress)
+    const currentHolderEvent = torchHoldersEvents.find(
+      (holder) => holder.address === currentHolderAddress.toLowerCase()
+    )
+
+    currentHolder = !isFiltered ? (currentHolderEvent ?? null) : null
+  } catch (error) {
+    console.error("Error fetching torch data:", error)
+  }
 
   // Filter out events where the address is in the filtered list
   const torchHolders = torchHoldersEvents.filter(
