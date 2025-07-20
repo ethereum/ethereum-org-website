@@ -140,7 +140,7 @@ export const getAvatarImage = (holder: TorchHolderMetadata | null) => {
   if (holder.twitter && holder.twitter.trim() !== "") {
     const twitterHandle = extractTwitterHandle(holder.twitter)
     if (twitterHandle) {
-      return `https://unavatar.io/twitter/${twitterHandle}`
+      return `https://unavatar.io/x/${twitterHandle}`
     }
   }
 
