@@ -114,7 +114,8 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
     const currentHolderAddress = await getCurrentHolderAddress()
     const isFiltered = isAddressFiltered(currentHolderAddress)
     const currentHolderEvent = torchHoldersEvents.find(
-      (holder) => holder.address === currentHolderAddress.toLowerCase()
+      (holder) =>
+        holder.address.toLowerCase() === currentHolderAddress.toLowerCase()
     )
 
     currentHolder = !isFiltered ? (currentHolderEvent ?? null) : null
