@@ -1,6 +1,6 @@
 import blockies from "ethereum-blockies-base64"
 import { unstable_cache as cache } from "next/cache"
-import type { Address } from "viem"
+import { type Address, isAddress } from "viem"
 import { getPublicClient } from "@wagmi/core"
 
 import Torch from "@/data/Torch.json"
@@ -236,4 +236,25 @@ export const getTxEtherscanUrl = (txHash: string) => {
 
 export const getAddressEtherscanUrl = (address: string) => {
   return `https://etherscan.io/address/${address}`
+}
+
+export async function resolveEnsName(
+  ensName: string
+): Promise<`0x${string}` | null> {
+  try {
+    const publicClient = getPublicClient(config)
+
+    if (isAddress(ensName)) {
+      return ensName
+    }
+
+    const address = await publicClient.getEnsAddress({
+      name: ensName,
+    })
+
+    return address
+  } catch (error) {
+    console.warn(`Failed to resolve ENS name "${ensName}":`, error)
+    return null
+  }
 }
