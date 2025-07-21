@@ -12947,6 +12947,15 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "dbarabashh",
+      "name": "Dima Barabash",
+      "avatar_url": "https://avatars.githubusercontent.com/u/10253529?v=4",
+      "profile": "https://dbarabashh.com",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
