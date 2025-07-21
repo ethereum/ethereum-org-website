@@ -45,7 +45,7 @@ import { fetch10YearEvents } from "@/lib/api/fetch10YearEvents"
 import { fetch10YearStories } from "@/lib/api/fetch10YearStories"
 import { fetchTorchHolders } from "@/lib/api/fetchTorchHolders"
 import {
-  getCurrentHolderAddress,
+  getCurrentHolder,
   getHolderEvents,
   getTransferEvents,
   isAddressFiltered,
@@ -93,6 +93,8 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   const adoptionCards = await getAdoptionCards()
 
   // Torch NFT data fetching logic
+  const transferEvents = await getTransferEvents()
+
   const torchHolderMap: Record<string, (typeof allTorchHolders)[0]> =
     allTorchHolders.reduce(
       (acc, holder) => {
@@ -102,7 +104,6 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
       {} as Record<string, (typeof allTorchHolders)[0]>
     )
 
-  const transferEvents = await getTransferEvents()
   const torchHoldersEvents = await getHolderEvents(
     torchHolderMap,
     transferEvents
@@ -112,14 +113,10 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   let currentHolder: TorchHolderEvent | null = null
   try {
     isBurned = await isTorchBurned()
-    const currentHolderAddress = await getCurrentHolderAddress()
-    const isFiltered = isAddressFiltered(currentHolderAddress)
-    const currentHolderEvent = torchHoldersEvents.find(
-      (holder) =>
-        holder.address.toLowerCase() === currentHolderAddress.toLowerCase()
-    )
+    const currentHolderEvent = getCurrentHolder(torchHoldersEvents)
+    const isFiltered = isAddressFiltered(currentHolderEvent.address)
 
-    currentHolder = !isFiltered ? (currentHolderEvent ?? null) : null
+    currentHolder = !isFiltered ? currentHolderEvent : null
   } catch (error) {
     console.error("Error fetching torch data:", error)
   }

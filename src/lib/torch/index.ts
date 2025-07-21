@@ -94,22 +94,9 @@ export const getHolderEvents = async (
   })
 }
 
-export const getCurrentHolderAddress = cache(
-  async () => {
-    const publicClient = getPublicClient(config)
-
-    // If not burned, get the current holder
-    const currentHolderAddress = (await publicClient.readContract({
-      address: TORCH_CONTRACT_ADDRESS,
-      abi: TORCH_ABI,
-      functionName: "currentHolder",
-    })) as Address
-
-    return currentHolderAddress
-  },
-  ["torch-current-holder"],
-  { revalidate: 86400 }
-)
+export const getCurrentHolder = (holderEvents: TorchHolderEvent[]) => {
+  return holderEvents[holderEvents.length - 1]
+}
 
 export const isTorchBurned = cache(
   async () => {
