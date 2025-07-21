@@ -19,7 +19,7 @@ interface TorchHistoryCardProps {
   avatar: string
   twitter: string
   from: number
-  to: number
+  to?: number
   transactionHash: string
   className?: string
   isCurrentHolder?: boolean
@@ -78,7 +78,8 @@ const TorchHistoryCard: React.FC<TorchHistoryCardProps> = ({
         {!isPlaceholder && (
           <>
             <div className="text-xs text-gray-500">
-              From {formatDate(from)} to {formatDate(to)}
+              From {formatDate(from)}
+              {to !== undefined ? ` to ${formatDate(to)}` : " to present"}
             </div>
             <BaseLink
               href={getTxEtherscanUrl(transactionHash)}
