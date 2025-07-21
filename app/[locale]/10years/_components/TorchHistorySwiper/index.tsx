@@ -20,20 +20,16 @@ type TorchHistorySwiperProps = {
 }
 
 const getOrdinalSuffix = (num: number): string => {
-  const lastDigit = num % 10;
-  const lastTwoDigits = num % 100;
+  const pr = new Intl.PluralRules('en', { type: 'ordinal' });
+  const rule = pr.select(num);
   
-  if (lastTwoDigits >= 11 && lastTwoDigits <= 13) {
-    return `${num}th`;
-  }
-  
-  switch (lastDigit) {
-    case 1: return `${num}st`;
-    case 2: return `${num}nd`;
-    case 3: return `${num}rd`;
+  switch (rule) {
+    case "one": return `${num}st`;
+    case "two": return `${num}nd`;
+    case "few": return `${num}rd`;
     default: return `${num}th`;
   }
-};
+}
 
 const TorchHistorySwiper = ({
   holders,
@@ -57,7 +53,7 @@ const TorchHistorySwiper = ({
       return {
         address: `placeholder-${index}` as Address,
         name: `Torchbearer ${index + 1}`,
-        role: `Coming ${getOrdinalSuffix(20 + index)}!`,
+        role: `Coming July ${getOrdinalSuffix(20 + index)}!`,
         twitter: "",
         event: {
           from: "0x0000000000000000000000000000000000000000" as Address,
