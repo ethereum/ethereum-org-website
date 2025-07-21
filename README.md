@@ -2014,6 +2014,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/futreall"><img src="https://avatars.githubusercontent.com/u/86553580?v=4?s=100" width="100px;" alt="futreall"/><br /><sub><b>futreall</b></sub></a><br /><a href="#translation-futreall" title="Translation">🌍</a> <a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Afutreall" title="Bug reports">🐛</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/0xshikhar"><img src="https://avatars.githubusercontent.com/u/64684053?v=4?s=100" width="100px;" alt="Shikhar Singh"/><br /><sub><b>Shikhar Singh</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=0xshikhar" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/clacladev"><img src="https://avatars.githubusercontent.com/u/161903?v=4?s=100" width="100px;" alt="clacla"/><br /><sub><b>clacla</b></sub></a><br /><a href="#maintenance-clacladev" title="Maintenance">🚧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://a30a.dev/"><img src="https://avatars.githubusercontent.com/u/1610146?v=4?s=100" width="100px;" alt="Daehyun Paik"/><br /><sub><b>Daehyun Paik</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Abaumstern" title="Bug reports">🐛</a></td>
     </tr>
   </tbody>
 </table>
