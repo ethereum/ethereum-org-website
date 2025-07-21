@@ -40,6 +40,7 @@ import {
   parseStoryDates,
 } from "./_components/utils"
 
+import { routing } from "@/i18n/routing"
 import { fetch10YearEvents } from "@/lib/api/fetch10YearEvents"
 import { fetch10YearStories } from "@/lib/api/fetch10YearStories"
 import { fetchTorchHolders } from "@/lib/api/fetchTorchHolders"
@@ -489,6 +490,12 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
       </div>
     </MainArticle>
   )
+}
+
+export async function generateStaticParams() {
+  return routing.locales.map((locale) => ({
+    locale,
+  }))
 }
 
 export async function generateMetadata({
