@@ -1,24 +1,25 @@
 import React from "react"
 
-import {
-  AvatarBase as Avatar,
-  AvatarFallback,
-  AvatarImage,
-} from "@/components/ui/avatar"
+import { Avatar } from "@/components/ui/avatar"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { BaseLink } from "@/components/ui/Link"
 import { Tag } from "@/components/ui/tag"
 
 import { cn } from "@/lib/utils/cn"
 
-import { formatDate, getTxEtherscanUrl } from "@/lib/torch"
+import {
+  extractTwitterHandle,
+  formatDate,
+  getTxEtherscanUrl,
+} from "@/lib/torch"
 
 interface TorchHistoryCardProps {
   name: string
   role: string
   avatar: string
+  twitter: string
   from: number
-  to: number
+  to?: number
   transactionHash: string
   className?: string
   isCurrentHolder?: boolean
@@ -29,6 +30,7 @@ const TorchHistoryCard: React.FC<TorchHistoryCardProps> = ({
   name,
   role,
   avatar,
+  twitter,
   from,
   to,
   transactionHash,
@@ -48,10 +50,12 @@ const TorchHistoryCard: React.FC<TorchHistoryCardProps> = ({
     >
       <CardHeader className="flex flex-col p-0">
         <div className="mb-4 flex flex-col items-center">
-          <Avatar className="h-32 w-32 border-2 border-gray-100/50 !shadow-none">
-            <AvatarImage src={avatar} alt={`Avatar for ${name}`} />
-            <AvatarFallback>{name}</AvatarFallback>
-          </Avatar>
+          <Avatar
+            className="h-32 w-32 border-2 border-gray-100/50 !shadow-none"
+            src={avatar}
+            href={`https://x.com/${extractTwitterHandle(twitter)}`}
+            name={name}
+          />
         </div>
 
         {isCurrentHolder && (
@@ -74,7 +78,8 @@ const TorchHistoryCard: React.FC<TorchHistoryCardProps> = ({
         {!isPlaceholder && (
           <>
             <div className="text-xs text-gray-500">
-              From {formatDate(from)} to {formatDate(to)}
+              From {formatDate(from)}
+              {to !== undefined ? ` to ${formatDate(to)}` : " to present"}
             </div>
             <BaseLink
               href={getTxEtherscanUrl(transactionHash)}
