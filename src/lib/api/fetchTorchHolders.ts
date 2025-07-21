@@ -1,4 +1,4 @@
-import type { TorchHolder } from "@/lib/torch"
+import { resolveEnsName, type TorchHolder } from "@/lib/torch"
 
 export async function fetchTorchHolders(): Promise<TorchHolder[]> {
   const googleApiKey = process.env.GOOGLE_API_KEY
@@ -15,7 +15,7 @@ export async function fetchTorchHolders(): Promise<TorchHolder[]> {
   }
 
   try {
-    const url = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/Sheet1!A:E?majorDimension=ROWS&key=${googleApiKey}`
+    const url = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/Website%20Info!A:E?majorDimension=ROWS&key=${googleApiKey}`
     const response = await fetch(url)
 
     if (!response.ok) {
@@ -34,15 +34,26 @@ export async function fetchTorchHolders(): Promise<TorchHolder[]> {
     // data.values[0] is the header row
     const rows = data.values.slice(1) || []
 
-    // Map rows to TorchHolder objects
-    const holders: TorchHolder[] = rows
-      .filter((row: string[]) => row[0]) // must have address
-      .map((row: string[]) => ({
-        address: row[0],
-        name: row[1] || "",
-        twitter: row[2] || "",
-        role: row[3] || "",
-      }))
+    // Map rows to TorchHolder objects with ENS resolution
+    const holders: TorchHolder[] = []
+
+    for (const row of rows) {
+      if (!row[0]) continue // must have address or ENS name
+
+      const addressOrEns = row[0].trim()
+      const resolvedAddress = await resolveEnsName(addressOrEns)
+
+      if (resolvedAddress) {
+        holders.push({
+          address: resolvedAddress,
+          name: row[1] || "",
+          role: row[2] || "",
+          twitter: row[3] || "",
+        })
+      } else {
+        console.warn(`Could not resolve address or ENS name: ${addressOrEns}`)
+      }
+    }
 
     return holders
   } catch (error) {
