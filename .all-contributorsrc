@@ -12929,6 +12929,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "clacladev",
+      "name": "clacla",
+      "avatar_url": "https://avatars.githubusercontent.com/u/161903?v=4",
+      "profile": "https://github.com/clacladev",
+      "contributions": [
+        "maintenance"
+      ]
     }
   ],
   "contributorsPerLine": 7,
