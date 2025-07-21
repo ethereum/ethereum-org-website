@@ -257,37 +257,9 @@ const Page = async ({
           </div>
         </div>
 
-        <div className="flex flex-col justify-between gap-10 bg-background-highlight px-4 py-10 md:flex-row md:px-8">
-          <div className="flex flex-1 flex-col gap-11">
-            <p className="max-w-3xl">{app.description}</p>
-            <div className="flex h-fit w-full flex-col gap-4 rounded-2xl border bg-background p-8 md:hidden md:w-44">
-              <h3 className="text-lg">Info</h3>
-              <div>
-                <p className="text-sm text-body-medium">Founded</p>
-                <p className="text-sm">
-                  {new Date(app.dateOfLaunch).getFullYear()}
-                </p>
-              </div>
-              <div>
-                <p className="text-sm text-body-medium">Creator</p>
-                <p className="text-sm">{app.parentCompany}</p>
-              </div>
-              <div>
-                <p className="text-sm text-body-medium">Last updated</p>
-                <p className="text-sm">{getTimeAgo(app.lastUpdated)}</p>
-              </div>
-            </div>
-            {app.screenshots.length > 0 && (
-              <div className="flex flex-col gap-4">
-                <h3 className="text-2xl">Gallery</h3>
-                <ScreenshotSwiper
-                  screenshots={app.screenshots}
-                  appName={app.name}
-                />
-              </div>
-            )}
-          </div>
-          <div className="hidden h-fit w-full flex-col gap-4 rounded-2xl border bg-background p-8 md:flex md:w-44">
+        <div className="grid grid-cols-1 grid-rows-[auto_1fr] gap-10 bg-background-highlight px-4 py-10 md:grid-cols-[minmax(0,1fr)_auto] md:px-8">
+          <p className="max-w-3xl">{app.description}</p>
+          <div className="flex h-fit w-full flex-col gap-4 rounded-2xl border bg-background p-8 md:row-span-2 md:w-44">
             <h3 className="text-lg">Info</h3>
             <div>
               <p className="text-sm text-body-medium">Founded</p>
@@ -304,6 +276,15 @@ const Page = async ({
               <p className="text-sm">{getTimeAgo(app.lastUpdated)}</p>
             </div>
           </div>
+          {app.screenshots.length > 0 && (
+            <div className="flex flex-col gap-4">
+              <h3 className="text-2xl">Gallery</h3>
+              <ScreenshotSwiper
+                screenshots={app.screenshots}
+                appName={app.name}
+              />
+            </div>
+          )}
         </div>
 
         {relatedApps.length > 0 && (
