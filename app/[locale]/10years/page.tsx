@@ -50,7 +50,6 @@ import {
   getTransferEvents,
   isAddressFiltered,
   isTorchBurned,
-  TorchHolderEvent,
 } from "@/lib/torch"
 import TenYearLogo from "@/public/images/10-year-anniversary/10-year-logo.png"
 
@@ -110,21 +109,18 @@ const Page = async ({ params }: { params: Promise<{ locale: Lang }> }) => {
   )
 
   let isBurned = false
-  let currentHolder: TorchHolderEvent | null = null
   try {
     isBurned = await isTorchBurned()
-    const currentHolderEvent = getCurrentHolder(torchHoldersEvents)
-    const isFiltered = isAddressFiltered(currentHolderEvent.address)
-
-    currentHolder = !isFiltered ? currentHolderEvent : null
   } catch (error) {
-    console.error("Error fetching torch data:", error)
+    console.error("Error fetching torch burned status:", error)
   }
 
   // Filter out events where the address is in the filtered list
   const torchHolders = torchHoldersEvents.filter(
     (holder) => !isAddressFiltered(holder.address)
   )
+
+  const currentHolder = getCurrentHolder(torchHolders)
 
   return (
     <MainArticle className="mx-auto flex w-full flex-col items-center">
