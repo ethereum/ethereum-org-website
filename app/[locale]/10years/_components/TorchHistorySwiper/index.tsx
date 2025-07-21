@@ -75,31 +75,43 @@ const TorchHistorySwiper = ({
         modules={[EffectCoverflow, Navigation]}
         className="w-full"
       >
-        {allCards.map((card, idx) => (
-          <SwiperSlide
-            key={idx}
-            className="flex !min-h-[400px] !w-60 justify-center"
-          >
-            <TorchHistoryCard
-              className="!min-h-[400px]"
-              name={card.name}
-              role={card.role}
-              avatar={
-                card.isPlaceholder
-                  ? "/images/10-year-anniversary/torch-cover.webp"
-                  : getAvatarImage(card)
-              }
-              twitter={card.twitter}
-              from={card.event.timestamp}
-              to={card.event.timestamp}
-              transactionHash={card.event.transactionHash}
-              isCurrentHolder={
-                !card.isPlaceholder && card.address === currentHolderAddress
-              }
-              isPlaceholder={card.isPlaceholder}
-            />
-          </SwiperSlide>
-        ))}
+        {allCards.map((card, idx) => {
+          // For past holders, "to" is the timestamp of the next holder's event.
+          // For the current holder, "to" is undefined to signify "present".
+          // For placeholders, "to" is the same as "from" (0).
+          const toTimestamp =
+            !card.isPlaceholder && idx < holders.length - 1
+              ? holders[idx + 1].event.timestamp
+              : card.isPlaceholder
+                ? card.event.timestamp
+                : undefined
+
+          return (
+            <SwiperSlide
+              key={idx}
+              className="flex !min-h-[400px] !w-60 justify-center"
+            >
+              <TorchHistoryCard
+                className="!min-h-[400px]"
+                name={card.name}
+                role={card.role}
+                avatar={
+                  card.isPlaceholder
+                    ? "/images/10-year-anniversary/torch-cover.webp"
+                    : getAvatarImage(card)
+                }
+                twitter={card.twitter}
+                from={card.event.timestamp}
+                to={toTimestamp}
+                transactionHash={card.event.transactionHash}
+                isCurrentHolder={
+                  !card.isPlaceholder && card.address === currentHolderAddress
+                }
+                isPlaceholder={card.isPlaceholder}
+              />
+            </SwiperSlide>
+          )
+        })}
         <SwiperNavigation className="mt-8" />
       </Swiper>
     </SwiperContainer>
