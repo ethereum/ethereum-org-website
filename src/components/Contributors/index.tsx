@@ -44,6 +44,9 @@ const Contributors = () => {
               className="h-[132px] w-[132px]"
               src={contributor.avatar_url}
               alt={contributor.name}
+              width={132}
+              height={132}
+              sizes="132px"
             />
             <div className="p-4">
               <h3 className="mb-4 mt-2 text-md">
