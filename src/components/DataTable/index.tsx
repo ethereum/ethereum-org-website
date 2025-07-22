@@ -137,7 +137,7 @@ const DataTable = <TData, TValue>({
       </div>
       <Table {...props}>
         <TableBody
-          className={`duration-75 transition-opacity ${
+          className={`transition-opacity duration-75 ${
             isVisible ? "opacity-100" : "opacity-0"
           }`}
         >
