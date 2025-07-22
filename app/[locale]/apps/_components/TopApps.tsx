@@ -67,22 +67,22 @@ const TopApps = ({ appsData }: TopAppsProps) => {
         breakpoints={{
           [breakpointAsNumber.sm]: {
             slidesPerView: 1.2,
-            slidesPerGroup: 1.2,
+            slidesPerGroup: 1,
           },
           [breakpointAsNumber.md]: {
             slidesPerView: 2.2,
-            slidesPerGroup: 2.2,
+            slidesPerGroup: 2,
           },
           [breakpointAsNumber.lg]: {
             slidesPerView: 3.2,
-            slidesPerGroup: 3.2,
+            slidesPerGroup: 3,
           },
         }}
       >
         {Object.keys(appsData).map((category) => (
           <SwiperSlide key={category}>
             <div className="flex flex-col rounded-xl border">
-              <LinkBox className="border-b p-4 hover:bg-background-highlight">
+              <LinkBox className="rounded-t-xl border-b p-4 hover:bg-background-highlight">
                 <LinkOverlay
                   href={`/apps/categories/${slugify(category)}`}
                   className="text-body no-underline"
