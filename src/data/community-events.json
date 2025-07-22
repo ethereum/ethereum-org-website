@@ -183,7 +183,8 @@
     "href": "https://conference.tum-blockchain.com",
     "location": "Munich, Germany",
     "description": "Europe's top Blockchain Conference in Munich is back! Discover how Web3 is moving beyond promise to real world impact with top experts.",
-    "imageUrl": "https://conference.tum-blockchain.com/banners/c25-banner.svg"
+    "imageUrl": "https://conference.tum-blockchain.com/banners/c25-banner.svg",
+    "hackathon": false
   },
   {
     "title": "ETHSofia",
