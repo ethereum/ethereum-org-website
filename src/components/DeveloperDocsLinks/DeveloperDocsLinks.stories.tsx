@@ -7,9 +7,6 @@ import DeveloperDocsLinksComponent from "."
 const meta = {
   title: "Molecules / Navigation / DeveloperDocsLinks",
   component: DeveloperDocsLinksComponent,
-  args: {
-    headerId: "ethereum-stack",
-  },
   parameters: {
     layout: "fullscreen",
     chromatic: {
@@ -31,4 +28,20 @@ export default meta
 
 type Story = StoryObj<typeof meta>
 
-export const DeveloperDocsLinks: Story = {}
+export const FoundationalTopics: Story = {
+  args: {
+    headerId: "foundational-topics",
+  },
+}
+
+export const EthereumStack: Story = {
+  args: {
+    headerId: "ethereum-stack",
+  },
+}
+
+export const Advanced: Story = {
+  args: {
+    headerId: "advanced",
+  },
+}
