@@ -2022,6 +2022,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://mdqst.com"><img src="https://avatars.githubusercontent.com/u/98899785?v=4?s=100" width="100px;" alt="Dmitry"/><br /><sub><b>Dmitry</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Amdqst" title="Bug reports">🐛</a></td>
     </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/3eph1r0th"><img src="https://avatars.githubusercontent.com/u/26237289?v=4?s=100" width="100px;" alt="Sephiroth"/><br /><sub><b>Sephiroth</b></sub></a><br /><a href="#tool-3eph1r0th" title="Tools">🔧</a></td>
+    </tr>
   </tbody>
 </table>
 
