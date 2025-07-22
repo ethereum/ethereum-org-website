@@ -20,12 +20,20 @@ export interface Contributor {
 
 const allContributors = JSON.parse(data)
 
-const Contributors = () => {
+interface ContributorsProps {
+  contributors?: Contributor[]
+}
+
+const Contributors = ({ contributors }: ContributorsProps) => {
   const [contributorsList, setContributorsList] = useState<Contributor[]>([])
 
   useEffect(() => {
-    setContributorsList(shuffle(allContributors.contributors))
-  }, [])
+    if (contributors) {
+      setContributorsList(contributors)
+    } else {
+      setContributorsList(shuffle(allContributors.contributors))
+    }
+  }, [contributors])
 
   return (
     <>
