@@ -7,7 +7,7 @@ const meta = {
   component: FaqComponent,
   decorators: [
     (Story) => (
-      <div className="mx-auto w-[52rem] max-w-full p-4">
+      <div className="mx-auto w-[calc(100vw-2rem)] max-w-[min(52rem,100%)] p-4">
         <Story />
       </div>
     ),
@@ -18,7 +18,7 @@ export default meta
 
 export const Faq: StoryObj = {
   render: () => (
-    <FaqComponent type="single" collapsible className="w-full">
+    <FaqComponent type="single" collapsible>
       <FaqItem value="item-1">
         <FaqTrigger>
           <h2 className="text-start text-base md:text-xl">
