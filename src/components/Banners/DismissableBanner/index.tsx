@@ -1,5 +1,7 @@
+"use client"
+
 import { useEffect, useState } from "react"
-import { MdClose } from "react-icons/md"
+import { X } from "lucide-react"
 
 import { Button } from "@/components/ui/buttons/Button"
 import { Center } from "@/components/ui/flex"
@@ -41,7 +43,7 @@ const DismissableBanner = ({
         aria-label={t("close")}
         size="sm"
       >
-        <MdClose />
+        <X />
       </Button>
     </BannerNotification>
   )

@@ -1,3 +1,5 @@
+"use client"
+
 import type { StakingPage, TranslationKey } from "@/lib/types"
 
 import {

@@ -6,6 +6,7 @@ import { DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
 export const routing = defineRouting({
   locales: LOCALES_CODES,
   defaultLocale: DEFAULT_LOCALE,
+  localeCookie: false,
 })
 
 // Lightweight wrappers around Next.js' navigation APIs

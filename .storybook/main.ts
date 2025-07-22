@@ -1,18 +1,13 @@
+import path from "path"
+
 import TsconfigPathsPlugin from "tsconfig-paths-webpack-plugin"
 import type { StorybookConfig } from "@storybook/nextjs"
 
 /**
- * Note regarding package.json settings related to Storybook:
- *
- * There is a resolutions option set for the package `jackspeak`. This is related to a
- * workaround provided to make sure storybook ( as of v7.5.2) works correctly with
- * Yarn v1
- *
- * Reference: https://github.com/storybookjs/storybook/issues/22431#issuecomment-1630086092
- *
- * The primary recommendation is to upgrade to Yarn 3 if possible
+ * Storybook configuration for the ethereum.org website
+ * This loads our components as stories and configures the necessary
+ * webpack settings for proper rendering
  */
-
 const config: StorybookConfig = {
   stories: [
     "../src/components/**/*.stories.{ts,tsx}",
@@ -51,6 +46,11 @@ const config: StorybookConfig = {
           extensions: config.resolve.extensions,
         }),
       ]
+
+      config.resolve.alias = {
+        ...config.resolve.alias,
+        "@/storybook/*": path.resolve(__dirname, "./.storybook/"),
+      }
     }
 
     // This modifies the existing image rule to exclude .svg files
@@ -76,6 +76,9 @@ const config: StorybookConfig = {
     },
 
     reactDocgen: "react-docgen-typescript",
+  },
+  features: {
+    experimentalRSC: true,
   },
 }
 export default config

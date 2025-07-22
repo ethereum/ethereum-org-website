@@ -61,7 +61,7 @@ buttons:
 
 <RoadmapImageContent title="路线图是如何制定的？">
 
-因为协议的技术性很强，所以路线图主要是研究人员和开发者多年来工作的结果，但任何有意向的人都可以参与进来。 想法通常都始于论坛上的讨论，比如 [ethresear.ch](https://ethresear.ch/)、[以太坊魔术师](https://ethereum-magicians.org/) 或者以太坊研发 discord 服务器。 它们可能是对新发现的漏洞的响应、来自从事于应用程序层的组织（例如[去中心化应用程序] (/glossary/#dapp) 和交易所）的建议或终端用户面临的已知问题（例如费用或交易速度）。 这些想法一旦成熟，就可以作为 [以太坊改进建议](https://eips.ethereum.org/) 提出。 整个过程都是公开进行的，社区的任何人可以随时发表意见。
+因为协议的技术性很强，所以路线图主要是研究人员和开发者多年来工作的结果，但任何有意向的人都可以参与进来。 想法通常都始于论坛上的讨论，比如[ethresear.ch] (https://ethresear.ch/)、[以太坊魔术师] (https://ethereum-magicians.org/) 或者以太坊研发 discord 服务器。 它们可能是对新发现的漏洞的响应、来自从事于应用程序层的组织（例如[去中心化应用程序] (/glossary/#dapp) 和交易所）的建议或终端用户面临的已知问题（例如费用或交易速度）。 这些想法一旦成熟，就可以作为 [以太坊改进建议](https://eips.ethereum.org/) 提出。 整个过程都是公开进行的，社区的任何人可以随时发表意见。
 
 [更多关于以太坊治理的信息](/governance/)
 
@@ -109,6 +109,7 @@ buttons:
 
 ## 正在寻求特定技术升级？ {#looking-for-specific-technical-upgrades}
 
+- [Pectra](/roadmap/pectra) - Prague/Electra 硬分叉带来帐户抽象的新途径，提升可扩展性以及更多功能。
 - [Danksharding](/roadmap/danksharding) - Danksharding 通过向以太坊区块添加二进制大对象数据，为用户大大降低二层网络卷叠成本。
 - [质押提款](/staking/withdrawals) - 上海/卡佩拉升级启用了以太坊质押提款，允许用户解锁质押的以太币。
 - [单时隙最终确定性](/roadmap/single-slot-finality) - 让区块可以在同一时隙内提出和最终确定，无需等待 15 分钟。 这提高了应用程序的便利性，大大增加了攻击难度。

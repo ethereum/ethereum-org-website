@@ -22,7 +22,7 @@ Les transactions requièrent des frais et doivent être incluses dans un bloc va
 
 Une transaction soumise comprend les informations suivantes :
 
-- `depuis` - l'adresse de l'expéditeur qui signera la transaction. On aura donc une adresse émettrice, car les contrats et les adresses (Accounts) ne vous permettront pas d'envoyer des transactions.
+- `depuis` - l'adresse de l'expéditeur qui signera la transaction. Il s'agira d'un compte externe, car les comptes contractuels ne vous permettront pas d'envoyer des transactions
 - `to` : l'adresse de réception (S'il s'agit d'un compte externe, la transaction va transférer la valeur. S'il s'agit d'un compte de contrat, la transaction exécutera le code du contrat.)
 - `signature` : identifiant de l'expéditeur. Cette signature est générée lorsque la clé privée de l'expéditeur signe la transaction, et confirme que l'expéditeur a autorisé cette transaction.
 - `nonce` -, il s'agit d'une machine à travers laquelle un nombre maximum d'essais consécutifs est réalisé, il qualifie aussi le numéro de transactions dans la liste des transactions sortantes depuis votre adresse
@@ -162,7 +162,7 @@ Tout gaz non utilisé dans une transaction est remboursé sur le compte de l'uti
 
 Du gaz est nécessaire pour toute transaction qui implique un contrat intelligent.
 
-Les contrats intelligents peuvent également contenir des fonctions connues sous le nom de fonctions [`view`](https://docs.soliditylang.org/en/latest/contracts.html#view-functions) ou [`pure`](https://docs.soliditylang.org/en/latest/contracts.html#pure-functions), qui n'altèrent pas l'état du contrat. Ainsi, appeler ces fonctions à partir d'un EOA ne nécessitera aucun gaz. L'appel RPC sous-jacent pour ce scénario est [`eth_call`](/developers/docs/apis/json-rpc#eth_call)
+Les contrats intelligents peuvent également contenir des fonctions connues sous le nom de fonctions [`view`](https://docs.soliditylang.org/en/latest/contracts.html#view-functions) ou [`pure`](https://docs.soliditylang.org/en/latest/contracts.html#pure-functions), qui n'altèrent pas l'état du contrat. Ainsi, appeler ces fonctions à partir d'un EOA ne nécessitera aucun gaz. L'appel RPC sous-jacent pour ce scénario est [`eth_call`](/developers/docs/apis/json-rpc#eth_call).
 
 Contrairement à l'utilisation de `eth_call`, ces fonctions `view` ou `pure` sont également fréquemment appelées en interne (c'est-à-dire à partir du contrat lui-même ou d'un autre contrat), ce qui entraîne un coût en gaz.
 
@@ -198,7 +198,7 @@ Où les champs sont définis comme :
 - `TransactionType` : un nombre compris entre 0 et 0x7f, pour un total de 128 types de transactions possibles.
 - `TransactionPayload` : une table arbitraire d'octets définie par le type de transaction.
 
-En fonction de la valeur `TransactionType`, une transaction peut être classée comme
+En fonction de la valeur `TransactionType`, une transaction peut être classée comme :
 
 1. **Transactions de type 0 (Legacy) :** Le format de transaction original utilisé depuis le lancement d'Ethereum. Ils n'incluent pas les fonctionnalités de l'[EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), telles que les calculs dynamiques des frais de gaz ou les listes d'accès pour les contrats intelligents. Les transactions originelles n'ont pas de préfixe spécifique indiquant leur type dans leur forme sérialisée, et commencent par l'octet `0xf8` lorsqu'elles utilisent le codage [Recursive Length Prefix (RLP)](/developers/docs/data-structures-and-encoding/rlp). La valeur TransactionType pour ces transactions est `0x0`.
 

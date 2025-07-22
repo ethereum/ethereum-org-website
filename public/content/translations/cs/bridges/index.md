@@ -49,7 +49,7 @@ Představte si, že máte ETH na hlavní síti Ethereum, ale chtěli byste plati
 
 ### Dappky na jiných blockchainech {#dapps-other-chains}
 
-Pokud jste používali Aave na hlavní síti Ethereum k poskytování půjček v USDT, ale úroková sazba pro půjčování USDT pomocí Aave na Polygonu je vyšší.
+Pokud jste používali Aave na hlavní síti Etherea k poskytování půjček v USDT, ale úroková sazba pro půjčování USDT pomocí Aave na Polygonu je vyšší.
 
 ### Prozkoumávání blockchainových ekosystémů {#explore-ecosystems}
 
@@ -131,7 +131,9 @@ Přemostění jsou klíčová pro vstup uživatelů do 2. vrstev Etherea, stejn�
 <Divider />
 
 ## Další četba {#further-reading}
+- [EIP-5164: Meziblockchainová exekuce](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) – _18. června 2022 – Brendan Asselstine_
+- [Rizika přemostění vrstev 2](https://gov.l2beat.com/t/l2bridge-risk-framework/31) – _5. července 2022 – Bartek Kiepuszewski_
+- [Proč je budoucnost multiblockchainová, ale ne meziblockchainová](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) – _8. ledna 2022 – Vitalik Buterin_
+- [Využití sdíleného zabezpečení pro bezpečnou interoperabilitu mezi blockchainy: Lagrangovy stavové výbory a další](https://research.2077.xyz/harnessing-shared-security-for-secure-blockchain-interoperability) – _ 12. června 2024 – Emmanuel Awosika_
+- [Stav řešení interoperability rollupů](https://research.2077.xyz/the-state-of-rollup-interoperability) – _20. června 2024 – Alex Hook_
 
-- [EIP-5164: Meziblockchainová exekuce](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) _18. června 2022 - Brendan Asselstine_
-- [Rizika přemostění 2. vrstev](https://gov.l2beat.com/t/l2bridge-risk-framework/31) _5. července 2022 - Bartek Kiepuszewski_
-- [Proč je budoucnost multiblockchainová, ale ne meziblockchainová](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) _8. ledna 2022 - Vitalik Buterin_

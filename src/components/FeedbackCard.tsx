@@ -1,3 +1,5 @@
+"use client"
+
 import { type ReactNode, useState } from "react"
 import { useLocale } from "next-intl"
 
@@ -78,11 +80,11 @@ const FeedbackCard = ({ prompt, isArticle, ...props }: FeedbackCardProps) => {
           {!feedbackSubmitted ? (
             <>
               <Button variant="outline" onClick={() => handleSubmit(true)}>
-                <FeedbackThumbsUpIcon className="h-6 w-6" />
+                <FeedbackThumbsUpIcon className="text-2xl" />
                 {t("yes")}
               </Button>
               <Button variant="outline" onClick={() => handleSubmit(false)}>
-                <FeedbackThumbsUpIcon className="-scale-y-100" />
+                <FeedbackThumbsUpIcon className="-scale-y-100 text-2xl" />
                 {t("no")}
               </Button>
             </>

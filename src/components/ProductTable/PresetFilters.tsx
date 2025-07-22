@@ -1,14 +1,15 @@
+import { Check } from "lucide-react"
+
 import type { TPresetFilters } from "@/lib/types"
 
 import { cn } from "@/lib/utils/cn"
-
-import { useTranslation } from "@/hooks/useTranslation"
 
 export interface PresetFiltersProps {
   presets: TPresetFilters
   activePresets: number[]
   handleSelectPreset: (index: number) => void
   showMobileSidebar?: boolean
+  presetFiltersCounts?: number[]
 }
 
 const PresetFilters = ({
@@ -16,67 +17,88 @@ const PresetFilters = ({
   activePresets,
   handleSelectPreset,
   showMobileSidebar = false,
+  presetFiltersCounts,
 }: PresetFiltersProps) => {
-  const { t } = useTranslation("table")
+  const colors = {
+    text: [
+      "text-primary",
+      "text-accent-b",
+      "text-accent-c",
+      "text-accent-a",
+      "text-[#BEBF3B]",
+    ],
+    border: [
+      "border-primary",
+      "border-accent-b",
+      "border-accent-c",
+      "border-accent-a",
+      "border-[#BEBF3B]",
+    ],
+    bg: [
+      "bg-primary",
+      "bg-accent-b",
+      "bg-accent-c",
+      "bg-accent-a",
+      "bg-[#BEBF3B]",
+    ],
+  }
 
   return (
     <div>
-      <h3 className={cn("mb-3 text-xl font-bold", "px-4")}>
-        {t("table-what-are-you-looking-for")}
-      </h3>
       <div
-        className={`mb-2 ${
+        className={`lg:pb-11 ${
           showMobileSidebar
-            ? "grid grid-cols-2 gap-2"
+            ? "grid grid-cols-2 gap-2 pb-5"
             : "grid auto-cols-[200px] grid-flow-col gap-4 overflow-x-auto px-4 lg:auto-cols-fr"
         }`}
+        data-testid="preset-filters-container"
       >
         {presets.map((preset, idx) => {
+          const colorIdx = colors.text[idx] ? idx : idx % colors.text.length
           return (
             <div
               key={idx}
-              className={showMobileSidebar ? "w-full" : "grid-rows-1"}
+              className={showMobileSidebar ? "w-full" : "grid-rows-1 pb-5"}
             >
               <button
                 className={cn(
-                  "duration-50 group flex h-full w-full cursor-pointer flex-col items-start rounded border-2 bg-background-highlight p-2 transition-all hover:border-primary-hover",
+                  "duration-50 group flex h-[164px] w-full cursor-pointer flex-col items-start rounded-2xl border p-3 shadow-svg-button-link transition-all hover:bg-background-highlight lg:h-full lg:p-6",
                   "focus-visible:outline focus-visible:outline-4 focus-visible:-outline-offset-4 focus-visible:outline-primary-hover",
                   activePresets.includes(idx)
                     ? "border-primary"
-                    : "border-transparent"
+                    : "border-primary-low-contrast",
+                  showMobileSidebar && "h-full"
                 )}
                 onClick={() => handleSelectPreset(idx)}
               >
                 <div className="items-top flex gap-2 px-1.5">
-                  <div className="relative mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded border-2 border-primary">
+                  <div
+                    className={cn(
+                      "relative mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded border-2",
+                      colors.border[colorIdx],
+                      activePresets.includes(idx) && colors.bg[colorIdx]
+                    )}
+                  >
                     {activePresets.includes(idx) && (
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="3"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="h-4 w-4 text-primary"
-                      >
-                        <polyline points="20 6 9 17 4 12"></polyline>
-                      </svg>
+                      <Check className="size-4 stroke-[3] text-background" />
                     )}
                   </div>
-                  <h3 className="duration-50 hyphens-auto text-left text-xl text-primary transition-all group-hover:text-primary-hover">
-                    {preset.title}
+                  <h3
+                    className={cn(
+                      "duration-50 hyphens-auto text-left text-xl transition-all",
+                      colors.text[colorIdx]
+                    )}
+                  >
+                    {preset.title}{" "}
+                    {presetFiltersCounts?.[idx] && (
+                      <span className="font-normal">
+                        ({presetFiltersCounts[idx]})
+                      </span>
+                    )}
                   </h3>
                 </div>
                 {!showMobileSidebar && (
-                  <p
-                    className={cn(
-                      "p-2 text-left text-sm transition-colors duration-500",
-                      activePresets.includes(idx)
-                        ? "text-body"
-                        : "text-body-medium"
-                    )}
-                  >
+                  <p className="p-2 text-left text-sm text-body transition-colors duration-500">
                     {preset.description}
                   </p>
                 )}

@@ -1,8 +1,10 @@
+"use client"
+
 import { useLocale } from "next-intl"
-import { FaDiscord } from "react-icons/fa"
 
 import type { Lang } from "@/lib/types"
 
+import Discord from "@/components/icons/discord.svg"
 import { ButtonLink } from "@/components/ui/buttons/Button"
 import { Flex } from "@/components/ui/flex"
 import InlineLink from "@/components/ui/Link"
@@ -71,7 +73,7 @@ export const TranslatathonCalendar = () => {
           might have.
         </p>
         <ButtonLink href="/discord/" onClick={() => matomoEvent("discord")}>
-          <FaDiscord className="text-2xl" />
+          <Discord className="text-2xl" />
           Join Discord
         </ButtonLink>
       </Flex>

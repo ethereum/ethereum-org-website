@@ -1,3 +1,5 @@
+"use client"
+
 import { ChangeEvent, FC, useMemo, useState } from "react"
 
 import CopyToClipboard from "@/components/CopyToClipboard"

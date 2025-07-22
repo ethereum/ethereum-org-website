@@ -111,6 +111,7 @@
   "page-run-a-node-sovereignty-1": "Una cartera Ethereum le permite tomar el control y la custodia completos de sus activos digitales manteniendo las claves privadas de sus direcciones, pero esas claves no le especifican el estado actual de la cadena de bloques, como el balance de su cartera.",
   "page-run-a-node-sovereignty-2": "Por defecto, las carteras de Ethereum suelen llegar a un nodo de terceros, como Infura o Alchemy, cuando consulte sus balances. Ejecutar su propio nodo le permite tener su propia copia de la cadena de bloques de Ethereum.",
   "page-run-a-node-title": "Ejecutar un nodo",
+  "page-run-a-node-meta-title": "Cómo ejecutar un nodo de Ethereum",
   "page-run-a-node-voice-your-choice-title": "Hágase oír",
   "page-run-a-node-voice-your-choice-preview": "No ceda el control en caso de bifurcación.",
   "page-run-a-node-voice-your-choice-1": "En el caso de una bifurcación de cadena, donde emergen dos cadenas con dos conjuntos diferentes de reglas, ejecutar su propio nodo garantiza su capacidad de elegir qué conjunto de reglas soporta. Depende de usted actualizar a nuevas reglas y apoyar los cambios propuestos, o no.",

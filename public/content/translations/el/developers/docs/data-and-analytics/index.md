@@ -45,11 +45,15 @@ lang: el
 ## Πρόγραμμα δεδομένων Ethernow - Mempool {#ethernow}
 Το [Blocknative](https://www.blocknative.com/) παρέχει ανοιχτή πρόσβαση στο ιστορικό [αρχείο δεδομένων του mempool](https://www.ethernow.xyz/mempool-data-archive) στο Ethereum. Αυτό δίνει τη δυνατότητα σε ερευνητές και σε έργα της κοινότητας να εξερευνήσουν το επίπεδο προ-αλυσίδας του Ethereum Mainnet. Το σύνολο δεδομένων διατηρείται ενεργά και αντιπροσωπεύει το πιο ολοκληρωμένο ιστορικό αρχείο γεγονότων συναλλαγών mempool εντός του οικοσυστήματος του Ethereum. Μάθετε περισσότερα για το [Ethernow](https://www.ethernow.xyz/).
 
-## Περισσότερες πληροφορίες {#further-reading}
+## Γλώσσα ερωτήματος EVM
 
-- [Επισκόπηση του Δικτύου Graph](https://thegraph.com/docs/en/about/network/)
+Η Γλώσσα Ερωτημάτων EVM (EQL) είναι μια γλώσσα που μοιάζει με SQL και έχει σχεδιαστεί για να υποβάλλει ερωτήματα σε αλυσίδες EVM (Εικονική μηχανή Ethereum). Ο απώτερος στόχος της EQL είναι να υποστηρίξει σύνθετα σχεσιακά ερωτήματα σε πολίτες πρώτης κατηγορίας της αλυσίδας EVM (μπλοκ, λογαριασμοί και συναλλαγές), ενώ παρέχει στους προγραμματιστές και τους ερευνητές μια εργονομική σύνταξη για καθημερινή χρήση. Με το EQL, οι προγραμματιστές μπορούν να ανακτήσουν δεδομένα blockchain χρησιμοποιώντας οικεία σύνταξη τύπου SQL και να εξαλείψουν την ανάγκη για πολύπλοκο κώδικα boilerplate. Η EQL υποστηρίζει τυπικά αιτήματα δεδομένων blockchain (π.χ. ανάκτηση του μηδενικού και υπολοίπου ενός λογαριασμού στο Ethereum ή ανάκτηση του τρέχοντος μεγέθους και χρονικής σφραγίδας μπλοκ) και προσθέτει συνεχώς υποστήριξη για πιο σύνθετα αιτήματα και σύνολα χαρακτηριστικών.
+
+## Περισσότερες πληροφορίες {#further-reading}
+- [Εξερευνώντας Δεδομένα Κρύπτο I: Αρχιτεκτονική Ροής Δεδομένων](https://research.2077.xyz/exploring-crypto-data-1-data-flow-architectures)
+- [Επισκόπηση του Δικτύου Graph](https://thegraph.com/docs/en/about/)
 - [Χώρος ανάπτυξης Graph Query](https://thegraph.com/explorer/subgraph/graphprotocol/graph-network-mainnet?version=current)
 - [Παραδείγματα κώδικα API στο EtherScan](https://etherscan.io/apis#contracts)
 - [Beaconcha.in εξερευνητής κύριας αλυσίδας](https://beaconcha.in)
 - [Τα βασικά για το Dune](https://docs.dune.com/#dune-basics)
-- [Οδηγός γρήγορης εκκίνησης SubQuery Ethereum](https://academy.subquery.network/indexer/quickstart/quickstart_chains/ethereum-gravatar.html)
+- [Γλώσσα ερωτήματος EVM](https://eql.sh/blog/alpha-release-notes)

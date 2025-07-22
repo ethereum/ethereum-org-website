@@ -35,7 +35,8 @@ export const Simulator = ({ children, data }: SimulatorProps) => {
   const [step, setStep] = useState(0) // 0-indexed to use as array index
 
   // Track pathID
-  const pathId = getValidPathId(searchParams.get(PATH_ID_QUERY_PARAM))
+  const pathIdString = searchParams?.get(PATH_ID_QUERY_PARAM)
+  const pathId = getValidPathId(pathIdString ?? null)
   const simulator: SimulatorDetails | null = pathId ? data[pathId] : null
   const totalSteps: number = simulator ? simulator.explanations.length : 0
 

@@ -203,7 +203,7 @@ return (
 
 このチュートリアルでは、イーサリアムアカウントアドレスを管理するためにブラウザの仮想ウォレットであるMetamaskを使用します。 イーサリアムのトランザクションの仕組みの詳細については、[こちらのページ](/developers/docs/transactions/)をご覧ください。
 
-Metamaskのアカウントは[こちら](https://metamask.io/download.html)から無料でダウンロード、作成できます。 アカウントを作成後、またはすでにアカウントをお持ちの場合は、(実際に支払いが発生しないように)右上の「Ropsten Test Network」に切り替えてください。
+Metamaskのアカウントは[こちら](https://metamask.io/download)から無料でダウンロード、作成できます。 アカウントを作成後、またはすでにアカウントをお持ちの場合は、(実際に支払いが発生しないように)右上の「Ropsten Test Network」に切り替えてください。
 
 ### フォーセットからイーサ(ETH)を追加 {#add-ether-from-faucet}
 
@@ -260,7 +260,7 @@ export const connectWallet = async () => {
         <span>
           <p>
             {" "}
-            🦊 <a target="_blank" href={`https://metamask.io/download.html`}>
+            🦊 <a target="_blank" href={`https://metamask.io/download`}>
               You must install MetaMask, a virtual Ethereum wallet, in your
               browser.
             </a>
@@ -370,7 +370,7 @@ export const getCurrentWalletConnected = async () => {
         <span>
           <p>
             {" "}
-            🦊 <a target="_blank" href={`https://metamask.io/download.html`}>
+            🦊 <a target="_blank" href={`https://metamask.io/download`}>
               You must install MetaMask, a virtual Ethereum wallet, in your
               browser.
             </a>
@@ -434,7 +434,7 @@ function addWalletListener() {
     setStatus(
       <p>
         {" "}
-        🦊 <a target="_blank" href={`https://metamask.io/download.html`}>
+        🦊 <a target="_blank" href={`https://metamask.io/download`}>
           You must install MetaMask, a virtual Ethereum wallet, in your browser.
         </a>
       </p>
@@ -479,7 +479,7 @@ JSONオブジェクトとしてメタデータを設定し、保存する必要�
 
 ## Pinataを使用してメタデータをIPFSに固定化 {#use-pinata-to-pin-your-metadata-to-IPFS}
 
-[Pinata](https://pinata.cloud/)アカウントをお持ちでない場合は、[こちら](https://pinata.cloud/signup)から無料のアカウントにサインアップし、メールアドレスとアカウントの認証手順を完了してください。
+[Pinata](https://pinata.cloud/)アカウントをお持ちでない場合は、[こちら](https://app.pinata.cloud/auth/signup)から無料のアカウントにサインアップし、メールアドレスとアカウントの認証手順を完了してください。
 
 ### Pinata APIキーの作成 {#create-pinata-api-key}
 
@@ -518,7 +518,7 @@ REACT_APP_PINATA_SECRET = <pinata-api-secret>
 
 ### pinJSONToIPFSの実装 {#pin-json-to-ipfs}
 
-幸いにもPinataでは、[惑星間ファイルシステム(IPFS)へのJSONデータのアップロードに特化したAPI](https://pinata.cloud/documentation#PinJSONToIPFS)と、少しの変更を加えるだけで使用できるaxiosのサンプルを備えた便利なJavaScriptを使用できます。
+幸いにもPinataでは、[惑星間ファイルシステム(IPFS)へのJSONデータのアップロードに特化したAPI](https://docs.pinata.cloud/api-reference/endpoint/ipfs/pin-json-to-ipfs#pin-json)と、少しの変更を加えるだけで使用できるaxiosのサンプルを備えた便利なJavaScriptを使用できます。
 
 `utils`フォルダーに`pinata.js`という別のファイルを作成し、.envファイルからPinataのシークレットとキーをインポートしましょう。
 

@@ -58,7 +58,7 @@ Stejně jako privátní klíče zajišťují vaši adresu Ethereum, budete muset
 <a href="/security/">Zabezpečení Etherea a prevence podvodů</a>
 </ExpandableCard>
 
-<ExpandableCard title="Maintenance" eventCategory="SoloStaking" eventName="clicked maintenance">
+<ExpandableCard title="Údržba" eventCategory="SoloStaking" eventName="clicked maintenance">
 Hardware občas selže, dojde k chybě síťových připojení a klientský software občas potřebuje upgrade. Údržba uzlů je nevyhnutelná a občas bude vyžadovat vaši pozornost. Budete si chtít být jisti, že budete informováni o všech očekávaných upgradech sítě nebo jiných důležitých upgradech klientů.
 </ExpandableCard>
 
@@ -203,4 +203,4 @@ Chcete-li odemknout a získat zpět celý zůstatek, musíte také dokončit pro
 - [Krok za krokem: Jak se připojit k testovací síti Ethereum 2.0](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) – _ Butta_
 - [Tipy pro prevenci trestu Eth2](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) – _Raul Jordan 2020 _
 
-<QuizWidget quizKey="solo-staking" />
+<QuizWidget quizKey="staking-solo" />

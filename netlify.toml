@@ -7,7 +7,7 @@
   publish = ".next"
 
   # Default build command.
-  command = "yarn build"
+  command = "pnpm build"
 
 [build.environment]
   NEXT_FORCE_EDGE_IMAGES="true"
@@ -39,4 +39,4 @@
     path = "en/developers/tutorials/creating-a-wagmi-ui-for-your-contract/"
 
 [functions]
-  included_files = ["i18n.config.json","src/data/mocks/**/*"]
+  included_files = ["i18n.config.json", "src/intl/**/*", "src/data/mocks/**/*"]

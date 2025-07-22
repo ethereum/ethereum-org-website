@@ -25,7 +25,7 @@
 
     --border: var(--gray-200);
     --border-high-contrast: var(--gray-400);
-    --border-low-contrast: var(--gray-50);
+    --border-low-contrast: var(--gray-100);
     --border-hover: var(--gray-300);
 
     --primary: var(--purple-600);
@@ -75,6 +75,13 @@
       transparent 100%
     );
 
+    --radial-b: radial-gradient(
+      127.67% 82.36% at 50% -15%,
+      hsla(var(--purple-500), var(--radial-a-opacity-2)) 0%,
+      hsla(var(--blue-500), var(--radial-a-opacity-1)) 66%,
+      transparent 100%
+    );
+
     --linear-bug-bounty-title: linear-gradient(
       to left,
       #f7cbc0 0%,
@@ -83,6 +90,21 @@
       #85acf9 54.14%,
       #1c1ce1 61.77%,
       #000000 69.77%
+    );
+
+    --card-gradient: linear-gradient(123deg, rgba(255, 255, 255, 0.20) 58.99%, rgba(174, 110, 203, 0.13) 104.04%);
+    --card-gradient-secondary: linear-gradient(95deg, rgba(211, 145, 242, 0.12) 0%, rgba(159, 43, 212, 0.12) 102.78%);
+    --card-gradient-secondary-hover: linear-gradient(95deg, rgba(211, 145, 242, 0.2) 0%, rgba(159, 43, 212, 0.2) 102.78%);
+    --ten-year-gradient: linear-gradient(100deg, #F6C9EA 55.38%, #C7A9F1 110.54%);
+
+    /* Rainbow gradients */
+    --rainbow-gradient: conic-gradient(
+      from 0deg,
+      hsla(var(--primary)),
+      hsla(var(--accent-b)),
+      hsla(var(--accent-a)),
+      hsla(var(--accent-c)),
+      hsla(var(--primary))
     );
 
     /* Shadows */
@@ -126,6 +148,8 @@
     --staking-blue-fill: 142, 65%, 97%;
     --staking-red: 4, 36%, 46%;
     --staking-red-fill: 140, 27%, 98%;
+
+    --shadow-widget: 2px 2px 12px 1px rgba(52, 43, 64, 0.02), -16px 16px 12px -3px rgba(52, 43, 64, 0.02), -32px 32px 24px -6px rgba(52, 43, 64, 0.02), -40px 40px 40px -12px rgba(88, 55, 131, 0.04);
   }
 
   /* Dark mode token declarations */
@@ -150,7 +174,7 @@
 
     --border: var(--gray-600);
     --border-high-contrast: var(--gray-300);
-    --border-low-contrast: var(--black);
+    --border-low-contrast: var(--gray-900);
     --border-hover: var(--gray-500);
 
     --primary: var(--purple-400);
@@ -196,6 +220,9 @@
       #8db4ff 69.77%
     );
 
+    --roadmap-card-gradient: linear-gradient(123deg, rgba(34, 34, 34, 0.20) 40.53%, rgba(174, 110, 203, 0.13) 104.05%);
+    --ten-year-gradient: linear-gradient(100deg, #1E151B 55.38%, #000 110.54%);
+
     /* Shadows (dark mode adjustments) */
     --shadow-color: hsla(var(--white), 0.04);
     --shadow-svg-button-link-1: -2px 2px 12px 1px var(--shadow-color);
@@ -216,13 +243,15 @@
     --shadow-window-box-5-opacity: 0.06;
 
     /* Staking */
-    --staking-gold: #f2bb2f;
-    --staking-gold-fill: #373228;
-    --staking-green: #49de96;
-    --staking-green-fill: #30342b;
-    --staking-blue: #a9d3f2;
-    --staking-blue-fill: #2b352f;
-    --staking-red: #d6bbb9;
-    --staking-red-fill: #313432;
+    --staking-gold: 43, 86%, 57%;
+    --staking-gold-fill: 36, 16%, 19%;
+    --staking-green: 151, 74%, 58%;
+    --staking-green-fill: 90, 10%, 19%;
+    --staking-blue: 204, 76%, 81%;
+    --staking-blue-fill: 150, 10%, 19%;
+    --staking-red: 6, 24%, 78%;
+    --staking-red-fill: 140, 3%, 19%;
+
+    --shadow-widget: -2px 2px 12px 1px rgba(255, 255, 255, 0.04), -6px 6px 12px -3px rgba(255, 255, 255, 0.04), -12px 12px 24px -6px rgba(255, 255, 255, 0.04), -20px 20px 40px -12px rgba(255, 255, 255, 0.04);
   }
 }

@@ -47,7 +47,7 @@ Gumagamit ang mga proyekto sa ReFi ng blockchain technology para solusyonan ang 
 - **Tinitipon ang liquidity sa iilang liquidity pool** na malayang mate-trade ng kahit sino. Ginagamit ng malalaking organisasyon, pati na rin ng mga indibidwal na user ang mga pool na ito nang hindi manual na naghahanap ng mga seller/buyer, bayarin sa paglahok, o paunang pagpaparehistro.
 - **Nire-record ang lahat ng transaksyon sa mga pampublikong blockchain**. Ang daang tinatahak ng bawat carbon credit dahil sa aktibidad sa trading ay palaging masusubaybayan sa sandaling maging available ito sa digital carbon market (DCM).
 - **Halos agaran ang bilis ng transaksyon**. Maaaring abutin nang ilang araw o linggo ang pagkuha ng maraming carbon credit sa pamamagitan ng mga legacy market, pero magagawa ito sa loob ng ilang segundo sa DCM.
-- **Isinasagawa ang mga gawain sa trading nang walang intermediary**, na naniningil ng mahal na bayarin. Ayon sa data mula sa isang analytics firm, kumakatawan ang mga digital carbon credit sa [62% pagpapabuti sa gastos kumpara sa mga katumbas na tradisyonal na credit](https://www.klimadao.finance/blog/klimadao-analysis-of-the-base-carbon-tonne).
+- **Isinasagawa ang mga gawain sa trading nang walang intermediary**, na naniningil ng mahal na bayarin. Ayon sa data mula sa isang analytics firm, kumakatawan ang mga digital carbon credit sa [62% pagpapabuti sa gastos kumpara sa mga katumbas na tradisyonal na credit](https://www.klimadao.finance/resources/klimadao-impact-report-analysis-of-the-base-carbon-tonne).
 - **Scalable ang DCM** at kaya nitong tugunan ang mga demand ng mga indibidwal at multinational corporation.
 
 ### Mga pangunahing bahagi ng DCM {#key-components-dcm}

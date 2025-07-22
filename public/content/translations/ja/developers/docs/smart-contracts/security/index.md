@@ -8,7 +8,7 @@ lang: ja
 
 イーサリアムのようなパブリックブロックチェーンは、スマートコントラクトのセキュリティ確保の問題をさらに複雑にします。 デプロイされたコントラクトのコードは_通常_、セキュリティ上の欠陥にパッチを当てるために変更することはできません。一方、スマートコントラクトから盗まれた資産は追跡が非常に難しく、その不変性により、大抵回収できません。
 
-数値は一様ではありませんが、スマートコントラクトのセキュリティ上の欠陥が原因で盗まれたり失われたりした価値の総額は、10億ドルを超えると推定されています。 これには、[The DAOハック](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/)(現行価格10億ドル相当以上の360万ETHの盗難)、[パリティ(Parity)マルチシグウォレットハック](https://www.coindesk.com/30-million-ether-reported-stolen-parity-wallet-breach) (ハッカーによる3000万ドルの盗難)、[パリティ(Parity)凍結ウォレット問題](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether)(3億ドル以上のETHを永遠にロック)などの有名な事件も含まれています。
+数値は一様ではありませんが、スマートコントラクトのセキュリティ上の欠陥が原因で盗まれたり失われたりした価値の総額は、10億ドルを超えると推定されています。 これには、[The DAOハック](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/)(現行価格10億ドル相当以上の360万ETHの盗難)、[パリティ(Parity)マルチシグウォレットハック](https://www.coindesk.com/markets/2017/07/19/30-million-ether-reported-stolen-due-to-parity-wallet-breach) (ハッカーによる3000万ドルの盗難)、[パリティ(Parity)凍結ウォレット問題](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether)(3億ドル以上のETHを永遠にロック)などの有名な事件も含まれています。
 
 前述の問題は、デベロッパーに安全で堅牢な回復力のあるスマートコントラクトの構築に労力を費やすことを不可欠にしました。 スマートコントラクトのセキュリティは深刻な課題であり、全てのデベロッパーが学ぶべきことです。 このガイドでは、イーサリアムデベロッパーのためのセキュリティの考慮事項について説明します。さらに、スマートコントラクトのセキュリティ向上に役立つリソースもご紹介します。
 
@@ -115,7 +115,7 @@ contract VendingMachine {
 
 - スマートコントラクトのテスト、コンパイル、デプロイに[開発環境](/developers/docs/frameworks/)を使用する
 
-- [Cyfrin Aaderyn](https://github.com/Cyfrin/aderyn)、Mythril、Slitherなど、基本的なコード解析ツールを使用してコードを実行する。 これは、各プルリクエストがマージされる前に実行し、出力の違いを比較しておくのが理想的である
+- [Cyfrin Aderyn](https://github.com/Cyfrin/aderyn)、Mythril、Slitherなど、基本的なコード解析ツールを使用してコードを実行する。 これは、各プルリクエストがマージされる前に実行し、出力の違いを比較しておくのが理想的である
 
 - コードがエラーなくコンパイルされ、Solidityコンパイラが警告を発していないことを確認する
 
@@ -304,7 +304,7 @@ contract Victim {
 - 「Victim」は、最終的に最初のトランザクション(および後続のトランザクション)の結果をステート(状態)に適用するので、「Attacker」の残高は0に設定されます。
 ```
 
-要約すると、関数の実行が完了するまで呼び出し元の残高が0にならないため、その後の呼び出しが成功し、呼び出し元が何度も残高を引き出せるようになります。 この種の攻撃は、[2016年のDAOハック](https://www.coindesk.com/learn/2016/06/25/understanding-the-dao-attack/)で行われたように、スマートコントラクトから資金を流出させるために使用されます。 [再入可能(リエントランシー)エクスプロイトの公開リスト](https://github.com/pcaversaccio/reentrancy-attacks)が示すように、再入可能攻撃は今日でもスマートコントラクトにとって深刻な問題になっています。
+要約すると、関数の実行が完了するまで呼び出し元の残高が0にならないため、その後の呼び出しが成功し、呼び出し元が何度も残高を引き出せるようになります。 この種の攻撃は、[2016年のDAOハック](https://www.coindesk.com/learn/understanding-the-dao-attack)で行われたように、スマートコントラクトから資金を流出させるために使用されます。 [再入可能(リエントランシー)エクスプロイトの公開リスト](https://github.com/pcaversaccio/reentrancy-attacks)が示すように、再入可能攻撃は今日でもスマートコントラクトにとって深刻な問題になっています。
 
 ##### 再入可能 (リエントランシー) 攻撃を防ぐ方法
 
@@ -417,7 +417,7 @@ contract Attack {
     function attack() public payable {
         timeLock.deposit{value: msg.value}();
         /*
-        「t = 現在のロック時間」ならば、xを以下のようにして求める必要があります。 
+        「t = 現在のロック時間」ならば、xを以下のようにして求める必要があります。
         x + t = 2**256 = 0
         so x = -t
         2**256 = type(uint).max + 1
@@ -503,7 +503,7 @@ DEXの価格は正確であることが多く、これは市場の均衡を取�
 
 - **[Hacken](https://hacken.io)** - _ブロックチェーンセキュリティへの360度アプローチをもたらすサイバーセキュリティ監査人。_
 
-- **[Nethermind](https://nethermind.io/smart-contracts-audits)** - _ SolidityとCairoの監査サービスにより、イーサリアムとStarknet全体でスマートコントラクトの整合性とユーザーの安全を確保。_
+- **[Nethermind](https://www.nethermind.io/smart-contract-audits)** - _ SolidityとCairoの監査サービスにより、イーサリアムとStarknet全体でスマートコントラクトの整合性とユーザーの安全を確保。_
 
 - **[HashEx](https://hashex.org/)** - _HashExは、ブロックチェーンとスマート コントラクトの監査に焦点を当てており、暗号通貨のセキュリティを確保するためのスマートコントラクト開発、侵入テスト、ブロックチェーンコンサルティングなどのサービスを提供。_
 
@@ -513,7 +513,7 @@ DEXの価格は正確であることが多く、これは市場の均衡を取�
 
 - **[Cyfrin](https://cyfrin.io)** - _Web3セキュリティの有力企業であり、製品やスマート コントラクト監査サービスを通じて暗号セキュリティを推進している。_
 
-- **[ImmuneBytes](https://www.immunebytes.com//smart-contract-audit/)** - _Web3セキュリティファームで、経験豊富な監査人と最高クラスのツールを通じてブロックチェーンシステムのセキュリティ監査を提供している。_
+- **[ImmuneBytes](https://immunebytes.com/smart-contract-audit/)** - _Web3セキュリティファームで、経験豊富な監査人と最高クラスのツールを通じてブロックチェーンシステムのセキュリティ監査を提供している。_
 
 - **[Oxorio](https://oxor.io/)** - _クリプト会社およびDeFiプロジェクト向けのEVM、Solidity、ゼロ知識、クロスチェーン技術を専門としたスマートコントラクト監査およびブロックチェーンセキュリティサービス。_
 
@@ -561,7 +561,7 @@ DEXの価格は正確であることが多く、これは市場の均衡を取�
 
 - **[スマートコントラクトセキュリティ検証スタンダード](https://github.com/securing/SCSVS)** - _デベロッパー、アーキテクト、セキュリティ評価者、ベンダー向けにスマートコントラクトのセキュリティを標準化するために作成された14部構成のチェックリスト。_
 
-- **[スマートコントラクトセキュリティと監査の学習](https://updraft.cyfrin.io/courses/security)** - _究極のスマート コントラクトセキュリティと監査コース。セキュリティのベストプラクティスのレベルアップおよびセキュリティ研究者になりたいと考えているスマートコントラクトデベロッパー向け。_
+- **[スマートコントラクトセキュリティと監査の学習](https://updraft.cyfrin.io/courses/security) - _究極のスマート コントラクトセキュリティと監査コース。セキュリティのベストプラクティスのレベルアップおよびセキュリティ研究者になりたいと考えているスマートコントラクトデベロッパー向け。_
 
 ### スマートコントラクトのセキュリティに関するチュートリアル {#tutorials-on-smart-contract-security}
 

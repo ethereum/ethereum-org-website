@@ -41,16 +41,15 @@ Hardhat Network comes built-in with Hardhat, an Ethereum development environment
 
 Some consensus clients have built-in tools for spinning up local beacon chains for testing purposes. Instructions for Lighthouse, Nimbus and Lodestar are available:
 
-- [Local testnet using Lodestar](https://chainsafe.github.io/lodestar/usage/local/)
+- [Local testnet using Lodestar](https://chainsafe.github.io/lodestar/contribution/advanced-topics/setting-up-a-testnet#post-merge-local-testnet/)
 - [Local testnet using Lighthouse](https://lighthouse-book.sigmaprime.io/setup.html#local-testnets)
 - [Local testnet using Nimbus](https://github.com/status-im/nimbus-eth1/blob/master/fluffy/docs/local_testnet.md)
 
 ### Public Ethereum Test-chains {#public-beacon-testchains}
 
-There are also two maintained public test implementations of Ethereum: Goerli and Sepolia. The recommended testnet with long-term support is Goerli, which anyone is free to validate on. Sepolia is a newer, smaller chain also expected to be maintained for the foreseeable future, with a permissioned validator set (meaning there is no general access to new validators on this testnet). The Ropsten chain is expected to be deprecated in Q4 2022, and the Rinkeby chain is expected to be deprecated in Q2/Q3 2023.
+There are also two maintained public test implementations of Ethereum: Sepolia and Hoodi. The recommended testnet with long-term support is Hoodi, which anyone is free to validate on. Sepolia uses a permissioned validator set, meaning there is no general access to new validators on this testnet.
 
-- [Goerli Staking Launchpad](https://goerli.launchpad.ethereum.org/)
-- [Ropsten, Rinkeby & Kiln Deprecation Announcement](https://blog.ethereum.org/2022/06/21/testnet-deprecation)
+- [Hoodi Staking Launchpad](https://hoodi.launchpad.ethereum.org/)
 
 ### Kurtosis Ethereum Package {#kurtosis}
 

@@ -1,6 +1,6 @@
 import * as React from "react"
 import { cva, type VariantProps } from "class-variance-authority"
-import { MdClose } from "react-icons/md"
+import { X } from "lucide-react"
 
 import { cn } from "@/lib/utils/cn"
 
@@ -83,7 +83,7 @@ const AlertCloseButton = React.forwardRef<
     className={cn("-me-4 rounded-full text-body", className)}
     {...props}
   >
-    <MdClose className="h-6 w-6" />
+    <X className="h-6 w-6" />
     <span className="sr-only">Close</span>
   </Button>
 ))

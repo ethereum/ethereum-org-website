@@ -3,7 +3,7 @@ import { type ComponentProps, type HTMLAttributes } from "react"
 import type { ChildOnlyProp } from "@/lib/types"
 
 import Contributors from "@/components/Contributors"
-import MarkdownImage from "@/components/MarkdownImage"
+import MarkdownImage from "@/components/Image/MarkdownImage"
 import TooltipLink from "@/components/TooltipLink"
 import YouTube from "@/components/YouTube"
 
@@ -26,7 +26,7 @@ import { ButtonLink } from "../ui/buttons/Button"
 import { Divider } from "../ui/divider"
 import { Flex } from "../ui/flex"
 import { ListItem, OrderedList, UnorderedList } from "../ui/list"
-import { mdxTableComponents } from "../ui/table"
+import { mdxTableComponents } from "../ui/mdx-table-components"
 import { Tag } from "../ui/tag"
 
 export const commonHeadingAttributes = (className: string, id?: string) => ({

@@ -60,7 +60,7 @@ Verkle 樹是 `(key,value)` 對，其中鍵是 32 字節位元組要素，由 31
 - [Guillaume Ballet 在 ETHGlobal 上解釋沃克爾樹](https://www.youtube.com/watch?v=f7bEtX3Z57o)
 - [「沃克爾樹如何讓以太坊變得更加精幹而簡約」Guillaume Ballet 在 Devcon 6 發表的演講](https://www.youtube.com/watch?v=Q7rStTKwuYs)
 - [Piper Merriam 談 ETHDenver 2020 的無狀態用戶端](https://www.youtube.com/watch?v=0yiZJNciIJ4)
-- [Dankrad Feist 在「零知識」播客上談沃克爾樹和無狀態性](https://zeroknowledge.fm/episode-202-stateless-ethereum-verkle-tries-with-dankrad-feist/)
+- [Dankrad Feist 在「零知識」播客上談沃克爾樹和無狀態性](https://zeroknowledge.fm/podcast/202/)
 - [Vitalik Buterin 談沃克爾樹](https://vitalik.eth.limo/general/2021/06/18/verkle.html)
 - [Dankrad Feist 談沃克爾樹](https://dankradfeist.de/ethereum/2021/06/18/verkle-trie-for-eth1.html)
 - [以太坊改進提案文件：沃克爾樹](https://notes.ethereum.org/@vbuterin/verkle_tree_eip#Illustration)

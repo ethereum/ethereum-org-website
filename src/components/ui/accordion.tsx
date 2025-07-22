@@ -30,10 +30,14 @@ const AccordionTrigger = React.forwardRef<
       )}
       {...props}
     >
-      {children}
-      {!hideIcon && (
-        <ChevronNext className="size-[1em] shrink-0 text-2xl transition-transform duration-200" />
-      )}
+      <>
+        {children}
+        {!hideIcon && (
+          <div data-label="icon-container">
+            <ChevronNext className="size-[1em] shrink-0 text-2xl transition-transform duration-200" />
+          </div>
+        )}
+      </>
     </AccordionPrimitive.Trigger>
   </AccordionPrimitive.Header>
 ))
