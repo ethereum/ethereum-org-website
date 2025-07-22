@@ -17,7 +17,7 @@ A mellékláncok független blokkláncok, eltérő történetekkel, fejlesztési
 
 A mellékláncokat egyedivé (Ethereumtól eltérővé) tevő egyik tulajdonság az alkalmazott konszenzusalgoritmus. Konzenzus tekintetében a mellékláncok nem támaszkodnak az Ethereumra, hanem az igényeiknek megfelelő alternatív konzenzusprotokollt választhatnak. Néhány példa a mellékláncokon alkalmazott konszenzusalgoritmusokra:
 
-- [Proof-of-authority (jogosultsági igazolás)](https://wikipedia.org/wiki/Proof_of_authority)
+- [Proof-of-authority (jogosultsági igazolás)](/developers/docs/consensus-mechanisms/poa/)
 - [Delegált proof-of-stake (letéti igazolás)](https://en.bitcoin.it/wiki/Delegated_proof_of_stake)
 - [Bizánci hibatűrés](https://decrypt.co/resources/byzantine-fault-tolerance-what-is-it-explained).
 
@@ -70,4 +70,4 @@ Több projekt is kínál olyan melléklánc-implementációkat, amelyeket Ön is
 
 - [Ethereum dappok skálázása mellékláncokkal](https://medium.com/loom-network/dappchains-scaling-ethereum-dapps-through-sidechains-f99e51fff447) _2018. február 8. – Georgios Konstantopoulos_
 
-_Van olyan közösségi erőforrása, amely segített Önnek? Szerkessze ezt az oldalt, és adja hozzá!_
+_Ismersz olyan közösségi anyagot, mely segített neked? Módosítsd az oldalt és add hozzá!_

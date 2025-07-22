@@ -5,13 +5,15 @@ lang: tr
 hideEditButton: true
 ---
 
-# Gelecek etkinlikler {#events}
+# Yaklaşan etkinlikler {#events}
 
 **Her ay dünya çapında büyük Ethereum etkinlikleri olur.** Toplulukta daha fazla insanla tanışmak, istihdam fırsatları hakkında bilgi edinmek ve yeni beceriler geliştirmek için bunlardan birine katılmayı düşünebilirsiniz.
 
 <UpcomingEventsList/>
 
 Bu, topluluğumuz tarafından sağlanan kapsamlı olmayan bir listedir. Bu listeye eklenecek yaklaşan bir Ethereum etkinliğini biliyor musunuz? [Lütfen ekleyin](https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-events.json)!
+
+<EventsOrganizerBanner className="mt-16" />
 
 ## Ethereum buluşmaları {#meetups}
 

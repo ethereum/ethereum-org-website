@@ -153,11 +153,18 @@ La tarifa base que se consumirá será de **0,00399 ETH**
 
 El validador se queda con una propina de **+0,000210 ETH**
 
-También se necesita gas para cualquier interacción del contrato inteligente.
 
 ![Diagrama que muestra la devolución del gas no utilizado.](./gas-tx.png) _Diagrama adaptado de [Ethereum EVM ilustrado](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 Cualquier gas no utilizado en una transacción se reembolsa a la cuenta de usuario.
+
+### Interacciones con contratos inteligentes {#smart-contract-interactions}
+
+Se requiere gas para cualquier transacción que involucre un contrato inteligente.
+
+Los contratos inteligentes también pueden presentar funciones conocidas como [`view`](https://docs.soliditylang.org/en/latest/contracts.html#view-functions) o [`pure`](https://docs.soliditylang.org/en/latest/contracts.html#pure-functions), que no afectan el estado del contrato. Como tal, invocar estas funciones desde una EOA no requerirá gas. La llamada RPC subyacente para este escenario es [`eth_call`](/developers/docs/apis/json-rpc#eth_call).
+
+A diferencia de cuando se accede usando `eth_call`, estas funciones `view` o `pure` también se llaman comúnmente de forma interna (es decir, desde el contrato en sí o de otro contrato), lo que sí cuesta gas.
 
 ## Ciclo de vida de la transacción {#transaction-lifecycle}
 
@@ -191,11 +198,21 @@ Donde los campos indican:
 - `TransactionType` - un número entre 0 y 0x7f, para un total de 128 posibles tipos de transacción.
 - `TransactionPayload`: una matriz de bytes arbitraria definida según el tipo de transacción.
 
+Según el valor `TransactionType`, una transacción se puede clasificar como:
+
+1. **Transacciones de Tipo 0 (heredadas):** El formato de transacción original utilizado desde el lanzamiento de Ethereum. No incluyen características de [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) como cálculos dinámicos de tarifas de gas o listas de acceso para contratos inteligentes. Las transacciones heredadas carecen de un prefijo específico que indique su tipo en su forma serializada, comenzando con el byte `0xf8` cuando se utiliza la codificación de [Prefijo de Longitud Recursiva (RLP)](/developers/docs/data-structures-and-encoding/rlp). El valor de TransactionType para estas transacciones es `0x0`.
+
+2. **Transacciones de tipo 1:** Introducidas en [EIP-2930](https://eips.ethereum.org/EIPS/eip-2930) como parte de la [Actualización Berlín](/history/#berlin) de Ethereum, estas transacciones incluyen un parámetro `accessList`. Esta lista especifica direcciones y claves de almacenamiento a las que la transacción espera acceder, ayudando a reducir potencialmente los costos de [gas](/developers/docs/gas/) para transacciones complejas que involucren contratos inteligentes. Los cambios en el mercado de tarifas de EIP-1559 no se incluyen en las transacciones de Tipo 1. Las transacciones de Tipo 1 también incluyen un parámetro `yParity`, que puede ser `0x0` o `0x1`, lo que indica la igualdad del valor y de la firma secp256k1. Se identifican comenzando con el byte `0x01`, y su valor TransactionType es `0x1`.
+
+3. **Transacciones de Tipo 2**: Comúnmente conocidas como transacciones EIP-1559, son transacciones introducidas en [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), en la [Actualización London](/history/#london) de Ethereum. Se han convertido en el tipo de transacción estándar en la red Ethereum. Estas transacciones introducen un nuevo mecanismo de mercado de tarifas que mejora la previsibilidad separando la tarifa de transacción en una tarifa base y una tarifa prioritaria. Comienzan con el byte `0x02` e incluyen campos como `maxPriorityFeePerGas` y `maxFeePerGas`. Las transacciones de Tipo 2 son ahora las predeterminadas debido a su flexibilidad y eficiencia, especialmente favorecidas durante los períodos de alta congestión de la red por su capacidad para ayudar a los usuarios a gestionar las tarifas de transacción de manera más predecible. El valor de TransactionType para estas transacciones es `0x2`.
+
+
+
 ## Más información {#further-reading}
 
 - [EIP-2718: Typed Transaction Envelope](https://eips.ethereum.org/EIPS/eip-2718)
 
-_¿Conoce algún recurso de la comunidad que le haya servido de ayuda? Edite esta página y añádalo._
+_¿Conoces algún recurso en la comunidad que te haya servido de ayuda? Edita esta página y añádelo._
 
 ## Temas relacionados {#related-topics}
 

@@ -86,9 +86,9 @@ Learn more about [smart contract composability](/developers/docs/smart-contracts
 
 ## Limitations {#limitations}
 
-Smart contracts alone cannot get information about "real-world" events because they can't retrieve data from off-chain sources. This means they can't respond to events in the real world. This is by design. Relying on external information could jeopardise consensus, which is important for security and decentralization.
+Smart contracts alone cannot get information about "real-world" events because they can't retrieve data from offchain sources. This means they can't respond to events in the real world. This is by design. Relying on external information could jeopardise consensus, which is important for security and decentralization.
 
-However, it is important for blockchain applications to be able to use off-chain data. The solution is [oracles](/developers/docs/oracles/) which are tools that ingest off-chain data and make it available to smart contracts.
+However, it is important for blockchain applications to be able to use offchain data. The solution is [oracles](/developers/docs/oracles/) which are tools that ingest offchain data and make it available to smart contracts.
 
 Another limitation of smart contracts is the maximum contract size. A smart contract can be a maximum of 24KB or it will run out of gas. This can be circumnavigated by using [The Diamond Pattern](https://eips.ethereum.org/EIPS/eip-2535).
 

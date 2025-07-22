@@ -1,6 +1,6 @@
 import * as React from "react"
 import { Command as CommandPrimitive } from "cmdk"
-import { MdOutlineSearch } from "react-icons/md"
+import { Search } from "lucide-react"
 import { type DialogProps } from "@radix-ui/react-dialog"
 
 import { Dialog, DialogContent } from "@/components/ui/dialog"
@@ -46,7 +46,7 @@ type CommandInputProps = React.ComponentPropsWithoutRef<
 const CommandInput = React.forwardRef<
   React.ElementRef<typeof CommandPrimitive.Input>,
   CommandInputProps
->(({ className, icon = MdOutlineSearch, kbdShortcut, ...props }, ref) => {
+>(({ className, icon = Search, kbdShortcut, ...props }, ref) => {
   const Icon = icon
   return (
     <div
@@ -123,7 +123,7 @@ const CommandSeparator = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <CommandPrimitive.Separator
     ref={ref}
-    className={cn("bg-border -mx-1 h-px", className)}
+    className={cn("-mx-1 h-px bg-border", className)}
     {...props}
   />
 ))

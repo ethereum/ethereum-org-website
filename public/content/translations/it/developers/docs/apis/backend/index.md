@@ -52,6 +52,9 @@ Queste librerie eliminano buona parte della complessità legata al dover interag
 
 - [cloudflare-eth.com](https://www.cloudflare.com/application-services/products/web3/)
 
+**Etherscan - Esploratore di Blocchi e API di transazione**
+- [Documentazione](https://docs.etherscan.io/)
+
 **GetBlock-** **_Blockchain-as-a-service per lo sviluppo Web3_**
 
 - [GetBlock.io](https://getblock.io/)
@@ -63,7 +66,7 @@ Queste librerie eliminano buona parte della complessità legata al dover interag
 - [Documentazione](https://docs.infura.io/api)
 - [GitHub](https://github.com/INFURA)
 
-**Node RPC - _Conveniente fornitore di RPC JSON dell'EVM_**
+**Node RPC - _Conveniente fornitore di RPC-JSON dell'EVM_**
 
 - [noderpc.xyz](https://www.noderpc.xyz/)
 - [Documentazione](https://docs.noderpc.xyz/node-rpc)

@@ -7,7 +7,7 @@ incomplete: true
 
 <FeaturedText>
 
-Delphi programlama dilini kullanarak nasıl Ethereum için geliştireceğinizi öğrenin
+Delphhi programlama dilini kullanarak nasıl Ethereum için geliştireceğinizi öğrenin
 
 </FeaturedText>
 

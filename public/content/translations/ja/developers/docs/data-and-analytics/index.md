@@ -18,7 +18,7 @@ lang: ja
 
 ## ブロックエクスプローラー {#block-explorers}
 
-多くの[ブロックエクスプローラー](/developers/docs/data-and-analytics/block-explorers/)は、[RESTful](https://www.wikipedia.org/wiki/Representational_state_transfer) [API](https://www.wikipedia.org/wiki/API)ゲートウェイを提供しています。このゲートウェイにより、デベロッパーは、ブロック、トランザクション、マイナー、アカウント、およびその他のオンチェーンアクティビティについて、リアルタイムのデータを可視化できるようになります。
+多くの[ブロックエクスプローラー](/developers/docs/data-and-analytics/block-explorers/)は、[RESTful](https://www.wikipedia.org/wiki/Representational_state_transfer)な[API](https://www.wikipedia.org/wiki/API)ゲートウェイを提供しており、デベロッパーはブロック、トランザクション、バリデータ、アカウント、その他のオンチェーン活動に関するリアルタイムデータを確認できます。
 
 デベロッパーはこうしたデータを処理して変換することで、[ブロックチェーン](/glossary/#blockchain)についての独自のインサイトおよびやり取りをユーザーに提供できます。 たとえば、[Etherscan](https://etherscan.io)は、12秒のスロットごとに実行データとコンセンサスデータを提供します。
 
@@ -34,7 +34,7 @@ lang: ja
 
 ## Dune Analytics {#dune-analytics}
 
-[Dune Analytics](https://dune.com/)は、リレーショナルデータベース(PostgreSQLおよびDatabricksSQL)テーブルのために、ブロックチェーンデータの前処理を行います。 これにより、ユーザーはSQLを使用してブロックチェーンデータのクエリを実行し、クエリ結果に基づいてダッシュボードを構築できるようになります。 オンチェーンデータは、`blocks`、`transactions`、(event) `logs`、(call) `traces`という、4つの未加工テーブルに編成されます。 一般的なコントラクトやプロトコルはデコードされており、それぞれにイベントと呼び出しのテーブルのセットがあります。 これらのイベントと呼び出しのテーブルはさらに処理され、DEX、レンディング、ステーブルコインなどのプロトコルの種類によって抽象テーブルに編成されます。
+[Dune Analytics](https://dune.com/)は、リレーショナルデータベース(DuneSQL)テーブルのために、ブロックチェーンデータの前処理を行います。 これにより、ユーザーはSQLを使用してブロックチェーンデータのクエリを実行し、クエリ結果に基づいてダッシュボードを構築できるようになります。 オンチェーンデータは、`blocks`、`transactions`、(event) `logs`、(call) `traces`という、4つの未加工テーブルに編成されます。 一般的なコントラクトやプロトコルはデコードされており、それぞれにイベントと呼び出しのテーブルのセットがあります。 これらのイベントと呼び出しのテーブルはさらに処理され、DEX、レンディング、ステーブルコインなどのプロトコルの種類によって抽象テーブルに編成されます。
 
 ## SubQueryネットワーク {#subquery-network}
 
@@ -47,7 +47,7 @@ lang: ja
 
 ## 参考文献 {#further-reading}
 
-- [Graphネットワークの概要](https://thegraph.com/docs/en/about/network/)
+- [Graphネットワークの概要](https://thegraph.com/docs/en/about/)
 - [Graph Query Playground](https://thegraph.com/explorer/subgraph/graphprotocol/graph-network-mainnet?version=current)
 - [EtherScanのAPIコードの例](https://etherscan.io/apis#contracts)
 - [Beaconcha.inビーコンチェーンエクスプローラー](https://beaconcha.in)

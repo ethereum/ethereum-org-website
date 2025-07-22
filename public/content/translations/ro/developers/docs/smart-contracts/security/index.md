@@ -6,7 +6,7 @@ lang: ro
 
 Contractele inteligente Ethereum sunt extrem de flexibile, capabile atât să dețină cantități mari de tokenuri (de multe ori peste 1 miliard USD), cât și să ruleze o logică imuabilă pe baza codului de contract inteligent implementat anterior. Pe de-o parte, acest lucru a creat un ecosistem vibrant și creativ de contracte inteligente ce nu necesită autorizarea, interconectate, dar este şi ecosistemul perfect pentru a atrage atacatorii care doresc să profite prin exploatarea vulnerabilității din contractele inteligente și a comportamentului neașteptat în Ethereum. Codul de contract inteligent, _de obicei_ nu poate fi schimbat ca să fie remediate defectele de securitate; activele care au fost furate din contracte inteligente sunt irecuperabile, iar activele furate sunt extrem de dificil de urmărit. The total of amount of value stolen or lost due to smart contract issues is easily over $1B. Unele dintre cele mai mari pierderi din cauza erorilor de programare a contractelor inteligente includ:
 
-- [Problema nr. 1 cu Parity Multi-Sign - 30 mil. USD pierduți](https://www.coindesk.com/30-million-ether-reported-stolen-parity-wallet-breach)
+- [Problema nr. 1 cu Parity Multi-Sign - 30 mil. USD pierduți](https://www.coindesk.com/markets/2017/07/19/30-million-ether-reported-stolen-due-to-parity-wallet-breach)
 - [Problema nr. 2 cu Parity Multi-Sign - 300 mil. USD blocați](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether)
 - [Atacul TheDAO, 3,6 mil. USD în ETH! Peste 1 mld. USD la prețul ETH-ului de astăzi](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/)
 

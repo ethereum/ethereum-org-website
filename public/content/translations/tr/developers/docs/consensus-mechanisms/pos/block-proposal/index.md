@@ -64,6 +64,6 @@ Blok önerici çalışmaları için ödeme alır. Aktif doğrulayıcı sayısı 
 
 - [Blok'lara giriş](/developers/docs/blocks/)
 - [Hisse ispatı'na giriş](/developers/docs/consensus-mechanisms/pos/)
-- [Ethereum mutabakat özellikleri](https://www.github.com/ethereum/consensus-specs)
+- [Ethereum mutabakat özellikleri](https://github.com/ethereum/consensus-specs)
 - [Gasper'a giriş](/developers/docs/consensus-mechanisms/pos/)
 - [Ethereum'u Yükseltme](https://eth2book.info/)

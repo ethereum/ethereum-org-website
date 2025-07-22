@@ -1,6 +1,6 @@
 ---
-title: Az Ethereum eseményei
-description: Hogyan lehet bekapcsolódni az Ethereum közösségébe.
+title: Ethereum események
+description: Hogyan kapcsolódhat be az Ethereum közösségébe?
 lang: hu
 hideEditButton: true
 ---
@@ -11,14 +11,16 @@ hideEditButton: true
 
 <UpcomingEventsList/>
 
-A lista nem teljeskörű, a közösség tagjai frissítik. Tudomása van egy tervezett Ethereum-eseményről? [Kérjük, adja hozzá a listához](https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-events.ts)!
+A lista nem teljeskörű, a közösség tagjai frissítik. Tudomása van egy tervezett Ethereum-eseményről? [Kérjük, adja hozzá](https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-events.json)!
+
+<EventsOrganizerBanner className="mt-16" />
 
 ## Ethereum-találkozók {#meetups}
 
-Nem talál olyan eseményt, amely jó lenne Önnek? Próbáljon meg elmenni egy találkozóra. Ezek kisebb események, melyeket az Ethereum-rajongók szerveznek, hogy az Ethereum iránt érdeklődők összegyűljenek, beszélgessenek az Ethereumról, megismerjék az új fejlesztéseket.
+Nem talál olyan eseményt, amely megfelelő lenne Önnek? Érdemes lehet elmennie egy találkozóra. Ezek kisebb események, melyeket az Ethereum-rajongók szerveznek, hogy az Ethereum iránt érdeklődők összegyűljenek, beszélgessenek az Ethereumról és megismerjék az új fejlesztéseket.
 
 <MeetupList />
 
-Saját találkozót szeretne szervezni? Nézze meg a [BUIDL Network-öt](https://consensys.net/developers/buidlnetwork/), ami a ConsesSys kezdeményezése, hogy támogassa az Ethereum találkozókat.
+Saját találkozót szeretne szervezni? Nézze meg a ConsesSys által létrehozott, az Ethereum-közösségi találkozók szervezését segítő [BUIDL Network](https://consensys.net/developers/buidlnetwork/) hálózatot.
 
-Ez a lista nem teljeskörű, a közösség tagjai írják. [Több Ethereum találkozót](https://www.meetup.com/topics/ethereum/) találhat itt. Ismer olyan találkozót szervező csoportot, amelyik nincs a listán? [Kérjük, adja hozzá!](https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-meetups.json)
+Ez a lista nem teljes körű, a közösség tagjai írják. [Több Ethereum-találkozót találhat itt](https://www.meetup.com/topics/ethereum/). Ismer olyan találkozót szervező csoportot, amely nincs a listán? [Kérjük, adja hozzá](https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-meetups.json)!

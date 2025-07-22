@@ -46,7 +46,7 @@ Bir Alchemy hesabı oluşturduktan sonra, bir uygulama oluşturarak bir API anah
 
 İşlem göndermek ve almak için bir Ethereum hesabına ihtiyacımız var. Bu eğitim için, Ethereum hesap adresinizi yönetmek için kullanılan tarayıcı üstü bir sanal cüzdan olan MetaMask'i kullanacağız. Ethereum'daki işlemlerin nasıl çalıştığı hakkında daha fazla bilgi edinmek istiyorsanız, Ethereum Vakfı'nın [bu sayfasına](/developers/docs/transactions/) göz atın.
 
-[Buradan](https://metamask.io/download.html) ücretsiz olarak bir MetaMask hesabı indirebilir ve oluşturabilirsiniz. Bir hesap oluştururken, ya da bir hesabınız çoktan varsa, sağ üstten Sepolia Test Ağına geçtiğinizden emin olun (bu sayede gerçek parayla denemeler yapmayız).
+[Buradan](https://metamask.io/download) ücretsiz olarak bir MetaMask hesabı indirebilir ve oluşturabilirsiniz. Bir hesap oluştururken, ya da bir hesabınız çoktan varsa, sağ üstten Sepolia Test Ağına geçtiğinizden emin olun (bu sayede gerçek parayla denemeler yapmayız).
 
 ![Sepolia'yı ağınız olarak ayarlayın](./metamask-goerli.png)
 
@@ -76,7 +76,7 @@ Artık proje klasörümüzün içinde olduğumuza göre, projeyi başlatmak içi
     npm init
 
 Kurulum sorularına nasıl cevap verdiğiniz çok önemli değil; referans olması için nasıl yaptığımızı aşağıda açıkladık:
-
+```json
     package name: (my-nft)
     version: (1.0.0)
     description: My first NFT!
@@ -99,7 +99,7 @@ Kurulum sorularına nasıl cevap verdiğiniz çok önemli değil; referans olmas
       "author": "",
       "license": "ISC"
     }
-
+```
 package.json'ı onaylayın ve artık hazırız!
 
 ## Adım 7: [Hardhat](https://hardhat.org/getting-started/#overview)'i kurun {#install-hardhat}
@@ -259,6 +259,7 @@ Bir sonraki adımda hardhat.config.js'mizde de ether'lere ihtiyacımız olacak.
 
 Hardhat.config.js dosyanızı şöyle görünecek şekilde güncelleyin:
 
+```js
     /**
     * @type import('hardhat/config').HardhatUserConfig
     */
@@ -276,6 +277,7 @@ Hardhat.config.js dosyanızı şöyle görünecek şekilde güncelleyin:
           }
        },
     }
+```
 
 ## Adım 14: Sözleşmemizi derleyin {#compile-contract}
 

@@ -8,10 +8,10 @@ alt: "Roadmap di Ethereum"
 summaryPoints:
 buttons:
   - 
-    label: Ulteriori aggiornamenti
+    content: Ulteriori aggiornamenti
     toId: what-changes-are-coming
   - 
-    label: Aggiornamenti precedenti
+    content: Aggiornamenti precedenti
     href: /history/
     variant: delineazione
 ---
@@ -78,7 +78,7 @@ La tabella di marcia è principalmente il risultato di anni di lavoro da parte d
 
 **Sì, quasi sicuramente**. La tabella di marcia è l'attuale piano per l'aggiornamento di Ethereum, che copre sia i piani a breve termine che quelli futuri. Ci aspettiamo che la tabella di marcia cambi man mano che saranno disponibili nuove informazioni e tecnologie.
 
-Pensa alla tabella di marcia di Ethereum come a una serie di intenzioni per migliorare Ethereum; è l'ipotesi migliore dei ricercatori e sviluppatori centrali del percorso ottimale di Ethereum.
+Pensa alla tabella di marcia di Ethereum come a un insieme d'intenzioni per migliorare Ethereum; è la migliore ipotesi che i principali ricercatori e sviluppatori fanno sul percorso ottimale di Ethereum.
 
 ## Quando terminerà la tabella di marcia? {#when-will-the-roadmap-be-finished}
 

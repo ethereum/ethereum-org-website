@@ -1,6 +1,6 @@
 ---
 title: Akıllı sözleşme dilleri
-description: "İki ana akıllı sözleşme diline genel bir bakış ve karşılaştırma: Solidity ve Vyper."
+description: 'İki ana akıllı sözleşme diline genel bir bakış ve karşılaştırma: Solidity ve Vyper.'
 lang: tr
 ---
 
@@ -10,6 +10,8 @@ En aktif ve sürdürülen iki dil ise şunlardır:
 
 - Solidity
 - Vyper
+
+Remix IDE, hem Solidity hem de Vyper'da sözleşme oluşturmak ve test etmeye yönelik kapsamlı bir geliştirme ortamı sağlar. Kodlamaya başlamak için [Remix IDE'nin tarayıcı içi sürümünü deneyin](https://remix.ethereum.org).
 
 Daha deneyimli geliştiricilerin [Ethereum Sanal Makinesi](/developers/docs/evm/) için orta seviye bir dil olan Yul ya da Yul'un bir eklentisi olan Yul+'ı kullanması uygun olur.
 

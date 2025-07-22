@@ -15,15 +15,17 @@ Commencez à lire la mission et les valeurs d'ethereum.org dans notre [code de c
 - Découvrez et essayez Ethereum sur [ethereum.org/developers/](/developers/)
 - Participez à un hackathon [ETHGlobal](http://ethglobal.co/) près de chez vous !
 - Consultez les [projets liés à votre domaine d'expertise ou au langage de programmation de votre choix](/developers/docs/programming-languages/)
-- Regardez ou participez aux [appels Core Dev](https://www.youtube.com/@EthereumProtocol)
+- Regardez ou participez aux [appels des couches de consensus et d'exécution](https://www.youtube.com/@EthereumProtocol/streams)
 - [Liste de souhaits du programme de soutien à l'écosystème](https://esp.ethereum.foundation/wishlist/) - domaines d'outillage, de documentation et d'infrastructure où le programme de soutien à l'écosystème Ethereum recherche activement des demandes de subvention
 - [Web3Bridge](https://www.web3bridge.com/) - rejoignez la communauté Web3 en herbe dans son initiative visant à identifier, former et soutenir des centaines de développeurs et de membres de la communauté à travers l'Afrique
+- Rejoignez le [Discord d'Eth R&D](https://discord.com/invite/VmG7Uxc)
 - Rejoignez le Discord [Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu)
 
 ## Chercheurs et universitaires <Emoji text=":mag:" size={1} /> {#researchers-and-academics}
 
 Avez-vous une formation en mathématiques, en cryptographie ou en économie ? Vous pourriez être intéressé par certains des travaux de pointe réalisés au sein de l'écosystème Ethereum :
 
+- Rejoignez le [Discord d'Eth R&D](https://discord.com/invite/VmG7Uxc)
 - Écrivez ou relisez une proposition d'amélioration d'Ethereum (EIP)
   - Écrivez une EIP
     1. Soumettez votre idée aux [Ethereum Magicians](https://ethereum-magicians.org)
@@ -38,7 +40,7 @@ Avez-vous une formation en mathématiques, en cryptographie ou en économie ? V
 - [Ethresear.ch](https://ethresear.ch) - le principal forum de recherche d'Ethereum et le forum le plus influent au monde pour la cryptoéconomie
 - [EF Research AMA](https://old.reddit.com/r/ethereum/comments/vrx9xe/ama_we_are_ef_research_pt_8_07_july_2022) - Une série de questions-réponses avec des chercheurs. Dès l'ouverture de chaque partie suivante, tout le monde peut poster des questions.
 - [Liste de souhaits du programme de soutien à l'écosystème](https://esp.ethereum.foundation/wishlist/) - domaines de recherche dans lesquels le programme de soutien à l'écosystème Ethereum recherche activement des demandes de subvention
-- [AllWalletDevs](https://allwallet.dev) - Un forum pour les développeurs Ethereum, les designeurs, et les utilisateurs intéressés leur permettant d'interagir régulièrement et de discuter des portefeuilles
+- [AllWalletDevs](https://allwallet.dev) - un forum pour les développeurs et les concepteurs Ethereum, ainsi que pour les utilisateurs intéressés, afin de se réunir régulièrement et de discuter des portefeuilles
 
 [Explorer des domaines de recherche plus actifs](/community/research/).
 

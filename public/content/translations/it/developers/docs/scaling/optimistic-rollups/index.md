@@ -198,9 +198,9 @@ Infine, dovremmo notare che le chiamate di messaggio dal L2 al L1 tra i contratt
 
 I rollup ottimistici usano uno schema di commissioni sul gas, molto simile a Ethereum, per denotare quanto gli utenti pagano per la transazione. Le commissioni addebitate sui rollup ottimistici dipendono dai seguenti componenti:
 
-1. **Scrittura di stato**: i rollup ottimistici pubblicano i dati delle transazioni e le intestazioni dei blocchi (consistenti in: hash dell'intestazione del blocco precedente, radice di stato, radice del batch) su Ethereum come `calldata`. Il costo minimo di una transazione su Ethereum è di 21.000 gas. I rollup ottimistici possono ridurre il costo di scrittura della transazione al L1, raggruppando più transazioni in un singolo blocco (che ammortizza i 21.000 gas sulle numerose transazioni dell'utente).
+1. **Scrittura di stato**: i rollup ottimistici pubblicano i dati delle transazioni e le intestazioni dei blocchi (consistenti in: hash dell'intestazione del blocco precedente, radice di stato, radice del batch) su Ethereum come `blob`, o "oggetto binario di grandi dimensioni". [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844) ha introdotto una soluzione economica per includere i dati on-chain. Un `blob` è un nuovo campo di transazione che consente ai rollup di pubblicare dati compressi sulle transizioni tra stati sul L1 di Ethereum. A differenza dei `calldata`, che rimangono permanentemente on-chain, i blob sono di breve durata e possono essere eliminati dai client dopo [4096 epoche](https://github.com/ethereum/consensus-specs/blob/81f3ea8322aff6b9fb15132d050f8f98b16bdba4/configs/mainnet.yaml#L147) (circa 18 giorni). Utilizzando i blob per pubblicare batch di transazioni compresse, i rollup ottimistici possono ridurre significativamente il costo di scrittura delle transazioni nel L1.
 
-2. **`calldata`**: oltre la commissione di base della transazione, il costo di ogni scrittura di stato dipende dalla dimensione di `calldata` pubblicata al L1. I costi di `calldata` sono correntemente disciplinati dall'[EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), che stipula un costo di 16 gas per i byte diversi da zero e 4 gas ber i byte pari a zero di `calldata`, rispettivamente. Per ridurre le commissioni dell'utente, gli operatori dei rollup comprimono le transazioni per ridurre il numero di byte di `calldata` pubblicati su Ethereum.
+2. **Gas del blob utilizzato**: le transazioni che trasportano blob utilizzano un meccanismo di commissione dinamica simile a quello introdotto da [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559). La commissione sul gas per le transazioni di tipo 3 tiene conto della commissione di base per i blob, che è determinata dalla rete in base alla domanda di spazio blob e all'utilizzo dello spazio blob della transazione inviata.
 
 3. **Commissioni dell'operatore del L2**: questo è l'importo pagato al nodo del rollup come compenso per i costi di calcolo sostenuti nell'elaborazione delle transazioni, proprio come le commissioni sul carburante su Ethereum. I nodi del rollup addebitano commissioni di transazione inferiori, poiché gli L2 hanno capacità di elaborazione maggiori e non affrontano congestioni di rete che forzano i validatori su Ethereum a dare priorità alle transazioni con commissioni maggiori.
 
@@ -253,17 +253,11 @@ Preferisci un approccio visivo all'apprendimento? Guarda Finematics spiegare i r
 
 <YouTube id="7pWxCklcNsU" start="263" />
 
-### Utilizzo dei rollup ottimistici {#use-optimistic-rollups}
-
-Esistono molteplici implementazioni dei rollup ottimistici, che puoi integrare nelle tue dapp:
-
-<RollupProductDevDoc rollupType="optimistic" />
-
 ## Ulteriori letture sui rollup ottimistici
 
 - [Come funzionano gli Optimistic Rollup (La guida completa)](https://www.alchemy.com/overviews/optimistic-rollups)
 - [Cos'è un rollup della blockchain? Un'introduzione tecnica](https://www.ethereum-ecosystem.com/blog/what-is-a-blockchain-rollup-a-technical-introduction)
-- [Guida essenziale ad Arbitrum](https://newsletter.banklesshq.com/p/the-essential-guide-to-arbitrum)
-- [Come funziona davvero il rollup di Optimism?](https://www.paradigm.xyz/2021/01/how-does-optimisms-rollup-really-work)
+- [Guida essenziale ad Arbitrum](https://www.bankless.com/the-essential-guide-to-arbitrum)
+- [Come funziona davvero il rollup di Optimism?](https://www.paradigm.xyz/2021/01/how-does-optimism-s-rollup-really-work)
 - [Approfondimento su OVM](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)
 - [What is the Optimistic Virtual Machine?](https://www.alchemy.com/overviews/optimistic-virtual-machine)

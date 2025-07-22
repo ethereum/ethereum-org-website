@@ -25,7 +25,7 @@
   "page-what-is-ethereum-p2p-card-desc": "Ethereum vam omogućuje da koordinišete, ugovarate ili razmjenjujete digitalna sredstva direktno sa drugim ljudima. Netreba van oslonac na posrednike.",
   "page-what-is-ethereum-start-building-btn": "Počnite graditi",
   "page-what-is-ethereum-title": "Šta je Ethereum?",
-  "page-what-is-ethereum-subtitle": "Kompletni vodič za početnike o tome kako Etereum funkcioniše, prednosti koje donosi, i kako ga koriste milioni ljudi širom svijeta.",
+  "page-what-is-ethereum-subtitle": "Kompletni vodič za početnike o tome kako Ethereum funkcioniše, prednosti koje donosi, i kako ga koriste milioni ljudi širom svijeta.",
   "page-what-is-ethereum-button-lets-start": "Krenimo",
   "page-what-is-ethereum-blockchain-tab-title": "Šta je blockchain?",
   "page-what-is-ethereum-blockchain-tab-content": "<b>Bloklanac je baza podataka o transakcijama</b>, koja je ažurirana i dijeljena putem mnogih kompjutera u mreži. Svaki put kada se doda novi skup transakcija, nazove se \"blok\" - otuda i ime \"bloklanac\". Javni bloklanci poput Ethereum-a omogućuju svakome da doda, ali ne i ukloni podatke. Kada bi netko želio promijeniti bilo koju informaciju ili prevariti sistem, morao bi to učiniti na većini kompjutera u mreži. A ima ih mnogo! Na taj način decentralizovani bloklanci poput Ethereum-a postižu visoku sigurnost.",

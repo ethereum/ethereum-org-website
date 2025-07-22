@@ -203,4 +203,4 @@ Um Ihr gesamtes Guthaben zu entsperren und zu erhalten, müssen Sie auch den Pro
 - [Schritt für Schritt: Wie man dem Ethereum 2.0 Testnetz beitritt](https://kb.beaconcha.in/Guides/Tutorium-eth2-Multi-Client) - _ Butta_
 - [Eth2-Slashing-Präventionstipps](https://medium.com/prysmatic-labs/eth2-Slashing-Präventionstipps-f6faa5025f50) – _Raul Jordan 2020 _
 
-<QuizWidget quizKey="solo-staking" />
+<QuizWidget quizKey="staking-solo" />

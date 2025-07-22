@@ -6,6 +6,10 @@ lang: es
 
 # Introducción a Web3 {#introduction}
 
+<div className="mt-4">
+<ListenToPlayer slug="/web3/" />
+</div>
+
 La centralización ha ayudado a miles de millones de personas a conectarse a Internet y ha creado la infraestructura sólida y estable en la que vive. Al mismo tiempo, un grupúsculo de entidades centralizadas mantienen un férreo control de grandes extensiones de Internet, decidiendo unilateralmente qué se debe y qué no se debe permitir.
 
 Web3 es la respuesta a este dilema. En vez de tener una Web monopolizada por las grandes compañías de tecnología, la Web3 adopta la descentralización y se construye, opera y permanece en propiedad de sus usuarios. Web3 pone el poder en manos de los usuarios y no de las grandes empresas. Antes de hablar de Web3, vamos a explorar cómo hemos llegado aquí.
@@ -59,7 +63,7 @@ Aunque las características destacadas de Web3 no están aisladas y no encajan e
 
 La Web3 le otorga la propiedad de sus activos digitales de una manera sin precedentes. Por ejemplo, supongamos que está jugando a un juego en Web2. Si compra un elemento del juego, se vinculará directamente a su cuenta. Si los creadores del juego eliminan su cuenta, perderá estos elementos. O, que si deja de jugar, pierde el valor que invirtió en los objetos del juego.
 
-Web3 permite la propiedad directa a través de [tókenes no fungibles (NFT)](/nft/). Nadie, ni siquiera los creadores del juego, tienen el poder de quitarle la propiedad. Y, si deja de jugar, puede vender o intercambiar sus objetos del juego en mercados abiertos y recuperar su valor.
+Web3 permite la propiedad directa a través de [tokens no fungibles (NFT)](/glossary/#nft). Nadie, ni siquiera los creadores del juego, tienen el poder de quitarle la propiedad. Y, si deja de jugar, puede vender o intercambiar sus objetos del juego en mercados abiertos y recuperar su valor.
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Saber más sobre NFT</div>
@@ -80,9 +84,9 @@ Web 2.0 requiere que los creadores de contenido confíen en las plataformas para
 
 #### Organizaciones Autónomas Descentralizadas (DAO) {#daos}
 
-Así como el conservar la propiedad de sus datos en la Web3, también puede ser propietario/a de la plataforma como parte de un colectivo, usando tókenes que actuán como acciones en una empresa. Las DAO le permiten coordinar la posesión descentralizada de una plataforma y hacer decisiones sobre su futuro.
+Así como el conservar la propiedad de sus datos en la Web3, también puede ser propietario/a de la plataforma como parte de un colectivo, usando tokens que actuán como acciones en una empresa. Las DAO le permiten coordinar la posesión descentralizada de una plataforma y hacer decisiones sobre su futuro.
 
-Las DAO se definen técnicamente según los contratos inteligentes acordados que automatizan la toma de decisiones descentralizada sobre un conjunto de recursos (tókenes). Los usuarios con tókenes votan respecto a cómo se gastan los recursos, y el código calcula automáticamente los resultados de las votaciones.
+La definición técnica de DAO consiste en [contratos inteligentes](/glossary/#smart-contract) acordados que automatizan la toma de decisiones descentralizada sobre un conjunto de recursos (tokens). Los usuarios con tokens votan respecto a cómo se gastan los recursos, y el código calcula automáticamente los resultados de las votaciones.
 
 Sin embargo, las personas definen muchas comunidades Web3 como si fueran DAO. Todas estas comunidades tienen diferentes niveles de descentralización y automatización mediante código. En la actualidad, estamos explorando qué son las DAO y cómo podrían evolucionar en el futuro.
 
@@ -97,15 +101,11 @@ Sin embargo, las personas definen muchas comunidades Web3 como si fueran DAO. To
 
 Tradicionalmente, se creaba una cuenta para cada plataforma que se utilizaba. Por ejemplo, se puede tener una cuenta de Twitter, de YouTube y de Reddit. ¿Quiere cambiar su nombre o foto de perfil? Pues entonces, tiene que cambiarlo en todas las cuentas. Puede usar inicios de sesión sociales en algunos casos, pero esto presenta un problema conocido: la censura. Con un solo clic, estas plataformas pueden bloquearlo de toda su vida en línea. Peor aún, muchas plataformas requieren que les confíe información de identificación personal para crear una cuenta.
 
-Web3 resuelve estos problemas al permitirle controlar su identidad digital con una dirección de Ethereum y un perfil ENS. El uso de una dirección de Ethereum proporciona un inicio de sesión único en todas las plataformas que es seguro, resistente a la censura y anónimo.
-
-<ButtonLink href="https://login.xyz/">
-  Iniciar sesión con Ethereum
-</ButtonLink>
+Web3 resuelve estos problemas permitiéndole controlar su identidad digital con una dirección de Ethereum y un perfil de [Ethereum Name Service (ENS)](/glossary/#ens). El uso de una dirección de Ethereum proporciona un inicio de sesión único en todas las plataformas que es seguro, resistente a la censura y anónimo.
 
 ### Pagos nativos {#native-payments}
 
-La infraestructura de pago de la Web 2 se basa en bancos y procesadores de pagos, excluyendo a las personas sin cuentas bancarias o a las que viven dentro de las fronteras del país equivocado. Web3 utiliza tokens como [ETH](/eth/) para enviar dinero directamente en el navegador y no requiere de terceros de confianza.
+La infraestructura de pago de la Web 2 se basa en bancos y procesadores de pagos, excluyendo a las personas sin cuentas bancarias o a las que viven dentro de las fronteras del país equivocado. Web3 utiliza tokens como [ETH](/glossary/#ether) para enviar dinero directamente en el navegador y no requiere de terceros de confianza.
 
 <ButtonLink href="/eth/">
   Más sobre ETH
@@ -117,7 +117,7 @@ A pesar de los numerosos beneficios de Web3 en su forma actual, todavía hay muc
 
 ### Accesibilidad {#accessibility}
 
-Las características importantes de la Web 3, como el inicio de sesión con Ethereum, ya están disponibles para que cualquiera las use sin costo alguno. Pero, el coste relativo de las transacciones sigue siendo prohibitivo para muchos. Es menos probable que Web3 se utilice en países menos ricos, o en vías de desarrollo debido a las altas comisiones de las transacciones. En Ethereum, estos desafíos están siendo resueltos a través de la [hoja de ruta](/roadmap/) y las [soluciones de escalamiento de capa 2](/developers/docs/scaling/). La tecnología está lista, pero necesitamos niveles más altos de adopción en la capa 2 para que Web3 sea accesible para todos.
+Las características importantes de la Web 3, como el inicio de sesión con Ethereum, ya están disponibles para que cualquiera las use sin costo alguno. Pero, el coste relativo de las transacciones sigue siendo prohibitivo para muchos. Es menos probable que Web3 se utilice en países menos ricos, o en vías de desarrollo debido a las altas comisiones de las transacciones. En Ethereum, estos desafíos están siendo resueltos a través de la [hoja de ruta](/roadmap/) y las [soluciones de escalamiento de capa 2](/glossary/#layer-2). La tecnología está lista, pero necesitamos niveles más altos de adopción en la capa 2 para que Web3 sea accesible para todos.
 
 ### Experiencia de usuario {#user-experience}
 
@@ -151,11 +151,11 @@ Esto es solo el comienzo para crear un mejor Internet con Web3, y a medida que s
 
 Web3 no está definida rígidamente. Varios participantes de la comunidad tienen diferentes opiniones al respecto. He aquí algunas de ellas:
 
-- [¿Qué es la Web3? El Internet descentralizado del futuro explicado](https://www.freecodecamp.org/news/what-is-web3/) – _Nader Dabit_
+- [¿Qué es la Web3? El Internet descentralizado del futuro explicado](https://www.freecodecamp.org/news/what-is-web3) – _Nader Dabit_
 - [Dar sentido a la Web3](https://medium.com/l4-media/making-sense-of-web-3-c1a9e74dcae) – _Josh Stark_
 - [¿Por qué es Importante Web3?](https://future.a16z.com/why-web3-matters/) — _Chris Dixon_
 - [¿Por qué es importante la Descentralización?](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) - _Chris Dixon_
 - [El paisaje de la Web3](https://a16z.com/wp-content/uploads/2021/10/The-web3-Readlng-List.pdf) – _a16z_
-- [El debate de Web3](https://www.notboring.co/p/the-web3-debate?s=r) – _Packy McCormick_
+- [El debate de Web3](https://www.notboring.co/p/the-web3-debate) – _Packy McCormick_
 
 <QuizWidget quizKey="web3" />

@@ -1,38 +1,45 @@
-import React, { type ReactNode } from "react"
-import {
-  Flex,
-  Popover,
-  PopoverBody,
-  PopoverCloseButton,
-  PopoverContent,
-  PopoverContentProps,
-  PopoverHeader,
-  PopoverProps,
-  PopoverTrigger,
-} from "@chakra-ui/react"
+import { type ReactNode } from "react"
+import { X } from "lucide-react"
 
-type NotificationPopoverProps = Omit<PopoverContentProps, "children"> &
-  Pick<PopoverProps, "placement"> & {
-    children: ReactNode
-  }
+import { Flex } from "../ui/flex"
+import {
+  Popover,
+  PopoverClose,
+  PopoverContent,
+  type PopoverContentProps,
+  PopoverTrigger,
+} from "../ui/popover"
+
+type NotificationPopoverProps = Omit<
+  PopoverContentProps,
+  "children" | "className"
+> & {
+  children: ReactNode
+}
 export const NotificationPopover = ({
-  placement,
   children,
   content,
   title,
   ...restProps
 }: NotificationPopoverProps) => {
   return (
-    <Popover placement={placement}>
-      <PopoverTrigger>{children}</PopoverTrigger>
-      <PopoverContent px={4} py={2} maxW="15rem" fontSize="xs" {...restProps}>
-        <Flex gap={2}>
-          <PopoverHeader fontWeight="bold" mb={2} flex={1} mt={0.5} p={0}>
+    <Popover>
+      <PopoverTrigger asChild className="text-start">
+        <div>{children}</div>
+      </PopoverTrigger>
+      <PopoverContent
+        className="max-w-[15rem] px-4 py-2 text-xs"
+        {...restProps}
+      >
+        <Flex className="gap-2">
+          <header className="mb-2 mt-0.5 flex-1 p-0 font-bold">
             {title || ""}
-          </PopoverHeader>
-          <PopoverCloseButton ms="auto" />
+          </header>
+          <PopoverClose className="absolute right-2 top-1 ms-auto flex size-6 items-center justify-center text-xl leading-none">
+            <X />
+          </PopoverClose>
         </Flex>
-        <PopoverBody p={0}>{content}</PopoverBody>
+        <div>{content}</div>
       </PopoverContent>
     </Popover>
   )

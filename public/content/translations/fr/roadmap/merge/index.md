@@ -92,7 +92,7 @@ title="Développeurs de dApps et de contrats intelligents"
 contentPreview="The Merge was designed to have minimal impact on smart contract and dapp developers."
 id="developers">
 
-La Fusion s'est accompagnée de changements apportés au consensus, qui incluent également des changements liés à :<
+La Fusion s'est accompagnée de changements apportés au consensus, qui incluent également des changements liés à :
 
 <ul>
   <li>la structure d'un bloc</li>
@@ -108,7 +108,7 @@ Pour plus d'informations, consultez ce billet de blog de Tim Beiko sur <a href="
 
 ## La Fusion et la consommation énergétique {#merge-and-energy}
 
-La Fusion marque la fin de la preuve de travail pour Ethereum, et le début de l'ère d'un Ethereum plus durable et plus écologique. La consommation énergétique d'Ethereum a chuté d'environ 99,95 %, faisant de l'Ethereum une blockchain verte. Apprenez-en plus à propos de [la consommation énergétique d'Ethereum](/energy-consumption/).
+La Fusion marque la fin de la preuve de travail pour Ethereum, et le début d'un Ethereum plus durable et plus écologique. La consommation énergétique d'Ethereum a chuté d'environ 99,95 %, faisant de l'Ethereum une blockchain verte. Apprenez-en plus à propos de [la consommation énergétique d'Ethereum](/energy-consumption/).
 
 ## La Fusion et la fragmentation {#merge-and-scaling}
 

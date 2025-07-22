@@ -19,13 +19,12 @@ Kami adalah komunitas yang ramah yang akan membantu Anda berkembang dan belajar 
 - [Bekerja pada masalah terbuka](https://github.com/ethereum/ethereum-org-website/issues) – Pekerjaan yang telah kami identifikasi dan perlu dilakukan
 
 **Desain**
-- [Bantu desain situs web](/contributing/design/) Desainer dari semua tingkat dapat berkontribusi untuk meningkatkan situs web
+- [Bantu kami mendesain situs web](/contributing/design/) - Desainer dari semua tingkat dapat berkontribusi meningkatkan situs web
 
 **Konten**
 - [Buat/edit konten](/contributing/#how-to-update-content) – Usulkan halaman baru atau lakukan perubahan pada apa yang sudah ada di sini
 - [Tambahkan sumber daya komunitas](/contributing/content-resources/) – Tambahkan artikel atau sumber daya yang berguna ke halaman yang relevan
 - [Tambahkan sumber daya komunitas](/contributing/design/adding-design-resources/) – Tambahkan artikel atau sumber daya yang bermanfaat ke halaman yang relevan
-- [Tambahkan istilah glosarium](/contributing/adding-glossary-terms/) – Bantu kami terus memperluas Ethereum [glossary](/glossary/)
 - [Kuiz](/contributing/quizzes/) – Tambahkan, perbarui, dan hapus bank soal kuis untuk halaman yang relevan
 
 **Ide fitur**
@@ -68,7 +67,7 @@ Sebelum berkontribusi, pastikan Anda memahami:
 - [panduan gaya](/contributing/style-guide/) kami
 - kode etik [kami](/community/code-of-conduct)
 
-<ContributorsQuizBanner mt={16} mb={8} />
+<ContributorsQuizBanner className="mt-16 mb-8" />
 
 ## Bagaiman keputusan tentang situs dibuat {#how-decisions-about-the-site-are-made}
 
@@ -90,11 +89,11 @@ Kami menerapkan pembatasan tidak ketat untuk isu tertulis di repositori GitHub k
 
 Jika kontribusi Anda digabungkan ke ethereum.org, Anda akan memiliki kesempatan untuk mengeklaim lencana khusus di [Galxe](https://app.galxe.com/quest/ethereumorg). Token Prestasi Onchain (OAT) adalah bukti bahwa Anda telah membantu membuat ekosistem menjadi sedikit lebih hebat.
 
-[Selengkapnya tentang OAT](https://help.galxe.com/en/articles/7067290-galxe-oats-reward-and-celebrate-achievements)
+[Selengkapnya tentang OAT](https://help.galxe.com/en/articles/9645630-create-quest-rewards#h_1c5d63ba03)
 
 ### Cara mengklaim
 1. Bergabunglah dalam [server Discord](https://discord.gg/ethereum-org) kami.
-2. Tempelkan tautan ke kontribusi Anda di saluran `#🥇 | bukti kontribusi`
+2. Tempelkan tautan ke kontribusi Anda di saluran `#🥇 | bukti kontribusi`.
 3. Tunggu hingga anggota tim kami mengirimkan tautan ke OAT Anda.
 4. Klaim OAT Anda!
 

@@ -55,7 +55,7 @@ DeFi'nin potansiyelini görmenin en iyi yollarından biri, bugün var olan sorun
 
 Bitcoin, birçok yönden ilk DeFi uygulamasıydı. Bitcoin, değere gerçekten sahip olmanızı, onu kontrol etmenizi ve dünyanın her yerine göndermenizi sağlar. Bunu, birbirine güvenmeyen çok sayıda insanın, güvenilir bir aracıya ihtiyaç duymadan bir hesap defteri üzerinde anlaşmaya varması için bir yol sağlayarak yapar. Bitcoin herkese açıktır ve hiç kimsenin kurallarını değiştirme yetkisi yoktur. Bitcoin'in kıtlığı ve açıklığı gibi kuralları teknolojinin içine yazılmıştır. Geleneksel finans sisteminde hükümetler, paranızın değerini düşürecek paralar basabilir ve şirketler pazarları kapatabilir.
 
-Ethereum bunun üzerine kurulu. Bitcoin gibi, kurallar sizin aleyhinize değişemez ve herkesin erişimi vardır. Ama aynı zamanda [akıllı sözleşmeler](/glossary#smart-contract) kullanarak bu dijital parayı programlanabilir hâle getirir, böylece değer depolamanın ve göndermenin ötesine geçebilirsiniz.
+Ethereum bunun üzerine kurulu. Bitcoin gibi, kurallar sizin aleyhinize değişemez ve herkesin erişimi vardır. Ama aynı zamanda [akıllı sözleşmeler](/glossary/#smart-contract) kullanarak bu dijital parayı programlanabilir hâle getirir, böylece değer depolamanın ve göndermenin ötesine geçebilirsiniz.
 
 <YouTube id="qFBYB4W2tqU" />
 
@@ -90,7 +90,7 @@ Bu kulağa tuhaf geliyor... "Neden paramı programlamak isteyeyim ki"? Bununla b
 
 ### Dünyanın her yerine çabucak para gönderin {#send-money}
 
-Bir blok zinciri olarak Ethereum, işlemleri güvenli ve küresel bir şekilde göndermek için tasarlanmıştır. Bitcoin gibi, Ethereum da dünyanın her yerine para göndermeyi bir e-posta göndermek kadar kolay hâle getiriyor. Cüzdanınızdan alıcınızın [ENS adını](/nft/#nft-domains) (bob.eth gibi) veya hesap adresini girdikten sonra ödemeniz (genellikle) dakikalar içinde doğrudan alıcıya gidecektir. Ödeme göndermek veya almak için bir [cüzdan](/wallets/) gerekir.
+Bir blok zinciri olarak Ethereum, işlemleri güvenli ve küresel bir şekilde göndermek için tasarlanmıştır. Bitcoin gibi, Ethereum da dünyanın her yerine para göndermeyi bir e-posta göndermek kadar kolay hâle getiriyor. Cüzdanınızdan alıcınızın [ENS adını](/glossary/#ens) (bob.eth gibi) veya hesap adresini girdikten sonra ödemeniz (genellikle) dakikalar içinde doğrudan alıcıya gidecektir. Ödeme göndermek veya almak için bir [cüzdan](/wallets/) gerekir.
 
 <ButtonLink href="/dapps/?category=finance#explore">
   Ödeme dApp'lerini gör
@@ -100,7 +100,7 @@ Bir blok zinciri olarak Ethereum, işlemleri güvenli ve küresel bir şekilde g
 
 Ayrıca Ethereum üzerinden para akışı da yapabilirsiniz. Bu, birisine maaşını saniyede ödemenize izin vererek, ihtiyaç duyduklarında paralarına erişmelerini sağlar. Ya da anında depo veya elektrikli scooter gibi bir şeyler kiralayın.
 
-Ve değerinin değişebileceğinden dolayı [ETH](/eth/) göndermek veya akışı yapmak istemiyorsanız, Ethereum'da alternatif para birimleri vardır: sabit paralar.
+Değerinin değişebileceğinden dolayı [ETH](/glossary/#ether) göndermek veya akış yapmak istemiyorsanız, Ethereum'da alternatif para birimleri vardır: [sabit paralar](/glossary/#stablecoin).
 
 <Divider />
 
@@ -133,7 +133,7 @@ Merkezi olmayan bir borç veren kullanmanın birçok avantajı vardır...
 
 Bugün, borç vermek ve borç almak, ilgili kişilerin etrafında dönmektedir. Bankaların, borç vermeden önce bir krediyi geri ödeme olasılığınız olup olmadığını bilmesi gerekir.
 
-Merkezi olmayan borç verme, tarafların kendilerini tanımlamasına gerek kalmadan çalışır. Böylece, borç alan kişi kredisini geri ödemezse kredi verenin otomatik olarak alacağı bir teminat sunulmuş olur. Bazı borç verenler, NFT'leri bile teminat olarak kabul ederler. NFT'ler, bir tablo gibi benzersiz bir varlığın tapusudur. [NFT'ler hakkında daha fazla bilgi](/nft/)
+Merkezi olmayan borç verme, tarafların kendilerini tanımlamasına gerek kalmadan çalışır. Böylece, borç alan kişi kredisini geri ödemezse kredi verenin otomatik olarak alacağı bir teminat sunulmuş olur. Bazı borç verenler, [NFT'leri](/glossary/#nft) teminat olarak bile kabul eder. NFT'ler, bir tablo gibi benzersiz bir varlığın tapusudur. [NFT'ler hakkında daha fazla bilgi](/nft/)
 
 Bu, kredi kontrolü olmadan veya özel bilgileri teslim etmeden borç para almanızı sağlar.
 
@@ -168,7 +168,9 @@ B borsasının arzı aniden düşerse ve kullanıcı orijinal krediyi karşılay
 
 Yukarıdaki örneği geleneksel finans dünyasında yapabilmek için çok büyük miktarda paraya ihtiyacınız var. Bu para kazanma stratejilerine yalnızca önceden bir servete sahip olanlar erişebilir. Hızlı krediler, paraya sahip olmanın para kazanmak için mutlaka bir ön koşul olmadığı bir geleceğe bir örnektir.
 
-[Hızlı krediler hakkında daha fazla bilgi](https://aave.com/flash-loans/)
+<ButtonLink isSecondary href="https://aave.com/docs/concepts/flash-loans/">
+  Hızlı krediler hakkında daha fazla bilgi
+</ButtonLink>
 
 <Divider />
 
@@ -180,7 +182,7 @@ Borç vererek kripto paranızdan faiz kazanabilir ve fonlarınızın gerçek zam
 
 - Bir [sabit para](/stablecoins/) olan 100 Dai'nizi Aave gibi bir ürüne borç veriyorsunuz.
 - Borç verdiğiniz Dai'nizi temsil eden bir token olan 100 Aave Dai (aDai) alırsınız.
-- aDai'niz faiz oranlarına göre artacak ve cüzdanınızdaki bakiyenizin büyüdüğünü görebilirsiniz. APR'ye (yıllık yüzde oran) bağlı olarak, cüzdan bakiyenizde birkaç gün hatta birkaç saat sonra 100.1234 gibi bir tutar görebilirsiniz!
+- aDai'niz faiz oranlarına göre artacak ve cüzdanınızdaki bakiyenizin büyüdüğünü görebilirsiniz. [APR](/glossary/#apr)'ye bağımlı olan cüzdan bakiyenizde birkaç gün hatta birkaç saat sonra 100,1234 gibi bir tutar görebilirsiniz!
 - İstediğiniz zaman aDai bakiyenize eşit miktarda normal Dai çekebilirsiniz.
 
 <ButtonLink href="/dapps/?category=finance#explore">
@@ -233,7 +235,7 @@ Merkezi bir borsa kullandığınızda, varlıklarınızı ticaretten önce yatı
 
 Ethereum'da, seçtiğiniz bir stratejiye dayalı olarak portföyünüzü büyütmeye çalışacak fon yönetimi ürünleri bulunmaktadır. Bu otomatiktir, herkese açıktır ve kârınızdan pay alan bir insan yöneticiye ihtiyaç duymaz.
 
-İyi bir örnek: [DeFi Pulse Index fonu (DPI)](https://defipulse.com/blog/defi-pulse-index/). Bu, sizin portföyünüzün her zaman [piyasa değerine göre en iyi DeFi token'larını](https://www.coingecko.com/en/defi) içermesini sağlamak için otomatik olarak yeniden dengelenen bir fondur. Hiçbir zaman herhangi bir ayrıntıyı yönetmek zorunda kalmazsınız ve istediğiniz zaman fondan çıkabilirsiniz.
+İyi bir örnek: [DeFi Pulse Index fonu (DPI)](https://defipulse.com/blog/defi-pulse-index/). Bu, portföyünüzün toplam piyasa değerine göre her zaman en iyi DeFi jetonlarını içermesini sağlamak için otomatik olarak yeniden dengelenen bir fondur. Hiçbir zaman herhangi bir ayrıntıyı yönetmek zorunda kalmazsınız ve istediğiniz zaman fondan çıkabilirsiniz.
 
 <ButtonLink href="/dapps/?category=finance#explore">
   Yatırım dapp'lerini gör
@@ -266,7 +268,9 @@ Ethereum açık kaynaklı bir yazılımdır ve şimdiye kadar yapılan çalışm
 
 Bu, 1 dolarlık 100 bağışa sahip olan A Projesi'nin, tek bir 10.000 dolarlık bağışa sahip olan B Projesi'nden daha fazla fon alabilmesi anlamına gelir (eşleştirme havuzunun boyutuna bağlı olarak).
 
-[İkinci dereceden finansman hakkında daha fazla bilgi](https://wtfisqf.com)
+<ButtonLink href="https://wtfisqf.com">
+  İkinci dereceden finansman hakkında daha fazla bilgi
+</ButtonLink>
 
 <Divider />
 
@@ -320,6 +324,8 @@ DeFi'yi katmanlar halinde düşünebilirsiniz:
 3. Protokol – [akıllı sözleşmeler](/glossary/#smart-contract) işlevsellik sağlar; örneğin, bu varlıklara merkeziyetsiz borçlanmaya izin veren bir servis sağlar.
 4. [Uygulamalar](/dapps/): Protokolleri yönetmek ve bunlara erişmek için kullandığımız ürünler.
 
+Not: DeFi'nin büyük bir kısmı [ERC-20 standardını](/glossary/#erc-20) kullanır. DeFi'deki uygulamalar, ETH için Sarılı Ether (WETH) adı verilen bir sarıcı kullanır. [Sarılı ether hakkında daha fazla bilgi edinin](/wrapped-eth).
+
 ## DeFi oluşturun {#build-defi}
 
 DeFi, açık kaynaklı bir akımdır. DeFi protokolleri ve uygulamaları; incelemeniz, çatallamanız ve yenilik yapmanız için tamamen açıktır. Bu katmanlı yığın sayesinde (hepsi aynı temel blok zincirini ve varlıkları paylaşır), benzersiz birleşik fırsatların kilidini açmak için protokoller karıştırılabilir ve eşleştirilebilir.
@@ -328,13 +334,12 @@ DeFi, açık kaynaklı bir akımdır. DeFi protokolleri ve uygulamaları; incele
   Dapp oluşturma hakkında daha fazla bilgi
 </ButtonLink>
 
-## Daha fazla bilgi {#futher-reading}
+## Daha fazla bilgi {#further-reading}
 
 ### DeFi verisi {#defi-data}
 
 - [DeFi Prime](https://defiprime.com/)
 - [DeFi Llama](https://defillama.com/)
-- [DeFi Oranı](https://defirate.com/)
 
 ### DeFi makaleleri {#defi-articles}
 
@@ -348,5 +353,5 @@ DeFi, açık kaynaklı bir akımdır. DeFi protokolleri ve uygulamaları; incele
 
 ### Topluluklar {#communities}
 
-- [DeFi Llama Discord sunucusu](https://discord.gg/buPFYXzDDd)
+- [DeFi Llama Discord sunucusu](https://discord.defillama.com/)
 - [DeFi Pulse Discord sunucusu](https://discord.gg/Gx4TCTk)

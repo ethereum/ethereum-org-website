@@ -7,45 +7,45 @@ emoji: ":money_with_wings:"
 image: /images/use-cases/defi.png
 alt: Logo ng Eth na gawa sa mga lego brick.
 sidebarDepth: 2
-summaryPoint1: Isang pandaigdigan at bukas na alternatibo sa kasalukuyang sistemang pinansyal.
-summaryPoint2: Mga produkto na nagbibigay-daan sa iyong manghiram, mag-ipon, mag-invest, mag-trade, at iba pa.
-summaryPoint3: Nakabatay sa open-source na teknolohiyang magagamit ng kahit sino para mag-program.
+summaryPoint1: Pandaigdigan, bukas na alternatibo sa kasalukuyang sistema ng pananalapi.
+summaryPoint2: Mga produkto na nagpapahintulot sa iyong manghiram, mag-ipon, mamuhunan, mag-trade, at iba pa.
+summaryPoint3: Batay sa open-source na teknolohiya na maaaring gamitin ng sinuman sa programa.
 ---
 
-Ang DeFi ay isang bukas at pandaigdigang sistemang pinansyal na binuo para sa panahon ng internet - isang alternatibo sa isang sistema na mahirap unawain, mahigpit na kontrolado, at pinagbubuklod ng infrastructure at mga prosesong ilang dekada nang ginagamit. Sa tulong nito makokontrol at makikita mo ang iyong pera. Binibigyan ka nito ng pagkakataong makita ang mga pandaigdigang market at mga alternatibo sa iyong lokal na currency o mga opsyon sa pagbabangko. Binubuksan ng mga produkto ng DeFi ang mga serbisyong pinansyal sa sinumang may koneksyon sa internet at ang karamihan sa mga ito ay pagmamay-ari at pinapanatili ng mga user ng mga ito. Sa ngayon, daan-daang bilyong dolyar ng crypto na ang dumaan sa mga DeFi application at patuloy itong dumarami araw-araw.
+Ang DeFi ay bukas at pandaigdigang sistemang pinansyal na binuo para sa panahon ng internet - alternatibo sa isang sistema na mahirap unawain, mahigpit na kontrolado, at pinagbubuklod ng dekadang taon na imprastaktura at mga proseso. Sa tulong nito makokontrol at makikita mo ang iyong pera. Binibigyan ka nito ng pagkakataong makita ang mga pandaigdigang merkado at mga alternatibo sa iyong lokal na pera o mga opsyon sa pagbabangko. Binubuksan ng mga produkto ng DeFi ang mga serbisyong pinansyal sa sinumang may koneksyon sa internet at ang karamihan sa mga ito ay pagmamay-ari at pinapanatili ng mga user ng mga ito. Sa ngayon, sampu-sampung bilyong dolyar na halaga ng crypto ang dumaan sa mga aplikasyon ng DeFi at patuloy itong lumalaki araw-araw.
 
 ## Ano ang DeFi? {#what-is-defi}
 
-DeFi ang tawag sa mga produkto at serbisyong pinansyal na maaring gamitin ng sinumang makakagamit ng Ethereum - kahit sinong may koneksyon sa internet. Sa DeFi, laging bukas ang mga market at walang centralized na awtoridad na makakapigil ng mga pagbabayad o hindi magbibigay sa iyo ng access sa kahit ano. Ang mga serbisyong dating mabagal at nanganganib dahil sa human error ay awtomatiko at mas ligtas na ngayon dahil pinapangasiwaan na ang mga ito ng code na masusuri at mabubusisi ng kahit sino.
+DeFi ang pinagsamang tawag sa mga produkto at serbisyong pinansyal na maaring gamitin ng sinumang makakagamit ng Ethereum - kahit sinong may koneksyon sa internet. Sa DeFi, ang mga pamilihan ay palaging bukas at walang mga sentralisadong awtoridad na maaaring humadlang sa mga pagbabayad o tanggihan ang iyong access sa kahit ano. Ang mga serbisyo na dati ay mabagal at nasa panganib ng pagkakamali ng tao ay awtomatiko at mas ligtas na ngayon dahil ito ay pinangangasiwaan ng code na maaaring suriin at tingnan ng sinuman.
 
-Lumalaki ang ekonomiya ng crypto, kung saan puwede kang magpautang, manghiram, mag-trade, kumita ng interes, at iba pa. Gumamit ng DeFi ang mga taga-Argentina na marunong sa crypto para takasan ang matinding pagtaas ng presyo. May mga kumpanya nang nagsimulang i-stream sa kanilang mga empleyado ang kanilang mga suweldo nang real time. May ibang nakahiram at nakapagbayad ng mga loan na milyong-milyong dolyar ang halaga nang hindi nangangailangan ng anumang personal identification.
+Lumalaki ang ekonomiya ng crypto, kung saan puwede kang magpautang, manghiram, mag-trade, kumita ng interes, at iba pa. Gumamit ng DeFi ang mga taga-Argentina na marunong sa crypto para takasan ang matinding pagtaas ng presyo. Sinimulan kaagad ng kumpanya ang patuloy na sahod ng kanilang empleyado. Ang ilan ay nakakuha at nakabayad ng mga utang na nagkakahalaga ng milyon-milyong dolyar nang hindi kinakailangan ng anumang personal na pagkakakilanlan.
 
 <YouTube id="H-O3r2YMWJ4" />
 
-## DeFi vs tradisyonal na pinansya {#defi-vs-tradfi}
+## DeFi laban sa tradisyunal na pananalapi {#defi-vs-tradfi}
 
 Ang isa sa mga pinakamagandang paraan upang makita ang potensyal ng DeFi ay unawain ang mga problemang umiiral ngayon.
 
-- May mga tao na hindi pinagkakalooban ng access para gumawa ng bank account o gumamit ng mga serbisyong pinansyal.
-- Ang kakulangan ng access sa mga serbisyong pinansyal ay maaaring nakakahadlang para makahanap ng trabaho ang mga tao.
-- Maaaring mapigilan ng mga serbisyong pinansyal na makuha mo ang iyong suweldo.
-- Isa sa mga nakatagong singil ng mga serbisyong pinansyal ay ang iyong personal na data.
-- Maaaring ipasara ng mga pamahalaan at centralized institution ang mga market kapag gusto nila.
-- Ang oras ng pag-trade ay karaniwang limitado sa oras ng negosyo ng partikular na time zone.
-- Maaaring abutin nang ilang araw ang mga pag-transfer ng pera dahil sa mga internal na prosesong ginagawa ng tao.
-- May premium ang mga serbisyong pinansyal dahil kailangan ng mga intermediary institution ang kanilang parte.
+- May mga tao na hindi pinagkakalooban ng access upang gumawa ng bank account o gumamit ng mga serbisyong pinansyal.
+- Ang kakulangan ng access sa mga serbisyong pinansyal ay maaaring hadlangan ang mga tao na maging empleyado.
+- Maaaring hadlangan ka ng mga serbisyong pinansyal upang makuha ang iyong suweldo.
+- Ang nakatagong singil ng mga serbisyong pinansyal ay ang iyong personal na data.
+- Maaaring ipasara ng mga gobyerno at sentralisadong institusyon ang mga merkado kapag gusto nila.
+- Ang oras ng pagte-trade ay karaniwang limitado sa oras ng negosyo ng partikular na time zone.
+- Maaaring abutin nang ilang araw ang mga pag-transfer ng pera dahil sa panloob na mga prosesong ginagawa ng tao.
+- May karagdagang bayad sa mga serbisyo sa pananalapi dahil kinakailangan ng mga institusyong tagapamagitan ang kanilang parte.
 
 ### Pag-kumpara {#defi-comparison}
 
-| DeFi                                                                                                                            | Tradisyonal na pinansya                                                                                                                                                         |
-| ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Hawak mo ang iyong pera.                                                                                                        | Ang iyong pera ay hawak ng mga kumpanya.                                                                                                                                        |
-| Kontrolado mo kung saan mapupunta ang iyong pera at kung paano ito gagastusin.                                                  | Kailangan mong magtiwalang hindi papabayaan ng mga kumpanya ang pera mo, tulad ng pagpapahiram nito sa mga hindi mapagkakatiwalaang nangungutang.                               |
-| Nangyayari ang mga pag-transfer ng pondo sa loob ng ilang minuto.                                                               | Maaaring tumagal nang ilang araw ang mga pagbabayad dahil sa mga manula na proseso.                                                                                             |
-| Gumagamit ng mga hindi tunay na pangalan sa mga aktibidad sa transaksyon.                                                       | Talagang konektado ang pinansyal na aktibidad sa iyong identity.                                                                                                                |
-| Ang DeFi ay bukas para sa lahat.                                                                                                | Kailangan mong mag-apply para magamit ang mga serbisyong pinansyal.                                                                                                             |
-| Ang mga market ay palaging bukas.                                                                                               | Nagsasara ang mga market dahil kailangang magpahinga ng mga empleyado.                                                                                                          |
-| Transparency ang pundasyon nito – puwedeng tingnan ng kahit sino ang data ng produkto at suriin kung paano gumagana ang system. | Ang mga pinansyal institusyon ay parang mga saradong libro: hindi mo maaaring tingnan ang kanilang kasaysayan ng pautang, record ng mga pinapamahalaan nilang asset, at iba pa. |
+| DeFi                                                                                                                                | Tradisyunal na pananalapi                                                                                                                                                |
+| ----------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Hawak mo ang iyong pera.                                                                                                            | Ang iyong pera ay hawak ng mga kumpanya.                                                                                                                                 |
+| Kontrolado mo kung saan mapupunta ang iyong pera at kung paano ito gagastusin.                                                      | Kailangan mong magtiwalang hindi pababayaan ng mga kumpanya ang pera mo, tulad ng pagpapahiram nito sa mga hindi mapagkakatiwalaang nangungutang.                        |
+| Nangyayari ang mga paglipat ng pondo sa loob ng ilang minuto.                                                                       | Maaaring tumagal nang ilang araw ang mga pagbabayad dahil sa mamu-manong mga proseso.                                                                                    |
+| Gumagamit ng mga hindi tunay na pangalan sa mga aktibidad sa transaksyon.                                                           | Ang aktibidad sa pananalapi ay mahigpit na naka-ugnay sa iyong pagkakakilanlan.                                                                                          |
+| Ang DeFi ay bukas para sa lahat.                                                                                                    | Kailangan mong mag-apply upang magamit ang mga serbisyong pinansyal.                                                                                                     |
+| Palaging bukas ang mga merkado.                                                                                                     | Nagsasara ang mga merkado dahil kailangang magpahinga ng mga empleyado.                                                                                                  |
+| Nakabatay ito sa pagiging malinaw—sinuman ay maaaring tingnan ang data ng isang produkto at suriin kung paano gumagana ang sistema. | Ang mga pinansyal na institusyon ay mga pribado: hindi mo maaaring tingnan ang kanilang kasaysayan ng pautang, rekord ng kanilang mga pinapamahalaanng asset, at iba pa. |
 
 <ButtonLink href="/dapps/?category=finance#explore">
   I-explore ang mga DeFi app
@@ -53,18 +53,18 @@ Ang isa sa mga pinakamagandang paraan upang makita ang potensyal ng DeFi ay unaw
 
 ## Nagsimula ito sa Bitcoin... {#bitcoin}
 
-Sa maraming paraan, ang Bitcoin ang unang DeFi application. Talagang pinapayagan ka ng Bitcoin na magmay-ari at kontrolin ang halaga nito at ipadala ito kahit saan sa mundo. Ginagawa nito ito sa pamamagitan ng pagbibigay ng paraan para sa maraming tao, na hindi umaasa sa isa't isa, na sumang-ayon sa isang ledger ng mga account na hindi nangangailangan ng isang pinagkakatiwalaang intermediary. Ang Bitcoin ay bukas sa lahat at walang sinuman ang may awtoridad na baguhin ang mga panuntunan nito. Ang mga panuntunan ng Bitcoin, tulad ng kanyang kakapusan at pagiging bukas, ay nakalagay na sa teknolohiya. Hindi ito katulad ng tradisyonal na pinansya kung saan maaaring mag-print ang mga pamahalaan ng pera na nagpapababa sa halaga ng iyong ipon at mga kumpanyang maaaring magpasara ng mga market.
+Sa maraming paraan, ang Bitcoin ang unang DeFi application. Pinapahintulutan ka ng Bitcoin na tunay na pagmamay-ari at kontrolin ang halaga at ipadala ito kahit saan sa buong mundo. Ginagawa ito sa pamamagitan ng pagbibigay ng paraan para sa malaking bilang ng mga tao, na hindi nagtitiwala sa isa't isa, na magkasunduan sa isang talaan ng mga account nang hindi nangangailangan ng mapagkakatiwalaang tagapamagitan. Bukas ang Bitcoin para sa sinuman at walang sinuman ang may kapangyarihang baguhin ang mga panuntunan nito. Ang mga panuntunan ng Bitcoin, tulad ng kanyang kakapusan at pagiging bukas, ay nakalagay na sa teknolohiya. Hindi ito katulad ng tradisyunal na pananalapi kung saan ang mga gobyerno ay maaaring gumawa ng pera na nagpapababa sa halaga ng iyong ipon at ang mga kumpanya ay maaaring magpasara ng mga merkado.
 
-Mas pinapahusay pa ito ng Ethereum. Tulad ng Bitcoin, hindi maaaring magbago ang mga panuntunan nang biglaan at may access ang lahat. Ngunit ito rin ang dahilan kung bakit programmable ang digital money, gamit ang [mga smart contract](/glossary#smart-contract), kung kaya, hindi lang pag-store at pagpapadala ng halaga ang magagawa mo.
+Mas pinapahusay pa ito ng Ethereum. Tulad ng Bitcoin, hindi maaaring magbago ang mga panuntunan nang biglaan at may access ang lahat. Ngunit ginagawa rin nitong programmable ang digital na pera, gamit ang [mga smart contract](/glossary/#smart-contract), kung kaya, hindi lang pag-imbak at pagpapadala ng halaga ang magagawa mo.
 
 <YouTube id="qFBYB4W2tqU" />
 
-## Programmable na pera {#programmable-money}
+## Napoprogramang pera {#programmable-money}
 
-Medyo kakaiba itong pakinggan... "bakit ko gugustuhing i-program ang pera ko"? Ngunit, isa itong default na feature ng mga token sa Ethereum. Kahit sino ay maaaring mag-program ng logic sa mga pagbabayad. Kaya makukuha mo ang kontrol at seguridad ng Bitcoin pati ang mga serbisyong ibinibigay ng mga pinansyal na institusyon. Dahil dito, magagawa mo sa mga cryptocurrency ang mga bagay na hindi mo magagawa sa Bitcoin, tulad ng pagpapautang at panghihiram, pag-iiskedyul ng mga pagbabayad, pag-invest sa mga index fund at iba pa.
+Medyo kakaiba itong pakinggan... "bakit ko gugustuhing iprograma ang pera ko"? Ngunit, ito ay higit na default na feature ng mga token sa Ethereum. Sinuman ay maaaring magprograma ng lohika sa mga pagbabayad. Kaya makukuha mo ang kontrol at seguridad ng Bitcoin pati ang mga serbisyong ibinibigay ng mga pinansyal na institusyon. Dahil dito, magagawa mo sa mga cryptocurrency ang mga bagay na hindi mo magagawa sa Bitcoin, tulad ng pagpapautang at panghihiram, pag-i-schedule ng mga pagbabayad, pamumuhunan sa mga index fund at iba pa.
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
-  <div>Tingnan ang aming mga rekomendasyon para sa mga DeFi application na dapat subukan kung bago ka sa Ethereum.</div>
+  <div>Tuklasin ang aming mga mungkahi para sa mga application ng DeFi na maaari mong subukan kung bago ka sa Ethereum.</div>
   <ButtonLink href="/dapps/?category=finance#explore">
     I-explore ang mga DeFi app
   </ButtonLink>
@@ -72,11 +72,11 @@ Medyo kakaiba itong pakinggan... "bakit ko gugustuhing i-program ang pera ko"? N
 
 ## Ano ang magagawa mo sa DeFi? {#defi-use-cases}
 
-May decentralized na alternatibo sa karamihan sa mga serbisyong pinansyal. Ngunit nagbibigay din ang Ethereum ng pagkakataon para gumawa ng mga bagong-bagong pinansyal na produkto. Palaging nadaragdagan ang listahang ito.
+Mayroong desentralisadong alternatibo para sa karamihan ng mga serbisyong pinansyal. Ngunit ang Ethereum ay nagbubukas din ng mga oportunidad para makalikha ng mga produktong pinansyal na ganap na bago. Palaging nadaragdagan ang listahang ito.
 
 - [Magpadala ng pera sa iba't ibang bahagi ng mundo](#send-money)
-- [Mag-stream ng pera sa iba't ibang bahagi ng mundo](#stream-money)
-- [Ma-access ang mga stable na currency](#stablecoins)
+- [Patuloy na magpadala ng pera sa buong mundo](#stream-money)
+- [I-access ang nakapirmi na pera](#stablecoins)
 - [Humiram ng pondo na may collateral](#lending)
 - [Humiram nang walang collateral](#flash-loans)
 - [Simulan ang pag-iipon ng crypto](#saving)
@@ -88,116 +88,118 @@ May decentralized na alternatibo sa karamihan sa mga serbisyong pinansyal. Nguni
 
 <Divider />
 
-### Magpadala ng pera sa iba't ibang bahagi ng mundo nang mabilis {#send-money}
+### Mabilis na magpadala ng pera sa buong mundo {#send-money}
 
-Bilang isang blockchain, ang Ethereum ay idinisenyo para magpadala ng mga transaksyon sa ligtas at pandaigdigang paraan. Tulad ng Bitcoin, pinapadali ng Ethereum ang pagpapadala ng pera sa iba't ibang bahagi ng mundo, na parang nagpapadala lang ng email. Ilagay lang ang [ENS name](/nft/#nft-domains) (tulad ng bob.eth) ng recipient mo o ang kanyang account address mula sa iyong wallet at sa loob ng ilang minuto (karaniwan), direkta na niyang matatanggap ang bayad mo. Upang magpadala o tumanggap ng mga pagbabayad, kakailanganin mo ng [wallet](/wallets/).
+Bilang blockchain, ang Ethereum ay idinisenyo para magpadala ng mga transaksyon sa ligtas at pandaigdigang paraan. Tulad ng Bitcoin, pinapadali ng Ethereum ang pagpapadala ng pera sa buong mundo, na parang nagpapadala lang ng email. Ilagay lamang ang [pangalan ng ENS](/glossary/#ens) ng iyong tatanggap (tulad ng bob.eth) o ang kanilang address ng account mula sa iyong wallet at ang iyong bayad ay direktang mapupunta sa kanila sa loob ng ilang minuto (karaniwan). Upang magpadala o tumanggap ng mga pagbabayad, kakailanganin mo ng [wallet](/wallets/).
 
 <ButtonLink href="/dapps/?category=finance#explore">
-  Tingnan ang mga decentralized application (dapps) para sa pagbabayad
+  Tingnan ang mga dapps ng pagbabayad
 </ButtonLink>
 
-#### Mag-stream ng pera sa iba't ibang bahagi ng mundo... {#stream-money}
+#### Patuloy na magpadala ng pera sa buong mundo... {#stream-money}
 
-Maaari ka ring mag-stream ng pera sa Ethereum. Binibigyang-daan ka nitong bayaran ang suweldo ng isang tao sa kada segundo, kaya agad niyang makukuha ang pera niya kapag kailangan niya ito. O magrenta ng isang bagay kada segundi, tulad ng storage locker o electric scooter.
+Maaari ka ring magpatuloy na magpadala ng pera sa Ethereum. Pinapahintulutan ka nitong bayaran ang sahod ng isang tao sa kada segundo, na nagbibigay sa kanila ng access sa kanilang pera sa tuwing kailangan nila ito. O magrenta ng isang bagay kada segundo, tulad ng storage locker o electric scooter.
 
-At kung ayaw mong magpadala o mag-stream ng [ETH](/eth/) dahil nagbabago-bago ang halaga nito, may mga alternatibong currency sa Ethereum: mga stablecoin.
+At kung ayaw mong magpadala o magpatuloy na mgapadala ng pera sa [ETH](/glossary/#ether) dahil sa laki ng pagbabago ng halaga nito, mayroon nang mga alternatibong pera sa Ethereum: [mga stablecoin](/glossary/#stablecoin).
 
 <Divider />
 
-### Ma-access ang mga stable na currency {#stablecoins}
+### I-access ang nakapirmi na pera {#stablecoins}
 
-Ang volatility ng cryptocurrency ay problema para sa maraming pinansyal na produkto at pangkalahatang paggastos. Inayos ito ng komunidad ng DeFi gamit ang mga stablecoin. Ipinapareho ang halaga ng mga ito sa isa pang asset, na karaniwang mas ginagamit na currency tulad ng dolyar.
+Ang pagbabago-bago ng cryptocurrency ay isang problema para sa maraming produktong pampinansyal at pangkalahatang paggastos. Inayos ito ng komunidad ng DeFi gamit ang mga stablecoin. Ipinapareho ang halaga ng mga ito sa isa pang asset, na karaniwang mas ginagamit na pera tulad ng dolyar.
 
-Ang mga coin tulad ng Dai o USDC ay may halagang nananatiling malapit sa isang dolyar. Dahil dito, mainam ito para sa pagkakaroon ng kita o retail. Maraming tao sa Latin America ang gumamit ng mga stablecoin bilang paraan para protektahan ang kanilang naipong pera sa panahon ng kawalan ng katiyakan pagdating sa mga currency na mula sa kanilang pamahalaan.
+Ang mga coin tulad ng Dai o USDC ay may halaga na nananatili sa ilang sentimo ng isang dolyar. Ginagawa nitong mainam ang mga ito para kumita o retail. Maraming tao sa Latin America ang gumamit ng mga stablecoin bilang paraan ng pagprotekta sa kanilang naipong pera sa panahon ng kawalan ng katiyakan pagdating sa mga pera na mula sa kanilang gobyerno.
 
 <ButtonLink href="/stablecoins/">
-  Iba pang detalye tungkol sa mga stablecoin
+  Higit pang detalye tungkol sa mga stablecoin
 </ButtonLink>
 
 <Divider />
 
 ### Paghiram {#lending}
 
-Ang paghiram ng pera mula sa mga decentralized provider ay may dalawang pangunahing uri.
+Ang paghiram ng pera mula sa mga desentralisadong provider ay may dalawang pangunahing uri.
 
-- Peer-to-peer, na nangangahulugang direktang hihiram ang borrower sa isang partikular na lender.
-- Pool-based kung saan nagbibigay ng pondo (liquidity) ang mga lender sa isang pool na mahihiraman ng mga borrower.
+- Peer-to-peer, na nangangahulugang ang nanghihiram ay direktang manghihiram mula sa isang tiyak na nagpapahiram.
+- Pool-based kung saan ang mga nagpapahiram ay nagbibigay ng pondo (liquidity) sa isang sama-sama na maaaring pautangin ng mga nanghihiram.
 
 <ButtonLink href="/dapps/?category=finance#explore">
-  Tingnan ang dapps para sa panghihiram
+  Tingnan ang mga dapp para sa paghiram
 </ButtonLink>
 
-Maraming benepisyo sa paggamit ng decentralized lender...
+Maraming mga benepisyo ang paggamit ng isang desentralisadong nagpapahiram...
 
 #### Paghiram nang may privacy {#borrowing-privacy}
 
-Sa kasalukuyan, ang pagpapautang at panghihiram ng pera ay nauugnay sa mga indibidwal na may kinalaman dito. Kailangang malaman ng mga bangko kung malaman na mababayaran mo ang loan bago ito magpautang.
+Sa ngayon, ang pagpapautang at paghiram ng pera ay nakabatay sa mga kasamang indibidwal. Kailangang malaman ng mga bangko kung malamang na mababayaran mo ang loan bago ito magpautang.
 
-Ang decentralized na pagpapautang ay nangyayari nang hindi kinakailangang magpakilala ng kahit aling panig. Sa halip, ang borrower ay dapat maglaan ng collateral na awtomatikong matatanggap ng lender kung sakali hindi mabayaran ang kanilang loan. May ilang lender na tumatanggap ng NFT bilang collateral. Ang mga NFT ay titulo para sa natatanging asset, tulad ng painting. [Iba pang detalye tungkol sa mga NFT](/nft/)
+Gumagana ang desentralisadong pagpapautang nang hindi kinakailangang kilalanin ang sinumang partido ang kanilang sarili. Sa halip, ang nanghihiram ay dapat maglagay ng collateral na awtomatikong matatanggap ng nagpapahiram kung ang kanilang utang ay hindi nabayaran. Tumatanggap pa nga ang ilang nagpapahiram ng [mga NFT](/glossary/#nft) bilang collateral. Ang mga NFT ay sertipiko ng pagmamay-ari sa isang natatanging asset, tulad ng isang painting. [Higit pang detalye tungkol sa mga NFT](/nft/)
 
-Binibigyang-daan ka nitong humiram ng pera nang walang pagsusuri ng iyong credit o pagbibigay ng pribadong impormasyon.
+Pinapahintulutan ka nitong humiram ng pera nang walang pagsusuri sa iyong credit o pagbibigay ng pribadong impormasyon.
 
 #### Access sa pandaigdigang pondo {#access-global-funds}
 
-Kapag gumamit ka ng decentralized lender, may access ka sa pondong idineposito sa iba't ibang bahagi ng mundo, hindi lang sa pondong hawak ng pinili mong bangko o institusyon. Pinapadali nito ang pagkuha ng mga loan at pinapababa nito ang interes.
+Kapag gumamit ka ng desentralisadong nagpapahiram, may access ka sa pondong idineposito sa buong mundo, hindi lang sa pondong hawak ng pinili mong bangko o institusyon. Pinapadali nito ang pagkuha ng mga loan at pinapababa nito ang interes.
 
-#### Tax-efficiencies {#tax-efficiencies}
+#### Epektibong pagbubuwis {#tax-efficiencies}
 
-Kapag nanghiram, maa-access mo ang pondong kailangan mo nang hindi ibinebenta ang iyong ETH (isang taxable event). Sa halip, maaari mong gamitin ang ETH bilang collateral para sa stablecoin loan. Dahil dito, makukuha mo ang cash-flow na kailangan mo at hindi mawawala sa iyo ang ETH mo. Ang mga stablecoin ay mga token na mas mainam kapag kailangan mo ng cash dahil hindi nagbabago-bago ang halaga ng mga ito gaya ng ETH. [Iba pang detalye tungkol sa mga stablecoin.](#stablecoins)
+Ang pagpapautang ay makapagbibigay sa iyo ng access sa mga pondo na kailangan mo nang hindi kinakailangang ibenta ang iyong ETH (pangyayaring may buwis). Sa halip, maaari mong gamitin ang ETH bilang collateral para sa stablecoin loan. Nagbibigay ito sa iyo ng kinakailangang cash flow at pinapahintulutan kang panatilihin ang iyong ETH. Ang mga stablecoin ay mga token na mas angkop kapag kailangan mo ng cash dahil hindi sila nagbabago ng halaga tulad ng ETH. [Higit pang detalye tungkol sa mga stablecoin.](#stablecoins)
 
-#### Mga flash loan {#flash-loans}
+#### Mga mabilis na loan {#flash-loans}
 
-Ang mga flash loan ay mas eksperimental na uri ng decentralized na pagpapautang kung saan puwede kang humiram kahit walang collateral o nang hindi nagbibigay ng anumang personal na impormasyon.
+Ang mga mabilis na loan ay mas experimental na anyo ng desentralisadong pagpapautang na nagpapahintulot sa iyo na manghiram nang walang collateral o pagbibigay ng anumang personal na impormasyon.
 
-Sa ngayon, hindi pa ito magagamit ng mga hindi maalam sa teknolohiya, pero ipinapahiwatig ng mga ito ang mga posibleng maisagawa ng lahat sa hinaharap.
+Hindi sila malawakang naa-access ng mga hindi teknikal na tao sa ngayon, ngunit nagbibigay sila ng pahiwatig kung ano ang maaaring maging posible para sa lahat sa hinaharap.
 
-Gumagana ito kapag inutang ang loan at binayaran ito sa iisang transaksyon. Kung hindi ito mababayaran, bababalik sa dati ang transaksyon na parang walang nangyari.
+Gumagana ito batay sa ang utang ay kinukuha at binabayaran sa loob ng parehong transaksyon. Kung hindi ito mababayaran, bababalik sa dati ang transaksyon na parang walang nangyari.
 
-Ang pondo na kadalasang ginagamit ay nasa mga liquidity pool (malalaking grupo ng pondo na ginagamit para sa panghihiram). Kung hindi ginagamit ang mga ito sa ngayon, binibigyan nito ng pagkakataon ang isang tao na hiramin ang pondong ito, magnegosyo gamit ang mga ito, at bayaran ang mga ito nang buo sa halos parehong pagkakataon na hiniram ito.
+Ang pondo na kadalasang ginagamit ay nasa mga liquidity pool (malalaking sama-samang pondo na ginagamit para sa panghihiram). Kung hindi ginagamit ang mga ito sa ngayon, binibigyan nito ng pagkakataon ang isang tao na hiramin ang mga pondong ito, magnegosyo gamit ang mga ito, at bayaran ang mga ito nang buo sa halos parehong pagkakataon na hiniram ito.
 
-Ibig sabihin nito, maraming logic na dapat isama sa isang napaka-bespoke na transaksyon. Ang isang simpleng halimbawa ay ang paggamit ng isang tao ng flash loan para manghiram ng maraming asset sa isang presyo upang maibenta ito sa ibang exchange kung saan mas mataas ang presyo.
+Ibig sabihin nito, maraming lohika ang kailangang isama sa isang napaka-tiyak na transaksyon. Ang simpleng halimbawa ay ang isa na gumagamit ng mabilis na loan upang manghiram ng maraming asset sa isang presyo upang maibenta ito sa ibang palitan kung saan mas mataas ang presyo.
 
-Kung kaya, sa iisang transaksyon, ganito ang nangyayari:
+Kaya sa iisang transaksyon, ang mga sumusunod ay nangyayari:
 
 - Humiram ka ng halagang X ng $asset sa halagang $1.00 mula sa exchange A
-- Ibinenta mo ang X na $asset sa exchange B sa halagang $1.10
-- Binayaran mo ang loan sa exchange A
+- Ibinenta mo ang X na $asset sa palitan B sa halagang $1.10
+- Binayaran mo ang loan sa palitan A
 - Makukuha mo ang kita maliban sa bayarin sa transaksyon
 
-Kung biglang bumaba ang supply ng exchange B at kulang ang binili ng user para sapatan ang orihinal na loan, hindi maisasagawa ang transaksyon.
+Kung biglang bumaba ang supply ng palitan B at kulang ang binili ng user para sapatan ang orihinal na loan, hindi maisasagawa ang transaksyon.
 
-Para magawa ang halimbawa sa itaas sa tradisyonal na mundo ng pinansya, kakailanganin mo ng napakalaking halaga ng pera. Ang mga may pera lang ang makakagamit ng mga pamamaraang ito ng pagkakapera. Ang mga flash loan ay halimbawa ng kinabukasan kung saan hindi kailangang magkaroon ng pera para kumita ng pera.
+Upang magawa ang halimbawa sa itaas sa tradisyunal na mundo ng pananalapi, kakailanganin mo ng napakalaking halaga ng pera. Ang mga estratehiya sa paggawa ng pera na ito ay naa-access lamang ng mga may umiiral na kayamanan. Ang mga mabilis na loan ay isang halimbawa ng hinaharap kung saan ang pagkakaroon ng pera ay hindi kinakailangan para kumita ng pera.
 
-[Iba pang detalye tungkol sa mga flash loan](https://aave.com/flash-loans/)
+<ButtonLink isSecondary href="https://aave.com/docs/concepts/flash-loans/">
+  Higit pang detalye tungkol sa mga mabilis na loan
+</ButtonLink>
 
 <Divider />
 
 ### Magsimulang mag-ipon gamit ang crypto {#saving}
 
-#### Pagpapautang {#lending}
+#### Pagpapahiram {#lending}
 
-Maaari kang kumita ng interes sa iyong crypto sa pamamagitan ng pagpapautang nito at subaybayan ang paglago ng iyong pondo nang real time. Sa ngayon, mas mataas ang interes kaysa sa karaniwang makukuha mo sa iyong lokal na bangko (kung susuwertihin kang magkaroon ng access sa isang bangko). Narito ang isang halimbawa:
+Maaari kang kumita ng interes sa iyong crypto sa pamamagitan ng pagpapahiram nito at tingnan ang kaagad na paglago ng iyong pondo. Sa ngayon, ang mga rate ng interes ay mas mataas kaysa sa kung ano ang malamang na makuha mo sa iyong lokal na bangko (kung suswertehen kang ma-access ito). Narito ang isang halimbawa:
 
-- Ipapautang mo ang iyong 100 Dai, isang [stablecoin](/stablecoins/), sa isang produkto gaya ng Aave.
-- Tatanggap ka ng 100 Aave Dai (aDai) na isang token na kumakatawan sa iyong ipinautang na Dai.
-- Ang iyong aDai ay tataas base sa interes at makikita mo ang paglaki ng iyong balanse sa iyong wallet. Depende sa APR, maaaring maging 100.1234 ang balanse ng iyong wallet pagkatapos ng ilang araw o maging oras!
+- Ipahiram mo ang iyong 100 Dai, isang [mga stablecoin](/stablecoins/), sa isang produkto tulad ng Aave.
+- Tatanggap ka ng 100 Aave Dai (aDai) na token na kumakatawan sa iyong ipinautang na Dai.
+- Ang iyong aDai ay tataas batay sa interes at makikita mo ang paglaki ng iyong balanse sa iyong wallet. Depende sa [APR](/glossary/#apr), ang balanse ng iyong wallet ay magpapakita ng 100.1234 matapos ang ilang araw o kahit oras!
 - Maaari kang mag-withdraw ng regular na Dai na katumbas ng iyong balanse sa aDai anumang oras.
 
 <ButtonLink href="/dapps/?category=finance#explore">
-  Tingnan ang mga decentralized application (dapps) para sa pagpapautang
+  Tingnan ang pagpapahiram ng mga dapp
 </ButtonLink>
 
-#### Mga no-loss lottery {#no-loss-lotteries}
+#### Mga lottery na walang pagkalugi {#no-loss-lotteries}
 
-Ang mga no-loss lottery tulad ng PoolTogether ay masaya at bagong paraan upang mag-ipon ng pera.
+Ang mga lottery na walang pagkalugi tulad ng PoolTogether ay isang masaya at makabagong paraan upang magtipid ng pera.
 
-- Bibili ka ng 100 na ticket gamit ang 100 Dai token.
+- Bumili ka ng 100 na ticket gamit ang 100 token ng Dai.
 - Makakatanggap ka ng 100 plDai na kumakatawan sa iyong 100 ticket.
-- Kung mananalo ang isa sa mga ticket mo, tataas ang iyong plDai balance ayon sa halaga ng prize pool.
-- Kung hindi ka mananalo, maililipat ang iyong 100 plDai sa draw sa susunod na linggo.
-- Maaari kang mag-withdraw ng regular na Dai na katumbas ng iyong plDai balance anumang oras.
+- Kung mananalo ang isa sa mga ticket mo, tataas ang iyong balanse sa plDai ayon sa halaga ng prize pool.
+- Kung hindi ka mananalo, maisasama ang iyong 100 plDai sa draw sa susunod na linggo.
+- Maaari kang mag-withdraw ng regular na Dai na katumbas ng iyong balanse sa plDai anumang oras.
 
-Ang prize pool ay mula sa lahat ng interes na kinikita mula sa pagpapautang ng mga ticket deposit tulad ng nabanggit sa halimbawa sa pagpapautang sa itaas.
+Ang prize pool ay mula sa lahat ng interes na kinikita mula sa pagpapautang ng mga ticket deposit tulad ng nabanggit sa halimbawa sa pagpapahiram sa itaas.
 
 <ButtonLink isSecondary href="https://pooltogether.com">
   Subukan ang PoolTogether
@@ -205,38 +207,38 @@ Ang prize pool ay mula sa lahat ng interes na kinikita mula sa pagpapautang ng m
 
 <Divider />
 
-### Mag-exchange ng mga token {#swaps}
+### Palitan ng mga token {#swaps}
 
-May libo-libong token sa Ethereum. Sa tulong ng mga decentralized exchange (DEXs), mate-trade mo ang iba't ibang token kahit kailan mo gusto. Hinding-hindi mo bibitawan ang pagkontrol sa mga asset mo. Dito, para kang gumagamit ng currency exchange kapag pumunta sa ibang bansa. Ngunit hinding-hindi nagsasara ang bersyong DeFi. Ang mga market ay bukas 24/7, 365 araw kada taon at iginagarantiya ng teknolohiya na palaging may tatanggap ng trade.
+May libu-libong mga token sa Ethereum. Ang mga decentralized exchange (DEX) ay nagpapahintulot sa iyo na mag-trade ng iba't ibang mga token anumang oras na nais mo. Hinding-hindi mo bibitawan ang pagkontrol sa mga asset mo. Ito ay tulad ng paggamit ng palitan ng pera kapag bumibisita sa ibang bansa. Ngunit hinding-hindi nagsasara ang bersyong DeFi. Ang mga merkado ay bukas 24/7, 365 na araw sa isang taon at ang teknolohiya ay ginagarantiyang palaging mayroong tatanggap ng trade.
 
-Halimbawa, kung nais mong gamitin ang no-loss lottery na PoolTogether (na inilalarawan sa itaas), kakailanganin mo ng token tulad ng Dai o USDC. Ang mga DEX na ito ay nagbibigay-daan sa iyo na i-swap ang iyong ETH sa mga token na iyon at i-swap ito ulit kapag tapos ka na.
+Halimbawa, kung nais mong gamitin ang walang talong lottery na PoolTogether (na inilalarawan sa itaas), kakailanganin mo ng token tulad ng Dai o USDC. Pinapahintulutan ka ng mga DEX na ito na i-swap ang iyong ETH sa mga token na iyon at i-swap ito ulit kapag tapos ka na.
 
 <ButtonLink href="/dapps/?category=finance#explore">
-  Tingnan ang mga token exchange
+  Tingnan ang palitan ng mga token
 </ButtonLink>
 
 <Divider />
 
-### Advanced trading {#trading}
+### Masulong na trading {#trading}
 
-Mayroong mga mas advanced na opsyon para sa mga trader na gusto ng kaunti pang kontrol. Ang mga limit order, perpetual, margin trading, at iba pa ay posibleng gawin. Sa pamamagitan ng Decentralized trading, magkakaroon ka ng access sa global na liquidity, hinding-hindi nagsasara ang market, palagi mong makokontrol ang mga asset mo.
+Mayroong mga mas masulong na opsyon para sa mga trader na gusto ng kaunti pang kontrol. Posible ang mga limitasyon ng order, walang hanggan, margin trading, at marami pang iba. Sa Desentralisadong trading, makakakuha ka ng access sa pandaigdigang liquidity, hindi kailanman nagsasara ang merkado, at palagi kang may kontrol sa iyong mga asset.
 
-Kapag gumagamit ka ng centralized exchange, dapat mong ideposito ang mga asset mo bago mag-trade at dapat mong ipaubaya sa kanila ang mga ito. Habang nakadeposito ang iyong mga asset, nanganganib ang mga ito dahil mainit sa mata ng mga hacker ang mga centralized exchange.
+Kapag gumagamit ka ng sentralisadong palitan, dapat mong ideposito ang mga asset mo bago mag-trade at dapat mong ipagkatiwala sa kanila ang mga ito. Habang nakadeposito ang iyong mga asset, nanganganib ang mga ito dahil mainit sa mata ng mga hacker ang mga sentralisadong palitan.
 
 <ButtonLink href="/dapps/?category=finance#explore">
-  Tingnan ang mga decentralized application (dapps) para sa trading
+  Tingnan ang desentralisadong mga dapp
 </ButtonLink>
 
 <Divider />
 
 ### Palaguin ang iyong portfolio {#investing}
 
-May mga produkto para sa pamamahala ng pondo sa Ethereum na susubukang palaguin ang iyong portfolio batay sa estratehiyang iyong pipiliin. Ito ay awtomatiko, bukas sa lahat, at hindi nangangailangan ng manager na makikihati sa iyong kita.
+May mga produkto sa pamamahala ng pondo sa Ethereum na susubukang palaguin ang iyong portfolio batay sa estratehiyang iyong pipiliin. Ito ay awtomatiko, bukas sa lahat, at hindi nangangailangan ng taong tagapamahala na makikihati sa iyong kita.
 
-Isang magandang halimbawa ang [ DeFi Pulse Index fund (DPI)](https://defipulse.com/blog/defi-pulse-index/). Ito ay isang pondo na awtomatikong nagre-rebalance upang tiyaking palaging makikita sa portfolio mo [ang mga nangungunang DeFi token ayon sa market capitalization](https://www.coingecko.com/en/defi). Hindi mo kailangang pamahalaan ang alinman sa mga detalye at puwede kang umalis sa pondo kung kailan mo gusto.
+Ang magandang halimbawa ay ang [ pondo sa DeFi Pulse Index (DPI)](https://defipulse.com/blog/defi-pulse-index/). Ito ay pondo na awtomatikong muling nagbabalanse upang matiyak na ang iyong portfolio ay laging naglalaman ng mga nangungunang token ng token batay sa kapitalisasyon ng merkado. Hindi mo kailangang pamahalaan ang alinman sa mga detalye at maaari kang umalis sa pondo kung kailan mo gusto.
 
 <ButtonLink href="/dapps/?category=finance#explore">
-  Tingnan ang mga decentralized application (dapps) para sa investment
+  Tingnan ang mga pamumuhunan sa mga dapp
 </ButtonLink>
 
 <Divider />
@@ -245,28 +247,30 @@ Isang magandang halimbawa ang [ DeFi Pulse Index fund (DPI)](https://defipulse.c
 
 Magandang platform ang Ethereum para sa crowdfunding:
 
-- Maaaring manggagaling ang mga potensyal na funder kahit saan – bukas ang Ethereum at ang mga token nito para sa kahit sino at kahit saang sulok ng mundo.
-- Transparent ito kaya maipapakita ng mga fundraiser kung magkano na ang naipong pera. At malalaman mo kung saan napupunta o nagagastos ang lahat ng ito.
-- Maaaring mag-set up ang mga fundraiser ng mga awtomatikong refund kung, halimbawa, may tiyak na takdang oras at minimum na halaga na hindi natugunan.
+- Ang mga potensyal na tagapagpondo ay maaaring manggaling sa kahit saan—bukas ang Ethereum at ang mga token nito sa sinuman, saan man sa mundo.
+- Malinaw ito kaya maipapakita ng mga fundraiser kung magkano na ang naipon na pera. Maaari mo ring subaybayan kung paano ginagastos ang mga pondo sa kalaunan.
+- Maaaring mag-set up ang mga fundraiser ng mga awtomatikong refund kung, halimbawa, may tiyak na deadline at minimum na halaga na hindi natugunan.
 
 <ButtonLink href="/dapps/?category=finance#explore">
-  Tingnan ang mga decentralized application (dapps) para sa crowdfunding
+  Tingnan ang crowdfunding nga mga dapp
 </ButtonLink>
 
-#### Kwadratik na pondo {#quadratic-funding}
+#### Quadratic na pagpopondo {#quadratic-funding}
 
-Ang Ethereum ay open source na software at marami sa mga naunang gawain nito ay pinondohan ng komunidad. Dahil dito, nagkaroon ng interesante at bagong fundraising model: ang quadratic funding. This has the potential to improve the way we fund all types of public goods in the future.
+Ang Ethereum ay bukas na mapagkukunan na software at marami sa mga naunang gawain nito ay pinondohan ng komunidad. Nagbunga ito ng isang kawili-wiling bagong modelo ng fundraising: quadratic na pagpopondo. Ito ay may potensyal na mapabuti ang paraan ng pagpopondo natin sa lahat ng uri ng pampublikong kalakal sa hinaharap.
 
-Quadratic funding makes sure that the projects that receive the most funding are those with the most unique demand. In other words, projects that stand to improve the lives of the most people. Narito kung paano ito gumagana:
+Tinitiyak ng quadratic funding na ang mga proyektong nakakatanggap ng pinakamaraming pondo ay ang mga may pinakanatatanging pangangailangan. Sa madaling salita, mga proyektong naninindigan upang mapabuti ang buhay ng karamihan ng mga tao. Narito kung paano ito gumagana:
 
-1. May matching pool ng mga donasyon.
-2. Magsisimula ang isang round ng public funding.
-3. Maaaring ipahiwatig ng mga tao ang kanilang demand para sa isang proyekto sa pamamagitan ng pag-donate ng pera.
-4. Kapag natapos na ang round, ang matching pool ay ipinapamahagi sa mga proyekto. Ang may pinakakakaibang demand ang makakakuha ng pinakamalaking halaga mula sa matching pool.
+1. May matching pool ng donasyon na mga pondo.
+2. Nagsisimula ang isang round ng pampublikong pagpopondo.
+3. Maaaring ipahayag ng mga tao ang kanilang interes sa isang proyekto sa pamamagitan ng donasyon na pera.
+4. Kapag natapos na ang round, ang matching pool ay ipinapamahagi sa mga proyekto. Ang mga may pinakamaraming natatanging interes ang makakakuha ng pinakamalaking halaga mula sa matching pool.
 
-Ibig sabihin nito, ang Proyekto A na may 100 na donasyon na nagkakahalaga ng 1 dolyar ay maaaring magkaroon ng mas maraming pondo kaysa sa Proyekto B na may isang donasyon na nagkakahalaga ng 10,000 dolyar (depende sa laki ng matching pool).
+Ibig sabihin nito, ang Proyekto A na may 100 donasyon na 1 dolyar ay maaaring magkaroon ng mas malaking pondo kaysa sa Proyekto B na may nag-iisang donasyon na 10,000 dolyar (depende sa laki ng matching pool).
 
-[Iba pang detalye tungkol sa quadratic funding](https://wtfisqf.com)
+<ButtonLink href="https://wtfisqf.com">
+  Iba pang detalye tungkol sa quadratic funding
+</ButtonLink>
 
 <Divider />
 
@@ -320,6 +324,8 @@ Maaaring isipin na may mga layer ang DeFi:
 3. Ang mga protocol – [mga smart contract](/glossary/#smart-contract) na nagbibigay ng kakayahan, halimbawa, sa isang serbisyong nagpapahintulot ng decentralized na pagpapautang ng mga asset.
 4. [Ang mga application](/dapps/) – ang mga produkto na ginagamit natin para pamahalaan at i-access ang mga protocol.
 
+Tandaan: karamihan sa DeFi ay gumagamit ng [pamantayan ng ERC-20](/glossary/#erc-20). Gumagamit ang mga application sa DeFi ng wrapper para sa ETH na tinatawag na Wrapped Ether (WETH). [Matuto pa ng higit tungkol sa wrapped ether](/wrapped-eth).
+
 ## Gumawa ng DeFi {#build-defi}
 
 Ang DeFi ay isang open-source movement. Ang mga protocol at application ng DeFi ay bukas para i-inspect, i-fork, at pagandahin mo. Dahil sa layered stack na ito (gumagamit ang lahat ng ito ng parehong base blockchain at mga asset), ang mga protocol ay maaaring pagsama-samahin upang gumawa ng mga natatanging oportunidad.
@@ -328,13 +334,12 @@ Ang DeFi ay isang open-source movement. Ang mga protocol at application ng DeFi 
   Iba pang detalye tungkol sa mga decentralized application (dapps) para sa paggawa
 </ButtonLink>
 
-## Karagdagang pagbabasa {#futher-reading}
+## Karagdagang pagbabasa {#further-reading}
 
 ### DeFi data {#defi-data}
 
 - [DeFi Prime](https://defiprime.com/)
 - [Defi Llama](https://defillama.com/)
-- [DeFi Rate](https://defirate.com/)
 
 ### Mga artikulo tungkol sa DeFi {#defi-articles}
 
@@ -348,5 +353,5 @@ Ang DeFi ay isang open-source movement. Ang mga protocol at application ng DeFi 
 
 ### Mga Komunidad {#communities}
 
-- [Discord server ng DeFi Llama](https://discord.gg/buPFYXzDDd)
+- [Discord server ng DeFi Llama](https://discord.defillama.com/)
 - [Discord server ng DeFi Pulse](https://discord.gg/Gx4TCTk)

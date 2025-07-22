@@ -6,6 +6,10 @@ lang: tr
 
 # Web3'e Giriş {#introduction}
 
+<div className="mt-4">
+<ListenToPlayer slug="/web3/" />
+</div>
+
 Merkezileştirme, milyarlarca insanın World Wide Web'e katılmasına yardımcı oldu ve üzerinde yaşadığı istikrarlı, sağlam altyapıyı yarattı. Aynı zamanda bir avuç merkezi kuruluş World Wibe Web'in büyük bölümünde neye izin verilip verilmemesi gerektiğine tek taraflı olarak karar verebilmelerini sağlayan bir güce sahip oldu.
 
 Web3 bu ikileme bir cevaptır. Büyük teknoloji şirketleri tarafından tekelleştirilen bir Web yerine, Web3 merkeziyetsizliği benimsiyor ve kullanıcıları tarafından inşa ediliyor, işletiliyor ve sahipleniliyor. Web3, gücü şirketlerden ziyade bireylerin eline verir. Web3 hakkında konuşmadan önce buraya nasıl geldiğimizi keşfedelim.
@@ -59,7 +63,7 @@ Web3'ün müthiş özelliklerini soyutlamak ve belli başlı kategorilere ayırm
 
 Web3, dijital varlıklarınızın mülkiyet hakkını benzeri görülmemiş bir şekilde size verir. Örneğin, bir web2 oyunu oynadığınızı varsayalım. Bir oyun içi öğe satın alırsanız, bu doğrudan hesabınıza bağlanır. Oyunun yaratıcıları hesabınızı silerse bu öğeleri kaybedersiniz. Oyunu oynamayı bırakırsanız da oyun içi öğelerinize yatırdığınız değeri kaybedersiniz.
 
-Web3, [eşsiz jetonlar (NFT'ler)](/nft/) aracılığıyla doğrudan mülkiyete izin verir. Hiç kimse, hatta oyunun yaratıcıları bile, mülkiyetinizi elinizden alma gücüne sahip değildir. Oyunu oynamayı bırakırsanız da oyun içi öğelerinizi açık pazarlarda satabilir veya takas edebilir ve değerini geri alabilirsiniz.
+Web3, [eşsiz jetonlar (NFT'ler)](/glossary/#nft) aracılığıyla doğrudan mülkiyete olanak tanır. Hiç kimse, hatta oyunun yaratıcıları bile, mülkiyetinizi elinizden alma gücüne sahip değildir. Oyunu oynamayı bırakırsanız da oyun içi öğelerinizi açık pazarlarda satabilir veya takas edebilir ve değerini geri alabilirsiniz.
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>NFT’ler hakkında daha fazlasını öğrenin</div>
@@ -82,7 +86,7 @@ Web 2.0, içerik oluşturucuların kuralları değiştirmemeleri için platforml
 
 Web3'teki verilerinize sahip olmanın yanı sıra, bir şirkette hisse gibi davranan tokenleri kullanarak platforma kollektif olarak sahip olabilirsiniz. DAO'lar, bir platformun merkeziyetsiz sahipliğini koordine etmenize ve geleceği hakkında kararlar almanıza izin verir.
 
-DAO'lar teknik olarak, bir kaynak havuzu (tokenler) üzerinde merkeziyetsiz karar vermeyi otomatikleştiren, üzerinde anlaşmaya varılmış akıllı sözleşmeler olarak tanımlanır. Tokenli kullanıcılar, kaynakların nasıl harcandığına oy verir ve kod, oylama sonucunu otomatik olarak gerçekleştirir.
+DAO'lar teknik olarak, bir kaynak havuzu (jetonlar) üzerinde merkeziyetsiz karar vermeyi otomatikleştiren, üzerinde anlaşmaya varılmış [akıllı sözleşmeler](/glossary/#smart-contract) olarak tanımlanır. Tokenli kullanıcılar, kaynakların nasıl harcandığına oy verir ve kod, oylama sonucunu otomatik olarak gerçekleştirir.
 
 Ancak, insanlar birçok Web3 topluluğunu DAO olarak tanımlar. Bu toplulukların tümü, koda göre farklı merkeziyetsizlik ve otomasyon seviyelerine sahiptir. Şu anda DAO'ların neler olduğunu ve gelecekte nasıl gelişebileceklerini araştırıyoruz.
 
@@ -97,15 +101,11 @@ Ancak, insanlar birçok Web3 topluluğunu DAO olarak tanımlar. Bu toplulukları
 
 Geleneksel yöntemde kullandığınız her platform için bir hesap oluştururdunuz. Örneğin, bir Twitter hesabınız, bir YouTube hesabınız ve bir Reddit hesabınız olabilir. Görünen adınızı veya profil resminizi değiştirmek mi istiyorsunuz? Bunu her hesap için ayrı ayrı yapmanız gerekir. Bazı durumlarda sosyal oturum açma araçlarını kullanabilirsiniz ancak bu durum tanıdık bir sorunu, sansürü de beraberinde getirir. Tek bir tıklamayla bu platformlar sizi tüm çevrimiçi yaşamınızın dışında tutabilir. Daha da kötüsü, birçok platform, bir hesap oluşturmak için kişisel olarak tanımlanabilir bilgilerle, onlara güvenmenizi gerektirir.
 
-Web3, dijital kimliğinizi bir Ethereum adresi ve ENS profili ile kontrol etmenize izin vererek bu sorunları çözer. Bir Ethereum adresi kullanmak güvenli, sansüre dayanıklıdır ve anonim olan platformlarda tek bir oturum açabilmenizi sağlar.
-
-<ButtonLink href="https://login.xyz/">
-  Ethereum ile giriş yapın
-</ButtonLink>
+Web3, dijital kimliğinizi bir Ethereum adresi ve [Ethereum İsim Servisi (ENS)](/glossary/#ens) profili ile kontrol etmenize olanak tanıyarak bu sorunları çözer. Bir Ethereum adresi kullanmak güvenli, sansüre dayanıklıdır ve anonim olan platformlarda tek bir oturum açabilmenizi sağlar.
 
 ### Yerel ödemeler {#native-payments}
 
-Web2'nin ödeme altyapısı bankalara ve ödeme işlemcilerine dayanır; banka hesabı olmayan veya kapsam dışı bırakılan ülke sınırları içinde yaşayan kişileri hariç tutar. Web3, doğrudan tarayıcıdan para göndermek için [ETH](/eth/) gibi tokenleri kullanır ve güvenilir üçüncü taraf gerektirmez.
+Web2'nin ödeme altyapısı bankalara ve ödeme işlemcilerine dayanır; banka hesabı olmayan veya kapsam dışı bırakılan ülke sınırları içinde yaşayan kişileri hariç tutar. Web3, doğrudan tarayıcıdan para göndermek için [ETH](/glossary/#ether) gibi tokenleri kullanır ve güvenilir üçüncü taraf gerektirmez.
 
 <ButtonLink href="/eth/">
   ETH hakkında daha fazlası
@@ -117,7 +117,7 @@ Web3'ün mevcut halindeki sayısız faydasına rağmen ekosistemin gelişmesi i�
 
 ### Erişilebilirlik {#accessibility}
 
-Ethereum ile Giriş Yapma gibi önemli Web3 özellikleri, herkesin sıfır maliyetle kullanması için zaten mevcuttur. Ancak işlemlerin göreli maliyeti hâlâ birçok kişi için engelleyicidir. Yüksek işlem ücretleri nedeniyle Web3'ün daha az varlıklı, gelişmekte olan ülkelerde kullanılması daha az olasıdır. Ethereumda bu zorluklar [yol haritası](/roadmap/) ve [katman 2 ölçeklendirme aracılığıyla](/developers/docs/scaling/) çözülüyor. Teknoloji hazır, ancak Web3'ü herkese erişilebilir kılmak için katman 2'nin daha yüksek düzeyde benimsenmesine ihtiyacımız var.
+Ethereum ile Giriş Yapma gibi önemli Web3 özellikleri, herkesin sıfır maliyetle kullanması için zaten mevcuttur. Ancak işlemlerin göreli maliyeti hâlâ birçok kişi için engelleyicidir. Yüksek işlem ücretleri nedeniyle Web3'ün daha az varlıklı, gelişmekte olan ülkelerde kullanılması daha az olasıdır. Ethereum'da bu zorluklar, [yol haritası](/roadmap/) ve [katman 2 ölçeklendirme çözümleri](/glossary/#layer-2) aracılığıyla çözülüyor. Teknoloji hazır, ancak Web3'ü herkese erişilebilir kılmak için katman 2'nin daha yüksek düzeyde benimsenmesine ihtiyacımız var.
 
 ### Kullanıcı deneyimi {#user-experience}
 
@@ -151,11 +151,11 @@ Web3 ile daha iyi bir Web yaratmanın henüz başındayız, ancak bunu destekley
 
 Web3 rijit bir şekilde tanımlanmamıştır. Çeşitli topluluk katılımcıları bu konuda farklı bakış açılarına sahiptir. İşte bunlardan birkaçı:
 
-- [Web3 nedir? Geleceğin Merkeziyetsiz İnterneti Açıklandı](https://www.freecodecamp.org/news/what-is-web3/) – _Nader Dabit_
+- [Web3 nedir? Geleceğin Merkeziyetsiz İnterneti Açıklandı](https://www.freecodecamp.org/news/what-is-web3) – _Nader Dabit_
 - [Web 3'ü Anlamak](https://medium.com/l4-media/making-sense-of-web-3-c1a9e74dcae)–_Josh Stark_
 - [Web3 Neden Önemli?](https://future.a16z.com/why-web3-matters/)—_Chris Dixon_
 - [Merkeziyetsizlik Neden Önemli?](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) - _Chris Dixon_
 - [Web3 Manzarası](https://a16z.com/wp-content/uploads/2021/10/The-web3-Readlng-List.pdf) – _a16z_
-- [Web3 Tartışması](https://www.notboring.co/p/the-web3-debate?s=r) – _Packy McCormick_
+- [Web3 Tartışması](https://www.notboring.co/p/the-web3-debate) – _Packy McCormick_
 
 <QuizWidget quizKey="web3" />

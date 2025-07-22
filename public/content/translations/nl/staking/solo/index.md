@@ -17,6 +17,8 @@ summaryPoints:
 
 Solo staking is de handeling van het [uitvoeren van een Ethereum-node](/run-a-node/) aangesloten op het internet en het storten van 32 ETH om een [validator](#faq)te activeren, wat u de mogelijkheid geeft om rechtstreeks deel te nemen aan netwerkconsensus.
 
+**Solo staking verhoogt de decentralisatie van het Ethereum-netwerk**, waardoor Ethereum beter bestand is tegen censuur en robuuster is tegen aanvallen. Andere staking-methoden helpen het netwerk mogelijk niet op dezelfde manier. Solo staking is de beste staking-optie voor het beveiligen van Ethereum.
+
 Een Ethereum-node bestaat uit zowel een uitvoeringslaag (EL)-client, als een consensuslaag (CL)-client. Deze clients zijn software die naast elkaar werken, samen met een geldige set ondertekeningssleutels, om transacties en blokken te verifiëren, het juiste hoofd van de chain te attesteren en blokken voor te stellen.
 
 Solo stakers zijn verantwoordelijk voor het bedienen van de hardware die nodig is om deze clients uit te voeren. Het is ten zeerste aangeraden om hiervoor een speciale machine te gebruiken die u thuis bedient. Dit is zeer nuttig voor de gezondheid van het netwerk.
@@ -25,18 +27,12 @@ Een solo staker ontvangt beloningen rechtstreeks uit het protocol voor het goed 
 
 ## Waarom solo staken? {#why-stake-solo}
 
-Solo staking brengt meer verantwoordelijkheid met zich mee, maar geeft u maximale controle over uw geld en staking-installatie.
+Solo staking brengt meer verantwoordelijkheid met zich mee, maar biedt je maximale controle over je fondsen en staking-instellingen.
 
 <CardGrid>
-  <Card title="Verdien nieuwe ETH" emoji="💸">
-    Verdien in ETH omgezette beloningen direct uit het protocol wanneer uw validator online is, zonder dat tussenpersonen een deel afpakken.
-  </Card>
-  <Card title="Volledige controle" emoji="🎛️">
-    Bewaar je eigen sleutels. Kies de combinatie van clients en hardware waarmee u uw risico kunt minimaliseren en het best kunt bijdragen aan de gezondheid en beveiliging van het netwerk. Staking-diensten van derden nemen deze beslissingen voor u, en deze maken niet altijd de beste keuzes.
-  </Card>
-  <Card title="Netwerkbeveiliging" emoji="🔐">
-    Solo staking is de meest impactvolle manier om te staken. Door thuis een validator op uw eigen hardware uit te voeren, versterkt u de robuustheid, decentralisatie en veiligheid van het Ethereum-protocol.
-  </Card>
+  <Card title="Verdien nieuwe ETH" emoji="💸" description="Earn ETH-denominated rewards directly from the protocol when your validator is online, without any middlemen taking a cut." />
+  <Card title="Volledige controle" emoji="🎛️" description="Keep your own keys. Choose the combination of clients and hardware that allows you to minimize your risk and best contribute to the health and security of the network. Third-party staking services make these decisions for you, and they don't always make the safest choices." />
+  <Card title="Netwerkbeveiliging" emoji="🔐" description="Solo staking is the most impactful way to stake. By running a validator on your own hardware at home, you strengthen the robustness, decentralization, and security of the Ethereum protocol." />
 </CardGrid>
 
 ## Overwegingen voordat u begint met solo staking {#considerations-before-staking-solo}
@@ -44,32 +40,37 @@ Solo staking brengt meer verantwoordelijkheid met zich mee, maar geeft u maximal
 We zouden heel graag willen dat solo staking toegankelijk en risicovrij zou zijn voor iedereen, maar dit is niet de realiteit. Er zijn enkele praktische en serieuze overwegingen om in gedachten te houden voordat u kiest voor het solo staken van uw ETH.
 
 <InfoGrid>
-  <ExpandableCard title="Verplicht lezen" eventCategory="SoloStaking" eventName="clicked required reading">
-    Bij het beheren van uw eigen node moet u wat tijd besteden om te leren hoe u de software gebruikt die u heeft gekozen. Dit heeft betrekking op het lezen van relevante documentatie en letten op communicatiekanalen van die dev-teams.
-    Hoe meer u begrijpt van de software die u gebruikt en hoe proof-of-stake werkt, hoe minder risico's er zullen zijn als staker, en hoe makkelijker het zal zijn om problemen op te lossen die zich kunnen voordoen.
-  </ExpandableCard>
-  <ExpandableCard title="Comfortabel met computers" eventCategory="SoloStaking" eventName="clicked comfortable with computers">
-    Node setup vereist een redelijk comfortniveau bij het werken met computers, hoewel nieuwe tools dit makkelijker maken na verloop van tijd. Het begrijpen van de opdrachtregelinterface is nuttig, maar niet langer strikt nodig.
-    Het vereist ook een zeer elementaire hardwareinstallatie en enig begrip van de aanbevolen minimum specificaties.
-  </ExpandableCard>
-  <ExpandableCard title="Veilig sleutelbeheer" eventCategory="SoloStaking" eventName="clicked secure key management">
-    Net als hoe privé-sleutels uw Ethereum-adres beveiligen, moet u specifieke sleutels genereren voor uw validator. U moet begrijpen hoe u uw herstelzinnen en privé-sleutels veilig moet houden.
-    <p style={{marginTop: "1rem"}}><a href="/security">Ethereum-beveiliging en -scampreventie</a></p>
-  </ExpandableCard>
-  <ExpandableCard title="Geen opnames (voorlopig)" eventCategory="SoloStaking" eventName="clicked no withdrawing">
-    Het opnemen van gestakete ETH of beloningen van een validatorsaldo wordt nog niet ondersteund. Ondersteuning voor opnames is gepland voor de aankomende Shanghai upgrade. U moet er rekening mee houden dat uw ETH ten minste één tot twee jaar vergrendeld blijft. Na de Shanghai upgrade bent u vrij om delen of uw hele stake op te nemen, als u dat wenst.
-  </ExpandableCard>
-  <ExpandableCard title="Onderhoud" eventCategory="SoloStaking" eventName="clicked maintenance">
-    Hardware faalt af en toe, netwerkverbindingen geven soms fouten en client-software moet soms bijgewerkt worden. Node-onderhoud is onvermijdelijk en vereist af en toe uw aandacht. U moet er zeker van zijn dat u op de hoogte blijft van alle verwachte netwerkupgrades of andere kritische client-upgrades.
-  </ExpandableCard>
-  <ExpandableCard title="Betrouwbare uptime" eventCategory="SoloStaking" eventName="clicked reliable uptime">
-    Uw beloningen zijn in verhouding tot de tijd die uw validator online is en juist attesteert. Downtime leidt tot boetes in verhouding tot hoeveel andere andere validators offline zijn op hetzelfde moment, maar <a href="#faq">leidt niet tot slashing</a>. Bandbreedte is ook van belang, omdat de beloningen verminderen voor attesten die niet op tijd worden ontvangen. De vereisten zullen verschillen, maar een minimum van +/- 10 MB/s wordt aanbevolen.
-  </ExpandableCard>
-  <ExpandableCard title="Slashing-risico" eventCategory="SoloStaking" eventName="clicked slashing risk">
-    Anders dan inactiviteitsboetes voor offline zijn, is er ook <em>slashing</em>. Dit is een veel serieuzere boete gereserveerd voor kwaadwillige misdrijven. Door een minderheid-client met sleutels enkel op één machine tegelijk te gebruiken, wordt het risico op slashing geminimaliseerd. Toch moeten alle stakers zich bewust zijn van de risico's van slashing.
+<ExpandableCard title="Verplicht lezen" eventCategory="SoloStaking" eventName="clicked required reading">
+Bij het beheren van uw eigen node moet u wat tijd besteden om te leren hoe u de software gebruikt die u heeft gekozen. Dit heeft betrekking op het lezen van relevante documentatie en letten op communicatiekanalen van die dev-teams.
 
-    <p><a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/">Meer over slashing en validatorlevenscyclus</a></p>
-  </ExpandableCard>
+Hoe meer u begrijpt van de software die u gebruikt en hoe proof-of-stake werkt, hoe minder risico's er zullen zijn als staker, en hoe makkelijker het zal zijn om problemen op te lossen die zich kunnen voordoen.
+</ExpandableCard>
+
+<ExpandableCard title="Comfortabel met computers" eventCategory="SoloStaking" eventName="clicked comfortable with computers">
+Node setup vereist een redelijk comfortniveau bij het werken met computers, hoewel nieuwe tools dit makkelijker maken na verloop van tijd. Het begrijpen van de opdrachtregelinterface is nuttig, maar niet langer strikt nodig.
+
+Het vereist ook een zeer elementaire hardwareinstallatie en enig begrip van de aanbevolen minimum specificaties.
+</ExpandableCard>
+
+<ExpandableCard title="Veilig sleutelbeheer" eventCategory="SoloStaking" eventName="clicked secure key management">
+Net als de wijze waarop privé-sleutels je Ethereum-adres beveiligen, moet je specifieke sleutels genereren voor je validator. Je moet begrijpen hoe je alle zaadzinnen of privé-sleutels veilig kunt bewaren.{' '}
+
+<a href="/security/">Ethereum-beveiliging en scampreventie</a>
+</ExpandableCard>
+
+<ExpandableCard title="Onderhoud" eventCategory="SoloStaking" eventName="clicked maintenance">
+Hardware faalt af en toe, netwerkverbindingen geven soms fouten en client-software moet soms bijgewerkt worden. Node-onderhoud is onvermijdelijk en vereist af en toe uw aandacht. U moet er zeker van zijn dat u op de hoogte blijft van alle verwachte netwerkupgrades of andere kritische client-upgrades.
+</ExpandableCard>
+
+<ExpandableCard title="Betrouwbare uptime" eventCategory="SoloStaking" eventName="clicked reliable uptime">
+Uw beloningen zijn in verhouding tot de tijd die uw validator online is en juist attesteert. Downtime leidt tot boetes in verhouding tot hoeveel andere andere validators offline zijn op hetzelfde moment, maar <a href="#faq">leidt niet tot slashing</a>. Bandbreedte is ook van belang, omdat de beloningen verminderen voor attesten die niet op tijd worden ontvangen. De vereisten zullen verschillen, maar een minimum van +/- 10 MB/s wordt aanbevolen.
+</ExpandableCard>
+
+<ExpandableCard title="Slashing-risico" eventCategory="SoloStaking" eventName="clicked slashing risk">
+Anders dan inactiviteitsboetes voor offline zijn, is er ook <em>slashing</em>. Dit is een veel serieuzere boete gereserveerd voor kwaadwillige misdrijven. Door een minderheid-client met sleutels enkel op één machine tegelijk te gebruiken, wordt het risico op slashing geminimaliseerd. Toch moeten alle stakers zich bewust zijn van de risico's van slashing.
+
+<a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> Meer over slashing en de levenscyclus van validators</a>
+</ExpandableCard>
 </InfoGrid>
 
 <StakingComparison page="solo" />
@@ -78,9 +79,11 @@ We zouden heel graag willen dat solo staking toegankelijk en risicovrij zou zijn
 
 <StakingHowSoloWorks />
 
-Indien ooit gewenst, kunt u stoppen als validator; hiermee hoeft u niet meer online te blijven, wat wel het verkrijgen van verdere beloningen stopt. Wees ervan bewust dat _opname_ van deze fondsen niet mogelijk zal zijn tot de geplande Shanghai upgrade.
+Zolang je actief bent, verdien je ETH-beloningen, die periodiek worden gestort op je opnameadres.
 
-Na de Shanghai upgrade kunnen gebruikers zowel hun beloningen als hun stake opnemen als ze dat willen.
+Indien ooit gewenst, kunt u stoppen als validator; hiermee hoeft u niet meer online te blijven, wat wel het verkrijgen van verdere beloningen stopt. Je resterende saldo wordt dan opgenomen op het opnameadres dat je tijdens het instellen hebt opgegeven.
+
+[Meer over staking-opnames](/staking/withdrawals/)
 
 ## Aan de slag met het Staking Launchpad {#get-started-on-the-staking-launchpad}
 
@@ -100,21 +103,21 @@ Attribuutindicatoren worden hieronder gebruikt om opmerkelijke sterke of zwakke 
 
 Er zijn verschillende opties beschikbaar om u te helpen met uw installatie. Gebruik bovenstaande indicatoren om u door de onderstaande tools heen te leiden.
 
-<InfoBanner emoji="⚠️" isWarning>
-Houd rekening met het belang van het kiezen van een <a href="/developers/docs/nodes-and-clients/client-diversity/">minoriteit-client</a>, aangezien dit de veiligheid van het netwerk verbetert en uw risico beperkt. Tools die u in staat stellen om een minoriteit-client in te stellen worden aangeduid als <em style={{ textTransform: "uppercase" }}>"multi-client."</em>
-</InfoBanner>
+<ProductDisclaimer />
 
-### Node tools
+### Node-tools
 
 <StakingProductsCardGrid category="nodeTools" />
 
+Houd rekening met het belang van het kiezen van een [minoriteit-client](/developers/docs/nodes-and-clients/client-diversity/), aangezien dit de veiligheid van het netwerk verbetert en uw risico beperkt. Tools die je in staat stellen om een minderheid-client in te stellen worden aangeduid als <em style={{ textTransform: "uppercase" }}>"multi-client."</em>
+
 ### Sleutelgenerators
 
-Deze tools worden gebruikt als een alternatief voor de [Staking Deposit CLI](https://github.com/ethereum/staking-deposit-cli/), om u te helpen met het genereren van sleutels.
+Deze tools worden gebruikt als een alternatief voor de [Staking Deposit CLI](https://github.com/ethereum/staking-deposit-cli/), om te helpen met het genereren van sleutels.
 
 <StakingProductsCardGrid category="keyGen" />
 
-Heeft u een voorstel voor een staking tool die we hebben gemist? Bekijk ons [productlijstbeleid](/contributing/adding-staking-products/) om te zien of het een goede fit zou zijn en om het ter beoordeling in te dienen.
+Heb je een voorstel voor een stakingtool die we hebben gemist? Bekijk ons [productlijstbeleid](/contributing/adding-staking-products/) om te zien of het passend zou zijn en om het ter beoordeling in te dienen.
 
 ## Bekijk solo staking-handleidingen {#staking-guides}
 
@@ -126,14 +129,14 @@ Dit zijn enkele van de meest voorkomende vragen over staking die de moeite waard
 
 <ExpandableCard title="Wat is een validator?">
 
-Een _validator_ is een virtuele entiteit die op Ethereum bestaat en deelneemt aan de consensus van het Ethereum-protocol. Validators worden vertegenwoordigd door een saldo, een publieke sleutel en andere eigenschappen. Een _validator client_ is de software die namens de validator handelt door de privé-sleutel te bewaren en te gebruiken. Een enkele validator-client kan verschillende sleutelparen hebben die verschillende validators kunnen controleren.
+Een <em>validator</em> is een virtuele entiteit die op Ethereum bestaat en deelneemt aan de consensus van het Ethereum-protocol. Validators worden vertegenwoordigd door een saldo, een publieke sleutel en andere eigenschappen. Een <em>validator-client</em> is de software die namens de validator handelt door de privé-sleutel ervan te bewaren en te gebruiken. Een enkele validator-client kan verschillende sleutelparen hebben die verschillende validators kunnen controleren.
 
 </ExpandableCard>
 
 <ExpandableCard title="Kan ik meer dan 32 ETH storten?">
 Voor elk sleutelpaar gekoppeld aan een validator moet precies 32 ETH geactiveerd worden. Meer ETH gestort op een enkele set sleutels verhoogt het beloningspotentieel niet, aangezien elke validator is beperkt tot een <a href="https://www.attestant.io/posts/understanding-validator-effective-balance/">effectief saldo</a> van 32 ETH. Dit betekent dat staking wordt uitgevoerd in 32 ETH-incrementen, elk met zijn eigen set sleutels en saldo.
 
-Stort niet meer dan 32 ETH voor één enkele validator. Het zal je beloningen niet verhogen, en het wordt vergrendeld tot de geplande Shanghai update.
+Stort niet meer dan 32 ETH voor één enkele validator. Het zal je beloningen niet verhogen. Als er een opnameadres is ingesteld voor de validator, zullen overtollige fondsen boven 32 ETH automatisch worden opgenomen op dit adres tijdens de volgende <a href="/staking/withdrawals/#validator-sweeping">validator-sweep</a>.
 
 Als solo staking u te veeleisend lijkt, overweeg dan om een <a href="/staking/saas/">staking-as-a-service</a> provider te gebruiken, of als je met minder dan 32 ETH werkt, bekijk dan de <a href="/staking/pools/">staking pools</a>.
 </ExpandableCard>
@@ -155,8 +158,10 @@ Het uitvoeren van een supermeerderheid-client (elke client die gebruikt wordt do
 
 Gelijkwaardige bugs in een <em>minderheid-client zouden nooit afgerond worden</em> en zouden dus nooit resulteren in een surround vote; het zou simpelweg leiden tot inactiviteitsboetes, <em>niet tot slashing</em>.
 
-<p><a href="https://hackernoon.com/ethereums-client-diversity-problem">Meer informatie over het belang van het uitvoeren van een minderheid-client.</a></p>
-<p><a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50">Meer informatie over slashing-preventie</a></p>
+<ul>
+  <li><a href="https://hackernoon.com/ethereums-client-diversity-problem">Meer informatie over het belang van het uitvoeren van een minderheid-client.</a></li>
+  <li><a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50">Meer informatie over slashing-preventie</a></li>
+</ul>
 </ExpandableCard>
 
 <ExpandableCard title="Welke client is de beste?">
@@ -175,11 +180,27 @@ Hoe meer validator-clients draaien op een enkele gecentraliseerde cloud-opslagop
 Offline boetes zijn evenredig aan hoeveel andere validators er tegelijkertijd offline zijn. Het gebruik van een VPS verhoogt het risico dat offline boetes zwaarder zullen zijn, en verhoogt uw risico op kwadratische lekkage of slashing in het geval dat de uitval groot genoeg is. Om uw eigen risico en het risico voor het netwerk te minimaliseren, worden gebruikers sterk aangemoedigd om hun eigen hardware te verkrijgen en gebruiken.
 </ExpandableCard>
 
+<ExpandableCard title="Hoe kan ik mijn beloningen ontgrendelen of mijn ETH terugkrijgen?">
+
+Voor elke opname uit de Beacon Chain moeten opnamegegevens worden ingesteld.
+
+Nieuwe stakers stellen dit in op het moment dat ze de sleutel genereren en een storting doen. Bestaande stakers die dit nog niet hebben ingesteld, kunnen hun sleutels upgraden om deze functionaliteit te ondersteunen.
+
+Zodra de opnamegegevens zijn ingesteld, worden beloningsbetalingen (verzamelde ETH over de eerste 32) automatisch periodiek naar het opnameadres verzonden.
+
+Om je volledige saldo te ontgrendelen en terug te krijgen, moet je ook het proces van het afsluiten van je validator voltooien.
+
+<ButtonLink href="/staking/withdrawals/">Meer over staking-opnames</ButtonLink>
+</ExpandableCard>
+
 ## Verder lezen {#further-reading}
 
+- [De staking-directory van Ethereum](https://www.staking.directory/) - _Eridian en Spacesider_
 - [Ethereum's Client Diversity Problem](https://hackernoon.com/ethereums-client-diversity-problem) - _@emmanuelawosika 2022_
 - [Helping Client Diversity](https://www.attestant.io/posts/helping-client-diversity/) - _Jim McDonald 2022_
 - [Client diversity on Ethereum's consensus layer](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA) - _jmcook.eth 2022_
 - [How To: Shop For Ethereum Validator Hardware](https://www.youtube.com/watch?v=C2wwu1IlhDc) - _EthStaker 2022_
 - [Step by Step: How to join the Ethereum 2.0 Testnet](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) - _Butta_
 - [Eth2 Slashing Prevention Tips](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) - _Raul Jordan 2020_
+
+<QuizWidget quizKey="staking-solo" />

@@ -4,21 +4,21 @@ description: Bevezetés az Ethereum-csomópontok szerveződésébe.
 lang: hu
 ---
 
-Egy Ethereum-csomópont két kliensből áll: egy [végrehajtási kliensből](/developers/docs/nodes-and-clients/#execution-clients) és egy [konszenzusos kliensből](/developers/docs/nodes-and-clients/#consensus-clients).
+Egy Ethereum-csomópont két kliensből áll: egy [végrehajtási kliensből](/developers/docs/nodes-and-clients/#execution-clients) és egy [konszenzusos kliensből](/developers/docs/nodes-and-clients/#consensus-clients). Ahhoz, hogy egy csomópont új blokkot javasolhasson, egy [validátorklienst](#validators) is futtatnia kell.
 
-Amikor az Ethereum a [proof-of-work (munkaigazolás)](/developers/docs/consensus-mechanisms/pow/) mechanizmusát használta, akkor a végrehajtási kliens elegendő volt egy teljes Ethereum-csomópont futtatásához. A [proof-of-stake (letétigazolás)](/developers/docs/consensus-mechanisms/pow/) mechanizmusának bevezetésétől a végrehajtási kliens egy másik szoftverrel együtt kell működtetni, amely a [konszenzusos kliens](/developers/docs/nodes-and-clients/#consensus-clients).
+Amikor az Ethereum a [proof-of-work (munkaigazolás)](/developers/docs/consensus-mechanisms/pow/) mechanizmusát használta, akkor a végrehajtási kliens elegendő volt egy teljes Ethereum-csomópont futtatásához. A [proof-of-stake](/developers/docs/consensus-mechanisms/pow/) mechanizmusának bevezetésétől a végrehajtási klienst egy másik szoftverrel együtt kell működtetni, amelyet [konszenzusos kliensnek](/developers/docs/nodes-and-clients/#consensus-clients) neveznek.
 
 Ez az ábra a két Ethereum-kliens kapcsolatát mutatja. A két kliens a saját megfelelő peer-to-peer (P2P), azaz társak közötti hálózatához kapcsolódik. Külön P2P hálózatra van szükségük, mert a végrehajtási kliens a saját hálózatán terjeszti a „pletykát” a tranzakciókról, hogy azok a kliensek helyi tranzakciógyűjtőjébe kerülhessenek, miközben a konszenzusos kliens a saját hálózatán a blokkokról „pletykál”, mellyel konszenzust és láncnövekedést ér el.
 
 ![](node-architecture-text-background.png)
 
-_Ez az illusztráció a geth.ethereum.org-ról származik, és a Geth logó jeleni a végrehajtási klienseket – emellett számos más végrehajtási kliens is létezik, mint például az Erigon, Nethermind és Besu_
+_A végrehajtási kliensre több lehetőség is van, köztük az Erigon, a Nethermind és a Besu_.
 
-Ahhoz, hogy ez a két kliensből álló struktúra működni tudjon, a konszenzusos klienseknek tranzakciókötegeket kell átadni a végrehajtási kliensnek. Ahogy a kliens ezeket a tranzakciókat lokálisan végrehajtja, le tudja ellenőrizni, hogy nem sértenek-e semmilyen Ethereum szabályt, illetve a javasolt Ethereum státusz korrekt-e. Ehhez hasonlóan, amikor az adott csomópont válik a blokképítővé, akkor a konszenzusos kliensnek tranzakciókötegeket kell kérnie a Geth-től, hogy azokat az új blokkba betegye és végrehajtsa, hogy frissíteni tudja a globális státuszt. Ez a kliensek közötti kommunikáció egy helyi RPC-kapcsolaton keresztül megy végbe az [motor API-t](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md) használva.
+Ahhoz, hogy ez a két kliensből álló struktúra működni tudjon, a konszenzusos klienseknek tranzakciókötegeket kell átadni a végrehajtási kliensnek. A végrehajtási kliens a tranzakciókat lokálisan hajtja végre annak ellenőrzésére, nem sértenek-e semmilyen Ethereum-szabályt, illetve a javasolt Ethereum-státusz helyes-e. Amikor egy csomópont blokképítővé válik, akkor a konszenzusos kliensnek tranzakciókötegeket kell kérnie a végrehajtási klienstől, hogy azokat az új blokkba belefoglalja és végrehajtsa, hogy frissíteni tudja a globális státuszt. A konszentusos kliens egy helyi RPC-kapcsolaton keresztül vezérli a végrehajtási klienst a [motor API-t](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md) használva.
 
 ## Mit csinál a végrehajtási kliens? {#execution-client}
 
-A végrehajtási kliens feladata a tranzakciók kezelése, a tranzakciókról való pletykálás, a státusz kezelése és az Ethereum virtuális gép ([EVM](/developers/docs/evm/)) támogatása. Ugyanakkor **nem** felel a blokképítésért, a blokkról való pletykáért vagy a konszenzuslogika kezeléséért. Ezek a konszenzusos kliens feladatai.
+A végrehajtási kliens feladata a tranzakciók validálása, kezelése és a tranzakciókról való pletykálás, továbbá a státusz kezelése és az Ethereum virtuális gép ([EVM](/developers/docs/evm/)) támogatása. **Nem** felel a blokképítésért, a blokkról való pletykálásért vagy a konszenzuslogika kezeléséért. Ezek a konszenzusos kliens feladatai.
 
 A végrehajtási kliens végrehajtási csomagokat készít, melynek része a tranzakciók listája, a frissített státuszfa és más végrehajtással kapcsolatos adatok. A konszenzusos kliens a végrehajtási csomagot teszi bele a blokkba. A végrehajtási kliens azért is felel, hogy az új blokkok tranzakcióit újrafuttatva biztosítsa azok érvényességét. A tranzakciók újrafuttatása a végrehajtási kliens beépített számítógépén történik, melyet [Ethereum virtuális gépként (EVM)](/developers/docs/evm) ismerünk.
 
@@ -37,7 +37,7 @@ A konszenzusos kliens nem vesz részt a tanúsításban vagy a blokkelőterjeszt
 
 ## Validátorok {#validators}
 
-A csomópont működtetői hozzáadhatnak egy validátort a konszenzusos klienseikhez azzal, hogy 32 ETH-t letétbe helyeznek a letéti szerződésben. A validátorkliens a konszenzusos klienssel van összecsomagolva, és bármikor hozzá lehet adni egy csomóponthoz. A validátor kezeli a tanúsításokat és a blokkelőterjesztéseket. Lehetővé teszik, hogy a csomópont jutalmakat szerezzen vagy ETH-t veszítsen a büntetések és kizárások révén. A validátorszoftver futtatása megengedi, hogy a csomópont új blokkot is javasolhasson.
+A letétbe helyezés és a validátorszoftver futtatása megengedi, hogy a csomópont új blokkot is javasolhasson. A csomópont működtetői hozzáadhatnak egy validátort a konszenzusos klienseikhez azzal, hogy 32 ETH-t letétbe helyeznek a letéti szerződésben. A validátorkliens a konszenzusos klienssel van összecsomagolva, és bármikor hozzá lehet adni egy csomóponthoz. A validátor kezeli a tanúsításokat és a blokkelőterjesztéseket. Lehetővé teszi, hogy a csomópont jutalmakat szerezzen vagy ETH-t veszítsen a büntetések és kizárások révén.
 
 [Bővebben a letétbe helyezésről](/staking/).
 

@@ -22,7 +22,7 @@ A Nakamoto konszenzus, amely a proof-of-work (PoW) mechanizmust használja, egyk
 
 A proof-of-work a mögöttes algoritmus, amely a nehézséget és a szabályokat határozza meg a munkához, amelyet a bányászok végeznek proof-of-work blokkláncokon. A bányászat maga a „munka”. Érvényes blokkok hozzáadását jelenti a lánchoz. Ez azért fontos, mert a lánc hossza segíti a hálózatot abban, hogy kövesse a blokklánc megfelelő elágazását. Minél több „munka” van elvégezve, annál hosszabb a lánc, és minél magasabb a blokkszám, annál inkább biztosabb lehet a hálózat a dolgok jelenlegi állapotában.
 
-[A bányászatról bővebben](/developers/docs/consensus-mechanisms/pow/mining/)
+[Többet a bányászatról](/developers/docs/consensus-mechanisms/pow/mining/)
 
 ## Hogyan működött az Ethereum proof-of-work mechanizmusa? {#how-it-works}
 
@@ -106,3 +106,4 @@ Nagy vonalakban a proof-of-stake-nek ugyanaz a végcélja, mint a proof-of-work-
 
 - [Bányászat](/developers/docs/consensus-mechanisms/pow/mining/)
 - [Proof-of-stake](/developers/docs/consensus-mechanisms/pos/)
+- [Proof-of-authority (jogosultsági igazolás)](/developers/docs/consensus-mechanisms/poa/)

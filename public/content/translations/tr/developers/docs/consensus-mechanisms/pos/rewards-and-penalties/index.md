@@ -4,7 +4,7 @@ description: Hisse ispatı Ethereum'da protokol içi teşvikler hakkında bilgi 
 lang: tr
 ---
 
-Ethereum kendi kripto parası olan ether (ETH) ile güvenli hale getirilir. Blok doğrulamaya ve zincirin başını belirlemeye katılım sağlamak isteyen düğüm operatörleri Ethereum üzerindeki bir akıllı sözleşmeye ether yatırırlar. Sonrasında ise eşler arası ağ üzerinde alınan yeni blokların geçerliliğini kontrol eden ve zincirin başını tespit etmek için çatal seçim algoritmasını kullanan doğrulayıcı yazılımını çalıştırmak için ether cinsinden ödeme alırlar.
+Ethereum kendi kripto parası olan ether (ETH) ile güvenli hale getirilir. Blokları doğrulamaya ve zincirin başını belirlemeye katılmak isteyen düğüm operatörleri, Ethereum'daki [depozito sözleşmesine](/staking/deposit-contract/) ether yatırır. Sonrasında ise eşler arası ağ üzerinde alınan yeni blokların geçerliliğini kontrol eden ve zincirin başını tespit etmek için çatal seçim algoritmasını kullanan doğrulayıcı yazılımını çalıştırmak için ether cinsinden ödeme alırlar.
 
 Bir doğrulayıcı için iki ana rol vardır: 1) yeni blokları kontrol etmek ve eğer geçerli iseler onları "tasdik etmek", 2) tüm doğrulayıcı havuzundan rastgele olarak seçildiğinde yeni bloklar önermek. Eğer doğrulayıcı bu görevlerin ikisini de istendiğinde yapmakta başarısız olursa ether ödemesini kaçıracaktır. Doğrulayıcılar ayrıca bazen imza toplamak ve senkronizasyon kurullarına katılım sağlamak ile görevlendirilirler.
 
@@ -50,7 +50,7 @@ PROPOSER_WEIGHT uint64(8)
 
 Bu bileşenin toplamı 64'tür. Toplam uygulanabilir ağırlıklarının toplamının 64'e bölümü olarak hesaplanır. Zamanında kaynak, hedef ve baş oyları vermiş olan, bir blok önermiş olan ve bir senkronizasyon kuruluna katılmış olan bir doğrulayıcı `64/64 * base_reward == base_reward` alabilir. Ancak, bir doğrulayıcı normal olarak bir blok önericisi değildir, yani alabilecekleri maksimum ödül `64-8 /64 * base_reward == 7/8 * base_reward` olacaktır. Ne blok önericisi ne de bir senkronizasyon kurulunda olmayan doğrulayıcılar `64-8-2 / 64 * base_reward == 6.75/8 * base_reward` alabilir.
 
-Hızlı tasdikleri teşvik etmek için ek bir ödül eklenmiştir. Bu `inclusion_delay_reward` olmaktadır. Bu, `base_reward` ile çarpılan `1/delay` şeklinde hesaplanan bir değere sahiptir, burada `delay`, blok önerisinin ve tasdiklemenin ayrıldığı yuva sayısını ifade eder. Örnek olarak, tasdik eğer ki blok önerisinin bir yuvası içinde verilirse tasdikleyici `base_reward * 1/1 == base_reward` alır. Tasdik diğer yuvaya varırsa, tasdikleyici `base_reward * 1/2` alır ve bu biçimde devam eder.
+Hızlı tasdikleri teşvik etmek için ek bir ödül eklenmiştir. Bu `inclusion_delay_reward` olmaktadır. Bu, `base_reward` ile çarpılan `1/delay` şeklinde hesaplanan bir değere sahiptir, burada `delay`, blok önerisinin ve tasdiklemenin ayrıldığı yuva sayısını ifade eder. Örnek olarak, tasdik eğer ki blok önerisinin bir yuvası içinde verilirse tasdikleyici `base_reward * 1/1 == base_reward` alır. Tasdik bir sonraki yuvada gelirse, tasdikleyen `base_reward*1/2` alır ve böyle devam eder.
 
 Blok önericileri bloka dahil edilen ** her geçerli tasdik** için `8 / 64 * base_reward` almaktadır, yani ödülün gerçek değeri tasdik eden doğrulayıcıların sayısına göre ölçeklenir. Blok önericileri ayrıca önerdikleri blokta diğer doğrulayıcılar tarafından kötü davranışların kanıtını ekleyerek de ödüllerini artırabilirler. Bu ödüller doğrulayıcı dürüstlüğünü destekleyen "havuçlar"dır. Kesimi dahil eden bir blok önericisi `slashed_validators_effective_balance/512` ile ödüllendirilecektir.
 

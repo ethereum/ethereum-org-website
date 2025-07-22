@@ -8,6 +8,8 @@ lang: el
 
 Το αυξανόμενο ενδιαφέρον για τα κρυπτονομίσματα συνεπάγεται αυξανόμενο κίνδυνο από απατεώνες και χάκερ. Αυτό το άρθρο παρουσιάζει ορισμένες βέλτιστες πρακτικές για τον μετριασμό αυτών των κινδύνων.
 
+**Να θυμάστε: Κανείς από το ethereum.org δε θα επικοινωνήσει ποτέ μαζί σας. Μην απαντάτε σε email λέγοντας ότι προέρχονται από την επίσημη υποστήριξη του Ethereum.**
+
 <Divider />
 
 ## Ασφάλεια κρυπτονομισμάτων 101 {#crypto-security}
@@ -33,7 +35,7 @@ lang: el
 
 Το ιδιωτικό κλειδί του πορτοφολιού σας είναι ο κωδικός πρόσβασης στο πορτοφόλι Ethereum σας. Είναι το μόνο πράγμα που εμποδίζει κάποιον που γνωρίζει τη διεύθυνση του πορτοφολιού σας να αφαιρέσει από τον λογαριασμό σας από όλα τα περιουσιακά του στοιχεία!
 
-<DocLink to="/wallets/">
+<DocLink href="/wallets/">
   Τι είναι το πορτοφόλι Ethereum;
 </DocLink>
 
@@ -242,15 +244,7 @@ _Σημείωση: Υπάρχουν παράγωγα token/tickers που μπο
 
 <InfoBanner emoji=":lock:">
   <div>
-    Σημείωση: Η χρήση 2FA που βασίζεται σε SMS είναι επιρρεπής σε 
-    <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">
-      SIM jacking
-    </a>
-     και δεν είναι ασφαλές. Για καλύτερη ασφάλεια, χρησιμοποιήστε μια υπηρεσία όπως το{" "}
-    <a href="https://mashable.com/article/how-to-set-up-google-authenticator">
-      Google Authenticator
-    </a>
-     ή το <a href="https://authy.com/">Authy</a>.
+    Σημείωση: Η χρήση 2FA με χρήση SMS είναι ευάλωτη στην <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">κλοπή SIM</a> και δεν είναι ασφαλής. Για καλύτερη ασφάλεια, χρησιμοποιήστε μια υπηρεσία όπως το <a href="https://mashable.com/article/how-to-set-up-google-authenticator">Google Authenticator</a> ή το <a href="https://authy.com/">Authy</a>.
   </div>
 </InfoBanner>
 

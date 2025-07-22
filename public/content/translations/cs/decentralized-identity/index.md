@@ -67,13 +67,13 @@ Decentralizovaná identita umožňuje společnostem vyhnout se konvenčním [Kno
 
 ### 3. Hlasování a online komunity {#voting-and-online-communities}
 
-Online hlasování a sociální média jsou dvě nová využití pro decentralizovanou identitu. Online hlasovací systémy jsou náchylné k manipulaci, zejména pokud škodliví aktéři vytvářejí k hlasování falešnou identitu. Žádat jednotlivce, aby předložili online atestace, může zlepšit integritu procesů hlasování on-line.
+Online hlasování a sociální média jsou dvě nová využití pro decentralizovanou identitu. Online hlasovací systémy jsou náchylné k manipulaci, zejména pokud škodliví aktéři vytvářejí k hlasování falešnou identitu. Žádat jednotlivce, aby předložili blockchainové atestace, může zlepšit integritu procesů hlasování online.
 
-Decentralizovaná identita může pomoci vytvořit online komunity, které jsou bez falešných účtů. Každý uživatel například bude muset ověřit svou identitu pomocí blockchainového systému identity jako je Ethereum Name Service, což snižuje možnost výskytu botů.
+Decentralizovaná identita může pomoci vytvořit online komunity, které jsou bez falešných účtů. Každý uživatel například bude muset ověřit svou identitu pomocí blockchainového systému identity, jako je Ethereum Name Service, což snižuje možnost výskytu botů.
 
 ### 4. Ochrana proti Sybil útokům {#sybil-protection}
 
-Sybil útoky jsou útoky, kde se jednotlivci snaží přelstít systém, aby si myslel, že jsou více lidmi, aby zvyšili svůj vliv. Aplikace pro udělování grantů, které využívají [kvadratické hlasování](/glossary/#quadratic-voting), jsou zranitelné vůči Sybil útokům, protože hodnota grantu se zvýší, když pro něj hlasuje více jednotlivců, což podněcuje uživatele k tomu, aby své příspěvky rozdělili mezi více identit. Decentralizované identity tomu pomáhají zabránit tím, že zvyšují břemeno každého účastníka, aby dokázali, že jsou skutečně lidé, i když často aniž by bylo nutné zveřejnit konkrétní soukromé informace.
+Aplikace pro udělování grantů, které využívají [kvadratické hlasování](/glossary/#quadratic-voting), jsou zranitelné vůči [Sybil útokům](/glossary/#sybil-attack), protože hodnota grantu se zvýší, když pro něj hlasuje více jednotlivců, což podněcuje uživatele k tomu, aby své příspěvky rozdělili mezi více identit. Decentralizované identity tomu pomáhají zabránit tím, že zvyšují břemeno každého účastníka, aby dokázali, že jsou skutečně lidé, i když často aniž by bylo nutné zveřejnit konkrétní soukromé informace.
 
 ## Co jsou atestace? {#what-are-attestations}
 
@@ -119,7 +119,7 @@ Decentralizované identifikátory jsou také klíčové pro ochranu soukromí os
 
 Jak se informace atestací ukládají a získávají v ekosystému založeném na Ethereu se liší od tradiční správy identity. Zde je přehled různých přístupů k vydávání, ukládání a ověřování atestací v decentralizovaných systémech identity:
 
-### Atestace mimo blockchain {#off-chain-attestations}
+### Atestace mimo blockchain {#offchain-attestations}
 
 Jednou z obav o uchovávání atestací na blockchainu je to, že by mohly obsahovat informace, které si jednotlivci přejí zachovat v tajnosti. Veřejná povaha blockchainu Ethereum činí ukládání takových osvědčení neatraktivním.
 
@@ -139,7 +139,7 @@ Tento přístup umožňuje atestacím získat trvalost založenou na blockchainu
 
 ### Atestace na blockchainu {#onchain-attestations}
 
-Atestace na blockchainu jsou ukládány ve [smart kontaktech](/glossary/#smart-contract) na blockchainu Ethereum. Chytrý kontrakt (sloužící jako rejstřík) spojí atestaci k odpovídajícímu blockchainovému decentralizovanému identifikátoru (veřejnému klíči).
+Atestace na blockchainu jsou ukládány v [chytrých kontaktech](/glossary/#smart-contract) na blockchainu Etherea. Chytrý kontrakt (sloužící jako rejstřík) spojí atestaci s odpovídajícím blockchainovým decentralizovaným identifikátorem (veřejným klíčem).
 
 Zde je příklad toho, jak by mohla fungovat blockchainová atestace v praxi:
 
@@ -151,19 +151,19 @@ Zde je příklad toho, jak by mohla fungovat blockchainová atestace v praxi:
 
 ### Soulbound tokeny a identity {#soulbound}
 
-[Soulbound tokeny](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) ([nepřenosná NFT](/glossary/#nft)) je možné používat ke shromažďování informací, které jsou pro konkrétní peněženku jedinečné. To efektivně vytváří jedinečnou blockchainovou identitu vázanou na konkrétní Ethereum adresu, která by mohla zahrnovat tokeny reprezentující úspěchy (např.: dokončení daného online kurzu nebo dosažení nového skóre ve hře) nebo komunitní účasti.
+[Soulbound tokeny](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) ([nepřenosná NFT](/glossary/#nft)) je možné používat ke shromažďování informací, které jsou pro konkrétní peněženku jedinečné. To efektivně vytváří jedinečnou blockchainovou identitu vázanou na konkrétní Ethereum adresu, která by mohla zahrnovat tokeny reprezentující úspěchy (např.: dokončení daného online kurzu nebo dosažení nového skóre ve hře) nebo komunitní účast.
 
 ## Využití decentralizované identity {#use-decentralized-identity}
 
 Existuje mnoho ambiciózních projektů, které využívají Ethereum jako základ pro decentralizovaná řešení identity:
 
-- **[Ethereum Name Service (ENS)](https://ens.domains/)** – _Decentralizovaný systém pojmenování pro blockchainové, strojově čitelné identifikátory, jako jsou adresy peněženky Ethereum, hashe obsahů a metadata._
+- **[Ethereum Name Service (ENS)](https://ens.domains/)** – _Decentralizovaný systém pojmenování pro blockchainové, strojově čitelné identifikátory, jako jsou adresy Ethereum peněženek, hashe obsahů a metadata._
 - **[SpruceID](https://www.spruceid.com/)** – _Projekt decentralizované identity, který uživatelům umožňuje ovládat digitální identitu s Ethereum účty a profily ENS místo spoléhání se na služby třetích stran._
-- **[Ethereum Attestation Service (EAS)](https://attest.sh/)** – _Decentralizovaná účetní kniha/protokol pro vytváření jakýkoliv atestací na blockchainu nebo mimo něj._
+- **[Ethereum Attestation Service (EAS)](https://attest.sh/)** – _Decentralizovaná účetní kniha / protokol pro vytváření atestací na blockchainu nebo mimo něj._
 - **[Proof of Humanity](https://www.proofofhumanity.id)** – _Proof of Humanity (nebo PoH) je systém pro ověřování sociální identity postavený na Ethereu._
 - **[BrightID](https://www.brightid.org/)** – _Decentralizovaná síť sociální identity s veřejně dostupným zdrojovým kódem usilující o reformu ověřování identity vytvořením a analýzou sociálního grafu._
 - **[walt.id](https://walt.id)** - _Open source decentralizovaná identita a peněženková infrastruktura, která umožňuje vývojářům a organizacím využívat vlastní suverénní identitu a NFT/SBT._
-- **[Masca](https://masca.io/)** — _Open source peněženka decentralizovaných identit implementovaná jako MetaMask Snap, která umožňuje uživatelům a vývojářům využívat DID a VC._
+- **[Veramo](https://veramo.io/)** – _Framework JavaScriptu, který každému usnadňuje používání kryptograficky ověřitelných dat v aplikacích._
 
 ## Další informace {#further-reading}
 
@@ -180,7 +180,7 @@ Existuje mnoho ambiciózních projektů, které využívají Ethereum jako zákl
 - [Decentralizovaná identita (Bonusové živé vysílání)](https://www.youtube.com/watch?v=ySHNB1za_SE&t=539s) — _Skvělé video na vysvětlení decentralizované identity od Andrease Antonopolouse_
 - [Přihlaste se pomocí Etherea a decentralizované identity s Ceramic, IDX, React, a 3ID Connect](https://www.youtube.com/watch?v=t9gWZYJxk7c) – _YouTube tutorial na vytváření systému správy identity pro tvorbu, čtení a aktualizaci uživatelského profilu pomocí jejich Ethereum peněženky od Nadera Dabita_
 - [BrightID – Decentralizovaná identita na Ethereu](https://www.youtube.com/watch?v=D3DbMFYGRoM) — _epizoda podcastu Bankless o BrightID, decentralizovaném řešení identity pro Ethereum_
-- [Internet mimo blockchain: Decentralizovaná identita & Ověřitelné údaje](https://www.youtube.com/watch?v=EZ_Bb6j87mg) – EthDenver 2022 prezentace Evina McMullena
+- [Internet mimo blockchain: Decentralizovaná identita a Ověřitelné údaje](https://www.youtube.com/watch?v=EZ_Bb6j87mg) – EthDenver 2022 prezentace Evina McMullena
 - [Vysvětlení ověřitelných pověření](https://www.youtube.com/watch?v=ce1IdSr-Kig) - Vysvětlující video na YouTube s demo ukázkou od Tamina Baumanna
 
 ### Komunity {#communities}

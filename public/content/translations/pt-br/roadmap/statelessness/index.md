@@ -16,7 +16,7 @@ Discos rígidos mais baratos podem ser utilizados para armazenar dados mais anti
 
 Há várias maneiras de reduzir a quantidade de dados que cada nó precisa armazenar, e cada uma exige que o protocolo principal do Ethereum seja atualizado em uma extensão diferente:
 
-- **Expiração do histórico**: habilita os nós para descartar dados de estado mais antigos que X blocos, mas não muda a maneira como o cliente Ethereum processa os dados de estado
+- **Expiração do histórico**: habilita os nós para descartar dados de estado mais antigos que X blocos, mas não muda a maneira como o cliente Ethereum processa os dados de estado.
 - **Expiração do estado**: permite que os dados de estado que não são usados com frequência se tornem inativos. Os clientes podem ignorar os dados inativos até que sejam "ressuscitados".
 - **Sem estado fraco**: apenas os produtores de blocos precisam acessar os dados de estado completos, outros nós podem verificar blocos sem um banco de dados de estado local.
 - **Sem estado forte**: nenhum nó precisa de acesso aos dados de estado completos.
@@ -81,7 +81,7 @@ O conceito "sem estado fraco" está em um estado avançado de pesquisa, mas depe
 
 ### Sem estado forte {#strong-statelessness}
 
-O conceito "sem estado forte" remove a necessidade de armazenamento de dados do estado por qualquer bloco. Em vez disso, as transações são enviadas com testemunhas que podem ser agregadas pelos produtores de blocos. Portanto, os produtores de blocos serão responsáveis por armazenar apenas o estado necessário para gerar testemunhas para as contas relevantes. A responsabilidade pelo estado é quase totalmente transferida para os usuários, pois eles enviam testemunhas e "listas de acesso" para declarar com quais contas e chaves de armazenamento estão interagindo. Embora isso permitiria nódulos altamente leves, seria mais difícil realizar trtansações conm contratos inteligentes.
+A forte ausência de estado elimina a necessidade de qualquer nó armazenar dados de estado. Em vez disso, as transações são enviadas com testemunhas que podem ser agregadas pelos produtores de blocos. Portanto, os produtores de blocos serão responsáveis por armazenar apenas o estado necessário para gerar testemunhas para as contas relevantes. A responsabilidade pelo estado é quase totalmente transferida para os usuários, pois eles enviam testemunhas e "listas de acesso" para declarar com quais contas e chaves de armazenamento estão interagindo. Embora isso permitiria nódulos altamente leves, seria mais difícil realizar trtansações conm contratos inteligentes.
 
 O conceito "sem estado forte" foi investigado por pesquisadores, mas atualmente não se espera que faça parte do planejamento do Ethereum. É mais provável que o sem estado fraco seja suficiente para as necessidades de escalabilidade do Ethereum.
 

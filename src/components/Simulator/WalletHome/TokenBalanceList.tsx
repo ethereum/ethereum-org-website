@@ -1,18 +1,14 @@
-import React from "react"
-import { Flex, type FlexProps } from "@chakra-ui/react"
+import { Flex } from "@/components/ui/flex"
 
 import { type TokenBalance } from "./interfaces"
 import { TokenBalanceItem } from "./TokenBalanceItem"
 
-type TokenBalanceListProps = FlexProps & {
+type TokenBalanceListProps = {
   tokenBalances: Array<TokenBalance>
 }
-export const TokenBalanceList = ({
-  tokenBalances,
-  ...flexProps
-}: TokenBalanceListProps) => {
+export const TokenBalanceList = ({ tokenBalances }: TokenBalanceListProps) => {
   return (
-    <Flex direction="column" w="full" gap={4} {...flexProps}>
+    <Flex className="w-full flex-col gap-4">
       {tokenBalances.map((item) => (
         <TokenBalanceItem key={item.name} item={item} />
       ))}

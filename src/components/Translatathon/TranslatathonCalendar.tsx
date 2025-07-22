@@ -1,17 +1,17 @@
-import { useRouter } from "next/router"
-import { FaDiscord } from "react-icons/fa"
-import { Heading, Icon, Text } from "@chakra-ui/react"
+"use client"
+
+import { useLocale } from "next-intl"
 
 import type { Lang } from "@/lib/types"
 
-import { ButtonLink } from "@/components/Buttons"
-import InlineLink from "@/components/Link"
+import Discord from "@/components/icons/discord.svg"
+import { ButtonLink } from "@/components/ui/buttons/Button"
+import { Flex } from "@/components/ui/flex"
+import InlineLink from "@/components/ui/Link"
 
 import { cn } from "@/lib/utils/cn"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { getLocaleTimestamp } from "@/lib/utils/time"
-
-import { Flex } from "../ui/flex"
 
 const matomoEvent = (buttonType: string) => {
   trackCustomEvent({
@@ -55,7 +55,7 @@ const events = [
 ]
 
 export const TranslatathonCalendar = () => {
-  const { locale } = useRouter()
+  const locale = useLocale()
 
   return (
     <Flex className="w-full flex-col py-16 lg:flex-row">
@@ -65,31 +65,23 @@ export const TranslatathonCalendar = () => {
           "bg-gradient-to-r from-accent-a/10 to-accent-c/10 dark:from-accent-a/20 dark:to-accent-c-hover/20"
         )}
       >
-        <Heading as="h3" fontSize="2xl">
-          Translatathon calls
-        </Heading>
-        <Text>
+        <h3 className="text-2xl font-bold">Translatathon calls</h3>
+        <p>
           Join us on the ethereum.org Discord for a series of onboarding calls
           and workshops where we’ll cover everything you need to know about the
           Translatathon, walk through using Crowdin and answer any questions you
           might have.
-        </Text>
-        <ButtonLink
-          href="/discord/"
-          gap={2}
-          onClick={() => matomoEvent("discord")}
-        >
-          <Icon as={FaDiscord} fontSize={25} />
+        </p>
+        <ButtonLink href="/discord/" onClick={() => matomoEvent("discord")}>
+          <Discord className="text-2xl" />
           Join Discord
         </ButtonLink>
       </Flex>
       <Flex className="w-full flex-col bg-background-highlight p-8 lg:w-1/2">
-        <Text fontSize="lg" fontWeight="bold" mb={2}>
-          Translatathon calls
-        </Text>
+        <p className="mb-2 text-lg font-bold">Translatathon calls</p>
         {events.map((event, index) => (
           <Flex className="mb-4 gap-6" key={index}>
-            <Text>{getLocaleTimestamp(locale! as Lang, event.date)}</Text>
+            <p>{getLocaleTimestamp(locale! as Lang, event.date)}</p>
             <InlineLink href={event.calendarLink}>{event.title}</InlineLink>
           </Flex>
         ))}

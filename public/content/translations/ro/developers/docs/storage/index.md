@@ -45,7 +45,7 @@ Platforme cu persistență bazată pe contracte:
 - [Filecoin](https://docs.filecoin.io/about-filecoin/what-is-filecoin/)
 - [Skynet](https://siasky.net/)
 - [Storj](https://storj.io/)
-- [0Chain](https://0chain.net/)
+- [Züs](https://zus.network/)
 
 ### Considerații suplimentare {#additional-consideration}
 
@@ -66,7 +66,7 @@ Una dintre cele mai populare modalități de a ne asigura că datele sunt păstr
 
 Tipuri de dStorage cu un mecanism de provocare:
 
-- 0Chain
+- Züs
 - Skynet
 - Arweave
 - Filecoin
@@ -77,7 +77,7 @@ Nu există instrumente grozave pentru măsurarea nivelului de descentralizare a 
 
 Instrumente descentralizate fără KYC:
 
-- 0Chain (implementarea unei ediții non-KYC)
+- Züs (implementarea unei ediții non-KYC)
 - Skynet
 - Arweave
 - Filecoin
@@ -98,7 +98,7 @@ Bazate pe PoS:
 
 - [Lanțul Beacon](/roadmap/beacon-chain/)
 - Filecoin
-- 0Chain
+- Züs
 
 ## Instrumente corelate {#related-tools}
 
@@ -131,10 +131,10 @@ Bazate pe PoS:
 - [Documentație](https://docs.arweave.org/info/)
 - [Arweave](https://github.com/ArweaveTeam/arweave/)
 
-**0chain - _0Chain este o platformă dStorage bazată pe dovada-mizei cu fragmente și blobbers._**
+**Züs - _Züs este o platformă dStorage bazată pe dovada-mizei cu fragmente și blobbers._**
 
-- [0Chain.net](https://0chain.net/)
-- [Documentație](https://docs.0chain.net/0chain/)
+- [zus.network](https://zus.network/)
+- [Documentație](https://0chaindocs.gitbook.io/zus-docs)
 - [GitHub](https://github.com/0chain/)
 
 **Swarm - _Platformă de stocare distribuită și serviciu de distribuție a conținutului pentru stiva web3 Ethereum._**

@@ -5,7 +5,7 @@ lang: de
 incomplete: true
 ---
 
-<FeaturedText>Erfahren Sie, wie Sie mit Java-basierten Projekten und Werkzeugen für Ethereum entwickeln können</FeaturedText>
+<FeaturedText>Lernen, wie Sie mit Java-basierten Projekten und Werkzeugen für Ethereum entwickeln können</FeaturedText>
 
 Sie können mit Ethereum dezentrale Anwendungen (oder „dApps“) erstellen, die von den Vorteilen der Kryptowährung und der Blockchain-Technologie profitieren. Solche dApps sind vertrauenswürdig. Das bedeutet, dass sie, sobald sie auf Ethereum hochgeladen wurden, immer exakt wie programmiert ausgeführt werden. Darüber lassen sich digitale Vermögenswerte verwalten und neuartige Finanzanwendungen erschaffen. Sie können dezentralisiert sein. Das bedeutet, dass keine einzelne Einheit oder Person sie kontrollieren kann. Damit ist es fast unmöglich, sie zu zensieren.
 
@@ -31,7 +31,12 @@ Lernen Sie, wie Sie [Web3J](https://github.com/web3j/web3j) und Hyperledger Besu
 - [Empfangsbereitschaft für Ethereum-Smart-Contract-Ereignisse](https://kauri.io/article/760f495423db42f988d17b8c145b0874/listening-for-ethereum-smart-contract-events-in-java)
 - [Besu (Pantheon), den Java-Ethereum-Client, mit Linux verwenden](https://kauri.io/article/276dd27f1458443295eea58403fd6965/using-pantheon-the-java-ethereum-client-with-linux)
 - [Einen Hyperledger-Besu-(Pantheon)-Node in Java-Integrationstests ausführen](https://kauri.io/article/7dc3ecc391e54f7b8cbf4e5fa0caf780/running-a-pantheon-node-in-java-integration-tests)
-- [Web3j Cheat Sheet](<https://kauri.io/web3j-cheat-sheet-(java-ethereum)/5dfa1ea941ac3d0001ce1d90/c>)
+- [Web3j Cheat Sheet](https://kauri.io/web3j-cheat-sheet-(java-ethereum)/5dfa1ea941ac3d0001ce1d90/c)
+
+Lernen Sie, wie Sie [ethers-kt](https://github.com/Kr1ptal/ethers-kt) verwenden – eine asynchrone, hochleistungsfähige Kotlin-Bibliothek zur Interaktion mit EVM-basierten Blockchains. Ausgelegt für JVM und Android-Plattfomen.
+- [ERC20-Token übertragen](https://github.com/Kr1ptal/ethers-kt/blob/master/examples/src/main/kotlin/io/ethers/examples/abi/TransferERC20.kt)
+- [UniswapV2-Tausch mit Ereignisüberwachung](https://github.com/Kr1ptal/ethers-kt/blob/master/examples/src/main/kotlin/io/ethers/examples/tokenswapwitheventlistening/TokenSwapWithEventListening.kt)
+- [ETH-/ERC20-Saldo-Tracker](https://github.com/Kr1ptal/ethers-kt/blob/master/examples/src/main/kotlin/io/ethers/examples/balancetracker/BalanceTracker.kt)
 
 ## Artikel für Fortgeschrittene {#intermediate-articles}
 
@@ -47,6 +52,7 @@ Lernen Sie, wie Sie [Web3J](https://github.com/web3j/web3j) und Hyperledger Besu
 
 - [Hyperledger Besu (Pantheon) (Ethereum-Client)](https://docs.pantheon.pegasys.tech/en/stable/)
 - [Web3J (Bibliothek für Interaktion mit Ethereum-Clients)](https://github.com/web3j/web3j)
+- [ethers-kt (eine asynchrone, hochleistungsfähige Kotlin-/Java-/Android-Bibliothek für EVM-basierte Blockchains.)](https://github.com/Kr1ptal/ethers-kt)
 - [Eventeum (Event Listener)](https://github.com/ConsenSys/eventeum)
 - [Mahuta (IPFS-Entwicklertools)](https://github.com/ConsenSys/mahuta)
 

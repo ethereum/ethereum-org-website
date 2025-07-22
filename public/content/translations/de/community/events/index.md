@@ -5,13 +5,13 @@ lang: de
 hideEditButton: true
 ---
 
-# Kommende Veranstaltungen {#events}
+# Bevorstehende Veranstaltungen {#events}
 
 **Jeden Monat finden auf der ganzen Welt große Ethereum-Veranstaltungen statt.** Besuchen Sie doch eine Veranstaltung in Ihrer Nähe, so lernen Sie andere aus der Community kennen und können sich über mögliche Karrierechancen informieren und neue Kompetenzen aufbauen.
 
 <UpcomingEventsList/>
 
-Diese Liste wird von unserer Community gepflegt und ist nicht abschließend. Wissen Sie von einer bevorstehenden Ethereum-Veranstaltung, die Sie dieser Liste hinzufügen möchten? Fügen Sie sie gerne hinzu.
+Diese Liste wird von unserer Community gepflegt und ist nicht abschließend. Wissen Sie von einer bevorstehenden Ethereum-Veranstaltung, die Sie dieser Liste hinzufügen möchten? [Fügen Sie gern eine Veranstaltung hinzu](https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-events.json)!
 
 ## Ethereum-Treffen {#meetups}
 

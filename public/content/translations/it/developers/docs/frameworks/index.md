@@ -118,12 +118,27 @@ Prima di iniziare a studiare i framework, raccomandiamo la lettura della nostra 
 - [Documentazione](https://catapulta.sh/docs)
 - [Github](https://github.com/catapulta-sh)
 
+**Covalent -** **_API della blockchain arricchite per oltre 200 catene._**
+
+- [covalenthq.com](https://www.covalenthq.com/)
+- [Documentazione](https://www.covalenthq.com/docs/api/)
+- [GitHub](https://github.com/covalenthq)
+- [Discord](https://www.covalenthq.com/discord/)
+
 **Wake -** **_Assetto completo di Python per testare i contratti, fuzzing, distribuzione, scansione delle vulnerabilità e navigazione del codice_**
 
 - [Home page](https://getwake.io/)
 - [Documentazione](https://ackeeblockchain.com/wake/docs/latest/)
 - [GitHub](https://github.com/Ackee-Blockchain/wake)
 - [Estensione del codice VS](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity)
+
+**Veramo**: **_Framework open source, modulare e agnostico che semplifica la creazione di identità decentralizzate e credenziali verificabili per gli sviluppatori di applicazioni decentralizzate nelle proprie applicazioni._**
+
+- [Home page](https://veramo.io/)
+- [Documentazione](https://veramo.io/docs/basics/introduction)
+- [GitHub](https://github.com/uport-project/veramo)
+- [Discord](https://discord.com/invite/FRRBdjemHV)
+- [Pacchetto NPM](https://www.npmjs.com/package/@veramo/core)
 
 ## Letture consigliate {#further-reading}
 

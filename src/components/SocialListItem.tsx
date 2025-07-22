@@ -1,54 +1,48 @@
-import {
-  FaDiscord,
-  FaGlobe,
-  FaRedditAlien,
-  FaStackExchange,
-  FaXTwitter,
-  FaYoutube,
-} from "react-icons/fa6"
-import { Box, Flex, Icon } from "@chakra-ui/react"
+import { Globe } from "lucide-react"
 
-const socialColors = {
-  reddit: "#ff4301",
-  twitter: "#1da1f2",
-  youtube: "#ff0000",
-  discord: "#7289da",
-  stackExchange: "#48a2da",
+import Discord from "@/components/icons/discord.svg"
+import Reddit from "@/components/icons/reddit.svg"
+import StackExchange from "@/components/icons/stack-exchange.svg"
+import Twitter from "@/components/icons/twitter.svg"
+import Youtube from "@/components/icons/youtube.svg"
+
+import { cn } from "@/lib/utils/cn"
+
+const socialColorClasses = {
+  reddit: "text-[#ff4301]",
+  twitter: "text-[#1da1f2]",
+  youtube: "text-[#ff0000]",
+  discord: "text-[#7289da]",
+  stackExchange: "text-[#48a2da]",
 }
 
 const icons = {
-  reddit: FaRedditAlien,
-  twitter: FaXTwitter,
-  youtube: FaYoutube,
-  discord: FaDiscord,
-  stackExchange: FaStackExchange,
-  webpage: FaGlobe,
+  reddit: Reddit,
+  twitter: Twitter,
+  youtube: Youtube,
+  discord: Discord,
+  stackExchange: StackExchange,
+  webpage: Globe,
 }
 
-type SocialListItemProps = {
-  children?: React.ReactNode
+type SocialListItemProps = React.HTMLAttributes<HTMLDivElement> & {
   socialIcon: keyof typeof icons
 }
 
-const SocialListItem = ({ children, socialIcon }: SocialListItemProps) => (
-  <Flex w="100%" py="2" px="0" align="center">
-    <Icon
-      as={icons[socialIcon]}
-      pe={3}
-      boxSize={10}
-      color={socialColors[socialIcon]}
-    />
-    <Box
-      fontStyle="italic"
-      sx={{
-        "> a": {
-          fontStyle: "normal",
-        },
-      }}
-    >
-      {children}
-    </Box>
-  </Flex>
-)
+const SocialListItem = ({
+  children,
+  socialIcon,
+  className,
+}: SocialListItemProps) => {
+  const Icon = icons[socialIcon]
+  return (
+    <div className={cn("flex w-full items-center px-0 py-2", className)}>
+      <Icon
+        className={cn("size-8 shrink-0 pe-3", socialColorClasses[socialIcon])}
+      />
+      <div className="font-normal italic">{children}</div>
+    </div>
+  )
+}
 
 export default SocialListItem

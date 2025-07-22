@@ -2,9 +2,8 @@ import type { Options } from "mdast-util-toc"
 import type { NextPage } from "next"
 import type { AppProps } from "next/app"
 import type { StaticImageData } from "next/image"
-import type { SSRConfig } from "next-i18next"
 import type { ReactElement, ReactNode } from "react"
-import type { Icon } from "@chakra-ui/react"
+import type { ColumnDef } from "@tanstack/react-table"
 
 import type {
   DocsFrontmatter,
@@ -20,13 +19,15 @@ import type { BreadcrumbsProps } from "@/components/Breadcrumbs"
 import type { CallToActionProps } from "@/components/Hero/CallToAction"
 import type { SimulatorNav } from "@/components/Simulator/interfaces"
 
+import chains from "@/data/chains"
+import { Rollup, Rollups } from "@/data/networks/networks"
 import allQuizData from "@/data/quizzes"
 import allQuestionData from "@/data/quizzes/questionBank"
 
 import { screens } from "./utils/screen"
 import { WALLETS_FILTERS_DEFAULT } from "./constants"
 
-import { layoutMapping } from "@/pages/[...slug]"
+import { layoutMapping } from "@/layouts"
 
 // Credit: https://stackoverflow.com/a/52331580
 export type Unpacked<T> = T extends (infer U)[] ? U : T
@@ -48,13 +49,14 @@ export type AppPropsWithLayout = AppProps & {
 
 export type Root = {
   children: ReactNode
-  contentIsOutdated: boolean
-  contentNotTranslated: boolean
   lastDeployLocaleTimestamp: string
 }
 
-export type BasePageProps = SSRConfig &
-  Pick<Root, "contentNotTranslated" | "lastDeployLocaleTimestamp">
+export type BasePageProps = Pick<Root, "lastDeployLocaleTimestamp">
+
+export type Params = {
+  locale: string
+}
 
 export type Frontmatter = RoadmapFrontmatter &
   UpgradeFrontmatter &
@@ -65,7 +67,7 @@ export type Frontmatter = RoadmapFrontmatter &
   TutorialFrontmatter
 
 export type LayoutMappingType = typeof layoutMapping
-export type Layout = keyof LayoutMappingType
+export type Layout = keyof LayoutMappingType | "docs" | "tutorial"
 
 export type Lang =
   | "en"
@@ -88,6 +90,7 @@ export type Lang =
   | "fr"
   | "gl"
   | "gu"
+  | "ha"
   | "he"
   | "hi"
   | "hr"
@@ -110,28 +113,31 @@ export type Lang =
   | "ne-np"
   | "nl"
   | "pcm"
-  | "ph"
   | "pl"
-  | "pt"
   | "pt-br"
+  | "pt"
   | "ro"
   | "ru"
   | "se"
   | "sk"
   | "sl"
+  | "sn"
   | "sr"
   | "sw"
   | "ta"
   | "te"
   | "th"
   | "tk"
+  | "tl"
   | "tr"
+  | "tw"
   | "uk"
   | "ur"
   | "uz"
   | "vi"
-  | "zh"
+  | "yo"
   | "zh-tw"
+  | "zh"
 
 export type Direction = "rtl" | "ltr" | "auto"
 
@@ -155,9 +161,21 @@ export type LoadingState<T> =
   | { loading: false; data: T }
   | { loading: false; error: unknown }
 
-/**
- * Quiz data types
- */
+// Quiz data types
+
+export type ChoiceLetter = "a" | "b" | "c" | "d"
+
+type ChoiceNumber = 1 | 2 | 3 | 4
+type TotalAnswers = 2 | 3 | 4
+
+type QuestionTemplate = {
+  totalAnswers: TotalAnswers
+  correctAnswer: ChoiceNumber
+  explanationOverrides?: (ChoiceNumber | null)[] // Tuple<ChoiceNumber, QuestionTemplate["totalAnswers"]>
+}
+
+export type QuestionBankConfig = Record<string, QuestionTemplate[]>
+
 export type Answer = {
   id: string
   label: TranslationKey
@@ -377,7 +395,7 @@ export type FileContributor = {
   login: string
   avatar_url: string
   html_url: string
-  date?: string
+  date: string
 }
 
 type FilePath = string
@@ -540,22 +558,40 @@ export type StatsBoxState = ValueOrError<string>
 
 export type GrowThePieMetricKey = "txCount" | "txCostsMedianUsd"
 
-export type GrowThePieData = Record<GrowThePieMetricKey, MetricReturnData>
+export type GrowThePieData = Record<GrowThePieMetricKey, MetricReturnData> & {
+  dailyTxCosts: Record<string, number | undefined>
+  activeAddresses: Record<string, number | undefined>
+}
 
-export type MetricName =
+export type HomepageActivityMetric =
   | "ethPrice" // Use with `totalEthStaked` to convert ETH to USD
   | "totalEthStaked"
   | "totalValueLocked"
   | GrowThePieMetricKey
 
-export type AllMetricData = Record<MetricName, MetricReturnData>
+export type AllHomepageActivityData = Record<
+  HomepageActivityMetric,
+  MetricReturnData
+>
+
+export type EnterpriseActivityMetric =
+  | "txCount"
+  | "txCostsMedianUsd"
+  | "stablecoinMarketCap"
+  | "ethPrice" // Use with `totalEthStaked` to convert ETH to USD
+  | "totalEthStaked"
+
+export type AllEnterpriseActivityData = Record<
+  EnterpriseActivityMetric,
+  MetricReturnData
+>
 
 export type StatsBoxMetric = {
   label: string
   description?: string
   state: StatsBoxState
-  apiUrl: string
-  apiProvider: string
+  apiUrl?: string
+  apiProvider?: string
 }
 
 export type SimulatorNavProps = {
@@ -573,17 +609,81 @@ export type CommunityConference = {
   startDate: string
   endDate: string
   imageUrl: string
+  hackathon?: boolean
+  formattedDate?: string
+}
+
+// Chains
+export type ChainIdNetworkResponse = {
+  name: string
+  chain: string
+  title?: string
+  icon?: string
+  rpc: string[]
+  features?: { name: string }[]
+  faucets?: string[]
+  nativeCurrency: {
+    name: string
+    symbol: string
+    decimals: number
+  }
+  infoURL: string
+  shortName: string
+  chainId: number
+  networkId: number
+  redFlags?: string[]
+  slip44?: number
+  ens?: { registry: string }
+  explorers?: {
+    name: string
+    url: string
+    icon?: string
+    standard: string
+  }[]
+  status?: "deprecated" | "active" | "incubating"
+  parent?: {
+    type: "L2" | "shard"
+    chain: string
+    bridges?: { url: string }[]
+  }
+}
+
+export type Chain = Pick<
+  ChainIdNetworkResponse,
+  "name" | "infoURL" | "chainId" | "nativeCurrency" | "chain"
+>
+
+export type ChainName = (typeof chains)[number]["name"]
+
+export type NonEVMChainName = "Starknet"
+
+export type ExtendedRollup = Rollup & {
+  networkMaturity: MaturityLevel
+  txCosts: number | undefined
+  tvl: number
+  walletsSupported: string[]
+  activeAddresses: number | undefined
+  launchDate: string | null
+  walletsSupportedCount: number
+  blockspaceData: {
+    nft: number
+    defi: number
+    social: number
+    token_transfers: number
+    unlabeled: number
+  } | null
 }
 
 // Wallets
-export interface WalletData {
+export type WalletData = {
   last_updated: string
   name: string
   image: StaticImageData
-  brand_color: string
+  twBackgroundColor: string
+  twGradiantBrandColor: string
   url: string
   active_development_team: boolean
-  languages_supported: string[]
+  languages_supported: Lang[]
   twitter: string
   discord: string
   reddit: string
@@ -609,6 +709,7 @@ export interface WalletData {
   swaps: boolean
   multichain?: boolean
   layer_2: boolean
+  supported_chains: (ChainName | NonEVMChainName)[]
   gas_fee_customization: boolean
   ens_support: boolean
   erc_20_support: boolean
@@ -634,23 +735,54 @@ export interface WalletFilterData {
   description: TranslationKey | ""
 }
 
+export type FilterInputState = boolean | Lang | string | string[] | null
+
 export type FilterOption = {
   title: string
-  items: Array<{
-    title: string
-    icon: typeof Icon
-    description: string
-    filterKey: string | undefined
-    showOptions: boolean | undefined
-    options:
-      | Array<{
-          name: string
-          filterKey?: string
-          inputType: "checkbox"
-        }>
-      | []
-  }>
+  showFilterOption: boolean
+  items: Array<FilterItem>
 }
+
+type FilterItem = {
+  filterKey: string
+  filterLabel: string
+  description: string
+  inputState: FilterInputState
+  ignoreFilterReset?: boolean
+  input: FilterInput
+  options: Array<FilterOptionItem>
+}
+
+type FilterInput = (
+  filterIndex: number,
+  itemIndex: number,
+  state: FilterInputState,
+  updateFilterState: UpdateFilterState
+) => ReactElement
+
+type FilterOptionItem = {
+  filterKey: string
+  filterLabel: string
+  description: string
+  ignoreFilterReset?: boolean
+  inputState: FilterInputState
+  input: FilterOptionInput
+}
+
+type FilterOptionInput = (
+  filterIndex: number,
+  itemIndex: number,
+  optionIndex: number,
+  state: FilterInputState,
+  updateFilterState: UpdateFilterState
+) => ReactElement
+
+type UpdateFilterState = (
+  filterIndex: number,
+  itemIndex: number,
+  inputState: FilterInputState,
+  optionIndex?: number
+) => void
 
 export interface WalletPersonas {
   title: string
@@ -684,6 +816,14 @@ export interface WalletPersonas {
   }
 }
 
+export type TPresetFilters = WalletPersonas[]
+
+export type ProductTablePresetFilters = WalletPersonas[]
+
+export type ProductTableColumnDefs = ColumnDef<Wallet | Rollups>
+
+export type ProductTableRow = Wallet | Rollup
+
 export interface DropdownOption {
   label: string
   value: string
@@ -694,6 +834,11 @@ export interface DropdownOption {
 export type WalletSupportedLanguageContextType = {
   supportedLanguage: string
   setSupportedLanguage: (language: string) => void
+}
+
+export type FeedbackWidgetContextType = {
+  showFeedbackWidget: boolean
+  setShowFeedbackWidget: (showFeedbackWidget: boolean) => void
 }
 
 // Historical upgrades
@@ -854,4 +999,76 @@ export type EventCardProps = {
   imageUrl?: string
 }
 
+export type PageWithContributorsProps = {
+  contributors: FileContributor[]
+  lastEditLocaleTimestamp: string
+}
+
 export type BreakpointKey = keyof typeof screens
+
+export type MaturityLevel =
+  | "N/A"
+  | "robust"
+  | "maturing"
+  | "developing"
+  | "emerging"
+
+// Tutorials
+export enum Skill {
+  BEGINNER = "beginner",
+  INTERMEDIATE = "intermediate",
+  ADVANCED = "advanced",
+}
+
+export interface IExternalTutorial {
+  url: string
+  title: string
+  description: string
+  author: string
+  authorGithub: string
+  tags: Array<string>
+  skillLevel: string
+  timeToRead?: string
+  lang: string
+  publishDate: string
+}
+
+export interface ITutorial {
+  href: string
+  title: string
+  description: string
+  author: string
+  tags?: Array<string>
+  skill?: Skill
+  timeToRead?: number | null
+  published?: string | null
+  lang: string
+  isExternal: boolean
+}
+
+type ValuesItem = {
+  label: string
+  content: string[]
+}
+
+export type ValuesPairing = {
+  legacy: ValuesItem
+  ethereum: ValuesItem
+}
+
+export type StablecoinType = "FIAT" | "CRYPTO" | "ASSET" | "ALGORITHMIC"
+
+export type PageParams = {
+  locale: string
+}
+
+export type SlugPageParams = PageParams & {
+  slug: string[]
+}
+
+export type TimeLeftLabel = { singular: string; plural: string }
+
+export type TimeLeftLabels = Record<
+  "days" | "hours" | "minutes" | "seconds",
+  TimeLeftLabel
+>

@@ -23,7 +23,7 @@ EVM'nin durumunu değiştiren işlemlerin tüm ağa yayınlanması gerekir. Herh
 Gönderilen bir işlem aşağıdaki bilgileri içerir:
 
 - `from` - işlemi imzalayacak olan göndericinin adresi. Bu sözleşme hesapları işlem gönderemeyeceği için harici olarak sahiplenilmiş bir hesap olacaktır.
-- `recipient` - alıcı adres (eğer harici olarak sahiplenilmiş bir hesapsa, işlem değeri aktaracaktır. Eğer bir sözleşme hesabıysa, işlem sözleşme kodunu yürütecektir)
+- `to` - alıcı adres (harici olarak sahiplenilmiş bir hesapsa, işlem değeri aktaracaktır. Eğer bir sözleşme hesabıysa, işlem sözleşme kodunu yürütecektir)
 - `signature` - gönderenin tanımlayıcısı. Bu, gönderenin özel anahtarı işlemi imzaladığında ve gönderenin bu işleme yetki verdiğini doğruladığında oluşturulur
 - `nonce` - hesabın işlem sayısını belirten ve ardışık olarak artan bir sayaç
 - `value` - göndericiden alıcıya aktarılacak ETH miktarı (WEI şeklinde birimlendirilmiştir, 1ETH 1e+18wei'ye eşittir)
@@ -153,11 +153,18 @@ Taban ücret yakılacaktır **-0,00399 ETH**
 
 Doğrulayıcı **+0,000210 ETH** bahşişi tutar
 
-Gaz, herhangi bir akıllı sözleşme etkileşimi için de gereklidir.
 
 ![Kullanılmayan gazın nasıl iade edildiğini gösteren diyagram](./gas-tx.png) _Diyagram [Ethereum EVM resmediciden](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf) uyarlanmıştır_
 
 İşlemde kullanılmayan gaz, kullanıcı hesabına iade edilir.
+
+### Akıllı sözleşme etkileşimleri {#smart-contract-interactions}
+
+Akıllı sözleşme içeren herhangi bir işlem için gaz gereklidir.
+
+Akıllı sözleşmeler, sözleşmenin durumunu değiştirmeyen [`view`](https://docs.soliditylang.org/en/latest/contracts.html#view-functions) ya da [`pure`](https://docs.soliditylang.org/en/latest/contracts.html#pure-functions) olarak adlandırılan fonksiyonlar da içerebilir. Bu nedenle bu fonksiyonların bir EOA tarafından çağrılması için herhangi bir gaz gerekmez. Bu senaryoda kullanılan temel RPC çağrısı [`"eth_call"`](/developers/docs/apis/json-rpc#eth_call) olarak adlandırılır
+
+Bu `view` veya `pure` fonksiyonları, `eth_call` kullanılarak erişildiği durumun aksine, genellikle dahili olarak (yani sözleşmenin kendisinden veya başka bir sözleşmeden) çağrılır ve bu da gaz maliyetine yol açmaz.
 
 ## İşlem yaşam döngüsü {#transaction-lifecycle}
 
@@ -166,7 +173,7 @@ Gaz, herhangi bir akıllı sözleşme etkileşimi için de gereklidir.
 1. Bir işlem şifresi kriptografik olarak oluşturulur: `0x97d99bc7729211111a21b12c933c949d4f31684f1d6954ff477d0477538ff017`
 2. İşlem sonrasında ağa yayınlanır ve diğer bekleyen ağ işlemlerinden oluşan işlem havuzuna eklenir.
 3. Bir doğrulayıcı, işlemi doğrulamak ve "başarılı" olarak değerlendirmek için işleminizi seçmeli ve bir bloka eklemelidir.
-4. Zaman geçtikçe işleminizi taşıyan blok önce "kanıtlanmış" sonrasında "sonlandırılmış" şeklinde güncellenecektir. Bu yükseltmeler işleminizin başarılı olduğunu ve asla değiştirilemeyeceğini daha netleştirir. Bir blok "sonlandırıldıktan" sonra sadece milyarlarca dolar maliyetinde ağ seviyesinde bir saldırı ile değiştirilebilir.
+4. Zaman geçtikçe işleminizi taşıyan blok önce "kanıtlanmış" sonrasında "kesinleştirilmiş" şeklinde güncellenecektir. Bu yükseltmeler işleminizin başarılı olduğunu ve asla değiştirilemeyeceğini daha netleştirir. Bir blok "kesinleştirildikten" sonra sadece milyarlarca dolar maliyetinde ağ seviyesinde bir saldırı ile değiştirilebilir.
 
 ## Görsel bir demo {#a-visual-demo}
 
@@ -190,6 +197,16 @@ Burada alanlar şu şekilde tanımlanır:
 
 - `TransactionType` - toplam 128 olası işlem türü için 0 ile 0x7f arasında bir sayı.
 - `TransactionPayload` - işlem türü tarafından tanımlanan rastgele bir bayt dizisi.
+
+`TransactionType` değerine göre, bir işlem şöyle sınıflandırılabilir
+
+1. **Tip 0 (Eski) İşlemler:** Ethereum'un başlatılmasından itibaren kullanılan orijinal işlem formatıdır. [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559)'dan gelen dinamik gaz ücreti hesaplamaları veya akıllı sözleşmeler için erişim listeleri gibi özellikler içermezler. Eski işlemler, [Tekrarlamalı Uzunluk Öneki (RLP)](/developers/docs/data-structures-and-encoding/rlp) kodlaması kullanıldığında `0xf8` baytıyla başlayarak serileştirilmiş formlarında türlerini belirten belirli bir öneke sahip değildir. Bu işlemler için TransactionType değeri `0x0`'dır.
+
+2. **Tip 1 İşlemler:** Ethereum'un [Berlin Yükseltmesi](/history/#berlin)'nin bir parçası olarak [EIP-2930](https://eips.ethereum.org/EIPS/eip-2930)'da kullanıma açılan bu işlemler bir `accessList` parametresi içerir. Bu liste, işlemin erişmeyi beklediği adresleri ve depolama anahtarlarını belirtir, bu da akıllı sözleşmelerle ilgili karmaşık işlemler için [gaz](/developers/docs/gas/) maliyetlerinin potansiyel olarak azaltılmasına yardımcı olur. EIP-1559 ücret piyasası değişiklikleri Tip 1 işlemlere dahil değildir. Tip 1 işlemler buna ek olarak, secp256k1 imzasının y değerinin paritesini gösteren `0x0` veya `0x1` olabilen bir `yParity` parametresi de içerir. Bu işlemler, `0x01` baytıyla başladıkları için kolayca tanınır ve TransactionType değerleri `0x1`'dir.
+
+3. **Tip 2 İşlemler**, sıklıkla EIP-1559 işlemleri olarak adlandırılır ve Ethereum'un [Londra Yükseltmesi](/history/#london)'nde [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) dahilinde tanıtılan işlemlerdir. Bu işlemler, Ethereum ağında standart işlem tipi haline gelmiştir. Bu işlemler, işlem ücretini ana ücret ve öncelik ücreti olarak ayıran öngörülebilirliği artıran yeni bir ücret piyasası mekanizması sunar. `0x02` baytı ile başlarlar ve `maxPriorityFeePerGas` ile `maxFeePerGas` gibi alanları içerirler. Tip 2 işlemler, esneklikleri ve verimlilikleri nedeniyle varsayılan seçenek durumuna gelmiştir. Özellikle yüksek ağ tıkanıklığı dönemlerinde kullanıcıların işlem ücretlerini daha öngörülebilir şekilde yönetmelerine yardımcı olma yetenekleri nedeniyle tercih edilirler. Bu işlemler için TransactionType değeri `0x2`'dir.
+
+
 
 ## Daha fazla bilgi {#further-reading}
 

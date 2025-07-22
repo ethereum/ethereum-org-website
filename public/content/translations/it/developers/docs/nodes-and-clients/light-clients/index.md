@@ -44,7 +44,7 @@ Esistono vari client leggeri in via di sviluppo, tra cui client leggeri di esecu
 
 - [Lodestar](https://github.com/ChainSafe/lodestar/tree/unstable/packages/light-client): client leggero di consenso in TypeScript
 - [Helios](https://github.com/a16z/helios): client leggero combinato di esecuzione e consenso in Rust
-- [Geth](https://github.com/ethereum/go-ethereum/tree/master/light): modalità leggera per il client di esecuzione (in via di sviluppo) in Go
+- [Geth](https://github.com/ethereum/go-ethereum/tree/master/beacon/light): modalità leggera per il client di esecuzione (in via di sviluppo) in Go
 - [Nimbus](https://nimbus.guide/el-light-client.html): client leggero di consenso in Nim
 
 Per quanto ne sappiamo, nessuno è ancora considerato pronto alla produzione.

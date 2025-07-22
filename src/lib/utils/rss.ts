@@ -1,48 +1,52 @@
-import { _0X_PARC_FEED, SOLIDITY_FEED, VITALIK_FEED } from "../constants"
-import type { RSSItem } from "../types"
+import { SOLIDITY_FEED, VITALIK_FEED } from "../constants"
+import type { Lang, RSSItem } from "../types"
 
-export const sortByPubDate = (items: RSSItem[]) =>
+import { isValidDate } from "./date"
+import { getLocaleTimestamp } from "./time"
+
+// Sort by original pubDate string (not yet localized)
+export const sortByPubDateRaw = (items: (RSSItem & { pubDateRaw: string })[]) =>
   items.sort((a, b) => {
-    const dateA = new Date(a.pubDate)
-    const dateB = new Date(b.pubDate)
+    const dateA = new Date(a.pubDateRaw)
+    const dateB = new Date(b.pubDateRaw)
     if (isNaN(dateA.getTime()) || isNaN(dateB.getTime())) {
-      console.error("Invalid date found:", a.pubDate, b.pubDate)
+      console.error("Invalid date found:", a.pubDateRaw, b.pubDateRaw)
       return 0
     }
     return dateB.getTime() - dateA.getTime()
   })
 
-export const postProcess = (rssItems: RSSItem[]) =>
+export const postProcess = (rssItems: RSSItem[], locale: Lang) =>
   rssItems.map((item) => {
+    const pubDate = isValidDate(item.pubDate)
+      ? getLocaleTimestamp(locale, item.pubDate)
+      : ""
+    const formattedItem = { ...item, pubDate, pubDateRaw: item.pubDate }
+
     switch (item.sourceFeedUrl) {
       case VITALIK_FEED:
         return {
-          ...item,
+          ...formattedItem,
           imgSrc: "/images/vitalik-blog-banner.svg",
           link: item.link.replace(".ca", ".eth.limo"),
           sourceUrl: item.sourceUrl.replace(".ca", ".eth.limo"),
         }
       case SOLIDITY_FEED:
         return {
-          ...item,
+          ...formattedItem,
           imgSrc: "/images/solidity-banner.png",
         }
-      case _0X_PARC_FEED:
-        return {
-          ...item,
-          imgSrc: "/images/0xparc-logo.svg",
-        }
       default:
-        return item
+        return formattedItem
     }
   })
 
-export const polishRSSList = (...items: RSSItem[][]) => {
+export const polishRSSList = (items: RSSItem[][], locale: Lang) => {
   const latestOfEach = items
     .filter(({ length }) => length)
     .map((item) => item[0]) // Take only latest post (first in array) from each
 
   const latestItems = latestOfEach.flat()
-  const readyForSorting = postProcess(latestItems)
-  return sortByPubDate(readyForSorting)
+  const readyForSorting = postProcess(latestItems, locale)
+  return sortByPubDateRaw(readyForSorting)
 }

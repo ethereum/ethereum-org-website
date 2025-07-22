@@ -6,20 +6,8 @@ import FoundryImage from "@/public/images/dev-tools/foundry.png"
 import HardhatImage from "@/public/images/dev-tools/hardhat.png"
 import KurtosisImage from "@/public/images/dev-tools/kurtosis.png"
 import ScaffoldEthImage from "@/public/images/dev-tools/scaffoldeth.png"
-import WaffleImage from "@/public/images/dev-tools/waffle.png"
 
 const frameworksList: Array<Framework> = [
-  {
-    id: "waffle",
-    url: "https://getwaffle.io/",
-    githubUrl: "https://github.com/EthWorks/waffle",
-    background: "#ffffff",
-    name: "Waffle",
-    description:
-      "page-developers-local-environment:page-local-environment-waffle-desc",
-    alt: "page-developers-local-environment:page-local-environment-waffle-logo-alt",
-    image: WaffleImage,
-  },
   {
     id: "Kurtosis Ethereum Package",
     url: "https://github.com/kurtosis-tech/ethereum-package",
@@ -118,7 +106,7 @@ export const ghRepoData = async (githubUrl: string) => {
     `https://api.github.com/repos/${repoOwner}/${repoName}`,
     {
       headers: {
-        Authorization: `Bearer ${process.env.NEXT_PUBLIC_GITHUB_TOKEN_READ_ONLY}`,
+        Authorization: `Bearer ${process.env.GITHUB_TOKEN_READ_ONLY}`,
       },
     }
   )
@@ -133,7 +121,7 @@ export const ghRepoData = async (githubUrl: string) => {
     `https://api.github.com/repos/${repoOwner}/${repoName}/languages`,
     {
       headers: {
-        Authorization: `Bearer ${process.env.NEXT_PUBLIC_GITHUB_TOKEN_READ_ONLY}`,
+        Authorization: `Bearer ${process.env.GITHUB_TOKEN_READ_ONLY}`,
       },
     }
   )

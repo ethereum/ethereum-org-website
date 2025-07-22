@@ -28,7 +28,7 @@ Mais sobre [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining/m
 
 ## Ethash {#ethash}
 
-Ethash foi o algoritmo de mineração, que na verdade foi usado na rede principal Ethereum real, sob a agora obsoleta arquitetura de prova de trabalho. Ethash foi efetivamente um novo nome dado a uma versão específica do Dagger-Hashimoto depois que o algoritmo foi significativamente atualizado, enquanto ainda herdava os princípios fundamentais de seu antecessor. A rede principal do Ethereum só usava Ethash. Dagger Hashimoto era uma versão de pesquisa e desenvolvimento do algoritmo de mineração que foi substituído antes do início da mineração na rede principal do Ethereum.
+Ethash foi o algoritmo de mineração, que na verdade foi usado na rede principal Ethereum real, sob a agora obsoleta arquitetura de prova de trabalho. Ethash foi efetivamente um novo nome dado a uma versão específica do Dagger-Hashimoto depois que o algoritmo foi significativamente atualizado, enquanto ainda herdava os princípios fundamentais de seu antecessor. A Rede principal do Ethereum só utilizou o Ethash. Dagger Hashimoto era uma versão de pesquisa e desenvolvimento do algoritmo de mineração que foi substituído antes do início da mineração na Rede principal do Ethereum.
 
 [Mais sobre Ethash](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash).
 
